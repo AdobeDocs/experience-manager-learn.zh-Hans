@@ -11,7 +11,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 1%
@@ -61,7 +61,7 @@ ht-degree: 1%
    **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** ，如下屏幕截图所示
    ![用户映射器](assets/user-mapper-service.PNG)
 * [导入示例自适应表单](assets/certify-pdf-af.zip)
-* [导入客户端库和自定义提交](assets/certify-document-assets.zip)
+* [导入和安装自定义提交](assets/custom-submit-certify.zip)
 * [打开自适应表单](http://localhost:4502/content/dam/formsanddocuments/certifypdf/jcr:content?wcmmode=disabled)
 * 上传需要认证的PDF文档
    **可选** -指定要在验证文档时使用的签名字段
