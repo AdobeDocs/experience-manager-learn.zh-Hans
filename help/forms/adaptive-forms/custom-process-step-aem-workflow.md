@@ -10,7 +10,7 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: c7ae9a51800bb96de24ad577863989053d53da6b
+source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 0%
@@ -133,7 +133,7 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 #### 构建和部署
 
-[按照此处所述构建捆绑](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)[确保捆绑部署并处于活动状态](http://localhost:450/system/console/bundles)
+[按照此处所述构建捆绑](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)[确保捆绑部署并处于活动状态](http://localhost:4502/system/console/bundles)
 
 创建工作流模型。 在工作流模型中拖放流程步骤。 将流程步骤与“将自适应表单附件保存到文件系统”相关联。
 
