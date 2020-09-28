@@ -1,0 +1,143 @@
+---
+title: 从一个数据文件生成多个pdf
+seo-title: 从一个数据文件生成多个pdf
+feature: output-service
+topics: development
+audience: developer
+doc-type: article
+activity: implement
+version: 6.4,6.5
+translation-type: tm+mt
+source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+workflow-type: tm+mt
+source-wordcount: '496'
+ht-degree: 0%
+
+---
+
+
+# 从一个xml文档文件生成一组PDF数据
+
+OutputService提供许多方法，使用表单设计创建文档并使用数据与表单设计合并。 以下文章介绍了用例，该用例从一个包含多个单独记录的大型xml生成多个pdf。
+下面是包含多个记录的xml文件的屏幕截图。
+
+![multi-record-xml](assets/multi-record-xml.PNG)
+
+数据xml有2条记录。 每个记录由form1元素表示。 此xml被传递给OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) ，我们获得pdf文档的列表（每个记录一个）generatePDFOutputBatch方法的签名采用以下参数
+
+* 模板——包含模板的映射（由键标识）
+* 数据——包含xml数据文档的映射（由键标识）
+* pdfOutputOptions —— 配置pdf生成的选项
+* batchOptions —— 用于配置批处理的选项
+
+>[!NOTE]
+>
+>此用例在此网站上以实时示 [例提供](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。
+
+## 用例详细信息{#use-case-details}
+
+在此用例中，我们将提供一个简单的Web界面来上传模板和数据(xml)文件。 完成文件上传并将POST请求发送到AEM servlet后。 此servlet提取文档并调用OutputService的generatePDFOutputBatch方法。 生成的pdf将压缩到zip文件中，供最终用户从Web浏览器下载。
+
+## Servlet代码{#servlet-code}
+
+以下是servlet中的代码片断。 代码从请求中提取模板(xdp)和数据文件(xml)。 模板文件将保存到文件系统。 创建了两个映射-templateMap和dataFileMap，分别包含模板和xml(data)文件。 然后调用DocumentServices服务的generateMultipleRecords方法。
+
+```java
+for (final java.util.Map.Entry < String, org.apache.sling.api.request.RequestParameter[] > pairs: params
+.entrySet()) {
+final String key = pairs.getKey();
+final org.apache.sling.api.request.RequestParameter[] pArr = pairs.getValue();
+final org.apache.sling.api.request.RequestParameter param = pArr[0];
+try {
+if (!param.isFormField()) {
+
+if (param.getFileName().endsWith("xdp")) {
+    final InputStream xdpStream = param.getInputStream();
+    com.adobe.aemfd.docmanager.Document xdpDocument = new com.adobe.aemfd.docmanager.Document(xdpStream);
+
+    xdpDocument.copyToFile(new File(saveLocation + File.separator + "fromui.xdp"));
+    templateMap.put("key1", "file://///" + saveLocation + File.separator + "fromui.xdp");
+    System.out.println("####  " + param.getFileName());
+
+}
+if (param.getFileName().endsWith("xml")) {
+    final InputStream xmlStream = param.getInputStream();
+    com.adobe.aemfd.docmanager.Document xmlDocument = new com.adobe.aemfd.docmanager.Document(xmlStream);
+    dataFileMap.put("key1", xmlDocument);
+}
+}
+
+Document zippedDocument = documentServices.generateMultiplePdfs(templateMap, dataFileMap,saveLocation);
+.....
+.....
+....
+```
+
+### 接口实现代码{#Interface-Implementation-Code}
+
+以下代码使用OutputService的generatePDFOutputBatch生成多个pdf，并将包含pdf文件的zip文件返回到调用servlet
+
+```java
+public Document generateMultiplePdfs(HashMap < String, String > templateMap, HashMap < String, Document > dataFileMap, String saveLocation) {
+    log.debug("will save generated documents to " + saveLocation);
+    com.adobe.fd.output.api.PDFOutputOptions pdfOptions = new com.adobe.fd.output.api.PDFOutputOptions();
+    pdfOptions.setAcrobatVersion(com.adobe.fd.output.api.AcrobatVersion.Acrobat_11);
+    com.adobe.fd.output.api.BatchOptions batchOptions = new com.adobe.fd.output.api.BatchOptions();
+    batchOptions.setGenerateManyFiles(true);
+    com.adobe.fd.output.api.BatchResult batchResult = null;
+    try {
+        batchResult = outputService.generatePDFOutputBatch(templateMap, dataFileMap, pdfOptions, batchOptions);
+        FileOutputStream fos = new FileOutputStream(saveLocation + File.separator + "zippedfile.zip");
+        ZipOutputStream zipOut = new ZipOutputStream(fos);
+        FileInputStream fis = null;
+
+        for (int i = 0; i < batchResult.getGeneratedDocs().size(); i++) {
+              com.adobe.aemfd.docmanager.Document dataMergedDoc = batchResult.getGeneratedDocs().get(i);
+            log.debug("Got document " + i);
+            dataMergedDoc.copyToFile(new File(saveLocation + File.separator + i + ".pdf"));
+            log.debug("saved file " + i);
+            File fileToZip = new File(saveLocation + File.separator + i + ".pdf");
+            fis = new FileInputStream(fileToZip);
+            ZipEntry zipEntry = new ZipEntry(fileToZip.getName());
+            zipOut.putNextEntry(zipEntry);
+            byte[] bytes = new byte[1024];
+            int length;
+            while ((length = fis.read(bytes)) >= 0) {
+                zipOut.write(bytes, 0, length);
+            }
+            fis.close();
+        }
+        zipOut.close();
+        fos.close();
+        Document zippedDocument = new Document(new File(saveLocation + File.separator + "zippedfile.zip"));
+        log.debug("Got zipped file from file system");
+        return zippedDocument;
+
+
+    } catch (OutputServiceException | IOException e) {
+
+        e.printStackTrace();
+    }
+    return null;
+
+
+}
+```
+
+### 在服务器上部署{#Deploy-on-your-server}
+
+要在服务器上测试此功能，请按照以下说明操作：
+
+* [下载zip文件内容并将其解压到文件系统](assets/mult-records-template-and-xml-file.zip)。此zip文件包含模板和xml数据文件。
+* [将您的浏览器指向Felix Web控制台](http://localhost:4502/system/console/bundles)
+* [部署DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
+* [部署自定义AEMFormsDocumentServices Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Custom bundle，它使用OutputService API生成pdf
+* [将您的浏览器指向包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* [导入并安装包](assets/generate-multiple-pdf-from-xml.zip)。 此包包含html页，通过该页可删除模板和数据文件。
+* [将您的浏览器指向MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html?)
+* 将模板和xml数据文件拖放到一起
+* 下载创建的zip文件。 此zip文件包含由输出服务生成的pdf文件。
+
+>[!NOTE]
+>触发此功能有多种方法。 在此示例中，我们使用Web界面拖放模板和数据文件来演示该功能。
+
