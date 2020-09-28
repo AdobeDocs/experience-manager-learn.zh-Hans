@@ -1,0 +1,37 @@
+---
+title: 创建自适应表单
+seo-title: 创建自适应表单
+description: 在第1部分中，我们将创建自适应表单，添加并配置带有相应按钮的工具栏。
+seo-description: 在第1部分中，我们将创建自适应表单，添加并配置带有相应按钮的工具栏。
+uuid: 4ab7f01e-a75b-4e08-a5d8-690c63773ec3
+feature: adaptive-forms
+topics: authoring
+audience: developer
+doc-type: tutorial
+activity: understand
+discoiquuid: 1c9fb7b6-98dd-4725-b787-ac9e71906500
+kt: 4208
+thumbnail: 22173.jpg
+translation-type: tm+mt
+source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+workflow-type: tm+mt
+source-wordcount: '64'
+ht-degree: 0%
+
+---
+
+
+# 创建自适应表单 {#creating-adaptive-form}
+
+在第1部分中，我们将根据上一课中创建的模板创建自适应表单，并使用相应的按钮配置工具栏。
+
+**创建您的第一个自适应表单**
+
+>[!VIDEO](https://video.tv.adobe.com/v/22173/quality=9)
+
+
+
+
+
+
+
