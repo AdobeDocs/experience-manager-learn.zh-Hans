@@ -10,9 +10,9 @@ audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
 translation-type: tm+mt
-source-git-commit: 1eb15af3d9d2904856218aaad4d5c52233603a71
+source-git-commit: 7fd232d6821f91c342dd04fcdd04b9b505cb7250
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '990'
 ht-degree: 1%
 
 ---
@@ -28,6 +28,12 @@ ht-degree: 1%
 
 + `cm-p<PROGRAM ID>-e<ENVIRONMENT ID>-aem-<author|publish>-<POD NAME>`
 + 示例: `cm-p12345-e56789-aem-author-abcdefabde-98765`
+
+## 自定义日志文件
+
+AEM作为Cloud Services不支持自定义日志文件，但支持自定义日志记录。
+
+要使AEM中的Java日志作为Cloud Service(通 [过Cloud Manager](#cloud-manager)[或AdobeI/O CLI)可用](#aio)，必须写入自定义日志语句 `error.log`。 写入到自定义命名日志(如 `example.log`)的日志将不能作为Cloud Service从AEM访问。
 
 ## AEM作者和发布服务日志
 
@@ -54,7 +60,7 @@ AEM作者服务和发布服务都提供AEM运行时服务器日志：
    + 暂存: `WARN`
    + 生产: `ERROR`
 
-## Cloud Manager
+## Cloud Manager{#cloud-manager}
 
 Adobe云管理器允许通过环境的“下载日志”操作按日下载日志。
 
@@ -62,7 +68,7 @@ Adobe云管理器允许通过环境的“下载日志”操作按日下载日志
 
 这些日志可通过任何日志分析工具进行下载和检查。
 
-## AdobeI/O CLI（带有Cloud Manager插件）
+## AdobeI/O CLI（带有Cloud Manager插件）{#aio}
 
 Adobe云管理器支持通过Cloud ServiceI/O CLI以 [AdobeI/O CLI的形式](https://github.com/adobe/aio-cli) , [通过AdobeI/O CLI的Cloud Manager插件访问AEM作为日志](https://github.com/adobe/aio-cli-plugin-cloudmanager)。
 
