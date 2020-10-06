@@ -9,7 +9,7 @@ audience: administrator, architect, developer, implementer
 doc-type: technical video
 contentOwner: dgordon
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: c9a11bcb01a5ec9f7390deab68e6d0e1dec273de
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe Experience Manager(AEM) [!UICONTROL 系统概述] 从单个仪表板提供
 
 1. 系统概述可从以下位置访问： **AEM开始** > **[!UICONTROL 工具]** >操 **[!UICONTROL 作]** >系 **[!UICONTROL 统概述]**
 
-   直接在 **[!DNL <server-host>/libs/granite/operations/content/systemoverview.html]**
+   直接在 **`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
 1. 单击“下载” [!UICONTROL 按钮] ，可导出“系统 [!UICONTROL 概述] ”。 信息还通过以下端点进行 [!DNL REST] 公开：
 1. 以下是从“系统概述”中导出的JSON [!UICONTROL 输出示例]:
