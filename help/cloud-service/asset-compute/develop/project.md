@@ -1,6 +1,6 @@
 ---
 title: 为资产计算可扩展性创建资产计算项目
-description: 资产计算应用程序是使用AdobeI/O CLI生成的Node.js项目，符合特定结构，允许将它们部署到Adobe I/O Runtime并与AEM集成为Cloud Service。
+description: 资产计算项目是使用AdobeI/O CLI生成的Node.js项目，符合特定结构，可将其部署到Adobe I/O Runtime并与AEM集成为Cloud Service。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: a71c61304bbc9d54490086b3313c823225fbe2e0
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 创建资产计算项目
 
-资产计算应用程序是使用AdobeI/O CLI生成的Node.js项目，它们遵循一种特定结构，允许将它们部署到Adobe I/O Runtime并与AEM集成为Cloud Service。 单个资产计算项目可以包含一个或多个资产计算工作程序，每个工作程序都具有可以从AEM作为Cloud Service处理用户档案的离散HTTP端点引用。
+资产计算项目是使用AdobeI/O CLI生成的Node.js项目，符合允许将其部署到Adobe I/O Runtime并与AEM集成为Cloud Service的特定结构。 单个资产计算项目可以包含一个或多个资产计算工作程序，每个工作程序都具有可以从AEM作为Cloud Service处理用户档案的离散HTTP端点引用。
 
 ## 生成项目
 
@@ -51,7 +51,7 @@ _生成资产计算项目的点进（无音频）_
 
 ## 审查项目剖析
 
-生成的资产计算项目是专用的Adobe项目Firefly应用程序的Node.js项目，以下项目是Asset Compute项目的特有项：
+生成的资产计算项目是专用的Adobe项目Firefly项目的Node.js项目，以下是Asset Compute项目的特有项：
 
 + `/actions` 包含子文件夹，每个子文件夹都定义一个资产计算工作人员。
    + `/actions/<worker-name>/index.js` 定义执行JavaScript以执行此工作者的工作。
@@ -65,6 +65,14 @@ _生成资产计算项目的点进（无音频）_
 + `/.env` 在语法中定义环境 `key=value` 变量，并包含不应共享的机密。 要保护这些机密，不应将此文件签入Git，并通过项目的默认文件忽略 `.gitignore` 此文件。
    + 在该文件中定义的变量可通过在命 [令行上导出](../deploy/runtime.md) 变量来覆盖。
 
-有关项目结构审阅的更多详细信息，请 [查看Adobe项目Firefly应用程序剖析](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)。
+有关项目结构审阅的更多详细信息，请 [查看Adobe项目Firefly项目的剖析](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)。
 
 开发的大部分内容发生在开发工 `/actions` 作者实施的文件夹中，以及编写自 `/test/asset-compute` 定义资产计算工作者的测试中。
+
+## Github上的资产计算项目
+
+Github上提供最终的资产计算项目：
+
++ [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
+
+_Github contains是项目的最终状态，它完全填充了工作者和测试用例，但不包含任何凭据，如`.env`,`.config.json`or`.aio`._
