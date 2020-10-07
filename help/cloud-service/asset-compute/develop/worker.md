@@ -1,6 +1,6 @@
 ---
 title: 开发资产计算工作人员
-description: 资产计算工作线程是资产计算应用程序的核心，它提供对资产执行或协调工作以创建新再现的自定义功能。
+description: 资产计算工作线程是资产计算项目的核心，它提供可对资产执行或协调工作以创建新演绎版的自定义功能。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1508'
 ht-degree: 0%
 
 ---
@@ -20,26 +20,28 @@ ht-degree: 0%
 
 # 开发资产计算工作人员
 
-资产计算工作线程是资产计算应用程序的核心，它提供对资产执行或协调工作以创建新再现的自定义功能。
+资产计算工作线程是资产计算项目的核心，它提供对资产执行或协调工作以创建新再现的自定义功能。
 
 资产计算项目会自动生成一个简单的工作程序，该程序会将资产的原始二进制文件复制到指定演绎版中，而不进行任何转换。 在本教程中，我们将修改此工作人员，制作更有趣的再现，以说明资产计算工作人员的强大功能。
 
-我们将创建一个资产计算工作人员，该工作人员将生成一个新的水平图像演绎版，该格式副本在资产版本模糊的情况下，将空白空间覆盖在资产演绎版的左侧和右侧。 最终再现的宽度、高度和模糊将进行参数化。
+我们将创建一个资产计算工作人员，该人员将生成一个新的水平图像演绎版，该格式副本在资产版本模糊的情况下，将空白空间覆盖在资产演绎版的左侧和右侧。 最终再现的宽度、高度和模糊将进行参数化。
 
-## 了解资产计算工作人员的执行
+## 资产计算工作器调用的逻辑流
 
-资产计算工作人员实施资产计算SDK工作人员API合同，该合同很简单：
+资产计算工作者在函数中实施资产计算SDK工作 `renditionCallback(...)` 者API合同，从概念上讲：
 
 + __输入：__ AEM资产的原始资产二进制和参数
 + __输出：__ 一个或多个要添加到AEM资产的演绎版
 
-![资产计算工作人员执行流程](./assets/worker/execution-flow.png)
+![资产计算工作人员逻辑流](./assets/worker/logical-flow.png)
 
 1. 当从AEM作者服务调用资产计算工作人员时，它将通过处理用户档案针对AEM资产。 资产的( __1a)原始二进制文件通过再现回调函数的__ 参数传递到工作器 `source` ，并且(1b)在处理用户档案中通过参数集定义的任何 ____`rendition.instructions` 参数都通过。
-1. 资产计算工作代码根据(1b)提 __供的任何参数__ ，转换(1a)中提供的 ____ 源二进制文件，以生成源二进制文件的再现。
+1. 资产计算SDK层接受来自处理用户档案的请求，并协调自定义资产计算工作器函数的执 `renditionCallback(...)` 行，根据(1b)提供的任何参数转换( __1a__ )中提供的源二进制 ____ ，以生成源二进制的再现。
    + 在本教程中，再现是“正在创建”的，这意味着工作者组成再现，但源二进制文件也可以发送到其他Web服务API以生成再现。
 1. 资产计算工作人员会将演绎版的二进制表示 `rendition.path` 形式保存到AEM作者服务中。
-1. 完成后，写入的二进制数 `rendition.path` 据将通过AEM作者服务公开，作为AEM资产的再现呈现，此时会调用资产计算工作人员。
+1. 完成后，写入的二进制数 `rendition.path` 据将通过资产计算SDK传输，并通过AEM作者服务以AEM UI中可用的再现形式公开。
+
+上图阐述了面向资产计算开发人员的问题和资产计算工作人员调用的逻辑流程。 出于好奇，Asset Compute [执行的内部详细信息可用](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) ，但只应依赖公共Asset Compute SDK API合同。
 
 ## 工人剖析
 
@@ -106,7 +108,7 @@ function customHelperFunctions() { ... }
 
 ## 安装和导入支持npm模块
 
-作为Node.js应用程序，资产计算应用程序可以从强大的npm [模块生态系统中受益](https://npmjs.com)。 要利用npm模块，我们必须首先将它们安装到我们的Asset Compute应用程序项目中。
+作为基于Node.js的资产计算项目，它可以从强大的npm模块 [生态系统中受益](https://npmjs.com)。 要利用npm模块，我们必须先将它们安装到我们的Asset Compute项目中。
 
 在此工作者中，我们利 [用jimp](https://www.npmjs.com/package/jimp) 直接在Node.js代码中创建和操作再现图像。
 
@@ -380,6 +382,12 @@ class RenditionInstructionsError extends ClientError {
    ![参数化PNG再现](./assets/worker/parameterized-rendition.png)
 
 1. 将其他图像上传到 __源文件__ ，然后尝试使用不同的参数针对它们运行工作器！
+
+## Github上的Worker index.js
+
+最后一 `index.js` 节在Github上提供，网址为：
+
++ [aem-guides-wknd-asset-compute/actions/worker/index.js](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/actions/worker/index.js)
 
 ## 疑难解答
 
