@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
 translation-type: tm+mt
-source-git-commit: 53e4235c55d890765e9f13ffeb37a2c805fb307b
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 设置本地开发环境
 
-Adobe资产计算应用程序无法与AEM SDK提供的本地AEM运行时集成，而是使用其自己的工具链进行开发，这与AEM Maven项目原型上的AEM应用程序要求的工具链不同。
+Adobe资产计算项目无法与AEM SDK提供的本地AEM运行时集成，并使用其自己的工具链进行开发，这与AEM Maven项目原型上的AEM应用程序要求的工具链不同。
 
 要扩展资产计算微服务，必须在本地开发人员机器上安装以下工具。
 
@@ -46,7 +46,7 @@ Adobe资产计算应用程序无法与AEM SDK提供的本地AEM运行时集成�
 
 ## 安装Visual Studio代码{#vscode}
 
-[Microsoft Visual Studio代码](https://code.visualstudio.com/download) ，用于开发和调试资产计算应用程序。 虽然可 [以使用其他JavaScript兼容](../../local-development-environment/development-tools.md#set-up-the-development-ide) IDE来开发应用程序，但只能集成Visual Studio代码来调试资 [产计算](../test-debug/debug.md) 应用程序。
+[Microsoft Visual Studio代码](https://code.visualstudio.com/download) ，用于开发和调试资产计算工作程序。 虽然可 [以使用其他JavaScript兼容](../../local-development-environment/development-tools.md#set-up-the-development-ide) IDE来开发该工作器，但只能集成Visual Studio代码来调 [试Asset](../test-debug/debug.md) Compute Worker。
 
 _Visual Studio代码1.48.x+是wskdebug工作所[必需的](#wskdebug)。_
 
@@ -67,7 +67,7 @@ Windows计算机上的开发人员应确保他们正在对上述图像使用Linu
 
 ## 安装Node.js（和npm）{#node-js}
 
-资产计算工作 [者是Node.js](https://nodejs.org/) 应用程序，因此需要Node.js 10+（和npm）进行开发和构建。
+资产计算工 [作程序基于Node](https://nodejs.org/).js，因此需要Node.js 10+（和npm）进行开发和构建。
 
 + [以与传统AEM开发相同的方式安装](../../local-development-environment/development-tools.md#node-js) Node.js（和npm）。
 
@@ -89,7 +89,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 ## 安装wskdebug{#wskdebug}
 
-下载并安装 [Apache OpenWhisk调试npm](https://www.npmjs.com/package/@openwhisk/wskdebug) 模块，以便于本地调试Asset Compute应用程序。
+下载并安装 [Apache OpenWhisk调试npm](https://www.npmjs.com/package/@openwhisk/wskdebug) 模块，以便于本地调试资产计算工作器。
 
 _Visual Studio代码1.48.x+是wskdebug工作所[必需的](#wskdebug)。_
 
@@ -99,7 +99,7 @@ $ npm install -g @openwhisk/wskdebug
 
 ## 安装ngrok{#ngrok}
 
-下载并安装 [ngrok](https://www.npmjs.com/package/ngrok) npm模块，它提供对本地开发机器的公共访问，以便于本地调试资产计算应用程序。
+下载并安装 [ngrok](https://www.npmjs.com/package/ngrok) npm模块，它提供对本地开发机器的公共访问，以便于本地调试资产计算工作程序。
 
 ```
 $ npm install -g ngrok --unsafe-perm=true
