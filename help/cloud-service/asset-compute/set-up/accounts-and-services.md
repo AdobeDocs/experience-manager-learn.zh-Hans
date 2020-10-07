@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ## AEM 云服务{#aem-as-a-cloud-service}
 
-要配置AEM Assets处理用户档案以调用自定义资产计算应用程序，需要将AEM作为Cloud Service环境访问。
+要配置AEM Assets处理用户档案以调用自定义资产计算工作器，需要以Cloud Service环境身份访问AEM。
 
 理想情况下，可以使用沙箱项目或非沙箱开发环境。
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 ## Adobe项目Firefly{#adobe-project-firefly}
 
-Adobe [项目Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly.html) framework用于构建自定义应用程序并将其部署到Adobe I/O Runtime，是Adobe的无服务器平台。 AEM资产计算应用程序是专门构建的Firefly应用程序，它们通过处理用户档案与AEM Assets集成，并提供访问和处理资产二进制文件的能力。
+Adobe [项目Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly.html) framework用于构建自定义操作并将其部署到Adobe I/O Runtime，是Adobe的无服务器平台。 AEM资产计算项目是专门构建的Firefly项目，它们通过处理用户档案与AEM Assets集成，并提供访问和处理资产二进制文件的能力。
 
 要访问Project Firefly，请注册预览。
 
@@ -57,9 +57,9 @@ Adobe [项目Firefly](https://www.adobe.io/apis/experienceplatform/project-firef
 
 ## 云存储
 
-本地开发Asset Compute应用程序需要云存储。
+本地开发资产计算项目需要云存储。
 
-当资产计算应用程序部署到Adobe I/O Runtime以供AEM直接用作Cloud Service时，并非严格要求此云存储，因为AEM提供从中读取资产并写入再现的云存储。
+当资产计算工作线程部署到Adobe I/O Runtime供AEM直接用作Cloud Service时，此云存储并非严格要求，因为AEM提供从中读取资产并写入其演绎版的云存储。
 
 ### Microsoft Azure Blob存储{#azure-blob-storage}
 
