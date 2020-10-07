@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: ecee5f83dc778b016b6d236c1e3bcc4919ee55a7
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '985'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ AEM作为Cloud Service的Asset Compute Microservices支持开发和部署自定�
 
 了解如何正确准备扩展资产计算工作器，并了解必须配置和配置哪些服务和帐户以及在本地安装软件进行开发。
 
-### 帐户和服务配置
+### 帐户和服务配置{#accounts-and-services}
 
 以下帐户和服务需要设置和访问，以完成教程AEM(作为Cloud Service开发环境或沙箱项目)、访问Adobe项目Firefly和Microsoft Azure Blob存储。
 
@@ -50,13 +50,13 @@ AEM作为Cloud Service的Asset Compute Microservices支持开发和部署自定�
 
 ### 本地开发环境
 
-资产计算应用程序的本地开发需要特定的开发人员工具集，这与传统的AEM开发不同，包括：Microsoft Visual Studio代码、Docker Desktop、Node.js和支持npm模块。
+资产计算项目的本地开发需要一个特定的开发人员工具集，这与传统的AEM开发不同，包括：Microsoft Visual Studio代码、Docker Desktop、Node.js和支持npm模块。
 
 + [设置本地开发环境](./set-up/development-environment.md)
 
 ### Adobe项目Firefly
 
-资产计算项目是特别定义的Adobe项目Firefly应用程序，因此，需要访问Adobe开发者控制台中的Adobe项目Firefly才能设置和部署它们。
+资产计算项目是特别定义的Adobe项目Firefly项目，因此，需要访问Adobe开发者控制台中的Adobe项目Firefly才能设置和部署它们。
 
 + [设置Adobe项目Firefly](./set-up/firefly.md)
 
@@ -66,7 +66,7 @@ AEM作为Cloud Service的Asset Compute Microservices支持开发和部署自定�
 
 ### 创建新的资产计算项目
 
-资产计算应用程序项目（包含一个或多个资产计算工作程序）使用交互式AdobeI/O CLI生成。 资产计算应用程序是特别结构化的Adobe项目Firefly应用程序，而Node.js应用程序又是这些应用程序。
+资产计算项目（包含一个或多个资产计算工作程序）使用交互式AdobeI/O CLI生成。 资产计算项目是特殊结构化的Adobe项目Firefly项目，而Node.js项目又是Node.js项目。
 
 + [创建新的资产计算项目](./develop/project.md)
 
@@ -78,7 +78,7 @@ AEM作为Cloud Service的Asset Compute Microservices支持开发和部署自定�
 
 ### 配置manifest.yml
 
-资产计算应用程序包含清单，它定义项目中包含的所有资产计算工作程序，以及部署到Adobe I/O Runtime执行时可用的资源。
+资产计算项目包含清单，它定义项目中包含的所有资产计算工作人员，以及部署到Adobe I/O Runtime执行时可用的资源。
 
 + [配置manifest.yml](./develop/manifest.md)
 
@@ -106,7 +106,7 @@ AEM作为Cloud Service的Asset Compute Microservices支持开发和部署自定�
 
 ### 调试工作者
 
-资产计算应用程序提供从传统输出到与VS `console.log(..)` 代码和wskdebug集成的各 __种调试级别__ ，使开 ____&#x200B;发人员能够在工作代码实时执行时遍历它。
+资产计算工作线程提供从传统输出到与 `console.log(..)` VS代码和wskdebug集成的各 __种调试级别__ ，使开 ____&#x200B;发人员能够在工作线程代码的实时执行中逐步完成。
 
 + [调试工作者](./test-debug/debug.md)
 
@@ -125,6 +125,14 @@ AEM作为Cloud Service的Asset Compute Microservices支持开发和部署自定�
 部署到Adobe I/O Runtime后，资产计算工作者可以通过资产处理用户档案在AEM中 [注册为Cloud Service](../../assets/configuring/processing-profiles.md)。 处理用户档案反过来会应用于应用于其中资产的资产文件夹。
 
 + [与AEM处理用户档案集成](./deploy/processing-profiles.md)
+
+## Github上的教程代码库
+
+教程代码库可在Github上找到，网址为：
+
++ [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @主控分支
+
+源代码不包含所需的 `.env` 或文 `config.json` 件。 必须使用您的帐户和服务信息 [添加和配置这些](#accounts-and-services) 。
 
 ## 其他资源
 
