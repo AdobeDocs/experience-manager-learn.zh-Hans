@@ -1,6 +1,6 @@
 ---
 title: 配置资产计算项目的manifest.yml
-description: 资产计算项目的manifest.yml描述了要部署的此应用程序中的所有Worker。
+description: 资产计算项目的manifest.yml描述了要部署的此项目中的所有Worker。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -93,6 +93,13 @@ packages:
         annotations:
           require-adobe-auth: true
 ```
+
+## manifest.yml on Github
+
+最后一 `.manifest.yml` 节在Github上提供，网址为：
+
++ [aem-guides-wknd-asset-compute/manifest.yml](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/manifest.yml)
+
 
 ## 验证manifest.yml
 
