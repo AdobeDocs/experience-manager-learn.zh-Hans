@@ -1,5 +1,5 @@
 ---
-title: 在AEM Assets使用报告
+title: AEM Assets资产报道
 description: 'AEM Assets提供了企业级报告框架，可通过直观的用户体验扩展到大型存储库。 '
 feature: reports
 topics: authoring, operations, performance, metadata
@@ -9,15 +9,15 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 648
 translation-type: tm+mt
-source-git-commit: 3b5dd583a458393a41dbce1d8eeb0095a22db734
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '91'
 ht-degree: 2%
 
 ---
 
 
-# 在AEM Assets使用报告{#using-reports-in-aem-assets}
+# 资产报表{#using-reports-in-aem-assets}
 
 AEM Assets提供了企业级报告框架，可通过直观的用户体验扩展到大型存储库。
 
