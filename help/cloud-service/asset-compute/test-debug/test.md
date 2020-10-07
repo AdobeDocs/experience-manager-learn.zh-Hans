@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
 translation-type: tm+mt
-source-git-commit: 06632b90e5cdaf80b9343e5a69ab9c735d4a70f1
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
@@ -109,6 +109,12 @@ ht-degree: 0%
    + 终止任何正在运行的开发工具实例
 
 ![测试——错误对比度](./assets/test/error-contrast/result.png)
+
+## Github的测试用例
+
+Github上提供的最终测试用例有：
+
++ [aem-guides-wknd-asset-compute/test/asset-compute/worker](https://github.com/adobe/aem-guides-wknd-asset-compute/tree/master/test/asset-compute/worker)
 
 ## 疑难解答
 
