@@ -1,5 +1,5 @@
 ---
-title: 将封闭用户组与AEM Assets
+title: AEM Assets的封闭用户组
 description: '“已关闭的用户组”(CUG)是一项功能，用于限制对已发布站点上的选定用户组的内容访问权限。 此视频显示如何将已关闭的用户组与Adobe Experience Manager资产结合使用，以限制对特定资产文件夹的访问。 首先在AEM 6.4中引入了对AEM Assets封闭用户组的支持。 '
 feature: asset-share
 topics: authoring, collaboration, operations, sharing
@@ -8,15 +8,15 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 
-# 将封闭用户组与AEM Assets{#using-closed-user-groups-with-aem-assets}
+# 已关闭的用户组{#using-closed-user-groups-with-aem-assets}
 
 “已关闭的用户组”(CUG)是一项功能，用于限制对已发布站点上的选定用户组的内容访问权限。 此视频显示如何将已关闭的用户组与Adobe Experience Manager资产结合使用，以限制对特定资产文件夹的访问。 首先在AEM 6.4中引入了对AEM Assets封闭用户组的支持。
 
