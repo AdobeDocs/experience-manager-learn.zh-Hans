@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 要部署到项目文件中定义的工作区，请执行以 `.env` 下操作：
 
-1. 打开资产计算应用程序项目根目录中的命令行
+1. 打开资产计算项目根目录中的命令行
 1. 执行命令 `aio app deploy`
 1. 执行命令以 `aio app get-url` 获取工作器URL，以在AEM中用作Cloud Service处理用户档案，以引用此自定义资产计算工作器。 如果项目包含多个工作线程，则列出每个工作线程的离散URL。
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 部署到舞台和生产环境的一般方法是：
 
 1. 确保 [AdobeI/O CLI npm模块和Asset Compute插件已安装](../set-up/development-environment.md#aio)
-1. 查看要从Git部署的资产计算应用程序
+1. 查看要从Git部署的资产计算项目
 1. 使用与环境工作区（舞台或生产）对应的值设置目标变量
    + 这两个必需的变量是 `AIO_runtime_namespace` 和 `AIO_runtime_auth` 通过AdobeI/O开发人员控制台中的每个工作区的“下载全部”功能 __获取的__ 。
 
@@ -74,7 +74,7 @@ $ export AIO_runtime_auth=27100f9f-2676-4cce-b73d-b3fb6bac47d1:0tDu307W6MboQf5VW
 1. AEM作为Cloud Service处理用户档案引用的工作器URL也可通过以下方式获得：
    + `aio app get-url`。
 
-如果资产计算应用程序版本更改了工作器URL，也会更改以反映新版本，并且需要在处理用户档案中更新该URL。
+如果资产计算项目版本更改了工作器URL，则工作器URL也会更改以反映新版本，并且需要在处理用户档案中更新该URL。
 
 ## 工作区API设置{#workspace-api-provisioning}
 
