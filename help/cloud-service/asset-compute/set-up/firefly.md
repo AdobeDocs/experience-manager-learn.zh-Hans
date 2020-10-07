@@ -1,6 +1,6 @@
 ---
 title: 为资产计算可扩展性设置Adobe项目Firefly
-description: 资产计算应用程序是特别定义的Adobe项目Firefly应用程序，因此，需要访问Adobe开发者控制台中的Adobe项目Firefly才能设置和部署它们。
+description: 资产计算项目是特别定义的Adobe项目Firefly项目，因此，需要访问Adobe开发者控制台中的Adobe项目Firefly才能设置和部署它们。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 设置Adobe项目Firefly
 
-资产计算应用程序是特别定义的Adobe项目Firefly应用程序，因此，需要访问Adobe开发者控制台中的Adobe项目Firefly才能设置和部署它们。
+资产计算项目是特别定义的Adobe项目Firefly项目，因此，需要访问Adobe开发者控制台中的Adobe项目Firefly才能设置和部署它们。
 
 ## 在Adobe开发人员控制台中创建和设置Adobe项目Firefly{#set-up}
 
@@ -34,8 +34,8 @@ _设置Adobe项目Firefly的点进（无音频）_
 
    + __项目标题__: `WKND AEM Asset Compute`
    + __应用程序名称__: `wkndAemAssetCompute<YourName>`
-      + 应用 __程序名称__ 在所有Firefly应用程序中必须唯一，以后不可修改。 为公司或组织的名称加上前缀后添加有意义的后缀是一种不错的方法，例如： `wkndAemAssetCompute`.
-      + 为了实现自我启用，最好将您的姓名后缀到应 __用程序名称__，如 `wkndAemAssetComputeJaneDoe` 避免与其他Project Firefly应用程序发生冲突。
+      + 应用 __程序名称__ 在所有Firefly项目中必须唯一，以后不可修改。 为公司或组织的名称加上前缀后添加有意义的后缀是一种不错的方法，例如： `wkndAemAssetCompute`.
+      + 为了实现自我启用，最好将您的姓名后缀 __到应用程序名__，如 `wkndAemAssetComputeJaneDoe` 避免与其他Project Firefly项目发生冲突。
    + 在“工 __作区__ ”下，添加一个名为 `Development`
    + 在 __Adobe I/O Runtime____下__ ，确保选择“包含运行时”(Include Runtime with each workspace)
    + 点按 __保存__ ，以保存项目
@@ -58,7 +58,7 @@ _设置Adobe项目Firefly的点进（无音频）_
 
 ## 查看服务帐户(JWT)凭据
 
-本地Asset Compute Development Tool使用此AdobeI/O项 [目的凭据与Adobe I/O Runtime进行交互](../develop/development-tool.md) ，并且需要将其并入Asset Compute应用程序项目。 熟悉服务帐户(JWT)凭据。
+本地Asset Compute Development Tool使用此AdobeI/ [O项目的凭据与Adobe I/O Runtime](../develop/development-tool.md) ，并且需要将其并入Asset Compute项目。 熟悉服务帐户(JWT)凭据。
 
 ![Adobe开发人员服务帐户凭据](./assets/firefly/service-account.png)
 
