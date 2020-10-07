@@ -5,9 +5,9 @@ description: Adobe Experience Manager资产的视频和教程集
 seo-description: Adobe Experience Manager资产的视频和教程集
 sub-product: 资产，动态媒体
 translation-type: tm+mt
-source-git-commit: a2772bd8dd65e8bcb4caf660709f6aceb6e28eb4
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '244'
 ht-degree: 5%
 
 ---
@@ -18,6 +18,11 @@ ht-degree: 5%
 Adobe Experience Manager资产是AEM Platform上的一款数字资产管理工具，它允许用户在基于Web的存储库中创建、管理和共享其数字资产(图像、视频、文档和音频剪辑)。 本用户指南包含有关AEM Assets的众多特性和功能的视频和教程。
 
 ## 新增功能
+
+* **[水印（视频）](./advanced/watermarks.md)**
+
+   <br>
+   *了解如何将AEM中的资产演绎版作为Cloud Service进行水印*
 
 * **[基线权限（视频）](./configuring/baseline-permissions.md)**
 
@@ -38,12 +43,6 @@ Adobe Experience Manager资产是AEM Platform上的一款数字资产管理工�
 
    <br>
    *了解AEM Assets的收藏集如何提供组织和发现资产的新方式*
-
-* **[使用审阅任务（视频）](./collaboration/review-task.md)**
-
-   <br>
-   *使用审核任务工作流可快速轻松地批准（或拒绝）资产*
-
 
 ## 员工挑选
 
@@ -91,7 +90,7 @@ Adobe Experience Manager资产是AEM Platform上的一款数字资产管理工�
 
 ## 其他资源
 
-* [体验联盟——探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League-探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Assets文档](https://helpx.adobe.com/cn/experience-manager/6-5/assets/user-guide.html)
 * [AEM作为Cloud ServiceTutorials](/help/cloud-service/overview.md)
 * [AEM SitesTutorials](/help/sites/overview.md)
