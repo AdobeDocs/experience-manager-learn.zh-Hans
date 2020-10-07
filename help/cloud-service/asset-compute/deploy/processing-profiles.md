@@ -10,10 +10,10 @@ doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
 translation-type: tm+mt
-source-git-commit: 59bfc9ae08acca6c41234f23eaa60f56e2eda890
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 2%
+source-wordcount: '778'
+ht-degree: 1%
 
 ---
 
@@ -76,6 +76,14 @@ ht-degree: 2%
 ## 已完成!
 
 恭喜！ 您已完成了如 [何将AEM](../overview.md) 扩展为Cloud Service资产计算微服务的教程！ 您现在应该能够设置、开发、测试、调试和部署自定义资产计算工作器，以便AEM作为Cloud Service作者服务使用。
+
+### 在Github上查看完整的项目源代码
+
+Github上提供最终的资产计算项目：
+
++ [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
+
+_Github contains是项目的最终状态，它完全填充了工作者和测试用例，但不包含任何凭据，如`.env`、`.config.json`或`.aio`。_
 
 ## 疑难解答
 
