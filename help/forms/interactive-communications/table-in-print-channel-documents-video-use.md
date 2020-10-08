@@ -9,7 +9,7 @@ doc-type: technical video
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
@@ -26,7 +26,8 @@ ht-degree: 0%
 表用于以表格形式显示数据。 表中的行需要根据数据源返回的数据增大或缩小。 要在打印渠道文档中使用表，我们需要使用AEM Forms设计器创建布局文件（xdp文件）。 在此布局文件中，我们添加具有所需列数的表。 根据您的要求，确保列字段对象类型为TextField或数字字段。 对于每列，字段确保数据绑定设置为“使用名称”。
 
 >[!NOTE]
-要使表动态化，请确保已将“行”标记为重复。
+>
+>要使表动态化，请确保已将“行”标记为重复。
 
 **在您自己的服务器上试用它**
 
