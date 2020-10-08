@@ -10,10 +10,10 @@ version: cloud-service
 kt: 6133
 thumbnail: 41243.jpg
 translation-type: tm+mt
-source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
+source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 4%
+source-wordcount: '455'
+ht-degree: 3%
 
 ---
 
@@ -111,6 +111,10 @@ window.targetGlobalSettings = {
    cookieDomain: 'your-domain' //set the cookie directly on this subdomain 
 };
 ```
+
+## 后续步骤
+
+1. [将体验片段导出到Adobe Target](./export-experience-fragment-target.md)
 
 ## 支持链接
 
