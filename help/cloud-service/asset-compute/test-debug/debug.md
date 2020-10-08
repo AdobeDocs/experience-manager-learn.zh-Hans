@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -45,6 +45,7 @@ ht-degree: 0%
 wskdebug [](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模块支持将调试器附加到资产计算工作器，包括在VS代码中设置断点并遍历代码。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40383/?quality=12&learn=on)
+
 _使用wskdebug调试资产计算工作器的点进（无音频）_
 
 1. 确 [保已安](../set-up/development-environment.md#wskdebug) 装wskdebug [和ngrok](../set-up/development-environment.md#ngork) npm模块
