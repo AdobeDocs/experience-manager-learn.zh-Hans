@@ -11,7 +11,7 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
@@ -74,6 +74,7 @@ AEM作为Cloud ServiceSDK或AEM SDK，包含用于在本地运行Apache HTTP Web
 请注意，下面发出的所有命令都假定当前工作目录包含正在扩展的“调度程序工具”内容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
+
 *此视频使用macOS进行说明。 等效的Windows/Linux命令可用于获得类似的结果*
 
 ## 了解Dispatcher配置文件
@@ -86,6 +87,7 @@ AEM作为Cloud ServiceSDK或AEM SDK，包含用于在本地运行Apache HTTP Web
 如果Experience ManagerMaven项目中尚不存在这些文件， `dispatcher/src` 则这些文件将被复制到Experience ManagerMaven项目中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30602/?quality=12&learn=on)
+
 *此视频使用macOS进行说明。 等效的Windows/Linux命令可用于获得类似的结果*
 
 解压缩的调度程序工具中提供了配置文件的完整说明，如所示 `dispatcher-sdk-x.x.x/docs/Config.html`。
@@ -142,6 +144,7 @@ AEM作为Cloud ServiceSDK的发布服务，在端口4503上本地运行，可在
    ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30603/?quality=12&learn=on)
+
 *此视频使用macOS进行说明。 等效的Windows/Linux命令可用于获得类似的结果*
 
 ## 调度程序工具日志
@@ -177,6 +180,7 @@ AEM作为Cloud ServiceSDK的发布服务，在端口4503上本地运行，可在
    ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12&learn=on)
+
 *此视频使用macOS进行说明。 等效的Windows/Linux命令可用于获得类似的结果*
 
 ## 何时更新Dispatcher工具{#dispatcher-tools-version}
