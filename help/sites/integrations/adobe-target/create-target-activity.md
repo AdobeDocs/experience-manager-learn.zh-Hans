@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6351
 thumbnail: 41246.jpg
 translation-type: tm+mt
-source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
+source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
 workflow-type: tm+mt
-source-wordcount: '69'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,11 @@ ht-degree: 0%
 了解如何使用AEM体验片段优惠创建和测试Adobe Target活动。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41246?quality=12&learn=on)
+
+在目标中创建活动之前，您需要进行设置：
+
+1. [集成Experience Platform Launch和AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
+2. [使用Cloud Services将Adobe Experience Manager与Adobe Target整合](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/target/setup-aem-target-cloud-service.html)
 
 ## 支持链接
 
