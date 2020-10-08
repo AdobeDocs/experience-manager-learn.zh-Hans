@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4
 translation-type: tm+mt
-source-git-commit: 1ba56ad44df4dc327cf37d39ac72539b5c7af4a2
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -32,4 +32,5 @@ ht-degree: 0%
 要使此演示在您的系统上运行，您需要创建一个名为AEM Assets的 `acroforms` 文件夹。 将Acroform上传到此文 `acroforms` 件夹。
 
 >[!NOTE]
-示例代码在此文件夹中查找acroform。 合并自适应表单的提交数据时需要acroform。
+>
+>示例代码在此文件夹中查找acroform。 合并自适应表单的提交数据时需要acroform。
