@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 0%
@@ -25,6 +25,7 @@ ht-degree: 0%
 ## 生成项目
 
 >[!VIDEO](https://video.tv.adobe.com/v/40197/?quality=12&learn=on)
+
 _生成资产计算项目的点进（无音频）_
 
 
