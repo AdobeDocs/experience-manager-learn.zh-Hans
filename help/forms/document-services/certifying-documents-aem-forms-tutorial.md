@@ -11,7 +11,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 1%
@@ -49,8 +49,10 @@ ht-degree: 1%
 * [使用文档服务API](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 您也可以使用作为本教程资源的一部分提供的示例捆绑包。
+
 >[!NOTE]
-示例捆绑使用名为“ares”的别名来验证文档。 因此，请确保在使用此捆绑包时您的别名称为“ares”
+>
+>示例捆绑使用名为“ares”的别名来验证文档。 因此，请确保在使用此捆绑包时您的别名称为“ares”
 
 ## 在本地系统上测试示例
 
