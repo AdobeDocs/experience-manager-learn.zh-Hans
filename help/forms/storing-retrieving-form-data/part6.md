@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 translation-type: tm+mt
-source-git-commit: 6ae8110d4f4bc80682c35b0dab3fe7a62cad88f3
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 4%
@@ -19,7 +19,12 @@ ht-degree: 4%
 # 在您的服务器上部署此组件
 
 >[!NOTE]
-要在您的系统上运行AEMForms（版本6.3或更高版本）MYSQL数据库上，需要以下代码
+>
+>要在您的系统上运行此程序，需要以下各项
+>
+>* AEM Forms（版本6.3或更高版本）
+>* MYSQL数据库
+
 
 要在您的AEM Forms实例上测试此功能，请执行以下步骤
 
