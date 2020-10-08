@@ -12,7 +12,7 @@ doc-type: technical video
 activity: setup
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 3%
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> 要设置智能内容服务，您需要具有启用智能内容服务的组织的具有管理员权限的Adobe ID帐户。
+>要设置智能内容服务，您需要具有启用智能内容服务的组织的具有管理员权限的Adobe ID帐户。
 
 视频详细列出了配置智能内容服务所需的以下主要任务。
 
