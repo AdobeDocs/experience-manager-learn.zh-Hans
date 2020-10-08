@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 0%
@@ -25,6 +25,7 @@ ht-degree: 0%
 ## 在Adobe开发人员控制台中创建和设置Adobe项目Firefly{#set-up}
 
 >[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
+
 _设置Adobe项目Firefly的点进（无音频）_
 
 1. 使用与所配 [置的帐户和服务](https://console.adobe.io) 关联的Adobe ID登录 [到Adobe开发人员](./accounts-and-services.md)控制台。 确保您是系 __统管理员__ ，或是正 __确的Adobe组__ 织的开发人员。
