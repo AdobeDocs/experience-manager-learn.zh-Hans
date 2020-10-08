@@ -9,7 +9,7 @@ doc-type: setup
 activity: use
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
@@ -22,6 +22,7 @@ ht-degree: 0%
 体验片段使营销人员能够将AEM中创建的体验发布到社交媒体平台。 以下视频详细介绍了将体验片段发布到Facebook和Pinterest所需的设置和配置。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20592/?quality=9&learn=on)
+
 *[体验片段]-设置和配置社交帖子到Facebook和Pinterest*
 
 ## 将体验片段配置为发布到Facebook和Pinterest的核对清单
