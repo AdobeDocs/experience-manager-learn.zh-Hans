@@ -13,10 +13,10 @@ version: 6.4, 6.5
 uuid: 7b91f65d-5a35-419a-8cf7-be850165dd33
 discoiquuid: 45fc8d83-73fb-42e5-9c92-ce588c085ed4
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 10%
+source-wordcount: '459'
+ht-degree: 11%
 
 ---
 
@@ -52,6 +52,5 @@ Adobe Experience Manager6.4重新设计了AEM和目标之间的个性化工作�
 
 ## 其他资源 {#additional-resources}
 
-* [流畅的个性化-Adobe Target的AEM体验片段](https://www.youtube.com/watch?v=ohvKDjCb1yM)
 * [体验片段文档](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html)
 * [使用体验片段](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)
