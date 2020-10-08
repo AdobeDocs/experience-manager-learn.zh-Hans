@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4
 translation-type: tm+mt
-source-git-commit: 1e615d1c51fa0c4c0db335607c29a8c284874c8d
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%
@@ -38,8 +38,12 @@ Acroforms是使用Acrobat创建的表单。 您可以使用Acrobat从头开始�
 [Adobe Sign文本标记文档](https://helpx.adobe.com/sign/using/text-tag.html)
 
 >[!NOTE]
-确保acroform文件名中没有任何空格。 当前示例代码不处理空格。
-表单字段名称只能包含以下内容
-* 单空间
-* 单下划线
-* 字母数字字符
+>
+>确保acroform文件名中没有任何空格。 当前示例代码不处理空格。
+>
+>表单字段名称只能包含以下内容：
+>
+>* 单空间
+>* 单下划线
+>* 字母数字字符
+
