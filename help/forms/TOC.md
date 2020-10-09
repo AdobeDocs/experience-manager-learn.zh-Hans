@@ -1,20 +1,20 @@
 ---
 sub-product: 表单
 audience: developer
-user-guide-title: AEM Forms视频和Tutorials
+user-guide-title: AEM Forms 视频和教程
 user-guide-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers.
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
+source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '843'
+ht-degree: 4%
 
 ---
 
 
-# AEM Forms视频和Tutorials {#forms}
+# AEM Forms 视频和教程 {#forms}
 
 + [概述](overview.md)
 + [要遵循的最佳实践](adaptive-forms/best-practices-adaptive-forms.md)
@@ -169,7 +169,9 @@ ht-degree: 0%
    + [对XDP再现上的PDF应用使用权限](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [将使用权限应用于已上传的PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [认证文档](document-services/certifying-documents-aem-forms-tutorial.md)
-+ 交互式通信以实现印刷渠道 {#ic-print-channel-tutorial}
+   + [组合表单附件](document-services/assemble-form-attachments.md)
++ 交互式通信以实现印刷渠道
+{#ic-print-channel-tutorial}
    + [简介](ic-print-channel-tutorial/introduction.md)
    + [设置Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
    + [创建数据源](ic-print-channel-tutorial/create-data-source.md)
