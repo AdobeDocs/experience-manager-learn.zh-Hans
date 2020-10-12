@@ -10,9 +10,9 @@ version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
 translation-type: tm+mt
-source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
+source-git-commit: a9fbd73f128998bb201ef8715e5e725e94ee1ede
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ session.save();
 * 将“组 [合表单附件](assets/assemble-form-attachments-af.zip) ”表单下载到本地系统。
 * 从“表单和文档”[页面导入表单](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) 。
 * 下载 [工作流](assets/assemble-form-attachments.zip) ，并使用包管理器导入到AEM。
-* 下载自定义捆绑包(assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
+* 下载自定 [义捆绑包](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
 * 使用Web控制台部署和 [开始捆绑包](http://localhost:4502/system/console/bundles)
 * 将浏览器指向“组合附 [件”表单](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
 * 在ID文档中添加附件，并在银行对帐单部分添加几个pdf文档
