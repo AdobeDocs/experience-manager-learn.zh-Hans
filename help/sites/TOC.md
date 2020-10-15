@@ -1,18 +1,18 @@
 ---
-user-guide-title: AEM Sites视频和Tutorials
-user-guide-description: A collection of videos and tutorials for Adobe Experience Manager Sites.
-breadcrumb-title: AEM Sites Tutorials
+user-guide-title: AEM Sites 视频和教程
+user-guide-description: Adobe Experience Manager Sites 的视频和教程集合。
+breadcrumb-title: AEM Sites 教程
 sub-product: 站点
 translation-type: tm+mt
 source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 8%
+source-wordcount: '471'
+ht-degree: 14%
 
 ---
 
 
-# AEM Sites视频和Tutorials {#sites}
+# AEM Sites 视频和教程 {#sites}
 
 + [概述](overview.md)
 + 页面创作 {#page-authoring}
@@ -49,9 +49,9 @@ ht-degree: 8%
 + 开发 {#developing}
    + [AEM 项目原型](developing/aem-project-archetype.md)
    + [AEM Sites入门](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-   + [AEM无头入门](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
-   + [AEM SPA Editor和React入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPA Editor和Angular入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [AEM Headless 快速入门](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+   + [AEM SPA编辑器和React入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [AEM SPA编辑器和Angular入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
    + [以风格体系发展](developing/style-system-technical-video-understand.md)
    + [样式系统最佳实践](developing/style-organization-style-system-understand-article.md)
@@ -67,8 +67,8 @@ ht-degree: 8%
 + 单页应用程序 {#spa-editor}
    + [使用SPA编辑器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello World教程](spa-editor/spa-editor-helloworld-tutorial-use.md)
-   + [AEM SPA Editor和React入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPA Editor和Angular入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [AEM SPA编辑器和React入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [AEM SPA编辑器和Angular入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
 + Multi Site Management {#multi-site-management}
    + [语言副本简介](./multi-site-management/language-copy-overview.md)
    + [Live Copy和Blueprint](./multi-site-management/live-copy-and-blueprint.md)
