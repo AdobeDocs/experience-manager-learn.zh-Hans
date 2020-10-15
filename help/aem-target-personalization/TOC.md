@@ -1,6 +1,6 @@
 ---
-user-guide-title: 'AEM和Adobe Target入门 '
-user-guide-description: An end-to-end tutorial showing how to deliver personalized experiences using Experience Manager and Target.
+user-guide-title: 'AEM 和 Adobe Target 使用入门 '
+user-guide-description: 一个端到端教程，其中演示了如何使用 Experience Manager 和 Target 提供个性化体验。
 product: experience manager
 version: 6.5
 sub-product: 站点
@@ -14,13 +14,13 @@ kt: 2214
 translation-type: tm+mt
 source-git-commit: bdb62b3361f20a0d0f27f5818cb82276980755d1
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 5%
+source-wordcount: '65'
+ht-degree: 46%
 
 ---
 
 
-# AEM和目标入门 {#aem-target-tutorial}
+# AEM 和 Target 使用入门 {#aem-target-tutorial}
 
 + [概述](./overview.md)
 + [使用AEM Experience Fragments实现个性化](./personalization-use-case-1.md)
