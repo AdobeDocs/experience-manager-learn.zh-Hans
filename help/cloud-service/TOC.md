@@ -1,14 +1,14 @@
 ---
 user-guide-title: Adobe Experience Manager 云服务教程
-user-guide-description: A collection of tutorials for Adobe Experience Manager as a Cloud Service.
-breadcrumb-title: AEM as a Cloud Service Tutorials
+user-guide-description: Adobe Experience Manager 即 Cloud Service 的教程集合。
+breadcrumb-title: AEM 即 Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
 source-git-commit: 50519b9526182b528047069f211498099e3a4c88
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 25%
+source-wordcount: '197'
+ht-degree: 32%
 
 ---
 
