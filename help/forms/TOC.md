@@ -2,14 +2,14 @@
 sub-product: 表单
 audience: developer
 user-guide-title: AEM Forms 视频和教程
-user-guide-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers.
-breadcrumb-title: AEM Forms Tutorials
+user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
+breadcrumb-title: AEM Forms 教程
 index: y
 translation-type: tm+mt
 source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 4%
+source-wordcount: '858'
+ht-degree: 6%
 
 ---
 
