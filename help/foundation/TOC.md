@@ -1,19 +1,19 @@
 ---
-user-guide-title: AEM基础视频和Tutorials
-breadcrumb-title: AEM Foundation Tutorials
-user-guide-description: A collection of videos and tutorials for Adobe Experience Manager Foundation.
+user-guide-title: AEM Foundation 视频和教程
+breadcrumb-title: AEM Foundation 教程
+user-guide-description: 'Adobe Experience Manager Foundation 的视频和教程集合。 '
 sub-product: 基础
 index: y
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 4%
+source-wordcount: '156'
+ht-degree: 19%
 
 ---
 
 
-# AEM基础视频和Tutorials {#foundation}
+# AEM Foundation 视频和教程 {#foundation}
 
 + [概述](./overview.md)
 + 管理 {#administration}
