@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
 translation-type: tm+mt
-source-git-commit: 97fe98c8c62f5472f7771bbc803b2a47dc97044d
+source-git-commit: 096cdccdf1675480aa0a35d46ce7b62a3906dad1
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1831'
 ht-degree: 1%
 
 ---
@@ -255,9 +255,13 @@ Adobe客户端数据层是 **事件** 驱动的数据层。 单击任何核心�
 
    * `evar8` - `%Component ID%`
    * `prop8` - `%Component ID%`
-   * `event8` - `CTA Clicked`
+   * `event8`
 
    ![设置eVar属性和事件](assets/track-clicked-component/set-evar-prop-event.png)
+
+   >[!NOTE]
+   >
+   > 此 `%Component ID%` 处使用，因为它将为已单击的CTA获取唯一标识符。 使用Analytics报告 `%Component ID%` 的潜在缺点是将包含类似的值 `button-2e6d32893a`。 使 `%Component Title%` 用会给出一个更人性化的名称，但价值可能并不唯一。
 
 1. 接下来，在Adobe Analytics的右侧添加一个附加的“操 **作”-通过点按加号** ，设置 **变量** :
 
@@ -265,9 +269,11 @@ Adobe客户端数据层是 **事件** 驱动的数据层。 单击任何核心�
 
 1. 将“扩 **展** ”类型设 **置为** Adobe Analytics **，将“操** 作类型 **”设置**&#x200B;为“发送信标”。
 1. 在“ **跟踪** ”下，将单选按钮设置为 **`s.tl()`**。
-1. 对于 **链接类型** ，选择 **自定义链接** ，对于链 **接名称，请将值设置为数据元素******&#x200B;组件标题：
+1. 对于 **链接类型** ，选 **择“自定义链接** ”，对于“ **链接名称** ”，将值设置为： **`%Component Title%: CTA Clicked`**:
 
    ![发送链路信标的配置](assets/track-clicked-component/analytics-send-beacon-link-track.png)
+
+   这将合并数据元素“组件标题”中 **的动态变量** ，以及静态 **字符串CTA Clicked**。
 
 1. 保存更改。CTA **单击规** 则现在应具有以下配置：
 
