@@ -10,9 +10,9 @@ version: cloud-service
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 translation-type: tm+mt
-source-git-commit: 97fe98c8c62f5472f7771bbc803b2a47dc97044d
+source-git-commit: 096cdccdf1675480aa0a35d46ce7b62a3906dad1
 workflow-type: tm+mt
-source-wordcount: '2402'
+source-wordcount: '2414'
 ht-degree: 2%
 
 ---
@@ -270,6 +270,10 @@ Adobe客户端数据层是 **事件** 驱动的数据层。 加载AEM **Page数*
    >[!TIP]
    >
    >我们建议使用“ *为我管理库”选项* ，作为“库管理”设置，因为这样可以更轻松地使 `AppMeasurement.js` 库保持最新状态。
+
+1. 选中该框以启用“ **使用Activity Map**”。
+
+   ![启用使用Activity Map](assets/track-clicked-component/analytic-track-click.png)
 
 1. 在“ **常规** ”>“ **跟踪服务器**”下，输入跟踪服务器，如 `tmd.sc.omtrdc.net`. 如果站点支持 `https://`
 
