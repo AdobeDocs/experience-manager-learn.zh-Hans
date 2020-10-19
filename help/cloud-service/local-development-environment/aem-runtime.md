@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: 4cfbf975919eb38413be8446b70b107bbfebb845
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1406'
 ht-degree: 1%
 
 ---
@@ -23,12 +23,6 @@ ht-degree: 1%
 Adobe Experience Manager(AEM)可以使用AEM作为Cloud ServiceSDK的快速启动程序Jar在本地运行。 这允许开发人员在将自定义代码、配置和内容提交到源代码控件并将其部署到AEM作为Cloud Service环境之前，先进行部署和测试。
 
 请注 `~` 意，它用作用户目录的简写。 在Windows中，这相当于 `%HOMEPATH%`。
-
->[!VIDEO](https://video.tv.adobe.com/v/32551/?quality=12&learn=on)
-
->[!NOTE]
->
-> 此视频演示如何使用AEM SDK的本地快速启动在几分钟内安装和运行Adobe Experience Manager的本地实例。 此视频通过多次单击快速启动Jar文件来显示启动AEM SDK的本地快速启动的过程，但在计算机上安装了Java 8时，此操作将不起作用。 或者，也可以使用本页所述的命令从命令行启 `java -jar ...` 动AEM [SDK的本地快速启动](#set-up-local-aem-author-service)。
 
 ## 安装Java
 
@@ -55,9 +49,6 @@ AEM作为Cloud ServiceSDK或AEM SDK，包含用于在本地运行AEM作者和发
 ## 从AEM SDK zip解压快速启动程序Jar
 
 1. 解压缩下载的文 `aem-sdk-XXX.zip` 件
-1. 确保您的Experience Manager开 __发人员license.properties__ 文件可用
-
-请注意，同一Quickstart Jar和license.properties文件用于开始 _AEM_ Author和Publish Services。
 
 ## 设置本地AEM作者服务{#set-up-local-aem-author-service}
 
@@ -65,7 +56,6 @@ AEM作为Cloud ServiceSDK或AEM SDK，包含用于在本地运行AEM作者和发
 
 1. 创建文件夹 `~/aem-sdk/author`
 1. 将快速 __启动JAR文__ 件复制 `~/aem-sdk/author` 并重命名为 `aem-author-p4502.jar`
-1. 将license. __properties文件复制__ 到  `~/aem-sdk/author`
 1. 开始本地AEM作者服务，方法是从命令行执行以下操作：
    + `java -jar aem-author-p4502.jar`
       + 请提供管理员密码 `admin`。 可以接受任何管理员密码，但建议使用本地开发的默认密码，以减少重新配置的需要。
@@ -78,7 +68,6 @@ Windows:
 ```shell
 $ mkdir -p c:\Users\<My User>\aem-sdk\author
 $ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\author\aem-author-p4502.jar
-$ copy ../license.properties c:\Users\<My User>\aem-sdk\author
 $ cd c:\Users\<My User>\aem-sdk\author
 $ java -jar aem-author-p4502.jar
 ```
@@ -88,7 +77,6 @@ macOS/Linux:
 ```shell
 $ mkdir -p ~/aem-sdk/author
 $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/author/aem-author-p4502.jar
-$ cp ../license.properties ~/aem-sdk/author
 $ cd ~/aem-sdk/author
 $ java -jar aem-author-p4502.jar
 ```
@@ -99,7 +87,6 @@ $ java -jar aem-author-p4502.jar
 
 1. 创建文件夹 `~/aem-sdk/publish`
 1. 将快速 __启动JAR文__ 件复制 `~/aem-sdk/publish` 并重命名为 `aem-publish-p4503.jar`
-1. 将license. __properties文件复制__ 到  `~/aem-sdk/publish`
 1. 开始本地AEM发布服务，方法是从命令行执行以下操作：
    + `java -jar aem-publish-p4503.jar`
       + 请提供管理员密码 `admin`。 可以接受任何管理员密码，但建议使用本地开发的默认密码，以减少重新配置的需要。
@@ -112,7 +99,6 @@ Windows:
 ```shell
 $ mkdir -p c:\Users\<My User>\aem-sdk\publish
 $ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\publish\aem-publish-p4503.jar
-$ copy ../license.properties c:\Users\<My User>\aem-sdk\publish
 $ cd c:\Users\<My User>\aem-sdk\publish
 $ java -jar aem-publish-p4503.jar
 ```
@@ -122,7 +108,6 @@ macOS/Linux:
 ```shell
 $ mkdir -p ~/aem-sdk/publish
 $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
-$ cp ../license.properties ~/aem-sdk/publish
 $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
