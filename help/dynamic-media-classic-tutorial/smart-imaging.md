@@ -8,9 +8,9 @@ topics: development, authoring, configuring, renditions, images
 audience: all
 activity: use
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: 317fb625e7af57b7ad0079014c341eab9adda376
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '694'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Smart Imaging还得益于与Adobe一流的高级服务完全集成所带来的�
 
 Smart Imaging包含在您现有的Dynamic Media Classic许可证中。 此功能不需要额外费用。 要利用它，您必须满足以下两个要求：拥有Adobe捆绑的CDN和专用域。 然后，您必须为您的帐户启用它，因为它未自动启用。
 
-在向技术支持发送请求时启用智能成像开始，方法是发送电子邮件 [至s7support@adobe.com](mailto:s7support@adobe.com)。 他们将与您合作，以设置您将与智能成像关联的自定义域。 您将更改一个与缓存相关的参数（生存时间或TTL），并且支持将清除缓存。 如果您喜欢，还可以在推送到生产之前执行可选的暂存步骤。 然后，启用智能成像后，您将为客户提供尺寸较小的图像，但质量与客户要求的相同。 这意味着他们体验到的页面加载时间更短——所有这一切都是自动完成的，因为Adobe Sensei帮助选择最有效的大小。
+通过发送技术支持请求，启用智能成像开始 |创建支持案例| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 支持人员将与您合作设置与智能成像关联的自定义域。 您将更改一个与缓存相关的参数（生存时间或TTL），并且支持将清除缓存。 如果您喜欢，还可以在推送到生产之前执行可选的暂存步骤。 然后，启用智能成像后，您将为客户提供尺寸较小的图像，但质量与客户要求的相同。 这意味着他们体验到的页面加载时间更短——所有这一切都是自动完成的，因为Adobe Sensei帮助选择最有效的大小。
 
 启用智能成像后，您需要验证它是否按预期工作。
 
