@@ -11,9 +11,9 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 1b4a927a68d24eeb08d0ee244e85519323482910
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1534'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,8 @@ Adobe Experience Manager(AEM)的Dispatcher是一个Apache HTTP Web服务器模�
 AEM作为Cloud ServiceSDK，包括推荐的调度程序工具版本，该版本便于在本地配置、验证和模拟调度程序。 调度程序工具由以下部分组成：
 
 + 位于 `.../dispatcher-sdk-x.x.x/src`
-+ 配置验证程序CLI工具，位于 `.../dispatcher-sdk-x.x.x/bin/validator`
++ 配置validator CLI工具，位 `.../dispatcher-sdk-x.x.x/bin/validate` 于(Dispatcher SDK 2.0.29+)
++ 配置生成CLI工具，位于 `.../dispatcher-sdk-x.x.x/bin/validator`
 + 配置部署CLI工具，位于 `.../dispatcher-sdk-x.x.x/bin/docker_run`
 + 使用调度程序模块运行Apache HTTP Web服务器的Docker图像
 
@@ -39,7 +40,7 @@ AEM作为Cloud ServiceSDK，包括推荐的调度程序工具版本，该版本�
 ## 前提条件
 
 1. Windows用户必须使用Windows 10 Professional
-1. 在本 [地开发机器上](./aem-runtime.md) ，安装Experience Manager发布快速启动。
+1. 在本 [地开发机器上安装Experience Manager](./aem-runtime.md) “发布快速启动程序Jar”。
    + （可选）在本地AEM [发布服务上](https://github.com/adobe/aem-guides-wknd/releases) ，安装最新的AEM参考网站。 本教程使用此网站来可视化正在工作的Dispatcher。
 1. 在本地开发机器上安 [装并开始](https://www.docker.com/) Docker的最新版本(Docker Desktop 2.2.0.5+ / Docker Engine v19.03.9+)。
 
@@ -49,13 +50,10 @@ AEM作为Cloud ServiceSDK或AEM SDK，包含用于在本地运行Apache HTTP Web
 
 如果AEM作为Cloud ServiceSDK已下载以设置本 [地AEM运行时](./aem-runtime.md)，则无需重新下载它。
 
-1. 使用您 [的Adobe ID登录experience.adobe.com/#](https://experience.adobe.com/#/downloads) /downloads
-   + 请注意，您的Adobe __组织__ 必须提供AEM作为Cloud Service才能下载AEM作为Cloud ServiceSDK。
-1. 导航到AEM __作为Cloud Service选项卡__
-1. 按发布 __日期__ ，降 __序排__ 序
-1. 单击最新的 __AEM__ SDK结果行
-1. 查看并接受EULA，然后点击“下 __载__ ”按钮
-1. 确保使用AEM SDK的Dispatcher Tools v2.0.21+
+1. 使用您 [的Adobe ID登录experience.adobe.com/#](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;orderby=%40jcr%3Content%2Fjcr%3AlastModifiest.3Modified&amp;stedSt.stedSt.st.st.d.st.st.st.st.st.st.st.st.st.st.st.st.st.st.st.sSt.st.st.sordordested&amp;st.st.st.st.st.s.st.s.s.st.s.s.st.s.sord=列表&amp;p.offset=0&amp;p.limit=1) /downloads
+   + 您的Adobe __组织__ 必须提供AEM作为Cloud Service才能下载AEM作为Cloud ServiceSDK
+1. 单击最新 __的AEM__ SDK结果行进行下载
+   + 确保下载说明中记录AEM SDK的Dispatcher Tools v2.0.29+
 
 ## 从AEM SDK zip解压调程序工具
 
@@ -92,20 +90,25 @@ AEM作为Cloud ServiceSDK或AEM SDK，包含用于在本地运行Apache HTTP Web
 
 解压缩的调度程序工具中提供了配置文件的完整说明，如所示 `dispatcher-sdk-x.x.x/docs/Config.html`。
 
+## 验证配置
+
+或者，可以使用脚本(不要与可执行文 `httpd -t`件混淆)验证调度程序和Apache Web服 `validate` 务器配置(通过 `validator` )。
+
++ 使用:
+   + Windows: `bin\validate src`
+   + macOS/Linux: `./bin/validate ./src`
+
 ## 在本地运行Dispatcher
 
-要在本地运行Dispatcher，必须使用Dispatcher Tools的CLI工具验证要用于配置Dispatcher的Dispatcher配 `validator` 置文件。
+要在本地运行调度程序，必须使用调度程序工具的CLI工具生成调 `validator` 度程序配置文件。
 
 + 使用:
    + Windows: `bin\validator full -d out src`
    + macOS/Linux: `./bin/validator full -d ./out ./src`
 
-验证具有双重用途：
+此命令将配置传输到与Docker容器的Apache HTTP Web服务器兼容的文件集中。
 
-+ 验证Apache HTTP Web服务器和调度程序配置文件的正确性
-+ 将配置传输到与Docker容器的Apache HTTP Web Server兼容的文件集中。
-
-经过验证后，将使用在Docker容器中本地运行Dispatcher的透明配置。 务必确保使用验证程序选项验证 __和输__ 出最新配置 `-d` 。
+生成后，将使用Docker容器中本地运行Dispatcher的透明配置。 务必确保使用验证程序的选项和输 `validate` 出 __验证__ 最新配置 `-d` 。
 
 + 使用:
    + Windows: `bin\docker_run <deployment-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
