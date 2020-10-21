@@ -11,7 +11,7 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 193
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 41e2c27cd089e7111b2eb1ef6c344d27980f0741
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 4%
@@ -23,7 +23,7 @@ ht-degree: 4%
 
 可编辑的模板允许专业作者使用Adobe Experience Manager(AEM)站点创建和更新页面模板以及管理高级策略配置。
 
->[!VIDEO](https://video.tv.adobe.com/v/17455/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326784/?quality=12&learn=on)
 
 可编辑模板是建立新AEM Sites的建议。
 
