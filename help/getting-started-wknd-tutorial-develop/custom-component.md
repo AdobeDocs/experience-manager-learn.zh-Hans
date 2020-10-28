@@ -808,7 +808,7 @@ public class BylineImpl implements Byline {
 
 * 加载 `data-sly-call="${placeholderTemplate.placeholder @ isEmpty=false}` 上面定 `placeholderTemplate` 义的代码，并将布尔值（当前硬编码为）传递 `false`到占位符模板。 如果 `isEmpty` 为true，占位符模板将呈现灰色框，否则将不呈现任何内容。
 
-### 更新Byline HTL {#byline-htl-1}
+### 更新Byline HTL
 
 1. 使用 **以下框架** HTML结构更新byline.html:
 
