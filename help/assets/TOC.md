@@ -5,10 +5,10 @@ breadcrumb-title: AEM Assets 教程
 sub-product: 资产
 team: TM
 translation-type: tm+mt
-source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
+source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 33%
+ht-degree: 32%
 
 ---
 
@@ -55,10 +55,9 @@ ht-degree: 33%
 
 + 高级元数据管理{#metadata}
    + [层叠元数据](metadata/cascade-metadata-feature-video-use.md)
-   + [智能标记概述](metadata/smart-tags-feature-video-use.md)
-   + [配置智能标记](metadata/smart-tags-technical-video-setup.md)
-   + [增强型智能标记](metadata/enhanced-smart-tags-feature-video-use.md)
-   + [配置增强的智能标记](metadata/enhanced-smart-tags-technical-video-setup.md)
+   + [图像的智能标记](metadata/image-smart-tags.md)
+   + [图像的自定义智能标记](metadata/custom-smart-tags.md)
+   + [视频智能标记](metadata/video-smart-tags.md)
    + [导入和导出元数据](metadata/metadata-import-feature-video-use.md)
 
 + 共享和分发{#sharing}
