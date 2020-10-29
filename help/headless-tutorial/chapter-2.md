@@ -4,9 +4,9 @@ seo-title: AEM内容服务入门——第2章——定义事件内容片段模�
 description: AEM无头教程的第2章介绍了如何启用和定义内容片段模型，这些模型用于定义用于创建事件的标准化数据结构和创作界面。
 seo-description: AEM无头教程的第2章介绍了如何启用和定义内容片段模型，这些模型用于定义用于创建事件的标准化数据结构和创作界面。
 translation-type: tm+mt
-source-git-commit: 885e30dea2a21dff789c98bdc5beb2f758b806f3
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '994'
 ht-degree: 6%
 
 ---
@@ -25,9 +25,9 @@ AEM内容片段模型定义内容模式，可用于模板创建AEM作者创建�
 
 ## 启用内容片段模型
 
-必须通过AEM **配置** 浏览器启 **用内[!UICONTROL 容片段模型]**。
+必须通过AEM **配置** 浏览器启 **[用内 [!UICONTROL 容片段模型]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)**。
 
-如果未为配置 **启用** “内容片段模型”，则对于相关的AEM配 **[!UICONTROL 配置，不]会显示“创建[!UICONTROL ”]** >“内容片段”按钮。
+如果未为配置 **启用** “内容片段模型”，则对于相关的AEM配 **[!UICONTROL 配置，不] 会显示“创建 [!UICONTROL ”]** >“内容片段”按钮。
 
 >[!NOTE]
 >
@@ -36,11 +36,13 @@ AEM内容片段模型定义内容模式，可用于模板创建AEM作者创建�
 >为了使配置影响内容层次结构，必须通过该内容层次结构上的 `cq:conf` 属性引用该配置。 (这是在下面的步 [!DNL WKND Mobile] 骤5中 **实现的** )。
 >
 >当使 `global` 用配置时，该配置将应用于所有内容， `cq:conf` 无需设置。
+>
+>See the [[!UICONTROL Configuration Browser] documentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html) for more information.
 
 1. 以具有相应权限的用户身份登录到AEM作者，以修改相关配置。
    * 在本教程中，可 **以使用** admin用户。
-1. 导航到“工 **[!UICONTROL 具]”>“[!UICONTROL 常规]”[!UICONTROL >“配置浏览器”]**
-1. 点按 **要选择****[!DNL WKND Mobile]** 的旁边的文件夹图标，然 **[!UICONTROL 后点]按左** 上角的“编辑”按钮。
+1. 导航到“工 **[!UICONTROL 具] ”>“ [!UICONTROL 常规] ” [!UICONTROL >“配置浏览器”]**
+1. 点按 **要选择****[!DNL WKND Mobile]** 的旁边的文件夹图标，然 **[!UICONTROL 后点] 按左** 上角的“编辑”按钮。
 1. 选择 **[!UICONTROL 内容片段模型]**，然后点 **[!UICONTROL 按右上]** 方的保存并关闭。
 
    这允许应用配置的资产文件夹内容树上的内容片段 [!DNL WKND Mobile] 模型。
@@ -58,8 +60,8 @@ AEM内容片段模型定义内容模式，可用于模板创建AEM作者创建�
 
 1. 将配置应 **[!DNL WKND Mobile]** 用到“资 **[!DNL WKND Mobile]产文件夹** ”，以允许在该“资产”文件夹层次结构中创建“内容片段模型中的内容片段”:
 
-   1. 导航到 **[!UICONTROL AEM]>[!UICONTROL Assets]>[!UICONTROL Files]**
-   1. 选择WKND **[!UICONTROL Mobile文件夹]。**
+   1. 导航到 **[!UICONTROL AEM] > [!UICONTROL Assets] > [!UICONTROL Files]**
+   1. 选择WKND **[!UICONTROL Mobile文件夹] 。**
    1. 点按顶 **[!UICONTROL 部操]** 作栏中的“属性”按钮以打开文 [!UICONTROL 件夹属性]
    1. 在文 [!UICONTROL 件夹属性]中，点按 **[!UICONTROL Cloud Services]** 选项卡
    1. 验证 **[!UICONTROL 云配置]** 字段是否 **设置为/conf/wknd-mobile**
@@ -79,7 +81,7 @@ AEM内容片段模型定义内容模式，可用于模板创建AEM作者创建�
 
 ## 创建内容片段模型
 
-1. 导航到 **[!UICONTROL 工具]>资[!UICONTROL 产]>内[!UICONTROL 容片段模型]**。
+1. 导航到 **[!UICONTROL 工具] >资 [!UICONTROL 产] >内 [!UICONTROL 容片段模型]**。
 1. 点按要打 **[!DNL WKND Mobile]** 开的文件夹。
 1. 点按 **[!UICONTROL 创建]** ，以打开内容片段模型创建向导。
 1. 输入 **[!DNL Event]** 为模 **[!UICONTROL 型标]** 题( *说明为可选)* ，然后点 **[!UICONTROL 按创]** 建以保存。
@@ -88,10 +90,10 @@ AEM内容片段模型定义内容模式，可用于模板创建AEM作者创建�
 
 ## 定义内容片段模型的结构
 
-1. 导航到 **[!UICONTROL 工具]>资[!UICONTROL 产]>内[!UICONTROL 容片段模型][!DNL WKND]**>。
+1. 导航到 **[!UICONTROL 工具] >资 [!UICONTROL 产] >内 [!UICONTROL 容片段模型][!DNL WKND]**>。
 1. 选择内 **[!DNL Event]** 容片段模型，然 **[!UICONTROL 后点]** 按顶部操作栏中的编辑。
-1. 从右 **[!UICONTROL 侧的]Data Types(数** 据类型)选项卡 **[!UICONTROL ，将单行文本输入拖]** 入左下拉区域 **[!DNL Question]** ，以定义字段。
-1. 确保在左 **[!UICONTROL 侧选中新的]** “单行文本输入”，在右 **[!UICONTROL 侧选中]“属性** ”选项卡。 按如下方式填充属性字段：
+1. 从右 **[!UICONTROL 侧的] Data Types(数** 据类型)选项卡 **[!UICONTROL ，将单行文本输入拖]** 入左下拉区域 **[!DNL Question]** ，以定义字段。
+1. 确保在左 **[!UICONTROL 侧选中新的]** “单行文本输入”，在右 **[!UICONTROL 侧选中] “属性** ”选项卡。 按如下方式填充属性字段：
 
    * [!UICONTROL 呈现为] : `textfield`
    * [!UICONTROL 字段标签] : `Event Title`
