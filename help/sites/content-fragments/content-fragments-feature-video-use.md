@@ -9,9 +9,9 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '396'
 ht-degree: 5%
 
 ---
@@ -39,7 +39,7 @@ AEM内容片段是基于文本的编辑内容，可能包含一些关联但被�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEM内容片段模型是内容片段的数据模式，必须通过AEM配置浏 [!UICONTROL 览器启用]，它允许根据配置定义内容片段模型。
+AEM内容片段模型是内容片段的数据模式，必须通过AEM配置浏 [[!UICONTROL 览器启用]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)，它允许根据配置定义内容片段模型。
 
 ## 创建内容片段 {#creating-content-fragments}
 
