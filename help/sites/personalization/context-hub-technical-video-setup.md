@@ -8,9 +8,9 @@ doc-type: technical video
 activity: setup
 version: 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '426'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ ContextHub是存储、处理和呈现上下文数据的框架。 ContextHub Java
 
 ## 站点配置和ContextHub区段 {#site-configuration-and-contexthub-segments}
 
-ContextHub包含一个分段引擎，它管理区段并确定为当前上下文解析哪些区段。 定义了多个区段。 您可以使用Javascript API确定已 [解析的区段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)。 在“配置浏览器”下为您的站点启 [!UICONTROL 用ContextHub区段]。
+ContextHub包含一个分段引擎，它管理区段并确定为当前上下文解析哪些区段。 定义了多个区段。 您可以使用Javascript API确定已 [解析的区段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)。 在“配置浏览器”下为您的站点启 [[!UICONTROL 用ContextHub区段]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)。
 
 ## 创建区段 {#create-segments}
 
