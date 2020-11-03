@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 AEM作为Cloud Service的Asset Compute Microservices支持开发和部署自定义工作器，这些工作器用于读取和操作存储在AEM中的资产的二进制数据，最常用的操作是创建自定义资产演绎版。
 
-而在AEM 6.x中，自定义AEM工作流流程用于读取、转换和回写资产演绎版，在AEM中，作为Cloud Service资产计算工作程序，它满足了这一需求。
+而在AEM 6.x中，自定义AEM工作流流程用于读取、转换和回写资产演绎版，而在AEM中，作为Cloud Service资产计算工作流程来满足这一需求。
 
 ## 您将做什么
 
@@ -112,7 +112,7 @@ AEM作为Cloud Service的Asset Compute Microservices支持开发和部署自定�
 
 ## 部署
 
-了解如何将自定义资产计算工作者与AEM作为Cloud Service集成，方法是首先将它们部署到Adobe I/O Runtime，然后通过AEM Assets处理用户档案从AEM作为Cloud Service作者进行调用。
+了解如何将自定义资产计算工作线程与AEM作为Cloud Service集成，方法是先将它们部署到Adobe I/O Runtime，然后通过AEM资产的处理用户档案从AEM作为Cloud Service作者进行调用。
 
 ### 部署到Adobe I/O Runtime
 
@@ -126,9 +126,15 @@ AEM作为Cloud Service的Asset Compute Microservices支持开发和部署自定�
 
 + [与AEM处理用户档案集成](./deploy/processing-profiles.md)
 
-## Github上的教程代码库
+## 高级
 
-教程代码库可在Github上找到，网址为：
+这些简略教程以前各章所确立的基础知识为基础，处理更高级的使用案例。
+
++ [开发一个资产计算元数据工作器](./advanced/metadata.md) ，可将元数据写回
+
+## Github上的代码库
+
+教程的代码库在Github上提供，网址为：
 
 + [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @主控分支
 
@@ -142,14 +148,13 @@ AEM作为Cloud Service的Asset Compute Microservices支持开发和部署自定�
 
 + [资产计算服务文档](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html)
 + [资产计算开发工具自述文件](https://github.com/adobe/asset-compute-devtool)
-
-### 其他代码示例
-
 + [资产计算示例工作程序](https://github.com/adobe/asset-compute-example-workers)
 
 ### API和SDK
 
 + [资产计算SDK](https://github.com/adobe/asset-compute-sdk)
    + [资产计算公域](https://github.com/adobe/asset-compute-commons)
+   + [资产计算XMP](https://github.com/adobe/asset-compute-xmp#readme)
 + [Adobe云Blobstore包装器库](https://github.com/adobe/node-cloud-blobstore-wrapper)
 + [Adobe节点提取重试库](https://github.com/adobe/node-fetch-retry)
++ [资产计算示例工作程序](https://github.com/adobe/asset-compute-example-workers)
