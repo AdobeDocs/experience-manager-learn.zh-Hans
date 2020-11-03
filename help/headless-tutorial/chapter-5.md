@@ -2,7 +2,7 @@
 title: 第5章——创作内容服务页面
 description: AEM无头教程的第5章介绍了如何根据第4章中定义的模板创建页面。 这些页面将充当JSON HTTP端点。
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 0%
@@ -20,7 +20,7 @@ AEM无头教程的第5章介绍了如何根据第4章中定义的模板创建页
 
 ## 创建事件API页
 
-1. 导航到 **[!UICONTROL AEM]>[!UICONTROL 站点]>[!DNL WKND Mobile]>[!DNL English][!DNL API]**> 。
+1. 导航到 **[!UICONTROL AEM] > [!UICONTROL 站点] > [!DNL WKND Mobile] > [!DNL English][!DNL API]**> 。
 1. **点按API页面的标签**，然后点按顶 **部操作** 栏中的“创建”按钮，并在API页面下创建新的事件API页面。
    1. 点 **按顶部** 操作栏中的创建
    1. 选择 **事件API** 模板
@@ -44,7 +44,7 @@ AEM无头教程的第5章介绍了如何根据第4章中定义的模板创建页
 1. 添 **加标签行** ，以在事件上方显示。
    1. 编辑文 **本组** 件
    1. 输入文本：
-      1. `The WKND is here.`
+      * `The WKND is here.`
 
 1. 选择要 **显示的** 事件:
    1. 在“属性”选项卡上设 **置以下** 配置：
