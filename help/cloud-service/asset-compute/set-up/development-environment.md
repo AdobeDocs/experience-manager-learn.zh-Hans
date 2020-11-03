@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Adobe资产计算项目无法与AEM SDK提供的本地AEM运行时集成，并�
 1. [安装Docker Desktop](https://www.docker.com/products/docker-desktop) ，并拉取所需的Docker图像：
 
    ```
-   $ docker pull openwhisk/action-nodejs-v10:latest
-   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
+   $ docker pull openwhisk/action-nodejs-v12:latest
+   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:latest
    ```
 
 1. [安装Visual Studio代码](https://code.visualstudio.com/download)
@@ -44,11 +44,13 @@ Adobe资产计算项目无法与AEM SDK提供的本地AEM运行时集成，并�
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
+有关简略安装说明的详细信息，请阅读以下各节。
+
 ## 安装Visual Studio代码{#vscode}
 
 [Microsoft Visual Studio代码](https://code.visualstudio.com/download) ，用于开发和调试资产计算工作程序。 虽然可 [以使用其他JavaScript兼容](../../local-development-environment/development-tools.md#set-up-the-development-ide) IDE来开发该工作器，但只能集成Visual Studio代码来调 [试Asset](../test-debug/debug.md) Compute Worker。
 
-_Visual Studio代码1.48.x+是wskdebug工作所[必需的](#wskdebug)。_
+_Visual Studio代码1.48.x+是wskdebug工作所 [必需的](#wskdebug) 。_
 
 本教程假定使用Visual Studio代码，因为它为扩展资产计算提供了最佳开发人员体验。
 
@@ -59,7 +61,7 @@ _Visual Studio代码1.48.x+是wskdebug工作所[必需的](#wskdebug)。_
 安装Docker Desktop后，请开始它并从命令行安装以下Docker图像：
 
 ```
-$ docker pull openwhisk/action-nodejs-v10:latest
+$ docker pull openwhisk/action-nodejs-v12:latest
 $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
 ```
 
@@ -91,7 +93,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 下载并安装 [Apache OpenWhisk调试npm](https://www.npmjs.com/package/@openwhisk/wskdebug) 模块，以便于本地调试资产计算工作器。
 
-_Visual Studio代码1.48.x+是wskdebug工作所[必需的](#wskdebug)。_
+_Visual Studio代码1.48.x+是wskdebug工作所 [必需的](#wskdebug) 。_
 
 ```
 $ npm install -g @openwhisk/wskdebug
