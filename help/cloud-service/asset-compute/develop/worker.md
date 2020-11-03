@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -30,18 +30,20 @@ ht-degree: 0%
 
 资产计算工作者在函数中实施资产计算SDK工作 `renditionCallback(...)` 者API合同，从概念上讲：
 
-+ __输入：__ AEM资产的原始资产二进制和参数
++ __输入：__ AEM资产的原始二进制和处理用户档案参数
 + __输出：__ 一个或多个要添加到AEM资产的演绎版
 
 ![资产计算工作人员逻辑流](./assets/worker/logical-flow.png)
 
-1. 当从AEM作者服务调用资产计算工作人员时，它将通过处理用户档案针对AEM资产。 资产的( __1a)原始二进制文件通过再现回调函数的__ 参数传递到工作器 `source` ，并且(1b)在处理用户档案中通过参数集定义的任何 ____`rendition.instructions` 参数都通过。
-1. 资产计算SDK层接受来自处理用户档案的请求，并协调自定义资产计算工作器函数的执 `renditionCallback(...)` 行，根据(1b)提供的任何参数转换( __1a__ )中提供的源二进制 ____ ，以生成源二进制的再现。
-   + 在本教程中，再现是“正在创建”的，这意味着工作者组成再现，但源二进制文件也可以发送到其他Web服务API以生成再现。
-1. 资产计算工作人员会将演绎版的二进制表示 `rendition.path` 形式保存到AEM作者服务中。
-1. 完成后，写入的二进制数 `rendition.path` 据将通过资产计算SDK传输，并通过AEM作者服务以AEM UI中可用的再现形式公开。
+1. AEM作者服务调用资产计算工作 __人员，提供资产的(1a__ )原始二进制`source` （参数）和 __(1b)处理用户档案__ （参数）中定义的任何`rendition.instructions` 参数。
+1. 资产计算SDK安排自定义资产计算元数据工作器的 `renditionCallback(...)` 函数的执行，根据资产的原始二进制(1a) __和任何参数(1b)生__ 成新的二进制再 __现__。
 
-上图阐述了面向资产计算开发人员的问题和资产计算工作人员调用的逻辑流程。 出于好奇，Asset Compute [执行的内部详细信息可用](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) ，但只应依赖公共Asset Compute SDK API合同。
+   + 在本教程中，再现是“正在创建”的，这意味着工作者组成再现，但源二进制文件也可以发送到其他Web服务API以生成再现。
+
+1. 资产计算工作者会将新再现的二进制数据保存到 `rendition.path`。
+1. 写入的二进制数 `rendition.path` 据通过Asset Compute SDK传输到AEM Author Service __，并以(4a)文本格式副本和(__ 4b) ____ （持久存储到资产的元数据节点）形式公开。
+
+上图阐述了面向资产计算开发人员的问题和资产计算工作人员调用的逻辑流程。 出于好奇，可 [以获取资产计算执行的内部详细](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) ，但只能依赖公共资产计算SDK API合同。
 
 ## 工人剖析
 
@@ -316,7 +318,7 @@ class RenditionInstructionsError extends ClientError {
 由于工作代码已完成，并且之前已在manifest.yml中注 [册和配置](./manifest.md)，因此可以使用本地资产计算开发工具执行该代码以查看结果。
 
 1. 从资产计算项目的根
-1. 执行 `app aio run`
+1. 执行 `aio app run`
 1. 等待资产计算开发工具在新窗口中打开
 1. 在选 __择文件……下拉框中__ ，选择要处理的示例图像
    + 选择要用作源资产二进制文件的示例图像文件
@@ -391,11 +393,4 @@ class RenditionInstructionsError extends ClientError {
 
 ## 疑难解答
 
-### 返回部分绘制的再现
-
-+ __错误__:当再现文件总大小较大时，再现渲染不完全呈现
-
-   ![疑难解答——返回部分绘制的再现](./assets/worker/troubleshooting__await.png)
-
-+ __原因__:在完全写入再 `renditionCallback` 现之前，工作者的函数正在退出 `rendition.path`。
-+ __解决方案__:查看自定义工作代码并确保所有异步调用都同步。
++ [返回部分绘制／损坏的再现](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
