@@ -1,13 +1,13 @@
 ---
 user-guide-title: Adobe Experience Manager 云服务教程
-user-guide-description: Adobe Experience Manager 即 Cloud Service 的教程集合。
-breadcrumb-title: AEM 即 Cloud Service 教程
+user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集合。
+breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '201'
 ht-degree: 32%
 
 ---
@@ -69,4 +69,8 @@ ht-degree: 32%
    + Deploy{#deploy}
       + [部署到Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
       + [与AEM集成](./asset-compute/deploy/processing-profiles.md)
+   + 高级{#advanced}
+      + [元数据工作程序](./asset-compute/advanced/metadata.md)
+   + [疑难解答](./asset-compute/troubleshooting.md)
+
 + [AEM Sites 开发入门- WKND 教程](./develop-wknd-tutorial.md)
