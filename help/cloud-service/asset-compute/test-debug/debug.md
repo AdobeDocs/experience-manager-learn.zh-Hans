@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -103,40 +103,9 @@ _使用wskdebug调试资产计算工作器的点进（无音频）_
 
 ## 疑难解答
 
-### 调试器不附加
-
-+ __错误__:处理启动时出错：错误：无法连接到调试目标...
-+ __原因__:Docker Desktop未在本地系统上运行。 通过查看VS代码调试控制台(视图>调试控制台)验证此错误，确认报告了此错误。
-+ __解决方案__:开始 [Docker Desktop并确认安装了必需的Docker图像](../set-up/development-environment.md#docker)。
-
-### 断点未暂停
-
-+ __错误__:当从可调试的开发工具运行资产计算工作器时，VS代码不会在断点暂停。
-
-#### VS代码调试器未连接
-
-+ __原因：__ VS代码调试器已停止／断开连接。
-+ __解决方案：__ 重新启动VS代码调试器，并通过观看VS代码调试输出控制台(“视图”>“调试控制台”)验证它是否连接。
-
-#### VS在工作器执行开始后附加的代码调试器
-
-+ __原因：__ 在点击“在开发工具中运行”之前，VS代码调 __试器__ 未连接。
-+ __解决方案：__ 通过查看VS代码的调试控制台(“视图”>“调试控制台”)，确保已附加调试器，然后从开发工具重新运行资产计算工作器。
-
-### 调试时工作者超时
-
-+ __错误__:调试控制台报告“操作将以-XXX毫秒为单位超时”，或 [者资产计算开发工具的再现预览无](../develop/development-tool.md) 限期旋转，或者无限旋转
-+ __原因__:在调试过程中，超出了manifest. [yml中定义的工](../develop/manifest.md) 作器超时。
-+ __解决方案__:在manifest.yml中临时增加工作者的超 [时时间](../develop/manifest.md) ，或加速调试活动。
-
-### 无法终止调试器进程
-
-+ __错误__: `Ctrl-C` 命令行不终止调试器进程(`npx adobe-asset-compute devtool`)。
-+ __原因__:1.3. `@adobe/aio-cli-plugin-asset-compute` x中出现错误，导致 `Ctrl-C` 无法识别为终止命令。
-+ __解决方案__:更 `@adobe/aio-cli-plugin-asset-compute` 新到版本1.4.1+
-
-   ```
-   $ aio update
-   ```
-
-   ![疑难解答-aio更新](./assets/debug/troubleshooting__terminate.png)
++ [调试器不附加](../troubleshooting.md#debugger-does-not-attach)
++ [断点未暂停](../troubleshooting.md#breakpoints-no-pausing)
++ [未附加VS代码调试器](../troubleshooting.md#vs-code-debugger-not-attached)
++ [VS在工作器执行开始后附加的代码调试器](../troubleshooting.md#vs-code-debugger-attached-after-worker-execution-began)
++ [调试时工作者超时](../troubleshooting.md#worker-times-out-while-debugging)
++ [无法终止调试器进程](../troubleshooting.md#cannot-terminate-debugger-process)
