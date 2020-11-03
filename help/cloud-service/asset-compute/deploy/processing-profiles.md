@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '630'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
    + __扩展：__ `png`
       + 将生成的再现的扩展。 设置为 `png` 因为这是工作者的Web服务支持的支持的输出格式，并在圆形剪切后面产生透明背景。
    + __端点：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/worker`
-      + 这是通过获取的工作者的URL `aio app get-url`。 确保URL点位于正确的工作区，该工作区基于AEM作为正在配置处理用户档案的Cloud Service环境。 请注意，此子域与工作区 `development` 匹配。
+      + 这是通过获取的工作者的URL `aio app get-url`。 根据AEM作为Cloud Service环境，确保URL指向正确的工作区。
       + 确保工作器URL指向正确的工作区。 AEM作为Cloud Service级，应使用舞台工作区URL，而AEM作为Cloud Service生产应使用生产工作区URL。
    + __服务参数__
       + 点按 __添加参数__
@@ -54,7 +54,7 @@ ht-degree: 1%
       + 这些键／值对会传递到资产计算工作器，并可通过JavaScript对 `rendition.instructions` 象使用。
    + __Mime 类型__
       + __包括：__`image/jpeg`, `image/png`, `image/gif`, `image/bmp``image/tiff`
-         + 这些MIME类型是工作人员的Web服务所支持的唯一类型，这限制了自定义工作人员可以处理哪些资产。
+         + 这些MIME类型是工作者npm模块中唯一的类型。 此列表限制自定义工作者将处理哪些资产。
       + __不包括：__ `Leave blank`
          + 切勿使用此服务配置使用这些MIME类型处理资产。 在这种情况下，我们只使用允许列表。
 1. 点按 __右上__ 方的“保存”
@@ -83,26 +83,9 @@ Github上提供最终的资产计算项目：
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_Github contains是项目的最终状态，它完全填充了工作者和测试用例，但不包含任何凭据，如`.env`、`.config.json`或`.aio`。_
+_Github contains是项目的最终状态，它完全填充了工作者和测试用例，但不包含任何凭据，如 `.env`、 `.config.json` 或 `.aio`。_
 
 ## 疑难解答
 
-### 资产中缺少自定义再现
-
-+ __错误：__ 已成功处理新资产和重新处理的资产，但缺少自定义演绎版
-
-#### 处理用户档案未应用于上级文件夹
-
-+ __原因：__ 资产在具有使用自定义工作器的处理用户档案的文件夹下不存在
-+ __解决方案：__ 将处理用户档案应用于资产的上级文件夹
-
-#### 处理用户档案由较低的处理用户档案替代
-
-+ __原因：__ 资产存在于应用了自定义工作用户档案的文件夹下，但在该文件夹和资产之间已应用了不使用客户工作人员的其他处理用户档案。
-+ __解决方案：__ 合并或以其他方式协调两个处理用户档案并删除中间处理用户档案
-
-### 资产处理失败
-
-+ __错误：__ 资产处理失败标记显示在资产上
-+ __原因：__ 执行自定义工作器时出错
-+ __解决方案：__ 按照使用调试 [Adobe I/O Runtime激活](../test-debug/debug.md#aio-app-logs) 的说 `aio app logs`明。
++ [AEM中资产中缺少自定义再现](../troubleshooting.md#custom-rendition-missing-from-asset)
++ [AEM中的资产处理失败](../troubleshooting.md#asset-processing-fails)
