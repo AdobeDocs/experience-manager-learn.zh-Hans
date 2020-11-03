@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 ...
 /test/
   asset-compute/
-    <worker-name>/           <--- Test suite for the worker
+    <worker-name>/           <--- Test suite for the worker, must match the yaml key for this worker in manifest.yml
         <test-case-1>/       <--- Specific test case 
             file.jpg         <--- Input file (ie. `source.path` or `source.url`)
             params.json      <--- Parameters (ie. `rendition.instructions`)
@@ -118,21 +118,5 @@ Github上提供的最终测试用例有：
 
 ## 疑难解答
 
-### 未生成任何再现
-
-测试用例在不生成再现的情况下失败。
-
-+ __错误：__ 失败：未生成任何再现。
-+ __原因：__ 由于意外错误（如JavaScript语法错误），该工作器无法生成再现。
-+ __解决方案：__ 查看测试执行 `test.log` 的 `/build/test-results/test-worker/test.log`。 找到此文件中与失败测试用例对应的部分，并查看错误。
-
-   ![疑难解答——无生成再现](./assets/test/troubleshooting__no-rendition-generated.png)
-
-### 测试生成不正确的再现
-
-测试用例无法生成不正确的再现。
-
-+ __错误：__ 失败：再现“rendition.xxx”不如预期。
-+ __原因：__ 该工作器输出的再现与测试用例 `rendition.<extension>` 中提供的再现不同。
-   + 如果预期文 `rendition.<extension>` 件的创建方式与测试用例中本地生成的再现的创建方式不完全相同，则测试可能会失败，因为位可能有一些不同。 如果测试用例中的预期再现是从开发工具中保存的(即在Adobe I/O Runtime内生成)，则位在技术上可能不同，导致测试失败，即使从人的角度看，预期和实际再现文件是相同的。
-+ __解决方案：__ 导航到，检查测试中的再现输 `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`出，并将其与测试用例中的预期再现文件进行比较。
++ [测试执行过程中未生成任何再现](../troubleshooting.md#test-no-rendition-generated)
++ [测试生成不正确的再现](../troubleshooting.md#tests-generates-incorrect-rendition)
