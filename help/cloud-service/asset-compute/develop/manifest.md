@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -122,14 +122,5 @@ packages:
 
 ## 疑难解答
 
-### YAML缩进不正确
-
-+ __错误：__ YAMLException:在X，列Y:（通过从命令中标准输出）处对映射项进行不 `aio app run` 良缩进
-+ __原因：__ Yaml文件是白色间隔的敏感文件，您的缩进可能不正确。
-+ __解决方案：__ 检查并 `manifest.yml` 确保所有缩进均正确。
-
-### memorySize限制设置得太低
-
-+ __错误：__ 本地开发服务器OpenWhiskError:PUThttps://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true返回HTTP 400（错误请求）—> &quot;请求内容格式不正确：要求失败：内存低于允许的阈值64 MB 134217728 B”
-+ __原因：__ 清单 `memorySize` 中的限制设置为低于错误消息报告的允许的最小阈值（以字节为单位）。
-+ __解决方案：__ 查看限 `memorySize` 制并确 `manifest.yml` 保这些限制均大于允许的最低阈值。
++ [YAML缩进不正确](../troubleshooting.md#incorrect-yaml-indentation)
++ [memorySize限制设置得太低](../troubleshooting.md#memorysize-limit-is-set-too-low)
