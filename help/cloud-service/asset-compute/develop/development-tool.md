@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -84,24 +84,10 @@ _在开发工具中运行资产计算工作的点进（无音频）_
 
 ## 疑难解答
 
-### 源文件下拉框不正确{#troubleshooting__dev-tool-application-cache}
-
-资产计算开发工具可能会进入其提取旧数据的状态，在显示错误项的源文件下拉 __列表中__ ，这一点最为明显。
-
-+ __错误：__ 源文件下拉列表显示不正确的项目。
-+ __原因：__ 过时的缓存浏览器状态导致
-+ __解决方案：__ 在您的浏览器中，完全清除浏览器选项卡的“应用程序状态”、浏览器缓存、本地存储和服务工作者。
-
-### 缺少或无效devToolToken查询参数{#troubleshooting__devtooltoken}
-
-+ __错误：__ 资产计算开发工具中的“未授权”通知
-+ __原因：__`devToolToken` 缺失或无效
-+ __解决方案：__ 关闭“资产计算开发工具”浏览器窗口，终止通过命令启动的任何正在运行的 `aio app run` 开发工具进程，并（使用）重新开始 `aio app run`开发工具。
-
-### 无法删除源文件{#troubleshooting__remove-source-files}
-
-+ __错误：__ 无法从开发工具UI中删除添加的源文件
-+ __原因：__ 此功能尚未实现
-+ __解决方案：__ 使用中定义的凭据登录到您的云存储提供 `.env`商。 找到开发工具使用的容器(也在中指定 `.env`)，导航到源文 __件夹__ ，并删除任何源图像。 如果删除的源文件继续显示在下 [拉列表中](#troubleshooting__dev-tool-application-cache) ，您可能需要执行源文件下拉列表中概述的步骤不正确，因为这些源文件可能在开发工具“应用程序状态”中本地缓存。
-
-   ![Microsoft Azure Blob存储](./assets/development-tool/troubleshooting__remove-source-files.png)
++ [YAML缩进不正确](../troubleshooting.md#incorrect-yaml-indentation)
++ [memorySize限制设置得太低](../troubleshooting.md#memorysize-limit-is-set-too-low)
++ [开发工具无法开始，因为缺少private.key](../troubleshooting.md#missing-private-key)
++ [源文件下拉框不正确](../troubleshooting.md#source-files-dropdown-incorrect)
++ [缺少或无效devToolToken查询参数](../troubleshooting.md#missing-or-invalid-devtooltoken-query-parameter)
++ [无法删除源文件](../troubleshooting.md#unable-to-remove-source-files)
++ [返回部分绘制／损坏的再现](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
