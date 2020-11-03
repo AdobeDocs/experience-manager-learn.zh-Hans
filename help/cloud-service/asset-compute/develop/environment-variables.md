@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -113,8 +113,4 @@ AWS_REGION=us-east-1
 
 ## 疑难解答
 
-### 由于缺少private.key，资产计算本地开发工具无法开始
-
-+ __错误：__ 本地开发服务器错误：验证私钥文件中缺少所需文件……. (通过标准输出命令 `aio app run` )
-+ __原因：__ 文 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 件中 `.env` 的值不指向当前用户 `private.key` 或 `private.key` 当前用户不能读取。
-+ __解决方案：__ 查看文 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 件中 `.env` 的值，并确保它包含文件系统上的完整 `private.key` 绝对路径。
++ [开发工具无法开始，因为缺少private.key](../troubleshooting.md#missing-private-key)
