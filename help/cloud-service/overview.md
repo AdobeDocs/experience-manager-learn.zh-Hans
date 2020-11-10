@@ -1,48 +1,43 @@
 ---
-title: Adobe Experience ManagerTutorials
+title: Adobe Experience Manager as Cloud Service 教程
 description: 作为Cloud Service为Adobe Experience Manager(AEM)提供的教程集
 sub-product: 站点，云管理器，基础，资产
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 06632b90e5cdaf80b9343e5a69ab9c735d4a70f1
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
 
 # 概述 {#overview}
 
-Adobe Experience Manager (AEM) 现已作为云服务提供。AEM作为Cloud Service，以过去的投资和创新为基础，推出下一代Experience Manager产品线，保留和扩展所有使用案例和功能。
+Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM作为Cloud Service，以过去的投资和创新为基础，推出下一代Experience Manager产品线，保留和扩展所有使用案例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
 ## 新增功能
 
-* **[资产计算微服务可扩展性（教程）](./asset-compute/overview.md)**
+* **[asset computemicroservices可扩展性（教程）](./asset-compute/overview.md)**
 
-   <br>
-   *了解如何开发资产计算工作流以生成自定义资产演绎版*
+   *了解如何开发Asset compute工具以生成自定义资产演绎版*
 
 * **[将对AEM的访问配置为Cloud Service（教程）](./accessing/overview.md)**
 
-   <br>
    *了解如何在Adobe Admin Console配置IMS用户，以便他们能够访问AEM*
 
 * **[将AEM作为Cloud Service进行调试（教程）](./debugging/cloud-service/overview.md)**
 
-   <br>
    *了解如何将AEM作为Cloud Service进行调试*
 
 * **[调试AEM SDK（教程）](./debugging/aem-sdk-local-quickstart/overview.md)**
 
-   <br>
    *探索在AEM上作为Cloud ServiceSDK的本地快速启动调试应用程序时使用的各种工具*
 
 * **[本地开发环境设置（教程）](./local-development-environment/overview.md)**
 
-   <br>
    *了解如何将AEM的本地开发机器设置为Cloud Service开发*
 
 ## 员工挑选
@@ -91,5 +86,5 @@ Adobe Experience Manager (AEM) 现已作为云服务提供。AEM作为Cloud Serv
 
 ## 其他资源
 
-* [体验联盟——探索Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League-探索Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [Adobe Experience Manager作为Cloud Service文档](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/landing/home.html)
