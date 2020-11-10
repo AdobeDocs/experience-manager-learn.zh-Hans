@@ -1,6 +1,6 @@
 ---
-title: 开发资产计算元数据工作器
-description: 了解如何创建资产计算元数据工作器，该工作器派生图像资产中最常用的颜色，并将颜色名称写回AEM中资产的元数据。
+title: 开发Asset compute元数据工作者
+description: 了解如何创建Asset compute元数据工作器，该工作器派生图像资产中最常用的颜色，并将颜色名称写回AEM中资产的元数据。
 feature: asset-compute
 topics: metadata, development
 version: cloud-service
@@ -10,17 +10,17 @@ doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: c2a8e6c3ae6dcaa45816b1d3efe569126c6c1e60
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1434'
 ht-degree: 1%
 
 ---
 
 
-# 开发资产计算元数据工作器
+# 开发Asset compute元数据工作者
 
-自定义资产计算工作者可以生成XMP(XML)数据，这些数据将发送回AEM并作为元数据存储在资产上。
+自定义Asset compute工作者可以生成XMP(XML)数据，这些数据将发回AEM并作为元数据存储在资产上。
 
 常见用例包括：
 
@@ -32,27 +32,27 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/327313?quality=12&learn=on)
 
-在本教程中，我们将创建一个资产计算元数据工作器，它派生图像资产中最常用的颜色，并将颜色名称写回AEM中资产的元数据。 虽然工作者本身是基本的，但本教程使用它来探索如何使用资产计算工作者将元数据作为Cloud Service写回AEM中的资产。
+在本教程中，我们将创建一个Asset compute元数据工作器，它派生出图像资产中最常用的颜色，并将颜色名称写回AEM中资产的元数据。 虽然工作者本身是基本的，但本教程使用它来探索如何使用Asset compute工作者将元数据作为Cloud Service写回到AEM中的资产。
 
-## 资产计算元数据工作器调用的逻辑流
+## asset compute元数据工作器调用的逻辑流
 
-资产计算元数据工作器的调用与生成工作 [器的二进制再现的调用几乎相同](../develop/worker.md)，其主要区别是返回类型是XMP(XML)再现，其值也写入资产的元数据。
+asset compute元数据Worker的调用与生成Worker的 [二进制再现的调用几乎相同](../develop/worker.md)，其主要区别是返回类型是XMP(XML)再现，其值也写入资产的元数据。
 
-资产计算工作者在函数中实施资产计算SDK工作 `renditionCallback(...)` 者API合同，从概念上讲：
+asset compute工作者实施Asset computeSDK工作者API合同，在功 `renditionCallback(...)` 能中，从概念上讲是：
 
 + __输入：__ AEM资产的原始二进制和处理用户档案参数
 + __输出：__ XMP(XML)再现作为再现保留到AEM资产以及资产的元数据
 
-![资产计算元数据工作流逻辑流](./assets/metadata/logical-flow.png)
+![asset compute元数据工作者逻辑流](./assets/metadata/logical-flow.png)
 
-1. AEM作者服务调用资产计算元数据工作 __器，提供资产的(1a__ )原始二进制文件 __和(1b)处理用户档案中定__ 义的任何参数。
-1. 资产计算SDK安排自定义资产计算元数据工作器功 `renditionCallback(...)` 能的执行，根据资产的二进制(1a)和任何处理用户档案参数( __1b)推导XMP(__ XML)再现 __。__
-1. 资产计算工作者将XMP(XML)表示形式保存到 `rendition.path`。
-1. 写入的XMP(XML)数据 `rendition.path` 通过Asset Compute SDK传输到AEM Author Service，并以(4a)文本再现和(4b) ________ 持久保留到资产的元数据节点的形式显示它。
+1. AEM作者服务调用Asset compute元数据工作 __器，提供资产的(1a__ )原始二进制文件 __和(1b)处理用户档案__ 中定义的任何参数。
+1. asset computeSDK安排自定义用户档案元数据工作器功能的执 `renditionCallback(...)` 行，根据资产的二进制(1a)和任何处理Asset compute参数( __1b)导出XMP__ (XML)再现 __。__
+1. asset compute工作者将XMP(XML)表示形式保存到 `rendition.path`。
+1. 写入的XMP(XML)数据 `rendition.path` 通过Asset computeSDK传输到AEM作者服务，并以(4a)文本再现形式 __显示它，(4b)______ 保留到资产的元数据节点。
 
 ## 配置manifest.yml{#manifest}
 
-必须在manifest.yml中注册所有资 [产计算工作器](../develop/manifest.md)。
+所有Asset compute工作者都必须在manifest. [yml中注册](../develop/manifest.md)。
 
 打开项目并添 `manifest.yml` 加配置新工作者的工作者条目，在这种情况下 `metadata-colors`。
 
@@ -87,11 +87,11 @@ The `limits` and `require-adobe-auth` Designed by worker. 在此工作器中， 
 
 ## 开发元数据工作器{#metadata-worker}
 
-在资产计算项目中，为新工作者在定义的清单。yml [路径下为新工作者创建新的元数据工作者](#manifest)JavaScript文件，网址为 `/actions/metadata-colors/index.js`
+在Asset compute项目中为新工作者在定义的清单。yml路径 [下为新工作者创建新的元数据工作者](#manifest)JavaScript文件，网址为 `/actions/metadata-colors/index.js`
 
 ### 安装npm模块
 
-安装将在此[资产计算工作器中使用的额](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions)[外npm模块(@adobe](https://www.npmjs.com/package/get-image-colors)/asset-compute-xmp [、get-image-colors](https://www.npmjs.com/package/color-namer)和color-namer)。
+安装将在此[Asset compute工作器中使用的额外npm](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions)模块(@adobe [/asset-compute-xmp](https://www.npmjs.com/package/get-image-colors)、 [get-image-colors](https://www.npmjs.com/package/color-namer)和color-namer)。
 
 ```
 $ npm install @adobe/asset-compute-xmp
@@ -180,14 +180,14 @@ function getColorName(colorsFamily, color) {
 
 ## 在本地运行元数据工作器{#development-tool}
 
-工作代码完成后，可以使用本地资产计算开发工具执行它。
+工作代码完成后，可以使用本地Asset compute开发工具执行它。
 
-由于我们的资产计算项目包含两个工作 [者(前一个](../develop/worker.md) 圆圈再现 `metadata-colors`[和此工作者](../develop/development-tool.md) )，因此资产计算开发工具的用户档案定义列表执行用户档案将同时为这两个工作者执行。 第二个用户档案定义指向新工 `metadata-colors` 作者。
+由于我们的Asset compute项目包含两个工作 [者(前一个圆](../develop/worker.md)`metadata-colors` 形再现和此工作者 [)，因此](../develop/development-tool.md) Asset compute开发工具的用户档案定义将为这两个工作者执行用户档案。 第二个用户档案定义指向新工 `metadata-colors` 作者。
 
 ![XML元数据再现](./assets/metadata/metadata-rendition.png)
 
-1. 从资产计算项目的根
-1. 执 `aio app run` 行以开始资产计算开发工具
+1. 从Asset compute项目的根
+1. 执 `aio app run` 行开始Asset compute开发工具
 1. 在选 __择文件……下拉__ ，选取要处 [理的示例图](../assets/samples/sample-file.jpg) 像
 1. 在第二个用户档案定义配置(指向该 `metadata-colors` 工作器) `"name": "rendition.xml"` 中，当此工作器生成XMP(XML)再现时更新。 或者，也可以添 `colorsFamily` 加参数(支 `basic`持 `hex`的值、 `html`、 `ntc`、 `pantone``roygbiv`、、)。
 
@@ -208,9 +208,9 @@ function getColorName(colorsFamily, color) {
 
 ## 测试工作人员{#test}
 
-可以使用与二进制演绎版相同的 [资产计算测试框架来测试元数据工作器](../test-debug/test.md)。 唯一的区别是 `rendition.xxx` 测试用例中的文件必须是所需的XMP(XML)再现。
+可以使用与二进制再现相 [同的Asset compute测试框架来测试元数据工作器](../test-debug/test.md)。 唯一的区别是 `rendition.xxx` 测试用例中的文件必须是所需的XMP(XML)再现。
 
-1. 在资产计算项目中创建以下结构：
+1. 在Asset compute项目中创建以下结构：
 
    ```
    /test/asset-compute/metadata-colors/success-pantone/
@@ -239,7 +239,7 @@ function getColorName(colorsFamily, color) {
    <?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:wknd="https://wknd.site/assets/1.0/"><rdf:Description><wknd:colors><rdf:Seq><rdf:li>Silver</rdf:li><rdf:li>Black</rdf:li><rdf:li>Outer Space</rdf:li></rdf:Seq></wknd:colors><wknd:colorsFamily>pantone</wknd:colorsFamily></rdf:Description></rdf:RDF>
    ```
 
-5. 从资 `aio app test` 产计算项目的根目录执行所有测试套件。
+5. 从Asset compute `aio app test` 项目的根执行以执行所有测试套件。
 
 ### 将员工部署到Adobe I/O Runtime{#deploy}
 
@@ -304,15 +304,15 @@ $ aio app deploy
 1. 导航到该文件夹或子文件夹，处理用户档案将应用到
 1. 将新图像（JPEG、PNG、GIF或SVG）上传到文件夹，或使用更新的“处理”用户档案重新处理现 [有图像](#processing-profile)
 1. 处理完成后，选择资产，然后点按顶 __部操作__ 栏中的属性以显示其元数据
-1. 检查从自 `Colors Family` 定义 `Colors` Asset Compute [元数据工作器中](#metadata-schema) 回写的元数据，以及元数据字段。
+1. 查看从自 `Colors Family` 定 `Colors` 义Asset compute [元数据工作](#metadata-schema) 器中回写的元数据的元数据和元数据字段。
 
-此颜色元数据现在可以写回二进制文件，作为XMP数据(在下一个XMP回写上)，并通过全文搜索帮助实现资产发现功能。
+使用写入资产元数据的颜色元数据(在资源上 `[dam:Asset]/jcr:content/metadata` )，可以通过搜索使用这些术语索引此元数据，从而提高资产发现能力，并且如果对资产调用DAM元数据写回工作流，甚至可以将这些元数据写回 __资产的二进制__ 。
 
 ### AEM Assets的元数据再现
 
 ![AEM Assets元数据再现文件](./assets/metadata/cqdam-metadata-rendition.png)
 
-资产计算元数据工作人员生成的实际XMP文件也会作为离散格式副本存储在资产上。 通常不使用此文件，而是使用对资产元数据节点应用的值，但AEM中提供了来自工作人员的原始XML输出。
+由Asset compute元数据工作器生成的实际XMP文件也会作为离散再现存储在资产上。 通常不使用此文件，而是使用对资产元数据节点应用的值，但AEM中提供了来自工作人员的原始XML输出。
 
 ## Github上的元数据颜色工作代码
 
