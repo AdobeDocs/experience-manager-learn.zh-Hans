@@ -5,10 +5,10 @@ description: 为初学者和经验丰富的AEM Forms开发人员收集AEM Forms�
 seo-description: 为初学者和经验丰富的AEM Forms开发人员收集AEM Forms资源
 sub-product: 表单
 translation-type: tm+mt
-source-git-commit: b085a2c75f8e0b4860d503774ea01a108773ad09
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '303'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -21,18 +21,15 @@ Adobe Experience Manager(AEM)提供易于使用的解决方案，用于创建、
 
 * **[调用表单数据模型服务步骤中处理错误消息](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
 
-   <br>
    *工作流模型中的变量是根据其数据类型存储值的方法*
 
 * **[交互通信文档（视频）中的多序列图](./interactive-communications/multiseriescharts.md)**
 
-   <br>
    *在同一图表中绘制多个系列。多个系列图表通常与线图、条形图、柱状图类型相关联使用。*
 
 * **[创建可重用的工作流模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
-   <br>
-   _创建不绑定到特定表单的工作流模型_
+   *创建不绑定到特定表单的工作流模型*
 
 ## 员工挑选
 
@@ -82,12 +79,12 @@ Adobe Experience Manager(AEM)提供易于使用的解决方案，用于创建、
 
 ## 其他资源
 
-* [体验联盟——探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League-探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Sites创作文档](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
 * [AEM Sites开发文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites管理文档](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
 * [AEM Sites部署文档](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
-* [AEM作为Cloud ServiceTutorials](/help/cloud-service/overview.md)
-* [AEM AssetsTutorials](/help/assets/overview.md)
-* [AEM FormsTutorials](/help/forms/overview.md)
-* [AEM基础Tutorials](/help/foundation/overview.md)
+* [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
+* [AEM Assets 教程](/help/assets/overview.md)
+* [AEM Forms 教程](/help/forms/overview.md)
+* [AEM Foundation 教程](/help/foundation/overview.md)
