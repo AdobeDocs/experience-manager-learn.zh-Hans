@@ -1,13 +1,13 @@
 ---
-title: AEM基础视频和Tutorials
-seo-title: AEM基础视频和Tutorials
-description: 'Adobe Experience Manager基金会的视频和教程集合。 '
+title: AEM Foundation 视频和教程
+seo-title: AEM Foundation 视频和教程
+description: 'Adobe Experience Manager Foundation 的视频和教程集合。 '
 seo-description: Adobe Experience Manager基金会的视频和教程集
 translation-type: tm+mt
-source-git-commit: e19e177589df7ce6a56c0be3f9d590cbca2f8ce7
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '261'
-ht-degree: 1%
+ht-degree: 18%
 
 ---
 
@@ -19,22 +19,15 @@ Adobe Experience Manager为AEM Sites的用户提供了一套通用的功能， [
 ## 新增功能
 
 * **[在AEM中使用工作流管理（视频）](./workflow/use-workflow-management.md)**
-
-   <br>
-   *AEM提供运行工作流的可视性，并简化定义[!DNL Workflow]管理。*
+   *AEM提供运行工作流的可视性，并简化定义 [!DNL Workflow] 管理。*
 
 * **[了解AEM的Cloud Manager（视频）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   <br>
-
    *Cloud Manager for AEM可轻松管理、检查和自助AEM环境。*
 
 * **[设置公钥和私钥以与AdobeI/O一起使用（教程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   <br>
-   *了解如何使用AEM和AdobeI/O[!DNL openssl]生成密钥和密钥库。*
+   *了解如何使用AEM和AdobeI/O [!DNL openssl] 生成密钥和密钥库。*
 
 * **[使用Cloud Manager CI/CD管道（视频）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   <br>
-
    *了解如何使用Cloud Manager的CI/CD管道来确保安全一致的部署。*
 
 ## 员工挑选
@@ -85,8 +78,8 @@ Adobe Experience Manager为AEM Sites的用户提供了一套通用的功能， [
 
 ## 其他资源
 
-* [体验联盟——探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM作为Cloud ServiceTutorials](/help/cloud-service/overview.md)
-* [AEM Sites视频和Tutorials](/help/sites/overview.md)
-* [AEM Assets视频和Tutorials](/help/assets/overview.md)
-* [AEM Forms视频和Tutorials](/help/forms/overview.md)
+* [Experience League-探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
+* [AEM Sites 视频和教程](/help/sites/overview.md)
+* [AEM Assets 视频和教程](/help/assets/overview.md)
+* [AEM Forms 视频和教程](/help/forms/overview.md)
