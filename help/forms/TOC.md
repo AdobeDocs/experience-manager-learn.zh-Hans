@@ -6,9 +6,9 @@ user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员
 breadcrumb-title: AEM Forms 教程
 index: y
 translation-type: tm+mt
-source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
+source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '898'
 ht-degree: 6%
 
 ---
@@ -94,7 +94,18 @@ ht-degree: 6%
    + [添加自定义列](inbox-customization/add-married-column.md)
    + [使用美观模板](inbox-customization/use-sightly-template.md)
 
-
++ 存储和检索自适应表单{#store-and-retrieve-af-with-2fa}
+   + [简介](store-and-retrieve-af-with-2fa/introduction.md)
+   + [配置数据源](store-and-retrieve-af-with-2fa/configure-data-source.md)
+   + [存储表单附件](store-and-retrieve-af-with-2fa/store-form-attachments.md)
+   + [存储表单数据](store-and-retrieve-af-with-2fa/store-form-data.md)
+   + [创建Servlet](store-and-retrieve-af-with-2fa/create-servlet.md)
+   + [使用保存的数据渲染表单](store-and-retrieve-af-with-2fa/retrieve-saved-form.md)
+   + [创建客户端库](store-and-retrieve-af-with-2fa/create-client-lib.md)
+   + [与OTP服务集成](store-and-retrieve-af-with-2fa/verify-users-with-otp.md)
+   + [创建主表单](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
+   + [创建MyAccount表单](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
+   + [部署示例](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
 + 以CSV格式导出提交的数据{#export-submitted-data-csv-format}
    + [导出提交的数据](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 表单{#html5-forms}
@@ -109,7 +120,7 @@ ht-degree: 6%
    + [创建和配置自适应表单](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [为单个签署方配置自适应表单](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [为两个签署方配置自适应表单](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
-   + [配置自动化Forms转换服务](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
+   + [配置Automated forms conversion服务](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [将PDF表单转换为自适应表单](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [配置转换的自适应表单](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [将XDP模板与Adobe Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
