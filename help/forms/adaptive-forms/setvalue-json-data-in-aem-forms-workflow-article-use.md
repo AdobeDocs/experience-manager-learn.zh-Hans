@@ -12,7 +12,7 @@ activity: setup
 version: 6.4
 discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
 translation-type: tm+mt
-source-git-commit: f07680e73316efb859a675f4b2212d8c3e03f6a0
+source-git-commit: 233ad7184cb48098253a78c07a3913356ac9e774
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
@@ -46,7 +46,7 @@ afData.afUnboundData.data.initialStep,N
 
 * [下载和部署DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-*下[载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 这是自定义OSGI捆绑包，它允许您在提交的json数据中设置元素的值。
+* [下载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 这是自定义OSGI捆绑包，它允许您在提交的json数据中设置元素的值。
 
 * [下载并解压zip文件的内容](assets/set-value-jsondata.zip)
    * 将浏览器指向包 [管理器](http://localhost:4502/crx/packmgr/index.jsp)
@@ -63,10 +63,8 @@ afData.afUnboundData.data.initialStep,N
 * 请注意，第一个面板中的字段被禁用。
 * 请注意，现在可以看到批准或拒绝请求的面板。
 
-
-
 >[!NOTE]
-
+>
 >由于我们使用用户用户档案预填充自适应表单，因此请确保管理员用 [户用户档案信息 ](http://localhost:4502/security/users.html)。 请至少确保已设置FirstName、LastName和“电子邮件”字段值。
 >您可以从此处为com.aemforms.setvalue.core.SetValueInJson启用记录器，以启 [用调试日志](http://localhost:4502/system/console/slinglog)
 
