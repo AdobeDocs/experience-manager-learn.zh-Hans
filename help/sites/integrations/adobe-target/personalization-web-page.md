@@ -1,6 +1,6 @@
 ---
 title: 全网页体验的个性化
-description: 了解如何创建活动，使用Adobe Target将托管在AEM上的站点页面重定向到新页面。
+description: 了解如何创建目标活动，以使用Adobe Target将AEM网站页面重定向到新页面。
 feature: targeting
 topics: integrations, authoring, personalization, activity, offers
 audience: all
@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6353
 thumbnail: 6353-personalization-web-page.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,12 @@ ht-degree: 0%
 
 了解如何创建活动，使用Adobe Target将托管在AEM上的站点页面重定向到新页面。
 
-在目标中创建活动之前，您需要进行设置：
+## 前提条件
 
-1. [集成Experience Platform Launch和AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
+要个性化AEM网站的完整页面，必须完成以下设置：
+
+1. [将Adobe Target添加到AEM网站](./add-target-launch-extension.md)
+1. [从Launch触发Adobe Target电话](./load-and-fire-target.md)
 
 ## 方案概述
 
