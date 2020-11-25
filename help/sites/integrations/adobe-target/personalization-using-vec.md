@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,12 @@ ht-degree: 0%
 
 了解如何使用Visual Experience Composer(VEC)创建A/B测试目标活动。
 
-在目标中创建活动之前，您需要进行设置：
+## 前提条件
 
-1. [集成Experience Platform Launch和AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-2. [使用Cloud Services将Adobe Experience Manager与Adobe Target整合](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/target/setup-aem-target-cloud-service.html)
+要在AEM网站上使用VEC，必须完成以下设置：
+
+1. [将Adobe Target添加到AEM网站](./add-target-launch-extension.md)
+1. [从Launch触发Adobe Target电话](./load-and-fire-target.md)
 
 ## 方案概述
 
@@ -33,7 +35,10 @@ WKND站点主页以信息卡的形式显示本地活动或在城市周围执行�
 
 ## 使用Visual Experience Composer(VEC)创建A/B测试的步骤
 
-1. 登录Adobe Target并导航到活动选项卡
+1. 登录 [Adobe Experience Cloud](https://experience.adobe.com/)，点按 __目标__，导航到 __活动选项卡__
+
+   + 如果未看到目标 __Experience Cloud__ ，请确保在右上方的组织切换器中选择了正确的Adobe组织，并且您的用户已被授予访问Adobe Admin Console目标的 [权限](https://adminconsole.adobe.com/)。
+
 1. 单击 **“创建活动** ”按钮，然后选择 **A/B测试活动** 。
 
    ![A/B活动](assets/ab-target-activity.png)
@@ -82,5 +87,5 @@ WKND站点主页以信息卡的形式显示本地活动或在城市周围执行�
 
 ## 支持链接
 
-* [Adobe Experience Cloud调试器- Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
-* [Adobe Experience Cloud调试器- Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Adobe Experience Cloud调试器- Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud调试器- Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
