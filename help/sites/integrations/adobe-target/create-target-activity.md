@@ -10,24 +10,28 @@ version: cloud-service
 kt: 6351
 thumbnail: 41246.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
 
-# 使用体验片段创建Adobe Target活动 {#target-activity-experience-fragment}
+# 使用体验片段Adobe Target创建活动 {#target-activity-experience-fragment}
 
 了解如何使用AEM体验片段优惠创建和测试Adobe Target活动。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41246?quality=12&learn=on)
 
-在目标中创建活动之前，您需要进行设置：
+## 前提条件
 
-1. [集成Experience Platform Launch和AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-2. [使用Cloud Services将Adobe Experience Manager与Adobe Target整合](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/target/setup-aem-target-cloud-service.html)
+要使用体验片段优惠创建Adobe Target活动，必须完成以下设置：
+
+1. [将Adobe Target添加到AEM网站](./add-target-launch-extension.md)
+1. [从Launch触发Adobe Target电话](./load-and-fire-target.md)
+1. [将AEM作者服务与Adobe Target](./setup-aem-target-cloud-service.md)
+1. [将AEM Experience Fragments导出到Adobe Target](./export-experience-fragment-target.md)
 
 ## 支持链接
 
