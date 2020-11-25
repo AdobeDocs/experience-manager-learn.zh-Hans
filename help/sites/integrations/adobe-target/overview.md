@@ -1,6 +1,6 @@
 ---
 title: AEM和Adobe Target概述
-description: 了解如何使用Adobe Experience Manager作为Cloud Service和Adobe Target来创建和提供个性化体验
+description: 了解如何利用Adobe Experience Manager作为Cloud Service和Adobe Target来创造和提供个性化体验。
 feature: launch, experience-fragments, core-components, data-layer
 topics: integrations, personalization, administration, development
 audience: all
@@ -10,27 +10,40 @@ version: cloud-service
 kt: 6043
 thumbnail: 41241.jpg
 translation-type: tm+mt
-source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
 
-# AEM和Adobe Target概述 {#overview-aem-target}
+# AEM和Adobe Target
 
-AEM和目标都是功能看似重叠的强大解决方案。 客户有时难以理解如何以及何时结合使用这些产品来提供个性化体验。 为了为每个最终用户提供优化的体验，组织内的不同团队应密切协作并定义谁负责。
+Adobe Experience Manager(AEM)和Adobe Target是强大的解决方案，其附带的功能强大，不能误解为竞争。 客户有时难以理解如何以及何时结合使用这些产品来提供个性化体验。 为了为每个最终用户提供优化的体验，组织内的不同团队应密切协作并定义谁负责。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41241?quality=12&learn=on)
 
-在此视频中，我们介绍AEM和目标的三种不同情景，这有助于您了解最适合您的组织的方案。
+在此视频中，我们讨论了三种使用AEM和目标的方法，并帮助您了解哪种方法最适合您的组织。
 
-* 方案1:使用AEM Experience Fragments实现个性化
-* 方案2:使用视觉体验书写器实现个性化
-* 方案3:全网页体验的个性化
+* __方案1:__ 使用AEM体验片段优惠实现个性化
 
-**要实施此方案，您需要：**
+   1. [将Adobe Target添加到AEM网站](./add-target-launch-extension.md)
+   1. [从Launch触发Adobe Target电话](./load-and-fire-target.md)
+   1. [将AEM作者服务与Adobe Target](./setup-aem-target-cloud-service.md)
+   1. [将AEM Experience Fragments导出到Adobe Target](./export-experience-fragment-target.md)
+   1. [使用体验片段优惠个性化网页的一部分](./create-target-activity.md)
 
-* 使用Launch和AdobeI/O集成AEM和Adobe Target
-* AEM和Adobe Target使用传统Cloud Services
+* __方案2:__ 使用可视体验书写器(VEC)实现个性化
+
+   1. [将Adobe Target添加到AEM网站](./add-target-launch-extension.md)
+   1. [从Launch触发Adobe Target电话](./load-and-fire-target.md)
+   1. [使用Visual Experience Composer个性化网页的一部分](./personalization-using-vec.md)
+
+* __方案3:__ 全网页体验的个性化
+
+   1. [将Adobe Target添加到AEM网站](./add-target-launch-extension.md)
+   1. [从Launch触发Adobe Target电话](./load-and-fire-target.md)
+   1. [个性化完整的网页体验](./personalization-web-page.md)
+
+
