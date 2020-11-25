@@ -4,7 +4,7 @@ user-guide-description: Adobe Experience Manager Sites 的视频和教程集合�
 breadcrumb-title: AEM Sites 教程
 sub-product: 站点
 translation-type: tm+mt
-source-git-commit: 55beee99b91c44f96cd37d161bb3b4ffe38d2687
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 14%
@@ -107,7 +107,7 @@ ht-degree: 14%
       + [向启动项属性添加目标扩展](integrations/adobe-target/add-target-launch-extension.md)
       + [加载并触发目标呼叫](integrations/adobe-target/load-and-fire-target.md)
       + [创建Adobe TargetCloud Service帐户](integrations/adobe-target/setup-aem-target-cloud-service.md)
-      + [将体验片段导出到Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
+      + [将体验片段导出至Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
       + [使用体验片段目标创建活动优惠](integrations/adobe-target/create-target-activity.md)
       + [使用视觉体验书写器实现个性化](integrations/adobe-target/personalization-using-vec.md)
       + [全网页体验的个性化](integrations/adobe-target/personalization-web-page.md)
