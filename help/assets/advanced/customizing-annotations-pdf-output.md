@@ -23,7 +23,7 @@ AEM支持将批注的输出自定义为PDF。
 
 ## PDF批注sling:OsgiConfig定义
 
-要自定义PDF批注，请在AEM **项目下创建一个sling:OsgiConfig** 节点，该节点位于
+要自定义PDF批注，请在AEM项目下创建&#x200B;**sling:OsgiConfig**&#x200B;节点
 
 `/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` 并根据需要调整值：
 
