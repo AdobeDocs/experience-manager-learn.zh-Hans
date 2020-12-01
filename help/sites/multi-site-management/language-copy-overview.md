@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 语言副本简介 {#introduction-language-copy}
+# 语言副本简介{#introduction-language-copy}
 
 获取如何使用AEM Sites的语言副本创建多语言站点的概述。
 
