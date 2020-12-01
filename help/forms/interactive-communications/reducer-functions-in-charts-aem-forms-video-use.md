@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms中使用减速器函数——图表{#using-reducer-functions-in-aem-forms-charts}
+# 使用AEM Forms中的Reducer函数——图表{#using-reducer-functions-in-aem-forms-charts}
 
 Reducer函数用于聚合或组图表中显示的值。
 
