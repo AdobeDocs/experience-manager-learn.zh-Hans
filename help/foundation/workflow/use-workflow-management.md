@@ -28,12 +28,12 @@ ht-degree: 0%
 + 在“列表视图”设置下启用工作流元数据。
 + 从列表视图轻松导航到工作流时间轴
 + 复制和粘贴现有OOTB工作流以自定义或覆盖默认功能
-+ 对和执行快速发 [!DNL Workflow Models] 布 [!DNL Launchers]
-+ 管理和的 [!DNL Workflow Models] 发布 [!DNL Launchers]。
++ 对[!DNL Workflow Models]和[!DNL Launchers]执行快速发布
++ 管理[!DNL Workflow Models]和[!DNL Launchers]的发布。
 + 尝试编辑OOTB工作流模型或启动器时，用警告工具提示通知用户。
 + 能够恢复对OOTB工作流模型或启动器所做的更改。
 
-此视频用 [!DNL Workflow models] 于演示此功能集，但也适用于 [!DNL AEM Launchers]。
+此视频使用[!DNL Workflow models]演示此功能集，但它们也适用于[!DNL AEM Launchers]。
 
 
 >[!NOTE]
