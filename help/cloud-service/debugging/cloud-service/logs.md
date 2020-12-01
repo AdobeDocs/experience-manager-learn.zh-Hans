@@ -33,13 +33,13 @@ ht-degree: 1%
 
 AEM作为Cloud Services不支持自定义日志文件，但支持自定义日志记录。
 
-要使AEM中的Java日志作为Cloud Service(通 [过Cloud Manager](#cloud-manager)[或AdobeI/O CLI)可用](#aio)，必须写入自定义日志语句 `error.log`。 写入到自定义命名日志(如 `example.log`)的日志将不能作为Cloud Service从AEM访问。
+要使AEM中的Java日志作为Cloud Service(通过[云管理器](#cloud-manager)或[Adobe I/OCLI](#aio))可用，必须在`error.log`中写入自定义日志语句。 写入到自定义命名日志（如`example.log`）的日志将不能作为Cloud Service从AEM访问。
 
 ## AEM作者和发布服务日志
 
 AEM作者服务和发布服务都提供AEM运行时服务器日志：
 
-+ `aemerror` 是Java错误日志(位于AEM `/crx-quickstart/error.log` SDK本地快速启动中)。 以下是针对每个 [环境类型的自定](#log-levels) 义日志记录器的推荐日志级别：
++ `aemerror` 是Java错误日志(可在AEM  `/crx-quickstart/error.log` SDK本地快速启动上找到)。以下是针对每个环境类型的自定义日志程序的[推荐的日志级别](#log-levels):
    + 开发: `DEBUG`
    + 暂存: `WARN`
    + 生产: `ERROR`
@@ -68,13 +68,13 @@ Adobe云管理器允许通过环境的“下载日志”操作按日下载日志
 
 这些日志可通过任何日志分析工具进行下载和检查。
 
-## AdobeI/O CLI（带有Cloud Manager插件）{#aio}
+## Adobe I/OCLI with Cloud Manager plugin{#aio}
 
-Adobe云管理器支持通过Cloud ServiceI/O CLI以 [AdobeI/O CLI的形式](https://github.com/adobe/aio-cli) , [通过AdobeI/O CLI的Cloud Manager插件访问AEM作为日志](https://github.com/adobe/aio-cli-plugin-cloudmanager)。
+Adobe云管理器支持通过[Adobe I/OCLI](https://github.com/adobe/aio-cli)以Adobe I/OCLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)的[云管理器插件访问AEM作为Cloud Service日志。
 
-首先， [使用Cloud Manager插件设置AdobeI/O](../../local-development-environment/development-tools.md#aio-cli)。
+首先，[使用云管理器插件](../../local-development-environment/development-tools.md#aio-cli)设置Adobe I/O。
 
-确保已识别相关的项目ID和环境ID，并使 [用列表可用日志选项](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerlist-available-log-options-environmentid) 列表用于跟踪或下载日志 [的日](#aio-cli-tail-logs) 志选 [项](#aio-cli-download-logs) 。
+确保已识别相关的项目Id和环境Id，并使用[列表可用日志选项](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerlist-available-log-options-environmentid)列表用于[尾部](#aio-cli-tail-logs)或[下载](#aio-cli-download-logs)日志的日志选项。
 
 ```
 $ aio cloudmanager:list-programs
@@ -106,24 +106,24 @@ Environment Id Service    Name
 
 ### 跟踪日志{#aio-cli-tail-logs}
 
-AdobeI/O CLI能够使用tail-logs命令从AEM作为Cloud Service实时跟踪 [日志](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name) 。 跟踪功能对于在AEM上作为Cloud Service环境执行操作时监视实时日志活动很有用。
+Adobe I/OCLI使用[tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name)命令将日志作为Cloud Service实时从AEM跟踪。 跟踪功能对于在AEM上作为Cloud Service环境执行操作时监视实时日志活动很有用。
 
 ```
 $ aio config:set cloudmanager_programid <PROGRAM ID>
 $ aio cloudmanager:tail-logs <ENVIRONMENT ID> <SERVICE> <NAME>
 ```
 
-其他命令行工具(如 `grep` 可与相关的 `tail-logs` 日志语句一起使用)，例如：
+其他命令行工具（如`grep`）可与`tail-logs`一起使用，以帮助隔离感兴趣的日志语句，例如：
 
 ```
 $ aio cloudmanager:tail-logs 12345 author | grep com.example.MySlingModel
 ```
 
-...仅显示从中生成或包含 `com.example.MySlingModel` 该字符串的日志语句。
+...仅显示从`com.example.MySlingModel`生成或包含该字符串的日志语句。
 
-### 下载日志{#aio-cli-download-logs}
+### 正在下载日志{#aio-cli-download-logs}
 
-AdobeI/O CLI能够使用download-logs命令从AEM作为Cloud Service [下载日志](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerdownload-logs-environmentid-service-name-days)。 这与从Cloud Manager Web UI下载日志的结果相同，区别在于该命令根据请求的日 `download-logs` 志天数，跨天合并日志。
+Adobe I/OCLI使用[download-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerdownload-logs-environmentid-service-name-days)命令将日志从AEM作为Cloud Service下载。 这与从Cloud Manager Web UI下载日志的结果相同，区别在于`download-logs`命令根据请求的日志天数，跨天合并日志。
 
 ```
 $ aio config:set cloudmanager_programid <PROGRAM ID>
@@ -132,7 +132,7 @@ $ aio cloudmanager:download-logs <ENVIRONMENT> <SERVICE> <NAME> <DAYS>
 
 ## 了解日志
 
-作为Cloud Service登录AEM时，有多个窗格将日志语句写入其中。 由于多个AEM实例写入同一日志文件，因此了解调试时如何分析和减少噪声非常重要。 要说明，将使 `aemerror` 用以下日志片段：
+作为Cloud Service登录AEM时，有多个窗格将日志语句写入其中。 由于多个AEM实例写入同一日志文件，因此了解调试时如何分析和减少噪声非常重要。 要说明，将使用以下`aemerror`日志片段：
 
 ```
 01.01.2020 12:00:00.000 [cm-p12345-e56789-aem-author-abcdefg-1111] *DEBUG* [qtp2078364989-269] com.example.components.impl.ExampleModelImpl Preparing to collect resources
@@ -159,7 +159,7 @@ __Pod cm-p12345-e56789-aem-author-abcdefg-2222__
 
 Adobe对AEM作为Cloud Service环境的日志级别的一般指导是：
 
-+ 本地开发(AEM SDK): `DEBUG`
++ 本地开发(AEM SDK):`DEBUG`
 + 开发: `DEBUG`
 + 暂存: `WARN`
 + 生产: `ERROR`
@@ -173,9 +173,9 @@ Adobe对AEM作为Cloud Service环境的日志级别的一般指导是：
 
 ### 环境特定变量以设置Java日志级别
 
-为每个环境设置静态的已知Java日志级别的替代方法是使用AEM作为Cloud Service的特 [定变量](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values) ，对日志级别进行参数化，允许通过带Cloud Manager插件 [的AdobeI/O CLI动态更改这些值](#aio-cli)。
+为每个环境设置静态的众所周知的Java日志级别的替代方法是使用AEM作为Cloud Service的[环境特定变量](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)参数化日志级别，允许通过带有Cloud Manager插件](#aio-cli)的[Adobe I/O CLI动态更改这些值。
 
-这需要更新日志记录OSGi配置以使用环境特定的变量占位符。 [日志级](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) （日志级）的默认值应根据Adobe建 [议设置](#log-levels)。 例如：
+这需要更新日志记录OSGi配置以使用环境特定的变量占位符。 [日志](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) 级别的默认值应根据Adobe建议 [设置](#log-levels)。例如：
 
 `/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
@@ -189,7 +189,7 @@ Adobe对AEM作为Cloud Service环境的日志级别的一般指导是：
 这种方法的缺点是必须考虑：
 
 + [允许有限数量的环境变量](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#number-of-variables)，创建用于管理日志级别的变量将使用一个变量。
-+ 环境变量只能通过 [AdobeI/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)[或Cloud Manager HTTP API以编程方式管理](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#cloud-manager-api-format-for-setting-properties)。
++ 环境变量只能通过[Adobe I/OCLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)或[云管理器HTTP API](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#cloud-manager-api-format-for-setting-properties)以编程方式管理。
 + 对环境变量所做的更改必须由支持的工具手动重置。 忘记将高流量环境（如生产）重置为较详细的日志级别可能会淹没日志并影响AEM性能。
 
 _环境特定变量对Apache Web服务器或调度程序日志配置无效，因为这些变量未通过OSGi配置进行配置。_
