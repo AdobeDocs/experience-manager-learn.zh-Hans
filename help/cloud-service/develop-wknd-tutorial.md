@@ -26,11 +26,11 @@ ht-degree: 9%
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-本教程设计为将AEM **作为Cloud Service使** 用 **，并向后兼容** AEM 6.5+ ****&#x200B;和AEM 6.4.2+。
+本教程设计为将&#x200B;**AEM用作Cloud Service**，并向后兼容&#x200B;**AEM 6.5+**&#x200B;和&#x200B;**AEM 6.4.2+**。
 
 **[视图此处的教程！](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
-## Deploying WKND to AEM as a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## 将WKND作为Cloud Service部署到AEM{#deploying-wknd-to-aem-as-a-cloud-service}
 
 完成WKND教程后，请观看以下视频，了解如何将WKND项目作为Cloud Service部署到AEM。
 
@@ -42,4 +42,4 @@ ht-degree: 9%
 2. 已推送到向AEM注册为Adobe项目的上游Cloud ServiceCloud Manager Git存储库
 3. 通过Cloud Manager管道部署到AEM作为Cloud Service环境
 
-有关如何将AEM项目部署到AEM作为云服务的完整概述，请观看视频系列，了解如 [何将Git与Adobe云管理器集成](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)。
+有关如何将AEM项目部署到AEM作为云服务的完整概述，请观看有关如何[将Git与Adobe云管理器](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)集成的视频系列。
