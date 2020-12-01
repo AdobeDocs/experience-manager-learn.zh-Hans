@@ -32,28 +32,28 @@ WKND营销团队希望了解哪个行动动员(CTA)按钮在主页上表现最�
 
 * `eVar5` -  `Page template`
 * `eVar6` - `Page Id`
-* `eVar7` - `Page last modified date`
-* `eVar8` - `CTA Button Id`
-* `eVar9` - `Page Name`
-* `event8` - `CTA Button Click event`
-* `prop8` - `CTA Button Id`
+* `eVar7` -  `Page last modified date`
+* `eVar8` -  `CTA Button Id`
+* `eVar9` -  `Page Name`
+* `event8` -  `CTA Button Click event`
+* `prop8` -  `CTA Button Id`
 
 ![CTA单击Adobe Analytics](assets/create-analytics-workspace/page-analytics.png)
 
-### 目标 {#objective}
+### 目标{#objective}
 
 1. 创建新的报表包或使用现有报表包。
-1. 在报 [表包中配置](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) “转 [换变量”(eVar)和“成](https://docs.adobe.com/help/en/analytics/admin/admin-tools/success-events/success-event.html) 功事件”(事件)。
-1. 创建一个 [Analysis Workspace项](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/home.html) 目，借助可让您快速构建、分析和分享洞察的工具分析数据。
+1. 在报告包中配置[转换变量(eVar)](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)和[成功事件(事件)](https://docs.adobe.com/help/en/analytics/admin/admin-tools/success-events/success-event.html)。
+1. 创建[Analysis Workspace项目](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/home.html)，借助可让您快速构建、分析和共享洞察的工具分析数据。
 1. 与其他团队成员共享Analysis Workspace项目。
 
 ## 前提条件
 
-本教程是“跟踪”单击 [的组件与Adobe Analytics的继续](./track-clicked-component.md) ，并假定您已：
+本教程是[跟踪单击的组件与Adobe Analytics](./track-clicked-component.md)的延续，并假定您已：
 
-* 启 **用了Adobe Analytics** 扩展的 [启动属性](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)
-* **Adobe Analytics** 测试／开发报告套件ID和跟踪服务器。 请参阅以下文档 [以创建新报表包](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)。
-* [Experience Platform调试器](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) ，浏览器扩展配置为在https://wknd.site/us/en.html或AEM站 [点上加载Launch属性](https://wknd.site/us/en.html) ，并启用Adobe数据层。
+* 启用了[Adobe Analytics扩展](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)的&#x200B;**启动属性**
+* **Adobe** Analyticst/dev报告套件ID和跟踪服务器。有关[创建新报表包](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)，请参阅以下文档。
+* [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) 调试器浏览器扩展配置为在启用了Adobe数 [据层的](https://wknd.site/us/en.html) https://wknd.site/us/en.html或AEM站点上加载启动属性。
 
 ## 转换变量(eVar)和成功事件(事件)
 
@@ -75,25 +75,25 @@ eVar最适合用于衡量原因和效果，例如：
 
    ![Analytics AEP](assets/create-analytics-workspace/analytics-aep.png)
 
-1. 从Analytics工具栏中，单击管 **理** > **报表包** ，然后查找报表包。
+1. 在“Analytics”工具栏中，单击&#x200B;**Admin** > **报表包**&#x200B;并找到您的报表包。
 
    ![分析报告套件](assets/create-analytics-workspace/select-report-suite.png)
 
-1. 选择“报表包”>“编 **辑设置** ”> **“转换** ” **>“转换变量”**
+1. 选择“报告包”>“**编辑设置”**>“**转换**”>“转换变量”****
 
    ![分析转化变量](assets/create-analytics-workspace/conversion-variables.png)
 
-1. 使用“ **添加新** ”选项，让我们创建转换变量以映射模式，如下所示：
+1. 使用&#x200B;**添加新**&#x200B;选项，我们创建转换变量以映射模式，如下所示：
 
-   * `eVar5` -  `Page Template`
-   * `eVar6` - `Page ID`
-   * `eVar7` - `Last Modified Date`
-   * `eVar8` - `Button Id`
-   * `eVar9` - `Page Name`
+   * `eVar5` -   `Page Template`
+   * `eVar6` -  `Page ID`
+   * `eVar7` -  `Last Modified Date`
+   * `eVar8` -  `Button Id`
+   * `eVar9` -  `Page Name`
 
    ![添加新eVar](assets/create-analytics-workspace/add-new-evars.png)
 
-1. 为每个eVar提供适当的名称和说明，并 **保存** 您所做的更改。 我们将在下一节中使用这些eVar创建一个Analysis Workspace项目。 因此，用户友好的名称使变量易于发现。
+1. 为每个eVar和&#x200B;**保存**&#x200B;更改提供适当的名称和说明。 我们将在下一节中使用这些eVar创建一个Analysis Workspace项目。 因此，用户友好的名称使变量易于发现。
 
    ![eVar](assets/create-analytics-workspace/evars.png)
 
@@ -101,52 +101,52 @@ eVar最适合用于衡量原因和效果，例如：
 
 接下来，我们创建一个用于跟踪“CTA按钮”单击的EV。
 
-1. 从“报 **表包管理器** ”窗口中，选 **择报表包Id** ，然 **后单击编辑设置**。
-1. 单击“ **转换** ”>“ **成功事件”**
-1. 使用“ **添加新** ”选项，创建新的自定义成功事件以跟踪“CTA按钮”单击，然后 **保存更** 改。
+1. 从&#x200B;**报表包管理器**&#x200B;窗口中，选择&#x200B;**报表包Id**&#x200B;并单击&#x200B;**编辑设置**。
+1. 单击&#x200B;**转换** > **成功事件**
+1. 使用&#x200B;**添加新**&#x200B;选项，创建新的自定义成功事件以跟踪CTA按钮，单击，然后&#x200B;**保存**&#x200B;更改。
    * `Event` : `event8`
    * `Name`:`CTA Click`
    * `Type`:`Counter`
 
    ![eVar](assets/create-analytics-workspace/add-success-event.png)
 
-## 在Analysis Workspace创建新项目 {#workspace-project}
+## 在Analysis Workspace创建新项目{#workspace-project}
 
 Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分析并分享见解。 使用拖放界面，您可以制作分析、添加可视化功能以栩栩如生地呈现数据、创建数据集、与组织中的任何人共享和计划项目。
 
-接下来，创建一 [个新项](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/build-workspace-project/t-freeform-project.html) 目以构建仪表板，分析整个站点中CTA按钮的性能。
+然后，新建一个[项目](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/build-workspace-project/t-freeform-project.html)以构建仪表板来分析整个站点中CTA按钮的性能。
 
-1. 从Analytics工具栏中，选择 **Workspace** ，然后单 **击以创建新项目**。
+1. 从“Analytics”工具栏中，选择&#x200B;**Workspace**&#x200B;并单击&#x200B;**创建新项目**。
 
    ![工作区](assets/create-analytics-workspace/create-workspace.png)
 
-1. 选择从空白项 **目开始** ，或选择一个预建模板(由Adobe提供或由您的组织创建的自定义模板)。 根据您的分析或用例，可以使用多个模板。 [进一步了解](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) 可用的不同模板选项。
+1. 选择从&#x200B;**空项目**&#x200B;中开始，或选择预建模板之一，该模板由Adobe提供或由您的组织创建的自定义模板。 根据您的分析或用例，可以使用多个模板。 [进一](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) 步了解可用的不同模板选项。
 
    在您的Workspace项目中，面板、表、可视化和组件可从左边栏中访问。 这些是您的项目构件。
 
-   * **[组件](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)** -组件是维度、量度、细分或日期范围，所有这些组件都可以合并到自由形式表中，以开始回答您的业务问题。 进入分析前，请务必熟悉每个组件类型。 掌握组件术语后，您可以开始拖放以在自由形式表中构建分析。
-   * **[可视化](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)** -然后在数据顶部添加可视化（如条形图或折线图），以可视方式使其栩栩如生。 在最左边的边栏上，选择中间的可视化图标，以查看可用可视化的完整列表。
-   * **[面板](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/panels.html)** -面板是表和可视化的集合。 您可以从工作区的左上角图标访问面板。 当您希望根据时段、报表包或分析使用案例组织项目时，面板会很有帮助。 Analysis Workspace提供以下面板类型：
+   * **[组件](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)** -组件是维度、量度、细分或日期范围，所有这些组件都可以合并到自由形式表中，以开始回答您的业务问题。进入分析前，请务必熟悉每个组件类型。 掌握组件术语后，您可以开始拖放以在自由形式表中构建分析。
+   * **[可视化](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)** -可视化（如条形图或折线图）随后添加在数据上，以可视方式使其栩栩如生。在最左边的边栏上，选择中间的可视化图标，以查看可用可视化的完整列表。
+   * **[面板](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/panels.html)** -面板是表和可视化的集合。您可以从工作区的左上角图标访问面板。 当您希望根据时段、报表包或分析使用案例组织项目时，面板会很有帮助。 Analysis Workspace提供以下面板类型：
 
    ![模板选择](assets/create-analytics-workspace/workspace-tools.png)
 
 ### 使用Analysis Workspace添加数据可视化
 
-接下来，构建一个表，以直观呈现用户如何与WKND站点主页上的行动动员(CTA)按钮交互。 要构建这样的表示形式，让我们将在“跟踪”单击的组件 [中收集的数据与Adobe Analytics一起使用](./track-clicked-component.md)。 以下是用户与WKND站点的“行动动员”按钮进行交互时跟踪的数据的快速摘要。
+接下来，构建一个表，以直观呈现用户如何与WKND站点主页上的行动动员(CTA)按钮交互。 要构建这样的表示形式，我们使用在[跟踪单击的组件中收集的数据和Adobe Analytics](./track-clicked-component.md)。 以下是用户与WKND站点的“行动动员”按钮进行交互时跟踪的数据的快速摘要。
 
-* `eVar5` -  `Page template`
-* `eVar6` - `Page Id`
-* `eVar7` - `Page last modified date`
-* `eVar8` - `CTA Button Id`
-* `eVar9` - `Page Name`
-* `event8` - `CTA Button Click event`
-* `prop8` - `CTA Button Id`
+* `eVar5` -   `Page template`
+* `eVar6` -  `Page Id`
+* `eVar7` -  `Page last modified date`
+* `eVar8` -  `CTA Button Id`
+* `eVar9` -  `Page Name`
+* `event8` -  `CTA Button Click event`
+* `prop8` -  `CTA Button Id`
 
-1. 将页面维 **度组件** 拖放到自由形式表上。 您现在应能够视图显示页面名称(eVar9)的可视化，以及表中显示的相应页面视图（发生次数）。
+1. 将&#x200B;**Page**&#x200B;维组件拖放到自由形式表上。 您现在应能够视图显示页面名称(eVar9)的可视化，以及表中显示的相应页面视图（发生次数）。
 
    ![页面Dimension](assets/create-analytics-workspace/evar9-dimension.png)
 
-1. 将CTA单击( **事件** 8)量度拖放到发生次数量度上并替换它。 您现在可以视图显示页面名称(eVar9)的可视化，以及页面上相应的CTA单击事件计数。
+1. 将&#x200B;**CTA单击**(事件8)度量拖放到发生量度上并替换它。 您现在可以视图显示页面名称(eVar9)的可视化，以及页面上相应的CTA单击事件计数。
 
    ![页面度量- CTA单击](assets/create-analytics-workspace/evar8-cta-click.png)
 
@@ -168,7 +168,7 @@ Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分�
 
    ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
 
-1. 您可以使用“Adobe Analytics分类”将“按钮ID”值替换为更易用的名称。 您可以在此处阅读有关如何为特定指标创建分类的更 [多信息](https://docs.adobe.com/content/help/en/analytics/components/classifications/c-classifications.html)。 在这种情况下，我们为将按钮 `Button Section (Button ID)` ID映 `eVar8` 射到用户友好名称设置了分类度量。
+1. 您可以使用“Adobe Analytics分类”将“按钮ID”值替换为更易用的名称。 您可以阅读有关如何为特定度量[创建分类的更多信息，请参阅此处](https://docs.adobe.com/content/help/en/analytics/components/classifications/c-classifications.html)。 在这种情况下，我们为`eVar8`设置了分类度量`Button Section (Button ID)`，该分类度量将按钮id映射到用户友好名称。
 
    ![按钮部分](assets/create-analytics-workspace/button-section.png)
 
@@ -180,21 +180,21 @@ Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分�
 
 接下来，让我们为Analytics变量创建一个分类。
 
-1. 从“管理 **员** ”工具栏菜单 **中，选择**
-1. 从“报 **表包管理器** ”窗口 **中选择报表包Id** ，然后单击“编 **辑设置”** >“转 **换”>“转****换分类”**
+1. 从&#x200B;**Admin**&#x200B;工具栏菜单，选择&#x200B;**报表包**
+1. 从&#x200B;**报表包管理器**&#x200B;窗口中选择&#x200B;**报表包Id**，然后单击&#x200B;**编辑设置** > **转换** > **转换分类**
 
    ![转换分类](assets/create-analytics-workspace/conversion-classification.png)
 
-1. 从“选 **择分类类型** ”下拉列表中，选择变量(eVar8按钮ID)以添加分类。
+1. 从&#x200B;**选择分类类型**&#x200B;下拉列表中，选择变量(eVar8-按钮ID)以添加分类。
 1. 单击“分类”部分下列出的“分类”变量旁边的箭头可添加新的“分类”。
 
    ![转换分类类型](assets/create-analytics-workspace/select-classification-variable.png)
 
-1. 在“编 **辑分类** ”对话框中，为文本分类提供合适的名称。 将创建具有文本分类名称的维组件。
+1. 在&#x200B;**编辑分类**&#x200B;对话框中，为文本分类提供合适的名称。 将创建具有文本分类名称的维组件。
 
    ![转换分类类型](assets/create-analytics-workspace/new-classification.png)
 
-1. **保存** 您所做的更改。
+1. **保** 存更改。
 
 ### 分类导入程序
 
@@ -206,27 +206,27 @@ Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分�
 
 接下来，让我们下载按钮ID(eVar8)变量的分类模板
 
-1. 导航到“管 **理员** ”>“ **分类导入程序”**
-1. 让我们从下载模板选项卡中下载转换变量的 **分类模板** 。
+1. 导航到&#x200B;**Admin** > **分类导入程序**
+1. 让我们从&#x200B;**下载模板**选项卡中下载转换变量的分类模板。
    ![转换分类类型](assets/create-analytics-workspace/classification-importer.png)
 
 1. 在“下载模板”选项卡上，指定数据模板配置。
-   * **选择报表包** :选择要在模板中使用的报表包。 报表包和数据集必须匹配。
-   * **要分类的数据集** :为数据文件选择数据类型。 该菜单包含为分类配置的报表包中的所有报表。
-   * **编码** :为数据文件选择字符编码。 默认编码格式为UTF-8。
+   * **选择报表包** :选择要在模板中使用的报表包。报表包和数据集必须匹配。
+   * **要分类的数据集** :为数据文件选择数据类型。该菜单包含为分类配置的报表包中的所有报表。
+   * **编码** :为数据文件选择字符编码。默认编码格式为UTF-8。
 
-1. 单击 **“下载** ”，然后将模板文件保存到本地系统。 模板文件是大多数电子表格应用程序支持的制表符分隔数据文件（.tab文件扩展名）。
+1. 单击&#x200B;**下载**&#x200B;并将模板文件保存到本地系统。 模板文件是大多数电子表格应用程序支持的制表符分隔数据文件（.tab文件扩展名）。
 1. 使用您选择的编辑器打开制表符分隔的数据文件。
 1. 为该部分中步骤9中的每个eVar9值添加按钮ID(eVar9)和相应的按钮名称。
 
    ![键值](assets/create-analytics-workspace/key-value.png)
 
-1. **保存** 制表符分隔的文件。
-1. 导航到“导 **入文件** ”选项卡。
+1. **保** 存制表符分隔的文件。
+1. 导航到&#x200B;**导入文件**&#x200B;选项卡。
 1. 配置文件导入的目标。
    * **选择报表包** :WKND Site AEM(Report Suite)
    * **要分类的数据集** :按钮Id(转换变量eVar8)
-1. 单击“选 **择文件** ”选项，从系统上传制表符分隔的文件，然后单击“导 **入文件”**
+1. 单击&#x200B;**选择文件**&#x200B;选项，从系统上传制表符分隔的文件，然后单击&#x200B;**导入文件**
 
    ![文件导入程序](assets/create-analytics-workspace/file-importer.png)
 
@@ -236,13 +236,13 @@ Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分�
 
 #### 将转换变量替换为分类变量
 
-1. 从“Analytics”工具栏中，选 **择Workspace** ，然后打开我们在本教程的“在Analysis Workspace [创建新项目](#workspace-project) ”部分中创建的工作区。
+1. 从“Analytics”工具栏中，选择&#x200B;**Workspace**&#x200B;并打开我们在本教程的“在Analysis Workspace创建新项目”部分[中创建的工作区。](#workspace-project)
 
    ![工作区按钮ID](assets/create-analytics-workspace/workspace-report-button-id.png)
 
-1. 接下来，将工 **作区中** “按钮ID”(Button Id)度量替换为上一步中创建的分类名称，该度量显示“行动动员”(CTA)按钮的ID。
+1. 接下来，将工作区中显示行动动员(CTA)按钮的ID的&#x200B;**按钮Id**&#x200B;量度替换为上一步中创建的分类名称。
 
-1. 在组件查找器中，搜 **索WKND CTA按钮** ，并将WKND CTA按钮( **** 按钮Id)维拖放到按钮Id度量上并替换它。
+1. 在组件查找器中，搜索&#x200B;**WKND CTA按钮**&#x200B;并将&#x200B;**WKND CTA按钮（按钮Id）**&#x200B;维拖放到按钮Id度量上并替换它。
 
    * **之前**
 
@@ -252,7 +252,7 @@ Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分�
       ![之后的工作区按钮](assets/create-analytics-workspace/wknd-button-after.png)
 
 1. 您可以注意到包含行动动员(CTA)按钮的按钮id的按钮ID度量现在替换为分类模板中提供的相应名称。
-1. 让我们将Analytics Workspace表与WKND主页进行比较，了解CTA按钮点击计数及其分析。 根据工作区自由表格数据，用户单击SKI NOW按钮的次数明显为 **22次** ，单击WKND主页露营按钮的次数为4次，位于西澳大利亚的“阅 **读更多** ”按钮。
+1. 让我们将Analytics Workspace表与WKND主页进行比较，了解CTA按钮点击计数及其分析。 根据工作区自由表格数据，用户单击&#x200B;**SKI NOW**&#x200B;按钮22次，在西澳大利亚州WKND主页露营按钮&#x200B;**阅读更多**&#x200B;四次。
 
    ![CTA报告](assets/create-analytics-workspace/workspace-report-buttons-wknd.png)
 
