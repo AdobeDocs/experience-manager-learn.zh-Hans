@@ -24,7 +24,7 @@ ht-degree: 0%
 
 * 对servlet进行POST调用。 此servlet将数据存储在数据库中。 存储的数据与GUID关联
 
-* 如果要用存储的数据填充自适应表单，请检索与GUID关联的数据，然后使用request.setAttribute方法 **填充自适应表单** 。
+* 如果要用存储的数据填充自适应表单，请检索与GUID关联的数据，并使用&#x200B;**request.setAttribute**&#x200B;方法填充自适应表单。
 
 ## 用例演示
 
