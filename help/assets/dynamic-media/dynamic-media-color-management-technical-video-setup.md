@@ -21,7 +21,7 @@ ht-degree: 13%
 ---
 
 
-# 使用AEM Dynamic Media了解颜色管理{#understanding-color-management-with-aem-dynamic-media}
+# 了解使用AEM Dynamic Media进行色彩管理{#understanding-color-management-with-aem-dynamic-media}
 
 在此视频中，我们将探索Dynamic Media颜色管理，以及如何使用它为AEM Assets提供颜色校正预览功能。
 
@@ -29,11 +29,11 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->[使AEM中的Dynamic](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Media能够使用此功能。
+>[启用Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Media AEM以使用此功能。
 
 此功能作为功能包提供给AEM 6.1和6.2版本。
 
-## 颜色管理配置节点的XML模板 {#xml-template-for-the-color-management-configuration-node}
+## 颜色管理配置节点{#xml-template-for-the-color-management-configuration-node}的XML模板
 
 以下是“颜色管理”配置节点的XML模板。 可以将此XML模板复制到AEM开发项目中，并使用适合项目的配置进行配置。
 
@@ -91,7 +91,7 @@ ht-degree: 13%
 />
 ```
 
-### 默认Adobe颜色列表的用户档案列在下面 {#list-of-default-adobe-color-profiles-are-listed-below}
+### 默认Adobe颜色列表的用户档案列在{#list-of-default-adobe-color-profiles-are-listed-below}下
 
 | 名称 | 色彩空间 | 描述 |
 | ------------------- | ---------- | ------------------------------------- |
@@ -110,12 +110,12 @@ ht-degree: 13%
 | JapanColorUncoated | CMYK | Japan Color 2001 Uncoated |
 | JapanColorWebCoated | CMYK | Japan Color 2003 Web Coated |
 | JapanWebCoated | CMYK | Japan Web Coated(Ad) |
-| NewsprintSNAP2007 | CMYK | 美国新闻纸(SNAP 2007) |
+| 新闻纸SNAP2007 | CMYK | 美国新闻纸(SNAP 2007) |
 | NTSC | RGB | NTSC(1953) |
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhoto RGB |
 | PS4Default | CMYK | Photoshop4默认CMYK |
-| PS5Default | CMYK | Photoshop5默认CMYK |
+| PS5默认 | CMYK | Photoshop5默认CMYK |
 | SheetfedCoated | CMYK | 美国平板电脑涂层v2 |
 | 平板纸未涂层 | CMYK | 美国平板纸未涂层v2 |
 | SMPTE | RGB | SMPTE-C |
