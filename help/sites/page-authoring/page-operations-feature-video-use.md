@@ -20,7 +20,7 @@ ht-degree: 2%
 ---
 
 
-# 基本页面操作 {#basic-page-operations-aem-sites}
+# 基本页面操作{#basic-page-operations-aem-sites}
 
 了解如何对Adobe Experience Manager Sites页面执行基本页面管理操作。
 
