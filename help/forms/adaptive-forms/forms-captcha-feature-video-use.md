@@ -20,11 +20,11 @@ ht-degree: 0%
 ---
 
 
-# 将CAPTCHA与AEM Adaptive Depative Forms结合使用{#using-captchas-with-aem-adaptive-forms}
+# 将CAPTCHA与AEM Adaptive Depative Depory{#using-captchas-with-aem-adaptive-forms}一起使用
 
 在AEM Adaptive Forms中添加和使用CAPTCHA。
 
-请访问 [AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0) 页，获取此功能的实时演示的链接。
+请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)页面，获取此功能的实时演示的链接。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 >
 >在创作实例上配置reCaptach
 >
->在创作实 [例上打开](http://localhost:4502/system/console/bundles) felix web控制台
+>在创作实例上打开felix [web console](http://localhost:4502/system/console/bundles)
 >
 >搜索com.adobe.granite.crypto.file包
 >
@@ -51,7 +51,7 @@ ht-degree: 0%
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * 复制HMAC和主控文件
 
-在您的 [发布实例上](http://localhost:4502/system/console/bundles) ，打开Felix Web控制台。 搜索com.adobe.granite.crypto.file捆绑。 请注意捆绑id
+在发布实例上打开[felix web console](http://localhost:4502/system/console/bundles)。 搜索com.adobe.granite.crypto.file捆绑。 请注意捆绑id
 导航到发布实例的文件系统上的bundle id
 * &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * 删除现有的HMAC和主控文件。
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 重新启动AEM发布服务器
 
-## 支持材料 {#supporting-materials}
+## 支持材料{#supporting-materials}
 
 * [Google reCAPTCHA](https://www.google.com/recaptcha)
 
