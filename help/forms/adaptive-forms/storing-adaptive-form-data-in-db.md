@@ -30,12 +30,12 @@ ht-degree: 1%
    * 使用包管理器将StoreAFInDBWorkflow.zip导入AEM。 包具有将AF数据存储到数据库的示例工作流。 打开工作流模型。 该工作流只有一个步骤。 此步骤调用打包中写入的代码，将AF数据存储到数据库中。 我在给这个过程传递一个论点。 这是要保存其数据的自适应表单的名称。
    * 使用Felix Web控制台部署insertdata.core-0.0.1-SNAPSHOT.jar。 此捆绑包具有将提交的表单数据写入数据库的代码
 
-* 转到 [ConfigMgr](http://localhost:4502/system/console/configMgr)
+* 转至[ConfigMgr](http://localhost:4502/system/console/configMgr)
 
    * 搜索“JDBC连接池”。 新建一个Day Commons JDBC连接池。 指定特定于数据库的设置。
 
    * ![jdbc连接池](assets/jdbc-connection-pool.png)
-   * 搜索“将表&#x200B;**单数据插入数据库**”
+   * 搜索“**将表单数据插入DB**”
    * 指定数据库的特定属性。
       * DataSourceName：您之前配置的数据源的名称。
       * TableName —— 要在其中存储AF数据的表的名称
