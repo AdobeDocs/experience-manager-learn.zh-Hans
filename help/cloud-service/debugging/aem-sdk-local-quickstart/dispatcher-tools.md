@@ -28,15 +28,15 @@ ht-degree: 0%
 
 ## 调度程序工具日志
 
-调度程序工具日志可通过或 `stdout` 命令获 `bin/docker_run` 得，或在Docker容器中提供更多详细信息 `/etc/https/logs`。
+调度程序工具日志可通过`stdout`或`bin/docker_run`命令访问，或在位于`/etc/https/logs`的Docker容器中提供更详细的信息。
 
-有关 [如何直接访](./logs.md#dispatcher-logs) 问调度程序工具的Docker容器日志的说明，请参阅调度程序日志。
+有关如何直接访问调度程序工具的Docker容器日志的说明，请参见[调度程序日志](./logs.md#dispatcher-logs)。
 
 ## 调度程序工具缓存
 
 ### 访问Docker容器中的日志
 
-调度程序缓存可直接在Docker容器中访问 ` /mnt/var/www/html`。
+调度程序缓存可以直接在位于` /mnt/var/www/html`的Docker容器中访问。
 
 ```shell
 $ docker ps
@@ -56,7 +56,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 
 ### 将Docker日志复制到本地文件系统
 
-调度程序日志可以从Docker容器中复制到本 `/mnt/var/www/html` 地文件系统，以便使用您喜欢的工具进行检查。 请注意，这是一个时间点拷贝，不提供缓存的实时更新。
+调度程序日志可以从位于`/mnt/var/www/html`的Docker容器中复制到本地文件系统，以便使用您喜爱的工具进行检查。 请注意，这是一个时间点拷贝，不提供缓存的实时更新。
 
 ```shell
 $ docker ps
