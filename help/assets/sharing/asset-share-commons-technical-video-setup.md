@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# 在本地AEM上设置Asset Share Commons {#setup-asset-share-commons}
+# 在本地AEM {#setup-asset-share-commons}上设置资产共享共享公域
 
 在本地AEM实例上运行资产共享共享共享资源的简短指南。
 
