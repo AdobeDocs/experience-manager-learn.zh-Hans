@@ -24,7 +24,7 @@ ht-degree: 0%
 
 本文将引导您完成从HTML5(又称移动Forms)表单提交生成pdf所涉及的步骤。 此演示还将说明向HTML5表单添加图像以及将图像合并到最终pdf中所需的步骤。
 
-要查看此功能的实时演示，请访问示 [例服务器](https://forms.enablementadobe.com/content/samples/samples.html?query=0) ，并搜索“移动表单到PDF”。
+要查看此功能的实时演示，请访问[示例服务器](https://forms.enablementadobe.com/content/samples/samples.html?query=0)并搜索“将移动表单转换为PDF”。
 
 要将提交的数据合并到xdp模板中，我们将执行以下操作
 
@@ -84,7 +84,7 @@ $("#file1").click();
 });
 ```
 
-[自定义用户档案](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。 使用自定义用户档案，可更轻松地处理移动表单的HTML DOM对象。 隐藏的文件元素将添加到HTML.jsp。 当用户单击“添加您的照片”时，我们会触发文件元素的单击事件。 这允许用户浏览并选择要附加的照片。 然后，使用javascript FileReader对象获取图像的base64编码字符串。 base64图像字符串存储在表单的文本字段中。 提交表单后，我们提取此值并将其插入XML的img元素中。 然后，此XML用于与xdp合并以生成最终的pdf。
+[自定义用户档案](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。使用自定义用户档案，可更轻松地处理移动表单的HTML DOM对象。 隐藏的文件元素将添加到HTML.jsp。 当用户单击“添加您的照片”时，我们会触发文件元素的单击事件。 这允许用户浏览并选择要附加的照片。 然后，使用javascript FileReader对象获取图像的base64编码字符串。 base64图像字符串存储在表单的文本字段中。 提交表单后，我们提取此值并将其插入XML的img元素中。 然后，此XML用于与xdp合并以生成最终的pdf。
 
 您已将用于此文章的自定义用户档案作为本文资源的一部分提供给您。
 
@@ -121,7 +121,7 @@ function readURL(input) {
 
 * [下载并安装与此文章关联的包。](assets/pdf-from-mobile-form-submission.zip)
 
-* 通过查看xdp的属性页确保正确设置提交URL和HTML渲染用户档案 [。](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
+* 通过查看[xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)的属性页面，确保正确设置提交URL和HTML渲染用户档案
 
 * [将XDP预览为html](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 
