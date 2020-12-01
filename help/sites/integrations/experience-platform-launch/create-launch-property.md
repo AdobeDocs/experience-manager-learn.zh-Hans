@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# 创建启动项属性 {#create-launch-property}
+# 创建启动属性{#create-launch-property}
 
 了解如何创建具有设置与Adobe Experience Manager集成其余部分所需的最低裸机配置的启动属性。 将向用户介绍Launch UI，并了解扩展、规则和发布工作流。
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 后续步骤
 
-[使用AdobeI/O将AEM与Launch连接](connect-aem-launch-adobe-io.md)
+[使用Adobe I/O将AEM与Launch连接](connect-aem-launch-adobe-io.md)
 
 ## 其他资源 {#additional-resources}
 
