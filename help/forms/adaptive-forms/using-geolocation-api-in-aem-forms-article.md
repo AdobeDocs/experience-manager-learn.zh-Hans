@@ -20,15 +20,15 @@ ht-degree: 0%
 ---
 
 
-# 在自适应Forms中使用Geolocation API{#using-geolocation-api-s-in-adaptive-forms}
+# 在自适应Forms中使用地理位置API{#using-geolocation-api-s-in-adaptive-forms}
 
-请访问 [AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0) 页，获取此功能的实时演示的链接。
+请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)页面，获取此功能的实时演示的链接。
 
 在本文中，我们将了解如何使用Google的Geolocation API填充自适应表单的字段。 当您要在表单上填充当前地址字段时，通常使用此用例。
 
 按照以下步骤在Adaptive Forms中使用Geolocation API。
 
-1. [从Google获取](https://developers.google.com/maps/documentation/javascript/get-api-key) API密钥以使用Google Maps平台。 您可以获得有效期为1年的试用密钥。
+1. [从Google](https://developers.google.com/maps/documentation/javascript/get-api-key) 获取API密钥以使用Google Maps平台。您可以获得有效期为1年的试用密钥。
 
 1. 自适应表单片段已创建，其中包含用于保存当前地址的字段
 
