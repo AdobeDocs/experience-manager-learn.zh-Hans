@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 使用视觉体验书写器实现个性化 {#personalization-vec}
+# 使用Visual Experience Composer{#personalization-vec}实现个性化
 
 了解如何使用Visual Experience Composer(VEC)创建A/B测试目标活动。
 
@@ -35,19 +35,19 @@ WKND站点主页以信息卡的形式显示本地活动或在城市周围执行�
 
 ## 使用Visual Experience Composer(VEC)创建A/B测试的步骤
 
-1. 登录 [Adobe Experience Cloud](https://experience.adobe.com/)，点按 __目标__，导航到 __活动选项卡__
+1. 登录[Adobe Experience Cloud](https://experience.adobe.com/)，点按&#x200B;__目标__，导航至&#x200B;__活动__&#x200B;选项卡
 
-   + 如果未看到目标 __Experience Cloud__ ，请确保在右上方的组织切换器中选择了正确的Adobe组织，并且您的用户已被授予访问Adobe Admin Console目标的 [权限](https://adminconsole.adobe.com/)。
+   + 如果在Experience Cloud仪表板上未看到&#x200B;__目标__，请确保在右上方的组织切换器中选择了正确的Adobe组织，并且您的用户已被授予访问[Adobe Admin Console](https://adminconsole.adobe.com/)中目标的权限。
 
-1. 单击 **“创建活动** ”按钮，然后选择 **A/B测试活动** 。
+1. 单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**A/B测试**&#x200B;活动
 
    ![A/B活动](assets/ab-target-activity.png)
 
-1. 选择“ **可视体验书写器** ”选项，提供活动URL，然后单击“下 **一步”**
+1. 选择&#x200B;**Visual Experience Composer**&#x200B;选项，提供活动URL，然后单击&#x200B;**Next**
 
    ![活动URL](assets/ab-test-url.png)
 
-1. 创建新活动后，Visual Experience Composer在左侧显示两个选项卡： *体验* A *和体验B*。 从列表中选择体验。 您可以使用添加体验按钮将新体验 **添加到列表** 。
+1. 创建新活动后，Visual Experience Composer在左侧显示两个选项卡：*体验A*&#x200B;和&#x200B;*体验B*。 从列表中选择体验。 您可以使用&#x200B;**添加体验**&#x200B;按钮向列表添加新体验。
 
    ![体验A](assets/experience.png)
 
@@ -55,16 +55,16 @@ WKND站点主页以信息卡的形式显示本地活动或在城市周围执行�
 
    ![元素](assets/select-element.png)
 
-1. 将文本从Camping *in Western Australia更改为**Adventures of Australia*。 添加到体验的列表更改将显示在修改下。 您可以单击并编辑修改后的项目，以视图其CSS选择器和添加到它的新内容。
+1. 将文本从&#x200B;*Camping in Western Australia*&#x200B;更改为&#x200B;*Adventures of Australia*。 添加到体验的列表更改将显示在修改下。 您可以单击并编辑修改后的项目，以视图其CSS选择器和添加到它的新内容。
 
    ![冒险](assets/adventures.png)
 
-1. 将体 *验A重命名* 为 *Adventure*
-1. 同样，从西澳大利亚 *的Camping* *in Australia更新Experience B的文* 本，探 *索澳大利亚荒野*。
+1. 将&#x200B;*体验A*&#x200B;重命名为&#x200B;*冒险*
+1. 同样，将&#x200B;*体验B*&#x200B;上的文本从&#x200B;*Camping in Western Australia*&#x200B;更新为&#x200B;*探索澳大利亚荒野*。
 
    ![浏览](assets/explore.png)
 
-1. 单 **击下** 一步以转到定位，让我们在两个体验之间保持手动流量分配50-50。
+1. 单击&#x200B;**下一步**&#x200B;移至定位，让我们在两个体验之间保持手动流量分配50-50。
 
    ![定位](assets/targeting.png)
 
