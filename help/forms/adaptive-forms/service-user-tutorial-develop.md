@@ -27,14 +27,14 @@ ht-degree: 1%
 
 本文将介绍如何创建系统用户以及配置用户映射器属性。
 
-1. 导航到 [http://localhost:4502/crx/explorer/index.jsp](http://localhost:4502/crx/explorer/index.jsp)
+1. 导航到[http://localhost:4502/crx/explorer/index.jsp](http://localhost:4502/crx/explorer/index.jsp)
 1. 以“ admin ”登录
 1. 单击“用户管理”
 1. 单击“创建系统用户”
 1. 将userid类型设置为“ data ”，然后单击绿色图标以完成创建系统用户的过程
 1. [打开configMgr](http://localhost:4502/system/console/configMgr)
 1. 搜索“ Apache Sling Service User Mapper Service”并单击以打开属性
-1. 单击 *+图* 标（加号）以添加以下服务映射
+1. 单击&#x200B;*+*&#x200B;图标（加号）以添加以下服务映射
 
    * DevelopingWithServiceUser.core:getresourceresolver=data
    * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
@@ -46,14 +46,14 @@ ht-degree: 1%
 我们还可以代表fd-service用户获取资源解析程序。 此服务用户用于文档服务。 例如，如果您要验证／应用使用权限等，我们将使用fd-service用户的资源解析程序来执行这些操作
 
 1. [下载并解压缩与本文关联的zip文件。](assets/developingwithserviceuser.zip)
-1. 导航到 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
+1. 导航到[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 1. 上传和开始OSGi捆绑包
 1. 确保捆绑包处于活动状态
-1. 您现在已成功创建 *系统用户* ，并部署了 *服务用户包*。
+1. 您现在已成功创建&#x200B;*系统用户*&#x200B;并部署了&#x200B;*服务用户包*。
 
    要提供对/content的访问，请为系统用户（“数据”）授予对内容节点的读取权限。
 
-   1. 导航到 [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
+   1. 导航到[http://localhost:4502/useradmin](http://localhost:4502/useradmin)
    1. 搜索用户“数据”。 这是您在前一步创建的同一系统用户。
    1. 多次单击用户，然后单击“权限”选项卡
    1. 授予对“content”文件夹的“ read”访问权限。
