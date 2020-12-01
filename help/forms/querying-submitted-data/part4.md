@@ -23,7 +23,7 @@ ht-degree: 0%
 
 下一步是查询提交的数据并以表格形式显示结果。 要完成此任务，我们将使用以下软件
 
-[QueryBuilder](https://querybuilder.js.org/) —— 用于创建查询的UI组件
+[QueryBuilder](https://querybuilder.js.org/)  —— 用于创建查询的UI组件
 
 [查询表](https://datatables.net/)-以表格形式显示结果。
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 >
 >本教程的当前版本不支持查询多列。
 
-当您选择表单以执行查询时，将对/bin/getdatakeysfromschema **进行GET调用**。 此GET调用返回与表单的模式关联的必填字段。 然后，必填字段会填充到QueryBuilder的下拉列表中，以便您构建查询。
+选择表单以执行查询时，将对&#x200B;**/bin/getdatakeysfromschema**&#x200B;进行GET调用。 此GET调用返回与表单的模式关联的必填字段。 然后，必填字段会填充到QueryBuilder的下拉列表中，以便您构建查询。
 
 以下代码片断调用JSONSchemaOperations服务的getRequiredColumnsFromSchema方法。 我们将模式的属性和必需元素传递给此方法调用。 此函数调用返回的数组随后用于填充查询生成器下拉列表
 
@@ -62,7 +62,7 @@ public JSONArray getData(String formName) throws SQLException, IOException {
  }
 ```
 
-单击GetResult按钮时，将向“/bin/ **querydata”发出Get调用**。 我们通过查询参数将QueryBuilder UI构建的查询传递给servlet。 然后，Servlet将此查询按摩到SQL查询中，以用于查询数据库。 例如，如果要搜索以检索名为“Mouse”的所有产品，查询生成器查询字符串将为$.productname = &#39;Mouse&#39;。 此查询随后将转换为以下代码
+单击GetResult按钮时，将对&#x200B;**&quot;/bin/querydata&quot;**&#x200B;进行Get调用。 我们通过查询参数将QueryBuilder UI构建的查询传递给servlet。 然后，Servlet将此查询按摩到SQL查询中，以用于查询数据库。 例如，如果要搜索以检索名为“Mouse”的所有产品，查询生成器查询字符串将为$.productname = &#39;Mouse&#39;。 此查询随后将转换为以下代码
 
 从aemformswithjson中选择*。  formsubmissions where JSON_EXTRACT(formsubmissions .formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;
 
@@ -75,6 +75,6 @@ public JSONArray getData(String formName) throws SQLException, IOException {
 1. 使用示例json模式创建自适应表单
 1. 配置自适应表单以提交到“customsubmithelpx”自定义提交操作
 1. 填写表单并提交
-1. 将浏览器指向 [仪表板.html](http://localhost:4502/content/AemForms/dashboard.html)
+1. 将浏览器指向[仪表板.html](http://localhost:4502/content/AemForms/dashboard.html)
 1. 选择表单并执行简单查询
 
