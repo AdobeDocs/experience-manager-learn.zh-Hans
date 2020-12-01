@@ -18,7 +18,7 @@ ht-degree: 24%
 ---
 
 
-# 访问Adobe资产链接 {#access-adobe-asset-link}
+# 访问Adobe资产链接{#access-adobe-asset-link}
 
 Adobe Asset Link 加强了内容创建过程中创意人员与营销人员之间的协作。您可以访问存储在Adobe Experience Manager资产(AEM Assets)中的内容，而无需离开您最熟悉的Creative Cloud桌面应用程序。 了解如何从Creative Cloud桌面应用程序启动Adobe资源链接面板。
 
