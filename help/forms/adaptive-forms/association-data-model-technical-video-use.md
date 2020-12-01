@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 将关联数据模型与AEM Forms{#using-association-data-models-with-aem-forms}
+# 将关联数据模型与AEM Forms{#using-association-data-models-with-aem-forms}结合使用
 
 在表单数据模型中创建2个实体之间的关联
 
