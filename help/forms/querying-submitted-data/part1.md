@@ -21,11 +21,11 @@ ht-degree: 0%
 # 基于JSON模式创建自适应表单
 
 
-AEM Forms6.3版引入了基于JSON模式创建自适应Forms的功能。 有关使用JSON模式创建自适应Forms的详细信息，请参阅本 [文](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-form-json-schema-form-model.html)。
+AEM Forms6.3版引入了基于JSON模式创建自适应Forms的功能。 有关使用JSON模式创建自适应Forms的详细信息，请参阅本[文章](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-form-json-schema-form-model.html)。
 
 根据JSON模式创建自适应表单后，下一步是将提交的数据存储在数据库中。 为此，我们将使用由不同数据库供应商引入的新JSON数据类型。 为了本文的目的，我们将使用MySql 8数据库存储提交的数据。
 
-本文使用了MySql 8数据库。 MySQL引入了一种名为JSON的新数据 [类型](https://dev.mysql.com/doc/refman/8.0/en/json.html)。 这使得存储和查询JSON对象变得更简单。 我们将将提交的数据存储在数据库的JSON类型列中。
+本文使用了MySql 8数据库。 MySQL引入了一种名为[JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)的新数据类型。 这使得存储和查询JSON对象变得更简单。 我们将将提交的数据存储在数据库的JSON类型列中。
 
 以下屏幕截图显示以JSON数据类型存储的已提交表单数据。 列“formdata”的类型为JSON。 我们还将与数据关联的表单的名称存储在列表单名称中
 
