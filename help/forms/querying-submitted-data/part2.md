@@ -29,7 +29,7 @@ ht-degree: 0%
 
 我们创建了自定义提交以处理表单提交。 在此自定义提交的post.POST.jsp中，我们将请求转发到我们的servlet。
 
-要进一步了解自定义提交请求，请阅读本 [文](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
+要进一步了解自定义提交请求，请阅读此[文章](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
 
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,&quot;/bin/storeafsubmission&quot;,null,null);
 
