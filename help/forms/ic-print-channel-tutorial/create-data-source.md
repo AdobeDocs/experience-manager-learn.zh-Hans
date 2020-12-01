@@ -28,4 +28,4 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/27765/?quality=9&learn=on)
 
-请使用作为与本教程相关的资源的一部分提供给您的Swagger文件。 在本教程的介绍 [中](introduction.md) ，可以使用资源。
+请使用作为与本教程相关的资源的一部分提供给您的Swagger文件。 本教程的[简介](introduction.md)中提供了资源。
