@@ -31,18 +31,18 @@ AEM Assets元数据导入和导出功能使内容作者能够轻松地在AEM中�
 
 >[!VIDEO](https://video.tv.adobe.com/v/21374/?quality=9&learn=on)
 
-下载 [WeRetail sports文件夹](assets/we-retail-sports.zip)
+下载[WeRetail sports文件夹](assets/we-retail-sports.zip)
 
-下载 [资产元数据包](assets/we-retail-sports-asset-metadata.zip)
+下载[资产元数据包](assets/we-retail-sports-asset-metadata.zip)
 
-## 元数据文件格式 {#metadata-file-format}
+## 元数据文件格式{#metadata-file-format}
 
 ### CSV文件格式
 
 #### 第一行
 
 * CSV文件的第一行定义元数据模式。
-* “第一列”默 `assetPath`认为，它包含资产的绝对JCR路径。
+* 第一列默认为`assetPath`，它包含资产的绝对JCR路径。
 
 * 第一行中的后续列指向资产的其他元数据属性。
 
@@ -55,11 +55,11 @@ AEM Assets元数据导入和导出功能使内容作者能够轻松地在AEM中�
    * 例如：`dc:title {{String}}`
 
 * 属性名称区分大小写
-   * 正确： `dc:title {{String}}`
-   * 不正确： `Dc:Ttle {{String}}`
+   * 正确：`dc:title {{String}}`
+   * 不正确：`Dc:Ttle {{String}}`
 
 * 属性类型不区分大小写
-* 支持所 [有有效的JCR属性](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html) 类型
+* 支持所有有效的[JCR属性类型](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
 
 * 多值属性格式- `<metadata property name> {{<property type : MULTI }}`
 
