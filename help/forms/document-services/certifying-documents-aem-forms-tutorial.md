@@ -25,16 +25,16 @@ ht-degree: 1%
 
 要认证文档，您可以在桌面上使用AcrobatDC，或在服务器上使用AEM Forms文档服务作为自动化流程的一部分。
 
-本文提供范例OSGI捆绑包，用于使用AEM Forms文档服务验证pdf文档。范例中使用的代码可 [在此处获取](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+本文提供了使用AEM Forms文档服务验证pdf文档的示例OSGI包。示例中使用的代码在[此处提供](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 要使用AEM Forms认证文档，需要遵循以下步骤
 
-## 将证书添加到信任存储 {#adding-certificate-to-trust-store}
+## 将证书添加到信任存储{#adding-certificate-to-trust-store}
 
 请按照以下步骤将证书添加到AEM中的密钥库
 
 * [初始化全局信任存储](http://localhost:4502/libs/granite/security/content/truststore.html)
-* [搜索fd-service用户](http://localhost:4502/security/users.html)
+* [搜索fd-](http://localhost:4502/security/users.html) service用户
 * **您必须滚动结果页以加载所有用户以查找fd-service用户**
 * 多次单击fd-service用户以打开用户设置窗口
 * 单击“从密钥库文件添加私钥”。指定证书的特定别名和密码
@@ -56,11 +56,11 @@ ht-degree: 1%
 
 ## 在本地系统上测试示例
 
-* 下载和安装自 [定义文档服务包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* 下载和安 [装使用服务用户包开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* 下载并安装[自定义文档服务包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* 下载并安装[使用服务用户捆绑进行开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [确保已在Apache Sling Service User Mapper服务中添加以下条目](http://localhost:4502/system/console/configMgr)
 
-   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** ，如下屏幕截图所示
+   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-** service，如下图所示
    ![用户映射器](assets/user-mapper-service.PNG)
 * [导入示例自适应表单](assets/certify-pdf-af.zip)
 * [导入和安装自定义提交](assets/custom-submit-certify.zip)
