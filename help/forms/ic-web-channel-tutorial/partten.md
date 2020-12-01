@@ -40,7 +40,7 @@ ht-degree: 0%
 
 * 选择“铅笔”图标以编辑默认文本。
 
-* 将默认文本替换&#x200B;**为“您的退休收入展望”**
+* 将默认文本替换为“**您的退休收入展望”**
 
 **配置RightPanel目标区域**
 
@@ -52,15 +52,15 @@ ht-degree: 0%
 
 * 选择“铅笔”图标以编辑默认文本。
 
-* 将默认文本替换为“估&#x200B;**计月退休收入”**
+* 将默认文本替换为“**估计月退休收入”**
 
-## 添加退休收入展望文档片段 {#add-retirement-income-outlook-document-fragment}
+## 添加退休收入展望文档片段{#add-retirement-income-outlook-document-fragment}
 
 * 单击资产图标，然后应用筛选器以显示“文档片段”类型的资产。 将RetimentIncomeOutlook文档片段拖放到左面板目标区。
 
-* 有关将文档 [片段添加到内容](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html) 区域，请参阅本页。
+* 在向内容区域添加文档片段时，可以将[引用到此页面](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html)。
 
-## 添加估计的月收入图表 {#adding-estimated-monthly-income-chart}
+## 添加估计月收入图表{#adding-estimated-monthly-income-chart}
 
 * 单击右侧的RightPanel目标区域。 单击“+”图标以插入图表组件。 我们用柱状图来显示月度收入的估计值。 轻轻点按新插入的图表组件。 选择“扳手”图标以打开配置属性表。请按照以下屏幕截图所示，使用以下属性配置图表。
 
