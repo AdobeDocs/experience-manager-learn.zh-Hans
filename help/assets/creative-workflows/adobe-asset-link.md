@@ -16,20 +16,20 @@ ht-degree: 1%
 ---
 
 
-# 将Adobe资产链接扩展与AEM Assets{#using-adobe-asset-link-extension-with-aem-assets}
+# 将Adobe资产链接扩展与AEM Assets{#using-adobe-asset-link-extension-with-aem-assets}一起使用
 
 Adobe Experience Manager资源现在可供设计人员和创意用户在他们喜爱的Adobe Creative Cloud桌面应用程序中使用。 Adobe Creative Cloud企业的Adobe资产链接扩展扩展了在Adobe Photoshop、InDesign和Illustrator等Creative Cloud工具中搜索和浏览AEM资产、排序、预览、上传资产、签出、修改、签入和视图资产元数据的功能。
 
 
 ## Adobe资产链接1.1
 
-Adobe资产链接v1.1现在在Adobe资产链接和AEM Assets之间提供InDesign直接链接支持。 借助InDesign直接链接支持，您现在可以通过“InDesign资产链接”面板将数字资产放置（放置链接或置入副本）或从AEM Assets拖放到Adobe。 此外，还引入 *“仅用于放置* (FPO)”再现。
+Adobe资产链接v1.1现在在Adobe资产链接和AEM Assets之间提供InDesign直接链接支持。 借助InDesign直接链接支持，您现在可以通过“InDesign资产链接”面板将数字资产放置（放置链接或置入副本）或从AEM Assets拖放到Adobe中。 此外，还引入了&#x200B;*仅用于放置*(FPO)再现。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28988/?quality=12&learn=on)
 
 >[!NOTE]
 >
->仅使用您的Adobe Creative CloudEnterprise ID或Federated ID。 确保为 [Adobe资产链接配置AEM](https://helpx.adobe.com/enterprise/using/configure-aem-for-aal-prerelease.html)。
+>仅使用您的Adobe Creative CloudEnterprise ID或Federated ID。 确保[为Adobe资产链接](https://helpx.adobe.com/enterprise/using/configure-aem-for-aal-prerelease.html)配置AEM。
 
 
 ### Adobe资产链接功能
@@ -51,17 +51,17 @@ Adobe资产链接v1.1现在在Adobe资产链接和AEM Assets之间提供InDesign
 
 您可以使用以下选项之一将资产放置到InDesign布局中：
 
-* **置入副本** -嵌入资产（使用置入副本选项）会在将二进制文件下载到本地系统后，将原始资产的副本放置到InDesign布局中。 Adobe资产链接不维护嵌入副本与原始资产之间的任何链接。 如果原始资产在AEM Assets进行了修改，则必须从InDesign文件中删除嵌入的资产，并从AEM Assets重新嵌入该资产。
+* **置入副本** -嵌入资产（使用置入副本选项）会在将二进制文件下载到本地系统后，将原始资产的副本放置到InDesign布局中。Adobe资产链接不维护嵌入副本与原始资产之间的任何链接。 如果原始资产在AEM Assets进行了修改，则必须从InDesign文件中删除嵌入的资产，并从AEM Assets重新嵌入该资产。
 
-* **置入链接** -在使用InDesign文档时，除了直接嵌入资产（使用上下文菜单中的置入副本选项）外，您现在还可以选择引用AEM Assets的资产。 通过引用资产，您可以与其他用户协作并纳入对AEM Assets原始资产所做的任何更新。 要引用AEM Assets的资产，请使用上下文菜单中的“放置链接的资产”选项。
+* **置入链接** -在使用InDesign文档时，除了直接嵌入资产（使用上下文菜单中的“置入副本”选项），您现在还可以选择引用AEM Assets的资产。通过引用资产，您可以与其他用户协作并纳入对AEM Assets原始资产所做的任何更新。 要引用AEM Assets的资产，请使用上下文菜单中的“放置链接的资产”选项。
 
 ### 仅用于放置(FPO)分辨率
 
-当使用Adobe资产链接将大型资产文件从AEM Assets放入InDesign文档时，创意用户需要在启动置入操作后等待几秒钟。 这会影响整体用户体验。 利用Adobe资产链接，您现在可以暂时放置AEM Assets原始资产的低分辨率图像，从而缩短放置图像所花费的时间。 同时，它提高了整体用户体验和工作效率。 低分辨率图像将临时放置，当打印或发布需要最终输出时，您需要将FPO再现替换为原始图像。 如果要将多个FPO图像替换为相应的原始图像，请导航到 **_Windows >链接面板_** ，然后下载原始资源。 下载原始图像后，选择“Replace all FPO&#39;s With Originals（用原始图像替换所有FPO）”。
+当使用Adobe资产链接将大型资产文件从AEM Assets放入InDesign文档时，创意用户需要在启动置入操作后等待几秒钟。 这会影响整体用户体验。 利用Adobe资产链接，您现在可以暂时放置AEM Assets原始资产的低分辨率图像，从而缩短放置图像所花费的时间。 同时，它提高了整体用户体验和工作效率。 低分辨率图像将临时放置，当打印或发布需要最终输出时，您需要将FPO再现替换为原始图像。 如果要将多个FPO图像替换为相应的原始图像，请导航到&#x200B;**_Windows >链接_**&#x200B;面板，然后下载原始资产。 下载原始图像后，选择“Replace all FPO&#39;s With Originals（用原始图像替换所有FPO）”。
 
 >[!NOTE]
 >
-> *仅适用于置入(FPO)* ，再现仅适用于“置入链接”选项。 您还应在AEM AssetsDam更新资产工作流中启 *用FPO再现支* 持。
+> *仅适用于放置(FPO)再* 现仅适用于“放置链接”选项。您还应在AEM Assets *Dam更新资产*&#x200B;工作流中启用FPO再现支持。
 
 FPO演绎版是原始资产的轻量级替代。 它们具有相同的长宽比，但与原始图像相比尺寸较小。 目前，InDesign仅支持为以下图像类型导入FPO演绎版：
 
@@ -76,23 +76,23 @@ FPO演绎版是原始资产的轻量级替代。 它们具有相同的长宽比�
 
 
 
-## 了解Adobe资产链接身份验证与AEM Assets{#understanding-adobe-asset-link-authentication-with-aem-assets}
+## 了解Adobe资产链接身份验证AEM Assets{#understanding-adobe-asset-link-authentication-with-aem-assets}
 
 Adobe资产链接身份验证如何在AdobeIdentity Management服务(IMS)和Adobe Experience Manager作者的环境中工作。
 
 ![Adobe资产链接架构](assets/adobe-asset-link-article-understand.png)
 
-下载 [Adobe资产链接体系结构](assets/adobe-asset-link-article-understand-1.png)
+下载[Adobe资产链接架构](assets/adobe-asset-link-article-understand-1.png)
 
 1. Adobe资产链接扩展通过Adobe Creative Cloud桌面应用程序向Adobe标识管理服务(IMS)发出授权请求，并在成功时接收承载令牌。
-2. Adobe资产链接扩展通过HTTP(S)连接到AEM作者，包括在 **步骤** 1中使用扩展设置JSON中提供的方案(HTTP/HTTPS)获取的承载令牌。
+2. Adobe资产链接扩展通过HTTP(S)连接到AEM作者，包括在&#x200B;**步骤1**&#x200B;中使用方案(HTTP/HTTPS)获取的承载令牌、扩展设置JSON中提供的主机和端口。
 3. AEM的承载身份验证处理程序从请求中提取承载令牌，并针对AdobeIMS验证它。
 4. 一旦AdobeIMS验证Bearer令牌，将在AEM中创建用户（如果尚不存在），并同步用户档案和AdobeIMS的组／成员数据。 AEM用户将获得一个标准AEM登录令牌，该令牌作为HTTP(S)响应上的Cookie发送回Adobe资产链接扩展。
 5. 后续交互(即 浏览、搜索、登记／注销资产等) adobe资产链接扩展导致对AEM作者的HTTP请求，这些请求使用AEM登录令牌(使用标准的AEM令牌身份验证处理程序)进行验证。
 
 >[!NOTE]
 >
->登录令牌到期后， **步骤1-5** 将自动调用，使用承载令牌验证Adobe资产链接扩展，并重新发布新的有效登录令牌。
+>登录令牌到期后，**步骤1-5**&#x200B;将自动调用，使用承载令牌验证Adobe资产链接扩展，并重新发布新的有效登录令牌。
 
 ## 其他资源{#additional-resources}
 
