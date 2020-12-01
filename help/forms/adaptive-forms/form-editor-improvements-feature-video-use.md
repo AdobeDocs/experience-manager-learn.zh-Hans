@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Forms的表单编辑改进 {#form-editor-improvements-in-aem-forms}
+# AEM Forms{#form-editor-improvements-in-aem-forms}中的表单编辑器改进
 
 AEM 6.3在此版本中引入了几个新增功能和增强功能，以简化自适应表单和文档的创作体验。 这些增强功能有助于缩短上市时间并使商业用户能够处理表单和文档
 
