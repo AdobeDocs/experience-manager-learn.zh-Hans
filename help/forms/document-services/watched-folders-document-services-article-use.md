@@ -24,7 +24,7 @@ ht-degree: 0%
 
 管理员可以配置网络文件夹（称为“监视文件夹”），当用户将文件（如PDF文件）放在“监视文件夹”中时，会启动预先配置的工作流、服务或脚本操作以处理添加的文件。 服务执行指定操作后，会将结果文件保存到指定的输出文件夹中。 有关工作流、服务和脚本的详细信息。
 
-要了解有关创建监视文件夹的更多信息，请单 [击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html)
+要了解有关创建监视文件夹的更多信息，请单击此处[](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html)
 
 “监视文件夹”用于在批处理模式下生成文档。 使用监视的文件夹机制，您可以为打印渠道生成交互通信，或使用输出服务将数据与模板合并。
 
@@ -32,8 +32,8 @@ ht-degree: 0%
 
 输出服务是AEM文档服务的一部分的OSGi服务。 输出服务支持AEM Forms设计器的各种输出格式和输出设计功能。 输出服务可以转换XFA模板和XML数据以生成各种格式的打印文档。
 
-要进一步了解输出服务，请 [单击此处](https://helpx.adobe.com/aem-forms/6/output-service.html)。
-要在系统上设置监视文件夹，请按照以下步骤操作：
+要进一步了解输出服务，请单击此处[。
+](https://helpx.adobe.com/aem-forms/6/output-service.html)要在系统上设置监视文件夹，请按照以下步骤操作：
 * [下载并解压zip文件的内容](assets/outputservicewatchedfolderkt.zip)。此zip文件包含用于创建监视文件夹的包以及使用监视文件夹机制测试输出服务的示例文件
    * Windows系统
 
