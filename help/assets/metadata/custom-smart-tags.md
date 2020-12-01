@@ -25,19 +25,19 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/22254/?quality=12&learn=on)
 
-## 为AEM 6.x的图像设置自定义智能标记{#set-up}
+## 为AEM 6.x{#set-up}的图像设置自定义智能标记
 
 >[!NOTE]
 > 图像的自定义智能标记会作为Cloud Service自动为AEM提供。
 
-图像的自定义智能标 [签需要为图像设置智能标签](./image-smart-tags.md#set-up)。
+图像的自定义智能标记要求设置[图像的智能标记](./image-smart-tags.md#set-up)。
 
-了解如何使用智能内容服务和AdobeI/O在AEM Assets配置智能标记培训。图像的自定义智能标记
+了解如何使用智能内容服务和Adobe I/O在AEM Assets配置智能标签培训。图像的自定义智能标记
 
 >[!VIDEO](https://video.tv.adobe.com/v/23405/?quality=12&learn=on)
 
 ## 其他资源
 
-* AEM 6.4需要最新 [的Service Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)。
+* AEM 6.4需要[最新的Service Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)。
 
 
