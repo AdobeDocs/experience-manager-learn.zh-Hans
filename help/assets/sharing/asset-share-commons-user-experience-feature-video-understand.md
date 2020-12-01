@@ -21,7 +21,7 @@ ht-degree: 1%
 ---
 
 
-# 理解资源共享的用户体验{#understanding-asset-share-commons}
+# 了解Asset Share Commons的用户体验{#understanding-asset-share-commons}
 
 资产共享共享共享的用户和创作体验简介。
 
