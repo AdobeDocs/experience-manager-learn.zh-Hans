@@ -22,13 +22,18 @@ ht-degree: 0%
 >
 >此示例仅适用于不基于模式或表单数据模型的自适应Forms
 
-![表结构](assets/tablestructure.PNG)正如您所看到的模式的名称是修改的。在此模式中是表格提交，定义了以下列
+![表结](assets/tablestructure.PNG)
+构您可以看到模式的名称是修改的。在此模式中是表格提交，定义了以下列
 
 * formdata:此列将保存提交的表单数据
 * formname:此列将包含提交的表单的名称
 * id:这是主键，设置为自动增量
 
-表名称和两列名称以OSGi配置属性的形式显示，如下图所示：![osgi-configuration](assets/configuration.PNG)代码将读取这些值，并构建要执行的相应SQL查询。 例如，将根据以上值&#x200B;**SELECT formdata FROM aemformsturiol.formsubmissions(其中formname=timeoffrequestform**)执行以下查询。在上述查询中，表单的名称(timeoffrequestform)将作为请求参数传递给servlet。
+表名称和两列名称以OSGi配置属性的形式显示，如下图所示：
+![osgi-configuration](assets/configuration.PNG)
+代码将读取这些值，并构建要执行的相应SQL查询。 例如，将根据以上值执行以下查询
+**SELECT formdata FROM aemformstutorial.formsubmissions where formname=timeoffrequestform**
+在上述查询中，表单的名称(timeoffrequestform)将作为请求参数传递给servlet。
 
 ## **创建OSGi服务**
 
@@ -36,7 +41,7 @@ ht-degree: 0%
 
 * 第37行：我们正在访问Apache Sling Connection Pooled DataSource。
 
-* 第89行：这是服务的入口点。该方法以 `getCSVFile(..)` formName为输入参数，并获取与给定表单名称相关的提交数据。
+* 第89行：这是服务的入口点。方法`getCSVFile(..)`以formName为输入参数，获取与给定表单名称相关的提交数据。
 
 >[!NOTE]
 >
@@ -256,7 +261,7 @@ public @interface StoreAndExportConfiguration {
 
 ## Servlet
 
-以下是调用服务方法 `getCSVFile(..)` 的servlet代码。 服务返回StringBuffer对象，然后将该对象流回调用应用程序
+以下是调用服务的`getCSVFile(..)`方法的servlet代码。 服务返回StringBuffer对象，然后将该对象流回调用应用程序
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -298,6 +303,6 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 
 ### 在服务器上部署
 
-* 使用 [MySQL](assets/formsubmissions.sql) Workbench将SQL文件导入MySQL Server。 这将创建名为aemformstutorial **的模式** ，并创建名为formsubmissions的 **表，其中包** 含一些示例数据。
-* 使 [用Felix](assets/store-export.jar) Web控制台部署OSGi Bundle
-* [获取TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)。 您应将CSV文件流式传输回您。
+* 使用MySQL Workbench将[SQL文件](assets/formsubmissions.sql)导入MySQL Server。 这将创建名为&#x200B;**aemformstutorial**&#x200B;的模式和名为&#x200B;**formsubmisions**&#x200B;的表，其中含有一些示例数据。
+* 使用Felix Web控制台部署[OSGi Bundle](assets/store-export.jar)
+* [获取TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)。您应将CSV文件流式传输回您。
