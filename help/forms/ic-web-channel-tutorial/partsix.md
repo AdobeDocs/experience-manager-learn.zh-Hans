@@ -39,7 +39,7 @@ ht-degree: 0%
 
    1. 取消选中“打印渠道”复选框。 我们不是为打印文档创建渠道。
    1. Web:选择此选项可为Web文档生成渠道
-   1. 交互通信：模板： **global>** RetirementAccountStatement（这是在前一步中创建的模板）
+   1. 交互通信：模板：**global>RetirementAccountStatemen** t（这是在前一步中创建的模板）
    1. 主题：**参考主题->画布2.0**
 
 1. 点按创建
