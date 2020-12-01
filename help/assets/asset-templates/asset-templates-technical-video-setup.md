@@ -24,13 +24,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->上载 **INDD模板** 时，AEM必须连接到正在运行的InDesign服务器。 INDD文件的初始处理部分需要InDesign服务器。
+>上载INDD模板时，AEM **必须**&#x200B;连接到正在运行的InDesign服务器。 INDD文件的初始处理部分需要InDesign服务器。
 
-## 下载InDesign Server试用版 {#download-indesign-server-trial}
+## 下载InDesign Server试用版{#download-indesign-server-trial}
 
-下载 [InDesign Server试用版下载网站](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
+下载[InDesign Server试用版下载网站](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
 
-## 开始InDesign Server {#starting-indesign-server}
+## 开始InDesign Server{#starting-indesign-server}
 
 ```shell
 # macOS command
