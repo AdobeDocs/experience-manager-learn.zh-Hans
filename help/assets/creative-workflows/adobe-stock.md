@@ -16,7 +16,7 @@ ht-degree: 6%
 ---
 
 
-# 将Adobe Stock与AEM Assets{#using-adobe-stock-assets-with-aem-assets}
+# 将Adobe Stock与AEM Assets一起使用{#using-adobe-stock-assets-with-aem-assets}
 
 AEM 6.4.2允许用户直接从AEM搜索、预览、保存和许可Adobe Stock资产。 组织现在可以将其Adobe Stock企业计划与AEM Assets集成，以确保许可资产现在可广泛用于其创意和营销项目，并具有AEM的强大资产管理功能。
 
@@ -24,7 +24,7 @@ AEM 6.4.2允许用户直接从AEM搜索、预览、保存和许可Adobe Stock资
 
 >[!NOTE]
 >
->该集成需要企 [业Adobe Stock计划](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) 和AEM 6.4，并且至少部署了Service Pack 2。 有关AEM 6.4 Service Pack的详细信息，请参阅这 [些发行说明](https://helpx.adobe.com/cn/experience-manager/6-4/release-notes/sp-release-notes.html)。
+>集成需要[企业Adobe Stock计划](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)和AEM 6.4，并且至少部署了Service Pack 2。 有关AEM 6.4 Service Pack的详细信息，请参阅以下[发行说明](https://helpx.adobe.com/cn/experience-manager/6-4/release-notes/sp-release-notes.html)。
 
 Adobe Stock和AEM Assets的集成使内容作者和营销人员能轻松许可和使用Stock资产进行创意或营销。 您可以使用Omni Search、将位置筛选器添加为Adobe Stock或通过在AEM Assets主导航中导航并单击搜索Adobe Stock珊瑚UI图标来执行Stock资产搜索。
 
@@ -46,7 +46,7 @@ Adobe Stock和AEM Assets的集成使内容作者和营销人员能轻松许可�
 
 ### 资产库存用户档案
 
-* 用户可以在“用户”>“我的首 *选项”>“库存配置”下选择“Adobe Stock”用户档案*
+* 用户可以在&#x200B;*“用户”>“我的首选项”>“库存配置”下选择“Adobe Stock用户档案”*
 * 可以将强制和可选引用添加到资产授权窗口。
 * 根据区域为“资产授权”窗口选择语言首选项的功能。
 
@@ -60,11 +60,11 @@ Adobe Stock和AEM Assets的集成使内容作者和营销人员能轻松许可�
 ### 访问控制
 
 * 管理员可以在设置Adobe Stock云服务配置时向特定用户／组提供许可Stock资源的权限。
-* 如果特定用户／组没有许可Stock资产的权限，则将禁 *用Stock资产搜索／资产许* 可功能。
+* 如果特定用户／组没有许可Stock资源的权限，则将禁用&#x200B;*Stock资源搜索／资产许可*&#x200B;功能。
 
-## 与AEM Assets建立Adobe Stock{#set-up-adobe-stock-with-aem-assets}
+## 设置Adobe Stock与AEM Assets{#set-up-adobe-stock-with-aem-assets}
 
-AEM 6.4.2允许用户直接从AEM搜索、预览、保存和许可Adobe Stock资产。 此视频介绍如何使用AdobeI/O控制台在AEM Assets设置Adobe库。
+AEM 6.4.2允许用户直接从AEM搜索、预览、保存和许可Adobe Stock资产。 此视频快速演练如何使用Adobe I/O控制台在AEM Assets设置Adobe库存。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25043/?quality=12&learn=on)
 
@@ -74,18 +74,18 @@ AEM 6.4.2允许用户直接从AEM搜索、预览、保存和许可Adobe Stock资
 
 >[!NOTE]
 >
->该集成需要企 [业Adobe Stock计划](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) 和AEM 6.4，并且至少 [部署了Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0) 。 有关AEM 6.4 Service Pack的详细信息，请参阅这 [些发行说明](https://helpx.adobe.com/cn/experience-manager/6-4/release-notes/sp-release-notes.html)。 您还需要管理员权 [限才能AdobeI](https://console.adobe.io/)/O控 [制台、](https://adminconsole.adobe.com/) Adobe Admin Console和Adobe Experience Manager来设置集成。
+>该集成需要[企业Adobe Stock计划](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)和AEM 6.4，并且至少部署了[Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0)。 有关AEM 6.4 Service Pack的详细信息，请参阅以下[发行说明](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)。 您还需要对[Adobe I/O控制台](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)和Adobe Experience Manager具有管理员权限才能设置集成。
 
-### 安装 {#installations}
+### 安装{#installations}
 
-* 对于AEM 6.4，您需要安 [装AEM Service Pack](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0) 2，然后重新安装cq-dam-stock-integration-content-1.0.4.zip文件。
-* 确保您对AdobeI/ [O控制台](https://console.adobe.io/)、 [Adobe Admin Console](https://adminconsole.adobe.com/) 和Adobe Experience Manager具有管理权限来设置集成。
+* 对于AEM 6.4，您需要安装[AEM Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0)，然后重新安装cq-dam-stock-integration-content-1.0.4.zip文件。
+* 确保您对[Adobe I/O控制台](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)和Adobe Experience Manager具有管理员权限，以设置集成。
 
-#### 使用AdobeI/O控制台设置AdobeIMS配置 {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
+#### 使用Adobe I/O控制台{#set-up-adobe-ims-configuration-using-adobe-i-o-console}设置AdobeIMS配置
 
-1. 在“工具”>“安全”下创建AdobeIMS **技术帐户配置**
-2. 选择云 *解决方* 案 *,* 作为Adobe Stock，创建新证书或重新使用现有证书进行配置。
-3. 导航到AdobeI/O控制台并为Adobe Stock创建新的服务帐户 *集成*。
+1. 在&#x200B;**工具>安全**&#x200B;下创建AdobeIMS技术帐户配置
+2. 选择&#x200B;*云解决方案*&#x200B;作为&#x200B;*Adobe Stock*&#x200B;并创建新证书或重新使用现有证书进行配置。
+3. 导航到Adobe I/O控制台并为&#x200B;*Adobe Stock*&#x200B;新建一个服务帐户集成。
 4. 将证书从步骤2上传到您的Adobe Stock服务帐户集成。
 5. 选择所需的Adobe Stock用户档案配置并完成服务集成。
 6. 使用集成详细信息完成AdobeIMS技术帐户配置
@@ -93,13 +93,13 @@ AEM 6.4.2允许用户直接从AEM搜索、预览、保存和许可Adobe Stock资
 
 ![Adobe IMS 技术帐户](assets/screen_shot_2018-10-22at12219pm.png)
 
-#### 设置Adobe StockCloud Services {#set-up-adobe-stock-cloud-services}
+#### 设置Adobe StockCloud Services{#set-up-adobe-stock-cloud-services}
 
-1. 在“工具”>“Adobe Stock”下为Cloud Services新建一 **个云服务配置。**
-2. 为您 *的Adobe Stock云配置* ，选择在上节中创建的 *AdobeIMS配置*
+1. 在&#x200B;**工具>Cloud Services下为Adobe Stock新建云服务配置。**
+2. 为您的&#x200B;*Adobe Stock云*&#x200B;配置选择在上节中创建的&#x200B;*AdobeIMS配置*
 
-3. 确保选择 **环境** 作为PROD。 暂存环境不受支持，将在AEM的下一版本中删除。
-4. **许可的资产路径** ，可以指向/content/dam下的任何目录。 在下一个版本的AEM中将添加对此字段的功能支持
+3. 确保选择&#x200B;**环境**&#x200B;作为PROD。 暂存环境不受支持，将在AEM的下一版本中删除。
+4. **授权资** 产路径可指向/content/dam下的任何目录。在下一个版本的AEM中将添加对此字段的功能支持
 5. 选择您的区域设置并完成设置。
 6. 您还可以将用户／用户组添加到您的Adobe Stock云服务，以启用特定用户或用户组的访问权限。
 
@@ -108,7 +108,7 @@ AEM 6.4.2允许用户直接从AEM搜索、预览、保存和许可Adobe Stock资
 ### 其他资源
 
 * [企业库存计划](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
-* [AEM 6.4 Service Pack 2发行说明](https://helpx.adobe.com/cn/experience-manager/6-4/release-notes/sp-release-notes.html)
+* [AEM 6.4 Service Pack 2发行说明](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)
 * [集成AEM和Adobe Stock](https://helpx.adobe.com/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html#IntegrateAEMandAdobeStock)
-* [AdobeI/O控制台集成API](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
+* [Adobe I/O控制台集成API](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
 * [Adobe StockAPI文档](https://www.adobe.io/apis/creativecloud/stock/docs.html)
