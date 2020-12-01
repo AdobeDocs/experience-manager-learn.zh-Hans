@@ -29,11 +29,11 @@ ht-degree: 0%
 
 在AEM中配置监视文件夹时，将关联在将文件放入监视文件夹时执行的ECMA脚本或java代码。 本文将重点介绍ECMA脚本，它将生成打印渠道文档并将其保存到文件系统。
 
-监视的文件夹配置和ECMA脚本是您在本教程开始时导入 [的资源的一部分](introduction.md)
+监视的文件夹配置和ECMA脚本是您在本教程](introduction.md)开头导入的[资源的一部分
 
 放入监视文件夹的输入文件具有以下结构。 ECMA脚本读取帐户号并为每个帐户生成打印渠道文档。
 
-有关生成文档的ECMA脚本的更多详细信 [息，请参阅本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+有关生成文档的ECMA脚本的详细信息，[请参阅本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 ```xml
 <accountnumbers>
