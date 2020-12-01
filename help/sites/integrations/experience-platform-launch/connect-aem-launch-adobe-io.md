@@ -1,6 +1,6 @@
 ---
-title: 使用AdobeI/O将AEM与Launch连接
-description: 了解如何使用AdobeI/O创建IMS配置，以通过Launch API验证AEM。 在此集成到位后，AEM将能够通过Launch API进行通信以访问Launch属性。
+title: 使用Adobe I/O将AEM与Launch连接
+description: 了解如何使用Adobe I/O创建IMS配置，以通过Launch API验证AEM。 在此集成到位后，AEM将能够通过Launch API进行通信以访问Launch属性。
 feature: launch
 topics: integrations
 audience: administrator
@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# 使用AdobeI/O将AEM与Launch连接 {#connect-aem-launch-adobe-io}
+# 使用Adobe I/O将AEM与启动连接{#connect-aem-launch-adobe-io}
 
-了解如何使用AdobeI/O创建IMS配置，以通过Launch API验证AEM。 在此集成到位后，AEM将能够通过Launch API进行通信以访问Launch属性。
+了解如何使用Adobe I/O创建IMS配置，以通过Launch API验证AEM。 在此集成到位后，AEM将能够通过Launch API进行通信以访问Launch属性。
 
 >[!VIDEO](https://video.tv.adobe.com/v/38555?quality=12&learn=on)
 
