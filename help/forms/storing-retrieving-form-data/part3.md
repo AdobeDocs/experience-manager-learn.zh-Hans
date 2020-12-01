@@ -8,74 +8,148 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 787a79663472711b78d467977d633e3d410803e5
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '93'
 ht-degree: 1%
 
 ---
 
 
-# 创建OSGI服务以获取数据
+# 创建OSGi服务以获取数据
 
-编写以下代码以获取存储的自适应表单数据。 简单查询用于获取与给定GUID关联的自适应表单数据。 然后，所获取的数据被返回到调用应用程序。 在第一步中创建的同一数据源在此代码中被引用。
+以下代码被写入以存储和获取存储的自适应表单数据。 简单查询用于获取与给定GUID关联的自适应表单数据。 然后，所获取的数据被返回到调用应用程序。 在此代码中引用了之前步骤中创建的同一数据源
 
 
 ```java
-package com.techmarketing.core.impl;
+package com.aemforms.saveandcontinue.core.impl;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.UUID;
 
-import com.techmarketing.core.AemFormsAndDB;
+import javax.sql.DataSource;
+
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
-@Component(
-        service = AemFormsAndDB.class
-)
-public class AemformWithDB implements AemFormsAndDB {
-    private final Logger log = LoggerFactory.getLogger(getClass());
-   
-    @Reference(target = "(&(objectclass=javax.sql.DataSource)(datasource.name=aemformstutorial))")
-    private DataSource dataSource;
-
-    @Override
-    public String getData(String guid) {
-        log.debug("### inside my getData of AemformWithDB");
-        Connection con = getConnection();
-        try {
-            Statement st = con.createStatement();
-            String query = "SELECT afdata FROM aemformstutorial.formdata where guid = '" + guid + "'" + "";
-            log.debug(" The query is " + query);
-            ResultSet rs = st.executeQuery(query);
-            while (rs.next()) {
-                return rs.getString("afdata");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+@Component(immediate = true)
+public class FetchFormData implements com.aemforms.saveandcontinue.core.FetchStoredFormData {
+  private final Logger log = LoggerFactory.getLogger(getClass());@Reference(target = "(&(objectclass=javax.sql.DataSource)(datasource.name=SaveAndContinue))")
+  private DataSource dataSource;@Override
+  public String getData(String guid) {
+    log.debug("### inside my getData of AemformWithDB");
+    Connection con = getConnection();
+    try {
+      Statement st = con.createStatement();
+      String query = "SELECT afdata FROM aemformstutorial.formdata where guid = '" + guid + "'" + "";
+      log.debug(" Got Result Set" + query);
+      ResultSet rs = st.executeQuery(query);
+      while (rs.next()) {
+        return rs.getString("afdata");
+      }
+    } catch(SQLException e) {
+      // TODO Auto-generated catch block
+      log.debug(e.getMessage());
     }
 
-    public Connection getConnection() {
-        log.debug("Getting Connection ");
-        Connection con = null;
-        try {
-            con = dataSource.getConnection();
-            log.debug("got connection");
-            return con;
-        } catch (Exception e) {
-            log.debug("not able to get connection ");
-            e.printStackTrace();
-        }
-        return null;
+    return null;
+  }
+  public Connection getConnection() {
+    log.debug("Getting Connection ");
+    Connection con = null;
+    try {
+
+      con = dataSource.getConnection();
+      log.debug("got connection");
+      return con;
+    } catch(Exception e) {
+      log.debug("not able to get connection " + e.getMessage());
+
     }
+    return null;
+  }
+
+  public String storeFormData(String formData) {
+    // TODO Auto-generated method stub
+    log.debug("******Inside my AEMFormsWith DB service*****");
+    log.debug("### Inserting data ... " + formData);
+
+    String insertRowSQL = "INSERT INTO aemformstutorial.formdata(guid,afdata) VALUES(?,?)";
+    UUID uuid = UUID.randomUUID();
+    String randomUUIDString = uuid.toString();
+    log.debug("The insert query is " + insertRowSQL);
+    Connection c = getConnection();
+    PreparedStatement pstmt = null;
+    try {
+      pstmt = null;
+      pstmt = c.prepareStatement(insertRowSQL);
+      pstmt.setString(1, randomUUIDString);
+      pstmt.setString(2, formData);
+      log.debug("Executing the insert statment  " + pstmt.executeUpdate());
+      c.commit();
+    } catch(SQLException e) {
+
+      log.error("unable to insert data in the table", e.getMessage());
+    } finally {
+      if (pstmt != null) {
+        try {
+          pstmt.close();
+        } catch(SQLException e) {
+          log.debug("error in closing prepared statement " + e.getMessage());
+        }
+      }
+      if (c != null) {
+        try {
+          c.close();
+        } catch(SQLException e) {
+          log.debug("error in closing connection " + e.getMessage());
+        }
+      }
+    }
+    return randomUUIDString;
+  }@Override
+  public String updateData(String guid, String afData) {
+    String updateTableSQL = "update aemformstutorial.formdata set afdata= ? where guid = ?";
+    Connection c = getConnection();
+    PreparedStatement pstmt = null;
+    try {
+
+      pstmt = null;
+      pstmt = c.prepareStatement(updateTableSQL);
+      pstmt.setString(1, afData);
+      pstmt.setString(2, guid);
+      log.debug("Executing the insert statment  " + pstmt.executeUpdate());
+
+    } catch(SQLException e) {
+
+      log.debug("Getting errors", e.getMessage());
+    } finally {
+      if (pstmt != null) {
+        try {
+          pstmt.close();
+        } catch(SQLException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
+      if (c != null) {
+        try {
+          c.close();
+        } catch(SQLException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
+    }
+    return guid;
+
+  }
+
 }
 ```
 
@@ -84,9 +158,12 @@ public class AemformWithDB implements AemFormsAndDB {
 下面是使用的接口声明
 
 ```java
-package com.techmarketing.core;
+package com.aemforms.saveandcontinue.core;
 
-public interface AemFormsAndDB {
-   public String getData(String guid);
+public interface FetchStoredFormData 
+{public String getData(String guid);
+public String storeFormData(String formData);
+public String updateData(String guid,String afData);
+
 }
 ```
