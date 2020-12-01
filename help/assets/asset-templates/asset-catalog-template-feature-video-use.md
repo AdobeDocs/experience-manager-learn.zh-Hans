@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 将资产目录与AEM Commerce and Sorcipe一起使用{#using-asset-catalog-with-aem-commerce-and-indesign-server}
+# 将资产目录与AEM Commerce and Socer{#using-asset-catalog-with-aem-commerce-and-indesign-server}一起使用
 
 AEM 6.4目录增强功能提供了使用AEM资产模板和InDesign Server创建目录页面的功能。  用户可以使用InDesign模板创建目录页面，并将产品属性映射到可编辑字段，以后可使用这些字段为不同产品创建类似页面。
 
