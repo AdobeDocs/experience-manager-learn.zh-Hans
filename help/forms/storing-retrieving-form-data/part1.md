@@ -8,18 +8,34 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 translation-type: tm+mt
-source-git-commit: 6ae8110d4f4bc80682c35b0dab3fe7a62cad88f3
+source-git-commit: 787a79663472711b78d467977d633e3d410803e5
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 3%
+source-wordcount: '197'
+ht-degree: 4%
 
 ---
 
 # 配置数据源
 
-AEM支持与外部数据库集成的方式有很多。 数据库集成最常见的标准做法之一是通过configMgr使用Apache Sling Connection池化DataSource配置属 [性](http://localhost:4502/system/console/configMgr)。
-第一步是在AEM中下载并部署相 [应的My SQL驱动程](https://mvnrepository.com/artifact/mysql/mysql-connector-java) 序。
-然后设置Sling Connection池化DataSource属性。 这些属性特定于您的数据库。 以下屏幕截图显示了本教程使用的设置。 数据库模式是作为本教程资源的一部分提供给您的。
-![数据源](assets/data-source.png)
+AEM支持与外部数据库集成的方式有很多。 数据库集成最常见的标准做法之一是通过[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling Connection池化DataSource配置属性。
+第一步是下载并部署AEM中相应的[MySql驱动程序](https://mvnrepository.com/artifact/mysql/mysql-connector-java)。
+创建Apache Sling Connection Pooled DataSource并提供以下屏幕快照中指定的属性。 数据库模式是作为本教程资源的一部分提供给您的。
 
-数据库有一个名为formdata的表，其中有3列，如数据库下的屏幕截![图所示](assets/data-base-tables.PNG)
+![数据源](assets/save-continue.PNG)
+
+数据库有一个名为formdata的表，其中有3列，如下面的屏幕截图所示。
+
+![数据库](assets/data-base-tables.PNG)
+
+创建模式的sql文件可从此处[下载。 ](assets/form-data-db.sql)您需要使用MySql工作台导入此文件以创建模式和表。
+
+>[!NOTE]
+>请确保将数据源命名为&#x200B;**SaveAndContinue**。 示例代码使用名称连接到数据库。
+
+| 属性名称 | 值 |
+------------------------|---------------------------------------
+| 数据源名称 | 保存并继续 |
+| JDBC驱动程序类 | com.mysql.cj.jdbc.Driver |
+| JDBC连接URI | jdbc:mysql://localhost:3306/aemformstutorial |
+
+
