@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 文件和集合 {#files-and-collections}
+# 文件和集合{#files-and-collections}
 
 了解如何从“资产链接”面板快速轻松地访问AEM Assets文件和集合。
 
