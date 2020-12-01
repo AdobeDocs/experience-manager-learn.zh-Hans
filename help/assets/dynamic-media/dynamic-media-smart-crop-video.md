@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 使用视频的Dynamic Media智能裁剪 {#using-smart-crop-video}
+# 对视频{#using-smart-crop-video}使用Dynamic Media智能裁剪
 
 Dynamic Media视频智能裁切使用Adobe Sensei智能跟踪视频中的兴趣点，确保视频在所有屏幕大小上呈现最佳效果。
 
