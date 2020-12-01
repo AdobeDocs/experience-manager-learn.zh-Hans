@@ -15,7 +15,7 @@ ht-degree: 2%
 ---
 
 
-# 开发资源状态 {#developing-resource-statuses-in-aem-sites}
+# 正在开发资源状态{#developing-resource-statuses-in-aem-sites}
 
 Adobe Experience Manager的资源状态API是用于在AEM各种编辑器Web UI中显示状态消息的可插拔框架。
 
@@ -33,7 +33,7 @@ AEM的页面、体验片段和模板编辑器中本机提供编辑器状态栏�
 
 ![AEM editor资源状态概述](assets/sample-editor-resource-status-screenshot.png)
 
-## 资源状态提供程序框架 {#resource-status-provider-framework}
+## 资源状态提供程序框架{#resource-status-provider-framework}
 
 在开发自定义资源状态时，开发工作包括：
 
@@ -42,21 +42,21 @@ AEM的页面、体验片段和模板编辑器中本机提供编辑器状态栏�
 
    ![资源状态体系](assets/sample-editor-resource-status-application-architecture.png)
 
-3. 作为页面、体验片段和模板编辑器的一部分提供的状态资源通过资源“”属性赋[!DNL statusType]予类型。
+3. 通过资源“[!DNL statusType]”属性为作为页面、体验片段和模板编辑器的一部分提供的状态资源提供一种类型。
 
-   * Page editor: `editor`
-   * Experience Fragment editor: `editor`
+   * 页面编辑器：`editor`
+   * 体验片段编辑器：`editor`
    * 模板编辑器: `template-editor`
 
-4. 状态资源与已注 `statusType` 册的OSGi配置 `CompositeStatusType` 属性 `name` 匹配。
+4. 状态资源的`statusType`与已注册的`CompositeStatusType` OSGi配置的`name`属性匹配。
 
-   对于所有匹配项 `CompositeStatusType's` ，将通过收集类型并用 `ResourceStatusProvider` 于收集具有此类型的实现 `ResourceStatusProvider.getType()`。
+   对于所有匹配项，将通过`ResourceStatusProvider.getType()`收集`CompositeStatusType's`类型，并用于收集具有此类型的`ResourceStatusProvider`实现。
 
-5. 匹配项 `ResourceStatusProvider` 在编辑 `resource` 器中传递，并确定是否 `resource` 具有要显示的状态。 如果需要状态，则此实现负责生成0个或多个要返回 `ResourceStatuses` 的组件，每个组件表示要显示的状态。
+5. 匹配的`ResourceStatusProvider`在编辑器中传递`resource`，并确定`resource`是否具有要显示的状态。 如果需要状态，则此实现负责生成0或多个要返回的`ResourceStatuses`，每个表示要显示的状态。
 
-   通常， `ResourceStatusProvider` 每个返回0 `ResourceStatus` 或1 `resource`。
+   通常，`ResourceStatusProvider`返回0或1 `ResourceStatus`，每个`resource`。
 
-6. ResourceStatus是可由客户实现的接口，或者有帮助 `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` 的可用于构建状态。 状态包括：
+6. ResourceStatus是可由客户实现的接口，或者有用的`com.day.cq.wcm.commons.status.EditorResourceStatus.Builder`可用于构建状态。 状态包括：
 
    * 标题
    * 消息
@@ -66,7 +66,7 @@ AEM的页面、体验片段和模板编辑器中本机提供编辑器状态栏�
    * 操作
    * 数据
 
-7. 或者，如 `Actions` 果为对象提 `ResourceStatus` 供，则需要支持客户端将功能绑定到状态栏中的操作链接。
+7. 或者，如果为`ResourceStatus`对象提供`Actions`，则需要支持clientlibs才能将功能绑定到状态栏中的操作链接。
 
    ```js
    (function(jQuery, document) {
@@ -81,11 +81,11 @@ AEM的页面、体验片段和模板编辑器中本机提供编辑器状态栏�
 
 8. 任何支持这些操作的JavaScript或CSS都必须通过每个编辑器各自的客户端库进行代理，以确保前端代码在编辑器中可用。
 
-   * 页面编辑器类别: `cq.authoring.editor.sites.page`
-   * 体验片段编辑器类别: `cq.authoring.editor.sites.page`
-   * 模板编辑器类别: `cq.authoring.editor.sites.template`
+   * 页面编辑器类别:`cq.authoring.editor.sites.page`
+   * 体验片段编辑器类别:`cq.authoring.editor.sites.page`
+   * 模板编辑器类别:`cq.authoring.editor.sites.template`
 
-## 视图代码 {#view-the-code}
+## 视图代码{#view-the-code}
 
 [查看GitHub上的代码](https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples/resourcestatus/impl/SampleEditorResourceStatusProvider.java)
 
