@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Create a multi-language Translation Project {#create-multi-language-translation-projects}
+# 创建多语言翻译项目{#create-multi-language-translation-projects}
 
 了解如何从AEM项目控制台为您的语言副本创建、编辑和管理多语言翻译项目
 
