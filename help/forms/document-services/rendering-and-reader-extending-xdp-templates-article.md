@@ -26,15 +26,15 @@ ht-degree: 0%
 
 例如，在AEM Forms的表单门户中，当用户单击XDP时，我们可以将XDP渲染为PDF，并且阅读器会扩展PDF。
 
-要测试此功能，您可以尝试此 [链接](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 示例名称为“Render XDP with RE”
+要测试此功能，可以尝试使用此[链接](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 示例名称为“Render XDP with RE”
 
 要完成此用例，我们需要执行以下操作。
 
-* 将Reader扩展证书添加到“fd-service”用户。 此处列出添加Reader扩展凭据的步 [骤](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
+* 将Reader扩展证书添加到“fd-service”用户。 添加Reader扩展凭据的步骤列在[此处](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
 
 * 创建将呈现和应用使用权限的自定义OSGi服务。 完成此操作的代码列于下面
 
-## 渲染XDP并应用使用权限 {#render-xdp-and-apply-usage-rights}
+## 渲染XDP并应用使用权限{#render-xdp-and-apply-usage-rights}
 
 * 第7行：使用FormsService的renderPDFForm，我们从XDP生成PDF。
 
@@ -203,7 +203,7 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 1. [使用包管理器将与本文相关的资产下载并导入AEM](assets/renderandextendxdp.zip)
    * 此包包含示例门户和xdp文件
 1. 向“fd-service”用户添加Reader扩展证书
-1. 将浏览器指向 [门户网页](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
+1. 将您的浏览器指向[门户网页](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
 1. 单击pdf图标以渲染xdp并获取Reader扩展的pdf
 
 
