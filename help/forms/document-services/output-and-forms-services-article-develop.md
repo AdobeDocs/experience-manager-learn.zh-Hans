@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 以产出和Forms服务发展AEM Forms{#developing-with-output-and-forms-services-in-aem-forms}
+# 在AEM Forms开发产出和Forms服务{#developing-with-output-and-forms-services-in-aem-forms}
 
 在AEM Forms使用输出和Forms服务API
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 * 输出服务——通常，此服务用于将xml数据与xdp模板或pdf合并，以生成拼合的pdf
 * FormsService —— 这是一项功能多样的服务，允许您从PDF文件导出／导入数据
 
-此处列出AEM FormsAPI的官方javadoc [。](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+此处[列出了AEM FormsAPI的正式javadoc](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 以下代码片断从PDF文件导出数据
 
@@ -67,10 +67,16 @@ Line2从请求中提取saveLocation
 1. /content/AemFormsSamples/exportdata
 1. /content/AemFormsSamples/outputservice
 1. 搜索“Sling推荐人过滤器”
-1. 选中“允许空”复选框。 （此设置应仅用于测试目的）有多种方法可测试示例代码。 最快、最简单的方法是使用Postman应用程序。 邮递员允许您向服务器发出POST请求。 在您的系统上安装Postman应用程序。
+1. 选中“允许空”复选框。 （此设置应仅用于测试目的）
+有多种方法可测试示例代码。 最快、最简单的方法是使用Postman应用程序。 邮递员允许您向服务器发出POST请求。 在您的系统上安装Postman应用程序。
 启动应用程序并输入以下URL以测试导出数据API
 
-确保您从下拉POST中选择了“列表”http://localhost:4502/content/AemFormsSamples/exportdata.html请确保将“授权”指定为“基本身份验证”。 指定AEM Server用户名和口令导航到“正文”选项卡并指定请求参数，如下面的导出图![像](assets/postexport.png)所示，然后单击“发送”按钮
+确保您已从下拉POST中选择“列表”
+http://localhost:4502/content/AemFormsSamples/exportdata.html
+确保将“授权”指定为“基本身份验证”。 指定AEM Server用户名和密码
+导航到“正文”选项卡并指定请求参数，如下图所示
+![export](assets/postexport.png)
+然后单击“发送”按钮
 
 软件包包含3个范例。 以下各段说明何时使用输出服务或Forms服务、服务的url、每个服务所需的输入参数
 
@@ -86,7 +92,7 @@ Line2从请求中提取saveLocation
 
 **将数据导入PDF文件：**
 * 使用FormsService将数据导入PDF文件
-* **POSTURL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
+* **POSTURL**  - http://localhost:4502/content/AemFormsSamples/mergedata.html
 * **请求参数：**
 
    * pdf文件：要将数据与
