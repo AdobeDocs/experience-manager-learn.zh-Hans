@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# 将图像锐化与AEM Dynamic Media结合使用{#using-image-sharpening-with-aem-dynamic-media}
+# 将图像锐化与AEM Dynamic Media{#using-image-sharpening-with-aem-dynamic-media}结合使用
 
 此视频介绍锐化图像对保持图像保真度至关重要的原因，以及如何使用高级设置制作完美图像。
 
