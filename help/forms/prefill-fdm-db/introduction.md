@@ -25,11 +25,12 @@ ht-degree: 0%
 
 * 创建RDBMS支持的表单数据模型
 * 创建2个实体之间的关联
-* 使用表单数据模型的get _服务_ 返回的数据填充表
+* 使用表单数据模型的&#x200B;_get_&#x200B;服务返回的数据填充表
 * 使用表单数据模型的请求属性
 
 
-[单击查看该功能的实时演](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)示以下视频为您提供了课程概述
+[单击查看该功能的实时演](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)
+示以下视频为您提供了课程的概述
 >[!VIDEO](https://video.tv.adobe.com/v/36387/quality=9)
 
 ## 前提条件
