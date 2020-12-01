@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# “创建语言副本”页 {#create-language-copy-page}
+# 创建语言副本页面{#create-language-copy-page}
 
 了解如何在现有语言副本中创建页面，然后将内容翻译为其他语言副本。
 
