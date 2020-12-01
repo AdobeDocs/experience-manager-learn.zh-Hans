@@ -36,25 +36,25 @@ ht-degree: 1%
 
 ## asset compute元数据工作器调用的逻辑流
 
-asset compute元数据Worker的调用与生成Worker的 [二进制再现的调用几乎相同](../develop/worker.md)，其主要区别是返回类型是XMP(XML)再现，其值也写入资产的元数据。
+asset compute元数据Worker的调用与生成Worker](../develop/worker.md)的[二进制再现的调用几乎相同，主要区别是返回类型是XMP(XML)再现，其值也写入资产的元数据。
 
-asset compute工作者实施Asset computeSDK工作者API合同，在功 `renditionCallback(...)` 能中，从概念上讲是：
+asset compute工作者在`renditionCallback(...)`函数中实施Asset computeSDK工作者API合同，从概念上讲，该合同是：
 
 + __输入：__ AEM资产的原始二进制和处理用户档案参数
 + __输出：__ XMP(XML)再现作为再现保留到AEM资产以及资产的元数据
 
 ![asset compute元数据工作者逻辑流](./assets/metadata/logical-flow.png)
 
-1. AEM作者服务调用Asset compute元数据工作 __器，提供资产的(1a__ )原始二进制文件 __和(1b)处理用户档案__ 中定义的任何参数。
-1. asset computeSDK安排自定义用户档案元数据工作器功能的执 `renditionCallback(...)` 行，根据资产的二进制(1a)和任何处理Asset compute参数( __1b)导出XMP__ (XML)再现 __。__
-1. asset compute工作者将XMP(XML)表示形式保存到 `rendition.path`。
-1. 写入的XMP(XML)数据 `rendition.path` 通过Asset computeSDK传输到AEM作者服务，并以(4a)文本再现形式 __显示它，(4b)______ 保留到资产的元数据节点。
+1. AEM作者服务调用Asset compute元数据工作器，提供资产的&#x200B;__(1a)__&#x200B;原始二进制文件和&#x200B;__(1b)__&#x200B;处理用户档案中定义的任何参数。
+1. asset computeSDK安排自定义Asset compute元数据工作器的`renditionCallback(...)`函数的执行，根据资产的二进制&#x200B;__(1a)__&#x200B;和任何处理用户档案参数&#x200B;__(1b)__&#x200B;导出XMP(XML)再现。
+1. asset compute工作者将XMP(XML)表示形式保存到`rendition.path`。
+1. 写入`rendition.path`的XMP(XML)数据通过Asset computeSDK传输到AEM作者服务，并以&#x200B;__(4a)__&#x200B;形式显示，并以&#x200B;__(4b)__&#x200B;形式保留到资产的元数据节点。
 
 ## 配置manifest.yml{#manifest}
 
-所有Asset compute工作者都必须在manifest. [yml中注册](../develop/manifest.md)。
+所有Asset computeWorker都必须注册在[manifest.yml](../develop/manifest.md)中。
 
-打开项目并添 `manifest.yml` 加配置新工作者的工作者条目，在这种情况下 `metadata-colors`。
+打开项目的`manifest.yml`并添加配置新工作器的工作器条目（在本例中为`metadata-colors`）。
 
 _请记 `.yml` 住，空格很敏感。_
 
@@ -81,17 +81,17 @@ packages:
           memorySize: 512 # in MB   
 ```
 
-`function` 指向在下一步中创建的工 [作器实施](#metadata-worker)。 从语义上命名工作器(例 `actions/worker/index.js` 如，可能更好地命 `actions/rendition-circle/index.js`名该工作器)，这些命名在工 [作器的URL中显示](#deploy) ，还确定 [该工作器的测试套件文件夹名称](#test)。
+`function` 指向在下一步中创建的工 [作器实施](#metadata-worker)。从语义上命名工作器（例如，`actions/worker/index.js`可能更好地命名为`actions/rendition-circle/index.js`），如[工作者的URL](#deploy)中所示，还可确定[工作者的测试套件文件夹名称](#test)。
 
-The `limits` and `require-adobe-auth` Designed by worker. 在此工作器中， `512 MB` 当代码检查（可能）大型二进制图像数据时，将分配内存。 另一个 `limits` 将被删除以使用默认值。
+`limits`和`require-adobe-auth`是按工作者分别配置的。 在此工作器中，内存的`512 MB`被分配，因为代码检查（可能）大型二进制图像数据。 其他`limits`将被删除以使用默认值。
 
 ## 开发元数据工作器{#metadata-worker}
 
-在Asset compute项目中为新工作者在定义的清单。yml路径 [下为新工作者创建新的元数据工作者](#manifest)JavaScript文件，网址为 `/actions/metadata-colors/index.js`
+在Asset compute项目中为新工作器](#manifest)定义的清单。yml路径[`/actions/metadata-colors/index.js`创建一个新的元数据工作器JavaScript文件
 
 ### 安装npm模块
 
-安装将在此[Asset compute工作器中使用的额外npm](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions)模块(@adobe [/asset-compute-xmp](https://www.npmjs.com/package/get-image-colors)、 [get-image-colors](https://www.npmjs.com/package/color-namer)和color-namer)。
+安装将在此Asset compute工作器中使用的额外npm模块（[@adobe/asset-compute-xmp](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions)、[get-image-colors](https://www.npmjs.com/package/get-image-colors)和[color-namer](https://www.npmjs.com/package/color-namer)）。
 
 ```
 $ npm install @adobe/asset-compute-xmp
@@ -101,7 +101,7 @@ $ npm install color-namer
 
 ### 元数据工作代码
 
-此工作器与再现生 [成工作器非常相似](../develop/worker.md)，其主要区别在于它将XMP(XML)数据写 `rendition.path` 入到AEM中以将其保存回。
+此工作器与[再现生成工作器](../develop/worker.md)非常相似，主要区别在于它将XMP(XML)数据写入`rendition.path`以将其保存回AEM。
 
 
 ```javascript
@@ -182,14 +182,14 @@ function getColorName(colorsFamily, color) {
 
 工作代码完成后，可以使用本地Asset compute开发工具执行它。
 
-由于我们的Asset compute项目包含两个工作 [者(前一个圆](../develop/worker.md)`metadata-colors` 形再现和此工作者 [)，因此](../develop/development-tool.md) Asset compute开发工具的用户档案定义将为这两个工作者执行用户档案。 第二个用户档案定义指向新工 `metadata-colors` 作者。
+由于我们的Asset compute项目包含两个工作器（前一个[圆形再现](../develop/worker.md)和此`metadata-colors`工作器），因此[Asset compute开发工具的](../develop/development-tool.md)用户档案定义会为这两个工作器执行列表。 第二个用户档案定义指向新的`metadata-colors`工作器。
 
 ![XML元数据再现](./assets/metadata/metadata-rendition.png)
 
 1. 从Asset compute项目的根
-1. 执 `aio app run` 行开始Asset compute开发工具
-1. 在选 __择文件……下拉__ ，选取要处 [理的示例图](../assets/samples/sample-file.jpg) 像
-1. 在第二个用户档案定义配置(指向该 `metadata-colors` 工作器) `"name": "rendition.xml"` 中，当此工作器生成XMP(XML)再现时更新。 或者，也可以添 `colorsFamily` 加参数(支 `basic`持 `hex`的值、 `html`、 `ntc`、 `pantone``roygbiv`、、)。
+1. 执行`aio app run`以开始Asset compute开发工具
+1. 在&#x200B;__中选择文件……__&#x200B;下拉框，选取[样本图像](../assets/samples/sample-file.jpg)进行处理
+1. 在第二个用户档案定义配置（指向`metadata-colors`工作器）中，当此工作器生成XMP(XML)再现时更新`"name": "rendition.xml"`。 或者，添加`colorsFamily`参数（支持的值`basic`、`hex`、`html`、`ntc`、`pantone`和`roygbiv`）。
 
    ```json
    {
@@ -202,13 +202,13 @@ function getColorName(colorsFamily, color) {
        ]
    }
    ```
-1. 点 __按运行__ ，然后等待XML再现生成
-   + 由于两个工作线程都列在用户档案定义中，因此两个再现都将生成。 （可选）可删除指向圆形再现工作 [器的顶部用户档案](../develop/worker.md) 定义，以避免从开发工具中执行它。
-1. 演绎 __版部分__ ，将生成的演绎版预览。 点按下 `rendition.xml` 载它，然后在VS代码（或您最喜爱的XML/文本编辑器）中打开它进行审阅。
+1. 点按&#x200B;__运行__&#x200B;并等待XML再现生成
+   + 由于两个工作线程都列在用户档案定义中，因此两个再现都将生成。 或者，可删除指向[圆形再现工作器](../develop/worker.md)的顶部用户档案定义，以避免从开发工具中执行它。
+1. __演绎版__&#x200B;部分预览生成的演绎版。 点按`rendition.xml`以下载它，然后在VS代码（或您最喜爱的XML/文本编辑器）中打开它进行查看。
 
-## 测试工作人员{#test}
+## 测试工作器{#test}
 
-可以使用与二进制再现相 [同的Asset compute测试框架来测试元数据工作器](../test-debug/test.md)。 唯一的区别是 `rendition.xxx` 测试用例中的文件必须是所需的XMP(XML)再现。
+可以使用与二进制演绎版[相同的Asset compute测试框架测试元数据工作器。 ](../test-debug/test.md)唯一的区别是测试用例中的`rendition.xxx`文件必须是所需的XMP(XML)再现。
 
 1. 在Asset compute项目中创建以下结构：
 
@@ -220,8 +220,8 @@ function getColorName(colorsFamily, color) {
        rendition.xml
    ```
 
-2. 将示 [例文件](../assets/samples/sample-file.jpg) 用作测试用例 `file.jpg`。
-3. 将以下JSON添加到 `params.json`。
+2. 使用[示例文件](../assets/samples/sample-file.jpg)作为测试用例的`file.jpg`。
+3. 将以下JSON添加到`params.json`。
 
    ```
    {
@@ -230,16 +230,16 @@ function getColorName(colorsFamily, color) {
    }
    ```
 
-   请注 `"fmt": "xml"` 意，要求测试套件生成基于文 `.xml` 本的再现。
+   请注意，要求`"fmt": "xml"`指示测试套件生成`.xml`基于文本的再现。
 
-4. 在文件中提供所需的 `rendition.xml` XML。 可通过以下方式获取此信息：
+4. 在`rendition.xml`文件中提供所需的XML。 可通过以下方式获取此信息：
    + 通过开发工具运行测试输入文件并保存（已验证）XML再现。
 
    ```
    <?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:wknd="https://wknd.site/assets/1.0/"><rdf:Description><wknd:colors><rdf:Seq><rdf:li>Silver</rdf:li><rdf:li>Black</rdf:li><rdf:li>Outer Space</rdf:li></rdf:Seq></wknd:colors><wknd:colorsFamily>pantone</wknd:colorsFamily></rdf:Description></rdf:RDF>
    ```
 
-5. 从Asset compute `aio app test` 项目的根执行以执行所有测试套件。
+5. 从Asset compute项目的根执行`aio app test`以执行所有测试套件。
 
 ### 将员工部署到Adobe I/O Runtime{#deploy}
 
@@ -251,32 +251,32 @@ $ aio app deploy
 
 ![aio应用程序部署](./assets/metadata/aio-app-deploy.png)
 
-请注意，这将部署项目中的所有工作者。 查看有 [关如何部署到](../deploy/runtime.md) Stage和Production工作区的简略部署说明。
+请注意，这将部署项目中的所有工作者。 查看[未加删节的部署说明](../deploy/runtime.md)，了解如何部署到舞台和生产工作区。
 
-### 与AEM处理用户档案集成{#processing-profile}
+### 与AEM处理用户档案{#processing-profile}集成
 
 通过创建新的或修改调用此已部署工作器的现有自定义处理用户档案服务，从AEM调用该工作器。
 
 ![处理用户档案](./assets/metadata/processing-profile.png)
 
-1. 以AEM管理员身份登录AEM作为Cloud Service作者服 __务__
-1. 导航到工 __具>资产>处理用户档案__
-1. __新建__ 、编辑和 __现有__ 的处理用户档案
-1. 点按自定 __义选__ 项卡，然后点 __按添加新__
+1. 以&#x200B;__AEM管理员__&#x200B;身份以Cloud Service作者服务身份登录到AEM
+1. 导航到&#x200B;__工具>资产>处理用户档案__
+1. __创__ 建新的或编辑的 ____ 现有处理用户档案
+1. 点按&#x200B;__Custom__&#x200B;选项卡，然后点按&#x200B;__添加新__
 1. 定义新服务
    + __创建元数据再现__:切换为活动
    + __端点：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/metadata-colors`
-      + 这是在部署或使用命令时获 [得](#deploy) 的工作者的URL `aio app get-url`。 根据AEM作为Cloud Service环境，确保URL指向正确的工作区。
+      + 这是在[部署](#deploy)期间或使用命令`aio app get-url`获取的工作者的URL。 根据AEM作为Cloud Service环境，确保URL指向正确的工作区。
    + __服务参数__
-      + 点按 __添加参数__
+      + 点按&#x200B;__添加参数__
          + 键: `colorFamily`
          + 值: `pantone`
-            + 支持的值： `basic`, `hex`, `html`, `ntc`, `pantone``roygbiv`
+            + 支持的值：`basic`、`hex`、`html`、`ntc`、`pantone`、`roygbiv`
    + __Mime 类型__
-      + __包括：__`image/jpeg`, `image/png`, `image/gif``image/svg`
+      + __包括__ `image/jpeg`: `image/png`、 `image/gif`、  `image/svg`
          + 这些是第三方npm模块支持的唯一用于导出颜色的MIME类型。
       + __不包括：__ `Leave blank`
-1. 点按 __右上__ 方的“保存”
+1. 点按右上方的&#x200B;__保存__
 1. 将处理用户档案应用到AEM Assets文件夹（如果尚未这样做）
 
 ### 更新元数据模式{#metadata-schema}
@@ -285,28 +285,28 @@ $ aio app deploy
 
 ![元数据架构](./assets/metadata/metadata-schema.png)
 
-1. 在AEM作者服务中，导航到工 __具>资产>元数据模式__
-1. 导航到 __默认__ ，选择并编 __辑图像__ ，添加只读表单字段以显示生成的颜色元数据
-1. Add a __Single Line Text__
+1. 在AEM作者服务中，导航到&#x200B;__工具>资产>元数据模式__
+1. 导航到&#x200B;__default__，选择并编辑&#x200B;__image__&#x200B;并添加只读表单字段以显示生成的颜色元数据
+1. 添加&#x200B;__单行文本__
    + __字段标签__: `Colors Family`
    + __映射到属性__: `./jcr:content/metadata/wknd:colorsFamily`
    + __“规则”>“字段”>“禁用编辑__”:已检查
-1. Add a __Multi Value Text__
+1. 添加&#x200B;__多值文本__
    + __字段标签__: `Colors`
    + __映射到属性__: `./jcr:content/metadata/wknd:colors`
-1. 点按 __右上__ 方的“保存”
+1. 点按右上方的&#x200B;__保存__
 
 ## 处理资产
 
 ![资源详细信息](./assets/metadata/asset-details.png)
 
-1. 在AEM作者服务中，导航到“资产”>“ __文件”。__
+1. 在AEM作者服务中，导航到&#x200B;__资产>文件__
 1. 导航到该文件夹或子文件夹，处理用户档案将应用到
-1. 将新图像（JPEG、PNG、GIF或SVG）上传到文件夹，或使用更新的“处理”用户档案重新处理现 [有图像](#processing-profile)
-1. 处理完成后，选择资产，然后点按顶 __部操作__ 栏中的属性以显示其元数据
-1. 查看从自 `Colors Family` 定 `Colors` 义Asset compute [元数据工作](#metadata-schema) 器中回写的元数据的元数据和元数据字段。
+1. 将新图像（JPEG、PNG、GIF或SVG）上传到文件夹，或使用更新的[处理用户档案](#processing-profile)重新处理现有图像
+1. 处理完成后，选择资产，然后点按顶部操作栏中的&#x200B;__属性__&#x200B;以显示其元数据
+1. 查看从自定义Asset compute元数据工作器写入的元数据的`Colors Family`和`Colors` [元数据字段](#metadata-schema)。
 
-使用写入资产元数据的颜色元数据(在资源上 `[dam:Asset]/jcr:content/metadata` )，可以通过搜索使用这些术语索引此元数据，从而提高资产发现能力，并且如果对资产调用DAM元数据写回工作流，甚至可以将这些元数据写回 __资产的二进制__ 。
+在`[dam:Asset]/jcr:content/metadata`资源上，将颜色元数据写入资产的元数据中，通过搜索为此元数据编制索引，从而提高了使用这些术语进行资产发现的能力，如果对资产调用&#x200B;__DAM元数据写回__&#x200B;工作流，甚至可以将这些元数据写回资产的二进制文件。
 
 ### AEM Assets的元数据再现
 
@@ -316,10 +316,10 @@ $ aio app deploy
 
 ## Github上的元数据颜色工作代码
 
-最后一 `metadata-colors/index.js` 节在Github上提供，网址为：
+最后`metadata-colors/index.js`在Github上可用，网址为：
 
 + [aem-guides-wknd-asset-compute/actions/metadata-colors/index.js](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/actions/metadata-colors/index.js)
 
-Github上提 `test/asset-compute/metadata-colors` 供的最终测试套件位于：
+Github上提供最终的`test/asset-compute/metadata-colors`测试套件：
 
 + [aem-guides-wknd-asset-compute/test/asset-compute/metadata-colors](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/test/asset-compute/metadata-colors)
