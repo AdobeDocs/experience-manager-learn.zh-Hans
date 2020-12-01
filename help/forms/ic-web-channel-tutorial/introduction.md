@@ -22,7 +22,7 @@ ht-degree: 2%
 
 交互通信是AEM Forms6.4的新增功能。此文档将指导您完成为印刷渠道创建交互通信所需的步骤。
 
-请访问 [AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0) 页，获取此功能的实时演示的链接。
+请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)页面，获取此功能的实时演示的链接。
 
 ## 前提条件 {#prerequistes}
 
