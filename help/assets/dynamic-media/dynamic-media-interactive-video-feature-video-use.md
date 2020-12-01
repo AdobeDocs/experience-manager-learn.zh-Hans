@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# 将交互式视频与AEM Dynamic Media结合使用{#using-interactive-video-with-aem-dynamic-media}
+# 将交互式视频与AEM Dynamic Media{#using-interactive-video-with-aem-dynamic-media}结合使用
 
 AEM资产现在具有创建交互式视频的功能，用户可以在该功能中将视频拆分为较小的区段，或将较小的区段组合以创建较大的区段，从而允许用户关联行动号召。
 
