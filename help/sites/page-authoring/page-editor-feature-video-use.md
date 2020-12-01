@@ -20,7 +20,7 @@ ht-degree: 6%
 ---
 
 
-# 使用页面编辑器 {#using-page-editor-with-aem-sites}
+# 使用页面编辑器{#using-page-editor-with-aem-sites}
 
 AEM站点的页面编辑器是用于创建和编辑Web内容的强大工具。 页面编辑器的工具和功能可从页面编辑器的UI工具栏访问。
 
