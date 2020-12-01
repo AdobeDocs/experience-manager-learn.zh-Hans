@@ -24,23 +24,23 @@ AEM资产的图像智能标记通过自动向图像资产添加派生的元数�
 
 >[!VIDEO](https://video.tv.adobe.com/v/17019/?quality=12&learn=on)
 
-## 为AEM 6.x设置{#set-up}
+## 设置AEM 6.x{#set-up}
 
 >[!NOTE]
 > 图像的智能标记会作为Cloud Service自动为AEM设置。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17023/?quality=12&learn=on)
 
-在使用智能内容服务之前，请确保以下各项在AdobeI/O上创建集成：
+在使用智能内容服务之前，请确保在Adobe I/O创建以下集成：
 
 * 具有组织管理员权限的Adobe ID帐户
 * 您的组织已启用智能内容服务
 
-视频详细介绍了配置用于智能标记图像的AdobeI/O智能内容服务所需的以下任务。
+该视频详细介绍了配置用于智能标记图像的Adobe I/O智能内容服务所需的以下任务。
 
 * 在AEM中创建智能内容服务配置以生成公钥。 为 OAuth 集成获取公共证书。
-* 在AdobeI/O中创建集成并上传生成的公钥。
-* 使用API密钥和AdobeI/O中的其他凭据配置AEM实例。
+* 在Adobe I/O创建集成并上传生成的公钥。
+* 使用API密钥和Adobe I/O的其他凭据配置AEM实例。
 * （可选）在资产上传时启用自动标记。
 
 ## 其他资源
