@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 将连接资产与AEM Assets{#using-connected-assets-with-aem-assets}
+# 将连接的资源与AEM Assets一起使用{#using-connected-assets-with-aem-assets}
 
 “连接资产”功能允许AEM Sites的作者无缝共享托管在AEM不同实例上的数字资产。
 
@@ -28,4 +28,4 @@ ht-degree: 0%
 * 03:30 —使用来自已连接资产的图像
 * 04:42 —用于启用“已连接资产”功能的管理员配置
 
-请查看所 [支持的已连接资产部署](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) ，了解AEM部署是否支持已连接资产。
+请查看[支持的已连接资产部署](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites)，了解AEM部署是否支持已连接资产。
