@@ -28,5 +28,5 @@ ht-degree: 46%
 + [全网页体验的个性化](./personalization-use-case-2.md)
 + 实施 {#aem-target-implementation}
    + [简介](./implementation.md)
-   + [AEM和Adobe Target使用Launch和AdobeI/O](./using-launch-adobe-io.md)
+   + [AEM和Adobe Target使用Launch和Adobe I/O](./using-launch-adobe-io.md)
    + [AEM和Adobe Target使用传统Cloud Services](./using-aem-cloud-services.md)
