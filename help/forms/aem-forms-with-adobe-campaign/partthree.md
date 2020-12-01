@@ -19,11 +19,11 @@ ht-degree: 0%
 
 ---
 
-# 使用ACS用户档案预填自适应表单 {#prefilling-adaptive-form-using-acs-profile}
+# 使用ACS用户档案{#prefilling-adaptive-form-using-acs-profile}预填自适应表单
 
 在此部分，我们将使用从ACS获取的用户档案信息预填自适应表单。 AEM Forms拥有预填自适应表单的强大功能。
 
-要进一步了解预填自适应表单，请阅读本 [教程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
+要进一步了解预填自适应表单，请阅读此[教程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
 
 要通过从ACS获取数据来预填充自适应表单，我们假定ACS中存在与已登录的AEM用户具有相同电子邮件的用户档案。 例如，如果登录AEM的人员的电子邮件ID为csimms@adobe.com，则我们希望在电子邮件为csimms@adobe.com的ACS中找到一个用户档案。
 
