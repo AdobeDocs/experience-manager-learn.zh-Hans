@@ -31,12 +31,12 @@ ht-degree: 4%
 
 **高级策略配置** -以下重点介绍了可编辑模板提供的一些高级策略配置：
 
-* **布局容器** -能够配置允许的组件、管理资产的拖放映射以及响应式网格列。
-* **文本组件** -能够使用新的UI配置富文本编辑器插件，并跨模板重复使用RTE策略。
+* **布局容器** -配置允许的组件、管理资产的拖放映射以及响应式网格列的功能。
+* **文本组件** -可使用新的UI配置富文本编辑器插件并跨模板重复使用RTE策略。
 * **图像组件** -能够打开／关闭裁剪、使用新UI上传桌面文件以及跨模板重用图像策略等功能。
 
-可编辑的模板可在工具 **常规模板**`>`**下找** 到 `>` Editable **Templates**。\
-可编辑模板URL(本地AEM实例): [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
+可编辑的模板位于&#x200B;**工具** `>` **常规** `>` **模板**&#x200B;下。\
+可编辑模板URL(本地AEM实例):[http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 ## 其他资源 {#additional-resources}
 
