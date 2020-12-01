@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Live Copy控制台 {#live-copy-console}
+# Live Copy控制台{#live-copy-console}
 
 了解如何使用Live Copy概述控制台视图或管理站点中的继承或执行转出操作。
 
