@@ -1,18 +1,18 @@
 ---
-title: AEM和Adobe Target入门
-seo-title: AEM和Adobe Target入门
+title: AEM 和 Adobe Target 使用入门
+seo-title: AEM 和 Adobe Target 使用入门
 description: 一个端到端教程，其中演示如何使用Adobe Experience Manager和Adobe Target创建和提供个性化体验。 在本教程中，您还将学习端到端流程中涉及的不同角色以及他们如何相互协作
 seo-description: 一个端到端教程，其中演示如何使用Adobe Experience Manager和Adobe Target创建和提供个性化体验。 在本教程中，您还将学习端到端流程中涉及的不同角色以及他们如何相互协作
 translation-type: tm+mt
 source-git-commit: c4ddafe392f74be8401f3ef6e07fc9d463d7620a
 workflow-type: tm+mt
 source-wordcount: '889'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
 
-# AEM和Adobe Target入门 {#getting-started-with-aem-target}
+# AEM 和 Adobe Target 使用入门 {#getting-started-with-aem-target}
 
 AEM和目标都是功能看似重叠的强大解决方案。 客户有时难以理解如何以及何时结合使用这些产品来提供个性化体验。 为了为每个最终用户提供优化的体验，组织内的不同团队应密切协作并定义谁负责。
 
@@ -22,15 +22,15 @@ AEM和目标都是功能看似重叠的强大解决方案。 客户有时难以�
 * 方案2:使用视觉体验书写器实现个性化
 * 方案3:全网页体验的个性化
 
-## 使用AEM Experience Fragments实现个性化 {#personalization-using-aem-experience-fragment}
+## 使用AEM Experience Fragments{#personalization-using-aem-experience-fragment}实现个性化
 
-对于这种情况，我们将使用AEM和目标。 显然，这两种产品都有各自的优势，在向您网站的用户提供个性化体验方面，您需要 **个性化内容** (AEM **内容)和智能方式** (目标)来根据特定用户提供这些内容。
+对于这种情况，我们将使用AEM和目标。 显然，这两种产品都有各自的优势，在向您网站的用户提供个性化体验时，您需要&#x200B;**个性化内容(AEM中的内容)**&#x200B;和&#x200B;**智能方式(目标)**&#x200B;根据特定用户提供这些内容。
 
 AEM可帮助您创建个性化内容，将您的所有内容和资产集中在一个中心位置，以推动您的个性化战略。 通过AEM，您无需编写代码，即可在一个位置轻松创建适用于台式机、平板电脑和移动设备的内容。 无需为每个设备创建页面-AEM可使用您的内容自动调整每个体验。 您还可以通过按钮将内容从AEM导出到Adobe Target作为优惠。
 
 我们现在以目标AEM优惠形式提供个性化内容。 目标允许您根据融合了行为、情境和离线变量的基于规则和人工智能驱动的机器学习方法的组合大规模交付这些优惠。  借助目标，您可以轻松设置和运行A/B和多变量(MVT)活动，以确定最佳优惠、内容和体验。
 
-**体验片段** ，是将内容／体验创建者与个性化专业人士关联起来的一个重大飞跃，这些专业人士通过目标推动业务成果。
+**体验** 碎片是将内容／体验创建者与个性化专业人士关联起来的一个巨大进步，这些专业人士通过目标推动业务成果。
 
 * AEM内容编辑器作者将个性化内容作为Experience Fragments及其变量
 * AEM将体验片段HTML导出到&#x200B;目标
@@ -41,10 +41,10 @@ AEM可帮助您创建个性化内容，将您的所有内容和资产集中在�
 
 **要实施此方案，您需要：**
 
-* [使用Launch和AdobeI/O集成AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
+* [使用Launch和Adobe I/O将AEM和Adobe Target集成](./implementation.md#integrating-aem-target-options)
 * [AEM和Adobe Target使用传统Cloud Services](./implementation.md#integrating-aem-target-options)
 
-***在实施上述集成之后，我们将详细[地研究该方案](./personalization-use-case-1.md)。***
+***在实施上述集成之后，我们将详细 [地研究该方案](./personalization-use-case-1.md)。***
 
 ## 使用视觉体验书写器实现个性化
 
@@ -62,9 +62,9 @@ VEC公司是Adobe Target公司的主要功能之一。 VEC允许营销人员和�
 
 **要实施此方案，您需要：**
 
-* [使用Launch和AdobeI/O集成AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
+* [使用Launch和Adobe I/O将AEM和Adobe Target集成](./implementation.md#integrating-aem-target-options)
 
-***在实施上述集成之后，我们将详[细探索该方案。](./personalization-use-case-3.md)***
+***在实施上述集成之后，我们将详 [细探索该方案。](./personalization-use-case-3.md)***
 
 ## 全网页体验的个性化
 
@@ -80,6 +80,6 @@ VEC公司是Adobe Target公司的主要功能之一。 VEC允许营销人员和�
 
 **要实施此方案，您需要：**
 
-* [使用Launch和AdobeI/O集成AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
+* [使用Launch和Adobe I/O将AEM和Adobe Target集成](./implementation.md#integrating-aem-target-options)
 
-***在实施上述集成之后，我们将详[细探索该方案。](./personalization-use-case-2.md)***
+***在实施上述集成之后，我们将详 [细探索该方案。](./personalization-use-case-2.md)***
