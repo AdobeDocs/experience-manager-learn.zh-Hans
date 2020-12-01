@@ -16,7 +16,7 @@ ht-degree: 2%
 ---
 
 
-# 面向管理员的宝贵报告 {#valuable-reports}
+# 管理员的宝贵报告{#valuable-reports}
 
 在最后一章中，我们只希望您了解在您是管理员时，您可能考虑设置的两个有价值的报告：带宽和存储报告和图像错误报告。
 
@@ -42,9 +42,9 @@ _图像错误报告。_
 
 要进一步了解Dynamic Media Classic，请查看以下资源：
 
-- [体验联盟上的Dynamic Media Classic —— 实现价值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- [Experience League上的Dynamic Media Classic —— 实现价值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
 - [Experience League上的Dynamic Media Classic —— 完成更多工作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media Newsletter存档](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [Dynamic Media新闻稿订阅页](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
-- [动态媒体经典文档](https://docs.adobe.com/content/help/zh-Hans/dynamic-media-classic/using/home.html)
+- [动态媒体经典文档](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
 - [富媒体博客文章](https://theblog.adobe.com/tag/dynamic-media)
