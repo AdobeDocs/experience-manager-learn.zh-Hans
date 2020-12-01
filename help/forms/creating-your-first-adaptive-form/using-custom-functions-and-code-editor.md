@@ -22,24 +22,24 @@ ht-degree: 0%
 ---
 
 
-# 使用自定义函数和代码编辑器 {#using-functions-and-code-editor}
+# 使用自定义函数和代码编辑器{#using-functions-and-code-editor}
 
 在本部分，我们将使用自定义函数和代码编辑器来编写业务规则。
 
-您已经在本教程的 [前面安装了具有自定义函](assets/client-libs-and-logo.zip) 数的ClientLib。
+您已经在本教程的前面安装了自定义函数](assets/client-libs-and-logo.zip)的[ClientLib。
 
 通常，客户端库由CSS和Javascript文件组成。 此客户端库包含显示用于填充下拉列表值的函数的javascript文件。
 
 
-## 填充下拉框的函数列表 {#function-to-populate-drop-down-list}
+## 填充下拉列表{#function-to-populate-drop-down-list}的函数
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
 
-### 设置面板的摘要标题 {#set-the-summary-title-of-panels}
+### 设置面板{#set-the-summary-title-of-panels}的摘要标题
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
 
-#### 验证面板 {#validate-panels-using-rule-editor}
+#### 验证面板{#validate-panels-using-rule-editor}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28409?quality=9&learn=on)
 
