@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# 将智能裁剪与AEM Assets动态媒体结合使用{#using-smart-crop-with-aem-assets-dynamic-media}
+# 将智能裁剪与AEM AssetsDynamic Media一起使用{#using-smart-crop-with-aem-assets-dynamic-media}
 
 Smart Crop使用Adobe Sensei来消除耗时且成本高昂的裁剪内容任务，以实现响应式设计。
 
