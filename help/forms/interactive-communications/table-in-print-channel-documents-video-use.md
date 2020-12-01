@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms打印渠道文档中使用表组件 {#using-table-component-in-aem-forms-print-channel-document}
+# 在AEM Forms打印渠道文档{#using-table-component-in-aem-forms-print-channel-document}中使用表组件
 
 以下视频将逐步介绍在Interactive Communications中使用表组件进行打印渠道文档所需的步骤。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
    * 交互通信文档
    * sampleretirementaccountdata.json
 
-* 在编辑模式下打开交互式 [通信文档](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)。
+* 在[编辑模式](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)中打开交互式通信文档。
 
 * 将TableDemo布局片段添加到贡献部分。
 * 将表单元格绑定到相应的表单数据模型元素，如视频所示
