@@ -20,18 +20,18 @@ ht-degree: 0%
 
 # 创建主自适应表单
 
-表单 **StoreAFWithAttachments** 是主要自适应表单。 此自适应表单是用例的入口点。 在此表单中，将捕获用户详细信息（包括移动号码）。 此表单还可以添加一些附件。 单击“保存并退出”按钮时，将执行服务器端代码以将表单数据存储在数据库中，并生成唯一的应用程序ID并呈现给用户以进行安全保存。 此应用程序ID将用于检索与应用程序关联的移动号码。
+表单&#x200B;**StoreAFWithAttachments**&#x200B;是主自适应表单。 此自适应表单是用例的入口点。 在此表单中，将捕获用户详细信息（包括移动号码）。 此表单还可以添加一些附件。 单击“保存并退出”按钮时，将执行服务器端代码以将表单数据存储在数据库中，并生成唯一的应用程序ID并呈现给用户以进行安全保存。 此应用程序ID将用于检索与应用程序关联的移动号码。
 
 ![主要应用程序表单](assets/6552.JPG)
 
-此表单与课程前 **面创建的bootboxjs540、storeAFWithAttachments** 客户端库以及在提交表单时触发的AEM工作流相关联。
+此表单与课程前面创建的&#x200B;**bootboxjs540,storeAFWithAttachments**&#x200B;客户端库以及在提交表单时触发的AEM工作流相关联。
 
 
-* 示例表单基于自定 [义自适应表单模板](assets/custom-template-with-page-component.zip) ，需要将其导入AEM，以便示例表单正确呈现。
+* 示例表单基于[自定义自适应表单模板](assets/custom-template-with-page-component.zip)，需要将该模板导入AEM，以使示例表单正确呈现。
 
-* 可以下 [载完成的](assets/store-af-with-attachments-form.zip) StoreAfWithAttachments表单并将其导入AEM实例。
+* 可以下载完成的[StoreAfWithAttachments Form](assets/store-af-with-attachments-form.zip)并将其导入AEM实例。
 
-* 与 [此表单关联的AEM工作流](assets/workflow-model-store-af-with-attachments.zip) ，需要导入到AEM实例中，以使表单正常工作。
+* 需要将与此表单](assets/workflow-model-store-af-with-attachments.zip)关联的[AEM工作流导入AEM实例，以使表单正常工作。
 
 
 
