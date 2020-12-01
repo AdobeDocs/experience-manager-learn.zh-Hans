@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# 调试启动实施 {#debug-launch-implementation}
+# 调试启动实现{#debug-launch-implementation}
 
 介绍用于调试Launch实现的常用工具和技术。 了解如何使用浏览器的开发人员控制台和Experience Platform调试器扩展来识别和排除启动实施的关键方面的故障。
 
