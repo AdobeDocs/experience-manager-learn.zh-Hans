@@ -17,13 +17,13 @@ ht-degree: 0%
 ---
 
 
-# 将Dynamic Media 3D与AEM Assets一起使用{#using-dynamic-3d-with-aem-assets}
+# 将Dynamic Media 3D与AEM Assets{#using-dynamic-3d-with-aem-assets}结合使用
 
 针对Adobe Experience Manager的Dynamic Media 3D支持可让您轻松定制和大规模交付交互式3D驱动体验。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35156/?quality=9&learn=on)
 
-请在此处查看 [3D Dimensional Viewer](http://s7d1.scene7.com/s7viewers/html5/DimensionalViewer.html?asset=DynamicmediaNA1/canBlue-2&amp;config=DynamicmediaNA1/Dimensional&amp;serverUrl=http://s7d1.scene7.com/is/image/&amp;contenturl=http://s7d1.scene7.com/is/content/) 。
+请在此处查看3D [Dimensional Viewer](http://s7d1.scene7.com/s7viewers/html5/DimensionalViewer.html?asset=DynamicmediaNA1/canBlue-2&amp;config=DynamicmediaNA1/Dimensional&amp;serverUrl=http://s7d1.scene7.com/is/image/&amp;contenturl=http://s7d1.scene7.com/is/content/)。
 
 
 ## 使用3D Experience Viewer
