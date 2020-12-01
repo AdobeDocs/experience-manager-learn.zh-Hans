@@ -16,7 +16,7 @@ ht-degree: 5%
 ---
 
 
-# 设置ContextHub进行个性化 {#set-up-contexthub}
+# 为个性化设置ContextHub {#set-up-contexthub}
 
 ContextHub是存储、处理和呈现上下文数据的框架。 ContextHub Javascript API允许您根据需要访问存储以创建、更新和删除数据。 因此，ContextHub表示页面上的数据层。 本页介绍如何将Context Hub添加到AEM站点页面。
 
@@ -24,13 +24,13 @@ ContextHub是存储、处理和呈现上下文数据的框架。 ContextHub Java
 
 >[!NOTE]
 >
->我们使用此视频的WKND参考站点，它不是AEM版本的一部分。 您可以在此处 [下载最新版本](https://github.com/adobe/aem-guides-wknd/releases)。
+>我们使用此视频的WKND参考站点，它不是AEM版本的一部分。 您可以在此处](https://github.com/adobe/aem-guides-wknd/releases)下载[最新版本。
 
 将ContextHub添加到您的页面以启用ContextHub功能并链接到ContextHub JavaScript库。 ContextHub JavaScript API提供对ContextHub管理的上下文数据的访问。
 
-## 将ContextHub添加到页面组件 {#adding-contexthub-to-a-page-component}
+## 将ContextHub添加到页面组件{#adding-contexthub-to-a-page-component}
 
-要启用ContextHub功能并链接到ContextHub JavaScript库，请在网 `contexthub` 页的 `<head>` 部分中包含该组件。 页面组件的HTL代码类似于以下示例：
+要启用ContextHub功能并链接到ContextHub JavaScript库，请在网页的`<head>`部分包含`contexthub`组件。 页面组件的HTL代码类似于以下示例：
 
 ```java
 <!--/* Include Context Hub */-->
@@ -38,15 +38,15 @@ ContextHub是存储、处理和呈现上下文数据的框架。 ContextHub Java
 */-->
 ```
 
-## 站点配置和ContextHub区段 {#site-configuration-and-contexthub-segments}
+## 站点配置和ContextHub区段{#site-configuration-and-contexthub-segments}
 
-ContextHub包含一个分段引擎，它管理区段并确定为当前上下文解析哪些区段。 定义了多个区段。 您可以使用Javascript API确定已 [解析的区段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)。 在“配置浏览器”下为您的站点启 [[!UICONTROL 用ContextHub区段]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)。
+ContextHub包含一个分段引擎，它管理区段并确定为当前上下文解析哪些区段。 定义了多个区段。 您可以使用Javascript API确定已解析的段[。 ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)在[[!UICONTROL 配置浏览器]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)下为您的站点启用ContextHub区段。
 
-## 创建区段 {#create-segments}
+## 创建区段{#create-segments}
 
 创建AEM区段，充当Teaser的规则。 即，它们定义Teaser中的内容何时出现在网页上。 内容可以特别针对于访客的需求和兴趣，具体取决于他们匹配的区段。
 
-## 将云配置、区段路径和ContextHub路径分配给您的站点 {#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
+## 将云配置、区段路径和ContextHub路径分配给您的站点{#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
 
 将云配置路径、分段路径和ContextHub路径分配给您的站点根节点，以便您为受众创建个性化体验。 使用ContextHub，您可以处理上下文数据并测试已解析的区段。
 
