@@ -26,9 +26,9 @@ ht-degree: 0%
 
 
 
-有关更多详 [细信息，请参阅自适应表](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html) 单模板文档
+有关详细信息，请参阅[自适应表单模板文档](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html)
 
-如果需要，您可以下 [载配偶详细信息 ](assets/spouse-details-fragment.zip) 片段，并使用包管理器 [导入AEM](http://localhost:4502/crx/packmgr/index.jsp)
+如果需要，您可以下载[配偶详细信息片段](assets/spouse-details-fragment.zip)，然后使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入AEM
 
 
 
