@@ -16,13 +16,13 @@ ht-degree: 0%
 ---
 
 
-# 设置翻译规则 {#set-up-translation-rules-in-aem}
+# 设置转换规则{#set-up-translation-rules-in-aem}
 
 翻译配置UI允许用户管理在AEM Sites翻译内容的规则。 此视频详细介绍了如何为自定义组件创建新的翻译规则。
 
 >[!NOTE]
 >
-> 以下视频记录在AEM 6.3上。 AEM 6.4+引入了用于存储转换规则XML文件的新存储库结构。 在AEM 6.4+中使用翻译配置UI时，规则将保存到该位置 `/conf/global/settings/translation/rules/translation_rules.xml`。 有关更 [多详细信息，请参阅](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html) “识别要翻译的内容”。
+> 以下视频记录在AEM 6.3上。 AEM 6.4+引入了用于存储转换规则XML文件的新存储库结构。 在AEM 6.4+中使用转换配置UI时，规则将保存到位置`/conf/global/settings/translation/rules/translation_rules.xml`。 有关详细信息，请参阅[标识要翻译的内容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135/?quality=9&learn=on)
 
@@ -36,11 +36,11 @@ ht-degree: 0%
 
 访问翻译配置UI:
 
-* **[!UICONTROL AEM开始菜单]>[!UICONTROL 工具]>[!UICONTROL 常规]>转[[!UICONTROL 换配置]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
+* **[!UICONTROL AEM开始菜单] > [!UICONTROL 工具] >常 [!UICONTROL 规] >转 [[!UICONTROL 换配置]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
-## AEM 6.3之前 {#prior-to-aem}
+## AEM 6.3 {#prior-to-aem}之前
 
-在以前的AEM版本转换规则中，通过编辑位于转换工作流下的XML文件手动更新： `/etc/workflow/models/translation/translation_rules.xml`.
+在以前的AEM版本转换规则中，通过编辑位于转换工作流下的XML文件手动更新：`/etc/workflow/models/translation/translation_rules.xml`。
 
 ## 其他资源 {#additional-resources}
 
