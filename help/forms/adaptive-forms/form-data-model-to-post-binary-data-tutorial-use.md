@@ -46,24 +46,24 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->故障排除提示——如果由于某种原因未在DAM中创建DOR.pdf，请单击此处重置数据源身份验证 [设置](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam)。 这些是AEM身份验证设置，默认为admin/admin。
+>故障排除提示——如果由于某种原因未在DAM中创建DOR.pdf，请单击[此处](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam)重置数据源身份验证设置。 这些是AEM身份验证设置，默认为admin/admin。
 
 要在服务器上测试此功能，请按照以下步骤操作：
 
-1.部[署使用serviceuser包进行开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1.[部署使用serviceuser bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)进行开发
 
 1. [下载并部署setvalue bundle](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。此自定义OSGI bundle用于创建元数据属性并从提交的表单数据设置其值。
 
-1. [使用包管理器](assets/postdortodam.zip) ，将与本文关联的资产导入AEM。您将获得以下信息：
+1. [使用包](assets/postdortodam.zip) 管理器将与本文关联的资产导入AEM。您将获得以下信息
 
    1. 工作流模型
    1. 自适应表单配置为提交到AEM工作流
    1. 配置为使用PostToDam.JSON文件的数据源
    1. 使用数据源的表单数据模型
 
-1. 指向浏 [览器以打开自适应表单](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+1. 指向您的[浏览器以打开自适应表单](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 1. 填写表单并提交。
 1. 如果创建并存储了记录文档，请检查资产应用程序。
 
 
-[创建数据源](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) 时使用的Swagger文件可供您参考
+[创建](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) 数据源时使用的Swagger文件可供您参考
