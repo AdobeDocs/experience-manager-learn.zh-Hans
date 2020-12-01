@@ -27,7 +27,7 @@ WKND网站重新设计了主页，希望将其当前主页访客重定向到新�
 对于本练习，需要参与以下用户，并执行某些任务，您可能需要管理访问权限。
 
 * **内容制作者／内容编辑** (Adobe Experience Manager)
-* **营销人员** (Adobe Target/优化团队)
+* **营销人** (Adobe Target/优化团队)
 
 ### WKND站点主页
 
@@ -36,10 +36,10 @@ WKND网站重新设计了主页，希望将其当前主页访客重定向到新�
 ### 前提条件
 
 * **AEM**
-   * [AEM author和publish实例](./implementation.md#getting-aem) （分别运行于localhost 4502和4503上）。
+   * [AEM author和publish ](./implementation.md#getting-aem) instancerunning分别位于localhost 4502和4503上。
    * [AEM使用Adobe Experience Platform Launch与Adobe Target集成](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * 访问您的组织Adobe Experience Cloud <https://>`<yourcompany>`-.experiencecloud.adobe.com
+   * 访问您的组织Adobe Experience Cloud- <https://>`<yourcompany>`.experienccloud.adobe.com
    * Experience Cloud配置了以下解决方案
       * [Adobe Target](https://experiencecloud.adobe.com)
 
@@ -52,29 +52,29 @@ WKND网站重新设计了主页，希望将其当前主页访客重定向到新�
 ## 营销人员活动
 
 1. 营销人员创建A/B目标活动，将重定向优惠作为体验，并在添加成功目标和指标后将分配给新主页的100%网站流量分配给新。
-   1. 在您的Adobe Target窗口中，导航到 **活动** 选项卡。
-   2. 单 **击“创建活动** ”按钮，然后选择“A/ **B测试”活动类型**
+   1. 在您的Adobe Target窗口中，导航到&#x200B;**活动**&#x200B;选项卡。
+   2. 单击&#x200B;**创建活动**&#x200B;按钮并选择活动类型作为&#x200B;**A/B测试**
 
       ![Adobe Target-创建活动](assets/personalization-use-case-2/create-ab-activity.png)
-   3. 选择Web **渠道** ，然后选择 **可视体验书写器**。
-   4. 输入 **活动URL** ，然 **后单击** 下一步以打开Visual Experience Composer。
+   3. 选择&#x200B;**Web**&#x200B;渠道，然后选择&#x200B;**Visual Experience Composer**。
+   4. 输入&#x200B;**活动URL**，然后单击&#x200B;**下一步**以打开可视体验书写器。
       ![Adobe Target-创建活动](assets/personalization-use-case-2/create-activity-ab-name.png)
-   5. 要加 **载Visual Experience Composer** ，请在浏览器 **上启用“允许加载不安全脚本** ”并重新加载页面。
+   5. 要加载&#x200B;**可视体验书写器**，请在浏览器上启用&#x200B;**允许加载不安全脚本**并重新加载页面。
       ![体验定位活动](assets/personalization-use-case-1/load-unsafe-scripts.png)
    6. 请注意，WKND站点主页在Visual Experience Composer编辑器中打开。
       ![VEC](assets/personalization-use-case-2/vec.png)
-   7. 将鼠标悬停 **在体验B上** ，然后选择“视图”其他选项。
+   7. 将指针悬停在&#x200B;**体验B**上，然后选择视图其他选项。
       ![体验 B](assets/personalization-use-case-2/redirect-url.png)
-   8. 选 **择“重定向到** URL”选项，然后输入指向新WKND主页的URL。 (http://localhost:4503/content/wknd/en1.html)
+   8. 选择&#x200B;**重定向到URL**选项并输入新WKND主页的URL。 (http://localhost:4503/content/wknd/en1.html)
       ![体验 B](assets/personalization-use-case-2/redirect-url-2.png)
-   9. **保存** 您所做的更改，并继续执行活动创建的后续步骤。
-   10. 选择流 **量分配方法** （人工分配），将100%流量分配 **到体验B**。
+   9. **保** 存更改并继续执行活动创建的后续步骤。
+   10. 选择&#x200B;**流量分配方法**&#x200B;作为手动流量，将流量分配到&#x200B;**体验B**。
       ![体验B流量](assets/personalization-use-case-2/traffic.png)
    11. 单击&#x200B;**下一步**。
-   12. 提 **供活动** 、保存并关闭A/B测试的目标指标。
+   12. 为活动提供&#x200B;**目标指标**并保存和关闭A/B测试。
       ![A/B测试目标度量](assets/personalization-use-case-2/goal-metric.png)
-   13. 为您的主页提&#x200B;**供名称**(WKND活动重新设计)，并保存您所做的更改。
-   14. 从活动详细信息屏幕，确保激 **活** 活动。
+   13. 为活动提供名称(**WKND主页重新设计**)并保存更改。
+   14. 在活动详细信息屏幕中，确保&#x200B;**激活**您的活动。
       ![激活活动](assets/personalization-use-case-2/ab-activate.png)
    15. 导航到WKND主页(http://localhost:4503/content/wknd/en.html)，您将被重定向到重新设计的WKND站点主页(http://localhost:4503/content/wknd/en1.html)。
       ![WKND主页已重新设计](assets/personalization-use-case-2/WKND-home-page-redesign.png)
