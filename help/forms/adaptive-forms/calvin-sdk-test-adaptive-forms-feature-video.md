@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 了解Forms自动化测试与AEM Forms{#understanding-automated-forms-testing-with-aem-forms}
+# 使用AEM Forms了解Forms自动化测试{#understanding-automated-forms-testing-with-aem-forms}
 
 AEM 6.3Forms公司引入了让用户在AEM内使用构建于hobbes.js框架之上的Calvin SDK创建自适应Forms测试案例的功能。
 
