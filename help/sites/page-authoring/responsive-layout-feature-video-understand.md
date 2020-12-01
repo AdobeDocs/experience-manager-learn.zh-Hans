@@ -20,7 +20,7 @@ ht-degree: 14%
 ---
 
 
-# 了解响应式布局 {#understanding-responsive-layout-with-aem-sites}
+# 了解响应式布局{#understanding-responsive-layout-with-aem-sites}
 
 Adobe Experience Manager Sites允许作者根据设备宽度管理组件的宽度，以便于响应式网站设计。 使用布局模式和布局容器，用户可以为不同设备创建响应式内容并预览最终用户体验，而无需离开AEM UI。
 
