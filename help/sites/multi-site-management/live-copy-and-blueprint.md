@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Live Copy和蓝色打印 {#livecopy-blueprint}
+# Live Copy和蓝色打印{#livecopy-blueprint}
 
 了解Live Copy与AEM SitesBlueprint之间的关系。
 
