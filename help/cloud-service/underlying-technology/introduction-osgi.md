@@ -19,6 +19,6 @@ ht-degree: 4%
 
 # [!DNL OSGi] 简介{#introduction-osgi}
 
-介绍一种 [!DNL OSGi]动态的模块化应用 [!DNL Java] 架构，它是Adobe Experience Manager的基础。
+[!DNL OSGi]是[!DNL Java]应用程序的动态模块化架构，它是Adobe Experience Manager的基础。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32031/?quality=12&learn=on)
