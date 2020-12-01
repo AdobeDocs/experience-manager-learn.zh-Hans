@@ -24,9 +24,9 @@ HTML5表单可提交到AEM中托管的servlet。 提交的数据可以作为输�
 
 ## 创建提交处理程序
 
-可以创建一个简单的servlet来处理HTML5表单提交。 然后，可使用以下代码提取提交的数据。 本 [教程中](assets/html5-submit-handler.zip) ，您可以使用此Servlet。 请使用包管 [理器](assets/html5-submit-handler.zip) 安 [装servlet](http://localhost:4502/crx/packmgr/index.jsp)
+可以创建一个简单的servlet来处理HTML5表单提交。 然后，可使用以下代码提取提交的数据。 此[servlet](assets/html5-submit-handler.zip)是本教程的一部分。 请使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)安装[servlet](assets/html5-submit-handler.zip)
 
-第9行的代码可用于调用J2EE进程。 如果要使用代码调 [用J2EE进程](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) ，请确保已配置AdobeLiveCycle客户端SDK配置。
+第9行的代码可用于调用J2EE进程。 如果要使用代码调用J2EE进程，请确保已配置[AdobeLiveCycle客户端SDK配置](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html)。
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();
@@ -60,14 +60,14 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 ![submit-url](assets/submit-url.PNG)
 
-* 点按xdp并单击“属 _性_”->_“高级”_
+* 点按xdp并单击&#x200B;_属性_->_高级_
 * 复制http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html并将其粘贴到“提交URL”文本字段中
-* 单击“ _保存并关闭_ ”按钮。
+* 单击&#x200B;_SaveAndClose_&#x200B;按钮。
 
 ### 在排除路径中添加条目
 
-* 导航到 [configMgr](http://localhost:4502/system/console/configMgr)。
-* Adobe花岗岩 _CSRF滤波器的研究_
+* 导航到[configMgr](http://localhost:4502/system/console/configMgr)。
+* 搜索&#x200B;_Adobe花岗岩CSRF滤镜_
 * 在“排除的路径”部分添加以下条目
 * _/content/AemFormsSamples/handlehml5formsubmission_
 * 保存更改
@@ -75,13 +75,13 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 ### 测试表单
 
 * 点按xdp模板。
-* 单击“ _预览_”->“预览为HTML”
+* 单击&#x200B;_预览_->预览为HTML
 * 在表单中输入一些数据，然后单击“提交”
 * 您应当看到已提交的数据写入服务器的stdout.log文件
 
 ### 其他阅读
 
-还建 [议使](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) 用HTML5表单生成PDF的本文。
+还建议使用此[文章](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html)从HTML5表单生成PDF。
 
 
 
