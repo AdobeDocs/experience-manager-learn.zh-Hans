@@ -28,9 +28,9 @@ ht-degree: 1%
 
 AEM的本地开发环境可分为三个逻辑组：
 
-+ AEM __Project__ 包含自定义的代码、配置和内容，这些是自定义的AEM应用程序。
-+ 本 __地AEM__ 运行时，它在本地运行AEM作者服务和发布服务的本地版本。
-+ 运 __行Apache__ HTTP Web Server和Dispatcher的本地版本的本地调度程序运行时。
++ __AEM Project__&#x200B;包含自定义AEM应用程序的自定义代码、配置和内容。
++ __本地AEM Runtime__，它在本地运行AEM作者服务和发布服务的本地版本。
++ 运行Apache HTTP Web服务器和Dispatcher的本地版本的&#x200B;__本地调度程序运行时__。
 
 本教程将介绍如何安装和设置上图中突出显示的项目，为AEM开发提供稳定的本地开发环境。
 
@@ -44,16 +44,16 @@ AEM的本地开发环境可分为三个逻辑组：
 + `~/aem-sdk/dispatcher` 包含调度程序工具
 + `~/code/<project name>` 包含自定义AEM项目源代码
 
-请注 `~` 意，用户目录的简写。 在Windows中，这相当于 `%HOMEPATH%`;
+请注意，`~`是用户目录的简写。 在Windows中，这等效于`%HOMEPATH%`;
 
 ## AEM项目开发工具
 
-AEM项目是包含通过云管理器部署到AEM作为Cloud Service的代码、配置和内容的自定义代码库。 基线项目结构通过AEM Project [Maven Archetype生成](https://github.com/adobe/aem-project-archetype)。
+AEM项目是包含通过云管理器部署到AEM作为Cloud Service的代码、配置和内容的自定义代码库。 基线项目结构通过[AEM项目Maven Archetype](https://github.com/adobe/aem-project-archetype)生成。
 
 本教程的本节将介绍如何：
 
 + 安装 [!DNL Java]
-+ 安 [!DNL Node.js] 装（和npm）
++ 安装[!DNL Node.js]（和npm）
 + 安装 [!DNL Maven]
 + 安装 [!DNL Git]
 
@@ -61,25 +61,25 @@ AEM项目是包含通过云管理器部署到AEM作为Cloud Service的代码、�
 
 ## 本地AEM运行时
 
-AEM作为Cloud ServiceSDK提供 [!DNL QuickStart Jar] 了运行AEM的本地版本。 可 [!DNL QuickStart Jar] 用于在本地运行AEM作者服务或AEM发布服务。 请注意，尽管提供 [!DNL QuickStart Jar] 了本地开发体验，但AEM作为Cloud Service提供的所有功能并不都包含在中 [!DNL QuickStart Jar]。
+AEM作为Cloud ServiceSDK提供了运行AEM的本地版本的[!DNL QuickStart Jar]。 [!DNL QuickStart Jar]可用于在本地运行AEM作者服务或AEM发布服务。 请注意，尽管[!DNL QuickStart Jar]提供本地开发体验，但[!DNL QuickStart Jar]中并不包含AEM作为Cloud Service提供的所有功能。
 
 本教程的本节将介绍如何：
 
 + 安装 [!DNL Java]
 + 下载AEM SDK
-+ 运行 [!DNL AEM Author Service]
-+ 运行 [!DNL AEM Publish Service]
++ 运行[!DNL AEM Author Service]
++ 运行[!DNL AEM Publish Service]
 
 [设置本地AEM运行时](./aem-runtime.md)
 
-## 本地运 [!DNL Dispatcher] 行时
+## 本地[!DNL Dispatcher]运行时
 
-AEM作为Cloud ServiceSDK的调度程序工具提供设置本地运行时所需的一 [!DNL Dispatcher] 切。 [!DNL Dispatcher] 工具基 [!DNL Docker]于并提供命令行工具，可将Web服 [!DNL Apache HTTP] 务器和配置文 [!DNL Dispatcher] 件传输为兼容格式并将它们部署到在 [!DNL Dispatcher] 容器中 [!DNL Docker] 运行。
+AEM作为Cloud ServiceSDK的“调度程序工具”提供设置本地[!DNL Dispatcher]运行时所需的一切。 [!DNL Dispatcher] 工具基 [!DNL Docker]于并提供命令行工具，可 [!DNL Apache HTTP] 以将Web服 [!DNL Dispatcher] 务器和配置文件传输为兼容格 [!DNL Dispatcher] 式并将它们部署到在 [!DNL Docker] 容器中运行。
 
 本教程的本节将介绍如何：
 
 + 下载AEM SDK
-+ 安装工 [!DNL Dispatcher] 具
-+ 运行本地运 [!DNL Dispatcher] 行时
++ 安装[!DNL Dispatcher]工具
++ 运行本地[!DNL Dispatcher]运行时
 
 [设置LocalRuntime [!DNL Dispatcher] ](./dispatcher-tools.md)
