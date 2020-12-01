@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 链接的位置{#place-linked}
+# 将链接的位置{#place-linked}
 
 了解如何使用AEM Assets的“位置链接”操作使用资源。
 
