@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 翻译作业 {#translation-jobs}
+# 转换作业{#translation-jobs}
 
 了解如何将翻译作业添加到现有翻译项目。
 
