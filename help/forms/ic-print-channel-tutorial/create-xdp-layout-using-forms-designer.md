@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 使用Forms设计器创建版面 {#create-layout-using-forms-designer}
+# 使用Forms设计器{#create-layout-using-forms-designer}创建布局
 
 在本部分，我们将看到使用AEM Forms设计器创建的布局文件。
 
