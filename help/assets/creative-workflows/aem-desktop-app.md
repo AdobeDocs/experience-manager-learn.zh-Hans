@@ -32,7 +32,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
-> [Adobe资产链接](./adobe-asset-link.md) 是Adobe专用的解决方案，用于在Adobe Creative Cloud应用程序内与AEM资产进行协作：Photoshop,Illustrator,InDesign。 在这些应用程序中使用AEM Assets时，Adobe资产链接优先于AEM桌面应用程序。
+> [Adobe资产链](./adobe-asset-link.md) 接Adobe专门用于在Adobe Creative Cloud应用程序内与AEM资产协作的解决方案：Photoshop,Illustrator,InDesign。在这些应用程序中使用AEM Assets时，Adobe资产链接优先于AEM桌面应用程序。
 
 ## 其他资源
 
