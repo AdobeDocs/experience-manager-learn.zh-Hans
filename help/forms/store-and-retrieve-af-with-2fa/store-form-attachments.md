@@ -31,7 +31,7 @@ ht-degree: 0%
 }
 ```
 
-以下代码从请求中提取附件并将其存储在/content/ **afattachments文件夹下** 。
+以下代码从请求中提取附件并将其存储在&#x200B;**/content/afattachments**&#x200B;文件夹下
 
 ```java
 public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest request) {
