@@ -26,7 +26,7 @@ ht-degree: 0%
 
 我们来看下面的代码片断。 此代码是GET.jsp的一部分，当用户单击电子邮件中的链接以视图Web渠道文档时，将触发该代码。 我们使用jackrabbit UserManager获取登录用户。 获得登录用户后，我们将获得与用户用户档案关联的accountNumber属性的值。
 
-然后，我们将accountNumber值与映射中名为accountnumber的键关联。 在表单 **数据模** 式中，关键帐号定义为请求属性。 此属性的值作为输入参数传递给表单数据模态读取服务方法。
+然后，我们将accountNumber值与映射中名为accountnumber的键关联。 键&#x200B;**accountnumber**&#x200B;在表单数据模式中定义为请求属性。 此属性的值作为输入参数传递给表单数据模态读取服务方法。
 
 第7行：我们根据交互通信文档url所标识的资源类型，将收到的请求发送到另一个servlet。 由第二个servlet返回的响应包含在第一个servlet的响应中。
 
