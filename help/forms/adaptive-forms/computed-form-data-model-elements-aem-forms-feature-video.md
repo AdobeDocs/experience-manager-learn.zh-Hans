@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms创建计算表数据模型元{#creating-computed-form-data-model-elements-in-aem-forms}
+# 在AEM Forms创建计算表单数据模型元素{#creating-computed-form-data-model-elements-in-aem-forms}
 
 计算的表单数据模型元素允许您将处理结果存储在一个或多个表单数据模型元素上。 例如，您可能希望通过对薪金字段执行数学运算来计算和存储月薪。 为此，您将工资除以12，并将结果存储在名为monthlySalary的计算表单数据模型元素中。
 
