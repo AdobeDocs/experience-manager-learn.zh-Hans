@@ -23,7 +23,7 @@ ht-degree: 19%
    + [使用系统概述仪表板](./administration/use-the-system-overview-dashboard.md)
 + 身份验证 {#authentication}
    + [OAuth身份验证](authentication/oauth-code-sample-develop.md)
-   + [设置要与AdobeI/O一起使用的公共／私有密钥](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
+   + [设置要与Adobe I/O一起使用的公共／私钥](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
    + [了解身份验证](authentication/authentication-support-article-understand.md)
    + [了解AMS上的IMS身份验证](authentication/adobe-ims-authentication-technical-video-understand.md)
 + Adobe云管理器{#cloud-manager}
