@@ -20,7 +20,7 @@ ht-degree: 24%
 
 # [!DNL AEM Project Archetype] {#aem-project-archetype}
 
-AEM项目包含实施的所有代码和配置。 The [!DNL AEM Project Archetype] creates a minimal, best-practices-based Adobe Experience Manager project as a starting point for your own AEM projects.
+AEM项目包含实施的所有代码和配置。 [!DNL AEM Project Archetype]将创建基于最佳实践的最小Adobe Experience Manager项目作为您自己的AEM项目的起点。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32550/?quality=12&learn=on)
 
