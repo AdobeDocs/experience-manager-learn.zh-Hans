@@ -110,9 +110,9 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **要在本地系统上测试此功能，请按照以下说明操作：**
 
-* 如本文所述设置 [Tomcat。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成样本数据的war文件。
-* 按本文所述设置服务aka系统用 [户](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。
-确保此系统用户对以下节点具有读取权限。 要授予用户管理员的 [权限登录](https://localhost:4502/useradmin) ，并搜索系统用户“数据”，并通过Tab键切换到权限选项卡，在以下节点上授予读取权限
+* 按照本[文章中的说明设置Tomcat。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成样本数据的war文件。
+* 按照本[文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md)中的说明设置服务aka系统用户。
+确保此系统用户对以下节点具有读取权限。 向[用户管理员](https://localhost:4502/useradmin)授予权限登录权限并搜索系统用户“数据”，并通过Tab键切换到权限选项卡，为以下节点授予读取权限
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
