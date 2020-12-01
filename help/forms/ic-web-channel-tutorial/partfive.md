@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 创建文档片段以保存收件人名称和地址 {#creating-document-fragments-to-hold-the-recipient-name-and-address}
+# 创建文档片段以保存收件人名和地址{#creating-document-fragments-to-hold-the-recipient-name-and-address}
 
 在此部分，我们将创建文档片段以保存收件人名称和地址。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 富文本编辑器足够直观，使商业用户能够创作文本和插入表单数据元素。 文档片段编辑器能够设置文本格式、指定字体类型和样式、插入特殊字符和创建超链接。
 
-文档片段编辑器还能够在文本中插入内联条件，如此视频所 [示](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+文档片段编辑器还能够在文本中插入内联条件，如此[视频](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)中所示
 
 >[!NOTE]
 >
