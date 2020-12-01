@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Publishing pages {#using-publication-management-with-aem-sites}
+# 发布页面{#using-publication-management-with-aem-sites}
 
 AEM Sites为发布和取消发布内容提供了多个选项。 此视频探索各种方法及其功能。
 
