@@ -27,16 +27,16 @@ ht-degree: 0%
 
 ### 获取自适应表单模板
 
-* 下载自 [适应表单模板](assets/af-form-template.zip)
+* 下载[自适应表单模板](assets/af-form-template.zip)
 * [使用包管理器导入模板](http://localhost:4502/crx/packmgr/index.jsp)
 * 上传和安装自适应表单模板
 
 ### 获取示例自适应表单
 
-* 下载 [自适应表单](assets/peak-application-form.zip)
-* 浏览到 [表单和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 下载[自适应表单](assets/peak-application-form.zip)
+* 浏览至[表单和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 单击创建->文件上传
-* 示例自适应表单将放在名为“应用程序Forms”的 [文件夹中](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
+* 示例自适应表单将放在名为[Application Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)的文件夹中
 
 以下视频介绍如何配置自适应表单以触发AEM工作流
 >[!VIDEO](https://video.tv.adobe.com/v/40258/?quality=9&learn=on)
