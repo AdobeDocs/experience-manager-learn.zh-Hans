@@ -29,7 +29,7 @@ AEM 6.5中的Dynamic Media Viewer增强功能包括新增了对360视频渲染�
 
 >[!NOTE]
 >
->视频假定AEM实例在Dynamic Media S7模式下运行。  [有关使用Dynamic Media设置AEM的说明，请参阅此处](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)。 在上传视频时，如果视频的长宽比为2:1，则默认情况下，Dynamic Media会将该视频处理为360视频。 即，宽高比为2:1。
+>视频假定AEM实例在Dynamic Media S7模式下运行。  [有关使用Dynamic Media设置AEM的说明，请参阅此处](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)。在上传视频时，如果视频的长宽比为2:1，则默认情况下，Dynamic Media会将该视频处理为360视频。 即，宽高比为2:1。
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ Dynamic Media视频现在支持为视频选择自定义缩略图的功能。 用
    <tr>
       <td>Dynamic Media运行模式</td>
       <td>仅Dynamic MediaScene7模式</td>
-      <td>仅Dynamic MediaScene7模式<br>
+      <td>Dynamic MediaScene7模式（仅限<br>）
          <br>
       </td>
    </tr>
