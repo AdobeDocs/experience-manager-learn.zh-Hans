@@ -1,6 +1,6 @@
 ---
-title: 配置资产计算项目的manifest.yml
-description: 资产计算项目的manifest.yml描述了要部署的此项目中的所有Worker。
+title: 配置Asset compute项目的manifest.yml
+description: asset compute项目的manifest.yml描述了要部署的此项目中的所有Worker。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -20,17 +20,17 @@ ht-degree: 0%
 
 # 配置manifest.yml
 
-位 `manifest.yml`于资产计算项目根目录中，描述了要部署的此项目中的所有工作线程。
+位于Asset compute项目根目录中的`manifest.yml`描述了要部署的此项目中的所有Worker。
 
 ![manifest.yml](./assets/manifest/manifest.png)
 
 ## 默认工作器定义
 
-Worker定义为“Adobe I/O Runtime”操作 `actions`条目，由一组配置组成。
+Worker被定义为`actions`下的Adobe I/O Runtime操作条目，由一组配置组成。
 
-访问其他AdobeI/O集成的Worker必须将 `annotations -> require-adobe-auth` 属性 `true` 设置为， [因为这会通过对象显示Worker的AdobeI](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) /O `params.auth` 凭据。 当工作人员调用AdobeI/O API(如Adobe Photoshop、Lightroom或Sensei API)时，通常需要此参数，并且可以根据工作人员切换。
+访问其他Adobe I/O集成的Worker必须将`annotations -> require-adobe-auth`属性设置为`true`，因为此[通过`params.auth`对象显示该Worker的Adobe I/O凭据](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 当工作人员调用Adobe I/OAPI(如Adobe Photoshop、Lightroom或Sensei API)时，通常需要此参数，并且可以按工作人员切换。
 
-1. 打开并查看自动生成的工作人员 `manifest.yml`。 包含多个资产计算工作线程的项目，必须为阵列下的每个工作线程定义一个 `actions` 条目。
+1. 打开并查看自动生成的工作器`manifest.yml`。 包含多个Asset computeWorker的项目必须为`actions`阵列下的每个Worker定义一个条目。
 
 ```yml
 packages:
@@ -49,11 +49,11 @@ packages:
 
 ## 定义限制
 
-每个工作者都可以在 [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) ，为其执行上下文配置限制。 应根据员工要计算的资产量、比率和类型以及所执行的工作类型，调整这些值以为员工提供最佳规模。
+每个工作者都可以在Adobe I/O Runtime为其执行上下文配置[limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)。 应根据员工要计算的资产量、比率和类型以及所执行的工作类型，调整这些值以为员工提供最佳规模。
 
-在设置 [限制前查看Adobe](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers) 大小调整指南。 资产计算工作人员在处理资产时可能内存不足，导致Adobe I/O Runtime执行被杀，因此请确保该工作人员的大小适合处理所有候选资产。
+在设置限制之前，请查阅[Adobe大小调整指南](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 asset compute工作人员在处理资产时可能内存不足，导致Adobe I/O Runtime执行被杀，因此请确保该工作人员的大小适合处理所有候选资产。
 
-1. 向新操 `inputs` 作条目中添 `wknd-asset-compute` 加一个部分。 这允许调整资产计算工作者的总体性能和资源分配。
+1. 在新`wknd-asset-compute`操作条目中添加`inputs`部分。 这允许调整Asset compute工作者的总体性能和资源分配。
 
 ```yml
 packages:
@@ -75,7 +75,7 @@ packages:
 
 ## 完成的清单。yml
 
-最终结果 `manifest.yml` 如下：
+最终`manifest.yml`如下所示：
 
 ```yml
 packages:
@@ -96,29 +96,29 @@ packages:
 
 ## manifest.yml on Github
 
-最后一 `.manifest.yml` 节在Github上提供，网址为：
+最后`.manifest.yml`在Github上可用，网址为：
 
 + [aem-guides-wknd-asset-compute/manifest.yml](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/manifest.yml)
 
 
 ## 验证manifest.yml
 
-更新生成的资产计 `manifest.yml` 算后，运行本地开发工具，并确保使用更新的设置成功开始 `manifest.yml` 用户。
+更新生成的Asset compute`manifest.yml`后，运行本地开发工具，并确保使用更新的`manifest.yml`设置成功开始。
 
-要开始资产计算项目的资产计算开发工具，请执行以下操作：
+要开始Asset compute开发工具，请执行以下操作：
 
-1. 在“资产计算”项目根目录中打开命令行（在VS代码中，可以通过“终端”>“新建终端”在IDE中直接打开它），然后执行命令：
+1. 在Asset compute项目根目录中打开命令行（在VS代码中，可以通过“终端”>“新建终端”在IDE中直接打开它），然后执行命令：
 
    ```
    $ aio app run
    ```
 
-1. 本地资产计算开发工具将在您的默认Web浏览器中打开，网 __址为http://localhost:9000__。
+1. 本地Asset compute开发工具将在默认的Web浏览器中打开，位于&#x200B;__http://localhost:9000__。
 
    ![aio应用程序运行](assets/environment-variables/aio-app-run.png)
 
 1. 当开发工具初始化时，观察命令行输出和Web浏览器是否有错误消息。
-1. 要停止资产计算开发工具，请点 `Ctrl-C` 按已执行的窗口以 `aio app run` 终止该流程。
+1. 要停止Asset compute开发工具，请点按执行`aio app run`的窗口中的`Ctrl-C`以终止该进程。
 
 ## 疑难解答
 
