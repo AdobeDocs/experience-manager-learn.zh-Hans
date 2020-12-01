@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 使用启动项更新语言副本 {#update-language-copy-launch}
+# 使用启动项{#update-language-copy-launch}更新语言副本
 
 了解如何借助启动项更新、审核和批准语言副本中的更改。
 
