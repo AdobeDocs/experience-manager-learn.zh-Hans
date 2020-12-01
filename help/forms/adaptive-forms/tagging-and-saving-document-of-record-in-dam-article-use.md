@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在DAM中标记和存储AEM FormsDoR {#tagging-and-storing-aem-forms-dor-in-dam}
+# 在DAM {#tagging-and-storing-aem-forms-dor-in-dam}中标记和存储AEM FormsDoR
 
 本文将介绍AEM Forms在AEM DAM中生成的DoR的存储和标记用例。 文档的标记基于提交的表单数据完成。
 
@@ -46,7 +46,7 @@ tagManager.setTags(metadata, tagArray, true);
 要使此范例在您的系统上工作，请按照下面列出的步骤操作：
 * [使用服务用户包部署开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 这是自定义OSGI捆绑包，用于从提交的表单数据设置标记。
+* [下载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。这是自定义OSGI捆绑包，用于从提交的表单数据设置标记。
 
 * [下载示例自适应表单](assets/tag-and-store-in-dam-assets.zip)
 
@@ -54,12 +54,12 @@ tagManager.setTags(metadata, tagArray, true);
 
 * 单击创建 |文件上传并上传示例adaptiveform.zip
 
-* [使用AEM包管理器导入](assets/tag-and-store-in-dam-assets.zip) 文章资产
-* 在预览 [模式下打开示例表单](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled)。 填写“人员”部分并提交表单。
-* [导航到DAM中的峰值文件夹](http://localhost:4502/assets.html/content/dam/Peak)。 您应在峰值文件夹中看到DoR。 检查文档的属性。 它应该被正确标记。
+* [使用AEM包管理器](assets/tag-and-store-in-dam-assets.zip) 导入文章资源
+* 以预览模式](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled)打开[示例表单。 填写“人员”部分并提交表单。
+* [导航到DAM中的峰值文件夹](http://localhost:4502/assets.html/content/dam/Peak)。您应在峰值文件夹中看到DoR。 检查文档的属性。 它应该被正确标记。
 祝贺你！! 您已成功在系统上安装示例
 
-* 让我们了解提交 [表单](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) 时触发的工作流。
+* 让我们浏览在提交表单时触发的[工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html)。
 * 工作流中的第一步是通过连接申请人姓名和居住地县来创建唯一的文件名。
 * 工作流的第二步传递标记层次结构和需要标记的表单字段元素。 处理步骤从提交的数据中提取值并构建需要标记文档的标记标题。
 * 如果要将DoR存储在DAM中的其他文件夹中，请使用以下屏幕截图中指定的配置属性指定文件夹位置。
