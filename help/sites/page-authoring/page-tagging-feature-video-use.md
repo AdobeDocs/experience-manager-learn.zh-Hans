@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 标记页面 {#using-page-tagging-with-aem-sites}
+# 标记页面{#using-page-tagging-with-aem-sites}
 
 了解如何使用标签在Adobe Experience Manager维护和组织网页。
 
