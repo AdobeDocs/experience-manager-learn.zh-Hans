@@ -20,7 +20,7 @@ ht-degree: 24%
 ---
 
 
-# AEM SitesUI和导航 {#basic-handling-aem-sites}
+# AEM SitesUI和导航{#basic-handling-aem-sites}
 
 以下视频概述了使用AEM作者环境时的基本操作。 它使用站点控制台作为基础。
 
