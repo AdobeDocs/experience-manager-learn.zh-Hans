@@ -26,7 +26,7 @@ AEM作为Cloud Service的水印功能，允许使用任何PNG图像对自定义�
 
 ## OSGi配置
 
-以下OSGi配置存根可以更新并添加到AEM项目的 `ui.config` 子项目中。
+以下OSGi配置存根可以更新并添加到AEM项目的`ui.config`子项目。
 
 `/apps/example/osgiconfig/config.author/com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json`
 
