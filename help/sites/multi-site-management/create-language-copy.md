@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 创建语言副本 {#create-language-copy}
+# 创建语言副本{#create-language-copy}
 
 了解如何使用创建语言副本向导为AEM站点创建语言副本。
 
