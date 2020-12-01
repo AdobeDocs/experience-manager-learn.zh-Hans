@@ -21,11 +21,11 @@ ht-degree: 1%
 ---
 
 
-# 使用页面差异功能 {#using-page-difference-with-aem-sites}
+# 使用页面差异功能{#using-page-difference-with-aem-sites}
 
 AEM Sites的页面差异功能显示为页面（版本、Live Copy、启动项、语言副本）中的内容更改提供了快速、彩色编码视图。
 
-## 比较页面版本 {#comparing-page-versions}
+## 比较页面版本{#comparing-page-versions}
 
 >[!VIDEO](https://video.tv.adobe.com/v/32152?quality=9&learn=on)
 
@@ -40,7 +40,7 @@ AEM Sites的页面差异功能显示为页面（版本、Live Copy、启动项�
 * **红色**:已删除的组件
 * **蓝色**:修改的组件
 
-## 比较启动页面 {#comparing-launch-pages}
+## 比较启动页面{#comparing-launch-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17746/?quality=9&learn=on)
 
