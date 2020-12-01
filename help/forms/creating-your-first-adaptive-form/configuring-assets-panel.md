@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 将组件添加到资产部分 {#adding-components-to-assets-section}
+# 将组件添加到资产部分{#adding-components-to-assets-section}
 
 为“资源”面板配置折叠布局。折叠布局为添加可重复的部分提供了更好的最终用户体验。
 
