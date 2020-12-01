@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 将规则编辑器限制在AEM Forms的特定组 {#restricting-the-rule-editor-to-specific-groups-in-aem-forms}
+# 将规则编辑器限制到AEM Forms的特定组{#restricting-the-rule-editor-to-specific-groups-in-aem-forms}
 
 将自适应表单规则编辑器限制为AEM中的特定组
 
