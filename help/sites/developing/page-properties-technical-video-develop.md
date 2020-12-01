@@ -16,13 +16,13 @@ ht-degree: 1%
 ---
 
 
-# 扩展页面属性 {#extending-page-properties-in-aem-sites}
+# 扩展页面属性{#extending-page-properties-in-aem-sites}
 
 自定义页面属性的元数据字段是任何站点实施中的常见要求。 此视频详细介绍了使用Sling Resource Merabile的功能实现此目的的最有效方法。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25173?quality=9&learn=on)
 
-上述视频显示了使用Sling Resource Merager的各种功能在AEM **6.4中自定义We.Retail应** 用程序的页面属性。 它启用以下自定义：
+上述视频显示了使用Sling Resource Mergare的各种功能在&#x200B;**AEM 6.4**&#x200B;中自定义We.Retail应用程序的页面属性。 它启用以下自定义：
 
 * 在“基本”选项卡之前插入了“自定义”选项卡。
 * 作为“基本”选项卡的一部分插入的新文本字段。
