@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 创建交互式通信以进行打印渠道 {#create-interactive-communication-for-print-channel}
+# 为打印渠道创建交互通信{#create-interactive-communication-for-print-channel}
 
 在本部分中，将创建“打印文档”的交互式通信渠道。
 
