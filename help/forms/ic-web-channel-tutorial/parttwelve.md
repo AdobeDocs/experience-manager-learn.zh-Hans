@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 建立Web投放渠道文档 {#setting-up-the-delivery-of-web-channel-document}
+# 设置Web渠道文档的投放{#setting-up-the-delivery-of-web-channel-document}
 
 
 本部分，我们通过电子邮件了解Web渠道文档的投放。
@@ -50,7 +50,7 @@ ht-degree: 0%
 * 确保保存更改。
    ![fdm](assets/requestattribute.gif)
 
-## 测试Web投放渠道的电子邮件文档 {#test-email-delivery-of-web-channel-document}
+## 测试Web渠道投放文档的电子邮件{#test-email-delivery-of-web-channel-document}
 
 * [使用包管理器安装示例资产](assets/webchanneldelivery.zip)
 * [登录crx](http://localhost:4502/crx/de/index.jsp#)
@@ -71,4 +71,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->请查看crx中的 **/apps/AEMForms/fetchad/GET.jsp** 文件。 请确保字符串变量webChannelDocument指向有效的通信文档路径。
+>请查看crx中的&#x200B;**/apps/AEMForms/fetchad/GET.jsp**&#x200B;文件。 请确保字符串变量webChannelDocument指向有效的通信文档路径。
