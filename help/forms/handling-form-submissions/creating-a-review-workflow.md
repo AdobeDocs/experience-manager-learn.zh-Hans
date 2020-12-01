@@ -25,13 +25,13 @@ ht-degree: 0%
 
 ## 先决条件
 
-请确保您有AEM Forms的工作实例。 请按照安 [装指南](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) ，安装和配置AEM Forms
+请确保您有AEM Forms的工作实例。 请按照[安装指南](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)安装和配置AEM Forms
 
 以下视频介绍了如何使用AEM Forms组件创建审阅和批准工作流
 >[!VIDEO](https://video.tv.adobe.com/v/40242/?quality=9&learn=on)
 
 
-如果由于某种原因无法构建工作流，则可以从此处下载完成的工作流 [](assets/review-submitted-data-workflow.zip) ，并使用包管理器将其 [导入AEM](http://localhost:4502/crx/packmgr/index.jsp) 实例。
+如果由于某种原因无法构建工作流，您可以从[此处](assets/review-submitted-data-workflow.zip)下载完成的工作流，然后使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)将相同的工作流导入AEM实例。
 
 
 
