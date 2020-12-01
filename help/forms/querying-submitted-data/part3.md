@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 将JSON模式存储在数据库中 {#storing-json-schema-in-database}
+# 将JSON模式存储在数据库{#storing-json-schema-in-database}中
 
 
 为了能够查询已提交的数据，我们需要存储与已提交表单关联的JSON模式。 JSON模式将用于查询构建器以构建查询。
