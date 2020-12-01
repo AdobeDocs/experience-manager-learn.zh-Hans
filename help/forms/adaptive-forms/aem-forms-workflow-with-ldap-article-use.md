@@ -26,7 +26,7 @@ ht-degree: 0%
 
 在AEM工作流中使用自适应表单时，您需要将任务动态分配给表单提交者的管理者。 要完成此用例，我们必须使用Ldap配置AEM。
 
-此处详细介绍了使用LDAP配置AEM所需 [的步骤。](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
+此处的[详细信息中介绍了使用LDAP配置AEM所需的步骤。](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
 
 为了本文，我将附加配置AEM时使用AdobeLdap时使用的配置文件。 这些文件包含在包中，可以使用包管理器导入。
 
@@ -66,16 +66,16 @@ String managerPorperty = workflowInitiator.getProperty("profile/manager")[0].get
 
 根据LDAP中存储管理器属性的方式，您可能需要执行一些字符串处理才能获取管理器ID。
 
-请阅读本文以实施您自己的参加者 [ 选择器。](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
+请阅读本文以实施您自己的[ PracipiantChooser .](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
 
 要在系统上测试此示例(对于Adobe员工，您可以使用此示例开箱即用)
 
-* [下载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 这是用于设置管理器属性的自定义OSGI捆绑包。
+* [下载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。这是用于设置管理器属性的自定义OSGI捆绑包。
 * [下载并安装DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [使用包管理器将与本文关联的资产导入AEM](assets/aem-forms-ldap.zip)。作为此包的一部分，包括LDAP配置文件、工作流和自适应表单。
 * 使用适当的LDAP凭据在LDAP中配置AEM。
 * 使用LDAP凭据登录AEM。
-* 打开时间 [offrequestform](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* 打开[timeoffrequestform](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填写表单并提交。
 * 提交者的经理应该得到表单以供审阅。
 
