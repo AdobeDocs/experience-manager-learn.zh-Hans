@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 将组件添加到“收入”面板 {#adding-components-to-income-panel}
+# 将组件添加到“收入”面板{#adding-components-to-income-panel}
 
 我们将在“收入”专题讨论中添加一个表格。 配置表行，并使用规则编辑器计算总计。
 
@@ -32,9 +32,9 @@ ht-degree: 0%
 
 
 
-## 使收入表变得动态 {#make-the-income-table-dynamic}
+## 使收入表变得动态{#make-the-income-table-dynamic}
 
-**确保您处于编辑模式。 编辑按钮位于浏览器的右上侧。**
+**确保您处于编辑模式。编辑按钮位于浏览器的右上侧。**
 
 * 默认情况下，将表插入自适应表单时，该表不是动态的，这意味着您无法在运行时向表添加新行。
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 * 在“重复设置”下，将“最小”和“最大”计数设置为1和5，并通过单击蓝色复选标记图标保存更改。 这意味着表最多可以有5行。 要具有不确定行数，请将最大计数设置为-1。
 
-## 创建规则以计算总计 {#create-rule-to-calculate-grand-total}
+## 创建用于计算总计{#create-rule-to-calculate-grand-total}的规则
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/22197?quality=9&learn=on)
