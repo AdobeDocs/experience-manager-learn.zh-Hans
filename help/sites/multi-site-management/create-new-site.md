@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 创建国家／地区站点 {#create-country-site}
+# 创建国家／地区站点{#create-country-site}
 
 了解如何使用创建站点向导从现有语言副本创建国家／地区站点。
 
