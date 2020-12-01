@@ -26,5 +26,5 @@ Adobe Experience Manager以AdobeIMS用户、用户组和产品用户档案为基
 
 ## 其他资源
 
-+ [对 Adobe Experience Manager 云服务的 IMS 支持](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-service/security/ims-support.html)
++ [对 Adobe Experience Manager as a Cloud Service 的 IMS 支持](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-service/security/ims-support.html)
 + [AEM提供的用户组及其权限](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security.html#built-in-users-and-groups)
