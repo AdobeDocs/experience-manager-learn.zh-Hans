@@ -22,10 +22,10 @@ ht-degree: 0%
 # 应用Reader扩展
 
 Reader扩展允许您处理PDF文档的使用权限。 使用权与在Acrobat可用但在Adobe Reader不可用的功能有关。 由Reader扩展控制的功能包括向文档添加注释、填写表单和保存文档的功能。 添加了使用权限的PDF文档称为启用权限的文档。 在Adobe Reader打开启用权限的PDF文档的用户可以执行为该文档启用的操作。
-要测试此功能，您可以尝试此 [链接](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 示例名称为“Render XDP with RE”
+要测试此功能，可以尝试使用此[链接](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 示例名称为“Render XDP with RE”
 
 要完成此用例，我们需要执行以下操作：
-* 将Reader扩展证书添加到“fd-service”用户。 此处列出添加Reader扩展凭据的步 [骤](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
+* 将Reader扩展证书添加到“fd-service”用户。 添加Reader扩展凭据的步骤列在[此处](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
 
 * 创建将使用权限应用于文档的自定义OSGi服务。 完成此操作的代码列于下面
 
@@ -71,8 +71,8 @@ public Document applyUsageRights(Document pdfDocument,UsageRights usageRights) {
 
 下一步是使用POST方法创建一个servlet，将reader扩展PDF返回给用户。 在这种情况下，将要求用户将PDF保存到其文件系统。 这是因为PDF呈现为动态PDF，而浏览器附带的pdf查看器不处理动态PDF。
 
-以下是servlet的代码。 将从自适应表单的 **customsubmit** 操作调用servlet。
-Servlet创建UsageRights对象，并根据用户在自适应表单中输入的值设置其属性。 然后，Servlet调用为 **此目的创建** 的服务的applyUsageRights方法。
+以下是servlet的代码。 将从自适应表单的&#x200B;**customsubmit**操作调用servlet。
+Servlet创建UsageRights对象，并根据用户在自适应表单中输入的值设置其属性。 然后，servlet调用为此目的创建的服务的**applyUsageRights**&#x200B;方法。
 
 ```java
 package com.aemforms.ares.core.servlets;
@@ -191,7 +191,7 @@ try {
 
 要在本地服务器上测试此功能，请执行以下步骤：
 1. [下载并安装DevelopingWithServiceUser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [下载并安装ares.ares.core-ares捆绑](assets/ares.ares.core-ares.jar)。 它具有自定义服务和servlet以应用使用权限并将pdf流回
+1. [下载并安装ares.ares.core-ares捆绑](assets/ares.ares.core-ares.jar)。它具有自定义服务和servlet以应用使用权限并将pdf流回
 1. [导入客户端库和自定义提交](assets/applyaresdemo.zip)
 1. [导入自适应表单](assets/applyaresform.zip)
 1. 向“fd-service”用户添加Reader扩展证书
