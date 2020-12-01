@@ -50,7 +50,7 @@ ht-degree: 2%
             <td>✔</td>
         </tr>
         <tr>
-            <td>基于令牌(带有封装 <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">的令牌</a>)</td>
+            <td>基于令牌（w/ <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装的令牌</a>）</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -93,4 +93,4 @@ ht-degree: 2%
     </tbody>
 </table>
 
-⁕通过社区项目提供，但不直接受Adobe支持。 **
+&lt;a0/⁕>通过社区项目提供，但不直接受Adobe支持。**
