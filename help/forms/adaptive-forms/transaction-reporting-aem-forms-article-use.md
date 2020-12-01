@@ -20,11 +20,11 @@ ht-degree: 1%
 ---
 
 
-# 在AEM Forms使用交易报告{#using-transaction-reporting-in-aem-forms}
+# 在AEM Forms使用事务报告{#using-transaction-reporting-in-aem-forms}
 
 AEM Forms6.4.1引入了交易报告，以捕获表单提交数量、使用文档服务呈现文档以及交互通信(Web和打印渠道)呈现。此功能主要针对希望根据表单提交数量和／或呈现文档来许可软件的客户。 此功能目前仅在AEM FormsOSGI堆栈上可用。
 
-## 启用事务报告 {#enabling-transaction-reporting}
+## 启用事务报告{#enabling-transaction-reporting}
 
 默认情况下，禁用事务记录。 要启用事务记录，请按照以下步骤操作：
 
@@ -35,13 +35,13 @@ AEM Forms6.4.1引入了交易报告，以捕获表单提交数量、使用文档
 
 启用事务报告后，您可以提交自适应Forms、使用文档服务生成文档或渲染交互通信文档，以查看实际操作中的事务报告。
 
-## 查看事务处理报表 {#viewing-transaction-report}
+## 查看事务报告{#viewing-transaction-report}
 
 要视图事务报告，请以管理员身份登录AEM Forms。 只有fd-Administrator组的成员才能视图事务报表。
 
 选择工具 |Forms |视图事务报表
 
-或单击此处视图事务 [报告](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
+或单击[此处](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)视图事务报告
 
 ![TransctionReporting](assets/transactionreporting.gif)
 
@@ -53,5 +53,5 @@ AEM Forms6.4.1引入了交易报告，以捕获表单提交数量、使用文档
 
 如果要查看创作实例上的事务报告，请确保在所有发布实例上都配置了反向复制。
 
-要进一步了解交易报告，请 [单击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+要进一步了解事务报告[，请单击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
 
