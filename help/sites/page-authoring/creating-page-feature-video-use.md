@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Creating a Page {#creating-page-aem-sites}
+# 创建页面{#creating-page-aem-sites}
 
 了解如何使用Adobe Experience Manager的页面模板创建网页。
 
