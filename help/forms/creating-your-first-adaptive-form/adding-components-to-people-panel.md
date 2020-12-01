@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 将组件添加到“人员”面板 {#adding-components-to-people-panel}
+# 将组件添加到“人员”面板{#adding-components-to-people-panel}
 
 通过添加配偶详细信息片段配置“人员”面板。 创建规则，以在申请人婚姻状况已结时显示配偶详细信息片段。
 
