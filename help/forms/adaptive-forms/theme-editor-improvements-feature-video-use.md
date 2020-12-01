@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Forms主题编辑的改进{#theme-editor-improvements-in-aem-forms}
+# AEM Forms的主题编辑器改进{#theme-editor-improvements-in-aem-forms}
 
 AEM 6.3中自适应表单的主题编辑器的改进
 
