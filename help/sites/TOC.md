@@ -64,12 +64,12 @@ ht-degree: 14%
    + [设置体验片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [将体验片段与Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [设置ContextHub](personalization/context-hub-technical-video-setup.md)
-+ 单页应用程序 {#spa-editor}
++ 单页应用程序{#spa-editor}
    + [使用SPA编辑器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello World教程](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [AEM SPA编辑器和React入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM SPA编辑器和Angular入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
-+ Multi Site Management {#multi-site-management}
++ 多站点管理{#multi-site-management}
    + [语言副本简介](./multi-site-management/language-copy-overview.md)
    + [Live Copy和Blueprint](./multi-site-management/live-copy-and-blueprint.md)
    + [创建Live Copy](./multi-site-management/create-live-copy.md)
@@ -90,13 +90,13 @@ ht-degree: 14%
    + [设置翻译规则](translation/translation-rules-editor-technical-video-setup.md)
    + [翻译增强功能](translation/translation-enhancements-feature-video-use.md)
 + 集成 {#integrations}
-   + Experience Platform Launch {#experience-platform-launch}
+   + Experience Platform Launch{#experience-platform-launch}
       + [概述](integrations/experience-platform-launch/overview.md)
       + [创建启动项属性](integrations/experience-platform-launch/create-launch-property.md)
-      + [使用AdobeI/O将AEM与Launch连接](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
+      + [使用Adobe I/O将AEM与Launch连接](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
       + [创建启动Cloud Service](integrations/experience-platform-launch/create-launch-cloud-service.md)
       + [调试启动实施](integrations/experience-platform-launch/debug-launch-implementation.md)
-   + Adobe客户端数据层 {#adobe-client-data-layer}
+   + Adobe客户端数据层{#adobe-client-data-layer}
       + [使用Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-overview.md)
    + 分析 {#analytics}
       + [与Adobe Analytics收集页面数据](integrations/analytics/collect-data-analytics.md)
