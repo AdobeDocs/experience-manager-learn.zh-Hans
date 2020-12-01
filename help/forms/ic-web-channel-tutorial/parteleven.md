@@ -32,7 +32,7 @@ ht-degree: 0%
 
 * 我们将增加2张饼图，以代表账户持有人的当前和模型投资组合。
 
-## 当前资产组合 {#current-asset-mix}
+## 当前资产组合{#current-asset-mix}
 
 * 点按右侧的“CurrentAssetMix”面板，选择“+”图标并插入文本组件。 将默认文本更改为“当前资产混合”。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 * ![currentassetmix](assets/currentassetmixchart.png)
 
-## 模型资产混合 {#model-asset-mix}
+## 模型资产组合{#model-asset-mix}
 
 * 点按右侧的“RecommendedAssetMix”面板，选择“+”图标并插入文本组件。 将默认文本更改为“Model Asset Mix”。
 
