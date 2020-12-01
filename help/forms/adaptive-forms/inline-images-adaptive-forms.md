@@ -67,7 +67,7 @@ function consumeImage (file) {
 
 ### 在服务器上部署
 
-* 使用AEM包管理器 [在AEM实](assets/inline-image-client-library.zip) 例上下载并安装客户端库。
-* 使用AEM包管理器 [在AEM](assets/inline-image-af.zip) 实例上下载并安装示例表单。
-* 将浏览器指向“添 [加内联图像”](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* 使用AEM包管理器在AEM实例上下载并安装[客户端库](assets/inline-image-client-library.zip)。
+* 使用AEM包管理器在AEM实例上下载并安装[示例表单](assets/inline-image-af.zip)。
+* 将浏览器指向[添加内联图像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * 单击“附加照片”按钮以添加图像
