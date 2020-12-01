@@ -21,13 +21,13 @@ ht-degree: 5%
 ---
 
 
-# 在AEM Dynamic Media中使用视频播放器{#using-the-video-player-in-aem-dynamic-media}
+# 在AEM Dynamic Media{#using-the-video-player-in-aem-dynamic-media}中使用视频播放器
 
 AEM Dynamic Media视频播放器过去依赖Flash运行时支持桌面客户端和浏览器上的自适应视频流，现在它们对基于Flash的内容流更加积极。 随着HLS(Apple的HTTP实时流视频投放协议)的推出，现在无需依赖闪存即可对内容进行流处理。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
-## 快速了解非Flash视频播放器 {#quick-look-into-non-flash-video-player}
+## 快速了解非Flash视频播放器{#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
