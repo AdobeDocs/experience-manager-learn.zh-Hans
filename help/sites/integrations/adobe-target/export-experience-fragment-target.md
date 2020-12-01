@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Export Experience Fragment to Adobe Target {#experience-fragment-target}
+# 将体验片段导出到Adobe Target{#experience-fragment-target}
 
 了解如何将AEM体验片段导出为Adobe Target优惠。
 
@@ -38,16 +38,16 @@ ht-degree: 1%
 
     ![目标API UI错误](assets/error-target-offer.png)
 
-...和日志中的以下日志 `aemerror` 消息：
+...和`aemerror`日志中的以下日志消息：
 
     ![目标API控制台错误](assets/target-console-error.png)
 
 #### 分辨率
 
-1. 登录 [Admin Console](https://adminconsole.adobe.com/) ，具有Adobe Target产品用户档案的管理权限，但使用AEM集成
-2. 选择 __产品>Adobe Target>产品用户档案__
-3. 在“ __集成__ ”选项卡下，选择AEM的集成作为Cloud Service环境(与AdobeI/O项目同名)
-4. 分配 __编辑__ 或审 __批人角色__
+1. 登录[Admin Console](https://adminconsole.adobe.com/)，具有Adobe Target产品用户档案的管理权限，但使用AEM集成
+2. 选择&#x200B;__产品>Adobe Target>产品用户档案__
+3. 在&#x200B;__集成__&#x200B;选项卡下，选择AEM的集成作为Cloud Service环境(与Adobe I/O项目同名)
+4. 分配&#x200B;__编辑者__&#x200B;或&#x200B;__批准者__&#x200B;角色
 
    ![目标API错误](assets/target-permissions.png)
 
