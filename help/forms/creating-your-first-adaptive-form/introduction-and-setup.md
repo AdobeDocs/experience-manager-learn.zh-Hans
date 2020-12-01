@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 自适应Forms入门 {#getting-started-with-adaptive-forms}
+# 自适应Forms入门{#getting-started-with-adaptive-forms}
 
 本教程将指导您完成创建多选项卡式自适应表单所涉及的步骤。 您将学会使用表、折叠布局和规则编辑器来编写业务规则。
 
@@ -36,8 +36,8 @@ ht-degree: 0%
 
 * **假定您运行的是localhost:4502上的AEM Forms版本6.4或更高版本。**
 
-* [将客户端库和徽标](assets/client-libs-and-logo.zip)[和入门片段下载](assets/getting-started-fragment.zip) 到硬盘。
+* [将客户端库和库](assets/client-libs-and-logo.zip) 入 [门片段下](assets/getting-started-fragment.zip) 载到硬盘。
 
-* 使用包管理器将zip文件导 [入AEM ](http://localhost:4502/crx/packmgr/index.jsp)
+* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)将zip文件导入AEM
 
 
