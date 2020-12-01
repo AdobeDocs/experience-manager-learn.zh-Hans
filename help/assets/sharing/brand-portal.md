@@ -35,9 +35,9 @@ Brand Portal的资产来源收集功能用于从第三方代理和团队收集�
 
 *Experience Manager作者6.5 SP2(6.5.2)或更高版本才能使用资产来源补充*
 
-有关 [如何在Experience Manager作者上配置和设置资产来源补充](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) ，请查阅为资产来源补充启用Experience Manager作者的说明。
+有关如何配置和设置Experience Manager作者资产来源补充的说明，请查阅[为资产来源补充启用Experience Manager作者](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html)。
 
-## Brand Portal 2019年2月功能和增强功能{#brand-portal-features-and-enhancements-644}
+## Brand Portal 2019年2月功能和增强{#brand-portal-features-and-enhancements-644}
 
 >[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
 
@@ -61,7 +61,7 @@ Brand Portal通过筛选窗格中属性谓词的部分文本搜索增强了搜�
 
 品牌门户允许在搜索查询中使用星号(*)，并在搜索的短语中使用部分单词。
 
-**用例** ：如果您不确定搜索的短语中出现的确切词，可使用通配符搜索来填补搜索查询中的间隙。
+**用例** ：如果您不确定搜索的短语中出现的确切词语，可使用通配符搜索来填补搜索查询中的间隙。
 
 例如，指定clim*会返回所有资产，如果品牌门户中的搜索表单使用属性谓词对资产标题进行部分搜索，则其标题短语中包含以字符clamp开头的词的所有资产。
 
@@ -73,12 +73,12 @@ Brand Portal通过筛选窗格中属性谓词的部分文本搜索增强了搜�
 #### 启用文件夹层次结构
 
 管理员现在可以配置文件夹在登录时向非管理员用户（编辑者、查看者和来宾用户）显示的方式。
-[“启用文件夹层次结构](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) ”配置将添加到“常规设置”中的“管理工具”面板中。 如果配置为：
+[“启用文](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) 件夹层次配置”将添加到“常规设置”中的“管理工具”面板中。如果配置为：
 
 * 启用后，非管理员用户将看到从根文件夹开始的文件夹树。 因此，为他们提供类似于管理员的导航体验。
 * 禁用后，登陆页上只显示共享文件夹。
 
-[启用文件夹层次结构](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) （启用后）功能可帮助您区分名称与从不同层次结构共享的文件夹名称相同的文件夹。 登录时，非管理员用户现在可以看到共享文件夹的虚拟父（和上级）文件夹。
+[启用文](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) 件夹分层功能（启用时）有助于区分从不同层次共享的名称相同的文件夹。登录时，非管理员用户现在可以看到共享文件夹的虚拟父（和上级）文件夹。
 
 共享文件夹在虚拟文件夹的各个目录中进行组织。 您可以通过锁定图标识别这些虚拟文件夹。
 
@@ -103,7 +103,7 @@ Dynamic Media视频编码可从以下位置下载：
 
 ### 计划发布到品牌门户
 
-资产（和文件夹）从AEM( [6.4.2.0)发布工作流](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) ，可以将作者实例安排到Brand Portal，以后的日期和时间。
+资产（和文件夹）发布工作流从[AEM(6.4.2.0)](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011)创作实例发布到Brand Portal，可以计划在以后的日期、时间内进行。
 
 同样，可以通过计划从Brand Portal中取消发布工作流，在以后的日期（时间）从门户中删除已发布的资产。
 
@@ -112,9 +112,9 @@ Dynamic Media视频编码可从以下位置下载：
 组织可以通过在URL中具有替代前缀来自定义其门户URL。 要在其现有门户URL中获取租户名称的别名，组织需要联系Adobe支持。
 
 请注意，只能自定义品牌门户URL的前缀，而不能自定义整个URL。
-例如，可以根据请求创建具有现 `wknd.brand-portal.adobe.com` 有域 `wkndinc.brand-portal.adobe.com` 的组织。
+例如，现有域`wknd.brand-portal.adobe.com`的组织可以在请求时创建`wkndinc.brand-portal.adobe.com`。
 
-但是，AEM作者实例只能 [使用](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) 租户ID URL进行配置，而不能使用租户别名（备用）URL进行配置。
+但是，AEM作者实例只能[配置](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)（仅使用租户ID URL），而不能使用租户别名（备用）URL。
 
 **用例** :组织可以通过自定义门户URL而不是坚持Adobe提供的URL来满足其品牌需求。
 
@@ -156,14 +156,14 @@ Brand Portal用户可以利用基于Aspera的快速下载，将下载速度提�
 
 ### 其他增强功能
 
-* *卡和列表视图上的文件夹层次结构路径* —使用户能够了解存储在Brand Portal实例中的文件夹的位置。 帮助用户区分不同文件夹层次结构中具有相同名称的文件夹。
-* *概述选项* —通过选择资产／文件夹，然后从工具栏中选择概述选项，为非管理员用户提供有关资产／文件夹的元数据。 当前，显示标题、创建日期和路径
+* *卡和列表视图上的文件夹层次结构路径* —使用户能够了解存储在Brand Portal实例中的文件夹的位置。帮助用户区分不同文件夹层次结构中具有相同名称的文件夹。
+* *概述选项* —通过选择资产／文件夹，然后从工具栏中选择概述选项，提供有关资产／文件夹的非管理员用户元数据。当前，显示标题、创建日期和路径
 
-### AdobeI/O主机UI配置身份验证集成
+### Adobe I/O承载UI以配置身份验证集成
 
-Brand Portal使用AdobeI/O https://legacy-oauth.cloud.adobe.io/ [界面](https://legacy-oauth.cloud.adobe.io/) 创建JWT应用程序，该应用程序支持配置Auth集成以允许AEM Assets与Brand Portal集成。 以前，用于配置OAuth集成的UI托管在 `https://marketing.adobe.com/developer/`。 要了解有关将AEM Assets与Brand Portal集成以将资产和集合发布到Brand Portal的更多信息，请 [参阅配置AEM Assets与Brand Portal的集成](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)。
+Brand Portal使用Adobe I/O[https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)接口创建JWT应用程序，该应用程序支持配置Auth集成以允许AEM Assets与Brand Portal集成。 以前，用于配置OAuth集成的UI托管在`https://marketing.adobe.com/developer/`中。 要进一步了解如何将AEM Assets与品牌门户集成，以将资产和集合发布到品牌门户，请参阅[配置AEM Assets与品牌门户的集成](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)。
 
-## Brand Portal 2018年2月功能和增强功能{#brand-portal-features-and-enhancements-632}
+## Brand Portal 2018年2月功能和增强{#brand-portal-features-and-enhancements-632}
 
 新增功能增强了面向将Brand Portal与AEM协调的功能。
 
