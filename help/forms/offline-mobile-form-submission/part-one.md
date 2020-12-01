@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # 创建自定义用户档案
 
-在此部分，我们将创建自定 [义用户档案。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) 用户档案负责将XDP渲染为HTML。 默认用户档案是现成的，用于将XDP渲染为HTML。 它表示移动Forms再现服务的自定义版本。 您可以使用移动表单再现服务来自定义移动Forms的外观、行为和交互。 在我们的自定义用户档案中，我们将使用Guidebridge API捕获在移动表单中填充的数据。 然后，此数据将发送到自定义servlet，该servlet随后将生成一个交互式PDF并将其流回调用应用程序。
+在此部分，我们将创建[自定义用户档案。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) 用户档案负责将XDP渲染为HTML。默认用户档案是现成的，用于将XDP渲染为HTML。 它表示移动Forms再现服务的自定义版本。 您可以使用移动表单再现服务来自定义移动Forms的外观、行为和交互。 在我们的自定义用户档案中，我们将使用Guidebridge API捕获在移动表单中填充的数据。 然后，此数据将发送到自定义servlet，该servlet随后将生成一个交互式PDF并将其流回调用应用程序。
 
-使用JavaScript API获取表 `formBridge` 单数据。 我们利用了这 `getDataXML()` 种方法：
+使用`formBridge` JavaScript API获取表单数据。 我们利用`getDataXML()`方法：
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});
@@ -61,7 +61,7 @@ var suc = function(obj) {
 
 ## 生成交互式PDF
 
-以下是Servlet代码，它负责渲染交互式pdf并将pdf返回给调用应用程序。 Servlet调用自 `mobileFormToInteractivePdf` 定义DocumentServices OSGi服务的方法。
+以下是Servlet代码，它负责渲染交互式pdf并将pdf返回给调用应用程序。 Servlet调用自定义DocumentServices OSGi服务的`mobileFormToInteractivePdf`方法。
 
 ```java
 import java.io.File;
@@ -123,7 +123,7 @@ public class GenerateInteractivePDF extends SlingAllMethodsServlet {
 
 ### 渲染交互式PDF
 
-以下代码利用 [Forms服务](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) API用移动表单中的数据渲染交互式PDF。
+以下代码使用[Forms服务API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html)以移动表单中的数据呈现交互式PDF。
 
 ```java
 public Document mobileFormToInteractivePdf(Document xmlData,String path) {
@@ -146,7 +146,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-要视图从部分完成的移动表单下载交互式PDF的功能，请 [单击此处](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content)。
-下载PDF后，下一步是提交PDF以触发AEM工作流。 此工作流将合并提交的PDF中的数据并生成非交互式PDF供审阅。
+要视图能够从部分完成的移动表单下载交互式PDF，请单击此处[。
+](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content)下载PDF后，下一步是提交PDF以触发AEM工作流。 此工作流将合并提交的PDF中的数据并生成非交互式PDF供审阅。
 
 为此用例创建的自定义用户档案可作为本教程资源的一部分提供。
