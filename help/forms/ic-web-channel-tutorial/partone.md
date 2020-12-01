@@ -28,15 +28,15 @@ ht-degree: 0%
 
 1. 下载并安装JDK1.8。
 2. 将JAVA_HOME设置为指向JDK1.8。
-3. 下载 [tomcat](https://tomcat.apache.org/)。 此war文件已通过Tomcat版本8.5.x和9.0.x测试。
+3. 下载[tomcat](https://tomcat.apache.org/)。 此war文件已通过Tomcat版本8.5.x和9.0.x测试。
 4. 下载您的首选项的tomcat版本。 您可以下载核心部分下的64位windows zip。
 5. 将内容解压缩到您的c:\tomcat文件夹。
-6. 您应该在c驱动器c:\tomcat\apache-tomcat-8.5中看 **到类似的内容** 。27取决于您的tomcat的版本
+6. 您应该在c驱动器&#x200B;**c:\tomcat\apache-tomcat-8.5.27**&#x200B;中看到类似的内容，具体取决于tomcat的版本
 7. 创建一个名为“CATALINA_HOME”的环境变量，并将其值设置为tomcat安装文件夹示例c:\tomcat\apache- tomcat-8.5.27
 8. 将SampleRest.war文件复制到Tomcat安装的webapps文件夹中
 9. 开始新命令提示窗口。
 10. 导航到&lt;tomcat install folder>\bin并运行startup.bat
-11. Tomcat启动后，单击此处测试WAR文件公开的端 [点。](http://localhost:8080/SampleRest/webapi/getStatement/9586)
+11. Tomcat启动后，请通过单击此处[测试WAR文件公开的端点。](http://localhost:8080/SampleRest/webapi/getStatement/9586)
 12. 您应该通过此调用获得示例数据。
 
 祝贺你！!!. 您已设置tomcat并部署了SampleRest.war文件。
