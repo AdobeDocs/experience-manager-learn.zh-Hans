@@ -68,12 +68,15 @@ ht-degree: 0%
 ```
 
 要初始化子类型字符串的ArrayList变量，可以使用JSON点表示法或XPath映射模式。 以下屏幕截图显示了使用JSON点记号填充名为CustomRoutes的ArrayList变量。 确保您指向数组对象中的元素，如下面的屏幕截图所示。 我们使用managerchain数组对象的名称填充CustomRoutes ArrayList。
-然后，CustomRoutes ArrayList用于填充AssignTask组件![](assets/arraylist.jpg)customroutes中的路由。一旦CustomRoutes ArrayList变量初始化为提交数据中的值，AssignTask组件的路由就使用CustomRoutes变量填充。 下面的屏幕截图显示了AssignTask任务中的自定义![路由](assets/customactions.jpg)
+然后，CustomRoutes ArrayList用于填充AssignTask组件中的路由
+![customroutes](assets/arraylist.jpg)
+使用提交数据中的值初始化CustomRoutes ArrayList变量后，将使用CustomRoutes变量填充AssignTask组件的“路由”。 以下屏幕截图显示了AssignTask中的自定义路由
+![asingtask](assets/customactions.jpg)
 
 要在系统上测试此工作流，请按照以下步骤操作
 
 * 下载ArrayListVariable.zip文件并将其保存到文件系统
-* [使用AEM](assets/arraylistvariable.zip) Package Manager导入zip文件
+* [使用AEM包](assets/arraylistvariable.zip) 管理器导入zip文件
 * [打开TravelExpenseReport表单](http://localhost:4502/content/dam/formsanddocuments/helpx/travelexpensereport/jcr:content?wcmmode=disabled)
 * 输入几项费用和2名经理的姓名
 * 点击提交按钮
