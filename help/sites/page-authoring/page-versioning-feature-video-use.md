@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 创建页面版本 {#creating-page-versions-aem-sites}
+# 创建页面版本{#creating-page-versions-aem-sites}
 
 页面版本控制通过创建页面版本来帮助内容作者跟踪与页面关联的更改，并提供一个选项，用于预览版本、恢复版本以及将版本与页面的当前版本进行比较。
 
