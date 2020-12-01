@@ -22,30 +22,30 @@ ht-degree: 1%
 
 到目前为止，我们已经创建了以下
 
-* 具有2个表的数据库- `newhire` 和 `beneficiaries`
+* 具有2个表的数据库- `newhire`和`beneficiaries`
 * 已配置Apache Sling Connection池化数据源
 * 基于RDBMS的表单数据模型
 
-下一步是创建并配置自适应表单以使用表单数据模型。  要获取头部开始，您可 [以下载并导入](assets/fdm-demo-af.zip) 示例表单。 示例表单中有一个部分用于显示员工详细信息，另一个部分用于列表员工的受益人。
+下一步是创建并配置自适应表单以使用表单数据模型。  要获取头部开始，您可以[下载并导入](assets/fdm-demo-af.zip)示例表单。 示例表单中有一个部分用于显示员工详细信息，另一个部分用于列表员工的受益人。
 
 ## 将表单与表单数据模型关联
 
 本课程提供的示例表单与任何表单数据模型都没有关联。 要配置表单以使用表单数据模型，我们需要执行以下操作：
 
 * 选择FDMDemo表单
-* 单击“属 _性_”->“_表单模型”_
+* 单击&#x200B;_属性_->_表单模型_
 * 从下拉式列表中选择表单数据模型
 * 搜索并选择在前一课中创建的表单数据模型。
-* Click on _Save &amp; Close_
+* 单击&#x200B;_保存并关闭_
 
 ## 配置预填服务
 
 第一步是关联表单的预填服务。 要关联预填服务，请按照以下步骤操作
 
-* 选择表 `FDMDemo` 单
-* 单击 _编辑_ ，以在编辑模式下打开表单
+* 选择`FDMDemo`表单
+* 单击&#x200B;_编辑_&#x200B;以编辑模式打开表单
 * 在内容层次结构中选择表单容器，然后单击扳手图标以打开其属性表
-* 从“ _预填服务”下拉列表_ ，选择“表单数据模型预填服务”
+* 从“预填服务”下拉列表中选择&#x200B;_表单数据模型预填服务_
 * 单击蓝☑色保存更改
 
 * ![预填服务](assets/fdm-prefill.png)
@@ -71,7 +71,7 @@ ht-degree: 1%
 * 在编辑模式下打开表单。
 * 展开根面板->您的受益人->表
 * 选择Row1并单击扳手图标以打开其属性表。
-* 将绑定引用设 **置为/newhire/GetEmployee受益人**
+* 将“绑定引用”设置为&#x200B;**/newhire/GetEmployeeWenneriters**
 * 将重复设置——最小计数设置为1，最大计数设置为5。
 * 您的Row1配置应类似于下面的屏幕快照
    ![行配置](assets/configure-row.PNG)
@@ -95,7 +95,9 @@ ht-degree: 1%
 
 ## 测试表单
 
-现在，我们需要在url中打开具有相应empID的表单。 以下2个链接将用empID=207的数据库[表单中的信息填充](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=207)[表单，empID=208](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=208)
+现在，我们需要在url中打开具有相应empID的表单。 以下2个链接将用数据库中的信息填充表单
+[表单，empID=207](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=207)
+[empID=208](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=208)的表单
 
 ## 疑难解答
 
