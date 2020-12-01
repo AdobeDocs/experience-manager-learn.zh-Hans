@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Forms规则编辑器的改进 {#rule-editor-improvements-in-aem-forms}
+# AEM Forms的规则编辑器改进{#rule-editor-improvements-in-aem-forms}
 
 规则编辑器允许用户向AEM自适应Forms添加逻辑。 AEM 6.3通过多种方式改进了规则编辑器，使技术用户和非技术用户都能更轻松、更快地添加智能。
 
