@@ -25,7 +25,7 @@ ht-degree: 0%
 # 在稿件节添加表
 
 在本部分中，我们将在稿件部分添加一个表。
-有关在打印 [渠道中使用表的详细信息](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) ，请参阅在打印渠道文档中使用表。
+有关在打印渠道中使用表的详细信息，请参阅[在打印渠道文档中使用表](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md)。
 
 登录AEM Forms并导航到Adobe Experience Manager>Forms>Forms和文档。
 
