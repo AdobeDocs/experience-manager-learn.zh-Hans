@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 使用体验片段Adobe Target创建活动 {#target-activity-experience-fragment}
+# 使用体验片段优惠{#target-activity-experience-fragment}创建Adobe Target活动
 
 了解如何使用AEM体验片段优惠创建和测试Adobe Target活动。
 
