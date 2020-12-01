@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 仅用于放置(FPO)再现{#for-placement-only-rendition}
+# 仅适用于放置(FPO)再现{#for-placement-only-rendition}
 
 了解如何为AEM资产创建和使用仅限放置(FPO)再现。
 
