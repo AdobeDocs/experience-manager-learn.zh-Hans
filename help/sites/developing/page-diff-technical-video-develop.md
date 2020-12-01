@@ -16,19 +16,19 @@ ht-degree: 2%
 ---
 
 
-# 针对页面差异进行开发 {#developing-for-page-difference}
+# 为页面差异{#developing-for-page-difference}进行开发
 
 此视频演示如何为AEM Sites的“页面差异”功能提供自定义样式。
 
-## 自定义页面差异样式 {#customizing-page-difference-styles}
+## 自定义页面差异样式{#customizing-page-difference-styles}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18871/?quality=9&learn=on)
 
 >[!NOTE]
 >
->此视频将自定义CSS添加到we.Retail客户端库中，因为这些更改应该对客户的AEM Sites项目进行；在下面的示例代码中： `my-project`.
+>此视频将自定义CSS添加到we.Retail客户端库中，因为这些更改应该对客户的AEM Sites项目进行；在下面的示例代码中：`my-project`。
 
-AEM页面差异通过直接加载获得OOTB CSS `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`。
+AEM page difference通过直接加载`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`获得OOTB CSS。
 
 由于CSS的直接加载而不是使用客户端库类别，因此我们必须为自定义样式找到另一个注入点，而此自定义注入点是项目的创作clientlib。
 
@@ -36,7 +36,7 @@ AEM页面差异通过直接加载获得OOTB CSS `/libs/cq/gui/components/common/
 
 ### 准备创作clientlib {#prepare-the-authoring-clientlib}
 
-确保项目存 `authoring` 在clientlib，位于 `/apps/my-project/clientlib/authoring.`
+确保项目`/apps/my-project/clientlib/authoring.`存在`authoring` clientlib
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -47,7 +47,7 @@ AEM页面差异通过直接加载获得OOTB CSS `/libs/cq/gui/components/common/
 
 ### 提供自定义CSS {#provide-the-custom-css}
 
-添加到项目的 `authoring` clientlib, `css.txt` 它指向提供覆盖样式的较少文件。 [由于](https://lesscss.org/) 它有许多便捷的功能，包括本例中利用的类包装，因此更少是首选。
+添加到项目的`authoring` clientlib a `css.txt`，它指向提供覆盖样式的较少文件。 [Lessis](https://lesscss.org/) 之所以首选，是因为它具有许多便捷的功能，包括本例中利用的类包装。
 
 ```shell
 base=./css
@@ -55,7 +55,7 @@ base=./css
 htmldiff.less
 ```
 
-在创建 `less` 包含样式覆盖的文件， `/apps/my-project/clientlibs/authoring/css/htmldiff.less`并根据需要提供覆盖样式。
+在`/apps/my-project/clientlibs/authoring/css/htmldiff.less`创建包含样式重写的`less`文件，并根据需要提供叠加样式。
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -101,11 +101,11 @@ body {
 }
 ```
 
-### 通过页面组件包含创作clientlib CSS {#include-the-authoring-clientlib-css-via-the-page-component}
+### 通过页面组件{#include-the-authoring-clientlib-css-via-the-page-component}包含创作clientlib CSS
 
-将创作客户端类别直接包含在项目基页的标 `/apps/my-project/components/structure/page/customheaderlibs.html` 签之前， `</head>` 以确保加载样式。
+将创作clientlibs类别直接包含在项目基页的`/apps/my-project/components/structure/page/customheaderlibs.html`中`</head>`标签之前，以确保加载样式。
 
-这些样式应限于“编 [!UICONTROL 辑] ” [!UICONTROL 和“] 预览WCM”模式。
+这些样式应限制为[!UICONTROL Edit]和[!UICONTROL 预览] WCM模式。
 
 ```xml
 <head>
