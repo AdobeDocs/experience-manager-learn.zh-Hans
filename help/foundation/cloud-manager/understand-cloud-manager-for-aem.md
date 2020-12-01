@@ -31,29 +31,29 @@ Adobe云管理器提供简单而可靠的解决方案，可轻松管理、检查
 * [CI/CD非生产管道](#cicd-non-production-pipeline)
 * [活动](#activity)
 
-有关完整概述，请查看《Cloud Manager [用户指南》](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)。
+有关完整概述，请查看[Cloud Manager用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)。
 
 ## 程序 {#programs}
 
-[Cloud Manager项目代表](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/setting-up-program.html) AEM环境集，这些支持业务计划的逻辑集，通常对应于已购买的服务级别协议(SLA)。 例如，一个项目可以代表AEM资源以支持全球公共网站，而另一个项目则代表内部的Central DAM。
+[Cloud Manager计](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/setting-up-program.html) 划表示支持业务计划逻辑集的AEM环境集，通常对应于已购买的服务级别协议(SLA)。例如，一个项目可以代表AEM资源以支持全球公共网站，而另一个项目则代表内部的Central DAM。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&learn=on)
 
 ## 环境 {#environments}
 
-[Cloud Manager环境由](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) AEM作者、AEM发布和调度程序实例组成。 不同的环境支持角色，可使用不同的CI/CD管道（如下所述）参与。 Cloud Manager环境通常具有一个生产环境和一个阶段环境。
+[云管理](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) 器环境由AEM作者、AEM发布和调度程序实例组成。不同的环境支持角色，可使用不同的CI/CD管道（如下所述）参与。 Cloud Manager环境通常具有一个生产环境和一个阶段环境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318/?quality=12&learn=on)
 
 ## 报告 {#reports}
 
-[Cloud Manager Reports](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/monitor-your-environments.html) 通过一组图表为项目的视图和AEM实例提供环境，这些图表报告并跟踪每个AEM实例的各种指标。
+[云管理](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/monitor-your-environments.html) 器报告通过一组图表为项目的环境和AEM实例提供视图，这些图表报告并跟踪每个AEM实例的各种指标。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26315/?quality=12&learn=on)
 
-## CI/CD Production Pipeline {#cicd-production-pipeline}
+## CI/CD生产管道{#cicd-production-pipeline}
 
-*[在AdobeCloud Manager视频系列中使用CI](./use-the-cicd-pipeline-in-cloud-manager-for-aem.md)/CD管道可深入探索生产管道执行，包括探索失败的部署和成功的部署。*
+*[在AdobeCloud Manager中使用CI/CD管道视频系](./use-the-cicd-pipeline-in-cloud-manager-for-aem.md) 列可深入探索生产管道的执行，包括探索失败的部署和成功的部署。*
 
 >[!NOTE]
 >
@@ -61,19 +61,19 @@ Adobe云管理器提供简单而可靠的解决方案，可轻松管理、检查
 
 ### 配置
 
-CI/ [CD生产管道配置](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) ，定义将启动管道的触发器、控制生产部署和性能测试参数的参数。
+[CI/CD生产管道](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html)配置定义将启动管道的触发器、控制生产部署和性能测试参数的参数。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314/?quality=12&learn=on)
 
 ### 管道执行
 
-CI/ [CD生产管道](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) ，用于通过Stage构建代码并将其部署到生产环境，从而缩短了实现价值的时间。
+[CI/CD生产管道](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/deploying-code.html)用于通过Stage构建代码并将其部署到生产环境，从而缩短了实现值的时间。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317/?quality=12&learn=on)
 
-## CI/CD非生产管道 {#cicd-non-production-pipeline}
+## CI/CD非生产管道{#cicd-non-production-pipeline}
 
-[CI/CD非生产管道被分为](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html#non-production--code-quality-only-pipelines) “代码质量”管道和“部署”管道两个类别。 代码质量将从Git分支中输入所有代码，以根据Cloud Manager的代码质量扫描进行构建和评估。 部署渠道支持将代码从Git存储库自动部署到任何非生产环境，这意味着任何非舞台或生产的经过调配的AEM环境。
+[CI/CD非生产管](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html#non-production--code-quality-only-pipelines) 道分为两个类别，代码质量管道和部署管道。代码质量将从Git分支中输入所有代码，以根据Cloud Manager的代码质量扫描进行构建和评估。 部署渠道支持将代码从Git存储库自动部署到任何非生产环境，这意味着任何非舞台或生产的经过调配的AEM环境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/?quality=12&learn=on)
 
@@ -81,6 +81,6 @@ CI/ [CD生产管道](https://docs.adobe.com/content/help/en/experience-manager-c
 
 Cloud Manager为项目的活动提供整合视图，列出所有CI/CD管道执行（生产和非生产），让您能够了解过去和现在的活动，并可以查看任何活动的详细信息。
 
-Cloud Manager还在每用户级别与Adobe Experience Cloud通 [知集成](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/notifications.html)，为事件和相关操作提供全方位视图。
+Cloud Manager还以每用户级别与[Adobe Experience Cloud通知](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/notifications.html)集成，为事件和感兴趣的操作提供全方位视图。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26319/?quality=12&learn=on)
