@@ -20,7 +20,7 @@ ht-degree: 15%
 ---
 
 
-# 创作概述 {#authoring-overview}
+# 创作概述{#authoring-overview}
 
 以下视频概述了在AEM Sites的AEM作者环境中进行创作的基本概念。
 
