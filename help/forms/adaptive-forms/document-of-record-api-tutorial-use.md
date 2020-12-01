@@ -20,11 +20,11 @@ ht-degree: 1%
 ---
 
 
-# 使用API在AEM Forms生成记录文档 {#using-api-to-generate-document-of-record-with-aem-forms}
+# 使用API在AEM Forms生成记录文档{#using-api-to-generate-document-of-record-with-aem-forms}
 
 以编程方式生成记录文档(DOR)
 
-本文说明如何使用以编 `com.adobe.aemds.guide.addon.dor.DoRService API` 程方 **式生成记录** 文档。 [记录文档](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) 是自适应表单中捕获的数据的PDF版本。
+本文说明使用`com.adobe.aemds.guide.addon.dor.DoRService API`以编程方式生成记录&#x200B;**的**&#x200B;文档。 [文档](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) 录制内容以PDF版本的自适应表单捕获的数据。
 
 1. 下面是代码片断。 第一行是DOR服务。
 1. 设置DoROptions。
@@ -45,10 +45,10 @@ com.adobe.aemds.guide.addon.dor.DoROptions dorOptions =  new com.adobe.aemds.gui
 要在本地系统上尝试，请按照以下步骤操作
 
 1. [使用包管理器下载并安装文章资产](assets/dor-with-api.zip)
-1. 确保已安装并启动作为创建服务用户文章的一部分提供 [的DevelopingWithServiceUser包](service-user-tutorial-develop.md)
+1. 确保已安装并启动作为[创建服务用户文章](service-user-tutorial-develop.md)的一部分提供的DevelopingWithServiceUser包
 1. [登录到configMgr](http://localhost:4502/system/console/configMgr)
 1. 搜索Apache Sling Service User Mapper服务
-1. 确保在“服务映 _射”部分中输入以下条目_ DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+1. 确保在“服务映射”部分中输入以下条目&#x200B;_DevelopingWithServiceUser.core:getformsresourceresolver=fd-service_
 1. [打开表单](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
 1. 填写表单并单击“视图PDF”
 1. 您应在浏览器中的新选项卡中看到DOR
@@ -59,7 +59,7 @@ com.adobe.aemds.guide.addon.dor.DoROptions dorOptions =  new com.adobe.aemds.gui
 PDF不显示在新的浏览器选项卡中：
 
 1. 确保不阻止浏览器中的弹出窗口
-1. 让您遵循本文中所述的步 [骤](service-user-tutorial-develop.md)
-1. 确保“DevelopingWithServiceUser”包处于活 *动状态*
-1. 确保系统用户“数据”对以下节点具有读取、修改和创建权限 `/content/usergenerated/content/aemformsenablement`
+1. 使您遵循本[文章](service-user-tutorial-develop.md)中所述的步骤
+1. 确保“DevelopingWithServiceUser”包处于&#x200B;*活动状态*
+1. 确保系统用户“数据”对以下节点`/content/usergenerated/content/aemformsenablement`具有读取、修改和创建权限
 
