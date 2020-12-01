@@ -24,11 +24,11 @@ HTML5表单是Adobe Experience Manager州的一项新功能，可优惠HTML5格�
 
 ## 先决条件
 
-请确保您有AEM Forms的工作实例。 请按照安 [装指南](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) ，安装和配置AEM Forms
+请确保您有AEM Forms的工作实例。 请按照[安装指南](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)安装和配置AEM Forms
 
 ## 创建您的第一个HTML5表单
 
-1. [下载并解压zip文件的内容](assets/assets.zip)。 zip文件包含xdp和数据文件
+1. [下载并解压zip文件的内容](assets/assets.zip)。zip文件包含xdp和数据文件
 2. [导航到Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 3. 单击创建->文件上传
 4. 选择在步骤2中下载的xdp模板
@@ -37,26 +37,26 @@ HTML5表单是Adobe Experience Manager州的一项新功能，可优惠HTML5格�
 
 xdp可以以HTML5格式或PDF格式进行预览。 要预览HTML5格式的xdp，请执行以下步骤
 
-* 点按新上传的xdp，然后单 _击预览->预览为HTML_。 您应当看到xdp呈现为HTML5
+* 点按新上传的xdp并单击&#x200B;_预览->预览，作为HTML_。 您应当看到xdp呈现为HTML5
 
 >[!NOTE]
->当您选择“ _预览为PDF_ ”选项时，渲染的PDF将不会显示在浏览器中，因为AEM Forms渲染需要Acrobat插件的动态pdf。您必须下载PDF并使用Adobe Acrobat/Reader打开它以视图
+>当您选择&#x200B;_预览为PDF_&#x200B;选项时，渲染的PDF将不会显示在浏览器中，因为AEM Forms渲染需要Acrobat插件的动态pdf。您必须下载PDF，并使用Adobe Acrobat/Reader打开它以视图
 
 
 ## 使用数据预览
 
 要将HTML5格式的xdp与数据文件预览，请执行以下步骤：
 
-* 点按新上传的xdp并单击“ _预览”->“预览”_。 浏览并选择数据文件，然后单击 _预览_。
+* 点按新上传的xdp并单击&#x200B;_预览->预览。_&#x200B;浏览并选择数据文件，然后单击&#x200B;_预览_。
 * 您应当看到以HTML5格式呈现的模板，其中已预填充数据
 
 ## 浏览xdp模板的高级属性
 
-xdp模板的高级属性允许您指定发布日期、提交处理程序、表单的渲染用户档案、预填服务等。 要视图模板的高级属性，请点按xdp，然后单 _击属性->高级_。 您将在此找到许多属性。 这里介绍了其中一些属性。
+xdp模板的高级属性允许您指定发布日期、提交处理程序、表单的渲染用户档案、预填服务等。 要视图模板的高级属性，请点按xdp，然后单击&#x200B;_属性->高级_。 您将在此找到许多属性。 这里介绍了其中一些属性。
 
-**提交URL** —— 此URL将处理您的HTML5表单提交。 下一课我们将讨论此问题。 如果未在此处指定提交URL，则会调用默认的提交处理程序，该处理程序会将表单数据返回到浏览器。
+**提交URL**  —— 此URL将处理您的HTML5表单提交。下一课我们将讨论此问题。 如果未在此处指定提交URL，则会调用默认的提交处理程序，该处理程序会将表单数据返回到浏览器。
 
-**HTML渲染用户档案** - HTML5表单具有用户档案的概念，这些作为REST端点公开，以支持表单模板的移动渲染。 大多数情况下，默认渲染用户档案应足以渲染表单。 如果默认渲染用户档案不满足您的需求，则可 [以创建自定](https://docs.adobe.com/content/help/en/experience-manager-64/forms/html5-forms/custom-profile.html) 义用户档案并与表单关联。
+**HTML渲染用户档案** - HTML5表单具有用户档案的概念，这些作为REST端点公开，以支持表单模板的移动渲染。大多数情况下，默认渲染用户档案应足以渲染表单。 如果默认渲染用户档案不满足您的需求，可以创建[自定义用户档案](https://docs.adobe.com/content/help/en/experience-manager-64/forms/html5-forms/custom-profile.html)并与表单关联。
 
 **预填服务** -预填服务通常用于用从后端数据源获取的数据填充表单。
 
