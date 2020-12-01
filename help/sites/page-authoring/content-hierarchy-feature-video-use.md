@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 内容结构和层次结构 {#content-hierarchy}
+# 内容结构和层次结构{#content-hierarchy}
 
 了解如何在AEM Sites创建和组织组织组织的网页。
 
