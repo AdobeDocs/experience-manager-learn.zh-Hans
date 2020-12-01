@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# 将自定义视频缩略图与AEM Dynamic Media结合使用{#using-custom-video-thumbnail-with-aem-dynamic-media}
+# 将自定义视频缩略图与AEM Dynamic Media{#using-custom-video-thumbnail-with-aem-dynamic-media}一起使用
 
 AEM Assets自定义视频缩略图使作者能够从一组生成的缩略图中选择适当的缩略图。 可以轻松自定义为视频生成的缩略图数。
 
@@ -33,4 +33,4 @@ AEM Assets自定义视频缩略图使作者能够从一组生成的缩略图中�
 
 >[!NOTE]
 >
->您应在Dynamic Media [模式下运行AEM实例](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)
+>您应在Dynamic Media](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)模式下运行[AEM实例
