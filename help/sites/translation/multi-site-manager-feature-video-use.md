@@ -20,15 +20,15 @@ ht-degree: 2%
 ---
 
 
-# 使用多站点管理器 {#using-multi-site-manager-with-aem-sites}
+# 使用多站点管理器{#using-multi-site-manager-with-aem-sites}
 
-[!UICONTROL Live Copy概述和] Blueprint [!UICONTROL Configuration Manager是AEM作者界面] ，用于使用Adobe Experience Manager Sites的多站点管理器功能。
+[!UICONTROL Live Copy ] Overview和 [!UICONTROL Blueprint Configuration Manager是] AEM作者界面，用于使用Adobe Experience Manager Sites的多站点管理器功能。
 
 ## Live Copy 概述 {#live-copy-overview}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17054/?quality=9&learn=on)
 
-*Live Copy概述是一个触屏UI界面，用于管理Live Copy及其各自的蓝图。 此功能在AEM 6.3中引入，取代了经典UI Blueprint Control Center。*
+*Live Copy概述是一个触屏UI界面，用于管理Live Copy及其各自的蓝图。此功能在AEM 6.3中引入，取代了经典UI Blueprint Control Center。*
 
 ## Blueprint Configuration Manager —— 触屏UI {#blueprint-config-mgr}
 
