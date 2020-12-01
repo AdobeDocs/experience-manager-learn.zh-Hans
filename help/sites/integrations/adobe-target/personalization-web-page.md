@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 全网页体验的个性化 {#personalization-fpe}
+# 个性化完整网页体验{#personalization-fpe}
 
 了解如何创建活动，使用Adobe Target将托管在AEM上的站点页面重定向到新页面。
 
@@ -36,27 +36,27 @@ WKND网站重新设计了主页，希望将其当前主页访客重定向到新�
 ## 使用Visual Experience Composer(VEC)创建A/B测试的步骤
 
 1. 登录Adobe Target并导航到活动选项卡
-1. 单击 **“创建活动** ”按钮，然后选择 **A/B测试活动** 。
+1. 单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**A/B测试**&#x200B;活动
 
    ![A/B活动](assets/ab-target-activity.png)
 
-1. 选择“ **可视体验书写器** ”选项，提供活动URL，然后单击“下 **一步”**
+1. 选择&#x200B;**Visual Experience Composer**&#x200B;选项，提供活动URL，然后单击&#x200B;**Next**
 
    ![活动URL](assets/ab-test-url.png)
 
-1. 创建新活动后，Visual Experience Composer在左侧显示两个选项卡： *体验* A *和体验B*。 从列表中选择体验。 您可以使用添加体验按钮将新体验 **添加到列表** 。
+1. 创建新活动后，Visual Experience Composer在左侧显示两个选项卡：*体验A*&#x200B;和&#x200B;*体验B*。 从列表中选择体验。 您可以使用&#x200B;**添加体验**&#x200B;按钮向列表添加新体验。
 
    ![体验选项](assets/experience-options.png)
 
-1. 视图选项可用于体验A，然后选 **择重定向到URL** 选项，并为新的WKND站点主页提供URL。
+1. 可用于体验A的视图选项，然后选择&#x200B;**重定向到URL**&#x200B;选项，并为新的WKND站点主页提供URL。
 
    ![重定向URL](assets/redirect-url.png)
 
-1. 将体 *验A* 重命 *名为新WKND* 主页，将体 *验B重命名为* WKND *主页*
+1. 将体验A *重命名为*&#x200B;新WKND主页&#x200B;*和体验B*&#x200B;重命名为&#x200B;*WKND主页***
 
    ![冒险](assets/new-experiences.png)
 
-1. 单 **击下** 一步以转到定位，并在两个体验之间保持手动流量分配50-50。
+1. 单击&#x200B;**下一步**&#x200B;移至定位，并在两个体验之间保持手动流量分配50-50。
 
    ![定位](assets/targeting.png)
 
