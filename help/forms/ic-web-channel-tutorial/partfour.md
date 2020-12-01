@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 创建Web渠道文档模板AEM Forms {#creating-web-channel-document-template-aem-forms}
+# 创建Web渠道文档模板AEM Forms{#creating-web-channel-document-template-aem-forms}
 
 在此部分，我们将为Web渠道文档创建模板。
 在AEM Forms6.4中创建Web渠道文档模板
