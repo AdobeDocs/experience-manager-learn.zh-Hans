@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms使用汇编服务{#using-assembler-service-in-aem-forms}
+# 使用AEM Forms{#using-assembler-service-in-aem-forms}中的汇编器服务
 
 本文为您提供了一些资源，用于演示将多个PDF文件拖放到浏览器中以及将组合的pdf文件保存到文件系统的能力。 以下是servlet的代码，它汇编使用浏览器上传的pdf文件。
 
@@ -107,19 +107,19 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 使此功能在AEM Server上工作
 
-* 将AssembleMultipleFiles [.zip下载](assets/assemble-multiple-files.zip) 到您的本地系统。
-* 使用包管理器上传和安 [装包](http://localhost:4502/crx/packmgr/index.jsp)
-* 下[载自定义文档服务包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* 下载 [使用服务用户包进行开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* 使用Felix Web控制台部署 [和开始捆绑套件](http://localhost:4502/system/console/bundles)
-* 将浏览器指向 [AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
+* 将[AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip)下载到本地系统。
+* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)上载和安装包
+* 下载[自定义文档服务捆绑](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* 下载[使用服务用户捆绑开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* 使用[felix Web控制台](http://localhost:4502/system/console/bundles)部署和开始捆绑套件
+* 将您的浏览器指向[AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
 * 拖放几个PDF文件
 
 >[!NOTE]
 >
 >确保您的AEM Forms安装完成。 您的所有捆绑包都必须处于活动状态。
 >
->确保已添加- Boot委托RSA和BouncyCastle库，如本安装 [AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>确保已添加——如本[安装AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)中所述的引导委托RSA和BouncyCastle库
 >
 >**此演示的注意事项**
 >
