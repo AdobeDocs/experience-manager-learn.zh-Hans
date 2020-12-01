@@ -23,7 +23,8 @@ OutputService提供许多方法，使用表单设计创建文档并使用数据�
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-数据xml有2条记录。 每个记录由form1元素表示。 此xml被传递给OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) ，我们获得pdf文档的列表（每个记录一个）generatePDFOutputBatch方法的签名采用以下参数
+数据xml有2条记录。 每个记录由form1元素表示。 此xml被传递给OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html)，我们得到pdf文档的列表（每个记录一个）
+generatePDFOutputBatch方法的签名采用以下参数
 
 * 模板——包含模板的映射（由键标识）
 * 数据——包含xml数据文档的映射（由键标识）
@@ -32,7 +33,7 @@ OutputService提供许多方法，使用表单设计创建文档并使用数据�
 
 >[!NOTE]
 >
->此用例在此网站上以实时示 [例提供](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。
+>此用例在此[网站](https://forms.enablementadobe.com/content/samples/samples.html?query=0)上以实时示例提供。
 
 ## 用例详细信息{#use-case-details}
 
@@ -124,7 +125,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 }
 ```
 
-### 在服务器上部署{#Deploy-on-your-server}
+### 部署到服务器{#Deploy-on-your-server}
 
 要在服务器上测试此功能，请按照以下说明操作：
 
@@ -133,7 +134,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 * [部署DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
 * [部署自定义AEMFormsDocumentServices Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Custom bundle，它使用OutputService API生成pdf
 * [将您的浏览器指向包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* [导入并安装包](assets/generate-multiple-pdf-from-xml.zip)。 此包包含html页，通过该页可删除模板和数据文件。
+* [导入并安装包](assets/generate-multiple-pdf-from-xml.zip)。此包包含html页，通过该页可删除模板和数据文件。
 * [将您的浏览器指向MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html?)
 * 将模板和xml数据文件拖放到一起
 * 下载创建的zip文件。 此zip文件包含由输出服务生成的pdf文件。
