@@ -11,7 +11,7 @@ doc-type: tutorial
 translation-type: tm+mt
 source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -19,27 +19,27 @@ ht-degree: 0%
 
 # 为跨来源资源共享(CORS)进行开发
 
-利用客户端JavaScript [!DNL CORS] 从外部Web应用程序访问AEM内容的一个简短示例。
+利用[!DNL CORS]通过客户端JavaScript从外部Web应用程序访问AEM内容的简短示例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837/?quality=12&learn=on)
 
 在此视频中：
 
-* **www.example.com** maps to localhost via `/etc/hosts`
-* **aem-publish.local** 通过 `/etc/hosts`
-* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12) ([!DNL Python]的 [SimpleHTTPServer的包装器](https://docs.python.org/2/library/simplehttpserver.html))通过端口8000为HTML页提供服务。
+* **www.example.** commaps通过  `/etc/hosts`
+* **aem-publish.localmaps** 通过  `/etc/hosts`
+* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12) (SimpleHTTPServer的 [[!DNL Python]包装器](https://docs.python.org/2/library/simplehttpserver.html))通过端口8000为HTML页提供服务。
 * [!DNL AEM Dispatcher] 正在2. [!DNL Apache HTTP Web Server] 4上运行，并反向代理请求 `aem-publish.local` 到 `localhost:4503`。
 
-有关详细信息，请 [查看AEM中的“了解跨来源资源共享(CORS)”](./understand-cross-origin-resource-sharing.md)。
+有关详细信息，请查看AEM](./understand-cross-origin-resource-sharing.md)中的[了解跨来源资源共享(CORS)。
 
 ## www.example.com HTML和JavaScript
 
 此网页的逻辑是
 
 1. 单击按钮后
-1. 请 [!DNL AJAX GET] 求 `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
-1. 检索 `jcr:title` JSON响应的表单
-1. 将其注 `jcr:title` 入DOM
+1. 向`http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`发出[!DNL AJAX GET]请求
+1. 从JSON响应中检索`jcr:title`
+1. 将`jcr:title`注入DOM
 
 ```xml
 <html>
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ## OSGi工厂配置
 
-OSGi配置工厂 [!DNL Cross-Origin Resource Sharing] 可通过：
+[!DNL Cross-Origin Resource Sharing]的OSGi配置工厂可通过以下方式获得：
 
 * `http://<host>:<port>/system/console/configMgr > [!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]`
 
@@ -94,9 +94,9 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 />
 ```
 
-## Dispatcher configuration {#dispatcher-configuration}
+## 调度程序配置{#dispatcher-configuration}
 
-要允许缓存内容上的标题 [!DNL CORS] 的缓存和提供，请将以下配置添加到所有支持AEM发布的 `dispatcher.any` 文件。
+要允许缓存内容上[!DNL CORS]头的缓存和服务，请将以下配置添加到所有支持AEM发布`dispatcher.any`文件。
 
 ```
 /cache { 
@@ -113,11 +113,11 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 }
 ```
 
-**对文件进行更改后** ，重新启动Web服务器应 `dispatcher.any` 用程序。
+**在对文件进行更** 改后重新启动Web服务器应 `dispatcher.any` 用程序。
 
-可能需要完全清除缓存，以确保在配置更新后在下一个请求上正确缓存 `/headers` 标头。
+可能需要完全清除缓存，以确保在`/headers`配置更新后在下一个请求上正确缓存标头。
 
-## 支持材料 {#supporting-materials}
+## 支持材料{#supporting-materials}
 
 * [AEM OSGi跨来源资源共享策略的配置工厂](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [适用于macOS的SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
