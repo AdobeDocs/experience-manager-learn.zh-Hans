@@ -6,9 +6,9 @@ user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员
 breadcrumb-title: AEM Forms 教程
 index: y
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 787a79663472711b78d467977d633e3d410803e5
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '896'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 + [概述](overview.md)
 + [要遵循的最佳实践](adaptive-forms/best-practices-adaptive-forms.md)
 + [使用AEM作者设置OKTA身份验证](adaptive-forms/single-sign-on-with-okta.md)
-+ 创建您的第一个自适应表单 {#creating-your-first-adaptive-form}
++ 创建您的第一个自适应表单{#creating-your-first-adaptive-form}
    + [简介和设置](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [创建自适应表单模板](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [创建表单片段](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -29,7 +29,7 @@ ht-degree: 6%
    + [将表添加到收入面板](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [配置资源面板](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [使用自定义函数和代码编辑器](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ 处理表单提交 {#handling-af-form-submissions}
++ 处理表单提交{#handling-af-form-submissions}
    + [创建审阅工作流](handling-form-submissions/creating-a-review-workflow.md)
    + [配置自适应表单以触发工作流](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [显示感谢页面](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -38,7 +38,7 @@ ht-degree: 6%
    + [请求工作流的付费停用时间](handling-form-submissions/paid-time-off-request-workflow.md)
    + [配置自适应表单以触发AEM Workflow —— 视频](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [自定义分配任务通知](handling-form-submissions/customize-assign-task-notification.md)
-+ 有用的集成{#some-useful-integrations}
++ 有用集成{#some-useful-integrations}
    + [双因素身份验证](some-useful-integrations/two-factor-authentication.md)
 
 + 自适应表单 {#adaptive-forms}
@@ -124,7 +124,7 @@ ht-degree: 6%
    + [将PDF表单转换为自适应表单](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [配置转换的自适应表单](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [将XDP模板与Adobe Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
-+ AEM工作流中的变量{#variables-aem-workflow}
++ AEM Workflow{#variables-aem-workflow}中的变量
    + [简介——工作流中的变量](variables-aem-workflow/introduction.md)
    + [XML变量](variables-aem-workflow/part1.md)
    + [JSON变量](variables-aem-workflow/part2.md)
@@ -132,11 +132,11 @@ ht-degree: 6%
    + [ArrayList变量](variables-aem-workflow/part4.md)
    + [表单数据模型变量](variables-aem-workflow/form-data-model.md)
    + [AEM工作流中的规则编辑器](variables-aem-workflow/part5.md)
-+ 在MySQL数据库中存储和检索表单数据{#storing-and-retrieving-form-data}
++ 在MySQL DB{#storing-and-retrieving-form-data}中存储和检索表单数据
    + [简介](storing-retrieving-form-data/introduction.md)
    + [配置数据源](storing-retrieving-form-data/part1.md)
-   + [存储数据的Servlet](storing-retrieving-form-data/part2.md)
-   + [用于获取数据的服务](storing-retrieving-form-data/part3.md)
+   + [存储数据的服务](storing-retrieving-form-data/part3.md)
+   + [创建Servlet](storing-retrieving-form-data/part2.md)
    + [客户端库](storing-retrieving-form-data/part4.md)
    + [自适应表单模板](storing-retrieving-form-data/part5.md)
    + [部署示例资源](storing-retrieving-form-data/part6.md)
@@ -146,7 +146,7 @@ ht-degree: 6%
    + [处理PDF提交](offline-mobile-form-submission/part-two.md)
    + [审阅PDF的工作流程](offline-mobile-form-submission/part-three.md)
    + [在系统上部署](offline-mobile-form-submission/part-four.md)
-+ 查询提交的数据{#querying-submitted-data}
++ 查询已提交的数据{#querying-submitted-data}
    + [简介](querying-submitted-data/introduction.md)
    + [根据JSON模式创建表单](querying-submitted-data/part1.md)
    + [存储提交的数据](querying-submitted-data/part2.md)
@@ -155,7 +155,7 @@ ht-degree: 6%
 + 在Forms门户中列出自定义资产类型{#listing-custom-asset-types}
    + [第1部分——注册自定义资产类型](listing-custom-asset-types/part1.md)
    + [第2部分——创建自定义模板](listing-custom-asset-types/part2.md)
-+ AEM Forms与市场{#aem-forms-with-marketo}
++ AEM Forms与Marketo{#aem-forms-with-marketo}
    + [第1部分——简介](aem-forms-with-marketo/part1.md)
    + [第2部分——自定义身份验证](aem-forms-with-marketo/part2.md)
    + [第3部分——数据源](aem-forms-with-marketo/part3.md)
@@ -204,7 +204,7 @@ ht-degree: 6%
    + [在AEM Forms打印渠道文档中使用表组件](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [使用监视文件夹为打印渠道生成交互式通信文档](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
-+ Interactive Communications For Web Channel {#ic-web-channel-tutorial}
++ 用于Web渠道的交互式通信{#ic-web-channel-tutorial}
    + [简介](ic-web-channel-tutorial/introduction.md)
    + [设置Tomcat](ic-web-channel-tutorial/partone.md)
    + [创建数据源](ic-web-channel-tutorial/parttwo.md)
