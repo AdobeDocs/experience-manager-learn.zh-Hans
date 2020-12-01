@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 置入副本 {#place-copy}
+# 放置副本{#place-copy}
 
 了解如何使用AEM Assets的置入副本操作来使用资源。
 
