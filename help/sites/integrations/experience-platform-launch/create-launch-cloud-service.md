@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 创建启动Cloud Service配置 {#create-launch-cloud-service}
+# 创建启动Cloud Service配置{#create-launch-cloud-service}
 
 了解如何在Adobe Experience Manager创建新的LaunchCloud Services配置。 AEM启动Cloud Service配置随后可应用于现有站点，并且可以在创作和发布环境中观察到启动库的加载情况。
 
