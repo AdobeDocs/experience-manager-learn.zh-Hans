@@ -22,7 +22,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果您使用的是AEM Forms6.5，请使用自动化Forms转化功能。
+>如果您使用的是AEM Forms6.5，请使用Automated forms conversion功能。
 
 ## 前提条件
 
@@ -32,14 +32,14 @@ ht-degree: 2%
 
 ### 需要以下各项才能使此功能在您的系统上工作
 
-* 使用Felix Web Console下载和 [部署捆绑套件](http://localhost:4502/system/console/bundles)
+* 使用[Felix Web控制台](http://localhost:4502/system/console/bundles)下载和部署捆绑套件
 * [DocumentServicesBundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 * [DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [AcroFormsToAEMFormsBundle](https://forms.enablementadobe.com/content/DemoServerBundles/AcroFormToAEMForm.core-1.0-SNAPSHOT.jar)
-* [下载此包并将其导入AEM](assets/acro-form-aem-form.zip)。 此包包含从acroform创建XSD的示例工作流和html页
-* 打开configMgr [。](http://localhost:4502/system/console/configMgr)
+* [下载此包并将其导入AEM](assets/acro-form-aem-form.zip)。此包包含从acroform创建XSD的示例工作流和html页
+* 打开[configMgr](http://localhost:4502/system/console/configMgr)
    * 搜索“Apache Sling Service User Mapper Service”并单击以打开属性
-   * 单击图 `+` 标（加号）以添加以下服务映射
+   * 单击`+`图标（加号）以添加以下服务映射
       * `DevelopingWithServiceUser.core:getresourceresolver=data`
       * `DevelopingWithServiceUser.core:getformsresourceresolver=fd-service`
    * 单击“保存”
