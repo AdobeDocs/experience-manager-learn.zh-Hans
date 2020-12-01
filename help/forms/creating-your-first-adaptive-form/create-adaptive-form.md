@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# 创建自适应表单 {#creating-adaptive-form}
+# 创建自适应表单{#creating-adaptive-form}
 
 在第1部分中，我们将根据上一课中创建的模板创建自适应表单，并使用相应的按钮配置工具栏。
 
