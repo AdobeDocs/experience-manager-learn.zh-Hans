@@ -20,7 +20,7 @@ ht-degree: 27%
 ---
 
 
-# 了解页面属性 {#understanding-page-properties-aem-sites}
+# 了解页面属性{#understanding-page-properties-aem-sites}
 
 以下视频介绍与Adobe Experience Manager的页面关联的页面属性。
 
