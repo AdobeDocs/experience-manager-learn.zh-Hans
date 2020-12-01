@@ -20,11 +20,11 @@ ht-degree: 0%
 ---
 
 
-# 将Microsoft Dynamics与AEM Forms{#using-microsoft-dynamics-with-aem-forms}
+# 将Microsoft Dynamics与AEM Forms一起使用{#using-microsoft-dynamics-with-aem-forms}
 
 AEM Forms数据集成允许您配置和连接不同的数据源。 现成支持以下功能。 但是，只需少量自定义，您也可以集成其他数据源。
 
-关系数据库- MySQL、Microsoft SQL Server、IBM DB2和Oracle RDBMS。
+关系数据库- MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS。
 1. AEM用户用户档案
 1. REST风格的Web服务
 1. 基于SOAP的Web服务
