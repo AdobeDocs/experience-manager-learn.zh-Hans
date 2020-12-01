@@ -15,11 +15,11 @@ ht-degree: 4%
 ---
 
 
-# 使用资产元数据搜索提升 {#search-boost-asset}
+# 使用资产元数据{#search-boost-asset}搜索提升
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=12&learn=on)
 
-## 理解AEM Assets的搜索增长{#understanding-search-boosting-in-aem-assets}
+## 了解AEM Assets的搜索提升{#understanding-search-boosting-in-aem-assets}
 
 深入了解AEM Assets搜索推广及其在更广泛的AEM环境中的工作方式。
 
