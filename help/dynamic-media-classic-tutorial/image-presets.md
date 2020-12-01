@@ -38,8 +38,8 @@ ht-degree: 1%
 >
 >根据站点上的唯一图像大小创建一个图像预设。 例如，如果您需要产品详细信息页面的350 X 350图像、浏览／搜索页面的120 X 120图像以及交叉销售／特色产品的90 X 90图像，则您需要三个图像预设，无论您有500张图像还是500,000张图像。
 
-- 进一步了 [解图像预设](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html)。
-- 了解如何 [创建图像预设](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)。
+- 了解有关[图像预设的更多信息](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html)。
+- 了解如何[创建图像预设](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)。
 
 ## 图像预设和锐化
 
@@ -61,12 +61,12 @@ ht-degree: 1%
 
 Dynamic Media Classic允许三种类型的锐化：简单的锐化、重新取样模式和USM锐化。
 
-进一步了 [解Dynamic Media Classic锐化选项](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)。
+了解有关[Dynamic Media Classic锐化选项的更多信息](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)。
 
 ## 其他资源
 
-[图像预设指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)。 用于优化图像质量和加载速度的设置。
+[图像预设指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)。用于优化图像质量和加载速度的设置。
 
-[图像是一切第2部分：它从不只是模糊——质量与速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。 一篇博客文章，讨论如何使用图像预设来传送高质量、快速加载的图像。
+[图像是一切第2部分：它从不只是模糊——质量与速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。一篇博客文章，讨论如何使用图像预设来传送高质量、快速加载的图像。
 
-[图像是网络研讨会的全部内容](https://dynamicmediaseries2019.enterprise.adobeevents.com/)。 链接到图像中所有三个网络研讨会的录 _制内容是所有_ 。 [网络研讨会](https://seminars.adobeconnect.com/p6lqaotpjnd3) 2讨论图像预设。
+[图像是网络研讨会的全部内容](https://dynamicmediaseries2019.enterprise.adobeevents.com/)。链接到&#x200B;_图像是所有_&#x200B;系列中所有三个网络研讨会的录制内容。 [网络研讨会2](https://seminars.adobeconnect.com/p6lqaotpjnd3) 讨论图像预设。
