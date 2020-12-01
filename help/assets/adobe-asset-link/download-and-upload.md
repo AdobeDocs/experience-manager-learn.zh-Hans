@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 下载和上传 {#download-and-upload}
+# 下载并上传{#download-and-upload}
 
 了解如何使用“资产链接”面板从AEM Assets下载资产文件并将其上传到该区域。
 
