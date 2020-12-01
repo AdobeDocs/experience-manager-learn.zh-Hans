@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms写定制 {#writing-a-custom-submit-in-aem-forms}
+# 在AEM Forms编写自定义提交{#writing-a-custom-submit-in-aem-forms}
 
 快速轻松地为自适应表单创建自己的自定义提交操作
 
