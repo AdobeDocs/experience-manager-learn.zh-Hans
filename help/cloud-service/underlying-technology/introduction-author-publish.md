@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 创作层和发布层简介 {#introduction-author-publish}
+# 创作层和发布层简介{#introduction-author-publish}
 
 作为Adobe Experience Manager体系结构的一部分介绍作者层和发布层。
 
