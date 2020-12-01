@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 文件版本和注释{#file-versioning-and-comments}
+# 文件版本控制和注释{#file-versioning-and-comments}
 
 使用Adobe资产链接面板，您可以从面板中访问AEM Assets资产的文件详细信息，例如缩略图、基本元数据和版本。 了解如何创建、预览和比较文件版本。
 
