@@ -29,9 +29,9 @@ Apache Sling提供一个Jackson JSON导出器，用于涵盖将Sling Models导�
 
 >[!VIDEO](https://video.tv.adobe.com/v/16862/?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 是项目的一个功 [!DNL Apache Sling] 能，不直接绑定到AEM产品发布周期。 [!DNL Sling Model Exporter] 与AEM 6.3及更高版本兼容。
+[!DNL Sling Model Exporter] 是项目的一个功 [!DNL Apache Sling] 能，不直接绑定到AEM产品发布周期。[!DNL Sling Model Exporter] 与AEM 6.3及更高版本兼容。
 
-## 用例 [!DNL Sling Model Exporter]
+## [!DNL Sling Model Exporter]的用例
 
 >[!VIDEO](https://video.tv.adobe.com/v/16863/?quality=12&learn=on)
 
@@ -41,32 +41,32 @@ Apache Sling提供一个Jackson JSON导出器，用于涵盖将Sling Models导�
 
 >[!VIDEO](https://video.tv.adobe.com/v/16864/?quality=12&learn=on)
 
-在 [!DNL Exporter] 上启用 [!DNL Sling Model] 支持与向Java类添 `@Exporter` 加注释一样简单。
+对[!DNL Sling Model]启用[!DNL Exporter]支持与向Java类添加`@Exporter`注释一样简单。
 
 ## 应用Sling Model Exporter选项
 
 >[!VIDEO](https://video.tv.adobe.com/v/16865/?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 支持将每型号导出器选项传递到导出器实施，以驱动最终 [!DNL Sling Model] 导出的方式。 这些选项通常“全局”应用于导出方 [!DNL Sling Model] 式，而不是通过下面描述的内嵌注释完成的数据点。
+[!DNL Sling Model Exporter] 支持将每型号导出器选项传递到导出器实施，以驱动最终 [!DNL Sling Model] 导出的方式。这些选项通常对[!DNL Sling Model]的导出方式应用“全局”，而对于可通过下面描述的内嵌注释完成的每个数据点，则应用“全局”。
 
 [!DNL Jackson Exporter] 选项包括：
 
 * [映射器功能选项](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
 * [序列化功能选项](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
 
-## 应用注 [!DNL Jackson] 释
+## 应用[!DNL Jackson]注释
 
 >[!VIDEO](https://video.tv.adobe.com/v/16866/?quality=12&learn=on)
 
-导出程序实现还支持可内嵌在类上应用的 [!DNL Sling Model] 注释，这些注释可以提供更精细的数据导出控制级别。
+导出程序实现还支持可以内嵌在[!DNL Sling Model]类上应用的注释，这些注释可以提供更精细的数据导出控制级别。
 
 * [[!DNL Jackson Exporter] 批注](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)
 
-## 视图代码 {#view-the-code}
+## 视图代码{#view-the-code}
 
 [SampleSlingModelExporter.java](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleSlingModelExporter.java)
 
-## 支持材料 {#supporting-materials}
+## 支持材料{#supporting-materials}
 
 * [[!DNL Jackson Mapper] 功能Javadoc](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
 * [[!DNL Jackson Serialization] 功能Javadoc](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
