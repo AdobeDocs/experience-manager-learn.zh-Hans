@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 将服务数据模型与AEM Forms结合使用{#using-service-data-models-with-aem-forms}
+# 将服务数据模型与AEM Forms{#using-service-data-models-with-aem-forms}一起使用
 
 AEM Adaptive Forms的规则编辑器可以利用在表单数据模型中创建的服务。
 
