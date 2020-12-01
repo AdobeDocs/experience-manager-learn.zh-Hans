@@ -20,16 +20,17 @@ ht-degree: 0%
 ---
 
 
-# 使用用户用户档案数据与AEM Forms{#using-user-profile-data-integration-with-aem-forms}
+# 使用与AEM Forms的用户用户档案数据集成{#using-user-profile-data-integration-with-aem-forms}
 
 AEM Forms数据集成允许您配置和连接不同的数据源。 现成支持以下功能。 但是，只需少量自定义，您也可以集成其他数据源。
 
-关系数据库- MySQL、Microsoft SQL Server、IBM DB2和Oracle RDBMS。
+关系数据库- MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS。
 
 1. AEM用户用户档案
 1. REST风格的Web服务
 1. 基于SOAP的Web服务
-1. OData服务本文将重点介绍将AEM用户用户档案信息与自适应Forms集成。
+1. OData服务
+本文将重点介绍将AEM用户用户档案信息与自适应Forms集成。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17432/?quality=9&learn=on)
 
