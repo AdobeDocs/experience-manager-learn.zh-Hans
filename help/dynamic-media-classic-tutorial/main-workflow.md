@@ -16,7 +16,7 @@ ht-degree: 1%
 ---
 
 
-# Dynamic Media Classic主工作流和预览资产 {#main-workflow}
+# Dynamic Media Classic主工作流和预览资产{#main-workflow}
 
 Dynamic Media支持创建（和上传）、创作（和发布）和传送工作流程。 您可以通过上传资产来进行开始，然后对这些资产执行一些操作，如构建图像集，最后发布以使其实时。 “构建”步骤对于某些工作流是可选的。 例如，如果您的目标是仅对图像进行动态大小调整和缩放，或者转换并发布视频以进行流化，则无需执行任何构建步骤。
 
@@ -32,7 +32,7 @@ Dynamic Media Classic解决方案中的工作流包括三个主要步骤：
 
 这是工作流的开始。 在此步骤中，您收集或创建适合您所使用工作流的源内容，并将其上传到Dynamic Media Classic。 该系统支持图像、视频和字体的多种文件类型，也支持PDF、Adobe Illustrator和Adobe InDesign。
 
-查看所支持文件类 [型的完整列表](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats)。
+请参见[支持的文件类型](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats)的完整列表。
 
 您可以通过多种不同方式上传源内容：
 
@@ -45,31 +45,27 @@ Dynamic Media Classic解决方案中的工作流包括三个主要步骤：
 
 >[!TIP]
 >
->请勿手动添加文件夹。 而是从FTP运行上传，然后使用“包含子文 **件夹** ”选项在Dynamic Media Classic中重新创建文件夹结构。
+>请勿手动添加文件夹。 而是从FTP运行上传，然后使用&#x200B;**“包含子文件夹”**&#x200B;选项在Dynamic Media Classic中重新创建文件夹结构。
 
-默认情况下启用两个最重要的上传选项 **：标记为发布**（我们前面已讨论）和 **覆盖**。 覆盖意味着，如果正在上传的文件与系统中已有的文件同名，则新文件将替换现有版本。 如果取消选中此选项，则文件可能无法上传。
+默认情况下启用两个最重要的上传选项： **标记为发布**（我们之前已经讨论过）和&#x200B;**覆盖**。 覆盖意味着，如果正在上传的文件与系统中已有的文件同名，则新文件将替换现有版本。 如果取消选中此选项，则文件可能无法上传。
 
 ### 上传图像时覆盖选项
 
 可以为整个公司设置“覆盖图像”选项的四种变体，它们经常被误解。 简而言之，您可以设置规则，以便更频繁地覆盖具有相同名称的资产，或者希望更少地覆盖（在这种情况下，将使用“-1”或“-2”扩展重命名新图像）。
 
-- **在当前文件夹中覆盖，基本图像名称／扩展名相同**。
-此选项是最严格的替换规则。 它要求您将替换图像上传到与原始图像相同的文件夹，并且替换图像的文件扩展名与原始图像的扩展名相同。 如果这些要求不满足，则会创建重复。
+- **在当前文件夹中覆盖，基本图像名称／扩展名相同**。此选项是最严格的替换规则。 它要求您将替换图像上传到与原始图像相同的文件夹，并且替换图像的文件扩展名与原始图像的扩展名相同。 如果这些要求不满足，则会创建重复。
 
-- **在当前文件夹中覆盖，无论扩展名如何，基本资产名称都相同**。
-要求将替换图像上传到与原始图像相同的文件夹，但文件扩展名可以与原始图像不同。 例如，chair.tif替换chair.jpg。
+- **在当前文件夹中覆盖，无论扩展名如何，基本资产名称都相同**。要求将替换图像上传到与原始图像相同的文件夹，但文件扩展名可以与原始图像不同。 例如，chair.tif替换chair.jpg。
 
-- **在任意文件夹中覆盖，基本资产名称／扩展名相同**。
-要求替换图像的文件扩展名与原始图像相同（例如，chair.jpg必须替换chair.jpg，而不是chair.tif）。 但是，您可以将替换图像上传到与原始图像不同的文件夹。 更新后的图像驻留在新文件夹中；在文件的原始位置找不到该文件。
+- **在任意文件夹中覆盖，基本资产名称／扩展名相同**。要求替换图像的文件扩展名与原始图像相同（例如，chair.jpg必须替换chair.jpg，而不是chair.tif）。 但是，您可以将替换图像上传到与原始图像不同的文件夹。 更新后的图像驻留在新文件夹中；在文件的原始位置找不到该文件。
 
-- **在任意文件夹中覆盖相同的基本资产名称，而不考虑扩展名**。
-此选项是最包容的替换规则。 您可以将替换图像上传到与原始图像不同的文件夹，以其他文件扩展名上传文件，然后替换原始文件。 如果原始文件位于其他文件夹中，则替换图像将驻留在其上传到的新文件夹中。
+- **在任意文件夹中覆盖相同的基本资产名称，而不考虑扩展名**。此选项是最包容的替换规则。 您可以将替换图像上传到与原始图像不同的文件夹，以其他文件扩展名上传文件，然后替换原始文件。 如果原始文件位于其他文件夹中，则替换图像将驻留在其上传到的新文件夹中。
 
-进一步了解“覆 [盖图像”选项](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option)。
+进一步了解[覆盖图像选项](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option)。
 
 虽然不是必需的，但是使用上述两种方法之一进行上传时，您可以为该特定上传指定作业选项——例如，计划重复上传、在上传时设置裁剪选项等。 这些对于某些工作流来说可能很有价值，因此，如果它们适合您，值得考虑。
 
-进一步了 [解作业选项](https://docs.adobe.com/content/help/zh-Hans/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options)。
+了解有关[作业选项](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options)的更多信息。
 
 上传是任何工作流程中的第一个必要步骤，因为Dynamic Media Classic无法处理任何系统中尚未包含的内容。 在上传过程中的幕后操作中，系统会将每个上传的资产注册到集中的Dynamic Media Classic数据库，分配一个ID，然后将其复制到存储。 此外，系统会将图像文件转换为允许动态调整大小和缩放的格式，并将视频文件转换为适合Web的MP4格式。
 
@@ -92,13 +88,13 @@ Dynamic Media Classic解决方案中的工作流包括三个主要步骤：
 - 如果需要缩放，请上传最长尺寸范围为1500-2500像素的高分辨率图像。 考虑您要提供多少细节、源图像的质量以及所显示产品的大小。 例如，上传一个1000像素的小环图像，而上传一个3000像素的整个会议室图像。
 - 如果您不需要缩放，请以可见的大小上传它。 例如，如果要将徽标或初始／横幅图像放在页面上，请准确地以1:1大小上传这些图像，然后以该大小完全调用它们。
 
-**在上传到Dynamic Media Classic之前，切勿对图像进行上采样或放大。** 例如，不要向上采样较小的图像以使其变为2000像素的图像。 看起来不妙。 在上传之前，使图像尽可能接近完美。
+**在上传到Dynamic Media Classic之前，切勿对图像进行上采样或放大。** 例如，不要向上采样较小的图像以使其变为2000像素的图像。看起来不妙。 在上传之前，使图像尽可能接近完美。
 
 **缩放没有最小大小，但默认情况下，查看器不会缩放到100%以上。** 如果图像太小，它将不会缩放，或只会缩放很小的图像，以防图像看起来不佳。
 
-**虽然图像大小没有最低要求，但我们不建议上传巨型图像。** 大图像可以视为4000+像素。 上传此大小的图像可能会显示图像中的灰尘颗粒或毛发等潜在缺陷。 此类图像还将占用Dynamic Media Classic服务器上的更多空间，这可能导致您超越合同存储限制。
+**虽然图像大小没有最低要求，但我们不建议上传巨型图像。** 大图像可以视为4000+像素。上传此大小的图像可能会显示图像中的灰尘颗粒或毛发等潜在缺陷。 此类图像还将占用Dynamic Media Classic服务器上的更多空间，这可能导致您超越合同存储限制。
 
-了解有关上传文 [件的更多信息](https://docs.adobe.com/content/help/zh-Hans/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files)。
+了解有关[上传文件](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files)的更多信息。
 
 ## 第2步：作者（和发布）
 
@@ -128,7 +124,7 @@ Dynamic Media Classic工作流的最终产品是指向资产（无论是图像�
 
 在URL中，问号左侧的所有内容都是指向特定图像的虚拟路径。 问号右侧的所有内容都是图像服务器修饰符，它指示了如何处理图像。 当您有多个修饰符时，它们以和号分隔。
 
-在第一个示例中，图像“Backpack_A”的虚拟路径是 `http://sample.scene7.com/is/image/s7train/BackpackA`。 图像服务器修饰符将图像的大小调整为250像素的宽度（从wid=250），并使用Lanczos插值算法对图像重新采样，该算法在调整大小时（从resMode=sharp2）会进行锐化。
+在第一个示例中，图像“Backpack_A”的虚拟路径为`http://sample.scene7.com/is/image/s7train/BackpackA`。 图像服务器修饰符将图像的大小调整为250像素的宽度（从wid=250），并使用Lanczos插值算法对图像重新采样，该算法在调整大小时（从resMode=sharp2）会进行锐化。
 
 第二个示例将称为“图像预设”的内容应用于同一Backpack_A图像，如$！所示_template300$。 表达式两侧的$符号表示图像预设（一组打包的图像修饰符）正应用于图像。
 
@@ -140,18 +136,18 @@ Dynamic Media Classic工作流的最终产品是指向资产（无论是图像�
 
 除非出现错误，并且图像／资产的名称与之前发布的版本相同，否则通常不会出现此问题，但图像存在问题。 例如，您意外上传了低分辨率版本或您的艺术总监未批准图像。 在这种情况下，您需要重新调用原始图像，并使用同一资产ID将其替换为新版本。
 
-了解如 [何手动清除需要更新的URL的缓存](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html)。
+了解如何[手动清除需要更新的URL的缓存](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html)。
 
 >[!TIP]
 >
 >要避免缓存延迟的问题，请始终继续工作——一个晚上、一天、两周等。 在向公众发布您的作品之前，及时为内部验证方提供QA/接受。 甚至在前一个晚上工作也允许您更改并在当天晚上重新发布。 到早上，10小时已过去，缓存会使用正确的映像进行更新。
 
-- 了解有关创建 [发布作业的更多信息](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job)。
-- 了解有关发布的 [更多信息](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html)。
+- 了解有关[创建发布作业的更多信息](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job)。
+- 了解有关[发布的更多信息](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html)。
 
 ## 第3步：交付
 
-请记住，Dynamic Media Classic工作流的最终产品是指向资产的URL。 该URL可能指向单个图像、图像集、旋转集或某些其他图像集集合或视频。 您需要采用该URL并对其执行一些操作，例如编辑HTML，这样，标 `<IMG>` 签就会指向Dynamic Media Classic图像，而不是指向来自当前站点的图像。
+请记住，Dynamic Media Classic工作流的最终产品是指向资产的URL。 该URL可能指向单个图像、图像集、旋转集或某些其他图像集集合或视频。 您需要使用该URL并执行一些操作，如编辑HTML，这样`<IMG>`标签就会指向Dynamic Media Classic图像，而不是指向来自当前站点的图像。
 
 在传送步骤中，您必须将这些URL集成到您的网站、移动应用程序、电子邮件活动或要在其上显示资产的任何其他数字接触点中。
 
@@ -175,14 +171,14 @@ Dynamic Media Classic工作流的最终产品是指向资产（无论是图像�
 
 ## 预览资产
 
-您可能希望预览您上传或正在创建或编辑的资产，以确保在客户视图资产时，资产按您的需要显示。 您可以通过单击资产缩略图 **上** 、浏览／构建面板顶部的任意预览 **，或转到“文件”>“预览**”，来访问“预览 **”窗口**。 在浏览器窗口中，它将预览面板中当前位于哪个资产，无论该资产是图像、视频还是构建的资产（如图像集）。
+您可能希望预览您上传或正在创建或编辑的资产，以确保在客户视图资产时，资产按您的需要显示。 您可以通过单击资产缩略图上的&#x200B;**预览**&#x200B;按钮或&#x200B;**浏览／构建面板**&#x200B;顶部的按钮，或转到&#x200B;**文件>预览**&#x200B;来访问预览窗口。 在浏览器窗口中，它将预览面板中当前位于哪个资产，无论该资产是图像、视频还是构建的资产（如图像集）。
 
 ### 动态大小预览（图像预设）
 
-您可以使用“大小”预览以多种大 **小预览** 。 这将加载可用图像预设的列表。 我们稍后将讨论图像预设，但将它们视为以指定大小加载图像的“方法”，具有特定锐化和图像质量。
+您可以使用&#x200B;**大小**&#x200B;预览预览以多种大小图像。 这将加载可用图像预设的列表。 我们稍后将讨论图像预设，但将它们视为以指定大小加载图像的“方法”，具有特定锐化和图像质量。
 
 ### 缩放预览
 
-您还可以使用“缩 **放** ”选项将图像预览到许多预建缩放预设中的一个，这些预设基于包含的不同缩放查看器。
+您还可以使用&#x200B;**缩放**&#x200B;选项将图像预览到许多预建缩放预设中的一个，这些预设基于包含的不同缩放查看器。
 
-了解有关预览资 [产的更多信息](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/previewing-asset.html)。
+了解有关[预览资产](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/previewing-asset.html)的更多信息。
