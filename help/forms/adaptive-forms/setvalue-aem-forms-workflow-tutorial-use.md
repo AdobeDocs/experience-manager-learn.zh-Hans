@@ -44,18 +44,18 @@ LiveCycle用于设置值组件，该组件允许您设置XML元素的值。
 
 * [使用服务用户包部署开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [部署示例包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 这是自定义OSGI捆绑包，它允许您在提交的xml数据中设置元素的值
+* [部署示例包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。这是自定义OSGI捆绑包，它允许您在提交的xml数据中设置元素的值
 
 * [下载并解压zip文件的内容](assets/setvalueassets.zip)
-* 将浏览器指向包 [管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 将浏览器指向[包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 * 导入并安装setValueWorkflow.zip。 它包含工作流模型示例。
-* 将您的浏览器指向 [Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 将您的浏览器指向[Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 单击创建 |文件上传
 * 上传TimeOfRequestForm.zip
-* 打开TimeOffRequest [表单](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
+* 打开[TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
 * 填写3个必填字段并提交
 * 以“admin”身份登录AEM（如果尚未登录）
-* 转到“ [AEM收件箱”](http://localhost:4502/aem/inbox)
+* 转至[&quot;AEM收件箱&quot;](http://localhost:4502/aem/inbox)
 * 打开“请求审核时间结束”表单
 * 请注意，第一个面板中的字段被禁用。 这是因为审阅者正在打开表单。 此外，请注意，现在可以看到批准或拒绝请求的面板
 
