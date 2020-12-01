@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 管理组件上的Live Copy继承 {#manage-live-copy-component}
+# 管理组件{#manage-live-copy-component}上的Live Copy继承
 
 了解如何在组件级别管理Live Copy与其Blueprint之间的继承。
 
