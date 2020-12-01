@@ -21,7 +21,7 @@ ht-degree: 1%
 ---
 
 
-# Asset Share Commons中的主题介绍 {#asset-share-commons-theme}
+# Asset Share Commons {#asset-share-commons-theme}中的主题介绍
 
 Asset Share Commons中主题的简介。 视频将逐步介绍如何使用自定义颜色方案创建新主题。
 
@@ -80,7 +80,7 @@ Asset Share Commons中主题的简介。 视频将逐步介绍如何使用自定
 @msgWarningBackgroundColor: @yellow;
 ```
 
-下载自 [定义客户端库主题](assets/asc-theme-demo.zip)
+下载[自定义客户端库主题](assets/asc-theme-demo.zip)
 
 ## 其他资源{#additional-resources}
 
