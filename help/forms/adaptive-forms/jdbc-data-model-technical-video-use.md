@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 基于JDBC的表单数据模型与AEM Forms {#using-jdbc-based-form-data-models-with-aem-forms}
+# 将基于JDBC的表单数据模型与AEM Forms{#using-jdbc-based-form-data-models-with-aem-forms}结合使用
 
 此视频说明了如何基于JDBC数据源创建表单数据模型、基于表单数据模型的自适应表单以及如何使用表单数据模型的“插入”操作。
 
@@ -28,5 +28,5 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->只要所需的数据库驱动程序部署到AEM作为OSGi捆绑包，就可以使用任何RDBMS数据源。 在AEM中设置RDBMS数据源在与AEM Forms的设 [置数据集成中介绍](/help/forms/adaptive-forms/data-integration-technical-video-setup.md)。
+>只要所需的数据库驱动程序部署到AEM作为OSGi捆绑包，就可以使用任何RDBMS数据源。 在[与AEM Forms建立数据集成](/help/forms/adaptive-forms/data-integration-technical-video-setup.md)中介绍在AEM中设置RDBMS数据源。
 
