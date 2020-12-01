@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 创建无数据源的表单数据模型 {#creating-form-data-model-without-data-source}
+# 创建没有数据源的表单数据模型{#creating-form-data-model-without-data-source}
 
 从AEM Forms6.4开始，我们现在无需将表单数据模型与数据源关联即可定义表单数据模型(FDM)。 以下视频将逐步介绍创建FDM时不需要任何数据源。
 
