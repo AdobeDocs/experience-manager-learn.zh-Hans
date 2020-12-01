@@ -27,7 +27,7 @@ ht-degree: 0%
 * 处理Acrobat/Reader的PDF提交
 * 触发Adobe Experience Manager(AEM)工作流程以审阅提交的PDF
 
-本教程将逐步介绍完成上述用例所需的步骤。 此处提供与本教程相关的示例代码 [和资源。](part-four.md)
+本教程将逐步介绍完成上述用例所需的步骤。 此处提供与本教程相关的示例代码和资源[。](part-four.md)
 
 以下视频为您提供了用例的概述
 
