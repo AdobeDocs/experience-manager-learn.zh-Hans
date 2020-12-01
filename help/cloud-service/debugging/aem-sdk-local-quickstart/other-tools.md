@@ -30,7 +30,7 @@ CRXDE Lite是一个基于Web的界面，用于与AEM数据存储库JCR进行交�
 CRXDE Lite位于：
 
 + “工具”>“常规”>“CRXDE Lite”
-+ 或直接访问 [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
++ 或直接在[http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)上
 
 ## 说明查询
 
@@ -41,13 +41,13 @@ CRXDE Lite位于：
 说明查询位于：
 
 + “工具”>“诊断”>“查询性能”>“说明查询”选项卡
-+ [http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) >说明查询选项卡
++ [http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) >“说明”查询选项卡
 
 ## QueryBuilder调试器
 
 ![QueryBuilder调试器](./assets/other-tools/query-debugger.png)
 
-QueryBuilder调试器是基于Web的工具，可帮助您使用AEMQueryBuilder语法调试和了解搜 [索查询](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) 。
+QueryBuilder调试器是基于Web的工具，可帮助您使用AEM [QueryBuilder](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)语法调试和了解搜索查询。
 
 QueryBuilder调试器位于：
 
@@ -57,9 +57,9 @@ QueryBuilder调试器位于：
 
 ![Sling Log Tracer和AEM Chrome插件](./assets/other-tools/log-tracer.png)
 
-[Sling Log Tracer随AEM](https://sling.apache.org/documentation/bundles/log-tracers.html)SDK的本地快速启动一起提供，它允许对HTTP请求进行深入跟踪，从而揭示每个请求的深入调试信息。 必 [须配置Log Tracer OSGi配置](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1) ，才能启用此功能。
+[Sling Log Tracer随AEM](https://sling.apache.org/documentation/bundles/log-tracers.html) SDK的本地快速启动一起提供，它允许对HTTP请求进行深入跟踪，从而揭示每个请求的深入调试信息。必须配置[Log Tracer OSGi配置](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1)才能启用此功能。
 
-Google Chrome Web浏 [览器的开放源](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)[AEM Chrome插件与Log Tracer相集成](https://www.google.com/chrome/)，直接在Chrome的Dev Tools中显示调试信息。
+[Google Chrome Web浏览器](https://www.google.com/chrome/)的开放源[AEM Chrome插件](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)与Log Tracer集成，直接在Chrome的Dev Tools中显示调试信息。
 
 _AEM Chrome插件是一个开放源代码工具，Adobe不支持它。_
 
