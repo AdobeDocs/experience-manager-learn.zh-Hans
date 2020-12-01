@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 设置与AEM Forms的数据集成 {#set-up-data-integration-with-aem-forms}
+# 设置与AEM Forms{#set-up-data-integration-with-aem-forms}的数据集成
 
 设置与JDBC数据源的数据连接
 
@@ -30,9 +30,9 @@ ht-degree: 0%
 >
 >必须通过AEM实例上的OSGi捆绑包安装MySQL JDBC驱动程序。
 
-## 支持材料 {#supporting-materials}
+## 支持材料{#supporting-materials}
 
 * [下载MySQL JDBC OSGi Bundle](https://dev.mysql.com/downloads/connector/j/)
 
-   * 通过AEM Web Console下载、解压并安 [装JAR文件](http://localhost:4502/system/console/bundles)
+   * 通过[AEM Web Console](http://localhost:4502/system/console/bundles)下载、解压缩和安装JAR文件
 
