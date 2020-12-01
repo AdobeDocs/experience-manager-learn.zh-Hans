@@ -61,11 +61,11 @@ wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").incl
 
 * [使用包管理器导入和安装与本文相关的资产。](assets/launch-agent-ui.zip)
 * [登录到configMgr](http://localhost:4502/system/console/configMgr)
-* Adobe花岗岩 _CSRF滤波器的研究_
-* 在 _排除的路径中添加_ /content/getprintchannel
+* 搜索&#x200B;_Adobe花岗岩CSRF滤镜_
+* 在“排除的路径”中添加&#x200B;_/content/getprintchannel_
 * 保存更改。
-* [打开POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。 确保传递给FormFieldRequestParameter的字符串是有效的documentId。（第19行）。
-* [打开网页](http://localhost:4502/content/OpenPrintChannel.html) ，输入帐号并提交表单。
+* [打开POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。确保传递给FormFieldRequestParameter的字符串是有效的documentId。（第19行）。
+* [打开网](http://localhost:4502/content/OpenPrintChannel.html) 页，输入帐号并提交表单。
 * 代理UI界面应打开，其中预填充的数据特定于在表单中输入的帐户号。
 
 >[!NOTE]
