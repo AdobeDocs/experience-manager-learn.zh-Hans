@@ -17,9 +17,9 @@ ht-degree: 0%
 
 # 将PDF表单转换为自适应表单
 
-AEM Forms自动Forms转换服务由Adobe Sensei提供支持，可自动将您的PDF forms转换为适合设备、响应迅速的自适应表单。 无论您是使用非交互式PDF forms、AcroFormsPDF forms还是基于XFA的，自动Forms转换服务都可以轻松地将这些表单转换为自适应表单。
+AEM FormsAutomated forms conversion服务由Adobe Sensei提供支持，可自动将您的PDF forms转换为适合设备的响应式自适应表单。 无论您是使用非交互式PDF forms、AcroFormsPDF forms还是基于XFA的，Automated forms conversion服务都可以轻松地将这些表单转换为自适应表单。
 
-以下视频介绍使用自动化Forms转换服务将PDF表单转换为自适应表单所需的步骤
+以下视频介绍使用Automated forms conversion服务将PDF表单转换为自适应表单所需的步骤
 
 >[!VIDEO](https://video.tv.adobe.com/v/39495/?quality=9&learn=on)
 
