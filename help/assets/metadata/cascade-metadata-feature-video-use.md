@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Assets使用级联元数据{#using-cascading-metadata-in-aem-assets}
+# 在AEM Assets使用层叠元数据{#using-cascading-metadata-in-aem-assets}
 
 高级元数据管理允许用户创建级联字段规则，在AEM Assets的元数据之间形成上下文关系。 以下视频演示了有关字段要求、可见性和上下文选择的新动态规则。 该视频还详细介绍了管理员将这些规则应用到自定义元数据模式所需的步骤。
 
@@ -37,9 +37,9 @@ ht-degree: 0%
 >
 >只能根据下拉字段的值创建级联规则。 可以将所有三个规则集应用到同一元数据字段，但作为最佳实践，建议将每个规则集都依赖于同一元数据下拉列表。
 
-下载自 [定义元数据包](assets/cascade-metadata-values-001.zip)
+下载[自定义元数据包](assets/cascade-metadata-values-001.zip)
 
 ## 其他资源{#additional-resources}
 
-自定义元数据模式创建于： `/conf/global/settings/dam/adminui-extension/metadataschema/custom`. 以下AEM包将将自定义模式应用于文件夹： `/content/dam/we-retail/en/activities`:
+自定义元数据模式创建于：`/conf/global/settings/dam/adminui-extension/metadataschema/custom`。 以下AEM包将将自定义模式应用于文件夹：`/content/dam/we-retail/en/activities`:
 
