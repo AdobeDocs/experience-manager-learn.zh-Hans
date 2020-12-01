@@ -1,5 +1,5 @@
 ---
-user-guide-title: Adobe Experience Manager 云服务教程
+user-guide-title: Adobe Experience Manager as a Cloud Service 教程
 user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集合。
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
@@ -13,17 +13,17 @@ ht-degree: 32%
 ---
 
 
-# Adobe Experience Manager 云服务教程 {#cloud-service}
+# Adobe Experience Manager as a Cloud Service 教程 {#cloud-service}
 
 + [概述](./overview.md)
-+ 底层技术 {#underlying-technology}
++ 基础技术{#underlying-technology}
    + [AEM体系架构简介](./underlying-technology/introduction-architecture.md)
    + [OSGi简介](./underlying-technology/introduction-osgi.md)
    + [Java内容存储库简介](./underlying-technology/introduction-jcr.md)
    + [Sling简介](./underlying-technology/introduction-sling.md)
    + [创作层和发布层简介](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher 简介](./underlying-technology/introduction-dispatcher.md)
-+ 本地开发环境设置 {#local-development-environment-set-up}
++ 本地开发环境设置{#local-development-environment-set-up}
    + [概述](./local-development-environment/overview.md)
    + [开发工具](./local-development-environment/development-tools.md)
    + [本地AEM运行时](./local-development-environment/aem-runtime.md)
@@ -36,7 +36,7 @@ ht-degree: 32%
       + [OSGi Web控制台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [调度程序工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + 将AEM作为Cloud Service进行调试{#debugging-aem-as-a-cloud-service}
+   + 将AEM作为Cloud Service调试{#debugging-aem-as-a-cloud-service}
       + [概述](./debugging/cloud-service/overview.md)
       + [日志](./debugging/cloud-service/logs.md)
       + [构建和部署](./debugging/cloud-service/build-and-deployment.md)
@@ -49,16 +49,16 @@ ht-degree: 32%
    + [AdobeIMS产品用户档案](./accessing/adobe-ims-product-profiles.md)
    + [AEM用户、组和权限](./accessing/aem-users-groups-and-permissions.md)
    + [配置对AEM遍历的访问](./accessing/walk-through.md)
-+ 迁移 {#migration}
++ 迁移{#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
-+ 资产计算可扩展性{#asset-compute}
++ asset compute可扩展性{#asset-compute}
    + [概述](./asset-compute/overview.md)
    + 设置{#set-up}
       + [帐户和服务配置](./asset-compute/set-up/accounts-and-services.md)
       + [本地开发环境](./asset-compute/set-up/development-environment.md)
       + [Adobe项目Firefly](./asset-compute/set-up/firefly.md)
    + 开发{#develop}
-      + [创建资产计算项目](./asset-compute/develop/project.md)
+      + [创建Asset compute项目](./asset-compute/develop/project.md)
       + [配置环境变量](./asset-compute/develop/environment-variables.md)
       + [配置manifest.yml](./asset-compute/develop/manifest.md)
       + [开发员工](./asset-compute/develop/worker.md)
@@ -66,7 +66,7 @@ ht-degree: 32%
    + 测试和调试{#test-debug}
       + [测试工作人员](./asset-compute/test-debug/test.md)
       + [调试工作者](./asset-compute/test-debug/debug.md)
-   + Deploy{#deploy}
+   + 部署{#deploy}
       + [部署到Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
       + [与AEM集成](./asset-compute/deploy/processing-profiles.md)
    + 高级{#advanced}
