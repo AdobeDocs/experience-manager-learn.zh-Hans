@@ -14,7 +14,7 @@ ht-degree: 18%
 
 # 概述 {#overview}
 
-Adobe Experience Manager为AEM Sites的用户提供了一套通用的功能， [!DNL Assets] 以及 [!DNL Forms]。
+Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]用户提供了一套通用功能。
 
 ## 新增功能
 
@@ -24,8 +24,8 @@ Adobe Experience Manager为AEM Sites的用户提供了一套通用的功能， [
 * **[了解AEM的Cloud Manager（视频）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
    *Cloud Manager for AEM可轻松管理、检查和自助AEM环境。*
 
-* **[设置公钥和私钥以与AdobeI/O一起使用（教程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *了解如何使用AEM和AdobeI/O [!DNL openssl] 生成密钥和密钥库。*
+* **[设置用于Adobe I/O的公共和私钥（教程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
+   *了解如何使用AEM和Adobe I/O共同 [!DNL openssl] 创建密钥和密钥库。*
 
 * **[使用Cloud Manager CI/CD管道（视频）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *了解如何使用Cloud Manager的CI/CD管道来确保安全一致的部署。*
