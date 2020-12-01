@@ -20,7 +20,7 @@ ht-degree: 34%
 
 # [!DNL Dispatcher] 简介{#introduction-dispatcher}
 
-介绍作为AEM体系架构的一部分 [!DNL dispatcher] 的功能和特性。
+介绍作为AEM体系结构一部分的[!DNL dispatcher]的功能和特性。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32029/?quality=12&learn=on)
 
