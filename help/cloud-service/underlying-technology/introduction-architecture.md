@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# AEM架构堆栈简介 {#introduction-architecture}
+# AEM体系结构堆栈{#introduction-architecture}简介
 
-作为Adobe Experience Manager技术 [!DNL OSGi]堆栈 [!DNL JCR]的一 [!DNL Oak]部分，引 [!DNL Sling] 入了技术、技术和技术。
+介绍作为Adobe Experience Manager技术堆栈的一部分的[!DNL OSGi]、[!DNL JCR]、[!DNL Oak]和[!DNL Sling]技术。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32034/?quality=12&learn=on)
