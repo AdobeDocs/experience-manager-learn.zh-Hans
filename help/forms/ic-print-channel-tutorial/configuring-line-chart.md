@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 为您的第一个交互式通信文档配置线图 {#configuring-line-chart-for-your-first-interactive-communication-document}
+# 为您的第一个交互式通信文档{#configuring-line-chart-for-your-first-interactive-communication-document}配置线图
 
 在此部分，我们将添加折线图以显示帐户余额。
 
