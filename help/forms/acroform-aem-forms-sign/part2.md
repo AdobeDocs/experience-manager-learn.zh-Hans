@@ -20,16 +20,16 @@ ht-degree: 0%
 
 下一步是从在前一步中创建的Acroform创建模式。 本教程中提供了一个用于创建模式的范例应用程序。 要创建模式，请按照以下说明操作：
 
-1. 登录 [CRXDE Lite](http://localhost:4502/crx/de)
-2. 打开到文件 `/apps/AemFormsSamples/components/createxsd/POST.jsp`
-3. 将其更 `saveLocation` 改为硬盘上的相应文件夹。 确保已创建要保存到的文件夹。
-4. 将浏览器指向托 [管在AEM](http://localhost:4502/content/DocumentServices/CreateXsd.html) 上的“创建XSD”页面。
+1. 登录[CRXDE Lite](http://localhost:4502/crx/de)
+2. 打开到文件`/apps/AemFormsSamples/components/createxsd/POST.jsp`
+3. 将`saveLocation`更改为硬盘上的相应文件夹。 确保已创建要保存到的文件夹。
+4. 将浏览器指向托管在AEM上的[创建XSD](http://localhost:4502/content/DocumentServices/CreateXsd.html)页面。
 5. 拖放Acroform。
 6. 检查在步骤3中指定的文件夹。 模式文件将保存到此位置。
 
 ## 上传Acroform
 
-要使此演示在您的系统上运行，您需要创建一个名为AEM Assets的 `acroforms` 文件夹。 将Acroform上传到此文 `acroforms` 件夹。
+要使此演示在您的系统上运行，您需要在AEM Assets创建一个名为`acroforms`的文件夹。 将Acroform上传到此`acroforms`文件夹。
 
 >[!NOTE]
 >
