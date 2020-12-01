@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 将Dynamic Media与AEM Assets {#understanding-aem-dynamic-media}
+# 将Dynamic Media与AEM Assets{#understanding-aem-dynamic-media}结合使用
 
 此多部分视频系列概述了如何使用Adobe Experience Manager动态媒体作为内容服务来管理和访问媒体内容。 Dynamic Media可让您管理和发布动态数字体验——这是Experience Manager资产特有的功能。 我们的框架和组件套件使营销人员能够在所有设备上自定义和提供交互式多媒体体验。
 
