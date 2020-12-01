@@ -20,7 +20,7 @@ ht-degree: 11%
 ---
 
 
-# 创作页面 {#authoring-page-aem-sites}
+# 创作页面{#authoring-page-aem-sites}
 
 了解如何使用站点编辑器的UI在Adobe Experience Manager Sites创作页面。
 
