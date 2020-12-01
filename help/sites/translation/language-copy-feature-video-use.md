@@ -15,7 +15,7 @@ ht-degree: 3%
 ---
 
 
-# 使用语言副本 {#using-language-copy}
+# 使用语言副本{#using-language-copy}
 
 借助AEM 6.3创建语言副本向导站点翻译增强功能，用户无需创建根页面即可从主控语言创建语言副本。
 
