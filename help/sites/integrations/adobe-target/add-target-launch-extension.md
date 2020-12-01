@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# 向启动项属性添加目标扩展 {#adobe-target-extension}
+# 将目标扩展添加到启动属性{#adobe-target-extension}
 
-要观看此视频，您必须已经将 [Experience Platform Launch与AEM集成](../experience-platform-launch/overview.md)。
+要继续播放此视频，您必须已经具有[与AEM](../experience-platform-launch/overview.md)集成的Experience Platform Launch。
 
 了解如何使Adobe Target能够使用Experience Platform Launch访问AEM网站。
 
