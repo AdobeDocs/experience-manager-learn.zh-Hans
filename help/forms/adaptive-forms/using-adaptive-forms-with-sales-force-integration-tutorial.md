@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms6.3和6.4中使用Salesforce配置数据源{#configuring-datasource-with-salesforce-in-aem-forms-and}
+# 在AEM Forms6.3和6.4{#configuring-datasource-with-salesforce-in-aem-forms-and}中使用Salesforce配置数据源
 
 ## 前提条件 {#prerequisites}
 
@@ -35,23 +35,23 @@ ht-degree: 0%
    * [在AEM 6.4上启用SSL的正式文档](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
 * 您需要具有Salesforce帐户
-* 您需要创建连接的应用程序。 此处列出了Salesforce用于创建应用程序的官方 [文档](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0)。
+* 您需要创建连接的应用程序。 Salesforce中用于创建应用程序的官方文档在[此处](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0)列出。
 * 为应用程序提供适当的OAuth范围（我已选择所有可用的OAuth范围以进行测试）
 * 提供回调URL。 我的回调URL是
 
-   * 如果您使用 **AEM Forms6.3**，则回调URL将为https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html。 在此URL创建潜在客户是我的表单数据模型的名称。
+   * 如果您使用&#x200B;**AEM Forms6.3**，则回调URL将为https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html。 在此URL创建潜在客户是我的表单数据模型的名称。
 
-   * 如果您使用**AEM Forms6.4**，则回调URL将为 [https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html](https://gbedekar-w7-1:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html)
+   * 如果您使用**AEM Forms6.4**，则回调URL将为[https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html](https://gbedekar-w7-1:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html)
 
 在此示例中，gbedekar -w7-1:6443是我的服务器的名称以及AEM正在运行的端口。
 
-创建“已连接应用程序”后，请注意 **消费方密钥和密钥**。 在AEM Forms创建数据源时，您需要这些资源。
+创建“已连接应用程序”后，请注意&#x200B;**消费方密钥和密钥**。 在AEM Forms创建数据源时，您需要这些资源。
 
 现在，您已经创建了连接的应用程序，然后需要为需要在salesforce中执行的操作创建Swagger文件。 示例Swagger文件作为可下载资源的一部分包含在内。 此Swagger文件允许您在提交自适应表单时创建“潜在客户”对象。 请浏览此Swagger文件。
 
 下一步是在AEM Forms创建数据源。 请按照您的AEM Forms版本执行以下步骤
 
-## AEM Forms 6.3 {#aem-forms}
+## AEM Forms6.3 {#aem-forms}
 
 * 使用https协议登录AEM Forms
 * 通过键入https://&lt;servername>:&lt;serverport> /etc/cloudservices.html导航到云服务，例如，https://gbedekar-w7-1:6443/etc/cloudservices.html
@@ -71,13 +71,13 @@ ht-degree: 0%
 * 选择身份验证类型作为OAuth2.0
 * 提供ClientID和Client Secret值
 * OAuth Url为- **https://login.salesforce.com/services/oauth2/authorize**
-* 刷新令牌URL - **https://na5.salesforce.com/services/oauth2/token**
+* 刷新令牌Url - **https://na5.salesforce.com/services/oauth2/token**
 * **访问Url - https://na5.salesforce.com/services/oauth2/token**
-* 授权范围：** api chatter_api完整id openid refresh_token visualforce web**
+* 授权范围：** api   chatter_api完整ID   openid   refresh_token visualforce web**
 * 身份验证处理程序：授权承载者
 * 单击“连接到OAUTH”。如果一切正常，则不会看到任何错误
 
-使用Salesforce创建表单数据模型后，您可以使用刚刚创建的数据源创建表单数据集成。 此处是创建表单数据集成的官方 [文档](https://helpx.adobe.com/aem-forms/6-3/data-integration.html)。
+使用Salesforce创建表单数据模型后，您可以使用刚刚创建的数据源创建表单数据集成。 创建表单数据集成的官方文档为[此处](https://helpx.adobe.com/aem-forms/6-3/data-integration.html)。
 
 确保将表单数据模型配置为包含POST服务，以在SFDC中创建潜在客户对象。
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 创建表单数据模型后，您可以基于此模型创建自适应Forms，并使用表单数据模型提交方法在SFDC中创建潜在客户。
 
-## AEM Forms 6.4 {#aem-forms-1}
+## AEM Forms6.4 {#aem-forms-1}
 
 * 创建数据源
 
@@ -103,14 +103,14 @@ ht-degree: 0%
    * 身份验证类型：OAuth 2.0。指定以下值
    * 提供ClientID和Client Secret值
    * OAuth Url为- **https://login.salesforce.com/services/oauth2/authorize**
-   * 刷新令牌URL - **https://na5.salesforce.com/services/oauth2/token**
-   * 访问令牌&#x200B;**Url - https://na5.salesforce.com/services/oauth2/token**
+   * 刷新令牌Url - **https://na5.salesforce.com/services/oauth2/token**
+   * 访问令牌Ur **l - https://na5.salesforce.com/services/oauth2/token**
    * 授权范围：** api chatter_api完整id openid refresh_token visualforce web**
    * 身份验证处理程序：授权承载者
    * 单击“连接到OAuth”按钮。 如果您看到任何错误，请查看上述步骤，确保准确输入所有信息。
 
 
-使用SalesForce创建数据源后，您可以使用刚刚创建的数据源创建表单数据集成。 此处是该文档链 [接](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
+使用SalesForce创建数据源后，您可以使用刚刚创建的数据源创建表单数据集成。 其文档链接为[此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
 
 确保将表单数据模型配置为包含POST服务，以在SFDC中创建潜在客户对象。
 
