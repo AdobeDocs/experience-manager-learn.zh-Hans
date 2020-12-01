@@ -30,7 +30,7 @@ ht-degree: 0%
 * [能力演示](#capability-demo)
 * [在服务器上部署](#deploy-on-your-server)
 
-## 配置数据源 {#Configure-Data-Source}
+## 配置数据源{#Configure-Data-Source}
 
 Apache Sling Connection Pooled DataSource配置为指向将用于存储自适应表单数据的数据库。 以下屏幕截图显示了我实例的配置。 可以复制和粘贴以下属性
 
@@ -212,7 +212,7 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 }
 ```
 
-## 创建OSGI服务以获取数据 {#create-osgi-service}
+## 创建OSGI服务以获取数据{#create-osgi-service}
 
 编写以下代码以获取存储的自适应表单数据。 简单查询用于获取与给定GUID关联的自适应表单数据。 然后，所获取的数据被返回到调用应用程序。 在此代码中引用的第一个步骤中创建的同一数据源。
 
@@ -277,7 +277,7 @@ public class AemformWithDB implements AemFormsAndDB {
 }
 ```
 
-## 创建客户端库 {#create-client-library}
+## 创建客户端库{#create-client-library}
 
 AEM客户端库管理所有客户端javascript代码。 对于本文，我创建了一个简单的javascript，用于使用指南桥API获取自适应表单数据。 一旦获取自适应表单数据，将向servlet发出POST调用，以在库中插入或更新自适应表单数据。 函数getALLUrlParams返回URL中的参数。 当您想要更新数据时，会使用它。 其余功能在与。savebutton类的单击事件关联的代码中处理。 如果URL中存在guid参数，则我们需要执行更新操作（如果不是插入操作）。
 
@@ -405,16 +405,16 @@ $(document).ready(function()
 });
 ```
 
-## 创建自适应表单模板和页面组件 {#form-template-and-page-component}
+## 创建自适应表单模板和页面组件{#form-template-and-page-component}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
-### 能力演示 {#capability-demo}
+### 演示功能{#capability-demo}
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
-#### 在服务器上部署 {#deploy-on-your-server}
+#### 部署到服务器{#deploy-on-your-server}
 
 要在您的AEM Forms实例上测试此功能，请执行以下步骤
 
