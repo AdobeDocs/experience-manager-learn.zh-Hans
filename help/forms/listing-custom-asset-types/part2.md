@@ -20,15 +20,15 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms列出自定义资产类型 {#listing-custom-asset-types-in-aem-forms}
+# 在AEM Forms列出自定义资产类型{#listing-custom-asset-types-in-aem-forms}
 
-## 创建自定义模板 {#creating-custom-template}
+## 创建自定义模板{#creating-custom-template}
 
 
 为了便于本文使用，我们将创建一个自定义模板，在同一页面上显示自定义资产类型和OOTB资产类型。 要创建自定义模板，请按照以下说明操作
 
 1. 创建吊带：文件夹。 将其命名为&quot; myportalcomponent &quot;
-1. 添加“fpContentType”属性。 将其值设&#x200B;**置为“/libs/fd/fp/formTemplate”。**
+1. 添加“fpContentType”属性。 将其值设置为“**/libs/fd/fp/formTemplate”。**
 1. 添加“title”属性并将其值设置为“自定义模板”。 这是您在搜索和制表人组件的下拉列表中看到的名称
 1. 在此文件夹下创建“template.html”。 此文件将保存用于设置样式和显示各种资产类型的代码。
 
@@ -76,9 +76,9 @@ ht-degree: 0%
 >
 >要在此模板中列表自适应Forms，请新建一个div并将其数据类型属性设置为“guide”。 可以复制并粘贴其data-type=&quot;printForm的div，并将新复制的div的data-type设置为“guide”
 
-## 配置搜索和制表人组件 {#configure-search-and-lister-component}
+## 配置搜索和制表器组件{#configure-search-and-lister-component}
 
-定义自定义模板后，我们现在必须将此自定义模板与“搜索和制表人”组件关联。 将您的浏览 [器指向此url ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html)。
+定义自定义模板后，我们现在必须将此自定义模板与“搜索和制表人”组件关联。 将浏览器[指向此url ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html)。
 
 切换到“设计”模式并配置段落系统，将“搜索和制表人”组件包含在允许的组件组中。 搜索和制表人组件是文档服务组的一部分。
 
@@ -108,10 +108,11 @@ ht-degree: 0%
 
 ![assettypes](assets/assettypes.png)
 
-现在您已配置了搜索和制表人门户组件，是时候让制表人亲身体验了。 将您的浏览 [器指向此url ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled)。 结果应类似于下图。
+现在您已配置了搜索和制表人门户组件，是时候让制表人亲身体验了。 将浏览器[指向此url ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled)。 结果应类似于下图。
 
 >[!NOTE]
 >
->如果您的门户在发布服务器上列出自定义资产类型，请确保您为“fd-service”用户授予节点/apps/fp/extensions/ **querybuilder“读取”权限**
+>如果您的门户在发布服务器上列出自定义资产类型，请确保您为节点&#x200B;**/apps/fp/extensions/querybuilder**&#x200B;的“fd-service”用户授予“read”权限
 
-![assettypes](assets/assettypeslistings.png)[请使用包管理器下载并安装此包。](assets/customassettypekt1.zip) 它包含示例mp4和word文档以及xdp文件，这些文件将用作资源类型，以便使用搜索和制表人组件进行列表
+![资](assets/assettypeslistings.png)
+[源类型请使用包管理器下载并安装此包。](assets/customassettypekt1.zip) 它包含示例mp4和word文档以及xdp文件，这些文件将用作资源类型，以便使用搜索和制表人组件进行列表
