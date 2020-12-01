@@ -19,7 +19,7 @@ ht-degree: 21%
 + [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html)
 + [AEM asCloud Service](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
 + [AEM基础](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
-+ 多步Tutorials {#multi}
++ 多步Tutorials{#multi}
    + [AEM Sites入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [AEM SPA编辑器和React入门](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
