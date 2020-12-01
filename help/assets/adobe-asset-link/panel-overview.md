@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Adobe资产链接面板概述 {#adobe-asset-link-panel-overview}
+# Adobe资产链接面板概述{#adobe-asset-link-panel-overview}
 
 Adobe资产链接使创意用户能够使用InDesign、Photoshop和Illustrator的应用程序内面板浏览、搜索、注销和登记存储在AEM Assets的资源。 介绍Adobe资产链接面板的UI及其功能。
 
