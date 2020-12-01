@@ -20,12 +20,12 @@ ht-degree: 0%
 
 在这些视频中，我们将看到AEM中对资产搜索的一些增强。 作者可以通过更新相应的元数据属性来提升关键字搜索结果中的某些资产。 我们还将看一些Assets OmniSearch谓词的高级配置。
 
-## 使用资产元数据搜索提升 {#search-boost-asset}
+## 使用资产元数据{#search-boost-asset}搜索提升
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=9&learn=on)
 
-## 多值和标记搜索谓词的高级配置 {#multi-value-tag-predicates}
+## 多值和标记搜索谓词的高级配置{#multi-value-tag-predicates}
 
-该 **多值搜索谓词可用于** ，以便在搜索结果中进行文本匹配。 此外，还对标记谓词进行了多项增强，以更高效地筛选资产搜索结果。
+使&#x200B;**多值搜索谓词**&#x200B;可用于在搜索结果中轻松进行文本匹配。 此外，还对标记谓词进行了多项增强，以更高效地筛选资产搜索结果。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16457/?quality=9&learn=on)
