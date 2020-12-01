@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# 将全景图和垂直图像查看器与AEM AssetsDynamic Media结合使用{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
+# 将全景图和垂直图像查看器与AEM AssetsDynamic Media一起使用{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
 AEM 6.4中的Dynamic Media Viewer增强功能包括添加全景图像查看器、全景虚拟现实图像查看器和垂直图像查看器。 全景查看器提供了一种轻松的方式，无需任何自定义开发，即可提供引人入胜的房间、房产、位置或景观体验。
 
