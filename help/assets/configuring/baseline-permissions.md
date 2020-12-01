@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # 基线权限
 
-管理基准资产文 [件夹上的用户](./baseline-folders.md) 访问权是管理中的一个重要方面，并确保可以正确支持这些流程。
+在[基线资产文件夹](./baseline-folders.md)上管理用户访问权是管理中的一个关键方面，并确保可以正确支持这些流程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37696/?quality=12&learn=on&hidetitle=true)
