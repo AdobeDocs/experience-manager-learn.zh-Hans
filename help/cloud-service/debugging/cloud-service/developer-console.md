@@ -26,13 +26,13 @@ AEM asCloud Service为每个环境提供一个开发人员控制台，该控制�
 
 ## 开发人员控制台访问
 
-要访问和使用开发人员控制台，必须通过Adobe的Adobe ID向开发人员的Admin Console [授予以下权限](https://adminconsole.adobe.com)。
+要访问和使用开发人员控制台，必须通过[Adobe的Admin Console](https://adminconsole.adobe.com)向开发人员的Adobe ID授予以下权限。
 
 1. 确保Adobe组织切换器中已将Cloud Manger和AEM作为Cloud Service产品生效的Adobe组织。
-1. 开发人员必须是Cloud Manager产品的开发人员- __Cloud Service产品用户档案__ 。
+1. 开发人员必须是Cloud Manager产品&#x200B;__开发人员-Cloud Service__&#x200B;产品用户档案的成员。
    + 如果此会员资格不存在，则开发人员将无法登录到开发人员控制台。
-1. 开发人员必须是AEM作者和发布服务的AEM Administrators产品 __用户档案的成员__ 。
-   + 如果此成员身份不存在，状态转储 [将超时](#status) ，并显示401未授权错误。
+1. 开发人员必须是AEM作者和发布服务的&#x200B;__AEM Administrators__&#x200B;产品用户档案的成员。
+   + 如果此成员身份不存在，[status](#status)转储将超时，并显示401未授权错误。
 
 ### 开发人员控制台访问疑难解答
 
@@ -72,7 +72,7 @@ AEM作为Cloud Service作者和发布服务分别由多个实例组成，以处�
 
 ### 捆绑
 
-捆绑AEM中所有OSGi捆绑的列表。 此功能与AEM SDK的 [本地快速启动的OSGi Bundles类似](http://localhost:4502/system/console/bundles) ，位 `/system/console/bundles`置
+捆绑AEM中所有OSGi捆绑的列表。 此功能类似于[AEM SDK的本地快速启动的OSGi Bundles](http://localhost:4502/system/console/bundles)（位于`/system/console/bundles`）。
 
 通过以下方式捆绑调试帮助：
 
@@ -82,7 +82,7 @@ AEM作为Cloud Service作者和发布服务分别由多个实例组成，以处�
 
 ### 组件
 
-组件列表AEM中的所有OSGi组件。 此功能与AEM SDK的 [本地快速启动的OSGi组件类似](http://localhost:4502/system/console/components) ，位 `/system/console/components`置。
+组件列表AEM中的所有OSGi组件。 此功能类似于[AEM SDK的本地快速启动的OSGi组件](http://localhost:4502/system/console/components)（位于`/system/console/components`）。
 
 组件通过以下方式在调试时提供帮助：
 
@@ -93,7 +93,7 @@ AEM作为Cloud Service作者和发布服务分别由多个实例组成，以处�
 
 ### 配置
 
-配置列表所有OSGi组件的配置（OSGi属性和值）。 此功能与AEM SDK的 [本地快速启动的OSGi Configuration Manager类似](http://localhost:4502/system/console/configMgr) ，位 `/system/console/configMgr`置。
+配置列表所有OSGi组件的配置（OSGi属性和值）。 此功能类似于[AEM SDK的本地快速启动的OSGi Configuration Manager](http://localhost:4502/system/console/configMgr)（位于`/system/console/configMgr`）。
 
 配置通过以下方式帮助进行调试：
 
@@ -102,7 +102,7 @@ AEM作为Cloud Service作者和发布服务分别由多个实例组成，以处�
 
 ### Oak索引
 
-Oak索引提供在下定义的节点的转储 `/oak:index`。 请记住，这不会显示合并索引，这在修改AEM索引时发生。
+Oak索引提供在`/oak:index`下定义的节点的转储。 请记住，这不会显示合并索引，这在修改AEM索引时发生。
 
 Oak索引通过以下方式帮助进行调试：
 
@@ -110,7 +110,7 @@ Oak索引通过以下方式帮助进行调试：
 
 ### OSGi Services
 
-组件列表所有OSGi服务。 此功能与AEM SDK的 [本地快速启动的OSGi服务类似](http://localhost:4502/system/console/services) ，位 `/system/console/services`置
+组件列表所有OSGi服务。 此功能与[AEM SDK的本地快速启动的OSGi服务](http://localhost:4502/system/console/services)的`/system/console/services`类似。
 
 OSGi Services通过以下方式帮助进行调试：
 
@@ -118,7 +118,7 @@ OSGi Services通过以下方式帮助进行调试：
 
 ### Sling 作业
 
-Sling Jobs会列表所有Sling Jobs队列。 此功能与AEM SDK的 [本地快速启动作业类似](http://localhost:4502/system/console/slingevent) ，位 `/system/console/slingevent`置
+Sling Jobs会列表所有Sling Jobs队列。 此功能类似于[AEM SDK的本地快速启动作业](http://localhost:4502/system/console/slingevent)（位于`/system/console/slingevent`）。
 
 Sling Jobs通过以下方式帮助进行调试：
 
@@ -127,7 +127,7 @@ Sling Jobs通过以下方式帮助进行调试：
 
 ## Java包
 
-Java包允许检查Java包和版本是否可作为Cloud Service在AEM中使用。 此功能与AEM SDK的 [本地快速启动的依赖项查找器相同](http://localhost:4502/system/console/depfinder) ，位 `/system/console/depfinder`置
+Java包允许检查Java包和版本是否可作为Cloud Service在AEM中使用。 此功能与[AEM SDK的本地快速启动的依赖项查找器](http://localhost:4502/system/console/depfinder)（位于`/system/console/depfinder`）相同。
 
 ![开发人员控制台- Java包](./assets/developer-console/java-packages.png)
 
@@ -136,11 +136,11 @@ Java包用于解决由于未解析导入或脚本（HTL、JSP等）中未解析�
 + 确保项目的AEM API主依赖项的版本与环境的AEM发行版的版本匹配（如果可能，请将所有内容更新为最新版本）。
 + 如果在Maven项目中使用额外的Maven依赖项
    + 确定是否可以改用AEM SDK API依赖关系提供的替代API。
-   + 如果需要额外的依赖项，请确保它作为OSGi捆绑包提供（而不是普通Jar），并且它嵌入到项目的代码包中(`ui.apps`)，与核心OSGi捆绑包嵌入到包中的方 `ui.apps` 式相似。
+   + 如果需要额外的依赖项，请确保它作为OSGi捆绑包提供（而不是普通Jar），并且它嵌入到项目的代码包(`ui.apps`)中，这与核心OSGi捆绑包嵌入`ui.apps`包的方式类似。
 
 ## Servlet
 
-Servlet用于提供AEM如何将URL解析为最终处理请求的Java Servlet或脚本(HTL,JSP)的分析。 此功能与AEM SDK的 [本地快速启动的Sling Servlet Resolver相同](http://localhost:4502/system/console/servletresolver) ，位 `/system/console/servletresolver`。
+Servlet用于提供AEM如何将URL解析为最终处理请求的Java Servlet或脚本(HTL,JSP)的分析。 此功能与[AEM SDK的本地快速启动程序的Sling Servlet解析程序](http://localhost:4502/system/console/servletresolver)在`/system/console/servletresolver`的功能相同。
 
 ![开发人员控制台- Servlet](./assets/developer-console/servlets.png)
 
@@ -151,7 +151,7 @@ Servlet有助于调试确定：
 
 ## 查询
 
-查询帮助提供关于在AEM上执行搜索查询的方式和方式的洞察。 此功能与AEM SDK的本 [地快速启动工具>查询性能控制台相 ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) 同。
+查询帮助提供关于在AEM上执行搜索查询的方式和方式的洞察。 此功能与[AEM SDK的本地快速启动工具>查询性能](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)控制台相同。
 
 查询仅在选择特定窗格时(当它打开该窗格的“查询性能”Web控制台时)才起作用，这要求开发人员有权登录AEM服务。
 
