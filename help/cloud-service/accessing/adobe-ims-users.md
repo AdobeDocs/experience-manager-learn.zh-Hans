@@ -20,7 +20,7 @@ ht-degree: 4%
 
 # AdobeIMS用户
 
-需要访问AEM作者服务的用户在Adobe的 [Admin Console中作为Adobe](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html) IMS [用户进行管理](https://adminconsole.adobe.com)。 了解IMSAdobe的用户，以及如何在Admin Console中访问和管理他们。
+需要访问AEM作者服务的用户在[AdobeAdmin Console](https://adminconsole.adobe.com)中作为[AdobeIMS用户](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html)进行管理。 了解IMSAdobe的用户，以及如何在Admin Console中访问和管理他们。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39149/?quality=12&learn=on)
 
