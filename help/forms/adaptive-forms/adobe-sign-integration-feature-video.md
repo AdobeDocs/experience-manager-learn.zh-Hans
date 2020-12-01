@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 将Adobe Sign与AEM Forms{#using-adobe-sign-with-aem-forms}
+# 将Adobe Sign与AEM Forms一起使用{#using-adobe-sign-with-aem-forms}
 
 将Adobe Sign与AEM Forms
 
@@ -32,4 +32,4 @@ ht-degree: 0%
 >
 >此功能仅在AEM 6.3之后可用。
 
-请访问 [AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0) 页，获取此功能的实时演示的链接。
+请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)页面，获取此功能的实时演示的链接。
