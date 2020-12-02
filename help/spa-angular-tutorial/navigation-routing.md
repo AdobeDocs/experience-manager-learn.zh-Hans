@@ -146,7 +146,7 @@ ht-degree: 1%
 
    ![单击标题策略](assets/navigation-routing/header-policy-icon.png)
 
-7. 使用&#x200B;**[!UICONTROL **&quot;WKND SPA Header&quot;**的&lt;a0/>策略标题]**&#x200B;创建新策略。
+7. 使用“WKND SPA标 **[!UICONTROL 题”]**&#x200B;**的策略标题创建新策略**。
 
    在&#x200B;**[!UICONTROL 属性]**&#x200B;下：
 
