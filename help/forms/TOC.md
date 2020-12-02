@@ -6,9 +6,9 @@ user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员
 breadcrumb-title: AEM Forms 教程
 index: y
 translation-type: tm+mt
-source-git-commit: 787a79663472711b78d467977d633e3d410803e5
+source-git-commit: c0db84f25334106c798d555c754d550113e91eac
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '899'
 ht-degree: 6%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 6%
    + [自定义分配任务通知](handling-form-submissions/customize-assign-task-notification.md)
 + 有用集成{#some-useful-integrations}
    + [双因素身份验证](some-useful-integrations/two-factor-authentication.md)
+   + [OCR数据提取](some-useful-integrations/ocr-data-extraction.md)
 
 + 自适应表单 {#adaptive-forms}
    + [在Windows上安装AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
