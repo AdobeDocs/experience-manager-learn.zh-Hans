@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: null
 thumbnail: null
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 64d88ef98ec1fe3e2dbe727fc59b350bb0a2134b
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -208,40 +208,40 @@ _本章中的IDE屏幕截图来自 [Visual Studio代码](https://code.visualstud
 1. 在IDE中，打开文件：`src/components/Adventures.js`。 此文件表示家庭体验的冒险组件，该组件用于查询并显示冒险卡。
 1. Inspect函数`filterQuery(activity)`（未使用），但已准备好构建一个GraphQL查询,过滤器`activity`冒险。
 
-请注意，参数`activity`作为`adventureActivity`字段`filter`的一部分注入到GraphQL查询中，要求该字段的值与参数的值匹配。
+   请注意，参数`activity`作为`adventureActivity`字段`filter`的一部分注入到GraphQL查询中，要求该字段的值与参数的值匹配。
 
-    &quot;
-    javascriptfunction filterQuery(活动){
-    return 
-    {
-    adventures(filter:{
-    adventureActivity:{
-    _表达式:[
-    {
-    value:“${活动
-    
-    
-    }
-    ){
-    
-    }
-    
-    
-    
-    项
-    {2012年
-    
-    
-    
-    
-    2014年
-    初
-    初级
-    初
-    级
-    初
-    级邮
-    本……
+   ```javascript
+   function filterQuery(activity) {
+       return `
+           {
+           adventures (filter: {
+               adventureActivity: {
+               _expressions: [
+                   {
+                   value: "${activity}"
+                   }
+                 ]
+               }
+           }){
+               items {
+               _path
+               adventureTitle
+               adventurePrice
+               adventureTripLength
+               adventurePrimaryImage {
+               ... on ImageRef {
+                   _path
+                   mimeType
+                   width
+                   height
+               }
+               }
+             }
+         }
+       }
+       `;
+   }
+   ```
 
 1. 更新React Adventures组件的`return`语句，以添加调用新参数化`filterQuery(activity)`的按钮，为列表提供冒险。
 
