@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: null
 thumbnail: null
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 2e0352b051bf25a491b67468a76522084e53a71f
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
@@ -109,27 +109,15 @@ ht-degree: 1%
 >
 > 如果使用Cloud Service环境，请参阅有关如何[将代码库（如WKND引用站点）部署到Cloud Service环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#deploying)的文档。
 
-## 允许GraphQL请求
+## 安装GraphQL端点{#graphql-endpoint}
 
-AEM在默认情况下是安全的，它阻止跨来源请求，防止未经授权的应用程序连接到其内容并呈现其内容。
+需要配置GraphQL端点。 这使项目在确定GraphQL API公开的确切端点时具有灵活性。 还需要[CORS](#cors-config)来授予对外部应用程序的访问权。 要加速教程，已预先创建了包。
 
-为了允许本教程的React应用程序与AEM GraphQL API端点进行交互，定义了跨来源资源共享配置。
+1. 下载[aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip](./assets/setup/aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip)包。
+1. 从&#x200B;**AEM开始**&#x200B;菜单导航到&#x200B;**工具** > **部署** **软件包**。
+1. 单击&#x200B;**上传包**&#x200B;并选择上一步中下载的包。 单击&#x200B;**安装**&#x200B;以安装软件包。
 
-![跨来源资源共享配置](./assets/setup/cross-origin-resource-sharing-configuration.png)
-
-1. 导航到AEM SDK的Web控制台，位于&#x200B;**工具** > **操作** > **Web控制台**
-1. 单击标有&#x200B;**AdobeGranite跨来源资源共享策略**&#x200B;的行以创建新配置
-1. 更新以下字段，将其他字段保留为默认值：
-   * 允许的来源:`localhost:3000`
-   * 允许的来源符（正则表达式）:`.* `
-   * 允许的路径: `/content/graphql/endpoint.gql`
-   * 允许的方法：`GET`、`HEAD`、`POST`
-      * GraphQL只需`POST`，但是，在以无头方式与AEM交互时，其他方法可能很有用。
-   * 支持凭据：`Yes`
-      * 这是必需的，因为我们的React应用程序将与AEM作者服务上受保护的GraphQL端点进行通信。
-1. 单击&#x200B;**保存**
-
-此配置允许从`localhost:3000`发往路径`/content/graphql/endpoint.gql`上的AEM作者服务的`POST` HTTP请求。
+以上软件包还包含将在后几章中使用的[GraphiQL工具](https://github.com/graphql/graphiql)。 有关CORS配置的详细信息，请参见下面的[。](#cors-config)
 
 ## 安装示例应用程序{#sample-app}
 
@@ -209,3 +197,29 @@ AEM在默认情况下是安全的，它阻止跨来源请求，防止未经授�
 ## 后续步骤{#next-steps}
 
 在下一章[定义内容片段模型](content-fragment-models.md)中，了解如何对内容建模并使用&#x200B;**内容片段模型**&#x200B;构建模式。 您将检查现有模型并创建新模型。 您还将了解可用于将模式定义为模型一部分的不同数据类型。
+
+## （额外）CORS配置{#cors-config}
+
+AEM在默认情况下是安全的，它阻止跨来源请求，防止未经授权的应用程序连接到其内容并呈现其内容。
+
+为了允许本教程的React应用程序与AEM GraphQL API端点交互，已在GraphQL端点包中定义了跨来源资源共享配置。
+
+![跨来源资源共享配置](./assets/setup/cross-origin-resource-sharing-configuration.png)
+
+要手动配置，请执行以下操作：
+
+1. 导航到AEM SDK的Web控制台，位于&#x200B;**工具** > **操作** > **Web控制台**
+1. 单击标有&#x200B;**AdobeGranite跨来源资源共享策略**&#x200B;的行以创建新配置
+1. 更新以下字段，将其他字段保留为默认值：
+   * 允许的来源:`localhost:3000`
+   * 允许的来源符（正则表达式）:`.* `
+   * 允许的路径: `/content/graphql/endpoint.gql`
+   * 允许的方法：`GET`、`HEAD`、`POST`
+      * GraphQL只需`POST`，但是，在以无头方式与AEM交互时，其他方法可能很有用。
+   * 支持凭据：`Yes`
+      * 这是必需的，因为我们的React应用程序将与AEM作者服务上受保护的GraphQL端点进行通信。
+1. 单击&#x200B;**保存**
+
+此配置允许从`localhost:3000`发往路径`/content/graphql/endpoint.gql`上的AEM作者服务的`POST` HTTP请求。
+
+此配置和GraphQL端点是从AEM项目生成的。 [视图此处的详细信息](https://github.com/adobe/aem-guides-wknd-graphql/tree/master/aem-project)。
