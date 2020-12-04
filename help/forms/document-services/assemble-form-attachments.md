@@ -10,9 +10,9 @@ version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
 translation-type: tm+mt
-source-git-commit: a9fbd73f128998bb201ef8715e5e725e94ee1ede
+source-git-commit: 3e8b820939c2d39ef9a17f7d7aaef87cd9cdbbbb
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### 从附件名称创建DDX
 
-然后，我们需要创建[文档描述XML(DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)文档,Assembler服务使用它来组合文档。 以下是从进程参数创建的DDX。 请注意，PDF源元素按流程参数中指定的正确顺序排列。
+然后，我们需要创建[文档描述XML(DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)文档,Assembler服务使用它来组合文档。 以下是从进程参数创建的DDX。 NoForms元素允许您在拼合基于XFA的文档之前对其进行拼合。 请注意，PDF源元素按流程参数中指定的正确顺序排列。
 
-![ddx-xml](assets/ddx-xml.JPG)
+![ddx-xml](assets/ddx.PNG)
 
 ### 创建文档地图
 
