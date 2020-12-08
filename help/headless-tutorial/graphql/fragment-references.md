@@ -8,12 +8,12 @@ doc-type: tutorial
 activity: develop
 audience: developer
 mini-toc-levels: 1
-kt: null
-thumbnail: null
+kt: 6718
+thumbnail: KT-6718.jpg
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '849'
 ht-degree: 1%
 
 ---
@@ -239,6 +239,12 @@ ht-degree: 1%
 
    ![应用程序中添加的参与者](assets/fragment-references/contributor-added-detail.png)
 
+## 其他资源
+
+有关内容片段和GraphQL的更多详细信息，请参阅以下资源：
+
+* [使用内容片段和GraphQL的无头内容投放](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html)
+* [AEM GraphQL API，用于内容片段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
 
 ## 恭喜！{#congratulations}
 
