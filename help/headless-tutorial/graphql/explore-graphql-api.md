@@ -8,12 +8,12 @@ doc-type: tutorial
 activity: develop
 audience: developer
 mini-toc-levels: 1
-kt: null
-thumbnail: null
+kt: 6714
+thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -278,6 +278,10 @@ AEM的GraphQL API提供了一种功能强大的查询语言，可向下游应用
   }
 }
 ```
+
+## 其他资源
+
+有关GraphQL查询的更多示例，请参阅：[学习将GraphQL与AEM一起使用——示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)。
 
 ## 恭喜！{#congratulations}
 
