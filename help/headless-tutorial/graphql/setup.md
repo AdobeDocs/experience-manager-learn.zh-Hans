@@ -8,12 +8,12 @@ doc-type: tutorial
 activity: develop
 audience: developer
 mini-toc-levels: 1
-kt: null
-thumbnail: null
+kt: 6386
+thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: 2e0352b051bf25a491b67468a76522084e53a71f
+source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1590'
 ht-degree: 1%
 
 ---
@@ -67,6 +67,10 @@ ht-degree: 1%
 1. 提供管理员密码作为`admin`。 可以接受任何管理员密码，但建议使用本地开发的默认密码，以减少重新配置的需要。
 1. 几分钟后，AEM实例将完成安装，并将在[http://localhost:4502](http://localhost:4502)打开一个新的浏览器窗口。
 1. 使用用户名`admin`和密码`admin`登录。
+
+>[!CAUTION]
+>
+> 要继续安装，现在必须在快速启动SDK上手动启用GraphQL功能。 联系您的Adobe联系人以获取进一步说明。 只有在2021年发布该功能之前，才需要此手动步骤。
 
 ## 安装示例内容{#wknd-site}
 
