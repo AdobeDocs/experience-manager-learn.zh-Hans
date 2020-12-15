@@ -5,9 +5,9 @@ breadcrumb-title: AEM Assets 教程
 sub-product: 资产
 team: TM
 translation-type: tm+mt
-source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+source-git-commit: aa349fba9e0f1df97316105ada62ff9b32501573
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '257'
 ht-degree: 32%
 
 ---
@@ -99,9 +99,10 @@ ht-degree: 32%
    + [查看器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
    + [全景和垂直图像查看器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
    + [Adobe Analytics观众](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + [Dynamic Media Classic桌面应用程序](dynamic-media/dynamic-media-classic-desktop-application.md)
-   + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + [动态媒体智能裁剪视频](dynamic-media/dynamic-media-smart-crop-video.md)
+   + [Dynamic Media经典桌面应用程序](dynamic-media/dynamic-media-classic-desktop-application.md)
+   + [Dynamic Media3D](dynamic-media/dynamic-media-3d-feature-video.md)
+   + [Dynamic Media智能裁剪视频](dynamic-media/dynamic-media-smart-crop-video.md)
+   + [Dynamic Media核心组件](dynamic-media/dynamic-media-core-components.md)
 
 + 翻译 {#translation}
    + [源文件转换](translation/source-file-translation-feature-video-use.md)
