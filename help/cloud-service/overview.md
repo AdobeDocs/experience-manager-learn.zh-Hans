@@ -4,9 +4,9 @@ description: 作为Cloud Service为Adobe Experience Manager(AEM)提供的教程�
 sub-product: 站点，云管理器，基础，资产
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '265'
 ht-degree: 8%
 
 ---
@@ -20,6 +20,14 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM作为Clou
 
 ## 新增功能
 
+* **[批量导入（视频）](./migration/bulk-import.md)**
+
+   *了解如何从Azure Blob存储或AmazonS3将资源批量导入AEM*
+
+* **[asset compute元数据工作器（教程）](./asset-compute/advanced/metadata.md)**
+
+   *了解如何将资产元数据从Asset compute工作者写回AEM*
+
 * **[asset computemicroservices可扩展性（教程）](./asset-compute/overview.md)**
 
    *了解如何开发Asset compute工具以生成自定义资产演绎版*
@@ -31,14 +39,6 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM作为Clou
 * **[将AEM作为Cloud Service进行调试（教程）](./debugging/cloud-service/overview.md)**
 
    *了解如何将AEM作为Cloud Service进行调试*
-
-* **[调试AEM SDK（教程）](./debugging/aem-sdk-local-quickstart/overview.md)**
-
-   *探索在AEM上作为Cloud ServiceSDK的本地快速启动调试应用程序时使用的各种工具*
-
-* **[本地开发环境设置（教程）](./local-development-environment/overview.md)**
-
-   *了解如何将AEM的本地开发机器设置为Cloud Service开发*
 
 ## 员工挑选
 
