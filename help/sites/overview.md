@@ -5,10 +5,10 @@ description: 'Adobe Experience Manager Sites 的视频和教程集合。 '
 seo-description: Adobe Experience Manager Sites的视频和教程集
 sub-product: 站点，内容服务
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 17%
+source-wordcount: '337'
+ht-degree: 20%
 
 ---
 
@@ -19,21 +19,13 @@ Adobe Experience Manager(AEM)站点是领先的体验管理平台。 本用户�
 
 ## 新增功能
 
-* **[AEM SPA编辑器和React入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html) （教程）**
+* **[使用AEM组件自定义Adobe客户端数据层](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
-   *开发人员使用React将单页应用程序(SPA)与AEM集成入门指南*
+   *了解如何使用自定义AEM组件中的内容更新Adobe客户端数据层。*
 
-* **[AEM SPA编辑器和Angular入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) （教程）**
+* **[AEM无头图形QL入门（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *开发人员使用Angular将单页应用程序(SPA)与AEM集成入门指南*
-
-* **[AEM无头入门（教程）](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)**
-
-   *如何在无外设CMS场景中展示AEM中的内容，让本机移动应用程序占用。*
-
-* **[使用体验片段（视频系列）](./experience-fragments/experience-fragments-feature-video-use.md)**
-
-   *了解AEM Experience Fragments，以促进内容跨渠道。*
+   *如何使用AEM GraphQL API公开AEM中的内容，使本机移动应用程序占用这些内容。*
 
 * **[使用内容片段（视频系列）](./content-fragments/content-fragments-feature-video-use.md)**
 
