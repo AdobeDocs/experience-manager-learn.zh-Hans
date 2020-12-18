@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '205'
 ht-degree: 32%
 
 ---
@@ -51,6 +51,7 @@ ht-degree: 32%
    + [配置对AEM遍历的访问](./accessing/walk-through.md)
 + 迁移{#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
+   + [批量导入资产](./migration/bulk-import.md)
 + asset compute可扩展性{#asset-compute}
    + [概述](./asset-compute/overview.md)
    + 设置{#set-up}
