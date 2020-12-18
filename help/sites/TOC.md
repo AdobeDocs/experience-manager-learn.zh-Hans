@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Sites 的视频和教程集合�
 breadcrumb-title: AEM Sites 教程
 sub-product: 站点
 translation-type: tm+mt
-source-git-commit: 16c73d19584eefff3c9551d2a3174b5b8ed6d427
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '447'
 ht-degree: 19%
 
 ---
@@ -98,6 +98,7 @@ ht-degree: 19%
       + [调试启动实施](integrations/experience-platform-launch/debug-launch-implementation.md)
    + Adobe客户端数据层{#adobe-client-data-layer}
       + [使用Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-overview.md)
+      + [自定义Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-customize.md)
    + 分析 {#analytics}
       + [与Adobe Analytics收集页面数据](integrations/analytics/collect-data-analytics.md)
       + [使用Adobe Analytics跟踪已点击的组件](integrations/analytics/track-clicked-component.md)
