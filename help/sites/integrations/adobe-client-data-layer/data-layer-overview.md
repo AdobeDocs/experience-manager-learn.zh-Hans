@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6261
 thumbnail: 41195.jpg
 translation-type: tm+mt
-source-git-commit: e13a5171fbeb9e1eb5f78d1c691bc8b4b896a998
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '788'
 ht-degree: 1%
 
 ---
@@ -174,6 +174,8 @@ Adobe客户端数据层引入了一种标准方法，用于在网页上收集和
 ## 后续步骤
 
 查看以下教程，了解如何使用事件驱动的Adobe客户端数据层来收集页面数据并发送到Adobe Analytics[。](../analytics/collect-data-analytics.md)
+
+或了解如何使用AEM组件[自定义Adobe客户端数据层](./data-layer-customize.md)
 
 
 ## 其他资源 {#additional-resources}
