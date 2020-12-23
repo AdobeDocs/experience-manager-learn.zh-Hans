@@ -6,9 +6,9 @@ user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员
 breadcrumb-title: AEM Forms 教程
 index: y
 translation-type: tm+mt
-source-git-commit: c0db84f25334106c798d555c754d550113e91eac
+source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '902'
 ht-degree: 6%
 
 ---
@@ -169,7 +169,7 @@ ht-degree: 6%
    + [第3部分——使用ACS用户档案信息预填表单](aem-forms-with-adobe-campaign/partthree.md)
    + [第4部分——使用表单用户档案模型创建ACS数据](aem-forms-with-adobe-campaign/partfour.md)
 
-+ 文档服务 {#document-services}
++ Document Services {#document-services}
    + [在AEM Forms使用汇编服务](document-services/using-assembler-service-in-aem-forms.md)
    + [在AEM Forms使用监视文件夹](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms使用条形码服务](document-services/barcode-service-adaptive-forms-article.md)
@@ -182,6 +182,7 @@ ht-degree: 6%
    + [将使用权限应用于已上传的PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [认证文档](document-services/certifying-documents-aem-forms-tutorial.md)
    + [组合表单附件](document-services/assemble-form-attachments.md)
+   + [实用实用服务](document-services/useful-utility-services.md)
 + 交互式通信以实现印刷渠道
 {#ic-print-channel-tutorial}
    + [简介](ic-print-channel-tutorial/introduction.md)
