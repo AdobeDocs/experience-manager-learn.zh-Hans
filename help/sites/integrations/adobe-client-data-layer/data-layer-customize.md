@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6265
 thumbnail: KT-6265.jpg
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: 46936876de355de9923f7a755aa6915a13cca354
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2027'
 ht-degree: 1%
 
 ---
@@ -112,6 +112,8 @@ ht-degree: 1%
 1. 在文件开头添加以下导入语句：
 
    ```java
+   import java.util.HashMap;
+   import java.util.Map;
    import org.apache.sling.api.resource.Resource;
    import com.fasterxml.jackson.core.JsonProcessingException;
    import com.fasterxml.jackson.databind.ObjectMapper;
@@ -163,17 +165,6 @@ ht-degree: 1%
 
    `ObjectMapper`用于序列化属性并返回JSON字符串。 然后，可以将此JSON字符串注入数据层。
 
-1. 在`core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java`打开文件`package-info.java`，将版本从`1.0`更新到`2.0`:
-
-   ```java
-   @Version("2.0")
-   package com.adobe.aem.guides.wknd.core.models;
-   
-   import org.osgi.annotation.versioning.Version;
-   ```
-
-   由于接口`Byline.java`已更改，因此必须更新Java包版本。
-
 1. 打开终端窗口。 使用Maven技能仅构建和部署`core`模块：
 
    ```shell
@@ -194,13 +185,11 @@ ht-degree: 1%
 
 1. 更新`byline.html`以包含`data-cmp-data-layer`属性：
 
-   ```html
-    <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
+   ```diff
+     <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
        data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
        data-sly-test.hasContent="${!byline.empty}"
-       <!--/* Add the data-cmp-data-layer */-->
-       data-cmp-data-layer="${byline.data}"
-   
+   +   data-cmp-data-layer="${byline.data}"
        class="cmp-byline">
        ...
    ```
@@ -256,8 +245,11 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见的事件之
 
 1. 更新`byline.html`以在Byline的&#x200B;**name**&#x200B;元素中包含`data-cmp-clickable`属性：
 
-   ```html
-   <h2 class="cmp-byline__name" data-cmp-clickable>${byline.name}</h2>
+   ```diff
+     <h2 class="cmp-byline__name" 
+   +    data-cmp-clickable="${byline.data ? true : false}">
+        ${byline.name}
+     </h2>
    ```
 
 1. 打开新终端。 使用Maven技能仅构建和部署`ui.apps`模块：
@@ -289,7 +281,7 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见的事件之
 
    ```javascript
    window.adobeDataLayer.push(function (dl) {
-        dl.addEventListener("cmp:show", bylineClickHandler);
+        dl.addEventListener("cmp:click", bylineClickHandler);
    });
    ```
 
@@ -419,6 +411,13 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见的事件之
    ```
 
    请注意，`byline`组件条目中现在有一个`image`对象。 此组件在DAM中有更多有关资产的信息。 另请注意，`@type`和唯一id（在本例中为`byline-136073cfcb`）已自动填充，以及指示修改组件时间的`repo:modifyDate`。
+
+## 其他示例{#additional-examples}
+
+1. 扩展数据层的另一个示例可通过检查WKND代码库中的`ImageList`组件来查看：
+   * `ImageList.java` -模块中的Java `core` 界面。
+   * `ImageListImpl.java` -模块中的Sling `core` 模型。
+   * `image-list.html` -模块中的HTL `ui.apps` 模板。
 
    >[!NOTE]
    >
