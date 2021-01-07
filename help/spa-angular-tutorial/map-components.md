@@ -11,10 +11,10 @@ audience: developer
 kt: 5311
 thumbnail: 5311-spa-angular.jpg
 translation-type: tm+mt
-source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
+source-git-commit: 28b5522e094a41d81116acb923dc0390478e2308
 workflow-type: tm+mt
-source-wordcount: '2387'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -481,7 +481,7 @@ AEMSPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 **
 
    ![VSCode导入模板](assets/map-components/import-aem-servervscode.png)
 
-4. 重复这些步骤以导入内容，但选择位于`/conf/wknd-spa-angular/settings/wcm/templates/policies`的&#x200B;**策略**&#x200B;文件夹。
+4. 重复这些步骤以导入内容，但选择位于`/conf/wknd-spa-angular/settings/wcm/policies`的&#x200B;**策略**&#x200B;文件夹。
 
 5. Inspect位于`ui.content/src/main/content/META-INF/vault/filter.xml`的`filter.xml`文件。
 
