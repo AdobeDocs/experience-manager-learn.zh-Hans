@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
-source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
+source-git-commit: 81c704240f163ccd151a61643f589f825a288705
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '218'
 ht-degree: 32%
 
 ---
@@ -23,6 +23,12 @@ ht-degree: 32%
    + [Sling简介](./underlying-technology/introduction-sling.md)
    + [创作层和发布层简介](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher 简介](./underlying-technology/introduction-dispatcher.md)
++ Cloud Manager {#cloud-manager}
+   + [程序](./cloud-manager/programs.md)
+   + [环境](./cloud-manager/environments.md)
+   + [CI/CD生产管道](./cloud-manager/cicd-production-pipeline.md)
+   + [CI/CD非生产管道](./cloud-manager/cicd-non-production-pipeline.md)
+   + [活动](./cloud-manager/activity.md)
 + 本地开发环境设置{#local-development-environment-set-up}
    + [概述](./local-development-environment/overview.md)
    + [开发工具](./local-development-environment/development-tools.md)
