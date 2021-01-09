@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: 4cfbf975919eb38413be8446b70b107bbfebb845
+source-git-commit: 398b9f855556fc425b034986a7f21159297dcba5
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1614'
 ht-degree: 1%
 
 ---
@@ -111,6 +111,39 @@ $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
 $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
+
+## 模拟内容分发{#content-distribution}
+
+在真正的Cloud Service环境中，使用[Sling内容分发](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe管道将内容从作者服务分发到发布服务。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution)是仅在云环境中可用的隔离微服务。
+
+在开发过程中，可能需要使用本地作者和发布服务模拟内容的分发。 这可以通过启用旧版复制代理来实现。
+
+>[!NOTE]
+>
+> 复制代理仅可在本地快速启动JAR中使用，并且仅提供一模拟内容分发。
+
+1. 登录&#x200B;**Author**&#x200B;服务并导航到[http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html)。
+1. 单击&#x200B;**默认代理（发布）**&#x200B;以打开默认的复制代理。
+1. 单击&#x200B;**编辑**&#x200B;以打开代理的配置。
+1. 在&#x200B;**设置**&#x200B;选项卡下，更新以下字段：
+
+   + **启用** -检查真
+   + **代理用户** ID —— 将此字段留空
+
+   ![复制代理配置——设置](assets/aem-runtime/settings-config.png)
+
+1. 在&#x200B;**传输**&#x200B;选项卡下，更新以下字段：
+
+   + **URI** -  `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
+   + **用户** -  `admin`
+   + **密码** -  `admin`
+
+   ![复制代理配置——传输](assets/aem-runtime/transport-config.png)
+
+1. 单击&#x200B;**确定**&#x200B;以保存配置并启用&#x200B;**默认**&#x200B;复制代理。
+1. 您现在可以更改创作服务上的内容，并将其发布到发布服务。
+
+![发布页面](assets/aem-runtime/publish-page-changes.png)
 
 ## 快速启动Jar开始模式
 
