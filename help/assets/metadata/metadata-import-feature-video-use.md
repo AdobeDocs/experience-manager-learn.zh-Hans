@@ -1,20 +1,17 @@
 ---
 title: 在AEM Assets使用元数据导入和导出
-seo-title: 在AEM Assets使用元数据导入和导出
 description: AEM Assets元数据导入和导出功能使内容作者能够轻松地在AEM中移入和移出资产元数据，并利用Microsoft Excel的强大功能大规模处理元数据，从而便于AEM中现有资产的批量更新元数据。
-seo-description: AEM Assets元数据导入和导出功能使内容作者能够轻松地在AEM中移入和移出资产元数据，并利用Microsoft Excel的强大功能大规模处理元数据，从而便于AEM中现有资产的批量更新元数据。
-uuid: db7e57a4-b0c1-4a48-906d-802c19964313
-discoiquuid: 72dd9230-73e1-454e-a3e0-9281e621d901
 topics: metadata
 audience: all
 doc-type: feature video
 activity: use
+kt: 647
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 2c0818d0223a3db55e6407068f4802b9e7f7dd83
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 2%
+source-wordcount: '256'
+ht-degree: 3%
 
 ---
 
@@ -56,7 +53,7 @@ AEM Assets元数据导入和导出功能使内容作者能够轻松地在AEM中�
 
 * 属性名称区分大小写
    * 正确：`dc:title {{String}}`
-   * 不正确：`Dc:Ttle {{String}}`
+   * 不正确：`Dc:Title {{String}}`
 
 * 属性类型不区分大小写
 * 支持所有有效的[JCR属性类型](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
