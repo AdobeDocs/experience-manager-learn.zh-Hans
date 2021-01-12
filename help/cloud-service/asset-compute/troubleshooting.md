@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 649d971ecaa67c0d1dd2636f3c212bfee3d13561
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,15 @@ ht-degree: 0%
 + __解决方案__:查看自定义工作器代码，并确保所有异步调用都使用同步 `await`。
 
 ## 开发工具{#development-tool}
+
+### asset compute项目{#missing-console-json}中缺少Console.json文件
+
++ __错误：__ 错误：验证时缺少所需文件(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY)(异步设置AssetCompute(.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __原因：__ Asset compute `console.json` 项目的根中缺少该文件
++ __解决方案：__ 从您的Adobe I/O `console.json` 项目下载新表单
+   1. 在console.adobe.io中，打开配置为使用的Adobe I/O项目Asset compute项目
+   1. 点按右上方的&#x200B;__下载__&#x200B;按钮
+   1. 使用文件名`console.json`将下载的文件保存到Asset compute项目的根目录
 
 ### manifest.yml{#incorrect-yaml-indentation}中的YAML缩进不正确
 
@@ -95,7 +104,6 @@ asset compute开发工具可能会进入其提取旧数据的状态，在显示�
    + 或者，验证在`/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`生成的测试文件，验证其正确性，并将其用作预期的再现文件
 
 ## 调试
-
 
 ### 调试器未连接{#debugger-does-not-attach}
 
