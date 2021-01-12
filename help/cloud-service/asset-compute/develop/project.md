@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 676d4bfceaaec3ae8d4feb9f66294ec04e1ecd2b
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,6 @@ asset compute项目是使用Adobe I/OCLI生成的Node.js项目，符合允许将
 >[!VIDEO](https://video.tv.adobe.com/v/40197/?quality=12&learn=on)
 
 _生成Asset compute项目的点进（无音频）_
-
 
 使用[Adobe I/OCLIAsset compute插件](../set-up/development-environment.md#aio-cli)生成新的空Asset compute项目。
 
@@ -58,7 +57,21 @@ _生成Asset compute项目的点进（无音频）_
 $ aio app use
 ```
 
-验证当前工作区详细信息是否正确，并且漂亮地`Y`或进入以生成`console.json`。 如果检测到`.env`和`.aio`已存在，请点按`x`以跳过其创建。
+验证当前工作区详细信息是否正确，按`Y`或进入以生成`console.json`。 如果检测到`.env`和`.aio`已存在，请点按`x`以跳过其创建。
+
+如果创建新项，或覆盖`.env`，请将任何缺失的键／值重新添加到新`.env`:
+
+```
+## please provide the following environment variables for the Asset Compute devtool. You can use AWS or Azure, not both:
+#ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
+#S3_BUCKET=
+#AWS_ACCESS_KEY_ID=
+#AWS_SECRET_ACCESS_KEY=
+#AWS_REGION=
+#AZURE_STORAGE_ACCOUNT=
+#AZURE_STORAGE_KEY=
+#AZURE_STORAGE_CONTAINER_NAME=
+```
 
 ## 审查项目剖析
 
