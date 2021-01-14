@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1599'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
-> 针对内容片段投放的AEM GraphQL API将于2021年初发布。
-> 相关文档可供预览使用。
+> AEM GraphQL API for Content Fragments投放可应请求提供。
+> 请联系Adobe支持，为AEM启用API作为Cloud Service项目。
 
 本章优惠本地环境的快速设置，以查看外部应用程序使用AEM  GraphQL API从AEM中消耗内容。 本教程的后几章将总结此设置。
 
@@ -121,7 +121,7 @@ ht-degree: 1%
 1. 从&#x200B;**AEM开始**&#x200B;菜单导航到&#x200B;**工具** > **部署** **软件包**。
 1. 单击&#x200B;**上传包**&#x200B;并选择上一步中下载的包。 单击&#x200B;**安装**&#x200B;以安装软件包。
 
-以上软件包还包含将在后几章中使用的[GraphiQL工具](https://github.com/graphql/graphiql)。 有关CORS配置的详细信息，请参见下面的[。](#cors-config)
+以上软件包还包含将在后几章中使用的[GraphiQL工具](https://github.com/graphql/graphiql)。 有关CORS配置的详细信息，请参见下面的](#cors-config)。[
 
 ## 安装示例应用程序{#sample-app}
 
@@ -180,7 +180,7 @@ ht-degree: 1%
 现在React应用程序正在运行，请更新AEM中的内容并查看应用程序中反映的更改。
 
 1. 导航到AEM [http://localhost:4502](http://localhost:4502)。
-1. 导航至&#x200B;**资产**>**文件**>**WKND站点****英语****冒险**>**[巴厘岛冲浪营地](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)&lt;a11/>2/>。**
+1. 导航至&#x200B;**资产**>**文件**>**WKND站点****英语****冒险**>**[巴厘岛冲浪营地](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)** 2/>。
 
    ![巴厘岛冲浪营文件夹](assets/setup/bali-surf-camp-folder.png)
 
