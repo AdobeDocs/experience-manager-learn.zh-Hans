@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
-> 针对内容片段投放的AEM GraphQL API将于2021年初发布。
-> 相关文档可供预览使用。
+> AEM GraphQL API for Content Fragments投放可应请求提供。
+> 请联系Adobe支持，为AEM启用API作为Cloud Service项目。
 
 在本章中，您将根据[新定义的参与者内容片段模型](./content-fragment-models.md)创建和编辑新的内容片段。 您还将学习如何创建内容片段的变体。
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 1. 对于&#x200B;**全名**，请输入：**Stacey Roswells**。
 1. 对于&#x200B;**传记**，请输入简短的传记。 需要灵感吗？ 请随意重新使用此[文本文件](assets/author-content-fragments/stacey-roswells-bio.txt)。
-1. 对于&#x200B;**图片引用**，单击&#x200B;**文件夹**&#x200B;图标并浏览至&#x200B;**WKND站点** > **英语** **参与者** > **stacey-roswells.jpg&lt;a1/>.**&#x200B;此值将根据路径计算：`/content/dam/wknd/en/contributors/stacey-roswells.jpg`。
+1. 对于&#x200B;**图片引用**，单击&#x200B;**文件夹**&#x200B;图标并浏览至&#x200B;**WKND站点** > **英语** **参与者** > **stacey-roswells.jpg**. 此值将根据路径计算：`/content/dam/wknd/en/contributors/stacey-roswells.jpg`。
 1. 对于&#x200B;**职业**，选择&#x200B;**摄影师**。
 
    ![创作的片段](assets/author-content-fragments/stacye-roswell-fragment-authored.png)
