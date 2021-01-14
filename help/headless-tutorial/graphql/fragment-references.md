@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '858'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
-> 针对内容片段投放的AEM GraphQL API将于2021年初发布。
-> 相关文档可供预览使用。
+> AEM GraphQL API for Content Fragments投放可应请求提供。
+> 请联系Adobe支持，为AEM启用API作为Cloud Service项目。
 
 可以从其他内容片段中引用内容片段。 这使用户能够构建具有片段之间关系的复杂数据模型。
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 
 现在，冒险内容片段模型已更新，我们可以编辑现有片段并引用参与者。 应当注意，编辑内容片段模型&#x200B;*会影响*&#x200B;任何从其创建的现有内容片段。
 
-1. 导航至&#x200B;**资产**>**文件**>**WKND站点****英语****冒险**>**[巴厘岛冲浪营地](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)&lt;a11/>2/>。**
+1. 导航至&#x200B;**资产**>**文件**>**WKND站点****英语****冒险**>**[巴厘岛冲浪营地](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)** 2/>。
 
    ![巴厘岛冲浪营文件夹](assets/setup/bali-surf-camp-folder.png)
 
