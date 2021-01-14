@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '980'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
-> 针对内容片段投放的AEM GraphQL API将于2021年初发布。
-> 相关文档可供预览使用。
+> AEM GraphQL API for Content Fragments投放可应请求提供。
+> 请联系Adobe支持，为AEM启用API作为Cloud Service项目。
 
 在本章中，学习如何使用&#x200B;**内容片段模型**&#x200B;建模内容和构建模式。 您将检查现有模型并创建新模型。 您还将了解可用于将模式定义为模型一部分的不同数据类型。
 
