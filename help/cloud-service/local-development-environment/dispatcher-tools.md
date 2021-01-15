@@ -11,9 +11,9 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: 1b4a927a68d24eeb08d0ee244e85519323482910
+source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1566'
 ht-degree: 2%
 
 ---
@@ -96,7 +96,7 @@ AEM作为Cloud ServiceSDK或AEM SDK，包含用于在本地运行Apache HTTP Web
 
 + 使用:
    + Windows: `bin\validate src`
-   + macOS/Linux:`./bin/validate ./src`
+   + macOS/Linux:`./bin/validate.sh ./src`
 
 ## 在本地运行Dispatcher
 
@@ -185,6 +185,13 @@ AEM作为Cloud ServiceSDK的发布服务，在端口4503上本地运行，可通
 >[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12&learn=on)
 
 *此视频使用macOS进行说明。等效的Windows/Linux命令可用于获得类似结果*
+
+### 日志文件访问
+
+Apache Web服务器和AEM Dispatcher日志可以直接在Docker容器中访问：
+
++ [访问Docker容器中的日志](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
++ [将Docker日志复制到本地文件系统](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
 
 ## 何时更新调度程序工具{#dispatcher-tools-version}
 
