@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 5252
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '394'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 
 调用`bin/docker_run`时，调度程序日志将输出到stdout，但可以直接访问Docker包含的日志。
 
-### 访问Docker容器中的日志
+### 访问Docker容器{#dispatcher-tools-access-logs}中的日志
 
 调度程序日志可以直接在位于`/etc/httpd/logs`的Docker容器中访问。
 
@@ -73,7 +73,10 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-### 将Docker日志复制到本地文件系统
+_必 `<CONTAINER ID>` 须 `docker exec -it <CONTAINER ID> /bin/sh` 用命令中列出的目标容器ID替换 `docker ps` 中。_
+
+
+### 将Docker日志复制到本地文件系统{#dispatcher-tools-copy-logs}
 
 调度程序日志可以从位于`/etc/httpd/logs`的Docker容器中复制到本地文件系统，以便使用您喜爱的日志分析工具进行检查。 请注意，这是一个时间点拷贝，不提供日志的实时更新。
 
@@ -90,3 +93,4 @@ $ ls
     dispatcher.log          healthcheck_access_log  httpd_access.log        httpd_error.log
 ```
 
+_必 `<CONTAINER_ID>` 须 `docker cp <CONTAINER_ID>:/var/log/apache2 ./` 用命令中列出的目标容器ID替换 `docker ps` 中。_
