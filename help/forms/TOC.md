@@ -6,9 +6,9 @@ user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员
 breadcrumb-title: AEM Forms 教程
 index: y
 translation-type: tm+mt
-source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
+source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '938'
 ht-degree: 6%
 
 ---
@@ -125,6 +125,18 @@ ht-degree: 6%
    + [将PDF表单转换为自适应表单](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [配置转换的自适应表单](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [将XDP模板与Adobe Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
++ 签名多个Forms{#sign-multiple-documents}
+   + [简介](sign-multiple-documents/introduction.md)
+   + [配置数据源](sign-multiple-documents/configure-data-source.md)
+   + [创建OSGi服务](sign-multiple-documents/create-osgi-service.md)
+   + [创建主工作流](sign-multiple-documents/create-main-workflow.md)
+   + [更新签名状态工作流](sign-multiple-documents/update-signature-status.md)
+   + [自定义摘要组件](sign-multiple-documents/customize-summary-component.md)
+   + [创建客户端库](sign-multiple-documents/create-client-lib.md)
+   + [创建表单模板](sign-multiple-documents/create-af-template.md)
+   + [创建初始表单](sign-multiple-documents/create-initial-form.md)
+   + [创建用于签名的Forms](sign-multiple-documents/create-forms-for-signing.md)
+   + [测试解决方案](sign-multiple-documents/testing-and-trouble-shooting.md)
 + AEM Workflow{#variables-aem-workflow}中的变量
    + [简介——工作流中的变量](variables-aem-workflow/introduction.md)
    + [XML变量](variables-aem-workflow/part1.md)
@@ -169,7 +181,7 @@ ht-degree: 6%
    + [第3部分——使用ACS用户档案信息预填表单](aem-forms-with-adobe-campaign/partthree.md)
    + [第4部分——使用表单用户档案模型创建ACS数据](aem-forms-with-adobe-campaign/partfour.md)
 
-+ Document Services {#document-services}
++ 文档服务 {#document-services}
    + [在AEM Forms使用汇编服务](document-services/using-assembler-service-in-aem-forms.md)
    + [在AEM Forms使用监视文件夹](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms使用条形码服务](document-services/barcode-service-adaptive-forms-article.md)
