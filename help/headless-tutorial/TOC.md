@@ -12,9 +12,9 @@ activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '103'
 ht-degree: 31%
 
 ---
@@ -40,3 +40,7 @@ ht-degree: 31%
    + [4 —— 了解GraphQL API](./graphql/explore-graphql-api.md)
    + [5 —— 来自外部应用程序的查询](./graphql/graphql-and-external-app.md)
    + [6 —— 使用片段引用进行高级数据建模](./graphql/fragment-references.md)
++ 基于令牌的身份验证{#authentication}
+   + [概述](./authentication/overview.md)
+   + [1 —— 地方发展访问令牌](./authentication/local-development-access-token.md)
+   + [2 —— 服务凭据](./authentication/service-credentials.md)
