@@ -4,9 +4,9 @@ description: 作为Cloud Service为Adobe Experience Manager(AEM)提供的教程�
 sub-product: 站点，云管理器，基础，资产
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
+source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '277'
 ht-degree: 8%
 
 ---
@@ -19,6 +19,10 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM作为Clou
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
 ## 新增功能
+
+* **[从外部应用程序以Cloud Service身份验证AEM（教程）](../headless-tutorial/authentication/overview.md)**
+
+   *了解如何使用基于令牌的身份验证作为HTTP上的Cloud Service与AEM进行交互*
 
 * **[批量导入（视频）](./migration/bulk-import.md)**
 
@@ -36,9 +40,6 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM作为Clou
 
    *了解如何在Adobe Admin Console配置IMS用户，以便他们能够访问AEM*
 
-* **[将AEM作为Cloud Service进行调试（教程）](./debugging/cloud-service/overview.md)**
-
-   *了解如何将AEM作为Cloud Service进行调试*
 
 ## 员工挑选
 
