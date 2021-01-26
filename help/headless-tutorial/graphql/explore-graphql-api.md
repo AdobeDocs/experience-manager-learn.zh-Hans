@@ -11,7 +11,7 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: bfcc9dbb70753f985a2e47f329dbb9f43f5805e2
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 0%
@@ -73,7 +73,7 @@ AEM的GraphQL API提供了一种功能强大的查询语言，可向下游应用
 
    `fullName` 属 `occupation` 于简单属性。从[定义内容片段模型](./content-fragment-models.md)一章中回想，`fullName`和`occupation`是定义相应字段的&#x200B;**属性名称**&#x200B;时使用的值。
 
-1. `pictureReference` 代表 `biography` 更复杂的领域。使用以下内容更新查询，以返回有关`pictureReference`和`biography`字段的数据。
+1. `pictureReference` 代表 `biographyText` 更复杂的领域。使用以下内容更新查询，以返回有关`pictureReference`和`biographyText`字段的数据。
 
    ```graphql
    {
@@ -82,7 +82,7 @@ AEM的GraphQL API提供了一种功能强大的查询语言，可向下游应用
          _path
          fullName
          occupation
-         biography {
+         biographyText {
            html
          }
          pictureReference {
@@ -97,7 +97,7 @@ AEM的GraphQL API提供了一种功能强大的查询语言，可向下游应用
    }
    ```
 
-   `biography` 是多行文本字段，GraphQL API允许我们为结果选择各种格 `html`式， `markdown`如 `json` 、或 `plaintext`。
+   `biographyText` 是多行文本字段，GraphQL API允许我们为结果选择各种格 `html`式， `markdown`如 `json` 、或 `plaintext`。
 
    `pictureReference` 是内容引用，它应为图像，因此使用内 `ImageRef` 置对象。这允许我们请求有关正在引用的映像的其他数据，如`width`和`height`。
 
