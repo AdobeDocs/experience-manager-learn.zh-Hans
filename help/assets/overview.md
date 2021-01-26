@@ -3,9 +3,9 @@ title: AEM Assets 视频和教程
 description: Adobe Experience Manager资产的视频和教程集
 sub-product: 资产，动态媒体
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '227'
 ht-degree: 14%
 
 ---
@@ -16,6 +16,11 @@ ht-degree: 14%
 Adobe Experience Manager资产是AEM Platform上的一款数字资产管理工具，它允许用户在基于Web的存储库中创建、管理和共享其数字资产(图像、视频、文档和音频剪辑)。 本用户指南包含有关AEM Assets的众多特性和功能的视频和教程。
 
 ## 新增功能
+
+
+* **[发布资产（视频）](./sharing/publish.md)**
+
+   *了解将资产从AEM作者发布到AEM发布的过程*
 
 * **[水印（视频）](./advanced/watermarks.md)**
 
@@ -32,10 +37,6 @@ Adobe Experience Manager资产是AEM Platform上的一款数字资产管理工�
 * **[处理用户档案（视频）](./configuring/processing-profiles.md)**
 
    *了解如何将Assets Microservices调用到演绎版资源*
-
-* **[使用资产收藏集（视频）](./search-and-discovery/collections.md)**
-
-   *了解AEM Assets的收藏集如何提供组织和发现资产的新方式*
 
 ## 员工挑选
 
