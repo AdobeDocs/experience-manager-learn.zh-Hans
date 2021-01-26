@@ -2,10 +2,10 @@
 title: AEM无头教程
 description: 关于如何将Adobe Experience Manager用作无外设CMS的教程集。
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 5%
+source-wordcount: '460'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +31,13 @@ AEM GraphQL API for Content Fragments
 
 为了克服这些难题，GraphQL提供了一个基于查询的API，允许客户仅查询AEM所需的内容，并通过单个API调用接收。
 
-* 了解如何使用AEM GraphQL API阅读[AEM GraphQL API入门教程](./graphql/overview.md)
+* 在《AEM GraphQL API快速入门》教程](./graphql/overview.md)中了解如何使用AEM GraphQL API[
+
+## 基于令牌的身份验证教程
+
+AEM公开了各种可以无头方式交互的HTTP端点，从GraphQL、AEM Content Services到Assets HTTP API。 通常，这些无头用户可能需要向AEM进行身份验证才能访问受保护的内容或操作。 为便于实现此目的，AEM支持基于令牌的对来自外部应用程序、服务或系统的HTTP请求的身份验证。
+
+* 了解如何使用[从外部应用程序教程](./authentication/overview.md)将AEM验证为Cloud Service的访问令牌，通过HTTP验证到AEM
 
 ## AEM内容服务教程
 
@@ -39,7 +45,7 @@ AEM Content Services利用传统的AEM页面组成无头REST API端点，AEM组�
 
 AEM Content Services允许使用与在AEM Sites创作网页时相同的内容抽象来定义这些HTTP API的内容和模式。 AEM页面和AEM组件的使用使营销人员能快速构建和更新灵活的JSON API，这些JSON API可以支持任何应用程序。
 
-* 了解如何使用AEM Content Services阅读《AEM Content Services入门》教程](./content-services/overview.md)[
+* 在《AEM内容服务入门》教程[中了解如何使用AEM Content Services](./content-services/overview.md)
 
 ## AEM GraphQL与AEM Content Services
 
