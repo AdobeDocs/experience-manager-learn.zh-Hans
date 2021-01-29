@@ -10,9 +10,9 @@ audience: developer
 kt: 6785
 thumbnail: 330477.jpg
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ![获得本地开发访问令牌](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-本地开发访问令牌提供对AEM作者和发布服务的访问权限（以生成令牌的用户身份）及其权限。 尽管这是开发令牌，但请勿共享此令牌。
+本地开发访问令牌提供对AEM作者和发布服务的访问权限（以生成令牌的用户身份）及其权限。 尽管这是开发令牌，但请勿共享此令牌或存储在源代码控制中。
 
 1. 在[AdobeAdminConsole](https://adminconsole.adobe.com/)中，确保您（开发人员）是以下成员：
    + __云管理器——开__ 发人员IMS产品用户档案(授予访问AEM开发人员控制台的权限)
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ![AEM开发人员控制台——集成——获取本地开发令牌](./assets/local-development-access-token/developer-console.png)
 
-## 下载本地开发访问令牌{#download-local-development-access-token}
+## 已使用本地开发访问令牌{#use-local-development-access-token}
 
 ![本地开发访问令牌-外部应用程序](assets/local-development-access-token/local-development-access-token-external-application.png)
 
@@ -55,11 +55,11 @@ ht-degree: 0%
 1. 外部应用程序将发往AEM的HTTP请求构建为Cloud Service，将本地开发访问令牌添加为HTTP请求的授权头的承载令牌
 1. AEM作为Cloud Service接收HTTP请求、验证请求并执行HTTP请求所请求的工作，并将HTTP响应返回给外部应用程序
 
-### 外部应用程序
+### 外部应用程序示例
 
 我们将创建一个简单的外部JavaScript应用程序，以说明如何使用本地开发者访问令牌通过HTTPS以Cloud Service方式有计划地访问AEM。 这说明了在AEM之外运行的&#x200B;_任何_&#x200B;应用程序或系统（无论框架或语言如何）如何使用访问令牌以编程方式验证AEM并将其作为Cloud Service访问。 在[下一节](./service-credentials.md)中，我们将更新此应用程序代码，以支持生成用于生产用途的令牌的方法。
 
-此应用程序从命令行运行，并使用AEM AssetsHTTP API更新AEM资产元数据，流程如下：
+此范例应用程序从命令行运行，并使用AEM AssetsHTTP API更新AEM资产元数据，流程如下：
 
 1. 从命令行读取参数(`getCommandLineParams()`)
 1. 获取用于验证AEM的访问令牌作为Cloud Service(`getAccessToken(...)`)
@@ -208,11 +208,11 @@ ht-degree: 0%
    }
    ```
 
-   查看`listAssetsByFolder(...)`和`updateMetadata(...)`中的`fetch(..)`调用，注意`headers`定义值为`Bearer <ACCESS TOKEN>`的`Authorization` HTTP请求标头。 这是从外部应用程序发出的HTTP请求作为Cloud Service验证到AEM的方式。
+   查看`listAssetsByFolder(...)`和`updateMetadata(...)`中的`fetch(..)`调用，注意`headers`定义值为`Bearer ACCESS_TOKEN`的`Authorization` HTTP请求标头。 这是从外部应用程序发出的HTTP请求作为Cloud Service验证到AEM的方式。
 
    ```javascript
    ...
-   return fetch(`${params.aem}${ASSETS_HTTP_API}${folder}.json?configid=ims`, {
+   return fetch(`${params.aem}${ASSETS_HTTP_API}${folder}.json`, {
                method: 'get',
                headers: { 
                    'Content-Type': 'application/json',
@@ -267,4 +267,6 @@ ht-degree: 0%
 
 ## 后续步骤
 
-既然我们已经使用本地开发令牌以编程方式将AEM作为Cloud Service访问，我们需要将代码更新到。
+既然我们已经使用本地开发令牌以编程方式将AEM作为Cloud Service访问，我们需要更新应用程序以使用服务凭据来处理，这样该应用程序就可以在生产上下文中使用。
+
++ [如何使用服务凭据](./service-credentials.md)
