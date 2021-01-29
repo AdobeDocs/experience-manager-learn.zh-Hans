@@ -10,9 +10,9 @@ audience: developer
 kt: 6785
 thumbnail: 330519.jpg
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1824'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,11 @@ ht-degree: 0%
 
 服务凭据可能显示类似的[本地开发访问令牌](./local-development-access-token.md)，但在以下几种主要方式上有所不同：
 
-+ 服务凭据是&#x200B;_不是_&#x200B;访问令牌，而是用于获取访问令牌的凭据。
-+ 服务凭据是永久的，除非撤销，否则不会更改，而本地开发访问令牌会每天过期。
-+ AEM作为Cloud Service环境的服务凭据映射到单个AEM用户，而本地开发访问令牌验证为生成访问令牌的AEM用户。
++ 服务凭据是&#x200B;_不是_&#x200B;访问令牌，而是用于&#x200B;_获取_&#x200B;访问令牌的凭据。
++ 服务凭据更为永久（每365天过期），除非撤销，否则不更改，而本地开发访问令牌每天过期。
++ AEM作为Cloud Service环境的服务凭据映射到单个AEM技术帐户用户，而本地开发访问令牌验证为生成访问令牌的AEM用户。
+
+服务凭据及其生成的访问令牌以及本地开发访问令牌都应保密，因为这三个都可以作为Cloud Service环境用于访问其各自的AEM
 
 ## 生成服务凭据
 
@@ -39,7 +41,7 @@ ht-degree: 0%
 
 ### 服务凭据初始化
 
-与本地开发访问令牌不同，服务凭据需要Adobe组织IMS管理员进行一次性初始化，然后才能下载。
+与本地开发访问令牌不同，服务凭据需要Adobe组织IMS管理员执行一次性初始化&#x200B;_，然后才能下载。_
 
 ![初始化服务凭据](assets/service-credentials/initialize-service-credentials.png)
 
@@ -55,7 +57,7 @@ __这是作为Cloud Service环境的每AEM一次性初始化__
 
 ![AEM开发人员控制台——集成——获取服务凭据](./assets/service-credentials/developer-console.png)
 
-初始化AEM作为Cloud Service环境的服务凭据后，其他用户可以下载它们。
+一旦AEM作为Cloud Service环境的服务凭据被初始化，您的AdobeIMS组织中的其他AEM开发人员就可以下载它们。
 
 ### 下载服务凭据
 
@@ -71,7 +73,7 @@ __这是作为Cloud Service环境的每AEM一次性初始化__
 1. 点按&#x200B;__集成__&#x200B;选项卡
 1. 点按&#x200B;__获取服务凭据__&#x200B;按钮
 1. 点按左上角的下载按钮，下载包含服务凭据值的JSON文件，并将文件保存到安全位置。
-   + _如果这些服务凭据受到破坏，请立即联系Adobe支持部门撤销这些凭据_
+   + _如果服务凭据被破坏，请立即联系Adobe支持以撤销这些凭据_
 
 ## 安装服务凭据
 
@@ -137,38 +139,38 @@ function getCommandLineParams() {
 
 1. 更新`getAccessToken(..)`以检查JSON文件内容并确定它是否表示本地开发访问令牌或服务凭据。 通过检查是否存在`.accessToken`属性可轻松实现此目标，该属性仅存在于本地开发访问令牌JSON中。
 
-如果提供了服务凭据，则应用程序生成JWT并与AdobeIMS交换它以用于访问令牌。 我们将使用[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)的`auth(...)`函数，该函数既生成JWT，又在单个函数调用中将其交换为访问令牌。  `auth(..)`的参数是[JSON对象，由服务凭据JSON中提供的特定信息](https://www.npmjs.com/package/@adobe/jwt-auth#config-object)组成，如代码中所述。
+   如果提供了服务凭据，则应用程序生成JWT并与AdobeIMS交换它以用于访问令牌。 我们将使用[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)的`auth(...)`函数，该函数既生成JWT，又在单个函数调用中将其交换为访问令牌。  `auth(..)`的参数是[JSON对象，由服务凭据JSON中提供的特定信息](https://www.npmjs.com/package/@adobe/jwt-auth#config-object)组成，如代码中所述。
 
-```javascript
- async function getAccessToken(developerConsoleCredentials) {
+   ```javascript
+    async function getAccessToken(developerConsoleCredentials) {
+   
+        if (developerConsoleCredentials.accessToken) {
+            // This is a Local Development access token
+            return developerConsoleCredentials.accessToken;
+        } else {
+            // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
+            let serviceCredentials = developerConsoleCredentials.integration;
+   
+            // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
+            // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
+            let { access_token } = await auth({
+                clientId: serviceCredentials.technicalAccount.clientId, // Client Id
+                technicalAccountId: serviceCredentials.id,              // Technical Account Id
+                orgId: serviceCredentials.org,                          // Adobe IMS Org Id
+                clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
+                privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
+                metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
+                ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
+            });
+   
+            return access_token;
+        }
+    }
+   ```
 
-     if (developerConsoleCredentials.accessToken) {
-         // This is a Local Development access token
-         return developerConsoleCredentials.accessToken;
-     } else {
-         // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
-         let serviceCredentials = developerConsoleCredentials.integration;
+   现在，根据通过`file`命令行参数传入的JSON文件(本地开发访问令牌JSON或服务凭据JSON)，应用程序将派生访问令牌。
 
-         // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
-         // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
-         let { access_token } = await auth({
-             clientId: serviceCredentials.technicalAccount.clientId, // Client Id
-             technicalAccountId: serviceCredentials.id,              // Technical Account Id
-             orgId: serviceCredentials.org,                          // Adobe IMS Org Id
-             clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
-             privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
-             metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
-             ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
-         });
-
-         return access_token;
-     }
- }
-```
-
-    现在，根据通过“文件”命令行参数传入的JSON文件(本地开发访问令牌JSON或服务凭据JSON)，应用程序将派生访问令牌。
-    
-    请记住，虽然服务凭据未过期，但JWT和相应访问令牌会过期，并且需要在发出后12小时刷新。这可以通过使用“refresh_token”[由AdobeIMS提供](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)来完成。
+   请记住，虽然服务凭据未过期，但JWT和相应访问令牌会过期，并且需要在它们过期之前进行刷新。 这可以通过使用AdobeIMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)提供的`refresh_token` [来完成。
 
 1. 在进行这些更改后，从AEM开发人员控制台下载的服务凭据JSON（为简单起见，将其保存为与此`index.js`相同的文件夹`service_token.json`），执行将命令行参数`file`替换为`service_token.json`的应用程序，并将`propertyValue`更新为新值，以便在AEM中显示效果。
 
@@ -241,11 +243,6 @@ $ node index.js \
 1. 查看已更新属性的值，例如映射到已更新的`metadata/dc:rights` JCR属性的&#x200B;__Copyright__，该属性现在反映在`propertyValue`参数中提供的值，例如&#x200B;__WKND Restricted Use__
 
 ![WKND受限的使用元数据更新](./assets/service-credentials/asset-metadata.png)
-
-## 撤销服务凭据
-
-
-
 
 ## 恭喜！
 
