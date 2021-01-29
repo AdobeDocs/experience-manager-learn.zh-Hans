@@ -10,9 +10,9 @@ audience: developer
 kt: 6785
 thumbnail: 330460.jpg
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
@@ -41,29 +41,29 @@ Node.js应用程序的执行流程如下：
 
 ![外部应用程序](./assets/overview/external-application.png)
 
-1. 从命令行调用的Node.js应用程序
+1. 从命令行调用Node.js应用程序
 1. 命令行参数定义：
-   + AEM作为要连接到的Cloud Service主机(`aem`)
+   + AEM作为要连接到的Cloud Service作者服务主机(`aem`)
    + 将更新其资产的AEM资产文件夹(`folder`)
    + 要更新的元数据属性和值（`propertyName`和`propertyValue`）
    + 文件的本地路径，提供作为Cloud Service访问AEM所需的凭据(`file`)
-1. 用于验证AEM的访问令牌源自命令行参数提供的凭据JSON文件
+1. 用于验证AEM的访问令牌源自通过命令行参数`file`提供的JSON文件
 
-   a.如果凭据JSON中提供了用于非本地开发的服务凭据，则从AdobeIMS API检索访问令牌
-1. 应用程序使用访问令牌访问AEM并列表命令行参数中指定的文件夹中的所有资产
-1. 对于文件夹中的每个资产，应用程序会根据命令行参数中指定的属性名称和值更新其元数据
+   a.如果JSON文件(`file`)中提供了用于非本地开发的服务凭据，则从AdobeIMS API检索访问令牌
+1. 应用程序使用访问令牌访问AEM并列表命令行参数`folder`中指定的文件夹中的所有资源
+1. 对于文件夹中的每个资产，应用程序会根据命令行参数`propertyName`和`propertyValue`中指定的属性名称和值更新其元数据
 
 虽然此示例应用程序是Node.js，但这些交互可以使用不同的编程语言进行开发并从其他外部系统执行。
 
 ## 本地开发访问令牌
 
-为特定AEM生成本地开发访问令牌，作为Cloud Service环境，并提供对创作和发布服务的访问。  这些访问令牌是临时的，只用于帮助开发通过HTTP与AEM交互的外部应用程序或系统。 开发者不必获得和管理固定服务凭据，他们可以快速而轻松地自行生成临时访问令牌，使他们能够开发其集成。
+为特定AEM生成本地开发访问令牌，作为Cloud Service环境，并提供对创作和发布服务的访问。  这些访问令牌是临时的，仅用于开发通过HTTP与AEM交互的外部应用程序或系统。 开发者不必获得和管理固定服务凭据，他们可以快速而轻松地自行生成临时访问令牌，使他们能够开发其集成。
 
 + [如何使用本地开发访问令牌](./local-development-access-token.md)
 
 ## 服务凭据
 
-服务凭据是任何非开发场景（最明显是生产场景）中使用的绑定凭据，这些凭据有助于外部应用程序或系统以HTTPCloud Service身份与AEM进行身份验证并与之交互。 服务凭据本身不会直接发送到AEM进行身份验证，而是外部应用程序使用这些凭据生成JWT,JWT与AdobeIMS的API _交换作为_&#x200B;的安全访问令牌，然后该安全AEM可用于验证作为Cloud Service的HTTP请求。
+服务凭据是任何非开发场景（最明显是生产场景）中使用的绑定凭据，这些凭据有助于外部应用程序或系统以AEM身份通过HTTPCloud Service进行身份验证并与之交互。 服务凭据本身不会发送到AEM进行身份验证，而是外部应用程序使用这些凭据生成JWT,JWT与AdobeIMS的API _交换作为访问令牌的_，然后该API可用于验证作为Cloud Service的HTTP请求。
 
 + [如何使用服务凭据](./service-credentials.md)
 
