@@ -10,10 +10,10 @@ audience: developer
 kt: 4083
 thumbnail: 30359.jpg
 translation-type: tm+mt
-source-git-commit: 1e615d1c51fa0c4c0db335607c29a8c284874c8d
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
-source-wordcount: '3003'
-ht-degree: 3%
+source-wordcount: '3257'
+ht-degree: 1%
 
 ---
 
@@ -30,25 +30,34 @@ ht-degree: 3%
 
 ### 入门项目
 
+>[!NOTE]
+>
+> 如果您成功完成了上一章，则可以重复使用项目并跳过注销起始项目的步骤。
+
 查看教程构建的基线代码：
 
-1. 克隆[github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd)存储库。
-1. 检查`client-side-libraries/start`分支
+1. 查看[GitHub](https://github.com/adobe/aem-guides-wknd)中的`tutorial/client-side-libraries-start`分支
 
    ```shell
-   $ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
-   $ cd ~/code/aem-guides-wknd
-   $ git checkout client-side-libraries/start
+   $ cd aem-guides-wknd
+   $ git checkout tutorial/client-side-libraries-start
    ```
 
 1. 使用Maven技能将代码库部署到本地AEM实例：
 
    ```shell
-   $ cd ~/code/aem-guides-wknd
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd/tree/client-side-libraries/solution)上视图完成的代码，或通过切换到分支`client-side-libraries/solution`在本地签出代码。
+   >[!NOTE]
+   >
+   > 如果使用AEM 6.5或6.4，请将`classic`用户档案附加到任何Maven命令。
+
+   ```shell
+   $ mvn clean install -PautoInstallSinglePackage -Pclassic
+   ```
+
+您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/client-side-libraries-solution)上视图完成的代码，或通过切换到分支`tutorial/client-side-libraries-solution`在本地签出代码。
 
 ## 目标
 
@@ -60,7 +69,9 @@ ht-degree: 3%
 
 在本章中，您将为WKND站点和文章页面模板添加一些基线样式，以使实现更接近[UI设计模型](assets/pages-templates/wknd-article-design.xd)。 您将使用高级前端工作流将webpack项目集成到AEM客户端库中。
 
->[!VIDEO](https://video.tv.adobe.com/v/30359/?quality=12&learn=on)
+![完成的样式](assets/client-side-libraries/finished-styles.png)
+
+*应用了基线样式的文章页面*
 
 ## 背景 {#background}
 
@@ -88,256 +99,78 @@ ht-degree: 3%
 >
 > 以下客户端库组织由AEM Project Archetype生成，但仅代表一个起点。 项目最终如何管理CSS和Javascript并将它们交付到站点实施可能会因资源、技能和要求而大大不同。
 
-1. 使用Eclipse或其他IDE打开&#x200B;**ui.apps**&#x200B;模块。
+1. 使用VSCode或其他IDE打开&#x200B;**ui.apps**&#x200B;模块。
 1. 展开路径`/apps/wknd/clientlibs`以视图原型生成的clientlibs。
 
    ![ui.apps中的客户端库](assets/client-side-libraries/four-clientlib-folders.png)
 
    我们将在下面详细检查这些客户端库。
 
-1. Inspect`clientlibs/clientlib-base`的属性。
+1. 下表总结了客户端库。 有关[包括客户端库的更多详细信息，请访问](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html?lang=en#developing)。
 
-   **clientlib-** base表示WKND站点正常工作所需的CSS和JavaScript的基级。请注意设置为`wknd.base`的属性`categories`。 `categories` 是客户端库的标记机制，也是如何引用这些库的。
+   | 名称 | 描述 | 注释 |
+   |-------------------| ------------| ------|
+   | `clientlib-base` | WKND站点运行所需的CSS和JavaScript的基本级别 | 嵌入核心组件客户端库 |
+   | `clientlib-grid` | 生成使[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)正常工作所必需的CSS。 | 可在此处配置移动／平板电脑断点 |
+   | `clientlib-site` | 包含WKND站点的站点特定主题 | 由`ui.frontend`模块生成 |
+   | `clientlib-dependencies` | 嵌入任何第三方依赖项 | 由`ui.frontend`模块生成 |
 
-   注意`embed`属性和`String[]`值。 `embed`属性根据其类别嵌入其他clientlib。 **clientlib-** base将包括所需的所有AEM Core Component clientlibaries。这包括诸如传送的javascript等项目，以及要运行的快速搜索组件。 **clientlib-** base将不包括其自己的任何CSS和Javascript，而只是嵌入其他客户端库。**clientlib-** baseembeds  **clientlib-** gridclientlib with the类别 `wknd.grid`。
+1. 请注意，从源代码控件中忽略`clientlib-site`和`clientlib-dependencies`。 这是设计的，因为这些组件将在构建时由`ui.frontend`模块生成。
 
-   请注意设置为`true`的`allowProxy`属性。 始终在clientlibs上设置`allowProxy=true`是最佳做法。 `allowProxy`属性允许我们将客户端与应用程序代码存储在`/apps` **下，但**&#x200B;随后通过以`/etc.clientlibs`前缀的路径传送客户端，以避免向最终用户公开任何应用程序代码。 有关[allowProxy属性的详细信息，请访问此处。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)。
+## 更新基本样式{#base-styles}
 
-1. Inspect`clientlibs/clientlib-grid`的属性。
+然后，更新在&#x200B;**[ui.frontend](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)**&#x200B;模块中定义的基本样式。 `ui.frontend`模块中的文件将生成`clientlib-site`和`clientlib-dependecies`库，它们包含站点主题和任何第三方相关性。
 
-   **clientlib-** gridis负责包含／生成布局模型与AEM Sites [编](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html) 辑器配合使用所需的CSS。**clientlib-gridhad** 类别集设置为并 `wknd.grid` 通过clientlib-base **进行嵌入**。
+在支持[Sass](https://sass-lang.com/)或[TypeScript](https://www.typescriptlang.org/)等语言方面，客户端库有一些限制。 有许多开放源工具，如[NPM](https://www.npmjs.com/)和[webpack](https://webpack.js.org/)，可加速和优化前端开发。 **ui.frontend**&#x200B;模块的目标是能够使用这些工具管理大多数前端源文件。
 
-   可以自定义网格以使用不同数量的列和断点。 接下来，我们将更新生成的默认断点。
+1. 打开&#x200B;**ui.frontend**&#x200B;模块并导航到`src/main/webpack/site`。
+1. 打开文件`main.scss`
 
-1. 更新文件`/apps/wknd/clientlibs/clientlib-grid/less/grid.less`:
+   ![main.scss - entrypoint](assets/client-side-libraries/main-scss.png)
 
-   ```css
-   @import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
-   
-   /* maximum amount of grid cells to be provided */
-   @max_col: 12;
-   @screen-small: 767px;
-   @screen-medium: 1024px;
-   @screen-large: 1200px;
-   @gutter-padding: 14px;
-   
-   /* default breakpoint */
-   .aem-Grid {
-       .generate-grid(default, @max_col);
-   }
-   
-   /* phone breakpoint */
-   @media (max-width: @screen-small) {
-       .aem-Grid {
-           .generate-grid(phone, @max_col);
-       }
-   }
-   /* tablet breakpoint */
-   @media (min-width: (@screen-small + 1)) and (max-width: @screen-medium) {
-       .aem-Grid {
-           .generate-grid(tablet, @max_col);
-       }
-   }
-   
-   .aem-GridColumn {
-       padding: 0 @gutter-padding;
-   }
-   
-   .responsivegrid.aem-GridColumn {
-       padding-left: 0;
-       padding-right: 0;
-   }
+   `main.scss` 是模块中所有Sass文件的入口 `ui.frontend` 点。它将包括`_variables.scss`文件，其中包含一系列品牌变量，这些变量将用于项目中不同的Sass文件。 `_base.scss`文件也包含在内，并定义HTML元素的一些基本样式。 常规表达式包含`src/main/webpack/components`下各个组件样式的所有样式。 另一个常规表达式包含`src/main/webpack/site/styles`下的所有文件。
+
+1. Inspect文件`main.ts`。 `main.ts` 包 `main.scss` 括并包含一个定期表达式，用于收 `.js` 集 `.ts` 项目中的任何或文件。此入口点将由[webpack配置文件](https://webpack.js.org/configuration/)用作整个`ui.frontend`模块的入口点。
+
+1. Inspect`src/main/webpack/site/styles`下的文件：
+
+   ![样式文件](assets/client-side-libraries/style-files.png)
+
+   模板中全局元素的这些文件样式，如标题、页脚和主内容容器。 这些文件中的CSS规则目标不同的HTML元素`header`、`main`和`footer`。 这些HTML元素由前一章[页面和模板](./pages-templates.md)中的策略定义。
+
+1. 展开`src/main/webpack`下的`components`文件夹并检查文件。
+
+   ![组件Sass文件](assets/client-side-libraries/component-sass-files.png)
+
+   每个文件都映射到核心组件，如[Accordion组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/accordion.html?lang=en#components)。 每个核心组件都使用[块元素修饰符](https://getbem.com/)或BEM记号构建，以便更轻松地使用样式规则目标特定CSS类。 `/components`下的文件已由AEM Project Archetype以不同的BEM规则对每个组件进行了备份。
+
+1. 下载WKND基本样式&#x200B;**[wknd-base-styles-src.zip](./assets/client-side-libraries/wknd-base-styles-src.zip)**&#x200B;和&#x200B;**解压缩文件**。
+
+   ![WKND基样式](assets/client-side-libraries/wknd-base-styles-unzipped.png)
+
+   为了加速教程，我们提供了几个Sass文件，这些文件基于核心组件和文章页面模板的结构实施WKND品牌。
+
+1. 使用上一步中的文件覆盖`ui.frontend/src`的内容。 zip的内容应覆盖以下文件夹：
+
+   ```plain
+   /src/main/webpack
+            /base
+            /components
+            /resources
    ```
 
-   这将更改断点，使其与我们在`/ui.content/src/main/content/jcr_root/conf/wknd/settings/wcm/templates/article-page-template/structure/.content.xml`中设置的“模板”断点相对应。
+   ![更改的文件](assets/client-side-libraries/changed-files-uifrontend.png)
 
-   请注意，此文件实际引用`/libs`下的`grid_base.less`文件，该文件包含生成网格的自定义混音。
+   Inspect更改了文件，以查看WKND样式实施的详细信息。
 
-1. Inspect`clientlibs/clientlib-site`的属性。
+## Inspectui.frontend集成{#ui-frontend-integration}
 
-   **clientlib-** sitewill将包含WKND品牌的所有站点特定样式。请注意`wknd.site`的类别。 生成此clientlib的CSS和Javascript实际上将保留在`ui.frontend`模块中。 我们接下来将探索此集成。
-
-1. Inspect`clientlibs/clientlib-dependencies`的属性。
-
-   **clientlib-** dependenciesis旨在嵌入任何第三方依赖关系。它是单独的clientlib，因此可以根据需要将其加载到HTML页面的顶部。 请注意`wknd.dependencies`的类别。 生成此clientlib的CSS和Javascript实际上将保留在`ui.frontend`模块中。 我们将在教程的稍后部分探索此集成。
-
-## 使用ui.frontend模块{#ui-frontend}
-
-接下来，我们将探索&#x200B;**[ui.frontend](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)**&#x200B;模块的使用。
-
-### 动机
-
-在支持[Sass](https://sass-lang.com/)或[TypeScript](https://www.typescriptlang.org/)等语言方面，客户端库有一些限制。 开放源工具（如[NPM](https://www.npmjs.com/)和[webpack](https://webpack.js.org/)）也大量涌现，它们加速和优化了前端开发。
-
-**ui.frontend**&#x200B;模块的基本思想是能够使用像NPM和Webpack这样的出色工具管理大多数前端开发。 内置到&#x200B;**ui.frontend**&#x200B;模块中的关键集成部分[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)从webpack/npm项目获取已编译的CSS和JS伪像，并将它们转换为AEM客户端库。 这为前端开发者提供了更大的自由，让他们能够选择不同的工具和技术。
+内置到&#x200B;**ui.frontend**&#x200B;模块中的关键集成部分[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)从webpack/npm项目获取已编译的CSS和JS伪像，并将它们转换为AEM客户端库。
 
 ![ui.frontend体系结构集成](assets/client-side-libraries/ui-frontend-architecture.png)
 
-### 用法
+AEM Project Archetype会自动设置此集成。 接下来，探索其工作方式。
 
-现在，我们将通过&#x200B;**ui.frontend**&#x200B;模块添加一些Sass文件（`.scss`扩展），为WKND品牌添加一些基本样式。
-
-1. 打开&#x200B;**ui.frontend**&#x200B;模块并导航到`src/main/webpack/base/sass`。
-
-   ![ui.frontend模块](assets/client-side-libraries/ui-frontendmodule-eclipse.png)
-
-1. 在文件夹`src/main/webpack/base/sass`下新建一个名为`_variables.scss`的文件。
-1. 使用以下内容填充`_variables.scss`:
-
-   ```scss
-   //== Colors
-   //
-   //## Gray and brand colors for use across theme.
-   
-   $black:                  #202020;
-   $gray:                   #696969;
-   $gray-light:             #EBEBEB;
-   $gray-lighter:           #F7F7F7;
-   $white:                  #ffffff;
-   $yellow:                 #FFE900;
-   $blue:                   #0045FF;
-   $pink:                   #FF0058;
-   
-   $brand-primary:           $yellow;
-   
-   //== Layout
-   $gutter-padding: 14px;
-   $max-width: 1164px;
-   $max-body-width: 1680px;
-   $screen-xsmall: 475px;
-   $screen-small: 767px;
-   $screen-medium: 1024px;
-   $screen-large: 1200px;
-   
-   //== Scaffolding
-   //
-   //## Settings for some of the most global styles.
-   $body-bg:                   $white;
-   $text-color:                $black;
-   $text-color-inverse:        $gray-light;
-   
-   $brand-secondary:           $black;
-   
-   $brand-third:               $gray-light;
-   $link-color:                $blue;
-   $link-hover-color:          $link-color;
-   $link-hover-decoration:     underline;
-   $nav-link:                  $black;
-   $nav-link-inverse:          $gray-light;
-   
-   //== Typography
-   //
-   //## Font, line-height, and color for body text, headings, and more.
-   
-   $font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-   $font-family-serif:       "Asar",Georgia, "Times New Roman", Times, serif;
-   $font-family-base:        $font-family-sans-serif;
-   
-   $font-size-base:          18px;
-   $font-size-large:         24px;
-   $font-size-xlarge:        48px;
-   $font-size-medium:        18px;
-   $font-size-small:         14px;
-   $font-size-xsmall:        12px;
-   
-   $font-size-h1:            40px;
-   $font-size-h2:            36px;
-   $font-size-h3:            24px;
-   $font-size-h4:            16px;
-   $font-size-h5:            14px;
-   $font-size-h6:            10px;
-   
-   $line-height-base:        1.5;
-   $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
-   
-   $font-weight-light:      300;
-   $font-weight-normal:     normal;
-   $font-weight-semi-bold:  400;
-   $font-weight-bold:       600;
-   ```
-
-   Sass允许我们创建变量，然后这些变量可以用于不同的文件，以确保一致性。 注意字体系列。 在本教程的稍后部分，我们将了解如何包含对Google Web字体的调用，以便使用这些字体。
-
-1. 在`src/main/webpack/base/sass`下创建另一个名为`_elements.scss`的文件，并用以下内容填充该文件：
-
-   ```scss
-   body {
-       background-color: $body-bg;
-       font-family: $font-family-base;
-       margin: 0;
-       padding: 0;
-       font-size: $font-size-base;
-       text-align: left;
-       color: $text-color;
-       line-height: $line-height-base;
-   
-       .root {
-           max-width: $max-width;
-           margin: 0 auto;
-       }
-   }
-   
-   // Headings
-   // -------------------------
-   
-   h1, h2, h3, h4, h5, h6,
-   .h1, .h2, .h3, .h4, .h5, .h6 {
-       line-height: $line-height-base;
-       color: $text-color;
-   }
-   
-   h1, .h1,
-   h2, .h2,
-   h3, .h3 {
-       font-family: $font-family-serif;
-       font-weight: $font-weight-normal;
-       margin-top: $line-height-computed;
-       margin-bottom: ($line-height-computed / 2);
-   }
-   
-   h4, .h4,
-   h5, .h5,
-   h6, .h6 {
-       font-family: $font-family-sans-serif;
-       text-transform: uppercase;
-       font-weight: $font-weight-bold;
-   }
-   
-   h1, .h1 { font-size: $font-size-h1; }
-   h2, .h2 { font-size: $font-size-h2; }
-   h3, .h3 { font-size: $font-size-h3; }
-   h4, .h4 { font-size: $font-size-h4; }
-   h5, .h5 { font-size: $font-size-h5; }
-   h6, .h6 { font-size: $font-size-h6; }
-   
-   a {
-       color: $link-color;
-       text-decoration: none;
-   }
-   
-   h1 a, h2 a, h3 a {
-       color: $pink; /* for wednesdays :-) */
-   }
-   
-   // Body text
-   // -------------------------
-   
-   p {
-       margin: 0 0 ($line-height-computed / 2);
-       font-size: $font-size-base;
-       line-height: $line-height-base + 1;
-       text-align: justify;
-   }
-   ```
-
-   请注意，`_elements.scss`文件使用`_variables.scss`中的变量。
-
-1. 更新`src/main/webpack/base/sass`下的`_shared.scss`以包含`_elements.scss`和`_variables.scss`文件。
-
-   ```css
-   @import './variables';
-   @import './elements';
-   ```
 
 1. 打开命令行终端，然后使用`npm install`命令安装&#x200B;**ui.frontend**&#x200B;模块：
 
@@ -354,25 +187,25 @@ ht-degree: 3%
 
    ```shell
    $ npm run dev
-   ...
-   Entrypoint site = clientlib-site/css/site.css clientlib-site/js/site.js
-   Entrypoint dependencies = clientlib-dependencies/js/dependencies.js
-   start aem-clientlib-generator
-   ...
-   copy: dist/clientlib-site/css/site.css ../ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css/site.css
    ```
 
-   命令`npm run dev`应构建并编译Webpack项目的源代码，并最终在&#x200B;**ui.apps**&#x200B;模块中填充&#x200B;**clientlib-site**&#x200B;和&#x200B;**clientlib-dependencies**。
+   >[!CAUTION]
+   >
+   > 您可能会收到“中的错误”等错误。/src/main/webpack/site/main.scss”。
+   > 这通常是因为您的环境自运行`npm install`以来发生了更改。
+   > 运行`npm rebuild node-sass`以解决此问题。 如果本地开发计算机上安装的`npm`版本与`aem-guides-wknd/pom.xml`文件中的Maven `frontend-maven-plugin`版本不同，则会发生这种情况。 您可以通过修改pom文件中的版本来永久修复此问题，否则也可以。
+
+1. 命令`npm run dev`应构建并编译Webpack项目的源代码，并最终在&#x200B;**ui.apps**&#x200B;模块中填充&#x200B;**clientlib-site**&#x200B;和&#x200B;**clientlib-dependencies**。
 
    >[!NOTE]
    >
    >还有一个`npm run prod`用户档案，将最小化JS和CSS。 只要通过Maven触发Webpack构建，这就是标准编译。 有关[ui.frontend模块的更多详细信息，请访问](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)。
 
-1. Inspect`ui.frontend/dist/clientlib-site/css/site.css`下的文件`site.css`。 请注意，CSS主要由之前创建的`_elements.scss`文件的内容组成，但变量已被实际值替换。
+1. Inspect`ui.frontend/dist/clientlib-site/css/site.css`下的文件`site.css`。 这是基于Sass源文件的已编译CSS。
 
    ![分布式站点css](assets/client-side-libraries/ui-frontend-dist-site-css.png)
 
-1. Inspect文件`ui.frontend/clientlib.config.js`。 这是npm插件[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)的配置文件。 **aem-clientlib-generator是** 负责转换已编译的CSS/JavaScript并将其复制到ui.appsmodule **的工** 具。
+1. Inspect文件`ui.frontend/clientlib.config.js`。 这是npm插件[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)的配置文件，该插件将`/dist`的内容转换为客户端库并将其移至`ui.apps`模块。
 
 1. Inspect **ui.apps**&#x200B;模块`ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css/site.css`中的文件`site.css`。 这应该是&#x200B;**ui.frontend**&#x200B;模块中`site.css`文件的相同副本。 现在它位于&#x200B;**ui.apps**&#x200B;模块中，可将其部署到AEM。
 
@@ -380,17 +213,33 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   > 由于&#x200B;**clientlib-site**&#x200B;实际是在构建时间内编译的，因此使用&#x200B;**npm**&#x200B;或&#x200B;**maven**，实际上可以从&#x200B;**ui.apps**&#x200B;模块的源代码控件中忽略它。 Inspect **ui.apps**&#x200B;下的`.gitignore`文件。
+   > 由于&#x200B;**clientlib-site**&#x200B;是在构建时间内编译的，使用&#x200B;**npm**&#x200B;或&#x200B;**maven**，因此可以从&#x200B;**ui.apps**&#x200B;模块的源代码控件中安全地忽略它。 Inspect **ui.apps**&#x200B;下的`.gitignore`文件。
+
+1. 使用开发人员工具或Maven技能将`clientlib-site`库与AEM的本地实例同步。
+
+   ![同步Clientlib站点](assets/client-side-libraries/sync-clientlib-site.png)
+
+1. 在AEM上打开LA Skatepark文章：[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)。
+
+   ![更新了文章的基本样式](assets/client-side-libraries/updated-base-styles.png)
+
+   您现在应看到文章的更新样式。 您可能需要进行硬刷新以清除浏览器缓存的任何CSS文件。
+
+   它开始离模型更近了！
+
+   >[!NOTE]
+   >
+   > 当从项目`mvn clean install -PautoInstallSinglePackage`的根触发Maven生成时，将自动执行上述为构建ui.frontend代码并将其部署到AEM而执行的步骤。
 
 >[!CAUTION]
 >
-> 并非所有项目都需要使用&#x200B;**ui.frontend**&#x200B;模块。 **ui.frontend**&#x200B;模块增加了额外的复杂性，如果不需要／希望使用这些高级前端工具(Sass、webpack、npm...)，则可能会过度关闭。 因此，它被视为AEM Project Archetype的可选部分，并且继续完全支持使用标准客户端库以及vanilla CSS和JavaScript。
+> 并非所有项目都需要使用&#x200B;**ui.frontend**&#x200B;模块。 **ui.frontend**&#x200B;模块增加了额外的复杂性，如果不需要／希望使用这些高级前端工具(Sass、webpack、npm...)，则可能不需要它。
 
 ## 页面和模板包含{#page-inclusion}
 
-接下来，我们将检查项目设置如何将clientlibs包含在AEM模板／页面中。 在Web开发中，通常的最佳实践是在结束`</body>`标记之前，在HTML Header `<head>`和JavaScript中包含CSS。
+接下来，让我们查看clientlibs在AEM页面中的引用情况。 在Web开发中，通常的最佳实践是在结束`</body>`标记之前，在HTML Header `<head>`和JavaScript中包含CSS。
 
-1. 在&#x200B;**ui.apps**&#x200B;模块中，导航到`ui.apps/src/main/content/jcr_root/apps/wknd/components/structure/page`。
+1. 在&#x200B;**ui.apps**&#x200B;模块中，导航到`ui.apps/src/main/content/jcr_root/apps/wknd/components/page`。
 
    ![结构页面组件](assets/client-side-libraries/customheaderlibs-html.png)
 
@@ -398,32 +247,22 @@ ht-degree: 3%
 
 1. 打开文件`customheaderlibs.html`。 注意行`${clientlib.css @ categories='wknd.base'}`。 这表示类别为`wknd.base`的clientlib的CSS将通过此文件包含在内，有效地将&#x200B;**clientlib-base**&#x200B;包含在我们所有页面的标题中。
 
-1. 更新`customheaderlibs.html`以包含对之前在&#x200B;**ui.frontend**&#x200B;模块中指定的Google字体样式的引用。 我们还将暂时注释掉ContextHub...
+1. 更新`customheaderlibs.html`以包含对之前在&#x200B;**ui.frontend**&#x200B;模块中指定的Google字体样式的引用。
 
    ```html
    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Asar&display=swap" rel="stylesheet">
    <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
     data-sly-call="${clientlib.css @ categories='wknd.base'}"/>
    
-   <!--/* Include Context Hub
+   <!--/* Include Context Hub */-->
    <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
-   */-->
    ```
 
 1. Inspect文件`customfooterlibs.html`。 此文件（如`customheaderlibs.html`）应被实施项目覆盖。 此处，行`${clientlib.js @ categories='wknd.base'}`表示来自&#x200B;**clientlib-base**&#x200B;的JavaScript将包含在我们所有页面的底部。
 
-1. 使用Maven构建项目并将其部署到本地AEM实例：
+1. 使用开发人员工具或使用Maven技能将`page`组件导出到AEM服务器。
 
-   ```shell
-   $ cd ~/code/aem-guides-wknd
-   $ mvn clean install -PautoInstallSinglePackage
-   ```
-
-1. 浏览至位于[http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd)的WKND模板。
-
-1. 选择并打开模板编辑器中的&#x200B;**文章页面模板**。
-
-   ![选择文章页面模板](assets/client-side-libraries/open-article-page-template.png)
+1. 浏览至位于[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)的文章页面模板
 
 1. 单击&#x200B;**页面信息**&#x200B;图标，在菜单中选择&#x200B;**页面策略**&#x200B;以打开&#x200B;**页面策略**&#x200B;对话框。
 
@@ -439,7 +278,7 @@ ht-degree: 3%
    >
    > 也可以使用`customheaderlibs.html`或`customfooterlibs.html`脚本直接从页面组件中引用`wknd.site`或`wknd.dependencies`，就像我们在早期的`wknd.base` clientlib中看到的那样。 使用模板可提供一定的灵活性，您可以选择每个模板使用的客户端库。 例如，如果您有一个非常重的JavaScript库，它将仅用于选定模板。
 
-1. 导航到使用&#x200B;**文章页面模板**&#x200B;创建的&#x200B;**LA Skateparks**&#x200B;页面：[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)。 您应当看到字体和应用的一些基本样式有所不同，以指示在&#x200B;**ui.frontend**&#x200B;模块中创建的CSS正在工作。
+1. 导航到使用&#x200B;**文章页面模板**&#x200B;创建的&#x200B;**LA Skateparks**&#x200B;页面：[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)。 您应该看到字体的差异。
 
 1. 单击&#x200B;**页面信息**&#x200B;图标，在菜单中选择&#x200B;**视图为已发布**&#x200B;以在AEM编辑器外打开文章页面。
 
@@ -450,10 +289,11 @@ ht-degree: 3%
    ```html
    <head>
    ...
-   <link rel="stylesheet" href="/etc.clientlibs/wknd/clientlibs/clientlib-base.css" type="text/css">
-   <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-dependencies.js"></script>
-   <link rel="stylesheet" href="/etc.clientlibs/wknd/clientlibs/clientlib-dependencies.css" type="text/css">
-   <link rel="stylesheet" href="/etc.clientlibs/wknd/clientlibs/clientlib-site.css" type="text/css">
+   <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Asar&display=swap" rel="stylesheet"/>
+   <link rel="stylesheet" href="/etc.clientlibs/wknd/clientlibs/clientlib-base.min.css" type="text/css">
+   <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-dependencies.min.js"></script>
+   <link rel="stylesheet" href="/etc.clientlibs/wknd/clientlibs/clientlib-dependencies.min.css" type="text/css">
+   <link rel="stylesheet" href="/etc.clientlibs/wknd/clientlibs/clientlib-site.min.css" type="text/css">
    ...
    </head>
    ```
@@ -462,8 +302,8 @@ ht-degree: 3%
 
    ```html
    ...
-   <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-site.js"></script>
-   <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-base.js"></script>
+   <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-site.min.js"></script>
+   <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-base.min.js"></script>
    ...
    </body>
    ```
@@ -472,27 +312,14 @@ ht-degree: 3%
    >
    >在发布端，客户端库&#x200B;**不**&#x200B;是从&#x200B;**/apps**&#x200B;提供的，这一点至关重要，因为使用[调度程序过滤器部分](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section)时，应出于安全原因限制此路径。 客户端库的[allowProxy属性](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)可确保从&#x200B;**/etc.clientlibs**&#x200B;提供CSS和JS。
 
-## Webpack DevServer {#webpack-dev-server}
+## Webpack DevServer —— 静态标记{#webpack-dev-static}
 
-在前几个练习中，我们能够更新&#x200B;**ui.frontend**&#x200B;模块中的多个Sass文件，并通过构建过程最终看到AEM中反映的这些更改。 接下来，我们将研究如何利用[webpack-dev-server](https://webpack.js.org/configuration/dev-server/)快速开发我们的前端样式。
+在前几个练习中，我们能够更新&#x200B;**ui.frontend**&#x200B;模块中的多个Sass文件，并通过构建过程最终看到AEM中反映的这些更改。 接下来，我们将研究利用[webpack-dev-server](https://webpack.js.org/configuration/dev-server/)快速开发针对&#x200B;**static** HTML的前端样式的技术。
 
->[!VIDEO](https://video.tv.adobe.com/v/30352/?quality=12&learn=on)
+如果大部分样式和前端代码将由专用前端开发人员执行，而后者可能无法轻松访问AEM环境，则此技术非常实用。 此技术还允许FED直接对HTML进行修改，然后将该修改移交给AEM开发人员以作为组件实施。
 
-以下是视频中显示的高级步骤：
-
-1. 从&#x200B;**ui.frontend**&#x200B;模块中运行以下命令开始webpack dev服务器：
-
-   ```shell
-   $ cd ~/code/aem-guides-wknd/ui.frontend/
-   $ npm start
-   
-   > aem-maven-archetype@1.0.0 start code/aem-guides-wknd/ui.frontend
-   > webpack-dev-server --open --config ./webpack.dev.js
-   ```
-
-1. 这应打开一个位于[http://localhost:8080/](http://localhost:8080/)的新浏览器窗口，其中带有静态标记。
 1. 在[http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled)复制LA skatepark文章页面的页面源。
-1. 将复制的标记从AEM粘贴到&#x200B;**ui.frontend**&#x200B;模块`src/main/webpack/static`下的`index.html`中。
+1. 重新打开IDE。 将复制的标记从AEM粘贴到&#x200B;**ui.frontend**&#x200B;模块`src/main/webpack/static`下的`index.html`中。
 1. 编辑复制的标记并删除对&#x200B;**clientlib-site**&#x200B;和&#x200B;**clientlib-dependencies**&#x200B;的任何引用：
 
    ```html
@@ -506,55 +333,81 @@ ht-degree: 3%
 
    我们可以删除这些引用，因为webpack dev服务器将自动生成这些对象。
 
-1. 编辑`.scss`文件并查看浏览器中自动反映的更改。
+1. 通过从&#x200B;**ui.frontend**&#x200B;模块中运行以下命令，从新终端开始webpack dev服务器：
+
+   ```shell
+   $ cd ~/code/aem-guides-wknd/ui.frontend/
+   $ npm start
+   
+   > aem-maven-archetype@1.0.0 start code/aem-guides-wknd/ui.frontend
+   > webpack-dev-server --open --config ./webpack.dev.js
+   ```
+
+1. 这应打开一个位于[http://localhost:8080/](http://localhost:8080/)的新浏览器窗口，其中带有静态标记。
+
+1. 编辑文件`src/main/webpack/site/_variables.scss`。 将`$text-color`规则替换为：
+
+   ```diff
+   - $text-color:              $black;
+   + $text-color:              $pink;
+   ```
+
+   保存更改。
+
+1. 您应当自动看到在[http://localhost:8080](http://localhost:8080)上的浏览器中自动反映所做的更改。
+
+   ![本地WebPack开发服务器更改](assets/client-side-libraries/local-webpack-dev-server.png)
+
 1. 查看`/aem-guides-wknd.ui.frontend/webpack.dev.js`文件。 它包含用于开始webpack-dev-server的webpack配置。 请注意，它代理来自本地运行的AEM实例的路径`/content`和`/etc.clientlibs`。 这是图像和其他客户端库（不由&#x200B;**ui.frontend**&#x200B;代码管理）的可用方式。
 
    >[!CAUTION]
    >
-   > 静态标记的图像src指向本地AEM实例上的实时图像组件。 如果图像路径发生更改、AEM未启动或浏览器使用的未登录到本地AEM实例，则图像将显示为中断。
-1. 可以通过键入&#x200B;**从命令行停止Webpack服务器。**`CTRL+C`
+   > 静态标记的图像src指向本地AEM实例上的实时图像组件。 如果图像路径发生更改、AEM未启动或浏览器未登录到本地AEM实例，则图像将显示为断开。 如果移交到外部资源，则还可以用静态引用替换图像。
 
-## 将它放在一起{#putting-it-together}
+1. 可以通过键入`CTRL+C`从命令行停止Webpack服务器。****
 
-本教程的重点是客户端库和与AEM集成的潜在前端工作流。 考虑到这一点，我们将通过安装[client-side-libraries-final-styles.zip](assets/client-side-libraries/client-side-libraries-final-styles.zip)来加快实施，它为文章页面模板上使用的核心组件提供一些默认样式：
+## Webpack DevServer —— 观看和Aemsync {#webpack-dev-watch}
 
-* [痕迹导航](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/breadcrumb.html)
-* [下载](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/download.html)
-* [图像](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html)
-* [列表](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html)
-* [导航](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)
-* [快速搜索](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/quick-search.html)
-* [分隔符](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/separator.html)
+另一种方法是让Node.js观察`ui.frontend`模块中src文件的任何文件更改。 每当文件发生更改时，它都会快速编译客户端库并使用[aemsync](https://www.npmjs.com/package/aemsync) npm模块将更改同步到正在运行的AEM服务器。
 
->[!VIDEO](https://video.tv.adobe.com/v/30351/?quality=12&learn=on)
-
-以下是视频中显示的高级步骤：
-
-1. 下载[client-side-libraries-final-styles.zip](assets/client-side-libraries/client-side-libraries-final-styles.zip)并解压缩`ui.frontend/src/main/webpack`下的内容。 zip的内容应覆盖以下文件夹：
-
-   ```plain
-   /src/main/webpack
-            /base
-            /components
-            /resources
-   ```
-
-1. 预览使用webpack dev server的新样式：
+1. 在&#x200B;**ui.frontend**&#x200B;模块中运行以下命令，从新终端开始&#x200B;**watch**&#x200B;模式的webpack dev服务器：
 
    ```shell
-    $ cd ~/code/aem-guides-wknd/ui.frontend/
-    $ npm start
-   
-    > aem-maven-archetype@1.0.0 start code/aem-guides-wknd/ui.frontend
-    > webpack-dev-server --open --config ./webpack.dev.js
+   $ cd ~/code/aem-guides-wknd/ui.frontend/
+   $ npm run watch
    ```
 
-1. 将代码库部署到本地AEM实例，查看应用于LA滑板公园文章的新样式：
+1. 这将编译`src`文件，并与AEM同步更改，地址为[http://localhost:4502](http://localhost:4502)
 
    ```shell
-    $ cd ~/code/aem-guides-wknd
-    $ mvn -PautoInstallSinglePackage clean install
+   + jcr_root/apps/wknd/clientlibs/clientlib-site/js/site.js
+   + jcr_root/apps/wknd/clientlibs/clientlib-site/js
+   + jcr_root/apps/wknd/clientlibs/clientlib-site
+   + jcr_root/apps/wknd/clientlibs/clientlib-dependencies/css.txt
+   + jcr_root/apps/wknd/clientlibs/clientlib-dependencies/js.txt
+   + jcr_root/apps/wknd/clientlibs/clientlib-dependencies
+   http://admin:admin@localhost:4502 > OK
+   + jcr_root/apps/wknd/clientlibs/clientlib-site/css
+   + jcr_root/apps/wknd/clientlibs/clientlib-site/js/site.js
+   http://admin:admin@localhost:4502 > OK
    ```
+
+1. 导航到AEM和LA Skateparks文章：[http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled)
+
+   ![部署到AEM的更改](assets/client-side-libraries/changes-deployed-aem-watch.png)
+
+   更改应部署到AEM。 稍有延迟，您必须手动刷新浏览器才能看到更新。 但是，如果您使用新组件和对话框创作，直接在AEM中查看更改会很有用。
+
+1. 将更改还原到`_variables.scss`并保存更改。 稍有延迟后，更改应再次与AEM的本地实例同步。
+
+1. 停止Webpack开发服务器，并从项目的根执行完全Maven版本：
+
+   ```shell
+   $ cd aem-guides-wknd
+   $ mvn clean install -PautoInstallSinglePackage
+   ```
+
+   同样，`ui.frontend`模块经过编译、转换为clientlibraries并通过`ui.apps`模块部署到AEM。 但这次马文为我们做一切。
 
 ## 恭喜！{#congratulations}
 
@@ -564,10 +417,10 @@ ht-degree: 3%
 
 了解如何使用Experience Manager的样式系统实施个别样式并重复使用核心组件。 [使用样式系统进](style-system.md) 行开发包括使用样式系统以使用模板编辑器的品牌特定CSS和高级策略配置扩展核心组件。
 
-在[GitHub](https://github.com/adobe/aem-guides-wknd)上视图完成的代码，或在Git brach `client-side-libraries/solution`上本地查看并部署代码。
+在[GitHub](https://github.com/adobe/aem-guides-wknd)上视图完成的代码，或在Git brach `tutorial/client-side-libraries-solution`上本地查看并部署代码。
 
 1. 克隆[github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd)存储库。
-1. 查看`client-side-libraries/solution`分支。
+1. 查看`tutorial/client-side-libraries-solution`分支。
 
 ## 其他工具和资源{#additional-resources}
 
