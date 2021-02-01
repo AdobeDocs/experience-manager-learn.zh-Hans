@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1532'
 ht-degree: 1%
 
 ---
 
 
 # 快速设置{#setup}
-
->[!CAUTION]
->
-> AEM GraphQL API for Content Fragments投放可应请求提供。
-> 请联系Adobe支持，为AEM启用API作为Cloud Service项目。
 
 本章优惠本地环境的快速设置，以查看外部应用程序使用AEM  GraphQL API从AEM中消耗内容。 本教程的后几章将总结此设置。
 
@@ -67,10 +62,6 @@ ht-degree: 1%
 1. 提供管理员密码作为`admin`。 可以接受任何管理员密码，但建议使用本地开发的默认密码，以减少重新配置的需要。
 1. 几分钟后，AEM实例将完成安装，并将在[http://localhost:4502](http://localhost:4502)打开一个新的浏览器窗口。
 1. 使用用户名`admin`和密码`admin`登录。
-
->[!CAUTION]
->
-> 要继续安装，现在必须在快速启动SDK上手动启用GraphQL功能。 联系您的Adobe联系人以获取进一步说明。 只有在2021年发布该功能之前，才需要此手动步骤。
 
 ## 安装示例内容{#wknd-site}
 
