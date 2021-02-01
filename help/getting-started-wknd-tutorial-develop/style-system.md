@@ -12,9 +12,9 @@ kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
-source-wordcount: '3077'
+source-wordcount: '1996'
 ht-degree: 0%
 
 ---
@@ -32,25 +32,34 @@ ht-degree: 0%
 
 ### 入门项目
 
+>[!NOTE]
+>
+> 如果您成功完成了上一章，则可以重复使用项目并跳过注销起始项目的步骤。
+
 查看教程构建的基线代码：
 
-1. 克隆[github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd)存储库。
-1. 检查`style-system/start`分支
+1. 查看[GitHub](https://github.com/adobe/aem-guides-wknd)中的`tutorial/style-system-start`分支
 
    ```shell
-   $ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
-   $ cd ~/code/aem-guides-wknd
-   $ git checkout style-system/start
+   $ cd aem-guides-wknd
+   $ git checkout tutorial/style-system-start
    ```
 
 1. 使用Maven技能将代码库部署到本地AEM实例：
 
    ```shell
-   $ cd ~/code/aem-guides-wknd
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd/tree/style-system/solution)上视图完成的代码，或通过切换到分支`style-system/solution`在本地签出代码。
+   >[!NOTE]
+   >
+   > 如果使用AEM 6.5或6.4，请将`classic`用户档案附加到任何Maven命令。
+
+   ```shell
+   $ mvn clean install -PautoInstallSinglePackage -Pclassic
+   ```
+
+您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/style-system-solution)上视图完成的代码，或通过切换到分支`tutorial/style-system-solution`在本地签出代码。
 
 ## 目标
 
@@ -60,9 +69,11 @@ ht-degree: 0%
 
 ## 您将构建的{#what-you-will-build}
 
-在本章中，我们将使用[样式系统功能](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)创建文章页面上使用的多个组件变体。 我们还将使用样式系统为结构元素(如Header/Footer和布局容器)创建变体。
+在本章中，我们将使用[样式系统功能](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)创建文章页面上使用的&#x200B;**标题**&#x200B;和&#x200B;**文本**&#x200B;组件的变体。
 
->[!VIDEO](https://video.tv.adobe.com/v/30386/?quality=12&learn=on)
+![可用于标题的样式](assets/style-system/styles-added-title.png)
+
+*可用于标题组件的下划线样式*
 
 ## 背景 {#background}
 
@@ -70,29 +81,21 @@ ht-degree: 0%
 
 样式系统的一般思想是作者可以选择组件外观的各种样式。 “样式”由注入到组件外div中的其他CSS类作为后盾。 在客户端库中，会根据这些样式类添加CSS规则，以便组件更改外观。
 
-您可以在此处找到[样式系统的详细文档](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/style-system.html)。 此外，还有一个用于了解Style System](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)的出色[技术视频。
+您可以在此处找到[样式系统的详细文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)。 此外，还有一个用于了解Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)的出色[技术视频。
 
-## 标题组件样式{#title-component}
+## 下划线样式——标题{#underline-style}
 
-此时，[标题组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/title.html)已作为&#x200B;**ui.apps**&#x200B;模块的一部分被代理到`/apps/wknd/components/content/title`下的项目中。 标题元素(`H1`、`H2`、`H3`...)的默认样式已在`_elements.scss`文件`ui.frontend/src/main/webpack/base/sass/_elements.scss`下的&#x200B;**ui.frontend**&#x200B;模块中实现。
-
-### 下划线样式
+[标题组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/title.html)已作为&#x200B;**ui.apps**&#x200B;模块的一部分被代理到`/apps/wknd/components/title`下的项目中。 标题元素(`H1`、`H2`、`H3`...)的默认样式已在&#x200B;**ui.frontend**&#x200B;模块中实现。
 
 [WKND文章设计](assets/pages-templates/wknd-article-design.xd)包含标题组件的唯一样式并带有下划线。 样式系统可用于允许作者添加下划线样式，而不是创建两个组件或修改组件对话框。
 
 ![下划线样式——标题组件](assets/style-system/title-underline-style.png)
 
-### Inspect标题组件标记
+### Inspect标题标记
 
 作为前端开发者，设计核心组件样式的第一步是了解组件生成的标记。
 
-作为生成项目的一部分，原型嵌入&#x200B;**核心组件示例**&#x200B;项目。 对于开发人员和内容作者而言，此文档包含一个简单的参考，用于了解核心组件提供的所有功能。 实时版本也[可用](https://opensource.adobe.com/aem-core-wcm-components/library.html)。
-
-1. 打开新浏览器并视图标题组件：
-
-   本地AEM实例：[http://localhost:4502/editor.html/content/core-components-examples/library/title.html](http://localhost:4502/editor.html/content/core-components-examples/library/title.html)
-
-   实时示例：[https://opensource.adobe.com/aem-core-wcm-components/library/title.html](https://opensource.adobe.com/aem-core-wcm-components/library/title.html)
+1. 打开新的浏览器并视图AEM核心组件库站点上的标题组件：[https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html)
 
 1. 以下是标题组件的标记：
 
@@ -121,7 +124,7 @@ ht-degree: 0%
 
 ### 实施下划线样式- ui.frontend
 
-接下来，我们将使用我们项目的&#x200B;**ui.frontend**&#x200B;模块来实施下划线样式。 我们将使用与&#x200B;**ui.frontend**&#x200B;模块绑定的webpack开发服务器在部署到AEM的本地实例之前预览样式&#x200B;*。*
+接下来，使用我们项目的&#x200B;**ui.frontend**&#x200B;模块实现下划线样式。 我们将使用与&#x200B;**ui.frontend**&#x200B;模块绑定的webpack开发服务器在部署到AEM的本地实例之前预览样式&#x200B;*。*
 
 1. 从&#x200B;**ui.frontend**&#x200B;模块中运行以下命令开始webpack dev服务器：
 
@@ -141,37 +144,24 @@ ht-degree: 0%
 
    ![Webpack开发服务器](assets/style-system/static-webpack-server.png)
 
-1. 在Eclipse或您选择的IDE中，打开位于以下位置的文件`index.html`:`ui.frontend/src/main/webpack/static/index.html`。 这是Webpack开发服务器使用的静态标记。
+1. 在IDE中，打开位于以下位置的文件`index.html`:`ui.frontend/src/main/webpack/static/index.html`。 这是Webpack开发服务器使用的静态标记。
 1. 在`index.html`中，通过搜索&#x200B;*cmp-title*&#x200B;的文档，查找标题组件的实例，以向其添加下划线样式。 选择标题组件，其中文本为&#x200B;*“Vans oft the Wall Skatepark”*（第218行）。 将类`cmp-title--underline`添加到周围的div中：
 
-   ```html
-    <!-- before -->
-    <div class="title aem-GridColumn aem-GridColumn--default--8">
-        <div class="cmp-title">
-            <h2 class="cmp-title__text">Vans off the Wall Skatepark</h2>
-        </div>
-    </div>
-   ```
-
-   ```html
-    <!-- After -->
-    <div class="cmp-title--underline title aem-GridColumn aem-GridColumn--default--8">
-        <div class="cmp-title">
-            <h2 class="cmp-title__text">Vans off the Wall Skatepark</h2>
+   ```diff
+   - <div class="title aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--8">
+   + <div class="cmp-title--underline title aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--8">
+        <div data-cmp-data-layer="{&#34;title-8bea562fa0&#34;:{&#34;@type&#34;:&#34;wknd/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2021-01-22T18:54:20Z&#34;,&#34;dc:title&#34;:&#34;Vans Off the Wall&#34;}}" id="title-8bea562fa0" class="cmp-title">
+            <h2 class="cmp-title__text">Vans Off the Wall</h2>
         </div>
     </div>
    ```
 
 1. 返回浏览器并验证标记中是否反映了额外的类。
-1. 返回至&#x200B;**ui.frontend**&#x200B;模块并更新位于以下位置的文件`title.scss`:`ui.frontend/src/main/webpack/components/content/title/scss/title.scss`:
+1. 返回至&#x200B;**ui.frontend**&#x200B;模块并更新位于以下位置的文件`title.scss`:`ui.frontend/src/main/webpack/components/_title.scss`:
 
    ```css
    /* Add Title Underline Style */
    .cmp-title--underline {
-   
-       .cmp-title {
-       }
-   
        .cmp-title__text {
            &:after {
            display: block;
@@ -207,9 +197,9 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. 导航到位于以下位置的&#x200B;**文章页面模板**:[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html)。
+1. 导航到位于以下位置的&#x200B;**文章页面**&#x200B;模板：[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)
 
-1. 在&#x200B;**结构**&#x200B;模式中，在主&#x200B;**布局容器**&#x200B;中，选择&#x200B;**允许的组件&#x200B;*下列出的&lt;a6/>标题**组件旁边的&#x200B;**策略**图标：*
+1. 在&#x200B;**结构**&#x200B;模式中，在主&#x200B;**布局容器**&#x200B;中，选择&#x200B;**允许的组件&#x200B;*下列出的*标题**&#x200B;组件旁边的&#x200B;**策略**&#x200B;图标：
 
    ![标题策略配置](assets/style-system/article-template-title-policy-icon.png)
 
@@ -221,7 +211,7 @@ ht-degree: 0%
 
    **下划线** :  `cmp-title--underline`
 
-   ![标题的样式策略配置](assets/style-system/title-style-policy.gif)
+   ![标题的样式策略配置](assets/style-system/title-style-policy.png)
 
    单击&#x200B;**完成**&#x200B;以保存对标题策略所做的更改。
 
@@ -246,11 +236,9 @@ ht-degree: 0%
 
    使用您的浏览器开发人员工具验证标题组件周围的标记是否将CSS类`cmp-title--underline`应用于外部div。
 
-## 文本组件样式{#text-component}
+## 引号块样式——文本{#text-component}
 
-接下来，我们将重复类似步骤，以将唯一样式应用于[文本组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。 文本组件已作为&#x200B;**ui.apps**&#x200B;模块的一部分被代理到`/apps/wknd/components/content/text`下的项目中。 在`_elements.scss`文件`ui.frontend/src/main/webpack/base/sass/_elements.scss`下的&lt;a2/>文件的&#x200B;**ui.frontend**&#x200B;模块中，已实现段落元素的默认样式。
-
-### 引号块样式
+然后，重复类似步骤，将唯一样式应用于[文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)。 文本组件已作为&#x200B;**ui.apps**&#x200B;模块的一部分被代理到`/apps/wknd/components/text`下的项目中。 段落元素的默认样式已在&#x200B;**ui.frontend**&#x200B;中实现。
 
 [WKND文章设计](assets/pages-templates/wknd-article-design.xd)包含带有引号块的文本组件的唯一样式：
 
@@ -260,22 +248,19 @@ ht-degree: 0%
 
 我们将再次检查文本组件的标记。
 
-1. 打开新的浏览器并将文本组件作为核心组件库的一部分进行视图:
-本地AEM实例：[http://localhost:4502/editor.html/content/core-components-examples/library/text.html](http://localhost:4502/editor.html/content/core-components-examples/library/text.html)
-
-   实时示例：[https://opensource.adobe.com/aem-core-wcm-components/library/text.html](https://opensource.adobe.com/aem-core-wcm-components/library/text.html)
+1. 在以下位置查看文本组件的标记：[https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/text.html](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/text.html)
 
 1. 下面是文本组件的标记：
 
    ```html
-   <div class="cmp-text">
-       <p><b>Bold </b>can be used to emphasize a word or phrase, as can <u>underline</u> and <i>italics.&nbsp;</i><sup>Superscript</sup> and <sub>subscript</sub> are useful for mathematical (E = mc<sup>2</sup>) or scientific (h<sub>2</sub>O) expressions. Paragraph styles can provide alternative renderings, such as quote sections:</p>
-       <blockquote>"<i>Be yourself; everyone else is already taken"</i></blockquote>
-       <b>- Oscar Wilde</b>
+   <div class="text">
+       <div class="cmp-text" data-cmp-data-layer="{&quot;text-2d9d50c5a7&quot;:{&quot;@type&quot;:&quot;core/wcm/components/text/v2/text&quot;,&quot;repo:modifyDate&quot;:&quot;2019-01-22T11:56:17Z&quot;,&quot;xdm:text&quot;:&quot;<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>\n&quot;}}" id="text-2d9d50c5a7">
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
+       </div>
    </div>
    ```
 
-   标题组件的BEM记号：
+   文本组件的BEM记号：
 
    ```plain
    BLOCK cmp-text
@@ -285,11 +270,9 @@ ht-degree: 0%
 1. 样式系统将CSS类添加到组件周围的外div中。 因此，我们要定位的标记将类似于以下内容：
 
    ```html
-   <div class="STYLE-SYSTEM-CLASS-HERE"> <!-- Custom CSS class - implementation gets to define this -->
-       <div class="cmp-text">
-           <p><b>Bold </b>can be used to emphasize a word or phrase, as can <u>underline</u> and <i>italics.&nbsp;</i><sup>Superscript</sup> and <sub>subscript</sub> are useful for mathematical (E = mc<sup>2</sup>) or scientific (h<sub>2</sub>O) expressions. Paragraph styles can provide alternative renderings, such as quote sections:</p>
-           <blockquote>"<i>Be yourself; everyone else is already taken"</i></blockquote>
-           <b>- Oscar Wilde</b>
+   <div class="text STYLE-SYSTEM-CLASS-HERE"> <!-- Custom CSS class - implementation gets to define this -->
+       <div class="cmp-text" data-cmp-data-layer="{&quot;text-2d9d50c5a7&quot;:{&quot;@type&quot;:&quot;core/wcm/components/text/v2/text&quot;,&quot;repo:modifyDate&quot;:&quot;2019-01-22T11:56:17Z&quot;,&quot;xdm:text&quot;:&quot;<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>\n&quot;}}" id="text-2d9d50c5a7">
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
        </div>
    </div>
    ```
@@ -303,42 +286,26 @@ ht-degree: 0%
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
    $ npm start
-   
-   > aem-maven-archetype@1.0.0 start code/aem-guides-wknd/ui.frontend
-   > webpack-dev-server --open --config ./webpack.dev.js
    ```
 
-1. 在Eclipse或您选择的IDE中，打开位于以下位置的文件`index.html`:`ui.frontend/src/main/webpack/static/index.html`。 这是Webpack开发服务器使用的静态标记。
+1. 在IDE中，打开位于以下位置的文件`index.html`:`ui.frontend/src/main/webpack/static/index.html`。
 1. 在`index.html`中，通过搜索文本&#x200B;*&quot;Jacob Wester&quot;*（第210行）来查找文本组件的实例。 将类`cmp-text--quote`添加到周围的div中：
 
-   ```html
-    <!-- before -->
-    <div class="text aem-GridColumn aem-GridColumn--default--8">
-        <div class="cmp-text">
-            <blockquote>"There is no better place to shred then Los Angeles"</blockquote>
-            <p>Jacob Wester - Pro Skater</p>
+   ```diff
+   - <div class="text aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--8">
+   + <div class="cmp-text--quote text aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--8">
+        <div data-cmp-data-layer="{&#34;text-a15f39a83a&#34;:{&#34;@type&#34;:&#34;wknd/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2021-01-22T00:23:27Z&#34;,&#34;xdm:text&#34;:&#34;&lt;blockquote>&amp;quot;There is no better place to shred then Los Angeles.”&lt;/blockquote>\r\n&lt;p>- Jacob Wester, Pro Skater&lt;/p>\r\n&#34;}}" id="text-a15f39a83a" class="cmp-text">
+            <blockquote>&quot;There is no better place to shred then Los Angeles.”</blockquote>
+            <p>- Jacob Wester, Pro Skater</p>
         </div>
     </div>
    ```
 
-   ```html
-    <!-- After -->
-    <div class="cmp-text--quote text aem-GridColumn aem-GridColumn--default--8">
-        <div class="cmp-text">
-            <blockquote>"There is no better place to shred then Los Angeles"</blockquote>
-            <p>Jacob Wester - Pro Skater</p>
-        </div>
-    </div>
-   ```
-
-1. 返回浏览器并验证标记中是否反映了额外的类。
-1. 返回至&#x200B;**ui.frontend**&#x200B;模块并更新位于以下位置的文件`text.scss`:`ui.frontend/src/main/webpack/components/content/text/scss/text.scss`:
+1. 更新位于以下位置的文件`text.scss`:`ui.frontend/src/main/webpack/components/_text.scss`:
 
    ```css
    /* WKND Text Quote style */
-   
    .cmp-text--quote {
-   
        .cmp-text {
            background-color: $brand-third;
            margin: 1em 0em;
@@ -346,7 +313,7 @@ ht-degree: 0%
    
            blockquote {
                border: none;
-               font-size: $font-size-h2;
+               font-size: $font-size-large;
                font-family: $font-family-serif;
                padding: 14px 14px;
                margin: 0;
@@ -361,9 +328,7 @@ ht-degree: 0%
                    width: 80px;
                }
            }
-   
            p {
-               font-size:    $font-size-large;
                font-family:  $font-family-serif;
            }
        }
@@ -391,15 +356,15 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. 导航到位于以下位置的&#x200B;**文章页面模板**:[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html)。
+1. 导航到位于以下位置的&#x200B;**文章页面模板**:[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html))。
 
-1. 在&#x200B;**结构**&#x200B;模式中，在主&#x200B;**布局容器**&#x200B;中，选择&#x200B;**允许的组件&#x200B;*下列出的&lt;a6/>文本**组件旁边的&#x200B;**策略**图标：*
+1. 在&#x200B;**结构**&#x200B;模式中，在主&#x200B;**布局容器**&#x200B;中，选择&#x200B;**允许的组件&#x200B;*下列出的*文本**&#x200B;组件旁边的&#x200B;**策略**&#x200B;图标：
 
    ![文本策略配置](assets/style-system/article-template-text-policy-icon.png)
 
-1. 为具有以下值的文本组件创建新策略：
+1. 使用以下值更新文本组件策略：
 
-   *策略标题**: **WKND文本**
+   *策略标题**: **内容文本**
 
    *插件* >段 *落样式* >启 *用段落样式*
 
@@ -426,317 +391,35 @@ ht-degree: 0%
 
    作为作者，您应该能够打开／关闭样式。
 
-## 布局容器 {#layout-container}
+## 固定宽度-容器（奖金）{#layout-container}
 
-布局容器已用于创建文章页面模板的基本结构，并为内容作者提供拖放区域以在页面上添加内容。 布局容器还可以利用样式系统，为内容作者提供更多布局设计选项。
+容器组件已用于创建文章页面模板的基本结构，并为内容作者提供拖放区域以在页面上添加内容。 容器还可以利用样式系统，为内容作者提供更多版面设计选项。
 
-当前，CSS规则应用于整个页面，强制使用固定宽度。 相反，更灵活的方法是创建一个&#x200B;**固定宽度**&#x200B;样式，内容作者可以打开／关闭该样式。
+文章页面模板的&#x200B;**主容器符**&#x200B;包含两个可创作的容器符，并且具有固定宽度。
 
-### 实施固定宽度样式- ui.frontend
+![主容器](assets/style-system/main-container-article-page-template.png)
 
-我们将开始在项目的&#x200B;**ui.frontend**&#x200B;模块中实施固定宽度样式。
+*文章页面模板中的主容器*。
 
-1. 从&#x200B;**ui.frontend**&#x200B;模块中运行以下命令开始webpack dev服务器：
+**主容器**&#x200B;的策略将默认元素设置为`main`:
 
-   ```shell
-   $ cd ~/code/aem-guides-wknd/ui.frontend/
-   $ npm start
-   ```
+![主要容器策略](assets/style-system/main-container-policy.png)
 
-1. 打开位于以下位置的文件`index.html`:`ui.frontend/src/main/webpack/static/index.html`。
-1. 我们希望使文章页面模板的正文宽度固定，使页眉和页脚可自由扩展。 因此，我们希望在两个体验片段之间目标第2个`<div class='responsivegrid aem-GridColumn aem-GridColumn--default--12'`(布局容器)（第136行）
+使&#x200B;**主容器**&#x200B;固定的CSS在&#x200B;**ui.frontend**&#x200B;模块中设置为`ui.frontend/src/main/webpack/site/styles/container_main.scss` :
 
-   ![主体布局容器Div](assets/style-system/main-body-layoutContainer.png)
+```SCSS
+main.container {
+    padding: .5em 1em;
+    max-width: $max-content-width;
+    float: unset!important;
+    margin: 0 auto!important;
+    clear: both!important;
+}
+```
 
-1. 将类`cmp-layout-container--fixed`添加到上一步中标识的`div`。
+样式系统可用于创建作为容器策略一部分的&#x200B;**固定宽度**&#x200B;样式，而不是定位`main` HTML元素。 样式系统可让用户选择在&#x200B;**固定宽度**&#x200B;和&#x200B;**可变宽度**&#x200B;容器之间切换。
 
-   ```html
-   <!-- Experience Fragment Header -->
-   <div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
-       ...
-   </div>
-   <!-- Main body Layout Container -->
-   <div class="responsivegrid cmp-layout-container--fixed aem-GridColumn aem-GridColumn--default--12">
-       ...
-   </div>
-   <!-- Experience Fragment Footer -->
-   <div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
-       ...
-   </div>
-   ```
-
-1. 更新位于以下位置的文件`container.scss`:`ui.frontend/src/main/webpack/components/content/container/scss/container.scss`:
-
-   ```css
-   /* WKND Layout Container - Fixed Width */
-   
-   .cmp-layout-container--fixed {
-       @media (min-width: $screen-medium + 1) {
-           display:block;
-           max-width:  $max-width !important;
-           float: unset !important;
-           margin: 0 auto !important;
-           padding: 0 $gutter-padding;
-           clear: both !important;
-       }
-   }
-   ```
-
-1. 更新位于以下位置的文件`_elements.scss`:`ui.frontend/src/main/webpack/base/sass/_elements.scss`并更改`.root`规则，使变量`$max-body-width`设置新的max width。
-
-   ```css
-    /* Before */
-    body {
-        ...
-   
-        .root {
-            max-width: $max-width;
-            margin: 0 auto;
-            padding-top: 12px;
-        }
-    }
-   ```
-
-   ```css
-    /* After */
-    body {
-        ...
-   
-        .root {
-            max-width: $max-body-width;
-            margin: 0 auto;
-            padding-top: 12px;
-        }
-    }
-   ```
-
-   >[!NOTE]
-   >
-   > 变量和值的完整列表可在以下位置找到：`ui.frontend/src/main/webpack/base/sass/_variables.scss`。
-
-1. 返回浏览器后，您会看到页面的主要内容显示相同，但页眉和页脚的延伸范围要广得多。 这是意料之中的。
-
-   ![固定布局容器- Webpack服务器](assets/style-system/fixed-layout-container-webpack-server.png)
-
-### 更新布局容器策略
-
-接下来，我们将通过更新AEM中的布局容器策略来添加固定宽度样式。
-
-1. 使用Maven技能将代码库部署到本地AEM实例：
-
-   ```shell
-   $ cd ~/code/aem-guides-wknd
-   $ mvn clean install -PautoInstallSinglePackage
-   ```
-
-1. 导航到位于以下位置的&#x200B;**文章页面模板**:[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html)。
-
-1. 在&#x200B;**结构**&#x200B;模式中，选择主&#x200B;**布局容器**（在体验片段标题和页脚之间），然后选择&#x200B;**策略**&#x200B;图标。
-
-   ![配置主体布局容器策略](assets/style-system/layout-container-article-template-policy-icon.png)
-
-1. 更新&#x200B;**WKND Site Default**&#x200B;策略，为值`cmp-layout-container--fixed`的&#x200B;**固定宽度**&#x200B;加入一个附加样式：
-
-   ![WKND站点默认策略更新  ](assets/style-system/wknd-site-default-policy-update-fixed-width.png)
-
-   保存更改并刷新“文章页面模板”页面。
-
-1. 再次选择主&#x200B;**布局容器**（在体验片段标题和页脚之间）。 此时应显示&#x200B;**画笔**&#x200B;图标，您可以从样式下拉菜单中选择&#x200B;**固定宽度**。
-
-   ![应用固定宽度布局容器](assets/style-system/apply-fixed-width-layout-container.png)
-
-   您应该可以打开／关闭样式。
-
-1. 导览至AEM Sites编辑中的&#x200B;**La Skateparks**&#x200B;文章：[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)。 您应当看到固定宽度容器的实际操作。
-
-## 页眉／页脚——体验片段{#experience-fragment}
-
-接下来，我们将向Header和Footer添加样式，以完成文章页面模板。 Header和Footer都已作为体验片段实现，体验片段是容器内的组件组。 我们可以像样式系统中的其他核心组件组件一样，将唯一的CSS类应用于体验片段组件。
-
-### 实施标题样式- ui.frontend
-
-标题组件中的组件已设置了与[AdobeXD设计](assets/pages-templates/wknd-article-design.xd)匹配的样式，只需修改一些小布局。
-
-1. 从&#x200B;**ui.frontend**&#x200B;模块中运行以下命令开始webpack dev服务器：
-
-   ```shell
-   $ cd ~/code/aem-guides-wknd/ui.frontend/
-   $ npm start
-   ```
-
-1. 打开位于以下位置的文件`index.html`:`ui.frontend/src/main/webpack/static/index.html`。
-1. 通过搜索&#x200B;*class=&quot;experiencefragment*（第48行），查找体验片段组件的&#x200B;**first**&#x200B;实例。
-1. 将类`cmp-experiencefragment--header`添加到上一步中标识的`div`。
-
-   ```html
-       ...
-       <div class="root responsivegrid">
-           <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
-   
-           <!-- add cmp-experiencefragment--header -->
-           <div class="experiencefragment cmp-experiencefragment--header aem-GridColumn aem-GridColumn--default--12">
-               ...
-   ```
-
-1. 打开位于以下位置的文件`experiencefragment.scss`:`ui.frontend/src/main/webpack/components/content/experiencefragment/scss/experiencefragment.scss`。 将以下样式追加到文件：
-
-   ```css
-   /* Header Style */
-   .cmp-experiencefragment--header {
-   
-       .cmp-experiencefragment {
-           max-width: $max-width;
-           margin: 0 auto;
-       }
-   
-       /* Logo Image */
-       .cmp-image__image {
-           max-width: 8rem;
-           margin-top: $gutter-padding / 2;
-           margin-bottom: $gutter-padding / 2;
-       }
-   
-       @media (max-width: $screen-medium) {
-   
-           .cmp-experiencefragment {
-               padding-top: 1rem;
-               padding-bottom: 1rem;
-           }
-           /* Logo Image */
-           .cmp-image__image {
-               max-width: 6rem;
-               margin-top: .75rem;
-           }
-       }
-   }
-   ```
-
-   >[!CAUTION]
-   >
-   > 我们采用了一些快捷键来设计标题中Logo的样式。 徽标实际上只是碰巧位于体验片段中的图像组件。 假设稍后，我们需要在标题中添加另一个图像，我们无法区分这两个图像。 如果需要，始终可以在此处将“徽标”类添加到图像组件。
-
-1. 返回浏览器并视图Webpack开发服务器。 您应当看到标题样式已更新，使其与其余内容更加一致。 将浏览器缩小为平板电脑／移动设备宽度时，您还应注意到徽标的大小更合适。
-
-   ![体验片段标题](assets/style-system/header-experience-fragment-webpack.png)
-
-### 实施页脚样式- ui.frontend
-
-[AdobeXD designs](assets/pages-templates/wknd-article-design.xd)中的Footer包含一个带有浅文本的黑色背景。 我们需要在Experience Fragment Footer中设置内容样式，以反映这一点。
-
-1. 打开位于以下位置的文件`index.html`:`ui.frontend/src/main/webpack/static/index.html`。
-
-1. 通过搜索&#x200B;*class=&quot;experiencefragment*（第385行），查找体验片段组件的&#x200B;**第二个**&#x200B;实例。
-
-1. 将类`cmp-experiencefragment--footer`添加到上一步中标识的`div`。
-
-   ```html
-   <!-- add cmp-experiencefragment--footer -->
-   <div class="experiencefragment cmp-experiencefragment--footer aem-GridColumn aem-GridColumn--default--12">
-   ```
-
-1. 重新打开位于以下位置的文件`experiencefragment.scss`:`ui.frontend/src/main/webpack/components/content/experiencefragment/scss/experiencefragment.scss`。 **将以** 下样式附加到文件中：
-
-   ```css
-   /* Footer Style */
-   .cmp-experiencefragment--footer {
-   
-       background-color: $black;
-       color: $gray-light;
-       margin-top: 5rem;
-   
-       p {
-           font-size: $font-size-small;
-       }
-   
-       .cmp-experiencefragment {
-           max-width: $max-width;
-           margin: 0 auto;
-           padding-bottom: 0rem;
-       }
-   
-       /* Separator */
-       .cmp-separator {
-           margin-top: 2rem;
-           margin-bottom: 2rem;
-       }
-   
-       .cmp-separator__horizontal-rule {
-           border: 0;
-       }
-   
-       /* Navigation */
-       .cmp-navigation__item-link {
-           color: $nav-link-inverse;
-           &:hover,
-           &:focus {
-               background-color: unset;
-               text-decoration: underline;
-           }
-       }
-   
-       .cmp-navigation__item--level-1.cmp-navigation__item--active .cmp-navigation__item-link {
-           background-color: unset;
-           color: $gray-lighter;
-           text-decoration: underline;
-       }
-   
-   }
-   ```
-
-   >[!CAUTION]
-   >
-   > 同样，我们也会采取一些快捷方式，即从我们的Experience Fragment footer CSS中覆盖导航组件的默认样式。 页脚中不太可能有多个导航组件，而内容作者希望切换导航样式的可能性同样不大。 更好的做法是仅为导航组件创建页脚样式。
-
-1. 返回到浏览器和Webpack开发服务器。 您应当看到页脚样式已更新以与XD设计更接近。
-
-   ![页脚](assets/style-system/footer-webpack-style.png)
-
-1. 停止Webpack开发服务器。
-
-### 更新体验片段策略
-
-接下来，我们将通过更新AEM中的体验片段组件策略来添加页眉和页脚样式。
-
-1. 使用Maven技能将代码库部署到本地AEM实例：
-
-   ```shell
-   $ cd ~/code/aem-guides-wknd
-   $ mvn clean install -PautoInstallSinglePackage
-   ```
-
-1. 导航到位于以下位置的&#x200B;**文章页面模板**:[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html)。
-
-1. 在&#x200B;**结构**&#x200B;模式中，选择标题&#x200B;**体验片段**，然后选择&#x200B;**策略**&#x200B;图标。
-
-   ![配置体验片段策略](assets/style-system/experience-fragment-click-policy.png)
-
-1. 更新&#x200B;**WKND站点体验片段——标题**&#x200B;策略，以添加值`cmp-experiencefragment--header`的&#x200B;**默认CSS类**:
-
-   ![WKND站点体验片段——标题更新](assets/style-system/experience-fragment-header-policy-configure.png)
-
-   保存更改，您现在应看到应用了正确的标题CSS样式。
-
-   >[!NOTE]
-   >
-   > 由于除了在模板上切换标题样式外，无需切换标题样式，我们只需将其设置为默认CSS样式。
-
-1. 接下来，选择Footer **体验片段**&#x200B;并单击其&#x200B;**策略**&#x200B;图标以打开策略配置。
-
-1. 更新&#x200B;**WKND Site Experience Fragment - Footer**&#x200B;策略，以添加值为`cmp-experiencefragment--footer`的&#x200B;**默认CSS类**:
-
-   ![WKND站点体验片段——页脚更新](assets/style-system/experience-fragment-footer-policy-configure.png)
-
-   保存更改，您应看到应用了Footer CSS样式。
-
-   ![WKND文章模板——最终样式](assets/style-system/final-header-footer-applied.png)
-
-1. 导览至AEM Sites编辑中的&#x200B;**La Skateparks**&#x200B;文章：[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)。 您应当看到已应用更新的页眉和页脚。
-
-## 审核 {#review}
-
-查看作为本章的一部分实施的样式和功能。
-
->[!VIDEO](https://video.tv.adobe.com/v/30378/?quality=12&learn=on)
+1. **奖金挑战** -使用从先前练习中汲取的经验教训，并使用样式系统为容器 **组件** 实施固 **定宽** 度和可变宽度样式。
 
 ## 恭喜！{#congratulations}
 
@@ -746,7 +429,7 @@ ht-degree: 0%
 
 了解创建[自定义AEM组件](custom-component.md)的端到端步骤，该组件显示在对话框中创作的内容，并探索开发Sling模型以封装填充组件HTL的业务逻辑。
 
-在[GitHub](https://github.com/adobe/aem-guides-wknd)上视图完成的代码，或在Git brach `style-system/solution`上本地查看并部署代码。
+在[GitHub](https://github.com/adobe/aem-guides-wknd)上视图完成的代码，或在Git brach `tutorial/style-system-solution`上本地查看并部署代码。
 
 1. 克隆[github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd)存储库。
-1. 查看`style-system/solution`分支。
+1. 查看`tutorial/style-system-solution`分支。
