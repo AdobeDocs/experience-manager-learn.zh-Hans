@@ -1,6 +1,6 @@
 ---
 title: AEM Forms
-seo-title: 将自适应表单数据与Acroform合并
+description: 一个教程，其中将逐步介绍如何使用Acroform创建自适应表单并合并数据以获得PDF。 然后，可以使用Adobe Sign发送包含合并数据的PDF进行签名。
 feature: adaptive-forms
 topics: development
 audience: developer
@@ -8,9 +8,9 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '254'
 ht-degree: 2%
 
 ---
