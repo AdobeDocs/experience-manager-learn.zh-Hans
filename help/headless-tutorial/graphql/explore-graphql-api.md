@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: bfcc9dbb70753f985a2e47f329dbb9f43f5805e2
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
 
 
 # 浏览GraphQL API {#explore-graphql-apis}
-
->[!CAUTION]
->
-> AEM GraphQL API for Content Fragments投放可应请求提供。
-> 请联系Adobe支持，为AEM启用API作为Cloud Service项目。
 
 AEM的GraphQL API提供了一种功能强大的查询语言，可向下游应用程序公开内容片段的数据。 内容片段模型定义内容片段使用的模式。 只要创建或更新内容片段模型，模式就会被转换并添加到构成GraphQL API的“图形”中。
 
