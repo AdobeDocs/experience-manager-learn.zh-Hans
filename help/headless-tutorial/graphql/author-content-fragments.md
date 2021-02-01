@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
 
 
 # 创作内容片段{#authoring-content-fragments}
-
->[!CAUTION]
->
-> AEM GraphQL API for Content Fragments投放可应请求提供。
-> 请联系Adobe支持，为AEM启用API作为Cloud Service项目。
 
 在本章中，您将根据[新定义的参与者内容片段模型](./content-fragment-models.md)创建和编辑新的内容片段。 您还将学习如何创建内容片段的变体。
 
