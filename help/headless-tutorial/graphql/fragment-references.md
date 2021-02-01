@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '828'
 ht-degree: 1%
 
 ---
 
 
 # 使用片段引用进行高级数据建模
-
->[!CAUTION]
->
-> AEM GraphQL API for Content Fragments投放可应请求提供。
-> 请联系Adobe支持，为AEM启用API作为Cloud Service项目。
 
 可以从其他内容片段中引用内容片段。 这使用户能够构建具有片段之间关系的复杂数据模型。
 
