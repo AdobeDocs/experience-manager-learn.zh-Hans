@@ -10,10 +10,10 @@ user-guide-description: 面向不熟悉 AEM 的开发人员的多部分教程。
 breadcrumb-title: AEM Sites WKND 教程
 index: y
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
 source-wordcount: '56'
-ht-degree: 73%
+ht-degree: 66%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 73%
 # AEM Sites - WKND 教程快速入门 {#getting-started-wknd-tutorial-develop}
 
 + [WKND教程概述](overview.md)
-+ [项目设置](project-setup.md)
-+ [组件基础知识](component-basics.md)
-+ [页面和模板](pages-templates.md)
-+ [客户端库](client-side-libraries.md)
-+ [样式系统](style-system.md)
-+ [自定义组件](custom-component.md)
-+ [单元测试](unit-testing.md)
++ [1 —— 项目设置](project-setup.md)
++ [2 —— 组件基础知识](component-basics.md)
++ [3 —— 页面和模板](pages-templates.md)
++ [4 —— 客户端库](client-side-libraries.md)
++ [5 —— 样式系统](style-system.md)
++ [6 —— 自定义组件](custom-component.md)
++ [7 —— 单元测试](unit-testing.md)
