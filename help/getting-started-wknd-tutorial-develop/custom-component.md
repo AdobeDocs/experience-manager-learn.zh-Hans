@@ -12,9 +12,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
-source-wordcount: '4011'
+source-wordcount: '3961'
 ht-degree: 0%
 
 ---
@@ -32,27 +32,32 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 如果您在教程的前几部分中也进行了学习，您会注意到本章的入门项目加快了实施过程。 它包含多个模板和更多内容。 作为奖励，您可以在自定义组件开发之外自由探索新内容和实施的其他方面。
+> 如果您成功完成了上一章，则可以重复使用项目并跳过注销起始项目的步骤。
 
 查看教程构建的基线代码：
 
-1. 克隆[github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd)存储库。
-1. 检查`custom-component/start`分支
+1. 查看[GitHub](https://github.com/adobe/aem-guides-wknd)中的`tutorial/custom-component-start`分支
 
    ```shell
-   $ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
-   $ cd ~/code/aem-guides-wknd
-   $ git checkout custom-component/start
+   $ cd aem-guides-wknd
+   $ git checkout tutorial/custom-component-start
    ```
 
 1. 使用Maven技能将代码库部署到本地AEM实例：
 
    ```shell
-   $ cd ~/code/aem-guides-wknd
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd/tree/custom-component/solution)上视图完成的代码，或通过切换到分支`custom-component/solution`在本地签出代码。
+   >[!NOTE]
+   >
+   > 如果使用AEM 6.5或6.4，请将`classic`用户档案附加到任何Maven命令。
+
+   ```shell
+   $ mvn clean install -PautoInstallSinglePackage -Pclassic
+   ```
+
+您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/custom-component-solution)上视图完成的代码，或通过切换到分支`tutorial/custom-component-solution`在本地签出代码。
 
 ## 目标
 
@@ -62,13 +67,11 @@ ht-degree: 0%
 
 ## 您将构建的{#byline-component}
 
->[!VIDEO](https://video.tv.adobe.com/v/30181/?quality=12&learn=on)
-
 在WKND教程的这一部分中，将创建一个署名组件，用于显示有关文章的作者的创作信息。
 
-![byline组件示例](./assets/custom-component/byline-design.png)
+![byline组件示例](assets/custom-component/byline-design.png)
 
-*由WKND设计团队提供的Byline组件可视设计*
+*Byline组件*
 
 Byline组件的实现包括收集署名内容的对话框和检索署名的自定义Sling模型：
 
@@ -76,55 +79,40 @@ Byline组件的实现包括收集署名内容的对话框和检索署名的自�
 * 图像
 * 职业
 
-由HTL脚本显示，该脚本渲染浏览器最终显示的HTML。
-
-![署名分解](./assets/custom-component/byline-decomposition.png)
-
-*Byline分解*
-
 ## 创建Byline组件{#create-byline-component}
 
 首先，创建Byline Component节点结构并定义一个对话框。 它表示AEM中的组件，并按组件在JCR中的位置隐式定义组件的资源类型。
 
 该对话框显示内容作者可以提供的界面。 对于此实现，将利用AEM WCM核心组件的&#x200B;**Image**&#x200B;组件来处理Byline图像的创作和渲染，因此它将设置为我们组件的`sling:resourceSuperType`。
 
-### 创建组件节点{#create-component-node}
+### 创建组件定义{#create-component-definition}
 
-1. 在&#x200B;**ui.apps**&#x200B;模块中，导航到`/apps/wknd/components/content`并创建一个名为&#x200B;**byline**&#x200B;且类型为`cq:Component`的新节点。
+1. 在&#x200B;**ui.apps**&#x200B;模块中，导航到`/apps/wknd/components`并创建名为`byline`的新文件夹。
+1. 在`byline`文件夹下，添加一个名为`.content.xml`的新文件
 
-   ![对话框，创建节点](./assets/custom-component/byline-node-creation.png)
+   ![对话框，创建节点](assets/custom-component/byline-node-creation.png)
 
-1. 将以下属性添加到Byline组件的`cq:Component`节点。
-
-   ```plain
-   jcr:title = Byline
-   jcr:description = Displays a contributor's byline.
-   componentGroup = WKND.Content
-   sling:resourceSuperType =  core/wcm/components/image/v2/image
-   ```
-
-   ![署名组件属性](./assets/custom-component/byline-component-properties.png)
-
-   这会导致此`.content.xml` XML:
+1. 使用以下代码填充`.content.xml`文件：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
-   <jcr:root
-       xmlns:sling="https://sling.apache.org/jcr/sling/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
+       <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
        jcr:primaryType="cq:Component"
        jcr:title="Byline"
        jcr:description="Displays a contributor's byline."
-       componentGroup="WKND.Content"
+       componentGroup="WKND Sites Project - Content"
        sling:resourceSuperType="core/wcm/components/image/v2/image"/>
    ```
 
+   上述XML文件提供组件的定义，包括标题、描述和组。 `sling:resourceSuperType`指向`core/wcm/components/image/v2/image`，它是[核心图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)。
+
 ### 创建HTL脚本{#create-the-htl-script}
 
-1. 在`byline`节点下，添加一个新文件`byline.html`，它负责组件的HTML演示。 命名与`cq:Component`节点相同的文件很重要，因为它将成为Sling用于呈现此资源类型的默认脚本。
+1. 在`byline`文件夹下，添加一个新文件`byline.html`，它负责组件的HTML演示。 将文件命名为与文件夹相同的文件很重要，因为它将成为Sling用于呈现此资源类型的默认脚本。
 
 1. 将以下代码添加到`byline.html`。
 
-   ```xml
+   ```html
    <!--/* byline.html */-->
    <div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html">
    </div>
@@ -141,13 +129,12 @@ Byline组件的实现包括收集署名内容的对话框和检索署名的自�
 * **图像**:参考投稿人的生物图片。
 * **职业**:一列表由贡献者贡献的职业。职业应按字母顺序按升序（a至z）排序。
 
-1. 在`byline`组件节点下，创建一个名为`cq:dialog`的类型为`nt:unstructured`的新节点。
-1. 使用以下XML更新`cq:dialog`。 最容易打开`.content.xml`并将以下XML复制／粘贴到其中。
+1. 在`byline`文件夹下，新建一个名为`_cq_dialog`的文件夹。
+1. 在`byline/_cq_dialog`下添加一个名为`.content.xml`的新文件。 这是对话框的XML定义。 添加以下XML:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
-   <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-           xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+   <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
            jcr:primaryType="nt:unstructured"
            jcr:title="Byline"
            sling:resourceType="cq/gui/components/authoring/dialog">
@@ -214,16 +201,16 @@ Byline组件的实现包括收集署名内容的对话框和检索署名的自�
    </jcr:root>
    ```
 
-   这些节点定义使用[Sling Resource Mergare](https://sling.apache.org/documentation/bundles/resource-merger.html)来控制从`sling:resourceSuperType`组件继承哪些对话框选项卡，在此例中为&#x200B;**核心组件&#39;图像组件**。
+   这些对话框节点定义使用[Sling Resource Mergare](https://sling.apache.org/documentation/bundles/resource-merger.html)来控制从`sling:resourceSuperType`组件继承哪些对话框选项卡，在本例中为&#x200B;**核心组件的图像组件**。
 
-   ![byline的已完成对话框](./assets/custom-component/byline-dialog-created.png)
+   ![byline的已完成对话框](assets/custom-component/byline-dialog-created.png)
 
 ### 创建策略对话框{#create-the-policy-dialog}
 
 按照与创建对话框相同的方法，创建策略对话框（以前称为设计对话框），以隐藏从核心组件的图像组件继承的策略配置中不需要的字段。
 
-1. 在`byline` `cq:Component`节点下，创建一个名为`cq:design_dialog`的类型为`nt:unstructured`的新节点。
-1. 使用以下XML更新`cq:design_dialog`。 打开`.content.xml`并复制／粘贴下面的XML，最简单。
+1. 在`byline`文件夹下，新建一个名为`_cq_design_dialog`的文件夹。
+1. 在`byline/_cq_design_dialog`下面创建一个名为`.content.xml`的新文件。 使用以下方式更新文件：以下XML。 打开`.content.xml`并复制／粘贴下面的XML，最简单。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -299,26 +286,33 @@ Byline组件的实现包括收集署名内容的对话框和检索署名的自�
 1. 使用Maven技能将更新的代码库部署到本地AEM实例：
 
    ```shell
-   $ cd ~/code/aem-guides-wknd
-   $ mvn clean install -PautoInstallPackage
+   $ cd aem-guides-wknd
+   $ mvn clean install -PautoInstallSinglePackage
    ```
 
-### 将组件添加到页面{#add-the-component-to-a-page}
+## 将组件添加到页面{#add-the-component-to-a-page}
 
 为了使开发过程保持简单并专注于AEM组件开发，我们将将处于当前状态的Byline组件添加到文章页面，以验证`cq:Component`节点定义已部署且正确，AEM识别新组件定义，并且组件的对话框可用于创作。
 
-由于我们[通过`/apps/wknd/components/content/byline@componentGroup=WKND.Content`属性将Byline组件添加到&#x200B;**WKND.Content**&#x200B;组件组](#create-component-node)，因此它可自动用于任何&#x200B;**布局容器**，其&#x200B;**策略**&#x200B;允许&#x200B;**WKND.A6content**&#x200B;组件组，文章页面的布局容器为。
+### 为AEM Assets添加图像
 
-#### 将组件拖放到页面{#drag-and-drop-the-component-onto-the-page}上
+首先，将头像样本上传到AEM Assets，以用于填充Byline组件中的图像。
 
-1. **在AEM** >站点>  **WKND站点>语言主控>英语>杂志> LA Skateparks终极指南中编辑文章页面**。
+1. 导航到AEM Assets的LA Skateparks文件夹：[http://localhost:4502/assets.html/content/dam/wknd/en/magazine/la-skateparks](http://localhost:4502/assets.html/content/dam/wknd/en/magazine/la-skateparks)。
+
+1. 将&#x200B;**[stacey-roswells.jpg](assets/custom-component/stacey-roswells.jpg)**&#x200B;的头部照片上传到文件夹。
+
+   ![已上传头部照片](assets/custom-component/stacey-roswell-headshot-assets.png)
+
+### 创作组件{#author-the-component}
+
+然后，将Byline组件添加到AEM中的页面。 由于我们通过`ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/.content.xml`定义将Byline组件添加到&#x200B;**WKND站点项目——内容**&#x200B;组件组，因此它可自动提供给任何&#x200B;**容器**，其&#x200B;**策略**&#x200B;允许&#x200B;**WKND站点项目——内容**&#x200B;组件组，文章页面的布局容器为。
+
+1. 导航到LA Skatepark文章，网址为：[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+
 1. 从左侧提要栏中，将&#x200B;**Byline组件**&#x200B;拖放到已打开文章页面的布局容器的&#x200B;**bottom**&#x200B;上。
 
    ![将byline组件添加到页面](assets/custom-component/add-to-page.png)
-
-#### 创作组件{#author-the-component}
-
-AEM作者通过对话框配置和创作组件。 此时，在Byline组件的开发中，将包含用于收集数据的对话框，但渲染创作内容的逻辑尚未添加。
 
 1. 确保&#x200B;**左侧提要栏已打开**&#x200B;且可见，并且已选择&#x200B;**资产查找器**。
 
@@ -330,8 +324,6 @@ AEM作者通过对话框配置和创作组件。 此时，在Byline组件的开�
 
 1. 在对话框打开且第一个选项卡（资产）处于活动状态时，打开左侧提要栏，并从资产查找器中将图像拖入图像拖放区。 搜索“stacey”以查找WKND ui.content包中提供的Stacey Roswells生物图片。
 
-   **[stacey-roswells.jpg](assets/custom-component/stacey-roswells.jpg)**
-
    ![添加图像到对话框](assets/custom-component/add-image.png)
 
 1. 添加图像后，单击&#x200B;**属性**&#x200B;选项卡以输入&#x200B;**名称**&#x200B;和&#x200B;**职业**。
@@ -342,17 +334,17 @@ AEM作者通过对话框配置和创作组件。 此时，在Byline组件的开�
 
    ![填充byline组件的属性](assets/custom-component/add-properties.png)
 
-1. 保存对话框后，导航到[CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/language-masters/en/magazine/guide-la-skateparks/jcr:content/root/responsivegrid/responsivegrid/byline)并查看组件内容在AEM页面下的byline组件内容节点上的存储方式。
+   AEM作者通过对话框配置和创作组件。 此时，在Byline组件的开发中，将包含用于收集数据的对话框，但渲染创作内容的逻辑尚未添加。 因此，只显示占位符。
 
-   在`jcr:content/root/responsivegrid/responsivegrid`节点（即`/content/wknd/language-masters/en/magazine/guide-la-skateparks/jcr:content/root/responsivegrid/responsivegrid/byline`）下找到Byline组件内容节点。
+1. 保存对话框后，导航到[CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/us/en/magazine/guide-la-skateparks/jcr%3Acontent/root/container/container/byline)并查看组件内容在AEM页面下的byline组件内容节点上的存储方式。
+
+   在“LA Skate Parks”（LA滑板公园）页面下找到“Byline”（署名）组件内容节点，即`/content/wknd/us/en/magazine/guide-la-skateparks/jcr:content/root/container/container/byline`。
 
    请注意，属性名称`name`、`occupations`和`fileReference`存储在&#x200B;**字节节点**&#x200B;上。
 
    另外，请注意，该节点的`sling:resourceType`设置为`wknd/components/content/byline`，这是将此内容节点绑定到Byline组件实现的原因。
 
    ![CRXDE中的字节属性](assets/custom-component/byline-properties-crxde.png)
-
-   */content/wknd/language-masters/cn/magazine/guide-la-skateparks/jcr:content/root/root/responsivegrid/responsivegrid/byline*
 
 ## 创建署名Sling模型{#create-sling-model}
 
@@ -362,10 +354,21 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，它有助
 
 ### 查看Maven依赖项{#maven-dependency}
 
-Byline Sling Model将依赖AEM提供的多个Java API。 这些API通过`core`模块的POM文件中列出的`dependencies`提供。
+Byline Sling Model将依赖AEM提供的多个Java API。 这些API通过`core`模块的POM文件中列出的`dependencies`提供。 本教程使用的项目已作为Cloud Service为AEM构建。 但是，它的独特之处在于它向后兼容AEM 6.5/6.4。因此，包括了Cloud Service和AEM 6.x的依赖关系。
 
 1. 打开`<src>/aem-guides-wknd/core/pom.xml`下的`pom.xml`文件。
-1. 在pom文件的依赖关系部分中查找`uber-jar`的依赖关系：
+1. 查找`aem-sdk-api` - **AEM的依赖关系(仅Cloud Service**)
+
+   ```xml
+   <dependency>
+       <groupId>com.adobe.aem</groupId>
+       <artifactId>aem-sdk-api</artifactId>
+   </dependency>
+   ```
+
+   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#building-for-the-sdk)包含AEM公开的所有公共Java API。 默认情况下，构建此项目时使用`aem-sdk-api`。 版本将保留在位于项目根部`aem-guides-wknd/pom.xml`的父反应器pom中。
+
+1. 查找`uber-jar` - **AEM 6.5/6.4的依赖关系，仅**
 
    ```xml
    ...
@@ -377,7 +380,9 @@ Byline Sling Model将依赖AEM提供的多个Java API。 这些API通过`core`�
    ...
    ```
 
-   [uber-jar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)包含AEM公开的所有公共Java API。 请注意，`core/pom.xml`文件中未指定版本。 而是将版本保留在位于项目`aem-guides-wknd/pom.xml`根的父反应器pom中。
+   仅当调用`classic`用户档案（即`mvn clean install -PautoInstallSinglePackage -Pclassic`）时，才包括`uber-jar`。 这同样是此项目特有的。 在由AEM Project Archetype生成的真实项目中，如果指定的AEM版本为6.5或6.4，则`uber-jar`将是默认值。
+
+   [uber-jar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)包含AEM 6.x公开的所有公共Java API。版本将保留在位于项目`aem-guides-wknd/pom.xml`根的父反应器pom中。
 
 1. 查找`core.wcm.components.core`的依赖关系：
 
@@ -389,7 +394,7 @@ Byline Sling Model将依赖AEM提供的多个Java API。 这些API通过`core`�
        </dependency>
    ```
 
-   这是AEM核心组件公开的所有公共Java API。 AEM核心组件是在AEM外维护的项目，因此具有单独的发布周期。 因此，它是需要单独包含的依赖项，并且&#x200B;**不**&#x200B;包含在uber-jar中。
+   这是AEM核心组件公开的所有公共Java API。 AEM核心组件是在AEM外维护的项目，因此具有单独的发布周期。 因此，它是需要单独包含的依赖项，并且&#x200B;**不**&#x200B;包含在`uber-jar`或`aem-sdk-api`中。
 
    与uber-jar一样，此依赖关系的版本会保留在位于`aem-guides-wknd/pom.xml`的Parent reactor pom文件中。
 
@@ -399,7 +404,7 @@ Byline Sling Model将依赖AEM提供的多个Java API。 这些API通过`core`�
 
 为Byline创建公共Java接口。 `Byline.java` 定义驱动HTL脚本所需的 `byline.html` 公共方法。
 
-1. 在`src/main/java,`下的`aem-guides-wknd.core`模块中，右键单击`com.adobe.aem.guides.wknd.core.models` **包>新建>接口**，创建一个名为`Byline.java`的新Java接口。 输入&#x200B;**Byline**&#x200B;作为接口名称，然后单击“完成”。
+1. 在`core/src/main/java/com/adobe/aem/guides/wknd/core/models`下的`aem-guides-wknd.core`模块中，创建一个名为`Byline.java`的新文件
 
    ![创建byline接口](assets/custom-component/create-byline-interface.png)
 
@@ -443,13 +448,41 @@ Byline Sling Model将依赖AEM提供的多个Java API。 这些API通过`core`�
 
 `BylineImpl.java` 是实现先前定义的接口 `Byline.java` 的Sling Model。此部分底部可找到`BylineImpl.java`的完整代码。
 
-1. 在`src/main/java`下的`core`模块中，通过右键单击`com.adobe.aem.guides.wknd.core.models.impl`包并选择&#x200B;**新建>类**，新建一个名为&#x200B;**BylineImpl.java**&#x200B;的类文件。
+1. 在`core/src/main/java/com/adobe/aem/guides/core/models`下新建一个名为`impl`的文件夹。
+1. 在`impl`文件夹中新建一个文件`BylineImpl.java`。
 
-   对于名称，输入&#x200B;**BylineImpl**。 将&#x200B;**Byline接口**&#x200B;添加为实现接口。
+   ![Byline Impl文件](assets/custom-component/byline-impl-file.png)
 
-   ![创建按线实施](assets/custom-component/create-byline-impl.png)
+1. 打开 `BylineImpl.java`. 指定它实现`Byline`接口。 使用IDE的自动完成功能或手动更新文件以包含实现`Byline`接口所需的方法：
 
-1. 打开 `BylineImpl.java`. 它自动填充接口`Byline.java`中定义的所有方法。 通过使用以下类级别注释更新`BylineImpl.java`来添加Sling Model注释。 此`@Model(..)`注释将类转换为Sling Model的原因。
+   ```java
+   package com.adobe.aem.guides.wknd.core.models.impl;
+   import java.util.List;
+   import com.adobe.aem.guides.wknd.core.models.Byline;
+   
+   public class BylineImpl implements Byline {
+   
+       @Override
+       public String getName() {
+           // TODO Auto-generated method stub
+           return null;
+       }
+   
+       @Override
+       public List<String> getOccupations() {
+           // TODO Auto-generated method stub
+           return null;
+       }
+   
+       @Override
+       public boolean isEmpty() {
+           // TODO Auto-generated method stub
+           return false;
+       }
+   }
+   ```
+
+1. 通过使用以下类级别注释更新`BylineImpl.java`来添加Sling Model注释。 此`@Model(..)`注释将类转换为Sling Model的原因。
 
    ```java
    import org.apache.sling.api.SlingHttpServletRequest;
@@ -483,13 +516,12 @@ Byline Sling Model将依赖AEM提供的多个Java API。 这些API通过`core`�
 
 对于此，`@ValueMapValue` Sling Model注释用于使用请求资源的ValueMap将值注入Java字段。
 
+
 ```java
-...
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
-...
+
 public class BylineImpl implements Byline {
     ...
-
     @ValueMapValue
     private String name;
 
@@ -512,16 +544,18 @@ public class BylineImpl implements Byline {
 
 一旦JCR属性值通过插入的Java字段`occupations`在Sling Model中可用，排序业务逻辑便可应用于`getOccupations()`方法。
 
+
 ```java
 import java.util.ArrayList;
 import java.util.Collections;
-...
+  ...
 
 public class BylineImpl implements Byline {
     ...
     @ValueMapValue
     private List<String> occupations;
     ...
+    @Override
     public List<String> getOccupations() {
         if (occupations != null) {
             Collections.sort(occupations);
@@ -532,8 +566,9 @@ public class BylineImpl implements Byline {
     }
     ...
 }
-...
+  ...
 ```
+
 
 #### isEmpty(){#implementing-is-empty}
 
@@ -541,9 +576,10 @@ public class BylineImpl implements Byline {
 
 对于此组件，我们的业务要求是，必须填写&#x200B;*所有三个字段、名称、图像和职业，然后才能渲染*&#x200B;组件。
 
+
 ```java
 import org.apache.commons.lang3.StringUtils;
-...
+  ...
 public class BylineImpl implements Byline {
     ...
     @Override
@@ -566,16 +602,16 @@ public class BylineImpl implements Byline {
 }
 ```
 
+
 #### 解决“图像问题”{#tackling-the-image-problem}
 
 检查名称和占用条件很琐碎（Apache Commons Lang3提供始终方便的[StringUtils](https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html)类），但是，由于使用核心组件图像组件来表现图像，因此不清楚如何验证图像&#x200B;**的存在。**
 
 有两种方法可以解决这个问题：
 
-1. 检查`fileReference` JCR属性是否解析为资产。
-1. 将此资源转换为核心组件图像Sling模型并确保`getSrc()`方法不为空。
+检查`fileReference` JCR属性是否解析为资产。 *将* 此资源转换为核心组件图像Sling模型并确 `getSrc()` 保方法不为空。
 
-   我们将选择&#x200B;**second**&#x200B;方法。 第一种方法可能已足够，但在本教程中，后一种方法将用于允许我们探索Sling Models的其他功能。
+我们将选择&#x200B;**second**&#x200B;方法。 第一种方法可能已足够，但在本教程中，后一种方法将用于允许我们探索Sling Models的其他功能。
 
 1. 创建获取图像的专用方法。 此方法保留为私有，因为我们无需在HTL本身中公开Image对象，它只用于驱动`isEmpty().`
 
@@ -687,12 +723,21 @@ public class BylineImpl implements Byline {
    ```java
    @Override
    public boolean isEmpty() {
-       ...
-       } else if (getImage() == null || StringUtils.isBlank(getImage().getSrc())) {
+      final Image componentImage = getImage();
+   
+       if (StringUtils.isBlank(name)) {
+           // Name is missing, but required
+           return true;
+       } else if (occupations == null || occupations.isEmpty()) {
+           // At least one occupation is required
+           return true;
+       } else if (componentImage == null || StringUtils.isBlank(componentImage.getSrc())) {
            // A valid image is required
            return true;
        } else {
-       ...
+           // Everything is populated, so this component is not considered empty
+           return false;
+       }
    }
    ```
 
@@ -700,15 +745,14 @@ public class BylineImpl implements Byline {
 
 1. 最后`BylineImpl.java`的外观应当如下：
 
+
    ```java
    package com.adobe.aem.guides.wknd.core.models.impl;
    
    import java.util.ArrayList;
    import java.util.Collections;
    import java.util.List;
-   
    import javax.annotation.PostConstruct;
-   
    import org.apache.commons.lang3.StringUtils;
    import org.apache.sling.api.SlingHttpServletRequest;
    import org.apache.sling.models.annotations.DefaultInjectionStrategy;
@@ -717,7 +761,6 @@ public class BylineImpl implements Byline {
    import org.apache.sling.models.annotations.injectorspecific.Self;
    import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
    import org.apache.sling.models.factory.ModelFactory;
-   
    import com.adobe.aem.guides.wknd.core.models.Byline;
    import com.adobe.cq.wcm.core.components.models.Image;
    
@@ -766,7 +809,7 @@ public class BylineImpl implements Byline {
    
        @Override
        public boolean isEmpty() {
-           final Image image = getImage();
+           final Image componentImage = getImage();
    
            if (StringUtils.isBlank(name)) {
                // Name is missing, but required
@@ -774,7 +817,7 @@ public class BylineImpl implements Byline {
            } else if (occupations == null || occupations.isEmpty()) {
                // At least one occupation is required
                return true;
-           } else if (image == null || StringUtils.isBlank(image.getSrc())) {
+           } else if (componentImage == null || StringUtils.isBlank(componentImage.getSrc())) {
                // A valid image is required
                return true;
            } else {
@@ -792,9 +835,10 @@ public class BylineImpl implements Byline {
    }
    ```
 
+
 ## 署名HTL {#byline-htl}
 
-在`ui.apps`模块中，打开我们在AEM组件较早设置中创建的`/apps/wknd/components/content/byline/byline.html`。
+在`ui.apps`模块中，打开我们在AEM组件较早设置中创建的`/apps/wknd/components/byline/byline.html`。
 
 ```html
 <div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html">
@@ -812,7 +856,7 @@ public class BylineImpl implements Byline {
 
 1. 使用以下骨骼HTML结构更新&#x200B;**byline.html**:
 
-   ```xml
+   ```html
    <div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
        class="cmp-byline">
            <div class="cmp-byline__image">
@@ -826,7 +870,7 @@ public class BylineImpl implements Byline {
 
    请注意，CSS类遵循[BEM命名约定](https://getbem.com/naming/)。 虽然使用BEM约定不是强制性的，但建议使用BEM，因为它在核心组件CSS类中使用，并且通常会生成清晰、可读的CSS规则。
 
-#### 在HTL {#instantiating-sling-model-objects-in-htl}中实例化Sling Model对象
+### 在HTL {#instantiating-sling-model-objects-in-htl}中实例化Sling Model对象
 
 [使用块语句](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#221-use)用于实例化HTL脚本中的Sling Model对象，并将其指定给HTL变量。
 
@@ -842,7 +886,7 @@ public class BylineImpl implements Byline {
    </div>
    ```
 
-#### 访问Sling Model方法{#accessing-sling-model-methods}
+### 访问Sling Model方法{#accessing-sling-model-methods}
 
 HTL从JSTL中借入，并使用相同的缩短Java getter方法名称。
 
@@ -858,7 +902,7 @@ HTL中使用需要参数&#x200B;**的Java方法不能**。 这是为了使HTL中
    <h2 class="cmp-byline__name">${byline.name}</h2>
    ```
 
-#### 使用HTL表达式选项{#using-htl-expression-options}
+### 使用HTL表达式选项{#using-htl-expression-options}
 
 [HTL表达式](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#12-available-expression-options) 选项在HTL中用作内容的修饰符，范围从日期格式到i18n转换。表达式还可用于加入列表或数值数组，这是以逗号分隔的格式显示占领区所需的。
 
@@ -870,7 +914,7 @@ HTL中使用需要参数&#x200B;**的Java方法不能**。 这是为了使HTL中
    <p class="cmp-byline__occupations">${byline.occupations @ join=', '}</p>
    ```
 
-#### 有条件地显示占位符{#conditionally-displaying-the-placeholder}
+### 有条件地显示占位符{#conditionally-displaying-the-placeholder}
 
 AEM组件的大多数HTL脚本都利用&#x200B;**占位符范式**&#x200B;为作者&#x200B;**提供可视提示，表明某个组件创作不正确，并且不会显示在AEM Publish**&#x200B;上。 推动此决定的惯例是对组件的支持Sling Model实施一种方法，在我们的案例中：`Byline.isEmpty()`。
 
@@ -897,28 +941,13 @@ AEM组件的大多数HTL脚本都利用&#x200B;**占位符范式**&#x200B;为作
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
    ```
 
-#### 使用核心组件{#using-the-core-components-image}显示图像
+### 使用核心组件{#using-the-core-components-image}显示图像
 
 `byline.html`的HTL脚本现在几乎已完成，只缺少图像。
 
-```html
-<!--/* current progress of byline.html */-->
-<div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
-     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
-     data-sly-test.hasContent="${!byline.empty}"
-     class="cmp-byline">
-    <div class="cmp-byline__image">
-        <!-- Include the Core Components Image component -->
-    </div>
-    <h2 class="cmp-byline__name">${byline.name}</h2>
-    <p class="cmp-byline__occupations">${byline.occupations @ join=', '}</p>
-</div>
-<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
-```
-
 由于我们使用`sling:resourceSuperType`核心组件图像组件来提供图像的创作，因此我们还可以使用核心组件图像组件来渲染图像！
 
-为此，我们需要包含当前的署名资源，但使用资源类型`core/wcm/components/image/v2/image`强制使用核心组件映像组件的资源类型。 这是一种强大的组件重用模式。 为此，使用HTL的`data-sly-resource`块。
+为此，我们需要包含当前的字节资源，但使用资源类型`core/wcm/components/image/v2/image`强制使用核心组件映像组件的资源类型。 这是一种强大的组件重用模式。 为此，使用HTL的`data-sly-resource`块。
 
 1. 将`div`替换为`cmp-byline__image`类，如下所示：
 
@@ -934,45 +963,42 @@ AEM组件的大多数HTL脚本都利用&#x200B;**占位符范式**&#x200B;为作
 2. 已完成`byline.html`:
 
    ```html
-   <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
+   <!--/* byline.html */-->
+   <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline" 
        data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
        data-sly-test.hasContent="${!byline.empty}"
        class="cmp-byline">
        <div class="cmp-byline__image"
-            data-sly-resource="${ '.' @ resourceType = 'core/wcm/components/image/v2/image' }">
+           data-sly-resource="${ '.' @ resourceType = 'core/wcm/components/image/v2/image' }">
        </div>
-           <h2 class="cmp-byline__name">${byline.name}</h2>
-           <p class="cmp-byline__occupations">${byline.occupations @ join=','}</p>
+       <h2 class="cmp-byline__name">${byline.name}</h2>
+       <p class="cmp-byline__occupations">${byline.occupations @ join=', '}</p>
    </div>
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
    ```
 
 3. 将代码库部署到本地AEM实例。 由于对POM文件进行了重大更改，因此从项目的根目录执行完全Maven内部版本。
 
-   >[!WARNING]
-   >
-   > 请注意，WKND项目已设置为`ui.content`将覆盖JCR中的任何更改，因此，我们希望确保仅部署`ui.apps`项目，以避免抹去之前添加到文章页面的Byline组件。
-
    ```shell
-   $ cd ~/code/aem-guides-wknd/ui.apps
-   $ mvn -PautoInstallPackage clean install
-   ...
-   Package imported.
-   Package installed in 338ms.
-   [INFO] ------------------------------------------------------------------------
-   [INFO] BUILD SUCCESS
-   [INFO] ------------------------------------------------------------------------
+   $ cd aem-guides-wknd/
+   $ mvn clean install -PautoInstallSinglePackage
    ```
 
-#### 查看未设置样式的Byline组件{#reviewing-the-unstyled-byline-component}
+   如果部署到AEM 6.5/6.4，将调用`classic`用户档案:
 
-1. 部署更新后，请导航到[LA Skateparks ](http://localhost:4502/editor.html/content/wknd/language-masters/en/magazine/guide-la-skateparks.html)终极指南页面，或在本章前面添加Byline组件的任何位置。
+   ```shell
+   $ mvn clean install -PautoInstallSinglePackage -Pclassic
+   ```
+
+### 查看未设置样式的Byline组件{#reviewing-the-unstyled-byline-component}
+
+1. 部署更新后，请导航到[LA Skateparks ](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)终极指南页面，或在本章前面添加Byline组件的任何位置。
 
 1. **图像**、**名称**&#x200B;和&#x200B;**职业**&#x200B;现在出现，我们有一个未设置样式但正在工作的Byline组件。
 
    ![未设置样式的署名组件](assets/custom-component/unstyled.png)
 
-#### 查看Sling Model注册{#reviewing-the-sling-model-registration}
+### 查看Sling Model注册{#reviewing-the-sling-model-registration}
 
 [AEM Web Console的Sling Models状态视图](http://localhost:4502/system/console/status-slingmodels)显示AEM中的所有已注册的Sling Models。 通过查看此列表，可以验证Byline Sling模型是否已安装并已识别。
 
@@ -986,30 +1012,13 @@ AEM组件的大多数HTL脚本都利用&#x200B;**占位符范式**&#x200B;为作
 
 Byline组件需要设置样式以与Byline组件的创意设计保持一致。 这将通过使用SCSS实现，AEM通过&#x200B;**ui.frontend** Maven子项目提供支持。
 
-设计样式后，Byline组件应采用以下美感。
-
-![署名模型样式](./assets/custom-component/byline-design.png)
-
-*由WKND创意团队定义的署名组件设计*
-
 ### 添加默认样式
 
-为Byline组件添加默认样式。 在`/src/main/webpack/components/content`下的&#x200B;**ui.frontend**&#x200B;项目中：
+为Byline组件添加默认样式。 在`/src/main/webpack/components`下的&#x200B;**ui.frontend**&#x200B;项目中：
 
-1. 新建一个名为`byline`的文件夹。
-1. 在名为`scss`的`byline`文件夹下新建一个文件夹。
-1. 在名为`byline.scss`的`byline/scss`文件夹下新建一个文件。
-1. 在名为`styles`的`byline/scss`文件夹下新建一个文件夹。
-1. 在名为`default.scss`的`byline/scss/styles`文件夹下新建一个文件。
+1. 创建名为`_byline.scss`的新文件。
 
    ![byline project explorer](assets/custom-component/byline-style-project-explorer.png)
-
-1. 开始，通过填充&#x200B;**byline.scss**&#x200B;来包含默认样式：
-
-   ```scss
-    /* WKND Byline styles */
-   @import 'styles/default';
-   ```
 
 1. 将Byline实现CSS（写作为SCSS）添加到`default.scss`中：
 
@@ -1030,7 +1039,7 @@ Byline组件需要设置样式以与Byline组件的创意设计保持一致。 �
        }
    
        .cmp-byline__name {
-           font-size: $font-size-large;
+           font-size: $font-size-medium;
            font-family: $font-family-serif;
            padding-top: 0.5rem;
            margin-left: $imageSize + 25px;
@@ -1047,25 +1056,26 @@ Byline组件需要设置样式以与Byline组件的创意设计保持一致。 �
    }
    ```
 
-1. 打开&#x200B;**ui.frontend**&#x200B;项目`/src/main/webpack/site`中的文件`main.scss`，并在`/* Components */`部分添加以下行：
+1. 在`ui.frontend/src/main/webpack/site/main.scss`查看`main.scss`:
 
    ```scss
-   @import '../components/content/byline/scss/byline.scss';
+   @import 'variables';
+   @import 'wkndicons';
+   @import 'base';
+   @import '../components/**/*.scss';
+   @import './styles/*.scss';
    ```
 
-1. 使用NPM构建和编译`ui.frontend`模块：
+   `main.scss` 是模块包含的样式的主入口 `ui.frontend` 点。常规表达式`'../components/**/*.scss'`将包含位于`components/`文件夹下的所有文件。
+
+1. 构建完整项目并将其部署到AEM:
 
    ```shell
-    $ cd ~/code/aem-guides-wknd/ui.frontend
-    $ npm run dev
+   $ cd aem-guides-wknd/
+   $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. 使用Maven构建`ui.apps`项目并将其过渡性地包含`ui.frontend`项目部署到本地AEM实例：
-
-   ```shell
-    $ cd ~/code/aem-guides-wknd/ui.apps
-    $ mvn clean install -PautoInstallPackage
-   ```
+   如果使用AEM 6.4/6.5，则添加`-Pclassic`用户档案。
 
    >[!TIP]
    >
@@ -1077,10 +1087,6 @@ Byline组件需要设置样式以与Byline组件的创意设计保持一致。 �
 
 ![已完成的byline组件](assets/custom-component/final-byline-component.png)
 
-观看以下视频，快速了解本教程中构建的功能。
-
->[!VIDEO](https://video.tv.adobe.com/v/30174/?quality=12&learn=on)
-
 ## 恭喜！{#congratulations}
 
 祝贺您，您刚刚使用Adobe Experience Manager从头开始创建了自定义组件！
@@ -1091,21 +1097,7 @@ Byline组件需要设置样式以与Byline组件的创意设计保持一致。 �
 
 * [编写单元测试或AEM组件](unit-testing.md)
 
-在[GitHub](https://github.com/adobe/aem-guides-wknd)上视图完成的代码，或在Git brach `custom-component/solution`上本地查看并部署代码。
+在[GitHub](https://github.com/adobe/aem-guides-wknd)上视图完成的代码，或在Git brach `tutorial/custom-component-solution`上本地查看并部署代码。
 
 1. 克隆[github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd)存储库。
-1. 检查`custom-component/solution`分支
-
-## 疑难解答 {#troubleshooting}
-
-### 缺少源文件夹
-
-如果Eclipse中未显示`src/main/java`源文件夹，可以通过右键单击src并添加main和java的文件夹来添加文件夹。 添加文件夹后，将显示`src/main/java`包。
-
-### 未解析的包
-
-![疑难解答包](assets/custom-component/troubleshoot-unresolved-packages.png)
-
->[!NOTE]
->
-> 如果您尚未解析为某些添加到核心项目的新依赖关系导入的包，请尝试更新aem-guides-wknd maven项目，这反过来将更新所有子项目。 可通过右键单击&#x200B;**aem-guides-wknd > Maven >更新项目**&#x200B;来执行此操作。
+1. 检查`tutorial/custom-component-solution`分支
