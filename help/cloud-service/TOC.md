@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
-source-git-commit: 81c704240f163ccd151a61643f589f825a288705
+source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '270'
 ht-degree: 32%
 
 ---
@@ -16,24 +16,48 @@ ht-degree: 32%
 # Adobe Experience Manager as a Cloud Service 教程 {#cloud-service}
 
 + [概述](./overview.md)
++ AEM as a Cloud Service 简介{#introduction}
+   + [AEM是什么Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [进化](./introduction/evolution.md)
+   + [架构](./introduction/architecture.md)
+   + [Cloud Manager](./introduction/cloud-manager.md)
 + 基础技术{#underlying-technology}
-   + [AEM体系架构简介](./underlying-technology/introduction-architecture.md)
-   + [OSGi简介](./underlying-technology/introduction-osgi.md)
-   + [Java内容存储库简介](./underlying-technology/introduction-jcr.md)
-   + [Sling简介](./underlying-technology/introduction-sling.md)
-   + [创作层和发布层简介](./underlying-technology/introduction-author-publish.md)
-   + [Dispatcher 简介](./underlying-technology/introduction-dispatcher.md)
+   + [AEM架构](./underlying-technology/introduction-architecture.md)
+   + [OSGi](./underlying-technology/introduction-osgi.md)
+   + [Java内容存储库](./underlying-technology/introduction-jcr.md)
+   + [Sling](./underlying-technology/introduction-sling.md)
+   + [创作和发布服务](./underlying-technology/introduction-author-publish.md)
+   + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Cloud Manager {#cloud-manager}
    + [程序](./cloud-manager/programs.md)
    + [环境](./cloud-manager/environments.md)
    + [CI/CD生产管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD非生产管道](./cloud-manager/cicd-non-production-pipeline.md)
    + [活动](./cloud-manager/activity.md)
+   + 开发运营{#devops}
+      + [部署代码](./cloud-manager/devops/deploy-code.md)
+      + [合并项目](./cloud-manager/devops/merge-projects.md)
+      + [配置管道](./cloud-manager/devops/configure-pipelines.md)
+      + [持续集成](./cloud-manager/devops/continuous-integration.md)
+      + [分析测试结果](./cloud-manager/devops/analyze-test-results.md)
+      + [调度程序配置](./cloud-manager/devops/dispatcher-configurations.md)
+      + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
 + 本地开发环境设置{#local-development-environment-set-up}
    + [概述](./local-development-environment/overview.md)
    + [开发工具](./local-development-environment/development-tools.md)
    + [本地AEM运行时](./local-development-environment/aem-runtime.md)
    + [本地调度程序工具](./local-development-environment/dispatcher-tools.md)
++ 开发{#developing}
+   + 开发基础知识{#basics}
+      + [AEM SDK](./developing/basics/aem-sdk.md)
+      + [本地开发环境](./developing/basics/local-development-environment.md)
+      + [AEM 项目原型](./developing/basics/aem-project-archetype.md)
+      + [AEM 项目结构](./developing/basics/project-structure.md)
+      + [可变内容与不可变内容](./developing/basics/mutable-immutable.md)
+      + [存储库结构包](./developing/basics/repository-structure-package.md)
+      + [内容发布](./developing/basics/content-publishing.md)
+      + [OSGi配置](./developing/basics/osgi-configurations.md)
+      + [调度程序配置迁移](./developing/basics/dispatcher-configuration.md)
 + 调试AEM{#debugging}
    + 调试AEM SDK{#debugging-aem-sdk}
       + [概述](./debugging/aem-sdk-local-quickstart/overview.md)
