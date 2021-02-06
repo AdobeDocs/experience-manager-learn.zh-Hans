@@ -15,7 +15,7 @@ translation-type: tm+mt
 source-git-commit: 1e615d1c51fa0c4c0db335607c29a8c284874c8d
 workflow-type: tm+mt
 source-wordcount: '438'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 5%
 | 可用于规避调度程序规则的URL过滤器绕过漏洞- CVE-2016-0957 | 这在旧版Dispatcher中已得到修复，但现在建议您安装最新版本的Dispatcher(4.3.1)，并遵循建议的Dispatcher配置。 | 请参阅[AEM Dispatcher发行说明](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html)和[配置Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)。 |
 | 与存储的SWF文件相关的XSS漏洞 | 此问题已通过先前发布的安全修复解决。 | 请参阅[AEM安全公告APSB18-10](https://helpx.adobe.com/security/products/experience-manager/apsb18-10.html)。 |
 | 密码相关漏洞利用 | 遵循安全检查清单中的建议，确保使用更强的密码。 | 请参阅[AEM安全核对清单](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-checklist.html) |
-| 匿名用户的磁盘使用情况曝光 | 对于AEM 6.1和更高版本，此问题已得到解决，对于AEM 6.0，现成权限可以修改为限制性更强。 | 请参阅AEM 6.1及更早版本的[发行说明](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)。 |
+| 匿名用户的磁盘使用情况曝光 | 对于AEM 6.1和更高版本，此问题已得到解决，对于AEM 6.0，现成权限可以修改为限制性更强。 | 请参阅AEM 6.1及更早版本的[发行说明](https://helpx.adobe.com/cn/experience-manager/aem-previous-versions.html)。 |
 | 匿名用户的开放社交代理曝光 | 在从6.0 SP2开始的版本中已解决此问题。 | 请参阅AEM 6.1及更早版本的[发行说明](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)。 |
 | 生产实例上的CRX Explorer Access | 安全核对清单中已涵盖管理CRX Explorer访问权限，应从生产作者中删除CRX Explorer并发布，如果未删除，安全运行状况检查会报告它。 | 请参阅[AEM安全清单](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security-checklist.html)。 |
 | BGServlets已公开 | 自AEM 6.2以来已解决此问题。 | 请参阅[AEM 6.2发行说明](https://helpx.adobe.com/cn/experience-manager/6-2/release-notes.html) |
