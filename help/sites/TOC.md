@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
 source-wordcount: '447'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -64,12 +64,12 @@ ht-degree: 19%
    + [设置体验片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [将体验片段与Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [设置ContextHub](personalization/context-hub-technical-video-setup.md)
-+ 单页应用程序{#spa-editor}
++ 单页应用程序 {#spa-editor}
    + [使用SPA编辑器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello World教程](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [AEM SPA编辑器和React入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM SPA编辑器和Angular入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
-+ 多站点管理{#multi-site-management}
++ 多站点管理 {#multi-site-management}
    + [语言副本简介](./multi-site-management/language-copy-overview.md)
    + [Live Copy和Blueprint](./multi-site-management/live-copy-and-blueprint.md)
    + [创建Live Copy](./multi-site-management/create-live-copy.md)
@@ -99,7 +99,7 @@ ht-degree: 19%
    + Adobe客户端数据层{#adobe-client-data-layer}
       + [使用Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自定义Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-customize.md)
-   + 分析 {#analytics}
+   + Analytics {#analytics}
       + [与Adobe Analytics收集页面数据](integrations/analytics/collect-data-analytics.md)
       + [使用Adobe Analytics跟踪已点击的组件](integrations/analytics/track-clicked-component.md)
       + [利用Analysis Workspace分析数据](integrations/analytics/create-analytics-workspace.md)
