@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 21%
+ht-degree: 25%
 
 ---
 
@@ -25,5 +25,5 @@ ht-degree: 21%
    + [AEM SPA编辑器和React入门](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM SPA编辑器和Angular入门](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM 和 Adobe Target 使用入门](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
-   + [AEM 6.x Dynamic Media Classic教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html)
+   + [AEM 6.xDynamic Media经典教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html)
    + [AEM 6.x调度程序缓存教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)
