@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,8 @@ ht-degree: 0%
 ## 前提条件 {#prerequisites}
 
 查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。
+
+视频中使用的IDE是[Visual Studio代码](https://code.visualstudio.com/)和[VSCodeAEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)插件。
 
 ## 目标 {#objective}
 
@@ -110,7 +112,7 @@ HTML模板语言或&#x200B;**[HTL](https://docs.adobe.com/content/help/en/experi
 
 1. 切换到IDE并打开项目至`ui.apps`模块。
 1. 打开`helloworld.html`文件并更改HTML标记。
-1. 使用IDE工具将文件更改与本地AEM实例同步。
+1. 使用[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)等IDE工具将文件更改与本地AEM实例同步。
 1. 返回浏览器并观察组件渲染已更改。
 1. 打开`.content.xml`文件，该文件定义`HelloWorld`组件的对话框：
 
@@ -209,14 +211,14 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，它有助
        ...
    
        @ValueMapValue
-       protected String title;
+       private String title;
    
        @ValueMapValue
-       protected String text;
+       private String text;
    
-           @PostConstruct
-           protected void init() {
-               ...
+       @PostConstruct
+       protected void init() {
+           ...
    ```
 
 1. 将以下方法`getTitle()`添加到`HelloWorldModel`类，它返回名为`title`的属性值。 此方法添加附加逻辑以返回字符串值“此处为默认值！” 如果属性`title`为null或空：
@@ -349,6 +351,10 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，它有助
    ```
 
 1. 使用开发人员插件或使用Maven技能将更改部署到AEM的本地实例。
+
+   >[!NOTE]
+   >
+   > 由于性能原因，CSS和JavaScript经常由浏览器进行缓存。 如果您没有立即看到客户端库的更改，请执行硬刷新并清除浏览器的缓存。 使用隐姓埋名窗口来确保新缓存可能会很有帮助。
 
 ## 恭喜！{#congratulations}
 
