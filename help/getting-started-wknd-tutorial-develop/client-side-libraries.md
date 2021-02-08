@@ -10,9 +10,9 @@ audience: developer
 kt: 4083
 thumbnail: 30359.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '3257'
+source-wordcount: '3291'
 ht-degree: 1%
 
 ---
@@ -144,7 +144,7 @@ ht-degree: 1%
 
    每个文件都映射到核心组件，如[Accordion组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/accordion.html?lang=en#components)。 每个核心组件都使用[块元素修饰符](https://getbem.com/)或BEM记号构建，以便更轻松地使用样式规则目标特定CSS类。 `/components`下的文件已由AEM Project Archetype以不同的BEM规则对每个组件进行了备份。
 
-1. 下载WKND基本样式&#x200B;**[wknd-base-styles-src.zip](./assets/client-side-libraries/wknd-base-styles-src.zip)**&#x200B;和&#x200B;**解压缩文件**。
+1. 下载WKND基本样式&#x200B;**[wknd-base-styles-src.zip](./assets/client-side-libraries/wknd-base-styles-srcv2.zip)**&#x200B;和&#x200B;**解压缩文件**。
 
    ![WKND基样式](assets/client-side-libraries/wknd-base-styles-unzipped.png)
 
@@ -307,6 +307,10 @@ AEM Project Archetype会自动设置此集成。 接下来，探索其工作方�
    ...
    </body>
    ```
+
+   >[!NOTE]
+   >
+   > 如果在6.5/6.4中执行以下操作，则客户端库将不会自动缩小。 请参阅[HTML库管理器上的文档以启用最小化（推荐）](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors)。
 
    >[!WARNING]
    >
