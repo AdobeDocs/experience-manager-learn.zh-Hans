@@ -6,9 +6,9 @@ user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员
 breadcrumb-title: AEM Forms 教程
 index: y
 translation-type: tm+mt
-source-git-commit: 48060b4d8c4b502e0c099ae8081695f97b423037
+source-git-commit: 1e945afddda3d7735005029952a9d7ec46828bc6
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '947'
 ht-degree: 6%
 
 ---
@@ -91,7 +91,7 @@ ht-degree: 6%
    + [配置表单数据模型](prefill-fdm-db/configuring-form-data-model.md)
    + [获取请求参数](prefill-fdm-db/get-request-parameter.md)
    + [创建自适应表单](prefill-fdm-db/create-adaptive-form.md)
-+ 收件箱自定义{#inbox-customization}
++ 自定义收件箱{#inbox-customization}
    + [简介](inbox-customization/introduction.md)
    + [添加自定义列](inbox-customization/add-married-column.md)
    + [使用美观模板](inbox-customization/use-sightly-template.md)
@@ -183,6 +183,7 @@ ht-degree: 6%
    + [第4部分——使用表单用户档案模型创建ACS数据](aem-forms-with-adobe-campaign/partfour.md)
 
 + 文档服务 {#document-services}
+   + [PDF forms类型](document-services/pdf-forms-and-documents.md)
    + [在AEM Forms使用汇编服务](document-services/using-assembler-service-in-aem-forms.md)
    + [在AEM Forms使用监视文件夹](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms使用条形码服务](document-services/barcode-service-adaptive-forms-article.md)
