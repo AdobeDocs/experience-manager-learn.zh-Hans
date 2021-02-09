@@ -3,9 +3,9 @@ title: AEM Assets 视频和教程
 description: Adobe Experience Manager资产的视频和教程集
 sub-product: 资产，动态媒体
 translation-type: tm+mt
-source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
+source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '230'
 ht-degree: 14%
 
 ---
@@ -17,6 +17,9 @@ Adobe Experience Manager资产是AEM Platform上的一款数字资产管理工�
 
 ## 新增功能
 
+* **[关联和取消关联（视频）](./authoring/relate-unrelate.md)**
+
+   *了解如何在AEM中建立和管理资产之间的关系*
 
 * **[发布资产（视频）](./sharing/publish.md)**
 
@@ -33,10 +36,6 @@ Adobe Experience Manager资产是AEM Platform上的一款数字资产管理工�
 * **[自动开始工作流（视频）](./configuring/auto-start-workflows.md)**
 
    *了解如何在上传或重新处理的资产上自动调用AEM工作流*
-
-* **[处理用户档案（视频）](./configuring/processing-profiles.md)**
-
-   *了解如何将Assets Microservices调用到演绎版资源*
 
 ## 员工挑选
 
