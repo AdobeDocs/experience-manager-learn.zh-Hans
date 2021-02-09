@@ -5,9 +5,9 @@ breadcrumb-title: AEM Assets 教程
 sub-product: 资产
 team: TM
 translation-type: tm+mt
-source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
+source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '262'
 ht-degree: 32%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 32%
    + [基本操作](./authoring/basic-operations.md)
    + [元数据](./authoring/metadata.md)
    + [演绎版](./authoring/renditions.md)
+   + [关联和不关联](./authoring/relate-unrelate.md)
 
 + 协作{#collaboration}
    + [时间轴和收件箱](./collaboration/timeline-and-inbox.md)
