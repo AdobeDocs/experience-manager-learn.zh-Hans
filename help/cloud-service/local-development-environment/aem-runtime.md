@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: 398b9f855556fc425b034986a7f21159297dcba5
+source-git-commit: 39ea3dd6133477a52fd91ee696936cd226fce5ea
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1652'
 ht-degree: 1%
 
 ---
@@ -180,6 +180,10 @@ $ java -jar aem-publish-p4503.jar
 ## 停止本地AEM运行时
 
 要停止本地AEM运行时（AEM作者服务或发布服务），请打开用于开始AEM运行时的命令行窗口，然后点按`Ctrl-C`。 等待AEM关闭。 当关闭过程完成时，命令行提示将可用。
+
+## 可选的本地AEM运行时设置任务
+
++ __OSGi配置环境变量和机__ 密变 [量是专门为AEM本地运行时设置的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development)，而不是使用aio CLI管理它们。
 
 ## 何时更新快速启动程序Jar
 
