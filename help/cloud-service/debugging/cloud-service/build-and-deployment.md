@@ -10,9 +10,9 @@ audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
 translation-type: tm+mt
-source-git-commit: a405cf14d3f71bf51e32e50c828c3216d29aa253
+source-git-commit: b9fb3cb0c12afcabf4a92ded3d7d330ac9d229d6
 workflow-type: tm+mt
-source-wordcount: '2517'
+source-wordcount: '2537'
 ht-degree: 0%
 
 ---
@@ -231,6 +231,7 @@ AEM作为Cloud Service，在每个AEM版本中自动包括最新的核心组件�
    1. 如果不需要`/var`资源，请从作为应用程序一部分部署的内容包中删除`/var`下的所有资源。
    2. 如果`/var`资源是必需的，请使用[重新指向](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)定义节点结构。 通过OSGi运行模式，可将重新指向AEM作者脚本和／或AEM发布脚本。
    3. 如果`/var`资源仅对AEM作者是必需的，并且无法使用[repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)合理地建模，请将它们移至离散内容包，该内容包仅由[embedding](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)将其安装在AEM作者运行模式文件夹(`<target>/apps/example-packages/content/install.author</target>`)的`all`包中。
+   4. 按照本[AdobeKB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html)中的说明，为`sling-distribution-importer`服务用户提供适当的ACL。
 
 ### 创建Adobe支持案例
 
