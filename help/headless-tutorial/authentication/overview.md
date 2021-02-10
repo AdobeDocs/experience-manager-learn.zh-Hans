@@ -8,9 +8,9 @@ feature: APIs
 activity: develop
 audience: developer
 kt: 6785
-thumbnail: 330519.jpg
+thumbnail: 330460.jpg
 translation-type: tm+mt
-source-git-commit: 733382dc0e0ca14d4bd6e49174ba33f8d7fc517d
+source-git-commit: 0b1150cd7ca32382cfaa880f9f956b55bfb65a33
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 在本教程中，您将详细了解外部应用程序如何使用访问令牌以编程方式验证AEM并将其作为HTTP上的Cloud Service与之交互。
 
->[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
 
 ## 先决条件
 
