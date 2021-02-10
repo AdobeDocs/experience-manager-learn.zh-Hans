@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 doc-type: tutorial
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: c657eefa69b383c1b1a9e2845276245d3db00e6f
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -96,12 +96,12 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## 调度程序配置{#dispatcher-configuration}
 
-要允许缓存内容上[!DNL CORS]头的缓存和服务，请将以下配置添加到所有支持AEM发布`dispatcher.any`文件。
+要允许缓存内容上的CORS头的缓存和服务，请将以下[/clientheaders配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)添加到所有支持AEM发布`dispatcher.any`文件。
 
 ```
 /cache { 
   ...
-  /headers {
+  /clientheaders {
       "Access-Control-Allow-Origin",
       "Access-Control-Expose-Headers",
       "Access-Control-Max-Age",
@@ -115,7 +115,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 **在对文件进行更** 改后重新启动Web服务器应 `dispatcher.any` 用程序。
 
-可能需要完全清除缓存，以确保在`/headers`配置更新后在下一个请求上正确缓存标头。
+可能需要完全清除缓存，以确保在`/clientheaders`配置更新后在下一个请求上正确缓存标头。
 
 ## 支持材料{#supporting-materials}
 
