@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 2d7ae5e46acb25eaaf7a1a35d9bbf20f7c14042e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ function customHelperFunctions() { ... }
 
 >[!WARNING]
 >
->并非所有用于资产处理的npm模块都受Asset compute支持。 npm模块，它们依赖于其他应用程序（如ImageMagick或操作系统相关库）的现有。 最好限制仅使用JavaScript npm模块。
+>并非所有用于资产处理的npm模块都受Asset compute支持。 不支持依赖ImageMagick或其他操作系统相关库等应用程序存在的npm模块。 最好限制仅使用JavaScript npm模块。
 
 1. 打开Asset compute项目根目录中的命令行（可通过&#x200B;__终端>新终端__&#x200B;在VS代码中执行此操作）并执行命令：
 
