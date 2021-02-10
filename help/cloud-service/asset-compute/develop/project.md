@@ -10,10 +10,10 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: 676d4bfceaaec3ae8d4feb9f66294ec04e1ecd2b
+source-git-commit: 23c91551673197cebeb517089e5ab6591f084846
 workflow-type: tm+mt
-source-wordcount: '772'
-ht-degree: 0%
+source-wordcount: '904'
+ht-degree: 1%
 
 ---
 
@@ -32,9 +32,9 @@ _生成Asset compute项目的点进（无音频）_
 
 1. 在命令行中，导航到要包含项目的文件夹。
 1. 在命令行中，执行`aio app init`以开始交互式项目生成CLI。
-   + 这可能会生成Web浏览器，提示Adobe I/O进行身份验证。如果需要，请提供与[所需的Adobe服务和产品](../set-up/accounts-and-services.md)关联的Adobe凭据。 如果您无法登录，请按照[这些说明操作，了解如何生成项目](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user)。
+   + 此命令可能生成Web浏览器，提示验证到Adobe I/O。如果需要，请提供与[所需的Adobe服务和产品](../set-up/accounts-and-services.md)关联的Adobe凭据。 如果无法登录，请按照[这些说明操作，了解如何生成项目](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user)。
 1. __选择组织__
-   + 选择具有AEM的Adobe组织作为Cloud Service,Project Firefly将注册到
+   + 选择具有AEM的Adobe组织，Project Firefly已注册
 1. __选择项目__
    + 找到并选择项目。 这是从Firefly项目模板创建的[项目标题](../set-up/firefly.md)，在本例中为`WKND AEM Asset Compute`
 1. __选择工作区__
@@ -51,45 +51,41 @@ _生成Asset compute项目的点进（无音频）_
 
 ## 生成console.json
 
-从新建Asset compute项目的根目录中，运行以下命令以生成`console.json`。
+该开发人员工具需要一个名为`console.json`的文件，它包含连接到Adobe I/O所需的凭据。此文件从Adobe I/O控制台下载。
 
-```
-$ aio app use
-```
+1. 打开Asset compute工的[Adobe I/O](https://console.adobe.io)项目
+1. 选择项目工作区以下载`console.json`凭据，在此示例中，选择`Development`
+1. 转到Adobe I/O项目的根目录，然后点按右上角的&#x200B;__下载全部__。
+1. 文件下载为带有项目和工作区前缀的`.json`文件，例如：`wkndAemAssetCompute-81368-Development.json`
+1. 您可以
+   + 将文件重命名为`config.json`，并将其移到Asset compute工作项目的根目录中。 这是本教程中的方法。
+   + 将其移入任意文件夹，并从具有配置项`ASSET_COMPUTE_INTEGRATION_FILE_PATH`的`.env`文件中引用该文件夹。 文件路径可以是绝对路径，也可以是相对于项目根路径的绝对路径。 例如：
+      + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=/Users/example-user/secrets/wkndAemAssetCompute-81368-Development.json`
 
-验证当前工作区详细信息是否正确，按`Y`或进入以生成`console.json`。 如果检测到`.env`和`.aio`已存在，请点按`x`以跳过其创建。
+      或者
+      + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=../../secrets/wkndAemAssetCompute-81368-Development.json.json`
 
-如果创建新项，或覆盖`.env`，请将任何缺失的键／值重新添加到新`.env`:
 
-```
-## please provide the following environment variables for the Asset Compute devtool. You can use AWS or Azure, not both:
-#ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
-#S3_BUCKET=
-#AWS_ACCESS_KEY_ID=
-#AWS_SECRET_ACCESS_KEY=
-#AWS_REGION=
-#AZURE_STORAGE_ACCOUNT=
-#AZURE_STORAGE_KEY=
-#AZURE_STORAGE_CONTAINER_NAME=
-```
+> 注意
+> 文件包含凭据。 如果将文件存储在项目中，请确保将其添加到`.gitignore`文件以防止共享。 `.env`文件也是如此——这些凭据文件不得共享或存储在Git中。
 
 ## 审查项目剖析
 
-生成的Asset compute项目是专门的Adobe项目Firefly项目的Node.js项目，以下项目是Asset compute项目的特有项目：
+生成的Asset compute项目是Node.js项目，可用作专门的Adobe项目Firefly项目。 以下结构元素对Asset compute项目是特有的：
 
 + `/actions` 包含子文件夹，每个子文件夹都定义一个Asset compute工作者。
-   + `/actions/<worker-name>/index.js` 定义执行JavaScript以执行此工作者的工作。
+   + `/actions/<worker-name>/index.js` 定义用于执行此工作者的工作的JavaScript。
       + 文件夹名称`worker`是默认名称，只要它已在`manifest.yml`中注册，就可以是任何内容。
       + 可以根据需要在`/actions`下定义多个工作文件夹，但必须在`manifest.yml`中注册这些文件夹。
-+ `/test/asset-compute` 包含每个工作者的测试套件。与`/actions`文件夹类似，`/test/asset-compute`可以包含多个子文件夹，每个子文件夹都与它测试的工作器相对应。
-   + `/test/asset-compute/worker`表示特定工作者的测试套件的子文件夹包含表示特定测试用例的子文件夹以及测试输入、参数和预期输出。
++ `/test/asset-compute` 包含每个工作者的测试套件。与`/actions`文件夹类似，`/test/asset-compute`可以包含多个子文件夹，每个子文件夹都与它测试的工作者相对应。
+   + `/test/asset-compute/worker`表示特定工作者的测试套件的子文件夹包含表示特定测试用例的子文件夹，以及测试输入、参数和预期输出。
 + `/build` 包含Asset compute测试用例执行的输出、日志和伪像。
 + `/manifest.yml` 定义项目提供的Asset compute工作者。必须在此文件中枚举每个工作器实现，以使它们作为Cloud Service提供给AEM。
 + `/console.json` 定义Adobe I/O配置
    + 可以使用`aio app use`命令生成／更新此文件。
 + `/.aio` 包含aio CLI工具使用的配置。
    + 可以使用`aio app use`命令生成／更新此文件。
-+ `/.env` 在语法中定义环境 `key=value` 变量，并包含不应共享的机密。可以生成此项，或者要保护这些机密，不应将此文件签入Git，并通过项目的默认`.gitignore`文件忽略此文件。
++ `/.env` 在语法中定义环境 `key=value` 变量，并包含不应共享的机密。要保护这些机密，不应将此文件签入Git，并通过项目的默认`.gitignore`文件被忽略。
    + 可以使用`aio app use`命令生成／更新此文件。
    + 在此文件中定义的变量可以由命令行上的[导出变量](../deploy/runtime.md)覆盖。
 
@@ -97,11 +93,11 @@ $ aio app use
 
 大部分开发发生在`/actions`文件夹中开发工作者实现以及在`/test/asset-compute`中为自定义Asset compute工作者编写测试。
 
-## Githubasset compute项目
+## asset computeGitHub上的项目
 
-Github上提供最终Asset compute项目：
+最终Asset compute项目可在GitHub上获得，网址为：
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_Github contains是项目的最终状态，它完全填充了工作者和测试用例，但不包含任何凭据，如`.env`, `console.json` 或 `.aio`。_
+_GitHub包含项目的最终状态，完全填充了工作者和测试用例，但不包含任何凭据，即、 `.env`或 `console.json` 凭据 `.aio`。_
 
