@@ -8,9 +8,9 @@ doc-type: feature video
 activity: use
 version: 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 9102505bbd826e17bf924cec719d7a430eea5095
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1094'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Adobe资产链接v1.1现在在Adobe资产链接和AEM Assets之间提供InDesign
 
 >[!NOTE]
 >
->仅使用您的Adobe Creative CloudEnterprise ID或Federated ID。 确保[为Adobe资产链接](https://helpx.adobe.com/enterprise/using/configure-aem-for-aal-prerelease.html)配置AEM。
+>仅使用您的Adobe Creative CloudEnterprise ID或Federated ID。 确保[为Adobe资产链接](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)配置AEM。
 
 
 ### Adobe资产链接功能
@@ -73,8 +73,6 @@ FPO演绎版是原始资产的轻量级替代。 它们具有相同的长宽比�
 * BMP
 
 如果FPO再现不适用于AEM Assets的特定资产，则会引用原始高分辨率资产。 对于FPO图像，状态FPO显示在“InDesign链接”面板中。
-
-
 
 ## 了解Adobe资产链接身份验证AEM Assets{#understanding-adobe-asset-link-authentication-with-aem-assets}
 
