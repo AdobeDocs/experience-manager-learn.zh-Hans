@@ -10,7 +10,7 @@ version: cloud-service
 kt: 6133
 thumbnail: 41243.jpg
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: 9102505bbd826e17bf924cec719d7a430eea5095
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 3%
@@ -133,9 +133,13 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 
 ### 为什么我的mbox不在我的网页上打开？
 
-#### 未设置mboxDisable cookie时的错误消息**
+#### 未设置mboxDisable cookie时的错误消息
 
 ![目标Cookie域错误](assets/target-cookie-error.png)
+
+```
+> AT: [page-init] Adobe Target content delivery is disabled. Ensure that you can save cookies to your current domain, there is no "mboxDisable" cookie and there is no "mboxDisable" parameter in the query string.
+```
 
 #### 解决方案
 
