@@ -9,7 +9,7 @@ activity: understand
 audience: architect, developer
 doc-type: article
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: bc14783840a47fb79ddf1876aca1ef44729d097e
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 1%
@@ -139,12 +139,12 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 ```
 /cache { 
   ...
-  /headers {
-      "Access-Control-Allow-Origin",
-      "Access-Control-Expose-Headers",
-      "Access-Control-Max-Age",
-      "Access-Control-Allow-Credentials",
-      "Access-Control-Allow-Methods",
+  /clientheaders {
+      "Access-Control-Allow-Origin"
+      "Access-Control-Expose-Headers"
+      "Access-Control-Max-Age"
+      "Access-Control-Allow-Credentials"
+      "Access-Control-Allow-Methods"
       "Access-Control-Allow-Headers"
   }
   ...
@@ -153,7 +153,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 
 在对`dispatcher.any`文件进行更改后，请记住&#x200B;**重新启动Web服务器应用程序**。
 
-可能需要完全清除缓存，以确保在`/headers`配置更新后在下一个请求上正确缓存标头。
+可能需要完全清除缓存，以确保在`/clientheaders`配置更新后在下一个请求上正确缓存标头。
 
 ## CORS疑难解答
 
@@ -168,7 +168,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 * 验证请求是否被CORS处理程序拒绝，而不是由身份验证、CSRF令牌过滤器、调度程序过滤器或其他安全层拒绝
    * 如果CORS处理函数以200作出响应，但响应中缺少`Access-Control-Allow-Origin`头，请查看`com.adobe.granite.cors`中[!DNL DEBUG]下的拒绝日志
 * 如果[!DNL CORS]请求的调度程序缓存已启用
-   * 确保将`/headers`配置应用于`dispatcher.any`并成功重新启动Web服务器
+   * 确保将`/clientheaders`配置应用于`dispatcher.any`并成功重新启动Web服务器
    * 确保在任何OSGi或调度程序发生任何配置更改后正确清除缓存。
 * 如果需要，检查请求中是否存在身份验证凭据。
 
