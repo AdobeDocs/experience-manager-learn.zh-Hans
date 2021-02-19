@@ -5,7 +5,7 @@ description: 'Adobe Experience Manager Sites 的视频和教程集合。 '
 seo-description: 一系列针对Adobe Experience Manager Sites的视频和教程
 sub-product: 站点，内容服务
 translation-type: tm+mt
-source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
+source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 20%
@@ -19,7 +19,7 @@ Adobe Experience Manager(AEM)Sites是领先的体验管理平台。 本用户指
 
 ## 新增功能
 
-* **[将启动项与AEM Sites结合使用（视频）](./spa-editor/spa-editor-framework-feature-video-use.md)**
+* **[将启动项与AEM Sites结合使用（视频）](./page-authoring/launches.md)**
 
    *了解AEM站点的启动项，以及如何使用这些启动项准备网站内容以供将来发布。*
 
