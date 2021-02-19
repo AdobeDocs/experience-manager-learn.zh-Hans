@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 32%
+source-wordcount: '282'
+ht-degree: 29%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 32%
 
 + [概述](./overview.md)
 + AEM as a Cloud Service 简介{#introduction}
-   + [AEM是什么Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [什么是AEM作为Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [进化](./introduction/evolution.md)
    + [架构](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
-+ 基础技术{#underlying-technology}
++ 底层技术{#underlying-technology}
    + [AEM架构](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java内容存储库](./underlying-technology/introduction-jcr.md)
@@ -45,10 +45,10 @@ ht-degree: 32%
 + 本地开发环境设置{#local-development-environment-set-up}
    + [概述](./local-development-environment/overview.md)
    + [开发工具](./local-development-environment/development-tools.md)
-   + [本地AEM运行时](./local-development-environment/aem-runtime.md)
+   + [本地AEM Runtime](./local-development-environment/aem-runtime.md)
    + [本地调度程序工具](./local-development-environment/dispatcher-tools.md)
 + 开发{#developing}
-   + 开发基础知识{#basics}
+   + 开发基础{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本地开发环境](./developing/basics/local-development-environment.md)
       + [AEM 项目原型](./developing/basics/aem-project-archetype.md)
@@ -66,7 +66,7 @@ ht-degree: 32%
       + [OSGi Web控制台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [调度程序工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + 将AEM作为Cloud Service调试{#debugging-aem-as-a-cloud-service}
+   + 将AEM调试为Cloud Service{#debugging-aem-as-a-cloud-service}
       + [概述](./debugging/cloud-service/overview.md)
       + [日志](./debugging/cloud-service/logs.md)
       + [构建和部署](./debugging/cloud-service/build-and-deployment.md)
@@ -77,8 +77,8 @@ ht-degree: 32%
    + [AdobeIMS用户](./accessing/adobe-ims-users.md)
    + [AdobeIMS用户组](./accessing/adobe-ims-user-groups.md)
    + [AdobeIMS产品用户档案](./accessing/adobe-ims-product-profiles.md)
-   + [AEM用户、组和权限](./accessing/aem-users-groups-and-permissions.md)
-   + [配置对AEM遍历的访问](./accessing/walk-through.md)
+   + [AEM用户、用户组和权限](./accessing/aem-users-groups-and-permissions.md)
+   + [配置对AEM直通服务的访问](./accessing/walk-through.md)
 + 迁移{#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
    + [批量导入资产](./migration/bulk-import.md)
@@ -87,7 +87,7 @@ ht-degree: 32%
    + 设置{#set-up}
       + [帐户和服务配置](./asset-compute/set-up/accounts-and-services.md)
       + [本地开发环境](./asset-compute/set-up/development-environment.md)
-      + [Adobe项目Firefly](./asset-compute/set-up/firefly.md)
+      + [AdobeProject Firefly](./asset-compute/set-up/firefly.md)
    + 开发{#develop}
       + [创建Asset compute项目](./asset-compute/develop/project.md)
       + [配置环境变量](./asset-compute/develop/environment-variables.md)
@@ -96,12 +96,18 @@ ht-degree: 32%
       + [使用开发工具](./asset-compute/develop/development-tool.md)
    + 测试和调试{#test-debug}
       + [测试工作人员](./asset-compute/test-debug/test.md)
-      + [调试工作者](./asset-compute/test-debug/debug.md)
+      + [调试工作人员](./asset-compute/test-debug/debug.md)
    + 部署{#deploy}
       + [部署到Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
       + [与AEM集成](./asset-compute/deploy/processing-profiles.md)
    + 高级{#advanced}
       + [元数据工作程序](./asset-compute/advanced/metadata.md)
    + [疑难解答](./asset-compute/troubleshooting.md)
++ 多步Tutorials{#multi-step-tutorials}
+   + [AEM Sites开发](./develop-wknd-tutorial.md)
+   + [GraphQL](../headless-tutorial/graphql/overview.md)
+   + [SPA Editor(React)](../spa-react-tutorial/overview.md)
+   + [SPA Editor（角形）](../spa-angular-tutorial/overview.md)
+   + [AEM Sites和Adobe Target](../aem-target-personalization/overview.md)
+   + [基于令牌的身份验证](../headless-tutorial/authentication/overview.md)
 
-+ [AEM Sites 开发入门- WKND 教程](./develop-wknd-tutorial.md)
