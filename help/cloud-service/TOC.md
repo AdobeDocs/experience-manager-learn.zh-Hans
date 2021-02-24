@@ -5,7 +5,7 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
-source-git-commit: c7b3a6e408e46338a6a540c6403601be8c0893e2
+source-git-commit: 59b786d95d1428916adad37ceca4412b93463e9b
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 24%
@@ -42,7 +42,7 @@ ht-degree: 24%
       + [分析测试结果](./cloud-manager/devops/analyze-test-results.md)
       + [调度程序配置](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
-+ 本地开发环境设置{#local-development-environment-setup}
++ 本地开发环境设置{#local-development-environment-set-up}
    + [概述](./local-development-environment/overview.md)
    + [开发工具](./local-development-environment/development-tools.md)
    + [本地AEM Runtime](./local-development-environment/aem-runtime.md)
