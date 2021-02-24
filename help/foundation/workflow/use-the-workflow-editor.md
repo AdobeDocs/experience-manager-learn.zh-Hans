@@ -1,24 +1,24 @@
 ---
-title: 使用AEM中的工作流编辑器
-description: 工作流支持Experience Manager中的业务流程管理，并用于自动处理内容和促进需要人为决策的治理和流程。 工作流是通过工作流模型定义的，工作流模型由一系列步骤组成，在工作流模型编辑器中创建和管理。
-version: 6.4, 6.5
-sub-product: 基础，站点，资产
-feature: workflow
-topics: governance, collaboration
-activity: use
-audience: administrator, implementer
-doc-type: feature video
+title: 如何在AEM中创建工作流
+description: 工作流支持Experience Manager中的业务流程管理，用于自动处理内容并促进需要人力决策的治理和流程。
+version: 6.4, 6.5, cloud-service
+feature: 工作流
+topic: 内容管理
+level: 中间
+role: 管理员、开发人员
+kt: 657
+thumbnail: 22201.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: a08b1dd31d27284b9cfa128b68e5b8739ad9eab0
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 0%
+source-wordcount: '93'
+ht-degree: 3%
 
 ---
 
 
 # 使用工作流编辑器
 
-工作流支持Experience Manager中的业务流程管理，并用于自动处理内容和促进需要人为决策的治理和流程。 工作流是通过工作流模型定义的，工作流模型由一系列步骤组成，在[!UICONTROL 工作流模型编辑器]中创建和管理。
+工作流支持Experience Manager中的业务流程管理，用于自动处理内容并促进需要人力决策的治理和流程。 工作流是通过工作流模型定义的，工作流模型由一系列步骤组成，并在工作流模型编辑器[!UICONTROL 中创建和管理。]
 
 >[!VIDEO](https://video.tv.adobe.com/v/22201/?quality=12&learn=on)
