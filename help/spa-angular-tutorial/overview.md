@@ -20,7 +20,7 @@ ht-degree: 7%
 
 # 在AEM中创建您的第一个AngularSPA {#introduction}
 
-欢迎使用为Adobe Experience Manager(AEM)中&#x200B;**SPA Editor**&#x200B;功能新手的开发人员设计的多部分教程。 本教程将介绍虚拟生活方式品牌WKND的Angular应用程序的实施。 Angular应用程序将开发并设计为与AEM SPA Editor一起部署，后者将Angular组件映射到AEM组件。 部署到AEM的完整SPA可以使用AEM的传统在线编辑工具动态创作。
+欢迎使用为Adobe Experience Manager(AEM)中&#x200B;**SPA Editor**&#x200B;功能新手的开发人员设计的多部分教程。 本教程将介绍虚拟生活方式品牌WKND的Angular应用程序的实施。 angular应用程序将开发并设计为与AEM SPA Editor一起部署，后者将Angular组件映射到AEM组件。 部署到AEM的完整SPA可以使用AEM的传统在线编辑工具动态创作。
 
 ![最终SPA已实施](assets/wknd-spa-implementation.png)
 
