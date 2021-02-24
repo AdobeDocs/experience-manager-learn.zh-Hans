@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 创建自定义组件{#custom-component}
 
-了解如何创建要与AEM SPA Editor一起使用的自定义组件。 了解如何开发创作对话框和Sling Models以扩展JSON模型以填充自定义组件。
+了解如何创建要与AEM SPA Editor一起使用的自定义组件。 了解如何开发创作对话框和Sling Models来扩展JSON模型以填充自定义组件。
 
 ## 目标
 
