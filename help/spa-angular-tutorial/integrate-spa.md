@@ -407,7 +407,7 @@ ht-degree: 0%
 
    创建专用的&#x200B;**dev**&#x200B;配置可确保&#x200B;**mocks**&#x200B;文件夹仅在开发过程中使用，且从不部署到生产构建中的AEM。
 
-6. 在&#x200B;**angular.json**&#x200B;文件中，下次更新&#x200B;**browserTarget**&#x200B;配置以使用新的&#x200B;**dev**&#x200B;配置：
+6. 在&#x200B;**angular.json**&#x200B;文件中，下一步更新&#x200B;**browserTarget**&#x200B;配置以使用新的&#x200B;**dev**&#x200B;配置：
 
    ```diff
      ...
@@ -556,7 +556,7 @@ ht-degree: 0%
    }
    ```
 
-6. 更新&#x200B;**angular.json**&#x200B;并使用&#x200B;**style.scss**&#x200B;重新命名对&#x200B;**style.css**&#x200B;的所有引用。 应该有3个参考。
+6. 更新&#x200B;**angular.json**，并使用&#x200B;**styles.scs**&#x200B;重新命名对&#x200B;**style.css**&#x200B;的所有引用。 应该有3个参考。
 
    ```diff
      "styles": [
