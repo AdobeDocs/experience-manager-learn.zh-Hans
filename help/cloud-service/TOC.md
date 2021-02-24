@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
-source-git-commit: 91399ff4ab26655de27bbecab4ff773f6666d86a
+source-git-commit: c7b3a6e408e46338a6a540c6403601be8c0893e2
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 25%
+source-wordcount: '329'
+ht-degree: 24%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 25%
       + [分析测试结果](./cloud-manager/devops/analyze-test-results.md)
       + [调度程序配置](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
-+ 本地开发环境设置{#local-development-environment-set-up}
++ 本地开发环境设置{#local-development-environment-setup}
    + [概述](./local-development-environment/overview.md)
    + [开发工具](./local-development-environment/development-tools.md)
    + [本地AEM Runtime](./local-development-environment/aem-runtime.md)
@@ -58,6 +58,7 @@ ht-degree: 25%
       + [内容发布](./developing/basics/content-publishing.md)
       + [OSGi配置](./developing/basics/osgi-configurations.md)
       + [调度程序配置迁移](./developing/basics/dispatcher-configuration.md)
+   + [AEM SDK API JavaDocs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/)
 + 调试AEM{#debugging}
    + 调试AEM SDK{#debugging-aem-sdk}
       + [概述](./debugging/aem-sdk-local-quickstart/overview.md)
@@ -107,7 +108,7 @@ ht-degree: 25%
    + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/develop-wknd-tutorial.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
    + [SPA Editor(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [SPA Editor（角形）](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [SPA Editor(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
 
