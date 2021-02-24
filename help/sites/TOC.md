@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Sites 的视频和教程集合�
 breadcrumb-title: AEM Sites 教程
 sub-product: 站点
 translation-type: tm+mt
-source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
+source-git-commit: fcfb33f93e57d40b08e0527d38cfce8553095e65
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 20%
+source-wordcount: '447'
+ht-degree: 21%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 20%
    + [内容片段与体验片段](content-fragments/understand-content-fragments-and-experience-fragments.md)
 + 体验片段 {#experience-fragments}
    + [使用体验片段](experience-fragments/experience-fragments-feature-video-use.md)
-   + [了解体验片段](experience-fragments/experience-fragments-feature-video-understand.md)
+   + [构建基块](experience-fragments/building-blocks.md)
    + [设置包含体验片段的社交发布](experience-fragments/experience-fragments-social-technical-video-setup.md)
    + [内容片段与体验片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 开发 {#developing}
