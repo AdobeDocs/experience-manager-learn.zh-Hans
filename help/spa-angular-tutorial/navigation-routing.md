@@ -700,7 +700,7 @@ ht-degree: 1%
 
    >[!CAUTION]
    >
-   > Angular项目启用了一些非常严格的linting规则。 如果Maven生成失败，请检查错误并查找列出的文件中找到的&#x200B;**Lint错误。**. 修复linter发现的所有问题并重新运行Maven命令。
+   > angular项目启用了一些非常严格的linting规则。 如果Maven生成失败，请检查错误并查找列出的文件中找到的&#x200B;**Lint错误。**. 修复linter发现的所有问题并重新运行Maven命令。
 
 2. 导航到AEM中的SPA主页：[http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html)并打开浏览器的开发人员工具。 下面的屏幕截图是从Google Chrome浏览器中捕获的。
 
@@ -732,4 +732,4 @@ ht-degree: 1%
 
 ### 后续步骤{#next-steps}
 
-[创建自定义组件](custom-component.md)  — 了解如何创建要与AEM SPA Editor一起使用的自定义组件。了解如何开发创作对话框和Sling Models以扩展JSON模型以填充自定义组件。
+[创建自定义组件](custom-component.md)  — 了解如何创建要与AEM SPA Editor一起使用的自定义组件。了解如何开发创作对话框和Sling Models来扩展JSON模型以填充自定义组件。
