@@ -5,10 +5,10 @@ user-guide-description: 'Adobe Experience Manager Foundation 的视频和教程�
 sub-product: 基础
 index: y
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: 2760064642002a684b3fd70337a81a7d6e28a343
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 19%
+source-wordcount: '147'
+ht-degree: 21%
 
 ---
 
@@ -20,15 +20,15 @@ ht-degree: 19%
    + [了解升级AEM的理由](./administration/understand-reasons-to-upgrade.md)
    + [使用oak-run.jar管理索引](./administration/use-oak-run-jar-to-manage-indexes.md)
    + [使用在线修订清理](./administration/use-online-revision-clean-up.md)
-   + [使用系统概述仪表板](./administration/use-the-system-overview-dashboard.md)
+   + [使用“系统概述”仪表板](./administration/use-the-system-overview-dashboard.md)
 + 身份验证 {#authentication}
    + [OAuth身份验证](authentication/oauth-code-sample-develop.md)
-   + [设置要与Adobe I/O一起使用的公共／私钥](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
+   + [设置要与Adobe I/O一起使用的公钥/私钥](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
    + [了解身份验证](authentication/authentication-support-article-understand.md)
    + [了解AMS上的IMS身份验证](authentication/adobe-ims-authentication-technical-video-understand.md)
-+ Adobe云管理器{#cloud-manager}
-   + [了解Adobe云管理器](./cloud-manager/understand-cloud-manager-for-aem.md)
-   + [在Adobe云管理器中使用CI/CD管道](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
++ Adobe Cloud Manager{#cloud-manager}
+   + [了解Adobe Cloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
+   + [在Adobe Cloud Manager中使用CI/CD管道](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
 + 开发 {#development}
    + [开发Sling模型出口商](./development/develop-sling-model-exporter.md)
    + [设置本地AEM开发环境](./development/set-up-a-local-aem-development-environment.md)
@@ -46,6 +46,5 @@ ht-degree: 19%
 + 工作流 {#workflow}
    + [使用工作流编辑器](./workflow/use-the-workflow-editor.md)
    + [使用工作流管理](./workflow/use-workflow-management.md)
-   + [将日历视图与AEM项目和收件箱结合使用](./workflow/use-the-calendar-view-with-aem-projects-and-inbox.md)
    + [使用收件箱](./workflow/use-the-inbox.md)
 
