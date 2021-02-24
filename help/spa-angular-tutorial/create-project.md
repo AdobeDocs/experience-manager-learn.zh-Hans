@@ -82,7 +82,7 @@ ht-degree: 3%
    | appTitle | WKND SPAAngular |
    | appId | wknd-spa-angular |
    | groupId | com.adobe.aem.guides |
-   | frontendModule | 角 |
+   | frontendModule | angular |
    | 包 | com.adobe.aem.guides.wknd.spa.angular |
    | includeExamples | n |
 
