@@ -1,48 +1,47 @@
 ---
 title: 使用AEM Assets为图像添加智能标签
-description: 图像的智能标记可根据图像的内容自动智能地向图像资产中添加元数据标记，从而增强AEM搜索功能。
-feature: smart-tags
-topics: metadata, search
-audience: all
-doc-type: feature video
-activity: understand
-version: 6.3, 6.4, 6.5
-kt: 5244
+description: 图像的智能标记可根据图像内容自动智能地向图像资产中添加元数据标记，从而增强AEM搜索功能。
+topic: 内容管理
+feature: 智能标记
+role: 业务从业者
+level: 中间
+version: 6.3, 6.4, 6.5, cloud-service
+kt: 645
 thumbnail: 17019.jpg
 translation-type: tm+mt
-source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+source-git-commit: a5fb96275194ddc46169832c0fb79a2587833564
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 3%
+source-wordcount: '225'
+ht-degree: 5%
 
 ---
 
 
-# 图像的智能标记
+# 图像智能标签
 
-AEM资产的图像智能标记通过自动向图像资产添加派生的元数据标记来增强AEM资产的搜索，从而更轻松、快速地查找正确的图像，从而改善创作体验。
+AEM资产的图像智能标记可以自动向图像资产添加派生的元数据标记，从而增强AEM资产的搜索功能，同时通过更轻松、更快地找到正确的图像来改善创作体验。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17019/?quality=12&learn=on)
 
-## 设置AEM 6.x{#set-up}
+## 为AEM 6.x{#set-up}设置
 
 >[!NOTE]
-> 图像的智能标记会作为Cloud Service自动为AEM设置。
+> 图像的智能标记会作为Cloud Service自动为AEM配置。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17023/?quality=12&learn=on)
 
-在使用智能内容服务之前，请确保在Adobe I/O创建以下集成：
+在使用智能内容服务之前，请确保执行以下操作以创建Adobe I/O集成：
 
 * 具有组织管理员权限的Adobe ID帐户
 * 您的组织已启用智能内容服务
 
-该视频详细介绍了配置用于智能标记图像的Adobe I/O智能内容服务所需的以下任务。
+视频详细说明了配置用于智能标记图像的Adobe I/O智能内容服务所需的以下任务。
 
 * 在AEM中创建智能内容服务配置以生成公钥。 为 OAuth 集成获取公共证书。
-* 在Adobe I/O创建集成并上传生成的公钥。
-* 使用API密钥和Adobe I/O的其他凭据配置AEM实例。
+* 在Adobe I/O中创建集成，并上传生成的公钥。
+* 使用API密钥和Adobe I/O中的其他凭据配置您的AEM实例。
 * （可选）在资产上传时启用自动标记。
 
 ## 其他资源
 
-* [AEM Assets智能标记文档](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)
+* [AEM Assets Smart Tags文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/smart-tags.html)
