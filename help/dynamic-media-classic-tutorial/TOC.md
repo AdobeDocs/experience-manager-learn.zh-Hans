@@ -20,7 +20,7 @@ ht-degree: 46%
 
 # Dynamic Media Classic 简介 {#dynamic-media-classic-tutorial}
 
-+ [Dynamic Media经典概述](./overview.md)
++ [Dynamic Media Classic概述](./overview.md)
 + [资产工作流和预览](./main-workflow.md)
 + [确定文件夹结构和文件命名约定](./folder-structure-filenaming.md)
 + [图像预设](./image-presets.md)
@@ -29,4 +29,4 @@ ht-degree: 46%
 + [基本模板简介](./basic-templates.md)
 + [视频概述](./video-overview.md)
 + [智能图像处理](./smart-imaging.md)
-+ [面向管理员的宝贵报告](./valuable-reports.md)
++ [为管理员提供有价值的报告](./valuable-reports.md)
