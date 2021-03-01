@@ -20,7 +20,7 @@ ht-degree: 71%
 # AEM SPA Editor 和 React 快速入门 {#spa-react-tutorial}
 
 + [概述](overview.md)
-+ [SPA Editor项目](create-project.md)
++ [SPA Editor Project](create-project.md)
 + [集成SPA](integrate-spa.md)
 + [映射SPA组件](map-components.md)
 + [导航和路由](navigation-routing.md)
