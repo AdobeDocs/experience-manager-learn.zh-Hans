@@ -2,18 +2,15 @@
 title: 在AEM中开发项目
 description: 一个开发教程，其中演示了如何为AEM项目进行开发。  在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建新项目以管理内容创作工作流和任务。
 version: 6.3, 6.4, 6.5
-feature: '"项目，工作流"'
+feature: 项目，工作流
 topics: collaboration, development, governance
 activity: develop
 audience: developer, implementer, administrator
 doc-type: tutorial
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '4654'
+source-wordcount: '4651'
 ht-degree: 0%
 
 ---
