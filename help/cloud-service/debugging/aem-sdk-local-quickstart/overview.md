@@ -1,46 +1,49 @@
 ---
 title: 调试AEM SDK
 description: AEM SDK是开发人员使用的主要开发环境，支持多种调试AEM和部署应用程序的方法。
-feature: null
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: null
+topic: 开发
+role: 开发人员
+level: 初学者，中级
 translation-type: tm+mt
-source-git-commit: a3d3612713decefb5c7e1cf5b2d4d21afff0a2f5
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 0%
+source-wordcount: '215'
+ht-degree: 2%
 
 ---
 
 
 # 调试AEM SDK
 
-AEM SDK的本地快速启动是开发人员使用的主要开发环境，它支持多种调试AEM和已部署应用程序的方法。 本用户指南将带您了解一些更常见的调试工具和控制台，在AEM SDK的本地快速启动上调试应用程序。
+AEM SDK的本地快速入门是开发人员使用的主要开发环境，它支持多种调试AEM和部署应用程序的方法。 本用户指南将指导您完成一些比较常见的调试工具和控制台，以在AEM SDK的本地快速启动上调试应用程序。
 
 ## 日志
 
-日志是调试AEM应用程序的前线，但依赖于部署的AEM应用程序中的适当日志记录。
+日志是调试AEM应用程序的前线，但取决于部署的AEM应用程序中是否有足够的日志记录。
 
 [使用日志调试AEM SDK](./logs.md)
 
 ## 远程调试
 
-远程调试在AEM SDK的本地快速启动中运行的Java代码，允许从IDE在AEM中执行实时代码。
+远程调试AEM SDK的本地快速启动中运行的Java代码，允许从IDE在AEM中执行实时代码的分步操作。
 
 [远程调试AEM SDK](./remote-debugging.md)
 
 ## OSGi Web控制台
 
-AEM SDK的本地快速启动具有一个OSGi Web控制台，它向本地AEM运行时提供各种信息和介绍，这些信息和介绍有助于了解您的应用程序如何被识别以及AEM中的功能。
+AEM SDK的本地快速入门具有OSGi Web控制台，该控制台在本地AEM运行时中提供各种信息和内部介绍，这些信息和内部介绍对于了解您的应用程序如何被AEM识别以及在中的功能非常有用。
 
 [使用OSGi Web控制台调试AEM SDK](./osgi-web-consoles.md)
 
 ## 其他工具
 
-其他各种工具可以帮助在AEM SDK的本地快速启动上调试应用程序。
+其他各种工具可帮助在AEM SDK的本地快速启动上调试应用程序。
 
 [用于调试AEM SDK的其他工具](./other-tools.md)
