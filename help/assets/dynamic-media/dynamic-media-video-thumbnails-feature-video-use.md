@@ -1,22 +1,17 @@
 ---
 title: 将自定义视频缩略图与AEM Dynamic Media结合使用
-seo-title: 将自定义视频缩略图与AEM Dynamic Media结合使用
 description: AEM Assets自定义视频缩略图使作者能够从一组生成的缩略图中选择适当的缩略图。 可以轻松自定义为视频生成的缩略图数。
-seo-description: AEM Assets自定义视频缩略图使作者能够从一组生成的缩略图中选择适当的缩略图。 可以轻松自定义为视频生成的缩略图数。
-uuid: 1559b1bc-daca-49e9-b6de-0b93798658a8
-discoiquuid: 5e168b37-2906-4ab5-9840-086ae7efa281
-sub-product: 动态媒体
-feature: media-player, video-profiles
-topics: videos, renditions, authoring, best-practices
-doc-type: feature video
-audience: all
-activity: use
+sub-product: dynamic-media
+feature: 视频配置文件
 version: 6.3, 6.4, 6.5
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 0%
+source-wordcount: '112'
+ht-degree: 11%
 
 ---
 
@@ -33,4 +28,4 @@ AEM Assets自定义视频缩略图使作者能够从一组生成的缩略图中�
 
 >[!NOTE]
 >
->您应在Dynamic Media](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)模式下运行[AEM实例
+>您应在Dynamic Media](https://docs.adobe.com/docs/cn/aem/6-3/administer/content/dynamic-media/config-dynamic.html)模式下运行您的[AEM实例
