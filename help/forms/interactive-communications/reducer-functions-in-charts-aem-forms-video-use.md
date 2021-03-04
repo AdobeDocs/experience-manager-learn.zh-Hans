@@ -5,20 +5,17 @@ description: Reducer函数用于聚合图表中显示的值或组值。以下视
 seo-description: Reducer函数用于聚合图表中显示的值或组值。以下视频将介绍使用Reducer函数所涉及的步骤。
 uuid: e9bd8bda-48ea-4a02-95c4-02aedafdb640
 discoiquuid: 6fef8341-8fd5-4d82-9f69-2b8be7cd22db
-feature: 交互式通信
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: technical video
 activity: use
 version: 6.4,6.5
-topic: 开发
-role: 开发人员
-level: 中间
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 3%
+source-wordcount: '128'
+ht-degree: 0%
 
 ---
 
