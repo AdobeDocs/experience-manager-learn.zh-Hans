@@ -1,7 +1,7 @@
 ---
 title: 处理HTML5表单提交
 description: 创建HTML5表单提交处理程序
-feature: mobile-forms
+feature: 移动设备表单
 topics: development
 audience: developer
 doc-type: article
@@ -9,24 +9,27 @@ activity: implement
 version: 6.4,6.5
 kt: 5269
 thumbnail: kt-5269.jpg
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: c60a46027cc8d71fddd41aa31dbb569e4df94823
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 1%
+source-wordcount: '282'
+ht-degree: 4%
 
 ---
 
 
 # 处理HTML5表单提交
 
-HTML5表单可提交到AEM中托管的servlet。 提交的数据可以作为输入流在servlet中访问。 要提交HTML5表单，您需要使用AEM Forms设计器在表单模板中添加“HTTP提交按钮”
+HTML5表单可提交到AEM中托管的servlet。 提交的数据可以作为输入流在Servlet中访问。 要提交您的HTML5表单，您需要使用AEM Forms Designer在表单模板中添加“HTTP提交按钮”
 
 ## 创建提交处理程序
 
-可以创建一个简单的servlet来处理HTML5表单提交。 然后，可使用以下代码提取提交的数据。 此[servlet](assets/html5-submit-handler.zip)是本教程的一部分。 请使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)安装[servlet](assets/html5-submit-handler.zip)
+可以创建一个简单的servlet来处理HTML5表单提交。 然后，可使用以下代码提取提交的数据。 此[servlet](assets/html5-submit-handler.zip)在本教程中提供。 请使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)安装[servlet](assets/html5-submit-handler.zip)
 
-第9行的代码可用于调用J2EE进程。 如果要使用代码调用J2EE进程，请确保已配置[AdobeLiveCycle客户端SDK配置](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html)。
+第9行的代码可用于调用J2EE进程。 如果您打算使用代码调用J2EE进程，请确保您已配置[Adobe LiveCycle客户端SDK配置](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html)。
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();
@@ -64,12 +67,12 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 * 复制http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html并将其粘贴到“提交URL”文本字段中
 * 单击&#x200B;_SaveAndClose_&#x200B;按钮。
 
-### 在排除路径中添加条目
+### 在“排除路径”中添加条目
 
 * 导航到[configMgr](http://localhost:4502/system/console/configMgr)。
 * 搜索&#x200B;_Adobe花岗岩CSRF滤镜_
 * 在“排除的路径”部分添加以下条目
-* _/content/AemFormsSamples/handlehml5formsubmission_
+* _/content/AemFormsSamples/handlehml5formsubmision_
 * 保存更改
 
 ### 测试表单
@@ -81,7 +84,7 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 ### 其他阅读
 
-还建议使用此[文章](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html)从HTML5表单生成PDF。
+还建议使用此[文章](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html)从HTML5表单提交生成PDF。
 
 
 
