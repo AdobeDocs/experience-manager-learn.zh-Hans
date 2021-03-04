@@ -1,7 +1,7 @@
 ---
 title: 检索保存的自适应表单
 description: Servlet用保存的数据呈现自适应表单
-feature: adaptive-forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,18 +9,21 @@ activity: implement
 version: 6.4,6.5
 kt: 6553
 thumbnail: 6553.jpg
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 0%
+source-wordcount: '108'
+ht-degree: 3%
 
 ---
 
 # 检索保存的表单
 
-下一步是创建一个servlet，它将使用保存的数据及其附件呈现自适应表单。
-验证OTP代码后，将执行以下Servlet代码。 从数据库获取与唯一应用程序ID关联的自适应表单数据及其文件附件映射。 请求对象将填充保存的自适应表单数据和文件附件映射。 然后转发请求，以呈现预填充原始数据及其附件的“存储附件”表单。
+下一步是创建一个servlet，它将呈现包含保存的数据及其附件的自适应表单。
+在验证OTP代码后，将执行以下Servlet代码。 从数据库获取与唯一应用程序ID相关联的自适应表单数据及其文件附件映射。 请求对象将填充保存的自适应表单数据和文件附件映射。 然后转发该请求，以呈现预填充原始数据和其附件的“存储附件”表单。
 
 ```java
 package store.and.fetch.core.servlets;
