@@ -1,38 +1,36 @@
 ---
 title: AEM桌面应用程序
-description: 使用AEM桌面应用程序简化对AEM桌面上管理的任何资产（适用于任何应用程序和文件格式）的访问。
+description: 使用AEM桌面应用程序简化对任何应用程序和文件格式的AEM桌面上管理的任何资源的访问。
 kt: 2551
 sub-product: 资产
-feature: desktop-app
-topics: authoring, collaboration, content-velocity
+feature: Experience Manager桌面应用程序
 version: 6.5, 6.4, 6.3
-doc-type: feature video
-activity: use
-team: TM
-audience: author, marketer
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 7%
+source-wordcount: '146'
+ht-degree: 10%
 
 ---
 
 
-# 使用AEM桌面应用程序
+# 使用 AEM 桌面应用程序
 
-使用AEM桌面应用程序简化对AEM桌面上管理的任何资产（适用于任何应用程序和文件格式）的访问。
+使用AEM桌面应用程序简化对任何应用程序和文件格式的AEM桌面上管理的任何资源的访问。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28868/?quality=12&learn=on)
 
-+ 通过使用专用桌面应用程序进行浏览和搜索来在AEM中发现资产
++ 通过使用专用桌面应用程序进行浏览和搜索，在AEM中发现资源
 + 优化的带宽管理允许上传和下载许多大型资源
 + 批量上传和下载文件夹和资产
 + 脱机访问同步的资产
 
 >[!NOTE]
 >
-> [Adobe资产链](./adobe-asset-link.md) 接Adobe专门用于在Adobe Creative Cloud应用程序内与AEM资产协作的解决方案：Photoshop,Illustrator,InDesign。在这些应用程序中使用AEM Assets时，Adobe资产链接优先于AEM桌面应用程序。
+> [Adobe Asset Linkis ](./adobe-asset-link.md) Adobe专门用于在Adobe Creative Cloud应用程序中使用AEM资产的解决方案：Photoshop、Illustrator、InDesign。在这些应用程序中使用AEM Assets时，Adobe Asset Link优先于AEM Desktop App。
 
 ## 其他资源
 
