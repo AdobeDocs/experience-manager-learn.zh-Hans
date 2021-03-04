@@ -1,26 +1,29 @@
 ---
 title: 收件箱自定义
 description: '根据工作流数据添加新列，从而自定义收件箱 '
-feature: adaptive-forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
 kt: 5830
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 3%
+source-wordcount: '206'
+ht-degree: 5%
 
 ---
 
 # AEM 收件箱
 
-AEM Inbox整合来自各个AEM组件(包括Forms工作流)的通知和任务。 当触发包含分配任务步骤的表单工作流时，关联的应用程序将作为任务列在被分派人的收件箱中。
-收件箱用户界面为列表视图和日历视图提供数据。 您还可以配置视图设置。 您可以根据各种参数筛选任务
-您可以自定义Experience Manager收件箱以更改列的默认标题，对列的位置重新排序，并根据工作流的数据显示其他列
+AEM Inbox整合来自各种AEM组件(包括Forms工作流)的通知和任务。 当触发包含“分配”任务步骤的表单工作流时，关联的应用程序将作为任务列在被分派人的收件箱中。
+收件箱用户界面为视图任务提供列表和日历视图。 您还可以配置视图设置。 您可以根据各种参数筛选任务
+您可以自定义Experience Manager收件箱以更改列的默认标题、对列的位置重新排序并根据工作流的数据显示其他列
 
 
 >[!NOTE]
@@ -30,14 +33,14 @@ AEM Inbox整合来自各个AEM组件(包括Forms工作流)的通知和任务。 
 ## 列自定义
 
 [启动AEM收](http://localhost:4502/aem/inbox)
-件箱通过单击列表视 _图图标，然后选择_  __ 控件，打开Admin Control（如下面的屏幕截图所示）
+件箱通过单击列表视图图标，然后选 _择下_ 面屏幕截图中所示的Admin  __ Control，打开Admin Control
 
 ![管理控制](assets/open-customization.png)
 
 在列自定义UI中，您可以执行以下操作
 
 * 删除列
-* 对列重新排序
+* 重新排列列
 * 重命名列
 
 ## 品牌化自定义
@@ -49,4 +52,4 @@ AEM Inbox整合来自各个AEM组件(包括Forms工作流)的通知和任务。 
 * 自定义帮助链接
 * 隐藏导航选项
 
-![收件箱品牌](assets/branding-customization.PNG)
+![收件箱 — 品牌](assets/branding-customization.PNG)
