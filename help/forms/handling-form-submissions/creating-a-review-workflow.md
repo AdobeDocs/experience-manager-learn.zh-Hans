@@ -1,8 +1,8 @@
 ---
-title: 创建用于审核已提交数据的工作流
+title: 创建工作流以审核提交的数据
 description: 使用AEM Forms工作流组件创建AEM工作流模型以审核提交的数据。
 sub-product: 表单
-feature: workflow
+feature: 工作流
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,18 +10,21 @@ activity: setup
 version: 6.4,6.5
 kt: 4271
 thumbnail: 40242.jpg
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 0%
+source-wordcount: '145'
+ht-degree: 6%
 
 ---
 
 
-# 创建用于审核已提交数据的工作流
+# 创建工作流以审核提交的数据
 
-工作流通常用于传送提交的数据以供审核和批准。 工作流是使用AEM中的工作流编辑器创建的。 工作流可以在提交自适应表单时触发。
+工作流通常用于路由提交的数据，以供审阅和批准。 工作流是使用AEM中的工作流编辑器创建的。 工作流可以在提交自适应表单时触发。
 
 ## 先决条件
 
@@ -31,7 +34,7 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/40242/?quality=9&learn=on)
 
 
-如果由于某种原因无法构建工作流，您可以从[此处](assets/review-submitted-data-workflow.zip)下载完成的工作流，然后使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)将相同的工作流导入AEM实例。
+如果由于某种原因无法构建工作流，则可以从[此处](assets/review-submitted-data-workflow.zip)下载完成的工作流，并使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)将相同的工作流导入AEM实例。
 
 
 
