@@ -3,7 +3,7 @@ title: 设置与AEM Forms的数据集成
 seo-title: 设置与AEM Forms的数据集成
 description: 设置到JDBC数据源的数据连接
 seo-description: 设置到JDBC数据源的数据连接
-feature: '"自适应Forms，工作流"'
+feature: 自适应表单，表单数据模型
 topics: integrations
 audience: developer
 doc-type: technical video
@@ -11,14 +11,11 @@ activity: setup
 version: 6.4,6.5
 uuid: 267de794-4462-4421-adee-d40a469fabb3
 discoiquuid: 41864584-cb99-4c54-abda-8eb83829cb90
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 2%
+source-wordcount: '92'
+ht-degree: 0%
 
 ---
 
