@@ -11,14 +11,10 @@ KT: 4132
 mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
-feature: “核心组件、页面编辑器、可编辑模板、AEM项目原型”
-topic: '"内容管理，开发"'
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '893'
 ht-degree: 7%
 
 ---
