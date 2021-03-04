@@ -1,10 +1,10 @@
 ---
-title: 在稿件节添加表
-seo-title: 在稿件节添加表
-description: 这是创建第一个交互式通信文档的多步教程的第9部分。在本部分中，我们将向稿节添加一个表。
-seo-description: 这是创建第一个交互式通信文档的多步教程的第9部分。在本部分中，我们将向稿节添加一个表。
+title: 在捐款节增加表
+seo-title: 在捐款节增加表
+description: 这是创建您的第一个交互式通信文档的多步教程的第9部分。在本部分中，我们将向贡献部分添加一个表。
+seo-description: 这是创建您的第一个交互式通信文档的多步教程的第9部分。在本部分中，我们将向贡献部分添加一个表。
 uuid: 9475e769-a3f8-4aec-9b46-e0dc182b78a0
-feature: interactive-communication
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,21 +13,24 @@ version: 6.4,6.5
 kt: 5994
 thumbnail: 37953.jpg
 discoiquuid: 36c1f67f-b5bb-431e-893c-fd5032918dd7
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 0%
+source-wordcount: '138'
+ht-degree: 2%
 
 ---
 
 
-# 在稿件节添加表
+# 在捐款节增加表
 
-在本部分中，我们将在稿件部分添加一个表。
+在这部分中，我们将在稿件部分添加一个表。
 有关在打印渠道中使用表的详细信息，请参阅[在打印渠道文档中使用表](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md)。
 
-登录AEM Forms并导航到Adobe Experience Manager>Forms>Forms和文档。
+登录AEM Forms并导航到Adobe Experience Manager > Forms > Forms和文档。
 
 打开401KStatementPrint文件夹。
 
