@@ -4,18 +4,21 @@ seo-title: 创建Web渠道文档模板AEM Forms
 description: 这是创建第一个交互式通信文档的多步教程的第4部分。 在此部分，我们将为Web渠道文档创建模板。
 seo-description: 这是创建第一个交互式通信文档的多步教程的第4部分。 在此部分，我们将为Web渠道文档创建模板。
 uuid: b4c9f68b-3091-4f87-988d-705f0296a8d8
-feature: 交互通信
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 95ca401b-69ea-49e2-a9ae-e144444e481e
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 0%
+source-wordcount: '156'
+ht-degree: 2%
 
 ---
 
