@@ -3,15 +3,18 @@ title: 了解AEM中的Java API最佳实践
 description: AEM构建于一个丰富的开放源码软件堆栈上，它公开了许多Java API，以供在开发过程中使用。 本文探讨了主要API，以及它们的使用时间和用途。
 version: 6.2, 6.3, 6.4, 6.5
 sub-product: 基础，资产，站点
-feature: null
+feature: API
 topics: best-practices, development
 activity: develop
 audience: developer
 doc-type: article
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2023'
+source-wordcount: '2027'
 ht-degree: 2%
 
 ---
