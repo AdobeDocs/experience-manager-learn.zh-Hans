@@ -1,25 +1,28 @@
 ---
 title: 调试调度程序工具
-description: 调度程序工具提供一个容器化的Apache Web Server环境，可用于模拟AEM作为Cloud Services的AEM Publish服务的本地调度程序。 调试调度程序工具的日志和缓存内容对于确保端到端AEM应用程序以及支持缓存和安全配置正确至关重要。
-feature: dispatcher, aem-sdk
+description: 调度程序工具提供了一个容器化的Apache Web Server环境，可用于将AEM模拟为Cloud Services的AEM Publish服务的本地调度程序。 调试调度程序工具的日志和缓存内容对于确保端到端AEM应用程序以及支持缓存和安全配置正确至关重要。
+feature: Dispatcher
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5918
+topic: 开发
+role: 开发人员
+level: 初学者，中级
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 0%
+source-wordcount: '234'
+ht-degree: 1%
 
 ---
 
 
 # 调试调度程序工具
 
-调度程序工具提供一个容器化的Apache Web Server环境，可用于模拟AEM作为Cloud Services的AEM Publish服务的本地调度程序。
+调度程序工具提供了一个容器化的Apache Web Server环境，可用于将AEM模拟为Cloud Services的AEM Publish服务的本地调度程序。
 调试调度程序工具的日志和缓存内容对于确保端到端AEM应用程序以及支持缓存和安全配置正确至关重要。
 
 >[!NOTE]
@@ -28,15 +31,15 @@ ht-degree: 0%
 
 ## 调度程序工具日志
 
-调度程序工具日志可通过`stdout`或`bin/docker_run`命令访问，或在位于`/etc/https/logs`的Docker容器中提供更详细的信息。
+调度程序工具日志可通过`stdout`或`bin/docker_run`命令访问，或在位于`/etc/https/logs`的Docker容器中提供更多详细信息。
 
-有关如何直接访问调度程序工具的Docker容器日志的说明，请参见[调度程序日志](./logs.md#dispatcher-logs)。
+有关如何直接访问Dispatcher Tools的Docker容器日志的说明，请参阅[ Dispatcher logs](./logs.md#dispatcher-logs)。
 
 ## 调度程序工具缓存
 
 ### 访问Docker容器中的日志
 
-调度程序缓存可以直接在位于` /mnt/var/www/html`的Docker容器中访问。
+调度程序缓存可以直接访问位于` /mnt/var/www/html`的Docker容器。
 
 ```shell
 $ docker ps
