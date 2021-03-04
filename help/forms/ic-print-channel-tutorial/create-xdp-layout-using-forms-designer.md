@@ -1,10 +1,10 @@
 ---
-title: 使用Forms设计器创建版面
-seo-title: 使用Forms设计器创建版面
-description: 本教程是创建打印渠道的第一个交互式通信文档的多部分教程的第4部分。在本部分中，我们将看到使用AEM Forms设计器创建的布局文件。
-seo-description: 本教程是创建打印渠道的第一个交互式通信文档的多部分教程的第4部分。在本部分中，我们将看到使用AEM Forms设计器创建的布局文件。
+title: 使用Forms Designer创建布局
+seo-title: 使用Forms Designer创建布局
+description: 这是创建打印渠道的第一个交互式通信文档的多部分教程的第4部分。在本部分中，我们将查看使用AEM Forms Designer创建的布局文件。
+seo-description: 这是创建打印渠道的第一个交互式通信文档的多部分教程的第4部分。在本部分中，我们将查看使用AEM Forms Designer创建的布局文件。
 uuid: 2f014c58-1ae1-40e8-a45d-7ffe9c86f693
-feature: interactive-communication
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,20 +13,23 @@ version: 6.4,6.5
 discoiquuid: 17f4cdbb-079b-4fe3-861d-cfa0c03d30dd
 kt: 5957
 thumbnail: 37890.jpg
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 0%
+source-wordcount: '169'
+ht-degree: 2%
 
 ---
 
 
-# 使用Forms设计器{#create-layout-using-forms-designer}创建布局
+# 使用Forms Designer {#create-layout-using-forms-designer}创建布局
 
-在本部分，我们将看到使用AEM Forms设计器创建的布局文件。
+在此部分，我们将查看使用AEM Forms Designer创建的布局文件。
 
-每个印刷渠道文档都将基于使用AEM Forms设计器工具创建的模板。 通常，您将在模板中创建用于保存目标片段、图像或布局片段的章节或文档区域。 理想情况下，布局将不定义任何内容。 这会将布局与推荐的做法内容分离。
+每个打印渠道文档都将基于使用AEM Forms设计器工具创建的模板。 通常，您将在模板中创建用于存放文档片段、图像或布局片段的部分或目标区域。 理想情况下，布局将不定义任何内容。 这会将布局与推荐的做法内容分离。
 
 以下视频突出显示了将在本教程中使用的布局中定义的部分或目标区域。
 
