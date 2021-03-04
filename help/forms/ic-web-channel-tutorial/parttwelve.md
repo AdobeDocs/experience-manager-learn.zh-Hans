@@ -4,21 +4,18 @@ seo-title: 设置Web渠道投放文档
 description: 这是创建您的第一个交互式通信文档的多步教程的最后一部分。 在此部分，我们将通过电子邮件查看Web渠道文档的投放。
 seo-description: 这是创建您的第一个交互式通信文档的多步教程的最后一部分。 在此部分，我们将通过电子邮件查看Web渠道文档的投放。
 uuid: c1066600-1abd-4401-b04f-b93c28603cc7
-feature: 交互式通信
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 1%
+source-wordcount: '390'
+ht-degree: 0%
 
 ---
 
