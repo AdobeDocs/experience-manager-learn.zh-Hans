@@ -1,7 +1,7 @@
 ---
-title: 培养Asset compute工
-description: asset compute工作流是Asset compute项目的核心，它提供了对资产执行或协调工作以创建新再现的自定义功能。
-feature: asset-compute
+title: 开发Asset compute工作者
+description: asset computeWorker是Asset compute项目的核心，它提供了对资产执行或安排工作以创建新再现的自定义功能。
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,45 +9,48 @@ audience: developer
 doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
+topic: 集成、开发
+role: 开发人员
+level: 中级，经验丰富的
 translation-type: tm+mt
-source-git-commit: 2d7ae5e46acb25eaaf7a1a35d9bbf20f7c14042e
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1429'
 ht-degree: 0%
 
 ---
 
 
-# 培养Asset compute工
+# 开发Asset compute工作者
 
-asset compute工作线程是Asset compute项目的核心，它提供对资产执行或协调工作以创建新再现的自定义功能。
+asset computeWorker是Asset compute项目的核心，它提供了对资产执行或安排工作以创建新再现的自定义功能。
 
-asset compute项目会自动生成一个简单的工作程序，该程序会将资产的原始二进制文件复制到指定演绎版中，而不进行任何转换。 在本教程中，我们将修改此工作者，以制作更有趣的再现，以说明Asset compute工作者的强大功能。
+asset compute项目会自动生成一个简单的工作程序，该程序会将资产的原始二进制文件复制到命名演绎版中，而不进行任何转换。 在本教程中，我们将修改此worker以制作更有趣的再现，以说明Asset computeworker的强大功能。
 
-我们将创建一个Asset compute工作人员，该人员将生成一个新的水平图像演绎版，该格式副本在资产版本模糊的情况下，在资产演绎版的左侧和右侧覆盖空白空间。 最终再现的宽度、高度和模糊将进行参数化。
+我们将创建一个Asset compute工作人员，该工作人员将生成一个新的水平图像演绎版，该图像演绎版的左侧和右侧将空白区域覆盖，并且资产版本模糊。 最终再现的宽度、高度和模糊将进行参数化。
 
 ## asset compute工作器调用的逻辑流
 
-asset compute工作者在`renditionCallback(...)`函数中实施Asset computeSDK工作者API合同，从概念上讲，该合同是：
+asset compute工作者在`renditionCallback(...)`函数中实施Asset compute SDK工作人员API合同，从概念上讲，该合同是：
 
 + __输入：__ AEM资产的原始二进制和处理用户档案参数
 + __输出：__ 要添加到AEM资产的一个或多个演绎版
 
-![asset compute工作者逻辑流](./assets/worker/logical-flow.png)
+![asset compute工作逻辑流](./assets/worker/logical-flow.png)
 
-1. AEM作者服务调用Asset compute工作者，提供资产的&#x200B;__(1a)__&#x200B;原始二进制（`source`参数）和&#x200B;__(1b)__&#x200B;处理用户档案中定义的任何参数（`rendition.instructions`参数）。
-1. asset computeSDK安排自定义Asset compute元数据工作器的`renditionCallback(...)`函数的执行，根据资产的原始二进制&#x200B;__(1a)__&#x200B;和任何参数&#x200B;__(1b)__&#x200B;生成新的二进制再现。
+1. AEM作者服务调用Asset computeworker，提供资产的&#x200B;__(1a)__&#x200B;原始二进制（`source`参数）和&#x200B;__(1b)__&#x200B;在处理用户档案中定义的任何参数（`rendition.instructions`参数）。
+1. asset compute SDK安排自定义Asset compute元数据worker的`renditionCallback(...)`函数的执行，根据资产的原始二进制&#x200B;__(1a)__&#x200B;和任何参数&#x200B;__(1b)__&#x200B;生成新的二进制再现。
 
-   + 在本教程中，再现是“正在创建”的，这意味着工作者组成再现，但源二进制文件也可以发送到其他Web服务API以生成再现。
+   + 在本教程中，将创建“正在创建”再现，这意味着worker组成再现，但源二进制文件也可以发送到其他Web服务API以生成再现。
 
-1. asset compute工作者将新再现的二进制数据保存到`rendition.path`。
-1. 写入`rendition.path`的二进制数据通过Asset computeSDK传输到AEM作者服务，并以&#x200B;__(4a)__&#x200B;形式公开，并以&#x200B;__(4b)__&#x200B;形式保留到资产的元数据节点。
+1. asset computeworker将新再现的二进制数据保存到`rendition.path`。
+1. 写入`rendition.path`的二进制数据通过Asset compute SDK传输到AEM作者服务，并以&#x200B;__(4a)__&#x200B;形式公开，并以&#x200B;__(4b)__&#x200B;持久保存到资产的元数据节点中的文本格式。
 
-上图阐述了面向Asset compute开发者的关注点和Asset compute工作者调用的逻辑流程。 出于好奇，[内部Asset compute执行详细信息](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html)可用，但只能依赖公共Asset computeSDK API合同。
+上图阐述了面向Asset compute开发者的问题以及Asset compute工作者调用的逻辑流程。 出于好奇，[内部Asset compute执行详细信息](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html)可用，但只能依赖公共Asset computeSDK API合同。
 
-## 工人剖析
+## 工人的解剖
 
-所有Asset compute工人都遵循相同的基本结构和投入／产出合同。
+所有Asset compute工人都遵循相同的基本结构和投入/产出合同。
 
 ```javascript
 'use strict';
@@ -106,25 +109,25 @@ function customHelperFunctions() { ... }
 1. 导航到`/actions/worker`文件夹
 1. 打开`index.js`文件
 
-这是我们将在本教程中修改的工作JavaScript文件。
+这是我们将在本教程中修改的JavaScript工作文件。
 
 ## 安装和导入支持npm模块
 
-作为基于Node.js的Asset compute项目，其优势在于强大的[npm模块生态系统](https://npmjs.com)。 要利用npm模块，我们必须首先将它们安装到我们的Asset compute项目中。
+作为基于Node.js的项目，Asset compute项目受益于强大的[npm模块生态系统](https://npmjs.com)。 要利用npm模块，我们必须首先将它们安装到我们的Asset compute项目中。
 
-在此工作器中，我们利用[jimp](https://www.npmjs.com/package/jimp)直接在Node.js代码中创建和操作再现图像。
+在此worker中，我们利用[jimp](https://www.npmjs.com/package/jimp)直接在Node.js代码中创建和操作再现映像。
 
 >[!WARNING]
 >
->并非所有用于资产处理的npm模块都受Asset compute支持。 不支持依赖ImageMagick或其他操作系统相关库等应用程序存在的npm模块。 最好限制仅使用JavaScript npm模块。
+>并非所有用于资产处理的npm模块都受Asset compute支持。 不支持依赖ImageMagick或其他操作系统相关库等应用程序存在的npm模块。 最好限制为仅使用JavaScriptnpm模块。
 
-1. 打开Asset compute项目根目录中的命令行（可通过&#x200B;__终端>新终端__&#x200B;在VS代码中执行此操作）并执行命令：
+1. 打开Asset compute项目根目录中的命令行（可以通过&#x200B;__“终端”>“新建终端”__&#x200B;在VS代码中执行此操作）并执行命令：
 
    ```
    $ npm install jimp
    ```
 
-1. 将`jimp`模块导入工作代码中，以便通过`Jimp` JavaScript对象使用它。
+1. 将`jimp`模块导入worker代码中，以便通过`Jimp` JavaScript对象使用。
 更新工作器`index.js`顶部的`require`指令，以从`jimp`模块导入`Jimp`对象：
 
    ```javascript
@@ -147,11 +150,11 @@ function customHelperFunctions() { ... }
 
 ## 读取参数
 
-asset compute工作者可以读取参数，这些参数可以通过在AEM中定义为Cloud Service作者服务的处理用户档案进行传入。 参数通过`rendition.instructions`对象传递到工作器。
+asset compute工作者可以读取可以通过在AEM中定义为Cloud Service作者服务的处理用户档案传入的参数。 这些参数通过`rendition.instructions`对象传递到worker。
 
 可以通过访问工作代码中的`rendition.instructions.<parameterName>`来读取这些代码。
 
-在此，我们将阅读可配置再现的`SIZE`、`BRIGHTNESS`和`CONTRAST`，如果尚未通过处理用户档案提供默认值，则提供默认值。 请注意，从AEM作为Cloud Service处理用户档案调用`renditions.instructions`时，将作为字符串传入，因此，请确保将它们转换为工作代码中的正确数据类型。
+在此，我们将阅读可配置再现的`SIZE`、`BRIGHTNESS`和`CONTRAST`，如果尚未通过处理用户档案提供默认值，则提供默认值。 请注意，从AEM作为Cloud Service处理用户档案调用`renditions.instructions`时，将作为字符串传入，因此请确保将它们转换为工作代码中的正确数据类型。
 
 ```javascript
 'use strict';
@@ -178,12 +181,12 @@ exports.main = worker(async (source, rendition, params) => {
 
 ## 引发错误{#errors}
 
-asset compute工作者可能遇到导致错误的情况。 AdobeAsset computeSDK提供[一套预定义错误](https://github.com/adobe/asset-compute-commons#asset-compute-errors)，在遇到此类情况时可能引发这些错误。 如果未应用特定错误类型，则可以使用`GenericError`，或定义特定的自定义`ClientErrors`。
+asset compute工作人员可能遇到导致错误的情况。 Adobe Asset compute SDK提供[一套预定义错误](https://github.com/adobe/asset-compute-commons#asset-compute-errors)，在遇到此类情况时可能引发这些错误。 如果未应用特定错误类型，则可以使用`GenericError`，或定义特定的自定义`ClientErrors`。
 
-在开始处理再现之前，请检查以确保此工作器的上下文中所有参数都有效且受支持：
+在开始处理再现之前，请检查以确保所有参数在此worker的上下文中都有效并受支持：
 
-+ 确保`SIZE`、`CONTRAST`和`BRIGHTNESS`的再现指令参数有效。 否则，抛出自定义错误`RenditionInstructionsError`。
-   + 在此文件底部定义了扩展`ClientError`的自定义`RenditionInstructionsError`类。 当[为工作器写入测试](../test-debug/test.md)时，使用特定的自定义错误很有用。
++ 确保`SIZE`、`CONTRAST`和`BRIGHTNESS`的再现指令参数有效。 否则，引发自定义错误`RenditionInstructionsError`。
+   + 在此文件底部定义了扩展`ClientError`的自定义`RenditionInstructionsError`类。 当[为worker写入测试](../test-debug/test.md)时，使用特定的自定义错误很有用。
 
 ```javascript
 'use strict';
@@ -235,24 +238,24 @@ class RenditionInstructionsError extends ClientError {
 
 ## 创建再现
 
-读取、清理和验证参数后，将编写代码以生成再现。 生成再现的伪代码如下所示：
+通过读取、清理和验证参数，将编写代码以生成再现。 生成再现的伪代码如下所示：
 
-1. 以通过`size`参数指定的平方尺寸新建一个`renditionImage`画布。
-1. 从源资产的二进制文件创建`image`对象
+1. 创建通过`size`参数指定的方形尺寸的新`renditionImage`画布。
+1. 从源资源的二进制文件创建`image`对象
 1. 使用&#x200B;__Jimp__&#x200B;库转换图像：
    + 将原始图像裁剪到居中的正方形
-   + 从“方形”图像的中心剪切一个圆
+   + 从“方形”图像的中心剪切圆
    + 缩放以适合由`SIZE`参数值定义的尺寸
    + 根据`CONTRAST`参数值调整对比度
    + 根据`BRIGHTNESS`参数值调整亮度
-1. 将转换后的`image`放置到具有透明背景的`renditionImage`的中心
-1. 将合成内容`renditionImage`写回`rendition.path`，以将其保存回AEM作为资产演绎版。
+1. 将变换后的`image`放置到具有透明背景的`renditionImage`的中心
+1. 将合成内容`renditionImage`写入`rendition.path`，以将其保存回AEM作为资产演绎版。
 
 此代码使用[Jimp API](https://github.com/oliver-moran/jimp#jimp)执行这些图像转换。
 
-asset compute工作人员必须同步完成工作，并且`rendition.path`必须在工作人员的`renditionCallback`完成之前完全写回。 这要求使用`await`运算符同步进行异步函数调用。 如果您不熟悉JavaScript异步函数以及如何使它们以同步方式执行，请熟悉[JavaScript的wait运算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)。
+asset compute工作人员必须同步完成工作，并且必须在工作人员的`renditionCallback`完成之前将`rendition.path`完全写回。 这要求使用`await`运算符使异步函数调用同步。 如果您不熟悉JavaScript异步函数以及如何使它们以同步方式执行，请熟悉[JavaScript的await运算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)。
 
-已完成的工作器`index.js`应当如下：
+已完成的worker `index.js`应当如下：
 
 ```javascript
 'use strict';
@@ -313,17 +316,17 @@ class RenditionInstructionsError extends ClientError {
 }
 ```
 
-## 运行工作器
+## 运行Worker
 
-由于工作代码已完成，并且之前已在[manifest.yml](./manifest.md)中注册和配置，因此可以使用本地Asset compute开发工具执行该代码以查看结果。
+现在工作代码已完成，并且之前已在[manifest.yml](./manifest.md)中注册和配置，因此可以使用本地Asset compute开发工具执行它以查看结果。
 
 1. 从Asset compute项目的根
 1. 执行 `aio app run`
 1. 等待Asset compute开发工具在新窗口中打开
-1. 在&#x200B;__中选择文件……__&#x200B;下拉框，选择要处理的示例图像
-   + 选择要用作源资产二进制文件的示例图像文件
+1. 在&#x200B;__选择文件……__&#x200B;下拉框，选择要处理的样本图像
+   + 选择要用作源资源二进制文件的示例图像文件
    + 如果尚不存在，请点按左侧的&#x200B;__(+)__，上传[示例图像](../assets/samples/sample-file.jpg)文件，然后刷新“开发工具”浏览器窗口
-1. 将`"name": "rendition.png"`更新为此工作器以生成透明PNG。
+1. 将`"name": "rendition.png"`更新为此worker以生成透明PNG。
    + 请注意，此“name”参数仅用于开发工具，不应依赖。
 
    ```json
@@ -341,22 +344,22 @@ class RenditionInstructionsError extends ClientError {
 
    ![默认PNG再现](./assets/worker/default-rendition.png)
 
-### 使用参数运行工作器
+### 使用参数运行worker
 
-通过处理用户档案配置传入的参数可在Asset compute开发工具中模拟，方法是在再现参数JSON上将其作为键／值对提供。
+通过处理用户档案配置传入的参数可以在Asset compute开发工具中模拟，方法是在再现参数JSON上将它们作为键/值对提供。
 
 >[!WARNING]
 >
->在本地开发过程中，当从AEM作为Cloud Service处理用户档案作为字符串传入时，可以使用各种数据类型传入值，因此，请确保根据需要分析正确的数据类型。
-> 例如，Jimp的`crop(width, height)`函数要求其参数为`int`。如果未将`parseInt(rendition.instructions.size)`解析为int，则对`jimp.crop(SIZE, SIZE)`的调用将失败，因为参数将不兼容“String”类型。
+>在本地开发过程中，当从AEM作为Cloud Service处理用户档案作为字符串传入时，可以使用各种数据类型传入值，因此请确保根据需要分析正确的数据类型。
+> 例如，Jimp的`crop(width, height)`函数要求其参数为`int`的。如果未将`parseInt(rendition.instructions.size)`解析为int，则对`jimp.crop(SIZE, SIZE)`的调用将失败，因为参数将不兼容“String”类型。
 
 我们的代码接受以下参数：
 
 + `size` 定义演绎版的大小（高度和宽度为整数）
-+ `contrast` 定义对比度调整，必须介于-1和1之间，作为浮点
-+ `brightness`  定义亮度调整，必须介于-1和1之间，作为浮点
++ `contrast` 定义对比度调整，必须介于–1和1之间，作为浮点
++ `brightness`  定义亮调整，必须介于–1和1之间，作为浮点
 
-在工作器`index.js`中通过以下方式读取这些内容：
+在worker `index.js`中通过以下方式读取这些内容：
 
 + `const SIZE = parseInt(rendition.instructions.size) || 800`
 + `const CONTRAST = parseFloat(rendition.instructions.contrast) || 0`
@@ -379,11 +382,11 @@ class RenditionInstructionsError extends ClientError {
    ```
 
 1. 再次点按&#x200B;__运行__
-1. 点按演绎版预览以下载和查看生成的演绎版。 请注意其尺寸以及与默认再现相比对比度和亮度的更改方式。
+1. 点按演绎版预览以下载和查看生成的演绎版。 请注意其尺寸，以及与默认再现相比对比度和亮度的更改方式。
 
    ![参数化PNG再现](./assets/worker/parameterized-rendition.png)
 
-1. 将其他图像上传到&#x200B;__源文件__&#x200B;下拉列表，然后尝试使用不同的参数针对这些图像运行工作器！
+1. 将其他映像上载到&#x200B;__源文件__&#x200B;下拉列表，然后尝试使用不同参数针对它们运行worker!
 
 ## Github上的Worker index.js
 
@@ -393,4 +396,4 @@ class RenditionInstructionsError extends ClientError {
 
 ## 疑难解答
 
-+ [返回部分绘制／损坏的再现](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
++ [再现返回部分绘制/损坏](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
