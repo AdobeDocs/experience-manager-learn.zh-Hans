@@ -1,7 +1,7 @@
 ---
-title: 将体验片段导出至Adobe Target
-description: 了解如何将AEM体验片段作为Adobe Target优惠发布和导出。
-feature: experience-fragments
+title: 将体验片段导出到Adobe Target
+description: 了解如何将AEM Experience Fragment发布并导出为Adobe Target优惠。
+feature: 体验片段
 topics: integrations, authoring
 audience: all
 doc-type: feature video
@@ -9,16 +9,19 @@ activity: use
 version: cloud-service
 kt: 6350
 thumbnail: 41245.jpg
+topic: 集成
+role: 业务从业者
+level: 中间
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 1%
+source-wordcount: '198'
+ht-degree: 3%
 
 ---
 
 
-# 将体验片段导出到Adobe Target{#experience-fragment-target}
+# 将体验片段导出到Adobe Target {#experience-fragment-target}
 
 了解如何将AEM体验片段导出为Adobe Target优惠。
 
@@ -34,26 +37,26 @@ ht-degree: 1%
 
 #### 错误
 
-将体验片段导出到Adobe Target时，在Adobe Admin Console没有正确的权限，将导致AEM作者服务出现以下错误：
+在Adobe Admin Console中将体验片段导出到Adobe Target时，如果没有正确的权限，则会在AEM作者服务上导致以下错误：
 
-    ![目标API UI错误](assets/error-target-offer.png)
+    ![目标 API UI错误](assets/error-target-offer.png)
 
 ...和`aemerror`日志中的以下日志消息：
 
-    ![目标API控制台错误](assets/target-console-error.png)
+    ![目标 API控制台错误](assets/target-console-error.png)
 
 #### 分辨率
 
-1. 登录[Admin Console](https://adminconsole.adobe.com/)，具有Adobe Target产品用户档案的管理权限，但使用AEM集成
-2. 选择&#x200B;__产品>Adobe Target>产品用户档案__
+1. 登录[Admin Console](https://adminconsole.adobe.com/)，但使用AEM集成的Adobe Target产品用户档案具有管理权限
+2. 选择&#x200B;__产品> Adobe Target >产品用户档案__
 3. 在&#x200B;__集成__&#x200B;选项卡下，选择AEM的集成作为Cloud Service环境(与Adobe I/O项目同名)
-4. 分配&#x200B;__编辑者__&#x200B;或&#x200B;__批准者__&#x200B;角色
+4. 分配&#x200B;__编辑者__&#x200B;或&#x200B;__审批者__&#x200B;角色
 
    ![目标API错误](assets/target-permissions.png)
 
-向您的Adobe Target集成添加正确权限应解决此错误。
+向Adobe Target集成添加正确权限应可解决此错误。
 
 ## 支持链接
 
-+ [Adobe Experience Cloud调试器- Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
-+ [Adobe Experience Cloud调试器- Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Adobe Experience Cloud调试器 — Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud调试器 — Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
