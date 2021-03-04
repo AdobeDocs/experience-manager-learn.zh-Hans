@@ -1,24 +1,27 @@
 ---
 title: 从MySQL数据库存储和检索表单数据
 description: 多部分教程，指导您完成存储和检索表单数据所涉及的步骤
-feature: adaptive-forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: 787a79663472711b78d467977d633e3d410803e5
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 1%
+source-wordcount: '98'
+ht-degree: 5%
 
 ---
 
 
 # 创建OSGi服务以获取数据
 
-以下代码被写入以存储和获取存储的自适应表单数据。 简单查询用于获取与给定GUID关联的自适应表单数据。 然后，所获取的数据被返回到调用应用程序。 在此代码中引用了之前步骤中创建的同一数据源
+以下代码被写入以存储并获取存储的自适应表单数据。 简单的查询用于获取与给定GUID关联的自适应表单数据。 然后，所获取的数据返回到调用应用程序。 在此代码中引用了在先前步骤中创建的同一数据源
 
 
 ```java
