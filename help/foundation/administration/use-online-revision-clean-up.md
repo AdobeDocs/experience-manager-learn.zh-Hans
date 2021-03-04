@@ -1,30 +1,32 @@
 ---
 title: 使用在线修订清理
-description: '在线修订清理的简介。 联机修订清理减轻了频繁进行脱机修订清理的需求。 '
+description: '在线修订清理简介。 联机修订清理减少了频繁的脱机修订清理的需要。 '
 version: 6.3, 6.4, 6.5
-feature: oak, compaction
 topics: operations, authoring, performance
 activity: use
 audience: administrator, architect, implementer
 doc-type: technical video
+topic: 管理
+role: 管理员
+level: 中间
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 0%
+source-wordcount: '77'
+ht-degree: 3%
 
 ---
 
 
 # 使用在线修订清理
 
-简要介绍“在线修订清理”，可减轻频繁进行“脱机修订清理”的需求。
+对联机修订清理的简要介绍，可减轻频繁的脱机修订清理的需要。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17004/?quality=12&learn=on)
 
-## 支持材料
+## 辅助材料
 
 * [AEM [!DNL JMX MBean - SegmentRevisionGarbageCollection]](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+revision+garbage+collection%2Ctype%3DSegmentRevisionGarbageCollection)
 
-* [AEM [!DNL OSGi Configuration]  -  [!UICONTROL Oak细分NodeStore服务]](http://localhost:4502/system/console/configMgr/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService)
+* [AEM [!DNL OSGi Configuration]  -  [!UICONTROL Oak Segment NodeStore服务]](http://localhost:4502/system/console/configMgr/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService)
 
