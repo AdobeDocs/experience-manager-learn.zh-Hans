@@ -1,7 +1,7 @@
 ---
 title: 存储表单数据
 description: 将表单数据与新附件映射一起存储在数据库中
-feature: adaptive-forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,24 +9,27 @@ activity: implement
 version: 6.3,6.4,6.5
 kt: 6538
 thumbnail: 6538.jpg
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 0%
+source-wordcount: '74'
+ht-degree: 5%
 
 ---
 
 # 存储表单数据
 
-下一步是创建一个服务，在数据库中插入新行以存储自适应表单数据和关联的附件。
-下面的屏幕快照显示了数据库中的一行。
+下一步是创建一个服务，在数据库中插入新行，以存储自适应表单数据和关联的attachmentsinfo。
+以下屏幕快照显示了数据库中的一行。
 
 
 ![示例行](assets/sample-row.JPG)
 
 
-下面的代码在数据库中插入包含相应数据的新行
+以下代码在数据库中插入包含相应数据的新行
 
 ```java
 public String storeFormData(String formData, String attachmentsInfo, String telephoneNumber) {
