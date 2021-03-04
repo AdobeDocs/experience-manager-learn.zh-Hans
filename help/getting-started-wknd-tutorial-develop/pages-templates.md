@@ -3,7 +3,7 @@ title: AEM Sites入门 — 页面和模板
 seo-title: AEM Sites入门 — 页面和模板
 description: 了解基本页面组件与可编辑模板之间的关系。 了解如何将核心组件代理到项目中，并了解可编辑模板的高级策略配置，以基于Adobe XD的模型构建结构良好的文章页面模板。
 sub-product: 站点
-feature: “核心组件，可编辑模板”
+feature: 模板编辑器，核心组件
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,13 +12,10 @@ audience: developer
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
-topic: '"内容管理，开发"'
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '3083'
+source-wordcount: '3076'
 ht-degree: 0%
 
 ---
