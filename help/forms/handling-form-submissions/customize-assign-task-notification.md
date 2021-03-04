@@ -2,7 +2,7 @@
 title: 自定义分配任务通知
 description: 在分配任务通知电子邮件中包含表单数据
 sub-product: 表单
-feature: 工作流
+feature: workflow
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,14 +10,11 @@ activity: setup
 version: 6.4,6.5
 kt: 6279
 thumbnail: KT-6279.jpg
-topic: 开发
-role: 开发人员
-level: 富有经验
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 2%
+source-wordcount: '447'
+ht-degree: 1%
 
 ---
 
