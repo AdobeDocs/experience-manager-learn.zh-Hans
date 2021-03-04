@@ -1,20 +1,17 @@
 ---
 title: 有用的公用服务
 description: 为AEM Forms开发人员提供的一些实用服务
-feature: 自适应表单
+feature: 文档服务
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 开发
-role: 开发人员
-level: 中间
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 3%
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
