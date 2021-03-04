@@ -1,25 +1,24 @@
 ---
-title: 使用放置链接的资产操作
-description: 了解如何使用AEM Assets的“位置链接”操作使用资源。
+title: 使用置入链接的资产操作
+description: 了解如何使用“置入链接”操作从AEM Assets使用资源。
 sub-product: 资产
-feature: adobe-asset-link
-topics: authoring, collaboration, operations, sharing, metadata, images, operations
-audience: all
-doc-type: feature video
-activity: use
-version: null
+feature: Adobe Asset Link
+version: cloud-service
 thumbnail: 34839.jpg
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '34'
-ht-degree: 0%
+source-wordcount: '42'
+ht-degree: 11%
 
 ---
 
 
-# 将链接的位置{#place-linked}
+# 放置链接的{#place-linked}
 
-了解如何使用AEM Assets的“位置链接”操作使用资源。
+了解如何使用“置入链接”操作从AEM Assets使用资源。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34839/?quality=12)
