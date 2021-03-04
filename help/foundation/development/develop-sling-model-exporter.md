@@ -3,18 +3,15 @@ title: 在AEM中开发Sling模型导出器
 description: 此技术说明了如何设置AEM以与Sling Model Exporter一起使用、使用Exporter框架增强现有Sling Model以再现为JSON，以及如何使用Exporter选项和Jackson批注进一步自定义输出。
 version: 6.3, 6.4, 6.5
 sub-product: 基础，内容服务
-feature: API
+feature: sling-models，sling-model-exporter
 topics: content-delivery, development, headless
 activity: develop
 audience: developer
 doc-type: technical video
-topic: 开发
-role: 开发人员
-level: 中间
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
