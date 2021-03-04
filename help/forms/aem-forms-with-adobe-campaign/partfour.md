@@ -1,28 +1,31 @@
 ---
-title: 使用表单活动模型创建用户档案
-seo-title: 使用表单活动模型创建用户档案
-description: 使用Adobe Campaign Standard表单用户档案模型创建AEM Forms数据的过程
-seo-description: 使用Adobe Campaign Standard表单用户档案模型创建AEM Forms数据的过程
+title: 使用表单用户档案模型创建活动
+seo-title: 使用表单用户档案模型创建活动
+description: 使用Adobe Campaign Standard表单用户档案模型创建AEM Forms Form数据涉及的步骤
+seo-description: 使用Adobe Campaign Standard表单用户档案模型创建AEM Forms Form数据涉及的步骤
 uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: adaptive-forms, form-data-model
+feature: 输出服务
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 2%
+source-wordcount: '452'
+ht-degree: 3%
 
 ---
 
 
-# 使用表单活动模型{#create-campaign-profile-using-form-data-model}创建用户档案
+# 使用表单用户档案模型{#create-campaign-profile-using-form-data-model}创建活动
 
-使用Adobe Campaign Standard表单用户档案模型创建AEM Forms数据的过程
+使用Adobe Campaign Standard表单用户档案模型创建AEM Forms Form数据涉及的步骤
 
 ## 创建自定义身份验证{#create-custom-authentication}
 
@@ -36,9 +39,9 @@ ht-degree: 2%
 
 ![campafdm](assets/campaignfdm.gif)
 
-我们必须使用自定义身份验证来向Adobe Campaign Standard发出REST呼叫。
+我们必须使用自定义身份验证才能向Adobe Campaign Standard发出REST调用。
 
-要使用自定义身份验证，我们必须开发实现IAuthentication接口的OSGi组件
+要使用自定义身份验证，我们必须开发一个OSGi组件来实现IAuthentication接口
 
 需要实现方法getAuthDetails。 此方法将返回AuthenticationDetails对象。 此AuthenticationDetails对象将设置进行REST API调用Adobe Campaign所需的HTTP头。
 
@@ -107,21 +110,21 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 
 ## 创建数据源{#create-data-source}
 
-第一步是创建Swagger文件。 Swagger文件定义将在Adobe Campaign Standard创建用户档案的REST API。 swagger文件定义REST API的输入参数和输出参数。
+第一步是创建Swagger文件。 Swagger文件定义将在Adobe Campaign Standard中用于创建用户档案的REST API。 Swagger文件定义REST API的输入参数和输出参数。
 
-使用swagger文件创建数据源。 创建数据源时，可以指定身份验证类型。 在这种情况下，我们将使用自定义身份验证来针对Adobe Campaign进行身份验证。上面列出的代码用于针对Adobe Campaign进行身份验证。
+将使用Swagger文件创建数据源。 创建数据源时，可以指定身份验证类型。 在这种情况下，我们将使用自定义身份验证来针对Adobe Campaign进行身份验证。上面列出的代码用于针对Adobe Campaign进行身份验证。
 
-示例Swagger文件作为与本文相关的资产的一部分提供给您。**确保更改swagger文件中的主机和basePath以匹配您的ACS实例**
+示例Swagger文件作为与本文相关的资产的一部分提供给您。**确保更改swagger文件中的host和basePath以匹配您的ACS实例**
 
 ## 测试解决方案{#test-the-solution}
 
 要测试解决方案，请执行以下步骤：
-* [确保遵循此处所述的步骤](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [确保您遵循了此处所述的步骤](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [下载并解压缩此文件以获取Swagger文件](assets/create-acs-profile-swagger-file.zip)
 * 使用Swagger文件创建数据源
-创建表单数据模型，并将其基于在上一步中创建的数据源
+创建表单数据模型，并基于在上一步中创建的数据源
 * 根据在前一步中创建的表单数据模型创建自适应表单。
-* 将以下元素从数据源选项卡拖放到自适应表单
+* 将以下元素从“数据源”选项卡拖放到自适应表单
 
    * 电子邮件
    * 名字
@@ -129,6 +132,6 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
    * 手机
 
 * 将提交操作配置为“使用表单数据模型提交”。
-* 将数据模型配置为适当提交。
+* 配置数据模型以正确提交。
 * 预览表单。 填写字段并提交。
-* 验证用户档案是否在Adobe Campaign Standard创建。
+* 验证用户档案是否在Adobe Campaign Standard中创建。
