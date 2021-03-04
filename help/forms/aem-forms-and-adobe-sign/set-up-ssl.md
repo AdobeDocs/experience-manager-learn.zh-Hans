@@ -1,7 +1,7 @@
 ---
 title: 为AEM启用SSL
-description: 使用Adobe Experience Manager的SSL设置向导设置AEM实例以通过HTTPS运行。
-feature: adaptive-forms
+description: 使用Adobe Experience Manager的SSL设置向导设置要通过HTTPS运行的AEM实例。
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,18 +9,21 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 17993.jpg
 kt: 6046
+topic: 开发
+role: 管理员
+level: 中间
 translation-type: tm+mt
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '80'
-ht-degree: 0%
+source-wordcount: '85'
+ht-degree: 4%
 
 ---
 
 
 # 为AEM启用SSL
 
-将AEM Forms与Adobe Sign集成的先决条件之一是将AEM实例配置为使用SSL。 Adobe Experience Manager的SSL设置向导，可更轻松地设置AEM实例以通过HTTPS运行。
-以下视频介绍使用向导配置SSL所需的步骤
+将AEM Forms与Adobe Sign集成的先决条件之一是将您的AEM实例配置为使用SSL。 Adobe Experience Manager的SSL设置向导，可更轻松地设置要通过HTTPS运行的AEM实例。
+以下视频介绍了使用向导配置SSL所需的步骤
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993/?quality=9&learn=on)
