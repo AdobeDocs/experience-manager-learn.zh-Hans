@@ -4,7 +4,7 @@ seo-title: 创建表单数据模型
 description: 这是创建第一个交互式通信文档的多步骤教程的第3部分。 在此部分，我们将创建表单数据模型。 表单数据模型允许您配置和连接到不同的数据源。它提供直观的用户界面，用于创建跨连接数据源的业务实体和服务的统一数据表示模式。以下视频将逐步介绍创建表单数据模型的步骤。
 seo-description: 这是创建第一个交互式通信文档的多步骤教程的第3部分。 在此部分，我们将创建表单数据模型。 表单数据模型允许您配置和连接到不同的数据源。它提供直观的用户界面，用于创建业务实体和服务在连接的数据源之间的统一数据表示模式。 以下视频将逐步介绍创建表单数据模型的步骤。
 uuid: 4cba42f3-860a-4bd3-b4b0-79c63195b36d
-feature: 交互通信
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,11 +12,14 @@ activity: implement
 version: 6.4,6.5
 kt: 5952
 thumbnail: 27763.jpg
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 0%
+source-wordcount: '308'
+ht-degree: 1%
 
 ---
 
