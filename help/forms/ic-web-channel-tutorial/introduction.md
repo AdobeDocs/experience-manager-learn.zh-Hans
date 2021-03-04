@@ -3,20 +3,17 @@ title: 为Web渠道创建您的第一个交互式通信
 seo-title: 为Web渠道创建您的第一个交互式通信
 description: 交互通信是AEM Forms 6.4的新增功能。此文档将指导您完成为Web渠道创建交互通信所需的步骤。
 seo-description: 交互通信是AEM Forms 6.4的新增功能。此文档将指导您完成为Web渠道创建交互通信所需的步骤。
-feature: 交互式通信
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 4%
+source-wordcount: '215'
+ht-degree: 2%
 
 ---
 
