@@ -4,20 +4,17 @@ seo-title: '生成JSON Web令牌和访问令牌 '
 description: 本文解释生成JWT所需的代码和向Adobe Campaign Standard发出REST调用所需的访问令牌
 seo-description: 本文解释生成JWT所需的代码和向Adobe Campaign Standard发出REST调用所需的访问令牌
 uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
-feature: '"自适应Forms，表单数据模型"'
+feature: 自适应表单，表单数据模型
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
-topic: 开发
-role: 开发人员
-level: 富有经验
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
