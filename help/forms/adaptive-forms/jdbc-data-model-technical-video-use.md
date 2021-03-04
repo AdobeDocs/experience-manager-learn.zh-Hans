@@ -4,21 +4,18 @@ seo-title: 将基于JDBC的表单数据模型与AEM Forms
 description: 此视频说明了如何基于JDBC数据源创建表单数据模型、基于表单数据模型的自适应表单以及如何使用表单数据模型的“INSERT”操作。
 seo-description: 此视频说明了如何基于JDBC数据源创建表单数据模型、基于表单数据模型的自适应表单以及如何使用表单数据模型的“INSERT”操作。
 uuid: 5c664b16-c089-48ad-8bf6-9766d0ddc3c4
-feature: 自适应表单
+feature: 集成
 topics: form-data-model
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: 4e5f947c-b49a-423e-9139-51c0c5648318
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 2%
+source-wordcount: '171'
+ht-degree: 0%
 
 ---
 
