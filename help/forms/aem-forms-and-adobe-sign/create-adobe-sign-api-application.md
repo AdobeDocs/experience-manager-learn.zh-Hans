@@ -1,18 +1,21 @@
 ---
 title: 创建Adobe Sign API应用程序
 description: Adobe Sign API应用程序允许您将AEM Forms与Adobe Sign集成
-feature: 自适应表单
+feature: 自适应Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 kt: 6032
 thumbnail: 38178.jpg
+topic: 开发
+role: 管理员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 0%
+source-wordcount: '89'
+ht-degree: 2%
 
 ---
 
