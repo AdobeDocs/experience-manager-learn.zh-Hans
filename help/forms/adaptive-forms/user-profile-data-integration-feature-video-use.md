@@ -1,30 +1,33 @@
 ---
-title: 使用用户用户档案数据与AEM Forms
-seo-title: 使用用户用户档案数据与AEM Forms
+title: 使用与AEM Forms的用户用户档案数据集成
+seo-title: 使用与AEM Forms的用户用户档案数据集成
 description: 将AEM用户用户档案信息与自适应Forms集成
 seo-description: 将AEM用户用户档案信息与自适应Forms集成
 uuid: c8cfe575-8732-4d8b-99de-fb09e7c2497d
-feature: adaptive-forms, form-data-model
+feature: 自适应表单
 topics: integrations
 audience: developer
 doc-type: feature video
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: ca01dfce-abab-4bc1-9c5e-3bafdbed4836
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 0%
+source-wordcount: '118'
+ht-degree: 3%
 
 ---
 
 
-# 使用与AEM Forms的用户用户档案数据集成{#using-user-profile-data-integration-with-aem-forms}
+# 将用户用户档案数据集成与AEM Forms{#using-user-profile-data-integration-with-aem-forms}
 
-AEM Forms数据集成允许您配置和连接不同的数据源。 现成支持以下功能。 但是，只需少量自定义，您也可以集成其他数据源。
+AEM Forms数据集成允许您配置和连接到不同的数据源。 现成支持以下功能。 但是，只需少量自定义，您也可以集成其他数据源。
 
-关系数据库- MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS。
+关系数据库 — MySQL、Microsoft SQL Server、IBM DB2和Oracle RDBMS。
 
 1. AEM用户用户档案
 1. REST风格的Web服务
@@ -36,5 +39,5 @@ AEM Forms数据集成允许您配置和连接不同的数据源。 现成支持�
 
 >[!NOTE]
 >
->此功能仅在AEM 6.3之后可用。
+>此功能仅从AEM 6.3开始提供。
 
