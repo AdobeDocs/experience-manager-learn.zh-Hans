@@ -1,7 +1,7 @@
 ---
 title: AEM用户、组和权限
 description: Adobe Experience Manager以Adobe IMS用户、用户组和产品用户档案为构建基础，为用户提供对AEM的可自定义访问。 了解如何定义AEM组和权限，以及它们如何与Adobe IMS抽象协同工作，以提供对AEM的无缝、可自定义的访问。
-feature: users-and-groups
+feature: 用户和组
 topics: authentication
 version: cloud-service
 activity: setup
@@ -9,11 +9,14 @@ audience: administrator
 doc-type: feature video
 kt: 6060
 thumbnail: 39151.jpg
+topic: 管理、安全
+role: 管理员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: f30d15f0578b7e529e4acefb8e1d2e29157ab359
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 12%
+source-wordcount: '232'
+ht-degree: 13%
 
 ---
 
