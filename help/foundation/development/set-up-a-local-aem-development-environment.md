@@ -2,18 +2,15 @@
 title: 设置本地AEM开发环境
 description: 为Adobe Experience Manager AEM设置本地开发的指南。 涵盖本地安装、Apache Maven、集成开发环境和调试/疑难解答等重要主题。 讨论了使用Eclipse IDE、CRXDE-Lite、Visual Studio代码和IntelliJ进行开发。
 version: 6.4, 6.5
-feature: Developer Tools
+feature: 马文 — 阿尔基斯
 topics: development
 activity: develop
 audience: developer
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '2657'
-ht-degree: 1%
+source-wordcount: '2653'
+ht-degree: 0%
 
 ---
 
