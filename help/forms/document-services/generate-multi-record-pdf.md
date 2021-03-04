@@ -1,47 +1,50 @@
 ---
 title: 从一个数据文件生成多个pdf
 seo-title: 从一个数据文件生成多个pdf
-feature: output-service
+feature: 输出服务
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 0%
+source-wordcount: '501'
+ht-degree: 1%
 
 ---
 
 
-# 从一个xml文档文件生成一组PDF数据
+# 从一个xml文档文件生成一组PDF文件
 
-OutputService提供许多方法，使用表单设计创建文档并使用数据与表单设计合并。 以下文章介绍了用例，该用例从一个包含多个单独记录的大型xml生成多个pdf。
-下面是包含多个记录的xml文件的屏幕截图。
+OutputService提供了许多方法，可使用表单设计创建文档，并使用数据与表单设计合并。 以下文章介绍了用一个包含多个单独记录的大型xml生成多个pdf的用例。
+以下是包含多个记录的xml文件的屏幕截图。
 
-![multi-record-xml](assets/multi-record-xml.PNG)
+![多记录xml](assets/multi-record-xml.PNG)
 
-数据xml有2条记录。 每个记录由form1元素表示。 此xml被传递给OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html)，我们得到pdf文档的列表（每个记录一个）
+数据xml有2条记录。 每个记录由form1元素表示。 此xml将传递给OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html)我们将获得pdf文档的列表（每条记录一个）
 generatePDFOutputBatch方法的签名采用以下参数
 
-* 模板——包含模板的映射（由键标识）
-* 数据——包含xml数据文档的映射（由键标识）
-* pdfOutputOptions —— 配置pdf生成的选项
-* batchOptions —— 用于配置批处理的选项
+* 模板 — 包含模板的映射（由键标识）
+* data — 包含xml数据文档的映射（由键标识）
+* pdfOutputOptions — 用于配置pdf生成的选项
+* batchOptions — 用于配置批处理的选项
 
 >[!NOTE]
 >
->此用例在此[网站](https://forms.enablementadobe.com/content/samples/samples.html?query=0)上以实时示例提供。
+>此用例在此[网站](https://forms.enablementadobe.com/content/samples/samples.html?query=0)上作为实时示例。
 
 ## 用例详细信息{#use-case-details}
 
-在此用例中，我们将提供一个简单的Web界面来上传模板和数据(xml)文件。 完成文件上传并将POST请求发送到AEM servlet后。 此servlet提取文档并调用OutputService的generatePDFOutputBatch方法。 生成的pdf将压缩到zip文件中，供最终用户从Web浏览器下载。
+在此用例中，我们将提供一个简单的Web界面来上传模板和数据(xml)文件。 完成文件上传并将POST请求发送到AEM servlet后。 此Servlet提取文档并调用OutputService的generatePDFOutputBatch方法。 生成的pdf将压缩到zip文件中，供最终用户从Web浏览器下载。
 
 ## Servlet代码{#servlet-code}
 
-以下是servlet中的代码片断。 代码从请求中提取模板(xdp)和数据文件(xml)。 模板文件将保存到文件系统。 创建了两个映射-templateMap和dataFileMap，分别包含模板和xml(data)文件。 然后调用DocumentServices服务的generateMultipleRecords方法。
+以下是servlet中的代码段。 代码从请求中提取模板(xdp)和数据文件(xml)。 模板文件将保存到文件系统。 创建了两个映射 — templateMap和dataFileMap，这两个映射分别包含模板和xml(data)文件。 然后，调用以生成DocumentServices服务的MultipleRecords方法。
 
 ```java
 for (final java.util.Map.Entry < String, org.apache.sling.api.request.RequestParameter[] > pairs: params
@@ -76,7 +79,7 @@ Document zippedDocument = documentServices.generateMultiplePdfs(templateMap, dat
 
 ### 接口实现代码{#Interface-Implementation-Code}
 
-以下代码使用OutputService的generatePDFOutputBatch生成多个pdf，并将包含pdf文件的zip文件返回到调用servlet
+以下代码使用OutputService的generatePDFOutputBatch生成多个pdf，并将包含pdf文件的zip文件返回给调用servlet
 
 ```java
 public Document generateMultiplePdfs(HashMap < String, String > templateMap, HashMap < String, Document > dataFileMap, String saveLocation) {
@@ -129,16 +132,16 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 要在服务器上测试此功能，请按照以下说明操作：
 
-* [下载zip文件内容并将其解压到文件系统](assets/mult-records-template-and-xml-file.zip)。此zip文件包含模板和xml数据文件。
+* [下载zip文件内容并将其解压到您的文件系统](assets/mult-records-template-and-xml-file.zip)。此zip文件包含模板和xml数据文件。
 * [将您的浏览器指向Felix Web控制台](http://localhost:4502/system/console/bundles)
-* [部署DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
+* [部署DevelopingWithServiceUser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
 * [部署自定义AEMFormsDocumentServices Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Custom bundle，它使用OutputService API生成pdf
-* [将您的浏览器指向包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* [导入并安装包](assets/generate-multiple-pdf-from-xml.zip)。此包包含html页，通过该页可删除模板和数据文件。
+* [将浏览器指向包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* [导入并安装包](assets/generate-multiple-pdf-from-xml.zip)。此包中包含html页，通过该页可放置模板和数据文件。
 * [将您的浏览器指向MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html?)
 * 将模板和xml数据文件拖放到一起
 * 下载创建的zip文件。 此zip文件包含由输出服务生成的pdf文件。
 
 >[!NOTE]
->触发此功能有多种方法。 在此示例中，我们使用Web界面拖放模板和数据文件来演示该功能。
+>触发此功能有多种方法。 在此示例中，我们使用Web界面放置模板和数据文件来演示该功能。
 
