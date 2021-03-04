@@ -3,20 +3,17 @@ title: 在HTM5表单提交时触发AEM工作流
 seo-title: 在HTML5表单提交时触发AEM Workflow
 description: 在脱机模式下继续填写移动表单并提交移动表单以触发AEM工作流
 seo-description: 在脱机模式下继续填写移动表单并提交移动表单以触发AEM工作流
-feature: 移动设备表单
+feature: 移动表单
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4, 6.5
-topic: 开发
-role: 开发人员
-level: 富有经验
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 1%
+source-wordcount: '342'
+ht-degree: 0%
 
 ---
 
