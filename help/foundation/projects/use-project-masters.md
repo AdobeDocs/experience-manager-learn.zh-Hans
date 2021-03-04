@@ -1,22 +1,18 @@
 ---
 title: 如何在AEM中使用Project Masters
 description: Project Masters通过AEM Projects大大简化了用户和团队管理。
-version: 6.4, 6.5, Cloud Service
-feature: 项目、用户和用户组
-topics: administration, collaboration, performance
-activity: use
-audience: administrator, implementer, architect
-doc-type: article
-topic: 协作
+version: 6.4, 6.5, cloud-service
+topic: 内容管理
+feature: 项目
+level: 中间
 role: 业务从业者
-level: 初学者
 kt: 256
 thumbnail: 17740.jpg
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 0%
+source-wordcount: '374'
+ht-degree: 1%
 
 ---
 
