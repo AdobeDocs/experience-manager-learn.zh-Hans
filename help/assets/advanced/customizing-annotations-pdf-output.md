@@ -1,25 +1,23 @@
 ---
-title: 在AEM Assets自定义注释
-seo-title: 在AEM Assets自定义注释
+title: 在AEM Assets中自定义注释
 description: AEM Assets格式和样式。
-feature: asset-share
-topics: authoring, collaboration, operations, sharing
-audience: developer
-doc-type: feature video
-activity: developer
+feature: 协作
 version: 6.3, 6.4, 6.5
+topic: 协作
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 0%
+source-wordcount: '64'
+ht-degree: 4%
 
 ---
 
 
-# 在AEM Assets自定义注释{#using-annotations-in-aem-assets}
+# 在AEM Assets中自定义注释{#using-annotations-in-aem-assets}
 
-AEM支持将批注的输出自定义为PDF。
+AEM支持自定义注释输出为PDF。
 
 ## PDF批注sling:OsgiConfig定义
 
