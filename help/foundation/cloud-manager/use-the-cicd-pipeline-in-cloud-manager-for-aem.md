@@ -2,15 +2,17 @@
 title: 在Adobe Cloud Manager中使用CI/CD管道
 description: Adobe Cloud Manager提供简单而灵活的自助CI/CD管道，使AEM项目团队能够快速、安全、一致地将代码部署到AMS中托管的所有AEM环境。 此视频系列探讨了在失败和成功两种情况下设置和执行Cloud Manager的CI/CD管道。
 sub-product: 云管理器，基础
-feature: 管道，质量门
 topics: cicd, performance, best-practices, development, governance
 doc-type: feature video
 activity: understand
 audience: all
+topic: 架构
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
