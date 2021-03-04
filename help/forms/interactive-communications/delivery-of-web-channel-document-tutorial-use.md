@@ -3,20 +3,17 @@ title: 交互通信文档投放- Web渠道AEM Forms
 seo-title: 交互通信文档投放- Web渠道AEM Forms
 description: 通过电子邮件链接投放Web渠道文档
 seo-description: 通过电子邮件链接投放Web渠道文档
-feature: 交互式通信
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 1%
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
