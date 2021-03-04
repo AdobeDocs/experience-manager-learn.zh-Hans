@@ -4,7 +4,7 @@ seo-title: 在AEM Forms中创建数据源配置
 description: 这是创建第一个交互式通信文档的多步教程的第2部分。 在这部分中，我们将创建一个REST支持的数据源。  以下视频将逐步介绍创建数据源的步骤。
 seo-description: 这是创建第一个交互式通信文档的多步教程的第2部分。 在这部分中，我们将创建一个REST支持的数据源。  以下视频将逐步介绍创建数据源的步骤。
 uuid: b9d5c220-3e86-4e7d-8ea0-a7f604dde925
-feature: 交互通信
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,11 +13,14 @@ version: 6.4,6.5
 targetaudience: target-audience ongoing
 thumbnail: 27765.jpg
 kt: 5954
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 0%
+source-wordcount: '144'
+ht-degree: 2%
 
 ---
 
