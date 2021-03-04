@@ -1,19 +1,18 @@
 ---
-title: AEM Assets水印
+title: AEM Assets中的水印
 description: AEM作为Cloud Service的水印功能，允许使用任何PNG图像对自定义图像演绎版进行水印。
-feature: watermark
-topics: images
-audience: all
-doc-type: feature video
-activity: use
+feature: asset compute Microservices
 version: cloud-service
 kt: 6357
 thumbnail: 41536.jpg
+topic: 内容管理
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '58'
-ht-degree: 0%
+source-wordcount: '65'
+ht-degree: 4%
 
 ---
 
@@ -26,7 +25,7 @@ AEM作为Cloud Service的水印功能，允许使用任何PNG图像对自定义�
 
 ## OSGi配置
 
-以下OSGi配置存根可以更新并添加到AEM项目的`ui.config`子项目。
+可以更新以下OSGi配置存根并将其添加到AEM项目的`ui.config`子项目中。
 
 `/apps/example/osgiconfig/config.author/com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json`
 
