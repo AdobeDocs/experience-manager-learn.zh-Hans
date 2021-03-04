@@ -4,17 +4,18 @@ user-guide-description: 一个端到端教程，它演示了如何使用 AEM Hea
 breadcrumb-title: AEM Headless 教程
 version: cloud-service
 sub-product: 内容服务
-audience: architect, developer, implementer
 doc-type: tutorial
+feature: 内容片段，核心组件
 topics: content-delivery
+audience: architect, developer, implementer
 activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 30%
+source-wordcount: '107'
+ht-degree: 29%
 
 ---
 
