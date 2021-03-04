@@ -2,17 +2,17 @@
 title: 在AEM Assets中使用元数据导入和导出
 description: 了解如何使用Adobe Experience Manager Assets的导入和导出元数据功能。 导入和导出功能允许内容作者批量更新现有资产的元数据。
 version: 6.3, 6.4, 6.5, cloud-service
-topics: Content Management
+topic: 内容管理
 feature: 元数据
 role: 管理员
 level: 中间
 kt: 647, 917
 thumbnail: 22132.jpg
 translation-type: tm+mt
-source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 3%
+source-wordcount: '265'
+ht-degree: 4%
 
 ---
 
