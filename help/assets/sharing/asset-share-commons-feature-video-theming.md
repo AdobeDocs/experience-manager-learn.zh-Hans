@@ -1,33 +1,26 @@
 ---
-title: Asset Share Commons中的主题介绍
-seo-title: Asset Share Commons中的主题介绍
+title: Asset Share Commons中的主题
 description: 功能和技术理解的材料Assets Share Commons
-seo-description: 功能和技术理解的材料Assets Share Commons
-uuid: 5991a015-392a-4bb5-8332-192681505b07
-discoiquuid: 08a5a394-c62b-4748-b303-33117f283612
-contentOwner: dgonzale
-feature: asset-share, brand-portal
-topics: authoring, sharing, collaboration, search, integrations, publishing, metadata, images, renditions
-audience: developer, architect, administrator
-doc-type: technical video
-activity: setup
 version: 6.3, 6.4, 6.5
+topic: 内容管理
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 1%
+source-wordcount: '117'
+ht-degree: 4%
 
 ---
 
 
-# Asset Share Commons {#asset-share-commons-theme}中的主题介绍
+# 资产共享共享资源{#asset-share-commons-theme}中的主题介绍
 
-Asset Share Commons中主题的简介。 视频将逐步介绍如何使用自定义颜色方案创建新主题。
+Asset Share Commons中主题的简介。 视频将逐步介绍使用自定义颜色方案创建新主题的过程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20572/?quality=9&learn=on)
 
-在此视频中，将基于Asset Share Commons Dark主题创建新主题。 颜色方案将与自定义徽标匹配，使站点具有一致的外观。
+在此视频中，将基于Asset Share Commons Dark主题创建新主题。 颜色方案将匹配自定义徽标，使站点具有一致的外观。
 
 ## 主题变量
 
