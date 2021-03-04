@@ -2,20 +2,17 @@
 title: 了解AEM中的身份验证支持
 description: 'AEM支持的身份验证（偶尔授权）机制中的整合视图。 '
 version: 6.3, 6.4, 6.5
-feature: 用户和组
+feature: 身份验证
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
-topic: 架构
-role: 架构师
-level: 富有经验
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 5%
+source-wordcount: '139'
+ht-degree: 2%
 
 ---
 
