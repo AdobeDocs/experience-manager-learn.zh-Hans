@@ -4,21 +4,18 @@ seo-title: 使用表单用户档案模型创建活动
 description: 使用Adobe Campaign Standard表单用户档案模型创建AEM Forms Form数据涉及的步骤
 seo-description: 使用Adobe Campaign Standard表单用户档案模型创建AEM Forms Form数据涉及的步骤
 uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: 输出服务
+feature: 自适应表单，表单数据模型
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
-topic: 开发
-role: 开发人员
-level: 富有经验
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 3%
+source-wordcount: '449'
+ht-degree: 2%
 
 ---
 
