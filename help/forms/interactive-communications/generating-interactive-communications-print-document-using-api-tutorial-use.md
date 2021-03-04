@@ -1,30 +1,33 @@
 ---
-title: 使用监视文件夹机制为打印渠道生成交互式通信文档
-seo-title: 使用监视文件夹机制为打印渠道生成交互式通信文档
-description: 使用监视的文件夹生成打印渠道文档
-seo-description: 使用监视的文件夹生成打印渠道文档
-feature: interactive-communication
+title: 使用监视文件夹机制生成用于打印渠道的交互式通信文档
+seo-title: 使用监视文件夹机制生成用于打印渠道的交互式通信文档
+description: 使用监视文件夹生成打印渠道文档
+seo-description: 使用监视文件夹生成打印渠道文档
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 开发
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 0%
+source-wordcount: '487'
+ht-degree: 1%
 
 ---
 
 
-# 使用监视文件夹机制为打印渠道生成交互式通信文档
+# 使用监视文件夹机制生成用于打印渠道的交互式通信文档
 
-在设计并测试了打印渠道文档后，您通常需要通过发出REST调用或使用监视文件夹机制生成打印文档来生成文档。
+设计并测试了打印渠道文档后，您通常需要通过发出REST调用来生成文档，或使用监视文件夹机制生成打印文档。
 
 本文说明了使用监视文件夹机制生成打印渠道文档的用例。
 
-将文件放入监视文件夹时，将执行与监视文件夹关联的脚本。 此脚本在下面的文章中进行说明。
+将文件放入监视文件夹时，将执行与监视文件夹关联的脚本。 此脚本在以下文章中进行说明。
 
 放入监视文件夹的文件具有以下结构。 代码将为XML文档中列出的所有帐号生成语句。
 
@@ -40,21 +43,21 @@ ht-degree: 0%
 
 &lt;/accountnumbers>
 
-以下代码列表如下所示：
+以下代码清单如下所示：
 
-第1行- InteractiveCommunicationsDocument的路径
+第1行 — InteractiveCommunicationsDocument的路径
 
-第15-20行：从XML文档中获取帐号列表，并将其放入监视的文件夹
+第15-20行：从XML文档获取帐号的列表，并将其放入监视的文件夹
 
-第24 -25行：获取与渠道关联的PrintChannelService和打印文档。
+第24-25行：获取与文档关联的PrintChannelService和打印渠道。
 
-第30行：将帐号作为关键元素传递给表单数据模型。
+第30行：将帐号作为关键元素传递到表单数据模型。
 
 第32-36行：为要生成的文档设置数据选项。
 
 第38行：渲染文档。
 
-第39-40行——将生成的文档保存到文件系统。
+第39-40行 — 将生成的文档保存到文件系统。
 
 表单数据模型的REST端点需要一个id作为输入参数。 此id将映射到名为accountnumber的请求属性，如以下屏幕截图所示。
 
@@ -111,8 +114,8 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 **要在本地系统上测试此功能，请按照以下说明操作：**
 
 * 按照本[文章中的说明设置Tomcat。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成样本数据的war文件。
-* 按照本[文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md)中的说明设置服务aka系统用户。
-确保此系统用户对以下节点具有读取权限。 向[用户管理员](https://localhost:4502/useradmin)授予权限登录权限并搜索系统用户“数据”，并通过Tab键切换到权限选项卡，为以下节点授予读取权限
+* 按本[文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md)中所述设置服务aka系统用户。
+确保此系统用户对以下节点具有读取权限。 要授予用户登录[用户admin](https://localhost:4502/useradmin)的权限，并搜索系统用户“data”，并按下面节点的Tab键时授予读取权限，请执行以下操作
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
@@ -125,9 +128,9 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 * 打开/etc/fd/watchfolder/scripts/PrintPDF.ecma文件。 确保第1行中的interactiveCommunicationsDocument的路径指向要打印的正确文档
 
-* 根据您的首选项在第2行修改saveLocation
+* 根据第2行中您的首选项修改saveLocation
 
-* 使用以下内容创建accountnumbers.xml文件
+* 创建包含以下内容的accountnumbers.xml文件
 
 ```xml
 <accountnumbers>
@@ -141,7 +144,7 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-* 将accountnumbers.xml放入C:\RenderPrintChannel\input folder文件夹。
+* 将accountnumbers.xml放入C:\RenderPrintChannel\input folder目录中。
 
 * 生成的PDF文件将按照ecma脚本中的指定写入saveLocation。
 
