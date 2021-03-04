@@ -1,9 +1,9 @@
 ---
-title: AEM Sites创作概述
-seo-title: AEM Sites创作概述
-description: 以下视频概述AEM创作环境中的创作基本概念。 它使用站点控制台作为基础。
-seo-description: 以下视频概述AEM创作环境中的创作基本概念。 它使用站点控制台作为基础。
-feature: page-editor, template-editor
+title: AEM Sites中的创作概述
+seo-title: AEM Sites中的创作概述
+description: 以下视频概述了在AEM作者环境中进行创作的基本概念。 它使用站点控制台作为基础。
+seo-description: 以下视频概述了在AEM作者环境中进行创作的基本概念。 它使用站点控制台作为基础。
+feature: 页面编辑器、可编辑模板
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,11 +11,14 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4242
 thumbnail: 33594.jpg
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 15%
+source-wordcount: '124'
+ht-degree: 16%
 
 ---
 
