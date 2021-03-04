@@ -1,12 +1,14 @@
 ---
-title: 第3章 — 高级缓存主题
-seo-title: AEM Dispatcher Cache Demystified — 第3章 — 高级缓存主题
-description: AEM Dispatcher缓存演示教程的第3章介绍了如何克服第2章中讨论的限制。
-seo-description: AEM Dispatcher缓存演示教程的第3章介绍了如何克服第2章中讨论的限制。
+title: '"第3章 — 高级调度程序缓存主题"'
+description: 这是要在AEM中缓存的三部分系列的第3部分。 前两个部分侧重于调度程序中的纯http缓存以及存在哪些限制。 本部分讨论了如何克服这些限制的一些想法。
+feature: Dispatcher
+topic: 架构
+role: 架构师
+level: 中间
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '6187'
+source-wordcount: '6191'
 ht-degree: 0%
 
 ---
