@@ -2,7 +2,7 @@
 title: 自定义组件
 description: 介绍显示创作内容的自定义署名组件的端到端创建。 包括开发Sling模型以封装业务逻辑以填充署名组件和相应的HTL以呈现组件。
 sub-product: 站点
-feature: “核心组件、API”
+feature: sling-models
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,13 +11,10 @@ audience: developer
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
-topic: '"内容管理，开发"'
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '3969'
+source-wordcount: '3962'
 ht-degree: 0%
 
 ---
