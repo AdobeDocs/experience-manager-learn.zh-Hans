@@ -1,18 +1,21 @@
 ---
 title: 使用内容传输工具
-description: 内容传输工具是将内容从AEM的内部部署或AMS托管版本迁移到AEM作为Cloud Service环境的推荐方式。
+description: 建议使用内容传输工具将内容从AEM的内部部署或AMS托管版本迁移到AEM作为Cloud Service环境。
 version: cloud-service
 doc-type: technical-video
 topics: migration
-feature: content-transfer-tool
+feature: 迁移
 activity: develop
 audience: developer
 kt: 5352
 thumbnail: kt-5352.jpg
+topic: 迁移
+role: 架构师、开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 44734103ede53f559bbdfe848f5ca308ff4e128b
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '87'
 ht-degree: 2%
 
 ---
@@ -20,7 +23,7 @@ ht-degree: 2%
 
 # 使用内容传输工具
 
-内容传输工具是将内容从AEM的内部部署或AMS托管版本迁移到AEM作为Cloud Service环境的推荐方式。
+建议使用内容传输工具将内容从AEM的内部部署或AMS托管版本迁移到AEM作为Cloud Service环境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on)
 
