@@ -4,7 +4,7 @@ seo-title: 使用监视文件夹生成打印渠道文档
 description: 这是创建用于打印渠道的第一个交互式通信文档的多步教程的第10部分。 在此部分，我们将使用监视的文件夹机制生成打印渠道文档。
 seo-description: 这是创建用于打印渠道的第一个交互式通信文档的多步教程的第10部分。 在此部分，我们将使用监视的文件夹机制生成打印渠道文档。
 uuid: 9e39f4e3-1053-4839-9338-09961ac54f81
-feature: 交互式通信
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,14 +12,11 @@ activity: implement
 version: 6.4,6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 1%
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
