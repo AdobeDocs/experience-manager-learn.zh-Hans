@@ -1,25 +1,25 @@
 ---
 title: 登记注销
-description: Adobe资产链接允许您直接从您正在处理的创意应用程序中查看AEM Assets，并可立即开始进行编辑。 在您的Creative Cloud应用程序中编辑完资产后，您可以使用正确的版本控制和注释轻松将其存回AEM Assets。
+description: Adobe Asset Link允许您直接从您正在处理的创意应用程序中签出AEM Assets，并可以立即开始进行编辑。 在AEM Assets应用程序中编辑完资产后，您可以使用适当的版本控制和注释轻松将资产签回到Creative Cloud。
 sub-product: 资产
-feature: adobe-asset-link
-topics: authoring, collaboration, operations, sharing, metadata, images, operations
-audience: all
-doc-type: feature video
-activity: use
-version: null
+feature: Adobe Asset Link
+version: 6.4, 6.5, cloud-service
+kt: 4910
 thumbnail: 33886.jpg
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 0%
+source-wordcount: '112'
+ht-degree: 4%
 
 ---
 
 
 # 签入签出{#check-in-check-out}
 
-Adobe资产可让您直接从您正在处理的创意应用程序中查看AEM Assets，并立即开始进行编辑。 在您的Creative Cloud应用程序中编辑完资产后，您可以使用正确的版本控制和注释轻松将其存回AEM Assets。
+Adobe Asset允许您直接从您正在处理的创意应用程序中签出AEM Assets，并可以立即开始进行编辑。 在AEM Assets应用程序中编辑完资产后，您可以使用适当的版本控制和注释轻松将资产签回到Creative Cloud。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33886/?quality=12)
