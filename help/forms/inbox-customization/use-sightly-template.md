@@ -1,31 +1,34 @@
 ---
 title: 收件箱自定义
-description: 添加自定义列以使用美观模板显示其他工作流数据
-feature: adaptive-forms
+description: 添加自定义列，以使用美观的模板显示工作流程的其他数据
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 0%
+source-wordcount: '296'
+ht-degree: 1%
 
 ---
 
-# 使用美观模板显示收件箱数据
+# 使用Sightly模板显示收件箱数据
 
-您可以使用美观的模板来格式化要显示在收件箱列中的数据。 在此示例中，我们将根据收入列的值显示coral-ui图标。 以下屏幕截图显示了收入列中图标的使用情况
+您可以使用Sightly模板来设置要显示在收件箱列中的数据的格式。 在此示例中，我们将根据收入列的值显示coral-ui图标。 以下屏幕截图显示了收入列中图标的使用情况
 ![income-icons](assets/income-column.PNG)
 
-[用于显](assets/sightly-template.zip) 示自定义coral ui图标的美观模板将作为本文的一部分提供。
+[用于](assets/sightly-template.zip) 显示自定义coral ui图标的美观模板作为本文的一部分提供。
 
 ## Sightly模板
 
-下面是美观的模板。 模板中的代码会根据收入显示图标。 这些图标作为AEM附带的[coral ui图标库](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)的一部分提供。
+以下是美观的模板。 模板中的代码会根据收入显示图标。 这些图标是AEM附带的[coral ui图标库](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)的一部分。
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -79,14 +82,14 @@ return val;
 
 >[!NOTE]
 >
->本文假定您已安装本系列中前一篇文章[的[示例工作流](assets/review-workflow.zip)和[示例表单](assets/snap-form.zip)。](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/inbox-customization/add-married-column.md)
+>本文假定您已安装本系列中前一篇文章](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/inbox-customization/add-married-column.md)中的[示例工作流](assets/review-workflow.zip)和[示例表单](assets/snap-form.zip)。[
 
 * [以管理员用户身份登录crx](http://localhost:4502/crx/de/index.jsp)
-* [导入Gastly模板](assets/sightly-template.zip)
+* [导入](assets/sightly-template.zip)
 * [登录AEM Web控制台](http://localhost:4502/system/console/bundles)
-* [部署和开始收件箱自定义捆绑包](assets/income-column-customization.jar)
-* [打开收件箱](http://localhost:4502/aem/inbox)
-* 单击“创建”按钮旁的“列表视图”，打开Admin Control
+* [部署和开始收件箱自定义包](assets/income-column-customization.jar)
+* [打开您的收件箱](http://localhost:4502/aem/inbox)
+* 单击“创建”按钮旁边的列表视图，打开Admin Control
 * 将收入列添加到收件箱并保存更改
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
 * 选择&#x200B;_婚姻状态_&#x200B;并提交表单
