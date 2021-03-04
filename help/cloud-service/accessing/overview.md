@@ -1,7 +1,7 @@
 ---
 title: 将对AEM的访问配置为Cloud Service
 description: 'AEM作为Cloud Service是利用AEM应用程序的云本机方式，因此，利用Adobe IMS(Identity Management系统)方便管理员和普通用户登录到AEM作者服务。 了解Adobe IMS用户、用户组和产品用户档案如何与AEM组和权限一起使用，以提供对AEM作者的特定访问。  '
-feature: users-and-groups
+feature: 用户和组
 topics: authentication
 version: cloud-service
 activity: setup
@@ -9,11 +9,14 @@ audience: administrator
 doc-type: article
 kt: 5882
 thumbnail: KT-5882.jpg
+topic: 管理、安全
+role: 管理员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: f30d15f0578b7e529e4acefb8e1d2e29157ab359
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 0%
+source-wordcount: '602'
+ht-degree: 1%
 
 ---
 
