@@ -1,25 +1,24 @@
 ---
-title: 资产管理员搜索边栏
+title: 资产管理搜索边栏
 description: 资产管理搜索边栏允许在Omnisearch中使用自定义条件搜索资产。
 sub-product: 资产
-feature: omnisearch
-topics: search
-audience: administrator, implementer
-doc-type: feature-video
-activity: setup
+feature: 搜索
 version: cloud-service
 kt: 4995
 thumbnail: 35842.jpg
+topic: 内容管理
+role: 管理员
+level: 中间
 translation-type: tm+mt
-source-git-commit: 570693c582b4b6e467bcab8253ab5ff36b8f7ca1
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '41'
-ht-degree: 0%
+source-wordcount: '46'
+ht-degree: 8%
 
 ---
 
 
-# 资产管理员搜索边栏
+# 资产管理搜索边栏
 
 资产管理搜索边栏允许在Omnisearch中使用自定义条件搜索资产。
 
