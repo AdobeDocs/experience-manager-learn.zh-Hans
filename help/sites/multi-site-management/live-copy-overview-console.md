@@ -1,7 +1,7 @@
 ---
 title: Live Copy控制台
 description: 以下视频介绍如何使用Live Copy概述控制台视图或管理站点中的继承或执行转出操作。
-feature: language-copy, live-copy, multi-site-manager
+feature: 语言副本，多站点管理器
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -9,11 +9,14 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 5373
 thumbnail: 36680.jpg
+topic: 本地化
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 0d4d1140dd226bbb02de0b19942b55495e3e2b2c
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '49'
-ht-degree: 0%
+source-wordcount: '58'
+ht-degree: 1%
 
 ---
 
