@@ -1,28 +1,31 @@
 ---
-title: 在AEM 6.5工作流中将表单数据模型服务作为步骤
-seo-title: 在AEM 6.5工作流中将表单数据模型服务作为步骤
-description: AEM Forms6.5引入了在AEM工作流中创建变量的功能。 借助AEM工作流中的“调用表单数据模型服务”这一新功能，已变得非常简单。 以下视频将指导您完成在AEM工作流中使用调用表单数据模型服务所涉及的步骤。
-seo-description: AEM Forms6.5引入了在AEM工作流中创建变量的功能。 借助AEM工作流中的“调用表单数据模型服务”这一新功能，已变得非常简单。 以下视频将指导您完成在AEM工作流中使用调用表单数据模型服务所涉及的步骤。
-feature: workflow.
+title: 在AEM 6.5工作流中使用表单数据模型服务
+seo-title: 在AEM 6.5工作流中使用表单数据模型服务
+description: AEM Forms 6.5引入了在AEM工作流中创建变量的功能。 借助这一新增功能，使用AEM Workflow中的“调用表单数据模型服务”变得非常简单。 以下视频将指导您完成在AEM工作流中使用调用表单数据模型服务所涉及的步骤。
+seo-description: AEM Forms 6.5引入了在AEM工作流中创建变量的功能。 借助这一新增功能，使用AEM Workflow中的“调用表单数据模型服务”变得非常简单。 以下视频将指导您完成在AEM工作流中使用调用表单数据模型服务所涉及的步骤。
+feature: 工作流
 topics: workflow.
 audience: developer.
 doc-type: technical video.
 activity: setup.
 version: 6.5.
+topic: 开发
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 0%
+source-wordcount: '338'
+ht-degree: 1%
 
 ---
 
 
-# 在AEM 6.5工作流{#using-form-data-model-service-as-step-in-workflow}中将表单数据模型服务用作步骤
+# 在AEM 6.5工作流{#using-form-data-model-service-as-step-in-workflow}中使用表单数据模型服务作为步骤
 
-从AEM Forms6.4开始，我们现在能够将表单数据模型服务用作AEM工作流的一部分。 以下视频将逐步介绍在AEM Workflow中配置表单数据模型步骤所需的步骤
+从AEM Forms 6.4开始，我们现在能够将表单数据模型服务用作AEM工作流的一部分。 以下视频将逐步介绍在AEM Workflow中配置表单数据模型步骤所需的步骤
 
->!![NOTE]此视频演示的功能需要AEM Forms6.5.1
+>!![NOTE]此视频中演示的功能需要AEM Forms 6.5.1
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28145?quality=9&learn=on)
@@ -36,8 +39,8 @@ ht-degree: 0%
 
    * 使用FDM步骤的工作流模型。
    * 用于FDM步骤的表单数据模型。
-   * 自适应表单，在提交时触发工作流。
+   * 在提交时触发工作流的自适应表单。
 * 打开[MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled)。 填写详细信息并提交。 在表单提交中，将触发[loanapplication workflow](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)。
 
 ![ workflow ](assets/invokefdm651.PNG).
-如果信用分数超过500，则该工作流会利用“或拆分”组件将应用程序发送给管理员。 如果信用评分低于500，则申请将送交。
+如果信用分数超过500，该工作流会利用“或拆分”组件将应用程序路由到管理员。 如果信用评分低于500，则申请将送达回复。
