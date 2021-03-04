@@ -1,10 +1,10 @@
 ---
 title: 创建自适应表单
 seo-title: 创建自适应表单
-description: 在第1部分中，我们将创建自适应表单，添加并配置带有相应按钮的工具栏。
-seo-description: 在第1部分中，我们将创建自适应表单，添加并配置带有相应按钮的工具栏。
+description: 在第1部分中，我们将创建自适应表单，添加并配置包含相应按钮的工具栏。
+seo-description: 在第1部分中，我们将创建自适应表单，添加并配置包含相应按钮的工具栏。
 uuid: 4ab7f01e-a75b-4e08-a5d8-690c63773ec3
-feature: adaptive-forms
+feature: 自适应表单
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -12,11 +12,14 @@ activity: understand
 discoiquuid: 1c9fb7b6-98dd-4725-b787-ac9e71906500
 kt: 4208
 thumbnail: 22173.jpg
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 0%
+source-wordcount: '69'
+ht-degree: 5%
 
 ---
 
