@@ -1,39 +1,42 @@
 ---
 title: 使用ACS用户档案预填自适应表单
 seo-title: 使用ACS用户档案预填自适应表单
-description: 使用ACS用户档案预填充自适应Forms
-seo-description: 使用ACS用户档案预填充自适应Forms
+description: 使用ACS用户档案预填自适应Forms
+seo-description: 使用ACS用户档案预填自适应Forms
 uuid: 9bff6f61-96e9-40d4-a977-a80008cfbeee
-feature: adaptive-forms, form-data-model
+feature: '"自适应Forms，表单数据模型"'
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: a2ffcb84-4dd8-45e5-8e2c-0da74202851b
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
 
 # 使用ACS用户档案{#prefilling-adaptive-form-using-acs-profile}预填自适应表单
 
-在此部分，我们将使用从ACS获取的用户档案信息预填自适应表单。 AEM Forms拥有预填自适应表单的强大功能。
+在此部分，我们将使用从ACS获取的用户档案信息预填自适应表单。 AEM Forms具备预填自适应表单的强大功能。
 
-要进一步了解预填自适应表单，请阅读此[教程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
+要了解有关预填自适应表单的更多信息，请阅读此[教程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
 
-要通过从ACS获取数据来预填充自适应表单，我们假定ACS中存在与已登录的AEM用户具有相同电子邮件的用户档案。 例如，如果登录AEM的人员的电子邮件ID为csimms@adobe.com，则我们希望在电子邮件为csimms@adobe.com的ACS中找到一个用户档案。
+要通过从ACS获取数据来预填充自适应表单，我们假定ACS中存在与登录的AEM用户具有相同电子邮件的用户档案。 例如，如果登录到AEM的人员的电子邮件ID为csimms@adobe.com，则我们希望在电子邮件为csimms@adobe.com的ACS中找到一个用户档案。
 
 使用REST API从ACS获取用户档案信息时需要执行以下步骤
 
 * 生成JWT
-* 交换JWT以访问令牌
+* Exchange JWT for 访问令牌
 * 向ACS发出REST呼叫并通过电子邮件获取用户档案
 * 使用文档信息构建XML用户档案
-* 将由AEM Forms使用的XML文档的Return InputStream
+* 返回AEM Forms将使用的XML文档的InputStream
 
 ![prefillservice](assets/prefillserviceaf.gif)
 
@@ -41,7 +44,7 @@ ht-degree: 0%
 
 以下是从ACS获取和返回用户档案信息的代码。
 
-在第68行中，我们获取AEM用户的电子邮件ID。 用户档案详细信息通过给Adobe Campaign Standard打REST电话来获取。 从获取的用户档案详细信息中，以AEM Forms理解的方式构建XML文档。 返回此文档的输入流供AEM Forms使用。
+在第68行中，我们会获取AEM用户的电子邮件ID。 通过向Adobe Campaign Standard发出REST调用来获取用户档案详细信息。 从获取的用户档案详细信息中，XML文档以AEM Forms理解的方式构建。 返回此文档的输入流供AEM Forms使用。
 
 ```java
 package aemforms.campaign.core;
@@ -233,10 +236,10 @@ return "Pre Fill Forms Using Campaign Profile";
 }
 ```
 
-要在您的系统上实现此操作，请按照以下说明操作：
+要在您的系统上使此功能正常工作，请按照以下说明操作：
 
-* [确保遵循此处所述的步骤](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [确保您遵循了此处所述的步骤](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [使用包管理器将示例自适应表单导入AEM](assets/pre-fill-af-from-campaign.zip)
-* 确保您与电子邮件ID由Adobe Campaign用户档案共享的用户登录到AEM。 例如，如果AEM用户的电子邮件ID为johndoe@adobe.com，则您需要在电子邮件为johndoe@adobe.com的ACS中具有用户档案。
+* 确保您与Adobe Campaign中的用户档案共享其电子邮件ID的用户登录到AEM。 例如，如果AEM用户的电子邮件ID为johndoe@adobe.com，则您需要在电子邮件为johndoe@adobe.com的ACS中拥有一个用户档案。
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled)。
 
