@@ -1,38 +1,41 @@
 ---
 title: 在自适应表单提交时创建活动用户档案
 seo-title: 在自适应表单提交时创建活动用户档案
-description: 本文将说明在Adobe Campaign Standard创建自适应表单提交用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
-seo-description: 本文将说明在Adobe Campaign Standard创建自适应表单提交用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
+description: 本文将说明在提交自适应表单时在Adobe Campaign Standard中创建用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
+seo-description: 本文将说明在提交自适应表单时在Adobe Campaign Standard中创建用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
 uuid: f3cb7b3c-1a1c-49eb-9447-a9e52c675244
-feature: adaptive-forms, form-data-model
+feature: '"自适应Forms，表单数据模型"'
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 46ec4136-4898-4b01-86bb-ac638a29b242
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
 
 
-# 在自适应表单提交上创建活动用户档案{#creating-campaign-profile-on-adaptive-form-submission}
+# 在自适应表单提交{#creating-campaign-profile-on-adaptive-form-submission}时创建活动用户档案
 
-本文将说明在Adobe Campaign Standard创建自适应表单提交用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
+本文将说明在提交自适应表单时在Adobe Campaign Standard中创建用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
 
 本教程将介绍在自适应表单提交时创建活动用户档案的步骤。 要完成此用例，我们需要执行以下操作
 
-* 创建AEM服务(CampaignService)，以使用REST API创建Adobe Campaign Standard用户档案
+* 创建AEM服务(CampaignService)以使用REST API创建Adobe Campaign Standard用户档案
 * 创建用于处理自适应表单提交的自定义提交操作
 * 调用CampaignService的createProfile方法
 
 ## 创建AEM服务{#create-aem-service}
 
-创建AEM服务以创建Adobe Campaign用户档案。 此AEM服务将从OSGI配置中获取Adobe Campaign凭据。 一旦获得活动凭据，就会生成访问令牌，并使用访问令牌HTTP Post调用创建Adobe Campaign用户档案。 以下是创建用户档案的代码。
+创建AEM服务以创建Adobe Campaign用户档案。 此AEM服务将从OSGI配置中获取Adobe Campaign凭据。 获得活动凭据后，生成访问令牌，并使用访问令牌HTTP Post调用在Adobe Campaign中创建用户档案。 以下是用于创建用户档案的代码。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -249,7 +252,7 @@ return null;
 
 创建一个自定义提交处理程序以处理自适应表单提交。 在此自定义提交处理程序中，我们将调用CampaignService的createProfile方法。 createProfile方法接受表示需要创建的用户档案的JSONObject。
 
-要进一步了解AEM Forms的自定义提交处理程序，请按照此[链接](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)操作
+要进一步了解AEM Forms中的自定义提交处理程序，请按照此[链接](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)操作
 
 以下是自定义提交中的代码
 
@@ -269,8 +272,8 @@ String pkey = addNewProfile.createProfile(profile);
 定义服务和自定义提交操作后，我们便可以测试解决方案。 要测试解决方案，请执行以下步骤
 
 
-* [确保遵循此处所述的步骤](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [确保您遵循了此处所述的步骤](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [使用包管理器导入自适应表单和自定义提交处理程序](assets/create-acs-profile-on-af-submission.zip)。此包包含配置为提交到自定义提交操作的自适应表单。
-* 预览[形式](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
+* 预览[表单](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * 填写所有字段并提交
 * 将在您的ACS实例中创建新用户档案
