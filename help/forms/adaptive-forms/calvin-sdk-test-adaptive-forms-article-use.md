@@ -1,39 +1,42 @@
 ---
-title: '将自动测试与AEM Adaptive Depative Forms结合使用 '
-seo-title: '将自动测试与AEM Adaptive Depative Forms结合使用 '
-description: Calvin SDK实现自适应Forms的自动测试
-seo-description: Calvin SDK实现自适应Forms的自动测试
-feature: adaptive-forms
+title: '将自动测试与AEM Adaptive Forms结合使用 '
+seo-title: '将自动测试与AEM Adaptive Forms结合使用 '
+description: 使用Calvin SDK自动测试自适应Forms
+seo-description: 使用Calvin SDK自动测试自适应Forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 uuid: 3ad4e6d6-d3b1-4e4d-9169-847f74ba06be
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 0%
+source-wordcount: '465'
+ht-degree: 1%
 
 ---
 
 
-# 将自动测试与AEM Adaptive Detaptive Detaption一起使用{#using-automated-tests-with-aem-adaptive-forms}
+# 将自动测试与AEM Adaptive Forms {#using-automated-tests-with-aem-adaptive-forms}结合使用
 
-Calvin SDK实现自适应Forms的自动测试
+使用Calvin SDK自动测试自适应Forms
 
-Calvin SDK是供自适应Forms开发人员测试自适应Forms的实用程序API. Calvin SDK构建于[Hobbes.js测试框架](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)之上。 从AEM Forms6.3开始，Calvin SDK可用。
+Calvin SDK是一个实用程序API，供Adaptive Forms开发人员测试Adaptive Forms。 Calvin SDK构建于[Hobbes.js测试框架](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)之上。 从AEM Forms 6.3开始，Calvin SDK可用。
 
 在本教程中，您将创建以下内容：
 
-* 测试套件
+* Test Suite
 * 测试套件将包含一个或多个测试用例
 * 测试用例将包含一个或多个操作
 
 ## 入门 {#getting-started}
 
-[使用包管理器下载和安装资](assets/testingadaptiveformsusingcalvinsdk1.zip)产该包包含示例脚本和几个自适应Forms。这些自适应Forms是使用AEM Forms6.3版本构建的。如果要在AEM Forms6.4或更高版本上测试，建议创建特定于您的AEM Forms版本的新表单。 范例脚本演示了可用于测试自适应Forms的各种Calvin SDK API。 测试AEM自适应Forms的一般步骤有：
+[使用包管理器下载和安装资](assets/testingadaptiveformsusingcalvinsdk1.zip)产该包包含示例脚本和多个自适应Forms。这些自适应Forms是使用AEM Forms 6.3版本构建的。如果要在AEM Forms 6.4或更高版本上测试AEM Forms，则建议创建特定于您的版本的新表单。 范例脚本演示了可用于测试自适应Forms的各种Calvin SDK API。 测试AEM Adaptive Forms的一般步骤有：
 
 * 导航到需要测试的表单
 * 设置字段的值
@@ -50,10 +53,10 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 })
 ```
 
-上面的代码将创建新的测试套件。
+上面的代码将创建一个新的测试套件。
 
-* 本例中TestSuite的名称为“ `Mortgage Form Test` ”。
-* 提供了AEM中到包含测试套件的js文件的绝对路径。
+* 在本例中，TestSuite的名称为“ `Mortgage Form Test` ”。
+* 提供的是AEM中包含测试套件的js文件的绝对路径。
 * 设置为“ `true` ”时的register参数使测试套件在测试UI中可用。
 
 ```javascript
@@ -67,20 +70,20 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 
 >[!NOTE]
 >
->如果您正在AEM Forms6.4或更高版本上测试此功能，请创建新的自适应表单并使用它进行测试。不建议使用包中提供的自适应表单。
+>如果您正在AEM Forms 6.4或更高版本上测试此功能，请创建一个新的自适应表单并使用它进行测试。不建议使用包中提供的自适应表单。
 
 可以将测试用例添加到测试套件，以针对自适应表单执行。
 
 * 要向测试套件添加测试用例，请使用TestSuite对象的`addTestCase`方法。
 * `addTestCase`方法将TestCase对象作为参数。
 * 要创建TestCase，请使用`hobs.TestCase(..)`方法。
-* 注意：第一个参数是将在UI中显示的测试用例的名称。
-* 创建测试用例后，可向测试用例添加操作。
-* 可以将包括`navigateTo`、`asserts.isTrue`的操作作为操作添加到测试用例。
+* 注意：第一个参数是将在UI中显示的Test Case的名称。
+* 创建测试用例后，可以向测试用例添加操作。
+* 可以将包括`navigateTo`、`asserts.isTrue`的操作添加为测试用例的操作。
 
-## 运行自动化测试{#running-the-automated-tests}
+## 运行自动测试{#running-the-automated-tests}
 
-[](http://localhost:4502/libs/granite/testing/hobbes.html)Openthetestsuite展开测试套件并运行测试。如果所有内容都成功运行，您将看到以下输出。
+[](http://localhost:4502/libs/granite/testing/hobbes.html)打开测试套件展开测试套件并运行测试。如果所有内容都成功运行，您将看到以下输出。
 
 ![calvinsdk](assets/calvinimage.png)
 
