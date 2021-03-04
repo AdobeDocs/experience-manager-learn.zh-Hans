@@ -1,7 +1,7 @@
 ---
 title: 获取请求参数
 description: 访问表单数据模型的预填服务的请求参数
-feature: adaptive-forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: article
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 5815
 thumbnail: kt-5815.jpg
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 0%
+source-wordcount: '184'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +24,7 @@ ht-degree: 0%
 
 ## 获取empID参数
 
-下一步是从url访问empID参数。 然后，empID请求参数的值被传递到表单数据模型的&#x200B;**_get_**服务操作。
+下一步是从url访问empID参数。 empID请求参数的值随后被传递到表单数据模型的&#x200B;**_get_**服务操作。
 为了本课程的目的，我们创建并提供了以下内容
 
 * 名为&#x200B;**_FDMDemo_**&#x200B;的自适应表单模板
@@ -29,7 +32,7 @@ ht-degree: 0%
 * 将我们的自定义jsp包含在页面组件中
 * 将自适应表单模板与页面组件关联
 
-通过执行此操作，只有在渲染基于此自定义模板的自适应表单时，才会执行自定义jsp中的代码
+通过执行此操作，我们在自定义jsp中的代码只有在渲染基于此自定义模板的自适应表单时才会执行
 
 * [使用包管](assets/template-page-component.zip) 理器 [导入包](http://localhost:4502/crx/packmgr/index.jsp)
 * [打开fdmrequest.jsp](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
@@ -46,8 +49,8 @@ if(request.getParameter("empID")!=null)
     }
 ```
 
-empID的值与paraMap中名为empID的键相关联。 然后，此映射将传递给slingRequest
+empID的值与paraMap中名为empID的键关联。 然后，此映射将传递给slingRequest
 
 >[!NOTE]
 >
->密钥empID必须与新实体获取服务的绑定值相匹配
+>键empID必须与新实体获取服务的绑定值匹配
