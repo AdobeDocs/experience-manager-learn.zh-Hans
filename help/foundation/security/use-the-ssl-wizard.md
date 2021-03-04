@@ -3,19 +3,17 @@ title: 在AEM中使用SSL向导
 description: Adobe Experience Manager的SSL设置向导，可更轻松地设置要通过HTTPS运行的AEM实例。
 seo-description: Adobe Experience Manager的SSL设置向导，可更轻松地设置要通过HTTPS运行的AEM实例。
 version: 6.3, 6,4, 6.5
+feature: null
 topics: security, operations
 activity: use
 audience: administrator
 doc-type: technical video
 uuid: 82a6962e-3658-427a-bfad-f5d35524f93b
 discoiquuid: 9e666741-0f76-43c9-ab79-1ef149884686
-topic: 安全
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
