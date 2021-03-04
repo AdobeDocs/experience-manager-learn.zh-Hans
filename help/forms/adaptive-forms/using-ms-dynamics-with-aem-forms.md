@@ -4,18 +4,21 @@ seo-title: 将Microsoft Dynamics与AEM Forms
 description: 此视频在整个工作流程中展示AEM Forms如何与Microsoft Dynamics作为后端数据源协作，以提供交互式的个性化通信。
 seo-description: 此视频在整个工作流程中展示AEM Forms如何与Microsoft Dynamics作为后端数据源协作，以提供交互式的个性化通信。
 uuid: 33d63899-1f58-49b3-a05e-6c57b01ef911
-feature: 自适应表单，表单数据模型
+feature: 自适应表单
 topics: integrations
 audience: developer
 doc-type: feature video
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 6cb82275-55bc-4b9e-b958-75b906c6afa9
+topic: 开发
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 0%
+source-wordcount: '172'
+ht-degree: 2%
 
 ---
 
