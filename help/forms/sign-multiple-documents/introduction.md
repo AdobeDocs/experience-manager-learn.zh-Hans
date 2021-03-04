@@ -1,25 +1,28 @@
 ---
 title: 简介
-description: 签名多表单用例的视频演示
-feature: adaptive-forms
+description: 签名多表单用例视频演示
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 thumbnail: 330165.jpg
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 2%
+source-wordcount: '124'
+ht-degree: 5%
 
 ---
 
 # 简介
 
-无论您是申请抵押贷款，还是开立新的银行账户，都需要填写和签署多份表单。 AEM Forms和Adobe Sign的集成使填写和签署多个表单变得很容易。
-以下视频将指导您了解签署多个表单的用例。
+无论您是申请抵押贷款，还是开立新的银行账户，都需要填写和签署多份表单。 AEM Forms与Adobe Sign之间的集成使您能轻松填写和签署多个表单。
+以下视频将指导您了解对多个表单进行签名的使用案例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330165?quality=9&learn=on)
 
@@ -27,9 +30,9 @@ ht-degree: 2%
 
 本课程假定：
 
-* 您有权访问安装并配置了FormsAdd的AEM 6.4或6.5服务器
-* AEM配置为Adobe Sign
+* 您有权访问安装并配置了Forms Add的AEM 6.4或6.5服务器
+* AEM已配置Adobe Sign
 * 访问SMTP服务器
-* AEM/AEM Forms的经验
+* 一些AEM/AEM Forms经验
 
-遵循本教程并安装所提供的资产后，您将获得一个可对多个表单进行签名的有效解决方案。
+按照本教程并安装提供的资源后，您将获得一个可对多个表单进行签名的有效解决方案。
