@@ -1,7 +1,7 @@
 ---
 title: 表单数据模型类型变量
 description: 在AEM工作流中使用表单数据模型类型的变量。
-feature: 工作流
+feature: workflow
 topics: development
 audience: developer
 doc-type: technical video
@@ -9,14 +9,11 @@ activity: understand
 version: 6.5
 kt: 6347
 thumbnail: 41238.jpg
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 4%
+source-wordcount: '62'
+ht-degree: 1%
 
 ---
 
