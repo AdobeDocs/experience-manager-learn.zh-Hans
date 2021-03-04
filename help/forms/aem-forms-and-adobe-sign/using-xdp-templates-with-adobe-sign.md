@@ -8,14 +8,11 @@ doc-type: article
 activity: implement
 thumbnail: 39705.jpg
 kt: 6143
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 8%
+source-wordcount: '68'
+ht-degree: 2%
 
 ---
 
