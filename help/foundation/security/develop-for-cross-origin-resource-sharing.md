@@ -3,17 +3,15 @@ title: 利用AEM开发跨来源资源共享(CORS)
 description: 利用CORS通过客户端JavaScript从外部Web应用程序访问AEM内容的一个简短示例。
 version: 6.3, 6,4, 6.5
 sub-product: 基础，内容服务，站点
+feature: null
 topics: security, development, content-delivery
 activity: develop
 audience: developer
 doc-type: tutorial
-topic: 安全
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
