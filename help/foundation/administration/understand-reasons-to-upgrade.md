@@ -7,10 +7,13 @@ topics: best-practices, upgrade
 audience: all
 activity: understand
 doc-type: article
+topic: 升级
+role: 领导者，架构师，开发人员，管理员，业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '3540'
+source-wordcount: '3548'
 ht-degree: 3%
 
 ---
@@ -963,7 +966,7 @@ AEM增强了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/delivering-dynamic-media-assets.html" target="_blank">投放</a>：用</strong>
-            于链接或嵌入Dynamic Media内容的灵活选项以及通过HTTP/2协议实现的投放。</td>
+            于链接或嵌入Dynamic Media内容的灵活选项和通过HTTP/2协议实现的投放。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
