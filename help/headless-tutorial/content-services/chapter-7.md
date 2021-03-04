@@ -1,10 +1,14 @@
 ---
 title: 第7章 — 使用移动应用程序中的AEM内容服务 — 内容服务
 description: 教程的第7章运行Android移动应用程序以使用AEM Content Services中创作的内容。
+feature: 内容片段、API
+topic: 无头、内容管理
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
