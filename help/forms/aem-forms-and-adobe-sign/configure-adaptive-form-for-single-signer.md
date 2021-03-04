@@ -1,28 +1,31 @@
 ---
-title: 单签署方自适应表单
-description: 由单一签署方提供的自适应表单。 该视频介绍了为单一签署方配置自适应表单所需的各种步骤。
-feature: adaptive-forms
+title: 具有单个签名者的自适应表单
+description: 具有单个签名者的自适应表单。 该视频介绍了配置具有单个签名者的自适应表单所需的各种步骤。
+feature: '"自适应Forms,Adobe Sign"'
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39475.jpg
 kt: 6103
+topic: 开发
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 0%
+source-wordcount: '69'
+ht-degree: 1%
 
 ---
 
-# 单签署方自适应表单
+# 具有单个签名者的自适应表单
 
 
-该视频介绍了为单一签署方配置自适应表单所需的各种步骤。
+该视频介绍了配置具有单个签名者的自适应表单所需的各种步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39475/?quality=9&learn=on)
 
-与此视频相关的资产可从以下链接下载
+与此视频相关的资产可以从以下链接下载
 
 * [更改受益人表单  ](assets/change-of-beneficiary-form.zip)
