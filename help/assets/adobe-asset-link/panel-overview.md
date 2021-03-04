@@ -1,26 +1,25 @@
 ---
-title: Adobe资产链接面板概述
-description: 'Adobe资产链接使创意用户能够使用InDesign、Photoshop和Illustrator的应用程序内面板浏览、搜索、注销和登记存储在AEM Assets的资源。 介绍Adobe资产链接面板的UI及其功能。 '
+title: Adobe资源链接面板概述
+description: 'Adobe Asset Link使创意用户能够使用InDesign、Photoshop和Illustrator中的应用程序内面板浏览、搜索、签出和签入存储在AEM Assets中的资源。 介绍Adobe Asset Link面板的UI及其功能。 '
 sub-product: 资产
-feature: adobe-asset-link
-topics: authoring, collaboration, operations, sharing, metadata, images
-audience: all
-doc-type: feature video
-activity: use
-version: null
+feature: Adobe Asset Link
+version: cloud-service
 kt: 4905
 thumbnail: 33734.jpg
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 0%
+source-wordcount: '103'
+ht-degree: 4%
 
 ---
 
 
-# Adobe资产链接面板概述{#adobe-asset-link-panel-overview}
+# Adobe资源链接面板概述{#adobe-asset-link-panel-overview}
 
-Adobe资产链接使创意用户能够使用InDesign、Photoshop和Illustrator的应用程序内面板浏览、搜索、注销和登记存储在AEM Assets的资源。 介绍Adobe资产链接面板的UI及其功能。
+Adobe Asset Link使创意用户能够使用InDesign、Photoshop和Illustrator中的应用程序内面板浏览、搜索、签出和签入存储在AEM Assets中的资源。 介绍Adobe Asset Link面板的UI及其功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33734/?quality=12)
