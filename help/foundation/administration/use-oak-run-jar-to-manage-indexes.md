@@ -2,15 +2,18 @@
 title: 使用oak-run.jar管理索引
 description: oak-run.jar的index命令整合了用于管理AEM中Oak索引的多种功能，包括收集索引统计信息、运行索引一致性检查和索引本身的重新/索引。
 version: 6.4, 6.5
-feature: 橡
+feature: 搜索
 topics: search
 activity: use
 audience: architect, developer, implementer
 doc-type: technical video
+topic: 演出
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
