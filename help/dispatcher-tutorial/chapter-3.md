@@ -1,10 +1,12 @@
 ---
 title: 第3章 — 高级缓存主题
+seo-title: AEM Dispatcher Cache Demystified — 第3章 — 高级缓存主题
 description: AEM Dispatcher缓存演示教程的第3章介绍了如何克服第2章中讨论的限制。
+seo-description: AEM Dispatcher缓存演示教程的第3章介绍了如何克服第2章中讨论的限制。
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '6162'
+source-wordcount: '6187'
 ht-degree: 0%
 
 ---
