@@ -1,23 +1,26 @@
 ---
 title: 从MySQL数据库存储和检索表单数据
 description: 多部分教程，指导您完成存储和检索表单数据所涉及的步骤
-feature: adaptive-forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '81'
-ht-degree: 0%
+source-wordcount: '86'
+ht-degree: 4%
 
 ---
 
 # 创建自适应表单模板和页面组件
 
-我们现在将创建一个新的自适应表单模板和页面组件来测试此用例。 然后，使用此新模板创建的每个自适应表单都将能够存储和检索表单数据。
+我们现在将新建一个自适应表单模板和页面组件来测试此用例。 然后，使用此新模板创建的每个自适应表单都将能够存储和检索表单数据。
 以下视频将逐步介绍创建新的自适应表单模板所需的步骤
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
