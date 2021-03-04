@@ -11,11 +11,14 @@ doc-type: feature video
 activity: use
 version: 6.3,6.4,6.5
 discoiquuid: 9ba8c552-bf3f-445c-b0d1-17e62b34f1a2
+topic: 开发
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 0%
+source-wordcount: '62'
+ht-degree: 4%
 
 ---
 
