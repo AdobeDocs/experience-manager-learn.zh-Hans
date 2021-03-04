@@ -1,6 +1,6 @@
 ---
 title: OSGi简介
-description: OSGi的简介，它是Java应用程序的动态模块化架构，是Adobe Experience Manager的基础。
+description: OSGi的简介，OSGi是Java应用程序的动态模块化架构，是Adobe Experience Manager的基础。
 topics: osgi, architecture
 audience: administrator, developer
 doc-type: technical video
@@ -8,11 +8,14 @@ activity: understand
 version: cloud-service
 kt: 4642
 thumbnail: 32031.jpg
+topic: 架构
+role: 架构师、开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '41'
-ht-degree: 4%
+source-wordcount: '45'
+ht-degree: 6%
 
 ---
 
