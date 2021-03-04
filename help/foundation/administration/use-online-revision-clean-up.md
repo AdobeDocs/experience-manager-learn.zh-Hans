@@ -2,18 +2,16 @@
 title: 使用在线修订清理
 description: '在线修订清理简介。 联机修订清理减少了频繁的脱机修订清理的需要。 '
 version: 6.3, 6.4, 6.5
+feature: 橡木，压实
 topics: operations, authoring, performance
 activity: use
 audience: administrator, architect, implementer
 doc-type: technical video
-topic: 管理
-role: 管理员
-level: 中间
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 3%
+source-wordcount: '76'
+ht-degree: 1%
 
 ---
 
