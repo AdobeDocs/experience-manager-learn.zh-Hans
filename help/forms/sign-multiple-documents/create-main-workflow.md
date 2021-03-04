@@ -1,7 +1,7 @@
 ---
-title: 创建主工作流以触发签名流程
+title: 创建主工作流以触发签名进程
 description: 创建将表单存储在数据库中以供签名的工作流
-feature: adaptive-forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,24 +9,27 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6887.jpg
 kt: 6887
+topic: 开发
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 0%
+source-wordcount: '167'
+ht-degree: 2%
 
 ---
 
 
 # 创建主工作流
 
-当用户提交初始表单(**RefecantForm**)时，将触发主工作流。 以下是工作流的流程
+当用户提交初始表单(**RefinatForm**)时，将触发主工作流。 以下是工作流的流程
 
 ![主工作流](assets/main-workflow.PNG)
 
-**将Forms存** 储到签名是自定义流程步骤。
+**存储Forms到** 签名是自定义进程步骤。
 
-实施自定义流程步骤的动机是扩展AEM工作流。 以下代码实现自定义进程步骤。 代码提取要签名的表单的名称，并将提交的表单数据传递到SignMultipleForms服务中的`insertData`方法。 然后，`insertData`方法将行插入由数据源&#x200B;**aemformstorial**&#x200B;标识的数据库中。
+实施自定义流程步骤的动机是扩展AEM工作流。 以下代码实现自定义进程步骤。 代码提取要签名的表单的名称，并将提交的表单数据传递给SignMultipleForms服务中的`insertData`方法。 然后，`insertData`方法将行插入由数据源&#x200B;**aemformstutorial**&#x200B;标识的数据库中。
 
 此自定义进程步骤中的代码引用`SignMultipleForms`服务。
 
@@ -119,7 +122,7 @@ public class StoreFormsToSignWorkflowStep implements WorkflowProcess {
 
 ## 资产
 
-本文中使用的“Sign MultipleForms”工作流可从此处](assets/sign-multiple-forms-workflows.zip)下载[
+本文中使用的Sign Multiple Forms工作流可从此处[下载](assets/sign-multiple-forms-workflows.zip)
 
 >[!NOTE]
-> 请确保配置Day CQ邮件服务以发送电子邮件通知。 电子邮件模板也提供在上述包中。
+> 请确保配置Day CQ Mail服务以发送电子邮件通知。 电子邮件模板也在上述包中提供。
