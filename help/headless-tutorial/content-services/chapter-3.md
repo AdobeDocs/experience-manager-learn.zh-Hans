@@ -3,10 +3,14 @@ title: 第3章 — 创作事件内容片段 — 内容服务
 seo-title: AEM内容服务入门 — 第3章 — 创作事件内容片段
 description: AEM无头教程的第3章涵盖从在第2章中创建的内容片段模型中创建和创作事件内容片段。
 seo-description: AEM无头教程的第3章涵盖从在第2章中创建的内容片段模型中创建和创作事件内容片段。
+feature: 内容片段、API
+topic: 无头、内容管理
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '518'
 ht-degree: 2%
 
 ---
