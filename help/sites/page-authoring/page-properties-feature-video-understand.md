@@ -1,9 +1,9 @@
 ---
-title: 了解AEM Sites的页面属性
-seo-title: 了解Adobe Experience Manager Sites的页面属性
-description: 以下视频介绍与Adobe Experience Manager的页面关联的页面属性元数据。
-seo-description: '以下视频介绍与Adobe Experience Manager的页面关联的页面属性元数据。 '
-feature: page-editor
+title: 了解AEM Sites中的页面属性
+seo-title: 了解Adobe Experience Manager Sites中的页面属性
+description: 以下视频介绍了与Adobe Experience Manager中的页面关联的页面属性元数据。
+seo-description: '以下视频介绍了与Adobe Experience Manager中的页面关联的页面属性元数据。 '
+feature: 页面编辑器
 topics: authoring, metadata
 audience: author, marketer
 doc-type: feature video
@@ -11,18 +11,21 @@ activity: understand
 version: 6.3, 6.4, 6.5
 kt: 4321
 thumbnail: 32192.jpg
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 27%
+source-wordcount: '177'
+ht-degree: 28%
 
 ---
 
 
 # 了解页面属性{#understanding-page-properties-aem-sites}
 
-以下视频介绍与Adobe Experience Manager的页面关联的页面属性。
+以下视频介绍了与Adobe Experience Manager中的页面关联的页面属性。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32192?quality=12&learn=on)
 
