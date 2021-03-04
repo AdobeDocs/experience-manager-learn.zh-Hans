@@ -1,26 +1,25 @@
 ---
 title: 元数据架构
-description: 元数据模式定义用户与AEM中资产元数据交互的界面，其定义和资产应用对于数字资产管理至关重要。
+description: 元数据模式定义了用户与AEM中的资产元数据交互的界面，而元数据的定义和资产应用程序对于数字资产管理至关重要。
 sub-product: 资产
-feature: metadata-schemas
-topics: configuring, content-architecture, metadata
-audience: administrator, implementer
-doc-type: feature video
-activity: use
+feature: 元数据
 version: cloud-service
 kt: 4981
 thumbnail: 33696.jpg
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 0d4d1140dd226bbb02de0b19942b55495e3e2b2c
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 7%
+source-wordcount: '61'
+ht-degree: 11%
 
 ---
 
 
 # 元数据架构
 
-元数据模式定义用户与AEM中资产元数据交互的界面，其定义和资产应用对于数字资产管理至关重要。
+元数据模式定义了用户与AEM中的资产元数据交互的界面，而元数据的定义和资产应用程序对于数字资产管理至关重要。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33696/?quality=12&learn=on&hidetitle=true)
