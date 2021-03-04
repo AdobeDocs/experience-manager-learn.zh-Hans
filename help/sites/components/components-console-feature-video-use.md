@@ -6,11 +6,15 @@ audience: all
 doc-type: feature video
 version: 6.3, 6.4, 6.5
 activity: use
+feature: 核心组件
+topic: 内容管理
+role: 业务从业者
+level: 中间
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 1%
+source-wordcount: '181'
+ht-degree: 3%
 
 ---
 
@@ -23,13 +27,13 @@ ht-degree: 1%
 
 组件控制台提供以下功能：
 
-* 概述：列表当前AEM实例上可用的所有已安装组件
+* 概述：列表当前AEM实例上所有可用的已安装组件
 * [!UICONTROL 属性]:显示元数据，如组件的标题、组和说明
-* [!UICONTROL 策略]:显示给定组件的所有现有策略以及关联的模板
-* [!UICONTROL 实时使用情况]:显示包含该组件的页面列表
+* [!UICONTROL 策略]:显示给定组件和关联的模板的任何现有策略
+* [!UICONTROL 实时使用情况]:显示包含组件的页面列表
 
 组件控制台位于&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 组件]**下。
-组件控制台URL（本地AEM作者）:[http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
+组件控制台URL（本地AEM作者）：[http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
 
 ## 其他资源 {#additional-resources}
 
