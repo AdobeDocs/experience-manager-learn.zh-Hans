@@ -4,7 +4,7 @@ seo-title: 安装和配置Tomcat
 description: 这是创建您的第一个交互式通信文档的多步教程的第一部分。在本部分中，我们将安装TOMCAT并在TOMCAT中部署sampleRest.war文件。 此WAR文件公开的REST端点将作为数据源和表单数据模型的基础。
 seo-description: 这是创建您的第一个交互式通信文档的多步教程的第一部分。在本部分中，我们将安装TOMCAT并在TOMCAT中部署sampleRest.war文件。 此WAR文件公开的REST端点将作为数据源和表单数据模型的基础。
 uuid: 835e2342-82b6-4f0c-9a6b-467bbbd8527a
-feature: 交互通信
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,11 +12,14 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 37815.jpg
 discoiquuid: 5f68be3d-aa35-4a3f-aaea-b8ee213c87ae
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 0%
+source-wordcount: '324'
+ht-degree: 1%
 
 ---
 
