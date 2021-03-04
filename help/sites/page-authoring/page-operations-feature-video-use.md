@@ -1,9 +1,9 @@
 ---
-title: AEM Sites的基本页面操作
-seo-title: AEM Sites的基本页面操作
-description: 以下视频重点介绍如何为Adobe Experience Manager Sites页面执行基本页面管理操作。
-seo-description: 以下视频重点介绍如何为Adobe Experience Manager Sites页面执行基本页面管理操作。
-feature: page-editor, template-editor
+title: AEM Sites中的基本页面操作
+seo-title: AEM Sites中的基本页面操作
+description: 以下视频重点介绍如何对Adobe Experience Manager Sites页面执行基本页面管理操作。
+seo-description: 以下视频重点介绍如何对Adobe Experience Manager Sites页面执行基本页面管理操作。
+feature: 页面编辑器、可编辑模板
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,11 +11,14 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 4245
 thumbnail: 32147.jpg
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: d3e2595bf189c937b1023881d84eb1a9739750b6
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 2%
+source-wordcount: '108'
+ht-degree: 3%
 
 ---
 
