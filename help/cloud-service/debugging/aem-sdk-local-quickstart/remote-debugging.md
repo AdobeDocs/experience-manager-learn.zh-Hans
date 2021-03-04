@@ -1,18 +1,21 @@
 ---
 title: 远程调试AEM SDK
-description: AEM SDK的本地快速启动允许从IDE中进行远程Java调试，允许您在AEM中逐步执行实时代码以了解确切的执行流程。
-feature: null
+description: AEM SDK的本地快速启动允许从IDE中进行远程Java调试，允许您在AEM中逐步执行实时代码，以了解确切的执行流。
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
+topic: 开发
+role: 开发人员
+level: 初学者，中级
 translation-type: tm+mt
-source-git-commit: a3d3612713decefb5c7e1cf5b2d4d21afff0a2f5
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 1%
 
 ---
 
@@ -21,27 +24,27 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/34338/?quality=12&learn=on)
 
-AEM SDK的本地快速启动允许从IDE中进行远程Java调试，允许您在AEM中逐步执行实时代码以了解确切的执行流程。
+AEM SDK的本地快速启动允许从IDE中进行远程Java调试，允许您在AEM中逐步执行实时代码，以了解确切的执行流。
 
-要将远程调试器连接到AEM,AEM SDK的本地快速启动必须使用允许IDE连接到它的特定参数(`-agentlib:...`)启动。
+要将远程调试器连接到AEM，必须使用允许IDE连接到的特定参数(`-agentlib:...`)启动AEM SDK的本地快速启动。
 
 ```
 $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar aem-author-p4502.jar   
 ```
 
 + `address` 指定AEM监听远程调试连接的端口，并可更改为本地开发计算机上的任何可用端口。
-+ 最后一个参数(例如 `aem-author-p4502.jar`)是AEM SKD快速启动Jar。这可以是AEM作者服务(`aem-author-p4502.jar`)或AEM发布服务(`aem-publish-p4503.jar`)。
++ 最后一个参数(例如 `aem-author-p4502.jar`)是AEM SKD快速启动程序Jar。这可以是AEM作者服务(`aem-author-p4502.jar`)或AEM发布服务(`aem-publish-p4503.jar`)。
 
 ## IDE设置说明
 
-大多数Java IDE都支持Java项目的远程调试，但每个IDE的确切设置步骤各不相同。 请查看IDE的远程调试设置说明以了解具体步骤。 通常，IDE配置需要：
+大多数Java IDE都支持Java项目的远程调试，但每个IDE的确切设置步骤各不相同。 请查看IDE的远程调试设置说明，了解具体步骤。 通常，IDE配置需要：
 
 + 主机AEM SDK的本地快速启动正在侦听，它为`localhost`。
-+ 端口AEM SDK的本地快速启动正在侦听远程调试连接，该端口是启动AEM SDK的本地快速启动时由`address`参数指定的端口。
++ 端口AEM SDK的本地快速启动正在侦听远程调试连接，这是启动AEM SDK的本地快速启动时由`address`参数指定的端口。
 + 有时，必须指定为远程调试提供源代码的Maven项目；这是您的OSGi bundle maven项目。
 
 ### 设置说明
 
-+ [VS代码Java远程调试器设置](https://code.visualstudio.com/docs/java/java-debugging)
++ [VS代码Java Remote调试器设置](https://code.visualstudio.com/docs/java/java-debugging)
 + [IntelliJ IDEA Remote调试器设置](https://www.jetbrains.com/help/idea/run-debug-configuration-remote-debug.html)
 + [Eclipse Remote调试器设置](https://javapapers.com/core-java/java-remote-debug-with-eclipse/)
