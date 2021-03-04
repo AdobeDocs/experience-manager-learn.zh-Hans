@@ -1,7 +1,7 @@
 ---
 title: 组合表单附件
 description: 按指定顺序组合表单附件
-feature: 汇编程序
+feature: assem
 topics: development
 audience: developer
 doc-type: article
@@ -9,13 +9,10 @@ activity: implement
 version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
-topic: 开发
-role: 开发人员
-level: 富有经验
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
