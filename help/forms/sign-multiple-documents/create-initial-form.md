@@ -1,7 +1,7 @@
 ---
-title: 创建初始表单以触发流程
+title: 创建初始表单以触发进程
 description: 创建初始表单以触发电子邮件通知以开始签名过程。
-feature: adaptive-forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,18 +9,21 @@ activity: implement
 version: 6.4,6.5
 kt: 6892
 thumbnail: 6892.jpg
+topic: 开发
+role: 业务从业者
+level: 中间
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 4%
+source-wordcount: '174'
+ht-degree: 5%
 
 ---
 
 
 # 创建初始表单
 
-初始表单（再融资表单）用于通过触发&#x200B;**签署多个Forms** AEM工作流来签署多个表单。 您可以输入所选的值，但应确保将以下字段添加到表单。
+初始表单（再融资表单）用于通过触发&#x200B;**多重Forms** AEM工作流对多个表单进行签名。 您可以输入所选的值，但确保将以下字段添加到表单。
 
 
 
@@ -35,11 +38,11 @@ ht-degree: 4%
 
 
 需要配置初始表单以触发名为&#x200B;**signmultipleforms**的AEM工作流
-确保数据文件路径设置为**Data.xml**。 当示例代码在表单提交过程中的有效负荷中查找名为Data.xml的文件时，这非常重要。
+确保将“数据文件路径”设置为**Data.xml**。 这非常重要，因为示例代码在表单提交过程中的有效负荷中查找名为Data.xml的文件。
 
 ## 资产
 
-初始表单（再融资表单）可从此处](assets/refinance-form.zip)下载[
+初始表单（再融资表单）可从此处下载[](assets/refinance-form.zip)
 
 
 
