@@ -1,10 +1,14 @@
 ---
 title: 第6章 — 将AEM发布上的内容公开为JSON — 内容服务
 description: AEM无外设教程的第6章介绍了如何确保AEM发布中包含所有必要的包、配置和内容，以允许从移动应用程序使用。
+feature: 内容片段、API
+topic: 无头、内容管理
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -47,7 +51,7 @@ AEM无外设教程的第6章介绍了如何确保AEM发布中包含所有必要�
    1. 导航到&#x200B;**[!UICONTROL AEM] > [!UICONTROL 站点] > [!DNL WKND Mobile] > [!DNL English] >[!DNL API]**
    1. 选择&#x200B;**[!DNL Events]**&#x200B;页
    1. 点按顶部操作栏中的&#x200B;**[!UICONTROL 管理发布]**
-   1. 将默认的&#x200B;**Publish**&#x200B;操作保留为原样，点按顶部操作栏中的&#x200B;**[!UICONTROL Next]**
+   1. 将默认的&#x200B;**Publish**&#x200B;操作保留为原样，点按顶部操作栏中的&#x200B;**[!UICONTROL 下一个]**
    1. 选择&#x200B;**[!DNL Events]**&#x200B;页
    1. 点按顶部操作栏中的&#x200B;**[!DNL Publish]**
 
