@@ -1,18 +1,22 @@
 ---
-title: AEM无头入门——内容服务
+title: AEM无外设入门 — 内容服务
 description: 一个端到端教程，它演示了如何使用 AEM Headless 构建和展示内容。
+feature: '"内容片段， API"'
+topic: “无头、内容管理”
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 9%
+source-wordcount: '223'
+ht-degree: 6%
 
 ---
 
 
-# AEM Headless 快速入门 - Content Services
+# AEM无外设入门 — 内容服务
 
-一个端到端教程，它演示了如何在无外设CMS场景中使用AEM构建和展示内容并由本机移动应用程序使用。
+一个端到端教程，演示如何在无外设CMS场景中使用AEM构建和公开内容并由本机移动应用程序使用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28315/?quality=12&learn=on)
 
@@ -21,13 +25,13 @@ ht-degree: 9%
 本教程将涵盖以下主题：
 
 * 使用内容片段创建表示事件的内容
-* 使用AEM Sites的模板和将事件数据公开为JSON的页面定义AEM Content Services端点
+* 使用AEM Sites的模板和页面定义AEM Content Services端点，将事件数据显示为JSON
 * 了解如何使用AEM WCM核心组件使营销人员能够创作JSON端点
 * 从移动应用程序使用AEM Content Services JSON
-   * Android的使用是因为它有一个跨平台模拟器，本教程的所有用户（Windows、macOS和Linux）都可以使用该模拟器运行本机应用程序。
+   * Android的使用是因为它有一个跨平台模拟器，本教程的所有用户（Windows、macOS和Linux）都可以使用它运行本机应用程序。
 
 ## GitHub项目
 
-[AEM指南- WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile)中提供源代码和内容包。
+可在[AEM指南 — WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile)中找到源代码和内容包。
 
 如果您发现教程或代码存在问题，请保留[GitHub问题](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
