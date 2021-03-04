@@ -1,15 +1,16 @@
 ---
 title: 如何在AEM中使用收件箱
 description: AEM收件箱可促进协作，并可查看任务和工作流程。
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
+feature: 工作流
+activity: use
+audience: author, analyst
+doc-type: feature video
 topic: 协作
-feature: 收件箱
 role: 业务从业者
-level: 中间
-kt: 159
-thumbnail: 16827.jpg
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 2760064642002a684b3fd70337a81a7d6e28a343
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 2%
