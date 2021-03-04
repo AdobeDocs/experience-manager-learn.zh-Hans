@@ -3,27 +3,30 @@ title: 通过合并渠道生成打印文档
 seo-title: 通过合并渠道生成打印文档
 description: 了解如何通过合并输入流中包含的数据来生成打印渠道文档
 seo-description: 了解如何通过合并输入流中包含的数据来生成打印渠道文档
-feature: interactive-communication
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 开发
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 0%
+source-wordcount: '506'
+ht-degree: 1%
 
 ---
 
 # 使用提交的数据生成打印渠道文档
 
-打印渠道文档通常通过从后端数据源通过表单数据模型的get服务获取数据来生成。 在某些情况下，您可能需要使用提供的数据生成打印渠道文档。 例如——客户填写受益人表单的更改，您可能希望使用提交表单的数据生成打印渠道文档。 要完成此用例，需要遵循以下步骤
+打印渠道文档通常通过从后端数据源通过表单数据模型的获取服务获取数据而生成。 在某些情况下，您可能需要使用提供的数据生成打印渠道文档。 例如 — 客户填写受益人表单的更改，您可能希望使用提交的表单中的数据生成打印渠道文档。 要完成此用例，需要遵循以下步骤
 
 ## 创建预填服务
 
-服务名称“ccm-print-test”将用于访问此服务。 定义此预填充服务后，您可以在servlet或工作流进程步骤实现中访问此服务，以生成打印渠道文档。
+服务名称“ccm-print-test”将用于访问此服务。 定义此预填充服务后，您可以在servlet或工作流进程步骤实现中访问此服务以生成打印渠道文档。
 
 ```java
 import java.io.InputStream;
@@ -65,15 +68,15 @@ public PrefillData getPrefillData(DataOptions options) throws FormsException {
 
 ### 创建WorkflowProcess实现
 
-以下显示了workflowProcess实现代码片断。当AEM Workflow中的进程步骤与此实现关联时，将执行此代码。 此实现需要3个进程参数，具体说明如下：
+如下所示，workflowProcess实现代码段。此代码在AEM工作流中的进程步骤与此实现关联时执行。 此实施需要3个进程参数，如下所述：
 
-* 配置自适应表单时指定的数据文件路径的名称
+* 配置自适应表单时指定的DataFile路径的名称
 * 打印渠道模板的名称
 * 生成的打印渠道文档的名称
 
-第98行——由于自适应表单基于表单数据模型，因此提取驻留在afBoundData数据节点中的数据。
-第128行——已设置“数据选项”服务名称。 记下服务名称。 它必须与上一个代码列表的第45行中返回的名称匹配。
-第135行-文档是使用PrintChannel对象的渲染方法生成的
+第98行 — 由于自适应表单基于表单数据模型，因此会提取驻留在afBoundData数据节点中的数据。
+第128行 — 已设置“数据选项”服务名称。 记下服务名称。 它必须与上一代码列表第45行中返回的名称匹配。
+第135行 — 文档是使用PrintChannel对象的渲染方法生成的
 
 
 ```java
@@ -162,11 +165,11 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
 
 要在服务器上测试它，请执行以下步骤：
 
-* [配置Day CQ邮件服务。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) 这是用作为附件生成的文档发送电子邮件所必需的。
+* [配置Day CQ Mail服务。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) 这是用作为附件生成的文档发送电子邮件时需要的。
 * [使用服务用户包部署开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* 确保已在Apache Sling Service User Mapper服务配置中添加以下条目
+* 确保已在Apache Sling Service用户映射器服务配置中添加以下条目
 * **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
-* [将与本文相关的资源下载并解压缩到您的文件系统中](assets/prefillservice.zip)
+* [将与本文相关的资源下载并解压缩到您的文件系统](assets/prefillservice.zip)
 * [使用AEM包管理器导入以下包](http://localhost:4502/crx/packmgr/index.jsp)
    1. beneficiaryconfirmationic.zip
    2. changeofbeneficiaryform.zip
@@ -176,8 +179,8 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
    * GenerateIC.GenerateIC.core-1.0-SNAPSHOT.jar。 此包包含本文中提到的代码。
 
 * [打开ChangeOfVenialtForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
-* 确保将自适应表单配置为提交到AEM Workflow，如下所示
+* 确保将自适应表单配置为提交到AEM工作流，如下所示
    ![图像](assets/generateic.PNG)
 * [配置工作流模型。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)确保根据您的环境配置流程步骤和发送电子邮件组件
-* [预览ChangeOfVenialtForm。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 填写一些详细信息并提交
+* [预览ChangeOfVenitalForm。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 填写一些详细信息并提交
 * 应调用工作流，并将IC打印渠道文档作为附件发送到发送电子邮件组件中指定的收件人
