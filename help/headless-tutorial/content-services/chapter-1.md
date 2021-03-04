@@ -3,10 +3,14 @@ title: 第1章 — 教程设置和下载 — 内容服务
 seo-title: AEM内容服务入门 — 第1章 — 教程设置
 description: AEM无头教程的第1章，介绍教程的AEM实例的基线设置。
 seo-description: AEM无头教程的第1章，介绍教程的AEM实例的基线设置。
+feature: 内容片段、API
+topic: 无头、内容管理
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
