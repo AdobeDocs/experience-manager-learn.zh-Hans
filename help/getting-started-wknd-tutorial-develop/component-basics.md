@@ -2,7 +2,7 @@
 title: AEM Sites入门 — 组件基础
 description: 通过一个简单的“HelloWorld”示例了解Adobe Experience Manager(AEM)Sites组件的基础技术。 探讨了HTL、Sling Models、客户端库和作者对话框的主题。
 sub-product: 站点
-feature: 组件， sling models， htl
+feature: 核心组件、开发人员工具
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,10 +11,13 @@ audience: developer
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
+topic: 内容管理，开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1154'
 ht-degree: 0%
 
 ---
