@@ -1,12 +1,16 @@
 ---
-title: 第1章——教程设置和下载——内容服务
-seo-title: AEM Content Services入门——第1章——教程设置
-description: AEM无头教程的第1章教程的AEM实例的基线设置。
-seo-description: AEM无头教程的第1章教程的AEM实例的基线设置。
+title: 第1章 — 教程设置和下载 — 内容服务
+seo-title: AEM内容服务入门 — 第1章 — 教程设置
+description: AEM无头教程的第1章，介绍教程的AEM实例的基线设置。
+seo-description: AEM无头教程的第1章，介绍教程的AEM实例的基线设置。
+feature: '"内容片段， API"'
+topic: “无头、内容管理”
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -20,12 +24,12 @@ ht-degree: 0%
 * AEM WCM核心组件2.4.0或更高版本
    * 包含在](#wknd-mobile-application-packages)下的[WKND Mobile AEM应用程序内容包中
 
-在开始本教程之前，请确保在本地计算机[上安装并运行以下AEM实例：](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install)
+在启动本教程之前，请确保以下AEM实例已在本地计算机上](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install)安装并运行：[
 
-* **AEM** Authoron  **port 4502**
-* **AEM** Publish **端口4503**
+* **AEM** Authoron **端口4502**
+* **AEM** Publishon **端口4503**
 
-## WKND移动应用程序包{#wknd-mobile-application-packages}
+## WKND Mobile应用程序包{#wknd-mobile-application-packages}
 
 使用[!DNL AEM Package Manager]在&#x200B;**** AEM作者和AEM发布上安装以下AEM内容包。
 
@@ -53,15 +57,15 @@ ht-degree: 0%
 
 ## 源代码
 
-[[!DNL AEM Guides - WKND Mobile GitHub Project]](https://github.com/adobe/aem-guides-wknd-mobile)中提供AEM项目和[!DNL Android Mobile App]的源代码。 无需为本教程构建或修改源代码，它的提供是为了在构建教程的各个方面时实现完全透明。
+[[!DNL AEM Guides - WKND Mobile GitHub Project]](https://github.com/adobe/aem-guides-wknd-mobile)中提供AEM项目和[!DNL Android Mobile App]的源代码。 源代码不需要为本教程构建或修改，它的提供是为了允许在如何构建教程的所有方面方面完全透明。
 
 如果您发现教程或代码存在问题，请保留[GitHub问题](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
 
 ## 跳到结尾
 
-为了跳到教程结尾，[可在&#x200B;**AEM作者和AEM发布上安装&lt;a0/>com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)内容包。**&#x200B;请注意，内容和配置不会在AEM作者中显示为已发布，但由于手动部署，所有必需的内容和配置都将在AEM发布中可用，允许[!DNL WKND Mobile App]访问该内容。
+为了跳到教程的结尾，[**AEM作者和AEM发布上都可以安装** com.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)内容包。 请注意，内容和配置将不会在AEM作者中显示为已发布，但由于手动部署，所有必需的内容和配置将在AEM发布中可用，允许[!DNL WKND Mobile App]访问内容。
 
 
 ## 下一步
 
-* [第2章——定义事件内容片段模型](./chapter-2.md)
+* [第2章 — 定义事件内容片段模型](./chapter-2.md)
