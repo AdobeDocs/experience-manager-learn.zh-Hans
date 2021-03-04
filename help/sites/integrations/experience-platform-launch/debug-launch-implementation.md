@@ -1,7 +1,6 @@
 ---
 title: 调试启动实施
-description: 介绍调试Launch实现的一些常用工具和技术。 了解如何使用浏览器的开发人员控制台和Experience Platform调试器扩展来识别和排除启动实施的关键方面的故障。
-feature: launch
+description: 介绍调试Launch实现的一些常用工具和技术。 了解如何使用浏览器的开发人员控制台和Experience Platform调试器扩展来识别和排除启动实施的关键方面。
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -9,18 +8,21 @@ activity: setup
 version: cloud-service
 kt: 6047
 thumbnail: 38567.jpg
+topic: 集成
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: eabc325c498b4d5b8b5a53b9004f0e89d82cefe3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 1%
+source-wordcount: '104'
+ht-degree: 3%
 
 ---
 
 
 # 调试启动实现{#debug-launch-implementation}
 
-介绍用于调试Launch实现的常用工具和技术。 了解如何使用浏览器的开发人员控制台和Experience Platform调试器扩展来识别和排除启动实施的关键方面的故障。
+介绍用于调试Launch实现的常用工具和技术。 了解如何使用浏览器的开发人员控制台和Experience Platform调试器扩展来识别和排除启动实施的关键方面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/38567?quality=12&learn=on)
 
