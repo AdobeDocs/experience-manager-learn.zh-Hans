@@ -1,25 +1,28 @@
 ---
 title: 了解AEM中的身份验证支持
-description: '在AEM支持的身份验证（偶尔也是授权）机制中整合的视图。 '
+description: 'AEM支持的身份验证（偶尔授权）机制中的整合视图。 '
 version: 6.3, 6.4, 6.5
-feature: authentication
+feature: 用户和组
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
+topic: 架构
+role: 架构师
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: 703321483454435e33c0aa26d66110271fc095d8
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 2%
+source-wordcount: '144'
+ht-degree: 5%
 
 ---
 
 
 # 了解AEM 6.x中的身份验证支持
 
-在AEM支持的身份验证（偶尔也是授权）机制中整合的视图。
+AEM支持的身份验证（偶尔授权）机制中的整合视图。
 
 *下表说明了用户如何验证到AEM。*
 
@@ -50,7 +53,7 @@ ht-degree: 2%
             <td>✔</td>
         </tr>
         <tr>
-            <td>基于令牌（w/ <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装的令牌</a>）</td>
+            <td>基于令牌（w/ <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装令牌</a>）</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -93,4 +96,4 @@ ht-degree: 2%
     </tbody>
 </table>
 
-&lt;a0/⁕>通过社区项目提供，但不直接受Adobe支持。**
+⁕ *通过社区项目提供，但不直接受Adobe支持。*
