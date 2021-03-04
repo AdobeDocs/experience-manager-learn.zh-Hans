@@ -2,7 +2,7 @@
 title: 配置自适应表单以触发AEM工作流
 description: 在表单提交时触发AEM工作流时配置有效负荷选项
 sub-product: 表单
-feature: workflow
+feature: 工作流
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,11 +10,14 @@ activity: setup
 version: 6.4,6.5
 kt: 5407
 thumbnail: 40258.jpg
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 4%
+source-wordcount: '170'
+ht-degree: 5%
 
 ---
 
