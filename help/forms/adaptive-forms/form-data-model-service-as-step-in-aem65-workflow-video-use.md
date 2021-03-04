@@ -3,20 +3,17 @@ title: 在AEM 6.5工作流中使用表单数据模型服务
 seo-title: 在AEM 6.5工作流中使用表单数据模型服务
 description: AEM Forms 6.5引入了在AEM工作流中创建变量的功能。 借助这一新增功能，使用AEM Workflow中的“调用表单数据模型服务”变得非常简单。 以下视频将指导您完成在AEM工作流中使用调用表单数据模型服务所涉及的步骤。
 seo-description: AEM Forms 6.5引入了在AEM工作流中创建变量的功能。 借助这一新增功能，使用AEM Workflow中的“调用表单数据模型服务”变得非常简单。 以下视频将指导您完成在AEM工作流中使用调用表单数据模型服务所涉及的步骤。
-feature: 工作流
+feature: workflow.
 topics: workflow.
 audience: developer.
 doc-type: technical video.
 activity: setup.
 version: 6.5.
-topic: 开发
-role: 开发人员
-level: 中间
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 1%
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
