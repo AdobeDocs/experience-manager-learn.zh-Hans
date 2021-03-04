@@ -1,19 +1,17 @@
 ---
 title: AdobeIMS产品用户档案和AEM
 description: Adobe IMS产品用户档案使用户有权登录AEM作者服务并提供访问基准，具体取决于他们是哪个产品用户档案的成员。
-feature: users-and-groups
-topics: authorization, permissions
-version: cloud-service
-activity: setup
-audience: administrator
-doc-type: feature video
+feature: 用户和组
 kt: 5000
 thumbnail: 39156.jpg
+topic: 管理、安全
+role: 管理员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: f30d15f0578b7e529e4acefb8e1d2e29157ab359
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 5%
+source-wordcount: '155'
+ht-degree: 7%
 
 ---
 
