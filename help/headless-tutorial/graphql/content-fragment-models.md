@@ -10,14 +10,10 @@ audience: developer
 mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
-feature: '"内容片段， GraphQL API"'
-topic: “无头、内容管理”
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '966'
 ht-degree: 1%
 
 ---
@@ -65,7 +61,7 @@ ht-degree: 1%
 
    ![冒险标题属性](assets/content-fragment-models/adventure-title-properties-tab.png)
 
-   观察&#x200B;**属性名称**&#x200B;字段设置为`adventureTitle`。 这定义保留到AEM的属性的名称。 **属性名称**&#x200B;还定义了此属性的&#x200B;**键**&#x200B;名称，作为数据模式的一部分。 当内容片段数据通过GraphQL API公开时，将使用此&#x200B;**键**。
+   观察&#x200B;**属性名称**&#x200B;字段设置为`adventureTitle`。 这定义保留到AEM的属性的名称。 **属性名称**&#x200B;还定义了此属性的&#x200B;**键**&#x200B;名称，作为数据模式的一部分。 当通过GraphQL API公开内容片段数据时，将使用此&#x200B;**键**。
 
    >[!CAUTION]
    >
