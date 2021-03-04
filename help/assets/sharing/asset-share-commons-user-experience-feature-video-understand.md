@@ -1,41 +1,34 @@
 ---
-title: 理解资源共享的用户体验
-seo-title: 理解资源共享的用户体验
+title: 了解Asset Share Commons的用户体验
 description: 功能和技术理解的材料Assets Share Commons
-seo-description: 功能和技术理解的材料Assets Share Commons
-uuid: 16e58bb3-99de-49cf-a23c-dd46f4c34339
-discoiquuid: 64a45096-6fc4-41c9-8695-33dea5d45a3a
-contentOwner: dgonzale
-feature: asset-share, brand-portal
-topics: authoring, sharing, collaboration, search, integrations, publishing, metadata, images, renditions
-audience: all
-doc-type: feature video
-activity: understand
 version: 6.3, 6.4, 6.5
+topic: 内容管理
+role: 业务从业者
+level: 中间
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 1%
+source-wordcount: '133'
+ht-degree: 3%
 
 ---
 
 
 # 了解Asset Share Commons的用户体验{#understanding-asset-share-commons}
 
-资产共享共享共享的用户和创作体验简介。
+简要介绍Asset Share Commons的用户和创作体验。
 
 ## 用户体验
 
 >[!VIDEO](https://video.tv.adobe.com/v/20497/?quality=9&learn=on)
 
-该视频提供了Asset Share Commons用户体验的简略演练。 评论涉及搜索页面、资产详细信息页面的功能，以及下载、共享和添加到购物车等多个操作。
+该视频为Asset Share Commons提供了简略的用户体验。 该评论涉及“搜索”页面、“资产详细信息”页面的功能，以及“下载”、“共享”和“添加到购物车”等多个操作。
 
 ## 创作体验
 
 >[!VIDEO](https://video.tv.adobe.com/v/20498/?quality=9&learn=on)
 
-此视频简略地概述了Asset Share Commons中的基本组件创作功能，以提供创作能力的程度。
+此视频简要概述了资产共享共享共享资源中的基本组件创作功能，以提供创作能力级别。
 
 ## 其他资源{#additional-resources}
 
