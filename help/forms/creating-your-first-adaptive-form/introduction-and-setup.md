@@ -11,11 +11,14 @@ doc-type: tutorial
 activity: understand
 version: 6.3,6.4,6.5
 discoiquuid: b6863d3d-8528-4a96-ae37-c8d1aa62d443
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 2%
+source-wordcount: '246'
+ht-degree: 4%
 
 ---
 
