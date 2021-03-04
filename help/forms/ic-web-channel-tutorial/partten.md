@@ -4,21 +4,18 @@ seo-title: 配置Retive Outlook面板
 description: 这是创建第一个交互式通信文档的多步教程的第10部分。 在此部分中，我们将通过添加文本和图表组件来配置Retirement Outlook面板。
 seo-description: 这是创建第一个交互式通信文档的多步教程的第10部分。 在此部分中，我们将通过添加文本和图表组件来配置Retirement Outlook面板。
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
-feature: 交互式通信
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 1%
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
