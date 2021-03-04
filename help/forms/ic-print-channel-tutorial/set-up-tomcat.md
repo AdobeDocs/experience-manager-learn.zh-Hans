@@ -1,10 +1,10 @@
 ---
 title: 安装和配置Tomcat
 seo-title: 安装和配置Tomcat
-description: 这是创建第一个交互式通信文档的多步教程的第一部分。在本部分中，我们将安装TOMCAT并在TOMCAT中部署sampleRest.war文件。 此WAR文件公开的REST端点将作为我们数据源和表单数据模型的基础。
-seo-description: 这是创建第一个交互式通信文档的多步教程的第一部分。在本部分中，我们将安装TOMCAT并在TOMCAT中部署sampleRest.war文件。 此WAR文件公开的REST端点将作为我们数据源和表单数据模型的基础。
+description: 这是创建您的第一个交互式通信文档的多步教程的第一部分。在本部分中，我们将安装TOMCAT并在TOMCAT中部署sampleRest.war文件。 此WAR文件公开的REST端点将作为数据源和表单数据模型的基础。
+seo-description: 这是创建您的第一个交互式通信文档的多步教程的第一部分。在本部分中，我们将安装TOMCAT并在TOMCAT中部署sampleRest.war文件。 此WAR文件公开的REST端点将作为数据源和表单数据模型的基础。
 uuid: 835e2342-82b6-4f0c-9a6b-467bbbd8527a
-feature: interactive-communication
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,18 +12,21 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 37815.jpg
 discoiquuid: 5f68be3d-aa35-4a3f-aaea-b8ee213c87ae
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 0%
+source-wordcount: '324'
+ht-degree: 1%
 
 ---
 
 
 # 安装和配置Tomcat {#install-and-configure-tomcat}
 
-在本部分，我们将安装TOMCAT并在TOMCAT中部署sampleRest.war文件。 此WAR文件公开的REST端点将作为我们数据源和表单数据模型的基础。
+在本部分中，我们将安装TOMCAT并在TOMCAT中部署sampleRest.war文件。 此WAR文件公开的REST端点将作为数据源和表单数据模型的基础。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37815/?quality=9&learn=on)
 
@@ -31,7 +34,7 @@ ht-degree: 0%
 
 1. 下载并安装JDK1.8。
 2. 将JAVA_HOME设置为指向JDK1.8。
-3. 下载[tomcat](https://tomcat.apache.org/)。 此war文件已通过Tomcat版本8.5.x和9.0.x测试。
+3. 下载[tomcat](https://tomcat.apache.org/)。 此war文件已使用Tomcat版本8.5.x和9.0.x进行测试。
 4. 下载您的首选项的tomcat版本。 您可以下载核心部分下的64位windows zip。
 5. 将内容解压缩到您的c:\tomcat文件夹。
 6. 您应该在c驱动器&#x200B;**c:\tomcat\apache-tomcat-8.5.27**&#x200B;中看到类似的内容，具体取决于tomcat的版本
@@ -39,7 +42,7 @@ ht-degree: 0%
 8. 将SampleRest.war文件复制到Tomcat安装的webapps文件夹中
 9. 开始新命令提示窗口。
 10. 导航到&lt;tomcat install folder>\bin并运行startup.bat
-11. Tomcat启动后，请通过单击此处[测试WAR文件公开的端点。](http://localhost:8080/SampleRest/webapi/getStatement/9586)
+11. Tomcat启动后，请通过单击此处](http://localhost:8080/SampleRest/webapi/getStatement/9586)测试WAR文件公开的端点[
 12. 您应该通过此调用获得示例数据。
 
 祝贺你！!!. 您已设置tomcat并部署了SampleRest.war文件。
