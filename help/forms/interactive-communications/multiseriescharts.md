@@ -3,17 +3,20 @@ title: AEM Forms中的多系列图
 seo-title: AEM Forms中的多系列图
 description: 创建适当的表单数据模型以在打印和Web渠道文档中创建多系列图表。
 seo-description: 创建适当的表单数据模型以在打印和Web渠道文档中创建多系列图表。
-feature: 交互通信
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 0%
+source-wordcount: '306'
+ht-degree: 1%
 
 ---
 
