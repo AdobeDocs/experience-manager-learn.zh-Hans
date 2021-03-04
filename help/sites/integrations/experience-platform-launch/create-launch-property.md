@@ -1,7 +1,6 @@
 ---
 title: 创建启动项属性
-description: 了解如何使用设置其余集成所需的最低裸机配置创建启动属性。 用户将被介绍到Launch UI，并了解扩展、规则和发布工作流。
-feature: launch
+description: 了解如何使用设置其余集成所需的最低配置创建启动项属性。 用户将被介绍到启动UI，并了解扩展、规则和发布工作流。
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -9,18 +8,21 @@ activity: setup
 version: cloud-service
 kt: 5980
 thumbnail: 38553.jpg
+topic: 集成
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: eabc325c498b4d5b8b5a53b9004f0e89d82cefe3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 1%
+source-wordcount: '112'
+ht-degree: 3%
 
 ---
 
 
-# 创建启动属性{#create-launch-property}
+# 创建启动项属性{#create-launch-property}
 
-了解如何创建具有设置与Adobe Experience Manager集成其余部分所需的最低裸机配置的启动属性。 将向用户介绍Launch UI，并了解扩展、规则和发布工作流。
+了解如何创建具有设置与Adobe Experience Manager集成其余部分所需的最低配置的启动属性。 将向用户介绍启动UI，并了解扩展、规则和发布工作流。
 
 >[!VIDEO](https://video.tv.adobe.com/v/38553?quality=12&learn=on)
 
