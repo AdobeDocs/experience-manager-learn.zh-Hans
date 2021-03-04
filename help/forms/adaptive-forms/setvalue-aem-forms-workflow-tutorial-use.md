@@ -4,17 +4,20 @@ seo-title: 在AEM Forms Workflow中使用setvalue
 description: 在AEM Forms OSGI中设置自适应Forms提交数据中元素的值
 seo-description: 在AEM Forms OSGI中设置自适应Forms提交数据中元素的值
 uuid: fe431e48-f05b-4b23-94d2-95d34d863984
-feature: 自适应表单，工作流
+feature: 自适应表单
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 discoiquuid: dbd87302-f770-4e61-b5ad-3fc5831b4613
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 0%
+source-wordcount: '552'
+ht-degree: 1%
 
 ---
 
