@@ -1,31 +1,30 @@
 ---
-title: 使用视频的Dynamic Media智能裁剪
-description: Dynamic Media视频智能裁切使用Adobe Sensei智能跟踪视频中的兴趣点，确保视频在所有屏幕大小上呈现最佳效果。
-sub-product: 动态媒体
-feature: smart-crop, video-profiles, viewer-presets
-topics: videos, renditions, authoring
-doc-type: feature video
-audience: all
-activity: use
+title: 使用Dynamic Media Smart Crop for Video
+description: Dynamic Media Smart Crop for video使用Adobe Sensei智能跟踪视频中的目标点，确保视频在所有屏幕大小上呈现最佳效果。
+sub-product: dynamic-media
+feature: 智能裁剪、视频用户档案、查看器预设
 version: cloud-service
 kt: 5977
 thumbnail: 37958.jpg
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 0%
+source-wordcount: '114'
+ht-degree: 9%
 
 ---
 
 
-# 对视频{#using-smart-crop-video}使用Dynamic Media智能裁剪
+# 使用Dynamic Media Smart Crop对视频{#using-smart-crop-video}
 
-Dynamic Media视频智能裁切使用Adobe Sensei智能跟踪视频中的兴趣点，确保视频在所有屏幕大小上呈现最佳效果。
+Dynamic Media Smart Crop for video使用Adobe Sensei智能跟踪视频中的目标点，确保视频在所有屏幕大小上呈现最佳效果。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37958/?quality=12)
 
 >[!NOTE]
 >
->以上视频假定AEM服务在Dynamic Media S7模式下运行。 [有关使用Dynamic Media设置AEM的说明，请参阅此处。](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)
+>以上视频假定您的AEM服务在Dynamic Media S7模式下运行。 [有关使用Dynamic Media设置AEM的说明，请参阅此处。](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)
 
