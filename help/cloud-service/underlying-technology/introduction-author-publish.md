@@ -8,11 +8,15 @@ activity: understand
 version: cloud-service
 kt: 4639
 thumbnail: 32033.jpg
+feature: 发布
+topic: 架构
+role: 架构师、开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 0%
+source-wordcount: '51'
+ht-degree: 3%
 
 ---
 
