@@ -1,18 +1,18 @@
 ---
 title: 导航
 description: 浏览导航AEM Assets的基础知识。
-feature: Asset Management
-topics: Content Management
-role: Business Practitioner
-level: Beginner
+feature: 资产管理
+role: 业务从业者
+level: 初学者
 version: cloud-service
 kt: 4305
 thumbnail: 32046.jpg
+topic: 内容管理
 translation-type: tm+mt
-source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '16'
-ht-degree: 12%
+source-wordcount: '23'
+ht-degree: 17%
 
 ---
 
