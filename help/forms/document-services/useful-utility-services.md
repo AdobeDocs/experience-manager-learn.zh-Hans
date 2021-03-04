@@ -1,24 +1,27 @@
 ---
-title: 有用的实用服务
-description: 为AEM Forms开发商提供一些有用的实用服务
-feature: document-services
+title: 有用的公用服务
+description: 为AEM Forms开发人员提供的一些实用服务
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 开发
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 0%
+source-wordcount: '160'
+ht-degree: 3%
 
 ---
 
 
-# 有用的实用服务
+# 有用的公用服务
 
-此范例捆绑包提供可供AEM Forms开发者使用的实用服务。 提供以下服务。
+此示例捆绑包提供AEM Forms开发人员可以使用的实用服务。 提供以下服务。
 
 
 ```java
@@ -39,7 +42,7 @@ public abstract String saveDocumentInCrx(String jcrPath,String fileExtension, Do
 
 ## 使用实用程序服务的示例代码
 
-以下是JSP页中用于从字符串创建org.w3c.dom.文档的代码，并转换文档并将其存储在CRX存储库中，如下面的代码片断所示。
+以下是JSP页中用于从字符串创建org.w3c.dom.文档的代码，并转换文档并将其存储在CRX存储库中，如以下代码片断所示。
 
 ```java
  aemformsutilityfunctions.core.AemFormsUtilities aemFormsUtilities = sling.getService(aemformsutilityfunctions.core.AemFormsUtilities.class);
@@ -50,8 +53,8 @@ aemFormsUtilities.saveDocumentInCrx("/content/xmlfiles",".xml",xmlStringDoc);
 ## 前提条件
 
 
-您需要部署[DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar)并开始该包。
+您需要部署[DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar)并开始包。
 
 
-如果要使用这些实用程序服务将文档保存在CRX存储库中，请按照[使用服务用户文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms)进行开发。 确保为fd-service用户提供相应CRX文件夹上的[所需权限](http://localhost:4502/useradmin)。
+如果要使用这些实用程序服务将文档保存在CRX存储库中，请按照[使用服务用户文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms)进行开发。 确保向fd-service用户提供相应CRX文件夹上的[所需权限](http://localhost:4502/useradmin)。
 
