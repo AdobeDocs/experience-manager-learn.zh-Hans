@@ -1,9 +1,9 @@
 ---
-title: 在AEM Sites创作页面
-seo-title: 以下视频重点介绍如何使用站点编辑器的UI在Adobe Experience Manager Sites创作新页面
-description: 以下视频重点介绍如何使用站点编辑器的UI在Adobe Experience Manager Sites创作新页面
-seo-description: 以下视频重点介绍如何使用站点编辑器的UI在Adobe Experience Manager Sites创作新页面
-feature: page-editor, template-editor
+title: 在AEM Sites中创作页面
+seo-title: 以下视频重点介绍如何使用站点编辑器的UI在Adobe Experience Manager Sites中创作新页面
+description: 以下视频重点介绍如何使用站点编辑器的UI在Adobe Experience Manager Sites中创作新页面
+seo-description: 以下视频重点介绍如何使用站点编辑器的UI在Adobe Experience Manager Sites中创作新页面
+feature: 页面编辑器、可编辑模板
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,22 +11,25 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 4497
 thumbnail: 31828.jpg
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 11%
+source-wordcount: '185'
+ht-degree: 12%
 
 ---
 
 
 # 创作页面{#authoring-page-aem-sites}
 
-了解如何使用站点编辑器的UI在Adobe Experience Manager Sites创作页面。
+了解如何使用站点编辑器的UI在Adobe Experience Manager Sites中创作页面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31828?quality=12&learn=on)
 
-在此视频中，介绍了以下功能或功能：
+在此视频中，将介绍以下功能或功能：
 
 * 根据模板创建页面
 * 为页面引入不同的创作模式
