@@ -3,17 +3,20 @@ title: AEM Workflow中的变量[第5部分]
 seo-title: AEM Workflow中的变量[第5部分]
 description: 在aem工作流中使用xml、json、arraylist、文档类型的变量
 seo-description: 在aem工作流中使用xml、json、arraylist、文档类型的变量
-feature: workflow
+feature: 工作流
 topics: development
 audience: developer
 doc-type: technical video
 activity: understand
 version: 6.5
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 0%
+source-wordcount: '110'
+ht-degree: 2%
 
 ---
 
