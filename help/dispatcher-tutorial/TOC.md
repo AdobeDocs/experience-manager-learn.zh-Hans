@@ -4,17 +4,16 @@ user-guide-description: 一个教程，可帮助您更好地了解 Dispatcher �
 version: 6.x
 sub-product: 基础
 doc-type: tutorial
-feature: dispatcher
 audience: architect, developer, implementer
 activity: develop, understand
 kt: 2233
 index: y
 team: TM
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '38'
-ht-degree: 73%
+source-wordcount: '37'
+ht-degree: 72%
 
 ---
 
