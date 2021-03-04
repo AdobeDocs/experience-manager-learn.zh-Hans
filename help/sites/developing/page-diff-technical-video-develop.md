@@ -1,22 +1,25 @@
 ---
-title: AEM Sites的页面差异开发
+title: 在AEM Sites中为页面差异开发
 description: 此视频演示如何为AEM Sites的“页面差异”功能提供自定义样式。
-feature: page-diff
+feature: 创作
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 2%
+source-wordcount: '297'
+ht-degree: 3%
 
 ---
 
 
-# 为页面差异{#developing-for-page-difference}进行开发
+# 为页差{#developing-for-page-difference}进行开发
 
 此视频演示如何为AEM Sites的“页面差异”功能提供自定义样式。
 
@@ -26,17 +29,17 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->此视频将自定义CSS添加到we.Retail客户端库中，因为这些更改应该对客户的AEM Sites项目进行；在下面的示例代码中：`my-project`。
+>此视频将自定义CSS添加到we.Retail客户端库中，因为这些更改应当对定制者的AEM Sites项目进行；在下面的示例代码中：`my-project`。
 
-AEM page difference通过直接加载`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`获得OOTB CSS。
+AEM页差通过直接加载`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`获得OOTB CSS。
 
-由于CSS的直接加载而不是使用客户端库类别，因此我们必须为自定义样式找到另一个注入点，而此自定义注入点是项目的创作clientlib。
+由于CSS的直接加载而不是使用客户端库类别，因此我们必须为自定义样式找到另一个注入点，并且此自定义注入点是项目的创作clientlib。
 
-这样做的好处是，允许这些自定义样式重写特定于租户。
+这有利于允许这些自定义样式覆盖特定于租户。
 
 ### 准备创作clientlib {#prepare-the-authoring-clientlib}
 
-确保项目`/apps/my-project/clientlib/authoring.`存在`authoring` clientlib
+确保`/apps/my-project/clientlib/authoring.`中存在针对您的项目的`authoring` clientlib
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -47,7 +50,7 @@ AEM page difference通过直接加载`/libs/cq/gui/components/common/admin/diffs
 
 ### 提供自定义CSS {#provide-the-custom-css}
 
-添加到项目的`authoring` clientlib a `css.txt`，它指向提供覆盖样式的较少文件。 [Lessis](https://lesscss.org/) 之所以首选，是因为它具有许多便捷的功能，包括本例中利用的类包装。
+添加到项目的`authoring` clientlib a `css.txt`，它指向提供覆盖样式的较少文件。 [Lessis](https://lesscss.org/) 的优选是因为它有许多方便的功能，包括本例中利用的类包装。
 
 ```shell
 base=./css
@@ -55,7 +58,7 @@ base=./css
 htmldiff.less
 ```
 
-在`/apps/my-project/clientlibs/authoring/css/htmldiff.less`创建包含样式重写的`less`文件，并根据需要提供叠加样式。
+在`/apps/my-project/clientlibs/authoring/css/htmldiff.less`创建包含样式覆盖的`less`文件，并根据需要提供覆盖样式。
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -103,9 +106,9 @@ body {
 
 ### 通过页面组件{#include-the-authoring-clientlib-css-via-the-page-component}包含创作clientlib CSS
 
-将创作clientlibs类别直接包含在项目基页的`/apps/my-project/components/structure/page/customheaderlibs.html`中`</head>`标签之前，以确保加载样式。
+在项目基页的`/apps/my-project/components/structure/page/customheaderlibs.html`中直接将创作clientlibs类别包含在`</head>`标记之前，以确保加载样式。
 
-这些样式应限制为[!UICONTROL Edit]和[!UICONTROL 预览] WCM模式。
+这些样式应限于[!UICONTROL Edit]和[!UICONTROL 预览] WCM模式。
 
 ```xml
 <head>
@@ -115,12 +118,12 @@ body {
 </head>
 ```
 
-应用了上述样式的差异页面的最终结果将如此（已添加HTML并更改了组件）。
+应用了上述样式的差异页面的最终结果将如此（已添加HTML且组件已更改）。
 
 ![页面差异](assets/page-diff.png)
 
 ## 其他资源 {#additional-resources}
 
-* [下载we.Retail示例站点](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
-* [使用AEM客户端库](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [下载we.Retail示例网站](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
+* [使用AEM Client Libraries](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [更少的CSS文档](https://lesscss.org/)
