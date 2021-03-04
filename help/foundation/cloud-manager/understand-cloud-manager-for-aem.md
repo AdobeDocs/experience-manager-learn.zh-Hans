@@ -2,17 +2,15 @@
 title: 了解Adobe Cloud Manager
 description: Adobe Cloud Manager提供简单而可靠的解决方案，可轻松管理、检查和自助服务AEM环境。
 sub-product: 云管理器，基础
+feature: 管道、项目、项目、质量门、报告
 topics: best-practices, cicd, development, operations, governance
 doc-type: feature video
 activity: understand
 audience: developer, implementer, administrator, architect
-topic: 架构
-role: 架构师
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '536'
 ht-degree: 3%
 
 ---
