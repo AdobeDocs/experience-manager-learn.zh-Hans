@@ -2,7 +2,7 @@
 title: 自定义分配任务通知
 description: 在分配任务通知电子邮件中包含表单数据
 sub-product: 表单
-feature: workflow
+feature: 工作流
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,28 +10,31 @@ activity: setup
 version: 6.4,6.5
 kt: 6279
 thumbnail: KT-6279.jpg
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: c7ae9a51800bb96de24ad577863989053d53da6b
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 0%
+source-wordcount: '450'
+ht-degree: 2%
 
 ---
 
 
 # 自定义分配任务通知
 
-分配任务组件用于向工作流参加者分配任务。 将任务分配给用户或用户组时，将向定义的用户或用户组成员发送电子邮件通知。
-此电子邮件通知通常包含与任务相关的动态数据。 使用系统生成的[元数据属性](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)来读取此动态数据。
-要在电子邮件通知中包含提交表单数据的值，我们需要创建自定义元数据属性，然后在电子邮件模板中使用这些自定义元数据属性
+“分配任务”组件用于向工作流参加者分配任务。 将任务分配给用户或用户组时，将向定义的用户或用户组成员发送电子邮件通知。
+此电子邮件通知通常包含与任务相关的动态数据。 使用系统生成的[元数据属性](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)获取此动态数据。
+要在电子邮件通知中包含已提交表单数据的值，我们需要创建自定义元数据属性，然后在电子邮件模板中使用这些自定义元数据属性
 
 
 
 ## 创建自定义元数据属性
 
-建议的方法是创建一个OSGI组件，该组件实现[WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)的getUserMetadata方法
+建议的方法是创建一个OSGI组件，用于实现[WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)的getUserMetadata方法
 
-以下代码创建4个元数据属性（_firstName_、_lastName_、_原因_&#x200B;和&#x200B;_amountRequested_），并从提交的数据设置其值。 例如，元数据属性&#x200B;_firstName_&#x200B;的值设置为提交数据中名为firstName的元素的值。 以下代码假定自适应表单的提交数据采用xml格式。 基于JSON模式或表单数据模型的自适应Forms以JSON格式生成数据。
+以下代码创建4个元数据属性（_firstName_、_lastName_、_reason_&#x200B;和&#x200B;_amountRequested_），并从提交的数据中设置其值。 例如，从提交的数据中将元数据属性&#x200B;_firstName_&#x200B;的值设置为名为firstName的元素的值。 以下代码假定自适应表单的提交数据采用xml格式。 基于JSON模式或表单数据模型的自适应Forms以JSON格式生成数据。
 
 
 ```java
@@ -113,16 +116,16 @@ return customMetadataMap;
 
 ## 在任务通知电子邮件模板中使用自定义元数据属性
 
-在电子邮件模板中，您可以使用以下语法包含元数据属性，其中amountRequested是元数据属性`${amountRequested}`
+在电子邮件模板中，您可以使用以下语法包含metadata属性，其中amountRequested是元数据属性`${amountRequested}`
 
 ## 配置分配任务以使用自定义元数据属性
 
-在将OSGi组件构建并部署到AEM服务器后，将“分配任务”组件配置为使用自定义元数据属性，如下所示。
+在将OSGi组件构建并部署到AEM服务器后，配置如下所示的分配任务组件以使用自定义元数据属性。
 
 
 ![任务通知](assets/task-notification.PNG)
 
-## 启用自定义元数据属性
+## 启用自定义元数据属性的使用
 
 ![自定义元数据属性](assets/custom-meta-data-properties.PNG)
 
@@ -135,13 +138,13 @@ return customMetadataMap;
 * 使用[Web控制台](http://localhost:4502/system/console/bundles)部署和开始[自定义捆绑包](assets/work-items-user-service-bundle.jar)
 * [预览并提交表单](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 
-在表单提交时，任务分配通知会发送到与管理员用户关联的电子邮件ID。 以下屏幕截图显示了示例任务分配通知
+在表单提交时，任务分配通知将发送到与管理员用户关联的电子邮件ID。 以下屏幕截图显示了示例任务分配通知
 
 ![通知](assets/task-nitification-email.png)
 
 >[!NOTE]
->分配任务通知的电子邮件模板必须采用以下格式。
+>分配任务通知的电子邮件模板需要采用以下格式。
 >
-> subject=已分配任务- `${workitem_title}`
+> subject=任务- `${workitem_title}`
 >
-> message=表示电子邮件模板且没有任何新行字符的字符串。
+> message=表示您的电子邮件模板的字符串，不带任何新行字符。
