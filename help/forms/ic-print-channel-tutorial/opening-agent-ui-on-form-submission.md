@@ -1,10 +1,10 @@
 ---
 title: 提交POST时打开代理UI
 seo-title: 提交POST时打开代理UI
-description: 这是创建打印文档的第一个交互式通信渠道的多步教程的第11部分。 在本部分中，我们将启动代理ui界面，以便在提交表单时创建点对点通信。
-seo-description: 这是创建打印文档的第一个交互式通信渠道的多步教程的第11部分。 在本部分中，我们将启动代理ui界面，以便在提交表单时创建点对点通信。
+description: 这是创建用于打印渠道的第一个交互式通信文档的多步教程的第11部分。 在本部分中，我们将启动代理用户界面，以便在提交表单时创建临时通信。
+seo-description: 这是创建用于打印渠道的第一个交互式通信文档的多步教程的第11部分。 在本部分中，我们将启动代理用户界面，以便在提交表单时创建临时通信。
 uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
-feature: interactive-communication
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,22 +12,25 @@ activity: implement
 version: 6.4,6.5
 kt: 6168
 thumbnail: 40122.jpg
+topic: 开发
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: 824efde8d90dd77d41dce093998b4215db2532ae
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 1%
+source-wordcount: '369'
+ht-degree: 2%
 
 ---
 
 
 # 提交POST时打开代理UI
 
-在本部分中，我们将启动代理ui界面，以便在提交表单时创建点对点通信。
+在本部分中，我们将启动代理用户界面，以便在提交表单时创建临时通信。
 
-本文将引导您完成在提交表单时打开代理用户界面所涉及的步骤。 典型的用例是，客户服务代理用一些输入参数填写表单，在表单提交代理用户界面上用从表单数据模型预填服务预填的数据进行打开。表单数据模型预填服务的输入参数从表单提交中提取。
+本文将引导您完成在提交表单时打开代理用户界面所涉及的步骤。 典型的用例是客户服务代理用一些输入参数填写表单，在表单提交代理用户界面上用从表单数据模型预填服务预填充的数据进行打开。表单数据模型预填服务的输入参数是从表单提交中提取的。
 
-以下视频显示用例
+以下视频显示了用例
 
 >[!VIDEO](https://video.tv.adobe.com/v/40122/?quality=9&learn=on)
 
@@ -47,26 +50,26 @@ CustomParameterRequest wrapperRequest = new CustomParameterRequest(slingRequest,
 wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").include(wrapperRequest, response);
 ```
 
-第1行：从请求参数获取帐号
+第1行：从request参数获取帐号
 
-第2-8行：创建参数映射并设置相应的键和值以反映documentId,Random。
+第2-8行：创建参数映射并设置相应的键和值以反映documentId，Random。
 
 第9-10行：创建另一个Map对象，以保存在表单数据模型中定义的输入参数。
 
 第11行：设置slingRequest属性“paramMap”
 
-12-13号线：将请求转发到servlet
+第12-13行：将请求转发到Servlet
 
 在服务器上测试此功能
 
 * [使用包管理器导入和安装与本文相关的资产。](assets/launch-agent-ui.zip)
 * [登录到configMgr](http://localhost:4502/system/console/configMgr)
 * 搜索&#x200B;_Adobe花岗岩CSRF滤镜_
-* 在“排除的路径”中添加&#x200B;_/content/getprintchannel_
+* 在排除路径中添加&#x200B;_/content/getprintchannel_
 * 保存更改。
-* [打开POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。确保传递给FormFieldRequestParameter的字符串是有效的documentId。（第19行）。
-* [打开网](http://localhost:4502/content/OpenPrintChannel.html) 页，输入帐号并提交表单。
-* 代理UI界面应打开，其中预填充的数据特定于在表单中输入的帐户号。
+* [打开POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。确保传递到FormFieldRequestParameter的字符串是有效的documentId。（第19行）。
+* [打开网](http://localhost:4502/content/OpenPrintChannel.html) 页，输入帐户号并提交表单。
+* 代理UI界面应打开，其中特定于在表单中输入的帐号预填充的数据。
 
 >[!NOTE]
 >
