@@ -1,34 +1,37 @@
 ---
 title: 在HTM5表单提交时触发AEM工作流
-seo-title: 在提交HTML5表单时触发AEM工作流
-description: 在脱机模式下继续填写移动表单并提交移动表单以触发AEM工作流程
-seo-description: 在脱机模式下继续填写移动表单并提交移动表单以触发AEM工作流程
-feature: mobile-forms
+seo-title: 在HTML5表单提交时触发AEM Workflow
+description: 在脱机模式下继续填写移动表单并提交移动表单以触发AEM工作流
+seo-description: 在脱机模式下继续填写移动表单并提交移动表单以触发AEM工作流
+feature: 移动设备表单
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4, 6.5
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 0%
+source-wordcount: '346'
+ht-degree: 1%
 
 ---
 
 
 # 创建自定义用户档案
 
-在此部分，我们将创建[自定义用户档案。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) 用户档案负责将XDP渲染为HTML。默认用户档案是现成的，用于将XDP渲染为HTML。 它表示移动Forms再现服务的自定义版本。 您可以使用移动表单再现服务来自定义移动Forms的外观、行为和交互。 在我们的自定义用户档案中，我们将使用Guidebridge API捕获在移动表单中填充的数据。 然后，此数据将发送到自定义servlet，该servlet随后将生成一个交互式PDF并将其流回调用应用程序。
+在此部分，我们将创建[自定义用户档案。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) 用户档案负责将XDP渲染为HTML。为将XDP渲染为HTML提供了现成的默认用户档案。 它表示Mobile Forms Rendition服务的自定义版本。 您可以使用Mobile Form Rendition服务自定义Mobile Forms的外观、行为和交互。 在我们的自定义用户档案中，我们将使用Guidebridge API捕获移动表单中填充的数据。 然后，此数据将发送到自定义servlet，该servlet随后将生成交互式PDF并将其流回调用的应用程序。
 
-使用`formBridge` JavaScript API获取表单数据。 我们利用`getDataXML()`方法：
+使用`formBridge` JavaScript API获取表单数据。 我们使用`getDataXML()`方法：
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});
 ```
 
-在成功处理函数方法中，我们调用在AEM中运行的自定义servlet。 此servlet将用移动表单中的数据呈现和返回交互式pdf
+在成功处理程序方法中，我们调用在AEM中运行的自定义servlet。 此Servlet将使用移动表单中的数据呈现和返回交互式pdf
 
 ```javascript
 var suc = function(obj) {
@@ -123,7 +126,7 @@ public class GenerateInteractivePDF extends SlingAllMethodsServlet {
 
 ### 渲染交互式PDF
 
-以下代码使用[Forms服务API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html)以移动表单中的数据呈现交互式PDF。
+以下代码使用[Forms Service API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html)以移动表单中的数据呈现交互式PDF。
 
 ```java
 public Document mobileFormToInteractivePdf(Document xmlData,String path) {
@@ -146,7 +149,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-要视图能够从部分完成的移动表单下载交互式PDF，请单击此处[。
-](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content)下载PDF后，下一步是提交PDF以触发AEM工作流。 此工作流将合并提交的PDF中的数据并生成非交互式PDF供审阅。
+要视图从部分完成的移动表单下载交互式PDF的功能，[请单击此处](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content)。
+下载PDF后，下一步是提交PDF以触发AEM工作流。 此工作流程将合并提交的PDF中的数据并生成非交互式PDF供审阅。
 
 为此用例创建的自定义用户档案可作为本教程资源的一部分提供。
