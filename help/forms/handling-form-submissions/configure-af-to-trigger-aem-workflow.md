@@ -4,20 +4,17 @@ seo-title: 配置自适应表单以触发AEM工作流
 description: 了解配置自适应表单以触发AEM工作流中的各种选项
 seo-description: 了解配置自适应表单以触发AEM工作流中的各种选项
 sub-product: 表单
-feature: 工作流
+feature: workflow
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 6%
+source-wordcount: '47'
+ht-degree: 2%
 
 ---
 
