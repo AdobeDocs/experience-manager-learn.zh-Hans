@@ -1,24 +1,27 @@
 ---
 title: 从MySQL数据库存储和检索表单数据
 description: 多部分教程，指导您完成存储和检索表单数据所涉及的步骤
-feature: adaptive-forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: 787a79663472711b78d467977d633e3d410803e5
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 0%
+source-wordcount: '96'
+ht-degree: 4%
 
 ---
 
 
 # 用于存储表单数据的Servlet
 
-下一步是创建一个Servlet，它将插入或更新表单数据。 servlet调用OSGi服务的适当方法插入或更新数据库。 存储的自适应表单数据与GUID关联。 然后使用相同的GUID更新表单数据。 单击“SaveAndContinueLater”按钮时将调用此servlet。
+下一步是创建一个Servlet，它将插入或更新表单数据。 Servlet调用OSGi服务的适当方法来插入或更新数据库。 存储的自适应表单数据与GUID关联。 然后使用相同的GUID更新表单数据。 单击“SaveAndContinueLater”按钮时将调用此servlet。
 
 ```java
 package com.aemforms.saveandcontinue.core.servlets;
