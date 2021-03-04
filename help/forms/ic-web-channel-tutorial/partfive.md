@@ -4,21 +4,18 @@ seo-title: 创建文档片段以保存收件人名称和地址
 description: '这是创建第一个交互式通信文档的多步骤教程的第5部分。 在此部分，我们将创建文档片段以保存收件人名称和地址。 '
 seo-description: '这是创建第一个交互式通信文档的多步骤教程的第5部分。 在此部分，我们将创建文档片段以保存收件人名称和地址。 '
 uuid: 689931e4-a026-4e62-9acd-552918180819
-feature: 交互式通信
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 404eed65-ec55-492a-85b5-59773896b217
-topic: 开发
-role: 开发人员
-level: 初学者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 1%
+source-wordcount: '278'
+ht-degree: 0%
 
 ---
 
