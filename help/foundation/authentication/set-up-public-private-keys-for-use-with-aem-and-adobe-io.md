@@ -2,16 +2,19 @@
 seo: Set up public and private keys for use with AEM and Adobe I/O
 description: 'AEM使用公共/私有密钥对与Adobe I/O和其他web服务进行安全通信。 此简短教程说明了如何使用openssl命令行工具生成兼容的键和密钥库，该工具同时支持AEM和Adobe I/O。 '
 version: 6.4, 6.5
-feature: 身份验证
+feature: 用户和组
 topics: authentication, integrations
 activity: setup
 audience: architect, developer, implementer
 doc-type: tutorial
 kt: 2450
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '774'
 ht-degree: 0%
 
 ---
