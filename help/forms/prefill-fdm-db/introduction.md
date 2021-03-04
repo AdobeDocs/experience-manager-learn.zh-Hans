@@ -1,7 +1,7 @@
 ---
 title: 使用表单数据模型预填表单
 description: '使用表单数据模型的请求属性预填自适应表单 '
-feature: adaptive-forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: article
@@ -9,24 +9,27 @@ activity: implement
 version: 6.4,6.5
 kt: 4419
 thumbnail: kt-4419.jpg
+topic: 开发
+role: 业务从业者
+level: 中间
 translation-type: tm+mt
-source-git-commit: b085a2c75f8e0b4860d503774ea01a108773ad09
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 0%
+source-wordcount: '131'
+ht-degree: 3%
 
 ---
 
 
 # 使用表单数据模型预填表单
 
-您将学会使用表单数据模型的请求属性来获取数据以填充自适应表单。
+您将学会如何使用表单数据模型的请求属性来获取数据以填充自适应表单。
 完成本课程后，您将学到以下内容。
 
 * 创建RDBMS支持的表单数据模型
 * 创建2个实体之间的关联
 * 使用表单数据模型的&#x200B;_get_&#x200B;服务返回的数据填充表
-* 使用表单数据模型的请求属性
+* 使用表单数据模型的request属性
 
 
 [单击查看该功能的实时演](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)
@@ -37,5 +40,5 @@ ht-degree: 0%
 
 * AEM Forms工作实例
 * 熟悉MySQL数据库和MySQL工作台
-* 创建适应性Forms的几点经验
+* 创建自适应Forms的一些经验
 
