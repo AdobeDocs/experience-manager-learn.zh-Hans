@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 5831
 thumbnail: 5831-spa-angular.jpg
+topic: SPA
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 1fd4d31770a4eac37a88a7c6960fd51845601bee
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1510'
 ht-degree: 1%
 
 ---
@@ -21,7 +24,7 @@ ht-degree: 1%
 
 # 创建自定义组件{#custom-component}
 
-了解如何创建要与AEM SPA Editor一起使用的自定义组件。 了解如何开发创作对话框和Sling Models来扩展JSON模型以填充自定义组件。
+了解如何创建要与AEM SPA Editor一起使用的自定义组件。 了解如何开发创作对话框和Sling Models以扩展JSON模型以填充自定义组件。
 
 ## 目标
 
