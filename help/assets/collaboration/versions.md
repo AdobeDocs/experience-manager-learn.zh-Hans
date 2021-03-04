@@ -2,19 +2,18 @@
 title: 版本
 description: 了解AEM如何创建和维护资产版本。
 sub-product: 资产
-feature: null
-topics: authoring, collaboration
-audience: author
-doc-type: feature video
-activity: use
+feature: 资产管理
 version: cloud-service
 kt: 4671
 thumbnail: 32052.jpg
+topic: 内容管理
+role: 业务从业者
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 8d0e6f2c4c979e6704cae08e766300baf7ef8ad0
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '19'
-ht-degree: 10%
+source-wordcount: '26'
+ht-degree: 15%
 
 ---
 
