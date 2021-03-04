@@ -1,17 +1,20 @@
 ---
 title: 使用AEM表单创建您的第一个OSGi捆绑包
 description: 使用maven和eclipse构建您的第一个OSGi捆绑包
-feature: 管理
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 1%
+source-wordcount: '835'
+ht-degree: 2%
 
 ---
 
@@ -78,7 +81,7 @@ Archetype是Maven项目的模板工具包。 原型被定义为原始图案或�
 ------------------------|---------------------------------------|---------------------
 | groupId | groupId可在所有项目中唯一标识您的项目 | com.learningaemforms.adobe |
 | appsFolderName | 将保存您的项目结构的文件夹的名称 | 学习Aemforms |
-| artifactId | artifactId是没有版本的jar的名称。 如果您创建了它，则可以选择任何您想要的名称，并使用小写字母，而不使用奇怪的符号。 | 学习Aemforms |
+| artifactId | artifactId是没有版本的jar的名称。 如果您创建了它，则可以选择任何您想要的名称，并且不使用奇怪的符号。 | 学习Aemforms |
 | 版本 | 如果您分发它，则可以选择任何带数字和点(1.0、1.1、1.0.1、...)的典型版本。 | 1.0 |
 
 通过按Enter键接受其他属性的默认值。
