@@ -2,33 +2,35 @@
 title: AEM Foundation 视频和教程
 seo-title: AEM Foundation 视频和教程
 description: 'Adobe Experience Manager Foundation 的视频和教程集合。 '
-seo-description: Adobe Experience Manager基金会的视频和教程集
+seo-description: Adobe Experience Manager Foundation的一系列视频和教程
+role: “领导者、架构师、开发人员、管理员、业务从业者”
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 18%
+source-wordcount: '268'
+ht-degree: 17%
 
 ---
 
 
 # 概述 {#overview}
 
-Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]用户提供了一套通用功能。
+Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]的用户提供了一组通用的功能。
 
 ## 新增功能
 
 * **[在AEM中使用工作流管理（视频）](./workflow/use-workflow-management.md)**
    *AEM提供运行工作流的可视性，并简化定义 [!DNL Workflow] 管理。*
 
-* **[了解AEM的Cloud Manager（视频）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   *Cloud Manager for AEM可轻松管理、检查和自助AEM环境。*
+* **[了解Cloud Manager for AEM（视频）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
+   *Cloud Manager for AEM可让您轻松管理、检查和自助AEM环境。*
 
-* **[设置用于Adobe I/O的公共和私钥（教程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *了解如何使用AEM和Adobe I/O共同 [!DNL openssl] 创建密钥和密钥库。*
+* **[设置用于Adobe I/O的公钥和私钥（教程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
+   *了解如何使用AEM和Adobe I/O [!DNL openssl] 生成密钥和密钥库。*
 
 * **[使用Cloud Manager CI/CD管道（视频）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   *了解如何使用Cloud Manager的CI/CD管道来确保安全一致的部署。*
+   *了解如何使用Cloud Manager的CI/CD渠道确保安全一致的部署。*
 
 ## 员工挑选
 
@@ -36,15 +38,15 @@ Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]用户提供�
 <tr>
   <td>
     <a href="./cloud-manager/understand-cloud-manager-for-aem.md">
-    <img alt="了解AEM的Cloud Manager" src="./cloud-manager/assets/understand-cloud-manager-for-aem/thumbnail.png" />
+    <img alt="了解Cloud Manager for AEM" src="./cloud-manager/assets/understand-cloud-manager-for-aem/thumbnail.png" />
     </a>
     <div>
      <a href="./cloud-manager/understand-cloud-manager-for-aem.md">
-    <strong>了解AEM的Cloud Manager</strong>
+    <strong>了解Cloud Manager for AEM</strong>
     </a>
     </div>
     <p>
-    <em>Cloud Manager for AEM提供简单而可靠的解决方案，可轻松管理、检查和自助AEM环境。</em>
+    <em>Cloud Manager for AEM提供简单而可靠的解决方案，可轻松管理、检查和自助服务AEM环境。</em>
     <p>
   </td>
    <td>
@@ -78,7 +80,7 @@ Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]用户提供�
 
 ## 其他资源
 
-* [Experience League-探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League — 了解AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
 * [AEM Sites 视频和教程](/help/sites/overview.md)
 * [AEM Assets 视频和教程](/help/assets/overview.md)
