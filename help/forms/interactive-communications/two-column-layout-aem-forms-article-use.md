@@ -3,37 +3,40 @@ title: 为打印渠道文档创建两列布局
 seo-title: 为打印渠道文档创建两列布局
 description: 为打印渠道文档创建2列布局
 seo-description: 为打印渠道文档创建2列布局
-feature: interactive-communication
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 开发
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: 314f798f7a80f9c554e5bea052f8a64ae397d0de
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 0%
+source-wordcount: '243'
+ht-degree: 2%
 
 ---
 
 
 # 打印渠道文档中的两列布局
 
-本简短文章将重点介绍在打印渠道中创建2列布局所需的步骤。 用例是生成2页文档，第1页具有2列布局，第2页具有标准1列布局。
+这篇简短文章将重点介绍在打印渠道中创建2列布局所需的步骤。 用例是生成2页文档，第1页具有2列布局，第2页具有标准1列布局。
 
-以下是使用AEM Forms设计器创建2列布局时涉及的高级步骤。
+以下是使用AEM Forms Designer创建2列布局时涉及的高级步骤。
 
-* 在第1页主控页面中创建2个内容区域
+* 在第1页的主控页面中创建2个内容区域
 * 将2个内容区域命名为“leftcolumn”和“rightcolumn”
-* 创建具有一个内容区域的第二个主控页面（这是默认页面）
+* 创建包含一个内容区域的第二个主控页面（这是默认页面）
 * 选择分页选项卡（无标题子表单）（第1页）和（无标题子表单）（第2页），并设置以下屏幕快照中显示的属性。
 
 ![page1](assets/untitledsubform_paginationproperties.gif)
 
 ![page2](assets/untitled_subformpage2.gif)
 
-设置分页属性后，我们便可在（无标题子表单）（第1页）下添加子表单或目标区域。
+设置分页属性后，我们便可以在（无标题子表单）（第1页）下添加子表单或目标区域。
 
 然后，我们可以向这些子表单或文档区域添加目标片段。 当左列已满时，内容将流向右列。
 
