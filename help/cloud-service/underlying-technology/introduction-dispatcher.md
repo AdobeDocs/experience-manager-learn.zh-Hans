@@ -1,7 +1,7 @@
 ---
 title: Dispatcher 简介
-description: 介绍作为AEM体系架构一部分的调度程序的功能和功能。
-feature: dispatcher
+description: 介绍作为AEM体系结构一部分的调度程序的功能和功能。
+feature: Dispatcher
 topics: architecture
 audience: administrator, developer
 doc-type: technical video
@@ -9,11 +9,14 @@ activity: understand
 version: cloud-service
 kt: 4644
 thumbnail: 32029.jpg
+topic: 架构、性能
+role: 架构师、开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 34%
+source-wordcount: '53'
+ht-degree: 32%
 
 ---
 
