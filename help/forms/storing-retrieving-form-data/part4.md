@@ -1,23 +1,26 @@
 ---
 title: 从MySQL数据库存储和检索表单数据
 description: 多部分教程，指导您完成存储和检索表单数据所涉及的步骤
-feature: adaptive-forms
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: 787a79663472711b78d467977d633e3d410803e5
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 0%
+source-wordcount: '149'
+ht-degree: 2%
 
 ---
 
 # 创建客户端库
 
-AEM客户端库管理所有客户端JavaScript代码。 对于本文，我创建了一个简单的JavaScript，用于使用指南桥API获取自适应表单数据。 一旦获取自适应表单数据，将向servlet发出POST调用，以在库中插入或更新自适应表单数据。 函数getALLUrlParams返回URL中的参数。 如果URL中存在guid参数，则我们需要执行更新操作（如果不是插入操作）。其余功能在与。savebutton类的单击事件关联的代码中处理。
+AEM客户端库管理所有客户端JavaScript代码。 对于本文，我创建了一个简单的JavaScript，以使用指南桥API获取自适应表单数据。 获取自适应表单数据后，将对servlet进行POST调用，以在数据库中插入或更新自适应表单数据。 函数getALLUrlParams返回URL中的参数。 如果URL中存在guid参数，则我们需要执行更新操作（如果不是插入操作）。其余功能在与.savebutton类的单击事件关联的代码中处理。
 
 >[!NOTE]
 >
