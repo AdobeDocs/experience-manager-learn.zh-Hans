@@ -1,12 +1,14 @@
 ---
-title: 第2章 — 定义事件内容片段模型
-seo-title: AEM内容服务入门 — 第2章 — 定义事件内容片段模型
-description: AEM无头教程的第2章介绍了如何启用和定义内容片段模型，这些模型用于定义用于创建事件的标准化数据结构和创作界面。
-seo-description: AEM无头教程的第2章介绍了如何启用和定义内容片段模型，这些模型用于定义用于创建事件的标准化数据结构和创作界面。
+title: “第2章 — 调度程序基础架构”
+description: 了解发布和调度程序拓扑。 了解最常见的拓扑和设置。
+feature: Dispatcher
+topic: 架构
+role: 架构师
+level: 初学者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1917'
+source-wordcount: '1868'
 ht-degree: 0%
 
 ---
