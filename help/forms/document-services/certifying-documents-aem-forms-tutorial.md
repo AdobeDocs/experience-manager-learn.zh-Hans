@@ -4,20 +4,17 @@ seo-title: AEM Forms认证文档
 description: 在AEM Forms中使用Docassance服务验证PDF文档
 seo-description: 在AEM Forms中使用Docassance服务验证PDF文档
 uuid: ecb1f9b6-bbb3-43a3-a0e0-4c04411acc9f
-feature: Document Security
+feature: 文档安全
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 开发
-role: 开发人员
-level: 中间
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 2%
+source-wordcount: '417'
+ht-degree: 1%
 
 ---
 
