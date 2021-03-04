@@ -1,18 +1,21 @@
 ---
 title: 创建表单片段
-description: AEM forms提供了一种便捷的机制，只需创建面板或一组字段等表单段，即可在自适应表单中重复使用它们。
-feature: adaptive-forms
+description: AEM forms提供了一种便捷的机制，只需创建面板或一组字段等表单段一次，即可在自适应表单中重复使用。
+feature: 自适应表单
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 kt: 5862
 thumbnail: 37325.jpg
+topic: 开发
+role: 开发人员
+level: 初学者
 translation-type: tm+mt
-source-git-commit: c60a46027cc8d71fddd41aa31dbb569e4df94823
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 0%
+source-wordcount: '112'
+ht-degree: 8%
 
 ---
 
@@ -28,7 +31,7 @@ ht-degree: 0%
 
 有关详细信息，请参阅[自适应表单模板文档](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html)
 
-如果需要，您可以下载[配偶详细信息片段](assets/spouse-details-fragment.zip)，然后使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入AEM
+如果需要，您可以下载[Portible-details-fragment ](assets/spouse-details-fragment.zip)并使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入AEM
 
 
 
