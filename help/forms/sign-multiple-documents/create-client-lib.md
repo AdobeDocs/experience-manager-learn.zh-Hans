@@ -9,14 +9,11 @@ activity: implement
 version: 6.4,6.5
 kt: 6907
 thumbnail: 6907.jpg
-topic: 开发
-role: 开发人员
-level: 中间
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 5%
+source-wordcount: '82'
+ht-degree: 1%
 
 ---
 
