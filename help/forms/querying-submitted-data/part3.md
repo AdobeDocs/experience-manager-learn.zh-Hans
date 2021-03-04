@@ -1,19 +1,22 @@
 ---
 title: AEM Forms，含JSON模式和数据[Part3]
 seo-title: AEM Forms，含JSON模式和数据[Part3]
-description: 多部分教程，指导您逐步完成使用JSON模式创建自适应表单和查询提交数据所涉及的步骤。
-seo-description: 多部分教程，指导您逐步完成使用JSON模式创建自适应表单和查询提交数据所涉及的步骤。
-feature: adaptive-forms
+description: 多部分教程，用于指导您完成创建带有JSON模式的自适应表单和查询提交数据所涉及的步骤。
+seo-description: 多部分教程，用于指导您完成创建带有JSON模式的自适应表单和查询提交数据所涉及的步骤。
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: 开发
+role: 开发人员
+level: 富有经验
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 0%
+source-wordcount: '287'
+ht-degree: 1%
 
 ---
 
@@ -21,9 +24,9 @@ ht-degree: 0%
 # 将JSON模式存储在数据库{#storing-json-schema-in-database}中
 
 
-为了能够查询已提交的数据，我们需要存储与已提交表单关联的JSON模式。 JSON模式将用于查询构建器以构建查询。
+为了能够查询已提交的数据，我们需要存储与已提交表单关联的JSON模式。 JSON模式将用在查询生成器中以构建查询。
 
-提交自适应表单时，我们会检查关联的JSON模式是否在数据库中。 如果JSON模式不存在，我们将获取JSON模式并将模式存储在相应的表中。 我们还将表单名称与JSON模式关联。 以下屏幕截图显示存储JSON模式的表。
+提交自适应表单时，我们会检查关联的JSON模式是否在数据库中。 如果JSON模式不存在，我们将获取JSON模式并将模式存储在相应的表中。 我们还将表单名称与JSON模式关联。 以下屏幕截图显示了存储JSON模式的表。
 
 ![jsonschema](assets/jsonschemas.gif)
 
@@ -105,9 +108,9 @@ public String getJSONSchema(String afPath) {
 
 >[!NOTE]
 >
->创建自适应表单时，您可以使用存储库中的JSON模式或上传JSON模式。 上述代码适用于两种情况。
+>创建自适应表单时，您可以使用存储库中的JSON模式，也可以上传JSON模式。 上述代码适用于两种情况。
 
-读取的模式使用标准JDBC操作存储在数据库中。 以下代码将模式插入数据库
+获取的模式使用标准JDBC操作存储在数据库中。 以下代码将模式插入数据库
 
 ```java
 public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
@@ -143,12 +146,12 @@ public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
  }
 ```
 
-总而言之，我们到目前为止已做了以下工作
+总之，我们到目前为止已经完成了以下工作
 
 * 基于JSON模式创建自适应表单
-* 如果表单是首次提交的，则我们将与表单关联的JSON模式存储在数据库中。
+* 如果表单是首次提交的，则我们会将与表单关联的JSON模式存储在数据库中。
 * 我们将自适应表单的绑定数据存储在数据库中。
 
-接下来的步骤是使用QueryBuilder显示要根据JSON模式进行搜索的字段
+下一步是使用QueryBuilder显示要根据JSON模式进行搜索的字段
 
 
