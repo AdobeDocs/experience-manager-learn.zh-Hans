@@ -4,21 +4,18 @@ seo-title: 在自适应Forms Workflow中捕获工作流注释
 description: 在AEM Workflow中捕获工作流注释
 seo-description: 在AEM Workflow中捕获工作流注释
 uuid: df41fc6f-9abf-47b4-a014-b3b9fb58b6f7
-feature: 工作流
+feature: workflow
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4
 discoiquuid: d5e40650-3b1f-4875-91b2-e22d932b5e7c
-topic: 开发
-role: 开发人员
-level: 富有经验
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 1%
+source-wordcount: '394'
+ht-degree: 0%
 
 ---
 
