@@ -1,34 +1,37 @@
 ---
-title: 以产出和Forms服务发展AEM Forms
-seo-title: 以产出和Forms服务发展AEM Forms
-description: 在AEM Forms使用输出和Forms服务API
-seo-description: 在AEM Forms使用输出和Forms服务API
-feature: forms-service
+title: 在AEM Forms中使用输出和Forms服务进行开发
+seo-title: 在AEM Forms中使用输出和Forms服务进行开发
+description: 在AEM Forms中使用输出和Forms Service API
+seo-description: 在AEM Forms中使用输出和Forms Service API
+feature: 表单服务
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 开发
+role: 开发人员
+level: 中间
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 1%
+source-wordcount: '352'
+ht-degree: 2%
 
 ---
 
 
-# 使用AEM Forms的Forms服务渲染交互式PDF
+# 使用AEM Forms中的Forms服务渲染交互式PDF
 
-使用AEM Forms的Forms服务API渲染交互式PDF
+使用AEM Forms中的Forms Service API渲染交互式PDF
 
 在本文中，我们将看到以下服务
 
-* FormsService —— 这是一项功能非常广泛的服务，它允许您从PDF文件导出／导入数据，还可以通过将xml数据合并到xdp模板中来生成交互式pdf
+* FormsService — 这是一项用途非常广的服务，它允许您从PDF文件中导出/导入数据，还可以通过将xml数据合并到xdp模板中来生成交互式pdf
 
-此处[列出了AEM FormsAPI的正式javadoc](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+此处](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)列出了AEM Forms API的正式javadoc[
 
-以下代码片断使用FormsService的renderPDFForm操作来渲染交互式pdf。 申根。xdp是用于合并xml数据的模板。
+以下代码段使用FormsService的renderPDFForm操作来渲染交互式pdf。 senga.xdp是用于合并xml数据的模板。
 
 ```java
 String uri = "crx:///content/dam/formsanddocuments";
@@ -59,7 +62,7 @@ return interactivePDF;
 
 
 1. [登录到configMgr](http://localhost:4502/system/console/configMgr)
-1. Adobe花岗石CSRF滤波器的研究
+1. Adobe花岗岩CSRF滤波器的研究
 1. 在被排除的部分中添加以下路径并保存
 1. /bin/generateinteractivepdf
 1. [打开移动表单](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
@@ -67,6 +70,6 @@ return interactivePDF;
 1. 应将交互式pdf下载到您的本地系统
 
 
-示例包包含与移动表单关联的自定义用户档案。 请浏览[customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp)文件。 此jsp从移动表单中提取数据，并向装载在&#x200B;***/bin/generateinteractivepdf***&#x200B;路径上的servlet发出POST请求。 Servlet将交互式pdf返回给调用应用程序。 customtoolbar.jsp中的代码随后会将文件下载到本地系统
+示例包中包含与移动表单关联的自定义用户档案。 请浏览[customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp)文件。 此jsp从移动表单中提取POST，并向装载在&#x200B;***/bin/generateinteractivepdf***&#x200B;路径上的servlet发出数据请求。 Servlet将交互式pdf返回给调用应用程序。 然后，customtoolbar.jsp中的代码将文件下载到您的本地系统
 
 
