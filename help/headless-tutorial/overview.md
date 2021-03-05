@@ -6,10 +6,10 @@ topic: 无头、内容管理
 role: 开发人员
 level: 初学者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 4%
+source-wordcount: '438'
+ht-degree: 5%
 
 ---
 
@@ -19,11 +19,6 @@ ht-degree: 4%
 Adobe Experience Manager有多种选项，用于定义无外设端点并将其内容作为JSON提供。 使用实践教程探索如何使用各种选项并选择适合您的选项。
 
 ## AEM GraphQL API教程
-
->[!CAUTION]
->
-> AEM GraphQL API for Content Fragments投放可应请求提供。
-> 请联系Adobe支持，以将AEM的API作为Cloud Service项目。
 
 AEM GraphQL API，用于内容片段
 支持无外设CMS方案，外部客户端应用程序使用AEM中管理的内容来呈现体验。
