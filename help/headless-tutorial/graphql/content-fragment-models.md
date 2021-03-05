@@ -15,9 +15,9 @@ topic: 无头、内容管理
 role: 开发人员
 level: 初学者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: cae6e32baa256d4c94fe317eb31cd5163cdae41f
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1027'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,10 @@ ht-degree: 1%
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
 以上视频概括介绍了如何使用内容片段模型。
+
+>[!CAUTION]
+>
+> 上面的视频显示了如何创建名为`Contributors`的&#x200B;**Contributor**&#x200B;模型。 在您自己的环境中执行步骤时，请确保标题使用单数形式：`Contributor`没有&#x200B;**s**。 内容片段模型的命名驱动着将在本教程稍后部分执行的GraphQL API调用。
 
 ## Inspect The Adventure Content Fragment Model
 
