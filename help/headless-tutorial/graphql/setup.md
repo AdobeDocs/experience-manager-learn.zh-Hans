@@ -15,9 +15,9 @@ topic: 无头、内容管理
 role: 开发人员
 level: 初学者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1832'
 ht-degree: 1%
 
 ---
@@ -127,11 +127,12 @@ WKND参考站点包括公开[GraphQL端点](https://experienceleague.adobe.com/d
    $ git clone --branch tutorial/react git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 在您选择的IDE中，打开位于`aem-guides-wknd-graphql/react-app/.env.development`的文件`.env.development`。 取消`REACT_APP_AUTHORIZATION`行的注释，使文件如下所示：
+1. 在您选择的IDE中，打开位于`aem-guides-wknd-graphql/react-app/.env.development`的文件`.env.development`。 验证`REACT_APP_AUTHORIZATION`行是否未加注释，且文件如下所示：
 
    ```plain
    REACT_APP_HOST_URI=http://localhost:4502
    REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json
+   # Use Authorization when connecting to an AEM Author environment
    REACT_APP_AUTHORIZATION=admin:admin
    ```
 
@@ -139,7 +140,7 @@ WKND参考站点包括公开[GraphQL端点](https://experienceleague.adobe.com/d
 
    >[!NOTE]
    >
-   > 在生产方案中，应用程序将连接到AEM **Publish**&#x200B;环境。 本教程的后面将更详细地介绍这一点。
+   > 在生产方案中，应用程序将连接到AEM **Publish**&#x200B;环境。 这在[生产部署](production-deployment.md)一章中有更详细的介绍。
 
 1. 导览至`aem-guides-wknd-graphql/react-app`文件夹。 安装和开始应用程序：
 
