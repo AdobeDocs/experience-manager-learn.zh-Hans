@@ -16,9 +16,9 @@ topic: 内容管理，开发
 role: 开发人员
 level: 初学者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b5b43ae8231bf23e0c53777b1e9c16bcc3fc188a
 workflow-type: tm+mt
-source-wordcount: '3083'
+source-wordcount: '3106'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/30214/?quality=12&learn=on)
 
 **下载WKND [文章设计文件](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)**。
+
+>[!NOTE]
+>
+> 还有通用的[AEM核心组件UI套件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd)可作为自定义项目的起点。
 
 ## 创建文章页面模板
 
@@ -159,7 +163,7 @@ ht-degree: 0%
 
 ## 使用Experience Fragments {#experience-fragments}更新页眉和页脚
 
-创建全局内容（如页眉或页脚）时的常见做法是使用[体验片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 体验片段，允许用户组合多个组件以创建单个可引用的组件。 Experience Fragments具有支持多站点管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)的优势。
+创建全局内容（如页眉或页脚）时的常见做法是使用[体验片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 Experience Fragments，允许用户组合多个组件以创建单个可引用的组件。 Experience Fragments具有支持多站点管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)的优势。
 
 AEM Project Archetype生成了一个Header和Footer。 接下来，更新体验片段以匹配模型。 按照以下视频中的步骤操作：
 
