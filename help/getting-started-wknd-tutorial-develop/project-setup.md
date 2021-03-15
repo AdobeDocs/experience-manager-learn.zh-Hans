@@ -16,9 +16,9 @@ topic: 内容管理，开发
 role: 开发人员
 level: 初学者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b11039ef9d373685a4279c01dbd08eb6464acd29
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1947'
 ht-degree: 4%
 
 ---
@@ -134,6 +134,24 @@ ht-degree: 4%
            |--- pom.xml
            |--- README.md
            |--- .gitignore
+   ```
+
+### 更新Project Analyser版本
+
+>[!CAUTION]
+>
+> Archetype版本25中存在[已知问题，该问题需要更新到生成的项目中的&#x200B;**Project Analyser**&#x200B;版本。 ](https://github.com/adobe/aem-project-archetype/issues/638)以下步骤仅&#x200B;**对于使用`aemVersion="cloud"`生成的项目需要**。
+
+1. 使用您最喜爱的文本编辑器打开文件`aem-guides-wknd/poml.xml`。
+1. 将`aemanalyser.version`更新为&#x200B;**`0.9.2`**:
+
+   ```diff
+    <properties>
+       ...
+   -   <aemanalyser.version>0.0.18</aemanalyser.version>
+   +   <aemanalyser.version>0.9.2</aemanalyser.version>
+       ...
+    </properties>
    ```
 
 ## 部署和构建项目{#build}
