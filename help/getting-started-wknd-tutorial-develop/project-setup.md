@@ -16,9 +16,9 @@ topic: 内容管理，开发
 role: 开发人员
 level: 初学者
 translation-type: tm+mt
-source-git-commit: b11039ef9d373685a4279c01dbd08eb6464acd29
+source-git-commit: 600d3e217b93b30cc673af85c1fd1b62ccc37eb1
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1890'
 ht-degree: 4%
 
 ---
@@ -50,11 +50,11 @@ ht-degree: 4%
 
 ## 创建项目{#create}
 
-为AEM创建Maven多模块项目有几个选项。 本教程将利用[Maven AEM Project Archetype **25**](https://github.com/adobe/aem-project-archetype)。 Cloud Manager还[提供UI向导](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/create-an-application-project.html)以启动AEM应用程序项目的创建。 由Cloud Manager UI生成的基础项目与直接使用原型的结构相同。
+为AEM创建Maven多模块项目有几个选项。 本教程将利用[Maven AEM Project Archetype **26**](https://github.com/adobe/aem-project-archetype)。 Cloud Manager还[提供UI向导](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/create-an-application-project.html)以启动AEM应用程序项目的创建。 由Cloud Manager UI生成的基础项目与直接使用原型的结构相同。
 
 >[!NOTE]
 >
->本教程使用原型的&#x200B;**25**&#x200B;版本。 使用&#x200B;**最新**&#x200B;版本的原型生成新项目始终是最佳做法。
+>本教程使用原型的&#x200B;**26**&#x200B;版本。 使用&#x200B;**最新**&#x200B;版本的原型生成新项目始终是最佳做法。
 
 接下来的一系列步骤将使用基于UNIX的命令行终端进行，但在使用Windows终端时应类似。
 
@@ -100,7 +100,7 @@ ht-degree: 4%
    mvn -B archetype:generate \
        -D archetypeGroupId=com.adobe.aem \
        -D archetypeArtifactId=aem-project-archetype \
-       -D archetypeVersion=25 \
+       -D archetypeVersion=26 \
        -D appTitle="WKND Sites Project" \
        -D appId="wknd" \
        -D groupId="com.adobe.aem.guides.wknd" \
@@ -111,7 +111,7 @@ ht-degree: 4%
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.5.5.0+或6.4.8.1+，请用您的AEM目标版本（即`aemVersion="6.5.5"`或`aemVersion="6.4.8.1"`）替换`aemVersion="cloud"`
+   > 如果以AEM 6.5.5+为目标，则将`aemVersion="cloud"`替换为`aemVersion="6.5.5"`。 如果目标为6.4.8+，请使用`aemVersion="6.4.8"`。
 
    可在此](https://github.com/adobe/aem-project-archetype#available-properties)找到用于配置项目[的可用属性的完整列表。
 
@@ -134,24 +134,6 @@ ht-degree: 4%
            |--- pom.xml
            |--- README.md
            |--- .gitignore
-   ```
-
-### 更新Project Analyser版本
-
->[!CAUTION]
->
-> Archetype版本25中存在[已知问题，该问题需要更新到生成的项目中的&#x200B;**Project Analyser**&#x200B;版本。 ](https://github.com/adobe/aem-project-archetype/issues/638)以下步骤仅&#x200B;**对于使用`aemVersion="cloud"`生成的项目需要**。
-
-1. 使用您最喜爱的文本编辑器打开文件`aem-guides-wknd/poml.xml`。
-1. 将`aemanalyser.version`更新为&#x200B;**`0.9.2`**:
-
-   ```diff
-    <properties>
-       ...
-   -   <aemanalyser.version>0.0.18</aemanalyser.version>
-   +   <aemanalyser.version>0.9.2</aemanalyser.version>
-       ...
-    </properties>
    ```
 
 ## 部署和构建项目{#build}
