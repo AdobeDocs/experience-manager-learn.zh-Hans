@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
-source-git-commit: 59b786d95d1428916adad37ceca4412b93463e9b
+source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 24%
+source-wordcount: '353'
+ht-degree: 23%
 
 ---
 
@@ -83,6 +83,15 @@ ht-degree: 24%
 + 迁移{#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
    + [批量导入资产](./migration/bulk-import.md)
++ 表单{#forms}
+   + [与Salesforce集成]{#integrate-with-salesforce}
+      + [简介](./forms/integrate-with-salesforce/introduction.md)
+      + [创建连接的应用程序](./forms/integrate-with-salesforce/create-connected-app.md)
+      + [创建Swagger文件](./forms/integrate-with-salesforce/describe-rest-api.md)
+      + [创建数据源](./forms/integrate-with-salesforce/create-data-source.md)
+      + [创建表单数据模型](./forms/integrate-with-salesforce/create-form-data-model.md)
+      + [测试表单提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+      + [测试单击事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset compute可扩展性{#asset-compute}
    + [概述](./asset-compute/overview.md)
    + 设置{#set-up}
@@ -111,4 +120,3 @@ ht-degree: 24%
    + [SPA Editor(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
-
