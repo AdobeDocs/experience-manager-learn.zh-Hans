@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 23%
+source-wordcount: '413'
+ht-degree: 22%
 
 ---
 
@@ -84,7 +84,26 @@ ht-degree: 23%
    + [内容传输工具](./migration/content-transfer-tool.md)
    + [批量导入资产](./migration/bulk-import.md)
 + 表单{#forms}
-   + [与Salesforce集成]{#integrate-with-salesforce}
+   + 创建自适应表单{#create-first-af}
+      + [创建名称](./forms/create-first-af/create-theme.md)
+      + [创建模板](./forms/create-first-af/create-template.md)
+      + [创建片段](./forms/create-first-af/create-fragments.md)
+      + [创建表单](./forms/create-first-af/create-af.md)
+      + [配置根面板](./forms/create-first-af/configure-root-panel.md)
+      + [“配置人员”面板](./forms/create-first-af/configure-people-panel.md)
+      + [配置收入面板](./forms/create-first-af/configure-income-panel.md)
+      + [配置资源面板](./forms/create-first-af/configure-assets-panel.md)
+      + [配置开始面板](./forms/create-first-af/configure-start-panel.md)
+      + [添加和配置工具栏](./forms/create-first-af/add-configure-toolbar.md)
+   + 创建审阅工作流{#create-aem-workflow}
+      + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
+      + [触发工作流](./forms/create-aem-workflow/configure-af.md)
+   + Adobe Sign with AEM Forms{forms-and-sign}
+      + [Adobe Sign API应用程序](./forms/forms-and-sign/create-sign-api-application.md)
+      + [Adobe Sign 云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+      + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
+      + [配置以填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + 与Salesforce{#integrate-with-salesforce}集成
       + [简介](./forms/integrate-with-salesforce/introduction.md)
       + [创建连接的应用程序](./forms/integrate-with-salesforce/create-connected-app.md)
       + [创建Swagger文件](./forms/integrate-with-salesforce/describe-rest-api.md)
