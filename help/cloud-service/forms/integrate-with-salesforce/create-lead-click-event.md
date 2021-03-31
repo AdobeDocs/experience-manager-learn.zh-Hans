@@ -1,7 +1,6 @@
 ---
 title: '在按钮的单击事件上在Salesforce数据库中创建Lead对象 '
 description: 通过调用表单数据模型的过帐操作创建潜在客户
-product: aem
 type: 文档
 role: 开发人员
 level: 初学者，中级
@@ -10,7 +9,7 @@ feature: 自适应表单
 topic: 开发
 kt: 7193
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 8%
