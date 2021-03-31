@@ -1,7 +1,7 @@
 ---
 title: 使用表单数据模型的提交操作提交表单
 description: 在提交表单时创建潜在客户对象，创建自适应表单以测试Salesforce集成
-solution: Experience Manager Forms
+solution: Experience Manager, Experience Manager Forms
 type: 文档
 role: 开发人员
 level: 初学者，中级
@@ -10,7 +10,7 @@ feature: 自适应表单
 topic: 开发
 kt: 7151
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 7%
