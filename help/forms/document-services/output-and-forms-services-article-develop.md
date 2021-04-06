@@ -15,9 +15,9 @@ topic: 开发
 role: 开发人员
 level: 中间
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '613'
 ht-degree: 1%
 
 ---
@@ -29,10 +29,9 @@ ht-degree: 1%
 
 在本文中，我们将看到以下内容
 
-* 输出服务 — 通常，此服务用于将xml数据与xdp模板或pdf合并，以生成拼合的pdf
-* FormsService — 这是一项功能多样的服务，允许您从PDF文件导出/导入数据
+* 输出服务 — 通常，此服务用于将xml数据与xdp模板或pdf合并，以生成拼合的pdf。 有关详细信息，请参阅输出服务的[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)。
+* FormsService — 这是一项用途广泛的服务，允许您从PDF文件中导出/导入数据。 有关详细信息，请参阅Forms服务的[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html)。
 
-此处](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)列出了AEM Forms API的正式javadoc[
 
 以下代码段从PDF文件导出数据
 
