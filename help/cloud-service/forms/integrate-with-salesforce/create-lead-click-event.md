@@ -8,8 +8,9 @@ version: cloud-service
 feature: 自适应表单
 topic: 开发
 kt: 7193
+thumbnail: 331892.jpg
 translation-type: tm+mt
-source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
+source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 8%
