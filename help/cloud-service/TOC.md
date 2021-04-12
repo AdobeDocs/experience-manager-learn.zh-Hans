@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
-source-git-commit: 5d567c3ed2275e50065aa1ad1576b0d621a3895b
+source-git-commit: cb4f678be79ad39110cc199b8c66349f311a431d
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '413'
 ht-degree: 22%
 
 ---
@@ -85,6 +85,7 @@ ht-degree: 22%
    + [批量导入资产](./migration/bulk-import.md)
 + 表单{#forms}
    + 创建自适应表单{#create-first-af}
+      + [简介](./forms/create-first-af/introduction.md)
       + [创建名称](./forms/create-first-af/create-theme.md)
       + [创建模板](./forms/create-first-af/create-template.md)
       + [创建片段](./forms/create-first-af/create-fragments.md)
