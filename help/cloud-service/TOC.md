@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
 translation-type: tm+mt
-source-git-commit: 0c7759b59e6b6c99da3cd7e7c502445c14964e26
+source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '415'
 ht-degree: 22%
 
 ---
@@ -100,6 +100,7 @@ ht-degree: 22%
       + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
       + [触发工作流](./forms/create-aem-workflow/configure-af.md)
    + Adobe Sign wAEM Forms{#forms-and-sign}
+      + [简介](./forms/forms-and-sign/introduction.md)
       + [Adobe Sign API应用程序](./forms/forms-and-sign/create-sign-api-application.md)
       + [Adobe Sign 云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
