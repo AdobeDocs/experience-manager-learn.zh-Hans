@@ -2,9 +2,9 @@
 title: 在本地AEM上设置Asset Share Commons
 description: 功能和技术理解的材料Assets Share Commons
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 开发人员
-level: 中间
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

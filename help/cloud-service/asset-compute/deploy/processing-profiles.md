@@ -1,7 +1,7 @@
 ---
 title: 将Asset compute工作人员与AEM处理用户档案集成
 description: AEM作为一个Cloud Service，与通过AEM Assets处理用户档案部署到Adobe I/O Runtime的Asset compute工作人员集成。 处理用户档案在作者服务中进行了配置，以使用自定义worker处理特定资产，并将worker生成的文件存储为资产演绎版。
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
-topic: 集成、开发
-role: 开发人员
-level: 中级，经验丰富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

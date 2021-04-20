@@ -4,16 +4,16 @@ seo-title: 注册自定义资产类型
 description: 启用自定义资源类型以在AEMForms门户中列出
 seo-description: 启用自定义资源类型以在AEMForms门户中列出
 uuid: eaf29eb0-a0f6-493e-b267-1c5c4ddbe6aa
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 discoiquuid: 99944f44-0985-4320-b437-06c5adfc60a1
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

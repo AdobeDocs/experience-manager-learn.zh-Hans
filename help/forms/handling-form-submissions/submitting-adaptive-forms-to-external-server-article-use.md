@@ -4,16 +4,16 @@ seo-title: 将自适应表单提交到外部服务器
 description: 将自适应表单提交到外部服务器上运行的REST端点
 seo-description: 将自适应表单提交到外部服务器上运行的REST端点
 uuid: 1a46e206-6188-4096-816a-d59e9fb43263
-feature: 自适应表单
+feature: Adaptive Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 9e936885-4e10-4c05-b572-b8da56fcac73
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

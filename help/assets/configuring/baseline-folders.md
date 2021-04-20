@@ -2,13 +2,13 @@
 title: 基线文件夹
 description: '在AEM Assets中定义基准文件夹有助于为数字资产管理建立坚实的内容架构和基础。 '
 sub-product: 资产
-feature: 资产管理
+feature: Asset Management
 version: cloud-service
 kt: 4870
 thumbnail: 33496.jpg
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

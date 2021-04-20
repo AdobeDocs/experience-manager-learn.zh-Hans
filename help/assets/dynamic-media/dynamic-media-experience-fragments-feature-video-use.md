@@ -2,11 +2,11 @@
 title: 将体验片段与AEM Assets Dynamic Media结合使用
 description: AEM Assets Dynamic Media通过交互式媒体查看器将资产热点与体验片段集成在一起。 营销人员可以创作包含文本、图像和链接的体验片段，以填充自定义弹出窗口并将该弹出窗口关联到横幅、轮盘或视频上的热点。
 sub-product: dynamic-media， content-services
-feature: 体验片段
+feature: Experience Fragments
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

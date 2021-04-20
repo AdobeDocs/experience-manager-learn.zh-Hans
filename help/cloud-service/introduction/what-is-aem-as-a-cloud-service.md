@@ -1,10 +1,10 @@
 ---
 title: 什么是AEM作为Cloud Service?
 description: 了解什么是AEM作为Cloud Service，以及它与其他版本的Adobe Experience Manager有何不同。
-role: 架构师、开发人员
-level: 初学者
-type: 教程
-topic: 架构
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Architecture
 kt: 6923
 thumbnail: 330546.jpg
 translation-type: tm+mt

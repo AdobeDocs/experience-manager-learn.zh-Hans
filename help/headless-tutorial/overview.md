@@ -1,10 +1,10 @@
 ---
 title: AEM无头教程
 description: 有关如何将Adobe Experience Manager用作无外设CMS的教程集。
-feature: 内容片段、API
-topic: 无头、内容管理
-role: 开发人员
-level: 初学者
+feature: Content Fragments, APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt

@@ -2,11 +2,11 @@
 title: '创建云服务配置 '
 description: 使用OAuth凭据创建要连接到Salesforce的数据源
 solution: Experience Manager, Experience Manager Forms
-type: 文档
-role: 开发人员
-level: 初学者，中级
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-topic: 开发
+topic: Development
 kt: 7148
 thumbnail: 331755.jpg
 translation-type: tm+mt

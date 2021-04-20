@@ -2,9 +2,9 @@
 title: 将资产模板与AEM Assets和InDesign Server结合使用
 description: AEM Assets模板使营销人员能够创建、管理和交付用于数字和印刷的数字资产。 与InDesign服务器集成后，使用资产模板可以更轻松地创建标记小册子、名片、传单、广告和明信片。
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -4,16 +4,16 @@ seo-title: 使用与AEM Forms的用户用户档案数据集成
 description: 将AEM用户用户档案信息与自适应Forms集成
 seo-description: 将AEM用户用户档案信息与自适应Forms集成
 uuid: c8cfe575-8732-4d8b-99de-fb09e7c2497d
-feature: 自适应表单
+feature: Adaptive Forms
 topics: integrations
 audience: developer
 doc-type: feature video
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: ca01dfce-abab-4bc1-9c5e-3bafdbed4836
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

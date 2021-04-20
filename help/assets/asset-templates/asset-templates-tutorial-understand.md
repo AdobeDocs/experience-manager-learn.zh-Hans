@@ -2,9 +2,9 @@
 title: '了解InDesign文件和AEM Assets中的资源模板 '
 description: 此视频教程将逐步介绍如何定义一个InDesign文件以及所有随附的注意事项，以用于AEM资产的资产模板功能。
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 中间
+topic: Content Management
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

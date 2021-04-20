@@ -1,13 +1,13 @@
 ---
 title: AEM Assets中图像的自定义智能标签
 description: 了解如何培训AEM资产的智能标记以将自定义条款应用到资产。
-feature: 智能标记
+feature: Smart Tags
 version: 6.4, 6.5, cloud-services
 kt: 795
 thumbnail: 22254.jpg
-topic: 内容管理
-role: 开发人员
-level: 中间
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

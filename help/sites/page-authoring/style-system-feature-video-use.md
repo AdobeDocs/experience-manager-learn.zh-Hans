@@ -3,7 +3,7 @@ title: 将样式系统与AEM Sites
 seo-title: 将样式系统与Adobe Experience Manager、AEM Sites
 description: Adobe Experience Manager的Style System无需后端开发即可实现组件的可视化变化，从而更好地重复使用AEM组件，并实现更多功能、更高效的内容创作。 样式系统与AEM核心组件、模板编辑器和响应式布局结合使用时，可优惠强大的功能以快速创作丰富的体验。
 seo-description: Adobe Experience Manager的Style System无需后端开发即可实现组件的可视化变化，从而更好地重复使用AEM组件，并实现更多功能、更高效的内容创作。 样式系统与AEM核心组件、模板编辑器和响应式布局结合使用时，可优惠强大的功能以快速创作丰富的体验。
-feature: 样式系统
+feature: Style System
 topics: authoring, front-end-development
 audience: all
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: use
 version: cloud-service
 kt: 974
 thumbnail: 21750.jpg
-topic: 内容管理
-role: 业务从业者
-level: 中间
+topic: Content Management
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

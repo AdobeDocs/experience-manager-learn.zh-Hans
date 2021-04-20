@@ -1,7 +1,7 @@
 ---
 title: 创建初始表单以触发进程
 description: 创建初始表单以触发电子邮件通知以开始签名过程。
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6892
 thumbnail: 6892.jpg
-topic: 开发
-role: 业务从业者
-level: 中间
+topic: Development
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

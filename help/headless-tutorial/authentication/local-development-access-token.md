@@ -4,14 +4,14 @@ description: AEM本地开发访问令牌用于加快与AEM的集成开发，作�
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
-feature: API
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330477.jpg
-topic: 无外设、集成
-role: 开发人员
-level: 中级，经验丰富的
+topic: Headless, Integrations
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

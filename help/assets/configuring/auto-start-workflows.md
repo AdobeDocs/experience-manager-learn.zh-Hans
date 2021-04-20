@@ -2,13 +2,13 @@
 title: 自动开始工作流
 description: 自动开始工作流在上传或重新处理时自动调用自定义工作流，从而扩展了资产处理。
 sub-product: 资产
-feature: asset compute Microservices，工作流
+feature: Asset Compute Microservices, Workflow
 version: cloud-service
 kt: 4994
 thumbnail: 37323.jpg
-topic: 开发
-role: 开发人员
-level: 中间
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

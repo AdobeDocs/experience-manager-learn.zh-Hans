@@ -3,7 +3,7 @@ title: 了解AEM Sites中的页面属性
 seo-title: 了解Adobe Experience Manager Sites中的页面属性
 description: 以下视频介绍了与Adobe Experience Manager中的页面关联的页面属性元数据。
 seo-description: '以下视频介绍了与Adobe Experience Manager中的页面关联的页面属性元数据。 '
-feature: 页面编辑器
+feature: Page Editor
 topics: authoring, metadata
 audience: author, marketer
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: understand
 version: 6.3, 6.4, 6.5
 kt: 4321
 thumbnail: 32192.jpg
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

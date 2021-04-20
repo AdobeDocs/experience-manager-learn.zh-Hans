@@ -3,7 +3,7 @@ title: 将LDAP与AemForms Workflow
 seo-title: 将LDAP与AemForms Workflow
 description: 将AEM Forms工作流任务分配给提交者的管理者
 seo-description: 将AEM Forms工作流任务分配给提交者的管理者
-feature: 自适应Forms，工作流
+feature: Adaptive Forms,Workflow
 topics: integrations
 audience: developer
 doc-type: article
@@ -11,9 +11,9 @@ activity: setup
 version: 6.3,6.4,6.5
 uuid: 3e32c3a7-387f-4652-8a94-4e6aa6cd5ab8
 discoiquuid: 671872b3-3de0-40da-9691-f8b7e88a9443
-topic: 开发
-role: 管理员
-level: 中间
+topic: Development
+role: Administrator
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

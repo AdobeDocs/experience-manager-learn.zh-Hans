@@ -1,7 +1,7 @@
 ---
 title: 创建HTML5 Forms
 description: 创建和配置HTML5表单
-feature: 移动设备表单
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 4419
 thumbnail: kt-4419.jpg
-topic: 开发
-role: 业务从业者
-level: 初学者
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

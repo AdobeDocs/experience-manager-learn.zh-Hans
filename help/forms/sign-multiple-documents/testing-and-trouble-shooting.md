@@ -1,7 +1,7 @@
 ---
 title: 对多个文档解决方案进行签名疑难解答
 description: 测试和故障拍摄解决方案
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6960
 thumbnail: 6960.jpg
-topic: 开发
-role: 开发人员
-level: 中间
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -3,15 +3,15 @@ title: 在工作流中捕获表单数据模型服务中的错误消息
 seo-title: 在工作流中捕获表单数据模型服务中的错误消息
 description: 从AEM Forms 6.5.1开始，我们现在能够捕获在调用表单数据模型服务时生成的错误消息，这是AEM工作流中的一个步骤。 工作流.
 seo-description: 从AEM Forms 6.5.1开始，我们现在能够捕获在调用表单数据模型服务时生成的错误消息，这是AEM工作流中的一个步骤。 工作流.
-feature: 工作流
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: article
 activity: setup
 version: 6.5.1,6.5.2
-topic: 开发
-role: 开发人员
-level: 中间
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

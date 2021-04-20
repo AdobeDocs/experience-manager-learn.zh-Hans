@@ -1,7 +1,7 @@
 ---
 title: asset compute开发工具
 description: asset compute开发工具是一个本地Web工具，它允许开发人员在AEM SDK上下文外部针对Adobe I/O Runtime中的Asset compute资源在本地配置和执行资产计算机工作程序。
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
-topic: 集成、开发
-role: 开发人员
-level: 中级，经验丰富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

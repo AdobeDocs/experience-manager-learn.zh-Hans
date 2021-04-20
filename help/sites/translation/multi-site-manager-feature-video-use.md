@@ -3,7 +3,7 @@ title: 将多站点管理器与AEM Sites
 seo-title: 使用多站点管理器触屏UI界面与Adobe Experience Manager
 description: Live Copy概述和Blueprint Configuration Manager是用于使用多站点管理器的触屏优化用户界面。
 seo-description: Live Copy概述和Blueprint Configuration Manager是支持触屏UI的界面，用于与Adobe Experience Manager结合使用多站点管理器。
-feature: 多站点管理器
+feature: Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: use
 version: 6.3, 6.4, 6.5
 uuid: 76f295d0-78dd-429c-9129-9182b3a706a6
 discoiquuid: a0dc581e-300f-45ef-916a-1cbac0429899
-topic: 本地化
-role: 业务从业者
-level: 初学者
+topic: Localization
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

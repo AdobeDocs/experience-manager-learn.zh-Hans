@@ -1,7 +1,7 @@
 ---
 title: 配置表单数据模型
 description: 基于RDBMS数据源创建表单数据模型
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 5812
 thumbnail: kt-5812.jpg
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

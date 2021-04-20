@@ -1,10 +1,10 @@
 ---
 title: AEM内容片段的翻译支持
 description: 了解如何使用Adobe Experience Manager本地化和翻译内容片段。 与内容片段关联的混合媒体资产也有资格进行提取和翻译。
-feature: 内容片段，多站点管理器
-topic: 本地化
-role: 业务从业者
-level: 中间
+feature: Content Fragments, Multi Site Manager
+topic: Localization
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 201
 thumbnail: 18131.jpg

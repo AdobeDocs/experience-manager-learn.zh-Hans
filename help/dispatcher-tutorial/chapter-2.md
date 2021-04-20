@@ -2,9 +2,9 @@
 title: “第2章 — 调度程序基础架构”
 description: 了解发布和调度程序拓扑。 了解最常见的拓扑和设置。
 feature: Dispatcher
-topic: 架构
-role: 架构师
-level: 初学者
+topic: Architecture
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

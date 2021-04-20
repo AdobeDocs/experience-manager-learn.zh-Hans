@@ -2,11 +2,11 @@
 title: 将全景图和垂直图像查看器与AEM Assets Dynamic Media结合使用
 description: Dynamic Media 6.4中增强的AEM查看器包括添加的全景图像查看器、全景虚拟现实图像查看器和垂直图像查看器。 Panoramic Viewer提供了一种轻松的方式，无需任何自定义开发，即可提供引人入胜的房间、房产、位置或景观体验。
 sub-product: dynamic-media
-feature: 视频用户档案、视频用户档案、360 VR视频
+feature: Video Profiles, Video Profiles, 360 VR Video
 version: 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -6,9 +6,9 @@ topics: cicd, performance, best-practices, development, governance
 doc-type: feature video
 activity: understand
 audience: all
-topic: 架构
-role: 开发人员
-level: 初学者
+topic: Architecture
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

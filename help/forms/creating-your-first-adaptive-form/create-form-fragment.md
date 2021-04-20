@@ -1,16 +1,16 @@
 ---
 title: 创建表单片段
 description: AEM forms提供了一种便捷的机制，只需创建面板或一组字段等表单段一次，即可在自适应表单中重复使用。
-feature: 自适应表单
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 kt: 5862
 thumbnail: 37325.jpg
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

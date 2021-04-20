@@ -2,11 +2,11 @@
 title: 了解使用AEM Dynamic Media进行色彩管理
 description: 在此视频中，我们将探索Dynamic Media色彩管理，以及如何使用它为AEM Assets提供色彩校正预览功能。
 sub-product: dynamic-media
-feature: 图像用户档案，视频用户档案
+feature: Image Profiles, Video Profiles
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 开发人员
-level: 中间
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

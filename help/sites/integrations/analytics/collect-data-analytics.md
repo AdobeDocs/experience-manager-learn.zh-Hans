@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe Analytics收集页面数据
 description: 使用事件驱动的Adobe客户端数据层在使用Adobe Experience Manager构建的网站上收集有关用户活动的数据。 了解如何在Experience Platform Launch中使用规则来侦听这些事件并将数据发送到Adobe Analytics报表包。
-feature: 分析
+feature: analytics
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: setup
 version: cloud-service
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
-topic: 集成
-role: 开发人员
-level: 中间
+topic: Integrations
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

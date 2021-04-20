@@ -2,10 +2,10 @@
 title: 使用AEM Assets设置智能翻译搜索
 description: 智能翻译搜索允许使用非英语搜索词解析为英语内容。 要为智能翻译搜索设置AEM，必须安装和配置Apache Oak Search Machine Translation OSGi捆绑包，以及包含翻译规则的相关免费和开放源Apache Joshua语言包。
 version: 6.3, 6.4, 6.5
-feature: 搜索
-topic: 内容管理
-role: 开发人员
-level: 初学者
+feature: Search
+topic: Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

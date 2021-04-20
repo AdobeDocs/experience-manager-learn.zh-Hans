@@ -2,15 +2,15 @@
 title: 了解Adobe IMS身份验证(使用Adobe Managed Services上的AEM)
 description: Adobe Experience Manager引入了对AEM实例的Admin Console支持以及针对Managed Services上的AEM的基于Adobe IMS(Identity Management系统)的身份验证。   此集成允许AEM Managed Services客户在一个统一的Web控制台中管理所有Experience Cloud用户。 可以将用户和用户组分配给与AEM实例关联的产品用户档案，从而授予对特定AEM实例的集中管理访问权。
 version: 6.4, 6.5
-feature: 用户和组
+feature: Users and Groups
 topics: authentication, security
 activity: understand
 audience: administrator, architect, developer, implementer
 doc-type: technical video
 kt: 781
-topic: 架构
-role: 架构师
-level: 富有经验
+topic: Architecture
+role: Architect
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

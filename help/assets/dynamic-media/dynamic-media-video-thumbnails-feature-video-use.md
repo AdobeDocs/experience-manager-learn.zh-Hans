@@ -2,11 +2,11 @@
 title: 将自定义视频缩略图与AEM Dynamic Media结合使用
 description: AEM Assets自定义视频缩略图使作者能够从一组生成的缩略图中选择适当的缩略图。 可以轻松自定义为视频生成的缩略图数。
 sub-product: dynamic-media
-feature: 视频配置文件
+feature: Video Profiles
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

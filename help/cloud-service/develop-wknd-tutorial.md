@@ -5,10 +5,10 @@ description: 初次开发AEM? 需要进修一下最佳实践？ 这是开始! �
 seo-description: 初次开发AEM? 需要进修一下最佳实践？ 这是开始! 此多部分教程的目标是教给刚接触AEM的开发人员如何使用最新的标准和技术在AEM中实施网站。
 content-type: reference
 topic-tags: introduction
-feature: AEM Project Archetype、核心组件、页面编辑器、可编辑模板
-topic: 开发
-role: 开发人员
-level: 初学者
+feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

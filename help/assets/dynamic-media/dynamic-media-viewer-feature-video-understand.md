@@ -2,11 +2,11 @@
 title: 了解使用AEM Dynamic Media的Asset Viewer
 description: AEM Dynamic Media Viewer增强功能允许AEM作者定义和自定义将向网站用户展示的体验资产。
 sub-product: 动态媒体经典
-feature: 查看器预设，图像用户档案
+feature: Viewer Presets, Image Profiles
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 开发人员
-level: 中间
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

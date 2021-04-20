@@ -2,15 +2,15 @@
 title: 使用AEM体验片段设置社交发布
 description: 体验片段使营销人员能够将在AEM中创建的体验发布到社交媒体平台。 以下视频详细介绍了将体验片段发布到Facebook和Pinterest所需的设置和配置。
 sub-product: 站点，内容服务
-feature: 体验片段
+feature: Experience Fragments
 topics: integrations, content-delivery
 audience: administrator, implementer, developer
 doc-type: setup
 activity: use
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 管理员、开发人员
-level: 中间
+topic: Content Management
+role: Administrator, Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

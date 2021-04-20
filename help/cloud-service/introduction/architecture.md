@@ -1,10 +1,10 @@
 ---
 title: AEM as a Cloud Service 的架构
 description: 探索作为Cloud Service的底层架构和AEM的重要部分。 深入了解Cloud Manager和API。
-role: 架构师、开发人员
-level: 初学者
-type: 教程
-topic: 架构
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Architecture
 kt: 6919
 thumbnail: 330542.jpg
 translation-type: tm+mt

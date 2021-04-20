@@ -1,10 +1,10 @@
 ---
 title: '探索Cloud Manager在AEM中的重要性 '
 description: 了解Cloud Manager的用途以及它如何作为Cloud Service与AEM协作。
-role: 架构师、开发人员
-level: 初学者
-type: 教程
-topic: 架构
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Architecture
 kt: 6922
 thumbnail: 330545.jpg
 translation-type: tm+mt

@@ -3,10 +3,10 @@ title: 第4章 — 定义内容服务模板 — 内容服务
 seo-title: AEM无外设入门 — 第4章 — 定义内容服务模板
 description: AEM无头教程的第4章介绍了AEM可编辑模板在AEM内容服务上下文中的作用。 可编辑模板用于定义AEM Content Services最终将公开的JSON内容结构。
 seo-description: AEM无头教程的第4章介绍了AEM可编辑模板在AEM内容服务上下文中的作用。 可编辑模板用于定义AEM Content Services最终将公开的JSON内容结构。
-feature: 内容片段、API
-topic: 无头、内容管理
-role: 开发人员
-level: 初学者
+feature: Content Fragments, APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,16 +1,16 @@
 ---
 title: automated forms conversion服务
 description: automated forms conversion服务。 本文描述AEM管理员如何配置Automated forms conversion服务，以自动将其PDF forms转换为自适应表单。 此帮助适用于贵组织的IT和AEM管理员。
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39493.jpg
 kt: 6114
-topic: 开发
-role: 管理员
-level: 初学者
+topic: Development
+role: Administrator
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

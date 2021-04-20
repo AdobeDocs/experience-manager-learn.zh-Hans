@@ -2,12 +2,12 @@
 title: 创建AEM工作流
 description: 创建工作流模型以模仿您的业务流程。
 solution: Experience Manager Forms
-type: 文档
-role: 开发人员
-level: 初学者，中级
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 自适应表单
-topic: 开发
+feature: Adaptive Forms
+topic: Development
 kt: 7424
 thumbnail: 332434.pg
 translation-type: tm+mt

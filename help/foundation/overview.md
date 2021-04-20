@@ -3,8 +3,8 @@ title: AEM Foundation 视频和教程
 seo-title: AEM Foundation 视频和教程
 description: 'Adobe Experience Manager Foundation 的视频和教程集合。 '
 seo-description: Adobe Experience Manager Foundation的一系列视频和教程
-role: 领导者，架构师，开发人员，管理员，业务从业者
-level: 初学者
+role: Leader, Architect, Developer, Administrator, Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

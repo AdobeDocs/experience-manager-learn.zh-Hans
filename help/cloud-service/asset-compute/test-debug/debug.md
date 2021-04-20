@@ -1,7 +1,7 @@
 ---
 title: 调试Asset compute工作者
 description: asset compute工作者可以通过多种方式进行调试，从简单的调试日志语句，到附加的VS代码（作为远程调试器），再到提取从AEM作为Cloud Service启动的Adobe I/O Runtime中的激活日志。
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
-topic: 集成、开发
-role: 开发人员
-level: 中级，经验丰富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

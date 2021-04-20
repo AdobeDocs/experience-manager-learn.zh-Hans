@@ -5,9 +5,9 @@ sub-product: 资产
 feature: Adobe Asset Link
 version: cloud-service
 thumbnail: 34839.jpg
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

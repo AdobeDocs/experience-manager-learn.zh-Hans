@@ -1,7 +1,7 @@
 ---
 title: 创建主自适应表单
 description: 创建自适应表单以捕获申请人信息，创建自适应表单以检索保存的自适应表单
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6552
 thumbnail: 6552.jpg
-topic: 开发
-role: 业务从业者
-level: 初学者
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

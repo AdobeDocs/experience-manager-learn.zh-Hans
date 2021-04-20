@@ -1,7 +1,7 @@
 ---
 title: 处理HTML5表单提交
 description: 创建HTML5表单提交处理程序
-feature: 移动设备表单
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 5269
 thumbnail: kt-5269.jpg
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

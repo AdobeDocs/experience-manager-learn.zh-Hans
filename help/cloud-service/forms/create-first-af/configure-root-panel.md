@@ -2,12 +2,12 @@
 title: 配置根面板
 description: 将子面板添加到根面板。
 solution: Experience Manager Forms
-type: 文档
-role: 开发人员
-level: 初学者，中级
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 自适应表单
-topic: 开发
+feature: Adaptive Forms
+topic: Development
 kt: 7377
 thumbnail: 332238.jpg
 translation-type: tm+mt

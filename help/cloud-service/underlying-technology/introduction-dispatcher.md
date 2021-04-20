@@ -9,9 +9,9 @@ activity: understand
 version: cloud-service
 kt: 4644
 thumbnail: 32029.jpg
-topic: 架构、性能
-role: 架构师、开发人员
-level: 初学者
+topic: Architecture, Performance
+role: Architect, Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

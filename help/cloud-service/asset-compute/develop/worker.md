@@ -1,7 +1,7 @@
 ---
 title: 开发Asset compute工作者
 description: asset computeWorker是Asset compute项目的核心，它提供了对资产执行或安排工作以创建新再现的自定义功能。
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
-topic: 集成、开发
-role: 开发人员
-level: 中级，经验丰富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: 1e5d8171832ec6b26969a8485ae970e295962828
 workflow-type: tm+mt

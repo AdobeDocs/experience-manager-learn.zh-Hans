@@ -1,10 +1,10 @@
 ---
 title: 第6章 — 将AEM发布上的内容公开为JSON — 内容服务
 description: AEM无外设教程的第6章介绍了如何确保AEM发布中包含所有必要的包、配置和内容，以允许从移动应用程序使用。
-feature: 内容片段、API
-topic: 无头、内容管理
-role: 开发人员
-level: 初学者
+feature: Content Fragments, APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -4,7 +4,7 @@ seo-title: 使用函数和代码编辑器
 description: 使用函数和代码编辑器创作业务规则
 seo-description: 使用函数和代码编辑器创作业务规则
 uuid: 578e91f8-0d93-4192-b7af-1579df2feaf8
-feature: 自适应表单
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,9 +13,9 @@ version: 6.4,6.5
 discoiquuid: f480ef3e-7e38-4a6b-a223-c102787aea7f
 kt: 4270
 thumbnail: 22282.jpg
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

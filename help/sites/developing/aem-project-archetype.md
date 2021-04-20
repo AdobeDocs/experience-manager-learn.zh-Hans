@@ -1,7 +1,7 @@
 ---
 title: AEM 项目原型
 description: 'AEM Project Archetype创建了一个基于最佳实践的最小化Adobe Experience Manager项目，作为您自己的AEM项目的起点。 '
-feature: AEM 项目原型
+feature: AEM Project Archetype
 topics: development
 audience: developer
 doc-type: technical video
@@ -9,9 +9,9 @@ activity: understand
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4675
 thumbnail: 32550.jpg
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

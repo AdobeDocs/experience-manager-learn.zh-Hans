@@ -2,13 +2,13 @@
 title: 收藏集
 description: 了解集合如何提供和将替代视图导入AEM Assets。
 sub-product: 资产
-feature: 收藏集
+feature: Collections
 version: cloud-service
 kt: 4301
 thumbnail: 32053.jpg
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

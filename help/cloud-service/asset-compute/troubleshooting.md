@@ -1,7 +1,7 @@
 ---
 title: 解决AEM Assets的Asset compute可扩展性问题
 description: 以下是开发和部署AEM Assets的自定义Asset computeWorker时可能遇到的常见问题和错误以及解决方法的索引。
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, metadata, development
 version: cloud-service
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: 集成、开发
-role: 开发人员
-level: 中级，经验丰富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

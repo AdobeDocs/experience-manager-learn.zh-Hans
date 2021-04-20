@@ -3,10 +3,10 @@ title: AEM 和 Adobe Target 使用入门
 seo-title: AEM 和 Adobe Target 使用入门
 description: 一个端到端教程，其中演示了如何使用Adobe Experience Manager和Adobe Target创建和提供个性化体验。 在本教程中，您还将了解端到端流程中涉及的不同角色以及他们如何相互协作
 seo-description: 一个端到端教程，其中演示了如何使用Adobe Experience Manager和Adobe Target创建和提供个性化体验。 在本教程中，您还将了解端到端流程中涉及的不同角色以及他们如何相互协作
-feature: 体验片段
-topic: 个性化
-role: 开发人员
-level: 中间
+feature: Experience Fragments
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

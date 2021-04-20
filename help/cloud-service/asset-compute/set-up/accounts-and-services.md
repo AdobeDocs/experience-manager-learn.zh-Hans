@@ -1,7 +1,7 @@
 ---
 title: 设置帐户和服务以实现Asset compute可扩展性
 description: 开发Asset compute工作者需要访问帐户和服务，包括作为Cloud Service的AEM、Adobe Project Firefly以及由Microsoft或Amazon提供的云存储。
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
-topic: 集成、开发
-role: 开发人员
-level: 中级，经验丰富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

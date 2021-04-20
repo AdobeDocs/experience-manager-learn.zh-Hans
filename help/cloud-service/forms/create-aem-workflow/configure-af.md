@@ -2,12 +2,12 @@
 title: 配置自适应表单以触发工作流
 description: 在提交自适应表单时触发工作流。
 solution: Experience Manager Forms
-type: 文档
-role: 开发人员
-level: 初学者，中级
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 自适应表单
-topic: 开发
+feature: Adaptive Forms
+topic: Development
 kt: 7425
 thumbnail: 332435.pg
 translation-type: tm+mt

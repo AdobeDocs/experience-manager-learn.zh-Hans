@@ -3,7 +3,7 @@ title: 使用数据属性预填充HTML5 Forms。
 seo-title: 使用数据属性预填充HTML5 Forms。
 description: 通过从后端源获取数据来填充HTML5表单。
 seo-description: 通过从后端源获取数据来填充HTML5表单。
-feature: 自适应表单
+feature: Adaptive Forms
 topics: mobile-forms
 audience: developer
 doc-type: article
@@ -11,9 +11,9 @@ activity: implement
 version: 6.3,6.4,6.5.
 uuid: 889d2cd5-fcf2-4854-928b-0c2c0db9dbc2
 discoiquuid: 3aa645c9-941e-4b27-a538-cca13574b21c
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

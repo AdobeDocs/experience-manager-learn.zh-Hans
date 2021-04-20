@@ -3,9 +3,9 @@ title: 将Adobe Stock资源与AEM Assets结合使用
 description: 'AEM使用户能够直接从AEM中搜索、预览、保存和许可Adobe Stock资产。 组织现在可以将其Adobe Stock企业计划与AEM Assets集成，以确保许可的资产现在可广泛用于其创意和营销项目，并具备AEM的强大资产管理功能。 '
 feature: Adobe Stock
 version: 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

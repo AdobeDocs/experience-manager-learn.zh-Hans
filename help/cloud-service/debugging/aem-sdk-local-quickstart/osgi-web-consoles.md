@@ -8,9 +8,9 @@ doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5265, 5366, 5267
-topic: 开发
-role: 开发人员
-level: 初学者，中级
+topic: Development
+role: Developer
+level: Beginner, Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

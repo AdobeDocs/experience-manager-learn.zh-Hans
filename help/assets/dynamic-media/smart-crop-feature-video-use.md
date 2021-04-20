@@ -2,11 +2,11 @@
 title: 将Smart Crop与AEM Assets Dynamic Media结合使用
 description: Smart Crop使用Adobe Sensei消除了为响应式设计而裁切内容的耗时且成本高昂的任务。
 sub-product: dynamic-media
-feature: 智能裁剪，图像用户档案
+feature: Smart Crop, Image Profiles
 version: 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

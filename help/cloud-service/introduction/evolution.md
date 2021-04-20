@@ -1,10 +1,10 @@
 ---
 title: AEM作为Cloud Service的发展
 description: '浏览AEM的历史以及内部部署AEM、Adobe Managed Services AEM和AEM之间作为Cloud Service的差异。 '
-role: 架构师、开发人员
-level: 初学者
-type: 教程
-topic: 架构
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Architecture
 kt: 6920
 thumbnail: 330543.jpg
 translation-type: tm+mt

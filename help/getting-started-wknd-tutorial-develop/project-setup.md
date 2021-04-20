@@ -3,7 +3,7 @@ title: AEM Sites入门 — 项目设置
 seo-title: AEM Sites入门 — 项目设置
 description: 包括创建Maven多模块项目以管理AEM站点的代码和配置。
 sub-product: 站点
-feature: AEM 项目原型
+feature: AEM Project Archetype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,9 +12,9 @@ audience: developer
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
-topic: 内容管理，开发
-role: 开发人员
-level: 初学者
+topic: Content Management, Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: 600d3e217b93b30cc673af85c1fd1b62ccc37eb1
 workflow-type: tm+mt

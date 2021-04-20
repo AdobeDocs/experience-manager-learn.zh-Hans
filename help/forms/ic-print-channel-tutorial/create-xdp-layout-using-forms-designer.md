@@ -4,7 +4,7 @@ seo-title: 使用Forms Designer创建布局
 description: 这是创建打印渠道的第一个交互式通信文档的多部分教程的第4部分。在本部分中，我们将查看使用AEM Forms Designer创建的布局文件。
 seo-description: 这是创建打印渠道的第一个交互式通信文档的多部分教程的第4部分。在本部分中，我们将查看使用AEM Forms Designer创建的布局文件。
 uuid: 2f014c58-1ae1-40e8-a45d-7ffe9c86f693
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,9 +13,9 @@ version: 6.4,6.5
 discoiquuid: 17f4cdbb-079b-4fe3-861d-cfa0c03d30dd
 kt: 5957
 thumbnail: 37890.jpg
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

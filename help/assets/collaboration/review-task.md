@@ -2,13 +2,13 @@
 title: 审核任务
 description: 了解AEM资产的审阅任务如何促进最常见的审阅和批准工作流。
 sub-product: 资产
-feature: 协作
+feature: Collaboration
 version: cloud-service
 kt: 4670
 thumbnail: 32050.jpg
-topic: 协作
-role: 业务从业者
-level: 初学者
+topic: Collaboration
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

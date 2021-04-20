@@ -1,7 +1,7 @@
 ---
 title: 配置AEM数据源
 description: 配置MySQL支持的数据源以存储和检索表单数据
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6899
 thumbnail: 6899.jpg
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,13 +2,13 @@
 title: 了解不同类型的PDF forms和文档
 description: PDF实际上是一系列文件格式，本文描述了对表单开发人员来说重要且相关的PDF类型。
 solution: Experience Manager, Experience Manager Forms
-type: 文档
-role: 开发人员
-level: 初学者，中级
+type: Documentation
+role: Developer
+level: Beginner,Intermediate
 version: 6.3,6.4,6.5
-feature: 文档服务
+feature: Document Services
 kt: 7071
-topic: 开发
+topic: Development
 translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt

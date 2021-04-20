@@ -2,7 +2,7 @@
 title: SPA Editor Project | AEM SPA Editor和React入门
 description: 了解如何将Adobe Experience Manager(AEM)Maven项目用作与SPA AEM Editor集成的React应用程序的起点。
 sub-product: 站点
-feature: SPA Editor， AEM Project Archetype
+feature: SPA Editor, AEM Project Archetype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,8 +11,8 @@ audience: developer
 kt: 413
 thumbnail: 413-spa-react.jpg
 topic: SPA
-role: 开发人员
-level: 初学者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

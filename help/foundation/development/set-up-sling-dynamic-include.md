@@ -3,14 +3,14 @@ title: 为AEM设置Sling Dynamic Include
 description: 在Apache HTTP Web Server上运行的AEM Dispatcher中安装和使用Apache Sling Dynamic Include的视频演练。
 version: 6.3, 6.4, 6.5
 sub-product: 基础，站点
-feature: API
+feature: APIs
 topics: caching
 activity: develop
 audience: architect, developer
 doc-type: technical video
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

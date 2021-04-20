@@ -1,7 +1,7 @@
 ---
 title: 创建OSGi服务
 description: 创建OSGi服务以存储要签名的表单
-feature: 工作流
+feature: Workflow
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

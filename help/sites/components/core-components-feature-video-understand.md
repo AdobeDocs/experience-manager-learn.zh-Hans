@@ -1,7 +1,7 @@
 ---
 title: 了解核心组件
 description: 'AEM核心组件是要与Adobe Experience Manager一起使用的标准组件。 核心组件以Adobe的最佳实践和标准为构建基础，为任何Sites实施提供一组基准功能。 '
-feature: 核心组件
+feature: Core Components
 topics: authoring
 audience: all
 activity: use
@@ -9,9 +9,9 @@ doc-type: feature video
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4676
 thumbnail: 18926.jpg
-topic: 开发
-role: 业务从业者
-level: 初学者
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

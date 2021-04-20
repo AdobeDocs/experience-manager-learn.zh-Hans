@@ -4,16 +4,16 @@ seo-title: 带有自适应Forms的条形码服务
 description: 使用条形码服务解码条形码并从提取的数据填充表单域
 seo-description: 使用条形码服务解码条形码并从提取的数据填充表单域
 uuid: 42568b81-cbcd-479e-8d9a-cc0b244da4ae
-feature: barcoded forms
+feature: barcoded-forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1224de6d-7ca1-4e9d-85fe-cd675d03e262
-topic: 开发
-role: 开发人员
-level: 中间
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

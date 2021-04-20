@@ -1,11 +1,11 @@
 ---
 title: 理解多租与并发开发
 description: 了解使用Adobe Experience Manager Assets管理多租户实施的优势、挑战和技术。
-feature: 连接的资产
+feature: Connected Assets
 version: 6.5
-topic: 开发
-role: 开发人员
-level: 中间
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

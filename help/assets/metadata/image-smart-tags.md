@@ -1,10 +1,10 @@
 ---
 title: 使用AEM Assets为图像添加智能标签
 description: 图像的智能标记可根据图像内容自动智能地向图像资产中添加元数据标记，从而增强AEM搜索功能。
-topic: 内容管理
-feature: 智能标记
-role: 业务从业者
-level: 中间
+topic: Content Management
+feature: Smart Tags
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 645
 thumbnail: 17019.jpg

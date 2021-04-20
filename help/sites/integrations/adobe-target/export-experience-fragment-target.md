@@ -1,7 +1,7 @@
 ---
 title: 将体验片段导出到Adobe Target
 description: 了解如何将AEM Experience Fragment发布并导出为Adobe Target优惠。
-feature: 体验片段
+feature: Experience Fragments
 topics: integrations, authoring
 audience: all
 doc-type: feature video
@@ -9,9 +9,9 @@ activity: use
 version: cloud-service
 kt: 6350
 thumbnail: 41245.jpg
-topic: 集成
-role: 业务从业者
-level: 中间
+topic: Integrations
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

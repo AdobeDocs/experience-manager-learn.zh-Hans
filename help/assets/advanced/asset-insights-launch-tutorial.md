@@ -1,11 +1,11 @@
 ---
 title: 利用AEM Assets和Adobe Launch设置资产分析
 description: 在这5个部分的视频系列中，我们将演练通过Launch by Adobe部署的Experience Manager资产分析的设置和配置。
-feature: 资产分析
+feature: Asset Insights
 version: 6.3, 6.4, 6.5
-topic: 集成
-role: 开发人员
-level: 中间
+topic: Integrations
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

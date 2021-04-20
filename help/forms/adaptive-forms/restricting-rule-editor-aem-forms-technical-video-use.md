@@ -4,16 +4,16 @@ seo-title: 将规则编辑器限制为AEM Forms中的特定组
 description: 将自适应表单规则编辑器限制为AEM中的特定组
 seo-description: 将自适应表单规则编辑器限制为AEM中的特定组
 uuid: b50f3736-b72e-4154-9ca5-95e10606f4ad
-feature: 自适应表单
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 5aa35204-1c6d-4a1e-b8cd-79170653471a
-topic: 管理
-role: 业务从业者
-level: 初学者
+topic: Administration
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

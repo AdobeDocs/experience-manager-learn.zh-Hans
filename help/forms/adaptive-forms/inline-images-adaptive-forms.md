@@ -3,15 +3,15 @@ title: 在自适应Forms中显示内联图像
 seo-title: 在自适应Forms中显示内联图像
 description: 在Adaptive Forms中内联显示上传的图像
 seo-description: 在Adaptive Forms中内联显示上传的图像
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

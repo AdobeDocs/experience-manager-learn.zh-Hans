@@ -1,15 +1,15 @@
 ---
 title: 将AEM Forms与Adobe Sign结合使用
 description: Adobe Sign和AEM Forms让复杂交易实现自动化，并将合法的电子签名作为无缝数字体验的一部分。
-feature: 自适应Forms,Adobe Sign
+feature: Adaptive Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

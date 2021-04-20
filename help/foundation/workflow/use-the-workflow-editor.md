@@ -2,10 +2,10 @@
 title: 如何在AEM中创建工作流
 description: 工作流支持Experience Manager中的业务流程管理，用于自动处理内容并促进需要人力决策的治理和流程。
 version: 6.4, 6.5, cloud-service
-feature: 工作流
-topic: 内容管理
-level: 中间
-role: 管理员、开发人员
+feature: Workflow
+topic: Content Management
+level: Intermediate
+role: Administrator, Developer
 kt: 657
 thumbnail: 22201.jpg
 translation-type: tm+mt

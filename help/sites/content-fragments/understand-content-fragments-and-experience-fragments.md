@@ -2,15 +2,15 @@
 title: 了解内容片段和体验片段
 description: Adobe Experience Manager的内容片段和体验片段表面上看似相似，但在不同的用例中，每个片段都起着关键作用。 了解内容片段和体验片段如何相似、不同，以及何时以及如何使用。
 sub-product: 资产，站点，内容服务
-feature: 内容片段、体验片段
+feature: Content Fragments, Experience Fragments
 topics: headless
 version: 6.3, 6.4, 6.5
 doc-type: article
 activity: understand
 audience: all
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

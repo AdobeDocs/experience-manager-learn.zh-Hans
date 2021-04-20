@@ -3,11 +3,11 @@ title: AEM桌面应用程序
 description: 使用AEM桌面应用程序简化对任何应用程序和文件格式的AEM桌面上管理的任何资源的访问。
 kt: 2551
 sub-product: 资产
-feature: Experience Manager桌面应用程序
+feature: Experience Manager Desktop App
 version: 6.5, 6.4, 6.3
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

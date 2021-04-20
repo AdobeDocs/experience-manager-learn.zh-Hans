@@ -4,16 +4,16 @@ seo-title: 在自适应表单提交时创建活动用户档案
 description: 本文将说明在提交自适应表单时在Adobe Campaign Standard中创建用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
 seo-description: 本文将说明在提交自适应表单时在Adobe Campaign Standard中创建用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
 uuid: f3cb7b3c-1a1c-49eb-9447-a9e52c675244
-feature: 自适应Forms，表单数据模型
+feature: Adaptive Forms, Form Data Model
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 46ec4136-4898-4b01-86bb-ac638a29b242
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -4,8 +4,8 @@ seo-title: AEM FormsTutorials和视频
 description: 面向初学者和经验丰富的AEM Forms开发人员的AEM Forms资源集
 seo-description: 面向初学者和经验丰富的AEM Forms开发人员的AEM Forms资源集
 sub-product: 表单
-topic: 开发
-role: 开发人员
+topic: Development
+role: Developer
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

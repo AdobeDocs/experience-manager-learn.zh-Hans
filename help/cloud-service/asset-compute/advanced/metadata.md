@@ -1,7 +1,7 @@
 ---
 title: 开发Asset compute元数据工作器
 description: 了解如何创建一个Asset compute元数据worker，它派生了图像资产中最常用的颜色，并将颜色名称写回AEM中资产的元数据。
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: metadata, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: 集成、开发
-role: 开发人员
-level: 中级，经验丰富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

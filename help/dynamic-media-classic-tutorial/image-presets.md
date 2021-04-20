@@ -2,14 +2,14 @@
 title: 图像预设
 description: Dynamic Media Classic中的图像预设包含创建特定大小、格式、质量和锐化的图像所需的所有设置。 图像预设是动态调整大小的关键组件。 当您查看Dynamic Media Classic中的URL时，您可以轻松查看是否使用了图像预设。 了解图像预设、它们为何如此有用以及如何创建它们。
 sub-product: dynamic-media
-feature: Dynamic Media经典，图像预设
+feature: Dynamic Media Classic, Image Presets
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

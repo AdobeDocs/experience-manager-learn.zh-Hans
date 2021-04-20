@@ -3,15 +3,15 @@ title: 存储自适应表单数据
 seo-title: 存储自适应表单数据
 description: 将自适应表单数据存储到DataBase中，作为AEM工作流程的一部分
 seo-description: 将自适应表单数据存储到DataBase中，作为AEM工作流程的一部分
-feature: 自适应Forms，工作流，表单数据模型
+feature: Adaptive Forms,Workflow,Form Data Model
 topics: integrations
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

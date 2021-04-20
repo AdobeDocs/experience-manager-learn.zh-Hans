@@ -2,15 +2,15 @@
 title: 在AEM中创作内容片段
 description: '内容片段是AEM中的内容抽象，允许独立于它支持的渠道创作和管理基于文本的内容。 '
 sub-product: 内容服务
-feature: 内容片段
+feature: Content Fragments
 topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
 version: cloud-service
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

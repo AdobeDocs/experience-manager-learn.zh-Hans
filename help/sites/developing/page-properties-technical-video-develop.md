@@ -1,9 +1,9 @@
 ---
 title: 在AEM Sites中扩展页面属性
 description: 了解如何在Adobe Experience Manager Sites中扩展页面属性的元数据字段。 此视频详细描述了使用Sling Resource Merabile的功能实现此目的的最有效方法。
-topic: 开发
-feature: 核心组件
-role: 开发人员
+topic: Development
+feature: Core Components
+role: Developer
 version: cloud-service
 kt: 243
 thumbnail: 25173.jpg

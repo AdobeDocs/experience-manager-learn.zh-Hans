@@ -4,9 +4,9 @@ seo-title: AEM Dispatcher 缓存教程
 description: 本教程旨在帮助您更好地了解调度程序的工作方式以及如何使用它。
 seo-description: 本教程旨在帮助您更好地了解调度程序的工作方式以及如何使用它。
 feature: Dispatcher
-topic: 架构
-role: 架构师
-level: 初学者
+topic: Architecture
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: 使用Analysis Workspace分析数据
 description: 了解如何将从Adobe Experience Manager站点捕获的数据映射到Adobe Analytics报表包中的量度和维度。 了解如何使用Adobe Analytics的Analysis Workspace功能构建详细的报告仪表板。
-feature: 分析
+feature: analytics
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: setup
 version: cloud-service
 kt: 6409
 thumbnail: KT-6296.jpg
-topic: 集成
-role: 业务从业者
-level: 中间
+topic: Integrations
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,11 +2,11 @@
 title: 在AEM Dynamic Media中使用视频播放器
 description: AEM Dynamic Media视频播放器过去依赖Flash运行时支持桌面客户端和浏览器上的自适应视频流，现在在基于flash的内容流上变得更加积极。 随着HLS(苹果的HTTP实时流视频投放协议)的推出，现在无需依赖闪存即可对内容进行流处理。
 sub-product: dynamic-media
-feature: 视频配置文件
+feature: Video Profiles
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

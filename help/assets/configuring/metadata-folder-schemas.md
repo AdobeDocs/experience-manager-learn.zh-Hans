@@ -2,13 +2,13 @@
 title: 元数据文件夹模式
 description: 元数据文件夹模式允许用户管理和审阅与资产文件夹本身关联的元数据，而不是直接管理资产。
 sub-product: 资产
-feature: 元数据
+feature: Metadata
 version: cloud-service
 kt: 4983
 thumbnail: 34071.jpg
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

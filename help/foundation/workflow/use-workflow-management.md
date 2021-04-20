@@ -2,10 +2,10 @@
 title: 如何在AEM中管理工作流
 description: 'AEM工作流管理为用户提供了对工作流下内容的更多可见性，并允许更轻松地管理工作流模型定义。 '
 version: 6.5, cloud-service
-feature: 工作流
-topic: 内容管理
-role: 管理员
-level: 中间
+feature: Workflow
+topic: Content Management
+role: Administrator
+level: Intermediate
 kt: 2557
 thumbnail: 27848.jpg
 translation-type: tm+mt

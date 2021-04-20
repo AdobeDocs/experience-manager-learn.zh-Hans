@@ -4,16 +4,16 @@ seo-title: 为您的第一个交互式通信文档配置折线图
 description: 这是创建您的第一个交互式通信文档的多步教程的第8部分。 在此部分中，我们将向帐户进度面板添加折线图。
 seo-description: 这是创建您的第一个交互式通信文档的多步教程的第8部分。 在此部分中，我们将向帐户进度面板添加折线图。
 uuid: 08c3e7af-e3cb-4ee0-bdc1-d112bfa70e40
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 4292303c-3ef4-4df2-b537-fdb011412670
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -3,15 +3,15 @@ title: 为打印渠道文档创建两列布局
 seo-title: 为打印渠道文档创建两列布局
 description: 为打印渠道文档创建2列布局
 seo-description: 为打印渠道文档创建2列布局
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 开发
-role: 开发人员
-level: 中间
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -4,16 +4,16 @@ seo-title: 通过HTML5表单提交生成PDF
 description: 通过提交移动表单生成PDF
 seo-description: 通过提交移动表单生成PDF
 uuid: 61f07029-d440-44ec-98bc-f2b5eef92b59
-feature: 移动设备表单
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 816f1a75-6ceb-457b-ba18-daf229eed057
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

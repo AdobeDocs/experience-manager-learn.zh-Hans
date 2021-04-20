@@ -4,14 +4,14 @@ description: AEM服务凭据用于帮助外部应用程序、系统和服务通�
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
-feature: API
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330519.jpg
-topic: 无外设、集成
-role: 开发人员
-level: 中级，经验丰富的
+topic: Headless, Integrations
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -4,7 +4,7 @@ seo-title: 将组件添加到“收入”面板
 description: 我们将在收入小组中增加一个表格。 配置表行，并使用规则编辑器计算总计。
 seo-description: 我们将在收入小组中增加一个表格。 配置表行，并使用规则编辑器计算总计。
 uuid: d5c98561-c559-4624-976a-7a1486da7e69
-feature: 自适应表单
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,9 +13,9 @@ version: 6.4,6.5
 thumbnail: 22198.jpg
 kt: 4211
 discoiquuid: fa483260-38ff-40d8-96a7-1de11d8b792b
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

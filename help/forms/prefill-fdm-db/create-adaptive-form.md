@@ -1,7 +1,7 @@
 ---
 title: 创建自适应表单
 description: 创建并配置自适应表单以使用表单数据模型的预填服务
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 5813
 thumbnail: kt-5813.jpg
-topic: 开发
-role: 业务从业者
-level: 初学者
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

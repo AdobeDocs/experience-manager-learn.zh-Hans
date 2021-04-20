@@ -2,11 +2,11 @@
 title: 在AEM Dynamic Media中使用图像锐化
 description: 此视频介绍了锐化图像对保持图像保真度至关重要的原因，以及如何使用高级设置制作完美图像的原因。
 sub-product: dynamic-media
-feature: 图像用户档案、查看器预设
+feature: Image Profiles, Viewer Presets
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

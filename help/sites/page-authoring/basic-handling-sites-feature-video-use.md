@@ -3,7 +3,7 @@ title: AEM Sites中的基本操作
 seo-title: 在Adobe Experience Manager Sites中创建新页面
 description: 以下视频概述了使用AEM作者环境时的基本操作。 它使用站点控制台作为基础。
 seo-description: 以下视频概述了使用AEM作者环境时的基本操作。 它使用站点控制台作为基础。
-feature: 页面编辑器、可编辑模板
+feature: Page Editor, Editable Templates
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4495
 thumbnail: 31784.jpg
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

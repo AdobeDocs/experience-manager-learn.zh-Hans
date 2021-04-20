@@ -3,16 +3,16 @@ title: 将可编辑页面模板与AEM Sites
 seo-title: 将可编辑页面模板与Adobe Experience Manager Sites
 description: 可编辑的模板允许专业作者使用AEM Sites创建和更新页面模板以及管理高级策略配置。
 seo-description: 可编辑的模板允许专业作者使用Adobe Experience Manager Sites创建和更新页面模板以及管理高级策略配置。
-feature: 可编辑的模板
+feature: Editable Templates
 topics: authoring
 audience: all
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 kt: 193
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

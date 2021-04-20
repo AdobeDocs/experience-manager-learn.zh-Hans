@@ -2,12 +2,12 @@
 title: 添加和配置工具栏
 description: 添加在表单面板之间导航的功能。
 solution: Experience Manager Forms
-type: 文档
-role: 开发人员
-level: 初学者，中级
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 自适应表单
-topic: 开发
+feature: Adaptive Forms
+topic: Development
 kt: 7389
 thumbnail: 332236.jpg
 translation-type: tm+mt

@@ -1,10 +1,10 @@
 ---
 title: AEM无外设入门 — 内容服务
 description: 一个端到端教程，它演示了如何使用 AEM Headless 构建和展示内容。
-feature: 内容片段、API
-topic: 无头、内容管理
-role: 开发人员
-level: 初学者
+feature: Content Fragments, APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

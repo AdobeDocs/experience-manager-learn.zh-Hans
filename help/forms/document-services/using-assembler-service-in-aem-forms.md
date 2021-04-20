@@ -4,16 +4,16 @@ seo-title: 在AEM Forms中使用Assembler服务
 description: 使用AEM Forms中的Assembler Service组合多个pdf文件
 seo-description: 使用AEM Forms中的Assembler Service组合多个pdf文件
 uuid: 7895b1a3-6f9d-4413-bb7f-692ea0380fcd
-feature: 汇编程序
+feature: Assembler
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: a12f52af-7039-4452-a58d-9ad2c0096347
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

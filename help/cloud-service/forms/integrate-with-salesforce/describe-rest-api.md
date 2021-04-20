@@ -2,12 +2,12 @@
 title: 创建描述Salesforce REST API的Swagger文件
 description: Swagger文件将定义API端点以及输入和输出参数
 solution: Experience Manager, Experience Manager Forms
-type: 文档
-role: 开发人员
-level: 初学者，中级
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 自适应表单
-topic: 开发
+feature: Adaptive Forms
+topic: Development
 kt: 7147
 thumbnail: 331754.jpg
 translation-type: tm+mt

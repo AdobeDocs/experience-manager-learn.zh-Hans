@@ -2,10 +2,10 @@
 title: 将智能翻译搜索与AEM Assets结合使用
 description: 智能翻译搜索可自动跨AEM内容（资产和页面）实现跨语言搜索和发现，支持50多种语言，并减少了手动内容翻译的需求。
 version: 6.3, 6.4, 6.5
-feature: 搜索
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+feature: Search
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

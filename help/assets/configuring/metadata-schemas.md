@@ -2,13 +2,13 @@
 title: 元数据架构
 description: 元数据模式定义了用户与AEM中的资产元数据交互的界面，而元数据的定义和资产应用程序对于数字资产管理至关重要。
 sub-product: 资产
-feature: 元数据
+feature: Metadata
 version: cloud-service
 kt: 4981
 thumbnail: 33696.jpg
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

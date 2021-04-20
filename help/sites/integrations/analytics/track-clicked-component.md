@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe Analytics跟踪已点击的组件
 description: 使用事件驱动的Adobe Client Data层跟踪Adobe Experience Manager站点上特定组件的单击。 了解如何在Experience Platform Launch中使用规则来侦听这些事件，并使用跟踪链接信标将数据发送到Adobe Analytics。
-feature: 分析
+feature: analytics
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: setup
 version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
-topic: 集成
-role: 开发人员
-level: 中间
+topic: Integrations
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

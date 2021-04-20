@@ -3,10 +3,10 @@ title: 使用Adobe Target Visual Experience Composer实现个性化
 seo-title: 使用Adobe Target Visual Experience Composer(VEC)实现个性化
 description: 一个端到端教程，其中演示了如何使用Adobe Target Visual Experience Composer(VEC)创建和提供个性化体验。
 seo-description: 一个端到端教程，其中演示了如何使用Adobe Target Visual Experience Composer(VEC)创建和提供个性化体验。
-feature: 体验片段
-topic: 个性化
-role: 开发人员
-level: 中间
+feature: Experience Fragments
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

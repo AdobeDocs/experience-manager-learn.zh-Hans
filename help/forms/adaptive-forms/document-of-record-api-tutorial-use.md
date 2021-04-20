@@ -3,7 +3,7 @@ title: 使用API通过AEM Forms生成记录文档
 seo-title: 使用API通过AEM Forms生成记录文档
 description: 以编程方式生成记录文档(DOR)
 seo-description: 使用API通过AEM Forms生成记录文档
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
@@ -11,9 +11,9 @@ activity: implement
 version: 6.4,6.5
 uuid: 94ac3b13-01b4-4198-af81-e5609c80324c
 discoiquuid: ba91d9df-dc61-47d8-8e0a-e3f66cae6a87
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

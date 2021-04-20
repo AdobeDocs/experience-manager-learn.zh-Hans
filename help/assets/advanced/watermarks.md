@@ -1,13 +1,13 @@
 ---
 title: AEM Assets中的水印
 description: AEM作为Cloud Service的水印功能，允许使用任何PNG图像对自定义图像演绎版进行水印。
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 version: cloud-service
 kt: 6357
 thumbnail: 41536.jpg
-topic: 内容管理
-role: 开发人员
-level: 中间
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

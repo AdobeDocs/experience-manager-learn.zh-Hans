@@ -1,7 +1,7 @@
 ---
 title: 使用AEM组件自定义Adobe客户端数据层
 description: 了解如何使用自定义AEM组件中的内容自定义Adobe客户端数据层。 了解如何使用AEM核心组件提供的API扩展和自定义数据层。
-feature: Adobe客户端数据层，核心组件
+feature: Adobe Client Data Layer, Core Component
 topics: integrations
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: use
 version: cloud-service
 kt: 6265
 thumbnail: KT-6265.jpg
-topic: 集成
-role: 开发人员
-level: 中级，经验丰富的
+topic: Integrations
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

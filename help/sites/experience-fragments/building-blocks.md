@@ -3,10 +3,10 @@ title: 如何使用体验片段构建块
 description: 构建块是体验片段的子功能，可在不同体验片段之间重复使用创作的组件。
 sub-product: 站点，内容服务
 version: cloud-service
-feature: 体验片段
-topic: 内容管理
-level: 初学者，中级
-role: 架构师、开发人员、管理员、业务从业者
+feature: Experience Fragments
+topic: Content Management
+level: Beginner, Intermediate
+role: Architect, Developer, Administrator, Business Practitioner
 doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg

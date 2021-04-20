@@ -3,9 +3,9 @@ title: 将Adobe Asset Link Extension与AEM Assets结合使用
 description: 'Adobe Experience Manager资源现在供设计人员和创意用户在他们喜爱的Adobe Creative Cloud桌面应用程序中使用。 Adobe Asset Link Extension for Adobe Creative Cloud Enterprise扩展了在Adobe Photoshop、InDesign和Illustrator等Creative Cloud工具中搜索和浏览AEM资产、排序、预览、上传资产、签出、修改、签入和视图元数据的功能。 '
 feature: Adobe Asset Link
 version: 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

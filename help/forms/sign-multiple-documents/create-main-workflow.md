@@ -1,7 +1,7 @@
 ---
 title: 创建主工作流以触发签名进程
 description: 创建将表单存储在数据库中以供签名的工作流
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6887.jpg
 kt: 6887
-topic: 开发
-role: 开发人员
-level: 中间
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

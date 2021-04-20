@@ -1,15 +1,15 @@
 ---
 title: 在AEM中设置翻译规则
 description: 翻译配置UI允许用户管理在AEM Sites中翻译内容的规则。 此视频详细介绍了如何为自定义组件创建新的翻译规则。
-feature: 语言复制
+feature: Language Copy
 topics: localization, content-architecture
 audience: developer, administrator
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
-topic: 本地化
-role: 业务从业者
-level: 初学者
+topic: Localization
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

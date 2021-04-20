@@ -4,16 +4,16 @@ seo-title: 在AEM Forms中使用事务报告
 description: AEM Forms中的事务报表允许您对自指定日期以来在AEM Forms部署中发生的所有事务进行计数。
 seo-description: AEM Forms中的事务报表允许您对自指定日期以来在AEM Forms部署中发生的所有事务进行计数。
 uuid: e6133f7e-c79c-4006-89e7-3bebf7b8229e
-feature: 自适应表单
+feature: Adaptive Forms
 topics: developing
 audience: administrator
 doc-type: article
 activity: setup
 version: 6.4.1,6.5
 discoiquuid: 1abdf07a-b9f0-4c58-a1c6-08ae57db2014
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

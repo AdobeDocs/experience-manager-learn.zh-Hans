@@ -1,10 +1,10 @@
 ---
 title: 如何将现有AMS调度程序配置迁移到AEM作为Cloud Service
 description: 将AEM Dispatcher配置从Adobe Managed Services(AMS)迁移到AEM作为Cloud Service的提示与技巧。
-role: 架构师、开发人员
-level: 初学者
-type: 教程
-topic: 开发、迁移
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Development, Migration
 feature: Dispatcher
 kt: 6931
 thumbnail: 330556.jpg

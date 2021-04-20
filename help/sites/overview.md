@@ -4,7 +4,7 @@ seo-title: AEM Sites 教程
 description: 'Adobe Experience Manager Sites 的视频和教程集合。 '
 seo-description: 一系列针对Adobe Experience Manager Sites的视频和教程
 sub-product: 站点，内容服务
-topic: 内容管理
+topic: Content Management
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

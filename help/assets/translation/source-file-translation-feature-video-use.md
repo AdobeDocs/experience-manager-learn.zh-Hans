@@ -2,9 +2,9 @@
 title: 将源文件翻译与AEM Assets一起使用
 description: Adobe Experience Manager(AEM)资产可让您识别共享常见属性的资产，并使用新增的“相关资产”功能将其标记为“相关”。 它还允许用户定义资产之间的源/派生关系，使用户能轻松识别资产的来源。 对派生资产运行翻译工作流会获取源文件引用的任何资产并将其包含在翻译中，从而减少维护多站点的工作。
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 中间
+topic: Content Management
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

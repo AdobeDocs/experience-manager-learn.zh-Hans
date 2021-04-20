@@ -2,14 +2,14 @@
 title: 图像、色板、旋转和混合媒体集
 description: Dynamic Media Classic最有用、最强大的功能之一是支持创建富媒体集，如图像、色板、旋转和混合媒体集。 了解每个富媒体集的内容以及如何在Dynamic Media Classic中创建每种类型。 然后进一步了解批集预设，它可以在上传时自动创建富媒体集。
 sub-product: dynamic-media
-feature: Dynamic Media经典、图像集、混合媒体集、旋转集
+feature: Dynamic Media Classic, Image Sets, Mix Media Sets, Spin Sets
 doc-type: tutorial
 topics: sets, development, authoring, configuring
 audience: all
 activity: use
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

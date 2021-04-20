@@ -1,11 +1,11 @@
 ---
 title: 将连接资源与AEM Sites
 description: 通过“已连接资产”功能，AEM Sites作者可以无缝共享托管在AEM其他实例上的数字资产。
-feature: 连接的资产
+feature: Connected Assets
 version: 6.5
-topic: 内容管理
-role: 开发人员
-level: 中间
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

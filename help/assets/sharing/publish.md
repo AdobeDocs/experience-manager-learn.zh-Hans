@@ -2,13 +2,13 @@
 title: 如何使用AEM发布资产
 description: 了解如何将资产及其演绎版从AEM作者发布到AEM发布。
 sub-product: 资产
-feature: 资产管理
+feature: Asset Management
 version: cloud-service
 kt: 330932
 thumbnail: 32194.jpg
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

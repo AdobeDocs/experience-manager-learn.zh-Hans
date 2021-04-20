@@ -4,7 +4,7 @@ seo-title: 提交POST时打开代理UI
 description: 这是创建用于打印渠道的第一个交互式通信文档的多步教程的第11部分。 在本部分中，我们将启动代理用户界面，以便在提交表单时创建临时通信。
 seo-description: 这是创建用于打印渠道的第一个交互式通信文档的多步教程的第11部分。 在本部分中，我们将启动代理用户界面，以便在提交表单时创建临时通信。
 uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,9 +12,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6168
 thumbnail: 40122.jpg
-topic: 开发
-role: 开发人员
-level: 中间
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

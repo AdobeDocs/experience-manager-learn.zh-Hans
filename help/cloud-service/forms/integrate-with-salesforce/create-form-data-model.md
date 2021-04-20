@@ -2,12 +2,12 @@
 title: 基于Salesforce数据源创建表单数据模型
 description: 创建由RESTful数据源支持的表单数据模型
 solution: Experience Manager, Experience Manager Forms
-type: 文档
-role: 开发人员
-level: 初学者，中级
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 自适应表单
-topic: 开发
+feature: Adaptive Forms
+topic: Development
 kt: 7149
 thumbnail: 331756.jpg
 translation-type: tm+mt

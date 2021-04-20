@@ -3,10 +3,10 @@ title: 将Adobe Experience Manager与Adobe Target集成
 seo-title: 一篇文章介绍了将Adobe Experience Manager(AEM)与Adobe Target集成以交付个性化内容的不同方式。
 description: 一篇文章，其中介绍如何针对不同场景使用Adobe Target设置Adobe Experience Manager。
 seo-description: 一篇文章，其中介绍如何针对不同场景使用Adobe Target设置Adobe Experience Manager。
-feature: 体验片段
-topic: 个性化
-role: 开发人员
-level: 中间
+feature: Experience Fragments
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,13 +2,13 @@
 title: 基线权限
 description: 管理基准资产文件夹上的用户访问权限是管理的一个重要方面，并确保可以正确支持这些流程。
 sub-product: 资产
-feature: 资产管理
+feature: Asset Management
 version: cloud-service
 kt: 4870
 thumbnail: 37696.jpg
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -4,16 +4,16 @@ seo-title: 将服务数据模型与AEM Forms结合使用
 description: AEM Adaptive Forms的规则编辑器可以利用在表单数据模型中创建的服务。
 seo-description: AEM Adaptive Forms的规则编辑器可以利用在表单数据模型中创建的服务。
 uuid: fb4a331f-231a-4864-9325-6dceb288ad75
-feature: 自适应Forms，表单数据模型
+feature: Adaptive Forms, Form Data Model
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: e3ff47c3-9ab3-41cb-83ba-38f3eb7b2299
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

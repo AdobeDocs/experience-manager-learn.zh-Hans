@@ -1,10 +1,10 @@
 ---
 title: 将时间扭曲与AEM Sites
 description: 时间扭曲是Adobe Experience Manager Sites的一项功能，它为作者提供了快速方法来审阅页面在过去特定时间的状态。
-topic: 内容管理
-feature: 创作
-role: 业务从业者
-level: 中间
+topic: Content Management
+feature: Authoring
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 3307
 thumbnail: 17453.jpg

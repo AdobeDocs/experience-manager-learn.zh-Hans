@@ -2,9 +2,9 @@
 title: '"第3章 — 高级调度程序缓存主题"'
 description: 这是要在AEM中缓存的三部分系列的第3部分。 前两个部分侧重于调度程序中的纯http缓存以及存在哪些限制。 本部分讨论了如何克服这些限制的一些想法。
 feature: Dispatcher
-topic: 架构
-role: 架构师
-level: 中间
+topic: Architecture
+role: Architect
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

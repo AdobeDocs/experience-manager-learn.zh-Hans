@@ -1,15 +1,15 @@
 ---
 title: 了解使用AEM Sites的样式系统最佳实践
 description: 一篇详细的文章，介绍在使用Adobe Experience Manager Sites实施样式系统时的最佳实践。
-feature: 样式系统
+feature: Style System
 topics: development, components, front-end-development
 audience: developer
 doc-type: article
 activity: understand
 version: 6.4, 6.5
-topic: 开发
-role: 开发人员
-level: 中级，经验丰富的
+topic: Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

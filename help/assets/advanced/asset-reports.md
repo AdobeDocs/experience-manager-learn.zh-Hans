@@ -1,10 +1,10 @@
 ---
 title: AEM Assets中的资产报表
 description: 'AEM Assets提供企业级报告框架，可通过直观的用户体验扩展到大型存储库。 '
-feature: 资产报表
-topic: 管理
-role: 业务从业者
-level: 中间
+feature: Asset Reports
+topic: Administration
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 648
 thumbnail: 22140.jpg

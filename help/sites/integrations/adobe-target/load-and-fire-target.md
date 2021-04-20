@@ -1,7 +1,7 @@
 ---
 title: 加载和触发目标呼叫
 description: 了解如何使用启动规则加载、将参数传递给页面请求以及从您的网站页面触发目标调用。 页面信息是使用Adobe客户端数据层检索并作为参数传递的，该层允许您在网页上收集和存储有关访客体验的数据，然后使访问此数据更加容易。
-feature: 核心组件，Adobe客户端数据层
+feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
@@ -9,9 +9,9 @@ activity: setup
 version: cloud-service
 kt: 6133
 thumbnail: 41243.jpg
-topic: 集成
-role: 开发人员
-level: 中间
+topic: Integrations
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

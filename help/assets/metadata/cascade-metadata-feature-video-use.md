@@ -2,10 +2,10 @@
 title: 在AEM Assets中使用级联元数据
 description: 高级元数据管理允许用户创建级联字段规则，以在AEM Assets中的元数据之间形成上下文关系。 以下视频演示了有关字段要求、可见性和上下文选择的新动态规则。 该视频还详细介绍了管理员将这些规则应用到自定义元数据模式所需的步骤。
 version: 6.3, 6.4, 6.5, cloud-service
-topic: 内容管理
-feature: 元数据
-role: 业务从业者
-level: 中间
+topic: Content Management
+feature: Metadata
+role: Business Practitioner
+level: Intermediate
 kt: 616
 thumbnail: 20702.jpg
 translation-type: tm+mt

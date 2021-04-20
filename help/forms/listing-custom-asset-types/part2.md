@@ -4,16 +4,16 @@ seo-title: 在AEM Forms中列出自定义资产类型
 description: 在AEM Forms中列出自定义资产类型的第2部分
 seo-description: 在AEM Forms中列出自定义资产类型的第2部分
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,11 +2,11 @@
 title: 将Dynamic Media 360视频和自定义视频缩略图与AEM Assets结合使用
 description: Dynamic Media 6.5中的Adobe Viewer增强功能包括新增了对360视频渲染、360媒体查看器（video360Social和video360VR）的支持以及选择自定义视频缩略图的功能。
 sub-product: dynamic-media
-feature: 视频配置文件
+feature: Video Profiles
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

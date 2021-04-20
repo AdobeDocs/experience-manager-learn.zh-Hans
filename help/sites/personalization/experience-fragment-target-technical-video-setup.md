@@ -4,7 +4,7 @@ seo-title: 在AEM中设置体验片段和Adobe Target集成
 description: Adobe Experience Manager 6.4重新构思了AEM和目标之间的个性化工作流程。 现在，在AEM中创建的体验可以作为HTML优惠直接交付到Adobe Target。 它使营销人员能够跨不同渠道无缝测试和个性化内容。
 seo-description: Adobe Experience Manager 6.4重新构思了AEM和目标之间的个性化工作流程。 现在，在AEM中创建的体验可以作为HTML优惠直接交付到Adobe Target。 它使营销人员能够跨不同渠道无缝测试和个性化内容。
 sub-product: 内容服务
-feature: 体验片段
+feature: Experience Fragments
 topics: integrations
 audience: administrator, developer
 doc-type: technical video
@@ -12,9 +12,9 @@ activity: setup
 version: 6.4, 6.5
 uuid: 05fd477d-0c1a-42c0-ab92-2bca86602e2e
 discoiquuid: 16cb0b92-9398-4fd2-b8c3-f4b7675ef72c
-topic: 个性化
-role: 管理员、开发人员
-level: 中间
+topic: Personalization
+role: Administrator, Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

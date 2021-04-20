@@ -2,7 +2,7 @@
 title: 将AEM的Dispatcher Tools设置为Cloud Service开发
 description: AEM SDK的Dispatcher Tools通过使本地安装、运行Dispatcher并解决其疑难问题变得轻松，从而简化了Adobe Experience Manager(AEM)项目的本地开发。
 sub-product: 基础
-feature: Dispatcher，开发人员工具
+feature: Dispatcher, Developer Tools
 topics: development, caching, security
 version: cloud-service
 doc-type: tutorial
@@ -10,9 +10,9 @@ activity: develop
 audience: developer
 kt: 4679
 thumbnail: 30603.jpg
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

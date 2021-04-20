@@ -1,7 +1,7 @@
 ---
 title: 从MySQL数据库存储和检索带有附件的表单数据
 description: 多部分教程，指导您逐步了解使用附件存储和检索表单数据所涉及的步骤
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6593
 thumbnail: 327122.jpg
-topic: 开发
-role: 开发人员
-level: 富有经验
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

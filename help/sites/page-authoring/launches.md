@@ -1,10 +1,10 @@
 ---
 title: 如何在AEM Sites中使用启动项
 description: AEM Sites中的启动项提供了一种创建、创作和审阅内容的方式，以供将来发布。
-topic: 内容管理
-feature: 启动项
-level: 中级，经验丰富的
-role: 管理员
+topic: Content Management
+feature: Launches
+level: Intermediate, Experienced
+role: Administrator
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 6970
 thumbnail: 331285.jpg

@@ -1,15 +1,15 @@
 ---
 title: 在AEM Sites中为页面差异开发
 description: 此视频演示如何为AEM Sites的“页面差异”功能提供自定义样式。
-feature: 创作
+feature: Authoring
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

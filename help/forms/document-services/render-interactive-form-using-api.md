@@ -3,15 +3,15 @@ title: 在AEM Forms中使用输出和Forms服务进行开发
 seo-title: 在AEM Forms中使用输出和Forms服务进行开发
 description: 在AEM Forms中使用输出和Forms Service API
 seo-description: 在AEM Forms中使用输出和Forms Service API
-feature: 表单服务
+feature: Forms Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 开发
-role: 开发人员
-level: 中间
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

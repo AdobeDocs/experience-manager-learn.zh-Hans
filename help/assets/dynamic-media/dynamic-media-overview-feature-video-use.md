@@ -2,11 +2,11 @@
 title: Dynamic Media与AEM Assets概述
 description: 此视频系列概述了如何使用Adobe Experience Manager Dynamic Media作为内容服务服务来管理和访问媒体内容。 Dynamic Media可让您管理和发布动态数字体验 — 这是Experience Manager资产特有的功能。 我们的框架和组件套件使营销人员能够在所有设备上自定义和提供交互式多媒体体验。
 sub-product: dynamic-media
-feature: 智能裁剪、用户档案、图像用户档案、查看器预设、360 VR视频、图像集、旋转集
+feature: Smart Crop, Video Profiles, Image Profiles, Viewer Presets, 360 VR Video, Image Sets, Spin Sets
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 业务从业者
-level: 初学者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

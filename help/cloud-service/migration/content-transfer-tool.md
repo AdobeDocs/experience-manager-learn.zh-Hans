@@ -4,14 +4,14 @@ description: 建议使用内容传输工具将内容从AEM的内部部署或AMS�
 version: cloud-service
 doc-type: technical-video
 topics: migration
-feature: 迁移
+feature: Migration
 activity: develop
 audience: developer
 kt: 5352
 thumbnail: kt-5352.jpg
-topic: 迁移
-role: 架构师、开发人员
-level: 初学者
+topic: Migration
+role: Architect, Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

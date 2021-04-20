@@ -1,16 +1,16 @@
 ---
 title: 具有单个签名者的自适应表单
 description: 具有单个签名者的自适应表单。 该视频介绍了配置具有单个签名者的自适应表单所需的各种步骤。
-feature: 自适应Forms,Adobe Sign
+feature: Adaptive Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39475.jpg
 kt: 6103
-topic: 开发
-role: 业务从业者
-level: 初学者
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

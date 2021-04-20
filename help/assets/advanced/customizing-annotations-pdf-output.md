@@ -1,11 +1,11 @@
 ---
 title: 在AEM Assets中自定义注释
 description: AEM Assets格式和样式。
-feature: 协作
+feature: Collaboration
 version: 6.3, 6.4, 6.5
-topic: 协作
-role: 开发人员
-level: 中间
+topic: Collaboration
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

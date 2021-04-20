@@ -2,13 +2,13 @@
 title: 处理配置文件
 description: 处理用户档案将要为AEM中的资产创建的演绎版定义为Cloud Service。
 sub-product: 资产
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 version: cloud-service
 kt: 4993
 thumbnail: 35597.jpg
-topic: 集成
-role: 开发人员
-level: 初学者
+topic: Integrations
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

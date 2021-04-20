@@ -2,9 +2,9 @@
 title: “第1章 — 调度程序概念、模式和反模式”
 description: 本章简要介绍Dispatcher的历史和机制，并讨论这如何影响AEM开发人员设计其组件的方式。
 feature: Dispatcher
-topic: 架构
-role: 架构师
-level: 初学者
+topic: Architecture
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

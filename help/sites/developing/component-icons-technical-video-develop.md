@@ -6,10 +6,10 @@ audience: administrator, developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
-feature: 核心组件
-topic: 开发
-role: 业务从业者
-level: 中间
+feature: Core Components
+topic: Development
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

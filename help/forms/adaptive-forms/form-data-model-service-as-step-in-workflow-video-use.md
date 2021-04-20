@@ -4,16 +4,16 @@ seo-title: 在工作流中使用表单数据模型服务
 description: 从AEM Forms 6.4开始，我们现在能够将表单数据模型用作AEM工作流的一部分。 以下视频将逐步介绍在AEM工作流中配置表单数据模型步骤所需的步骤。
 seo-description: 从AEM Forms 6.4开始，我们现在能够将表单数据模型用作AEM工作流的一部分。 以下视频将逐步介绍在AEM工作流中配置表单数据模型步骤所需的步骤。
 uuid: ecd5d5aa-01eb-48fb-872f-66c656ae14df.
-feature: 工作流
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: c442f439-1e5d-4f96-85df-b818c28389ff
-topic: 开发
-role: 开发人员
-level: 中间
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

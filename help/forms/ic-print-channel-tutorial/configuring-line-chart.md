@@ -4,7 +4,7 @@ seo-title: 为您的第一个交互式通信文档配置折线图
 description: 这是创建用于打印渠道的第一个交互式通信文档的多步教程的第8部分。 在此部分中，我们将添加折线图以显示帐户余额。
 seo-description: 这是创建用于打印渠道的第一个交互式通信文档的多步教程的第8部分。 在此部分中，我们将添加折线图以显示帐户余额。
 uuid: a4394874-a080-4b6a-a3eb-ffc71504919d
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,9 +13,9 @@ version: 6.4,6.5
 discoiquuid: 9110e5c6-50ee-4c3e-a779-b680ff49ef23
 kt: 5993
 thumbnail: 22386.jpg
-topic: 开发
-role: 开发人员
-level: 初学者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

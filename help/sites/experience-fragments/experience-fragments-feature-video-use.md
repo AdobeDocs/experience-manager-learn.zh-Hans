@@ -2,10 +2,10 @@
 title: 使用AEM Experience Fragments
 description: 体验片段使内容作者能够在包括站点页面和第三方系统在内的渠道中重复使用内容。
 sub-product: 站点，内容服务
-feature: 体验片段
-topic: 内容管理
-role: 架构师、开发人员、管理员、业务从业者
-level: 初学者
+feature: Experience Fragments
+topic: Content Management
+role: Architect, Developer, Administrator, Business Practitioner
+level: Beginner
 doc-type: feature video
 version: cloud-service
 kt: 194

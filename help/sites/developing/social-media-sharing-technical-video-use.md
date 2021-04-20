@@ -1,15 +1,15 @@
 ---
 title: 在AEM Sites中使用社交媒体共享
 description: 浏览设置和使用社交媒体共享组件。
-feature: 核心组件
+feature: Core Components
 topics: integrations
 audience: developer, implementer
 doc-type: technical video
 activity: setup
 version: 6.3, 6.4, 6.5
-topic: 内容管理
-role: 开发人员
-level: 中间
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,15 +2,15 @@
 title: 使用AEM SPA Editor进行开发 — Hello World教程
 description: AEM SPA Editor支持单页应用程序或SPA的上下文编辑。 本教程介绍了要与AEM SPA Editor JS SDK一起使用的SPA开发。 本教程将通过添加自定义Hello World组件来扩展We.Retail日志应用程序。 用户可以使用React或Angular框架完成教程。
 sub-product: 站点，内容服务
-feature: Spa编辑器
+feature: Spa Editor
 topics: development, single-page-applications
 audience: developer
 doc-type: tutorial
 activity: use
 version: 6.3, 6.4, 6.5
 topic: SPA
-role: 开发人员
-level: 初学者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
