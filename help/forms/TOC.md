@@ -6,9 +6,9 @@ user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员
 breadcrumb-title: AEM Forms 教程
 index: y
 translation-type: tm+mt
-source-git-commit: 1e945afddda3d7735005029952a9d7ec46828bc6
+source-git-commit: da7837d45a9d5f614a4f6527b7bfe98aaf980d4f
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '952'
 ht-degree: 6%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 6%
 
 + 自适应表单 {#adaptive-forms}
    + [在Windows上安装AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
+   + [在Linux上安装32位软件包](adaptive-forms/installing-aem-form-on-linux.md)
    + [自适应Forms中的预填服务](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [自适应Forms中的自定义提交](adaptive-forms/custom-submit-aem-forms-article.md)
    + [自适应Forms中的Captcha](adaptive-forms/forms-captcha-feature-video-use.md)
