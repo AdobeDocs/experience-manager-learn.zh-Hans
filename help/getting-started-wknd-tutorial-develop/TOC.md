@@ -10,10 +10,10 @@ user-guide-description: 面向不熟悉 AEM 的开发人员的多部分教程。
 breadcrumb-title: AEM Sites WKND 教程
 index: y
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 66%
+source-wordcount: '59'
+ht-degree: 64%
 
 ---
 
@@ -21,10 +21,12 @@ ht-degree: 66%
 # AEM Sites - WKND 教程快速入门 {#getting-started-wknd-tutorial-develop}
 
 + [WKND教程概述](overview.md)
-+ [1 — 项目设置](project-setup.md)
-+ [2 — 组件基础](component-basics.md)
-+ [3 — 页面和模板](pages-templates.md)
-+ [4 — 客户端库](client-side-libraries.md)
-+ [5 — 样式系统](style-system.md)
-+ [6 — 自定义组件](custom-component.md)
-+ [7 — 单元测试](unit-testing.md)
++ 原型{#project-archetype}
+   + [概述](./project-archetype/overview.md)
+   + [1 — 项目设置](./project-archetype/project-setup.md)
+   + [2 — 组件基础](./project-archetype/component-basics.md)
+   + [3 — 页面和模板](./project-archetype/pages-templates.md)
+   + [4 — 客户端库](./project-archetype/client-side-libraries.md)
+   + [5 — 样式系统](./project-archetype/style-system.md)
+   + [6 — 自定义组件](./project-archetype/custom-component.md)
+   + [7 — 单元测试](./project-archetype/unit-testing.md)
