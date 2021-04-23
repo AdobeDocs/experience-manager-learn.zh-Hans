@@ -1,23 +1,14 @@
 ---
 title: AEM无外设入门 — GraphQL
-description: 一个端到端教程，演示如何使用AEM GraphQL API构建和公开内容。
-sub-product: 站点
-topics: headless
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-mini-toc-levels: 1
-kt: 6678
-thumbnail: 328618.jpg
-feature: Content Fragments, GraphQL APIs
-topic: Headless, Content Management
+description: AEM GraphQL API和功能概述。
+feature: 内容片段、API
+topic: 无头、内容管理
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
@@ -25,30 +16,18 @@ ht-degree: 0%
 
 # AEM无外设入门 — GraphQL
 
-一个端到端教程，演示如何在无外设CMS场景中使用AEM GraphQL API构建和公开内容并由外部应用程序使用。
-
-本教程探讨如何使用AEM GraphQL API和无外设功能为外部应用程序中呈现的体验提供动力。
-
-本教程将涵盖以下主题：
-
-* 在AEM中创建内容片段模型以为参与者建模
-* 使用新创建的内容片段模型创作参与者内容片段
-* 了解如何使用集成的GraphiQL开发工具查询AEM中的内容片段。
-* 从示例WKND GraphQL React应用程序使用AEM GraphQL API
-* 使用片段引用执行高级数据建模
-
-## GraphQL概述
-
-以下视频概述了在AEM中实现的GraphQL API。 AEM中的GraphQL API主要设计为将内容片段数据交付到下游应用程序，作为无外设部署的一部分。
-
 >[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
 
-## 开始吧！
+此视频概述了在AEM中实现的GraphQL API。 AEM中的GraphQL API主要设计为将AEM内容片段作为无外设部署的一部分交付到下游应用程序。
 
-开始AEM GraphQL教程，方法是跳转到[快速设置](./setup.md)一章！
+## AEM无外设图形QL视频系列
 
-## GitHub项目
+通过内容片段和AEM GraphQL API和开发工具的深入演练了解AEM GraphQL功能。
 
-[AEM指南 — WKND GraphQL GitHub项目](https://github.com/adobe/aem-guides-wknd-graphql)中提供了源代码和内容包。
++ [AEM无外设图形QL视频系列](./video-series/modeling-basics.md)
 
-如果您发现教程或代码存在问题，请保留[GitHub问题](https://github.com/adobe/aem-guides-wknd-graphql/issues)。
+## AEM无外设图形QL实践教程
+
+通过构建通过AEM GraphQL API消费内容片段的React应用程序，了解AEM GraphQL功能。
+
++ [AEM无外设图形QL实践教程](./multi-step/overview.md)
