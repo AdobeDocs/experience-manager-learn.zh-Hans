@@ -14,9 +14,9 @@ topic: 内容管理，开发
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: e8c36a85bc47adbf76e614f245c3f47d7a50826e
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3016'
 ht-degree: 0%
 
 ---
@@ -212,8 +212,10 @@ _如果系统上同时安装了Java 8和Java 11，则VS代码测试运行程序�
 
    单元测试文件`Test`后缀`BylineImplTest.java`是一种约定，它允许我们
 
-   1.轻松将其标识为_`BylineImpl.java`的测试文件_
-   2.同时，将测试文件_与_&#x200B;要测试的类区分开，`BylineImpl.java`
+   1. 轻松将其标识为&#x200B;_`BylineImpl.java`的测试文件_
+   1. 但是，将测试文件&#x200B;_与要测试的类_&#x200B;区分开， `BylineImpl.java`
+
+
 
 ## 查看BylineImplTest.java {#reviewing-bylineimpltest-java}
 
