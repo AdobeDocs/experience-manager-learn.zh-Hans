@@ -11,10 +11,10 @@ activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 28%
+source-wordcount: '135'
+ht-degree: 25%
 
 ---
 
@@ -37,6 +37,15 @@ ht-degree: 28%
       + [5 — 来自外部应用程序的查询](./graphql/multi-step/graphql-and-external-app.md)
       + [6 — 使用片段引用进行高级数据建模](./graphql/multi-step/fragment-references.md)
       + [7 — 生产部署](./graphql/multi-step/production-deployment.md)
++ SPA Editor{#spa-editor}
+   + 远程SPA{#remote-spa}
+      + [概述](./spa-editor/remote-spa/overview.md)
+      + [1 — 快速设置](./spa-editor/remote-spa/quick-setup.md)
+      + [2 — 配置AEM](./spa-editor/remote-spa/aem-configure.md)
+      + [3 -BootstrapSPA](./spa-editor/remote-spa/spa-bootstrap.md)
+      + [4 — 固定组件](./spa-editor/remote-spa/spa-fixed-component.md)
+      + [5 -容器组件](./spa-editor/remote-spa/spa-container-component.md)
+      + [6 — 动态路由](./spa-editor/remote-spa/spa-dynamic-routes.md)
 + 基于令牌的身份验证{#authentication}
    + [概述](./authentication/overview.md)
    + [1 — 本地开发访问令牌](./authentication/local-development-access-token.md)
