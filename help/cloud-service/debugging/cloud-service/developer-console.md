@@ -9,14 +9,14 @@ activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
-topic: Development
+topic: 开发
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 048a37a9813e7b61ff069c4606b8d23cc6b6844f
 workflow-type: tm+mt
-source-wordcount: '1349'
-ht-degree: 1%
+source-wordcount: '1351'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +34,7 @@ AEM as a Cloud Service为每个环境提供一个开发人员控制台，该控�
 1. 确保已将Cloud Manger和AEM作为Cloud Service产品的Adobe组织在Adobe组织切换程序中处于活动状态。
 1. 开发人员必须是Cloud Manager产品&#x200B;__开发人员 — Cloud Service__&#x200B;产品用户档案的成员。
    + 如果此会员资格不存在，则开发人员将无法登录到开发人员控制台。
-1. 开发人员必须是AEM作者和发布服务的&#x200B;__AEM Administrators__&#x200B;产品用户档案的成员。
+1. 开发人员必须是AEM作者和/或发布上的&#x200B;__AEM Users__&#x200B;或&#x200B;__AEM Administrators__&#x200B;产品用户档案的成员。
    + 如果此成员身份不存在，[status](#status)转储将超时，并显示401未授权错误。
 
 ### 开发人员控制台访问疑难解答
