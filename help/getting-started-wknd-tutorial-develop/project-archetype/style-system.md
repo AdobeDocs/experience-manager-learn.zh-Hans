@@ -3,20 +3,17 @@ title: 用样式体系进行开发
 seo-title: 用样式体系进行开发
 description: 了解如何使用Experience Manager的Style System实施各个样式并重复使用核心组件。 本教程涵盖样式系统的开发，以使用模板编辑器的特定CSS和高级策略配置扩展核心组件。
 sub-product: 站点
-topics: front-end-development,responsive
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-kt: 4128
-mini-toc-levels: 1
-thumbnail: 30386.jpg
+version: 6.4, 6.5, Cloud Service
+type: Tutorial
 feature: 核心组件，样式系统
 topic: 内容管理，开发
 role: Developer
 level: Beginner
+kt: 4128
+mini-toc-levels: 1
+thumbnail: 30386.jpg
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
 source-wordcount: '2003'
 ht-degree: 0%
