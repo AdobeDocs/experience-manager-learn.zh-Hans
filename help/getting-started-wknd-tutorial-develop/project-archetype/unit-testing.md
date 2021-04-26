@@ -1,22 +1,20 @@
 ---
 title: 单元测试
 description: 本教程涵盖单位测试的实现，该测试用于验证在自定义组件教程中创建的Byline组件的Sling模型的行为。
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-kt: 4089
-mini-toc-levels: 1
-thumbnail: 30207.jpg
+sub-product: 站点
+version: 6.4, 6.5, Cloud Service
+type: Tutorial
 feature: API、AEM Project Archetype
 topic: 内容管理，开发
 role: Developer
 level: Beginner
+kt: 4089
+mini-toc-levels: 1
+thumbnail: 30207.jpg
 translation-type: tm+mt
-source-git-commit: e8c36a85bc47adbf76e614f245c3f47d7a50826e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
-source-wordcount: '3016'
+source-wordcount: '3017'
 ht-degree: 0%
 
 ---
