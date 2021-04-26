@@ -210,9 +210,10 @@ _如果系统上同时安装了Java 8和Java 11，则VS代码测试运行程序�
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
-2.同时，区分测试文件    单元测试文件`Test`后缀`BylineImplTest.java`是一种约定，它允许我们
-1.轻松将其标识为_`BylineImpl.java`的测试文件_
-2.同时，将测试文件_与_&#x200B;要测试的类区分开，`BylineImpl.java`
+   单元测试文件`Test`后缀`BylineImplTest.java`是一种约定，它允许我们
+
+   1.轻松将其标识为_`BylineImpl.java`的测试文件_
+   2.同时，将测试文件_与_&#x200B;要测试的类区分开，`BylineImpl.java`
 
 ## 查看BylineImplTest.java {#reviewing-bylineimpltest-java}
 
