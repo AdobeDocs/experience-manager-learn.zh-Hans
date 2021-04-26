@@ -3,22 +3,19 @@ title: AEM Sites入门 — 页面和模板
 seo-title: AEM Sites入门 — 页面和模板
 description: 了解基本页面组件与可编辑模板之间的关系。 了解如何将核心组件代理到项目中，并了解可编辑模板的高级策略配置，以基于Adobe XD的模型构建结构良好的文章页面模板。
 sub-product: 站点
-feature: 核心组件、可编辑模板
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-mini-toc-levels: 1
-kt: 4082
-thumbnail: 30214.jpg
+version: 6.4, 6.5, Cloud Service
+type: Tutorial
+feature: 核心组件、可编辑模板、页面编辑器
 topic: 内容管理，开发
 role: Developer
 level: Beginner
+mini-toc-levels: 1
+kt: 4082
+thumbnail: 30214.jpg
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
-source-wordcount: '3104'
+source-wordcount: '3106'
 ht-degree: 0%
 
 ---
@@ -163,7 +160,7 @@ ht-degree: 0%
 
 ## 使用Experience Fragments {#experience-fragments}更新页眉和页脚
 
-创建全局内容（如页眉或页脚）时的常见做法是使用[体验片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 体验片段，允许用户组合多个组件以创建单个可引用的组件。 Experience Fragments具有支持多站点管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)的优势。
+创建全局内容（如页眉或页脚）时的常见做法是使用[体验片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 Experience Fragments，允许用户组合多个组件以创建单个可引用的组件。 Experience Fragments具有支持多站点管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)的优势。
 
 AEM Project Archetype生成了一个Header和Footer。 接下来，更新体验片段以匹配模型。 按照以下视频中的步骤操作：
 
