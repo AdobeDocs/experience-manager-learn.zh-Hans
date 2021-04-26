@@ -2,19 +2,16 @@
 title: AEM Sites入门 — Project Archetype
 description: AEM Sites入门 — Project Archetype。 WKND教程是为初次接触Adobe Experience Manager的开发人员设计的多部分教程。 本教程将介绍一个虚构生活方式品牌WKND的AEM站点的实施。 本教程涵盖基本主题，如项目设置、主原型、核心组件、可编辑模板、客户端库和组件开发。
 sub-product: 站点
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-mini-toc-levels: 1
-index: y
+version: 6.4, 6.5, Cloud Service
+type: Tutorial
 feature: 核心组件、页面编辑器、可编辑模板、AEM项目原型
 topic: 内容管理，开发
 role: Developer
 level: Beginner
+mini-toc-levels: 1
+index: y
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 7%
