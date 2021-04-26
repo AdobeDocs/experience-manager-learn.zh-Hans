@@ -16,10 +16,10 @@ topic: 内容管理，开发
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 5%
+source-wordcount: '632'
+ht-degree: 4%
 
 ---
 
@@ -34,11 +34,19 @@ ht-degree: 5%
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-## 关于教程{#about-tutorial}
+## 用于启动站点项目的选项
 
-WKND是一个虚构的在线杂志和博客，关注几个国际城市的夜生活、活动和事件。
+启动AEM Sites项目有两种基本方法。
 
-### Adobe XD UI Kit
+**AEM Project Archetype**  — 使用Maven模板生成最小的AEM项目，从而实现AEM开发的传统方法。这是AEM 6.5/6.4项目和AEM作为预期大量自定义的Cloud Service项目的建议方法。 本教程优惠您更深入地了解AEM开发。
+
+[开始教程与AEM Project Archetype](./project-archetype/overview.md)
+
+**AEM站点模板**  — 一种使用预定义的站点模板生成AEM站点的低代码方法。使用开箱即用的组件和模板快速启动和运行网站。 只需使用CSS和JavaScript，即可使用主题工作流程应用品牌特定的样式和自定义。 建议用于新项目和开发人员。 目前仅可用于AEM作为Cloud Service。
+
+[开始使用站点模板的教程](./site-template/create-site.md)
+
+## Adobe XD UI Kit
 
 为使本教程更接近真实场景，Adobe才华横溢的UX设计人员使用[Adobe XD](https://www.adobe.com/products/xd.html)为站点创建了模型。 在本教程中，各种设计将实现到一个完全可创作的AEM站点中。 特别感谢&#x200B;**Lorenzo Buosi**&#x200B;和&#x200B;**Kilian Amendola**&#x200B;为WKND网站设计了美观的设计。
 
@@ -63,4 +71,4 @@ WKND参考网站中的许多图像来自[Adobe Stock](https://stock.adobe.com/)�
 
 ## 后续步骤{#next-steps}
 
-你在等什么！开始教程并学习如何使用AEM Project Archetype](./project-archetype/overview.md)生成新的Adobe Experience Manager项目。[
+你在等什么！了解如何使用AEM Project Archetype](./project-archetype/overview.md)或[使用站点模板](./site-template/create-site.md)创建站点，从而[生成新的Adobe Experience Manager项目。
