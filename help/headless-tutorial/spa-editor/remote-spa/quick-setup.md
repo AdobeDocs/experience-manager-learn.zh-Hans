@@ -8,9 +8,9 @@ level: Beginner
 kt: 7629
 thumbnail: kt-7629.jpeg
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '729'
 ht-degree: 3%
 
 ---
@@ -75,8 +75,8 @@ AEM SDK将在[http://localhost:4502](http://localhost:4502)上开始并自动启
 
 要执行快速设置，会提供包含教程的最终AEM配置和内容的AEM包。
 
-1. 从“DemoHub资产”窗格下载`wknd-app.all.x.x.x.zip`
-1. 从“DemoHub资产”窗格下载`wknd-app.ui.content.sample.x.x.x.zip`
+1. [下载 `wknd-app.all.x.x.x.zip`](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [下载 `wknd-app.ui.content.sample.x.x.x.zip`](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
 1. 使用`admin`凭据登录到位于[http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)的AEM SDK的包管理器。
 1. __上__ 载步 `wknd-app.all.x.x.x.zip` 骤1中下载的
 1. 点按条目`wknd-app.all.x.x.x.zip`的&#x200B;__安装__&#x200B;按钮
