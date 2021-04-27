@@ -8,9 +8,9 @@ level: Beginner
 kt: 7630
 thumbnail: kt-7630.jpg
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '694'
 ht-degree: 1%
 
 ---
@@ -67,35 +67,37 @@ ht-degree: 1%
 
 “快速设置”可在15分钟内使用WKND应用程序SPA和AEM SPA编辑器启动并运行。 此加速设置将直接带您进入教程的结束状态，让您了解如何在AEM SPA Editor中创作SPA。
 
-+ [快速设置](./quick-setup.md)
++ [了解快速设置](./quick-setup.md)
 
-## 配置AEM for SPA Editor
+## 1.配置AEM for SPA Editor
 
 AEM配置是将SPA与AEM SPA Editor集成所必需的。 通过AEM项目管理和部署这些配置。 在本章中，了解哪些配置是必需的以及如何定义它们。
 
-+ [配置AEM](./aem-configure.md)
++ [了解如何为SPA Editor配置AEM](./aem-configure.md)
 
-## BootstrapSPA
+## 2.BootstrapSPA
 
 要使AEM SPA编辑器将SPA集成到it的创作上下文中，必须为SPA添加一些附加内容。
 
-+ [BootstrapSPA for SPA Editor](./spa-bootstrap.md)
++ [了解如何引导SPA for AEM SPA Editor](./spa-bootstrap.md)
 
-## 可编辑的固定组件
+## 3.可编辑的固定组件
 
 首先，探索向SPA中添加可编辑的“固定组件”。 这说明了开发人员如何将特定的可编辑组件放入SPA中。 虽然作者可以更改组件的内容，但他们无法删除组件或更改其位置、位置或大小。
 
-+ [可编辑的固定组件](./spa-fixed-component.md)
++ [了解可编辑的固定组件](./spa-fixed-component.md)
 
-## 可编辑的容器组件
+## 4.可编辑的容器组件
 
 接下来，浏览向SPA中添加一个可编辑的“容器组件”。 这说明了开发人员如何将容器组件放入SPA中。 容器组件允许作者将允许的组件放入组件中，并调整组件的布局。
 
-## 动态路由和可编辑组件
++ [了解可编辑的容器组件](./spa-container-component.md)
+
+## 5.动态路由和可编辑组件
 
 最后，将前几章阐述的概念用于动态路线；根据路由参数显示不同内容的路由。 这说明了如何使用AEM SPA Editor在以编程方式驱动和派生的路由上创作内容。
 
-+ [动态路由和可编辑组件](./spa-dynamic-routes.md)
++ [了解动态路由和可编辑组件](./spa-dynamic-routes.md)
 
 ## 其他资源
 
