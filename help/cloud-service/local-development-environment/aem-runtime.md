@@ -9,19 +9,26 @@ activity: develop
 audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
-topic: Development
+topic: 开发
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1657'
-ht-degree: 1%
+source-wordcount: '1734'
+ht-degree: 2%
 
 ---
 
 
 # 设置本地AEM Runtime
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_aemruntime"
+>title="本地AEM Runtime"
+>abstract="Adobe Experience Manager(AEM)可以在本地运行，使用AEM作为Cloud Service SDK的快速启动程序Jar。 这允许开发人员在将自定义代码、配置和内容提交到源代码控制并将其部署到AEM作为Cloud Service环境之前，先对其进行部署和测试。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="将AEM下载为Cloud Service SDK"
 
 Adobe Experience Manager(AEM)可以在本地运行，使用AEM作为Cloud Service SDK的快速启动程序Jar。 这允许开发人员在将自定义代码、配置和内容提交到源代码控制并将其部署到AEM作为Cloud Service环境之前，先对其进行部署和测试。
 
