@@ -2,7 +2,7 @@
 title: 将AEM的Dispatcher Tools设置为Cloud Service开发
 description: AEM SDK的Dispatcher Tools通过使本地安装、运行Dispatcher并解决其疑难问题变得轻松，从而简化了Adobe Experience Manager(AEM)项目的本地开发。
 sub-product: 基础
-feature: Dispatcher, Developer Tools
+feature: Dispatcher，开发人员工具
 topics: development, caching, security
 version: cloud-service
 doc-type: tutorial
@@ -10,19 +10,26 @@ activity: develop
 audience: developer
 kt: 4679
 thumbnail: 30603.jpg
-topic: Development
+topic: 开发
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
 
 
 # 设置本地调度程序工具
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_dispatcher"
+>title="本地调度程序工具"
+>abstract="调度程序是整个Experience Manager体系结构的一个组成部分，应是本地开发设置的一部分。 AEM作为Cloud ServiceSDK，包括推荐的Dispatcher Tools版本，该版本便于在本地配置、验证和模拟Dispatcher。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html" text="云中的调度程序"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="将AEM下载为Cloud Service SDK"
 
 Adobe Experience Manager(AEM)的Dispatcher是一个Apache HTTP Web服务器模块，在CDN和AEM发布层之间提供一个安全和性能层。 调度程序是整个Experience Manager体系结构的一个组成部分，应是本地开发设置的一部分。
 
