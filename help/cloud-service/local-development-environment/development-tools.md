@@ -9,19 +9,26 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
-topic: Development
+topic: 开发
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
 
 
 # 设置开发工具
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_devtools"
+>title="设置开发工具"
+>abstract="Adobe Experience Manager(AEM)开发需要在开发人员机器上安装和设置最少的开发工具集。 这些工具包括Java、Maven、Adobe I/O CLI、开发IDE等。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="开发指南"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html" text="开发基础"
 
 Adobe Experience Manager(AEM)开发需要在开发人员机器上安装和设置最少的开发工具集。 这些工具支持AEM项目的开发和构建。
 
