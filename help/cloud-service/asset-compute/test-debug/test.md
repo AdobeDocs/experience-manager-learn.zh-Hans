@@ -1,7 +1,7 @@
 ---
 title: 测试Asset compute工作者
 description: asset compute项目定义了一种模式，用于轻松创建和执行Asset computeWorker测试。
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
-topic: Integrations, Development
+topic: 集成、开发
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,9 @@ asset compute项目中的测试结构如下：
        "brightness": "-0.50"
    }
    ```
+
    这些键/值与传入[开发工具的Asset compute用户档案定义](../develop/development-tool.md)的键/值相同，小于`worker`键。
+
 1. 将预期的[再现文件](./assets/test/success-parameterized/rendition.png)添加到此测试用例中，并将其命名为`rendition.png`。 此文件表示给定输入`file.jpg`的worker的预期输出。
 1. 在命令行中，通过执行`aio app test`来运行项目根
    + 确保安装并启动[Docker Desktop](../set-up/development-environment.md#docker)和支持Docker映像
