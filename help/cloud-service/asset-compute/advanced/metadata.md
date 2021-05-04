@@ -1,7 +1,7 @@
 ---
 title: 开发Asset compute元数据工作器
 description: 了解如何创建一个Asset compute元数据worker，它派生了图像资产中最常用的颜色，并将颜色名称写回AEM中资产的元数据。
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: metadata, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: Integrations, Development
+topic: 集成、开发
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1439'
 ht-degree: 1%
 
 ---
@@ -205,6 +205,7 @@ function getColorName(colorsFamily, color) {
        ]
    }
    ```
+
 1. 点按&#x200B;__运行__&#x200B;并等待XML再现生成
    + 由于两个工作线程都列在用户档案定义中，因此两个再现都将生成。 或者，可以删除指向[圆形再现worker](../develop/worker.md)的顶部用户档案定义，以避免从开发工具中执行它。
 1. __演绎版__&#x200B;部分预览生成的演绎版。 点按`rendition.xml`以下载它，然后在VS代码（或您喜爱的XML/文本编辑器）中打开它进行查看。
