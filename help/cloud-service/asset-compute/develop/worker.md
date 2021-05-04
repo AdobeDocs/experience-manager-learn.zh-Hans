@@ -1,7 +1,7 @@
 ---
 title: 开发Asset compute工作者
 description: asset computeWorker是Asset compute项目的核心，它提供了对资产执行或安排工作以创建新再现的自定义功能。
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
-topic: Integrations, Development
+topic: 集成、开发
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: 1e5d8171832ec6b26969a8485ae970e295962828
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
@@ -340,6 +340,7 @@ class RenditionInstructionsError extends ClientError {
        ]
    }
    ```
+
 1. 点按&#x200B;__运行__&#x200B;并等待再现生成
 1. __演绎版__&#x200B;部分预览生成的演绎版。 点按演绎版预览以下载完整的演绎版
 
