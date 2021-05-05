@@ -8,9 +8,9 @@ level: Beginner
 kt: 7629
 thumbnail: kt-7629.jpeg
 translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: d3a237b196ac872beda6119c854a0cae29510437
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '794'
 ht-degree: 3%
 
 ---
@@ -32,8 +32,11 @@ ht-degree: 3%
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
++ 仅macOS先决条件
+   + [Xcodeor ](https://developer.apple.com/xcode/) Xcode命 [令行工具](https://developer.apple.com/xcode/resources/)
 + [aem-guides-wknd.all.0.3.0.zip或更高版本](https://github.com/adobe/aem-guides-wknd/releases)
 + [aem-guides-wknd-graphql源代码](https://github.com/adobe/aem-guides-wknd-graphql)
+
 
 本教程假定：
 
@@ -90,7 +93,8 @@ AEM SDK将在[http://localhost:4502](http://localhost:4502)上开始并自动启
 ```
 $ mkdir -p ~/Code/wknd-app
 $ cd ~/Code/wknd-app
-$ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
+$ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd aem-guides-wknd-graphql
 $ git checkout -b feature/spa-editor
 $ git pull origin feature/spa-editor
 ```
@@ -146,6 +150,8 @@ $ npm run start
 1. 点按&#x200B;__Bali Surf Camp__&#x200B;卡并导航至其动态路由
 1. 添加、更改或删除位于&#x200B;__Itrine__&#x200B;标题上方的容器组件中的组件
 1. 刷新`http://localhost:3000`上运行的SPA，并查看所反映的更改
+
+__WKND应用程序主页> Adventure__ _下的新AEM页面必须_&#x200B;具有与相应冒险内容片段名称匹配的AEM页面名称。 这是因为SPA到AEM页面映射的路由基于路由的最后一段，即内容片段的名称。
 
 ## 恭喜！
 
