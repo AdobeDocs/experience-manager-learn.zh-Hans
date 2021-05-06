@@ -1,23 +1,29 @@
 ---
 title: '分析AEM Cloud Manager测试结果 '
-description: 浏览并修复AEM Cloud Manager中的报告结果
+description: 从AEM Cloud Manager中浏览并修复报表结果
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
+topic: 开发
 feature: Developer Tools
 kt: 6917
 thumbnail: 330540.jpg
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 0%
+source-wordcount: '84'
+ht-degree: 8%
 
 ---
 
 
 # 分析测试结果
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_devops_testresult"
+>title="分析测试结果"
+>abstract="检查代码中的任何编译错误以及此代码是否遵循AEM作为Cloud Service的最佳实践"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use" text="理解测试结果"
 
 浏览代码中的任何编译错误，以及此代码是否遵循AEM作为Cloud Service的最佳实践
 
