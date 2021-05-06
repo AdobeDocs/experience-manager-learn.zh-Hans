@@ -9,19 +9,26 @@ activity: use
 version: cloud-service
 kt: 6872, 6875
 thumbnail: 26317.jpg
-topic: Architecture
+topic: 架构
 role: Architect, Developer, Administrator
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 1%
+source-wordcount: '179'
+ht-degree: 2%
 
 ---
 
 
 # 使用Adobe Cloud Manager - CI/CD生产管道
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_devops_prodpipeline"
+>title="CI/CD生产管道"
+>abstract="CI/CD生产管道配置定义将启动管道的触发器，参数控制生产部署和性能测试参数。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-process" text="部署代码"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-production-phase" text="部署到生产阶段"
 
 ## 配置
 
