@@ -4,21 +4,27 @@ description: 在AEM上配置管道并探索不同类型的管道。
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
+topic: 开发
 feature: Developer Tools
 kt: 6916
 thumbnail: 330539.jpg
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 0%
+source-wordcount: '74'
+ht-degree: 4%
 
 ---
 
 
 # 配置管道
 
-在Cloud Manager中探索不同类型的管道，以及如何为成功的项目配置它们。
+>[!CONTEXTUALHELP]
+>id="aemcloud_devops_configurepipeline"
+>title="配置管道"
+>abstract="在Cloud Manager中探索不同类型的管道，以及如何为成功的项目配置这些管道。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#config-pipeline-video" text="在Cloud Manager中配置管道"
+
+在Cloud Manager中探索不同类型的管道，以及如何为成功的项目配置这些管道。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330539/?quality=12&learn=on)
