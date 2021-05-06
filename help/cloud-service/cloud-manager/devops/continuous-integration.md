@@ -1,24 +1,30 @@
 ---
 title: 使用与AEM Cloud Manager的持续集成
-description: 使用Adobe云管理器了解最佳实践和持续集成。
+description: 使用Adobe Cloud Manager了解最佳实践和持续集成。
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
+topic: 开发
 feature: Developer Tools
 kt: 6914
 thumbnail: 330536.jpg
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
 workflow-type: tm+mt
-source-wordcount: '32'
-ht-degree: 0%
+source-wordcount: '64'
+ht-degree: 10%
 
 ---
 
 
-# 持续集成和云管理器
+# Continuous Integration和Cloud Manager
 
-使用Adobe云管理器了解最佳实践和持续集成。
+>[!CONTEXTUALHELP]
+>id="aemcloud_devops_cicd"
+>title="Continuous Integration和Cloud Manager"
+>abstract="使用Adobe Cloud Manager了解最佳实践和持续集成。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#non-production-pipelines" text="配置 CI-CD 管道"
+
+使用Adobe Cloud Manager了解最佳实践和持续集成。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330536/?quality=12&learn=on)
