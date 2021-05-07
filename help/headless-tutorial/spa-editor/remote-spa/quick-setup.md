@@ -6,11 +6,11 @@ feature: SPA编辑器，核心组件， API，开发
 role: Developer, Architect
 level: Beginner
 kt: 7629
-thumbnail: kt-7629.jpeg
+thumbnail: 333181.jpeg
 translation-type: tm+mt
-source-git-commit: d3a237b196ac872beda6119c854a0cae29510437
+source-git-commit: e6dc028a120670d34806def36ad200ed161295e1
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '801'
 ht-degree: 3%
 
 ---
@@ -21,6 +21,10 @@ ht-degree: 3%
 快速设置是一个快速的逐步介绍，它说明了如何安装和运行WKND应用程序并作为远程SPA，以及如何使用AEM SPA Editor创作它。
 
 “快速设置”将直接带您进入本教程的结束状态。
+
+>[!VIDEO](https://video.tv.adobe.com/v/333181/?quality=12&learn=on)
+
+_快速设置的视频浏览_
 
 ## 前提条件
 
