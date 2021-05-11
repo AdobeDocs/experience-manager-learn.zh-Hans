@@ -8,14 +8,14 @@ doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
-topic: Development
+topic: 开发
 role: Developer
 level: Beginner, Intermediate
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 5fcc7eec120debf1a8ac08716154599467e66759
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 3%
+source-wordcount: '222'
+ht-degree: 4%
 
 ---
 
@@ -55,14 +55,4 @@ QueryBuilder调试器是基于Web的工具，可帮助您使用AEM [QueryBuilder
 QueryBuilder调试器位于：
 
 + [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
-
-## Sling Log Tracer和AEM Chrome插件
-
-![Sling Log Tracer和AEM Chrome插件](./assets/other-tools/log-tracer.png)
-
-[Sling Log Tracer随AEM](https://sling.apache.org/documentation/bundles/log-tracers.html) SDK的本地快速启动一起提供，它允许对HTTP请求进行深入跟踪，并为每个请求提供详细的调试信息。必须配置[Log Tracer OSGi配置](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1)才能启用此功能。
-
-用于[Google Chrome Web浏览器](https://www.google.com/chrome/)的开放源[AEM Chrome插件](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)与Log Tracer集成，直接在Chrome的开发工具中显示调试信息。
-
-_AEM Chrome插件是一个开放源代码工具，Adobe不提供对它的支持。_
 
