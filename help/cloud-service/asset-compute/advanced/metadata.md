@@ -13,7 +13,7 @@ topic: 集成、开发
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 1%
@@ -270,7 +270,7 @@ $ aio app deploy
 1. 定义新服务
    + __创建元数据演绎版__:切换至活动
    + __端点：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/metadata-colors`
-      + 这是在[deploy](#deploy)期间或使用命令`aio app get-url`获取的工作器的URL。 根据AEM作为Cloud Service环境，确保URL点位于正确的工作区。
+      + 这是在[deploy](#deploy)期间或使用命令`aio app get-url`获取的worker的URL。 根据AEM作为Cloud Service环境，确保URL点位于正确的工作区。
    + __服务参数__
       + 点按&#x200B;__添加参数__
          + 键: `colorFamily`
