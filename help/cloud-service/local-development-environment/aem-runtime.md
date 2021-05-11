@@ -13,7 +13,7 @@ topic: 开发
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: d49ae402b332ba972a78cdbd8f5bf962b91c83b1
 workflow-type: tm+mt
 source-wordcount: '1734'
 ht-degree: 2%
@@ -229,7 +229,7 @@ $ java -jar aem-publish-p4503.jar
 
 或者，要开始AEM发布服务，请将`cd`添加到包含快速启动Jar的目录中，然后执行以下命令：
 
-`$ java -jar aem-author-p4503.jar`
+`$ java -jar aem-publish-p4503.jar`
 
 ## 从命令行启动快速启动程序Jar会立即中止{#troubleshooting-java-8}
 
