@@ -8,7 +8,7 @@ level: Beginner
 kt: 7630
 thumbnail: kt-7630.jpg
 translation-type: tm+mt
-source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
+source-git-commit: ec692af56afa83330097bb9d8db0d2f2f4fde1c1
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 1%
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## 最新代码
 
-+ 本教程的代码位于`feature/spa-editor`分支的[GitHub](https://github.com/adobe/aem-guides-wknd-graphq)上。
++ 本教程的代码位于`feature/spa-editor`分支的[GitHub](https://github.com/adobe/aem-guides-wknd-graphql)上。
 
 ## 前提条件
 
