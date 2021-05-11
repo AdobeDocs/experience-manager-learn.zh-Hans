@@ -13,7 +13,7 @@ topic: 集成、开发
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 0%
@@ -59,6 +59,7 @@ _使用wskdebug调试调试Asset compute工作者的点进（无音频）_
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
+
 
 1. 使用命令`npx adobe-asset-compute devtool`开始Asset compute开发工具的新实例
 1. 在VS代码中，点按左侧导航中的调试图标
