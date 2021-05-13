@@ -6,9 +6,8 @@ feature: SPA编辑器，核心组件， API，开发
 role: Developer, Architect
 level: Beginner
 kt: 7630
-thumbnail: kt-7630.jpg
-translation-type: tm+mt
-source-git-commit: ec692af56afa83330097bb9d8db0d2f2f4fde1c1
+thumbnail: 333272.jpeg
+source-git-commit: cede0c97e0f322fe5d20d5c4f685ed10b90af1d4
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 1%
@@ -21,6 +20,8 @@ ht-degree: 1%
 欢迎观看面向希望使用SPA AEM Editor将现有基于React（或Next.js）的远程SPA内容与可编辑的AEM内容相结合的开发人员的多部分教程。
 
 本教程构建于[WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)之上，后者是一个React应用程序，通过AEM GraphQL API读取AEM内容片段内容，但不提供SPA内容的任何上下文内容创作。
+
+>[!VIDEO](https://video.tv.adobe.com/v/333272/?quality=12&learn=on)
 
 ## 关于教程
 
