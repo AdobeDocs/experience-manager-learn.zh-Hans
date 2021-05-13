@@ -2,13 +2,12 @@
 title: '了解InDesign文件和AEM Assets中的资源模板 '
 description: 此视频教程将逐步介绍如何定义一个InDesign文件以及所有随附的注意事项，以用于AEM资产的资产模板功能。
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: 内容管理
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b4fa992abe22e3a546d651e465d6ffc9e415aee2
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '496'
 ht-degree: 1%
 
 ---
@@ -74,4 +73,4 @@ InDesign模板文件和支持图像
 下载[InDesign模板文件并支持Images](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
 * [InDesign CC试用版下载](https://creative.adobe.com/products/download/indesign)
-* [InDesign Server试用版下载](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
+* [CC Enterprise客户可联系其客户经理申请InDesign Server试用许可](https://www.adobe.com/products/indesignserver/faq.html)
