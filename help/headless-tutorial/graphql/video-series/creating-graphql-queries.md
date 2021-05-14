@@ -9,10 +9,9 @@ role: Developer
 level: Beginner
 kt: 7621
 thumbnail: 332860.jpg
-translation-type: tm+mt
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
 workflow-type: tm+mt
-source-wordcount: '70'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---
@@ -21,5 +20,12 @@ ht-degree: 0%
 # 创建GraphQL查询
 
 了解如何创建GraphQL查询以从Adobe Experience Manager(AEM)返回内容，以及如何使用GraphiQL工具快速测试、优化和调试查询。
+
+在此视频中，您将：
+
++ 了解GraphQL语言背后的强大功能
++ 了解如何查询内容片段和单个内容片段的列表
++ 了解如何过滤和请求特定数据属性
++ 了解如何安装和使用GraphiQL工具
 
 >[!VIDEO](https://video.tv.adobe.com/v/332860/?quality=12&learn=on)
