@@ -9,10 +9,9 @@ role: Developer
 level: Beginner
 kt: 7619
 thumbnail: 332858.jpg
-translation-type: tm+mt
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -22,5 +21,10 @@ ht-degree: 0%
 
 了解如何定义和使用Adobe Experience Manager(AEM)中的内容片段以与GraphQL一起使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/332858/?quality=12&learn=on)
+在此视频中，您将：
 
++ 了解如何创建和定义内容片段模型
++ 了解用于构建内容片段模型的各种数据类型和验证
++ 了解内容片段模型如何驱动GraphQL API
+
+>[!VIDEO](https://video.tv.adobe.com/v/332858/?quality=12&learn=on)
