@@ -9,10 +9,9 @@ role: Developer
 level: Beginner
 kt: 7620
 thumbnail: 332859.jpg
-translation-type: tm+mt
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
@@ -21,6 +20,12 @@ ht-degree: 0%
 # GraphQL的高级建模
 
 了解如何在Adobe Experience Manager(AEM)中创建内容片段模型之间的关系，以及如何在GraphQL查询中利用这些关系。
+
+在此视频中，您将：
+
++ 了解如何使用内容片段引用链接一个或多个内容片段
++ 了解如何在富文本字段中深入链接到其他内容片段
++ 创建从引用的内容片段中返回数据的GraphQL查询
 
 >[!VIDEO](https://video.tv.adobe.com/v/332859/?quality=12&learn=on)
 
