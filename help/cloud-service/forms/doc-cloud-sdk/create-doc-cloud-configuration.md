@@ -7,12 +7,11 @@ role: Developer
 level: Beginner, Intermediate
 version: cloud-service
 topic: 开发
-thumbnail: 331891.jpg
-kt: 7192
-translation-type: tm+mt
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+thumbnail: 7818.jpg
+kt: 7818
+source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
-source-wordcount: '63'
+source-wordcount: '64'
 ht-degree: 3%
 
 ---
@@ -21,7 +20,11 @@ ht-degree: 3%
 
 创建自定义OSGi配置以捕获您的文档云帐户的凭据
 
+
 要创建自定义OSGi配置，我们首先需要创建一个接口，其公共方法将表示配置中的字段。
+
+![doc-cloud-config](assets/doc-cloud-configuration.JPG)
+
 
 创建一个名为DocumentCloudConfiguration的界面，并在其中粘贴以下代码。
 
