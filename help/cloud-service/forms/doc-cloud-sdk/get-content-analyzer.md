@@ -1,25 +1,33 @@
 ---
 title: 创建内容分析器
 description: 创建包含有关REST调用的输入参数信息的JSON部件。
-solution: Experience Manager, Experience Manager Forms
+solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
 topic: 开发
-thumbnail: 331891.jpg
-kt: 7192
-translation-type: tm+mt
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+thumbnail: 7836.jpg
+kt: 7836
+source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 2%
+source-wordcount: '59'
+ht-degree: 1%
 
 ---
 
-# contentAnalyserRequests
 
-包含有关输入、参数和输出的信息的JSON部分。 此处提供此[表单参数的详细信息。](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
+# 创建Analyzer请求
+
+创建定义以下内容的JSON片段：
+
++ 输入
++ 参数
++ 。
+
+此处提供此[表单参数的详细信息。](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
+
+下面列出的示例代码为所有Office 365文档类型生成JSON片段。
 
 ```java
 package com.aemforms.doccloud.core.impl;
@@ -34,10 +42,15 @@ public class GetContentAnalyser {
 		
 		JsonObject documentIn = new JsonObject();
 		documentIn.addProperty("cpf:location", "InputFile0");
-		System.out.println("The file name is "+fileName);
+
+		if(fileName.endsWith(".pptx"))
+		{
+			documentIn.addProperty("dc:format","application/vnd.openxmlformats-officedocument.presentationml.presentation");
+		}
+
 		if(fileName.endsWith(".docx"))
 		{
-			System.out.println("This is word document");
+			
 			documentIn.addProperty("dc:format","application/vnd.openxmlformats-officedocument.wordprocessingml.document");
 		}
 		if(fileName.endsWith(".xlsx"))
