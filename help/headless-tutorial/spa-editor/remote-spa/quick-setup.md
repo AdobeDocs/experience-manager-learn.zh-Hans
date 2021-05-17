@@ -6,9 +6,8 @@ feature: SPA编辑器，核心组件， API，开发
 role: Developer, Architect
 level: Beginner
 kt: 7629
-thumbnail: 333181.jpeg
-translation-type: tm+mt
-source-git-commit: e6dc028a120670d34806def36ad200ed161295e1
+thumbnail: 333181.jpg
+source-git-commit: 73c75f8dac85615f4ed2dfdcc2ee4d0e9e5d161a
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 3%
@@ -82,8 +81,8 @@ AEM SDK将在[http://localhost:4502](http://localhost:4502)上开始并自动启
 
 要执行快速设置，会提供包含教程的最终AEM配置和内容的AEM包。
 
-1. [下载 `wknd-app.all.x.x.x.zip`](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [下载 `wknd-app.ui.content.sample.x.x.x.zip`](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
+1. [下载 ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [下载 ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
 1. 使用`admin`凭据登录到位于[http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)的AEM SDK的包管理器。
 1. __上__ 载步 `wknd-app.all.x.x.x.zip` 骤1中下载的
 1. 点按条目`wknd-app.all.x.x.x.zip`的&#x200B;__安装__&#x200B;按钮
