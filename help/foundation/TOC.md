@@ -4,10 +4,9 @@ breadcrumb-title: AEM Foundation 教程
 user-guide-description: 'Adobe Experience Manager Foundation 的视频和教程集合。 '
 sub-product: 基础
 index: y
-translation-type: tm+mt
-source-git-commit: 2760064642002a684b3fd70337a81a7d6e28a343
+source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '146'
 ht-degree: 21%
 
 ---
@@ -45,6 +44,6 @@ ht-degree: 21%
    + [使用SSL向导](./security/use-the-ssl-wizard.md)
 + 工作流 {#workflow}
    + [使用工作流编辑器](./workflow/use-the-workflow-editor.md)
-   + [使用工作流管理](./workflow/use-workflow-management.md)
+   + [使用工作流](./workflow/use-workflow.md)
    + [使用收件箱](./workflow/use-the-inbox.md)
 
