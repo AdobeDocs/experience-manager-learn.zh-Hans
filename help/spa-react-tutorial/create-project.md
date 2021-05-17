@@ -2,7 +2,7 @@
 title: SPA Editor Project | AEM SPA Editor和React入门
 description: 了解如何将Adobe Experience Manager(AEM)Maven项目用作与SPA AEM Editor集成的React应用程序的起点。
 sub-product: 站点
-feature: SPA Editor, AEM Project Archetype
+feature: SPA Editor， AEM Project Archetype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -13,10 +13,9 @@ thumbnail: 413-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 375df47a13b1820911a7ceb73af0dad15c68740e
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 3%
 
 ---
@@ -122,23 +121,23 @@ ht-degree: 3%
    项目的多个模块应编译并部署到AEM。
 
    ```plain
-    [INFO] ------------------------------------------------------------------------
-    [INFO] Reactor Summary for wknd-spa-react 1.0.0-SNAPSHOT:
-    [INFO] 
-    [INFO] wknd-spa-react ..................................... SUCCESS [  0.523 s]
-    [INFO] WKND SPA React - Core .............................. SUCCESS [  8.069 s]
-    [INFO] wknd-spa-react.ui.frontend - UI Frontend ........... SUCCESS [01:23 min]
-    [INFO] WKND SPA React - Repository Structure Package ...... SUCCESS [  0.830 s]
-    [INFO] WKND SPA React - UI apps ........................... SUCCESS [  4.654 s]
-    [INFO] WKND SPA React - UI content ........................ SUCCESS [  1.607 s]
-    [INFO] WKND SPA React - All ............................... SUCCESS [  0.384 s]
-    [INFO] WKND SPA React - Integration Tests Bundles ......... SUCCESS [  0.770 s]
-    [INFO] WKND SPA React - Integration Tests Launcher ........ SUCCESS [  1.407 s]
-    [INFO] WKND SPA React - Dispatcher ........................ SUCCESS [  0.055 s]
-    [INFO] ------------------------------------------------------------------------
-    [INFO] BUILD SUCCESS
-    [INFO] ------------------------------------------------------------------------
-    [INFO] Total time:  01:44 min
+   [INFO] ------------------------------------------------------------------------
+   [INFO] Reactor Summary for wknd-spa-react 1.0.0-SNAPSHOT:
+   [INFO] 
+   [INFO] wknd-spa-react ..................................... SUCCESS [  0.523 s]
+   [INFO] WKND SPA React - Core .............................. SUCCESS [  8.069 s]
+   [INFO] wknd-spa-react.ui.frontend - UI Frontend ........... SUCCESS [01:23 min]
+   [INFO] WKND SPA React - Repository Structure Package ...... SUCCESS [  0.830 s]
+   [INFO] WKND SPA React - UI apps ........................... SUCCESS [  4.654 s]
+   [INFO] WKND SPA React - UI content ........................ SUCCESS [  1.607 s]
+   [INFO] WKND SPA React - All ............................... SUCCESS [  0.384 s]
+   [INFO] WKND SPA React - Integration Tests Bundles ......... SUCCESS [  0.770 s]
+   [INFO] WKND SPA React - Integration Tests Launcher ........ SUCCESS [  1.407 s]
+   [INFO] WKND SPA React - Dispatcher ........................ SUCCESS [  0.055 s]
+   [INFO] ------------------------------------------------------------------------
+   [INFO] BUILD SUCCESS
+   [INFO] ------------------------------------------------------------------------
+   [INFO] Total time:  01:44 min
    ```
 
    Maven用户档案&#x200B;***autoInstallSinglePackage***&#x200B;编译项目的各个模块并将单个包部署到AEM实例。 默认情况下，此包将部署到在端口&#x200B;**4502**&#x200B;上本地运行的AEM实例，凭据为&#x200B;**admin:admin**。
@@ -237,7 +236,7 @@ ht-degree: 3%
    >
    > 安装浏览器扩展以自动设置JSON输出格式可能会有所帮助。
 
-## 恭喜！{#congratulations}
+## 恭喜！ {#congratulations}
 
 祝贺您，您刚刚创建了第一个AEM SPA Editor项目！
 
