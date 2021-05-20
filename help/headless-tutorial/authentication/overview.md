@@ -1,72 +1,71 @@
 ---
-title: 从外部应用程序以Cloud Service身份验证到AEM
-description: 了解外部应用程序如何使用本地开发访问令牌和服务凭据通过HTTP以编程方式验证身份并与AEM进行交互，作为Cloud Service。
+title: 从外部应用程序验证AEM作为Cloud Service
+description: 了解外部应用程序如何使用本地开发访问令牌和服务凭据通过HTTP以编程方式验证AEM身份并与其作为Cloud Service进行交互。
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
-feature: APIs
+feature: API
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330460.jpg
-topic: Headless, Integrations
+topic: 无头、集成
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
 
 
-# 将AEM作为Cloud Service进行基于令牌的身份验证
+# 基于令牌的AEM身份验证作为Cloud Service
 
-在本教程中，您可以很好地了解外部应用程序如何使用访问令牌以编程方式验证AEM作为HTTP上的Cloud Service并与之交互。
+在本教程中，您将详细了解外部应用程序如何使用访问令牌以编程方式验证AEM as a HTTPCloud Service并与之进行交互。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
 
 ## 先决条件
 
-在继续学习本教程之前，请确保已经做好以下准备：
+在随本教程一起学习之前，请确保已完成以下操作：
 
-1. 作为Cloud Service环境(最好是开发环境或沙箱项目)访问AEM
-1. 作为Cloud Service环境的作者服务AEM管理员产品用户档案加入AEM
-1. 在您的AdobeIMS组织管理员中或访问您的IMS组织管理员（他们必须对[服务凭据](./service-credentials.md)执行一次性初始化）
-1. 部署到您的Cloud Service环境的最新[WKND站点](https://github.com/adobe/aem-guides-wknd)
+1. 将am AEM作为Cloud Service环境（最好是开发环境或沙盒项目）访问
+1. AEM as aCloud Service环境的创作服务AEM管理员产品配置文件中的成员资格
+1. 在您的AdobeIMS组织管理员中拥有成员资格或对其进行访问（他们必须对[服务凭据](./service-credentials.md)执行一次性初始化）
+1. 部署到您的Cloud Service环境的最新[WKND Site](https://github.com/adobe/aem-guides-wknd)
 
 ## 外部应用程序概述
 
-本教程使用从命令行运行的[简单的Node.js应用程序](./assets/aem-guides_token-authentication-external-application.zip)来使用[资产HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html)将AEM上的资产元数据更新为Cloud Service。
+本教程使用从命令行运行的[简单的Node.js应用程序](./assets/aem-guides_token-authentication-external-application.zip)，以使用[Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html)更新AEM上的资产元数据作为Cloud Service。
 
-Node.js应用程序的执行流程如下：
+Node.js应用程序的执行流程如下所示：
 
 ![外部应用程序](./assets/overview/external-application.png)
 
-1. 从命令行调用Node.js应用程序
+1. Node.js应用程序可从命令行调用
 1. 命令行参数定义：
-   + AEM作为要连接到(`aem`)的Cloud Service作者服务主机
+   + 要连接到的AEM as a Cloud Service作者服务主机(`aem`)
    + 要更新资产的AEM资产文件夹(`folder`)
    + 要更新的元数据属性和值（`propertyName`和`propertyValue`）
-   + 提供作为Cloud Service访问AEM所需凭据的文件的本地路径(`file`)
-1. 用于验证AEM的访问令牌源自通过命令行参数`file`提供的JSON文件
+   + 文件的本地路径，提供作为Cloud Service访问AEM所需的凭据(`file`)
+1. 用于对AEM进行身份验证的访问令牌是从通过命令行参数`file`提供的JSON文件中派生的
 
-   a.如果在JSON文件(`file`)中提供了用于非本地开发的服务凭据，则将从Adobe IMS API中检索访问令牌
-1. 应用程序使用访问令牌访问AEM并列表命令行参数`folder`中指定的文件夹中的所有资源
+   a.如果JSON文件(`file`)中提供了用于非本地开发的服务凭据，则会从AdobeIMS API中检索访问令牌
+1. 应用程序使用访问令牌访问AEM，并列出命令行参数`folder`中指定的文件夹中的所有资产
 1. 对于文件夹中的每个资产，应用程序会根据命令行参数`propertyName`和`propertyValue`中指定的属性名称和值更新其元数据
 
-虽然此示例应用程序是Node.js，但这些交互可以使用不同的编程语言进行开发并从其他外部系统执行。
+虽然此示例应用程序是Node.js，但这些交互可以使用不同的编程语言开发并从其他外部系统执行。
 
 ## 本地开发访问令牌
 
-本地开发访问令牌是作为Cloud Service环境为特定AEM生成的，并提供对创作和发布服务的访问。  这些访问令牌是临时的，仅用于开发通过HTTP与AEM交互的外部应用程序或系统。 他们可以快速轻松地自行生成一个临时访问令牌，允许他们开发其集成，而不是开发者必须获得和管理联合服务凭据。
+特定AEM作为Cloud Service环境并提供对创作和发布服务的访问权限时，会生成本地开发访问令牌。  这些访问令牌是临时的，仅用于开发通过HTTP与AEM交互的外部应用程序或系统。 开发人员不必获取和管理受保护的服务凭据，而是可以快速轻松地自行生成临时访问令牌，以便开发其集成。
 
 + [如何使用本地开发访问令牌](./local-development-access-token.md)
 
 ## 服务凭据
 
-服务凭据是任何非开发场景（最明显是生产场景）中使用的合并凭据，有助于外部应用程序或系统能够通过HTTP作为Cloud Service与AEM进行身份验证并与之交互。 服务凭据本身不会发送到AEM进行身份验证，而外部应用程序使用这些凭据生成JWT，JWT与Adobe IMS的API _交换作为_&#x200B;访问令牌的API，然后该API可用于验证作为Cloud Service的AEM请求。
+服务凭据是任何非开发场景（最明显是生产场景）中使用的绑定凭据，有助于外部应用程序或系统通过HTTP验证AEM作为Cloud Service并与之交互的能力。 服务凭据本身不会发送到AEM进行身份验证，而是外部应用程序会使用这些凭据来生成JWT，JWT与AdobeIMS的API _的_&#x200B;访问令牌交换，该令牌随后可用于对AEM作为Cloud Service的HTTP请求进行身份验证。
 
 + [如何使用服务凭据](./service-credentials.md)
 
