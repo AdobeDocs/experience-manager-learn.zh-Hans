@@ -16,11 +16,11 @@ ht-degree: 21%
 
 + [概述](./overview.md)
 + AEM as a Cloud Service 简介{#introduction}
-   + [什么是AEM作为Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [什么是AEM as aCloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [进化](./introduction/evolution.md)
    + [架构](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
-+ 底层技术{#underlying-technology}
++ 基础技术{#underlying-technology}
    + [AEM架构](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java内容存储库](./underlying-technology/introduction-jcr.md)
@@ -33,7 +33,7 @@ ht-degree: 21%
    + [CI/CD生产管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD非生产管道](./cloud-manager/cicd-non-production-pipeline.md)
    + [活动](./cloud-manager/activity.md)
-   + 开发运营{#devops}
+   + Dev Ops{#devops}
       + [部署代码](./cloud-manager/devops/deploy-code.md)
       + [合并项目](./cloud-manager/devops/merge-projects.md)
       + [配置管道](./cloud-manager/devops/configure-pipelines.md)
@@ -44,10 +44,10 @@ ht-degree: 21%
 + 本地开发环境设置{#local-development-environment-set-up}
    + [概述](./local-development-environment/overview.md)
    + [开发工具](./local-development-environment/development-tools.md)
-   + [本地AEM Runtime](./local-development-environment/aem-runtime.md)
-   + [本地调度程序工具](./local-development-environment/dispatcher-tools.md)
+   + [本地AEM运行时](./local-development-environment/aem-runtime.md)
+   + [本地Dispatcher工具](./local-development-environment/dispatcher-tools.md)
 + 开发{#developing}
-   + 开发基础{#basics}
+   + 开发基础知识{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本地开发环境](./developing/basics/local-development-environment.md)
       + [AEM 项目原型](./developing/basics/aem-project-archetype.md)
@@ -64,9 +64,9 @@ ht-degree: 21%
       + [日志](./debugging/aem-sdk-local-quickstart/logs.md)
       + [远程调试](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi Web控制台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
-      + [调度程序工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
+      + [Dispatcher工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + 将AEM调试为Cloud Service{#debugging-aem-as-a-cloud-service}
+   + 调试AEM as aCloud Service{#debugging-aem-as-a-cloud-service}
       + [概述](./debugging/cloud-service/overview.md)
       + [日志](./debugging/cloud-service/logs.md)
       + [构建和部署](./debugging/cloud-service/build-and-deployment.md)
@@ -76,9 +76,9 @@ ht-degree: 21%
    + [概述](./accessing/overview.md)
    + [AdobeIMS用户](./accessing/adobe-ims-users.md)
    + [AdobeIMS用户组](./accessing/adobe-ims-user-groups.md)
-   + [AdobeIMS产品用户档案](./accessing/adobe-ims-product-profiles.md)
-   + [AEM用户、用户组和权限](./accessing/aem-users-groups-and-permissions.md)
-   + [配置对AEM直通服务的访问](./accessing/walk-through.md)
+   + [AdobeIMS产品配置文件](./accessing/adobe-ims-product-profiles.md)
+   + [AEM用户、组和权限](./accessing/aem-users-groups-and-permissions.md)
+   + [配置对AEM演练的访问权限](./accessing/walk-through.md)
 + 迁移{#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
    + [批量导入资产](./migration/bulk-import.md)
@@ -92,49 +92,49 @@ ht-degree: 21%
       + [配置根面板](./forms/create-first-af/configure-root-panel.md)
       + [“配置人员”面板](./forms/create-first-af/configure-people-panel.md)
       + [配置收入面板](./forms/create-first-af/configure-income-panel.md)
-      + [配置资源面板](./forms/create-first-af/configure-assets-panel.md)
+      + [配置资产面板](./forms/create-first-af/configure-assets-panel.md)
       + [配置开始面板](./forms/create-first-af/configure-start-panel.md)
       + [添加和配置工具栏](./forms/create-first-af/add-configure-toolbar.md)
-   + Document Cloud API和AEM Forms CS{#doc-cloud-sdk}
+   + Document CloudAPI和AEM Forms CS{#doc-cloud-sdk}
       + [简介](./forms/doc-cloud-sdk/introduction.md)
-      + [创建Adobe IO项目](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [创建AdobeIO项目](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
       + [创建OSGI配置](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
       + [定义界面](./forms/doc-cloud-sdk/create-interface.md)
-      + [实现接口](./forms/doc-cloud-sdk/implement-interface.md)
-      + [创建JSON部件](./forms/doc-cloud-sdk/get-content-analyzer.md)
+      + [实施界面](./forms/doc-cloud-sdk/implement-interface.md)
+      + [创建JSON部分](./forms/doc-cloud-sdk/get-content-analyzer.md)
       + [自定义流程步骤](./forms/doc-cloud-sdk/custom-process-step.md)
-   + 创建审阅工作流{#create-aem-workflow}
+   + 创建审核工作流{#create-aem-workflow}
       + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
       + [触发工作流](./forms/create-aem-workflow/configure-af.md)
-   + Adobe Sign wAEM Forms{#forms-and-sign}
+   + Adobe Sign与AEM Forms{#forms-and-sign}
       + [简介](./forms/forms-and-sign/introduction.md)
       + [Adobe Sign API应用程序](./forms/forms-and-sign/create-sign-api-application.md)
       + [Adobe Sign 云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
-      + [配置以填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-   + 与Salesforce{#integrate-with-salesforce}集成
+      + [配置以进行填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + 与Salesforce集成{#integrate-with-salesforce}
       + [简介](./forms/integrate-with-salesforce/introduction.md)
       + [创建连接的应用程序](./forms/integrate-with-salesforce/create-connected-app.md)
-      + [创建Swagger文件](./forms/integrate-with-salesforce/describe-rest-api.md)
+      + [创建swagger文件](./forms/integrate-with-salesforce/describe-rest-api.md)
       + [创建数据源](./forms/integrate-with-salesforce/create-data-source.md)
       + [创建表单数据模型](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [测试表单提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
-      + [测试单击事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
+      + [测试点击事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset compute可扩展性{#asset-compute}
    + [概述](./asset-compute/overview.md)
    + 设置{#set-up}
       + [帐户和服务配置](./asset-compute/set-up/accounts-and-services.md)
       + [本地开发环境](./asset-compute/set-up/development-environment.md)
-      + [AdobeProject Firefly](./asset-compute/set-up/firefly.md)
+      + [Adobe项目Firefly](./asset-compute/set-up/firefly.md)
    + 开发{#develop}
       + [创建Asset compute项目](./asset-compute/develop/project.md)
       + [配置环境变量](./asset-compute/develop/environment-variables.md)
       + [配置manifest.yml](./asset-compute/develop/manifest.md)
-      + [开发员工](./asset-compute/develop/worker.md)
+      + [开发工作人员](./asset-compute/develop/worker.md)
       + [使用开发工具](./asset-compute/develop/development-tool.md)
    + 测试和调试{#test-debug}
       + [测试工作人员](./asset-compute/test-debug/test.md)
-      + [调试工作人员](./asset-compute/test-debug/debug.md)
+      + [调试工作程序](./asset-compute/test-debug/debug.md)
    + 部署{#deploy}
       + [部署到Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
       + [与AEM集成](./asset-compute/deploy/processing-profiles.md)
@@ -145,6 +145,6 @@ ht-degree: 21%
    + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/develop-wknd-tutorial.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
    + [SPA Editor(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [SPA Editor(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [SPA编辑器(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
