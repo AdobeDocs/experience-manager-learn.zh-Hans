@@ -1,7 +1,7 @@
 ---
 title: 创建客户端库
-description: 创建clientlibrary以处理“保存并退出”按钮的单击事件
-feature: Adaptive Forms
+description: 创建clientlibrary以处理“保存并退出”按钮的点击事件
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,22 +9,21 @@ activity: implement
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
-topic: Development
+topic: 开发
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '144'
 ht-degree: 2%
 
 ---
 
 # 创建客户端库
 
-创建[客户端lib](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html)，其中将包含在CSS类&#x200B;**savebutton**&#x200B;所标识的按钮的单击事件上调用`guideBridge` API方法`doAjaxSubmitWithFileAttachment`的代码。  我们将自适应表单数据`fileMap`和`mobileNumber`传递给侦听`**/bin/storeafdatawithattachments`的端点
+创建[client lib](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html)，该库将包含在CSS类&#x200B;**savebutton**&#x200B;标识的按钮的点击事件上调用`guideBridge` API的方法`doAjaxSubmitWithFileAttachment`的代码。  我们将自适应表单数据`fileMap`和`mobileNumber`传递到监听`**/bin/storeafdatawithattachments`的端点
 
-保存表单数据后，将生成唯一的应用程序ID并在对话框中向用户显示。 取消对话框后，用户会转到表单，该表单允许用户使用唯一的应用程序id检索保存的自适应表单。
+保存表单数据后，将生成一个唯一的应用程序ID，并在对话框中向用户显示该ID。 取消对话框后，用户将转到表单，通过该表单，用户可以使用唯一的应用程序ID检索保存的自适应表单。
 
 ```java
 $(document).ready(function () {
@@ -70,6 +69,6 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> 我们已使用[bootbox javascript库](http://bootboxjs.com/examples.html)显示对话框
+> 我们使用了[bootbox javascript库](http://bootboxjs.com/examples.html)来显示对话框
 
 此示例中使用的客户端库可从此处](assets/client-libraries.zip)下载[
