@@ -1,7 +1,7 @@
 ---
-title: 创建初始表单以触发进程
-description: 创建初始表单以触发电子邮件通知以开始签名过程。
-feature: Adaptive Forms
+title: 创建初始表单以触发流程
+description: 创建初始表单以触发电子邮件通知以启动签名过程。
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,13 +9,12 @@ activity: implement
 version: 6.4,6.5
 kt: 6892
 thumbnail: 6892.jpg
-topic: Development
+topic: 开发
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '171'
 ht-degree: 5%
 
 ---
@@ -23,7 +22,7 @@ ht-degree: 5%
 
 # 创建初始表单
 
-初始表单（再融资表单）用于通过触发&#x200B;**多重Forms** AEM工作流对多个表单进行签名。 您可以输入所选的值，但确保将以下字段添加到表单。
+初始表单（再融资表单）用于通过触发&#x200B;**Sign Multiple Forms** AEM工作流对多个表单进行签名。 您可以输入所选的值，但请确保将以下字段添加到表单中。
 
 
 
@@ -38,7 +37,7 @@ ht-degree: 5%
 
 
 需要配置初始表单以触发名为&#x200B;**signmultipleforms**的AEM工作流
-确保将“数据文件路径”设置为**Data.xml**。 这非常重要，因为示例代码在表单提交过程中的有效负荷中查找名为Data.xml的文件。
+确保将“数据文件路径”设置为**Data.xml**。 当示例代码在表单提交过程的有效负载中查找名为Data.xml的文件时，这一点非常重要。
 
 ## 资产
 
