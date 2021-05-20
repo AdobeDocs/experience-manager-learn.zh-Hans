@@ -1,9 +1,8 @@
 ---
 title: Adobe Experience Manager as Cloud Service 教程
-description: Adobe Experience Manager(AEM)作为Cloud Service的教程集
-sub-product: 站点，云管理器，基础，资产
+description: Adobe Experience Manager(AEM)作为Cloud Service的教程集合
+sub-product: 站点， cloud manager，基础，资产
 kt: 3289
-translation-type: tm+mt
 source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
 source-wordcount: '275'
@@ -14,7 +13,7 @@ ht-degree: 8%
 
 # 概述 {#overview}
 
-Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM作为Cloud Service，以过去的投资和创新为基础，引入了下一代Experience Manager产品线，保留和扩展了所有使用案例和功能。
+Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM as aCloud Service引入了新一代Experience Manager产品线，以过去的投资和创新为基础，保留和扩展所有用例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
@@ -22,23 +21,23 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM作为Clou
 
 * **[基于令牌的身份验证（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
-   *了解如何使用基于令牌的身份验证作为HTTPCloud Service与AEM交互*
+   *了解如何使用基于令牌的身份验证通过HTTP与AEM作为Cloud Service进行交互*
 
-* **[无外设图形QL（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+* **[无头图形QL（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *了解如何使用AEM GraphQL API在外部应用程序中提升体验。*
+   *了解如何使用AEM GraphQL API为外部应用程序中的体验提供动力。*
 
 * **[批量导入（视频）](./migration/bulk-import.md)**
 
-   *了解如何将资源从Azure Blob 存储或Amazon S3批量导入AEM*
+   *了解如何将资产从Azure Blob Storage或Amazon S3批量导入AEM*
 
-* **[asset compute元数据工作器（教程）](./asset-compute/advanced/metadata.md)**
+* **[asset compute元数据工作程序（教程）](./asset-compute/advanced/metadata.md)**
 
-   *了解如何将资产元数据从Asset compute工作者写回AEM*
+   *了解如何从Asset compute工作程序将资产元数据写回AEM*
 
-* **[asset compute microservices可扩展性（教程）](./asset-compute/overview.md)**
+* **[asset compute微服务可扩展性（教程）](./asset-compute/overview.md)**
 
-   *了解如何开发Asset compute工具以生成自定义资产演绎版*
+   *了解如何开发Asset compute工作程序以生成自定义资产演绎版*
 
 ## 员工挑选
 
@@ -49,7 +48,7 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM作为Clou
       </a>
       <div>
          <a href="./accessing/overview.md">
-         <strong>配置对AEM教程的访问</strong>
+         <strong>配置对AEM教程的访问权限</strong>
          </a>
       </div>
       <p>
@@ -66,7 +65,7 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM作为Clou
          </a>
       </div>
       <p>
-         <em>将您的本地开发机器作为Cloud Service开发准备就绪！</em>
+         <em>为本地开发计算机做好AEM as a Cloud Service开发准备！</em>
       <p>
    </td>   
    <td>
@@ -79,7 +78,7 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM作为Clou
          </a>
       </div>
       <p>
-         <em>浏览用于在AEM上作为Cloud Service SDK的本地快速入门调试应用程序的工具。</em>
+         <em>浏览用于在AEM(作为Cloud ServiceSDK的本地快速启动)上调试应用程序的工具。</em>
       <p>
    </td>
 </table>
@@ -87,4 +86,4 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM作为Clou
 ## 其他资源
 
 * [Experience League — 浏览Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [Adobe Experience Manager作为Cloud Service文档](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/landing/home.html)
+* [Adobe Experience Manager as a Cloud Service文档](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/landing/home.html)
