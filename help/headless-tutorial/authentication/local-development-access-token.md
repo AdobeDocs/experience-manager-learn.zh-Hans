@@ -1,21 +1,20 @@
 ---
 title: 本地开发访问令牌
-description: AEM本地开发访问令牌用于加快与AEM的集成开发，作为一个通过HTTP与AEM作者或发布服务进行编程交互的Cloud Service。
+description: AEM本地开发访问令牌用于加快与AEM的集成开发，作为一个Cloud Service，可通过HTTP以编程方式与AEM创作或发布服务进行交互。
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
-feature: APIs
+feature: API
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330477.jpg
-topic: Headless, Integrations
+topic: 无头、集成
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -23,27 +22,27 @@ ht-degree: 0%
 
 # 本地开发访问令牌
 
-构建需要以编程方式访问AEM作为Cloud Service的集成的开发人员需要一种简单、快速的方法来获取AEM的临时访问令牌以促进本地开发活动。 为满足这一需求，AEM开发人员控制台允许开发人员自行生成可用于以编程方式访问AEM的临时访问令牌。
+构建集成(需要以编程方式访问AEM作为Cloud Service)的开发人员需要一种简单、快速的方法来获取AEM的临时访问令牌，以便于进行本地开发活动。 为了满足这一需求，AEM开发人员控制台允许开发人员自行生成临时访问令牌，这些令牌可用于以编程方式访问AEM。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330477/?quality=12&learn=on)
 
 ## 生成本地开发访问令牌
 
-![获得本地开发访问令牌](assets/local-development-access-token/getting-a-local-development-access-token.png)
+![获取本地开发访问令牌](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-本地开发访问令牌以生成令牌的用户身份提供对AEM作者和发布服务的访问，以及他们的权限。 尽管这是开发令牌，但请勿共享此令牌或存储在源代码控制中。
+本地开发访问令牌提供了对AEM创作和发布服务的访问权限（作为生成令牌的用户）及其权限。 尽管这是开发令牌，但请勿共享此令牌，或将其存储在源代码管理中。
 
-1. 在[中，Adobe AdminConsole](https://adminconsole.adobe.com/)确保您（开发人员）是以下成员：
-   + __云管理器 — 开__ 发人员IMS产品用户档案(授予对AEM开发人员控制台的访问权限)
-   + __AEM Administrators__&#x200B;或&#x200B;__AEM Users__ IMS产品用户档案，用于访问令牌将与
-   + 沙箱AEM作为Cloud Service环境，仅要求在&#x200B;__AEM Administrators__&#x200B;或&#x200B;__AEM Users__&#x200B;产品用户档案中具有成员资格
-1. 登录到[Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
-1. 打开包含AEM的项目作为Cloud Service环境，以与
-1. 点按&#x200B;__环境__&#x200B;部分中环境旁的&#x200B;__省略号__，然后选择&#x200B;__开发人员控制台__
-1. 点按&#x200B;__集成__&#x200B;选项卡
+1. 在[AdobeAdminConsole](https://adminconsole.adobe.com/)中，确保您（开发人员）是以下成员：
+   + __Cloud Manager - DeveloperIMS__ 产品配置文件(授予对AEM开发人员控制台的访问权限)
+   + __AEM管理员__&#x200B;或&#x200B;__AEM用户__ AEM环境服务的IMS产品配置文件访问令牌将与集成
+   + 沙盒AEM作为Cloud Service环境，只需要在&#x200B;__AEM Administrators__&#x200B;或&#x200B;__AEM Users__&#x200B;产品配置文件中具有成员资格即可
+1. 登录到[AdobeCloud Manager](https://my.cloudmanager.adobe.com)
+1. 打开包含AEM作为Cloud Service环境的程序以与集成
+1. 点按&#x200B;__环境__&#x200B;部分中环境旁边的&#x200B;__省略号__ ，然后选择&#x200B;__开发人员控制台__
+1. 点按&#x200B;__集成__&#x200B;选项卡中的
 1. 点按&#x200B;__获取本地开发令牌__&#x200B;按钮
-1. 点按左上角的&#x200B;__下载按钮__，下载包含`accessToken`值的JSON文件，并将JSON文件保存到开发机器上的安全位置。
-   + 这是您24小时的开发人员访问令牌，将AEM作为Cloud Service环境。
+1. 点按左上角的&#x200B;__下载按钮__&#x200B;以下载包含`accessToken`值的JSON文件，然后将JSON文件保存到开发计算机上的安全位置。
+   + 这是您24小时的开发人员访问令牌，用于将AEM作为Cloud Service环境。
 
 ![AEM开发人员控制台 — 集成 — 获取本地开发令牌](./assets/local-development-access-token/developer-console.png)
 
@@ -52,34 +51,34 @@ ht-degree: 0%
 ![本地开发访问令牌 — 外部应用程序](assets/local-development-access-token/local-development-access-token-external-application.png)
 
 1. 从AEM开发人员控制台下载临时的本地开发访问令牌
-   + “本地开发”访问令牌每24小时过期一次，因此开发人员每天需要下载新访问令牌
-1. 正在开发一个以编程方式与AEM交互作为Cloud Service的外部应用程序
+   + 本地开发访问令牌每24小时过期一次，因此开发人员将需要每天下载新的访问令牌
+1. 正在开发以编程方式与AEM作为Cloud Service交互的外部应用程序
 1. 外部应用程序在本地开发访问令牌中读取
-1. 外部应用程序将构建到AEM的HTTP请求作为Cloud Service，并将本地开发访问令牌作为载体令牌添加到HTTP请求的授权标头
-1. AEM作为Cloud Service接收HTTP请求、验证请求并执行HTTP请求所请求的工作，并将HTTP响应返回给外部应用程序
+1. 外部应用程序将HTTP请求构建为AEM作为Cloud Service，并将本地开发访问令牌作为载体令牌添加到HTTP请求的授权标头
+1. AEM as a A Service接收HTTP请求、验证请求并执行HTTP请求请求所请求的工作，并将HTTP响应返回给外部应用程序
 
-### 外部应用程序示例
+### 示例外部应用程序
 
-我们将创建一个简单的外部JavaScript应用程序来说明如何使用本地开发人员访问令牌通过HTTPS以编程方式访问AEM作为Cloud Service。 这说明了在AEM外部运行的&#x200B;_任何_&#x200B;应用程序或系统如何使用该访问令牌以编程方式验证AEM并将其作为Cloud Service访问。 在[下一节](./service-credentials.md)中，我们将更新此应用程序代码，以支持生成生产用令牌的方法。
+我们将创建一个简单的外部JavaScript应用程序，以说明如何使用本地开发人员访问令牌以编程方式通过HTTPS访问AEM as aCloud Service。 这说明了&#x200B;_任何在AEM外运行的_&#x200B;应用程序或系统，无论其框架或语言如何，都可以使用访问令牌以编程方式对AEM进行身份验证并将其作为Cloud Service进行访问。 在[下一部分](./service-credentials.md)中，我们将更新此应用程序代码，以支持生成生产用令牌的方法。
 
-此范例应用程序从命令行运行，并使用以下流程使用AEM Assets HTTP API更新AEM资产元数据：
+此示例应用程序从命令行运行，并使用以下流程通过AEM Assets HTTP API更新AEM资产元数据：
 
-1. 从命令行读取参数(`getCommandLineParams()`)
-1. 获取用于验证AEM为Cloud Service的访问令牌(`getAccessToken(...)`)
-1. 列表在命令行参数(`listAssetsByFolder(...)`)中指定的AEM资产文件夹中的所有资产
-1. 使用命令行参数(`updateMetadata(...)`)中指定的值更新列出的资产的元数据
+1. 从命令行中读取参数(`getCommandLineParams()`)
+1. 获取用于对AEM作为Cloud Service进行身份验证的访问令牌(`getAccessToken(...)`)
+1. 列出在命令行参数(`listAssetsByFolder(...)`)中指定的AEM资产文件夹中的所有资产
+1. 使用命令行参数(`updateMetadata(...)`)中指定的值更新列出的资产元数据
 
-使用访问令牌以编程方式对AEM进行身份验证的关键元素是向对AEM发出的所有HTTP请求添加一个授权HTTP请求头，格式如下：
+使用访问令牌以编程方式对AEM进行身份验证的关键元素是，将以下格式向对AEM发出的所有HTTP请求添加授权HTTP请求标头：
 
 + `Authorization: Bearer ACCESS_TOKEN`
 
 ## 运行外部应用程序
 
-1. 确保本地开发机器上已安装[Node.js](/help/cloud-service/local-development-environment/development-tools.md?lang=en#node-js)，该机器将用于运行外部应用程序
+1. 确保在本地开发计算机上安装了[Node.js](/help/cloud-service/local-development-environment/development-tools.md?lang=en#node-js)，该开发计算机将用于运行外部应用程序
 1. 下载并解压缩[示例外部应用程序](./assets/aem-guides_token-authentication-external-application.zip)
-1. 从命令行，在此项目的文件夹中运行`npm install`
-1. 将[下载的本地开发访问令牌](#download-local-development-access-token)复制到项目根目录中名为`local_development_token.json`的文件
-   + 但请记住，千万不要向Git提交任何凭据！
+1. 在此项目文件夹的命令行中，运行`npm install`
+1. 将[下载的本地开发访问令牌](#download-local-development-access-token)复制到项目根目录中名为`local_development_token.json`的文件中
+   + 但请记住，切勿向Git提交任何凭据！
 1. 打开`index.js`并查看外部应用程序代码和注释。
 
    ```javascript
@@ -211,7 +210,7 @@ ht-degree: 0%
    }
    ```
 
-   查看`listAssetsByFolder(...)`和`updateMetadata(...)`中的`fetch(..)`调用，并注意`headers`定义了值为`Bearer ACCESS_TOKEN`的`Authorization` HTTP请求标头。 这是从外部应用程序发出的HTTP请求作为Cloud Service验证到AEM的方式。
+   查看`listAssetsByFolder(...)`和`updateMetadata(...)`中的`fetch(..)`调用，并注意`headers`定义值为`Bearer ACCESS_TOKEN`的`Authorization` HTTP请求标头。 这是源自外部应用程序的HTTP请求作为Cloud Service验证到AEM的方式。
 
    ```javascript
    ...
@@ -224,9 +223,9 @@ ht-degree: 0%
    })...
    ```
 
-   对AEM的任何HTTP请求都必须在“授权”标头中设置承载访问令牌。 请记住，每个AEM作为Cloud Service环境都需要它自己的访问令牌。 开发的访问令牌不会在阶段或生产上工作，阶段的不会在开发或生产上工作，而生产的不会在开发或阶段工作！
+   对AEM作为Cloud Service的任何HTTP请求，都必须在授权标头中设置载体访问令牌。 请记住，每个AEM作为Cloud Service环境都需要它自己的访问令牌。 开发的访问令牌在暂存或生产环境中不起作用，暂存环境在开发或生产环境中不起作用，而生产环境在开发或暂存环境中不起作用！
 
-1. 使用命令行，从项目的根执行应用程序，传入以下参数：
+1. 使用命令行，从项目的根执行应用程序，并传递以下参数：
 
    ```shell
    $ node index.js \
@@ -239,13 +238,13 @@ ht-degree: 0%
 
    传入以下参数：
 
-   + `aem`:作为应用程序将与之交互的Cloud Service环境的AEM的方案和主机名(例如 `https://author-p1234-e5678.adobeaemcloud.com`)。
-   + `folder`:资产文件夹路径，其资产将用于更新 `propertyValue`;请勿添加 `/content/dam` 前缀(例如 `/wknd/en/adventures/napa-wine-tasting`)
+   + `aem`:AEM作为应用程序将与之交互的Cloud Service环境的方案和主机名(例如， `https://author-p1234-e5678.adobeaemcloud.com`)。
+   + `folder`:资产将更新为的资产文件夹路径 `propertyValue`;请勿添加 `/content/dam` 前缀(例如 `/wknd/en/adventures/napa-wine-tasting`)
    + `propertyName`:要更新的资产属性名称，相对 `[dam:Asset]/jcr:content` 于(例如 `metadata/dc:rights`)。
-   + `propertyValue`:要设置为的 `propertyName` 值；包含空格的值需要用( `"` 例如)封装 `"WKND Limited Use"`)
+   + `propertyValue`:将设置为的 `propertyName` 值；包含空格的值需要使用( `"` 例如 `"WKND Limited Use"`)
    + `file`:从AEM开发人员控制台下载的JSON文件的相对文件路径。
 
-   成功执行每个已更新资产的应用程序结果输出：
+   成功执行每个更新资产的应用程序结果输出：
 
    ```shell
    200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting.json
@@ -257,19 +256,19 @@ ht-degree: 0%
 
 ### 验证AEM中的元数据更新
 
-通过以Cloud Service环境身份登录到AEM来验证元数据是否已更新（确保访问传入`aem`命令行参数的同一主机）。
+通过作为Cloud Service环境登录AEM以验证元数据是否已更新（确保访问传递到`aem`命令行参数的相同主机）。
 
-1. 作为外部应用程序与之交互的Cloud Service环境登录AEM（使用`aem`命令行参数中提供的同一主机）
-1. 导航到&#x200B;__资产__ > __文件__
-1. 导航到由`folder`命令行参数指定的资产文件夹，例如&#x200B;__WKND__ > __英语__ > __冒险__ > __纳帕品酒会__
-1. 打开文件夹中任意（非内容片段）资产的&#x200B;__属性__
-1. 点按&#x200B;__高级__&#x200B;选项卡
-1. 查看已更新属性的值，例如映射到已更新`metadata/dc:rights` JCR属性的&#x200B;__Copyright__，该属性反映在`propertyValue`参数中提供的值，例如&#x200B;__WKND Limited Use__
+1. 以外部应用程序交互的Cloud Service环境登录AEM（使用`aem`命令行参数中提供的相同主机）
+1. 导航到&#x200B;__Assets__ > __Files__
+1. 导航到`folder`命令行参数指定的资产文件夹，例如&#x200B;__WKND__ > __英语__ > __冒险__ > __纳帕品酒会__
+1. 打开文件夹中任何（非内容片段）资产的&#x200B;__属性__
+1. 点按&#x200B;__Advanced__&#x200B;选项卡
+1. 查看更新属性的值，例如&#x200B;__Copyright__，该值映射到更新的`metadata/dc:rights` JCR属性，该属性反映`propertyValue`参数中提供的值，例如&#x200B;__WKND Limited Use__
 
 ![WKND有限使用元数据更新](./assets/local-development-access-token/asset-metadata.png)
 
-## 后续步骤
+## 下面的步骤
 
-既然我们已经使用本地开发令牌以编程方式将AEM作为Cloud Service访问，我们需要更新应用程序以使用服务凭据进行处理，以便此应用程序可以在生产上下文中使用。
+现在，我们已使用本地开发令牌以编程方式访问AEM作为Cloud Service，因此我们需要更新应用程序以使用服务凭据进行处理，以便此应用程序可以在生产环境中使用。
 
 + [如何使用服务凭据](./service-credentials.md)
