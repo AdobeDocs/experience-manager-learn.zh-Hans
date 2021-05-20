@@ -1,7 +1,7 @@
 ---
 title: 创建客户端库
-description: 要获取要签名的下一个表单的客户端库代码
-feature: Adaptive Forms
+description: 用于获取要签名的下一个表单的客户端库代码
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,20 +9,19 @@ activity: implement
 version: 6.4,6.5
 kt: 6907
 thumbnail: 6907.jpg
-topic: Development
+topic: 开发
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 5%
+source-wordcount: '84'
+ht-degree: 4%
 
 ---
 
 # 创建客户端库
 
-创建自定义客户端库（简称clientlib），以提取url参数，在GET调用中传递这些参数。 GET调用是对/bin/getnextformtosign上装载的servlet进行的，它返回要登录包的下一个表单的url。
+创建一个自定义客户端库（简称clientlib），以提取在GET调用中传递这些参数的url参数。 GET调用对/bin/getnextformtosign上装载的servlet进行，该servlet返回要登录包的下一个表单的URL。
 
 以下是clientlib javascript函数中使用的代码
 
@@ -78,4 +77,4 @@ $(document).ready(function()
 
 ## 资产
 
-[clientlib可从此处下载](assets/get-next-form-client-lib.zip)
+[可从此处下载clientlib](assets/get-next-form-client-lib.zip)
