@@ -1,7 +1,7 @@
 ---
 title: 创建Servlet
-description: 创建Servlet以处理保存表单数据的POST请求
-feature: Adaptive Forms
+description: 创建Servlet以处理用于保存表单数据的POST请求
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,22 +9,21 @@ activity: implement
 version: 6.4,6.5
 kt: 6539
 thumbnail: 6539.pg
-topic: Development
+topic: 开发
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 4%
+source-wordcount: '86'
+ht-degree: 3%
 
 ---
 
 # 创建Servlet
 
-下一步是创建一个Servlet，它将调用我们自定义OSGi服务的相应方法。 Servlet可以访问自适应表单数据、文件附件信息。 Servlet将返回一个唯一的应用程序ID，它可用于检索部分完成的自适应表单。
+下一步是创建一个Servlet，以调用自定义OSGi服务的适当方法。 Servlet有权访问自适应表单数据、文件附件信息。 Servlet将返回一个唯一的应用程序ID，用于检索部分完成的自适应表单。
 
-当用户单击自适应表单上的“保存并退出”按钮时，将调用此servlet
+当用户单击自适应表单上的“保存并退出”按钮时，将调用此Servlet
 
 ```java
 package com.techmarketing.core.servlets;
