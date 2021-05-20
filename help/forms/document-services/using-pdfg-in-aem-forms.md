@@ -11,13 +11,12 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 7f570f12-ce43-4da7-a249-ef6bd0fe48e5
-topic: Development
+topic: 开发
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '283'
 ht-degree: 2%
 
 ---
@@ -27,24 +26,24 @@ ht-degree: 2%
 
 演示使用AEM Forms创建PDF的拖放功能
 
-PDFG代表PDF生成。 这意味着您可以将各种文件格式转换为PDF。 最常见的是Microsoft Office文档。 PDFG自6.1起一直是AEM Forms的一部分。
-[此处列出PDFG API的Javadoc](https://helpx.adobe.com/experience-manager/6-3/forms/using/aem-document-services-programmatically.html#PDFGeneratorService)
+PDFG表示“PDF生成”。 这意味着您可以将多种文件格式转换为PDF。 最常见的是Microsoft Office文档。 PDFG自6.1起成为AEM Forms的一部分。
+[此处列出了PDFG API的Javadoc](https://helpx.adobe.com/experience-manager/6-3/forms/using/aem-document-services-programmatically.html#PDFGeneratorService)
 
-通过与本文关联的资源，您可以将MS office文档或JPG文件拖放到HTML页面的放置区中。 删除文档后，它将调用PDFG服务并将文档转换为PDF并保存在AEM Server的文件系统中。
+利用与本文关联的资产，可将MS Office文档或JPG文件拖放到HTML页面的拖放区域。 文档一旦被删除，将调用PDFG服务，并将文档转换为PDF，并保存在AEM Server的文件系统上。
 
-要安装演示资源，请执行以下步骤
+要安装演示资产，请执行以下步骤
 
-1. 按此文档[此处](https://helpx.adobe.com/cn/experience-manager/6-4/forms/using/install-configure-pdf-generator.html)中所述配置PDFG。
-1. 请按照与您的AEM Forms版本相关的相应文档操作。
-1. [使用包管理器导入和安装与本文相关的资源。](assets/createpdfgdemov2.zip)
+1. 按照本文档[此处](https://helpx.adobe.com/cn/experience-manager/6-4/forms/using/install-configure-pdf-generator.html)所述配置PDFG。
+1. 请遵循与您的AEM Forms版本相关的相应文档。
+1. [使用包管理器导入和安装与本文相关的资产。](assets/createpdfgdemov2.zip)
 1. [导航到post.](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) jspin您的CRX
 1. 根据您的首选项更改保存位置（第9行）
 1. 保存更改。
 1. 打开[ html页面](http://localhost:4502/content/DocumentServices/CreatePDFG.html)以拖放要转换的文件。
-1. 将单词文件或jpg放置到放置区中。
-1. 输入文档将转换为PDF并保存在第4点中指定的同一位置。
+1. 将单词文件或jpg放入拖放区域。
+1. 输入文档将转换为PDF并保存在与第4点中指定的相同位置。
 
-以下代码段显示了使用PDFG服务将文件转换为PDF
+以下代码片段显示了PDFG服务在将文件转换为PDF时的用法
 
 ```java
 com.adobe.pdfg.service.api.GeneratePDFService pdfService = sling.getService(com.adobe.pdfg.service.api.GeneratePDFService.class);
