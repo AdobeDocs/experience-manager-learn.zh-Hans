@@ -1,21 +1,20 @@
 ---
 title: 在自适应Forms中显示内联图像
 seo-title: 在自适应Forms中显示内联图像
-description: 在Adaptive Forms中内联显示上传的图像
-seo-description: 在Adaptive Forms中内联显示上传的图像
-feature: Adaptive Forms
+description: 在自适应Forms中显示内嵌的上传图像
+seo-description: 在自适应Forms中显示内嵌的上传图像
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: Development
+topic: 开发
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '241'
 ht-degree: 1%
 
 ---
@@ -23,11 +22,11 @@ ht-degree: 1%
 
 # 自适应Forms中的内联图像
 
-一个常见用例是在自适应表单中将上传的图像显示为内嵌图像。 默认情况下，上传的图像会显示为链接，通过在自适应表单中显示图像可以增强此体验。 本文将引导您了解显示内联图像所涉及的步骤。
+在自适应表单中，常见的用例是将上传的图像显示为内嵌图像。 默认情况下，上传的图像会显示为链接，通过在自适应表单中显示图像，可以增强此体验。 本文将指导您完成显示内联图像时涉及的步骤。
 
 ## 添加占位符图像
 
-第一步是在文件附件组件前面附加一个占位符div。 在下面的代码中，文件附件组件由照片上传的CSS类名称标识。 JavaScript函数是与自适应表单关联的客户端库的一部分。 在文件附件组件的初始化事件中调用此函数。
+第一步是在文件附件组件的前面添加占位符div。 在下面的代码中，文件附件组件通过其照片上传的CSS类名称进行标识。 JavaScript函数是与自适应表单关联的客户端库的一部分。 在文件附件组件的初始化事件中调用此函数。
 
 ```javascript
 /**
@@ -40,9 +39,9 @@ function addTempImage(){
 }
 ```
 
-### 显示内联图像
+### 显示内嵌图像
 
-用户上传图像后，将在文件附件组件的提交事件中调用以下列出的函数。 该函数接收上传的文件对象作为参数。
+用户上传图像后，将在文件附件组件的提交事件中调用下面列出的函数。 函数将上传的文件对象作为参数进行接收。
 
 ```javascript
 /**
@@ -72,5 +71,5 @@ function consumeImage (file) {
 
 * 使用AEM包管理器在AEM实例上下载并安装[客户端库](assets/inline-image-client-library.zip)。
 * 使用AEM包管理器在您的AEM实例上下载并安装[示例表单](assets/inline-image-af.zip)。
-* 将浏览器指向[添加内联图像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* 将您的浏览器指向[Add Inline Image](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * 单击“附加照片”按钮以添加图像
