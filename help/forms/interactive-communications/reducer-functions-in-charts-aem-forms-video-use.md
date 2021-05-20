@@ -1,34 +1,33 @@
 ---
-title: 在图表中使用减速器函数
+title: 在图表中使用Reducer函数
 seo-title: 在AEM Forms中使用Reducer函数 — 图表
-description: Reducer函数用于聚合图表中显示的值或组值。以下视频将介绍使用Reducer函数所涉及的步骤。
-seo-description: Reducer函数用于聚合图表中显示的值或组值。以下视频将介绍使用Reducer函数所涉及的步骤。
+description: Reducer函数用于聚合或分组图表中显示的值。以下视频将演示使用Reducer函数时涉及的步骤。
+seo-description: Reducer函数用于聚合或分组图表中显示的值。以下视频将演示使用Reducer函数时涉及的步骤。
 uuid: e9bd8bda-48ea-4a02-95c4-02aedafdb640
 discoiquuid: 6fef8341-8fd5-4d82-9f69-2b8be7cd22db
-feature: Interactive Communication
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: technical video
 activity: use
 version: 6.4,6.5
-topic: Development
+topic: 开发
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 3%
+source-wordcount: '130'
+ht-degree: 2%
 
 ---
 
 
 # 在AEM Forms中使用Reducer函数 — Charts{#using-reducer-functions-in-aem-forms-charts}
 
-Reducer函数用于聚合或组图表中显示的值。
+Reducer函数用于聚合或分组图表中显示的值。
 
 
-例如，我们可以使用Reducer函数显示每个类别的事务处理数，或显示以下示例数据中每个类别的最高费用
+例如，我们可以使用Reducer函数来显示每个类别的事务处理数，或显示下面示例数据中每个类别的最高费用
 
 ```json
 [{
@@ -62,7 +61,7 @@ Reducer函数用于聚合或组图表中显示的值。
 ]
 ```
 
-下面的视频将介绍使用减速器功能所涉及的步骤。
+以下视频将演示使用减速器功能涉及的步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21368/?quality=9&learn=on)
 
