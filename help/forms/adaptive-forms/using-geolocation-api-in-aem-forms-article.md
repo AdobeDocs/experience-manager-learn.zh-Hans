@@ -1,43 +1,42 @@
 ---
-title: 在自适应Forms中使用Geolocation API
-seo-title: 在自适应Forms中使用Geolocation API
-description: 使用geolocation api的
-seo-description: 使用geolocation api的
+title: 在自适应Forms中使用地理位置API
+seo-title: 在自适应Forms中使用地理位置API
+description: 使用地理位置api的
+seo-description: 使用地理位置api的
 uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
-feature: Adaptive Forms
+feature: 自适应表单
 topics: integrations
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
-topic: Development
+topic: 开发
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
 
-# 在Adaptive Forms{#using-geolocation-api-s-in-adaptive-forms}中使用Geolocation API
+# 在自适应Forms中使用地理位置API{#using-geolocation-api-s-in-adaptive-forms}
 
-请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)页面，获取此功能的实时演示的链接。
+请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)页面，获取此功能的实时演示链接。
 
-在本文中，我们将了解如何使用Google的Geolocation API填充自适应表单的字段。 当您要在表单上填充当前地址字段时，通常使用此用例。
+在本文中，我们将了解如何使用Google的地理位置API填充自适应表单的字段。 当您想要在表单上填充当前地址字段时，通常会使用此用例。
 
-按照以下步骤使用自适应Forms中的Geolocation API。
+遵循以下步骤在自适应Forms中使用地理位置API。
 
-1. [从Google获](https://developers.google.com/maps/documentation/javascript/get-api-key) 取API密钥以使用Google地图平台。您可以获得有效期为1年的试用密钥。
+1. [从Google](https://developers.google.com/maps/documentation/javascript/get-api-key) 获取API密钥以使用Google Maps平台。您可以获得有效期为1年的试用密钥。
 
-1. 自适应表单片段已创建，其中包含字段以保存当前地址
+1. 创建了自适应表单片段，其中包含用于保存当前地址的字段
 
-1. 在自适应表单的图像对象的单击事件上调用了Geolocation API
+1. 在自适应表单图像对象的单击事件中调用了地理位置API
 
-1. 已分析API调用返回的JSON数据，并相应地设置自适应表单字段值。
+1. 解析了API调用返回的JSON数据，并相应地设置了自适应表单字段值。
 
 ```javascript
 navigator.geolocation.getCurrentPosition(showPosition);
@@ -84,33 +83,33 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 }
 ```
 
-![填充有geoloaction api的字段](assets/capture-4.gif)
+![使用地理位置api填充的字段](assets/capture-4.gif)
 
-在第1行中，我们使用HTML Geolocation API获取当前位置。 获得当前位置后，我们将当前位置传递给showPosition函数。
+在第1行中，我们使用HTML地理位置API获取当前位置。 获取当前位置后，我们将当前位置传递到showPosition函数。
 
-在showPosition函数中，我们使用Google API获取给定经纬度的地址详细信息。
+在showPosition函数中，我们使用Google API获取给定纬度和经度的地址详细信息。
 
-随后将分析API返回的JSON以设置自适应表单字段。
+然后，将解析API返回的JSON以设置自适应表单字段。
 
 >[!NOTE]
 >
->为了进行测试，您可以将HTTP协议与URL中的localhost一起使用。
+>出于测试目的，您可以在URL中将HTTP协议与localhost结合使用。
 >
->对于生产服务器，您需要为AEM服务器启用SSL才能获得此功能。
+>对于生产服务器，您需要为AEM服务器启用SSL才能获取此功能。
 >
->与本文相关的示例已使用美国地址进行测试。 如果要在其他地理位置使用此功能，您可能必须调整JSON分析。
+>与本文关联的示例已使用美国地址进行测试。 如果要在其他地理位置使用此功能，则可能必须调整JSON解析。
 
 要将此功能安装到您的服务器上，请执行以下步骤
 
-* 安装和开始AEM Forms服务器。
+* 安装并启动AEM Forms服务器。
 
->!![NOTE] 此功能已在AEM Forms 6.3及更高版本上测试
+>!![NOTE] 此功能已在AEM Forms 6.3及更高版本上进行测试
 * [获取Google API密钥](https://developers.google.com/maps/documentation/javascript/get-api-key)。
-* [将与此文章相关的资产导入AEM。](assets/geolocationapi.zip)
+* [将与本文相关的资产导入AEM。](assets/geolocationapi.zip)
 * [在编辑模式下打开自适应表单片段。](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
 * 打开图像选择组件的规则编辑器。
-* 将&lt;your_api_key>替换为Google API Key。
+* 将&lt;your_api_key>替换为Google API密钥。
 * 保存更改。
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled)。
-* 单击“geolocation”图标。
-* 您的表单应填充当前位置。
+* 单击“地理位置”图标。
+* 您的表单应使用当前位置填充。
