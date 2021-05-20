@@ -1,7 +1,7 @@
 ---
 title: 将Adobe客户端数据层与AEM核心组件结合使用
-description: Adobe客户端数据层引入了一种标准方法来在网页上收集和存储有关访客体验的数据，然后使访问这些数据变得很容易。 Adobe客户端数据层与平台无关，但完全集成到核心组件中以与AEM一起使用。
-feature: core-component
+description: Adobe客户端数据层引入了一种标准方法，用于收集和存储有关访客在网页上体验的数据，然后使访客能够轻松访问这些数据。 Adobe客户端数据层与平台无关，但完全集成到核心组件中以与AEM一起使用。
+feature: 核心组件
 topics: integrations
 audience: developer
 doc-type: feature video
@@ -9,35 +9,34 @@ activity: use
 version: cloud-service
 kt: 6261
 thumbnail: 41195.jpg
-topic: Integrations
+topic: 集成
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
 
 
-# 将Adobe客户端数据层与AEM核心组件{#overview}结合使用
+# 将Adobe客户端数据层与AEM核心组件结合使用 {#overview}
 
-Adobe客户端数据层引入了一种标准方法来在网页上收集和存储有关访客体验的数据，然后使访问这些数据变得很容易。 Adobe客户端数据层与平台无关，但完全集成到核心组件中以与AEM一起使用。
+Adobe客户端数据层引入了一种标准方法，用于收集和存储有关访客在网页上体验的数据，然后使访客能够轻松访问这些数据。 Adobe客户端数据层与平台无关，但完全集成到核心组件中以与AEM一起使用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41195?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 想在AEM站点上启用Adobe客户端数据层？ [请参阅此处的说明](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+> 是否要在您的AEM网站上启用Adobe客户端数据层？ [请参阅此处的说明](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
 
-## 浏览数据层
+## 探索数据层
 
-您只需使用浏览器的开发人员工具和实时[ WKND参考站点](https://wknd.site/)，即可了解Adobe Client Data Layer的内置功能。
+您只需使用浏览器的开发人员工具和实时[WKND引用站点](https://wknd.site/)，即可了解Adobe客户端数据层的内置功能。
 
 >[!NOTE]
 >
-> 从Chrome浏览器拍摄的屏幕截图。
+> 下面从Chrome浏览器拍摄的屏幕截图。
 
 1. 导航到[https://wknd.site](https://wknd.site)
 1. 打开开发人员工具，并在&#x200B;**Console**&#x200B;中输入以下命令：
@@ -46,11 +45,11 @@ Adobe客户端数据层引入了一种标准方法来在网页上收集和存储
    window.adobeDataLayer.getState();
    ```
 
-   Inspect响应，查看AEM站点上数据层的当前状态。 您应该可以看到有关页面和各个组件的信息。
+   Inspect响应，用于查看AEM网站上数据层的当前状态。 您应会看到有关页面和各个组件的信息。
 
    ![Adobe数据层响应](assets/data-layer-state-response.png)
 
-1. 通过在控制台中输入以下内容，将数据对象推上数据层：
+1. 通过在控制台中输入以下内容，将数据对象推送到数据层：
 
    ```js
    window.adobeDataLayer.push({
@@ -63,8 +62,8 @@ Adobe客户端数据层引入了一种标准方法来在网页上收集和存储
    });
    ```
 
-1. 再次运行命令`adobeDataLayer.getState()`并查找`training-data`的条目。
-1. 接下来，添加一个路径参数以仅返回组件的特定状态：
+1. 再次运行命令`adobeDataLayer.getState()`并找到`training-data`的条目。
+1. 接下来，添加一个路径参数，以仅返回组件的特定状态：
 
    ```js
    window.adobeDataLayer.getState('component.training-data');
@@ -74,7 +73,7 @@ Adobe客户端数据层引入了一种标准方法来在网页上收集和存储
 
 ## 使用事件
 
-根据数据层的事件触发任何自定义代码是最佳做法。 接下来，浏览注册和收听不同的事件。
+最佳做法是根据数据层中的事件触发任何自定义代码。 接下来，探索注册和侦听不同事件。
 
 1. 在控制台中输入以下帮助程序方法：
 
@@ -95,13 +94,13 @@ Adobe客户端数据层引入了一种标准方法来在网页上收集和存储
    }
    ```
 
-   上述代码将检查`event`对象，并使用`adobeDataLayer.getState`方法获取触发该事件的对象的当前状态。 然后，帮助程序方法将检查`filter`条件，并且仅当当前`dataObject`满足过滤器时，才会返回该条件。
+   上述代码将检查`event`对象，并使用`adobeDataLayer.getState`方法获取触发该事件的对象的当前状态。 然后，帮助程序方法将检查`filter`条件，并且仅当当前`dataObject`满足筛选器时，才会返回该条件。
 
    >[!CAUTION]
    >
-   > 在本练习中刷新浏览器很重要，**not**，否则控制台JavaScript将丢失。
+   > 在本练习中，要刷新浏览器，**不**&#x200B;将很重要，否则控制台JavaScript将丢失。
 
-1. 接下来，输入一个事件处理程序，当&#x200B;**传送**&#x200B;中显示&#x200B;**Teaser**&#x200B;组件时，将调用该处理程序。
+1. 接下来，输入一个事件处理程序，该处理程序将在&#x200B;**Carousel**&#x200B;中显示&#x200B;**Teaser**&#x200B;组件时调用。
 
    ```js
    function teaserShownHandler(event) {
@@ -113,9 +112,9 @@ Adobe客户端数据层引入了一种标准方法来在网页上收集和存储
    }
    ```
 
-   `teaserShownHandler`将调用`getDataObjectHelper`方法并作为`@type`传入`wknd/components/teaser`的过滤器，以过滤由其他组件触发的事件。
+   `teaserShownHandler`将调用`getDataObjectHelper`方法，并在`wknd/components/teaser`的筛选器中作为`@type`传递，以筛选由其他组件触发的事件。
 
-1. 接下来，将事件侦听器推上数据层以侦听`cmp:show`事件。
+1. 接下来，将事件侦听器推送到数据层以侦听`cmp:show`事件。
 
    ```js
    window.adobeDataLayer.push(function (dl) {
@@ -123,13 +122,13 @@ Adobe客户端数据层引入了一种标准方法来在网页上收集和存储
    });
    ```
 
-   `cmp:show`事件由许多不同的组件触发，例如当新幻灯片显示在&#x200B;**传送**&#x200B;中时，或者当在&#x200B;**Tab**&#x200B;组件中选择了新选项卡时。
+   `cmp:show`事件由许多不同的组件触发，例如当在&#x200B;**轮播**&#x200B;中显示新幻灯片时，或在&#x200B;**Tab**&#x200B;组件中选择新选项卡时。
 
-1. 在页面上切换旋转式幻灯片并观察控制台语句：
+1. 在页面上切换轮播幻灯片，并观察控制台语句：
 
-   ![切换传送并查看事件侦听器](assets/teaser-console-slides.png)
+   ![切换轮播并查看事件侦听器](assets/teaser-console-slides.png)
 
-1. 从事件层删除事件侦听器以停止侦听`cmp:show`:
+1. 从数据层中删除事件侦听器以停止侦听`cmp:show`事件：
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -138,9 +137,9 @@ Adobe客户端数据层引入了一种标准方法来在网页上收集和存储
    });
    ```
 
-1. 返回页面并切换传送幻灯片。 请注意，不再记录任何声明，并且事件不被监听。
+1. 返回到页面并切换轮播幻灯片。 请注意，不再记录任何语句，并且事件未被侦听。
 
-1. 接下来，输入一个事件处理函数，该处理函数将在触发页面显示事件时调用：
+1. 接下来，输入将在触发页面显示事件时调用的事件处理程序：
 
    ```js
    function pageShownHandler(event) {
@@ -154,7 +153,7 @@ Adobe客户端数据层引入了一种标准方法来在网页上收集和存储
 
    请注意，资源类型`wknd/components/page`用于筛选事件。
 
-1. 接下来，将事件侦听器推上事件层以侦听`cmp:show`，调用`pageShownHandler`。
+1. 接下来，将事件侦听器推送到数据层以侦听`cmp:show`事件，并调用`pageShownHandler`。
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -163,22 +162,22 @@ Adobe客户端数据层引入了一种标准方法来在网页上收集和存储
    });
    ```
 
-1. 您应立即看到已触发的控制台语句与页面数据：
+1. 您应会立即看到一个控制台语句已随页面数据一起触发：
 
    ![页面显示数据](assets/page-show-console-data.png)
 
-   页面的`cmp:show`事件在页面顶部加载每页时触发。 您可能会问，当页面显然已加载时，为什么触发事件处理程序？
+   页面的`cmp:show`事件在页面最顶部的每次页面加载时触发。 您可能会问，当页面显然已加载时，为何触发事件处理程序？
 
-   这是Adobe客户端数据层的独特功能之一，其中，您可以在事件层初始化后的&#x200B;**或**&#x200B;之前注册数据侦听器&#x200B;**。**&#x200B;这是避免种族状况的关键特征。
+   这是Adobe客户端数据层的独特功能之一，其中，可以在数据层初始化后&#x200B;**或**&#x200B;之前注册事件侦听器&#x200B;**。**&#x200B;这是避免竞争情况的关键功能。
 
-   数据层维护一个队列数组，其中包含按顺序发生的所有事件。 默认情况下，事件层将触发&#x200B;**past**&#x200B;中发生的事件以及&#x200B;**future**&#x200B;中的事件的回调。 它可以将事件过滤到过去或将来。 [有关更多信息，请参阅文档](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener)。
+   数据层维护一个队列数组，其中包含依次发生的所有事件。 默认情况下，数据层将触发&#x200B;**past**&#x200B;中发生的事件以及&#x200B;**future**&#x200B;中的事件的事件回调。 它可以将事件过滤到过去或未来。 [有关更多信息，请参阅此文档](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener)。
 
 
 ## 后续步骤
 
-查看以下教程，了解如何使用事件驱动的Adobe客户端数据层来收集页面数据并发送到Adobe Analytics](../analytics/collect-data-analytics.md)。[
+请参阅以下教程，了解如何使用事件驱动的Adobe客户端数据层来收集页面数据并发送到Adobe Analytics](../analytics/collect-data-analytics.md)。[
 
-或了解如何使用AEM组件](./data-layer-customize.md)自定义Adobe Client数据层[
+或了解如何使用AEM Components](./data-layer-customize.md)自定义Adobe客户端数据层[
 
 
 ## 其他资源 {#additional-resources}
