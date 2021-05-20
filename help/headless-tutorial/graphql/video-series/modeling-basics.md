@@ -1,10 +1,10 @@
 ---
-title: GraphQL建模基础
-description: 了解如何定义和使用Adobe Experience Manager(AEM)中的内容片段以与GraphQL一起使用。
+title: GraphQL建模基础知识
+description: 了解如何在Adobe Experience Manager(AEM)中定义和使用内容片段以与GraphQL一起使用。
 sub-product: 资产
 version: cloud-service
-topic: 无头、内容管理
-feature: 内容片段、GraphQL API
+topic: 无外设、内容管理
+feature: 内容片段、 GraphQL API
 role: Developer
 level: Beginner
 kt: 7619
@@ -17,9 +17,9 @@ ht-degree: 0%
 ---
 
 
-# GraphQL建模基础
+# GraphQL建模基础知识
 
-了解如何定义和使用Adobe Experience Manager(AEM)中的内容片段以与GraphQL一起使用。
+了解如何在Adobe Experience Manager(AEM)中定义和使用内容片段以与GraphQL一起使用。
 
 在此视频中，您将：
 
