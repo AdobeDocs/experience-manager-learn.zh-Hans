@@ -1,10 +1,10 @@
 ---
 title: 在AEM中设置体验片段和Adobe Target集成
 seo-title: 在AEM中设置体验片段和Adobe Target集成
-description: Adobe Experience Manager 6.4重新构思了AEM和目标之间的个性化工作流程。 现在，在AEM中创建的体验可以作为HTML优惠直接交付到Adobe Target。 它使营销人员能够跨不同渠道无缝测试和个性化内容。
-seo-description: Adobe Experience Manager 6.4重新构思了AEM和目标之间的个性化工作流程。 现在，在AEM中创建的体验可以作为HTML优惠直接交付到Adobe Target。 它使营销人员能够跨不同渠道无缝测试和个性化内容。
+description: Adobe Experience Manager 6.4可重新构建AEM和Target之间的个性化工作流。 现在，在AEM中创建的体验可以作为HTML选件直接交付到Adobe Target。 它允许营销人员跨不同渠道无缝测试和个性化内容。
+seo-description: Adobe Experience Manager 6.4可重新构建AEM和Target之间的个性化工作流。 现在，在AEM中创建的体验可以作为HTML选件直接交付到Adobe Target。 它允许营销人员跨不同渠道无缝测试和个性化内容。
 sub-product: 内容服务
-feature: Experience Fragments
+feature: 体验片段
 topics: integrations
 audience: administrator, developer
 doc-type: technical video
@@ -12,13 +12,12 @@ activity: setup
 version: 6.4, 6.5
 uuid: 05fd477d-0c1a-42c0-ab92-2bca86602e2e
 discoiquuid: 16cb0b92-9398-4fd2-b8c3-f4b7675ef72c
-topic: Personalization
+topic: 个性化
 role: Administrator, Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '272'
 ht-degree: 2%
 
 ---
@@ -26,17 +25,17 @@ ht-degree: 2%
 
 # 设置体验片段和Adobe Target集成{#set-up-experience-fragments-and-adobe-target-integration}
 
-Adobe Experience Manager 6.4重新构思了AEM和目标之间的个性化工作流程。 现在，在AEM中创建的体验可以作为HTML优惠直接交付到Adobe Target。 它使营销人员能够跨不同渠道无缝测试和个性化内容。
+Adobe Experience Manager 6.4可重新构建AEM和Target之间的个性化工作流。 现在，在AEM中创建的体验可以作为HTML选件直接交付到Adobe Target。 它允许营销人员跨不同渠道无缝测试和个性化内容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22380/?quality=9&learn=on)
 
 >[!NOTE]
 >
->建议使用at.js客户端库，最佳实践是使用Launch by Adobe、Adobe DTM或任何第三方标签管理解决方案等标签管理解决方案将目标库添加到您的网页
+>建议使用at.js客户端库，最佳做法是使用标签管理解决方案(如Launch by Adobe、AdobeDTM或任何第三方标签管理解决方案)将目标库添加到您的网站页面
 
-* 应用于Experience Fragment文件夹的目标云服务配置会继承直接在父文件夹下创建的所有Experience Fragments。 子文件夹不继承父云服务配置。
-* 目标客户端代码可从Adobe Experience Cloud >启动目标>在设置选项卡>实施>编辑at.js设置中获取。
-* 目标 API用户名和密码可以通过向Client Care提交票证来获取，并请求启用Experience Fragment目标集成功能。
+* 应用于体验片段文件夹的Target云服务配置会继承到直接在父文件夹下创建的所有体验片段。 子文件夹不会继承父云服务配置。
+* 可以从Adobe Experience Cloud >启动Target >位于设置选项卡>实施>编辑at.js设置下，获取Target客户端代码。
+* 通过向客户关怀团队提交票证并请求启用Experience Fragment Target集成功能，可以获取Target API用户名和密码。
 
 ## 其他资源 {#additional-resources}
 
