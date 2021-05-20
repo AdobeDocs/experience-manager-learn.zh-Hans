@@ -1,20 +1,19 @@
 ---
 title: 了解AEM中的身份验证支持
-description: 'AEM支持的身份验证（偶尔授权）机制中的整合视图。 '
+description: '对AEM支持的身份验证（有时还是授权）机制的整合视图。 '
 version: 6.3, 6.4, 6.5
-feature: Users and Groups
+feature: 用户和组
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
-topic: Architecture
+topic: 架构
 role: Architect
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '142'
 ht-degree: 5%
 
 ---
@@ -22,9 +21,9 @@ ht-degree: 5%
 
 # 了解AEM 6.x中的身份验证支持
 
-AEM支持的身份验证（偶尔授权）机制中的整合视图。
+对AEM支持的身份验证（有时还是授权）机制的整合视图。
 
-*下表说明了用户如何验证到AEM。*
+*下表介绍了用户如何在AEM中进行身份验证。*
 
 <table>
     <tbody>
@@ -35,7 +34,7 @@ AEM支持的身份验证（偶尔授权）机制中的整合视图。
             <td><strong>AEM 6.5</strong></td>
         </tr>
         <tr>
-            <td><strong>AEM作为规范标识提供者</strong></td>
+            <td><strong>AEM作为规范身份提供程序</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -53,13 +52,13 @@ AEM支持的身份验证（偶尔授权）机制中的整合视图。
             <td>✔</td>
         </tr>
         <tr>
-            <td>基于令牌（w/ <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装令牌</a>）</td>
+            <td>基于令牌（带有<a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装的令牌</a>）</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>非AEM系统作为规范标识提供者</strong></td>
+            <td><strong>非AEM系统作为规范身份提供程序</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -70,7 +69,7 @@ AEM支持的身份验证（偶尔授权）机制中的整合视图。
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/single-sign-on.html" target="_blank">SSO</a></td>
+                <td><a href="https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/single-sign-on.html" target="_blank">单点登录</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
@@ -96,4 +95,4 @@ AEM支持的身份验证（偶尔授权）机制中的整合视图。
     </tbody>
 </table>
 
-⁕ *通过社区项目提供，但不直接受Adobe支持。*
+⁕*通过社区项目提供，但不直接受Adobe支持。*
