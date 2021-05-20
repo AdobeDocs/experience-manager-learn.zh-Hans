@@ -1,9 +1,9 @@
 ---
 title: 了解AEM Sites中的页面属性
 seo-title: 了解Adobe Experience Manager Sites中的页面属性
-description: 以下视频介绍了与Adobe Experience Manager中的页面关联的页面属性元数据。
-seo-description: '以下视频介绍了与Adobe Experience Manager中的页面关联的页面属性元数据。 '
-feature: Page Editor
+description: 以下视频介绍与Adobe Experience Manager中的页面关联的页面属性元数据。
+seo-description: '以下视频介绍与Adobe Experience Manager中的页面关联的页面属性元数据。 '
+feature: 页面编辑器
 topics: authoring, metadata
 audience: author, marketer
 doc-type: feature video
@@ -11,25 +11,24 @@ activity: understand
 version: 6.3, 6.4, 6.5
 kt: 4321
 thumbnail: 32192.jpg
-topic: Content Management
+topic: 内容管理
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 28%
+source-wordcount: '174'
+ht-degree: 29%
 
 ---
 
 
 # 了解页面属性{#understanding-page-properties-aem-sites}
 
-以下视频介绍了与Adobe Experience Manager中的页面关联的页面属性。
+以下视频介绍与Adobe Experience Manager中的页面关联的页面属性。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32192?quality=12&learn=on)
 
-在此视频中，将介绍以下页面属性元素：
+在此视频中，介绍了以下页面属性元素：
 
 * 基本
    * 标题和标记
@@ -65,4 +64,4 @@ ht-degree: 28%
 
 * [编辑页面属性文档](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/authoring/editing-page-properties.html)
 * [编辑页面内容文档](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/authoring/editing-content.html)
-* [站点创作用户指南](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/home.html?topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [Sites Authoring用户指南](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/home.html?topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
