@@ -1,60 +1,59 @@
 ---
-title: 在AEM Forms中使用事务报告
-seo-title: 在AEM Forms中使用事务报告
-description: AEM Forms中的事务报表允许您对自指定日期以来在AEM Forms部署中发生的所有事务进行计数。
-seo-description: AEM Forms中的事务报表允许您对自指定日期以来在AEM Forms部署中发生的所有事务进行计数。
+title: 在AEM Forms中使用交易报表
+seo-title: 在AEM Forms中使用交易报表
+description: 利用AEM Forms中的事务报表，可统计自AEM Forms部署中指定日期以来发生的所有事务。
+seo-description: 利用AEM Forms中的事务报表，可统计自AEM Forms部署中指定日期以来发生的所有事务。
 uuid: e6133f7e-c79c-4006-89e7-3bebf7b8229e
-feature: Adaptive Forms
+feature: 自适应表单
 topics: developing
 audience: administrator
 doc-type: article
 activity: setup
 version: 6.4.1,6.5
 discoiquuid: 1abdf07a-b9f0-4c58-a1c6-08ae57db2014
-topic: Development
+topic: 开发
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 2%
+source-wordcount: '401'
+ht-degree: 1%
 
 ---
 
 
-# 在AEM Forms{#using-transaction-reporting-in-aem-forms}中使用事务报告
+# 在AEM Forms中使用事务报表{#using-transaction-reporting-in-aem-forms}
 
-AEM Forms 6.4.1中引入了交易报告，用于捕获表单提交数量、使用文档服务渲染文档和交互通信(Web和打印渠道)渲染。此功能主要针对希望根据表单提交数量和/或渲染数量来许可软件的客户。 此功能当前仅在AEM Forms OSGI堆栈上可用。
+AEM Forms 6.4.1引入了交易报告功能，用于捕获表单提交数量、使用文档服务渲染文档以及渲染交互式通信（Web和打印渠道）。此功能主要适用于希望根据表单提交数量和/或文档渲染数量授权软件的客户。 此功能当前仅在AEM Forms OSGi堆栈上可用。
 
 ## 启用事务报告{#enabling-transaction-reporting}
 
-默认情况下，会禁用事务记录。 要启用事务记录，请按照以下步骤操作：
+默认情况下，事务记录处于禁用状态。 要启用交易记录，请按照以下步骤操作：
 
 * [打开configMgr](http://localhost:4502/system/console/configMgr)
-* 搜索“Forms事务报告”
-* 选中“记录事务”复选框
+* 搜索“Forms Transaction Reporting”
+* 选中“记录交易”复选框
 * 保存更改
 
-启用事务报告后，您可以提交自适应Forms，使用文档服务生成文档，或渲染Interactive Communication文档，以查看事务报告的实际操作。
+启用事务报表后，您可以提交自适应Forms、使用文档服务生成文档或渲染Interactive Communication文档，以查看事务报表的实际操作情况。
 
 ## 查看事务报表{#viewing-transaction-report}
 
-要视图事务报表，请以管理员身份登录AEM Forms。 只有fd-Administrator组的成员才能视图事务报表。
+要查看事务报表，请以管理员身份登录AEM Forms。 只有fd-Administrator组的成员才能查看事务报表。
 
-选择工具 | Forms |视图事务报表
+选择工具 | Forms |查看交易报表
 
-或单击[此处](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)视图事务报表
+或单击[此处](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)查看事务报表
 
-![TransctionReporting](assets/transactionreporting.gif)
+![TransactionReporting](assets/transactionreporting.gif)
 
-在以上“已处理文档”屏幕截图中，是使用文档服务生成的文档数。 渲染的文档是渲染的交互式通信文档（Web和打印）的数量。 Forms Submitted是自适应表单提交的数量。
+在上面的屏幕截图中， Document Processed是使用文档服务生成的文档数。 呈现的文档是呈现的交互式通信文档（Web和打印）的数量。 Forms Submitted是自适应表单提交的数量。
 
-事务在指定时间段内仍保留在缓冲区中（刷新缓冲区时间+反向复制时间）。 默认情况下，事务计数大约需要90秒才能反映在事务报表中。
+事务在指定时段（刷新缓冲时间+反向复制时间）内保留在缓冲区中。 默认情况下，交易计数大约需要90秒才能反映在交易报表中。
 
-诸如提交PDF表单、使用代理UI预览交互式通信或使用非标准表单提交方法等操作不作为事务处理入账。 AEM Forms提供了用于记录此类事务的API。 从您的自定义实施调用API以记录事务。
+诸如提交PDF表单、使用代理UI预览交互式通信或使用非标准表单提交方法之类的操作不会计为交易。 AEM Forms提供了用于记录此类交易的API。 从自定义实施中调用API以记录交易。
 
-如果您正在查看创作实例上的事务报表，请确保在所有发布实例上都配置了反向复制。
+如果要查看创作实例上的事务报表，请确保在所有发布实例上配置了反向复制。
 
-要了解有关事务报告[的更多信息，请单击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+要了解有关事务报告的更多信息[，请单击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
 
