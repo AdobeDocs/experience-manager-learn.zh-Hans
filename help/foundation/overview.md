@@ -2,7 +2,7 @@
 title: AEM Foundation 视频和教程
 seo-title: AEM Foundation 视频和教程
 description: 'Adobe Experience Manager Foundation 的视频和教程集合。 '
-seo-description: Adobe Experience Manager Foundation的一系列视频和教程
+seo-description: Adobe Experience Manager Foundation的视频和教程集合
 role: Leader, Architect, Developer, Administrator, Business Practitioner
 level: Beginner
 source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
@@ -15,22 +15,22 @@ ht-degree: 18%
 
 # 概述 {#overview}
 
-Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]的用户提供了一组通用的功能。
+Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]的用户提供了一组通用功能。
 
 ## 新增功能
 
-* **[使用Workflow AEM（视频）](./workflow/use-workflow.md)**
+* **[使用工作流AEM（视频）](./workflow/use-workflow.md)**
 
    *AEM工作流提供了一种在AEM中协作、管理和处理内容的方式。*
 
 * **[了解Cloud Manager for AEM（视频）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   *Cloud Manager for AEM可让您轻松管理、检查和自助AEM环境。*
+   *AEM版Cloud Manager允许轻松管理、检查和自助服务AEM环境。*
 
-* **[设置用于Adobe I/O的公钥和私钥（教程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *了解如何使用AEM和Adobe I/O [!DNL openssl] 生成密钥和密钥库。*
+* **[设置公钥和私钥以与Adobe I/O一起使用（教程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
+   *了解如何使用与AEM和Adobe I/O结合使用 [!DNL openssl] 的密钥和密钥库生成。*
 
-* **[使用Cloud Manager CI/CD管道（视频）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   *了解如何使用Cloud Manager的CI/CD渠道确保安全一致的部署。*
+* **[使用Cloud Manager CI/CD管线（视频）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
+   *了解如何使用Cloud Manager的CI/CD管道来确保部署安全一致。*
 
 ## 员工挑选
 
@@ -46,33 +46,33 @@ Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]的用户提�
     </a>
     </div>
     <p>
-    <em>Cloud Manager for AEM提供简单而可靠的解决方案，可轻松管理、检查和自助服务AEM环境。</em>
+    <em>Cloud Manager for AEM提供了一个简单而强大的解决方案，允许轻松管理、检查和自助服务AEM环境。</em>
     <p>
   </td>
    <td>
     <a href="./development/set-up-sling-dynamic-include.md">
-    <img alt="设置Sling Dynamic Include(SDI)" src="./development/assets/set-up-sling-dynamic-include/thumbnail.png" />
+    <img alt="设置Sling动态包含(SDI)" src="./development/assets/set-up-sling-dynamic-include/thumbnail.png" />
     </a>
      <div>
      <a href="./development/set-up-sling-dynamic-include.md">
-    <strong>设置Sling Dynamic Include(SDI)</strong>
+    <strong>设置Sling动态包含(SDI)</strong>
     </a>
     </div>
     <p>
-    <em>了解如何设置Sling Dynamic Include(SDI)并允许动态AEM组件始终提供新鲜内容。</em>
+    <em>了解如何设置Sling动态包含(SDI)并允许动态AEM组件始终提供新内容。</em>
     <p>
   </td>
   <td>
     <a href="./administration/understand-reasons-to-upgrade.md">
-    <img alt="了解升级AEM的理由" src="./administration/assets/understand-reasons-to-upgrade/thumbnail.png" />
+    <img alt="了解升级AEM的原因" src="./administration/assets/understand-reasons-to-upgrade/thumbnail.png" />
     </a>
     <div>
     <a href="./administration/understand-reasons-to-upgrade.md">
-    <strong>了解升级AEM的理由</strong>
+    <strong>了解升级AEM的原因</strong>
     </a>
     </div>
     <p>
-    <em>在考虑升级到最新版AEM时，对要了解的关键功能进行高级细分。</em>
+    <em>在考虑升级到最新版本的AEM时，简要列出要了解的主要功能。</em>
     </p>
   </td>
 </tr>
@@ -80,7 +80,7 @@ Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]的用户提�
 
 ## 其他资源
 
-* [Experience League — 了解AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League — 浏览AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
 * [AEM Sites 视频和教程](/help/sites/overview.md)
 * [AEM Assets 视频和教程](/help/assets/overview.md)
