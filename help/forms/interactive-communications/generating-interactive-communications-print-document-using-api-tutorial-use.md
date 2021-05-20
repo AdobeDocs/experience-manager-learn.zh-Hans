@@ -3,19 +3,18 @@ title: 使用监视文件夹机制生成用于打印渠道的交互式通信文�
 seo-title: 使用监视文件夹机制生成用于打印渠道的交互式通信文档
 description: 使用监视文件夹生成打印渠道文档
 seo-description: 使用监视文件夹生成打印渠道文档
-feature: Interactive Communication
+feature: 交互式通信
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: 开发
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -23,13 +22,13 @@ ht-degree: 1%
 
 # 使用监视文件夹机制生成用于打印渠道的交互式通信文档
 
-设计并测试了打印渠道文档后，您通常需要通过发出REST调用来生成文档，或使用监视文件夹机制生成打印文档。
+设计并测试打印渠道文档后，通常需要通过发出REST调用来生成文档，或使用监视文件夹机制生成打印文档。
 
-本文说明了使用监视文件夹机制生成打印渠道文档的用例。
+本文介绍了利用监视文件夹机制生成打印渠道文档的用例。
 
-将文件放入监视文件夹时，将执行与监视文件夹关联的脚本。 此脚本在以下文章中进行说明。
+将文件放入监视文件夹后，将执行与监视文件夹关联的脚本。 下文的文章中对此脚本进行了说明。
 
-放入监视文件夹的文件具有以下结构。 代码将为XML文档中列出的所有帐号生成语句。
+放入监视文件夹的文件具有以下结构。 该代码将为XML文档中列出的所有帐号生成语句。
 
 &lt;accountnumbers>
 
@@ -43,15 +42,15 @@ ht-degree: 1%
 
 &lt;/accountnumbers>
 
-以下代码清单如下所示：
+以下代码列表会执行以下操作：
 
 第1行 — InteractiveCommunicationsDocument的路径
 
-第15-20行：从XML文档获取帐号的列表，并将其放入监视的文件夹
+第15-20行：从XML文档中获取帐号列表，并将其放入监视的文件夹中
 
-第24-25行：获取与文档关联的PrintChannelService和打印渠道。
+第24-25行：获取与文档关联的PrintChannelService和Print Channel。
 
-第30行：将帐号作为关键元素传递到表单数据模型。
+第30行：将accountnumber作为关键元素传递到表单数据模型。
 
 第32-36行：为要生成的文档设置数据选项。
 
@@ -59,9 +58,9 @@ ht-degree: 1%
 
 第39-40行 — 将生成的文档保存到文件系统。
 
-表单数据模型的REST端点需要一个id作为输入参数。 此id将映射到名为accountnumber的请求属性，如以下屏幕截图所示。
+表单数据模型的REST端点需要一个id作为输入参数。 此id会映射到名为accountnumber的请求属性，如以下屏幕截图所示。
 
-![请求属性](assets/requestattributeprintchannel.gif)
+![requestattribute](assets/requestattributeprintchannel.gif)
 
 ```java
 var interactiveCommunicationsDocument = "/content/forms/af/retirementstatementprint/channels/print/";
@@ -113,22 +112,22 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **要在本地系统上测试此功能，请按照以下说明操作：**
 
-* 按照本[文章中的说明设置Tomcat。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成样本数据的war文件。
-* 按本[文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md)中所述设置服务aka系统用户。
-确保此系统用户对以下节点具有读取权限。 要授予用户登录[用户admin](https://localhost:4502/useradmin)的权限，并搜索系统用户“data”，并按下面节点的Tab键时授予读取权限，请执行以下操作
+* 按照本[文章中所述设置Tomcat。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成样本数据的war文件。
+* 按照[文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md)中所述设置服务即系统用户。
+确保此系统用户对以下节点具有读取权限。 为[用户管理员](https://localhost:4502/useradmin)授予登录权限，并搜索系统用户“data”，并通过Tab键访问权限选项卡，为以下节点授予读取权限
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
 * 使用包管理器将以下包导入AEM。 此包包含以下内容：
 
 
-* [交互通信示例文档](assets/retirementstatementprint.zip)
-* [监视文件夹脚本](assets/printchanneldocumentusingwatchedfolder.zip)
+* [交互式通信文档示例](assets/retirementstatementprint.zip)
+* [监视的文件夹脚本](assets/printchanneldocumentusingwatchedfolder.zip)
 * [数据源配置](assets/datasource.zip)
 
-* 打开/etc/fd/watchfolder/scripts/PrintPDF.ecma文件。 确保第1行中的interactiveCommunicationsDocument的路径指向要打印的正确文档
+* 打开/etc/fd/watchfolder/scripts/PrintPDF.ecma文件。 确保第1行中interactiveCommunicationsDocument的路径指向要打印的正确文档
 
-* 根据第2行中您的首选项修改saveLocation
+* 根据第2行上的首选项修改saveLocation
 
 * 创建包含以下内容的accountnumbers.xml文件
 
@@ -150,7 +149,7 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 >[!NOTE]
 >
->如果您计划在非Windows操作系统上使用它，请导航到
+>如果您计划在非Windows操作系统上使用它，请导航至
 >
->/etc/fd/watchfolder /config/PrintChannelDocument并根据您的首选项更改folderPath
+>/etc/fd/watchfolder /config/PrintChannelDocument ，并根据您的首选项更改folderPath
 
