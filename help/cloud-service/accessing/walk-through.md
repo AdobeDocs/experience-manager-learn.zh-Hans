@@ -1,7 +1,7 @@
 ---
-title: 配置对AEM直通服务的访问
-description: 简略介绍在Adobe AdminConsole中配置Adobe IMS用户、用户组和产品用户档案，以及如何在AEM作者中利用这些Adobe IMS抽象来定义和管理特定基于组的权限。
-feature: Users and Groups
+title: 配置对AEM演练的访问权限
+description: 在AdobeAdminConsole中配置AdobeIMS用户、用户组和产品配置文件的简略演练，以及如何利用AEM Author中的这些AdobeIMS抽象概念来定义和管理特定的基于组的权限。
+feature: 用户和组
 topics: authentication, permissions
 version: cloud-service
 activity: setup
@@ -9,25 +9,24 @@ audience: administrator
 doc-type: technical video
 kt: 6061
 thumbnail: 39155.jpg
-topic: Administration, Security
+topic: 管理、安全
 role: Administrator
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 3%
+source-wordcount: '120'
+ht-degree: 2%
 
 ---
 
 
-# 配置对AEM直通服务的访问
+# 配置对AEM演练的访问权限
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_aem_walkthrough"
->title="配置对AEM直通服务的访问"
->abstract="在Adobe Admin Console中配置Adobe IMS用户、用户组和产品用户档案，以及如何在AEM作者中利用这些AdobeIMS抽象来定义和管理特定基于组的权限，简略介绍。"
+>title="配置对AEM演练的访问权限"
+>abstract="在Adobe Admin Console中配置AdobeIMS用户、用户组和产品配置文件的简略演练，以及如何利用AEM Author中的这些AdobeIMS抽象概念来定义和管理特定的基于组的权限。"
 
-简略介绍在Adobe AdminConsole中配置Adobe IMS用户、用户组和产品用户档案，以及如何在AEM作者中利用这些Adobe IMS抽象来定义和管理特定基于组的权限。
+在AdobeAdminConsole中配置AdobeIMS用户、用户组和产品配置文件的简略演练，以及如何利用AEM Author中的这些AdobeIMS抽象概念来定义和管理特定的基于组的权限。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39155/?quality=12&learn=on)
