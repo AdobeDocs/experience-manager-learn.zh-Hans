@@ -1,6 +1,6 @@
 ---
-title: 使用片段引用进行高级数据建模 — AEM无标题入门 — GraphQL
-description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 了解如何使用片段参考功能进行高级数据建模并创建两个不同内容片段之间的关系。 了解如何修改GraphQL查询以包含引用模型中的字段。
+title: 使用片段引用进行高级数据建模 — AEM无头入门 — GraphQL
+description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 了解如何使用片段引用功能进行高级数据建模，以及如何在两个不同的内容片段之间创建关系。 了解如何修改GraphQL查询以包含引用模型中的字段。
 sub-product: 资产
 topics: headless
 version: cloud-service
@@ -10,11 +10,10 @@ audience: developer
 mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
-feature: 内容片段、GraphQL API
-topic: 无头、内容管理
+feature: 内容片段、 GraphQL API
+topic: 无外设、内容管理
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
 workflow-type: tm+mt
 source-wordcount: '855'
@@ -25,9 +24,9 @@ ht-degree: 1%
 
 # 使用片段引用进行高级数据建模
 
-可以从其他内容片段中引用内容片段。 这使用户能够构建具有片段之间关系的复杂数据模型。
+可以从其他内容片段中引用内容片段。 这允许用户使用片段之间的关系构建复杂的数据模型。
 
-在本章中，您将更新Adventure模型，以包含使用&#x200B;**片段引用**&#x200B;字段对参与者模型的引用。 您还将学习如何修改GraphQL查询以包含引用模型中的字段。
+在本章中，您将更新Adventure模型，以包含使用&#x200B;**片段引用**&#x200B;字段对参与者模型的引用。 您还将了解如何修改GraphQL查询，以包含引用模型中的字段。
 
 ## 前提条件
 
@@ -38,14 +37,14 @@ ht-degree: 1%
 在本章中，我们将学习如何：
 
 * 更新内容片段模型以使用片段引用字段
-* 创建一个GraphQL查询，它返回引用模型中的字段
+* 创建可返回引用模型中字段的GraphQL查询
 
 ## 添加片段引用{#add-fragment-reference}
 
-更新Adventure内容片段模型以添加对参与者模型的引用。
+更新冒险内容片段模型以添加对参与者模型的引用。
 
 1. 打开新浏览器并导航到AEM。
-1. 从&#x200B;**AEM开始**&#x200B;菜单导航到&#x200B;**工具** > **资产** > **内容片段模型** > **WKND站点**。
+1. 从&#x200B;**AEM开始**&#x200B;菜单中，导航到&#x200B;**工具** > **资产** > **内容片段模型** > **WKND站点**。
 1. 打开&#x200B;**Adventure**&#x200B;内容片段模型
 
    ![打开冒险内容片段模型](assets/fragment-references/adventure-content-fragment-edit.png)
@@ -54,50 +53,50 @@ ht-degree: 1%
 
    ![添加片段引用字段](assets/fragment-references/add-fragment-reference-field.png)
 
-1. 使用以下命令更新此字段的&#x200B;**属性**:
+1. 使用以下内容更新此字段的&#x200B;**属性**:
 
    * 呈现为 - `fragmentreference`
    * 字段标签 — **Adventure Contributor**
    * 属性名称 - `adventureContributor`
-   * 模型类型 — 选择&#x200B;**Contributor**&#x200B;型号
+   * 模型类型 — 选择&#x200B;**参与者**&#x200B;模型
    * 根路径 - `/content/dam/wknd`
 
    ![片段引用属性](assets/fragment-references/fragment-reference-properties.png)
 
    属性名称`adventureContributor`现在可用于引用参与者内容片段。
 
-1. 保存对模型的更改。
+1. 保存对模型所做的更改。
 
-## 将参与者分配到冒险
+## 为冒险活动分配参与者
 
-现在，已更新Adventure内容片段模型，我们可以编辑现有片段并引用参与者。 应当指出，编辑内容片段模型&#x200B;*会影响*&#x200B;从其创建的任何现有内容片段。
+现在，冒险内容片段模型已更新，我们可以编辑现有片段并引用参与者。 应该注意的是，编辑内容片段模型&#x200B;*会影响*&#x200B;从其创建的任何现有内容片段。
 
-1. 导航至&#x200B;**资产**>**文件**>**WKND站点**>**英语****冒险**>**[巴厘岛冲浪营地](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)**。
+1. 导航至&#x200B;**Assets** > **文件** > **WKND Site** > **英语** > **Adventures** > **[Bali Surf Camp](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)**。
 
    ![巴厘岛冲浪营文件夹](assets/setup/bali-surf-camp-folder.png)
 
 1. 单击&#x200B;**Bali Surf Camp**&#x200B;内容片段以打开内容片段编辑器。
-1. 更新&#x200B;**Adventure Contributor**&#x200B;字段，然后单击文件夹图标选择参与者。
+1. 更新&#x200B;**Adventure Contributor**&#x200B;字段，并单击文件夹图标以选择参与者。
 
    ![选择Stacey Roswells作为投稿人](assets/fragment-references/stacey-roswell-contributor.png)
 
    *选择参与者片段的路径*
 
-   ![contributor的填充路径](assets/fragment-references/populated-path.png)
+   ![参与者填充路径](assets/fragment-references/populated-path.png)
 
-   请注意，只能选择使用&#x200B;**Contributor**&#x200B;模型创建的片段。
+   请注意，只有使用&#x200B;**Contributor**&#x200B;模型创建的片段才能被选择。
 
-1. 保存对片段的更改。
+1. 保存对片段所做的更改。
 
-1. 重复上述步骤，为[Yosemite Backpacking](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking)和[Colorado Rock Climping](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/colorado-rock-climbing/colorado-rock-climbing)等冒险活动分配参与者
+1. 重复上述步骤，为[Yosemite Backpacking](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking)和[Colorado Rock Climbing](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/colorado-rock-climbing/colorado-rock-climbing)等冒险活动分配参与者
 
-## 查询包含GraphiQL的嵌套内容片段
+## 使用GraphiQL查询嵌套内容片段
 
-接下来，对“冒险”执行查询，并添加引用的“参与者”模型的嵌套属性。 我们将使用GraphiQL工具快速验证查询的语法。
+接下来，对冒险项执行查询，并添加引用的参与者模型的嵌套属性。 我们将使用GraphiQL工具快速验证查询的语法。
 
-1. 导航到AEM中的GraphiQL工具：[http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html)
+1. 在AEM中导航到GraphiQL工具：[http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html)
 
-1. 输入以下查询:
+1. 输入以下查询：
 
    ```graphql
    {
@@ -119,9 +118,9 @@ ht-degree: 1%
    }
    ```
 
-   以上查询仅针对一条路径的冒险。 `adventureContributor`属性引用参与者模型，然后我们可以从嵌套的内容片段请求属性。
+   上面的查询是一条路径上的“冒险”。 `adventureContributor`属性引用参与者模型，然后我们可以从嵌套的内容片段中请求属性。
 
-1. 执行查询，您应得到如下结果：
+1. 执行查询，您应获得如下结果：
 
    ```json
    {
@@ -143,11 +142,11 @@ ht-degree: 1%
    }
    ```
 
-1. 尝试其他查询（如`adventureList`），并在`adventureContributor`下添加引用内容片段的属性。
+1. 尝试使用其他查询（如`adventureList`），并在`adventureContributor`下添加引用内容片段的属性。
 
-## 更新React应用程序以显示Contributor内容
+## 更新React应用程序以显示参与者内容
 
-接下来，更新React Application使用的查询，以包含新的Contributor并显示有关Contributor的信息，作为Adventure详细信息视图的一部分。
+接下来，更新React应用程序使用的查询，以包含新的参与者，并在“冒险详细信息”视图中显示有关参与者的信息。
 
 1. 在IDE中打开WKND GraphQL React应用程序。
 
@@ -155,7 +154,7 @@ ht-degree: 1%
 
    ![Adventure Detail组件IDE](assets/fragment-references/adventure-detail-ide.png)
 
-1. 查找函数`adventureDetailQuery(_path)`。 `adventureDetailQuery(..)`函数只包含过滤GraphQL查询，它使用AEM `<modelName>ByPath`语法查询由其JCR路径标识的单个内容片段。
+1. 查找函数`adventureDetailQuery(_path)`。 `adventureDetailQuery(..)`函数只包含过滤GraphQL查询，该查询使用AEM `<modelName>ByPath`语法来查询通过其JCR路径标识的单个内容片段。
 
 1. 更新查询以包含有关引用的参与者的信息：
 
@@ -205,7 +204,7 @@ ht-degree: 1%
 
    通过此更新，查询中将包含有关`adventureContributor`、`fullName`、`occupation`和`pictureReference`的其他属性。
 
-1. Inspect嵌入`AdventureDetail.js`文件`function Contributor(...)`中的`Contributor`组件。 如果属性存在，此组件将呈现参与者的名称、职位和图片。
+1. Inspect `Contributor`组件，该组件嵌入在`AdventureDetail.js`文件的`function Contributor(...)`中。 如果属性存在，则此组件将呈现参与者的名称、职位和图片。
 
    `Contributor`组件在`AdventureDetail(...)` `return`方法中引用：
 
@@ -227,21 +226,21 @@ ht-degree: 1%
    ```
 
 1. 保存对文件所做的更改。
-1. 开始React App（如果尚未运行）：
+1. 启动React应用程序（如果尚未运行）：
 
    ```shell
    $ cd aem-guides-wknd-graphql/react-app
    $ npm start
    ```
 
-1. 导航到[http://localhost:3000](http://localhost:3000/)，然后单击包含引用的参与者的冒险。 现在，您应当看到&#x200B;**Intriginal**&#x200B;下面列出的参与者信息：
+1. 导航到[http://localhost:3000](http://localhost:3000/)，然后单击包含引用的参与者的冒险。 现在，您应会看到&#x200B;**Interinal**&#x200B;下面列出的参与者信息：
 
-   ![在应用程序中添加的参与者](assets/fragment-references/contributor-added-detail.png)
+   ![应用程序中添加的参与者](assets/fragment-references/contributor-added-detail.png)
 
 ## 恭喜！{#congratulations}
 
-恭喜！ 您已使用&#x200B;**片段引用**&#x200B;字段更新了现有内容片段模型以引用嵌套内容片段。 您还学习了如何修改GraphQL查询以包含引用模型中的字段。
+恭喜！ 您已更新现有的内容片段模型，以使用&#x200B;**片段引用**&#x200B;字段引用嵌套的内容片段。 您还学习了如何修改GraphQL查询以包含引用模型中的字段。
 
 ## 后续步骤{#next-steps}
 
-在下一章[使用AEM发布环境](./production-deployment.md)的生产部署中，了解AEM创作和发布服务以及无外设应用程序的推荐部署模式。 您将更新现有应用程序，以使用环境变量根据目标环境动态更改GraphQL端点。 您还将学习如何正确配置AEM以实现跨来源资源共享(CORS)。
+在下一章中， [使用AEM发布环境的生产部署](./production-deployment.md) ，了解AEM创作和发布服务以及无头应用程序的推荐部署模式。 您将更新现有应用程序，以使用环境变量根据目标环境动态更改GraphQL端点。 您还将了解如何正确配置AEM以进行跨域资源共享(CORS)。
