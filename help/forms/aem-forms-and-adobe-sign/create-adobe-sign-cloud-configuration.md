@@ -1,27 +1,26 @@
 ---
 title: 创建Adobe Sign云配置
-description: 通过AEM中的云服务配置，您可以创建AEM与其他云应用程序之间的集成。 以下视频将指导您完成创建云服务配置以将AEM与Adobe Sign集成所需的步骤。
-feature: Adaptive Forms
+description: AEM中的云服务配置允许您在AEM与其他云应用程序之间创建集成。 以下视频将指导您完成创建云服务配置以将AEM与Adobe Sign集成所需的步骤。
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 38179.jpg
 kt: 6033
-topic: Development
+topic: 开发
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 4%
+source-wordcount: '87'
+ht-degree: 3%
 
 ---
 
 # 创建Adobe Sign云配置
 
-通过AEM中的云服务配置，您可以创建AEM与其他云应用程序之间的集成。
+AEM中的云服务配置允许您在AEM与其他云应用程序之间创建集成。
 
 以下视频将指导您完成创建云服务配置以将AEM与Adobe Sign集成所需的步骤
 
