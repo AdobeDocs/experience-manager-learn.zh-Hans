@@ -1,16 +1,15 @@
 ---
 title: 在AEM Dynamic Media中使用视频播放器
-description: AEM Dynamic Media视频播放器过去依赖Flash运行时支持桌面客户端和浏览器上的自适应视频流，现在在基于flash的内容流上变得更加积极。 随着HLS(苹果的HTTP实时流视频投放协议)的推出，现在无需依赖闪存即可对内容进行流处理。
+description: AEM Dynamic Media视频播放器过去依赖Flash运行时支持桌面客户端上的自适应视频流播放，而在基于flash的内容流播放中，浏览器变得更加积极。 随着HLS（Apple的HTTP实时流视频交付协议）的推出，现在无需依赖闪存即可对内容进行流式处理。
 sub-product: dynamic-media
-feature: Video Profiles
+feature: 视频配置文件
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: 内容管理
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '218'
 ht-degree: 8%
 
 ---
@@ -18,7 +17,7 @@ ht-degree: 8%
 
 # 在AEM Dynamic Media中使用视频播放器{#using-the-video-player-in-aem-dynamic-media}
 
-AEM Dynamic Media视频播放器过去依赖Flash运行时支持桌面客户端和浏览器上的自适应视频流，现在在基于flash的内容流上变得更加积极。 随着HLS(苹果的HTTP实时流视频投放协议)的推出，现在无需依赖闪存即可对内容进行流处理。
+AEM Dynamic Media视频播放器过去依赖Flash运行时支持桌面客户端上的自适应视频流播放，而在基于flash的内容流播放中，浏览器变得更加积极。 随着HLS（Apple的HTTP实时流视频交付协议）的推出，现在无需依赖闪存即可对内容进行流式处理。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
@@ -26,7 +25,7 @@ AEM Dynamic Media视频播放器过去依赖Flash运行时支持桌面客户端�
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
-HLS浏览器支持如下所示，对于不支持的浏览器，我们回退到渐进式视频投放
+HLS浏览器支持如下所示，对于不受支持的浏览器，我们回退到渐进式视频交付
 
 <table> 
  <thead> 
