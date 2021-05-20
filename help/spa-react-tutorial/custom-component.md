@@ -1,8 +1,8 @@
 ---
-title: 创建自定义组件 | AEM SPA Editor和React入门
-description: 了解如何创建要与AEM SPA Editor一起使用的自定义组件。 了解如何开发创作对话框和Sling Models以扩展JSON模型以填充自定义组件。
+title: 创建自定义组件 | AEM SPA Editor和React快速入门
+description: 了解如何创建要与AEM SPA编辑器一起使用的自定义组件。 了解如何开发创作对话框和Sling模型以扩展JSON模型以填充自定义组件。
 sub-product: 站点
-feature: SPA Editor
+feature: SPA编辑器
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -13,10 +13,9 @@ thumbnail: 5878-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1489'
 ht-degree: 1%
 
 ---
@@ -24,21 +23,21 @@ ht-degree: 1%
 
 # 创建自定义组件{#custom-component}
 
-了解如何创建要与AEM SPA Editor一起使用的自定义组件。 了解如何开发创作对话框和Sling Models以扩展JSON模型以填充自定义组件。
+了解如何创建要与AEM SPA编辑器一起使用的自定义组件。 了解如何开发创作对话框和Sling模型以扩展JSON模型以填充自定义组件。
 
 ## 目标
 
-1. 了解Sling Models在操作AEM提供的JSON模型API中的角色。
+1. 了解Sling模型在处理AEM提供的JSON模型API中的角色。
 2. 了解如何创建新的AEM组件对话框。
-3. 了解如何创建与SPA编辑器框架兼容的&#x200B;**自定义** AEM组件。
+3. 了解如何创建与SPA编辑器框架兼容的&#x200B;**custom** AEM组件。
 
-## 您将构建的
+## 将构建的内容
 
-前几章的重点是开发SPA组件，并将它们映射到现有&#x200B;*AEM核心组件。*&#x200B;本章将重点介绍如何创建和扩展&#x200B;*new* AEM组件以及如何操作AEM提供的JSON模型。
+以前各章的重点是开发SPA组件，并将它们映射到&#x200B;*现有* AEM核心组件。 本章将重点介绍如何创建和扩展新的&#x200B;** AEM组件，以及如何处理AEM提供的JSON模型。
 
-简单的`Custom Component`说明了创建新AEM组件所需的步骤。
+一个简单的`Custom Component`说明创建新AEM组件所需的步骤。
 
-![“全部大写”中显示的消息](assets/custom-component/message-displayed.png)
+![全部大写显示的消息](assets/custom-component/message-displayed.png)
 
 ## 前提条件
 
@@ -60,29 +59,29 @@ ht-degree: 1%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   如果使用[AEM 6.x](overview.md#compatibility)添加`classic`用户档案:
+   如果使用[AEM 6.x](overview.md#compatibility)添加`classic`配置文件：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. 为传统[WKND参考站点](https://github.com/adobe/aem-guides-wknd/releases/latest)安装完成的包。 将在WKND SPA上重新使用由[WKND参考站点](https://github.com/adobe/aem-guides-wknd/releases/latest)提供的图像。 可以使用[AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)安装该包。
+3. 为传统[WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/latest)安装完成的包。 [WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/latest)提供的图像将在WKND SPA上重新使用。 可以使用[AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)安装包。
 
    ![包管理器安装wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
-您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/React/custom-component-solution)上视图完成的代码，或通过切换到分支`React/custom-component-solution`在本地签出代码。
+您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/React/custom-component-solution)上查看完成的代码，或通过切换到分支`React/custom-component-solution`在本地签出代码。
 
 ## 定义AEM组件
 
-AEM组件定义为节点和属性。 在项目中，这些节点和属性在`ui.apps`模块中表示为XML文件。 接下来，在`ui.apps`模块中创建AEM组件。
+AEM组件被定义为节点和属性。 在项目中，这些节点和属性在`ui.apps`模块中表示为XML文件。 接下来，在`ui.apps`模块中创建AEM组件。
 
 >[!NOTE]
 >
-> 有关AEM组件的[基础知识的快速复习可能](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html)很有帮助。
+> 有关AEM组件[基础知识的快速刷新器可能](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html)很有用。
 
-1. 在您选择的IDE中，打开`ui.apps`文件夹。
-2. 导览至`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components`并创建名为`custom-component`的新文件夹。
-3. 在`custom-component`文件夹下新建一个名为`.content.xml`的文件。 使用以下内容填充`custom-component/.content.xml`:
+1. 在选择的IDE中，打开`ui.apps`文件夹。
+2. 导航到`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components`并创建一个名为`custom-component`的新文件夹。
+3. 在`custom-component`文件夹下创建一个名为`.content.xml`的新文件。 使用以下内容填充`custom-component/.content.xml`:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -96,10 +95,10 @@ AEM组件定义为节点和属性。 在项目中，这些节点和属性在`ui.
 
    `jcr:primaryType="cq:Component"`  — 标识此节点将是AEM组件。
 
-   `jcr:title` 是将显示给内容作者的值，它 `componentGroup` 决定了创作UI中的组件分组。
+   `jcr:title` 是将显示给内容作者的值，它可确 `componentGroup` 定创作UI中的组件分组。
 
-4. 在`custom-component`文件夹下，创建名为`_cq_dialog`的另一个文件夹。
-5. 在`_cq_dialog`文件夹下，创建一个名为`.content.xml`的新文件，并用以下内容填充该文件：
+4. 在`custom-component`文件夹下，创建另一个名为`_cq_dialog`的文件夹。
+5. 在`_cq_dialog`文件夹下，创建一个名为`.content.xml`的新文件，并在其中填充以下内容：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -152,35 +151,35 @@ AEM组件定义为节点和属性。 在项目中，这些节点和属性在`ui.
 
    ![自定义组件定义](assets/custom-component/dialog-custom-component-defintion.png)
 
-   上述XML文件为`Custom Component`生成一个非常简单的对话框。 文件的关键部分是内部`<message>`节点。 此对话框将包含一个名为`Message`的简单`textfield`，并将textifeld的值保留到名为`message`的属性。
+   上述XML文件为`Custom Component`生成一个非常简单的对话框。 文件的关键部分是内部`<message>`节点。 此对话框将包含一个名为`Message`的简单`textfield`，并将文本字段的值保留为名为`message`的属性。
 
-   接下来将创建一个Sling Model，通过JSON模型公开`message`属性的值。
+   随后将创建一个Sling模型，以通过JSON模型显示`message`属性的值。
 
    >[!NOTE]
    >
-   > 您可以通过查看核心组件定义](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)来视图更多[对话框示例。 您还可以视图其他表单域，如`select`、`textarea`、`pathfield`，在[中`/libs/granite/ui/components/coral/foundation/form`下方的](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)中可用。
+   > 您可以通过查看核心组件定义](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)来查看更多[对话框示例。 您还可以查看其他表单字段，如`select`、`textarea`、`pathfield`，它们位于[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)中`/libs/granite/ui/components/coral/foundation/form`下方。
 
-   对于传统的AEM组件，通常需要[HTL](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)脚本。 由于SPA将渲染组件，因此不需要HTL脚本。
+   对于传统AEM组件，通常需要[HTL](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)脚本。 由于SPA将渲染组件，因此无需HTL脚本。
 
 ## 创建Sling模型
 
-Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，有助于将数据从JCR映射到Java变量。 [Sling Model](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html#sling-models) 通常能够封装AEM组件的复杂服务器端业务逻辑。
+Sling模型是注释驱动的Java“POJO”（纯旧Java对象），有助于将数据从JCR映射到Java变量。 [Sling Models](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html#sling-models) 通常可以函数为AEM组件封装复杂的服务器端业务逻辑。
 
-在SPA编辑器的上下文中，Sling Models使用[Sling Model Exporter](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)通过功能通过JSON模型公开组件内容。
+在SPA编辑器的上下文中，Sling模型通过使用[Sling模型导出器](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)的功能，通过JSON模型公开组件的内容。
 
-1. 在您选择的IDE中，打开`core`模块。 `CustomComponent.java` 并 `CustomComponentImpl.java` 且已作为章节启动代码的一部分创建和调试。
+1. 在选择的IDE中，打开`core`模块。 `CustomComponent.java` 和已 `CustomComponentImpl.java` 作为章节起始代码的一部分创建和停用。
 
    >[!NOTE]
    >
-   > 如果使用Visual Studio代码IDE，则安装[的Java](https://code.visualstudio.com/docs/java/extensions)扩展可能会很有帮助。
+   > 如果使用Visual Studio代码IDE，则安装Java的[扩展可能会很有帮助。](https://code.visualstudio.com/docs/java/extensions)
 
-2. 打开位于`core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/CustomComponent.java`的Java接口`CustomComponent.java`:
+2. 在`core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/CustomComponent.java`处打开Java接口`CustomComponent.java`:
 
-   ![CustomComponent.java接口](assets/custom-component/custom-component-interface.png)
+   ![CustomComponent.java界面](assets/custom-component/custom-component-interface.png)
 
-   这是将由Sling Model实现的Java接口。
+   这是将由Sling模型实施的Java界面。
 
-3. 更新`CustomComponent.java`，以扩展`ComponentExporter`接口：
+3. 更新`CustomComponent.java`，以便扩展`ComponentExporter`接口：
 
    ```java
    package com.adobe.aem.guides.wknd.spa.react.core.models;
@@ -195,11 +194,11 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，有助于
 
    实施`ComponentExporter`接口是JSON模型API自动选取Sling模型的要求。
 
-   `CustomComponent`接口包括单个getter方法`getMessage()`。 这是通过JSON模型公开创作对话框值的方法。 在JSON模型中，将只导出参数`()`为空的公共getter方法。
+   `CustomComponent`接口包括单个getter方法`getMessage()`。 这是通过JSON模型公开创作对话框值的方法。 在JSON模型中，只导出参数为`()`空的公共getter方法。
 
-4. 在`core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/impl/CustomComponentImpl.java`打开`CustomComponentImpl.java`。
+4. 在`core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/impl/CustomComponentImpl.java`处打开`CustomComponentImpl.java`。
 
-   这是`CustomComponent`接口的实现。 `@Model`注释将Java类标识为Sling Model。 `@Exporter`注释使Java类能够通过Sling Model Exporter进行序列化和导出。
+   这是`CustomComponent`接口的实现。 `@Model`注释将Java类标识为Sling模型。 `@Exporter`注释允许通过Sling模型导出器序列化和导出Java类。
 
 5. 更新静态变量`RESOURCE_TYPE`，以指向在上一个练习中创建的AEM组件`wknd-spa-react/components/custom-component`。
 
@@ -207,7 +206,7 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，有助于
    static final String RESOURCE_TYPE = "wknd-spa-react/components/custom-component";
    ```
 
-   组件的资源类型是将Sling Model绑定到AEM组件并最终映射到React组件的类型。
+   组件的资源类型是将Sling模型绑定到AEM组件，并最终映射到React组件的类型。
 
 6. 将`getExportedType()`方法添加到`CustomComponentImpl`类以返回组件资源类型：
 
@@ -218,9 +217,9 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，有助于
    }
    ```
 
-   实现`ComponentExporter`接口时需要此方法，并将公开允许映射到React组件的资源类型。
+   实现`ComponentExporter`接口时需要此方法，该方法将公开允许映射到React组件的资源类型。
 
-7. 更新`getMessage()`方法以返回作者对话框保留的`message`属性值。 使用`@ValueMap`注释将JCR值`message`映射到Java变量：
+7. 更新`getMessage()`方法，以返回创作对话框保留的`message`属性的值。 使用`@ValueMap`注释将JCR值`message`映射到Java变量：
 
    ```java
    import org.apache.commons.lang3.StringUtils;
@@ -235,18 +234,18 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，有助于
    }
    ```
 
-   添加一些附加的“业务逻辑”，以返回包含所有大写字母的消息的字符串值。 这样，我们就可以看到作者对话框存储的原始值与Sling Model公开的值之间的差异。
+   添加了一些额外的“业务逻辑”，以返回包含所有大写字母的消息的字符串值。 这将允许我们查看创作对话框存储的原始值与Sling模型公开的值之间的差异。
 
    >[!NOTE]
    >
-   > 您可以在此处视图[已完成的CustomComponentImpl.java](https://github.com/adobe/aem-guides-wknd-spa/blob/React/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/impl/CustomComponentImpl.java)。
+   > 您可以在此处](https://github.com/adobe/aem-guides-wknd-spa/blob/React/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/impl/CustomComponentImpl.java)查看[完成的CustomComponentImpl.java。
 
 ## 更新React组件
 
-已创建自定义组件的React代码。 接下来，进行一些更新，将React组件映射到AEM组件。
+已创建自定义组件的React代码。 接下来，进行一些更新，以将React组件映射到AEM组件。
 
 1. 在`ui.frontend`模块中，打开文件`ui.frontend/src/components/Custom/Custom.js`。
-2. 将`{this.props.message}`变量作为`render()`方法的一部分进行观察：
+2. 在`render()`方法中观察`{this.props.message}`变量：
 
    ```js
    return (
@@ -256,7 +255,7 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，有助于
        );
    ```
 
-   应将Sling Model中转换的大写值映射到此`message`属性。
+   应将Sling模型中转换后的大写值映射到此`message`属性。
 
 3. 从AEM SPA Editor JS SDK导入`MapTo`对象，并使用它映射到AEM组件：
 
@@ -271,7 +270,7 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，有助于
    + MapTo('wknd-spa-react/components/custom-component')(Custom, CustomEditConfig);
    ```
 
-4. 使用您的Maven技能，从项目目录的根部部署本地AEM环境的所有更新：
+4. 使用您的Maven技能，从项目目录的根目录将所有更新部署到本地AEM环境：
 
    ```shell
    $ cd aem-guides-wknd-spa
@@ -282,7 +281,7 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，有助于
 
 接下来，导航到AEM以验证更新并允许将`Custom Component`添加到SPA。
 
-1. 导航至[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)验证新Sling Model的注册。
+1. 导航到[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)，以验证新Sling模型的注册情况。
 
    ```plain
    com.adobe.aem.guides.wknd.spa.react.core.models.impl.CustomComponentImpl - wknd-spa-react/components/custom-component
@@ -290,10 +289,10 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，有助于
    com.adobe.aem.guides.wknd.spa.react.core.models.impl.CustomComponentImpl exports 'wknd-spa-react/components/custom-component' with selector 'model' and extension '[Ljava.lang.String;@6fb4a693' with exporter 'jackson'
    ```
 
-   您应看到以上两行，它们指示`CustomComponentImpl`与`wknd-spa-react/components/custom-component`组件关联，并且已通过Sling Model Exporter注册。
+   您应会看到以上两行代码，指示`CustomComponentImpl`与`wknd-spa-react/components/custom-component`组件关联，并且已通过Sling模型导出程序进行注册。
 
 2. 导航到位于[http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html)的SPA页面模板。
-3. 更新布局容器的策略，将新`Custom Component`添加为允许的组件：
+3. 更新布局容器的策略，将新的`Custom Component`添加为允许的组件：
 
    ![更新布局容器策略](assets/custom-component/custom-component-allowed.png)
 
@@ -303,24 +302,24 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，有助于
 
 ## 创作自定义组件
 
-然后，使用AEM SPA Editor创作`Custom Component`。
+接下来，使用AEM SPA编辑器创作`Custom Component`。
 
 1. 导航到[http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。
 2. 在`Edit`模式下，将`Custom Component`添加到`Layout Container`:
 
    ![插入新组件](assets/custom-component/insert-custom-component.png)
 
-3. 打开组件的对话框，并输入包含一些小写字母的消息。
+3. 打开组件的对话框，然后输入一条包含一些小写字母的消息。
 
    ![配置自定义组件](assets/custom-component/enter-dialog-message.png)
 
-   这是根据本章前面部分的XML文件创建的对话框。
+   这是基于章节前面的XML文件创建的对话框。
 
-4. 保存更改。请注意显示的消息是大写的。
+4. 保存更改。请注意显示的消息全部大写。
 
-   ![“全部大写”中显示的消息](assets/custom-component/message-displayed.png)
+   ![全部大写显示的消息](assets/custom-component/message-displayed.png)
 
-5. 视图JSON模型，方法是导航到[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)。 搜索 `wknd-spa-react/components/custom-component`:
+5. 通过导航到[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)，查看JSON模型。 搜索 `wknd-spa-react/components/custom-component`:
 
    ```json
    "custom_component_208183317": {
@@ -329,14 +328,14 @@ Sling Models是注释驱动的Java“POJO”(Plain Old Java Objects)，有助于
    }
    ```
 
-   请注意，JSON值会根据添加到Sling Model的逻辑设置为所有大写字母。
+   请注意，JSON值会根据添加到Sling模型的逻辑设置为所有大写字母。
 
-## 恭喜！{#congratulations}
+## 恭喜！ {#congratulations}
 
-恭喜您，您学习了如何创建要与SPA编辑器一起使用的自定义AEM组件。 您还了解了对话框、JCR属性和Sling模型如何交互以输出JSON模型。
+恭喜，您已学会如何创建要与SPA编辑器一起使用的自定义AEM组件。 您还了解了对话框、JCR属性和Sling模型如何进行交互以输出JSON模型。
 
-您可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/React/custom-component-solution)上视图完成的代码，或通过切换到分支`React/custom-component-solution`在本地签出代码。
+您可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/React/custom-component-solution)上查看完成的代码，或通过切换到分支`React/custom-component-solution`在本地签出代码。
 
 ### 后续步骤{#next-steps}
 
-[扩展核心组件](extend-component.md)  — 了解如何扩展要与AEM SPA Editor一起使用的现有核心组件。了解如何向现有组件添加属性和内容是扩展AEM SPA Editor实现功能的强大技术。
+[扩展核心组件](extend-component.md)  — 了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件。了解如何向现有组件添加属性和内容是一项功能强大的技术，可扩展AEM SPA Editor实施的功能。
