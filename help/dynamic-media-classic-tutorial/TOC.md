@@ -9,7 +9,6 @@ user-guide-title: Dynamic Media Classic 简介
 user-guide-description: 本教程演示如何使用 Dynamic Media Classic 创建、创作和交付富媒体内容。
 breadcrumb-title: Dynamic Media Classic 教程
 index: y
-translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
 source-wordcount: '76'
@@ -28,5 +27,5 @@ ht-degree: 46%
 + [裁剪、调整图像和缩放目标](./crop-adjusted-zoom-targets.md)
 + [基本模板简介](./basic-templates.md)
 + [视频概述](./video-overview.md)
-+ [智能图像处理](./smart-imaging.md)
-+ [为管理员提供有价值的报告](./valuable-reports.md)
++ [智能成像](./smart-imaging.md)
++ [对管理员有价值的报告](./valuable-reports.md)
