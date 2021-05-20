@@ -1,19 +1,18 @@
 ---
-title: 将组件控制台与AEM Sites
-description: 组件控制台为开发人员和管理员提供一个中心位置来管理站点实施中的所有不同组件。 以下视频详细介绍了组件控制台的功能。
+title: 将组件控制台与AEM Sites结合使用
+description: 组件控制台为开发人员和管理员提供了一个中心位置，用于管理站点实施中的所有各种组件。 以下视频详细介绍了组件控制台的功能。
 topics: components
 audience: all
 doc-type: feature video
 version: 6.3, 6.4, 6.5
 activity: use
-feature: Core Components
-topic: Content Management
+feature: 核心组件
+topic: 内容管理
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '178'
 ht-degree: 3%
 
 ---
@@ -21,14 +20,14 @@ ht-degree: 3%
 
 # 使用组件控制台{#using-the-components-console-with-aem-sites}
 
-组件控制台为开发人员和管理员提供一个中心位置来管理站点实施中的所有不同组件。 以下视频详细介绍了组件控制台的功能。
+组件控制台为开发人员和管理员提供了一个中心位置，用于管理站点实施中的所有各种组件。 以下视频详细介绍了组件控制台的功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17417/?quality=9&learn=on)
 
-组件控制台提供以下功能：
+组件控制台提供了以下功能：
 
-* 概述：列表当前AEM实例上所有可用的已安装组件
-* [!UICONTROL 属性]:显示元数据，如组件的标题、组和说明
+* 概述：当前AEM实例上所有可用已安装组件的列表
+* [!UICONTROL 属性]:显示元数据，如组件的标题、组和描述
 * [!UICONTROL 策略]:显示给定组件和关联的模板的任何现有策略
 * [!UICONTROL 实时使用情况]:显示包含组件的页面列表
 
