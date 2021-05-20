@@ -1,7 +1,7 @@
 ---
 title: 配置Asset compute项目的manifest.yml
-description: asset compute项目的manifest.yml描述了要部署的此项目中的所有Worker。
-feature: Asset Compute Microservices
+description: asset compute项目的manifest.yml描述了此项目中要部署的所有工作程序。
+feature: asset compute微服务
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,12 @@ audience: developer
 doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
-topic: Integrations, Development
+topic: 集成、开发
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -23,17 +22,17 @@ ht-degree: 0%
 
 # 配置manifest.yml
 
-位于Asset compute项目根目录的`manifest.yml`描述了要部署的此项目中的所有Worker。
+位于Asset compute项目根目录的`manifest.yml`描述了此项目中要部署的所有工作程序。
 
 ![manifest.yml](./assets/manifest/manifest.png)
 
-## 默认工作器定义
+## 默认工作程序定义
 
-Worker在`actions`下定义为Adobe I/O Runtime操作条目，由一组配置组成。
+工作程序在`actions`下定义为Adobe I/O Runtime操作条目，由一组配置组成。
 
-访问其他Adobe I/O集成的Worker必须将`annotations -> require-adobe-auth`属性设置为`true`，因为此[通过`params.auth`对象公开Worker的Adobe I/O凭据](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 这通常是当工作人员调用Adobe I/O API(如Adobe Photoshop、Lightroom或Sensei API)时所必需的，并且可以按工作人员切换。
+访问其他Adobe I/O集成的工作程序必须将`annotations -> require-adobe-auth`属性设置为`true`，因为此[通过`params.auth`对象公开工作程序的Adobe I/O凭据](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 当工作人员发出Adobe I/OAPI(如Adobe Photoshop、Lightroom或Sensei API)时，通常需要此功能，并且可以按工作人员切换该功能。
 
-1. 打开并查看自动生成的worker `manifest.yml`。 包含多个Asset computeWorker的项目必须为`actions`阵列下的每个Worker定义一个条目。
+1. 打开并查看自动生成的工作程序`manifest.yml`。 包含多个Asset compute工作程序的项目必须在`actions`阵列下为每个工作程序定义一个条目。
 
 ```yml
 packages:
@@ -52,11 +51,11 @@ packages:
 
 ## 定义限制
 
-每个worker都可以在Adobe I/O Runtime中为其执行上下文配置[limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)。 应调整这些值，以根据员工要计算的资源的卷、速率和类型以及所执行的工作类型，为员工提供最佳大小调整。
+每个工作者都可以在Adobe I/O Runtime中为其执行上下文配置[limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)。 应根据工作人员要计算的资产数量、速率和类型以及所执行的工作类型，对这些值进行调整，以便为工作人员提供最佳大小调整。
 
-在设置限制之前，请查阅[Adobe大小指南](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 asset compute工作人员在处理资产时可能内存不足，导致Adobe I/O Runtime执行死亡，因此请确保工作人员的大小适当，以处理所有候选资产。
+在设置限制之前，请查看[Adobe大小调整指南](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 asset compute工作程序在处理资产时可能内存不足，导致Adobe I/O Runtime执行被终止，因此请确保该工作程序的大小适合处理所有候选资产。
 
-1. 在新`wknd-asset-compute`操作条目中添加`inputs`部分。 这允许调整Asset compute工作者的总体性能和资源分配。
+1. 在新的`wknd-asset-compute`操作条目中添加`inputs`部分。 这允许调整Asset compute工作者的总体性能和资源分配。
 
 ```yml
 packages:
@@ -76,9 +75,9 @@ packages:
            
 ```
 
-## 已完成的manifest.yml
+## 已完成manifest.yml
 
-最终`manifest.yml`如下所示：
+最终的`manifest.yml`如下所示：
 
 ```yml
 packages:
@@ -97,33 +96,33 @@ packages:
           require-adobe-auth: true
 ```
 
-## manifest.yml on Github
+## Github上的manifest.yml
 
-最后`.manifest.yml`在Github上可用，网址为：
+最终`.manifest.yml`可在Github上获取，网址为：
 
 + [aem-guides-wknd-asset-compute/manifest.yml](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/manifest.yml)
 
 
 ## 验证manifest.yml
 
-更新生成的Asset compute`manifest.yml`后，运行本地开发工具，并确保使用更新的`manifest.yml`设置成功开始。
+更新生成的Asset compute`manifest.yml`后，运行本地开发工具，并确保使用更新的`manifest.yml`设置成功启动。
 
-要开始Asset compute项目的Adobe Development Tool，请执行以下操作：
+要为Asset compute项目启动Asset compute开发工具，请执行以下操作：
 
-1. 在Asset compute项目根目录中打开命令行（在VS代码中，可以通过“终端”>“新建终端”在IDE中直接打开），然后执行命令：
+1. 在Asset compute项目根目录中打开命令行（在VS代码中，可以通过“终端”>“新终端”直接在IDE中打开此命令），然后执行命令：
 
    ```
    $ aio app run
    ```
 
-1. 本地Asset compute开发工具将在默认的Web浏览器中打开，位于&#x200B;__http://localhost:9000__。
+1. 本地Asset compute开发工具将在默认Web浏览器中的&#x200B;__http://localhost:9000__&#x200B;打开。
 
-   ![aio app run](assets/environment-variables/aio-app-run.png)
+   ![aio应用程序运行](assets/environment-variables/aio-app-run.png)
 
-1. 当开发工具初始化时，观察命令行输出和Web浏览器中是否有错误消息。
+1. 当开发工具初始化时，请观看命令行输出和Web浏览器中的错误消息。
 1. 要停止Asset compute开发工具，请点按执行`aio app run`的窗口中的`Ctrl-C`以终止该进程。
 
 ## 疑难解答
 
 + [YAML缩进不正确](../troubleshooting.md#incorrect-yaml-indentation)
-+ [memorySize限制设置得太低](../troubleshooting.md#memorysize-limit-is-set-too-low)
++ [memorySize限制设置过低](../troubleshooting.md#memorysize-limit-is-set-too-low)
