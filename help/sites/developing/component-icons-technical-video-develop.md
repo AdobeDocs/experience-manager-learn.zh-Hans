@@ -1,19 +1,18 @@
 ---
 title: 在Adobe Experience Manager Sites中自定义组件图标
-description: 组件图标允许作者使用图标或有意义的缩写快速标识组件。 现在，作者可以比以往更快地找到构建其Web体验所需的组件。
+description: 组件图标允许作者通过图标或有意义的缩写快速识别组件。 现在，作者可以比以往更快地找到构建其Web体验所需的组件。
 topics: components
 audience: administrator, developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
-feature: Core Components
-topic: Development
+feature: 核心组件
+topic: 开发
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '378'
 ht-degree: 2%
 
 ---
@@ -21,7 +20,7 @@ ht-degree: 2%
 
 # 自定义组件图标{#developing-component-icons-in-aem-sites}
 
-组件图标允许作者使用图标或有意义的缩写快速标识组件。 现在，作者可以比以往更快地找到构建其Web体验所需的组件。
+组件图标允许作者通过图标或有意义的缩写快速识别组件。 现在，作者可以比以往更快地找到构建其Web体验所需的组件。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16778/?quality=9&learn=on)
 
@@ -38,11 +37,11 @@ ht-degree: 2%
 
 ## 组件图标配置选项{#component-icon-configuration-options}
 
-### 缩写{#abbreviations}
+### 缩写 {#abbreviations}
 
-默认情况下，组件标题(**[cq:Component]@jcr:title**)的前2个字符用作缩写。 例如，如果&#x200B;**[cq:Component]@jcr:title=Article 列表**，则缩写将显示为“**Ar**”。
+默认情况下，组件标题的前2个字符(**[cq:Component]@jcr:title**)用作缩写。 例如，如果&#x200B;**[cq:Component]@jcr:title=Article List**，则缩写将显示为“**Ar**”。
 
-可以通过&#x200B;**[cq:Component]@abbreviation**&#x200B;属性自定义缩写。 虽然此值可以接受2个以上的字符，但建议将缩写限制为2个字符，以避免任何视觉干扰。
+可通过&#x200B;**[cq:Component]@abbreviation**&#x200B;属性自定义缩写。 虽然此值可以接受2个字符以上的字符，但建议将缩写限制为2个字符，以避免任何视觉干扰。
 
 ```plain
 /apps/.../components/content/my-component
@@ -62,11 +61,11 @@ AEM提供的CoralUI图标可用于组件图标。 要配置CoralUI图标，请�
 
 ### PNG图像{#png-images}
 
-PNG图像可用于组件图标。 要将PNG图像配置为组件图标，请在&#x200B;**[cq:Component]**&#x200B;下将所需图像添加为名为&#x200B;**** cq:icon.png **的nt:file**。
+PNG图像可用于组件图标。 要将PNG图像配置为组件图标，请在&#x200B;**[cq:Component]**&#x200B;下将所需图像添加为名为&#x200B;**nt:file**&#x200B;的&#x200B;**cq:icon.png**。
 
-PNG应具有透明背景或设置为&#x200B;**#707070**&#x200B;的背景颜色。
+PNG应具有透明背景，或者背景颜色设置为&#x200B;**#707070**。
 
-PNG图像将按20px **缩放到** 20px。 但是，最好通过&#x200B;**40px**&#x200B;容纳视网膜显示屏&#x200B;**40px**。
+PNG图像将缩放为&#x200B;**20px x 20px**。 但是，要容纳视网膜显示器&#x200B;**40px** by **40px**，可能更好。
 
 ```plain
 /apps/.../components/content/my-component
@@ -77,7 +76,7 @@ PNG图像将按20px **缩放到** 20px。 但是，最好通过&#x200B;**40px**&
 
 ### SVG图像{#svg-images}
 
-SVG图像（基于矢量）可用于组件图标。 要将SVG图像配置为组件图标，请在&#x200B;**[cq:Component]**&#x200B;下将所需的SVG添加为名为&#x200B;****&#x200B;的&#x200B;**cq:icon.svg**&#x200B;的nt:file。
+SVG图像（基于矢量）可用于组件图标。 要将SVG图像配置为组件图标，请在&#x200B;**[cq:Component]**&#x200B;下将所需的SVG添加为&#x200B;**nt:file**，名为&#x200B;**cq:icon.svg**。
 
 SVG图像应将背景颜色设置为&#x200B;**#707070**，大小应为&#x200B;**20px x 20px。**
 
