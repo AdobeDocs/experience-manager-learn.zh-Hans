@@ -1,24 +1,23 @@
 ---
-title: 注释和注释
+title: 注释和批注
 description: 了解如何在AEM中使用注释和批注来交流和协作资产。
 sub-product: 资产
-feature: Collaboration
+feature: 协作
 version: cloud-service
 kt: 4541
 thumbnail: 32049.jpg
-topic: Collaboration
+topic: 协作
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 4%
+source-wordcount: '39'
+ht-degree: 5%
 
 ---
 
 
-# 注释和注释
+# 注释和批注
 
 了解如何在AEM中使用注释和批注来交流和协作资产。
 
