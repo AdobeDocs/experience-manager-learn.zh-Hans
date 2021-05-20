@@ -1,18 +1,17 @@
 ---
 title: 保存和检索自适应表单数据
 seo-title: 保存和检索自适应表单数据
-description: 从数据库保存和检索自适应表单数据。 此功能允许表单填写者保存表单并在以后的日期继续填写表单。
-seo-description: 从数据库保存和检索自适应表单数据。 此功能允许表单填写者保存表单并在以后的日期继续填写表单。
-feature: adaptive-forms
+description: 从数据库保存和检索自适应表单数据。 此功能允许表单填写者保存表单，并在以后的日期继续填写表单。
+seo-description: 从数据库保存和检索自适应表单数据。 此功能允许表单填写者保存表单，并在以后的日期继续填写表单。
+feature: 自适应表单
 topics: developing
 audience: developer,implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-translation-type: tm+mt
 source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -20,21 +19,21 @@ ht-degree: 0%
 
 # 保存和检索自适应表单数据
 
-本文将引导您完成从数据库保存和检索自适应表单数据所涉及的步骤。 MySQL数据库用于存储自适应表单数据。 在高级别上，下面是实现用例的步骤：
+本文将指导您完成从数据库中保存和检索自适应表单数据所涉及的步骤。 MySQL数据库用于存储自适应表单数据。 在高级别上，完成用例的步骤如下：
 
 * [配置数据源](#Configure-Data-Source)
 * [创建Servlet以将数据写入数据库](#create-servlet)
-* [创建OSGI服务以获取存储的数据](#create-osgi-service)
+* [创建OSGi服务以获取存储的数据](#create-osgi-service)
 * [创建客户端库](#create-client-library)
 * [创建自适应表单模板和页面组件](#form-template-and-page-component)
-* [能力演示](#capability-demo)
+* [功能演示](#capability-demo)
 * [在服务器上部署](#deploy-on-your-server)
 
 ## 配置数据源{#Configure-Data-Source}
 
-Apache Sling Connection Pooled DataSource配置为指向将用于存储自适应表单数据的数据库。 以下屏幕截图显示了我实例的配置。 可以复制和粘贴以下属性
+Apache Sling连接池化数据源配置为指向将用于存储自适应表单数据的数据库。 以下屏幕截图显示了实例的配置。 可以复制并粘贴以下属性
 
-* 数据源名称：aemformstorial —— 这是我的代码中使用的名称。
+* 数据源名称：aemformstutorial — 这是在我的代码中使用的名称。
 
 * JDBC驱动程序类：com.mysql.jdbc.Driver
 
@@ -44,7 +43,7 @@ Apache Sling Connection Pooled DataSource配置为指向将用于存储自适应
 
 ### 创建Servlet {#create-servlet}
 
-以下是插入／更新数据库中自适应表单数据的servlet的代码。 Apache Sling Connection Pooled DataSource是使用AEM ConfigMgr配置的，第26行中也引用了此配置。 其余的代码相当简单。 代码在数据库中插入新行或更新现有行。 存储的自适应表单数据与GUID关联。 然后使用相同的GUID更新表单数据。
+以下是在数据库中插入/更新自适应表单数据的Servlet代码。 Apache Sling连接池化数据源是使用AEM ConfigMgr配置的，第26行中会引用该数据源。 其余的代码相当简单。 该代码可在数据库中插入新行或更新现有行。 存储的自适应表单数据与GUID关联。 然后使用相同的GUID来更新表单数据。
 
 ```java
 package com.techmarketing.core.servlets;
@@ -214,7 +213,7 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 
 ## 创建OSGI服务以获取数据{#create-osgi-service}
 
-编写以下代码以获取存储的自适应表单数据。 简单查询用于获取与给定GUID关联的自适应表单数据。 然后，所获取的数据被返回到调用应用程序。 在此代码中引用的第一个步骤中创建的同一数据源。
+编写了以下代码以获取存储的自适应表单数据。 简单查询用于获取与给定GUID关联的自适应表单数据。 然后，获取的数据将返回到调用应用程序。 在此代码中引用的第一步中创建的相同数据源。
 
 ```java
 package com.techmarketing.core.impl;
@@ -279,7 +278,7 @@ public class AemformWithDB implements AemFormsAndDB {
 
 ## 创建客户端库{#create-client-library}
 
-AEM客户端库管理所有客户端javascript代码。 对于本文，我创建了一个简单的javascript，用于使用指南桥API获取自适应表单数据。 一旦获取自适应表单数据，将向servlet发出POST调用，以在库中插入或更新自适应表单数据。 函数getALLUrlParams返回URL中的参数。 当您想要更新数据时，会使用它。 其余功能在与。savebutton类的单击事件关联的代码中处理。 如果URL中存在guid参数，则我们需要执行更新操作（如果不是插入操作）。
+AEM客户端库可管理您的所有客户端Javascript代码。 对于本文，我创建了一个简单的javascript来使用指南桥API获取自适应表单数据。 获取自适应表单数据后，将对Servlet进行POST调用，以在数据库中插入或更新自适应表单数据。 函数getALLUrlParams返回URL中的参数。 当您想要更新数据时，会使用此插件。 其余功能在与.savebutton类的点击事件关联的代码中处理。 如果URL中存在guid参数，则我们需要执行更新操作（如果不存在），它是插入操作。
 
 ```javascript
 function getAllUrlParams(url) {
@@ -410,21 +409,21 @@ $(document).ready(function()
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
-### 演示功能{#capability-demo}
+### {#capability-demo}功能演示
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
-#### 部署到服务器{#deploy-on-your-server}
+#### 在服务器{#deploy-on-your-server}上部署
 
-要在您的AEM Forms实例上测试此功能，请执行以下步骤
+要在AEM Forms实例上测试此功能，请执行以下步骤
 
-* [下载DemoAssets.zip并解压缩到您的本地系统](assets/demoassets.zip)
-* 使用Felix Web控制台部署和开始techmarketingdemos.jar和mysqldriver.jar捆绑套件。
-***使用MYSQL Workbench导入aemformstutor.sql。 这将在模式库中创建必要的数据库和表
+* [将DemoAssets.zip下载并解压缩到您的本地系统](assets/demoassets.zip)
+* 使用Felix Web控制台部署和启动techmarketingdemos.jar和mysqldriver.jar包。
+***使用MYSQL Workbench导入aemformstutorial.sql。 这将在数据库中创建必要的架构和表
 * 使用AEM包管理器导入StoreAndRetrieve.zip。 此包包含自适应表单模板、页面组件客户端库以及示例自适应表单和数据源配置。
-* 登录到configMgr。 搜索“Apache Sling Connection Pooled DataSource”。 打开与Aemformsturation关联的数据源条目，并输入特定于数据库实例的用户名和密码。
+* 登录到configMgr。 搜索“Apache Sling连接池化数据源”。 打开与aemformstutory关联的数据源条目，并输入特定于数据库实例的用户名和密码。
 * 打开自适应表单
 * 填写一些详细信息，然后单击“保存并稍后继续”按钮
-* 您应返回包含GUID的URL。
+* 您应该返回一个GUID为的URL。
 * 复制URL并将其粘贴到新的浏览器选项卡中
-* 自适应表单应填充上一步中的数据**
+* 自适应表单应使用上一步中的数据填充**
