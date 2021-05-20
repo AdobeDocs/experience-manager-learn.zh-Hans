@@ -1,5 +1,5 @@
 ---
-title: 创建服务接口
+title: 创建服务界面
 description: 在界面中定义要公开的方法
 solution: Experience Manager
 type: Documentation
