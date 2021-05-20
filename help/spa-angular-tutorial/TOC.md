@@ -8,7 +8,6 @@ audience: developer
 user-guide-title: AEM SPA Editor 和 Angular 快速入门
 user-guide-description: 创建您的首个 Angular 单页面应用程序 (SPA)，该应用程序可在 AEM 和 WKND SPA 中编辑。
 breadcrumb-title: AEM SPA Editor 和 Angular 教程
-translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
 source-wordcount: '59'
@@ -20,7 +19,7 @@ ht-degree: 71%
 # AEM SPA Editor 和 Angular 快速入门 {#spa-angular-tutorial}
 
 + [概述](overview.md)
-+ [SPA Editor Project](create-project.md)
++ [SPA编辑器项目](create-project.md)
 + [集成SPA](integrate-spa.md)
 + [映射SPA组件](map-components.md)
 + [导航和路由](navigation-routing.md)
