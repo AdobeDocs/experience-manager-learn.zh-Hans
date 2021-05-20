@@ -1,6 +1,6 @@
 ---
 title: 使用OSGi Web控制台调试AEM SDK
-description: AEM SDK的本地快速入门具有OSGi Web控制台，该控制台在本地AEM运行时中提供各种信息和内部介绍，这些信息和内部介绍对于了解您的应用程序如何被AEM识别以及在中的功能非常有用。
+description: AEM SDK的本地快速启动具有一个OSGi Web控制台，该控制台在本地AEM运行时中提供了各种信息和介绍，有助于了解应用程序如何被识别以及AEM中的功能。
 feature: Developer Tools
 topics: development
 version: cloud-service
@@ -8,13 +8,12 @@ doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5265, 5366, 5267
-topic: Development
+topic: 开发
 role: Developer
 level: Beginner, Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '396'
 ht-degree: 1%
 
 ---
@@ -22,57 +21,57 @@ ht-degree: 1%
 
 # 使用OSGi Web控制台调试AEM SDK
 
-AEM SDK的本地快速入门具有OSGi Web控制台，该控制台在本地AEM运行时中提供各种信息和内部介绍，这些信息和内部介绍对于了解您的应用程序如何被AEM识别以及在中的功能非常有用。
+AEM SDK的本地快速启动具有一个OSGi Web控制台，该控制台在本地AEM运行时中提供了各种信息和介绍，有助于了解应用程序如何被识别以及AEM中的功能。
 
-AEM提供许多OSGi控制台，每个控制台都提供对AEM不同方面的重要洞察，但是，在调试应用程序时，以下控制台通常最有用。
+AEM提供了许多OSGi控制台，每个控制台都对AEM的不同方面提供了重要的分析，但是以下控制台在调试应用程序时通常最有用。
 
-## 捆绑
+## 包
 
 >[!VIDEO](https://video.tv.adobe.com/v/34335/?quality=12&learn=on)
 
-Bundles控制台是部署到AEM的OSGi捆绑包及其详细信息的目录，以及开始和停止捆绑包的专门功能。
+“包”控制台是部署到AEM的OSGi包及其详细信息的目录，以及启动和停止这些包的临时功能。
 
-“捆绑套件”控制台位于：
+“包”控制台位于：
 
-+ “工具”>“操作”>“Web控制台”>“OSGi”>“捆绑包”
-+ 或直接在：[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
++ “工具”>“操作”>“Web控制台”>“OSGi”>“包”
++ 或直接在以下位置：[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
-单击每个包，提供有助于调试应用程序的详细信息。
+单击每个包，会提供有助于调试应用程序的详细信息。
 
-+ 正在验证OSGi包
-+ 验证OSGi捆绑是否处于活动状态
-+ 确定OSGi捆绑包是否存在未满足的导入，阻止其启动
++ 验证OSGi包
++ 验证OSGi包是否处于活动状态
++ 确定OSGi包是否具有未满足的导入，从而阻止其启动
 
 ## 组件
 
 >[!VIDEO](https://video.tv.adobe.com/v/34336/?quality=12&learn=on)
 
-组件控制台是部署到AEM的所有OSGi组件的目录，并提供有关它们的所有信息，从它们定义的OSGi组件生命周期到它们可能引用的OSGi服务
+组件控制台是部署到AEM的所有OSGi组件的目录，提供了有关这些组件的所有信息，从其定义的OSGi组件生命周期，到它们可能引用的OSGi服务
 
 组件控制台位于：
 
 + “工具”>“操作”>“Web控制台”>“OSGi”>“组件”
-+ 或直接在：[http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
++ 或直接在以下位置：[http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
 
-有助于调试活动的主要方面：
+帮助进行调试活动的关键方面：
 
-+ 正在验证OSGi包
-+ 验证OSGi捆绑是否处于活动状态
-+ 确定OSGi捆绑包是否存在未满足的导入，阻止其启动
++ 验证OSGi包
++ 验证OSGi包是否处于活动状态
++ 确定OSGi包是否具有未满足的导入，从而阻止其启动
 + 获取组件的PID，以便在Git中为组件创建OSGi配置
-+ 标识绑定到活动OSGi配置的OSGi属性值
++ 识别绑定到活动OSGi配置的OSGi属性值
 
 ## Sling 模型
 
 >[!VIDEO](https://video.tv.adobe.com/v/34337/?quality=12&learn=on)
 
-Sling Models控制台位于：
+Sling模型控制台位于：
 
 + “工具”>“操作”>“Web控制台”>“状态”>“Sling模型”
-+ 或直接在：[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
++ 或直接在以下位置：[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
 
-有助于调试活动的主要方面：
+帮助进行调试活动的关键方面：
 
-+ 验证Sling模型已注册到正确的资源类型
-+ 验证Sling模型可从正确的对象（Resource或SlingHttpRequestServlet）中调整
-+ 验证Sling模型导出器已正确注册
++ 验证Sling模型会注册到正确的资源类型
++ 验证Sling模型可根据正确的对象（资源或SlingHttpRequestServlet）进行调整
++ 验证Sling模型导出程序已正确注册
