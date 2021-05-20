@@ -6,20 +6,19 @@ type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Forms
-topic: Development
+feature: 自适应表单
+topic: 开发
 kt: 7149
 thumbnail: 331756.jpg
-translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 20%
+source-wordcount: '41'
+ht-degree: 17%
 
 ---
 
 # 创建表单数据模型
 
-基于在上一步中配置的数据源创建表单数据模型
+根据上一步中配置的数据源创建表单数据模型
 
 >[!VIDEO](https://video.tv.adobe.com/v/331756/?quality=12&learn=on)
