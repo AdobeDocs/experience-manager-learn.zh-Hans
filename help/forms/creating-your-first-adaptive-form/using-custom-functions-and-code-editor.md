@@ -1,10 +1,10 @@
 ---
 title: 使用函数和代码编辑器
 seo-title: 使用函数和代码编辑器
-description: 使用函数和代码编辑器创作业务规则
-seo-description: 使用函数和代码编辑器创作业务规则
+description: 使用函数和代码编辑器来创作业务规则
+seo-description: 使用函数和代码编辑器来创作业务规则
 uuid: 578e91f8-0d93-4192-b7af-1579df2feaf8
-feature: Adaptive Forms
+feature: 自适应表单
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,28 +13,27 @@ version: 6.4,6.5
 discoiquuid: f480ef3e-7e38-4a6b-a223-c102787aea7f
 kt: 4270
 thumbnail: 22282.jpg
-topic: Development
+topic: 开发
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 2%
+source-wordcount: '153'
+ht-degree: 1%
 
 ---
 
 
 # 使用自定义函数和代码编辑器{#using-functions-and-code-editor}
 
-在这部分中，我们将使用自定义函数和代码编辑器来编写业务规则。
+在本部分中，我们将使用自定义函数和代码编辑器来创作业务规则。
 
-您已经在本教程的前面安装了自定义函数](assets/client-libs-and-logo.zip)的[ClientLib。
+在本教程的前面，您已经安装了具有自定义函数](assets/client-libs-and-logo.zip)的[ClientLib。
 
-通常，客户端库由CSS和Javascript文件组成。 此客户端库包含显示用于填充下拉列表值的函数的javascript文件。
+通常，客户端库由CSS和Javascript文件组成。 此客户端库包含可公开用于填充下拉列表值的函数的javascript文件。
 
 
-## 填充下拉列表列表{#function-to-populate-drop-down-list}的函数
+## 用于填充下拉列表{#function-to-populate-drop-down-list}的函数
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
 
@@ -69,12 +68,12 @@ else
   }
 ```
 
-您可以取消行1的注释，以在浏览器窗口中调试代码。
+您可以在浏览器窗口中取消对第1行的注释以调试代码。
 
 第4行 — 获取当前面板
 
 第5行 — 验证当前面板。
 
-第9行 — 如果没有错误，则移至下一个面板
+第9行 — 如果没有错误，请移至下一个面板
 
 预览表单，并测试新启用的功能。
