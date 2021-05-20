@@ -1,23 +1,22 @@
 ---
 title: '生成JSON Web令牌和访问令牌 '
 seo-title: '生成JSON Web令牌和访问令牌 '
-description: 本文解释生成JWT所需的代码和向Adobe Campaign Standard发出REST调用所需的访问令牌
-seo-description: 本文解释生成JWT所需的代码和向Adobe Campaign Standard发出REST调用所需的访问令牌
+description: 本文介绍了生成对Adobe Campaign Standard进行REST调用所需的JWT和访问令牌所需的代码
+seo-description: 本文介绍了生成对Adobe Campaign Standard进行REST调用所需的JWT和访问令牌所需的代码
 uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
-feature: Adaptive Forms, Form Data Model
+feature: 自适应Forms，表单数据模型
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
-topic: Development
+topic: 开发
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -25,21 +24,21 @@ ht-degree: 0%
 
 # 生成JSON Web令牌和访问令牌{#generating-json-web-token-and-access-token}
 
-本文解释生成JWT所需的代码和向Adobe Campaign Standard发出REST调用所需的访问令牌
+本文介绍了生成对Adobe Campaign Standard进行REST调用所需的JWT和访问令牌所需的代码
 
 ## 生成JSON Web令牌{#generate-json-web-token}
 
-使用Adobe Campaign API的第一步是生成JWT。 有关如何为ACS生成JWT的代码示例很多。 可以按照此[java代码示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)生成JWT。
+使用Adobe Campaign API的第一步是生成JWT。 有关如何为ACS生成JWT的代码示例很多。 您可以按照此[java代码示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)生成JWT。
 
-为了将ACS API与AEM Forms一起使用，我们需要在OSGi捆绑包中创建JWT。 以下代码段用于在此示例OSGI包中生成JWT。 有关ACS实例的详细信息从如上所示设置的OSGI配置属性中获取。
+要将ACS API与AEM Forms一起使用，我们需要在OSGi包内创建JWT。 以下代码片段用于在此示例OSGi包中生成JWT。 有关ACS实例的详细信息是从OSGI配置属性中获取的，如上所示。
 
 ![配置](assets/campaignconfiguration.gif)
 
-**A.** 此处显示的值是虚拟值
+**A.** 此处显示的值是虚设值
 
-以下代码从OSGI配置获取有关Adobe Campaign服务器的详细信息。 我们在80到104号线创建一个私钥。
+以下代码从OSGi配置中获取有关Adobe Campaign Server的详细信息。 我们在80到104之间创建一个私钥。
 
-获得私钥后，我们将创建JSON Web Token。
+获得私钥后，我们将创建JSON Web令牌。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -250,4 +249,4 @@ public class CampaignServiceImpl implements CampaignService {
 
 ## 生成访问令牌{#generate-access-token}
 
-然后，我们通过进行访问令牌调用，将生成的JWT交换为POST。 然后，此访问令牌将作为HTTP头中的授权密钥发送，以用于后续的REST调用
+然后，我们通过进行POST调用，将生成的JWT交换为访问令牌。 然后，此访问令牌将作为授权密钥在HTTP标头中发送，以用于后续的REST调用
