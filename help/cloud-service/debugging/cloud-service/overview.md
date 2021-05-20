@@ -1,6 +1,6 @@
 ---
-title: 将AEM作为Cloud Service
-description: 自助、可扩展的云基础架构，这要求AEM开发人员了解如何将AEM的各个方面理解和调试作为Cloud Service，从构建和部署到获取运行AEM应用程序的详细信息。
+title: 调试AEM as aCloud Service
+description: 在自助式、可扩展的云基础架构上，这要求AEM开发人员了解如何了解和调试AEM as a Cloud Service的各个方面，从构建和部署到获取运行AEM应用程序的详细信息。
 feature: Developer Tools
 topics: development
 version: cloud-service
@@ -8,42 +8,41 @@ doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5346
-topic: Development
+topic: 开发
 role: Developer
 level: Beginner, Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '311'
 ht-degree: 2%
 
 ---
 
 
-# 将AEM作为Cloud Service
+# 调试AEM as aCloud Service
 
-AEM作为Cloud Service是利用AEM应用程序的云本机方式。 AEM作为一个Cloud Service运行在自助服务、可扩展的云基础架构上，这要求AEM开发人员了解如何将AEM作为一个Cloud Service的各个方面理解和调试，从构建和部署到获取运行AEM应用程序的详细信息。
+AEM as a Cloud Service是利用AEM应用程序的云原生方式。 AEM as aCloud Service在自助式、可扩展的云基础架构上运行，这要求AEM开发人员了解如何将AEM作为Cloud Service来了解和调试从构建和部署到获取运行AEM应用程序的详细信息等各个方面。
 
 ## 日志
 
-日志提供详细信息，说明您的应用程序在AEM中作为Cloud Service的运行情况，以及对部署问题的洞察。
+日志提供了有关您的应用程序在AEM as a Cloud Service中运行情况的详细信息，以及有关部署问题的分析。
 
-[使用日志将AEM作为Cloud Service进行调试](./logs.md)
+[使用日志调试AEM as aCloud Service](./logs.md)
 
 ## 构建和部署
 
-Adobe Cloud Manager管道通过一系列步骤部署AEM应用程序，以确定作为Cloud Service部署到AEM时的代码质量和可行性。 每个步骤都可能导致失败，因此了解如何调试构建以确定故障的根本原因以及如何解决任何故障非常重要。
+AdobeCloud Manager管道通过一系列步骤来部署AEM应用程序，以确定将代码部署到AEM作为Cloud Service时的代码质量和可行性。 每个步骤都可能会导致失败，因此务必要了解如何调试内部版本以确定根本原因以及如何解决任何故障。
 
-[将AEM作为Cloud Service构建和部署进行调试](./build-and-deployment.md)
+[调试AEM as a Cloud Service构建和部署](./build-and-deployment.md)
 
 ## 开发人员控制台
 
-开发人员控制台将多种信息和内部介绍作为Cloud Service环境提供到AEM中，这些信息和内部介绍对于了解您的应用程序如何被AEM识别以及在中作为Cloud Service发挥作用非常有用。
+开发人员控制台在AEM作为Cloud Service环境中提供了各种信息和介绍，这些信息和介绍有助于了解AEM如何识别您的应用程序，以及如何在中作为Cloud Service使用。
 
-[使用开发人员控制台将AEM作为Cloud Service进行调试](./developer-console.md)
+[使用开发人员控制台调试AEM as aCloud Service](./developer-console.md)
 
 ## CRXDE Lite
 
-CRXDE Lite是将AEM作为Cloud Service开发环境进行调试的经典而强大的工具。 CRXDE Lite提供一套功能，可帮助调试检查所有资源和属性、处理JCR的可变部分、调查权限和评估查询。
+CRXDE Lite是一款经典但功能强大的工具，可用于将AEM作为Cloud Service开发环境进行调试。 CRXDE Lite提供了一套功能，可帮助调试人员检查所有资源和属性、处理JCR的可变部分、调查权限和评估查询。
 
-[将AEM作为Cloud Service与CRXDE Lite](./crxde-lite.md)
+[将AEM作为Cloud Service进行CRXDE Lite](./crxde-lite.md)
