@@ -1,6 +1,6 @@
 ---
-title: 调试调度程序工具
-description: 调度程序工具提供了一个容器化的Apache Web Server环境，可用于将AEM模拟为Cloud Services的AEM Publish服务的本地调度程序。 调试调度程序工具的日志和缓存内容对于确保端到端AEM应用程序以及支持缓存和安全配置正确至关重要。
+title: 调试Dispatcher工具
+description: “调度程序工具”提供了一个容器化的Apache Web Server环境，该环境可用于在本地模拟AEM作为Cloud Services的AEM发布服务的调度程序。 调试AEM工具的日志和缓存内容对于确保端到端Dispatcher应用程序和支持缓存和安全配置正确至关重要。
 feature: Dispatcher
 topics: development
 version: cloud-service
@@ -8,38 +8,37 @@ doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5918
-topic: Development
+topic: 开发
 role: Developer
 level: Beginner, Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 1%
+source-wordcount: '231'
+ht-degree: 0%
 
 ---
 
 
-# 调试调度程序工具
+# 调试Dispatcher工具
 
-调度程序工具提供了一个容器化的Apache Web Server环境，可用于将AEM模拟为Cloud Services的AEM Publish服务的本地调度程序。
-调试调度程序工具的日志和缓存内容对于确保端到端AEM应用程序以及支持缓存和安全配置正确至关重要。
+“调度程序工具”提供了一个容器化的Apache Web Server环境，该环境可用于在本地模拟AEM作为Cloud Services的AEM发布服务的调度程序。
+调试AEM工具的日志和缓存内容对于确保端到端Dispatcher应用程序和支持缓存和安全配置正确至关重要。
 
 >[!NOTE]
 >
->由于调度程序工具基于容器，因此每次重新启动它时，以前的日志和缓存内容都会被销毁。
+>由于调度程序工具基于容器，因此每当重新启动它时，以前的日志和缓存内容都会被销毁。
 
-## 调度程序工具日志
+## Dispatcher工具日志
 
-调度程序工具日志可通过`stdout`或`bin/docker_run`命令访问，或在位于`/etc/https/logs`的Docker容器中提供更多详细信息。
+可通过`stdout`或`bin/docker_run`命令获取Dispatcher工具日志，或者通过`/etc/https/logs`的Docker容器获取更多详细信息。
 
-有关如何直接访问Dispatcher Tools的Docker容器日志的说明，请参阅[ Dispatcher logs](./logs.md#dispatcher-logs)。
+有关如何直接访问Dispatcher工具Docker容器日志的说明，请参阅[Dispatcher日志](./logs.md#dispatcher-logs)。
 
-## 调度程序工具缓存
+## Dispatcher工具缓存
 
 ### 访问Docker容器中的日志
 
-调度程序缓存可以直接访问位于` /mnt/var/www/html`的Docker容器。
+Dispatcher缓存可以直接在位于` /mnt/var/www/html`的Docker容器中访问。
 
 ```shell
 $ docker ps
@@ -59,7 +58,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 
 ### 将Docker日志复制到本地文件系统
 
-调度程序日志可以从位于`/mnt/var/www/html`的Docker容器中复制到本地文件系统，以便使用您喜爱的工具进行检查。 请注意，这是一个时间点拷贝，不提供缓存的实时更新。
+调度程序日志可以从位于`/mnt/var/www/html`的Docker容器复制到本地文件系统，以便使用您喜爱的工具进行检查。 请注意，这是一个时间点副本，不提供对缓存的实时更新。
 
 ```shell
 $ docker ps
