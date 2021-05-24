@@ -21,12 +21,12 @@ ht-degree: 3%
 创建自定义OSGi配置以捕获您的文档云帐户的凭据
 
 
-要创建自定义OSGi配置，我们首先需要创建一个接口，其公共方法将表示配置中的字段。
+要创建自定义OSGi配置，我们需要首先创建一个接口，其公共方法将表示配置中的字段。
 
 ![doc-cloud-config](assets/doc-cloud-configuration.JPG)
 
 
-创建一个名为DocumentCloudConfiguration的界面，并在其中粘贴以下代码。
+创建一个名为DocumentCloudConfiguration的界面，并将以下代码粘贴到该界面中。
 
 ```java
 package com.aemforms.doccloud.core;
