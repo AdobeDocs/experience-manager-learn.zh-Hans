@@ -1,7 +1,7 @@
 ---
 title: 将对AEM的访问配置为Cloud Service
-description: 'AEM作为Cloud Service是利用AEM应用程序的云本机方式，因此，利用Adobe IMS(Identity Management系统)方便管理员和普通用户登录到AEM作者服务。 了解Adobe IMS用户、用户组和产品用户档案如何与AEM组和权限一起使用，以提供对AEM作者的特定访问。  '
-feature: Users and Groups
+description: 'AEM as a A A A A A Target是利用AEM应用程序的云原生方式，因此，可利用AdobeIMS(Identity Management系统)来促进管理员和普通用户登录到AEM创作服务。 了解如何将AdobeIMS用户、用户组和产品配置文件与AEM组和权限结合使用，以提供对AEM作者的特定访问权限。  '
+feature: 用户和组
 topics: authentication
 version: cloud-service
 activity: setup
@@ -9,13 +9,12 @@ audience: administrator
 doc-type: article
 kt: 5882
 thumbnail: KT-5882.jpg
-topic: Administration, Security
+topic: 管理、安全
 role: Administrator
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '600'
 ht-degree: 1%
 
 ---
@@ -25,47 +24,47 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_overview"
->title="Adobe IMS简介"
->abstract="AEM作为Cloud Service，利用Adobe IMS(Identity Management System)，方便管理员和普通用户登录到AEM作者服务。 了解Adobe IMS用户、组和产品用户档案如何与AEM组和权限一起使用，以提供对AEM创作服务的细致访问。"
+>title="AdobeIMS简介"
+>abstract="AEM as aCloud Service可利用AdobeIMS(Identity Management系统)来促进管理员和普通用户登录到AEM创作服务。 了解如何将AdobeIMS用户、组和产品配置文件与AEM组和权限一起使用，以提供对AEM创作服务的细粒度访问。"
 
-AEM作为Cloud Service是利用AEM应用程序的云本机方式，因此，它利用Adobe IMS(Identity Management系统)来方便其用户（管理员和普通用户）登录到AEM作者服务。 了解Adobe IMS用户、组和产品用户档案如何与AEM组和权限一起使用，以提供对AEM创作服务的细致访问。
+AEM as a A A A A A Service是利用AEM应用程序的云原生方式，因此，可利用AdobeIMS(Identity Management系统)促进其管理员和普通用户登录AEM创作服务。 了解如何将AdobeIMS用户、组和产品配置文件与AEM组和权限一起使用，以提供对AEM创作服务的细粒度访问。
 
 ## AdobeIMS用户
 
-需要访问AEM作者服务的用户在[Adobe的AdminConsole](https://adminconsole.adobe.com)中作为[AdobeIMS用户](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html)进行管理。 了解哪些Adobe IMS用户以及如何在Admin Console中访问和管理他们。
+需要访问AEM创作服务的用户在[Adobe的AdminConsole](https://adminconsole.adobe.com)中作为[AdobeIMS用户](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html)进行管理。 了解IMS用户是什么Adobe，以及如何在Admin Console中访问和管理他们。
 
-[了解Adobe IMS用户](./adobe-ims-users.md)
+[了解AdobeIMS用户](./adobe-ims-users.md)
 
 ## AdobeIMS用户组
 
-使用[Adobe的AdminConsole](https://adminconsole.adobe.com)中的[AdobeIMS用户组](https://helpx.adobe.com/enterprise/using/user-groups.html)，访问AEM作者服务的用户应组织到逻辑组中。 Adobe IMS用户组不提供对AEM的直接权限或访问权限(这是[AdobeIMS产品用户档案](#adobe-ims-product-profiles)的作业)，但是，使用AEM组和权限，它们是定义用户的逻辑组（这些用户组反过来可以转换为AEM作者服务中的特定访问级别）的一种极好方法。
+访问AEM创作服务的用户应使用[[Adobe的AdminConsole](https://adminconsole.adobe.com)中的AdobeIMS用户组](https://helpx.adobe.com/enterprise/using/user-groups.html)组织为逻辑组。 AdobeIMS用户组不提供对AEM的直接权限或访问权限(这是[AdobeIMS产品配置文件](#adobe-ims-product-profiles)的作业)，但是，它们是定义用户的逻辑分组的绝佳方式，这些逻辑分组又可以通过AEM组和权限转换为AEM创作服务中的特定访问级别。
 
-[了解Adobe IMS用户组](./adobe-ims-user-groups.md)
+[了解AdobeIMS用户组](./adobe-ims-user-groups.md)
 
-## AdobeIMS产品用户档案
+## AdobeIMS产品配置文件
 
-[Adobe IMS产品用户档案](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)(在Adobe [的AdminConsole中管理](https://adminconsole.adobe.com))是提供 [Adobe IMS用](#adobe-ims-users) 户访问权限以基本访问级别登录AEM Author服务的机制。
+[AdobeIMS产品配置文件](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)(在Adobe的 [AdminConsole中管理](https://adminconsole.adobe.com))是提供 [AdobeIMS用](#adobe-ims-users) 户访问权限以通过基本级别访问登录到AEM创作服务的机械工。
 
-+ __AEM Users__&#x200B;产品用户档案允许用户通过AEM Contributors组中的成员身份对AEM进行只读访问。
-+ __AEM Administrators__&#x200B;产品用户档案为用户提供对AEM的完全、管理访问。
++ __AEM Users__&#x200B;产品配置文件为用户提供了AEM Contributors组中的成员资格，以只读方式访问AEM。
++ __AEM管理员__&#x200B;产品配置文件为用户提供了对AEM的完全管理访问权限。
 
-[了解Adobe IMS产品用户档案](./adobe-ims-product-profiles.md)
+[了解AdobeIMS产品配置文件](./adobe-ims-product-profiles.md)
 
 ## AEM用户组和权限
 
-Adobe Experience Manager以Adobe IMS用户、用户组和产品用户档案为构建基础，为用户提供对AEM的可自定义访问。 了解如何构建AEM组和权限，以及它们如何与Adobe IMS抽象协同工作，以提供对AEM的无缝、可自定义的访问。
+Adobe Experience Manager以AdobeIMS用户、用户组和产品配置文件为基础，旨在为用户提供对AEM的可自定义的访问权限。 了解如何构建AEM组和权限，以及它们如何与AdobeIMS抽象概念协同工作，以提供对AEM的无缝、可自定义的访问。
 
-[了解AEM用户、用户组和权限](./aem-users-groups-and-permissions.md)
+[了解AEM用户、组和权限](./aem-users-groups-and-permissions.md)
 
-## 访问和权限浏览
+## 访问和权限演练
 
-一个简略的演练，介绍如何在Adobe AdminConsole中配置Adobe IMS用户、用户组和产品用户档案，以及如何利用AEM作者中的这些AdobeIMS抽象来定义和管理特定基于组的权限。
+一个简略的演练，用于在AdobeAdminConsole中配置AdobeIMS用户、用户组和产品配置文件，以及如何利用AEM Author中的这些AdobeIMS抽象概念来定义和管理特定的基于组的权限。
 
-[AEM访问和权限漫游](./walk-through.md)
+[AEM访问和权限演练](./walk-through.md)
 
 ## 其他Adobe Admin Console资源
 
-以下文档涵盖[Adobe Admin Console](https://adminconsole.adobe.com)特定的详细信息和关注事项，有助于更好地了解Adobe Admin Console并使用它管理用户和跨Experience Cloud产品访问。
+以下文档涵盖[Adobe Admin Console](https://adminconsole.adobe.com)特定的详细信息和关注事项，这些信息和关注事项可能有助于更好地了解Adobe Admin Console并使用它来管理用户和跨Experience Cloud产品的访问。
 
 + [Adobe Admin Console Identity概述](https://helpx.adobe.com/enterprise/using/identity.html)
 + [Adobe Admin Console管理员角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)
