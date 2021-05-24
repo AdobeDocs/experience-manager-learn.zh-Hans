@@ -1,7 +1,7 @@
 ---
 title: 创建OSGi服务
 description: 创建OSGi服务以存储要签名的表单
-feature: Workflow
+feature: 工作流
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,13 +9,12 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
-topic: Development
+topic: 开发
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
@@ -23,7 +22,7 @@ ht-degree: 1%
 
 # 创建OSGi服务
 
-以下代码用于存储需要签名的表单。 每个要签名的表单都与一个唯一的guid和一个客户id关联。 因此，一个或多个表单可以与同一客户ID关联，但将具有分配给表单的唯一GUID。
+以下代码用于存储需要签名的表单。 每个要签名的表单都与唯一的GUID和客户ID关联。 因此，一个或多个表单可以与同一客户ID关联，但具有分配给表单的唯一GUID。
 
 ## 接口
 
@@ -46,7 +45,7 @@ public interface SignMultipleForms
 
 ## 插入数据
 
-插入数据方法在由数据源标识的数据库中插入一行。 数据库中的每一行都对应一个表单，并由GUID和客户id唯一标识。 表单数据和表单URL也存储在此行中。 状态列用于指示表单是否已填写和签名。 值为0表示表单尚未签名。
+插入数据方法在数据源标识的数据库中插入一行。 数据库中的每一行都对应一个表单，并由GUID和客户ID唯一标识。 表单数据和表单URL也存储在此行中。 状态列用于指示表单是否已填写和签名。 值0表示表单尚未签名。
 
 ```java
 @Override
@@ -108,7 +107,7 @@ log.debug(e.getMessage());
 
 ## 获取表单数据
 
-以下代码用于获取与给定GUID关联的自适应表单数据。 表单数据随后用于预填充自适应表单。
+以下代码用于获取与给定GUID关联的自适应表单数据。 然后，使用表单数据预填充自适应表单。
 
 ```java
 @Override
@@ -135,7 +134,7 @@ public String getFormData(String guid) {
 
 ## 更新签名状态
 
-签名仪式的成功完成触发了与表单关联的AEM工作流程。 工作流中的第一步是一个流程步骤，它更新了由guid和客户id标识的行在数据库中的状态。 我们还将表单数据中已签名元素的值设置为Y，以指示表单已填写和签名。 自适应表单将填充此数据，xml数据中已签名数据元素的值将用于显示相应的消息。 从自定义进程步骤中调用updateSignatureStatus代码。
+成功完成签署仪式将触发与表单关联的AEM工作流。 工作流中的第一步是一个流程步骤，用于更新数据库中由guid和客户id标识的行的状态。 我们还将formdata中带符号元素的值设置为Y，以表示已填写并签名表单。 自适应表单将填充此数据，xml数据中已签名数据元素的值将用于显示相应的消息。 可从自定义流程步骤中调用updateSignatureStatus代码。
 
 
 ```java
@@ -167,9 +166,9 @@ public void updateSignatureStatus(String formData, String guid) {
 }
 ```
 
-## 获取下一个要签名的表单
+## 获取下一张表格进行签名
 
-以下代码用于获取下一个用于为状态为0的给定customerID签名的表单。 如果sql查询没有返回任何行，我们将返回字符串&#x200B;**&quot;AllDone&quot;**，该字符串指示没有更多用于为给定客户id进行签名的表单。
+以下代码用于获取下一个用于为状态为0的给定customerID签名的表单。 如果sql查询未返回任何行，则我们将返回字符串&#x200B;**&quot;AllDone&quot;**，该字符串表示给定客户ID不再有用于签名的表单。
 
 ```java
 @Override
@@ -209,4 +208,4 @@ public String getNextFormToSign(int customerID) {
 
 ## 资产
 
-与上述服务一起下载的OSGi捆绑包可从此处](assets/sign-multiple-forms.jar)下载[
+与上述服务一起使用的OSGi包可以从此处](assets/sign-multiple-forms.jar)下载[
