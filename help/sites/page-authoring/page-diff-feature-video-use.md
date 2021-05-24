@@ -1,8 +1,8 @@
 ---
-title: 将页面差异与AEM Sites
-seo-title: 将页面差异与AEM Sites
-description: AEM Sites的页面差异功能显示提供了页面中已更改内容（版本、Live Copy、启动项、语言副本）的快速、彩色编码视图。
-seo-description: AEM Sites的页面差异功能显示提供了页面中已更改内容（版本、Live Copy、启动项、语言副本）的快速、彩色编码视图。
+title: 将页面差异与AEM Sites结合使用
+seo-title: 将页面差异与AEM Sites结合使用
+description: AEM Sites的页面差异功能显示了一个以颜色编码的快速视图，其中显示了页面中哪些内容发生了更改（版本、Live Copy、启动项、语言副本）。
+seo-description: AEM Sites的页面差异功能显示了一个以颜色编码的快速视图，其中显示了页面中哪些内容发生了更改（版本、Live Copy、启动项、语言副本）。
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -11,13 +11,12 @@ version: 6.3, 6.4, 6.5
 uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
-topic: Content Management
+topic: 内容管理
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '153'
 ht-degree: 2%
 
 ---
@@ -25,7 +24,7 @@ ht-degree: 2%
 
 # 使用“页面差异”功能{#using-page-difference-with-aem-sites}
 
-AEM Sites的页面差异功能显示提供了页面中已更改内容（版本、Live Copy、启动项、语言副本）的快速、彩色编码视图。
+AEM Sites的页面差异功能显示了一个以颜色编码的快速视图，其中显示了页面中哪些内容发生了更改（版本、Live Copy、启动项、语言副本）。
 
 ## 比较页面版本{#comparing-page-versions}
 
@@ -46,7 +45,7 @@ AEM Sites的页面差异功能显示提供了页面中已更改内容（版本�
 
 >[!VIDEO](https://video.tv.adobe.com/v/17746/?quality=9&learn=on)
 
-“页面差异”功能还可用于确定蓝图和活动副本以及蓝图和语言副本之间的差异。
+“页面差异”功能还可用于识别Blueprint和LiveCopie以及Blueprint和语言副本之间的差异。
 
 ## 其他资源 {#additional-resources}
 
