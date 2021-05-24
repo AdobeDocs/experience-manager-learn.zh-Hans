@@ -1,6 +1,6 @@
 ---
-title: 将Adobe Experience Manager Forms作为Cloud Service与Document Cloud
-description: 使用Document Cloud REST API创建PDF
+title: 将Adobe Experience Manager Forms作为Cloud Service与Document Cloud集成
+description: 使用Document CloudREST API创建PDF
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
