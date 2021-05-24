@@ -1,19 +1,18 @@
 ---
-title: 以CSV格式导出已提交的表单数据
-description: 以CSV格式导出已提交的自适应表单数据
-feature: Adaptive Forms
+title: 以CSV格式导出提交的表单数据
+description: 以CSV格式导出提交的自适应表单数据
+feature: 自适应表单
 topics: development
 audience: developer
 doc-type: article
 activity: implement
-topic: Development
+topic: 开发
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 1%
+source-wordcount: '401'
+ht-degree: 0%
 
 ---
 
@@ -23,32 +22,32 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->此示例仅适用于不基于模式或表单数据模型的自适应Forms
+>此示例仅适用于不基于架构或表单数据模型的自适应Forms
 
 ![表结](assets/tablestructure.PNG)
-构您可以看到模式的名称是aemformstorial。在此模式中是表格提交，定义了以下列
+构由于您可以看到架构的名称是aemformstutorial。在此架构内是表格提交，其中定义了以下列
 
-* formdata:此列将保存提交的表单数据
-* formname:此列将包含提交的表单的名称
-* id:这是主键，设置为自动增量
+* 格式数据：此列将保存提交的表单数据
+* formname:此列将保存提交的表单的名称
+* id:这是主键，设置为自动递增
 
-表名和两列名作为OSGi配置属性公开，如以下屏幕截图所示：
+表名称和两列名称将作为OSGi配置属性显示，如以下屏幕截图所示：
 ![osgi-configuration](assets/configuration.PNG)
-代码将读取这些值并构建要执行的相应SQL查询。 例如，将根据上述值执行以下查询
-**SELECT formdata FROM aemformstutorial.formsubmissions where formname=timeoffrequestform**
-在上述查询中，表单(timeofrequestform)的名称将作为请求参数传递给servlet。
+该代码将读取这些值，并构建要执行的相应SQL查询。 例如，将根据上述值执行以下查询
+**从AEMFORMSTUTORIAL.formsubmissions中选择表单数据，其中formname=timeoffrequestform**
+在上述查询中，表单的名称(timeoffrequestform)将作为请求参数传递给Servlet。
 
 ## **创建OSGi服务**
 
-创建以下OSGI服务以以CSV格式导出提交的数据。
+创建以下OSGI服务以将提交的数据导出为CSV格式。
 
-* 第37行：我们正在访问Apache Sling Connection Pooled DataSource。
+* 第37行：我们正在访问Apache Sling连接池化数据源。
 
-* 第89行：这是服务的入口点。方法`getCSVFile(..)`以formName为输入参数，并获取与给定表单名称相关的已提交数据。
+* 第89行：这是服务的入口点。方法`getCSVFile(..)`以formName作为输入参数，并获取与给定表单名称相关的提交数据。
 
 >[!NOTE]
 >
->该代码假定您已在Felix Web Console中定义名为“aemformstution”的连接池DataSource。该代码还假定您在名为aemformstution的模式库中具有
+>该代码假定您已在Felix Web Console中定义了名为“aemformstutorial”的池化数据源连接。该代码还假定您在数据库中有一个名为aemformstutorial的架构
 
 ```java
 package com.aemforms.storeandexport.core;
@@ -264,7 +263,7 @@ public @interface StoreAndExportConfiguration {
 
 ## Servlet
 
-以下是调用服务的`getCSVFile(..)`方法的servlet代码。 服务返回StringBuffer对象，然后将其流回调用的应用程序
+以下是调用服务`getCSVFile(..)`方法的Servlet代码。 该服务返回StringBuffer对象，然后该对象将流回调用应用程序
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -306,6 +305,6 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 
 ### 在服务器上部署
 
-* 使用MySQL Workbench将[SQL文件](assets/formsubmissions.sql)导入MySQL Server。 这将创建名为&#x200B;**aemformstutorial**&#x200B;的模式和名为&#x200B;**formsubmisions**&#x200B;的表，其中包含一些示例数据。
-* 使用Felix Web控制台部署[OSGi Bundle](assets/store-export.jar)
-* [获取TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)。您应将CSV文件流式传输回您。
+* 使用MySQL Workbench将[SQL文件](assets/formsubmissions.sql)导入MySQL Server。 这会创建名为&#x200B;**aemformstutorial**&#x200B;的模式以及名为&#x200B;**formsubmissions**&#x200B;的表，其中包含一些示例数据。
+* 使用Felix Web控制台部署[OSGi包](assets/store-export.jar)
+* [获取TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)。您应该将CSV文件流式传输到您。
