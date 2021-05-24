@@ -1,16 +1,15 @@
 ---
 title: 了解使用AEM Dynamic Media进行色彩管理
-description: 在此视频中，我们将探索Dynamic Media色彩管理，以及如何使用它为AEM Assets提供色彩校正预览功能。
+description: 在此视频中，我们将探索Dynamic Media色彩管理，以及如何使用它在中为AEM Assets提供颜色校正预览功能。
 sub-product: dynamic-media
-feature: Image Profiles, Video Profiles
+feature: 图像配置文件、视频配置文件
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: 内容管理
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '328'
 ht-degree: 15%
 
 ---
@@ -18,19 +17,19 @@ ht-degree: 15%
 
 # 了解使用AEM Dynamic Media进行色彩管理{#understanding-color-management-with-aem-dynamic-media}
 
-在此视频中，我们将探索Dynamic Media色彩管理，以及如何使用它为AEM Assets提供色彩校正预览功能。
+在此视频中，我们将探索Dynamic Media色彩管理，以及如何使用它在中为AEM Assets提供颜色校正预览功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
 
 >[!NOTE]
 >
->[启用](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Dynamic Media AEM以使用此功能。
+>[启用Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Media AEM以使用此功能。
 
-此功能可作为功能包用于AEM 6.1和6.2版本。
+此功能可作为功能包，在AEM 6.1和6.2版本中使用。
 
 ## 颜色管理配置节点{#xml-template-for-the-color-management-configuration-node}的XML模板
 
-以下是“色彩管理”配置节点的XML模板。 可以将此XML模板复制到AEM开发项目中，并使用适合项目的配置进行配置。
+以下是“色彩管理”配置节点的XML模板。 此XML模板可复制到AEM开发项目中，并使用适合项目的配置进行配置。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -86,43 +85,43 @@ ht-degree: 15%
 />
 ```
 
-### 默认Adobe颜色用户档案的列表列在{#list-of-default-adobe-color-profiles-are-listed-below}下
+### 默认Adobe颜色配置文件列表列于{#list-of-default-adobe-color-profiles-are-listed-below}下
 
 | 名称 | 色彩空间 | 描述 |
 | ------------------- | ---------- | ------------------------------------- |
-| AdobeRGB | RGB | Adobe RGB(1998) |
+| AdobeRGB | RGB | Adobe RGB（1998年） |
 | AppleRGB | RGB | Apple RGB |
 | CIERGB | RGB | CIE RGB |
-| CoatedFogra27 | CMYK | Coated FOGRA27(ISO 12647-2:2004) |
-| CoatedFogra39 | CMYK | Coated FOGRA39(ISO 12647-2:2004) |
-| CoatedGraCol | CMYK | Coated GRACoL 2006(ISO 12647-2:2004) |
+| CoatedFogra27 | CMYK | 涂层FOGRA27(ISO 12647-2:2004) |
+| CoatedFogra39 | CMYK | 涂层FOGRA39(ISO 12647-2:2004) |
+| CoatedGraCol | CMYK | 涂层GRACoL 2006(ISO 12647-2:2004) |
 | ColorMatchRGB | RGB | 颜色匹配RGB |
-| 欧洲ISOC | CMYK | 欧洲ISO涂层FOGRA27 |
+| EuropeISOCoated | CMYK | 欧洲ISO涂层FOGRA27 |
 | EuroscaleCoated | CMYK | Euroscale Coated v2 |
 | EuroscaleUncoated | CMYK | Euroscale Uncoated v2 |
-| JapanColorCoated | CMYK | Japan Color 2001 Coated |
-| JapanColorSpeable | CMYK | Japan Color 2002报纸 |
-| JapanColorUncoated | CMYK | Japan Color 2001 Uncoated |
-| JapanColorWebCoated | CMYK | Japan Color 2003 Web Coated |
-| JapanWebCoated | CMYK | Japan Web Coated(Ad) |
+| JapanColorCoated | CMYK | 日本颜色2001涂层 |
+| JapanColorJeappe | CMYK | 日本彩色2002报纸 |
+| JapanColorUncoated | CMYK | 日本颜色2001无涂层 |
+| JapanColorWebCoated | CMYK | 日本Color 2003 Web Coated |
+| JapanWebCoated | CMYK | Japan Web Coated（广告） |
 | 新闻纸SNAP2007 | CMYK | 美国新闻纸（2007年快照） |
-| NTSC | RGB | NTSC(1953) |
+| NTSC | RGB | NTSC（1953年） |
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhoto RGB |
 | PS4Default | CMYK | Photoshop 4默认CMYK |
 | PS5默认 | CMYK | Photoshop 5默认CMYK |
-| SheetfedCoated | CMYK | 美国Sheetfed Coated v2 |
+| SheetfedCoated | CMYK | 美国钣金涂层v2 |
 | SheetfedUncoated | CMYK | 美国平板纸未涂层v2 |
 | SMPTE | RGB | SMPTE-C |
 | sRGB | RGB sRGB | IEC61966-2.1 |
-| UncoatedFogra29 | CMYK | 非涂层FOGRA29(ISO 12647-2:2004) |
-| WebCoated | CMYK | U.S. Web Coated(SWOP)v2 |
+| UncoatedFogra29 | CMYK | 无涂层FOGRA29(ISO 12647-2:2004) |
+| WebCoated | CMYK | 美国涂层网络(SWOP)v2 |
 | WebCoatedFogra28 | CMYK | Web Coated FOGRA28(ISO 12647-2:2004) |
-| WebCoatedGrade3 | CMYK | Web Coated SWOP 2006 3级纸 |
-| WebCoatedGrade5 | CMYK | Web Coated SWOP 2006五级纸 |
+| WebCoatedGrade3 | CMYK | Web版SWOP 2006三级纸 |
+| WebCoatedGrade5 | CMYK | Web版SWOP 2006五级纸 |
 | WebUncoated | CMYK | 美国Web Uncoated v2 |
-| WideGalytRGB | RGB | 宽色域RGB |
+| 宽色域RGB | RGB | 宽色域RGB |
 
 ## 其他资源{#additional-resources}
 
-* [配置Dynamic Media颜色管理](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
+* [配置Dynamic Media色彩管理](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
