@@ -1,20 +1,19 @@
 ---
-title: 为AEM设置Sling Dynamic Include
-description: 在Apache HTTP Web Server上运行的AEM Dispatcher中安装和使用Apache Sling Dynamic Include的视频演练。
+title: 为AEM设置Sling动态包含
+description: 有关安装和使用Apache Sling Dynamic Include以及在Apache HTTP Web Server上运行的AEM Dispatcher的视频演示。
 version: 6.3, 6.4, 6.5
 sub-product: 基础，站点
-feature: APIs
+feature: API
 topics: caching
 activity: develop
 audience: architect, developer
 doc-type: technical video
-topic: Development
+topic: 开发
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '265'
 ht-degree: 6%
 
 ---
@@ -30,8 +29,8 @@ ht-degree: 6%
 >
 > 确保本地安装了最新版本的AEM Dispatcher。
 
-1. 下载并安装[[!DNL Sling Dynamic Include] bundle](https://sling.apache.org/downloads.cgi)。
-1. 通过位于&#x200B;**http://&lt;host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**&#x200B;的[!DNL OSGi Configuration Factory]配置[!DNL Sling Dynamic Include]。
+1. 下载并安装[[!DNL Sling Dynamic Include] 包](https://sling.apache.org/downloads.cgi)。
+1. 通过&#x200B;**http://&lt;host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**&#x200B;的[!DNL OSGi Configuration Factory]配置[!DNL Sling Dynamic Include]。
 
    或者，要添加到AEM代码库，请在以下位置创建相应的&#x200B;**sling:OsgiConfig**&#x200B;节点：
 
@@ -57,7 +56,7 @@ ht-degree: 6%
    -->
    ```
 
-1. （可选）重复最后一步，允许通过[!DNL SDI]提供可编辑模板](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/page-templates-editable.html)的已锁定（初始）内容上的组件。 [其他配置的原因是，可编辑模板的锁定内容是从`/conf`提供的，而不是从`/content`提供的。
+1. （可选）重复最后一步，以允许通过[!DNL SDI]提供可编辑模板](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/page-templates-editable.html)的锁定（初始）内容上的组件。 [进行额外配置的原因是，可编辑模板的锁定内容是从`/conf`提供，而不是从`/content`提供。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -91,7 +90,7 @@ ht-degree: 6%
    LoadModule include_module libexec/apache2/mod_include.so
    ```
 
-1. 根据包含指令更新[!DNL vhost]文件。
+1. 更新[!DNL vhost]文件以遵循include指令。
 
    ```shell
    $ sudo vi .../vhosts/aem-publish.local.conf
@@ -116,7 +115,7 @@ ht-degree: 6%
    </VirtualHost>
    ```
 
-1. 更新dispatcher.any配置文件以支持(1)`nocache`选择器和(2)启用TTL支持。
+1. 更新dispatcher.any配置文件以支持(1)`nocache`选择器，并启用(2)TTL支持。
 
    ```shell
    $ sudo vi .../conf/dispatcher.any
@@ -134,7 +133,7 @@ ht-degree: 6%
 
    >[!TIP]
    >
-   > 如果在上述全局`*.nocache.html*`规则中将尾随`*`保留为关闭，则会导致子资源请求](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16)中出现[问题。
+   > 如果将上述全局`*.nocache.html*`规则中的尾随`*`保留为关闭，则可能会导致子资源](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16)请求中出现[问题。
 
    ```shell
    /cache {
@@ -151,16 +150,16 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->如果使用[!DNL Sling Dynamic Includes]服务边缘端包括(ESI)，请确保在调度程序缓存中缓存相关的[响应标头。 ](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)可能的标题包括：
+>如果您使用[!DNL Sling Dynamic Includes]来提供边缘端包含(ESI)，请确保在调度程序缓存](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)中缓存相关的[响应标头。 可能的标头包括：
 >
->* &quot;缓存控制&quot;
+>* &quot;Cache-Control&quot;
 >* &quot;Content-Disposition&quot;
->* &quot;内容类型&quot;
+>* &quot;Content-Type&quot;
 >* &quot;截止日期&quot;
->* &quot;上次修改时间&quot;
+>* &quot;Last-Modified&quot;
 >* &quot;ETag&quot;
 >* &quot;X-Content-Type-Options&quot;
->* &quot;上次修改时间&quot;
+>* &quot;Last-Modified&quot;
 
 >
 
@@ -168,5 +167,5 @@ ht-degree: 6%
 
 ## 辅助材料
 
-* [下载Sling Dynamic Include包](https://sling.apache.org/downloads.cgi)
-* [Apache Sling Dynamic Include文档](https://github.com/Cognifide/Sling-Dynamic-Include)
+* [下载Sling动态包含包](https://sling.apache.org/downloads.cgi)
+* [Apache Sling动态包含文档](https://github.com/Cognifide/Sling-Dynamic-Include)
