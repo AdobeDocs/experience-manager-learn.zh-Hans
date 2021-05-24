@@ -1,39 +1,38 @@
 ---
-title: 了解如何为AEM Style System编码
-description: 在此视频中，我们将了解使用样式系统设置Adobe Experience Manage核心标题组件样式的CSS（或LESS）和JavaScript，以及这些样式如何应用于HTML和DOM。
-feature: Style System
+title: 了解如何编码AEM样式系统
+description: 在此视频中，我们将了解用于使用样式系统来设置Adobe Experience Manage核心标题组件样式的CSS（或更低版本）和JavaScript的结构，以及这些样式如何应用于HTML和DOM。
+feature: 样式系统
 topics: development, components, front-end-development
 audience: developer, implementer
 doc-type: technical video
 activity: understand
 version: 6.4, 6.5
-topic: Development
+topic: 开发
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1148'
 ht-degree: 2%
 
 ---
 
 
-# 了解如何为样式系统编码{#understanding-how-to-code-for-the-aem-style-system}
+# 了解如何编码样式系统{#understanding-how-to-code-for-the-aem-style-system}
 
-在此视频中，我们将了解使用样式系统设置Experience Manage核心标题组件样式的CSS（或[!DNL LESS]）和JavaScript，以及这些样式如何应用于HTML和DOM。
+在此视频中，我们将了解用于使用样式系统来设置Experience Manage核心标题组件样式的CSS（或[!DNL LESS]）和JavaScript的解剖结构，以及这些样式如何应用于HTML和DOM。
 
 >[!NOTE]
 >
->AEM Style System是随[AEM 6.3 SP1](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp1-release-notes.html) + [功能包20593](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-20593)引入的。
+>引入了AEM Style System的A/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/[](https://helpx.adobe.com/cn/experience-manager/6-3/release-notes/sp1-release-notes.html)[](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-20593)
 >
->视频假定We.Retail Title组件已更新为继承[核心组件v2.0.0+](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases)。
+>此视频假定We.Retail标题组件已更新，可继承自[核心组件v2.0.0+](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases)。
 
-## 了解如何为样式系统{#understanding-how-to-code-for-the-style-system}编码
+## 了解如何编码样式系统{#understanding-how-to-code-for-the-style-system}
 
 >[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=9&learn=on)
 
-提供的AEM包(**technical-review.sites.style-system-1.0.0.zip**)将安装示例标题样式、We.Retail布局容器和标题组件的示例策略以及示例页。
+提供的AEM包(**technical-review.sites.style-system-1.0.0.zip**)安装示例标题样式、We.Retail布局容器和标题组件的示例策略以及示例页面。
 
 [technical-review.sites.style-system-1.0.0.zip](assets/technical-review.sites.style-system-1.0.0.zip)
 
@@ -43,7 +42,7 @@ ht-degree: 2%
 
 * `/apps/demo/sites/style-system/clientlib-example/components/titles/styles/example.less`
 
-对于喜欢CSS的人，此代码片断下面是此[!DNL LESS]编译为的CSS。
+对于偏好CSS的用户，此代码片段下面是此[!DNL LESS]编译到的CSS。
 
 ```css
 /* LESS */
@@ -71,7 +70,7 @@ ht-degree: 2%
 }
 ```
 
-通过将上述[!DNL LESS]Experience Manager到以下CSS进行本机编译。
+上述[!DNL LESS]由Experience Manager到以下CSS在本地编译。
 
 ```css
 /* CSS */
@@ -98,9 +97,9 @@ ht-degree: 2%
 
 ### JavaScript {#example-javascript}
 
-将示例样式应用于标题组件时，以下JavaScript会收集并注入当前页面在标题文本下方的上次修改日期和时间。
+当将示例样式应用于标题组件时，以下JavaScript会收集并注入当前页面在标题文本下方的上次修改日期和时间。
 
-使用jQuery是可选的，也是使用的命名约定。
+可以选择使用jQuery以及使用的命名约定。
 
 以下是位于的示例样式的[!DNL LESS]定义：
 
@@ -154,12 +153,12 @@ jQuery(function ($) {
 
 ## 开发最佳实践{#development-best-practices}
 
-### HTML最佳做法{#html-best-practices}
+### HTML最佳实践{#html-best-practices}
 
-* HTML（通过HTL生成）应尽可能具有结构语义；避免元素的不必要的分组/嵌套。
+* HTML（通过HTL生成）应尽可能具有结构语义；避免元素的不必要分组/嵌套。
 * HTML元素应可通过BEM样式的CSS类寻址。
 
-**良好**  — 组件中的所有元素都可通过BEM记号进行寻址：
+**良好**  — 组件中的所有元素均可通过BEM符号进行寻址：
 
 ```html
 <!-- Good practice -->
@@ -170,7 +169,7 @@ jQuery(function ($) {
 </div>
 ```
 
-**错误** -列表和列表元素只能通过元素名称寻址：
+**错误**  — 列表和列表元素只能通过元素名称寻址：
 
 ```html
 <!-- Bad practice -->
@@ -181,91 +180,91 @@ jQuery(function ($) {
 </div>
 ```
 
-* 暴露更多数据和隐藏数据比暴露要求未来后端开发提供的太少数据更好。
+* 更好的做法是公开更多数据并隐藏这些数据，而不是公开太少的数据，这需要未来的后端开发来公开这些数据。
 
-   * 实施可创作的内容切换有助于保持此HTML的精益，从而作者可以选择将哪些内容元素写入HTML。 在将图像写入HTML时（可能不适用于所有样式），Creat可能尤为重要。
-   * 此规则的例外情况是，默认情况下，昂贵的资源（例如图像）会公开，因为CSS隐藏的事件图像会不必要地获取。
+   * 实施可创作内容切换有助于保持此HTML的精简，从而作者能够选择将哪些内容元素写入HTML。 在将图像写入HTML时，可能并非所有样式都使用的图像时，可能尤其重要。
+   * 此规则的例外情况是，默认情况下会显示昂贵的资源（例如图像），因为CSS隐藏的事件图像将（在这种情况下）不必要地获取。
 
-      * 现代图像组件通常使用JavaScript来选择并加载最适合用例（视图端口）的图像。
+      * 现代图像组件通常会使用JavaScript为用例（视区）选择并加载最合适的图像。
 
-### CSS最佳做法{#css-best-practices}
+### CSS最佳实践{#css-best-practices}
 
 >[!NOTE]
 >
->样式系统与[BEM](https://en.bem.info/)有小的技术差异，因为`BLOCK`和`BLOCK--MODIFIER`不应用于由[BEM](https://en.bem.info/)指定的同一元素。
+>样式系统与[BEM](https://en.bem.info/)有小的技术差异，因为`BLOCK`和`BLOCK--MODIFIER`未应用于[BEM](https://en.bem.info/)指定的同一元素。
 >
->相反，由于产品约束，`BLOCK--MODIFIER`应用于`BLOCK`元素的父项。
+>由于产品限制，`BLOCK--MODIFIER`将应用于`BLOCK`元素的父元素。
 >
 >[BEM](https://en.bem.info/)的所有其他租户都应与对齐。
 
-* 使用预处理器，如[LESS](https://lesscss.org/)(本机受AEM支持)或[SCSS](https://sass-lang.com/)（需要自定义构建系统），以允许清晰的CSS定义和重新可用性。
+* 使用预处理器，如[LESS](https://lesscss.org/)(本地受AEM支持)或[SCSS](https://sass-lang.com/)（需要自定义构建系统），以便清晰定义CSS并重新使用。
 
-* 保持选择器权重/特异性一致；这有助于避免和解决难以识别的CSS层叠冲突。
-* 将每个样式组织到一个离散文件中。
-   * 这些文件可以使用LESS/SCSS `@imports`组合，如果需要原始CSS，可通过HTML客户端库文件包含或自定义前端资源构建系统组合。
+* 保持选择器重量/特异性一致；这有助于避免和解决难以识别的CSS级联冲突。
+* 将每种样式组织为一个离散的文件。
+   * 这些文件可以使用LESS/SCSS `@imports`进行组合，如果需要原始CSS，也可以通过HTML客户端库文件包含或自定义前端资产构建系统进行组合。
 * 避免混用许多复杂的样式。
-   * 一次可应用于组件的样式越多，排列变化越多。 这可能会变得难以维护/保证/确保品牌协调。
-* 始终使用CSS类（遵循BEM记号）来定义CSS规则。
-   * 如果绝对需要选择不带CSS类的元素（即裸元素），请在CSS定义中将它们移到较高位置，以明确它们与具有可选CSS类的此类元素的任何冲突相比具有较低的特异性。
-* 避免直接设置`BLOCK--MODIFIER`的样式，因为它已附加到响应式网格。 更改此元素的显示可能会影响响应式网格的呈现和功能，因此当更改响应式网格的行为时，只有在此级别上设置样式。
-* 使用`BLOCK--MODIFIER`应用样式范围。 `BLOCK__ELEMENT--MODIFIERS`可用于组件中，但由于`BLOCK`表示组件，并且组件是设置样式的组件，因此样式是“defined”，并通过`BLOCK--MODIFIER`确定范围。
+   * 一次可以应用于组件的样式越多，排列的类型就越多。 这可能会变得难以维护/QA/确保品牌一致性。
+* 始终使用CSS类（遵循BEM符号）来定义CSS规则。
+   * 如果绝对需要选择不带CSS类的元素（即裸机元素），请在CSS定义中将其移到较高位置，以明确表示它们的特异性低于与具有可选CSS类的此类元素的任何冲突。
+* 当`BLOCK--MODIFIER`附加到响应式网格时，请避免直接为其设置样式。 更改此元素的显示可能会影响响应式网格的呈现和功能，因此当更改响应式网格的行为的意图时，仅会影响此级别的样式。
+* 使用`BLOCK--MODIFIER`应用样式范围。 `BLOCK__ELEMENT--MODIFIERS`可以在组件中使用，但由于`BLOCK`表示组件，并且组件是样式设置的，因此样式为“defined”，并通过`BLOCK--MODIFIER`的范围。
 
-CSS选择器结构示例应如下：
+CSS选择器结构示例应如下所示：
 
 <table> 
  <tbody> 
   <tr> 
-   <td valign="bottom"><p>1级选择器</p> <p>块 — 修饰符</p> </td> 
+   <td valign="bottom"><p>第1级选择器</p> <p>块 — 修饰符</p> </td> 
    <td valign="bottom"><p>第2级选择器</p> <p>块</p> </td> 
-   <td valign="bottom"><p>3级选择器</p> <p>BLOCK__ELEMENT</p> </td> 
+   <td valign="bottom"><p>3级选择器</p> <p>块__元素</p> </td> 
    <td> </td> 
    <td valign="middle">有效的CSS选择器</td> 
   </tr> 
   <tr> 
-   <td valign="middle"><span class="code">.cmp-列表-dark</span></td> 
-   <td valign="middle"><span class="code">.cmp-列表</span></td> 
-   <td valign="middle"><span class="code">.cmp-列表__item</span></td> 
+   <td valign="middle"><span class="code">.cmp-list-dark</span></td> 
+   <td valign="middle"><span class="code">.cmp-list</span></td> 
+   <td valign="middle"><span class="code">.cmp-list__item</span></td> 
    <td valign="middle">→</td> 
-   <td><p><span class="code">.cmp-列表-dark</span></p> <p><span class="code"> .cmp-列表</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-列表__item {  </span></strong></p> <p><strong> 颜色：蓝色；</strong></p> <p><strong> }</strong></p> </td> 
+   <td><p><span class="code">.cmp-list-dark</span></p> <p><span class="code"> .cmp-list</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-list__item {  </span></strong></p> <p><strong> 颜色：蓝色；</strong></p> <p><strong> }</strong></p> </td> 
   </tr> 
   <tr> 
    <td valign="middle"><span class="code">.cmp-image—hero</span></td> 
    <td valign="middle"><span class="code">.cmp-image</span></td> 
-   <td valign="middle"><span class="code">.cmp-image_caption</span></td> 
+   <td valign="middle"><span class="code">.cmp-image__caption</span></td> 
    <td valign="middle">→</td> 
-   <td valign="middle"><p><span class="code">.cmp-image—hero</span></p> <p><span class="code"> .cmp-image</span></p> <p><span class="code"> .cmp-image_caption {</span></p> <p><span class="code"> 颜色：红色；</span></p> <p><span class="code"> }</span></p> </td> 
+   <td valign="middle"><p><span class="code">.cmp-image—hero</span></p> <p><span class="code"> .cmp-image</span></p> <p><span class="code"> .cmp-image__caption {</span></p> <p><span class="code"> 颜色：红色；</span></p> <p><span class="code"> }</span></p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-对于嵌套组件，这些嵌套组件元素的CSS选择器深度将超过第3级选择器。 为嵌套组件重复相同的模式，但由父组件的`BLOCK`确定范围。 换句话说，将嵌套组件的`BLOCK`开始到第3级，而嵌套组件的`ELEMENT`将位于第4选择器级。
+对于嵌套的组件，这些嵌套的组件元素的CSS选择器深度将超过第3级选择器。 为嵌套组件重复相同的模式，但范围由父组件的`BLOCK`确定。 换言之，在第3级启动嵌套组件的`BLOCK`，而嵌套组件的`ELEMENT`将在第4个选择器级别启动。
 
-### JavaScript最佳做法{#javascript-best-practices}
+### JavaScript最佳实践{#javascript-best-practices}
 
-本节中定义的最佳做法与“style-JavaScript”或专门用于为风格而非功能目的操纵组件的JavaScript有关。
+本节中定义的最佳实践与“style-JavaScript”或专门用于处理组件以实现风格而非功能目的的JavaScript有关。
 
-* Style-JavaScript应慎重使用，是少数用例。
-* Style-JavaScript应主要用于操作组件的DOM，以支持CSS设置样式。
-* 如果组件在页面上出现多次，请重新评估Javascript的使用，并了解计算/重绘成本。
-* 如果当组件可能在页面上多次显示时以异步方式(通过AJAX)提取新数据/内容，请重新评估Javascript的使用。
+* Style-JavaScript应谨慎使用，属于少数用例。
+* Style-JavaScript主要用于处理组件的DOM以支持由CSS设置样式。
+* 如果组件在页面上出现多次，请重新评估Javascript的使用情况，并了解计算/重绘成本。
+* 如果组件在页面上可能显示多次，则Javascript会异步(通过AJAX)提取新数据/内容，从而重新评估其使用情况。
 * 处理发布和创作体验。
-* 尽可能重用样式 — Javascript。
-   * 例如，如果某个组件的多个样式要求将其图像移动到背景图像，则可以实现style-JavaScript一次，并将其附加到多个`BLOCK--MODIFIERs`。
-* 尽可能将style-JavaScript与功能JavaScript分开。
-* 评估JavaScript与直接通过HTL在HTML中显示这些DOM更改的成本。
-   * 当使用style-JavaScript的组件需要服务器端修改时，请评估此时是否可以引入JavaScript操作，以及影响/影响组件的性能和支持性。
+* 尽可能重复使用样式Javascript。
+   * 例如，如果组件的多个样式要求将其图像移动到背景图像，则可以实施style-JavaScript一次，并将其附加到多个`BLOCK--MODIFIERs`。
+* 尽可能将style-JavaScript与功能性JavaScript分开。
+* 评估JavaScript的成本与通过HTL直接在HTML中显示这些DOM更改的成本。
+   * 当使用style-JavaScript的组件需要服务器端修改时，请评估此时是否可以引入JavaScript操作，以及这些操作/影响对组件的性能和支持性有何影响。
 
 #### 性能注意事项{#performance-considerations}
 
-* Style-JavaScript应保持轻盈。
-* 要避免闪烁和不必要的重绘，请首先通过`BLOCK--MODIFIER BLOCK`隐藏组件，并在JavaScript中的所有DOM操作完成时显示它。
-* style-JavaScript操作的性能类似于附加到DOMReady上的元素并修改元素的基本jQuery插件。
+* Style-JavaScript应保持轻薄。
+* 为避免闪烁和不必要的重绘，最初通过`BLOCK--MODIFIER BLOCK`隐藏组件，并在JavaScript中的所有DOM操作完成时显示组件。
+* style-JavaScript操作的性能类似于附加到DOMReady上的元素并对其进行修改的基本jQuery插件。
 * 确保对请求进行压缩，并缩小CSS和JavaScript。
 
 ## 其他资源 {#additional-resources}
 
 * [样式系统文档](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)
-* [创建AEM Client库](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [创建AEM客户端库](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [BEM（块元素修饰符）文档网站](https://getbem.com/)
 * [LESS文档网站](https://lesscss.org/)
 * [jQuery网站](https://jquery.com/)
