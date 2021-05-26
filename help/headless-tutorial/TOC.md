@@ -10,7 +10,7 @@ topics: content-delivery
 activity: develop, understand
 kt: 2963
 index: y
-source-git-commit: bfca379bf2722dc1658400f375e65d2943f27ed7
+source-git-commit: 2b2c45e5ceb6f1121ff5b9befa0c79226e4e2efb
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 23%
@@ -27,10 +27,10 @@ ht-degree: 23%
       + [1 — 建模基础知识](./graphql/video-series/modeling-basics.md)
       + [2 — 高级建模](./graphql/video-series/advanced-modeling.md)
       + [3 — 创建GraphQL查询](./graphql/video-series/creating-graphql-queries.md)
-      + [4 - GraphQL持久查询](./graphql/video-series/graphql-persisted-queries.md)
-      + [5 — 创作和发布架构](./graphql/video-series/author-publish-architecture.md)
-      + [6 — 内容片段变量](./graphql/video-series/content-fragment-variations.md)
-      + [7 - GraphQL端点](./graphql/video-series/graphql-endpoints.md)
+      + [4 — 内容片段变量](./graphql/video-series/content-fragment-variations.md)
+      + [5 - GraphQL端点](./graphql/video-series/graphql-endpoints.md)
+      + [6 — 创作和发布架构](./graphql/video-series/author-publish-architecture.md)
+      + [7 - GraphQL持久查询](./graphql/video-series/graphql-persisted-queries.md)
    + 多步教程{#multi-step}
       + [概述](./graphql/multi-step/overview.md)
       + [1 — 快速设置](./graphql/multi-step/setup.md)
