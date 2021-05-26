@@ -1,0 +1,95 @@
+---
+title: 在AEM Forms中创建您的第一个Servlet
+description: 构建您的第一个sling servlet以将数据与表单模板合并。
+feature: 自适应表单
+topics: development
+audience: developer
+doc-type: article
+activity: setup
+version: 6.4,6.5
+topic: 开发
+role: Developer
+level: Beginner
+source-git-commit: c74c6f5627e69e32bbf0098d6b6bab122cace798
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 2%
+
+---
+
+
+# Sling Servlet
+
+Servlet是一种类，用于扩展通过请求 — 响应编程模型访问的托管应用程序的服务器的功能。 对于此类应用程序，Servlet技术定义特定于HTTP的Servlet类。
+所有Servlet都必须实施Servlet接口，该接口定义生命周期方法。
+
+
+AEM中的Servlet可注册为OSGi服务：您可以扩展SlingSafeMethodsServlet以用于只读实现或SlingAllMethodsServlet，以便实施所有RESTful操作。
+
+## Servlet代码
+
+```java
+import javax.servlet.Servlet;
+
+import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.SlingHttpServletResponse;
+import org.apache.sling.api.servlets.SlingAllMethodsServlet;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+
+import com.adobe.aemfd.docmanager.Document;
+import com.adobe.fd.forms.api.FormsService;
+
+@Component(service={Servlet.class}, property={"sling.servlet.methods=post", "sling.servlet.paths=/bin/mergedataWithAcroform"})
+public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
+{
+	
+	private static final long serialVersionUID = 1L;
+	@Reference
+	FormsService formsService;
+	 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response)
+	  { 
+		 String file_path = request.getParameter("save_location");
+		 
+		 java.io.InputStream pdf_document_is = null;
+		 java.io.InputStream xml_is = null;
+		 javax.servlet.http.Part pdf_document_part = null;
+		 javax.servlet.http.Part xml_data_part = null;
+		 	 try
+		 	 {
+		 		pdf_document_part = request.getPart("pdf_file");
+				 xml_data_part = request.getPart("xml_data_file");
+				 pdf_document_is = pdf_document_part.getInputStream();
+				 xml_is = xml_data_part.getInputStream();
+				 Document data_merged_document = formsService.importData(new Document(pdf_document_is), new Document(xml_is));
+				 data_merged_document.copyToFile(new File(file_path));
+				 
+		 	 }
+		 	 catch(Exception e)
+		 	 {
+		 		 response.sendError(400,e.getMessage());
+		 	 }
+	  }
+}
+```
+
+## 构建和部署
+
+要构建项目，请执行以下步骤：
+
+* 打开&#x200B;**命令提示符窗口**
+* 导航至 `c:\aemformsbundles\learningaemforms\core`
+* 执行命令`mvn clean install -PautoInstallBundle`
+* 上述命令将自动生成包并将其部署到在localhost:4502上运行的AEM实例。
+
+此包还将在以下位置`C:\AEMFormsBundles\learningaemforms\core\target`提供。 也可以使用[Felix Web控制台将包部署到AEM中。](http://localhost:4502/system/console/bundles)
+
+
+## 测试Servlet解析程序
+
+将您的浏览器指向[servlet解析程序URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST)。 这将告诉您将为给定路径调用的Servlet，如下面的屏幕快照所示
+![servlet-resolver](assets/servlet-resolver.JPG)
+
+## 使用Postman测试Servlet
+
+![test-servlet-postman](assets/test-servlet-postman.JPG)
