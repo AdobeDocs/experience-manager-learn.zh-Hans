@@ -7,7 +7,7 @@ role: Developer, Architect
 level: Beginner
 kt: 7633
 thumbnail: kt-7633.jpeg
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: 5dea9cf646762c0f4aff43d9e48a35ab6ebc0af8
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 1%
@@ -277,7 +277,7 @@ $ npm install --save \
 1. 下载以下两个文件并将其复制到`src/styles`中
    + [_grid.scss](./assets/spa-bootstrap/_grid.scss)
       + AEM响应式网格SCSS生成器
-   + [_grid-init.scss](./assets/spa-bootstrap/_grid.scss)
+   + [_grid-init.scss](./assets/spa-bootstrap/_grid-init.scss)
       + 使用SPA特定断点（桌面和移动设备）和列(12)调用`_grid.scss`。
 1. 打开`src/App.scss`并导入`./styles/grid-init.scss`
 
