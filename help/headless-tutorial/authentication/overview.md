@@ -12,15 +12,17 @@ thumbnail: 330460.jpg
 topic: 无头、集成
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
 
 
 # 基于令牌的AEM身份验证作为Cloud Service
+
+AEM公开了各种可以无头方式交互的HTTP端点，从GraphQL、AEM内容服务到资产HTTP API。 通常，这些无头用户可能需要对AEM进行身份验证才能访问受保护的内容或操作。 为了实现此目的，AEM支持对来自外部应用程序、服务或系统的HTTP请求进行基于令牌的身份验证。
 
 在本教程中，您将详细了解外部应用程序如何使用访问令牌以编程方式验证AEM as a HTTPCloud Service并与之进行交互。
 
