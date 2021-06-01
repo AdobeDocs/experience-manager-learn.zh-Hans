@@ -5,58 +5,153 @@ feature: 内容片段、 API
 topic: 无外设、内容管理
 role: Developer
 level: Beginner
-source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
+source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 4%
+source-wordcount: '419'
+ht-degree: 0%
 
 ---
 
 
 # AEM Headless教程
 
-Adobe Experience Manager有多个选项可用于定义无头端点并将其内容交付为JSON。 使用动手实践教程了解如何使用各种选项并选择适合您的选项。
+Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将其内容交付为JSON。 使用动手实践教程了解如何使用各种选项并选择适合您的选项。
 
-## AEM GraphQL API教程
+>[!TIP]
+>
+>此教程集合专为希望&#x200B;**通过**&#x200B;学习的用户而设计。 如果您希望从头开始学习概念，请查看[AEM Headless Developer历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html)。 这套教程和历程是相辅相成的。
 
-AEM GraphQL API（用于内容片段）
-支持无头CMS方案，其中外部客户端应用程序使用AEM中管理的内容渲染体验。
+## Tutorials（按API）
 
-现代内容交付API是基于Javascript的前端应用程序效率和性能的关键。 使用REST API会带来以下挑战：
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <img alt="GraphQL API" src="./assets/graphql-icon.png" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+    <strong>GraphQL API</strong>
+    </a>
+    </div>
+    <p>
+    <em>了解应用程序如何使用AEM GraphQL API查询内容。</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+    <img alt="基于令牌的身份验证" src="./assets/token-auth-icon.png" />
+    </a>
+    <div>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+    <strong>令牌身份验证</strong>
+    </a>
+    </div>
+    <p>
+    <em>了解应用程序如何通过AEM进行安全身份验证。</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
+      <img alt="Content Services" src="./assets/content-services.png" />
+    </a>
+     <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
+        <strong>Content Services</strong>
+      </a>
+    </div>
+    <p>
+    <em>了解应用程序如何使用REST API来使用内容。</em>
+    <p>
+  </td>
+</tr>
+</table>
 
-* 一次获取一个对象的请求数量很大
-* 通常是“过度投放”内容，这意味着应用程序收到的内容超出了其需求
+## Tutorials（按框架）
 
-为了克服这些难题，GraphQL提供了一个基于查询的API，允许客户仅查询AEM所需的内容，并使用单个API调用接收。
+根据所使用的技术浏览以下教程。 了解AEM如何超越纯粹的无头用例，提供用于上下文内创作和体验管理的选项。
 
-* 在[AEM GraphQL API快速入门教程](./graphql/overview.md)中了解如何使用AEM GraphQL API
-
-## 基于令牌的身份验证教程
-
-AEM公开了各种可以无头方式交互的HTTP端点，从GraphQL、AEM内容服务到资产HTTP API。 通常，这些无头用户可能需要对AEM进行身份验证才能访问受保护的内容或操作。 为了实现此目的，AEM支持对来自外部应用程序、服务或系统的HTTP请求进行基于令牌的身份验证。
-
-* 了解如何使用[从外部应用程序Cloud Service对AEM进行身份验证教程](./authentication/overview.md)中的访问令牌，通过HTTP对AEM进行身份验证
-
-## AEM Content Services教程
-
-AEM内容服务利用传统的AEM页面来撰写无头REST API端点，并且AEM组件定义或引用要在这些端点上公开的内容。
-
-AEM Content Services允许使用与在AEM Sites中创作网页相同的内容抽象概念，来定义这些HTTP API的内容和模式。 使用AEM页面和AEM组件，营销人员能够快速编写和更新可支持任何应用程序的灵活JSON API。
-
-* 在[AEM Content Services快速入门教程](./content-services/overview.md)中了解如何使用AEM Content Services
-
-## AEM GraphQL与AEM Content Services
-
-|  | AEM GraphQL API | AEM Content Services |
-|--------------------------------|:-----------------|:---------------------|
-| 架构定义 | 结构化内容片段模型 | AEM组件 |
-| 内容 | 内容片段 | AEM组件 |
-| 内容发现 | 按GraphQL查询 | 按AEM页面 |
-| 投放格式 | GraphQL JSON | AEM ComponentExporter JSON |
-
-## 其他有用教程
-
-与无头概念相关的其他AEM教程包括：
-
-* [AEM SPA Editor 和 Angular 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
-* [AEM SPA Editor 和 React 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html">
+      <img alt="React — 无头" src="./assets/react-headless.png" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+    <strong>React — 无头</strong>
+    </a>
+    </div>
+    <p>
+    <em>在纯粹的无头情景中使用GraphQL构建React JS应用程序。</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
+    <img alt="React — 远程编辑器" src="./assets/react-remote.png" />
+    </a>
+    <div>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
+    <strong>React — 远程编辑器</strong>
+    </a>
+    </div>
+    <p>
+    <em>在上下文中创作远程托管的React应用程序的一部分。</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
+      <img alt="React - SPA Editor" src="./assets/react-spa-editor.png" />
+    </a>
+     <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
+        <strong>React - SPA Editor</strong>
+      </a>
+    </div>
+    <p>
+    <em>使用AEM SPA编辑器管理完整的React应用程序体验。</em>
+    <p>
+  </td>
+</tr>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html">
+      <img alt="React — 无头" src="./assets/angular-spa-editor.png" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html">
+    <strong>Angular- SPA编辑器</strong>
+    </a>
+    </div>
+    <p>
+    <em>使用AEM SPA编辑器管理完整的Angular应用程序体验。</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
+    <img alt="Angular — 内容服务" src="./assets/android.png" />
+    </a>
+    <div>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
+    <strong>Android — 内容服务</strong>
+    </a>
+    </div>
+    <p>
+    <em>使用Content Services和REST为移动Android应用程序提供支持。</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+      <img alt="Node.js — 身份验证" src="./assets/node-js.png" />
+    </a>
+     <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+        <strong>Node.js — 身份验证</strong>
+      </a>
+    </div>
+    <p>
+    <em>使用开发人员和服务令牌构建Node.js应用程序以进行身份验证。</em>
+    <p>
+  </td>
+</tr>
+</table>
