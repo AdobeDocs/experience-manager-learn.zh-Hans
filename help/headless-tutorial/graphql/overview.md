@@ -5,15 +5,25 @@ feature: 内容片段、 API
 topic: 无外设、内容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 0%
+source-wordcount: '250'
+ht-degree: 1%
 
 ---
 
 
 # AEM无头入门 — GraphQL
+
+AEM GraphQL API（用于内容片段）
+支持无头CMS方案，其中外部客户端应用程序使用AEM中管理的内容渲染体验。
+
+现代内容交付API是基于Javascript的前端应用程序效率和性能的关键。 使用REST API会带来以下挑战：
+
+* 一次获取一个对象的请求数量很大
+* 通常是“过度投放”内容，这意味着应用程序收到的内容超出了其需求
+
+为了克服这些难题，GraphQL提供了一个基于查询的API，允许客户仅查询AEM所需的内容，并使用单个API调用接收。
 
 >[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
 
@@ -23,10 +33,19 @@ ht-degree: 0%
 
 通过深入演练内容片段以及AEM GraphQL API和开发工具，了解AEM GraphQL功能。
 
-+ [AEM无头GraphQL视频系列](./video-series/modeling-basics.md)
+* [AEM无头GraphQL视频系列](./video-series/modeling-basics.md)
 
 ## AEM无头GraphQL动手教程
 
 通过构建通过AEM GraphQL API使用内容片段的React应用程序来探索AEM GraphQL功能。
 
-+ [AEM无头GraphQL动手教程](./multi-step/overview.md)
+* [AEM无头GraphQL动手教程](./multi-step/overview.md)
+
+## AEM GraphQL与AEM Content Services
+
+|  | AEM GraphQL API | AEM Content Services |
+|--------------------------------|:-----------------|:---------------------|
+| 架构定义 | 结构化内容片段模型 | AEM组件 |
+| 内容 | 内容片段 | AEM组件 |
+| 内容发现 | 按GraphQL查询 | 按AEM页面 |
+| 投放格式 | GraphQL JSON | AEM ComponentExporter JSON |
