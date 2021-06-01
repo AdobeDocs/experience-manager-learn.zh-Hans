@@ -5,15 +5,21 @@ feature: 内容片段、 API
 topic: 无外设、内容管理
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 5%
+source-wordcount: '340'
+ht-degree: 4%
 
 ---
 
 
 # AEM Headless快速入门 — 内容服务
+
+AEM内容服务利用传统的AEM页面来撰写无头REST API端点，并且AEM组件定义或引用要在这些端点上公开的内容。
+
+AEM Content Services允许使用与在AEM Sites中创作网页相同的内容抽象概念，来定义这些HTTP API的内容和模式。 使用AEM页面和AEM组件，营销人员能够快速编写和更新可支持任何应用程序的灵活JSON API。
+
+## 内容服务教程
 
 一个端到端教程，其中演示了如何在无头CMS场景中使用AEM构建和显示由本机移动设备应用程序使用的内容。
 
@@ -34,3 +40,12 @@ ht-degree: 5%
 [AEM指南 — WKND Mobile GitHub项目](https://github.com/adobe/aem-guides-wknd-mobile)上提供了源代码和内容包。
 
 如果您发现本教程或代码存在问题，请保留[GitHub问题](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
+
+## AEM GraphQL与AEM Content Services
+
+|  | AEM GraphQL API | AEM Content Services |
+|--------------------------------|:-----------------|:---------------------|
+| 架构定义 | 结构化内容片段模型 | AEM组件 |
+| 内容 | 内容片段 | AEM组件 |
+| 内容发现 | 按GraphQL查询 | 按AEM页面 |
+| 投放格式 | GraphQL JSON | AEM ComponentExporter JSON |
