@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: c74c6f5627e69e32bbf0098d6b6bab122cace798
+source-git-commit: 22437e93cbf8f36d723dc573fa327562cb51b562
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '970'
 ht-degree: 6%
 
 ---
@@ -98,6 +98,9 @@ ht-degree: 6%
    + [简介](inbox-customization/introduction.md)
    + [添加自定义列](inbox-customization/add-married-column.md)
    + [使用美观模板](inbox-customization/use-sightly-template.md)
++ 压缩表单附件{#zipping-form-attachments}
+   + [简介](zipping-form-attachments/introduction.md)
+   + [自定义流程](zipping-form-attachments/custom-process-step.md)
 
 + 存储和检索自适应表单{#store-and-retrieve-af-with-2fa}
    + [简介](store-and-retrieve-af-with-2fa/introduction.md)
