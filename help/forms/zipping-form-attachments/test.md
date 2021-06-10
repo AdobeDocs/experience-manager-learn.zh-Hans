@@ -1,0 +1,32 @@
+---
+title: 测试解决方案
+description: 通过向表单中添加附件来测试解决方案，并触发发送电子邮件的工作流。
+sub-product: 表单
+feature: 工作流
+topics: adaptive forms
+audience: developer
+doc-type: article
+activity: develop
+version: 6.5
+topic: 开发
+role: Developer
+level: Beginner
+kt: kt-8049
+source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+workflow-type: tm+mt
+source-wordcount: '155'
+ht-degree: 1%
+
+---
+
+
+# 测试解决方案
+
+
+* 配置[Day CQ Mail Service](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=en#configuring-the-mail-service)以从AEM Forms服务器发送电子邮件
+* 使用[felix Web控制台](http://localhost:4502/system/console/bundles)部署[formattachments](assets/formattachments.formattachments.core-1.0-SNAPSHOT.jar)包
+* 部署[SendFormAttachmentsViaEmail工作流。](assets/zipped-form-attachments-model.zip) 此工作流使用发送电子邮件组件来发送zipped_attachments.zip文件，该文件通过自定义流程步骤保存在有效负荷文件夹下。根据需要配置发件人和收件人的电子邮件地址。
+* 从[Forms和文档UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)导入[示例表单](assets/zip-form-attachments-form.zip)
+* [预览表](http://localhost:4502/content/dam/formsanddocuments/zippformattachments/jcr:content?wcmmode=disabled) 单并添加几个附件并提交表单。
+* 应触发工作流，并发送包含zip文件的电子邮件通知。
+
