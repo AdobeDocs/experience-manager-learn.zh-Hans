@@ -6,9 +6,9 @@ feature: 自适应表单
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: 22437e93cbf8f36d723dc573fa327562cb51b562
+source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '843'
 ht-degree: 2%
 
 ---
@@ -116,7 +116,12 @@ Maven项目将以交互方式生成，系统将要求您为许多属性提供值
 ## 构建项目
 
 
-编写OSGi服务或Servlet后，您将需要构建项目以生成可使用Felix Web控制台部署的OSGi包。 请参阅[AEMFD客户端SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/)以在您的Maven项目中包含相应的客户端SDK。 您必须在核心项目`pom.xml`的依赖项部分中包含AEM FD客户端SDK，如下所示。
+
+
+编写OSGi服务或Servlet后，您将需要构建项目以生成可使用Felix Web控制台部署的OSGi包。 请参阅[AEMFD客户端SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk-)以在您的Maven项目中包含相应的客户端SDK。 您必须在核心项目`pom.xml`的依赖项部分中包含AEM FD客户端SDK，如下所示。
+
+
+
 
 
 ```xml
@@ -131,5 +136,6 @@ Maven项目将以交互方式生成，系统将要求您为许多属性提供值
 
 * 打开&#x200B;**命令提示符窗口**
 * 导航至 `c:\aemformsbundles\learningaemforms\core`
-* 执行命令`mvn clean install`
-如果一切正常，您应会在以下位置`C:\AEMFormsBundles\learningaemforms\core\target`中看到包。 此包现已准备就绪，可使用Felix Web控制台部署到AEM中。
+* 执行命令`mvn clean install -PautoInstallBundle`
+上述命令在`http://localhost:4502`上运行的AEM服务器中生成并安装包。 该包也将在文件系统上的
+   `C:\AEMFormsBundles\learningaemforms\core\target` 和可以使用Felix  [Web控制台进行部署](http://localhost:4502/system/console/bundles)
