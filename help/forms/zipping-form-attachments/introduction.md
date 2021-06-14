@@ -1,6 +1,6 @@
 ---
 title: 发送自适应表单附件
-description: 压缩自适应表单附件，并使用发送电子邮件组件发送它们
+description: 使用发送电子邮件组件发送自适应表单附件
 feature: 自适应表单
 topics: adaptive forms
 audience: developer
@@ -11,10 +11,10 @@ topic: 开发
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 2%
+source-wordcount: '135'
+ht-degree: 1%
 
 ---
 
@@ -23,8 +23,20 @@ ht-degree: 2%
 
 
 
-常见用例是在AEM工作流中压缩自适应表单附件，然后使用发送电子邮件组件发送。 为完成用例，编写了自定义工作流流程步骤。 在此自定义流程步骤中，在中创建并存储名为&#x200B;*zipped_attachments.zip*&#x200B;的文件的有效负荷文件夹下的带有表单附件的zip文件
+常见用例是在AEM工作流中使用发送电子邮件组件发送自适应表单附件。
+客户通常会使用发送电子邮件组件压缩表单附件或将附件作为单个文件发送。
+
+## 以zip文件发送表单附件
+
+为完成用例，编写了自定义工作流流程步骤。 在此自定义流程步骤中，在中创建并存储名为&#x200B;*zipped_attachments.zip*&#x200B;的文件的有效负荷文件夹下的带有表单附件的zip文件
 
 ![send-form-attachments](assets/send-form-attachments.JPG)
+
+## 单独发送表单附件
+
+为完成此用例，编写了自定义工作流流程步骤。 在此自定义流程步骤中，我们会填充“文档数组列表”和“字符串数组列表”类型的工作流变量。
+
+![send-list-of-documents](assets/send-list-of-documents.JPG)
+
 
 
