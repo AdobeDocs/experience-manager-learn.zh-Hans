@@ -6,7 +6,7 @@ feature: 自适应表单
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 2%
@@ -119,6 +119,8 @@ Maven项目将以交互方式生成，系统将要求您为许多属性提供值
 
 
 编写OSGi服务或Servlet后，您将需要构建项目以生成可使用Felix Web控制台部署的OSGi包。 请参阅[AEMFD客户端SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk-)以在您的Maven项目中包含相应的客户端SDK。 您必须在核心项目`pom.xml`的依赖项部分中包含AEM FD客户端SDK，如下所示。
+
+
 
 
 
