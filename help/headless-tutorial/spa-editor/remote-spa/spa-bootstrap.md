@@ -7,9 +7,9 @@ role: Developer, Architect
 level: Beginner
 kt: 7633
 thumbnail: kt-7633.jpeg
-source-git-commit: 5dea9cf646762c0f4aff43d9e48a35ab6ebc0af8
+source-git-commit: 76b10941ca8aeb5aa15ca39d354d9f7e7fb24522
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1227'
 ht-degree: 1%
 
 ---
@@ -18,6 +18,18 @@ ht-degree: 1%
 # BootstrapRemote SPA for SPA Editor
 
 在将可编辑区域添加到远程SPA中之前，必须先通过AEM SPA Editor JavaScript SDK和其他一些配置将其引导。
+
+
+## 下载WKND应用程序源
+
+如果您尚未执行此操作，请从Github.com下载WKND应用程序的源代码，然后将包含对本教程中所执行的SPA所做更改的分支切换为。
+
+```
+$ mkdir -p ~/Code/wknd-app
+$ cd ~/Code/wknd-app
+$ git clone --branch feature/spa-editor https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd aem-guides-wknd-graphql
+```
 
 ## 添加AEM SPA Editor JS SDK npm依赖项
 
