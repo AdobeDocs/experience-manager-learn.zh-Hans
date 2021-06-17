@@ -4,7 +4,7 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
-source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
+source-git-commit: e2bdc73aff012bde5a1ff8f5c85ac0a183dc441d
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 21%
@@ -142,7 +142,7 @@ ht-degree: 21%
       + [元数据工作程序](./asset-compute/advanced/metadata.md)
    + [疑难解答](./asset-compute/troubleshooting.md)
 + 多步Tutorials{#multi-step-tutorials}
-   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/develop-wknd-tutorial.html)
+   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
    + [SPA Editor(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [SPA编辑器(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
