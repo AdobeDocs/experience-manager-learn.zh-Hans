@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '3299'
 ht-degree: 1%
@@ -130,7 +130,8 @@ ht-degree: 1%
 
    `main.scss` 是模块中所有Sass文件的入口 `ui.frontend` 点。它将包含`_variables.scss`文件，其中包含一系列品牌变量，这些变量将用于项目中不同的Sass文件。 还包含`_base.scss`文件，它为HTML元素定义了一些基本样式。 正则表达式包含`src/main/webpack/components`下各个组件样式的所有样式。 另一个正则表达式包含`src/main/webpack/site/styles`下的所有文件。
 
-1. Inspect文件`main.ts`。 `main.ts` 包括 `main.scss` 和，其中包含用于收集项目中任 `.js` 何或 `.ts` 文件的正则表达式。此入口点将由[Webpack配置文件](https://webpack.js.org/configuration/)用作整个`ui.frontend`模块的入口点。
+1. 
+   1. Inspect文件`main.ts`。 它包括`main.scss`和用于收集项目中任何`.js`或`.ts`文件的正则表达式。 此入口点将由[Webpack配置文件](https://webpack.js.org/configuration/)用作整个`ui.frontend`模块的入口点。
 
 1. Inspect `src/main/webpack/site/styles`下的文件：
 
@@ -201,7 +202,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
    >
    >还有一个`npm run prod`配置文件，该配置文件将缩小JS和CSS。 每当通过Maven触发Web包内部版本时，这便是标准编译。 有关[ui.frontend模块的更多详细信息，请访问此处](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)。
 
-1. Inspect `ui.frontend/dist/clientlib-site/css/site.css`下的文件`site.css`。 这是基于Sass源文件的编译CSS。
+1. Inspect `ui.frontend/dist/clientlib-site/site.css`下的文件`site.css`。 这是基于Sass源文件的编译CSS。
 
    ![分布式网站css](assets/client-side-libraries/ui-frontend-dist-site-css.png)
 
