@@ -11,7 +11,7 @@ level: Beginner
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 0%
@@ -328,7 +328,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
    helloworld.js
    ```
 
-1. 更新`clientlib-helloworld/.conten.xml`文件以包含以下属性：
+1. 更新`clientlib-helloworld/.content.xml`文件以包含以下属性：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
