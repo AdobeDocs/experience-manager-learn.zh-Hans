@@ -9,9 +9,9 @@ role: Developer
 level: Beginner
 kt: 7619
 thumbnail: 332858.jpg
-source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
+source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
 workflow-type: tm+mt
-source-wordcount: '89'
+source-wordcount: '100'
 ht-degree: 0%
 
 ---
@@ -28,3 +28,5 @@ ht-degree: 0%
 + 了解内容片段模型如何驱动GraphQL API
 
 >[!VIDEO](https://video.tv.adobe.com/v/332858/?quality=12&learn=on)
+
+_下载整 [个AEM](./assets/aem-headless-video-series.postman_collection.json) 无头视频系列中使用的Postman Collection。_
