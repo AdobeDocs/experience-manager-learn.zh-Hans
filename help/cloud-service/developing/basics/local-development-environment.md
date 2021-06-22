@@ -8,10 +8,10 @@ topic: 开发
 feature: Developer Tools
 kt: 6933
 thumbnail: 330558.jpg
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: f707c8e7cce413ecdcfb5d406fd1b38f26d965c4
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -22,4 +22,6 @@ ht-degree: 3%
 
 >[!VIDEO](https://video.tv.adobe.com/v/330558/?quality=12&learn=on)
 
-_查看[使用AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)设置完整的本地开发环境的这些说明。_
+_运 `license.properties` 行AEM SDK不再需要此视频中显示的。_
+
+请查看以下说明以使用AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)设置完整的本地开发环境。[
