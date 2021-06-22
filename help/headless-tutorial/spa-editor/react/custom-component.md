@@ -11,7 +11,7 @@ thumbnail: 5878-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 1%
@@ -155,7 +155,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），有助于将
 
 1. 在选择的IDE中，打开`core`模块（位于`aem-guides-wknd-spa.react/core`）。
 1. 在`core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`创建名为`OpenWeatherModel.java`的文件。
-1. 使用以下内容填充`OpenWeather.java` :
+1. 使用以下内容填充`OpenWeatherModel.java` :
 
    ```java
    package com.adobe.aem.guides.wkndspa.react.core.models;
