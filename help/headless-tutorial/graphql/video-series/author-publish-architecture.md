@@ -9,9 +9,9 @@ role: Developer
 level: Beginner
 kt: 7873
 thumbnail: 333296.jpg
-source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
+source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---
@@ -28,3 +28,5 @@ ht-degree: 0%
 + 探索如何将创作环境用作应用程序的预览
 
 >[!VIDEO](https://video.tv.adobe.com/v/333296/?quality=12&learn=on)
+
+_下载整 [个AEM](./assets/aem-headless-video-series.postman_collection.json) 无头视频系列中使用的Postman Collection。_
