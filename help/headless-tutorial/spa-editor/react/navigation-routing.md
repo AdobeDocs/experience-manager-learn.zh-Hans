@@ -12,7 +12,7 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '1625'
 ht-degree: 0%
@@ -54,7 +54,7 @@ ht-degree: 0%
 
    在&#x200B;**允许的组件** > **常规** >下，选择&#x200B;**布局容器**&#x200B;组件。
 
-   在&#x200B;**允许的组件** > **WKND SPA REACT - STRUCTURE**&#x200B;下，选择&#x200B;**标头**&#x200B;组件：
+   在&#x200B;**允许的组件** > **WKND SPA REACT - STRUCTURE**&#x200B;下，选择&#x200B;**导航**&#x200B;组件：
 
    ![选择导航组件](assets/navigation-routing/select-navigation-component.png)
 
