@@ -2,17 +2,13 @@
 title: 从MySQL数据库存储和检索表单数据
 description: 多部分教程，指导您完成存储和检索表单数据时涉及的步骤
 feature: 自适应表单
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
-version: 6.3,6.4,6.5
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+version: 6.3,6.4,6.5
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '280'
 ht-degree: 5%
 
 ---
@@ -39,11 +35,10 @@ ht-degree: 5%
 * 登录到[configMgr。](http://localhost:4502/system/console/configMgr) 搜索“Apache Sling连接池化数据源”。使用以下属性创建一个名为&#x200B;**SaveAndContinue**&#x200B;的新Apache Sling连接池化数据源条目：
 
 | 属性名称 | 值 |
-------------------------|---------------------------------------
+| ------------------------|---------------------------------------|
 | 数据源名称 | SaveAndContinue |
 | JDBC驱动程序类 | com.mysql.cj.jdbc.Driver |
-| JDBC连接URI | jdbc:mysql://localhost:3306/aemformstutorial |
-
+| JDBC连接URI | jdbc:mysql://localhost:3306/aemformstorial |
 
 * 打开[自适应表单](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
 * 填写一些详细信息，然后单击“保存并稍后继续”按钮。
