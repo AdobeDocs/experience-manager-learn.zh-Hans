@@ -6,7 +6,7 @@ feature: 自适应表单
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 2%
