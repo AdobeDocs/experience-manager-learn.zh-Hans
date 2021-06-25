@@ -10,7 +10,7 @@ version: 6.4,6.5
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 3a9778c97d57e55e3da740b492472456768fb32c
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 2%
@@ -77,7 +77,7 @@ Maven `settings.xml`文件定义了用各种方式配置Maven执行的值。 通
 maven项目将以交互方式生成，系统将要求您为许多属性提供值，例如
 
 | 属性名称 | 显着性 | 值 |
-------------------------|---------------------------------------|---------------------
+|------------------------|---------------------------------------|---------------------|
 | groupId | groupId可在所有项目中唯一标识您的项目 | com.learningaemforms.adobe |
 | appsFolderName | 包含项目结构的文件夹的名称 | 学习Aemforms |
 | artifactId | artifactId是不带版本的jar的名称。 如果您创建了该名称，则可以选择您想要的任何名称，并使用小写字母而不使用奇怪的符号。 | 学习Aemforms |
