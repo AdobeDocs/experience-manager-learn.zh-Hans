@@ -5,7 +5,7 @@ feature: Dispatcher
 topic: 架构
 role: Architect
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 67e55e92cf95e03388ab3de49eff5a80786fb3a7
 workflow-type: tm+mt
 source-wordcount: '17487'
 ht-degree: 0%
@@ -684,8 +684,10 @@ Unix时间戳非常适合于实际实施。 为了更好的可读性，我们在
 
 事实上，无论您通过哪条路径告知Dispatcher失效（只要它位于同一站点、同一“子树”中），都无关紧要。 您甚至不必使用真正的资源路径。 它也可以是“虚拟”的：
 
-`GET /dispatcher-invalidate
-Invalidate-path /content/mysite/dummy`
+```
+GET /dispatcher-invalidate
+Invalidate-path /content/mysite/dummy
+```
 
 ![](assets/chapter-1/resource-path.png)
 
@@ -908,8 +910,10 @@ AEM了解一些引用。 当您尝试删除或移动引用的页面或资产时�
 
 减少选择器数量是一个良好的开端。 作为经验法则，您应始终将有效参数的数量限制为绝对最小值。 如果您这样做，甚至可以在AEM外使用一组静态筛选器来利用Web应用程序防火墙，而无需深入了解底层AEM系统，从而保护您的系统：
 
-`Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
-\.respi\.q-(20|40|60|80|100)\.jpg`
+```
+Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
+       \.respi\.q-(20|40|60|80|100)\.jpg
+```
 
 如果您没有Web应用程序防火墙，则必须在Dispatcher或AEM中进行过滤。 如果您在AEM中执行此操作，请确保
 
@@ -1296,7 +1300,7 @@ www.shiny-brand.de
 
 如果客户端同时请求该内容，则Dispatcher将请求并存储过时的内容。
 
-在&#x200B;_系统收到内容后，发布系统_&#x200B;发送失效请求时，一个更为可靠的设置。 文章“[从发布实例中使调度程序缓存失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)”介绍了详细信息。
+在&#x200B;_之后，发布系统_&#x200B;收到内容后，发送失效请求时，一个更为可靠的设置。 文章“[从发布实例中使调度程序缓存失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)”介绍了详细信息。
 
 **引用**
 
