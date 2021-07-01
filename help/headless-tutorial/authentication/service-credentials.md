@@ -12,9 +12,9 @@ thumbnail: 330519.jpg
 topic: 无头、集成
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e0822ad4aaf4022a849825ef625e1c29eb6e78f3
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1828'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ function getCommandLineParams() {
 
    现在，根据通过`file`命令行参数传入的JSON文件（本地开发访问令牌JSON或服务凭据JSON），应用程序将派生访问令牌。
 
-   请记住，虽然服务凭据未过期，但JWT和相应的访问令牌会过期，并且需要在它们过期之前刷新。 可以使用AdobeIMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)提供的`refresh_token` [来完成此操作。
+   请记住，尽管服务凭据每365天过期一次，但JWT和相应的访问令牌会频繁过期，并且需要在它们过期之前进行刷新。 可以使用AdobeIMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)提供的`refresh_token` [来完成此操作。
 
 1. 在进行这些更改并从AEM开发人员控制台下载服务凭据JSON（为了简便起见，另存为与此`index.js`相同的文件夹`service_token.json`）后，执行将命令行参数`file`替换为`service_token.json`的应用程序，并将`propertyValue`更新为新值，以便在AEM中显现效果。
 
