@@ -5,9 +5,9 @@ feature: 用户和组
 kt: 5000
 thumbnail: 39156.jpg
 topic: 管理、安全
-role: Administrator
+role: Admin
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 7%
