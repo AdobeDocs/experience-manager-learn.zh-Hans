@@ -7,9 +7,9 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 topic: 本地化
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 8%
@@ -17,7 +17,7 @@ ht-degree: 8%
 ---
 
 
-# 使用语言副本{#using-language-copy}
+# 使用语言副本 {#using-language-copy}
 
 借助AEM 6.3创建语言副本向导站点翻译增强功能，用户可以从主控语言创建语言副本，而无需创建根页面。
 
