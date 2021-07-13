@@ -8,9 +8,9 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 topic: 本地化
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# 多站点管理器{#translation-enhancements}的翻译增强功能
+# 多站点管理器的翻译增强功能 {#translation-enhancements}
 
 AEM强大的翻译框架允许受支持的翻译供应商无缝翻译AEM内容。
 
