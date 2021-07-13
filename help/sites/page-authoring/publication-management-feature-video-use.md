@@ -12,9 +12,9 @@ kt: 4322
 thumbnail: 32193.jpg
 feature: 发布
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 ---
 
 
-# 发布页面{#using-publication-management-with-aem-sites}
+# 发布页面 {#using-publication-management-with-aem-sites}
 
 AEM Sites提供了多个用于发布和取消发布内容的选项。 本视频探讨了各种方法及其功能。
 
