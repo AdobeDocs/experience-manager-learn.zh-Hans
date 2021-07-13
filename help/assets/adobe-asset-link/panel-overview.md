@@ -7,9 +7,9 @@ version: cloud-service
 kt: 4905
 thumbnail: 33734.jpg
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 5%
@@ -17,7 +17,7 @@ ht-degree: 5%
 ---
 
 
-# Adobe资产链接面板概述{#adobe-asset-link-panel-overview}
+# Adobe资产链接面板概述 {#adobe-asset-link-panel-overview}
 
 Adobe资产链接使创意用户能够使用InDesign、Photoshop和Illustrator中的应用程序内面板浏览、搜索、签出和签入AEM Assets中存储的资产。 介绍AdobeAsset Link面板的UI及其功能。
 
