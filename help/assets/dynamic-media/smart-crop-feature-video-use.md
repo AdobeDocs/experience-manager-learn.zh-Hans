@@ -5,9 +5,9 @@ sub-product: dynamic-media
 feature: 智能裁剪、图像配置文件
 version: 6.4, 6.5
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 ---
 
 
-# 将智能裁剪与AEM Assets Dynamic Media结合使用{#using-smart-crop-with-aem-assets-dynamic-media}
+# 在AEM Assets Dynamic Media中使用智能裁剪{#using-smart-crop-with-aem-assets-dynamic-media}
 
 智能裁剪使用Adobe Sensei来消除裁剪内容以进行响应式设计所耗时且成本高昂的任务。
 
