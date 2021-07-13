@@ -5,9 +5,9 @@ sub-product: dynamic-media
 feature: 视频配置文件
 version: 6.3, 6.4, 6.5
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 5%
