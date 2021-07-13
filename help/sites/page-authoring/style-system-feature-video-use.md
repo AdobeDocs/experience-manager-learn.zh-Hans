@@ -12,9 +12,9 @@ version: cloud-service
 kt: 974
 thumbnail: 21750.jpg
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 ---
 
 
-# 使用样式系统{#using-the-style-system-with-aem-sites}
+# 使用样式系统 {#using-the-style-system-with-aem-sites}
 
 Adobe Experience Manager的样式系统允许在不进行后端开发的情况下对组件进行可视化变化，从而更好地重复使用AEM组件，并且更加通用、高效地创作内容。 样式系统在与AEM核心组件、模板编辑器和响应式布局结合使用时，提供了强大的功能来快速创作丰富的体验。
 
