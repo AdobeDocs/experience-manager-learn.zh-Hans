@@ -8,9 +8,9 @@ topics: development, authoring, configuring, renditions, images
 audience: all
 activity: use
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 3%
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 客户在您的网站、移动设备网站或应用程序上体验的最重要方面之一是页面加载时间。 如果页面加载时间过长，客户通常会放弃网站或应用程序。 图像构成了页面加载时间的大部分。 Dynamic Media Classic中的Smart Imaging可根据客户端浏览器功能自动优化图像格式和质量，从而增强图像交付性能。 它通过利用Adobe Sensei AI功能并使用现有图像预设来实现此目的。 “智能成像”功能将图像大小减少了30%或更多，这意味着页面加载速度更快，客户体验更佳。
 
-Smart Imaging还得益于与Adobe中同类最佳的优质服务完全集成而带来的额外性能提升。 此服务可找到在服务器、网络和对等点之间的最佳Internet路由，这些路由的延迟和/或数据包丢失率低于Internet上的默认路由。
+Smart Imaging还得益于与Adobe中同类最佳的优质服务完全集成而带来的额外性能提升。 此服务可找到在服务器、网络和对等点之间的最佳Internet路由，这些路由的延迟和/或数据包丢失率低于Internet上默认路由。
 
 了解有关[智能成像](https://docs.adobe.com/content/help/zh-Hans/experience-manager-64/assets/dynamic/imaging-faq.html)的更多信息。
 
