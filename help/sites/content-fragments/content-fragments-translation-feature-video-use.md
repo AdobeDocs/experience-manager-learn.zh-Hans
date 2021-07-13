@@ -3,12 +3,12 @@ title: 对AEM内容片段的翻译支持
 description: 了解如何使用Adobe Experience Manager本地化和翻译内容片段。 与内容片段关联的混合媒体资产也有资格进行提取和翻译。
 feature: 内容片段，多站点管理器
 topic: 本地化
-role: Business Practitioner
+role: User
 level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 201
 thumbnail: 18131.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 2%
@@ -16,13 +16,13 @@ ht-degree: 2%
 ---
 
 
-# 对AEM内容片段{#translation-support-content-fragments}的翻译支持
+# 对AEM内容片段的翻译支持 {#translation-support-content-fragments}
 
 了解如何使用Adobe Experience Manager本地化和翻译内容片段。 与内容片段关联的混合媒体资产也有资格进行提取和翻译。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=12&learn=on)
 
-## 内容片段翻译用例{#content-fragment-translation-use-cases}
+## 内容片段翻译用例 {#content-fragment-translation-use-cases}
 
 内容片段是AEM提取的可识别内容类型，可发送到外部翻译服务。 开箱即用地支持以下几个用例：
 
