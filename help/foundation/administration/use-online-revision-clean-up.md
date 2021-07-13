@@ -7,9 +7,9 @@ activity: use
 audience: administrator, architect, implementer
 doc-type: technical video
 topic: 管理
-role: Administrator
+role: Admin
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # 使用在线修订清理
 
-对在线修订清理的简要介绍，可减轻对频繁的离线修订清理的需要。
+对在线修订清理的简要介绍，可减轻对频繁离线修订清理的需求。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17004/?quality=12&learn=on)
 
