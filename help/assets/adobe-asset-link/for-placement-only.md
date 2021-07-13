@@ -7,9 +7,9 @@ version: cloud-service
 kt: 4916
 thumbnail: 34259.jpg
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 5%
@@ -17,7 +17,7 @@ ht-degree: 5%
 ---
 
 
-# 仅用于放置(FPO)演绎版{#for-placement-only-rendition}
+# 仅用于置入(FPO)演绎版{#for-placement-only-rendition}
 
 了解如何为AEM资产创建和使用“仅用于置入”(FPO)演绎版。
 
