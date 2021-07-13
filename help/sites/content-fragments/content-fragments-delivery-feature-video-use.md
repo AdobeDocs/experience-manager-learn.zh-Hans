@@ -13,9 +13,9 @@ version: 6.3, 6.4, 6.5
 uuid: 045473d2-5abe-4414-b91c-d369f3069ead
 discoiquuid: 912e0c41-83cf-49f7-b515-09519b6718c1
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 7%
@@ -23,7 +23,7 @@ ht-degree: 7%
 ---
 
 
-# 传送内容片段{#delivering-content-fragments}
+# 交付内容片段 {#delivering-content-fragments}
 
 Adobe Experience Manager(AEM)内容片段是基于文本的编辑内容，可能包含一些与之关联但被视为纯内容的结构化数据元素，而不包含设计或布局信息。 内容片段通常创建为与渠道无关的内容，旨在跨渠道使用和重复使用，进而将内容包装在特定于上下文的体验中。
 
@@ -35,7 +35,7 @@ Adobe Experience Manager(AEM)内容片段是基于文本的编辑内容，可能
 2. 使用AEM Content Services将内容片段公开为JSON
 3. 使用资产HTTP API
 
-## 在网页{#using-content-fragments-in-web-pages}中使用内容片段
+## 在网页中使用内容片段 {#using-content-fragments-in-web-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
 
@@ -43,7 +43,7 @@ Adobe Experience Manager(AEM)内容片段是基于文本的编辑内容，可能
 
 可以使用AEM样式系统设置内容片段组件的样式，以根据需要显示内容。
 
-## 将内容片段公布为JSON {#exposing-content-fragments-as-json}
+## 将内容片段公开为JSON {#exposing-content-fragments-as-json}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22448/?quality=12&learn=on)
 
