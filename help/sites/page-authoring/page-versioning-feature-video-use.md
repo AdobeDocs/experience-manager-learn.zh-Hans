@@ -9,9 +9,9 @@ version: 6.3, 6.4, 6.5, cloud-service
 kt: 4630
 thumbnail: 32151.jpg
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# 创建页面版本{#creating-page-versions-aem-sites}
+# 创建页面版本 {#creating-page-versions-aem-sites}
 
 页面版本控制通过创建页面版本来帮助内容作者跟踪与页面关联的更改，并且还提供了用于预览版本、恢复版本以及将版本与页面的当前版本进行比较的选项。
 
