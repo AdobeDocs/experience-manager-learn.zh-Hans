@@ -9,9 +9,9 @@ doc-type: feature video
 activity: use
 version: cloud-service
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 8%
@@ -19,7 +19,7 @@ ht-degree: 8%
 ---
 
 
-# 创作内容片段{#authoring-content-fragments}
+# 创作内容片段 {#authoring-content-fragments}
 
 内容片段是AEM中的内容抽象，它允许独立于它支持的渠道来创作和管理基于文本的内容。
 
@@ -32,13 +32,13 @@ AEM内容片段是基于文本的编辑内容，可能包含一些与之关联�
 3. 下载内容片段
 4. 编辑能力
 
-## 定义内容片段模型{#defining-content-fragment-models}
+## 定义内容片段模型 {#defining-content-fragment-models}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
 AEM内容片段模型（内容片段的数据架构）必须通过AEM [[!UICONTROL 配置浏览器]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)启用，这允许根据配置定义内容片段模型。
 
-## 创建内容片段{#creating-content-fragments}
+## 创建内容片段 {#creating-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
 
@@ -49,7 +49,7 @@ AEM配置会应用于AEM Assets文件夹层次结构，以允许将其内容片�
 *导入的运动员传记示例：*\
 **[sandra-sprient-bio.txt](assets/sandra-sprient-bio.txt)**
 
-## 下载内容片段{#downloading-content-fragments}
+## 下载内容片段 {#downloading-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22450/?quality=12&learn=on)
 
@@ -58,7 +58,7 @@ AEM内容片段可以从AEM作者中下载为包含变体、元素和元数据�
 *内容片段下载Zip文件示例：*\
 **[daniel_schreder.zip](assets/daniel_schreder.zip)**
 
-## 内容片段编辑功能{#editorial-capabilities}
+## 内容片段编辑功能 {#editorial-capabilities}
 
 >[!VIDEO](https://video.tv.adobe.com/v/25891/?quality=12&learn=on)
 
