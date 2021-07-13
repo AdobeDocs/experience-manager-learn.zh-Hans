@@ -4,11 +4,11 @@ description: AEM收件箱可帮助您更好地协作并查看任务和工作流�
 version: 6.3, 6.4, 6.5, cloud-service
 topic: 协作
 feature: 收件箱
-role: Business Practitioner
+role: User
 level: Intermediate
 kt: 159
 thumbnail: 16827.jpg
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 2%
