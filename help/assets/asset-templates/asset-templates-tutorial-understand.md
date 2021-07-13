@@ -3,9 +3,9 @@ title: '了解AEM Assets中的InDesign文件和资产模板 '
 description: 本视频教程将介绍如何定义一个InDesign文件以及所有随附的注意事项，以便在AEM Assets的“资产模板”功能中使用。
 version: 6.3, 6.4, 6.5
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: b4fa992abe22e3a546d651e465d6ffc9e415aee2
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 1%
@@ -13,11 +13,11 @@ ht-degree: 1%
 ---
 
 
-# 了解AEM Assets中的InDesign文件和资产模板{#understanding-indesign-files-and-asset-templates-in-aem-assets}
+# 了解AEM Assets中的InDesign文件和资产模板 {#understanding-indesign-files-and-asset-templates-in-aem-assets}
 
 本视频教程将介绍如何定义一个InDesign文件以及所有随附的注意事项，以便在AEM Assets的“资产模板”功能中使用。
 
-## 构建InDesign模板文件{#constructing-the-indesign-template-file}
+## 构建InDesign模板文件 {#constructing-the-indesign-template-file}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19293/?quality=9&learn=on)
 
@@ -49,7 +49,7 @@ ht-degree: 1%
    >
    >请记住，构造不当的InDesign文件是AEM资产模板问题的最常见原因，因此请确保标记和结构清晰正确。
 
-## 在AEM Assets中创建和创作资产模板{#creating-and-authoring-an-asset-template-in-aem-assets}
+## 在AEM Assets中创建和创作资产模板 {#creating-and-authoring-an-asset-template-in-aem-assets}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19294/?quality=9&learn=on)
 
