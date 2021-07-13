@@ -3,9 +3,9 @@ title: AEM Foundation 视频和教程
 seo-title: AEM Foundation 视频和教程
 description: 'Adobe Experience Manager Foundation 的视频和教程集合。 '
 seo-description: Adobe Experience Manager Foundation的视频和教程集合
-role: Leader, Architect, Developer, Administrator, Business Practitioner
+role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 18%
@@ -80,7 +80,7 @@ Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]的用户提�
 
 ## 其他资源
 
-* [Experience League — 浏览AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
 * [AEM Sites 视频和教程](/help/sites/overview.md)
 * [AEM Assets 视频和教程](/help/assets/overview.md)
