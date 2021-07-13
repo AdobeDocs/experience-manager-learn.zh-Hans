@@ -5,10 +5,10 @@ version: 6.4, 6.5, cloud-service
 topic: 内容管理、协作
 feature: 项目
 level: Intermediate
-role: Business Practitioner
+role: User
 kt: 256
 thumbnail: 17740.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
