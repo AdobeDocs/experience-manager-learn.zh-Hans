@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5, cloud-service
 kt: 4242
 thumbnail: 33594.jpg
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 16%
@@ -22,7 +22,7 @@ ht-degree: 16%
 ---
 
 
-# 创作概述{#authoring-overview}
+# 创作概述 {#authoring-overview}
 
 以下视频概述了在AEM创作环境中为AEM Sites创作的基本概念。
 
