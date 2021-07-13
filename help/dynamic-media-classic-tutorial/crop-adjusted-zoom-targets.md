@@ -8,9 +8,9 @@ topics: development, authoring, configuring
 audience: all
 activity: use
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 裁剪、调整图像和缩放目标{#crop-adjusted-zoom-targets}
+# 裁剪、调整图像和缩放目标 {#crop-adjusted-zoom-targets}
 
 Dynamic Media Classic主控图像概念的主要优势之一是，您可以为多种用途重新调整图像资产的用途。 传统上，您必须为每个图像创建单独的裁剪版本才能显示详细信息或色板。 使用Dynamic Media Classic时，您可以在单个主控上执行相同的任务，并将这些裁剪的版本另存为新的物理文件或作为不需要存储空间的虚拟衍生工具。
 
