@@ -3,12 +3,12 @@ title: 适用于具有AEM Assets的图像的智能标记
 description: 图像的智能标记可根据图像内容自动和智能地向图像资产添加元数据标记，以增强AEM搜索功能。
 topic: 内容管理
 feature: 智能标记
-role: Business Practitioner
+role: User
 level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 645
 thumbnail: 17019.jpg
-source-git-commit: a5fb96275194ddc46169832c0fb79a2587833564
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 5%
@@ -22,7 +22,7 @@ AEM Assets的图像智能标记通过自动向图像资产添加派生的元数�
 
 >[!VIDEO](https://video.tv.adobe.com/v/17019/?quality=12&learn=on)
 
-## 为AEM 6.x{#set-up}设置
+## 为AEM 6.x设置{#set-up}
 
 >[!NOTE]
 > 图像的智能标记会自动配置为AEM作为Cloud Service。
