@@ -8,9 +8,9 @@ topics: development, authoring, configuring, reports
 audience: all
 activity: use
 topic: 内容管理
-role: Administrator
+role: Admin
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 ---
 
 
-# {#valuable-reports}对管理员有价值的报告
+# 对管理员有价值的报告 {#valuable-reports}
 
 在最后一章中，我们仅希望您了解在您是管理员时可能考虑设置的两个重要报表：“带宽和存储”报告和“图像错误”报告。
 
