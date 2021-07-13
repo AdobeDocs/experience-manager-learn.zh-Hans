@@ -8,9 +8,9 @@ topics: development, authoring, configuring, videos, video-profiles
 audience: all
 activity: use
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '6231'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# 视频概述{#video-overview}
+# 视频概述 {#video-overview}
 
 Dynamic Media Classic附带了上传视频时的自动转换、到桌面和移动设备的视频流，以及针对基于设备和带宽的播放而优化的自适应视频集。 视频最重要的一点是工作流程很简单 — 设计好让任何人都能使用它，即使他们不太熟悉视频技术。
 
