@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6409
 thumbnail: KT-6296.jpg
 topic: 集成
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '2204'
 ht-degree: 0%
@@ -112,7 +112,7 @@ eVar最适用于衡量原因和影响，例如：
 
    ![eVar](assets/create-analytics-workspace/add-success-event.png)
 
-## 在Analysis Workspace中创建新项目{#workspace-project}
+## 在Analysis Workspace中创建新项目 {#workspace-project}
 
 Analysis Workspace是一个灵活的浏览器工具，允许您快速构建分析并共享分析。 使用拖放界面，您可以进行分析、添加可视化图表以生动呈现数据、组织数据集、与组织中的任何人共享项目并安排其时间。
 
