@@ -8,9 +8,9 @@ topics: development, authoring, configuring, architecture, publishing
 audience: all
 activity: use
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '2734'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Dynamic Media Classic主工作流和预览资产{#main-workflow}
+# Dynamic Media Classic主工作流和预览资产 {#main-workflow}
 
 Dynamic Media支持创建（和上传）、创作（和发布）和交付工作流程。 您首先需要上传资产，然后对这些资产执行一些操作，例如构建图像集，最后发布以使其生效。 对于某些工作流，“生成”步骤是可选的。 例如，如果您的目标是仅对图像进行动态大小调整和缩放，或者转换和发布视频以进行流播放，则无需执行必要的构建步骤。
 
