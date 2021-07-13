@@ -8,9 +8,9 @@ activity: develop
 topics: development, authoring, configuring, architecture
 audience: all
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 确定文件夹结构和文件命名约定{#folder-structure-filenaming}
+# 确定文件夹结构和文件命名约定 {#folder-structure-filenaming}
 
 在您跳入并开始上传所有内容之前，最好考虑您将使用的文件夹结构，特别是文件命名约定。 这可能会节省您的时间，并且以后必须重做任务。 最好在所有群体中协调这些决策。
 
