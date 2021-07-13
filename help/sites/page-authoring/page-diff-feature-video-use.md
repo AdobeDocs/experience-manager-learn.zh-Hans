@@ -12,9 +12,9 @@ uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 2%
@@ -22,11 +22,11 @@ ht-degree: 2%
 ---
 
 
-# 使用“页面差异”功能{#using-page-difference-with-aem-sites}
+# 使用“页面差异”功能 {#using-page-difference-with-aem-sites}
 
 AEM Sites的页面差异功能显示了一个以颜色编码的快速视图，其中显示了页面中哪些内容发生了更改（版本、Live Copy、启动项、语言副本）。
 
-## 比较页面版本{#comparing-page-versions}
+## 比较页面版本 {#comparing-page-versions}
 
 >[!VIDEO](https://video.tv.adobe.com/v/32152?quality=9&learn=on)
 
@@ -41,7 +41,7 @@ AEM Sites的页面差异功能显示了一个以颜色编码的快速视图，�
 * **红色**:已删除的组件
 * **蓝色**:修改的组件
 
-## 比较启动页面{#comparing-launch-pages}
+## 比较启动页面 {#comparing-launch-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17746/?quality=9&learn=on)
 
