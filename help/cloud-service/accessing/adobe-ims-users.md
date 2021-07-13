@@ -10,9 +10,9 @@ doc-type: feature video
 kt: 4997
 thumbnail: 39149.jpg
 topic: 管理、安全
-role: Administrator
+role: Admin
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 7%
