@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5
 kt: 4497
 thumbnail: 31828.jpg
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 12%
@@ -22,7 +22,7 @@ ht-degree: 12%
 ---
 
 
-# 创作页面{#authoring-page-aem-sites}
+# 创作页面 {#authoring-page-aem-sites}
 
 了解如何使用站点编辑器的UI在Adobe Experience Manager Sites中创作页面。
 
