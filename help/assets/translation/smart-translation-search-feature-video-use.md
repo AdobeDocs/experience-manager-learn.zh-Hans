@@ -4,9 +4,9 @@ description: 智能翻译搜索支持跨AEM内容（包括资产和页面）自�
 version: 6.3, 6.4, 6.5
 feature: 搜索
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 1%
@@ -26,7 +26,7 @@ AEM智能翻译搜索允许用户使用非英语术语在AEM中搜索内容，�
 
 此视频假定已设置[AEM智能翻译搜索](smart-translation-search-technical-video-setup.md)。
 
-## 智能翻译搜索的工作原理{#how-smart-translation-search-works}
+## 智能翻译搜索的工作原理 {#how-smart-translation-search-works}
 
 ![智能翻译搜索流程图](assets/smart-translation-search-flow.png)
 
