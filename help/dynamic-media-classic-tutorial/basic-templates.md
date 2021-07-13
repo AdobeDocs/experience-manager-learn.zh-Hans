@@ -8,9 +8,9 @@ topics: development, authoring, configuring
 audience: all
 activity: use
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '6306'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 基本模板简介{#basic-templates}
+# 基本模板简介 {#basic-templates}
 
 在Dynamic Media Classic术语中，模板是指在模板发布后可通过URL动态更改的文档。 Dynamic Media Classic提供了基本模板，这些模板是从图像服务器中调用的基于图像的模板，由图像和渲染的文本组成。
 
