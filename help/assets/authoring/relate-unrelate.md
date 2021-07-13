@@ -2,13 +2,13 @@
 title: 如何在AEM中关联和取消关联资产
 description: 了解如何在AEM中建立和管理资产之间的关系。
 feature: 资产管理
-role: Business Practitioner
+role: User
 level: Beginner
 version: cloud-service
 kt: 6969
 thumbnail: 331107.jpg
 topic: 内容管理
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 5%
