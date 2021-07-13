@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5
 kt: 4252
 thumbnail: 32012.jpg
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 15%
@@ -22,7 +22,7 @@ ht-degree: 15%
 ---
 
 
-# 了解响应式布局{#understanding-responsive-layout-with-aem-sites}
+# 了解响应式布局 {#understanding-responsive-layout-with-aem-sites}
 
 Adobe Experience Manager Sites允许作者根据设备宽度管理组件的宽度，以便于进行响应式网站设计。 使用布局模式和布局容器，用户可以为不同设备创建响应式内容并预览最终用户体验，而无需离开AEM UI。
 
