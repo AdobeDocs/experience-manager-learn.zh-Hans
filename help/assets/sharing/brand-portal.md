@@ -4,9 +4,9 @@ description: AEM创作和AEM Assets Brand Portal集成的视频演练。
 feature: Brand Portal
 version: 6.3, 6.4, 6.5
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# 将Brand Portal与AEM Assets一起使用{#using-brand-portal-with-aem-assets}
+# 将Brand Portal与AEM Assets结合使用{#using-brand-portal-with-aem-assets}
 
 有关Adobe Experience Manager(AEM)Assets Brand Portal集成的视频指南。
 
@@ -113,7 +113,7 @@ Dynamic Media视频编码可从以下位置下载：
 
 **用例** :组织可以通过自定义门户URL来满足其品牌需求，而不是坚持使用由Adobe提供的URL。
 
-## Brand Portal 2018年12月功能和增强功能{#brand-portal-features-and-enhancements-642}
+## Brand Portal 2018年12月版功能和增强功能{#brand-portal-features-and-enhancements-642}
 
 >[!VIDEO](https://video.tv.adobe.com/v/23707/?quality=9&learn=on)
 
