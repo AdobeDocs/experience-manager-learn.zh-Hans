@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5, cloud-service
 kt: 4248
 thumbnail: 32011.jpg
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 7%
@@ -22,7 +22,7 @@ ht-degree: 7%
 ---
 
 
-# 使用页面编辑器{#using-page-editor-with-aem-sites}
+# 使用页面编辑器 {#using-page-editor-with-aem-sites}
 
 AEM Site的页面编辑器是用于创建和编辑Web内容的强大工具。 从页面编辑器的UI工具栏访问页面编辑器的工具和功能。
 
