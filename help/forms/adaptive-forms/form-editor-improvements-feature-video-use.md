@@ -12,9 +12,9 @@ version: 6.3,6.4,6.5
 uuid: 9e76a2b8-f843-47b8-abf8-596c64fbcbb6
 discoiquuid: 7a7bad50-c604-4182-accb-acb85571ba78
 topic: 开发
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 ---
 
 
-# AEM Forms中的表单编辑器改进{#form-editor-improvements-in-aem-forms}
+# 改进了AEM Forms中的表单编辑器 {#form-editor-improvements-in-aem-forms}
 
 AEM 6.3在此版本中引入了一些新增功能和增强功能，以简化自适应表单和文档的创作体验。 这些增强功能有助于您缩短上市时间，并使企业用户能够处理表单和文档
 
