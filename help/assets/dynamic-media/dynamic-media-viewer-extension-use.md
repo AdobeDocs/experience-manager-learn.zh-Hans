@@ -5,9 +5,9 @@ sub-product: Dynamic Media
 feature: 资产分析
 version: 6.3, 6.4, 6.5
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 16%
@@ -15,7 +15,7 @@ ht-degree: 16%
 ---
 
 
-# 将Dynamic Media查看器与Adobe Analytics和AdobeLaunch一起使用{#using-dynamic-media-viewers-adobe-analytics-launch}
+# 将Dynamic Media查看器与Adobe Analytics和AdobeLaunch结合使用{#using-dynamic-media-viewers-adobe-analytics-launch}
 
 对于具有Dynamic Media和Adobe Analytics的客户，您现在可以使用Dynamic Media查看器扩展来跟踪Dynamic Media查看器在您网站上的使用情况。
 
