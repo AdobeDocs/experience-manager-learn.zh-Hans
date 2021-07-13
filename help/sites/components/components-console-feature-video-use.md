@@ -8,9 +8,9 @@ version: 6.3, 6.4, 6.5
 activity: use
 feature: 核心组件
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 ---
 
 
-# 使用组件控制台{#using-the-components-console-with-aem-sites}
+# 使用组件控制台 {#using-the-components-console-with-aem-sites}
 
 组件控制台为开发人员和管理员提供了一个中心位置，用于管理站点实施中的所有各种组件。 以下视频详细介绍了组件控制台的功能。
 
