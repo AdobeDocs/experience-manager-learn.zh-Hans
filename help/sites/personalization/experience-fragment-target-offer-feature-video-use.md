@@ -13,11 +13,11 @@ version: 6.4, 6.5
 uuid: 7b91f65d-5a35-419a-8cf7-be850165dd33
 discoiquuid: 45fc8d83-73fb-42e5-9c92-ce588c085ed4
 topic: 个性化
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '459'
 ht-degree: 11%
 
 ---
@@ -44,7 +44,7 @@ Adobe Experience Manager 6.4可重新构建AEM和Target之间的个性化工作�
 * 为了创建个性化优惠，我们现在可以轻松利用AEM中存储的内容。
 * 您可以创建Target活动类型，包括提供Sensei支持的活动，如自动分配、自动定位和Automated Personalization
 
-## AEM 6.3功能包和依赖项{#aem-feature-packs-and-dependencies}
+## AEM 6.3功能包和依赖项 {#aem-feature-packs-and-dependencies}
 
 | AEM 6.3功能包 | 依赖关系 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
