@@ -5,10 +5,10 @@ version: 6.4, 6.5, cloud-service
 feature: 工作流
 topic: 内容管理
 level: Intermediate
-role: Administrator, Developer
+role: Admin, Developer
 kt: 657
 thumbnail: 22201.jpg
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 3%
