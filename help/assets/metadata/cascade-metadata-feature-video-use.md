@@ -4,11 +4,11 @@ description: 高级元数据管理允许用户创建级联字段规则，以在A
 version: 6.3, 6.4, 6.5, cloud-service
 topic: 内容管理
 feature: 元数据
-role: Business Practitioner
+role: User
 level: Intermediate
 kt: 616
 thumbnail: 20702.jpg
-source-git-commit: a414284d497a74bb1a617d205a5bb034ea5b8005
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 1%
