@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5, cloud-service
 kt: 4244
 thumbnail: 31827.jpg
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 ---
 
 
-# 创建页面{#creating-page-aem-sites}
+# 创建页面 {#creating-page-aem-sites}
 
 了解如何在Adobe Experience Manager中使用页面模板创建网站页面。
 
