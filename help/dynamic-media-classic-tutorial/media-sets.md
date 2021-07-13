@@ -8,9 +8,9 @@ topics: sets, development, authoring, configuring
 audience: all
 activity: use
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# 图像、色板、旋转和混合媒体集{#media-sets}
+# 图像、色板、旋转和混合媒体集 {#media-sets}
 
 Dynamic Media Classic集合不仅允许对单个图像进行动态大小调整和缩放，还允许提供更丰富的在线体验。 本教程的本部分将探讨如何在Dynamic Media Classic中创建以下富媒体集：
 
