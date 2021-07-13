@@ -5,9 +5,9 @@ sub-product: dynamic-media
 feature: 图像配置文件、查看器预设
 version: 6.3, 6.4, 6.5
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 ---
 
 
-# 将图像锐化与AEM Dynamic Media结合使用{#using-image-sharpening-with-aem-dynamic-media}
+# 在AEM Dynamic Media中使用图像锐化{#using-image-sharpening-with-aem-dynamic-media}
 
 此视频介绍了锐化图像对保持图像保真度至关重要的原因，以及如何使用高级设置来制作完美图像的原因。
 
