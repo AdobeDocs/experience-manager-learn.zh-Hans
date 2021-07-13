@@ -6,11 +6,11 @@ version: cloud-service
 feature: 体验片段
 topic: 内容管理
 level: Beginner, Intermediate
-role: Architect, Developer, Administrator, Business Practitioner
+role: Architect, Developer, Admin, User
 doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 ---
 
 
-# 具有体验片段的构建基块{#building-blocks}
+# 包含体验片段的构建基块 {#building-blocks}
 
 构建基块是体验片段的子功能。 构建基块使内容作者能够在体验片段的不同变体中重复使用组件。
 
