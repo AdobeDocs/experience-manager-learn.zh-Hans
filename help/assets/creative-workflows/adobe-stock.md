@@ -4,9 +4,9 @@ description: 'AEM让用户能够直接从AEM搜索、预览、保存和许可Ado
 feature: Adobe Stock
 version: 6.4, 6.5
 topic: 内容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 6%
@@ -14,7 +14,7 @@ ht-degree: 6%
 ---
 
 
-# 将Adobe Stock与AEM Assets一起使用{#using-adobe-stock-assets-with-aem-assets}
+# 将Adobe Stock与AEM Assets结合使用{#using-adobe-stock-assets-with-aem-assets}
 
 AEM 6.4.2让用户能够直接从AEM搜索、预览、保存和许可Adobe Stock资产。 现在，组织可以将其Adobe Stock企业计划与AEM Assets相集成，以确保许可资产现在可广泛用于其创意和营销项目，并具有AEM的强大资产管理功能。
 
@@ -79,7 +79,7 @@ AEM 6.4.2让用户能够直接从AEM搜索、预览、保存和许可Adobe Stock
 * 对于AEM 6.4，您需要安装[AEM Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0)，然后重新安装cq-dam-stock-integration-content-1.0.4.zip文件。
 * 确保您拥有[Adobe I/O控制台](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)和Adobe Experience Manager的管理员权限，以设置集成。
 
-#### 使用Adobe控制台{#set-up-adobe-ims-configuration-using-adobe-i-o-console}设置Adobe I/OIMS配置
+#### 使用Adobe控制台设置Adobe I/OIMS配置 {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
 
 1. 在&#x200B;**工具>安全**&#x200B;下创建AdobeIMS技术帐户配置
 2. 选择&#x200B;*云解决方案*&#x200B;作为&#x200B;*Adobe Stock*，然后创建新证书或重复使用现有证书进行配置。
@@ -91,7 +91,7 @@ AEM 6.4.2让用户能够直接从AEM搜索、预览、保存和许可Adobe Stock
 
 ![Adobe IMS 技术帐户](assets/screen_shot_2018-10-22at12219pm.png)
 
-#### 设置Adobe StockCloud Services{#set-up-adobe-stock-cloud-services}
+#### 设置Adobe StockCloud Services {#set-up-adobe-stock-cloud-services}
 
 1. 在&#x200B;**工具>Cloud Services下为Adobe Stock创建新的云服务配置。**
 2. 选择在上述部分中为您的&#x200B;*Adobe Stock Cloud*&#x200B;配置创建的&#x200B;*AdobeIMS配置*
