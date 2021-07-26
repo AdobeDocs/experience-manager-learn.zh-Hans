@@ -11,15 +11,15 @@ level: Beginner
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
-source-git-commit: 255d6bd403d240b2c18a0ca46c15b0bb98cf9593
+source-git-commit: 66d35a41d63d4c33f71a118e9471c5aa58dc48a7
 workflow-type: tm+mt
-source-wordcount: '3967'
+source-wordcount: '4108'
 ht-degree: 0%
 
 ---
 
 
-# 自定义组件{#custom-component}
+# 自定义组件 {#custom-component}
 
 本教程涵盖自定义AEM Byline组件的端到端创建，该组件显示对话框中创作的内容，并探讨如何开发Sling模型以封装可填充组件HTL的业务逻辑。
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 1. 了解如何使用Sling模型封装业务逻辑
 1. 了解如何从HTL脚本中使用Sling模型
 
-## 将生成{#byline-component}的内容
+## 将构建的内容 {#byline-component}
 
 在WKND教程的这一部分中，将创建一个署名组件，用于显示有关文章参与者的创作信息。
 
@@ -78,13 +78,13 @@ ht-degree: 0%
 * 图像
 * 职业
 
-## 创建署名组件{#create-byline-component}
+## 创建署名组件 {#create-byline-component}
 
 首先，创建署名组件节点结构并定义一个对话框。 这表示AEM中的组件，并通过组件在JCR中的位置隐式定义组件的资源类型。
 
 该对话框公开了内容作者可以提供的界面。 对于此实施，将利用AEM WCM核心组件的&#x200B;**Image**&#x200B;组件来创作和渲染署名图像，因此它将设置为我们组件的`sling:resourceSuperType`。
 
-### 创建组件定义{#create-component-definition}
+### 创建组件定义 {#create-component-definition}
 
 1. 在&#x200B;**ui.apps**&#x200B;模块中，导航到`/apps/wknd/components`并创建一个名为`byline`的新文件夹。
 1. 在`byline`文件夹下，添加一个名为`.content.xml`的新文件
@@ -105,7 +105,7 @@ ht-degree: 0%
 
    上述XML文件提供了组件的定义，包括标题、描述和组。 `sling:resourceSuperType`指向`core/wcm/components/image/v2/image`，即[核心图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)。
 
-### 创建HTL脚本{#create-the-htl-script}
+### 创建HTL脚本 {#create-the-htl-script}
 
 1. 在`byline`文件夹下，添加一个新文件`byline.html`，该文件负责组件的HTML显示。 使用与文件夹相同的方式命名文件很重要，因为它将成为Sling用于呈现此资源类型的默认脚本。
 
@@ -120,7 +120,7 @@ ht-degree: 0%
 
 `byline.html` 稍后 [将重新查看](#byline-htl)，在创建Sling模型后。HTL文件的当前状态允许组件在拖放到页面上时以空状态在AEM Sites的页面编辑器中显示。
 
-### 创建对话框定义{#create-the-dialog-definition}
+### 创建对话框定义 {#create-the-dialog-definition}
 
 接下来，为署名组件定义一个对话框，其中包含以下字段：
 
@@ -204,7 +204,7 @@ ht-degree: 0%
 
    ![署名的已完成对话框](assets/custom-component/byline-dialog-created.png)
 
-### 创建策略对话框{#create-the-policy-dialog}
+### 创建策略对话框 {#create-the-policy-dialog}
 
 按照与创建对话框相同的方法，创建策略对话框（以前称为设计对话框）以隐藏从核心组件的图像组件继承的策略配置中的不需要字段。
 
@@ -280,7 +280,7 @@ ht-degree: 0%
 
    与对话框配置中一样，[Sling资源合并器](https://sling.apache.org/documentation/bundles/resource-merger.html)用于隐藏从`sling:resourceSuperType`继承的不相关字段，如`sling:hideResource="{Boolean}true"`属性的节点定义所示。
 
-### 部署代码{#deploy-the-code}
+### 部署代码 {#deploy-the-code}
 
 1. 使用您的Maven技能将更新的代码库部署到本地AEM实例：
 
@@ -289,7 +289,7 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-## 将组件添加到页面{#add-the-component-to-a-page}
+## 将组件添加到页面 {#add-the-component-to-a-page}
 
 为了保持AEM组件开发的简单性和重点，我们会将处于当前状态的Byline组件添加到文章页面，以验证`cq:Component`节点定义是否已部署和正确，AEM可识别新组件定义，并且组件的对话框可用于创作。
 
@@ -303,7 +303,7 @@ ht-degree: 0%
 
    ![已上传头部照片](assets/custom-component/stacey-roswell-headshot-assets.png)
 
-### 创作组件{#author-the-component}
+### 创作组件 {#author-the-component}
 
 接下来，将署名组件添加到AEM中的页面。 由于我们通过`ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/.content.xml`定义将署名组件添加到&#x200B;**WKND站点项目 — 内容**&#x200B;组件组，因此它可自动供任何&#x200B;**容器**&#x200B;使用，其&#x200B;**Policy**&#x200B;允许&#x200B;**WKND站点项目 — 内容**&#x200B;组件组，文章页面的布局容器就是该组件组。
 
@@ -345,13 +345,13 @@ ht-degree: 0%
 
    ![CRXDE中的署名属性](assets/custom-component/byline-properties-crxde.png)
 
-## 创建署名Sling模型{#create-sling-model}
+## 创建署名Sling模型 {#create-sling-model}
 
 接下来，我们将创建一个Sling模型以充当数据模型，并存储Byline组件的业务逻辑。
 
 Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于将数据从JCR映射到Java变量，并在AEM上下文中进行开发时提供许多其他细节。
 
-### 查看Maven依赖项{#maven-dependency}
+### 查看Maven依赖项 {#maven-dependency}
 
 署名Sling模型将依赖于AEM提供的多个Java API。 这些API通过`core`模块POM文件中列出的`dependencies`提供。 已为AEM as a Cloud Service构建本教程所用的项目。 但是，它的独特之处在于，它向后兼容AEM 6.5/6.4。因此，它同时包含Cloud Service和AEM 6.x的依赖项。
 
@@ -399,7 +399,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
 
    在本教程的后面，我们将使用核心组件图像类在署名组件中显示图像。 要构建和编译我们的Sling模型，必须具有核心组件依赖关系。
 
-### 署名接口{#byline-interface}
+### 署名界面 {#byline-interface}
 
 为署名创建公共Java接口。 `Byline.java` 定义驱动HTL脚本所需的公 `byline.html` 共方法。
 
@@ -443,7 +443,20 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
 
    请注意，图像没有方法；[我们将查看为什么这是以后的](#tackling-the-image-problem)。
 
-### 署名实施{#byline-implementation}
+1. 包含公共Java类（本例中为Sling模型）的Java包必须使用包的`package-info.java`文件进行版本控制。
+
+由于WKND源的Java包`com.adobe.aem.guides.wknd.core.models`声明为`2.0.0`版本，并且我们添加的是不中断的公共接口和方法，因此必须将该版本增加到`2.1.0`。 在`core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java`打开文件，并将`@Version("2.0.0")`更新为`@Version("2.1.0")`。
+
+    &quot;&#39;
+    @Version(&quot;2.1.0&quot;)
+    包com.adobe.aem.guides.wknd.core.models;
+    
+    导入org.osgi.annotation.versioning.Version;
+    &quot;
+
+每当对此包中的文件进行更改时，必须从语义上](https://semver.org/)调整[包版本。 如果没有，则Maven项目的[bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin)将检测到无效的包版本并中断构建。 幸运的是，Maven插件在失败时会报告无效的Java包版本以及该版本。 刚刚将违反Java包`package-info.java`中的`@Version("...")`声明更新为插件建议的要修复的版本。
+
+### 署名实施 {#byline-implementation}
 
 `BylineImpl.java` 是用于实现之前定义的接口 `Byline.java` 的Sling模型。`BylineImpl.java`的完整代码可在此部分的底部找到。
 
@@ -507,9 +520,9 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
    * `adapters`参数允许在Byline接口下注册实现类。 这允许HTL脚本通过界面调用Sling模型（而不是直接调用impl）。 [有关适配器的更多详细信息，请访问此处](https://sling.apache.org/documentation/bundles/models.html#specifying-an-alternate-adapter-class-since-110)。
    * `resourceType`指向Byline组件资源类型（之前创建），并且如果存在多个实施，则有助于解析正确的模型。 [有关将模型类与资源类型关联的更多详细信息，请参阅此处](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)。
 
-### 实施Sling模型方法{#implementing-the-sling-model-methods}
+### 实施Sling模型方法 {#implementing-the-sling-model-methods}
 
-#### getName(){#implementing-get-name}
+#### getName() {#implementing-get-name}
 
 我们将处理的第一个方法是`getName()`，它只返回存储到署名的JCR内容节点中属性`name`下的值。
 
@@ -535,7 +548,7 @@ public class BylineImpl implements Byline {
 
 由于JCR属性与Java字段共享相同的名称（两者都是“name”），因此`@ValueMapValue`会自动解析此关联，并将属性的值插入Java字段。
 
-#### getSchropions(){#implementing-get-occupations}
+#### getScriptions() {#implementing-get-occupations}
 
 要实现的下一个方法是`getOccupations()`。 此方法将收集JCR属性`occupations`中存储的所有职业，并返回这些职业的排序（按字母顺序）集合。
 
@@ -569,7 +582,7 @@ public class BylineImpl implements Byline {
 ```
 
 
-#### isEmpty(){#implementing-is-empty}
+#### isEmpty() {#implementing-is-empty}
 
 最后一个公共方法是`isEmpty()`，它确定组件何时应考虑“创作足够”来渲染。
 
@@ -602,7 +615,7 @@ public class BylineImpl implements Byline {
 ```
 
 
-#### 解决“映像问题” {#tackling-the-image-problem}
+#### 解决&quot;形象问题&quot; {#tackling-the-image-problem}
 
 检查名称和占用条件很琐碎（Apache Commons Lang3提供了始终方便使用的[StringUtils](https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html)类），但是，由于核心组件图像组件用于显示图像，因此不清楚如何验证图像&#x200B;**的**&#x200B;存在。
 
@@ -869,7 +882,7 @@ public class BylineImpl implements Byline {
 
    请注意，CSS类遵循[BEM命名约定](https://getbem.com/naming/)。 虽然使用BEM约定并非强制性的，但建议使用BEM，因为它在核心组件CSS类中使用，并且通常会生成清晰易读的CSS规则。
 
-### 在HTL {#instantiating-sling-model-objects-in-htl}中实例化Sling模型对象
+### 在HTL中实例化Sling模型对象 {#instantiating-sling-model-objects-in-htl}
 
 [Use block语句](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#221-use)用于实例化HTL脚本中的Sling模型对象，并将其分配给HTL变量。
 
@@ -885,7 +898,7 @@ public class BylineImpl implements Byline {
    </div>
    ```
 
-### 访问Sling模型方法{#accessing-sling-model-methods}
+### 访问Sling模型方法 {#accessing-sling-model-methods}
 
 HTL从JSTL中借用，并使用与缩短Java getter方法名称相同的方法。
 
@@ -901,7 +914,7 @@ HTL中使用需要参数&#x200B;**的Java方法不能**。 这是为了使HTL中
    <h2 class="cmp-byline__name">${byline.name}</h2>
    ```
 
-### 使用HTL表达式选项{#using-htl-expression-options}
+### 使用HTL表达式选项 {#using-htl-expression-options}
 
 [HTL表达式](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#12-available-expression-options) 选项用作HTL中内容的修饰符，范围从日期格式转换到i18n转换。表达式还可用于连接列表或值数组，这是以逗号分隔格式显示职位所需的内容。
 
@@ -913,7 +926,7 @@ HTL中使用需要参数&#x200B;**的Java方法不能**。 这是为了使HTL中
    <p class="cmp-byline__occupations">${byline.occupations @ join=', '}</p>
    ```
 
-### 有条件地显示占位符{#conditionally-displaying-the-placeholder}
+### 有条件地显示占位符 {#conditionally-displaying-the-placeholder}
 
 AEM组件的大多数HTL脚本都利用&#x200B;**占位符范例**&#x200B;为作者&#x200B;**提供一个可视提示，指示组件的创作不正确，且不会显示在AEM发布**&#x200B;中。 推动此决策的约定是对组件的支持Sling模型实施一种方法，在本例中为：`Byline.isEmpty()`。
 
@@ -940,7 +953,7 @@ AEM组件的大多数HTL脚本都利用&#x200B;**占位符范例**&#x200B;为作
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
    ```
 
-### 使用核心组件{#using-the-core-components-image}显示图像
+### 使用核心组件显示图像 {#using-the-core-components-image}
 
 `byline.html`的HTL脚本现在几乎已完成，并且只缺少图像。
 
@@ -989,7 +1002,7 @@ AEM组件的大多数HTL脚本都利用&#x200B;**占位符范例**&#x200B;为作
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-### 查看未设置样式的署名组件{#reviewing-the-unstyled-byline-component}
+### 查看未设置样式的署名组件 {#reviewing-the-unstyled-byline-component}
 
 1. 部署更新后，导航到[Ultimate Guide to LA Skateparks ](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)页面，或在章节前面添加Byline组件的任何位置。
 
@@ -997,7 +1010,7 @@ AEM组件的大多数HTL脚本都利用&#x200B;**占位符范例**&#x200B;为作
 
    ![未设置署名的组件](assets/custom-component/unstyled.png)
 
-### 查看Sling模型注册{#reviewing-the-sling-model-registration}
+### 查看Sling模型注册 {#reviewing-the-sling-model-registration}
 
 [AEM Web Console的“Sling模型状态”视图](http://localhost:4502/system/console/status-slingmodels)显示AEM中所有已注册的Sling模型。 可通过查看此列表，验证并识别署名Sling模型。
 
@@ -1007,7 +1020,7 @@ AEM组件的大多数HTL脚本都利用&#x200B;**占位符范例**&#x200B;为作
 
 *http://localhost:4502/system/console/status-slingmodels*
 
-## 署名样式{#byline-styles}
+## 署名样式 {#byline-styles}
 
 署名组件需要设置样式，以与署名组件的创意设计保持一致。 这将通过使用SCSS来实现，AEM通过&#x200B;**ui.frontend** Maven子项目为SCSS提供支持。
 
@@ -1080,7 +1093,7 @@ AEM组件的大多数HTL脚本都利用&#x200B;**占位符范例**&#x200B;为作
    >
    >您可能需要清除浏览器缓存以确保不提供过时的CSS，并使用署名组件刷新页面以获得完整的样式。
 
-## 将它放在一起{#putting-it-together}
+## 拼合在一起 {#putting-it-together}
 
 下面是完整创作且设置样式的署名组件在AEM页面上的样子。
 
