@@ -12,9 +12,9 @@ thumbnail: 330519.jpg
 topic: 无头、集成
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: e0822ad4aaf4022a849825ef625e1c29eb6e78f3
+source-git-commit: b902ced3d7f7cf827d0a487bf741ff370f7c1f04
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1863'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,10 @@ ht-degree: 0%
 
 __这是作为Cloud Service环境对每个AEM进行一次性初始化__
 
-1. 确保您以AdobeIMS组织管理员的身份登录
+1. 确保您以以下方式登录：
+   + 您的AdobeIMS组织的管理员
+   + __Cloud Manager - Developer__ IMS产品配置文件的成员
+   + __AEM用户__&#x200B;或&#x200B;__AEM管理员__ AEM作者&#x200B;__上的IMS产品配置文件的成员__
 1. 登录到[AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 打开包含AEM作为Cloud Service环境的程序，以集成
 1. 点按&#x200B;__环境__&#x200B;部分中环境旁边的省略号，然后选择&#x200B;__开发人员控制台__
@@ -67,8 +70,10 @@ __这是作为Cloud Service环境对每个AEM进行一次性初始化__
 
 下载服务凭据的步骤与初始化的步骤相同。 如果尚未进行初始化，则用户点按&#x200B;__获取服务凭据__&#x200B;按钮时将收到错误。
 
-1. 确保您是&#x200B;__Cloud Manager - Developer__ IMS产品配置文件的成员(用于授予对AEM Developer Console的访问权限)
-   + 沙盒AEM作为Cloud Service环境，只需要在&#x200B;__AEM Administrators__&#x200B;或&#x200B;__AEM Users__&#x200B;产品配置文件中具有成员资格即可
+1. 确保您已作为以下用户登录：
+   + __Cloud Manager - Developer__ IMS产品配置文件的成员(用于授予对AEM Developer Console的访问权限)
+      + 沙盒AEM作为Cloud Service环境不需要此&#x200B;__Cloud Manager - Developer__&#x200B;成员资格
+   + __AEM用户__&#x200B;或&#x200B;__AEM管理员__ AEM作者&#x200B;__上的IMS产品配置文件的成员__
 1. 登录到[AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 打开包含AEM作为Cloud Service环境的程序以与集成
 1. 点按&#x200B;__环境__&#x200B;部分中环境旁边的省略号，然后选择&#x200B;__开发人员控制台__
