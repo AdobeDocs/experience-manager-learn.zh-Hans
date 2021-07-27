@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation 教程
 user-guide-description: 'Adobe Experience Manager Foundation 的视频和教程集合。 '
 sub-product: 基础
 index: y
-source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
+source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 21%
+source-wordcount: '221'
+ht-degree: 14%
 
 ---
 
@@ -46,4 +46,14 @@ ht-degree: 21%
    + [使用工作流编辑器](./workflow/use-the-workflow-editor.md)
    + [使用工作流](./workflow/use-workflow.md)
    + [使用收件箱](./workflow/use-the-inbox.md)
-
++ 疑难解答 {#troubleshooting}
+   + [如何启用资产下载报表](./troubleshooting/how-to-enable-asset-download-report.md)
+   + [如何在AEM6.4中强制重新编译](./troubleshooting/how-to-force-recompilation.md)
+   + [如何在AEM中调查索引相关问题](./troubleshooting/how-to-investigate-indexing-related-issues.md)
+   + [如何在AEM中调查与SAML相关的问题](./troubleshooting/how-to-investigate-saml-related-issues.md)
+   + [如何在AEM中调查搜索相关问题](./troubleshooting/how-to-investigate-search-related-issues.md)
+   + [如何设置Oak登录令牌会话过期](./troubleshooting/how-to-set-the-oak-login-token-session-expiration.md)
+   + [如何对与Jetty配置相关的问题进行故障诊断](./troubleshooting/how-to-troubleshoot-issues-related-to-jetty-configuration.md)
+   + [如何对性能相关问题进行故障诊断](./troubleshooting/how-to-troubleshoot-performance-related-issues.md)
+   + [解决AEM中内存相关问题的步骤](./troubleshooting/steps-to-resolve-memory-related-issues.md)
+   + [解决AEM中复制问题的步骤](./troubleshooting/steps-to-resolve-replication-issues.md)
