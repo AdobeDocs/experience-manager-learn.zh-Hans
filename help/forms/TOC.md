@@ -5,10 +5,10 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
 workflow-type: tm+mt
-source-wordcount: '977'
-ht-degree: 6%
+source-wordcount: '1593'
+ht-degree: 3%
 
 ---
 
@@ -242,3 +242,74 @@ ht-degree: 6%
    + [配置饼图](ic-web-channel-tutorial/parteleven.md)
    + [Web渠道文档的交付](ic-web-channel-tutorial/parttwelve.md)
    + [Web渠道文档的电子邮件发送](interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
+
++ 疑难解答 {#troubleshooting}
+   + [文档服务：对DDX相关问题进行故障诊断的步骤](troubleshooting/steps-to-capture-required-information-to-troubleshoot-ddx-related-issues.md)
+   + [文档服务：对PDFA转换问题进行故障诊断的步骤](troubleshooting/steps-to-capture-required-information-to-troubleshoot-pdfa-conversion-issues.md)
+   + [文档服务：如何调试Forms和输出服务的字体相关问题](troubleshooting/how-to-debug-font-related-issue-for-forms-and-output-service.md)
+   + [文档服务：如何为Forms和输出服务嵌入字体](troubleshooting/how-to-embed-fonts-for-forms-and-output-service.md)
+   + [文档服务：如何启用性能日志记录以调试Forms和输出服务](troubleshooting/how-to-enable-performance-logging-to-debug-forms-and-output-service.md)
+   + [文档服务：如何增加大文件转换的事务超时](troubleshooting/how-to-increase-aries-transaction-timeout-for-conversion-of-large-files.md)
+   + [文档服务：如何使用FormsIVS和OutputIVS运行负载测试](troubleshooting/how-to-run-load-tests-using-formsivs-and-outputivs.md)
+   + [文档服务：如何在FormsIVS和OutputIVS中更新自定义XDP和数据文件](troubleshooting/how-to-update-custom-xdps-and-data-files-in-formsivs-and-outputivs.md)
+   + [文档服务：启用详细ORB跟踪的步骤](troubleshooting/steps-to-enable-verbose-orb-trace.md)
+   + [文档服务：为XMLFormService第1部分调整bmc池大小的步骤](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-1.md)
+   + [文档服务：为XMLFormService part2调整bmc池大小的步骤](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-2.md)
+   + [文档服务：在JMX控制台中调整参数的步骤](troubleshooting/steps-to-tweak-parameters-on-jmx-console.md)
+   + [PDFG:如何在PDFG中更改交易超时](troubleshooting/how-to-change-the-transaction-timeout-in-pdfg.md)
+   + [PDFG:PDFG中如何更新CORBA超时](troubleshooting/how-to-update-corba-timeout-in-pdfg.md)
+   + [PDFG:如何更新PDFG中的超时](troubleshooting/how-to-update-the-timeouts-in-pdfg.md)
+   + [PDFG:在Windows Server 2016中添加PDFG用户的步骤](troubleshooting/steps-to-add-pdfg-user-in-windows-server.md)
+   + [PDFG:检查和安装32位库及其依赖项的步骤](troubleshooting/steps-to-check-and-install-32-bit-libraries-and-their-dependencies.md)
+   + [PDFG:检查Windows Server 2016上文件夹权限的步骤](troubleshooting/steps-to-check-folder-permission-on-windows-server-2016.md)
+   + [PDFG:在unix上启用字符串的步骤](troubleshooting/steps-to-enable-strace-on-unix-setup.md)
+   + [PDFG:安装所需的32位Microsoft Visual C++可再发行版的步骤](troubleshooting/steps-to-install-required-32bit-microsoft-vc-redistributables.md)
+   + [PDFG:运行和解释系统就绪工具输出的步骤](troubleshooting/steps-to-run-and-interpret-output-of-system-readiness-tool.md)
+   + [PDFG:Acrobat特定问题疑难解答步骤](troubleshooting/steps-to-troubleshoot-acrobat-specific-issues.md)
+   + [PDFG:对Windows上的HtmltoPDF问题进行故障诊断的步骤](troubleshooting/steps-to-troubleshoot-htmltopdf-issues-on-windows.md)
+   + [PDFG:对Unix(PhantomJS)上的HtmltoPDF特定问题进行故障诊断的步骤](troubleshooting/steps-to-troubleshoot-htmltopdf-specific-issues-on-unix-phantomjs.md)
+   + [PDFG:对Unix（WebKit转换）上的HtmltoPDF特定问题进行故障诊断的步骤](troubleshooting/steps-to-troubleshoot-htmltopdf-specific-issues-on-unix-webkit.md)
+   + [PDFG:对UNIX上多用户PDFG转换进行故障诊断的步骤](troubleshooting/steps-to-troubleshoot-multi-user-pdfg-conversion-on-unix.md)
+   + [PDFG:对Windows上多用户PDFG转换进行故障诊断的步骤](troubleshooting/steps-to-troubleshoot-multi-user-pdfg-conversion-on-windows.md)
+   + [PDFG:对OpenOffice特定问题进行Unix故障诊断的步骤](troubleshooting/steps-to-troubleshoot-openoffice-specific-issues-on-unix.md)
+   + [PDFG:对Windows上OpenOffice特定问题进行故障诊断的步骤](troubleshooting/steps-to-troubleshoot-openoffice-specific-issues-on-windows.md)
+   + [文档安全：如何在Acrobat中应用使用文档安全模块创建的策略](troubleshooting/how-to-apply-policy-created-using-document-security-module-in-acrobat.md)
+   + [用户管理：如何在AEM Forms JEE中添加用户或组](troubleshooting/how-to-add-users-or-groups-in-aem-forms-jee.md)
+   + [用户管理：如何增加UM会话超时](troubleshooting/how-to-increase-um-session-timeout.md)
+   + [工作台：使用https连接Workbench](troubleshooting/connecting-workbench-using-https.md)
+   + [工作台：从帮助菜单收集Workbench日志](troubleshooting/gathering-workbench-logs-from-help-menu.md)
+   + [工作台：如何为Workbench启用调试输出](troubleshooting/how-to-enable-debug-output-for-workbench.md)
+   + [工作台：如何调整Workbench内存参数](troubleshooting/how-to-tweak-workbench-memory-parameters.md)
+   + [工作台：如何调整Workbench性能参数](troubleshooting/how-to-tweak-workbench-performance-parameters.md)
+   + [设计器：Designer对C++可再发行性的依赖](troubleshooting/dependency-of-vc-on-designer.md)
+   + [设计器：如何启用HTML预览](troubleshooting/how-to-enable-html-preview.md)
+   + [设计器：如何启用PDF预览](troubleshooting/how-to-enable-pdf-preview.md)
+   + [设计器：如何安装Designer补丁](troubleshooting/how-to-install-designer-patches.md)
+   + [JEE Foundation:如何改变熵值](troubleshooting/how-to-change-the-value-of-entropy.md)
+   + [JEE Foundation:如何在AEM Forms JEE中更改任何服务的事务超时](troubleshooting/how-to-change-transaction-timeout-of-any-service-in-aem-forms-jee.md)
+   + [JEE Foundation:如何从作业管理器表中清除进程记录](troubleshooting/how-to-purge-process-records-from-the-job-manager-table.md)
+   + [JEE Foundation:如何从命令行运行进程清除](troubleshooting/how-to-run-process-purge-from-command-line.md)
+   + [JEE Foundation:手动引导的步骤](troubleshooting/steps-to-bootstrap-manually.md)
+   + [JEE Foundation:为移动设备表单捕获调试日志的步骤](troubleshooting/steps-to-capture-debug-logs-for-mobile-forms.md)
+   + [JEE Foundation:缓解ForcedDisconnectException的步骤](troubleshooting/steps-to-mitigate-forceddisconnectexception.md)
+   + [常规：如何为JBoss管理控制台添加管理用户](troubleshooting/how-to-add-management-user-for-jboss-admin-console.md)
+   + [常规：如何捕获HAR日志](troubleshooting/how-to-capture-har-logs.md)
+   + [常规：如何在Unix服务器上捕获JVM的堆转储](troubleshooting/how-to-capture-heap-dumps-of-a-jvm-on-a-unix-server.md)
+   + [常规：如何在Windows服务器上捕获JVM的堆转储](troubleshooting/how-to-capture-heap-dumps-of-a-jvm-on-a-windows-server.md)
+   + [常规：如何捕获网络日志](troubleshooting/how-to-capture-network-logs.md)
+   + [常规：如何在UNIX服务器上捕获JVM的线程转储](troubleshooting/how-to-capture-thread-dumps-of-a-jvm-on-a-unix-server.md)
+   + [常规：如何在Windows服务器上捕获JVM的线程转储](troubleshooting/how-to-capture-thread-dumps-of-a-jvm-on-a-windows-server.md)
+   + [常规：如何生成自签名证书](troubleshooting/how-to-generate-a-self-signed-certificate.md)
+   + [常规：如何从HTML5表单发起Web服务调用](troubleshooting/how-to-make-web-service-call-from-html5-form.md)
+   + [常规：在AEM Forms OSGi中为任何类启用调试日志记录的步骤](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-aem-forms-osgi.md)
+   + [常规：在JBOSS应用程序服务器中为任何类启用调试日志记录的步骤](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-jboss-application-server.md)
+   + [常规：在Websphere应用程序服务器中为任何类启用调试日志记录的步骤](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-websphere-application-server.md)
+   + [常规：为AEM Forms OSGi启用SSL的步骤](troubleshooting/steps-to-enable-ssl-for-aem-forms-osgi.md)
+   + [常规：加密要在lc_turnkey.xml中使用的密钥库密码的步骤](troubleshooting/steps-to-encrypt-keystore-password-to-be-used-in-lc-turnkey-xml.md)
+   + [常规：AEM-Forms-JEE中用户重置的步骤 — default-password-for-users](troubleshooting/steps-to-reset-default-password-for-users-in-aem-forms-jee.md)
+   + [常规：AEM-Forms-OSGI中用户重置默认密码的步骤](troubleshooting/steps-to-reset-default-password-for-users-in-aem-forms-osgi.md)
+   + [常规：在群集中设置gemfire定位器并执行相关配置的步骤](troubleshooting/steps-to-set-up-gemfire-locators-in-a-cluster-and-perform-related-configuration.md)
+
+
+
+
