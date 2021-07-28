@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: 云服务
 team: TM
-source-git-commit: e2bdc73aff012bde5a1ff8f5c85ac0a183dc441d
+source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '460'
 ht-degree: 21%
 
 ---
@@ -57,7 +57,14 @@ ht-degree: 21%
       + [内容发布](./developing/basics/content-publishing.md)
       + [OSGi配置](./developing/basics/osgi-configurations.md)
       + [调度程序配置迁移](./developing/basics/dispatcher-configuration.md)
-   + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
+   + AEM 项目{#aem-projects}
+      + [AEM Maven项目](./developing/projects/maven-project-structure.md)
++ OSGi服务{#osgi-services}
+   + [OSGi服务基础知识](./developing/osgi-services/basics.md)
+   + [OSGi组件生命周期](./developing/osgi-services/lifecycle.md)
+   + [OSGi配置基础知识](./developing/osgi-services/configurations.md)
+   + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
++ [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + 调试AEM{#debugging}
    + 调试AEM SDK{#debugging-aem-sdk}
       + [概述](./debugging/aem-sdk-local-quickstart/overview.md)
