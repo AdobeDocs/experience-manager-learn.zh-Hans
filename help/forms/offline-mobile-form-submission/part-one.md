@@ -12,9 +12,9 @@ version: 6.4, 6.5
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -148,7 +148,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-要查看从部分完成的移动表单下载交互式PDF的功能，请[单击此处](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content)。
+要查看从部分完成的移动表单下载交互式PDF的功能，请[单击此处](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content)。
 下载PDF后，下一步是提交PDF以触发AEM工作流。 此工作流将合并提交的PDF中的数据，并生成非交互式PDF以供审阅。
 
 为此用例创建的自定义配置文件将作为本教程资产的一部分提供。
