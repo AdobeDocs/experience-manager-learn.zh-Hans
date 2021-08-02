@@ -8,8 +8,8 @@ version: cloud-service
 feature: 文档服务
 topic: 开发
 kt: 7432
-thumbnail: 332439.jpg
-source-git-commit: 33cb3d18b744d9a8e54a87152079b42ed09212f2
+thumbnail: 334859.jpg
+source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 4%
@@ -24,3 +24,5 @@ ht-degree: 4%
 1. 从服务凭据创建JSON Web令牌(JWT)，并将其交换为访问令牌
 1. 在AEM中配置技术帐户的访问权限
 1. 使用访问令牌进行HTTP调用
+
+>[!VIDEO](https://video.tv.adobe.com/v/334859/?quality=12&learn=on)
