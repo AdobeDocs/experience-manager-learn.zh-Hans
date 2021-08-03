@@ -14,9 +14,9 @@ discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -28,15 +28,15 @@ ht-degree: 0%
 
 例如，在AEM Forms的Forms Portal中，当用户单击XDP时，我们可以将XDP渲染为PDF并阅读器扩展PDF。
 
-要测试此功能，可尝试使用此[链接](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 示例名称为“Render XDP with RE”
+要测试此功能，可尝试使用此[链接](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse2)。 示例名称为“Render and Extend XDP”(渲染并Reader扩展XDP)
 
 要完成此用例，我们需要执行以下操作。
 
-* 将Reader扩展证书添加到“fd-service”用户。 此处](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)列出了添加Reader扩展凭据的步骤[
+* 将Reader扩展证书添加到“fd-service”用户。 此处](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)列出了添加Reader扩展凭据的步骤[
 
 * 创建将呈现和应用使用权限的自定义OSGi服务。 完成此操作的代码如下所示
 
-## 呈现XDP并应用使用权限{#render-xdp-and-apply-usage-rights}
+## 渲染XDP并应用使用权限 {#render-xdp-and-apply-usage-rights}
 
 * 第7行：使用FormsService的renderPDFForm，我们从XDP中生成PDF。
 
@@ -202,6 +202,8 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 要在本地服务器上测试此功能，请执行以下步骤
 1. [下载并安装DevelopingWithServiceUser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下载并安装AEMFormsDocumentServices包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+
+1. [下载自定义门户模板html](assets/render-and-extend-template.zip)
 1. [使用包管理器将与本文相关的资产下载并导入AEM中](assets/renderandextendxdp.zip)
    * 此包包含示例门户和xdp文件
 1. 将Reader扩展证书添加到“fd-service”用户
