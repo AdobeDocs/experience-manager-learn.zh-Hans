@@ -12,9 +12,9 @@ thumbnail: KT-5882.jpg
 topic: 管理、安全
 role: Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '603'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,11 @@ ht-degree: 1%
 >title="AdobeIMS简介"
 >abstract="AEM as aCloud Service可利用AdobeIMS(Identity Management系统)来促进管理员和普通用户登录到AEM创作服务。 了解如何将AdobeIMS用户、组和产品配置文件与AEM组和权限一起使用，以提供对AEM创作服务的细粒度访问。"
 
-AEM as a A A A A A Service是利用AEM应用程序的云原生方式，因此，可利用AdobeIMS(Identity Management系统)促进其管理员和普通用户登录AEM创作服务。 了解如何将AdobeIMS用户、组和产品配置文件与AEM组和权限一起使用，以提供对AEM创作服务的细粒度访问。
+AEM as a A A A A A Service是利用AEM应用程序的云原生方式，因此，可利用AdobeIMS(Identity Management系统)促进其管理员和普通用户登录AEM创作服务。
+
+![Adobe Admin Console](./assets/hero.png)
+
+了解如何将AdobeIMS用户、组和产品配置文件与AEM组和权限一起使用，以提供对AEM创作服务的细粒度访问。
 
 ## AdobeIMS用户
 
