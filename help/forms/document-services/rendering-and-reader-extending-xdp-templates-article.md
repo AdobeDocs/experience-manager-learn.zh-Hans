@@ -14,9 +14,9 @@ discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
+source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,10 @@ ht-degree: 0%
 要完成此用例，我们需要执行以下操作。
 
 * 将Reader扩展证书添加到“fd-service”用户。 此处](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)列出了添加Reader扩展凭据的步骤[
+
+
+* 您还可以参阅有关[配置Reader扩展凭据](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)的视频
+
 
 * 创建将呈现和应用使用权限的自定义OSGi服务。 完成此操作的代码如下所示
 
