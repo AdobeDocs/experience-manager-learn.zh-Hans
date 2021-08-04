@@ -2,9 +2,9 @@
 title: AEM Assets Essentials视频
 description: 用于Adobe Experience Manager Assets Essentials的视频集合
 sub-product: 资产
-source-git-commit: 46f270c5b26baeb546997f2191cc28801444a290
+source-git-commit: 882c7ce872533ab4848c8db6145172b8cce4e270
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 0%
 Experience ManagerAssets Essentials为轻量级的资产管理和协作提供了简化的用户界面。
 
 观看我们的视频，了解如何使用Assets Essentials管理您的资产，以及如何将其与Adobe历程Orchestrator集成！
+
+## 进一步了解Assets Essentials
 
 <table>
 <td>
@@ -32,27 +34,25 @@ Experience ManagerAssets Essentials为轻量级的资产管理和协作提供了
       <em>了解Assets Essentials的基础知识！</em>
    </p>
 </td>
-<!--
 <td>
-   <a href="./creative-cloud.md">
-   <img alt="" src="./assets/overview/x.png"/>
+   <a href="./basics/collaborating.md">
+   <img alt="" src="./assets/overview/collaboration.png"/>
    </a>
    <div>
-      <a href="./provisioning/getting-access.md">
-      <strong>Creative Cloud and Assets Essentials</strong>
+      <a href="./basics/collaborating.md">
+      <strong>协作Assets Essentials</strong>
       </a>
    </div>
    <p>
-      <em>Learn how Assets Essentials can integrate with your Creative Cloud Enterprise Libraries!</em>
+      <em>了解Assets Essentials如何提供轻量级任务管理来管理资产的生命周期！</em>
    <p>
 </td>
--->
 <td>
-   <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/create-messages/assets-essentials.html">
+   <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
    <img alt="Adobe Journey Optimizer" src="./assets/overview/adobe-journey-optimizer.png" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/create-messages/assets-essentials.html">
+      <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
       <strong>Adobe Journey Optimizer</strong>
       </a>
    </div>
