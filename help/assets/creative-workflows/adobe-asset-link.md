@@ -7,9 +7,9 @@ topic: 内容管理
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1029'
 ht-degree: 2%
 
 ---
@@ -20,6 +20,13 @@ ht-degree: 2%
 Adobe Experience Manager资产可供设计人员和创意用户在其最喜爱的Adobe Creative Cloud桌面应用程序中使用。
 
 适用于Adobe Creative Cloud for enterprise的Adobe资产链接扩展了在Creative Cloud应用程序中搜索和浏览、排序、预览、上传资产、签出、修改、签入和查看AEM资产元数据的功能。
+
+
+## Adobe资产链接和AEM创作工作流
+
+以下视频演示了在Adobe Creative Cloud应用程序中工作的创意人员使用的常见工作流，并使用Adobe资产链接直接与AEM集成。
+
+>[!VIDEO](https://video.tv.adobe.com/v/335927/?quality=12&learn=on)
 
 ## Adobe资产链接功能
 
