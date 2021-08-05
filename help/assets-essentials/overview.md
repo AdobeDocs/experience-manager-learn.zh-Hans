@@ -2,9 +2,9 @@
 title: AEM Assets Essentials视频
 description: 用于Adobe Experience Manager Assets Essentials的视频集合
 sub-product: 资产
-source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
+source-git-commit: c385183bee58bc062f4d46253096828c03e058c3
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
@@ -35,16 +35,16 @@ Experience ManagerAssets Essentials为轻量级的资产管理和协作提供了
    </p>
 </td>
 <td>
-   <a href="./basics/collaborating.md">
-   <img alt="" src="./assets/overview/collaboration.png"/>
+   <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
+   <img alt="" src="./assets/overview/assets-essentials-docs.png"/>
    </a>
    <div>
-      <a href="./basics/collaborating.md">
-      <strong>协作Assets Essentials</strong>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
+      <strong>Assets Essentials文档</strong>
       </a>
    </div>
    <p>
-      <em>了解Assets Essentials如何提供轻量级任务管理来管理资产的生命周期！</em>
+      <em>请查看Assets Essentials产品文档！</em>
    <p>
 </td>
 <td>
@@ -53,7 +53,7 @@ Experience ManagerAssets Essentials为轻量级的资产管理和协作提供了
    </a>
    <div>
       <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
-      <strong>Adobe Journey Optimizer</strong>
+      <strong>Adobe Journey Optimizer集成</strong>
       </a>
    </div>
    <p>
