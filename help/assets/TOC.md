@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Assets 的视频和教程集合
 breadcrumb-title: AEM Assets 教程
 sub-product: 资产
 team: TM
-source-git-commit: 46f270c5b26baeb546997f2191cc28801444a290
+source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 32%
+source-wordcount: '273'
+ht-degree: 31%
 
 ---
 
@@ -121,3 +121,5 @@ ht-degree: 32%
 
 + 部署{#deployment}
    + [多租户和并行开发](deployment/multitenancy-concurrent-article-understand.md)
+
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html)
