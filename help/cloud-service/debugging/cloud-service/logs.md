@@ -12,10 +12,10 @@ thumbnail: kt-5432.jpg
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e2473a1584ccf315fffe5b93cb6afaed506fdbce
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -37,11 +37,21 @@ AEM as aCloud Services不支持自定义日志文件，但支持自定义日志�
 
 要使Java日志在AEM中作为Cloud Service可用(通过[Cloud Manager](#cloud-manager)或[Adobe I/OCLI](#aio))，必须在`error.log`中写入自定义日志语句。 写入自定义命名日志（如`example.log`）的日志将无法从AEM as a Cloud Service访问。
 
+日志可以使用应用程序`org.apache.sling.commons.log.LogManager.factory.config~example.cfg.json`文件中的Sling LogManager OSGi配置属性写入`error.log`。
+
+```
+{
+   ...
+   "org.apache.sling.commons.log.file": "logs/error.log"
+   ...
+}
+```
+
 ## AEM创作和发布服务日志
 
 AEM创作和发布服务都提供AEM运行时服务器日志：
 
-+ `aemerror` 是Java错误日志(可在AEM SDK本 `/crx-quickstart/error.log` 地快速启动中找到)。以下是每种环境类型的自定义日志记录器的[推荐日志级别](#log-levels):
++ `aemerror` 是Java错误日志(可在AEM SDK本 `/crx-quickstart/logs/error.log` 地快速启动中找到)。以下是每种环境类型的自定义日志记录器的[推荐日志级别](#log-levels):
    + 开发: `DEBUG`
    + 暂存: `WARN`
    + 生产: `ERROR`
