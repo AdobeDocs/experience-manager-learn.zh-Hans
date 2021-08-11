@@ -10,10 +10,10 @@ doc-type: article
 topic: 安全
 role: Developer
 level: Intermediate
-source-git-commit: 1c99c319fba5048904177fc82c43554b0cf0fc15
+source-git-commit: 3418cd424cc82fece9e7d13de72c0d8dde346d7c
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -123,7 +123,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 />
 ```
 
-## 调度程序缓存问题和配置{#dispatcher-caching-concerns-and-configuration}
+## 调度程序缓存问题和配置 {#dispatcher-caching-concerns-and-configuration}
 
 从Dispatcher 4.1.1+响应标头开始，可以缓存。 这样，只要请求是匿名的，就可以沿着[!DNL CORS]请求的资源缓存[!DNL CORS]标头。
 
@@ -141,7 +141,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 /cache { 
   ...
   /headers {
-      "Origin",
+      "Origin"
       "Access-Control-Allow-Origin"
       "Access-Control-Expose-Headers"
       "Access-Control-Max-Age"
