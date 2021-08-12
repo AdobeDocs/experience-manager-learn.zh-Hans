@@ -14,9 +14,9 @@ discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
+source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
    * 此包包含示例门户和xdp文件
 1. 将Reader扩展证书添加到“fd-service”用户
 1. 将浏览器指向[门户网页](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
-1. 单击pdf图标以渲染xdp并获取“扩展”的pdfReader
+1. 单击pdf图标以将xdp渲染为应用了使用权限的pdf文件。
 
 
 
