@@ -2,9 +2,9 @@
 title: AEM Assets Essentials视频
 description: 用于Adobe Experience Manager Assets Essentials的视频集合
 sub-product: 资产
-source-git-commit: c385183bee58bc062f4d46253096828c03e058c3
+source-git-commit: 21d6df065fe61614d3bbd68ce2f20d3dc23a9cef
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
