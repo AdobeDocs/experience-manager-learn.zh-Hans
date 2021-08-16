@@ -1,5 +1,5 @@
 ---
-title: "Creative Cloud和Assets Essentials\t"
+title: Creative Cloud和Assets Essentials
 description: 了解Assets Essentials如何与Adobe Creative Cloud集成。
 version: cloud-service
 feature: Assets Essentials
@@ -8,7 +8,7 @@ role: User
 level: Beginner
 kt: 7918
 thumbnail: 336069.jpeg
-source-git-commit: c7da508b500ac64ac2e817c5b6ff40899f71e7f3
+source-git-commit: b247bb18eab3e610d40d3e01a63ba7e311fafde0
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 3%
