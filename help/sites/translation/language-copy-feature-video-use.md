@@ -1,5 +1,6 @@
 ---
 title: 将语言副本与AEM Sites结合使用
+description: '通过AEM创建语言副本向导站点翻译增强功能，用户可以从主控语言创建语言副本，而无需创建根页面。 '
 feature: 语言复制
 topics: localization, authoring, content-architecture
 audience: all
@@ -9,10 +10,10 @@ version: 6.3, 6.4, 6.5
 topic: 本地化
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: fb6c21a9a88b5ebcbfb14213182a9b8cba6fe6ae
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 8%
+source-wordcount: '89'
+ht-degree: 5%
 
 ---
 
