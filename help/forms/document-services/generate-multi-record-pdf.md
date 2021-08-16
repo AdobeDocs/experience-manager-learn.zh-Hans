@@ -1,6 +1,6 @@
 ---
 title: 从一个数据文件生成多个PDF
-seo-title: 从一个数据文件生成多个PDF
+description: OutputService提供了多种方法来使用表单设计和数据创建文档，以便与表单设计合并。 了解如何从一个包含多个单个记录的大型xml中生成多个pdf。
 feature: 输出服务
 topics: development
 audience: developer
@@ -10,9 +10,9 @@ version: 6.4,6.5
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: fb6c21a9a88b5ebcbfb14213182a9b8cba6fe6ae
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '526'
 ht-degree: 1%
 
 ---
@@ -76,7 +76,7 @@ Document zippedDocument = documentServices.generateMultiplePdfs(templateMap, dat
 ....
 ```
 
-### 接口实现代码{#Interface-Implementation-Code}
+### 界面实施代码{#Interface-Implementation-Code}
 
 以下代码使用OutputService的generatePDFOutputBatch生成多个PDF，并将包含PDF文件的zip文件返回给调用Servlet
 
