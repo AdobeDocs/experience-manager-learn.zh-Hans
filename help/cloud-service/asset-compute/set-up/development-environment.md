@@ -12,9 +12,9 @@ thumbnail: KT-6266.jpg
 topic: 集成、开发
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 53c20b9774c15b04a1c78c7c0c7b61a60996bf60
+source-git-commit: fd72f3c85db8a56ec8abfd1609da53492ee54be2
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ AdobeAsset compute项目无法与AEM SDK提供的本地AEM运行时集成，并�
 1. 从命令行安装所需的npm模块和Adobe I/OCLI插件：
 
    ```
-   $ npm i -g @adobe/aio-cli @openwhisk/wskdebug ngrok --unsafe-perm=true \
+   $ npm i -g @adobe/aio-cli@7.1.0 @openwhisk/wskdebug ngrok --unsafe-perm=true \
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
@@ -51,8 +51,6 @@ AdobeAsset compute项目无法与AEM SDK提供的本地AEM运行时集成，并�
 ## 安装Visual Studio代码{#vscode}
 
 [Microsoft Visual Studio代码](https://code.visualstudio.com/download) 用于开发和调试Asset compute工作程序。虽然可以使用其他与JavaScript兼容的IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide)来开发该工作程序，但只有Visual Studio代码可以集成到[debug](../test-debug/debug.md)Asset compute工作程序。[
-
-_Visual Studio代码1.48.x+是进行wskdebugto工作 [](#wskdebug) 所必需的。_
 
 本教程假定使用Visual Studio代码，因为它为扩展Asset compute提供了最佳开发人员体验。
 
@@ -80,8 +78,11 @@ asset compute工作程序基于[Node.js](https://nodejs.org/)，因此需要Node
 [安装Adobe I/OCLI](../../local-development-environment/development-tools.md#aio-cli)，或 ____ 安装命令行(CLI)npm模块，该模块便于使用和与Adobe I/O技术交互，并用于生成和本地开发自定义Asset compute工作程序。
 
 ```
-$ npm install -g @adobe/aio-cli
+$ npm install -g @adobe/aio-cli@7.1.0
 ```
+
+_Adobe I/OCLI版本7.1.0是必需的。目前不支持更高版本的Adobe I/OCLI。_
+
 
 ## 安装Adobe I/OCLIAsset compute插件{#aio-asset-compute}
 
