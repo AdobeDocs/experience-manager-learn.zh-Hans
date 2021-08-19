@@ -1,18 +1,14 @@
 ---
 title: AEM中的翻译增强功能
 description: AEM强大的翻译框架允许受支持的翻译供应商无缝翻译AEM内容。 了解最新的增强功能。
-feature: 多站点管理器，语言副本
-topics: localization, authoring, content-architecture
-audience: author, marketer, developer
-doc-type: feature video
-activity: use
 version: 6.3, 6.4, 6.5
 topic: 本地化
+feature: 多站点管理器，语言副本
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '340'
 ht-degree: 2%
 
 ---
