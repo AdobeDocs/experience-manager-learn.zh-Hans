@@ -1,20 +1,16 @@
 ---
 title: 使用Analysis Workspace分析数据
 description: 了解如何将从Adobe Experience Manager网站捕获的数据映射到Adobe Analytics报表包中的量度和维度。 了解如何使用Adobe Analytics的Analysis Workspace功能构建详细的报表功能板。
-feature: 分析
-topics: integrations
-audience: administrator
-doc-type: tutorial
-activity: setup
 version: cloud-service
-kt: 6409
-thumbnail: KT-6296.jpg
 topic: 集成
+feature: Adobe客户端数据层
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 6409
+thumbnail: KT-6296.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2204'
+source-wordcount: '2184'
 ht-degree: 0%
 
 ---
@@ -45,17 +41,17 @@ WKND营销团队希望了解哪个行动动员(CTA)按钮在主页上的效果�
 ### 目标 {#objective}
 
 1. 创建新报表包或使用现有报表包。
-1. 在报表包中配置[转化变量(eVars)](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)和[成功事件（事件）](https://docs.adobe.com/help/en/analytics/admin/admin-tools/success-events/success-event.html)。
-1. 创建[Analysis Workspace项目](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/home.html)，借助工具分析数据，您可以快速构建、分析和共享分析。
+1. 在报表包中配置[转化变量(eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)和[成功事件（事件）](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html)。
+1. 创建[Analysis Workspace项目](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)，借助工具分析数据，您可以快速构建、分析和共享分析。
 1. 与其他团队成员共享Analysis Workspace项目。
 
 ## 前提条件
 
 本教程是[使用Adobe Analytics](./track-clicked-component.md)跟踪已单击的组件的延续教程，它假定您具有：
 
-* 启用了[Adobe Analytics扩展](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)的&#x200B;**Launch属性**
-* **Adobe** Analyticst/dev报表包ID和跟踪服务器。有关[创建新报表包](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)的信息，请参阅以下文档。
-* [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser扩展配置了您的Launch资产，该资产 [在https://wknd.site/us/en.](https://wknd.site/us/en.html) html或AEM网站上加载，并且启用了Adobe数据层。
+* 启用了[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)的&#x200B;**Launch属性**
+* **Adobe** Analyticst/dev报表包ID和跟踪服务器。有关[创建新报表包](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)的信息，请参阅以下文档。
+* [Experience Platform](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser扩展配置了您的Launch资产，该资产 [在https://wknd.site/us/en.](https://wknd.site/us/en.html) html或AEM网站上加载，并且启用了Adobe数据层。
 
 ## 转化变量(eVar)和成功事件（事件）
 
@@ -116,19 +112,19 @@ eVar最适用于衡量原因和影响，例如：
 
 Analysis Workspace是一个灵活的浏览器工具，允许您快速构建分析并共享分析。 使用拖放界面，您可以进行分析、添加可视化图表以生动呈现数据、组织数据集、与组织中的任何人共享项目并安排其时间。
 
-接下来，创建一个新的[项目](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/build-workspace-project/t-freeform-project.html)以构建功能板，以分析整个站点中CTA按钮的性能。
+接下来，创建一个新的[项目](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace)以构建功能板，以分析整个站点中CTA按钮的性能。
 
 1. 从Analytics工具栏中，选择&#x200B;**工作区**&#x200B;并单击&#x200B;**创建新项目**。
 
    ![工作区](assets/create-analytics-workspace/create-workspace.png)
 
-1. 选择从&#x200B;**空白项目**&#x200B;开始，或选择一个由Adobe提供的预建模板或由您的组织创建的自定义模板。 根据您所考虑的分析或用例，可以使用多个模板。 [进一](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) 步了解可用的不同模板选项。
+1. 选择从&#x200B;**空白项目**&#x200B;开始，或选择一个由Adobe提供的预建模板或由您的组织创建的自定义模板。 根据您所考虑的分析或用例，可以使用多个模板。 [进一](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) 步了解可用的不同模板选项。
 
    在工作区项目中，从左边栏访问面板、表格、可视化图表和组件。 这些是您的项目构建基块。
 
-   * **[组件](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)**  — 组件是维度、量度、区段或日期范围，所有这些组件都可以合并到一个自由格式表中，以开始回答您的业务问题。请务必先熟悉每个组件类型，然后再开始投入分析。 掌握组件术语后，即可开始拖放到自由格式表中以构建分析。
-   * **[可视化](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)**  — 然后，在数据的顶部添加可视化（如条形图或折线图），以使其更加直观地呈现。在最左侧的边栏中，选择中间的可视化图标，以查看所有可用的可视化图表。
-   * **[面板](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/panels.html)**  — 面板是表格和可视化图表的集合。您可以从工作区的左上角图标访问面板。 当您想要根据时间段、报表包或分析用例来组织项目时，面板会很有帮助。 Analysis Workspace中提供了以下面板类型：
+   * **[组件](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)**  — 组件是维度、量度、区段或日期范围，所有这些组件都可以合并到一个自由格式表中，以开始回答您的业务问题。请务必先熟悉每个组件类型，然后再开始投入分析。 掌握组件术语后，即可开始拖放到自由格式表中以构建分析。
+   * **[可视化](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)**  — 然后，在数据的顶部添加可视化（如条形图或折线图），以使其更加直观地呈现。在最左侧的边栏中，选择中间的可视化图标，以查看所有可用的可视化图表。
+   * **[面板](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html)**  — 面板是表格和可视化图表的集合。您可以从工作区的左上角图标访问面板。 当您想要根据时间段、报表包或分析用例来组织项目时，面板会很有帮助。 Analysis Workspace中提供了以下面板类型：
 
    ![模板选择](assets/create-analytics-workspace/workspace-tools.png)
 
@@ -170,7 +166,7 @@ Analysis Workspace是一个灵活的浏览器工具，允许您快速构建分�
 
    ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
 
-1. 您可以使用Adobe Analytics分类将按钮ID值替换为更易用的名称。 您可以在此处](https://docs.adobe.com/content/help/en/analytics/components/classifications/c-classifications.html)阅读有关如何为特定量度创建分类的更多信息。 [在这种情况下，我们为`eVar8`设置了一个分类量度`Button Section (Button ID)`，该分类量度将按钮ID映射到用户友好名称。
+1. 您可以使用Adobe Analytics分类将按钮ID值替换为更易用的名称。 您可以在此处](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)阅读有关如何为特定量度创建分类的更多信息。 [在这种情况下，我们为`eVar8`设置了一个分类量度`Button Section (Button ID)`，该分类量度将按钮ID映射到用户友好名称。
 
    ![按钮区域](assets/create-analytics-workspace/button-section.png)
 
