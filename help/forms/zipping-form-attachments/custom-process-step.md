@@ -1,19 +1,15 @@
 ---
 title: 自定义流程步骤，以压缩文件附件
 description: 自定义流程步骤，将自适应表单附件添加到zip文件，并将zip文件存储到工作流变量中
-feature: 工作流
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: setup
+feature: 自适应表单
 version: 6.5
 topic: 开发
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '151'
 ht-degree: 1%
 
 ---
