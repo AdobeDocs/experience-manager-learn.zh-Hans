@@ -1,28 +1,20 @@
 ---
 title: 从HTM5表单提交生成PDF
-seo-title: 从HTML5表单提交生成PDF
 description: 通过移动设备表单提交生成PDF
-seo-description: 通过移动设备表单提交生成PDF
-uuid: 61f07029-d440-44ec-98bc-f2b5eef92b59
 feature: 移动设备表单
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
-discoiquuid: 816f1a75-6ceb-457b-ba18-daf229eed057
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
 
 
-# 从HTM5表单提交{#generate-pdf-from-htm-form-submission}生成PDF
+# 从HTM5表单提交生成PDF {#generate-pdf-from-htm-form-submission}
 
 本文将指导您完成从HTML5(即Forms移动版)表单提交生成PDF时涉及的步骤。 此演示还将说明向HTML5表单添加图像以及将图像合并到最终PDF中所需的步骤。
 
