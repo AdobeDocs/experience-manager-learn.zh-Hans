@@ -1,22 +1,14 @@
 ---
 title: 创建可重用的AEM Forms工作流模型。
-seo-title: 创建可重用的AEM Forms工作流模型。
 description: 与自适应Forms无关的工作流模型。
-seo-description: 与自适应Forms无关的工作流模型。
 feature: 工作流
-topics: development
-audience: developer
-doc-type: article
-activity: setup
 version: 6.5
-uuid: 3a082743-3e56-42f4-a44b-24fa34165926
-discoiquuid: 9f18c314-39d1-4c82-b1bc-d905ea472451
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
