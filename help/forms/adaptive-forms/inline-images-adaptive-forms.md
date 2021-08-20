@@ -1,20 +1,15 @@
 ---
 title: 在自适应Forms中显示内联图像
-seo-title: 在自适应Forms中显示内联图像
 description: 在自适应Forms中显示内嵌的上传图像
-seo-description: 在自适应Forms中显示内嵌的上传图像
 feature: 自适应表单
 topics: development
-audience: developer
-doc-type: article
-activity: setup
 version: 6.3,6.4,6.5
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '240'
 ht-degree: 1%
 
 ---
@@ -23,6 +18,8 @@ ht-degree: 1%
 # 自适应Forms中的内联图像
 
 在自适应表单中，常见的用例是将上传的图像显示为内嵌图像。 默认情况下，上传的图像会显示为链接，通过在自适应表单中显示图像，可以增强此体验。 本文将指导您完成显示内联图像时涉及的步骤。
+
+[此功能的实时示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)
 
 ## 添加占位符图像
 
