@@ -2,16 +2,15 @@
 title: 创建自适应表单模板
 description: 模板可定义自适应表单的结构和初始内容。
 feature: 自适应表单
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
+topic: 开发
+role: Developer
+level: Beginner
 kt: 5859
-thumbnail: 37324
-source-git-commit: c60a46027cc8d71fddd41aa31dbb569e4df94823
+thumbnail: 37324.jpg
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -24,7 +23,7 @@ ht-degree: 3%
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324/quality=9)
 
-有关更多详细信息，请参阅[自适应表单模板文档](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
+有关更多详细信息，请参阅[自适应表单模板文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
 
 如果需要，您可以下载[自适应表单模板](assets/peak-application-template.zip)并使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入AEM
 
