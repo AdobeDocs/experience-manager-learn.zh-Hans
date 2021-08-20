@@ -1,28 +1,20 @@
 ---
 title: 在AEM Forms工作流中设置Json数据元素的值
-seo-title: 在AEM Forms工作流中设置Json数据元素的值
 description: 在AEM工作流中将自适应表单路由到不同的用户时，将要求根据审核表单的人员来隐藏或禁用某些字段或面板。 为了满足这些用例，我们通常会设置一个隐藏字段值。 可以根据此隐藏字段的值业务规则进行创作，以隐藏/禁用相应的面板或字段。
-seo-description: 在AEM工作流中将自适应表单路由到不同的用户时，将要求根据审核表单的人员来隐藏或禁用某些字段或面板。 为了满足这些用例，我们通常会设置一个隐藏字段值。 可以根据此隐藏字段的值业务规则进行创作，以隐藏/禁用相应的面板或字段。
-uuid: a4ea6aef-a799-49e5-9682-3fa3b7a442fb
 feature: 自适应表单
-topics: developing
-audience: implementer
-doc-type: article
-activity: setup
 version: 6.4
-discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '692'
 ht-degree: 1%
 
 ---
 
 
-# 在AEM Forms工作流中设置JSON数据元素的值{#setting-value-of-json-data-element-in-aem-forms-workflow}
+# 在AEM Forms工作流中设置JSON数据元素的值 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
 在AEM工作流中将自适应表单路由到不同的用户时，将要求根据审核表单的人员来隐藏或禁用某些字段或面板。 为了满足这些用例，我们通常会设置一个隐藏字段值。 可以根据此隐藏字段的值业务规则进行创作，以隐藏/禁用相应的面板或字段。
 
