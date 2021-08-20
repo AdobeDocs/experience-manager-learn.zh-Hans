@@ -1,28 +1,20 @@
 ---
 title: 带有自适应Forms的条形码服务
-seo-title: 带有自适应Forms的条形码服务
-description: 使用条形码服务对条形码进行解码并从提取的数据填充表单字段
-seo-description: 使用条形码服务对条形码进行解码并从提取的数据填充表单字段
-uuid: 42568b81-cbcd-479e-8d9a-cc0b244da4ae
-feature: 条形码表单
-topics: development
-audience: developer
-doc-type: article
-activity: implement
+description: 使用条形码服务对条形码进行解码并从提取的数据填充表单字段。
+feature: 条形码Forms
 version: 6.4,6.5
-discoiquuid: 1224de6d-7ca1-4e9d-85fe-cd675d03e262
 topic: 开发
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
 
-# 使用自适应Forms的条形码服务{#barcode-service-with-adaptive-forms}
+# 带有自适应Forms的条形码服务{#barcode-service-with-adaptive-forms}
 
 本文将演示如何使用条形码服务来填充自适应表单。 用例如下：
 
