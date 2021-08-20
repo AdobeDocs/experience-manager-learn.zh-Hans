@@ -1,23 +1,15 @@
 ---
 title: 使用用户配置文件数据集成AEM Forms
-seo-title: 使用用户配置文件数据集成AEM Forms
 description: 将AEM用户配置文件信息与自适应Forms集成
-seo-description: 将AEM用户配置文件信息与自适应Forms集成
-uuid: c8cfe575-8732-4d8b-99de-fb09e7c2497d
 feature: 自适应表单
-topics: integrations
-audience: developer
-doc-type: feature video
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: ca01dfce-abab-4bc1-9c5e-3bafdbed4836
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 2%
+source-wordcount: '100'
+ht-degree: 3%
 
 ---
 
