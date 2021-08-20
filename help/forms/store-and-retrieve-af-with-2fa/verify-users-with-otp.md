@@ -2,19 +2,16 @@
 title: 使用OTP验证用户
 description: 使用OTP验证与应用程序号关联的移动号码。
 feature: 自适应表单
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: use
+type: Tutorial
 version: 6.4,6.5
 kt: 6594
 thumbnail: 6594.jpg
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
@@ -52,11 +49,11 @@ OpenAPI规范（以前称为Swagger规范）是REST API的API描述格式。 Ope
 
 ## 创建数据源
 
-要将AEM/AEM Forms与第三方应用程序集成，我们需要使用云服务配置中的swagger文件](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)来使用基于[REST的数据源。 已完成的数据源将作为本课程资产的一部分提供给您。
+要将AEM/AEM Forms与第三方应用程序集成，我们需要使用云服务配置中的swagger文件](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)来使用基于[REST的数据源。 已完成的数据源将作为本课程资产的一部分提供给您。
 
 ## 创建表单数据模型
 
-AEM Forms数据集成提供了直观的用户界面，用于创建和使用[表单数据模型](https://docs.adobe.com/content/help/en/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 表单数据模型依赖于数据源来交换数据。
+AEM Forms数据集成提供了直观的用户界面，用于创建和使用[表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 表单数据模型依赖于数据源来交换数据。
 可从此处](assets/sms-2fa-fdm.zip)下载完成的表单数据模型[
 
 ![fdm](assets/2FA-fdm.PNG)
