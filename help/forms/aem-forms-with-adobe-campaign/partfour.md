@@ -1,32 +1,24 @@
 ---
 title: 使用表单数据模型创建Campaign用户档案
-seo-title: 使用表单数据模型创建Campaign用户档案
 description: 使用Adobe Campaign Standard表单数据模型创建AEM Forms用户档案时涉及的步骤
-seo-description: 使用Adobe Campaign Standard表单数据模型创建AEM Forms用户档案时涉及的步骤
-uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: 输出服务
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
+feature: 自适应表单
 version: 6.3,6.4,6.5
-discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '429'
 ht-degree: 3%
 
 ---
 
 
-# 使用表单数据模型{#create-campaign-profile-using-form-data-model}创建营销活动用户档案
+# 使用表单数据模型创建Campaign用户档案 {#create-campaign-profile-using-form-data-model}
 
 使用Adobe Campaign Standard表单数据模型创建AEM Forms用户档案时涉及的步骤
 
-## 创建自定义身份验证{#create-custom-authentication}
+## 创建自定义身份验证 {#create-custom-authentication}
 
 使用swagger文件创建数据源时，AEM Forms支持以下类型的身份验证类型
 
@@ -107,7 +99,7 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 }
 ```
 
-## 创建数据源{#create-data-source}
+## 创建数据源 {#create-data-source}
 
 第一步是创建swagger文件。 swagger文件定义将在Adobe Campaign Standard中创建用户档案的REST API。 swagger文件定义REST API的输入参数和输出参数。
 
@@ -115,7 +107,7 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 
 作为与本文相关的资产的一部分，会向您提供示例swagger文件。**确保更改swagger文件中的主机和basePath以匹配您的ACS实例**
 
-## 测试解决方案{#test-the-solution}
+## 测试解决方案 {#test-the-solution}
 
 要测试解决方案，请执行以下步骤：
 * [确保已按照此处所述的步骤执行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
