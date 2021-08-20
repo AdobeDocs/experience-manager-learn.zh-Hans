@@ -1,23 +1,14 @@
 ---
 title: 自适应Forms中的预填充服务
-seo-title: 自适应Forms中的预填充服务
 description: 通过从后端数据源获取数据来预填充自适应表单。
-seo-description: 通过从后端数据源获取数据来预填充自适应表单。
-sub-product: 表单
 feature: 自适应表单
-topics: integrations
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
-uuid: 26a8cba3-7921-4cbb-a182-216064e98054
-discoiquuid: 936ea5e9-f5f0-496a-9188-1a8ffd235ee5
 topic: 开发
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
