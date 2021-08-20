@@ -2,17 +2,15 @@
 title: 为JBoss应用程序服务器中的任何类启用调试日志记录的步骤
 description: 配置调试日志记录，以解决与JBoss应用程序服务器相关的问题
 type: Troubleshooting
-product: forms
 role: Admin
 level: Intermediate
 version: 6.5
-feature: Foundation JEE
 topic: '管理   '
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 5%
+source-wordcount: '53'
+ht-degree: 1%
 
 ---
 
