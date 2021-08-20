@@ -1,21 +1,15 @@
 ---
 title: 创建自适应表单时应遵循的命名约定和最佳实践
-seo-title: 创建自适应表单时应遵循的命名约定和最佳实践
 description: 创建自适应表单时应遵循的命名约定和最佳实践
-seo-description: 创建自适应表单时应遵循的命名约定和最佳实践
 feature: 自适应表单
-topics: best-practices
-audience: developer
-doc-type: article
-activity: setup
 version: 6.3,6.4,6.5
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 1%
+source-wordcount: '290'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +20,7 @@ Adobe Experience Manager(AEM)表单可帮助您将复杂的事务转换为简单
 ## 命名约定
 
 * **面板**
-   * 面板名称以大写字符开头，以驼峰式大小写。
+   * 面板名称是以大写字符开头的驼峰式大小写。
 
 * **表单字段**
    * 字段名称以小写字符开头，采用驼峰式大小写。
