@@ -1,28 +1,20 @@
 ---
 title: 在自适应表单提交中创建营销活动用户档案
-seo-title: 在自适应表单提交中创建营销活动用户档案
 description: 本文将介绍在Adobe Campaign Standard中自适应表单提交时创建用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
-seo-description: 本文将介绍在Adobe Campaign Standard中自适应表单提交时创建用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
-uuid: f3cb7b3c-1a1c-49eb-9447-a9e52c675244
 feature: 自适应Forms，表单数据模型
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: 46ec4136-4898-4b01-86bb-ac638a29b242
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
 
-# 在自适应表单提交中创建营销活动用户档案{#creating-campaign-profile-on-adaptive-form-submission}
+# 在自适应表单提交中创建营销活动用户档案 {#creating-campaign-profile-on-adaptive-form-submission}
 
 本文将介绍在Adobe Campaign Standard中自适应表单提交时创建用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
 
@@ -32,7 +24,7 @@ ht-degree: 0%
 * 创建用于处理自适应表单提交的自定义提交操作
 * 调用CampaignService的createProfile方法
 
-## 创建AEM服务{#create-aem-service}
+## 创建AEM服务 {#create-aem-service}
 
 创建AEM服务以创建Adobe Campaign配置文件。 此AEM服务将从OSGI配置中获取Adobe Campaign凭据。 在获取促销活动凭据后，生成访问令牌，并使用访问令牌HTTP Post调用在Adobe Campaign中创建用户档案。 以下是用于创建用户档案的代码。
 
@@ -247,7 +239,7 @@ return null;
 }
 ```
 
-## 自定义提交{#custom-submit}
+## 自定义提交 {#custom-submit}
 
 创建自定义提交处理程序以处理自适应表单提交。 在此自定义提交处理程序中，我们将调用CampaignService的createProfile方法。 createProfile方法接受表示需要创建的配置文件的JSONObject。
 
@@ -266,7 +258,7 @@ profile.addProperty("mobilePhone",request.getParameter("phone"));
 String pkey = addNewProfile.createProfile(profile);
 ```
 
-## 测试解决方案{#test-the-solution}
+## 测试解决方案 {#test-the-solution}
 
 定义服务和自定义提交操作后，我们便可以测试我们的解决方案。 要测试解决方案，请执行以下步骤
 
