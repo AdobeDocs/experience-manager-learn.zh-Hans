@@ -1,23 +1,15 @@
 ---
 title: 修改数据源配置设置。
-seo-title: 修改数据源配置设置。
 description: 在数据源配置设置中修改主机名和其他设置。
-seo-description: 在数据源配置设置中修改主机名和其他设置。
 feature: 自适应表单
-topics: form-data-model
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.5
-uuid: 31e297c9-3d12-4a7a-b1ff-1e347e17b24c
-discoiquuid: de227e8f-0f59-4506-828b-3b6b18b61eb1
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 1%
+source-wordcount: '142'
+ht-degree: 2%
 
 ---
 
