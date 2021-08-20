@@ -1,32 +1,24 @@
 ---
 title: 使用API通过AEM Forms生成记录文档
-seo-title: 使用API通过AEM Forms生成记录文档
 description: 以编程方式生成记录文档(DOR)
-seo-description: 使用API通过AEM Forms生成记录文档
 feature: 自适应表单
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
-uuid: 94ac3b13-01b4-4198-af81-e5609c80324c
-discoiquuid: ba91d9df-dc61-47d8-8e0a-e3f66cae6a87
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 2%
+source-wordcount: '257'
+ht-degree: 3%
 
 ---
 
 
-# 使用API在AEM Forms中生成记录文档{#using-api-to-generate-document-of-record-with-aem-forms}
+# 在AEM Forms中使用API生成记录文档 {#using-api-to-generate-document-of-record-with-aem-forms}
 
 以编程方式生成记录文档(DOR)
 
-本文说明了如何使用`com.adobe.aemds.guide.addon.dor.DoRService API`以编程方式生成&#x200B;**记录文档**。 [文档记](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) 录在自适应表单中捕获的PDF版本数据。
+本文说明了如何使用`com.adobe.aemds.guide.addon.dor.DoRService API`以编程方式生成&#x200B;**记录文档**。 [文档记](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) 录在自适应表单中捕获的PDF版本数据。
 
 1. 以下是代码片段。 第一线获得DOR服务。
 1. 设置DoROptions。
