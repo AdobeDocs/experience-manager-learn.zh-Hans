@@ -1,20 +1,14 @@
 ---
 title: 实施自定义流程步骤
-seo-title: 实施自定义流程步骤
 description: 使用自定义流程步骤将自适应表单附件写入文件系统
-seo-description: 使用自定义流程步骤将自适应表单附件写入文件系统
 feature: 工作流
-topics: development
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.5
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
