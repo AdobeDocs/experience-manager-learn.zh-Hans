@@ -1,17 +1,14 @@
 ---
 title: 保存和检索自适应表单数据
-seo-title: 保存和检索自适应表单数据
 description: 从数据库保存和检索自适应表单数据。 此功能允许表单填写者保存表单，并在以后的日期继续填写表单。
-seo-description: 从数据库保存和检索自适应表单数据。 此功能允许表单填写者保存表单，并在以后的日期继续填写表单。
 feature: 自适应表单
-topics: developing
-audience: developer,implementer
-doc-type: article
-activity: setup
+topic: 开发
+role: Developer
+type: Tutorial
 version: 6.3,6.4,6.5
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -29,7 +26,7 @@ ht-degree: 0%
 * [功能演示](#capability-demo)
 * [在服务器上部署](#deploy-on-your-server)
 
-## 配置数据源{#Configure-Data-Source}
+## 配置数据源 {#Configure-Data-Source}
 
 Apache Sling连接池化数据源配置为指向将用于存储自适应表单数据的数据库。 以下屏幕截图显示了实例的配置。 可以复制并粘贴以下属性
 
@@ -211,7 +208,7 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 }
 ```
 
-## 创建OSGI服务以获取数据{#create-osgi-service}
+## 创建OSGI服务以获取数据 {#create-osgi-service}
 
 编写了以下代码以获取存储的自适应表单数据。 简单查询用于获取与给定GUID关联的自适应表单数据。 然后，获取的数据将返回到调用应用程序。 在此代码中引用的第一步中创建的相同数据源。
 
@@ -276,7 +273,7 @@ public class AemformWithDB implements AemFormsAndDB {
 }
 ```
 
-## 创建客户端库{#create-client-library}
+## 创建客户端库 {#create-client-library}
 
 AEM客户端库可管理您的所有客户端Javascript代码。 对于本文，我创建了一个简单的javascript来使用指南桥API获取自适应表单数据。 获取自适应表单数据后，将对Servlet进行POST调用，以在数据库中插入或更新自适应表单数据。 函数getALLUrlParams返回URL中的参数。 当您想要更新数据时，会使用此插件。 其余功能在与.savebutton类的点击事件关联的代码中处理。 如果URL中存在guid参数，则我们需要执行更新操作（如果不存在），它是插入操作。
 
@@ -404,16 +401,16 @@ $(document).ready(function()
 });
 ```
 
-## 创建自适应表单模板和页面组件{#form-template-and-page-component}
+## 创建自适应表单模板和页面组件 {#form-template-and-page-component}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
-### {#capability-demo}功能演示
+### 能力演示 {#capability-demo}
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
-#### 在服务器{#deploy-on-your-server}上部署
+#### 在服务器上部署 {#deploy-on-your-server}
 
 要在AEM Forms实例上测试此功能，请执行以下步骤
 
