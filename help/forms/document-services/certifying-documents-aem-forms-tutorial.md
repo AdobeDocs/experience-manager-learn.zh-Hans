@@ -1,21 +1,14 @@
 ---
 title: AEM Forms中的认证文档
-seo-title: AEM Forms中的认证文档
 description: 使用Docassurance Service验证AEM Forms中的PDF文档
-seo-description: 使用Docassurance Service验证AEM Forms中的PDF文档
-uuid: ecb1f9b6-bbb3-43a3-a0e0-4c04411acc9f
-feature: 文档安全
-topics: development
-audience: developer
-doc-type: article
-activity: implement
+feature: Document Security
 version: 6.4,6.5
 topic: 开发
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '403'
 ht-degree: 1%
 
 ---
@@ -31,7 +24,7 @@ ht-degree: 1%
 
 要使用AEM Forms验证文档，需执行以下步骤
 
-## 将证书添加到信任存储{#adding-certificate-to-trust-store}
+## 将证书添加到信任存储 {#adding-certificate-to-trust-store}
 
 请按照以下所述步骤将证书添加到AEM中的KeyStore
 
