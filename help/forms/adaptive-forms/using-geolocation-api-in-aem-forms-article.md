@@ -1,22 +1,14 @@
 ---
 title: 在自适应Forms中使用地理位置API
-seo-title: 在自适应Forms中使用地理位置API
-description: 使用地理位置api的
-seo-description: 使用地理位置api的
-uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
+description: 使用地理位置API填充表单上的地址字段
 feature: 自适应表单
-topics: integrations
-audience: developer
-doc-type: article
-activity: develop
 version: 6.3,6.4,6.5
-discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
@@ -24,7 +16,7 @@ ht-degree: 0%
 
 # 在自适应Forms中使用地理位置API{#using-geolocation-api-s-in-adaptive-forms}
 
-请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)页面，获取此功能的实时演示链接。
+请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)页面，获取此功能的实时演示链接。
 
 在本文中，我们将了解如何使用Google的地理位置API填充自适应表单的字段。 当您想要在表单上填充当前地址字段时，通常会使用此用例。
 
