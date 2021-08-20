@@ -1,28 +1,20 @@
 ---
 title: 使用发送电子邮件步骤Forms Workflow
-seo-title: 使用发送电子邮件步骤Forms Workflow
-description: “发送电子邮件”步骤在AEM Forms 6.4中引入。使用此步骤，我们可以构建业务流程或工作流，以便您发送包含或不包含附件的电子邮件。 以下视频将演示配置发送电子邮件组件的步骤
-seo-description: “发送电子邮件”步骤在AEM Forms 6.4中引入。使用此步骤，我们可以构建业务流程或工作流，以便您发送包含或不包含附件的电子邮件。 以下视频将演示配置发送电子邮件组件的步骤
-uuid: d054ebfb-3b9b-4ca4-8355-0eb0ee7febcb
+description: “发送电子邮件”步骤在AEM Forms 6.4中引入。使用此步骤，我们可以构建业务流程或工作流，以便您发送包含或不包含附件的电子邮件。 以下视频介绍如何配置发送电子邮件组件
 feature: 工作流
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.4,6.5
-discoiquuid: 3a11f602-2f4c-423a-baef-28824c0325a1
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '445'
 ht-degree: 1%
 
 ---
 
 
-# 使用{#using-send-email-step-of-forms-workflow}的“发送电子邮件”步骤Forms Workflow
+# 使用发送电子邮件步骤Forms Workflow {#using-send-email-step-of-forms-workflow}
 
 “发送电子邮件”步骤在AEM Forms 6.4中引入。使用此步骤，我们可以构建业务流程或工作流，以便您发送包含或不包含附件的电子邮件。 以下视频将演示配置发送电子邮件组件的步骤。
 
