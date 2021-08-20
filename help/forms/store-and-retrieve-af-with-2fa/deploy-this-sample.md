@@ -2,19 +2,16 @@
 title: 部署示例
 description: 在本地AEM Forms实例上运行用例
 feature: 自适应表单
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+type: Tutorial
 version: 6.4,6.5
 kt: 6602
 thumbnail: 6602.jpg
 topic: 开发
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '371'
 ht-degree: 1%
 
 ---
@@ -48,7 +45,7 @@ ht-degree: 1%
 ## 部署以下OSGi包
 
 部署具有[代码的包，以从数据库](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)中存储和获取数据
-部署[DevelopingWithServiceUser包](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
+部署[DevelopingWithServiceUser包](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
 
 ## 部署客户端库
 
