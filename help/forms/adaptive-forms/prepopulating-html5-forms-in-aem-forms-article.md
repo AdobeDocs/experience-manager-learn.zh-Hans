@@ -1,28 +1,20 @@
 ---
 title: 使用数据属性预填充HTML5 Forms。
-seo-title: 使用数据属性预填充HTML5 Forms。
 description: 通过从后端源获取数据来填充HTML5表单。
-seo-description: 通过从后端源获取数据来填充HTML5表单。
 feature: 自适应表单
-topics: mobile-forms
-audience: developer
-doc-type: article
-activity: implement
 version: 6.3,6.4,6.5.
-uuid: 889d2cd5-fcf2-4854-928b-0c2c0db9dbc2
-discoiquuid: 3aa645c9-941e-4b27-a538-cca13574b21c
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
 
 
-# 使用数据属性{#prepopulate-html-forms-using-data-attribute}预填充HTML5 Forms
+# 使用数据属性预填充HTML5 Forms {#prepopulate-html-forms-using-data-attribute}
 
 请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)页面，获取此功能的实时演示链接。
 
