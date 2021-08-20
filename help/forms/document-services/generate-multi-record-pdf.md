@@ -2,15 +2,11 @@
 title: 从一个数据文件生成多个PDF
 description: OutputService提供了多种方法来使用表单设计和数据创建文档，以便与表单设计合并。 了解如何从一个包含多个单个记录的大型xml中生成多个pdf。
 feature: 输出服务
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: fb6c21a9a88b5ebcbfb14213182a9b8cba6fe6ae
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 1%
