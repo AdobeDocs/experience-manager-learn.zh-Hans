@@ -2,15 +2,13 @@
 title: 在Linux上安装AEM Forms
 description: 了解如何安装32位库以便AEM Forms在Linux安装上工作。
 feature: 自适应表单
-audience: developer
-doc-type: article
-activity: setup
+type: Tutorial
 version: 6.4, 6.5
 topic: 开发
 role: Developer
 level: Beginner
 kt: 7593
-source-git-commit: 9583006352ca6a20a763c9d5ec7ba15c3791e897
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -88,7 +86,7 @@ yum remove glibc32-2.28-42.1.el8.x86_64
 所有说完，您希望x86_64和i686版本完全相同，例如从此输出到命令：
 yom info glibc
 
-上次元数据过期检查：0:41:33年1月18日东部时间2020年1月11:37:08日周六。
+上次元数据过期检查：0:41:33年1月18日星期六上午11:37:08。
 已安装的包
 名称：glibc
 版本：2.28
