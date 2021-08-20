@@ -1,28 +1,21 @@
 ---
 title: 在工作流中使用表单数据模型服务作为步骤
-seo-title: 在工作流中使用表单数据模型服务作为步骤
 description: 从AEM Forms 6.4开始，我们现在能够将表单数据模型用作AEM工作流的一部分。 以下视频将演示在AEM工作流中配置表单数据模型步骤所需的步骤。
-seo-description: 从AEM Forms 6.4开始，我们现在能够将表单数据模型用作AEM工作流的一部分。 以下视频将演示在AEM工作流中配置表单数据模型步骤所需的步骤。
-uuid: ecd5d5aa-01eb-48fb-872f-66c656ae14df.
 feature: 工作流
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
+type: Tutorial
 version: 6.4,6.5
-discoiquuid: c442f439-1e5d-4f96-85df-b818c28389ff
 topic: 开发
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 1%
 
 ---
 
 
-# 在工作流{#using-form-data-model-service-as-step-in-workflow}中使用表单数据模型服务作为步骤
+# 在工作流中使用表单数据模型服务作为步骤 {#using-form-data-model-service-as-step-in-workflow}
 
 从AEM Forms 6.4开始，我们现在能够将表单数据模型用作AEM工作流的一部分。 以下视频将演示在AEM工作流中配置表单数据模型步骤所需的步骤
 
@@ -33,7 +26,7 @@ ht-degree: 0%
 * [下载并部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。这是用于设置元数据属性的自定义OSGI包。
 >!![NOTE]在AEM Forms 6.5及更高版本中，此功能可开箱即用，如 [下所述](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* 如[此处](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)所述，使用SampleRest.war文件设置tomcat。Tomcat中部署的war文件具有返回申请人信用得分的代码。 信用得分是200到800之间的随机数
+* 如[此处](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)所述，使用SampleRest.war文件设置tomcat。Tomcat中部署的war文件具有返回申请人信用得分的代码。 信用得分是200到800之间的随机数
 
 * [使用包管理器将资产导入AEM](assets/invoke-fdm-as-service-step.zip)。该包包含以下内容：
 
