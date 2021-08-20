@@ -1,32 +1,24 @@
 ---
 title: 在AEM Forms中使用交易报表
-seo-title: 在AEM Forms中使用交易报表
 description: 利用AEM Forms中的事务报表，可统计自AEM Forms部署中指定日期以来发生的所有事务。
-seo-description: 利用AEM Forms中的事务报表，可统计自AEM Forms部署中指定日期以来发生的所有事务。
-uuid: e6133f7e-c79c-4006-89e7-3bebf7b8229e
 feature: 自适应表单
-topics: developing
-audience: administrator
-doc-type: article
-activity: setup
 version: 6.4.1,6.5
-discoiquuid: 1abdf07a-b9f0-4c58-a1c6-08ae57db2014
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 1%
+source-wordcount: '370'
+ht-degree: 2%
 
 ---
 
 
-# 在AEM Forms中使用事务报表{#using-transaction-reporting-in-aem-forms}
+# 在AEM Forms中使用交易报表{#using-transaction-reporting-in-aem-forms}
 
 AEM Forms 6.4.1引入了交易报告功能，用于捕获表单提交数量、使用文档服务渲染文档以及渲染交互式通信（Web和打印渠道）。此功能主要适用于希望根据表单提交数量和/或文档渲染数量授权软件的客户。 此功能当前仅在AEM Forms OSGi堆栈上可用。
 
-## 启用事务报告{#enabling-transaction-reporting}
+## 启用交易报告 {#enabling-transaction-reporting}
 
 默认情况下，事务记录处于禁用状态。 要启用交易记录，请按照以下步骤操作：
 
@@ -37,7 +29,7 @@ AEM Forms 6.4.1引入了交易报告功能，用于捕获表单提交数量、�
 
 启用事务报表后，您可以提交自适应Forms、使用文档服务生成文档或渲染Interactive Communication文档，以查看事务报表的实际操作情况。
 
-## 查看事务报表{#viewing-transaction-report}
+## 查看交易报表 {#viewing-transaction-report}
 
 要查看事务报表，请以管理员身份登录AEM Forms。 只有fd-Administrator组的成员才能查看事务报表。
 
