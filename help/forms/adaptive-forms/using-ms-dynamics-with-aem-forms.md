@@ -1,28 +1,20 @@
 ---
 title: 将Microsoft Dynamics与AEM Forms结合使用
-seo-title: 将Microsoft Dynamics与AEM Forms结合使用
 description: 此视频将演示一个工作流程，其中演示了AEM Forms如何与Microsoft Dynamics作为后端数据源结合使用，以提供交互式的个性化通信。
-seo-description: 此视频将演示一个工作流程，其中演示了AEM Forms如何与Microsoft Dynamics作为后端数据源结合使用，以提供交互式的个性化通信。
-uuid: 33d63899-1f58-49b3-a05e-6c57b01ef911
 feature: 自适应表单
-topics: integrations
-audience: developer
-doc-type: feature video
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: 6cb82275-55bc-4b9e-b958-75b906c6afa9
 topic: 开发
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 1%
+source-wordcount: '139'
+ht-degree: 2%
 
 ---
 
 
-# 将Microsoft Dynamics与AEM Forms{#using-microsoft-dynamics-with-aem-forms}结合使用
+# 将Microsoft Dynamics与AEM Forms结合使用{#using-microsoft-dynamics-with-aem-forms}
 
 AEM Forms数据集成允许您配置不同的数据源并将其连接到不同的数据源。 以下功能现成支持。 但是，通过少量自定义，您也可以集成其他数据源。
 
