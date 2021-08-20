@@ -1,20 +1,14 @@
 ---
 title: 将项目添加到选择组组件
-seo-title: 将项目添加到选择组组件
 description: 将项目动态添加到选择组组件
-seo-description: 将项目动态添加到选择组组件
 feature: 自适应表单
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.5
 topic: 开发
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -96,7 +90,7 @@ else
 **使用可视编辑器添加项目**
 
 * [下载资产](assets/usingthevisualeditor.zip)
-* 安装Tomcat（如果尚未安装）。 [此处提供了安装tomcat的说明](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* 安装Tomcat（如果尚未安装）。 [此处提供了安装tomcat的说明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
 * [在Tomcat中部署SampleRest.war文件](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
 * [打开Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 单击“创建” |文件上传”，并上传您在上一步中下载的文件
