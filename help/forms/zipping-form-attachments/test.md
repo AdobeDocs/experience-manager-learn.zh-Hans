@@ -1,21 +1,16 @@
 ---
 title: 测试解决方案
 description: 通过向表单中添加附件来测试解决方案，并触发发送电子邮件的工作流。
-sub-product: 表单
-feature: 工作流
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: develop
+feature: 自适应表单
 version: 6.5
 topic: 开发
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '257'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
