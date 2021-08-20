@@ -9,7 +9,7 @@ version: cloud-service
 topic: 开发
 thumbnail: 7836.jpg
 kt: 7836
-source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 1%
