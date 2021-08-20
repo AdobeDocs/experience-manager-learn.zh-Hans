@@ -2,18 +2,14 @@
 title: OCR数据提取
 description: 从政府颁发的文档中提取数据以填充表单。
 feature: 条形码Forms
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: use
 version: 6.4,6.5
 kt: 6679
 topic: 开发
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
@@ -51,11 +47,11 @@ OpenAPI规范（以前称为Swagger规范）是REST API的API描述格式。 Ope
 
 ## 创建数据源
 
-要将AEM/AEM Forms与第三方应用程序集成，我们需要在云服务配置中[创建数据源](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)。 请使用[swagger文件](assets/drivers-license-swagger.zip)创建数据源。
+要将AEM/AEM Forms与第三方应用程序集成，我们需要在云服务配置中[创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)。 请使用[swagger文件](assets/drivers-license-swagger.zip)创建数据源。
 
 ## 创建表单数据模型
 
-AEM Forms数据集成提供了直观的用户界面，用于创建和使用[表单数据模型](https://docs.adobe.com/content/help/en/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 将表单数据模型基于在前面步骤中创建的数据源。
+AEM Forms数据集成提供了直观的用户界面，用于创建和使用[表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 将表单数据模型基于在前面步骤中创建的数据源。
 
 ![fdm](assets/test-dl-fdm.PNG)
 
