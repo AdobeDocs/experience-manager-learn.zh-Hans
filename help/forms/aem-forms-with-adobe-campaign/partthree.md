@@ -1,27 +1,19 @@
 ---
 title: 使用ACS配置文件预填自适应表单
-seo-title: 使用ACS配置文件预填自适应表单
 description: 使用ACS配置文件预填自适应Forms
-seo-description: 使用ACS配置文件预填自适应Forms
-uuid: 9bff6f61-96e9-40d4-a977-a80008cfbeee
 feature: 自适应Forms，表单数据模型
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: a2ffcb84-4dd8-45e5-8e2c-0da74202851b
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
 
-# 使用ACS配置文件{#prefilling-adaptive-form-using-acs-profile}预填自适应表单
+# 使用ACS配置文件预填自适应表单 {#prefilling-adaptive-form-using-acs-profile}
 
 在本部分中，我们将使用从ACS获取的用户档案信息预填自适应表单。 AEM Forms具有预填自适应表单的强大功能。
 
