@@ -1,22 +1,14 @@
 ---
-title: 将LDAP与Aem结合使用Forms Workflow
-seo-title: 将LDAP与Aem结合使用Forms Workflow
+title: 将LDAP与AEM Forms工作流结合使用
 description: 将AEM Forms工作流任务分配给提交者的管理器
-seo-description: 将AEM Forms工作流任务分配给提交者的管理器
 feature: 自适应Forms，工作流
-topics: integrations
-audience: developer
-doc-type: article
-activity: setup
+topic: 集成
+role: Developer
 version: 6.3,6.4,6.5
-uuid: 3e32c3a7-387f-4652-8a94-4e6aa6cd5ab8
-discoiquuid: 671872b3-3de0-40da-9691-f8b7e88a9443
-topic: 开发
-role: Admin
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
