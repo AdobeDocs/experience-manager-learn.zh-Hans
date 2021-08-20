@@ -2,18 +2,14 @@
 title: 短信双重身份验证
 description: 添加额外的安全层，以帮助在用户想要执行某些活动时确认其身份
 feature: 自适应表单
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: use
 version: 6.4,6.5
 kt: 6317
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '602'
 ht-degree: 1%
 
 ---
@@ -51,11 +47,11 @@ OpenAPI规范（以前称为Swagger规范）是REST API的API描述格式。 Ope
 
 ## 创建数据源
 
-要将AEM/AEM Forms与第三方应用程序集成，我们需要在云服务配置中[创建数据源](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)。
+要将AEM/AEM Forms与第三方应用程序集成，我们需要在云服务配置中[创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)。
 
 ## 创建表单数据模型
 
-AEM Forms数据集成提供了直观的用户界面，用于创建和使用[表单数据模型](https://docs.adobe.com/content/help/en/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 表单数据模型依赖于数据源来交换数据。
+AEM Forms数据集成提供了直观的用户界面，用于创建和使用[表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 表单数据模型依赖于数据源来交换数据。
 可从此处](assets/sms-2fa-fdm.zip)下载完成的表单数据模型[
 
 ![fdm](assets/2FA-fdm.PNG)
