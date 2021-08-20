@@ -1,31 +1,26 @@
 ---
 title: '在AEM自适应Forms中使用自动测试 '
-seo-title: '在AEM自适应Forms中使用自动测试 '
 description: 使用Calvin SDK自动测试自适应Forms
-seo-description: 使用Calvin SDK自动测试自适应Forms
 feature: 自适应表单
-topics: development
-audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
-uuid: 3ad4e6d6-d3b1-4e4d-9169-847f74ba06be
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '446'
 ht-degree: 1%
 
 ---
 
 
-# 在AEM自适应Forms {#using-automated-tests-with-aem-adaptive-forms}中使用自动测试
+# 在AEM自适应Forms中使用自动测试 {#using-automated-tests-with-aem-adaptive-forms}
 
 使用Calvin SDK自动测试自适应Forms
 
-Calvin SDK是一个实用程序API，供自适应Forms开发人员测试自适应Forms。 Calvin SDK是基于[Hobbes.js测试框架](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)构建的。 Calvin SDK从AEM Forms 6.3开始提供。
+Calvin SDK是一个实用程序API，供自适应Forms开发人员测试自适应Forms。 Calvin SDK是基于[Hobbes.js测试框架](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)构建的。 Calvin SDK从AEM Forms 6.3开始提供。
 
 在本教程中，您将创建以下内容：
 
@@ -80,13 +75,13 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 * 创建测试用例后，您可以向测试用例添加操作。
 * 可以将包括`navigateTo`、`asserts.isTrue`的操作作为操作添加到测试案例中。
 
-## 运行自动测试{#running-the-automated-tests}
+## 运行自动测试 {#running-the-automated-tests}
 
 [](http://localhost:4502/libs/granite/testing/hobbes.html)打开测试包展开测试包并运行测试。如果所有内容都成功运行，您将看到以下输出。
 
 ![calvinsdk](assets/calvinimage.png)
 
-## 试用示例测试包{#try-out-the-sample-test-suites}
+## 试用示例测试包 {#try-out-the-sample-test-suites}
 
 作为示例包的一部分，还有三个其他测试包。 您可以通过在clientlibrary的js.txt文件中包含相应的文件来尝试这些操作，如下所示：
 
