@@ -1,32 +1,24 @@
 ---
 title: '生成JSON Web令牌和访问令牌 '
-seo-title: '生成JSON Web令牌和访问令牌 '
 description: 本文介绍了生成对Adobe Campaign Standard进行REST调用所需的JWT和访问令牌所需的代码
-seo-description: 本文介绍了生成对Adobe Campaign Standard进行REST调用所需的JWT和访问令牌所需的代码
-uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
 feature: 自适应Forms，表单数据模型
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
 
-# 生成JSON Web令牌和访问令牌{#generating-json-web-token-and-access-token}
+# 生成JSON Web令牌和访问令牌 {#generating-json-web-token-and-access-token}
 
 本文介绍了生成对Adobe Campaign Standard进行REST调用所需的JWT和访问令牌所需的代码
 
-## 生成JSON Web令牌{#generate-json-web-token}
+## 生成JSON Web令牌 {#generate-json-web-token}
 
 使用Adobe Campaign API的第一步是生成JWT。 有关如何为ACS生成JWT的代码示例很多。 您可以按照此[java代码示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)生成JWT。
 
@@ -247,6 +239,6 @@ public class CampaignServiceImpl implements CampaignService {
  }
 ```
 
-## 生成访问令牌{#generate-access-token}
+## 生成访问令牌 {#generate-access-token}
 
 然后，我们通过进行POST调用，将生成的JWT交换为访问令牌。 然后，此访问令牌将作为授权密钥在HTTP标头中发送，以用于后续的REST调用
