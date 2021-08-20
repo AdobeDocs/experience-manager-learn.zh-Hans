@@ -2,15 +2,11 @@
 title: 在AEM Forms中创建您的第一个Servlet
 description: 构建您的第一个sling servlet以将数据与表单模板合并。
 feature: 自适应表单
-topics: development
-audience: developer
-doc-type: article
-activity: setup
 version: 6.4,6.5
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: c74c6f5627e69e32bbf0098d6b6bab122cace798
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 2%
