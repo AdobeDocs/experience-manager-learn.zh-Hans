@@ -2,14 +2,13 @@
 title: 启用字符串跟踪的步骤（Unix设置）
 description: '配置字符串日志以解决PDF生成器问题 '
 type: Troubleshooting
-product: forms
 role: Admin
 level: Intermediate
 version: 6.5
 feature: PDF 生成器
 topic: '管理  '
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 7%
