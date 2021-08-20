@@ -2,17 +2,13 @@
 title: 在网页中嵌入自适应Forms/HTML5表单
 description: 在非AEM网页中嵌入自适应Forms或HTML5表单所需的配置步骤。
 feature: 自适应表单
-feature-set: Adaptive Forms
-topics: development
-audience: developer
-doc-type: Tutorial
-activity: implement
+type: Tutorial
 version: 6.4,6.5
-topic: 管理
-role: Admin
+topic: 开发
+role: Developer
 level: Beginner
 kt: 8390
-source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 2%
