@@ -1,28 +1,20 @@
 ---
 title: 利用产出和Forms服务在AEM Forms进行开发
-seo-title: 利用产出和Forms服务在AEM Forms进行开发
 description: 在AEM Forms中使用输出和Forms服务API
-seo-description: 在AEM Forms中使用输出和Forms服务API
-uuid: be018eb5-dbe7-4101-a1a9-bee11ac97273
 feature: 输出服务
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
-discoiquuid: 57f478a9-8495-469e-8a06-ce1251172fda
 topic: 开发
 role: Developer
 level: Intermediate
-source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '593'
 ht-degree: 1%
 
 ---
 
 
-# 在AEM Forms中使用输出和Forms服务进行开发{#developing-with-output-and-forms-services-in-aem-forms}
+# 利用产出和Forms服务在AEM Forms进行开发{#developing-with-output-and-forms-services-in-aem-forms}
 
 在AEM Forms中使用输出和Forms服务API
 
