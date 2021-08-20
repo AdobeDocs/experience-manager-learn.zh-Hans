@@ -1,20 +1,14 @@
 ---
 title: AEM Forms与Marketo（第4部分）
-seo-title: AEM Forms与Marketo（第4部分）
 description: 有关使用AEM Forms表单数据模型将AEM Forms与Marketo集成的教程。
-seo-description: 有关使用AEM Forms表单数据模型将AEM Forms与Marketo集成的教程。
 feature: 自适应Forms，表单数据模型
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
