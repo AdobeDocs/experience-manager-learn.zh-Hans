@@ -12,15 +12,15 @@ level: Beginner
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3106'
+source-wordcount: '3100'
 ht-degree: 0%
 
 ---
 
 
-# 页面和模板{#pages-and-template}
+# 页面和模板 {#pages-and-template}
 
 在本章中，我们将探讨基本页面组件与可编辑模板之间的关系。 我们将基于[AdobeXD](https://www.adobe.com/products/xd.html)中的某些模型构建未设置样式的文章模板。 在构建模板过程中，将介绍可编辑模板的核心组件和高级策略配置。
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 1. 了解可编辑模板的详细信息以及如何使用策略来强制对页面内容进行精细控制。
 1. 了解模板和页面的关联方式
 
-## 将生成{#what-you-will-build}的内容
+## 将构建的内容 {#what-you-will-build}
 
 在本教程的本部分中，您将构建一个新的文章页面模板，该模板可用于创建新文章页面，并与通用结构保持一致。 文章页面模板将基于AdobeXD中生成的设计和UI Kit。 本章仅侧重于构建模板的结构或框架。 将不会实施样式，但模板和页面将可正常工作。
 
@@ -157,9 +157,9 @@ ht-degree: 0%
 
    ![文章页面模板缩略图](assets/pages-templates/article-page-template-thumbnail.png)
 
-## 使用体验片段{#experience-fragments}更新页眉和页脚
+## 使用体验片段更新页眉和页脚 {#experience-fragments}
 
-创建全局内容（如页眉或页脚）时的常见做法是使用[体验片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 体验片段，允许用户合并多个组件以创建一个可引用的组件。 体验片段具有支持多站点管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)的优势。
+创建全局内容（如页眉或页脚）时的常见做法是使用[体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 体验片段，允许用户合并多个组件以创建一个可引用的组件。 体验片段具有支持多站点管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)的优势。
 
 AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹配模型。 按照以下视频中的步骤操作：
 
@@ -233,7 +233,7 @@ AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹�
    * 将&#x200B;**父页面**&#x200B;设置为`/content/wknd/us/en/magazine`。
    * 在&#x200B;**项目设置**&#x200B;下，选中&#x200B;**链接项目**，然后选中&#x200B;**显示日期**。
 
-## Inspect节点结构{#node-structure}
+## Inspect节点结构 {#node-structure}
 
 此时，文章页面显然未设置样式。 但是，基本结构已经到位。 接下来，检查文章页面的节点结构，以更好地了解模板、页面和组件的角色。
 
@@ -261,7 +261,7 @@ AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹�
 
    请注意，页面组件下只有2个HTL脚本，即`customfooterlibs.html`和`customheaderlibs.html`。 *那么，此组件如何渲染页面？*
 
-   `sling:resourceSuperType`属性指向`core/wcm/components/page/v2/page`。 此属性允许WKND的页面组件继承核心组件页面组件功能的&#x200B;**所有**。 这是[代理组件模式](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)的第一个示例。 有关更多信息，请参见[此处。](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html)。
+   `sling:resourceSuperType`属性指向`core/wcm/components/page/v2/page`。 此属性允许WKND的页面组件继承核心组件页面组件功能的&#x200B;**所有**。 这是[代理组件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)的第一个示例。 有关更多信息，请参见[此处。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)。
 
 1. Inspect WKND组件中的另一个组件`Breadcrumb`组件位于：`/apps/wknd/components/breadcrumb`。 请注意，可以找到相同的`sling:resourceSuperType`属性，但此时它指向`core/wcm/components/breadcrumb/v2/breadcrumb`。 这是使用代理组件模式包含核心组件的另一个示例。 事实上，WKND代码库中的所有组件都是AEM核心组件的代理（我们著名的HelloWorld组件除外）。 在&#x200B;*编写自定义代码之前，最好尝试并尽可能多地重复使用核心组件的功能。*
 
@@ -315,7 +315,7 @@ AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹�
 
 1. Inspect另一个核心组件，如`/libs/core/wcm/components/breadcrumb/v2/breadcrumb`的痕迹导航。 查看`breadcrumb.html`脚本，了解痕迹导航组件的标记最终如何生成。
 
-## 将配置保存到源控件{#configuration-persistence}
+## 将配置保存到源控件 {#configuration-persistence}
 
 在很多情况下，特别是在AEM项目开始时，将配置（如模板和相关内容策略）保留到源控制中非常有价值。 这可确保所有开发人员针对同一组内容和配置开展工作，并可确保各环境之间具有额外的一致性。 一旦项目达到一定的成熟度，管理模板的做法就可以交给一组特定的高级用户。
 
@@ -364,7 +364,7 @@ AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹�
 
 恭喜，您刚刚使用Adobe Experience Manager Sites创建了新模板和页面。
 
-### 后续步骤{#next-steps}
+### 后续步骤 {#next-steps}
 
 此时，文章页面显然未设置样式。 请按照[客户端库和前端工作流](client-side-libraries.md)教程，了解包含CSS和Javascript以将全局样式应用到站点并集成专用的前端内部版本的最佳实践。
 
