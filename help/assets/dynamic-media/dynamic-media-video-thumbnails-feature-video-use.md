@@ -7,10 +7,10 @@ version: 6.3, 6.4, 6.5
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 11%
+source-wordcount: '103'
+ht-degree: 3%
 
 ---
 
@@ -27,4 +27,4 @@ AEM Assets自定义视频缩略图使作者能够从一组生成的缩略图中�
 
 >[!NOTE]
 >
->您应在Dynamic Media](https://docs.adobe.com/docs/cn/aem/6-3/administer/content/dynamic-media/config-dynamic.html)模式下运行[AEM实例
+>您应在Dynamic Media](https://experienceleague.adobe.com/docs/)模式下运行[AEM实例
