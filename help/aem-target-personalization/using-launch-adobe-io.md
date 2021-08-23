@@ -7,9 +7,9 @@ feature: 体验片段
 topic: 个性化
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1098'
 ht-degree: 2%
 
 ---
@@ -87,7 +87,7 @@ AEM提供了与Experience Platform Launch的开箱即用集成。 通过此集�
 
 #### 添加Target扩展
 
-Adobe Target扩展支持使用适用于新版Web的Target JavaScript SDK的客户端实施，`at.js`。 仍在使用Target旧库`mbox.js`、[的客户应升级到at.js](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/upgrading-from-atjs-1x-to-atjs-20.html)以使用Launch。
+Adobe Target扩展支持使用适用于新版Web的Target JavaScript SDK的客户端实施，`at.js`。 仍在使用Target旧库`mbox.js`、[的客户应升级到at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html)以使用Launch。
 
 Target扩展包含两个主要部分：
 
@@ -137,7 +137,7 @@ Target扩展包含两个主要部分：
 
 >[!NOTE]
 >
-> 授予Adobe I/O集成使用相应的[角色选择工作区的权限，以允许中心团队仅在少数几个工作区中进行API驱动的更改](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html)。
+> 授予Adobe I/O集成使用相应的[角色选择工作区的权限，以允许中心团队仅在少数几个工作区中进行API驱动的更改](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html)。
 
 1. 在AEM中使用来自Adobe I/O的凭据创建IMS集成。（01:12到03:55）
 2. 在Experience Platform Launch中，创建资产。 （覆盖于[上方](#create-launch-property)）
