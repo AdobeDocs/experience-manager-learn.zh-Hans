@@ -2,7 +2,7 @@
 title: 了解Adobe Managed Services上的AdobeIMS身份验证和AEM
 description: Adobe Experience Manager引入了对AEM实例的Admin Console支持，以及基于AEM on Managed Services身份验证的AdobeIMS(Identity Management系统)。   此集成允许AEM Managed Services客户在一个统一的Web控制台中管理所有Experience Cloud用户。 可以将用户和组分配给与AEM实例关联的产品配置文件，从而授予对特定AEM实例的集中管理访问权限。
 version: 6.4, 6.5
-feature: 用户和组
+feature: 用户和群组
 topics: authentication, security
 activity: understand
 audience: administrator, architect, developer, implementer
@@ -11,7 +11,7 @@ kt: 781
 topic: 架构
 role: Architect
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 了解Adobe Managed Services上使用AEM进行AdobeIMS身份验证{#understanding-adobe-ims-authentication-with-aem-on-adobe-managed-services}
+# 了解Adobe Managed Services上的AdobeIMS身份验证和AEM{#understanding-adobe-ims-authentication-with-aem-on-adobe-managed-services}
 
 Adobe Experience Manager引入了对AEM实例的Admin Console支持，以及基于AEM on Managed Services身份验证的AdobeIMS(Identity Management系统)。   此集成允许AEM Managed Services客户在一个统一的Web控制台中管理所有Experience Cloud用户。 可以将用户和组分配到与AEM实例关联的产品配置文件，从而授予对特定AEM实例的集中管理访问权限。
 
@@ -34,7 +34,7 @@ Adobe Experience Manager引入了对AEM实例的Admin Console支持，以及基�
 
 ** AEM 6.4 SP3及更高版本支持Adobe Managed Services客户使用此功能。*
 
-## 最佳实践{#best-practices}
+## 最佳实践 {#best-practices}
 
 ### 在Admin Console中应用权限
 
