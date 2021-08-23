@@ -13,10 +13,10 @@ feature: SPA编辑器
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 4%
+source-wordcount: '470'
+ht-degree: 2%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 4%
 
 *虽然不需要，但对开发传统的AEM Sites组件有基 [本的了解](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。*
 
-## 本地开发环境{#local-dev-environment}
+## 本地开发环境 {#local-dev-environment}
 
 要完成本教程，需要本地开发环境。 屏幕截图和视频是使用AEM作为Cloud ServiceSDK捕获的，该SDK在Mac OS环境中运行，并且IDE为[Visual Studio代码](https://code.visualstudio.com/)。 除非另有说明，否则命令和代码应独立于本地操作系统。
 
@@ -61,10 +61,10 @@ ht-degree: 4%
 
 >[!NOTE]
 >
-> **初次使用AEM as aCloud Service?** 请参阅以 [下指南，以使用AEM as a Cloud ServiceSDK设置本地开发环境](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **初次使用AEM as aCloud Service?** 请参阅以 [下指南，以使用AEM as a Cloud ServiceSDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 >
-> **AEM 6.5的新增功能？** 请参阅以 [下指南以设置本地开发环境](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+> **AEM 6.5的新增功能？** 请参阅以 [下指南以设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
-## 后续步骤{#next-steps}
+## 后续步骤 {#next-steps}
 
 你在等什么?!通过导航到[创建项目](create-project.md)章节来启动教程，并了解如何使用AEM项目原型生成启用了SPA Editor的项目。
