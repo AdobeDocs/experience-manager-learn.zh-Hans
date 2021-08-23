@@ -13,10 +13,10 @@ feature: SPA编辑器
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 7%
+source-wordcount: '702'
+ht-degree: 3%
 
 ---
 
@@ -35,9 +35,9 @@ ht-degree: 7%
 
 本教程旨在将&#x200B;**AEM用作Cloud Service**，并且向后兼容&#x200B;**AEM 6.5.4+**&#x200B;和&#x200B;**AEM 6.4.8+**。 SPA的实施方式如下：
 
-* [Maven AEM项目原型](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html)
-* [AEM SPA Editor](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
-* [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
+* [Maven AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [AEM SPA Editor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [Angular](https://angular.io/)
 
 *估计需要1-2小时才能完成教程的每个部分。*
@@ -54,24 +54,24 @@ ht-degree: 7%
 
 * HTML、CSS和JavaScript的基本知识
 * 对[Angular](https://angular.io/)的基本熟悉
-* [AEM as a Cloud ServiceSDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、 [AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) 或 [AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
+* [AEM as a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、 [AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) 或 [AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) （3.3.9或更高版本）
 * [Node.](https://nodejs.org/en/) jsand  [npm](https://www.npmjs.com/)
 
-*虽然不需要，但对开发传统的AEM Sites组件有基 [本的了解](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。*
+*虽然不需要，但对开发传统的AEM Sites组件有基 [本的了解](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。*
 
-## 本地开发环境{#local-dev-environment}
+## 本地开发环境 {#local-dev-environment}
 
 要完成本教程，需要本地开发环境。 屏幕截图和视频是使用AEM作为Cloud ServiceSDK捕获的，该SDK在Mac OS环境中运行，并且IDE为[Visual Studio代码](https://code.visualstudio.com/)。 除非另有说明，否则命令和代码应独立于本地操作系统。
 
 >[!NOTE]
 >
-> **初次使用AEM as aCloud Service?** 请参阅以 [下指南，以使用AEM as a Cloud ServiceSDK设置本地开发环境](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **初次使用AEM as aCloud Service?** 请参阅以 [下指南，以使用AEM as a Cloud ServiceSDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 >
-> **AEM 6.5的新增功能？** 请参阅以 [下指南以设置本地开发环境](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+> **AEM 6.5的新增功能？** 请参阅以 [下指南以设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
-## 后续步骤{#next-steps}
+## 后续步骤 {#next-steps}
 
 你在等什么?!启动本教程的方法是导航到[SPA Editor项目](create-project.md)章节，并了解如何使用AEM项目原型生成启用SPA Editor的项目。
 
@@ -79,7 +79,7 @@ ht-degree: 7%
 
 本教程的项目代码是为AEM as a Cloud Service构建的。 为了使项目代码向后兼容&#x200B;**6.5.4+**&#x200B;和&#x200B;**6.4.8+**，做了若干修改。
 
-[UberJar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4**&#x200B;已作为依赖项包含在内：
+[UberJar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4**&#x200B;已作为依赖项包含在内：
 
 ```xml
 <!-- Adobe AEM 6.x Dependencies -->
