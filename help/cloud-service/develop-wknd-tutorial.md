@@ -9,10 +9,10 @@ feature: AEM项目原型、核心组件、页面编辑器、可编辑模板
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 9%
+source-wordcount: '362'
+ht-degree: 7%
 
 ---
 
@@ -31,9 +31,9 @@ ht-degree: 9%
 
 本教程旨在将&#x200B;**AEM用作Cloud Service**，并且向后兼容&#x200B;**AEM 6.5+**&#x200B;和&#x200B;**AEM 6.4.2+**。
 
-**[请在此处查看教程！](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
+**[请在此处查看教程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
-## 将WKND部署到AEM as a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## 将WKND部署到AEM as aCloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
 完成WKND教程后，请观看下面的视频，概述如何将WKND项目部署到AEM as aCloud Service。
 
