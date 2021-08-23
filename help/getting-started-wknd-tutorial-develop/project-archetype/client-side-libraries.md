@@ -10,17 +10,17 @@ role: Developer
 level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3299'
-ht-degree: 1%
+source-wordcount: '3285'
+ht-degree: 0%
 
 ---
 
 
-# 客户端库和前端工作流{#client-side-libraries}
+# 客户端库和前端工作流 {#client-side-libraries}
 
-了解如何使用客户端库或客户端库来部署和管理Adobe Experience Manager(AEM)Sites实施的CSS和Javascript。 本教程还将介绍如何将[ui.frontend](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/uifrontend.html)模块（即解耦的[webpack](https://webpack.js.org/)项目）集成到端到端构建过程中。
+了解如何使用客户端库或客户端库来部署和管理Adobe Experience Manager(AEM)Sites实施的CSS和Javascript。 本教程还将介绍如何将[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)模块（即解耦的[webpack](https://webpack.js.org/)项目）集成到端到端构建过程中。
 
 ## 前提条件 {#prerequisites}
 
@@ -65,7 +65,7 @@ ht-degree: 1%
 1. 了解如何使用UI.Frontend模块和Web Pack开发服务器进行专用前端开发。
 1. 了解将编译的CSS和JavaScript交付到Sites实施的端到端工作流。
 
-## 将生成{#what-you-will-build}的内容
+## 将构建的内容 {#what-you-will-build}
 
 在本章中，您将为WKND站点和文章页面模板添加一些基线样式，以便使实施更接近于[UI设计模型](assets/pages-templates/wknd-article-design.xd)。 您将使用高级前端工作流将WebPack项目集成到AEM客户端库中。
 
@@ -81,7 +81,7 @@ ht-degree: 1%
 1. 以有组织的方式管理对第三方框架的依赖
 1. 通过将CSS/JS连接到一个或两个请求中，可最大限度地减少客户端请求数。
 
-有关使用[客户端库的更多信息，请参阅此处。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html)
+有关使用[客户端库的更多信息，请参阅此处。](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)
 
 客户端库确实存在一些限制。 最引人注目的是对常用前端语言（如Sass、LESS和TypeScript）的有限支持。 在本教程中，我们将介绍&#x200B;**ui.frontend**&#x200B;模块如何帮助解决此问题。
 
@@ -89,7 +89,7 @@ ht-degree: 1%
 
 ## 客户端库组织 {#organization}
 
-接下来，我们将探索由[AEM项目原型](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html)生成的clientlibs的组织。
+接下来，我们将探索由[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)生成的clientlibs的组织。
 
 ![高级客户库组织](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -117,9 +117,9 @@ ht-degree: 1%
 
 1. 请注意，从源代码管理中忽略`clientlib-site`和`clientlib-dependencies`。 这是特意设计的，因为这些将在构建时由`ui.frontend`模块生成。
 
-## 更新基本样式{#base-styles}
+## 更新基本样式 {#base-styles}
 
-接下来，更新在&#x200B;**[ui.frontend](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)**&#x200B;模块中定义的基本样式。 `ui.frontend`模块中的文件将生成包含Site主题和任何第三方依赖项的`clientlib-site`和`clientlib-dependecies`库。
+接下来，更新在&#x200B;**[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)**&#x200B;模块中定义的基本样式。 `ui.frontend`模块中的文件将生成包含Site主题和任何第三方依赖项的`clientlib-site`和`clientlib-dependecies`库。
 
 在支持语言（如[Sass](https://sass-lang.com/)或[TypeScript](https://www.typescriptlang.org/)）方面，客户端库存在一些限制。 有许多开源工具，如[NPM](https://www.npmjs.com/)和[webpack](https://webpack.js.org/)，可加速和优化前端开发。 **ui.frontend**&#x200B;模块的目标是能够使用这些工具管理大多数前端源文件。
 
@@ -164,7 +164,7 @@ ht-degree: 1%
 
    Inspect已更改的文件，以查看WKND样式实施的详细信息。
 
-## Inspect ui.frontend集成{#ui-frontend-integration}
+## Inspect ui.frontend集成 {#ui-frontend-integration}
 
 内置到&#x200B;**ui.frontend**&#x200B;模块[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)的关键集成块会从Webpack/npm项目中获取已编译的CSS和JS工件，并将它们转换为AEM客户端库。
 
@@ -200,7 +200,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
    >[!NOTE]
    >
-   >还有一个`npm run prod`配置文件，该配置文件将缩小JS和CSS。 每当通过Maven触发Web包内部版本时，这便是标准编译。 有关[ui.frontend模块的更多详细信息，请访问此处](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)。
+   >还有一个`npm run prod`配置文件，该配置文件将缩小JS和CSS。 每当通过Maven触发Web包内部版本时，这便是标准编译。 有关[ui.frontend模块的更多详细信息，请访问此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)。
 
 1. Inspect `ui.frontend/dist/clientlib-site/site.css`下的文件`site.css`。 这是基于Sass源文件的编译CSS。
 
@@ -236,7 +236,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 >
 > 对于所有项目，可能不需要使用&#x200B;**ui.frontend**&#x200B;模块。 **ui.frontend**&#x200B;模块增加了额外的复杂性，如果不需要/希望使用这些高级前端工具(Sass、webpack、npm...)，则可能不需要它。
 
-## 页面和模板包含{#page-inclusion}
+## 页面和模板包含 {#page-inclusion}
 
 接下来，让我们查看如何在AEM页面中引用clientlib。 Web开发中的常见最佳实践是，在结束`</body>`标记之前，将CSS包含在HTML标头`<head>`和JavaScript中。
 
@@ -315,9 +315,9 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
    >[!WARNING]
    >
-   >在发布端，客户端库是&#x200B;**不**&#x200B;从&#x200B;**/apps**&#x200B;提供的，这一点至关重要，因为出于安全原因，应使用[Dispatcher筛选器部分](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section)限制此路径。 客户端库的[allowProxy属性](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)可确保CSS和JS是从&#x200B;**/etc.clientlibs**&#x200B;提供的。
+   >在发布端，客户端库是&#x200B;**不**&#x200B;从&#x200B;**/apps**&#x200B;提供的，这一点至关重要，因为出于安全原因，应使用[Dispatcher筛选器部分](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section)限制此路径。 客户端库的[allowProxy属性](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)可确保CSS和JS是从&#x200B;**/etc.clientlibs**&#x200B;提供的。
 
-## Webpack DevServer — 静态标记{#webpack-dev-static}
+## Webpack DevServer — 静态标记 {#webpack-dev-static}
 
 在前几个练习中，我们能够更新&#x200B;**ui.frontend**&#x200B;模块中的多个Sass文件，并通过构建过程最终看到这些更改反映在AEM中。 接下来，我们将看到利用[webpack-dev-server](https://webpack.js.org/configuration/dev-server/)的技术，以针对&#x200B;**static** HTML快速开发我们的前端样式。
 
@@ -418,7 +418,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
 恭喜，文章页面现在具有一些与WKND品牌匹配的一致样式，并且您已经熟悉&#x200B;**ui.frontend**&#x200B;模块！
 
-### 后续步骤{#next-steps}
+### 后续步骤 {#next-steps}
 
 了解如何使用Experience Manager的样式系统实施单个样式并重复使用核心组件。 [使用样式系统进](style-system.md) 行开发，包括使用样式系统通过特定于品牌的CSS和模板编辑器的高级策略配置来扩展核心组件。
 
@@ -427,7 +427,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 1. 克隆[github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd)存储库。
 1. 查看`tutorial/client-side-libraries-solution`分支。
 
-## 其他工具和资源{#additional-resources}
+## 其他工具和资源 {#additional-resources}
 
 ### aemfed {#develop-aemfed}
 
@@ -437,7 +437,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
 如果您在&#x200B;**ui.apps**&#x200B;模块中执行大量工作、修改HTL脚本并创建自定义组件，则&#x200B;**aemfed**&#x200B;可以成为非常强大的使用工具。 [完整文档可在此处找到。](https://github.com/abmaonline/aemfed)
 
-### 调试客户端库{#debugging-clientlibs}
+### 调试客户端库 {#debugging-clientlibs}
 
 使用&#x200B;**类别**&#x200B;和&#x200B;**嵌入**&#x200B;的不同方法来包含多个客户端库，可能会麻烦进行故障诊断。 AEM会提供一些可帮助解决此问题的工具。 最重要的工具之一是&#x200B;**重建客户端库**，这将强制AEM重新编译任何LESS文件并生成CSS。
 
