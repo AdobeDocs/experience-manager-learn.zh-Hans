@@ -1,22 +1,17 @@
 ---
 title: 浏览GraphQL API - AEM无头入门 — GraphQL
 description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 使用内置的GrapiQL IDE浏览AEM GraphQL API。 了解AEM如何根据内容片段模型自动生成GraphQL模式。 尝试使用GraphQL语法构建基本查询。
-sub-product: 资产
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
-feature: 内容片段、 GraphQL API
+feature: 内容片段， GraphQL API
 topic: 无外设、内容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -40,7 +35,7 @@ AEM的GraphQL API提供了一种功能强大的查询语言，用于将内容片
 * 了解如何查询内容片段的变体。
 * 了解如何连接多个内容片段模型的查询
 
-## 安装GraphiQL工具{#install-graphiql}
+## 安装GraphiQL工具 {#install-graphiql}
 
 GraphiQL IDE是一款开发工具，仅在开发或本地实例等较低级别环境中需要。 因此，它不会包含在AEM项目中，而是作为单独的包提供，可以临时安装。
 
@@ -57,7 +52,7 @@ GraphiQL IDE是一款开发工具，仅在开发或本地实例等较低级别�
 
    ![安装GraphiQL包](assets/explore-graphql-api/install-graphiql-package.png)
 
-## 查询内容片段列表{#query-list-cf}
+## 查询内容片段列表 {#query-list-cf}
 
 一个常见要求是查询多个内容片段。
 
@@ -137,7 +132,7 @@ GraphiQL IDE是一款开发工具，仅在开发或本地实例等较低级别�
 
    您应会看到返回的&#x200B;**Adventures**&#x200B;列表。 通过向查询添加其他字段，您可以随意尝试。
 
-## 筛选内容片段列表{#filter-list-cf}
+## 过滤内容片段列表 {#filter-list-cf}
 
 接下来，让我们看看如何根据属性值将结果过滤为内容片段的子集。
 
@@ -189,7 +184,7 @@ GraphiQL IDE是一款开发工具，仅在开发或本地实例等较低级别�
 
 还有许多其他用于筛选和创建复杂查询的选项，以上只是几个示例。
 
-## 查询单个内容片段{#query-single-cf}
+## 查询单个内容片段 {#query-single-cf}
 
 也可以直接查询单个内容片段。 AEM中的内容以分层方式存储，并且片段的唯一标识符基于片段的路径。 如果目标是返回有关单个片段的数据，则最好使用路径并直接查询模型。 使用此语法意味着查询复杂性将非常低，并且会生成更快的结果。
 
@@ -237,7 +232,7 @@ GraphiQL IDE是一款开发工具，仅在开发或本地实例等较低级别�
 
 1. 执行查询并观察`biography`字段包含的`html`结果要短得多。
 
-## 查询多个内容片段模型{#query-multiple-models}
+## 查询多个内容片段模型 {#query-multiple-models}
 
 也可以将单独的查询合并到单个查询中。 这有助于最大限度地减少为应用程序提供支持所需的HTTP请求数。 例如，应用程序的&#x200B;*Home*&#x200B;视图可以根据&#x200B;**两个**&#x200B;不同的内容片段模型显示内容。 我们不能执行&#x200B;**两个**&#x200B;单独的查询，而是可以将查询合并到单个请求中。
 
@@ -302,6 +297,6 @@ GraphiQL IDE是一款开发工具，仅在开发或本地实例等较低级别�
 
 恭喜，您刚刚创建并执行了多个GraphQL查询！
 
-## 后续步骤{#next-steps}
+## 后续步骤 {#next-steps}
 
 在下一章[从React应用程序查询AEM](./graphql-and-external-app.md)中，您将了解外部应用程序如何查询AEM GraphQL端点。 外部应用程序修改示例WKND GraphQL React应用程序以添加过滤GraphQL查询，从而允许应用程序的用户按活动过滤历险。 此外，还将介绍一些基本的错误处理。
