@@ -11,9 +11,9 @@ level: Beginner
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
-source-git-commit: 66d35a41d63d4c33f71a118e9471c5aa58dc48a7
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4106'
 ht-degree: 0%
 
 ---
@@ -381,7 +381,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
 
    只有在调用`classic`配置文件（即`mvn clean install -PautoInstallSinglePackage -Pclassic`）时，才会包含`uber-jar`。 同样，这是此项目特有的。 在从AEM项目原型生成的真实项目中，如果指定的AEM版本为6.5或6.4，则默认为`uber-jar`。
 
-   [uber-jar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)包含由AEM 6.x公开的所有公共Java API。该版本在位于项目`aem-guides-wknd/pom.xml`根的父反应器pom中进行维护。
+   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)包含由AEM 6.x公开的所有公共Java API。该版本在位于项目`aem-guides-wknd/pom.xml`根的父反应器pom中进行维护。
 
 1. 查找`core.wcm.components.core`的依赖项：
 
