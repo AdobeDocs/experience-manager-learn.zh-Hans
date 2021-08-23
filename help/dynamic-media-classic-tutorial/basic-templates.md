@@ -10,9 +10,9 @@ activity: use
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '6306'
+source-wordcount: '6292'
 ht-degree: 0%
 
 ---
@@ -66,8 +66,8 @@ ht-degree: 0%
 
 模板项目可能相对简单或非常复杂，具体取决于应用程序的业务规则和需求。 从图像服务器中调用基本模板，但由于Dynamic Media Classic环境的灵活性，您甚至可以将模板嵌套在其他模板中，从而创建相当复杂的图像，这些图像可由通常命名的变量链接。
 
-- 了解有关[模板基础知识](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/quick-start-template-basics.html)的更多信息。
-- 了解如何创建[基本模板](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template)。
+- 了解有关[模板基础知识](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html)的更多信息。
+- 了解如何创建[基本模板](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template)。
 
 ## 创建基本模板
 
@@ -189,7 +189,7 @@ _具有和没有投影的图层_
 
 阴影效果在水平或垂直远离图层时偏移，而辉光效果在所有方向上均匀应用。 内效应作用在图层不透明部分的顶部，而外效应仅影响透明区域。
 
-了解有关[添加层效果](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers)的更多信息。
+了解有关[添加层效果](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers)的更多信息。
 
 ### 添加参数
 
@@ -226,7 +226,7 @@ _具有和没有投影的图层_
 >
 >无法添加参数，因为您看不到资产？ 只需将图层的属性从其默认值（通过移动、调整大小、隐藏等）更改为其属性即可。 此时您应会看到该资产已公开。
 
-了解有关[模板参数](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template-parameters.html)的更多信息。
+了解有关[模板参数](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html)的更多信息。
 
 ## 创建带有文本层的模板
 
@@ -315,7 +315,7 @@ RTF示例：
 - 您可以看到RGB值：\red56\green53\blue4  — 这是文本颜色。
 - 虽然字体大小为20，但您看不到数字20。 但是，您确实看到命令\fs40 — 出于一些奇怪的原因，RTF将字体测量为半点。 因此，\fs40是字体大小！
 
-您有足够的信息来创建参数，但是图像提供文档中提供了所有RTF命令的完整参考。 请访问[图像服务文档](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c)。
+您有足够的信息来创建参数，但是图像提供文档中提供了所有RTF命令的完整参考。 请访问[图像服务文档](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c)。
 
 #### 向文本层添加参数
 
@@ -333,7 +333,7 @@ RTF示例：
 >
 >要将参数添加到文本颜色，请分别添加红、绿和蓝的参数。 例如，如果RTF为`\red56\green53\blue46`，则需为值56、53和46分别添加红、绿和蓝参数。 在URL中，您可以通过调用所有这三个变量来更改颜色：`&$red=56&$green=53&$blue=46`。
 
-了解如何[创建动态文本参数](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters)。
+了解如何[创建动态文本参数](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters)。
 
 ## 发布和创建模板URL
 
@@ -347,7 +347,7 @@ RTF示例：
 
 您需要运行发布，才能查看实时将所做的更改推送到图像服务器。 请记住要发布的内容：各种图像资产层、动态文本的字体以及模板本身。 与图像集和旋转集等其他Dynamic Media Classic富媒体资产类似，基本模板是一种人工构造，它是数据库中的一个行项目，使用一系列“图像提供”命令来引用图像和字体。 因此，发布模板时，您所做的只是更新图像服务器上的数据。
 
-了解有关[发布模板](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/publishing-templates.html)的更多信息。
+了解有关[发布模板](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/publishing-templates.html)的更多信息。
 
 ### 模板URL构建
 
