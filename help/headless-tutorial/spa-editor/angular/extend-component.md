@@ -13,15 +13,15 @@ thumbnail: 5871-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1989'
-ht-degree: 2%
+source-wordcount: '1967'
+ht-degree: 0%
 
 ---
 
 
-# 扩展核心组件{#extend-component}
+# 扩展核心组件 {#extend-component}
 
 了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件。 了解如何扩展现有组件是一项功能强大的技术，可用于自定义和扩展AEM SPA Editor实施的功能。
 
@@ -33,13 +33,13 @@ ht-degree: 2%
 
 ## 将构建的内容
 
-在本章中，将创建新的`Card`组件。 `Card`组件将扩展[图像核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html)，添加其他内容字段，如标题和行动动员按钮，以对SPA中的其他内容执行Teaser角色。
+在本章中，将创建新的`Card`组件。 `Card`组件将扩展[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)，添加其他内容字段，如标题和行动动员按钮，以对SPA中的其他内容执行Teaser角色。
 
 ![卡片组件的最终创作](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> 在实际实施中，更合适的做法是简单地使用[Teaser组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/teaser.html)，然后扩展[图像核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)，以根据项目要求制作`Card`组件。 始终建议尽可能直接使用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+> 在实际实施中，更合适的做法是简单地使用[Teaser组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html)，然后扩展[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)，以根据项目要求制作`Card`组件。 始终建议尽可能直接使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 ## 前提条件
 
@@ -106,13 +106,13 @@ ht-degree: 2%
 
    请注意，`sling:resourceSuperType`指向`core/wcm/components/image/v2/image`。 这表示WKND SPA图像组件继承了核心组件图像的所有功能。
 
-   也称为[代理模式](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Sling资源继承是一种功能强大的设计模式，允许子组件在需要时继承功能并扩展/覆盖行为。 Sling继承支持多个级别的继承，因此新的`Card`组件最终会继承核心组件图像的功能。
+   也称为[代理模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Sling资源继承是一种功能强大的设计模式，允许子组件在需要时继承功能并扩展/覆盖行为。 Sling继承支持多个级别的继承，因此新的`Card`组件最终会继承核心组件图像的功能。
 
    许多开发团队都努力成为DRY（不要重复自己）。 Sling继承使AEM能够实现此目的。
 
 4. 在`card`文件夹下，打开文件`_cq_dialog/.content.xml`。
 
-   此文件是`Card`组件的组件对话框定义。 如果使用Sling继承，则可以使用[Sling资源合并器](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/sling-resource-merger.html)的功能覆盖或扩展对话框的各个部分。 在此示例中，向对话框中添加了一个新选项卡，用于从作者那里捕获用于填充卡片组件的其他数据。
+   此文件是`Card`组件的组件对话框定义。 如果使用Sling继承，则可以使用[Sling资源合并器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html)的功能覆盖或扩展对话框的各个部分。 在此示例中，向对话框中添加了一个新选项卡，用于从作者那里捕获用于填充卡片组件的其他数据。
 
    诸如`sling:orderBefore`之类的属性允许开发人员选择插入新选项卡或表单字段的位置。 在这种情况下，将在`asset`选项卡之前插入`Text`选项卡。 要充分利用Sling资源合并器，请务必了解[图像组件对话框](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml)的原始对话框节点结构。
 
@@ -296,7 +296,7 @@ ht-degree: 2%
    }
    ```
 
-   初始化Sling模型时，将始终调用`@PostConstruct initModel()`，因此，这是初始化模型中其他方法可能使用的对象的良机。 `pageManager`是通过`@ScriptVariable`注释向Sling模型提供的许多[Java支持的全局对象](https://docs.adobe.com/content/help/en/experience-manager-htl/using/htl/global-objects.html#java-backed-objects)中的一个。 [getPage](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-)方法进入路径并返回AEM [Page](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/Page.html)对象；如果路径未指向有效页面，则返回null。
+   初始化Sling模型时，将始终调用`@PostConstruct initModel()`，因此，这是初始化模型中其他方法可能使用的对象的良机。 `pageManager`是通过`@ScriptVariable`注释向Sling模型提供的许多[Java支持的全局对象](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects)中的一个。 [getPage](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-)方法进入路径并返回AEM [Page](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/Page.html)对象；如果路径未指向有效页面，则返回null。
 
    这将初始化`cardPage`变量，其他新方法将使用该变量来返回有关基础链接页面的数据。
 
