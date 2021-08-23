@@ -12,15 +12,15 @@ thumbnail: 4854-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2273'
-ht-degree: 1%
+source-wordcount: '2267'
+ht-degree: 0%
 
 ---
 
 
-# 将SPA组件映射到AEM组件{#map-components}
+# 将SPA组件映射到AEM组件 {#map-components}
 
 了解如何使用AEM SPA Editor JS SDK将React组件映射到Adobe Experience Manager(AEM)组件。 组件映射允许用户在AEM SPA编辑器中对SPA组件进行动态更新，这与传统的AEM创作类似。
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 ## Inspect文本组件
 
-[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了映射到AEM [文本组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，其中组件从AEM中呈现&#x200B;*content*。
+[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了映射到AEM [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，其中组件从AEM中呈现&#x200B;*content*。
 
 让我们看看组件的工作方式。
 
@@ -223,7 +223,7 @@ AEM SPA Editor SDK会自动提供对&#x200B;**布局容器**&#x200B;的支持。
 
    **布局容器**&#x200B;组件的`sling:resourceType`为`wcm/foundation/components/responsivegrid`，并且可由SPA编辑器使用`:type`属性进行识别，与`Text`和`Image`组件类似。
 
-   SPA编辑器中提供了使用[布局模式](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新调整组件大小的相同功能。
+   SPA编辑器中提供了使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新调整组件大小的相同功能。
 
 2. 返回到[http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。 添加其他&#x200B;**Image**&#x200B;组件，然后尝试使用&#x200B;**布局**&#x200B;选项重新调整组件大小：
 
@@ -247,11 +247,11 @@ AEM SPA Editor SDK会自动提供对&#x200B;**布局容器**&#x200B;的支持。
 
 恭喜，您已学习如何将SPA组件映射到AEM组件，并且还使用了React核心组件。 您还有机会探索&#x200B;**布局容器**&#x200B;的响应功能。
 
-### 后续步骤{#next-steps}
+### 后续步骤 {#next-steps}
 
 [导航和路由](navigation-routing.md)  — 通过SPA Editor SDK将映射到AEM页面，了解如何支持SPA中的多个视图。动态导航是使用React Router和React Core Components实现的。
 
-## （附加练习）保留源控件{#bonus-configs}的配置
+## （附加练习）保留用于源控制的配置 {#bonus-configs}
 
 在很多情况下，特别是在AEM项目开始时，将配置（如模板和相关内容策略）保留到源控制中非常有价值。 这可确保所有开发人员针对同一组内容和配置开展工作，并可确保各环境之间具有额外的一致性。 一旦项目达到一定的成熟度，管理模板的做法就可以交给一组特定的高级用户。
 
@@ -286,9 +286,9 @@ AEM SPA Editor SDK会自动提供对&#x200B;**布局容器**&#x200B;的支持。
 
    比较`ui.content/src/main/content/META-INF/vault/filter.xml`和`ui.apps/src/main/content/META-INF/vault/filter.xml`以了解每个模块管理的不同节点。
 
-## （附加练习）创建自定义图像组件{#bonus-image}
+## （附加练习）创建自定义图像组件 {#bonus-image}
 
-SPA Core组件已提供React图像组件。 但是，如果您需要其他练习，请创建您自己的React实施，该实施将映射到AEM [图像组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html)。 `Image`组件是&#x200B;**content**&#x200B;组件的另一个示例。
+SPA Core组件已提供React图像组件。 但是，如果您需要其他练习，请创建您自己的React实施，该实施将映射到AEM [图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)。 `Image`组件是&#x200B;**content**&#x200B;组件的另一个示例。
 
 ### Inspect JSON
 
