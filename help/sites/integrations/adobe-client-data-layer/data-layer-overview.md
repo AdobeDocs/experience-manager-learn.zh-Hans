@@ -1,21 +1,16 @@
 ---
 title: 将Adobe客户端数据层与AEM核心组件结合使用
 description: Adobe客户端数据层引入了一种标准方法，用于收集和存储有关访客在网页上体验的数据，然后使访客能够轻松访问这些数据。 Adobe客户端数据层与平台无关，但完全集成到核心组件中以与AEM一起使用。
-feature: 核心组件
-topics: integrations
-audience: developer
-doc-type: feature video
-activity: use
-version: cloud-service
-kt: 6261
-thumbnail: 41195.jpg
 topic: 集成
+feature: Adobe客户端数据层，核心组件
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6261
+thumbnail: 41195.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 1%
+source-wordcount: '791'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +23,7 @@ Adobe客户端数据层引入了一种标准方法，用于收集和存储有关
 
 >[!NOTE]
 >
-> 是否要在您的AEM网站上启用Adobe客户端数据层？ [请参阅此处的说明](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+> 是否要在您的AEM网站上启用Adobe客户端数据层？ [请参阅此处的说明](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
 
 ## 探索数据层
 
@@ -183,4 +178,4 @@ Adobe客户端数据层引入了一种标准方法，用于收集和存储有关
 ## 其他资源 {#additional-resources}
 
 * [Adobe客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [使用Adobe客户端数据层和核心组件文档](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
