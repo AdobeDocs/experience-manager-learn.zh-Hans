@@ -1,18 +1,17 @@
 ---
 title: 使用AEM发布服务的生产部署 — AEM无头入门 — GraphQL
 description: 了解AEM创作和发布服务以及无头应用程序的推荐部署模式。 在本教程中，了解如何使用环境变量根据目标环境动态更改GraphQL端点。 了解如何正确配置AEM以进行跨域资源共享(CORS)。
-sub-product: 资产
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+feature: 内容片段， GraphQL API
+topic: 无外设、内容管理
+role: Developer
+level: Beginner
 mini-toc-levels: 1
 kt: 7131
 thumbnail: KT-7131.jpg
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2361'
+source-wordcount: '2367'
 ht-degree: 1%
 
 ---
@@ -34,7 +33,7 @@ ht-degree: 1%
 * 了解管理环境变量的最佳实践。
 * 了解如何正确配置AEM以进行跨域资源共享(CORS)。
 
-## 创作发布部署模式{#deployment-pattern}
+## 创作发布部署模式 {#deployment-pattern}
 
 完整的AEM环境由创作、发布和调度程序组成。 “创作”服务是内部用户创建、管理和预览内容的位置。 发布服务被视为“实时”环境，通常是最终用户与之交互的环境。 内容在创作服务上进行编辑和批准后，会分发到发布服务。
 
@@ -57,7 +56,7 @@ AEM无头应用程序的最常见部署模式是，将应用程序的生产版�
 * http://localhost:4503 — 发布实例
 * http://localhost:5000 — 在生产模式下， React应用程序连接到发布实例。
 
-## 安装AEM SDK — 发布模式{#aem-sdk-publish}
+## 安装AEM SDK — 发布模式 {#aem-sdk-publish}
 
 当前，我们在&#x200B;**创作**&#x200B;模式下有一个正在运行的SDK实例。 也可以在&#x200B;**发布**&#x200B;模式下启动SDK，以模拟AEM发布环境。
 
@@ -81,7 +80,7 @@ AEM无头应用程序的最常见部署模式是，将应用程序的生产版�
 
    应会返回“404未找到”页面。 这是一个全新的AEM实例，尚未安装任何内容。
 
-## 安装示例内容和GraphQL端点{#wknd-site-content-endpoints}
+## 安装示例内容和GraphQL端点 {#wknd-site-content-endpoints}
 
 与创作实例一样，发布实例需要启用GraphQL端点，并且需要示例内容。 接下来，在发布实例上安装WKND引用站点。
 
@@ -101,7 +100,7 @@ AEM无头应用程序的最常见部署模式是，将应用程序的生产版�
 
    与AEM创作实例不同，AEM发布实例默认使用匿名只读访问。 我们希望在运行React应用程序时模拟匿名用户的体验。
 
-## 更新环境变量以指向发布实例{#react-app-publish}
+## 更新环境变量以指向发布实例 {#react-app-publish}
 
 接下来，更新React应用程序使用的环境变量以指向Publish实例。 React应用程序应该在生产模式下&#x200B;**仅**&#x200B;连接到Publish实例。
 
@@ -125,7 +124,7 @@ AEM无头应用程序的最常见部署模式是，将应用程序的生产版�
    >
    > 请注意，由于发布环境默认提供对内容的匿名访问，因此未包含任何身份验证信息。
 
-## 部署静态节点服务器{#static-server}
+## 部署静态节点服务器 {#static-server}
 
 React应用程序可以使用Webpack服务器启动，但仅供开发使用。 接下来，使用[serve](https://github.com/vercel/serve)模拟生产部署，以使用Node.js托管React应用程序的生产内部版本。
 
@@ -186,7 +185,7 @@ React应用程序可以使用Webpack服务器启动，但仅供开发使用。 �
 
    观察是否引发了`adventureContributor`的GraphQL错误。 在接下来的练习中，修复了损坏的图像和`adventureContributor`问题。
 
-## 绝对图像引用{#absolute-image-references}
+## 绝对图像引用 {#absolute-image-references}
 
 图像显示为已损坏，因为`<img src`属性被设置为相对路径，并最终指向位于`http://localhost:5000/`的Node静态服务器。 这些图像而应该指向AEM发布实例。 这有几个潜在的解决方案。 使用WebPack开发服务器时，文件`react-app/src/setupProxy.js`会在WebPack服务器和AEM创作实例之间为对`/content`的任何请求设置代理。 代理配置可以在生产环境中使用，但必须在Web服务器级别进行配置。 例如， [Apache的代理模块](https://httpd.apache.org/docs/2.4/mod/mod_proxy.html)。
 
@@ -301,7 +300,7 @@ React应用程序可以使用Webpack服务器启动，但仅供开发使用。 �
 
    ![已修复损坏的图像](assets/publish-deployment/broken-images-fixed.png)
 
-## 模拟内容发布{#content-publish}
+## 模拟内容发布 {#content-publish}
 
 请记住，在请求“探险详细信息”页面时，会为`adventureContributor`引发GraphQL错误。 Publish实例上尚不存在&#x200B;**Contributor**&#x200B;内容片段模型。 对&#x200B;**Adventure**&#x200B;内容片段模型的更新也在Publish实例中不可用。 这些更改直接发生在创作实例中，需要分发到发布实例。
 
