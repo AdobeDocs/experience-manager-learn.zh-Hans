@@ -15,10 +15,10 @@ discoiquuid: 912e0c41-83cf-49f7-b515-09519b6718c1
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 7%
+source-wordcount: '586'
+ht-degree: 2%
 
 ---
 
@@ -39,7 +39,7 @@ Adobe Experience Manager(AEM)内容片段是基于文本的编辑内容，可能
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
 
-内容片段可以在AEM Sites页面上使用，也可以使用AEM WCM核心组件“ [内容片段组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/content-fragment-component.html)以类似方式使用体验片段。
+内容片段可以在AEM Sites页面上使用，也可以使用AEM WCM核心组件“ [内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)以类似方式使用体验片段。
 
 可以使用AEM样式系统设置内容片段组件的样式，以根据需要显示内容。
 
@@ -49,7 +49,7 @@ Adobe Experience Manager(AEM)内容片段是基于文本的编辑内容，可能
 
 AEM Content Services可帮助创建基于AEM页面的HTTP端点，以将内容演绎版为标准化的JSON格式。
 
-以上视频使用[内容片段组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)来显示单个内容片段。 [内容片段列表组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-list.html)是一个新组件，它允许作者定义一个查询，该查询将使用内容片段列表动态填充页面。 当需要公开多个内容片段时，首选使用内容片段列表组件。
+以上视频使用[内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)来显示单个内容片段。 [内容片段列表组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html)是一个新组件，它允许作者定义一个查询，该查询将使用内容片段列表动态填充页面。 当需要公开多个内容片段时，首选使用内容片段列表组件。
 
 *Content Services端点JSON有效负载示例：*\
 **[aterys.json](assets/athletes.json)**
@@ -80,8 +80,8 @@ AEM 6.5中首次引入，通过Assets HTTP API增强了对内容片段的支持�
 ## 其他资源 {#additional-resources}
 
 * [创作内容片段](content-fragments-feature-video-use.md)
-* [AEM WCM核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
-* [AEM WCM核心内容片段组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [AEM WCM核心内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 要在AEM 6.4+实例上下载并安装以下包，以获取视频系列的最终状态，请执行以下操作：\
 **[aem_demo_fluid-experiencecontent-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**
