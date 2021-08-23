@@ -10,9 +10,9 @@ feature: 搜索
 topic: 开发
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '899'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 # 简单搜索实施指南{#simple-search-implementation-guide}
 
-“简单搜索”实施是&#x200B;**Adobe峰会实验室AEM Search Demystified**&#x200B;中的材料。 本页包含本实验的材料。 有关实验室的指导教程，请查看本页演示部分的实验室工作簿。
+“简单搜索”实施是&#x200B;**Adobe Summit实验室AEM Search Demystified**&#x200B;中的材料。 本页包含本实验的材料。 有关实验室的指导教程，请查看本页演示部分的实验室工作簿。
 
 ![搜索架构概述](assets/l4080/simple-search-application.png)
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 * [实验室工作簿](assets/l4080/l4080-lab-workbook.pdf)
 * [演示文稿](assets/l4080/l4080-presentation.pdf)
 
-## 书签{#bookmarks-1}
+## 书签 {#bookmarks-1}
 
 ### 工具 {#tools}
 
@@ -56,12 +56,12 @@ ht-degree: 2%
 
 ## 包 {#packages}
 
-### 初始包{#initial-packages}
+### 初始包 {#initial-packages}
 
 * [标记](assets/l4080/summit-tags.zip)
 * [简单搜索应用程序包](assets/l4080/simple.ui.apps-0.0.1-snapshot.zip)
 
-### 章节包{#chapter-packages}
+### 章节包 {#chapter-packages}
 
 * [第1章解决方案](assets/l4080/l4080-chapter1.zip)
 * [第2章解决方案](assets/l4080/l4080-chapter2.zip)
@@ -72,15 +72,15 @@ ht-degree: 2%
 * [第6章解决方案](assets/l4080/l4080-chapter6.zip)
 * [第9章解决方案](assets/l4080/l4080-chapter9.zip)
 
-## 参考材料{#reference-materials}
+## 参考资料 {#reference-materials}
 
 * [Github存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/master/simple-search-guide)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 * [Sling模型导出程序](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
-* [QueryBuilder API](https://docs.adobe.com/docs/en/aem/6-2/develop/search/querybuilder-api.html)
+* [QueryBuilder API](https://experienceleague.adobe.com/docs/)
 * [AEM Chrome插件](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode) ([文档页面](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
 
-## 更正和后续行动{#corrections-and-follow-up}
+## 更正和后续行动 {#corrections-and-follow-up}
 
 实验室讨论的更正和澄清以及与会者对后续问题的回答。
 
