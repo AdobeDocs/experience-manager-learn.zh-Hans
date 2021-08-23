@@ -1,17 +1,17 @@
 ---
 title: AEM桌面应用程序
 description: 使用AEM桌面应用程序可简化对桌面上AEM中管理的任何资产（适用于任何应用程序和文件格式）的访问。
-kt: 2551
-sub-product: 资产
-feature: Experience Manager桌面应用程序
 version: 6.5, 6.4, 6.3
 topic: 内容管理
+feature: 桌面应用程序
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 2551
+thumbnail: 28868.jpeg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 11%
+source-wordcount: '138'
+ht-degree: 5%
 
 ---
 
@@ -33,4 +33,4 @@ ht-degree: 11%
 
 ## 其他资源
 
-+ [下载最新的AEM桌面应用程序](https://docs.adobe.com/content/help/zh-Hans/experience-manager-desktop-app/using/release-notes.html)
++ [下载最新的AEM桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)
