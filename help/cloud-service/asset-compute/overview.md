@@ -12,9 +12,9 @@ thumbnail: KT-5802.jpg
 topic: 集成、开发
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -148,7 +148,7 @@ asset compute工作程序必须部署到Adobe I/O Runtime才能与AEM作为Cloud
 
 ### 文档
 
-+ [asset compute服务文档](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html)
++ [asset compute服务文档](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
 + [asset compute开发工具自述文件](https://github.com/adobe/asset-compute-devtool)
 + [asset compute示例工作程序](https://github.com/adobe/asset-compute-example-workers)
 
