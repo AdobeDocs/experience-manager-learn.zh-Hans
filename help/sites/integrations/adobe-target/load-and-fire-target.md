@@ -12,15 +12,15 @@ thumbnail: 41243.jpg
 topic: 集成
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 3%
+source-wordcount: '615'
+ht-degree: 1%
 
 ---
 
 
-# 加载并触发Target调用{#load-fire-target}
+# 加载和触发Target调用 {#load-fire-target}
 
 了解如何加载参数并将参数传递到页面请求，以及如何使用Launch规则从您的网站页面触发Target调用。 使用Adobe客户端数据层可检索网页信息并将其作为参数进行传递，该数据层允许您收集和存储有关访客在网页上的体验的数据，然后使访客能够轻松访问这些数据。
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 Adobe客户端数据层是事件驱动的数据层。 加载AEM页面数据层时，将触发事件`cmp:show` 。 在视频中，使用自定义事件调用`Launch Library Loaded`规则。 在下面，您可以找到视频中用于自定义事件和数据元素的代码片段。
 
-### 显示的自定义页面事件{#page-event}
+### 自定义页面显示事件{#page-event}
 
 ![页面显示的事件配置和自定义代码](assets/load-and-fire-target-call.png)
 
@@ -163,5 +163,5 @@ window.targetGlobalSettings = {
 + [Adobe客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [使用Adobe客户端数据层和核心组件文档](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/data-layer/overview.html)
-+ [Adobe Experience Platform Debugger简介](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
++ [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
