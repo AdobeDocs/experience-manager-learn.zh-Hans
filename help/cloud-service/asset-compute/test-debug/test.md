@@ -12,9 +12,9 @@ thumbnail: KT-6284.jpg
 topic: 集成、开发
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # 测试Asset compute工作程序
 
-asset compute项目定义了一种模式，用于轻松创建和执行Asset compute工作程序](https://docs.adobe.com/content/help/en/asset-compute/using/extend/test-custom-application.html)的测试。[
+asset compute项目定义了一种模式，用于轻松创建和执行Asset compute工作程序](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html)的测试。[
 
 ## 工人考试剖析
 
