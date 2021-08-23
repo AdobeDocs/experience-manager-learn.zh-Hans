@@ -11,9 +11,9 @@ kt: 5830
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '292'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ return val;
 
 >[!NOTE]
 >
->本文假定您已安装此系列中[上一篇文章](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/inbox-customization/add-married-column.md)中的[示例工作流](assets/review-workflow.zip)和[示例表单](assets/snap-form.zip)。
+>本文假定您已安装此系列中[上一篇文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.md)中的[示例工作流](assets/review-workflow.zip)和[示例表单](assets/snap-form.zip)。
 
 * [以管理员用户身份登录crx](http://localhost:4502/crx/de/index.jsp)
 * [导入sightly模板](assets/sightly-template.zip)
