@@ -1,26 +1,22 @@
 ---
 title: 使用AEM组件自定义Adobe客户端数据层
 description: 了解如何使用自定义AEM组件中的内容自定义Adobe客户端数据层。 了解如何使用AEM核心组件提供的API来扩展和自定义数据层。
-feature: Adobe客户端数据层，核心组件
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: use
 version: cloud-service
-kt: 6265
-thumbnail: KT-6265.jpg
 topic: 集成
+feature: Adobe客户端数据层，核心组件
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6265
+thumbnail: KT-6265.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2034'
-ht-degree: 1%
+source-wordcount: '2028'
+ht-degree: 0%
 
 ---
 
 
-# 使用AEM组件{#customize-data-layer}自定义Adobe客户端数据层
+# 使用AEM组件自定义Adobe客户端数据层 {#customize-data-layer}
 
 了解如何使用自定义AEM组件中的内容自定义Adobe客户端数据层。 了解如何使用[AEM核心组件提供的API扩展](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)并自定义数据层。
 
@@ -40,11 +36,11 @@ ht-degree: 1%
 
 完成本教程需要&#x200B;**本地开发环境**。 屏幕截图和视频是使用AEM as a MacOS上运行的Cloud ServiceSDK捕获的。 除非另有说明，否则命令和代码与本地操作系统无关。
 
-**初次使用AEM as aCloud Service?** 请参阅以 [下指南，以使用AEM as a Cloud ServiceSDK设置本地开发环境](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+**初次使用AEM as aCloud Service?** 请参阅以 [下指南，以使用AEM as a Cloud ServiceSDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 
-**AEM 6.5的新增功能？** 请参阅以 [下指南以设置本地开发环境](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+**AEM 6.5的新增功能？** 请参阅以 [下指南以设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
-## 下载并部署WKND引用站点{#set-up-wknd-site}
+## 下载和部署WKND参考网站 {#set-up-wknd-site}
 
 本教程将扩展WKND引用站点中的署名组件。 克隆WKND代码库并将其安装到本地环境。
 
@@ -85,7 +81,7 @@ ht-degree: 1%
 
    请注意，Byline组件未列在数据层中。
 
-## 更新署名Sling模型{#sling-model}
+## 更新署名Sling模型 {#sling-model}
 
 要在数据层中插入有关组件的数据，我们必须先更新组件的Sling模型。 接下来，更新Byline的Java接口和Sling Model实施，以添加新方法`getData()`。 此方法将包含我们要注入数据层的属性。
 
@@ -236,7 +232,7 @@ ht-degree: 1%
 
    请注意，公开的属性与在Sling模型的`HashMap`中添加的属性相同。
 
-## 添加点击事件{#click-event}
+## 添加点击事件 {#click-event}
 
 Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一是`cmp:click`事件。 通过AEM核心组件，可以在数据元素的帮助下轻松注册组件：`data-cmp-clickable`。
 
@@ -301,7 +297,7 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
 
    `cmp:click`事件是最容易挂接的事件。 对于更复杂的组件和要跟踪其他行为，可以添加自定义javascript以添加和注册新事件。 轮播组件就是一个很好的示例，每当切换幻灯片时，它都会触发`cmp:show`事件。 有关更多详细信息，请参阅[源代码](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js#L219)。
 
-## 使用DataLayerBuilder实用程序{#data-layer-builder}
+## 使用DataLayerBuilder实用程序 {#data-layer-builder}
 
 当章节前面的[更新了](#sling-model)Sling模型时，我们选择使用`HashMap`创建JSON字符串，并手动设置每个属性。 此方法适用于小型一次性组件，但对于扩展AEM核心组件的组件，这可能会产生大量额外代码。
 
@@ -414,7 +410,7 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
 
    请注意，`byline`组件条目中现在有一个`image`对象。 这包含有关DAM中资产的更多信息。 另请注意，已自动填充`@type`和唯一ID（在本例中为`byline-136073cfcb`），以及指示修改组件时间的`repo:modifyDate`。
 
-## 其他示例{#additional-examples}
+## 其他示例 {#additional-examples}
 
 1. 通过检查WKND代码库中的`ImageList`组件，可以查看扩展数据层的另一个示例：
    * `ImageList.java`  — 模块中的Java界 `core` 面。
@@ -437,4 +433,4 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
 
 * [Adobe客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
 * [数据层与核心组件的集成](https://github.com/adobe/aem-core-wcm-components/blob/master/DATA_LAYER_INTEGRATION.md)
-* [使用Adobe客户端数据层和核心组件文档](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
