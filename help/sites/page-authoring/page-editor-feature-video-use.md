@@ -14,9 +14,9 @@ thumbnail: 32011.jpg
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '242'
 ht-degree: 7%
 
 ---
@@ -56,5 +56,5 @@ AEM Site的页面编辑器是用于创建和编辑Web内容的强大工具。 �
 
 ## 其他资源 {#additional-resources}
 
-* [编辑页面内容文档](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/authoring/editing-content.html)
-* [Sites Authoring用户指南](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/home.html)
+* [编辑页面内容文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
+* [Sites Authoring用户指南](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
