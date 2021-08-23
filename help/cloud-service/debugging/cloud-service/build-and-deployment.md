@@ -1,7 +1,7 @@
 ---
 title: 内部版本和部署
 description: AdobeCloud Manager可帮助将代码构建和部署到AEM as aCloud Service。 在构建过程中的步骤中可能会发生失败，需要采取操作来解决这些问题。 本指南将指导您逐步了解部署中的常见故障，以及如何以最佳方式处理这些故障。
-feature: Developer Tools
+feature: 开发人员工具
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,9 +12,9 @@ thumbnail: kt-5424.jpg
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2540'
+source-wordcount: '2529'
 ht-degree: 0%
 
 ---
@@ -71,11 +71,11 @@ AdobeCloud Manager可帮助将代码构建和部署到AEM as aCloud Service。 �
 
 代码扫描使用特定于Java和AEM的最佳实践组合来执行静态代码分析。
 
-如果代码中存在关键安全漏洞，则代码扫描会导致生成失败。 可以覆盖较小的违规，但建议修复这些违规。 请注意，代码扫描不完美，可能会导致[误报](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/understand-test-results.html#dealing-with-false-positives)。
+如果代码中存在关键安全漏洞，则代码扫描会导致生成失败。 可以覆盖较小的违规，但建议修复这些违规。 请注意，代码扫描不完美，可能会导致[误报](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives)。
 
 要解决代码扫描问题，请通过&#x200B;**Download Details**&#x200B;按钮下载Cloud Manager提供的CSV格式报表，并查看任何条目。
 
-有关更多详细信息，请参阅AEM特定规则，请参阅Cloud Manager文档的[自定义AEM特定代码扫描规则](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html)。
+有关更多详细信息，请参阅AEM特定规则，请参阅Cloud Manager文档的[自定义AEM特定代码扫描规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html)。
 
 ## 构建图像
 
@@ -103,7 +103,7 @@ set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multip
 #### 原因2
 
 + __原因：__ AEM项目错误地包含了两次同一代码包，从而导致与所述包中包含的任何OSGi配置重复。
-+ __解决办法：__ 查看在所有项目中嵌入的包的所有pom.xml，并确保将其配 `filevault-package-maven-plugin` [](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) 置设置 `<cloudManagerTarget>none</cloudManagerTarget>`为。
++ __解决办法：__ 查看在所有项目中嵌入的包的所有pom.xml，并确保将其配 `filevault-package-maven-plugin` [](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) 置设置 `<cloudManagerTarget>none</cloudManagerTarget>`为。
 
 ### 错误的重新指向脚本
 
@@ -231,8 +231,8 @@ AEM as a AEM在每个Cloud Service版本中会自动包含最新的核心组件�
 + __原因：__ 用于将内容包部署到AEM发布服务的AEM复制服务用户在AEM发布时无 `/var` 法写入。这会导致将内容包部署到AEM发布服务失败。
 + __解决办法：__ 以下解决此问题的方法按优先顺序列出：
    1. 如果不需要`/var`资源，请从作为应用程序一部分部署的内容包中删除`/var`下的任何资源。
-   2. 如果需要`/var`资源，请使用[repoint](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)定义节点结构。 可以通过OSGi运行模式将重新指向脚本定位到AEM作者和/或AEM发布。
-   3. 如果`/var`资源仅在AEM作者上需要，并且无法使用[repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)合理建模，请将它们移动到离散的内容包中，该内容包仅由[嵌入](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)在AEM创作运行模式文件夹(`<target>/apps/example-packages/content/install.author</target>`)的`all`包中安装在AEM创作上。
+   2. 如果需要`/var`资源，请使用[repoint](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)定义节点结构。 可以通过OSGi运行模式将重新指向脚本定位到AEM作者和/或AEM发布。
+   3. 如果`/var`资源仅在AEM作者上需要，并且无法使用[repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)合理建模，请将它们移动到离散的内容包中，该内容包仅由[嵌入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)在AEM创作运行模式文件夹(`<target>/apps/example-packages/content/install.author</target>`)的`all`包中安装在AEM创作上。
    4. 按照此[AdobeKB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html)中所述，为`sling-distribution-importer`服务用户提供适当的ACL。
 
 ### 创建Adobe支持案例
