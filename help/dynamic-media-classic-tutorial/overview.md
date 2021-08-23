@@ -10,9 +10,9 @@ feature: Dynamic Media Classic
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '897'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Dynamic Media Classic是客户创建、创作和交付富媒体内容的中心�
 - **视频.** 上传最终视频、发布这些视频，并逐步将它们下载到可配置的视频查看器中。
 - **智能成像.** 此技术利用Adobe Sensei AI功能并与现有的“图像预设”配合使用，根据客户端浏览器功能自动优化图像格式、大小和质量，从而增强图像交付性能。
 
-要发现该解决方案的其他功能，请访问[Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/intro/introduction.html)文档。
+要发现该解决方案的其他功能，请访问[Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html)文档。
 
 ## Dynamic Media Classic用户界面(UI)
 
@@ -75,4 +75,4 @@ _Dynamic Media经典UI_
 >
 >选中上传对话框中的&#x200B;**上传后发布**&#x200B;复选框，以在上传时自动发布资产。
 
-了解有关[导航Dynamic Media Classic的UI](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html)的更多信息。
+了解有关[导航Dynamic Media Classic的UI](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html)的更多信息。
