@@ -12,9 +12,9 @@ thumbnail: KT-6282.jpg
 topic: 集成、开发
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ asset compute工作人员在`renditionCallback(...)`函数中实施Asset compute
 1. asset compute工作程序将新再现的二进制数据保存到`rendition.path`。
 1. 写入`rendition.path`的二进制数据通过Asset computeSDK传输到AEM创作服务，并以&#x200B;__(4a)__&#x200B;的形式公开，并以&#x200B;__(4b)__&#x200B;持久保留在资产元数据节点中的文本呈现。
 
-上图阐述了面向Asset compute开发人员的问题以及Asset compute工作程序调用的逻辑流程。 出于好奇，[内部Asset compute执行详细信息](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html)可供使用，但只能依赖公共Asset computeSDK API合同。
+上图阐述了面向Asset compute开发人员的问题以及Asset compute工作程序调用的逻辑流程。 出于好奇，[内部Asset compute执行详细信息](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html)可供使用，但只能依赖公共Asset computeSDK API合同。
 
 ## 工人解剖学
 
