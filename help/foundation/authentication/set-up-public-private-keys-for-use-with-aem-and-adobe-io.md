@@ -2,7 +2,7 @@
 seo: Set up public and private keys for use with AEM and Adobe I/O
 description: 'AEM使用公钥/私钥对与Adobe I/O和其他web服务进行安全通信。 本简短教程说明了如何使用与AEM和Adobe I/O同时使用的openssl命令行工具生成兼容的键值和密钥库。 '
 version: 6.4, 6.5
-feature: 用户和组
+feature: 用户和群组
 topics: authentication, integrations
 activity: setup
 audience: architect, developer, implementer
@@ -11,7 +11,7 @@ kt: 2450
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -27,7 +27,7 @@ AEM使用公钥/私钥对与Adobe I/O和其他web服务进行安全通信。 本
 >
 >本指南创建自签名密钥，这些自签名密钥对于在较低环境中开发和使用非常有用。 在生产方案中，密钥通常由组织的IT安全团队生成和管理。
 
-## 生成公钥/私钥对{#generate-the-public-private-key-pair}
+## 生成公钥/私钥对 {#generate-the-public-private-key-pair}
 
 [[!DNL openssl]](https://www.openssl.org/docs/man1.0.2/man1/openssl.html)命令行工具的[[!DNL req] 命令](https://www.openssl.org/docs/man1.0.2/man1/req.html)可用于生成与Adobe I/O和Adobe Experience Manager兼容的键对。
 
@@ -59,7 +59,7 @@ Common Name (eg, fully qualified host name) []:com.example
 Email Address []:me@example.com
 ```
 
-## 将密钥对添加到新密钥库{#add-key-pair-to-a-new-keystore}
+## 将密钥对添加到新密钥库 {#add-key-pair-to-a-new-keystore}
 
 密钥对可以添加到新的[!DNL PKCS12]密钥库。 在[[!DNL openssl]'s [!DNL pcks12] 命令中，](https://www.openssl.org/docs/man1.0.2/man1/pkcs12.html)密钥库的名称（通过`-  caname`）、密钥的名称（通过`-name`）和密钥库的密码（通过`-  passout`）。
 
@@ -75,7 +75,7 @@ $ openssl pkcs12 -export -caname my-keystore -in certificate.crt -name my-key -i
 >
 >**[!DNL my-keystore]**、**[!DNL my-key]**&#x200B;和&#x200B;**[!DNL my-password]**&#x200B;的参数值将替换为您自己的值。
 
-## 验证KeyStore内容{#verify-the-keystore-contents}
+## 验证密钥库内容 {#verify-the-keystore-contents}
 
 Java [[!DNL keytool] 命令行工具](https://docs.oracle.com/middleware/1213/wls/SECMG/keytool-summary-appx.htm#SECMG818)提供对密钥库的可见性，以确保密钥已成功加载到密钥库文件([!DNL keystore.p12])中。
 
@@ -101,14 +101,14 @@ AEM使用生成的&#x200B;**私钥**&#x200B;与Adobe I/O和其他web服务进行
 
 导航至&#x200B;**AEM > [!UICONTROL 工具] > [!UICONTROL 安全] > [!UICONTROL 用户]**&#x200B;和&#x200B;**编辑用户**，私钥将与其关联。
 
-### 创建AEM密钥库{#create-an-aem-keystore}
+### 创建AEM密钥库 {#create-an-aem-keystore}
 
 ![在AEM >工](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--create-keystore.png)
 *具 [!UICONTROL  > ] 安全 [!UICONTROL  > ] 用户   >编辑用户中创建KeyStore*
 
 如果提示创建密钥库，请执行此操作。 此密钥库将仅存在于AEM中，并且不是通过openssl创建的密钥库。 密码可以是任何内容，并且不必与[!DNL openssl]命令中使用的密码相同。
 
-### 通过密钥库{#install-the-private-key-via-the-keystore}安装私钥
+### 通过密钥库安装私钥 {#install-the-private-key-via-the-keystore}
 
 ![在AEMUser](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--add-private-key.png)
 *[!UICONTROL > ] Keystore [!UICONTROL  > ]  [!UICONTROL 从keystore添加私钥]*
@@ -125,18 +125,18 @@ AEM使用生成的&#x200B;**私钥**&#x200B;与Adobe I/O和其他web服务进行
 >
 >对于这两个输入，KeyStore文件密码和私钥密码是相同的。 输入不匹配的密码将导致无法导入密钥。
 
-### 验证私钥是否已加载到AEM密钥库{#verify-the-private-key-is-loaded-into-the-aem-keystore}中
+### 验证私钥是否已加载到AEM密钥库中 {#verify-the-private-key-is-loaded-into-the-aem-keystore}
 
 ![验证AEMUser](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--keystore.png)
 *[!UICONTROL > ] Keystore中的私 [!UICONTROL 钥]*
 
 将私钥从提供的密钥库成功加载到AEM密钥库中后，私钥的元数据将显示在用户的密钥库控制台中。
 
-## 将公钥添加到Adobe I/O{#adding-the-public-key-to-adobe-i-o}
+## 将公钥添加到Adobe I/O {#adding-the-public-key-to-adobe-i-o}
 
 必须将匹配的公钥上传到Adobe I/O，以允许AEM服务用户安全通信，该用户具有公钥的相应私钥。
 
-### 创建Adobe I/O新集成{#create-a-adobe-i-o-new-integration}
+### 创建Adobe I/O新集成 {#create-a-adobe-i-o-new-integration}
 
 ![创建Adobe I/O新集成](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--create-new-integration.png)
 
@@ -144,7 +144,7 @@ AEM使用生成的&#x200B;**私钥**&#x200B;与Adobe I/O和其他web服务进行
 
 在Adobe I/O中创建新集成需要上传公共证书。 上传由`openssl req`命令生成的&#x200B;**certificate.crt**。
 
-### 验证公钥是否已加载到Adobe I/O{#verify-the-public-keys-are-loaded-in-adobe-i-o}中
+### 验证公钥是否已加载到Adobe I/O中 {#verify-the-public-keys-are-loaded-in-adobe-i-o}
 
 ![验证公共密钥在Adobe I/O中](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--public-keys.png)
 
