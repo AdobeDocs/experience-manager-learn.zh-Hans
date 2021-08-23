@@ -8,15 +8,15 @@ role: Admin
 level: Intermediate
 kt: 647, 917
 thumbnail: 22132.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '264'
 ht-degree: 4%
 
 ---
 
 
-# 在AEM Assets中使用元数据导入和导出{#metadata-import-and-export}
+# 在AEM Assets中使用元数据导入和导出 {#metadata-import-and-export}
 
 了解如何使用Adobe Experience Manager Assets的导入和导出元数据功能。 导入和导出功能允许内容作者批量更新现有资产的元数据。
 
@@ -32,7 +32,7 @@ ht-degree: 4%
 >
 > 在准备导入CSV文件时，使用元数据导出功能更容易生成包含资产列表的CSV。 然后，您可以修改生成的CSV文件，并使用“导入”功能导入它。
 
-## 元数据CSV文件格式{#metadata-file-format}
+## 元数据CSV文件格式 {#metadata-file-format}
 
 ### 第一行
 
@@ -53,7 +53,7 @@ ht-degree: 4%
    * 错误：`Dc:Title {{String}}`
 
 * 属性类型不区分大小写
-* 支持所有有效的[JCR属性类型](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
+* 支持所有有效的[JCR属性类型](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
 
 * 多值属性格式 — `<metadata property name> {{<property type : MULTI }}`
 
