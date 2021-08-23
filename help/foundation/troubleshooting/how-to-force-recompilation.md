@@ -2,14 +2,13 @@
 title: 如何强制重新编译所有Sling脚本jsp、java和sightly
 description: 强制重新编译JSP的步骤
 type: Troubleshooting
-product: Sites
 role: Admin
 level: Intermediate
 version: 6.5, cloud-service
 feature: 创作
 topic: 管理
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 3%
