@@ -8,9 +8,9 @@ thumbnail: 22254.jpg
 topic: 内容管理
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '151'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 >[!VIDEO](https://video.tv.adobe.com/v/22254/?quality=12&learn=on)
 
-## 为AEM 6.x{#set-up}的图像设置自定义智能标记
+## 为AEM 6.x的图像设置自定义智能标记{#set-up}
 
 >[!NOTE]
 > 图像的自定义智能标记会作为Cloud Service自动配置AEM。
@@ -36,6 +36,6 @@ ht-degree: 3%
 
 ## 其他资源
 
-* AEM 6.4要求使用[最新的Service Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)。
+* AEM 6.4要求使用[最新的Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)。
 
 
