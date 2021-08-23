@@ -3,13 +3,14 @@ title: OSGi配置作为ObjectClassDefinition对象
 description: 了解如何在OSGi服务中创建ObjectClassDefinitions并将其指定为OSGi配置表示
 role: Developer
 level: Beginner
-topic: 初学者
+topic: 开发
+feature: OSGI
 kt: 8269
 thumbnail: 335730.jpeg
-source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 0%
+source-wordcount: '106'
+ht-degree: 2%
 
 ---
 
