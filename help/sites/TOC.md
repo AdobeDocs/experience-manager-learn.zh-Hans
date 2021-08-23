@@ -2,11 +2,11 @@
 user-guide-title: AEM Sites 视频和教程
 user-guide-description: Adobe Experience Manager Sites 的视频和教程集合。
 breadcrumb-title: AEM Sites 教程
-sub-product: 站点
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+feature-set: Experience Manager, Experience Manager Sites
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 16%
+source-wordcount: '439'
+ht-degree: 20%
 
 ---
 
@@ -45,13 +45,13 @@ ht-degree: 16%
    + [使用体验片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [构建基块](experience-fragments/building-blocks.md)
    + [使用体验片段设置社交发布](experience-fragments/experience-fragments-social-technical-video-setup.md)
-   + [内容片段与体验片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 开发 {#developing}
    + [AEM 项目原型](developing/aem-project-archetype.md)
-   + [开始使用AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-   + [AEM Headless 快速入门](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
-   + [AEM SPA Editor和React快速入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPA Editor和Angular快速入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [开始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+   + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+   + [AEM SPA Editor和Angular快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
    + [用风格体系发展](developing/style-system-technical-video-understand.md)
    + [样式系统最佳实践](developing/style-organization-style-system-understand-article.md)
@@ -67,8 +67,8 @@ ht-degree: 16%
 + 单页应用程序 {#spa-editor}
    + [使用SPA编辑器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello World教程](spa-editor/spa-editor-helloworld-tutorial-use.md)
-   + [AEM SPA Editor和React快速入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPA Editor和Angular快速入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+   + [AEM SPA Editor和Angular快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
 + 多站点管理 {#multi-site-management}
    + [语言副本简介](./multi-site-management/language-copy-overview.md)
    + [Live Copy和Blueprint](./multi-site-management/live-copy-and-blueprint.md)
@@ -112,24 +112,3 @@ ht-degree: 16%
       + [使用体验片段选件创建Target活动](integrations/adobe-target/create-target-activity.md)
       + [使用可视化体验编辑器进行个性化](integrations/adobe-target/personalization-using-vec.md)
       + [完整网页体验的个性化](integrations/adobe-target/personalization-web-page.md)
-
-+ Dynamic MediaTutorials{#dynamic-media}
-   + [在Dynamic Media中添加测试图像服务器（客户端IP过滤器）详细信息，以便使用DMc应用程序进行安全预览](dynamic-media/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
-   + [使用AEM Dynamic Media创建不同类型的集 |轮播集](dynamic-media/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
-   + [使用AEM Dynamic Media创建不同类型的集|图像集](dynamic-media/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
-   + [创建图像预设](dynamic-media/creating-image-presets.md)
-   + [在Dynamic Media中创建图像配置文件（智能裁剪）](dynamic-media/creating-image-profile-smart-crop.md)
-   + [在Dynamic Media中创建视频配置文件以处理视频](dynamic-media/creating-video-profile-to-process-videos-in-dynamic-media.md)
-   + [删除Dynamic Media配置](dynamic-media/deleting-dynamic-media-configuration.md)
-   + [如何在Dynamic Media Classic应用程序中下载资产](dynamic-media/how-to-download-asset-in-dynamic-media-classic-app.md)
-   + [如何为资产生成公共URL或嵌入代码](dynamic-media/how-to-generate-public-url-or-embed-code-for-an-asset.md)
-   + [如何在启用了Dynamic Media的资产上运行DAM更新资产工作流。](dynamic-media/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
-   + [如何在提交作业操作参数期间触发Dynamic Media中的导出作业](dynamic-media/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
-   + [Dynamic Media Classic IPS API简介](dynamic-media/introduction-to-dynamic-media-classic-ips-api.md)
-   + [通过Dynamic Media使CDN缓存失效](dynamic-media/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
-   + [在站点页面上使用DM组件](dynamic-media/using-dm-components-on-site-page.md)
-
-+ Brand PortalTutorials{#brand-portal}
-   + [使用Brand Portal配置资产源](brand-portal/configuring-asset-sourcing-with-the-brand-portal.md)
-   + [如何启用演绎版下载](brand-portal/how-to-enable-the-download-of-renditions.md)
-   + [配置AEM Assets Brand Portal的步骤](brand-portal/steps-to-configure-aem-assets-brand-portal.md)
