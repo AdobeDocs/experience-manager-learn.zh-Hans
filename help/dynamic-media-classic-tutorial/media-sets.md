@@ -2,17 +2,13 @@
 title: 图像、色板、旋转和混合媒体集
 description: Dynamic Media Classic最有用、最强大的功能之一是，它支持创建富媒体集，如图像、色板、旋转和混合媒体集。 了解每个富媒体集的含义以及如何在Dynamic Media Classic中创建每种类型。 然后，了解有关批量集预设的更多信息，批量集预设可在上传时自动创建富媒体集。
 sub-product: dynamic-media
-feature: Dynamic Media Classic，图像集，混合媒体集，旋转集
-doc-type: tutorial
-topics: sets, development, authoring, configuring
-audience: all
-activity: use
+feature: Dynamic Media Classic、图像集、混合媒体集、旋转集
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1446'
 ht-degree: 1%
 
 ---
@@ -51,8 +47,8 @@ _图像集的示例_
 
 ![图像](assets/media-sets/image-set-url-1.png)
 
-- 了解有关使用[图像集快速入门](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/quick-start-image-sets.html)的图像集的更多信息。
-- 了解如何[创建图像集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set)。
+- 了解有关使用[图像集快速入门](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/quick-start-image-sets.html)的图像集的更多信息。
+- 了解如何[创建图像集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set)。
 
 ### 色板集
 
@@ -70,8 +66,8 @@ _样本集示例_
 
 ![图像](assets/media-sets/image-set_url.png)
 
-- 了解有关[快速入门到样本集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html)的样本集的更多信息。
-- 了解如何[创建色板集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set)。
+- 了解有关[快速入门到样本集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html)的样本集的更多信息。
+- 了解如何[创建色板集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set)。
 
 ### 旋转集
 
@@ -87,8 +83,8 @@ _旋转集示例_
 
 ![图像](assets/media-sets/spin-set.png)
 
-- 通过[快速启动旋转集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html)了解有关旋转集的更多信息。
-- 了解如何[创建旋转集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set)。
+- 通过[快速启动旋转集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html)了解有关旋转集的更多信息。
+- 了解如何[创建旋转集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set)。
 
 ## 混合媒体集
 
@@ -102,13 +98,13 @@ _混合媒体集的示例_
 
 ![图像](assets/media-sets/image-set-url-1.png)
 
-- 通过[快速入门到混合媒体集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html)了解混合媒体集的更多信息。
+- 通过[快速入门到混合媒体集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html)了解混合媒体集的更多信息。
 
-- 了解如何[创建混合媒体集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set)。
+- 了解如何[创建混合媒体集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set)。
 
 要在您的网站上显示图像以进行缩放、设置或视频，可在Dynamic Media Classic“查看器”中将其命名为。 Dynamic Media Classic包含富媒体资产（如色板集、旋转集、视频和许多其他内容）的查看器。
 
-了解有关[AEM Assets和Dynamic Media Classic查看器的更多信息](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html)。
+了解有关[AEM Assets和Dynamic Media Classic查看器的更多信息](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html)。
 
 ## 批次集预设
 
@@ -127,7 +123,7 @@ _混合媒体集的示例_
 
 创建预设后，公司管理员可以选择这些预设是处于活动状态还是非活动状态。 活动表示这些预设将显示在上传页面的&#x200B;**作业选项**&#x200B;下，而不活动的预设将保持隐藏状态。
 
-了解如何[创建批集预设](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset)。
+了解如何[创建批集预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset)。
 
 ### 在上传时使用批集预设
 
@@ -138,4 +134,4 @@ _混合媒体集的示例_
 3. 打开&#x200B;**批量集预设**&#x200B;选项，然后选中或取消选中预设以将其用于上传。
 4. 上传完成后，在您的文件夹中查找已完成的集。
 
-了解有关[批集预设](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets)的更多信息。
+了解有关[批集预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets)的更多信息。
