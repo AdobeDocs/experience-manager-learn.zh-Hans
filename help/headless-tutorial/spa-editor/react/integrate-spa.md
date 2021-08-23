@@ -9,9 +9,9 @@ thumbnail: 4853-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1851'
+source-wordcount: '1843'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。 本章是[创建项目](create-project.md)章节的继续，但是，随后您需要的只是一个启用了SPA且运行正常的AEM项目。
 
-## 集成方法{#integration-approach}
+## 集成方法 {#integration-approach}
 
 在AEM项目中创建了两个模块：`ui.apps`和`ui.frontend`。
 
@@ -50,13 +50,13 @@ ht-degree: 0%
 
 *对SPA集成的高级描述。*
 
-有关前端内部版本的其他信息，请访问[此处](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)。
+有关前端内部版本的其他信息，请访问[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)。
 
-## Inspect SPA集成{#inspect-spa-integration}
+## Inspect SPA集成 {#inspect-spa-integration}
 
-接下来，检查`ui.frontend`模块以了解由[AEM项目原型](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)自动生成的SPA。
+接下来，检查`ui.frontend`模块以了解由[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)自动生成的SPA。
 
-1. 在选择的IDE中，打开AEM项目。 本教程将使用[Visual Studio代码IDE](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)。
+1. 在选择的IDE中，打开AEM项目。 本教程将使用[Visual Studio代码IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)。
 
    ![VSCode - AEM WKND SPA项目](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -76,7 +76,7 @@ ht-degree: 0%
    "@adobe/aem-core-components-react-spa": "1.1.7",
    ```
 
-   上述模块构成了[AEM SPA Editor JS SDK](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-blueprint.html)，并提供了将SPA组件映射到AEM组件的功能。
+   上述模块构成了[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)，并提供了将SPA组件映射到AEM组件的功能。
 
    还包括[AEM WCM组件 — React Core实施](https://github.com/adobe/aem-react-core-wcm-components-base)和[AEM WCM组件 — Spa编辑器 — React Core实施](https://github.com/adobe/aem-react-core-wcm-components-spa)。 这些是一组可重用的UI组件，可映射到开箱即用的AEM组件。 这些组件按原样使用，并具有满足您项目需求的样式。
 
@@ -130,7 +130,7 @@ ht-degree: 0%
 
 1. Inspect文件`import-component.js`在`ui.frontend/src/import-components.js`。 此文件会导入开箱即用的&#x200B;**React核心组件**，并将它们提供给项目。 我们将在下一章中检查AEM内容到SPA组件的映射。
 
-## 添加静态SPA组件{#static-spa-component}
+## 添加静态SPA组件 {#static-spa-component}
 
 接下来，向SPA中添加新组件，并将更改部署到本地AEM实例。 这将是一个简单的更改，只是为了说明SPA的更新方式。
 
@@ -347,7 +347,7 @@ ht-degree: 0%
 
 恭喜，您已更新SPA并探索与AEM的集成！ 您了解如何使用&#x200B;**webpack-dev-server**&#x200B;来针对AEM JSON模型API开发SPA。
 
-### 后续步骤{#next-steps}
+### 后续步骤 {#next-steps}
 
 [将SPA组件映射到AEM组件](map-components.md)  — 了解如何使用AEM SPA Editor JS SDK将React组件映射到Adobe Experience Manager(AEM)组件。组件映射允许用户在AEM SPA编辑器中对SPA组件进行动态更新，这与传统的AEM创作类似。
 
