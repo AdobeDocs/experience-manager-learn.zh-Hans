@@ -7,10 +7,10 @@ feature: 内容片段、 API
 topic: 无外设、内容管理
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 6%
+source-wordcount: '998'
+ht-degree: 7%
 
 ---
 
@@ -28,7 +28,7 @@ AEM内容片段模型定义了内容架构，可用于模板AEM作者创建原�
 
 ## 启用内容片段模型
 
-内容片段模型&#x200B;**必须通过**[ AEM [!UICONTROL 配置浏览器]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)**启用**。
+内容片段模型&#x200B;**必须通过**[ AEM [!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)**启用**。
 
 如果为配置启用了&#x200B;**未**&#x200B;的内容片段模型，则相关AEM配置将不会显示&#x200B;**[!UICONTROL 创建] > [!UICONTROL 内容片段]**&#x200B;按钮。
 
@@ -40,7 +40,7 @@ AEM内容片段模型定义了内容架构，可用于模板AEM作者创建原�
 >
 >使用`global`配置时，该配置适用于所有内容，而且不需要设置`cq:conf`。
 >
->有关更多信息，请参阅[[!UICONTROL 配置浏览器]文档](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html) 。
+>有关更多信息，请参阅[[!UICONTROL 配置浏览器]文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html) 。
 
 1. 以具有相应权限以用户身份登录AEM作者，以修改相关配置。
    * 在本教程中，可以使用&#x200B;**admin**&#x200B;用户。
