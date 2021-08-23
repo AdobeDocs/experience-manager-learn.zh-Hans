@@ -13,9 +13,9 @@ thumbnail: 30603.jpg
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1637'
 ht-degree: 2%
 
 ---
@@ -293,4 +293,4 @@ AH00016: Configuration Failed
 + [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
 + [下载Docker](https://www.docker.com/)
 + [下载AEM参考网站(WKND)](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience ManagerDispatcher文档](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience ManagerDispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)
