@@ -1,22 +1,17 @@
 ---
 title: 使用片段引用进行高级数据建模 — AEM无头入门 — GraphQL
 description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 了解如何使用片段引用功能进行高级数据建模，以及如何在两个不同的内容片段之间创建关系。 了解如何修改GraphQL查询以包含引用模型中的字段。
-sub-product: 资产
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
-feature: 内容片段、 GraphQL API
+feature: 内容片段， GraphQL API
 topic: 无外设、内容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '854'
 ht-degree: 1%
 
 ---
@@ -39,7 +34,7 @@ ht-degree: 1%
 * 更新内容片段模型以使用片段引用字段
 * 创建可返回引用模型中字段的GraphQL查询
 
-## 添加片段引用{#add-fragment-reference}
+## 添加片段引用 {#add-fragment-reference}
 
 更新冒险内容片段模型以添加对参与者模型的引用。
 
@@ -241,6 +236,6 @@ ht-degree: 1%
 
 恭喜！ 您已更新现有的内容片段模型，以使用&#x200B;**片段引用**&#x200B;字段引用嵌套的内容片段。 您还学习了如何修改GraphQL查询以包含引用模型中的字段。
 
-## 后续步骤{#next-steps}
+## 后续步骤 {#next-steps}
 
 在下一章中， [使用AEM发布环境的生产部署](./production-deployment.md) ，了解AEM创作和发布服务以及无头应用程序的推荐部署模式。 您将更新现有应用程序，以使用环境变量根据目标环境动态更改GraphQL端点。 您还将了解如何正确配置AEM以进行跨域资源共享(CORS)。
