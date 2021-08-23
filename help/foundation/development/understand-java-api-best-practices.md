@@ -11,10 +11,10 @@ doc-type: article
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2025'
-ht-degree: 2%
+source-wordcount: '2029'
+ht-degree: 3%
 
 ---
 
@@ -66,7 +66,7 @@ AEM基于4个主Java API集构建。
 
 AEM API提供了特定于产品化用例的抽象概念和功能。
 
-例如， AEM [PageManager](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)和[Page](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/model/Page.html) API为AEM中表示网页的`cq:Page`节点提供了抽象概念。
+例如， AEM [PageManager](https://helpx.adobe.com/cn/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)和[Page](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/model/Page.html) API为AEM中表示网页的`cq:Page`节点提供了抽象概念。
 
 虽然这些节点可通过[!DNL Sling] API作为资源使用，JCR API作为节点使用，但AEM API为常见用例提供了抽象概念。 使用AEM API可确保产品之间的AEM行为保持一致，并可自定义和扩展到AEM。
 
@@ -100,7 +100,7 @@ AEM支持多种查询语言。 3种主要语言为[JCR-SQL2](https://docs.jboss.
 * [支持常见](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) 查询要求的OOTB谓词
 
 * 可扩展API，允许开发自定义[查询谓词](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)
-* JCR-SQL2和XPath可以直接通过[[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)和[JCR API](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)执行，分别返回结果a [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)或[JCR节点](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)。
+* JCR-SQL2和XPath可以直接通过[[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)和[JCR API](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)执行，分别返回结果a [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)或[JCR节点](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)。
 
 >[!CAUTION]
 >
@@ -137,9 +137,9 @@ AEM支持多种查询语言。 3种主要语言为[JCR-SQL2](https://docs.jboss.
 
 ## JCR API
 
-* **[JCR 2.0 JavaDocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
+* **[JCR 2.0 JavaDocs](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-[JCR（Java内容存储库）2.0 API](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)是JCR实施规范的一部分(对于AEM，为[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))。 所有JCR实施都必须符合并实施这些API，因此，是与AEM内容交互的最低级别API。
+[JCR（Java内容存储库）2.0 API](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)是JCR实施规范的一部分(对于AEM，为[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))。 所有JCR实施都必须符合并实施这些API，因此，是与AEM内容交互的最低级别API。
 
 JCR本身是基于层次/树的NoSQL数据存储AEM用作其内容存储库。 JCR具有大量受支持的API，从内容CRUD到查询内容，不一而足。 尽管有这种强大的API，但与较高级别的AEM和[!DNL Sling]抽象概念相比，它们很少受青睐。
 
@@ -202,11 +202,11 @@ OSGi定义了所有OSGi容器必须实施和符合的规范。 AEM OSGi实施Apa
 
 * AEM QueryBuilder不支持某些查询函数，例如[submenties](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions)、拼写检查和索引提示等其他不太常用的函数。 要使用这些函数进行查询，首选JCR-SQL2。
 
-### [!DNL Sling] Servlet注册  {#sling-servlet-registration}
+### [!DNL Sling] Servlet注册 {#sling-servlet-registration}
 
 * [!DNL Sling] servlet注册，首选 [OSGi DS 1.2注释，带@](https://sling.apache.org/documentation/the-sling-engine/servlets.html) SlingServletResourceTypesover  `@SlingServlet`
 
-### [!DNL Sling] 过滤器注册  {#sling-filter-registration}
+### [!DNL Sling] 过滤器注册 {#sling-filter-registration}
 
 * [!DNL Sling] 筛选器注册，首选 [OSGi DS 1.2批注，带有@SlingServletFilterover](https://sling.apache.org/documentation/the-sling-engine/filters.html)   `@SlingFilter`
 
@@ -297,7 +297,7 @@ Page page = pageManager.getContainingPage(resource);
 Page page2 = pageManager.getContainingPage("/content/path/to/page/jcr:content/or/component");
 ```
 
-#### 替代方法{#alternative-approach-1}
+#### 替代方法 {#alternative-approach-1}
 
 要使资源适应页面，资源本身必须是`cq:Page`节点。
 
@@ -325,7 +325,7 @@ String title = asset.getMetadataValue("dc:title");
 Calendar lastModified = (Calendar) asset.getMetadata("cq:lastModified");
 ```
 
-### 读取[!DNL Sling] [!DNL Resource]属性{#read-sling-resource-properties}
+### 读取[!DNL Sling] [!DNL Resource]属性 {#read-sling-resource-properties}
 
 当属性存储在AEM API（页面、资产）无法直接访问的位置（属性或相对资源）中时，可以使用[!DNL Sling]资源和值映射来获取数据。
 
