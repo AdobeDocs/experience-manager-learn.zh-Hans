@@ -10,9 +10,9 @@ doc-type: article
 topic: 升级
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3541'
+source-wordcount: '3529'
 ht-degree: 3%
 
 ---
@@ -342,7 +342,7 @@ AEM增强了与其他Adobe服务集成的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://docs.adobe.com/docs/en/aem/6-5/administer/security/saml-2-0-authenticationhandler.html" target="_blank">改进了SAML身份验</a><br>
+        <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">改进了SAML身份验</a><br>
  </strong>证支持改进了SAML重定向、优化了组信息和密钥加密问题。 
             <br>
         </td>
@@ -953,7 +953,7 @@ AEM增强了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://docs.adobe.com/docs/cn/aem/6-5/administer/content/dynamic-media/viewer-presets.html" target="_blank">查看器</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">查看器</a>:</strong>
             支持不同屏幕/设备的自定义品牌富媒体播放器和预设。</td>
             <td> </td>
             <td>✔</td>
