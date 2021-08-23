@@ -1,17 +1,16 @@
 ---
 title: GraphQL的高级建模
 description: 了解如何在Adobe Experience Manager(AEM)中创建内容片段模型之间的关系，以及如何在GraphQL查询中利用这些关系。
-sub-product: 资产
 version: cloud-service
 topic: 无外设、内容管理
-feature: 内容片段、 GraphQL API
+feature: 内容片段， GraphQL API
 role: Developer
 level: Beginner
 kt: 7620
 thumbnail: 332859.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
