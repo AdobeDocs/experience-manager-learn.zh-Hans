@@ -7,10 +7,10 @@ version: 6.3, 6.4, 6.5
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 8%
+source-wordcount: '149'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ AEM Assets Dynamic Media通过交互式媒体查看器将资产热点与体验�
 
 >[!NOTE]
 >
->在AEM Assets Dynamic Media热点中使用AEM体验片段要求在Dynamic Media](https://docs.adobe.com/docs/cn/aem/6-3/administer/content/dynamic-media/config-dynamic.html)模式下运行[AEM。
+>在AEM Assets Dynamic Media热点中使用AEM体验片段要求在Dynamic Media](https://experienceleague.adobe.com/docs/)模式下运行[AEM。
 
 视频中显示的弹出式体验片段变体可用作以下AEM包。
 
