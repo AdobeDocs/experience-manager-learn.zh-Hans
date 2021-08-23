@@ -11,10 +11,10 @@ audience: all
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 3%
+source-wordcount: '1000'
+ht-degree: 2%
 
 ---
 
@@ -100,7 +100,7 @@ Adobe Experience Manager的内容片段和体验片段在表面上看似相似�
 </td>
 </tr><tr><td><strong>用法</strong></td>
 <td><ul>
-<li><a href="https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM核心组件内容片</a> 段组件，用于AEM Sites、AEM Screens或体验片段。</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM核心组件内容片</a> 段组件，用于AEM Sites、AEM Screens或体验片段。</li>
 <li>通过<a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">AEM Content Services</a>导出JSON，以用于第三方使用</li>
 <li>通过AEM HTTP Assets API进行JSON，用于第三方使用。</li>
 </ul>
@@ -171,7 +171,7 @@ Adobe Experience Manager的内容片段和体验片段在表面上看似相似�
 
 + [内容片段用户指南](https://helpx.adobe.com/experience-manager/6-5/assets/user-guide.html?topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
 + [在AEM中使用内容片段](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-feature-video-use.html)
-+ [AEM WCM核心组件的内容片段组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/content-fragment-component.html)
++ [AEM WCM核心组件的内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 + [使用内容片段和AEM内容服务](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
 + [AEM Content Services快速入门](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html)
 
