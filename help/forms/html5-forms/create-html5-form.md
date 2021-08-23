@@ -12,9 +12,9 @@ thumbnail: kt-4419.jpg
 topic: 开发
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ HTML5表单是Adobe Experience Manager中的一项新功能，可渲染HTML5格�
 
 ## 先决条件
 
-请确保您有AEM Forms的工作实例。 请按照[安装指南](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)安装和配置AEM Forms
+请确保您有AEM Forms的工作实例。 请按照[安装指南](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)安装和配置AEM Forms
 
 ## 创建您的第一个HTML5表单
 
@@ -58,7 +58,7 @@ xdp模板的高级属性允许您指定发布日期、提交处理程序、表�
 
 **提交URL**  — 这是将处理HTML5表单提交的URL。我们将在下一课中介绍此内容。 如果未在此处指定提交URL，则会调用默认的提交处理程序，该处理程序会将表单数据返回到浏览器。
 
-**HTML渲染配置文件**  - HTML5表单具有“配置文件”概念，这些配置文件作为REST端点公开，以便能够移动渲染表单模板。大多数情况下，默认渲染配置文件应足以渲染表单。 如果默认呈现配置文件不符合您的需求，则可以创建一个[自定义配置文件](https://docs.adobe.com/content/help/en/experience-manager-64/forms/html5-forms/custom-profile.html)并将其与表单关联。
+**HTML渲染配置文件**  - HTML5表单具有“配置文件”概念，这些配置文件作为REST端点公开，以便能够移动渲染表单模板。大多数情况下，默认渲染配置文件应足以渲染表单。 如果默认呈现配置文件不符合您的需求，则可以创建一个[自定义配置文件](https://experienceleague.adobe.com/docs/experience-manager-64/forms/html5-forms/custom-profile.html)并将其与表单关联。
 
 **预填充服务**  — 预填充服务通常用于使用从后端数据源获取的数据填充您的表单。
 
