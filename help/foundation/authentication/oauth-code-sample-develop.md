@@ -2,18 +2,14 @@
 title: 在AEM中开发OAuth作用域
 description: Adobe Experience Manager的可扩展OAuth作用域允许从最终用户授权的客户端应用程序对资源进行访问控制。 下图说明了AEM上下文中的请求流。
 version: 6.3, 6.4, 6.5
-feature: 用户和组
-topics: authentication, security
-activity: develop
-audience: developer
-doc-type: code
+feature: 用户和群组
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
