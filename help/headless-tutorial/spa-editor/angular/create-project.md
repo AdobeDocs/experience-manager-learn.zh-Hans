@@ -13,15 +13,15 @@ thumbnail: 5309-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1115'
-ht-degree: 3%
+source-wordcount: '1111'
+ht-degree: 2%
 
 ---
 
 
-# SPA编辑器项目{#create-project}
+# SPA编辑器项目 {#create-project}
 
 了解如何将Adobe Experience Manager(AEM)Maven项目用作与AEM SPA编辑器集成的Angular应用程序的起点。
 
@@ -90,7 +90,7 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   > 请注意`frontendModule=angular`属性。 这可告知AEM项目原型使用启动程序[Angular代码库](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)引导项目以与AEM SPA编辑器一起使用。
+   > 请注意`frontendModule=angular`属性。 这可告知AEM项目原型使用启动程序[Angular代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)引导项目以与AEM SPA编辑器一起使用。
 
 ## 构建项目
 
@@ -149,7 +149,7 @@ ht-degree: 3%
 
    项目所需的所有自定义代码都将捆绑到这些包中，并安装在AEM运行时上。
 
-6. 您还应看到`spa.project.core`和`core.wcm.components`的多个包。 这些是原型自动包含的依赖项。 有关[AEM核心组件的更多信息，请参阅此处](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+6. 您还应看到`spa.project.core`和`core.wcm.components`的多个包。 这些是原型自动包含的依赖项。 有关[AEM核心组件的更多信息，请参阅此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
 
 ## 创作内容
 
@@ -237,6 +237,6 @@ ht-degree: 3%
 
 现在非常简单，但在接下来的几章中，将添加更多功能。
 
-### 后续步骤{#next-steps}
+### 后续步骤 {#next-steps}
 
 [集成SPA](integrate-spa.md)  — 了解SPA源代码如何与AEM项目集成，并了解可用于快速开发SPA的工具。
