@@ -1,17 +1,16 @@
 ---
 title: 内容片段变量
 description: 了解如何创建内容片段的变体并探索一些常见用例。
-sub-product: 资产
 version: cloud-service
 topic: 无外设、内容管理
-feature: 内容片段、 GraphQL API
+feature: 内容片段， GraphQL API
 role: Developer
 level: Beginner
 kt: 7874
 thumbnail: 333295.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
