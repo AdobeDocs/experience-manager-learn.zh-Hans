@@ -7,9 +7,9 @@ feature: 体验片段
 topic: 个性化
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1728'
 ht-degree: 1%
 
 ---
@@ -58,8 +58,8 @@ WKND网站计划通过其网站在美国各地宣布一个&#x200B;**SkateFest Ch
 1. 根据要求，AEM内容编辑器会为内容块创建一个体验片段，并将其作为选件导出到Adobe Target。 为了为美国的所有州提供个性化内容，内容作者可以创建一个体验片段主控变量，然后创建50个其他变量，每个州一个。 然后，可以手动编辑每个状态变体的内容以及相关的图像和文本。 在创作体验片段时，内容编辑器可以使用资产查找器选项快速访问AEM Assets中可用的所有资产。 当体验片段导出到Adobe Target时，其所有变量也会作为选件推送到Adobe Target。
 
 1. 在将体验片段从AEM导出为“选件”后，营销人员可以使用这些选件在Target中创建活动。 根据WKND站点SkateFest营销活动，营销人员需要创建每个州的WKND站点访客并向其提供个性化体验。 要创建体验定位活动，营销人员需要识别受众。 对于WKND SkateFest活动，我们需要根据访客访问WKND网站的位置创建50个不同的受众。
-   * [](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) 受众为您的活动定义目标，可在任何有定位的地方使用。Target受众是一组定义的访客标准。 选件可以定位到特定受众（或区段）。 只有属于该受众的访客才会看到针对他们的体验。  例如，您可以向由使用特定浏览器或来自特定地理位置的访客组成的受众交付选件。
-   * [Offer](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9)是在营销活动或活动期间在您的网页上显示的内容。 在测试网页时，您可以使用不同位置的选件衡量每个体验的成功与否。 选件可以包含不同类型的内容，包括：
+   * [](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) 受众为您的活动定义目标，可在任何有定位的地方使用。Target受众是一组定义的访客标准。 选件可以定位到特定受众（或区段）。 只有属于该受众的访客才会看到针对他们的体验。  例如，您可以向由使用特定浏览器或来自特定地理位置的访客组成的受众交付选件。
+   * [Offer](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9)是在营销活动或活动期间在您的网页上显示的内容。 在测试网页时，您可以使用不同位置的选件衡量每个体验的成功与否。 选件可以包含不同类型的内容，包括：
       * 图像
       * 文本
       * **HTML**
@@ -77,7 +77,7 @@ WKND网站计划通过其网站在美国各地宣布一个&#x200B;**SkateFest Ch
 
 ## 营销人员活动
 
-### 使用地理定位创建受众{#marketer-audience}
+### 通过地域定位创建受众 {#marketer-audience}
 
 1. 导航到您的组织[Adobe Experience Cloud](https://experiencecloud.adobe.com/)(<https://>`<yourcompany>`.experiencecloud.adobe.com)
 1. 使用Adobe ID登录，并确保您所在的组织正确。
