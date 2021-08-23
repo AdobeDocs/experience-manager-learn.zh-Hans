@@ -13,9 +13,9 @@ thumbnail: 40242.jpg
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '141'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 ## 先决条件
 
-请确保您有AEM Forms的工作实例。 请按照[安装指南](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)安装和配置AEM Forms
+请确保您有AEM Forms的工作实例。 请按照[安装指南](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)安装和配置AEM Forms
 
 以下视频介绍了如何使用AEM Forms组件创建审阅和批准工作流程
 >[!VIDEO](https://video.tv.adobe.com/v/40242/?quality=9&learn=on)
