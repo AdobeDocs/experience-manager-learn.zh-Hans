@@ -2,18 +2,13 @@
 title: 开发与AEM的跨域资源共享(CORS)
 description: 有关利用CORS通过客户端JavaScript从外部Web应用程序访问AEM内容的简短示例。
 version: 6.3, 6,4, 6.5
-sub-product: 基础，内容服务，站点
-topics: security, development, content-delivery
-activity: develop
-audience: developer
-doc-type: tutorial
-topic: 安全
+topic: 安全、开发
 role: Developer
 level: Beginner
-feature: null
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+feature: 安全
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -96,7 +91,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 />
 ```
 
-## 调度程序配置{#dispatcher-configuration}
+## 调度程序配置 {#dispatcher-configuration}
 
 要允许缓存内容上缓存和提供CORS标头，请将[/clientheaders配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)后面的添加到所有支持AEM发布`dispatcher.any`文件。
 
@@ -119,7 +114,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 可能需要完全清除缓存，以确保在`/clientheaders`配置更新后，在下一个请求中正确缓存标头。
 
-## 辅助材料{#supporting-materials}
+## 辅助材料 {#supporting-materials}
 
 * [AEM OSGi跨源资源共享策略配置工厂](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [适用于macOS的SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
