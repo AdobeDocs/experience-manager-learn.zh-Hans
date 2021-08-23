@@ -2,13 +2,12 @@
 title: 如何设置Oak登录令牌会话过期
 description: 设置Oak Origin令牌会话过期超时的步骤
 type: Troubleshooting
-product: Sites
 role: Admin
 level: Intermediate
 version: 6.5, cloud-service
-feature: Developer Tools
+feature: 开发人员工具
 topic: 管理
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 6%
