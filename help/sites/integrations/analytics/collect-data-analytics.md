@@ -1,28 +1,24 @@
 ---
 title: 使用Adobe Analytics收集页面数据
 description: 使用事件驱动的Adobe客户端数据层在使用Adobe Experience Manager构建的网站上收集有关用户活动的数据。 了解如何在Experience Platform Launch中使用规则来侦听这些事件并将数据发送到Adobe Analytics报表包。
-feature: 分析
-topics: integrations
-audience: administrator
-doc-type: tutorial
-activity: setup
 version: cloud-service
-kt: 5332
-thumbnail: 5332-collect-data-analytics.jpg
 topic: 集成
+feature: Adobe客户端数据层
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 5332
+thumbnail: 5332-collect-data-analytics.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2417'
-ht-degree: 2%
+source-wordcount: '2378'
+ht-degree: 1%
 
 ---
 
 
 # 使用Adobe Analytics收集页面数据
 
-了解如何将[Adobe客户端数据层的内置功能与AEM核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/data-layer/overview.html)一起使用来收集有关Adobe Experience Manager Sites中某个页面的数据。 [Experience Platform](https://www.adobe.com/experience-platform/launch.html) Launch和Adobe Analytics [扩](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html) 展将用于创建规则以将页面数据发送到Adobe Analytics。
+了解如何将[Adobe客户端数据层的内置功能与AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)一起使用来收集有关Adobe Experience Manager Sites中某个页面的数据。 [Experience Platform](https://www.adobe.com/experience-platform/launch.html) Launch和Adobe Analytics [扩](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html) 展将用于创建规则以将页面数据发送到Adobe Analytics。
 
 ## 将构建的内容
 
@@ -41,9 +37,9 @@ ht-degree: 2%
 需要满足以下条件：
 
 * **Experience Platform** LaunchProperty
-* **Adobe** Analyticst/dev报表包ID和跟踪服务器。有关[创建新报表包](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)的信息，请参阅以下文档。
-* [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser扩展。本教程中的屏幕截图是从Chrome浏览器捕获的。
-* （可选）启用[Adobe客户端数据层的AEM Site](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 本教程将使用面向公众的站点[https://wknd.site/us/en.html](https://wknd.site/us/en.html)，但欢迎您使用自己的站点。
+* **Adobe** Analyticst/dev报表包ID和跟踪服务器。有关[创建新报表包](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)的信息，请参阅以下文档。
+* [Experience Platform](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser扩展。本教程中的屏幕截图是从Chrome浏览器捕获的。
+* （可选）启用[Adobe客户端数据层的AEM Site](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 本教程将使用面向公众的站点[https://wknd.site/us/en.html](https://wknd.site/us/en.html)，但欢迎您使用自己的站点。
 
 >[!NOTE]
 >
@@ -51,12 +47,12 @@ ht-degree: 2%
 
 ## 为WKND站点切换Launch环境
 
-[https://wknd.sites](https://wknd.site) 基于开源项目构建的面向公众 [的站点，](https://github.com/adobe/aem-guides-wknd) 该项目设计为AEM实施的 [](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) 参考和教程。
+[https://wknd.sites](https://wknd.site) 基于开源项目构建的面向公众 [的站点，](https://github.com/adobe/aem-guides-wknd) 该项目设计为AEM实施的 [](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) 参考和教程。
 
-您可以使用Experience Platform调试器将实时[https://wknd.site/](https://wknd.site/)切换到&#x200B;*您的* Launch资产，而不是设置AEM环境并安装WKND代码库。 ****&#x200B;当然，如果您自己的AEM站点已启用[Adobe客户端数据层](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)，则可以使用该站点
+您可以使用Experience Platform调试器将实时[https://wknd.site/](https://wknd.site/)切换到&#x200B;*您的* Launch资产，而不是设置AEM环境并安装WKND代码库。 ****&#x200B;当然，如果您自己的AEM站点已启用[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)，则可以使用该站点
 
-1. 登录Experience Platform Launch并[创建Launch资产](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch.html)（如果尚未登录）。
-1. 确保已创建初始的Launch [库](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html#create-a-library)并将其提升到Launch [环境](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)。
+1. 登录Experience Platform Launch并[创建Launch资产](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html)（如果尚未登录）。
+1. 确保已创建初始的Launch [库](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)并将其提升到Launch [环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)。
 1. 从库已发布到的环境中复制Launch嵌入代码。
 
    ![复制Launch嵌入代码](assets/collect-data-analytics/launch-environment-copy.png)
@@ -76,7 +72,7 @@ ht-degree: 2%
 
 ## 验证WKND站点上的Adobe客户端数据层
 
-[WKND引用项目](https://github.com/adobe/aem-guides-wknd)是使用AEM核心组件构建的，默认情况下启用[Adobe客户端数据层](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 接下来，验证Adobe客户端数据层是否已启用。
+[WKND引用项目](https://github.com/adobe/aem-guides-wknd)是使用AEM核心组件构建的，默认情况下启用[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 接下来，验证Adobe客户端数据层是否已启用。
 
 1. 导航到[https://wknd.site](https://wknd.site)。
 1. 打开浏览器的开发人员工具并导航到&#x200B;**Console**。 运行以下命令：
@@ -103,11 +99,11 @@ ht-degree: 2%
        xdm:template: "/conf/wknd/settings/wcm/templates/landing-page-template"
    ```
 
-   我们将使用从数据层的[页面架构](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)、`dc:title`、`xdm:language`和`xdm:template`派生的标准属性，将页面数据发送到Adobe Analytics。
+   我们将使用从数据层的[页面架构](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page)、`dc:title`、`xdm:language`和`xdm:template`派生的标准属性，将页面数据发送到Adobe Analytics。
 
    >[!NOTE]
    >
-   > 没有看到`adobeDataLayer` javascript对象？ 确保在您的网站上启用了[Adobe客户端数据层](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+   > 没有看到`adobeDataLayer` javascript对象？ 确保在您的网站上启用了[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
 
 ## 创建Page Loaded规则
 
@@ -174,13 +170,13 @@ Adobe客户端数据层是一个&#x200B;**事件**&#x200B;驱动的数据层。 
    console.debug("Page template: " + event.component['xdm:template']);
    ```
 
-   `event`对象从自定义事件中调用的`trigger()`方法传递。 `component` 是从自定义事件中的数据层派 `getState` 生的当前页面。回顾之前由数据层公开的[页面架构](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)，以查看现成公开的各种键值。
+   `event`对象从自定义事件中调用的`trigger()`方法传递。 `component` 是从自定义事件中的数据层派 `getState` 生的当前页面。回顾之前由数据层公开的[页面架构](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page)，以查看现成公开的各种键值。
 
-1. 在Launch中保存更改并运行[build](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html)，以将代码提升到AEM Site上使用的[environment](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)。
+1. 在Launch中保存更改并运行[build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以将代码提升到AEM Site上使用的[environment](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)。
 
    >[!NOTE]
    >
-   > 使用[Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)将嵌入代码切换到&#x200B;**Development**&#x200B;环境会非常有用。
+   > 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)将嵌入代码切换到&#x200B;**Development**&#x200B;环境会非常有用。
 
 1. 导航到您的AEM站点并打开开发人员工具以查看控制台。 刷新页面，此时您应会看到控制台消息已记录：
 
@@ -190,7 +186,7 @@ Adobe客户端数据层是一个&#x200B;**事件**&#x200B;驱动的数据层。 
 
 接下来，创建多个数据元素以从Adobe客户端数据层捕获不同的值。 如上一个练习中所示，我们已经看到可以通过自定义代码直接访问数据层的属性。 使用数据元素的优势在于，可以在Launch规则中重复使用这些数据元素。
 
-从之前的数据层公开的[页面架构](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)中回顾：
+从之前的数据层公开的[页面架构](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page)中回顾：
 
 数据元素将映射到`@type`、`dc:title`和`xdm:template`属性。
 
