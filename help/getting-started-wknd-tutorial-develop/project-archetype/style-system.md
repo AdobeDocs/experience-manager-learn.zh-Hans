@@ -12,15 +12,15 @@ level: Beginner
 kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2003'
+source-wordcount: '1999'
 ht-degree: 0%
 
 ---
 
 
-# 使用样式系统{#developing-with-the-style-system}进行开发
+# 用风格体系发展 {#developing-with-the-style-system}
 
 了解如何使用Experience Manager的样式系统实施单个样式并重复使用核心组件。 本教程涵盖开发样式系统以使用特定于品牌的CSS和模板编辑器的高级策略配置来扩展核心组件。
 
@@ -67,9 +67,9 @@ ht-degree: 0%
 1. 了解BEM记数法，以及如何使用它仔细调整样式。
 1. 使用可编辑的模板应用高级策略配置。
 
-## 将生成{#what-you-will-build}的内容
+## 将构建的内容 {#what-you-will-build}
 
-在本章中，我们将使用[样式系统功能](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)创建文章页面上使用的&#x200B;**标题**&#x200B;和&#x200B;**文本**&#x200B;组件的变体。
+在本章中，我们将使用[样式系统功能](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)创建文章页面上使用的&#x200B;**标题**&#x200B;和&#x200B;**文本**&#x200B;组件的变体。
 
 ![可用于标题的样式](assets/style-system/styles-added-title.png)
 
@@ -77,13 +77,13 @@ ht-degree: 0%
 
 ## 背景 {#background}
 
-[样式系统](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/style-system.html)允许开发人员和模板编辑器创建组件的多个可视化变量。 然后，作者可以决定在合成页面时使用哪种样式。 在本教程的其余部分中，我们将利用样式系统来实现多个独特的样式，同时以低代码方式利用核心组件。
+[样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)允许开发人员和模板编辑器创建组件的多个可视化变量。 然后，作者可以决定在合成页面时使用哪种样式。 在本教程的其余部分中，我们将利用样式系统来实现多个独特的样式，同时以低代码方式利用核心组件。
 
 样式系统的一般思想是，作者可以选择组件外观的各种样式。 “styles”由插入到组件外div中的其他CSS类作为后盾。 在客户端库中，会根据这些样式类添加CSS规则，以便组件更改外观。
 
 您可以在此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)找到有关样式系统的详细文档。 [还有一个很棒的[技术视频，用于了解样式系统](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)。
 
-## 下划线样式 — 标题{#underline-style}
+## 下划线样式 — 标题 {#underline-style}
 
 [标题组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/title.html)已作为&#x200B;**ui.apps**&#x200B;模块的一部分，在`/apps/wknd/components/title`下被代理到项目中。 已在&#x200B;**ui.frontend**&#x200B;模块中实施了标题元素的默认样式(`H1`、`H2`、`H3`...)。
 
@@ -236,7 +236,7 @@ ht-degree: 0%
 
    使用浏览器开发人员工具验证标题组件周围的标记是否将CSS类`cmp-title--underline`应用于外部div。
 
-## 引号块样式 — 文本{#text-component}
+## 引号块样式 — 文本 {#text-component}
 
 接下来，重复类似步骤以对[文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)应用唯一样式。 文本组件已作为&#x200B;**ui.apps**&#x200B;模块的一部分被代理到`/apps/wknd/components/text`下的项目中。 段落元素的默认样式已在&#x200B;**ui.frontend**&#x200B;中实施。
 
@@ -391,7 +391,7 @@ ht-degree: 0%
 
    作为作者，您应该能够打开/关闭样式。
 
-## 固定宽度 — 容器（附加）{#layout-container}
+## 固定宽度 — 容器（附加） {#layout-container}
 
 容器组件用于创建文章页面模板的基本结构，并为内容作者提供用于在页面上添加内容的拖放区域。 容器还可以利用样式系统，为内容作者提供更多用于设计布局的选项。
 
@@ -425,7 +425,7 @@ main.container {
 
 恭喜，文章页面的样式几乎完整，您在使用AEM样式系统时获得了实际操作经验。
 
-### 后续步骤{#next-steps}
+### 后续步骤 {#next-steps}
 
 了解端到端创建[自定义AEM组件](custom-component.md)以显示对话框中创作的内容的步骤，并探索开发Sling模型以封装可填充组件HTL的业务逻辑。
 
