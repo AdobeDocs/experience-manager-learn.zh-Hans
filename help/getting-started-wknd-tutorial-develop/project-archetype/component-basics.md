@@ -11,15 +11,15 @@ level: Beginner
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1150'
 ht-degree: 0%
 
 ---
 
 
-# 组件基础知识{#component-basics}
+# 组件基础知识 {#component-basics}
 
 在本章中，我们将通过一个简单的`HelloWorld`示例来探索Adobe Experience Manager(AEM)站点组件的基础技术。 将对现有组件进行小幅修改，涵盖创作、HTL、Sling模型、客户端库等主题。
 
@@ -35,11 +35,11 @@ ht-degree: 0%
 1. 了解如何使用对话框来促进内容创作。
 1. 了解客户端库的基础知识，以包含用于支持组件的CSS和JavaScript。
 
-## 将生成{#what-you-will-build}的内容
+## 将构建的内容 {#what-you-will-build}
 
 在本章中，您将对非常简单的`HelloWorld`组件进行几处修改。 在对`HelloWorld`组件进行更新的过程中，您将了解AEM组件开发的关键方面。
 
-## 章节起始项目{#starter-project}
+## 章节入门项目 {#starter-project}
 
 本章基于由[AEM项目原型](https://github.com/adobe/aem-project-archetype)生成的通用项目。 请观看以下视频并查看[先决条件](#prerequisites)以开始操作！
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
 1. 按照设置[本地开发环境](overview.md#local-dev-environment)的说明，将项目导入首选IDE。
 
-## 组件创作{#component-authoring}
+## 组件创作 {#component-authoring}
 
 组件可以视为网页的小模块化构建块。 要重复使用组件，必须对组件进行配置。 此操作可通过创作对话框完成。 接下来，我们将创作一个简单的组件，并检查对话框中的值是如何在AEM中保留的。
 
@@ -97,9 +97,9 @@ ht-degree: 0%
 1. 切换到开发人员模式，在CRXDE-Lite中查看内容路径，并检查组件实例的属性。
 1. 使用CRXDE-Lite查看位于`/apps/wknd/components/content/helloworld`的`cq:dialog`和`helloworld.html`脚本。
 
-## HTL（HTML模板语言）和对话框{#htl-dialogs}
+## HTL（HTML模板语言）和对话框 {#htl-dialogs}
 
-HTML模板语言或&#x200B;**[HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)**&#x200B;是AEM组件用于呈现内容的轻量级服务器端模板语言。
+HTML模板语言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)**&#x200B;是AEM组件用于呈现内容的轻量级服务器端模板语言。
 
 **** 对话框定义可用于组件的配置。
 
@@ -359,7 +359,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
 
 恭喜，您刚刚学习了Adobe Experience Manager中组件开发的基础知识！
 
-### 后续步骤{#next-steps}
+### 后续步骤 {#next-steps}
 
 在下一章[页面和模板](pages-templates.md)中了解Adobe Experience Manager页面和模板。 了解核心组件如何代理到项目中，并了解可编辑模板的高级策略配置，以构建结构良好的文章页面模板。
 
