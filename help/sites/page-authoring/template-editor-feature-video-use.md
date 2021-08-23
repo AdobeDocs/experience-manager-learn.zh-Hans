@@ -13,9 +13,9 @@ kt: 193
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '252'
 ht-degree: 5%
 
 ---
@@ -42,5 +42,5 @@ ht-degree: 5%
 
 ## 其他资源 {#additional-resources}
 
-* [可编辑的页面模板 — 文档](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/templates/page-templates-editable.html)
-* [创建页面模板 — 文档](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/templates.html)
+* [可编辑的页面模板 — 文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
+* [创建页面模板 — 文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)
