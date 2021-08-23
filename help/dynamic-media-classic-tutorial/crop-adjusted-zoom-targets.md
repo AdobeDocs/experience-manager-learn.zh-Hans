@@ -10,9 +10,9 @@ activity: use
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2659'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Dynamic Media Classic主控图像概念的主要优势之一是，您可以为�
 
 在本教程的本节结束时，您将了解如何：
 
-- 在Dynamic Media Classic中裁剪图像，并另存为新的主控文件或虚拟图像。 [了解更多](https://docs.adobe.com/help/en/dynamic-media-classic/using/master-files/cropping-image.html)。
-- 保存虚拟调整后的图像并使用它们代替主控资产。 [了解更多](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/adjusting-image.html)。
-- 在图像上创建缩放目标以显示其高亮显示。 [了解更多](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html)。
+- 在Dynamic Media Classic中裁剪图像，并另存为新的主控文件或虚拟图像。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html)。
+- 保存虚拟调整后的图像并使用它们代替主控资产。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html)。
+- 在图像上创建缩放目标以显示其高亮显示。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html)。
 
 ## 裁剪
 
@@ -45,8 +45,8 @@ Dynamic Media Classic在UI中提供了一些图像编辑工具（包括裁剪工
 
 您可以从资产的“详细信息”页面或单击&#x200B;**编辑**&#x200B;按钮，访问Dynamic Media Classic中的裁剪工具。 您可以使用该工具通过两种方式进行裁剪：
 
-- 默认的裁剪模式，在该模式中，您可以拖动裁剪窗口的手柄或在“大小”框中键入值。 了解如何[手动裁剪](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop)。
-- 裁切。 使用此选项通过计算与图像不匹配的像素数来删除图像周围的额外空格。 了解如何[通过修剪进行裁剪](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image)。
+- 默认的裁剪模式，在该模式中，您可以拖动裁剪窗口的手柄或在“大小”框中键入值。 了解如何[手动裁剪](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop)。
+- 裁切。 使用此选项通过计算与图像不匹配的像素数来删除图像周围的额外空格。 了解如何[通过修剪进行裁剪](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image)。
 
 ### _手动裁剪_
 
@@ -137,7 +137,7 @@ _主控图像ASIAN_BR_MAIN的图像调整视图_
 
 决定是否使用缩放目标的另一个因素是您选择的查看器。 并非所有查看器类型都可以显示缩放目标（例如，弹出查看器不支持这些类型）。
 
-了解如何[创建缩放目标](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets)。
+了解如何[创建缩放目标](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets)。
 
 ![图像](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 
