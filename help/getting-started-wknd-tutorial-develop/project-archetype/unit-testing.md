@@ -11,15 +11,15 @@ level: Beginner
 kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3017'
+source-wordcount: '3013'
 ht-degree: 0%
 
 ---
 
 
-# 设备测试{#unit-testing}
+# 单元测试 {#unit-testing}
 
 本教程涵盖单元测试的实施，该测试将验证在[自定义组件](./custom-component.md)教程中创建的署名组件Sling模型的行为。
 
@@ -76,13 +76,13 @@ _如果系统上同时安装了Java 8和Java 11，则VS Code测试运行程序�
 * [Mockito测试框架](https://site.mockito.org/)
 * [wcm.io测试框架](https://wcm.io/testing/) (以Apache Sling吊 [床为基础](https://sling.apache.org/documentation/development/sling-mock.html))
 
-## 设备测试和AdobeCloud Manager {#unit-testing-and-adobe-cloud-manager}
+## 单元测试和AdobeCloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[Adobe云管](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) 理器将单元测试执行和 [代码覆](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) 盖报告集成到其CI/CD管道中，以帮助鼓励和推广单元测试AEM代码的最佳实践。
+[Adobe云管](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hans) 理器将单元测试执行和 [代码覆](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) 盖报告集成到其CI/CD管道中，以帮助鼓励和推广单元测试AEM代码的最佳实践。
 
 虽然单元测试代码是任何代码库的最佳实践，但在使用Cloud Manager时，务必要通过为Cloud Manager运行单元测试来利用其代码质量测试和报告功能。
 
-## Inspect测试Maven依赖项{#inspect-the-test-maven-dependencies}
+## Inspect测试Maven依赖项 {#inspect-the-test-maven-dependencies}
 
 第一步是检查Maven依赖项，以支持编写和运行测试。 需要四个依赖项：
 
@@ -187,7 +187,7 @@ _如果系统上同时安装了Java 8和Java 11，则VS Code测试运行程序�
 
    **core**&#x200B;项目中的并行源文件夹将包含单元测试和任何支持的测试文件。 此&#x200B;**test**&#x200B;文件夹提供了与源代码分离的测试类，但允许测试像与源代码位于同一包中一样进行操作。
 
-## 创建JUnit测试{#creating-the-junit-test}
+## 创建JUnit测试 {#creating-the-junit-test}
 
 单元测试通常使用Java类将1对1映射。 在本章中，我们将为&#x200B;**BylineImpl.java**&#x200B;编写一个JUnit测试，该测试是支持Byline组件的Sling模型。
 
@@ -288,7 +288,7 @@ public class BylineImplTest {
 
 对于AEM,TDD需要一定的专业技能，最能被精通AEM代码开发和单元测试的AEM开发人员采用。
 
-## 设置AEM测试上下文{#setting-up-aem-test-context}
+## 设置AEM测试上下文  {#setting-up-aem-test-context}
 
 为AEM编写的大多数代码都依赖于JCR、Sling或AEM API，而JCR、Sling或API反过来又需要运行AEM的上下文才能正确执行。
 
@@ -354,7 +354,7 @@ public class BylineImplTest {
 
    现在，存在&#x200B;**BylineImplTest.json**&#x200B;时，当执行`ctx.json("/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.json", "/content")`时，模拟资源定义将加载到路径&#x200B;**/content.**&#x200B;的上下文中。
 
-## 测试getName(){#testing-get-name}
+## 测试getName() {#testing-get-name}
 
 既然我们有了基本的模拟上下文设置，让我们编写我们针对&#x200B;**BylineImpl&#39;s getName()**&#x200B;的第一个测试。 此测试必须确保方法&#x200B;**getName()**&#x200B;返回存储在资源“**name&quot;**&#x200B;属性中的正确创作名称。
 
@@ -482,7 +482,7 @@ public class BylineImplTest {
    ![测试名称通过](assets/unit-testing/testgetname-pass.png)
 
 
-## 测试getSchories(){#testing-get-occupations}
+## 测试getSchories() {#testing-get-occupations}
 
 很好！ 我们的第一个测试通过了！ 让我们继续测试`getOccupations()`。 由于模拟上下文的初始化是在`@Before setUp()`方法中进行的，因此此测试案例中的所有`@Test`方法（包括`getOccupations()`）均可使用此模拟上下文。
 
@@ -538,7 +538,7 @@ public class BylineImplTest {
 
    *testGetSchories()通过*
 
-## 测试isEmpty(){#testing-is-empty}
+## 测试isEmpty() {#testing-is-empty}
 
 测试&#x200B;**`isEmpty()`**&#x200B;的最后一个方法。
 
@@ -702,7 +702,7 @@ public class BylineImplTest {
 
 ![所有测试均通过](./assets/unit-testing/all-tests-pass.png)
 
-## 运行单元测试作为内部版本{#running-unit-tests-as-part-of-the-build}的一部分
+## 运行单元测试作为内部版本的一部分 {#running-unit-tests-as-part-of-the-build}
 
 在maven内部版本中，需要执行单元测试才能通过。 这可确保在部署应用程序之前成功通过所有测试。 执行Maven目标（如包或安装）时，会自动调用并要求通过项目中的所有单元测试。
 
@@ -720,6 +720,6 @@ $ mvn package
 
 ![mvn包失败](assets/unit-testing/mvn-package-fail.png)
 
-## 查看代码{#review-the-code}
+## 查看代码 {#review-the-code}
 
 在[GitHub](https://github.com/adobe/aem-guides-wknd)上查看完成的代码，或在Git浏览器`tutorial/unit-testing-solution`上的本地查看并部署代码。
