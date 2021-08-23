@@ -3,16 +3,12 @@ user-guide-title: AEM Headless 快速入门
 user-guide-description: 一个端到端教程，它演示了如何使用 AEM Headless 构建和展示内容。
 breadcrumb-title: AEM Headless 教程
 version: cloud-service
-sub-product: 内容服务
-audience: architect, developer, implementer
-doc-type: tutorial
-topics: content-delivery
-activity: develop, understand
+feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '181'
 ht-degree: 19%
 
 ---
