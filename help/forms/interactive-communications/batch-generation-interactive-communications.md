@@ -10,9 +10,9 @@ version: 6.5
 topic: 开发
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '417'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 您可以使用批处理API从模板生成多个交互式通信。 模板是一种无任何数据的交互式通信。 批处理API将数据与模板组合在一起，以生成交互式通信。 该API在大规模生产交互式通信中非常有用。 例如，电话单、多个客户的信用卡对帐单。
 
-[了解有关批量生成API的更多信息](https://docs.adobe.com/content/help/en/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html)
+[了解有关批量生成API的更多信息](https://experienceleague.adobe.com/docs/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html)
 
 本文提供了使用批处理API生成交互式通信文档的示例资产。
 
