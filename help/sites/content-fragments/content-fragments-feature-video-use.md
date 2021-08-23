@@ -11,10 +11,10 @@ version: cloud-service
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 8%
+source-wordcount: '372'
+ht-degree: 5%
 
 ---
 
@@ -36,7 +36,7 @@ AEM内容片段是基于文本的编辑内容，可能包含一些与之关联�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEM内容片段模型（内容片段的数据架构）必须通过AEM [[!UICONTROL 配置浏览器]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)启用，这允许根据配置定义内容片段模型。
+AEM内容片段模型（内容片段的数据架构）必须通过AEM [[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)启用，这允许根据配置定义内容片段模型。
 
 ## 创建内容片段 {#creating-content-fragments}
 
@@ -73,8 +73,8 @@ AEM内容片段可以从AEM作者中下载为包含变体、元素和元数据�
 ## 其他资源 {#additional-resources}
 
 * [交付内容片段](content-fragments-delivery-feature-video-use.md)
-* [AEM WCM核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
-* [AEM WCM核心内容片段组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [AEM WCM核心内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 要在AEM 6.4+实例上下载并安装以下包，以获取视频系列的最终状态，请执行以下操作：
 
