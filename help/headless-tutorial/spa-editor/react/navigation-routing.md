@@ -12,15 +12,15 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1623'
 ht-degree: 0%
 
 ---
 
 
-# 添加导航和路由{#navigation-routing}
+# 添加导航和路由 {#navigation-routing}
 
 了解如何通过SPA Editor SDK将SPA中的多个视图映射到AEM页面，从而支持中的多个视图。 动态导航是使用React Router和React Core Components实现的。
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## 将构建的内容
 
-本章将向AEM中的SPA添加导航。 导航菜单将由AEM页面层次结构驱动，并将利用[导航核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
+本章将向AEM中的SPA添加导航。 导航菜单将由AEM页面层次结构驱动，并将利用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
 
 ![添加了导航](assets/navigation-routing/navigation-added.png)
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。 本章是[映射组件](map-components.md)章节的继续，但是，随后您只需要将一个启用了SPA的AEM项目部署到本地AEM实例。
 
-## 将导航添加到模板{#add-navigation-template}
+## 将导航添加到模板 {#add-navigation-template}
 
 1. 打开浏览器并登录AEM, [http://localhost:4502/](http://localhost:4502/)。 应该已部署起始代码库。
 1. 导航到&#x200B;**SPA页面模板**:[http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html)。
@@ -121,7 +121,7 @@ ht-degree: 0%
 
    请注意，在初始页面加载后，后续导航不会导致页面完全刷新，并且在返回到之前访问的页面时，网络流量会最小化。
 
-## 层级页面JSON模型{#hierarchy-page-json-model}
+## 层级页面JSON模型 {#hierarchy-page-json-model}
 
 接下来，检查可驱动SPA多视图体验的JSON模型。
 
@@ -208,7 +208,7 @@ ht-degree: 0%
 
 1. 通过直接导航到以下位置来体验深层链接：[http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html)。 另请注意，浏览器的“返回”按钮可继续工作。
 
-## Inspect React Routing {#react-routing}
+## Inspect React Routing  {#react-routing}
 
 导航和路由采用[React Router](https://reactrouter.com/)实现。 React Router是React应用程序的导航组件集合。 [AEM React核心组](https://github.com/adobe/aem-react-core-wcm-components-base) 件使用React Router的功能来实施 **** 前面步骤中使用的Navigation组件。
 
