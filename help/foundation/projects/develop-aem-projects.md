@@ -10,9 +10,9 @@ doc-type: tutorial
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '4652'
+source-wordcount: '4585'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ AEM项目附带多个[OOTB项目模板](https://helpx.adobe.com/experience-manag
 * [已完成教程包](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整代码存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教程假定您对[AEM开发实践具有一些基本知识](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/the-basics.html)，并熟悉[AEM Maven项目设置](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ht-projects-maven.html)。 所有提及的代码都将用作引用，并且只应部署到[本地开发AEM实例](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted)。
+本教程假定您对[AEM开发实践具有一些基本知识](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/the-basics.html)，并熟悉[AEM Maven项目设置](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/ht-projects-maven.html)。 所有提及的代码都将用作引用，并且只应部署到[本地开发AEM实例](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted)。
 
 ## 项目模板的结构
 
@@ -90,7 +90,7 @@ AEM项目附带多个[OOTB项目模板](https://helpx.adobe.com/experience-manag
                    - wizard = dialog used to start the workflow
 ```
 
-## 创建项目模板{#creating-project-template}
+## 创建项目模板 {#creating-project-template}
 
 由于我们将主要复制/配置节点，因此我们将使用CRXDE Lite。 在本地AEM实例中，打开[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)。
 
@@ -131,7 +131,7 @@ AEM项目附带多个[OOTB项目模板](https://helpx.adobe.com/experience-manag
    1. 在authoring-project/gadgets（称为&#x200B;**tasks**）下添加新的&#x200B;**nt:unstructured**&#x200B;节点。
    1. 将字符串属性添加到&#x200B;**cardWeight** = &quot;100&quot;、**jcr:title**=&quot;Tasks&quot;和&#x200B;**sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;的任务节点。
 
-   现在，在创建新项目时，默认将显示[任务拼贴](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#Tasks)。
+   现在，在创建新项目时，默认将显示[任务拼贴](https://experienceleague.adobe.com/docs/#Tasks)。
 
    ```shell
    ../projects/templates/authoring-project
@@ -282,7 +282,7 @@ AEM项目附带多个[OOTB项目模板](https://helpx.adobe.com/experience-manag
 
 虽然任务比参与者步骤具有一些优势，但它们确实会产生额外的开销，在项目之外没有这样的用处。 此外，必须使用ecma脚本对任务的所有动态行为进行编码，这些脚本具有自己的限制。
 
-## 用例要求示例{#goals-tutorial}
+## 用例要求示例 {#goals-tutorial}
 
 ![工作流流程图](./assets/develop-aem-projects/workflow-process-diagram.png)
 
@@ -623,7 +623,7 @@ task.setCurrentAssignee(projectApproverGrp);
    }
    ```
 
-## 创建“启动工作流”向导{#start-workflow-wizard}
+## 创建“启动工作流”向导 {#start-workflow-wizard}
 
 从项目中启动工作流时，必须指定一个向导以启动该工作流。 默认向导：`/libs/cq/core/content/projects/workflowwizards/default_workflow`允许用户输入工作流标题、启动注释和要运行的工作流的有效负荷路径。 下面还提供了几个其他示例：`/libs/cq/core/content/projects/workflowwizards`。
 
@@ -631,13 +631,13 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. 在CRXDE-Lite中，我们将在`/apps/aem-guides/projects-tasks/projects`文件夹下创建一个名为“向导”的子文件夹。 从以下位置复制默认向导：`/libs/cq/core/content/projects/workflowwizards/default_workflow`在新创建的向导文件夹下，并将其重命名为&#x200B;**content-approval-start**。 现在，完整路径应为：`/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`。
 
-   默认向导为两列向导，第一列显示选定工作流模型的标题、描述和缩略图。 第二列包含工作流标题、开始注释和有效负载路径的字段。 该向导是标准的触屏UI表单，可使用标准[Granite UI表单组件](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html)填充字段。
+   默认向导为两列向导，第一列显示选定工作流模型的标题、描述和缩略图。 第二列包含工作流标题、开始注释和有效负载路径的字段。 该向导是标准的触屏UI表单，可使用标准[Granite UI表单组件](https://experienceleague.adobe.com/docs/)填充字段。
 
    ![内容批准工作流向导](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
 1. 我们将向向导中添加一个额外的字段，用于设置工作流中第一个任务的代理人（请参阅[创建工作流模型](#create-workflow-model)）：步骤5)。
 
-   在`../content-approval-start/jcr:content/items/column2/items`下，创建名为&#x200B;**&quot;assign&quot;**&#x200B;的`nt:unstructured`类型的新节点。 我们将使用项目用户选取器组件（该组件基于[Granite用户选取器组件](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/userpicker/index.html)）。 通过此表单字段，可以轻松地将用户和组选择限制为仅属于当前项目的用户和组选择。
+   在`../content-approval-start/jcr:content/items/column2/items`下，创建名为&#x200B;**&quot;assign&quot;**&#x200B;的`nt:unstructured`类型的新节点。 我们将使用项目用户选取器组件（该组件基于[Granite用户选取器组件](https://experienceleague.adobe.com/docs/)）。 通过此表单字段，可以轻松地将用户和组选择限制为仅属于当前项目的用户和组选择。
 
    以下是&#x200B;**assign**&#x200B;节点的XML表示形式：
 
@@ -657,7 +657,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. 我们还将添加一个优先级选择字段，该字段将确定工作流中第一个任务的优先级(请参阅[创建工作流模型](#create-workflow-model):步骤5)。
 
-   在`/content-approval-start/jcr:content/items/column2/items`下，创建名为&#x200B;**priority**&#x200B;的`nt:unstructured`类型的新节点。 我们将使用[Granite UI选择组件](https://docs.adobe.com/docs/en/aem/6-2/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/select/index.html)填充表单字段。
+   在`/content-approval-start/jcr:content/items/column2/items`下，创建名为&#x200B;**priority**&#x200B;的`nt:unstructured`类型的新节点。 我们将使用[Granite UI选择组件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)填充表单字段。
 
    在&#x200B;**priority**&#x200B;节点下，我们将添加&#x200B;**nt:unstructured**&#x200B;的&#x200B;**items**&#x200B;节点。 在&#x200B;**items**&#x200B;节点下方，添加3个节点以填充“高”、“中”和“低”的选择选项。 每个节点的类型为&#x200B;**nt:unstructured**，且应具有&#x200B;**text**&#x200B;和&#x200B;**value**&#x200B;属性。 文本和值应该相同：
 
@@ -693,7 +693,7 @@ task.setCurrentAssignee(projectApproverGrp);
    </priority>
    ```
 
-1. 我们将允许工作流启动器设置初始任务的到期日期。 我们将使用[Granite UI DatePicker](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/datepicker/index.html)表单字段捕获此输入。 我们还将添加一个隐藏字段，其中包含[TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint)，以确保将输入存储为JCR中的Date type属性。
+1. 我们将允许工作流启动器设置初始任务的到期日期。 我们将使用[Granite UI DatePicker](https://experienceleague.adobe.com/docs/)表单字段捕获此输入。 我们还将添加一个隐藏字段，其中包含[TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint)，以确保将输入存储为JCR中的Date type属性。
 
    添加两个&#x200B;**nt:unstructured**&#x200B;节点，其以下属性在XML中表示：
 
@@ -717,7 +717,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. 您可以在此处](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/projects-tasks-guide/ui.apps/src/main/content/jcr_root/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start/.content.xml)查看启动向导对话框的完整代码。[
 
-## 连接工作流和项目模板{#connecting-workflow-project}
+## 连接工作流和项目模板 {#connecting-workflow-project}
 
 我们最后需要做的就是确保可以从其中一个项目中启动工作流模型。 为此，我们需要重新访问在此系列第1部分中创建的项目模板。
 
