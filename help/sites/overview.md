@@ -5,10 +5,10 @@ description: 'Adobe Experience Manager Sites 的视频和教程集合。 '
 seo-description: Adobe Experience Manager Sites的视频和教程集合
 sub-product: 站点，内容服务
 topic: 内容管理
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 21%
+source-wordcount: '357'
+ht-degree: 17%
 
 ---
 
@@ -44,11 +44,11 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 <table>
 <tr>
   <td>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
       <img alt="AEM Sites - WKND 教程快速入门" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
-      <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
     <strong>开始使用AEM Sites</strong>
     </a>
     </div>
@@ -57,11 +57,11 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
     <p>
   </td>
   <td>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html">
     <img alt="AEM Headless 快速入门" src="./assets/aem-headless-tutorial.png" />
     </a>
     <div>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html">
     <strong>AEM Headless 快速入门</strong>
     </a>
     </div>
@@ -70,11 +70,11 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
     </p>
   </td>
   <td>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
       <img alt="AEM SPA Editor快速入门" src="./assets/aem-wknd-spa-editor-tutorial.png" />
     </a>
      <div>
-      <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
         <strong>AEM SPA Editor快速入门</strong>
       </a>
     </div>
@@ -87,7 +87,7 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 
 ## 其他资源
 
-* [Experience League — 浏览AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Sites创作文档](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
 * [AEM Sites开发文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites管理文档](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
