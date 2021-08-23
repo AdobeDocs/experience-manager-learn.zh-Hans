@@ -11,9 +11,9 @@ thumbnail: 41244.jpg
 topic: 集成
 role: Admin
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
@@ -29,5 +29,5 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->视频中显示的Adobe TargetCloud Services配置存在已知问题。 在解决此问题之前，请按照视频中的相同步骤操作，但使用[旧版Adobe TargetCloud Services配置](https://docs.adobe.com/content/help/en/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html)。
+>视频中显示的Adobe TargetCloud Services配置存在已知问题。 在解决此问题之前，请按照视频中的相同步骤操作，但使用[旧版Adobe TargetCloud Services配置](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html)。
 
