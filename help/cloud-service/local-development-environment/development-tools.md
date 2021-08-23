@@ -1,7 +1,7 @@
 ---
 title: 设置AEM as a Cloud Service开发的开发工具
 description: 设置本地开发机器，其中包含针对AEM进行本地开发所需的所有基线工具。
-feature: Developer Tools
+feature: 开发人员工具
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,9 +12,9 @@ thumbnail: 25907.jpg
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: 6b4b9d7039b7b1c60ed1a7e5ec4ed42250499cec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1428'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Homebrew是适用于macOS、Windows和Linux的开源包管理器。 所有支持
 
 ## 安装Git
 
-[](https://git-scm.com/) 提供Experience Cloud Manager使用的源代码 [管理系统](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/source-code-repository.html)，因此需要进行开发。
+[](https://git-scm.com/) 提供Experience Cloud Manager使用的源代码 [管理系统](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html)，因此需要进行开发。
 
 + 使用Homebrew安装Git
    1. 打开终端/命令提示符
