@@ -11,9 +11,9 @@ thumbnail: 39090.jpg
 topic: 集成
 role: Developer
 level: Intermediate
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '134'
 ht-degree: 11%
 
 ---
@@ -31,6 +31,6 @@ Experience Platform Launch是Adobe的下一代标签管理平台，是部署Adob
 
 ## 其他资源 {#additional-resources}
 
-* [Experience Platform与Experience Cloud应用程序集成](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
-* [Experience Platform Launch 用户指南](https://experienceleague.adobe.com/docs/launch/using/home.html)
-* [通过 Launch 在网站中实施 Experience Cloud](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/index.html)
+* [Experience Platform与Experience Cloud应用程序集成](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
+* [Experience Platform Launch 用户指南](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
+* [通过 Launch 在网站中实施 Experience Cloud](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/index.html)
