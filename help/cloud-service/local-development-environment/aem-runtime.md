@@ -1,7 +1,7 @@
 ---
 title: 为AEM设置本地AEM运行时作为Cloud Service开发
 description: 使用AEM作为Cloud ServiceSDK的快速入门Jar来设置本地AEM运行时。
-feature: Developer Tools
+feature: 开发人员工具
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,9 +12,9 @@ thumbnail: 32551.jpg
 topic: 开发
 role: Developer
 level: Beginner
-source-git-commit: d49ae402b332ba972a78cdbd8f5bf962b91c83b1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1732'
 ht-degree: 2%
 
 ---
@@ -121,7 +121,7 @@ $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
 
-## 模拟内容分发{#content-distribution}
+## 模拟内容分发 {#content-distribution}
 
 在真正的Cloud Service环境中，使用[Sling内容分发](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe管道将内容从创作服务分发到发布服务。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution)是仅在云环境中可用的隔离微服务。
 
@@ -258,4 +258,4 @@ Quickstart: aborting
 + [下载AEM SDK](https://experience.adobe.com/#/downloads)
 + [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
 + [下载Docker](https://www.docker.com/)
-+ [Experience ManagerDispatcher文档](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience ManagerDispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)
