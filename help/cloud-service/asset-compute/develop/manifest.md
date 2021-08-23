@@ -12,9 +12,9 @@ thumbnail: KT-6281.jpg
 topic: 集成、开发
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 工作程序在`actions`下定义为Adobe I/O Runtime操作条目，由一组配置组成。
 
-访问其他Adobe I/O集成的工作程序必须将`annotations -> require-adobe-auth`属性设置为`true`，因为此[通过`params.auth`对象公开工作程序的Adobe I/O凭据](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 当工作人员发出Adobe I/OAPI(如Adobe Photoshop、Lightroom或Sensei API)时，通常需要此功能，并且可以按工作人员切换该功能。
+访问其他Adobe I/O集成的工作程序必须将`annotations -> require-adobe-auth`属性设置为`true`，因为此[通过`params.auth`对象公开工作程序的Adobe I/O凭据](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 当工作人员发出Adobe I/OAPI(如Adobe Photoshop、Lightroom或Sensei API)时，通常需要此功能，并且可以按工作人员切换该功能。
 
 1. 打开并查看自动生成的工作程序`manifest.yml`。 包含多个Asset compute工作程序的项目必须在`actions`阵列下为每个工作程序定义一个条目。
 
@@ -53,7 +53,7 @@ packages:
 
 每个工作者都可以在Adobe I/O Runtime中为其执行上下文配置[limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)。 应根据工作人员要计算的资产数量、速率和类型以及所执行的工作类型，对这些值进行调整，以便为工作人员提供最佳大小调整。
 
-在设置限制之前，请查看[Adobe大小调整指南](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 asset compute工作程序在处理资产时可能内存不足，导致Adobe I/O Runtime执行被终止，因此请确保该工作程序的大小适合处理所有候选资产。
+在设置限制之前，请查看[Adobe大小调整指南](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 asset compute工作程序在处理资产时可能内存不足，导致Adobe I/O Runtime执行被终止，因此请确保该工作程序的大小适合处理所有候选资产。
 
 1. 在新的`wknd-asset-compute`操作条目中添加`inputs`部分。 这允许调整Asset compute工作者的总体性能和资源分配。
 
