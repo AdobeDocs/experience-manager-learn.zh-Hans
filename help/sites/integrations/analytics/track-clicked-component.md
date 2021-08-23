@@ -1,20 +1,16 @@
 ---
 title: 使用Adobe Analytics跟踪已单击的组件
 description: 使用事件驱动的Adobe客户端数据层跟踪Adobe Experience Manager网站上特定组件的单击次数。 了解如何在Experience Platform Launch中使用规则来监听这些事件，并通过跟踪链接信标将数据发送到Adobe Analytics。
-feature: 分析
-topics: integrations
-audience: administrator
-doc-type: tutorial
-activity: setup
 version: cloud-service
-kt: 6296
-thumbnail: KT-6296.jpg
 topic: 集成
+feature: Adobe客户端数据层
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6296
+thumbnail: KT-6296.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1814'
 ht-degree: 1%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 1%
 
 # 使用Adobe Analytics跟踪已单击的组件
 
-将事件驱动的[Adobe客户端数据层与AEM核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/data-layer/overview.html)结合使用，跟踪Adobe Experience Manager网站上特定组件的单击情况。 了解如何在Experience Platform Launch中使用规则来监听点击事件、按组件进行过滤，以及通过跟踪链接信标将数据发送到Adobe Analytics。
+将事件驱动的[Adobe客户端数据层与AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)结合使用，跟踪Adobe Experience Manager网站上特定组件的单击情况。 了解如何在Experience Platform Launch中使用规则来监听点击事件、按组件进行过滤，以及通过跟踪链接信标将数据发送到Adobe Analytics。
 
 ## 将构建的内容
 
@@ -40,13 +36,13 @@ WKND营销团队希望了解哪个行动动员(CTA)按钮在主页上的表现�
 
 本教程将继续[使用Adobe Analytics](./collect-data-analytics.md)收集页面数据，并假定您具有：
 
-* 启用了[Adobe Analytics扩展](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)的&#x200B;**Launch属性**
-* **Adobe** Analyticst/dev报表包ID和跟踪服务器。有关[创建新报表包](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)的信息，请参阅以下文档。
-* [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser扩展配置了您的Launch资产，该资产 [在https://wknd.site/us/en.](https://wknd.site/us/en.html) html或AEM网站上加载，并且启用了Adobe数据层。
+* 启用了[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)的&#x200B;**Launch属性**
+* **Adobe** Analyticst/dev报表包ID和跟踪服务器。有关[创建新报表包](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)的信息，请参阅以下文档。
+* [Experience Platform](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser扩展配置了您的Launch资产，该资产 [在https://wknd.site/us/en.](https://wknd.site/us/en.html) html或AEM网站上加载，并且启用了Adobe数据层。
 
 ## Inspect按钮和Teaser架构
 
-在Launch中制定规则之前，请查看[ Button和Teaser](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#item)的架构，并在数据层实施中检查它们。
+在Launch中制定规则之前，请查看[ Button和Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)的架构，并在数据层实施中检查它们。
 
 1. 导航到[https://wknd.site/us/en.html](https://wknd.site/us/en.html)
 1. 打开浏览器的开发人员工具并导航到&#x200B;**Console**。 运行以下命令：
@@ -82,7 +78,7 @@ WKND营销团队希望了解哪个行动动员(CTA)按钮在主页上的表现�
        xdm:linkURL: "/content/wknd/us/en/magazine/san-diego-surf.html"
    ```
 
-   这些参数基于[组件/容器项目架构](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#item)。 我们将在Launch中创建的规则将使用此架构。
+   这些参数基于[组件/容器项目架构](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)。 我们将在Launch中创建的规则将使用此架构。
 
 ## 创建已单击CTA的规则
 
@@ -148,11 +144,11 @@ Adobe客户端数据层是一个&#x200B;**事件**&#x200B;驱动的数据层。 
 
    `event`对象从自定义事件中调用的`trigger()`方法传递。 `component` 是从触发单击的数据层派生的组件 `getState` 的当前状态。
 
-1. 在Launch中保存更改并运行[build](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html)，以将代码提升到AEM Site上使用的[environment](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)。
+1. 在Launch中保存更改并运行[build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以将代码提升到AEM Site上使用的[environment](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)。
 
    >[!NOTE]
    >
-   > 使用[Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)将嵌入代码切换到&#x200B;**Development**&#x200B;环境会非常有用。
+   > 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)将嵌入代码切换到&#x200B;**Development**&#x200B;环境会非常有用。
 
 1. 导航到[WKND Site](https://wknd.site/us/en.html)并打开开发人员工具以查看控制台。 选择&#x200B;**保留日志**。
 
