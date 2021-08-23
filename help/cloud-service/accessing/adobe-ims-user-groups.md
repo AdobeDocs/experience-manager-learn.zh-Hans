@@ -1,21 +1,17 @@
 ---
 title: AdobeIMS用户组和AEM
 description:  AdobeIMS用户组可建立对AEM公开的用户的逻辑集，利用这些用户可定义对AEM用户的微调权限。
-feature: 用户和组
-topics: authentication
 version: cloud-service
-activity: setup
-audience: administrator
-doc-type: feature video
-kt: 4999
-thumbnail: 39150.jpg
 topic: 管理、安全
+feature: 用户和群组
 role: Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 4999
+thumbnail: 39150.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '97'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
