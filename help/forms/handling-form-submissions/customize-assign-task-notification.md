@@ -13,9 +13,9 @@ thumbnail: KT-6279.jpg
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '444'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 # 自定义分配任务通知
 
 “分配任务”组件用于将任务分配给工作流参与者。 在将任务分配给用户或群组时，会向定义的用户或群组成员发送电子邮件通知。
-此电子邮件通知通常包含与任务相关的动态数据。 使用系统生成的[元数据属性](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)获取此动态数据。
+此电子邮件通知通常包含与任务相关的动态数据。 使用系统生成的[元数据属性](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)获取此动态数据。
 要在电子邮件通知中包含来自已提交表单数据的值，我们需要创建自定义元数据属性，然后在电子邮件模板中使用这些自定义元数据属性
 
 
@@ -130,7 +130,7 @@ return customMetadataMap;
 
 ## 在服务器上尝试此操作
 
-* [配置Day CQ Mail Service](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
+* [配置Day CQ Mail Service](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
 * 将有效的电子邮件ID与[admin user](http://localhost:4502/security/users.html)关联
 * 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)下载并安装[Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip)
 * 下载[自适应表单](assets/request-travel-authorization.zip)并从[表单和文档ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)导入AEM。
