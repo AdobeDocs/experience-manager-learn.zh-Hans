@@ -1,29 +1,24 @@
 ---
 title: 使用AEM SPA编辑器进行开发 — Hello World教程
 description: AEM SPA Editor支持对单页应用程序或SPA进行上下文内编辑。 本教程将介绍如何与SPA Editor JS SDK一起使用AEM SPA开发。 本教程将通过添加自定义Hello World组件来扩展We.Retail Journal应用程序。 用户可以使用React或Angular框架完成教程。
-sub-product: 站点，内容服务
-feature: Spa编辑器
-topics: development, single-page-applications
-audience: developer
-doc-type: tutorial
-activity: use
 version: 6.3, 6.4, 6.5
 topic: SPA
+feature: SPA编辑器
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3174'
+source-wordcount: '3170'
 ht-degree: 1%
 
 ---
 
 
-# 使用AEM SPA编辑器进行开发 — Hello World教程{#developing-with-the-aem-spa-editor-hello-world-tutorial}
+# 使用AEM SPA编辑器进行开发 — Hello World教程 {#developing-with-the-aem-spa-editor-hello-world-tutorial}
 
 >[!WARNING]
 >
-> 本教程为&#x200B;**已弃用**。 建议遵循以下任一操作：[AEM SPA Editor和Angular入门](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)或[AEM SPA Editor和React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)快速入门
+> 本教程为&#x200B;**已弃用**。 建议遵循以下任一操作：[AEM SPA Editor和Angular入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)或[AEM SPA Editor和React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)快速入门
 
 AEM SPA Editor支持对单页应用程序或SPA进行上下文内编辑。 本教程将介绍如何与SPA Editor JS SDK一起使用AEM SPA开发。 本教程将通过添加自定义Hello World组件来扩展We.Retail Journal应用程序。 用户可以使用React或Angular框架完成教程。
 
@@ -43,7 +38,7 @@ AEM SPA Editor支持对单页应用程序或SPA进行上下文内编辑。 本�
 * [React.js教程](https://reactjs.org/tutorial/tutorial.html)  — 介绍如何使用React框架进行开发。
 * [Angular教程](https://angular.io/tutorial)  — 有关使用Angular进行开发的简介
 
-## 本地开发环境{#local-dev}
+## 本地开发环境 {#local-dev}
 
 本教程旨在：
 
@@ -79,7 +74,7 @@ $ npm --version
 
 开箱即用地支持常用框架[React JS](https://reactjs.org/)和[Angular](https://angular.io/)。 用户可以在Angular或React中完成本教程，无论这两个框架是他们最熟悉的。
 
-## 项目设置{#project-setup}
+## 项目设置 {#project-setup}
 
 SPA开发只涉及AEM开发，而涉及到其他方面。 其目标是允许SPA开发独立进行，并且（大多）与AEM无关。
 
@@ -155,7 +150,7 @@ SPA开发只涉及AEM开发，而涉及到其他方面。 其目标是允许SPA�
    >
    > 只有AEM 6.5和AEM 6.4 + **Service Pack 5**&#x200B;支持可编辑的模板。
 
-## 开发概述{#development-overview}
+## 开发概述 {#development-overview}
 
 ![概述开发](assets/spa-editor-helloworld-tutorial-use/diagramv2.png)
 
@@ -165,7 +160,7 @@ SPA开发迭代次数与AEM无关。 当SPA准备好部署到AEM中时，将执�
 1. SPA项目的&#x200B;[**aem-clientlib-generator**](https://www.npmjs.com/package/aem-clientlib-generator)将编译的SPA作为AEM客户端库嵌入到AEM项目中。
 1. AEM项目会生成一个AEM包，包括已编译的SPA，以及任何其他支持AEM代码。
 
-## 创建AEM组件{#aem-component}
+## 创建AEM组件 {#aem-component}
 
 **角色：AEM开发人员**
 
@@ -298,7 +293,7 @@ SPA开发迭代次数与AEM无关。 当SPA准备好部署到AEM中时，将执�
 
    ![部署的组件结构CRXDE Lite](assets/spa-editor-helloworld-tutorial-use/updated-component-withdialogs.png)
 
-## 创建Sling模型{#create-sling-model}
+## 创建Sling模型 {#create-sling-model}
 
 **角色：AEM开发人员**
 
@@ -308,7 +303,7 @@ SPA开发迭代次数与AEM无关。 当SPA准备好部署到AEM中时，将执�
 
 >[!NOTE]
 >
->作为最佳实践，开发人员应尽可能使用[AEM核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。 核心组件提供的JSON输出“SPA就绪”，具有其他功能，其中[!DNL Sling Models]提供了一些JSON输出，使开发人员能够将更多精力放在前端演示上。
+>作为最佳实践，开发人员应尽可能使用[AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。 核心组件提供的JSON输出“SPA就绪”，具有其他功能，其中[!DNL Sling Models]提供了一些JSON输出，使开发人员能够将更多精力放在前端演示上。
 
 1. 在您选择的编辑器中，打开&#x200B;**we-retail-journal-commons**&#x200B;项目(`<src>/aem-sample-we-retail-journal/bundles/commons`)。
 1. 在包`com.adobe.cq.sample.spa.commons.impl.models`中：
@@ -430,7 +425,7 @@ SPA开发迭代次数与AEM无关。 当SPA准备好部署到AEM中时，将执�
    com.adobe.cq.sample.spa.commons.impl.models.HelloWorld exports 'we-retail-journal/components/helloworld' with selector 'model' and extension '[Ljava.lang.String;@6480f3e5' with exporter 'jackson'
    ```
 
-## 创建React组件{#react-component}
+## 创建React组件 {#react-component}
 
 **角色：前端开发人员**
 
@@ -569,7 +564,7 @@ SPA开发迭代次数与AEM无关。 当SPA准备好部署到AEM中时，将执�
    > **app.js** 捆绑的React应用程序。该代码不再为人类可读。 `npm run build`命令已触发优化内部版本，该内部版本可输出可供现代浏览器解释的编译的JavaScript。
 
 
-## 创建Angular组件{#angular-component}
+## 创建Angular组件 {#angular-component}
 
 **角色：前端开发人员**
 
@@ -752,7 +747,7 @@ SPA开发迭代次数与AEM无关。 当SPA准备好部署到AEM中时，将执�
    >
    > **main.js** 捆绑的Angular应用程序。该代码不再为人类可读。 npm run build命令已触发优化内部版本，该内部版本可输出可供现代浏览器解释的编译的JavaScript。
 
-## 更新模板{#template-update}
+## 更新模板 {#template-update}
 
 1. 导航到React和/或Angular版本的可编辑模板：
 
@@ -779,7 +774,7 @@ SPA开发迭代次数与AEM无关。 当SPA准备好部署到AEM中时，将执�
 
    ![CRXDE Lite显示布局容器中允许的组件的更新策略配置](assets/spa-editor-helloworld-tutorial-use/editable-template-policy.png)
 
-## 将所有数据放在一起{#putting-together}
+## 把它们整合起来 {#putting-together}
 
 1. 导航到Angular或React页面：
 
@@ -800,7 +795,7 @@ SPA开发迭代次数与AEM无关。 当SPA准备好部署到AEM中时，将执�
 
    请注意，字符串“Hello”始终附加到消息的前面。 这是`HelloWorld.java` [!DNL Sling Model]中逻辑的结果。
 
-## 后续步骤{#next-steps}
+## 后续步骤 {#next-steps}
 
 [HelloWorld组件的完成解决方案](assets/spa-editor-helloworld-tutorial-use/aem-sample-we-retail-journal-HelloWorldSolution.zip)
 
@@ -809,7 +804,7 @@ SPA开发迭代次数与AEM无关。 当SPA准备好部署到AEM中时，将执�
 
 ## 疑难解答 {#troubleshooting}
 
-### 无法在Eclipse {#unable-to-build-project-in-eclipse}中构建项目
+### 无法在Eclipse中构建项目 {#unable-to-build-project-in-eclipse}
 
 **错误：** 将项目导入Eclipse以执行 [!DNL We.Retail Journal] 无法识别的目标时出错：
 
@@ -823,7 +818,7 @@ SPA开发迭代次数与AEM无关。 当SPA准备好部署到AEM中时，将执�
 
 **解决办法：** 尝试删除 `node_modules` react-app **下的文件夹**。从项目的根中重新运行Apache Maven命令`mvn  clean install -PautoInstallSinglePackage`。
 
-### AEM {#unsatisfied-dependencies-in-aem}中的未满足的依赖项
+### AEM中未满足的依赖项 {#unsatisfied-dependencies-in-aem}
 
 ![包管理器依赖关系错误](assets/spa-editor-helloworld-tutorial-use/we-retail-journal-package-dependency.png)
 
