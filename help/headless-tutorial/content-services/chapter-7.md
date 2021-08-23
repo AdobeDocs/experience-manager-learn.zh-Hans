@@ -5,9 +5,9 @@ feature: 内容片段、 API
 topic: 无外设、内容管理
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,7 @@ private void initApp(final List<ViewBinder> viewBinders) {
 }
 ```
 
-`onCreate(..)` 是移动设备应用程序的初始化挂接，并注册3个自 `ViewBinders` 定义变量，负责解析JSON并将值绑定到 `View` 元素。
+`onCreate(..)` 是移动设备应用程序的初始化挂接，并注册3个自定 `ViewBinders` 义，负责解析JSON并将值绑定到 `View` 元素。
 
 `initApp(...)` 随后将调用，以便在AEM发布中向AEM Content Services端点发出HTTPGET请求，以收集内容。收到有效的JSON响应后，JSON响应将传递到每个`ViewBinder`，每个负责解析JSON并将其绑定到移动设备`View`元素。
 
@@ -201,7 +201,7 @@ public class Image {
 要进一步了解AEM内容服务和AEM as a Headless CMS，请访问Adobe的其他文档和支持材料：
 
 * [使用内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [AEM WCM核心组件用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
+* [AEM WCM核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [AEM WCM核心组件库](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCM核心组件GitHub项目](https://github.com/adobe/aem-core-wcm-components)
 * [AEM WCM核心组件 — 咨询专家](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
