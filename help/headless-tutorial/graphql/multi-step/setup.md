@@ -1,22 +1,17 @@
 ---
 title: 快速设置 — AEM无头入门 — GraphQL
 description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 安装AEM SDK、添加示例内容并部署使用AEM中内容的应用程序（其GraphQL API）。 了解AEM如何为全渠道体验提供支持。
-sub-product: 站点
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
-feature: 内容片段、 GraphQL API
+feature: 内容片段， GraphQL API
 topic: 无外设、内容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1829'
 ht-degree: 1%
 
 ---
@@ -73,7 +68,7 @@ ht-degree: 1%
 1. 几分钟后，AEM实例将完成安装，并且新的浏览器窗口应会在[http://localhost:4502](http://localhost:4502)中打开。
 1. 使用用户名`admin`和密码`admin`登录。
 
-## 安装示例内容和GraphQL端点{#wknd-site-content-endpoints}
+## 安装示例内容和GraphQL端点 {#wknd-site-content-endpoints}
 
 将安装&#x200B;**WKND引用站点**&#x200B;中的示例内容以加速教程。 WKND是一个虚构的生命风格品牌，通常与AEM培训结合使用。
 
@@ -96,7 +91,7 @@ WKND引用站点包含公开[GraphQL端点](https://experienceleague.adobe.com/d
 
    ![Adventures的文件夹视图](assets/setup/folder-view-adventures.png)
 
-   这是构成WKND品牌推广的各种Adventures的所有资产的文件夹。 这包括传统媒体类型（如图像和视频），以及特定于AEM的媒体（如&#x200B;**内容片段**）。
+   这是构成WKND品牌促销的各种Adventures的所有资产的文件夹。 这包括传统媒体类型（如图像和视频），以及特定于AEM的媒体（如&#x200B;**内容片段**）。
 
 1. 单击&#x200B;**Sywand Skiing Wyoming**&#x200B;文件夹，然后单击&#x200B;**Sywand Skiing Wyoming内容片段**&#x200B;卡：
 
@@ -188,7 +183,7 @@ WKND引用站点包含公开[GraphQL端点](https://experienceleague.adobe.com/d
 
    ![更新了巴厘岛冲浪夏令营冒险](assets/setup/overnight-bali-surf-camp-changes.png)
 
-## 安装GraphiQL工具{#install-graphiql}
+## 安装GraphiQL工具 {#install-graphiql}
 
 [](https://github.com/graphql/graphiql) GraphiQL是一款开发工具，仅在开发或本地实例等较低级别环境中需要它。GraphiQL IDE允许您快速测试和优化返回的查询和数据。 GraphiQL还提供对文档的轻松访问，从而便于学习和了解可用的方法。
 
@@ -214,11 +209,11 @@ WKND引用站点包含公开[GraphQL端点](https://experienceleague.adobe.com/d
 
 恭喜，您现在有一个外部应用程序使用GraphQL的AEM内容。 您可以随时在React应用程序中检查代码，并继续尝试修改现有的内容片段。
 
-## 后续步骤{#next-steps}
+## 后续步骤 {#next-steps}
 
 在下一章[定义内容片段模型](content-fragment-models.md)中，了解如何使用&#x200B;**内容片段模型**&#x200B;对内容建模和构建架构。 您将检查现有模型并创建新模型。 您还将了解可用于定义模式作为模型一部分的不同数据类型。
 
-## （附加）CORS配置{#cors-config}
+## （附加）CORS配置 {#cors-config}
 
 AEM在默认情况下是安全的，它会阻止跨域请求，从而阻止未经授权的应用程序连接到并显示其内容。
 
