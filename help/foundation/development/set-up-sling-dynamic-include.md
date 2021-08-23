@@ -11,17 +11,17 @@ doc-type: technical video
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 6%
+source-wordcount: '261'
+ht-degree: 5%
 
 ---
 
 
 # 设置[!DNL Sling Dynamic Include]
 
-在[!DNL Apache HTTP Web Server]上运行的[AEM Dispatcher](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)中安装和使用[!DNL Apache Sling Dynamic Include]的视频演练。
+在[!DNL Apache HTTP Web Server]上运行的[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)中安装和使用[!DNL Apache Sling Dynamic Include]的视频演练。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040/?quality=12&learn=on)
 
@@ -150,7 +150,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->如果您使用[!DNL Sling Dynamic Includes]来提供边缘端包含(ESI)，请确保在调度程序缓存](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)中缓存相关的[响应标头。 可能的标头包括：
+>如果您使用[!DNL Sling Dynamic Includes]来提供边缘端包含(ESI)，请确保在调度程序缓存](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)中缓存相关的[响应标头。 可能的标头包括：
 >
 >* &quot;Cache-Control&quot;
 >* &quot;Content-Disposition&quot;
