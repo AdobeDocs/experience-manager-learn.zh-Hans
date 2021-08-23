@@ -10,9 +10,9 @@ activity: use
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '706'
 ht-degree: 1%
 
 ---
@@ -40,8 +40,8 @@ ht-degree: 1%
 >
 >在您的网站上为每个唯一图像大小创建一个图像预设。 例如，如果您需要产品详细信息页面显示350 X 350图像，浏览/搜索页面显示120 X 120图像，交叉销售/特色项目显示90 X 90图像，则您需要三个图像预设，无论您有500张图像还是500,000张图像。
 
-- 了解有关[图像预设](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html)的更多信息。
-- 了解如何[创建图像预设](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)。
+- 了解有关[图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html)的更多信息。
+- 了解如何[创建图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)。
 
 ## 图像预设和锐化
 
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 Dynamic Media Classic允许进行三种类型的锐化：简单的锐化、重新取样模式和钝化蒙版。
 
-了解有关[Dynamic Media Classic锐化选项](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)的更多信息。
+了解有关[Dynamic Media Classic锐化选项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)的更多信息。
 
 ## 其他资源
 
