@@ -1,28 +1,23 @@
 ---
 title: 创作内容片段 — AEM无头入门 — GraphQL
 description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 根据内容片段模型创建和编辑新的内容片段。 了解如何创建内容片段的变体。
-sub-product: 资产
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
-feature: 内容片段、 GraphQL API
+feature: 内容片段， GraphQL API
 topic: 无外设、内容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '791'
 ht-degree: 0%
 
 ---
 
 
-# 创作内容片段{#authoring-content-fragments}
+# 创作内容片段 {#authoring-content-fragments}
 
 在本章中，您将根据[新定义的参与者内容片段模型](./content-fragment-models.md)创建和编辑新的内容片段。 您还将了解如何创建内容片段的变体。
 
@@ -41,7 +36,7 @@ ht-degree: 0%
 
 以上视频为创作内容片段提供了高级概述。
 
-## 创建内容片段{#create-content-fragment}
+## 创建内容片段 {#create-content-fragment}
 
 在上一章[定义内容片段模型](./content-fragment-models.md)中，创建了&#x200B;**参与者**&#x200B;模型。 使用此模型创作新的内容片段。
 
@@ -126,6 +121,6 @@ ht-degree: 0%
 
 恭喜，您刚刚创作了多个内容片段并创建了一个变体。
 
-## 后续步骤{#next-steps}
+## 后续步骤 {#next-steps}
 
 在下一章[浏览GraphQL API](explore-graphql-api.md)中，您将使用内置的GrapiQL工具浏览AEM GraphQL API。 了解AEM如何根据内容片段模型自动生成GraphQL模式。 您将尝试使用GraphQL语法构建基本查询。
