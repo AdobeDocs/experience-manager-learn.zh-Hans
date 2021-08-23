@@ -1,22 +1,17 @@
 ---
 title: AEM Headless无头动手操作教程 — GraphQL
 description: 一个端到端教程，其中演示了如何使用AEM GraphQL API构建和公开内容。
-sub-product: 站点
-topics: headless
-version: cloud-service
 doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6678
 thumbnail: 328618.jpg
-feature: 内容片段、 GraphQL API
+feature: 内容片段， GraphQL API
 topic: 无外设、内容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
