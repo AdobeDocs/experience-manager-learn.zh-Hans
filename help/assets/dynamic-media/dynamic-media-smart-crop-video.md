@@ -9,10 +9,10 @@ thumbnail: 37958.jpg
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 9%
+source-wordcount: '109'
+ht-degree: 1%
 
 ---
 
@@ -25,5 +25,5 @@ Dynamic Media视频智能裁剪使用Adobe Sensei智能跟踪视频中的目标�
 
 >[!NOTE]
 >
->以上视频假定您的AEM服务在Dynamic Media S7模式下运行。 [有关在Dynamic Media中设置AEM的说明，请参阅此处。](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)
+>以上视频假定您的AEM服务在Dynamic Media S7模式下运行。 [有关在Dynamic Media中设置AEM的说明，请参阅此处。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)
 
