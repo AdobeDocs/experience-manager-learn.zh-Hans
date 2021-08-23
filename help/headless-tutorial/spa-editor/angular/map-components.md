@@ -13,15 +13,15 @@ thumbnail: 5311-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2390'
-ht-degree: 1%
+source-wordcount: '2384'
+ht-degree: 0%
 
 ---
 
 
-# 将SPA组件映射到AEM组件{#map-components}
+# 将SPA组件映射到AEM组件 {#map-components}
 
 了解如何使用AEM SPA Editor JS SDK将Angular组件映射到Adobe Experience Manager(AEM)组件。 组件映射允许用户在AEM SPA编辑器中对SPA组件进行动态更新，这与传统的AEM创作类似。
 
@@ -77,7 +77,7 @@ ht-degree: 1%
 
 ## Inspect文本组件
 
-[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了映射到AEM [文本组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，其中组件从AEM中呈现&#x200B;*content*。
+[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了映射到AEM [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，其中组件从AEM中呈现&#x200B;*content*。
 
 让我们看看组件的工作方式。
 
@@ -201,7 +201,7 @@ ht-degree: 1%
 
 ## 创建图像组件
 
-接下来，创建映射到AEM [图像组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html)的`Image`Angular组件。 `Image`组件是&#x200B;**content**&#x200B;组件的另一个示例。
+接下来，创建映射到AEM [图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)的`Image`Angular组件。 `Image`组件是&#x200B;**content**&#x200B;组件的另一个示例。
 
 ### Inspect JSON
 
@@ -437,7 +437,7 @@ AEM SPA Editor SDK会自动提供对&#x200B;**布局容器**&#x200B;的支持。
 
    **布局容器**&#x200B;组件的`sling:resourceType`为`wcm/foundation/components/responsivegrid`，并且可由SPA编辑器使用`:type`属性进行识别，与`Text`和`Image`组件类似。
 
-   SPA编辑器中提供了使用[布局模式](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新调整组件大小的相同功能。
+   SPA编辑器中提供了使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新调整组件大小的相同功能。
 
 3. 返回到[http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)。 添加其他&#x200B;**Image**&#x200B;组件，然后尝试使用&#x200B;**布局**&#x200B;选项重新调整组件大小：
 
@@ -463,7 +463,7 @@ AEM SPA Editor SDK会自动提供对&#x200B;**布局容器**&#x200B;的支持。
 
 您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution)上查看完成的代码，或通过切换到分支`Angular/map-components-solution`在本地签出代码。
 
-### 后续步骤{#next-steps}
+### 后续步骤 {#next-steps}
 
 [导航和路由](navigation-routing.md)  — 通过SPA Editor SDK将映射到AEM页面，了解如何支持SPA中的多个视图。动态导航是使用Angular路由器实现的，并添加到现有的标头组件中。
 
