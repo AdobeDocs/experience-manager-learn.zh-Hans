@@ -12,9 +12,9 @@ version: 6.4,6.5
 topic: 开发
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 要使此用例在本地系统上工作，请执行以下步骤：
 
 * 在端口4502上安装AEM创作实例，在端口4503上安装AEM发布实例
-* [按照在AEM Forms中使用服务用户进行开发中指定的说明进行操作](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html)。请确保创建服务用户并在AEM创作和发布实例上部署包。
+* [按照在AEM Forms中使用服务用户进行开发中指定的说明进行操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html)。请确保创建服务用户并在AEM创作和发布实例上部署包。
 * [打开osgi配置 ](http://localhost:4503/system/console/configMgr)。
 * 搜索&#x200B;**Apache Sling反向链接过滤器**。 确保选中允许空复选框。
 * [部署自定义AEMFormDocumentService包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。此包需要部署在AEM发布实例上。此捆绑包具有用于从移动设备表单生成交互式PDF的代码。
