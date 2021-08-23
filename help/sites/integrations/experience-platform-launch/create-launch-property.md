@@ -11,15 +11,15 @@ thumbnail: 38553.jpg
 topic: 集成
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '108'
 ht-degree: 2%
 
 ---
 
 
-# 创建Launch属性{#create-launch-property}
+# 创建Launch资产 {#create-launch-property}
 
 了解如何使用设置其余与Adobe Experience Manager集成所需的最低裸机配置来创建Launch属性。 将向用户介绍Launch UI，并了解扩展、规则和发布工作流程。
 
@@ -31,4 +31,4 @@ ht-degree: 2%
 
 ## 其他资源 {#additional-resources}
 
-* [创建Launch资产](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch.html)
+* [创建Launch资产](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html)
