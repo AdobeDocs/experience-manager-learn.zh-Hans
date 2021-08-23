@@ -1,7 +1,7 @@
 ---
 title: 用于调试AEM SDK的其他工具
 description: 其他各种工具可以帮助调试AEM SDK的本地快速启动。
-feature: Developer Tools
+feature: 开发人员工具
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,10 +11,10 @@ kt: 5251
 topic: 开发
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: 5fcc7eec120debf1a8ac08716154599467e66759
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 4%
+source-wordcount: '220'
+ht-degree: 5%
 
 ---
 
@@ -49,7 +49,7 @@ CRXDE Lite位于：
 
 ![QueryBuilder Debugger](./assets/other-tools/query-debugger.png)
 
-QueryBuilder调试器是一个基于Web的工具，可帮助您使用AEM [QueryBuilder](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)语法来调试和了解搜索查询。
+QueryBuilder调试器是一个基于Web的工具，可帮助您使用AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)语法来调试和了解搜索查询。
 
 QueryBuilder Debugger位于：
 
