@@ -14,10 +14,10 @@ thumbnail: 32192.jpg
 topic: 内容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 29%
+source-wordcount: '168'
+ht-degree: 30%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 29%
    * 设置
       * 语言
       * 重定向
-      * 设计
+      * Design
       * 别名
    * 云配置
    * 模板设置
@@ -62,6 +62,6 @@ ht-degree: 29%
 
 ## 其他资源 {#additional-resources}
 
-* [编辑页面属性文档](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/authoring/editing-page-properties.html)
-* [编辑页面内容文档](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/authoring/editing-content.html)
-* [Sites Authoring用户指南](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/home.html?topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [编辑页面属性文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
+* [编辑页面内容文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
+* [Sites Authoring用户指南](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html&amp;topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
