@@ -6,13 +6,13 @@ feature: Developer Tools
 topics: development
 activity: develop
 audience: developer
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2655'
-ht-degree: 1%
+source-wordcount: '2658'
+ht-degree: 0%
 
 ---
 
@@ -207,12 +207,12 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ### [!DNL Eclipse] IDE
 
-**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;是Java开发中比较流行的IDE之一，这在很大程度上是因为它是开源IDE，而&#x200B;***free***! Adobe为[!DNL Eclipse]提供了一个插件&#x200B;**[[!DNL AEM Developer Tools]](https://eclipse.adobe.com/aem/dev-tools/)**，以便使用良好的GUI更轻松地开发代码，从而将代码与本地AEM实例同步。 对于很大程度上不熟悉AEM的开发人员，建议使用[!DNL Eclipse] IDE，因为[!DNL AEM Developer Tools]支持GUI。
+**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;是Java开发中比较流行的IDE之一，这在很大程度上是因为它是开源IDE，而&#x200B;***free***! Adobe为[!DNL Eclipse]提供了一个插件&#x200B;**[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**，以便使用良好的GUI更轻松地开发代码，从而将代码与本地AEM实例同步。 对于很大程度上不熟悉AEM的开发人员，建议使用[!DNL Eclipse] IDE，因为[!DNL AEM Developer Tools]支持GUI。
 
 #### 安装和设置
 
 1. 下载并安装[!DNL Eclipse] IDE for [!DNL Java EE Developers]:[https://www.eclipse.org](https://www.eclipse.org/)
-1. 按照安装[!DNL AEM Developer Tools]插件的说明进行操作：[https://eclipse.adobe.com/aem/dev-tools/](https://eclipse.adobe.com/aem/dev-tools/)
+1. 按照安装[!DNL AEM Developer Tools]插件的说明进行操作：[https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html](https://eclipse.adobe.com/aem/dev-tools/)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
@@ -309,7 +309,7 @@ public class MyClass {
 
 ![在AEM中记录配置](./assets/set-up-a-local-aem-development-environment/logging.png)
 
-#### 包处于“已安装”状态{#bundle-active}
+#### 包处于“已安装”状态 {#bundle-active}
 
 所有包（不包括片段）都应处于&#x200B;**[!UICONTROL 活动]**&#x200B;状态。 如果您在[!UICONTROL Installed]状态中看到代码包，则需要解决一个问题。 大多数情况下，这是依赖关系问题：
 
@@ -323,7 +323,7 @@ public class MyClass {
 
 继续上述示例，我们可以看到在AEM实例上安装的版本是包预期的&#x200B;**12.2**&#x200B;与&#x200B;**12.6**。 从此处，您可以向后工作，并查看AEM上的[!DNL Maven]依赖项是否与AEM项目中的[!DNL Maven]依赖项匹配。 在上述示例中，[!DNL Core Components] **v2.2.0**&#x200B;安装在AEM实例上，但生成的代码包依赖于&#x200B;**v2.2.2**，因此出现依赖关系问题的原因。
 
-#### 验证Sling模型注册{#osgi-component-sling-models}
+#### 验证Sling模型注册 {#osgi-component-sling-models}
 
 AEM组件应始终由[!DNL Sling Model]进行备份，以封装任何业务逻辑，并确保HTL渲染脚本保持干净。 如果遇到找不到Sling模型的问题，从控制台中检查[!DNL Sling Models]可能会很有帮助：[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)。 这将告诉您Sling模型是否已注册以及它绑定到的资源类型（组件路径）。
 
