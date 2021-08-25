@@ -1,36 +1,27 @@
 ---
 title: 了解如何编码AEM样式系统
 description: 在此视频中，我们将了解用于使用样式系统来设置Adobe Experience Manage核心标题组件样式的CSS（或更低版本）和JavaScript的结构，以及这些样式如何应用于HTML和DOM。
-feature: 样式系统
-topics: development, components, front-end-development
-audience: developer, implementer
-doc-type: technical video
-activity: understand
+feature: Style System
 version: 6.4, 6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1148'
-ht-degree: 2%
+source-wordcount: '1092'
+ht-degree: 0%
 
 ---
 
 
-# 了解如何编码样式系统{#understanding-how-to-code-for-the-aem-style-system}
+# 了解如何对样式系统进行代码{#understanding-how-to-code-for-the-aem-style-system}
 
 在此视频中，我们将了解用于使用样式系统来设置Experience Manage核心标题组件样式的CSS（或[!DNL LESS]）和JavaScript的解剖结构，以及这些样式如何应用于HTML和DOM。
 
->[!NOTE]
->
->引入了AEM Style System的A/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/S/[](https://helpx.adobe.com/cn/experience-manager/6-3/release-notes/sp1-release-notes.html)[](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-20593)
->
->此视频假定We.Retail标题组件已更新，可继承自[核心组件v2.0.0+](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases)。
 
-## 了解如何编码样式系统{#understanding-how-to-code-for-the-style-system}
+## 了解如何对样式系统进行代码 {#understanding-how-to-code-for-the-style-system}
 
->[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=12&learn=on)
 
 提供的AEM包(**technical-review.sites.style-system-1.0.0.zip**)安装示例标题样式、We.Retail布局容器和标题组件的示例策略以及示例页面。
 
@@ -151,9 +142,9 @@ jQuery(function ($) {
 });
 ```
 
-## 开发最佳实践{#development-best-practices}
+## 开发最佳实践 {#development-best-practices}
 
-### HTML最佳实践{#html-best-practices}
+### HTML最佳实践 {#html-best-practices}
 
 * HTML（通过HTL生成）应尽可能具有结构语义；避免元素的不必要分组/嵌套。
 * HTML元素应可通过BEM样式的CSS类寻址。
@@ -187,7 +178,7 @@ jQuery(function ($) {
 
       * 现代图像组件通常会使用JavaScript为用例（视区）选择并加载最合适的图像。
 
-### CSS最佳实践{#css-best-practices}
+### CSS最佳实践 {#css-best-practices}
 
 >[!NOTE]
 >
@@ -239,7 +230,7 @@ CSS选择器结构示例应如下所示：
 
 对于嵌套的组件，这些嵌套的组件元素的CSS选择器深度将超过第3级选择器。 为嵌套组件重复相同的模式，但范围由父组件的`BLOCK`确定。 换言之，在第3级启动嵌套组件的`BLOCK`，而嵌套组件的`ELEMENT`将在第4个选择器级别启动。
 
-### JavaScript最佳实践{#javascript-best-practices}
+### JavaScript最佳实践 {#javascript-best-practices}
 
 本节中定义的最佳实践与“style-JavaScript”或专门用于处理组件以实现风格而非功能目的的JavaScript有关。
 
@@ -254,7 +245,7 @@ CSS选择器结构示例应如下所示：
 * 评估JavaScript的成本与通过HTL直接在HTML中显示这些DOM更改的成本。
    * 当使用style-JavaScript的组件需要服务器端修改时，请评估此时是否可以引入JavaScript操作，以及这些操作/影响对组件的性能和支持性有何影响。
 
-#### 性能注意事项{#performance-considerations}
+#### 性能注意事项 {#performance-considerations}
 
 * Style-JavaScript应保持轻薄。
 * 为避免闪烁和不必要的重绘，最初通过`BLOCK--MODIFIER BLOCK`隐藏组件，并在JavaScript中的所有DOM操作完成时显示组件。
