@@ -1,20 +1,16 @@
 ---
 title: 远程调试AEM SDK
 description: AEM SDK的本地快速启动允许从IDE进行远程Java调试，从而允许您逐步执行AEM中的实时代码，以了解确切的执行流程。
-feature: Developer Tools
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 kt: 5251
-topic: 开发
+topic: Development
+feature: Developer Tools
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+thumbnail: 34338.jpeg
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 1%
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
@@ -45,5 +41,5 @@ $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar a
 ### 设置说明
 
 + [与代码Java远程调试器设置](https://code.visualstudio.com/docs/java/java-debugging)
-+ [IntelliJ IDEA远程调试器设置](https://www.jetbrains.com/help/idea/run-debug-configuration-remote-debug.html)
++ [IntelliJ IDEA远程调试器设置](https://www.jetbrains.com/help/idea/tutorial-remote-debug.html)
 + [设置Eclipse远程调试器](https://javapapers.com/core-java/java-remote-debug-with-eclipse/)
