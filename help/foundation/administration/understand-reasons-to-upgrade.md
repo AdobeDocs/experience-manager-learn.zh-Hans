@@ -2,17 +2,12 @@
 title: 了解升级的原因
 description: 为考虑升级到最新版本的Adobe Experience Manager的客户简要分类关键功能。
 version: 6.5
-sub-product: 资产， cloud manager，商务，内容服务， dynamic-media，表单，基础，屏幕，站点
-topics: best-practices, upgrade
-audience: all
-activity: understand
-doc-type: article
-topic: 升级
+topic: Upgrade
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '3529'
+source-wordcount: '3462'
 ht-degree: 3%
 
 ---
@@ -503,7 +498,7 @@ AEM增强了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/release-notes/style-system-fp.html" target="_blank">样式系统</a>:</strong>
+            <td><strong>样式系统：</strong>
             通过使用上下文内样式系统定义AEM组件的可视外观，以增加组件的重复使用。</td>
             <td> </td>
             <td> </td>
@@ -514,7 +509,7 @@ AEM增强了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm.html" target="_blank">多站点管理器(MSM)</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/msm.html" target="_blank">多站点管理器(MSM)</a>:</strong>
             管理多个共享常用内容的网站（即多语言、多个品牌）。</td>
             <td>✔</td>
             <td>✔</td>
@@ -558,8 +553,8 @@ AEM增强了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-feature-video-understand.html" target="_blank">内容片段</a>:</strong>
-            创建和策划与演示文稿中消除耦合的编辑内容，以便于重复使用。</td>
+            <td><strong>内容片段：</strong>
+            创建和策划与演示文稿分离的编辑内容，以便于重复使用。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -580,8 +575,8 @@ AEM增强了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/release-notes/content-services-fragments-featurepack.html" target="_blank">内容服务</a>:</strong>
-            将内容从AEM导出为JSON，以供跨设备和应用程序使用。</td>
+            <td><strong>内容服务：</strong>
+            将内容从AEM导出为JSON，以便跨设备和应用程序使用。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -635,7 +630,7 @@ AEM增强了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/aem-screens-introduction.html" target="_blank">屏幕</a>:</strong>
+            <td><strong>屏幕：</strong>
             管理数字标牌和网亭的体验。</td>
             <td> </td>
             <td> </td>
@@ -992,8 +987,6 @@ AEM增强了与其他Adobe服务集成的能力：
 
 以下是AEM提供的主要AEM Forms附加组件功能矩阵。 其中一些功能在早期版本中引入了每个版本中添加的增量增强功能。
 
-+ [AEM Forms发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/forms.html)
-
 ***✔<sup>+</sup> 对此版本中该功能的重要增强。***
 
 ***✔<sup></sup>  SP表示功能可通过Service Pack或功能包使用。***
@@ -1148,7 +1141,7 @@ AEM增强了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/pdf/aem-forms/6-5/WorkbenchHelp.pdf" target="_blank">用于Forms处理的工作流(J2EE)</a>:</strong>
+            <td><strong>用于Forms处理的工作流(J2EE):</strong>
             利用直观的IDE构建复杂的表单/以文档为中心的工作流。</td>
             <td></td>
             <td>✔</td>
@@ -1187,8 +1180,6 @@ AEM增强了与其他Adobe服务集成的能力：
 ## 社区功能
 
 以下是AEM提供的主要AEM Communities附加组件功能矩阵。 其中一些功能在早期版本中引入了每个版本中添加的增量增强功能。
-
-+ [AEM Communities新增功能摘要](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html#main-pars_text)
 
 ***✔<sup>+</sup> 对此版本中该功能的重要增强。***
 
@@ -1628,7 +1619,7 @@ AEM增强了与其他Adobe服务集成的能力：
     </tbody>
 </table>
 
-AEM Communities通过发行版添加了[增强功能](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html)，以通过以下方式让组织吸引并启用其用户：
+AEM Communities通过以下版本添加了一些增强功能，使组织能够吸引和启用其用户：
 
 + **@** mentionsupport在用户生成的内容中。
 + 改进了&#x200B;**Enablement**&#x200B;组件中&#x200B;**键盘导航**&#x200B;的辅助功能。
