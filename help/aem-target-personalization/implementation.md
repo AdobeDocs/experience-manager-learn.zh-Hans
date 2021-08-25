@@ -1,15 +1,15 @@
 ---
 title: 将Adobe Experience Manager与Adobe Target集成
-seo-title: 一篇文章介绍了将Adobe Experience Manager(AEM)与Adobe Target集成以提供个性化内容的不同方式。
+seo-title: An article covering different ways to integrate Adobe Experience Manager(AEM) with Adobe Target for delivering personalized content.
 description: 一篇文章，介绍如何针对不同情景使用Adobe Target设置Adobe Experience Manager。
-seo-description: 一篇文章，介绍如何针对不同情景使用Adobe Target设置Adobe Experience Manager。
-feature: 体验片段
-topic: 个性化
+seo-description: An article covering how to set up Adobe Experience Manager with Adobe Target for different scenarios.
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '662'
 ht-degree: 4%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 4%
       * [数字数据层](assets/implementation/digital-data-layer.zip)
 
 * **Experience Cloud**
-   * 访问您的组织Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud配置了以下解决方案
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
