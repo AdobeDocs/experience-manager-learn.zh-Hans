@@ -1,17 +1,16 @@
 ---
 title: 使用Dynamic Media Classic桌面应用程序
 description: Adobe为Dynamic Media Classic用户引入了桌面应用程序，不再依赖浏览器中的AdobeFlash技术。
-sub-product: dynamic-media
 feature: Dynamic Media Classic
 version: 6.5
 kt: 5808
 thumbnail: 36645.jpg
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '189'
 ht-degree: 1%
 
 ---
@@ -21,7 +20,7 @@ ht-degree: 1%
 
 Adobe引入了适用于Dynamic Media Classic的桌面应用程序，该应用程序提供与浏览器类似的体验，以及功能相同且不依赖于AdobeFlash播放器的界面。
 
->[!VIDEO](https://video.tv.adobe.com/v/36645/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36645/?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -38,5 +37,4 @@ AdobeDynamic Media Classic桌面应用程序与以下操作系统兼容：
 
 * [AdobeDynamic Media Classic桌面应用程序文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
 * [AdobeDynamic Media常见问题解答](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
-* [下载 — 适用于macOS的磁盘映像文件(.dmg)](http://download.macromedia.com/dynamic-media-classic/20.20.1/adobe-dynamic-media-classic-20.20.1.dmg)
-* [下载 — 适用于Windows的可执行文件(.exe)](http://download.macromedia.com/dynamic-media-classic/20.20.1/adobe-dynamic-media-classic-20.20.1.exe)
+* [下载Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
