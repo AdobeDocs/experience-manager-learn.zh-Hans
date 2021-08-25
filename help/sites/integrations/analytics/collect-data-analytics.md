@@ -2,15 +2,15 @@
 title: 使用Adobe Analytics收集页面数据
 description: 使用事件驱动的Adobe客户端数据层在使用Adobe Experience Manager构建的网站上收集有关用户活动的数据。 了解如何在Experience Platform Launch中使用规则来侦听这些事件并将数据发送到Adobe Analytics报表包。
 version: cloud-service
-topic: 集成
-feature: Adobe客户端数据层
+topic: Integrations
+feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2375'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 1%
 您可以使用Experience Platform调试器将实时[https://wknd.site/](https://wknd.site/)切换到&#x200B;*您的* Launch资产，而不是设置AEM环境并安装WKND代码库。 ****&#x200B;当然，如果您自己的AEM站点已启用[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)，则可以使用该站点
 
 1. 登录Experience Platform Launch并[创建Launch资产](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html)（如果尚未登录）。
-1. 确保已创建初始的Launch [库](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)并将其提升到Launch [环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)。
+1. 确保已创建初始的Launch [库](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)并将其提升到Launch [环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)。
 1. 从库已发布到的环境中复制Launch嵌入代码。
 
    ![复制Launch嵌入代码](assets/collect-data-analytics/launch-environment-copy.png)
@@ -172,7 +172,7 @@ Adobe客户端数据层是一个&#x200B;**事件**&#x200B;驱动的数据层。 
 
    `event`对象从自定义事件中调用的`trigger()`方法传递。 `component` 是从自定义事件中的数据层派 `getState` 生的当前页面。回顾之前由数据层公开的[页面架构](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page)，以查看现成公开的各种键值。
 
-1. 在Launch中保存更改并运行[build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以将代码提升到AEM Site上使用的[environment](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)。
+1. 在Launch中保存更改并运行[build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以将代码提升到AEM Site上使用的[environment](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)。
 
    >[!NOTE]
    >
