@@ -1,19 +1,14 @@
 ---
 title: 对管理员有价值的报告
 description: 了解Dynamic Media Classic管理员应考虑设置的两个有价值的报表。
-sub-product: dynamic media， assets
 feature: Dynamic Media Classic
-doc-type: tutorial
-topics: development, authoring, configuring, reports
-audience: all
-activity: use
-topic: 内容管理
+topic: Content Management
 role: Admin
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 1%
+source-wordcount: '314'
+ht-degree: 0%
 
 ---
 
@@ -47,6 +42,4 @@ _图像错误报表。_
 - [Dynamic Media Classic on Experience League — 实现价值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
 - [Dynamic Media Classic on Experience League — 执行更多操作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media快讯档案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
-- [Dynamic Media新闻稿订阅页面](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
 - [Dynamic Media Classic文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)
-- [富媒体博客文章](https://theblog.adobe.com/tag/dynamic-media)
