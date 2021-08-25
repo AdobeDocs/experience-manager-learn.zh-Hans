@@ -5,13 +5,13 @@ version: cloud-service
 mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
-feature: 内容片段， GraphQL API
-topic: 无外设、内容管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1814'
 ht-degree: 1%
 
 ---
@@ -158,11 +158,7 @@ WKND引用站点包含公开[GraphQL端点](https://experienceleague.adobe.com/d
 
    ![GraphQL端点XHR请求](assets/setup/endpoint-gql.png)
 
-1. 您还可以通过检查网络请求来查看参数和JSON响应。 为Chrome安装诸如[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)之类的浏览器扩展，以便更好地了解查询和响应，可能会有所帮助。
-
-   ![GraphQL网络扩展](assets/setup/GraphQL-extension.png)
-
-   *使用Chrome扩展GraphQL网络*
+1. 您还可以通过检查网络请求来查看参数和JSON响应。 为Chrome安装诸如[GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln)之类的浏览器扩展，以更好地了解查询和响应，可能会有所帮助。
 
 ## 修改内容片段
 
