@@ -1,15 +1,15 @@
 ---
 title: 使用Adobe Target可视化体验编辑器进行个性化
-seo-title: 使用Adobe Target可视化体验编辑器进行个性化(VEC)
+seo-title: Personalization using Adobe Target Visual Experience Composer (VEC)
 description: 一个端到端教程，其中演示了如何使用Adobe Target可视化体验编辑器(VEC)创建和提供个性化体验。
-seo-description: 一个端到端教程，其中演示了如何使用Adobe Target可视化体验编辑器(VEC)创建和提供个性化体验。
-feature: 体验片段
-topic: 个性化
+seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target Visual Experience Composer (VEC).
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '583'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ WKND网站主页以卡布局的形式显示城市周围的本地活动或最佳�
    * [AEM 4503](./implementation.md#getting-aem) 上的发布实例
    * [使用Adobe Experience Platform Launch与Adobe Target集成](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * 访问您的组织Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud已配置[Adobe Target](https://experiencecloud.adobe.com)
 
 ## 营销人员活动
