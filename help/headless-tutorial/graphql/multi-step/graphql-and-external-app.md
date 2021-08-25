@@ -5,13 +5,13 @@ version: cloud-service
 mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
-feature: 内容片段， GraphQL API
-topic: 无外设、内容管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 _本章中的IDE屏幕截图来自 [Visual Studio代码](https://code.visualstudio.com/)_
 
-或者，安装诸如[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)之类的浏览器扩展，以便能够查看有关GraphQL查询的更多详细信息。
+或者，安装诸如[GraphQL网络检查器](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln)之类的浏览器扩展，以便能够查看有关GraphQL查询的更多详细信息。
 
 ## 目标
 
@@ -74,7 +74,7 @@ _本章中的IDE屏幕截图来自 [Visual Studio代码](https://code.visualstud
 
       ![WKND GraphQL React应用程序 — 详细体验](./assets/graphql-and-external-app/react-details-view.png)
 
-1. 使用浏览器的开发工具和浏览器扩展（如[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)）来检查发送到AEM的GraphQL查询及其JSON响应。 此方法可用于监控GraphQL请求和响应，以确保它们得到正确表达，并且其响应符合预期。
+1. 使用浏览器的开发工具和浏览器扩展（如[GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln)）来检查发送到AEM的GraphQL查询及其JSON响应。 此方法可用于监控GraphQL请求和响应，以确保它们得到正确表达，并且其响应符合预期。
 
    ![AdventureList的原始查询](assets/graphql-and-external-app/raw-query-chrome-extension.png)
 
