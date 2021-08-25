@@ -2,15 +2,15 @@
 title: 将Dynamic Media查看器与Adobe Analytics和AdobeLaunch结合使用
 description: 用于 Adobe Launch 的 Dynamic Media 查看器扩展以及 Dynamic Media 查看器 5.13 版允许 Dynamic Media 客户、Adobe Analytics 客户和 Adobe Launch 客户在其 Adobe Launch 配置中使用特定于 Dynamic Media 查看器的事件和数据。
 sub-product: Dynamic Media
-feature: 资产分析
-version: 6.3, 6.4, 6.5
-topic: 内容管理
+feature: Asset Insights
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 16%
+source-wordcount: '360'
+ht-degree: 15%
 
 ---
 
@@ -165,5 +165,5 @@ ht-degree: 16%
 ## 其他资源{#additional-resources}
 
 * [将Adobe Experience Manager与Launch集成Adobe](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-* [在Dynamic Media Scene7模式下运行Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
-* [将 Dynamic Media 查看器与 Adobe Analytics 和 Adobe Launch 集成](https://helpx.adobe.com/experience-manager/6-5/assets/using/launch.html)
+* [在Dynamic Media Scene7模式下运行Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=en)
+* [将 Dynamic Media 查看器与 Adobe Analytics 和 Adobe Launch 集成](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html)
