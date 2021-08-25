@@ -1,18 +1,14 @@
 ---
 title: 简单搜索实施指南
 description: “简单搜索”实施是2017年Summit lab AEM Search Demystified中的材料。 本页包含本实验的材料。 有关实验室的指导教程，请查看本页演示部分的实验室工作簿。
-topics: development, search
-audience: developer
-doc-type: tutorial
-activity: develop
 version: 6.3, 6.4, 6.5
-feature: 搜索
-topic: 开发
+feature: Search
+topic: Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '897'
 ht-degree: 2%
 
 ---
@@ -114,9 +110,9 @@ ht-degree: 2%
 
    Oak公开了一组lucene提供的分析器配置元素，以供在AEM中使用。
 
-   * [Apache Oak分析程序文档](http://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
+   * [Apache Oak分析程序文档](https://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
       * [令牌器](https://cwiki.apache.org/confluence/display/solr/Tokenizers)
-      * [筛选器](https://cwiki.apache.org/confluence/display/solr/Filter+Descriptions)
+      * [过滤器](https://cwiki.apache.org/confluence/display/solr/Filter+Descriptions)
       * [CharFilters](https://cwiki.apache.org/confluence/display/solr/CharFilterFactories)
 
 4. **如何在同一查询中搜索页面和资产？**
