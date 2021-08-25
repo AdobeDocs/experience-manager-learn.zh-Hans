@@ -2,17 +2,17 @@
 title: 图像预设
 description: Dynamic Media Classic中的图像预设包含创建特定大小、格式、质量和锐化的图像所需的所有设置。 图像预设是动态大小调整的关键组件。 在Dynamic Media Classic中查看URL时，您可以轻松查看图像预设是否正在使用。 了解图像预设、为何有用以及如何创建图像预设。
 sub-product: dynamic-media
-feature: Dynamic Media Classic，图像预设
+feature: Dynamic Media Classic, Image Presets
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '670'
 ht-degree: 1%
 
 ---
@@ -70,5 +70,3 @@ Dynamic Media Classic允许进行三种类型的锐化：简单的锐化、重�
 [图像预设指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)。用于优化图像质量和加载速度的设置。
 
 [图像是第2部分的一切：从来不是模糊 — 质量与速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。讨论使用图像预设传送高质量、快速加载图像的博客文章。
-
-[图像是网络研讨会的一切内容](https://dynamicmediaseries2019.enterprise.adobeevents.com/)。_图像是所有_&#x200B;系列的所有三个网络研讨会的录像链接。 [网络研讨会2](https://seminars.adobeconnect.com/p6lqaotpjnd3) 讨论了图像预设。
