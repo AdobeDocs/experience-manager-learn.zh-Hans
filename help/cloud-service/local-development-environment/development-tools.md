@@ -1,7 +1,7 @@
 ---
 title: 设置AEM as a Cloud Service开发的开发工具
 description: 设置本地开发机器，其中包含针对AEM进行本地开发所需的所有基线工具。
-feature: 开发人员工具
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,12 +9,12 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1435'
 ht-degree: 0%
 
 ---
@@ -190,9 +190,9 @@ Visual Studio Code是主要创建前端代码的前端开发人员的理想选�
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__ 是用于Java开发的常用IDE，它支持由  __[AEM](https://eclipse.adobe.com/aem/dev-tools/)__ 提供的Adobe开发人员工具插件，该插件提供了用于创作IDE内容以及将JCR内容与本地AEM实例同步的IDE内GUI。
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ 是用于Java开发的常用IDE，它支持由  __[AEM](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ 提供的Adobe开发人员工具插件，该插件提供了用于创作IDE内容以及将JCR内容与本地AEM实例同步的IDE内GUI。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [下载Eclipse](https://www.eclipse.org/ide/)
-+ [下载Eclipse开发工具](https://eclipse.adobe.com/aem/dev-tools/)
++ [下载Eclipse开发工具](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)
