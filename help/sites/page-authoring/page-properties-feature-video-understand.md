@@ -1,23 +1,17 @@
 ---
 title: 了解AEM Sites中的页面属性
-seo-title: 了解Adobe Experience Manager Sites中的页面属性
 description: 以下视频介绍与Adobe Experience Manager中的页面关联的页面属性元数据。
-seo-description: '以下视频介绍与Adobe Experience Manager中的页面关联的页面属性元数据。 '
-feature: 页面编辑器
-topics: authoring, metadata
-audience: author, marketer
-doc-type: feature video
-activity: understand
 version: 6.3, 6.4, 6.5
-kt: 4321
-thumbnail: 32192.jpg
-topic: 内容管理
+topic: Content Management
+feature: Page Editor
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+kt: 4321
+thumbnail: 32192.jpg
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 30%
+source-wordcount: '138'
+ht-degree: 38%
 
 ---
 
@@ -64,4 +58,5 @@ ht-degree: 30%
 
 * [编辑页面属性文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
 * [编辑页面内容文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Sites Authoring用户指南](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html&amp;topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [页面创作快速入门指南](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+
