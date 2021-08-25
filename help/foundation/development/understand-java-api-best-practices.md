@@ -1,25 +1,20 @@
 ---
-title: 了解AEM中的Java API最佳实践
+title: AEM中的Java API最佳实践
 description: AEM基于丰富的开源软件堆栈构建，该堆栈会公开许多Java API，以供在开发过程中使用。 本文探讨了主要API以及何时以及为何应使用它们。
 version: 6.2, 6.3, 6.4, 6.5
-sub-product: 基础，资产，站点
-feature: API
-topics: best-practices, development
-activity: develop
-audience: developer
-doc-type: article
-topic: 开发
+feature: APIs
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2029'
+source-wordcount: '2030'
 ht-degree: 3%
 
 ---
 
 
-# 了解Java API最佳实践
+# Java API最佳实践
 
 Adobe Experience Manager(AEM)构建于一个丰富的开源软件堆栈上，该堆栈会公开许多Java API，以供在开发过程中使用。 本文探讨了主要API以及何时以及为何应使用它们。
 
@@ -29,15 +24,15 @@ AEM基于4个主Java API集构建。
 
    * 产品抽象概念，如页面、资产、工作流等。
 
-* **[!DNL Apache Sling]Web框架**
+* **Apache Sling Web Framework**
 
    * REST和基于资源的抽象概念，如资源、值映射和HTTP请求。
 
-* **JCR([!DNL Apache Jackrabbit Oak])**
+* **JCR(Apache Jackrabbit Oak)**
 
    * 数据和内容抽象，如节点、属性和会话。
 
-* **[!DNL OSGi (Apache Felix)]**
+* **OSGi(Apache Felix)**
 
    * OSGi应用程序容器抽象，如服务和(OSGi)组件。
 
@@ -46,7 +41,7 @@ AEM基于4个主Java API集构建。
 一般规则是首选按以下顺序使用API/抽象：
 
 1. **AEM**
-1. **[!DNL Sling]**
+1. **Sling**
 1. **JCR**
 1. **OSGi**
 
@@ -96,8 +91,8 @@ AEM支持多种查询语言。 3种主要语言为[JCR-SQL2](https://docs.jboss.
 
 * 简单、参数化的查询构建（建模为映射的查询参数）
 * 本机[Java API和HTTP API](https://helpx.adobe.com/cn/experience-manager/6-3/sites/developing/using/querybuilder-api.html)
-* [OOTB查询调试器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html#TestingandDebugging)
-* [支持常见](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) 查询要求的OOTB谓词
+* [AEM查询调试器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html#TestingandDebugging)
+* [AEM](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) 谓词支持常见查询要求
 
 * 可扩展API，允许开发自定义[查询谓词](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)
 * JCR-SQL2和XPath可以直接通过[[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)和[JCR API](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)执行，分别返回结果a [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)或[JCR节点](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)。
@@ -105,7 +100,6 @@ AEM支持多种查询语言。 3种主要语言为[JCR-SQL2](https://docs.jboss.
 >[!CAUTION]
 >
 >AEM QueryBuilder API会泄漏ResourceResolver对象。 要缓解此泄漏，请遵循以下代码示例](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/search/querybuilder/impl/SampleQueryBuilder.java#L164)。[
-
 
 ## [!DNL Sling] API
 
@@ -155,12 +149,12 @@ JCR本身是基于层次/树的NoSQL数据存储AEM用作其内容存储库。 J
 
 ### JCR API的常见用法
 
-* [访问控制管理](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-service-users.html)
+* [访问控制管理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
 * [可授权的管理（用户/组）](https://jackrabbit.apache.org/api/2.8/org/apache/jackrabbit/api/security/user/package-summary.html)
 * JCR观察（侦听JCR事件）
 * 创建深层节点结构
 
-   * 虽然Sling API支持创建资源，但JCR API在[JcrUtils](https://jackrabbit.apache.org/api/2.10/index.html?org/apache/jackrabbit/commons/JcrUtils.html)和[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/jcr/JcrUtil.html)中提供了方便的方法，可加快创建深层结构的速度。
+   * 虽然Sling API支持创建资源，但JCR API在[JcrUtils](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/commons/JcrUtils.html)和[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/jcr/JcrUtil.html)中提供了方便的方法，可加快创建深层结构的速度。
 
 ## OSGi API
 
