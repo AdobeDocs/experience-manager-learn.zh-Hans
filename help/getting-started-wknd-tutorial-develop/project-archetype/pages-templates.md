@@ -1,20 +1,16 @@
 ---
 title: AEM Sites入门 — 页面和模板
-seo-title: AEM Sites入门 — 页面和模板
 description: 了解基本页面组件与可编辑模板之间的关系。 了解核心组件如何代理到项目中，并了解可编辑模板的高级策略配置，以基于Adobe XD的模型构建结构良好的文章页面模板。
-sub-product: 站点
-version: 6.4, 6.5, Cloud Service
-type: Tutorial
-feature: 核心组件、可编辑的模板、页面编辑器
-topic: 内容管理、开发
+feature: Core Components, Editable Templates, Page Editor
+topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '3100'
+source-wordcount: '3082'
 ht-degree: 0%
 
 ---
@@ -57,7 +53,7 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd/tree/pages-templates/solution)上查看完成的代码，或通过切换到分支`tutorial/pages-templates-solution`在本地签出代码。
+您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/pages-templates-solution)上查看完成的代码，或通过切换到分支`tutorial/pages-templates-solution`在本地签出代码。
 
 ## 目标
 
