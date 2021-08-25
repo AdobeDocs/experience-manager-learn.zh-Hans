@@ -1,20 +1,15 @@
 ---
 title: 创建Asset compute项目以实现Asset compute可扩展性
 description: asset compute项目是使用Adobe I/OCLI生成的Node.js项目，符合特定结构，允许将它们部署到Adobe I/O Runtime并与AEM作为Cloud Service集成。
-feature: asset compute微服务
-topics: renditions, development
-version: cloud-service
-activity: develop
-audience: developer
-doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
-topic: 集成、开发
+topic: Integrations, Development
+feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '902'
 ht-degree: 1%
 
 ---
@@ -34,7 +29,7 @@ _点进以生成Asset compute项目（无音频）_
 
 1. 在命令行中，导航到要包含项目的文件夹。
 1. 从命令行中，执行`aio app init`以开始交互式项目生成CLI。
-   + 此命令可能会生成Web浏览器，提示进行身份验证以Adobe I/O。如果是，请提供与[所需的Adobe服务和产品](../set-up/accounts-and-services.md)关联的Adobe凭据。 如果您无法登录，请按照[有关如何生成项目](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user)的说明操作。
+   + 此命令可能会生成Web浏览器，提示进行身份验证以Adobe I/O。如果是，请提供与[所需的Adobe服务和产品](../set-up/accounts-and-services.md)关联的Adobe凭据。 如果您无法登录，请按照[有关如何生成项目](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user)的说明操作。
 1. __选择组织__
    + 选择将AEM作为Cloud Service的Adobe组织，Project Firefly将在中注册
 1. __选择项目__
