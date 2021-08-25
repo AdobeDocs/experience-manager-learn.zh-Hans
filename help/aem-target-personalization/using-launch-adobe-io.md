@@ -1,15 +1,15 @@
 ---
 title: 使用Experience Platform Launch和Adobe I/O将Adobe Experience Manager与Adobe Target集成
-seo-title: 使用Experience Platform Launch和Adobe I/O将Adobe Experience Manager与Adobe Target集成
+seo-title: Integrating Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
 description: 分步说明如何使用Experience Platform Launch和Adobe I/O将Adobe Experience Manager与Adobe Target集成
-seo-description: 分步说明如何使用Experience Platform Launch和Adobe I/O将Adobe Experience Manager与Adobe Target集成
-feature: 体验片段
-topic: 个性化
+seo-description: Step by step walk-through on how to integrate Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1064'
 ht-degree: 2%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 2%
 
 * [AEM创作和发](./implementation.md#set-up-aem) 布实例在localhost端口4502和4503上取消
 * **Experience Cloud**
-   * 访问您的组织Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud配置了以下解决方案
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe I/O控制台](https://console.adobe.io)
 
       >[!NOTE]
-      >您应该有权在Launch中开发、批准、发布、管理扩展和管理环境。 如果由于用户界面选项不可用而无法完成其中的任何步骤，请联系Experience Cloud管理员以请求获取访问权限。 有关Launch权限的更多信息，请[参阅此文档](https://docs.adobelaunch.com/administration/user-permissions)。
+      >您应该有权在Launch中开发、批准、发布、管理扩展和管理环境。 如果由于用户界面选项不可用而无法完成其中的任何步骤，请联系Experience Cloud管理员以请求获取访问权限。 有关Launch权限的更多信息，请[参阅此文档](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html)。
 
 
 * **浏览器插件**
@@ -66,7 +66,7 @@ AEM提供了与Experience Platform Launch的开箱即用集成。 通过此集�
 
 资产是一个容器，在将标记部署到网站时可在其中填充扩展、规则、数据元素和库。
 
-1. 导航到您的组织[Adobe Experience Cloud](https://experiencecloud.adobe.com/)(<https://>`<yourcompany>`.experiencecloud.adobe.com)
+1. 导航到您的组织[Adobe Experience Cloud](https://experiencecloud.adobe.com/)(`https://<yourcompany>.experiencecloud.adobe.com`)
 2. 使用Adobe ID登录，并确保您所在的组织正确。
 3. 在解决方案切换器中，单击&#x200B;**Launch**，然后选择&#x200B;**转到Launch**&#x200B;按钮。
 
@@ -75,7 +75,7 @@ AEM提供了与Experience Platform Launch的开箱即用集成。 通过此集�
 4. 确保您位于正确的组织中，然后继续创建Launch资产。
    ![Experience Cloud — 启动](assets/using-launch-adobe-io/launch-create-property.png)
 
-   *有关创建资产的更多信息，请参 [阅产](https://docs.adobelaunch.com/administration/companies-and-properties#create-a-property) 品文档中的创建资产。*
+   *有关创建资产的更多信息，请参 [阅产](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property) 品文档中的创建资产。*
 5. 单击&#x200B;**New Property**&#x200B;按钮
 6. 为您的资产提供名称(例如，*AEM Target Tutorial*)
 7. 对于域，输入&#x200B;*localhost.com*，因为这是运行WKND演示网站的域。 尽管“*Domain*”字段是必需的，但Launch属性将在实施该属性的任何域上工作。 此字段的主要用途是在规则生成器中预填充菜单选项。
