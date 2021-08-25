@@ -1,15 +1,15 @@
 ---
 title: 使用Cloud Services将Adobe Experience Manager与Adobe Target集成
-seo-title: 使用旧版Cloud Services将Adobe Experience Manager(AEM)与Adobe Target集成
+seo-title: Integrating Adobe Experience Manager (AEM) with Adobe Target using Legacy Cloud Services
 description: 分步说明如何使用AEMCloud Service将Adobe Experience Manager(AEM)与Adobe Target集成
-seo-description: 分步说明如何使用AEMCloud Service将Adobe Experience Manager(AEM)与Adobe Target集成
-feature: 体验片段
-topic: 个性化
+seo-description: Step by step walkthrough on how to integrate Adobe Experience Manager (AEM) with Adobe Target using AEM Cloud Service
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '351'
 ht-degree: 3%
 
 ---
@@ -32,14 +32,13 @@ ht-degree: 3%
    * AEM创作和发布实例是完成本教程所必需的。 如果您尚未设置AEM实例，可以按照[此处](./implementation.md#set-up-aem)的步骤操作。
 
 * **Experience Cloud**
-   * 访问您的组织Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud配置了以下解决方案
       * [Adobe Target](https://experiencecloud.adobe.com)
 
       >[!NOTE]
       >
       > 需要从[Adobe支持](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html)为客户配置Experience Platform Launch和Adobe I/O，或联系系统管理员
-
 
 
 ### 将AEM与Adobe Target集成
