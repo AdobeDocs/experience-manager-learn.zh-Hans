@@ -1,23 +1,23 @@
 ---
 title: 配置Retirement Outlook面板
-seo-title: 配置Retirement Outlook面板
+seo-title: Configuring Retirement Outlook Panel
 description: 这是创建首个交互式通信文档的多步教程的10部分。 在本部分中，我们将通过添加文本和图表组件来配置Reriement Outlook面板。
-seo-description: 这是创建首个交互式通信文档的多步教程的10部分。 在本部分中，我们将通过添加文本和图表组件来配置Reriement Outlook面板。
+seo-description: This is part 10 of a multi-step tutorial for creating your first interactive communications document. In this part, we will configure Retirement Outlook Panel by adding text and chart components.
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 1%
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
@@ -56,13 +56,13 @@ ht-degree: 1%
 
 * 将默认文本替换为“**估计每月退休收入”**
 
-## 添加退休收入展望文档片段{#add-retirement-income-outlook-document-fragment}
+## 添加退休收入展望文档片段 {#add-retirement-income-outlook-document-fragment}
 
 * 单击资产图标，然后应用过滤器以显示“文档片段”类型的资产。 将RetiementIncomeOutlook文档片段拖放到左面板目标区域。
 
-* 在向内容区域添加文档片段时，您可以参阅[到此页面](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html)。
+* 在向内容区域添加文档片段时，您可以参阅[到此页面](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html)。
 
-## 添加预计月收入图{#adding-estimated-monthly-income-chart}
+## 添加预计月收入图 {#adding-estimated-monthly-income-chart}
 
 * 单击右侧的RightPanel目标区域。 单击“+”图标以插入图表组件。 我们将用柱状图显示月收入估计值。 轻轻点按新插入的图表组件。 选择“扳手”图标以打开配置属性工作表。如下面的屏幕截图所示，使用以下属性配置图表。
 

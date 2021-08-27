@@ -1,20 +1,20 @@
 ---
 title: 收件箱自定义
 description: 添加自定义列，以使用Sightly模板显示工作流的其他数据
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 1%
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
@@ -81,7 +81,7 @@ return val;
 
 >[!NOTE]
 >
->本文假定您已安装此系列中[上一篇文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.md)中的[示例工作流](assets/review-workflow.zip)和[示例表单](assets/snap-form.zip)。
+>本文假定您已安装此系列中[上一篇文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html)中的[示例工作流](assets/review-workflow.zip)和[示例表单](assets/snap-form.zip)。
 
 * [以管理员用户身份登录crx](http://localhost:4502/crx/de/index.jsp)
 * [导入sightly模板](assets/sightly-template.zip)

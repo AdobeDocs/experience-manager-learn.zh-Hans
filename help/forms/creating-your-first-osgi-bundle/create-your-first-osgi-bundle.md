@@ -2,14 +2,14 @@
 title: 与AEM Forms创建您的第一个OSGi包
 description: 使用Maven和Eclipse构建您的第一个OSGi包
 version: 6.4,6.5
-feature: 自适应表单
-topic: 开发
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 2%
+source-wordcount: '840'
+ht-degree: 1%
 
 ---
 
@@ -40,7 +40,7 @@ OSGi包是一个Java™存档文件，其中包含Java代码、资源以及描�
 Maven是一款主要用于Java项目的内部版本自动化工具。 请按照以下步骤在本地系统上安装maven。
 
 * 在C驱动器中创建名为`maven`的文件夹
-* 下载[二进制zip存档](http://maven.apache.org/download.cgi)
+* 下载[二进制zip存档](https://maven.apache.org/download.cgi)
 * 将zip存档的内容解压缩到`c:\maven`中
 * 创建一个名为`M2_HOME`的环境变量，其值为`C:\maven\apache-maven-3.6.0`。 在我的用例中，**mvn**&#x200B;版本为3.6.0。在编写本文时，最新的maven版本为3.6.3
 * 将`%M2_HOME%\bin`添加到路径中

@@ -1,15 +1,15 @@
 ---
 title: 在AEM Forms 6.3和6.4中使用Salesforce配置DataSource
 description: 使用表单数据模型将AEM Forms与Salesforce集成
-feature: 自适应Forms，表单数据模型
+feature: Adaptive Forms, Form Data Model
 topics: integrations
 version: 6.3,6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 
    * 如果您使用的是&#x200B;**AEM Forms 6.3**，则回调URL将为https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html。 在此URL中，创建潜在客户是我的表单数据模型的名称。
 
-   * 如果您使用的是** AEM Forms 6.4**，则回调URL将为[https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html](https://gbedekar-w7-1:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html)
+   * 如果您使用的是** AEM Forms 6.4**，则回调URL将为https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
 在本示例中， gbedekar -w7-1:6443是我的服务器名称以及运行AEM的端口。
 

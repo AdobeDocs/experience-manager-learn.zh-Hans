@@ -1,15 +1,15 @@
 ---
 title: '填充自适应表单表 '
 description: 使用表单数据模型服务调用的结果填充自适应表单表
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: User
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 1%
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,9 @@ Row1配置为根据服务调用返回的数据而增长。 请注意此处指定
 
 ## 在您的服务器上部署此组件
 
-[按照此处指定的](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[方式安装Tomcat部署SampleRest.war](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
-[文件使用AEM包管理器 ](assets/amortizationschedule.zip) 安装资产打
-[开摊销计划表单输入相](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-应的值并单击计算摊销计划应在您的表单中填充
+[按此处指定的方](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
+[式安装Tomcat部署此zip文件中包含的SampleRest.war](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
+[文件使用AEM包管理器 ](assets/amortizationschedule.zip) 安装资产打开摊销计划表
+[](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
+单输入相应值并单击计算摊销计划应在您的表单中填充
 

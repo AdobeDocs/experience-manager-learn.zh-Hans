@@ -1,14 +1,14 @@
 ---
 title: 将项目添加到选择组组件
 description: 将项目动态添加到选择组组件
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.5
-topic: 开发
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 AEM Forms 6.5引入了将项目动态添加到自适应Forms选择组组件（如复选框、单选按钮和图像列表）的功能。
 
-[此功能在示例服务器上实时提供](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。搜索“动态复选框项目”卡片，然后单击“尝试”
+[此功能在示例服务器上实时提供](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)。搜索“动态复选框项目”卡片，然后单击“尝试”
 
 
 您可以使用可视化编辑器以及代码编辑器添加项目，具体取决于您的用例。
@@ -91,7 +91,7 @@ else
 
 * [下载资产](assets/usingthevisualeditor.zip)
 * 安装Tomcat（如果尚未安装）。 [此处提供了安装tomcat的说明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
-* [在Tomcat中部署SampleRest.war文件](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
+* [部署此zip文件中包含的SampleRest.war文件](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
 * [打开Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 单击“创建” |文件上传”，并上传您在上一步中下载的文件
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)
