@@ -6,9 +6,9 @@ version: 6.4,6.5
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,8 @@ Row1配置为根据服务调用返回的数据而增长。 请注意此处指定
 
 ## 在您的服务器上部署此组件
 
-[按此处指定的方](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[式安装Tomcat部署此zip文件中包含的SampleRest.war](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
+[按此处指定的](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
+[方式安装Tomcat在Tomcat中部署此zip文件中包含的SampleRest.war](assets/sample-rest.zip)
 [文件使用AEM包管理器 ](assets/amortizationschedule.zip) 安装资产打开摊销计划表
 [](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
 单输入相应值并单击计算摊销计划应在您的表单中填充

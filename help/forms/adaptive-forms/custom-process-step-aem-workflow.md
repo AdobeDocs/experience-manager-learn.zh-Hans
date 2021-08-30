@@ -1,14 +1,14 @@
 ---
 title: 实施自定义流程步骤
 description: 使用自定义流程步骤将自适应表单附件写入文件系统
-feature: 工作流
+feature: Workflow
 version: 6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 创建Maven项目
 
-第一步是使用相应的AdobeMaven Archetype创建Maven项目。 此[article](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en)中列出了详细步骤。 将maven项目导入到eclipse后，您便可以开始编写可在流程步骤中使用的第一个OSGi组件。
+第一步是使用相应的AdobeMaven Archetype创建Maven项目。 此[article](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中列出了详细步骤。 将maven项目导入到eclipse后，您便可以开始编写可在流程步骤中使用的第一个OSGi组件。
 
 
 ### 创建实现WorkflowProcess的类
