@@ -1,13 +1,13 @@
 ---
 title: 第7章 — 从移动设备应用程序使用AEM内容服务 — 内容服务
 description: 本教程的第7章运行Android移动设备应用程序以使用AEM Content Services中的创作内容。
-feature: 内容片段、 API
-topic: 无外设、内容管理
+feature: Content Fragments, APIs
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
@@ -205,4 +205,4 @@ public class Image {
 * [AEM WCM核心组件库](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCM核心组件GitHub项目](https://github.com/adobe/aem-core-wcm-components)
 * [AEM WCM核心组件 — 咨询专家](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
-* [组件导出程序的代码示例](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/bundle/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)
+* [组件导出程序的代码示例](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)

@@ -6,10 +6,10 @@ feature: APIs
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '2030'
-ht-degree: 3%
+source-wordcount: '2021'
+ht-degree: 2%
 
 ---
 
@@ -61,7 +61,7 @@ AEM基于4个主Java API集构建。
 
 AEM API提供了特定于产品化用例的抽象概念和功能。
 
-例如， AEM [PageManager](https://helpx.adobe.com/cn/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)和[Page](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/model/Page.html) API为AEM中表示网页的`cq:Page`节点提供了抽象概念。
+例如， AEM [PageManager](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html)和[Page](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) API为AEM中表示网页的`cq:Page`节点提供了抽象概念。
 
 虽然这些节点可通过[!DNL Sling] API作为资源使用，JCR API作为节点使用，但AEM API为常见用例提供了抽象概念。 使用AEM API可确保产品之间的AEM行为保持一致，并可自定义和扩展到AEM。
 
@@ -95,7 +95,7 @@ AEM支持多种查询语言。 3种主要语言为[JCR-SQL2](https://docs.jboss.
 * [AEM](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) 谓词支持常见查询要求
 
 * 可扩展API，允许开发自定义[查询谓词](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)
-* JCR-SQL2和XPath可以直接通过[[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)和[JCR API](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)执行，分别返回结果a [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)或[JCR节点](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)。
+* JCR-SQL2和XPath可以直接通过[[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)和[JCR API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)执行，分别返回结果a [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)或[JCR节点](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)。
 
 >[!CAUTION]
 >
@@ -131,9 +131,9 @@ AEM支持多种查询语言。 3种主要语言为[JCR-SQL2](https://docs.jboss.
 
 ## JCR API
 
-* **[JCR 2.0 JavaDocs](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
+* **[JCR 2.0 JavaDocs](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-[JCR（Java内容存储库）2.0 API](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)是JCR实施规范的一部分(对于AEM，为[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))。 所有JCR实施都必须符合并实施这些API，因此，是与AEM内容交互的最低级别API。
+[JCR（Java内容存储库）2.0 API](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)是JCR实施规范的一部分(对于AEM，为[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))。 所有JCR实施都必须符合并实施这些API，因此，是与AEM内容交互的最低级别API。
 
 JCR本身是基于层次/树的NoSQL数据存储AEM用作其内容存储库。 JCR具有大量受支持的API，从内容CRUD到查询内容，不一而足。 尽管有这种强大的API，但与较高级别的AEM和[!DNL Sling]抽象概念相比，它们很少受青睐。
 
@@ -150,7 +150,7 @@ JCR本身是基于层次/树的NoSQL数据存储AEM用作其内容存储库。 J
 ### JCR API的常见用法
 
 * [访问控制管理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
-* [可授权的管理（用户/组）](https://jackrabbit.apache.org/api/2.8/org/apache/jackrabbit/api/security/user/package-summary.html)
+* [可授权的管理（用户/组）](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/user/package-summary.html)
 * JCR观察（侦听JCR事件）
 * 创建深层节点结构
 

@@ -9,9 +9,9 @@ audience: developer
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '2658'
+source-wordcount: '2661'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 #### 安装和设置
 
 1. 下载并安装[!DNL Eclipse] IDE for [!DNL Java EE Developers]:[https://www.eclipse.org](https://www.eclipse.org/)
-1. 按照安装[!DNL AEM Developer Tools]插件的说明进行操作：[https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html](https://eclipse.adobe.com/aem/dev-tools/)
+1. 按照安装[!DNL AEM Developer Tools]插件的说明进行操作：[https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 

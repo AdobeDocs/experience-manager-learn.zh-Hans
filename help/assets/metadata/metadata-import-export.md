@@ -1,17 +1,17 @@
 ---
 title: 在AEM Assets中使用元数据导入和导出
 description: 了解如何使用Adobe Experience Manager Assets的导入和导出元数据功能。 导入和导出功能允许内容作者批量更新现有资产的元数据。
-version: 6.3, 6.4, 6.5, cloud-service
-topic: 内容管理
-feature: 元数据
+version: 6.3, 6.4, 6.5, Cloud Service
+topic: Content Management
+feature: Metadata
 role: Admin
 level: Intermediate
 kt: 647, 917
 thumbnail: 22132.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 4%
+source-wordcount: '260'
+ht-degree: 3%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 4%
    * 错误：`Dc:Title {{String}}`
 
 * 属性类型不区分大小写
-* 支持所有有效的[JCR属性类型](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
+* 支持所有有效的[JCR属性类型](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
 
 * 多值属性格式 — `<metadata property name> {{<property type : MULTI }}`
 
