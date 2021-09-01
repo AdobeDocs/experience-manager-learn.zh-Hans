@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Assets 的视频和教程集合
 breadcrumb-title: AEM Assets 教程
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 team: TM
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 519047931bd4cbfb5dd2dd6f2b7b2871512992c5
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '347'
 ht-degree: 27%
 
 ---
@@ -95,6 +95,8 @@ ht-degree: 27%
 
 + 内容自动化{#content-automation}
    + [概述](./content-automation/overview.md)
+   + [创意运营](./content-automation/creative-operations.md)
+   + [Photoshop操作](./content-automation/photoshop-actions.md)
 
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media概述](dynamic-media/dynamic-media-overview-feature-video-use.md)
