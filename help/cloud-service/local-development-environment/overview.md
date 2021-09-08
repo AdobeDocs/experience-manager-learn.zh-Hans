@@ -2,20 +2,17 @@
 title: AEM as a A Service的本地开发环境Cloud Service
 description: Adobe Experience Manager(AEM)本地开发环境概述。
 feature: Developer Tools
-topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: article
-activity: troubleshoot
-audience: developer
 kt: 3290
 thumbnail: 32565.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 2%
+source-wordcount: '546'
+ht-degree: 1%
 
 ---
 

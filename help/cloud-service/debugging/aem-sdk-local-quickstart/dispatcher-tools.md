@@ -2,18 +2,13 @@
 title: 调试Dispatcher工具
 description: “调度程序工具”提供了一个容器化的Apache Web Server环境，该环境可用于在本地模拟AEM作为Cloud Services的AEM发布服务的调度程序。 调试AEM工具的日志和缓存内容对于确保端到端Dispatcher应用程序和支持缓存和安全配置正确至关重要。
 feature: Dispatcher
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 kt: 5918
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
@@ -22,11 +17,12 @@ ht-degree: 0%
 # 调试Dispatcher工具
 
 “调度程序工具”提供了一个容器化的Apache Web Server环境，该环境可用于在本地模拟AEM作为Cloud Services的AEM发布服务的调度程序。
+
 调试AEM工具的日志和缓存内容对于确保端到端Dispatcher应用程序和支持缓存和安全配置正确至关重要。
 
 >[!NOTE]
 >
->由于调度程序工具基于容器，因此每当重新启动它时，以前的日志和缓存内容都会被销毁。
+>由于调度程序工具基于容器，因此每次重新启动它时，以前的日志和缓存内容都会被销毁。
 
 ## Dispatcher工具日志
 
@@ -65,7 +61,7 @@ $ docker ps
 
 # locate the CONTAINER ID associated with "adobe/aem-ethos/dispatcher-publisher" IMAGE
 CONTAINER ID        IMAGE                                       COMMAND                  CREATED             STATUS              PORTS                  NAMES
-46127c9d7081        adobe/aem-ethos/dispatcher-publish:2.0.23   "/docker_entrypoint.…"   6 seconds ago       Up 5 seconds        0.0.0.0:8080->80/tcp   wonderful_merkle
+46127c9d7081        adobe/aem-ethos/dispatcher-publish:2.0.23   "/docker_entrypoint.…"   6 seconds ago       Up 5 seconds        0.0.0.0:8080->80/tcp   wonderful_ira
 
 $ docker cp -L <CONTAINER ID>:/mnt/var/www/html cache 
 $ cd cache

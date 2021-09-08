@@ -1,20 +1,16 @@
 ---
 title: 为AEM设置本地AEM运行时作为Cloud Service开发
 description: 使用AEM作为Cloud ServiceSDK的快速入门Jar来设置本地AEM运行时。
-feature: 开发人员工具
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+feature: Developer Tools
+version: Cloud Service
 kt: 4678, 4677
 thumbnail: 32551.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1729'
 ht-degree: 2%
 
 ---

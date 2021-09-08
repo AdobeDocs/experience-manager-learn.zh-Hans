@@ -1,18 +1,15 @@
 ---
 title: AEM Sites 开发入门- WKND 教程
-seo-title: AEM Sites 开发入门- WKND 教程
 description: 开发AEM的新用户？ 需要复习一下最佳实践吗？ 这是开始的地方！ 本多部分教程的目标是向不熟悉AEM的开发人员讲授如何使用最新标准和技术在AEM中实施网站。
-seo-description: 开发AEM的新用户？ 需要复习一下最佳实践吗？ 这是开始的地方！ 本多部分教程的目标是向不熟悉AEM的开发人员讲授如何使用最新标准和技术在AEM中实施网站。
-content-type: reference
-topic-tags: introduction
-feature: AEM项目原型、核心组件、页面编辑器、可编辑模板
-topic: 开发
+feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+thumbnail: 30476.jpeg
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 7%
+source-wordcount: '300'
+ht-degree: 6%
 
 ---
 

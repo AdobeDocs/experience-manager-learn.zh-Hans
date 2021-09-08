@@ -1,21 +1,16 @@
 ---
 title: 为AEM as a Dispatcher Development设置Dispatcher工具
 description: AEM SDK的Dispatcher工具通过在本地安装、运行Dispatcher并排除其故障，可帮助本地开发Adobe Experience Manager(AEM)项目。
-sub-product: 基础
-feature: Dispatcher、开发人员工具
-topics: development, caching, security
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-kt: 4679
-thumbnail: 30603.jpg
-topic: 开发
+version: Cloud Service
+topic: Development
+feature: Dispatcher, Developer Tools
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+kt: 4679
+thumbnail: 30603.jpg
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1380'
 ht-degree: 2%
 
 ---
@@ -35,7 +30,7 @@ Adobe Experience Manager(AEM)的Dispatcher是一个Apache HTTP Web服务器模�
 AEM as a Dispatcher SDK包含推荐的Dispatcher工具版本，该版本便于在本地配置、验证和模拟Dispatcher。 调度程序工具由以下部分组成：
 
 + 位于`.../dispatcher-sdk-x.x.x/src`的一组Apache HTTP Web服务器和Dispatcher配置文件
-+ 位于`.../dispatcher-sdk-x.x.x/bin/validate`(Dispatcher SDK 2.0.29+)的配置验证器CLI工具
++ 位于`.../dispatcher-sdk-x.x.x/bin/validate`的配置验证器CLI工具
 + 位于`.../dispatcher-sdk-x.x.x/bin/validator`的配置生成CLI工具
 + 位于`.../dispatcher-sdk-x.x.x/bin/docker_run`的配置部署CLI工具
 + 使用Dispatcher模块运行Apache HTTP Web服务器的Docker图像
@@ -48,7 +43,7 @@ AEM as a Dispatcher SDK包含推荐的Dispatcher工具版本，该版本便于�
 
 ## 前提条件
 
-1. Windows用户必须使用Windows 10 Professional
+1. Windows用户必须使用Windows 10 Professional（或支持Docker的版本）
 1. 在本地开发计算机上安装[Experience Manager发布快速入门Jar](./aem-runtime.md)。
    + （可选）在本地AEM发布服务上安装最新的[AEM引用网站](https://github.com/adobe/aem-guides-wknd/releases)。 本教程中使用此网站可视化Dispatcher运行情况。
 1. 在本地开发计算机上安装并启动最新版本的[Docker](https://www.docker.com/)(Docker Desktop 2.2.0.5+ / Docker Engine v19.03.9+)。
@@ -62,7 +57,6 @@ AEM as a Dispatcher SDK或AEM SDK包含用于在本地使用Dispatcher模块运�
 1. 使用您的Adobe ID登录到[experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)
    + 您的Adobe组织&#x200B;__必须__&#x200B;配置AEM作为Cloud Service，才能将AEM作为Cloud ServiceSDK下载
 1. 单击要下载的最新&#x200B;__AEM SDK__&#x200B;结果行
-   + 确保下载描述中注明了AEM SDK的Dispatcher工具v2.0.29+
 
 ## 从AEM SDK zip解压缩Dispatcher工具
 
@@ -93,15 +87,11 @@ Dispatcher工具的版本与AEM SDK的版本不同。 确保通过与AEM作为Cl
 
 如果Experience ManagerMaven项目中不存在这些文件，则将这些文件复制到`dispatcher/src`文件夹的Experience ManagerMaven项目中。
 
->[!VIDEO](https://video.tv.adobe.com/v/30602/?quality=12&learn=on)
-
-*此视频使用macOS作说明性用途。等效的Windows/Linux命令可用于获得类似结果*
-
 未打包的Dispatcher工具中提供了配置文件的完整说明，如`dispatcher-sdk-x.x.x/docs/Config.html`。
 
 ## 验证配置
 
-或者，也可以使用`validate`脚本（不要与`validator`可执行文件混淆）验证Dispatcher和Apache Web服务器配置（通过`httpd -t`）。
+或者，也可以使用`validate`脚本（不要与`validator`可执行文件混淆）验证Dispatcher和Apache Web服务器配置（通过`httpd -t`）。 `validate`脚本为运行`validator`的[3个阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/validation-debug.html?lang=en#local-validation-flexible-mode)提供了一种便捷的方法。
 
 + 使用:
    + Windows: `bin\validate src`
@@ -109,55 +99,36 @@ Dispatcher工具的版本与AEM SDK的版本不同。 确保通过与AEM作为Cl
 
 ## 在本地运行Dispatcher
 
-要在本地运行Dispatcher，必须使用Dispatcher工具的`validator` CLI工具生成Dispatcher配置文件。
+AEM Dispatcher是针对`src` Dispatcher和Apache Web服务器配置文件使用Docker在本地运行的。
 
 + 使用:
-   + Windows:`bin\validator full -d out src`
-   + macOS / Linux:`./bin/validator full -d ./out ./src`
+   + Windows:`bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
+   + macOS / Linux:`./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
 
-此命令将配置传输到与Docker容器的Apache HTTP Web服务器兼容的文件集中。
-
-生成后，将使用传输的配置在Docker容器中在本地运行Dispatcher。 请务必确保已使用`validate` __和__&#x200B;输出通过验证器的`-d`选项验证最新配置。
-
-+ 使用:
-   + Windows:`bin\docker_run <deployment-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
-   + macOS / Linux:`./bin/docker_run.sh <deployment-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
-
-`aem-publish-host`可以设置为`host.docker.internal`,Docker在容器中提供一个特殊的DNS名称，该名称可解析为主机的IP。 如果`host.docker.internal`未解析，请参阅下面的[疑难解答](#troubleshooting-host-docker-internal)部分。
+`<aem-publish-host>`可以设置为`host.docker.internal`,Docker在容器中提供一个特殊的DNS名称，该名称可解析为主机的IP。 如果`host.docker.internal`未解析，请参阅下面的[疑难解答](#troubleshooting-host-docker-internal)部分。
 
 例如，使用Dispatcher工具提供的默认配置文件启动Dispatcher Docker容器：
 
-1. 每次配置发生更改时，从头开始生成按惯例命名为`out`的`deployment-folder`:
+启动Dispatcher Docker容器，提供Dispatcher配置src文件夹的路径：
 
-   + Windows:`del /Q out && bin\validator full -d out src`
-   + macOS / Linux:`rm -rf ./out && ./bin/validator full -d ./out ./src`
-
-2. （重新启动）启动提供部署文件夹路径的Dispatcher Docker容器：
-
-   + Windows:`bin\docker_run out host.docker.internal:4503 8080`
-   + macOS / Linux:`./bin/docker_run.sh ./out host.docker.internal:4503 8080`
++ Windows:`bin\docker_run src host.docker.internal:4503 8080`
++ macOS / Linux:`./bin/docker_run.sh ./src host.docker.internal:4503 8080`
 
 在端口4503本地运行的AEM as a Cloud ServiceSDK的发布服务将通过Dispatcher在`http://localhost:8080`上提供。
 
-要针对Experience Manager项目的Dispatcher配置运行Dispatcher工具，只需使用项目的`dispatcher/src`文件夹生成`deployment-folder`即可。
+要针对Experience Manager项目的Dispatcher配置运行Dispatcher工具，请指向您项目的`dispatcher/src`文件夹。
 
 + Windows:
 
    ```shell
-   $ del -/Q out && bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
-   $ bin\docker_run out host.docker.internal:4503 8080
+   $ bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
    ```
 
 + macOS / Linux:
 
    ```shell
-   $ rm -rf ./out && ./bin/validator full -d ./out ~/code/my-project/dispatcher/src
-   $ ./bin/docker_run.sh ./out host.docker.internal:4503 8080
+   $ ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
    ```
-
->[!VIDEO](https://video.tv.adobe.com/v/30603/?quality=12&learn=on)
-
-*此视频使用macOS作说明性用途。等效的Windows/Linux命令可用于获得类似结果*
 
 ## Dispatcher工具日志
 
@@ -180,20 +151,14 @@ Dispatcher工具的版本与AEM SDK的版本不同。 确保通过与AEM作为Cl
 + Windows:
 
    ```shell
-   $ bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
-   $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run out host.docker.internal:4503 8080
+   $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
    ```
 
 + macOS / Linux:
 
    ```shell
-   $ ./bin/validator full -d out ~/code/my-project/dispatcher/src
-   $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh out host.docker.internal:4503 8080
+   $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
    ```
-
->[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12&learn=on)
-
-*此视频使用macOS作说明性用途。等效的Windows/Linux命令可用于获得类似结果*
 
 ### 日志文件访问
 
@@ -222,44 +187,28 @@ _请注意，调度程序工具版本本身与Experience Manager版本不匹配�
 
 > 从Docker 18.03开始，我们的建议是连接到特殊的DNS名称host.docker.internal，该名称解析为主机使用的内部IP地址
 
-如果`bin/docker_run out host.docker.internal:4503 8080`导致出现消息&#x200B;__Waiting untith ost.docker.internal可用__&#x200B;时，则：
+如果`bin/docker_run src host.docker.internal:4503 8080`导致出现消息&#x200B;__Waiting untith ost.docker.internal可用__&#x200B;时，则：
 
 1. 确保已安装的Docker版本为18.03或更高版本
 2. 您可能已设置本地计算机，该计算机会阻止`host.docker.internal`名称的注册/解析。 请改用本地IP。
    + Windows:
       + 在命令提示符下，执行`ipconfig`并记录主机的&#x200B;__IPv4地址__。
       + 然后，使用此IP地址执行`docker_run`:
-         `bin\docker_run out <HOST IP>:4503 8080`
+         `bin\docker_run src <HOST IP>:4503 8080`
    + macOS / Linux:
       + 从“终端”中，执行`ifconfig`并记录主机&#x200B;__inet__ IP地址，通常是&#x200B;__en0__&#x200B;设备。
       + 然后，使用主机IP地址执行`docker_run`:
-         `bin/docker_run.sh out <HOST IP>:4503 8080`
+         `bin/docker_run.sh src <HOST IP>:4503 8080`
 
 #### 示例错误
 
 ```shell
-$ docker_run out host.docker.internal:4503 8080
+$ docker_run src host.docker.internal:4503 8080
 
 Running script /docker_entrypoint.d/10-check-environment.sh
 Running script /docker_entrypoint.d/20-create-docroots.sh
 Running script /docker_entrypoint.d/30-wait-for-backend.sh
 Waiting until host.docker.internal is available
-```
-
-### docker_run导致“**错误：未找到部署文件夹&#39;
-
-运行`docker_run.cmd`时，将显示一个读取&#x200B;__**错误的错误：未找到部署文件夹：__。 这通常是因为路径中存在空格。 如果可能，请移除文件夹中的空格，或将`aem-sdk`文件夹移动到不包含空格的路径中。
-
-例如，Windows用户文件夹通常为`<First name> <Last name>`，中间有空格。 在以下示例中，文件夹`...\My User\...`包含一个空格，该空格会中断本地Dispatcher工具`docker_run`的执行。 如果Windows用户文件夹中有空格，请不要尝试重命名此文件夹，因为它会破坏Windows，而是将`aem-sdk`文件夹移动到您的用户有权完全修改的新位置。 请注意，需要将假定`aem-sdk`文件夹位于用户主目录中的说明调整为新位置。
-
-#### 示例错误
-
-```shell
-$ \Users\My User\aem-sdk\dispatcher>bin\docker_run.cmd out host.internal.docker:4503 8080
-
-'User\aem-sdk\dispatcher\out\*' is not recognized as an internal or external command,
-operable program or batch file.
-** error: Deployment folder not found: c:\Users\My User\aem-sdk\dispatcher\out
 ```
 
 ### docker_run在Windows上启动失败{#troubleshooting-windows-compatible}
@@ -269,7 +218,7 @@ operable program or batch file.
 #### 示例错误
 
 ```shell
-$ \Users\MyUser\aem-sdk\dispatcher>bin\docker_run out host.docker.internal:4503 8080
+$ \Users\MyUser\aem-sdk\dispatcher>bin\docker_run src host.docker.internal:4503 8080
 
 Running script /docker_entrypoint.d/10-check-environment.sh
 Running script /docker_entrypoint.d/20-create-docroots.sh
