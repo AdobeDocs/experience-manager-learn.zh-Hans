@@ -1,15 +1,15 @@
 ---
 title: 使用AEM配置OKTA
 description: 了解使用okta进行单点登录的各种配置设置
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.5
-topic: 管理
+topic: Administration
 role: Admin
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 3109d406ed4788ab492a148d4eac94f7e5ad9f2d
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 2%
+source-wordcount: '759'
+ht-degree: 1%
 
 ---
 
@@ -75,11 +75,11 @@ ht-degree: 2%
 导航到[configMgr](http://localhost:4502/system/console/configMgr)。
 搜索并打开“Apache Sling反向链接过滤器”。按照以下指定设置以下属性：
 
-* **允许为空**:true
+* **允许为空**:false
 * **允许主机**:IdP的主机名（在您的用例中将不同）
 * **允许Regexp主机**:IdP的主机名（在您的用例中将有所不同）Sling反向链接过滤器反向链接属性屏幕截图
 
-![referrer-filter](assets/sling-referrer-filter.PNG)
+![referrer-filter](assets/okta-referrer.png)
 
 #### 为OKTA集成配置调试日志记录
 
