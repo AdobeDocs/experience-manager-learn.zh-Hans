@@ -2,11 +2,11 @@
 user-guide-title: Adobe Experience Manager as a Cloud Service 教程
 user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集合。
 breadcrumb-title: AEM as a Cloud Service 教程
-sub-product: 云服务
+sub-product: cloud-service
 team: TM
-source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
+source-git-commit: 4c9d836881ad7cccd31c55fa5eddc24dff1200cd
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '516'
 ht-degree: 21%
 
 ---
@@ -89,6 +89,18 @@ ht-degree: 21%
 + 迁移{#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
    + [批量导入资产](./migration/bulk-import.md)
+   + Cloud Acceleration Manager {#cloud-acceleration-manager}
+      + [简介](./migration/cloud-acceleration-manager/introduction.md)
+      + [就绪性和最佳实践分析器](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
+      + [实施阶段](./migration/cloud-acceleration-manager/implementation-phase.md)
+      + [内容传输工具](./migration/cloud-acceleration-manager/content-transfer-tool.md)
+      + [代码重构工具](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
+      + [代码存储库Modernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
+      + [Dispatcher Converter](./migration/cloud-acceleration-manager/dispatcher-converter.md)
+      + [索引转换器](./migration/cloud-acceleration-manager/index-converter.md)
+      + [资产工作流迁移工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
+      + [导航Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
+      + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + 表单{#forms}
    + 创建自适应表单{#create-first-af}
       + [简介](./forms/create-first-af/introduction.md)
@@ -104,8 +116,8 @@ ht-degree: 21%
       + [添加和配置工具栏](./forms/create-first-af/add-configure-toolbar.md)
    + Document CloudAPI和AEM Forms CS{#doc-cloud-sdk}
       + [简介](./forms/doc-cloud-sdk/introduction.md)
-      + [创建AdobeIO项目](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
-      + [创建OSGI配置](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [创建Adobe I/O项目](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [创建OSGi配置](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
       + [定义界面](./forms/doc-cloud-sdk/create-interface.md)
       + [实施界面](./forms/doc-cloud-sdk/implement-interface.md)
       + [创建JSON部分](./forms/doc-cloud-sdk/get-content-analyzer.md)
@@ -116,23 +128,25 @@ ht-degree: 21%
       + [在Azure存储中存储表单数据](./forms/forms-cs-azure-portal/create-af.md)
       + [预填表单](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [查询提交](./forms/forms-cs-azure-portal/query-submitted-data.md)
-   + 创建审核工作流{#create-aem-workflow}
-      + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
-      + [触发工作流](./forms/create-aem-workflow/configure-af.md)
-   + Adobe Sign与AEM Forms{#forms-and-sign}
-      + [简介](./forms/forms-and-sign/introduction.md)
-      + [Adobe Sign API应用程序](./forms/forms-and-sign/create-sign-api-application.md)
-      + [Adobe Sign 云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
-      + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
-      + [配置以进行填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-   + 与Salesforce集成{#integrate-with-salesforce}
-      + [简介](./forms/integrate-with-salesforce/introduction.md)
-      + [创建连接的应用程序](./forms/integrate-with-salesforce/create-connected-app.md)
-      + [创建swagger文件](./forms/integrate-with-salesforce/describe-rest-api.md)
-      + [创建数据源](./forms/integrate-with-salesforce/create-data-source.md)
-      + [创建表单数据模型](./forms/integrate-with-salesforce/create-form-data-model.md)
-      + [测试表单提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
-      + [测试点击事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
+
+
+      + 创建审核工作流{#create-aem-workflow}
+         + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
+         + [触发工作流](./forms/create-aem-workflow/configure-af.md)
+      + Adobe Sign与AEM Forms{#forms-and-sign}
+         + [简介](./forms/forms-and-sign/introduction.md)
+         + [Adobe Sign API应用程序](./forms/forms-and-sign/create-sign-api-application.md)
+         + [Adobe Sign 云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+         + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
+         + [配置以进行填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+      + 与Salesforce集成{#integrate-with-salesforce}
+         + [简介](./forms/integrate-with-salesforce/introduction.md)
+         + [创建连接的应用程序](./forms/integrate-with-salesforce/create-connected-app.md)
+         + [创建swagger文件](./forms/integrate-with-salesforce/describe-rest-api.md)
+         + [创建数据源](./forms/integrate-with-salesforce/create-data-source.md)
+         + [创建表单数据模型](./forms/integrate-with-salesforce/create-form-data-model.md)
+         + [测试表单提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+         + [测试点击事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset compute可扩展性{#asset-compute}
    + [概述](./asset-compute/overview.md)
    + 设置{#set-up}
