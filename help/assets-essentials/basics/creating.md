@@ -3,18 +3,17 @@ title: 使用Assets Essentials创建内容
 description: 了解如何使用Adobe Photoshop Express上传资产、创建版本，甚至编辑资产。
 version: cloud-service
 feature: Assets Essentials
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
 kt: 7914
 thumbnail: 335746.jpeg
-source-git-commit: b247bb18eab3e610d40d3e01a63ba7e311fafde0
+source-git-commit: 7fde77ac287d01ce2ad4924b2b10939d8df4c3e5
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 4%
+source-wordcount: '40'
+ht-degree: 0%
 
 ---
-
 
 # 使用Assets Essentials创建内容
 
