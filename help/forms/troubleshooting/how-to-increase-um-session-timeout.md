@@ -5,12 +5,13 @@ type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-topic: 管理
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: edb97c88-2689-4508-82a6-256b344133c0
+source-git-commit: 29eeb3331c0152c5ae9a0779f61286edd266d640
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 2%
+source-wordcount: '34'
+ht-degree: 0%
 
 ---
 
