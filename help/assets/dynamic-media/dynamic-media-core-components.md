@@ -1,19 +1,19 @@
 ---
 title: 将Dynamic Media与AEM Sites核心组件结合使用
 description: 了解如何将Dynamic Media与Adobe Experience Manager Sites结合使用。 图像组件是Experience Manager核心组件的一部分，内置了对Dynamic Media的支持。 图像组件允许内容作者在AEM Sites页面上使用Dynamic Media的功能，如图像预设、智能裁剪和图像修改工具。
-feature: 核心组件、智能裁剪、图像配置文件、图像预设
-version: cloud-service
-topic: 内容管理
+feature: Core Components, Smart Crop, Image Profiles, Image Presets
+version: Cloud Service
+topic: Content Management
 role: User
 level: Beginner
 kt: 6630
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 12fa3622-428a-40c1-b47f-fa55c2858896
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 2%
+source-wordcount: '141'
+ht-degree: 1%
 
 ---
-
 
 # 将Dynamic Media与AEM Sites核心组件结合使用 {#dynamic-media-sites-core-components}
 

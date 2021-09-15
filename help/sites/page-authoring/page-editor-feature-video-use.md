@@ -1,26 +1,26 @@
 ---
 title: 将页面编辑器与AEM Sites结合使用
-seo-title: 将页面编辑器与Adobe Experience Manager Sites结合使用
+seo-title: Using the Page Editor with Adobe Experience Manager Sites
 description: 以下视频重点介绍Adobe Experience Manager中触屏UI站点编辑器的几项主要功能。
-seo-description: 以下视频重点介绍Adobe Experience Manager中触屏UI站点编辑器的几项主要功能。
-feature: 页面编辑器
+seo-description: The following video highlights several of the top features of the Touch-UI Sites editor in Adobe Experience Manager.
+feature: Page Editor
 topics: authoring
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 4248
 thumbnail: 32011.jpg
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '211'
 ht-degree: 7%
 
 ---
-
 
 # 使用页面编辑器 {#using-page-editor-with-aem-sites}
 

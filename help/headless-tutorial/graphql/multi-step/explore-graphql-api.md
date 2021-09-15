@@ -1,21 +1,21 @@
 ---
 title: 浏览GraphQL API - AEM无头入门 — GraphQL
 description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 使用内置的GrapiQL IDE浏览AEM GraphQL API。 了解AEM如何根据内容片段模型自动生成GraphQL模式。 尝试使用GraphQL语法构建基本查询。
-version: cloud-service
+version: Cloud Service
 mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
-feature: 内容片段， GraphQL API
-topic: 无外设、内容管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 0%
+source-wordcount: '1133'
+ht-degree: 1%
 
 ---
-
 
 # 浏览GraphQL API {#explore-graphql-apis}
 

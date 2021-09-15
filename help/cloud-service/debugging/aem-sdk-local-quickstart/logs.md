@@ -3,21 +3,21 @@ title: 使用日志调试AEM SDK
 description: 日志是调试AEM应用程序的首选工具，但取决于已部署的AEM应用程序中是否有足够的日志记录。
 feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5252
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 91aa4a10-47fe-4313-acd2-ca753e5484d9
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 3%
+source-wordcount: '394'
+ht-degree: 2%
 
 ---
-
 
 # 使用日志调试AEM SDK
 
@@ -53,7 +53,7 @@ $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 
 调用`bin/docker_run`时，调度程序日志将输出到stdout，但Docker包含的中可以直接通过访问日志。
 
-### 访问Docker容器{#dispatcher-tools-access-logs}中的日志
+### 访问Docker容器中的日志{#dispatcher-tools-access-logs}
 
 调度程序日志可以直接在位于`/etc/httpd/logs`的Docker容器中访问。
 

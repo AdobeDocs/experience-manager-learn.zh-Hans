@@ -1,20 +1,20 @@
 ---
 title: AdobeIMS用户和AEM
 description: 需要访问AEM创作服务的用户将作为AdobeIMS用户在AdobeAdmin Console中进行管理。 了解IMS用户是什么Adobe，以及如何在Admin Console中访问和管理他们。
-version: cloud-service
-topic: 管理、安全
-feature: 用户和群组
+version: Cloud Service
+topic: Administration, Security
+feature: User and Groups
 role: Admin
 level: Beginner
 kt: 4997
 thumbnail: 39149.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: d35a7892-d707-4a5c-9e97-ec3abba0f30c
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '172'
 ht-degree: 5%
 
 ---
-
 
 # AdobeIMS用户
 

@@ -1,26 +1,26 @@
 ---
 title: 将页面标记与AEM Sites结合使用
-seo-title: 将页面标记与Adobe Experience Manager Sites结合使用
+seo-title: Using Page Tagging with Adobe Experience Manager Sites
 description: 以下视频重点介绍如何使用页面标记快速轻松地对Adobe Experience Manager网站中的内容进行分类。
-seo-description: 以下视频重点介绍如何使用页面标记快速轻松地对Adobe Experience Manager网站中的内容进行分类。
-feature: 页面编辑器
+seo-description: The following video highlights how to quickly and easily classify content within a website in Adobe Experience Manager using page tags.
+feature: Page Editor
 topics: authoring
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 4632
 thumbnail: 32150.jpg
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: bf4427f7-1b7b-4e60-90a8-ab428dc65251
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 5%
+source-wordcount: '45'
+ht-degree: 0%
 
 ---
-
 
 # 标记页面 {#using-page-tagging-with-aem-sites}
 

@@ -1,24 +1,24 @@
 ---
 title: 为Asset compute可扩展性设置本地开发环境
 description: 开发Asset compute工作程序（即Node.js JavaScript应用程序）需要与传统AEM开发不同的特定开发工具，这些工具从Node.js和各种npm模块到Docker Desktop和Microsoft Visual Studio代码，不一而足。
-feature: asset compute微服务
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
-topic: 集成、开发
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: fd72f3c85db8a56ec8abfd1609da53492ee54be2
+exl-id: 162e10e5-fcb0-4f16-b6d1-b951826209d9
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
-
 
 # 设置本地开发环境
 

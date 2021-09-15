@@ -5,21 +5,21 @@ topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
-topic: 集成
+topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
 
-
-# 使用可视化体验编辑器{#personalization-vec}进行个性化
+# 使用可视化体验编辑器进行个性化 {#personalization-vec}
 
 了解如何使用可视化体验编辑器(VEC)创建A/B测试Target活动。
 

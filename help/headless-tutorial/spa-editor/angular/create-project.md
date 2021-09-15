@@ -1,10 +1,10 @@
 ---
 title: SPA编辑器项目 | AEM SPA Editor和Angular快速入门
 description: 了解如何将Adobe Experience Manager(AEM)Maven项目用作与AEM SPA编辑器集成的Angular应用程序的起点。
-sub-product: 站点
-feature: SPA Editor， AEM Project Archetype
+sub-product: sites
+feature: SPA Editor, AEM Project Archetype
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -13,13 +13,13 @@ thumbnail: 5309-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1111'
-ht-degree: 2%
+source-wordcount: '1104'
+ht-degree: 3%
 
 ---
-
 
 # SPA编辑器项目 {#create-project}
 

@@ -1,7 +1,7 @@
 ---
 title: 使用GraphQL从外部应用程序查询AEM - AEM无头入门 — GraphQL
 description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 浏览AEM GraphQL API示例（WKND GraphQL React应用程序）。 了解此外部应用程序如何通过GraphQL调用AEM来改善其体验。 了解如何执行基本错误处理。
-version: cloud-service
+version: Cloud Service
 mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
@@ -9,13 +9,13 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '1398'
 ht-degree: 0%
 
 ---
-
 
 # 使用GraphQL从外部应用程序查询AEM
 

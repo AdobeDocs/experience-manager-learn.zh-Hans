@@ -1,20 +1,20 @@
 ---
 title: 组件开发在Adobe Experience Manager Sites
 description: 使用Adobe Experience Manager Sites开发组件的概述。 包括对话框、Sling模型、HTL脚本和客户端库的简介。
-version: 6.3, 6.4, 6.5, cloud-service
-topic: 开发
-feature: Sling模型、HTL或HTML模板语言
+version: 6.3, 6.4, 6.5, Cloud Service
+topic: Development
+feature: Sling Model, HTL or HTML Template Language
 role: Developer
 level: Beginner
 kt: 4235
 thumbnail: 32547.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: ad767329-58bc-44ec-83de-2f5e3c8a30a3
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 1%
+source-wordcount: '55'
+ht-degree: 0%
 
 ---
-
 
 # 组件开发简介
 

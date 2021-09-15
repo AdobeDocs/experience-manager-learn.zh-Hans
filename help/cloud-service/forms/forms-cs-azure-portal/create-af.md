@@ -1,18 +1,19 @@
 ---
 title: 在Azure存储中存储自适应表单数据
 description: 创建并配置自适应表单以在Azure存储中存储数据
-feature: 自适应表单
+feature: Adaptive Forms
 type: Documentation
 role: Developer
 level: Beginner
-version: cloud-service
-topic: 集成
+version: Cloud Service
+topic: Integrations
 thumbnail: 335423.jpg
 kt: 8230
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a3a0414a-ce35-4609-922f-06f3c6153723
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 8%
+source-wordcount: '33'
+ht-degree: 0%
 
 ---
 
@@ -21,5 +22,3 @@ ht-degree: 8%
 创建Azure Blob Storage后端表单数据模型。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335423/?quality=12&learn=on)
-
-

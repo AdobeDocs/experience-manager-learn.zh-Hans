@@ -5,19 +5,19 @@ topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 6044
 thumbnail: 41244.jpg
-topic: 集成
+topic: Integrations
 role: Admin
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: dd6c17ae-8e08-4db3-95f9-081cc7dbd86e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
-
 
 # 创建Adobe TargetCloud Service帐户 {#adobe-target-cloud-service}
 
@@ -30,4 +30,3 @@ ht-degree: 0%
 >[!CAUTION]
 >
 >视频中显示的Adobe TargetCloud Services配置存在已知问题。 在解决此问题之前，请按照视频中的相同步骤操作，但使用[旧版Adobe TargetCloud Services配置](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html)。
-

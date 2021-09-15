@@ -1,20 +1,20 @@
 ---
 title: 使用AEM GraphQL创作和发布架构
 description: 了解在使用AEM GraphQL API时，如何以及何时利用AEM创作和发布环境。
-version: cloud-service
-topic: 无外设、内容管理
-feature: 内容片段， GraphQL API
+version: Cloud Service
+topic: Headless, Content Management
+feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
 kt: 7873
 thumbnail: 333296.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 7d5f5edb-10e7-43ec-a4e7-4cee8ddba685
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
-
 
 # 创作和发布架构
 

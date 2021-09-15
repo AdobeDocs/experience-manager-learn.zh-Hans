@@ -1,21 +1,21 @@
 ---
 title: 创建项目 | AEM SPA Editor和React快速入门
 description: 了解如何生成Adobe Experience Manager(AEM)Maven项目，作为与AEM SPA编辑器集成的React应用程序的起点。
-sub-product: 站点
-feature: SPA Editor， AEM Project Archetype
-version: cloud-service
+sub-product: sites
+feature: SPA Editor, AEM Project Archetype
+version: Cloud Service
 kt: 413
 thumbnail: 413-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1089'
 ht-degree: 1%
 
 ---
-
 
 # 创建项目 {#spa-editor-project}
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 1. 使用SPA项目原型生成启用AEM Editor的项目。
 2. 将起始项目部署到AEM的本地实例。
 
-## 将生成{#what-build}的内容
+## 将构建的内容 {#what-build}
 
 在本章中，将根据[AEM项目原型](https://github.com/adobe/aem-project-archetype)生成一个新的AEM项目。 AEM项目将通过React SPA的非常简单起点进行引导。
 
@@ -229,6 +229,6 @@ ht-degree: 1%
 
 SPA很简单。 在接下来的几章中，将添加更多功能。
 
-### 后续步骤{#next-steps}
+### 后续步骤 {#next-steps}
 
 [集成SPA](integrate-spa.md)  — 了解SPA源代码如何与AEM项目集成，并了解可用于快速开发SPA的工具。

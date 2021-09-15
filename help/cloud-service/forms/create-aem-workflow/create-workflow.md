@@ -5,22 +5,21 @@ solution: Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: 自适应表单
-topic: 开发
+version: Cloud Service
+feature: Adaptive Forms
+topic: Development
 kt: 7424
 thumbnail: 332434.pg
-source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
+exl-id: 21139665-eef2-4582-a360-bd4b8dafaf6c
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 7%
+source-wordcount: '39'
+ht-degree: 0%
 
 ---
-
 
 # 创建AEM工作流
 
 使用AEM Forms工作流组件创建工作流模型。 使用或拆分组件可根据总收入变量的值来分支工作流。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332434?quality=12&learn=on)
-

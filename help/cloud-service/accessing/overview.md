@@ -1,20 +1,20 @@
 ---
 title: 将对AEM的访问配置为Cloud Service
-description: 'AEM as a A A A A A Target是利用AEM应用程序的云原生方式，因此，可利用AdobeIMS(Identity Management系统)来促进管理员和普通用户登录到AEM创作服务。 了解如何将AdobeIMS用户、用户组和产品配置文件与AEM组和权限结合使用，以提供对AEM作者的特定访问权限。  '
-version: cloud-service
-topic: 管理、安全
-feature: 用户和群组
+description: AEM as a A A A A A Target是利用AEM应用程序的云原生方式，因此，可利用AdobeIMS(Identity Management系统)来促进管理员和普通用户登录到AEM创作服务。 了解如何将AdobeIMS用户、用户组和产品配置文件与AEM组和权限结合使用，以提供对AEM作者的特定访问权限。
+version: Cloud Service
+topic: Administration, Security
+feature: User and Groups
 role: Admin
 level: Beginner
 kt: 5882
 thumbnail: KT-5882.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
-
 
 # 将对AEM的访问配置为Cloud Service
 

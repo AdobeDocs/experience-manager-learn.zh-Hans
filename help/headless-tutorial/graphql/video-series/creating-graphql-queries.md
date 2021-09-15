@@ -1,20 +1,20 @@
 ---
 title: 创建GraphQL查询
 description: 了解如何创建GraphQL查询以从Adobe Experience Manager(AEM)返回内容，以及如何使用GraphQL工具快速测试、优化和调试查询。
-version: cloud-service
-topic: 无外设、内容管理
-feature: 内容片段， GraphQL API
+version: Cloud Service
+topic: Headless, Content Management
+feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
 kt: 7621
 thumbnail: 332860.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: c4f2e8f5-6acf-4efb-bdec-84d264568856
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
-
 
 # 创建GraphQL查询
 

@@ -1,26 +1,26 @@
 ---
 title: 在AEM Sites中使用样式系统
-seo-title: 在Adobe Experience Manager、AEM Sites中使用样式系统
+seo-title: Using the Style System with Adobe Experience Manager, AEM Sites
 description: Adobe Experience Manager的样式系统允许在不进行后端开发的情况下对组件进行可视化变化，从而更好地重复使用AEM组件，并且更加通用、高效地创作内容。 样式系统在与AEM核心组件、模板编辑器和响应式布局结合使用时，提供了强大的功能来快速创作丰富的体验。
-seo-description: Adobe Experience Manager的样式系统允许在不进行后端开发的情况下对组件进行可视化变化，从而更好地重复使用AEM组件，并且更加通用、高效地创作内容。 样式系统在与AEM核心组件、模板编辑器和响应式布局结合使用时，提供了强大的功能来快速创作丰富的体验。
-feature: 样式系统
+seo-description: Adobe Experience Manager's Style System allows visual variations of components without back-end development, allowing better re-use of AEM components, and more versatile and efficient content authoring. The Style System, when used in conjunction with AEM's Core Components, template editor, and responsive layout, offers powerful capabilities to quickly compose rich experiences.
+feature: Style System
 topics: authoring, front-end-development
 audience: all
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 974
 thumbnail: 21750.jpg
-topic: 内容管理
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 2%
+source-wordcount: '196'
+ht-degree: 1%
 
 ---
-
 
 # 使用样式系统 {#using-the-style-system-with-aem-sites}
 

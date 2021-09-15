@@ -5,21 +5,21 @@ topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 6353
 thumbnail: 6353-personalization-web-page.jpg
-topic: 集成
+topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
-
-# 完整网页体验的个性化{#personalization-fpe}
+# 完整网页体验的个性化 {#personalization-fpe}
 
 了解如何使用Adobe Target创建活动，将AEM上托管的网站页面重定向到新页面。
 
@@ -82,4 +82,3 @@ WKND网站重新设计了其主页，并希望将其当前主页的访客重定�
 
 * [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 * [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-

@@ -1,24 +1,24 @@
 ---
 title: 配置Asset compute项目的manifest.yml
 description: asset compute项目的manifest.yml描述了此项目中要部署的所有工作程序。
-feature: asset compute微服务
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
-topic: 集成、开发
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 766bfaff-ade0-41c8-a395-e79dfb4b3d76
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
-
 
 # 配置manifest.yml
 

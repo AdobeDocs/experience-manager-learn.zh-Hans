@@ -4,17 +4,17 @@ description: 调查与性能相关问题的步骤
 type: Troubleshooting
 role: Admin
 level: Intermediate
-version: 6.5, cloud-service
-feature: 开发人员工具
-topic: 管理
+version: 6.5, Cloud Service
+feature: Developer Tools
+topic: Administration
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 6cb60f32-d366-4677-8745-9da7176b782f
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 7%
+source-wordcount: '36'
+ht-degree: 0%
 
 ---
-
 
 # 如何对AEM中与性能相关的问题进行故障诊断
 

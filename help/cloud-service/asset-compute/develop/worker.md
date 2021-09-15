@@ -1,24 +1,24 @@
 ---
 title: 开发Asset compute工作人员
 description: asset compute工作程序是Asset compute项目的核心，它提供对资产执行或协调工作以创建新呈现的自定义功能。
-feature: asset compute微服务
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
-topic: 集成、开发
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 7d51ec77-c785-4b89-b717-ff9060d8bda7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1419'
 ht-degree: 0%
 
 ---
-
 
 # 开发Asset compute工作人员
 

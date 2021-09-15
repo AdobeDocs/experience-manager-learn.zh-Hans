@@ -1,26 +1,24 @@
 ---
 title: 签入和签出
 description: 了解如何使用AEM签入和签出功能来促进多用户在资产上的协作。
-sub-product: 资产
-feature: 资产管理
-version: cloud-service
+sub-product: assets
+feature: Asset Management
+version: Cloud Service
 kt: 4542
 thumbnail: 32048.jpg
-topic: 协作
+topic: Collaboration
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: fe8794b6-3fa7-4268-8352-758882705587
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 2%
+source-wordcount: '44'
+ht-degree: 0%
 
 ---
-
 
 # 签入和签出
 
 了解如何使用AEM签入和签出功能来促进多用户在资产上的协作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32048/?quality=12&learn=on&hidetitle=true)
-
-

@@ -3,22 +3,22 @@ title: 开发人员控制台
 description: AEM as a Cloud Service为每个环境提供了开发人员控制台，该控制台会公开运行的AEM服务的各种详细信息，这些信息在调试中很有帮助。
 feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 048a37a9813e7b61ff069c4606b8d23cc6b6844f
+exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1348'
 ht-degree: 0%
 
 ---
-
 
 # 使用开发人员控制台调试AEM as aCloud Service
 
@@ -46,8 +46,8 @@ AEM as a Cloud Service为每个环境提供了开发人员控制台，该控制�
 
 要解决401未授权问题，请执行以下操作：
 
-1. 确保您的用户是开发人员控制台关联的AEM(作为Adobe产品实例)相应的Cloud ServiceIMS产品配置文件(AEM管理员或AEM用户)的成员。
-   + 请记住，开发人员控制台访问2个AdobeIMS产品实例；将AEM作为Cloud Service创作和发布产品实例，因此请根据需要通过开发人员控制台访问的服务层，确保使用正确的产品配置文件。
+1. 确保您的用户是开发人员控制台关联的AEM(作为Cloud Service产品实例)相应Adobe IMS产品配置文件(AEM管理员或AEM用户)的成员。
+   + 请记住，开发人员控制台访问2个Adobe IMS产品实例；将AEM作为Cloud Service创作和发布产品实例，因此请根据需要通过开发人员控制台访问的服务层，确保使用正确的产品配置文件。
 1. 以Cloud Service身份（创作或发布）登录AEM，并确保您的用户和组已正确同步到AEM。
    + 开发人员控制台要求在相应的AEM服务层中创建用户记录，以便对该服务层进行身份验证。
 1. 清除浏览器Cookie以及应用程序状态（本地存储），并重新登录到开发人员控制台，以确保开发人员控制台使用的访问令牌正确且未过期。

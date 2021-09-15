@@ -1,30 +1,30 @@
 ---
 title: 调试Asset compute工作程序
 description: asset compute工作程序可以通过多种方式进行调试，从简单的调试日志语句，到作为远程调试器附加的VS Code，再到为从AEM as a Cloud Service启动的Adobe I/O Runtime中的激活提取日志。
-feature: asset compute微服务
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
-topic: 集成、开发
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
-
 
 # 调试Asset compute工作程序
 
 asset compute工作程序可以通过多种方式进行调试，从简单的调试日志语句，到作为远程调试器附加的VS Code，再到为从AEM as a Cloud Service启动的Adobe I/O Runtime中的激活提取日志。
 
-## 记录
+## 日志记录
 
 调试Asset compute工作程序的最基本形式在工作程序代码中使用传统的`console.log(..)`语句。 `console` JavaScript对象是隐式的全局对象，因此无需导入或要求导入，因为它始终存在于所有上下文中。
 

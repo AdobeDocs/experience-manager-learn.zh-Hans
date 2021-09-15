@@ -1,10 +1,10 @@
 ---
 title: 将SPA组件映射到AEM组件 | AEM SPA Editor和React快速入门
 description: 了解如何使用AEM SPA Editor JS SDK将React组件映射到Adobe Experience Manager(AEM)组件。 组件映射允许用户在AEM SPA编辑器中对SPA组件进行动态更新，这与传统的AEM创作类似。 您还将了解如何使用开箱即用的AEM React核心组件。
-sub-product: 站点
-feature: SPA编辑器
+sub-product: sites
+feature: SPA Editor
 topics: development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 4854
@@ -12,13 +12,13 @@ thumbnail: 4854-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2263'
 ht-degree: 0%
 
 ---
-
 
 # 将SPA组件映射到AEM组件 {#map-components}
 
@@ -432,4 +432,3 @@ SPA Core组件已提供React图像组件。 但是，如果您需要其他练习
    ```
 
    这是有关扩展和实施您自己的组件的简要介绍。
-

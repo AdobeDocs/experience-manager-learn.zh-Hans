@@ -1,20 +1,20 @@
 ---
 title: 基本操作
 description: 了解AEM Assets的基本操作，包括如何创建文件夹，以及上传、复制、移动和删除资产。
-feature: 资产管理
+feature: Asset Management
 role: User
 level: Beginner
-version: cloud-service
+version: Cloud Service
 kt: 4299
 thumbnail: 32044.jpg
-topic: 内容管理
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+topic: Content Management
+exl-id: d5b25fcc-4c8d-4720-a14e-eaf768873415
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 3%
+source-wordcount: '48'
+ht-degree: 0%
 
 ---
-
 
 # 基本操作
 

@@ -5,15 +5,16 @@ solution: Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: 自适应表单
-topic: 开发
+version: Cloud Service
+feature: Adaptive Forms
+topic: Development
 kt: 7428
 thumbnail: 332437.jpg
-source-git-commit: cb4f678be79ad39110cc199b8c66349f311a431d
+exl-id: a55773a5-0486-413f-ada6-bb589315f0b1
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 4%
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
@@ -24,4 +25,3 @@ AEM中的云服务配置允许您在AEM与其他云应用程序之间创建集�
 以下视频将指导您完成创建云服务配置以将AEM与Adobe Sign集成所需的步骤
 
 >[!VIDEO](https://video.tv.adobe.com/v/332437?quality=12&learn=on)
-

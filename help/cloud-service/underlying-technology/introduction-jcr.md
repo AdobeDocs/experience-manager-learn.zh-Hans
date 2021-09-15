@@ -5,21 +5,21 @@ topics: jcr, architecture
 audience: administrator, developer
 doc-type: technical video
 activity: understand
-version: cloud-service
+version: Cloud Service
 kt: 4643
 thumbnail: 32030.jpg
-topic: 架构
+topic: Architecture
 role: Architect, Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 1e419597-3f60-4110-bafd-a4acb0fad7a0
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 1%
+source-wordcount: '90'
+ht-degree: 0%
 
 ---
 
-
-# Java内容存储库(JCR){#introduction-jcr}简介
+# Java内容存储库(JCR)简介 {#introduction-jcr}
 
 对Adobe Experience Manager使用的Java内容存储库(JCR)的简介。 JCR是AEM技术堆栈的基本级别，负责底层内容持久性、存储、搜索、访问控制等！
 

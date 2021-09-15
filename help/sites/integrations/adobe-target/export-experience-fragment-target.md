@@ -1,24 +1,24 @@
 ---
 title: 将体验片段导出到Adobe Target
 description: 了解如何将AEM Experience Fragment作为Adobe Target选件发布和导出。
-feature: 体验片段
+feature: Experience Fragments
 topics: integrations, authoring
 audience: all
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 6350
 thumbnail: 41245.jpg
-topic: 集成
+topic: Integrations
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 3%
+source-wordcount: '192'
+ht-degree: 2%
 
 ---
-
 
 # 将体验片段导出到Adobe Target {#experience-fragment-target}
 
@@ -44,7 +44,7 @@ ht-degree: 3%
 
     ![Target API控制台错误](assets/target-console-error.png)
 
-#### 分辨率
+#### 解决方法
 
 1. 登录到[Admin Console](https://adminconsole.adobe.com/)，其中包含所用Adobe Target产品配置文件(但是AEM集成)的管理权限
 2. 选择&#x200B;__产品>Adobe Target >产品配置文件__

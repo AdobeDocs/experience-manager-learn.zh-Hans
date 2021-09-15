@@ -1,21 +1,21 @@
 ---
 title: 自动启动工作流
 description: 自动启动工作流可在上传或重新处理时自动调用自定义工作流，从而扩展资产处理。
-sub-product: 资产
-feature: asset compute微服务，工作流
-version: cloud-service
+sub-product: assets
+feature: Asset Compute Microservices, Workflow
+version: Cloud Service
 kt: 4994
 thumbnail: 37323.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 5e423f2c-90d2-474f-8bdc-fa15ae976f18
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 2%
+source-wordcount: '38'
+ht-degree: 0%
 
 ---
-
 
 # 自动启动工作流
 

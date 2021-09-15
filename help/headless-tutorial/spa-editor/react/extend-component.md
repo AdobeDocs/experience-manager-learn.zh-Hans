@@ -1,24 +1,24 @@
 ---
 title: 扩展核心组件 | AEM SPA Editor和React快速入门
 description: 了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件的JSON模型。 了解如何向现有组件添加属性和内容是一项功能强大的技术，可扩展AEM SPA Editor实施的功能。 了解如何使用委派模式来扩展Sling模型和Sling资源合并器的功能。
-sub-product: 站点
-feature: SPA编辑器，核心组件
+sub-product: sites
+feature: SPA Editor, Core Components
 doc-type: tutorial
-version: cloud-service
+version: Cloud Service
 kt: 5879
 thumbnail: 5879-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 0%
+source-wordcount: '1091'
+ht-degree: 1%
 
 ---
 
-
-# 扩展核心组件{#extend-component}
+# 扩展核心组件 {#extend-component}
 
 了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件。 了解如何扩展现有组件是一项功能强大的技术，可用于自定义和扩展AEM SPA Editor实施的功能。
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。 在本教程中，我们假定用户已对AEM SPA编辑器功能有了扎实的了解。
 
-## Sling资源超级类型{#sling-resource-super-type}的继承
+## 具有Sling资源超类型的继承 {#sling-resource-super-type}
 
 要扩展现有组件，请在组件的定义中设置名为`sling:resourceSuperType`的属性。  `sling:resourceSuperType`是一个 [](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties) 属性，可在AEM组件的定义中设置该属性以指向其他组件。这会显式设置组件以继承标识为`sling:resourceSuperType`的组件的所有功能。
 
@@ -172,7 +172,7 @@ ht-degree: 0%
 
    大多数组件不需要`_cq_editConfig`。 图像组件和子体是例外。
 
-## 扩展对话框{#extend-dialog}
+## 扩展对话框 {#extend-dialog}
 
 我们的`Banner`组件需要对话框中的额外文本字段来捕获`bannerText`。 由于我们使用的是Sling继承，因此可以使用[Sling资源合并器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html)的功能覆盖或扩展对话框的各个部分。 在此示例中，向对话框中添加了一个新选项卡，用于从作者那里捕获用于填充卡片组件的其他数据。
 
@@ -241,7 +241,7 @@ ht-degree: 0%
 
    在预览对话框之前，我们需要实施SPA组件和`MapTo`函数。
 
-## 实施SPA组件{#implement-spa-component}
+## 实施SPA组件 {#implement-spa-component}
 
 要将横幅组件与SPA编辑器一起使用，必须创建一个新的SPA组件，该组件将映射到`wknd-spa-react/components/banner`。 此操作将在`ui.frontend`模块中完成。
 
@@ -324,7 +324,7 @@ ht-degree: 0%
    >
    > 利用对话框，可保存&#x200B;**横幅文本**&#x200B;的值，但此值未反映在SPA组件中。 要启用此功能，我们需要扩展组件的Sling模型。
 
-## 添加Java接口{#java-interface}
+## 添加Java界面 {#java-interface}
 
 要最终将组件对话框中的值显示给React组件，我们需要更新Sling模型，该模型将填充`Banner`组件的JSON。 此操作将在`core`模块中完成，该模块包含我们的SPA项目的所有Java代码。
 
@@ -349,7 +349,7 @@ ht-degree: 0%
 
    这将继承核心组件`Image`界面中的所有方法，并添加一个新方法`getBannerText()`。
 
-## 实施Sling模型{#sling-model}
+## 实施Sling模型 {#sling-model}
 
 接下来，为`BannerModel`接口实施Sling模型。
 
@@ -462,7 +462,7 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallBundle
    ```
 
-## 将所有数据放在一起{#put-together}
+## 融于一起 {#put-together}
 
 1. 返回到AEM并打开包含`Banner`组件的SPA页面。
 1. 更新`Banner`组件以包含&#x200B;**横幅文本**:
@@ -495,4 +495,3 @@ ht-degree: 0%
 ## 恭喜！ {#congratulations}
 
 恭喜，您学习了如何使用扩展AEM组件，以及Sling模型和对话框如何与JSON模型一起使用。
-

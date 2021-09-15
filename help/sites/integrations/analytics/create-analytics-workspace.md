@@ -1,20 +1,20 @@
 ---
 title: 使用Analysis Workspace分析数据
 description: 了解如何将从Adobe Experience Manager网站捕获的数据映射到Adobe Analytics报表包中的量度和维度。 了解如何使用Adobe Analytics的Analysis Workspace功能构建详细的报表功能板。
-version: cloud-service
-topic: 集成
-feature: Adobe客户端数据层
+version: Cloud Service
+topic: Integrations
+feature: Adobe Client Data Layer
 role: User
 level: Intermediate
 kt: 6409
 thumbnail: KT-6296.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2179'
 ht-degree: 0%
 
 ---
-
 
 # 使用Analysis Workspace分析数据
 
@@ -265,4 +265,3 @@ Analytics分类是一种在生成报表时对Analytics变量数据进行分类�
 ## 恭喜！
 
 您刚刚学习了如何将从Adobe Experience Manager网站捕获的数据映射到Adobe Analytics报表包中的量度和维度，对量度执行分类，以及使用Adobe Analytics的Analysis Workspace功能构建详细的报表功能板。
-

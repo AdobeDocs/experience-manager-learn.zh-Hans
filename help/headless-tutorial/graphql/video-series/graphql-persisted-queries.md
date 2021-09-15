@@ -1,20 +1,20 @@
 ---
 title: GraphQL持久查询
 description: 了解如何在AEM中启用、创建更新和执行持久查询。
-version: cloud-service
-topic: 无外设、内容管理
+version: Cloud Service
+topic: Headless, Content Management
 feature: GraphQL API
 role: Developer
 level: Beginner
 kt: 7872
 thumbnail: 333429.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 06ba38c4-95fe-4ff5-b4d9-237ef9dec944
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '72'
 ht-degree: 0%
 
 ---
-
 
 # GraphQL持久查询
 

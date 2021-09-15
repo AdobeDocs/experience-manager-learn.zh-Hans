@@ -1,21 +1,21 @@
 ---
 title: 创作内容片段 — AEM无头入门 — GraphQL
 description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 根据内容片段模型创建和编辑新的内容片段。 了解如何创建内容片段的变体。
-version: cloud-service
+version: Cloud Service
 mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
-feature: 内容片段， GraphQL API
-topic: 无外设、内容管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
-
 
 # 创作内容片段 {#authoring-content-fragments}
 

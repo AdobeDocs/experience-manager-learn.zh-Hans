@@ -1,21 +1,21 @@
 ---
 title: 时间轴和收件箱
 description: 熟悉AEM Assets中用于协作的关键Web控制台。
-sub-product: 资产
-feature: 工作流
-version: cloud-service
+sub-product: assets
+feature: Workflow
+version: Cloud Service
 kt: 4540
 thumbnail: 32051.jpg
-topic: 协作
+topic: Collaboration
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 868dc44b-23ca-4e52-a0bc-229480cfae10
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 5%
+source-wordcount: '36'
+ht-degree: 0%
 
 ---
-
 
 # 时间轴和收件箱
 

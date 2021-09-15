@@ -1,7 +1,7 @@
 ---
-sub-product: 资产
+sub-product: assets
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -9,9 +9,9 @@ user-guide-title: Dynamic Media Classic 简介
 user-guide-description: 本教程演示如何使用 Dynamic Media Classic 创建、创作和交付富媒体内容。
 breadcrumb-title: Dynamic Media Classic 教程
 index: y
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '76'
+source-wordcount: '75'
 ht-degree: 46%
 
 ---

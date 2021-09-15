@@ -1,24 +1,24 @@
 ---
 title: CRXDE Lite
-description: 'CRXDE Lite是一款经典但功能强大的工具，可用于将AEM作为Cloud Service开发人员环境进行调试。 CRXDE Lite提供了一套功能，可帮助调试人员检查所有资源和属性、处理JCR的可变部分并调查权限。 '
+description: CRXDE Lite是一款经典但功能强大的工具，可用于将AEM作为Cloud Service开发人员环境进行调试。 CRXDE Lite提供了一套功能，可帮助调试人员检查所有资源和属性、处理JCR的可变部分并调查权限。
 feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: KT-5481
 thumbnail: kt-5481.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: f3f2c89f-6ec1-49d3-91c7-10a42b897780
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
-
 
 # 将AEM作为Cloud Service进行CRXDE Lite
 

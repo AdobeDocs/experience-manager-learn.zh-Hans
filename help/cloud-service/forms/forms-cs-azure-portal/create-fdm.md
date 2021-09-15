@@ -1,18 +1,19 @@
 ---
 title: 创建Azure存储备份表单数据模型
-description: '使用表单数据模型将AEM Forms CS与Azure存储集成 '
-feature: 自适应表单
+description: 使用表单数据模型将AEM Forms CS与Azure存储集成
+feature: Adaptive Forms
 type: Documentation
 role: Developer
 level: Beginner
-version: cloud-service
-topic: 集成
+version: Cloud Service
+topic: Integrations
 thumbnail: 335385.jpg
 kt: 8229
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 3bb4edb9-1b3c-4d9d-a133-16fb2b72f8a5
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 8%
+source-wordcount: '32'
+ht-degree: 0%
 
 ---
 
@@ -21,4 +22,3 @@ ht-degree: 8%
 创建Azure存储备份表单数据模型
 
 >[!VIDEO](https://video.tv.adobe.com/v/335385/?quality=12&learn=on)
-

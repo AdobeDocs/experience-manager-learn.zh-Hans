@@ -1,30 +1,30 @@
 ---
 title: 为Asset compute可扩展性设置帐户和服务
 description: 开发Asset compute工作人员需要访问帐户和服务，包括AEM as a Cloud Service、Adobe项目Firefly以及Microsoft或Amazon提供的云存储。
-feature: asset compute微服务
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
-topic: 集成、开发
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '627'
 ht-degree: 1%
 
 ---
-
 
 # 设置帐户和服务
 
 本教程要求以下服务可进行配置，并可通过学习者的Adobe ID访问。
 
-所有Adobe服务都必须使用您的Adobe ID通过同一Adobe组织访问。
+所有Adobe服务都必须使用您的Adobe ID通过同一Adobe组织进行访问。
 
 + [AEM as a Cloud Service](#aem-as-a-cloud-service)
 + [Adobe项目FireFly](#adobe-project-firefly)
@@ -39,7 +39,7 @@ ht-degree: 1%
 > 
 > 请查看下面有关如何设置和提供所需服务的章节。
 
-## AEM as a Cloud Service{#aem-as-a-cloud-service}
+## AEM as aCloud Service{#aem-as-a-cloud-service}
 
 要配置AEM Assets处理配置文件以调用自定义Asset compute工作程序，需要访问AEM as aCloud Service环境。
 

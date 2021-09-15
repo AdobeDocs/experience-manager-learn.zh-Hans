@@ -1,20 +1,20 @@
 ---
 title: 将SPA编辑器与AEM Sites结合使用
 description: AEM单页应用程序编辑器框架为作者提供了为单页应用程序或SPA编辑内容的功能。 使用React或Angular框架的开发人员创建一个SPA，然后将SPA的区域映射到AEM组件，从而使作者能够使用熟悉的AEM Sites编辑工具。
-version: 6.4, 6.5, cloud-service
+version: 6.4, 6.5, Cloud Service
 topic: SPA
-feature: SPA编辑器
+feature: SPA Editor
 role: Developer
 level: Beginner
 kt: 1047
 thumbnail: 22229.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '274'
 ht-degree: 7%
 
 ---
-
 
 # 将SPA编辑器与AEM Sites结合使用 {#using-the-spa-editor-with-aem-sites}
 

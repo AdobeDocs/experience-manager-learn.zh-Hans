@@ -1,20 +1,20 @@
 ---
 title: 如何在AEM Sites中使用启动项
 description: AEM Sites中的启动项提供了一种创建、创作和查看内容以供将来版本使用的方法。
-topic: 内容管理
-feature: 启动项
+topic: Content Management
+feature: Launches
 level: Intermediate, Experienced
 role: Admin
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 6970
 thumbnail: 331285.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 7e5ba3f5-e755-452a-8e72-be7832e95a49
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 5%
+source-wordcount: '65'
+ht-degree: 1%
 
 ---
-
 
 # 启动项
 

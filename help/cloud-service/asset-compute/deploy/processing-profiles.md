@@ -1,24 +1,24 @@
 ---
 title: 将Asset compute工作程序与AEM处理配置文件集成
 description: AEM as aCloud Service通过AEM Assets处理用户档案与部署到Adobe I/O Runtime的Asset compute工作程序集成。 处理配置文件在创作服务中进行了配置，以使用自定义工作程序处理特定资产，并将工作程序生成的文件存储为资产演绎版。
-feature: asset compute微服务
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
-topic: 集成、开发
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '635'
-ht-degree: 1%
+source-wordcount: '630'
+ht-degree: 2%
 
 ---
-
 
 # 与AEM处理配置文件集成
 
@@ -85,7 +85,7 @@ ht-degree: 1%
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_Github包含是项目的最终状态，已完全填充工作程序和测试用例，但不包含任何凭据，即。`.env`、 `.config.json` 或 `.aio`。_
+_Github包含是项目的最终状态，已完全填充工作程序和测试用例，但不包含任何凭据，即。`.env`, `.config.json` 或 `.aio`._
 
 ## 疑难解答
 

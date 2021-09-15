@@ -1,24 +1,24 @@
 ---
 title: 对AEM Assets的Asset compute可扩展性进行故障诊断
 description: 以下是开发和部署AEM Assets自定义Asset compute工作程序时可能遇到的常见问题和错误以及相关解决方案的索引。
-feature: asset compute微服务
+feature: Asset Compute Microservices
 topics: renditions, metadata, development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: 集成、开发
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1239'
 ht-degree: 0%
 
 ---
-
 
 # asset compute可扩展性故障诊断
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## 开发{#develop}
 
-### 返回部分绘制/损坏的演绎版{#rendition-returned-partially-drawn-or-corrupt}
+### 返回部分绘制/损坏的呈现版本{#rendition-returned-partially-drawn-or-corrupt}
 
 + __错误__:演绎版呈现不完整（当图像时）或已损坏且无法打开。
 
@@ -37,28 +37,28 @@ ht-degree: 0%
 
 ## 开发工具{#development-tool}
 
-### asset compute项目{#missing-console-json}中缺少Console.json文件
+### asset compute项目中缺少Console.json文件{#missing-console-json}
 
-+ __错误：__ 错误：验证时缺少必需文件(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY)，异步设置资产计算(.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __错误：__ 错误：验证时缺少必需文件(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.:XX:jsYY)（异步）setupAssetCompute(.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.:XX:jsYY)
 + __原因：__ 文 `console.json` 件在Asset compute项目的根中缺失
 + __解决方案：__ 从您的Adobe I/O `console.json` 项目下载新表单
    1. 在console.adobe.io中，打开Adobe I/O项目，该Asset compute项目配置为使用
    1. 点按右上方的&#x200B;__Download__&#x200B;按钮
    1. 使用文件名`console.json`将下载的文件保存到Asset compute项目的根目录中
 
-### manifest.yml{#incorrect-yaml-indentation}中的YAML缩进不正确
+### manifest.yml中的YAML缩进不正确{#incorrect-yaml-indentation}
 
 + __错误：__ YAMLException:在X，列Y：（通过从命令中标准退出）处映射条目的缩进 `aio app run` 错误
 + __原因：__ Yaml文件在空格上比较敏感，可能是因为缩进不正确。
 + __分辨率：__ 查看并 `manifest.yml` 确保所有缩进均正确。
 
-### memorySize限制设置为过低{#memorysize-limit-is-set-too-low}
+### memorySize限制设置过低{#memorysize-limit-is-set-too-low}
 
 + __错误：__  本地开发服务器OpenWhiskError:PUThttps://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true返回HTTP 400（错误请求） — > &quot;请求内容的格式错误：requirement失败：内存低于允许的134217728 B&quot;阈值64 MB
 + __原因：__ 中 `memorySize` 工作程序的限制设 `manifest.yml` 置为低于错误消息报告的允许的最小阈值（以字节为单位）。
 + __解决办法：__  查看 `memorySize` 中的限 `manifest.yml` 制，并确保这些限制都大于允许的最低阈值。
 
-### 由于缺少private.key{#missing-private-key}，开发工具无法启动
+### 由于缺少private.key，开发工具无法启动{#missing-private-key}
 
 + __错误：__ 本地开发服务器错误：在validatePrivateKeyFile中缺少必需文件…….（通过`aio app run`命令中的标准输出）
 + __原因：__ 文 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 件 `.env` 中的值未指 `private.key` 向或 `private.key` 当前用户无法读取。
@@ -72,7 +72,7 @@ asset compute开发工具可能会进入其提取过时数据的状态，在显�
 + __原因：__ 缓存的浏览器状态过时导致
 + __解决办法：__ 在浏览器中完全清除浏览器选项卡的“应用程序状态”、浏览器缓存、本地存储和服务工作程序。
 
-### 缺少或无效的devToolToken查询参数{#missing-or-invalid-devtooltoken-query-parameter}
+### devToolToken查询参数缺失或无效{#missing-or-invalid-devtooltoken-query-parameter}
 
 + __错误：__ Asset compute开发工具中的“未授权”通知
 + __原因：__ `devToolToken` 缺失或无效
@@ -96,7 +96,7 @@ asset compute开发工具可能会进入其提取过时数据的状态，在显�
 
    ![故障诊断 — 未生成任何演绎版](./assets/troubleshooting/test__no-rendition-generated.png)
 
-### 测试生成不正确的再现，导致测试失败{#tests-generates-incorrect-rendition}
+### 测试生成不正确的演绎版，导致测试失败{#tests-generates-incorrect-rendition}
 
 + __错误：__ 失败：格式副本“rendition.xxx”不如预期。
 + __原因：__ 工作程序输出的演绎版与测试用例 `rendition.<extension>` 中提供的不同。
@@ -127,7 +127,7 @@ asset compute开发工具可能会进入其提取过时数据的状态，在显�
 + __原因：__ 在点按运行开发工具之前，VS代码调试 ____ 器未附加。
 + __解决办法：__ 确保已通过查看与代码的调试控制台（查看>调试控制台）附加调试器，然后从开发工具中重新运行Asset compute工作程序。
 
-### 调试{#worker-times-out-while-debugging}时工作器超时
+### 调试时工作程序超时{#worker-times-out-while-debugging}
 
 + __错误__:Debug Console报告“操作将以 — XXX毫秒为单位超时”，或者Asset compute开 [发工具的](./develop/development-tool.md) 呈现预览将无限期地旋转或
 + __原因__:在调试期间，超出了清单。 [](./develop/manifest.md) 清单中定义的工作器超时。
@@ -147,7 +147,7 @@ asset compute开发工具可能会进入其提取过时数据的状态，在显�
 
 ## 部署{#deploy}
 
-### AEM{#custom-rendition-missing-from-asset}中的资产中缺少自定义演绎版
+### AEM资产中缺少自定义演绎版{#custom-rendition-missing-from-asset}
 
 + __错误：__ 已成功处理新资产和重新处理资产，但缺少自定义演绎版
 
@@ -161,10 +161,8 @@ asset compute开发工具可能会进入其提取过时数据的状态，在显�
 + __原因：__ 资产存在于应用了自定义工作程序处理配置文件的文件夹下方，但该文件夹与资产之间已应用了不使用客户工作程序的其他处理配置文件。
 + __解决办法：__ 合并或以其他方式协调两个处理配置文件，并删除中间处理配置文件
 
-### AEM{#asset-processing-fails}中的资产处理失败
+### 资产处理在AEM中失败{#asset-processing-fails}
 
 + __错误：__ 资产上显示“资产处理失败”标记
 + __原因：__ 执行自定义工作程序时出错
 + __解决办法：__ 按照有关使用调试 [Adobe I/O Runtime](./test-debug/debug.md#aio-app-logs) 活动的说 `aio app logs`明操作。
-
-

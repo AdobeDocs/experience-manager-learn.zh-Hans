@@ -1,21 +1,21 @@
 ---
 title: 使用AEM发布服务的生产部署 — AEM无头入门 — GraphQL
 description: 了解AEM创作和发布服务以及无头应用程序的推荐部署模式。 在本教程中，了解如何使用环境变量根据目标环境动态更改GraphQL端点。 了解如何正确配置AEM以进行跨域资源共享(CORS)。
-version: cloud-service
-feature: 内容片段， GraphQL API
-topic: 无外设、内容管理
+version: Cloud Service
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 7131
 thumbnail: KT-7131.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2367'
+source-wordcount: '2360'
 ht-degree: 1%
 
 ---
-
 
 # 使用AEM发布服务进行生产部署
 

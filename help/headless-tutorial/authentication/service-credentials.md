@@ -1,24 +1,24 @@
 ---
 title: 服务凭据
 description: AEM Service凭据用于帮助外部应用程序、系统和服务以编程方式通过HTTP与AEM创作或发布服务进行交互。
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
-feature: API
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330519.jpg
-topic: 无头、集成
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: b902ced3d7f7cf827d0a487bf741ff370f7c1f04
+exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1860'
 ht-degree: 0%
 
 ---
-
 
 # 服务凭据
 
@@ -254,4 +254,3 @@ $ node index.js \
 ## 恭喜！
 
 现在，我们已通过本地开发访问令牌以及生产就绪的服务到服务访问令牌，以编程方式将AEM作为Cloud Service访问！
-

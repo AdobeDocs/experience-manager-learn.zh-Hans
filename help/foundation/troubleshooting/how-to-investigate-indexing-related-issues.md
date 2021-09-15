@@ -4,17 +4,17 @@ description: 调查与索引相关问题的步骤
 type: Troubleshooting
 role: Admin
 level: Intermediate
-version: 6.5, cloud-service
-feature: 开发人员工具
-topic: 管理
+version: 6.5, Cloud Service
+feature: Developer Tools
+topic: Administration
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 042a216d-980d-4912-a77b-e2ee04a27cfb
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 7%
+source-wordcount: '36'
+ht-degree: 0%
 
 ---
-
 
 # 如何在AEM中调查索引相关问题
 

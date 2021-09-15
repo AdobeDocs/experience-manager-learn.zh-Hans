@@ -1,24 +1,24 @@
 ---
 title: 设置Adobe项目Firefly以实现Asset compute可扩展性
 description: asset compute项目是特别定义的Adobe项目Firefly项目，因此，需要访问Adobe开发人员控制台中的Adobe项目Firefly才能设置和部署它们。
-feature: asset compute微服务
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
-topic: 集成、开发
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 2b1d8786-592e-41f2-80cc-bc0b1c7e1b49
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
-
 
 # 设置Adobe项目Firefly
 
@@ -49,8 +49,8 @@ _设置Adobe项目Firefly的点进（无音频）_
       + 选择&#x200B;__生成键对__&#x200B;并点按&#x200B;__生成键对__&#x200B;按钮，然后将下载的`config.zip`保存到安全位置，以供以后使用](#private-key)[
       + 点按&#x200B;__Next__
       + 选择产品配置文件&#x200B;__集成 — Cloud Service__，然后点按&#x200B;__保存配置的API__
-   + __Adobe服务> I/O事件，然__ 后点按保 __存配置的API__
-   + __Adobe服务> I/O管理API__ 并点按保 __存配置的API__
+   + __Adobe Services > I/O事件，然__ 后点按保 __存配置的API__
+   + __Adobe服务> I/O管理API，然__ 后点按保 __存配置的API__
 
 ## 访问private.key{#private-key}
 

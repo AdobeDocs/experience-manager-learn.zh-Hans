@@ -1,18 +1,18 @@
 ---
 title: 在AEM Dynamic Media中触发导出作业
-description: '在Dynamic Media中执行提交作业操作期间触发导出作业的步骤。  '
+description: 在Dynamic Media中执行提交作业操作期间触发导出作业的步骤。
 role: Developer
 level: Intermediate
-version: cloud-service
-topic: 开发
+version: Cloud Service
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 2df133dc-8c9d-445c-895b-d2fb43cbd39e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 2%
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
-
 
 # 在AEM Dynamic Media中触发导出作业
 

@@ -1,24 +1,24 @@
 ---
 title: 使用Adobe Analytics收集页面数据
 description: 使用事件驱动的Adobe客户端数据层在使用Adobe Experience Manager构建的网站上收集有关用户活动的数据。 了解如何在Experience Platform Launch中使用规则来侦听这些事件并将数据发送到Adobe Analytics报表包。
-version: cloud-service
+version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '2375'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-
 # 使用Adobe Analytics收集页面数据
 
-了解如何将[Adobe客户端数据层的内置功能与AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)一起使用来收集有关Adobe Experience Manager Sites中某个页面的数据。 [Experience Platform](https://www.adobe.com/experience-platform/launch.html) Launch和Adobe Analytics [扩](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html) 展将用于创建规则以将页面数据发送到Adobe Analytics。
+了解如何将[Adobe客户端数据层的内置功能与AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)一起使用来收集有关Adobe Experience Manager Sites中某个页面的数据。 [Experience Platform Launch 和 Adobe Analytics 扩展将用于创建规则以将页面数据发送到 Adobe Analytics。](https://www.adobe.com/experience-platform/launch.html)[](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)
 
 ## 将构建的内容
 

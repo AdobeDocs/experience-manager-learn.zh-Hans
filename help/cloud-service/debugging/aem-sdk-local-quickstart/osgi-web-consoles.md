@@ -3,27 +3,27 @@ title: 使用OSGi Web控制台调试AEM SDK
 description: AEM SDK的本地快速启动具有一个OSGi Web控制台，该控制台在本地AEM运行时中提供了各种信息和介绍，有助于了解应用程序如何被识别以及AEM中的功能。
 feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5265, 5366, 5267
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 0929bc1a-376c-4e16-a540-a276fd5af164
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 1%
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
-
 
 # 使用OSGi Web控制台调试AEM SDK
 
 AEM SDK的本地快速启动具有一个OSGi Web控制台，该控制台在本地AEM运行时中提供了各种信息和介绍，有助于了解应用程序如何被识别以及AEM中的功能。
 
-AEM提供了许多OSGi控制台，每个控制台都对AEM的不同方面提供了重要的分析，但是以下控制台在调试应用程序时通常最有用。
+AEM提供了许多OSGi控制台，每个控制台都对AEM的不同方面提供了重要的分析，但以下在调试应用程序时通常最有用。
 
 ## 包
 

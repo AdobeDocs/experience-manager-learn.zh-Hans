@@ -1,24 +1,24 @@
 ---
 title: asset computeAEM作为Cloud Service的微服务可扩展性
 description: 本教程将指导您创建一个简单的Asset compute工作程序，该工作程序通过将原始资产裁剪到圆圈来创建资产演绎版，并应用可配置的对比度和亮度。 虽然工作人员本身是基本的，但本教程将利用它来探索如何创建、开发和部署自定义Asset compute工作人员，以便与AEM作为Cloud Service一起使用。
-feature: asset compute微服务
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: 集成、开发
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 575b12f9-b57f-41f7-bd39-56d242de4747
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
-
 
 # asset compute微服务可扩展性
 

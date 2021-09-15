@@ -1,24 +1,24 @@
 ---
 title: 创建语言副本
-description: '了解如何使用创建语言副本向导为AEM站点创建语言副本。  '
-feature: 语言副本，多站点管理器
+description: 了解如何使用创建语言副本向导为AEM站点创建语言副本。
+feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 5371
 thumbnail: 36483.jpg
-topic: 本地化
+topic: Localization
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: d1f557bd-c48f-4534-8735-59e479ec92b5
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 2%
+source-wordcount: '42'
+ht-degree: 0%
 
 ---
-
 
 # 创建语言副本 {#create-language-copy}
 

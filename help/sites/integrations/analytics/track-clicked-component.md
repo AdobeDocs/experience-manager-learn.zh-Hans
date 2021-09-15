@@ -1,24 +1,24 @@
 ---
 title: 使用Adobe Analytics跟踪已单击的组件
 description: 使用事件驱动的Adobe客户端数据层跟踪Adobe Experience Manager网站上特定组件的单击次数。 了解如何在Experience Platform Launch中使用规则来监听这些事件，并通过跟踪链接信标将数据发送到Adobe Analytics。
-version: cloud-service
+version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 6296
 thumbnail: KT-6296.jpg
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '1810'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-
 # 使用Adobe Analytics跟踪已单击的组件
 
-将事件驱动的[Adobe客户端数据层与AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)结合使用，跟踪Adobe Experience Manager网站上特定组件的单击情况。 了解如何在Experience Platform Launch中使用规则来监听点击事件、按组件进行过滤，以及通过跟踪链接信标将数据发送到Adobe Analytics。
+将事件驱动的[Adobe客户端数据层与AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)结合使用，跟踪Adobe Experience Manager网站上特定组件的单击情况。 了解如何使用 Experience Platform Launch 中的规则来侦听单击事件、按组件筛选并在带跟踪链接信标的情况下将数据发送到 Adobe Analytics。
 
 ## 将构建的内容
 

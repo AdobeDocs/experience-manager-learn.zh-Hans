@@ -5,19 +5,19 @@ topics: integrations
 audience: administrator
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 5980
 thumbnail: 38553.jpg
-topic: 集成
+topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: d5de62ef-a2aa-4283-b500-e1f7cb5dec3b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 2%
+source-wordcount: '107'
+ht-degree: 3%
 
 ---
-
 
 # 创建Launch资产 {#create-launch-property}
 

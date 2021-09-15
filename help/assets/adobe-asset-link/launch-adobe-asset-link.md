@@ -1,20 +1,20 @@
 ---
 title: 访问Adobe资产链接
 description: Adobe Asset Link 加强了内容创建过程中创意人员与营销人员之间的协作。您无需离开您最熟悉的Creative Cloud桌面应用程序，即可访问存储在Adobe Experience Manager Assets(AEM Assets)中的内容。 了解如何从Creative Cloud桌面应用程序启动Adobe资产链接面板。
-sub-product: 资产
-feature: Adobe资产链接
-version: cloud-service
+sub-product: assets
+feature: Adobe Asset Link
+version: Cloud Service
 thumbnail: 33733.jpg
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 261135af-4d26-4b07-8ec9-6e9875a158ba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 27%
+source-wordcount: '112'
+ht-degree: 25%
 
 ---
-
 
 # 访问Adobe资产链接 {#access-adobe-asset-link}
 

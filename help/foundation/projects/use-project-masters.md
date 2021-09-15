@@ -1,20 +1,20 @@
 ---
 title: 如何在AEM中使用项目主页
 description: 使用AEM Projects，项目主管可以大大简化用户和团队管理。
-version: 6.4, 6.5, cloud-service
-topic: 内容管理、协作
-feature: 项目
+version: 6.4, 6.5, Cloud Service
+topic: Content Management, Collaboration
+feature: Projects
 level: Intermediate
 role: User
 kt: 256
 thumbnail: 17740.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 78ff62ad-1017-4a02-80e9-81228f9e01eb
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
-
 
 # 使用项目主页
 

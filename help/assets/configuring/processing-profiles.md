@@ -1,21 +1,21 @@
 ---
 title: 处理配置文件
 description: 处理配置文件定义要为AEM中的资产创建的演绎版作为Cloud Service。
-sub-product: 资产
-feature: asset compute微服务
-version: cloud-service
+sub-product: assets
+feature: Asset Compute Microservices
+version: Cloud Service
 kt: 4993
 thumbnail: 35597.jpg
-topic: 集成
+topic: Integrations
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a08ce6b2-532d-4fd4-ada4-3cbec0fde699
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '41'
-ht-degree: 12%
+source-wordcount: '36'
+ht-degree: 11%
 
 ---
-
 
 # 处理配置文件
 

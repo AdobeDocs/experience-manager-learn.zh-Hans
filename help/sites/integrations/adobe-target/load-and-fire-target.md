@@ -1,24 +1,24 @@
 ---
 title: 加载和触发Target调用
 description: 了解如何加载参数并将参数传递到页面请求，以及如何使用Launch规则从您的网站页面触发Target调用。 使用Adobe客户端数据层可检索页面信息并将其作为参数进行传递，该数据层允许您收集和存储有关访客在网页上的体验的数据，然后使访客能够轻松访问这些数据。
-feature: 核心组件，Adobe客户端数据层
+feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 6133
 thumbnail: 41243.jpg
-topic: 集成
+topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '615'
-ht-degree: 1%
+source-wordcount: '608'
+ht-degree: 2%
 
 ---
-
 
 # 加载和触发Target调用 {#load-fire-target}
 

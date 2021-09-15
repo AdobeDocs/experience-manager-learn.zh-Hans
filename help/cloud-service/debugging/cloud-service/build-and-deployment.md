@@ -1,24 +1,24 @@
 ---
 title: 内部版本和部署
 description: AdobeCloud Manager可帮助将代码构建和部署到AEM as aCloud Service。 在构建过程中的步骤中可能会发生失败，需要采取操作来解决这些问题。 本指南将指导您逐步了解部署中的常见故障，以及如何以最佳方式处理这些故障。
-feature: 开发人员工具
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2529'
+source-wordcount: '2526'
 ht-degree: 0%
 
 ---
-
 
 # 调试AEM as a Cloud Service内部版本和部署
 
@@ -146,7 +146,7 @@ AEM as a AEM在每个Cloud Service版本中会自动包含最新的核心组件�
    ```
 
 + __原因：__   `core` 应用程序的OSGi包（在项目中定义）从核心组件核心依赖项中导入Java类，其版本级别与部署到AEM作为Cloud Service的版本级别不同。
-+ __分辨率:__
++ __解决方法:__
    + 使用Git，还原到核心组件版本增量之前存在的工作提交。 将此提交推送到Cloud Manager Git分支，然后从此分支中执行环境更新。 这会将AEM作为Cloud Service升级到最新的AEM版本，该版本将包含更高的核心组件版本。 将AEM as a Cloud Service更新到具有最新核心组件版本的最新AEM版本后，请重新部署最初失败的代码。
    + 要在本地重现此问题，请确保AEM SDK版本与AEM环境使用的AEM版本相同。
 
@@ -173,7 +173,7 @@ AEM as a AEM在每个Cloud Service版本中会自动包含最新的核心组件�
 
 + __原因：__ Cloud Manager管道保存的AEM版本比部署到目标环境的版本旧。如果重复使用管道并将管道指向运行更高版本AEM的新环境，则可能会发生这种情况。 可通过检查环境的AEM版本是否大于管道的AEM版本来标识此问题。
    ![Cloud Manager管道包含旧AEM版本](./assets/build-and-deployment/deploy-to__pipeline-holds-old-aem-version.png)
-+ __分辨率:__
++ __解决方法:__
    + 如果目标环境具有可用更新，请从该环境的操作中选择更新，然后重新运行该内部版本。
    + 如果目标环境没有可用的更新，则意味着它运行的是最新版本的AEM。 要解决此问题，请删除管道并重新创建管道。
 

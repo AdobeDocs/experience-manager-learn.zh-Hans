@@ -3,21 +3,21 @@ title: 调试AEM as aCloud Service
 description: 在自助式、可扩展的云基础架构上，这要求AEM开发人员了解如何了解和调试AEM as a Cloud Service的各个方面，从构建和部署到获取运行AEM应用程序的详细信息。
 feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5346
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 2%
+source-wordcount: '308'
+ht-degree: 1%
 
 ---
-
 
 # 调试AEM as aCloud Service
 

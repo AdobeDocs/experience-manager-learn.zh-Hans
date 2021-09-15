@@ -1,11 +1,11 @@
 ---
 title: 将SPA组件映射到AEM组件 | AEM SPA Editor和Angular快速入门
 description: 了解如何使用AEM SPA Editor JS SDK将Angular组件映射到Adobe Experience Manager(AEM)组件。 组件映射允许用户在AEM SPA编辑器中对SPA组件进行动态更新，这与传统的AEM创作类似。
-sub-product: 站点
-feature: SPA编辑器
+sub-product: sites
+feature: SPA Editor
 topics: development
 doc-type: tutorial
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 5311
@@ -13,13 +13,13 @@ thumbnail: 5311-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2384'
+source-wordcount: '2380'
 ht-degree: 0%
 
 ---
-
 
 # 将SPA组件映射到AEM组件 {#map-components}
 

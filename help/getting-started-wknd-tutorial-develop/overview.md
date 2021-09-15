@@ -1,9 +1,9 @@
 ---
-title: AEM Sites - WKND 教程快速入门
-description: AEM Sites - WKND 教程快速入门. WKND教程是一个多部分教程，专为不熟悉Adobe Experience Manager的开发人员而设计。 本教程将指导您实施一个AEM网站，以打造一个虚构的生活方式品牌WKND。 本教程涵盖基本主题，如项目设置、Maven原型、核心组件、可编辑模板、客户端库和组件开发。
-sub-product: 站点
+title: AEM Sites 快速入门 - WKND 教程
+description: AEM Sites 快速入门 - WKND 教程. WKND教程是一个多部分教程，专为不熟悉Adobe Experience Manager的开发人员而设计。 本教程将指导您实施一个AEM网站，以打造一个虚构的生活方式品牌WKND。 本教程涵盖基本主题，如项目设置、Maven原型、核心组件、可编辑模板、客户端库和组件开发。
+sub-product: sites
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -11,19 +11,19 @@ KT: 4132
 mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
-feature: 核心组件、页面编辑器、可编辑模板、AEM项目原型
-topic: 内容管理、开发
+feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
+topic: Content Management, Development
 role: Developer
 level: Beginner
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 4%
+source-wordcount: '619'
+ht-degree: 6%
 
 ---
 
-
-# AEM Sites - WKND 教程快速入门 {#introduction}
+# AEM Sites 快速入门 - WKND 教程 {#introduction}
 
 欢迎参加为初次使用Adobe Experience Manager(AEM)的开发人员而设计的多部分教程。 本教程将指导您实施AEM网站，以打造虚构的生活方式品牌WKND。 本教程涵盖一些基本主题，如项目设置、核心组件、可编辑模板、客户端库，以及使用Adobe Experience Manager Sites进行组件开发。
 
@@ -68,6 +68,6 @@ WKND参考网站中的许多图像都来自[Adobe Stock](https://stock.adobe.com
 
 借助Adobe Stock，您可以访问超过1.4亿张高品质、免版税的图像，包括照片、图形、视频和模板，以快速启动您的创意项目。
 
-## 后续步骤{#next-steps}
+## 后续步骤 {#next-steps}
 
 你在等什么?!了解如何使用AEM项目原型](./project-archetype/overview.md)或[使用网站模板](./site-template/create-site.md)创建网站，从而[生成新的Adobe Experience Manager项目。

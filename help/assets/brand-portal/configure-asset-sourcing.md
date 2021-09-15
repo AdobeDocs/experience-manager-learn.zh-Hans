@@ -1,23 +1,22 @@
 ---
-title: '使用Brand Portal配置资产源。 '
+title: 使用Brand Portal配置资产源。
 description: 使用Brand Portal配置资产源的步骤
 role: Developer
 level: Beginner
-version: cloud-service
+version: Cloud Service
 feature: Brand Portal
-topic: 开发
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 4f5c1e04-8b98-454c-b410-1b1d0e110798
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 7%
+source-wordcount: '36'
+ht-degree: 0%
 
 ---
-
 
 # 使用Brand Portal配置资产源
 
 *此视频将演示使用Brand Portal配置资产源的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335451?quality=9&learn=on)
-

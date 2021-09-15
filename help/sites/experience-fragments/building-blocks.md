@@ -1,22 +1,22 @@
 ---
 title: 如何使用体验片段构建基块
 description: 构建基块是体验片段的子功能，可在体验片段的各个变体中重复使用创作的组件。
-sub-product: 站点，内容服务
-version: cloud-service
-feature: 体验片段
-topic: 内容管理
+sub-product: sites, content-services
+version: Cloud Service
+feature: Experience Fragments
+topic: Content Management
 level: Beginner, Intermediate
 role: Architect, Developer, Admin, User
 doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: cc758602-3c20-4eca-9b87-f04b6dc96bfe
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 3%
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
-
 
 # 包含体验片段的构建基块 {#building-blocks}
 

@@ -1,26 +1,26 @@
 ---
 title: AEM Sites中的基本操作
-seo-title: 在Adobe Experience Manager Sites中创建新页面
+seo-title: Create a new page in Adobe Experience Manager Sites
 description: 以下视频概述了使用AEM创作环境时的基本操作。 它使用站点控制台作为基础。
-seo-description: 以下视频概述了使用AEM创作环境时的基本操作。 它使用站点控制台作为基础。
-feature: 页面编辑器、可编辑的模板
+seo-description: The following video provides an overview of basic handling when using the AEM author environment. It uses the Sites console as a basis.
+feature: Page Editor, Editable Templates
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 4495
 thumbnail: 31784.jpg
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 896d378c-c20e-4343-b592-277f4c71065e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '334'
 ht-degree: 25%
 
 ---
-
 
 # AEM Sites UI和导航 {#basic-handling-aem-sites}
 

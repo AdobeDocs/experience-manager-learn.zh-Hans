@@ -1,11 +1,11 @@
 ---
 title: 添加导航和路由 | AEM SPA Editor和Angular快速入门
 description: 了解如何使用SPA页面和SPA Editor SDK支持AEM中的多个视图。 动态导航是使用Angular路由实施的，并添加到现有的标题组件中。
-sub-product: 站点
-feature: SPA编辑器
+sub-product: sites
+feature: SPA Editor
 topics: development
 doc-type: tutorial
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 5312
@@ -13,13 +13,13 @@ thumbnail: 5312-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2717'
+source-wordcount: '2713'
 ht-degree: 0%
 
 ---
-
 
 # 添加导航和路由 {#navigation-routing}
 

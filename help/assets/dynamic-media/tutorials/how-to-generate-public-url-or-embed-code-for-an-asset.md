@@ -3,16 +3,16 @@ title: 为AEM Dynamic Media资产生成URL和嵌入代码
 description: 在Dynamic Media中为资产生成公共URL和嵌入代码的步骤
 role: Developer
 level: Intermediate
-version: cloud-service
-topic: 开发
+version: Cloud Service
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 2b526f92-17b4-4a69-9c1c-d8ca42334433
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 1%
+source-wordcount: '50'
+ht-degree: 0%
 
 ---
-
 
 # 为AEM Dynamic Media资产生成URL和嵌入代码
 

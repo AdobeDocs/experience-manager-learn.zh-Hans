@@ -1,24 +1,24 @@
 ---
 title: 使用体验片段选件创建Target活动
 description: 了解如何使用AEM Experience Fragment选件创建和测试Adobe Target活动。
-feature: 体验片段
+feature: Experience Fragments
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 6351
 thumbnail: 41246.jpg
-topic: 集成
+topic: Integrations
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 3%
+source-wordcount: '118'
+ht-degree: 0%
 
 ---
-
 
 # 使用体验片段选件创建Adobe Target活动 {#target-activity-experience-fragment}
 

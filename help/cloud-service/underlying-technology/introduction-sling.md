@@ -5,21 +5,21 @@ topics: sling, architecture
 audience: administrator, developer
 doc-type: technical video
 activity: understand
-version: cloud-service
+version: Cloud Service
 kt: 4641
 thumbnail: 32032.jpg
-topic: 架构
+topic: Architecture
 role: Architect, Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 92afc9c4-3d58-4787-86f6-46495d89c4d4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 7%
+source-wordcount: '41'
+ht-degree: 4%
 
 ---
 
-
-# [!DNL Sling] 简介{#introduction-sling}
+# [!DNL Sling] 简介 {#introduction-sling}
 
 对[!DNL Sling]的介绍，[!DNL RESTful]是Adobe Experience Manager底层技术堆栈的一部分的开源 Web框架。
 

@@ -1,24 +1,24 @@
 ---
 title: 日志
 description: 在AEM as a Cloud Service中，日志是调试AEM应用程序的首选工具，但取决于已部署的AEM应用程序中是否有足够的日志记录。
-feature: 开发人员工具
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 2%
+source-wordcount: '999'
+ht-degree: 1%
 
 ---
-
 
 # 使用日志调试AEM as aCloud Service
 

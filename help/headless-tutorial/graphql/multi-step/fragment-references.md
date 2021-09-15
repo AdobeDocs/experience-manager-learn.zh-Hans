@@ -1,21 +1,21 @@
 ---
 title: 使用片段引用进行高级数据建模 — AEM无头入门 — GraphQL
 description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 了解如何使用片段引用功能进行高级数据建模，以及如何在两个不同的内容片段之间创建关系。 了解如何修改GraphQL查询以包含引用模型中的字段。
-version: cloud-service
+version: Cloud Service
 mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
-feature: 内容片段， GraphQL API
-topic: 无外设、内容管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: d85b7ac3-42c1-4655-9394-29a797c0e1d7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '847'
 ht-degree: 1%
 
 ---
-
 
 # 使用片段引用进行高级数据建模
 

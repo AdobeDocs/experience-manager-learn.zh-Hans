@@ -1,19 +1,19 @@
 ---
 title: Adobe资产链接和AEM
-description: 'Adobe Experience Manager资产可供设计人员和创意用户在其最喜爱的Adobe Creative Cloud桌面应用程序中使用。 适用于Adobe Creative Cloud for enterprise的Adobe资产链接扩展了在Adobe XD、Photoshop、InDesign和Illustrator等Creative Cloud工具中搜索和浏览、排序、预览、上传资产、签出、修改、签入和查看AEM资产的元数据的功能。 '
+description: Adobe Experience Manager资产可供设计人员和创意用户在其最喜爱的Adobe Creative Cloud桌面应用程序中使用。 适用于Adobe Creative Cloud for enterprise的Adobe资产链接扩展了在Adobe XD、Photoshop、InDesign和Illustrator等Creative Cloud工具中搜索和浏览、排序、预览、上传资产、签出、修改、签入和查看AEM资产的元数据的功能。
 feature: Adobe Asset Link
-version: 6.4, 6.5, cloud-service
-topic: 内容管理
+version: 6.4, 6.5, Cloud Service
+topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
+exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 2%
+source-wordcount: '1052'
+ht-degree: 1%
 
 ---
-
 
 # Adobe资产链接3.0
 
@@ -21,6 +21,9 @@ Adobe Experience Manager资产可供设计人员和创意用户在其最喜爱�
 
 适用于Adobe Creative Cloud for enterprise的Adobe资产链接扩展了在Creative Cloud应用程序中搜索和浏览、排序、预览、上传资产、签出、修改、签入和查看AEM资产元数据的功能。
 
+>[!TIP]
+>
+> 进一步了解[Adobe XD Premium培训计划](https://spark.adobe.com/page/wU7OXv8qKGugO/)如何帮助您将Asset Link与Adobe Experience Manager工作流集成。
 
 ## Adobe资产链接和AEM创作工作流
 

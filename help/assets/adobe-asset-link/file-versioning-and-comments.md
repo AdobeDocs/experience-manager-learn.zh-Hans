@@ -1,20 +1,20 @@
 ---
 title: 文件版本控制和注释
-description: '使用Adobe资产链接面板，您可以访问AEM Assets中资产的文件详细信息，例如缩略图、基本元数据和版本。 了解如何创建、预览和比较文件版本。  '
-sub-product: 资产
+description: 使用Adobe资产链接面板，您可以访问AEM Assets中资产的文件详细信息，例如缩略图、基本元数据和版本。 了解如何创建、预览和比较文件版本。
+sub-product: assets
 feature: Adobe Asset Link
-version: 6.4, 6.5, cloud-service
+version: 6.4, 6.5, Cloud Service
 thumbnail: 34048.jpg
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 6bcc5978-dac8-4112-8e50-de1722b1c289
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 5%
+source-wordcount: '80'
+ht-degree: 0%
 
 ---
-
 
 # 文件版本控制和注释{#file-versioning-and-comments}
 

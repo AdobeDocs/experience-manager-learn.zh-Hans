@@ -1,23 +1,23 @@
 ---
 title: 用于调试AEM SDK的其他工具
 description: 其他各种工具可以帮助调试AEM SDK的本地快速启动。
-feature: 开发人员工具
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 11fb83e9-dbaf-46e5-8102-ae8cc716c6ba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 5%
+source-wordcount: '217'
+ht-degree: 3%
 
 ---
-
 
 # 用于调试AEM SDK的其他工具
 
@@ -54,4 +54,3 @@ QueryBuilder调试器是一个基于Web的工具，可帮助您使用AEM [QueryB
 QueryBuilder Debugger位于：
 
 + [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
-

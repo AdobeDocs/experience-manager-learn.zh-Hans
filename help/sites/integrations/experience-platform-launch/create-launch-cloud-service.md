@@ -5,21 +5,21 @@ topics: integrations
 audience: administrator
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 5982
 thumbnail: 38566.jpg
-topic: 集成
+topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 1%
+source-wordcount: '96'
+ht-degree: 2%
 
 ---
 
-
-# 创建LaunchCloud Service配置{#create-launch-cloud-service}
+# 创建LaunchCloud Service配置 {#create-launch-cloud-service}
 
 了解如何在Adobe Experience Manager中创建新的LaunchCloud Services配置。 然后，可以将AEM LaunchCloud Service配置应用于现有站点，并且可以在创作和发布环境中观察Launch库的加载情况。
 

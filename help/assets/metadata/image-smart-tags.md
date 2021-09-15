@@ -1,20 +1,20 @@
 ---
 title: 适用于具有AEM Assets的图像的智能标记
 description: 图像的智能标记可根据图像内容自动和智能地向图像资产添加元数据标记，以增强AEM搜索功能。
-topic: 内容管理
-feature: 智能标记
+topic: Content Management
+feature: Smart Tags
 role: User
 level: Intermediate
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 645
 thumbnail: 17019.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 5%
+source-wordcount: '218'
+ht-degree: 3%
 
 ---
-
 
 # 图像智能标记
 

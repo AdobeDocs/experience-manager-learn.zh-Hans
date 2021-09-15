@@ -3,17 +3,17 @@ title: 如何在Brand Portal中启用演绎版下载。
 description: 在Brand Portal中启用下载演绎版的步骤
 role: Developer
 level: Beginner
-version: cloud-service
+version: Cloud Service
 feature: Brand Portal
-topic: 开发
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 78664b38-b64a-4220-bb7a-83f09bdd441a
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 6%
+source-wordcount: '43'
+ht-degree: 0%
 
 ---
-
 
 # 在Brand Portal中启用下载演绎版
 
