@@ -1,5 +1,5 @@
 ---
-title: 使用内容传输工具迁移内容 — 移至A...（标题不得超过60个字符）
+title: 使用内容传输工具进行内容迁移
 description: 了解内容传输工具如何帮助您将内容从AEM 6作为Cloud Service迁移到AEM。
 version: Cloud Service
 topic: Migration, Upgrade
@@ -7,10 +7,11 @@ role: Developer
 level: Experienced
 kt: 8919
 thumbnail: 336970.jpeg
-source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
+exl-id: c51ce8e3-e83c-4f8b-a835-70335ed3a5b9
+source-git-commit: c0b8e598bd8bb968ae5e48b4033d6c3d46b71710
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
