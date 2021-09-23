@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
+source-git-commit: 598d00578e5179f76b6f309c5c14dc7b1634f051
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '561'
 ht-degree: 22%
 
 ---
@@ -92,17 +92,18 @@ ht-degree: 22%
 
    + 移动到 AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
       + [简介](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
+      + [入门](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
+      + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
       + [双酚A和CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [AEM现代化工具](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
       + [存储库现代化](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
-      + [入门](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
-      + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
+      + [asset compute微服务](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
       + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
+      + [搜索和索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + 内容迁移{#content-migration}
          + [批量导入服务](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [内容传输工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
-      + [搜索和索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
-      + [asset compute微服务](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
+      + [疑难解答](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Forms as aCloud Service{#aem-forms}
          + [简介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [数字注册](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
