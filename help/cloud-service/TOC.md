@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 598d00578e5179f76b6f309c5c14dc7b1634f051
+source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 22%
+source-wordcount: '564'
+ht-degree: 23%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 + [概述](./overview.md)
 + AEM as a Cloud Service 简介{#introduction}
-   + [什么是AEM as aCloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [什么是AEMas a Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [进化](./introduction/evolution.md)
    + [架构](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
@@ -64,6 +64,8 @@ ht-degree: 22%
       + [OSGi组件生命周期](./developing/osgi-services/lifecycle.md)
       + [OSGi配置基础知识](./developing/osgi-services/configurations.md)
       + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
+   + 高级{#advanced}
+      + [服务用户](./developing/advanced/service-users.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + 调试AEM{#debugging}
    + 调试AEM SDK{#debugging-aem-sdk}
@@ -73,7 +75,7 @@ ht-degree: 22%
       + [OSGi Web控制台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + 调试AEM as aCloud Service{#debugging-aem-as-a-cloud-service}
+   + 调试AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [概述](./debugging/cloud-service/overview.md)
       + [日志](./debugging/cloud-service/logs.md)
       + [构建和部署](./debugging/cloud-service/build-and-deployment.md)
@@ -81,9 +83,9 @@ ht-degree: 22%
       + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
 + 访问AEM{#accessing}
    + [概述](./accessing/overview.md)
-   + [AdobeIMS用户](./accessing/adobe-ims-users.md)
-   + [AdobeIMS用户组](./accessing/adobe-ims-user-groups.md)
-   + [AdobeIMS产品配置文件](./accessing/adobe-ims-product-profiles.md)
+   + [Adobe IMS用户](./accessing/adobe-ims-users.md)
+   + [Adobe IMS用户组](./accessing/adobe-ims-user-groups.md)
+   + [Adobe IMS产品配置文件](./accessing/adobe-ims-product-profiles.md)
    + [AEM用户、组和权限](./accessing/aem-users-groups-and-permissions.md)
    + [配置对AEM演练的访问权限](./accessing/walk-through.md)
 + 迁移{#migration}
@@ -104,7 +106,7 @@ ht-degree: 22%
          + [批量导入服务](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [内容传输工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
       + [疑难解答](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
-      + AEM Forms as aCloud Service{#aem-forms}
+      + AEM Formsas a Cloud Service{#aem-forms}
          + [简介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [数字注册](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
          + [通信](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
