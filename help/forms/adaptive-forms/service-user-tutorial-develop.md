@@ -1,23 +1,25 @@
 ---
 title: 在AEM Forms中与服务用户一起开发
 description: 本文将指导您完成在AEM Forms中创建服务用户的过程
-feature: 自适应表单
-topic: 开发
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 5fa3d52a-6a71-45c4-9b1a-0e6686dd29bc
+source-git-commit: f1afccdad8d819604c510421204f59e7b3dc68e4
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '445'
 ht-degree: 1%
 
 ---
-
 
 # 在AEM Forms中与服务用户一起开发
 
 本文将指导您完成在AEM Forms中创建服务用户的过程
 
 在Adobe Experience Manager(AEM)的早期版本中，管理资源解析程序用于后端处理，这需要访问存储库。 AEM 6.3中已弃用管理资源解析程序，而是使用在存储库中具有特定权限的系统用户。
+
+详细了解在AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html)中创建和使用服务用户的[详细信息。
 
 本文将介绍如何创建系统用户并配置用户映射器属性。
 
@@ -53,60 +55,90 @@ ht-degree: 1%
    1. 授予对“content”文件夹的“read”访问权限。
    1. 要使用服务用户获取对/content文件夹的访问权限，请使用以下代码
 
-   ```java
-   com.mergeandfuse.getserviceuserresolver.GetResolver aemDemoListings = sling.getService(com.mergeandfuse.getserviceuserresolver.GetResolver.class);
-   
-   resourceResolver = aemDemoListings.getServiceResolver();
-   
-   // get the resource. This will succeed because we have given ' read ' access to the content node
-   
-   Resource contentResource = resourceResolver.getResource("/content/forms/af/sandbox/abc.pdf");
-   ```
 
-   如果要访问包中的/content/dam/data.json文件，将使用以下代码。 此代码假定您已为/content/dam/节点上的“data”用户授予读取权限
 
-   ```java
-   @Reference
-   GetResolver getResolver;
-   .
-   .
-   .
+```java
+com.mergeandfuse.getserviceuserresolver.GetResolver aemDemoListings = sling.getService(com.mergeandfuse.getserviceuserresolver.GetResolver.class);
+   
+resourceResolver = aemDemoListings.getServiceResolver();
+   
+// get the resource. This will succeed because we have given ' read ' access to the content node
+   
+Resource contentResource = resourceResolver.getResource("/content/forms/af/sandbox/abc.pdf");
+```
+
+如果要访问包中的/content/dam/data.json文件，将使用以下代码。 此代码假定您已为/content/dam/节点上的“data”用户授予读取权限
+
+```java
+@Reference
+GetResolver getResolver;
+.
+.
+.
+try {
    ResourceResolver serviceResolver = getResolver.getServiceResolver();
-   // to get resource resolver specific to fd-service user. This is for Document Services
+
+   // To get resource resolver specific to fd-service user. This is for Document Services
    ResourceResolver fdserviceResolver = getResolver.getFormsServiceResolver();
+
    Node resNode = getResolver.getServiceResolver().getResource("/content/dam/data.json").adaptTo(Node.class);
-   ```
+} catch(LoginException ex) {
+   // Unable to get the service user, handle this exception as needed
+} finally {
+  // Always close all ResourceResolvers you open!
+  
+  if (serviceResolver != null( { serviceResolver.close(); }
+  if (fdserviceResolver != null) { fdserviceResolver.close(); }
+}
+```
 
-   实施的完整代码如下所示
+实施的完整代码如下所示
 
-   ```java
-   package com.mergeandfuse.getserviceuserresolver.impl;
-   
-   import java.util.HashMap;
-   
-   import org.apache.sling.api.resource.LoginException;
-   import org.apache.sling.api.resource.ResourceResolver;
-   import org.apache.sling.api.resource.ResourceResolverFactory;
-   import org.osgi.service.component.annotations.Component;
-   import org.osgi.service.component.annotations.Reference;
-   import com.mergeandfuse.getserviceuserresolver.GetResolver;
-   
-   @Component(service = GetResolver.class)
-   public class GetResolverImpl implements GetResolver {
-    @Reference
-    ResourceResolverFactory resolverFactory;
-    @Override
-    public ResourceResolver getServiceResolver() {
-     HashMap<String, Object> param = new HashMap<String, Object>();
-     param.put(ResourceResolverFactory.SUBSERVICE, "getresourceresolver");
-     ResourceResolver resolver = null;
-     try {
-      resolver = resolverFactory.getServiceResourceResolver(param);
-     } catch (LoginException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-     }
-     return resolver;
-    }
-   ```
+```java
+package com.mergeandfuse.getserviceuserresolver.impl;
+import java.util.HashMap;
+import org.apache.sling.api.resource.LoginException;
+import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.api.resource.ResourceResolverFactory;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import com.mergeandfuse.getserviceuserresolver.GetResolver;
+@Component(service = GetResolver.class)
+public class GetResolverImpl implements GetResolver {
+        @Reference
+        ResourceResolverFactory resolverFactory;
 
+        @Override
+        public ResourceResolver getServiceResolver() {
+                System.out.println("#### Trying to get service resource resolver ....  in my bundle");
+                HashMap < String, Object > param = new HashMap < String, Object > ();
+                param.put(ResourceResolverFactory.SUBSERVICE, "getresourceresolver");
+                ResourceResolver resolver = null;
+                try {
+                        resolver = resolverFactory.getServiceResourceResolver(param);
+                } catch (LoginException e) {
+
+                        System.out.println("Login Exception " + e.getMessage());
+                }
+                return resolver;
+
+        }
+
+        @Override
+        public ResourceResolver getFormsServiceResolver() {
+
+                System.out.println("#### Trying to get Resource Resolver for forms ....  in my bundle");
+                HashMap < String, Object > param = new HashMap < String, Object > ();
+                param.put(ResourceResolverFactory.SUBSERVICE, "getformsresourceresolver");
+                ResourceResolver resolver = null;
+                try {
+                        resolver = resolverFactory.getServiceResourceResolver(param);
+                } catch (LoginException e) {
+                        System.out.println("Login Exception ");
+                        System.out.println("The error message is " + e.getMessage());
+                }
+                return resolver;
+        }
+
+}
+```
