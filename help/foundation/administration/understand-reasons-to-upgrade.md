@@ -1,21 +1,21 @@
 ---
 title: 了解升级的原因
-description: 为考虑升级到最新版本的Adobe Experience Manager的客户简要分类关键功能。
+description: 为考虑升级到最新版本的Adobe Experience Manager 6的客户简要分类了主要功能。
 version: 6.5
 topic: Upgrade
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
+source-git-commit: 278433e7d9a2d524198efcebae336dca01a15259
 workflow-type: tm+mt
 source-wordcount: '3462'
 ht-degree: 3%
 
 ---
 
-
 # 了解升级的原因
 
-为考虑升级到最新版本的Adobe Experience Manager的客户简要分类关键功能。
+为考虑升级到最新版本的Adobe Experience Manager 6的客户简要分类了主要功能。
 
 ## 升级到AEM 6.5的主要功能
 
@@ -316,7 +316,7 @@ AEM增强了与其他Adobe服务集成的能力：
     </tr>
     <tr>
         <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong></strong> <strong></strong></a>
-            <br> CSRFprotection跨站点请求开箱即用的伪造保护。</td>
+            <br> CSRFprotection跨站点请求伪造保护开箱即用。</td>
         <td></td>
         <td></td>
         <td>✔</td>
@@ -327,7 +327,7 @@ AEM增强了与其他Adobe服务集成的能力：
     </tr>
     <tr>
         <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong></strong> <strong></strong></a>
-            <br> CORSsupport跨域资源共享支持，可提高应用程序灵活性。</td>
+            <br> CORSsupport跨域资源共享支持可提高应用程序灵活性。</td>
         <td></td>
         <td></td>
         <td></td>
@@ -405,8 +405,8 @@ AEM增强了与其他Adobe服务集成的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">AdobeIMS身份验</a><br>
- </strong>证支持专门用于Adobe Managed Services(AMS)，可通过AdobeIMS(Identity Management系统)集中管理对AEM创作实例的访问。</td>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Adobe IMS身份验</a><br>
+ </strong>证支持专门用于Adobe Managed Services(AMS)，可通过Adobe IMS集中管理对AEM创作实例的访问(Identity Management系统)。</td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -714,7 +714,7 @@ AEM增强了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank"></a> 任务和 <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects-with-workflows.html" target="_blank"></a> 工作流管理：</strong>
-            利用AEM项目审核和批准数字资产的预建工作流和任务。</td>
+            利用AEM Projects为审核和批准数字资产而预先构建的工作流和任务。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -847,7 +847,7 @@ AEM增强了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe图像库</a>:</strong>
-                <br> 用于高质量文件处理的Photoshop和Acrobat PDF库。</td>
+                <br> 用于高质量文件处理的Photoshop和AcrobatPDF库。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -906,10 +906,10 @@ AEM增强了与其他Adobe服务集成的能力：
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets.html" target="_blank">成像</a>:</strong>
             以不同大小和格式（包括智能裁剪）动态交付图像。</td>
             <td> </td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔<sup>+</sup></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
         </tr>
@@ -1153,7 +1153,7 @@ AEM增强了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#EnhancedDocumentSecurity" target="_blank">AEM Forms文档安全</a>:</strong>
-            安全地访问和授权PDF和Office文档。
+            安全访问和授权PDF和Office文档。
             </td>
             <td> </td>
             <td>✔</td>
