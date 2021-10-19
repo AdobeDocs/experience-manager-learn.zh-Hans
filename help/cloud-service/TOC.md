@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
+source-git-commit: bec04e6db13b80a8b5c4caa91acb8f2e684e70e9
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '567'
 ht-degree: 23%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 23%
    + [进化](./introduction/evolution.md)
    + [架构](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
-+ 基础技术{#underlying-technology}
++ 底层技术 {#underlying-technology}
    + [AEM架构](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java内容存储库](./underlying-technology/introduction-jcr.md)
@@ -33,7 +33,7 @@ ht-degree: 23%
    + [CI/CD生产管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD非生产管道](./cloud-manager/cicd-non-production-pipeline.md)
    + [活动](./cloud-manager/activity.md)
-   + Dev Ops{#devops}
+   + 开发运营{#devops}
       + [部署代码](./cloud-manager/devops/deploy-code.md)
       + [合并项目](./cloud-manager/devops/merge-projects.md)
       + [配置管道](./cloud-manager/devops/configure-pipelines.md)
@@ -41,7 +41,7 @@ ht-degree: 23%
       + [分析测试结果](./cloud-manager/devops/analyze-test-results.md)
       + [调度程序配置](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
-+ 本地开发环境设置{#local-development-environment-set-up}
++ 本地开发环境设置 {#local-development-environment-set-up}
    + [概述](./local-development-environment/overview.md)
    + [开发工具](./local-development-environment/development-tools.md)
    + [本地AEM运行时](./local-development-environment/aem-runtime.md)
@@ -88,7 +88,7 @@ ht-degree: 23%
    + [Adobe IMS产品配置文件](./accessing/adobe-ims-product-profiles.md)
    + [AEM用户、组和权限](./accessing/aem-users-groups-and-permissions.md)
    + [配置对AEM演练的访问权限](./accessing/walk-through.md)
-+ 迁移{#migration}
++ 迁移 {#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
    + [批量导入资产](./migration/bulk-import.md)
 
@@ -102,11 +102,11 @@ ht-degree: 23%
       + [asset compute微服务](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
       + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
       + [搜索和索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
-      + 内容迁移{#content-migration}
+      + 内容迁移 {#content-migration}
          + [批量导入服务](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [内容传输工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
       + [疑难解答](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
-      + AEM Formsas a Cloud Service{#aem-forms}
+      + AEM Formsas a Cloud Service {#aem-forms}
          + [简介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [数字注册](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
          + [通信](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
@@ -151,7 +151,7 @@ ht-degree: 23%
       + [查询提交](./forms/forms-cs-azure-portal/query-submitted-data.md)
 
 
-      + 创建审核工作流{#create-aem-workflow}
+      + 创建审阅工作流{#create-aem-workflow}
          + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
          + [触发工作流](./forms/create-aem-workflow/configure-af.md)
       + Adobe Sign与AEM Forms{#forms-and-sign}
@@ -189,8 +189,9 @@ ht-degree: 23%
    + 高级{#advanced}
       + [元数据工作程序](./asset-compute/advanced/metadata.md)
    + [疑难解答](./asset-compute/troubleshooting.md)
++ [AEM专家系列](./aem-experts-series.md)
 + 多步Tutorials{#multi-step-tutorials}
-   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
    + [SPA Editor(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [SPA编辑器(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
