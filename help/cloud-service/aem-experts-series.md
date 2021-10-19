@@ -2,9 +2,9 @@
 title: Adobe Experience Manager as a Cloud Service专家系列
 description: 了解Adobe Experience Manager(AEM)的as a Cloud Service信息，包括Adobe自己的专业工程师（负责构建该工具）以及提供该工具的专业服务。
 sub-product: sites, cloud-manager, assets
-source-git-commit: 5b3dd38d1fa2e3c35bfa2a867f51c7295907ecc7
+source-git-commit: 1e52e29051e219c4cd5ea83e2325fdae62ff833a
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
@@ -177,6 +177,43 @@ ht-degree: 2%
       <p>
         <br/>
         了解AEM Assets的Asset compute微服务、它们如何替换AEM 6资产处理，以及如何扩展以生成自定义资产演绎版。
+      </p>
+   </td>   
+   <td>
+      <a href="./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video">
+      <img alt="批量导入内容" src="./assets/experts-series/bulk-import.png"/>
+      </a>
+      <div>
+         <a href="./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video"><strong>批量导入内容</strong></a>
+         <br/><em>与高级云架构师Kiran Murugulla合作</em>
+      </div>
+      <p>
+        <br/>
+        了解如何使用批量导入服务和AEM包管理器安全高效地将内容批量导入AEMas a Cloud Service。
+      </p>
+   </td> 
+    <td></td>
+  </tr>
+</table>
+
+## 需要AEM as a ACloud Services的帮助？
+
+了解如何从专家那里调试AEM as a Cloud Service和AEM SDK并进行故障诊断！
+
+<table>
+  <tr>
+   <td>
+      <a href="./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" target="_aem-experts-series-video">
+      <img alt="AEMas a Cloud Service故障诊断" src="./assets/experts-series/troubleshooting.png"/>
+      </a>
+      <div>
+         <a href="/migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" 
+         target="_aem-experts-series-video"><strong>AEMas a Cloud Service故障诊断</strong></a>
+         <br/><em>与云架构师Kunwar Saluja合作</em>
+      </div>
+      <p>
+        <br/>
+        了解如何对AEMas a Cloud Service的各个方面进行故障诊断，从调试AEM SDK和AEMas a Cloud Service到Cloud Manager构建和部署失败。
       </p>
    </td>   
     <td></td>
