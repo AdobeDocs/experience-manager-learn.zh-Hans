@@ -2,7 +2,7 @@
 title: Adobe Experience Manager as a Cloud Service专家系列
 description: 了解Adobe Experience Manager(AEM)的as a Cloud Service信息，包括Adobe自己的专业工程师（负责构建该工具）以及提供该工具的专业服务。
 sub-product: sites, cloud-manager, assets
-source-git-commit: bec04e6db13b80a8b5c4caa91acb8f2e684e70e9
+source-git-commit: 5b3dd38d1fa2e3c35bfa2a867f51c7295907ecc7
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 2%
@@ -179,5 +179,7 @@ ht-degree: 2%
         了解AEM Assets的Asset compute微服务、它们如何替换AEM 6资产处理，以及如何扩展以生成自定义资产演绎版。
       </p>
    </td>   
+    <td></td>
+    <td></td>
   </tr>
 </table>
