@@ -3,10 +3,10 @@ user-guide-title: AEM Sites 视频和教程
 user-guide-description: Adobe Experience Manager Sites 的视频和教程集合。
 breadcrumb-title: AEM Sites 教程
 feature-set: Experience Manager, Experience Manager Sites
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 5bdff2eafaa28aff722b12607b1278539072be62
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 20%
+source-wordcount: '441'
+ht-degree: 22%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 20%
    + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 开发 {#developing}
    + [AEM 项目原型](developing/aem-project-archetype.md)
-   + [开始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [开始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
    + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
    + [AEM SPA Editor和Angular快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
@@ -64,6 +64,8 @@ ht-degree: 20%
    + [设置体验片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [在Adobe Target中使用体验片段](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [设置ContextHub](personalization/context-hub-technical-video-setup.md)
++ SEO {#seo}
+   + [站点地图](./seo/sitemaps.md)
 + 单页应用程序 {#spa-editor}
    + [使用SPA编辑器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello World教程](spa-editor/spa-editor-helloworld-tutorial-use.md)
@@ -90,13 +92,13 @@ ht-degree: 20%
    + [设置翻译规则](translation/translation-rules-editor-technical-video-setup.md)
    + [翻译增强功能](translation/translation-enhancements-feature-video-use.md)
 + 集成 {#integrations}
-   + Experience Platform Launch{#experience-platform-launch}
+   + Experience Platform Launch {#experience-platform-launch}
       + [概述](integrations/experience-platform-launch/overview.md)
       + [创建Launch资产](integrations/experience-platform-launch/create-launch-property.md)
       + [使用AEM连接与LaunchAdobe I/O](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
       + [创建启动项Cloud Service](integrations/experience-platform-launch/create-launch-cloud-service.md)
       + [调试Launch实施](integrations/experience-platform-launch/debug-launch-implementation.md)
-   + Adobe客户端数据层{#adobe-client-data-layer}
+   + Adobe Client Data Layer {#adobe-client-data-layer}
       + [使用Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自定义Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-customize.md)
    + Analytics {#analytics}
