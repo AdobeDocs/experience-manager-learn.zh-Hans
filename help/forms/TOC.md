@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
+source-git-commit: 72a9edb3edc73cf14f13bb53355a37e707ed4c79
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1607'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 3%
 + [概述](overview.md)
 + [要遵循的最佳实践](adaptive-forms/best-practices-adaptive-forms.md)
 + [使用AEM作者设置OKTA身份验证](adaptive-forms/single-sign-on-with-okta.md)
-+ 创建您的第一个自适应表单{#creating-your-first-adaptive-form}
++ 创建您的第一个自适应表单 {#creating-your-first-adaptive-form}
    + [简介和设置](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [创建自适应表单模板](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [创建表单片段](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -28,7 +28,7 @@ ht-degree: 3%
    + [向收入面板添加表](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [配置资产面板](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [使用自定义函数和代码编辑器](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ 处理表单提交{#handling-af-form-submissions}
++ 处理表单提交 {#handling-af-form-submissions}
    + [创建审阅工作流](handling-form-submissions/creating-a-review-workflow.md)
    + [配置自适应表单以触发工作流](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [显示感谢页面](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -40,7 +40,7 @@ ht-degree: 3%
 + 有用的集成{#some-useful-integrations}
    + [双重身份验证](some-useful-integrations/two-factor-authentication.md)
    + [OCR数据提取](some-useful-integrations/ocr-data-extraction.md)
-+ 创建OSGi包{#creating-your-first-osgi-bundle}
++ 创建OSGi包 {#creating-your-first-osgi-bundle}
    + [设置环境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [创建OSGi服务](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [创建Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
@@ -154,7 +154,7 @@ ht-degree: 3%
    + [ArrayList变量](variables-aem-workflow/part4.md)
    + [表单数据模型变量](variables-aem-workflow/form-data-model.md)
    + [AEM工作流中的规则编辑器](variables-aem-workflow/part5.md)
-+ 在MySQL DB{#storing-and-retrieving-form-data}中存储和检索表单数据
++ 在MySQL数据库中存储和检索表单数据{#storing-and-retrieving-form-data}
    + [简介](storing-retrieving-form-data/introduction.md)
    + [配置数据源](storing-retrieving-form-data/part1.md)
    + [用于存储数据的服务](storing-retrieving-form-data/part3.md)
@@ -166,7 +166,7 @@ ht-degree: 3%
    + [简介](offline-mobile-form-submission/introduction.md)
    + [自定义用户档案](offline-mobile-form-submission/part-one.md)
    + [处理PDF提交](offline-mobile-form-submission/part-two.md)
-   + [审阅PDF的工作流程](offline-mobile-form-submission/part-three.md)
+   + [审核工作流PDF](offline-mobile-form-submission/part-three.md)
    + [在您的系统上部署](offline-mobile-form-submission/part-four.md)
 + 查询提交的数据{#querying-submitted-data}
    + [简介](querying-submitted-data/introduction.md)
@@ -174,7 +174,7 @@ ht-degree: 3%
    + [存储提交的数据](querying-submitted-data/part2.md)
    + [存储JSON架构](querying-submitted-data/part3.md)
    + [查询提交的数据](querying-submitted-data/part4.md)
-+ 在Forms Portal中列出自定义资产类型{#listing-custom-asset-types}
++ 在Forms门户中列出自定义资产类型{#listing-custom-asset-types}
    + [第1部分 — 注册自定义资产类型](listing-custom-asset-types/part1.md)
    + [第2部分 — 创建自定义模板](listing-custom-asset-types/part2.md)
 + AEM Forms与Marketo{#aem-forms-with-marketo}
@@ -200,8 +200,9 @@ ht-degree: 3%
    + [从一个数据文件生成多个PDF](document-services/generate-multi-record-pdf.md)
    + [在移动设备表单提交时生成PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [从移动设备表单生成交互式PDF](document-services/render-interactive-form-using-api.md)
+   + [从自适应表单生成交互式DoR](document-services/generate-interactive-dor.md)
    + [配置Reader扩展凭据](document-services/configuring-reader-extension-osgi.md)
-   + [对XDP呈现版本上的PDF应用使用权限](document-services/rendering-and-reader-extending-xdp-templates-article.md)
+   + [将使用权限应用于XDP呈现版本上的PDF](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [将使用权限应用于已上传的PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [认证文档](document-services/certifying-documents-aem-forms-tutorial.md)
    + [组合表单附件](document-services/assemble-form-attachments.md)
@@ -229,7 +230,7 @@ ht-degree: 3%
    + [在AEM Forms打印渠道文档中使用表组件](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [使用监视文件夹为打印渠道生成交互式通信文档](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
-+ 用于Web渠道的交互式通信{#ic-web-channel-tutorial}
++ Web渠道的交互式通信 {#ic-web-channel-tutorial}
    + [简介](ic-web-channel-tutorial/introduction.md)
    + [设置Tomcat](ic-web-channel-tutorial/partone.md)
    + [创建数据源](ic-web-channel-tutorial/parttwo.md)
@@ -302,7 +303,7 @@ ht-degree: 3%
    + [常规：如何在UNIX服务器上捕获JVM的线程转储](troubleshooting/how-to-capture-thread-dumps-of-a-jvm-on-a-unix-server.md)
    + [常规：如何在Windows服务器上捕获JVM的线程转储](troubleshooting/how-to-capture-thread-dumps-of-a-jvm-on-a-windows-server.md)
    + [常规：如何生成自签名证书](troubleshooting/how-to-generate-a-self-signed-certificate.md)
-   + [常规：如何从HTML5表单发起Web服务调用](troubleshooting/how-to-make-web-service-call-from-html5-form.md)
+   + [常规：如何从Web5表单发起Web服务调用HTML](troubleshooting/how-to-make-web-service-call-from-html5-form.md)
    + [常规：在AEM Forms OSGi中为任何类启用调试日志记录的步骤](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-aem-forms-osgi.md)
    + [常规：在JBOSS应用程序服务器中为任何类启用调试日志记录的步骤](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-jboss-application-server.md)
    + [常规：在Websphere应用程序服务器中为任何类启用调试日志记录的步骤](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-websphere-application-server.md)
