@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: bec04e6db13b80a8b5c4caa91acb8f2e684e70e9
+source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '595'
 ht-degree: 23%
 
 ---
@@ -123,6 +123,15 @@ ht-degree: 23%
       + [导航Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + 表单{#forms}
+
+   + 为Formsas a Cloud Service开发{#developing-for-cloud-service}
+      + [入门](./forms/developing-for-cloud-service/getting-started.md)
+      + [安装IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
+      + [设置Git](./forms/developing-for-cloud-service/setup-git.md)
+      + [将IntelliJ与AEM同步](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
+      + [构建表单](./forms/developing-for-cloud-service/deploy-your-first-form.md)
+      + [推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [包括Cloud Services和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
    + 创建自适应表单{#create-first-af}
       + [简介](./forms/create-first-af/introduction.md)
       + [创建名称](./forms/create-first-af/create-theme.md)
@@ -137,8 +146,8 @@ ht-degree: 23%
       + [添加和配置工具栏](./forms/create-first-af/add-configure-toolbar.md)
    + Document CloudAPI和AEM Forms CS{#doc-cloud-sdk}
       + [简介](./forms/doc-cloud-sdk/introduction.md)
-      + [创建Adobe I/O项目](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
-      + [创建OSGi配置](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [创建AdobeIO项目](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [创建OSGI配置](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
       + [定义界面](./forms/doc-cloud-sdk/create-interface.md)
       + [实施界面](./forms/doc-cloud-sdk/implement-interface.md)
       + [创建JSON部分](./forms/doc-cloud-sdk/get-content-analyzer.md)
@@ -149,25 +158,23 @@ ht-degree: 23%
       + [在Azure存储中存储表单数据](./forms/forms-cs-azure-portal/create-af.md)
       + [预填表单](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [查询提交](./forms/forms-cs-azure-portal/query-submitted-data.md)
-
-
-      + 创建审阅工作流{#create-aem-workflow}
-         + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
-         + [触发工作流](./forms/create-aem-workflow/configure-af.md)
-      + Adobe Sign与AEM Forms{#forms-and-sign}
-         + [简介](./forms/forms-and-sign/introduction.md)
-         + [Adobe Sign API应用程序](./forms/forms-and-sign/create-sign-api-application.md)
-         + [Adobe Sign 云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
-         + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
-         + [配置以进行填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-      + 与Salesforce集成{#integrate-with-salesforce}
-         + [简介](./forms/integrate-with-salesforce/introduction.md)
-         + [创建连接的应用程序](./forms/integrate-with-salesforce/create-connected-app.md)
-         + [创建swagger文件](./forms/integrate-with-salesforce/describe-rest-api.md)
-         + [创建数据源](./forms/integrate-with-salesforce/create-data-source.md)
-         + [创建表单数据模型](./forms/integrate-with-salesforce/create-form-data-model.md)
-         + [测试表单提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
-         + [测试点击事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
+   + 创建审阅工作流{#create-aem-workflow}
+      + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
+      + [触发工作流](./forms/create-aem-workflow/configure-af.md)
+   + Adobe Sign与AEM Forms{#forms-and-sign}
+      + [简介](./forms/forms-and-sign/introduction.md)
+      + [Adobe Sign API应用程序](./forms/forms-and-sign/create-sign-api-application.md)
+      + [Adobe Sign 云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+      + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
+      + [配置以进行填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + 与Salesforce集成{#integrate-with-salesforce}
+      + [简介](./forms/integrate-with-salesforce/introduction.md)
+      + [创建连接的应用程序](./forms/integrate-with-salesforce/create-connected-app.md)
+      + [创建swagger文件](./forms/integrate-with-salesforce/describe-rest-api.md)
+      + [创建数据源](./forms/integrate-with-salesforce/create-data-source.md)
+      + [创建表单数据模型](./forms/integrate-with-salesforce/create-form-data-model.md)
+      + [测试表单提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+      + [测试点击事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset compute可扩展性{#asset-compute}
    + [概述](./asset-compute/overview.md)
    + 设置{#set-up}

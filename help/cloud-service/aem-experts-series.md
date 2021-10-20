@@ -2,7 +2,7 @@
 title: Adobe Experience Manager as a Cloud Service专家系列
 description: 了解Adobe Experience Manager(AEM)的as a Cloud Service信息，包括Adobe自己的专业工程师（负责构建该工具）以及提供该工具的专业服务。
 sub-product: sites, cloud-manager, assets
-source-git-commit: 1e52e29051e219c4cd5ea83e2325fdae62ff833a
+source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 2%
@@ -207,7 +207,7 @@ ht-degree: 2%
       <img alt="AEMas a Cloud Service故障诊断" src="./assets/experts-series/troubleshooting.png"/>
       </a>
       <div>
-         <a href="/migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" 
+         <a href="./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" 
          target="_aem-experts-series-video"><strong>AEMas a Cloud Service故障诊断</strong></a>
          <br/><em>与云架构师Kunwar Saluja合作</em>
       </div>

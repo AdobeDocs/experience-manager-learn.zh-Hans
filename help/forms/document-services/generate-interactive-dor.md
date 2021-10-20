@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 kt: 9226
-source-git-commit: 2ed78bb8b122acbe69e98d63caee1115615d568f
+source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -201,10 +201,12 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 
 1. [下载并安装DevelopingWithServiceUser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. 在Apache Sling Service用户映射器服务DevelopingWithServiceUser.core:getformsresourceresolver=fd-service中添加以下条目
-1. [下载并安装自定义DocumentServices包](/hep/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). 这有一个Servlet，用于将数据与XDP模板合并并并流回PDF
+1. [下载并安装自定义DocumentServices包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). 这有一个Servlet，用于将数据与XDP模板合并并并流回PDF
 1. [导入客户端库](assets/irs.zip)
 1. [导入自适应表单](assets/f8918complete.zip)
 1. [导入XDP模板和架构](assets/xdp-template-and-xsd.zip)
 1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. 填写几个表单字段
-1. 单击下载PDF以获取PDF
+1. 单击下载PDF以获取PDF。 您可能需要等待几秒钟，PDF才能下载
+
+
