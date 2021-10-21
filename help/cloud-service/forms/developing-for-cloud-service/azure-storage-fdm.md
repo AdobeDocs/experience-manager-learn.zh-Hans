@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 9006
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -42,10 +42,11 @@ ht-degree: 0%
 <filter root="/content/dam/formsanddocuments-fdm/registrations" mode="replace"/>
 ```
 
-现在，当您构建和部署项目时，该项目将根据云实例中可用的云服务配置创建表单数据模型
 
->!![NOTE]
-将此云服务配置推送到云实例时，必须使用AEM用户界面手动更新Azure密钥。任何经过加密的值都需要使用用户界面在云实例中更新。
+>[!NOTE]
+
+>现在，当您构建和部署项目时，该项目将根据云实例中可用的云服务配置创建表单数据模型
+
 
 
 

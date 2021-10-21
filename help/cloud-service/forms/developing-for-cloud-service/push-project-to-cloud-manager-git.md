@@ -8,7 +8,7 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8851
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
@@ -16,12 +16,11 @@ ht-degree: 0%
 ---
 
 
-# 将AEM项目推送到cloud manager git rep
+# 将AEM项目推送到cloud manager git存储库
 
 在上一步中，我们将AEM项目与在AEM实例中创建的自适应Forms和主题同步。
-现在，我们需要将这些更改添加到我们的本地git存储库，然后将本地git存储库推送到cloud manager git存储库
-
-打开命令提示符，导航至c:\cloudmanager\aem-banking-app Execute the following commands
+现在，我们需要将这些更改添加到我们的本地git存储库，然后将本地git存储库推送到cloud manager git存储库。
+打开命令提示符并导航到c:\cloudmanager\aem-banking-app Execute the following commands
 
 ```
 git add .**

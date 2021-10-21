@@ -8,18 +8,22 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 8844
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 3%
+source-wordcount: '504'
+ht-degree: 2%
 
 ---
 
 # 安装Cygwin
 
+
+Cygwin是一个与POSIX兼容的编程和运行时环境，在Microsoft Windows本地运行。
 安装 [齐格温](https://www.cygwin.com/). 我已安装在C:\cygwin64 folder中
->[注意]
+>[!NOTE]
 > 确保与cygwin安装一起安装zip、unzip、curl、rsync包
+
+在c:\cloudmanager文件夹下创建一个名为adoberepo的文件夹。
 
 [安装存储库工具].(https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo).Installing)repo工具只是复制repo文件并将其放置在您的c:\cloudmanger\adoberepo folder中。
 
@@ -27,7 +31,12 @@ ht-degree: 3%
 
 ## 设置外部工具
 
-启动IntelliJ按Ctrl+Alt+S键以启动设置窗口选择工具 — >外部工具，然后单击+符号并输入以下内容（如屏幕快照中所示）确保通过在“组”下拉字段中键入“repo”以及您创建的所有命令都属于 **存储库** 群组
+* 启动IntelliJ
+* 按Ctrl+Alt+S键以启动设置窗口。
+* 选择“工具” — >“外部工具”，然后单击“+”符号，然后输入以下内容，如屏幕快照中所示。
+   ![rep](assets/repo.png)
+* 在“组”下拉字段中键入“repo”，并且您创建的所有命令都属于 **存储库** 群组
+
 
 **Put命令**
 **项目**:C:\cygwin64\bin\bash
