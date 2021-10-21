@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 19%
+source-wordcount: '185'
+ht-degree: 20%
 
 ---
 
@@ -36,7 +36,10 @@ ht-degree: 19%
       + [5 — 从外部应用程序查询](./graphql/multi-step/graphql-and-external-app.md)
       + [6 — 使用片段引用进行高级数据建模](./graphql/multi-step/fragment-references.md)
       + [7 — 生产部署](./graphql/multi-step/production-deployment.md)
-+ SPA Editor{#spa-editor}
+   + 示例 {#example-apps}
+      + [React](./graphql/example-apps/react-app.md)
+      + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
++ SPA编辑器{#spa-editor}
    + React{#react}
       + [概述](./spa-editor/react/overview.md)
       + [1 — 创建项目](./spa-editor/react/create-project.md)
@@ -61,7 +64,7 @@ ht-degree: 19%
       + [3 — 固定组件](./spa-editor/remote-spa/spa-fixed-component.md)
       + [4 — 容器组件](./spa-editor/remote-spa/spa-container-component.md)
       + [5 — 动态路由](./spa-editor/remote-spa/spa-dynamic-routes.md)
-+ 基于令牌的身份验证{#authentication}
++ 基于令牌的身份验证 {#authentication}
    + [概述](./authentication/overview.md)
    + [1 — 本地开发访问令牌](./authentication/local-development-access-token.md)
    + [2 — 服务凭据](./authentication/service-credentials.md)
