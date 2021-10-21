@@ -1,17 +1,17 @@
 ---
 title: AEM Headless教程
 description: 有关如何使用Adobe Experience Manager作为无头CMS的教程集合。
-feature: 内容片段、 API
-topic: 无外设、内容管理
+feature: Content Fragments, APIs
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
+exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
+source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
-
 
 # AEM Headless教程
 
@@ -19,7 +19,7 @@ Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将
 
 >[!TIP]
 >
->此教程集合专为希望&#x200B;**通过**&#x200B;学习的用户而设计。 如果您希望从头开始学习概念，请查看[AEM Headless Developer历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html)。 这套教程和历程是相辅相成的。
+>本教程集合专为那些喜欢 **学习**. 如果您喜欢从头开始学习概念，请查看 [AEM Headless开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html). 这套教程和历程是相辅相成的。
 
 ## Tutorials（按API）
 
@@ -62,6 +62,54 @@ Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将
     </div>
     <p>
     <em>了解应用程序如何使用REST API来使用内容。</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+## 示例应用程序
+
+示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 要立即开始操作，请下载并安装这些已完成的示例。
+
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
+      <img alt="iOS示例" src="./assets/ios-example.png" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
+    <strong>iOS SwiftUI示例</strong>
+    </a>
+    </div>
+    <p>
+    <em>由AEM GraphQL API提供支持的iOS应用程序。</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
+    <img alt="Android示例" src="./assets/android-example.png" />
+    </a>
+    <div>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
+    <strong>Android示例</strong>
+    </a>
+    </div>
+    <p>
+    <em>由AEM GraphQL API提供支持的Android应用程序。</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
+      <img alt="React示例" src="./assets/react-example.png" />
+    </a>
+     <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
+        <strong>React示例</strong>
+      </a>
+    </div>
+    <p>
+    <em>由AEM GraphQL API提供支持的React应用程序。</em>
     <p>
   </td>
 </tr>

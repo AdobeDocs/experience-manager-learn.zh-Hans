@@ -9,10 +9,10 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
+source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 5%
+source-wordcount: '994'
+ht-degree: 3%
 
 ---
 
@@ -122,4 +122,106 @@ function useGraphQL(query, path) {
 
 该应用程序主要显示历险列表，并为用户提供一个单击进入冒险详细信息的选项。
 
-`Adventures.js`  — 显示历险记的卡片列表。
+`Adventures.js`  — 显示历险记的卡片列表。  初始状态使用 [持久化查询](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/graphql-persisted-queries.html) 其中 [预包装](https://github.com/adobe/aem-guides-wknd/tree/master/ui.content/src/main/content/jcr_root/conf/wknd/settings/graphql/persistentQueries/adventures-all/_jcr_content) 和WKND引用站点。 端点为 `/wknd/adventures-all`. 用户可以使用以下几个按钮来根据活动试验筛选结果：
+
+```javascript
+function filterQuery(activity) {
+  return `
+    {
+      adventureList (filter: {
+        adventureActivity: {
+          _expressions: [
+            {
+              value: "${activity}"
+            }
+          ]
+        }
+      }){
+        items {
+          _path
+        adventureTitle
+        adventurePrice
+        adventureTripLength
+        adventurePrimaryImage {
+          ... on ImageRef {
+            _path
+            mimeType
+            width
+            height
+          }
+        }
+      }
+    }
+  }
+  `;
+}
+```
+
+`AdventureDetail.js`  — 显示冒险的详细视图。 根据探险项的路径（从url中解析）进行graphQL查询：
+
+```javascript
+//parse the content fragment from the url
+const contentFragmentPath = props.location.pathname.substring(props.match.url.length);
+...
+function adventureDetailQuery(_path) {
+  return `{
+    adventureByPath (_path: "${_path}") {
+      item {
+        _path
+          adventureTitle
+          adventureActivity
+          adventureType
+          adventurePrice
+          adventureTripLength
+          adventureGroupSize
+          adventureDifficulty
+          adventurePrice
+          adventurePrimaryImage {
+            ... on ImageRef {
+              _path
+              mimeType
+              width
+              height
+            }
+          }
+          adventureDescription {
+            html
+          }
+          adventureItinerary {
+            html
+          }
+      }
+    }
+  }
+  `;
+}
+```
+
+### 环境变量
+
+几个 [环境变量](https://create-react-app.dev/docs/adding-custom-environment-variables) 此项目使用来连接到AEM环境。 默认情况下会连接到运行在http://localhost:4502的AEM创作环境。 如果要更改此行为，请更新 `.env.development` 文件：
+
+* `REACT_APP_HOST_URI=http://localhost:4502`  — 设置为AEM Target主机
+* `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json`  — 设置GraphQL端点路径
+* `REACT_APP_AUTH_METHOD=`  — 首选的身份验证方法。 可选，默认情况下不使用身份验证。
+   * `service-token`  — 为云环境PROD使用服务令牌交换
+   * `dev-token`  — 将开发令牌用于云环境的本地开发
+   * `basic`  — 将用户/传递用于本地开发和本地创作环境
+   * 留空不使用验证方法
+* `REACT_APP_AUTHORIZATION=admin:admin`  — 设置在连接到AEM创作环境时使用的基本身份验证凭据（仅限开发）。 如果连接到发布环境，则不需要此设置。
+* `REACT_APP_DEV_TOKEN`  — 开发令牌字符串。 要连接到远程实例，除了基本身份验证(user:pass)之外，您还可以在云控制台中将载体身份验证与DEV令牌结合使用
+* `REACT_APP_SERVICE_TOKEN`  — 服务令牌文件的路径。 要连接到远程实例，还可以使用服务令牌（从云控制台下载文件）完成身份验证
+
+### 代理API请求
+
+使用WebPack开发服务器(`npm start`)项目依赖于 [代理设置](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) 使用 `http-proxy-middleware`. 文件配置在 [src/setupProxy.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/setupProxy.js) 并依赖于 `.env` 和 `.env.development`.
+
+如果连接到AEM创作环境，则需要配置相应的身份验证方法。
+
+### CORS — 跨域资源共享
+
+此项目依赖于在目标AEM环境中运行的CORS配置，并假定应用程序在开发模式下在http://localhost:3000上运行。 的 [COR配置](https://github.com/adobe/aem-guides-wknd/blob/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) 是 [WKND参考站点](https://github.com/adobe/aem-guides-wknd).
+
+![CORS配置](assets/cross-origin-resource-sharing-configuration.png)
+
+*创作环境的CORS配置示例*
