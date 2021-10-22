@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8851
-source-git-commit: d38da94bd4164163a16899b565c90b159194580a
+source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '139'
 ht-degree: 0%
 
 ---
@@ -35,10 +35,10 @@ git commit -m "My First AF"
 这会将文件提交到我们本地git存储库的主控分支
 
 ```
-git push -f bankingapp master:"My First AF"
+git push -f bankingapp master:"MyFirstAF"
 ```
 
-在以上命令中，我们将我们的主控分支从本地git存储库推送到由分支应用程序友好名称标识的Cloud Manager存储库的My First AF分支
+在以上命令中，我们将我们的主控分支从本地git存储库推送到由分支应用程序友好名称标识的云管理器存储库的MyFirstAF分支。
 
 
 

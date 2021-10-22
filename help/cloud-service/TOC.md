@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '599'
 ht-degree: 23%
 
 ---
@@ -130,8 +130,9 @@ ht-degree: 23%
       + [设置Git](./forms/developing-for-cloud-service/setup-git.md)
       + [将IntelliJ与AEM同步](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
       + [构建表单](./forms/developing-for-cloud-service/deploy-your-first-form.md)
-      + [推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [包括Cloud Services和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [部署到开发环境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
    + 创建自适应表单{#create-first-af}
       + [简介](./forms/create-first-af/introduction.md)
       + [创建名称](./forms/create-first-af/create-theme.md)
