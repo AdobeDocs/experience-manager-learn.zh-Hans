@@ -9,9 +9,9 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
+source-git-commit: 9b1e38c8d4a0301c124c6f1607a9e4362b0e9cd1
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '960'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 3%
 # iOS SwiftUI应用程序
 
 示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此iOS应用程序演示了如何使用AEM的GraphQL API查询内容。 Apollo Client iOS用于生成GraphQL查询，并将数据映射到Swift对象以为应用程序提供动力。 SwiftUI用于呈现内容的简单列表和详细视图。
+
+查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app)
 
 >[!VIDEO](https://video.tv.adobe.com/v/338042/?quality=12&learn=on)
 
