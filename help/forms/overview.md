@@ -1,20 +1,18 @@
 ---
 title: AEM FormsTutorials和视频
-seo-title: AEM Forms Tutorials and Videos
 description: 面向初学者和经验丰富的AEM Forms开发人员的AEM Forms资源集合
-seo-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers
 sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 5%
+source-wordcount: '516'
+ht-degree: 3%
 
 ---
 
-# 概述 {#overview}
+# AEM FormsTutorials和视频 {#overview}
 
 Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于在与后端流程、业务规则和数据集成的同时，创建、管理、发布和更新复杂的数字表单。 本用户指南包含有关AEM Forms的众多特性和功能的视频和教程
 
@@ -26,9 +24,9 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
 
 * **[交互式通信文档（视频）中的多系列图](./interactive-communications/multiseriescharts.md)**
 
-   *在同一图表中绘制多个系列图。多个系列图通常与折线图、条形图、柱状图类型相关联使用。*
+   *在同一图表中绘制多个系列。 多系列图通常与折线图、条形图、柱状图类型相关联使用。*
 
-* **[创建可重复使用的工作流模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
+* **[创建可重用的工作流模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
    *创建未绑定到特定表单的工作流模型*
 
@@ -38,7 +36,7 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
 <tr>
   <td>
     <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
-      <img alt="400 x 225像素" src="./assets/afhero.png" />
+      <img alt="创建您的第一个自适应表单" src="./assets/afhero.png" />
     </a>
     <div>
       <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
@@ -51,7 +49,7 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
   </td>
    <td>
     <a href="./ic-print-channel-tutorial/introduction.md">
-      <img alt="400 x 225像素" src="./assets/correspondence-management1.png" />
+      <img alt="创建您的第一个打印渠道文档" src="./assets/correspondence-management1.png" />
     </a>
     <div>
       <a href="./ic-print-channel-tutorial/introduction.md">
@@ -64,7 +62,7 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
   </td>
   <td>
     <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-      <img alt="400 x 225像素" src="./assets/fdmlogo.png" />
+      <img alt="在AEM工作流中使用表单数据模型" src="./assets/fdmlogo.png" />
     </a>
     <div>
       <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
@@ -80,7 +78,7 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
 
 >[!TIP]
 >
->此集合的示例用于演示AEM Forms的各种功能。.
+>此集合的示例用于演示AEM Forms的各种功能。
 
 
 ## 自适应表单示例
@@ -181,10 +179,10 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
 ## 其他资源
 
 * [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Sites创作文档](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
-* [AEM Sites开发文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
-* [AEM Sites管理文档](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
-* [AEM Sites部署文档](https://helpx.adobe.com/cn/experience-manager/6-5/sites/deploying/user-guide.html)
+* [AEM Sites创作文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
 * [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
 * [AEM Assets 教程](/help/assets/overview.md)
 * [AEM Forms 教程](/help/forms/overview.md)

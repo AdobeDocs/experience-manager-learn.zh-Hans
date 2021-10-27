@@ -1,19 +1,19 @@
 ---
-title: Adobe Experience Manager as Cloud Service 教程
-description: Adobe Experience Manager(AEM)作为Cloud Service的教程集合
-sub-product: 站点， cloud manager，基础，资产
+title: Adobe Experience Manager作为Cloud Service视频和Tutorials
+description: Adobe Experience Manager(AEM)as a Cloud Service的教程集合
+sub-product: sites, cloud-manager, foundation, assets
 kt: 3289
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 8%
+source-wordcount: '276'
+ht-degree: 7%
 
 ---
 
+# AEM asCloud Service视频和Tutorials {#overview}
 
-# 概述 {#overview}
-
-Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM as aCloud Service引入了新一代Experience Manager产品线，以过去的投资和创新为基础，保留和扩展所有用例和功能。
+Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM as a Cloud Service引入了新一代Experience Manager产品线，以过去的投资和创新为基础，保留和扩展所有用例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
@@ -21,7 +21,7 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM as aCloud
 
 * **[基于令牌的身份验证（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
-   *了解如何使用基于令牌的身份验证通过HTTP与AEM作为Cloud Service进行交互*
+   *了解如何使用基于令牌的身份验证通过HTTP与AEMas a Cloud Service进行交互*
 
 * **[无头图形QL（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
@@ -44,7 +44,7 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM as aCloud
 <table>
    <td>
       <a href="./accessing/overview.md">
-      <img alt="将对AEM的访问配置为Cloud Service" src="./assets/overview/staff-pick__accessing.png"/>
+      <img alt="配置对AEMas a Cloud Service的访问" src="./assets/overview/staff-pick__accessing.png"/>
       </a>
       <div>
          <a href="./accessing/overview.md">
@@ -65,7 +65,7 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM as aCloud
          </a>
       </div>
       <p>
-         <em>为本地开发计算机做好AEM as a Cloud Service开发准备！</em>
+         <em>为AEMas a Cloud Service开发做好本地开发准备！</em>
       <p>
    </td>   
    <td>
@@ -78,7 +78,7 @@ Adobe Experience Manager (AEM) 现已作为 Cloud Service 提供。AEM as aCloud
          </a>
       </div>
       <p>
-         <em>浏览用于在AEM(作为Cloud ServiceSDK的本地快速启动)上调试应用程序的工具。</em>
+         <em>浏览用于在AEMas a Cloud ServiceSDK的本地快速启动中调试应用程序的工具。</em>
       <p>
    </td>
 </table>

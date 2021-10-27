@@ -1,19 +1,19 @@
 ---
-title: AEM Headless教程
+title: AEM无头Tutorials
 description: 有关如何使用Adobe Experience Manager作为无头CMS的教程集合。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%
 
 ---
 
-# AEM Headless教程
+# AEM无头Tutorials
 
 Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将其内容交付为JSON。 使用动手实践教程了解如何使用各种选项并选择适合您的选项。
 
@@ -92,11 +92,11 @@ Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
-    <strong>Android示例</strong>
+    <strong>Android™示例</strong>
     </a>
     </div>
     <p>
-    <em>由AEM GraphQL API提供支持的Android应用程序。</em>
+    <em>由AEM GraphQL API提供支持的Android™应用程序。</em>
     </p>
   </td>
   <td>
@@ -185,7 +185,7 @@ Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将
     </a>
     </div>
     <p>
-    <em>使用Content Services和REST为移动Android应用程序提供支持。</em>
+    <em>使用Content Services和REST为移动Android™应用程序提供动力。</em>
     </p>
   </td>
   <td>

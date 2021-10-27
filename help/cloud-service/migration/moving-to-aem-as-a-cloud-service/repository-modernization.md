@@ -9,10 +9,10 @@ level: Experienced
 kt: 8630
 thumbnail: 336958.jpeg
 exl-id: e9bd9035-1f2d-4a34-a581-9c1ec2c7bc04
-source-git-commit: 53a314c5cd9eaad5a26a0992c750c159f8e3697f
+source-git-commit: 1ddf6154d50a341d9a0fd4234392c37ced878a73
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 5%
 
 ## Repository Modernizer工具
 
-![Dispatcher Converter](./assets/repository-modernizer.png)
+![Repository Modernizer](./assets/repository-modernizer.png)
 
 在重构代码库时，请使用 [Repository Modernizer工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html) 将6.x代码库重构为更现代的结构。
 

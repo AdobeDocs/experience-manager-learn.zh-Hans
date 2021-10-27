@@ -1,18 +1,18 @@
 ---
 title: AEM Assets 视频和教程
 description: Adobe Experience Manager Assets的视频和教程集合
-sub-product: 资产， dynamic media
-source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
+sub-product: assets, dynamic-media
+exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 14%
+source-wordcount: '235'
+ht-degree: 13%
 
 ---
 
+# AEM Assets 视频和教程 {#overview}
 
-# 概述 {#overview}
-
-Adobe Experience Manager Assets是AEM Platform上的一款数字资产管理工具，它允许用户在基于Web的存储库中创建、管理和共享其数字资产（图像、视频、文档和音频剪辑）。 本用户指南包含有关AEM Assets的众多特性和功能的视频和教程。
+Adobe Experience Manager(AEM)Assets是AEM Platform上的一款数字资产管理工具，它允许用户在基于Web的存储库中创建、管理和共享其数字资产（图像、视频、文档和音频剪辑）。 本用户指南包含有关AEM Assets的众多特性和功能的视频和教程。
 
 ## 新增功能
 
@@ -26,7 +26,7 @@ Adobe Experience Manager Assets是AEM Platform上的一款数字资产管理工�
 
 * **[水印（视频）](./advanced/watermarks.md)**
 
-   *了解如何在AEM as a Cloud Service中对资产演绎版添加水印*
+   *了解如何在AEMas a Cloud Service中对资产演绎版添加水印*
 
 * **[基线权限（视频）](./configuring/baseline-permissions.md)**
 
@@ -34,7 +34,7 @@ Adobe Experience Manager Assets是AEM Platform上的一款数字资产管理工�
 
 * **[自动启动工作流（视频）](./configuring/auto-start-workflows.md)**
 
-   *了解如何在已上传或重新处理的资产上自动调用AEM工作流*
+   *了解如何在上传或重新处理的资产上自动调用AEM工作流*
 
 ## 员工挑选
 
@@ -82,8 +82,8 @@ Adobe Experience Manager Assets是AEM Platform上的一款数字资产管理工�
 
 ## 其他资源
 
-* [Experience League — 浏览AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Assets文档](https://helpx.adobe.com/cn/experience-manager/6-5/assets/user-guide.html)
+* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [AEM Assets文档](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
 * [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
 * [AEM Sites 教程](/help/sites/overview.md)
 * [AEM Forms 教程](/help/forms/overview.md)

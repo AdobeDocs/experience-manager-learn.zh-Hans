@@ -1,19 +1,17 @@
 ---
-title: AEM Sites 教程
-seo-title: AEM Sites 教程
-description: 'Adobe Experience Manager Sites 的视频和教程集合。 '
-seo-description: Adobe Experience Manager Sites的视频和教程集合
-sub-product: 站点，内容服务
-topic: 内容管理
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+title: AEM Sites 视频和教程
+description: Adobe Experience Manager Sites 的视频和教程集合。
+sub-product: sites, content-services
+topic: Content Management
+exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 17%
+source-wordcount: '345'
+ht-degree: 20%
 
 ---
 
-
-# 概述 {#overview}
+# AEM Sites 视频和教程 {#overview}
 
 Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用户指南包含有关AEM Sites的众多特性和功能的视频和教程。
 
@@ -33,7 +31,7 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 
 * **[使用内容片段（视频系列）](./content-fragments/content-fragments-feature-video-use.md)**
 
-   *内容片段是与渠道无关的内容片段，可供重复使用。*
+   *内容片段是与渠道无关的内容片段，可重复使用。*
 
 * **[使用SPA编辑器（视频）](./spa-editor/spa-editor-framework-feature-video-use.md)**
 
@@ -44,8 +42,8 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
-      <img alt="AEM Sites - WKND 教程快速入门" src="./assets/aem-wknd-tutorial.png" />
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans">
+      <img alt="《AEM Sites 快速入门》 - WKND 教程" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
@@ -88,10 +86,10 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 ## 其他资源
 
 * [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Sites创作文档](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
-* [AEM Sites开发文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
-* [AEM Sites管理文档](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
-* [AEM Sites部署文档](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
+* [AEM Sites创作文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
 * [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
 * [AEM Assets 教程](/help/assets/overview.md)
 * [AEM Forms 教程](/help/forms/overview.md)

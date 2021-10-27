@@ -1,21 +1,19 @@
 ---
 title: AEM Foundation 视频和教程
-seo-title: AEM Foundation 视频和教程
-description: 'Adobe Experience Manager Foundation 的视频和教程集合。 '
-seo-description: Adobe Experience Manager Foundation的视频和教程集合
+description: Adobe Experience Manager Foundation 的视频和教程集合。
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '251'
 ht-degree: 18%
 
 ---
 
+# AEM Foundation 视频和教程 {#overview}
 
-# 概述 {#overview}
-
-Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]的用户提供了一组通用功能。
+Adobe Experience Manager为AEM Sites、资产和Forms的用户提供了一组通用功能。
 
 ## 新增功能
 
@@ -27,7 +25,7 @@ Adobe Experience Manager为AEM Sites、[!DNL Assets]和[!DNL Forms]的用户提�
    *AEM版Cloud Manager允许轻松管理、检查和自助服务AEM环境。*
 
 * **[设置公钥和私钥以与Adobe I/O一起使用（教程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *了解如何使用与AEM和Adobe I/O结合使用 [!DNL openssl] 的密钥和密钥库生成。*
+   *了解如何使用 [!DNL openssl] 可与AEM和Adobe I/O配合使用。*
 
 * **[使用Cloud Manager CI/CD管线（视频）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *了解如何使用Cloud Manager的CI/CD管道来确保部署安全一致。*
