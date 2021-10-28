@@ -8,7 +8,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: 68c49f526146e2f2ba626dc2126fb96d4ae09854
+source-git-commit: d8738ef33940efc856e6fc00f6a57abb641598e5
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 6%
@@ -27,8 +27,9 @@ AEM Dynamic Media视频播放器过去依赖Flash运行时支持桌面客户端�
 
 HLS浏览器支持如下所示，对于不受支持的浏览器，我们回退到渐进式视频交付
 
->!![NOTE]
-Dynamic Media混合版在2022年5月之后将不支持Internet Explorer 11。
+>[!NOTE]
+>
+> Dynamic Media混合版在2022年5月之后将不支持Internet Explorer 11。
 
 <table> 
  <thead> 
