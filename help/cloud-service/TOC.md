@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
+source-git-commit: e8b3bcaeee40b4bfd4f967f929ad664e8d168cb0
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 23%
+source-wordcount: '604'
+ht-degree: 22%
 
 ---
 
@@ -59,6 +59,7 @@ ht-degree: 23%
       + [调度程序配置迁移](./developing/basics/dispatcher-configuration.md)
    + AEM 项目{#aem-projects}
       + [AEM Maven项目](./developing/projects/maven-project-structure.md)
+      + [清除AEM Maven项目](./developing/projects/remove-samples.md)
    + OSGi服务{#osgi-services}
       + [OSGi服务基础知识](./developing/osgi-services/basics.md)
       + [OSGi组件生命周期](./developing/osgi-services/lifecycle.md)
