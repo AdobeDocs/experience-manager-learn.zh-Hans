@@ -2,8 +2,9 @@
 title: AEM Assets Essentials视频
 description: 用于Adobe Experience Manager Assets Essentials的视频集合
 sub-product: assets
+recommendations: disable
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
-source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%

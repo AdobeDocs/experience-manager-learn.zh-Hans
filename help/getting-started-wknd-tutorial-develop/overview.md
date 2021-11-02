@@ -1,10 +1,9 @@
 ---
-title: AEM Sites 快速入门 - WKND 教程
+title: 《AEM Sites 快速入门》 - WKND 教程
 description: AEM Sites 快速入门 - WKND 教程. WKND教程是一个多部分教程，专为不熟悉Adobe Experience Manager的开发人员而设计。 本教程将指导您实施一个AEM网站，以打造一个虚构的生活方式品牌WKND。 本教程涵盖基本主题，如项目设置、Maven原型、核心组件、可编辑模板、客户端库和组件开发。
 sub-product: sites
 topics: development
 version: Cloud Service
-doc-type: tutorial
 activity: develop
 audience: developer
 KT: 4132
@@ -16,14 +15,15 @@ topic: Content Management, Development
 role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+recommendations: disable
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 6%
 
 ---
 
-# AEM Sites 快速入门 - WKND 教程 {#introduction}
+# 《AEM Sites 快速入门》 - WKND 教程 {#introduction}
 
 欢迎参加为初次使用Adobe Experience Manager(AEM)的开发人员而设计的多部分教程。 本教程将指导您实施AEM网站，以打造虚构的生活方式品牌WKND。 本教程涵盖一些基本主题，如项目设置、核心组件、可编辑模板、客户端库，以及使用Adobe Experience Manager Sites进行组件开发。
 
@@ -37,17 +37,17 @@ ht-degree: 6%
 
 启动AEM Sites项目有两种基本方法。
 
-**AEM项目原型**  — 通过使用Maven模板生成最小的AEM项目，从而实现AEM开发的传统方法。对于AEM 6.5/6.4项目和AEM ，这是推荐的方法，可作为预期会进行大量自定义的Cloud Service项目。 本教程可让您更深入地了解AEM开发。
+**AEM项目原型**  — 通过使用Maven模板生成最小的AEM项目，采用传统的AEM开发方法。 对于预计会进行大量自定义的AEM 6.5/6.4项目和AEMas a Cloud Service项目，建议使用此方法。 本教程可让您更深入地了解AEM开发。
 
 [使用AEM项目原型开始教程](./project-archetype/overview.md)
 
-**AEM网站模板**  — 一种使用预定义网站模板生成AEM网站的低代码方法。使用开箱即用的组件和模板，快速启动并运行网站。 使用主题工作流仅通过CSS和JavaScript应用品牌特定的样式和自定义。 建议新项目和开发人员使用。 当前仅可用于AEM as aCloud Service。
+**AEM网站模板**  — 使用预定义的网站模板生成AEM网站的低代码方法。 使用开箱即用的组件和模板，快速启动并运行网站。 使用主题工作流仅通过CSS和JavaScript应用品牌特定的样式和自定义。 建议新项目和开发人员使用。 当前仅适用于AEMas a Cloud Service。
 
 [使用网站模板启动教程](./site-template/create-site.md)
 
 ## Adobe XD UI Kit
 
-为了使本教程更接近真实场景，Adobe才华出众的UX设计人员使用[Adobe XD](https://www.adobe.com/products/xd.html)为站点创建了模型。 在本教程中，各种设计都被实施到一个完全可创作的AEM网站中。 特别感谢&#x200B;**Lorenzo Buosi**&#x200B;和&#x200B;**Kilian Amendola**&#x200B;为WKND站点创造了美丽的设计。
+为了使本教程更接近真实场景，Adobe才华出众的UX设计人员使用 [Adobe XD](https://www.adobe.com/products/xd.html). 在本教程中，各种设计都被实施到一个完全可创作的AEM网站中。 特别感谢 **洛伦佐·布奥西** 和 **基利安·阿门多拉** 为WKND站点创造了美丽的设计。
 
 下载XD UI工具包：
 
@@ -56,18 +56,18 @@ ht-degree: 6%
 
 ## 引用站点 {#reference-site}
 
-WKND站点的完成版本也可作为参考：[https://wknd.site/](https://wknd.site/)
+WKND站点的完成版本也可作为参考： [https://wknd.site/](https://wknd.site/)
 
-本教程涵盖AEM开发人员所需的主要开发技能，但&#x200B;*不*&#x200B;将构建整个站点的端到端。 完成的引用站点是探索和查看更多开箱即用功能的又一大资源。
+本教程涵盖AEM开发人员所需的主要开发技能，但将会 *not* 端到端构建整个站点。 完成的引用站点是探索和查看更多开箱即用功能的又一大资源。
 
-要在跳入教程之前测试最新代码，请从GitHub](https://github.com/adobe/aem-guides-wknd/releases/latest)**下载并安装**[&#x200B;最新版本。
+要在跳入教程之前测试最新代码，请下载并安装 **[GitHub的最新版本](https://github.com/adobe/aem-guides-wknd/releases/latest)**.
 
 ### 由Adobe Stock提供支持
 
-WKND参考网站中的许多图像都来自[Adobe Stock](https://stock.adobe.com/)，并且是第三方材料，如[https://www.adobe.com/legal/terms.html](https://www.adobe.com/cn/legal/terms.html)的演示资产附加条款中所定义。 如果您想将Adobe Stock图像用于除查看此演示网站之外的其他目的，例如在网站上显示该图像，或在营销材料中，则可以在Adobe Stock上购买许可证。
+WKND参考网站中的许多图像都来自 [Adobe Stock](https://stock.adobe.com/) 和是演示资产附加条款中定义的第三方材料， [https://www.adobe.com/legal/terms.html](https://www.adobe.com/cn/legal/terms.html). 如果您想将Adobe Stock图像用于除查看此演示网站之外的其他目的，例如在网站上显示该图像，或在营销材料中，则可以在Adobe Stock上购买许可证。
 
 借助Adobe Stock，您可以访问超过1.4亿张高品质、免版税的图像，包括照片、图形、视频和模板，以快速启动您的创意项目。
 
 ## 后续步骤 {#next-steps}
 
-你在等什么?!了解如何使用AEM项目原型](./project-archetype/overview.md)或[使用网站模板](./site-template/create-site.md)创建网站，从而[生成新的Adobe Experience Manager项目。
+你在等什么?!了解如何 [使用AEM项目原型生成新的Adobe Experience Manager项目](./project-archetype/overview.md) 或 [使用网站模板创建网站](./site-template/create-site.md).

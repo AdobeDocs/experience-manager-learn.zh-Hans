@@ -2,14 +2,13 @@
 sub-product: sites
 topics: development
 version: Cloud Service
-doc-type: tutorial
 activity: develop
 audience: developer
-user-guide-title: AEM Sites 快速入门 - WKND 教程
+user-guide-title: 《AEM Sites 快速入门》 - WKND 教程
 user-guide-description: 面向不熟悉 AEM 的开发人员的多部分教程。实施 AEM Sites，打造虚构的生活方式品牌 WKND。
 breadcrumb-title: AEM Sites WKND 教程
 index: y
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 56%
@@ -17,10 +16,10 @@ ht-degree: 56%
 ---
 
 
-# AEM Sites 快速入门 - WKND 教程 {#getting-started-wknd-tutorial-develop}
+# 《AEM Sites 快速入门》 - WKND 教程 {#getting-started-wknd-tutorial-develop}
 
 + [WKND教程概述](overview.md)
-+ 项目原型{#project-archetype}
++ 项目原型 {#project-archetype}
    + [概述](./project-archetype/overview.md)
    + [1 — 项目设置](./project-archetype/project-setup.md)
    + [2 — 组件基础知识](./project-archetype/component-basics.md)
