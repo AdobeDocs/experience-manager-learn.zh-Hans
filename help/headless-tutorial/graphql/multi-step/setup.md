@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
+source-git-commit: 846400cd3ac4eb1b04ece055dfcbbd677f11e88e
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1819'
 ht-degree: 1%
 
 ---
@@ -64,9 +64,9 @@ ht-degree: 1%
    $ java -jar aem-author-p4502.jar
    ```
 
-1. 提供管理员密码作为 `admin`. 可接受任何管理员密码，但建议将默认密码用于本地开发，以减少重新配置的需要。
+1. 提供管理员密码作为 `admin`. 可接受任何管理员密码，但建议使用 `admin` 用于本地开发，以减少重新配置的需要。
 1. 几分钟后，AEM实例将完成安装，并且新的浏览器窗口应会在 [http://localhost:4502](http://localhost:4502).
-1. 使用用户名登录 `admin` 和密码 `admin`.
+1. 使用用户名登录 `admin` 和在AEM初始启动期间选择的密码(通常 `admin`)。
 
 ## 安装示例内容和GraphQL端点 {#wknd-site-content-endpoints}
 
