@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 84a0c78f89f78e161b460574b5927fc4aba2fe3a
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1623'
 ht-degree: 3%
 
 ---
@@ -98,6 +98,7 @@ ht-degree: 3%
 + UI提示和技巧{#ui-tips-and-tricks}
    + [切换密码字段文本](ui-tips-tricks/toggle-password.md)
    + [空间工具栏按钮](ui-tips-tricks/toolbar-buttons.md)
+   + [使用嵌套面板导航选项卡](ui-tips-tricks/nested-panels.md)
 + 自定义收件箱{#inbox-customization}
    + [简介](inbox-customization/introduction.md)
    + [添加自定义列](inbox-customization/add-married-column.md)
