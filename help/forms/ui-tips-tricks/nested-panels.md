@@ -8,7 +8,7 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 20cae7a327131927f831ae9c49fb5eebfb00f5c4
+source-git-commit: 3bbd3e51ced1d990532a2cb3e309bf944bab8434
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -61,6 +61,10 @@ window.guideBridge.setFocus(null, 'prevItemDeep', true);
 
 >[!VIDEO](https://video.tv.adobe.com/v/338370?quality=9&learn=on)
 
+本文中描述的功能在最后一个选项卡中不起作用。 例如，如果“地址”选项卡具有子面板，则此功能将不起作用。
+
+<!--
 >[!NOTE]
 >
->本文中描述的功能在最后一个选项卡中不起作用。 例如，如果“地址”选项卡具有子面板，则此功能将不起作用。
+>The capability described in this article does not work in the last tab. For example if the Address tab had child panels this functionality would not work.
+-->
