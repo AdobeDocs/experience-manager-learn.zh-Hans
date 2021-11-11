@@ -8,7 +8,7 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 9006
-source-git-commit: d38da94bd4164163a16899b565c90b159194580a
+source-git-commit: 8484897297940ab28619c4b1af5362a5937eadfa
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -44,10 +44,5 @@ ht-degree: 0%
 
 
 >[!NOTE]
-
+>
 >现在，当您构建和部署项目时，该项目将根据云实例中可用的云服务配置创建表单数据模型
-
-
-
-
-
