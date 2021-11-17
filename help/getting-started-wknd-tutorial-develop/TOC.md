@@ -8,10 +8,10 @@ user-guide-title: 《AEM Sites 快速入门》 - WKND 教程
 user-guide-description: 面向不熟悉 AEM 的开发人员的多部分教程。实施 AEM Sites，打造虚构的生活方式品牌 WKND。
 breadcrumb-title: AEM Sites WKND 教程
 index: y
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 56%
+source-wordcount: '78'
+ht-degree: 50%
 
 ---
 
@@ -28,9 +28,10 @@ ht-degree: 56%
    + [5 — 样式系统](./project-archetype/style-system.md)
    + [6 — 自定义组件](./project-archetype/custom-component.md)
    + [7 — 单元测试](./project-archetype/unit-testing.md)
-+ 站点模板 {#site-template}
++ 快速创建网站 {#site-template}
    + [概述](./site-template/overview.md)
    + [1 — 创建站点](./site-template/create-site.md)
-   + [2 — 创作内容和发布更改](./site-template/author-content-publish.md)
+   + [2 — 创作和发布简介](./site-template/author-content-publish.md)
+   + [3 — 使用Adobe XD规划UI](./site-template/ui-planning-adobe-xd.md)
    + [3 — 页面模板](./site-template/page-templates.md)
    + [4 — 天明](./site-template/theming.md)

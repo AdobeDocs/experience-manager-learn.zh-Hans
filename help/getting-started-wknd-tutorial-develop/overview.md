@@ -16,9 +16,9 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '624'
 ht-degree: 6%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 6%
 
 [使用AEM项目原型开始教程](./project-archetype/overview.md)
 
-**AEM网站模板**  — 使用预定义的网站模板生成AEM网站的低代码方法。 使用开箱即用的组件和模板，快速启动并运行网站。 使用主题工作流仅通过CSS和JavaScript应用品牌特定的样式和自定义。 建议新项目和开发人员使用。 当前仅适用于AEMas a Cloud Service。
+**AEM网站模板**  — 也称为快速网站创建，是一种使用预定义网站模板生成AEM网站的低代码方法。 使用开箱即用的组件和模板，快速启动并运行网站。 使用主题工作流仅通过CSS和JavaScript应用品牌特定的样式和自定义。 建议新项目和开发人员使用。 仅适用于AEMas a Cloud Service。
 
 [使用网站模板启动教程](./site-template/create-site.md)
 
