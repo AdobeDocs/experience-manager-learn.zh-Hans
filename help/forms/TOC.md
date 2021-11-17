@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: 84a0c78f89f78e161b460574b5927fc4aba2fe3a
+source-git-commit: bbb2c352e8a4297496f248bbbc86252ac7118999
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1628'
 ht-degree: 3%
 
 ---
@@ -76,7 +76,7 @@ ht-degree: 3%
    + [AEM 6.4工作流中的表单数据模型服务](adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md)
    + [在表单数据模型服务步骤中处理错误消息](adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)
    + [AEM 6.5.1工作流中的表单数据模型服务](adaptive-forms/form-data-model-service-as-step-in-aem65-workflow-video-use.md)
-   + [无数据源的表单数据模型](adaptive-forms/form-data-model-without-data-source-feature-video-use.md)
+   + [无数据源表单数据模型](adaptive-forms/form-data-model-without-data-source-feature-video-use.md)
    + [计算表单数据模型元素](adaptive-forms/computed-form-data-model-elements-aem-forms-feature-video.md)
    + [在AEM Forms中设置JDBC数据源](adaptive-forms/data-integration-technical-video-setup.md)
    + [基于JDBC的表单数据模型](adaptive-forms/jdbc-data-model-technical-video-use.md)
@@ -99,6 +99,7 @@ ht-degree: 3%
    + [切换密码字段文本](ui-tips-tricks/toggle-password.md)
    + [空间工具栏按钮](ui-tips-tricks/toolbar-buttons.md)
    + [使用嵌套面板导航选项卡](ui-tips-tricks/nested-panels.md)
+   + [将图标添加到导航选项卡](ui-tips-tricks/active-complete.md)
 + 自定义收件箱{#inbox-customization}
    + [简介](inbox-customization/introduction.md)
    + [添加自定义列](inbox-customization/add-married-column.md)
