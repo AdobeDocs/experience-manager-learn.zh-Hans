@@ -1,30 +1,28 @@
 ---
 title: 为Web渠道创建您的第一个交互式通信
-seo-title: 为Web渠道创建您的第一个交互式通信
+seo-title: Creating your first interactive communication for the web channel
 description: 交互式通信是AEM Forms 6.4的新增功能。本文档将指导您完成为Web渠道创建交互式通信所需的步骤。
-seo-description: 交互式通信是AEM Forms 6.4的新增功能。本文档将指导您完成为Web渠道创建交互式通信所需的步骤。
-feature: 交互式通信
+seo-description: Interactive Communications is new to AEM Forms 6.4. This document will walk you through the steps needed to create an interactive communication for the web channel.
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '157'
 ht-degree: 3%
 
 ---
 
-
 # 为Web渠道创建您的第一个交互式通信
 
 交互式通信是AEM Forms 6.4的新增功能。本文档将指导您完成为打印渠道创建交互式通信所需的步骤。
-
-请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)页面，获取此功能的实时演示链接。
 
 ## 前提条件 {#prerequistes}
 
@@ -39,7 +37,3 @@ ht-degree: 3%
 * 创建文档片段
 * 配置表和图表
 * 提交Web渠道文档
-
-
-
-

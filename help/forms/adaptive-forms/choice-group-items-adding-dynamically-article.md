@@ -6,31 +6,28 @@ version: 6.5
 topic: Development
 role: User
 level: Beginner
-source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
+exl-id: 8fbea634-7949-417f-a4d6-9e551fff63f3
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
-
-
 
 # 将项目动态添加到选择的组组件
 
 AEM Forms 6.5引入了将项目动态添加到自适应Forms选择组组件（如复选框、单选按钮和图像列表）的功能。
 
-[此功能在示例服务器上实时提供](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)。搜索“动态复选框项目”卡片，然后单击“尝试”
-
 
 您可以使用可视化编辑器以及代码编辑器添加项目，具体取决于您的用例。
 
-**使用可视编辑器：** 您可以从函数调用或服务调用的结果填充所选组的项目。例如，您可以通过使用REST API调用的响应来设置选择组的项目。
+**使用可视编辑器：** 您可以从函数调用或服务调用的结果中填充所选组的项目。 例如，您可以通过使用REST API调用的响应来设置选择组的项目。
 
 在下面的屏幕截图中，我们将“贷款期（年）”选项设置为名为getLoanPeriods的服务调用结果。
 
 ![规则编辑器](assets/ruleeditor.png)
 
-**使用代码编辑器**:当您想要根据表单中输入的值动态设置选择组中的项目时。例如，以下代码片段将复选框的项目设置为在自适应表单的申请人名称和配偶字段中输入的值。
+**使用代码编辑器**:当您想要根据表单中输入的值动态设置选择组中的项目时。 例如，以下代码片段将复选框的项目设置为在自适应表单的申请人名称和配偶字段中输入的值。
 
 在代码片段中，我们设置WorkingMembers的项目，这是一个复选框组件。 项目的数组是通过获取自适应表单的applicantName和配偶文本字段的值来动态构建的
 

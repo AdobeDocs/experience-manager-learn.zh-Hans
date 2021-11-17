@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 458f1c2df6472be2b4704bb68eafb92b58f48a97
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,6 @@ ht-degree: 0%
 # 包含多个面板的导航选项卡
 
 当表单具有左侧导航选项卡，并且其中一个选项卡具有多个面板时，您可能希望隐藏子面板的标题，并且仍然能够在这些选项卡的选项卡和子面板之间导航
-
-[此功能以此形式提供](https://forms.enablementadobe.com/content/forms/af/testnav1.html)
-
-
-
 
 ## 创建自适应表单
 

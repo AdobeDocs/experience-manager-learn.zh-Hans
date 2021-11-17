@@ -1,18 +1,18 @@
 ---
 title: 从一个数据文件生成多个PDF
 description: OutputService提供了多种方法来使用表单设计和数据创建文档，以便与表单设计合并。 了解如何从一个包含多个单个记录的大型xml中生成多个pdf。
-feature: 输出服务
+feature: Output Service
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 1%
+source-wordcount: '506'
+ht-degree: 0%
 
 ---
-
 
 # 从一个xml数据文件生成一组PDF文档
 
@@ -21,17 +21,14 @@ OutputService提供了多种方法来使用表单设计和数据创建文档，�
 
 ![多记录xml](assets/multi-record-xml.PNG)
 
-数据xml有2条记录。 每个记录由form1元素表示。 此xml将传递到OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html)我们获得pdf文档列表（每个记录一个）
-generatePDFOutputBatch方法的签名采用以下参数
+数据xml有2条记录。 每个记录由form1元素表示。 此xml将传递到OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) 我们获得pdf文档列表（每条记录一个）， generatePDFOutputBatch方法的签名采用以下参数
 
 * 模板 — 包含模板的映射，由键标识
 * data — 包含xml数据文档的映射，由键标识
 * pdfOutputOptions — 用于配置pdf生成的选项
 * batchOptions — 用于配置批处理的选项
 
->[!NOTE]
->
->此用例可在此[website](https://forms.enablementadobe.com/content/samples/samples.html?query=0)上作为实时示例提供。
+
 
 ## 用例详细信息{#use-case-details}
 
@@ -127,16 +124,15 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 要在您的服务器上测试此功能，请按照以下说明操作：
 
-* [将zip文件内容下载并解压缩到您的文件系统](assets/mult-records-template-and-xml-file.zip)。此zip文件包含模板和xml数据文件。
+* [将zip文件内容下载并解压缩到您的文件系统](assets/mult-records-template-and-xml-file.zip).此zip文件包含模板和xml数据文件。
 * [将您的浏览器指向Felix Web控制台](http://localhost:4502/system/console/bundles)
-* [部署DevelopingWithServiceUser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
+* [部署DevelopingWithServiceUser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
 * [部署自定义AEMFormsDocumentServices包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).自定义包，该包使用OutputService API生成PDF
 * [将浏览器指向包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* [导入并安装包](assets/generate-multiple-pdf-from-xml.zip)。此包中包含html页，用于放置模板和数据文件。
+* [导入和安装包](assets/generate-multiple-pdf-from-xml.zip). 此包中包含html页，用于放置模板和数据文件。
 * [将您的浏览器指向MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html?)
 * 将模板和xml数据文件拖放到一起
 * 下载创建的zip文件。 此zip文件包含由输出服务生成的pdf文件。
 
 >[!NOTE]
 >有多种方法可触发此功能。 在本例中，我们使用Web界面拖放模板和数据文件以演示该功能。
-

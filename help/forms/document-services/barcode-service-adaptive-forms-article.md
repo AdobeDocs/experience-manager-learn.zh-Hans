@@ -1,31 +1,31 @@
 ---
 title: 带有自适应Forms的条形码服务
 description: 使用条形码服务对条形码进行解码并从提取的数据填充表单字段。
-feature: 条形码Forms
+feature: Barcoded Forms
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
-
 
 # 带有自适应Forms的条形码服务{#barcode-service-with-adaptive-forms}
 
 本文将演示如何使用条形码服务来填充自适应表单。 用例如下：
 
-1. 用户将条形码作为自适应表单附件添加的PDF
+1. 用户将条形码作为自适应表单附件添加PDF
 1. 附件的路径将发送到Servlet
 1. Servlet解码条形码并以JSON格式返回数据
 1. 然后，使用解码的数据填充自适应表单
 
 以下代码将对条形码进行解码，并使用解码的值填充JSON对象。 然后，Servlet在响应调用应用程序时返回JSON对象。
 
-您可以实时查看此功能，请访问[示例门户](https://forms.enablementadobe.com/content/samples/samples.html?query=0)并搜索条形码服务演示
+
 
 ```java
 public JSONObject extractBarCode(Document pdfDocument) {
@@ -140,11 +140,10 @@ $(document).ready(function()
 
 要在您的系统上运行此程序，请执行以下步骤
 
-1. [使用包管理器下载BarcodeService.](assets/barcodeservice.zip) zipand并导入AEM
+1. [下载BarcodeService.zip](assets/barcodeservice.zip) 和使用包管理器导入到AEM中
 1. [下载并安装自定义DocumentServices包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [下载并安装DevelopingWithServiceUser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下载示例PDF表单](assets/barcode.pdf)
-1. 将浏览器指向[示例自适应表单](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. 将您的浏览器指向 [示例自适应表单](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
 1. 上传提供的示例PDF
 1. 您应会看到填充了数据的表单
-

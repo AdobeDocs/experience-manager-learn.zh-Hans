@@ -1,24 +1,23 @@
 ---
 title: 从HTM5表单提交生成PDF
-description: 通过移动设备表单提交生成PDF
-feature: 移动设备表单
+description: 从移动设备表单提交生成PDF
+feature: Mobile Forms
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 91b4a134-44a7-474e-b769-fe45562105b2
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
 
-
 # 从HTM5表单提交生成PDF {#generate-pdf-from-htm-form-submission}
 
-本文将指导您完成从HTML5(即Forms移动版)表单提交生成PDF时涉及的步骤。 此演示还将说明向HTML5表单添加图像以及将图像合并到最终PDF中所需的步骤。
+本文将指导您完成从HTML5(即移动设备Forms)表单提交生成PDF时涉及的步骤。 此演示还将说明向HTML5表单中添加图像以及将图像合并到最终pdf中所需的步骤。
 
-要查看此功能的实时演示，请访问[示例服务器](https://forms.enablementadobe.com/content/samples/samples.html?query=0)并搜索“移动表单到PDF”。
 
 要将提交的数据合并到xdp模板中，我们会执行以下操作
 
@@ -78,7 +77,7 @@ $("#file1").click();
 });
 ```
 
-[自定义用户档案](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。使用自定义配置文件可更轻松地处理移动表单的HTML DOM对象。 HTML.jsp中会添加一个隐藏的文件元素。 当用户单击“添加照片”时，我们会触发文件元素的点击事件。 这允许用户浏览并选择要附加的照片。 然后，使用javascript FileReader对象获取图像的base64编码字符串。 base64图像字符串以表单形式存储在文本字段中。 提交表单后，我们会提取此值，并将其插入XML的img元素中。 然后，此XML将用于与xdp合并，以生成最终的pdf。
+[自定义用户档案](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). 使用自定义配置文件可更轻松地处理移动表单的HTMLDOM对象。 隐藏的文件元素将添加到HTML.jsp中。 当用户单击“添加照片”时，我们会触发文件元素的点击事件。 这允许用户浏览并选择要附加的照片。 然后，使用javascript FileReader对象获取图像的base64编码字符串。 base64图像字符串以表单形式存储在文本字段中。 提交表单后，我们会提取此值，并将其插入XML的img元素中。 然后，此XML将用于与xdp合并，以生成最终的pdf。
 
 本文使用的自定义用户档案已作为本文资产的一部分提供给您。
 
@@ -115,9 +114,8 @@ function readURL(input) {
 
 * [下载并安装与本文关联的包。](assets/pdf-from-mobile-form-submission.zip)
 
-* 通过查看[xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)的属性页面，确保正确设置提交URL和HTML渲染配置文件
+* 通过查看的属性页面，确保正确设置提交URL和HTML渲染配置文件  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
 
 * [以html形式预览XDP](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 
-* 将图像添加到表单并提交。 您应该在PDF中返回图像。
-
+* 将图像添加到表单并提交。 您应该将PDF重新包含在其中。

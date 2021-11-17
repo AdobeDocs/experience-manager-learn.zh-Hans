@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9270
-source-git-commit: 96b78ff5056bd9c2be39fb2cf21b4f92863af089
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '167'
 ht-degree: 2%
 
 ---
@@ -20,9 +20,7 @@ ht-degree: 2%
 一个常见用例是，允许表单填充程序切换到在密码字段中输入的文本的可见性。
 为了完成此用例，我使用了 [Font Awesome库](https://fontawesome.com/). 为此演示创建的客户端库中包含所需的CSS和eye.svg。
 
-## 实时示例
 
-[此功能可在此处进行测试](https://forms.enablementadobe.com/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
 
 ## 示例代码
 
