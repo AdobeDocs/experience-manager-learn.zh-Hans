@@ -8,7 +8,7 @@ level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
-source-git-commit: 3657e7798774f9cc673ff6ccd8af1a555b1d4013
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
@@ -27,13 +27,13 @@ ht-degree: 0%
 
 批量导入服务用于将Azure Blob Storage或Amazon S3存储中存储的文件作为资产传输到AEMas a Cloud Service。
 
-### 关键活动
+## 关键活动
 
 + 将要导入的文件上传到云存储提供程序(Azure Blob Storage或Amazon S3)。
 + 从AEMas a Cloud Service创作服务配置并运行批量导入服务。
 + 将批量服务导入程序作为一次性导入运行或计划定期导入。
 
-### 其他资源
+## 其他资源
 
 + [Adobe开发人员关于资产摄取的实时会话](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=en)
 

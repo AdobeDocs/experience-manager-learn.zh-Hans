@@ -9,7 +9,7 @@ level: Experienced
 kt: 8630
 thumbnail: 336958.jpeg
 exl-id: e9bd9035-1f2d-4a34-a581-9c1ec2c7bc04
-source-git-commit: 1ddf6154d50a341d9a0fd4234392c37ced878a73
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 4%
@@ -28,7 +28,7 @@ ht-degree: 4%
 
 在重构代码库时，请使用 [Repository Modernizer工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html) 将6.x代码库重构为更现代的结构。
 
-### 关键活动
+## 关键活动
 
 * 使用 [Adobe I/O存储库Modernizer](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationrepository-modernizer) 用于调整项目结构以匹配AEMas a Cloud Service项目的预期结构的工具。
 * 手动调整和修复更新的代码库中的任何生成错误。
