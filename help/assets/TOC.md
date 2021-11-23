@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Assets 的视频和教程集合
 breadcrumb-title: AEM Assets 教程
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: cd54cfbbded4e44f4850f9dac8ab17d179e7d498
+source-git-commit: a5c128d92f4a4625279b6ef76c61f1afb6ed45d5
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '357'
 ht-degree: 26%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 26%
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
 + Adobe Asset Link{#adobe-asset-link}
+   + [设置](./adobe-asset-link/setup.md)
    + [访问Adobe资产链接](./adobe-asset-link/launch-adobe-asset-link.md)
    + [面板概述](./adobe-asset-link/panel-overview.md)
    + [文件和收藏集](./adobe-asset-link/files-and-collections.md)
