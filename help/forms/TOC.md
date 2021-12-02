@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: bbb2c352e8a4297496f248bbbc86252ac7118999
+source-git-commit: 7f9a7951b2d9bb780d5374f17bb289c38b2e2ae7
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1633'
 ht-degree: 3%
 
 ---
@@ -197,6 +197,7 @@ ht-degree: 3%
 
 + 文档服务 {#document-services}
    + [PDF forms类型](document-services/pdf-forms-and-documents.md)
+   + [在自适应表单中嵌入PDF](document-services/embed-pdf-inline.md)
    + [在AEM Forms中使用汇编程序服务](document-services/using-assembler-service-in-aem-forms.md)
    + [在AEM Forms中使用监视文件夹](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms中使用条形码服务](document-services/barcode-service-adaptive-forms-article.md)
