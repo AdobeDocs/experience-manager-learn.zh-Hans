@@ -5,17 +5,17 @@ doc-type: tutorial
 mini-toc-levels: 1
 kt: 6678
 thumbnail: 328618.jpg
-feature: 内容片段， GraphQL API
-topic: 无外设、内容管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
-
 
 # AEM无头入门 — GraphQL
 
@@ -33,10 +33,11 @@ ht-degree: 0%
 
 ## 开始吧！
 
-通过跳转到[快速设置](./setup.md)章节，启动AEM GraphQL教程！
+1. 使用 [AEMas a Cloud Service](../quick-setup/cloud-service.md) 或使用 [本地SDK](../quick-setup/local-sdk.md).
+2. 以开始教程 [定义内容片段模型](content-fragment-models.md).
 
 ## GitHub项目
 
-[AEM指南 — WKND GraphQL GitHub项目](https://github.com/adobe/aem-guides-wknd-graphql)上提供了源代码和内容包。
+源代码和内容包位于 [AEM指南 — WKND GraphQL GitHub项目](https://github.com/adobe/aem-guides-wknd-graphql).
 
-如果您发现本教程或代码存在问题，请保留[GitHub问题](https://github.com/adobe/aem-guides-wknd-graphql/issues)。
+如果您发现本教程或代码存在问题，请保留 [GitHub问题](https://github.com/adobe/aem-guides-wknd-graphql/issues).

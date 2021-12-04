@@ -6,9 +6,9 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '190'
 ht-degree: 20%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 20%
 + [AEM Headless概述](./overview.md)
 + GraphQL {#graphql}
    + [概述](./graphql/overview.md)
+   + [快速设置](./graphql/quick-setup/cloud-service.md)
+   + [快速设置本地SDK](./graphql/quick-setup/local-sdk.md)
    + 视频系列{#video-series}
       + [1 — 建模基础知识](./graphql/video-series/modeling-basics.md)
       + [2 — 高级建模](./graphql/video-series/advanced-modeling.md)
@@ -29,13 +31,12 @@ ht-degree: 20%
       + [7 - GraphQL持久查询](./graphql/video-series/graphql-persisted-queries.md)
    + 多步教程{#multi-step}
       + [概述](./graphql/multi-step/overview.md)
-      + [1 — 快速设置](./graphql/multi-step/setup.md)
-      + [2 — 定义内容片段模型](./graphql/multi-step/content-fragment-models.md)
-      + [3 — 创作内容片段](./graphql/multi-step/author-content-fragments.md)
-      + [4 — 浏览GraphQL API](./graphql/multi-step/explore-graphql-api.md)
-      + [5 — 从外部应用程序查询](./graphql/multi-step/graphql-and-external-app.md)
-      + [6 — 使用片段引用进行高级数据建模](./graphql/multi-step/fragment-references.md)
-      + [7 — 生产部署](./graphql/multi-step/production-deployment.md)
+      + [1 — 定义内容片段模型](./graphql/multi-step/content-fragment-models.md)
+      + [2 — 创作内容片段](./graphql/multi-step/author-content-fragments.md)
+      + [3 — 浏览GraphQL API](./graphql/multi-step/explore-graphql-api.md)
+      + [4 — 从外部应用程序查询](./graphql/multi-step/graphql-and-external-app.md)
+      + [5 — 使用片段引用进行高级数据建模](./graphql/multi-step/fragment-references.md)
+      + [6 — 生产部署](./graphql/multi-step/production-deployment.md)
    + 示例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)

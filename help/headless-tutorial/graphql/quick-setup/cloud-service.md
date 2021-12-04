@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
-source-git-commit: f13f32de11bda924a2d255678e58e7c982d0d004
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -193,5 +193,7 @@ _步骤的截屏_
 恭喜！ 您已成功使用AEM Headless来为React应用程序提供支持！
 
 要详细了解React应用程序如何使用AEMas a Cloud Service中的内容，请参阅 [AEM Headless教程](../multi-step/overview.md). 本教程探讨了创建时AEM中的内容片段，以及此React应用程序如何将其内容用作JSON。
+
+### 后续步骤
 
 + [启动AEM Headless教程](../multi-step/overview.md)
