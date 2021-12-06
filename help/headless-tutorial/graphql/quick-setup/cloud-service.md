@@ -8,13 +8,13 @@ role: Developer
 level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
+source-git-commit: 94a57490edb00da072446ee8ca07c12c413ce1ac
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1072'
 ht-degree: 0%
 
 ---
-
 
 # AEM Headless快速设置AEMas a Cloud Service
 
@@ -26,13 +26,13 @@ AEM无头快速设置可让您使用WKND网站示例项目中的内容，以及�
 
 + AEMas a Cloud Service沙盒环境（最好是开发）
 + 访问AEMas a Cloud Service和Cloud Manager
-   + `AEM Administrator` 访问AEMas a Cloud Service
-   + `Cloud Manager - Deployment Manager` 对Cloud Manager的访问权限
+   + __AEM管理员__ 访问AEMas a Cloud Service
+   + __Cloud Manager — 部署管理器__ 对Cloud Manager的访问权限
 + 必须在本地安装以下工具：
    + [Node.js v10+](https://nodejs.org/en/)
    + [npm 6+](https://www.npmjs.com/)
    + [Git](https://git-scm.com/)
-   + IDE(例如， [Microsoft® Visual Studio代码](https://code.visualstudio.com/)
+   + IDE(例如， [Microsoft® Visual Studio代码](https://code.visualstudio.com/))
 
 ## 1.创建Cloud Manager Git存储库
 
@@ -74,15 +74,13 @@ _步骤的截屏_
       $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup/
       ```
 
-1. 将示例项目的源代码推送到Cloud Manager Git存储库
+1. 将示例项目的源代码从本地Git存储库推送到Cloud Manager Git存储库
 
-   1. 将代码从本地Git存储库推送到Cloud Manager Git存储库
+   ```shell
+   $ git push adobe master:main
+   ```
 
-      ```shell
-      $ git push adobe master:main
-      ```
-
-      提示输入凭据时，请提供 __用户名__ 和 __密码__ 从Cloud Manager的 __存储库信息__ 模式窗口。
+   提示输入凭据时，请提供 __用户名__ 和 __密码__ 从Cloud Manager的 __存储库信息__ 模式窗口。
 
 ## 3.将WKND站点部署到AEMas a Cloud Service
 
