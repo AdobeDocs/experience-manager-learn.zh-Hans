@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
+source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
-
 
 # 电子邮件服务
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 由于（大多数）邮件服务不会通过HTTP/HTTPS运行，因此必须代理从AEMas a Cloud Service连接到邮件服务。
 
-+ `smtp.host` 设置为OSGi环境变量 `$[env:AEM_PROXY_HOST]` 所以它被从出口路过。
++ `smtp.host` 设置为OSGi环境变量 `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` 所以它被从出口路过。
 + `smtp.port` 设置为 `portForward.portOrig` 映射到目标电子邮件服务的主机和端口的端口。 此示例使用映射： `AEM_PROXY_HOST:30002` → `smtp.sendgrid.com:465`.
 
 由于密钥不得存储在代码中，因此最好使用 [密钥OSGi配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)，使用AIO CLI或Cloud Manager API进行设置。
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 ```json
 {
-    "smtp.host": "$[env:AEM_PROXY_HOST]",
+    "smtp.host": "$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
     "smtp.port": "30002",
     "smtp.user": "$[env:EMAIL_USERNAME;default=apikey]",
     "smtp.password": "$[secret:EMAIL_PASSWORD]",

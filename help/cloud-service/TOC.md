@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 22%
+source-wordcount: '651'
+ht-degree: 21%
 
 ---
 
@@ -95,7 +95,8 @@ ht-degree: 22%
    + [专用出口IP地址](./networking/dedicated-egress-ip-address.md)
    + [虚拟专用网](./networking/vpn.md)
    + 代码示例{#examples}
-      + [非标准端口上的HTTP/HTTPS](./networking/examples/http-on-non-standard-ports.md)
+      + [在非标准端口上使用HTTP/HTTPS以实现灵活的端口出口](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
+      + [非标准端口上的HTTP/HTTPS，用于专用出口IP地址/VPN](./networking/examples/http-on-non-standard-ports.md)
       + [使用DataSourcePool的SQL连接](./networking/examples/sql-datasourcepool.md)
       + [使用Java SQL API的SQL连接](./networking/examples/sql-java-apis.md)
       + [电子邮件服务](./networking/examples/email-service.md)
