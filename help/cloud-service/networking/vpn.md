@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
+source-git-commit: ba2c299baeda632d6ebeff0c6ee07de5ef29b9cb
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1259'
 ht-degree: 0%
 
 ---
-
 
 # 虚拟专用网(VPN)
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 虚拟专用网络(VPN)允许AEMas a Cloud Service客户将Cloud Manager程序连接到现有的 [受支持](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) VPN。 这允许在客户网络内的AEMas a Cloud Service和服务之间进行安全且可控的连接。
 
-Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚拟专用网络是 [适当类型的网络基础架构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html%3Flang%3Dja#general-vpn-considerations) 的AEMas a Cloud Service。
+Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚拟专用网络是 [适当类型的网络基础架构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#general-vpn-considerations) 的AEMas a Cloud Service。
 
 >[!MORELIKETHIS]
 >
@@ -58,7 +58,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
        -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
        -H 'x-api-key: <CLIENT_ID>' \
        -H 'Authorization: Bearer <ACCESS_TOKEN>' \
-       -H 'Content-Type: application/json' 
+       -H 'Content-Type: application/json'
    ```
 
 1. 使用Cloud Manager API为Cloud Manager计划启用虚拟专用网络 [createNetworkInfrastructure](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure) 操作。 使用适当的 `region` 从Cloud Manager API获取的代码 `listRegions` 操作。
@@ -68,7 +68,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
    ```shell
    $ curl -X POST https://cloudmanager.adobe.io/api/program/{programId}/networkInfrastructures \
        -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
-       -H 'x-api-key: <CLIENT_ID>' \ 
+       -H 'x-api-key: <CLIENT_ID>' \
        -H 'Authorization: Bearer <ACCESS_TOKEN>' \
        -H 'Content-Type: application/json'
        -d @./vpn-create.json
@@ -79,15 +79,15 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
 [下载示例vpn-create.json](./assets/vpn-create.json)
 
    ```json
-   { 
+   {
        "kind": "vpn",
        "region": "va7",
-       "addressSpace": [ 
+       "addressSpace": [
            "10.104.182.64/26"
        ],
        "dns": {
            "resolvers": [
-               "10.151.201.22", 
+               "10.151.201.22",
                "10.151.202.22",
                "10.154.155.22"
            ]
@@ -130,7 +130,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/networkInfrastructure/{networkInfrastructureId} \
        -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
-       -H 'x-api-key: <CLIENT_ID>' \ 
+       -H 'x-api-key: <CLIENT_ID>' \
        -H 'Authorization: <YOUR_BEARER_TOKEN>' \
        -H 'Content-Type: application/json'
    ```
@@ -146,7 +146,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
    ```shell
    $ curl -X PUT https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
        -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
-       -H 'x-api-key: <CLIENT_ID>' \ 
+       -H 'x-api-key: <CLIENT_ID>' \
        -H 'Authorization: Bearer <ACCESS_TOKEN>' \
        -H 'Content-Type: application/json' \
        -d @./vpn-configure.json
@@ -241,9 +241,9 @@ AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTT
     <p>
         Java™代码示例，用于在非标准HTTP/HTTPS端口上将AEM中的HTTP/HTTPS连接从as a Cloud Service连接到外部服务。
     </p>
-</td>   
-<td></td>   
-<td></td>   
+</td>
+<td></td>
+<td></td>
 </tr>
 </table>
 
@@ -270,21 +270,21 @@ AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTT
       <p>
             Java™代码示例通过配置AEM JDBC数据源池连接到外部SQL数据库。
       </p>
-    </td>   
+    </td>
    <td>
       <a  href="./examples/sql-java-apis.md"><img alt="使用Java API的SQL连接" src="./assets/code-examples__sql-java-api.png"/></a>
       <div><strong><a href="./examples/sql-java-apis.md">使用Java™ API的SQL连接</a></strong></div>
       <p>
             Java™代码示例使用Java™的SQL API连接到外部SQL数据库。
       </p>
-    </td>   
+    </td>
    <td>
       <a  href="./examples/email-service.md"><img alt="虚拟专用网(VPN)" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">电子邮件服务</a></strong></div>
       <p>
         OSGi配置示例(使用AEM连接到外部电子邮件服务)。
       </p>
-    </td>   
+    </td>
 </tr></table>
 
 ### 限制通过VPN访问AEMas a Cloud Service
@@ -300,7 +300,7 @@ AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTT
       <p>
             配置IP允许列表，以便只有VPN流量才能访问AEM。
       </p>
-    </td>   
+    </td>
    <td>
       <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="对AEM发布的基于路径的VPN访问限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
       <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">对AEM发布的基于路径的VPN访问限制</a></strong></div>
@@ -308,5 +308,5 @@ AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTT
             对AEM发布上的特定路径需要VPN访问。
       </p>
     </td>
-   <td></td>   
+   <td></td>
 </tr></table>
