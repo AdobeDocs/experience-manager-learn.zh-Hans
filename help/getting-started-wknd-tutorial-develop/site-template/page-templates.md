@@ -11,18 +11,14 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 4%
+source-wordcount: '660'
+ht-degree: 5%
 
 ---
 
 # 页面模板 {#page-templates}
-
->[!CAUTION]
->
-> 快速网站创建工具当前为技术预览。 它可用于测试和评估目的，并且除非与Adobe支持部门达成协议，否则不会用于生产。
 
 在本章中，我们将探讨页面模板与页面之间的关系。 我们将根据 [AdobeXD](https://www.adobe.com/products/xd.html). 在构建模板过程中，将介绍核心组件和高级策略配置。
 

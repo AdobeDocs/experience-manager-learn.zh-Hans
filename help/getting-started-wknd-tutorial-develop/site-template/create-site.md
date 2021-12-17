@@ -11,18 +11,14 @@ level: Beginner
 kt: 7496
 thumbnail: KT-7496.jpg
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
 
 # 创建网站 {#create-site}
-
->[!CAUTION]
->
-> 快速网站创建工具当前为技术预览。 它可用于测试和评估目的，并且除非与Adobe支持部门达成协议，否则不会用于生产。
 
 在“快速创建网站”中，可使用AEM Adobe Experience Manager中的“网站创建向导”来生成新网站。 由Adobe提供的标准网站模板用作新网站的起点。
 

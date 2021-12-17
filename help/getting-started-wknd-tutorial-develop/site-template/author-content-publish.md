@@ -11,18 +11,14 @@ level: Beginner
 kt: 7497
 thumbnail: KT-7497.jpg
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1333'
 ht-degree: 2%
 
 ---
 
 # 创作和发布简介 {#author-content-publish}
-
->[!CAUTION]
->
-> 快速网站创建工具当前为技术预览。 它可用于测试和评估目的，并且除非与Adobe支持部门达成协议，否则不会用于生产。
 
 了解用户如何更新网站的内容非常重要。 在本章中，我们将采用 **内容作者** 并对上一章中生成的网站进行一些编辑更新。 在章节末尾，我们将发布更改，以了解实时网站的更新方式。
 
