@@ -12,13 +12,13 @@ level: Beginner
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
+source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
 workflow-type: tm+mt
 source-wordcount: '1843'
 ht-degree: 2%
 
 ---
-
 
 # 项目设置 {#project-setup}
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 前提条件 {#prerequisites}
 
-查看设置[本地开发环境](../overview.md#local-dev-environment)所需的工具和说明。 确保您在本地提供了新的Adobe Experience Manager实例，并且未安装其他示例/演示包（所需的Service Pack除外）。
+查看设置 [本地开发环境](./overview.md#local-dev-environment). 确保您在本地提供了新的Adobe Experience Manager实例，并且未安装其他示例/演示包（所需的Service Pack除外）。
 
 ## 目标 {#objective}
 
@@ -38,19 +38,19 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/30152/?quality=12&learn=on)
 
-在本章中，您将使用[AEM项目原型](https://github.com/adobe/aem-project-archetype)生成一个新的Adobe Experience Manager项目。 您的AEM项目包含用于Sites实施的所有代码、内容和配置。 本章中生成的项目将作为实施WKND站点的基础，并将在以后的章节中构建。
+在本章中，您将使用 [AEM项目原型](https://github.com/adobe/aem-project-archetype). 您的AEM项目包含用于Sites实施的所有代码、内容和配置。 本章中生成的项目将作为实施WKND站点的基础，并将在以后的章节中构建。
 
-**什么是Maven项目？** -  [Apache Maven](https://maven.apache.org/) 是用于构建项目的软件管理工具。*所有Adobe Experience Manager实* 施都使用Maven项目来基于AEM构建、管理和部署自定义代码。
+**什么是Maven项目？** - [阿帕奇·马文](https://maven.apache.org/) 是用于构建项目的软件管理工具。 *全部Adobe Experience Manager* 实施使用Maven项目来基于AEM构建、管理和部署自定义代码。
 
-**什么是Maven原型？** - Maven原 [型](https://maven.apache.org/archetype/index.html) 是用于生成新项目的模板或模式。AEM项目原型允许我们生成具有自定义命名空间的新项目，并包含遵循最佳实践的项目结构，从而大大加快了我们的项目速度。
+**什么是Maven原型？** - A [Maven原型](https://maven.apache.org/archetype/index.html) 是用于生成新项目的模板或模式。 AEM项目原型允许我们生成具有自定义命名空间的新项目，并包含遵循最佳实践的项目结构，从而大大加快了我们的项目速度。
 
 ## 创建项目 {#create}
 
-有几个选项可用于为AEM创建Maven多模块项目。 本教程将利用[Maven AEM项目原型&#x200B;**26**](https://github.com/adobe/aem-project-archetype)。 Cloud Manager还[提供了UI向导](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html)以启动创建AEM应用程序项目。 由Cloud Manager UI生成的基础项目的结构与直接使用原型的结构相同。
+有几个选项可用于为AEM创建Maven多模块项目。 本教程将利用 [Maven AEM项目原型 **26**](https://github.com/adobe/aem-project-archetype). Cloud Manager [提供UI向导](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html) 启动创建AEM应用程序项目。 由Cloud Manager UI生成的基础项目的结构与直接使用原型的结构相同。
 
 >[!NOTE]
 >
->本教程使用原型的版本&#x200B;**26**。 使用原型的&#x200B;**最新**&#x200B;版本生成新项目始终是最佳做法。
+>本教程使用的是版本 **26** 原型。 使用 **最新** 原型版本以生成新项目。
 
 接下来的一系列步骤将使用基于UNIX的命令行终端进行，但如果使用Windows终端，则应类似。
 
@@ -63,7 +63,7 @@ ht-degree: 2%
    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
-1. 通过运行以下命令，验证&#x200B;**adobe-public**&#x200B;配置文件是否处于活动状态：
+1. 验证 **adobe-public** 通过运行以下命令，配置文件处于活动状态：
 
    ```shell
    $ mvn help:effective-settings
@@ -82,15 +82,15 @@ ht-degree: 2%
    [INFO] Total time:  0.856 s
    ```
 
-   如果您执行&#x200B;**not**&#x200B;查看&#x200B;**adobe-public**&#x200B;操作，则表示在`~/.m2/settings.xml`文件中未正确引用Adobe存储库。 请重新访问在[本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven)中安装和配置Apache Maven的步骤。
+   如果是 **not** 请参阅 **adobe-public** 这表示您的Adobe存储库未在 `~/.m2/settings.xml` 文件。 请重新访问在中安装和配置Apache Maven的步骤 [本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven).
 
-1. 导航到要在其中生成AEM项目的目录。 这可以是要在其中维护项目源代码的任何目录。 例如，用户主目录下名为`code`的目录：
+1. 导航到要在其中生成AEM项目的目录。 这可以是要在其中维护项目源代码的任何目录。 例如，名为的目录 `code` 在用户的主目录下：
 
    ```shell
    $ cd ~/code
    ```
 
-1. 将以下内容粘贴到命令行中，以[以批量模式](https://maven.apache.org/archetype/maven-archetype-plugin/examples/generate-batch.html)生成项目：
+1. 将以下内容粘贴到命令行中以 [以批处理模式生成项目](https://maven.apache.org/archetype/maven-archetype-plugin/examples/generate-batch.html):
 
    ```shell
    mvn -B archetype:generate \
@@ -107,9 +107,9 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   > 如果定位AEM 6.5.5+ ，请将`aemVersion="cloud"`替换为`aemVersion="6.5.5"`。 如果定位的是6.4.8+版本，请使用`aemVersion="6.4.8"`。
+   > 如果定位AEM 6.5.5+，请替换 `aemVersion="cloud"` with `aemVersion="6.5.5"`. 如果定位的是6.4.8及更高版本，请使用 `aemVersion="6.4.8"`.
 
-   可在此处](https://github.com/adobe/aem-project-archetype#available-properties)找到用于配置项目[的可用属性的完整列表。
+   用于配置项目的可用属性的完整列表 [可在此处找到](https://github.com/adobe/aem-project-archetype#available-properties).
 
 1. 以下文件夹和文件结构将由本地文件系统上的Maven原型生成：
 
@@ -136,8 +136,8 @@ ht-degree: 2%
 
 生成项目代码并将其部署到AEM的本地实例。
 
-1. 确保在端口&#x200B;**4502**&#x200B;上本地运行AEM的创作实例。
-1. 从命令行中导航到`aem-guides-wknd`项目目录。
+1. 确保AEM的创作实例在端口上本地运行 **4502**.
+1. 从命令行中，导航到 `aem-guides-wknd` 项目目录。
 
    ```shell
    $ cd aem-guides-wknd
@@ -176,13 +176,13 @@ ht-degree: 2%
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven配置文件`autoInstallSinglePackage`编译项目的各个模块，并将单个包部署到AEM实例。 默认情况下，此包将部署到端口&#x200B;**4502**&#x200B;本地运行且凭据为`admin:admin`的AEM实例。
+   Maven个人资料 `autoInstallSinglePackage` 编译项目的各个模块，并将单个包部署到AEM实例。 默认情况下，此包将部署到端口上本地运行的AEM实例 **4502** 并拥有 `admin:admin`.
 
-1. 导航到本地AEM实例上的包管理器：[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)。 您应会看到`aem-guides-wknd.ui.apps`、`aem-guides-wknd.ui.config`、`aem-guides-wknd.ui.content`和`aem-guides-wknd.all`的包。
+1. 导航到本地AEM实例上的包管理器： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). 您应会看到 `aem-guides-wknd.ui.apps`, `aem-guides-wknd.ui.config`, `aem-guides-wknd.ui.content`和 `aem-guides-wknd.all`.
 
-1. 导航到站点控制台：[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)。 WKND站点将是其中一个站点。 它将包括一个具有美国和语言母版层次结构的网站结构。 使用原型生成项目时，此站点层次结构基于`language_country`和`isSingleCountryWebsite`的值。
+1. 导航到站点控制台： [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). WKND站点将是其中一个站点。 它将包括一个具有美国和语言母版层次结构的网站结构。 此网站层次结构基于 `language_country` 和 `isSingleCountryWebsite` 使用原型生成项目时。
 
-1. 选择&#x200B;**US** `>` **English**&#x200B;页面，然后单击菜单栏中的&#x200B;**编辑**&#x200B;按钮以打开该页面：
+1. 打开 **美国** `>` **英语** 页面，方法是选择页面并单击 **编辑** 按钮：
 
    ![站点控制台](assets/project-setup/aem-sites-console.png)
 
@@ -196,24 +196,24 @@ ht-degree: 2%
 
 生成的AEM项目由各个Maven模块组成，每个模块具有不同的角色。 本教程和大部分开发工作都侧重于以下模块：
 
-* [核心](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)  - Java代码，主要是后端开发人员。
+* [核心](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html) - Java代码，主要是后端开发人员。
 * [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)  — 包含CSS、JavaScript、Sass、Type Script的源代码，主要面向前端开发人员。
 * [ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)  — 包含组件和对话框定义，将编译的CSS和JavaScript嵌入为客户端库。
-* [ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)  — 包含结构内容和配置，如可编辑的模板、元数据架构(/content， /conf)。
+* [ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)  — 包含结构性内容和配置，如可编辑的模板、元数据架构(/content， /conf)。
 
-* **全部**  — 这是一个空的Maven模块，它将上述模块合并到可部署到AEM环境的单个包中。
+* **全部**  — 这是一个空的Maven模块，将上述模块合并到一个可以部署到AEM环境的包中。
 
 ![Maven项目图](assets/project-setup/project-pom-structure.png)
 
-请参阅[AEM项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) ，了解有关&#x200B;**all** Maven模块的更多详细信息。
+请参阅 [AEM项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 要了解更多详细信息，请 **全部** Maven模块。
 
 ### 包括核心组件 {#core-components}
 
-[AEM核心](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 组件是一套适用于AEM的标准化Web内容管理(WCM)组件。这些组件提供了一组功能的基线，旨在为各个项目设置样式、自定义和扩展。
+[AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 是一组适用于AEM的标准化Web内容管理(WCM)组件。 这些组件提供了一组功能的基线，旨在为各个项目设置样式、自定义和扩展。
 
-AEM as a Cloud Service环境包含最新版本的[AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。 因此，为AEM as aCloud Service生成的项目&#x200B;**不**&#x200B;包含AEM核心组件的嵌入。
+AEMas a Cloud Service环境包括 [AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). 因此，为AEMas a Cloud Service生成的项目会执行 **not** 包括嵌入的AEM核心组件。
 
-对于AEM 6.5/6.4生成的项目，原型会自动在项目中嵌入[AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。 嵌入AEM核心组件是AEM 6.5/6.4的最佳实践，目的是确保在您的项目中部署最新版本。 有关核心组件如何包含在项目中的[的更多信息，请访问此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components)。
+对于AEM 6.5/6.4生成的项目，原型会自动嵌入 [AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 中。 嵌入AEM核心组件是AEM 6.5/6.4的最佳实践，目的是确保在您的项目中部署最新版本。 有关核心组件的更多信息 [项目中包含的内容可在此处找到](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components).
 
 ## 源代码管理 {#source-control}
 
@@ -221,9 +221,9 @@ AEM as a Cloud Service环境包含最新版本的[AEM核心组件](https://exper
 
 无论您何时构建并安装代码包，Maven都会创建目标文件夹。 目标文件夹和内容应从SCM中排除。
 
-在`ui.apps`下方，观察是否创建了许多`.content.xml`文件。 这些XML文件映射在JCR中安装的内容的节点类型和属性。 这些文件至关重要，应当忽略&#x200B;**不**。
+下 `ui.apps` 请注意 `.content.xml` 文件。 这些XML文件映射在JCR中安装的内容的节点类型和属性。 这些文件至关重要，应该 **not** 被忽略。
 
-AEM项目原型将生成一个示例`.gitignore`文件，该文件可用作可以安全忽略其文件的起始点。 文件在`<src>/aem-guides-wknd/.gitignore`生成。
+AEM项目原型将生成一个示例 `.gitignore` 可用作文件安全忽略起点的文件。 文件在 `<src>/aem-guides-wknd/.gitignore`.
 
 ## 恭喜！ {#congratulations}
 
@@ -231,7 +231,7 @@ AEM项目原型将生成一个示例`.gitignore`文件，该文件可用作可�
 
 ### 后续步骤 {#next-steps}
 
-通过[组件基础知识](component-basics.md)教程中的简单`HelloWorld`示例，了解Adobe Experience Manager(AEM)站点组件的基础技术。
+通过简单的操作，了解Adobe Experience Manager(AEM)站点组件的基础技术 `HelloWorld` 示例 [组件基础知识](component-basics.md) 教程。
 
 ## 高级Maven命令（附加） {#advanced-maven-commands}
 
@@ -241,9 +241,9 @@ AEM项目原型将生成一个示例`.gitignore`文件，该文件可用作可�
 
 ### 核心模块 {#core-module}
 
-**[核心](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)**&#x200B;模块包含与项目关联的所有Java代码。 构建后，它会将OSGi包部署到AEM。 要仅构建此模块，请执行以下操作：
+的 **[核心](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)** 模块包含与项目关联的所有Java代码。 构建后，它会将OSGi包部署到AEM。 要仅构建此模块，请执行以下操作：
 
-1. 导航到`core`文件夹（在`aem-guides-wknd`下）：
+1. 导航到 `core` 文件夹（下方） `aem-guides-wknd`):
 
    ```shell
    $ cd core/
@@ -263,23 +263,23 @@ AEM项目原型将生成一个示例`.gitignore`文件，该文件可用作可�
    [INFO] Total time:  8.558 s
    ```
 
-1. 导航到[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)。 这是OSGi Web控制台，其中包含有关在AEM实例上安装的所有包的信息。
+1. 导航到 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles). 这是OSGi Web控制台，其中包含有关在AEM实例上安装的所有包的信息。
 
-1. 切换&#x200B;**Id**&#x200B;排序列，此时您应会看到WKND包已安装并处于活动状态。
+1. 切换 **Id** 排序列，您应会看到WKND包已安装并处于活动状态。
 
    ![核心包](assets/project-setup/wknd-osgi-console.png)
 
-1. 您可以在[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/wknd-packages/application/install/aem-guides-wknd.core-1.0.0-SNAPSHOT.jar)中看到jar的“物理”位置：
+1. 您可以在 [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/wknd-packages/application/install/aem-guides-wknd.core-1.0.0-SNAPSHOT.jar):
 
    ![CRXDE Jar的位置](assets/project-setup/jcr-bundle-location.png)
 
 ### Ui.apps和Ui.content模块 {#apps-content-module}
 
-**[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven模块包含`/apps`下站点所需的所有渲染代码。 这包括将以名为[clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)的AEM格式存储的CSS/JS。 这还包括用于渲染动态HTML的[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hans)脚本。 您可以将&#x200B;**ui.apps**&#x200B;模块视为JCR中结构的映射，但其格式可以存储在文件系统中并提交到源代码控制。 **ui.apps**&#x200B;模块仅包含代码。
+的 **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven模块包含站点下方所需的所有渲染代码 `/apps`. 这包括将以名为的AEM格式存储的CSS/JS [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). 这还包括 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html) 用于呈现动态HTML的脚本。 您可以考虑 **ui.apps** 模块作为JCR中结构的映射，但格式可以存储在文件系统中并提交到源代码控制。 的 **ui.apps** 模块仅包含代码。
 
 要构建仅此模块，请执行以下操作：
 
-1. 从命令行中。 导航到`ui.apps`文件夹（在`aem-guides-wknd`下）：
+1. 从命令行中。 导航到 `ui.apps` 文件夹（下方） `aem-guides-wknd`):
 
    ```shell
    $ cd ../ui.apps
@@ -299,11 +299,11 @@ AEM项目原型将生成一个示例`.gitignore`文件，该文件可用作可�
    [INFO] ------------------------------------------------------------------------
    ```
 
-1. 导航到[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)。 您应该看到`ui.apps`包是第一个安装的包，它应具有比任何其他包更新的时间戳。
+1. 导航到 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). 您应会看到 `ui.apps` 包作为第一个安装的包，且其时间戳应比任何其他包的时间戳都更新。
 
    ![已安装Ui.apps包](assets/project-setup/ui-apps-package.png)
 
-1. 返回到命令行并运行以下命令（在`ui.apps`文件夹中）：
+1. 返回到命令行并运行以下命令(在 `ui.apps` 文件夹):
 
    ```shell
    $ mvn -PautoInstallPackagePublish clean install
@@ -324,9 +324,9 @@ AEM项目原型将生成一个示例`.gitignore`文件，该文件可用作可�
    [INFO] ------------------------------------------------------------------------
    ```
 
-   配置文件`autoInstallPackagePublish`用于将包部署到端口&#x200B;**4503**&#x200B;上运行的发布环境。 如果找不到在http://localhost:4503上运行的AEM实例，则需要出现上述错误。
+   用户档案 `autoInstallPackagePublish` 用于将包部署到端口上运行的发布环境 **4503**. 如果找不到在http://localhost:4503上运行的AEM实例，则需要出现上述错误。
 
-1. 最后，运行以下命令以在端口&#x200B;**4504**&#x200B;上部署`ui.apps`包：
+1. 最后，运行以下命令以部署 `ui.apps` 端口上的包 **4504**:
 
    ```shell
    $ mvn -PautoInstallPackage clean install -Daem.port=4504
@@ -344,8 +344,8 @@ AEM项目原型将生成一个示例`.gitignore`文件，该文件可用作可�
    [INFO] --------------------------------------------------------------------
    ```
 
-   如果端口&#x200B;**4504**&#x200B;上没有运行的AEM实例可用，则预计会发生生成失败。 参数`aem.port`在`aem-guides-wknd/pom.xml`的POM文件中定义。
+   如果端口上没有运行AEM实例，则预期会再次发生生成失败 **4504** 中。 参数 `aem.port` 在的POM文件中定义 `aem-guides-wknd/pom.xml`.
 
-**[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)**&#x200B;模块的结构与&#x200B;**ui.apps**&#x200B;模块的结构相同。 唯一的区别在于，**ui.content**&#x200B;模块包含所谓的&#x200B;**可变**&#x200B;内容。 **** 多变量内容主要是指诸如模板、策略或文件夹结构之类的非代码配置，这些配置存储在源代码控制中，但 **** 可以直接在AEM实例上修改。有关详细信息，请参阅页面和模板一章。
+的 **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** 模块的结构与 **ui.apps** 模块。 唯一的区别是 **ui.content** 模块包含称为 **可变** 内容。 **可变** 内容主要是指存储在源代码管理中的模板、策略或文件夹结构等非代码配置 **但** 可以直接在AEM实例上修改。 有关详细信息，请参阅页面和模板一章。
 
-用于构建&#x200B;**ui.apps**&#x200B;模块的相同Maven命令可用于构建&#x200B;**ui.content**&#x200B;模块。 您可以在&#x200B;**ui.content**&#x200B;文件夹中重复上述步骤。
+用于构建 **ui.apps** 模块可用于构建 **ui.content** 模块。 您可以在 **ui.content** 文件夹。

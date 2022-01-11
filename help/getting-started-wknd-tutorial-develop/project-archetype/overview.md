@@ -12,10 +12,10 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 8%
+source-wordcount: '478'
+ht-degree: 7%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 8%
 
 应在本地安装以下内容：
 
-* 本地AEM **作者** 实例(Cloud ServiceSDK、6.5.5+或6.4.8.1+)
+* [本地AEM **作者** 实例](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK、6.5.5+或6.4.8.1+)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [阿帕奇·马文](https://maven.apache.org/) （3.3.9或更高版本）
 * [Node.js](https://nodejs.org/en/) （LTS — 长期支持）
