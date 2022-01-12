@@ -1,15 +1,15 @@
 ---
 title: 创建访问令牌
-description: 将JSON Web令牌(JWT)与AdobeIMS API交换为AEM访问令牌。
+description: 将JSON Web令牌(JWT)与Adobe IMS API交换为AEM访问令牌。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
-feature: Document Services
+feature: Output Service
 topic: Development
 kt: 8185
 thumbnail: 8185.jpg
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 # 用于访问令牌的Exchange JWT
 
 
-在上一步中创建的JWT将与AdobeIMS API交换，以获取访问令牌，然后该令牌可用于作为Cloud Service访问AEM。 要请求访问令牌，请向IMS身份验证服务发送包含JWT、client_id、client_secret的POST请求。
+在上一步中创建的JWT将与Adobe IMS API交换访问令牌，然后用于访问AEMas a Cloud Service。 要请求访问令牌，请向IMS身份验证服务发送包含JWT、client_id、client_secret的POST请求。
 
 以下代码用于为访问令牌生成Exchange JWT
 
