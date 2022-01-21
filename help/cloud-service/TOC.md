@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
+source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 21%
+source-wordcount: '656'
+ht-degree: 22%
 
 ---
 
@@ -131,10 +131,10 @@ ht-degree: 21%
       + [代码存储库Modernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
       + [Dispatcher Converter](./migration/cloud-acceleration-manager/dispatcher-converter.md)
       + [索引转换器](./migration/cloud-acceleration-manager/index-converter.md)
-      + [资产工作流迁移工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
+      + [资源工作流迁移 工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [导航Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
-+ 表单{#forms}
++ Forms{#forms}
 
    + 为Formsas a Cloud Service开发{#developing-for-cloud-service}
       + [入门](./forms/developing-for-cloud-service/getting-started.md)
@@ -145,6 +145,7 @@ ht-degree: 21%
       + [包括Cloud Services和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [部署到开发环境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [更新maven原型](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + 创建自适应表单{#create-first-af}
       + [简介](./forms/create-first-af/introduction.md)
       + [创建名称](./forms/create-first-af/create-theme.md)
@@ -172,6 +173,7 @@ ht-degree: 21%
       + [预填表单](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [查询提交](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + 创建审阅工作流{#create-aem-workflow}
+      + [外部化工作流存储](./forms/create-aem-workflow/externalize-workflow.md)
       + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
       + [触发工作流](./forms/create-aem-workflow/configure-af.md)
    + Adobe Sign与AEM Forms{#forms-and-sign}
