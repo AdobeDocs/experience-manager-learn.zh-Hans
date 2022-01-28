@@ -13,10 +13,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
-source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
+source-git-commit: 2685f2553349d6f0b48e03f2ed24dcea7ad9ac70
 workflow-type: tm+mt
 source-wordcount: '999'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -189,7 +189,7 @@ Adobe对每个AEMas a Cloud Service环境的日志级别的一般指导如下：
 
 这需要更新日志记录OSGi配置以使用特定于环境的变量占位符。 [默认值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) 对于日志级别，应设置为 [Adobe推荐](#log-levels). 例如：
 
-`/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
+`/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config~example.cfg.json`
 
 ```
 {
