@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 922248133a12e05ea9068a0646324f2370e743e9
+source-git-commit: 83e16ea87847182139982ea2378d8ff9f079c968
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 21%
+source-wordcount: '221'
+ht-degree: 19%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 21%
       + [5 - GraphQL端点](./graphql/video-series/graphql-endpoints.md)
       + [6 — 创作和发布架构](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL持久查询](./graphql/video-series/graphql-persisted-queries.md)
-   + 多步教程{#multi-step}
+   + 基本教程{#multi-step}
       + [概述](./graphql/multi-step/overview.md)
       + [1 — 定义内容片段模型](./graphql/multi-step/content-fragment-models.md)
       + [2 — 创作内容片段](./graphql/multi-step/author-content-fragments.md)
@@ -39,6 +39,13 @@ ht-degree: 21%
       + [4 — 从外部应用程序查询](./graphql/multi-step/graphql-and-external-app.md)
       + [5 — 使用片段引用进行高级数据建模](./graphql/multi-step/fragment-references.md)
       + [6 — 生产部署](./graphql/multi-step/production-deployment.md)
+   + 高级教程{#advanced-tutorial}
+      + [概述](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
+      + [1 — 创建内容片段模型](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
+      + [2 — 创作内容片段](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
+      + [3 — 浏览AEM GraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
+      + [4 — 持久GraphQL查询](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
+      + [5 — 客户端应用程序集成](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
    + 示例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
