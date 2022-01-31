@@ -131,18 +131,18 @@ Adobe Experience Manager附带了一些内置的验证方法。 这些验证方�
 
 10. 在 **仅接受指定的图像宽度**，选择“最大宽度”。 在 **最大（像素）** 字段，输入“500”。 为 **仅接受指定的图像高度**.
 
-   这些验证可确保添加的图像不会超过指定的值。 验证规则现在应如下所示：
-   ![内容引用验证规则](assets/define-content-fragment-models/content-reference-validation.png)
+    这些验证可确保添加的图像不会超过指定的值。 验证规则现在应如下所示：
+    ![内容引用验证规则](assets/define-content-fragment-models/content-reference-validation.png)
 
 11. 添加 **多行文本** 字段 **字段标签** 《传记》 离开 **默认类型** 下拉列表作为默认的“富文本”选项。
 
-   ![传记选项](assets/define-content-fragment-models/biography.png)
+    ![传记选项](assets/define-content-fragment-models/biography.png)
 
 12. 导航到 **数据类型** ，然后拖动 **明细列表** 字段。 而不是默认 **渲染为** 选项，选择 **下拉列表**. 输入教师体验级别选项的选项，如专家、高级、中级。
 
 13. 接下来，拖动另一个 **明细列表** “讲师体验级别”下的字段，然后选中 **渲染为** 选项。 进入不同的技能，如攀岩、冲浪、骑自行车、滑雪和背包。 选项标签和选项值应匹配如下：
 
-   ![技能明细表](assets/define-content-fragment-models/skills-enum.png)
+    ![技能明细表](assets/define-content-fragment-models/skills-enum.png)
 
 14. 最后，使用 **多行文本** 字段。
 
