@@ -1,18 +1,18 @@
 ---
 title: 利用产出和Forms服务在AEM Forms进行开发
 description: 在AEM Forms中使用输出和Forms服务API
-feature: 输出服务
+feature: Output Service
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
+source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 1%
+source-wordcount: '601'
+ht-degree: 0%
 
 ---
-
 
 # 利用产出和Forms服务在AEM Forms进行开发{#developing-with-output-and-forms-services-in-aem-forms}
 
@@ -20,8 +20,8 @@ ht-degree: 1%
 
 在本文中，我们将了解以下内容
 
-* 输出服务 — 通常，此服务用于将xml数据与xdp模板或pdf合并，以生成扁平化pdf。 有关更多详细信息，请参阅输出服务的[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)。
-* FormsService — 这是一项用途广泛的服务，允许您将数据从PDF文件导出/导入PDF文件。 有关详细信息，请参阅Forms服务的[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html)。
+* 输出服务 — 通常，此服务用于将xml数据与xdp模板或pdf合并，以生成扁平化的pdf。 有关更多详细信息，请参阅[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 的值。
+* FormsService — 这是一项用途广泛的服务，允许您将数据从文件导出/导入PDF文件。 有关更多详细信息，请参阅 [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html) 为Forms服务。
 
 
 以下代码片段从PDF文件导出数据
@@ -60,45 +60,41 @@ Line2从请求中提取saveLocation
 1. /content/AemFormsSamples/exportdata
 1. /content/AemFormsSamples/outputservice
 1. 搜索“Sling反向链接过滤器”
-1. 选中“允许空”复选框。 （此设置应仅用于测试目的）
-有多种方法可测试示例代码。 最快、最简单的方法是使用Postman应用程序。 Postman允许您向服务器发出POST请求。 在系统上安装Postman应用程序。
+1. 选中“允许空”复选框。 （此设置应仅用于测试目的）有多种方法可测试示例代码。 最快、最简单的方法是使用Postman应用程序。 Postman允许您向服务器发出POST请求。 在系统上安装Postman应用程序。
 启动应用程序并输入以下URL以测试导出数据API
 
-确保已从下拉列表中选择“POST”
-http://localhost:4502/content/AemFormsSamples/exportdata.html
-确保将“授权”指定为“基本身份验证”。 指定AEM Server用户名和密码
-导航到“Body”选项卡，并指定请求参数，如下图所示
-![export](assets/postexport.png)
+确保您从下拉列表http://localhost:4502/content/AemFormsSamples/exportdata.html中选择了“POST”。确保将“授权”指定为“基本身份验证”。 指定AEM Server用户名和密码导航到“Body”选项卡，并指定请求参数，如下图所示
+![导出](assets/postexport.png)
 然后，单击“发送”按钮
 
-包含3个示例。 以下各段说明了何时使用输出服务或Forms服务、服务的url以及每个服务所期望的输入参数
+包含3个示例。 以下段落说明了何时使用输出服务或Forms服务、服务的url以及每个服务所期望的输入参数
 
-**合并数据和扁平化输出：**
+## 合并数据和扁平化输出
 
 * 使用输出服务将数据与xdp或pdf文档合并，以生成扁平化pdf
 * **POSTURL**:http://localhost:4502/content/AemFormsSamples/outputservice.html
 * **请求参数 —**
 
-   * xdp_or_pdf_file :要将数据与
-   * xmlfile:将与xdp_or_pdf_file合并的xml数据文件
-   * saveLocation:在文件系统上保存已渲染文档的位置
+   * **xdp_or_pdf_file** :要将数据与
+   * **xmlfile**:将与xdp_or_pdf_file合并的xml数据文件
+   * **saveLocation**:在文件系统上保存已渲染文档的位置。 例如c:\\documents\\sample.pdf
 
-**将数据导入PDF文件：**
+### 将数据导入PDF文件
+
 * 使用FormsService将数据导入PDF文件
-* **POSTURL**  - http://localhost:4502/content/AemFormsSamples/mergedata.html
+* **POSTURL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
 * **请求参数：**
 
-   * 配置文件：要将数据与
-   * xmlfile:将与pdf文件合并的xml数据文件
-   * saveLocation:在文件系统上保存已渲染文档的位置。 例如c:\\\outputsample.pdf。
+   * **pdfile** :要将数据与
+   * **xmlfile**:将与pdf文件合并的xml数据文件
+   * **saveLocation**:在文件系统上保存已渲染文档的位置。 例如c:\\outputsample.pdf。
 
 **从PDF文件导出数据**
 * 使用FormsService从PDF文件导出数据
-* **POST** URL - http://localhost:4502/content/AemFormsSamples/exportdata.html
+* **POSTUR** L - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **请求参数：**
 
-   * 配置文件：要从中导出数据的pdf文件
-   * saveLocation:在文件系统上保存导出数据的位置
+   * **pdfile** :要从中导出数据的pdf文件
+   * **saveLocation**:在文件系统上保存导出数据的位置。 例如c:\\documents\\exported_data.xml
 
 [您可以导入此邮递员集合以测试API](assets/document-services-postman-collection.json)
-
