@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Assets 的视频和教程集合
 breadcrumb-title: AEM Assets 教程
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: a5c128d92f4a4625279b6ef76c61f1afb6ed45d5
+source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 26%
+source-wordcount: '378'
+ht-degree: 25%
 
 ---
 
@@ -73,7 +73,7 @@ ht-degree: 26%
       + [资产共享共用](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [在本地AEM上设置资产共享共用](./sharing/asset-share-commons-technical-video-setup.md)
       + [命名资产共享共用](./sharing/asset-share-commons-feature-video-theming.md)
-   + [连接的资产](./sharing/connected-assets.md)
+   + [连接的资源](./sharing/connected-assets.md)
 
 
 + 与创意工作流集成{#creative-workflows}
@@ -137,6 +137,12 @@ ht-degree: 26%
    + 增强的连接器{#enhanced-connector}
       + [增强的连接器基础知识](./workfront/enhanced-connector/basics.md)
       + [项目文件夹](./workfront/enhanced-connector/project-folders.md)
+      + AEM专家系列{#aem-experts-series}
+         + [概述](./workfront/enhanced-connector/aem-experts-series/overview.md)
+         + [设置](./workfront/enhanced-connector/aem-experts-series/setup.md)
+         + [Workfront表单和AEM元数据](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
+         + [标记、项目链接的文件夹和文件夹元数据](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)
+         + [高级设置和工作流](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 
 + 翻译 {#translation}
    + [源文件翻译](translation/source-file-translation-feature-video-use.md)
