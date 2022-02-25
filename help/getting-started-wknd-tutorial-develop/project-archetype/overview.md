@@ -2,7 +2,7 @@
 title: AEM Sites入门 — 项目原型
 description: AEM Sites入门 — 项目原型。 WKND教程是一个多部分教程，专为不熟悉Adobe Experience Manager的开发人员而设计。 本教程将指导您实施一个AEM网站，以打造一个虚构的生活方式品牌WKND。 本教程涵盖基本主题，如项目设置、Maven原型、核心组件、可编辑模板、客户端库和组件开发。
 sub-product: sites
-version: 6.4, 6.5, Cloud Service
+version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
 topic: Content Management, Development
@@ -12,10 +12,10 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
+source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 7%
+source-wordcount: '475'
+ht-degree: 8%
 
 ---
 
@@ -25,13 +25,13 @@ ht-degree: 7%
 
 本教程首先使用 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 以生成新项目。
 
-本教程旨在与 **AEMas a Cloud Service** 并且向后兼容 **AEM 6.5.5.0+** 和 **AEM 6.4.8.1+**. 站点的实施方式如下：
+本教程旨在与 **AEMas a Cloud Service** 并且向后兼容 **AEM 6.5.10+**. 站点的实施方式如下：
 
 * [Maven AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)
 * Sling 模型
-* [可编辑的模板](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
+* [可编辑模板](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
 * [样式系统](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
 *估计需要1-2小时才能完成教程的每个部分。*
@@ -44,7 +44,7 @@ ht-degree: 7%
 
 应在本地安装以下内容：
 
-* [本地AEM **作者** 实例](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK、6.5.5+或6.4.8.1+)
+* [本地AEM **作者** 实例](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK，6.5.10+)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [阿帕奇·马文](https://maven.apache.org/) （3.3.9或更高版本）
 * [Node.js](https://nodejs.org/en/) （LTS — 长期支持）

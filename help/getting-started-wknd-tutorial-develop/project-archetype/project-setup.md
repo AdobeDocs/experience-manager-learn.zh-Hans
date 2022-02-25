@@ -3,7 +3,7 @@ title: AEM Sites入门 — 项目设置
 seo-title: Getting Started with AEM Sites - Project Setup
 description: 介绍如何创建Maven多模块项目以管理AEM站点的代码和配置。
 sub-product: sites
-version: 6.4, 6.5, Cloud Service
+version: 6.5, Cloud Service
 type: Tutorial
 feature: AEM Project Archetype
 topic: Content Management, Development
@@ -13,10 +13,10 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
+source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
 workflow-type: tm+mt
-source-wordcount: '1843'
-ht-degree: 2%
+source-wordcount: '1818'
+ht-degree: 3%
 
 ---
 
@@ -46,11 +46,11 @@ ht-degree: 2%
 
 ## 创建项目 {#create}
 
-有几个选项可用于为AEM创建Maven多模块项目。 本教程将利用 [Maven AEM项目原型 **26**](https://github.com/adobe/aem-project-archetype). Cloud Manager [提供UI向导](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html) 启动创建AEM应用程序项目。 由Cloud Manager UI生成的基础项目的结构与直接使用原型的结构相同。
+有几个选项可用于为AEM创建Maven多模块项目。 本教程将利用 [Maven AEM项目原型 **35**](https://github.com/adobe/aem-project-archetype). Cloud Manager [提供UI向导](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html) 启动创建AEM应用程序项目。 由Cloud Manager UI生成的基础项目的结构与直接使用原型的结构相同。
 
 >[!NOTE]
 >
->本教程使用的是版本 **26** 原型。 使用 **最新** 原型版本以生成新项目。
+>本教程使用的是版本 **35** 原型。 使用 **最新** 原型版本以生成新项目。
 
 接下来的一系列步骤将使用基于UNIX的命令行终端进行，但如果使用Windows终端，则应类似。
 
@@ -63,27 +63,6 @@ ht-degree: 2%
    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
-1. 验证 **adobe-public** 通过运行以下命令，配置文件处于活动状态：
-
-   ```shell
-   $ mvn help:effective-settings
-       ...
-   <activeProfiles>
-       <activeProfile>adobe-public</activeProfile>
-   </activeProfiles>
-   <pluginGroups>
-       <pluginGroup>org.apache.maven.plugins</pluginGroup>
-       <pluginGroup>org.codehaus.mojo</pluginGroup>
-   </pluginGroups>
-   </settings>
-   [INFO] ------------------------------------------------------------------------
-   [INFO] BUILD SUCCESS
-   [INFO] ------------------------------------------------------------------------
-   [INFO] Total time:  0.856 s
-   ```
-
-   如果是 **not** 请参阅 **adobe-public** 这表示您的Adobe存储库未在 `~/.m2/settings.xml` 文件。 请重新访问在中安装和配置Apache Maven的步骤 [本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven).
-
 1. 导航到要在其中生成AEM项目的目录。 这可以是要在其中维护项目源代码的任何目录。 例如，名为的目录 `code` 在用户的主目录下：
 
    ```shell
@@ -93,21 +72,22 @@ ht-degree: 2%
 1. 将以下内容粘贴到命令行中以 [以批处理模式生成项目](https://maven.apache.org/archetype/maven-archetype-plugin/examples/generate-batch.html):
 
    ```shell
-   mvn -B archetype:generate \
+   mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
        -D archetypeGroupId=com.adobe.aem \
        -D archetypeArtifactId=aem-project-archetype \
-       -D archetypeVersion=26 \
+       -D archetypeVersion=35 \
        -D appTitle="WKND Sites Project" \
        -D appId="wknd" \
-       -D groupId="com.adobe.aem.guides.wknd" \
+       -D groupId="com.adobe.aem.guides" \
        -D artifactId="aem-guides-wknd" \
+       -D package="com.adobe.aem.guides.wknd" \
        -D version="0.0.1-SNAPSHOT" \
        -D aemVersion="cloud"
    ```
 
    >[!NOTE]
    >
-   > 如果定位AEM 6.5.5+，请替换 `aemVersion="cloud"` with `aemVersion="6.5.5"`. 如果定位的是6.4.8及更高版本，请使用 `aemVersion="6.4.8"`.
+   > 如果定位AEM 6.5.10+，请替换 `aemVersion="cloud"` with `aemVersion="6.5.10"`.
 
    用于配置项目的可用属性的完整列表 [可在此处找到](https://github.com/adobe/aem-project-archetype#available-properties).
 
@@ -275,7 +255,7 @@ AEM项目原型将生成一个示例 `.gitignore` 可用作文件安全忽略起
 
 ### Ui.apps和Ui.content模块 {#apps-content-module}
 
-的 **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven模块包含站点下方所需的所有渲染代码 `/apps`. 这包括将以名为的AEM格式存储的CSS/JS [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). 这还包括 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html) 用于呈现动态HTML的脚本。 您可以考虑 **ui.apps** 模块作为JCR中结构的映射，但格式可以存储在文件系统中并提交到源代码控制。 的 **ui.apps** 模块仅包含代码。
+的 **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven模块包含站点下方所需的所有渲染代码 `/apps`. 这包括将以名为的AEM格式存储的CSS/JS [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). 这还包括 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hans) 用于呈现动态HTML的脚本。 您可以考虑 **ui.apps** 模块作为JCR中结构的映射，但格式可以存储在文件系统中并提交到源代码控制。 的 **ui.apps** 模块仅包含代码。
 
 要构建仅此模块，请执行以下操作：
 
@@ -349,3 +329,7 @@ AEM项目原型将生成一个示例 `.gitignore` 可用作文件安全忽略起
 的 **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** 模块的结构与 **ui.apps** 模块。 唯一的区别是 **ui.content** 模块包含称为 **可变** 内容。 **可变** 内容主要是指存储在源代码管理中的模板、策略或文件夹结构等非代码配置 **但** 可以直接在AEM实例上修改。 有关详细信息，请参阅页面和模板一章。
 
 用于构建 **ui.apps** 模块可用于构建 **ui.content** 模块。 您可以在 **ui.content** 文件夹。
+
+## 疑难解答
+
+如果您在使用AEM项目原型生成项目时遇到问题，请参阅 [已知问题](https://github.com/adobe/aem-project-archetype#known-issues) 和打开列表 [问题](https://github.com/adobe/aem-project-archetype/issues).
