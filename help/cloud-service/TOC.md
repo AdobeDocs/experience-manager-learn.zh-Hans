@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+source-git-commit: 0848419e4da935787c351469925cc900d4eb21df
 workflow-type: tm+mt
-source-wordcount: '674'
-ht-degree: 21%
+source-wordcount: '679'
+ht-degree: 24%
 
 ---
 
@@ -105,7 +105,7 @@ ht-degree: 21%
    + [批量导入资产](./migration/bulk-import.md)
 
    + 移动到 AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
-      + [Communications API](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
+      + [简介](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
       + [入门](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
       + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
       + [双酚A和CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
@@ -119,11 +119,11 @@ ht-degree: 21%
          + [内容传输工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
       + [疑难解答](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Formsas a Cloud Service {#aem-forms}
-         + [Communications API](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
+         + [简介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [数字注册](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
          + [通信](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
    + Cloud Acceleration Manager {#cloud-acceleration-manager}
-      + [Communications API](./migration/cloud-acceleration-manager/introduction.md)
+      + [简介](./migration/cloud-acceleration-manager/introduction.md)
       + [就绪性和最佳实践分析器](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [实施阶段](./migration/cloud-acceleration-manager/implementation-phase.md)
       + [内容传输工具](./migration/cloud-acceleration-manager/content-transfer-tool.md)
@@ -131,7 +131,7 @@ ht-degree: 21%
       + [代码存储库Modernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
       + [Dispatcher Converter](./migration/cloud-acceleration-manager/dispatcher-converter.md)
       + [索引转换器](./migration/cloud-acceleration-manager/index-converter.md)
-      + [资源工作流迁移 工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
+      + [资源工作流迁移工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [导航Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + Forms{#forms}
@@ -147,7 +147,7 @@ ht-degree: 21%
       + [部署到开发环境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
       + [更新maven原型](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + 创建自适应表单{#create-first-af}
-      + [Communications API](./forms/create-first-af/introduction.md)
+      + [简介](./forms/create-first-af/introduction.md)
       + [创建名称](./forms/create-first-af/create-theme.md)
       + [创建模板](./forms/create-first-af/create-template.md)
       + [创建片段](./forms/create-first-af/create-fragments.md)
@@ -159,7 +159,7 @@ ht-degree: 21%
       + [配置开始面板](./forms/create-first-af/configure-start-panel.md)
       + [添加和配置工具栏](./forms/create-first-af/add-configure-toolbar.md)
    + AEM Forms CS中的文档生成{#doc-gen-formscs}
-      + [Communications API](./forms/doc-gen-forms-cs/introduction.md)
+      + [简介](./forms/doc-gen-forms-cs/introduction.md)
       + [创建服务凭据](./forms/doc-gen-forms-cs/service-credentials.md)
       + [创建JWT令牌](./forms/doc-gen-forms-cs/create-jwt.md)
       + [创建访问令牌](./forms/doc-gen-forms-cs/create-access-token.md)
@@ -167,13 +167,13 @@ ht-degree: 21%
       + [测试解决方案](./forms/doc-gen-forms-cs/test.md)
       + [挑战](./forms/doc-gen-forms-cs/challenge.md)
    + 使用批处理API生成文档{#formscs-batch-api}
-      + [Communications API](./forms/formscs-batch-api/introduction.md)
+      + [简介](./forms/formscs-batch-api/introduction.md)
       + [配置Azure存储](./forms/formscs-batch-api/configure-azure-storage.md)
       + [创建USC批量配置](./forms/formscs-batch-api/configure-usc-batch.md)
       + [创建批量配置](./forms/formscs-batch-api/create-batch-config.md)
       + [执行批处理](./forms/formscs-batch-api/execute-batch-generate-documents.md)
    + Azure门户存储{#forms-cs-azure-portal}
-      + [Communications API](./forms/forms-cs-azure-portal/introduction.md)
+      + [简介](./forms/forms-cs-azure-portal/introduction.md)
       + [创建表单数据模型](./forms/forms-cs-azure-portal/create-fdm.md)
       + [在Azure存储中存储表单数据](./forms/forms-cs-azure-portal/create-af.md)
       + [预填表单](./forms/forms-cs-azure-portal/prefill-af-storage.md)
@@ -183,13 +183,13 @@ ht-degree: 21%
       + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
       + [触发工作流](./forms/create-aem-workflow/configure-af.md)
    + Adobe Sign与AEM Forms{#forms-and-sign}
-      + [Communications API](./forms/forms-and-sign/introduction.md)
+      + [简介](./forms/forms-and-sign/introduction.md)
       + [Adobe Sign API应用程序](./forms/forms-and-sign/create-sign-api-application.md)
       + [Adobe Sign 云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
       + [配置以进行填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
    + 与Salesforce集成{#integrate-with-salesforce}
-      + [Communications API](./forms/integrate-with-salesforce/introduction.md)
+      + [简介](./forms/integrate-with-salesforce/introduction.md)
       + [创建连接的应用程序](./forms/integrate-with-salesforce/create-connected-app.md)
       + [创建swagger文件](./forms/integrate-with-salesforce/describe-rest-api.md)
       + [创建数据源](./forms/integrate-with-salesforce/create-data-source.md)
@@ -217,10 +217,13 @@ ht-degree: 21%
    + 高级{#advanced}
       + [元数据工作程序](./asset-compute/advanced/metadata.md)
    + [疑难解答](./asset-compute/troubleshooting.md)
++ 云5{#cloud-5}
+   + [简介](./cloud-5/cloud5-introduction.md)
+   + [CDN深入研究](./cloud-5/cloud5-aem-cdn-part1.md)
 + [AEM专家系列](./aem-experts-series.md)
 + 多步Tutorials{#multi-step-tutorials}
    + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
-   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans)
    + [SPA Editor(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [SPA编辑器(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
