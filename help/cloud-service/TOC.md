@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 0848419e4da935787c351469925cc900d4eb21df
+source-git-commit: 5da75b172a7dda29452954990f6ab2374e7698d9
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 24%
+source-wordcount: '697'
+ht-degree: 23%
 
 ---
 
@@ -188,6 +188,11 @@ ht-degree: 24%
       + [Adobe Sign 云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
       + [配置以进行填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + 与Microsoft Dynamics集成{#formscs-dynamics-crm}
+      + [创建Dynamics应用程序](./forms/formscs-dynamics-crm/create-dynamics-account.md)
+      + [配置数据源](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
+      + [创建表单数据模型](./forms/formscs-dynamics-crm/create-form-data-model.md)
+      + [创建自适应表单](./forms/formscs-dynamics-crm/create-adaptive-form.md)
    + 与Salesforce集成{#integrate-with-salesforce}
       + [简介](./forms/integrate-with-salesforce/introduction.md)
       + [创建连接的应用程序](./forms/integrate-with-salesforce/create-connected-app.md)
@@ -219,7 +224,8 @@ ht-degree: 24%
    + [疑难解答](./asset-compute/troubleshooting.md)
 + 云5{#cloud-5}
    + [简介](./cloud-5/cloud5-introduction.md)
-   + [CDN深入研究](./cloud-5/cloud5-aem-cdn-part1.md)
+   + [第1季](./cloud-5/cloud5-season-1.md)
+   + [AEM CDN第1部分](./cloud-5/cloud5-aem-cdn-part1.md)
 + [AEM专家系列](./aem-experts-series.md)
 + 多步Tutorials{#multi-step-tutorials}
    + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
