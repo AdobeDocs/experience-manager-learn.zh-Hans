@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: 15b57ec6792bc47d0041946014863b13867adf22
+source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1654'
 ht-degree: 3%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 3%
    + [使用Salesforce形成数据模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [将项目动态添加到选择组件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
 + 使用表单数据模型预填自适应表单{#prefill-fdm-db}
-   + [Communications API](prefill-fdm-db/introduction.md)
+   + [简介](prefill-fdm-db/introduction.md)
    + [创建数据库表](prefill-fdm-db/create-database-tables.md)
    + [配置表单数据模型](prefill-fdm-db/configuring-form-data-model.md)
    + [获取请求参数](prefill-fdm-db/get-request-parameter.md)
@@ -103,16 +103,16 @@ ht-degree: 3%
    + [使用嵌套面板导航选项卡](ui-tips-tricks/nested-panels.md)
    + [将图标添加到导航选项卡](ui-tips-tricks/active-complete.md)
 + 自定义收件箱{#inbox-customization}
-   + [Communications API](inbox-customization/introduction.md)
+   + [简介](inbox-customization/introduction.md)
    + [添加自定义列](inbox-customization/add-married-column.md)
    + [使用美观模板](inbox-customization/use-sightly-template.md)
 + 电子邮件表单附件{#zipping-form-attachments}
-   + [Communications API](zipping-form-attachments/introduction.md)
+   + [简介](zipping-form-attachments/introduction.md)
    + [Zip表单附件](zipping-form-attachments/custom-process-step.md)
    + [电子邮件表单附件](zipping-form-attachments/populating-list-of-documents.md)
    + [测试解决方案](zipping-form-attachments/test.md)
 + 存储和检索自适应表单{#store-and-retrieve-af-with-2fa}
-   + [Communications API](store-and-retrieve-af-with-2fa/introduction.md)
+   + [简介](store-and-retrieve-af-with-2fa/introduction.md)
    + [配置数据源](store-and-retrieve-af-with-2fa/configure-data-source.md)
    + [存储表单附件](store-and-retrieve-af-with-2fa/store-form-attachments.md)
    + [存储表单数据](store-and-retrieve-af-with-2fa/store-form-data.md)
@@ -129,7 +129,7 @@ ht-degree: 3%
    + [创建HTML5表单](html5-forms/create-html5-form.md)
    + [处理HTML5表单提交](html5-forms/handle-html5-form-submission.md)
 + AEM Forms和Adobe Sign{#forms-and-sign}
-   + [Communications API](aem-forms-and-adobe-sign/introduction.md)
+   + [简介](aem-forms-and-adobe-sign/introduction.md)
    + [设置SSL](aem-forms-and-adobe-sign/set-up-ssl.md)
    + [创建Adobe Sign API应用程序](aem-forms-and-adobe-sign/create-adobe-sign-api-application.md)
    + [创建Adobe Sign云配置](aem-forms-and-adobe-sign/create-adobe-sign-cloud-configuration.md)
@@ -142,7 +142,7 @@ ht-degree: 3%
    + [配置已转换的自适应表单](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [在Adobe Sign中使用XDP模板](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
 + 签署多个Forms{#sign-multiple-documents}
-   + [Communications API](sign-multiple-documents/introduction.md)
+   + [简介](sign-multiple-documents/introduction.md)
    + [配置数据源](sign-multiple-documents/configure-data-source.md)
    + [创建OSGi服务](sign-multiple-documents/create-osgi-service.md)
    + [创建主工作流](sign-multiple-documents/create-main-workflow.md)
@@ -153,6 +153,9 @@ ht-degree: 3%
    + [创建初始表单](sign-multiple-documents/create-initial-form.md)
    + [创建Forms以进行签名](sign-multiple-documents/create-forms-for-signing.md)
    + [测试解决方案](sign-multiple-documents/testing-and-trouble-shooting.md)
++ 自定义工作流步骤{#custom-workflow-steps}
+   + [从xml文档提取节点](custom-workflow-steps/extract-xml-node.md)
+   + [将文档保存到文件系统](custom-workflow-steps/write-payload-document.md)
 + AEM工作流中的变量{#variables-aem-workflow}
    + [简介 — 工作流中的变量](variables-aem-workflow/introduction.md)
    + [XML变量](variables-aem-workflow/part1.md)
@@ -162,7 +165,7 @@ ht-degree: 3%
    + [表单数据模型变量](variables-aem-workflow/form-data-model.md)
    + [AEM工作流中的规则编辑器](variables-aem-workflow/part5.md)
 + 在MySQL数据库中存储和检索表单数据{#storing-and-retrieving-form-data}
-   + [Communications API](storing-retrieving-form-data/introduction.md)
+   + [简介](storing-retrieving-form-data/introduction.md)
    + [配置数据源](storing-retrieving-form-data/part1.md)
    + [用于存储数据的服务](storing-retrieving-form-data/part3.md)
    + [创建Servlet](storing-retrieving-form-data/part2.md)
@@ -170,13 +173,13 @@ ht-degree: 3%
    + [自适应表单模板](storing-retrieving-form-data/part5.md)
    + [部署示例资产](storing-retrieving-form-data/part6.md)
 + 从移动设备表单提交触发AEM工作流{#offline-mobile-form-submission}
-   + [Communications API](offline-mobile-form-submission/introduction.md)
+   + [简介](offline-mobile-form-submission/introduction.md)
    + [自定义用户档案](offline-mobile-form-submission/part-one.md)
    + [处理PDF提交](offline-mobile-form-submission/part-two.md)
    + [审核工作流PDF](offline-mobile-form-submission/part-three.md)
    + [在您的系统上部署](offline-mobile-form-submission/part-four.md)
 + 查询提交的数据{#querying-submitted-data}
-   + [Communications API](querying-submitted-data/introduction.md)
+   + [简介](querying-submitted-data/introduction.md)
    + [基于JSON模式创建表单](querying-submitted-data/part1.md)
    + [存储提交的数据](querying-submitted-data/part2.md)
    + [存储JSON架构](querying-submitted-data/part3.md)
@@ -191,7 +194,7 @@ ht-degree: 3%
    + [第4部分 — 将所有内容拼合在一起](aem-forms-with-marketo/part4.md)
 
 + AEM Forms与Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
-   + [Communications API](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
+   + [简介](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
    + [第1部分 — 生成令牌](aem-forms-with-adobe-campaign/partone.md)
    + [第2部分 — 在表单提交时创建ACS配置文件](aem-forms-with-adobe-campaign/parttwo.md)
    + [第3部分 — 使用ACS用户档案信息预填表单](aem-forms-with-adobe-campaign/partthree.md)
@@ -217,7 +220,7 @@ ht-degree: 3%
    + [实用工具服务](document-services/useful-utility-services.md)
 + 用于打印渠道的交互式通信
 {#ic-print-channel-tutorial}
-   + [Communications API](ic-print-channel-tutorial/introduction.md)
+   + [简介](ic-print-channel-tutorial/introduction.md)
    + [设置Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
    + [创建数据源](ic-print-channel-tutorial/create-data-source.md)
    + [创建表单数据模型](ic-print-channel-tutorial/create-form-data-model.md)
@@ -239,7 +242,7 @@ ht-degree: 3%
    + [使用监视文件夹为打印渠道生成交互式通信文档](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 + Web渠道的交互式通信 {#ic-web-channel-tutorial}
-   + [Communications API](ic-web-channel-tutorial/introduction.md)
+   + [简介](ic-web-channel-tutorial/introduction.md)
    + [设置Tomcat](ic-web-channel-tutorial/partone.md)
    + [创建数据源](ic-web-channel-tutorial/parttwo.md)
    + [创建表单数据模型](ic-web-channel-tutorial/partthree.md)
