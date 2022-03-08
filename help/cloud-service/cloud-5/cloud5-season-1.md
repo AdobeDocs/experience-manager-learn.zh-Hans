@@ -5,10 +5,10 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 6f512bc35477b064a956ed35bc514166c3e9b683
+source-git-commit: 4fc95c69f3c15122f9e4b87be469f8bc15097042
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 2%
+source-wordcount: '256'
+ht-degree: 1%
 
 ---
 
@@ -16,9 +16,13 @@ ht-degree: 2%
 
 ![AEM专家系列](./imgs/masthead.png)
 
+## 简介
+
+欢迎使用AEM工程部的Cloud 5系列。 任何产品的实施阶段的主要问题之一是，有足够的代码示例和/或这些示例、工具或API的实时演示。 此系列的目标是在5分钟或更短的时间内提供有关AEMas a Cloud Service的有用信息。
+
 ## 第1季
 
-每个季节的时长各不相同，并按固定时间表发布。 第1季的主题主要源于我们在与客户和合作伙伴的日常接触中遇到的过去的请求。 访问此页面可获取每周更新，或在您选择的社交网络上关注我们。
+每个季节的时长各不相同，将按固定时间表发布。 第1季的主题主要源于我们在与客户和合作伙伴的日常接触中遇到的过去的请求。 访问此页面可获取每周更新，或在您选择的社交网络上关注我们。
 
 <table>
   <tr>
