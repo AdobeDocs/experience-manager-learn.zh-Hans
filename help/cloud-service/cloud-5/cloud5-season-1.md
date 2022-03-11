@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 4fc95c69f3c15122f9e4b87be469f8bc15097042
+source-git-commit: 83757a34cc82159326d3e035b88f018972d5dc27
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '288'
 ht-degree: 1%
 
 ---
@@ -40,14 +40,16 @@ ht-degree: 1%
       </p>
      </td>   
      <td>
-      <img alt="AEM CDN第2部分" src="./imgs/coming-soon.png"/>
+      <a href="./cloud5-aem-cdn-part2.md">
+         <img alt="AEM CDN第2部分" src="./imgs/002-thumb.png"/>
+      </a>
       <div>
-         <strong>AEM CDN Deep Dive（第2部分）</strong>
+         <a href="./cloud5-aem-cdn-part2.md"><strong>AEM CDN Deep Dive（第2部分）</strong></a>
          <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
       </div>
       <p>
         <br/>
-         2022年3月11日
+         第2部分是我们对AEMas a Cloud ServiceCDN的一项持续研究。 我们回答了一些关于您通过新CDN获得哪些功能的常见问题和误区。
       </p>
    </td>     
    </td>   
