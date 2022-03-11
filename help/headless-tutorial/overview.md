@@ -7,10 +7,10 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 0%
+source-wordcount: '529'
+ht-degree: 6%
 
 ---
 
@@ -20,14 +20,14 @@ Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将
 
 >[!TIP]
 >
->本教程集合专为那些喜欢 **学习**. 如果您喜欢从头开始学习概念，请查看 [AEM Headless开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html). 这套教程和历程是相辅相成的。
+>本教程集合专为那些喜欢 **学习**. 如果您喜欢从头开始学习概念，请查看 [AEM Headless开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). 这套教程和历程是相辅相成的。
 
 ## Tutorials（按API）
 
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans">
       <img alt="GraphQL API" src="./assets/graphql-icon.png" />
     </a>
     <div>

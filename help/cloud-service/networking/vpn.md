@@ -1,5 +1,5 @@
 ---
-title: 虚拟专用网(VPN)
+title: 虚拟专用网络 (VPN)
 description: 了解如何将AEMas a Cloud Service与VPN连接，以在AEM与内部服务之间创建安全通信通道。
 version: Cloud Service
 feature: Security
@@ -9,22 +9,26 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: ba2c299baeda632d6ebeff0c6ee07de5ef29b9cb
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
-source-wordcount: '1259'
-ht-degree: 0%
+source-wordcount: '1321'
+ht-degree: 1%
 
 ---
 
-# 虚拟专用网(VPN)
+# 虚拟专用网络 (VPN)
 
 了解如何将AEMas a Cloud Service与VPN连接，以在AEM与内部服务之间创建安全通信通道。
 
 ## 什么是虚拟专用网络？
 
-虚拟专用网络(VPN)允许AEMas a Cloud Service客户将Cloud Manager程序连接到现有的 [受支持](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) VPN。 这允许在客户网络内的AEMas a Cloud Service和服务之间进行安全且可控的连接。
+虚拟专用网络(VPN)允许AEMas a Cloud Service客户连接 **AEM环境** Cloud Manager计划中的 [受支持](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) VPN。 这允许在客户网络内的AEMas a Cloud Service和服务之间进行安全且可控的连接。
 
 Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚拟专用网络是 [适当类型的网络基础架构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#general-vpn-considerations) 的AEMas a Cloud Service。
+
+>[!NOTE]
+>
+>请注意，不支持将构建环境从Cloud Manager连接到VPN。 如果必须从专用存储库访问二进制对象，则需要设置一个安全且受密码保护的存储库，该存储库的URL在公共Internet上可用 [如下所述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
 
 >[!MORELIKETHIS]
 >
@@ -279,7 +283,7 @@ AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTT
       </p>
     </td>
    <td>
-      <a  href="./examples/email-service.md"><img alt="虚拟专用网(VPN)" src="./assets/code-examples__email.png"/></a>
+      <a  href="./examples/email-service.md"><img alt="虚拟专用网络 (VPN)" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">电子邮件服务</a></strong></div>
       <p>
         OSGi配置示例(使用AEM连接到外部电子邮件服务)。
