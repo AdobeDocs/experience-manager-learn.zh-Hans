@@ -8,9 +8,9 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: c921594d5c352f98e0d830d7a85e026844fd5da6
+source-git-commit: 947c280f32b013a6ade76b2f3df1152b29108c6e
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '227'
 ht-degree: 6%
 
 ---
@@ -30,7 +30,7 @@ HLS浏览器支持如下所示，对于不受支持的浏览器，我们回退�
 
 >[!NOTE]
 >
-> Dynamic Media Hybrid在2022年5月之后将不支持在Internet Explorer 11上进行视频流播放。
+> Dynamic Media Hybrid在2022年3月15日之后将不支持在Internet Explorer 11上进行视频流播放。
 
 <table> 
  <thead> 
