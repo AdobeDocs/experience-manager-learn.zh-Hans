@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 83757a34cc82159326d3e035b88f018972d5dc27
+source-git-commit: a8e6e863a4d236babdb1e2ae978240cd51631981
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '334'
 ht-degree: 1%
 
 ---
@@ -51,8 +51,7 @@ ht-degree: 1%
         <br/>
          第2部分是我们对AEMas a Cloud ServiceCDN的一项持续研究。 我们回答了一些关于您通过新CDN获得哪些功能的常见问题和误区。
       </p>
-   </td>     
-   </td>   
+   </td>
      <td>
       <img alt="日志文件和日志记录" src="./imgs/coming-soon.png"/>
       <div>
@@ -87,8 +86,7 @@ ht-degree: 1%
         <br/>
          将于2022年4月1日推出
       </p>
-   </td>     
-   </td>   
+   </td>
      <td>
       <img alt="迁移（第1部分）" src="./imgs/coming-soon.png"/>
       <div>
@@ -98,6 +96,41 @@ ht-degree: 1%
       <p>
         <br/>
          将于2022年4月8日发布
+      </p>
+   </td> 
+  </tr>
+<tr>
+   <td>
+      <img alt="迁移（第2部分）" src="./imgs/coming-soon.png"/>
+      <div>
+        <strong>迁移（第2部分）</strong>        
+         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+      </div>
+      <p>
+        <br/>
+         将于2022年4月14日发布
+      </p>
+     </td>   
+     <td>
+      <img alt="Dispatcher验证器" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>Dispatcher验证器</strong>
+         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+      </div>
+      <p>
+        <br/>
+         2022年4月22日
+      </p>
+   </td>
+     <td>
+      <img alt="索引和搜索提示" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>索引和搜索提示</strong>
+         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+      </div>
+      <p>
+        <br/>
+         2022年4月29日
       </p>
    </td> 
   </tr>
