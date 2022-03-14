@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Assets Essentials的视频集�
 breadcrumb-title: AEM Assets Essentials视频
 feature-set: Experience Manager Assets
 team: TM
-source-git-commit: 32917f4fe6be88b1ee1d1f7da1c02d0f81c20fe7
+source-git-commit: 00647ec3e2cf0ead5d6f427fd12b9d0f777f6890
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 12%
+source-wordcount: '68'
+ht-degree: 13%
 
 ---
 
@@ -24,10 +24,11 @@ ht-degree: 12%
    + [使用](basics/using.md)
    + [创建内容](basics/creating.md)
    + [协作](basics/collaborating.md)
+   + [链接共享](basics/link-sharing.md)
 
 + [Creative Cloud集成](integrations/creative-cloud.md)
 
-+ AdobeWorkfront集成{#workfront}
++ Adobe Workfront集成{#workfront}
    + [配置](./integrations/workfront/configure.md)
    + [映射元数据](./integrations/workfront/map-metadata.md)
    + [发送文档和链接资产](./integrations/workfront/link-send.md)
