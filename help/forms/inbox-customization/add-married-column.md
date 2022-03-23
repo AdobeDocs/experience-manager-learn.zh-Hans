@@ -1,23 +1,23 @@
 ---
-title: 收件箱自定义
+title: 添加自定义列
 description: 添加自定义列以显示工作流的其他数据
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # 添加自定义列
 
@@ -84,12 +84,12 @@ return isMarried(inboxItem);
 * [登录AEM Web控制台](http://localhost:4502/system/console/bundles)
 * [部署和启动收件箱自定义包](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [打开您的收件箱](http://localhost:4502/aem/inbox)
-* 单击&#x200B;_创建_&#x200B;按钮旁边的&#x200B;_列表视图_&#x200B;图标以打开Admin Control
+* 通过单击 _列表视图_ 图标 _创建_ 按钮
 * 将“已婚”列添加到收件箱并保存您所做的更改
 * [转到表单和文档UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [通过选择从创](assets/snap-form.zip) 建菜单中 _上传_ 文件来导 __ 入示例
+* [导入示例表单](assets/snap-form.zip) 选择 _文件上传_ 从 _创建_ 菜单
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* 选择&#x200B;_婚姻状态_并提交表单
+* 选择 _婚姻状况_ 并提交表格
    [查看收件箱](http://localhost:4502/aem/inbox)
 
 提交表单将触发工作流，并且会向“管理员”用户分配任务。 您应会在“已婚”列下看到一个值，如此屏幕快照中所示

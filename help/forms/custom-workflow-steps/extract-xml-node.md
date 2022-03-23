@@ -1,5 +1,5 @@
 ---
-title: 将负载文档写入文件系统
+title: 从提交的数据xml中提取节点
 description: 自定义进程步骤，将负载文件夹下的写文档添加到文件系统
 feature: Adaptive Forms
 version: 6.5
@@ -7,9 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 kt: kt-9860
-source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
+exl-id: 5282034f-275a-479d-aacb-fc5387da793d
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

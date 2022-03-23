@@ -1,30 +1,30 @@
 ---
-title: 在HTM5表单提交时触发AEM工作流
-seo-title: 在HTML5表单提交时触发AEM工作流
+title: 在HTM5表单提交时触发AEM工作流 — 处理PDF提交
+seo-title: Trigger AEM Workflow on HTML5 Form Submission
 description: 在离线模式下继续填写移动表单，并提交移动表单以触发AEM工作流
-seo-description: 在离线模式下继续填写移动表单，并提交移动表单以触发AEM工作流
-feature: 移动设备表单
+seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: eafeafe1-7a72-4023-b5bb-d83b056ba207
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-
 # 处理PDF提交
 
-在本部分中，我们将创建一个在AEM发布上运行的简单Servlet，以处理从Acrobat/Reader提交的PDF。 此Servlet随后将向AEM创作实例中运行的Servlet发出HTTPPOST请求，该实例负责将提交的数据另存为AEM创作存储库中的`nt:file`节点。
+在本部分中，我们将创建一个在AEM发布上运行的简单Servlet，以处理从Acrobat/Reader提交的PDF。 此Servlet随后将向AEM创作实例中运行的Servlet发出HTTPPOST请求，该Servlet负责将提交的数据另存为 `nt:file` 节点。
 
-以下是处理PDF提交的Servlet的代码。 在此Servlet中，我们对AEM创作实例中装载在&#x200B;**/bin/startworkflow**&#x200B;上的Servlet进行POST调用。 此Servlet将表单数据保存在AEM作者的存储库中。
+以下是处理PDF提交的Servlet的代码。 在此Servlet中，我们对装载在上的Servlet进行POST调用 **/bin/startworkflow** 在AEM创作实例中。 此Servlet将表单数据保存在AEM作者的存储库中。
 
 
 ## AEM发布Servlet
@@ -104,7 +104,7 @@ public class HandlePDFSubmission extends SlingAllMethodsServlet {
 
 ## AEM创作Servlet
 
-下一步是将提交的数据存储在AEM作者的存储库中。 `/bin/startworkflow`上装载的Servlet保存提交的数据。
+下一步是将提交的数据存储在AEM作者的存储库中。 Servlet已装载到 `/bin/startworkflow` 保存提交的数据。
 
 ```java
 import java.io.BufferedReader;
@@ -202,7 +202,6 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-AEM工作流启动器配置为在`/content/pdfsubmissions`节点下每次创建类型为`nt:file`的新资源时触发。 此工作流将通过将提交的数据与xdp模板合并，创建非交互式或静态PDF。 然后，将生成的PDF分配给用户进行审阅和批准。
+AEM工作流启动器配置为每次触发类型为 `nt:file` 在下创建 `/content/pdfsubmissions` 节点。 此工作流将通过将提交的数据与xdp模板合并，创建非交互式PDF或静态模板。 然后，将生成的PDF分配给用户进行审阅和批准。
 
-要在`/content/pdfsubmissions`节点下存储提交的数据，我们利用`GetResolver` OSGi服务，可使用`fd-service`系统用户保存提交的数据，该用户可在每个AEM Forms安装中使用。
-
+要在 `/content/pdfsubmissions` 节点，我们利用 `GetResolver` OSGi服务允许我们使用 `fd-service` 系统用户(在每个AEM Forms安装中均可用)。

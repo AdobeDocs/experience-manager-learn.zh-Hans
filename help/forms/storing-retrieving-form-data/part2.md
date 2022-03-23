@@ -1,19 +1,19 @@
 ---
-title: 从MySQL数据库存储和检索表单数据
+title: 从MySQL数据库存储和检索表单数据 — Servlet以存储表单数据
 description: 多部分教程，指导您完成存储和检索表单数据时涉及的步骤
-feature: 自适应表单
+feature: Adaptive Forms
 type: Tutorial
 version: 6.3,6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: dd82f309-dd4e-42ce-8856-e51c898024f5
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # 用于存储表单数据的Servlet
 

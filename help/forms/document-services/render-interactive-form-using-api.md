@@ -1,28 +1,28 @@
 ---
-title: 利用产出和Forms服务在AEM Forms进行开发
-description: 在AEM Forms中使用输出和Forms服务API
-feature: 表单服务
+title: 在AEM Forms中使用Forms服务渲染交互式PDF
+description: 在AEM Forms中使用Forms服务API渲染交互式PDF
+feature: Forms Service
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 9b2ef4c9-8360-480d-9165-f56a959635fb
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-
 # 在AEM Forms中使用Forms服务渲染交互式PDF
 
-在AEM Forms中使用Forms Service API渲染交互式PDF
+在AEM Forms中使用Forms服务API渲染交互式PDF
 
 在本文中，我们将了解以下服务
 
-* FormsService — 这是一项用途广泛的服务，允许您将数据从PDF文件导出/导入PDF文件，还可以通过将xml数据合并到xdp模板中来生成交互式PDF
+* FormsService — 这是一项用途广泛的服务，它允许您将数据从导出/导入PDF文件，还可通过将xml数据合并到xdp模板中来生成交互式pdf
 
-此处](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)列出了AEM Forms API的正式javadoc[
+列出了AEM Forms API的正式javadoc [此处](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 以下代码片段使用FormsService的renderPDFForm操作呈现交互式pdf。 申根.xdp是用于合并xml数据的模板。
 
@@ -59,10 +59,8 @@ return interactivePDF;
 1. 在排除的部分中添加以下路径并保存
 1. /bin/generateinteractivepdf
 1. [打开移动设备表单](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
-1. 填写几个字段，然后单击&#x200B;***下载并填写…….*** 按钮
+1. 填写几个字段，然后单击 ***下载并填写…….*** 按钮
 1. 应将交互式pdf下载到您的本地系统
 
 
-示例包包含与移动设备表单关联的自定义用户档案。 请浏览[customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp)文件。 此jsp从移动表单中提取数据，并向装载在&#x200B;***/bin/generateinteractivepdf***&#x200B;路径上的Servlet发出POST请求。 Servlet将交互式PDF返回给调用应用程序。 customtoolbar.jsp中的代码，然后将该文件下载到您的本地系统
-
-
+示例包包含与Mobile表单关联的自定义配置文件。 请浏览 [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) 文件。 此jsp从移动表单中提取数据，并向装载在上的Servlet发出POST请求 ***/bin/generateinteractivepdf*** 路径。 Servlet将交互式PDF返回给调用应用程序。 customtoolbar.jsp中的代码，然后将该文件下载到您的本地系统

@@ -1,5 +1,5 @@
 ---
-title: 收件箱自定义
+title: 使用Sightly模板显示收件箱数据
 description: 添加自定义列，以使用Sightly模板显示工作流的其他数据
 feature: Adaptive Forms
 topics: development
@@ -11,9 +11,10 @@ kt: 5830
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: d09b46ed-3516-44cf-a616-4cb6e9dfdf41
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,13 +22,13 @@ ht-degree: 0%
 # 使用Sightly模板显示收件箱数据
 
 您可以使用Sightly模板来设置要显示在收件箱列中的数据的格式。 在本例中，我们将根据收入列的值显示coral-ui图标。 以下屏幕截图显示了收入列中图标的使用情况
-![income-icons](assets/income-column.PNG)
+![收入图标](assets/income-column.PNG)
 
-[本文提](assets/sightly-template.zip) 供了用于显示自定义coral ui图标的美观模板。
+[美观的模板](assets/sightly-template.zip) 本文中提供了用于显示自定义coral ui图标的图标。
 
 ## Sightly模板
 
-以下是美观的模板。 模板中的代码会根据收入显示图标。 这些图标作为AEM附带的[coral ui图标库](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)的一部分提供。
+以下是美观的模板。 模板中的代码会根据收入显示图标。 这些图标在 [coral ui图标库](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) AEM附带的。
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -81,7 +82,7 @@ return val;
 
 >[!NOTE]
 >
->本文假定您已安装此系列中[上一篇文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html)中的[示例工作流](assets/review-workflow.zip)和[示例表单](assets/snap-form.zip)。
+>本文假定您已安装 [示例工作流](assets/review-workflow.zip) 和 [示例表单](assets/snap-form.zip) 从 [上一篇文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) 在此系列中。
 
 * [以管理员用户身份登录crx](http://localhost:4502/crx/de/index.jsp)
 * [导入sightly模板](assets/sightly-template.zip)
@@ -91,7 +92,7 @@ return val;
 * 单击创建按钮旁边的列表视图以打开Admin Control
 * 将收入列添加到收件箱并保存您所做的更改
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* 选择&#x200B;_婚姻状态_&#x200B;并提交表单
+* 选择 _婚姻状况_ 并提交表格
 * [查看收件箱](http://localhost:4502/aem/inbox)
 
 提交表单将触发工作流，并且会向“管理员”用户分配任务。 您应会在收入列下看到相应的图标

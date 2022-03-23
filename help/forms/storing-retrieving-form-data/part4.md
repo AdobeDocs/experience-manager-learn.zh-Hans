@@ -1,16 +1,17 @@
 ---
-title: 从MySQL数据库存储和检索表单数据
+title: 从MySQL数据库存储和检索表单数据 — 创建客户端库
 description: 多部分教程，指导您完成存储和检索表单数据时涉及的步骤
-feature: 自适应表单
+feature: Adaptive Forms
 type: Tutorial
 version: 6.3,6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: eef98a55-80d0-4598-abf2-02a6c5247b64
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

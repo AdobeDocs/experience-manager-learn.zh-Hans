@@ -1,19 +1,19 @@
 ---
-title: 从MySQL数据库存储和检索表单数据
+title: 从MySQL数据库存储和检索表单数据简介
 description: 多部分教程，指导您完成存储和检索表单数据时涉及的步骤
-feature: 自适应表单
+feature: Adaptive Forms
 type: Tutorial
 version: 6.3,6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 95795102-4278-4556-8e0f-1b8a359ab093
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # 从MySQL数据库存储和检索自适应表单数据
 
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 * 对Servlet进行POST调用。 此Servlet将数据存储在数据库中。 存储的数据与GUID关联
 
-* 如果要使用存储的数据填充自适应表单，请检索与GUID关联的数据，然后使用&#x200B;**request.setAttribute**&#x200B;方法填充自适应表单。
+* 当要使用存储的数据填充自适应表单时，需要检索与GUID关联的数据，并使用 **request.setAttribute** 方法。
 
 ## 用例演示
 

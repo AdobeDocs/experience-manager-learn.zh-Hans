@@ -1,29 +1,31 @@
 ---
-title: 收件箱自定义
-description: '根据工作流数据添加新列以自定义收件箱 '
-feature: 自适应表单
+title: AEM 收件箱
+description: 根据工作流数据添加新列以自定义收件箱
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
 kt: 5830
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # AEM 收件箱
 
 AEM收件箱可整合来自各种AEM组件(包括Forms工作流)的通知和任务。 触发包含“分配”任务步骤的表单工作流时，关联的应用程序将作为任务列在被分派人的收件箱中。
-收件箱用户界面提供列表视图和日历视图以查看任务。 您还可以配置视图设置。 您可以根据各种参数筛选任务
-您可以自定义Experience Manager收件箱以更改列的默认标题、重新排序列的位置，并根据工作流的数据显示其他列
 
+收件箱用户界面提供列表视图和日历视图以查看任务。 您还可以配置视图设置。 您可以根据各种参数筛选任务。
+
+您可以自定义Experience Manager收件箱以更改列的默认标题、重新排序列的位置，并根据工作流的数据显示其他列。
 
 >[!NOTE]
 >
@@ -31,8 +33,8 @@ AEM收件箱可整合来自各种AEM组件(包括Forms工作流)的通知和任�
 
 ## 列自定义
 
-[启动AEM收](http://localhost:4502/aem/inbox)
-件箱单击列表视图图标，然后选 _择管_  __ 理控制，以打开Admin Control
+[Launch AEM收件箱](http://localhost:4502/aem/inbox)
+通过单击 _列表视图_ 图标，然后选择 _管理控制_ 如下面的屏幕快照所示
 
 ![管理控制](assets/open-customization.png)
 

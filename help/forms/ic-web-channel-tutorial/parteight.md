@@ -1,26 +1,26 @@
 ---
-title: 为第一个交互式通信文档配置折线图
-seo-title: 为第一个交互式通信文档配置折线图
+title: 为第一个交互式通信文档第8部分配置折线图
+seo-title: Configuring line chart for your first interactive communication document
 description: 这是创建首个交互式通信文档的多步教程的8部分。 在本部分中，我们将向帐户进度面板添加折线图。
-seo-description: 这是创建首个交互式通信文档的多步教程的8部分。 在本部分中，我们将向帐户进度面板添加折线图。
+seo-description: This is part 8 of multistep tutorial for creating your first interactive communications document. In this part, we will add a Line chart to the account progress panel.
 uuid: 08c3e7af-e3cb-4ee0-bdc1-d112bfa70e40
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 4292303c-3ef4-4df2-b537-fdb011412670
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: ba9ce6a2-f6e8-4e84-a23a-f4803879f635
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # 为第一个交互式通信文档配置折线图
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 AEM Forms 6.4使用各种类型的图表显示数据非常简单。 我们将使用折线图来按年显示余额。
 
-点按右侧的&#x200B;**帐户进度**&#x200B;目标区域，然后单击“+”图标以显示插入组件对话框。
+点按 **帐户进度** 定位区域，然后单击“+”图标以显示“插入组件”对话框。
 
 选择图表以插入图表组件。
 
@@ -49,5 +49,3 @@ AEM Forms 6.4使用各种类型的图表显示数据非常简单。 我们将使
 **AEM Forms 6.5中的折线图设置**
 
 ![linechart64](assets/linechart65.PNG)
-
-
