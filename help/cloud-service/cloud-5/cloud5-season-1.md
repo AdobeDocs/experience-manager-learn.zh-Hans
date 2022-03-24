@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 187f13c5051237915fdc8a8c0e3280dd0f0702ce
+source-git-commit: 4976bc72228b76c02609cf63c7067cc7bad65861
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
@@ -68,14 +68,16 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>
-      <img alt="访问令牌" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-getting-login-token-integrations.md">
+            <img alt="访问令牌" src="./imgs/004-thumb.png"/>
+        </a>
       <div>
-        <strong>与访问令牌集成</strong>        
+        <a href="./cloud5-getting-login-token-integrations.md"><strong>与访问令牌集成</strong></a>        
          <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
       </div>
       <p>
         <br/>
-         2022年3月25日
+         有关与登录令牌交互以在云服务环境中执行集成工作的快速概述和演示。
       </p>
      </td>   
      <td>
