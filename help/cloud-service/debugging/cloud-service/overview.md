@@ -1,6 +1,6 @@
 ---
-title: 调试AEM as aCloud Service
-description: 在自助式、可扩展的云基础架构上，这要求AEM开发人员了解如何了解和调试AEM as a Cloud Service的各个方面，从构建和部署到获取运行AEM应用程序的详细信息。
+title: 调试AEMas a Cloud Service
+description: 在自助式、可扩展的云基础架构上，这要求AEM开发人员了解如何了解和调试AEMas a Cloud Service的各个方面，从构建和部署到获取运行AEM应用程序的详细信息。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -12,37 +12,37 @@ topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 1%
+source-wordcount: '314'
+ht-degree: 0%
 
 ---
 
-# 调试AEM as aCloud Service
+# 调试AEMas a Cloud Service
 
-AEM as a Cloud Service是利用AEM应用程序的云原生方式。 AEM as aCloud Service在自助式、可扩展的云基础架构上运行，这要求AEM开发人员了解如何将AEM作为Cloud Service来了解和调试从构建和部署到获取运行AEM应用程序的详细信息等各个方面。
+AEMas a Cloud Service是利用AEM应用程序的云原生方式。 AEM as a Cloud Service在自助式、可扩展的云基础架构上运行，这要求AEM开发人员了解如何了解和调试AEMas a Cloud Service的各个方面，从构建和部署到获取运行AEM应用程序的详细信息。
 
 ## 日志
 
-日志提供了有关您的应用程序在AEM as a Cloud Service中运行情况的详细信息，以及有关部署问题的分析。
+日志提供了有关您的应用程序在AEMas a Cloud Service中如何运行的详细信息，以及有关部署问题的分析。
 
-[使用日志调试AEM as aCloud Service](./logs.md)
+[使用日志调试AEMas a Cloud Service](./logs.md)
 
 ## 构建和部署
 
-AdobeCloud Manager管道通过一系列步骤来部署AEM应用程序，以确定将代码部署到AEM作为Cloud Service时的代码质量和可行性。 每个步骤都可能会导致失败，因此务必要了解如何调试内部版本以确定根本原因以及如何解决任何故障。
+AdobeCloud Manager管道通过一系列步骤来部署AEM应用程序，以确定部署到AEM as a Cloud Service时的代码质量和可行性。 每个步骤都可能会导致失败，因此务必要了解如何调试内部版本以确定根本原因以及如何解决任何故障。
 
-[调试AEM as a Cloud Service构建和部署](./build-and-deployment.md)
+[调试AEMas a Cloud Service内部版本和部署](./build-and-deployment.md)
 
 ## 开发人员控制台
 
-开发人员控制台在AEM作为Cloud Service环境中提供了各种信息和介绍，这些信息和介绍有助于了解AEM如何识别您的应用程序，以及如何在中作为Cloud Service使用。
+开发人员控制台在AEMas a Cloud Service环境中提供了各种信息和介绍，这些信息和介绍有助于了解应用程序如何被AEMas a Cloud Service识别以及在中的功能。
 
-[使用开发人员控制台调试AEM as aCloud Service](./developer-console.md)
+[使用开发人员控制台调试AEMas a Cloud Service](./developer-console.md)
 
-## CRXDE Lite
+## 存储库浏览器
 
-CRXDE Lite是一款经典但功能强大的工具，可用于将AEM作为Cloud Service开发环境进行调试。 CRXDE Lite提供了一套功能，可帮助调试人员检查所有资源和属性、处理JCR的可变部分、调查权限和评估查询。
+存储库浏览器是一款功能强大的工具，可显示AEM基础数据存储，从而轻松调试AEMas a Cloud Service环境。 存储库浏览器支持在生产、暂存和开发以及创作、发布和预览服务中以只读方式查看AEM的资源和属性。
 
-[将AEM作为Cloud Service进行CRXDE Lite](./crxde-lite.md)
+[使用存储库浏览器调试AEMas a Cloud Service](./repository-browser.md)

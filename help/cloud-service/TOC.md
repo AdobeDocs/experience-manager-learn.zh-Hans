@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 4976bc72228b76c02609cf63c7067cc7bad65861
+source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
 workflow-type: tm+mt
 source-wordcount: '727'
-ht-degree: 23%
+ht-degree: 22%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 23%
       + [日志](./debugging/cloud-service/logs.md)
       + [构建和部署](./debugging/cloud-service/build-and-deployment.md)
       + [开发人员控制台](./debugging/cloud-service/developer-console.md)
-      + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
+      + [存储库浏览器](./debugging/cloud-service/repository-browser.md)
 + 访问AEM{#accessing}
    + [概述](./accessing/overview.md)
    + [Adobe IMS用户](./accessing/adobe-ims-users.md)
