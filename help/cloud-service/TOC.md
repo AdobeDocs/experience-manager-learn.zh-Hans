@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
+source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 22%
+source-wordcount: '726'
+ht-degree: 23%
 
 ---
 
@@ -214,7 +214,7 @@ ht-degree: 22%
    + 设置{#set-up}
       + [帐户和服务配置](./asset-compute/set-up/accounts-and-services.md)
       + [本地开发环境](./asset-compute/set-up/development-environment.md)
-      + [Adobe项目Firefly](./asset-compute/set-up/firefly.md)
+      + [应用程序生成器](./asset-compute/set-up/app-builder.md)
    + 开发{#develop}
       + [创建Asset compute项目](./asset-compute/develop/project.md)
       + [配置环境变量](./asset-compute/develop/environment-variables.md)

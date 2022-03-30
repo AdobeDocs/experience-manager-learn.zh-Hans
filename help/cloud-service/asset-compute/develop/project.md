@@ -8,10 +8,10 @@ feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: 136049776140746c61d42ad1496df15a2d226e3a
+source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 1%
+source-wordcount: '589'
+ht-degree: 2%
 
 ---
 
@@ -29,11 +29,11 @@ _点进以生成Asset compute项目（无音频）_
 
 1. 在命令行中，导航到要包含项目的文件夹。
 1. 从命令行中执行 `aio app init` 开始交互式项目生成CLI。
-   + 此命令可能会生成Web浏览器，提示进行身份验证以Adobe I/O。如果存在，请提供与 [所需的Adobe服务和产品](../set-up/accounts-and-services.md). 如果您无法登录，请遵循 [有关如何生成项目的说明](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   + 此命令可能会生成Web浏览器，提示进行身份验证以Adobe I/O。如果存在，请提供与 [所需的Adobe服务和产品](../set-up/accounts-and-services.md). 如果您无法登录，请遵循 [有关如何生成项目的说明](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 1. __选择组织__
-   + 选择具有AEMas a Cloud Service的Adobe组织，Project Firefly将在中注册
+   + 选择具有AEMas a Cloud Service且已在中注册应用程序生成器的Adobe组织
 1. __选择项目__
-   + 找到并选择项目。 这是 [项目标题](../set-up/firefly.md) 从Firefly项目模板创建，在本例中 `WKND AEM Asset Compute`
+   + 找到并选择项目。 这是 [项目标题](../set-up/app-builder.md) 从应用程序生成器项目模板创建，在此例中为 `WKND AEM Asset Compute`
 1. __选择工作区__
    + 选择 `Development` 工作区
 1. __您希望为此项目启用哪些Adobe I/O应用程序功能？ 选择要包含的组件__
@@ -65,30 +65,6 @@ _点进以生成Asset compute项目（无音频）_
 
 > 注意
 > 文件包含凭据。 如果将文件存储在项目中，请确保将其添加到 `.gitignore` 文件来阻止共享。 这同样适用于 `.env` 文件 — 这些凭据文件不得共享或存储在Git中。
-
-## 审查项目结构
-
-生成的Asset compute项目是一个Node.js项目，可用作专门的Adobe项目Firefly项目。 以下结构元素对Asset compute项目具有特殊性：
-
-+ `/actions` 包含子文件夹，每个子文件夹都定义一个Asset compute工作程序。
-   + `/actions/<worker-name>/index.js` 定义用于执行此工作程序的JavaScript。
-      + 文件夹名称 `worker` 是默认值，只要它在中注册，即可为任何内容 `manifest.yml`.
-      + 可以在 `/actions` 但是，根据需要，必须在 `manifest.yml`.
-+ `/test/asset-compute` 包含每个工作程序的测试包。 与 `/actions` 文件夹， `/test/asset-compute` 可以包含多个子文件夹，每个子文件夹都与it测试的工作程序相对应。
-   + `/test/asset-compute/worker`，表示特定工作人员的测试包，包含表示特定测试包的子文件夹，以及测试输入、参数和预期输出。
-+ `/build` 包含执行Asset compute测试案例的输出、日志和工件。
-+ `/manifest.yml` 定义项目提供的Asset compute工作程序。 必须在此文件中枚举每个工作程序实施，以使其可用于AEMas a Cloud Service。
-+ `/console.json` 定义Adobe I/O配置
-   + 此文件可使用 `aio app use` 命令。
-+ `/.aio` 包含aio CLI工具使用的配置。
-   + 此文件可使用 `aio app use` 命令。
-+ `/.env` 在 `key=value` 语法和包含不应共享的密钥。 要保护这些密钥，不应将此文件签入到Git中，并且应通过项目的默认设置忽略此文件 `.gitignore` 文件。
-   + 此文件可使用 `aio app use` 命令。
-   + 此文件中定义的变量可由 [导出变量](../deploy/runtime.md) 在命令行中。
-
-有关项目结构审核的更多详细信息，请查看 [FireflyAdobe项目剖析](https://www.adobe.io/project-firefly/docs/guides/).
-
-大部分开发工作在 `/actions` 文件夹开发工作程序实施，以及 `/test/asset-compute` 为自定义Asset compute工作程序编写测试。
 
 ## asset computeGitHub上的项目
 
