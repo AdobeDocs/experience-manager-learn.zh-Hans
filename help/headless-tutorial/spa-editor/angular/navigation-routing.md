@@ -14,7 +14,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
 source-wordcount: '2713'
 ht-degree: 0%
@@ -28,18 +28,18 @@ ht-degree: 0%
 ## 目标
 
 1. 了解使用SPA编辑器时可用的SPA模型路由选项。
-2. 了解如何使用[Angular路由](https://angular.io/guide/router)在SPA的不同视图之间导航。
+2. 了解使用 [Angular路由](https://angular.io/guide/router) 可在SPA的不同视图之间导航。
 3. 实施由AEM页面层次结构驱动的动态导航。
 
 ## 将构建的内容
 
-本章将导航菜单添加到现有`Header`组件。 导航菜单由AEM页面层次结构驱动，并使用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
+本章将导航菜单添加到现有 `Header` 组件。 导航菜单由AEM页面层次结构驱动，并使用 [导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html).
 
 ![已实施导航](assets/navigation-routing/final-navigation-implemented.gif)
 
 ## 前提条件
 
-查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。
+查看设置 [本地开发环境](overview.md#local-dev-environment).
 
 ### 获取代码
 
@@ -57,30 +57,30 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   如果使用[AEM 6.x](overview.md#compatibility)添加`classic`配置文件：
+   如果使用 [AEM 6.x](overview.md#compatibility) 添加 `classic` 用户档案：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. 为传统[WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/latest)安装完成的包。 [WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/latest)提供的图像将在WKND SPA上重新使用。 可以使用[AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)安装包。
+3. 为传统 [WKND参考站点](https://github.com/adobe/aem-guides-wknd/releases/latest). 提供的图像 [WKND参考站点](https://github.com/adobe/aem-guides-wknd/releases/latest) 将在WKND SPA上重新使用。 可以使用 [AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp).
 
    ![包管理器安装wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
-您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution)上查看完成的代码，或通过切换到分支`Angular/navigation-routing-solution`在本地签出代码。
+您始终可以在 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution) 或通过切换到分支在本地检出代码 `Angular/navigation-routing-solution`.
 
 ## Inspect HeaderComponent更新 {#inspect-header}
 
-在前几章中，将`HeaderComponent`组件添加为通过`app.component.html`包含的纯Angular组件。 在本章中，将从应用程序中删除`HeaderComponent`组件，并将通过[模板编辑器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)进行添加。 这允许用户从AEM内配置`HeaderComponent`的导航菜单。
+在前几章中， `HeaderComponent` 组件作为纯Angular组件添加，该组件通过 `app.component.html`. 在本章中， `HeaderComponent` 组件将从应用程序中删除，并将通过 [模板编辑器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html). 这允许用户配置 `HeaderComponent` 从AEM。
 
 >[!NOTE]
 >
-> 已对代码库进行了多次CSS和JavaScript更新，以开始本章。 为了重点关注核心概念，不讨论代码更改的&#x200B;**所有**。 您可以在[此处](https://github.com/adobe/aem-guides-wknd-spa/compare/Angular/map-components-solution...Angular/navigation-routing-start)查看完整更改。
+> 已对代码库进行了多次CSS和JavaScript更新，以开始本章。 重点关注核心概念，而不是 **全部** 将讨论代码更改。 您可以查看完整更改 [此处](https://github.com/adobe/aem-guides-wknd-spa/compare/Angular/map-components-solution...Angular/navigation-routing-start).
 
 1. 在您选择的IDE中，打开本章的SPA起始项目。
-2. 在`ui.frontend`模块下方，检查文件`header.component.ts`:`ui.frontend/src/app/components/header/header.component.ts`。
+2. 在 `ui.frontend` 模块检查文件 `header.component.ts` at: `ui.frontend/src/app/components/header/header.component.ts`.
 
-   已进行多项更新，包括添加`HeaderEditConfig`和`MapTo`，以便将组件映射到AEM组件`wknd-spa-angular/components/header`。
+   已进行了一些更新，包括添加了 `HeaderEditConfig` 和 `MapTo` 启用组件以映射到AEM组件 `wknd-spa-angular/components/header`.
 
    ```js
    /* header.component.ts */
@@ -102,9 +102,9 @@ ht-degree: 0%
    MapTo('wknd-spa-angular/components/header')(withRouter(Header), HeaderEditConfig);
    ```
 
-   请注意`items`的`@Input()`注释。 `items` 将包含从AEM传入的导航对象数组。
+   请注意 `@Input()` 注释 `items`. `items` 将包含从AEM传入的导航对象数组。
 
-3. 在`ui.apps`模块中，检查AEM `Header`组件的组件定义：`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/header/.content.xml`:
+3. 在 `ui.apps` 模块检查AEM的组件定义 `Header` 组件： `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/header/.content.xml`:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -116,52 +116,52 @@ ht-degree: 0%
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`组件将通过`sling:resourceSuperType`属性继承[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)的所有功能。
+   AEM `Header` 组件将继承 [导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html) 通过 `sling:resourceSuperType` 属性。
 
 ## 将HeaderComponent添加到SPA模板 {#add-header-template}
 
-1. 打开浏览器并登录AEM, [http://localhost:4502/](http://localhost:4502/)。 应该已部署起始代码库。
-2. 导航到&#x200B;**[!UICONTROL SPA页面模板]**:[http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html)。
-3. 选择最外部的&#x200B;**[!UICONTROL 根布局容器]**&#x200B;并单击其&#x200B;**[!UICONTROL 策略]**&#x200B;图标。 要小心&#x200B;**不要**&#x200B;选择&#x200B;**[!UICONTROL 布局容器]**&#x200B;未锁定进行创作。
+1. 打开浏览器并登录AEM, [http://localhost:4502/](http://localhost:4502/). 应该已部署起始代码库。
+2. 导航到 **[!UICONTROL SPA页面模板]**: [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html).
+3. 选择最外侧 **[!UICONTROL 根布局容器]** 单击 **[!UICONTROL 策略]** 图标。 小心 **not** 选择 **[!UICONTROL 布局容器]** 未锁定进行创作。
 
    ![选择根布局容器策略图标](assets/navigation-routing/root-layout-container-policy.png)
 
-4. 复制当前策略并创建名为&#x200B;**[!UICONTROL SPA Structure]**&#x200B;的新策略：
+4. 复制当前策略并创建一个名为 **[!UICONTROL SPA结构]**:
 
    ![SPA结构策略](assets/map-components/spa-policy-update.png)
 
-   在&#x200B;**[!UICONTROL 允许的组件]** > **[!UICONTROL 常规]** >下，选择&#x200B;**[!UICONTROL 布局容器]**&#x200B;组件。
+   在 **[!UICONTROL 允许的组件]** > **[!UICONTROL 常规]** >选择 **[!UICONTROL 布局容器]** 组件。
 
-   在&#x200B;**[!UICONTROL 允许的组件]** > **[!UICONTROL WKND SPAANGULAR- STRUCTURE]**&#x200B;下，选择&#x200B;**[!UICONTROL 标头]**&#x200B;组件：
+   在 **[!UICONTROL 允许的组件]** > **[!UICONTROL WKND SPAANGULAR — 结构]** >选择 **[!UICONTROL 标题]** 组件：
 
    ![选择标题组件](assets/map-components/select-header-component.png)
 
-   在&#x200B;**[!UICONTROL 允许的组件]** > **[!UICONTROL WKND SPAANGULAR — 内容]** >下，选择&#x200B;**[!UICONTROL 图像]**&#x200B;和&#x200B;**[!UICONTROL 文本]**&#x200B;组件。 您应选择总共4个组件。
+   在 **[!UICONTROL 允许的组件]** > **[!UICONTROL WKND SPAANGULAR — 内容]** >选择 **[!UICONTROL 图像]** 和 **[!UICONTROL 文本]** 组件。 您应选择总共4个组件。
 
-   单击&#x200B;**[!UICONTROL 完成]**&#x200B;以保存更改。
+   单击 **[!UICONTROL 完成]** 以保存更改。
 
-5. **刷新页面。**&#x200B;在未锁定的&#x200B;**[!UICONTROL 布局容器]**&#x200B;上方添加&#x200B;**[!UICONTROL 标题]**&#x200B;组件：
+5. **刷新页面。**&#x200B;添加 **[!UICONTROL 标题]** 未锁定组件上方的组件 **[!UICONTROL 布局容器]**:
 
    ![将标题组件添加到模板](./assets/navigation-routing/add-header-component.gif)
 
-6. 选择&#x200B;**[!UICONTROL 标头]**&#x200B;组件并单击其&#x200B;**策略**&#x200B;图标以编辑策略。
+6. 选择 **[!UICONTROL 标题]** 组件，单击其 **策略** 图标以编辑策略。
 
    ![单击标题策略](assets/navigation-routing/header-policy-icon.png)
 
-7. 使用&#x200B;**[!UICONTROL 策略标题]**&#x200B;的&#x200B;**&quot;WKND SPA标头&quot;**&#x200B;创建新策略。
+7. 使用 **[!UICONTROL 策略标题]** of **&quot;WKND SPA标头&quot;**.
 
-   在&#x200B;**[!UICONTROL Properties]**&#x200B;下：
+   在 **[!UICONTROL 属性]**:
 
-   * 将&#x200B;**[!UICONTROL 导航根]**&#x200B;设置为`/content/wknd-spa-angular/us/en`。
-   * 将&#x200B;**[!UICONTROL 排除根级别]**&#x200B;设置为&#x200B;**1**。
-   * 取消选中&#x200B;**[!UICONTROL 收集所有子页面]**。
-   * 将&#x200B;**[!UICONTROL 导航结构深度]**&#x200B;设置为&#x200B;**3**。
+   * 设置 **[!UICONTROL 导航根]** to `/content/wknd-spa-angular/us/en`.
+   * 设置 **[!UICONTROL 排除根级别]** to **1**.
+   * 取消选中 **[!UICONTROL 收集所有子页面]**.
+   * 设置 **[!UICONTROL 导航结构深度]** to **3**.
 
    ![配置标头策略](assets/navigation-routing/header-policy.png)
 
-   这将收集`/content/wknd-spa-angular/us/en`下方深处的导航2级。
+   这将收集下方2层的导航 `/content/wknd-spa-angular/us/en`.
 
-8. 保存更改后，您应会看到填充的`Header`作为模板的一部分：
+8. 保存更改后，您应会看到填充的 `Header` 作为模板的一部分：
 
    ![填充的标题组件](assets/navigation-routing/populated-header.png)
 
@@ -169,28 +169,28 @@ ht-degree: 0%
 
 接下来，在AEM中创建其他页面，以用作SPA中的不同视图。 我们还将检查AEM提供的JSON模型的层次结构。
 
-1. 导航到&#x200B;**Sites**&#x200B;控制台：[http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home)。 选择&#x200B;**WKND SPAAngular主页**&#x200B;并单击&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 页面]**:
+1. 导航到 **站点** 控制台： [http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home). 选择 **WKND SPAAngular主页** 单击 **[!UICONTROL 创建]** > **[!UICONTROL 页面]**:
 
    ![创建新页面](assets/navigation-routing/create-new-page.png)
 
-2. 在&#x200B;**[!UICONTROL Template]**&#x200B;下，选择&#x200B;**[!UICONTROL SPA Page]**。 在&#x200B;**[!UICONTROL Properties]**&#x200B;下，输入&#x200B;**[!UICONTROL Title]**&#x200B;的&#x200B;**&quot;Page 1&quot;**&#x200B;和&#x200B;**&quot;page-1&quot;**&#x200B;作为名称。
+2. 在 **[!UICONTROL 模板]** 选择 **[!UICONTROL SPA页面]**. 在 **[!UICONTROL 属性]** enter **&quot;第1页&quot;** 对于 **[!UICONTROL 标题]** 和 **&quot;page-1&quot;** 作为名称。
 
    ![输入初始页面属性](assets/navigation-routing/initial-page-properties.png)
 
-   单击&#x200B;**[!UICONTROL 创建]**，然后在对话框弹出窗口中，单击&#x200B;**[!UICONTROL 打开]**&#x200B;以在AEM SPA编辑器中打开该页面。
+   单击 **[!UICONTROL 创建]** 并在对话框弹出窗口中，单击 **[!UICONTROL 打开]** 以在AEM SPA编辑器中打开页面。
 
-3. 向主&#x200B;**[!UICONTROL 布局容器]**&#x200B;添加新的&#x200B;**[!UICONTROL Text]**&#x200B;组件。 编辑组件并输入文本：**&quot;Page 1&quot;**&#x200B;使用RTE和&#x200B;**H1**&#x200B;元素（必须进入全屏模式才能更改段落元素）
+3. 添加新 **[!UICONTROL 文本]** 组件到主 **[!UICONTROL 布局容器]**. 编辑组件并输入文本： **&quot;第1页&quot;** 使用RTE和 **H1** 元素（您必须进入全屏模式才能更改段落元素）
 
    ![示例内容页面1](assets/navigation-routing/page-1-sample-content.png)
 
    请随时添加其他内容，如图像。
 
-4. 返回到AEM Sites控制台并重复上述步骤，创建名为&#x200B;**&quot;Page 2&quot;**&#x200B;的第二个页面作为&#x200B;**Page 1**&#x200B;的同级页面。 向&#x200B;**Page 2**&#x200B;添加内容，以便轻松识别内容。
-5. 最后，创建第三个页面，**&quot;Page 3&quot;**，但作为&#x200B;**Page 2**&#x200B;的&#x200B;**子**。 完成网站层次结构后，应如下所示：
+4. 返回到AEM Sites控制台并重复上述步骤，从而创建另一个名为 **&quot;第2页&quot;** 作为 **第1页**. 将内容添加到 **第2页** 以便易于识别。
+5. 最后创建第三个页面， **&quot;第3页&quot;** 但作为 **孩子** of **第2页**. 完成网站层次结构后，应如下所示：
 
    ![网站层次结构示例](assets/navigation-routing/wknd-spa-sample-site-hierarchy.png)
 
-6. 在新选项卡中，打开由AEM提供的JSON模型API:[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)。 首次加载SPA时，将请求此JSON内容。 外部结构如下所示：
+6. 在新选项卡中，打开由AEM提供的JSON模型API: [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). 首次加载SPA时，将请求此JSON内容。 外部结构如下所示：
 
    ```json
    {
@@ -213,25 +213,25 @@ ht-degree: 0%
    }
    ```
 
-   在`:children`下，您应会看到每个已创建页面的条目。 所有页面的内容都位于此初始JSON请求中。 一旦实施导航路由，将快速加载SPA的后续视图，因为内容已在客户端可用。
+   在 `:children` 您应会看到创建的每个页面对应的条目。 所有页面的内容都位于此初始JSON请求中。 一旦实施导航路由，将快速加载SPA的后续视图，因为内容已在客户端可用。
 
-   在初始JSON请求中加载SPA内容的&#x200B;**ALL**&#x200B;并不明智，因为这会减缓初始页面加载速度。 接下来，我们将看一看页面的层级深度是如何收集的。
+   加载不明智 **全部** 的JSON请求中SPA内容的URL，因为这会减慢初始页面加载速度。 接下来，我们将看一看页面的层级深度是如何收集的。
 
-7. 导航到&#x200B;**SPA根**&#x200B;模板：[http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-app-template/structure.html)。
+7. 导航到 **SPA根** 模板： [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-app-template/structure.html).
 
-   单击&#x200B;**[!UICONTROL 页面属性菜单]** > **[!UICONTROL 页面策略]**:
+   单击 **[!UICONTROL 页面属性菜单]** > **[!UICONTROL 页面策略]**:
 
    ![打开SPA根的页面策略](assets/navigation-routing/open-page-policy.png)
 
-8. **SPA根**&#x200B;模板具有额外的&#x200B;**[!UICONTROL 分层结构]**&#x200B;选项卡，用于控制收集的JSON内容。 **[!UICONTROL 结构深度]**&#x200B;确定在站点层次结构中收集&#x200B;**根**&#x200B;下子页面的深度。 您还可以使用&#x200B;**[!UICONTROL 结构模式]**&#x200B;字段根据正则表达式过滤掉其他页面。
+8. 的 **SPA根** 模板具有额外的 **[!UICONTROL 分层结构]** 选项卡来控制收集的JSON内容。 的 **[!UICONTROL 结构深度]** 确定网站层级中收集子页面的深度 **根**. 您还可以使用 **[!UICONTROL 结构模式]** 字段，以根据正则表达式筛选其他页面。
 
-   将&#x200B;**[!UICONTROL 结构深度]**&#x200B;更新为&#x200B;**&quot;2&quot;**:
+   更新 **[!UICONTROL 结构深度]** to **&quot;2&quot;**:
 
    ![更新结构深度](assets/navigation-routing/update-structure-depth.png)
 
-   单击&#x200B;**[!UICONTROL 完成]**&#x200B;以保存对策略所做的更改。
+   单击 **[!UICONTROL 完成]** 以保存对策略所做的更改。
 
-9. 重新打开JSON模型[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)。
+9. 重新打开JSON模型 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json).
 
    ```json
    {
@@ -253,15 +253,15 @@ ht-degree: 0%
    }
    ```
 
-   请注意，**Page 3**&#x200B;路径已被删除：`/content/wknd-spa-angular/us/en/home/page-2/page-3`。
+   请注意， **第3页** 路径已删除： `/content/wknd-spa-angular/us/en/home/page-2/page-3` 从初始JSON模型。
 
    稍后，我们将观察AEM SPA Editor SDK如何动态加载其他内容。
 
 ## 实施导航
 
-接下来，使用新的`NavigationComponent`实施导航菜单。 我们可以直接在`header.component.html`中添加代码，但最好的做法是避免出现较大的组件。 相反，应实施一个`NavigationComponent`，该稍后可能会重新使用。
+接下来，使用新的 `NavigationComponent`. 我们可以直接将代码添加到 `header.component.html` 但最好的做法是避免出现大型组件。 而是实施 `NavigationComponent` 以后可能会重新使用。
 
-1. 查看位于[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)的AEM `Header`组件公开的JSON:
+1. 查看由AEM公开的JSON `Header` 组件位置 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json):
 
    ```json
    ...
@@ -313,9 +313,9 @@ ht-degree: 0%
    ":type": "wknd-spa-angular/components/header"
    ```
 
-   AEM页面的层次结构是使用JSON建模的，可用于填充导航菜单。 请记住，`Header`组件继承了[导航核心组件](https://www.aemcomponents.dev/content/core-components-examples/library/templating/navigation.html)的所有功能，通过JSON公开的内容将自动映射到Angular`@Input`注释。
+   AEM页面的层次结构是使用JSON建模的，可用于填充导航菜单。 记得 `Header` 组件会继承 [导航核心组件](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) 且通过JSON公开的内容将自动映射到Angular `@Input` 注释。
 
-2. 打开新的终端窗口，然后导航到SPA项目的`ui.frontend`文件夹。 使用AngularCLI工具创建新的`NavigationComponent`:
+2. 打开新的终端窗口并导航到 `ui.frontend` 文件夹。 新建 `NavigationComponent` 使用AngularCLI工具：
 
    ```shell
    $ cd ui.frontend
@@ -327,7 +327,7 @@ ht-degree: 0%
    UPDATE src/app/app.module.ts (2032 bytes)
    ```
 
-3. 接下来，使用新创建的`components/navigation`目录中的AngularCLI创建名为`NavigationLink`的类：
+3. 接下来创建一个名为 `NavigationLink` 在新创建的Angular中使用CLI `components/navigation` 目录：
 
    ```shell
    $ cd src/app/components/navigation/
@@ -336,11 +336,11 @@ ht-degree: 0%
    CREATE src/app/components/navigation/navigation-link.ts (32 bytes)
    ```
 
-4. 返回到您选择的IDE，然后在`navigation-link.ts`的`/src/app/components/navigation/navigation-link.ts`处打开文件。
+4. 返回到您选择的IDE，然后在 `navigation-link.ts` at `/src/app/components/navigation/navigation-link.ts`.
 
    ![打开navigation-link.ts文件](assets/navigation-routing/ide-navigation-link-file.png)
 
-5. 使用以下内容填充`navigation-link.ts` :
+5. 填充 `navigation-link.ts` ，具有以下特点：
 
    ```js
    export class NavigationLink {
@@ -365,11 +365,11 @@ ht-degree: 0%
    }
    ```
 
-   这是一个用于表示单个导航链接的简单类。 在类构造函数中，我们希望`data`是从AEM传入的JSON对象。 该类将在`NavigationComponent`和`HeaderComponent`中使用，以轻松填充导航结构。
+   这是一个用于表示单个导航链接的简单类。 在类构造函数中，我们期望 `data` 为从AEM传入的JSON对象。 此类将在 `NavigationComponent` 和 `HeaderComponent` 以轻松填充导航结构。
 
-   不执行任何数据转换，此类主要用于强烈键入JSON模型。 请注意，`this.children`键入为`NavigationLink[]`，且构造函数会递归地为`children`数组中的每个项目创建新的`NavigationLink`对象。 请记住，`Header`的JSON模型是分层的。
+   不执行任何数据转换，此类主要用于强烈键入JSON模型。 请注意 `this.children` 键入为 `NavigationLink[]` 构造函数递归地创建新 `NavigationLink` 对象 `children` 数组。 回想一下 `Header` 是分层的。
 
-6. 打开文件`navigation-link.spec.ts`。 这是`NavigationLink`类的测试文件。 使用以下内容更新它：
+6. 打开文件 `navigation-link.spec.ts`. 这是 `NavigationLink` 类。 使用以下内容更新它：
 
    ```js
    import { NavigationLink } from './navigation-link';
@@ -391,9 +391,9 @@ ht-degree: 0%
    });
    ```
 
-   请注意， `const data`遵循之前针对单个链接检查的相同JSON模型。 这远非一个可靠的单元测试，但应该足以测试`NavigationLink`的构造函数。
+   请注意 `const data` 遵循之前针对单个链接检查的相同JSON模型。 这远非一个可靠的单元测试，但它应该足以测试的构造函数 `NavigationLink`.
 
-7. 打开文件`navigation.component.ts`。 使用以下内容更新它：
+7. 打开文件 `navigation.component.ts`. 使用以下内容更新它：
 
    ```js
    import { Component, OnInit, Input } from '@angular/core';
@@ -426,9 +426,9 @@ ht-degree: 0%
    }
    ```
 
-   `NavigationComponent` 应为 `object[]` AEM `items` 中的JSON模型的名称。此类会公开一个方法`get navigationLinks()`，该方法会返回`NavigationLink`对象的数组。
+   `NavigationComponent` 预期 `object[]` 已命名 `items` 即AEM中的JSON模型。 此类会公开单个方法 `get navigationLinks()` 返回 `NavigationLink` 对象。
 
-8. 打开文件`navigation.component.html`，然后使用以下内容更新它：
+8. 打开文件 `navigation.component.html` 并使用以下内容更新：
 
    ```html
    <ul *ngIf="navigationLinks && navigationLinks.length > 0" class="navigation__group">
@@ -436,9 +436,9 @@ ht-degree: 0%
    </ul>
    ```
 
-   这会生成一个初始的`<ul>`，并从`navigation.component.ts`调用`get navigationLinks()`方法。 `<ng-container>`用于调用名为`recursiveListTmpl`的模板，并将`navigationLinks`作为名为`links`的变量传递。
+   这会生成一个初始 `<ul>` 并调用 `get navigationLinks()` 方法 `navigation.component.ts`. 安 `<ng-container>` 用于调用名为 `recursiveListTmpl` 然后传递 `navigationLinks` 作为名为的变量 `links`.
 
-   添加`recursiveListTmpl`下一个：
+   添加 `recursiveListTmpl` 下一个：
 
    ```html
    <ng-template #recursiveListTmpl let-links="links">
@@ -453,11 +453,11 @@ ht-degree: 0%
    </ng-template>
    ```
 
-   此处实现了导航链接的其余渲染。 请注意，变量`link`的类型为`NavigationLink`，并且该类创建的所有方法/属性都可用。 [`[routerLink]`](https://angular.io/api/router/RouterLink) 而不是常规属 `href` 性。这样，我们便无需刷新整页，即可链接到应用程序中的特定路由。
+   此处实现了导航链接的其余渲染。 请注意变量 `link` 是类型 `NavigationLink` 和由该类创建的所有方法/属性都可用。 [`[routerLink]`](https://angular.io/api/router/RouterLink) 使用而不是正常 `href` 属性。 这样，我们便无需刷新整页，即可链接到应用程序中的特定路由。
 
-   如果当前`link`具有非空`children`数组，则还通过创建另一个`<ul>`来实现导航的递归部分。
+   导航的递归部分也通过创建另一个 `<ul>` 如果当前 `link` 具有非空 `children` 数组。
 
-9. 更新`navigation.component.spec.ts`以添加对`RouterTestingModule`的支持：
+9. 更新 `navigation.component.spec.ts` 添加对 `RouterTestingModule`:
 
    ```diff
     ...
@@ -473,9 +473,9 @@ ht-degree: 0%
     ...
    ```
 
-   需要添加`RouterTestingModule`，因为组件使用`[routerLink]`。
+   添加 `RouterTestingModule` 是必需的，因为组件使用 `[routerLink]`.
 
-10. 更新`navigation.component.scss`以向`NavigationComponent`添加一些基本样式：
+10. 更新 `navigation.component.scss` 向中添加一些基本样式 `NavigationComponent`:
 
    ```scss
    @import "~src/styles/variables";
@@ -511,24 +511,24 @@ ht-degree: 0%
 
 ## 更新标头组件
 
-现在，`NavigationComponent`已实施，必须更新`HeaderComponent`才能引用它。
+现在， `NavigationComponent` 已经实施， `HeaderComponent` 必须更新才能引用它。
 
-1. 打开终端，然后导航到SPA项目中的`ui.frontend`文件夹。 启动&#x200B;**Webpack开发服务器**:
+1. 打开终端并导航到 `ui.frontend` 文件夹。 启动 **WebPack开发服务器**:
 
    ```shell
    $ npm start
    ```
 
-2. 打开浏览器选项卡，然后导航到[http://localhost:4200/](http://localhost:4200/)。
+2. 打开浏览器选项卡，然后导航到 [http://localhost:4200/](http://localhost:4200/).
 
-   应将&#x200B;**webpack dev server**&#x200B;配置为从AEM的本地实例(`ui.frontend/proxy.conf.json`)代理JSON模型。 这将允许我们从教程前面的部分直接针对在AEM中创建的内容进行代码。
+   的 **WebPack开发服务器** 应该配置为从AEM的本地实例代理JSON模型(`ui.frontend/proxy.conf.json`)。 这将允许我们从教程前面的部分直接针对在AEM中创建的内容进行代码。
 
    ![菜单切换工作](./assets/navigation-routing/nav-toggle-static.gif)
 
-   `HeaderComponent`当前已实施菜单切换功能。 接下来，添加导航组件。
+   的 `HeaderComponent` 当前已实施菜单切换功能。 接下来，添加导航组件。
 
-3. 返回到您选择的IDE，然后在`ui.frontend/src/app/components/header/header.component.ts`打开文件`header.component.ts`。
-4. 更新`setHomePage()`方法以删除硬编码字符串，并使用AEM组件传入的动态prop:
+3. 返回到您选择的IDE，然后打开文件 `header.component.ts` at `ui.frontend/src/app/components/header/header.component.ts`.
+4. 更新 `setHomePage()` 方法来删除硬编码的字符串，并使用由AEM组件传入的动态prop:
 
    ```js
    /* header.component.ts */
@@ -544,9 +544,9 @@ ht-degree: 0%
    ...
    ```
 
-   基于从AEM传入的导航JSON模型的根`items[0]`创建`NavigationLink`的新实例。 `this.route.snapshot.data.path` 返回当前Angular路由的路径。此值用于确定当前路由是否为&#x200B;**Home Page**。 `this.homePageUrl` 用于填充徽标上的锚点 **链接**。
+   的新实例 `NavigationLink` 创建依据 `items[0]`，从AEM传入的导航JSON模型的根。 `this.route.snapshot.data.path` 返回当前Angular路由的路径。 此值用于确定当前路由是否为 **主页**. `this.homePageUrl` 用于填充 **徽标**.
 
-5. 打开`header.component.html`并将导航的静态占位符替换为对新创建的`NavigationComponent`的引用：
+5. 打开 `header.component.html` 并将导航的静态占位符替换为对新创建的引用 `NavigationComponent`:
 
    ```diff
        <div class="header-navigation">
@@ -557,9 +557,9 @@ ht-degree: 0%
        </div>
    ```
 
-   `[items]=items` 属性将从 `@Input() items` 传递到 `HeaderComponent` 其构 `NavigationComponent` 建导航的位置。
+   `[items]=items` 属性传递 `@Input() items` 从 `HeaderComponent` 到 `NavigationComponent` 在那里构建导航。
 
-6. 打开`header.component.spec.ts`并添加`NavigationComponent`的声明：
+6. 打开 `header.component.spec.ts` 并为 `NavigationComponent`:
 
    ```diff
        /* header.component.spect.ts */
@@ -578,9 +578,9 @@ ht-degree: 0%
        }));
    ```
 
-   由于`NavigationComponent`现在用作`HeaderComponent`的一部分，因此需要将其声明为测试台的一部分。
+   自 `NavigationComponent` 现在用作 `HeaderComponent` 它需要声明为测试台的一部分。
 
-7. 保存对任何打开的文件所做的更改并返回到&#x200B;**Webpack开发服务器**:[http://localhost:4200/](http://localhost:4200/)
+7. 保存对任何打开的文件所做的更改并返回到 **WebPack开发服务器**: [http://localhost:4200/](http://localhost:4200/)
 
    ![已完成标题导航](assets/navigation-routing/completed-header.png)
 
@@ -590,7 +590,7 @@ ht-degree: 0%
 
 现在，导航已实施，请在AEM中检查路由。
 
-1. 在IDE中，在`ui.frontend/src/app`处打开文件`app-routing.module.ts`。
+1. 在IDE中，打开文件 `app-routing.module.ts` at `ui.frontend/src/app`.
 
    ```js
    /* app-routing.module.ts */
@@ -633,19 +633,19 @@ ht-degree: 0%
    export class AppRoutingModule {}
    ```
 
-   `routes: Routes = [];`数组定义到Angular组件映射的路由或导航路径。
+   的 `routes: Routes = [];` 数组定义到Angular组件映射的路由或导航路径。
 
-   `AemPageMatcher` 是自定义Angular路 [由器UrlMatcher](https://angular.io/api/router/UrlMatcher)，与AEM中属于此Angular应用程序一部分的任何“看起来”页面相匹配。
+   `AemPageMatcher` 是自定义Angular路由器 [UrlMatcher](https://angular.io/api/router/UrlMatcher)，与AEM中属于此Angular应用程序一部分的任何“外观”页面相匹配。
 
-   `PageComponent` 是AEM中表示页面的Angular组件，将调用匹配的路由。将进一步检查`PageComponent`。
+   `PageComponent` 是AEM中表示页面的Angular组件，将调用匹配的路由。 的 `PageComponent` 会被进一步检查。
 
-   `AemPageDataResolver`由AEM SPA Editor JS SDK提供的是一个自定义的 [Angular路由器](https://angular.io/api/router/Resolve) 解析器，用于将路由URL(AEM中的路径，包括.html扩展)转换为AEM中的资源路径（页面路径，除以扩展名）。
+   `AemPageDataResolver`，由AEM SPA Editor JS SDK提供，是一个自定义 [Angular路由器解析程序](https://angular.io/api/router/Resolve) 用于将路由URL(AEM中的路径，包括.html扩展)转换为AEM中的资源路径（页面路径，即不包含扩展）。
 
-   例如，`AemPageDataResolver`会将路由的URL `content/wknd-spa-angular/us/en/home.html`转换为路径`/content/wknd-spa-angular/us/en/home`。 用于根据JSON模型API中的路径解析页面内容。
+   例如， `AemPageDataResolver` 转换路由的URL `content/wknd-spa-angular/us/en/home.html` 进入 `/content/wknd-spa-angular/us/en/home`. 用于根据JSON模型API中的路径解析页面内容。
 
-   `AemPageRouteReuseStrategy`由AEM SPA Editor JS SDK提供的是一个自定义的RouteReuseStrategy， [](https://angular.io/api/router/RouteReuseStrategy) 可阻止跨路由重 `PageComponent` 复使用。否则，页面“A”中的内容可能会在导航到页面“B”时显示。
+   `AemPageRouteReuseStrategy`，由AEM SPA Editor JS SDK提供，是一个自定义 [RouteReuseStrategy](https://angular.io/api/router/RouteReuseStrategy) 防止重复使用 `PageComponent` 跨路线。 否则，页面“A”中的内容可能会在导航到页面“B”时显示。
 
-2. 在`ui.frontend/src/app/components/page/`处打开文件`page.component.ts`。
+2. 打开文件 `page.component.ts` at `ui.frontend/src/app/components/page/`.
 
    ```js
    ...
@@ -669,13 +669,13 @@ ht-degree: 0%
    }
    ```
 
-   需要`PageComponent`才能处理从AEM中检索到的JSON，并用作呈现路由的Angular组件。
+   的 `PageComponent` 需要处理从AEM检索到的JSON，并用作呈现路由的Angular组件。
 
    `ActivatedRoute`，由Angular路由器模块提供，包含状态，指示应将哪个AEM页面的JSON内容加载到此Angular页组件实例中。
 
-   `ModelManagerService`，根据路由获取JSON数据，并将该数据映射到类变 `path`量 `items`、  `itemsOrder`。然后，这些值将传递到[AEMPageComponent](https://www.npmjs.com/package/@adobe/cq-angular-editable-components#aempagecomponent.md)
+   `ModelManagerService`，根据路由获取JSON数据并将该数据映射到类变量 `path`, `items`, `itemsOrder`. 然后，这些内容将传递到 [AEMPageComponent](https://www.npmjs.com/package/@adobe/cq-angular-editable-components#aempagecomponent.md)
 
-3. 在`ui.frontend/src/app/components/page/`处打开文件`page.component.html`
+3. 打开文件 `page.component.html` at `ui.frontend/src/app/components/page/`
 
    ```html
    <aem-page 
@@ -687,13 +687,13 @@ ht-degree: 0%
    </aem-page>
    ```
 
-   `aem-page` 包括 [AEMPageComponent](https://www.npmjs.com/package/@adobe/cq-angular-editable-components#aempagecomponent.md)。变量`path`、`items`和`itemsOrder`将传递到`AEMPageComponent`。 然后，通过SPA编辑器JavaScript SDK提供的`AemPageComponent`将遍历此数据，并根据[映射组件教程](./map-components.md)中所示的JSON数据动态实例化Angular组件。
+   `aem-page` 包括 [AEMPageComponent](https://www.npmjs.com/package/@adobe/cq-angular-editable-components#aempagecomponent.md). 变量 `path`, `items`和 `itemsOrder` 被传递到 `AEMPageComponent`. 的 `AemPageComponent`，通过SPA编辑器提供的JavaScript SDK随后将迭代此数据，并根据( [映射组件教程](./map-components.md).
 
-   `PageComponent`实际上只是`AEMPageComponent`的代理，它是执行大部分重力提升的`AEMPageComponent`代理，用于将JSON模型正确映射到Angular组件。
+   的 `PageComponent` 只是代表 `AEMPageComponent` 而是 `AEMPageComponent` 这样可进行大部分繁重的操作，以将JSON模型正确映射到Angular组件。
 
 ## Inspect AEM中的SPA路由
 
-1. 打开终端并停止&#x200B;**Webpack开发服务器**（如果启动）。 导航到项目的根，然后使用您的Maven技能将项目部署到AEM:
+1. 打开终端并停止 **WebPack开发服务器** 。 导航到项目的根，然后使用您的Maven技能将项目部署到AEM:
 
    ```shell
    $ cd aem-guides-wknd-spa
@@ -702,36 +702,36 @@ ht-degree: 0%
 
    >[!CAUTION]
    >
-   > angular项目启用了一些非常严格的链接规则。 如果Maven生成失败，请检查错误并查找在列出的文件中找到的&#x200B;**Lint错误。**. 修复了linter发现的任何问题，并重新运行Maven命令。
+   > angular项目启用了一些非常严格的链接规则。 如果Maven生成失败，请检查错误并查找 **在列出的文件中发现Lint错误。**. 修复了linter发现的任何问题，并重新运行Maven命令。
 
-2. 导航到AEM中的SPA主页：[http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html)并打开浏览器的开发人员工具。 下面的屏幕截图是从Google Chrome浏览器中捕获的。
+2. 导航到AEM中的SPA主页： [http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html) 并打开浏览器的开发人员工具。 下面的屏幕截图是从Google Chrome浏览器中捕获的。
 
-   刷新页面后，您应会看到对`/content/wknd-spa-angular/us/en.model.json`(SPA根)的XHR请求。 请注意，根据本教程前面对SPA根模板进行的层次结构深度配置，只包含三个子页面。 这不包括&#x200B;**第3**&#x200B;页。
+   刷新页面，此时您应会看到 `/content/wknd-spa-angular/us/en.model.json`，即SPA根。 请注意，根据本教程前面对SPA根模板进行的层次结构深度配置，只包含三个子页面。 这不包括 **第3页**.
 
    ![初始JSON请求 — SPA根](assets/navigation-routing/initial-json-request.png)
 
-3. 打开开发人员工具后，导航到&#x200B;**第3**&#x200B;页：
+3. 打开开发人员工具后，导航到 **第3页**:
 
    ![第3页导航](assets/navigation-routing/page-three-navigation.png)
 
-   请注意，新的XHR请求已发布到：`/content/wknd-spa-angular/us/en/home/page-2/page-3.model.json`
+   请注意，新的XHR请求已发布到： `/content/wknd-spa-angular/us/en/home/page-2/page-3.model.json`
 
    ![第3页XHR请求](assets/navigation-routing/page-3-xhr-request.png)
 
-   AEM模型管理器了解&#x200B;**第3**&#x200B;页JSON内容不可用，并自动触发其他XHR请求。
+   AEM模型管理器了解 **第3页** JSON内容不可用，并会自动触发其他XHR请求。
 
 4. 继续使用各种导航链接导航SPA。 请注意，未发出任何其他XHR请求，并且未发生完整的页面刷新。 这样，最终用户就可以快速获得SPA，并减少不必要的返回AEM请求。
 
    ![已实施导航](assets/navigation-routing/final-navigation-implemented.gif)
 
-5. 通过直接导航到以下位置来体验深层链接：[http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html)。 请注意，浏览器的“返回”按钮可继续工作。
+5. 通过直接导航到以下位置来体验深层链接： [http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html). 请注意，浏览器的“返回”按钮可继续工作。
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您了解了如何通过SPA Editor SDK将SPA中的多个视图映射到AEM页面来支持这些视图。 动态导航已使用Angular路由实现并添加到`Header`组件中。
+恭喜，您了解了如何通过SPA Editor SDK将SPA中的多个视图映射到AEM页面来支持这些视图。 动态导航已通过Angular路由实施，并添加到 `Header` 组件。
 
-您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution)上查看完成的代码，或通过切换到分支`Angular/navigation-routing-solution`在本地签出代码。
+您始终可以在 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution) 或通过切换到分支在本地检出代码 `Angular/navigation-routing-solution`.
 
 ### 后续步骤 {#next-steps}
 
-[创建自定义组件](custom-component.md)  — 了解如何创建要与AEM SPA编辑器一起使用的自定义组件。了解如何开发创作对话框和Sling模型以扩展JSON模型以填充自定义组件。
+[创建自定义组件](custom-component.md)  — 了解如何创建要与AEM SPA编辑器一起使用的自定义组件。 了解如何开发创作对话框和Sling模型以扩展JSON模型以填充自定义组件。

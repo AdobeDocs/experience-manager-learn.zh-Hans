@@ -9,18 +9,17 @@ thumbnail: 6602.jpg
 topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: cdfae631-86d7-438f-9baf-afd621802723
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '376'
 ht-degree: 1%
 
 ---
 
-
-
 # 部署示例
 
-要使此用例在您的系统上正常工作，请按照以下说明操作：
+要使此用例在您的系统上工作，请按照以下说明操作：
 
 >[!NOTE]
 >假定您在4502端口上运行AEM Forms。
@@ -28,43 +27,43 @@ ht-degree: 1%
 
 ## 创建数据库
 
-此示例使用MySQL数据库来存储自适应表单数据。 您需要通过将架构文件](assets/data-base-schema.sql)导入MySQL Workbench来创建[数据库架构。
+此示例使用MySQL数据库来存储自适应表单数据。 您需要创建 [通过导入模式文件实现数据库模式](assets/data-base-schema.sql) 到MySQL Workbench中。
 
 ## 创建数据源
 
-您需要创建一个名为&#x200B;**StoreAndRetrieveAfData**&#x200B;的数据源。 OSGi包中的代码使用此数据源名称
+您需要创建一个名为 **StoreAndRetrieveAfData**. OSGi包中的代码使用此数据源名称
 
 ## 创建表单数据模型
 
-需要基于此名为&#x200B;**StoreAndRetrieveAfData**&#x200B;的数据源创建表单数据模型。 此表单数据模型用于获取与应用程序ID关联的手机号码。 可从此处下载表单数据模型[。](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
+表单数据模型需要基于此数据源(称为 **StoreAndRetrieveAfData**. 此表单数据模型用于获取与应用程序ID关联的手机号码。 表单数据模型可以是 [从此处下载。](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
 
 ## 使用nexmo创建开发人员帐户
 
-使用[Nexmo](https://dashboard.nexmo.com/)创建开发人员帐户，以发送和验证OTP代码。 记下API密钥和API密钥。 数据源和表单数据模型已针对此服务为您创建，并包含在上一步中提到的资产中。
+使用创建开发人员帐户 [Nexmo](https://dashboard.nexmo.com/) 用于发送和验证OTP代码。 记下API密钥和API密钥。 数据源和表单数据模型已针对此服务为您创建，并包含在上一步中提到的资产中。
 
 ## 部署以下OSGi包
 
-部署具有[代码的包，以从数据库](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)中存储和获取数据
-下载并解压缩[developing-with-service-user.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/developing-with-service-user.zip)。
+部署包，包中包含 [用于从数据库存储和获取数据的代码](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)
+下载并解压缩 [developmentwithserviceuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip).
 使用Felix Web控制台部署DevelopingWithServiceUser.jar文件。
 
 ## 部署客户端库
 
-示例使用2个客户端库。 将这些[客户端库](assets/client-libraries.zip)导入AEM。
+示例使用2个客户端库。 导入这些 [客户端库](assets/client-libraries.zip) 到AEM。
 
 ## 导入自定义自适应表单模板
 
-本演示中使用的示例表单基于自定义模板。 将[自定义模板导入AEM](assets/custom-template-with-page-component.zip)
+本演示中使用的示例表单基于自定义模板。 导入 [自定义模板到AEM](assets/custom-template-with-page-component.zip)
 
 ## 导入示例自适应表单
 
-构成此示例的2个表单需要导入AEM。 示例表单可从此处[下载](assets/sample-forms.zip)
+构成此示例的2个表单需要导入AEM。 示例表单可以是 [从此处下载](assets/sample-forms.zip)
 
-在编辑模式下打开[MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html)。 在自适应表单的相应字段中指定API密钥和API密钥值。
+打开 [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) 在编辑模式下。 在自适应表单的相应字段中指定API密钥和API密钥值。
 
 ## 测试解决方案
 
-预览[StoreAFWithAttachments](http://localhost:4502/content/dam/formsanddocuments/storeafwithattachments/jcr:content?wcmmode=disabled)
+预览 [StoreAFWithAttachments](http://localhost:4502/content/dam/formsanddocuments/storeafwithattachments/jcr:content?wcmmode=disabled)
 输入您的手机号码（包括国家/地区代码），填写用户详细信息并添加一些附件。 单击“保存并退出”按钮以保存自适应表单及其附件
 
 

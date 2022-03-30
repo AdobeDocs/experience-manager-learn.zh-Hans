@@ -1,28 +1,26 @@
 ---
 title: 在自适应Forms中使用地理位置API
 description: 使用地理位置API填充表单上的地址字段
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.3,6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 50db6155-ee83-4ddb-9e3a-56e8709222db
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
 
-
 # 在自适应Forms中使用地理位置API{#using-geolocation-api-s-in-adaptive-forms}
-
-请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)页面，获取此功能的实时演示链接。
 
 在本文中，我们将了解如何使用Google的地理位置API填充自适应表单的字段。 当您想要在表单上填充当前地址字段时，通常会使用此用例。
 
 遵循以下步骤在自适应Forms中使用地理位置API。
 
-1. [从Google](https://developers.google.com/maps/documentation/javascript/get-api-key) 获取API密钥以使用Google Maps平台。您可以获得有效期为1年的试用密钥。
+1. [获取API密钥](https://developers.google.com/maps/documentation/javascript/get-api-key) 从Google使用Google地图平台。 您可以获得有效期为1年的试用密钥。
 
 1. 创建了自适应表单片段，其中包含用于保存当前地址的字段
 
@@ -77,7 +75,7 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 
 ![使用地理位置api填充的字段](assets/capture-4.gif)
 
-在第1行中，我们使用HTML地理位置API获取当前位置。 获取当前位置后，我们将当前位置传递到showPosition函数。
+在第1行中，我们使用HTML地理位置API来获取当前位置。 获取当前位置后，我们将当前位置传递到showPosition函数。
 
 在showPosition函数中，我们使用Google API获取给定纬度和经度的地址详细信息。
 
@@ -96,12 +94,12 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 * 安装并启动AEM Forms服务器。
 
 >!![NOTE] 此功能已在AEM Forms 6.3及更高版本上进行测试
-* [获取Google API密钥](https://developers.google.com/maps/documentation/javascript/get-api-key)。
+* [获取Google API密钥](https://developers.google.com/maps/documentation/javascript/get-api-key).
 * [将与本文相关的资产导入AEM。](assets/geolocationapi.zip)
 * [在编辑模式下打开自适应表单片段。](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
 * 打开图像选择组件的规则编辑器。
-* 将&lt;your_api_key>替换为Google API密钥。
+* 替换 &lt;your_api_key> 和Google API密钥。
 * 保存更改。
-* [预览表单](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled)。
+* [预览表单](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled).
 * 单击“地理位置”图标。
 * 您的表单应使用当前位置填充。

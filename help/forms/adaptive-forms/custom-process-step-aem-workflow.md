@@ -6,13 +6,13 @@ version: 6.5
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
+exl-id: 879518db-3f05-4447-86e8-5802537584e5
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
-
 
 # 自定义流程步骤
 
@@ -27,20 +27,18 @@ ht-degree: 0%
 
 ## 创建Maven项目
 
-第一步是使用相应的AdobeMaven Archetype创建Maven项目。 此[article](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中列出了详细步骤。 将maven项目导入到eclipse后，您便可以开始编写可在流程步骤中使用的第一个OSGi组件。
+第一步是使用相应的AdobeMaven Archetype创建Maven项目。 下面列出了详细步骤 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). 将maven项目导入到eclipse后，您便可以开始编写可在流程步骤中使用的第一个OSGi组件。
 
 
 ### 创建实现WorkflowProcess的类
 
-在Eclipse IDE中打开maven项目。 展开&#x200B;**projectname** > **core**文件夹。 展开src/main/java文件夹。 您应会看到以“core”结尾的包。 在此包中创建用于实现WorkflowProcess的Java类。 您需要覆盖执行方法。 执行方法的签名如下
-public void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)引发WorkflowException
-execute方法允许访问以下3个变量
+在Eclipse IDE中打开maven项目。 展开 **projectname** > **核心** 文件夹。 展开src/main/java文件夹。 您应会看到以“core”结尾的包。 在此包中创建用于实现WorkflowProcess的Java类。 您需要覆盖执行方法。 执行方法的签名如下：公共void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)引发WorkflowException执行方法允许访问以下3个变量
 
-**工作项**:workItem变量将授予对与工作流相关数据的访问权限。[此处提供了公共API文档。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**工作项目**:workItem变量将授予对与工作流相关数据的访问权限。 提供了公共API文档 [这里。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**WorkflowSession**:此workflowSession变量将允许您控制工作流。[此处](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)提供了公共API文档
+**WorkflowSession**:此workflowSession变量将允许您控制工作流。 提供了公共API文档 [此处](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**MetaDataMap**:与工作流关联的所有元数据。传递到流程步骤的任何流程参数均可使用MetaDataMap对象。[API文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
+**MetaDataMap**:与工作流关联的所有元数据。 传递到流程步骤的任何流程参数均可使用MetaDataMap对象。[API文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
 在本教程中，我们将将添加到自适应表单的附件作为AEM工作流的一部分写入文件系统。
 
@@ -148,16 +146,15 @@ QueryBuilder服务用于查询attachmentsPath文件夹下nt:file类型的节点�
 
 #### 构建和部署
 
-[按照此处所述构建](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en#build-your-project)
-[包确保包已部署并处于活动状态](http://localhost:4502/system/console/bundles)
+[按如下所述构建包](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[确保包已部署并处于活动状态](http://localhost:4502/system/console/bundles)
 
 创建工作流模型。 在工作流模型中拖放流程步骤。 将流程步骤与“将自适应表单附件保存到文件系统”相关联。
 
 提供以逗号分隔的必需进程参数。 例如附件c:\\scrappp\\。 第一个参数是将相对于工作流有效负载存储自适应表单附件时的文件夹。 此值必须与您在配置自适应表单的提交操作时指定的值相同。 第二个参数是您希望存储附件的位置。
 
-创建自适应表单。 将文件附件组件拖放到表单中。 配置表单的提交操作，以调用在前面步骤中创建的工作流。 提供相应的附件路径。
+创建自适应表单. 将文件附件组件拖放到表单中。 配置表单的提交操作，以调用在前面步骤中创建的工作流。 提供相应的附件路径。
 
 保存设置。
 
 预览表单。 添加几个附件并提交表单。 附件应保存到您在工作流中指定的位置的文件系统中。
-
