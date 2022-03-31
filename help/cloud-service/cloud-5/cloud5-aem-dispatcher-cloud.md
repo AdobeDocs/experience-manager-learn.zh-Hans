@@ -8,9 +8,9 @@ kt: 10054
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342067.jpeg
-source-git-commit: 8212bdddb35fe015efbea897b72b00df3787b120
+source-git-commit: cc4b565aeeaa1419138d459c2d144e944ffb0e67
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,7 @@ Darin和James讨论了AEM Cloud中的调度程序，包括一些最佳实践以�
 
 ## 此视频中涵盖的内容
 
-+ 日志文件 [概述](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
-+ 通过UI访问日志文件
-+ 使用AdobeCLI
-   + [Adobe I/O可扩展CLI](https://github.com/adobe/aio-cli)
-   + [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
-+ 跟踪日志文件
++ 在云服务环境中部署dispatcher文件
+   + [迁移文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
+   + [博客](https://medium.com/adobetech/migrating-a-dispatcher-configuration-from-managed-services-to-aem-as-a-cloud-service-fa8a80d242ee)
++ [迁移工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration)
