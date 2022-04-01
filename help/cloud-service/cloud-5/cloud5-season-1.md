@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 4976bc72228b76c02609cf63c7067cc7bad65861
+source-git-commit: cc434164a4474b71f23653f33cb7e3d99c271595
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '413'
 ht-degree: 1%
 
 ---
@@ -81,14 +81,16 @@ ht-degree: 1%
       </p>
      </td>   
      <td>
-      <img alt="云中的 Dispatcher" src="./imgs/coming-soon.png"/>
+      <a href="./cloud5-aem-dispatcher-cloud.md">
+      <img alt="云中的 Dispatcher" src="./imgs/005-thumb.png"/>
+       </a>  
       <div>
-         <strong>云中的调度程序</strong>
+        <a href="./cloud5-aem-dispatcher-cloud.md"><strong>云中的调度程序</strong></a>
          <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
       </div>
       <p>
         <br/>
-         将于2022年4月1日推出
+        Darin和James讨论了AEM Cloud中的调度程序，包括一些最佳实践以及与AMS/On-Prem的差异。 
       </p>
    </td>
      <td>
@@ -138,4 +140,18 @@ ht-degree: 1%
       </p>
    </td> 
   </tr>
+    <tr>
+        <td>
+            <img alt="Adobe应用程序生成器" src="./imgs/coming-soon.png"/>
+            <div>
+                <strong>迁移（第2部分）</strong><br/>        
+                <em>与Darin Kuntze &amp; James Talbot，云高级架构师和特邀嘉宾</em>
+            </div>
+            <p><br/>
+                将于2022年5月6日发布
+            </p>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
