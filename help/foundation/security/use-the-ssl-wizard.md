@@ -13,10 +13,10 @@ topic: Security
 role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
-source-git-commit: 835c01cb2ad1d154437087c51c70a2daf90493dd
+source-git-commit: 2d5446197b9b81a4dbe4eaa5a7cb4fcdd5d63f67
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 1%
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
@@ -26,6 +26,8 @@ Adobe Experience Manager的SSL设置向导，更便于设置要通过HTTPS运行
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993/?quality=12&learn=on)
 
+打开 __SSL配置向导__ 可直接通过导航到 __AEM作者>工具>安全> SSL配置__.
+
 >[!NOTE]
 >
 >对于托管环境，IT部门最好提供CA信任的证书和密钥。
@@ -34,11 +36,11 @@ Adobe Experience Manager的SSL设置向导，更便于设置要通过HTTPS运行
 
 ## 私钥和自签名证书下载
 
-以下zip文件包含在localhost上设置AEM SSL所需的[!DNL DER]和[!DNL CRT]文件，且仅用于本地开发目的。
+以下zip文件包含 [!DNL DER] 和 [!DNL CRT] 在本地主机上设置AEM SSL所需的文件，仅用于本地开发。
 
-为方便起见，提供了[!DNL DER]和[!DNL CERT]文件，并使用下面“生成私钥和自签名证书”部分中所述的步骤生成这些文件。
+的 [!DNL DER] 和 [!DNL CERT] 文件是为了方便起见而提供的，使用下面“生成私钥和自签名证书”部分中所述的步骤生成。
 
-如果需要，证书传递短语为&#x200B;**admin**。
+如果需要，证书传递短语为 **管理员**.
 
 localhost — 私钥和自签名certificate.zip（于2028年7月过期）
 
@@ -46,7 +48,7 @@ localhost — 私钥和自签名certificate.zip（于2028年7月过期）
 
 ## 私钥和自签名证书生成
 
-上述视频描述了如何使用自签名证书在AEM创作实例上设置和配置SSL。 使用[[!DNL OpenSSL]](https://www.openssl.org/)的以下命令可以生成要在向导的步骤2中使用的私钥和证书。
+上述视频描述了如何使用自签名证书在AEM创作实例上设置和配置SSL。 使用 [[!DNL OpenSSL]](https://www.openssl.org/) 可以生成要在向导的步骤2中使用的私钥和证书。
 
 ```shell
 ### Create Private Key
