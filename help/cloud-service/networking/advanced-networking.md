@@ -8,17 +8,24 @@ role: Architect, Developer
 level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
+source-git-commit: 6e7130cd98700bdb5e7f330ca0506fe89ea0eb94
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 0%
+source-wordcount: '268'
+ht-degree: 4%
 
 ---
 
-
 # 高级网络
 
-AEM as a Cloud Service提供了三个用于管理与外部服务的连接的选项。 Cloud Manager程序及其AEMas a Cloud Service环境一次只能使用单种高级网络配置，因此请确保选择最合适的类型。
+AEMas a Cloud Service提供高级网络功能，可精确管理与AEMas a Cloud Service程序的连接。
+
+|  | [生产程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
+|---------------------------------------------------|:-----------------------:|:---------------------|
+| 支持高级网络 | ✔ | ✘ |
+
+
+AEM高级网络由三个用于管理与外部服务的连接的选项组成。 Cloud Manager程序及其AEMas a Cloud Service环境一次只能使用单种高级网络配置，因此请确保选择最合适的类型。
 
 |  | 标准端口上的HTTP/HTTPS | 非标准端口上的HTTP/HTTPS | 非HTTP/HTTPS连接 | 专用出口IP | “无代理主机”列表 | 连接到受VPN保护的服务 | 按IP限制AEM发布流量 |
 |-----------------------------------|:----------------------------:|:--------------------------------:|:--------------------------:|:-------------------:|:-------------------------------------:|:-------------------------------------:|:----:|
@@ -51,8 +58,8 @@ AEM as a Cloud Service提供了三个用于管理与外部服务的连接的选�
       </p>
     </td>   
    <td>
-      <a  href="./vpn.md"><img alt="虚拟专用网(VPN)" src="./assets/vpn.png"/></a>
-      <div><strong><a href="./vpn.md">虚拟专用网(VPN)</a></strong></div>
+      <a  href="./vpn.md"><img alt="虚拟专用网络 (VPN)" src="./assets/vpn.png"/></a>
+      <div><strong><a href="./vpn.md">虚拟专用网络 (VPN)</a></strong></div>
       <p>
         保护客户或供应商基础架构与AEMas a Cloud Service之间的流量。
       </p>
