@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 83e16ea87847182139982ea2378d8ff9f079c968
+source-git-commit: 88797cf950dae46d0f856330df12c59a4efe6456
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 19%
+source-wordcount: '227'
+ht-degree: 18%
 
 ---
 
@@ -46,6 +46,8 @@ ht-degree: 19%
       + [3 — 浏览AEM GraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4 — 持久GraphQL查询](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 — 客户端应用程序集成](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
+   + 操作方法 {#how-to}
+      + [使用富文本](./graphql/how-to/rich-text.md)
    + 示例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
@@ -87,4 +89,4 @@ ht-degree: 19%
    + [4 — 定义内容服务模板](./content-services/chapter-4.md)
    + [5 — 创作内容服务页面](./content-services/chapter-5.md)
    + [6 — 在AEM发布中公布内容以进行交付](./content-services/chapter-6.md)
-   + [7 — 在移动设备应用程序中使用AEM内容服务](./content-services/chapter-7.md)
+   + [7 — 从Mobile应用程序使用AEM内容服务](./content-services/chapter-7.md)
