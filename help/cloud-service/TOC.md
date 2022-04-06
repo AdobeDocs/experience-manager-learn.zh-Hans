@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 8631d0b23e2befa22032d0b677e0f1c7122f2cb5
+source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '731'
 ht-degree: 22%
 
 ---
@@ -178,6 +178,7 @@ ht-degree: 22%
       + [创建JWT令牌](./forms/forms-cs-assembler/create-jwt.md)
       + [创建访问令牌](./forms/forms-cs-assembler/create-access-token.md)
       + [组合PDF文件](./forms/forms-cs-assembler/assemble-pdf-files.md)
+      + [PDF/A实用程序](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [测试解决方案](./forms/forms-cs-assembler/test.md)
       + [挑战](./forms/forms-cs-assembler/challenge.md)
    + Azure门户存储{#forms-cs-azure-portal}
