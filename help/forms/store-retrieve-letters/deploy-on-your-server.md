@@ -11,10 +11,11 @@ topic: Development
 role: Developer
 level: Intermediate
 kt: 10208
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+exl-id: 9053ee29-436a-439a-b592-c3fef9852ea4
+source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 0%
+source-wordcount: '165'
+ht-degree: 2%
 
 ---
 
@@ -22,13 +23,18 @@ ht-degree: 0%
 
 请按照以下说明操作，以便在AEM Server上使用此功能
 
-* 在c驱动器中创建名为icdrafts的文件夹
 * [创建数据库模式](assets/icdrafts.sql)
 * [导入客户端库](assets/icdrafts.zip)
 * [导入自适应表单](assets/SavedDraftsAdaptiveForm.zip)
 * 创建数据源(名为 _SaveAndContinue_
 
 ![创建数据源](assets/data-source.png)
+
+| 属性名称 | 属性值 |
+|---|---|
+| 数据源名称 | SaveAndContinue |
+| JDBC驱动程序类 | com.mysql.cj.jdbc.Driver |
+| JDBC连接URL | jdbc:mysql://localhost:3306/aemformstutorial?autoReconnect=true&amp;useSSL=false&amp;characterEncoding=utf8&amp;useUnicode=true |
 
 * [部署icdrafts包](assets/icdrafts.icdrafts.core-1.0-SNAPSHOT.jar)
 * 确保 _使用CCRDocumentInstanceService启用保存_ ，如下所示

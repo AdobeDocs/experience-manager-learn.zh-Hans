@@ -5,7 +5,7 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
 workflow-type: tm+mt
 source-wordcount: '1667'
 ht-degree: 3%
@@ -210,8 +210,8 @@ ht-degree: 3%
    + [在AEM Forms中使用PDFG服务](document-services/using-pdfg-in-aem-forms.md)
    + [在AEM Forms中使用输出和Forms服务](document-services/output-and-forms-services-article-develop.md)
    + [从一个数据文件生成多个PDF](document-services/generate-multi-record-pdf.md)
-   + [在Mobile表单提交中生成PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [从移动设备表单生成交互式PDF](document-services/render-interactive-form-using-api.md)
+   + [在移动设备表单提交时生成PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [从Mobile表单生成交互式PDF](document-services/render-interactive-form-using-api.md)
    + [从自适应表单生成交互式DoR](document-services/generate-interactive-dor.md)
    + [配置Reader扩展凭据](document-services/configuring-reader-extension-osgi.md)
    + [将使用权限应用于XDP呈现版本上的PDF](document-services/rendering-and-reader-extending-xdp-templates-article.md)
@@ -233,7 +233,7 @@ ht-degree: 3%
    + [将表添加到打印渠道](ic-print-channel-tutorial/adding-table-to-print-channel.md)
    + [使用监视文件夹生成文档](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
    + [在表单提交时打开代理UI](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
-+ 保存并检索草稿信件 {#store-retrieve-letters}
++ 保存和检索草稿信件 {#store-retrieve-letters}
    + [简介](store-retrieve-letters/introduction.md)
    + [实施](store-retrieve-letters/save-draft-letters.md)
    + [部署示例](store-retrieve-letters/deploy-on-your-server.md)
