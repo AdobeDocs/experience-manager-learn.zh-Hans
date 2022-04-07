@@ -1,6 +1,6 @@
 ---
 title: 迁移到云 — 第1部分
-description: 达林和詹姆斯讨论了迁移到AEM Cloud的问题，并演示了一些技术。
+description: 达林和詹姆斯讨论了迁移到AEM云的问题，并演示了一些技巧和最佳实践。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -8,16 +8,17 @@ kt: 10207
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342133.jpeg
-source-git-commit: bc14a89433ef603ef981a05efb1eb931dabcb777
+exl-id: 817ea20d-d902-4497-83d3-5800ed6aaa8f
+source-git-commit: 62a1deda2a4fda56edb0c3d0f34a5e804f78887b
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '113'
 ht-degree: 5%
 
 ---
 
 # 迁移到云 — 第1部分
 
-达林和詹姆士讨论了AEM Cloud中的调度程序，包括一些最佳实践以及与AMS./On-Prem.They的不同之处，这些也涉及迁移到云。 特邀嘉宾云专家， [阿普莱斯米特博士](https://twitter.com/DrApplesmith) 露面。
+Darin和James讨论了AEM Cloud中的调度程序，包括一些最佳实践以及与AMS/On-Prem的差异。 此外，他们还会在迁移到云时进行操作。 特邀嘉宾云专家， [阿普莱斯米特博士](https://twitter.com/DrApplesmith) 露面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342133/?quality=12&learn=on)
 
