@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: 8b95339bc2e037d3a0d9d705a94b37f268545b4f
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -36,24 +36,24 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
 
 ## 前提条件
 
-在设置虚拟专用网络时，需要满足以下条件：
+The following are required when setting up Virtual Private Network:
 
-+ Adobe帐户 [Cloud Manager业务所有者权限](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/permissions/#cloud-manager-api-permissions)
++ Adobe account with [Cloud Manager Business Owner permissions](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/permissions/#cloud-manager-api-permissions)
 + 访问 [Cloud Manager API的身份验证凭据](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/authentication/)
    + 组织ID（也称IMS组织ID）
    + 客户端ID（即API密钥）
-   + 访问令牌（也称载体令牌）
+   + Access Token (aka Bearer Token)
 + Cloud Manager项目ID
 + Cloud Manager环境ID
 + 虚拟专用网络，可访问所有必需的连接参数。
 
-本教程使用 `curl` 以配置Cloud Manager API。 提供的 `curl` 命令采用Linux/macOS语法。 如果使用Windows命令提示符，请将 `\` 换行符 `^`.
+This tutorial uses `curl` to make the Cloud Manager API configurations. The provided `curl` commands assume a Linux/macOS syntax. 如果使用Windows命令提示符，请将 `\` 换行符 `^`.
 
 ## 按程序启用虚拟专用网络
 
-首先，在AEMas a Cloud Service上启用虚拟专用网络。
+Start by enabling the Virtual Private Network on AEM as a Cloud Service.
 
-1. 首先，使用Cloud Manager API确定将在哪个区域设置高级网络 [listRegions](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/getProgramRegions) 操作。 的 `region name` 将需要进行后续的Cloud Manager API调用。 通常，会使用生产环境所在的区域。
+1. First, determine the region in which the Advanced Networking will be set up by using the Cloud Manager API [listRegions](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/getProgramRegions) operation. The `region name` will be required to make subsequent Cloud Manager API calls. 通常，会使用生产环境所在的区域。
 
    __listRegions HTTP请求__
 
@@ -80,7 +80,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
 
    在 `vpn-create.json` 并通过 `... -d @./vpn-create.json`.
 
-[下载示例vpn-create.json](./assets/vpn-create.json)
+[Download the example vpn-create.json](./assets/vpn-create.json)
 
    ```json
    {
@@ -94,6 +94,10 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
                "10.151.201.22",
                "10.151.202.22",
                "10.154.155.22"
+           ],
+           "domains": [
+               "wknd.site",
+               "wknd.com"
            ]
        },
        "connections": [{
@@ -125,7 +129,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
    }
    ```
 
-   等待45-60分钟，让Cloud Manager计划配置网络基础架构。
+   Wait 45-60 minutes for the Cloud Manager Program to provision the network infrastructure.
 
 1. 检查环境是否已完成 __虚拟专用网__ 使用Cloud Manager API进行配置 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 从上一步中的createNetworkInfrastructure HTTP请求返回。
 
@@ -139,13 +143,13 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
        -H 'Content-Type: application/json'
    ```
 
-   验证HTTP响应是否包含 __状态__ of __就绪__. 如果尚未就绪，请每隔几分钟重新检查一次状态。
+   Verify that the HTTP response contains a __status__ of __ready__. 如果尚未就绪，请每隔几分钟重新检查一次状态。
 
-## 为每个环境配置虚拟专用网络代理
+## Configure Virtual Private Network proxies per environment
 
 1. 启用和配置 __虚拟专用网__ 在每个AEMas a Cloud Service环境中使用Cloud Manager API进行配置 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作。
 
-   __enableEnvironmentAdvancedNetworkingConfiguration HTTP请求__
+   __enableEnvironmentAdvancedNetworkingConfiguration HTTP request__
 
    ```shell
    $ curl -X PUT https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
@@ -156,7 +160,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
        -d @./vpn-configure.json
    ```
 
-   在 `vpn-configure.json` 并通过 `... -d @./vpn-configure.json`.
+   Define the JSON parameters in a `vpn-configure.json` and provided to curl via `... -d @./vpn-configure.json`.
 
 [下载示例vpn-configure.json](./assets/vpn-configure.json)
 
@@ -181,7 +185,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
    }
    ```
 
-   `nonProxyHosts` 声明一组主机，端口80或443应通过默认的共享IP地址范围而不是专用出口IP路由。 当通过共享IP的流量分配可能会通过Adobe进一步自动优化时，这可能会非常有用。
+   `nonProxyHosts` declares a set of hosts for which port 80 or 443 should be routed through the default shared IP address ranges rather than the dedicated egress IP. 当通过共享IP的流量分配可能会通过Adobe进一步自动优化时，这可能会非常有用。
 
    对于 `portForwards` 映射时，高级网络定义了以下转发规则：
 
@@ -194,7 +198,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
 
 1. 对于每个环境，使用Cloud Manager API验证vpn路由规则是否有效 [getEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/getEnvironmentAdvancedNetworkingConfiguration) 操作。
 
-   __getEnvironmentAdvancedNetworkingConfiguration HTTP请求__
+   __getEnvironmentAdvancedNetworkingConfiguration HTTP request__
 
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
@@ -210,9 +214,9 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
 
 ## 通过虚拟专用网络连接到外部服务
 
-启用虚拟专用网络后，AEM代码和配置可以使用它们通过VPN调用外部服务。 AEM对外部调用的处理方式有两种：
+With the Virtual Private Network enabled, AEM code and configuration can use them to make calls to external services via the VPN. AEM对外部调用的处理方式有两种：
 
-1. 对非标准端口上的外部服务的HTTP/HTTPS调用
+1. HTTP/HTTPS calls to external services on non-standard ports
    + 包括对在标准80或443端口以外的端口上运行的服务进行的HTTP/HTTPS调用。
 1. 对外部服务的非HTTP/HTTPS调用
    + 包括任何非HTTP调用，例如与邮件服务器、SQL数据库或在其他非HTTP/HTTPS协议上运行的服务的连接。
@@ -221,9 +225,9 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
 
 ### 非标准端口上的HTTP/HTTPS
 
-从AEM创建到非标准端口(而非-80/443)的HTTP/HTTPS连接时，必须通过特殊主机和端口（通过占位符提供）建立连接。
+When creating HTTP/HTTPS connections to non-standard ports (not-80/443) from AEM, the connection must be made through special host and ports, provided via placeholders.
 
-AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTTP/HTTPS代理。
+AEM provides two sets of special Java™ system variables that map to AEM&#39;s HTTP/HTTPS proxies.
 
 |变量名称 |使用 | Java™代码 | OSGi配置 | Apache Web服务器mod_proxy配置 | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | HTTP连接的代理主机 | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | HTTP连接的代理端口 | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` |用于HTTPS连接的代理主机 | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | HTTPS连接的代理端口 | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
 
@@ -243,7 +247,7 @@ AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTT
     <a  href="./examples/http-on-non-standard-ports.md"><img alt="非标准端口上的HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
     <div><strong><a href="./examples/http-on-non-standard-ports.md">非标准端口上的HTTP/HTTPS</a></strong></div>
     <p>
-        Java™代码示例，用于在非标准HTTP/HTTPS端口上将AEM中的HTTP/HTTPS连接从as a Cloud Service连接到外部服务。
+        Java™ code example making HTTP/HTTPS connection from AEM as a Cloud Service to an external service on non-standard HTTP/HTTPS ports.
     </p>
 </td>
 <td></td>
@@ -253,26 +257,26 @@ AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTT
 
 ### 非HTTP/HTTPS连接代码示例
 
-创建非HTTP/HTTPS连接(例如 SQL、SMTP等)，连接必须通过AEM提供的特殊主机名进行。
+创建非HTTP/HTTPS连接(例如 SQL, SMTP, and so on) from AEM, the connection must be made through a special host name provided by AEM.
 
 |变量名称 |使用 | Java™代码 | OSGi配置 | | - | - | - | - | | `AEM_PROXY_HOST` |非HTTP/HTTPS连接的代理主机 | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
 然后，将通过 `AEM_PROXY_HOST` 和映射的端口(`portForwards.portOrig`),AEM随后将其路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
 
-| 代理主机 | 代理端口 |  | 外部主机 | 外部端口 |
+| 代理主机 | 代理端口 |  | 外部主机 | External port |
 |---------------------------------|----------|----------------|------------------|----------|
 | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
 
-#### 代码示例
+#### Code examples
 
 <table><tr>
    <td>
-      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC DataSourcePool的SQL连接" src="./assets//code-examples__sql-osgi.png"/></a>
+      <a  href="./examples/sql-datasourcepool.md"><img alt="SQL connection using JDBC DataSourcePool" src="./assets//code-examples__sql-osgi.png"/></a>
       <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC DataSourcePool的SQL连接</a></strong></div>
       <p>
-            Java™代码示例通过配置AEM JDBC数据源池连接到外部SQL数据库。
+            Java™ code example connecting to external SQL databases by configuring AEM's JDBC datasource pool.
       </p>
     </td>
    <td>
@@ -309,7 +313,7 @@ AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTT
       <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="对AEM发布的基于路径的VPN访问限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
       <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">对AEM发布的基于路径的VPN访问限制</a></strong></div>
       <p>
-            对AEM发布上的特定路径需要VPN访问。
+            Require VPN access for specific paths on AEM Publish.
       </p>
     </td>
    <td></td>
