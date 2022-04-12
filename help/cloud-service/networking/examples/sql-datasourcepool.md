@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
-source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
+source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ ht-degree: 0%
 ## 高级网络支持
 
 以下高级网络选项支持以下代码示例。
+
+确保 [适当](../advanced-networking.md#advanced-networking) 在完成本教程之前，已设置高级网络配置。
 
 | 无高级网络 | [灵活的端口出口](../flexible-port-egress.md) | [专用出口IP地址](../dedicated-egress-ip-address.md) | [虚拟专用网](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|

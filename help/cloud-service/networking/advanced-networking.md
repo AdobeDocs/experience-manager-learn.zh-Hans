@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: 6ec65dca77fff2f9da47607906088e694a656f68
+source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '475'
 ht-degree: 3%
 
 ---
@@ -70,6 +70,8 @@ AEM高级网络由三个用于管理与外部服务的连接的选项组成。 C
 ## 代码示例
 
 此集合提供了在特定用例中使用高级网络功能所需的配置和代码示例。
+
+确保 [高级网络配置](#advanced-networking) 在学习这些教程之前已设置。
 
 <table><tr>
    <td>
