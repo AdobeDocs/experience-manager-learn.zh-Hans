@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 8da6d5470c702620ee1121fd2688eb8756f0cebd
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,10 @@ ht-degree: 0%
 由于（大多数）邮件服务不会通过HTTP/HTTPS运行，因此必须代理从AEMas a Cloud Service连接到邮件服务。
 
 + `smtp.host` 设置为OSGi环境变量 `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` 所以它被从出口路过。
+   + `$[env:AEM_PROXY_HOST]` 是AEMas a Cloud Service映射到内部的保留变量 `proxy.tunnel` 主机。
+   + 请勿尝试设置 `AEM_PROXY_HOST` 通过Cloud Manager。
 + `smtp.port` 设置为 `portForward.portOrig` 映射到目标电子邮件服务的主机和端口的端口。 此示例使用映射： `AEM_PROXY_HOST:30002` → `smtp.sendgrid.com:465`.
+   + 的 `smpt.port` 设置为 `portForward.portOrig` 端口，而不是SMTP服务器的实际端口。 在 `smtp.port` 和 `portForward.portOrig` 端口由Cloud Manager建立 `portForwards` 规则（如下所示）。
 
 由于密钥不得存储在代码中，因此最好使用 [密钥OSGi配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)，使用AIO CLI或Cloud Manager API进行设置。
 
@@ -61,7 +64,7 @@ ht-degree: 0%
 {
     "smtp.host": "$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
     "smtp.port": "30002",
-    "smtp.user": "$[env:EMAIL_USERNAME;default=emailapikey]",
+    "smtp.user": "$[env:EMAIL_USERNAME;default=myApiKey]",
     "smtp.password": "$[secret:EMAIL_PASSWORD]",
     "from.address": "noreply@wknd.site",
     "smtp.ssl": true,
@@ -72,8 +75,11 @@ ht-degree: 0%
 }
 ```
 
-以下 `aio CLI` 命令可用于在每个环境中设置OSGi密钥：
+的 `EMAIL_USERNAME` 和 `EMAIL_PASSWORD` 可使用以下任一方式为每个环境设置OSGi变量和密钥：
 
-```shell
-$ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "apikey" --secret EMAIL_PASSWORD "password123"
-```
++ [Cloud Manager环境配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)
++ 或使用 `aio CLI` 命令
+
+   ```shell
+   $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "myApiKey" --secret EMAIL_PASSWORD "password123"
+   ```
