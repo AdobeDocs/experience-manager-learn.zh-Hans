@@ -1,5 +1,5 @@
 ---
-title: 使用富文本 | AEM Headless
+title: 将富文本与AEM Headless结合使用
 description: 了解如何使用包含Adobe Experience Manager内容片段的多行富文本编辑器来创作内容和嵌入引用内容，以及如何将富文本由AEM GraphQL API作为JSON交付，以供无标题应用程序使用。
 version: Cloud Service
 doc-type: article
@@ -7,22 +7,21 @@ kt: 9985
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
-source-git-commit: 88797cf950dae46d0f856330df12c59a4efe6456
+exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
+source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1376'
 ht-degree: 0%
 
 ---
 
-
-# 在Adobe Experience Manager Headless中使用富文本
+# 富文本，带AEM Headless
 
 多行文本字段是内容片段的数据类型，使作者能够创建富文本内容。 对其他内容（如图像或其他内容片段）的引用可以动态地插入到文本流中的行内。 AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯文本或纯JSON返回。 JSON表示形式非常强大，因为它赋予客户端应用程序对如何渲染内容的完全控制权。
 
 ## 多行编辑器
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104/?quality=12&learn=on)
-
 
 在内容片段编辑器中，多行文本字段的菜单栏为作者提供了标准富文本格式功能，例如 **粗体**, *斜体*、和下划线。 以全屏模式打开多行字段可启用 [其他格式工具，如段落类型、查找和替换、拼写检查等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
