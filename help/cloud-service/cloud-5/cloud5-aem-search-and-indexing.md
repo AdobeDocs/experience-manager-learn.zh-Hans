@@ -1,6 +1,6 @@
 ---
-title: Cloud 5Adobe应用程序生成器
-description: 此剧集会深入到使用Adobe应用程序生成器的外部集成模式
+title: Cloud 5 AEM搜索和索引
+description: 我们的脚趾头伸进海洋，寻找和索引
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -8,23 +8,22 @@ kt: 10275
 thumbnail: 342374.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 0b6e16d7263bc14c1824643b77678071694bcb7e
+exl-id: b2571a84-101f-4330-8a5f-9ef5e4344591
+source-git-commit: 3854deb12c2d5a5c91c3416939f3e4534cb0094f
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
-# Cloud 5Adobe应用程序生成器
+# Cloud 5 AEM搜索和索引
 
-Amol Anand加入，向我们提供有关与Adobe应用程序生成器的集成以及集成的使用位置和时间的下限。
+快速深入探索和索引的深海。 我们希望帮助教育您更有效地实现这一挑战性主题。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342374)
 
 ## 此视频中涵盖的内容
 
-+ 概述 [应用程序生成器](https://developer.adobe.com/app-builder/docs/overview/)
-+ [Tutorials和代码实验室](https://developer.adobe.com/app-builder/docs/resources/)
-+ [日志记录和监控](https://adobedocs.github.io/adobeio-runtime/guides/logging_monitoring.html#retrieving-activations-for-blocking-successful-calls)
-+ 设置 [系统限制](https://adobedocs.github.io/adobeio-runtime/guides/system_settings.html)
-+ [地方发展](https://developer.adobe.com/app-builder/docs/resources/debugging/) 提示
++ 搜索和索引 [概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html)
++ AEM [索引转换器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html)
++ 专家系列 [深究](../../cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
