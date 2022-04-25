@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
+source-git-commit: cb5b3eb77a57fa8a2918710b7dbcd1b0a58b74bd
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1671'
 ht-degree: 3%
 
 ---
@@ -204,14 +204,15 @@ ht-degree: 3%
 + 文档服务 {#document-services}
    + [PDF forms类型](document-services/pdf-forms-and-documents.md)
    + [在自适应表单中嵌入PDF](document-services/embed-pdf-inline.md)
+   + [PDF在轮播组件中](document-services/display-pdf-in-carousel.md)
    + [在AEM Forms中使用汇编程序服务](document-services/using-assembler-service-in-aem-forms.md)
    + [在AEM Forms中使用监视文件夹](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms中使用条形码服务](document-services/barcode-service-adaptive-forms-article.md)
    + [在AEM Forms中使用PDFG服务](document-services/using-pdfg-in-aem-forms.md)
    + [在AEM Forms中使用输出和Forms服务](document-services/output-and-forms-services-article-develop.md)
    + [从一个数据文件生成多个PDF](document-services/generate-multi-record-pdf.md)
-   + [在移动设备表单提交时生成PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [从Mobile表单生成交互式PDF](document-services/render-interactive-form-using-api.md)
+   + [在Mobile表单提交中生成PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [从移动设备表单生成交互式PDF](document-services/render-interactive-form-using-api.md)
    + [从自适应表单生成交互式DoR](document-services/generate-interactive-dor.md)
    + [配置Reader扩展凭据](document-services/configuring-reader-extension-osgi.md)
    + [将使用权限应用于XDP呈现版本上的PDF](document-services/rendering-and-reader-extending-xdp-templates-article.md)
