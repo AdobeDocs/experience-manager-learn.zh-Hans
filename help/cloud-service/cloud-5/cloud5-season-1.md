@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: bd60205f5561cfc8d758a15e69bc26fa1d64bd4d
+source-git-commit: 571f79cbcadff2161c3daa993ac833d9d4068f98
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -137,14 +137,16 @@ ht-degree: 0%
       </p>
    </td>
      <td>
-      <img alt="索引和搜索提示" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-aem-search-and-indexing.md">
+            <img alt="索引和搜索提示" src="./imgs/009-thumb.png"/>
+        </a>
       <div>
-         <strong>索引和搜索提示</strong>
+         <a href="./cloud5-aem-search-and-indexing.md"><strong>索引和搜索提示</strong></a>
          <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
       </div>
       <p>
         <br/>
-         2022年4月29日
+         对于索引和搜索等复杂的项目，团队向您展示了一些在开发时间优化和解决问题之前轻松取得的成功。
       </p>
    </td> 
   </tr>
