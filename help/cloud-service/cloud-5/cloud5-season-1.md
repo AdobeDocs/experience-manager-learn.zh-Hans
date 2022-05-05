@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 571f79cbcadff2161c3daa993ac833d9d4068f98
+source-git-commit: c6844750c2ef7c3471ce6a337002dde508d611f2
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -152,13 +152,15 @@ ht-degree: 0%
   </tr>
     <tr>
         <td>
-            <img alt="Adobe应用程序生成器" src="./imgs/coming-soon.png"/>
+            <a href="./cloud5-adobe-app-builder.md">
+                <img alt="Adobe应用程序生成器" src="./imgs/010-thumb.png"/>
+            </a>
             <div>
-                <strong>Adobe应用程序生成器</strong><br/>        
-                <em>与Darin Kuntze &amp; James Talbot，云高级架构师和特邀嘉宾</em>
+                <a href="./cloud5-adobe-app-builder.md"><strong>Adobe应用程序生成器</strong></a><br/>        
+                <em>Darin Kuntze &amp; James Talbot，高级云架构师和阿莫·阿南德</em>
             </div>
             <p><br/>
-                将于2022年5月6日发布
+                请查看您可以使用Adobe应用程序生成器执行的一些很酷的操作，并了解有关云中自定义功能的未来新增功能。
             </p>
         </td>
         <td></td>
