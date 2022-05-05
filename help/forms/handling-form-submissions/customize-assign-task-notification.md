@@ -1,8 +1,8 @@
 ---
 title: 自定义分配任务通知
 description: 在分配任务通知电子邮件中包含表单数据
-sub-product: 表单
-feature: 工作流
+sub-product: forms
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,30 +10,30 @@ activity: setup
 version: 6.4,6.5
 kt: 6279
 thumbnail: KT-6279.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 0cb74afd-87ff-4e79-a4f4-a4634ac48c51
+source-git-commit: eb2a807587ab918be82d00d50bf1b338df58e84c
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
 
-
 # 自定义分配任务通知
 
 “分配任务”组件用于将任务分配给工作流参与者。 在将任务分配给用户或群组时，会向定义的用户或群组成员发送电子邮件通知。
-此电子邮件通知通常包含与任务相关的动态数据。 使用系统生成的[元数据属性](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)获取此动态数据。
+此电子邮件通知通常包含与任务相关的动态数据。 使用生成的系统获取此动态数据 [元数据属性](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification).
 要在电子邮件通知中包含来自已提交表单数据的值，我们需要创建自定义元数据属性，然后在电子邮件模板中使用这些自定义元数据属性
 
 
 
 ## 创建自定义元数据属性
 
-推荐的方法是创建一个OSGI组件，以实施[WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)的getUserMetadata方法
+推荐的方法是创建一个OSGI组件，该组件用于实施的getUserMetadata方法 [工作项用户元数据服务](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)
 
-以下代码创建4个元数据属性（_firstName_、_lastName_、_reason_&#x200B;和&#x200B;_amountRequested_），并从提交的数据中设置其值。 例如，元数据属性&#x200B;_firstName_&#x200B;的值被设置为从提交的数据中名为firstName的元素的值。 以下代码假定自适应表单提交的数据为xml格式。 基于JSON模式或表单数据模型的自适应Forms以JSON格式生成数据。
+以下代码会创建4个元数据属性(_firstName_,_lastName_,_原因_ 和 _amountRequested_)，并从提交的数据中设置其值。 例如，元数据属性 _firstName_ s值会从提交的数据中设置为名为firstName的元素的值。 以下代码假定自适应表单提交的数据为xml格式。 基于JSON模式或表单数据模型的自适应Forms以JSON格式生成数据。
 
 
 ```java
@@ -115,7 +115,7 @@ return customMetadataMap;
 
 ## 在任务通知电子邮件模板中使用自定义元数据属性
 
-在电子邮件模板中，您可以使用以下语法来包含元数据属性，其中amountRequested是元数据属性`${amountRequested}`
+在电子邮件模板中，您可以使用以下语法来包含元数据属性，其中amountRequested是元数据属性 `${amountRequested}`
 
 ## 配置分配任务以使用自定义元数据属性
 
@@ -131,10 +131,10 @@ return customMetadataMap;
 ## 在服务器上尝试此操作
 
 * [配置Day CQ Mail Service](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
-* 将有效的电子邮件ID与[admin user](http://localhost:4502/security/users.html)关联
-* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)下载并安装[Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip)
-* 下载[自适应表单](assets/request-travel-authorization.zip)并从[表单和文档ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)导入AEM。
-* 使用[Web控制台](http://localhost:4502/system/console/bundles)部署和启动[自定义包](assets/work-items-user-service-bundle.jar)
+* 将有效的电子邮件ID与 [管理员用户](http://localhost:4502/security/users.html)
+* 下载并安装 [工作流和通知模板](assets/workflow-and-task-notification-template.zip) 使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 下载 [自适应表单](assets/request-travel-authorization.zip) 和从导入AEM [表单和文档ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
+* 部署和启动 [自定义包](assets/work-items-user-service-bundle.jar) 使用 [Web控制台](http://localhost:4502/system/console/bundles)
 * [预览并提交表单](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 
 在表单提交任务分配通知时，会向与管理员用户关联的电子邮件ID发送。 以下屏幕截图显示了任务分配通知示例
@@ -144,6 +144,62 @@ return customMetadataMap;
 >[!NOTE]
 >分配任务通知的电子邮件模板需要采用以下格式。
 >
-> subject=已分配任务 — `${workitem_title}`
+> subject=已分配任务 —  `${workitem_title}`
 >
 > message=表示电子邮件模板且没有任何新行字符的字符串。
+
+## 分配任务电子邮件通知中的任务注释
+
+在某些情况下，您可能需要在后续任务通知中包含先前任务所有者的注释。 下面列出了用于捕获任务最后一条评论的代码：
+
+```java
+package samples.aemforms.taskcomments.core;
+
+import org.osgi.service.component.annotations.Component;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.jcr.Session;
+
+import org.osgi.framework.Constants;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import com.adobe.granite.workflow.WorkflowSession;
+import com.adobe.granite.workflow.exec.HistoryItem;
+import com.adobe.granite.workflow.exec.WorkItem;
+import com.adobe.granite.workflow.metadata.MetaDataMap;
+
+import com.adobe.fd.workspace.service.external.WorkitemUserMetadataService;
+@Component(property = {
+  Constants.SERVICE_DESCRIPTION + "=A sample implementation of a user metadata service.",
+  Constants.SERVICE_VENDOR + "=Adobe Systems",
+  "process.label" + "=Capture Workflow Comments"
+})
+
+public class CaptureTaskComments implements WorkitemUserMetadataService {
+  private static final Logger log = LoggerFactory.getLogger(CaptureTaskComments.class);
+  @Override
+  public Map <String, String> getUserMetadata(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap metadataMap) {
+    HashMap < String, String > customMetadataMap = new HashMap < String, String > ();
+    workflowSession.adaptTo(Session.class);
+    try {
+      List <HistoryItem> workItemsHistory = workflowSession.getHistory(workItem.getWorkflow());
+      int listSize = workItemsHistory.size();
+      HistoryItem lastItem = workItemsHistory.get(listSize - 1);
+      String reviewerComments = (String) lastItem.getWorkItem().getMetaDataMap().get("workitemComment");
+      log.debug("####The comment I got was ...." + reviewerComments);
+      customMetadataMap.put("comments", reviewerComments);
+      log.debug("Created  " + customMetadataMap.size() + " metadata  properties");
+
+    } catch (Exception e) {
+      log.debug(e.getMessage());
+    }
+    return customMetadataMap;
+  }
+
+}
+```
+
+包含上述代码的包可以是 [从此处下载](assets/samples.aemforms.taskcomments.taskcomments.core-1.0-SNAPSHOT.jar)
