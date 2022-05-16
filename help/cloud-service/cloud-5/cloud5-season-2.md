@@ -1,0 +1,150 @@
+---
+title: 云5 — 第2季
+description: 通过第二季，您可以从Adobe自己的专业工程师（负责构建该工具）和提供该工具的专家服务人员那里了解与Adobe Experience Manager(AEM)as a Cloud Service的信息。
+sub-product: sites, cloud-manager, assets
+solution: Experience Manager as a Cloud Service, Experience Manager
+recommendations: noDisplay, noCatalog
+source-git-commit: 99424ae98bd85a8d0203f8f5d4bf24a4e4d7cb53
+workflow-type: tm+mt
+source-wordcount: '328'
+ht-degree: 2%
+
+---
+
+# 云5
+
+![AEM专家系列](./imgs/masthead-s2.png)
+
+## 简介
+
+欢迎观看第二季的AEM Engineering云5系列。 任何产品的实施阶段的主要问题之一是，有足够的代码示例和/或这些示例、工具或API的实时演示。 此系列的目标是在5分钟或更短的时间内提供有关AEMas a Cloud Service的有用信息。
+
+## 建议框
+
+访问 [建议框](https://forms.office.com/r/74P5Xz4UH0) 提交主题想法。
+
+## 第2季
+
+每个季节的时长各不相同，将按固定时间表发布。 第2季的主题主要源于我们在与客户和合作伙伴的日常接触中遇到的过去的请求。 访问此页面可获取每周更新，或在您选择的社交网络上关注我们。
+
+<table>
+  <tr>
+   <td>
+      <img alt="Admin Console" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>Admin Console</strong>        
+         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+      </div>
+      <p>
+        <br/>
+         将于2022年6月3日发布
+      </p>
+     </td>   
+     <td>
+         <img alt="片段" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>片段</strong>
+         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+      </div>
+      <p>
+        <br/>
+         将于2022年6月10日推出
+      </p>
+   </td>
+     <td>
+            <img alt="存储库现代化器" src="./imgs/coming-soon.png"/>
+      <div>
+            <strong>Repository Modernizer</strong>
+         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+      </div>
+      <p>
+        <br/>
+         2022年6月16日
+      </p>
+   </td> 
+  </tr>
+  <tr>
+   <td>
+            <img alt="Sling 作业" src="./imgs/coming-soon.png"/>
+      <div>
+            <strong>Sling作业</strong>       
+         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+      </div>
+      <p>
+        <br/>
+         将于2022年6月24日发布
+      </p>
+     </td>   
+     <td>
+        <img alt="存储库初始值设定项（重新指向）" src="./imgs/coming-soon.png"/>
+      <div>
+        <strong>存储库初始值设定项（重新指向）</strong>
+         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+      </div>
+      <p>
+        <br/>
+            将于2022年7月1日推出
+      </p>
+   </td>
+     <td>
+            <img alt="修复您……缓存" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>修复您……缓存</strong>
+         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+      </div>
+      <p>
+        <br/>
+         将于2022年7月15日
+      </p>
+   </td> 
+  </tr>
+<tr>
+   <td>
+            <img alt="修复您……重写" src="./imgs/coming-soon.png"/>
+      <div>
+            <strong>修复您……重写</strong>
+         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+      </div>
+      <p>
+        <br/>
+         将于2022年7月22日
+      </p>
+     </td>   
+     <td>
+            <img alt="Cloud Manager的奥秘……体验审核" src="./imgs/coming-soon.png"/>
+      <div>
+            <strong>Cloud Manager的奥秘……体验审核</strong>
+         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+      </div>
+      <p>
+        <br/>
+        2022年7月29日
+      </p>
+   </td>
+     <td>
+            <img alt="Cloud Manager的奥秘……单元测试" src="./imgs/coming-soon.png"/>
+      <div>
+            <strong>Cloud Manager的奥秘……单元测试</strong>
+         <br/><em>与高级云架构师Darin Kuntze &amp; Bryan Stopp合作</em>
+      </div>
+      <p>
+        <br/>
+         2022年8月5日将来
+      </p>
+   </td> 
+  </tr>
+    <tr>
+        <td>
+                <img alt="Cloud Manager的奥秘……功能测试" src="./imgs/coming-soon.png"/>
+            <div>
+                <strong>Cloud Manager的奥秘……功能测试</strong><br/>        
+                <em>与高级云架构师Darin Kuntze &amp; Bryan Stopp合作</em>
+            </div>
+            <p><br/>
+                将于2022年8月12日发布
+            </p>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
