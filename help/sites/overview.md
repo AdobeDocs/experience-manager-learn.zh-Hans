@@ -1,13 +1,13 @@
 ---
 title: AEM Sites 视频和教程
-description: Adobe Experience Manager Sites 的视频和教程集合。
+description: 通过我们的AEM视频和教程了解有关Adobe Experience Manager Sites的更多信息。
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
+source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 20%
+source-wordcount: '348'
+ht-degree: 23%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 
    *了解如何使用自定义AEM组件中的内容更新Adobe客户端数据层。*
 
-* **[AEM无头GraphQL快速入门（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+* **[AEM无头GraphQL快速入门（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans)**
 
    *如何使用AEM GraphQL API从AEM中显示内容以供本机移动设备应用程序使用。*
 
@@ -55,7 +55,7 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans">
     <img alt="AEM Headless 快速入门" src="./assets/aem-headless-tutorial.png" />
     </a>
     <div>
