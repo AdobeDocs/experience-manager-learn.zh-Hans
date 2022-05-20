@@ -8,7 +8,7 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 1532a865-4664-40d9-964a-e64463b49587
-source-git-commit: 55583effd0400bac2e38756483d69f5bd114cb21
+source-git-commit: b918afdddf1f047b478e0521883a633f7b0610c6
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 1%
@@ -43,7 +43,7 @@ OpenAPI规范（以前称为Swagger规范）是REST API的API描述格式。 Ope
 
 使用 [swagger编辑器](https://editor.swagger.io/) 创建swagger文件，以描述使用短信发送和验证OTP代码的操作。 可以以JSON或YAML格式创建swagger文件。 已完成的swagger文件可从 [此处](assets/drivers-license-swagger.zip)
 
-## 定义Swager文件时的注意事项
+## 定义swagger文件时的注意事项
 
 * 定义是必需的
 * 方法定义需要使用$ref
