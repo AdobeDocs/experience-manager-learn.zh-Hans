@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 99424ae98bd85a8d0203f8f5d4bf24a4e4d7cb53
+source-git-commit: e666e38d6b2a7057f7016b35ad1034a4487e9bc7
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '749'
 ht-degree: 22%
 
 ---
@@ -89,6 +89,9 @@ ht-degree: 22%
    + [Adobe IMS产品配置文件](./accessing/adobe-ims-product-profiles.md)
    + [AEM用户、组和权限](./accessing/aem-users-groups-and-permissions.md)
    + [配置对AEM演练的访问权限](./accessing/walk-through.md)
++ 身份验证{#authentication}
+   + [概述](./authentication/authentication.md)
+   + [SAML 2.0](./authentication/saml-2-0.md)
 + 高级网络{#networking}
    + [概述](./networking/advanced-networking.md)
    + [灵活的端口出口](./networking/flexible-port-egress.md)
