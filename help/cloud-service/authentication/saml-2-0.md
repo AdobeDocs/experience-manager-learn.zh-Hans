@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
-source-git-commit: e666e38d6b2a7057f7016b35ad1034a4487e9bc7
+exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
+source-git-commit: e4cd87e5d2d78c3113ef860b9f357cfacb2c874a
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2775'
 ht-degree: 1%
 
 ---
-
 
 # SAML 2.0身份验证{#saml-2-0-authentication}
 
@@ -398,6 +398,10 @@ AEM发布支持单个反向链接过滤器配置，因此可将SAML配置要求�
 ```
 
 如果配置了Apache Web服务器上的URL重写(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，请确保向 `.../saml_login` 端点不会意外损坏。
+
+## 启用数据同步
+
+在AEM发布中SAML身份验证流程创建用户后，必须在AEM发布层中同步用户记录。 至 [启用数据同步](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization)，向Adobe客户支持(通过 [AdminConsole](https://adminconsole.adobe.com) >支持)请求启用它。
 
 ## 部署SAML配置
 
