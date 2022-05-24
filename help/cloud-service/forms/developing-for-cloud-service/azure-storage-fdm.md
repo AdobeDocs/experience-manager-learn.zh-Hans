@@ -8,17 +8,17 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 9006
-source-git-commit: 8484897297940ab28619c4b1af5362a5937eadfa
+exl-id: 77c00a35-43bf-485f-ac12-0fffb307dc16
+source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
-
 # 将云服务配置包含到您的项目中
 
-创建名为“FormsTutorial”的配置容器以保存云服务配置在“FormsTutorial”容器中为Azure存储创建名为“Azure中的存储表单提交”的云服务配置。 提供Azure存储帐户详细信息和帐户密钥
+创建名为“FormTutorial”的配置容器以保存云服务配置通过提供Azure存储帐户详细信息和Azure访问密钥，在“FormTutorial”容器中为Azure存储创建名为“FormsCSAndAzureBlob”的云服务配置。
 
 在IntelliJ中打开您的AEM项目。 确保在ui.content项目中添加如下所示的文件夹FormTutorial
 ![cloud-services-configuration](assets/cloud-services-configuration.png)
@@ -45,4 +45,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->现在，当您构建和部署项目时，该项目将根据云实例中可用的云服务配置创建表单数据模型
+>现在，当您使用云管理器构建和部署项目时，必须在云服务配置中重新输入Azure访问密钥。 为避免重新输入访问键，建议使用环境变量创建上下文感知配置，如 [下一篇文章](./context-aware-fdm.md)

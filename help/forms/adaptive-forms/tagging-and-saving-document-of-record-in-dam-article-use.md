@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
-source-git-commit: 55583effd0400bac2e38756483d69f5bd114cb21
+source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '611'
 ht-degree: 0%
 
 ---
@@ -160,14 +160,14 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 
 * [下载和部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 这是自定义OSGI包，用于从提交的表单数据中设置标记。
 
-* [下载示例自适应表单](assets/tag-and-store-in-dam-assets.zip)
+* [下载示例自适应表单](assets/tag-and-store-in-dam-adaptive-form.zip)
 
 * [转到Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* 单击Create |文件上传和上传示例adaptiveform.zip
+* 单击Create |文件上传并上传dam-adaptive-form.zip中的标记和存储
 
 * [导入文章资产](assets/tag-and-store-in-dam-assets.zip) 使用AEM包管理器
-* 打开 [预览模式中的示例表单](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled). 填写人员部分并提交表单。
+* 打开 [预览模式中的示例表单](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **填写所有字段** 并提交表格。
 * [导航到DAM中的“峰值”文件夹](http://localhost:4502/assets.html/content/dam/Peak). 您应会在Peak文件夹中看到DoR。 检查文档的属性。 应正确标记。
 恭喜你!! 您已成功在系统上安装示例
 
