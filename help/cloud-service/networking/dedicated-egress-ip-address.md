@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 4f8222d3185ad4e87eda662c33c9ad05ce3b0427
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1229'
 ht-degree: 1%
 
 ---
@@ -110,7 +110,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
 
    在 `dedicated-egress-ip-address.json` 并通过 `... -d @./dedicated-egress-ip-address.json`.
 
-[下载dedicated-express-ip-address.json示例](./assets/dedicated-egress-ip-address.json)
+   [下载dedicated-express-ip-address.json示例](./assets/dedicated-egress-ip-address.json). 此文件仅是一个示例。 根据 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
