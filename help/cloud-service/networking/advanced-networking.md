@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '468'
 ht-degree: 3%
 
 ---
@@ -82,10 +82,10 @@ AEM高级网络由三个用于管理与外部服务的连接的选项组成。 C
       </p>
     </td>  
     <td>
-        <a  href="./examples/http-on-non-standard-ports.md"><img alt="非标准端口上的HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
-        <div><strong><a href="./examples/http-on-non-standard-ports.md">非标准端口上的HTTP/HTTPS</a></strong></div>
+        <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+        <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
         <p>
-            Java™代码示例，用于在非标准HTTP/HTTPS端口上将AEM中的HTTP/HTTPS连接从as a Cloud Service连接到外部服务。
+            Java™代码示例，用于使用HTTP/HTTPS协议将AEM中的HTTP/HTTPS连接从as a Cloud Service连接到外部服务。
         </p>
     </td>
     <td>

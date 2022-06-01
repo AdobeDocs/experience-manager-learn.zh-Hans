@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 52a2303f75c23c72e201b1f674f7f882db00710b
+source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1370'
 ht-degree: 1%
 
 ---
@@ -220,16 +220,16 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
 
 启用虚拟专用网络后，AEM代码和配置可以使用它们通过VPN调用外部服务。 AEM对外部调用的处理方式有两种：
 
-1. 对非标准端口上的外部服务的HTTP/HTTPS调用
+1. 对外部服务的HTTP/HTTPS调用
    + 包括对在标准80或443端口以外的端口上运行的服务进行的HTTP/HTTPS调用。
 1. 对外部服务的非HTTP/HTTPS调用
    + 包括任何非HTTP调用，例如与邮件服务器、SQL数据库或在其他非HTTP/HTTPS协议上运行的服务的连接。
 
-默认情况下，标准端口(80/443)上允许AEM的HTTP/HTTPS请求，并且不需要额外的配置或注意事项。
+默认情况下，标准端口(80/443)上的AEM HTTP/HTTPS请求是允许的，但如果未按照以下所述正确配置，则它们将不会使用VPN连接。
 
-### 非标准端口上的HTTP/HTTPS
+### HTTP/HTTPS
 
-从AEM创建到非标准端口(而非-80/443)的HTTP/HTTPS连接时，必须通过特殊主机和端口（通过占位符提供）建立连接。
+从AEM创建HTTP/HTTPS连接时，为了获得专用出口IP地址或通过VPN路由，连接必须通过专用主机和端口（通过占位符提供）进行。
 
 AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTTP/HTTPS代理。
 
@@ -237,7 +237,7 @@ AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTT
 
 应通过AEM代理主机/端口值配置Java™ HTTP客户端的代理配置，来发出对HTTP/HTTPS外部服务的请求。
 
-在非标准端口上对外部服务进行HTTP/HTTPS调用时，没有相应的 `portForwards` 必须使用Cloud Manager API的 `__enableEnvironmentAdvancedNetworkingConfiguration` 操作，因为端口转发“规则”是在“代码中”定义的。
+在任何端口上对外部服务进行HTTP/HTTPS调用时，没有相应的 `portForwards` 必须使用Cloud Manager API的 `__enableEnvironmentAdvancedNetworkingConfiguration` 操作，因为端口转发“规则”是在“代码中”定义的。
 
 >[!TIP]
 >
@@ -248,10 +248,10 @@ AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTT
 <table>
 <tr>
 <td>
-    <a  href="./examples/http-on-non-standard-ports.md"><img alt="非标准端口上的HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
-    <div><strong><a href="./examples/http-on-non-standard-ports.md">非标准端口上的HTTP/HTTPS</a></strong></div>
+    <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+    <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
     <p>
-        Java™代码示例，用于在非标准HTTP/HTTPS端口上将AEM中的HTTP/HTTPS连接从as a Cloud Service连接到外部服务。
+        Java™代码示例，用于使用HTTP/HTTPS协议将AEM中的HTTP/HTTPS连接从as a Cloud Service连接到外部服务。
     </p>
 </td>
 <td></td>

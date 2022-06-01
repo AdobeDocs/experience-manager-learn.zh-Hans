@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: 4f8222d3185ad4e87eda662c33c9ad05ce3b0427
+source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1238'
 ht-degree: 1%
 
 ---
@@ -167,43 +167,43 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
 
 1. 现在，您可以在自定义AEM代码和配置中使用专用出口IP地址。 通常，在使用专用出口IP地址时，外部服务AEMas a Cloud Service连接会配置为仅允许来自此专用IP地址的流量。
 
-## 通过专用端口出口连接到外部服务
+## 通过专用出口IP地址连接到外部服务
 
 启用专用出口IP地址后，AEM代码和配置可以使用专用出口IP来调用外部服务。 AEM对外部调用的处理方式有两种：
 
-1. 对非标准端口上的外部服务的HTTP/HTTPS调用
+1. 对外部服务的HTTP/HTTPS调用
    + 包括对在标准80或443端口以外的端口上运行的服务进行的HTTP/HTTPS调用。
 1. 对外部服务的非HTTP/HTTPS调用
    + 包括任何非HTTP调用，例如与邮件服务器、SQL数据库或在其他非HTTP/HTTPS协议上运行的服务的连接。
 
-默认情况下，标准端口(80/443)上允许AEM的HTTP/HTTPS请求，并且不需要额外的配置或注意事项。
+默认情况下，标准端口(80/443)上的AEM HTTP/HTTPS请求是允许的，但如果未按照以下所述正确配置，它们将不会使用专用出口IP地址。
 
 >[!TIP]
 >
 > 请参阅AEMas a Cloud Service的专用出口IP地址文档，以了解 [整套路由规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedcated-egress-ip-traffic-routing=).
 
 
-### 非标准端口上的HTTP/HTTPS
+### HTTP/HTTPS
 
-在从AEM创建到非标准端口(而非-80/443)的HTTP/HTTPS连接时，必须通过特殊主机和端口（通过占位符提供）进行连接。
+从AEM创建HTTP/HTTPS连接时，要获取专用出口IP地址，必须通过特殊主机和端口（通过占位符提供）建立连接。
 
 AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTTP/HTTPS代理。
 
-|变量名称 |使用 | Java™代码 | OSGi配置 | | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | HTTP连接的代理主机 | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | | `AEM_HTTP_PROXY_PORT` | HTTP连接的代理端口 | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` | | `AEM_HTTPS_PROXY_HOST` |用于HTTPS连接的代理主机 | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | | `AEM_HTTPS_PROXY_PORT` | HTTPS连接的代理端口 | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` |
+|变量名称 |使用 | Java™代码 | OSGi配置 | Apache Web服务器mod_proxy配置 | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | HTTP连接的代理主机 | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | HTTP连接的代理端口 | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` |用于HTTPS连接的代理主机 | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | HTTPS连接的代理端口 | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
 
 对HTTP/HTTPS外部服务的请求应通过使用AEM代理主机/端口值配置Java™ HTTP客户端的代理配置来完成。
 
-在非标准端口上对外部服务进行HTTP/HTTPS调用时，没有相应的 `portForwards` 必须使用Cloud Manager API进行定义 `enableEnvironmentAdvancedNetworkingConfiguration` 操作，因为端口转发“规则”是在“代码中”定义的。
+在任何端口上对外部服务进行HTTP/HTTPS调用时，没有相应的 `portForwards` 必须使用Cloud Manager API进行定义 `enableEnvironmentAdvancedNetworkingConfiguration` 操作，因为端口转发“规则”是在“代码中”定义的。
 
 #### 代码示例
 
 <table>
 <tr>
 <td>
-    <a  href="./examples/http-on-non-standard-ports.md"><img alt="非标准端口上的HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
-    <div><strong><a href="./examples/http-on-non-standard-ports.md">非标准端口上的HTTP/HTTPS</a></strong></div>
+    <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+    <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
     <p>
-        Java™代码示例，用于在非标准HTTP/HTTPS端口上将AEM中的HTTP/HTTPS连接从as a Cloud Service连接到外部服务。
+        Java™代码示例，用于使用HTTP/HTTPS协议将AEM中的HTTP/HTTPS连接从as a Cloud Service连接到外部服务。
     </p>
 </td>   
 <td></td>   
