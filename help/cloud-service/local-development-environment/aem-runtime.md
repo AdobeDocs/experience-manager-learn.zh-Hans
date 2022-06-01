@@ -9,9 +9,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: 1aba21ea777a58fe8efc8a6af455b0a8ba965b66
+source-git-commit: 3a9615177acb5475d9b2b4ef22907c11e7da2bf7
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1801'
 ht-degree: 2%
 
 ---
@@ -115,6 +115,18 @@ $ mkdir -p ~/aem-sdk/publish
 $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
 $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
+```
+
+## 在预发行模式下设置本地AEM服务
+
+本地AEM运行时可在 [预发行模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html) 允许开发人员根据AEM as a Cloud Service下一版本的功能进行构建。 通过传递 `-r prerelease` 本地AEM运行时的首次开始时的参数。 这可以与本地AEM创作和AEM发布服务一起使用。
+
+```shell
+# For AEM Author service in prerelease mode
+$ java -jar aem-author-p4502.jar -r prerelease
+
+# For AEM Publish service in prerelease mode
+$ java -jar aem-publish-p4503.jar -r prerelease
 ```
 
 ## 模拟内容分发 {#content-distribution}
@@ -248,4 +260,4 @@ Quickstart: aborting
 + [下载AEM SDK](https://experience.adobe.com/#/downloads)
 + [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
 + [下载Docker](https://www.docker.com/)
-+ [Experience ManagerDispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience ManagerDispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)
