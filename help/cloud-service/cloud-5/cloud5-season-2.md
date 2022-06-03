@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: abb26a995ec81332bb6ae3617b1a41b60c9dab96
+source-git-commit: 85e00a237c09867247a0b3ccffa0bf843826ee26
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '340'
 ht-degree: 2%
 
 ---
@@ -30,18 +30,20 @@ ht-degree: 2%
 每个季节的时长各不相同，将按固定时间表发布。 第2季的主题主要源于我们在与客户和合作伙伴的日常接触中遇到的过去的请求。 访问此页面可获取每周更新，或在您选择的社交网络上关注我们。
 
 <table>
-  <tr>
-   <td>
-      <img alt="片段" src="./imgs/coming-soon.png"/>
-      <div>
-         <strong>片段</strong>        
-         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
-      </div>
-      <p>
-        <br/>
-         将于2022年6月3日发布
-      </p>
-     </td>   
+    <tr>
+        <td>
+            <a href="season-2/cloud5-experience-v-content-fragments.md">
+                <img alt="片段" src="./imgs/s2/000-thumb.png"/>
+            </a>
+            <div>
+                <a href="season-2/cloud5-experience-v-content-fragments.md"><strong>片段</strong></a>        
+                <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+            </div>
+            <p>
+                <br/>
+                充分利用体验和内容片段之间的差异。 剧透：每个人都会赢。
+            </p>
+        </td>   
      <td>
          <img alt="存储库现代化器" src="./imgs/coming-soon.png"/>
       <div>
