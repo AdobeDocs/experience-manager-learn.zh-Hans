@@ -8,9 +8,10 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 10423
-source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
+exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -24,9 +25,9 @@ ht-degree: 0%
 
 ## 创建环境变量
 
-可以通过Cloud Manager配置和管理标准环境变量。 它们提供给运行时环境，并可用于OSGi配置。 环境变量可以是特定于环境的值，也可以是基于所更改的内容的环境密钥。
+可以通过Cloud Manager配置和管理标准环境变量。 它们提供给运行时环境，并可用于OSGi配置。 [环境变量可以是特定于环境的值，也可以是基于所更改的内容的环境密钥。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
 
-[环境变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+
 
 以下屏幕截图显示了定义的azure_key和azure_connection_string环境变量
 ![environment_variables](assets/environment-variables.png)

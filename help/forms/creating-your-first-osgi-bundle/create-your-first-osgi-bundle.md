@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '835'
-ht-degree: 0%
+source-wordcount: '674'
+ht-degree: 1%
 
 ---
 
@@ -49,12 +49,6 @@ Maven是一款主要用于Java项目的内部版本自动化工具。 请按照�
 
 ![数据源](assets/mvn-version.JPG)
 
-## Settings.xml
-
-玛文 `settings.xml` 文件定义了用各种方式配置Maven执行的值。 通常，它用于定义本地存储库位置、备用远程存储库服务器以及专用存储库的身份验证信息。
-
-导航到 `C:\Users\<username>\.m2 folder`
-提取的内容 [settings.zip](assets/settings.zip) 文件并放入 `.m2` 文件夹。
 
 ## 安装Eclipse
 
@@ -68,24 +62,17 @@ Maven是一款主要用于Java项目的内部版本自动化工具。 请按照�
 * 创建一个名为 `aemformsbundles` 在C驱动器中
 * 打开命令提示符并导航到 `c:\aemformsbundles`
 * 在命令提示符下运行以下命令
-* `mvn archetype:generate  -DarchetypeGroupId=com.adobe.granite.archetypes  -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=19`
 
-Maven项目将以交互方式生成，系统将要求您为许多属性提供值，例如：
+```java
+mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=36 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.13
+```
 
-| 属性名称 | 显着性 | 值 |
-------------------------|---------------------------------------|---------------------
-| groupId | groupId可在所有项目中唯一标识您的项目 | com.learningaemforms.adobe |
-| appsFolderName | 包含项目结构的文件夹的名称 | 学习Aemforms |
-| artifactId | artifactId是不带版本的jar的名称。 如果您创建了该名称，则可以选择您想要的任何名称，并使用小写字母而不使用奇怪的符号。 | 学习Aemforms |
-| 版本 | 如果您分发它，则可以选择任何带数字和点(1.0、1.1、1.0.1、...)的典型版本。 | 1.0 |
-
-通过按Enter键接受其他属性的默认值。
-如果一切正常，您应会在命令窗口中看到生成成功消息
+成功完成后，您应会在命令窗口中看到生成成功消息
 
 ## 从maven项目创建Eclipse项目
 
-将工作目录更改为 `learningaemforms`.
-执行 `mvn eclipse:eclipse` 从命令行上述命令读取您的pom文件，并使用正确的元数据创建Eclipse项目，以便Eclipse了解项目类型、关系、类路径等。
+* 将工作目录更改为 `mysite`
+* 执行 `mvn eclipse:eclipse` 命令行中。 该命令会读取您的pom文件并使用正确的元数据创建Eclipse项目，以便Eclipse了解项目类型、关系、类路径等。
 
 ## 将项目导入Eclipse
 
@@ -97,33 +84,24 @@ Launch **Eclipse**
 
 单击下一步
 
-选择 `c:\aemformsbundles\learningaemform`通过单击 **浏览** 按钮
+选择c:\aemformsbundles\mysite by clicking the **浏览** 按钮
 
-![数据源](assets/select-mvn-project.JPG)
+![数据源](assets/mysite-eclipse-project.png)
 
 >[!NOTE]
 >您可以根据需要选择导入相应的模块。 仅当您只想在项目中创建Java代码时，才选择并导入核心模块。
 
 单击 **完成** 启动导入流程
 
-项目已导入到Eclipse中，您将看到 `learningaemforms.xxxx` 文件夹
+项目已导入到Eclipse中，您将看到 `mysite.xxxx` 文件夹
 
-展开 `src/main/java` 下 `learningaemforms.core` 文件夹。 这是您将在其中编写大多数代码的文件夹。
+展开 `src/main/java` 下 `mysite.core` 文件夹。 这是您将在其中编写大多数代码的文件夹。
 
-![数据源](assets/learning-core.JPG)
+![数据源](assets/mysite-core-project.png)
 
-## 构建项目
+## 包括AEMFD客户端SDK
 
-
-
-
-编写OSGi服务或Servlet后，您将需要构建项目以生成可使用Felix Web控制台部署的OSGi包。 请参阅 [AEMFD客户端SDK](https://search.maven.org/artifact/com.adobe.aemfd/aemfd-client-sdk) 以在您的Maven项目中包含相应的客户端SDK。 您必须在的依赖项部分中包含AEM FD客户端SDK `pom.xml` 的子项目，如下所示。
-
-
-
-
-
-
+您需要将AEMFD客户端sdk包含在项目中，以利用AEM Forms附带的各种服务。 请参阅 [AEMFD客户端SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) 以在您的Maven项目中包含相应的客户端SDK。 您必须在的依赖项部分中包含AEM FD客户端SDK `pom.xml` 的子项目，如下所示。
 
 ```xml
 <dependency>
@@ -136,7 +114,7 @@ Launch **Eclipse**
 要构建项目，请执行以下步骤：
 
 * 打开 **命令提示符窗口**
-* 导航至 `c:\aemformsbundles\learningaemforms\core`
+* 导航至 `c:\aemformsbundles\mysite\core`
 * 执行命令 `mvn clean install -PautoInstallBundle`
 上述命令在运行的AEM服务器中生成并安装包 `http://localhost:4502`. 该包也将在文件系统上的
-   `C:\AEMFormsBundles\learningaemforms\core\target` 和可以使用 [Felix Web控制台](http://localhost:4502/system/console/bundles)
+   `C:\AEMFormsBundles\mysite\core\target` 和可以使用 [Felix Web控制台](http://localhost:4502/system/console/bundles)

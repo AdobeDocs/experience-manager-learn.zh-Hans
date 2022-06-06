@@ -1,45 +1,47 @@
 ---
 title: 使用AEM Forms创建您的首个OSGi服务
-description: '使用AEM Forms构建您的首个OSGi服务 '
-feature: 自适应表单
+description: 使用AEM Forms构建您的首个OSGi服务
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2f15782e-b60d-40c6-b95b-6c7aa8290691
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '349'
 ht-degree: 2%
 
 ---
 
-
 # OSGi服务
 
-OSGi服务是Java类或服务接口，以及许多服务属性（如名称/值对）。 所述服务属性区分提供具有相同服务接口的服务的不同服务提供商。
+OSGi服务是Java类或服务接口，以及许多作为名称/值对的服务属性。 所述服务属性区分提供具有相同服务接口的服务的不同服务提供商。
 
 OSGi服务由其服务接口语义定义并实现为服务对象。 服务的功能由其实现的接口定义。 因此，不同的应用程序可以实现相同的服务。 服务界面允许包通过绑定界面进行交互，而不是通过实施。 应指定尽可能少的实施详细信息的服务接口。
 
 ## 定义界面
 
-使用一种方法将数据与<span class="x x-first x-last">XDP</span>模板合并的简单接口。
+使用一种方法将数据与 <span class="x x-first x-last">XDP</span> 模板。
 
 ```java
-package com.learningaemforms.adobe.core;
+package com.mysite.samples;
 
 import com.adobe.aemfd.docmanager.Document;
 
-public interface MyfirstInterface {
-  public Document mergeDataWithXDPTemplate(Document xdpTemplate, Document xmlDocument);
-} 
+public interface MyfirstInterface
+{
+	public Document mergeDataWithXDPTemplate(Document xdpTemplate, Document xmlDocument);
+}
+ 
 ```
 
 ## 实施界面
 
-创建名为`com.learningaemforms.adobe.core.impl`的新包，以保存接口的实现。
+创建一个名为 `com.mysite.samples.impl` 来保存接口的实现。
 
 ```java
-package com.learningaemforms.adobe.core.impl;
+package com.mysite.samples.impl;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
@@ -47,7 +49,7 @@ import org.slf4j.LoggerFactory;
 import com.adobe.aemfd.docmanager.Document;
 import com.adobe.fd.output.api.OutputService;
 import com.adobe.fd.output.api.OutputServiceException;
-import com.learningaemforms.adobe.core.MyfirstInterface;
+import com.mysite.samples.MyfirstInterface;
 @Component(service = MyfirstInterface.class)
 public class MyfirstInterfaceImpl implements MyfirstInterface {
   @Reference
@@ -74,34 +76,36 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 }
 ```
 
-第10行上的注释`@Component(...)`将此Java类标记为OSGi组件，并将其注册为OSGi服务。
+注释 `@Component(...)` 第10行将此Java类标记为OSGi组件，并将其注册为OSGi服务。
 
-`@Reference`注释是OSGi声明性服务的一部分，用于将[Outputservice](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)的引用注入变量`outputService`中。
+的 `@Reference` 注释是OSGi声明性服务的一部分，用于注入 [Outputservice](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 变量 `outputService`.
 
 
 ## 构建和部署包
 
-* 打开&#x200B;**命令提示符窗口**
-* 导航至 `c:\aemformsbundles\learningaemforms\core`
-* 执行命令`mvn clean install -PautoInstallBundle`
+* 打开 **命令提示符窗口**
+* 导航至 `c:\aemformsbundles\mysite\core`
+* 执行命令 `mvn clean install -PautoInstallBundle`
 * 上述命令将自动生成包并将其部署到在localhost:4502上运行的AEM实例。
 
-此包还将在以下位置`C:\AEMFormsBundles\learningaemforms\core\target`提供。 也可以使用[Felix Web控制台将包部署到AEM中。](http://localhost:4502/system/console/bundles)
+此包还将在以下位置提供 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用 [Felix Web控制台。](http://localhost:4502/system/console/bundles)
 
 ## 使用服务
 
 您现在可以在JSP页中使用服务。 以下代码片段显示如何获取对服务的访问权限以及如何使用服务实施的方法
 
 ```java
-MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.learningaemforms.adobe.core.MyFirstAEMFormsService.class);
+MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.mysite.samples.MyFirstAEMFormsService.class);
 com.adobe.aemfd.docmanager.Document generatedDocument = myFirstAEMFormsService.mergeDataWithXDPTemplate(xdp_or_pdf_template,xmlDocument);
 ```
 
-包含JSP页的示例包可以从此处](assets/learning-aem-forms.zip)下载![
+包含JSP页的示例包可以是 [从此处下载](assets/learning_aem_forms.zip)
+
+[可下载完整的包](assets/mysite.core-1.0.0-SNAPSHOT.jar)
 
 ## 测试包
 
-使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)将包导入并安装到AEM中
+使用将包导入并安装到AEM中 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 
 使用postman进行POST调用并提供输入参数，如下面的屏幕快照中所示
-![postman](assets/test-service-postman.JPG)
+![邮递员](assets/test-service-postman.JPG)

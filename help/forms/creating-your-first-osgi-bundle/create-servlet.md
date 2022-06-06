@@ -1,18 +1,18 @@
 ---
 title: 在AEM Forms中创建您的第一个Servlet
 description: 构建您的第一个sling servlet以将数据与表单模板合并。
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 72728ed7-80a2-48b5-ae7f-d744db8a524d
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 2%
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
-
 
 # Sling Servlet
 
@@ -25,8 +25,8 @@ AEM中的Servlet可注册为OSGi服务：您可以扩展SlingSafeMethodsServlet�
 ## Servlet代码
 
 ```java
+package com.mysite.core.servlets;
 import javax.servlet.Servlet;
-
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
@@ -73,17 +73,17 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 
 要构建项目，请执行以下步骤：
 
-* 打开&#x200B;**命令提示符窗口**
-* 导航至 `c:\aemformsbundles\learningaemforms\core`
-* 执行命令`mvn clean install -PautoInstallBundle`
+* 打开 **命令提示符窗口**
+* 导航至 `c:\aemformsbundles\mysite\core`
+* 执行命令 `mvn clean install -PautoInstallBundle`
 * 上述命令将自动生成包并将其部署到在localhost:4502上运行的AEM实例。
 
-此包还将在以下位置`C:\AEMFormsBundles\learningaemforms\core\target`提供。 也可以使用[Felix Web控制台将包部署到AEM中。](http://localhost:4502/system/console/bundles)
+此包还将在以下位置提供 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用 [Felix Web控制台。](http://localhost:4502/system/console/bundles)
 
 
 ## 测试Servlet解析程序
 
-将您的浏览器指向[servlet解析程序URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST)。 这将告诉您将为给定路径调用的Servlet，如下面的屏幕快照所示
+将您的浏览器指向 [servlet解析程序URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). 这将告诉您将为给定路径调用的Servlet，如下面的屏幕快照所示
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
 ## 使用Postman测试Servlet
