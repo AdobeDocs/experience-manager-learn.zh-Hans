@@ -4,11 +4,11 @@ description: 体验片段与内容片段之间的差异，与
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
-thumbnail: 342375.jpeg
+thumbnail: 342864.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: bfd455c4-9a51-4537-ae6d-548d552e13e6
-source-git-commit: 6b0e9039ab1e0a54678387b61cfe4dc2147921d5
+source-git-commit: 726cf83f3cabe46c12abb79288368407ebf4d525
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 3%
