@@ -5,10 +5,10 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 85e00a237c09867247a0b3ccffa0bf843826ee26
+source-git-commit: 59bcd6f2501b324222de7e68f2f7c311cb595788
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 2%
+source-wordcount: '360'
+ht-degree: 1%
 
 ---
 
@@ -44,17 +44,19 @@ ht-degree: 2%
                 充分利用体验和内容片段之间的差异。 剧透：每个人都会赢。
             </p>
         </td>   
-     <td>
-         <img alt="存储库现代化器" src="./imgs/coming-soon.png"/>
-      <div>
-         <strong>Repository Modernizer</strong>
-         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
-      </div>
-      <p>
-        <br/>
-         将于2022年6月10日推出
-      </p>
-   </td>
+         <td>
+            <a href="season-2/cloud5-repo-modernizer.md">
+                 <img alt="存储库现代化器" src="./imgs/s2/001-thumb.png"/>
+            </a>
+            <div>
+                <a href="season-2/cloud5-repo-modernizer.md"><strong>Repository Modernizer</strong></a> 
+               <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+            </div>
+            <p>
+                <br/>
+                快速了解如何使用repository modernizer将现有项目包重构为与AEM as a cloud service兼容的离散包。
+            </p>
+         </td>
      <td>
             <img alt="Admin Console" src="./imgs/coming-soon.png"/>
       <div>
