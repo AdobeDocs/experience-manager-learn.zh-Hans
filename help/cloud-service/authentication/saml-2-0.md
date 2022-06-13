@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: f2b5adea71ec8e772385b6e0ae068369798030e0
+source-git-commit: 6d5a531f44414887e8dc6568fa6f5dcb73bfb183
 workflow-type: tm+mt
-source-wordcount: '2774'
+source-wordcount: '2815'
 ht-degree: 1%
 
 ---
@@ -399,9 +399,14 @@ AEM发布支持单个反向链接过滤器配置，因此可将SAML配置要求�
 
 如果配置了Apache Web服务器上的URL重写(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，请确保向 `.../saml_login` 端点不会意外损坏。
 
-## 启用数据同步
+## 启用数据同步并封装令牌
 
-在AEM发布中SAML身份验证流程创建用户后，必须在AEM发布层中同步用户记录。 至 [启用数据同步](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization)，向Adobe客户支持(通过 [AdminConsole](https://adminconsole.adobe.com) >支持)请求启用它。
+在AEM发布中创建用户后，SAML身份验证流程便会在AEM发布服务层中对AEM用户节点进行身份验证。
+这要求 [数据同步](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization) 和 [封装令牌](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#sticky-sessions-and-encapsulated-tokens) ，以便由AEM发布服务上的Adobe支持启用。
+
+向Adobe客户支持(通过 [AdminConsole](https://adminconsole.adobe.com) >支持)请求：
+
+> 在AEM发布服务中为程序X和环境Y启用了数据同步和封装令牌。
 
 ## 部署SAML配置
 
