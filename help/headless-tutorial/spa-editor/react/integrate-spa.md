@@ -10,7 +10,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: 415ad1266925525a6b0954b4515bae3d152bb6ec
 workflow-type: tm+mt
 source-wordcount: '1840'
 ht-degree: 0%
@@ -128,7 +128,7 @@ ht-degree: 0%
 
    `index.js` 是SPA的入口点。 `ModelManager` 由AEM SPA Editor JS SDK提供。 负责呼叫和注入 `pageModel` （JSON内容）。
 
-1. Inspect文件 `import-component.js` at `ui.frontend/src/import-components.js`. 此文件会导入开箱即用的 **React核心组件** 并提供给项目。 我们将在下一章中检查AEM内容到SPA组件的映射。
+1. Inspect文件 `import-components.js` at `ui.frontend/src/components/import-components.js`. 此文件会导入开箱即用的 **React核心组件** 并提供给项目。 我们将在下一章中检查AEM内容到SPA组件的映射。
 
 ## 添加静态SPA组件 {#static-spa-component}
 
