@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 59bcd6f2501b324222de7e68f2f7c311cb595788
+source-git-commit: 7985a5b36523aa090a7a9c7599e36bc1b5a9bd6f
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '375'
 ht-degree: 1%
 
 ---
@@ -57,17 +57,19 @@ ht-degree: 1%
                 快速了解如何使用repository modernizer将现有项目包重构为与AEM as a cloud service兼容的离散包。
             </p>
          </td>
-     <td>
-            <img alt="Admin Console" src="./imgs/coming-soon.png"/>
-      <div>
-            <strong>Admin Console</strong>
-         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
-      </div>
-      <p>
-        <br/>
-         2022年6月16日
-      </p>
-   </td> 
+         <td>
+            <a href="season-2/cloud5-admin-console.md">
+                 <img alt="Admin Console" src="./imgs/s2/002-thumb.png"/>
+            </a>
+            <div>
+                  <a href="season-2/cloud5-admin-console.md"><strong>Admin Console</strong></a>
+               <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+            </div>
+            <p>
+            <br/>
+               达林和詹姆士讨论了有关管理控制台、配置和访问的一些常见问题。
+            </p>
+         </td> 
   </tr>
   <tr>
    <td>
