@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 45061581322e23efb936e91c11be48ceac64183b
+source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 22%
+source-wordcount: '790'
+ht-degree: 21%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 22%
    + [进化](./introduction/evolution.md)
    + [架构](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
+   + 战略与思想领导{#strategy}
+      + [Experience Manager — 治理和人员配置模式和原型](./introduction/experience-manager-governance-and-staffing-models.md)
+      + [如何使用Adobe Experience Manager提高内容周转率](./introduction/drive-content-velocity-for-sites.md)
+      + [使用AEM样式系统加快内容速度](./introduction/accelerate-content-velocity-aem.md)
 + 底层技术 {#underlying-technology}
    + [AEM架构](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
@@ -28,7 +32,7 @@ ht-degree: 22%
    + [创作和发布服务](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Cloud Manager {#cloud-manager}
-   + [程序](./cloud-manager/programs.md)
+   + [项目](./cloud-manager/programs.md)
    + [环境](./cloud-manager/environments.md)
    + [CI/CD生产管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD非生产管道](./cloud-manager/cicd-non-production-pipeline.md)
