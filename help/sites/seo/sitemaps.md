@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9165
 thumbnail: 337960.jpeg
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 71f1d32c12742cdb644dec50050d147395c3f3b6
+source-git-commit: 7cfc150989453eec776eb34eac9b4598c46b0d7c
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 1%
+source-wordcount: '224'
+ht-degree: 5%
 
 ---
 
@@ -45,6 +45,23 @@ ht-degree: 1%
   "searchPath": "/content/wknd"
 }
 ```
+
+### 绝对站点地图URL
+
+AEM Sitemap通过使用 [Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). 这是通过在AEM服务上创建映射节点以生成站点地图来完成的。
+
+的Sling映射节点定义示例 `https://wknd.com` 可在下定义 `/etc/map/https` 如下所示：
+
+| 路径 | 属性名称 | 属性类型 | 属性值 |
+|------|----------|---------------|-------|
+| `/etc/map/https/wknd-site` | `jcr:primaryType` | 字符串 | `nt:unstructured` |
+| `/etc/map/https/wknd-site` | `sling:internalRedirect` | 字符串 | `/content/wknd/(.*)` |
+| `/etc/map/https/wknd-site` | `sling:match` | 字符串 | `wknd.com/$1` |
+
+下面的屏幕截图说明了类似的配置，但是 `http://wknd.local` (运行的本地主机名映射 `http`)。
+
+![Sitemap绝对URL配置](../assets/sitemaps/sitemaps-absolute-urls.jpg)
+
 
 ### 调度程序允许过滤器规则
 
