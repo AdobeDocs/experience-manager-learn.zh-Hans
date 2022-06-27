@@ -3,9 +3,9 @@ title: 如何使用Adobe Experience Manager提高内容周转率
 description: 了解内容周转率及其在企业组织中的价值。 深入研究有效实施的四项原则以及在实施过程中需要注意的缺陷。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '2805'
+source-wordcount: '2823'
 ht-degree: 0%
 
 ---
@@ -176,3 +176,5 @@ AEM Sites:基本运行和操作
 * 以单一方式查看解决方案。 例如，将重点放在AEM实施的技术方面不会实现全部业务好处。 相反，我们建议先查看业务用例和情景，然后转到架构和设计，因为这样可以更好地查看AEM功能。 Anurandha Pentareddy，来自Adobe股： _“我建议的一件事是，在您实施的平台之前，先看一下您的价值目标。”_
 
 有关内容周转率的更深入讨论，请收听此观看，时间为1小时 [小组讨论](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d) T-Mobile民主党议员莫妮克·米斯拉希、德勤(Emy Bergstrom)和Adobe的阿努拉达·佩纳雷迪主演。
+
+在 [客户成功](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) 中心。

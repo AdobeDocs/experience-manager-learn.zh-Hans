@@ -3,9 +3,9 @@ title: 使用AEM样式系统加快内容速度
 description: 了解如何使用AEM Style System，让组织中的设计人员、内容作者和开发人员能够按照客户期望的速度和规模创建和交付体验。
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
@@ -91,3 +91,5 @@ AEM Style System具有四个主要优势：
 最后，“风格系统”的使用更多是艺术，而不是科学。 正如我们所讨论的，我们提供了许多最佳实践，但您在如何自定义组织的设置方面将具有灵活性。
 
 有关更多信息，请查看我们的 [客户成功网络研讨会](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) 和威尔·布里斯班和约瑟夫·范·布什柯克。
+
+在 [客户成功](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) 中心。
