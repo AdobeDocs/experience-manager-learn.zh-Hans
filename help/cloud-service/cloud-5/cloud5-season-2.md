@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: e10617d81287a291d16aed3400ef0c01266586e6
+source-git-commit: c3d3eae47c17a7efed15f14e98e2f3ded719cef0
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '407'
 ht-degree: 1%
 
 ---
@@ -84,18 +84,20 @@ ht-degree: 1%
             <br/>
                达林和詹姆斯讨论了AEM as a cloud service中的作业计划和使用情况的难题和需要注意的事项。
             </p>
+         </td> 
+         <td>
+            <a href="season-2/cloud5-repoinit.md">
+                 <img alt="存储库初始值设定项（重新指向）" src="./imgs/s2/004-thumb.png"/>
+            </a>
+            <div>
+                  <a href="season-2/cloud5-repoinit.md"><strong>Sling存储库初始值设定项</strong></a>
+               <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+            </div>
+            <p>
+            <br/>
+              了解使用Sling存储库初始值设定项（即重新指示）发挥功能的一些技巧。
+            </p>
          </td>   
-     <td>
-        <img alt="存储库初始值设定项（重新指向）" src="./imgs/coming-soon.png"/>
-      <div>
-        <strong>存储库初始值设定项（重新指向）</strong>
-         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
-      </div>
-      <p>
-        <br/>
-            将于2022年7月1日推出
-      </p>
-   </td>
      <td>
             <img alt="修复您……缓存" src="./imgs/coming-soon.png"/>
       <div>
