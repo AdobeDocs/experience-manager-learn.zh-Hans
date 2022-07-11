@@ -2,7 +2,7 @@
 title: Android应用程序 — AEM Headless示例
 description: 示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此Android应用程序演示了如何使用AEM的GraphQL API查询内容。
 version: Cloud Service
-mini-toc-levels: 1
+mini-toc-levels: 2
 kt: 9166
 thumbnail: KT-9166.jpg
 feature: Content Fragments, GraphQL API
@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
-source-git-commit: 0204d9aaf7b79b0745adbe749f44245716203b88
+source-git-commit: 8b2c116ceb6ab8c3a009dcec6629c2e97d815b7b
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 3%
@@ -136,7 +136,7 @@ query($slug: String!) {
         slug: {
           _expressions: [ { value: $slug } ]
         }
-  	}) {
+      }) {
     items {
       _path
       title
@@ -178,7 +178,7 @@ query($slug: String!) {
 }
 ```
 
-## 执行GraphQL持久查询
+### 执行GraphQL持久查询
 
 AEM持久查询是通过HTTPGET执行的，因此， [AEM Headless Client for Java](https://github.com/adobe/aem-headless-client-java) 用于对AEM执行持久的GraphQL查询，并将冒险内容加载到应用程序中。
 

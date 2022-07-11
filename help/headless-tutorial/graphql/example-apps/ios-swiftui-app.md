@@ -1,8 +1,8 @@
 ---
-title: iOS SwiftUI应用程序 — AEM Headless示例
+title: iOS应用程序 — AEM Headless示例
 description: 示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此iOS应用程序演示了如何使用AEM GraphQL API来使用持久查询来查询内容。
 version: Cloud Service
-mini-toc-levels: 1
+mini-toc-levels: 2
 kt: 9166
 thumbnail: KT-9166.jpg
 feature: Content Fragments, GraphQL API
@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: bcedb190fba7b6bc044da06bd36d097d553172a1
+source-git-commit: 8b2c116ceb6ab8c3a009dcec6629c2e97d815b7b
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '981'
 ht-degree: 2%
 
 ---
 
-# iOS SwiftUI应用程序
+# iOS应用程序
 
 示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此iOS应用程序演示了如何使用AEM GraphQL API来使用持久查询来查询内容。
 
@@ -131,7 +131,7 @@ query($slug: String!) {
         slug: {
           _expressions: [ { value: $slug } ]
         }
-  	}) {
+      }) {
     items {
       _path
       title
@@ -173,7 +173,7 @@ query($slug: String!) {
 }
 ```
 
-## 执行GraphQL持久查询
+### 执行GraphQL持久查询
 
 AEM持久查询是通过HTTPGET执行的，因此，不能使用使用HTTPPOST（如Apollo）的常用GraphQL库。 而是创建一个自定义类，以执行对AEM的持久查询HTTPGET请求。
 
