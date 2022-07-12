@@ -8,16 +8,16 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: 22d5aa7299ceacd93771bd73a6b89d1903edc561
+source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1463'
 ht-degree: 0%
 
 ---
 
 # 富文本，带AEM Headless
 
-多行文本字段是内容片段的数据类型，使作者能够创建富文本内容。 对其他内容（如图像或其他内容片段）的引用可以动态地插入到文本流中的行内。 单行文本字段是内容片段的另一种数据类型，应用于简单文本元素。
+多行文本字段是内容片段的数据类型，使作者能够创建富文本内容。 对其他内容（如图像或其他内容片段）的引用可以动态地插入到文本流中的行内。 单行文本字段是内容片段的另一种数据类型，应用于简单的文本元素。
 
 AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯文本或纯JSON返回。 JSON表示形式非常强大，因为它赋予客户端应用程序对如何渲染内容的完全控制权。
 
@@ -25,7 +25,7 @@ AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯�
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104/?quality=12&learn=on)
 
-在内容片段编辑器中，多行文本字段的菜单栏为作者提供了标准富文本格式功能，例如 **粗体**, *斜体*、和下划线。 以全屏模式打开多行字段可启用 [其他格式工具，如段落类型、查找和替换、拼写检查等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
+在内容片段编辑器中，多行文本字段的菜单栏为作者提供了标准富文本格式功能，例如 **粗体**, *斜体*、和下划线。 以全屏模式打开多行字段时，可启用 [其他格式工具，如段落类型、查找和替换、拼写检查等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯�
 
 的 **呈现为** 属性可设置为：
 
-* 文本区域 — 呈现单个多行字段
+* 文本区域 — 渲染单个多行字段
 * 多个字段 — 呈现多个多行字段
 
 
@@ -55,7 +55,7 @@ AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯�
 
 您还可以 [启用行内引用](#insert-fragment-references) 通过检查 **允许片段引用** 和配置 **允许的内容片段模型**.
 
-如果内容将进行本地化，请检查 **可翻译** 框中。 只能本地化富文本和纯文本。 请参阅 [使用本地化内容以了解更多详细信息](./localized-content.md).
+检查 **可翻译** 框中，选择要在左侧导航。 只能本地化富文本和纯文本。 请参阅 [使用本地化内容以了解更多详细信息](./localized-content.md).
 
 ## 使用GraphQL API的富文本响应
 
@@ -63,17 +63,15 @@ AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯�
 
 开发人员可以使用 [JSON预览](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) 在内容片段编辑器中，显示可使用GraphQL API返回的当前内容片段的所有值。
 
-### JSON示例
+## GraphQL持久查询
 
-的 `json` 响应为前端开发人员提供了处理富文本内容时的最大灵活性。 富文本内容以JSON节点类型数组的形式交付，这些节点类型可以基于客户端平台进行唯一处理。
+选择 `json` 处理富文本内容时，多行字段的响应格式提供了最大的灵活性。 富文本内容以JSON节点类型数组的形式交付，这些节点类型可以基于客户端平台进行唯一处理。
 
 以下是名为的多行字段的JSON响应类型 `main` 包含段落：&quot;*这是一个段落，其中包括&#x200B;**重要**内容。*&quot;其中&quot;important&quot;标记为 **粗体**.
 
-**GraphQL查询：**
-
 ```graphql
-{
-  articleByPath(_path: "/content/dam/wknd/en/magazine/sample-article")
+query ($path: String!) {
+  articleByPath(_path: $path)
   {
     item {
       _path
@@ -84,6 +82,8 @@ AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯�
   }
 }
 ```
+
+的 `$path` 变量 `_path` 过滤器需要内容片段的完整路径(例如， `/content/dam/wknd/en/magazine/sample-article`)。
 
 **GraphQL响应：**
 
@@ -131,11 +131,11 @@ AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯�
 
 +++HTML示例
 
-**GraphQL查询：**
+**GraphQL持久查询：**
 
 ```graphql
-{
-  articleByPath(_path: "/content/dam/wknd/en/magazine/sample-article")
+query ($path: String!) {
+  articleByPath(_path: $path)
   {
     item {
       _path
@@ -168,11 +168,11 @@ AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯�
 
 +++Markdown示例
 
-**GraphQL查询：**
+**GraphQL持久查询：**
 
 ```graphql
-{
-  articleByPath(_path: "/content/dam/wknd/en/magazine/sample-article")
+query ($path: String!) {
+  articleByPath(_path: $path)
   {
     item {
       _path
@@ -205,11 +205,11 @@ AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯�
 
 +++纯文本示例
 
-**GraphQL查询：**
+**GraphQL持久查询：**
 
 ```graphql
-{
-  articleByPath(_path: "/content/dam/wknd/en/magazine/sample-article")
+query ($path: String!) {
+  articleByPath(_path: $path)
   {
     item {
       _path
@@ -245,7 +245,7 @@ AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯�
 
 ## 呈现富文本JSON响应 {#render-multiline-json-richtext}
 
-多行字段的富文本JSON响应的结构为层次树。 每个对象或节点表示富文本的不同HTML块。
+多行字段的富文本JSON响应被构造为层次树。 每个对象或节点表示富文本的不同HTML块。
 
 下面是多行文本字段的JSON响应示例。 请注意，每个对象或节点都包含 `nodeType` 表示来自富文本（如）的HTML块 `paragraph`, `link`和 `text`. 每个节点（可选）包含 `content` 是包含当前节点的任何子项的子数组。
 
@@ -298,7 +298,7 @@ function renderNodeList(childNodes) {
 }
 ```
 
-的 `renderNodeList` 函数是递归算法的入口点。 的 `renderNodeList` 函数需要数组 `childNodes`. 然后，数组中的每个节点都将传递到函数 `renderNode`.
+`renderNodeList` 是一个递归函数，它采用 `childNodes`. 然后，数组中的每个节点都将传递到函数 `renderNode`，这反过来会调用 `renderNodeList` 节点是否具有子节点。
 
 ```javascript
 // renderNode - renders an individual node
@@ -333,19 +333,19 @@ const nodeMap = {
 
 可在 [WKND GraphQL React示例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
-* [renderRichText.js](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app/src/utils/renderRichText.js)  — 公开函数的可重用实用程序 `mapJsonRichText`. 此实用程序可供要将富文本JSON响应渲染为React JSX的组件使用。
+* [renderRichText.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/utils/renderRichText.js)  — 公开函数的可重用实用程序 `mapJsonRichText`. 此实用程序可供要将富文本JSON响应渲染为React JSX的组件使用。
 * [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js)  — 发出包含富文本的GraphQL请求的示例组件。 组件使用 `mapJsonRichText` 用于呈现富文本和任何引用的实用程序。
 
 
 ## 向富文本添加内嵌引用 {#insert-fragment-references}
 
-多行字段允许作者在富文本流中插入来自AEM Assets的图像或其他数字资产。
+作者可以在富文本流中插入来自AEM Assets的图像或其他数字资产。
 
 ![插入图像](assets/rich-text/insert-image.png)
 
-上面的屏幕截图描述了使用 **插入资产** 按钮。
+以上屏幕截图描述了使用 **插入资产** 按钮。
 
-对其他内容片段的引用也可以使用链接或插入到多行字段中 **插入内容片段** 按钮。
+对其他内容片段的引用也可以使用链接或插入多行字段中的 **插入内容片段** 按钮。
 
 ![插入内容片段引用](assets/rich-text/insert-contentfragment.png)
 
@@ -353,7 +353,7 @@ const nodeMap = {
 
 ## 使用GraphQL查询内嵌引用
 
-GraphQL API允许开发人员创建一个查询，该查询包含有关在多行字段中插入的任何引用的其他属性。 JSON响应包含一个单独的 `_references` 列出这些额外属性的对象。 JSON响应使开发人员完全可以控制如何渲染引用或链接，而不必处理有意见的HTML。
+GraphQL API允许开发人员创建一个查询，该查询包含有关插入多行字段中的任何引用的其他属性。 JSON响应包含一个单独的 `_references` 列出这些额外属性的对象。 JSON响应使开发人员完全可以控制如何渲染引用或链接，而不必处理有意见的HTML。
 
 例如，您可能希望：
 
@@ -363,11 +363,11 @@ GraphQL API允许开发人员创建一个查询，该查询包含有关在多行
 
 使用 `json` 返回类型并包含 `_references` 对象：
 
-**GraphQL查询：**
+**GraphQL持久查询：**
 
 ```graphql
-{
-  articleByPath(_path: "/content/dam/wknd/en/magazine/sample-article")
+query ($path: String!) {
+  articleByPath(_path: $path)
   {
     item {
       _path

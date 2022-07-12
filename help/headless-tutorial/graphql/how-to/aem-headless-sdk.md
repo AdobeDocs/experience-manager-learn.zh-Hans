@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 10269
 thumbnail: KT-10269.jpeg
-source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
+exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
+source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 5%
+source-wordcount: '415'
+ht-degree: 4%
 
 ---
-
 
 # AEM Headless SDK
 
@@ -28,134 +28,13 @@ AEM Headless SDK可用于各种平台：
 
 ## GraphQL查询
 
-使用GraphQL使用查询查询AEM(而不是 [持久GraphQL查询](#persisted-graphql-queries))允许开发人员在代码中定义查询，准确指定要从AEM请求的内容。
-
-GraphQL查询的性能往往比持久查询低，因为它们使用HTTPPOST执行，这在CDN和AEM Dispatcher层的缓存能力较差。
-
-### 代码示例{#graphql-queries-code-examples}
-
-以下是如何对AEM执行GraphQL查询的代码示例。
-
-+++ JavaScript示例
-
-安装 [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) 运行 `npm install` 命令。
-
-```
-$ npm i @adobe/aem-headless-client-js
-```
-
-此代码示例显示如何使用 [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm模块使用 `async/await` 语法。 适用于JavaScript的AEM Headless SDK还支持 [Promise语法](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client).
-
-```javascript
-import AEMHeadless from '@adobe/aem-headless-client-js';
-
-// Initialize the AEMHeadless client with connection details
-const aemHeadlessClient = new AEMHeadless({
-    serviceURL: 'https://publish-p123-e789.adobeaemcloud.com',  // The AEM environment to query, this can be pulled out to env variables
-    endpoint: '/content/cq:graphql/wknd/endpoint.json',         // The AEM GraphQL endpoint, this can be pulled out to env variables
-})
-
-async function fetchQuery(query, queryParams) {
-    let data
-
-    try {
-        // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax
-        const response = await aemHeadlessClient.runQuery(query, queryParams);
-        // The GraphQL data is stored on the response's data key
-        data = response.data;
-    } catch (e) {
-        console.error(e.toJSON())
-    }
-
-    return data;
-};
-
-// Define the GraphQL query in-code
-const adventureNamesQuery = `{
-    adventuresList {
-        items {
-            adventureName
-        }
-    }
-}`;
-
-let data = fetchQuery(adventureNamesQuery);
-```
-
-+++
-
-
-+++ React useEffect(..) 示例
-
-安装 [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) 运行 `npm install` 命令。
-
-```
-$ npm i @adobe/aem-headless-client-js
-```
-
-此代码示例显示如何使用 [React useEffect(..) 钩钩](https://reactjs.org/docs/hooks-effect.html) 执行对AEM GraphQL的异步调用。
-
-使用 `useEffect` 在React中进行异步GraphQL调用非常有用，因为它：
-
-1. 为对AEM的异步调用提供同步包装器。
-1. 减少不必要的请求AEM。
-
-```javascript
-// src/useGraphQL.js
-
-import { useState, useEffect } from 'react';
-import AEMHeadless from '@adobe/aem-headless-client-js';
-
-const aemHeadlessClient = new AEMHeadless({
-    serviceURL: 'https://publish-p123-e789.adobeaemcloud.com', // The AEM environment to query, this can be pulled out to env variables
-    endpoint: '/content/cq:graphql/global/endpoint.json'       // The AEM GraphQL endpoint, this can be pulled out to env variables
-});
-
-export function useGraphQL(query, queryParams) {
-    let [data, setData] = useState(null);
-    let [errors, setErrors] = useState(null);
-  
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const response = await aemHeadlessClient.runQuery(query, queryParams);
-                setData(response.data);
-            } catch(error) {
-                setErrors(error);
-            };
-        }
-        fetchData();
-    }, [query, queryParams]);
-  
-    return { data, errors }
-}
-```
-
-导入和使用 `useGraphQL` 挂接以查询AEM。
-
-```javascript
-import useGraphQL from 'useGraphQL';
-
-const adventuresQuery = `{
-    adventuresList {
-        items {
-            adventureName
-        }
-    }
-}`;
-
-let { data, errors } = useGraphQL(adventuresQuery);
-```
-
-+++
-
-<p> </p>
+AEM支持客户端定义的GraphQL查询，但最佳做法是使用AEM [持久GraphQL查询](#persisted-graphql-queries).
 
 ## 持久 GraphQL 查询
 
-使用GraphQL使用持久查询查询查询AEM(而不是 [常规GraphQL查询](#graphl-queries))允许开发人员在AEM中保留查询（但不保留其结果），然后按名称请求执行查询。 持久化查询与SQL数据库中存储过程的概念类似。
+使用GraphQL使用持久查询查询查询AEM(而不是 [客户端定义的GraphQL查询](#graphl-queries))允许开发人员在AEM中保留查询（但不保留其结果），然后按名称请求执行查询。 持久化查询与SQL数据库中存储过程的概念类似。
 
-持久化查询往往比常规GraphQL查询更具性能，因为持久化查询是使用HTTPGET执行的，这在CDN和AEM Dispatcher层中更具有缓存能力。 持久化查询也有效，可定义API，并让开发人员不再需要了解每个内容片段模型的详细信息。
+持久化查询比客户端定义的GraphQL查询更具性能，因为持久化查询使用HTTPGET执行，HTTP数据可在CDN和AEM Dispatcher层中缓存。 持久化查询也有效，可定义API，并让开发人员不再需要了解每个内容片段模型的详细信息。
 
 ### 代码示例{#persisted-graphql-queries-code-examples}
 
@@ -179,26 +58,35 @@ import AEMHeadless from '@adobe/aem-headless-client-js';
 // Initialize the AEMHeadless client with connection details
 const aemHeadlessClient = new AEMHeadless({
     serviceURL: 'https://publish-p123-e789.adobeaemcloud.com',  // The AEM environment to query, this can be pulled out to env variables
-    endpoint: '/content/cq:graphql/wknd/endpoint.json',         // The AEM GraphQL endpoint, this can be pulled out to env variables
+    endpoint: '/content/cq:graphql/wknd-shared/endpoint.json',  // The AEM GraphQL endpoint, this is not used when invoking persisted queries.
 })
 
-async function fetchPersistedQuery(persistedQueryName) {
-    let data
+/**
+ * Uses the AEM Headless SDK to execute a persisted query with optional query variables.
+
+ * @param {String} persistedQueryName the fully qualified name of the persisted query
+ * @param {*} queryParameters an optional JavaScript object containing query parameters
+ * @returns the GraphQL data or an error message 
+ */
+export async function executePersistedQuery(persistedQueryName, queryParameters) {
+    let data;
+    let errors;
 
     try {
         // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax
-        const response = await aemHeadlessClient.runPersistedQuery(persistedQueryName);
+        const response = await aemHeadlessClient.runPersistedQuery(persistedQueryName, queryParameters);
         // The GraphQL data is stored on the response's data field
         data = response.data;
     } catch (e) {
         console.error(e.toJSON())
+        errors = e;
     }
 
-    return data;
+    return { data, errors };
 };
 
-// Execute the persisted query using its name
-let data = fetchPersistedQuery('wknd/adventureNames');
+// Execute the persisted query using its name 'wknd-shared/adventures-by-slug' and optional query variables
+let { data, errors } = executePersistedQuery('wknd-shared/adventures-by-slug', { "slug": "bali-surf-camp" });
 ```
 
 +++
@@ -218,44 +106,98 @@ $ npm i @adobe/aem-headless-client-js
 1. 它为对AEM的异步调用提供同步包装器。
 1. 它减少了不必要的AEM请求。
 
-此代码假定具有名称的持久查询 `wknd/adventureNames` 已在AEM作者上创建并发布到AEM发布。
+此代码假定具有名称的持久查询 `wknd-shared/adventure-by-slug` 已在AEM作者上创建，并使用GraphiQL发布到AEM发布。
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';
+import { useEffect, useState } from "react";
 
 // Initialize the AEMHeadless client with connection details
 const aemHeadlessClient = new AEMHeadless({
     serviceURL: 'https://publish-p123-e789.adobeaemcloud.com', // The AEM environment to query
-    endpoint: '/content/cq:graphql/wknd/endpoint.json'         // The AEM GraphQL endpoint
+    endpoint: '/content/cq:graphql/wknd-shared/endpoint.json'         // The AEM GraphQL endpoint, this is not used when invoking persisted queries.
 })
 
-export function fetchPersistedQuery(persistedQueryName) {
-  let [data, setData] = useState(null);
-  let [errors, setErrors] = useState(null);
+/**
+ * Private, shared function that invokes the AEM Headless client. 
+ * React components/views will invoke GraphQL via the custom React useEffect hooks defined below.
+ * 
+ * @param {String} persistedQueryName the fully qualified name of the persisted query
+ * @param {*} queryParameters an optional JavaScript object containing query parameters
+ * @returns the GraphQL data or an error message 
+ */
+async function fetchPersistedQuery(persistedQueryName, queryParameters) {
+  let data;
+  let err;
 
-  useEffect(async () => {
-    try {
-        // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax 
-        const response = await aemHeadlessClient.runPersistedQuery(persistedQueryName);
-        // The GraphQL data is stored on the response's data field
-        setData(response.data);
-    }.catch((error) => {
-        setErrors(error);
-    });
+  try {
+    // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax
+    const response = await aemHeadlessClient.runPersistedQuery(
+      persistedQueryName,
+      queryParameters
+    );
+    // The GraphQL data is stored on the response's data field
+    data = response?.data;
+  } catch (e) {
+    // An error occurred, return the error messages
+    err = e
+      .toJSON()
+      ?.map((error) => error.message)
+      ?.join(", ");
+    console.error(e.toJSON());
+  }
 
-  }, [persistedQueryName]);
+  return { data, err };
+}
 
-  return { data, errors }
+/**
+ * Calls the 'wknd-shared/adventure-by-slug' and provided the {slug} as the persisted query's `slug` parameter.
+ *
+ * @param {String!} slug the unique slug used to specify the adventure to return
+ * @returns a JSON object representing the adventure
+ */
+export function useAdventureBySlug(slug) {
+  const [adventure, setAdventure] = useState(null);
+  const [errors, setErrors] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      // The key is the variable name as defined in the persisted query, and may not match the model's field name
+      const queryParameters = { slug: slug };
+      
+      // Invoke the persisted query, and pass in the queryParameters object as the 2nd parameter
+      const { data, err } = await fetchPersistedQuery(
+        "wknd-shared/adventure-by-slug",
+        queryParameters
+      );
+
+      if (err) {
+        // Capture errors from the HTTP request
+        setErrors(err);
+      } else if (data?.adventureList?.items?.length === 1) {
+        // Set the adventure data after data validation (there should only be 1 matching adventure)
+        setAdventure(data.adventureList.items[0]);
+      } else {
+        // Set an error if no adventure could be found
+        setErrors(`Cannot find adventure with slug: ${slug}`);
+      }
+    }
+    fetchData();
+  }, [slug]);
+
+  return { adventure, errors };
 }
 ```
 
-并从React代码的其他位置调用此代码。
+调用自定义React `useEffect` 从React组件中的其他位置挂接。
 
 ```javascript
-import useGraphL from '...';
+import useAdventureBySlug from '...';
 
-let { data, errors } = fetchPersistedQuery('wknd/adventureNames');
+let { data, errors } = useAdventureBySlug('bali-surf-camp');
 ```
+
+新建 `useEffect` 可以为React应用程序使用的每个持久查询创建挂钩。
 
 +++
 
