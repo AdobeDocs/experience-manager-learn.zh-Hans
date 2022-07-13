@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: 6958b1f82c609af2998d94fd868e67bf1578e848
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1264'
 ht-degree: 1%
 
 ---
@@ -229,15 +229,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
 
 ### HTTP/HTTPS
 
-从AEM创建HTTP/HTTPS连接时，为了获得专用出口IP地址或通过VPN路由，连接必须通过专用主机和端口（通过占位符提供）进行。
-
-AEM提供了两组特殊的Java™系统变量，这些变量会映射到AEM HTTP/HTTPS代理。
-
-|变量名称 |使用 | Java™代码 | OSGi配置 | Apache Web服务器mod_proxy配置 | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | HTTP连接的代理主机 | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | HTTP连接的代理端口 | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` |用于HTTPS连接的代理主机 | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | HTTPS连接的代理端口 | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
-
-应通过AEM代理主机/端口值配置Java™ HTTP客户端的代理配置，来发出对HTTP/HTTPS外部服务的请求。
-
-在任何端口上对外部服务进行HTTP/HTTPS调用时，没有相应的 `portForwards` 必须使用Cloud Manager API的 `__enableEnvironmentAdvancedNetworkingConfiguration` 操作，因为端口转发“规则”是在“代码中”定义的。
+从AEM创建HTTP/HTTPS连接时，使用VPN时，HTTP/HTTPS连接将自动从AEM中代理。 支持HTTP/HTTPS连接无需其他代码或配置。
 
 >[!TIP]
 >
