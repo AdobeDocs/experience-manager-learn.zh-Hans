@@ -9,22 +9,22 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
-source-git-commit: aa2d0d4d6e0eb429baa37378907a9dd53edd837d
+source-git-commit: bdce84fdcc949c8f8d0690ee7110238d8e8d3e42
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
 
 # 用于专用出口IP地址和VPN的HTTP/HTTPS连接
 
-HTTP/HTTPS连接必须在AEMas a Cloud Service之外代理，但它们不需要任何特殊 `portForwards` 规则，并可使用AEM的 `AEM_HTTP_PROXY_HOST`, `AEM_HTTP_PROXY_PORT`, `AEM_HTTPS_PROXY_HOST`和 `AEM_HTTPS_PROXY_PORT`.
+使用专用出口IP地址或VPN，HTTP/HTTPS连接会自动从AEMas a Cloud Service中代理，它们不需要任何特殊 `portForwards` 规则。
 
 ## 高级网络支持
 
 以下高级网络选项支持以下代码示例。
 
-确保 [适当](../advanced-networking.md#advanced-networking) 在完成本教程之前，已设置高级网络配置。
+确保 [专用出口IP地址或VPN](../advanced-networking.md#advanced-networking) 在完成本教程之前，已设置高级网络配置。
 
 | 无高级网络 | [灵活的端口出口](../flexible-port-egress.md) | [专用出口IP地址](../dedicated-egress-ip-address.md) | [虚拟专用网](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -36,7 +36,7 @@ HTTP/HTTPS连接必须在AEMas a Cloud Service之外代理，但它们不需要�
 
 ## 代码示例
 
-此Java™代码示例是OSGi服务的一个示例，该服务可以在AEMas a Cloud Service中运行，该服务在8080上与外部Web服务器进行HTTP连接。 与HTTPS Web服务器的连接使用 `AEM_HTTPS_PROXY_HOST` 和 `AEM_HTTPS_PROXY_PORT` 而不是  `AEM_HTTP_PROXY_HOST` 和 `AEM_HTTP_PROXY_PORT`.
+此Java™代码示例是OSGi服务的一个示例，该服务可以在AEMas a Cloud Service中运行，该服务在8080上与外部Web服务器进行HTTP连接。 HTTPS（或HTTP）连接会自动从AEMas a Cloud Service中代理，无需进行特殊开发。
 
 >[!NOTE]
 > 建议使用 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) 用于从AEM发起HTTP/HTTPS调用。
