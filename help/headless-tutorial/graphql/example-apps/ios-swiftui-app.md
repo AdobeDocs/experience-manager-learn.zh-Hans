@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: 5d32899a58e591b535dab991f89a8f7467b7b435
+source-git-commit: 4b8f7d9c6def8c121f3c975218b7214d271fa77f
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 2%
@@ -47,7 +47,7 @@ iOS应用程序旨在连接到 __AEM发布__ 环境中，但是，如果在iOS�
 1. 克隆 `adobe/aem-guides-wknd-graphql` 存储库：
 
    ```shell
-   git clone git@github.com:adobe/aem-guides-wknd-graphql.git
+   $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
 1. Launch [Xcode](https://developer.apple.com/xcode/) 并打开文件夹 `ios-app`
