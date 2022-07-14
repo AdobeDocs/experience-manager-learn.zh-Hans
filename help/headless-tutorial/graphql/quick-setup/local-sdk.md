@@ -10,16 +10,16 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 64086f3f7b340b143bd281e2f6f802af07554ecf
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 8%
+source-wordcount: '1258'
+ht-degree: 1%
 
 ---
 
 # AEM Headless使用本地SDK快速设置 {#setup}
 
-AEM无头快速设置可让您使用WKND网站示例项目中的内容，以及通过AEM无头GraphQL API使用内容的示例React应用程序(SPA)，来实践AEM无头。 本指南使用 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#aem-as-a-cloud-service-sdk).
+AEM无头快速设置可让您使用WKND网站示例项目中的内容，以及通过AEM无头GraphQL API使用内容的示例React应用程序(SPA)，来实践AEM无头。 本指南使用 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
 
 ## 前提条件 {#prerequisites}
 
@@ -32,41 +32,37 @@ AEM无头快速设置可让您使用WKND网站示例项目中的内容，以及�
 
 ## 1.安装AEM SDK {#aem-sdk}
 
-此设置使用 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#aem-as-a-cloud-service-sdk) 浏览AEM GraphQL API。 本节提供了有关安装AEM SDK并在创作模式下运行该SDK的快速指南。 有关设置本地开发环境的更详细指南 [可在此处找到](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=en#local-development-environment-set-up).
+此设置使用 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?#aem-as-a-cloud-service-sdk) 浏览AEM GraphQL API。 本节提供了有关安装AEM SDK并在创作模式下运行该SDK的快速指南。 有关设置本地开发环境的更详细指南 [可在此处找到](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html#local-development-environment-set-up).
 
 >[!NOTE]
 >
 > 您还可以在本教程的后面使用 [AEMas a Cloud Service环境](./cloud-service.md). 整个教程中都包含有关使用云环境的其他说明。
 
-1. 导航到 **[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEMas a Cloud Service** 并下载 **AEM SDK**.
+1. 导航到 **[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)** > **AEMas a Cloud Service** 并下载 **AEM SDK**.
 
-   ![软件分发门户](assets/setup/software-distribution-portal-download.png)
-
-   >[!CAUTION]
-   >
-   > 默认情况下，仅在2021-02-04或更高版本的AEM SDK上启用GraphQL功能。
+   ![软件分发门户](assets/quick-setup/aem-sdk/downloads__aem-sdk.png)
 
 1. 解压缩下载并复制快速入门Jar(`aem-sdk-quickstart-XXX.jar`)到专用文件夹，例如 `~/aem-sdk/author`.
-1. 将jar文件重新命名为 `aem-author-p4502.jar`.
+1. 将jar文件重命名为 `aem-author-p4502.jar`.
 
-   的 `author` 名称指定快速入门jar将以“创作”模式启动。 的 `p4502` 指定快速启动服务器将在端口4502上运行。
+   的 `author` 名称指定快速入门jar以“创作”模式启动。 的 `p4502` 指定在端口4502上运行快速启动。
 
-1. 打开新的“终端”窗口，然后导航到包含jar文件的文件夹。 运行以下命令以安装和启动AEM实例：
+1. 要安装和启动AEM实例，请在包含jar文件的文件夹中打开命令提示符，然后运行以下命令：
 
    ```shell
    $ cd ~/aem-sdk/author
    $ java -jar aem-author-p4502.jar
    ```
 
-1. 提供管理员密码作为 `admin`. 可接受任何管理员密码，但建议使用 `admin` 用于本地开发，以减少重新配置的需要。
-1. 几分钟后，AEM实例将完成安装，并且新的浏览器窗口应会在 [http://localhost:4502](http://localhost:4502).
+1. 提供管理员密码作为 `admin`. 可接受任何管理员密码，但建议使用 `admin` 以便减少重新配置的需要。
+1. 安装完AEM服务后，应会在 [http://localhost:4502](http://localhost:4502).
 1. 使用用户名登录 `admin` 和在AEM初始启动期间选择的密码(通常 `admin`)。
 
-## 2.安装示例WKND内容 {#wknd-site-content}
+## 2.安装示例内容 {#install-sample-content}
 
-示例内容 **WKND参考站点** 将安装以加速教程。 WKND是一个虚构的生命风格品牌，通常与AEM培训结合使用。
+示例内容 **WKND参考站点** 用于加速教程。 WKND是一个虚构的生命风格品牌，通常与AEM培训一起使用。
 
-WKND引用站点包含公开 [GraphQL端点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html?lang=en#graphql-aem-endpoint). 在实际实施中，按照 [包括GraphQL端点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html?lang=en#graphql-aem-endpoint) 在您的客户项目中。 A [CORS](#cors-config) 也被打包为WKND站点的一部分。 需要CORS配置才能授予对外部应用程序的访问权限，有关 [CORS](#cors-config) 可在下面找到。
+WKND站点包括公开 [GraphQL端点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html). 在实际实施中，按照 [包括GraphQL端点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html) 在您的客户项目中。 A [CORS](#cors-config) 也被打包为WKND站点的一部分。 需要CORS配置才能授予对外部应用程序的访问权限，有关 [CORS](#cors-config) 可在下面找到。
 
 1. 下载适用于WKND站点的最新编译的AEM包： [aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest).
 
@@ -74,48 +70,49 @@ WKND引用站点包含公开 [GraphQL端点](https://experienceleague.adobe.com/
    >
    > 确保下载与AEM as a Cloud Service兼容的标准版本，以及 **not** the `classic` 版本。
 
-1. 从 **AEM 开始**&#x200B;菜单，导航到&#x200B;**工具** > **部署** > **软件包**。
+1. 从 **AEM开始** 菜单，导航至 **工具** > **部署** > **包**.
 
-   ![导航到包](assets/setup/navigate-to-packages.png)
+   ![导航到包](assets/quick-setup/aem-sdk/aem-sdk__packages.png)
 
 1. 单击 **上传包** 并选择在上一步骤中下载的WKND包。 单击&#x200B;**安装**&#x200B;可安装软件包。
 
-1. 从 **AEM开始** 菜单导航到 **资产** > **文件**.
-1. 单击文件夹以导航到 **WKND站点** > **英语** > **冒险**.
+1. 从 **AEM开始** 菜单，导航至 **资产** > **文件** > **WKND共享** > **英语** > **冒险**.
 
-   ![Adventures的文件夹视图](assets/setup/folder-view-adventures.png)
+   ![Adventures的文件夹视图](assets/quick-setup/aem-sdk/aem-sdk__assets-folder.png)
 
    这是构成WKND品牌推广的各种Adventures的所有资产的文件夹。 这包括传统媒体类型（如图像和视频），以及特定于AEM的媒体，如 **内容片段**.
 
 1. 单击 **怀俄明州速降滑雪** 文件夹，然后单击 **怀俄明山滑雪内容片段** 卡片：
 
-   ![向下滑雪内容片段卡](assets/setup/downhill-skiing-cntent-fragment.png)
+   ![内容片段卡](assets/quick-setup/aem-sdk/aem-sdk__content-fragment.png)
 
-1. 内容片段编辑器UI将打开，用于怀俄明州下山滑雪探险。
+1. 内容片段编辑器将打开，用于下山滑雪怀俄明探险。
 
-   ![速降滑雪内容片段](assets/setup/down-hillskiing-fragment.png)
+   ![内容片段编辑器](assets/quick-setup/aem-sdk/aem-sdk__content-fragment-editor.png)
 
    请注意， **标题**, **描述**&#x200B;和 **活动** 定义片段。
 
-   **内容片段** 是在AEM中管理内容的一种方式。 内容片段是可重用的、与呈现形式无关的内容，由结构化数据元素（如文本、富文本、日期或对其他内容片段的引用）组成。 在教程的后面部分，将更详细地探索内容片段。
+   **内容片段** 是在AEM中管理内容的一种方式。 内容片段是可重用的、与呈现形式无关的内容，由结构化数据元素（如文本、富文本、日期或对其他内容片段的引用）组成。 稍后在快速设置中会详细探索内容片段。
 
 1. 单击 **取消** 来关闭片段。 您可以随意导航到其他一些文件夹，并浏览其他Adventure内容。
 
 >[!NOTE]
 >
-> 如果使用Cloud Service环境，请参阅有关如何 [将类似WKND引用站点的代码库部署到Cloud Service环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#coding-against-the-right-aem-version).
+> 如果使用Cloud Service环境，请参阅有关如何 [将类似WKND引用站点的代码库部署到Cloud Service环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version).
 
 ## 3.下载并运行WKND React应用程序 {#sample-app}
 
-本教程的目标之一是演示如何使用GraphQL API从外部应用程序中使用AEM内容。 本教程使用已部分完成的React应用程序示例来加速教程。 同样的课程和概念也适用于使用iOS、Android或任何其他平台构建的应用程序。 React应用程序特意简单，以避免不必要的复杂性；它不是引用实施。
+本教程的目标之一是演示如何使用GraphQL API从外部应用程序中使用AEM内容。 本教程使用React应用程序的示例。 React应用程序特意非常简单，只注重与AEM GraphQL API的集成。
 
-1. 使用Git打开新的终端窗口和克隆教程启动器分支：
+1. 打开新的命令提示符，并从GitHub中克隆示例React应用程序：
 
    ```shell
-   $ git clone --branch tutorial/react git@github.com:adobe/aem-guides-wknd-graphql.git
+   $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
+   $ cd aem-guides-wknd-graphql/react-app
    ```
 
-1. 在选择的IDE中，打开文件 `.env.development` at `aem-guides-wknd-graphql/react-app/.env.development`. 验证 `REACT_APP_AUTHORIZATION` 行未添加注释，且文件如下所示：
+1. 在中打开React应用程序 `aem-guides-wknd-graphql/react-app` 在您选择的IDE中。
+1. 在IDE中，打开文件 `.env.development` at `/.env.development`. 验证 `REACT_APP_AUTHORIZATION` 行将被取消注释，并且文件声明了以下变量：
 
    ```plain
    REACT_APP_HOST_URI=http://localhost:4502
@@ -124,13 +121,14 @@ WKND引用站点包含公开 [GraphQL端点](https://experienceleague.adobe.com/
    REACT_APP_AUTHORIZATION=admin:admin
    ```
 
-   确保 `React_APP_HOST_URI` 匹配您的本地AEM实例。 在本章中，我们将React应用程序直接连接到AEM **作者** 环境。 **作者** 默认情况下，环境需要进行身份验证，因此我们的应用程序将作为 `admin` 用户。 这是开发过程中的常见做法，因为它允许我们快速在AEM环境中进行更改，并立即在应用程序中反映这些更改。
+   确保 `REACT_APP_HOST_URI` 指向本地AEM SDK。 为方便起见，此快速入门可将React应用程序连接到  **AEM作者**. **作者** 服务需要进行身份验证，因此应用程序使用 `admin` 用户建立其连接。 在开发过程中，将应用程序连接到AEM作者是一种常见做法，因为这样可以帮助快速迭代内容，而无需发布更改。
 
    >[!NOTE]
    >
    > 在生产方案中，应用程序将连接到AEM **发布** 环境。 有关详细信息，请参阅 _生产部署_ 中。
 
-1. 导航到 `aem-guides-wknd-graphql/react-app` 文件夹。 安装并启动应用程序：
+
+1. 安装并启动React应用程序：
 
    ```shell
    $ cd aem-guides-wknd-graphql/react-app
@@ -138,99 +136,52 @@ WKND引用站点包含公开 [GraphQL端点](https://experienceleague.adobe.com/
    $ npm start
    ```
 
-1. 新的浏览器窗口应会自动在 [http://localhost:3000](http://localhost:3000).
+1. 新的浏览器窗口会自动在 [http://localhost:3000](http://localhost:3000).
 
-   ![React启动应用程序](assets/setup/react-starter-app.png)
+   ![React启动应用程序](assets/quick-setup/aem-sdk/react-app__home-view.png)
 
-   应显示AEM中当前Adventure内容的列表。
+   将显示AEM中的探险内容列表。
 
 1. 单击其中一张冒险图像可查看冒险详细信息。 系统会向AEM发出请求，以返回冒险的详细信息。
 
-   ![“冒险详细信息”视图](assets/setup/adventure-details-view.png)
+   ![“冒险详细信息”视图](assets/quick-setup/aem-sdk/react-app__adventure-view.png)
 
-1. 使用浏览器的开发人员工具检查 **网络** 请求。 查看 **XHR** 请求和观察多个POST请求 `/content/graphql/global/endpoint.json`，为AEM配置的GraphQL端点。
+1. 使用浏览器的开发人员工具检查 **网络** 请求。 查看 **XHR** 请求和观察多个GET请求 `/graphql/execute.json/...`. 此路径前缀将调用AEM持久化查询端点，从而选择要使用前缀后面的名称和编码参数执行的持久化查询。
 
-   ![GraphQL端点XHR请求](assets/setup/endpoint-gql.png)
-
-1. 您还可以通过检查网络请求来查看参数和JSON响应。 安装诸如之类的浏览器扩展可能会有所帮助 [GraphQL网络检查器](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln) ，以便更好地了解查询和响应。
+   ![GraphQL端点XHR请求](assets/quick-setup/aem-sdk/react-app__graphql-request.png)
 
 ## 4.在AEM中编辑内容
 
-现在，React应用程序正在运行，请更新AEM中的内容，并查看应用程序中反映的更改。
+运行React应用程序时，更新AEM中的内容，并查看该更改是否反映在应用程序中。
 
 1. 导航到AEM [http://localhost:4502](http://localhost:4502).
-1. 导航到 **资产** > **文件** > **WKND站点** > **英语** > **冒险** > **[巴厘岛冲浪营](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)**.
+1. 导航到 **资产** > **文件** > **WKND共享** > **英语** > **冒险** > **[巴厘岛冲浪营](http://localhost:4502/assets.html/content/dam/wknd-shared/en/adventures/bali-surf-camp)**.
 
    ![巴厘岛冲浪营文件夹](assets/setup/bali-surf-camp-folder.png)
 
 1. 单击 **巴厘岛冲浪营** 用于打开内容片段编辑器的内容片段。
-1. 修改 **标题** 和 **描述** 冒险之旅
+1. 修改 **标题** 和 **描述** 冒险的。
 
    ![修改内容片段](assets/setup/modify-content-fragment-bali.png)
 
 1. 单击 **保存** 以保存更改。
-1. 导航回位于的React应用程序 [http://localhost:3000](http://localhost:3000) 并刷新以查看更改：
+1. 在以下位置刷新React应用程序： [http://localhost:3000](http://localhost:3000) 要查看更改：
 
    ![更新了巴厘岛冲浪夏令营冒险](assets/setup/overnight-bali-surf-camp-changes.png)
 
-## 5.安装GraphiQL工具 {#install-graphiql}
+## 5.浏览GraphiQL {#graphiql}
 
-[GraphiQL](https://github.com/graphql/graphiql) 是开发工具，仅在开发或本地实例等较低级别环境中需要。 GraphiQL IDE允许您快速测试和优化返回的查询和数据。 GraphiQL 还提供了对文档的轻松访问，使其可以轻松地学习和了解有哪些方法可用。
-
-1. 导航到&#x200B;**[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service**。
-1. 搜索“GraphiQL”（请确保包括了 **GraphiQL** 中的 **i**）。
-1. 下载最新的 **GraphiQL Content Package v.x.x.x**。
-
-   ![下载GraphiQL包](../multi-step/assets/explore-graphql-api/software-distribution.png)
-
-   zip文件是可直接安装的AEM包。
-
-1. 从 **AEM 开始**&#x200B;菜单，导航到&#x200B;**工具** > **部署** > **软件包**。
-1. 单击&#x200B;**上传软件包**，然后选择在之前步骤中下载的软件包。单击&#x200B;**安装**&#x200B;可安装软件包。
-
-   ![安装GraphiQL包](../multi-step/assets/explore-graphql-api/install-graphiql-package.png)
-1. 导航到GraphiQL IDE(位于 [http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html) 并开始浏览GraphQL API。
+1. 打开 [GraphiQL](http://localhost:4502/aem/graphiql.html) 导航至 **工具** > **常规** > **GraphQL查询编辑器**
+1. 选择左侧的现有持久化查询，然后运行它们以查看结果。
 
    >[!NOTE]
    >
    > GraphiQL工具和GraphQL API是 [稍后在教程中详细探讨了](../multi-step/explore-graphql-api.md).
 
-## 恭喜！ {#congratulations}
+## 恭喜！{#congratulations}
 
 恭喜，您现在有一个外部应用程序使用GraphQL的AEM内容。 您可以随时在React应用程序中检查代码，并继续尝试修改现有的内容片段。
 
 ### 后续步骤
 
 * [启动AEM Headless教程](../multi-step/overview.md)
-
-## （附加）CORS配置 {#cors-config}
-
-AEM在默认情况下是安全的，它会阻止跨域请求，从而阻止未经授权的应用程序连接到并显示其内容。
-
-为了允许本教程的React应用程序与AEM GraphQL API端点进行交互，已在WKND站点引用项目中定义了跨源资源共享配置。
-
-![跨源资源共享配置](assets/setup/cross-origin-resource-sharing-configuration.png)
-
-要查看已部署的配置，请执行以下操作：
-
-1. 导航到AEM SDK的Web控制台(位于 [http://localhost:4502/system/console](http://localhost:4502/system/console).
-
-   >[!NOTE]
-   >
-   > Web控制台仅在SDK上可用。 在AEMas a Cloud Service环境中，可以通过 [开发人员控制台](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html).
-
-1. 在顶部菜单中，单击 **OSGI** > **配置** 把所有 [OSGi配置](http://localhost:4502/system/console/configMgr).
-1. 向下滚动页面 **AdobeGranite跨源资源共享**.
-1. 单击的配置 `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql`.
-1. 以下字段已更新：
-   * 允许的源(Regex): `http://localhost:.*`
-      * 允许所有本地主机连接。
-   * 允许的路径: `/content/graphql/global/endpoint.json`
-      * 这是当前配置的唯一GraphQL端点。 作为最佳做法，COR的配置应尽可能严格。
-   * 允许的方法： `GET`, `HEAD`, `POST`
-      * 仅 `POST` GraphQL是必需的，但是，在以无头方式与AEM交互时，其他方法可能很有用。
-   * 支持的标头： **授权** 已添加，以在创作环境中传递基本身份验证。
-   * 支持凭据： `Yes`
-      * 这是必需的，因为我们的React应用程序将与AEM创作服务上受保护的GraphQL端点通信。
-
-此配置和GraphQL端点是AEM WKND项目的一部分。 您可以查看 [此处的OSGi配置](https://github.com/adobe/aem-guides-wknd/tree/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig).
