@@ -1,23 +1,23 @@
 ---
 title: 了解AEM中的身份验证支持
-description: '对AEM支持的身份验证（有时还是授权）机制的整合视图。 '
+description: 对AEM支持的身份验证（有时还是授权）机制的整合视图。
 version: 6.3, 6.4, 6.5
-feature: 用户和群组
+feature: User and Groups
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
-topic: 架构
+topic: Architecture
 role: Architect
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
+source-git-commit: 84d7230071544e7cdc63ecc0faa32c03ab337cd6
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 3%
+source-wordcount: '130'
+ht-degree: 8%
 
 ---
-
 
 # 了解AEM 6.x中的身份验证支持
 
@@ -52,7 +52,7 @@ ht-degree: 3%
             <td>✔</td>
         </tr>
         <tr>
-            <td>基于令牌（带有<a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装的令牌</a>）</td>
+            <td>基于令牌(带 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装令牌</a>)</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -81,7 +81,7 @@ ht-degree: 3%
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-oauth-server-functionality-in-aem.html" target="_blank">OAuth 1.0a和2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/assets/oauth-server-functionality-in-aem-7-23-14.pdf" target="_blank">OAuth 1.0a和2.0</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
@@ -95,4 +95,4 @@ ht-degree: 3%
     </tbody>
 </table>
 
-⁕*通过社区项目提供，但不直接受Adobe支持。*
+⁕ *通过社区项目提供，但不直接受Adobe支持。*
