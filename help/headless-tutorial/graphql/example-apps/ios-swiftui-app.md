@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: 8b2c116ceb6ab8c3a009dcec6629c2e97d815b7b
+source-git-commit: 5d32899a58e591b535dab991f89a8f7467b7b435
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 ![iOS带AEM Headless的SwiftUI应用程序](./assets/ios-swiftui-app/ios-app.png)
 
-查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app)
+查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)
 
 ## 前提条件 {#prerequisites}
 
@@ -50,7 +50,7 @@ iOS应用程序旨在连接到 __AEM发布__ 环境中，但是，如果在iOS�
    git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Launch [Xcode](https://developer.apple.com/xcode/) 并打开文件夹 `ios-swiftui-app`
+1. Launch [Xcode](https://developer.apple.com/xcode/) 并打开文件夹 `ios-app`
 1. 修改文件 `Config.xcconfig` 文件和更新 `AEM_SCHEME` 和 `AEM_HOST` 以匹配目标AEM发布服务。
 
    ```plain
@@ -86,7 +86,7 @@ iOS应用程序旨在连接到 __AEM发布__ 环境中，但是，如果在iOS�
 
 ## 代码
 
-以下是如何构建iOS应用程序的摘要，如何连接到AEM Headless以使用GraphQL持久查询检索内容，以及如何显示该数据。 完整代码可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app).
+以下是如何构建iOS应用程序的摘要，如何连接到AEM Headless以使用GraphQL持久查询检索内容，以及如何显示该数据。 完整代码可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
 
 ### 持久化查询
 
