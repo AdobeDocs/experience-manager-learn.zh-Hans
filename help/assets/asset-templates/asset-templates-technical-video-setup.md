@@ -5,13 +5,13 @@ version: 6.3, 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 5b764d86-8ced-46ed-838e-4bd2e75fd64c
+source-git-commit: 6dd7164f5ec045b4cffd7732fd83ad9a91fdd511
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
-
 
 # 使用AEM Assets和InDesign Server设置资产模板{#set-up-asset-templates-with-aem-assets-and-indesign-server}
 
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->上传INDD模板后，AEM **必须**&#x200B;连接到正在运行的InDesign服务器。 INDD文件的初始处理部分需要InDesign服务器。
+>AEM **必须** 上载INDD模板时，连接到正在运行的InDesign服务器。 INDD文件的初始处理部分需要InDesign服务器。
 
 ## 下载InDesign Server试用版 {#download-indesign-server-trial}
 
-下载[InDesign Server试用版下载网站](https://www.adobe.com/devnet/premiere/sdk/cs5/indesign-server-trial-downloads.html)
+下载 [InDesign Server试用版下载网站](https://www.adobeprerelease.com/)
 
 ## 开始InDesign Server {#starting-indesign-server}
 
