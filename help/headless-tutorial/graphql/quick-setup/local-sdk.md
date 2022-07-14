@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
 source-wordcount: '1768'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -74,11 +74,11 @@ WKND引用站点包含公开 [GraphQL端点](https://experienceleague.adobe.com/
    >
    > 确保下载与AEM as a Cloud Service兼容的标准版本，以及 **not** the `classic` 版本。
 
-1. 从 **AEM开始** 菜单导航到 **工具** > **部署** > **包**.
+1. 从 **AEM 开始**&#x200B;菜单，导航到&#x200B;**工具** > **部署** > **软件包**。
 
    ![导航到包](assets/setup/navigate-to-packages.png)
 
-1. 单击 **上传包** 并选择在上一步骤中下载的WKND包。 单击 **安装** 来安装包。
+1. 单击 **上传包** 并选择在上一步骤中下载的WKND包。 单击&#x200B;**安装**&#x200B;可安装软件包。
 
 1. 从 **AEM开始** 菜单导航到 **资产** > **文件**.
 1. 单击文件夹以导航到 **WKND站点** > **英语** > **冒险**.
@@ -128,7 +128,7 @@ WKND引用站点包含公开 [GraphQL端点](https://experienceleague.adobe.com/
 
    >[!NOTE]
    >
-   > 在生产方案中，应用程序将连接到AEM **发布** 环境。 有关详细信息，请参阅 [生产部署](../multi-step/production-deployment.md) 章节。
+   > 在生产方案中，应用程序将连接到AEM **发布** 环境。 有关详细信息，请参阅 _生产部署_ 中。
 
 1. 导航到 `aem-guides-wknd-graphql/react-app` 文件夹。 安装并启动应用程序：
 
@@ -175,18 +175,18 @@ WKND引用站点包含公开 [GraphQL端点](https://experienceleague.adobe.com/
 
 ## 5.安装GraphiQL工具 {#install-graphiql}
 
-[GraphiQL](https://github.com/graphql/graphiql) 是开发工具，仅在开发或本地实例等较低级别环境中需要。 GraphiQL IDE允许您快速测试和优化返回的查询和数据。 GraphiQL还提供对文档的轻松访问，从而便于学习和了解可用的方法。
+[GraphiQL](https://github.com/graphql/graphiql) 是开发工具，仅在开发或本地实例等较低级别环境中需要。 GraphiQL IDE允许您快速测试和优化返回的查询和数据。 GraphiQL 还提供了对文档的轻松访问，使其可以轻松地学习和了解有哪些方法可用。
 
-1. 导航到 **[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEMas a Cloud Service**.
-1. 搜索“GraphiQL”(请务必包含 **i** in **GraphiQL**.
-1. 下载最新版本 **GraphiQL内容包v.x.x.x**
+1. 导航到&#x200B;**[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service**。
+1. 搜索“GraphiQL”（请确保包括了 **GraphiQL** 中的 **i**）。
+1. 下载最新的 **GraphiQL Content Package v.x.x.x**。
 
    ![下载GraphiQL包](../multi-step/assets/explore-graphql-api/software-distribution.png)
 
    zip文件是可直接安装的AEM包。
 
-1. 从 **AEM开始** 菜单导航到 **工具** > **部署** > **包**.
-1. 单击 **上传包** 并选择在上一步骤中下载的包。 单击 **安装** 来安装包。
+1. 从 **AEM 开始**&#x200B;菜单，导航到&#x200B;**工具** > **部署** > **软件包**。
+1. 单击&#x200B;**上传软件包**，然后选择在之前步骤中下载的软件包。单击&#x200B;**安装**&#x200B;可安装软件包。
 
    ![安装GraphiQL包](../multi-step/assets/explore-graphql-api/install-graphiql-package.png)
 1. 导航到GraphiQL IDE(位于 [http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html) 并开始浏览GraphQL API。
