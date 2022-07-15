@@ -9,10 +9,10 @@ level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: 94a57490edb00da072446ee8ca07c12c413ce1ac
+source-git-commit: b4c04a9ef7d8cfdaa5675fdfe259ab9d813fb7e0
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 0%
+source-wordcount: '1084'
+ht-degree: 1%
 
 ---
 
@@ -46,7 +46,8 @@ _步骤的截屏_
 1. 为WKND站点项目创建Git存储库
    1. 选择 __存储库__ 在顶部导航中
    1. 选择 __添加存储库__ 在顶部操作栏中
-   1. 将新的Git存储库命名为： `aem-headless-quick-setup`
+   1. 将新的Git存储库命名为： `aem-headless-quick-setup-wknd`
+      + Git存储库名称必须是每个Adobe组织唯一的，
    1. 选择 __保存__，然后等待Git存储库初始化
 
 ## 2.将示例WKND站点项目推送到Cloud Manager Git存储库
@@ -71,13 +72,13 @@ _步骤的截屏_
 
       ```shell
       $ cd aem-guides-wknd
-      $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup/
+      $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup-wknd/
       ```
 
 1. 将示例项目的源代码从本地Git存储库推送到Cloud Manager Git存储库
 
    ```shell
-   $ git push adobe master:main
+   $ git push adobe main:main
    ```
 
    提示输入凭据时，请提供 __用户名__ 和 __密码__ 从Cloud Manager的 __存储库信息__ 模式窗口。
@@ -103,7 +104,7 @@ _步骤的截屏_
    1. 在 __源代码__ 选项卡
       1. 选择 __完整堆栈代码__ 选项
       1. 选择 __AEMas a Cloud Service开发环境__ 从 __符合条件的部署环境__ 选择框
-      1. 选择 `aem-headless-quick-setup` 在 __存储库__ 选择框
+      1. 选择 `aem-headless-quick-setup-wknd` 在 __存储库__ 选择框
       1. 选择 `main` 从 __Git分支__ 选择框
       1. 选择 __保存__
 1. 运行 __开发部署管道__
@@ -113,7 +114,7 @@ _步骤的截屏_
    1. 选择 __运行__，并在模式窗口中确认
    1. 选择 __...__ 在正在运行的管道的右侧
    1. 选择 __查看详细信息__
-1. 从管道执行的详细信息中，监控进度，直到成功完成。 管道执行需要45到60分钟。
+1. 从管道执行的详细信息中，监控进度，直到成功完成。 管道执行需要30到40分钟。
 
 ## 4.下载并运行WKND React应用程序
 
@@ -126,15 +127,15 @@ _步骤的截屏_
 
    ```shell
    $ cd ~/Code
-   $ git clone --branch tutorial/react git@github.com:adobe/aem-guides-wknd-graphql.git
+   $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 打开文件夹 `~/Code/aem-guides-wknd-graphql` 在IDE中。
-1. 在IDE中，打开文件 `react-app/.env.development`.
+1. 打开文件夹 `~/Code/aem-guides-wknd-graphql/react-app` 在IDE中。
+1. 在IDE中，打开文件 `.env.development`.
 1. 指向AEMas a Cloud Service __发布__ 服务的主机URI(来自  `REACT_APP_HOST_URI` 属性。
 
    ```plain
-   REACT_APP_HOST_URI=https://publish-pXXXX-eYYYY.adobeaemcloud.com/
+   REACT_APP_HOST_URI=https://publish-pXXXX-eYYYY.adobeaemcloud.com
    ...
    ```
 
@@ -164,19 +165,19 @@ _步骤的截屏_
 >[!VIDEO](https://video.tv.adobe.com/v/339077/?quality=12&learn=on)
 
 1. 登录到AEMas a Cloud Service创作服务
-1. 导航到 __资产>文件> WKND >英语>冒险__
+1. 导航到 __资产>文件> WKND共享>英语>冒险__
 1. 打开 __南犹他州自行车队__ 文件夹
 1. 选择 __南犹他州自行车队__ 内容片段，然后选择 __编辑__ 从顶部操作栏
 1. 更新内容片段的一些字段，例如：
    + 标题: `Cycling Utah's National Parks`
    + 行程时长： `6 Days`
    + 困难： `Intermediate`
-   + 价格: `$3500`
-   + 主映像： `/content/dam/wknd/en/activities/cycling/mountain-biking.jpg`
+   + 价格: `3500`
+   + 主映像： `/content/dam/wknd-shared/en/activities/cycling/mountain-biking.jpg`
 1. 选择 __保存__ 在顶部操作栏中
 1. 选择 __快速发布__ 从顶部操作栏的 __...__
 1. 刷新运行在上的React应用程序 [http://localhost:3000](http://localhost:3000).
-1. 在React应用程序中，选择当前已更新，并验证对内容片段所做的内容更改。
+1. 在React应用程序中，选择现在更新的循环冒险，然后验证对内容片段所做的内容更改。
 
 1. 在AEM创作服务中，使用相同的方法：
    1. 取消发布现有的Adventure内容片段，并验证是否已从React应用程序体验中将其删除
@@ -188,7 +189,7 @@ _步骤的截屏_
 
 ## 恭喜！
 
-恭喜！ 您已成功使用AEM Headless来为React应用程序提供支持！
+恭喜！您已成功使用AEM Headless来为React应用程序提供支持！
 
 要详细了解React应用程序如何使用AEMas a Cloud Service中的内容，请参阅 [AEM Headless教程](../multi-step/overview.md). 本教程探讨了创建时AEM中的内容片段，以及此React应用程序如何将其内容用作JSON。
 
