@@ -5,8 +5,8 @@ breadcrumb-title: AEM Sites 教程
 feature-set: Experience Manager Sites, Experience Manager
 source-git-commit: 6f930acd0b51c1f398be7a84efa99944dd3ce704
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 22%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 22%
    + [页面操作](page-authoring/page-operations-feature-video-use.md)
    + [布局模式](page-authoring/responsive-layout-feature-video-understand.md)
    + [发布](page-authoring/publication-management-feature-video-use.md)
-   + [可编辑的模板](page-authoring/template-editor-feature-video-use.md)
+   + [可编辑模板](page-authoring/template-editor-feature-video-use.md)
    + [样式系统](page-authoring/style-system-feature-video-use.md)
    + [时间扭曲](page-authoring/timewarp-feature-video-use.md)
    + [启动项](page-authoring/launches.md)
@@ -48,7 +48,7 @@ ht-degree: 22%
 + 开发 {#developing}
    + [AEM 项目原型](developing/aem-project-archetype.md)
    + [开始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
-   + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+   + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)
    + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
    + [AEM SPA Editor和Angular快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
@@ -93,14 +93,14 @@ ht-degree: 22%
 + 集成 {#integrations}
    + Experience Platform Launch {#experience-platform-launch}
       + [概述](integrations/experience-platform-launch/overview.md)
-      + [创建Launch资产](integrations/experience-platform-launch/create-launch-property.md)
+      + [创建 Launch 属性](integrations/experience-platform-launch/create-launch-property.md)
       + [使用AEM连接与LaunchAdobe I/O](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
       + [创建启动项Cloud Service](integrations/experience-platform-launch/create-launch-cloud-service.md)
       + [调试Launch实施](integrations/experience-platform-launch/debug-launch-implementation.md)
    + Adobe Client Data Layer {#adobe-client-data-layer}
       + [使用Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自定义Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-customize.md)
-   + Analytics {#analytics}
+   + 分析 {#analytics}
       + [使用Adobe Analytics收集页面数据](integrations/analytics/collect-data-analytics.md)
       + [使用Adobe Analytics跟踪已单击的组件](integrations/analytics/track-clicked-component.md)
       + [使用Analysis Workspace分析数据](integrations/analytics/create-analytics-workspace.md)

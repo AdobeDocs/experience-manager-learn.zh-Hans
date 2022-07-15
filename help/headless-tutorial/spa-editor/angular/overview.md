@@ -1,6 +1,6 @@
 ---
 title: AEM SPA Editor 和 Angular 快速入门
-description: 创建您的首个Angular单页应用程序(SPA)，该应用程序可在Adobe Experience Manager和AEM中使用WKND SPA进行编辑。 了解如何在AEM SPA编辑器中使用AngularJS框架创建SPA。 本多部分教程将演示如何实施Angular应用程序，以打造虚构的生活方式品牌WKND。 本教程涵盖SPA的端到端创建以及与AEM的集成。
+description: 创建您的首个 Angular 单页面应用程序 (SPA)，该应用程序可在带 WKND SPA 的 Adobe Experience Manager (AEM) 中编辑。了解如何结合使用 Angular JS 框架和 AEM 的 SPA 编辑器来创建 SPA。此多部分教程演练了为虚构的生活方式品牌 WKND 实施 Angular 应用程序的过程。此教程涵盖了 SPA 的端到端创建以及与 AEM 的集成。
 sub-product: sites
 topics: development
 version: Cloud Service
@@ -16,14 +16,14 @@ level: Beginner
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # 在AEM中创建您的第一个AngularSPA {#introduction}
 
-欢迎使用多部分教程，该教程专为不熟悉Adobe Experience Manager(AEM)中&#x200B;**SPA Editor**&#x200B;功能的开发人员设计。 本教程将指导您实施一个Angular应用程序，以打造一个虚构的生活方式品牌WKND。 将开发并设计该Angular应用程序以与AEM SPA Editor一起部署，后者将Angular组件映射到AEM组件。 部署到AEM的已完成SPA可以使用AEM的传统在线编辑工具进行动态创作。
+欢迎参加为初次使用 **SPA编辑器** 功能(Adobe Experience Manager(AEM))。 本教程将指导您实施一个Angular应用程序，以打造一个虚构的生活方式品牌WKND。 将开发并设计该Angular应用程序以与AEM SPA Editor一起部署，后者将Angular组件映射到AEM组件。 部署到AEM的已完成SPA可以使用AEM的传统在线编辑工具进行动态创作。
 
 ![已实施最终SPA](assets/wknd-spa-implementation.png)
 
@@ -31,9 +31,9 @@ ht-degree: 3%
 
 ## 关于
 
-此多部分教程的目标是教开发人员如何实施Angular应用程序以使用AEM的SPA编辑器功能。 在现实场景中，开发活动按角色划分，通常涉及&#x200B;**前端开发人员**&#x200B;和&#x200B;**后端开发人员**。 我们认为，对于任何将参与AEM SPA Editor项目的开发人员来说，完成本教程将会有所帮助。
+此多部分教程的目标是教开发人员如何实施Angular应用程序以使用AEM的SPA编辑器功能。 在现实世界中，发展活动按角色划分，通常涉及 **前端开发人员** 和 **后端开发人员**. 我们认为，对于任何将参与AEM SPA Editor项目的开发人员来说，完成本教程将会有所帮助。
 
-本教程旨在将&#x200B;**AEM用作Cloud Service**，并且向后兼容&#x200B;**AEM 6.5.4+**&#x200B;和&#x200B;**AEM 6.4.8+**。 SPA的实施方式如下：
+本教程旨在与 **AEMas a Cloud Service** 并且向后兼容 **AEM 6.5.4+** 和 **AEM 6.4.8+**. SPA的实施方式如下：
 
 * [Maven AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [AEM SPA Editor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
@@ -44,42 +44,42 @@ ht-degree: 3%
 
 ## 最新代码
 
-所有教程代码都可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa)上找到。
+所有教程代码都可以在 [GitHub](https://github.com/adobe/aem-guides-wknd-spa).
 
-[最新代码库](https://github.com/adobe/aem-guides-wknd-spa/releases)可作为可下载的AEM包提供。
+的 [最新代码库](https://github.com/adobe/aem-guides-wknd-spa/releases) 可作为可下载的AEM包使用。
 
 ## 前提条件
 
 在启动本教程之前，您需要满足以下条件：
 
 * HTML、CSS和JavaScript的基本知识
-* 对[Angular](https://angular.io/)的基本熟悉
-* [AEM as a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、 [AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) 或 [AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
+* 对 [Angular](https://angular.io/)
+* [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk), [AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) 或 [AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
-* [Apache Maven](https://maven.apache.org/) （3.3.9或更高版本）
-* [Node.](https://nodejs.org/en/) jsand  [npm](https://www.npmjs.com/)
+* [阿帕奇·马文](https://maven.apache.org/) （3.3.9或更高版本）
+* [Node.js](https://nodejs.org/en/) 和 [npm](https://www.npmjs.com/)
 
-*虽然不需要，但对开发传统的AEM Sites组件有基 [本的了解](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。*
+*虽然不需要，但对 [开发传统AEM Sites组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans).*
 
 ## 本地开发环境 {#local-dev-environment}
 
-要完成本教程，需要本地开发环境。 屏幕截图和视频是使用AEM作为Cloud ServiceSDK捕获的，该SDK在Mac OS环境中运行，并且IDE为[Visual Studio代码](https://code.visualstudio.com/)。 除非另有说明，否则命令和代码应独立于本地操作系统。
+要完成本教程，需要本地开发环境。 屏幕截图和视频是使用在Mac OS环境中运行的AEMas a Cloud ServiceSDK捕获的，该SDK [Visual Studio代码](https://code.visualstudio.com/) 作为IDE。 除非另有说明，否则命令和代码应独立于本地操作系统。
 
 >[!NOTE]
 >
-> **初次使用AEM as aCloud Service?** 请参阅以 [下指南，以使用AEM as a Cloud ServiceSDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **是AEMas a Cloud Service的新用户？** 查看 [以下使用AEMas a Cloud Service SDK设置本地开发环境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 >
-> **AEM 6.5的新增功能？** 请参阅以 [下指南以设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+> **AEM 6.5的新增功能？** 查看 [设置本地开发环境的以下指南](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
 ## 后续步骤 {#next-steps}
 
-你在等什么?!启动本教程的方法是导航到[SPA Editor项目](create-project.md)章节，并了解如何使用AEM项目原型生成启用SPA Editor的项目。
+你在等什么?!通过导航到 [SPA编辑器项目](create-project.md) 章节和了解如何使用SPA项目原型生成启用了AEM的项目。
 
 ## 向后兼容性 {#compatibility}
 
-本教程的项目代码是为AEM as a Cloud Service构建的。 为了使项目代码向后兼容&#x200B;**6.5.4+**&#x200B;和&#x200B;**6.4.8+**，做了若干修改。
+本教程的项目代码是为AEM as a Cloud Service构建的。 为了使项目代码向后兼容 **6.5.4+** 和 **6.4.8+** 已进行多项修改。
 
-[UberJar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4**&#x200B;已作为依赖项包含在内：
+的 [UberJar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4** 已作为依赖项包含在内：
 
 ```xml
 <!-- Adobe AEM 6.x Dependencies -->
@@ -92,7 +92,7 @@ ht-degree: 3%
 </dependency>
 ```
 
-添加了名为`classic`的其他Maven配置文件，用于修改到目标AEM 6.x环境的内部版本：
+另一个Maven个人资料，名为 `classic` 已添加以修改到target AEM 6.x环境的内部版本：
 
 ```xml
   <!-- AEM 6.x Profile to include Core Components-->
@@ -106,10 +106,10 @@ ht-degree: 3%
     </profile>
 ```
 
-默认情况下，`classic`配置文件处于禁用状态。 如果遵循AEM 6.x教程，请在指示您执行Maven内部版本时添加`classic`配置文件：
+的 `classic` 配置文件默认处于禁用状态。 如果您遵循AEM 6.x教程，请在 `classic` 配置文件，以执行Maven内部版本：
 
 ```shell
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
 ```
 
-为AEM实施生成新项目时，始终使用最新版本的[AEM项目原型](https://github.com/adobe/aem-project-archetype)并更新`aemVersion`以定位您的目标AEM版本。
+为AEM实施生成新项目时，始终使用 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 并更新 `aemVersion` 以定位您的目标AEM版本。
