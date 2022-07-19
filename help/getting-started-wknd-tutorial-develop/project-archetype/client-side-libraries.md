@@ -1,6 +1,6 @@
 ---
 title: 客户端库和前端工作流
-description: 了解如何使用客户端库或客户端库来部署和管理Adobe Experience Manager(AEM)Sites实施的CSS和Javascript。 本教程还将介绍如何将Web包项目ui.frontend模块集成到端到端构建过程中。
+description: 了解如何使用客户端库或客户端库来为Adobe Experience Manager(AEM)Sites实施部署和管理CSS和Javascript。 了解如何将ui.frontend模块（一个Webpack项目）集成到端到端构建过程中。
 sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
@@ -11,10 +11,10 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: 1a73d7ee1f71a5bd78114398f04e98a894847957
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '2882'
-ht-degree: 1%
+source-wordcount: '2878'
+ht-degree: 2%
 
 ---
 
@@ -288,7 +288,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
 1. 单击 **页面信息** 图标，在菜单中选择 **查看已发布项** 在AEM编辑器之外打开文章页面。
 
-   ![查看已发布的项目](assets/client-side-libraries/view-as-published-article-page.png)
+   ![以发布的形式查看](assets/client-side-libraries/view-as-published-article-page.png)
 
 1. 查看的页面源 [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled) 并且您应该能够在 `<head>`:
 

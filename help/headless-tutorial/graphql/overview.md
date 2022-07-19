@@ -1,22 +1,21 @@
 ---
 title: AEM无头入门 — GraphQL
-description: AEM GraphQL API和功能概述。
-feature: 内容片段、GraphQL API、API
-topic: 无外设、内容管理
+description: 了解Experience ManagerGraphQL API及其功能。
+feature: Content Fragments, GraphQL API, APIs
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '246'
 ht-degree: 1%
 
 ---
 
-
 # AEM无头入门 — GraphQL
 
-AEM GraphQL API（用于内容片段）
-支持无头CMS方案，其中外部客户端应用程序使用AEM中管理的内容渲染体验。
+AEM GraphQL API（内容片段）支持无头CMS方案，其中外部客户端应用程序使用AEM中管理的内容渲染体验。
 
 现代内容交付API是基于Javascript的前端应用程序效率和性能的关键。 使用REST API会带来以下挑战：
 

@@ -1,6 +1,6 @@
 ---
 title: 创建网站 | AEM快速网站创建
-description: 在“快速创建网站”中，可使用AEM Adobe Experience Manager中的“网站创建向导”来生成新网站。 由Adobe提供的标准网站模板用作新网站的起点。
+description: 了解如何使用站点创建向导生成新网站。 由Adobe提供的标准网站模板是新网站的起点。
 sub-product: sites
 version: Cloud Service
 type: Tutorial
@@ -11,10 +11,10 @@ level: Beginner
 kt: 7496
 thumbnail: KT-7496.jpg
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
-source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 0%
+source-wordcount: '914'
+ht-degree: 1%
 
 ---
 

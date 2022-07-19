@@ -1,6 +1,6 @@
 ---
 title: 单元测试
-description: 本教程涵盖单元测试的实施，该测试将验证在自定义组件教程中创建的署名组件Sling模型的行为。
+description: 实施单元测试，以验证在自定义组件教程中创建的署名组件Sling模型的行为。
 sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
@@ -12,9 +12,9 @@ kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '3025'
+source-wordcount: '3020'
 ht-degree: 0%
 
 ---

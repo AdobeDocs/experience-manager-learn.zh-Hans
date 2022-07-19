@@ -1,6 +1,6 @@
 ---
 title: 设置本地AEM开发环境
-description: 为AEM的Adobe Experience Manager设置本地开发指南。 涵盖本地安装、Apache Maven、集成开发环境以及调试/疑难解答的重要主题。 讨论了使用Eclipse IDE、CRXDE-Lite、Visual Studio代码和IntelliJ进行开发。
+description: '了解如何设置本地开发环境以进行Experience Manager。 熟悉本地安装、Apache Maven、集成开发环境，以及调试和疑难解答。 使用Eclipse IDE、CRXDE-Lite、Visual Studio代码和IntelliJ。 '
 version: 6.4, 6.5
 feature: Developer Tools
 topics: development
@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '2582'
+source-wordcount: '2579'
 ht-degree: 1%
 
 ---
@@ -170,7 +170,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 * [**下载**](https://code.visualstudio.com/Download) **Visual Studio代码**
 * **[存储库](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)**  — 适用于JCR内容的类似FTP的工具
 * **[aemfed](https://aemfed.io/)**  — 加快AEM前端工作流
-* **[AEM同步](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Visual Studio代码的社区支持*扩展
+* **[AEM同步](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)**  — 社区支持&#42; Visual Studio代码的扩展
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 
