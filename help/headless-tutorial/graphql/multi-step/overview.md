@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 879018d44cc63421d1c7185cce1c30fedbf526c9
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 2%
+source-wordcount: '440'
+ht-degree: 1%
 
 ---
 
@@ -52,8 +52,6 @@ ht-degree: 2%
    * [访问AEMas a Cloud Service和Cloud Manager](/help/cloud-service/accessing/overview.md)
       * **AEM管理员** 访问AEMas a Cloud Service
       * **Cloud Manager — 开发人员** 对Cloud Manager的访问权限
-* [本地AEMas a Cloud Service快速启动SDK](/help/cloud-service/local-development-environment/aem-runtime.md).
-* [AEM 6.5.13+](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 
 ### 安装示例内容 {#install-sample-content}
 
@@ -65,6 +63,7 @@ ht-degree: 2%
 1. 从AEM开始屏幕，导航到 **工具** > **部署** > **包**:
 
    ![导航包管理器](assets/overview/navigate-package-manager.png)
+
 1. 点按 **上传包** 然后选择 `aem-guides-wknd-shared.ui.content-x.x.x.zip` 文件。 点按 **确定** 上传。
 1. 包上传完成后，点按 **安装** 来安装内容。
 
