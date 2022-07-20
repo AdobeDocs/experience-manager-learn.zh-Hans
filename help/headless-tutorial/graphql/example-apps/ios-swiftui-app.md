@@ -3,14 +3,14 @@ title: iOS应用程序 — AEM Headless示例
 description: 示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此iOS应用程序演示了如何使用AEM GraphQL API来使用持久查询来查询内容。
 version: Cloud Service
 mini-toc-levels: 2
-kt: 9166
-thumbnail: KT-9166.jpg
+kt: 10587
+thumbnail: KT-10587.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: 4b8f7d9c6def8c121f3c975218b7214d271fa77f
+source-git-commit: cd7cb89f407f5e0c465544593563534472daf928
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 2%

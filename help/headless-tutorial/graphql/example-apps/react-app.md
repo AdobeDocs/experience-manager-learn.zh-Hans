@@ -3,14 +3,14 @@ title: React应用程序 — AEM Headless示例
 description: 示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此React应用程序演示了如何使用AEM GraphQL API通过持久查询来查询内容。
 version: Cloud Service
 mini-toc-levels: 1
-kt: 9166
-thumbnail: KT-9166.jpg
+kt: 10715
+thumbnail: KT-10715.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: 4b8f7d9c6def8c121f3c975218b7214d271fa77f
+source-git-commit: 3ef802d4e87b7dc8132dae25c9dbb801dfdce0fe
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 4%
