@@ -9,7 +9,7 @@ level: Intermediate
 kt: 10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: 595d990b7d8ed3c801a085892fef38d780082a15
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 4%
@@ -25,10 +25,6 @@ AEM Headless SDK可用于各种平台：
 + [适用于客户端浏览器的AEM Headless SDK(JavaScript)](https://github.com/adobe/aem-headless-client-js)
 + [AEM Headless SDK for server-side/Node.js(JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
 + [AEM Headless SDK for Java™](https://github.com/adobe/aem-headless-client-java)
-
-## GraphQL查询
-
-AEM支持客户端定义的GraphQL查询，但最佳做法是使用AEM [持久GraphQL查询](#persisted-graphql-queries).
 
 ## 持久 GraphQL 查询
 
@@ -202,3 +198,8 @@ let { data, errors } = useAdventureBySlug('bali-surf-camp');
 +++
 
 <p> </p>
+
+## GraphQL查询
+
+AEM支持客户端定义的GraphQL查询，但最佳做法是使用AEM [持久GraphQL查询](#persisted-graphql-queries).
+
