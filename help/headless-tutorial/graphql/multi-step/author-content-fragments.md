@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '819'
 ht-degree: 2%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 2%
 
    ![允许的内容片段模型](assets/author-content-fragments/allowed-content-fragment-models.png)
 
-   这些策略将自动由任何子文件夹继承，并可以覆盖。 请注意，您还可以允许按标记显示模型，或启用其他项目配置（如WKND共享）中的模型。 此机制为管理内容层次结构提供了一种有效的方法。
+   这些策略将自动由任何子文件夹继承，并可以覆盖。 请注意，您还可以允许按标记显示模型或从其他项目配置中启用模型。 此机制为管理内容层次结构提供了一种有效的方法。
 
 1. 点按 **保存并关闭** 以保存对文件夹属性所做的更改。
 
@@ -121,17 +121,9 @@ ht-degree: 2%
 
    ![打开内容片段](assets/author-content-fragments/open-fragment-for-editing.png)
 
-1. 内容片段编辑器包含基于内容片段模型的表单。 填写各个字段，以向 **无名氏** 片段。 对于配置文件图片，请随时选择WKND共享中的某个图像，或将您自己的图像上传到AEM Assets。
+1. 内容片段编辑器包含基于内容片段模型的表单。 填写各个字段，以向 **无名氏** 片段。 对于配置文件图片，请将您自己的图像上传到AEM Assets。
 
    ![内容片段编辑器](assets/author-content-fragments/content-fragment-editor-jd.png)
-
-1. 接下来，点按 **创建变量** 在左边栏中。 在对话框中，添加类型 **备用** ，用于变量名称。
-
-1. 更改 **备用** 变量。
-
-   ![替代版本](assets/author-content-fragments/alternate-variation-john-doe-fragment.png)
-
-   变量功能允许作者为同一内容片段创建不同版本。 这可用于提供长篇文章的摘要版本。 默认情况下， **主控** 变量。 变体的多行文本字段元素可以与主控变体同步。
 
 1. 点按 **保存并关闭** 以保存对John Doe片段所做的更改。
 1. 返回到内容片段UI并打开 **艾莉森·史密斯** 文件进行编辑。
@@ -151,11 +143,17 @@ ht-degree: 2%
 
 1. 点按 **保存并关闭** 以保存对Alpha团队片段的更改。
 
-## 浏览WKND内容片段（可选） {#explore-wknd-content-fragments}
+## 发布内容片段
 
-如果您 [已安装WKND共享示例内容](./overview.md#install-sample-content) 您可以检查历险记、文章和作者模型的内容片段，以了解有关创建内容的更多信息。
+审核后，发布创作的 `Content Fragments`
 
-![WKND内容片段](assets/author-content-fragments/wknd-content-fragments.png)
+1. 从AEM开始屏幕点按 **内容片段** 打开内容片段UI。
+
+1. 在左边栏中，展开 **我的项目** 点按 **英语**.
+
+1. 点按内容片段旁边的复选框，然后点按 **发布**
+
+   ![发布内容片段](assets/author-content-fragments/publish-content-fragment.png)
 
 ## 恭喜！ {#congratulations}
 

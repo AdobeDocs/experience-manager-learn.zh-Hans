@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 879018d44cc63421d1c7185cce1c30fedbf526c9
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '291'
 ht-degree: 1%
 
 ---
@@ -51,25 +51,6 @@ ht-degree: 1%
 * AEMas a Cloud Service环境：
    * [访问AEMas a Cloud Service和Cloud Manager](/help/cloud-service/accessing/overview.md)
       * **AEM管理员** 访问AEMas a Cloud Service
-      * **Cloud Manager — 开发人员** 对Cloud Manager的访问权限
-
-### 安装示例内容 {#install-sample-content}
-
-让示例内容在AEM环境中已可用作引用，这会非常有用。
-
-1. 导航到 [AEM WKND共享项目](https://github.com/adobe/aem-guides-wknd-shared/releases).
-1. 下载最新发布的资产： `aem-guides-wknd-shared.ui.content-x.x.x.zip`.
-1. 登录到要用于本教程的AEM创作环境。
-1. 从AEM开始屏幕，导航到 **工具** > **部署** > **包**:
-
-   ![导航包管理器](assets/overview/navigate-package-manager.png)
-
-1. 点按 **上传包** 然后选择 `aem-guides-wknd-shared.ui.content-x.x.x.zip` 文件。 点按 **确定** 上传。
-1. 包上传完成后，点按 **安装** 来安装内容。
-
-   ![安装示例内容包](assets/overview/install-sample-content-package.png)
-
-1. 将为虚拟图片安装示例内容片段、内容片段模型、图像等 [WKND品牌](https://wknd.site/). 稍后将在教程中引用示例内容。
 
 ## 开始吧！
 
@@ -80,5 +61,3 @@ ht-degree: 1%
 源代码和内容包位于 [AEM指南 — WKND GraphQL GitHub项目](https://github.com/adobe/aem-guides-wknd-graphql).
 
 如果您发现本教程或代码存在问题，请保留 [GitHub问题](https://github.com/adobe/aem-guides-wknd-graphql/issues).
-
-示例内容片段、模型和查询可在 [AEM WKND共享项目](https://github.com/adobe/aem-guides-wknd-shared)

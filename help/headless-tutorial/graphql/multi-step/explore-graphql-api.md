@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1532'
 ht-degree: 7%
 
 ---
@@ -56,9 +56,9 @@ AEM的GraphQL API提供了一种功能强大的查询语言，用于将内容片
 
    >[!NOTE]
    >
-   > 还可以创建全局端点，以便跨项目对模型进行查询。 例如，如果要组合一个查询，该查询涉及 **WKND共享** 项目和 **我的项目**. 应谨慎使用，并且仅在必要时使用，因为它可能会向其他安全漏洞打开环境。
+   > 还可以创建全局端点以启用跨多个配置的模型查询。 应当谨慎使用，因为它可能会向环境打开其他安全漏洞，并增加管理AEM的整体复杂性。
 
-1. 现在，您应会看到环境中已启用的两个GraphQL端点（假定您已安装WKND共享内容）。
+1. 此时，您应会看到在环境中启用了一个GraphQL端点。
 
    ![已启用graphql端点](assets/explore-graphql-api/enabled-graphql-endpoints.png)
 
@@ -76,11 +76,11 @@ AEM的GraphQL API提供了一种功能强大的查询语言，用于将内容片
    >
    > 对于AEM的旧版本，可能无法内置GraphiQL IDE。 可以按照以下步骤手动安装 [说明](#install-graphiql).
 
-1. 在右上角，将 **端点** to **我的项目端点**.
+1. 在右上角，确保 **端点** 设置为 **我的项目端点**.
 
    ![设置GraphQL端点](assets/explore-graphql-api/set-my-project-endpoint.png)
 
-   这会将所有查询的范围扩展到 **我的项目** 项目。 请注意，还有一个 **WKND共享**.
+这会将所有查询的范围扩展到 **我的项目** 项目。
 
 ### 查询内容片段列表 {#query-list-cf}
 
@@ -370,16 +370,28 @@ AEM的GraphQL API提供了一种功能强大的查询语言，用于将内容片
 
    ![最终持久化查询](assets/explore-graphql-api/final-persisted-queries.png)
 
+
+## 发布GraphQL端点和持久化查询
+
+审核后，发布 `GraphQL Endpoint` &amp; `Persisted Queries`
+
+1. 从AEM开始屏幕中，导航到 **工具** > **常规** > **GraphQL**.
+
+1. 点按旁边的复选框 **我的项目端点** 点按 **发布**
+
+   ![发布GraphQL端点](assets/explore-graphql-api/publish-graphql-endpoint.png)
+
+1. 从AEM开始屏幕中，导航到 **工具** > **常规** > **GraphQL查询编辑器**
+
+1. 点按 *所有团队* 从“保留的查询”面板中，点按 **发布**
+
+   ![发布持久查询](assets/explore-graphql-api/publish-persisted-query.png)
+
+1. 重复上述步骤 `person-by-name` 查询
+
 ## 解决方案文件 {#solution-files}
 
 下载在最近三章中创建的内容、模型和永久查询： [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip)
-
-## 浏览WKND持久化查询（可选） {#explore-wknd-content-fragments}
-
-如果您 [已安装WKND共享示例内容](./overview.md#install-sample-content) 您可以查看和执行持久查询，如“全部冒险”、“逐个活动冒险”、“逐个路径冒险”等。
-
-![WKND持久化查询](assets/explore-graphql-api/wknd-persisted-queries.png)
-
 
 ## 其他资源
 

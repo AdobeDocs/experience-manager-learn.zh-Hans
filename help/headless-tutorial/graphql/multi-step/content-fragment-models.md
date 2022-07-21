@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 ## 前提条件 {#prerequisites}
 
-这是一个多部分教程，假定 [AEM创作环境可用](./overview.md#prerequisites) （可选） [已安装WKND共享示例内容](./overview.md#install-sample-content).
+这是一个多部分教程，假定 [AEM创作环境可用](./overview.md#prerequisites)
 
 ## 目标 {#objectives}
 
@@ -39,7 +39,7 @@ ht-degree: 2%
 
 项目配置包含与特定项目关联的所有内容片段模型，并提供了组织模型的方法。 必须至少创建一个项目 **之前** 创建新的内容片段模型。
 
-1. 登录AEM **作者** 环境。
+1. 登录AEM **作者** 环境(例如 `https://author-pYYYY-eXXXX.adobeaemcloud.com/`)
 1. 从AEM开始屏幕中，导航到 **工具** > **常规** > **配置浏览器**.
 
    ![导航到配置浏览器](assets/content-fragment-models/navigate-config-browser.png)
@@ -65,7 +65,6 @@ ht-degree: 2%
 
    ![导航到内容片段模型](assets/content-fragment-models/navigate-cf-models.png)
 
-   如果您安装了 [示例内容](overview.md#install-sample-content) 然后，您将看到两个文件夹： **我的项目** 和 **WKND共享**.
 1. 导航到 **我的项目** 文件夹。
 1. 点按 **创建** 在右上角， **创建模型** 向导。
 1. 对于 **模型标题** 输入： **人员** 点按 **创建**.
@@ -165,23 +164,23 @@ ht-degree: 2%
 
    ![两种模型](assets/content-fragment-models/two-new-models.png)
 
-## Inspect WKND内容片段模型（可选）
+## 发布项目配置和内容片段模型
 
-如果您 [已安装WKND共享示例内容](./overview.md#install-sample-content) 您可以检查冒险、文章和作者模型，以了解有关数据建模技术的更多信息。
+审核后，发布 `Project Configuration` &amp; `Content Fragment Model`
 
-1. 从 **AEM开始** 菜单导航到 **工具** > **常规** > **内容片段模型**.
+1. 从AEM开始屏幕中，导航到 **工具** > **常规** > **配置浏览器**.
 
-1. 导航到 **WKND共享** 文件夹下，您应该看到三种模型：文章、冒险和作者。
+1. 点按旁边的复选框 **我的项目** 点按 **发布**
 
-1. Inspect ，方法是将鼠标悬停在卡片上并点按编辑图标（铅笔）
+   ![发布项目配置](assets/content-fragment-models/publish-project-config.png)
 
-   ![WKND模型](assets/content-fragment-models/wknd-shared-models.png)
+1. 从AEM开始屏幕中，导航到 **工具** > **常规** > **内容片段模型**.
 
-1. 这将打开 **内容片段模型编辑器** 对于模型，您可以检查使用的各种数据类型。
+1. 导航到 **我的项目** 文件夹。
 
-   >[!CAUTION]
-   >
-   > 修改模型 **after** 内容片段已创建，具有下游效果。 现有片段中的字段值将不再被引用，GraphQL公开的数据架构将发生更改，从而影响现有应用程序。
+1. 点按 **人员** 和 **团队** 模型和点按 **发布**
+
+   ![发布内容片段模型](assets/content-fragment-models/publish-content-fragment-model.png)
 
 ## 恭喜！ {#congratulations}
 
