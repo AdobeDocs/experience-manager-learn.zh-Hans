@@ -1,6 +1,6 @@
 ---
 title: 配置对AEM演练的访问权限
-description: 在AdobeAdminConsole中配置AdobeIMS用户、用户组和产品配置文件的简略演练，以及如何利用AEM Author中的这些AdobeIMS抽象概念来定义和管理特定的基于组的权限。
+description: 在AdobeAdminConsole中配置Adobe IMS用户、用户组和产品配置文件的简略演练，以及如何利用AEM Author中的这些Adobe IMS抽象概念来定义和管理特定的基于组的权限。
 version: Cloud Service
 topic: Administration, Security
 feature: User and Groups
@@ -9,20 +9,20 @@ level: Beginner
 kt: 6061
 thumbnail: 39155.jpg
 exl-id: 0ca50fa4-0b2a-4e6d-becb-7a91fc6b4166
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
-# 配置对AEM演练的访问权限
+# 配置对AEM演练的访问权限 {#configuring-access-to-aem-walkthrough}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_aem_walkthrough"
 >title="配置对AEM演练的访问权限"
->abstract="在Adobe Admin Console中配置AdobeIMS用户、用户组和产品配置文件的简略演练，以及如何利用AEM Author中的这些AdobeIMS抽象概念来定义和管理特定的基于组的权限。"
+>abstract="在Adobe Admin Console中配置Adobe IMS用户、用户组和产品配置文件的简略演练，以及如何利用AEM Author中的这些Adobe IMS抽象概念来定义和管理特定的基于组的权限。"
 
-在AdobeAdminConsole中配置AdobeIMS用户、用户组和产品配置文件的简略演练，以及如何利用AEM Author中的这些AdobeIMS抽象概念来定义和管理特定的基于组的权限。
+在AdobeAdminConsole中配置Adobe IMS用户、用户组和产品配置文件的简略演练，以及如何利用AEM Author中的这些Adobe IMS抽象概念来定义和管理特定的基于组的权限。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39155/?quality=12&learn=on)
