@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: c061ea9d08606052c4b2cf5b3c84d6f1df5a57fa
+source-git-commit: 1c4ebdf78dd7107c7587b50e7476ea4b7ca3e812
 workflow-type: tm+mt
-source-wordcount: '799'
-ht-degree: 21%
+source-wordcount: '802'
+ht-degree: 22%
 
 ---
 
@@ -24,6 +24,7 @@ ht-degree: 21%
       + [Experience Manager — 治理和人员配置模式和原型](./introduction/experience-manager-governance-and-staffing-models.md)
       + [如何使用Adobe Experience Manager提高内容周转率](./introduction/drive-content-velocity-for-sites.md)
       + [使用AEM样式系统加快内容速度](./introduction/accelerate-content-velocity-aem.md)
++ [Experience Cloud 集成](./experience-cloud/integrations.md)
 + 底层技术 {#underlying-technology}
    + [AEM架构](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
