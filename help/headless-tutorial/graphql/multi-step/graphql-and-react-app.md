@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 294ad688b17a5fc9559fea39fc99ebf5e95cad39
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1088'
 ht-degree: 1%
 
 ---
@@ -477,7 +477,7 @@ module.exports = function(app) {
   ...
 ```
 
-但是，这不是生产部署的合适选项，有关更多详细信息，请参阅 _生产部署_ 中。
+但是，这不适合 **生产部署** 但在开发过程中可正常使用，有关更多详细信息，请参阅 [_部署_](../deployment/spa.md) 中。
 
 ## 恭喜！{#congratulations}
 
