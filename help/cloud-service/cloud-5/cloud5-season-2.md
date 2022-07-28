@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: c061ea9d08606052c4b2cf5b3c84d6f1df5a57fa
+source-git-commit: 6197a40888ff5a8f93cbe03fb42c85f06f324de0
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
@@ -127,14 +127,16 @@ ht-degree: 1%
       </p>
      </td>   
      <td>
-            <img alt="Cloud Manager的奥秘……体验审核" src="./imgs/coming-soon.png"/>
+            <a href="season-2/cloud5-MoCM-experience-audit.md">
+               <img alt="Cloud Manager的奥秘……体验审核" src="./imgs/s2/007-thumb.png"/>
+               </a>
       <div>
-            <strong>Cloud Manager的奥秘……体验审核</strong>
-         <br/><em>Darin Kuntze &amp; James Talbot，云高级架构师</em>
+            <a href="season-2/cloud5-MoCM-experience-audit.md"><strong>Cloud Manager的奥秘……体验审核</strong></a>
+         <br/><em>与高级云架构师Darin Kuntze合作</em>
       </div>
       <p>
         <br/>
-        2022年7月29日
+        了解Cloud Manager及其体验审核功能的基础知识。
       </p>
    </td>
      <td>
