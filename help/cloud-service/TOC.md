@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 6197a40888ff5a8f93cbe03fb42c85f06f324de0
+source-git-commit: 80dfe87f372425014c22ccf4f2d1190b4c202b8a
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 22%
+source-wordcount: '814'
+ht-degree: 21%
 
 ---
 
@@ -210,6 +210,8 @@ ht-degree: 22%
       + [Adobe Sign 云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
       + [配置以进行填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + 与Microsoft Power集成自动化{#forms-cs-and-power-automate}
+      + [配置集成](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
    + 与Microsoft Dynamics集成{#formscs-dynamics-crm}
       + [创建Dynamics应用程序](./forms/formscs-dynamics-crm/create-dynamics-account.md)
       + [配置数据源](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
