@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 6197a40888ff5a8f93cbe03fb42c85f06f324de0
+source-git-commit: 3fb0fb5b8f43dc925da2ffa05808f24bf6d5ada3
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
@@ -140,14 +140,16 @@ ht-degree: 1%
       </p>
    </td>
      <td>
-            <img alt="Cloud Manager的奥秘……单元测试" src="./imgs/coming-soon.png"/>
+            <a href="season-2/cloud5-MoCM-unit-tests.md">
+               <img alt="Cloud Manager的奥秘……单元测试" src="./imgs/s2/009-thumb.png"/>
+            </a>
       <div>
-            <strong>Cloud Manager的奥秘……单元测试</strong>
+            <a href="season-2/cloud5-MoCM-unit-tests.md"><strong>Cloud Manager的奥秘……单元测试</strong></a>
          <br/><em>与高级云架构师Darin Kuntze &amp; Bryan Stopp合作</em>
       </div>
       <p>
         <br/>
-         2022年8月5日将来
+        Darin和Bryan讨论了Cloud Manager如何将单元测试执行和代码覆盖报告集成到其CI/CD管道中，以帮助鼓励和推广单元测试AEM代码的最佳实践。
       </p>
    </td> 
   </tr>
