@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 3fb0fb5b8f43dc925da2ffa05808f24bf6d5ada3
+source-git-commit: 043842912132336a4ec52b54776fab1525b09d16
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '822'
 ht-degree: 21%
 
 ---
@@ -112,7 +112,7 @@ ht-degree: 21%
       + [使用Java SQL API的SQL连接](./networking/examples/sql-java-apis.md)
       + [电子邮件服务](./networking/examples/email-service.md)
 + 迁移 {#migration}
-   + [内容传输工具](./migration/content-transfer-tool.md)
+   + [内容转移工具](./migration/content-transfer-tool.md)
    + [批量导入资产](./migration/bulk-import.md)
 
    + 移动到 AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
@@ -127,7 +127,7 @@ ht-degree: 21%
       + [搜索和索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + 内容迁移 {#content-migration}
          + [批量导入服务](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
-         + [内容传输工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
+         + [内容转移工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
       + [疑难解答](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Formsas a Cloud Service {#aem-forms}
          + [简介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
@@ -137,7 +137,7 @@ ht-degree: 21%
       + [简介](./migration/cloud-acceleration-manager/introduction.md)
       + [就绪性和最佳实践分析器](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [实施阶段](./migration/cloud-acceleration-manager/implementation-phase.md)
-      + [内容传输工具](./migration/cloud-acceleration-manager/content-transfer-tool.md)
+      + [内容转移工具](./migration/cloud-acceleration-manager/content-transfer-tool.md)
       + [代码重构工具](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
       + [代码存储库Modernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
       + [Dispatcher Converter](./migration/cloud-acceleration-manager/dispatcher-converter.md)
@@ -212,6 +212,7 @@ ht-degree: 21%
       + [配置以进行填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
    + 与Microsoft Power集成自动化{#forms-cs-and-power-automate}
       + [配置集成](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
+      + [解析提交的表单数据](./forms/forms-cs-and-power-automate/send-email-notification.md)
    + 与Microsoft Dynamics集成{#formscs-dynamics-crm}
       + [创建Dynamics应用程序](./forms/formscs-dynamics-crm/create-dynamics-account.md)
       + [配置数据源](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
@@ -273,7 +274,7 @@ ht-degree: 21%
 + [AEM专家系列](./aem-experts-series.md)
 + 多步Tutorials{#multi-step-tutorials}
    + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
-   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans)
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
    + [SPA Editor(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [SPA编辑器(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
