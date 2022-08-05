@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '238'
+ht-degree: 21%
 
 ---
 
@@ -44,15 +44,27 @@ ht-degree: 0%
       + [3 — 浏览AEM GraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4 — 持久GraphQL查询](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 — 客户端应用程序集成](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
-   + 操作方法 {#how-to}
-      + [富文本](./graphql/how-to/rich-text.md)
-      + [图像](./graphql/how-to/images.md)
-      + [本地化内容](./graphql/how-to/localized-content.md)
-      + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
++ 部署{#deployments}
+   + [概述](./graphql/deployment/overview.md)
+   + [单页应用程序](./graphql/deployment/spa.md)
+   + [Web组件](./graphql/deployment/web-component.md)
+   + [移动设备](./graphql/deployment/mobile.md)
+   + [服务器到服务器](./graphql/deployment/server-to-server.md)
+   + 配置{#configurations}
+      + [AEM主机](./graphql/deployment/configurations/aem-hosts.md)
+      + [CORS](./graphql/deployment/configurations/cors.md)
+      + [Dispatcher过滤器](./graphql/deployment/configurations/dispatcher-filters.md)
++ 操作方法 {#how-to}
+   + [富文本](./graphql/how-to/rich-text.md)
+   + [图像](./graphql/how-to/images.md)
+   + [本地化内容](./graphql/how-to/localized-content.md)
+   + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + 示例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
+      + [Web组件](./graphql/example-apps/web-component.md)
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
+      + [服务器到服务器](./graphql/example-apps/server-to-server-app.md)
 + SPA编辑器{#spa-editor}
    + React{#react}
       + [概述](./spa-editor/react/overview.md)
