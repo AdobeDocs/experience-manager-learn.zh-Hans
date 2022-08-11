@@ -3,10 +3,10 @@ user-guide-title: AEM Sites 视频和教程
 user-guide-description: Adobe Experience Manager Sites 的视频和教程集合。
 breadcrumb-title: AEM Sites 教程
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 6f930acd0b51c1f398be7a84efa99944dd3ce704
+source-git-commit: ce9966d48689cd153f5de9d20240644d96d10adf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '439'
+ht-degree: 24%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 0%
 + 组件 {#components}
    + [组件开发](components/component-development.md)
    + [核心组件](components/core-components-feature-video-understand.md)
+   + [Web优化图像交付](components/web-optimized-image-delivery.md)
    + [组件控制台](components/components-console-feature-video-use.md)
 + 内容片段 {#content-fragments}
    + [创作内容片段](content-fragments/content-fragments-feature-video-use.md)
@@ -43,7 +44,7 @@ ht-degree: 0%
    + [内容片段与体验片段](content-fragments/understand-content-fragments-and-experience-fragments.md)
 + 体验片段 {#experience-fragments}
    + [使用体验片段](experience-fragments/experience-fragments-feature-video-use.md)
-   + [构建基块](experience-fragments/building-blocks.md)
+   + [构建块](experience-fragments/building-blocks.md)
    + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 开发 {#developing}
    + [AEM 项目原型](developing/aem-project-archetype.md)
@@ -97,7 +98,7 @@ ht-degree: 0%
       + [使用AEM连接与LaunchAdobe I/O](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
       + [创建启动项Cloud Service](integrations/experience-platform-launch/create-launch-cloud-service.md)
       + [调试Launch实施](integrations/experience-platform-launch/debug-launch-implementation.md)
-   + Adobe Client Data Layer {#adobe-client-data-layer}
+   + Adobe 客户端数据层{#adobe-client-data-layer}
       + [使用Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自定义Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-customize.md)
    + 分析 {#analytics}
