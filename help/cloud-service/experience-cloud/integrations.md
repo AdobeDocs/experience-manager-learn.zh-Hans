@@ -10,9 +10,9 @@ kt: 10718
 thumbnail: KT-10718.jpeg
 mini-toc-levels: 1
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: fda7b74e7659daf61a9f5478d6bfabe439b923ae
+source-git-commit: 663075723da207242309c08feed42657b9e5188b
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '958'
 ht-degree: 12%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 12%
 |  | AEM Sites | AEM Assets | AEM Forms |
 |-------------------------------------------------------------------|:---------:|:----------:|:---------:|
 | [Acrobat Sign](#adobe-acrobat-sign) |  |  | ✔ |
+| 广告 |  |  |  |
 | [分析](#adobe-analytics) | ✔ | ✔ | ✔ |
 | Audience Manager |  |  |  |
 | [Campaign Classic](#adobe-campaign-classic) | ✔ |  |  |
@@ -33,7 +34,7 @@ ht-degree: 12%
 | Customer Journey Analytics |  |  |  |
 | [Experience Platform标记](#adobe-experience-platform-tags) | ✔ |  | ✔ |
 | [Journey Optimizer](#adobe-journey-optimizer) |  | ✔ |  |
-| 学习经理 |  |  |  |
+| [学习经理](#adobe-learning-manager) | ✔ |  |  |
 | Marketo Engage |  |  |  |
 | Real-time CDP |  |  |  |
 | [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
@@ -108,19 +109,21 @@ Adobe Experience Platform标记(以前称为AdobeLaunch、DTM)与AEM无缝集成
 + [Experience Platform标记用户指南](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
 + [Experience Platform标记教程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
 
+## Adobe Journey Optimizer
 
-## Adobe Workfront
-
-Adobe Workfront与AEM的集成是一个Cloud Service，可简化数字资产创建、协作和生命周期管理的过程。
+Adobe Journey Optimizer可帮助您从单个应用程序为数百万客户安排全方位的营销活动和一对一的体验，并且整个历程通过智能决策和分析进行了优化。
 
 ### AEM Assets
 
-+ [配置Workfront增强的连接器](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
-+ [Workfront增强的连接器视频](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
-+ AEM Assets Essentials
++ [将AEM Assets Essentials与Adobe Journey Optimizer集成](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html)
 
-   + [Adobe Workfront for Assets Essentials用户指南](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
-   + [Adobe Workfront和Assets Essentials视频](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
+## Adobe学习管理器
+
+Adobe学习管理器(以前称为Adobe Captivate Prime)为客户提供个性化学习。
+
+### AEM Sites
+
++ [将AEM Sites与Adobe学习管理器集成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-learning-manager.html)
 
 ## Adobe Sensei
 
@@ -157,3 +160,16 @@ Adobe Target与AEMas a Cloud Service集成，为每位最终用户提供优化�
 
 + [将AEM Context Hub与Target结合使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html#creating-an-adobe-target-audience-using-the-audience-console)
 + [AEM Sites和Target教程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/target/overview.html)
+
+## Adobe Workfront
+
+Adobe Workfront与AEM的集成是一个Cloud Service，可简化数字资产创建、协作和生命周期管理的过程。
+
+### AEM Assets
+
++ [配置Workfront增强的连接器](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
++ [Workfront增强的连接器视频](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
++ AEM Assets Essentials
+
+   + [Adobe Workfront for Assets Essentials用户指南](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
+   + [Adobe Workfront和Assets Essentials视频](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
