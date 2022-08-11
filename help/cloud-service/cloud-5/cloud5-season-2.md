@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 3fb0fb5b8f43dc925da2ffa05808f24bf6d5ada3
+source-git-commit: 2cfa5039e69ef23e58428e17b45877170930820e
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '503'
 ht-degree: 1%
 
 ---
@@ -141,7 +141,7 @@ ht-degree: 1%
    </td>
      <td>
             <a href="season-2/cloud5-MoCM-unit-tests.md">
-               <img alt="Cloud Manager的奥秘……单元测试" src="./imgs/s2/009-thumb.png"/>
+               <img alt="Cloud Manager的奥秘……单元测试" src="./imgs/s2/008-thumb.png"/>
             </a>
       <div>
             <a href="season-2/cloud5-MoCM-unit-tests.md"><strong>Cloud Manager的奥秘……单元测试</strong></a>
@@ -155,13 +155,15 @@ ht-degree: 1%
   </tr>
     <tr>
         <td>
-                <img alt="Cloud Manager的奥秘……功能测试" src="./imgs/coming-soon.png"/>
+               <a href="season-2/cloud5-MoCM-functional-tests.md">
+                   <img alt="Cloud Manager的奥秘……功能测试" src="./imgs/s2/009-thumb.png"/>
+               </a>
             <div>
-                <strong>Cloud Manager的奥秘……功能测试</strong><br/>        
+                <a href="season-2/cloud5-MoCM-functional-tests.md"><strong>Cloud Manager的奥秘……功能测试</strong><br/></a>        
                 <em>与高级云架构师Darin Kuntze &amp; Bryan Stopp合作</em>
             </div>
             <p><br/>
-                将于2022年8月12日发布
+                达林和布赖恩讨论了AEMas a Cloud Service部署过程中内置的不同类型的功能测试，以确保代码的质量和可靠性。
             </p>
         </td>
         <td></td>
