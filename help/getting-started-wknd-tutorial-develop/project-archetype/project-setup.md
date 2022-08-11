@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: 819188cabb784a2bbfa097dc4c47f75e38231b53
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1848'
 ht-degree: 3%
 
 ---
@@ -332,3 +332,11 @@ AEM项目原型将生成一个示例 `.gitignore` 可用作文件安全忽略起
 ## 疑难解答
 
 如果您在使用AEM项目原型生成项目时遇到问题，请参阅 [已知问题](https://github.com/adobe/aem-project-archetype#known-issues) 和打开列表 [问题](https://github.com/adobe/aem-project-archetype/issues).
+
+## 再次恭喜！ {#congratulations-bonus}
+
+恭喜你们，我们要通过奖金材料。
+
+### 后续步骤 {#next-steps-bonus}
+
+通过简单的操作，了解Adobe Experience Manager(AEM)站点组件的基础技术 `HelloWorld` 示例 [组件基础知识](component-basics.md) 教程。
