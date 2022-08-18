@@ -3,10 +3,10 @@ user-guide-title: AEM Sites 视频和教程
 user-guide-description: Adobe Experience Manager Sites 的视频和教程集合。
 breadcrumb-title: AEM Sites 教程
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: ce9966d48689cd153f5de9d20240644d96d10adf
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 24%
+source-wordcount: '404'
+ht-degree: 26%
 
 ---
 
@@ -51,7 +51,6 @@ ht-degree: 24%
    + [开始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
    + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)
    + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
-   + [AEM SPA Editor和Angular快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
    + [用风格体系发展](developing/style-system-technical-video-understand.md)
    + [样式系统最佳实践](developing/style-organization-style-system-understand-article.md)
@@ -68,9 +67,7 @@ ht-degree: 24%
    + [站点地图](./seo/sitemaps.md)
 + 单页应用程序 {#spa-editor}
    + [使用SPA编辑器](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [Hello World教程](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
-   + [AEM SPA Editor和Angular快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
 + 多站点管理 {#multi-site-management}
    + [语言副本简介](./multi-site-management/language-copy-overview.md)
    + [Live Copy和Blueprint](./multi-site-management/live-copy-and-blueprint.md)

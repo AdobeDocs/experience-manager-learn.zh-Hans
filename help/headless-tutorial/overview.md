@@ -7,10 +7,10 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 6%
+source-wordcount: '496'
+ht-degree: 7%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
       <img alt="GraphQL API" src="./assets/graphql-icon.png" />
     </a>
     <div>
@@ -162,23 +162,10 @@ Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将
     <p>
   </td>
 </tr>
-<tr>
-  <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html">
-      <img alt="React — 无头" src="./assets/angular-spa-editor.png" />
-    </a>
-    <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html">
-    <strong>Angular- SPA编辑器</strong>
-    </a>
-    </div>
-    <p>
-    <em>使用AEM SPA编辑器管理完整的Angular应用程序体验。</em>
-    <p>
-  </td>
+<tr>  
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
-    <img alt="Angular — 内容服务" src="./assets/android.png" />
+    <img alt="Android — 内容服务" src="./assets/android.png" />
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
@@ -202,5 +189,6 @@ Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将
     <em>使用开发人员和服务令牌构建Node.js应用程序以进行身份验证。</em>
     <p>
   </td>
+  <td></td>
 </tr>
 </table>

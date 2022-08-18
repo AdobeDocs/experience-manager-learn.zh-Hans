@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '612'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 # AEM Headless SPA部署
 
 
-AEM无头单页应用程序(SPA)部署涉及基于JavaScript的应用程序，这些应用程序是使用React、Vue或Angular等框架构建的，这些框架以无头方式使用AEM中的内容并与之交互。
+AEM无头单页应用程序(SPA)部署涉及基于JavaScript的应用程序，这些应用程序是使用React或Vue等框架构建的，它们以无头方式使用AEM中的内容并与之交互。
 
 部署以无头方式交互AEM的SPA包括托管SPA并通过Web浏览器访问。
 
