@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: 8da6d5470c702620ee1121fd2688eb8756f0cebd
+source-git-commit: d6eddceb3f414e67b5b6e3fba071cd95597dc41c
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -25,12 +25,14 @@ ht-degree: 0%
 + `smtp.host` 设置为OSGi环境变量 `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` 所以它被从出口路过。
    + `$[env:AEM_PROXY_HOST]` 是AEMas a Cloud Service映射到内部的保留变量 `proxy.tunnel` 主机。
    + 请勿尝试设置 `AEM_PROXY_HOST` 通过Cloud Manager。
-+ `smtp.port` 设置为 `portForward.portOrig` 映射到目标电子邮件服务的主机和端口的端口。 此示例使用映射： `AEM_PROXY_HOST:30002` → `smtp.sendgrid.com:465`.
++ `smtp.port` 设置为 `portForward.portOrig` 映射到目标电子邮件服务的主机和端口的端口。 此示例使用映射： `AEM_PROXY_HOST:30465` → `smtp.sendgrid.com:465`.
    + 的 `smpt.port` 设置为 `portForward.portOrig` 端口，而不是SMTP服务器的实际端口。 在 `smtp.port` 和 `portForward.portOrig` 端口由Cloud Manager建立 `portForwards` 规则（如下所示）。
 
 由于密钥不得存储在代码中，因此最好使用 [密钥OSGi配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)，使用AIO CLI或Cloud Manager API进行设置。
 
 通常， [灵活的端口出口](../flexible-port-egress.md) 用于满足与电子邮件服务的集成，除非 `allowlist` AdobeIP，在这种情况下 [专用出口ip地址](../dedicated-egress-ip-address.md) 中。
+
+此外，请查看AEM文档 [发送电子邮件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
 
 ## 高级网络支持
 
@@ -51,7 +53,7 @@ ht-degree: 0%
 "portForwards": [{
     "name": "smtp.mymail.com",
     "portDest": 465,
-    "portOrig": 30002
+    "portOrig": 30465
 }]
 ...
 ```
@@ -63,7 +65,7 @@ ht-degree: 0%
 ```json
 {
     "smtp.host": "$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
-    "smtp.port": "30002",
+    "smtp.port": "30465",
     "smtp.user": "$[env:EMAIL_USERNAME;default=myApiKey]",
     "smtp.password": "$[secret:EMAIL_PASSWORD]",
     "from.address": "noreply@wknd.site",
