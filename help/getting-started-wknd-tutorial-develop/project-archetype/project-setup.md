@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: 819188cabb784a2bbfa097dc4c47f75e38231b53
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '1847'
 ht-degree: 3%
 
 ---
@@ -256,7 +256,7 @@ AEM项目原型将生成一个示例 `.gitignore` 可用作文件安全忽略起
 
 的 **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven模块包含站点下方所需的所有渲染代码 `/apps`. 这包括将以名为的AEM格式存储的CSS/JS [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). 这还包括 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hans) 用于呈现动态HTML的脚本。 您可以考虑 **ui.apps** 模块作为JCR中结构的映射，但格式可以存储在文件系统中并提交到源代码控制。 的 **ui.apps** 模块仅包含代码。
 
-要构建仅此模块，请执行以下操作：
+要仅构建此模块，请执行以下操作：
 
 1. 从命令行中。 导航到 `ui.apps` 文件夹（下方） `aem-guides-wknd`):
 

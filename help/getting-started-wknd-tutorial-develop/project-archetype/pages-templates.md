@@ -9,7 +9,7 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
 source-wordcount: '3081'
 ht-degree: 1%
@@ -93,7 +93,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
 
-以下视频的高级步骤：
+以上视频的高级步骤：
 
 ### 结构配置
 
@@ -161,7 +161,7 @@ AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹�
 
 >[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
 
-以下视频的高级步骤：
+以上视频的高级步骤：
 
 1. 下载示例内容包 **[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets-1.1.zip)**.
 1. 使用包管理器(位于 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)
@@ -207,7 +207,7 @@ AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹�
 
 >[!VIDEO](https://video.tv.adobe.com/v/330993/?quality=12&learn=on)
 
-以下视频的高级步骤：
+以上视频的高级步骤：
 
 1. 导航到站点控制台(位于 [http://localhost:4502/sites.html/content/wknd/us/en/magazine](http://localhost:4502/sites.html/content/wknd/us/en/magazine).
 1. 在下面创建新页面 **WKND** > **美国** > **EN** > **杂志**.
@@ -257,7 +257,7 @@ AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹�
 
    请注意，只有2个HTL脚本， `customfooterlibs.html` 和 `customheaderlibs.html` 页面组件下方。 *那么，此组件如何渲染页面？*
 
-   的 `sling:resourceSuperType` 属性点到 `core/wcm/components/page/v2/page`. 此属性允许WKND的页面组件继承 **全部** 核心组件页面组件功能的详细信息。 这是第一个名为 [代理组件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern). 可以找到更多信息 [这里。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html).
+   的 `sling:resourceSuperType` 属性点到 `core/wcm/components/page/v2/page`. 此属性允许WKND的页面组件继承 **全部** 核心组件页面组件功能的详细信息。 这是第一个名为 [代理组件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern). 可以找到更多信息 [此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html).
 
 1. Inspect WKND组件中的另一个组件， `Breadcrumb` 组件位于： `/apps/wknd/components/breadcrumb`. 请注意， `sling:resourceSuperType` 属性，但此时它指向 `core/wcm/components/breadcrumb/v2/breadcrumb`. 这是使用代理组件模式包含核心组件的另一个示例。 事实上，WKND代码库中的所有组件都是AEM核心组件的代理（我们著名的HelloWorld组件除外）。 最佳做法是尽可能多地尝试和重复使用核心组件的功能 *之前* 编写自定义代码。
 

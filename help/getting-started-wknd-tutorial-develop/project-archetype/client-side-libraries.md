@@ -11,7 +11,7 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
 source-wordcount: '2878'
 ht-degree: 2%
@@ -333,7 +333,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
 ### Webpack DevServer — 静态标记 {#webpack-dev-static}
 
-在前几个练习中，我们能够更新 **ui.frontend** 模块，并通过构建过程，最终看到这些更改反映在AEM中。 接下来，我们将研究利用 [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 快速开发我们的前端风格 **静态** HTML。
+在前几个练习中，我们能够更新 **ui.frontend** 模块，并通过构建过程，最终看到这些更改反映在AEM中。 接下来，我们将看到利用 [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 快速开发我们的前端风格 **静态** HTML。
 
 如果大多数样式和前端代码将由专门的前端开发人员执行，而该开发人员可能无法轻松访问AEM环境，则此技术会非常方便。 此技术还允许FED直接对HTML进行修改，然后将修改转发给AEM开发人员以作为组件实施。
 
@@ -391,7 +391,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
 高级别 **aemfed** 用于监听 **ui.apps** 模块，并自动将它们直接同步到正在运行的AEM实例。 根据这些更改，本地浏览器将自动刷新，从而加快前端开发。 此外，它还与Sling Log Tracer一起构建，可自动在终端中直接显示任何服务器端错误。
 
-如果你在 **ui.apps** 模块，修改HTL脚本并创建自定义组件， **aemfed** 是一款非常强大的工具。 [完整文档可在此处找到。](https://github.com/abmaonline/aemfed).
+如果你在 **ui.apps** 模块，修改HTL脚本并创建自定义组件， **aemfed** 是一款非常强大的工具。 [完整文档可在此处找到](https://github.com/abmaonline/aemfed).
 
 ### 调试客户端库 {#debugging-clientlibs}
 

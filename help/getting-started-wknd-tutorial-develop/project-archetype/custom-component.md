@@ -12,7 +12,7 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: 79d41d833ab0659f26f988678e124daa18b857f3
 workflow-type: tm+mt
 source-wordcount: '4138'
 ht-degree: 0%
@@ -447,7 +447,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
        import org.osgi.annotation.versioning.version;
        &quot;
    
-   每当对此包中的文件进行更改时， [必须从语义上调整包版本](https://semver.org/). 如果没有，Maven项目的 [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) 将检测到无效的包版本并中断已构建的包。 幸运的是，Maven插件在失败时会报告无效的Java包版本以及该版本。 刚刚更新 `@Version("...")` 声明 `package-info.java` 到插件建议要修复的版本。
+每当对此包中的文件进行更改时， [必须从语义上调整包版本](https://semver.org/). 如果没有，Maven项目的 [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) 将检测到无效的包版本并中断已构建的包。 幸运的是，Maven插件在失败时会报告无效的Java包版本以及该版本。 只需更新 `@Version("...")` 声明 `package-info.java` 到插件建议要修复的版本。
 
 ### 署名实施 {#byline-implementation}
 
@@ -1017,7 +1017,7 @@ AEM组件的大多数HTL脚本都利用 **占位符范式** 为作者提供视�
 
 ### 查看Sling模型注册 {#reviewing-the-sling-model-registration}
 
-的 [AEM Web Console的Sling模型状态视图](http://localhost:4502/system/console/status-slingmodels) 显示AEM中注册的所有Sling模型。 可通过查看此列表，验证并识别署名Sling模型。
+的 [AEM Web Console的Sling模型状态视图](http://localhost:4502/system/console/status-slingmodels) 显示AEM中已注册的所有Sling模型。 可通过查看此列表，验证并识别署名Sling模型。
 
 如果 **BylineImpl** 未显示在此列表中，则可能会出现Sling模型批注问题，或者Sling模型未添加到注册的Sling模型包(`com.adobe.aem.guides.wknd.core.models`)。
 
