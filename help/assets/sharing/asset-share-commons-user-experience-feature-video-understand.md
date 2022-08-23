@@ -1,17 +1,17 @@
 ---
 title: 了解资产共享共用的用户体验
 description: 有关功能和技术了解的材料资产共享共用
-version: 6.3, 6.4, 6.5
-topic: 内容管理
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 500a9b10-462a-4f41-9b07-67138955cc3d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 3%
+source-wordcount: '128'
+ht-degree: 1%
 
 ---
-
 
 # 了解资产共享共用的用户体验{#understanding-asset-share-commons}
 

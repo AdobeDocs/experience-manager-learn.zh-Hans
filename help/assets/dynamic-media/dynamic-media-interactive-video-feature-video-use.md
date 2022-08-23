@@ -2,18 +2,18 @@
 title: 在AEM Dynamic Media中使用交互式视频
 description: AEM Assets现在能够创建交互式视频，用户可以在其中将视频拆分为较小的区段，或合并小的区段以创建较大的区段，从而允许用户关联行动动手。
 sub-product: dynamic-media
-feature: 视频配置文件、查看器预设、混合媒体集
-version: 6.3, 6.4, 6.5
-topic: 内容管理
+feature: Video Profiles, Viewer Presets, Mixed Media Sets
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 2a27d8bc-ee7b-4d13-8512-8f3dc1eb8f13
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 2%
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
-
 
 # 在AEM Dynamic Media中使用交互式视频{#using-interactive-video-with-aem-dynamic-media}
 

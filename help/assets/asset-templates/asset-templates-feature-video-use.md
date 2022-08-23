@@ -1,17 +1,17 @@
 ---
 title: 将资产模板与AEM Assets和InDesign Server结合使用
 description: AEM Assets模板允许营销人员创建、管理和交付用于数字和打印的数字资产。 与InDesign服务器集成后，使用资产模板可以更轻松地创建标记小册子、名片、传单、广告和明信片。
-version: 6.3, 6.4, 6.5
-topic: 内容管理
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 45e0f3d5-db56-44e7-ad68-4d60991a6d77
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 1%
+source-wordcount: '165'
+ht-degree: 0%
 
 ---
-
 
 # 将资产模板与AEM Assets和InDesign Server结合使用{#using-asset-templates-with-aem-assets-and-indesign-server}
 
@@ -19,7 +19,7 @@ AEM Assets模板允许营销人员创建、管理和交付用于数字和打印�
 
 >[!NOTE]
 >
->有关配置InDesign Server的步骤，请参阅[使用InDesign Server](asset-templates-technical-video-setup.md)设置资产模板。
+>有关配置InDesign Server的步骤，请查看 [使用InDesign Server设置资产模板](asset-templates-technical-video-setup.md).
 
 ## 概述 {#overview}
 

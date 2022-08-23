@@ -1,28 +1,28 @@
 ---
 title: 提交至感谢页面
-seo-title: 提交至感谢页面
+seo-title: Submitting To Thank You Page
 description: 在提交自适应表单时显示感谢页面
-seo-description: 在提交自适应表单时显示感谢页面
+seo-description: Display a thank you page on submitting Adaptive Form
 uuid: ec695b87-083a-47f6-92ac-c9a6dc2b85fb
-feature: 自适应表单
+feature: Adaptive Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 discoiquuid: 58c6bf42-efe5-41a3-8023-d84f3675f689
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 85e1b450-39c0-4bb8-be5d-d7f50b102f3d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 1%
+source-wordcount: '261'
+ht-degree: 0%
 
 ---
 
-
-# 提交以感谢页面{#submitting-to-thank-you-page}
+# 提交至感谢页面 {#submitting-to-thank-you-page}
 
 作为HTTPGET请求的一部分，“提交到REST端点”选项会将表单中填充的数据传递到配置的确认页面。 您可以添加要请求的字段名称。 请求的格式为：
 
@@ -41,8 +41,7 @@ submitterName=submitter
 
 要在您的服务器上测试此功能，请按照以下说明操作：
 
-* 使用包管理器](assets/submittingtorestendpoint.zip)将与本文关联的[assets文件导入AEM
-* 将您的浏览器指向[请求结束时间表](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* 导入 [与本文关联的资产文件，使用包管理器将其放入AEM中](assets/submittingtorestendpoint.zip)
+* 将您的浏览器指向 [请求表格结束时间](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填写必填字段并提交表格
 * 您应该在感谢页面中看到您的信息，并填充在页面上
-

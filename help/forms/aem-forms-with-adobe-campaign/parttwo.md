@@ -1,18 +1,18 @@
 ---
 title: 在自适应表单提交中创建营销活动用户档案
 description: 本文将介绍在Adobe Campaign Standard中自适应表单提交时创建用户档案所需的步骤。 此过程利用自定义提交机制处理自适应表单提交。
-feature: 自适应Forms，表单数据模型
-version: 6.3,6.4,6.5
-topic: 开发
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: deef09d9-82ec-4e61-b7ee-e72d1cd4e9e0
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
-
 
 # 在自适应表单提交中创建营销活动用户档案 {#creating-campaign-profile-on-adaptive-form-submission}
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 本教程将介绍在自适应表单提交中创建Campaign用户档案的步骤。 要完成此用例，我们需要执行以下操作
 
-* 创建AEM Service(CampaignService)以使用REST API创建Adobe Campaign Standard Profile
+* 创建AEM Service(CampaignService)以使用REST API创建Adobe Campaign Standard配置文件
 * 创建用于处理自适应表单提交的自定义提交操作
 * 调用CampaignService的createProfile方法
 
@@ -243,7 +243,7 @@ return null;
 
 创建自定义提交处理程序以处理自适应表单提交。 在此自定义提交处理程序中，我们将调用CampaignService的createProfile方法。 createProfile方法接受表示需要创建的配置文件的JSONObject。
 
-要了解有关AEM Forms中自定义提交处理程序的更多信息，请遵循以下内容：[link](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
+要了解有关AEM Forms中自定义提交处理程序的更多信息，请遵循以下内容 [链接](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
 
 以下是自定义提交中的代码
 
@@ -264,7 +264,7 @@ String pkey = addNewProfile.createProfile(profile);
 
 
 * [确保已按照此处所述的步骤执行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [使用包管理器导入自适应表单和自定义提交处理程序](assets/create-acs-profile-on-af-submission.zip)。此包包含配置为提交到自定义提交操作的自适应表单。
-* 预览[窗体](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
+* [使用包管理器导入自适应表单和自定义提交处理程序](assets/create-acs-profile-on-af-submission.zip).此包包含配置为提交到自定义提交操作的自适应表单。
+* 预览 [表单](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * 填写所有字段并提交
 * 将在您的ACS实例中创建新用户档案

@@ -5,10 +5,11 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
+version: Cloud Service
 topic: Development
 kt: 8844
-source-git-commit: d38da94bd4164163a16899b565c90b159194580a
+exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 2%
@@ -84,22 +85,3 @@ Cygwin是一个与POSIX兼容的编程和运行时环境，在Microsoft Windows�
 * 创建以下文件夹结构。C:\aemformscs\aem-sdk\author\crx-quickstart\install
 * 将aem-forms-addon-xxxxx.far复制到安装文件夹中
 * 打开命令提示符，然后导航到c:\aemformscs\aem-sdk\author enter the following command java -jar aem-author-p4502.jar -gui。 这将在您的AEM实例中部署Forms Add on包。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

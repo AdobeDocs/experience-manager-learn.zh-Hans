@@ -1,13 +1,13 @@
 ---
 title: AEM中的Java API最佳实践
 description: AEM基于丰富的开源软件堆栈构建，该堆栈会公开许多Java API，以供在开发过程中使用。 本文探讨了主要API以及何时以及为何应使用它们。
-version: 6.2, 6.3, 6.4, 6.5
+version: 6.4, 6.5
 feature: APIs
 topic: Development
 role: Developer
 level: Beginner
 exl-id: b613aa65-f64b-4851-a2af-52e28271ce88
-source-git-commit: 9ca80b743c2ca0d3e63cce99fa905be49d1fbcdd
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '2071'
 ht-degree: 2%
@@ -49,7 +49,7 @@ AEM基于4个主Java API集构建。
 
 此顺序是一般规则，表示存在例外。 违反此规则的可接受原因包括：
 
-* 众所周知的例外情况，如下所述。
+* 众所周知的例外，如下所述。
 * 更高级别的API中不提供必需的功能。
 * 在现有代码(自定义或AEM产品代码)的上下文中操作，该代码本身使用的是不太首选的API，而移动到新API的成本是不合理的。
 

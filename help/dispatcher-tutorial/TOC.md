@@ -1,7 +1,7 @@
 ---
 user-guide-title: AEM Dispatcher 缓存教程
 user-guide-description: 一个教程，可帮助您更好地了解 Dispatcher 的工作方式以及您如何使用它。
-version: 6.x
+version: 6.4, 6.5
 sub-product: foundation
 doc-type: tutorial
 audience: architect, developer, implementer
@@ -9,10 +9,10 @@ activity: develop, understand
 kt: 2233
 index: y
 team: TM
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '36'
+ht-degree: 75%
 
 ---
 

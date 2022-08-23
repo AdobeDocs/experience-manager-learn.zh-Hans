@@ -1,26 +1,26 @@
 ---
 title: 具有JSON模式和数据的AEM Forms[Part3]
-seo-title: 具有JSON模式和数据的AEM Forms[Part3]
+seo-title: AEM Forms with JSON Schema and Data[Part3]
 description: 多部分教程，用于指导您完成使用JSON模式创建自适应表单以及查询提交数据时涉及的步骤。
-seo-description: 多部分教程，用于指导您完成使用JSON模式创建自适应表单以及查询提交数据时涉及的步骤。
-feature: 自适应表单
+seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
-topic: 开发
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 412eea77-3cf4-43bb-9d2f-ae860cd9d3be
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 1%
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
-
-# 在数据库{#storing-json-schema-in-database}中存储JSON模式
+# 将JSON模式存储在数据库中 {#storing-json-schema-in-database}
 
 
 为了能够查询已提交的数据，我们需要存储与已提交表单关联的JSON模式。 查询生成器中将使用JSON架构来构建查询。
@@ -152,5 +152,3 @@ public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
 * 我们将自适应表单的绑定数据存储在数据库中。
 
 接下来的步骤是使用QueryBuilder显示要基于JSON架构搜索的字段
-
-

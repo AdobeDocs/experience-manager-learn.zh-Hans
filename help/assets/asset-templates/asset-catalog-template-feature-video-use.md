@@ -1,17 +1,17 @@
 ---
 title: 将资产目录与AEM Commerce和InDesign Server结合使用
 description: AEM 6.4目录增强功能提供了使用AEM资产模板和InDesign Server创建目录页面的功能。  用户可以使用InDesign模板创建目录页面，并将产品属性映射到可编辑的字段，以后可使用这些字段为不同产品创建类似页面。
-version: 6.3, 6.4, 6.5
-topic: 内容管理
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 45daa8e3-ce3b-43de-b3d6-276107215dd4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
-
 
 # 将资产目录与AEM Commerce和InDesign Server结合使用{#using-asset-catalog-with-aem-commerce-and-indesign-server}
 

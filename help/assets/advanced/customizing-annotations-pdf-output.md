@@ -1,26 +1,26 @@
 ---
 title: 在AEM Assets中自定义注释
 description: AEM Assets格式和样式。
-feature: 协作
-version: 6.3, 6.4, 6.5
-topic: 协作
+feature: Collaboration
+version: 6.4, 6.5
+topic: Collaboration
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 972737dd-8ca6-47b4-a4ec-b73355c09cec
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 3%
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
-
 # 在AEM Assets中自定义注释{#using-annotations-in-aem-assets}
 
-AEM支持将批注的输出自定义为PDF。
+AEM支持将注释的输出自定义为PDF。
 
-## PDF批注sling:OsgiConfig定义
+## PDF注释sling:OsgiConfig定义
 
-要自定义PDF批注，请在AEM项目下的&#x200B;****
+要自定义PDF批注，请创建 **sling:OsgiConfig** 的AEM项目中的节点
 
 `/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` 并根据需要调整值：
 

@@ -1,18 +1,18 @@
 ---
 title: 自适应Forms快速入门
-description: '本教程将指导您完成创建多选项卡式自适应表单所涉及的步骤。 您将学习如何使用表、折叠布局和规则编辑器来创作业务规则。 '
-feature: 自适应表单
-version: 6.3,6.4,6.5
-topic: 开发
+description: 本教程将指导您完成创建多选项卡式自适应表单所涉及的步骤。 您将学习如何使用表、折叠布局和规则编辑器来创作业务规则。
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 8c90fe1c-0c83-4287-9766-08d806b8815a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 4%
+source-wordcount: '207'
+ht-degree: 2%
 
 ---
-
 
 # 自适应Forms快速入门 {#getting-started-with-adaptive-forms}
 
@@ -30,8 +30,6 @@ ht-degree: 4%
 
 * **假定您在localhost:4502上运行AEM Forms 6.4或更高版本。**
 
-* [将client-libs-and-logoand](assets/client-libs-and-logo.zip) 入 [门片段下载](assets/getting-started-fragment.zip) 到硬盘。
+* [下载client-libs-and-logo](assets/client-libs-and-logo.zip) 和 [getting-started-fragment](assets/getting-started-fragment.zip) 硬盘上。
 
-* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)将zip文件导入AEM
-
-
+* 使用将zip文件导入AEM [包管理器 ](http://localhost:4502/crx/packmgr/index.jsp)

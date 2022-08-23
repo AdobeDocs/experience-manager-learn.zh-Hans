@@ -1,18 +1,18 @@
 ---
 title: 在AEM Forms中使用交易报表
 description: 利用AEM Forms中的事务报表，可统计自AEM Forms部署中指定日期以来发生的所有事务。
-feature: 自适应表单
-version: 6.4.1,6.5
-topic: 开发
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 36c38cb6-6f6a-4328-abf5-7a30059b66ce
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 2%
+source-wordcount: '367'
+ht-degree: 1%
 
 ---
-
 
 # 在AEM Forms中使用交易报表{#using-transaction-reporting-in-aem-forms}
 
@@ -35,7 +35,7 @@ AEM Forms 6.4.1引入了交易报告功能，用于捕获表单提交数量、�
 
 选择工具 | Forms |查看交易报表
 
-或单击[此处](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)查看事务报表
+或通过单击 [此处](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
 
 ![TransactionReporting](assets/transactionreporting.gif)
 
@@ -47,5 +47,4 @@ AEM Forms 6.4.1引入了交易报告功能，用于捕获表单提交数量、�
 
 如果要查看创作实例上的事务报表，请确保在所有发布实例上配置了反向复制。
 
-要了解有关事务报告的更多信息[，请单击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
-
+了解有关交易报告的更多信息 [请单击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)

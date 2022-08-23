@@ -1,18 +1,18 @@
 ---
 title: 将LDAP与AEM Forms工作流结合使用
 description: 将AEM Forms工作流任务分配给提交者的管理器
-feature: 自适应Forms，工作流
-topic: 集成
+feature: Adaptive Forms, Workflow
+topic: Integrations
 role: Developer
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2e9754ff-49fe-4260-b911-796bcc4fd266
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
-
 
 # 将LDAP与AEM Forms工作流结合使用
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 在AEM工作流中使用自适应表单时，您需要将任务动态分配给表单提交者的管理器。 要完成此用例，我们必须使用Ldap配置AEM。
 
-此处的[详细说明了使用LDAP配置AEM所需的步骤。](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
+有关使用LDAP配置AEM所需的步骤，请参阅 [详情请见。](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
 
 为本文的目的，我附加了用于使用AdobeLDAP配置AEM的配置文件。 这些文件包含在包中，可使用包管理器导入该包。
 
@@ -60,16 +60,16 @@ String managerPorperty = workflowInitiator.getProperty("profile/manager")[0].get
 
 根据manager属性在LDAP中的存储方式，您可能需要执行一些字符串处理来获取管理器ID。
 
-请阅读本文以实施您自己的[ ParticipantChooser 。](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
+请阅读本文以实施您自己的 [  参与者选择器。](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
 
 要在系统上测试此示例(对于Adobe员工，您可以开箱即用此示例)
 
-* [下载并部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。这是用于设置管理器属性的自定义OSGI包。
+* [下载和部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 这是用于设置管理器属性的自定义OSGI包。
 * [下载并安装DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* [使用包管理器将与本文关联的资产导入AEM中](assets/aem-forms-ldap.zip)。作为此包的一部分，包括LDAP配置文件、工作流和自适应表单。
-* 使用适当的LDAP凭据配置AEM。
+* [使用包管理器将与本文关联的资产导入AEM](assets/aem-forms-ldap.zip)此包中包含的.LDAP配置文件、工作流和自适应表单。
+* 使用适当的LDAP凭据在LDAP中配置AEM。
 * 使用LDAP凭据登录AEM。
-* 打开[timeoffrequestform](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* 打开 [timeoffrequestform](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填写表格并提交。
 * 提交者的经理应该得到该表格进行审核。
 

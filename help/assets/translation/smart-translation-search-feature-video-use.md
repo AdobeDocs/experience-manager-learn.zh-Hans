@@ -1,18 +1,18 @@
 ---
 title: 在AEM Assets中使用智能翻译搜索
 description: 智能翻译搜索支持跨AEM内容（包括资产和页面）自动进行跨语言搜索和发现，支持超过50种语言，并减少了手动内容翻译的需求。
-version: 6.3, 6.4, 6.5
-feature: 搜索
-topic: 内容管理
+version: 6.4, 6.5
+feature: Search
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 4f35e3f7-ae29-4f93-bba9-48c60b800238
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 1%
+source-wordcount: '266'
+ht-degree: 0%
 
 ---
-
 
 # 在AEM Assets中使用智能翻译搜索{#using-smart-translation-search-with-aem-assets}
 
@@ -24,7 +24,7 @@ AEM智能翻译搜索允许用户使用非英语术语在AEM中搜索内容，�
 
 智能翻译搜索是AEM智能标记的完美补充，智能标记以英语应用于资产。
 
-此视频假定已设置[AEM智能翻译搜索](smart-translation-search-technical-video-setup.md)。
+此视频假定 [AEM智能翻译搜索](smart-translation-search-technical-video-setup.md) 已设置。
 
 ## 智能翻译搜索的工作原理 {#how-smart-translation-search-works}
 

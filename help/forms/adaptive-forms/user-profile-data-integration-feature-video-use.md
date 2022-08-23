@@ -1,18 +1,18 @@
 ---
 title: 使用用户配置文件数据集成AEM Forms
 description: 将AEM用户配置文件信息与自适应Forms集成
-feature: 自适应表单
-version: 6.3,6.4,6.5
-topic: 开发
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 4f2b6669-d61e-400d-8657-dddb28ae35f4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 3%
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
-
 
 # 使用用户配置文件数据集成AEM Forms{#using-user-profile-data-integration-with-aem-forms}
 
@@ -23,12 +23,10 @@ AEM Forms数据集成允许您配置不同的数据源并将其连接到不同�
 1. AEM用户配置文件
 1. RESTful Web服务
 1. 基于SOAP的Web服务
-1. OData服务
-本文将重点介绍将AEM用户配置文件信息与自适应Forms集成。
+1. OData服务本文将重点介绍将AEM用户配置文件信息与自适应Forms集成。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17432/?quality=9&learn=on)
 
 >[!NOTE]
 >
 >此功能仅在AEM 6.3之后可用。
-

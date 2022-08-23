@@ -1,30 +1,30 @@
 ---
 title: 在AEM Forms中列出自定义资产类型
-seo-title: 在AEM Forms中列出自定义资产类型
+seo-title: Listing Custom Asset Types in AEM Forms
 description: 在AEM Forms中列出自定义资产类型的第2部分
-seo-description: 在AEM Forms中列出自定义资产类型的第2部分
+seo-description: Part 2 of Listing Custom Asset Types in AEM Forms
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
-feature: 自适应表单
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: f221d8ee-0452-4690-a936-74bab506d7ca
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
 
+# 在AEM Forms中列出自定义资产类型 {#listing-custom-asset-types-in-aem-forms}
 
-# 在AEM Forms中列出自定义资产类型{#listing-custom-asset-types-in-aem-forms}
-
-## 创建自定义模板{#creating-custom-template}
+## 创建自定义模板 {#creating-custom-template}
 
 
 为了撰写本文，我们将创建一个自定义模板，以在同一页面上显示自定义资产类型和OOTB资产类型。 要创建自定义模板，请按照以下说明操作
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ![appsfolder](assets/appsfolder_.png)
 
-以下代码使用搜索和列表组件列出了各种类型的资产。 我们会为每种类型的资产创建单独的html元素，如data-type = &quot;videos&quot;标记所示。 对于“videos”的资产类型，我们使用&lt;video>元素在内联播放视频。 对于“worddocuments”的资产类型，我们会使用不同的html标记。
+以下代码使用搜索和列表组件列出了各种类型的资产。 我们会为每种类型的资产创建单独的html元素，如data-type = &quot;videos&quot;标记所示。 对于“视频”的资产类型，我们使用 &lt;video> 元素来在内联播放视频。 对于“worddocuments”的资产类型，我们会使用不同的html标记。
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -76,11 +76,11 @@ ht-degree: 0%
 >
 >第11行 — 请更改图像src以指向您在DAM中选择的图像。
 >
->要在此模板中列出自适应Forms，请新建一个div，并将其数据类型属性设置为“guide”。 您可以复制并粘贴其data-type=&quot;printForm&quot;的div，并将新复制的div的data-type设置为&quot;guide&quot;
+>要在此模板中列出自适应Forms，请创建一个新div，并将其数据类型属性设置为“guide”。 您可以复制并粘贴其data-type=&quot;printForm&quot;的div，并将新复制的div的data-type设置为&quot;guide&quot;
 
-## 配置搜索组件和Lister组件{#configure-search-and-lister-component}
+## 配置搜索和制表器组件 {#configure-search-and-lister-component}
 
-定义自定义模板后，我们现在必须将此自定义模板与“搜索和制表人”组件相关联。 将浏览器[指向此url ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html)。
+定义自定义模板后，我们现在必须将此自定义模板与“搜索和制表人”组件相关联。 将浏览器指向 [到此url ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
 
 切换到设计模式，并配置段落系统，以在允许的组件组中包含搜索和制表器组件。 “搜索”和“制表人”组件是“文档服务”组的一部分。
 
@@ -110,11 +110,11 @@ ht-degree: 0%
 
 ![assettypes](assets/assettypes.png)
 
-现在，您已配置了搜索和制表人门户组件，接下来该看看制表人的行动了。 将浏览器[指向此url ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled)。 结果应类似于下图所示。
+现在，您已配置了搜索和制表人门户组件，接下来该看看制表人的行动了。 将浏览器指向 [到此url ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). 结果应类似于下图所示。
 
 >[!NOTE]
 >
->如果您的门户在发布服务器上列出了自定义资产类型，请确保为“fd-service”用户授予节点&#x200B;**/apps/fp/extensions/querybuilder**&#x200B;的“读取”权限
+>如果您的门户在发布服务器上列出了自定义资产类型，请确保您为“fd-service”用户向节点授予“读取”权限 **/apps/fd/fp/extensions/querybuilder**
 
-![](assets/assettypeslistings.png)
-[资产类型请使用包管理器下载并安装此包。](assets/customassettypekt1.zip) 其中包含示例mp4和word文档以及xdp文件，它们将用作资产类型，以使用搜索和列表组件列出
+![assettypes](assets/assettypeslistings.png)
+[请使用包管理器下载并安装此包。](assets/customassettypekt1.zip) 其中包含示例mp4和word文档以及xdp文件，它们将用作资产类型，以使用搜索和列表组件列出

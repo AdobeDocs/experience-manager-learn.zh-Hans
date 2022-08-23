@@ -1,14 +1,14 @@
 ---
 title: 保存和检索自适应表单数据
 description: 从数据库保存和检索自适应表单数据。 此功能允许表单填写者保存表单，并在以后的日期继续填写表单。
-feature: 自适应表单
-topic: 开发
+feature: Adaptive Forms
+topic: Development
 role: Developer
 type: Tutorial
-version: 6.3,6.4,6.5
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+version: 6.4,6.5
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---

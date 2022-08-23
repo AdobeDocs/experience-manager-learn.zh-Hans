@@ -1,26 +1,26 @@
 ---
 title: 将页面差异与AEM Sites结合使用
-seo-title: 将页面差异与AEM Sites结合使用
+seo-title: Using Page Difference with AEM Sites
 description: AEM Sites的页面差异功能显示了一个以颜色编码的快速视图，其中显示了页面中哪些内容发生了更改（版本、Live Copy、启动项、语言副本）。
-seo-description: AEM Sites的页面差异功能显示了一个以颜色编码的快速视图，其中显示了页面中哪些内容发生了更改（版本、Live Copy、启动项、语言副本）。
+seo-description: AEM Sites' page difference capabilities show provides a quick, color-coded view of what content has changed in a page (version, live copy, launches, language copy).
 topics: authoring
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 4d365957-9a5a-44f8-a117-95c1c0dd757d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 2%
+source-wordcount: '118'
+ht-degree: 1%
 
 ---
-
 
 # 使用“页面差异”功能 {#using-page-difference-with-aem-sites}
 

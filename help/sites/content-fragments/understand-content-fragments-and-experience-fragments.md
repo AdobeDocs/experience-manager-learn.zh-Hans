@@ -4,7 +4,7 @@ description: 了解内容片段和体验片段之间的相似之处和差异，�
 sub-product: assets, sites, content services
 feature: Content Fragments, Experience Fragments
 topics: headless
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 doc-type: article
 activity: understand
 audience: all
@@ -12,7 +12,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 2%
@@ -65,7 +65,7 @@ Adobe Experience Manager的内容片段和体验片段在表面上看似相似�
 <li>本机HTML呈现</li>
 </ul>
 </td>
-</tr><tr><td><strong>变量</strong></td>
+</tr><tr><td><strong>变体</strong></td>
 <td><ul>
 <li>主控变分是正则变分</li>
 <li>变体是特定于用例的，它们可能与渠道保持一致。</li>
@@ -79,7 +79,7 @@ Adobe Experience Manager的内容片段和体验片段在表面上看似相似�
 </td>
 </tr><tr><td><strong>功能</strong></td>
 <td><ul>
-<li>变量</li>
+<li>变体</li>
 <li>版本</li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-variations.html?lang=en#synchronizing-with-master" target="_blank">同步</a> 各个变量中的内容</li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-managing.html?lang=en#comparing-fragment-versions" target="_blank">可视化差异</a> 内容片段版本的</li>
@@ -89,7 +89,7 @@ Adobe Experience Manager的内容片段和体验片段在表面上看似相似�
 </ul>
 </td>
 <td><ul>
-<li>变量</li>
+<li>变体</li>
 <li>作为Live Copy的变体</li>
 <li>版本</li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en#building-blocks" target="_blank">构建基块</a></li>

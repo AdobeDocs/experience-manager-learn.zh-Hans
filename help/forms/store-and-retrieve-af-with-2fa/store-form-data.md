@@ -1,24 +1,25 @@
 ---
 title: 存储表单数据
 description: 将表单数据与新附件映射一起存储到数据库中
-feature: 自适应表单
+feature: Adaptive Forms
 type: Tutorial
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 kt: 6538
 thumbnail: 6538.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2bd9fe63-8f42-4b89-95a0-13ade49bc31b
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 4%
+source-wordcount: '69'
+ht-degree: 0%
 
 ---
 
 # 存储表单数据
 
-下一步是创建一个服务，在数据库中插入一个新行，以存储自适应表单数据和关联的附件。
+下一步是创建一个服务，以在数据库中插入新行，以存储自适应表单数据和关联的附件。
 下面的屏幕快照显示了数据库中的一行。
 
 

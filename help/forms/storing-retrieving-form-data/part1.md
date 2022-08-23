@@ -1,16 +1,16 @@
 ---
 title: 从MySQL数据库存储和检索表单数据 — 配置数据源
 description: 多部分教程，指导您完成存储和检索表单数据时涉及的步骤
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Experienced
 exl-id: dccca658-3373-4de2-8589-21ccba2b7ba6
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '199'
+ht-degree: 4%
 
 ---
 

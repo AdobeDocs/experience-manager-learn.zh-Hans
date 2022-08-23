@@ -2,18 +2,18 @@
 title: 在AEM Assets中使用Dynamic Media 360视频和自定义视频缩略图
 description: AEM 6.5中的Dynamic Media查看器增强功能包括添加了对360视频渲染、360媒体查看器（video360Social和video360VR）以及选择自定义视频缩略图的支持。
 sub-product: dynamic-media
-feature: 视频配置文件
-version: 6.3, 6.4, 6.5
-topic: 内容管理
+feature: Video Profiles
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 4ee0b68f-3897-4104-8615-9de8dbb8f327
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 5%
+source-wordcount: '394'
+ht-degree: 4%
 
 ---
-
 
 # 在AEM Assets中使用Dynamic Media 360视频和自定义视频缩略图
 
@@ -23,7 +23,7 @@ AEM 6.5中的Dynamic Media查看器增强功能包括添加了对360视频渲染
 
 >[!NOTE]
 >
->视频假定您的AEM实例在Dynamic Media S7模式下运行。  [有关在Dynamic Media中设置AEM的说明，请参阅此处](https://helpx.adobe.com/cn/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)。在您上传视频时，如果视频的长宽比为2:1，则默认情况下，Dynamic Media会将视频处理为360视频。 即，宽高比为2:1。
+>视频假定您的AEM实例在Dynamic Media S7模式下运行。  [有关使用Dynamic Media设置AEM的说明，请参阅此处](https://helpx.adobe.com/cn/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). 在您上传视频时，如果视频的长宽比为2:1，则默认情况下，Dynamic Media会将视频处理为360视频。 即，宽高比为2:1。
 
 >[!NOTE]
 >
@@ -49,8 +49,8 @@ Dynamic Media视频现在支持为视频选择自定义缩略图。 用户可以
    <tr>
       <td>Dynamic Media运行模式</td>
       <td>仅Dynamic Media Scene7模式</td>
-      <td>Dynamic Media Scene7模式（仅限a0/&gt;）
-         <br><br>
+      <td>仅Dynamic Media Scene7模式<br>
+         <br>
       </td>
    </tr>
    <tr>

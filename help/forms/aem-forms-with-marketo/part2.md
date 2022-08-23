@@ -2,12 +2,12 @@
 title: AEM Forms与Marketo（第2部分）
 description: 有关使用AEM Forms表单数据模型将AEM Forms与Marketo集成的教程。
 feature: Adaptive Forms, Form Data Model
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: 020852f16de0cdb1e17e19ad989dabf37b7f61f5
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 1%
@@ -199,5 +199,5 @@ public class MarketoConfigurationService {
 ```
 
 1. 在您的AEM服务器上构建并部署包。
-1. [将您的浏览器指](http://localhost:4502/system/console/configMgr) 向configMgrand搜索以查找“Marketo凭据服务配置”
+1. [将您的浏览器指向configMgr](http://localhost:4502/system/console/configMgr) 和搜索“Marketo凭据服务配置”
 1. 指定特定于您的Marketo实例的相应属性

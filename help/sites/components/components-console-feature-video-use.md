@@ -4,19 +4,19 @@ description: 组件控制台为开发人员和管理员提供了一个中心位�
 topics: components
 audience: all
 doc-type: feature video
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 activity: use
-feature: 核心组件
-topic: 内容管理
+feature: Core Components
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 6f33f121-5564-4c46-ab56-7ea382a0ab5a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 3%
+source-wordcount: '174'
+ht-degree: 1%
 
 ---
-
 
 # 使用组件控制台 {#using-the-components-console-with-aem-sites}
 
@@ -31,8 +31,8 @@ ht-degree: 3%
 * [!UICONTROL 策略]:显示给定组件和关联的模板的任何现有策略
 * [!UICONTROL 实时使用情况]:显示包含组件的页面列表
 
-组件控制台位于&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 组件]**下。
-组件控制台URL（本地AEM作者）：[http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
+组件控制台可在 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 组件]**.
+组件控制台URL（本地AEM作者）： [http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
 
 ## 其他资源 {#additional-resources}
 

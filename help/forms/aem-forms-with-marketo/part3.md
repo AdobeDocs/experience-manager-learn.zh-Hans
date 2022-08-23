@@ -1,18 +1,18 @@
 ---
 title: AEM Forms与Marketo（第3部分）
 description: 有关使用AEM Forms表单数据模型将AEM Forms与Marketo集成的教程。
-feature: 自适应Forms，表单数据模型
-version: 6.3,6.4,6.5
-topic: 开发
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
-
 
 # 配置数据源
 
@@ -24,7 +24,7 @@ AEM Forms数据集成允许您配置不同的数据源并将其连接到不同�
 1. 基于SOAP的Web服务
 1. OData服务
 
-对于AEM Forms与Marketo的集成，我们将使用RESTful Web服务。 集成的第一步是配置[数据源。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) 请使用本教程中提供的swagger文件。以下屏幕截图显示了配置数据源时需要指定的重要属性。
+对于AEM Forms与Marketo的集成，我们将使用RESTful Web服务。 集成的第一步是配置 [数据源。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) 请使用本教程中提供的swagger文件。 以下屏幕截图显示了配置数据源时需要指定的重要属性。
 ![数据源](assets/datasource.jfif)
 
 “marketo.json”是swagger文件，将作为本教程资产的一部分提供给您。
@@ -35,7 +35,7 @@ AEM Forms数据集成允许您配置不同的数据源并将其连接到不同�
 
 之后，配置数据源的下一步是创建一个表单数据模型，该模型基于前面步骤中配置的数据源。 要创建表单数据模型，请执行以下步骤：
 
-将您的浏览器指向[数据集成页面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) 此列表列出了在您的AEM实例中创建的所有数据集成。
+将您的浏览器指向 [数据集成页面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) 此列表列出了在您的AEM实例中创建的所有数据集成。
 
 1. 单击创建 |表单数据模型
 1. 提供有意义的标题（如FormsAndMarketo），然后单击“下一步”

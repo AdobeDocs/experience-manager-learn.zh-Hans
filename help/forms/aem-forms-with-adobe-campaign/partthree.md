@@ -1,14 +1,15 @@
 ---
 title: 使用ACS配置文件预填自适应表单
 description: 使用ACS配置文件预填自适应Forms
-feature: 自适应Forms，表单数据模型
-version: 6.3,6.4,6.5
-topic: 开发
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
@@ -17,13 +18,13 @@ ht-degree: 0%
 
 在本部分中，我们将使用从ACS获取的用户档案信息预填自适应表单。 AEM Forms具有预填自适应表单的强大功能。
 
-要了解有关预填自适应表单的更多信息，请阅读本[教程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
+要了解有关预填自适应表单的更多信息，请阅读此内容 [教程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
 
 要通过从ACS获取数据来预填充自适应表单，我们假定ACS中存在与已登录AEM用户具有相同电子邮件的用户档案。 例如，如果登录AEM的人员的电子邮件ID是csimms@adobe.com，则我们希望在ACS中找到电子邮件为csimms@adobe.com的用户档案。
 
 需要执行以下步骤，以使用REST API从ACS获取配置文件信息
 
-* 生成JWT
+* 生成 JWT
 * 用于访问令牌的Exchange JWT
 * 对ACS进行REST调用，并通过电子邮件获取配置文件
 * 使用配置文件信息构建XML文档
@@ -232,5 +233,4 @@ return "Pre Fill Forms Using Campaign Profile";
 * [确保已按照此处所述的步骤执行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [使用包管理器将示例自适应表单导入AEM](assets/pre-fill-af-from-campaign.zip)
 * 确保使用其电子邮件ID由Adobe Campaign中的用户档案共享的用户登录AEM。 例如，如果AEM用户的电子邮件ID为johndoe@adobe.com，则您需要在ACS中拥有电子邮件为johndoe@adobe.com的用户档案。
-* [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled)。
-
+* [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).

@@ -1,18 +1,18 @@
 ---
 title: AEM Forms与Marketo（上）
 description: 有关使用AEM Forms表单数据模型将AEM Forms与Marketo集成的教程。
-feature: 自适应Forms，表单数据模型
-version: 6.3,6.4,6.5
-topic: 开发
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 45047852-4fdb-4702-8a99-faaad7213b61
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
-
 
 # AEM Forms与Marketo
 

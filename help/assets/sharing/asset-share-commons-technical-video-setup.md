@@ -1,19 +1,19 @@
 ---
 title: 在本地AEM上设置资产共享共用
 description: 有关功能和技术了解的材料资产共享共用
-version: 6.3, 6.4, 6.5
-topic: 内容管理
+version: 6.4, 6.5
+topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: ab16d5e0-71d9-4518-a03b-4aa5d2ec95a7
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 2%
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
-
-# 在本地AEM上设置资产共享共用{#setup-asset-share-commons}
+# 在本地AEM上设置资产共享共用 {#setup-asset-share-commons}
 
 有关在本地AEM实例上运行资产共享共用的简短指南。
 

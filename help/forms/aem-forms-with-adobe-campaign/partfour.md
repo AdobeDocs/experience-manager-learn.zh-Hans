@@ -1,18 +1,18 @@
 ---
 title: 使用表单数据模型创建Campaign用户档案
 description: 使用Adobe Campaign Standard表单数据模型创建AEM Forms用户档案时涉及的步骤
-feature: 自适应表单
-version: 6.3,6.4,6.5
-topic: 开发
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 59d5ba6d-91c1-48c7-8c87-8e0caf4f2d7e
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '426'
 ht-degree: 3%
 
 ---
-
 
 # 使用表单数据模型创建Campaign用户档案 {#create-campaign-profile-using-form-data-model}
 
@@ -112,8 +112,7 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 要测试解决方案，请执行以下步骤：
 * [确保已按照此处所述的步骤执行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [下载并解压缩此文件以获取swagger文件](assets/create-acs-profile-swagger-file.zip)
-* 使用swagger文件创建数据源
-创建表单数据模型，并将其基于在上一步中创建的数据源
+* 使用Swagger文件创建数据源创建表单数据模型，并将其基于在上一步中创建的数据源
 * 根据前面步骤中创建的表单数据模型创建自适应表单。
 * 将数据源选项卡中的以下元素拖放到自适应表单上
 

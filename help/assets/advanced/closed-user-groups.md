@@ -1,7 +1,7 @@
 ---
 title: AEM Assets中的已关闭用户组
 description: “已关闭的用户组”(CUG)是一项功能，用于限制对已发布网站上的选定用户组的内容访问权限。 此视频演示了如何将已关闭的用户组与Adobe Experience Manager Assets一起使用，以限制对特定资产文件夹的访问。
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 topic: Administration, Security
 feature: User and Groups
 role: Admin
@@ -9,7 +9,7 @@ level: Intermediate
 kt: 649
 thumbnail: 22155.jpg
 exl-id: a2bf8a82-15ee-478c-b7c3-de8a991dfeb8
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
@@ -36,9 +36,9 @@ ht-degree: 0%
 
 |  | ACL | CUG |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 预期用途 | 在&#x200B;**current** AEM实例上配置和应用内容的权限。 | 在AEM **author**&#x200B;实例上为内容配置CUG策略。 对AEM **publish**&#x200B;实例上的内容应用CUG策略。 |
-| 权限级别 | 为所有级别的用户/组定义已授予/已拒绝的权限：读取、修改、创建、删除、读取ACL、编辑ACL、复制。 | 授予对一组用户/组的读取权限。 拒绝对&#x200B;*所有其他*&#x200B;用户/组的读取访问。 |
-| 发布 | ACL与内容一起发布时，*不*。 | CUG策略&#x200B;*与内容一起发布。* |
+| 预期用途 | 在 **当前** AEM实例。 | 在AEM上为内容配置CUG策略 **作者** 实例。 在AEM上对内容应用CUG策略 **发布** 实例。 |
+| 权限级别 | 为所有级别的用户/组定义已授予/已拒绝的权限：读取、修改、创建、删除、读取ACL、编辑ACL、复制。 | 授予对一组用户/组的读取权限。 拒绝对的读取访问 *所有其他* 用户/群组。 |
+| 发布 | ACL为 *not* 已发布内容。 | CUG策略 *are* 已发布内容。 |
 
 ## 支持链接 {#supporting-links}
 

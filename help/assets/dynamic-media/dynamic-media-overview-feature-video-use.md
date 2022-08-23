@@ -1,23 +1,23 @@
 ---
 title: Dynamic Media与AEM Assets概述
-description: 此视频系列概述了如何使用Adobe Experience Manager Dynamic Media作为内容服务来管理和访问媒体内容。 Dynamic Media允许您管理和发布动态数字体验 — 这是Experience Manager资产特有的功能。 我们的框架和组件套件允许营销人员在所有设备上自定义和提供交互式多媒体体验。
+description: 此视频系列概述了如何使用Adobe Experience Manager Dynamic Media作为内容服务来管理和访问媒体内容。 Dynamic Media让您可以管理和发布动态数字体验 — 这是Experience Manager Assets独有的功能。 我们的框架和组件套件允许营销人员在所有设备上自定义和提供交互式多媒体体验。
 sub-product: dynamic-media
-feature: 智能裁剪、视频配置文件、图像配置文件、查看器预设、360 VR视频、图像集、旋转集
-version: 6.3, 6.4, 6.5
-topic: 内容管理
+feature: Smart Crop, Video Profiles, Image Profiles, Viewer Presets, 360 VR Video, Image Sets, Spin Sets
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
 
-
 # 将Dynamic Media与AEM Assets结合使用 {#understanding-aem-dynamic-media}
 
-此多部分视频系列概述了如何使用Adobe Experience Manager Dynamic Media作为内容服务来管理和访问媒体内容。 Dynamic Media允许您管理和发布动态数字体验 — 这是Experience Manager资产特有的功能。 我们的框架和组件套件允许营销人员在所有设备上自定义和提供交互式多媒体体验。
+此多部分视频系列概述了如何使用Adobe Experience Manager Dynamic Media作为内容服务来管理和访问媒体内容。 Dynamic Media让您可以管理和发布动态数字体验 — 这是Experience Manager Assets独有的功能。 我们的框架和组件套件允许营销人员在所有设备上自定义和提供交互式多媒体体验。
 
 ## Dynamic Media概述
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 * 裁剪到图像路径
 * 从Photoshop文件创建文本模板
 
-## Dynamic Media控制JPEG文件大小（千字节）
+## Dynamic Media控制JPEG文件大小(KB)
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404/?quality=9&learn=on)
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 >
 >图像质量以反向压缩的百分比进行测量，其中100%的质量压缩最小，从而生成高质量图像，但文件大小相对较大。 Jpeg压缩是一种有损压缩方案，其中压缩设置决定图像质量和文件大小。
 
-使用2个命令调整jpeg压缩设置，以平衡jpeg图像质量与生成的文件大小（以千字节为单位），从而提高页面加载速度。 QLT通过调整jpeg压缩质量设置来定义图像质量。 “JPEG大小”命令允许您指定使用压缩需要实现的文件大小。
+使用2个命令调整jpeg压缩设置，以平衡jpeg图像质量与生成的文件大小（以千字节为单位），从而提高页面加载速度。 QLT通过调整jpeg压缩质量设置来定义图像质量。 JPEG大小命令允许您指定使用压缩需要达到的文件大小。
 
 ## 将CC隐藏式字幕添加到Dynamic Media视频
 

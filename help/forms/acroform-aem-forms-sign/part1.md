@@ -1,16 +1,16 @@
 ---
 title: 带有AEM Forms的Acroforms
-seo-title: 将自适应表单数据与Acroform合并
+seo-title: Merge Adaptive Form data with Acroform
 description: Acroforms与AEM Forms集成的第1部分。 使用Acroform创建自适应表单并合并数据以获取PDF。
-feature: 自适应表单
+feature: adaptive-forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+version: 6.4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Acroforms是使用Acrobat创建的表单。 您可以使用Acrobat从头开始�
 
 >[!NOTE]
 >
->如果要发送可填写的Acroform以使用Adobe Sign进行签名，请相应地命名字段。 例如，您可以将字段命名为&#x200B;**Sig_es_:signer1:signature**。 这是Adobe Sign理解的语法。
+>如果要发送可填写的Acroform以使用Adobe Sign进行签名，请相应地命名字段。 例如，您可以为字段命名 **Sig_es_:signer1:签名**. 这是Adobe Sign理解的语法。
 
 >[!NOTE]
 >

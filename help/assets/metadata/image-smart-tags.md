@@ -5,11 +5,11 @@ topic: Content Management
 feature: Smart Tags
 role: User
 level: Intermediate
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 kt: 645
 thumbnail: 17019.jpg
 exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 3%
@@ -25,7 +25,7 @@ AEM Assets的图像智能标记通过自动向图像资产添加派生的元数�
 ## 为AEM 6.x设置{#set-up}
 
 >[!NOTE]
-> 图像的智能标记会自动配置为AEM作为Cloud Service。
+> 图像的智能标记会针对AEMas a Cloud Service自动进行配置。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17023/?quality=12&learn=on)
 

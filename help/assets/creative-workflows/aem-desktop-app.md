@@ -1,20 +1,20 @@
 ---
 title: AEM桌面应用程序
 description: 使用AEM桌面应用程序可简化对桌面上AEM中管理的任何资产（适用于任何应用程序和文件格式）的访问。
-version: 6.5, 6.4, 6.3
-topic: 内容管理
-feature: 桌面应用程序
+version: 6.5, 6.4
+topic: Content Management
+feature: Desktop App
 role: User
 level: Beginner
 kt: 2551
 thumbnail: 28868.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 6765758f-0719-4ed9-83be-8ed192a75b41
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 5%
+source-wordcount: '134'
+ht-degree: 4%
 
 ---
-
 
 # 使用 AEM 桌面应用程序
 
@@ -29,7 +29,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
-> [Adobe资产链](./adobe-asset-link.md) 接Adobe用于在Adobe Creative Cloud应用程序内处理AEM资产的专用解决方案：Photoshop、Illustrator、InDesign。在这些应用程序中使用AEM Assets时，Adobe资产链接比AEM桌面应用程序更可取。
+> [Adobe资产链接](./adobe-asset-link.md) 是Adobe在Adobe Creative Cloud应用程序内使用AEM assets的专用解决方案：Photoshop、Illustrator、InDesign。 在这些应用程序中使用AEM Assets时，Adobe资产链接比AEM桌面应用程序更可取。
 
 ## 其他资源
 

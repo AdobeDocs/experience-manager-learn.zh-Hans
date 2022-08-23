@@ -5,16 +5,16 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
+version: Cloud Service
 topic: Development
 kt: 8842
-source-git-commit: d38da94bd4164163a16899b565c90b159194580a
+exl-id: 274018b9-91fe-45ad-80f2-e7826fddb37e
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
 
 ---
-
 
 # 安装所需软件
 
@@ -34,8 +34,3 @@ ht-degree: 0%
 * 打开命令提示符窗口并导航到 **c:\cloudmanager**
 * 复制并粘贴 [文本文件](assets/creating-maven-project.txt) 在命令提示符窗口中。 您可能需要根据 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 最新版本是撰写本文时的30个版本。
 * 按Enter键执行命令。如果一切正常，您应会看到生成成功消息。
-
-
-
-
-

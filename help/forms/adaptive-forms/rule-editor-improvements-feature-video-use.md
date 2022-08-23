@@ -1,28 +1,28 @@
 ---
 title: 改进了AEM Forms中的规则编辑器
-seo-title: 改进了AEM Forms中的规则编辑器
-description: '规则编辑器允许用户向AEM自适应Forms添加逻辑。 AEM 6.3通过多种方式改进了规则编辑器，从而让技术用户和非技术用户都可以更便捷地添加智能。 '
-seo-description: '规则编辑器允许用户向AEM自适应Forms添加逻辑。 AEM 6.3通过多种方式改进了规则编辑器，从而让技术用户和非技术用户都可以更便捷地添加智能。 '
+seo-title: Rule Editor Improvements in AEM Forms
+description: 规则编辑器允许用户向AEM自适应Forms添加逻辑。 AEM 6.3通过多种方式改进了规则编辑器，从而让技术用户和非技术用户都可以更便捷地添加智能。
+seo-description: The rule editor enables users to add logic to AEM Adaptive Forms. AEM 6.3 improves the rule editor in several ways making it easier and faster for both technical and non-technical users alike to add intelligence.
 uuid: 35e8cc7c-04cf-43b4-bbc7-41bfd909cfba
-feature: 自适应表单
+feature: Adaptive Forms
 topics: authoring
 audience: author
 doc-type: technical video
 activity: use
-version: 6.3,6.4,6.5.
+version: 6.4,6.5.
 discoiquuid: 51750b3f-1fda-43ae-b3ed-1eede83b19d5
-topic: 管理
+topic: Administration
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 98a35bd9-a659-41f9-a772-267730c1f579
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 1%
+source-wordcount: '145'
+ht-degree: 0%
 
 ---
 
-
-# AEM Forms {#rule-editor-improvements-in-aem-forms}中的规则编辑器改进
+# 改进了AEM Forms中的规则编辑器 {#rule-editor-improvements-in-aem-forms}
 
 规则编辑器允许用户向AEM自适应Forms添加逻辑。 AEM 6.3通过多种方式改进了规则编辑器，从而让技术用户和非技术用户都可以更便捷地添加智能。
 

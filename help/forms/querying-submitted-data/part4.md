@@ -1,24 +1,24 @@
 ---
 title: 具有JSON模式和数据的AEM Forms[Part4]
-seo-title: 具有JSON模式和数据的AEM Forms[Part4]
+seo-title: AEM Forms with JSON Schema and Data[Part4]
 description: 多部分教程，用于指导您完成使用JSON模式创建自适应表单以及查询提交数据时涉及的步骤。
-seo-description: 多部分教程，用于指导您完成使用JSON模式创建自适应表单以及查询提交数据时涉及的步骤。
-feature: 自适应表单
+seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
-topic: 开发
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a8d8118d-f4a1-483f-83b4-77190f6a42a4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
-
 
 # 查询提交的数据
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 >
 >本教程的当前版本不支持查询多个列。
 
-选择表单以执行查询时，将对&#x200B;**/bin/getdatakeysfromschema**&#x200B;进行GET调用。 此GET调用会返回与表单架构关联的必填字段。 然后，查询生成器的下拉列表中会填充必填字段，以便您生成查询。
+选择表单以执行查询时，将对GET调用 **/bin/getdatakeysfromschema**. 此GET调用会返回与表单架构关联的必填字段。 然后，查询生成器的下拉列表中会填充必填字段，以便您生成查询。
 
 以下代码片段对JSONSchemaOperations服务的getRequiredColumnsFromSchema方法进行了调用。 我们将架构的属性和必需元素传递到此方法调用。 此函数调用返回的数组随后用于填充查询生成器下拉列表
 
@@ -64,9 +64,9 @@ public JSONArray getData(String formName) throws SQLException, IOException {
  }
 ```
 
-单击GetResult按钮时，将对&#x200B;**&quot;/bin/querydata&quot;**&#x200B;发起Get调用。 我们通过查询参数将QueryBuilder UI构建的查询传递到Servlet。 然后，Servlet将此查询按摩到SQL查询中，以用于查询数据库。 例如，如果您正在搜索以检索名为“Mouse”的所有产品，查询生成器查询字符串将为$.productname = &#39;Mouse&#39;。 然后，此查询将转换为以下内容
+单击GetResult按钮时，将向 **&quot;/bin/querydata&quot;**. 我们通过查询参数将QueryBuilder UI构建的查询传递到Servlet。 然后，Servlet将此查询按摩到SQL查询中，以用于查询数据库。 例如，如果您正在搜索以检索名为“Mouse”的所有产品，查询生成器查询字符串将为$.productname = &#39;Mouse&#39;。 然后，此查询将转换为以下内容
 
-从aemformswithjson中选择* 。  JSON_EXTRACT(formsubmissions .formdata，&quot;$.productName &quot;)= &#39;Mouse&#39;的表单提交
+选择 &#42; 从aemformswithjson 。  JSON_EXTRACT(formsubmissions .formdata，&quot;$.productName &quot;)= &#39;Mouse&#39;的表单提交
 
 然后，返回此查询的结果以填充UI中的表。
 
@@ -77,6 +77,5 @@ public JSONArray getData(String formName) throws SQLException, IOException {
 1. 使用示例json模式创建自适应表单
 1. 配置自适应表单以提交到“customsubmithelpx”自定义提交操作
 1. 填写表格并提交
-1. 将您的浏览器指向[dashboard.html](http://localhost:4502/content/AemForms/dashboard.html)
+1. 将您的浏览器指向 [dashboard.html](http://localhost:4502/content/AemForms/dashboard.html)
 1. 选择表单并执行简单查询
-

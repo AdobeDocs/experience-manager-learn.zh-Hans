@@ -1,19 +1,19 @@
 ---
 title: 资产共享共用中的主题介绍
 description: 有关功能和技术了解的材料资产共享共用
-version: 6.3, 6.4, 6.5
-topic: 内容管理
+version: 6.4, 6.5
+topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 3%
+source-wordcount: '113'
+ht-degree: 1%
 
 ---
 
-
-# 资产共享共用中的主题简介{#asset-share-commons-theme}
+# 资产共享共用中的主题介绍 {#asset-share-commons-theme}
 
 资产共享共用中的主题简介。 该视频将逐步介绍如何使用自定义颜色方案创建新主题。
 
@@ -72,7 +72,7 @@ ht-degree: 3%
 @msgWarningBackgroundColor: @yellow;
 ```
 
-下载[自定义客户端库主题](assets/asc-theme-demo.zip)
+下载 [自定义客户端库主题](assets/asc-theme-demo.zip)
 
 ## 其他资源{#additional-resources}
 

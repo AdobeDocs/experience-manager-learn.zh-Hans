@@ -1,18 +1,18 @@
 ---
 title: 在工作流中捕获表单数据模型服务中的错误消息
 description: 从AEM Forms 6.5.1开始，我们现在能够捕获在使用调用表单数据模型服务作为AEM工作流中的步骤时生成的错误消息。 工作流.
-feature: 工作流
-version: 6.5.1,6.5.2
-topic: 开发
+feature: Workflow
+version: 6.5
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 8cae155c-c393-4ac3-a412-bf14fc411aac
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 1%
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
-
 
 # 在调用表单数据模型服务步骤中捕获错误消息
 
@@ -45,5 +45,3 @@ ht-degree: 1%
 
 }
 ```
-
-

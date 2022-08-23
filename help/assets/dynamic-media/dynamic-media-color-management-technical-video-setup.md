@@ -2,18 +2,18 @@
 title: 了解使用AEM Dynamic Media进行色彩管理
 description: 在此视频中，我们将探索Dynamic Media色彩管理，以及如何使用它在中为AEM Assets提供颜色校正预览功能。
 sub-product: dynamic-media
-feature: 图像配置文件、视频配置文件
-version: 6.3, 6.4, 6.5
-topic: 内容管理
+feature: Image Profiles, Video Profiles
+version: 6.4, 6.5
+topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 15%
+source-wordcount: '319'
+ht-degree: 17%
 
 ---
-
 
 # 了解使用AEM Dynamic Media进行色彩管理{#understanding-color-management-with-aem-dynamic-media}
 
@@ -23,7 +23,7 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->[启用Dynamic ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) Media AEM以使用此功能。
+>[启用Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) 在AEM中使用此功能。
 
 此功能可作为功能包，在AEM 6.1和6.2版本中使用。
 
@@ -90,12 +90,12 @@ ht-degree: 15%
 | 名称 | 色彩空间 | 描述 |
 | ------------------- | ---------- | ------------------------------------- |
 | AdobeRGB | RGB | Adobe RGB（1998年） |
-| AppleRGB | RGB | Apple RGB |
-| CIERGB | RGB | CIE RGB |
+| AppleRGB | RGB | AppleRGB |
+| CIERGB | RGB | CIERGB |
 | CoatedFogra27 | CMYK | 涂层FOGRA27(ISO 12647-2:2004) |
 | CoatedFogra39 | CMYK | 涂层FOGRA39(ISO 12647-2:2004) |
 | CoatedGraCol | CMYK | 涂层GRACoL 2006(ISO 12647-2:2004) |
-| ColorMatchRGB | RGB | 颜色匹配RGB |
+| ColorMatchRGB | RGB | ColorMatchRGB |
 | EuropeISOCoated | CMYK | 欧洲ISO涂层FOGRA27 |
 | EuroscaleCoated | CMYK | Euroscale Coated v2 |
 | EuroscaleUncoated | CMYK | Euroscale Uncoated v2 |
@@ -107,13 +107,13 @@ ht-degree: 15%
 | 新闻纸SNAP2007 | CMYK | 美国新闻纸（2007年快照） |
 | NTSC | RGB | NTSC（1953年） |
 | PAL | RGB | PAL/SECAM |
-| ProPhoto | RGB | ProPhoto RGB |
+| ProPhoto | RGB | ProPhotoRGB |
 | PS4Default | CMYK | Photoshop 4默认CMYK |
 | PS5默认 | CMYK | Photoshop 5默认CMYK |
 | SheetfedCoated | CMYK | 美国钣金涂层v2 |
 | SheetfedUncoated | CMYK | 美国平板纸未涂层v2 |
 | SMPTE | RGB | SMPTE-C |
-| sRGB | RGB sRGB | IEC61966-2.1 |
+| sRGB | RGBsRGB | IEC61966-2.1 |
 | UncoatedFogra29 | CMYK | 无涂层FOGRA29(ISO 12647-2:2004) |
 | WebCoated | CMYK | 美国涂层网络(SWOP)v2 |
 | WebCoatedFogra28 | CMYK | Web Coated FOGRA28(ISO 12647-2:2004) |

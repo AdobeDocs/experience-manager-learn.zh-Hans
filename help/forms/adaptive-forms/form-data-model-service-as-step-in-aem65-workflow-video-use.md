@@ -1,19 +1,19 @@
 ---
 title: 在AEM 6.5工作流中使用表单数据模型服务作为步骤
 description: AEM Forms 6.5引入了在AEM工作流中创建变量的功能。 使用AEM工作流中的“调用表单数据模型服务”这一新功能变得非常简单。 以下视频将指导您完成在AEM工作流中使用调用表单数据模型服务涉及的步骤。
-feature: 工作流
+feature: Workflow
 type: Tutorial
-version: 6.5.
-topic: 开发
+version: 6.5
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 1f13d82e-c1d0-4c8c-8468-b4a4c5897c71
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 1%
+source-wordcount: '272'
+ht-degree: 0%
 
 ---
-
 
 # 在AEM 6.5工作流中使用表单数据模型服务作为步骤 {#using-form-data-model-service-as-step-in-workflow}
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 要在服务器上测试此功能，请按照以下说明操作
 
-* 如[此处](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)所述，使用SampleRest.war文件设置tomcat。Tomcat中部署的war文件具有返回申请人信用得分的代码。信用得分是200到800之间的随机数
+* 如所述，使用SampleRest.war文件设置tomcat [此处](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)在Tomcat中部署的战争文件具有返回申请人信用评分的代码。信用评分是200到800之间的随机数
 
 * [ 使用包管理器将资产导入AEM](assets/aem65-loanapplication.zip)
 * 该包包含以下内容：
@@ -34,7 +34,7 @@ ht-degree: 1%
    * 使用FDM步骤的工作流模型。
    * 在FDM步骤中使用的表单数据模型。
    * 自适应表单，在提交时触发工作流。
-* 打开[MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled)。 填写详细信息并提交。 在提交表单时，将触发[loanapplication workflow](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)。
+* 打开 [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). 填写详细信息并提交。 在提交表单时， [外部应用程序工作流](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) 触发。
 
 ![ workflow ](assets/invokefdm651.PNG).
 如果信用分数超过500，则工作流会利用或拆分组件将应用程序路由到管理员。 如果信用分数小于500，则申请将被路由到付款。

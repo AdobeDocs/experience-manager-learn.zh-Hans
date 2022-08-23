@@ -1,18 +1,18 @@
 ---
 title: 改进了AEM Forms中的表单编辑器
 description: AEM 6.3在此版本中引入了一些新增功能和增强功能，以简化自适应表单和文档的创作体验。 这些增强功能有助于您缩短上市时间，并使企业用户能够处理表单和文档
-feature: 自适应表单
-version: 6.3,6.4,6.5
-topic: 开发
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a2d21f2e-3dbb-454f-8a02-101dc3af9b1e
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 1%
+source-wordcount: '187'
+ht-degree: 0%
 
 ---
-
 
 # 改进了AEM Forms中的表单编辑器 {#form-editor-improvements-in-aem-forms}
 
