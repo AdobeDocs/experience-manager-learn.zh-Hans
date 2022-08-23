@@ -5,10 +5,10 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: 2cb08c584cb8dce27fd74314d7eba69ef4f8a875
+source-git-commit: 614db8b03a823b60846ab8ccfa8fbc29a41f7791
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1686'
+ht-degree: 3%
 
 ---
 
@@ -55,6 +55,7 @@ ht-degree: 0%
    + [规则编辑器中的自定义函数](adaptive-forms/custom-functions-aem-forms.md)
    + [在网页中嵌入自适应表单](adaptive-forms/embed-af-web-page.md)
    + [创建字符串数组](adaptive-forms/converting-comma-seperated-string-to-array.md)
+   + [AEM Forms中的项目加载路径](adaptive-forms/using-item-load-path.md)
    + [在OSGi工作流中使用XML中的设置值](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
    + [在OSGi工作流中使用JSON中的设置值](adaptive-forms/setvalue-json-data-in-aem-forms-workflow-article-use.md)
    + [在AEM Forms工作流中发送电子邮件组件](adaptive-forms/email-step-aem-workflow-video-use.md)
