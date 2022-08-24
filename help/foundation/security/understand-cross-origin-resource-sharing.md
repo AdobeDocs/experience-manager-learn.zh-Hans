@@ -1,7 +1,7 @@
 ---
 title: 了解与AEM的跨源资源共享(CORS)
 description: Adobe Experience Manager的跨域资源共享(CORS)可帮助非AEM Web属性对AEM进行客户端调用（经过身份验证和未经身份验证）以获取内容或直接与AEM交互。
-version: 6,4, 6.5
+version: 6.4, 6.5
 sub-product: foundation, content-services, sites
 topics: security, development, content-delivery
 activity: understand
@@ -11,7 +11,7 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 1%
