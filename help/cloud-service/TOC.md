@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: b04e247c091634030e5377fdb8a159f8c7cce904
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '823'
 ht-degree: 21%
 
 ---
@@ -213,6 +213,7 @@ ht-degree: 21%
    + 与Microsoft Power集成自动化{#forms-cs-and-power-automate}
       + [配置集成](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
       + [解析提交的表单数据](./forms/forms-cs-and-power-automate/send-email-notification.md)
+      + [将DoR作为电子邮件附件发送](./forms/forms-cs-and-power-automate/send-DoR-email-attachment.md)
    + 与Microsoft Dynamics集成{#formscs-dynamics-crm}
       + [创建Dynamics应用程序](./forms/formscs-dynamics-crm/create-dynamics-account.md)
       + [配置数据源](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
