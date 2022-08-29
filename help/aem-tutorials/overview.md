@@ -2,26 +2,27 @@
 title: AEM 教程
 description: Adobe Experience Manager的视频和教程集合。
 exl-id: fe83a2dc-b43a-4e71-9b03-d31ec4f6a6ff
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: ebe252116f677ff7486346077736d0ee450896c1
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 31%
+source-wordcount: '170'
+ht-degree: 28%
 
 ---
 
-# AEM 教程 {#overview}
+# Experience Manager教程 {#overview}
 
 Adobe Experience Manager(AEM)是领先的体验管理平台。 本用户指南包含可帮助您从AEM中实现最大价值的视频和教程。
 
-## AEM 视频和教程
+## AEM教程
 
 + [AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 + [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html)
 + [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html)
 + [AEM asCloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=zh-Hans)
 + [AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/overview.html)
++ [AEM Guides 教程](https://experienceleague.adobe.com/docs/experience-manager-guides-learn/tutorials/overview.html)
 
-## AEM多步Tutorials
+## AEM多步教程
 
 + [《AEM Sites 快速入门》 - WKND 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
 + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)
