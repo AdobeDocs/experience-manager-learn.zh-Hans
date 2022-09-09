@@ -3,16 +3,22 @@ title: AEM Assets 视频和教程
 description: 观看我们的视频，获取AEM资产支持和帮助。
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: 9aae58c3301a7067baca374d6499f1afc3c95b06
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 18%
+source-wordcount: '205'
+ht-degree: 19%
 
 ---
 
 # AEM Assets 视频和教程 {#overview}
 
 Adobe Experience Manager(AEM)Assets是AEM Platform上的一款数字资产管理工具，它允许用户在基于Web的存储库中创建、管理和共享其数字资产（图像、视频、文档和音频剪辑）。 本用户指南包含有关AEM Assets的众多特性和功能的视频和教程。
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_assets_overview"
+>title="AEM Assets"
+>abstract="了解如何快速查找和编辑所需的资产。"
+>additional-url="https://video.tv.adobe.com/v/336196" text="AEM Assets"
 
 ## AEM Assets
 
