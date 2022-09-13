@@ -9,16 +9,15 @@ level: Intermediate
 kt: 10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '637'
 ht-degree: 1%
 
 ---
 
 
 # AEM Headless SPA部署
-
 
 AEM无头单页应用程序(SPA)部署涉及基于JavaScript的应用程序，这些应用程序是使用React或Vue等框架构建的，它们以无头方式使用AEM中的内容并与之交互。
 
@@ -110,6 +109,27 @@ Adobe提供了一个在React中编码的单页应用程序示例。
                <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/react-app.md" title="React应用程序">React应用程序</a></p>
                <p class="is-size-6">以React编写的单页应用程序示例，用于使用AEM Headless GraphQL API中的内容。</p>
                <a href="../example-apps/react-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
+               </a>
+           </div>
+       </div>
+   </div>
+</div>
+<!-- Next.js app -->
+<div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Next.js app" tabindex="0">
+   <div class="card">
+       <div class="card-image">
+           <figure class="image is-16by9">
+               <a href="../example-apps/next-js.md" title="Next.js应用程序" tabindex="-1">
+                   <img class="is-bordered-r-small" src="../example-apps/assets/next-js/next-js-card.png" alt="Next.js应用程序">
+               </a>
+           </figure>
+       </div>
+       <div class="card-content is-padded-small">
+           <div class="content">
+               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/next-js.md" title="Next.js应用程序">Next.js应用程序</a></p>
+               <p class="is-size-6">使用Next.js编写的单页应用程序示例，用于使用AEM无头GraphQL API中的内容。</p>
+               <a href="../example-apps/next-js.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                </a>
            </div>
