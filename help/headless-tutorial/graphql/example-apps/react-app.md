@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
+source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '941'
 ht-degree: 4%
 
 ---
 
-# React App
+# React App{#react-app}
 
 示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此React应用程序演示了如何使用AEM GraphQL API通过持久查询来查询内容。 用于JavaScript的AEM无头客户端用于执行为应用程序提供动力的GraphQL持久查询。
 
@@ -26,6 +26,11 @@ ht-degree: 4%
 查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
 A [分步完整教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans) 描述此React应用程序的生成方式。
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_react_app"
+>title="自定义React应用程序示例中的内容"
+>abstract="我们已设置了一个现代化的React应用程序，您可以使用该应用程序了解如何使用无头功能集自定义内容。"
 
 ## 前提条件 {#prerequisites}
 

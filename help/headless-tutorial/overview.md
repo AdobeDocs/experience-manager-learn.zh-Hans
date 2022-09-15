@@ -7,20 +7,25 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '517'
 ht-degree: 7%
 
 ---
 
-# AEM无头Tutorials
+# AEM无头Tutorials{#aem-headless-tutorials}
 
 Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将其内容交付为JSON。 使用动手实践教程了解如何使用各种选项并选择适合您的选项。
 
 >[!TIP]
 >
 >本教程集合专为那些喜欢 **学习**. 如果您喜欢从头开始学习概念，请查看 [AEM Headless开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). 这套教程和历程是相辅相成的。
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_edit_inline_content"
+>title="编辑内嵌内容"
+>abstract="了解如何使用无头功能集直接编辑从中引用的页面中的内容。"
 
 ## Tutorials（按API）
 
