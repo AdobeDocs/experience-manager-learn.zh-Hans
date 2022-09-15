@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: 614db8b03a823b60846ab8ccfa8fbc29a41f7791
+source-git-commit: 164741ce5ae7d00f904365589438c2eaaf1e05db
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1695'
 ht-degree: 3%
 
 ---
@@ -279,6 +279,7 @@ ht-degree: 3%
    + [文档服务：为XMLFormService第1部分调整bmc池大小的步骤](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-1.md)
    + [文档服务：为XMLFormService part2调整bmc池大小的步骤](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-2.md)
    + [文档服务：在JMX控制台中调整参数的步骤](troubleshooting/steps-to-tweak-parameters-on-jmx-console.md)
+   + [允许将大型xml数据文件与模板合并](troubleshooting/fix-timeout-errors-when-merging-large-xml-wth-template.md)
    + [PDFG:如何在PDFG中更改交易超时](troubleshooting/how-to-change-the-transaction-timeout-in-pdfg.md)
    + [PDFG:PDFG中如何更新CORBA超时](troubleshooting/how-to-update-corba-timeout-in-pdfg.md)
    + [PDFG:如何更新PDFG中的超时](troubleshooting/how-to-update-the-timeouts-in-pdfg.md)
