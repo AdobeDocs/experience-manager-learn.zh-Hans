@@ -5,10 +5,10 @@ version: Cloud Service
 activity: develop
 audience: developer
 user-guide-title: 《AEM Sites 快速入门》 - WKND 教程
-user-guide-description: 面向不熟悉 AEM 的开发人员的多部分教程。实施 AEM Sites，打造虚构的生活方式品牌 WKND。
+user-guide-description: 面向不熟悉 AEM 的开发人员的多节教程。实施 AEM Sites，打造虚构的生活方式品牌 WKND。启用前端管道，以加快开发到部署周期的速度。
 breadcrumb-title: AEM Sites WKND 教程
 index: y
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 96e1c95b7cd672aa5d4f79707735abc86dae7b8a
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -33,5 +33,9 @@ ht-degree: 0%
    + [1 — 创建站点](./site-template/create-site.md)
    + [2 — 创作和发布简介](./site-template/author-content-publish.md)
    + [3 — 使用Adobe XD规划UI](./site-template/ui-planning-adobe-xd.md)
-   + [3 — 页面模板](./site-template/page-templates.md)
-   + [4 — 天明](./site-template/theming.md)
+   + [4 — 页面模板](./site-template/page-templates.md)
+   + [5 — 天明](./site-template/theming.md)
++ 启用前端管道 — DevOps{#enable-frontend-pipeline-devops}
+   + [概述](./enable-frontend-pipeline/overview.md)
+
+
