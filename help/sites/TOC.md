@@ -3,10 +3,10 @@ user-guide-title: AEM Sites 视频和教程
 user-guide-description: Adobe Experience Manager Sites 的视频和教程集合。
 breadcrumb-title: AEM Sites 教程
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 552e5fbeb5dafc6d82763d5c3b31cc6d17131739
+source-git-commit: 798b366a5add2831bf60a8d89968bad16e48802c
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 26%
+source-wordcount: '434'
+ht-degree: 25%
 
 ---
 
@@ -48,6 +48,8 @@ ht-degree: 26%
    + [使用体验片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [构建块](experience-fragments/building-blocks.md)
    + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + 专家建议 {#expert-advice}
+      + [内容片段提示](content-fragments/expert-advice/content-fragments.md)
 + 开发 {#developing}
    + [AEM 项目原型](developing/aem-project-archetype.md)
    + [开始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
@@ -113,3 +115,8 @@ ht-degree: 26%
       + [使用体验片段选件创建Target活动](integrations/adobe-target/create-target-activity.md)
       + [使用可视化体验编辑器进行个性化](integrations/adobe-target/personalization-using-vec.md)
       + [完整网页体验的个性化](integrations/adobe-target/personalization-web-page.md)
++ 专家资源 {#expert-resources}
+   + [AEM Sites成熟度评估](expert-resources/maturity-assessment.md)
+   + [站点维护](expert-resources/site-maintenance.md)
+   + [AEM Champion提示和技巧：会话1](expert-resources/champion-tips-1.md)
+   + [AEM Champion提示和技巧：会议2](expert-resources/champion-tips-2.md)
