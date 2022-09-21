@@ -8,10 +8,10 @@ user-guide-title: 《AEM Sites 快速入门》 - WKND 教程
 user-guide-description: 面向不熟悉 AEM 的开发人员的多节教程。实施 AEM Sites，打造虚构的生活方式品牌 WKND。启用前端管道，以加快开发到部署周期的速度。
 breadcrumb-title: AEM Sites WKND 教程
 index: y
-source-git-commit: 96e1c95b7cd672aa5d4f79707735abc86dae7b8a
+source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '108'
+ht-degree: 37%
 
 ---
 
@@ -37,5 +37,8 @@ ht-degree: 0%
    + [5 — 天明](./site-template/theming.md)
 + 启用前端管道 — DevOps{#enable-frontend-pipeline-devops}
    + [概述](./enable-frontend-pipeline/overview.md)
-
+   + [1 — 查看全栈项目](./enable-frontend-pipeline/review-uifrontend-module.md)
+   + [2 — 更新项目以使用前端管道](./enable-frontend-pipeline/update-project.md)
+   + [3 — 使用前端管道部署](./enable-frontend-pipeline/create-frontend-pipeline.md)
+   + [4 — 注意事项](./enable-frontend-pipeline/considerations.md)
 
