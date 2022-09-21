@@ -3,7 +3,7 @@ title: 网站层次结构、分类和标记提示
 description: 网站层级、分类和标记提示最佳实践
 hide: true
 hidefromtoc: true
-source-git-commit: 6f4d811e796b34985fa9d5af335239948e59c1ef
+source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 1%
@@ -34,3 +34,4 @@ AEM成熟度评估主要针对内部部署和托管服务实施。 由于每个�
 建议的AEM成熟度评估领域：设计和架构、产品管理和策略、数字资产管理和交付、分析、测试和安全。
 
 为AEM冠军Greg Dimeris提供了巨大的谢礼，用于从多篇Experience League文章以及他自己的最佳实践中聚合此信息！
+
