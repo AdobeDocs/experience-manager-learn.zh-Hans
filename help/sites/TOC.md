@@ -3,9 +3,9 @@ user-guide-title: AEM Sites 视频和教程
 user-guide-description: Adobe Experience Manager Sites 的视频和教程集合。
 breadcrumb-title: AEM Sites 教程
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+source-git-commit: 8343ce6e3c9f144dddfc9f5bc80b436542f5be02
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '432'
 ht-degree: 25%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 25%
    + [Web优化图像交付](components/web-optimized-image-delivery.md)
    + [组件控制台](components/components-console-feature-video-use.md)
 + 内容片段 {#content-fragments}
+   + [内容片段控制台](content-fragments/content-fragments-console.md)
    + [创作内容片段](content-fragments/content-fragments-feature-video-use.md)
    + [交付内容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [翻译内容片段](content-fragments/content-fragments-translation-feature-video-use.md)
