@@ -1,11 +1,24 @@
 ---
 title: 网站层次结构、分类和标记提示
-description: 网站层级、分类和标记提示最佳实践
+seo-title: Overview of Authoring in AEM Sites
+description: 以下视频概述了在AEM创作环境中创作的基本概念。 它使用站点控制台作为基础。
+seo-description: The following video provides an overview of basic concepts of authoring in an AEM author environment. It uses the Sites console as a basis.
+feature: Page Editor, Editable Templates
+topics: authoring, publishing
+audience: author, marketer
+doc-type: feature video
+activity: use
+version: 6.4, 6.5, Cloud Service
+kt: 4242
+thumbnail: 33594.jpg
+topic: Content Management
+role: User
+level: Beginner
 hide: true
 hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
@@ -16,8 +29,6 @@ ht-degree: 0%
 元数据和标记是提高AEM效率的关键。 用户、领导者和管理层认识到需要全面的战略，但他们发现这很难取得进展。 通常，知识在用户之间是孤立的，使整体策略变得困难，并使调整更成问题。
 
 元数据和标记之间有何区别？ 在推动您的策略时需要考虑哪些业务方面？
-
-可以找到更详细的摘要 [此处](https://adobe.sharepoint.com/:w:/r/sites/ACSSuccessServices/_layouts/15/Doc.aspx?sourcedoc=%7BFE5E873A-A3B6-4F40-BF22-A2C9F1269802%7D&amp;file=AEM_TagTaxonomyAndMetadata_BestPractice_en%20(2).docx&amp;action=default&amp;mobileredirect=true).
 
 ## 元数据的用途是什么？
 
@@ -185,7 +196,7 @@ ht-degree: 0%
 
 *要创建策略，请咨询以下问题：*
 
-* 要解决业务问题/业务问题/业务问题，需要哪类内容和“其他信息”（=元数据）？
+* 要解决业务问题/业务问题/业务问题，需要哪种内容和“其他信息”（=元数据）？
 * 架构中的变量、“字段”以及哪些可能值？ 哪些变量需要自由文本输入，这些变量可以按类型（数字、日期、布尔值……）、一组固定值（例如国家/地区）或给定分类中的标记来缩小范围。 需要多少个标记？
 * 元数据可以解决哪些技术问题/问题/问题？
 * 如何获取/创建该内容/元数据？ 获取/创建该元数据需要多少费用？

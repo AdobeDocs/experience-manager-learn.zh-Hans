@@ -1,11 +1,12 @@
 ---
-title: 网站层次结构、分类和标记提示
-description: 网站层级、分类和标记提示最佳实践
-hide: true
-hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+title: 您的AEM Sites成熟度评估
+seo-title: AEM Sites Maturity Assessment
+description: 此检查列表概述了您在评估AEM Sites实例的成熟度时，您和您的团队应该回答的关键问题
+seo-description: This checklist provides an overview of key questions you and your team should be answering when evaluating the maturity of your AEM Sites instance
+audience: author, marketer, developer
+source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '332'
 ht-degree: 1%
 
 ---
