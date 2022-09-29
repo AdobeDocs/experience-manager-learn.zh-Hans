@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: 164741ce5ae7d00f904365589438c2eaaf1e05db
+source-git-commit: 5277b7a6ceba4473ab2808f980c8faa5bf69c757
 workflow-type: tm+mt
-source-wordcount: '1695'
+source-wordcount: '1701'
 ht-degree: 3%
 
 ---
@@ -155,11 +155,12 @@ ht-degree: 3%
    + [创建客户端库](sign-multiple-documents/create-client-lib.md)
    + [创建表单模板](sign-multiple-documents/create-af-template.md)
    + [创建初始表单](sign-multiple-documents/create-initial-form.md)
-   + [创建Forms以进行签名](sign-multiple-documents/create-forms-for-signing.md)
+   + [创建用于签名的表单](sign-multiple-documents/create-forms-for-signing.md)
    + [测试解决方案](sign-multiple-documents/testing-and-trouble-shooting.md)
 + 自定义工作流步骤{#custom-workflow-steps}
    + [从xml文档提取节点](custom-workflow-steps/extract-xml-node.md)
    + [将文档保存到文件系统](custom-workflow-steps/write-payload-document.md)
+   + [将提交的数据保存在字符串变量中](custom-workflow-steps/save-submitted-data-in-string-variable.md)
 + AEM工作流中的变量{#variables-aem-workflow}
    + [简介 — 工作流中的变量](variables-aem-workflow/introduction.md)
    + [XML变量](variables-aem-workflow/part1.md)
