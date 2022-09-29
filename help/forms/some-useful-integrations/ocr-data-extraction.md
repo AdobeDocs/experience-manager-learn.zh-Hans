@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 1532a865-4664-40d9-964a-e64463b49587
-source-git-commit: b918afdddf1f047b478e0521883a633f7b0610c6
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '708'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 创建开发人员帐户
 
-使用创建开发人员帐户 [ID Analyzer](https://portal.idanalyzer.com/signin.html). 记下API密钥。 需要此密钥才能调用ID分析器服务的REST API。
+使用创建开发人员帐户 [ID Analyzer](https://portal.idanalyzer.com/signin.html). 记下API密钥。 调用ID分析器服务的REST API时需要此密钥。
 
 ## 创建Swagger/OpenAPI文件
 

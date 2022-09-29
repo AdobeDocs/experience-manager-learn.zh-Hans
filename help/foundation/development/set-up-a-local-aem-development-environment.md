@@ -1,6 +1,6 @@
 ---
 title: 设置本地AEM开发环境
-description: '了解如何设置本地开发环境以进行Experience Manager。 熟悉本地安装、Apache Maven、集成开发环境，以及调试和疑难解答。 使用Eclipse IDE、CRXDE-Lite、Visual Studio代码和IntelliJ。 '
+description: 了解如何设置本地开发环境以进行Experience Manager。 熟悉本地安装、Apache Maven、集成开发环境，以及调试和疑难解答。 使用Eclipse IDE、CRXDE-Lite、Visual Studio代码和IntelliJ。
 version: 6.4, 6.5
 feature: Developer Tools
 topics: development
@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2579'
+source-wordcount: '2576'
 ht-degree: 1%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 1%
 
 ## 设置集成开发环境
 
-集成开发环境或IDE是一个应用程序，它结合了文本编辑器、语法支持和构建工具。 根据您正在进行的开发类型，一个IDE可能比另一个IDE更好。 无论IDE是什么，都必须能够定期 ***推送*** 代码到本地AEM实例以进行测试。 偶尔也很重要 ***提取*** 将本地AEM实例配置到您的AEM项目中，以便能够持续保留到诸如Git之类的源代码管理系统。
+集成开发环境或IDE是一个应用程序，它结合了文本编辑器、语法支持和构建工具。 根据您正在进行的开发类型，一个IDE可能比另一个IDE更好。 无论IDE如何，都必须能够定期 ***推送*** 代码到本地AEM实例以进行测试。 偶尔也很重要 ***提取*** 将本地AEM实例配置到您的AEM项目中，以便能够持续保留到诸如Git之类的源代码管理系统。
 
 下面是一些更受欢迎的IDE，这些IDE与AEM开发一起使用，并带有相应的视频，其中显示了与本地AEM实例的集成。
 
@@ -191,7 +191,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ## 疑难解答
 
-***帮助!*** 我的代码不起作用！ 与所有开发一样，有时候（可能有很多）您的代码无法按预期工作。 AEM是一个功能强大的平台，但其强大的功能……具有极大的复杂性。 下面是疑难解答和跟踪问题的一些高级起点（但远非详尽的可能出错的事情列表）：
+***帮助!*** 我的代码不起作用！ 与所有开发一样，有时您的代码无法按预期工作（可能有很多）。 AEM是一个功能强大的平台，但其强大的功能……具有极大的复杂性。 下面是疑难解答和跟踪问题的一些高级起点（但远非详尽的可能出错的事情列表）：
 
 ### 验证代码部署
 

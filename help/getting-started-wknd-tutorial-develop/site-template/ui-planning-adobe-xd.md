@@ -10,10 +10,11 @@ role: Developer
 level: Beginner
 kt: 9371
 thumbnail: 338680.jpg
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+exl-id: 3155e0fa-56b7-4a52-8eef-fee488e95f68
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 1%
+source-wordcount: '405'
+ht-degree: 3%
 
 ---
 
@@ -66,4 +67,4 @@ ht-degree: 1%
 
 在下一章中，将根据WKND文章设计创建新页面模板。
 
-了解如何创建和修改 [页面模板](./page-templates.md). 了解页面模板与页面之间的关系。 了解如何配置页面模板的策略，以便为内容提供精细的管理和品牌一致性。  将根据Adobe XD的模型创建结构良好的杂志文章模板。
+了解如何创建和修改 [页面模板](./page-templates.md). 了解页面模板与页面之间的关系。 了解如何配置页面模板的策略，以便为内容提供精细的管理和品牌一致性。  基于Adobe XD的模型，创建了结构良好的杂志文章模板。

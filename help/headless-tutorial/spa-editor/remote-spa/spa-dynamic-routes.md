@@ -8,9 +8,9 @@ level: Beginner
 kt: 7636
 thumbnail: kt-7636.jpeg
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
-source-git-commit: fe056006ab59a3955e5f16a23e96e9e208408cf5
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '916'
 ht-degree: 1%
 
 ---
@@ -176,8 +176,3 @@ function AdventureDetail(props) {
 + 在动态的巴厘岛冲浪营路线上创作了内容！
 
 您现在已完成探索如何使用AEM SPA Editor向远程SPA添加特定可编辑区域的首要步骤！
-
-
->[!NOTE]
->
->继续看！ 本教程将扩展，涵盖Adobe有关如何将SPA Editor解决方案部署到AEMas a Cloud Service和生产环境的最佳实践和建议。

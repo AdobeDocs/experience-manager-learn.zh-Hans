@@ -12,9 +12,9 @@ kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '3020'
+source-wordcount: '3014'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ _如果系统上同时安装了Java 8和Java 11，则VS Code测试运行程序�
 
 在本教程中，我们将探讨如何编写 [单元测试](https://en.wikipedia.org/wiki/Unit_testing) 对于我们的署名组件 [Sling模型](https://sling.apache.org/documentation/bundles/models.html) (在中创建 [创建自定义AEM组件](custom-component.md))。 单元测试是使用Java编写的内部版本时测试，用于验证Java代码的预期行为。 每个单元测试通常都较小，并根据预期结果验证方法（或工作单元）的输出。
 
-我们将使用AEM最佳实践，并使用：
+我们使用AEM最佳实践，并采用：
 
 * [JUnit 5](https://junit.org/junit5/)
 * [Mockito测试框架](https://site.mockito.org/)
@@ -238,7 +238,7 @@ _如果系统上同时安装了Java 8和Java 11，则VS Code测试运行程序�
 
    此变量， `ctx`，会公开一个模拟AEM上下文，其中提供了许多AEM和Sling抽象概念：
 
-   * BylineImpl Sling模型将注册到此上下文中
+   * BylineImpl Sling模型已注册到此上下文中
    * 在此上下文中创建模拟JCR内容结构
    * 可在此上下文中注册自定义OSGi服务
    * 提供各种常见的必需模拟对象和帮助程序，如SlingHttpServletRequest对象、各种模拟Sling和AEM OSGi服务，如ModelFactory、PageManager、Page、Template、ComponentManager、Component、TagManager、Tag等。
@@ -412,7 +412,7 @@ _如果系统上同时安装了Java 8和Java 11，则VS Code测试运行程序�
 
 ## 测试getSchories() {#testing-get-occupations}
 
-很好！ 我们的第一个测试通过了！ 让我们继续测试 `getOccupations()`. 由于模拟上下文的初始化在 `@Before setUp()`方法中，此选项将适用于所有 `@Test` 方法，包括 `getOccupations()`.
+很好！ 我们的第一个测试通过了！ 让我们继续测试 `getOccupations()`. 由于模拟上下文的初始化在 `@Before setUp()`方法，它适用于所有 `@Test` 方法，包括 `getOccupations()`.
 
 请记住，此方法必须返回按字母顺序排序的职业列表（降序），这些职业列表存储在职业属性中。
 
@@ -447,7 +447,7 @@ _如果系统上同时安装了Java 8和Java 11，则VS Code测试运行程序�
 
 1. 记住，就象 **`getName()`** 上面， **BylineImplTest.json** 不定义职业，因此如果我们运行它，测试将失败，因为 `byline.getOccupations()` 将返回空列表。
 
-   更新 **BylineImplTest.json** 列入职业清单，并按非字母顺序排列，以确保我们的测试验证职业是否按字母顺序排列 **`getOccupations()`**.
+   更新 **BylineImplTest.json** 列入职业清单，并按非字母顺序排列，以确保我们的测试验证职业是否按字母顺序排序 **`getOccupations()`**.
 
    ```json
    {

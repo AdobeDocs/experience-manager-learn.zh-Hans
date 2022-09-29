@@ -10,9 +10,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: 415ad1266925525a6b0954b4515bae3d152bb6ec
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1835'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 ## 将构建的内容
 
 在本章中，您将对SPA进行一些小的更改，以了解它如何与AEM集成。
-本章将添加一个简单 `Header` 组件添加到SPA。 在建立这个 **静态** `Header` 组件将使用多种AEM SPA开发方法。
+本章将添加一个简单 `Header` 组件添加到SPA。 在建立这个 **静态** `Header` 组件使用了多种AEM SPA开发方法。
 
 ![AEM中的新标题](./assets/integrate-spa/final-header-component.png)
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 在AEM项目中创建了两个模块： `ui.apps` 和 `ui.frontend`.
 
-的 `ui.frontend` 模块是 [webpack](https://webpack.js.org/) 包含所有SPA源代码的项目。 大部分SPA开发和测试将在WebPack项目中完成。 触发生产内部版本后，将使用WebPack构建和编译SPA。 编译的工件（CSS和Javascript）将会复制到 `ui.apps` 模块，然后将其部署到AEM运行时。
+的 `ui.frontend` 模块是 [webpack](https://webpack.js.org/) 包含所有SPA源代码的项目。 大多数SPA开发和测试都是在WebPack项目中完成的。 触发生产内部版本后，将使用WebPack构建和编译SPA。 编译的工件（CSS和Javascript）将会复制到 `ui.apps` 模块，然后将其部署到AEM运行时。
 
 ![ui.frontend高级架构](assets/integrate-spa/ui-frontend-architecture.png)
 
@@ -132,7 +132,7 @@ ht-degree: 0%
 
 ## 添加静态SPA组件 {#static-spa-component}
 
-接下来，向SPA中添加新组件，并将更改部署到本地AEM实例。 这将是一个简单的更改，只是为了说明SPA的更新方式。
+接下来，向SPA中添加新组件，并将更改部署到本地AEM实例。 这是一项简单的更改，只是为了说明SPA的更新方式。
 
 1. 在 `ui.frontend` 模块，下方 `ui.frontend/src/components` 创建名为 `Header`.
 1. 创建名为 `Header.js` 在 `Header` 文件夹。
@@ -227,7 +227,7 @@ ht-degree: 0%
 
 如前面的练习所示，执行生成操作并将客户端库同步到AEM的本地实例需要几分钟时间。 这对于最终测试是可以接受的，但并不适合大多数SPA开发。
 
-A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 可用于快速开发SPA。 SPA由AEM生成的JSON模型驱动。 在本练习中，来自运行的AEM实例的JSON内容将为 **代理** 到开发服务器。
+A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 可用于快速开发SPA。 SPA由AEM生成的JSON模型驱动。 在本练习中，来自运行AEM实例的JSON内容是 **代理** 到开发服务器。
 
 1. 返回到IDE并打开文件 `ui.frontend/package.json`.
 
@@ -237,7 +237,7 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 可用�
    "proxy": "http://localhost:4502",
    ```
 
-   的 [创建React应用程序](https://create-react-app.dev/docs/proxying-api-requests-in-development) 提供了代理API请求的简单机制。 所有未知请求都将通过 `localhost:4502`，本地AEM快速入门。
+   的 [创建React应用程序](https://create-react-app.dev/docs/proxying-api-requests-in-development) 提供了代理API请求的简单机制。 所有未知请求都通过 `localhost:4502`，本地AEM快速入门。
 
 1. 打开终端窗口并导航到 `ui.frontend` 文件夹。 运行命令 `npm start`:
 

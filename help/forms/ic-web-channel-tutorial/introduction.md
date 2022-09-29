@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '154'
 ht-degree: 3%
 
 ---
@@ -26,11 +26,11 @@ ht-degree: 3%
 
 ## 前提条件 {#prerequistes}
 
-[使用包管理器将与本教程相关的资产下载并导入AEM。](assets/gettingstartedassets.zip). 此zip文件包含将在本教程中使用的图像和文档片段
+[使用包管理器将与本教程相关的资产下载并导入AEM。](assets/gettingstartedassets.zip). 此zip文件包含本教程中使用的图像和文档片段
 
 [下载并解压缩此文件。](assets/warfileandswaggerfile.zip) 此文件包含需要部署到Tomcat上的SampleRest.war文件以及需要用于配置数据源的swagger文件。
 
-在完成本教程后，您将学习到以下内容：
+在完成本教程后，您学习了以下内容：
 
 * 创建数据源
 * 创建表单数据模型

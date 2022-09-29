@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2713'
+source-wordcount: '2712'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. 为传统 [WKND参考站点](https://github.com/adobe/aem-guides-wknd/releases/latest). 提供的图像 [WKND参考站点](https://github.com/adobe/aem-guides-wknd/releases/latest) 将在WKND SPA上重新使用。 可以使用 [AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp).
+3. 为传统 [WKND参考站点](https://github.com/adobe/aem-guides-wknd/releases/latest). 提供的图像 [WKND参考站点](https://github.com/adobe/aem-guides-wknd/releases/latest) 在WKND SPA中重新使用。 可以使用 [AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp).
 
    ![包管理器安装wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 ## Inspect HeaderComponent更新 {#inspect-header}
 
-在前几章中， `HeaderComponent` 组件作为纯Angular组件添加，该组件通过 `app.component.html`. 在本章中， `HeaderComponent` 组件将从应用程序中删除，并将通过 [模板编辑器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html). 这允许用户配置 `HeaderComponent` 从AEM。
+在前几章中， `HeaderComponent` 组件作为纯Angular组件添加，该组件通过 `app.component.html`. 在本章中， `HeaderComponent` 组件将从应用程序中删除，并通过 [模板编辑器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html). 这允许用户配置 `HeaderComponent` 从AEM。
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ ht-degree: 0%
    }
    ```
 
-   在 `:children` 您应会看到创建的每个页面对应的条目。 所有页面的内容都位于此初始JSON请求中。 一旦实施导航路由，将快速加载SPA的后续视图，因为内容已在客户端可用。
+   在 `:children` 您应会看到创建的每个页面对应的条目。 所有页面的内容都位于此初始JSON请求中。 一旦实施了导航路由，将快速加载SPA的后续视图，因为内容已在客户端可用。
 
    加载不明智 **全部** 的JSON请求中SPA内容的URL，因为这会减慢初始页面加载速度。 接下来，我们将看一看页面的层级深度是如何收集的。
 
@@ -313,7 +313,7 @@ ht-degree: 0%
    ":type": "wknd-spa-angular/components/header"
    ```
 
-   AEM页面的层次结构是使用JSON建模的，可用于填充导航菜单。 记得 `Header` 组件会继承 [导航核心组件](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) 且通过JSON公开的内容将自动映射到Angular `@Input` 注释。
+   AEM页面的层次结构是使用JSON建模的，可用于填充导航菜单。 记得 `Header` 组件会继承 [导航核心组件](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) 并且通过JSON公开的内容会自动映射到该Angular `@Input` 注释。
 
 2. 打开新的终端窗口并导航到 `ui.frontend` 文件夹。 新建 `NavigationComponent` 使用AngularCLI工具：
 
@@ -365,7 +365,7 @@ ht-degree: 0%
    }
    ```
 
-   这是一个用于表示单个导航链接的简单类。 在类构造函数中，我们期望 `data` 为从AEM传入的JSON对象。 此类将在 `NavigationComponent` 和 `HeaderComponent` 以轻松填充导航结构。
+   这是一个用于表示单个导航链接的简单类。 在类构造函数中，我们期望 `data` 为从AEM传入的JSON对象。 此类在 `NavigationComponent` 和 `HeaderComponent` 以轻松填充导航结构。
 
    不执行任何数据转换，此类主要用于强烈键入JSON模型。 请注意 `this.children` 键入为 `NavigationLink[]` 构造函数递归地创建新 `NavigationLink` 对象 `children` 数组。 回想一下 `Header` 是分层的。
 
@@ -637,7 +637,7 @@ ht-degree: 0%
 
    `AemPageMatcher` 是自定义Angular路由器 [UrlMatcher](https://angular.io/api/router/UrlMatcher)，与AEM中属于此Angular应用程序一部分的任何“外观”页面相匹配。
 
-   `PageComponent` 是AEM中表示页面的Angular组件，将调用匹配的路由。 的 `PageComponent` 会被进一步检查。
+   `PageComponent` 是AEM中表示页面的Angular组件，用于呈现匹配的路由。 的 `PageComponent` 稍后会在教程中进行审阅。
 
    `AemPageDataResolver`，由AEM SPA Editor JS SDK提供，是一个自定义 [Angular路由器解析程序](https://angular.io/api/router/Resolve) 用于将路由URL(AEM中的路径，包括.html扩展)转换为AEM中的资源路径（页面路径，即不包含扩展）。
 

@@ -1,5 +1,5 @@
 ---
-title: 服务凭据
+title: AEM开发人员控制台服务凭据
 description: AEM Service凭据用于帮助外部应用程序、系统和服务以编程方式通过HTTP与AEM创作或发布服务进行交互。
 version: Cloud Service
 doc-type: tutorial
@@ -13,7 +13,7 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: ef4579a44c1c940a3b7441e336db3790a0c7afd7
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '1901'
 ht-degree: 0%
@@ -59,7 +59,7 @@ __这是每个AEMas a Cloud Service环境的一次性初始化__
 1. 点按中环境旁边的省略号 __环境__ ，然后选择 __开发人员控制台__
 1. 在中点按 __集成__ 选项卡
 1. 点按 __获取服务凭据__ 按钮
-1. 服务凭据将初始化并显示为JSON
+1. 服务凭据已初始化，并显示为JSON
 
 ![AEM Developer Console — 集成 — 获取服务凭据](./assets/service-credentials/developer-console.png)
 
@@ -85,7 +85,7 @@ __这是每个AEMas a Cloud Service环境的一次性初始化__
 
 ## 安装服务凭据
 
-服务凭据提供生成JWT所需的详细信息，JWT用于交换用于通过AEMas a Cloud Service进行身份验证的访问令牌。 服务凭据必须存储在安全位置，外部应用程序、系统或服务可以使用服务凭据访问AEM。 每个客户管理服务凭据的方式和位置将是唯一的。
+服务凭据提供生成JWT所需的详细信息，JWT用于交换用于通过AEMas a Cloud Service进行身份验证的访问令牌。 服务凭据必须存储在安全位置，外部应用程序、系统或服务可以使用服务凭据访问AEM。 每个客户管理服务凭据的方式和位置都是唯一的。
 
 为了简单起见，本教程将通过命令行将服务凭据传递到中，但请与您的IT安全团队合作，了解如何根据贵组织的安全准则存储和访问这些凭据。
 

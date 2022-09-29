@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '358'
 ht-degree: 0%
 
 ---
@@ -89,15 +89,13 @@ public class DecodeBarCode extends SlingSafeMethodsServlet {
    // TODO Auto-generated catch block
    e1.printStackTrace();
   }
-
  }
-
 }
 ```
 
 以下代码是自适应表单引用的客户端库的一部分。 当用户将附件添加到自适应表单时，将触发此代码。 该代码对Servlet进行GET调用，并在请求参数中传递附件的路径。 然后，使用从Servlet调用收到的数据来填充自适应表单。
 
-```
+```javascript
 $(document).ready(function()
    {
        guideBridge.on("elementValueChanged",function(event,data){
@@ -138,7 +136,7 @@ $(document).ready(function()
 
 第23行 — 调用DocumentServices extractBarCode方法，以获取使用解码数据填充的JSON对象
 
-要在您的系统上运行此程序，请执行以下步骤
+要在您的系统上运行此程序，请执行以下步骤：
 
 1. [下载BarcodeService.zip](assets/barcodeservice.zip) 和使用包管理器导入到AEM中
 1. [下载并安装自定义DocumentServices包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)

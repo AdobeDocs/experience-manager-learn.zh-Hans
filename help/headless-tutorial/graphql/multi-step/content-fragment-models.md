@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
-source-git-commit: 410eb23534e083940bf716194576e099d22ca205
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1132'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 在本章中，了解如何对内容建模并使用 **内容片段模型**. 您将了解可用于定义模式作为模型一部分的不同数据类型。
 
-本章将创建两个简单的模型， **团队** 和 **人员**. 的 **团队** 数据模型具有名称、短名称和描述，并引用 **人员** 数据模型，包含全名、个人简介、个人简介和职业列表。
+在本章中，创建了两个简单的模型， **团队** 和 **人员**. 的 **团队** 数据模型具有名称、短名称和描述，并引用 **人员** 数据模型，包含全名、个人简介、个人简介和职业列表。
 
 此外，您还欢迎按照基本步骤创建自己的模型，并调整相应的步骤（如GraphQL查询和React应用程序代码），或者只是按照这些章节中概述的步骤操作。
 
@@ -79,7 +79,7 @@ ht-degree: 2%
 
    ![“全名”属性字段](assets/content-fragment-models/full-name-property-field.png)
 
-   的 **属性名称** 定义保留到AEM的属性的名称。 的 **属性名称** 还定义 **key** 作为数据架构一部分的此属性的名称。 此 **key** 将在通过GraphQL API公开内容片段数据时使用。
+   的 **属性名称** 定义保留到AEM的属性的名称。 的 **属性名称** 还定义 **key** 作为数据架构一部分的此属性的名称。 此 **key** 在通过GraphQL API公开内容片段数据时使用。
 
 1. 点按 **数据类型** 选项卡，并拖放 **多行文本** 字段 **全名** 字段。 输入以下属性：
 

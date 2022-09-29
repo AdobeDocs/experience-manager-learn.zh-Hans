@@ -11,9 +11,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '4582'
+source-wordcount: '4571'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
 ### 项目模板根
 
-项目模板的根节点类型为 **cq：模板**. 在此节点上，您可以配置属性 **jcr:title** 和 **jcr:description** ，该变量将显示在创建项目向导中。 还有一个名为 **向导** 表单中，该表单将填充项目的属性。 默认值为： **/libs/cq/core/content/projects/wizard/steps/defaultproject.html** 在大多数情况下，应该可以正常使用，因为它允许用户填充基本的项目属性并添加组成员。
+项目模板的根节点类型为 **cq：模板**. 在此节点上，您可以配置属性 **jcr:title** 和 **jcr:description** ，该值显示在创建项目向导中。 还有一个名为 **向导** 表单中，该表单将填充项目的属性。 默认值为： **/libs/cq/core/content/projects/wizard/steps/defaultproject.html** 在大多数情况下，应该可以正常使用，因为它允许用户填充基本的项目属性并添加组成员。
 
 *&#42;请注意，创建项目向导不使用SlingPOSTServlet。 而是会将值发布到自定义Servlet:**com.adobe.cq.projects.impl.servlet.ProjectServlet**. 添加自定义字段时应考虑这一点。*
 
@@ -92,7 +92,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
 ## 创建项目模板 {#creating-project-template}
 
-由于我们将主要复制/配置节点，因此我们将使用CRXDE Lite。 在本地AEM实例中打开 [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
+由于我们主要是复制/配置节点，因此我们将使用CRXDE Lite。 在本地AEM实例中打开 [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
 
 1. 首先，在下面创建新文件夹 `/apps/&lt;your-app-folder&gt;` 已命名 `projects`. 在该文件夹下创建另一个文件夹，该文件夹名为 `templates`.
 
@@ -324,7 +324,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
    >
    >如果使用AEM 6.4+，则工作流的位置已发生更改。 请参阅 [有关更多详细信息，请参阅此处。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
 
-   如果使用AEM 6.4+，则将在 `/conf/global/settings/workflow/models`. 使用/conf目录重复上述步骤，并添加一个名为 `aem-guides` 然后移动 `content-approval-workflow` 下面。
+   如果使用AEM 6.4+，则在下创建工作流模型 `/conf/global/settings/workflow/models`. 使用/conf目录重复上述步骤，并添加一个名为 `aem-guides` 然后移动 `content-approval-workflow` 下面。
 
    ![现代工作流定义位置](./assets/develop-aem-projects/modern-workflow-definition-location.png)
 工作流模型在6.4+中的位置
@@ -374,7 +374,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
        Due In - Days = "2"
    ```
 
-   路由选项卡是一个可选对话框，可为完成任务的用户指定可用的操作。 这些操作只是字符串值，将保存到工作流的元数据中。 这些值可以由脚本和/或后续工作流中的处理步骤读取，以动态“路由”工作流。 基于 [工作流目标](#goals-tutorial) 我们将在此选项卡中添加三个操作：
+   路由选项卡是一个可选对话框，可为完成任务的用户指定可用的操作。 这些操作只是字符串值，会保存到工作流的元数据中。 这些值可以由脚本和/或后续工作流中的处理步骤读取，以动态“路由”工作流。 基于 [工作流目标](#goals-tutorial) 我们将在此选项卡中添加三个操作：
 
    ```shell
    Routing Tab
@@ -393,7 +393,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
       Pre-Create Task Script = "/apps/aem-guides/projects/scripts/start-task-config.ecma"
    ```
 
-1. 在上一步中，我们引用了预创建任务脚本。 我们现在将创建该脚本，在该脚本中，我们将根据工作流元数据值“”的值设置任务的代理人&#x200B;**受让人**&quot; 的 **&quot;被分派人&quot;** 值将在工作流启动时进行设置。 我们还将读取工作流元数据，通过读取“**taskPriority”** 工作流元数据的值以及**&quot;taskDueDate&quot; **，以便在第一个任务到期时动态设置。
+1. 在上一步中，我们引用了预创建任务脚本。 我们现在将创建该脚本，在该脚本中，我们将根据工作流元数据值“”的值设置任务的代理人&#x200B;**受让人**&quot; 的 **&quot;被分派人&quot;** 值会在工作流启动时设置。 我们还将读取工作流元数据，通过读取“**taskPriority”** 工作流元数据的值以及**&quot;taskDueDate&quot; **，以便在第一个任务到期时动态设置。
 
    出于组织目的，我们在应用程序文件夹下创建了一个文件夹，用于保存所有与项目相关的脚本： **/apps/aem-guides/projects-tasks/projects/scripts**. 在此文件夹下创建新文件，该文件名为 **&quot;start-task-config.ecma&quot;**. &#42;请注意，确保start-task-config.ecma文件的路径与步骤4中“高级设置”选项卡中设置的路径匹配。
 
@@ -418,7 +418,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
    task.setProperty("taskPriority", taskPriority);
    ```
 
-1. 导航回内容批准工作流。 拖放 **或拆分** 组件（位于“Workflow”类别下的Sidekick中） **启动任务** 步骤。 在“常用对话框”中，为3个分支选择单选按钮。 OR拆分将读取工作流元数据值 **&quot;lastTaskAction&quot;** 以确定工作流的路线。 的 **&quot;lastTaskAction&quot;** 属性将设置为步骤4中配置的路由选项卡中的值之一。 对于每个“分支”选项卡，填写 **脚本** 文本区域，其值如下：
+1. 导航回内容批准工作流。 拖放 **或拆分** 组件（位于“Workflow”类别下的Sidekick中） **启动任务** 步骤。 在“常用对话框”中，为3个分支选择单选按钮。 OR拆分将读取工作流元数据值 **&quot;lastTaskAction&quot;** 以确定工作流的路线。 的 **&quot;lastTaskAction&quot;** 属性设置为步骤4中配置的“路由”选项卡中的值之一。 对于每个“分支”选项卡，填写 **脚本** 文本区域，其值如下：
 
    ```
    function check() {

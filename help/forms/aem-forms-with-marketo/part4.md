@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '314'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 # 使用表单数据模型创建自适应表单
 
 下一步是创建一个自适应表单，并将其基于在前一步中创建的表单数据模型。
-用户将输入潜在客户ID，在Tab键上显示Marketo服务时，将会调用按ID获取潜在客户。 然后，服务操作的结果将映射到自适应Forms的相应字段。
+用户输入潜在客户ID，在Tab键打开Marketo服务时，将调用id获取潜在客户。 然后，服务操作的结果将映射到自适应Forms的相应字段。
 
 1. 创建自适应表单并将其基于“空白表单模板”，将其与前面步骤中创建的表单数据模型相关联。
 1. 在编辑模式下打开表单

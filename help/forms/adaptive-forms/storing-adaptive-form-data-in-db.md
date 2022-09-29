@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 3dd552da-fc7c-4fc7-97ec-f20b6cc33df0
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '414'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 
    * 搜索“JDBC连接池”。 创建新的Day Commons JDBC连接池。 指定特定于数据库的设置。
 
-   * ![jdbc连接池](assets/aemformstutorial-jdbc.png)
+   * ![JDBC连接池OSGi配置](assets/aemformstutorial-jdbc.png)
 
 ## 指定数据库详细信息
 
@@ -38,7 +38,7 @@ ht-degree: 2%
    * FormName — 用于保存表单名称的列名称
    * ColumnName — 用于保存AF数据的列名称
 
-![插入数据](assets/specify-database-details.png)
+   ![指定数据库详细信息OSGi配置](assets/specify-database-details.png)
 
 
 

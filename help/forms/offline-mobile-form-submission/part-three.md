@@ -13,16 +13,16 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: a767d8f8-d75e-4472-9139-c08d804ee076
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '170'
+ht-degree: 2%
 
 ---
 
 # 审核和批准已提交PDF的工作流
 
-最后一步和最后一步是创建AEM工作流，该工作流将生成一个静态或非交互式PDF以供审核和批准。 工作流将通过在节点上配置的AEM启动器触发 `/content/pdfsubmissions`.
+最后一步和最后一步是创建AEM工作流，该工作流将生成一个静态或非交互式PDF以供审核和批准。 工作流通过在节点上配置的AEM启动器触发 `/content/pdfsubmissions`.
 
 以下屏幕截图显示了工作流中涉及的步骤。
 

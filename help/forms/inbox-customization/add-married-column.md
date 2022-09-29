@@ -12,9 +12,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 * [导入审阅工作流](assets/review-workflow.zip)
 * [查看工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/reviewworkflow.html)
 
-此工作流定义了两个变量（isFrimed和income），其值使用设置的变量组件进行设置。 这些变量将作为列提供，以添加到AEM收件箱
+此工作流定义了两个变量（isFrimed和income），其值使用设置的变量组件进行设置。 这些变量可用作要添加到AEM收件箱的列
 
 ## 创建服务
 

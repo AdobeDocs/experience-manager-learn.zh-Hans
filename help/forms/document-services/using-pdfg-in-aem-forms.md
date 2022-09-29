@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: bc79fcbf-b8b3-4d3a-9cd6-0bcd9321c7d5
-source-git-commit: 8d83d01fca3bfc9e6f674f7d73298b42f98a5d46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '269'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 PDFG表示PDF生成。 这意味着您可以将多种文件格式转换为PDF。 最常见的是Microsoft Office文档。 PDFG自6.1起成为AEM Forms的一部分。
 [此处列出了PDFG API的javadoc](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)
 
-利用与本文关联的资产，可将MS Office文档或JPG文件拖放到HTML页面的拖放区域。 文档一旦被删除，将调用PDFG服务，并将文档转换为PDF，并保存在AEM Server的文件系统上。
+利用与本文关联的资产，可将MS Office文档或JPG文件拖放到HTML页面的拖放区域。 文档一旦被删除，就会调用PDFG服务，并将文档转换为PDF，然后保存在AEM Server的文件系统上。
 
 要安装演示资产，请执行以下步骤
 
@@ -31,9 +31,9 @@ PDFG表示PDF生成。 这意味着您可以将多种文件格式转换为PDF。
 1. [导航到post.jsp](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) 在CRX中
 1. 根据您的首选项更改保存位置（第9行）
 1. 保存更改。
-1. 打开 [  html页面](http://localhost:4502/content/DocumentServices/CreatePDFG.html) ，用于拖放要转换的文件。
+1. 打开 [html页面](http://localhost:4502/content/DocumentServices/CreatePDFG.html) ，用于拖放要转换的文件。
 1. 将单词文件或jpg放入拖放区域。
-1. 输入文档将转换为PDF，并保存在与第4点中指定的相同位置。
+1. 输入文档将转换为PDF并保存在与第4点中指定的相同位置。
 
 以下代码片段显示了PDFG服务在将文件转换为PDF时的用法
 

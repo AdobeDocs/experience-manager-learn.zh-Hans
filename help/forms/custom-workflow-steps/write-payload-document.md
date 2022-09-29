@@ -7,9 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 kt: kt-9859
-source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
+exl-id: bab7c403-ba42-4a91-8c86-90b43ca6026c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 ChangeBeneficiary.pdf,c:\confirmation
 ```
 
-第一个参数是要保存到文件系统的文档的名称。 第二个参数是要保存文档的文件夹位置。 例如，在上述用例中，文档将被写入c:\confirmation\ChangeBeneficiary.pdf
+第一个参数是要保存到文件系统的文档的名称。 第二个参数是要保存文档的文件夹位置。 例如，在上述用例中，文档将被写入 `c:\confirmation\ChangeBeneficiary.pdf`
 
 以下屏幕快照显示了您需要传递到自定义流程步骤的参数
 ![write-payload-file-system](assets/write-payload-file-system.png)

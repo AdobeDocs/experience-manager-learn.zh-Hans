@@ -2,18 +2,18 @@
 title: 将全景和垂直图像查看器与AEM Assets Dynamic Media结合使用
 description: AEM 6.4中的Dynamic Media查看器增强功能包括添加全景图像查看器、虚拟现实全景图像查看器和垂直图像查看器。 全景查看器提供了一种轻松的方式，无需任何自定义开发，即可提供房间、资产、位置或景观的迷人、沉浸式体验。
 sub-product: dynamic-media
-feature: 视频配置文件、视频配置文件、360 VR视频
+feature: Video Profiles, Video Profiles, 360 VR Video
 version: 6.4, 6.5
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 3%
+source-wordcount: '533'
+ht-degree: 2%
 
 ---
-
 
 # 将全景和垂直图像查看器与AEM Assets Dynamic Media结合使用{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
@@ -27,7 +27,7 @@ AEM 6.4中的Dynamic Media查看器增强功能包括添加全景图像查看器
 
 ## 全景和全景VR查看器
 
-根据图像的宽高比或关键字，将图像视为全景图。 默认情况下，宽高比为2的图像将被视为全景图像。 如果图像符合上述条件，全景图像查看器预设将可用于图像预览。 在公司的DMS7配置中，可以通过在/conf/global/settings/cloudconfigs/dmscene7/jcr:content处指定双属性s7PanoramicAR来修改全景图像宽高比标准。 关键字存储在资产元数据节点的dc:keyword属性中。 如果关键词包含以下任意组合：
+根据图像的宽高比或关键字，将图像视为全景图。 默认情况下，宽高比为2的图像被视为全景图像。 如果图像符合上述条件，全景图像查看器预设便可用于图像预览。 在公司的DMS7配置中，可以通过在/conf/global/settings/cloudconfigs/dmscene7/jcr:content处指定双属性s7PanoramicAR来修改全景图像宽高比标准。 关键字存储在资产元数据节点的dc:keyword属性中。 如果关键词包含以下任意组合：
 
 * 等矩形，
 * 球面+全景，
@@ -37,7 +37,7 @@ AEM 6.4中的Dynamic Media查看器增强功能包括添加全景图像查看器
 
 ## 垂直图像查看器
 
-使用水平色板时，根据消费者的桌面屏幕大小，有时只有用户向下滚动页面后，才会显示这些色板。 通过使用垂直图像查看器并放置垂直色板，它可确保无论屏幕大小如何，都可以看到色板。 它还可最大化主图像大小。 使用水平色板时，必须保留页面上的空间，以确保这些色板具有很高的可见性，并且会减小主图像的大小。 使用垂直布局，您无需担心分配此空间，因此可以最大化主图像大小。
+使用水平色板时，根据消费者的桌面屏幕大小，有时只有用户向下滚动页面后，才会显示色板。 通过使用垂直图像查看器并放置垂直色板，它可确保无论屏幕大小如何，都可以看到色板。 它还可最大化主图像大小。 使用水平色板时，必须保留页面上的空间，以确保这些色板具有很高的可见性，并且会减小主图像的大小。 使用垂直布局，您无需担心分配此空间，因此可以最大化主图像大小。
 
 <table> 
  <tbody>

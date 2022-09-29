@@ -7,16 +7,16 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
 
 # 使用ACS配置文件预填自适应表单 {#prefilling-adaptive-form-using-acs-profile}
 
-在本部分中，我们将使用从ACS获取的用户档案信息预填自适应表单。 AEM Forms具有预填自适应表单的强大功能。
+在本部分中，我们使用从ACS获取的用户档案信息预填自适应表单。 AEM Forms具有预填自适应表单的强大功能。
 
 要了解有关预填自适应表单的更多信息，请阅读此内容 [教程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 * 用于访问令牌的Exchange JWT
 * 对ACS进行REST调用，并通过电子邮件获取配置文件
 * 使用配置文件信息构建XML文档
-* 返回将由AEM Forms使用的XML文档的InputStream
+* 返回由AEM Forms使用的XML文档的InputStream
 
 ![prefillservice](assets/prefillserviceaf.gif)
 

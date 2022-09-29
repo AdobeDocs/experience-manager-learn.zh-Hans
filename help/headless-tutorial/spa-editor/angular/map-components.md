@@ -14,10 +14,10 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2380'
-ht-degree: 0%
+source-wordcount: '2372'
+ht-degree: 1%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## 将构建的内容
 
-本章将检查提供的 `Text` SPA组件已映射到AEM `Text`组件。 新 `Image` 将创建可在SPA中使用并在AEM中创作的SPA组件。 的开箱即用功能 **布局容器** 和 **模板编辑器** 还将使用策略来创建外观稍有不同的视图。
+本章将检查提供的 `Text` SPA组件已映射到AEM `Text`组件。 新 `Image` SPA组件已创建，可在SPA中使用并在AEM中创作。 的开箱即用功能 **布局容器** 和 **模板编辑器** 还将使用策略来创建外观稍有不同的视图。
 
 ![章节示例最终创作](./assets/map-components/final-page.png)
 
@@ -92,7 +92,7 @@ ht-degree: 0%
 
    `:type` 是一个保留属性，其中列出了 `sling:resourceType` （或路径）。 的值 `:type` 用于将AEM组件映射到SPA组件。
 
-   `text` 和 `richText` 是将向SPA组件公开的其他属性。
+   `text` 和 `richText` 是显示给SPA组件的其他属性。
 
 ### Inspect文本组件
 
@@ -146,7 +146,7 @@ ht-degree: 0%
    };
    ```
 
-   上述代码负责确定何时在AEM创作环境中渲染占位符。 如果 `isEmpty` 方法返回 **true** 然后，将呈现占位符。
+   上述代码负责确定何时在AEM创作环境中渲染占位符。 如果 `isEmpty` 方法返回 **true** 然后，会呈现占位符。
 
 6. 最后看看 `MapTo` 致电~53线：
 
@@ -178,7 +178,7 @@ ht-degree: 0%
 
 8. Inspect **text.component.html** at `ui.frontend/src/app/components/text/text.component.html`.
 
-   此文件为空，因为组件的整个内容将由 `innerHTML` 属性。
+   此文件为空，因为组件的整个内容由 `innerHTML` 属性。
 
 9. Inspect **app.module.ts** at `ui.frontend/src/app/app.module.ts`.
 
@@ -211,11 +211,11 @@ ht-degree: 0%
 
    ![图像核心组件JSON](./assets/map-components/image-json.png)
 
-   属性 `src`, `alt`和 `title` 将用于填充SPA `Image` 组件。
+   属性 `src`, `alt`和 `title` 用于填充SPA `Image` 组件。
 
    >[!NOTE]
    >
-   > 还显示了其他图像属性(`lazyEnabled`, `widths`)来创建自适应和延迟加载组件。 本教程中构建的组件将非常简单，并且将 **not** 使用这些高级属性。
+   > 还显示了其他图像属性(`lazyEnabled`, `widths`)来创建自适应和延迟加载组件。 本教程中构建的组件非常简单，但是可以 **not** 使用这些高级属性。
 
 2. 返回到IDE并打开 `en.model.json` at `ui.frontend/src/mocks/json/en.model.json`. 由于这是我们项目的新组件，因此我们需要“模拟”图像JSON。
 
@@ -498,6 +498,6 @@ ht-degree: 0%
     </workspaceFilter>
    ```
 
-   的 `filter.xml` 文件负责标识将随包一起安装的节点的路径。 请注意 `mode="merge"` 在指示不会修改现有内容的每个过滤器上，只会添加新内容。 由于内容作者可能正在更新这些路径，因此代码部署必须执行以下操作 **not** 覆盖内容。 请参阅 [FileVault文档](https://jackrabbit.apache.org/filevault/filter.html) 有关使用过滤器元素的更多详细信息。
+   的 `filter.xml` 文件负责标识随包一起安装的节点的路径。 请注意 `mode="merge"` 在指示不会修改现有内容的每个过滤器上，只会添加新内容。 由于内容作者可能正在更新这些路径，因此代码部署必须执行以下操作 **not** 覆盖内容。 请参阅 [FileVault文档](https://jackrabbit.apache.org/filevault/filter.html) 有关使用过滤器元素的更多详细信息。
 
    比较 `ui.content/src/main/content/META-INF/vault/filter.xml` 和 `ui.apps/src/main/content/META-INF/vault/filter.xml` 以了解每个模块管理的不同节点。

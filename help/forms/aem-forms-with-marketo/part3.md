@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '378'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ AEM Forms数据集成允许您配置不同的数据源并将其连接到不同�
 1. 基于SOAP的Web服务
 1. OData服务
 
-对于AEM Forms与Marketo的集成，我们将使用RESTful Web服务。 集成的第一步是配置 [数据源。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) 请使用本教程中提供的swagger文件。 以下屏幕截图显示了配置数据源时需要指定的重要属性。
+对于AEM Forms与Marketo的集成，我们使用的是RESTful Web服务。 集成的第一步是配置 [数据源。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) 请使用本教程中提供的swagger文件。 以下屏幕截图显示了配置数据源时需要指定的重要属性。
 ![数据源](assets/datasource.jfif)
 
 “marketo.json”是swagger文件，将作为本教程资产的一部分提供给您。

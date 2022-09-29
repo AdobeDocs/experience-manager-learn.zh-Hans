@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: a8d8118d-f4a1-483f-83b4-77190f6a42a4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 # 查询提交的数据
 
 
-下一步是查询提交的数据并以表格形式显示结果。 为完成此操作，我们将使用以下软件
+下一步是查询提交的数据并以表格形式显示结果。 为完成此操作，我们使用以下软件：
 
 [QueryBuilder](https://querybuilder.js.org/)  — 用于创建查询的UI组件
 
@@ -64,7 +64,7 @@ public JSONArray getData(String formName) throws SQLException, IOException {
  }
 ```
 
-单击GetResult按钮时，将向 **&quot;/bin/querydata&quot;**. 我们通过查询参数将QueryBuilder UI构建的查询传递到Servlet。 然后，Servlet将此查询按摩到SQL查询中，以用于查询数据库。 例如，如果您正在搜索以检索名为“Mouse”的所有产品，查询生成器查询字符串将为$.productname = &#39;Mouse&#39;。 然后，此查询将转换为以下内容
+单击GetResult按钮时，将向 **&quot;/bin/querydata&quot;**. 我们通过查询参数将QueryBuilder UI构建的查询传递到Servlet。 然后，Servlet将此查询按摩到SQL查询中，以用于查询数据库。 例如，如果您搜索以检索名为“Mouse”的所有产品，则查询生成器查询字符串为 `$.productname = 'Mouse'`. 然后，此查询将转换为以下内容
 
 选择 &#42; 从aemformswithjson 。  JSON_EXTRACT(formsubmissions .formdata，&quot;$.productName &quot;)= &#39;Mouse&#39;的表单提交
 

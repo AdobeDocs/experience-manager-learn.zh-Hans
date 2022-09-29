@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 29195c70-af12-4a22-8484-3c87a1e07378
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -153,4 +153,4 @@ public class HandleAdaptiveFormSubmission extends SlingAllMethodsServlet {
 * 有关属性，请参阅上图。 这假定您将使用MySQL作为数据库。
 * 部署作为本文资产一部分提供的OSGi包。
 * 预览表单并提交。
-* JSON数据将存储在导入“schema.sql”文件时创建的数据库中。
+* JSON数据存储在导入“schema.sql”文件时创建的数据库中。

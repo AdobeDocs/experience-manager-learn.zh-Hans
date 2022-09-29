@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
-source-git-commit: 7a4585146b52d14f32645c6889c9c015e9991809
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2523'
 ht-degree: 0%
 
 ---
@@ -92,8 +92,8 @@ AdobeCloud Manager可帮助构建代码并将其部署到AEMas a Cloud Service�
 
 ```
 [ERROR] Unable to convert content-package [/tmp/packages/enduser.all-1.0-SNAPSHOT.zip]: 
-Configuration ‘com.example.ExampleComponent’ already defined in Feature Model ‘com.example.groupId:example.all:slingosgifeature:xxxxx:X.X’, 
-set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multiple configurations with same PID
+Configuration 'com.example.ExampleComponent' already defined in Feature Model 'com.example.groupId:example.all:slingosgifeature:xxxxx:X.X', 
+set the 'mergeConfigurations' flag to 'true' if you want to merge multiple configurations with same PID
 ```
 
 #### 原因1
@@ -110,7 +110,7 @@ set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multip
 
 重新指向脚本定义基线内容、用户、ACL等。 在AEMas a Cloud Service中，重新指示脚本在构建映像期间应用，但在AEM SDK的本地快速启动中，在激活OSGi重新指示工厂配置时会应用重新指示脚本。 因此，AEM SDK的本地快速启动脚本可能会静悄悄地失败（带有日志记录），但会导致“生成映像”步骤失败，从而停止部署。
 
-+ __原因：__ 重新指向脚本的格式错误。 请注意，这可能会使您的存储库处于不完整状态，因为在对存储库执行失败脚本后，将会执行任何重新指向脚本。
++ __原因：__ 重新指向脚本的格式错误。 这可能会使您的存储库处于不完整状态，因为在未对存储库执行失败脚本之后，将会出现任何重新指向脚本。
 + __解决办法：__ 部署重新指向脚本OSGi配置时，请查看AEM SDK的本地快速启动，以确定错误是否以及错误是什么。
 
 ### 未满足的重定向内容依赖项

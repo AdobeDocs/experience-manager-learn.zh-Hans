@@ -7,21 +7,21 @@ topic: Development
 role: Developer
 level: Intermediate
 kt: 8507
-source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
+exl-id: 9ad69407-2413-416f-9cec-43f88989b31d
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
-
 # 将逗号分隔的字符串转换为字符串数组 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-当您的表单基于表单数据模型（该数据模型将字符串数组作为输入参数）时，您将需要处理提交的自适应表单数据以插入字符串数组。 例如，如果已将复选框字段绑定到字符串类型数组的表单数据模型元素，则复选框字段中的数据将以逗号分隔字符串格式提供。 下面列出的示例代码向您展示了如何将逗号分隔的字符串替换为字符串数组。
+当您的表单基于表单数据模型（其中包含字符串数组作为输入参数）时，您需要处理提交的自适应表单数据以插入字符串数组。 例如，如果已将复选框字段绑定到字符串类型数组的表单数据模型元素，则复选框字段中的数据将以逗号分隔字符串格式提供。 下面列出的示例代码向您展示了如何将逗号分隔的字符串替换为字符串数组。
 
 ## 创建流程步骤
 
-当我们希望工作流执行特定逻辑时，会在AEM工作流中使用流程步骤。 流程步骤可以与ECMA脚本或OSGi服务关联。 我们的自定义进程步骤将执行OSGi服务
+当我们希望工作流执行特定逻辑时，会在AEM工作流中使用流程步骤。 流程步骤可以与ECMA脚本或OSGi服务关联。 我们的自定义流程步骤可执行OSGi服务。
 
 提交的数据采用以下格式。 businessUnits元素的值是以逗号分隔的字符串，需要将其转换为字符串数组。
 
@@ -140,4 +140,4 @@ public class CreateStringArray implements WorkflowProcess {
 }
 ```
 
-可从此处下载示例包[](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)
+样本包可以是 [从此处下载](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)

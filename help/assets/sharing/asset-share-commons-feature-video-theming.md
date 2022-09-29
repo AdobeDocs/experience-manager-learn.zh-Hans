@@ -6,9 +6,9 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '112'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/20572/?quality=9&learn=on)
 
-在此视频中，将根据资产共享共享共用深色主题创建一个新主题。 配色方案将与自定义徽标匹配，以便为网站提供一致的外观。
+在此视频中，将根据资产共享共用深色主题创建新主题。 配色方案将与自定义徽标匹配，以便为网站提供一致的外观。
 
 ## 主题变量
 

@@ -14,10 +14,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9f1dbd02-774a-4b84-90fa-02d4e468cbac
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '165'
+ht-degree: 3%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 * 下载 [自适应表单](assets/peak-application-form.zip)
 * 浏览到 [表单和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 单击创建 — >文件上传
-* 示例自适应表单将放置在名为 [应用程序Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
+* 示例自适应表单放置在名为 [应用程序Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
 
 以下视频介绍如何配置自适应表单以触发AEM工作流
 >[!VIDEO](https://video.tv.adobe.com/v/40258/?quality=9&learn=on)

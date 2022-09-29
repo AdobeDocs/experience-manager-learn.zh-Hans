@@ -11,9 +11,9 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -39,9 +39,9 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略都表示为
 * `Allowed Origin` 和 `Origin` 请求头
 * 和 `Allowed Paths` 和请求路径。
 
-将使用与这些值匹配的第一个策略。 如果未找到，则任意 [!DNL CORS] 请求将被拒绝。
+将使用与这些值匹配的第一个策略。 如果未找到，则任意 [!DNL CORS] 请求被拒绝。
 
-如果根本未配置策略， [!DNL CORS] 请求也不会得到应答，因为处理程序将被禁用并因此被有效拒绝 — 只要服务器的其他模块没有响应 [!DNL CORS].
+如果根本未配置策略， [!DNL CORS] 由于处理程序被禁用并因此被有效拒绝，因此请求也不会得到应答 — 只要服务器的其他模块没有响应 [!DNL CORS].
 
 ### 策略属性
 

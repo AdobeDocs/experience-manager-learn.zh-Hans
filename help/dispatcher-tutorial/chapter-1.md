@@ -6,9 +6,9 @@ topic: Architecture
 role: Architect
 level: Beginner
 exl-id: 3bdb6e36-4174-44b5-ba05-efbc870c3520
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '17468'
+source-wordcount: '17460'
 ht-degree: 0%
 
 ---
@@ -198,7 +198,7 @@ URL必须始终具有扩展名。 尽管您可以在AEM中提供不带扩展名�
 
 `http://domain.com/home.html/suffix.html`
 
-它们在AEM中是绝对有效的。 在本地开发计算机上（没有Dispatcher），您不会看到任何问题。 在UAT或负载测试中，您很可能也不会遇到任何问题。 我们面临的问题非常微妙，以至于它在大多数测试中都漏掉了。  当您处于高峰时段时，它会给您带来沉重的打击，并且您的解决时间会受到限制，可能没有服务器访问权限，也没有修复它的资源。 我们去过那里……
+它们在AEM中是绝对有效的。 在本地开发计算机上（没有Dispatcher），您不会看到任何问题。 在UAT或负载测试中，您很可能也不会遇到任何问题。 我们面临的问题非常微妙，以至于它在大多数测试中都漏掉了。  当您处于高峰时间时，它会给您带来沉重的打击，并且您的寻址时间有限，可能没有服务器访问权限，也没有修复它的资源。 我们去过那里……
 
 那，有什么问题？
 
@@ -304,7 +304,7 @@ invalidate-path:  /content/dam/path/to/image
 
 失效很简单：对Dispatcher上特殊“/invalidate”URL的简单GET请求。 不需要HTTP-body，“payload”只是“invalidate-path”标头。 另请注意，标头中的invalidate-path是AEM所知的资源，而不是Dispatcher已缓存的文件。 AEM只了解资源。 请求资源时，会在运行时使用扩展、选择器和后缀。 AEM不会对资源上使用的选择器执行任何簿记操作，因此在激活资源时，它只知道资源路径。
 
-就我们而言，这就足够了。 如果资源发生更改，我们可以安全地假定该资源的所有演绎版也发生了更改。 在我们的示例中，如果图像发生更改，则也会呈现新的缩略图。
+就我们而言，这就足够了。 如果资源发生更改，我们可以安全地假定该资源的所有演绎版也发生了更改。 在我们的示例中，如果图像发生更改，也会呈现一个新的缩略图。
 
 Dispatcher可以安全地删除其已缓存的所有演绎版的资源。 它会做类似，
 
@@ -361,7 +361,7 @@ Dispatcher可以安全地删除其已缓存的所有演绎版的资源。 它会
 
 Dispatcher只是一个基于文件系统的Web服务器，速度很快，但也相对简单。 如果包含的资源发生更改，它不会意识到这一点。 它仍会链接到呈现包含页面时所在的内容。
 
-“冬季特殊”页面尚未呈现，因此调度程序上没有静态版本，因此将随新Teaser一起显示，因为它将在请求时进行全新渲染。
+“冬季特殊”页面尚未呈现，因此调度程序上没有静态版本，因此在新Teaser应请求全新呈现时，会随新Teaser一起显示该页面。
 
 您可能认为，当资源发生更改时，Dispatcher会在渲染和刷新所有使用此资源的页面时，跟踪其接触的每个资源。 但Dispatcher不呈现页面。 渲染由发布系统执行。 Dispatcher不知道将哪些资源放入渲染的.html文件中。
 
@@ -582,7 +582,7 @@ Dispatcher的失效请求通常由复制代理从发布系统触发。
 
 从AEM开发人员的角度看，这种模式看起来非常优雅。 但是，如果Dispatcher考虑了这个等式，您可能会同意，天真的方法可能是不够的。
 
-现在，我们由你来决定这是一种模式还是一种反模式。 也许你已经有一些好的想法，想如何缓解上述问题？ 很好。 那么，你将迫切地想知道其他项目是如何解决这些问题的。
+现在，我们由你来决定这是一种模式还是一种反模式。 也许你已经有一些好的想法，想如何缓解上述问题？ 很好。 那么，你应该迫切地想看看其他项目是如何解决这些问题的。
 
 ### 解决常见Dispatcher问题
 
@@ -756,7 +756,7 @@ Invalidate-path /content/mysite/dummy
 
 这个细节很多，对吧？ 它拒绝被理解、测试和调试。 这一切都是为了一个看似优雅的解决方案。 诚然，它很优雅 — 但只从AEM的角度。 与调度程序一起，它变得肮脏。
 
-但是，这并不能解决一个基本的警告，如果图像在不同页面上被多次使用，则它们将缓存在这些页面下。 缓存的协同效应不大。
+但是，这并不能解决一个基本的警告，如果图像在不同页面上被多次使用，则它们会缓存在这些页面下。 缓存的协同效应不大。
 
 通常，URL指纹识别是工具包中的一个好工具，但您需要谨慎应用，因为它可能会导致新问题，同时仅解决少数现有问题。
 
@@ -1526,7 +1526,7 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 您可以将Dispatcher设置为使用 `grace period` 自动失效。 这会在内部为 `statfiles` 修改日期。
 
-比如说， `statfile` 修改时间为今天12:00，而您的 `gracePeriod` 设置为2分钟。 然后，所有自动失效的文件将在12时01分和12时02分被视为有效。 12点02分后重新渲染。
+比如说， `statfile` 修改时间为今天12:00，而您的 `gracePeriod` 设置为2分钟。 然后，所有自动失效的文件均在12:01和12:02被视为有效。 12时02分后重新渲染。
 
 参考配置提出了 `gracePeriod` 两分钟的时间。 你可能会想&quot;两分钟？ 那几乎没什么。 我可以轻松等待10分钟，让内容显示……”  因此，您可能打算设置更长的时段 — 比如说10分钟，假设您的内容至少在这10分钟后显示。
 
@@ -1909,7 +1909,7 @@ Dispatcher缓存的良好概述和简介： [https://helpx.adobe.com/experience-
 
 包含所有指令的调度程序文档说明： [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)
 
-一些常见问题： [https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/cn/experience-manager/using/dispatcher-faq.html)
+一些常见问题： [https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html)
 
 记录有关Dispatcher优化的网络研讨会 — 强烈建议： [https://my.adobeconnect.com/p7th2gf8k43?proto=true](https://my.adobeconnect.com/p7th2gf8k43?proto=true)
 

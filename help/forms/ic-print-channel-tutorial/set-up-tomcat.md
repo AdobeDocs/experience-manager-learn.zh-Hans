@@ -1,8 +1,7 @@
 ---
 title: 安装和配置Tomcat视频
 seo-title: Install and Configure Tomcat
-description: 这是创建您的第一个交互式通信文档的多步教程的第1部分。在本部分中，我们将安装TOMCAT并在TOMCAT中部署sampleRest.war文件。 此WAR文件公开的REST端点将作为数据源和表单数据模型的基础。
-seo-description: This is part 1 of multistep tutorial for creating your first interactive communications document.In this part, we will install TOMCAT and deploy the sampleRest.war file in TOMCAT. The REST endpoint exposed by this WAR file will be the basis for our Data Source and Form Data Model.
+description: 这是创建首个交互式通信文档的多步教程的1部分。
 uuid: 835e2342-82b6-4f0c-9a6b-467bbbd8527a
 feature: Interactive Communication
 topics: development
@@ -16,16 +15,16 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: faa9ca2d-6cfa-4abf-be5e-3e549202853a
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
 
 # 安装和配置Tomcat {#install-and-configure-tomcat}
 
-在本部分中，我们将安装TOMCAT并在TOMCAT中部署sampleRest.war文件。 此WAR文件公开的REST端点将作为数据源和表单数据模型的基础。
+在本部分中，我们安装了TOMCAT，并在TOMCAT中部署了sampleRest.war文件。 此WAR文件公开的REST端点是我们的数据源和表单数据模型的基础。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37815/?quality=9&learn=on)
 

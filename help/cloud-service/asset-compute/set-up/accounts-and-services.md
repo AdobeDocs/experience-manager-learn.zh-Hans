@@ -13,9 +13,9 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '621'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 1. [注册以试用App Builder](https://developer.adobe.com/app-builder/trial/).
 1. 请等待大约2 - 10天，直到通过电子邮件通知您已进行配置，然后再继续学习教程。
-   + 如果您不确定是否已配置，请继续执行后续步骤，如果您无法创建 __应用程序生成器__ 项目 [Adobe开发人员控制台](https://developer.adobe.com/console/) 您尚未进行配置。
+   + 如果您不确定是否已配置，请继续执行后续步骤，如果您无法创建 __应用程序生成器__ 项目 [Adobe Developer控制台](https://developer.adobe.com/console/) 您尚未进行配置。
 
 ## 云存储
 
@@ -78,7 +78,7 @@ _点进配置Azure Blob Storage（无音频）_
 1. 点按 __+添加__ 创建新的Blob存储帐户
 1. 新建 __资源组__ 根据需要，例如： `aem-as-a-cloud-service`
 1. 提供 __存储帐户名称__，例如： `aemguideswkndassetcomput`
-   + 的 __存储帐户名称__ 将用于 [配置云存储](../develop/environment-variables.md) (对于本地Asset compute开发工具)
+   + 的 __存储帐户名称__  用于 [配置云存储](../develop/environment-variables.md) 在本地Asset compute开发工具中
    + 的 __访问密钥__ 与存储帐户关联时 [配置云存储](../develop/environment-variables.md).
 1. 将其他所有内容保留为默认值，然后点按 __查看+创建__ 按钮
    + （可选）选择 __位置__ 离你近。

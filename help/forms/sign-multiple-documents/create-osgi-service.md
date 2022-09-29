@@ -1,20 +1,20 @@
 ---
 title: 创建OSGi服务
 description: 创建OSGi服务以存储要签名的表单
-feature: 工作流
+feature: Workflow
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 49e7bd65-33fb-44d4-aaa2-50832dffffb0
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 1%
+source-wordcount: '350'
+ht-degree: 0%
 
 ---
-
 
 # 创建OSGi服务
 
@@ -130,7 +130,7 @@ public String getFormData(String guid) {
 
 ## 更新签名状态
 
-成功完成签署仪式将触发与表单关联的AEM工作流。 工作流中的第一步是一个流程步骤，用于更新数据库中由guid和客户id标识的行的状态。 我们还将formdata中带符号元素的值设置为Y，以表示已填写并签名表单。 自适应表单将填充此数据，xml数据中已签名数据元素的值将用于显示相应的消息。 可从自定义流程步骤中调用updateSignatureStatus代码。
+成功完成签署仪式将触发与表单关联的AEM工作流。 工作流中的第一步是一个流程步骤，用于更新数据库中由guid和客户id标识的行的状态。 我们还将formdata中带符号元素的值设置为Y，以表示已填写并签名表单。 自适应表单中填充了此数据，xml数据中带符号的数据元素的值用于显示相应的消息。 可从自定义流程步骤中调用updateSignatureStatus代码。
 
 
 ```java
@@ -164,7 +164,7 @@ public void updateSignatureStatus(String formData, String guid) {
 
 ## 获取下一张表格进行签名
 
-以下代码用于获取下一个用于为状态为0的给定customerID签名的表单。 如果sql查询未返回任何行，则我们将返回字符串&#x200B;**&quot;AllDone&quot;**，该字符串表示给定客户ID不再有用于签名的表单。
+以下代码用于获取下一个用于为状态为0的给定customerID签名的表单。 如果sql查询未返回任何行，则我们将返回字符串 **&quot;AllDone&quot;** 表示不再有用于为给定客户id签名的表单。
 
 ```java
 @Override
@@ -202,6 +202,6 @@ public String getNextFormToSign(int customerID) {
 
 
 
-## 资产
+## Assets
 
-与上述服务一起使用的OSGi包可以从此处](assets/sign-multiple-forms.jar)下载[
+与上述服务相结合的OSGi包可以 [从此处下载](assets/sign-multiple-forms.jar)

@@ -1,6 +1,6 @@
 ---
 title: 了解带有AEM Dynamic Media的资产查看器
-description: AEM Dynamic Media查看器增强功能允许AEM作者定义和自定义将向网站用户展示的体验资产。
+description: AEM Dynamic Media查看器增强功能允许AEM作者定义和自定义向网站用户显示资产的方式。
 sub-product: dynamic media classic
 feature: Viewer Presets, Image Profiles
 version: 6.4, 6.5
@@ -8,16 +8,16 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: db4fc561-2368-4df8-9b02-fc08afa00805
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
 # 了解带有AEM Dynamic Media的资产查看器{#understanding-the-asset-viewer-with-aem-dynamic-media}
 
-AEM Dynamic Media查看器增强功能允许AEM作者定义和自定义将向网站用户展示的体验资产。
+AEM Dynamic Media查看器增强功能允许AEM作者定义和自定义向网站用户显示资产的方式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17783/?quality=9&learn=on)
 

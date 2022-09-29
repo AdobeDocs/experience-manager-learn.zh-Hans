@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 197f7e18f0d229698048cb06c2a49c019d420217
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '502'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ## 第2季
 
-每个季节的时长各不相同，将按固定时间表发布。 第2季的主题主要源于我们在与客户和合作伙伴的日常接触中遇到的过去的请求。 访问此页面可获取每周更新，或在您选择的社交网络上关注我们。
+每个季节的时长各不相同，并按固定时间表发布。 第2季的主题主要源于我们在与客户和合作伙伴的日常接触中遇到的过去的请求。 访问此页面可获取每周更新，或在您选择的社交网络上关注我们。
 
 <table>
     <tr>
@@ -127,11 +127,11 @@ ht-degree: 1%
       </p>
      </td>   
      <td>
-            <a href="season-2/cloud5-MoCM-experience-audit.md">
+            <a href="season-2/cloud5-mocm-experience-audit.md">
                <img alt="Cloud Manager的奥秘……体验审核" src="./imgs/s2/007-thumb.png"/>
                </a>
       <div>
-            <a href="season-2/cloud5-MoCM-experience-audit.md"><strong>Cloud Manager的奥秘……体验审核</strong></a>
+            <a href="season-2/cloud5-mocm-experience-audit.md"><strong>Cloud Manager的奥秘……体验审核</strong></a>
          <br/><em>与高级云架构师Darin Kuntze合作</em>
       </div>
       <p>
@@ -140,11 +140,11 @@ ht-degree: 1%
       </p>
    </td>
      <td>
-            <a href="season-2/cloud5-MoCM-unit-tests.md">
+            <a href="season-2/cloud5-mocm-unit-tests.md">
                <img alt="Cloud Manager的奥秘……单元测试" src="./imgs/s2/008-thumb.png"/>
             </a>
       <div>
-            <a href="season-2/cloud5-MoCM-unit-tests.md"><strong>Cloud Manager的奥秘……单元测试</strong></a>
+            <a href="season-2/cloud5-mocm-unit-tests.md"><strong>Cloud Manager的奥秘……单元测试</strong></a>
          <br/><em>与高级云架构师Darin Kuntze &amp; Bryan Stopp合作</em>
       </div>
       <p>
@@ -155,11 +155,11 @@ ht-degree: 1%
   </tr>
     <tr>
         <td>
-               <a href="season-2/cloud5-MoCM-functional-tests.md">
+               <a href="season-2/cloud5-mocm-functional-tests.md">
                    <img alt="Cloud Manager的奥秘……功能测试" src="./imgs/s2/009-thumb.png"/>
                </a>
             <div>
-                <a href="season-2/cloud5-MoCM-functional-tests.md"><strong>Cloud Manager的奥秘……功能测试</strong><br/></a>        
+                <a href="season-2/cloud5-mocm-functional-tests.md"><strong>Cloud Manager的奥秘……功能测试</strong><br/></a>        
                 <em>与高级云架构师Darin Kuntze &amp; Bryan Stopp合作</em>
             </div>
             <p><br/>

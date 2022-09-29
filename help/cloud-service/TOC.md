@@ -4,7 +4,7 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: bc222867c937b7d498e7b56bebc0aac18289ad03
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 21%
@@ -214,7 +214,7 @@ ht-degree: 21%
    + 与Microsoft Power集成自动化{#forms-cs-and-power-automate}
       + [配置集成](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
       + [解析提交的表单数据](./forms/forms-cs-and-power-automate/send-email-notification.md)
-      + [将DoR作为电子邮件附件发送](./forms/forms-cs-and-power-automate/send-DoR-email-attachment.md)
+      + [将DoR作为电子邮件附件发送](./forms/forms-cs-and-power-automate/send-dor-email-attachment.md)
       + [从提交的数据中提取表单附件](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
    + 与Microsoft Dynamics集成{#formscs-dynamics-crm}
       + [创建Dynamics应用程序](./forms/formscs-dynamics-crm/create-dynamics-account.md)
@@ -272,9 +272,9 @@ ht-degree: 21%
       + [Sling作业计划程序](./cloud-5/season-2/cloud5-sling-job-scheduler.md)
       + [修复缓存](./cloud-5/season-2/cloud5-fix-your-cache.md)
       + [修复了重写](./cloud-5/season-2/cloud5-fix-your-rewrites.md)
-      + [Cloud Manager — 体验审核](./cloud-5/season-2/cloud5-MoCM-experience-audit.md)
-      + [Cloud Manager — 单元测试](./cloud-5/season-2/cloud5-MoCM-unit-tests.md)
-      + [Cloud Manager — 功能测试](./cloud-5/season-2/cloud5-MoCM-functional-tests.md)
+      + [Cloud Manager — 体验审核](./cloud-5/season-2/cloud5-mocm-experience-audit.md)
+      + [Cloud Manager — 单元测试](./cloud-5/season-2/cloud5-mocm-unit-tests.md)
+      + [Cloud Manager — 功能测试](./cloud-5/season-2/cloud5-mocm-functional-tests.md)
 + [AEM专家系列](./aem-experts-series.md)
 + 多步Tutorials{#multi-step-tutorials}
    + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)

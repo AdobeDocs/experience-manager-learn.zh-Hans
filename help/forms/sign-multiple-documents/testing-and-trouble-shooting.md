@@ -1,35 +1,35 @@
 ---
 title: 对多个文档解决方案进行签名故障诊断
 description: 测试和故障排除解决方案
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6960
 thumbnail: 6960.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 99cba29e-4ae3-4160-a4c7-a5b6579618c0
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 1%
+source-wordcount: '388'
+ht-degree: 0%
 
 ---
-
 
 # 测试和故障诊断
 
 
 ## 预览再融资表单
 
-当客户服务代理填写并提交[再融资表单](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)时，将触发用例。
+当客户服务代理填写并提交时，将触发用例 [再融资表](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled).
 
 在提交此表单时，签署多个Forms工作流会触发，客户会收到一封包含链接的电子邮件通知，以开始表单填写和签名流程。
 
 ## 在包中填写表单
 
-客户将填写并签署包中的第一个表单。 成功签名表单后，客户可以导航到包中的下一个表单。 填写所有表单并对其签名后，客户将看到“**AllDone**”表单。
+客户将填写并签署包中的第一个表单。 成功签名表单后，客户可以导航到包中的下一个表单。 填写并签署所有表单后，客户将看到&#x200B;**AllDone**“ ”。
 
-## 故障诊断
+## 疑难解答
 
 ### 未生成电子邮件通知
 
@@ -49,15 +49,4 @@ ht-degree: 1%
 
 ### 未看到AllDone表单
 
-当包中没有可登录的表单时，将向用户显示AllDone表单。如果您没有看到AllDone表单，请检查GetNextFormToSign.js文件第33行中使用的URL，该文件是&#x200B;**getnextform**&#x200B;客户端库的一部分。
-
-
-
-
-
-
-
-
-
-
-
+当包中没有可登录的表单时，将向用户显示AllDone表单。如果您没有看到AllDone表单，请检查GetNextFormToSign.js文件第33行中使用的URL，该文件是 **getnextform** 客户端库。

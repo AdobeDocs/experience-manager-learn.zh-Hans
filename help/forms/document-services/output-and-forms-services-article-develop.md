@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Line2从请求中提取saveLocation
 * **请求参数 —**
 
    * **xdp_or_pdf_file** :要将数据与
-   * **xmlfile**:将与xdp_or_pdf_file合并的xml数据文件
+   * **xmlfile**:与xdp_or_pdf_file合并的xml数据文件
    * **saveLocation**:在文件系统上保存已渲染文档的位置。 例如c:\\documents\\sample.pdf
 
 ### 将数据导入PDF文件
@@ -86,8 +86,8 @@ Line2从请求中提取saveLocation
 * **请求参数：**
 
    * **pdfile** :要将数据与
-   * **xmlfile**:将与pdf文件合并的xml数据文件
-   * **saveLocation**:在文件系统上保存已渲染文档的位置。 例如c:\\outputsample.pdf。
+   * **xmlfile**:与pdf文件合并的xml数据文件
+   * **saveLocation**:在文件系统上保存已渲染文档的位置。 例如 `c:\\outputsample.pdf`.
 
 **从PDF文件导出数据**
 * 使用FormsService从PDF文件导出数据

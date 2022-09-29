@@ -8,9 +8,9 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1464'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯�
 
 您还可以 [启用行内引用](#insert-fragment-references) 通过检查 **允许片段引用** 和配置 **允许的内容片段模型**.
 
-检查 **可翻译** 框中，选择要在左侧导航。 只能本地化富文本和纯文本。 请参阅 [使用本地化内容以了解更多详细信息](./localized-content.md).
+检查 **可翻译** 框中，选择要将内容本地化的复选框。 只能本地化富文本和纯文本。 请参阅 [使用本地化内容以了解更多详细信息](./localized-content.md).
 
 ## 使用GraphQL API的富文本响应
 

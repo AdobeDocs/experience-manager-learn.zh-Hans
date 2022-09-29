@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 412eea77-3cf4-43bb-9d2f-ae860cd9d3be
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 # 将JSON模式存储在数据库中 {#storing-json-schema-in-database}
 
 
-为了能够查询已提交的数据，我们需要存储与已提交表单关联的JSON模式。 查询生成器中将使用JSON架构来构建查询。
+为了能够查询已提交的数据，我们需要存储与已提交表单关联的JSON模式。 查询生成器中使用JSON架构来构建查询。
 
 提交自适应表单后，我们会检查关联的JSON架构是否在数据库中。 如果JSON架构不存在，我们将获取JSON架构并将该架构存储在相应的表中。 我们还将表单名称与JSON架构相关联。 以下屏幕截图显示了存储JSON架构的表。
 

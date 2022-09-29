@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '355'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ MarketoService marketoService;
 
 MarketoAuthenticationService实现IAuthentication接口。 此界面是AEM Forms客户端SDK的一部分。 该服务获取访问令牌，并将该令牌插入AuthenticationDetails的HttpHeader中。 填充AuthenticationDetails对象的HttpHeaders后，AuthenticationDetails对象将返回到表单数据模型的Dermis层。
 
-请注意方法getAuthenticationType返回的字符串。 此字符串将在您配置数据源时使用。
+请注意方法getAuthenticationType返回的字符串。 此字符串在您配置数据源时使用。
 
 ### 获取访问令牌
 

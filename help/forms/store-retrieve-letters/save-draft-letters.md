@@ -1,8 +1,6 @@
 ---
-title: 保存并恢复信件
-seo-title: Save and resume letters
+title: 保存和检索草稿信件
 description: 了解如何保存和检索草稿信件
-seo-description: Learn how to save and retrieve draft letters
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -13,14 +11,15 @@ topic: Development
 role: Developer
 level: Intermediate
 kt: 10208
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+exl-id: dc6f64a0-7059-4392-9c29-e66bdef4fd4d
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
 
-# 保存草稿
+# 保存和检索草稿信件
 
 以下代码用于保存信件实例。 信件实例的元数据存储在 _草稿_ 表。 将生成并返回唯一的字符串(draftID)。 然后，此唯一字符串将用于检索保存的信件实例。
 
@@ -106,19 +105,19 @@ public CCRDocumentInstance get(String draftID) throws CCRDocumentException {
 
 ```java
 public void update(CCRDocumentInstance letterInstanceToUpdate) throws CCRDocumentException {
-		Document icData = letterInstanceToUpdate.getData();
-		String draftID = letterInstanceToUpdate.getId();
-		log.debug("updating letter instance with draft id =  "+draftID);
-		try
-			{
-				icData.copyToFile(new File(draftID+".xml"));
-			} 
-		catch (IOException e)
-			{
-				log.debug("Error updating "+e.getMessage());;
-			}
-		
-	}
+        Document icData = letterInstanceToUpdate.getData();
+        String draftID = letterInstanceToUpdate.getId();
+        log.debug("updating letter instance with draft id =  "+draftID);
+        try
+            {
+                icData.copyToFile(new File(draftID+".xml"));
+            } 
+        catch (IOException e)
+            {
+                log.debug("Error updating "+e.getMessage());;
+            }
+        
+    }
 ```
 
 ### 获取所有已保存的信件
@@ -127,49 +126,48 @@ AEM Forms不提供任何现成的用户界面来列出已保存的信件。 对�
 您可以自定义查询以获取保存的信件实例。 在此示例中，我正在通过“admin”查询已保存的信件实例。
 
 ```java
-	public List < CCRDocumentInstance > getAll(String arg0, Date arg1, Date arg2, Map < String, Object > arg3) throws CCRDocumentException {
-	  String selectStatement = "Select * from aemformstutorial.icdrafts where owner = 'admin'";
-	  Connection connection = getConnection();
-	  Statement statement = null;
-	  String documentID = "";
-	  List < CCRDocumentInstance > listOfDrafts = new ArrayList < CCRDocumentInstance > ();
-	  String draftID;
-	  String savedInstanceName = "";
-	  try {
-	    statement = connection.createStatement();
-	    ResultSet rs = statement.executeQuery(selectStatement);
-	    while (rs.next()) {
-	      documentID = rs.getString("documentID");
-	      draftID = rs.getString("draftID");
-	      savedInstanceName = rs.getString("name");
-	      Document draftData = new Document(new File(draftID + ".xml"));
-	      CCRDocumentInstance draftLetter = new CCRDocumentInstance(draftData, savedInstanceName, documentID, CCRDocumentInstance.Status.DRAFT);
-	      listOfDrafts.add(draftLetter);
-	    }
-	  } catch (SQLException e) {
-	    log.debug("The error is " + e.getMessage());
-	  } finally {
-	    if (statement != null) {
-	      try {
-	        statement.close();
-	      } catch (SQLException e) {
-	        log.debug("error in closing statement" + e.getMessage());
-	      }
-	    }
-	    if (connection != null) {
-	      try {
-	        connection.close();
-	      } catch (SQLException e) {
-	        log.debug("error in closing connection" + e.getMessage());
-	      }
-	    }
-	  }
+    public List < CCRDocumentInstance > getAll(String arg0, Date arg1, Date arg2, Map < String, Object > arg3) throws CCRDocumentException {
+      String selectStatement = "Select * from aemformstutorial.icdrafts where owner = 'admin'";
+      Connection connection = getConnection();
+      Statement statement = null;
+      String documentID = "";
+      List < CCRDocumentInstance > listOfDrafts = new ArrayList < CCRDocumentInstance > ();
+      String draftID;
+      String savedInstanceName = "";
+      try {
+        statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(selectStatement);
+        while (rs.next()) {
+          documentID = rs.getString("documentID");
+          draftID = rs.getString("draftID");
+          savedInstanceName = rs.getString("name");
+          Document draftData = new Document(new File(draftID + ".xml"));
+          CCRDocumentInstance draftLetter = new CCRDocumentInstance(draftData, savedInstanceName, documentID, CCRDocumentInstance.Status.DRAFT);
+          listOfDrafts.add(draftLetter);
+        }
+      } catch (SQLException e) {
+        log.debug("The error is " + e.getMessage());
+      } finally {
+        if (statement != null) {
+          try {
+            statement.close();
+          } catch (SQLException e) {
+            log.debug("error in closing statement" + e.getMessage());
+          }
+        }
+        if (connection != null) {
+          try {
+            connection.close();
+          } catch (SQLException e) {
+            log.debug("error in closing connection" + e.getMessage());
+          }
+        }
+      }
 
-	  return listOfDrafts;
-	}
+      return listOfDrafts;
+    }
 ```
 
 ### Eclipse项目
 
 包含实施示例的Eclipse项目可以 [从此处下载](assets/icdrafts-eclipse-project.zip)
-

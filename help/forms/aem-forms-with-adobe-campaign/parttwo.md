@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: deef09d9-82ec-4e61-b7ee-e72d1cd4e9e0
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '358'
 ht-degree: 0%
 
 ---
@@ -267,4 +267,4 @@ String pkey = addNewProfile.createProfile(profile);
 * [使用包管理器导入自适应表单和自定义提交处理程序](assets/create-acs-profile-on-af-submission.zip).此包包含配置为提交到自定义提交操作的自适应表单。
 * 预览 [表单](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * 填写所有字段并提交
-* 将在您的ACS实例中创建新用户档案
+* 在ACS实例中创建新配置文件

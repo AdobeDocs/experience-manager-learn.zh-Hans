@@ -15,9 +15,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 85e1b450-39c0-4bb8-be5d-d7f50b102f3d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -28,16 +28,15 @@ ht-degree: 0%
 
 \{fieldName\} = \{parameterName\}。 例如，submitterName是自适应表单字段的名称，submitter是参数的名称。 在感谢页中，您可以使用request.getParameter(&quot;submitter&quot;)访问提交者参数，以获取提交者名称字段的值。
 
-submitterName=submitter
+`submitterName=submitter`
 
-在下面的屏幕截图中，我们将提交自适应表单以感谢位于/content/thankyou的页面。 为此，我们将传递3个请求属性，这些属性将包含表单字段值。
+在下面的屏幕截图中，我们将提交自适应表单以感谢位于/content/thankyou的页面。 为此感谢页面，我们将传递3个包含表单字段值的请求属性。
 
-![感谢](assets/thankyoupage.gif)
+![感谢页面](assets/thankyoupage.gif)
 
-您还可以通过POST提交到外部端点。 要实现此目的，您只需选中“启用post请求”复选框，并提供外部端点的URL。 提交表单后，您将收到感谢页面，并同时调用POST端点。
+您还可以通过POST提交到外部端点。 要实现此目的，您只需选中“启用post请求”复选框，并提供外部端点的URL。 提交表单时，您会收到感谢页面，并同时调用POST端点。
 
-![捕获](assets/capture.gif)
-
+![捕获配置](assets/capture.gif)
 
 要在您的服务器上测试此功能，请按照以下说明操作：
 

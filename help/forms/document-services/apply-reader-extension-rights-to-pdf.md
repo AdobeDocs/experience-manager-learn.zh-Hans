@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -71,9 +71,9 @@ public class ApplyUsageRights implements ReaderExtendPDF {
 
 ## 创建Servlet以流式传输读取器扩展PDF
 
-下一步是使用POST方法创建一个Servlet，以将读取器扩展PDF返回给用户。 在这种情况下，将要求用户将PDF保存到其文件系统中。 这是因为PDF呈现为动态PDF，而浏览器附带的pdf查看器不处理动态pdf。
+下一步是使用POST方法创建一个Servlet，以将读取器扩展PDF返回给用户。 在这种情况下，系统会要求用户将PDF保存到其文件系统。 这是因为PDF呈现为动态PDF，而浏览器附带的pdf查看器不处理动态pdf。
 
-以下是Servlet的代码。 Servlet将通过自适应表单的customsubmit操作进行调用。
+以下是Servlet的代码。 Servlet通过自适应表单的自定义提交操作来调用。
 Servlet会创建UsageRights对象，并根据用户在自适应表单中输入的值设置其属性。 然后，该Servlet将调用为此目的创建的服务的applyUsageRights方法。
 
 ```java

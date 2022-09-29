@@ -1,51 +1,51 @@
 ---
-title: 第7章 — 从Mobile应用程序使用AEM内容服务 — 内容服务
-description: 教程的第7章运行Android Mobile应用程序以使用AEM Content Services中的创作内容。
+title: 第7章 — 从移动设备应用程序使用AEM内容服务 — 内容服务
+description: 本教程的第7章运行Android移动设备应用程序以使用AEM Content Services中的创作内容。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
 
-# 第7章 — 从Mobile应用程序使用AEM内容服务
+# 第7章 — 从移动设备应用程序使用AEM内容服务
 
-本教程的第7章使用本机Android Mobile应用程序从AEM Content Services中使用内容。
+本教程的第7章使用本机Android移动设备应用程序从AEM Content Services中使用内容。
 
-## Android Mobile应用程序
+## Android移动设备应用程序
 
-本教程使用 **简单的本机Android Mobile应用程序** 以使用和显示由AEM Content Services公开的事件内容。
+本教程使用 **简单的本机Android移动设备应用程序** 以使用和显示由AEM Content Services公开的事件内容。
 
 的使用 [Android](https://developer.android.com/) 基本上不重要，消费性移动应用程序可以在任何框架中编写，适用于任何移动平台，例如iOS。
 
 Android用于教程，因为能够在Windows、macOs和Linux上运行Android模拟器，其受欢迎程度，并且可以以Java(AEM开发人员非常了解的一种语言)编写。
 
-*本教程的Android Mobile应用程序是&#x200B;**not**旨在指导如何构建Android Mobile应用程序或传达Android开发最佳实践，但是却是为了说明如何从Mobile应用程序中使用AEM内容服务。*
+*本教程的Android移动设备应用程序是&#x200B;**not**旨在指导如何构建Android Mobile应用程序或传达Android开发最佳实践，但是却是为了说明如何从移动设备应用程序中使用AEM Content Services。*
 
-### AEM内容服务如何推动Mobile应用程序体验
+### AEM Content Services如何促进移动设备应用程序体验
 
-![Mobile应用程序到内容服务的映射](assets/chapter-7/content-services-mapping.png)
+![移动设备应用程序到内容服务的映射](assets/chapter-7/content-services-mapping.png)
 
 1. 的 **徽标** 定义 [!DNL Events API] 页面的 **图像组件**.
 1. 的 **标记行** 定义 [!DNL Events API] 页面的 **文本组件**.
 1. 此 **事件列表** 派生自事件内容片段的序列化，通过配置的 **内容片段列表组件**.
 
-## Mobile应用程序演示
+## 移动设备应用程序演示
 
 >[!VIDEO](https://video.tv.adobe.com/v/28345/?quality=12&learn=on)
 
-### 配置Mobile应用程序以用于非本地主机
+### 为非本地主机使用配置移动设备应用程序
 
-如果未在上运行AEM发布 **http://localhost:4503** 可以在Mobile应用程序的 [!DNL Settings] 指向属性AEM发布主机/端口。
+如果未在上运行AEM发布 **http://localhost:4503** 可以在移动设备应用程序的 [!DNL Settings] 指向属性AEM发布主机/端口。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28344/?quality=12&learn=on)
 
-## 在本地运行Mobile应用程序
+## 在本地运行移动设备应用程序
 
 1. 下载并安装 [Android Studio](https://developer.android.com/studio/install) 以安装Android模拟器。
 1. **下载** Android [!DNL APK] 文件 [GitHub >资产> wknd-mobile.x.x.xapk](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
@@ -63,7 +63,7 @@ Android用于教程，因为能够在Windows、macOs和Linux上运行Android模�
    1. 选择 **像素2**.
    1. 单击 **下一个** 按钮。
    1. 选择 **Q** with **API级别29**.
-      * 首次启动AVD管理器后，将要求您下载版本控制的API。 单击“Q”版本旁边的下载链接，然后完成下载和安装。
+      * 首次启动AVD管理器后，系统会要求您下载版本控制的API。 单击“Q”版本旁边的下载链接，然后完成下载和安装。
    1. 单击 **下一个** 按钮。
    1. 单击 **完成** 按钮。
 1. 关闭 **AVD管理器** 窗口。
@@ -77,27 +77,27 @@ Android用于教程，因为能够在Windows、macOs和Linux上运行Android模�
 
 >[!VIDEO](https://video.tv.adobe.com/v/28341/?quality=12&learn=on)
 
-## Mobile应用程序代码
+## 移动设备应用程序代码
 
-此部分重点介绍最常交互且依赖于AEM Content Services及其JSON输出的Android Mobile应用程序代码。
+此部分重点介绍最能交互且依赖于AEM Content Services及其JSON输出的Android移动设备应用程序代码。
 
-加载时，Mobile应用程序将 `HTTP GET` to `/content/wknd-mobile/en/api/events.model.json` 这是AEM Content Services端点，配置为提供内容以驱动Mobile应用程序。
+加载后，移动设备应用程序将 `HTTP GET` to `/content/wknd-mobile/en/api/events.model.json` 即AEM Content Services端点，配置为提供内容以驱动移动设备应用程序。
 
-因为事件API的可编辑模板(`/content/wknd-mobile/en/api/events.model.json`)，则可以对Mobile应用程序进行编码，以在JSON响应中的特定位置查找特定信息。
+因为事件API的可编辑模板(`/content/wknd-mobile/en/api/events.model.json`)，则可以对移动设备应用程序进行编码，以在JSON响应中的特定位置查找特定信息。
 
 ### 高级代码流
 
-1. 打开 [!DNL WKND Mobile] 应用程序会调用 `HTTP GET` 请求AEM在以下位置发布 `/content/wknd-mobile/en/api/events.model.json` 以收集用于填充Mobile应用程序UI的内容。
-2. 从AEM收到内容后，Mobile应用程序的三个视图元素中的每个元素： **徽标、标记行和事件列表**，将使用AEM中的内容进行初始化。
-   * 要将AEM内容绑定到Mobile应用程序的视图元素，则表示每个AEM组件的JSON是映射到Java POJO的对象，Java POJO又绑定到Android视图元素。
+1. 打开 [!DNL WKND Mobile] 应用程序会调用 `HTTP GET` 请求AEM在以下位置发布 `/content/wknd-mobile/en/api/events.model.json` 以收集用于填充移动设备应用程序UI的内容。
+2. 从AEM接收内容后，移动设备应用程序的三个视图元素中的每个元素： **徽标、标记行和事件列表**，将使用AEM中的内容进行初始化。
+   * 要将AEM内容绑定到移动设备应用程序的视图元素，则表示每个AEM组件的JSON是映射到Java POJO的对象，Java POJO又绑定到Android视图元素。
       * 图像组件JSON →徽标POJO →徽标ImageView
       * 文本组件JSON → TagLine POJO →文本ImageView
       * 内容片段列表JSON →事件POJO →事件回收器视图
-   * *由于Mobile应用程序代码中较大JSON响应中的已知位置，因此能够将JSON映射到POJO。 请记住，“image”、“text”和“contentfragmentlist”的JSON键由支持AEM组件的节点名称指定。 如果这些节点名称发生更改，则Mobile应用程序将会中断，因为它不知道如何从JSON数据中源出必需的内容。*
+   * *由于JSON响应中的已知位置，移动设备应用程序代码能够将JSON映射到POJO。 请记住，“image”、“text”和“contentfragmentlist”的JSON键由支持AEM组件的节点名称指定。 如果这些节点名称发生更改，则移动设备应用程序将会中断，因为它不知道如何从JSON数据中源出必需的内容。*
 
 #### 调用AEM Content Services端点
 
-以下是Mobile应用程序中代码的蒸馏 `MainActivity` 负责调用AEM内容服务来收集驱动Mobile应用程序体验的内容。
+以下是移动应用程序中代码的提取 `MainActivity` 负责调用AEM Content Services来收集驱动移动设备应用程序体验的内容。
 
 ```
 protected void onCreate(Bundle savedInstanceState) {
@@ -128,7 +128,7 @@ private void initApp(final List<ViewBinder> viewBinders) {
 }
 ```
 
-`onCreate(..)` 是Mobile应用程序的初始化挂接，并注册3个自定义 `ViewBinders` 负责解析JSON并将值绑定到 `View` 元素。
+`onCreate(..)` 是移动设备应用程序的初始化挂接，并注册3个自定义 `ViewBinders` 负责解析JSON并将值绑定到 `View` 元素。
 
 `initApp(...)` 随后将调用，以便在AEM发布中向AEM Content Services端点发出HTTPGET请求，以收集内容。 收到有效的JSON响应后，JSON响应将传递到每个 `ViewBinder` 负责解析JSON并将其绑定到移动设备 `View` 元素。
 
@@ -183,11 +183,11 @@ public class Image {
 
 事件POJO需要从JSON对象中选择更多数据点，它比简单的图像更能从中受益，我们只想从 `src`.
 
-## 探索Mobile应用程序体验
+## 探索移动设备应用程序体验
 
-现在，您已经了解AEM内容服务如何提供本机Mobile体验，接下来请使用您学到的知识执行以下步骤，并查看反映在Mobile应用程序中的更改。
+现在，您已经了解AEM Content Services如何驱动本机移动设备体验，接下来可以使用您学到的知识执行以下步骤，并查看移动设备应用程序中反映的更改。
 
-在每个步骤后，通过提取以刷新Mobile应用程序，并验证移动体验的更新。
+在每个步骤之后，通过提取来刷新移动设备应用程序，并验证移动设备体验的更新。
 
 1. 创建和发布 **新建 [!DNL Event] 内容片段**
 1. 取消发布 **现有 [!DNL Event] 内容片段**

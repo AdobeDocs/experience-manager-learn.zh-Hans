@@ -3,9 +3,9 @@ title: 如何使用Adobe Experience Manager提高内容周转率
 description: 了解内容周转率及其在企业组织中的价值。 深入研究有效实施的四项原则以及在实施过程中需要注意的缺陷。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2823'
+source-wordcount: '2815'
 ht-degree: 0%
 
 ---
@@ -75,11 +75,11 @@ _“领导力支持、方向和远见是一个关键因素。 奇妙的是，我
 
 问题是，在所有品牌以统一方式运营之前，您是否会坚持重新想象内容？ 解决所有这些问题是否明智？
 
-答案是否定的。 这将增加复杂性。 此外，许多利益相关方会对围绕旧的永无休止的对话感到沮丧，从而让构建新的尝试受挫。 一个人会被锁在对话中 _关于_ 更改，而不是进行更改。
+答案是否定的。 这将增加复杂性。 此外，许多利益相关方会对围绕旧的永无休止的对话感到沮丧，从而让构建新的尝试受挫。 一个人被锁在谈话中 _关于_ 更改，而不是进行更改。
 
 我们需要一个切实的框架。 一种新的模式。 人们能看到和感受的东西。 过去，内容可能被视为页面、营销活动或任何想象中的单数内容。 根本的转变是将内容视为内容本身：重新调整其用途、重新设置其样式并重新循环回创作团队。 核心新开发应用于目标丰富的体验。
 
-对于许多客户而言，实施更改的最佳方式是创建一个小型网站、品牌或网站的单独部分，以用作新框架的测试案例。 选择组织的一个部分作为概念验证将允许您：
+对于许多客户而言，实施更改的最佳方式是创建一个小型网站、品牌或网站的单独部分，以用作新框架的测试案例。 选择组织的一个部分作为概念验证允许您：
 
 * 创建一组内置的利益相关方，专门负责了解新框架
 * 减少周期性发现会话并更快地构建
@@ -94,19 +94,19 @@ _“我们知道有太多内容要公开。 因此，我们与观众进行了一
 
 AEM是一个企业级解决方案，它涉及公司或品牌的许多部分，而且其有效性作为CMS工具具有上游依赖关系。
 
-在构建框架时，您需要为一些常见的范例找到正确的解决方案。 其中某些元素可能具有挑战性，但必须做出决策 — 这就是为什么上述基本范式如此重要的原因。 正在构建的框架将是可用于在整个组织中扩展的框架。
+在构建框架时，您需要为一些常见的范例找到正确的解决方案。 其中某些元素可能具有挑战性，但必须做出决策 — 这就是为什么上述基本范式如此重要的原因。 正在构建的框架是可用于在整个组织中扩展的框架。
 
 以下是执行阶段要构建的四个里程碑：
 
 1. **定义组织全局分类的基础。**
 
-   当我们讨论分类时，我们不仅引用文件夹结构，还了解谁将创作什么和何时。 此外，我们需要考虑 [不同权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=en) 需要为每种类型的作者构建的结构。
+   当我们讨论分类时，我们不仅引用文件夹结构，还了解谁在创作什么和何时。 此外，我们需要考虑 [不同权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=en) 需要为每种类型的作者构建的结构。
 
    此时，请考虑您是希望采用集中式治理模式还是分散式治理模式。一方面，集中式治理模式创建了一种整合的分类策略，提供更严格的质量控制和流程分析，而在分散化的框架中，这是不可能实现的，或者至少是非常困难的。
 
-   另一方面，集中化模型（尤其是如果来自当前过于灵活的创作体验）对团队来说可能是一个太大的障碍。 该结构必须考虑到共同的语言和区域差异以及围绕质量控制的做法。 此外，创作体验的每个方面的自主性可能会降低 — 也就是说，只允许某些作者在特定的页面组上工作，并且只有有限的作者具有可编辑的权限。
+   另一方面，集中化模型（尤其是如果来自当前过于灵活的创作体验）对团队来说可能是一个太大的障碍。 该结构必须考虑到共同的语言和区域差异以及围绕质量控制的做法。 此外，创作体验的每个方面的自主性可能会降低 — 即，只允许某些作者在特定的页面组上工作，并且只有有限的作者具有可编辑的权限。
 
-   尽管最初的集中式治理模式似乎比较缓慢，但最终，随着流程洞察的收集和企业用户透明的问责，总体轨迹将会更快。
+   尽管最初的集中式治理模式似乎比较缓慢，但最终，随着流程洞察的收集和企业用户透明的问责，总体轨迹会更快。
 
    决定走哪个方向最终取决于本组织的总体战略目标。 这可能取决于在提高业务用户的灵活性或跨品牌的统一体验之间做出选择。 在正确的模型上对齐对于声音执行至关重要。
 
@@ -116,7 +116,7 @@ AEM是一个企业级解决方案，它涉及公司或品牌的许多部分，�
 
    交互式内容（通常位于主页上）可能需要高度交互的体验，因此，需要前端CSS设计人员与业务作者合作进行更新。 与诸如参考页面之类的权限结构和批准流程相比，主页维护需要的权限结构和批准流程有所不同，这样更容易更新。 健全的治理、效率和质量从明确的内容所有权开始。 考虑执行内容审核以回答以下问题：
 
-   * 谁将创作什么？ 什么时候？
+   * 谁在创作什么？ 什么时候？
    * 需要对每种内容应用哪些不同的权限结构？
    * 网站上哪些体验会发生更改，哪些体验会保持相对静态？
    * 谁将拥有哪些内容？
@@ -145,7 +145,7 @@ AEM是一个企业级解决方案，它涉及公司或品牌的许多部分，�
 一般来说，最好遵循以下经验法则：
 
 * 力求让80%以上的体验通过 [开箱即用的组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 和 [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). 通过客户证词，这不仅将创建一个更具扩展性的基础，使您能够利用产品路线图，还将使速度提高多达50%。
-* [设置](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[e](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[可编辑的模板](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) 和远离静态模板。 设置可编辑的模板（使用样式系统时需要使用这些模板）时，需要分配一个模板作者，该模板作者将控制网页或网站区域可用的不同样式。 对模板本身的这些更新在日常工作中相当小。
+* [设置](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[e](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[可编辑的模板](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) 和远离静态模板。 设置可编辑的模板（使用样式系统时需要使用这些模板）时，需要分配一个模板作者，该模板作者将控制网站页面或部分可用的不同样式。 对模板本身的这些更新在日常工作中相当小。
 * 使用 [体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en) 尽可能。 尽管体验片段的一般用例适用于多渠道分发，但您也可以在整个网站中有效地使用它们一次在一个区域中填充内容，而不是在多个区域中手动更新内容。 这样可以节省过多的时间和精力，并且可以腾出创作团队来处理更具体、更丰富的体验。
 * 创建更丰富的体验。 通过利用80/20规则（根据上文），组织可以利用特定的CSS和后端开发来获取选定的体验，而不是常见的维护更新。
 * 选择可扩展的基础并快速重新品牌。 基于现代实施执行的样式系统可以在您的平台上实现有效的品牌重塑。 通过更改CSS外观来更新内容的广泛扇区，可以快速测试和验证，并提高网站的体验质量，从而直接影响ROI。
@@ -177,4 +177,4 @@ AEM Sites:基本运行和操作
 
 有关内容周转率的更深入讨论，请收听此观看，时间为1小时 [小组讨论](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d) T-Mobile民主党议员莫妮克·米斯拉希、德勤(Emy Bergstrom)和Adobe的阿努拉达·佩纳雷迪主演。
 
-在 [客户成功](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) 中心。
+在 [客户成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html) 中心。

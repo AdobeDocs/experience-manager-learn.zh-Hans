@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
-source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '667'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Maven是一款主要用于Java项目的内部版本自动化工具。 请按照�
 
 ## 创建您的第一个项目
 
-原型是Maven项目模板工具包。 原型被定义为原始模式或模型，从中可以制造所有同类的其它事物。 此名称适合我们尝试提供一个系统，以提供一致的Maven项目生成方法。 原型将帮助作者为用户创建Maven项目模板，并为用户提供生成这些项目模板参数化版本的方法。
+原型是Maven项目模板工具包。 原型被定义为原始模式或模型，从中可以制造所有同类的其它事物。 此名称适合我们尝试提供一个系统，以提供一致的Maven项目生成方法。 原型可帮助作者为用户创建Maven项目模板，并为用户提供方法来生成这些项目模板的参数化版本。
 要创建您的第一个Maven项目，请执行以下步骤：
 
 * 创建一个名为 `aemformsbundles` 在C驱动器中
@@ -93,15 +93,15 @@ Launch **Eclipse**
 
 单击 **完成** 启动导入流程
 
-项目已导入到Eclipse中，您将看到 `mysite.xxxx` 文件夹
+项目已导入到Eclipse中，您会看到 `mysite.xxxx` 文件夹
 
-展开 `src/main/java` 下 `mysite.core` 文件夹。 这是您将在其中编写大多数代码的文件夹。
+展开 `src/main/java` 下 `mysite.core` 文件夹。 这是您在其中编写大多数代码的文件夹。
 
 ![数据源](assets/mysite-core-project.png)
 
 ## 包括AEMFD客户端SDK
 
-您需要将AEMFD客户端sdk包含在项目中，以利用AEM Forms附带的各种服务。 请参阅 [AEMFD客户端SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) 以在您的Maven项目中包含相应的客户端SDK。 您必须在的依赖项部分中包含AEM FD客户端SDK `pom.xml` 的子项目，如下所示。
+您需要在项目中包含AEMFD客户端sdk，以利用AEM Forms附带的各种服务。 请参阅 [AEMFD客户端SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) 以在您的Maven项目中包含相应的客户端SDK。 您必须在的依赖项部分中包含AEM FD客户端SDK `pom.xml` 的子项目，如下所示。
 
 ```xml
 <dependency>
@@ -116,5 +116,5 @@ Launch **Eclipse**
 * 打开 **命令提示符窗口**
 * 导航至 `c:\aemformsbundles\mysite\core`
 * 执行命令 `mvn clean install -PautoInstallBundle`
-上述命令在运行的AEM服务器中生成并安装包 `http://localhost:4502`. 该包也将在文件系统上的
+上述命令在运行的AEM服务器中生成并安装包 `http://localhost:4502`. 该包也可在位于的文件系统上使用
    `C:\AEMFormsBundles\mysite\core\target` 和可以使用 [Felix Web控制台](http://localhost:4502/system/console/bundles)

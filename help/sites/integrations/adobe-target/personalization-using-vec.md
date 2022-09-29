@@ -12,10 +12,10 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 0%
+source-wordcount: '517'
+ht-degree: 1%
 
 ---
 
@@ -36,36 +36,36 @@ WKND网站主页以信息卡的形式显示城市周围的本地活动或最佳�
 
 ## 使用可视化体验编辑器(VEC)创建A/B测试的步骤
 
-1. 登录到[Adobe Experience Cloud](https://experience.adobe.com/)，点按&#x200B;__Target__，导航到&#x200B;__活动__&#x200B;选项卡
+1. 登录 [Adobe Experience Cloud](https://experience.adobe.com/)，点按 __Target__，导航到 __活动__ 选项卡
 
-   + 如果您在Experience Cloud仪表板上未看到&#x200B;__Target__，请确保在右上方的组织切换器中选择了正确的Adobe组织，并且您的用户已在[Adobe Admin Console](https://adminconsole.adobe.com/)中获得了对Target的访问权限。
+   + 如果您没有看到 __Target__ 在“Experience Cloud”功能板上，确保在右上方的组织切换器中选择了正确的Adobe组织，并且已为您的用户授予了在 [Adobe Admin Console](https://adminconsole.adobe.com/).
 
-1. 单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**A/B测试**&#x200B;活动
+1. 单击 **创建活动** 按钮，然后选择 **A/B测试** 活动
 
    ![A/B活动](assets/ab-target-activity.png)
 
-1. 选择&#x200B;**可视化体验编辑器**&#x200B;选项，提供活动URL，然后单击&#x200B;**下一步**
+1. 选择 **可视化体验编辑器** 选项，提供活动URL，然后单击 **下一个**
 
    ![活动URL](assets/ab-test-url.png)
 
-1. 创建新活动后，可视化体验编辑器在左侧显示两个选项卡：*体验A*&#x200B;和&#x200B;*体验B*。 从列表中选择体验。 您可以使用&#x200B;**添加体验**&#x200B;按钮，将新体验添加到列表。
+1. 创建新活动后，可视化体验编辑器在左侧显示两个选项卡： *体验A* 和 *体验B*. 从列表中选择体验。 您可以使用 **添加体验** 按钮。
 
    ![体验A](assets/experience.png)
 
-1. 在页面上选择要开始修改的图像或文本，或使用代码编辑器来选取和HTML元素。
+1. 在页面上选择要开始修改的图像或文本，或使用代码编辑器可选取和HTML元素。
 
    ![元素](assets/select-element.png)
 
-1. 将文本从&#x200B;*Camping in Western Australia*&#x200B;更改为&#x200B;*Anduments of Australia*。 添加到体验的更改列表将显示在修改下。 您可以单击并编辑修改的项目，以查看其CSS选择器以及添加到该项目的新内容。
+1. 将文本从 *西澳大利亚露营* to *澳大利亚历险*. 添加到体验的更改列表将显示在修改下。 您可以单击并编辑修改的项目，以查看其CSS选择器以及添加到该项目的新内容。
 
    ![冒险](assets/adventures.png)
 
-1. 将&#x200B;*体验A*&#x200B;重命名为&#x200B;*Adventure*
-1. 同样，将&#x200B;*体验B*&#x200B;上的文本从&#x200B;*Camping in Western Australia*&#x200B;更新为&#x200B;*Explore the Australian Wilderness*。
+1. 重命名 *体验A* to *冒险*
+1. 同样，在 *体验B* 从 *西澳大利亚露营* to *探索澳大利亚荒野*.
 
    ![探索](assets/explore.png)
 
-1. 单击&#x200B;**Next**&#x200B;以转到“定位”，并将这两个体验之间的手动流量分配保持为50-50。
+1. 单击 **下一个** 要转到“定位”，让我们在两个体验之间将“手动”流量分配为50-50。
 
    ![定位](assets/targeting.png)
 

@@ -11,18 +11,18 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 0%
+source-wordcount: '479'
+ht-degree: 1%
 
 ---
 
 # 主题工作流 {#theming}
 
-在本章中，我们将更新Adobe Experience Manager网站的主题源，以应用特定于品牌的样式。 我们将了解在针对实时站点编码时，如何使用代理服务器查看CSS和Javascript更新的预览。 本教程还将介绍如何使用AEM Cloud Manager的前端管道将主题更新部署到Adobe站点。
+在本章中，我们更新了Adobe Experience Manager网站的主题源以应用特定于品牌的样式。 我们将了解如何在针对实时站点编码时，使用代理服务器查看CSS和Javascript更新的预览。 本教程还将介绍如何使用AEM Cloud Manager的前端管道将主题更新部署到Adobe站点。
 
-最后，我们的网站将进行更新以包含与WKND品牌匹配的样式。
+最后，我们的网站会进行更新以包含与WKND品牌匹配的样式。
 
 ## 前提条件 {#prerequisites}
 

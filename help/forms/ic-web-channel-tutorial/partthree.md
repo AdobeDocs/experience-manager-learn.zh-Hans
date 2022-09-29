@@ -7,9 +7,9 @@ version: 6.4,6.5
 role: Developer
 level: Beginner
 exl-id: 798012e5-5099-4fd0-82ad-a21f64a97aca
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 表单数据模型依赖于正确配置的数据源。 我们将使用上一步中配置的数据源作为此表单数据模型的基础。
 
-表单数据模型是所有交互式通信的基础。 表单数据模型的获取/读取操作将从后端数据源获取数据，并将用于填充交互式通信文档。
+表单数据模型是所有交互式通信的基础。 表单数据模型的获取/读取操作将从后端数据源获取数据，并用于填充交互式通信文档。
 
 有关详细信息，请参阅 [配置数据源](parttwo.md).
 

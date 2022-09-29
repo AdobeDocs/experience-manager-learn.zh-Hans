@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 5c250bbb-bac6-427d-8aca-1fbb1229e02c
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -45,8 +45,8 @@ ht-degree: 0%
 
 * 从收件箱中打开任务并提交表单。 请在出现提示时输入一些评论。
 
-这些注释将存储在crx中名为managerComments的元数据属性中。 以管理员身份检查注释登录到crx。 工作流实例存储在以下路径中
+注释存储在名为 `managerComments` 在AEM存储库中。 以管理员身份检查注释登录到crx。 工作流实例存储在以下路径中：
 
-/var/workflow/instances/server0
+`/var/workflow/instances/server0`
 
 选择相应的工作流实例，并在元数据节点中检查属性managerComments。

@@ -1,24 +1,25 @@
 ---
 title: 创建Servlet
 description: 创建Servlet以处理用于保存表单数据的POST请求
-feature: 自适应表单
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6539
 thumbnail: 6539.pg
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a24ea445-3997-4324-99c4-926b17c8d2ac
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 3%
+source-wordcount: '80'
+ht-degree: 0%
 
 ---
 
 # 创建Servlet
 
-下一步是创建一个Servlet，以调用自定义OSGi服务的适当方法。 Servlet有权访问自适应表单数据、文件附件信息。 Servlet将返回一个唯一的应用程序ID，用于检索部分完成的自适应表单。
+下一步是创建一个Servlet，以调用自定义OSGi服务的适当方法。 Servlet有权访问自适应表单数据、文件附件信息。 Servlet返回一个唯一的应用程序ID，可用于检索部分完成的自适应表单。
 
 当用户单击自适应表单上的“保存并退出”按钮时，将调用此Servlet
 

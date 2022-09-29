@@ -1,5 +1,5 @@
 ---
-title: AEM服务凭据
+title: AEM Forms服务凭据
 description: 从AEM开发人员控制台下载服务凭据。
 type: Documentation
 role: Developer
@@ -9,17 +9,17 @@ feature: Adaptive Forms
 topic: Development
 kt: 8192
 thumbnail: 330519.jpg
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+exl-id: 74cb8c30-4c41-426c-a1b5-fc595a3167c8
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
 
+# AEM Forms服务凭据
 
-# 服务凭据
-
-与AEM作为Cloud Service的集成必须能够安全地对AEM进行身份验证。 AEM Developer Console会生成服务凭据，外部应用程序、系统和服务使用这些凭据，以编程方式通过HTTP与AEM创作或发布服务进行交互。
+与AEMas a Cloud Service的集成必须能够安全地对AEM进行身份验证。 AEM Developer Console会生成服务凭据，外部应用程序、系统和服务使用这些凭据，以编程方式通过HTTP与AEM创作或发布服务进行交互。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
 

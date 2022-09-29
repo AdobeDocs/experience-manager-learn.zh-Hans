@@ -4,9 +4,10 @@ description: 了解如何设置和使用AEM as a cloud service来支持缓存页
 role: Architect, Developer
 topic: Development
 feature: CDN Cache, Dispatcher
-source-git-commit: fa85f0270e21cc9857f95c541a06e87cf26d5798
+exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
@@ -27,9 +28,9 @@ ht-degree: 1%
 
 + AEM代码必须设置Cookie __&quot;x-aem-variant&quot;__ 访客的首选状态(例如 `Set-Cookie: x-aem-variant=NY`)，以响应初始HTTP请求的相应HTTP响应。
 
-+ 访客的后续请求会发送该Cookie(例如 `“Cookie: x-aem-variant=NY”`)，并且Cookie将在CDN级别转换为预定义的标头(例如， `x-aem-variant:NY`)，以传递到调度程序。
++ 访客的后续请求会发送该Cookie(例如 `"Cookie: x-aem-variant=NY"`)，并且Cookie会在CDN级别转换为预定义的标头(例如， `x-aem-variant:NY`)，以传递到调度程序。
 
-+ Apache重写规则修改了请求路径，以将标头值作为Apache Sling选择器(例如， `/page.variant=NY.html`). 这允许AEM发布根据选择器提供不同的内容，而调度程序则为每个变体缓存一个页面。
++ Apache重写规则修改了请求路径，以将标头值作为Apache Sling选择器(例如， `/page.variant=NY.html`)。 这允许AEM发布根据选择器提供不同的内容，而调度程序则为每个变体缓存一个页面。
 
 + 由AEM Dispatcher发送的响应必须包含HTTP响应标头 `Vary: x-aem-variant`. 这会指示CDN针对不同的标头值存储不同的缓存副本。
 
@@ -47,7 +48,7 @@ ht-degree: 1%
 
 ## 用途
 
-1. 为了演示该功能，我们将使用 [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)以的实施为例。
+1. 为了演示该功能，我们将使用 [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)以的实施为例。
 
 1. 实施 [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) 在AEM中设置 `x-aem-variant` Cookie（具有变量值）。
 

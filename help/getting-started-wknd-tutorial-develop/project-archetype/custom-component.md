@@ -12,9 +12,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 79d41d833ab0659f26f988678e124daa18b857f3
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '4138'
+source-wordcount: '4131'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 首先，创建署名组件节点结构并定义一个对话框。 这表示AEM中的组件，并通过组件在JCR中的位置隐式定义组件的资源类型。
 
-该对话框公开了内容作者可以提供的界面。 对于此实施，请参阅AEM WCM核心组件的 **图像** 组件将用于处理署名图像的创作和渲染，因此该组件将被设置为我们组件的 `sling:resourceSuperType`.
+该对话框公开了内容作者可以提供的界面。 对于此实施，请参阅AEM WCM核心组件的 **图像** 组件用于处理署名图像的创作和渲染，因此必须将其设置为我们组件的 `sling:resourceSuperType`.
 
 ### 创建组件定义 {#create-component-definition}
 
@@ -372,7 +372,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
    ...
    ```
 
-   的 `uber-jar` 仅当 `classic` 将调用配置文件，即 `mvn clean install -PautoInstallSinglePackage -Pclassic`. 同样，这是此项目特有的。 在真实项目中，从AEM项目原型生成 `uber-jar` 如果指定的AEM版本为6.5或6.4，则将默认设置此变量。
+   的 `uber-jar` 仅当 `classic` 将调用配置文件，即 `mvn clean install -PautoInstallSinglePackage -Pclassic`. 同样，这是此项目特有的。 在真实项目中，从AEM项目原型生成 `uber-jar` 如果指定的AEM版本为6.5或6.4，则默认为。
 
    的 [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) 包含由AEM 6.x公开的所有公共Java API。版本将在位于项目根的父反应器pom中维护 `aem-guides-wknd/pom.xml`.
 
@@ -616,7 +616,7 @@ public class BylineImpl implements Byline {
 
 检查 `fileReference` JCR属性解析为资产。 *或* 将此资源转换为核心组件图像Sling模型，并确保 `getSrc()` 方法不为空。
 
-我们将选择 **秒** 方法。 第一种方法可能就足够了，但在本教程中，将使用后一种方法来探索Sling模型的其他功能。
+我们选择 **秒** 方法。 第一种方法可能就足够了，但在本教程中，后一种方法用于让我们探索Sling模型的其他功能。
 
 1. 创建用于获取图像的专用方法。 此方法保留为私有，因为我们不需要在HTL本身中公开Image对象，并且它仅用于驱动 `isEmpty().`
 
@@ -705,7 +705,7 @@ public class BylineImpl implements Byline {
 
    请记住，Sling模型 **NOT** OSGi服务，因此维护类状态是安全的。 通常 `@PostConstruct` 派生并设置Sling Model类状态以供将来使用，与普通构造函数的功能类似。
 
-   请注意，如果 `@PostConstruct` 方法引发异常，Sling模型将不会实例化（它将为空）。
+   请注意，如果 `@PostConstruct` 方法引发异常，Sling模型将不会实例化（它为空）。
 
 1. **getImage()** 现在可以更新，以仅返回图像对象。
 
@@ -790,7 +790,7 @@ public class BylineImpl implements Byline {
        /**
        * @PostConstruct is immediately called after the class has been initialized
        * but BEFORE any of the other public methods. 
-       * It is a good method to initialize variables that will be used by methods in the rest of the model
+       * It is a good method to initialize variables that is used by methods in the rest of the model
        *
        */
        @PostConstruct
@@ -1027,7 +1027,7 @@ AEM组件的大多数HTL脚本都利用 **占位符范式** 为作者提供视�
 
 ## 署名样式 {#byline-styles}
 
-署名组件需要设置样式，以与署名组件的创意设计保持一致。 这将通过使用SCSS来实现，AEM通过 **ui.frontend** 马文子项目。
+署名组件需要设置样式，以与署名组件的创意设计保持一致。 这是通过使用SCSS来实现的，AEM通过 **ui.frontend** 马文子项目。
 
 ### 添加默认样式
 

@@ -11,9 +11,9 @@ level: Beginner
 kt: 7496
 thumbnail: KT-7496.jpg
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '912'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 1%
    >
    >建议使用 **开发** 环境。
 
-1. 将向AEM启动新选项卡 **创作服务**. 单击 **使用Adobe登录** 并且您应使用相同的Experience Cloud凭据自动登录。
+1. 随即会向AEM启动新选项卡 **创作服务**. 单击 **使用Adobe登录** 并且您应使用相同的Experience Cloud凭据自动登录。
 
 1. 经过重定向和身份验证后，您现在应会看到AEM开始屏幕。
 
@@ -83,7 +83,7 @@ ht-degree: 1%
 
    ![基本网站模板Zip](assets/create-site/template-basic-zip-file.png)
 
-   此zip文件将用在下一个练习中。
+   下一个练习中将使用此zip文件。
 
    >[!NOTE]
    >

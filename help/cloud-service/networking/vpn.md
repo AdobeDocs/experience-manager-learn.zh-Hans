@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 6958b1f82c609af2998d94fd868e67bf1578e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1264'
-ht-degree: 1%
+source-wordcount: '1261'
+ht-degree: 5%
 
 ---
 
@@ -57,7 +57,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保虚
 
 首先，在AEMas a Cloud Service上启用虚拟专用网络。
 
-1. 首先，使用Cloud Manager API确定将在哪个区域设置高级网络 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 的 `region name` 将需要进行后续的Cloud Manager API调用。 通常，会使用生产环境所在的区域。
+1. 首先，使用Cloud Manager API确定需要高级网络的区域 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 的 `region name` 需要才能进行后续的Cloud Manager API调用。 通常，会使用生产环境所在的区域。
 
    __listRegions HTTP请求__
 

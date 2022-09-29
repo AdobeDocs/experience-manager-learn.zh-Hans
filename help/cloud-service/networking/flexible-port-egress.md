@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1080'
-ht-degree: 1%
+source-wordcount: '1076'
+ht-degree: 5%
 
 ---
 
@@ -52,7 +52,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
 
 首先，在AEMas a Cloud Service上启用灵活的端口出口。
 
-1. 首先，使用Cloud Manager API确定将在哪个区域设置高级网络 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 的 `region name` 需要才能进行后续的Cloud Manager API调用。 通常，会使用生产环境所在的区域。
+1. 首先，使用Cloud Manager API确定中设置高级网络的区域 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 的 `region name` 需要才能进行后续的Cloud Manager API调用。 通常，会使用生产环境所在的区域。
 
    __listRegions HTTP请求__
 

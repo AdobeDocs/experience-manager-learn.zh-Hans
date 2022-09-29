@@ -2,18 +2,18 @@
 title: 在AEM Assets Dynamic Media中使用智能裁剪
 description: 智能裁剪使用Adobe Sensei来消除裁剪内容以进行响应式设计所耗时且成本高昂的任务。
 sub-product: dynamic-media
-feature: 智能裁剪、图像配置文件
+feature: Smart Crop, Image Profiles
 version: 6.4, 6.5
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 3%
+source-wordcount: '245'
+ht-degree: 2%
 
 ---
-
 
 # 在AEM Assets Dynamic Media中使用智能裁剪{#using-smart-crop-with-aem-assets-dynamic-media}
 
@@ -35,4 +35,4 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->智能裁切坐标取决于宽高比。 也就是说，对于图像配置文件中的各种智能裁剪设置，如果图像配置文件中添加的维度的宽高比相同，则会将相同的宽高比发送到Dynamic Media。 因此，智能裁剪编辑器中将建议使用相同的裁剪区域。 例如，如果裁剪设置为100x100和200x200，则系统将生成相同的智能裁剪。
+>智能裁切坐标取决于宽高比。 也就是说，对于图像配置文件中的各种智能裁剪设置，如果图像配置文件中添加的维度的宽高比相同，则会将相同的宽高比发送到Dynamic Media。 因此，智能裁剪编辑器中建议使用相同的裁剪区域。 例如，如果裁剪设置为100x100和200x200，则系统将生成相同的智能裁剪。

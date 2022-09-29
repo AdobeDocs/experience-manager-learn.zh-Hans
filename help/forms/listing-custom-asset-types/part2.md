@@ -1,8 +1,6 @@
 ---
 title: 在AEM Forms中列出自定义资产类型
-seo-title: Listing Custom Asset Types in AEM Forms
 description: 在AEM Forms中列出自定义资产类型的第2部分
-seo-description: Part 2 of Listing Custom Asset Types in AEM Forms
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
 feature: Adaptive Forms
 topics: development
@@ -15,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: f221d8ee-0452-4690-a936-74bab506d7ca
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -26,8 +24,7 @@ ht-degree: 0%
 
 ## 创建自定义模板 {#creating-custom-template}
 
-
-为了撰写本文，我们将创建一个自定义模板，以在同一页面上显示自定义资产类型和OOTB资产类型。 要创建自定义模板，请按照以下说明操作
+为此，我们将创建一个自定义模板，以在同一页面上显示自定义资产类型和OOTB资产类型。 要创建自定义模板，请按照以下说明操作
 
 1. 创建Sling:文件夹。 将其命名为“ myportalcomponent ”
 1. 添加“fpContentType”属性。 将其值设置为“**/libs/fd/ fp/formTemplate”。**
@@ -117,4 +114,4 @@ ht-degree: 0%
 >如果您的门户在发布服务器上列出了自定义资产类型，请确保您为“fd-service”用户向节点授予“读取”权限 **/apps/fd/fp/extensions/querybuilder**
 
 ![assettypes](assets/assettypeslistings.png)
-[请使用包管理器下载并安装此包。](assets/customassettypekt1.zip) 其中包含示例mp4和word文档以及xdp文件，它们将用作资产类型，以使用搜索和列表组件列出
+[请使用包管理器下载并安装此包。](assets/customassettypekt1.zip) 其中包含示例mp4和word文档以及xdp文件，这些文件用作要使用搜索组件和Lister组件列出的资产类型

@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 9534
 exl-id: c2cd9c52-6f00-4cfe-a972-665093990e5d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您以云服务实例的形式部署此新项目，则将没有HandleFormSubmission和SubmitToAEMServlet。 这是因为每次您使用cloud manager部署项目时，应用程序文件夹下的所有内容都将被删除和覆盖。
+>如果您以云服务实例的形式部署此新项目，则将没有HandleFormSubmission和SubmitToAEMServlet。 这是因为每次您使用Cloud Manager部署项目时， `/apps` 文件夹。
 
 ## 复制Java代码
 

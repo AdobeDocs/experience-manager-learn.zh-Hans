@@ -11,9 +11,9 @@ topic: Development
 role: User
 level: Intermediate
 exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '374'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ PNG图像可用于组件图标。 要将PNG图像配置为组件图标，请将�
 
 PNG应具有透明背景或背景颜色设置为 **#707070**.
 
-PNG图像将缩放为 **20px x 20px**. 但是，要适应视网膜显示器 **40px** by **40px** 可能更好。
+PNG图像会缩放到 **20px x 20px**. 但是，要适应视网膜显示器 **40px** by **40px** 可能更好。
 
 ```plain
 /apps/.../components/content/my-component

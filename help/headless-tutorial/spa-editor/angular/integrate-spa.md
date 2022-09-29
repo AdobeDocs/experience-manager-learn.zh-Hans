@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2187'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## 将构建的内容
 
-本章将添加一个简单 `Header` 组件添加到SPA。 在构建此静态 `Header` 组件将使用多种AEM SPA开发方法。
+本章将添加一个简单 `Header` 组件添加到SPA。 在构建此静态 `Header` 组件使用了多种AEM SPA开发方法。
 
 ![AEM中的新标题](./assets/integrate-spa/final-header-component.png)
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 在AEM项目中创建了两个模块： `ui.apps` 和 `ui.frontend`.
 
-的 `ui.frontend` 模块是 [webpack](https://webpack.js.org/) 包含所有SPA源代码的项目。 大部分SPA开发和测试将在WebPack项目中完成。 触发生产内部版本后，将使用WebPack构建和编译SPA。 编译的工件（CSS和Javascript）将会复制到 `ui.apps` 模块，然后将其部署到AEM运行时。
+的 `ui.frontend` 模块是 [webpack](https://webpack.js.org/) 包含所有SPA源代码的项目。 大多数SPA开发和测试都是在WebPack项目中完成的。 触发生产内部版本后，将使用WebPack构建和编译SPA。 编译的工件（CSS和Javascript）将会复制到 `ui.apps` 模块，然后将其部署到AEM运行时。
 
 ![ui.frontend高级架构](assets/integrate-spa/ui-frontend-architecture.png)
 
@@ -269,7 +269,7 @@ ht-degree: 0%
 
 如前面的练习所示，执行生成操作并将客户端库同步到AEM的本地实例需要几分钟时间。 这对于最终测试是可以接受的，但并不适合大多数SPA开发。
 
-A [WebPack开发服务器](https://webpack.js.org/configuration/dev-server/) 可用于快速开发SPA。 SPA由AEM生成的JSON模型驱动。 在本练习中，来自运行的AEM实例的JSON内容将为 **代理** 到由 [Angular项目](https://angular.io/guide/build).
+A [WebPack开发服务器](https://webpack.js.org/configuration/dev-server/) 可用于快速开发SPA。 SPA由AEM生成的JSON模型驱动。 在本练习中，来自运行AEM实例的JSON内容是 **代理** 到由 [Angular项目](https://angular.io/guide/build).
 
 1. 返回到IDE并打开文件 **proxy.conf.json** at `ui.frontend/proxy.conf.json`.
 
@@ -458,7 +458,7 @@ A [WebPack开发服务器](https://webpack.js.org/configuration/dev-server/) 可
 
 ## 使用Sass添加样式
 
-接下来，将向项目添加一些已更新的样式。 此项目将添加 [萨斯](https://sass-lang.com/) 支持一些有用的功能，如变量。
+接下来，项目中会添加一些已更新的样式。 此项目将添加 [萨斯](https://sass-lang.com/) 支持一些有用的功能，如变量。
 
 1. 打开终端窗口并停止 **WebPack开发服务器** 。 从内部 `ui.frontend` 文件夹输入以下命令以更新要处理的Angular应用程序 **.scs** 文件。
 

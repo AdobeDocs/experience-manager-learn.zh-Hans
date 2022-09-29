@@ -12,10 +12,10 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1847'
-ht-degree: 3%
+source-wordcount: '1838'
+ht-degree: 4%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 >[!VIDEO](https://video.tv.adobe.com/v/30152/?quality=12&learn=on)
 
-在本章中，您将使用 [AEM项目原型](https://github.com/adobe/aem-project-archetype). 您的AEM项目包含用于Sites实施的所有代码、内容和配置。 本章中生成的项目将作为实施WKND站点的基础，并将在以后的章节中构建。
+在本章中，您使用 [AEM项目原型](https://github.com/adobe/aem-project-archetype). 您的AEM项目包含用于Sites实施的所有代码、内容和配置。 本章中生成的项目将作为实施WKND站点的基础，并在以后的章节中构建。
 
 **什么是Maven项目？** - [阿帕奇·马文](https://maven.apache.org/) 是用于构建项目的软件管理工具。 *全部Adobe Experience Manager* 实施使用Maven项目来基于AEM构建、管理和部署自定义代码。
 
@@ -90,7 +90,7 @@ ht-degree: 3%
 
    用于配置项目的可用属性的完整列表 [可在此处找到](https://github.com/adobe/aem-project-archetype#available-properties).
 
-1. 以下文件夹和文件结构将由本地文件系统上的Maven原型生成：
+1. 以下文件夹和文件结构由本地文件系统上的Maven原型生成：
 
    ```plain
     ~/code/
@@ -159,7 +159,7 @@ ht-degree: 3%
 
 1. 导航到本地AEM实例上的包管理器： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). 您应会看到 `aem-guides-wknd.ui.apps`, `aem-guides-wknd.ui.config`, `aem-guides-wknd.ui.content`和 `aem-guides-wknd.all`.
 
-1. 导航到站点控制台： [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). WKND站点将是其中一个站点。 它将包括一个具有美国和语言母版层次结构的网站结构。 此网站层次结构基于 `language_country` 和 `isSingleCountryWebsite` 使用原型生成项目时。
+1. 导航到站点控制台： [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). WKND站点是其中一个站点。 它将包括一个具有美国和语言母版层次结构的网站结构。 此网站层次结构基于 `language_country` 和 `isSingleCountryWebsite` 使用原型生成项目时。
 
 1. 打开 **美国** `>` **英语** 页面，方法是选择页面并单击 **编辑** 按钮：
 
@@ -254,7 +254,7 @@ AEM项目原型将生成一个示例 `.gitignore` 可用作文件安全忽略起
 
 ### Ui.apps和Ui.content模块 {#apps-content-module}
 
-的 **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven模块包含站点下方所需的所有渲染代码 `/apps`. 这包括将以名为的AEM格式存储的CSS/JS [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). 这还包括 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hans) 用于呈现动态HTML的脚本。 您可以考虑 **ui.apps** 模块作为JCR中结构的映射，但格式可以存储在文件系统中并提交到源代码控制。 的 **ui.apps** 模块仅包含代码。
+的 **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven模块包含站点下方所需的所有渲染代码 `/apps`. 这包括以名为的AEM格式存储的CSS/JS [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). 这还包括 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hans) 用于呈现动态HTML的脚本。 您可以考虑 **ui.apps** 模块作为JCR中结构的映射，但格式可以存储在文件系统中并提交到源代码控制。 的 **ui.apps** 模块仅包含代码。
 
 要仅构建此模块，请执行以下操作：
 

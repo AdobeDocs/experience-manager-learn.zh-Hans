@@ -7,9 +7,10 @@ kt: 9724
 topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 15b57ec6792bc47d0041946014863b13867adf22
+exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -82,8 +83,3 @@ AEM Forms数据集成提供了直观的用户界面，用于创建和使用 [表
 
 在表格中添加2个称为县和市的下拉列表，以根据所选国家/地区和省/自治区列出县和市。
 ![锻炼](assets/cascading-drop-down-exercise.png)
-
-
-
-
-

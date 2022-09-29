@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: cd7cb89f407f5e0c465544593563534472daf928
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '981'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -183,7 +183,7 @@ AEM持久查询是通过HTTPGET执行的，因此，不能使用使用HTTPPOST�
 1. 公共函数调用一个专用函数 `makeRequest(..)` 会调用AEM Headless的异步HTTPGET请求，并返回JSON数据。
 1. 然后，每个公共函数都会解码JSON数据，并执行任何必需的检查或转换，然后再将Adventure数据返回到视图。
 
-+ AEM GraphQL JSON数据使用 `AEM/Models.swift`，映射到JSON对象时返回了我的AEM Headless。
+   + AEM GraphQL JSON数据使用 `AEM/Models.swift`，映射到JSON对象时返回了我的AEM Headless。
 
 ```swift
     /// # getAdventures(..)

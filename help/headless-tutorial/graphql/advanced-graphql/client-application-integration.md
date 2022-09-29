@@ -6,13 +6,13 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 83e16ea87847182139982ea2378d8ff9f079c968
+exl-id: d0576962-a86a-4742-8635-02be1ec3243f
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1227'
 ht-degree: 1%
 
 ---
-
 
 # 客户端应用程序集成
 
@@ -287,4 +287,4 @@ _本章中的IDE屏幕截图来自 [Visual Studio代码](https://code.visualstud
 
 ## 恭喜
 
-恭喜！ 现在，您已完成将持久查询集成并实施到示例WKND应用程序中。
+恭喜！现在，您已完成将持久查询集成并实施到示例WKND应用程序中。

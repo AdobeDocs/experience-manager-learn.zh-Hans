@@ -14,16 +14,16 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
-source-git-commit: 825124bc6c3be10e6822fb5fb8bd9645d242da76
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '645'
+ht-degree: 11%
 
 ---
 
 # 在AEM中创建您的第一个AngularSPA {#introduction}
 
-欢迎参加为初次使用 **SPA编辑器** 功能(Adobe Experience Manager(AEM))。 本教程将指导您实施一个Angular应用程序，以打造一个虚构的生活方式品牌WKND。 将开发并设计该Angular应用程序以与AEM SPA Editor一起部署，后者将Angular组件映射到AEM组件。 部署到AEM的已完成SPA可以使用AEM的传统在线编辑工具进行动态创作。
+欢迎参加为初次使用 **SPA编辑器** 功能(Adobe Experience Manager(AEM))。 本教程将指导您实施一个Angular应用程序，以打造一个虚构的生活方式品牌WKND。 开发并设计了Angular应用程序，该应用程序可与AEM SPA Editor一起部署，后者将Angular组件映射到AEM组件。 部署到AEM的已完成SPA可以使用AEM的传统在线编辑工具进行动态创作。
 
 ![已实施最终SPA](assets/wknd-spa-implementation.png)
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 关于
 
-此多部分教程的目标是教开发人员如何实施Angular应用程序以使用AEM的SPA编辑器功能。 在现实世界中，发展活动按角色划分，通常涉及 **前端开发人员** 和 **后端开发人员**. 我们认为，对于任何将参与AEM SPA Editor项目的开发人员来说，完成本教程将会有所帮助。
+此多部分教程的目标是教开发人员如何实施Angular应用程序以使用AEM的SPA编辑器功能。 在现实世界中，发展活动按角色划分，通常涉及 **前端开发人员** 和 **后端开发人员**. 我们认为，对于AEM SPA Editor项目中涉及的任何开发人员而言，完成本教程都会有所帮助。
 
 本教程旨在与 **AEMas a Cloud Service** 并且向后兼容 **AEM 6.5.4+** 和 **AEM 6.4.8+**. SPA的实施方式如下：
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 * [阿帕奇·马文](https://maven.apache.org/) （3.3.9或更高版本）
 * [Node.js](https://nodejs.org/en/) 和 [npm](https://www.npmjs.com/)
 
-*虽然不需要，但对 [开发传统AEM Sites组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans).*
+*虽然不需要，但对 [开发传统AEM Sites组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).*
 
 ## 本地开发环境 {#local-dev-environment}
 

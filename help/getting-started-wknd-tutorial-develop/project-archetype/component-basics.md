@@ -12,16 +12,16 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 1%
+source-wordcount: '1145'
+ht-degree: 2%
 
 ---
 
 # 组件基础知识 {#component-basics}
 
-在本章中，我们将通过一个简单的界面来探索Adobe Experience Manager(AEM)站点组件的基础技术 `HelloWorld` 示例。 将对现有组件进行小幅修改，涵盖创作、HTL、Sling模型、客户端库等主题。
+在本章中，我们将通过一个简单的界面来探索Adobe Experience Manager(AEM)站点组件的基础技术 `HelloWorld` 示例。 对现有组件进行了细微修改，涵盖创作、HTL、Sling模型、客户端库等主题。
 
 ## 前提条件 {#prerequisites}
 
@@ -282,7 +282,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
 
 客户端库（简称clientlibs）提供了一种机制来组织和管理AEM Sites实施所需的CSS和JavaScript文件。 客户端库是在AEM中在页面上包含CSS和JavaScript的标准方法。
 
-的 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模块是去耦 [webpack](https://webpack.js.org/) 集成到构建过程中的项目。 这允许使用常用的前端库，如Sass、LESS和TypeScript。 的 `ui.frontend` 将更深入地探讨模块 [“客户端库”章节](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
+的 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模块是去耦 [webpack](https://webpack.js.org/) 集成到构建过程中的项目。 这允许使用常用的前端库，如Sass、LESS和TypeScript。 的 `ui.frontend` 模块将更深入地探索 [“客户端库”章节](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
 
 接下来，更新 `HelloWorld` 组件。
 

@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '892'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 前提条件 {#prerequisites}
 
-在本文中，我们将介绍使用Salesforce创建数据源的过程
+在本文中，我们将演练使用Salesforce创建数据源的过程
 
 本教程的先决条件：
 
@@ -29,20 +29,20 @@ ht-degree: 0%
    * [有关在AEM 6.3上启用SSL的正式文档](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
    * [有关在AEM 6.4上启用SSL的正式文档](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
-* 您将需要拥有Salesforce帐户
+* 您需要拥有Salesforce帐户
 * 您需要创建一个连接的应用程序。 此时会列出用于创建应用程序的Salesforce官方文档 [此处](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0).
 * 为应用程序提供相应的OAuth作用域（我已选择所有可用的OAuth作用域以进行测试）
 * 提供回调URL。 以我为例的回调URL是
 
-   * 如果您使用 **AEM Forms 6.3**，则回调URL将为https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html。 在此URL中，创建潜在客户是我的表单数据模型的名称。
+   * 如果您使用 **AEM Forms 6.3**，则回调URL为https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html。 在此URL中，创建潜在客户是我的表单数据模型的名称。
 
-   * 如果您使用的是** AEM Forms 6.4**，则回调URL将为https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
+   * 如果您使用的是** AEM Forms 6.4**，则回调URL为https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
 在本示例中， gbedekar -w7-1:6443是我的服务器名称以及运行AEM的端口。
 
-创建“连接的应用程序”后，请注意 **消费者密钥和密钥**. 在AEM Forms中创建数据源时，您将需要使用这些参数。
+创建“连接的应用程序”后，请注意 **消费者密钥和密钥**. 在AEM Forms中创建数据源时，您需要使用这些参数。
 
-现在，您已创建连接的应用程序，接下来将需要为需要在salesforce中执行的操作创建swagger文件。 样例swagger文件将作为可下载资产的一部分包含在内。 利用此swagger文件，可在提交自适应表单时创建“潜在客户”对象。 请浏览此swagger文件。
+现在，您已创建连接的应用程序，接下来需要为需要在salesforce中执行的操作创建一个swagger文件。 样例swagger文件将作为可下载资产的一部分包含在内。 利用此swagger文件，可在提交自适应表单时创建“潜在客户”对象。 请浏览此swagger文件。
 
 下一步是在AEM Forms中创建数据源。 请根据您的AEM Forms版本执行以下步骤
 

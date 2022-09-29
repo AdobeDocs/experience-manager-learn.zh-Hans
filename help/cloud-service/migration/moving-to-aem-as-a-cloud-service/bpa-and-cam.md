@@ -9,9 +9,9 @@ level: Experienced
 kt: 8627
 thumbnail: 336957.jpeg
 exl-id: f8289dd4-b293-4b8f-b14d-daec091728c0
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '427'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 ## 关键活动
 
-+ 克隆生产6.x环境。 在迁移内容和重构代码时，克隆生产环境对于测试各种工具和更改将非常有价值。
++ 克隆生产6.x环境。 在迁移内容和重构代码时，克隆生产环境对于测试各种工具和更改非常有用。
 + 从 [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) 并在AEM 6.x克隆环境中安装。
 + 使用BPA工具生成可上传到Cloud Acceleration Manager(CAM)的报表。 CAM通过 [https://experience.adobe.com/](https://experience.adobe.com/) > **Experience Manager** > **Cloud Acceleration Manager**.
 + 使用CAM提供有关需要对当前代码库和环境进行哪些更新以移动到AEMas a Cloud Service的指导。

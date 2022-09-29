@@ -10,10 +10,10 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1089'
-ht-degree: 1%
+source-wordcount: '1082'
+ht-degree: 2%
 
 ---
 
@@ -28,21 +28,21 @@ ht-degree: 1%
 
 ## 将构建的内容 {#what-build}
 
-在本章中，将根据[AEM项目原型](https://github.com/adobe/aem-project-archetype)生成一个新的AEM项目。 AEM项目将通过React SPA的非常简单起点进行引导。
+在本章中，将根据 [AEM项目原型](https://github.com/adobe/aem-project-archetype). AEM项目正在启动，React SPA的起点非常简单。
 
-**什么是Maven项目？** -  [Apache Maven](https://maven.apache.org/) 是用于构建项目的软件管理工具。*所有Adobe Experience Manager实* 施都使用Maven项目来基于AEM构建、管理和部署自定义代码。
+**什么是Maven项目？** - [阿帕奇·马文](https://maven.apache.org/) 是用于构建项目的软件管理工具。 *全部Adobe Experience Manager* 实施使用Maven项目来基于AEM构建、管理和部署自定义代码。
 
-**什么是Maven原型？** - Maven原 [型](https://maven.apache.org/archetype/index.html) 是用于生成新项目的模板或模式。AEM项目原型允许我们生成具有自定义命名空间的新项目，并包含遵循最佳实践的项目结构，从而大大加快了我们的项目速度。
+**什么是Maven原型？** - A [Maven原型](https://maven.apache.org/archetype/index.html) 是用于生成新项目的模板或模式。 AEM项目原型允许我们生成具有自定义命名空间的新项目，并包含遵循最佳实践的项目结构，从而大大加快了我们的项目速度。
 
 ## 前提条件
 
-查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。 确保以&#x200B;**author**&#x200B;模式启动的新Adobe Experience Manager实例在本地运行。
+查看设置 [本地开发环境](overview.md#local-dev-environment). 确保以 **作者** 模式。
 
 ## 创建项目 {#create}
 
 >[!NOTE]
 >
->本教程使用原型的版本&#x200B;**27**。 使用原型的&#x200B;**最新**&#x200B;版本生成新项目始终是最佳做法。
+>本教程使用的是版本 **27** 原型。 使用 **最新** 原型版本以生成新项目。
 
 1. 打开命令行终端并输入以下Maven命令：
 
@@ -61,18 +61,17 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   > 如果定位AEM 6.5.5+ ，请将`aemVersion="cloud"`替换为`aemVersion="6.5.5"`。 如果定位的是6.4.8+版本，请使用`aemVersion="6.4.8"`。
+   > 如果定位AEM 6.5.5+，请替换 `aemVersion="cloud"` with `aemVersion="6.5.5"`. 如果定位的是6.4.8及更高版本，请使用 `aemVersion="6.4.8"`.
 
-   请注意`frontendModule=react`属性。 这可告知AEM项目原型使用起始程序[React代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)引导项目以与AEM SPA编辑器一起使用。 `appTitle`、`appId`、`artifactId`和`groupId`等属性用于标识项目和用途。
+   请注意 `frontendModule=react` 属性。 这可告知AEM项目原型使用启动程序引导项目 [React代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html) 与AEM SPA Editor一起使用时，不会将其标记为“隐藏”。 属性，如 `appTitle`, `appId`, `artifactId`和 `groupId` 用于标识项目和用途。
 
-   可在此处](https://github.com/adobe/aem-project-archetype#available-properties)找到用于配置项目[的可用属性的完整列表。
+   用于配置项目的可用属性的完整列表 [可在此处找到](https://github.com/adobe/aem-project-archetype#available-properties).
 
-1. 以下文件夹和文件结构将由本地文件系统上的Maven原型生成：
+1. 以下文件夹和文件结构由本地文件系统上的Maven原型生成：
 
    ```plain
    |--- aem-guides-wknd-spa.react/
        |--- all/
-       |--- analyse/
        |--- core/
        |--- ui.apps/
        |--- ui.apps.structure/
@@ -82,20 +81,19 @@ ht-degree: 1%
        |--- ui.tests /
        |--- it.tests/
        |--- dispatcher/
-       |--- analyse/
        |--- pom.xml
        |--- README.md
        |--- .gitignore
    ```
 
-   每个文件夹都表示一个Maven模块。 在本教程中，我们将主要使用`ui.frontend`模块（即React应用程序）。 有关各个模块的更多详细信息，请参阅[AEM项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)。
+   每个文件夹都表示一个Maven模块。 在本教程中，我们将主要使用 `ui.frontend` 模块，即React应用程序。 有关各个模块的更多详细信息，请参阅 [AEM项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
 ## 部署和构建项目
 
 接下来，使用Maven编译、构建项目代码并将其部署到AEM的本地实例。
 
-1. 确保AEM实例在端口&#x200B;**4502**&#x200B;上本地运行。
-1. 从命令行中导航到`aem-guides-wknd-spa.react`项目目录。
+1. 确保AEM实例在端口上本地运行 **4502**.
+1. 从命令行中，导航到 `aem-guides-wknd-spa.react` 项目目录。
 
    ```shell
    $ cd aem-guides-wknd-spa.react
@@ -131,49 +129,49 @@ ht-degree: 1%
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven配置文件`autoInstallSinglePackage`编译项目的各个模块，并将单个包部署到AEM实例。 默认情况下，此包将部署到端口&#x200B;**4502**&#x200B;本地运行且凭据为`admin:admin`的AEM实例。
+   Maven个人资料 `autoInstallSinglePackage` 编译项目的各个模块，并将单个包部署到AEM实例。 默认情况下，此包将部署到端口上本地运行的AEM实例 **4502** 并拥有 `admin:admin`.
 
-1. 导航到本地AEM实例上的&#x200B;**包管理器**:[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)。
+1. 导航到 **包管理器** 在本地AEM实例上： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
 
-1. 您应会看到多个包的前缀为`aem-guides-wknd-spa.react`。
+1. 您应会看到多个包的前缀为 `aem-guides-wknd-spa.react`.
 
    ![WKND SPA包](assets/create-project/package-manager.png)
 
    *AEM包管理器*
 
-   项目所需的所有自定义代码都将捆绑到这些包中，并安装在AEM环境中。
+   项目所需的所有自定义代码都捆绑到这些包中，并安装在AEM环境中。
 
 ## 创作内容
 
 接下来，打开由原型生成的起始SPA，并更新一些内容。
 
-1. 导航到&#x200B;**Sites**&#x200B;控制台：[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)。
+1. 导航到 **站点** 控制台： [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content).
 
-   WKND SPA包括基本站点结构，其中包含国家/地区、语言和主页。 此层次结构基于`language_country`和`isSingleCountryWebsite`的原型默认值。 在生成项目时，可通过更新[可用属性](https://github.com/adobe/aem-project-archetype#available-properties)来覆盖这些值。
+   WKND SPA包括基本站点结构，其中包含国家/地区、语言和主页。 此层次结构基于的 `language_country` 和 `isSingleCountryWebsite`. 这些值可通过更新 [可用属性](https://github.com/adobe/aem-project-archetype#available-properties) 生成项目时。
 
-2. 通过选择&#x200B;**us** > **en** > **WKND SPA React主页**&#x200B;页面，然后单击菜单栏中的&#x200B;**编辑**&#x200B;按钮，打开该页面：
+2. 打开 **us** > **en** > **WKND SPA React主页** 页面，方法是选择页面并单击 **编辑** 按钮：
 
    ![站点控制台](./assets/create-project/open-home-page.png)
 
-3. **Text**&#x200B;组件已添加到页面中。 您可以像在AEM中编辑任何其他组件一样编辑此组件。
+3. A **文本** 组件已添加到页面。 您可以像在AEM中编辑任何其他组件一样编辑此组件。
 
    ![更新文本组件](./assets/create-project/update-text-component.gif)
 
-4. 向页面中添加额外的&#x200B;**Text**&#x200B;组件。
+4. 添加其他 **文本** 组件。
 
-   请注意，创作体验与传统AEM Sites页面的体验类似。 目前可使用的组件数量有限。 在本教程中将添加更多内容。
+   请注意，创作体验与传统AEM Sites页面的体验类似。 目前可使用的组件数量有限。 在教程中添加了更多内容。
 
 ## Inspect单页应用程序
 
 接下来，使用浏览器的开发人员工具验证这是单页应用程序。
 
-1. 在&#x200B;**页面编辑器**&#x200B;中，单击&#x200B;**页面信息**&#x200B;按钮> **查看已发布的**:
+1. 在 **页面编辑器**，请单击 **页面信息** 按钮> **查看已发布的项目**:
 
    ![“查看已发布项”按钮](./assets/create-project/view-as-published.png)
 
-   这将打开一个查询参数`?wcmmode=disabled`的新选项卡，该参数可有效关闭AEM编辑器：[http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
+   这将打开一个包含查询参数的新选项卡 `?wcmmode=disabled` 这会有效地关闭AEM编辑器： [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
 
-2. 查看页面的源，并注意未找到文本内容&#x200B;**[!DNL Hello World]**&#x200B;或任何其他内容。 您而应会看到如下HTML:
+2. 查看页面的源并注意文本内容 **[!DNL Hello World]** 或找不到任何其他内容。 您而应会看到HTML，如下所示：
 
    ```html
    ...
@@ -187,18 +185,18 @@ ht-degree: 1%
 
    `clientlib-react.min.js` 是加载到页面并负责呈现内容的React SPA。
 
-   但是，*内容来自何处？*
+   但是， *内容从何而来？*
 
-3. 返回到选项卡：[http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
-4. 打开浏览器的开发人员工具，并在刷新期间检查页面的网络流量。 查看&#x200B;**XHR**&#x200B;请求：
+3. 返回到选项卡： [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
+4. 打开浏览器的开发人员工具，并在刷新期间检查页面的网络流量。 查看 **XHR** 请求：
 
    ![XHR请求](./assets/create-project/xhr-requests.png)
 
-   应当有对[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)的请求。 其中包含将驱动SPA的所有内容（格式为JSON）。
+   应请求 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). 其中包含将驱动SPA的所有内容（格式为JSON）。
 
-5. 在新选项卡中打开[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)
+5. 在新选项卡中打开 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)
 
-   请求`en.model.json`表示将驱动应用程序的内容模型。 Inspect输出，您应该能够找到代表&#x200B;**[!UICONTROL Text]**&#x200B;组件的代码片段。
+   请求 `en.model.json` 表示将驱动应用程序的内容模型。 Inspect输出，您应该能够找到表示 **[!UICONTROL 文本]** 组件。
 
    ```json
    ...
@@ -227,7 +225,7 @@ ht-degree: 1%
 
 恭喜，您刚刚创建了第一个AEM SPA Editor项目！
 
-SPA很简单。 在接下来的几章中，将添加更多功能。
+SPA很简单。 在接下来的几章中，添加了更多功能。
 
 ### 后续步骤 {#next-steps}
 

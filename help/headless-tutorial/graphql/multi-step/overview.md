@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 93d50e79853429f420803c28807ee8018d0ff78f
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '297'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 1%
 
 ### AEM Environment
 
-要完成本教程，建议AEM管理员访问AEMas a Cloud Service环境。  如果您无权访问AEMas a Cloud Service环境，则可以使用 [本地AEMas a Cloud Service快速启动SDK](/help/cloud-service/local-development-environment/aem-runtime.md). 但是，请务必注意，某些产品UI屏幕（如“内容片段”导航）将不同。
+要完成本教程，建议AEM管理员访问AEMas a Cloud Service环境。  如果您无权访问AEMas a Cloud Service环境，则可以使用 [本地AEMas a Cloud Service快速启动SDK](/help/cloud-service/local-development-environment/aem-runtime.md). 但是，请务必注意，某些产品UI屏幕（如“内容片段”导航）不同。
 
 ## 开始吧！
 

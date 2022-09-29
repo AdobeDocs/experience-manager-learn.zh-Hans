@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: 410eb23534e083940bf716194576e099d22ca205
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1529'
 ht-degree: 7%
 
 ---
@@ -211,7 +211,7 @@ AEM的GraphQL API提供了一种功能强大的查询语言，用于将内容片
    {"name": "John Doe"}
    ```
 
-1. 执行查询时，应仅 **人员** 将返回，其值为“John Doe”。
+1. 执行查询时，应仅 **人员** 返回，其值为“John Doe”。
 
    ![使用查询变量进行筛选](assets/explore-graphql-api/using-query-variables-filter.png)
 
@@ -327,7 +327,7 @@ AEM的GraphQL API提供了一种功能强大的查询语言，用于将内容片
 
    | 名称 | 描述 |
    | ---------|---------- |
-   | `/graphql/execute.json` | 永久查询端点 |
+   | `/graphql/execute.json` | 持久查询端点 |
    | `/my-project` | 的项目配置 `/conf/my-project` |
    | `/all-teams` | 永久查询的名称 |
 

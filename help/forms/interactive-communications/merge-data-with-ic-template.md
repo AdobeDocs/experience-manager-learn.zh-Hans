@@ -1,20 +1,19 @@
 ---
 title: 通过合并数据生成打印渠道文档
-seo-title: 通过合并数据生成打印渠道文档
 description: 了解如何通过合并输入流中包含的数据来生成打印渠道文档
-seo-description: 了解如何通过合并输入流中包含的数据来生成打印渠道文档
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '479'
 ht-degree: 1%
 
 ---
@@ -25,7 +24,7 @@ ht-degree: 1%
 
 ## 创建预填充服务
 
-服务名称“ccm-print-test”将用于访问此服务。 定义此预填充服务后，您可以在Servlet或工作流流程步骤实施中访问此服务，以生成打印渠道文档。
+服务名称“ccm-print-test”用于访问此服务。 定义此预填充服务后，您可以在Servlet或工作流流程步骤实施中访问此服务，以生成打印渠道文档。
 
 ```java
 import java.io.InputStream;
@@ -74,7 +73,7 @@ public PrefillData getPrefillData(DataOptions options) throws FormsException {
 * 生成的打印渠道文档的名称
 
 第98行 — 由于自适应表单基于表单数据模型，因此提取驻留在afBoundData数据节点中的数据。
-第128行 — 已设置数据选项服务名称。 记下服务名称。 必须与上一代码列表第45行中返回的名称匹配。
+第128行 — 已设置数据选项服务名称。 记下服务名称。 它必须与上一个代码列表第45行中返回的名称匹配。
 第135行 — 使用PrintChannel对象的呈现方法生成文档
 
 

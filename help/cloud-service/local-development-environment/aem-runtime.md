@@ -9,9 +9,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1801'
+source-wordcount: '1800'
 ht-degree: 3%
 
 ---
@@ -190,7 +190,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 ## 停止本地AEM运行时
 
-要停止本地AEM运行时（AEM创作或发布服务），请打开用于启动AEM运行时的命令行窗口，然后点按 `Ctrl-C`. 等待AEM关闭。 关闭过程完成后，将提供命令行提示符。
+要停止本地AEM运行时（AEM创作或发布服务），请打开用于启动AEM运行时的命令行窗口，然后点按 `Ctrl-C`. 等待AEM关闭。 关闭过程完成后，将显示命令行提示符。
 
 ## 可选的本地AEM运行时设置任务
 

@@ -8,9 +8,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: cfb7ed39ecb85998192ba854b34161f7e1dba19a
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '962'
 ht-degree: 9%
 
 ---
@@ -84,7 +84,7 @@ AEM内容片段模型定义了内容架构，可用于模板AEM作者创建原�
 
 ![创建内容片段模型](assets/chapter-2/design-to-model-mapping.png)
 
-通过映射，我们可以定义用于收集和最终公开事件数据的内容片段。
+利用映射，我们可以定义用于收集和最终显示事件数据的内容片段。
 
 ## 创建内容片段模型
 
@@ -173,7 +173,7 @@ AEM内容片段模型定义了内容架构，可用于模板AEM作者创建原�
 
 >[!NOTE]
 >
->的 **[!UICONTROL 属性名称]** 表示 **both** 将存储此值的JCR属性名称以及JSON文件中的键。 这应该是一个在内容片段模型生命周期内不会发生更改的语义名称。
+>的 **[!UICONTROL 属性名称]** 表示 **both** 存储此值的JCR属性名称以及JSON文件中的键。 这应该是一个在内容片段模型生命周期内不会发生更改的语义名称。
 
 完成内容片段模型的创建后，您最终应该有一个如下的定义：
 

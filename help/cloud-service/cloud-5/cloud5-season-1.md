@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: c6844750c2ef7c3471ce6a337002dde508d611f2
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 第1季
 
-每个季节的时长各不相同，将按固定时间表发布。 第1季的主题主要源于我们在与客户和合作伙伴的日常接触中遇到的过去的请求。 访问此页面可获取每周更新，或在您选择的社交网络上关注我们。
+每个季节的时长各不相同，并按固定时间表发布。 第1季的主题主要源于我们在与客户和合作伙伴的日常接触中遇到的过去的请求。 访问此页面可获取每周更新，或在您选择的社交网络上关注我们。
 
 <table>
   <tr>

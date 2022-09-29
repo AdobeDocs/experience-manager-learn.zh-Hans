@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: 410eb23534e083940bf716194576e099d22ca205
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '817'
 ht-degree: 2%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 2%
 
    ![允许的内容片段模型](assets/author-content-fragments/allowed-content-fragment-models.png)
 
-   这些策略将自动由任何子文件夹继承，并可以覆盖。 请注意，您还可以允许按标记显示模型或从其他项目配置中启用模型。 此机制为管理内容层次结构提供了一种有效的方法。
+   这些策略会自动由任何子文件夹继承，并可以覆盖。 请注意，您还可以允许按标记显示模型或从其他项目配置中启用模型。 此机制为管理内容层次结构提供了一种有效的方法。
 
 1. 点按 **保存并关闭** 以保存对文件夹属性所做的更改。
 

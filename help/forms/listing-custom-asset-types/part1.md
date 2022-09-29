@@ -15,9 +15,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: da613092-e03b-467c-9b9e-668142df4634
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '645'
 ht-degree: 2%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 2%
 1. 创建的叠加节点 **/libs/fd/fp/extensions/querybuilder/assettypes**
 
 1. 将叠加位置设置为“/apps”
-1. 导航到在**/apps/fd/fp/extensions/querybuilder/assettypes中创建的新结构**
+1. 导航到在中创建的新结构 `/apps/fd/fp/extensions/querybuilder/assettypes`
 
 1. 在此位置下，为要注册的类型创建一个“nt:unstructured”节点，并命名该节点 **mp4文件。 将以下两个属性添加到此mp4files节点**
 
@@ -81,7 +81,7 @@ ht-degree: 2%
    1. name: ./jcr:content/metadata/dc:format
    1. 值：video/mp4
 
-1. 这意味着，属性dc:format等于video/mp4的资产将被视为资产类型“Mp4视频”。 您可以将“jcr:content/metadata”节点上列出的任何属性用于搜索条件
+1. 这意味着，属性dc:format等于video/mp4的资产被视为资产类型“Mp4视频”。 您可以将“jcr:content/metadata”节点上列出的任何属性用于搜索条件
 
 1. **确保保存您的工作**
 
@@ -91,4 +91,4 @@ ht-degree: 2%
 
 [如果在使其正常工作时遇到问题，可以导入以下包。](assets/assettypeskt1.zip) 资源包定义了两种自定义资产类型。 Mp4文件和Worddocuments。 建议您查看 **/apps/fd/fp/extensions/querybuilder/assettypes**
 
-[安装customportal包](assets/customportalpage.zip). 此包包含示例门户页面。 本页将在本教程的第2部分中使用
+[安装customportal包](assets/customportalpage.zip). 此包包含示例门户页面。 本教程第2部分将使用此页面
