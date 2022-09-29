@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集
 breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: cloud-service
 team: TM
-source-git-commit: aea43a705b3959f8be26238d32b816b3953e153e
+source-git-commit: bc222867c937b7d498e7b56bebc0aac18289ad03
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '830'
+ht-degree: 21%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 0%
       + [配置管道](./cloud-manager/devops/configure-pipelines.md)
       + [持续集成](./cloud-manager/devops/continuous-integration.md)
       + [分析测试结果](./cloud-manager/devops/analyze-test-results.md)
-      + [调度程序配置](./cloud-manager/devops/dispatcher-configurations.md)
+      + [Dispatcher 配置](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
 + 本地开发环境设置 {#local-development-environment-set-up}
    + [概述](./local-development-environment/overview.md)
@@ -117,7 +117,7 @@ ht-degree: 0%
 
    + 移动到 AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
       + [简介](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
-      + [入门](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
+      + [新用户引导](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
       + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
       + [双酚A和CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [AEM现代化工具](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
@@ -128,6 +128,7 @@ ht-degree: 0%
       + 内容迁移 {#content-migration}
          + [批量导入服务](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [内容转移工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
+         + [常见问题](./migration/moving-to-aem-as-a-cloud-service/content-migration/faq.md)
       + [疑难解答](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Formsas a Cloud Service {#aem-forms}
          + [简介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
@@ -276,7 +277,7 @@ ht-degree: 0%
       + [Cloud Manager — 功能测试](./cloud-5/season-2/cloud5-MoCM-functional-tests.md)
 + [AEM专家系列](./aem-experts-series.md)
 + 多步Tutorials{#multi-step-tutorials}
-   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
+   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
    + [SPA Editor(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
