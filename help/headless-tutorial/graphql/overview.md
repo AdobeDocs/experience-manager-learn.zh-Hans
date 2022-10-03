@@ -6,14 +6,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: 332ad831b6c49e8599aa2181caf978d5626c1aba
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 1%
+source-wordcount: '267'
+ht-degree: 2%
 
 ---
 
-# AEM无头入门 — GraphQL
+# AEM无头入门 — GraphQL {#getting-started-with-aem-headless}
 
 AEM GraphQL API（内容片段）支持无头CMS方案，其中外部客户端应用程序使用AEM中管理的内容渲染体验。
 
@@ -27,6 +27,12 @@ AEM GraphQL API（内容片段）支持无头CMS方案，其中外部客户端�
 >[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
 
 以下视频概述了在AEM中实施的GraphQL API。 AEM中的GraphQL API主要用于将AEM内容片段交付到作为无头部署一部分的下游应用程序。
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_learn_headless_graphql_overview"
+>title="开始使用AEM Headless"
+>abstract="了解如何使用GraphQL交付内容片段。"
+>additional-url="https://video.tv.adobe.com/v/328618" text="AEM中的GraphQL概述"
 
 ## AEM无头GraphQL视频系列
 
