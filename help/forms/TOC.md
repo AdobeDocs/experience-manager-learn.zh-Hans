@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: 5277b7a6ceba4473ab2808f980c8faa5bf69c757
+source-git-commit: 747d1823ce1bc6670d1e80abcf6483ac921c0a01
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1707'
 ht-degree: 3%
 
 ---
@@ -214,6 +214,7 @@ ht-degree: 3%
    + [在AEM Forms中使用条形码服务](document-services/barcode-service-adaptive-forms-article.md)
    + [在AEM Forms中使用PDFG服务](document-services/using-pdfg-in-aem-forms.md)
    + [在AEM Forms中使用输出和Forms服务](document-services/output-and-forms-services-article-develop.md)
+   + [在输出服务中使用xdp片段](document-services/using-fragments-in-output-service.md)
    + [从一个数据文件生成多个PDF](document-services/generate-multi-record-pdf.md)
    + [在移动设备表单提交时生成PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [从移动设备表单生成交互式PDF](document-services/render-interactive-form-using-api.md)
