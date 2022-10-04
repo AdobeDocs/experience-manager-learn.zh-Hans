@@ -4,7 +4,7 @@ description: 通过我们的视频和教程了解Experience Manager Sites。 了
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b6c92ca49eaa68f9a0374a5ad79fe69047ffa27c
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 21%
@@ -14,6 +14,9 @@ ht-degree: 21%
 # AEM Sites 视频和教程 {#overview}
 
 Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用户指南包含有关AEM Sites的众多特性和功能的视频和教程。
+
+
+<div id="whats-new-section">
 
 ## 新增功能
 
@@ -25,7 +28,7 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 
    *了解如何使用自定义AEM组件中的内容更新Adobe客户端数据层。*
 
-* **[AEM无头GraphQL快速入门（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans)**
+* **[AEM无头GraphQL快速入门（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
    *如何使用AEM GraphQL API从AEM中显示内容以供本机移动设备应用程序使用。*
 
@@ -37,12 +40,14 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 
    *了解AEM针对单页应用程序(SPA)的编辑功能。*
 
+</div>
+
 ## 员工挑选
 
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
       <img alt="《AEM Sites 快速入门》 - WKND 教程" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
