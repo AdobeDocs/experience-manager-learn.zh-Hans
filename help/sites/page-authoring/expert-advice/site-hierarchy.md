@@ -1,24 +1,12 @@
 ---
-title: 网站层次结构、分类和标记提示
-seo-title: Overview of Authoring in AEM Sites
-description: 以下视频概述了在AEM创作环境中创作的基本概念。 它使用站点控制台作为基础。
-seo-description: The following video provides an overview of basic concepts of authoring in an AEM author environment. It uses the Sites console as a basis.
-feature: Page Editor, Editable Templates
-topics: authoring, publishing
+title: 网站层次结构、分类和标记指南
+seo-title: AEM Sites Site Hierarchy, Taxonomy, and Tagging Guide
+description: AEM Sites元数据、标记、分类和层次结构的完整概述。 使用本指南可确保内容策略保持一致并遵循最佳实践
+seo-description: A full overview of AEM Sites metadata, tagging, taxonomy, and hierarchy. Use this guide to ensure your content strategy is consistent and following best practices
 audience: author, marketer
-doc-type: feature video
-activity: use
-version: 6.4, 6.5, Cloud Service
-kt: 4242
-thumbnail: 33594.jpg
-topic: Content Management
-role: User
-level: Beginner
-hide: true
-hidefromtoc: true
-source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
+source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2034'
 ht-degree: 0%
 
 ---
@@ -196,7 +184,7 @@ ht-degree: 0%
 
 *要创建策略，请咨询以下问题：*
 
-* 要解决业务问题/业务问题/业务问题，需要哪种内容和“其他信息”（=元数据）？
+* 要解决业务问题/业务问题/业务问题，需要哪类内容和“其他信息”（=元数据）？
 * 架构中的变量、“字段”以及哪些可能值？ 哪些变量需要自由文本输入，这些变量可以按类型（数字、日期、布尔值……）、一组固定值（例如国家/地区）或给定分类中的标记来缩小范围。 需要多少个标记？
 * 元数据可以解决哪些技术问题/问题/问题？
 * 如何获取/创建该内容/元数据？ 获取/创建该元数据需要多少费用？
