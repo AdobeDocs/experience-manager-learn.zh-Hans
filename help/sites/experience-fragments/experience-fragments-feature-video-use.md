@@ -10,8 +10,9 @@ doc-type: feature video
 version: Cloud Service
 kt: 194
 thumbnail: 331785.jpg
+last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: db76980966ece967af23c1e6423c5773c851f469
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 2%
@@ -24,7 +25,7 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/331785/?quality=12&learn=on)
 
-体验片段是一组经过分组的组件，在组合后会创建一个体验。 例如，可以将&#x200B;*标题*、*图像*、*描述*&#x200B;和&#x200B;*行动动员按钮*&#x200B;组合在一起，以形成Teaser体验。
+体验片段是一组经过分组的组件，在组合后会创建一个体验。 例如， *标题*, *图像*, *描述*&#x200B;和 *“行动动员”按钮* 可以合并以形成Teaser体验。
 
 使用体验片段，营销人员可以：
 
