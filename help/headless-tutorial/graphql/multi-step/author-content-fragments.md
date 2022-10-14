@@ -10,16 +10,16 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '810'
 ht-degree: 2%
 
 ---
 
 # 创作内容片段 {#authoring-content-fragments}
 
-在本章中，您将根据 [新定义的内容片段模型](./content-fragment-models.md). 您还将了解如何创建内容片段的变体。
+在本章中，您可以根据 [新定义的内容片段模型](./content-fragment-models.md). 您还可以了解如何创建内容片段的变体。
 
 ## 前提条件 {#prerequisites}
 
@@ -38,7 +38,7 @@ ht-degree: 2%
 
    ![导航到资产文件](assets/author-content-fragments/navigate-assets-files.png)
 
-1. 点按 **创建** 点按 **文件夹**. 在结果对话框中，输入：
+1. 点按 **创建** ，然后点按 **文件夹**. 在结果对话框中，输入：
 
    * 标题*: **我的项目**
    * 名称： **my-project**
@@ -49,17 +49,17 @@ ht-degree: 2%
 
    ![打开文件夹属性](assets/author-content-fragments/open-folder-properties.png)
 
-1. 点按 **Cloud Services** 选项卡。 在 **云配置** 使用路径查找器选择 **我的项目** 配置。 值应为 `/conf/my-project`.
+1. 点按 **Cloud Services** 选项卡。 在云配置选项卡下，使用路径查找器选择 **我的项目** 配置。 值应为 `/conf/my-project`.
 
    ![设置云配置](assets/author-content-fragments/set-cloud-config-my-project.png)
 
-   设置此属性将允许使用上一章中创建的模型创建内容片段。
+   通过设置此属性，可以使用在上一章中创建的模型来创建内容片段。
 
-1. 点按 **策略** 选项卡。 在 **允许的内容片段模型** 使用路径查找器选择 **人员** 和 **团队** 之前创建的模型。
+1. 点按 **策略** 选项卡 **允许的内容片段模型** 字段使用路径查找器选择 **人员** 和 **团队** 之前创建的模型。
 
    ![允许的内容片段模型](assets/author-content-fragments/allowed-content-fragment-models.png)
 
-   这些策略会自动由任何子文件夹继承，并可以覆盖。 请注意，您还可以允许按标记显示模型或从其他项目配置中启用模型。 此机制为管理内容层次结构提供了一种有效的方法。
+   这些策略会自动由任何子文件夹继承，并可以覆盖。 您还可以允许按标记建立模型，或从其他项目配置中启用模型。 此机制为管理内容层次结构提供了一种有效的方法。
 
 1. 点按 **保存并关闭** 以保存对文件夹属性所做的更改。
 
@@ -77,7 +77,7 @@ ht-degree: 2%
 
 接下来，将根据 **团队** 和 **人员** 模型。
 
-1. 从AEM开始屏幕点按 **内容片段** 打开内容片段UI。
+1. 从AEM开始屏幕中，点按 **内容片段** 打开内容片段UI。
 
    ![内容片段UI](assets/author-content-fragments/cf-fragment-ui.png)
 
@@ -98,16 +98,16 @@ ht-degree: 2%
    * 标题： **艾莉森·史密斯**
    * 名称: `alison-smith`
 
-   点按 **创建** 创建新的“人员”片段。
+   点按 **创建** 创建“人员”片段。
 
-1. 接下来，重复这些步骤以创建新 **团队** 片段表示 **A队**:
+1. 接下来，重复这些步骤以创建 **团队** 片段表示 **A队**:
 
    * 位置: `/content/dam/my-project/en`
    * 内容片段模型： **团队**
    * 标题： **A队**
    * 名称: `team-alpha`
 
-   点按 **创建** 创建新的团队片段。
+   点按 **创建** 创建团队片段。
 
 1. 下面应该有三个内容片段 **我的项目** > **英语**:
 
@@ -147,17 +147,16 @@ ht-degree: 2%
 
 审核后，发布创作的 `Content Fragments`
 
-1. 从AEM开始屏幕点按 **内容片段** 打开内容片段UI。
+1. 从AEM开始屏幕中，点按 **内容片段** 打开内容片段UI。
 
 1. 在左边栏中，展开 **我的项目** 点按 **英语**.
 
-1. 点按内容片段旁边的复选框，然后点按 **发布**
-
+1. 点按内容片段旁边的复选框，然后点按 **发布**.
    ![发布内容片段](assets/author-content-fragments/publish-content-fragment.png)
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您刚刚创作了多个内容片段并创建了一个变体。
+恭喜，您创作了多个内容片段并创建了一个变体。
 
 ## 后续步骤 {#next-steps}
 

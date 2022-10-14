@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '292'
 ht-degree: 1%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 1%
 
 本教程探讨如何使用AEM GraphQL API和无头功能来为外部应用程序中显示的体验提供动力。
 
-本教程将涵盖以下主题：
+本教程涵盖以下主题：
 
-* 创建新项目配置
-* 创建新的内容片段模型以对数据进行建模
-* 根据先前制作的模型创建新内容片段。
+* 创建项目配置
+* 创建内容片段模型以对数据进行建模
+* 根据先前制作的模型创建内容片段。
 * 了解如何使用集成的GraphiQL开发工具查询AEM中的内容片段。
 * 要存储GraphQL查询或将其保留到AEM
 * 从示例React应用程序中使用持久GraphQL查询
@@ -39,14 +39,14 @@ ht-degree: 1%
 
 * 基本HTML和JavaScript技能
 * 必须在本地安装以下工具：
-   * [Node.js v10+](https://nodejs.org/en/)
+   * [Node.js v14+](https://nodejs.org/en/)
    * [npm 6+](https://www.npmjs.com/)
    * [Git](https://git-scm.com/)
    * IDE(例如， [Microsoft® Visual Studio代码](https://code.visualstudio.com/))
 
 ### AEM Environment
 
-要完成本教程，建议AEM管理员访问AEMas a Cloud Service环境。  如果您无权访问AEMas a Cloud Service环境，则可以使用 [本地AEMas a Cloud Service快速启动SDK](/help/cloud-service/local-development-environment/aem-runtime.md). 但是，请务必注意，某些产品UI屏幕（如“内容片段”导航）不同。
+要完成本教程，建议AEM管理员访问AEMas a Cloud Service环境。 如果您无权访问AEMas a Cloud Service环境，则可以使用 [本地AEMas a Cloud Service快速启动SDK](/help/cloud-service/local-development-environment/aem-runtime.md). 但是，请务必注意，某些产品UI屏幕（如内容片段导航）不同。
 
 ## 开始吧！
 
