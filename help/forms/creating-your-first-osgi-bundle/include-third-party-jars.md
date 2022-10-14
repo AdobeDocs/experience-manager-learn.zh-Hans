@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: kt-11245
-source-git-commit: 061077fb6cd8ac7b760aa30b884ced6d4d3c3b20
+source-git-commit: 8944a4feaefbc4cf0db52011a0d49b22341780c0
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,6 @@ mvn clean install -pAutoInstallSinglePackage
 
 如果一切正常，则包将与第三方包一起安装到您的AEM实例中。 可以使用 [felix web console](http://localhost:4502/system/console/bundles). 第三方包位于的/apps文件夹中 `crx` 存储库如下所示
 ![第三方](assets/custom-bundle1.png)
-![第三方](assets/custom-bundle1.png)
+
 
 
