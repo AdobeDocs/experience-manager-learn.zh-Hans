@@ -4,7 +4,7 @@ description: 通过我们的视频和教程了解Experience Manager Sites。 了
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: b6c92ca49eaa68f9a0374a5ad79fe69047ffa27c
+source-git-commit: 5dbad9101ce73c2e0370592336d37338e45825ef
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 21%
@@ -42,12 +42,21 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 
 </div>
 
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
+
 ## 员工挑选
 
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans">
       <img alt="《AEM Sites 快速入门》 - WKND 教程" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
@@ -87,6 +96,8 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
   </td>
 </tr>
 </table>
+
+</div>
 
 ## 其他资源
 
