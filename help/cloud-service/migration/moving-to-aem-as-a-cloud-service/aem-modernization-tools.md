@@ -8,9 +8,9 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '446'
 ht-degree: 5%
 
 ---
@@ -20,7 +20,21 @@ ht-degree: 5%
 
 了解如何使用AEM现代化工具升级现有的AEM Sites内容，使其as a Cloud Service兼容并符合最佳实践。
 
->[!VIDEO](https://video.tv.adobe.com/v/336965/?quality=12&learn=on)
+## 一体式转换器
+
+>[!VIDEO](https://video.tv.adobe.com/v/338802/?quality=12&learn=on)
+
+## 页面转换
+
+>[!VIDEO](https://video.tv.adobe.com/v/338799/?quality=12&learn=on)
+
+## 组件转换
+
+>[!VIDEO](https://video.tv.adobe.com/v/338788/?quality=12&learn=on)
+
+## 策略导入
+
+>[!VIDEO](https://video.tv.adobe.com/v/338797/?quality=12&learn=on)
 
 ## 使用AEM现代化工具
 
@@ -88,7 +102,6 @@ AEM现代化工具会自动转换由旧版静态模板、基础组件和parsys�
 + [下载AEM Modernizations工具](https://github.com/adobe/aem-modernize-tools/releases/latest)
 + [AEM现代化工具文档](https://opensource.adobe.com/aem-modernize-tools/)
 + [AEM Gems — 介绍AEM现代化套件](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
-
 
 1. 在本地AEM SDK上部署新近现代化的旧版网站。 AEM ASK可从以下位置下载：
    + [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).

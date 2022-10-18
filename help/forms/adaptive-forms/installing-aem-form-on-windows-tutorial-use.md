@@ -8,9 +8,9 @@ topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
-source-git-commit: 5c53919dd038c0992e1fe5dd85053f26c03c5111
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '578'
 ht-degree: 6%
 
 ---
@@ -53,7 +53,8 @@ ht-degree: 6%
 * 找到AEMQuickStart.Jar并将其移入AEMForms文件夹
 * 将license.properties文件复制到此AEMForms文件夹中
 * 创建名为“StartAemForms.bat”的批处理文件，其中包含以下内容：
-   * java -d64 -Xmx2048M -jar AEM_6.5_Quickstart.jar -gui。 其中，AEM_6.5_Quickstart.jar是我的AEM快速入门Jar的名称。
+   * `java -d64 -Xmx2048M -jar AEM_6.5_Quickstart.jar -gui`
+      * 其中，AEM_6.5_Quickstart.jar是我的AEM快速入门Jar的名称。
    * 您可以将jar重命名为任何名称，但请确保该名称反映在批处理文件中。 将批处理文件保存在AEMForms文件夹中。
 
 * 打开新的命令提示符，然后导航到 _c:\aemforms_.

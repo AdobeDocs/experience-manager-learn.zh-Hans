@@ -1,6 +1,6 @@
 ---
 title: 客户端库和前端工作流
-description: 了解如何使用客户端库或客户端库来为Adobe Experience Manager(AEM)站点实施部署和管理CSS和JavaScript。 了解如何将ui.frontend模块（一个Webpack项目）集成到端到端构建过程中。
+description: 了解如何使用客户端库或客户端库来部署和管理Adobe Experience Manager(AEM)Sites实施的CSS和Javascript。 了解如何将ui.frontend模块（一个Webpack项目）集成到端到端构建过程中。
 sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
@@ -11,7 +11,7 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '2825'
 ht-degree: 2%
