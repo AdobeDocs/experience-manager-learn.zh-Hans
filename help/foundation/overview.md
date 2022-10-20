@@ -4,10 +4,10 @@ description: 请观看我们的视频和教程，以获取有关Adobe Experience
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 2%
+source-wordcount: '244'
+ht-degree: 0%
 
 ---
 
@@ -93,7 +93,6 @@ Adobe Experience Manager为AEM Sites、资产和Forms的用户提供了一组通
 
 ## 其他资源
 
-* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEMas a Cloud Service教程](/help/cloud-service/overview.md)
 * [AEM Sites视频和教程](/help/sites/overview.md)
 * [AEM Assets视频和教程](/help/assets/overview.md)

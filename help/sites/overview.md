@@ -4,10 +4,10 @@ description: 通过我们的视频和教程了解Experience Manager Sites。 了
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: d6366d1e3f4d575eb78b8af38a59a7fb9413f43d
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 19%
+source-wordcount: '345'
+ht-degree: 14%
 
 ---
 
@@ -101,12 +101,11 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 
 ## 其他资源
 
-* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Sites创作文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
 * [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
 * [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
-* [AEM Assets 教程](/help/assets/overview.md)
-* [AEM Forms 教程](/help/forms/overview.md)
-* [AEM Foundation 教程](/help/foundation/overview.md)
+* [AEMas a Cloud Service教程](/help/cloud-service/overview.md)
+* [AEM Assets教程](/help/assets/overview.md)
+* [AEM Forms教程](/help/forms/overview.md)
+* [AEM Foundation教程](/help/foundation/overview.md)
