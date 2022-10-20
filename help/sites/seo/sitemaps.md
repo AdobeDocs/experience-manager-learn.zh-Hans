@@ -10,9 +10,9 @@ kt: 9165
 thumbnail: 337960.jpeg
 last-substantial-update: 2022-11-03T00:00:00Z
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 835657082c0c6bf7b2822b53ef2b99039d77f249
+source-git-commit: f4d4bcc836123ba4320710c3024e03a82a36cfb9
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '228'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 5%
 
 ### 绝对站点地图URL
 
-AEM Sitemap通过使用 [Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). 这是通过在AEM服务上创建映射节点以生成站点地图来完成的。
+AEM Sitemap通过使用 [Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). 这是通过在AEM服务上创建映射节点以生成站点地图（通常为AEM发布服务）来完成的。
 
 的Sling映射节点定义示例 `https://wknd.com` 可在下定义 `/etc/map/https` 如下所示：
 
