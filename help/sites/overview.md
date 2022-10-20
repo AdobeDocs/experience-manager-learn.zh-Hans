@@ -4,14 +4,14 @@ description: 通过我们的视频和教程了解Experience Manager Sites。 了
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 5dbad9101ce73c2e0370592336d37338e45825ef
+source-git-commit: d6366d1e3f4d575eb78b8af38a59a7fb9413f43d
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 21%
+ht-degree: 19%
 
 ---
 
-# AEM Sites 视频和教程 {#overview}
+# AEM Sites视频和教程 {#overview}
 
 Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用户指南包含有关AEM Sites的众多特性和功能的视频和教程。
 
