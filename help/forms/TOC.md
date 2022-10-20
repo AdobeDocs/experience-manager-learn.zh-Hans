@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
 index: y
-source-git-commit: 061077fb6cd8ac7b760aa30b884ced6d4d3c3b20
+source-git-commit: 853c4fedd4b8db594aa0b53fd2d27d996811f14e
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1722'
 ht-degree: 3%
 
 ---
@@ -62,6 +62,7 @@ ht-degree: 3%
    + [在AEM Forms工作流中发送电子邮件组件](adaptive-forms/email-step-aem-workflow-video-use.md)
    + [使用API生成DocumentOfRecord](adaptive-forms/document-of-record-api-tutorial-use.md)
    + [显示内联图像](adaptive-forms/inline-images-adaptive-forms.md)
+   + [内联显示DAM图像](adaptive-forms/inline-images-from-dam.md)
    + [使用GeoLocation API](adaptive-forms/using-geolocation-api-in-aem-forms-article.md)
    + [使用交易报表](adaptive-forms/transaction-reporting-aem-forms-article-use.md)
    + [AEM Forms中的用户配置文件数据集成](adaptive-forms/user-profile-data-integration-feature-video-use.md)
