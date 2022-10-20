@@ -1,16 +1,16 @@
 ---
-title: AEM Assets 视频和教程
+title: AEM Assets视频和教程
 description: 观看我们的视频，获取AEM资产支持和帮助。
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: 9aae58c3301a7067baca374d6499f1afc3c95b06
+source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 19%
+ht-degree: 7%
 
 ---
 
-# AEM Assets 视频和教程 {#overview}
+# AEM Assets视频和教程 {#overview}
 
 Adobe Experience Manager(AEM)Assets是AEM Platform上的一款数字资产管理工具，它允许用户在基于Web的存储库中创建、管理和共享其数字资产（图像、视频、文档和音频剪辑）。 本用户指南包含有关AEM Assets的众多特性和功能的视频和教程。
 
@@ -25,6 +25,15 @@ Adobe Experience Manager(AEM)Assets是AEM Platform上的一款数字资产管理
 观看AEM Assets的这个端到端演示，其中说明了AEM Assets是什么，以及如何使用它来实现您组织的业务目标。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336196/?quality=12&learn=on)
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
 
 ## 员工挑选
 
@@ -70,11 +79,13 @@ Adobe Experience Manager(AEM)Assets是AEM Platform上的一款数字资产管理
 </td>
 </table>
 
+</div>
+
 ## 其他资源
 
 * [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Assets文档](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
-* [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
-* [AEM Sites 教程](/help/sites/overview.md)
-* [AEM Forms 教程](/help/forms/overview.md)
-* [AEM Foundation 教程](/help/foundation/overview.md)
+* [AEM Assets 文档](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
+* [AEMas a Cloud Service教程](/help/cloud-service/overview.md)
+* [AEM Sites教程](/help/sites/overview.md)
+* [AEM Forms教程](/help/forms/overview.md)
+* [AEM Foundation教程](/help/foundation/overview.md)

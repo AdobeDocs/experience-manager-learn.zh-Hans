@@ -1,20 +1,22 @@
 ---
-title: AEM FormsTutorials和视频
+title: AEM Forms教程和视频
 description: 浏览我们的AEM Forms视频和教程，以及解答您查询的资源和文档。
 sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 7%
+ht-degree: 2%
 
 ---
 
-# AEM FormsTutorials和视频 {#overview}
+# AEM Forms教程和视频 {#overview}
 
 Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于在与后端流程、业务规则和数据集成的同时，创建、管理、发布和更新复杂的数字表单。 本用户指南包含有关AEM Forms的众多特性和功能的视频和教程
+
+<div id="whats-new-section">
 
 ## 新增功能
 
@@ -29,6 +31,17 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
 * **[创建可重用的工作流模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
    *创建未绑定到特定表单的工作流模型*
+
+</div>
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
 
 ## 员工挑选
 
@@ -76,6 +89,7 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
 </tr>
 </table>
 
+</div>
 
 
 
@@ -87,7 +101,7 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
 * [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
 * [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
-* [AEM Assets 教程](/help/assets/overview.md)
-* [AEM Forms 教程](/help/forms/overview.md)
-* [AEM Foundation 教程](/help/foundation/overview.md)
+* [AEMas a Cloud Service教程](/help/cloud-service/overview.md)
+* [AEM Assets教程](/help/assets/overview.md)
+* [AEM Forms教程](/help/forms/overview.md)
+* [AEM Foundation教程](/help/foundation/overview.md)

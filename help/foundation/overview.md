@@ -1,19 +1,21 @@
 ---
-title: AEM Foundation 视频和教程
+title: AEM Foundation视频和教程
 description: 请观看我们的视频和教程，以获取有关Adobe Experience Manager Foundation的帮助。
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 15%
+ht-degree: 2%
 
 ---
 
-# AEM Foundation 视频和教程 {#overview}
+# AEM Foundation视频和教程 {#overview}
 
 Adobe Experience Manager为AEM Sites、资产和Forms的用户提供了一组通用功能。
+
+<div id="whats-new-section">
 
 ## 新增功能
 
@@ -29,6 +31,17 @@ Adobe Experience Manager为AEM Sites、资产和Forms的用户提供了一组通
 
 * **[使用Cloud Manager CI/CD管线（视频）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *了解如何使用Cloud Manager的CI/CD管道来确保部署安全一致。*
+
+</div>
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
 
 ## 员工挑选
 
@@ -76,10 +89,12 @@ Adobe Experience Manager为AEM Sites、资产和Forms的用户提供了一组通
 </tr>
 </table>
 
+</div>
+
 ## 其他资源
 
 * [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
-* [AEM Sites 视频和教程](/help/sites/overview.md)
-* [AEM Assets 视频和教程](/help/assets/overview.md)
-* [AEM Forms 视频和教程](/help/forms/overview.md)
+* [AEMas a Cloud Service教程](/help/cloud-service/overview.md)
+* [AEM Sites视频和教程](/help/sites/overview.md)
+* [AEM Assets视频和教程](/help/assets/overview.md)
+* [AEM Forms视频和教程](/help/forms/overview.md)
