@@ -5,13 +5,13 @@ version: Cloud Service
 activity: develop
 audience: developer
 user-guide-title: 《AEM Sites 快速入门》 - WKND 教程
-user-guide-description: 面向不熟悉 AEM 的开发人员的多节教程。实施 AEM Sites，打造虚构的生活方式品牌 WKND。启用前端管道，以加快开发到部署周期的速度。
+user-guide-description: 面向不熟悉 AEM 的开发人员的多节教程。为一个虚构的生活方式品牌 WKND 实施 AEM 网站。启用前端管道以加快从开发到部署的周期。
 breadcrumb-title: AEM Sites WKND 教程
 index: y
 source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
 workflow-type: tm+mt
 source-wordcount: '108'
-ht-degree: 37%
+ht-degree: 46%
 
 ---
 

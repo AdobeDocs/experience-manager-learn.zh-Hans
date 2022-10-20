@@ -17,7 +17,7 @@ exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '465'
-ht-degree: 22%
+ht-degree: 23%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 22%
 * HTML、CSS和JavaScript的基本知识
 * 对 [React](https://reactjs.org/tutorial/tutorial.html)
 
-*虽然不需要，但对 [开发传统AEM Sites组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).*
+*虽然不需要，但对 [开发传统AEM Sites组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans).*
 
 ## 本地开发环境 {#local-dev-environment}
 
@@ -63,7 +63,7 @@ ht-degree: 22%
 >
 > **是AEMas a Cloud Service的新用户？** 查看 [以下使用AEMas a Cloud Service SDK设置本地开发环境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 >
-> **AEM 6.5的新增功能？** 查看 [设置本地开发环境的以下指南](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+> **AEM 6.5的新增功能？** 查看 [设置本地开发环境的以下指南](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans).
 
 ## 后续步骤 {#next-steps}
 

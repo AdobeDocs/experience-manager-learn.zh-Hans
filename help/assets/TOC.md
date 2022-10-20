@@ -6,8 +6,8 @@ feature-set: Experience Manager Assets, Experience Manager Sites, Experience Man
 team: TM
 source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '378'
+ht-degree: 28%
 
 ---
 
@@ -158,4 +158,4 @@ ht-degree: 0%
 + 部署{#deployment}
    + [多租户和并行开发](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html)
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hans)
