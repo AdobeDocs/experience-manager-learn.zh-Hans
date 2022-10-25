@@ -8,8 +8,9 @@ role: Architect, Developer
 level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
+last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: 6d5a531f44414887e8dc6568fa6f5dcb73bfb183
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '2815'
 ht-degree: 1%
@@ -115,7 +116,7 @@ IDP的公共证书将添加到AEM全局信任存储，并用于验证由IDP发�
 
 ![将全局信任存储复制到AEM发布](./assets/saml-2-0/global-trust-store-replicate.png)
 
-1. 导航到 __工具>部署>包__.
+1. 导航到&#x200B;__工具 > 部署 > 包__。
 1. 创建资源包
    + 包名称： `Global Trust Store`
    + 版本: `1.0.0`

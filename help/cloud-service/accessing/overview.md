@@ -1,5 +1,5 @@
 ---
-title: 配置对AEMas a Cloud Service的访问
+title: 配置 AEM as a Cloud Service 的访问权限
 description: AEMas a Cloud Service是利用AEM应用程序的云原生方式，因此，会利用Adobe IMS(Identity Management系统)来促进管理员和普通用户用户登录到AEM创作服务。 了解如何将Adobe IMS用户、用户组和产品配置文件与AEM组和权限结合使用，以提供对AEM作者的特定访问权限。
 version: Cloud Service
 topic: Administration, Security
@@ -8,15 +8,16 @@ role: Admin
 level: Beginner
 kt: 5882
 thumbnail: KT-5882.jpg
+last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '598'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
-# 配置对AEMas a Cloud Service的访问 {#configuring-access-to-aem-as-a-cloud-service}
+# 配置 AEM as a Cloud Service 的访问权限 {#configuring-access-to-aem-as-a-cloud-service}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_overview"

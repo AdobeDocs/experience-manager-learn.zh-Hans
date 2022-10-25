@@ -7,13 +7,14 @@ topic: Integrations
 role: Leader, Architect, Admin, Developer
 level: Beginner
 kt: 10718
-thumbnail: KT-10718.jpeg
+thumbnail: KT-10718.png
+last-substantial-update: 2022-10-02T00:00:00Z
 mini-toc-levels: 1
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: 663075723da207242309c08feed42657b9e5188b
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '958'
-ht-degree: 12%
+ht-degree: 15%
 
 ---
 
@@ -82,7 +83,7 @@ Adobe Campaign Classic与AEMas a Cloud Service集成，允许您直接在Adobe E
 
 ### AEM Sites
 
-+ [与Adobe Campaign Classic集成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-campaign-classic.html#configure-user)
++ [与 Adobe Campaign Classic 集成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-campaign-classic.html#configure-user)
 + [创建Adobe Experience Manager新闻稿](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/creating-newsletter.html)
 + [AEM电子邮件核心组件文档](https://github.com/adobe/aem-core-email-components#aem-email-core-components)
 
