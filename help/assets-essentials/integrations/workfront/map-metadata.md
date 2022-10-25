@@ -1,5 +1,5 @@
 ---
-title: 在AdobeWorkfront和AEM Assets Essentials之间映射元数据
+title: 在Adobe Workfront和AEM Assets Essentials之间映射元数据
 description: 了解如何配置Workfront字段和Assets Essentials属性之间的元数据映射，以及如何配置Assets Essentials以显示映射的元数据。
 version: Cloud Service
 feature: Assets Essentials
@@ -8,13 +8,14 @@ role: User
 level: Beginner
 kt: 8222
 thumbnail: 336458.jpeg
-source-git-commit: 32917f4fe6be88b1ee1d1f7da1c02d0f81c20fe7
+last-substantial-update: 2022-10-13T00:00:00Z
+exl-id: 60724863-c464-4f6e-9b49-d882e2eb2294
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%
 
 ---
-
 
 # 映射元数据
 

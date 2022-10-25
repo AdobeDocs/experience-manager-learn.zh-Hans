@@ -7,15 +7,16 @@ role: Admin, User
 level: Beginner
 kt: 9127
 thumbnail: 337586.jpeg
-source-git-commit: cd54cfbbded4e44f4850f9dac8ab17d179e7d498
+last-substantial-update: 2022-09-02T00:00:00Z
+exl-id: 0e9d056a-4eec-450c-a941-b9563634fe8a
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 0%
 
 ---
 
-
-# Workfront enhanced connector project folders
+# Workfront enhanced connector项目文件夹
 
 了解使用Adobe Workfront和Experience Manager Assets增强连接器时的项目文件夹，包括：
 
