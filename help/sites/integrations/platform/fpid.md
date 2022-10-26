@@ -9,7 +9,7 @@ level: Beginner
 last-substantial-update: 2022-10-20T00:00:00Z
 kt: 11336
 thumbnail: kt-11336.jpeg
-source-git-commit: d1e105a4083b34e7a3f220a59d4608ef39d39032
+source-git-commit: aeeed85ec05de9538b78edee67db4d632cffaaab
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 0%
@@ -42,7 +42,7 @@ AEM发布服务会在CDN和AEM Dispatcher缓存中，通过尽可能多地缓存
 1. 如果网页无法从CDN或AEM Dispatcher缓存获取，则请求将到达AEM发布服务，该服务将生成请求的网页。
 1. 然后，网页返回到Web浏览器，填充无法提供该请求的缓存。 对于AEM，预期CDN和AEM Dispatcher缓存点击率大于90%。
 1. 该网页包含JavaScript，该JavaScript可向AEM发布服务中的自定义FPID Servlet发出不可执行的异步XHR(AJAX)请求。 由于这是一个不可执行的请求（由于它是随机查询参数和Cache-Control标头），因此CDN或AEM Dispatcher从不会缓存该请求，并始终访问AEM发布服务以生成响应。
-1. AEM发布服务中的自定义FPID Servlet处理请求，在未找到现有FPID Cookie时生成新的FPID，或扩展任何现有FPID Cookie的实时性。 Servlet还会在响应正文中返回FPID，以供客户端JavaScript使用。 幸运的是，自定义FPID Servlet逻辑非常轻量，可防止此请求影响AEM发布服务性能。
+1. AEM发布服务中的自定义FPID Servlet处理请求，在未找到现有FPID Cookie时生成新的FPID，或延长任何现有FPID Cookie的生命周期。 Servlet还会在响应正文中返回FPID，以供客户端JavaScript使用。 幸运的是，自定义FPID Servlet逻辑非常轻量，可防止此请求影响AEM发布服务性能。
 1. XHR请求的响应会返回到包含FPID Cookie的浏览器，并在响应正文中将FPID作为JSON，以供Platform Web SDK使用。
 
 ## 代码示例
@@ -62,7 +62,9 @@ AEM发布服务会在CDN和AEM Dispatcher缓存中，通过尽可能多地缓存
 + 如果FPID Cookie不存在，请生成新的FPID Cookie，并保存值以写入响应。
 
 然后，Servlet将FPID作为JSON对象以下形式写入响应： `{ fpid: "<FPID VALUE>" }`.
+
 由于标记了FPID Cookie，因此务必向主体中的客户端提供FPID `HttpOnly`，这表示只有服务器可以读取其值，而客户端JavaScript则无法读取。
+
 响应正文中的FPID值用于使用Platform Web SDK参数化调用。
 
 以下是AEM servlet端点的示例代码(可通过 `HTTP GET /bin/aep/fpid`)生成或刷新FPID Cookie，并将FPID返回为JSON。
