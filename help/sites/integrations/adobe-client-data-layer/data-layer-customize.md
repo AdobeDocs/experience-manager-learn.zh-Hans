@@ -8,8 +8,9 @@ role: Developer
 level: Intermediate, Experienced
 kt: 6265
 thumbnail: KT-6265.jpg
+last-substantial-update: 2022-09-20T00:00:00Z
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
 workflow-type: tm+mt
 source-wordcount: '2016'
 ht-degree: 2%
@@ -36,9 +37,9 @@ ht-degree: 2%
 
 A **本地开发环境** 是完成本教程所必需的。 使用在macOS上运行的AEMas a Cloud ServiceSDK捕获屏幕截图和视频。 除非另有说明，否则命令和代码与本地操作系统无关。
 
-**是AEMas a Cloud Service的新用户？** 查看 [以下使用AEMas a Cloud Service SDK设置本地开发环境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+**是AEMas a Cloud Service的新用户？** 查看 [以下使用AEMas a Cloud Service SDK设置本地开发环境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).
 
-**AEM 6.5的新增功能？** 查看 [设置本地开发环境的以下指南](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+**AEM 6.5的新增功能？** 查看 [设置本地开发环境的以下指南](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans).
 
 ## 下载和部署WKND参考网站 {#set-up-wknd-site}
 
