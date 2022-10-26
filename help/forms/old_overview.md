@@ -1,14 +1,13 @@
 ---
 title: AEM FormsTutorials和视频
 description: 面向初学者和经验丰富的AEM Forms开发人员的AEM Forms资源集合
-sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '516'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 

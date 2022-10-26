@@ -1,7 +1,6 @@
 ---
 title: 基本模板简介
 description: 了解Dynamic Media Classic中的基本模板，这些基于图像的模板从图像服务器中调用，由图像和渲染的文本组成。 模板可在发布后通过URL动态更改。 您将了解如何将PhotoshopPSD上传到Dynamic Media Classic以将其用作模板的基础。 创建由图像层组成的简单促销基本模板。 添加文本层，并通过使用参数使其变量。 构建模板URL并通过Web浏览器动态地处理图像。
-sub-product: dynamic-media
 feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
@@ -11,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: d4e16b45-0095-44b4-8c16-89adc15e0cf9
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '6260'
 ht-degree: 0%

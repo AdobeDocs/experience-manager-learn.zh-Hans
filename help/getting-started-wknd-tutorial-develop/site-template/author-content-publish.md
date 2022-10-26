@@ -1,7 +1,6 @@
 ---
 title: 创作和发布简介 | AEM快速网站创建
 description: 使用AEM的Adobe Experience Manager中的页面编辑器更新网站的内容。 了解如何使用组件来促进创作。 了解AEM创作和发布环境之间的差异，并了解如何将更改发布到实时站点。
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -11,7 +10,7 @@ level: Beginner
 kt: 7497
 thumbnail: KT-7497.jpg
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1330'
 ht-degree: 3%

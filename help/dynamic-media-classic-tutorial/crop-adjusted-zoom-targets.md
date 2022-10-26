@@ -1,41 +1,40 @@
 ---
 title: 裁剪、调整图像和缩放目标
-description: Dynamic Media Classic的主控图像支持为每个图像创建单独的裁剪版本以显示详细信息或色板，而无需为每个图像创建单独的裁剪版本。 了解如何在Dynamic Media Classic中裁剪图像并另存为新的主控文件或虚拟图像，保存虚拟的已调整图像并使用它们代替主控资产，以及在图像上创建缩放目标以显示突出显示的详细信息。
-sub-product: dynamic-media
+description: Dynamic Media Classic的主控图像支持为每个图像创建单独的裁剪版本以显示详细信息或色板，而无需为每个图像创建单独的裁剪版本。 了解如何在Dynamic Media Classic中裁剪图像并另存为新的主控文件或虚拟图像，保存虚拟调整后的图像并使用它们代替主控资产，以及在图像上创建缩放目标以显示突出显示的详细信息。
 feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: 内容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: a1d83c77-a9e4-4ed1-9b00-65fb002164c0
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
-source-wordcount: '2659'
+source-wordcount: '2653'
 ht-degree: 0%
 
 ---
 
-
 # 裁剪、调整图像和缩放目标 {#crop-adjusted-zoom-targets}
 
-Dynamic Media Classic主控图像概念的主要优势之一是，您可以为多种用途重新调整图像资产的用途。 传统上，您必须为每个图像创建单独的裁剪版本才能显示详细信息或色板。 使用Dynamic Media Classic时，您可以在单个主控上执行相同的任务，并将这些裁剪的版本另存为新的物理文件或作为不需要存储空间的虚拟衍生工具。
+Dynamic Media Classic主控图像概念的主要优势之一在于，您可以为多种用途重新调整图像资产的用途。 传统上，您必须为每个图像创建单独的裁剪版本才能显示详细信息或色板。 使用Dynamic Media Classic时，您可以在单个主控上执行相同的任务，并将这些裁剪的版本另存为新的物理文件或作为不需要存储空间的虚拟派生项。
 
 在本教程的本节结束时，您将了解如何：
 
-- 在Dynamic Media Classic中裁剪图像，并另存为新的主控文件或虚拟图像。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html)。
+- 在Dynamic Media Classic中裁剪图像并另存为新的主控文件或虚拟图像。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html)。
 - 保存虚拟调整后的图像并使用它们代替主控资产。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html)。
 - 在图像上创建缩放目标以显示其高亮显示。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html)。
 
-## 裁剪
+## 裁切
 
 Dynamic Media Classic在UI中提供了一些图像编辑工具（包括裁剪工具），这些工具非常方便地可用。 您可能出于多种原因希望在Dynamic Media Classic中裁剪主控图像。 例如：
 
 - 您无权访问原始文件。 您希望以不同的裁剪或宽高比来显示图像，但您的计算机上没有原始文件，或者您正在家中工作。 在这种情况下，您可以转到Dynamic Media Classic、查找图像、裁剪并保存图像，或将其另存为新版本。
 - 去除多余的空格。 照片上的白色空间太大，产品看起来很小。 您希望缩略图图像尽可能地填满画布。
 - 要创建“调整后的映像”，请创建不占用磁盘空间的映像的虚拟副本。 有些公司制定了业务规则，要求它们保留同一图像的不同副本，但名称不同。 或者，您可能希望对同一图像进行裁剪和未裁剪版本。
-- 从源图像生成新图像。 例如，您可能希望创建颜色色板或主图像的详细信息。 您可以在Adobe Photoshop中执行此操作，并单独上传，或使用Dynamic Media Classic中的裁剪工具。
+- 从源图像生成新图像。 例如，您可能希望创建颜色色板或主图像的详细信息。 您可以在Adobe Photoshop中执行此操作，并单独上传或在Dynamic Media Classic中使用裁剪工具。
 
 >[!NOTE]
 >
@@ -43,16 +42,16 @@ Dynamic Media Classic在UI中提供了一些图像编辑工具（包括裁剪工
 
 ### 使用裁剪工具
 
-您可以从资产的“详细信息”页面或单击&#x200B;**编辑**&#x200B;按钮，访问Dynamic Media Classic中的裁剪工具。 您可以使用该工具通过两种方式进行裁剪：
+您可以从资产的详细信息页面或通过单击 **编辑** 按钮。 您可以使用该工具通过两种方式进行裁剪：
 
-- 默认的裁剪模式，在该模式中，您可以拖动裁剪窗口的手柄或在“大小”框中键入值。 了解如何[手动裁剪](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop)。
-- 裁切。 使用此选项通过计算与图像不匹配的像素数来删除图像周围的额外空格。 了解如何[通过修剪进行裁剪](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image)。
+- 默认的裁剪模式，在该模式中，您可以拖动裁剪窗口的手柄或在“大小”框中键入值。 了解如何 [手动裁剪](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop).
+- 裁切。 使用此选项通过计算与图像不匹配的像素数来删除图像周围的额外空格。 了解如何 [通过裁切进行裁剪](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
 
 ### _手动裁剪_
 
 保存手动裁剪的版本时，图像会被永久裁剪；Dynamic Media Classic实际上是通过添加内部URL修饰符来裁剪图像来隐藏像素。 发布时，每个人都会看到图像都被裁剪，但是您可以返回到裁剪编辑器，稍后再删除裁剪。
 
-然后，您可以选择是另存为新主控图像还是另存为主控的附加视图。 新主控是占用存储空间的新物理文件（如TIFF或JPEG）。 另一个视图是一个虚拟映像，它不占用服务器空间。 我们不建议您选择“替换原始”，因为这将覆盖您的主控并使裁切永久。 如果您另存为新主控或作为其他视图，则必须选择新的资产ID。 与其他资产ID一样，此名称在Dynamic Media Classic中必须是唯一的名称。
+然后，您可以选择是另存为新主控图像还是另存为主控的附加视图。 新主控是占用存储空间的新物理文件(如TIFF或JPEG)。 另一个视图是一个虚拟映像，它不占用服务器空间。 我们不建议您选择“替换原始”，因为这将覆盖您的主控并使裁切永久。 如果您另存为新主控或作为其他视图，则必须选择新的资产ID。 与其他资产ID一样，此名称必须是Dynamic Media Classic中的唯一名称。
 
 ### _裁切裁剪_
 
@@ -66,19 +65,19 @@ Dynamic Media Classic在UI中提供了一些图像编辑工具（包括裁剪工
 
 >[!NOTE]
 >
->裁切不会在图像周围创建透明度。 为此，您需要在图像上嵌入一个剪贴路径，并使用&#x200B;**从剪贴路径创建蒙版**&#x200B;上传选项。
+>裁切不会在图像周围创建透明度。 为此，您需要在图像上嵌入剪贴路径，并使用 **从剪辑路径创建蒙版** 上传选项。
 >
->此外，要在使用&#x200B;**Save**&#x200B;选项时裁剪图像后将其恢复为原始状态，请在“裁剪编辑器”屏幕中显示该图像，然后选择&#x200B;**Reset**&#x200B;按钮。
+>此外，在使用 **保存** 选项，在“裁剪编辑器”屏幕中显示图像，然后选择 **重置** 按钮。
 
 ### _上传时裁剪_
 
-如前所述，您还可以在上传图像时选择裁剪图像。 要在上传时使用裁切裁剪，请单击&#x200B;**作业选项**&#x200B;按钮，然后在“裁切选项”下，选择&#x200B;**裁切**。
+如前所述，您还可以在上传图像时选择裁剪图像。 要在上传时使用裁切裁剪，请单击 **作业选项** 按钮，然后在“裁剪选项”下选择 **裁切**.
 
 Dynamic Media Classic将记住此选项以供下次上传。 虽然您可能希望图像裁剪以进行此上传，但您可能不希望图像在每次上传时都被裁剪。 另一个选项是设置一个特殊的计划FTP上传作业，并将裁剪选项放在该作业中。 这样，只有在需要裁剪图像时才会运行该作业。
 
 >[!IMPORTANT]
 >
->如果您为上传设置了裁剪，Dynamic Media Classic将放置一个Cookie来记住该设置，以便下次再次使用该设置。 在下次上传之前，最好单击&#x200B;**重置为公司默认值**&#x200B;按钮，以清除上次上传后剩余的任何裁剪选项；否则，您可能会意外裁剪下一批图像。
+>如果您为上传设置了裁剪，Dynamic Media Classic将放置一个Cookie来记住该设置，以便下次再次执行。 作为最佳实践，请单击 **重置为公司默认值** 按钮，以清除上次上传后剩余的任何裁剪选项；否则，您可能会意外裁剪下一批图像。
 
 ### 按URL裁剪
 
@@ -86,8 +85,8 @@ Dynamic Media Classic将记住此选项以供下次上传。 虽然您可能希�
 
 每当使用裁剪工具时，您都会在底部的字段中看到URL值。 您可以获取这些值，并将它们直接作为URL修饰符应用于图像。
 
-![](assets/crop-adjusted-zoom-targets/cropping-by-url.png)
-_位于裁剪编辑器底部的imageCrop命令修饰符_
+![图像](assets/crop-adjusted-zoom-targets/cropping-by-url.png)
+_位于裁剪编辑器底部的裁剪命令修饰符_
 
 ![图像](assets/crop-adjusted-zoom-targets/uncropped-cropped.png)
 
@@ -97,16 +96,16 @@ _位于裁剪编辑器底部的imageCrop命令修饰符_
 
 图像预设有一个字段，您可以在其中添加额外的“图像提供”命令。 要将与上述相同的裁剪添加到图像预设，请编辑预设并粘贴，或在“URL修饰符”字段中键入值，然后保存并发布。
 
-![](assets/crop-adjusted-zoom-targets/cropping-in-image-preset.jpg)
-_图像向图像预设的URL修饰符中添加裁剪命令（或任何命令）。_
+![图像](assets/crop-adjusted-zoom-targets/cropping-in-image-preset.jpg)
+_向图像预设的URL修饰符中添加裁剪命令（或任何命令）。_
 
 此时裁剪将成为该图像预设的一部分，并且每次使用时都会自动应用。 当然，这种方法取决于需要相同裁剪量的所有图像。 如果图像并非全部以相同方式拍摄，则此方法不适合您。
 
 ## 调整后的图像
 
-使用“裁剪”工具时，可以选择&#x200B;**另存为主控的附加视图**。 保存后，将创建一种新类型的Dynamic Media Classic资产 — 调整后的图像。 调整后的图像（也称为导数）是虚拟图像。 这其实根本不是一幅图片；它是物理主控映像的数据库引用（如别名或快捷方式）。
+使用“裁剪”工具时，您可以选择 **另存为其他主控视图**. 保存后，将创建一种新类型的Dynamic Media Classic资产 — 调整后的图像。 调整后的图像（也称为导数）是虚拟图像。 这其实根本不是一幅图片；它是物理主控映像的数据库引用（如别名或快捷方式）。
 
-### 真正的映像请站起来`?`
+### 真正的图像请站起来`?`
 
 能否判断哪个是主控图像，哪个是已调整图像？
 
@@ -120,24 +119,24 @@ _图像向图像预设的URL修饰符中添加裁剪命令（或任何命令）�
 
 通常使用裁剪工具创建调整后的图像；但是，也可以使用其他图像编辑器（“调整”和“锐化”工具）创建它们。
 
-调整后的图像需要唯一的资产ID。 发布后（您必须像发布任何其他资产一样发布），它们将充当任何其他图像，并会在URL上通过其资产ID进行调用。 在“详细信息”页面的&#x200B;**Build &amp; Derivatives**&#x200B;选项卡下，您可以查看与主控图像关联的已调整图像。
+调整后的图像需要唯一的资产ID。 发布后（您必须像发布任何其他资产一样发布），它们将充当任何其他图像，并会在URL上通过其资产ID进行调用。 在“详细信息”页面上，您可以在 **构建和派生** 选项卡。
 
-![](assets/crop-adjusted-zoom-targets/derivatives.jpg)
-_主控图像ASIAN_BR_MAIN的图像调整视图_
+![图像](assets/crop-adjusted-zoom-targets/derivatives.jpg)
+_调整了主控图像ASIAN_BR_MAIN的视图_
 
 ## 缩放目标
 
-缩放目标也可在图像的&#x200B;**Edit**&#x200B;菜单和&#x200B;**Details**&#x200B;页面上找到。 它们允许您设置“热点”以突出显示缩放图像的特定促销功能。 缩放查看器可以提供图像顶部的详细信息以及您创建的短标签，而不是通过裁剪大主控来创建单独的图像。
+缩放目标也可在 **编辑** 菜单和 **详细信息** 页面。 它们允许您设置“热点”以突出显示缩放图像的特定促销功能。 缩放查看器可以提供图像顶部的详细信息以及您创建的短标签，而不是通过裁剪大主控来创建单独的图像。
 
 ![图像](assets/crop-adjusted-zoom-targets/arm-with-watch.jpg)
 
 由于缩放目标本质上是一个促销功能，并且需要了解产品的销售点，因此它们通常由公司促销或产品团队中的人员创建。
 
-该过程非常简单 — 单击该功能，为其提供一个描述性名称，然后进行保存。 如果目标相似，则可以将其从一个图像复制到另一个图像，但此过程是手动的。 Dynamic Media Classic无法自动创建缩放目标，因为每个图像都不同，并且具有不同的功能。
+该过程非常简单 — 单击该功能，为其提供一个描述性名称，然后进行保存。 如果目标相似，则可以将其从一个图像复制到另一个图像，但此过程是手动的。 由于每个图像都不同，并且具有不同的功能，因此Dynamic Media Classic中无法自动创建缩放目标。
 
 决定是否使用缩放目标的另一个因素是您选择的查看器。 并非所有查看器类型都可以显示缩放目标（例如，弹出查看器不支持这些类型）。
 
-了解如何[创建缩放目标](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets)。
+了解如何 [创建缩放目标](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets).
 
 ![图像](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 
@@ -145,25 +144,25 @@ _主控图像ASIAN_BR_MAIN的图像调整视图_
 
 以下是在Dynamic Media Classic中创建目标的工作流。
 
-1. 浏览到您的图像，单击&#x200B;**编辑**&#x200B;按钮，然后选择&#x200B;**缩放目标**。
+1. 浏览到您的图像，单击 **编辑** 按钮，然后选择 **缩放目标**.
 2. 将加载缩放目标编辑器。 您将在中间看到图像，在顶部看到一些按钮，在右侧看到一个空的目标面板。 在左下角，您将看到一个已选中的查看器预设。 默认为“Zoom1-Guided”。
 3. 使用鼠标移动红色框并单击可创建新目标。
 
    - 红色框是目标区域。 当用户单击该目标时，它将放大到框内的区域。
-   - 目标大小由查看器预设内的视图大小决定。 这可确定主缩放图像的大小。 请参阅下面的&#x200B;_设置视图大小_ 。
+   - 目标大小由查看器预设内的视图大小决定。 这可确定主缩放图像的大小。 请参阅 _设置视图大小_，下面。
 
 4. 您将看到刚刚创建的目标变为蓝色，在右侧，您将看到该目标的缩略图版本以及默认名称“target-0”。
-5. 要重命名目标，请单击其缩略图，键入新的&#x200B;**名称**，然后单击&#x200B;**Enter**&#x200B;或&#x200B;**Tab** — 如果您单击离开，将不会保存您的名称。
+5. 要重命名目标，请单击其缩略图，然后键入新 **名称**，然后单击 **输入** 或 **选项卡**  — 如果您单击“离开”，您的名称将不会保存。
 6. 选择目标后，该框周围将有绿色虚线，您可以调整其大小并移动它。 拖动角可调整大小，或拖动目标框可移动。
 
    - 这将在默认的自定义缩放查看器中加载图像。 确保“查看器预设”支持“缩放目标” — 通常，所有带有“ — Guided”字样的标准预设都设计为用于“缩放目标”。 要使用目标，请将鼠标悬停在目标缩略图（或热点图标）上以查看标签，然后单击该标签以查看查看器对该功能的缩放效果。
-   - 与您在Dynamic Media Classic中执行的所有其他工作一样，您必须发布内容才能在Web上实时显示缩放目标。 如果您使用的查看器支持目标，则它们将立即显示（在清除缓存后）。 但是，如果您没有使用启用缩放目标的查看器，则查看器将保持隐藏状态。
+   - 与您在Dynamic Media Classic中执行的所有其他工作一样，您必须发布内容，才能在Web上实时显示缩放目标。 如果您使用的查看器支持目标，则它们将立即显示（在清除缓存后）。 但是，如果您没有使用启用缩放目标的查看器，则查看器将保持隐藏状态。
 
       ![图像](assets/crop-adjusted-zoom-targets/zoom-target-green-box.jpg)
 
-7. 此外，如果需要删除目标，请单击其缩略图以将其选中，然后按&#x200B;**Delete Target**&#x200B;按钮或按键盘上的DELETE键。
+7. 此外，如果需要删除某个目标，请单击其缩略图以将其选中，然后按 **删除Target** 按钮或按键盘上的DELETE键。
 8. 添加后，继续单击以添加新目标、重命名和/或调整大小。
-9. 完成后，单击&#x200B;**Save**&#x200B;按钮，然后单击&#x200B;**Preview**。
+9. 完成后，单击 **保存** 按钮，然后 **预览**.
 
 ### 在缩放查看器预设中设置视图大小
 
@@ -183,7 +182,7 @@ _主控图像ASIAN_BR_MAIN的图像调整视图_
 
 要设置视图大小，请创建或编辑支持缩放目标的查看器预设。
 
-1. 在查看器预设中，转到&#x200B;**缩放设置**&#x200B;选项。
+1. 在查看器预设中，转到 **缩放设置** 选项。
 2. 设置宽度和高度。
 3. 保存预设并关闭。 如果要在实时网站上使用该预设，则以后还必须发布。
 4. 转到缩放目标工具，然后在左下方选择您编辑的预设。 您将立即看到新视图大小反映在您的目标中。

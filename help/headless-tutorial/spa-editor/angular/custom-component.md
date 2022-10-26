@@ -1,7 +1,6 @@
 ---
 title: 创建自定义组件 | AEM SPA Editor和Angular快速入门
 description: 了解如何创建要与AEM SPA编辑器一起使用的自定义组件。 了解如何开发创作对话框和Sling模型以扩展JSON模型以填充自定义组件。
-sub-product: sites
 feature: SPA Editor
 doc-type: tutorial
 topics: development
@@ -14,7 +13,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 2%
@@ -165,7 +164,7 @@ AEM组件被定义为节点和属性。 在项目中，这些节点和属性在 
 
 Sling模型是由注释驱动的Java™“POJO”(纯旧Java™对象)，有助于将数据从JCR映射到Java™变量。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models) 通常用于封装AEM组件的复杂服务器端业务逻辑。
 
-在SPA编辑器的上下文中，Sling模型通过使用的功能，通过JSON模型来显示组件的内容 [Sling模型导出程序](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
+在SPA编辑器的上下文中，Sling模型通过使用的功能，通过JSON模型来显示组件的内容 [Sling模型导出程序](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hans).
 
 1. 在选择的IDE中，打开 `core` 模块。 `CustomComponent.java` 和 `CustomComponentImpl.java` 已作为章节起始代码的一部分创建和退出。
 

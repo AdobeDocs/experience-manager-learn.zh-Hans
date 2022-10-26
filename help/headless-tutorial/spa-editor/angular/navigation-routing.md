@@ -1,7 +1,6 @@
 ---
 title: 添加导航和路由 | AEM SPA Editor和Angular快速入门
 description: 了解如何使用SPA页面和SPA Editor SDK支持AEM中的多个视图。 动态导航是使用Angular路由实施的，并添加到现有的标题组件中。
-sub-product: sites
 feature: SPA Editor
 topics: development
 doc-type: tutorial
@@ -14,7 +13,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '2712'
 ht-degree: 0%
@@ -71,7 +70,7 @@ ht-degree: 0%
 
 ## Inspect HeaderComponent更新 {#inspect-header}
 
-在前几章中， `HeaderComponent` 组件作为纯Angular组件添加，该组件通过 `app.component.html`. 在本章中， `HeaderComponent` 组件将从应用程序中删除，并通过 [模板编辑器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html). 这允许用户配置 `HeaderComponent` 从AEM。
+在前几章中， `HeaderComponent` 组件作为纯Angular组件添加，该组件通过 `app.component.html`. 在本章中， `HeaderComponent` 组件将从应用程序中删除，并通过 [模板编辑器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hans). 这允许用户配置 `HeaderComponent` 从AEM。
 
 >[!NOTE]
 >

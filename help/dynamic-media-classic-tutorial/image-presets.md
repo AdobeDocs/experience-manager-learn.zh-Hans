@@ -1,7 +1,6 @@
 ---
 title: 图像预设
 description: Dynamic Media Classic中的图像预设包含创建特定大小、格式、质量和锐化的图像所需的所有设置。 图像预设是动态大小调整的关键组件。 在Dynamic Media Classic中查看URL时，您可以轻松查看图像预设是否正在使用。 了解图像预设、为何有用以及如何创建图像预设。
-sub-product: dynamic-media
 feature: Dynamic Media Classic, Image Presets
 doc-type: tutorial
 topics: development, authoring, configuring
@@ -10,21 +9,21 @@ activity: use
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: e472db7c-ac3f-4f66-85af-5a4c68ba609e
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 1%
 
 ---
 
-
 # 图像预设 {#image-presets}
 
 图像预设实质上是一种方法，其中包含创建特定大小、格式、质量和锐化的图像所需的所有设置。 图像预设是动态大小调整的关键组件。
 
-如果您查看的URL与任何Dynamic Media Classic客户相关，则可能会看到正在使用的图像预设。 只需在URL的末尾查找$name$即可（名称中包含任何单词或单词）。
+如果您查看的是任何Dynamic Media Classic客户的URL，您可能会看到正在使用的图像预设。 只需在URL的末尾查找$name$即可（名称中包含任何单词或单词）。
 
-图像预设可缩短URL，因此您可以编写一个图像预设，而不是根据每个请求写出多个图像提供说明。 例如，这两个URL会生成具有锐化的相同300 x 300 JPEG图像，但第二个URL会使用图像预设：
+图像预设可缩短URL，因此您可以编写一个图像预设，而不是根据每个请求写出多个图像提供说明。 例如，这两个URL会生成具有锐化功能的相同300 x 300JPEG图像，但第二个URL会使用图像预设：
 
 ![图像](assets/image-presets/image-preset-2.png)
 
@@ -40,14 +39,14 @@ ht-degree: 1%
 >
 >在您的网站上为每个唯一图像大小创建一个图像预设。 例如，如果您需要产品详细信息页面显示350 X 350图像，浏览/搜索页面显示120 X 120图像，交叉销售/特色项目显示90 X 90图像，则您需要三个图像预设，无论您有500张图像还是500,000张图像。
 
-- 了解有关[图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html)的更多信息。
-- 了解如何[创建图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)。
+- 详细了解 [图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
+- 了解如何 [创建图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
 
 ## 图像预设和锐化
 
 图像预设通常会调整图像大小，每当您调整图像的原始大小时，都应该添加锐化。 这是因为调整大小会导致许多像素合并并混合到较小的空间中，从而使图像看起来柔和模糊。 锐化可增加图像中边缘和高对比度区域的对比度。
 
-我们希望，您上传到Dynamic Media Classic的高分辨率图像在放大后全尺寸查看时不需要任何锐化。 但是，无论大小小，通常都需要进行一些锐化。
+我们希望您上传到Dynamic Media Classic的高分辨率图像在放大后全尺寸查看时不需要任何锐化。 但是，无论大小小，通常都需要进行一些锐化。
 
 >[!TIP]
 >
@@ -63,10 +62,10 @@ ht-degree: 1%
 
 Dynamic Media Classic允许进行三种类型的锐化：简单的锐化、重新取样模式和钝化蒙版。
 
-了解有关[Dynamic Media Classic锐化选项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)的更多信息。
+详细了解 [Dynamic Media Classic锐化选项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
 
 ## 其他资源
 
-[图像预设指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)。用于优化图像质量和加载速度的设置。
+[图像预设指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf). 用于优化图像质量和加载速度的设置。
 
-[图像是第2部分的一切：从来不是模糊 — 质量与速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。讨论使用图像预设传送高质量、快速加载图像的博客文章。
+[图像是第2部分的一切：从来不是模糊 — 质量与速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). 讨论使用图像预设传送高质量、快速加载图像的博客文章。

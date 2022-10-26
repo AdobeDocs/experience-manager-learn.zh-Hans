@@ -1,7 +1,6 @@
 ---
 title: 使用前端管道部署
 description: 了解如何创建和运行前端管道，以构建前端资源并部署到AEMas a Cloud Service中内置的CDN。
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -12,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: disable
-source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 0%

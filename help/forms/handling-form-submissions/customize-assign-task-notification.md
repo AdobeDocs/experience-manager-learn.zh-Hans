@@ -1,7 +1,6 @@
 ---
 title: 自定义分配任务通知
 description: 在分配任务通知电子邮件中包含表单数据
-sub-product: forms
 feature: Workflow
 topics: integrations
 audience: developer
@@ -14,7 +13,7 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 0cb74afd-87ff-4e79-a4f4-a4634ac48c51
-source-git-commit: eb2a807587ab918be82d00d50bf1b338df58e84c
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 1%

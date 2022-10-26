@@ -1,7 +1,6 @@
 ---
 title: 确定文件夹结构和文件命名约定
 description: 在实施Dynamic Media Classic时，文件命名可能是您将做出的最重要的决定。 文件夹结构同样重要。 了解为什么对文件夹结构和文件名采取如此重要且可能的方法。
-sub-product: dynamic-media
 feature: Dynamic Media Classic
 doc-type: tutorial
 activity: develop
@@ -11,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 15121896-9196-4ce0-aff2-9178563326b4
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 0%

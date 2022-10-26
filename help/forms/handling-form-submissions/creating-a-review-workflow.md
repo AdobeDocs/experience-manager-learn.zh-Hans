@@ -1,8 +1,7 @@
 ---
 title: 创建用于审核已提交数据的工作流
 description: 使用AEM Forms工作流组件创建AEM工作流模型以审核提交的数据。
-sub-product: 表单
-feature: 工作流
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,16 +9,16 @@ activity: setup
 version: 6.4,6.5
 kt: 4271
 thumbnail: 40242.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 0aafd97a-2e72-4257-ad4d-e0993263b11f
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 5%
+source-wordcount: '138'
+ht-degree: 4%
 
 ---
-
 
 # 创建用于审核已提交数据的工作流
 
@@ -27,13 +26,10 @@ ht-degree: 5%
 
 ## 先决条件
 
-请确保您有AEM Forms的工作实例。 请按照[安装指南](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)安装和配置AEM Forms
+请确保您有AEM Forms的工作实例。 请按照 [安装指南](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) 安装和配置AEM Forms
 
 以下视频介绍了如何使用AEM Forms组件创建审阅和批准工作流程
 >[!VIDEO](https://video.tv.adobe.com/v/40242/?quality=9&learn=on)
 
 
-如果由于某些原因您无法构建工作流，可以从[此处](assets/review-submitted-data-workflow.zip)下载已完成的工作流，并使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)将该工作流导入到您的AEM实例中。
-
-
-
+如果由于某些原因您无法构建工作流，则可以从 [此处](assets/review-submitted-data-workflow.zip) ，然后使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp) 到AEM实例。

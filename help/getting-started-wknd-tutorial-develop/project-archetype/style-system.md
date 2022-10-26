@@ -2,7 +2,6 @@
 title: 用风格体系发展
 seo-title: Developing with the Style System
 description: 了解如何使用Experience Manager的样式系统实施单个样式并重复使用核心组件。 本教程涵盖开发样式系统以使用特定于品牌的CSS和模板编辑器的高级策略配置来扩展核心组件。
-sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Style System
@@ -13,10 +12,10 @@ kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1681'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -103,7 +102,7 @@ ht-degree: 0%
 
 1. 为标题组件创建新策略，其值如下：
 
-   *策略标题**: **WKND标题**
+   *策略标题&#42;*: **WKND标题**
 
    *属性* > *“样式”选项卡* > *添加新样式*
 
@@ -213,7 +212,7 @@ ht-degree: 0%
 
 1. 使用以下值更新文本组件策略：
 
-   *策略标题**: **内容文本**
+   *策略标题&#42;*: **内容文本**
 
    *插件* > *段落样式* > *启用段落样式*
 

@@ -1,7 +1,6 @@
 ---
 title: AEM Sites入门 — WKND教程
 description: 了解如何为名为WKND的虚构生活方式品牌实施AEM网站。 逐步了解基本的Experience Manager主题，如项目设置、Maven原型、核心组件、可编辑模板、客户端库和组件开发。
-sub-product: sites
 topics: development
 version: Cloud Service
 activity: develop
@@ -16,16 +15,16 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 72abe1cddcf6a012403887203d38509bde8f2d23
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '599'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
 # AEM Sites入门 — WKND教程 {#introduction}
 
-欢迎参加为初次使用Adobe Experience Manager(AEM)的开发人员而设计的多部分教程。 本教程将指导您实施一个AEM网站，以打造一个虚构的生活方式品牌WKND。 本教程涵盖一些基本主题，如项目设置、核心组件、可编辑模板、客户端库，以及使用Adobe Experience Manager Sites进行组件开发。
+欢迎参加为初次使用Adobe Experience Manager(AEM)的开发人员而设计的多部分教程。 本教程将指导您实施一个AEM网站，以打造一个虚构的生活方式品牌WKND。 此教程涵盖了项目设置、核心组件、可编辑模板、客户端库和使用 Adobe Experience Manager Sites 进行组件开发等基本主题。
 
 ## 概述 {#wknd-tutorial-overview}
 

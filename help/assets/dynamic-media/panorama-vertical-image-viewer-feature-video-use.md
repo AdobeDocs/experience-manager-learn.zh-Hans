@@ -1,14 +1,13 @@
 ---
 title: 将全景和垂直图像查看器与AEM Assets Dynamic Media结合使用
 description: AEM 6.4中的Dynamic Media查看器增强功能包括添加全景图像查看器、虚拟现实全景图像查看器和垂直图像查看器。 全景查看器提供了一种轻松的方式，无需任何自定义开发，即可提供房间、资产、位置或景观的迷人、沉浸式体验。
-sub-product: dynamic-media
 feature: Video Profiles, Video Profiles, 360 VR Video
 version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 2%

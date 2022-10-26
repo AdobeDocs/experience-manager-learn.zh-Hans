@@ -1,7 +1,6 @@
 ---
 title: 使用AdobeCloud Manager - CI/CD生产管道
 description: CI/CD生产管道用于通过暂存环境构建代码并将其部署到生产环境，从而缩短实现价值的时间。 CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和性能测试参数的参数。
-sub-product: cloud-manager
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -13,10 +12,10 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '177'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 

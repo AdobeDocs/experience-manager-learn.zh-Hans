@@ -1,7 +1,6 @@
 ---
 title: 创建项目 | AEM SPA Editor和React快速入门
 description: 了解如何生成Adobe Experience Manager(AEM)Maven项目，作为与AEM SPA编辑器集成的React应用程序的起点。
-sub-product: sites
 feature: SPA Editor, AEM Project Archetype
 version: Cloud Service
 kt: 413
@@ -10,7 +9,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
-source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 2%

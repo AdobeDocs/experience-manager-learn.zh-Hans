@@ -1,7 +1,6 @@
 ---
 title: 视频概述
 description: Dynamic Media Classic附带了上传视频时的自动转换、到桌面和移动设备的视频流，以及针对基于设备和带宽的播放而优化的自适应视频集。 进一步了解Dynamic Media Classic中的视频，并获取有关视频概念和术语的入门知识。 然后，深入了解如何上传和编码视频，选择用于上传的视频预设，添加或编辑视频预设，在视频查看器中预览视频，将视频部署到Web和移动设备网站，向视频添加字幕和章节标记，以及将视频查看器发布到桌面和移动设备用户。
-sub-product: dynamic-media
 feature: Dynamic Media Classic, Video Profiles, Viewer Presets
 doc-type: tutorial
 topics: development, authoring, configuring, videos, video-profiles
@@ -11,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: dfbf316f-3922-4bc7-b3f3-2a5bbdeb7063
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '6118'
 ht-degree: 1%

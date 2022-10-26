@@ -1,7 +1,6 @@
 ---
 title: AEM Sites入门 — 组件基础知识
 description: 通过简单的“HelloWorld”示例，了解Adobe Experience Manager(AEM)站点组件的基础技术。 将探讨HTL、Sling模型、客户端库和创作对话框的主题。
-sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Developer Tools
@@ -12,7 +11,7 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1145'
 ht-degree: 2%

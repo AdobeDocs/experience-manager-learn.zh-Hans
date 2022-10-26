@@ -1,7 +1,6 @@
 ---
 title: 创建自定义天气组件 | AEM SPA Editor和React快速入门
 description: 了解如何创建要与AEM SPA编辑器一起使用的自定义天气组件。 了解如何开发创作对话框和Sling模型以扩展JSON模型以填充自定义组件。 使用开放天气API和React开放天气组件。
-sub-product: sites
 feature: SPA Editor
 doc-type: tutorial
 topics: development
@@ -12,7 +11,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 3%
@@ -41,7 +40,7 @@ ht-degree: 3%
 
 ### 打开天气API密钥
 
-来自的API密钥 [开放天气](https://openweathermap.org/) 需要与教程一起使用。 [注册免费](https://home.openweathermap.org/users/sign_up) 的API调用数量。
+来自的API密钥 [开放天气](https://openweathermap.org/) 需要与教程一起使用。 [注册免费](https://home.openweathermap.org/users/sign_up) 的API调用数量有限。
 
 ## 定义AEM组件
 
@@ -151,7 +150,7 @@ AEM组件被定义为节点和属性。 在项目中，这些节点和属性在 
 
 Sling模型是注释驱动的Java“POJO”（纯旧Java对象），有助于将数据从JCR映射到Java变量。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=en#sling-models) 通常用于封装AEM组件的复杂服务器端业务逻辑。
 
-在SPA编辑器的上下文中，Sling模型通过使用的功能，通过JSON模型来显示组件的内容 [Sling模型导出程序](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
+在SPA编辑器的上下文中，Sling模型通过使用的功能，通过JSON模型来显示组件的内容 [Sling模型导出程序](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hans).
 
 1. 在选择的IDE中，打开 `core` 模块位置 `aem-guides-wknd-spa.react/core`.
 1. 创建名为的文件 `OpenWeatherModel.java` at `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.

@@ -4,8 +4,10 @@ role: Developer
 user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
 breadcrumb-title: AEM Forms 教程
+sub-product: Experience Manager Forms
+version: 6.4, 6.5
 index: y
-source-git-commit: 853c4fedd4b8db594aa0b53fd2d27d996811f14e
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 3%

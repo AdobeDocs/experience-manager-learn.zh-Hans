@@ -1,7 +1,6 @@
 ---
 title: Dynamic Media Classic最佳实践教程
 description: Dynamic Media Classic是客户创建、创作和交付富媒体内容的中心。 已创建此最佳实践教程，以帮助Dynamic Media Classic的当前和新用户更全面地了解他们可以使用Adobe这一功能强大的富媒体解决方案执行哪些操作。 在本教程的这一部分中，您将学习Dynamic Media Classic的概念，并简要了解其核心功能和用户界面。
-sub-product: dynamic-media
 doc-type: tutorial
 topics: best-practices, development, authoring, configuring
 audience: all
@@ -11,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 975b85af-ca6a-419e-ab2a-6e1781bfee4a
-source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 1%
