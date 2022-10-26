@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 332ad831b6c49e8599aa2181caf978d5626c1aba
+source-git-commit: 129dedd4cd6973d5d576bed5f714ce62152923de
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1173'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ AEM无头内容建模中使用的内容片段，通常引用要用于在无头�
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
->title="使用图像"
+>title="使用AEM Headless的图像"
 >abstract="了解AEM Headless如何支持图像资产管理及其优化交付。"
 
 ## 内容片段模型
