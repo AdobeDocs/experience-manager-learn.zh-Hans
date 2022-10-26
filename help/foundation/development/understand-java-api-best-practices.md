@@ -1,24 +1,26 @@
 ---
-title: AEM中的Java API最佳实践
-description: AEM基于丰富的开源软件堆栈构建，该堆栈会公开许多Java API，以供在开发过程中使用。 本文探讨了主要API以及何时以及为何应使用它们。
+title: Java&trade;AEM中的API最佳实践
+description: AEM构建于一个丰富的开源软件堆栈上，该堆栈会公开许多Java&Trade;在开发过程中使用的API。 本文探讨了主要API以及何时以及为何应使用它们。
 version: 6.4, 6.5
 feature: APIs
 topic: Development
 role: Developer
 level: Beginner
 exl-id: b613aa65-f64b-4851-a2af-52e28271ce88
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+last-substantial-update: 2022-06-24T00:00:00Z
+thumbnail: aem-java-bp.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
-source-wordcount: '2071'
+source-wordcount: '2079'
 ht-degree: 2%
 
 ---
 
-# Java API最佳实践
+# Java™ API最佳实践
 
-Adobe Experience Manager(AEM)构建于一个丰富的开源软件堆栈上，该堆栈会公开许多Java API，以供在开发过程中使用。 本文探讨了主要API以及何时以及为何应使用它们。
+Adobe Experience Manager(AEM)构建于一个丰富的开源软件堆栈上，该堆栈会公开许多Java™ API，以供在开发过程中使用。 本文探讨了主要API以及何时以及为何应使用它们。
 
-AEM基于4个主Java API集构建。
+AEM基于四个主Java™ API集构建。
 
 * **Adobe Experience Manager (AEM)**
 
@@ -36,7 +38,7 @@ AEM基于4个主Java API集构建。
 
    * OSGi应用程序容器抽象，如服务和(OSGi)组件。
 
-## Java API首选项“经验规则”
+## Java™ API首选项“经验法则”
 
 一般规则是首选按以下顺序使用API/抽象：
 
@@ -57,7 +59,7 @@ AEM基于4个主Java API集构建。
 
 ## AEM API
 
-* [**AEM API JavaDocs**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)
+* [**AEM API JavaDocs**](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html)
 
 AEM API提供了特定于产品化用例的抽象概念和功能。
 
@@ -67,34 +69,34 @@ AEM API提供了特定于产品化用例的抽象概念和功能。
 
 ### com.adobe.&#42; 与com.day.&#42; API
 
-AEM API具有一个包内首选项，该首选项由以下Java包按照优先顺序标识：
+AEM API具有一个包内首选项，该首选项由以下Java™包按照优先顺序标识：
 
 1. `com.adobe.cq`
 1. `com.adobe.granite`
 1. `com.day.cq`
 
-`com.adobe.cq` 支持产品用例， `com.adobe.granite` 支持跨产品平台用例，例如工作流或任务（在产品之间使用）：AEM Assets、站点等)。
+的 `com.adobe.cq` 包支持产品用例， `com.adobe.granite` 支持跨产品平台用例，例如工作流或任务（在产品之间使用）：AEM Assets、站点等)。
 
-`com.day.cq` 包含“原始”API。 这些API解决了在Adobe获取之前和/或围绕客户获取 [!DNL Day CQ]. 这些API受支持，不应避免使用，除非 `com.adobe.cq` 或 `com.adobe.granite` 提供（较新）替代方法。
+的 `com.day.cq` 包中包含“原始”API。 这些API解决了在Adobe获取之前和/或围绕客户获取 [!DNL Day CQ]. 这些API受支持，应避免使用，除非 `com.adobe.cq` 或 `com.adobe.granite` 资源包不提供（较新）替代方法。
 
 新的抽象概念，例如 [!DNL Content Fragments] 和 [!DNL Experience Fragments] 是在 `com.adobe.cq` 空间而不是 `com.day.cq` 下文描述。
 
 ### 查询API
 
-AEM支持多种查询语言。 3种主要语言包括 [JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html)、 XPath和 [AEM查询生成器](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/querybuilder-api.html).
+AEM支持多种查询语言。 三种主要语言是 [JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html)、 XPath和 [AEM查询生成器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html).
 
 最重要的问题是在整个代码库中维护一致的查询语言，以降低复杂性和了解成本。
 
 与 [!DNL Apache Oak] 将它们转移到JCR-SQL2中以执行最终查询，与查询时间本身相比，转换到JCR-SQL2的时间可以忽略不计。
 
-首选API是 [AEM查询生成器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html)，这是最高级别的抽象，为构建、执行和检索查询结果提供了一个强大的API，并提供了以下内容：
+首选API是 [AEM查询生成器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)，这是最高级别的抽象，为构建、执行和检索查询结果提供了一个强大的API，并提供了以下内容：
 
 * 简单、参数化的查询构建（建模为映射的查询参数）
-* 本机 [Java API和HTTP API](https://helpx.adobe.com/cn/experience-manager/6-3/sites/developing/using/querybuilder-api.html)
-* [AEM查询调试器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html#TestingandDebugging)
-* [AEM谓词](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) 支持常见查询要求
+* 本机 [Java™ API和HTTP API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)
+* [AEM查询调试器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)
+* [AEM谓词](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-predicate-reference.html) 支持常见查询要求
 
-* 可扩展API，允许开发自定义 [查询谓词](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)
+* 可扩展API，允许开发自定义 [查询谓词](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
 * JCR-SQL2和XPath可以直接通过 [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) 和 [JCR API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)，返回结果 [[!DNL Sling] 资源](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) 或 [JCR节点](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html)，分别为。
 
 >[!CAUTION]
@@ -127,13 +129,13 @@ AEM支持多种查询语言。 3种主要语言包括 [JCR-SQL2](https://docs.jb
    * [调度程序](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
    * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 
-* [服务用户](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-service-users.html)
+* [服务用户](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
 
 ## JCR API
 
 * **[JCR 2.0 JavaDocs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-的 [JCR（Java内容存储库）2.0 API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) 是JCR实施规范的一部分(对于AEM, [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))。 所有JCR实施都必须符合并实施这些API，因此，是与AEM内容交互的最低级别API。
+的 [JCR(Java™内容存储库)2.0 API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) 是JCR实施规范的一部分(对于AEM, [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/))。 所有JCR实施都必须符合并实施这些API，因此，是与AEM内容交互的最低级别API。
 
 JCR本身是基于层次/树的NoSQL数据存储AEM用作其内容存储库。 JCR具有大量受支持的API，从内容CRUD到查询内容，不一而足。 尽管有这个强大的API，但与更高级别的AEM和 [!DNL Sling] 抽象。
 
@@ -141,11 +143,11 @@ JCR本身是基于层次/树的NoSQL数据存储AEM用作其内容存储库。 J
 
 ### 关于JCR API的常见误解
 
-虽然JCR是AEM内容存储库，但其API并不是与内容交互的首选方法。 相反，首选AEM API（页面、资产、标记等） 或Sling资源API，因为它们提供了更好的抽象概念。
+虽然JCR是AEM内容存储库，但其API并不是与内容交互的首选方法。 相反，首选AEM API（页面、资产、标记等）或Sling资源API，因为它们提供了更好的抽象概念。
 
 >[!CAUTION]
 >
->在AEM应用程序中，JCR API的会话和节点接口的广泛使用是代码气味。 确保 [!DNL Sling] 不应改用API。
+>在AEM应用程序中，JCR API的会话和节点接口的广泛使用是代码气味。 确保 [!DNL Sling] 应改用API。
 
 ### JCR API的常见用法
 
@@ -154,14 +156,14 @@ JCR本身是基于层次/树的NoSQL数据存储AEM用作其内容存储库。 J
 * JCR观察（侦听JCR事件）
 * 创建深层节点结构
 
-   * 虽然Sling API支持创建资源，但JCR API在 [JcrUtils](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/commons/JcrUtils.html) 和 [JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/jcr/JcrUtil.html) 加快了深层结构的创建。
+   * 虽然Sling API支持创建资源，但JCR API在 [JcrUtils](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/commons/JcrUtils.html) 和 [JcrUtil](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/jcr/JcrUtil.html) 加快了深层结构的创建。
 
 ## OSGi API
 
-* [**OSGi R6 JavaDocs**](https://osgi.org/javadoc/r6/cmpn/index.html?overview-summary.html)
-* **[OSGi声明性服务1.2组件批注JavaDocs](https://osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html)**
-* **[OSGi声明性服务1.2元类型批注JavaDocs](https://osgi.org/javadoc/r6/cmpn/org/osgi/service/metatype/annotations/package-summary.html)**
-* [**OSGi框架JavaDocs**](https://osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html)
+* [**OSGi R6 JavaDocs**](https://docs.osgi.org/javadoc/r6/cmpn/index.html?overview-summary.html)
+* **[OSGi声明性服务1.2组件批注JavaDocs](https://docs.osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html)**
+* **[OSGi声明性服务1.2元类型批注JavaDocs](https://docs.osgi.org/javadoc/r6/cmpn/org/osgi/service/metatype/annotations/package-summary.html)**
+* [**OSGi框架JavaDocs**](https://docs.osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html)
 
 OSGi API与更高级别的API(AEM、 [!DNL Sling]、和JCR)，并且很少需要使用OSGi API，并且需要高级AEM开发专业知识。
 
@@ -175,9 +177,9 @@ OSGi定义了所有OSGi容器必须实施和符合的规范。 AEM OSGi实施Apa
 
 * 用于声明OSGi服务和组件的OSGi批注。
 
-   * 首选 [OSGi声明性服务(DS)1.2注释](https://osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html) over [Felix SCR注释](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html) 用于声明OSGi服务和组件
+   * 首选 [OSGi声明性服务(DS)1.2注释](https://docs.osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html) over [Felix SCR注释](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html) 用于声明OSGi服务和组件
 
-* 用于动态代码内的OSGi API [取消/注册OSGi服务/组件](https://osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html).
+* 用于动态代码内的OSGi API [取消/注册OSGi服务/组件](https://docs.osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html).
 
    * 当不需要条件性OSGi服务/组件管理时（大多数情况下是这样），最好使用OSGi DS 1.2注释。
 
@@ -187,20 +189,20 @@ OSGi定义了所有OSGi容器必须实施和符合的规范。 AEM OSGi实施Apa
 
 ### OSGi API
 
-在处理低级OSGi抽象（如在OSGi组件属性中定义或读取）时，提供的较新抽象 `org.osgi` 优先于较高级别的Sling基础。 相互竞争的Sling抽象概念尚未被标记为 `@Deprecated` 建议 `org.osgi` 替换。
+在处理低级OSGi抽象（如在OSGi组件属性中定义或读取）时，提供的较新抽象 `org.osgi` 比较高级别的Sling抽象概念更受青睐。 相互竞争的Sling抽象概念尚未被标记为 `@Deprecated` 建议 `org.osgi` 替换。
 
 另请注意OSGi配置节点定义首选 `cfg.json` 在 `sling:OsgiConfig` 格式。
 
 ### AEM Asset API
 
-* 首选 [ `com.day.cq.dam.api`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/package-summary.html) over [ `com.adobe.granite.asset.api`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/asset/api/package-summary.html).
+* 首选 [ `com.day.cq.dam.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/dam/api/package-summary.html) over [ `com.adobe.granite.asset.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/asset/api/package-summary.html).
 
    * 而 `com.day.cq` Assets API为AEM资产管理用例提供了更免费的工具。
    * Granite Assets API支持低级别资产管理用例（版本、关系）。
 
 ### 查询API
 
-* AEM QueryBuilder不支持某些查询函数，例如 [建议](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions)、拼写检查和索引提示以及其他不太常用的函数。 要使用这些函数进行查询，首选JCR-SQL2。
+* AEM QueryBuilder不支持某些查询函数，例如 [建议](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions)、拼写检查和索引提示等其他不太常用的函数。 要使用这些函数进行查询，首选JCR-SQL2。
 
 ### [!DNL Sling] Servlet注册 {#sling-servlet-registration}
 
@@ -212,7 +214,7 @@ OSGi定义了所有OSGi容器必须实施和符合的规范。 AEM OSGi实施Apa
 
 ## 有用的代码片段
 
-以下是有用的Java代码片段，它们使用讨论的API说明常见用例的最佳实践。 这些片段还说明了如何从较不首选的API移动到更首选的API。
+以下是有用的Java™代码片段，它们使用讨论的API说明常见用例的最佳实践。 这些片段还说明了如何从较不首选的API移动到更首选的API。
 
 ### JCR会话至 [!DNL Sling] ResourceResolver
 
@@ -271,7 +273,7 @@ Resource resource = resourceResolver.getResource(node.getPath());
 
 #### 建议的方法
 
-`DamUtil.resolveToAsset(..)`解析下的任何资源 `dam:Asset` 按需要向上走树，以返回到资产对象。
+的 `DamUtil.resolveToAsset(..)` 函数解析下的任何资源 `dam:Asset` 按需要向上走树，以返回到资产对象。
 
 ```java
 Asset asset = DamUtil.resolveToAsset(resource);
@@ -307,7 +309,7 @@ Page page = resource.adaptTo(Page.class);
 
 ### 读取AEM页面属性
 
-使用页面对象的getter获取已知属性(`getTitle()`, `getDescription()`等) 和 `page.getProperties()` 获取 `[cq:Page]/jcr:content` 用于检索其他属性的ValueMap。
+使用页面对象的getter获取已知属性(`getTitle()`, `getDescription()`，等等)和 `page.getProperties()` 获取 `[cq:Page]/jcr:content` 用于检索其他属性的ValueMap。
 
 ```java
 Page page = resource.adaptTo(Page.class);
@@ -317,7 +319,7 @@ Calendar value = page.getProperties().get("cq:lastModified", Calendar.getInstanc
 
 ### 读取AEM资产元数据属性
 
-资产API为从 `[dam:Asset]/jcr:content/metadata` 节点。 请注意，这不是ValueMap，不支持第2个参数（默认值和自动类型转换）。
+资产API为从 `[dam:Asset]/jcr:content/metadata` 节点。 这不是ValueMap，不支持第二个参数（默认值和自动类型转换）。
 
 ```java
 Asset asset = resource.adaptTo(Asset.class);
@@ -381,7 +383,7 @@ if (!autoSave) { resourceResolver.commit(); }
 
 ### 创建 [!DNL Sling] 资源
 
-ResourceResolver支持创建资源的基本操作。 创建更高级别的抽象概念(AEM页面、资产、标记等) 使用其各自经理提供的方法。
+ResourceResolver支持创建资源的基本操作。 在创建更高级别的抽象概念(AEM页面、资产、标记等)时，请使用其各自经理提供的方法。
 
 ```java
 resourceResolver.create(parentResource, "my-node-name", new ImmutableMap.Builder<String, Object>()
@@ -395,7 +397,7 @@ resourceResolver.commit();
 
 ### 删除 [!DNL Sling] 资源
 
-ResourceResolver支持删除资源。 创建更高级别的抽象概念(AEM页面、资产、标记等) 使用其各自经理提供的方法。
+ResourceResolver支持删除资源。 在创建更高级别的抽象概念(AEM页面、资产、标记等)时，请使用其各自经理提供的方法。
 
 ```java
 resourceResolver.delete(resource);
