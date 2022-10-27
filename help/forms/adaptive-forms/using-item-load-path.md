@@ -7,8 +7,9 @@ kt: 10961
 topic: Development
 role: Developer
 level: Beginner
-last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+last-substantial-update: 2022-09-20T00:00:00Z
+thumbnail: item-load.jpg
+source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
