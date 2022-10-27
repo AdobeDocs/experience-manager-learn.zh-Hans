@@ -1,25 +1,26 @@
 ---
 title: 将AEM Forms与Adobe Sign结合使用
 description: Adobe Sign和AEM Forms可自动执行复杂的交易，并将合法的电子签名作为无缝数字体验的一部分。
-feature: 自适应Forms,Adobe Sign
+feature: Adaptive Forms,Adobe Sign
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 0be61f04-c3ed-4ecb-bab7-73fd308c14e0
+last-substantial-update: 2020-03-20T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 1%
+source-wordcount: '158'
+ht-degree: 15%
 
 ---
 
 # 将AEM Forms与Adobe Sign结合使用
 
-Adobe Sign为自适应表单启用电子签名工作流。 电子签名可改进工作流，以处理法律、销售、工资单、人力资源管理等许多领域的文档。
-AEM Forms与Adobe Sign之间的集成将允许您执行以下操作
+Adobe Sign为自适应表单启用电子签名工作流。 电子签名改进了法律、销售、工资单、人力资源管理和其他许多方面的文档的处理工作流。AEM Forms与Adobe Sign之间的集成将允许您执行以下操作
 
 * 使用自适应Forms捕获数据并呈现自动生成的记录文档(DoR)以供签名
-* 根据PDF模板创建自适应Forms。 将数据与PDF模板合并，并提供给签名
+* 根据您的Forms模板创建自适应PDF。 将数据与PDF模板合并，并提供给签名
 * 使用“签名文档”工作流组件发送文档以进行签名
 
 ## 前提条件
@@ -27,7 +28,6 @@ AEM Forms与Adobe Sign之间的集成将允许您执行以下操作
 要将Adobe Sign与AEM Forms集成，您需要满足以下条件：
 
 * 启用SSL的AEM Forms服务器
-* 有效的Adobe Sign开发人员帐户。
+* 有效的 Adobe Sign 开发人员帐户。
 * Adobe Sign API应用程序
 * Adobe Sign API应用程序的凭据（客户端ID和客户端密钥）。
-

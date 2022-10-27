@@ -2,17 +2,18 @@
 title: AEM工作流中的变量
 description: 在aem工作流中使用xml，json，arraylist，document类型的变量
 version: 6.5
-feature: 自适应表单
-topic: 开发
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: e84b70a0-c51b-4fe3-80e8-f3156931297a
+last-substantial-update: 2020-01-26T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 10%
+source-wordcount: '109'
+ht-degree: 8%
 
 ---
-
 
 # AEM工作流中的变量
 

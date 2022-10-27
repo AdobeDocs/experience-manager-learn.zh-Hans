@@ -1,18 +1,19 @@
 ---
 title: 修改数据源配置设置。
 description: 在数据源配置设置中修改主机名和其他设置。
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 6c63787c-e511-4764-9a03-2c85c394bcc0
+last-substantial-update: 2019-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 2%
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
-
 
 # 能够修改数据源配置设置{#ability-to-modify-data-source-configuration-settings}
 
@@ -24,7 +25,6 @@ ht-degree: 2%
 
 **AEM 6.4中的数据源配置**
 
-![64数据源](assets/64release.gif)
-**配置AEM 6.5及更高版本中可编辑的数据源配置**
-![ 65数据源配置](assets/modifiabledatasource.jfif)
-
+![64数据源配置](assets/64release.gif)
+**AEM 6.5及更高版本中的可编辑数据源配置**
+![65数据源配置](assets/modifiabledatasource.jfif)

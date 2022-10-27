@@ -1,24 +1,25 @@
 ---
 title: 为打印渠道文档创建两列布局
-seo-title: 为打印渠道文档创建两列布局
+seo-title: Creating two column layouts for print channel documents
 description: 为打印渠道文档创建2列布局
-seo-description: 为打印渠道文档创建2列布局
-feature: 交互式通信
+seo-description: Create 2 column layouts for print channel document
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 416e3401-ba9f-4da3-8b07-2d39f9128571
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 2%
+source-wordcount: '223'
+ht-degree: 0%
 
 ---
-
 
 # 打印渠道文档中的两列布局
 

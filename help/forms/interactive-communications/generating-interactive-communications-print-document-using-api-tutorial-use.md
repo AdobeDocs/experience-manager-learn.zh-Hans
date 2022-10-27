@@ -1,24 +1,25 @@
 ---
 title: 使用监视文件夹机制生成用于打印渠道的交互式通信文档
-seo-title: 使用监视文件夹机制生成用于打印渠道的交互式通信文档
+seo-title: Generating Interactive Communications Document for print channel using watch folder mechanism
 description: 使用监视文件夹生成打印渠道文档
-seo-description: 使用监视文件夹生成打印渠道文档
-feature: 交互式通信
+seo-description: Use watched folder to generate print channel documents
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: f5ab4801-cde5-426d-bfe4-ce0a985e25e8
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 1%
+source-wordcount: '463'
+ht-degree: 0%
 
 ---
-
 
 # 使用监视文件夹机制生成用于打印渠道的交互式通信文档
 
@@ -112,9 +113,9 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **要在本地系统上测试此功能，请按照以下说明操作：**
 
-* 按照本[文章中所述设置Tomcat。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成样本数据的war文件。
-* 按照[文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md)中所述设置服务即系统用户。
-确保此系统用户对以下节点具有读取权限。 为[用户管理员](https://localhost:4502/useradmin)授予登录权限，并搜索系统用户“data”，并通过Tab键访问权限选项卡，为以下节点授予读取权限
+* 按照以下所述设置Tomcat [文章。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成样本数据的war文件。
+* 设置服务即系统用户，如下所述 [文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
+确保此系统用户对以下节点具有读取权限。 为用户授予登录权限 [用户管理员](https://localhost:4502/useradmin) 和搜索系统用户“数据”，并通过Tab键到“权限”选项卡，为以下节点授予读取权限
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
@@ -145,11 +146,10 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 * 将accountnumbers.xml放入C:\RenderPrintChannel\input folder目录中。
 
-* 生成的PDF文件将按照ecma脚本中的指定写入saveLocation。
+* 生成的PDF文件将按照ecma脚本中的指定写入saveLocation 。
 
 >[!NOTE]
 >
 >如果您计划在非Windows操作系统上使用它，请导航至
 >
 >/etc/fd/watchfolder /config/PrintChannelDocument ，并根据您的首选项更改folderPath
-

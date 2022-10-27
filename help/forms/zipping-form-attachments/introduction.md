@@ -1,19 +1,20 @@
 ---
 title: 发送自适应表单附件
 description: 使用发送电子邮件组件发送自适应表单附件
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: bd9e1fc1-2fc7-452c-9a4a-2e16f6821760
+last-substantial-update: 2020-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 2%
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
-
 
 # 简介
 
@@ -24,7 +25,7 @@ ht-degree: 2%
 
 ## 以zip文件发送表单附件
 
-为完成用例，编写了自定义工作流流程步骤。 在此自定义流程步骤中，在中创建并存储名为&#x200B;*zipped_attachments.zip*&#x200B;的文件的有效负荷文件夹下的带有表单附件的zip文件
+为完成用例，编写了自定义工作流流程步骤。 在此自定义流程步骤中，会创建一个zip文件，其中的表单附件将存储在名为 *zipped_attachments.zip*
 
 ![send-form-attachments](assets/send-form-attachments.JPG)
 
@@ -33,6 +34,3 @@ ht-degree: 2%
 为完成此用例，编写了自定义工作流流程步骤。 在此自定义流程步骤中，我们会填充“文档数组列表”和“字符串数组列表”类型的工作流变量。
 
 ![send-list-of-documents](assets/send-list-of-documents.JPG)
-
-
-
