@@ -11,9 +11,9 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: 7c246c4f1af9dfe599485f68508c66fe29d2f0b6
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 更新全栈AEM项目以使用前端管道 {#update-project-enable-frontend-pipeline}
 
-在本章中，我们对 __WKND Sites项目__ 以使用前端管道来部署JavaScript和CSS，而不需要完全执行全栈管道。 这允许分离前端和后端工件的开发和部署生命周期，从而允许整体上更快速、更迭代的开发过程。
+在本章中，我们对 __WKND Sites项目__ 以使用前端管道来部署JavaScript和CSS，而不需要完全执行全栈管道。 这可以解耦前端和后端工件的开发和部署生命周期，从而允许更快速、更全面的迭代开发过程。
 
 ## 目标 {#objectives}
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 1. 准备 `ui.frontend` 用于前端管道合同的模块，方法是添加两个新的webpack配置文件。
 
-   * 复制现有 `webpack.common.js` as `webpack.theme.common.js`，更改 `output` 资产和 `MiniCssExtractPlugin`, `CopyWebpackPlugin` 插件配置参数如下所示：
+   * 复制现有 `webpack.common.js` as `webpack.theme.common.js`，然后更改 `output` 资产和 `MiniCssExtractPlugin`, `CopyWebpackPlugin` 插件配置参数如下所示：
 
    ```javascript
    ...
@@ -89,7 +89,7 @@ ht-degree: 0%
    
    ...
        new MiniCssExtractPlugin({
-               filename: 'clientlib-[name]/[name].css'
+               filename: 'theme/[name].css'
            }),
        new CopyWebpackPlugin({
            patterns: [
@@ -134,7 +134,7 @@ ht-degree: 0%
 
 1. 准备 `ui.content` 用于前端管道的模块（通过添加两个Sling配置）。
 
-   * 在以下位置创建新文件 `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig`  — 其中包括 `ui.frontend` 模块在下生成 `dist` 文件夹。
+   * 在 `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig`  — 其中包括 `ui.frontend` 模块在下生成 `dist` 文件夹。
 
    ```xml
    ...
@@ -157,7 +157,7 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >    请参阅，完成 [HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml) 在 __AEM WKND Sites项目__.
+   >    查看结束 [HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml) 在 __AEM WKND Sites项目__.
 
 
    * 第二 `com.adobe.aem.wcm.site.manager.config.SiteConfig` 和 `themePackageName` 值与 `package.json` 和 `name` 属性值和 `siteTemplatePath` 指向 `/libs/wcm/core/site-templates/aem-site-template-stub-2.0.0` 存根路径值。
@@ -191,6 +191,14 @@ ht-degree: 0%
 >
 > 这些更改可在GitHub的 [__前端管道__](https://github.com/adobe/aem-guides-wknd/tree/feature/frontend-pipeline) 分支 __AEM WKND Sites项目__.
 
+
+## 注意 —  _启用前端管道_ 按钮
+
+的 [边栏选择器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) &#39;s [网站](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) 选项 **启用前端管道** 按钮。 单击 **启用前端管道** 按钮将覆盖上述内容 **Sling配置**，确保 **您未单击** 通过Cloud Manager管道执行部署上述更改后，此按钮将保留。
+
+![“启用前端管线”按钮](assets/enable-front-end-Pipeline-button.png)
+
+如果错误地单击了该管道，则必须重新运行管道以确保恢复前端管道合同和更改。
 
 ## 恭喜！ {#congratulations}
 
