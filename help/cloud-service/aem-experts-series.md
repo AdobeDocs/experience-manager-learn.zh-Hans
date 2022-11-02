@@ -1,14 +1,14 @@
 ---
 title: Adobe Experience Manager as a Cloud Service专家系列
 description: 了解Adobe Experience Manager(AEM)的as a Cloud Service信息，包括Adobe自己的专业工程师（负责构建该工具）以及提供该工具的专业服务。
-sub-product: sites, cloud-manager, assets
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
+exl-id: ae1cdbe3-0863-41de-bb27-2e88c4640866
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 2%
 
 ---
-
 
 # Adobe Experience Manager as a Cloud Service专家系列
 
@@ -40,7 +40,7 @@ ht-degree: 2%
      </td>   
      <td>
       <a href="./migration/moving-to-aem-as-a-cloud-service/onboarding.md">
-      <img alt="AEM as a Cloud Service 入门" src="./assets/experts-series/onboarding.png"/>
+      <img alt="AEM as a Cloud Service 入门培训" src="./assets/experts-series/onboarding.png"/>
       </a>
       <div>
          <a href="./migration/moving-to-aem-as-a-cloud-service/onboarding.md"><strong>AEMas a Cloud Service入门</strong></a>

@@ -1,7 +1,7 @@
 ---
 title: 仅用于置入(FPO)演绎版
 description: Adobe Experience Manager资产现在可供设计人员和创意用户在其最喜爱的Adobe Creative Cloud桌面应用程序中使用。 适用于Adobe Creative Cloud企业的Adobe资产链接扩展了在Adobe Photoshop、InDesign和Illustrator等Creative Cloud工具中搜索和浏览、排序、预览、上传资产、签出、修改、签入和查看AEM资产的元数据的功能。
-sub-product: assets
+sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: Cloud Service
 kt: 4916
@@ -10,7 +10,7 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: 940608db-6e84-441a-b031-e8cf52459597
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%

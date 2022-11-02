@@ -2,7 +2,7 @@
 title: 了解与AEM的跨源资源共享(CORS)
 description: Adobe Experience Manager的跨域资源共享(CORS)可帮助非AEM Web属性对AEM进行客户端调用（经过身份验证和未经身份验证）以获取内容或直接与AEM交互。
 version: 6.4, 6.5
-sub-product: foundation, content-services, sites
+sub-product: Experience Manager, Experience Manager Sites
 topics: security, development, content-delivery
 activity: understand
 audience: architect, developer
@@ -11,7 +11,7 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 1%
@@ -129,7 +129,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 
 通常，在Dispatcher中缓存内容的注意事项同样适用于在Dispatcher中缓存CORS响应标头。 下表定义了 [!DNL CORS] 标题(因此 [!DNL CORS] 请求)。
 
-| 可缓存 | 环境 | 身份验证状态 | 说明 |
+| 可缓存 | 环境 | 身份验证状态 | 解释 |
 |-----------|-------------|-----------------------|-------------|
 | 否 | AEM 发布 | 已验证 | AEM作者上的Dispatcher缓存仅限于静态的未创作资产。 因此，很难且不切实际地在AEM创作上缓存大多数资源，包括HTTP响应标头。 |
 | 否 | AEM 发布 | 已验证 | 避免在经过身份验证的请求上缓存CORS标头。 这与不缓存已验证请求的常见指导一致，因为很难确定请求用户的身份验证/授权状态将如何影响交付的资源。 |

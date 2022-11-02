@@ -2,7 +2,7 @@
 title: 在AEM中开发Sling模型导出程序
 description: 本技术演示了如何设置AEM以与Sling模型导出器一起使用，使用导出器框架增强现有的Sling模型以呈现为JSON，以及如何使用导出器选项和Jackson批注进一步自定义输出。
 version: 6.4, 6.5
-sub-product: foundation, content-services
+sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
 topics: content-delivery, development, headless
 activity: develop
@@ -12,7 +12,7 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: fc321ed1-5cf7-4bbe-adc6-c4905af7b43c
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%

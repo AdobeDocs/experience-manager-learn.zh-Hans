@@ -2,7 +2,7 @@
 title: 了解AEM中的Sling模型导出程序
 description: Apache Sling模型1.3.0引入了Sling模型导出器，这是一种将Sling模型对象导出或序列化为自定义抽象的优雅方法。 本文并列了使用Sling模型填充HTL脚本的传统用例，以及利用Sling模型导出器框架将Sling模型序列化为JSON。
 version: 6.4, 6.5
-sub-product: foundation, content-services
+sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
 topics: development, content-delivery, headless
 activity: understand
@@ -12,7 +12,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 03cdf5d1-3253-44c9-ae1f-ec5d3c562427
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 1%

@@ -2,10 +2,10 @@
 user-guide-title: Adobe Experience Manager as a Cloud Service 教程
 user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集合。
 breadcrumb-title: AEM as a Cloud Service 教程
-sub-product: Experience Manager
+sub-product: Experience Manager as a Cloud Service, Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager, Experience Manager Assets
 version: Cloud Service
 team: TM
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 21%
@@ -206,10 +206,10 @@ ht-degree: 21%
       + [外部化工作流存储](./forms/create-aem-workflow/externalize-workflow.md)
       + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
       + [触发工作流](./forms/create-aem-workflow/configure-af.md)
-   + Adobe Sign与AEM Forms{#forms-and-sign}
+   + Acrobat Sign与AEM Forms{#forms-and-sign}
       + [简介](./forms/forms-and-sign/introduction.md)
-      + [Adobe Sign API应用程序](./forms/forms-and-sign/create-sign-api-application.md)
-      + [Adobe Sign 云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+      + [Acrobat Sign API应用程序](./forms/forms-and-sign/create-sign-api-application.md)
+      + [Acrobat Sign云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
       + [配置以进行填写和签名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
    + 与Microsoft Power集成自动化{#forms-cs-and-power-automate}
