@@ -1,5 +1,5 @@
 ---
-title: 在输出服务中使用片段
+title: 在已监视文件夹的输出服务中使用片段
 description: 生成PDF文档，其中片段驻留在CRX存储库中
 feature: Output Service
 version: 6.4,6.5
@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-09-07T00:00:00Z
 thumbnail: ecma-fragments.jpg
-source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
+source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---

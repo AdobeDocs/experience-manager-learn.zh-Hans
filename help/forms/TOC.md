@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1725'
 ht-degree: 3%
 
 ---
@@ -110,6 +110,7 @@ ht-degree: 3%
    + [空间工具栏按钮](ui-tips-tricks/toolbar-buttons.md)
    + [使用嵌套面板导航选项卡](ui-tips-tricks/nested-panels.md)
    + [将图标添加到导航选项卡](ui-tips-tricks/active-complete.md)
+   + [自动完成字段](ui-tips-tricks/auto-complete.md)
 + 自定义收件箱{#inbox-customization}
    + [简介](inbox-customization/introduction.md)
    + [添加自定义列](inbox-customization/add-married-column.md)
@@ -136,11 +137,11 @@ ht-degree: 3%
 + HTML5 表单{#html5-forms}
    + [创建HTML5表单](html5-forms/create-html5-form.md)
    + [处理HTML5表单提交](html5-forms/handle-html5-form-submission.md)
-+ AEM Forms和Adobe Sign{#forms-and-sign}
++ AEM Forms和Acrobat Sign{#forms-and-sign}
    + [简介](aem-forms-and-adobe-sign/introduction.md)
    + [设置SSL](aem-forms-and-adobe-sign/set-up-ssl.md)
-   + [创建Adobe Sign API应用程序](aem-forms-and-adobe-sign/create-adobe-sign-api-application.md)
-   + [创建Adobe Sign云配置](aem-forms-and-adobe-sign/create-adobe-sign-cloud-configuration.md)
+   + [创建Acrobat Sign API应用程序](aem-forms-and-adobe-sign/create-adobe-sign-api-application.md)
+   + [创建Acrobat Sign云配置](aem-forms-and-adobe-sign/create-adobe-sign-cloud-configuration.md)
    + [创建工作流以发送要签名的文档](aem-forms-and-adobe-sign/create-workflow-to-send-document-for-signing.md)
    + [创建和配置自适应表单](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [为单个签名者配置自适应表单](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
@@ -148,7 +149,7 @@ ht-degree: 3%
    + [配置Automated forms conversion服务](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [将PDF表单转换为自适应表单](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [配置已转换的自适应表单](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
-   + [在Adobe Sign中使用XDP模板](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
+   + [在Acrobat Sign中使用XDP模板](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
 + 签署多个Forms{#sign-multiple-documents}
    + [简介](sign-multiple-documents/introduction.md)
    + [配置数据源](sign-multiple-documents/configure-data-source.md)
