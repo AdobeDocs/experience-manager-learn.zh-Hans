@@ -7,9 +7,9 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
+source-git-commit: a21b78456354c18ad137e69a5d18258d652169b1
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '271'
 ht-degree: 19%
 
 ---
@@ -109,6 +109,7 @@ ht-degree: 19%
    + [7 — 在移动设备应用程序中使用AEM内容服务](./content-services/chapter-7.md)
 + 代码示例 {#code-samples}
    + [筛选React应用程序](./graphql/code-samples/filtering-react-app.md)
+   + [过滤预警应用程序](./graphql/code-samples/filtering-preact-app.md)
    + [过滤Angular应用程序](./graphql/code-samples/filtering-angular-app.md)
    + [筛选值应用程序](./graphql/code-samples/filtering-vue-app.md)
    + [使用jQuery和Handlebars进行筛选](./graphql/code-samples/filtering-jquery-handlebars.md)
