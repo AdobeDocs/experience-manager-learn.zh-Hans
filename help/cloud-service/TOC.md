@@ -2,10 +2,10 @@
 user-guide-title: Adobe Experience Manager as a Cloud Service 教程
 user-guide-description: Adobe Experience Manager as a Cloud Service 的教程集合。
 breadcrumb-title: AEM as a Cloud Service 教程
-sub-product: Experience Manager as a Cloud Service, Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager, Experience Manager Assets
+sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: 0c381c166f55178e219ebd27c6641298491aa8f6
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 21%
