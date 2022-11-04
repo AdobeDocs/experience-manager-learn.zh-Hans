@@ -8,7 +8,7 @@ audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
@@ -29,13 +29,13 @@ Acroforms是使用Acrobat创建的表单。 您可以使用Acrobat从头开始�
 
 >[!NOTE]
 >
->如果要发送可填写的Acroform以使用Adobe Sign进行签名，请相应地命名字段。 例如，您可以为字段命名 **Sig_es_:signer1:签名**. 这是Adobe Sign理解的语法。
+>如果要发送可填写的Acroform以使用Acrobat Sign进行签名，请相应地命名字段。 例如，您可以为字段命名 **Sig_es_:signer1:签名**. 这是Acrobat Sign理解的语法。
 
 >[!NOTE]
 >
->如果发送的是基于XFA的文档，则需要扁平化该文档，并且Adobe Sign签名标记需要作为静态文本显示在文档中。
+>如果发送的是基于XFA的文档，则需要扁平化该文档，并且Acrobat Sign签名标记需要作为静态文本显示在文档中。
 
-[Adobe Sign文本标记文档](https://helpx.adobe.com/sign/using/text-tag.html)
+[Acrobat Sign文本标记文档](https://helpx.adobe.com/sign/using/text-tag.html)
 
 >[!NOTE]
 >

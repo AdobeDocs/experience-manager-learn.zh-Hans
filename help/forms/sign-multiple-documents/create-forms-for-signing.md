@@ -9,7 +9,7 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 565d81a4-2918-44ea-a3e9-ed79f246f08a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 * 确保表单基于 **SignMultipleForms** 模板。 这可确保表单预填充从数据库获取的数据。
 
-* 需要将表单配置为使用Adobe Sign ，并且signer1字段需要与“客户电子邮件”字段关联
+* 需要将表单配置为使用Acrobat Sign ，并且signer1字段需要与“客户电子邮件”字段关联
 * 表单还需要与调用的clientLib关联 **getnextform**
 * 表单需要使用签名步骤组件。
 * 表单还必须使用自定义 **签署多个表单** 组件。 此组件允许您导航到要登录包的下一个表单。

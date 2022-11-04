@@ -4,7 +4,7 @@ description: 面向初学者和经验丰富的AEM Forms开发人员的AEM Forms�
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 6%
@@ -140,7 +140,7 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
     </a>
     </div>
     <p>
-    <em>租户与房东之间的租赁协议，已使用AEM Forms和Adobe Sign填写并签署</em>
+    <em>租户与房东之间的租赁协议，已使用AEM Forms和Acrobat Sign填写并签署</em>
     <p>
   </td>
   <td>
@@ -153,7 +153,7 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
     </a>
     </div>
     <p>
-    <em>动态创建NDA并使用Adobe Sign发送以进行签名</em>
+    <em>动态创建NDA并使用Acrobat Sign发送以进行签名</em>
     </p>
   </td>
   <td>
@@ -166,7 +166,7 @@ Adobe Experience Manager(AEM)提供了一个易于使用的解决方案，用于
       </a>
     </div>
     <p>
-    <em>使用Forms和Adobe Sign无缝地签署多个文档</em>
+    <em>使用Forms和Acrobat Sign无缝地签署多个文档</em>
     <p>
   </td>
 </tr>

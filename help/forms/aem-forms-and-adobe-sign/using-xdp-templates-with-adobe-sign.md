@@ -1,20 +1,21 @@
 ---
-title: 在AEM Forms和Adobe Sign中使用XDP模板
-description: 在AEM Forms和Adobe Sign中使用XDP模板。 此视频详细介绍了如何利用与AEM Forms和Sign集成的现有XDP模板。
-feature: 自适应表单
+title: 在AEM Forms和Acrobat Sign中使用XDP模板
+description: 在AEM Forms和Acrobat Sign中使用XDP模板。 此视频详细介绍了如何利用与AEM Forms和Sign集成的现有XDP模板。
+feature: Adaptive Forms
 thumbnail: 39705.jpg
 kt: 6143
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: faf0143a-0944-41fb-a211-0d83ae1978d4
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 7%
+source-wordcount: '67'
+ht-degree: 2%
 
 ---
 
-# 在AEM Forms和Adobe Sign中使用XDP模板
+# 在AEM Forms和Acrobat Sign中使用XDP模板
 
 利用AEM Forms和Sign集成中的现有XDP模板。
 
