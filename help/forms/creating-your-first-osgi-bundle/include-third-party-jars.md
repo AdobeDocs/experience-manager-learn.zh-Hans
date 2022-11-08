@@ -9,7 +9,7 @@ level: Beginner
 kt: 11245
 last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
-source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
+source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -56,7 +56,7 @@ ht-degree: 0%
 * 打开命令提示符。 在我的示例中，导航到您项目的文件夹(c:\aemformsbundles\AEMFormsProcessStep)。 执行以下命令
 
 ```java
-mvn clean install -pAutoInstallSinglePackage
+mvn clean install -PautoInstallSinglePackage
 ```
 
 如果一切正常，则包将与第三方包一起安装到您的AEM实例中。 可以使用 [felix web console](http://localhost:4502/system/console/bundles). 第三方包位于的/apps文件夹中 `crx` 存储库如下所示

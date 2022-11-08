@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 46df7b13401ee3497c871eac3b8158148c2e6a04
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,8 @@ ht-degree: 0%
 
 在本文中，我们将了解以下内容
 
-* 输出服务 — 通常，此服务用于将xml数据与xdp模板或pdf合并，以生成扁平化的pdf。 有关更多详细信息，请参阅[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 的值。
-* FormsService — 这是一项用途广泛的服务，允许您将数据从文件导出/导入PDF文件。 有关更多详细信息，请参阅 [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html) 为Forms服务。
+* 输出服务 — 通常，此服务用于将xml数据与xdp模板或pdf合并，以生成扁平化的pdf。 有关更多详细信息，请参阅 [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 的值。
+* FormsService — 这是一项用途广泛的服务，允许您将数据从文件导出/导入PDF文件。 有关更多详细信息，请参阅 [javadoc](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) 为Forms服务。
 
 
 以下代码片段从PDF文件导出数据

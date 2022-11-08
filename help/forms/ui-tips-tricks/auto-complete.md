@@ -9,9 +9,9 @@ role: Developer
 level: Beginner
 kt: 11374
 last-substantial-update: 2022-11-01T00:00:00Z
-source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
+source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -23,14 +23,11 @@ ht-degree: 0%
 
 用于完成自动完成功能的代码与字段的初始化事件相关联。
 
-
-## 为国家/地区名称提供建议
-
-![国家建议](assets/auto-complete1.png)
-
 ## 提供地址建议
 
 ![国家建议](assets/auto-complete2.png)
+
+
 
 以下代码用于提供街道地址建议
 
@@ -60,6 +57,10 @@ $(".streetAddress input").autocomplete({
 
 });
 ```
+
+
+
+
 
 ## 关于表情符号的建议
 

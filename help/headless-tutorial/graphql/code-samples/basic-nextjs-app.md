@@ -12,9 +12,9 @@ thumbnail: KT-11368.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
+source-git-commit: e3fb145e7a9f33dd010f6c40e42573d41e54b302
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
@@ -30,3 +30,7 @@ ht-degree: 0%
 + 使用WKND的持久查询： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-slug`
 
 要深入查看此Next.js应用程序的构建方式，请查看 [示例Next.js应用程序文档](../example-apps/next-js.md).
+
+>[!IMPORTANT]
+>
+> 在嵌入式IDE中，Codesandbox.io不支持编辑Next.js应用程序。 要编辑此代码示例，请 [直接在codesandbox.io上打开Next.js应用程序](https://codesandbox.io/s/wknd-next-js-app-3n6zdv).
