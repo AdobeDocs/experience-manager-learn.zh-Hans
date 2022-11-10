@@ -7,283 +7,317 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: d0576962-a86a-4742-8635-02be1ec3243f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '962'
 ht-degree: 1%
 
 ---
 
 # 客户端应用程序集成
 
-在上一章中，您使用HTTPPUT和POST请求创建并更新了持久查询。
+在上一章中，您使用GraphiQL资源管理器创建并更新了持久化查询。
 
-本章将指导您完成以下步骤，在五个React组件中使用HTTPGET请求将这些持久化查询与WKND应用程序集成：
-
-* 位置
-* 地址
-* 讲师
-* 管理员
-* 团队
+本章将指导您完成使用现有HTTPGET请求将持久查询与WKND客户端应用程序（又称WKND应用程序）集成的步骤 **React组件**. 它还为应用AEM Headless学习知识、编码专业知识以增强WKND客户端应用程序提供了可选挑战。
 
 ## 前提条件 {#prerequisites}
 
-本文档是多部分教程的一部分。 在继续处理本章之前，请确保已完成前几章。 完成 [基本教程](/help/headless-tutorial/graphql/multi-step/overview.md) 。
+本文档是多部分教程的一部分。 在继续处理本章之前，请确保已完成前几章。 WKND客户端应用程序连接到AEM发布服务，因此务必要 **将以下内容发布到AEM发布服务**.
 
-_本章中的IDE屏幕截图来自 [Visual Studio代码](https://code.visualstudio.com/)_
+* 项目配置
+* GraphQL 端点
+* 内容片段模型
+* 创作内容片段
+* GraphQL持久查询
+
+的 _本章中的IDE屏幕截图来自 [Visual Studio代码](https://code.visualstudio.com/)_
 
 ### 第1-4章解决方案包（可选） {#solution-package}
 
 可以安装一个解决方案包，以完成AEM UI中章节1-4中的步骤。 此包是 **不需要** 如果前几章已经完成。
 
-1. 下载 [Advanced-GraphQL-Tutorial-Solution-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.1.zip).
+1. 下载 [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip).
 1. 在AEM中，导航到 **工具** > **部署** > **包** 访问 **包管理器**.
 1. 上载并安装在上一步中下载的包（zip文件）。
+1. 将包复制到AEM发布服务
 
 ## 目标 {#objectives}
 
-在本教程中，您将了解如何使用AEM Headless JavaScript将持久查询请求集成到示例WKND GraphQl React应用程序中 [SDK](https://github.com/adobe/aem-headless-client-js).
+在本教程中，您将了解如何使用 [AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js).
 
-## 安装并运行示例客户端应用程序 {#install-client-app}
+## 克隆并运行示例客户端应用程序 {#clone-client-app}
 
 为了加快教程的进度，我们提供了一个React JS入门应用程序。
 
->[!NOTE]
-> 
-> 下面的说明是将React应用程序连接到 **作者** AEMas a Cloud Service中的环境使用 [本地开发访问令牌](/help/headless-tutorial/authentication/local-development-access-token.md). 也可以将应用程序连接到 [使用AEMaaCS SDK的本地创作实例](/help/headless-tutorial/graphql/quick-setup/local-sdk.md) 使用基本身份验证。
-
-1. 下载 **[aem-guides-wknd-headless-start-tutorial.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/aem-guides-wknd-headless-start-tutorial.zip)**.
-1. 解压缩文件，并在IDE中打开项目。
-1. 获取 [本地开发令牌](/help/headless-tutorial/authentication/local-development-access-token.md) 的AEM环境。
-1. 在项目中，打开文件 `.env.development`.
-   1. 已设置 `REACT_APP_DEV_TOKEN` 等于 `accessToken` 值。 （不是整个JSON文件）
-   1. 已设置 `REACT_APP_HOST_URI` 到AEM的url **作者** 环境。
-
-   ![更新本地环境文件](assets/client-application-integration/update-environment-file.png)
-1. 打开新终端并导航到项目文件夹。 运行以下命令：
+1. 克隆 [adobe/aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql) 存储库：
 
    ```shell
+   $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
+   ```
+
+1. 编辑 `aem-guides-wknd-graphql/advanced-tutorial/.env.development` 文件和设置 `REACT_APP_HOST_URI` 以指向target AEM发布服务。
+
+   如果连接到创作实例，请更新身份验证方法。
+
+   ```plain
+   # Server namespace
+   REACT_APP_HOST_URI=https://publish-pxx-eyy.adobeaemcloud.com
+   
+   #AUTH (Choose one method)
+   # Authentication methods: 'service-token', 'dev-token', 'basic' or leave blank to use no authentication
+   REACT_APP_AUTH_METHOD=
+   
+   # For Bearer auth, use DEV token (dev-token) from Cloud console
+   REACT_APP_DEV_TOKEN=
+   
+   # For Service toke auth, provide path to service token file (download file from Cloud console)
+   REACT_APP_SERVICE_TOKEN=auth/service-token.json
+   
+   # For Basic auth, use AEM ['user','pass'] pair (eg for Local AEM Author instance)
+   REACT_APP_BASIC_AUTH_USER=
+   REACT_APP_BASIC_AUTH_PASS=
+   ```
+
+   ![React应用程序开发环境](assets/client-application-integration/react-app-dev-env-settings.png)
+
+
+   >[!NOTE]
+   > 
+   > 上述说明是将React应用程序连接到 **AEM发布服务**，但要连接到 **AEM创作服务** 获取target AEMas a Cloud Service环境的本地开发令牌。
+   >
+   > 也可以将应用程序连接到 [使用AEMaaCS SDK的本地创作实例](/help/headless-tutorial/graphql/quick-setup/local-sdk.md) 使用基本身份验证。
+
+
+1. 打开终端并运行命令：
+
+   ```shell
+   $ cd aem-guides-wknd-graphql/advanced-tutorial
    $ npm install
    $ npm start
    ```
 
-1. 新浏览器应会在 `http://localhost:3000/aem-guides-wknd-pwa`.
+1. 应加载新的浏览器窗口 [http://localhost:3000](http://localhost:3000)
+
+
 1. 点按 **露营** > **约塞米蒂背包** 查看Yosemite Backpacking探险详情。
 
    ![Yosemite背包屏幕](assets/client-application-integration/yosemite-backpacking-adventure.png)
 
 1. 打开浏览器的开发人员工具并检查 `XHR` 请求
 
-   ![POSTGraphQL](assets/client-application-integration/post-query-graphql.png)
+   ![POSTGraphQL](assets/client-application-integration/graphql-persisted-query.png)
 
-   您应会看到 `POST` 到GraphQL端点。 查看 `Payload`，则可以查看已发送的完整GraphQL查询。 在接下来的部分中，将更新应用程序以使用 **持久保留** 查询。
+   您应会看到 `GET` 具有项目配置名称(`wknd-shared`)，保留的查询名称(`adventure-by-slug`)，变量名称(`slug`)，值(`yosemite-backpacking`)和特殊字符编码。
+
+>[!IMPORTANT]
+>
+>    如果您想知道为什么针对 `http://localhost:3000` 和NOT针对AEM发布服务域，请查看 [在引擎罩下](../multi-step/graphql-and-react-app.md#under-the-hood) 从基本教程。
 
 
-## 入门
+## 查看代码
 
-在基本教程中，使用参数化的GraphQl查询来请求单个内容片段并渲染冒险详细信息。 接下来，更新 `adventureDetailQuery` 以包含新字段，并使用在上一章中创建的持久查询。
+在 [基本教程 — 构建使用AEM GraphQL API的React应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object) 我们已审查并改进了几个关键文件，以获得实际操作的专业知识。 在增强WKND应用程序之前，请查看关键文件。
 
-创建了五个组件：
+* [查看AEMHeadless对象](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)
 
-| React组件 | 位置 |
-|-------|------|
-| 管理员 | `src/components/Administrator.js` |
-| 团队 | `src/components/Team.js` |
-| 位置 | `src/components/Location.js` |
-| 讲师 | `src/components/Instructors.js` |
-| 地址 | `src/components/Address.js` |
+* [实施以运行AEM GraphQL持久查询](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#implement-to-run-aem-graphql-persisted-queries)
 
-## 更新useGraphQL挂接
+### 审阅 `Adventures` React组件
 
-自定义 [反应效果挂钩](https://reactjs.org/docs/hooks-overview.html#effect-hook) 已创建，用于侦听对应用程序的更改 `query`，且发生更改时，会向AEM GraphQL端点发出HTTPPOST请求，并将JSON响应返回到应用程序。
+WKND React应用程序的主视图是所有历险的列表，您可以根据诸如之类的活动类型过滤这些历险 _野营、骑自行车_. 此视图由 `Adventures` 组件。 以下是主要实施详细信息：
 
-创建新挂接以使用 **持久保留** 查询。 然后，该应用程序可以发起HTTPGET请求，以获取Adventure详细信息。 的 `runPersistedQuery` 的 [AEM Headless Client SDK](https://github.com/adobe/aem-headless-client-js) 用于更轻松地执行持久查询。
+* 的 `src/components/Adventures.js` 调用 `useAllAdventures(adventureActivity)` 钩子 `adventureActivity` 参数是活动类型。
 
-1. 打开文件 `src/api/useGraphQL.js`
-1. 添加新挂接 `useGraphQLPersisted`:
+* 的 `useAllAdventures(adventureActivity)` 挂钩在 `src/api/usePersistedQueries.js` 文件。 基于 `adventureActivity` 值时，它会确定要调用的持久查询。 如果不为null值，则会调用 `wknd-shared/adventures-by-activity`，否则将获得所有可用的冒险 `wknd-shared/adventures-all`.
 
-   ```javascript
-   /**
-   * Custom React Hook to perform a GraphQL query to a persisted query endpoint
-   * @param persistedPath - the short path to the persisted query
-   * @param fragmentPathParam - optional parameters object that can be passed in for parameterized persistent queries
-   */
-   export function useGraphQLPersisted(persistedPath, fragmentPathVariable) {
-       let [data, setData] = useState(null);
-       let [errors, setErrors] = useState(null);
-   
-       useEffect(() => {
-           let queryVariables = {};
-   
-           // we pass in a primitive fragmentPathVariable (String) and then construct the object {fragmentPath: fragmentPathParam} to pass as query params to the persisted query
-           // It is simpler to pass a primitive into a React hooks, as comparing the state of a dependent object can be difficult. see https://reactjs.org/docs/hooks-faq.html#can-i-skip-an-effect-on-updates
-           if(fragmentPathVariable) {
-               queryVariables = {fragmentPath: fragmentPathVariable};
-           }
-   
-           // execute a persisted query using the given path and pass in variables (if needed)
-           sdk.runPersistedQuery(persistedPath, queryVariables)
-               .then(({ data, errors }) => {
-               if (errors) setErrors(mapErrors(errors));
-               if (data) setData(data);
-           })
-           .catch((error) => {
-           setErrors(error);
-           });
-   }, [persistedPath, fragmentPathVariable]);
-   
-   return { data, errors }
-   }
-   ```
-1. 保存对文件所做的更改。
+* 钩子使用主 `fetchPersistedQuery(..)` 将查询执行委派到的函数 `AEMHeadless` 通过 `aemHeadlessClient.js`.
 
-## 更新冒险详细信息组件
+* 此挂接还仅返回AEM GraphQL响应(位于 `response.data?.adventureList?.items`，允许 `Adventures` React视图组件与父JSON结构无关。
 
-文件 `src/api/queries.js` 包含用于为应用程序提供支持的GraphQL查询 `adventureDetailQuery` 使用标准POSTGraphQL请求返回单个冒险的详细信息。 接下来，更新 `AdventureDetail` 使用保留的组件 `wknd/all-adventure-details` 查询。
+* 成功执行查询后， `AdventureListItem(..)` 从渲染函数 `Adventures.js` 添加HTML元素以显示 _图像、行程时长、价格和标题_ 信息。
 
-1. 打开 `src/screens/AdventureDetail.js`.
-1. 首先，注释以下行：
+### 审阅 `AdventureDetail` React组件
 
-   ```javascript
-   export default function AdventureDetail() {
-   
-       ...
-   
-       //const { data, errors } = useGraphQL(adventureDetailQuery(adventureFragmentPath));
-   ```
+的 `AdventureDetail` React组件可渲染探险的详细信息。 以下是主要实施详细信息：
 
-   以上版本使用标准的GraphQLPOST，根据 `adventureFragmentPath`
+* 的 `src/components/AdventureDetail.js` 调用 `useAdventureBySlug(slug)` 钩子 `slug` 参数是查询参数。
 
-1. 使用 `useGraphQLPersisted` 挂接，添加以下行：
+* 如上所示， `useAdventureBySlug(slug)` 挂钩在 `src/api/usePersistedQueries.js` 文件。 它调用 `wknd-shared/adventure-by-slug` 将委派到 `AEMHeadless` 通过 `aemHeadlessClient.js`.
+
+* 成功执行查询后， `AdventureDetailRender(..)` 从渲染函数 `AdventureDetail.js` 添加HTML元素以显示“冒险”详细信息。
+
+
+## 增强代码
+
+### 使用 `adventure-details-by-slug` 持久化查询
+
+在上一章中，我们创建了 `adventure-details-by-slug` 持久查询，它提供其他冒险信息，例如 _位置、instructorTeam和管理员_. 让我们替换 `adventure-by-slug` with `adventure-details-by-slug` 保留查询以呈现此附加信息。
+
+1. 打开 `src/api/usePersistedQueries.js`.
+
+1. 找到函数 `useAdventureBySlug()` 将查询更新为
+
+```javascript
+ ...
+
+ // Call the AEM GraphQL persisted query named "wknd-shared/adventure-details-by-slug" with parameters
+ response = await fetchPersistedQuery(
+ "wknd-shared/adventure-details-by-slug",
+ queryParameters
+ );
+
+ ...
+```
+
+### 显示其他信息
+
+1. 要显示其他冒险信息，请打开 `src/components/AdventureDetail.js`
+
+1. 找到函数 `AdventureDetailRender(..)` 将返回函数更新为
 
    ```javascript
-   export default function AdventureDetail() {
+   ...
    
-      //const { data, errors } = useGraphQL(adventureDetailQuery(adventureFragmentPath));
-       const {data, errors} = useGraphQLPersisted("wknd/all-adventure-details", adventureFragmentPath);
-   ```
-
-   观察路径 `wknd/all-adventure-details` 是在上一章中创建的持久查询的路径。
-
-   >[!CAUTION]
-   >
-   > 要使更新的查询正常工作，请 `wknd/all-adventure-details` 必须在target AEM环境中持久保留。 查看 [持久GraphQL查询](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md#cache-control-all-adventures) 或安装 [AEM解决方案包](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.1.zip)
-
-1. 返回到浏览器中运行的应用程序，并在导航到 **冒险详细信息** 页面。
-
-   ![获取请求](assets/client-application-integration/get-request-persisted-query.png)
-
-   ```
-   http://localhost:3000/graphql/execute.json/wknd/all-adventure-details;fragmentPath=/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking
-   ```
-
-   此时您应会看到 `GET` 请求，该请求将在 `wknd/all-adventure-details`.
-
-1. 导航到其他冒险详细信息，并观察到相同的内容 `GET` 请求，但使用不同的片段路径。 应用程序应继续像以前一样工作。
-
-请参阅 `AdventureDetail.js` 在 [aem-guides-wknd-headless-solution-tutorial-zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/aem-guides-wknd-headless-solution-tutorial.zip) 以了解更新组件的完整示例。
-
-接下来，创建 **位置**, **管理员**&#x200B;和 **讲师** 用于呈现位置数据的组件。 的 **地址** 组件在 **团队** 组件。
-
-## 开发位置组件
-
-1. 在 `AdventureDetail.js` 文件，添加对 `<Location>` 从 `adventure` 数据对象：
-
-   ```javascript
-   export default function AdventureDetail() {
-       ...
+   return (<>
+       <h1 className="adventure-detail-title">{title}</h1>
+       <div className="adventure-detail-info">
    
-       return (
+           <LocationInfo {...location} />
+   
            ...
    
-           <Location data={adventure.location} />
+           <Location {...location} />
+   
+           <Administrator {...administrator} />
+   
+           <InstructorTeam {...instructorTeam} />
+   
+       </div>
+   </>); 
+   
+   ...
    ```
 
-1. 在 `src/components/Location.js`. 的 `Location` 组件会从中呈现相应地点、联系信息、天气信息以及位置图像的数据 **位置** 内容片段模型。 至少， `Location` 组件需要 `address` 要传递的对象。
-1. 请参阅 `Location.js` 在 [aem-guides-wknd-headless-solution-tutorial-zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/aem-guides-wknd-headless-solution-tutorial.zip) 以了解更新组件的完整示例。
+1. 还定义相应的渲染函数：
 
-进行更新后，渲染的详细信息页面应如下所示：
-
-![位置组件](assets/client-application-integration/location-component.png)
-
-## 开发团队组件
-
-1. 在 `AdventureDetail.js` 文件，添加对 `<Team>` 组件(在 `<Location>` 组件)传递 `instructorTeam` 数据 `adventure` 数据对象：
+   **LocationInfo**
 
    ```javascript
-   <Location data={adventure.location} />
-   <Team data={adventure.instructorTeam} />
+   function LocationInfo({name}) {
+   
+       if (!name) {
+           return null;
+       }
+   
+       return (
+           <>
+               <div className="adventure-detail-info-label">Location</div>
+               <div className="adventure-detail-info-description">{name}</div>
+           </>
+       );
+   
+   }
    ```
 
-1. 在 `src/components/Team.js`. 的 `Team` 组件会从 **团队** 内容片段。
-
-1. 在 `Team.js` 请注意，在 `Address` 组件。
+   **位置**
 
    ```javascript
-   export default function Team({data}) {
-       ...
-       {teamPath && <Address _path={teamPath}/>}
+   function Location({ contactInfo }) {
+   
+       if (!contactInfo) {
+           return null;
+       }
+   
+       return (
+           <>
+               <div className='adventure-detail-location'>
+                   <h2>Where we meet</h2>
+                   <hr />
+                   <div className="adventure-detail-addtional-info">Phone:{contactInfo.phone}</div>
+                   <div className="adventure-detail-addtional-info">Email:{contactInfo.email}</div>
+               </div>
+           </>);
+   }
    ```
 
-   此时，当前团队的路径将传递到 `Address` 组件，该组件又执行查询以根据团队获取地址。
-
-1. 请参阅 `Team.js` 在 [aem-guides-wknd-headless-solution-tutorial-zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/aem-guides-wknd-headless-solution-tutorial.zip) ，以查看组件的完整示例。
-
-集成查询后，该查询应如下所示：
-
-![团队组件](assets/client-application-integration/address-component.png)
-
-## 开发地址组件
-
-1. 在 `src/components/Address.js`. 的 `Address` 组件从以下位置提供地址信息：街道地址、城市、州/省、邮政编码、国家/地区 **地址** 内容片段以及来自 **联系信息** 片段引用。
-1. 的 `Address` 组件与 `AdventureDetails` 中的组件，它发起持久调用以基于路径检索数据。 区别在于它使用 `/wknd/team-location-by-location-path` 来提出请求。
-1. 请参阅 `Address.js` 在 [aem-guides-wknd-headless-solution-tutorial-zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/aem-guides-wknd-headless-solution-tutorial.zip) ，以查看组件的完整示例。
-
-## 开发管理员组件
-
-1. 在 `AdventureDetail.js` 文件，添加对 `<Adminstrator>` 组件(在 `<Team>` 组件)传递 `administrator` 数据 `adventure` 数据对象：
+   **InstructorTeam**
 
    ```javascript
-   <Location data={adventure.location} />
-   <Team data={adventure.instructorTeam} />
-   <Administrator data={adventure.administrator} /> 
+   function InstructorTeam({ _metadata }) {
+   
+       if (!_metadata) {
+           return null;
+       }
+   
+       return (
+           <>
+               <div className='adventure-detail-team'>
+                   <h2>Instruction Team</h2>
+                   <hr />
+                   <div className="adventure-detail-addtional-info">Team Name: {_metadata.stringMetadata[0].value}</div>
+               </div>
+           </>);
+   }
    ```
 
-1. 在 `src/components/Administrator.js`. 的 `Administrator` 组件会呈现详细信息，如其全名 **管理员** 内容片段，以及从 **联系信息** 片段引用。
-1. 请参阅 `Administrator.js` in [aem-guides-wknd-headless-solution-tutorial-zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/aem-guides-wknd-headless-solution-tutorial.zip) ，以查看组件的完整示例。
-
-创建管理员组件后，即可渲染应用程序。 输出应与以下图像匹配：
-
-![管理员组件](assets/client-application-integration/administrator-component.png)
-
-## 开发讲师组件
-
-1. 在 `AdventureDetail.js` 文件，添加对 `<Instructors>` 组件(在 `<Administrator>` 组件)传递 `instructorTeam` 数据 `adventure` 数据对象：
+   **管理员**
 
    ```javascript
-   <Location data={adventure.location} />
-   <Team data={adventure.instructorTeam}/>
-   <Administrator data={adventure.administrator} />             
-   <Instructors data={adventure.instructorTeam} />
+   function Administrator({ fullName, contactInfo }) {
+   
+       if (!fullName || !contactInfo) {
+           return null;
+       }
+   
+       return (
+           <>
+               <div className='adventure-detail-administrator'>
+                   <h2>Administrator</h2>
+                   <hr />
+                   <div className="adventure-detail-addtional-info">Name: {fullName}</div>
+                   <div className="adventure-detail-addtional-info">Phone: {contactInfo.phone}</div>
+                   <div className="adventure-detail-addtional-info">Email: {contactInfo.email}</div>
+               </div>
+           </>);
+   }
    ```
 
-1. 在 `src/components/Instructors.js`. 的 `Instructors` 组件可呈现有关每个团队成员的数据，包括全名、传记、图片、电话号码、体验级别和技能。 该组件在阵列上迭代以显示每个成员。
-1. 请参阅 `Instructors.js` in [aem-guides-wknd-headless-solution-tutorial-zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/aem-guides-wknd-headless-solution-tutorial.zip) ，以查看组件的完整示例。
+### 定义新样式
 
-呈现应用程序后，输出应与以下图像匹配：
+1. 打开 `src/components/AdventureDetail.scss` 添加以下类定义
 
-![讲师组件](assets/client-application-integration/instructors-component.png)
+   ```CSS
+   .adventure-detail-administrator,
+   .adventure-detail-team,
+   .adventure-detail-location {
+   margin-top: 1em;
+   width: 100%;
+   float: right;
+   }
+   
+   .adventure-detail-addtional-info {
+   padding: 10px 0px 5px 0px;
+   text-transform: uppercase;
+   }
+   ```
 
-## 已完成WKND应用程序示例
+>[!TIP]
+>
+>更新的文件位于 **AEM指南WKND - GraphQL** 项目，请参阅 [高级教程](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/advanced-tutorial) 中。
 
-完成的应用程序应当如下所示：
 
-![AEM-headless-final-experience](assets/client-application-integration/aem-headless-final-experience.gif)
+完成上述增强功能后，WKND应用程序如下所示，浏览器的开发人员工具显示 `adventure-details-by-slug` 持久查询调用。
 
-### 最终客户端应用程序
+![增强的WKND应用程序](assets/client-application-integration/Enhanced-WKND-APP.gif)
 
-可以下载并使用应用程序的最终版本：
-**[aem-guides-wknd-headless-solution-tutorial-zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/aem-guides-wknd-headless-solution-tutorial.zip)**
+## 增强功能挑战（可选）
+
+WKND React应用程序的主视图允许您根据诸如之类的活动类型过滤这些冒险 _野营、骑自行车_. 但WKND业务团队希望 _位置_ 基于过滤功能。 要求包括
+
+* 在WKND应用程序的主视图中，左上角或右上角添加 _位置_ 过滤图标。
+* 单击 _位置_ 过滤图标应显示位置列表。
+* 从列表中单击所需位置选项应仅显示匹配的冒险。
+* 如果只有一个匹配的“冒险”，则会显示“冒险详细信息”视图。
 
 ## 恭喜
 

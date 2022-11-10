@@ -6,22 +6,23 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 83e16ea87847182139982ea2378d8ff9f079c968
+exl-id: bd7916be-8caa-4321-add0-4c9031306d60
+source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
 # 浏览AEM GraphQL API
 
-AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 在上一个 [多步GraphQL教程](../multi-step/explore-graphql-api.md)，您探索了GraphiQL集成开发环境(IDE)，在该环境中测试并优化了一些常见的GraphQL查询。 在本章中，您将使用GraphiQL IDE来浏览更高级的查询，以收集您在上一章中创建的内容片段的数据。
+AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 在基本教程中 [多步GraphQL教程](../multi-step/explore-graphql-api.md)，则使用GraphiQL资源管理器来测试和优化GraphQL查询。
+
+在本章中，您可以使用GraphiQL资源管理器定义更高级的查询来收集您在 [上一章节](../advanced-graphql/author-content-fragments.md).
 
 ## 前提条件 {#prerequisites}
 
 本文档是多部分教程的一部分。 在继续处理本章之前，请确保已完成前几章。
-
-必须先安装GraphiQL IDE，然后才能完成本章。 请按照 [多步GraphQL教程](../multi-step/explore-graphql-api.md) 以了解更多信息。
 
 ## 目标 {#objectives}
 
@@ -33,11 +34,33 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 * 使用指令进行查询
 * 查询JSON对象内容类型
 
+## 使用GraphiQL资源管理器
+
+
+的 [GraphiQL资源管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 该工具允许开发人员在当前AEM环境中针对内容创建和测试查询。 GraphiQL工具还允许用户 **保留或保存** 要由客户端应用程序在生产设置中使用的查询。
+
+接下来，使用内置的GraphiQL资源管理器来探索AEM GraphQL API的强大功能。
+
+1. 从AEM开始屏幕中，导航到 **工具** > **常规** > **GraphQL查询编辑器**.
+
+   ![导航到GraphiQL IDE](assets/explore-graphql-api/navigate-graphql-query-editor.png)
+
+>[!IMPORTANT]
+>
+>在中，需要手动安装AEM(6.X.X)的某些版本的GraphiQL Explorer（又称GraphiQL IDE）工具，请遵循 [从此处](../multi-step/explore-graphql-api.md#install-the-graphiql-tool-optional).
+
+1. 在右上角，确保将端点设置为 **WKND共享端点**. 更改 _端点_ 此处的下拉值显示现有 _持久化查询_ 在左上角。
+
+   ![设置GraphQL端点](assets/explore-graphql-api/set-wknd-shared-endpoint.png)
+
+这会将所有查询的范围扩展到 **WKND共享** 项目。
+
+
 ## 使用查询变量过滤内容片段列表
 
-在上一个 [多步GraphQL教程](../multi-step/explore-graphql-api.md)，您学习了如何过滤内容片段列表。 在此，您将展开此知识并使用变量进行筛选。
+在上一个 [多步GraphQL教程](../multi-step/explore-graphql-api.md)，则会定义和使用基本的持久化查询来获取内容片段数据。 在此，您可以扩展此知识，并通过将变量传递到保留的查询来过滤内容片段数据。
 
-在开发客户端应用程序时，在大多数情况下，您需要根据动态参数筛选内容片段。 AEM GraphQL API允许您将这些参数作为变量在查询中传递，以避免运行时客户端上的字符串构建。 有关GraphQL变量的更多信息，请参阅 [GraphQL文档](https://graphql.org/learn/queries/#variables).
+在开发客户端应用程序时，通常需要基于动态参数筛选内容片段。 AEM GraphQL API允许您将这些参数作为变量在查询中传递，以避免运行时客户端上的字符串构建。 有关GraphQL变量的更多信息，请参阅 [GraphQL文档](https://graphql.org/learn/queries/#variables).
 
 在本例中，查询所有具有特定技能的讲师。
 
@@ -72,7 +95,7 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 
    的 `listPersonBySkill` 上述查询接受一个变量(`skillFilter`) `String`. 此查询会针对所有人员内容片段执行搜索，并根据 `skills` 字段和传入的字符串 `skillFilter`.
 
-   请注意 `listPersonBySkill` 包括 `contactInfo` 属性，这是对在前几章中定义的联系信息模型的片段引用。 “联系信息”模型包含 `phone` 和 `email` 字段。 要使查询能够正确执行，必须至少在查询中包含其中一个字段。
+   的 `listPersonBySkill` 包括 `contactInfo` 属性，这是对在前几章中定义的联系信息模型的片段引用。 “联系信息”模型包含 `phone` 和 `email` 字段。 查询中必须至少存在其中一个字段，才能正确执行。
 
    ```graphql
    contactInfo {
@@ -85,7 +108,7 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 
    ```json
    {
-   	    "skillFilter": "Skiing"
+       "skillFilter": "Skiing"
    }
    ```
 
@@ -103,10 +126,10 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
                "email": "sroswells@wknd.com"
              },
              "profilePicture": {
-               "_path": "/content/dam/wknd/en/contributors/stacey-roswells.jpg"
+               "_path": "/content/dam/wknd-shared/en/contributors/stacey-roswells.jpg"
              },
              "biography": {
-               "plaintext": "Stacey Roswells is an accomplished rock climber and alpine adventurer.\nBorn in Baltimore, Maryland, Stacey is the youngest of six children. Her father was a lieutenant colonel in the US Navy and her mother was a modern dance instructor. Her family moved frequently with her father’s duty assignments, and she took her first pictures when he was stationed in Thailand. This is also where Stacey learned to rock climb."
+               "plaintext": "Stacey Roswells is an accomplished rock climber and alpine adventurer. Born in Baltimore, Maryland, Stacey is the youngest of six children. Stacey's father was a lieutenant colonel in the US Navy and mother was a modern dance instructor. Stacey's family moved frequently with father's duty assignments and took the first pictures when father was stationed in Thailand. This is also where Stacey learned to rock climb."
              },
              "instructorExperienceLevel": "Advanced",
              "skills": [
@@ -120,6 +143,10 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
      }
    }
    ```
+
+按 **播放** 按钮以执行查询。 您应会看到上一章中内容片段的结果：
+
+![按技能结果划分的人员](assets/explore-graphql-api/person-by-skill.png)
 
 ## 片段引用中的内容过滤器
 
@@ -138,7 +165,7 @@ AEM GraphQL API允许您查询嵌套内容片段。 在上一章中，您为冒�
        filter: {administrator: {fullName: {_expressions: [{value: $name}]}}}
      ) {
        items {
-         adventureTitle
+         title
          administrator {
            fullName
            contactInfo {
@@ -158,7 +185,7 @@ AEM GraphQL API允许您查询嵌套内容片段。 在上一章中，您为冒�
 
    ```json
    {
-   	    "name": "Jacob Wester"
+       "name": "Jacob Wester"
    }
    ```
 
@@ -172,7 +199,7 @@ AEM GraphQL API允许您查询嵌套内容片段。 在上一章中，您为冒�
        "adventureList": {
          "items": [
            {
-             "adventureTitle": "Yosemite Backpacking",
+             "title": "Yosemite Backpacking",
              "administrator": {
                "fullName": "Jacob Wester",
                "contactInfo": {
@@ -186,7 +213,7 @@ AEM GraphQL API允许您查询嵌套内容片段。 在上一章中，您为冒�
                      "content": [
                        {
                          "nodeType": "text",
-                         "value": "Jacob Wester has been coordinating backpacking adventures for 3 years."
+                         "value": "Jacob Wester has been coordinating backpacking adventures for three years."
                        }
                      ]
                    }
@@ -254,13 +281,13 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
 
    的 `getTeamByAdventurePath` 查询可检索多个引用。 首先，它使用内置 `ImageRef` 要检索的对象 `_path` 和 `__typename` 作为内容引用插入到多行文本字段中的图像。 接下来，它使用 `LocationModel` 用于检索插入到同一字段中的位置内容片段的数据。
 
-   请注意，该查询还包含 `_metadata` 字段。 这允许您检索团队内容片段的名称，并稍后在WKND应用程序中显示该名称。
+   查询还包含 `_metadata` 字段。 这允许您检索团队内容片段的名称，并稍后在WKND应用程序中显示该名称。
 
 1. 接下来，将以下JSON字符串粘贴到“查询变量”面板中，以获取Yosemite Backpacking Adventure:
 
    ```json
    {
-   	    "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
+       "fragmentPath": "/content/dam/wknd-shared/en/adventures/yosemite-backpacking/yosemite-backpacking"
    }
    ```
 
@@ -293,7 +320,7 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
          "_references": [
            {
              "__typename": "LocationModel",
-             "_path": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
+             "_path": "/content/dam/wknd-shared/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
              "name": "Yosemite Valley Lodge",
              "address": {
                "streetAddress": "9006 Yosemite Lodge Drive",
@@ -308,7 +335,7 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
            },
            {
              "__typename": "ImageRef",
-             "_path": "/content/dam/wknd/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
+             "_path": "/content/dam/wknd-shared/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
            }
          ]
        }
@@ -316,14 +343,14 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
    }
    ```
 
-   请注意， `_references` 字段会显示徽标图像和插入到中的Yosemite Valley Lodge内容片段 **描述** 字段。
+   的 `_references` 字段会显示徽标图像和插入到中的Yosemite Valley Lodge内容片段 **描述** 字段。
 
 
 ## 使用指令进行查询
 
 有时，在开发客户端应用程序时，您需要有条件地更改查询的结构。 在这种情况下，AEM GraphQL API允许您使用GraphQL指令，以便根据提供的条件更改查询的行为。 有关GraphQL指令的更多信息，请参阅 [GraphQL文档](https://graphql.org/learn/queries/#directives).
 
-在 [上一部分](#query-rte-reference)，您学习了如何在多行文本字段中查询内联引用。 请注意，内容是从 `description` 在 `plaintext` 格式。 接下来，让我们展开该查询并使用指令有条件地检索 `description` 在 `json` 格式。
+在 [上一部分](#query-rte-reference)，您学习了如何在多行文本字段中查询内联引用。 内容是从 `description` 在 `plaintext` 格式。 接下来，让我们展开该查询并使用指令有条件地检索 `description` 在 `json` 格式。
 
 1. 在GraphiQL IDE中，将以下查询粘贴到左侧面板中：
 
@@ -376,7 +403,7 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
 
    ```json
    {
-     "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking",
+     "fragmentPath": "/content/dam/wknd-shared/en/adventures/yosemite-backpacking/yosemite-backpacking",
      "includeJson": false
    }
    ```
@@ -413,7 +440,7 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
                      {
                        "nodeType": "reference",
                        "data": {
-                         "path": "/content/dam/wknd/en/adventures/teams/yosemite-team/team-yosemite-logo.png",
+                         "path": "/content/dam/wknd-shared/en/adventures/teams/yosemite-team/team-yosemite-logo.png",
                          "mimetype": "image/png"
                        }
                      }
@@ -434,7 +461,7 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
                      {
                        "nodeType": "reference",
                        "data": {
-                         "href": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
+                         "href": "/content/dam/wknd-shared/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
                          "type": "fragment"
                        },
                        "value": "Yosemite Valley Lodge"
@@ -448,7 +475,7 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
          "_references": [
            {
              "__typename": "LocationModel",
-             "_path": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
+             "_path": "/content/dam/wknd-shared/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
              "name": "Yosemite Valley Lodge",
              "address": {
                "streetAddress": "9006 Yosemite Lodge Drive",
@@ -463,7 +490,7 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
            },
            {
              "__typename": "ImageRef",
-             "_path": "/content/dam/wknd/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
+             "_path": "/content/dam/wknd-shared/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
            }
          ]
        }
@@ -511,7 +538,7 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
 
    ```json
    {
-     "fragmentPath": "/content/dam/wknd/en/adventures/locations/yosemite-national-park/yosemite-national-park"
+     "fragmentPath": "/content/dam/wknd-shared/en/adventures/locations/yosemite-national-park/yosemite-national-park"
    }
    ```
 
@@ -530,7 +557,7 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
                  "content": [
                    {
                      "nodeType": "text",
-                     "value": "Yosemite National Park is in California’s Sierra Nevada mountains. It’s famous for its gorgeous waterfalls, giant sequoia trees, and iconic views of El Capitan and Half Dome cliffs."
+                     "value": "Yosemite National Park is in California's Sierra Nevada mountains. It's famous for its gorgeous waterfalls, giant sequoia trees, and iconic views of El Capitan and Half Dome cliffs."
                    }
                  ]
                },
@@ -550,7 +577,7 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
              "email": "yosemite@wknd.com"
            },
            "locationImage": {
-             "_path": "/content/dam/wknd/en/adventures/locations/yosemite-national-park/yosemite-national-park.jpeg"
+             "_path": "/content/dam/wknd-shared/en/adventures/locations/yosemite-national-park/yosemite-national-park.jpeg"
            },
            "weatherBySeason": {
              "summer": "81 / 89°F",
@@ -571,38 +598,39 @@ AEM GraphQL API允许您查询多行文本字段中的内容和片段引用。 �
    }
    ```
 
-   请注意， `weatherBySeason` 字段包含在上一章中添加的JSON对象。
+   的 `weatherBySeason` 字段包含在上一章中添加的JSON对象。
 
 ## 同时查询所有内容
 
-迄今为止，已执行多个查询来说明AEM GraphQL API的功能。 只能通过一个查询检索相同的数据：
+迄今为止，已执行多个查询来说明AEM GraphQL API的功能。
+
+同一数据只能通过单个查询进行检索，而此查询稍后会用在客户端应用程序中，以检索其他信息，如位置、团队名称、冒险团队成员：
 
 ```graphql
-query getAllAdventureDetails($fragmentPath: String!) {
-  adventureByPath(_path: $fragmentPath){
-    item {
+query getAdventureDetailsBySlug($slug: String!) {
+  adventureList(filter: {slug: {_expressions: [{value: $slug}]}}) {
+    items {
       _path
-      adventureTitle
-      adventureActivity
+      title
+      activity
       adventureType
-      adventurePrice
-      adventureTripLength
-      adventureGroupSize
-      adventureDifficulty
-      adventurePrice
-      adventurePrimaryImage{
-        ...on ImageRef{
+      price
+      tripLength
+      groupSize
+      difficulty
+      primaryImage {
+        ... on ImageRef {
           _path
           mimeType
           width
           height
         }
       }
-      adventureDescription {
+      description {
         html
         json
       }
-      adventureItinerary {
+      itinerary {
         html
         json
       }
@@ -613,175 +641,87 @@ query getAllAdventureDetails($fragmentPath: String!) {
           html
           json
         }
-        contactInfo{
+        contactInfo {
           phone
           email
         }
-        locationImage{
-          ...on ImageRef{
+        locationImage {
+          ... on ImageRef {
             _path
           }
         }
         weatherBySeason
-        address{
-            streetAddress
-            city
-            state
-            zipCode
-            country
+        address {
+          streetAddress
+          city
+          state
+          zipCode
+          country
         }
       }
       instructorTeam {
-        _metadata{
-            stringMetadata{
-                name
-                value
-            }
-        }        
+        _metadata {
+          stringMetadata {
+            name
+            value
+          }
+        }
         teamFoundingDate
         description {
-            json
+          json
         }
         teamMembers {
-            fullName
-            contactInfo {
-                phone
-                email
+          fullName
+          contactInfo {
+            phone
+            email
+          }
+          profilePicture {
+            ... on ImageRef {
+              _path
             }
-            profilePicture{
-                ...on ImageRef {
-                    _path
-                }
-            }
-            instructorExperienceLevel
-            skills
-            biography {
-                html
-            }
-        }       
-     }
-      administrator {
-            fullName
-            contactInfo {
-                phone
-                email
-            }
-            biography {
-                html
-            }
+          }
+          instructorExperienceLevel
+          skills
+          biography {
+            html
+          }
         }
+      }
+      administrator {
+        fullName
+        contactInfo {
+          phone
+          email
+        }
+        biography {
+          html
+        }
+      }
     }
     _references {
-        ...on ImageRef {
-            _path
+      ... on ImageRef {
+        _path
         mimeType
-        }
-        ...on LocationModel {
-            _path
-                __typename
-        }
+      }
+      ... on LocationModel {
+        _path
+        __typename
+      }
     }
   }
 }
 
+
 # in Query Variables
 {
-  "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
+  "slug": "yosemite-backpacking"
 }
 ```
 
-## 有关WKND应用程序的其他查询
-
-下面列出了用于检索WKND应用程序中所需的所有数据的查询。 这些查询不演示任何新概念，仅作为引用提供，以帮助您构建实施。
-
-1. **为团队成员安排特定冒险活动**:
-
-   ```graphql
-   query getTeamMembersByAdventurePath ($fragmentPath: String!){
-     adventureByPath (_path: $fragmentPath ) {
-       item {
-         instructorTeam {
-           teamMembers{
-             fullName
-             contactInfo{
-               phone
-               email
-             }
-           profilePicture {
-               ... on ImageRef {
-                 _path
-               }
-           }
-             instructorExperienceLevel
-             skills
-             biography{
-               plaintext
-             }
-           }
-         }
-       }
-     }
-   }
-   
-   # in Query Variables
-   {
-     "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
-   }
-   ```
-
-1. **获取特定冒险的位置路径**
-
-   ```graphql
-   query getLocationPathByAdventurePath ($fragmentPath: String!){
-     adventureByPath (_path: $fragmentPath){
-       item {
-         location{
-           _path  
-         } 
-       }
-     }
-   }
-   
-   # in Query Variables
-   {
-     "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
-   }
-   ```
-
-1. **按路径获取团队位置**
-
-   ```graphql
-   query getTeamLocationByLocationPath ($fragmentPath: String!){
-     locationByPath (_path: $fragmentPath) {
-       item {
-         name
-         description{
-           json
-         }
-         contactInfo{
-           phone
-           email
-         }
-           address{
-           streetAddress
-           city
-           state
-           zipCode
-           country
-         }
-       }
-     }
-   }
-   
-   # in Query Variables
-   {
-     "fragmentPath": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge"
-   }
-   ```
-
 ## 恭喜！
 
-恭喜！ 您现在已测试高级查询，以收集您在上一章中创建的内容片段的数据。
+恭喜！您现在已测试高级查询，以收集您在上一章中创建的内容片段的数据。
 
 ## 下面的步骤
 
