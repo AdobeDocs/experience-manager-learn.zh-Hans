@@ -2,15 +2,16 @@
 title: BootstrapRemote SPA for SPA Editor
 description: 了解如何引导远程SPA以实现AEM SPA Editor兼容性。
 topic: Headless, SPA, Development
-feature: SPA Editor, Core Components, APIs, Developing
+feature: SPA Editor, APIs, Developing
 role: Developer, Architect
 level: Beginner
 kt: 7633
 thumbnail: kt-7633.jpeg
+last-substantial-update: 2022-11-01T00:00:00Z
 exl-id: b8d43e44-014c-4142-b89c-ff4824b89c78
-source-git-commit: fe056006ab59a3955e5f16a23e96e9e208408cf5
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1200'
 ht-degree: 0%
 
 ---
@@ -19,42 +20,28 @@ ht-degree: 0%
 
 在将可编辑区域添加到远程SPA中之前，必须先通过AEM SPA Editor JavaScript SDK和其他一些配置将其引导。
 
+## 安装AEM SPA Editor JS SDK npm依赖项
 
-## 下载WKND应用程序源
-
-如果您尚未执行此操作，请从Github.com下载WKND应用程序的源代码，然后将包含对本教程中所执行的SPA所做更改的分支切换为。
-
-```
-$ mkdir -p ~/Code/wknd-app
-$ cd ~/Code/wknd-app
-$ git clone --branch feature/spa-editor https://github.com/adobe/aem-guides-wknd-graphql.git
-$ cd aem-guides-wknd-graphql
-```
-
-## 查看AEM SPA Editor JS SDK npm依赖项
-
-首先，查看AEM SPA npm与React项目的依赖关系。
+首先，查看AEM SPA npm对React项目的依赖项并安装它们。
 
 + [`@adobe/aem-spa-page-model-manager`](https://github.com/adobe/aem-spa-page-model-manager) :提供了用于从AEM检索内容的API。
 + [`@adobe/aem-spa-component-mapping`](https://github.com/adobe/aem-spa-component-mapping) :提供了将AEM内容映射到SPA组件的API。
-+ [`@adobe/aem-react-editable-components`](https://github.com/adobe/aem-react-editable-components) :提供了用于构建自定义SPA组件的API，并提供了常用实施，例如 `AEMPage` React组件。
-+ [`@adobe/aem-core-components-react-base`](https://github.com/adobe/aem-react-core-wcm-components-base) :提供了一套现成的React组件，这些组件与AEM WCM核心组件无缝集成，且与SPA编辑器无关。 这些组件主要包括以下内容组件：
-   + 标题
-   + 文本
-   + 痕迹导航
-   + 等等。
-+ [`@adobe/aem-core-components-react-spa`](https://github.com/adobe/aem-react-core-wcm-components-spa) :提供了一套现成的React组件，这些组件与AEM WCM核心组件无缝集成，但需要SPA编辑器。 这些组件主要包含包含 `@adobe/aem-core-components-react-base`，例如：
-   + 容器
-   + 轮盘
-   + 等等。
++ [`@adobe/aem-react-editable-components` v2](https://github.com/adobe/aem-react-editable-components) :提供了用于构建自定义SPA组件的API，并提供了常用实施，例如 `AEMPage` React组件。
+
+```shell
+$ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app
+$ npm install @adobe/aem-spa-page-model-manager 
+$ npm install @adobe/aem-spa-component-mapping
+$ npm install @adobe/aem-react-editable-components 
+```
 
 ## 查看SPA环境变量
 
 必须向远程SPA显示多个环境变量，以便其知道如何与AEM交互。
 
-1. 在以下位置打开远程SPA项目 `~/Code/wknd-app/aem-guides-wknd-graphql/react-app` 在IDE中
+1. 在以下位置打开远程SPA项目 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app` 在IDE中
 1. 打开文件 `.env.development`
-1. 在文件中，请特别注意以下键：
+1. 在文件中，请特别注意密钥，并根据需要进行更新：
 
    ```
    REACT_APP_HOST_URI=http://localhost:4502
@@ -90,16 +77,18 @@ $ cd aem-guides-wknd-graphql
 
 1. 在IDE中打开远程SPA项目
 1. 打开文件 `src/index.js`
-1. 添加导入 `ModelManager` 并在之前初始化它 `ReactDOM.render(..)` 调用，
+1. 添加导入 `ModelManager` 并在之前初始化它 `root.render(..)` 调用，
 
-   ```
+   ```javascript
    ...
    import { ModelManager } from "@adobe/aem-spa-page-model-manager";
    
-   // Initialize the ModelManager before invoking ReactDOM.render(...).
+   // Initialize the ModelManager before invoking root.render(..).
    ModelManager.initializeAsync();
    
-   ReactDOM.render(...);
+   const container = document.getElementById('root');
+   const root = createRoot(container);
+   root.render(<App />);
    ```
 
 的 `src/index.js` 文件应该如下所示：
@@ -108,13 +97,13 @@ $ cd aem-guides-wknd-graphql
 
 ## 设置内部SPA代理
 
-在SPA中从AEM来源补充可编辑内容时，最好设置 [SPA中的内部代理](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)，以将相应请求路由到AEM。 这是通过使用 [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) npm模块，该模块已由基本WKND GraphQL应用程序安装。
+创建可编辑的SPA时，最好设置 [SPA中的内部代理](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)，以将相应请求路由到AEM。 这是通过使用 [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) npm模块，该模块已由基本WKND GraphQL应用程序安装。
 
 1. 在IDE中打开远程SPA项目
 1. 在以下位置打开文件 `src/proxy/setupProxy.spa-editor.auth.basic.js`
-1. 查看以下代码：
+1. 使用以下代码更新文件：
 
-   ```
+   ```javascript
    const { createProxyMiddleware } = require('http-proxy-middleware');
    const {REACT_APP_HOST_URI, REACT_APP_BASIC_AUTH_USER, REACT_APP_BASIC_AUTH_PASS } = process.env;
    
@@ -152,7 +141,7 @@ $ cd aem-guides-wknd-graphql
        const pathRewriteToAEM = function (path, req) { 
            if (path === '/.model.json') {
                return '/content/wknd-app/us/en/home.model.json';
-           } else if (path.startsWith('/adventure:') && path.endsWith('.model.json')) {
+           } else if (path.startsWith('/adventure/') && path.endsWith('.model.json')) {
                return '/content/wknd-app/us/en/home/adventure/' + path.split('/').pop();
            }    
        }
@@ -167,7 +156,7 @@ $ cd aem-guides-wknd-graphql
                    target: REACT_APP_HOST_URI,
                    changeOrigin: true,
                    // Pass in credentials when developing against an Author environment
-                   auth: REACT_APP_AUTHORIZATION,
+                   auth: `${REACT_APP_BASIC_AUTH_USER}:${REACT_APP_BASIC_AUTH_PASS}`,
                    pathRewrite: pathRewriteToAEM // Rewrite SPA paths being sent to AEM
                }
            )
@@ -191,7 +180,7 @@ $ cd aem-guides-wknd-graphql
 
    此代理配置执行两项主要操作：
 
-   1. 向SPA发出特定于代理的请求， `http://localhost:3000` 到AEM `http://localhost:4502`
+   1. 特定于SPA的请求代理(`http://localhost:3000`)到AEM `http://localhost:4502`
       + 它仅代理其路径与指示AEM应提供服务的模式匹配的请求，如 `toAEM(path, req)`.
       + 它会将SPA路径重写到与之相对的AEM页面，如 `pathRewriteToAEM(path, req)`
    1. 它会向所有请求添加CORS标头，以便允许访问AEM内容（由定义） `res.header("Access-Control-Allow-Origin", REACT_APP_HOST_URI);`
@@ -207,10 +196,6 @@ $ cd aem-guides-wknd-graphql
    return require('./proxy/setupProxy.spa-editor.auth.basic');
    ...
    ```
-
-   的 `setupProxy.js` 文件应该如下所示：
-
-   ![src/setupProxy.js](./assets/spa-bootstrap/setup-proxy-js.png)
 
 请注意，对 `src/setupProxy.js` 或者引用的文件需要重新启动SPA。
 
@@ -236,7 +221,7 @@ $ cd aem-guides-wknd-graphql
 1. 打开文件 `src/App.js`
 1. 从SPA环境变量导入SPA公共URI
 
-   ```
+   ```javascript
    const {  REACT_APP_PUBLIC_URI } = process.env;
    
    function App() { ... }
@@ -244,13 +229,13 @@ $ cd aem-guides-wknd-graphql
 
 1. 为WKND徽标添加前缀 `<img src=.../>` with `REACT_APP_PUBLIC_URI` 以强制对SPA执行决议。
 
-   ```
+   ```html
    <img src={REACT_APP_PUBLIC_URI + '/' +  logo} className="logo" alt="WKND Logo"/>
    ```
 
 1. 在中加载图像时执行相同的操作 `src/components/Loading.js`
 
-   ```
+   ```javascript
    const { REACT_APP_PUBLIC_URI } = process.env;
    
    class Loading extends Component {
@@ -265,7 +250,7 @@ $ cd aem-guides-wknd-graphql
 
 1. 对于 __两个实例__ 中的“返回”按钮 `src/components/AdventureDetails.js`
 
-   ```
+   ```javascript
    const { REACT_APP_PUBLIC_URI } = process.env;
    
    function AdventureDetail(props) {
@@ -294,7 +279,7 @@ $ cd aem-guides-wknd-graphql
       + 调用 `_grid.scss` 使用SPA特定的断点（桌面和移动设备）和列(12)。
 1. 打开 `src/App.scss` 导入 `./styles/grid-init.scss`
 
-   ```
+   ```scss
    ...
    @import './styles/grid-init';
    ...
@@ -306,6 +291,17 @@ $ cd aem-guides-wknd-graphql
 
 现在，SPA中包含为添加到AEM容器的组件支持AEM布局模式所需的CSS。
 
+## 实用程序类
+
+将以下实用程序类中的代码复制到您的React应用程序项目中。
+
++ [RoutedLink.js](./assets/spa-bootstrap/RoutedLink.js) to `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/RoutedLink.js`
++ [EditorPlaceholder.js](./assets/spa-bootstrap/EditorPlaceholder.js) to `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/util/EditorPlaceholder.js`
++ [withConditionalPlaceholder.js](./assets/spa-bootstrap/withConditionalPlaceholder.js) to `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/util/withConditionalPlaceholder.js`
++ [withStandardBaseCssClass.js](./assets/spa-bootstrap/withStandardBaseCssClass.js) to `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/util/withStandardBaseCssClass.js`
+
+![远程SPA实用程序类](./assets/spa-bootstrap/utility-classes.png)
+
 ## 启动SPA
 
 现在，SPA正在自动与AEM集成，让我们运行SPA并查看其外观！
@@ -313,8 +309,8 @@ $ cd aem-guides-wknd-graphql
 1. 在命令行中，导航到SPA项目的根
 1. 使用常规命令启动SPA（如果尚未执行）
 
-   ```
-   $ cd ~/Code/wknd-app/aem-guides-wknd-graphql/react-app
+   ```shell
+   $ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app
    $ npm install 
    $ npm run start
    ```

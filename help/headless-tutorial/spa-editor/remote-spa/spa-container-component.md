@@ -1,5 +1,5 @@
 ---
-title: 将可编辑的容器组件添加到远程SPA
+title: 将可编辑的React容器组件添加到远程SPA
 description: 了解如何将可编辑的容器组件添加到远程SPA，以便AEM作者将组件拖放到其中。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
@@ -7,10 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7635
 thumbnail: kt-7635.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1109'
 ht-degree: 1%
 
 ---
@@ -21,97 +23,49 @@ ht-degree: 1%
 
 ![可编辑的容器组件](./assets/spa-container-component/intro.png)
 
-在本章中，我们向主页视图中添加一个可编辑的容器，以允许作者直接在SPA中使用AEM React Core Components来撰写和布局丰富的内容体验。
+在本章中，我们向主页视图中添加一个可编辑的容器，以允许作者直接在SPA中使用可编辑的React组件来撰写和布局丰富的内容体验。
 
 ## 更新WKND应用程序
 
 要向“主页”视图添加容器组件，请执行以下操作：
 
-+ 导入AEM React可编辑组件的ResponsiveGrid组件
-+ 导入和注册AEM React核心组件（文本和图像），以在容器组件中使用
++ 导入AEM React可编辑组件的 `ResponsiveGrid` 组件
++ 导入并注册自定义可编辑的React组件（文本和图像），以在ResponsiveGrid组件中使用
 
-### 在ResponsiveGrid容器组件中导入
+### 使用ResponsiveGrid组件
 
-要将可编辑区域放置到“主页”视图，我们必须：
+要向“主页”视图添加可编辑区域，请执行以下操作：
 
-1. 从导入ResponsiveGrid组件 `@adobe/aem-react-editable-components`
-1. 使用注册它 `withMappable` 以便开发人员可以将其放入SPA中
-1. 另外，请在 `MapTo` 这样可以在其它容器组件中重复使用，有效地嵌套容器。
-
-要执行此操作：
-
-1. 在IDE中打开SPA项目
-1. 在 `src/components/aem/AEMResponsiveGrid.js`
-1. 将以下代码添加到 `AEMResponsiveGrid.js`
-
-   ```
-   // Import the withMappable API provided bu the AEM SPA Editor JS SDK
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   
-   // Import the base ResponsiveGrid component
-   import { ResponsiveGrid } from "@adobe/aem-react-editable-components";
-   
-   // The sling:resourceType for which this Core Component is registered with in AEM
-   const RESOURCE_TYPE = "wcm/foundation/components/responsivegrid";
-   
-   // Create an EditConfig to allow the AEM SPA Editor to properly render the component in the Editor's context
-   const EditConfig = {
-       emptyLabel: "Layout Container",  // The component placeholder in AEM SPA Editor
-       isEmpty: function(props) { 
-           return props.cqItemsOrder == null || props.cqItemsOrder.length === 0;
-       },                              // The function to determine if this component has been authored
-       resourceType: RESOURCE_TYPE     // The sling:resourceType this SPA component is mapped to
-   };
-   
-   // MapTo allows the AEM SPA Editor JS SDK to dynamically render components added to SPA Editor Containers
-   MapTo(RESOURCE_TYPE)(ResponsiveGrid, EditConfig);
-   
-   // withMappable allows the component to be hardcoded into the SPA; <AEMResponsiveGrid .../>
-   const AEMResponsiveGrid = withMappable(ResponsiveGrid, EditConfig);
-   
-   export default AEMResponsiveGrid;
-   ```
-
-代码类似 `AEMTitle.js` the [导入了AEM Reach Core组件的标题组件](./spa-fixed-component.md).
-
-
-的 `AEMResponsiveGrid.js` 文件应该如下所示：
-
-![AEMResponsiveGrid.js](./assets/spa-container-component/aem-responsive-grid-js.png)
-
-### 使用AEMResponsiveGrid SPA组件
-
-现在，AEM ResponsiveGrid组件已在中注册并可在SPA中使用，我们可以将其置于主页视图中。
-
-1. 打开和编辑 `react-app/src/Home.js`
-1. 导入 `AEMResponsiveGrid` 组件并将其放在 `<AEMTitle ...>` 组件。
-1. 在 `<AEMResponsiveGrid...>` 组件
+1. 打开和编辑 `react-app/src/components/Home.js`
+1. 导入 `ResponsiveGrid` 组件从 `@adobe/aem-react-editable-components` 并将其添加到 `Home` 组件。
+1. 在 `<ResponsiveGrid...>` 组件
    + `pagePath = '/content/wknd-app/us/en/home'`
    + `itemPath = 'root/responsivegrid'`
 
-   这会指示 `AEMResponsiveGrid` 用于从AEM资源检索其内容的组件：
+   这会指示 `ResponsiveGrid` 用于从AEM资源检索其内容的组件：
 
    + `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
    的 `itemPath` 映射到 `responsivegrid` 在 `Remote SPA Page` AEM模板，将在通过 `Remote SPA Page` AEM模板。
 
-   更新 `Home.js` 添加 `<AEMResponsiveGrid...>` 组件。
+   更新 `Home.js` 添加 `<ResponsiveGrid...>` 组件。
 
-   ```
+   ```javascript
    ...
-   import AEMResponsiveGrid from './aem/AEMResponsiveGrid';
+   import { ResponsiveGrid } from '@adobe/aem-react-editable-components';
    ...
    
    function Home() {
        return (
            <div className="Home">
-               <AEMResponsiveGrid
+               <ResponsiveGrid
                    pagePath='/content/wknd-app/us/en/home' 
                    itemPath='root/responsivegrid'/>
    
-               <AEMTitle
+               <EditableTitle
                    pagePath='/content/wknd-app/us/en/home' 
                    itemPath='title'/>
+   
                <Adventures />
            </div>
        );
@@ -124,66 +78,164 @@ ht-degree: 1%
 
 ## 创建可编辑的组件
 
-要充分发挥SPA Editor中提供的灵活创作体验容器的作用。 我们已经创建了一个可编辑的标题组件，但是让我们再做一些工作，以允许作者在新添加的容器组件中使用文本和图像AEM WCM核心组件。
+要充分发挥SPA Editor中提供的灵活创作体验容器的作用。 我们已经创建了一个可编辑的标题组件，但是让我们再做一些工作，以允许作者在新添加的ResponsiveGrid组件中使用可编辑的文本和图像组件。
 
-### 文本组件
+新的可编辑文本和图像反应组件是使用 [可编辑的固定组件](./spa-fixed-component.md).
+
+### 可编辑的文本组件
 
 1. 在IDE中打开SPA项目
-1. 在 `src/components/aem/AEMText.js`
-1. 将以下代码添加到 `AEMText.js`
+1. 在 `src/components/editable/core/Text.js`
+1. 将以下代码添加到 `Text.js`
 
+   ```javascript
+   import React from 'react'
+   
+   const TextPlain = (props) => <div className={props.baseCssClass}><p className="cmp-text__paragraph">{props.text}</p></div>;
+   const TextRich = (props) => {
+   const text = props.text;
+   const id = (props.id) ? props.id : (props.cqPath ? props.cqPath.substr(props.cqPath.lastIndexOf('/') + 1) : "");
+       return <div className={props.baseCssClass} id={id} data-rte-editelement dangerouslySetInnerHTML={{ __html: text }} />
+   };
+   
+   export const Text = (props) => {
+       if (!props.baseCssClass) {
+           props.baseCssClass = 'cmp-text'
+       }
+   
+       const { richText = false } = props
+   
+       return richText ? <TextRich {...props} /> : <TextPlain {...props} />
+       }
+   
+       export function textIsEmpty(props) {
+       return props.text == null || props.text.length === 0;
+   }
    ```
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   import { TextV2, TextV2IsEmptyFn } from "@adobe/aem-core-components-react-base";
+
+1. 在以下位置创建可编辑的React组件 `src/components/editable/EditableText.js`
+1. 将以下代码添加到 `EditableText.js`
+
+   ```javascript
+   import React from 'react'
+   import { EditableComponent, MapTo } from '@adobe/aem-react-editable-components';
+   import { Text, textIsEmpty } from "./core/Text";
+   import { withConditionalPlaceHolder } from "./core/util/withConditionalPlaceholder";
+   import { withStandardBaseCssClass } from "./core/util/withStandardBaseCssClass";
    
    const RESOURCE_TYPE = "wknd-app/components/text";
    
-   const EditConfig = {    
+   const EditConfig = {
        emptyLabel: "Text",
-       isEmpty: TextV2IsEmptyFn,
+       isEmpty: textIsEmpty,
        resourceType: RESOURCE_TYPE
    };
    
-   MapTo(RESOURCE_TYPE)(TextV2, EditConfig);
+   export const WrappedText = (props) => {
+       const Wrapped = withConditionalPlaceHolder(withStandardBaseCssClass(Text, "cmp-text"), textIsEmpty, "Text V2")
+       return <Wrapped {...props} />
+   };
    
-   const AEMText = withMappable(TextV2, EditConfig);
+   const EditableText = (props) => <EditableComponent config={EditConfig} {...props}><WrappedText /></EditableComponent>
    
-   export default AEMText;
+   MapTo(RESOURCE_TYPE)(EditableText);
+   
+   export default EditableText;
    ```
 
-的 `AEMText.js` 文件应该如下所示：
+可编辑的文本组件实施应当类似于：
 
-![AEMText.js](./assets/spa-container-component/aem-text-js.png)
+![可编辑的文本组件](./assets/spa-container-component/text-js.png)
 
 ### 图像组件
 
 1. 在IDE中打开SPA项目
-1. 在 `src/components/aem/AEMImage.js`
-1. 将以下代码添加到 `AEMImage.js`
+1. 在 `src/components/editable/core/Image.js`
+1. 将以下代码添加到 `Image.js`
 
-   ```
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   import { ImageV2, ImageV2IsEmptyFn } from "@adobe/aem-core-components-react-base";
+   ```javascript
+   import React from 'react'
+   import { RoutedLink } from "./RoutedLink";
    
-   const RESOURCE_TYPE = "wknd-app/components/image";
+   export const imageIsEmpty = (props) => (!props.src) || props.src.trim().length === 0
    
-   const EditConfig = {    
-       emptyLabel: "Image",
-       isEmpty: ImageV2IsEmptyFn,
-       resourceType: RESOURCE_TYPE
+   const ImageInnerContents = (props) => {
+   return (<>
+       <img src={props.src}
+           className={props.baseCssClass + '__image'}
+           alt={props.alt} />
+       {
+           !!(props.title) && <span className={props.baseCssClass + '__title'} itemProp="caption">{props.title}</span>
+       }
+       {
+           props.displayPopupTitle && (!!props.title) && <meta itemProp="caption" content={props.title} />
+       }
+       </>);
    };
    
-   MapTo(RESOURCE_TYPE)(ImageV2, EditConfig);
+   const ImageContents = (props) => {
+       if (props.link && props.link.trim().length > 0) {
+           return (
+           <RoutedLink className={props.baseCssClass + '__link'} isRouted={props.routed} to={props.link}>
+               <ImageInnerContents {...props} />
+           </RoutedLink>
+           )
+       }
+       return <ImageInnerContents {...props} />
+   };
    
-   const AEMImage = withMappable(ImageV2, EditConfig);
+   export const Image = (props) => {
+       if (!props.baseCssClass) {
+           props.baseCssClass = 'cmp-image'
+       }
    
-   export default AEMImage;
+       const { isInEditor = false } = props;
+       const cssClassName = (isInEditor) ? props.baseCssClass + ' cq-dd-image' : props.baseCssClass;
+   
+       return (
+           <div className={cssClassName}>
+               <ImageContents {...props} />
+           </div>
+       )
+   };
    ```
 
-1. 创建SCSS文件 `src/components/aem/AEMImage.scss` 为 `AEMImage.scss`. 这些样式以AEM React核心组件的BEM-notation CSS类为目标。
-1. 将以下SCSS添加到 `AEMImage.scss`
+1. 在以下位置创建可编辑的React组件 `src/components/editable/EditableImage.js`
+1. 将以下代码添加到 `EditableImage.js`
 
-   ```
+```javascript
+import { EditableComponent, MapTo } from '@adobe/aem-react-editable-components';
+import { Image, imageIsEmpty } from "./core/Image";
+import React from 'react'
+
+import { withConditionalPlaceHolder } from "./core/util/withConditionalPlaceholder";
+import { withStandardBaseCssClass } from "./core/util/withStandardBaseCssClass";
+
+const RESOURCE_TYPE = "wknd-app/components/image";
+
+const EditConfig = {
+    emptyLabel: "Image",
+    isEmpty: imageIsEmpty,
+    resourceType: RESOURCE_TYPE
+};
+
+const WrappedImage = (props) => {
+    const Wrapped = withConditionalPlaceHolder(withStandardBaseCssClass(Image, "cmp-image"), imageIsEmpty, "Image V2");
+    return <Wrapped {...props}/>
+}
+
+const EditableImage = (props) => <EditableComponent config={EditConfig} {...props}><WrappedImage /></EditableComponent>
+
+MapTo(RESOURCE_TYPE)(EditableImage);
+
+export default EditableImage;
+```
+
+
+1. 创建SCSS文件 `src/components/editable/EditableImage.scss` 为 `EditableImage.scss`. 这些样式将定位可编辑React组件的CSS类。
+1. 将以下SCSS添加到 `EditableImage.scss`
+
+   ```css
    .cmp-image__image {
        margin: 1rem 0;
        width: 100%;
@@ -191,47 +243,48 @@ ht-degree: 1%
     }
    ```
 
-1. 导入 `AEMImage.scss` in `AEMImage.js`
+1. 导入 `EditableImage.scss` in `EditableImage.js`
 
-   ```
+   ```javascript
    ...
-   import './AEMImage.scss';
+   import './EditableImage.scss';
    ...
    ```
 
-的 `AEMImage.js` 和 `AEMImage.scss` 应该如下所示：
+可编辑的图像组件实施应类似于：
 
-![AEMImage.js和AEMImage.scs](./assets/spa-container-component/aem-image-js-scss.png)
+![可编辑的图像组件](./assets/spa-container-component/image-js.png)
+
 
 ### 导入可编辑的组件
 
-新创建的 `AEMText` 和 `AEMImage` SPA组件在SPA中引用，并会根据AEM返回的JSON动态实例化。 要确保这些组件可供SPA使用，请在 `Home.js`
+新创建的 `EditableText` 和 `EditableImage` React组件在SPA中引用，并且会根据AEM返回的JSON进行动态实例化。 要确保这些组件可供SPA使用，请在 `Home.js`
 
 1. 在IDE中打开SPA项目
 1. 打开文件 `src/Home.js`
 1. 为添加import语句 `AEMText` 和 `AEMImage`
 
-   ```
+   ```javascript
    ...
-   import AEMText from './components/aem/AEMText';
-   import AEMImage from './components/aem/AEMImage';
+   // The following need to be imported, so that MapTo is run for the components
+   import EditableText from './editable/EditableText';
+   import EditableImage from './editable/EditableImage';
    ...
    ```
-
 
 结果应该如下所示：
 
 ![Home.js](./assets/spa-container-component/home-js-imports.png)
 
-如果这些导入是 _not_ 添加了 `AEMText` 和 `AEMImage` SPA不会调用代码，因此组件不会针对提供的资源类型进行注册。
+如果这些导入是 _not_ 添加了 `EditableText` 和 `EditableImage` SPA不会调用代码，因此组件不会映射到提供的资源类型。
 
 ## 在AEM中配置容器
 
-AEM容器组件使用策略来指示其允许的组件。 使用SPA编辑器时，这是一个关键配置，因为SPA只能呈现具有映射SPA组件对应项的AEM WCM核心组件。 确保仅允许我们为SPA实施提供的组件：
+AEM容器组件使用策略来指示其允许的组件。 使用SPA编辑器时，这是一个关键配置，因为只有映射了SPA组件对应项的AEM组件才可由SPA呈现。 确保仅允许我们为SPA实施提供的组件：
 
-+ `AEMTitle` 映射到 `wknd-app/components/title`
-+ `AEMText` 映射到 `wknd-app/components/text`
-+ `AEMImage` 映射到 `wknd-app/components/image`
++ `EditableTitle` 映射到 `wknd-app/components/title`
++ `EditableText` 映射到 `wknd-app/components/text`
++ `EditableImage` 映射到 `wknd-app/components/image`
 
 要配置远程SPA页面模板的reponsivegrid容器，请执行以下操作：
 
@@ -259,7 +312,7 @@ AEM容器组件使用策略来指示其允许的组件。 使用SPA编辑器时�
 
 ## 在AEM中创作容器
 
-更新SPA以嵌入 `<AEMResponsiveGrid...>`，三个AEM React Core组件的包装器(`AEMTitle`, `AEMText`和 `AEMImage`)，且AEM已更新为匹配的模板策略，因此我们可以开始在容器组件中创作内容。
+更新SPA以嵌入 `<ResponsiveGrid...>`，三个可编辑的React组件的包装器(`EditableTitle`, `EditableText`和 `EditableImage`)，且AEM已更新为匹配的模板策略，因此我们可以开始在容器组件中创作内容。
 
 1. 登录到AEM作者
 1. 导航到 __站点> WKND应用程序__
@@ -296,7 +349,7 @@ AEM容器组件使用策略来指示其允许的组件。 使用SPA编辑器时�
 
    ![创作的组件](./assets/spa-container-component/authored-components.png)
 
-   使用AEM布局模式可允许我们调整组件的大小和布局。
+使用AEM布局模式可允许我们调整组件的大小和布局。
 
 1. 切换到 __布局模式__ 使用右上角的模式选择器
 1. __调整大小__ 图像和文本组件，以便它们可并排显示
@@ -315,9 +368,9 @@ AEM容器组件使用策略来指示其允许的组件。 使用SPA编辑器时�
 
 您已添加容器组件，该组件允许作者将可编辑的组件添加到WKND应用程序！ 您现在知道如何：
 
-+ 在SPA中使用AEM React可编辑组件的ResponsiveGrid组件
-+ 注册AEM React核心组件（文本和图像），以便通过容器组件在SPA中使用
-+ 配置远程SPA页面模板，以允许启用SPA的核心组件
++ 使用AEM React可编辑组件的 `ResponsiveGrid` 组件在SPA中
++ 创建并注册可编辑的React组件（文本和图像），以便通过容器组件在SPA中使用
++ 配置远程SPA页面模板以允许启用SPA的组件
 + 向容器组件中添加可编辑的组件
 + SPA编辑器中的创作和布局组件
 

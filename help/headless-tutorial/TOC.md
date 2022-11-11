@@ -7,9 +7,9 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: a21b78456354c18ad137e69a5d18258d652169b1
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '269'
 ht-degree: 19%
 
 ---
@@ -86,7 +86,6 @@ ht-degree: 19%
       + [6 — 扩展组件](./spa-editor/angular/extend-component.md)
    + 远程SPA{#remote-spa}
       + [概述](./spa-editor/remote-spa/overview.md)
-      + [快速设置](./spa-editor/remote-spa/quick-setup.md)
       + [1 — 配置AEM](./spa-editor/remote-spa/aem-configure.md)
       + [2 -BootstrapSPA](./spa-editor/remote-spa/spa-bootstrap.md)
       + [3 — 固定组件](./spa-editor/remote-spa/spa-fixed-component.md)

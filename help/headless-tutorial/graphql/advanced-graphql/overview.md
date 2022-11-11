@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: ee6f65fba8db5ae30cc14aacdefbeba39803527b
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 1%
@@ -125,7 +125,7 @@ WKND Site项目具有所有必需的配置，因此您可以在完成 [快速设
 * [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) 包含第1-4章的已完成解决方案，其中包括新的内容片段模型、内容片段和持久化图形QL查询。 对于要直接跳入 [客户端应用程序集成](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md) 章节。
 
 
-的 **React应用程序 — 高级教程 — WKND冒险**(https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md)项目可供查看和浏览示例应用程序。 此示例应用程序通过调用保留的GraphQL查询从AEM中检索内容，并以沉浸式体验呈现该内容。
+的 [React应用程序 — 高级教程 — WKND冒险](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) 项目可供查看和浏览示例应用程序。 此示例应用程序通过调用保留的GraphQL查询从AEM中检索内容，并以沉浸式体验呈现该内容。
 
 ## 入门
 

@@ -7,11 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7630
 thumbnail: 333272.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: fe056006ab59a3955e5f16a23e96e9e208408cf5
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 3%
+source-wordcount: '618'
+ht-degree: 5%
 
 ---
 
@@ -36,7 +37,7 @@ ht-degree: 3%
 
 ## 最新代码
 
-+ 本教程的代码可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql) 在 `feature/spa-editor` 分支。
++ 本教程代码的起点可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa) 在 `remote-spa-tutorial` 文件夹。
 
 ## 前提条件
 
@@ -49,26 +50,19 @@ ht-degree: 3%
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
 + [aem-guides-wknd.all-2.1.0.zip或更高版本](https://github.com/adobe/aem-guides-wknd/releases)
-+ [aem-guides-wknd-graphql源代码(分支：feature/spa-editor)](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
++ [aem-guides-wknd-graphql源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main)
 
 本教程假定：
 
 + [Microsoft® Visual Studio代码](https://visualstudio.microsoft.com/) 作为IDE
-+ 工作目录 `~/Code/wknd-app`
++ 工作目录 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial`
 + 在上运行AEM SDK作为创作服务 `http://localhost:4502`
 + 使用本地运行AEM SDK `admin` 密码帐户 `admin`
 + 在上运行SPA `http://localhost:3000`
 
 >[!NOTE]
 >
-> **需要有关设置本地开发环境的帮助？** 查看 [以下使用AEMas a Cloud Service SDK设置本地开发环境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
-
-
-## 快速设置
-
-快速设置可在15分钟内使用WKND应用程序SPA和AEM SPA编辑器启动并运行。 此加速设置将直接转到教程的结束状态，从而允许您探索在AEM SPA编辑器中创作SPA。
-
-+ [了解快速设置](./quick-setup.md)
+> **需要有关设置本地开发环境的帮助？** 查看 [以下使用AEMas a Cloud Service SDK设置本地开发环境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).
 
 ## 1.为AEM编辑器配置SPA
 
@@ -102,6 +96,4 @@ AEM SPA Editor要将SPA集成到其创作上下文中，必须在SPA中添加一
 
 ## 其他资源
 
-+ [在AEM文档中编辑外部SPA](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/hybrid/editing-external-spa.html)
-+ [AEM WCM组件 — React Core实施](https://www.npmjs.com/package/@adobe/aem-core-components-react-base)
-+ [AEM WCM组件 — Spa编辑器 — React Core实施](https://www.npmjs.com/package/@adobe/aem-core-components-react-spa)
++ [AEM SPA React可编辑的组件](https://www.npmjs.com/package/@adobe/aem-react-editable-components)

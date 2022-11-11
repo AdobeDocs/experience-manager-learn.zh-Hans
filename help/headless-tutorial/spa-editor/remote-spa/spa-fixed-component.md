@@ -7,10 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7634
 thumbnail: kt-7634.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
-source-git-commit: fe056006ab59a3955e5f16a23e96e9e208408cf5
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '536'
 ht-degree: 1%
 
 ---
@@ -27,87 +29,127 @@ ht-degree: 1%
 
 添加 __已修复__ 组件添加到主页视图：
 
-+ 导入AEM React核心组件标题组件，并将其注册到项目标题的资源类型
++ 创建自定义可编辑的标题组件，并将其注册到项目的标题资源类型
 + 将可编辑的标题组件放在SPA主页视图上
 
-### 在AEM React核心组件的标题组件中导入
+### 创建可编辑的React标题组件
 
-在SPA主页视图中，替换硬编码的文本 `<h2>Current Adventures</h2>` 与AEM React核心组件的标题组件一起使用。 在使用标题组件之前，我们必须：
+在SPA主页视图中，替换硬编码的文本 `<h2>Current Adventures</h2>` 具有自定义可编辑的标题组件。 在使用标题组件之前，我们必须：
 
-1. 从导入标题组件 `@adobe/aem-core-components-react-base`
-1. 使用注册它 `withMappable` 以便开发人员可以将其放入SPA中
-1. 另外，请在 `MapTo` 这样它就可以用于 [容器组件稍后组件](./spa-container-component.md).
+1. 创建自定义标题React组件
+1. 使用 `@adobe/aem-react-editable-components` 使其可编辑。
+1. 在中注册可编辑的标题组件 `MapTo` 这样它就可以用于 [容器组件稍后组件](./spa-container-component.md).
 
 要执行此操作：
 
-1. 在以下位置打开远程SPA项目 `~/Code/wknd-app/aem-guides-wknd-graphql/react-app` 在IDE中
-1. 在 `react-app/src/components/aem/AEMTitle.js`
-1. 将以下代码添加到 `AEMTitle.js`.
+1. 在以下位置打开远程SPA项目 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app` 在IDE中
+1. 在 `react-app/src/components/editable/core/Title.js`
+1. 将以下代码添加到 `Title.js`.
 
+   ```javascript
+   import React from 'react'
+   import { RoutedLink } from "./RoutedLink";
+   
+   const TitleLink = (props) => {
+   return (
+       <RoutedLink className={props.baseCssClass + (props.nested ? '-' : '__') + 'link'} 
+           isRouted={props.routed} 
+           to={props.linkURL}>
+       {props.text}
+       </RoutedLink>
+   );
+   };
+   
+   const TitleV2Contents = (props) => {
+       if (!props.linkDisabled) {
+           return <TitleLink {...props} />
+       }
+   
+       return <>{props.text}</>
+   };
+   
+   export const Title = (props) => {
+       if (!props.baseCssClass) {
+           props.baseCssClass = 'cmp-title'
+       }
+   
+       const elementType = (!!props.type) ? props.type.toString() : 'h3';
+       return (<div className={props.baseCssClass}>
+           {
+               React.createElement(elementType, {
+                       className: props.baseCssClass + (props.nested ? '-' : '__') + 'text',
+                   },
+                   <TitleV2Contents {...props} />
+               )
+           }
+   
+           </div>)
+   }
+   
+   export const titleIsEmpty = (props) => props.text == null || props.text.trim().length === 0
    ```
-   // Import the withMappable API provided by the AEM SPA Editor JS SDK
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
+
+   请注意，此React组件尚不可使用AEM SPA Editor编辑。 此基本组件将在下一步中进行编辑。
+
+   阅读代码中有关实施详细信息的注释。
+
+1. 在 `react-app/src/components/editable/EditableTitle.js`
+1. 将以下代码添加到 `EditableTitle.js`.
+
+   ```javascript
+   // Import the withMappable API provided bu the AEM SPA Editor JS SDK
+   import { EditableComponent, MapTo } from '@adobe/aem-react-editable-components';
+   import React from 'react'
    
-   // Import the AEM React Core Components' Title component implementation and it's Empty Function 
-   import { TitleV2, TitleV2IsEmptyFn } from "@adobe/aem-core-components-react-base";
+   // Import the AEM the Title component implementation and it's Empty Function
+   import { Title, titleIsEmpty } from "./core/Title";
+   import { withConditionalPlaceHolder } from "./core/util/withConditionalPlaceholder";
+   import { withStandardBaseCssClass } from "./core/util/withStandardBaseCssClass";
    
-   // The sling:resourceType for which this Core Component is registered with in AEM
+   // The sling:resourceType of the AEM component used to collected and serialize the data this React component displays
    const RESOURCE_TYPE = "wknd-app/components/title";
    
    // Create an EditConfig to allow the AEM SPA Editor to properly render the component in the Editor's context
-   const EditConfig = {    
-       emptyLabel: "Title",  // The component placeholder in AEM SPA Editor
-       isEmpty: TitleV2IsEmptyFn, // The function to determine if this component has been authored
+   const EditConfig = {
+       emptyLabel: "Title",        // The component placeholder in AEM SPA Editor
+       isEmpty: titleIsEmpty,      // The function to determine if this component has been authored
        resourceType: RESOURCE_TYPE // The sling:resourceType this component is mapped to
    };
    
+   export const WrappedTitle = (props) => {
+       const Wrapped = withConditionalPlaceHolder(withStandardBaseCssClass(Title, "cmp-title"), titleIsEmpty, "TitleV2")
+       return <Wrapped {...props} />
+   }
+   
+   // EditableComponent makes the component editable by the AEM editor, either rendered statically or in a container
+   const EditableTitle = (props) => <EditableComponent config={EditConfig} {...props}><WrappedTitle /></EditableComponent>
+   
    // MapTo allows the AEM SPA Editor JS SDK to dynamically render components added to SPA Editor Containers
-   MapTo(RESOURCE_TYPE)(TitleV2, EditConfig);
+   MapTo(RESOURCE_TYPE)(EditableTitle);
    
-   // withMappable allows the component to be hardcoded into the SPA; <AEMTitle .../>
-   const AEMTitle = withMappable(TitleV2, EditConfig);
-   
-   export default AEMTitle;
+   export default EditableTitle;
    ```
 
-阅读代码中有关实施详细信息的注释。
+   此 `EditableTitle` React组件封装 `Title` React组件、封装和装饰组件，以便在AEM SPA Editor中可编辑。
 
-的 `AEMTitle.js` 文件应该如下所示：
+### 使用React EditableTitle组件
 
-![AEMTitle.js](./assets/spa-fixed-component/aem-title-js.png)
+现在， EditableTitle React组件已在中注册，并可在React应用程序中使用，请替换“主页”视图上硬编码的标题文本。
 
-### 使用React AEMTitle组件
+1. 编辑 `react-app/src/components/Home.js`
+1. 在 `Home()` 在底部，导入 `EditableTitle` 将硬编码的标题替换为 `AEMTitle` 组件：
 
-现在，AEM React核心组件的标题组件已在中注册，并可在React应用程序中使用，请替换主页视图上的硬编码标题文本。
-
-1. 编辑 `react-app/src/Home.js`
-1. 在 `Home()` 在底部，将硬编码的标题替换为 `AEMTitle` 组件：
-
-   ```
-   <h2>Current Adventures</h2>
-   ```
-
-   替换为
-
-   ```
-   <AEMTitle
-       pagePath='/content/wknd-app/us/en/home' 
-       itemPath='root/title'/>
-   ```
-
-   更新 `Home.js` 使用以下代码：
-
-   ```
+   ```javascript
    ...
-   import { AEMTitle } from './aem/AEMTitle';
+   import EditableTitle from './editable/EditableTitle';
    ...
    function Home() {
        return (
            <div className="Home">
    
-               <AEMTitle
-                   pagePath='/content/wknd-app/us/en/home' 
-                   itemPath='root/title'/>
+           <EditableTitle
+               pagePath='/content/wknd-app/us/en/home'
+               itemPath='root/title'/>
    
                <Adventures />
            </div>
@@ -117,7 +159,7 @@ ht-degree: 1%
 
 的 `Home.js` 文件应该如下所示：
 
-![Home.js](./assets/spa-fixed-component/home-js.png)
+![Home.js](./assets/spa-fixed-component/home-js-update.png)
 
 ## 在AEM中创作标题组件
 
@@ -146,8 +188,7 @@ ht-degree: 1%
 
 您已向WKND应用程序添加了一个固定的可编辑组件！ 您现在知道如何：
 
-+ 在SPA中导入AEM React核心组件并将其重复使用
-+ 向SPA中添加一个已修复但可编辑的组件
++ 在SPA中创建了一个固定但可编辑的组件
 + 在AEM中创作固定组件
 + 在远程SPA中查看创作的内容
 

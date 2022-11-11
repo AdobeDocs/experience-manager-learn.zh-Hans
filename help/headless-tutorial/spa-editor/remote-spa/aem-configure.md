@@ -7,10 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7631
 thumbnail: kt-7631.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1246'
 ht-degree: 1%
 
 ---
@@ -26,26 +28,34 @@ ht-degree: 1%
 + 用于定义SPA到AEM URL映射的子项目
 + OSGi配置文件夹
 
+## 从GitHub下载基础项目
+
+下载 `aem-guides-wknd-graphql` 项目。 这将包含此项目中使用的一些基线文件。
+
+```
+$ mkdir -p ~/Code
+$ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd remote-spa-tutorial
+```
+
 ## 创建AEM项目
 
-创建一个AEM项目，其中管理配置和基线内容。
+创建一个AEM项目，其中管理配置和基线内容。 此项目将在克隆内生成 `aem-guides-wknd-graphql` 项目的 `remote-spa-tutorial` 文件夹。
 
 _始终使用 [AEM原型](https://github.com/adobe/aem-project-archetype)._
 
-
 ```
-$ mkdir -p ~/Code/wknd-app
-$ cd ~/Code/wknd-app
+$ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial
 $ mvn -B archetype:generate \
  -D archetypeGroupId=com.adobe.aem \
  -D archetypeArtifactId=aem-project-archetype \
- -D archetypeVersion=27 \
+ -D archetypeVersion=39 \
  -D aemVersion=cloud \
  -D appTitle="WKND App" \
  -D appId="wknd-app" \
  -D groupId="com.adobe.aem.guides.wkndapp" \
  -D frontendModule="react"
-$ mv ~/Code/wknd-app/wknd-app ~/Code/wknd-app/com.adobe.aem.guides.wknd-app
+$ mv ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/wknd-app ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app
 ```
 
 _最后一个命令只需重命名AEM项目文件夹，这样就可以清楚地知道它是AEM项目，而不要与远程SPA混淆__
@@ -67,7 +77,7 @@ AEM项目原型会生成以下元素，这些元素用于配置AEM以与SPA集�
 
 由于SPA是远程SPA，因此假定它是在AEM项目之外开发和管理的。 要避免冲突，请删除 `ui.frontend` 项目。 如果 `ui.frontend` 项目、两个SPA(在 `ui.frontend` 项目和远程SPA在AEM SPA编辑器中同时加载。
 
-1. 打开AEM项目(`~/Code/wknd-app/com.adobe.aem.guides.wknd-app`)
+1. 打开AEM项目(`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app`)
 1. 打开根 `pom.xml`
 1. 注释 `<module>ui.frontend</module` 从 `<modules>` 列表
 
