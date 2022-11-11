@@ -9,11 +9,12 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+last-substantial-update: 2022-11-09T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
+source-git-commit: c5f94b12a9af50bc4e7db693d6560d120ab8bf3b
 workflow-type: tm+mt
-source-wordcount: '941'
-ht-degree: 4%
+source-wordcount: '948'
+ht-degree: 5%
 
 ---
 
@@ -25,7 +26,7 @@ ht-degree: 4%
 
 查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
-A [分步完整教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans) 描述此React应用程序的生成方式。
+A [完整的分步教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans) 描述此React应用程序的生成方式。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_react_app"
@@ -43,11 +44,11 @@ A [分步完整教程](https://experienceleague.adobe.com/docs/experience-manage
 
 ## AEM要求
 
-React应用程序可与以下AEM部署选项配合使用。 所有部署都需要 [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 安装。
+React应用程序可与以下AEM部署选项配合使用。 所有部署都需要 [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0) 安装。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 使用进行本地设置 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
-+ [AEM 6.5 SP13+快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
++ 使用进行本地设置 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)
++ [AEM 6.5 SP13+快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans?lang=en#install-local-aem-instances)
 
 React应用程序旨在连接到 __AEM发布__ 环境中，但是，如果在React应用程序配置中提供了身份验证，则可以从AEM Author中源内容。
 
@@ -141,7 +142,7 @@ query($slug: String!) {
         slug: {
           _expressions: [ { value: $slug } ]
         }
-  	}) {
+      }) {
     items {
       _path
       title
@@ -187,46 +188,67 @@ query($slug: String!) {
 
 AEM持久查询是通过HTTPGET执行的，因此， [AEM JavaScript无头客户端](https://github.com/adobe/aem-headless-client-js) 用于 [执行持久GraphQL查询](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) 并将冒险内容加载到应用程序中。
 
-每个持久化查询在 `src/api/persistedQueries.js`，可异步调用AEM HTTPGET端点并返回冒险数据。
+每个持久化查询都有一个对应的React [useEffect](https://reactjs.org/docs/hooks-effect.html) 挂接 `src/api/usePersistedQueries.js`，可异步调用AEM HTTPGET持久化查询端点并返回冒险数据。
 
 每个函数依次调用 `aemHeadlessClient.runPersistedQuery(...)`，执行持久GraphQL查询。
 
 ```js
-// src/api/persistedQueries.js
+// src/api/usePersistedQueries.js
 
 /**
- * Queries a list of all Adventures using the persisted path "wknd-shared/adventures-all"
- * @returns {data, errors}
+ * React custom hook that returns a list of adevntures by activity. If no activity is provided, all adventures are returned.
+ * 
+ * Custom hook that calls the 'wknd-shared/adventures-all' or 'wknd-shared/adventures-by-activity' persisted query.
+ *
+ * @returns an array of Adventure JSON objects, and array of errors
  */
-export const getAllAdventures = async function() {
-    return executePersistedQuery('wknd-shared/adventures-all');
+export function useAdventuresByActivity(adventureActivity) {
+  ...
+  // If an activity is provided (i.e "Camping", "Hiking"...) call wknd-shared/adventures-by-activity query
+  if (adventureActivity) {
+    // The key is 'activity' as defined in the persisted query
+    const queryParameters = { activity: adventureActivity };
+
+    // Call the AEM GraphQL persisted query named "wknd-shared/adventures-by-activity" with parameters
+    response = await fetchPersistedQuery("wknd-shared/adventures-by-activity", queryParameters);
+  } else {
+    // Else call the AEM GraphQL persisted query named "wknd-shared/adventures-all" to get all adventures
+    response = await fetchPersistedQuery("wknd-shared/adventures-all");
+  }
+  
+  ... 
 }
 
 ...
-
 /**
- * Uses the AEM Headless SDK to execute a query besed on a persistedQueryPath and optional query variables
- * @param {*} persistedQueryPath 
- * @param {*} queryVariables 
- * @returns 
+ * Private function that invokes the AEM Headless client.
+ * 
+ * @param {String} persistedQueryName the fully qualified name of the persisted query
+ * @param {*} queryParameters an optional JavaScript object containing query parameters
+ * @returns the GraphQL data or an error message 
  */
- const executePersistedQuery = async function(persistedQueryPath, queryVariables) {
+async function fetchPersistedQuery(persistedQueryName, queryParameters) {
+  let data;
+  let err;
 
-    let data;
-    let errors;
+  try {
+    // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax
+    const response = await aemHeadlessClient.runPersistedQuery(
+      persistedQueryName,
+      queryParameters
+    );
+    // The GraphQL data is stored on the response's data field
+    data = response?.data;
+  } catch (e) {
+    // An error occurred, return the error messages
+    err = e
+      .toJSON()
+      ?.map((error) => error.message)
+      ?.join(", ");
+    console.error(e.toJSON());
+  }
 
-    try {
-        // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax
-        const response = await aemHeadlessClient.runPersistedQuery(persistedQueryPath, queryVariables);
-        // The GraphQL data is stored on the response's data field
-        data = response.data;
-        errors = response.errors ? mapErrors(response.errors) : undefined;
-    } catch (e) {
-        console.error(e.toJSON());
-        errors = e;
-    }
-
-    return {data, errors}; 
+  return { data, err };
 }
 ```
 
@@ -236,16 +258,15 @@ React应用程序使用两个视图来呈现Web体验中的冒险数据。
 
 + `src/components/Adventures.js`
 
-   调用 `getAllAdventures()` 从 `src/api/persistedQueries.js`  并在列表中显示返回的冒险。
+   调用 `getAdventuresByActivity(..)` 从 `src/api/usePersistedQueries.js` 并在列表中显示返回的冒险。
 
 + `src/components/AdventureDetail.js`
 
    调用 `getAdventureBySlug(..)` 使用 `slug` 通过 `Adventures` 组件，并显示单个冒险的详细信息。
 
-
 ### 环境变量
 
-几个 [环境变量](https://create-react-app.dev/docs/adding-custom-environment-variables) 用于连接到AEM环境。 默认情况下，会连接到运行在的AEM发布 `http://localhost:4503`. 要更改AEM连接，请更新 `.env.development` 文件：
+几个 [环境变量](https://create-react-app.dev/docs/adding-custom-environment-variables) 用于连接到AEM环境。 默认情况下，会连接到运行在的AEM发布 `http://localhost:4503`. 更新 `.env.development` 文件，要更改AEM连接：
 
 + `REACT_APP_HOST_URI=http://localhost:4502`:设置为AEM Target主机
 + `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json`:设置GraphQL端点路径。 此React应用程序不使用此函数，因为此应用程序仅使用持久查询。
@@ -254,8 +275,8 @@ React应用程序使用两个视图来呈现Web体验中的冒险数据。
    + `dev-token`:在AEMas a Cloud Service上使用开发令牌进行本地开发
    + `basic`:通过本地AEM作者使用用户/通行证进行本地开发
    + 留空以在未进行身份验证的情况下连接到AEM
-+ `REACT_APP_AUTHORIZATION=admin:admin`:设置在连接到AEM创作环境时使用的基本身份验证凭据（仅用于开发）。 如果连接到发布环境，则不需要此设置。
-+ `REACT_APP_DEV_TOKEN`:开发令牌字符串。 要连接到远程实例，除了基本身份验证(user:pass)之外，您还可以在云控制台中将载体身份验证与DEV令牌结合使用
++ `REACT_APP_AUTHORIZATION=admin:admin`:设置在连接到AEM创作环境时要使用的基本身份验证凭据（仅用于开发）。 如果连接到发布环境，则不需要此设置。
++ `REACT_APP_DEV_TOKEN`:开发令牌字符串。 要连接到远程实例，除了基本身份验证(user:pass)之外，您还可以在云控制台中对DEV令牌使用承载身份验证
 + `REACT_APP_SERVICE_TOKEN`:服务凭据文件的路径。 要连接到远程实例，还可以使用服务令牌（从开发人员控制台下载文件）完成身份验证。
 
 ### 代理AEM请求
@@ -266,6 +287,6 @@ React应用程序使用两个视图来呈现Web体验中的冒险数据。
 
 ### 跨源资源共享(CORS)
 
-此React应用程序依赖于在目标AEM环境中运行的基于AEM的CORS配置，并假定React应用程序在上运行 `http://localhost:3000` 在开发模式下。 的 [CORS配置](https://github.com/adobe/aem-guides-wknd/blob/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) 是 [WKND站点](https://github.com/adobe/aem-guides-wknd).
+此React应用程序依赖于在目标AEM环境中运行的基于AEM的CORS配置，并假定React应用程序在上运行 `http://localhost:3000` 在开发模式下。 的 [CORS配置](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) 是 [WKND站点](https://github.com/adobe/aem-guides-wknd).
 
 ![CORS配置](assets/react-app/cross-origin-resource-sharing-configuration.png)
