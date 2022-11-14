@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b74dc2693071313a80ccaaea839b8e2087c9edaa
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1161'
 ht-degree: 4%
 
 ---
@@ -79,7 +79,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
 
    等待15分钟，让Cloud Manager计划配置网络基础架构。
 
-1. 检查环境是否已完成 __专用出口IP地址__ 使用Cloud Manager API进行配置 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 从上一步中的createNetworkInfrastructure HTTP请求返回。
+1. 检查程序是否已完成 __专用出口IP地址__ 使用Cloud Manager API进行配置 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 从上一步中的createNetworkInfrastructure HTTP请求返回。
 
    __getNetworkInfrastructure HTTP请求__
 
@@ -91,11 +91,11 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
        -H 'Content-Type: application/json'
    ```
 
-   验证HTTP响应是否包含 __状态__ of __就绪__. 如果尚未就绪，请每隔几分钟重新检查一次状态。
+   验证HTTP响应是否包含 __状态__ of __就绪__. 如果尚未准备就绪，请每隔几分钟重新检查一次状态。
 
 ## 为每个环境配置专用出口IP地址代理
 
-1. 启用和配置 __专用出口IP地址__ 在每个AEMas a Cloud Service环境中使用Cloud Manager API进行配置 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
+1. 配置 __专用出口IP地址__ 在每个AEMas a Cloud Service环境中使用Cloud Manager API进行配置 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
 
    __enableEnvironmentAdvancedNetworkingConfiguration HTTP请求__
 
@@ -164,6 +164,8 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
    ```
 
    主机名不能为 `pinged`，因为它是出口和 _not_ 和入口。
+
+   请注意 __专用出口IP地址__ 由程序中的所有AEMas a Cloud Service环境共享。
 
 1. 现在，您可以在自定义AEM代码和配置中使用专用出口IP地址。 通常，在使用专用出口IP地址时，外部服务AEMas a Cloud Service连接会配置为仅允许来自此专用IP地址的流量。
 
