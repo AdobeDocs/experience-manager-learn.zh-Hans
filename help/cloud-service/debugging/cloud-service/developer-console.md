@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: 751aed9b8659d6a600429efb2bf60825b6d39144
+source-git-commit: e8e5c67f6e9f057fd7472b76ee09d7f87b133c89
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ AEM as a Cloud Service为每个环境提供了开发人员控制台，该控制�
 要访问和使用开发人员控制台，必须通过向开发人员的Adobe ID授予以下权限 [AdobeAdmin Console](https://adminconsole.adobe.com).
 
 1. 确保已实现Cloud Manger和AEMas a Cloud Service产品的Adobe组织在Adobe组织切换器中处于活动状态。
-1. 开发人员必须是Cloud Manager产品的成员 __开发人员 — Cloud Service__ 产品配置文件。
+1. 开发人员必须是 [Cloud Manager产品的 __开发人员 — Cloud Service__ 产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer).
    + 如果此会员资格不存在，则开发人员将无法登录到开发人员控制台。
-1. 开发人员必须是 __AEM用户__ 或 __AEM管理员__ AEM创作和/或发布上的产品配置文件。
+1. 开发人员必须是 [__AEM用户__ 或 __AEM管理员__ AEM创作和/或发布上的产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles).
    + 如果此会员资格不存在，则 [状态](#status) 转储将超时，并出现401未授权错误。
 
 ### 开发人员控制台访问疑难解答
