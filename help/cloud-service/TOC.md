@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 0c381c166f55178e219ebd27c6641298491aa8f6
+source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '841'
 ht-degree: 21%
 
 ---
@@ -91,6 +91,8 @@ ht-degree: 21%
       + [存储库浏览器](./debugging/cloud-service/repository-browser.md)
       + 风险{#risks}
          + [几个警告](./debugging/cloud-service/risks/traversals.md)
++ 内容交付{#content-delivery}
+   + [URL重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html)
 + 访问AEM{#accessing}
    + [概述](./accessing/overview.md)
    + [Adobe IMS用户](./accessing/adobe-ims-users.md)

@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation 教程
 user-guide-description: Adobe Experience Manager Foundation 的视频和教程集合。
 sub-product: Experience Manager
 index: y
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '222'
 ht-degree: 14%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 14%
    + [使用oak-run.jar管理索引](./administration/use-oak-run-jar-to-manage-indexes.md)
    + [使用在线修订清理](./administration/use-online-revision-clean-up.md)
    + [使用系统概述功能板](./administration/use-the-system-overview-dashboard.md)
+   + [URL重定向](./administration/url-redirection.md)
 + 身份验证 {#authentication}
    + [OAuth身份验证](authentication/oauth-code-sample-develop.md)
    + [设置要与Adobe I/O一起使用的公共/私钥](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
