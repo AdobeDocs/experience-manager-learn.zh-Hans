@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '826'
 ht-degree: 1%
 
 ---
@@ -311,3 +311,5 @@ $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_w
 
 请注意，我们仅更改了更改和利用基线配置文件附带的现有包含和代码所需的部分。  我们只需要勾勒出我们需要改变的要素。  使事项更轻松，并且允许我们维护更少的代码
 </div>
+
+[下一步 — >调度程序运行状况检查](./health-check.md)

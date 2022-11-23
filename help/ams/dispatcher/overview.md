@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '97'
 ht-degree: 5%
 
 ---
@@ -33,3 +33,4 @@ ht-degree: 5%
 - [虚 URL](./disp-vanity-url.md)
 - [常见日志记录](./common-logs.md)
 - [只读文件](./immutable-files.md)
+- [调度程序运行状况检查](./health-check.md)
