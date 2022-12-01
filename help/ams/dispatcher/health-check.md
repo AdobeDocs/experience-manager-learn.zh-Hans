@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
+source-git-commit: df3afc60f765c18915eca3bb2d3556379383fafc
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1139'
 ht-degree: 1%
 
 ---
@@ -209,3 +209,5 @@ X-Vhost: unhealthy-author
 使用时，此脚本将检查并记录其正面的所有实例，但无论AEM是否返回错误，都只会返回正常状态。
 
 > `Note:` 当运行状况检查未按预期运行且允许覆盖将AEM实例保留在负载平衡器中时，将使用此脚本。
+
+[下一个 — > GIT符号链接](./git-symlinks.md)
