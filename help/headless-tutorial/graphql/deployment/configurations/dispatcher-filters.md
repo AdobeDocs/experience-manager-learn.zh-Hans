@@ -1,6 +1,6 @@
 ---
-title: 适用于AEM GraphQL的调度程序过滤器
-description: 了解如何配置AEM发布Dispatcher过滤器以与AEM GraphQL一起使用。
+title: 适用于AEM GraphQL的Dispatcher过滤器
+description: 了解如何配置AEM Publish Dispatcher过滤器以与AEM GraphQL一起使用。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -8,9 +8,9 @@ role: Developer, Architect
 level: Intermediate
 kt: 10829
 thumbnail: kt-10829.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 442020d854d8f42c5d8a1340afd907548875866e
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '211'
 ht-degree: 2%
 
 ---
@@ -39,11 +39,16 @@ AEM发布调度程序过滤器配置定义允许访问AEM的URL模式，并且�
 添加 `allow` URL模式的规则 `/graphql/execute.json/*`，并确保文件ID(例如 `/0600`，在示例场文件中是唯一的)。
 这允许对持久查询端点进行HTTPGET请求，例如 `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` 到AEM发布。
 
+如果在AEM无头体验中使用体验片段，请对这些路径执行相同的操作。
+
 + `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
 ```
 ...
-/0600 { /type "allow" /url "/graphql/execute.json/*" }
+# Allow headless requests for Persisted Query endpoints
+/0600 { /type "allow" /method '(POST|OPTIONS)' /url "/graphql/execute.json/*" }
+# Allow headless requests for Experience Fragments
+/0601 { /type "allow" /method '(GET|OPTIONS)' /url "/content/experience-fragments/*" }
 ...
 ```
 
