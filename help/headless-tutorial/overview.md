@@ -1,20 +1,20 @@
 ---
-title: AEM无头Tutorials
-description: 有关如何使用Adobe Experience Manager作为无头CMS的教程集合。
+title: TutorialsAEM中的无头
+description: Adobe Experience Manager的无头CMS教程集合。 通过API、框架和示例应用程序浏览教程。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
+source-git-commit: 567f0ae80d79796fc50994d31a64fb0ca79879f6
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '524'
 ht-degree: 7%
 
 ---
 
-# AEM无头Tutorials{#aem-headless-tutorials}
+# TutorialsAEM中的无头{#aem-headless-tutorials}
 
 Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将其内容交付为JSON。 使用动手实践教程了解如何使用各种选项并选择适合您的选项。
 
@@ -137,7 +137,7 @@ Adobe Experience Manager(AEM)有多个选项，可用于定义无头端点并将
     </a>
     </div>
     <p>
-    <em>在纯粹的无头情景中使用GraphQL构建React JS应用程序。</em>
+    <em>在纯粹的无头场景中使用GraphQL构建React JS应用程序。</em>
     <p>
   </td>
   <td>
