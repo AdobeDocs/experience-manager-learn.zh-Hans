@@ -1,6 +1,6 @@
 ---
 title: React应用程序 — AEM Headless示例
-description: 示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此React应用程序演示了如何使用AEM GraphQL API通过持久查询来查询内容。
+description: 示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此React应用程序演示了如何使用持久化查询来使用AEM GraphQL API查询内容。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 10715
@@ -11,27 +11,22 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-11-09T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: c5f94b12a9af50bc4e7db693d6560d120ab8bf3b
+source-git-commit: 758fa40240b12f5bfa83ac5c0300b71f41e2326d
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '919'
 ht-degree: 5%
 
 ---
 
 # React App{#react-app}
 
-示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此React应用程序演示了如何使用AEM GraphQL API通过持久查询来查询内容。 用于JavaScript的AEM无头客户端用于执行为应用程序提供动力的GraphQL持久查询。
+示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此React应用程序演示了如何使用持久化查询来使用AEM GraphQL API查询内容。 用于JavaScript的AEM Headless Client用于执行为应用程序提供动力的GraphQL持久查询。
 
 ![使用AEM Headless反应应用程序](./assets/react-app/react-app.png)
 
 查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
 A [完整的分步教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans) 描述此React应用程序的生成方式。
-
->[!CONTEXTUALHELP]
->id="aemcloud_sites_trial_admin_content_fragments_react_app"
->title="自定义React应用程序示例中的内容"
->abstract="我们已设置了一个现代化的React应用程序，您可以使用该应用程序了解如何使用无头功能集自定义内容。"
 
 ## 前提条件 {#prerequisites}
 
@@ -96,12 +91,12 @@ React应用程序旨在连接到 __AEM发布__ 环境中，但是，如果在Rea
 
 ## 代码
 
-以下是如何构建React应用程序的摘要，它如何连接到AEM Headless以使用GraphQL持久查询检索内容，以及如何显示该数据。 完整代码可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
+以下是如何构建React应用程序、如何连接到AEM Headless以使用GraphQL持久查询检索内容以及如何显示该数据的摘要。 完整代码可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
 
 ### 持久化查询
 
-遵循AEM无头最佳实践，React应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
+遵循AEM Headless最佳实践，React应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
 
 + `wknd/adventures-all` 持久查询，该查询会返回具有一组简略属性的AEM中的所有冒险。 此持久查询驱动初始视图的探险列表。
 
@@ -186,11 +181,11 @@ query($slug: String!) {
 
 ### 执行GraphQL持久查询
 
-AEM持久查询是通过HTTPGET执行的，因此， [AEM JavaScript无头客户端](https://github.com/adobe/aem-headless-client-js) 用于 [执行持久GraphQL查询](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) 并将冒险内容加载到应用程序中。
+AEM持久查询是通过HTTPGET执行的，因此， [AEM JavaScript无头客户端](https://github.com/adobe/aem-headless-client-js) 用于 [执行持久化GraphQL查询](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) 并将冒险内容加载到应用程序中。
 
 每个持久化查询都有一个对应的React [useEffect](https://reactjs.org/docs/hooks-effect.html) 挂接 `src/api/usePersistedQueries.js`，可异步调用AEM HTTPGET持久化查询端点并返回冒险数据。
 
-每个函数依次调用 `aemHeadlessClient.runPersistedQuery(...)`，执行持久GraphQL查询。
+每个函数依次调用 `aemHeadlessClient.runPersistedQuery(...)`，执行保留的GraphQL查询。
 
 ```js
 // src/api/usePersistedQueries.js
