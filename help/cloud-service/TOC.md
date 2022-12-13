@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
+source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '866'
 ht-degree: 21%
 
 ---
@@ -53,6 +53,18 @@ ht-degree: 21%
    + [本地AEM运行时](./local-development-environment/aem-runtime.md)
    + [本地Dispatcher工具](./local-development-environment/dispatcher-tools.md)
 + 开发{#developing}
+   + 可扩展性{#extensibility}
+      + 内容片段控制台{#content-fragments}
+         + [概述](./developing/extensibility/content-fragments/overview.md)
+         + [扩展注册](./developing/extensibility/content-fragments/extension-registration.md)
+         + [标题菜单](./developing/extensibility/content-fragments/header-menu.md)
+         + [操作栏](./developing/extensibility/content-fragments/action-bar.md)
+         + [模态](./developing/extensibility/content-fragments/modal.md)
+         + [Adobe I/O Runtime行动](./developing/extensibility/content-fragments/runtime-action.md)
+         + [测试](./developing/extensibility/content-fragments/test.md)
+         + [部署](./developing/extensibility/content-fragments/deploy.md)
+         + 扩展示例{#example-extensions}
+            + [批量属性更新扩展](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
    + 开发基础知识{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本地开发环境](./developing/basics/local-development-environment.md)
