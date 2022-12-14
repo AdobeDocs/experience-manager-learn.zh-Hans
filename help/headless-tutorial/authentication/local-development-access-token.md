@@ -1,6 +1,6 @@
 ---
 title: 本地开发访问令牌
-description: AEM本地开发访问令牌用于加速与AEMas a Cloud Service的集成开发，该集成可通过HTTP以编程方式与AEM创作或发布服务进行交互。
+description: AEM本地开发访问令牌用于加速与AEMas a Cloud Service的集成开发，该集成可通过HTTP以编程方式与AEM创作或发布服务交互。
 version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
@@ -13,9 +13,9 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 0%
 
 本地开发访问令牌提供了对AEM创作和发布服务的访问权限（作为生成令牌的用户）及其权限。 尽管这是开发令牌，但请勿共享此令牌，或将其存储在源代码管理中。
 
-1. 在 [AdobeAdminConsole](https://adminconsole.adobe.com/) 确保您（开发人员）是以下成员：
+1. 在 [Adobe Admin Console](https://adminconsole.adobe.com/) 确保您（开发人员）是以下成员：
    + __Cloud Manager — 开发人员__ IMS产品配置文件(授予对AEM开发人员控制台的访问权限)
-   + 选择 __AEM管理员__ 或 __AEM用户__ AEM环境服务的IMS产品配置文件访问令牌将与
+   + 选择 __AEM管理员__ 或 __AEM用户__ 用于AEM环境服务的IMS产品配置文件访问令牌与
    + 沙盒AEMas a Cloud Service环境只需在 __AEM管理员__ 或 __AEM用户__ 产品配置文件
 1. 登录到 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 打开包含AEMas a Cloud Service环境的程序以与集成
@@ -51,7 +51,7 @@ ht-degree: 0%
 ![本地开发访问令牌 — 外部应用程序](assets/local-development-access-token/local-development-access-token-external-application.png)
 
 1. 从AEM开发人员控制台下载临时的本地开发访问令牌
-   + 本地开发访问令牌每24小时过期一次，因此开发人员将需要每天下载新的访问令牌
+   + 本地开发访问令牌每24小时过期一次，因此开发人员需要每天下载新的访问令牌
 1. 正在开发以编程方式与AEMas a Cloud Service交互的外部应用程序
 1. 外部应用程序在本地开发访问令牌中读取
 1. 外部应用程序将构建到AEMas a Cloud Service的HTTP请求，并将本地开发访问令牌作为载体令牌添加到HTTP请求的授权标头
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ### 示例外部应用程序
 
-我们将创建一个简单的外部JavaScript应用程序，以说明如何使用本地开发人员访问令牌以编程方式通过HTTPS访问AEMas a Cloud Service。 这说明了 _any_ 在AEM之外运行的应用程序或系统，无论其是框架还是语言，都可以使用访问令牌以编程方式对AEMas a Cloud Service进行身份验证和访问。 在 [下一部分](./service-credentials.md) 我们将更新此应用程序代码，以支持生成用于生产用途的令牌的方法。
+我们将创建一个简单的外部JavaScript应用程序，以说明如何使用本地开发人员访问令牌以编程方式通过HTTPS访问AEMas a Cloud Service。 这说明了 _any_ 在AEM之外运行的应用程序或系统，无论其是框架还是语言，都可以使用访问令牌以编程方式对AEMas a Cloud Service进行身份验证和访问。 在 [下一部分](./service-credentials.md)，我们将更新此应用程序代码，以支持生成用于生产的令牌的方法。
 
 此示例应用程序从命令行运行，并使用以下流程通过AEM Assets HTTP API更新AEM资产元数据：
 
@@ -96,7 +96,7 @@ ht-degree: 0%
    * Application entry point function
    */
    (async () => {
-       console.log('Example usage: node index.js aem=https://author-p1234-e5678.adobeaemcloud.com propertyName=metadata/dc:rights "propertyValue=WKND Limited Use" folder=/wknd/en/adventures/napa-wine-tasting file=credentials-file.json' );
+       console.log('Example usage: node index.js aem=https://author-p1234-e5678.adobeaemcloud.com propertyName=metadata/dc:rights "propertyValue=WKND Limited Use" folder=/wknd-shared/en/adventures/napa-wine-tasting file=credentials-file.json' );
    
        // Parse the command line parameters
        params = getCommandLineParams();
@@ -173,7 +173,7 @@ ht-degree: 0%
    * - aem = The AEM as a Cloud Service hostname to connect to.
    *              Example: https://author-p12345-e67890.adobeaemcloud.com
    * - folder = The asset folder to update assets in. Note that the Assets HTTP API do NOT use the JCR `/content/dam` path prefix.
-   *              Example: '/wknd/en/adventures/napa-wine-tasting'
+   *              Example: '/wknd-shared/en/adventures/napa-wine-tasting'
    * - propertyName = The asset property name to update. Note this is relative to the [dam:Asset]/jcr:content node of the asset.
    *              Example: metadata/dc:rights
    * - propertyValue = The value to update the asset property (specified by propertyName) with.
@@ -223,14 +223,14 @@ ht-degree: 0%
    })...
    ```
 
-   对AEMas a Cloud Service的任何HTTP请求都必须在授权标头中设置载体访问令牌。 请记住，每个AEMas a Cloud Service环境都需要它自己的访问令牌。 开发的访问令牌在暂存或生产环境中不起作用，暂存环境在开发或生产环境中不起作用，而生产环境在开发或暂存环境中不起作用！
+   对AEMas a Cloud Service的任何HTTP请求都必须在授权标头中设置载体访问令牌。 请记住，每个AEMas a Cloud Service环境都需要其自己的访问令牌。 开发的访问令牌在暂存或生产环境中不起作用，暂存的开发或生产环境中不起作用，而生产环境中的开发或暂存环境则不起作用！
 
 1. 使用命令行，从项目的根执行应用程序，并传递以下参数：
 
    ```shell
    $ node index.js \
        aem=https://author-p1234-e5678.adobeaemcloud.com \
-       folder=/wknd/en/adventures/napa-wine-tasting \
+       folder=/wknd-shared/en/adventures/napa-wine-tasting \
        propertyName=metadata/dc:rights \
        propertyValue="WKND Limited Use" \
        file=local_development_token.json
@@ -238,8 +238,8 @@ ht-degree: 0%
 
    传入以下参数：
 
-   + `aem`:应用程序将与之交互的AEMas a Cloud Service环境的方案和主机名(例如， `https://author-p1234-e5678.adobeaemcloud.com`)。
-   + `folder`:其资产更新为 `propertyValue`;请勿添加 `/content/dam` 前缀(例如 `/wknd/en/adventures/napa-wine-tasting`)
+   + `aem`:应用程序与之交互的AEMas a Cloud Service环境的方案和主机名(例如 `https://author-p1234-e5678.adobeaemcloud.com`)。
+   + `folder`:其资产更新为的资产文件夹路径 `propertyValue`;请勿添加 `/content/dam` 前缀(例如 `/wknd-shared/en/adventures/napa-wine-tasting`)
    + `propertyName`:要更新的资产属性名称，相对于 `[dam:Asset]/jcr:content` (例如 `metadata/dc:rights`)。
    + `propertyValue`:用于设置 `propertyName` 至；包含空格的值需要使用 `"` (例如 `"WKND Limited Use"`)
    + `file`:从AEM开发人员控制台下载的JSON文件的相对文件路径。
@@ -247,16 +247,16 @@ ht-degree: 0%
    成功执行每个更新资产的应用程序结果输出：
 
    ```shell
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
    ```
 
 ### 验证AEM中的元数据更新
 
-通过登录到AEMas a Cloud Service环境(确保将相同的主机传递到 `aem` 命令行参数)。
+通过登录到AEMas a Cloud Service环境，验证元数据是否已更新(确保将相同的主机传递到 `aem` 命令行参数)。
 
 1. 登录外部应用程序与之交互的AEMas a Cloud Service环境(使用 `aem` 命令行参数)
 1. 导航到 __资产__ > __文件__
@@ -269,6 +269,6 @@ ht-degree: 0%
 
 ## 下面的步骤
 
-现在，我们已使用本地开发令牌以编程方式访问AEMas a Cloud Service，因此需要更新应用程序以使用服务凭据进行处理，以便此应用程序可以在生产环境中使用。
+现在，我们已使用本地开发令牌以编程方式访问AEMas a Cloud Service。 接下来，我们需要更新应用程序以使用服务凭据来处理，以便此应用程序可以在生产环境中使用。
 
 + [如何使用服务凭据](./service-credentials.md)

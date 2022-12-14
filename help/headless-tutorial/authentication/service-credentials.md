@@ -1,6 +1,6 @@
 ---
-title: AEM开发人员控制台服务凭据
-description: AEM Service凭据用于帮助外部应用程序、系统和服务以编程方式通过HTTP与AEM创作或发布服务进行交互。
+title: 服务凭据
+description: 了解如何使用用于促进外部应用程序、系统和服务以编程方式通过HTTP与创作或发布服务交互的服务凭据。
 version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
@@ -13,16 +13,16 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1895'
 ht-degree: 0%
 
 ---
 
 # 服务凭据
 
-与AEMas a Cloud Service的集成必须能够安全地对AEM进行身份验证。 AEM开发人员控制台授予对服务凭据的访问权限，服务凭据用于促进外部应用程序、系统和服务以编程方式通过HTTP与AEM创作或发布服务交互。
+与Adobe Experience Manager(AEM)as a Cloud Service的集成必须能够安全地验证AEM服务。 AEM开发人员控制台授予对服务凭据的访问权限，服务凭据用于促进外部应用程序、系统和服务以编程方式通过HTTP与AEM创作或发布服务交互。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 + AEMas a Cloud Service环境的服务凭据映射到单个AEM技术帐户用户，而本地开发访问令牌将验证为生成访问令牌的AEM用户。
 + AEMas a Cloud Service环境有一个可映射到一个技术帐户AEM用户的服务凭据。 服务凭据不能用于与不同技术帐户AEM用户一样对同一AEMas a Cloud Service环境进行身份验证。
 
-应将服务凭据及其生成的访问令牌以及本地开发访问令牌均保密，因为所有这三个令牌都可用于访问其各自的AEMas a Cloud Service环境
+应将服务凭据及其生成的访问令牌和本地开发访问令牌均保密。 由于所有这三种环境均可用于获取，因此可以访问各自的AEMas a Cloud Service环境。
 
 ## 生成服务凭据
 
@@ -81,13 +81,14 @@ __这是每个AEMas a Cloud Service环境的一次性初始化__
 1. 在中点按 __集成__ 选项卡
 1. 点按 __获取服务凭据__ 按钮
 1. 点按左上角的下载按钮，下载包含服务凭据值的JSON文件，并将文件保存到安全位置。
-   + _如果服务凭据受损，请立即联系Adobe支持部门以撤销它们_
+
++ _如果服务凭据受损，请立即联系Adobe支持部门以撤销它们_
 
 ## 安装服务凭据
 
-服务凭据提供生成JWT所需的详细信息，JWT用于交换用于通过AEMas a Cloud Service进行身份验证的访问令牌。 服务凭据必须存储在安全位置，外部应用程序、系统或服务可以使用服务凭据访问AEM。 每个客户管理服务凭据的方式和位置都是唯一的。
+服务凭据提供生成JWT所需的详细信息，JWT用于交换用于通过AEMas a Cloud Service进行身份验证的访问令牌。 服务凭据必须存储在安全位置，外部应用程序、系统或服务可使用服务凭据访问AEM。 每个客户管理服务凭据的方式和位置都是唯一的。
 
-为了简单起见，本教程将通过命令行将服务凭据传递到中，但请与您的IT安全团队合作，了解如何根据贵组织的安全准则存储和访问这些凭据。
+为了简单起见，本教程将通过命令行传递服务凭据。 但是，请与您的IT安全团队合作，了解如何根据贵组织的安全准则存储和访问这些凭据。
 
 1. 复制 [下载了服务凭据JSON](#download-service-credentials) 到名为 `service_token.json` 在项目的根中
    + 但请记住，切勿向Git提交任何凭据！
@@ -104,21 +105,24 @@ __这是每个AEMas a Cloud Service环境的一次性初始化__
 1. 外部应用程序使用服务凭据中的信息来构建JWT令牌
 1. JWT令牌将发送到Adobe IMS以交换访问令牌
 1. Adobe IMS会返回一个访问令牌，可用于访问AEMas a Cloud Service
-   + 访问令牌可能已请求到期。 最好保持访问令牌的生命周期较短，并在需要时进行刷新。
+   + 访问令牌可以请求过期。 最好保持访问令牌的生命周期较短，并在需要时进行刷新。
 1. 外部应用程序向AEM发出HTTP请求，并将访问令牌作为载体令牌添加到HTTP请求的授权标头中
 1. AEMas a Cloud Service接收HTTP请求、验证请求并执行HTTP请求请求所请求的工作，并将HTTP响应返回到外部应用程序
 
 ### 外部应用程序的更新
 
-要使用服务凭据访问AEMas a Cloud Service，必须通过3种方式更新外部应用程序：
+要使用服务凭据访问AEMas a Cloud Service，必须通过三种方式更新外部应用程序：
 
 1. 在服务凭据中阅读
-   + 为了简单起见，我们将从下载的JSON文件中读取这些内容，但在实际使用场景中，必须按照贵组织的安全准则安全地存储服务凭据
+
++ 为了简单起见，我们从下载的JSON文件中读取了这些内容，但在实际使用场景中，必须按照贵组织的安全准则安全地存储服务凭据
+
 1. 从服务凭据生成JWT
 1. 将JWT交换为访问令牌
-   + 当存在服务凭据时，我们的外部应用程序在访问AEMas a Cloud Service时会使用此访问令牌而不是本地开发访问令牌
 
-在本教程中，Adobe `@adobe/jwt-auth` npm模块用于两者，(1)从服务凭据生成JWT，(2)在单个函数调用中将其交换为访问令牌。 如果您的应用程序不基于JavaScript，请查看 [其他语言的示例代码](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md) 以了解如何从服务凭据创建JWT，并将其与Adobe IMS交换为访问令牌。
++ 当存在服务凭据时，我们的外部应用程序在访问AEMas a Cloud Service时会使用此访问令牌而不是本地开发访问令牌
+
+在本教程中，Adobe `@adobe/jwt-auth` npm模块用于两者，(1)从服务凭据生成JWT，(2)在单个函数调用中将其交换为访问令牌。 如果您的应用程序不基于JavaScript，请查看 [其他语言的示例代码](https://developer.adobe.com/developer-console/docs/guides/) 以了解如何从服务凭据创建JWT，并将其与Adobe IMS交换为访问令牌。
 
 ## 阅读服务凭据
 
@@ -141,69 +145,69 @@ function getCommandLineParams() {
 
 ## 为访问令牌创建JWT和交换
 
-读取服务凭据后，将使用这些凭据生成JWT，然后与Adobe IMS API交换访问令牌，以用于访问AEMas a Cloud Service。
+读取服务凭据后，将使用它们生成JWT，然后与Adobe IMS API交换JWT以获取访问令牌。 然后，可以使用此访问令牌访问AEMas a Cloud Service。
 
-此示例应用程序基于Node.js，因此最好使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模块，以便于(1)生成JWT并（20次与Adobe IMS交换） 如果您的应用程序是使用其他语言开发的，请查看 [相应的代码示例](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md) 了解如何使用其他编程语言构建到Adobe IMS的HTTP请求。
+此示例应用程序基于Node.js，因此最好使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模块，以便于(1)生成JWT并（20次与Adobe IMS交换） 如果您的应用程序是使用其他语言开发的，请查看 [相应的代码示例](https://developer.adobe.com/developer-console/docs/guides/) 了解如何使用其他编程语言构建到Adobe IMS的HTTP请求。
 
 1. 更新 `getAccessToken(..)` 用于检查JSON文件内容并确定它是否表示本地开发访问令牌或服务凭据。 这可以通过检查 `.accessToken` 属性，该属性仅存在于本地开发访问令牌JSON中。
 
-   如果提供了服务凭据，则应用程序会生成JWT并与Adobe IMS交换JWT以获取访问令牌。 我们将使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)&#39;s `auth(...)` 函数，该函数生成JWT并在单个函数调用中为访问令牌交换JWT。  的参数 `auth(..)` 是 [由特定信息组成的JSON对象](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) 可从服务凭据JSON中获取，如代码中所述。
+   如果提供了服务凭据，则应用程序会生成JWT并与Adobe IMS交换JWT以获取访问令牌。 我们使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)&#39;s `auth(...)` 函数，该函数在单个函数调用中生成JWT并将其交换为访问令牌。 的参数 `auth(..)` 方法是 [由特定信息组成的JSON对象](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) 可从服务凭据JSON中获取，如代码中所述。
 
-   ```javascript
-    async function getAccessToken(developerConsoleCredentials) {
-   
-        if (developerConsoleCredentials.accessToken) {
-            // This is a Local Development access token
-            return developerConsoleCredentials.accessToken;
-        } else {
-            // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
-            let serviceCredentials = developerConsoleCredentials.integration;
-   
-            // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
-            // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
-            let { access_token } = await auth({
-                clientId: serviceCredentials.technicalAccount.clientId, // Client Id
-                technicalAccountId: serviceCredentials.id,              // Technical Account Id
-                orgId: serviceCredentials.org,                          // Adobe IMS Org Id
-                clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
-                privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
-                metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
-                ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
-            });
-   
-            return access_token;
-        }
-    }
-   ```
+```javascript
+ async function getAccessToken(developerConsoleCredentials) {
 
-   现在，取决于通过JSON传入的JSON文件（本地开发访问令牌JSON或服务凭据JSON） `file` 命令行参数，应用程序将派生访问令牌。
+     if (developerConsoleCredentials.accessToken) {
+         // This is a Local Development access token
+         return developerConsoleCredentials.accessToken;
+     } else {
+         // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
+         let serviceCredentials = developerConsoleCredentials.integration;
 
-   请记住，尽管服务凭据每365天过期一次，但JWT和相应的访问令牌会频繁过期，并且需要在它们过期之前进行刷新。 这可以通过使用 `refresh_token` [由Adobe IMS提供。](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens).
+         // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
+         // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
+         let { access_token } = await auth({
+             clientId: serviceCredentials.technicalAccount.clientId, // Client Id
+             technicalAccountId: serviceCredentials.id,              // Technical Account Id
+             orgId: serviceCredentials.org,                          // Adobe IMS Org Id
+             clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
+             privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
+             metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
+             ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
+         });
 
-1. 实施这些更改，并从AEM开发人员控制台下载服务凭据JSON(为了简便起见，另存为 `service_token.json` 与此文件夹相同 `index.js`)，执行应用程序以替换命令行参数 `file` with `service_token.json`，并更新 `propertyValue` 值，以便在AEM中显示效果。
+         return access_token;
+     }
+ }
+```
+
+    现在，根据通过“file”命令行参数传入的JSON文件（本地开发访问令牌JSON或服务凭据JSON），应用程序将派生访问令牌。
+    
+    请记住，尽管服务凭据每365天过期一次，但JWT和相应的访问令牌会频繁过期，并且需要在它们过期之前进行刷新。 可以使用“refresh_token”[由Adobe IMS提供](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)来完成此操作。
+
+1. 实施这些更改后，服务凭据JSON从AEM开发人员控制台中下载，并且为了简单起见，另存为 `service_token.json` 在与此相同的文件夹中 `index.js`. 现在，让我们执行替换命令行参数的应用程序 `file` with `service_token.json`，并更新 `propertyValue` 值，以便在AEM中显示效果。
 
    ```shell
    $ node index.js \
        aem=https://author-p1234-e5678.adobeaemcloud.com \
-       folder=/wknd/en/adventures/napa-wine-tasting \
+       folder=/wknd-shared/en/adventures/napa-wine-tasting \
        propertyName=metadata/dc:rights \
        propertyValue="WKND Restricted Use" \
        file=service_token.json
    ```
 
-   终端的输出将如下所示：
+   到终端的输出如下所示：
 
    ```shell
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting.json
-   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
-   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
-   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
-   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting.json
+   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
+   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
+   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
+   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
    ```
 
    的 __403 — 禁止__ 行，指示对AEMas a Cloud Service的HTTP API调用中出错。 尝试更新资产的元数据时，会出现这些403禁止错误。
 
-   原因是服务凭据派生的访问令牌使用自动创建的技术帐户AEM用户对AEM的请求进行身份验证，默认情况下，该用户仅具有读权限。 要提供对AEM的应用程序写入访问权限，必须向与访问令牌关联的技术帐户AEM用户授予在AEM中的权限。
+   原因是服务凭据派生的访问令牌使用自动创建的技术帐户AEM用户对AEM的请求进行身份验证，默认情况下，该用户仅具有读取访问权限。 要提供对AEM的应用程序写入访问权限，必须向与访问令牌关联的技术帐户AEM用户授予在AEM中的权限。
 
 ## 在AEM中配置访问权限
 
@@ -220,25 +224,25 @@ function getCommandLineParams() {
 1. 导航到 __群组__ ，然后添加 __DAM用户__ 群组（用作对资产的写入访问权限）
 1. 点按 __保存并关闭__
 
-在AEM中拥有资产写入权限的技术帐户，请重新运行应用程序：
+在AEM中允许具有资产写入权限的技术帐户下，重新运行应用程序：
 
 ```shell
 $ node index.js \
     aem=https://author-p1234-e5678.adobeaemcloud.com \
-    folder=/wknd/en/adventures/napa-wine-tasting \
+    folder=/wknd-shared/en/adventures/napa-wine-tasting \
     propertyName=metadata/dc:rights \
     propertyValue="WKND Restricted Use" \
     file=service_token.json
 ```
 
-终端的输出将如下所示：
+到终端的输出如下所示：
 
 ```
-200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting.json
-200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
-200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
-200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
-200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
+200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting.json
+200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
+200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
+200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
+200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
 ```
 
 ## 验证更改
@@ -254,4 +258,4 @@ $ node index.js \
 
 ## 恭喜！
 
-现在，我们已使用本地开发访问令牌以及生产就绪的服务到服务访问令牌，以编程方式访问AEMas a Cloud Service!
+现在，我们已使用本地开发访问令牌和生产就绪的服务到服务访问令牌以编程方式访问AEMas a Cloud Service!
