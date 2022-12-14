@@ -5,7 +5,7 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 79804ac1ec18f8ac4815bd5ee6f309ef85110cb9
+source-git-commit: 9fd2240cace83c27083f8209e9cec21640718989
 workflow-type: tm+mt
 source-wordcount: '868'
 ht-degree: 20%
@@ -85,7 +85,7 @@ ht-degree: 20%
       + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
    + 高级{#advanced}
       + [服务用户](./developing/advanced/service-users.md)
-      + [客户命名空间](./developing/advanced/custom-namespaces.md)
+      + [自定义命名空间](./developing/advanced/custom-namespaces.md)
       + [缓存页面变体](./developing/advanced/variant-caching.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + 调试AEM{#debugging}
@@ -162,7 +162,6 @@ ht-degree: 20%
       + [导航Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + Forms{#forms}
-
    + 为Formsas a Cloud Service开发{#developing-for-cloud-service}
       + [入门](./forms/developing-for-cloud-service/getting-started.md)
       + [安装IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
