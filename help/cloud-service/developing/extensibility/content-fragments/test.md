@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -78,7 +78,10 @@ AEM内容片段控制台扩展可以针对该扩展所属的Adobe组织中的任
 
 1. 加载AEM内容片段控制台时，会将扩展的本地版本插入到该控制台中进行测试，并在本地应用程序生成器应用程序运行期间热重新加载更改。
 
-请记住，使用此方法时，开发中的扩展仅会影响您的体验，而AEM内容片段控制台的所有其他用户则无需插入的扩展即可访问它。
+>[!IMPORTANT]
+>
+>请记住，使用此方法时，开发中的扩展仅会影响您的体验，而AEM内容片段控制台的所有其他用户则无需插入的扩展即可访问它。
+
 
 ## 测试阶段构建
 

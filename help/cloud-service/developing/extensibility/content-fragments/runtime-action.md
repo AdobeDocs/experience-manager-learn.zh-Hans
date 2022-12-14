@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 2%
@@ -49,7 +49,7 @@ Adobe I/O Runtime操作主要从AEM内容片段扩展中的两个位置调用：
 
 ### 从扩展注册
 
-可以直接从扩展注册代码调用Adobe I/O Runtime操作。 最常见的用例=是将操作绑定到 [标题菜单](./header-menu.md#no-modal)&#39;s按钮不使用 [模型](./modal.md).
+可以直接从扩展注册代码调用Adobe I/O Runtime操作。 最常见的用例是将操作绑定到 [标题菜单](./header-menu.md#no-modal)&#39;s按钮不使用 [模型](./modal.md).
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 

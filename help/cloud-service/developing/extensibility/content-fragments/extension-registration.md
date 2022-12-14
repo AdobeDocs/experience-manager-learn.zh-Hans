@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -55,15 +55,15 @@ function App(props) {
 `ExtensionRegistration.js` 必须立即通过扩展的索引路由加载，并执行扩展的注册点操作，定义：
 
 1. 扩展类型；a [标题菜单](./header-menu.md) 或 [操作栏](./action-bar.md) 按钮。
-   + [标题菜单](./header-menu.md) 扩展由 `headerMenu` 资产 `methods`.
-   + [操作栏](./action-bar.md) 扩展由 `actionBar` 资产 `methods`.
+   + [标题菜单](./header-menu.md#extension-registration) 扩展由 `headerMenu` 资产 `methods`.
+   + [操作栏](./action-bar.md#extension-registration) 扩展由 `actionBar` 资产 `methods`.
 1. 扩展按钮的定义，位于 `getButton()` 函数。 此函数返回一个包含字段的对象：
    + `id` 是按钮的唯一ID
    + `label` 是AEM内容片段控制台中扩展按钮的标签
    + `icon` 是AEM内容片段控制台中扩展按钮的图标。 图标是 [React Spectrum](https://spectrum.adobe.com/page/icons/) 图标名称，并删除空格。
 1. 在 `onClick()` 函数。
-   + [标题菜单](./header-menu.md) 扩展不会将参数传递到点击处理程序。
-   + [操作栏](./action-bar.md) 扩展提供了 `selections` 参数。
+   + [标题菜单](./header-menu.md#extension-registration) 扩展不会将参数传递到点击处理程序。
+   + [操作栏](./action-bar.md#extension-registration) 扩展提供了 `selections` 参数。
 
 ### 标题菜单扩展
 
