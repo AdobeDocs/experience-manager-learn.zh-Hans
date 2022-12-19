@@ -9,9 +9,9 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
+source-git-commit: 56e2cbadaceb9961de28454bfbed56a98df34c44
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -66,10 +66,12 @@ AEM内容片段控制台扩展可以针对该扩展所属的Adobe组织中的任
    + `&devMode=true`
    + `&ext=<LOCAL APPLICATION URL>`，通常 `&ext=https://localhost:9080`.
 
+   添加上述两个查询参数(`devMode` 和 `ext`)作为 __第__ 查询参数，因为内容片段控制台使用哈希路由(`#/@wknd/aem/...`)，因此在 `#` 将不起作用。
+
    测试URL应该类似于：
 
    ```
-   https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin&devMode=true&ext=https://localhost:9080
+   https://experience.adobe.com/?devMode=true&ext=https://localhost:9080&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
 1. 将测试URL复制并粘贴到浏览器中。
@@ -112,10 +114,12 @@ AEM内容片段控制台扩展可以针对该扩展所属的Adobe组织中的任
    + `&devMode=true`
    + `&ext=<DEPLOYED APPLICATION URL>`
 
+   添加上述两个查询参数(`devMode` 和 `ext`)作为 __第__ 查询参数，因为内容片段控制台使用哈希路由(`#/@wknd/aem/...`)，因此在 `#` 将不起作用。
+
    测试URL应该类似于：
 
    ```
-   https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin&devMode=true&ext=https://98765-123aquarat.adobeio-static.net/index.html
+   https://experience.adobe.com/?devMode=true&ext=https://98765-123aquarat.adobeio-static.net/index.html&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
 1. 将测试URL复制并粘贴到浏览器中。
