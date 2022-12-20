@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
+source-git-commit: 8f17e98c56c78824e8850402e3b79b3d47901c0b
 workflow-type: tm+mt
-source-wordcount: '1754'
+source-wordcount: '1759'
 ht-degree: 3%
 
 ---
@@ -227,6 +227,7 @@ ht-degree: 3%
    + [在自适应表单中嵌入PDF](document-services/embed-pdf-inline.md)
    + [PDF在轮播组件中](document-services/display-pdf-in-carousel.md)
    + [在AEM Forms中使用汇编程序服务](document-services/using-assembler-service-in-aem-forms.md)
+   + [使用汇编程序服务拼合XDP](document-services/xdp-stitching-using-assembler-service.md)
    + [在AEM Forms中使用监视文件夹](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms中使用条形码服务](document-services/barcode-service-adaptive-forms-article.md)
    + [在AEM Forms中使用PDFG服务](document-services/using-pdfg-in-aem-forms.md)
