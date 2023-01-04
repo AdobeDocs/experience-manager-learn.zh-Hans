@@ -10,9 +10,9 @@ recommendations: noDisplay
 kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
+source-git-commit: 8b683fdcea05859151b929389f7673075c359141
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '774'
 ht-degree: 4%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 4%
 
 AEM内容片段控制台扩展，需要 [Adobe Developer控制台项目](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console) 和 [应用程序生成器应用程序](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) 使用 `@adobe/aem-cf-admin-ui-ext-tpl` 模板，与Adobe Developer控制台项目关联。
 
-在生成应用程序生成器应用程序时，请根据扩展的用途，从以下功能中进行选择。 任何选项组合都可以在扩展中使用。
+在生成应用程序生成器应用程序时，请根据扩展的功能，从以下功能中进行选择。 任何选项组合都可以在扩展中使用。
 
 |  | 将按钮添加到 [标题菜单](./header-menu.md) | 将按钮添加到 [操作栏](./action-bar.md) | 显示 [模态](./modal.md) | 添加 [服务器端处理程序](./runtime-action.md) |
 | ------------------------------------------ | :-----------------------: | :----------------------: | :--------: | :--------------------:  |
@@ -193,7 +193,7 @@ Adobe Developer包含有关AEM内容片段控制台扩展的开发人员详细�
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">6.Adobe I/O Runtime行动</p>
-                    <p class="is-size-6">添加扩展可调用的无服务器Adobe I/O Runtime操作以与内容片段和AEM交互，以执行自定义业务操作。</p>
+                    <p class="is-size-6">添加无服务器Adobe I/O Runtime操作，扩展可调用该操作以与内容片段和AEM进行交互，以执行自定义业务操作。</p>
                     <a href="./runtime-action.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">添加Adobe I/O Runtime操作</span>
                     </a>
@@ -214,7 +214,7 @@ Adobe Developer包含有关AEM内容片段控制台扩展的开发人员详细�
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">7.测试</p>
-                    <p class="is-size-6">在开发过程中测试扩展，以及使用特殊URL将完成的扩展共享给QA或UAT测试人员。</p>
+                    <p class="is-size-6">在开发过程中测试扩展，并使用特殊URL将完成的扩展共享给QA或UAT测试人员。</p>
                     <a href="./test.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">测试扩展</span>
                     </a>
@@ -271,4 +271,28 @@ AEM内容片段控制台扩展示例。
             </div>
         </div>
     </div>
+    <!-- Bulk property update extension -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Image generation and upload to AEM extension">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-16by9">
+                    <a href="./example-extensions/image-generation-and-image-upload.md" title="生成图像并上传到AEM扩展" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./example-extensions/assets/digital-image-generation/screenshot.png" alt="生成图像并上传到AEM扩展">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small">
+                <div class="content">
+                    <p class="headline is-size-5 has-text-weight-bold">生成图像并上传到AEM扩展</p>
+                    <p class="is-size-6">浏览一个操作栏扩展示例，该扩展使用OpenAI生成图像，将其上传到AEM，并更新选定内容片段上的图像属性。</p>
+                    <a href="./example-extensions/image-generation-and-image-upload.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">浏览示例扩展</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </div>
