@@ -5,9 +5,9 @@ breadcrumb-title: AEM Sites 教程
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: c82965636ddeef7dc165e0bea079c99f1a16e0ca
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 25%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 25%
    + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)
    + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
+   + [响应式断点](developing/responsive-breakpoints.md)
    + [用风格体系发展](developing/style-system-technical-video-understand.md)
    + [样式系统最佳实践](developing/style-organization-style-system-understand-article.md)
    + [针对页面差异进行开发](developing/page-diff-technical-video-develop.md)
