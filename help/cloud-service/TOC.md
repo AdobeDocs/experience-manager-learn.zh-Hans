@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 8b683fdcea05859151b929389f7673075c359141
+source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '880'
 ht-degree: 20%
 
 ---
@@ -56,6 +56,8 @@ ht-degree: 20%
    + 可扩展性{#extensibility}
       + 内容片段控制台{#content-fragments}
          + [概述](./developing/extensibility/content-fragments/overview.md)
+         + [Adobe Developer控制台项目](./developing/extensibility/content-fragments/adobe-developer-console-project.md)
+         + [应用程序初始化](./developing/extensibility/content-fragments/app-initialization.md)
          + [扩展注册](./developing/extensibility/content-fragments/extension-registration.md)
          + [标题菜单](./developing/extensibility/content-fragments/header-menu.md)
          + [操作栏](./developing/extensibility/content-fragments/action-bar.md)

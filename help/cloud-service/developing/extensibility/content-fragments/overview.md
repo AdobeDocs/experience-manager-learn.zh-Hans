@@ -10,9 +10,9 @@ recommendations: noDisplay
 kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: 8b683fdcea05859151b929389f7673075c359141
+source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '742'
 ht-degree: 4%
 
 ---
@@ -59,7 +59,7 @@ Adobe Developer包含有关AEM内容片段控制台扩展的开发人员详细�
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console" title="创建Adobe Developer项目" tabindex="-1" target="_adobe-developer-com">
+                    <a href="./adobe-developer-console-project.md" title="创建Adobe Developer项目" tabindex="-1">
                         <img class="is-bordered-r-small" src="./assets/project/card.png" alt="创建Adobe Developer项目">
                     </a>
                 </figure>
@@ -68,7 +68,7 @@ Adobe Developer包含有关AEM内容片段控制台扩展的开发人员详细�
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">1.创建项目</p>
                     <p class="is-size-6">创建一个Adobe Developer Console项目，以定义其对其他Adobe服务的访问权限并管理其部署。</p>
-                    <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_adobe-developer-com">
+                    <a href="./adobe-developer-console-project.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">创建Adobe Developer项目</span>
                     </a>
                 </div>
@@ -80,7 +80,7 @@ Adobe Developer包含有关AEM内容片段控制台扩展的开发人员详细�
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation/#launch-code-generation-during-project-initialization" title="生成扩展应用程序" tabindex="-1" target="_adobe-developer-com">
+                    <a href="./app-initialization.md" title="生成扩展应用程序" tabindex="-1">
                         <img class="is-bordered-r-small" src="./assets/initialize-app/card.png" alt="初始化扩展应用程序">
                     </a>
                 </figure>
@@ -89,7 +89,7 @@ Adobe Developer包含有关AEM内容片段控制台扩展的开发人员详细�
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">2.初始化扩展应用程序</p>
                     <p class="is-size-6">初始化AEM内容片段控制台扩展应用程序生成器应用程序，该应用程序定义扩展的显示位置及其执行的工作。</p>
-                    <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation/#launch-code-generation-during-project-initialization" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_adobe-developer-com">
+                    <a href="./app-initialization.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">初始化扩展应用程序</span>
                     </a>
                 </div>

@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: 56e2cbadaceb9961de28454bfbed56a98df34c44
+source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 AEM内容片段控制台扩展可以针对该扩展所属的Adobe组织中的任何AEMas a Cloud Service环境进行测试。
 
 测试扩展是通过精心编制的URL完成的，该URL会指示AEM内容片段控制台加载扩展。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3412877/?quality=12&learn=on)
 
 ## AEM内容片段控制台URL
 
