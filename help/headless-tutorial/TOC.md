@@ -10,7 +10,7 @@ index: y
 source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
 source-wordcount: '269'
-ht-degree: 19%
+ht-degree: 21%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 19%
 
 + [AEM Headless概述](./overview.md)
 + GraphQL {#graphql}
-   + [AEM Headless开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+   + [AEM Headless开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
    + [概述](./graphql/overview.md)
    + 快速设置 {#quick-setup}
       + [云服务](./graphql/quick-setup/cloud-service.md)
@@ -29,9 +29,9 @@ ht-degree: 19%
       + [2 — 高级建模](./graphql/video-series/advanced-modeling.md)
       + [3 — 创建GraphQL查询](./graphql/video-series/creating-graphql-queries.md)
       + [4 — 内容片段变量](./graphql/video-series/content-fragment-variations.md)
-      + [5 - GraphQL端点](./graphql/video-series/graphql-endpoints.md)
+      + [5 -GraphQL端点](./graphql/video-series/graphql-endpoints.md)
       + [6 — 创作和发布架构](./graphql/video-series/author-publish-architecture.md)
-      + [7 - GraphQL持久查询](./graphql/video-series/graphql-persisted-queries.md)
+      + [7 - GraphQL保留查询](./graphql/video-series/graphql-persisted-queries.md)
    + 基本教程{#multi-step}
       + [概述](./graphql/multi-step/overview.md)
       + [1 — 定义内容片段模型](./graphql/multi-step/content-fragment-models.md)
@@ -43,7 +43,7 @@ ht-degree: 19%
       + [1 — 创建内容片段模型](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
       + [2 — 创作内容片段](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
       + [3 — 浏览AEM GraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
-      + [4 — 持久GraphQL查询](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
+      + [4 — 保留的GraphQL查询](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 — 客户端应用程序集成](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
 + 部署{#deployments}
    + [概述](./graphql/deployment/overview.md)
