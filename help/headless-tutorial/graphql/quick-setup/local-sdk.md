@@ -1,6 +1,6 @@
 ---
 title: AEM Headless使用本地SDK快速设置
-description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 安装AEM SDK、添加示例内容并部署使用AEM中内容的应用程序（其GraphQL API）。 了解AEM如何为全渠道体验提供支持。
+description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 安装AEM SDK、添加示例内容并部署使用GraphQL API从AEM中使用内容的应用程序。 了解AEM如何为全渠道体验提供支持。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6386
@@ -10,29 +10,28 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 64086f3f7b340b143bd281e2f6f802af07554ecf
+source-git-commit: f63ed212a5a8a6689b25bd0bc9438c605a129729
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1256'
 ht-degree: 1%
 
 ---
 
 # AEM Headless使用本地SDK快速设置 {#setup}
 
-AEM无头快速设置可让您使用WKND网站示例项目中的内容，以及通过AEM无头GraphQL API使用内容的示例React应用程序(SPA)，来实践AEM无头。 本指南使用 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
+AEM Headless快速设置可让您使用WKND网站示例项目中的内容来实践AEM Headless，以及一个可通过AEM Headless GraphQL API使用内容的示例React应用程序(SPA)。 本指南使用 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
 
 ## 前提条件 {#prerequisites}
 
 应在本地安装以下工具：
 
 * [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Cont%2Fjcr%3Alast&amp;by.sort=desc&amp;list=0&amp;p.offset=14)
-* [Node.js v10+](https://nodejs.org/en/)
-* [npm 6+](https://www.npmjs.com/)
+* [Node.js v14.x](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
 
 ## 1.安装AEM SDK {#aem-sdk}
 
-此设置使用 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?#aem-as-a-cloud-service-sdk) 浏览AEM GraphQL API。 本节提供了有关安装AEM SDK并在创作模式下运行该SDK的快速指南。 有关设置本地开发环境的更详细指南 [可在此处找到](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html#local-development-environment-set-up).
+此设置使用 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?#aem-as-a-cloud-service-sdk) 来浏览AEM GraphQL API。 本节提供了有关安装AEM SDK并在创作模式下运行该SDK的快速指南。 有关设置本地开发环境的更详细指南 [可在此处找到](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html#local-development-environment-set-up).
 
 >[!NOTE]
 >
@@ -148,7 +147,7 @@ WKND站点包括公开 [GraphQL端点](https://experienceleague.adobe.com/docs/e
 
 1. 使用浏览器的开发人员工具检查 **网络** 请求。 查看 **XHR** 请求和观察多个GET请求 `/graphql/execute.json/...`. 此路径前缀将调用AEM持久化查询端点，从而选择要使用前缀后面的名称和编码参数执行的持久化查询。
 
-   ![GraphQL端点XHR请求](assets/quick-setup/aem-sdk/react-app__graphql-request.png)
+   ![GraphQL Endpoint XHR请求](assets/quick-setup/aem-sdk/react-app__graphql-request.png)
 
 ## 4.在AEM中编辑内容
 
@@ -180,7 +179,7 @@ WKND站点包括公开 [GraphQL端点](https://experienceleague.adobe.com/docs/e
 
 ## 恭喜！{#congratulations}
 
-恭喜，您现在有一个外部应用程序使用GraphQL的AEM内容。 您可以随时在React应用程序中检查代码，并继续尝试修改现有的内容片段。
+恭喜，您现在有一个外部应用程序正在使用AEM内容与GraphQL。 您可以随时在React应用程序中检查代码，并继续尝试修改现有的内容片段。
 
 ### 后续步骤
 
