@@ -9,15 +9,15 @@ level: Beginner
 kt: 11649
 thumbnail: KT-11649.png
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: 8b683fdcea05859151b929389f7673075c359141
+source-git-commit: d902eb9a8d497a43c8d4ca63767f81a35eadf139
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
 
 
-# 生成数字图像，上传到AEM扩展示例
+# 基于OpenAI的数字图像生成，上传到AEM扩展示例
 
 ![数字图像生成](./assets/digital-image-generation/screenshot.png){align="center"}
 
@@ -43,6 +43,10 @@ ht-degree: 1%
 1. 接下来，在预定义路径下启动从App Builder运行时到AEM DAM的图像上传。
 1. AEMas a Cloud Service将图像保存到DAM，并返回对Adobe I/O Runtime操作的成功或失败响应。 成功的上传响应会使用Adobe I/O Runtime操作中对AEM的另一个HTTP请求来更新选定内容片段的图像属性值。
 1. 该模式窗口会收到来自Adobe I/O Runtime操作的响应，并提供新生成的上传图像的AEM资产详细信息链接。
+
+此视频回顾了使用OpenAI或DALL.E 2扩展生成图像的示例，其工作方式以及开发方式。 视频具有章节标记，例如 __功能演示、设置和技术代码__ 来快速观看相关内容。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3413093/?quality=12&learn=on)
 
 
 ## App Builder扩展应用程序
