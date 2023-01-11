@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
+source-git-commit: 3a77f99de25ad6dab37d4ee12b31f12b94f0ec73
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '879'
 ht-degree: 20%
 
 ---
@@ -66,8 +66,8 @@ ht-degree: 20%
          + [测试](./developing/extensibility/content-fragments/test.md)
          + [部署](./developing/extensibility/content-fragments/deploy.md)
          + 扩展示例{#example-extensions}
-            + [批量属性更新扩展](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
-            + [生成图像并上传到AEM](./developing/extensibility/content-fragments/example-extensions/image-generation-and-image-upload.md)
+            + [批量属性更新](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
+            + [AEM使用OpenAI生成图像资产](./developing/extensibility/content-fragments/example-extensions/image-generation-and-image-upload.md)
    + 开发基础知识{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本地开发环境](./developing/basics/local-development-environment.md)
