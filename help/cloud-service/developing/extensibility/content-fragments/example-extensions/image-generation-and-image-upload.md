@@ -1,5 +1,5 @@
 ---
-title: 通过内容片段控制台扩展生成基于OpenAI的图像
+title: 通过自定义内容片段控制台扩展生成OpenAI图像
 description: AEM内容片段控制台扩展的示例，该扩展使用OpenAI或DALL-E 2从自然语言描述生成数字图像，并将生成的图像上传到AEM，并将其与内容片段关联。
 feature: Developer Tools
 version: Cloud Service
@@ -9,15 +9,15 @@ level: Beginner
 kt: 11649
 thumbnail: KT-11649.png
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: d902eb9a8d497a43c8d4ca63767f81a35eadf139
+source-git-commit: 06c09affd427a4818f5a916a84490f9ed09d372c
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1313'
 ht-degree: 1%
 
 ---
 
 
-# 基于OpenAI的数字图像生成，上传到AEM扩展示例
+# AEM使用OpenAI生成图像资产
 
 ![数字图像生成](./assets/digital-image-generation/screenshot.png){align="center"}
 
