@@ -7,7 +7,7 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
 source-wordcount: '1705'
 ht-degree: 0%
@@ -251,7 +251,7 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 当从 `/etc/httpd/conf.dispatcher.d/available_farms/` 目录符号链接到 `/etc/httpd/conf.dispatcher.d/enabled_farms/` 将在运行配置中使用的目录。
 
-场文件具有基于 [场的顶级部分](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-farms-farms) 如cache、clientheader、filter、renders和vhosts。
+场文件具有基于 [场的顶级部分](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms) 如cache、clientheader、filter、renders和vhosts。
 
 的 `FILENAME_farm.any` 文件将根据需要包含在场文件中的位置为每个文件包含包含语句。  以下是 `FILENAME_farm.any` 文件作为良好引用：
 

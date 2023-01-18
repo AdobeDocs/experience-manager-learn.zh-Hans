@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1161'
 ht-degree: 1%
 
 ---
@@ -128,7 +128,7 @@ Apache Web Server非常可扩展，当模块具有大量配置文件时，最佳
 
 #### 暂存和启用的场
 
-以下目录允许您构建配置文件，其中有一个暂存区域，您可以处理文件，并且只在文件准备就绪后才启用暂存区域。
+以下目录允许您构建配置文件，其中有一个暂存区域，您可以处理文件，并且只在文件准备就绪后启用暂存区域。
 - `/etc/httpd/conf.dispatcher.d/available_farms/`
    - 此文件夹托管 `/myfarm {` 已调用 `_farm.any`
 - `/etc/httpd/conf.dispatcher.d/enabled_farms/`
@@ -146,7 +146,7 @@ Apache Web Server非常可扩展，当模块具有大量配置文件时，最佳
 
 #### 客户端头目录
 
-此目录可以包含 `_clientheaders.any` 您创建的文件包含请求传入时要传递到AEM的Client Headers列表。  有关此部分的更多详细信息，请访问此处 [此处](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
+此目录可以包含 `_clientheaders.any` 您创建的文件包含请求传入时要传递到AEM的Client Headers列表。  有关此部分的更多详细信息包括 [此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 
