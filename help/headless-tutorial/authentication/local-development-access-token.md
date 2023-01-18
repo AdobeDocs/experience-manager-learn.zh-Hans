@@ -12,10 +12,11 @@ thumbnail: 330477.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
+last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
+source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -40,6 +41,7 @@ ht-degree: 0%
 1. 打开包含AEMas a Cloud Service环境的程序以与集成
 1. 点按 __省略号__ 中环境旁边的 __环境__ ，然后选择 __开发人员控制台__
 1. 在中点按 __集成__ 选项卡
+1. 点按 __本地令牌__ 选项卡
 1. 点按 __获取本地开发令牌__ 按钮
 1. 点按 __下载按钮__ 下载包含 `accessToken` ，并将JSON文件保存到开发计算机上的安全位置。
    + 这是您24小时内对AEMas a Cloud Service环境的开发人员访问令牌。

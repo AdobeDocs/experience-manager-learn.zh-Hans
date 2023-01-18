@@ -12,10 +12,11 @@ thumbnail: 330519.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
+last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
+source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1931'
 ht-degree: 0%
 
 ---
@@ -28,10 +29,11 @@ ht-degree: 0%
 
 服务凭据可能显示类似 [本地开发访问令牌](./local-development-access-token.md) 但在几个关键方面却有所不同：
 
++ 服务凭据与技术帐户关联。 一个技术帐户可以使用多个服务凭据。
 + 服务凭据为 _not_ 访问令牌，而不是用于 _获取_ 访问令牌。
-+ 服务凭据更为永久（每365天过期一次），除非被撤销，否则不会更改，而本地开发访问令牌会每天过期。
++ 服务凭据更为永久（其证书每365天过期），除非被撤消，否则不会更改，而本地开发访问令牌会每天过期。
 + AEMas a Cloud Service环境的服务凭据映射到单个AEM技术帐户用户，而本地开发访问令牌将验证为生成访问令牌的AEM用户。
-+ AEMas a Cloud Service环境有一个可映射到一个技术帐户AEM用户的服务凭据。 服务凭据不能用于与不同技术帐户AEM用户一样对同一AEMas a Cloud Service环境进行身份验证。
++ 一个AEMas a Cloud Service环境最多可以拥有10个技术帐户，每个帐户具有自己的服务凭据，每个帐户都映射到离散的技术帐户AEM用户。
 
 应将服务凭据及其生成的访问令牌和本地开发访问令牌均保密。 由于所有这三种环境均可用于获取，因此可以访问各自的AEMas a Cloud Service环境。
 
@@ -39,27 +41,27 @@ ht-degree: 0%
 
 服务凭据生成分为两个步骤：
 
-1. 由Adobe IMS组织管理员进行的一次性服务凭据初始化
-1. 服务凭据JSON的下载和使用
+1. 由Adobe IMS组织管理员一次性创建技术帐户
+1. 技术帐户的服务凭据JSON的下载和使用
 
-### 服务凭据初始化
+### 创建技术帐户
 
-与本地开发访问令牌不同，服务凭据需要 _一次性初始化_ 由Adobe组织IMS管理员下载。
+与本地开发访问令牌不同，服务凭据要求Adobe组织IMS管理员先创建技术帐户，然后才能下载。 应为每个需要以编程方式访问AEM的客户端创建离散技术帐户。
 
-![初始化服务凭据](assets/service-credentials/initialize-service-credentials.png)
+![创建技术帐户](assets/service-credentials/initialize-service-credentials.png)
 
-__这是每个AEMas a Cloud Service环境的一次性初始化__
+技术帐户只创建一次，但随着时间的推移，可以管理用于管理与技术帐户关联的服务凭据的私钥。 例如，必须在当前私钥过期之前生成新的私钥/服务凭据，以便用户能够不间断地访问服务凭据。
 
-1. 确保您以以下方式登录：
-   + 您的Adobe IMS组织管理员
-   + 成员 __Cloud Manager — 开发人员__ IMS产品配置文件
-   + 成员 __AEM用户__ 或 __AEM管理员__ 上的IMS产品配置文件 __AEM作者__
+1. 确保您已作为以下用户登录：
+   + __Adobe IMS组织的管理员__
+   + 成员 __AEM管理员__ 上的IMS产品配置文件 __AEM作者__
 1. 登录到 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 打开包含AEMas a Cloud Service环境的程序，以集成为
 1. 点按中环境旁边的省略号 __环境__ ，然后选择 __开发人员控制台__
 1. 在中点按 __集成__ 选项卡
-1. 点按 __获取服务凭据__ 按钮
-1. 服务凭据已初始化，并显示为JSON
+1. 点按 __技术帐户__ 选项卡
+1. 点按 __创建新技术帐户__ 按钮
+1. 技术帐户的服务凭据已初始化，并显示为JSON
 
 ![AEM Developer Console — 集成 — 获取服务凭据](./assets/service-credentials/developer-console.png)
 
@@ -69,20 +71,20 @@ __这是每个AEMas a Cloud Service环境的一次性初始化__
 
 ![下载服务凭据](assets/service-credentials/download-service-credentials.png)
 
-下载服务凭据的步骤与初始化的步骤相同。 如果尚未进行初始化，则用户在点按 __获取服务凭据__ 按钮。
+下载服务凭据的步骤与初始化步骤类似。
 
 1. 确保您已作为以下用户登录：
-   + 成员 __Cloud Manager — 开发人员__ IMS产品配置文件(用于授予对AEM开发人员控制台的访问权限)
-      + 沙盒AEMas a Cloud Service环境不需要  __Cloud Manager — 开发人员__ 会员资格
-   + 成员 __AEM用户__ 或 __AEM管理员__ 上的IMS产品配置文件 __AEM作者__
+   + __Adobe IMS组织的管理员__
+   + 成员 __AEM管理员__ 上的IMS产品配置文件 __AEM作者__
 1. 登录到 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 打开包含AEMas a Cloud Service环境的程序以与集成
 1. 点按中环境旁边的省略号 __环境__ ，然后选择 __开发人员控制台__
 1. 在中点按 __集成__ 选项卡
-1. 点按 __获取服务凭据__ 按钮
-1. 点按左上角的下载按钮，下载包含服务凭据值的JSON文件，并将文件保存到安全位置。
-
-+ _如果服务凭据受损，请立即联系Adobe支持部门以撤销它们_
+1. 点按 __技术帐户__ 选项卡
+1. 展开 __技术帐户__ 使用
+1. 展开 __私钥__ 将下载其服务凭据，并验证状态是否为 __活动__
+1. 点按 __...__ > __查看__ 与 __私钥__，显示服务凭据JSON
+1. 点按左上角的下载按钮，下载包含服务凭据值的JSON文件，并将文件保存到安全位置
 
 ## 安装服务凭据
 
@@ -91,7 +93,7 @@ __这是每个AEMas a Cloud Service环境的一次性初始化__
 为了简单起见，本教程将通过命令行传递服务凭据。 但是，请与您的IT安全团队合作，了解如何根据贵组织的安全准则存储和访问这些凭据。
 
 1. 复制 [下载了服务凭据JSON](#download-service-credentials) 到名为 `service_token.json` 在项目的根中
-   + 但请记住，切勿向Git提交任何凭据！
+   + 记住，永远不要承诺 _任何凭据_ 去Git!
 
 ## 使用服务凭据
 
@@ -115,18 +117,18 @@ __这是每个AEMas a Cloud Service环境的一次性初始化__
 
 1. 在服务凭据中阅读
 
-+ 为了简单起见，我们从下载的JSON文件中读取了这些内容，但在实际使用场景中，必须按照贵组织的安全准则安全地存储服务凭据
++ 为简便起见，服务凭据是从下载的JSON文件中读取的，但在实际使用场景中，必须按照贵组织的安全准则安全地存储服务凭据
 
 1. 从服务凭据生成JWT
 1. 将JWT交换为访问令牌
 
-+ 当存在服务凭据时，我们的外部应用程序在访问AEMas a Cloud Service时会使用此访问令牌而不是本地开发访问令牌
++ 当存在服务凭据时，外部应用程序在访问AEMas a Cloud Service时会使用此访问令牌而不是本地开发访问令牌
 
 在本教程中，Adobe `@adobe/jwt-auth` npm模块用于两者，(1)从服务凭据生成JWT，(2)在单个函数调用中将其交换为访问令牌。 如果您的应用程序不基于JavaScript，请查看 [其他语言的示例代码](https://developer.adobe.com/developer-console/docs/guides/) 以了解如何从服务凭据创建JWT，并将其与Adobe IMS交换为访问令牌。
 
 ## 阅读服务凭据
 
-查看 `getCommandLineParams()` 并查看，我们可以使用与本地开发访问令牌JSON中读取的代码一样的代码在服务凭据JSON文件中读取。
+查看 `getCommandLineParams()` 因此，请参阅如何使用本地开发访问令牌JSON中用于读取的相同代码读取服务凭据JSON文件。
 
 ```javascript
 function getCommandLineParams() {
@@ -151,7 +153,7 @@ function getCommandLineParams() {
 
 1. 更新 `getAccessToken(..)` 用于检查JSON文件内容并确定它是否表示本地开发访问令牌或服务凭据。 这可以通过检查 `.accessToken` 属性，该属性仅存在于本地开发访问令牌JSON中。
 
-   如果提供了服务凭据，则应用程序会生成JWT并与Adobe IMS交换JWT以获取访问令牌。 我们使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)&#39;s `auth(...)` 函数，该函数在单个函数调用中生成JWT并将其交换为访问令牌。 的参数 `auth(..)` 方法是 [由特定信息组成的JSON对象](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) 可从服务凭据JSON中获取，如代码中所述。
+   如果提供了服务凭据，则应用程序会生成JWT并与Adobe IMS交换JWT以获取访问令牌。 使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)&#39;s `auth(...)` 函数，该函数生成JWT并在单个函数调用中为访问令牌交换JWT。 的参数 `auth(..)` 方法是 [由特定信息组成的JSON对象](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) 可从服务凭据JSON中获取，如代码中所述。
 
 ```javascript
  async function getAccessToken(developerConsoleCredentials) {
@@ -211,7 +213,7 @@ function getCommandLineParams() {
 
 ## 在AEM中配置访问权限
 
-服务凭据派生的访问令牌使用的技术帐户AEM用户，该用户在参与者AEM用户组中具有成员资格。
+服务凭据派生的访问令牌使用的技术帐户AEM用户在 __参与者__ AEM用户组。
 
 ![服务凭据 — 技术帐户AEM用户](./assets/service-credentials/technical-account-user.png)
 
