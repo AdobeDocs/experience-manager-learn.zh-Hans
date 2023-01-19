@@ -1,5 +1,5 @@
 ---
-title: 探索AEM GraphQL API - AEM无头 — GraphQL的高级概念
+title: 探索AEM GraphQL API - AEM Headless的高级概念 — GraphQL
 description: 使用GraphiQL IDE发送GraphQL查询。 了解如何使用过滤器、变量和指令进行高级查询。 查询片段和内容引用，包括多行文本字段中的引用。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
@@ -7,16 +7,16 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
-# 浏览AEM GraphQL API
+# 探索AEM GraphQL API
 
-AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 在基本教程中 [多步GraphQL教程](../multi-step/explore-graphql-api.md)，则使用GraphiQL资源管理器来测试和优化GraphQL查询。
+AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 在基本教程中 [多步GraphQL教程](../multi-step/explore-graphql-api.md)，则会使用GraphiQL资源管理器来测试和优化GraphQL查询。
 
 在本章中，您可以使用GraphiQL资源管理器定义更高级的查询来收集您在 [上一章节](../advanced-graphql/author-content-fragments.md).
 
@@ -39,7 +39,7 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 
 的 [GraphiQL资源管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 该工具允许开发人员在当前AEM环境中针对内容创建和测试查询。 GraphiQL工具还允许用户 **保留或保存** 要由客户端应用程序在生产设置中使用的查询。
 
-接下来，使用内置的GraphiQL资源管理器来探索AEM GraphQL API的强大功能。
+接下来，使用内置的GraphiQL Explorer探索AEM GraphQL API的强大功能。
 
 1. 从AEM开始屏幕中，导航到 **工具** > **常规** > **GraphQL查询编辑器**.
 
@@ -47,7 +47,7 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 
 >[!IMPORTANT]
 >
->在中，需要手动安装AEM(6.X.X)的某些版本的GraphiQL Explorer（又称GraphiQL IDE）工具，请遵循 [从此处](../multi-step/explore-graphql-api.md#install-the-graphiql-tool-optional).
+>在中，需要手动安装AEM(6.X.X)的某些版本的GraphiQL Explorer（又称GraphiQL IDE）工具，请遵循 [从此处](../how-to/install-graphiql-aem-6-5.md).
 
 1. 在右上角，确保将端点设置为 **WKND共享端点**. 更改 _端点_ 此处的下拉值显示现有 _持久化查询_ 在左上角。
 
@@ -150,7 +150,7 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 
 ## 片段引用中的内容过滤器
 
-AEM GraphQL API允许您查询嵌套内容片段。 在上一章中，您为冒险内容片段添加了三个新片段引用： `location`, `instructorTeam`和 `administrator`. 现在，让我们过滤所有具有特定名称的管理员的历险。
+AEM GraphQL API允许您查询嵌套的内容片段。 在上一章中，您为冒险内容片段添加了三个新片段引用： `location`, `instructorTeam`和 `administrator`. 现在，让我们过滤所有具有特定名称的管理员的历险。
 
 >[!CAUTION]
 >
@@ -725,4 +725,4 @@ query getAdventureDetailsBySlug($slug: String!) {
 
 ## 下面的步骤
 
-在 [下一章](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)，您将了解如何保留GraphQL查询，以及在应用程序中使用持久查询的最佳实践原因。
+在 [下一章](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)，您将了解如何保留GraphQL查询，以及为何在应用程序中使用持久查询是最佳做法。

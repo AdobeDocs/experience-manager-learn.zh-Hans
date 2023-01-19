@@ -1,5 +1,5 @@
 ---
-title: 浏览GraphQL API - AEM无头入门 — GraphQL
+title: 浏览GraphQL API - AEM Headless快速入门 — GraphQL
 description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 使用内置的GrapiQL IDE浏览AEM GraphQL API。 了解AEM如何根据内容片段模型自动生成GraphQL模式。 尝试使用GraphQL语法构建基本查询。
 version: Cloud Service
 mini-toc-levels: 1
@@ -10,18 +10,18 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: 25c289b093297e870c52028a759d05628d77f634
+source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
 workflow-type: tm+mt
-source-wordcount: '1535'
-ht-degree: 4%
+source-wordcount: '1454'
+ht-degree: 2%
 
 ---
 
 # 浏览GraphQL API {#explore-graphql-apis}
 
-AEM的GraphQL API提供了一种功能强大的查询语言，用于向下游应用程序公开内容片段的数据。 内容片段模型定义内容片段使用的数据架构。 每当创建或更新内容片段模型时，架构都会进行转换并添加到构成GraphQL API的“图形”中。
+AEM的GraphQL API提供了一种功能强大的查询语言，用于向下游应用程序公开内容片段的数据。 内容片段模型定义内容片段使用的数据架构。 每当创建或更新内容片段模型时，架构都会进行翻译并添加到构成GraphQL API的“图形”中。
 
-在本章中，我们探索一些常见的GraphQL查询，以使用名为 [GraphiQL](https://github.com/graphql/graphiql). GraphiQL IDE允许您快速测试和优化返回的查询和数据。 它还提供了对文档的轻松访问，从而便于学习和了解可用的方法。
+在本章中，我们将探索一些常见的GraphQL查询，以使用名为 [GraphiQL](https://github.com/graphql/graphiql). GraphiQL IDE允许您快速测试和优化返回的查询和数据。 它还提供了对文档的轻松访问，从而便于学习和了解可用的方法。
 
 ## 前提条件 {#prerequisites}
 
@@ -37,7 +37,7 @@ AEM的GraphQL API提供了一种功能强大的查询语言，用于向下游应
 
 ## 启用 GraphQL 端点 {#enable-graphql-endpoint}
 
-必须配置GraphQL端点以为内容片段启用GraphQL API查询。
+必须配置GraphQL端点才能为内容片段启用GraphQL API查询。
 
 1. 从AEM开始屏幕中，导航到 **工具** > **常规** > **GraphQL**.
 
@@ -46,13 +46,13 @@ AEM的GraphQL API提供了一种功能强大的查询语言，用于向下游应
 1. 点按 **创建** 在右上角的结果对话框中，输入以下值：
 
    * 名称*: **我的项目端点**.
-   * 使用…… *提供的GraphQL模式： **我的项目**
+   * 使用…… *提供的GraphQL架构： **我的项目**
 
    ![创建GraphQL端点](assets/explore-graphql-api/create-graphql-endpoint.png)
 
    点按 **创建** 以保存端点。
 
-   基于项目配置创建的GraphQL端点仅会针对属于该项目的模型启用查询。 在这种情况下，仅对 **人员** 和 **团队** 可以使用模型。
+   基于项目配置创建的GraphQL端点仅会对属于该项目的模型启用查询。 在这种情况下，仅对 **人员** 和 **团队** 可以使用模型。
 
    >[!NOTE]
    >
@@ -111,7 +111,7 @@ AEM的GraphQL API提供了一种功能强大的查询语言，用于向下游应
 
    ![短名称和描述结果](assets/explore-graphql-api/updated-query-shortname-description.png)
 
-   的 `shortname` 是一个简单的属性， `description` 是多行文本字段，GraphQL API允许我们为诸如之类的结果选择各种格式 `html`, `markdown`, `json`或 `plaintext`.
+   的 `shortname` 是一个简单的属性， `description` 是一个多行文本字段，GraphQL API允许我们为诸如之类的结果选择各种格式 `html`, `markdown`, `json`或 `plaintext`.
 
 ### 嵌套片段的查询
 
@@ -395,7 +395,7 @@ AEM的GraphQL API提供了一种功能强大的查询语言，用于向下游应
 
 ## 其他资源
 
-在 [了解如何将GraphQL与AEM结合使用 — 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+有关GraphQL查询的更多信息，请访问 [了解如何将GraphQL与AEM结合使用 — 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
 
 ## 恭喜！ {#congratulations}
 
@@ -403,21 +403,9 @@ AEM的GraphQL API提供了一种功能强大的查询语言，用于向下游应
 
 ## 后续步骤 {#next-steps}
 
-在下一章中， [构建React应用程序](./graphql-and-react-app.md)，您可以了解外部应用程序如何查询AEM GraphQL端点并使用这两个持久查询。 在GraphQL查询执行过程中，还介绍了一些基本的错误处理。
+在下一章中， [构建React应用程序](./graphql-and-react-app.md)，您可以了解外部应用程序如何查询AEM GraphQL端点并使用这两个持久查询。 此外，还介绍了在GraphQL查询执行期间处理一些基本错误的情况。
 
 ## 安装GraphiQL工具（可选） {#install-graphiql}
 
-在AEM(6.X.X)的某些版本中，需要手动安装GraphiQL IDE工具，请按照以下说明操作：
+在AEM(6.X.X)的某些版本中，需要手动安装GraphiQL IDE工具，请使用 [此处的说明](../how-to/install-graphiql-aem-6-5.md).
 
-1. 导航到&#x200B;**[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service**。
-1. 搜索“GraphiQL”（请确保包括了 **GraphiQL** 中的 **i**）。
-1. 下载最新的 **GraphiQL Content Package v.x.x.x**。
-
-   ![下载GraphiQL包](assets/explore-graphql-api/software-distribution.png)
-
-   zip文件是可直接安装的AEM包。
-
-1. 从AEM开始菜单中，导航到 **工具** > **部署** > **包**.
-1. 单击&#x200B;**上传软件包**，然后选择在之前步骤中下载的软件包。单击&#x200B;**安装**&#x200B;可安装软件包。
-
-   ![安装GraphiQL包](assets/explore-graphql-api/install-graphiql-package.png)
