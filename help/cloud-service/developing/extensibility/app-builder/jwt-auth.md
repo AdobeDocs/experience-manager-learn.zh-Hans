@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 kt: 11743
 last-substantial-update: 2023-01-17T00:00:00Z
-source-git-commit: 0990fc230e2a36841380b5b0c6cd94dca24614fa
+source-git-commit: de2788d8f3971a47fca53e35ee84cbbaa0137140
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '436'
 ht-degree: 1%
 
 ---
@@ -70,14 +70,14 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 
 1. 打开 `Terminal`
 1. `$ base64 -i /path/to/private.key | pbcopy`
-
-base64输出将自动复制剪贴板
+1. base64输出将自动复制剪贴板
 
 >[!TAB Windows]
 
 1. 打开 `Command Prompt`
 1. `$ certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
-1. 复制的内容 `encoded-private.key` 到剪贴板
+1. `$ findstr /v CERTIFICATE C:\path\to\encoded-private.key`
+1. 将base64输出复制到剪贴板
 
 >[!TAB Linux®]
 
@@ -87,14 +87,14 @@ base64输出将自动复制剪贴板
 
 >[!ENDTABS]
 
-例如，可以将以下值添加到 `JWT_PRIVATE_KEY` 键 `.env`:
+例如，可以将以下base64编码的私钥添加到 `JWT_PRIVATE_KEY` 键 `.env`:
 
 ```
 ...
 JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 ```
 
-## 扩展配置
+## 输入映射
 
 在 `.env` 文件，则必须将它们映射到AppBuilder操作输入，以便在操作本身中读取它们。 为此，请在 `ext.config.yaml` 操作 `inputs` 格式： `INPUT_NAME=$ENV_KEY`.
 
@@ -130,7 +130,7 @@ runtimeManifest:
 下定义的键 `inputs` 在 `params` 对象。
 
 
-## 将JWT凭据转换为访问令牌
+## 用于访问令牌的JWT凭据
 
 在应用程序生成器操作中，JWT凭据在 `params` 对象，可用方式为 [`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth) ，以生成访问令牌，而访问令牌又可以访问其他AdobeAPI和服务。
 
