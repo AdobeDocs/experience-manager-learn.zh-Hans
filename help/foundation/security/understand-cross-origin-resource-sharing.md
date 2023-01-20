@@ -11,9 +11,9 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: 7c2115945e2d62f52c777bba4d736ecd3262eecc
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '913'
 ht-degree: 1%
 
 ---
@@ -89,38 +89,84 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略都表示为
 
 网站1是可通过以下方式使用内容的基本、可匿名访问的只读方案 [!DNL GET] 请求：
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:primaryType="sling:OsgiConfig"
-    alloworigin="[https://site1.com]"
-    alloworiginregexp="[]"
-    allowedpaths="[/content/site1/.*]"
-    exposedheaders="[]"
-    maxage="{Long}1800"
-    supportedheaders="[Origin,Accept,X-Requested-With,Content-Type,
-Access-Control-Request-Method,Access-Control-Request-Headers]"
-    supportedmethods="[GET]"
-    supportscredentials="{Boolean}false"
-/>
+```json
+{
+  "supportscredentials":false,
+  "exposedheaders":[
+    ""
+  ],
+  "supportedmethods":[
+    "GET",
+    "HEAD",
+    "OPTIONS"
+  ],
+  "alloworigin":[
+    "http://127.0.0.1:3000",
+    "https://site1.com"
+    
+  ],
+  "maxage:Integer": 1800,
+  "alloworiginregexp":[
+    "http://localhost:.*"
+    "https://.*\.site1\.com"
+  ],
+  "allowedpaths":[
+    "/content/_cq_graphql/site1/endpoint.json",
+    "/graphql/execute.json.*",
+    "/content/site1/.*"
+  ],
+  "supportedheaders":[
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers",
+  ]
+}
 ```
 
-站点2更复杂，需要授权且不安全的请求：
+站点2更复杂，需要授权和变更(POST、PUT、DELETE)请求：
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:primaryType="sling:OsgiConfig"
-    alloworigin="[https://site2.com]"
-    alloworiginregexp="[]"
-    allowedpaths="[/content/site2/.*,/libs/granite/csrf/token.json]"
-    exposedheaders="[]"
-    maxage="{Long}1800"
-    supportedheaders="[Origin,Accept,X-Requested-With,Content-Type,
-Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-Token]"
-    supportedmethods="[GET,HEAD,POST,DELETE,OPTIONS,PUT]"
-    supportscredentials="{Boolean}true"
-/>
+```json
+{
+  "supportscredentials":true,
+  "exposedheaders":[
+    ""
+  ],
+  "supportedmethods":[
+    "GET",
+    "HEAD"
+    "POST",
+    "DELETE",
+    "OPTIONS",
+    "PUT"
+  ],
+  "alloworigin":[
+    "http://127.0.0.1:3000",
+    "https://site2.com"
+    
+  ],
+  "maxage:Integer": 1800,
+  "alloworiginregexp":[
+    "http://localhost:.*"
+    "https://.*\.site2\.com"
+  ],
+  "allowedpaths":[
+    "/content/site2/.*",
+    "/libs/granite/csrf/token.json",
+  ],
+  "supportedheaders":[
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers",
+    "Authorization",
+    "CSRF-Token"
+  ]
+}
 ```
 
 ## 调度程序缓存问题和配置 {#dispatcher-caching-concerns-and-configuration}
