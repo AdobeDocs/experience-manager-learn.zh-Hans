@@ -12,16 +12,16 @@ kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 2%
+source-wordcount: '1151'
+ht-degree: 1%
 
 ---
 
 # 组件基础知识 {#component-basics}
 
-在本章中，我们将通过一个简单的界面来探索Adobe Experience Manager(AEM)站点组件的基础技术 `HelloWorld` 示例。 对现有组件进行了细微修改，涵盖创作、HTL、Sling模型、客户端库等主题。
+在本章中，我们将通过一个简单的工具来探索Adobe Experience Manager(AEM)站点组件的基础技术 `HelloWorld` 示例。 对现有组件进行了细微修改，涵盖创作、HTL、Sling模型、客户端库等主题。
 
 ## 前提条件 {#prerequisites}
 
@@ -35,9 +35,9 @@ ht-degree: 2%
 1. 了解如何使用对话框来促进内容创作。
 1. 了解客户端库的基础知识，以包含用于支持组件的CSS和JavaScript。
 
-## 将构建的内容 {#what-you-will-build}
+## 要构建的内容 {#what-build}
 
-在本章中，您将对非常简单的操作执行一些修改 `HelloWorld` 组件。 在更新 `HelloWorld` 组件，您将了解AEM组件开发的关键方面。
+在本章中，您对简单的 `HelloWorld` 组件。 在对 `HelloWorld` 组件，您可以了解AEM组件开发的关键方面。
 
 ## 章节入门项目 {#starter-project}
 
@@ -49,7 +49,7 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/330985/?quality=12&learn=on)
 
-打开新命令行终端并执行以下操作。
+打开新的命令行终端并执行以下操作。
 
 1. 在空目录中，克隆 [aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) 存储库：
 
@@ -85,7 +85,7 @@ ht-degree: 2%
 
 ## 组件创作 {#component-authoring}
 
-组件可以视为网页的小模块化构建块。 要重复使用组件，必须对组件进行配置。 此操作可通过创作对话框完成。 接下来，我们将创作一个简单的组件，并检查对话框中的值是如何在AEM中保留的。
+组件可以视为网页的小模块化构建块。 要重复使用组件，必须对组件进行配置。 此操作可通过创作对话框完成。 接下来，让我们创作一个简单的组件，并检查对话框中的值是如何在AEM中保留的。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330986/?quality=12&learn=on)
 
@@ -95,22 +95,22 @@ ht-degree: 2%
 1. 添加 **Hello World组件** 到新创建的页面。
 1. 打开组件的对话框，然后输入一些文本。 保存更改以查看页面上显示的消息。
 1. 切换到开发人员模式，在CRXDE-Lite中查看内容路径，并检查组件实例的属性。
-1. 使用CRXDE-Lite查看 `cq:dialog` 和 `helloworld.html` 位于 `/apps/wknd/components/content/helloworld`.
+1. 使用CRXDE-Lite查看 `cq:dialog` 和 `helloworld.html` 从 `/apps/wknd/components/content/helloworld`.
 
 ## HTL(HTML模板语言)和对话框 {#htl-dialogs}
 
-HTML模板语言或 **[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)** 是AEM组件用于呈现内容的轻量级服务器端模板语言。
+HTML模板语言或 **[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)** 是AEM组件用于呈现内容的轻量级服务器端模板语言。
 
 **对话框** 定义可用于组件的配置。
 
-接下来，我们将更新 `HelloWorld` HTL脚本，在文本消息前显示附加问候语。
+接下来，让我们更新 `HelloWorld` HTL脚本，在文本消息之前显示额外的问候语。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330987/?quality=12&learn=on)
 
 以下是在上述视频中执行的高级步骤。
 
 1. 切换到IDE，然后将项目打开到 `ui.apps` 模块。
-1. 打开 `helloworld.html` 文件，并对HTML标记进行更改。
+1. 打开 `helloworld.html` 文件并更新HTML标记。
 1. 使用IDE工具，如 [VSCode AEM同步](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) 将文件更改与本地AEM实例同步。
 1. 返回到浏览器，并观察组件呈现已更改。
 1. 打开 `.content.xml` 用于定义 `HelloWorld` 组件位置：
@@ -119,7 +119,7 @@ HTML模板语言或 **[HTL](https://experienceleague.adobe.com/docs/experience-m
    <code>/aem-guides-wknd/ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/.content.xml
    ```
 
-1. 更新对话框以添加一个名为的附加文本字段 **标题** 名称为 `./title`:
+1. 更新对话框以添加名为的额外文本字段 **标题** 名称为 `./title`:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -152,7 +152,7 @@ HTML模板语言或 **[HTL](https://experienceleague.adobe.com/docs/experience-m
    </jcr:root>
    ```
 
-1. 重新打开文件 `helloworld.html`，表示负责呈现的主HTL脚本 `HelloWorld` 组件，位于：
+1. 重新打开文件 `helloworld.html`，表示负责呈现的主HTL脚本 `HelloWorld` 组件从以下路径中：
 
    ```plain
        <code>/aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/helloworld.html
@@ -171,9 +171,9 @@ HTML模板语言或 **[HTL](https://experienceleague.adobe.com/docs/experience-m
 
 ## Sling 模型 {#sling-models}
 
-Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于将数据从JCR映射到Java变量，并在AEM上下文中进行开发时提供许多其他细节。
+Sling模型是由注释驱动的Java™“POJO”(纯旧Java™对象)，有助于将数据从JCR映射到Java™变量。 在AEM环境下进行开发时，这些文档还提供了其他几个细节。
 
-接下来，我们将对 `HelloWorldModel` Sling模型，以便在将某些业务逻辑输出到页面之前，将其应用于JCR中存储的值。
+接下来，我们对 `HelloWorldModel` Sling模型，以便在将某些业务逻辑输出到页面之前，将其应用于JCR中存储的值。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330988/?quality=12&learn=on)
 
@@ -199,7 +199,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
       ...
    ```
 
-1. 将以下行添加到 `HelloWorldModel` 类来映射组件的JCR属性的值 `title` 和 `text` 到Java变量：
+1. 将以下行添加到 `HelloWorldModel` 类来映射组件的JCR属性的值 `title` 和 `text` 到Java™变量：
 
    ```java
    ...
@@ -253,7 +253,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.4/6.5，则使用 `mvn clean install -PautoInstallBundle -Pclassic`
+   > 对于AEM 6.4/6.5，请使用 `mvn clean install -PautoInstallBundle -Pclassic`
 
 1. 更新文件 `helloworld.html` at `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html` 使用 `HelloWorld` 模型：
 
@@ -280,9 +280,9 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
 
 ## 客户端库 {#client-side-libraries}
 
-客户端库（简称clientlibs）提供了一种机制来组织和管理AEM Sites实施所需的CSS和JavaScript文件。 客户端库是在AEM中在页面上包含CSS和JavaScript的标准方法。
+客户端库、 `clientlibs` 简而言之，提供了一种机制来组织和管理AEM Sites实施所需的CSS和JavaScript文件。 客户端库是在AEM中在页面上包含CSS和JavaScript的标准方法。
 
-的 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模块是去耦 [webpack](https://webpack.js.org/) 集成到构建过程中的项目。 这允许使用常用的前端库，如Sass、LESS和TypeScript。 的 `ui.frontend` 模块将更深入地探索 [“客户端库”章节](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
+的 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模块是去耦 [webpack](https://webpack.js.org/) 集成到构建过程中的项目。 这允许使用常用的前端库，如Sass、LESS和TypeScript。 的 `ui.frontend` 模块在 [“客户端库”章节](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
 
 接下来，更新 `HelloWorld` 组件。
 
@@ -290,13 +290,16 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
 
 以下是在上述视频中执行的高级步骤。
 
-1. 打开终端窗口并导航到 `ui.frontend` 目录和
+1. 打开终端窗口并导航到 `ui.frontend` 目录
 
-1. 在 `ui.frontend` 目录运行 `npm run watch` 命令：
+1. 在 `ui.frontend` 目录运行 `npm install npm-run-all --save-dev` 安装命令 [npm-run-all](https://www.npmjs.com/package/npm-run-all) 节点模块。 此步骤为 **在生成的AEM项目上必需**，在即将发布的Archetype版本中，不需要执行此操作。
+
+1. 接下来，运行 `npm run watch` 命令：
 
    ```shell
    $ npm run watch
    ```
+
 1. 切换到IDE，然后将项目打开到 `ui.frontend` 模块。
 1. 打开文件 `ui.frontend/src/main/webpack/components/_helloworld.scss`.
 1. 更新文件以显示红色标题：
@@ -330,7 +333,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧Java对象），它有助于
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您刚刚学习了Adobe Experience Manager中组件开发的基础知识！
+恭喜，您已学习了在Adobe Experience Manager中开发组件的基础知识！
 
 ### 后续步骤 {#next-steps}
 

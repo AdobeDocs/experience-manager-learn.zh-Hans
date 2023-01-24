@@ -13,9 +13,9 @@ mini-toc-levels: 1
 thumbnail: 30386.jpg
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1677'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 1%
 >
 > 如果您成功完成了上一章，则可以重复使用该项目并跳过签出起始项目的步骤。
 
-查看本教程构建的基行代码：
+查看本教程基于的基行代码：
 
 1. 查看 `tutorial/style-system-start` 分支 [GitHub](https://github.com/adobe/aem-guides-wknd)
 
@@ -59,7 +59,7 @@ ht-degree: 1%
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-您始终可以在 [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/style-system-solution) 或通过切换到分支在本地检出代码 `tutorial/style-system-solution`.
+您始终可以在 [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/style-system-solution) 或通过切换到分支在本地签出代码 `tutorial/style-system-solution`.
 
 ## 目标
 
@@ -67,9 +67,9 @@ ht-degree: 1%
 1. 了解BEM记数法，以及如何使用它仔细调整样式。
 1. 使用可编辑的模板应用高级策略配置。
 
-## 将构建的内容 {#what-you-will-build}
+## 要构建的内容 {#what-build}
 
-在本章中，我们将使用 [样式系统功能](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html) 创建 **标题** 和 **文本** 文章页面上使用的组件。
+本章使用 [样式系统功能](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html) 创建 **标题** 和 **文本** 文章页面上使用的组件。
 
 ![可用于标题的样式](assets/style-system/styles-added-title.png)
 
@@ -77,15 +77,15 @@ ht-degree: 1%
 
 ## 背景 {#background}
 
-的 [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html) 允许开发人员和模板编辑器创建组件的多个可视化变量。 然后，作者可以决定在合成页面时使用哪种样式。 在本教程的其余部分中，我们将利用样式系统来实现多个独特的样式，同时以低代码方式利用核心组件。
+的 [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html) 允许开发人员和模板编辑器创建组件的多个可视化变量。 然后，作者可以决定在合成页面时使用哪种样式。 在教程的其余部分中，均会使用样式系统来实现多个唯一的样式，同时通过低代码方法使用核心组件。
 
 样式系统的一般思想是，作者可以选择组件外观的各种样式。 “styles”由插入到组件外div中的其他CSS类作为后盾。 在客户端库中，会根据这些样式类添加CSS规则，以便组件更改外观。
 
-您可以找到 [此处提供了有关样式系统的详细文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html?lang=zh-Hans). 还有一个很棒的 [了解样式系统的技术视频](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html).
+您可以找到 [此处提供了有关样式系统的详细文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html?lang=zh-Hans). 还有一个很棒的 [了解样式系统的技术视频](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html).
 
 ## 下划线样式 — 标题 {#underline-style}
 
-的 [标题组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/title.html) 已被委托进项目 `/apps/wknd/components/title` 作为 **ui.apps** 模块。 标题元素的默认样式(`H1`, `H2`, `H3`...)已在 **ui.frontend** 模块。
+的 [标题组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/title.html) 已被委托进项目 `/apps/wknd/components/title` 作为 **ui.apps** 模块。 标题元素的默认样式(`H1`, `H2`, `H3`...)已在 **ui.frontend** 模块。
 
 的 [WKND文章设计](assets/pages-templates/wknd-article-design.xd) 包含带下划线的标题组件的唯一样式。 样式系统可用于允许作者使用选项添加下划线样式，而不是创建两个组件或修改组件对话框。
 
@@ -93,15 +93,15 @@ ht-degree: 1%
 
 ### 添加标题策略
 
-为标题组件添加新策略，以允许内容作者选择要应用于特定组件的下划线样式。 可使用AEM中的模板编辑器来完成此操作。
+让我们为标题组件添加一个策略，以允许内容作者选择要应用于特定组件的下划线样式。 可使用AEM中的模板编辑器来完成此操作。
 
-1. 导航到 **文章页面** 模板位于： [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)
+1. 导航到 **文章页面** 模板来源： [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)
 
 1. 在 **结构** 模式，在主 **布局容器**，选择 **策略** 图标 **标题** 下面列出的组件 *允许的组件*:
 
    ![标题策略配置](assets/style-system/article-template-title-policy-icon.png)
 
-1. 为标题组件创建新策略，其值如下：
+1. 为标题组件创建策略，其值如下：
 
    *策略标题&#42;*: **WKND标题**
 
@@ -119,7 +119,7 @@ ht-degree: 1%
 
 ### 应用下划线样式
 
-作者将下划线样式应用于某些标题组件。
+作为作者，我们可以将下划线样式应用于某些标题组件。
 
 1. 导航到 **拉滑板场** AEM Sites编辑在以下网站撰文： [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
 1. 在 **编辑** 模式下，选择标题组件。 单击 **画笔** 图标，然后选择 **下划线** 样式：
@@ -128,10 +128,10 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   > 此时，将不会发生可见的更改，因为 `underline` 样式未实施。 在下一个练习中，将实施此样式。
+   > 此时，由于 `underline` 样式未实施。 在下一个练习中，将实施此样式。
 
 1. 单击 **页面信息** 图标> **查看已发布的项目** 在AEM编辑器之外检查页面。
-1. 使用浏览器开发人员工具验证标题组件周围的标记是否具有CSS类 `cmp-title--underline` 应用于外部div。
+1. 使用您的浏览器开发人员工具验证标题组件周围的标记是否具有CSS类 `cmp-title--underline` 应用于外部div。
 
    ![应用了下划线类的Div](assets/style-system/div-underline-class-applied.png)
 
@@ -146,7 +146,7 @@ ht-degree: 1%
 
 ### 实施下划线样式 — ui.frontend
 
-接下来，使用 **ui.frontend** 我们项目的模块。 我们将使用与 **ui.frontend** 预览样式的模块 *之前* 部署到AEM的本地实例。
+接下来，使用 **ui.frontend** 模块。 与 **ui.frontend** 预览样式的模块 *之前* 将使用部署到AEM的本地实例。
 
 1. 启动 `watch` 从内部处理 **ui.frontend** 模块：
 
@@ -155,10 +155,10 @@ ht-degree: 1%
    $ npm run watch
    ```
 
-   这将启动一个用于监控 `ui.frontend` 模块并将更改同步到AEM实例。
+   这会启动一个用于监控 `ui.frontend` 模块并将更改同步到AEM实例。
 
 
-1. 返回IDE并打开文件 `_title.scss` 位于： `ui.frontend/src/main/webpack/components/_title.scss`.
+1. 返回IDE并打开文件 `_title.scss` 从： `ui.frontend/src/main/webpack/components/_title.scss`.
 1. 引入一个新规则，以 `cmp-title--underline` 类：
 
    ```scss
@@ -187,15 +187,15 @@ ht-degree: 1%
    >
    >所有核心组件均遵循 **[BEM符号](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**. 最好在为组件创建默认样式时定位外部CSS类。 另一个最佳实践是定位核心组件BEM符号指定的类名称，而不是HTML元素。
 
-1. 返回到浏览器和AEM页面。 您应会看到添加的下划线样式：
+1. 返回到浏览器和AEM页面。 您应会看到已添加下划线样式：
 
    ![Webpack开发服务器中显示的下划线样式](assets/style-system/underline-implemented-webpack.png)
 
-1. 在AEM编辑器中，您现在应该能够打开和关闭 **下划线** 样式，并以可视方式查看反映的更改。
+1. 在AEM编辑器中，您现在应该能够打开和关闭 **下划线** 样式，并看到更改以可视方式反映。
 
 ## 引号块样式 — 文本 {#text-component}
 
-接下来，重复类似步骤，以将唯一的样式应用到 [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). 文本组件已代理到下的项目中 `/apps/wknd/components/text` 作为 **ui.apps** 模块。 段落元素的默认样式已在 **ui.frontend**.
+接下来，重复类似步骤，以将唯一的样式应用到 [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html). 文本组件已代理到下的项目中 `/apps/wknd/components/text` 作为 **ui.apps** 模块。 段落元素的默认样式已在 **ui.frontend**.
 
 的 [WKND文章设计](assets/pages-templates/wknd-article-design.xd) 包含带有引号块的文本组件的唯一样式：
 
@@ -203,9 +203,9 @@ ht-degree: 1%
 
 ### 添加文本策略
 
-接下来，为文本组件添加新策略。
+接下来，为文本组件添加策略。
 
-1. 导航到 **文章页面模板** 位于： [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html).
+1. 导航到 **文章页面模板** 从： [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html).
 
 1. 在 **结构** 模式，在主 **布局容器**，选择 **策略** 图标 **文本** 下面列出的组件 *允许的组件*:
 
@@ -238,7 +238,7 @@ ht-degree: 1%
 
    ![应用引号块样式](assets/style-system/quote-block-style-applied.png)
 
-1. 使用浏览器的开发人员工具检查标记。 您应会看到类名称 `cmp-text--quote` 已添加到组件的外部div中：
+1. 使用浏览器的开发人员工具检查标记。 您应会看到类名称 `cmp-text--quote` 已添加到组件的外部div:
 
    ```html
    <!-- Quote Block style class added -->
@@ -252,7 +252,7 @@ ht-degree: 1%
 
 ### 实施引号块样式 — ui.frontend
 
-接下来，我们将使用 **ui.frontend** 我们项目的模块。
+接下来，我们使用 **ui.frontend** 模块。
 
 1. 如果尚未运行，请启动 `watch` 从内部处理 **ui.frontend** 模块：
 
@@ -260,7 +260,7 @@ ht-degree: 1%
    $ npm run watch
    ```
 
-1. 更新文件 `text.scss` 位于： `ui.frontend/src/main/webpack/components/_text.scss`:
+1. 更新文件 `text.scss` 从： `ui.frontend/src/main/webpack/components/_text.scss`:
 
    ```css
    /* Default text style */
@@ -310,7 +310,7 @@ ht-degree: 1%
 
 ## 固定宽度 — 容器（附加） {#layout-container}
 
-容器组件用于创建文章页面模板的基本结构，并为内容作者提供用于在页面上添加内容的拖放区域。 容器还可以利用样式系统，为内容作者提供更多用于设计布局的选项。
+容器组件用于创建文章页面模板的基本结构，并为内容作者提供用于在页面上添加内容的拖放区域。 容器还可以使用样式系统，为内容作者提供更多用于设计布局的选项。
 
 的 **主容器** “文章页面”模板的包含两个可创作的容器，其宽度固定。
 
@@ -340,13 +340,13 @@ main.container {
 
 ## 恭喜！ {#congratulations}
 
-恭喜，文章页面的样式几乎完整，您在使用AEM样式系统时获得了实际操作经验。
+恭喜，文章页面已近设置样式，您在使用AEM样式系统时获得了实际操作经验。
 
 ### 后续步骤 {#next-steps}
 
 了解创建 [自定义AEM组件](custom-component.md) ，可显示对话框中创作的内容，并探索开发Sling模型以封装可填充组件HTL的业务逻辑。
 
-在上查看完成的代码 [GitHub](https://github.com/adobe/aem-guides-wknd) 或在Git浏览器的本地查看和部署代码 `tutorial/style-system-solution`.
+在上查看完成的代码 [GitHub](https://github.com/adobe/aem-guides-wknd) 或在本地的Git分支上查看和部署代码 `tutorial/style-system-solution`.
 
 1. 克隆 [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd) 存储库。
 1. 查看 `tutorial/style-system-solution` 分支。

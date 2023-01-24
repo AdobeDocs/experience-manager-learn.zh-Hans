@@ -11,10 +11,10 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 17%
+source-wordcount: '476'
+ht-degree: 18%
 
 ---
 
@@ -24,12 +24,12 @@ ht-degree: 17%
 
 本教程首先使用 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 以生成新项目。
 
-本教程旨在与 **AEMas a Cloud Service** 并且向后兼容 **AEM 6.5.10+**. 站点的实施方式如下：
+本教程旨在与 **AEMas a Cloud Service** 并且向后兼容 **AEM 6.5.14+**. 站点的实施方式如下：
 
 * [Maven AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
-* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)
-* Sling 模型
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)
+* [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 * [可编辑模板](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hans)
 * [样式系统](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
@@ -37,14 +37,14 @@ ht-degree: 17%
 
 ## 本地开发环境 {#local-dev-environment}
 
-要完成本教程，需要本地开发环境。 屏幕截图和视频是使用在Mac OS环境中运行的AEMas a Cloud ServiceSDK捕获的，该SDK [Visual Studio代码](https://code.visualstudio.com/) 作为IDE。 除非另有说明，否则命令和代码应独立于本地操作系统。
+要完成本教程，需要本地开发环境。 使用在macOS环境中运行的AEMas a Cloud ServiceSDK捕获屏幕截图和视频，该SDK [Visual Studio代码](https://code.visualstudio.com/) 作为IDE。 除非另有说明，否则命令和代码应独立于本地操作系统。
 
 ### 所需软件
 
 应在本地安装以下内容：
 
-* [本地AEM **作者** 实例](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK，6.5.10+)
-* [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
+* [本地AEM **作者** 实例](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK或6.5.14+)
+* [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [阿帕奇·马文](https://maven.apache.org/) （3.3.9或更高版本）
 * [Node.js](https://nodejs.org/en/) （LTS — 长期支持）
 * [npm 6+](https://www.npmjs.com/)
@@ -58,9 +58,9 @@ ht-degree: 17%
 >
 > **AEM 6.5的新增功能？** 查看 [设置本地开发环境的以下指南](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans).
 
-## Github {#github}
+## GitHub {#github}
 
-项目的所有代码均可在AEM Guide存储库的Github上找到：
+可在GitHub上的AEM Guide存储库中找到本教程中的代码：
 
 **[GitHub:WKND Sites项目](https://github.com/adobe/aem-guides-wknd)**
 
@@ -68,4 +68,4 @@ ht-degree: 17%
 
 ## 后续步骤 {#next-steps}
 
-你在等什么?!通过导航到 [项目设置](project-setup.md) 章节和了解如何使用AEM项目原型生成新的Adobe Experience Manager项目。
+你在等什么？ 通过导航到 [项目设置](project-setup.md) 章节和了解如何使用AEM项目原型生成新的Adobe Experience Manager项目。

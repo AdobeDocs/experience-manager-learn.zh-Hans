@@ -1,6 +1,6 @@
 ---
 title: 客户端库和前端工作流
-description: 了解如何使用客户端库或客户端库来部署和管理Adobe Experience Manager(AEM)Sites实施的CSS和Javascript。 了解如何将ui.frontend模块（一个Webpack项目）集成到端到端构建过程中。
+description: 了解如何使用客户端库来部署和管理Adobe Experience Manager(AEM)Sites实施的CSS和JavaScript。 了解如何将ui.frontend模块（一个Webpack项目）集成到端到端构建过程中。
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, AEM Project Archetype
@@ -11,16 +11,16 @@ kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '2825'
+source-wordcount: '2798'
 ht-degree: 2%
 
 ---
 
 # 客户端库和前端工作流 {#client-side-libraries}
 
-了解如何使用客户端库或客户端库来部署和管理Adobe Experience Manager(AEM)Sites实施的CSS和JavaScript。 本教程还将介绍 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模块，去耦 [webpack](https://webpack.js.org/) 项目，可集成到端到端构建流程中。
+了解如何使用客户端库或客户端库来部署和管理Adobe Experience Manager(AEM)Sites实施的CSS和JavaScript。 本教程还介绍 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模块，去耦 [webpack](https://webpack.js.org/) 项目，可集成到端到端构建流程中。
 
 ## 前提条件 {#prerequisites}
 
@@ -62,10 +62,10 @@ ht-degree: 2%
 ## 目标
 
 1. 了解如何通过可编辑的模板将客户端库包含在页面中。
-1. 了解如何使用UI.Frontend模块和Web Pack开发服务器进行专用前端开发。
+1. 了解如何使用 `ui.frontend` 模块和用于专用前端开发的webpack开发服务器。
 1. 了解将编译的CSS和JavaScript交付到Sites实施的端到端工作流。
 
-## 将构建的内容 {#what-you-will-build}
+## 要构建的内容 {#what-build}
 
 在本章中，您为WKND站点和文章页面模板添加了一些基线样式，以使实施更接近 [用户界面设计模型](assets/pages-templates/wknd-article-design.xd). 您可以使用高级前端工作流将WebPack项目集成到AEM客户端库中。
 
@@ -89,7 +89,7 @@ ht-degree: 2%
 
 ## 客户端库组织 {#organization}
 
-接下来，我们将探索由 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
+接下来，我们来探索由 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
 ![高级客户库组织](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -104,7 +104,7 @@ ht-degree: 2%
 
    ![ui.apps中的Clientlibs](assets/client-side-libraries/four-clientlib-folders.png)
 
-   下面将详细检查这些clientlib。
+   在下节中，我们将更详细地审查这些clientlib。
 
 1. 下表汇总了客户端库。 有关 [包括客户端库可在此处找到](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html?lang=en#developing).
 
@@ -127,7 +127,6 @@ ht-degree: 2%
 1. 打开文件 `main.scss`
 
    ![main.scss — 入口点](assets/client-side-libraries/main-scss.png)
-客户端库/main-scss
 
    `main.scss` 是 `ui.frontend` 模块。 它包括 `_variables.scss` 文件，其中包含要在项目中不同Sass文件中使用的一系列品牌变量。 的 `_base.scss` 文件，并为HTML元素定义了一些基本样式。 正则表达式包含下各个组件样式的样式 `src/main/webpack/components`. 另一个正则表达式包含 `src/main/webpack/site/styles`.
 
@@ -143,13 +142,13 @@ ht-degree: 2%
 
    ![组件Sass文件](assets/client-side-libraries/component-sass-files.png)
 
-   每个文件都映射到核心组件，如 [折叠组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/accordion.html?lang=en#components). 每个核心组件均使用 [块元素修饰符](https://getbem.com/) 或使用BEM符号，更便于使用样式规则定位特定CSS类。 下面的文件 `/components` 已由AEM Project Archetype使用每个组件的不同BEM规则进行清理。
+   每个文件都映射到核心组件，如 [折叠组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/accordion.html?lang=en). 每个核心组件均使用 [块元素修饰符](https://getbem.com/) 或使用BEM符号，更便于使用样式规则定位特定CSS类。 下面的文件 `/components` 已由AEM Project Archetype使用每个组件的不同BEM规则进行清理。
 
 1. 下载WKND基本样式 **[wknd-base-styles-src-v3.zip](/help/getting-started-wknd-tutorial-develop/project-archetype/assets/client-side-libraries/wknd-base-styles-src-v3.zip)** 和 **解压缩** 文件。
 
    ![WKND基样式](assets/client-side-libraries/wknd-base-styles-unzipped.png)
 
-   为了加快本教程的进度，我们提供了多个Sass文件，这些文件将根据核心组件和文章页面模板的结构来实施WKND品牌。
+   为了加快教程的进度，提供了几个基于核心组件和文章页面模板结构实施WKND品牌的Sass文件。
 
 1. 覆盖的内容 `ui.frontend/src` 的文件。 zip文件的内容应会覆盖以下文件夹：
 
@@ -183,7 +182,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
    >[!NOTE]
    >
-   >`npm install` 只需在新克隆或生成项目后运行一次。
+   >`npm install` 只需运行一次，就像新克隆或生成项目后一样。
 
 1. 在中启动WebPack开发服务器 **watch** 模式：
 
@@ -191,7 +190,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
    $ npm run watch
    ```
 
-1. 它编译了 `src` 文件 `ui.frontend` 模块并与AEM在 [http://localhost:4502](http://localhost:4502)
+1. 它将编译来自 `ui.frontend` 模块并同步更改与AEM at [http://localhost:4502](http://localhost:4502)
 
    ```shell
    + jcr_root/apps/wknd/clientlibs/clientlib-site/js/site.js
@@ -242,7 +241,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
 接下来，在 `ui.frontend` 模块查看 `npm run watch` 自动将样式部署到本地AEM实例。
 
-1. 在 `ui.frontend` 模块打开文件： `ui.frontend/src/main/webpack/site/_variables.scss`.
+1. 从， `ui.frontend` 模块打开文件： `ui.frontend/src/main/webpack/site/_variables.scss`.
 1. 更新 `$brand-primary` 颜色变量：
 
    ```scsss
@@ -276,13 +275,13 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
    *页面信息>页面策略*
 
-1. 请注意， `wknd.dependencies` 和 `wknd.site` 列在此处。 默认情况下，通过“页面策略”配置的clientlib将进行拆分，以在页面标题中包含CSS，在正文末尾包含JavaScript。 如果需要，您可以明确地将clientlib JavaScript加载到页面标头中。 这是 `wknd.dependencies`.
+1. 请注意， `wknd.dependencies` 和 `wknd.site` 列在此处。 默认情况下，通过“页面策略”配置的clientlib将进行拆分，以在页面标题中包含CSS，在正文末尾包含JavaScript。 您可以明确列出要加载到页面标题中的clientlib JavaScript。 这是 `wknd.dependencies`.
 
    ![文章页面模板菜单页面策略](assets/client-side-libraries/template-page-policy-clientlibs.png)
 
    >[!NOTE]
    >
-   > 也可以引用 `wknd.site` 或 `wknd.dependencies` 直接从页面组件中，使用 `customheaderlibs.html` 或 `customfooterlibs.html` 剧本，正如我们见到的 `wknd.base` clientlib。 通过使用模板，您可以根据需要选择每个模板使用的客户端库，这在一定程度上提供了灵活性。 例如，如果您有一个繁重的JavaScript库，该库将仅用于选定模板。
+   > 也可以引用 `wknd.site` 或 `wknd.dependencies` 直接从页面组件中，使用 `customheaderlibs.html` 或 `customfooterlibs.html` 脚本。 通过使用模板，您可以灵活地选择每个模板使用的客户端库。 例如，如果您有一个繁重的JavaScript库，该库将仅用于选定模板。
 
 1. 导航到 **洛杉矶滑板场** 使用 **文章页面模板**: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html).
 
@@ -314,7 +313,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
    >[!NOTE]
    >
-   > 如果在6.5/6.4中跟踪，则客户端库将不会自动缩小。 请参阅 [HTML库管理器启用缩小（推荐）](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors).
+   > 对于AEM 6.5/6.4，客户端库不会自动缩小。 请参阅 [HTML库管理器启用缩小（推荐）](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors).
 
    >[!WARNING]
    >
@@ -333,9 +332,9 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
 ### Webpack DevServer — 静态标记 {#webpack-dev-static}
 
-在前几个练习中，我们能够更新 **ui.frontend** 模块，并通过构建过程，最终看到这些更改反映在AEM中。 接下来，我们将看到一种使用 [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 快速开发我们的前端风格 **静态** HTML。
+在前几个练习中， **ui.frontend** 更新了模块，并通过构建过程最终看到这些更改反映在AEM中。 接下来，我们来看一个使用 [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 以快速开发 **静态** HTML。
 
-如果大多数样式和前端代码是由专用前端开发人员执行的，而这些开发人员可能不容易访问AEM环境，则此技术会很方便。 此技术还允许FED直接对HTML进行修改，然后将修改转发给AEM开发人员以作为组件实施。
+如果大多数样式和前端代码是由专用前端开发人员执行的，而这些开发人员可能无法轻松访问AEM环境，则此技术会很方便。 此技术还允许FED直接对HTML进行修改，然后将修改转发给AEM开发人员以作为组件实施。
 
 1. 复制LA滑板场文章页面的页面源： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled).
 1. 重新打开IDE。 将复制的标记从AEM粘贴到 `index.html` 在 **ui.frontend** 模块下方 `src/main/webpack/static`.
@@ -350,7 +349,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
    <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-site.js"></script>
    ```
 
-   我们可以删除这些引用，因为Webpack开发服务器会自动生成这些工件。
+   删除这些引用，因为Webpack开发服务器会自动生成这些工件。
 
 1. 通过在 **ui.frontend** 模块：
 
@@ -389,7 +388,7 @@ AEM项目原型会自动设置此集成。 接下来，探索其工作方式。
 
 **[aemfed](https://aemfed.io/)** 是一个开源命令行工具，可用于加快前端开发。 它由 [aemsync](https://www.npmjs.com/package/aemsync), [Browsersync](https://browsersync.io/)和 [Sling日志跟踪器](https://sling.apache.org/documentation/bundles/log-tracers.html).
 
-在高级 **aemfed** 用于监听 **ui.apps** 模块，并自动将它们直接同步到正在运行的AEM实例。 根据这些更改，本地浏览器将自动刷新，从而加快前端开发。 此外，它还与Sling Log Tracer一起构建，可自动在终端中直接显示任何服务器端错误。
+在高层， `aemfed`用于监听 **ui.apps** 模块，并自动将它们直接同步到正在运行的AEM实例。 本地浏览器会根据这些更改自动刷新，从而加快前端开发。 此外，还构建了与Sling Log跟踪器一起使用的功能，可在终端中自动显示任何服务器端错误。
 
 如果您在 **ui.apps** 模块，修改HTL脚本，并创建自定义组件， **aemfed** 是一款功能强大的工具。 [完整文档可在此处找到](https://github.com/abmaonline/aemfed).
 
