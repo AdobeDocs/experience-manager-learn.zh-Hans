@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
+source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1784'
 ht-degree: 3%
 
 ---
@@ -184,6 +184,10 @@ ht-degree: 3%
    + [ArrayList变量](variables-aem-workflow/part4.md)
    + [表单数据模型变量](variables-aem-workflow/form-data-model.md)
    + [AEM工作流中的规则编辑器](variables-aem-workflow/part5.md)
++ 查看表单数据{#review-form-data}
+   + [简介](review-form-data/introduction.md)
+   + [创建组件](review-form-data/create-component.md)
+   + [部署资产](review-form-data/deploy-on-your-system.md)
 + 在MySQL数据库中存储和检索表单数据{#storing-and-retrieving-form-data}
    + [简介](storing-retrieving-form-data/introduction.md)
    + [配置数据源](storing-retrieving-form-data/part1.md)
