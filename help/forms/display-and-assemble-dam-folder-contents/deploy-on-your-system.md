@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
+source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 0%
+source-wordcount: '158'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 请按照下面列出的步骤操作，以便在本地AEM实例上使用此用例。
 
-* [按照本文中所述的步骤配置以使用fd-service用户](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en). 确保已部署DevelopingWithServiceUser包。
+* [部署DevelopingWithServiceUser包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) 包含在zip文件中。
+
+* 在Apache Sling Service用户映射器服务中添加以下条目 **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** 使用 [configMgr](http://localhost:4502/system/console/configMgr).
 
 * [部署新闻稿包](assets/Newsletters.core-1.0.0-SNAPSHOT.jar). 此包包含用于列出文件夹内容和组合所选新闻稿的代码。
 

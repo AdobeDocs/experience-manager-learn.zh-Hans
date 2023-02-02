@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 9a3b2128-a383-46ea-bcdc-6015105c70cc
-last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+last-substantial-update: 2023-01-26T00:00:00Z
+source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '261'
 ht-degree: 1%
 
 ---
@@ -26,15 +26,40 @@ ht-degree: 1%
 1. 调用DoRService的呈现方法并将DoROptions对象传递到呈现方法
 
 ```java
+String dataXml = request.getParameter("data");
+System.out.println("Got " + dataXml);
+Session session;
 com.adobe.aemds.guide.addon.dor.DoRService dorService = sling.getService(com.adobe.aemds.guide.addon.dor.DoRService.class);
-com.adobe.aemds.guide.addon.dor.DoROptions dorOptions =  new com.adobe.aemds.guide.addon.dor.DoROptions();
- dorOptions.setData(dataXml);
- dorOptions.setFormResource(resource);
- java.util.Locale locale = new java.util.Locale("en");
- dorOptions.setLocale(locale);
- com.adobe.aemds.guide.addon.dor.DoRResult dorResult = dorService.render(dorOptions);
- byte[] fileBytes = dorResult.getContent();
- com.adobe.aemfd.docmanager.Document dorDocument = new com.adobe.aemfd.docmanager.Document(fileBytes);
+System.out.println("Got ... DOR Service");
+com.mergeandfuse.getserviceuserresolver.GetResolver aemDemoListings = sling.getService(com.mergeandfuse.getserviceuserresolver.GetResolver.class);
+System.out.println("Got aem DemoListings");
+resourceResolver = aemDemoListings.getFormsServiceResolver();
+session = resourceResolver.adaptTo(Session.class);
+resource = resourceResolver.getResource("/content/forms/af/sandbox/1201-borrower-payments");
+com.adobe.aemds.guide.addon.dor.DoROptions dorOptions = new com.adobe.aemds.guide.addon.dor.DoROptions();
+dorOptions.setData(dataXml);
+dorOptions.setFormResource(resource);
+java.util.Locale locale = new java.util.Locale("en");
+dorOptions.setLocale(locale);
+com.adobe.aemds.guide.addon.dor.DoRResult dorResult = dorService.render(dorOptions);
+byte[] fileBytes = dorResult.getContent();
+com.adobe.aemfd.docmanager.Document dorDocument = new com.adobe.aemfd.docmanager.Document(fileBytes);
+resource = resourceResolver.getResource("/content/usergenerated/content/aemformsenablement");
+Node paydotgov = resource.adaptTo(Node.class);
+java.util.Random r = new java.util.Random();
+String nodeName = Long.toString(Math.abs(r.nextLong()), 36);
+Node fileNode = paydotgov.addNode(nodeName + ".pdf", "nt:file");
+
+System.out.println("Created file Node...." + fileNode.getPath());
+Node contentNode = fileNode.addNode("jcr:content", "nt:resource");
+Binary binary = session.getValueFactory().createBinary(dorDocument.getInputStream());
+contentNode.setProperty("jcr:data", binary);
+JSONWriter writer = new JSONWriter(response.getWriter());
+writer.object();
+writer.key("filePath");
+writer.value(fileNode.getPath());
+writer.endObject();
+session.save();
 ```
 
 要在本地系统上尝试此操作，请执行以下步骤
@@ -54,6 +79,6 @@ com.adobe.aemds.guide.addon.dor.DoROptions dorOptions =  new com.adobe.aemds.gui
 PDF未显示在新的浏览器选项卡中：
 
 1. 确保未阻止浏览器中的弹出窗口
-1. 使您已执行此中列出的步骤 [文章](service-user-tutorial-develop.md)
+1. 确保以管理员身份启动AEM服务器（至少在windows上）
 1. 确保“DevelopingWithServiceUser”包位于 *活动状态*
-1. 确保系统用户“ data ”对以下节点具有读取、修改和创建权限 `/content/usergenerated/content/aemformsenablement`
+1. [确保系统用户](http://localhost:4502/useradmin) “fd-service”具有对以下节点的读取、修改和创建权限 `/content/usergenerated/content/aemformsenablement`
