@@ -1,6 +1,6 @@
 ---
 title: 通过自定义内容片段控制台扩展生成OpenAI图像
-description: AEM内容片段控制台扩展的示例，该扩展使用OpenAI或DALL-E 2从自然语言描述生成数字图像，并将生成的图像上传到AEM，并将其与内容片段关联。
+description: 了解如何使用OpenAI或DALL-E 2从自然语言描述生成数字图像，以及使用自定义内容片段控制台扩展将生成的图像上传到AEM。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,9 +10,9 @@ kt: 11649
 thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: a298dbd27dfda00c80d2098199eb418200af0233
+source-git-commit: 5f0464d7bb8ffde9a9b3bd7fd67dc0e341970a6f
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1399'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,11 @@ ht-degree: 1%
 
 # AEM使用OpenAI生成图像资产
 
-![数字图像生成](./assets/digital-image-generation/screenshot.png){align="center"}
+了解如何使用OpenAI或DALL.E 2生成图像，并将其上传到AEM DAM以提高内容速度。
 
-此示例AEM内容片段控制台扩展是 [操作栏](../action-bar.md) 使用 [OpenAI API](https://openai.com/api/) 或 [DALL.E 2](https://openai.com/dall-e-2/). 生成的图像会上传到AEM DAM，并且所选内容片段的图像属性会进行更新以引用从DAM新生成的上传图像。
+![数字图像生成](./assets/digital-image-generation/screenshot.png){width="500" zoomable="yes"}
+
+此示例AEM内容片段控制台扩展是 [操作栏](../action-bar.md) 使用自然语言输入生成数字图像的扩展 [OpenAI API](https://openai.com/api/) 或 [DALL.E 2](https://openai.com/dall-e-2/). 生成的图像会上传到AEM DAM，并且所选内容片段的图像属性会进行更新以引用从DAM新生成的上传图像。
 
 在本例中，您将学习：
 
@@ -108,6 +110,12 @@ ht-degree: 1%
 1. 在Node.js库下安装
    1. [OpenAI Node.js库](https://github.com/openai/openai-node#installation)  — 轻松调用OpenAI API
    1. [AEM上传](https://github.com/adobe/aem-upload#install)  — 将图像上传到AEM-CS实例。
+
+
+>[!TIP]
+>
+>在以下部分中，您将了解关于React和Adobe I/O Runtime操作JavaScript键文件。 要供您参考，请使用 `web-src` 和  `actions` 提供了AppBuilder项目的文件夹，请参阅 [adobe-appbuilder-cfc-ext-image-generation-code-zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
+
 
 ## 应用程序路由{#app-routes}
 
@@ -198,7 +206,7 @@ function ExtensionRegistration() {
 1. 图像生成操作的响应，用于提供新生成的上传图像的AEM资产详细信息链接。
 
 重要的是，扩展中与AEM的任何交互都应委派给 [AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，这是在中运行的独立无服务器进程 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
-使用Adobe I/O Runtime操作与AEM通信，是为了避免跨域资源共享(CORS)连接问题。
+使用Adobe I/O Runtime操作与AEM通信，以避免跨域资源共享(CORS)连接问题。
 
 当 _生成图像_ 提交表单，自定义 `onSubmitHandler()` 调用Adobe I/O Runtime操作，以传递图像描述、当前AEM主机（域）和用户的AEM访问令牌。 然后，该操作将调用OpenAI的 [图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) 用于使用提交的图像描述生成图像的API。 下次使用 [AEM上传](https://github.com/adobe/aem-upload) 节点模块的 `DirectBinaryUpload` 将生成的图像上传到AEM，最后使用 [AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 更新内容片段。
 
@@ -458,6 +466,11 @@ export default function GenerateImageModal() {
   }
 }
 ```
+
+>[!NOTE]
+>
+>在 `buildAssetDetailsURL()` 函数， `aemAssetdetailsURL` 变量值假定 [统一外壳](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview) 启用。 如果已禁用统一Shell，则需要删除 `/ui#/aem` 变量值。
+
 
 ## Adobe I/O Runtime行动
 
