@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 0990fc230e2a36841380b5b0c6cd94dca24614fa
+source-git-commit: 1a7b4c9c4575407467856d795ad3b6dde8e10532
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '897'
 ht-degree: 20%
 
 ---
@@ -92,6 +92,11 @@ ht-degree: 20%
       + [服务用户](./developing/advanced/service-users.md)
       + [自定义命名空间](./developing/advanced/custom-namespaces.md)
       + [缓存页面变体](./developing/advanced/variant-caching.md)
+   + 快速开发环境{#rde}
+      + [概述](./developing/rde/overview.md)
+      + [如何设置](./developing/rde/how-to-setup.md)
+      + [使用方法](./developing/rde/how-to-use.md)
+      + [开发生命周期](./developing/rde/development-life-cycle.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + 调试AEM{#debugging}
    + 调试AEM SDK{#debugging-aem-sdk}
@@ -296,7 +301,7 @@ ht-degree: 20%
       + [Cloud Manager — 功能测试](./cloud-5/season-2/cloud5-mocm-functional-tests.md)
 + [AEM专家系列](./aem-experts-series.md)
 + 多步Tutorials{#multi-step-tutorials}
-   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
+   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
    + [SPA Editor(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
