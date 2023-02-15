@@ -9,7 +9,7 @@ level: Beginner
 jira: KT-11863
 thumbnail: KT-11863.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 674407637c475ea9b70ecbc81f9e9bfece0fe9df
+source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 5%
@@ -38,12 +38,11 @@ RDE的主要优势是保持发展势头。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415493/?quality=12&learn=on)
 
-
 ## 其他资源
-
 
 [多开发人员协作方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#multiple-developers-collaborating-on-the-same-rde)
 
 [本地开发环境设置](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)
 
 [使用AdobeCloud Manager - CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)
+
