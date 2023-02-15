@@ -9,7 +9,7 @@ level: Beginner
 jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
+source-git-commit: 4ff15fb482d31b984775ca691b53d117a2eba23c
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 1%
@@ -31,6 +31,11 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415491/?quality=12&learn=on)
 
+## 后续步骤
+
+了解 [使用RDE的开发/部署生命周期](./development-life-cycle.md) 快速提供功能。
+
+
 ## 其他资源
 
 [RDE命令文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#rde-cli-commands)
@@ -38,7 +43,3 @@ ht-degree: 1%
 [Adobe I/O Runtime CLI插件，用于与AEM快速开发环境进行交互](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [AEM项目设置](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html)
-
-## 后续步骤
-
-了解 [使用RDE的开发/部署生命周期](./development-life-cycle.md) 快速提供功能。
