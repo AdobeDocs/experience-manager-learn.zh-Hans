@@ -9,9 +9,9 @@ level: Beginner
 jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 81e1e2bf0382f6a577c1037dcd0d58ebc73366cd
+source-git-commit: 65d54f0137786c7e8ac9ac962c424dd20bf5f3dd
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
@@ -35,16 +35,16 @@ ht-degree: 0%
 
 克隆 [WKND站点](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) 项目，并在您喜爱的IDE中打开它以将AEM工件部署到RDE。
 
-    &quot;
-    $ git克隆git@github.com adobe/aem-guides-wknd.git
-    &quot;
+```shell
+$ git clone git@github.com:adobe/aem-guides-wknd.git
+```
 
 然后，运行以下maven命令，生成该代码并将其部署到本地AEM-SDK。
 
-    &quot;
-    $ cd aem-guides-wknd/
-    $ mvn清洁安装 — PautoInstallSinglePackage
-    &quot;
+```
+$ cd aem-guides-wknd/
+$ mvn clean install -PautoInstallSinglePackage
+```
 
 ## 使用AEM-RDE插件部署AEM工件
 
@@ -54,13 +54,13 @@ ht-degree: 0%
 
 通常的起点是首先部署 `all` 和 `dispatcher` 包。
 
-    &quot;
-    #安装“all”包
-    $ aio aem:rde:安装all/target/aem-guides-wknd.all-2.1.3-SNAPSHOT.zip
-    
-    #安装“dispatcher”zip
-    $ aio aem:rde:安装dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
-    &quot;
+```shell
+# Install the 'all' package
+$ aio aem:rde:install all/target/aem-guides-wknd.all-2.1.3-SNAPSHOT.zip
+
+# Install the 'dispatcher' zip
+$ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
+```
 
 成功部署后，在创作和发布服务上验证WKND站点。 您应该能够在WKND站点页面上添加、编辑内容并发布该内容。
 
@@ -118,9 +118,9 @@ ht-degree: 0%
 
 在上述单个文件部署命令示例中， `-t` 和 `-p` 标记用于分别指示JCR路径的类型和目标。 让我们查看可用 `install` 命令选项。
 
-    &quot;
-    $ aio aem:rde:安装 — 帮助
-    &quot;
+```shell
+$ aio aem:rde:install --help
+```
 
 旗子不言自明， `-s` 标记对于仅将部署定位到创作或发布服务非常有用。 使用 `-t` 标记部署时 **content-file或content-xml** 文件以及 `-p` 标记，用于在AEM RDE环境中指定目标JCR路径。
 
@@ -155,15 +155,15 @@ ht-degree: 0%
 
 您可以部署单个配置文件或完整的配置包，例如：
 
-    &quot;
-    #部署单个配置文件
-    $ aio aem:rde:安装ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config/org.apache.sling.commons.log.LogManager.factory.config~wknd.cfg.json
-    
-    #或部署完整的配置包
-    $ cd ui.config
-    $ mvn清洁包
-    $ aio aem:rde:安装target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
-    &quot;
+```shell
+# Deploy individual config file
+$ aio aem:rde:install ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config/org.apache.sling.commons.log.LogManager.factory.config~wknd.cfg.json
+
+# Or deploy the complete config package
+$ cd ui.config
+$ mvn clean package
+$ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
+```
 
 >[!TIP]
 >
@@ -202,21 +202,21 @@ Apache或Dispatcher配置文件 **无法单独部署**，但是整个Dispatcher�
 
 让我们查看其他AEM RDE插件命令，以从本地计算机管理RDE并与之交互。
 
-    &quot;
-    $ aio aem:rde — 帮助
-    与RapidDev环境交互。
-    
-    使用情况
-    $ aio aem rde命令
-    
-    命令
-    aem rde删除从当前rde中删除包和配置。
-    aem rde历史记录获取对当前rde完成的更新列表。
-    aem red安装安装/更新包、配置和内容包。
-    aem rde重置RDE
-    aem rde重新启动RDE的创作和发布
-    aem rde状态获取部署到当前rde的包和配置的列表。
-    &quot;
+```shell
+$ aio aem:rde --help
+Interact with RapidDev Environments.
+
+USAGE
+$ aio aem rde COMMAND
+
+COMMANDS
+aem rde delete   Delete bundles and configs from the current rde.
+aem rde history  Get a list of the updates done to the current rde.
+aem rde install  Install/update bundles, configs, and content-packages.
+aem rde reset    Reset the RDE
+aem rde restart  Restart the author and publish of an RDE
+aem rde status   Get a list of the bundles and configs deployed to the current rde.
+```
 
 使用上述命令，可以从您喜爱的IDE中管理RDE，以加快开发/部署生命周期。
 

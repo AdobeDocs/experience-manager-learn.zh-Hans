@@ -9,9 +9,9 @@ level: Beginner
 jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 81e1e2bf0382f6a577c1037dcd0d58ebc73366cd
+source-git-commit: 65d54f0137786c7e8ac9ac962c424dd20bf5f3dd
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '492'
 ht-degree: 1%
 
 ---
@@ -45,19 +45,19 @@ ht-degree: 1%
 
 安装Adobe I/O Runtime Extensible CLI，也称为 `aio CLI` 从命令行中运行以下命令。
 
-    &quot;
-    $ npm install -g @adobe/aio-cli
-    &quot;
+```shell
+$ npm install -g @adobe/aio-cli
+```
 
 ### AEM插件
 
 使用 `aio cli`&#39;s `plugins:install` 命令。
 
-    &quot;
-    $ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
-    
-    $ aio plugins:install @adobe/aio-cli-plugin-aem-rde
-    &quot;
+```shell
+$ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
+
+$ aio plugins:install @adobe/aio-cli-plugin-aem-rde
+```
 
 Cloud Manager插件允许开发人员通过命令行与Cloud Manager交互。
 
@@ -91,23 +91,23 @@ AEM RDE插件允许开发人员从本地计算机部署代码和内容。
 
 您可以运行以下命令来验证当前配置值。
 
-    &quot;
-    $aio配置：list
-    &quot;
+```shell
+$ aio config:list
+```
 
 此外，要切换或了解您当前登录的组织，可以使用以下命令。
 
-    &quot;
-    $aio，其中
-    &quot;
+```shell
+$ aio where
+```
 
 ## 验证RDE访问权限
 
 通过运行以下命令验证AEM RDE插件的安装和配置。
 
-    &quot;
-    $ aio aem:rde:状态
-    &quot;
+```shell
+$ aio aem:rde:status
+```
 
 RDE状态信息的显示方式与环境状态、 _您的AEM项目_ 创作和发布服务上的包和配置。
 
