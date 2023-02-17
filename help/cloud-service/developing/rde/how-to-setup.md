@@ -9,10 +9,10 @@ level: Beginner
 jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 4ff15fb482d31b984775ca691b53d117a2eba23c
+source-git-commit: 81e1e2bf0382f6a577c1037dcd0d58ebc73366cd
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 2%
+source-wordcount: '520'
+ht-degree: 1%
 
 ---
 
@@ -29,6 +29,87 @@ ht-degree: 2%
 - AEM RDE和Cloud Manager的设置和配置 `aio CLI` 插件
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415490/?quality=12&learn=on)
+
+## 先决条件
+
+应在本地安装以下内容：
+
+- [Node.js](https://nodejs.org/en/) （LTS — 长期支持）
+- [npm 8+](https://docs.npmjs.com/)
+
+## 本地设置
+
+部署 [WKND Sites项目的](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) 将代码和内容从本地计算机上传到RDE，请完成以下步骤。
+
+### Adobe I/O Runtime可扩展CLI
+
+安装Adobe I/O Runtime Extensible CLI，也称为 `aio CLI` 从命令行中运行以下命令。
+
+    &quot;
+    $ npm install -g @adobe/aio-cli
+    &quot;
+
+### AEM插件
+
+使用 `aio cli`&#39;s `plugins:install` 命令。
+
+    &quot;
+    $ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
+    
+    $ aio plugins:install @adobe/aio-cli-plugin-aem-rde
+    &quot;
+
+Cloud Manager插件允许开发人员通过命令行与Cloud Manager交互。
+
+AEM RDE插件允许开发人员从本地计算机部署代码和内容。
+
+此外，要更新插件，请使用 `aio plugins:update` 命令。
+
+## 配置AEM插件
+
+必须将AEM插件配置为与RDE交互。 首先，使用Cloud Manager UI复制组织、项目和环境ID的值。
+
+1. 组织ID:从 **配置文件图片>帐户信息（内部）>模式窗口>当前组织ID**
+
+   ![组织 ID](./assets/Org-ID.png)
+
+1. 程序ID:从 **项目概述>环境> {ProgramName}-rde >浏览器URI >之间的数字 `program/` 和`/environment`**
+
+1. 环境ID:从 **项目概述>环境> {ProgramName}-rde >浏览器URI >后面的数字`environment/`**
+
+   ![程序和环境ID](./assets/Program-Environment-Id.png)
+
+1. 然后，通过使用 `aio cli`&#39;s `config:set` 命令通过运行以下命令来设置这些值。
+
+   ```shell
+   $ aio config:set cloudmanager_orgid <org-id>
+   
+   $ aio config:set cloudmanager_programid <program-id>
+   
+   $ aio config:set cloudmanager_environmentid <env-id>
+   ```
+
+您可以运行以下命令来验证当前配置值。
+
+    &quot;
+    $aio配置：list
+    &quot;
+
+此外，要切换或了解您当前登录的组织，可以使用以下命令。
+
+    &quot;
+    $aio，其中
+    &quot;
+
+## 验证RDE访问权限
+
+通过运行以下命令验证AEM RDE插件的安装和配置。
+
+    &quot;
+    $ aio aem:rde:状态
+    &quot;
+
+RDE状态信息的显示方式与环境状态、 _您的AEM项目_ 创作和发布服务上的包和配置。
 
 ## 后续步骤
 
