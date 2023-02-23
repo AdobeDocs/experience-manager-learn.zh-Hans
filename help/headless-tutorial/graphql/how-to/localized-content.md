@@ -8,10 +8,10 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: 4fa84b0461cbdf2e25336259c4128be5585b8787
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 2%
+source-wordcount: '508'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ AEM提供 [翻译集成框架](https://experienceleague.adobe.com/docs/experienc
 
 区域设置文件夹必须是同级文件夹，并且文件夹名称（而不是标题）必须有效 [ISO 639-1代码](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 表示文件夹中包含的内容的区域设置。
 
-区域设置代码也是用于筛选GraphQL查询返回的内容片段的值。
+区域设置代码也是用于筛选由GraphQL查询返回的内容片段的值。
 
 | 区域设置代码 | AEM路径 | 内容区域设置 |
 |--------------------------------|----------|----------|
@@ -38,7 +38,7 @@ AEM提供 [翻译集成框架](https://experienceleague.adobe.com/docs/experienc
 
 ## GraphQL持久查询
 
-AEM提供 `_locale` 可按区域设置代码自动筛选内容的GraphQL过滤器。 例如，查询 [WKND参考演示项目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 可以使用新的保留查询完成 `wknd-shared/adventures-by-locale` 定义为：
+AEM提供 `_locale` GraphQL过滤器，可按区域设置代码自动过滤内容。 例如，查询 [WKND站点项目](https://github.com/adobe/aem-guides-wknd) 可以使用新的保留查询完成 `wknd-shared/adventures-by-locale` 定义为：
 
 ```graphql
 query($locale: String!) {
@@ -112,7 +112,7 @@ export default function LocaleSwitcher() {
 
 此方法可以扩展到您应用程序中的其他查询，从而确保所有查询仅包含用户区域设置选择指定的内容。
 
-对AEM的查询在自定义React挂接中执行 [getAdventuresByLocale，有关查询AEM GraphQL文档的更多详细说明](./aem-headless-sdk.md).
+对AEM的查询在自定义React挂接中执行 [getAdventuresByLocale，有关查询AEM GraphQL文档的更多详细信息](./aem-headless-sdk.md).
 
 ```javascript
 // src/Adventures.js

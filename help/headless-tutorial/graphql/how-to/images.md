@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 3a7c04dfe465c1eff29ba6b4e4b7e24f047e5b42
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 图像是 [开发丰富而引人入胜的AEM无头体验](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans). AEM Headless支持管理图像资产及其优化交付。
 
-AEM无头内容建模中使用的内容片段，通常引用要用于在无头体验中显示的图像资产。 AEM GraphQL查询可以编写为基于引用图像的位置的图像提供URL。
+AEM无头内容建模中使用的内容片段，通常引用要用于在无头体验中显示的图像资产。 可以编写AEM GraphQL查询，以根据引用图像的位置为图像提供URL。
 
 的 `ImageRef` 类型具有三个用于内容引用的URL选项：
 
@@ -38,7 +38,7 @@ AEM无头内容建模中使用的内容片段，通常引用要用于在无头�
 | `_authorUrl` | ✘ | ✔ | ✘ |
 | `_publishUrl` | ✘ | ✘ | ✔ |
 
-使用 `_authorUrl` 和 `_publishUrl` 应与用于源GraphQL响应的AEM GraphQL端点对齐。
+使用 `_authorUrl` 和 `_publishUrl` 应与用于源GraphQL响应的AEM GraphQL端点保持一致。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
@@ -55,7 +55,7 @@ AEM无头内容建模中使用的内容片段，通常引用要用于在无头�
 
 ## GraphQL持久查询
 
-在GraphQL查询中，将字段返回为 `ImageRef` 类型，并请求相应的字段 `_path`, `_authorUrl`或 `_publishUrl` 应用程序所需。 例如，查询 [WKND参考演示项目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) ，并在其中包含图像资产引用的图像URL `primaryImage` 字段，可以使用新的保留查询完成 `wknd-shared/adventure-image-by-path` 定义为：
+在GraphQL查询中，将字段返回为 `ImageRef` 类型，并请求相应的字段 `_path`, `_authorUrl`或 `_publishUrl` 应用程序所需。 例如，查询 [WKND站点项目](https://github.com/adobe/aem-guides-wknd) ，并在其中包含图像资产引用的图像URL `primaryImage` 字段，可以使用新的保留查询完成 `wknd-shared/adventure-image-by-path` 定义为：
 
 ```graphql
 query ($path: String!) {
