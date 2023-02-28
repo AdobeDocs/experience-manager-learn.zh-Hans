@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 kt: 11743
 last-substantial-update: 2023-01-17T00:00:00Z
-source-git-commit: 643a9844f19aa1bd153661540ec7f7398a35118e
+source-git-commit: 40679e80fd9270dd9fad8174a986fd1fdd5e3d29
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 1%
@@ -99,7 +99,7 @@ JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 
 ## 输入映射
 
-在 `.env` 文件，则必须将它们映射到AppBuilder操作输入，以便在操作本身中读取它们。 为此，请在 `ext.config.yaml` 操作 `inputs` 格式： `INPUT_NAME=$ENV_KEY`.
+在 `.env` 文件，则必须将它们映射到AppBuilder操作输入，以便在操作本身中读取它们。 为此，请在 `ext.config.yaml` 操作 `inputs` 格式： `PARAMS_INPUT_NAME: $ENV_KEY`.
 
 例如：
 
