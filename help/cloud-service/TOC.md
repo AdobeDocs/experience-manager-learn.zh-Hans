@@ -104,7 +104,7 @@ ht-degree: 20%
       + [日志](./debugging/aem-sdk-local-quickstart/logs.md)
       + [远程调试](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi Web控制台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
-      + [Dispatcher工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
+      + [Dispatcher 工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
    + 调试AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [概述](./debugging/cloud-service/overview.md)
@@ -138,11 +138,11 @@ ht-degree: 20%
       + [使用Java SQL API的SQL连接](./networking/examples/sql-java-apis.md)
       + [电子邮件服务](./networking/examples/email-service.md)
 + 迁移 {#migration}
-   + [内容转移工具](./migration/content-transfer-tool.md)
+   + [内容传输工具](./migration/content-transfer-tool.md)
    + [批量导入资产](./migration/bulk-import.md)
    + 移动到 AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
       + [简介](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
-      + [新用户引导](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
+      + [入门培训](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
       + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
       + [双酚A和CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [AEM现代化工具](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
@@ -152,7 +152,7 @@ ht-degree: 20%
       + [搜索和索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + 内容迁移 {#content-migration}
          + [批量导入服务](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
-         + [内容转移工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
+         + [内容传输工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
          + [常见问题](./migration/moving-to-aem-as-a-cloud-service/content-migration/faq.md)
       + [疑难解答](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Formsas a Cloud Service {#aem-forms}
@@ -163,7 +163,7 @@ ht-degree: 20%
       + [简介](./migration/cloud-acceleration-manager/introduction.md)
       + [就绪性和最佳实践分析器](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [实施阶段](./migration/cloud-acceleration-manager/implementation-phase.md)
-      + [内容转移工具](./migration/cloud-acceleration-manager/content-transfer-tool.md)
+      + [内容传输工具](./migration/cloud-acceleration-manager/content-transfer-tool.md)
       + [代码重构工具](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
       + [代码存储库Modernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
       + [Dispatcher Converter](./migration/cloud-acceleration-manager/dispatcher-converter.md)
@@ -301,7 +301,7 @@ ht-degree: 20%
       + [Cloud Manager — 功能测试](./cloud-5/season-2/cloud5-mocm-functional-tests.md)
 + [AEM专家系列](./aem-experts-series.md)
 + 多步Tutorials{#multi-step-tutorials}
-   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
    + [SPA Editor(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)

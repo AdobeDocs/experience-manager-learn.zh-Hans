@@ -7,7 +7,7 @@ index: y
 source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
 workflow-type: tm+mt
 source-wordcount: '222'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 14%
 + 安全性 {#security}
    + [AEM安全通知（2018年11月）](./security/aem-security-notification-2018-11.md)
    + [开发跨域资源共享(CORS)](./security/develop-for-cross-origin-resource-sharing.md)
-   + [了解跨源资源共享(CORS)](./security/understand-cross-origin-resource-sharing.md)
+   + [了解跨源资源共享 (CORS)](./security/understand-cross-origin-resource-sharing.md)
    + [使用SSL向导](./security/use-the-ssl-wizard.md)
 + 工作流 {#workflow}
    + [使用工作流编辑器](./workflow/use-the-workflow-editor.md)
