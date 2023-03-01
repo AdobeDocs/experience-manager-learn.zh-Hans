@@ -1,6 +1,6 @@
 ---
-title: 基本的Next.js应用程序
-description: 一个基本的Next.js应用程序，可显示WKND冒险列表及其详细信息
+title: 基本Next.js应用程序
+description: 一个基本Next.js应用程序，可显示WKND冒险列表及其详细信息
 version: Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -12,7 +12,7 @@ thumbnail: KT-11368.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: e3fb145e7a9f33dd010f6c40e42573d41e54b302
+source-git-commit: 772acab316ba2ff463fa5cacff02013bea920579
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
@@ -20,17 +20,17 @@ ht-degree: 0%
 ---
 
 
-# 基本的Next.js应用程序
+# 基本Next.js应用程序
 
-此 [Next.js](https://nextjs.org/) 应用程序演示了如何使用AEM GraphQL API使用持久查询来查询内容。 此应用程序会呈现WKND冒险的可过滤内容，并在选择冒险时显示冒险的完整详细信息。
+此 [Next.js](https://nextjs.org/) 应用程序演示了如何使用AEM GraphQL API通过持久查询来查询内容。 此应用程序呈现WKND冒险的可筛选内容，并在选择冒险后显示该冒险的完整详细信息。
 
 此代码：
 
-+ 连接到AEM发布服务，且不需要身份验证
++ 连接到AEM Publish服务，无需身份验证
 + 使用WKND的持久查询： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-slug`
 
-要深入查看此Next.js应用程序的构建方式，请查看 [示例Next.js应用程序文档](../example-apps/next-js.md).
+要更深入地了解如何构建此Next.js应用程序，请查看 [示例Next.js应用程序文档](../example-apps/next-js.md).
 
 >[!IMPORTANT]
 >
-> 在嵌入式IDE中，Codesandbox.io不支持编辑Next.js应用程序。 要编辑此代码示例，请 [直接在codesandbox.io上打开Next.js应用程序](https://codesandbox.io/s/wknd-next-js-app-3n6zdv).
+> Codesandbox.io不支持在嵌入式IDE中编辑Next.js应用程序。 要编辑此代码示例， [直接在codesandbox.io上打开Next.js应用程序](https://codesandbox.io/s/wknd-next-js-app-u8x5f8).
