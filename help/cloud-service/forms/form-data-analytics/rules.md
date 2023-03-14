@@ -1,5 +1,5 @@
 ---
-title: 使用Adobe分析报告已提交的表单数据字段
+title: 使用Adobe Analytics报告提交的表单数据字段
 description: 将AEM Forms CS与Adobe Analytics集成以报告表单数据字段
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
+source-git-commit: 439167be96959baea54f50a221c6d26f8fab78b2
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%

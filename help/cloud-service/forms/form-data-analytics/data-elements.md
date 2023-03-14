@@ -1,5 +1,5 @@
 ---
-title: 使用Adobe分析报告已提交的表单数据字段
+title: 使用Adobe Analytics报告提交的表单数据字段
 description: 将AEM Forms CS与Adobe Analytics集成以报告表单数据字段
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
+source-git-commit: 439167be96959baea54f50a221c6d26f8fab78b2
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 创建适当的数据元素
 
-在tags属性中新增了两个数据元素（ApplicationsStateOfResidence和validationError）。
+在Tags属性中，我们添加了两个新数据元素（ApplicationsStateOfResidence和validationError）。
 ![自适应表单](assets/data_elements.png)
 
 ## ApplicatorStateOfResidence
