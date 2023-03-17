@@ -7,9 +7,9 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: c96b8c9761ff9477fda40d641db5021994b32754
+source-git-commit: ea7cd118d9cba97d2b497f6659f74d2fe8331c66
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '282'
 ht-degree: 20%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 20%
    + [富文本](./graphql/how-to/rich-text.md)
    + [图像](./graphql/how-to/images.md)
    + [本地化内容](./graphql/how-to/localized-content.md)
+   + [预览](./graphql/how-to/preview.md)
    + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + [在AEM 6.5上安装GraphiQL](./graphql/how-to/install-graphiql-aem-6-5.md)
    + 示例 {#example-apps}
