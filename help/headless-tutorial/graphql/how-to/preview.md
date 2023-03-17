@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-03-17T00:00:00Z
 jira: KT-10841
 thumbnail: 3416906.jpeg
-source-git-commit: ea7cd118d9cba97d2b497f6659f74d2fe8331c66
+source-git-commit: 024b2faac2e5a1a8d4bac64d1f70f292aac75dd0
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
@@ -71,7 +71,7 @@ AEM无头应用程序支持集成的创作预览。 预览体验可将AEM作者�
 
 让我们来探索WKND应用程序，这是一个简单的React应用程序，可显示AEM在使用AEM Headless GraphQL API时的冒险经历。
 
-示例代码在 [Github.com](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/preview-app).
+示例代码在 [Github.com](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/preview-tutorial).
 
 ## URL和路由
 
