@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
+source-git-commit: 1401710c19ae6ee6a2822ae06286bef4f92cda45
 workflow-type: tm+mt
-source-wordcount: '1931'
+source-wordcount: '1937'
 ht-degree: 0%
 
 ---
@@ -124,7 +124,7 @@ ht-degree: 0%
 
 + 当存在服务凭据时，外部应用程序在访问AEMas a Cloud Service时会使用此访问令牌而不是本地开发访问令牌
 
-在本教程中，Adobe `@adobe/jwt-auth` npm模块用于两者，(1)从服务凭据生成JWT，(2)在单个函数调用中将其交换为访问令牌。 如果您的应用程序不基于JavaScript，请查看 [其他语言的示例代码](https://developer.adobe.com/developer-console/docs/guides/) 以了解如何从服务凭据创建JWT，并将其与Adobe IMS交换为访问令牌。
+在本教程中，Adobe `@adobe/jwt-auth` npm模块用于两者，(1)从服务凭据生成JWT，(2)在单个函数调用中将其交换为访问令牌。 如果您的应用程序不基于JavaScript，请查看 [其他语言的示例代码](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) 以了解如何从服务凭据创建JWT，并将其与Adobe IMS交换为访问令牌。
 
 ## 阅读服务凭据
 
@@ -149,7 +149,7 @@ function getCommandLineParams() {
 
 读取服务凭据后，将使用它们生成JWT，然后与Adobe IMS API交换JWT以获取访问令牌。 然后，可以使用此访问令牌访问AEMas a Cloud Service。
 
-此示例应用程序基于Node.js，因此最好使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模块，以便于(1)生成JWT并（20次与Adobe IMS交换） 如果您的应用程序是使用其他语言开发的，请查看 [相应的代码示例](https://developer.adobe.com/developer-console/docs/guides/) 了解如何使用其他编程语言构建到Adobe IMS的HTTP请求。
+此示例应用程序基于Node.js，因此最好使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模块，以便于(1)生成JWT并（20次与Adobe IMS交换） 如果您的应用程序是使用其他语言开发的，请查看 [相应的代码示例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) 了解如何使用其他编程语言构建到Adobe IMS的HTTP请求。
 
 1. 更新 `getAccessToken(..)` 用于检查JSON文件内容并确定它是否表示本地开发访问令牌或服务凭据。 这可以通过检查 `.accessToken` 属性，该属性仅存在于本地开发访问令牌JSON中。
 
