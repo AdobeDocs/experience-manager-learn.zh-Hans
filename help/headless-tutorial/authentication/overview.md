@@ -13,16 +13,16 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 8fc36698f06fea0eaaf818867c7e713453e0452d
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
 
 # 基于令牌的AEMas a Cloud Service身份验证
 
-AEM公开了各种可以无头方式交互的HTTP端点，从GraphQL、AEM内容服务到资产HTTP API。 通常，这些无头用户可能需要对AEM进行身份验证才能访问受保护的内容或操作。 为了实现此目的，AEM支持对来自外部应用程序、服务或系统的HTTP请求进行基于令牌的身份验证。
+AEM公开了各种可以无头方式进行交互的HTTP端点，从GraphQL、AEM内容服务到资产HTTP API。 通常，这些无头用户可能需要对AEM进行身份验证才能访问受保护的内容或操作。 为了实现此目的，AEM支持对来自外部应用程序、服务或系统的HTTP请求进行基于令牌的身份验证。
 
 在本教程中，您将详细了解外部应用程序如何使用访问令牌通过HTTP以编程方式对AEMas a Cloud Service进行身份验证并与之进行交互。
 
@@ -75,5 +75,5 @@ Node.js应用程序的执行流程如下所示：
 
 + [下载示例应用程序](./assets/aem-guides_token-authentication-external-application.zip)
 + JWT创建和交换的其他代码示例
-   + [Node.js、Java、Python、C#.NET和PHP代码示例](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md)
+   + [Node.js、Java、Python、C#.NET和PHP代码示例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)
    + [基于JavaScript/Axios的代码示例](https://github.com/adobe/aemcs-api-client-lib)
