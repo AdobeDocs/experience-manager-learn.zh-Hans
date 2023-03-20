@@ -24,7 +24,7 @@ ht-degree: 3%
 >title="本地AEM运行时"
 >abstract="Adobe Experience Manager(AEM)可以使用AEMas a Cloud Service SDK的快速入门Jar在本地运行。 这允许开发人员在将自定义代码、配置和内容提交到源控件之前，先对其进行部署和测试，然后将其部署到AEMas a Cloud Service环境。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下载AEMas a Cloud ServiceSDK"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下载 AEM as a Cloud Service SDK"
 
 Adobe Experience Manager(AEM)可以使用AEMas a Cloud Service SDK的快速入门Jar在本地运行。 这允许开发人员在将自定义代码、配置和内容提交到源控件之前，先对其进行部署和测试，然后将其部署到AEMas a Cloud Service环境。
 
@@ -261,4 +261,4 @@ Quickstart: aborting
 + [下载AEM SDK](https://experience.adobe.com/#/downloads)
 + [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
 + [下载Docker](https://www.docker.com/)
-+ [Experience ManagerDispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)
++ [Experience ManagerDispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)

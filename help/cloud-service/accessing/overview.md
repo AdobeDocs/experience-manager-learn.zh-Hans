@@ -67,6 +67,6 @@ Adobe Experience Manager以Adobe IMS用户、用户组和产品配置文件为�
 
 以下文档介绍 [Adobe Admin Console](https://adminconsole.adobe.com)特定的详细信息和关注事项，可能有助于更好地了解Adobe Admin Console并使用它来管理用户和跨Experience Cloud产品的访问。
 
-+ [Adobe Admin Console Identity概述](https://helpx.adobe.com/enterprise/using/identity.html)
++ [Adobe Admin Console Identity概述](https://helpx.adobe.com/cn/enterprise/using/identity.html)
 + [Adobe Admin Console管理员角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)
 + [Adobe Admin Console开发人员角色](https://helpx.adobe.com/enterprise/using/manage-developers.html)

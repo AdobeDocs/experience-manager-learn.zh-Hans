@@ -12,7 +12,7 @@ exl-id: d35a7892-d707-4a5c-9e97-ec3abba0f30c
 source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
 source-wordcount: '172'
-ht-degree: 6%
+ht-degree: 13%
 
 ---
 
@@ -32,4 +32,4 @@ ht-degree: 6%
 ## 其他资源
 
 + [在Admin Console文档中载入用户](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#onboarding-users-in-admin-console)
-+ [Adobe Admin Console身份概述文档](https://helpx.adobe.com/enterprise/using/identity.html)
++ [Adobe Admin Console身份概述文档](https://helpx.adobe.com/cn/enterprise/using/identity.html)
