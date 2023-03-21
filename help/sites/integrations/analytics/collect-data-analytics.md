@@ -9,7 +9,7 @@ level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
 workflow-type: tm+mt
 source-wordcount: '2371'
 ht-degree: 2%
@@ -43,11 +43,11 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-> 需要将Launch与您的AEM网站集成的帮助？ [请观看此视频系列](../experience-platform-launch/overview.md).
+> 需要将Launch与您的AEM网站集成的帮助？ [请观看此视频系列](../experience-platform/data-collection/tags/overview.md).
 
 ## 为WKND站点切换Launch环境
 
-[https://wknd.site](https://wknd.site) 是基于 [开源项目](https://github.com/adobe/aem-guides-wknd) 设计为参考和 [教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) 适用于AEM实施。
+[https://wknd.site](https://wknd.site) 是基于 [开源项目](https://github.com/adobe/aem-guides-wknd) 设计为参考和 [教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans) 适用于AEM实施。
 
 您可以使用Experience Platform调试器，而不是设置AEM环境并安装WKND代码库 **开关** 实况 [https://wknd.site/](https://wknd.site/) to *您的* 启动资产。 当然，如果您自己的AEM网站已经具有 [Adobe客户端数据层已启用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
 

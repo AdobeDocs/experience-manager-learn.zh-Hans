@@ -12,7 +12,7 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 将Target扩展添加到Launch资产 {#adobe-target-extension}
 
-要随此视频一起播放，您必须已经具有与AEM](../experience-platform-launch/overview.md)集成的[Experience Platform Launch。
+要观看此视频，您必须已 [与AEM集成Experience Platform Launch](../experience-platform/data-collection/tags/overview.md).
 
 了解如何使用Experience Platform Launch将Adobe Target启用到AEM网站。
 

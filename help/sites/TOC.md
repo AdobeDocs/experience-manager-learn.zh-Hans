@@ -5,10 +5,10 @@ breadcrumb-title: AEM Sites 教程
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: c82965636ddeef7dc165e0bea079c99f1a16e0ca
+source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 26%
+source-wordcount: '441'
+ht-degree: 25%
 
 ---
 
@@ -98,12 +98,12 @@ ht-degree: 26%
 + 集成 {#integrations}
    + Experience Platform {#experience-platform}
       + [生成FPID](integrations/platform/fpid.md)
-   + Experience Platform Launch {#experience-platform-launch}
-      + [概述](integrations/experience-platform-launch/overview.md)
-      + [创建 Launch 属性](integrations/experience-platform-launch/create-launch-property.md)
-      + [使用AEM连接与LaunchAdobe I/O](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
-      + [创建启动项Cloud Service](integrations/experience-platform-launch/create-launch-cloud-service.md)
-      + [调试Launch实施](integrations/experience-platform-launch/debug-launch-implementation.md)
+   + Experience Platform数据收集标记(Launch) {#experience-platform-data-collection-tags}
+      + [概述](integrations/experience-platform/data-collection/tags/overview.md)
+      + [创建标记属性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
+      + [使用开发人员控制台将AEM与标记连接起来](integrations/experience-platform/data-collection/tags/connect-aem-tags-using-developer-console.md)
+      + [创建AEM LaunchCloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [调试标记(Launch)实施](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe 客户端数据层{#adobe-client-data-layer}
       + [使用Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自定义Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-customize.md)
