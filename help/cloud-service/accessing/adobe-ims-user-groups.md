@@ -1,6 +1,6 @@
 ---
 title: Adobe IMS用户组和AEM
-description: Adobe IMS用户组可建立对AEM公开的用户的逻辑集，利用这些用户可定义AEM用户的微调权限。
+description: Adobe IMS 用户组建立了对 AEM 公开的用户逻辑集，这些逻辑集可用来定义 AEM 用户的微调权限。
 version: Cloud Service
 topic: Administration, Security
 feature: User and Groups
@@ -12,7 +12,7 @@ exl-id: 40ba2368-edb7-4348-9aff-91194200092e
 source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
 source-wordcount: '92'
-ht-degree: 0%
+ht-degree: 60%
 
 ---
 
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_usergroups"
->title="Adobe IMS用户组"
->abstract="Adobe IMS用户组可建立对AEM公开的用户的逻辑集，利用这些用户可定义AEM用户的微调权限。"
+>title="Adobe IMS 用户组"
+>abstract="Adobe IMS 用户组建立了对 AEM 公开的用户逻辑集，这些逻辑集可用来定义 AEM 用户的微调权限。"
 
  Adobe IMS用户组可建立对AEM公开的用户的逻辑集，利用这些用户可定义AEM用户的微调权限。
 

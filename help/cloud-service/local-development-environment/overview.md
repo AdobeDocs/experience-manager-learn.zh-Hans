@@ -14,7 +14,7 @@ exl-id: 8b12f34c-be98-4f47-853c-411bb601990c
 source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '546'
-ht-degree: 5%
+ht-degree: 14%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_overview"
 >title="概述"
->abstract="为AEM as a Cloud Service设置本地开发环境包括开发、构建和编译AEM项目所需的开发工具，以及允许开发人员在本地运行时快速在本地验证新功能，然后再通过Adobe Cloud Manager将新功能部署到AEM as a Cloud Service。"
+>abstract="为 AEM as a Cloud Service 设置本地开发环境包括开发、构建和编译 AEM 项目所需的开发工具，以及允许开发人员在通过 Adobe Cloud Manager 将新功能部署到 AEM as a Cloud Service 之前在本地快速验证这些新功能的本地运行时。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="开发准则"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=zh-Hans" text="开发基础"
 
@@ -66,7 +66,7 @@ AEM项目是一个自定义代码库，其中包含通过Cloud Manager部署到A
 
 [为AEM项目设置开发工具](./development-tools.md)
 
-## 本地AEM运行时
+## 本地 AEM 运行时
 
 AEMas a Cloud ServiceSDK提供了 [!DNL QuickStart Jar] 运行本地版本的AEM。 的 [!DNL QuickStart Jar] 可用于在本地运行AEM创作服务或AEM发布服务。 请注意，当 [!DNL QuickStart Jar] 提供了本地开发体验，但AEM as a Cloud Service中提供的所有功能并非都包含在 [!DNL QuickStart Jar].
 

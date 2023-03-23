@@ -12,11 +12,11 @@ exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
 source-wordcount: '1174'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# 使用AEM Headless的图像 {#images-with-aem-headless}
+# AEM Headless 图像 {#images-with-aem-headless}
 
 图像是 [开发丰富而引人入胜的AEM无头体验](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans). AEM Headless支持管理图像资产及其优化交付。
 
@@ -42,8 +42,8 @@ AEM无头内容建模中使用的内容片段，通常引用要用于在无头�
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
->title="使用AEM Headless的图像"
->abstract="了解AEM Headless如何支持图像资产管理及其优化交付。"
+>title="AEM Headless 图像"
+>abstract="了解 AEM Headless 如何支持图像资产的管理及其优化交付。"
 
 ## 内容片段模型
 

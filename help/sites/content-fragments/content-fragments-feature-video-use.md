@@ -14,7 +14,7 @@ exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '383'
-ht-degree: 9%
+ht-degree: 17%
 
 ---
 
@@ -34,7 +34,7 @@ AEM内容片段是基于文本的编辑内容，可能包含一些与之关联�
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_admin_content_fragments"
 >title="管理片段"
->abstract="了解内容片段如何允许您设计、创建、策划和使用独立于页面的内容。"
+>abstract="了解如何使用内容片段来设计、创建、管理和使用独立于页面的内容。"
 
 ## 定义内容片段模型 {#defining-content-fragment-models}
 
@@ -77,7 +77,7 @@ AEM内容片段可以从AEM作者中下载为包含变体、元素和元数据�
 ## 其他资源 {#additional-resources}
 
 * [交付内容片段](content-fragments-delivery-feature-video-use.md)
-* [AEM WCM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [AEM WCM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [AEM WCM核心内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)
 
 要在AEM 6.4+实例上下载并安装以下包，以获取视频系列的最终状态，请执行以下操作：

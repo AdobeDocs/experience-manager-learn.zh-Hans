@@ -13,7 +13,7 @@ exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
 source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '598'
-ht-degree: 6%
+ht-degree: 27%
 
 ---
 
@@ -21,18 +21,18 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_overview"
->title="Adobe IMS简介"
->abstract="AEMas a Cloud Service利用Adobe IMS(Identity Management系统)促进管理员和普通用户登录AEM创作服务。 了解如何将Adobe IMS用户、组和产品配置文件与AEM组和权限一起使用，以提供对AEM创作服务的细粒度访问。"
+>title="Adobe IMS 简介"
+>abstract="AEM as a Cloud Service 利用 Adobe IMS (Identity Management System) 推动其用户（包括管理员和普通用户）登录 AEM Author 服务。了解 Adobe IMS 用户、组和产品配置文件如何与 AEM 组和权限结合使用，以提供对 AEM Author 服务的精细访问。"
 
 AEMas a Cloud Service是利用AEM应用程序的云原生方式，因此，会利用Adobe IMS(Identity Management系统)来促进管理员和普通用户的用户登录到AEM创作服务。
 
 ![Adobe Admin Console](./assets/hero.png)
 
-了解如何将Adobe IMS用户、组和产品配置文件与AEM组和权限一起使用，以提供对AEM创作服务的细粒度访问。
+了解 Adobe IMS 用户、组和产品配置文件如何与 AEM 组和权限结合使用，以提供对 AEM Author 服务的精细访问。
 
 ## Adobe IMS用户
 
-需要访问AEM创作服务的用户将作为 [Adobe IMS用户](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html) in [Adobe的AdminConsole](https://adminconsole.adobe.com). 了解Adobe IMS用户的概念，以及如何在Admin Console中访问和管理这些用户。
+需要访问AEM创作服务的用户将作为 [Adobe IMS用户](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html) in [Adobe的AdminConsole](https://adminconsole.adobe.com). 了解 Adobe IMS 用户的身份，以及如何在 Admin Console 中访问和管理他们。
 
 [了解Adobe IMS用户](./adobe-ims-users.md)
 
@@ -53,7 +53,7 @@ AEMas a Cloud Service是利用AEM应用程序的云原生方式，因此，会�
 
 ## AEM用户组和权限
 
-Adobe Experience Manager以Adobe IMS用户、用户组和产品配置文件为基础，旨在为用户提供对AEM的可自定义的访问权限。 了解如何构建AEM组和权限，以及它们如何与Adobe IMS抽象概念协同工作，以提供对AEM的无缝、可自定义的访问。
+Adobe Experience Manager 基于 Adobe IMS 用户、用户组和产品配置文件进行构建，以便向用户提供对 AEM 的可定制的访问权限。了解如何构建AEM组和权限，以及它们如何与Adobe IMS抽象概念协同工作，以提供对AEM的无缝、可自定义的访问。
 
 [了解AEM用户、组和权限](./aem-users-groups-and-permissions.md)
 
@@ -67,6 +67,6 @@ Adobe Experience Manager以Adobe IMS用户、用户组和产品配置文件为�
 
 以下文档介绍 [Adobe Admin Console](https://adminconsole.adobe.com)特定的详细信息和关注事项，可能有助于更好地了解Adobe Admin Console并使用它来管理用户和跨Experience Cloud产品的访问。
 
-+ [Adobe Admin Console Identity概述](https://helpx.adobe.com/cn/enterprise/using/identity.html)
++ [Adobe Admin Console 标识概述](https://helpx.adobe.com/cn/enterprise/using/identity.html)
 + [Adobe Admin Console管理员角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)
 + [Adobe Admin Console开发人员角色](https://helpx.adobe.com/enterprise/using/manage-developers.html)

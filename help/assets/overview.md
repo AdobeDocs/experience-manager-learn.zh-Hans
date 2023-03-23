@@ -7,7 +7,7 @@ exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 5%
+ht-degree: 15%
 
 ---
 
@@ -18,10 +18,10 @@ Adobe Experience Manager(AEM)Assets是AEM Platform上的一款数字资产管理
 >[!CONTEXTUALHELP]
 >id="aemcloud_assets_overview"
 >title="AEM Assets"
->abstract="了解如何快速查找和编辑所需的资产。"
->additional-url="https://video.tv.adobe.com/v/336196" text="AEM Assets演练"
+>abstract="了解如何快速查找和编辑所需资产。"
+>additional-url="https://video.tv.adobe.com/v/336196" text="AEM Assets 演练"
 
-## AEM Assets演练
+## AEM Assets 演练
 
 了解AEM Assets的概念以及如何使用它来实现贵组织的业务目标。
 
