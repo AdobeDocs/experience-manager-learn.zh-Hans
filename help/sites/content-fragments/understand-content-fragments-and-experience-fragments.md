@@ -1,5 +1,5 @@
 ---
-title: 了解内容片段和体验片段
+title: 内容片段和体验片段
 description: 了解内容片段和体验片段之间的相似之处和差异，以及使用每种类型的时间和方式。
 sub-product: Experience Manager Assets, Experience Manager Sites
 feature: Content Fragments, Experience Fragments
@@ -12,18 +12,18 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: 84fdbaa173a929ae7467aecd031cacc4ce73538a
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 2%
+source-wordcount: '1044'
+ht-degree: 5%
 
 ---
 
-# 了解内容片段和体验片段
+# 内容片段和体验片段
 
 Adobe Experience Manager的内容片段和体验片段在表面上看似相似，但在不同的用例中，每个片段都扮演着关键角色。 了解内容片段和体验片段如何相似、不同，以及何时以及如何使用它们。
 
-## 内容片段和体验片段比较
+## 比较
 
 <table>
 <tbody><tr><td><strong> </strong></td>
@@ -96,25 +96,30 @@ Adobe Experience Manager的内容片段和体验片段在表面上看似相似�
 <li>注释</li>
 <li>响应式布局和预览</li>
 <li>翻译/本地化</li>
+<li>通过内容片段引用的复杂数据模型</li>
+<li>应用程序内预览</li>
 </ul>
 </td>
 </tr><tr><td><strong>使用</strong></td>
 <td><ul>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM核心组件内容片段组件</a> ，以在AEM Sites、AEM Screens或体验片段中使用。</li>
+<li>通过导出JSON <a href="https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans">AEM Headless GraphQL API</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans" target="_blank">AEM核心组件内容片段组件</a> ，以在AEM Sites、AEM Screens或体验片段中使用。</li>
 <li>通过导出JSON <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en" target="_blank">AEM Content Services</a> 用于第三方消费</li>
-<li>通过AEM HTTP Assets API进行JSON，用于第三方使用。</li>
+<li>将JSON导出到Adobe Target以获取目标选件</li>
+<li>通过AEM HTTP Assets API进行JSON以用于第三方使用</li>
 </ul>
 </td>
 <td><ul>
 <li>AEM体验片段组件，用于AEM Sites、AEM Screens或其他体验片段。</li>
 <li>导出为 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en" target="_blank">纯HTML</a> 供第三方系统使用</li>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/experience-fragments-target.html?lang=en" target="_blank">HTML导出到Adobe Target</a> 针对定位选件</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/experience-fragments-target.html?lang=zh-Hans" target="_blank">HTML导出到Adobe Target</a> 针对定位选件</li>
 <li>将JSON导出到Adobe Target以获取目标选件</li>
 </ul>
 </td>
 </tr><tr><td><strong>常见用例</strong></td>
 <td><ul>
-<li>高度结构化的数据输入/表单内容</li>
+<li>通过GraphQL提供无头用例</li>
+<li>结构化数据输入/基于表单的内容</li>
 <li>长格式编辑内容（多行元素）</li>
 <li>在提供内容的渠道的生命周期之外管理的内容</li>
 </ul>
@@ -142,20 +147,20 @@ Adobe Experience Manager的内容片段和体验片段在表面上看似相似�
 
 下图说明了AEM内容片段的整体架构
 
-!![内容片段架构](./assets/content-fragments-architecture.png)
+![内容片段架构](./assets/content-fragments-architecture.png)
 
 + **内容片段模型** 定义用于定义内容片段可捕获和显示的内容的元素（或字段）。
 + 的 **内容片段** 是表示逻辑内容实体的内容片段模型的实例。
 + 内容片段 **变量** 但是，内容片段模型中存在变量。
 + 内容片段可由以下人员公开/使用：
    + 在上使用内容片段 **AEM Sites** (或AEM Screens)。
-   + 在 **体验片段** 通过AEM WCM核心组件的内容片段组件，用于任何体验片段用例。
+   + 消费 **内容片段** 从使用AEM Headless GraphQL API的无头应用程序。
    + 通过将内容片段变量内容公布为JSON **AEM Content Services** 和API页面。
    + 通过直接调用（通过）直接将内容片段内容（所有变量）公布为JSON **AEM Assets HTTP API** 用于CRUD用例。
 
 ## 体验片段架构
 
-!![体验片段架构](./assets/experience-fragments-architecture.png)
+![体验片段架构](./assets/experience-fragments-architecture.png)
 
 + **可编辑的模板**，而定义者又为 **可编辑的模板类型** 和 **AEM页面组件实施**，定义可用于撰写体验片段的允许的AEM组件。
 + 的 **体验片段** 是可编辑模板的一个实例，表示逻辑体验。
@@ -167,15 +172,16 @@ Adobe Experience Manager的内容片段和体验片段在表面上看似相似�
    + 将体验片段导出到 **Adobe Target** 作为HTML或JSON选件。
    + AEM Sites本身支持HTML选件，但是，JSON选件需要自定义开发。
 
-## 内容片段的支持材料
+## 内容片段的支持资源
 
 + [内容片段用户指南](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
++ [Adobe Experience Manager as a Headless CMS 简介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html?lang=zh-Hans)
 + [在AEM中使用内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=en)
 + [AEM WCM核心组件的内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)
 + [使用内容片段和AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=en)
 + [AEM Content Services快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
 
-## 体验片段的支持材料
+## 体验片段的支持资源
 
 + [Adobe体验片段文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en)
 + [了解AEM体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en)
