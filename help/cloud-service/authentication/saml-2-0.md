@@ -10,9 +10,9 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 5522a22cc3ac12ce54297ee9f30570c29cfd5ce7
 workflow-type: tm+mt
-source-wordcount: '2815'
+source-wordcount: '2961'
 ht-degree: 1%
 
 ---
@@ -107,7 +107,7 @@ IDP的公共证书将添加到AEM全局信任存储，并用于验证由IDP发�
 1. 展开 __从CER文件添加证书__.
 1. 选择 __选择证书文件__，并上传IDP提供的证书文件。
 1. 离开 __将证书映射到用户__ 空白。
-1. 选择&#x200B;__提交__。
+1. 选择 __提交__.
 1. 新添加的证书显示在 __从CRT文件添加证书__ 中。
 1. 记下 __别名__，因为此值在 [SAML 2.0身份验证处理程序OSGi配置](#saml-2-0-authentication-handler-osgi-configuration).
 1. 选择 __保存并关闭__.
@@ -126,6 +126,21 @@ IDP的公共证书将添加到AEM全局信任存储，并用于验证由IDP发�
 1. 选择 __完成__ 然后 __保存__.
 1. 选择 __生成__ 按钮 __全局信任存储__ 包。
 1. 生成后，选择 __更多__ > __复制__ 激活全局信任存储节点(`/etc/truststore`)到AEM发布。
+
+## 创建authentication-service密钥库{#authentication-service-keystore}
+
+_当 [SAML 2.0身份验证处理程序OSGi配置属性 `handleLogout` 设置为 `true`](#saml-20-authenticationsaml-2-0-authentication) 或 [AuthnRequest签名/SAML断言加密](#install-aem-public-private-key-pair) 必需_
+
+1. 以AEM管理员身份登录AEM作者，以上传私钥。
+1. 导航到 __工具>安全>信任存储__，然后选择 __身份验证服务__ 用户，然后选择 __属性__ 中。
+1. 导航到 __工具>安全>用户__，然后选择 __身份验证服务__ 用户，然后选择 __属性__ 中。
+1. 选择 __密钥库__ 选项卡。
+1. 创建或打开密钥库。 如果创建密钥库，请保护密码安全。
+   + A [公共/私有密钥库安装在此密钥库中](#install-aem-public-private-key-pair) 仅当需要AuthnRequest签名/SAML断言加密时。
+   + 如果此SAML集成支持注销，但不支持AuthnRequest签名/SAML断言，则空密钥库就足够了。
+1. 选择 __保存并关闭__.
+1. 选择 __身份验证服务__ 用户，然后选择 __激活__ 中。
+
 
 ## 安装AEM公钥/私钥对{#install-aem-public-private-key-pair}
 
@@ -214,24 +229,24 @@ AEM SAML配置通过 __AdobeGranite SAML 2.0身份验证处理程序__ OSGi配�
 | 路径 | `path` | ✔ | 字符串数组 | `/` | AEM路径此身份验证处理程序用于。 |
 | IDP URL | `idpUrl` | ✔ | 字符串 |  | 发送SAML身份验证请求的IDP URL。 |
 | IDP证书别名 | `idpCertAlias` | ✔ | 字符串 |  | 在AEM全局信任存储中找到的IDP证书的别名 |
-| IDP HTTP重定向 | `idpHttpRedirect` | ✘ | 布尔型 | `false` | 指示是否向IDP URL进行HTTP重定向，而不是发送AuthnRequest。 设置为 `true` IDP启动的身份验证。 |
+| IDP HTTP重定向 | `idpHttpRedirect` | ✘ | 布尔值 | `false` | 指示是否向IDP URL进行HTTP重定向，而不是发送AuthnRequest。 设置为 `true` IDP启动的身份验证。 |
 | IDP标识符 | `idpIdentifier` | ✘ | 字符串 |  | 唯一IDP Id，可确保AEM用户和组的唯一性。 如果为空，则 `serviceProviderEntityId` 的值。 |
 | 断言使用者服务URL | `assertionConsumerServiceURL` | ✘ | 字符串 |  | 的 `AssertionConsumerServiceURL` AuthnRequest中的URL属性，指定 `<Response>` 消息必须发送到AEM。 |
 | SP实体ID | `serviceProviderEntityId` | ✔ | 字符串 |  | 唯一标识IDP的AEM;通常为AEM主机名。 |
-| SP加密 | `useEncryption` | ✘ | 布尔型 | `true` | 指示IDP是否加密SAML断言。 需要 `spPrivateKeyAlias` 和 `keyStorePassword` 设置。 |
+| SP加密 | `useEncryption` | ✘ | 布尔值 | `true` | 指示IDP是否加密SAML断言。 需要 `spPrivateKeyAlias` 和 `keyStorePassword` 设置。 |
 | SP私钥别名 | `spPrivateKeyAlias` | ✘ | 字符串 |  | 中私钥的别名 `authentication-service` 用户的密钥库。 如果 `useEncryption` 设置为 `true`. |
 | SP密钥存储密码 | `keyStorePassword` | ✘ | 字符串 |  | “authentication-service”用户密钥存储的密码。 如果 `useEncryption` 设置为 `true`. |
 | 默认重定向 | `defaultRedirectUrl` | ✘ | 字符串 | `/` | 成功身份验证后的默认重定向URL。 可以是相对于AEM主机的(例如， `/content/wknd/us/en/html`)。 |
 | 用户Id属性 | `userIDAttribute` | ✘ | 字符串 | `uid` | 包含AEM用户ID的SAML断言属性的名称。 将留空以使用 `Subject:NameId`. |
-| 自动创建AEM用户 | `createUser` | ✘ | 布尔型 | `true` | 指示AEM用户是否在成功验证时创建。 |
+| 自动创建AEM用户 | `createUser` | ✘ | 布尔值 | `true` | 指示AEM用户是否在成功验证时创建。 |
 | AEM用户中间路径 | `userIntermediatePath` | ✘ | 字符串 |  | 创建AEM用户时，此值将用作中间路径(例如， `/home/users/<userIntermediatePath>/jane@wknd.com`)。 需要 `createUser` 设置为 `true`. |
 | AEM用户属性 | `synchronizeAttributes` | ✘ | 字符串数组 |  | 要在AEM用户上存储的SAML属性映射列表，格式为 `[ "saml-attribute-name=path/relative/to/user/node" ]` (例如， `[ "firstName=profile/givenName" ]`)。 请参阅 [本机AEM属性的完整列表](#aem-user-attributes). |
-| 将用户添加到AEM组 | `addGroupMemberships` | ✘ | 布尔型 | `true` | 指示AEM用户在成功身份验证后是否自动添加到AEM用户组。 |
+| 将用户添加到AEM组 | `addGroupMemberships` | ✘ | 布尔值 | `true` | 指示AEM用户在成功身份验证后是否自动添加到AEM用户组。 |
 | AEM组成员资格属性 | `groupMembershipAttribute` | ✘ | 字符串 | `groupMembership` | SAML断言属性的名称，该属性包含应添加用户的AEM用户组列表。 需要 `addGroupMemberships` 设置为 `true`. |
 | 默认AEM组 | `defaultGroups` | ✘ | 字符串数组 |  | 经过身份验证的AEM用户组列表始终会添加到(例如， `[ "wknd-user" ]`)。 需要 `addGroupMemberships` 设置为 `true`. |
 | NameIDPolicy格式 | `nameIdFormat` | ✘ | 字符串 | `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` | 要在AuthnRequest消息中发送的NameIDPolicy格式参数的值。 |
-| 存储SAML响应 | `storeSAMLResponse` | ✘ | 布尔型 | `false` | 指示 `samlResponse` 值存储在AEM中 `cq:User` 节点。 |
-| 处理注销 | `handleLogout` | ✘ | 布尔型 | `false` | 指示注销请求是否由此SAML身份验证处理程序处理。 需要 `logoutUrl` 设置。 |
+| 存储SAML响应 | `storeSAMLResponse` | ✘ | 布尔值 | `false` | 指示 `samlResponse` 值存储在AEM中 `cq:User` 节点。 |
+| 处理注销 | `handleLogout` | ✘ | 布尔值 | `false` | 指示注销请求是否由此SAML身份验证处理程序处理。 需要 `logoutUrl` 设置。 |
 | 注销URL | `logoutUrl` | ✘ | 字符串 |  | 将SAML注销请求发送到的IDP的URL。 如果 `handleLogout` 设置为 `true`. |
 | 时钟容差 | `clockTolerance` | ✘ | 整数 | `60` | 验证SAML断言时，IDP和AEM(SP)时钟偏差容限。 |
 | 摘要方法 | `digestMethod` | ✘ | 字符串 | `http://www.w3.org/2001/04/xmlenc#sha256` | IDP在对SAML消息进行签名时使用的摘要算法。 |
