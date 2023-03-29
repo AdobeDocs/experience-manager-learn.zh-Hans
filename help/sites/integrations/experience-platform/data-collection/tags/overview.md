@@ -13,10 +13,10 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-10T00:00:00Z
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 3%
+source-wordcount: '336'
+ht-degree: 2%
 
 ---
 
@@ -31,21 +31,28 @@ ht-degree: 3%
 
 标记是Adobe Experience Platform的下一代标签管理技术。 标记提供了部署Adobe Analytics、Target、Audience Manager和更多解决方案的最简单方法。 获取标记以及与Adobe Experience Manager的建议集成概述。
 
->[!VIDEO](https://video.tv.adobe.com/v/39090?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
 
 
 ## 前提条件
 
-集成Experience Platform数据收集标记时需要满足以下条件
+集成Experience Platform数据收集标记时需要满足以下条件。
 
 + AEM管理员对AEMas a Cloud Service环境的访问权限
-+ 参考网站，如 [WKND](https://github.com/adobe/aem-guides-wknd) 部署到
++ 参考网站，如 [WKND](https://github.com/adobe/aem-guides-wknd) 部署到其上。
++ 访问Adobe Experience Platform数据收集解决方案
 + 系统管理员访问 [Adobe Developer控制台](https://developer.adobe.com/developer-console/)
 
 
+## 高级步骤
+
++ 在Adobe Experience Platform数据收集中，创建一个标记属性并将其编辑到 _添加规则_. 然后 _添加库_，选择新添加的规则，批准并发布该规则。
++ 使用现有（或新）IMS配置连接AEM和标记
++ 在AEM中，创建Launch云服务配置，然后将其应用到现有网站，最后验证标记属性及其库是否已在已发布或创作网站上加载。
+
 ## 后续步骤
 
-[创建标记(Launch)属性](create-tag-property.md)
+[创建标记属性](create-tag-property.md)
 
 ## 其他资源 {#additional-resources}
 

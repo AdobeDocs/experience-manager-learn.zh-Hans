@@ -12,10 +12,10 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 2%
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
@@ -25,6 +25,34 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/38567?quality=12&learn=on)
 
+## 通过Satellite对象进行客户端调试
+
+客户端调试有助于验证标记属性规则的加载情况或执行顺序。 每当将标记属性添加到网站时， `_satellite` 浏览器中存在JavaScript对象，以便于进行客户端事件和数据跟踪。
+
+要启用客户端调试，请调用 `setDebug(true)` 方法 `_satellite` 对象。
+
+1. 打开浏览器控制台，然后运行以下命令。
+
+   ```javascript
+       _satellite.setDebug(true);
+   ```
+
+1. 重新加载AEM网站页面，并验证控制台日志是否显示 _已触发规则_ 如下所示的消息。
+
+   ![创作和发布页面上的标记属性](assets/satellite-object-debugging.png)
+
+## 通过Adobe Experience Platform Debugger进行调试
+
+Adobe提供Adobe Experience Platform Debugger [Chrome扩展](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 和 [Firefox加载项](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) 调试、了解和深入了解集成。
+
+1. 打开Adobe Experience Platform Debugger扩展，并在Publish实例上打开网站页面
+
+1. 在 **Adobe Experience Platform Debugger >摘要>Adobe Experience Platform标记** 部分，验证您的标记属性详细信息，如名称、版本、构建日期、环境和扩展。
+
+   ![Adobe Experience Platform Debugger和标记属性详细信息](assets/tag-property-details.png)
+
 ## 其他资源 {#additional-resources}
 
-* [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
+
++ [卫星对象引用](https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html)

@@ -12,7 +12,7 @@ topic: Integrations
 role: Admin
 level: Intermediate
 exl-id: dd6c17ae-8e08-4db3-95f9-081cc7dbd86e
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 以下视频介绍如何将AEMas a Cloud Service与Adobe Target连接。
 
-此集成允许AEM创作服务直接与Adobe Target通信，并将体验片段从AEM作为选件推送到Target。  此集成可执行以下操作 *not* 将Adobe Target JavaScript(AT.js)添加到AEM Sites网页中，以便集成 [AEM with Launch（使用Target扩展）](../experience-platform/data-collection/tags/connect-aem-tags-using-developer-console.md).
+此集成允许AEM创作服务直接与Adobe Target通信，并将体验片段从AEM作为选件推送到Target。  此集成可执行以下操作 *not* 将Adobe Target JavaScript(AT.js)添加到AEM Sites网页中，以便集成 [AEM with Launch（使用Target扩展）](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
 
