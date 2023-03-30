@@ -1,6 +1,6 @@
 ---
 title: 将Adobe客户端数据层与AEM核心组件结合使用
-description: Adobe客户端数据层引入了一种标准方法，用于收集和存储有关访客在网页上体验的数据，然后使访客能够轻松访问这些数据。 Adobe Client Data Layer 与平台无关，而是与核心组件完全集成以用于 AEM。
+description: Adobe客户端数据层引入了一种标准方法，用于收集和存储有关访客在网页上的体验的数据，然后使访客能够轻松访问这些数据。 Adobe Client Data Layer 与平台无关，而是与核心组件完全集成以用于 AEM。
 topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
@@ -9,16 +9,16 @@ kt: 6261
 thumbnail: 41195.jpg
 last-substantial-update: 2021-01-11T00:00:00Z
 exl-id: 066693b7-2b87-45e8-93ec-8bd09a7c263e
-source-git-commit: 835657082c0c6bf7b2822b53ef2b99039d77f249
+source-git-commit: 99b3ecf7823ff9a116c47c88abc901f8878bbd7a
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '783'
 ht-degree: 8%
 
 ---
 
 # 将Adobe客户端数据层与AEM核心组件结合使用 {#overview}
 
-Adobe客户端数据层引入了一种标准方法，用于收集和存储有关访客在网页上体验的数据，然后使访客能够轻松访问这些数据。 Adobe Client Data Layer 与平台无关，而是与核心组件完全集成以用于 AEM。
+Adobe客户端数据层引入了一种标准方法，用于收集和存储有关访客在网页上的体验的数据，然后使访客能够轻松访问这些数据。 Adobe Client Data Layer 与平台无关，而是与核心组件完全集成以用于 AEM。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41195?quality=12&learn=on)
 
@@ -28,20 +28,20 @@ Adobe客户端数据层引入了一种标准方法，用于收集和存储有关
 
 ## 探索数据层
 
-您只需使用浏览器和实时版的开发人员工具，即可了解Adobe客户端数据层的内置功能 [WKND参考站点](https://wknd.site/).
+您只需使用浏览器和实时版的开发人员工具，即可了解Adobe客户端数据层的内置功能 [WKND参考站点](https://wknd.site/us/en.html).
 
 >[!NOTE]
 >
 > 下面从Chrome浏览器拍摄的屏幕截图。
 
-1. 导航到 [https://wknd.site](https://wknd.site)
+1. 导航到 [https://wknd.site/us/en.html](https://wknd.site/us/en.html)
 1. 打开开发人员工具，然后在 **控制台**:
 
    ```js
    window.adobeDataLayer.getState();
    ```
 
-   Inspect响应，用于查看AEM网站上数据层的当前状态。 您应会看到有关页面和各个组件的信息。
+   要查看AEM网站上数据层的当前状态，请检查响应。 您应会看到有关页面和各个组件的信息。
 
    ![Adobe数据层响应](assets/data-layer-state-response.png)
 
@@ -90,7 +90,7 @@ Adobe客户端数据层引入了一种标准方法，用于收集和存储有关
    }
    ```
 
-   上述代码将检查 `event` 对象和使用 `adobeDataLayer.getState` 方法获取触发事件的对象的当前状态。 然后，帮助程序方法将检查 `filter` 标准，且仅当 `dataObject` 满足将返回的过滤器。
+   上述代码会检查 `event` 对象和使用 `adobeDataLayer.getState` 方法获取触发事件的对象的当前状态。 然后，帮助程序方法检查 `filter` 只有当 `dataObject` 符合返回的筛选条件。
 
    >[!CAUTION]
    >
@@ -108,7 +108,7 @@ Adobe客户端数据层引入了一种标准方法，用于收集和存储有关
    }
    ```
 
-   的 `teaserShownHandler` 将调用 `getDataObjectHelper` 在 `wknd/components/teaser` 作为 `@type` 以过滤由其他组件触发的事件。
+   的 `teaserShownHandler` 函数调用 `getDataObjectHelper` 函数，并传递 `wknd/components/teaser` 作为 `@type` 以过滤由其他组件触发的事件。
 
 1. 接下来，将事件侦听器推送到数据层以侦听 `cmp:show` 事件。
 
@@ -118,13 +118,13 @@ Adobe客户端数据层引入了一种标准方法，用于收集和存储有关
    });
    ```
 
-   的 `cmp:show` 事件由许多不同的组件触发，例如当一个新幻灯片显示在 **轮播** 或在 **选项卡** 组件。
+   的 `cmp:show` 事件由许多不同的组件触发，例如当一个新幻灯片显示在 **轮播**，或者在 **选项卡** 组件。
 
-1. 在页面上切换轮播幻灯片，并观察控制台语句：
+1. 在页面上，切换轮播幻灯片并观察控制台语句：
 
    ![切换轮播并查看事件侦听器](assets/teaser-console-slides.png)
 
-1. 从数据层中删除事件侦听器以停止侦听 `cmp:show` 事件：
+1. 停止监听 `cmp:show` 事件，从数据层删除事件侦听器
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -162,18 +162,16 @@ Adobe客户端数据层引入了一种标准方法，用于收集和存储有关
 
    ![页面显示数据](assets/page-show-console-data.png)
 
-   的 `cmp:show` 页面的事件会在页面最顶部的每次页面加载时触发。 您可能会问，当页面显然已加载时，为何触发事件处理程序？
+   的 `cmp:show` 页面顶部每次加载页面时都会触发页面事件。 您可能会问，当页面显然已加载时，为何触发事件处理程序？
 
-   这是Adobe客户端数据层的独特功能之一，在其中，您可以注册事件侦听器 **之前** 或 **after** 数据层已初始化。 这是避免竞争情况的关键功能。
+   Adobe客户端数据层的一个独特功能是，您可以注册事件侦听器 **之前** 或 **after** 数据层已初始化，这有助于避免争用情况。
 
-   数据层维护一个队列数组，其中包含依次发生的所有事件。 默认情况下，数据层将触发在 **过去** 以及 **未来**. 它可以将事件过滤到过去或未来。 [有关更多信息，请参阅此文档](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
+   数据层维护一个队列数组，其中包含已依次发生的所有事件。 默认情况下，数据层将触发在 **过去** 和 **未来**. 可以过滤过去或将来的事件。 [有关更多信息，请参阅此文档](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
 
 
 ## 后续步骤
 
-请参阅以下教程，了解如何使用事件驱动的Adobe客户端数据层 [收集页面数据并发送到Adobe Analytics](../analytics/collect-data-analytics.md).
-
-或了解如何 [使用AEM组件自定义Adobe客户端数据层](./data-layer-customize.md)
+有两个选项可供继续学习，第一个选项是查看 [收集页面数据并将其发送到Adobe Analytics](../analytics/collect-data-analytics.md) 教程，演示如何使用Adobe客户端数据层。 第二个选择是，学习如何 [使用AEM组件自定义Adobe客户端数据层](./data-layer-customize.md)
 
 
 ## 其他资源 {#additional-resources}
