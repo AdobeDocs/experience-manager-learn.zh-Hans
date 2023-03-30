@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
+source-git-commit: 9917b16248ef1f0a9c86f03a024c634636b2304e
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 21%
+source-wordcount: '913'
+ht-degree: 22%
 
 ---
 
@@ -36,8 +36,8 @@ ht-degree: 21%
 + Cloud Manager {#cloud-manager}
    + [项目](./cloud-manager/programs.md)
    + [环境](./cloud-manager/environments.md)
-   + [CI/CD生产管道](./cloud-manager/cicd-production-pipeline.md)
-   + [CI/CD非生产管道](./cloud-manager/cicd-non-production-pipeline.md)
+   + [CI/CD 生产管道](./cloud-manager/cicd-production-pipeline.md)
+   + [CI/CD 非生产管道](./cloud-manager/cicd-non-production-pipeline.md)
    + [活动](./cloud-manager/activity.md)
    + 开发运营{#devops}
       + [部署代码](./cloud-manager/devops/deploy-code.md)
@@ -50,7 +50,7 @@ ht-degree: 21%
 + 本地开发环境设置 {#local-development-environment-set-up}
    + [概述](./local-development-environment/overview.md)
    + [开发工具](./local-development-environment/development-tools.md)
-   + [本地AEM运行时](./local-development-environment/aem-runtime.md)
+   + [本地 AEM 运行时](./local-development-environment/aem-runtime.md)
    + [本地 Dispatcher 工具](./local-development-environment/dispatcher-tools.md)
 + 开发{#developing}
    + 可扩展性{#extensibility}
@@ -89,6 +89,7 @@ ht-degree: 21%
       + [OSGi配置基础知识](./developing/osgi-services/configurations.md)
       + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
    + 高级{#advanced}
+      + [Web优化的图像API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
       + [服务用户](./developing/advanced/service-users.md)
       + [自定义命名空间](./developing/advanced/custom-namespaces.md)
       + [缓存页面变体](./developing/advanced/variant-caching.md)
@@ -122,7 +123,7 @@ ht-degree: 21%
    + [Adobe IMS用户组](./accessing/adobe-ims-user-groups.md)
    + [Adobe IMS产品配置文件](./accessing/adobe-ims-product-profiles.md)
    + [AEM用户、组和权限](./accessing/aem-users-groups-and-permissions.md)
-   + [配置对AEM演练的访问权限](./accessing/walk-through.md)
+   + [配置对 AEM 演练的访问权限](./accessing/walk-through.md)
 + 身份验证{#authentication}
    + [概述](./authentication/authentication.md)
    + [SAML 2.0](./authentication/saml-2-0.md)
@@ -173,7 +174,7 @@ ht-degree: 21%
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + Forms{#forms}
    + 为Formsas a Cloud Service开发{#developing-for-cloud-service}
-      + [入门](./forms/developing-for-cloud-service/getting-started.md)
+      + [入门指南](./forms/developing-for-cloud-service/getting-started.md)
       + [安装IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [设置Git](./forms/developing-for-cloud-service/setup-git.md)
       + [将IntelliJ与AEM同步](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
