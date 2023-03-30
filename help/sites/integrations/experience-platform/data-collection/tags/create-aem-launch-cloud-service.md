@@ -3,6 +3,7 @@ title: 在AEM中创建LaunchCloud Service配置
 description: 了解如何在AEM中创建LaunchCloud Service配置。 然后，可以将LaunchCloud Service配置应用于现有站点，并且可以在创作和发布环境中观察标记库的加载情况。
 topics: integrations
 audience: administrator
+solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
 version: Cloud Service
@@ -12,7 +13,7 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%

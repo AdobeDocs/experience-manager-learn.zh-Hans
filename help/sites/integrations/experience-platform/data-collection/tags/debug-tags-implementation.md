@@ -3,6 +3,7 @@ title: 调试标记实施
 description: 介绍一些用于调试标记实施的常用工具和技术。 了解如何使用浏览器的开发人员控制台和Experience Platform调试器扩展功能，识别标记实施的关键方面并执行相应的故障诊断。
 topics: integrations
 audience: administrator
+solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
 version: Cloud Service
@@ -12,7 +13,7 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%

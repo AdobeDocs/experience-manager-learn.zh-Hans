@@ -3,6 +3,7 @@ title: 创建标记属性
 description: 了解如何使用最低裸机配置创建标记属性以与AEM集成。 将用户引入标记UI，并了解扩展、规则和发布工作流程。
 topics: integrations
 audience: administrator
+solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
 version: Cloud Service
@@ -12,7 +13,7 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: d5de62ef-a2aa-4283-b500-e1f7cb5dec3b
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 1%
