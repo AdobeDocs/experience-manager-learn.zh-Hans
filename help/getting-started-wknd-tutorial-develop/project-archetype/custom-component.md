@@ -11,9 +11,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
 workflow-type: tm+mt
-source-wordcount: '4065'
+source-wordcount: '4066'
 ht-degree: 0%
 
 ---
@@ -1016,7 +1016,7 @@ AEM组件的大多数HTL脚本都使用 **占位符范式** 为作者提供视�
 
 ### 查看Sling模型注册 {#reviewing-the-sling-model-registration}
 
-的 [AEM Web Console的Sling模型状态视图](http://localhost:4502/system/console/status-slingmodels) 显示AEM中已注册的所有Sling模型。 可通过查看此列表，验证并识别署名Sling模型。
+的 [AEM Web Console的Sling模型状态视图](http://localhost:4502/system/console/status-slingmodels) 显示AEM中注册的所有Sling模型。 可通过查看此列表，验证并识别署名Sling模型。
 
 如果 **BylineImpl** 未显示在此列表中，则可能会出现Sling模型批注问题，或者模型未添加到正确的包(`com.adobe.aem.guides.wknd.core.models`)。
 
@@ -1093,7 +1093,7 @@ AEM组件的大多数HTL脚本都使用 **占位符范式** 为作者提供视�
 
 恭喜，您已使用Adobe Experience Manager从头开始创建自定义组件！
 
-### 下面的步骤 {#next-steps}
+### 后续步骤 {#next-steps}
 
 继续了解AEM组件开发，方法是探索如何编写Byline Java™代码的JUnit测试，以确保所有内容都得到正确开发，并且实施的业务逻辑正确且完整。
 
