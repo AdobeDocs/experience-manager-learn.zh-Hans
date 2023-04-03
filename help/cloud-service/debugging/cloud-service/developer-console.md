@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: e8e5c67f6e9f057fd7472b76ee09d7f87b133c89
+source-git-commit: 8ca9535866cc1a673a59ac3743847e68dfedd156
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1471'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,18 @@ ht-degree: 0%
 AEM as a Cloud Service为每个环境提供了开发人员控制台，该控制台会公开运行的AEM服务的各种详细信息，这些信息在调试中很有帮助。
 
 每个AEMas a Cloud Service环境都有自己的开发人员控制台。
+
+## 导航到开发人员控制台
+
+可通过Cloud Manager根据AEMas a Cloud Service环境访问开发人员控制台。
+
+![导航到开发人员控制台](./assets/developer-console/navigate.png)
+
+1. 导航到 __[Cloud Manager](https://my.cloudmanager.adobe.com/)__
+2. 打开 __项目__ 其中包含用于打开开发人员控制台的AEMas a Cloud Service环境。
+3. 找到 __环境__，然后选择 `...`.
+4. 选择 __开发人员控制台__ 从下拉列表中。
+
 
 ## 开发人员控制台访问
 
