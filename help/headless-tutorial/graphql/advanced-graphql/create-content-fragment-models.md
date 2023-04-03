@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1989'
 ht-degree: 1%
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 ## 目标 {#objectives}
 
-* 创建内容片段模型。
+* 创建内容片段模型.
 * 添加选项卡占位符、日期和时间、JSON对象、片段引用以及对模型的内容引用。
 * 向内容引用添加验证。
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 以下视频简要介绍内容片段模型以及在本教程中如何使用它们。
 
->[!VIDEO](https://video.tv.adobe.com/v/340037/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340037?quality=12&learn=on)
 
 ## 创建内容片段模型 {#create-models}
 
@@ -236,4 +236,4 @@ Adobe Experience Manager附带了一些内置的验证方法。 这些验证方�
 本系列的下一章将介绍 [创作内容片段](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md) 从本章中创建的模型。 了解如何使用本章中介绍的数据类型并创建文件夹策略，以限制可以在资产文件夹中创建的内容片段模型。
 
 虽然在本教程中它是可选的，但请确保在实际生产环境中发布所有内容。 有关AEM中的创作和发布环境的查看，请参阅
-[AEM无头和GraphQL视频系列](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).
+[AEM Headless和GraphQL视频系列](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).

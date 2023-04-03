@@ -8,7 +8,7 @@ level: Beginner
 kt: 5000
 thumbnail: 39156.jpg
 exl-id: 089a557c-5155-489c-bccf-0cb97e95840c
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 80%
@@ -25,7 +25,7 @@ ht-degree: 80%
 
 Adobe IMS 产品配置文件授权用户登录 AEM Author 服务，并根据用户所属的产品配置文件提供访问权限基准。
 
->[!VIDEO](https://video.tv.adobe.com/v/39156/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39156?quality=12&learn=on)
 
 ## 其他资源
 

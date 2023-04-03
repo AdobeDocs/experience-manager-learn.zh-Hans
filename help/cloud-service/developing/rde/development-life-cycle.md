@@ -9,7 +9,7 @@ level: Beginner
 jira: KT-11863
 thumbnail: KT-11863.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 5%
@@ -23,7 +23,7 @@ ht-degree: 5%
 
 以下视频探讨了基于RDE的从部署到开发的生命周期。 此视频概述了用于高效使用RDE的关键子任务和开发流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3415492/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3415492?quality=12&learn=on)
 
 
 ## RDE的好处
@@ -36,7 +36,7 @@ RDE的主要优势是保持发展势头。
 - 改进协作
 - 提高生产效率
 
->[!VIDEO](https://video.tv.adobe.com/v/3415493/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3415493?quality=12&learn=on)
 
 ## 其他资源
 

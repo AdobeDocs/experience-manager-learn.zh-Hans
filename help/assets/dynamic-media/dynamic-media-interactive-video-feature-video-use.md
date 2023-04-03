@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 2a27d8bc-ee7b-4d13-8512-8f3dc1eb8f13
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -18,4 +18,4 @@ ht-degree: 0%
 
 AEM Assets现在能够创建交互式视频，用户可以在其中将视频拆分为较小的区段，或合并小的区段以创建较大的区段，从而允许用户关联行动动手。
 
->[!VIDEO](https://video.tv.adobe.com/v/16516/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16516?quality=12&learn=on)

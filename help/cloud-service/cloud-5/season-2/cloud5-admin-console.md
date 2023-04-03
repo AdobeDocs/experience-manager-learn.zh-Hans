@@ -7,7 +7,8 @@ level: Intermediate
 thumbnail: 342866.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 726cf83f3cabe46c12abb79288368407ebf4d525
+exl-id: eec1764e-1234-4b4c-993f-6584717e3c9e
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 6%
@@ -18,7 +19,7 @@ ht-degree: 6%
 
 想知道为什么每个项目在Admin Console内AEM的上下文中都有什么用？ 团队会尝试解释一些人们应该了解的关于配置和访问的常见事项。
 
->[!VIDEO](https://video.tv.adobe.com/v/342866)
+>[!VIDEO](https://video.tv.adobe.com/v/342866?quality=12&learn=on)
 
 ## 此视频中涵盖的内容
 

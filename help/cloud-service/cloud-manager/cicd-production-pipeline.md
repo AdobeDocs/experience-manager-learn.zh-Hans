@@ -12,7 +12,7 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 49%
@@ -32,10 +32,10 @@ ht-degree: 49%
 
 的 [CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) 配置定义将启动管道、控制生产部署和性能测试参数的参数的触发器。
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### 管道执行
 
 的 [CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) 用于通过Stage构建代码并将其部署到生产环境，从而缩短实现价值的时间。
 
->[!VIDEO](https://video.tv.adobe.com/v/26317/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)

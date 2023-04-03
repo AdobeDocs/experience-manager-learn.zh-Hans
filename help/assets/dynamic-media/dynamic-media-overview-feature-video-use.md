@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Dynamic Media概述
 
->[!VIDEO](https://video.tv.adobe.com/v/27144/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## Dynamic Media与AEM Sites以及任何其他CMS
 
->[!VIDEO](https://video.tv.adobe.com/v/27145/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 ## Dynamic Media构建混合媒体收集和自定义查看器
 
->[!VIDEO](https://video.tv.adobe.com/v/27146/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 ## Dynamic Media图像预设
 
->[!VIDEO](https://video.tv.adobe.com/v/27320/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
 此视频介绍图像预设的创建方式以及图像预设的内容。图像预设是一种URL缩短服务，可让一系列图像服务器参数在URL请求时对图像执行操作。 了解扩展和编辑图像预设的有用技术。
 
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 ## Dynamic Media高级URL修饰符
 
->[!VIDEO](https://video.tv.adobe.com/v/27319/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
 此视频介绍如何调整图像大小以利用源文件本身的功能 — 背景透明度、内置剪贴路径以及作为变量的裁剪和文本 — 以及Dynamic Media的URL修饰符。
 
@@ -88,7 +88,7 @@ ht-degree: 0%
 
 ## Dynamic Media控制JPEG文件大小(KB)
 
->[!VIDEO](https://video.tv.adobe.com/v/27404/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
 
 >[!NOTE]
@@ -99,7 +99,7 @@ ht-degree: 0%
 
 ## 将CC隐藏式字幕添加到Dynamic Media视频
 
->[!VIDEO](https://video.tv.adobe.com/v/28074/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 通过附加复制URL以指向附加的隐藏式字幕文件文档（web.VTT Sidecar文件，其中包含任何视频的CC信息），可轻松地将隐藏式字幕添加到Dynamic Media视频。
 

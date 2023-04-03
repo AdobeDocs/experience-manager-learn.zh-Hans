@@ -7,7 +7,7 @@ level: Intermediate
 thumbnail: 343623.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 单元测试是软件开发中常被忽视的一步，是每个开发人员都应该完成的一项非常重要的活动。 AEM本地提供了许多默认质量检查，但无法测试您可能已自定义或已更改的所有内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/343623)
+>[!VIDEO](https://video.tv.adobe.com/v/343623?quality=12&learn=on)
 
 ## 此视频中涵盖的内容
 

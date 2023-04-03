@@ -8,7 +8,7 @@ role: Developer
 level: Beginner
 exl-id: 2ee1efe7-ba7a-42a1-baaf-8c3b9d4e69ec
 last-substantial-update: 2020-02-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 此视频演示如何基于JDBC数据源创建表单数据模型、基于表单数据模型的自适应表单，以及如何使用“表单数据模型”使用“插入”操作。
 
->[!VIDEO](https://video.tv.adobe.com/v/17736/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17736?quality=12&learn=on)
 
 >[!NOTE]
 >

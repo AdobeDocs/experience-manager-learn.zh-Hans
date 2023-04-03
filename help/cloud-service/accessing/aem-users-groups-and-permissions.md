@@ -9,7 +9,7 @@ level: Beginner
 kt: 6060
 thumbnail: 39151.jpg
 exl-id: 7d7942ae-7e38-4abd-9900-5b8e3542f5e1
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 90%
@@ -27,7 +27,7 @@ ht-degree: 90%
 
 Adobe Experience Manager 基于 Adobe IMS 用户、用户组和产品配置文件进行构建，以便向用户提供对 AEM 的可定制的访问权限。了解如何定义 AEM 组和权限，以及它们如何与 Adobe IMS 抽象概念协同工作，进而实现对 AEM 的无缝访问和可定制的访问。
 
->[!VIDEO](https://video.tv.adobe.com/v/39151/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39151?quality=12&learn=on)
 
 ## 其他资源
 

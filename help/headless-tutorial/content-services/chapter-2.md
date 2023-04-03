@@ -8,7 +8,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: 30c882da3a89820b5e11bc2902bb92dd0629efe9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '962'
 ht-degree: 9%
@@ -70,7 +70,7 @@ AEM内容片段模型定义了内容架构，可用于模板AEM作者创建原�
    1. 验证 **[!UICONTROL 云配置]** 字段设置为 **/conf/wknd-mobile**
    1. 点按 **[!UICONTROL 保存并关闭]** 用于保留更改的右上角
 
->[!VIDEO](https://video.tv.adobe.com/v/28336/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28336?quality=12&learn=on)
 
 >[!WARNING]
 >
@@ -93,7 +93,7 @@ AEM内容片段模型定义了内容架构，可用于模板AEM作者创建原�
 1. 点按 **[!UICONTROL 创建]** 打开“内容片段模型”创建向导。
 1. 输入 **[!DNL Event]** 作为 **[!UICONTROL 模型标题]** *（描述是可选的）* 点按 **[!UICONTROL 创建]** 保存。
 
->[!VIDEO](https://video.tv.adobe.com/v/28337/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28337?quality=12&learn=on)
 
 ## 定义内容片段模型的结构
 
@@ -169,7 +169,7 @@ AEM内容片段模型定义了内容架构，可用于模板AEM作者创建原�
 * [!UICONTROL 属性名称] : `venueCity`
 * [!UICONTROL 选项] : `Basel,London,Los Angeles,Paris,New York,Tokyo`
 
->[!VIDEO](https://video.tv.adobe.com/v/28335/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28335?quality=12&learn=on)
 
 >[!NOTE]
 >

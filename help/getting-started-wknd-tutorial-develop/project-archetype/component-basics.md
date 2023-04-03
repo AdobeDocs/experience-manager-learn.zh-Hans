@@ -12,7 +12,7 @@ kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
 >
 > 如果您成功完成了上一章，则可以重复使用该项目并跳过签出起始项目的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/330985/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330985?quality=12&learn=on)
 
 打开新的命令行终端并执行以下操作。
 
@@ -87,7 +87,7 @@ ht-degree: 1%
 
 组件可以视为网页的小模块化构建块。 要重复使用组件，必须对组件进行配置。 此操作可通过创作对话框完成。 接下来，让我们创作一个简单的组件，并检查对话框中的值是如何在AEM中保留的。
 
->[!VIDEO](https://video.tv.adobe.com/v/330986/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330986?quality=12&learn=on)
 
 以下是在上述视频中执行的高级步骤。
 
@@ -105,7 +105,7 @@ HTML模板语言或 **[HTL](https://experienceleague.adobe.com/docs/experience-m
 
 接下来，让我们更新 `HelloWorld` HTL脚本，在文本消息之前显示额外的问候语。
 
->[!VIDEO](https://video.tv.adobe.com/v/330987/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330987?quality=12&learn=on)
 
 以下是在上述视频中执行的高级步骤。
 
@@ -175,7 +175,7 @@ Sling模型是由注释驱动的Java™“POJO”(纯旧Java™对象)，有助�
 
 接下来，我们对 `HelloWorldModel` Sling模型，以便在将某些业务逻辑输出到页面之前，将其应用于JCR中存储的值。
 
->[!VIDEO](https://video.tv.adobe.com/v/330988/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330988?quality=12&learn=on)
 
 1. 打开文件 `HelloWorldModel.java`，这是与 `HelloWorld` 组件。
 
@@ -286,7 +286,7 @@ Sling模型是由注释驱动的Java™“POJO”(纯旧Java™对象)，有助�
 
 接下来，更新 `HelloWorld` 组件。
 
->[!VIDEO](https://video.tv.adobe.com/v/340750/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340750?quality=12&learn=on)
 
 以下是在上述视频中执行的高级步骤。
 

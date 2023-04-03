@@ -5,20 +5,19 @@ type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-feature: PDF 生成器
-topic: '管理 '
+feature: PDF Generator
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 669dde4b-777c-4fea-b0e8-50f797c21757
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 5%
+source-wordcount: '54'
+ht-degree: 0%
 
 ---
-
 
 # 如何更新PDFG服务中的服务器转换和全局超时
 
 *此视频介绍在Forms PDFG服务中更新服务器转换和服务器全局超时的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335514?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/335514?quality=12&learn=on)

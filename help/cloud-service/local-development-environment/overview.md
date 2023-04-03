@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-01T00:00:00Z
 exl-id: 8b12f34c-be98-4f47-853c-411bb601990c
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 14%
@@ -29,7 +29,7 @@ ht-degree: 14%
 
 本教程将演示如何使用AEM AEM SDK为Adobe Experience Manager(as a Cloud Service)设置本地开发环境。 其中包括开发、构建和编译AEM项目所需的开发工具，以及本地运行时间，这些工具允许开发人员在本地快速验证新功能，然后再通过AdobeCloud Manager将新功能部署到AEMas a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/32565/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32565?quality=12&learn=on)
 
 ![AEMas a Cloud Service本地开发环境技术堆栈](./assets/overview/aem-sdk-technology-stack.png)
 

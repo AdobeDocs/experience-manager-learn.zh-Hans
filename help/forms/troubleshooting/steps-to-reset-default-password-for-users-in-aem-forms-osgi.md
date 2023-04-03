@@ -5,18 +5,18 @@ type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-topic: '管理 '
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 21daa263-2a11-402c-ba34-79b76fc9e3d1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 2%
+source-wordcount: '49'
+ht-degree: 0%
 
 ---
-
 
 # 在AEM Forms OSGi中重置管理员默认密码的步骤
 
 *此视频将演示在AEM Forms OSGi中重置管理员默认密码的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335542?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335542?quality=12&learn=on)

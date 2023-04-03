@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: da3190bb-f350-420f-bf24-a6dede296efa
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 AEM Assets自定义视频缩略图使作者能够从一组生成的缩略图中选择适当的缩略图。 可以轻松自定义为视频生成的缩略图数量。
 
->[!VIDEO](https://video.tv.adobe.com/v/16467/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16467?quality=12&learn=on)
 
 ## 自定义视频缩略图
 
->[!VIDEO](https://video.tv.adobe.com/v/18867/)
+>[!VIDEO](https://video.tv.adobe.com/v/18867?quality=12&learn=on)
 
 >[!NOTE]
 >

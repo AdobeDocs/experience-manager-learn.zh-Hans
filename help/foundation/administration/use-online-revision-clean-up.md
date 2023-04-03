@@ -10,10 +10,10 @@ topic: Administration
 role: Admin
 level: Intermediate
 exl-id: 62a36ab1-3245-43ac-b943-e28ff95661bf
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '74'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 对在线修订清理的简要介绍，可减轻对频繁离线修订清理的需求。
 
->[!VIDEO](https://video.tv.adobe.com/v/17004/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17004?quality=12&learn=on)
 
 ## 辅助材料
 

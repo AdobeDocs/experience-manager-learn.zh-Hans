@@ -6,7 +6,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 0%
@@ -37,13 +37,13 @@ Android用于教程，因为能够在Windows、macOs和Linux上运行Android模�
 
 ## 移动设备应用程序演示
 
->[!VIDEO](https://video.tv.adobe.com/v/28345/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28345?quality=12&learn=on)
 
 ### 为非本地主机使用配置移动设备应用程序
 
 如果未在上运行AEM发布 **http://localhost:4503** 可以在移动设备应用程序的 [!DNL Settings] 指向属性AEM发布主机/端口。
 
->[!VIDEO](https://video.tv.adobe.com/v/28344/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28344?quality=12&learn=on)
 
 ## 在本地运行移动设备应用程序
 
@@ -75,7 +75,7 @@ Android用于教程，因为能够在Windows、macOs和Linux上运行Android模�
    * 要在虚拟设备中滚动，请单击并按住并拖动。
    * 要从AEM刷新内容，请从顶部向下拉出，直到显示“刷新”图标，然后释放。
 
->[!VIDEO](https://video.tv.adobe.com/v/28341/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28341?quality=12&learn=on)
 
 ## 移动设备应用程序代码
 

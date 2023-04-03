@@ -8,13 +8,13 @@ level: Beginner
 kt: 9718
 thumbnail: 340332.jpeg
 hidefromtoc: false
-source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
+exl-id: 40d76e0c-69f3-4003-9f34-f393e6fb8561
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
-
 
 # Workfront自定义表单和元数据映射
 
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 了解如何配置Workfront和AEM Assets，以使用Workfront自定义表单和AEM元数据架构来管理和同步资产元数据。
 
->[!VIDEO](https://video.tv.adobe.com/v/340332/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340332?quality=12&learn=on)
 
 _a的第二部分 [关于Workfront for Experience Manager增强连接器的四部分专家系列](./overview.md)_

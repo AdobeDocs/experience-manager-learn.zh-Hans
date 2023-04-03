@@ -11,7 +11,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '4571'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 本开发教程将演示如何为 [!DNL AEM Projects].  在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建新项目，以管理内容创作工作流和任务。
 
->[!VIDEO](https://video.tv.adobe.com/v/16904/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
 *此视频简要介绍在以下教程中创建的已完成工作流。*
 
@@ -261,7 +261,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
 1. 单击“创建”以完成基于自定义模板的项目创建。 您会在“项目功能板”上注意到，任务拼贴以及在小工具下配置的其他拼贴会自动显示。
 
-   ![“任务”拼贴](./assets/develop-aem-projects/tasks-tile.png)
+   ![任务拼贴](./assets/develop-aem-projects/tasks-tile.png)
 
 
 ## 为什么选择工作流？

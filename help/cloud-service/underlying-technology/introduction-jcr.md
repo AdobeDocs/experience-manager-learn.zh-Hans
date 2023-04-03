@@ -12,7 +12,7 @@ topic: Architecture
 role: Architect, Developer
 level: Beginner
 exl-id: 1e419597-3f60-4110-bafd-a4acb0fad7a0
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
@@ -23,4 +23,4 @@ ht-degree: 0%
 
 对Adobe Experience Manager使用的Java内容存储库(JCR)的简介。 JCR是AEM技术堆栈的基本级别，负责底层内容持久性、存储、搜索、访问控制等！
 
->[!VIDEO](https://video.tv.adobe.com/v/32030/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32030?quality=12&learn=on)

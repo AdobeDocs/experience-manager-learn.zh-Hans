@@ -3,23 +3,23 @@ title: OSGi配置作为ObjectClassDefinition对象
 description: 了解如何在OSGi服务中创建ObjectClassDefinitions并将其指定为OSGi配置表示
 role: Developer
 level: Beginner
-topic: 开发
+topic: Development
 feature: OSGI
 kt: 8269
 thumbnail: 335730.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 72918da0-d5c4-4451-8082-0a0435c28890
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 2%
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
-
 
 # OSGi配置作为ObjectClassDefinition对象
 
 了解如何在OSGi服务中创建ObjectClassDefinitions并将其指定为OSGi配置表示。
 
->[!VIDEO](https://video.tv.adobe.com/v/335730/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335730?quality=12&learn=on)
 
 ## 资源
 

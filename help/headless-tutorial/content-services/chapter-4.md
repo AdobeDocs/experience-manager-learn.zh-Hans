@@ -6,7 +6,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: ece0bf0d-c4af-4962-9c00-f2849c2d8f6f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 0%
@@ -89,13 +89,13 @@ AEM可编辑的模板用于定义用于将事件内容显示为JSON的HTTP端点
 1. 但是，请确保 **布局容器** is **锁定** 以阻止添加其他组件，或者删除这三个组件。
 1. 点按 **[!UICONTROL 页面信息] > [!UICONTROL 在管理员中查看]** 返回 [!DNL WKND Mobile] 模板列表。 选择新创建的 **[!DNL Events API]** 模板和点按 **[!UICONTROL 启用]** 中。
 
->[!VIDEO](https://video.tv.adobe.com/v/28342/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28342?quality=12&learn=on)
 
 >[!NOTE]
 >
 > 请注意，用于显示内容的组件会添加到模板本身并被锁定。 这是为了允许作者编辑预定义的组件，但不能任意添加或删除组件，因为更改API本身可能会破坏JSON结构的假设并破坏耗费的应用程序。 所有API都需要稳定。
 
-## 下面的步骤
+## 后续步骤
 
 （可选）安装 [com.adobe.aem.guides.wknd-mobile.content.chapter-4.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) AEM作者上的内容包(通过 [AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp). 此包包含教程本章及前几章中概述的配置和内容。
 

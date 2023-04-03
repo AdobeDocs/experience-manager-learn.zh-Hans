@@ -15,7 +15,7 @@ topic: Personalization
 role: Admin, Developer
 level: Intermediate
 exl-id: 9c139a36-e3c5-407e-af5d-b4fb8860f5a2
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 2%
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 Adobe Experience Manager 6.4可重新构建AEM和Target之间的个性化工作流。 现在，在AEM中创建的体验可以作为HTML选件直接交付到Adobe Target。 它允许营销人员跨不同渠道无缝测试和个性化内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/22380/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22380?quality=12&learn=on)
 
 >[!NOTE]
 >

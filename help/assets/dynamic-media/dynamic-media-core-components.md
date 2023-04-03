@@ -8,7 +8,7 @@ role: User
 level: Beginner
 kt: 6630
 exl-id: 12fa3622-428a-40c1-b47f-fa55c2858896
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 图像组件是Experience Manager核心组件的一部分，内置了对Dynamic Media的支持。 图像组件允许内容作者在AEM Sites页面上使用Dynamic Media的功能，如图像预设、智能裁剪和图像修改工具。
 
->[!VIDEO](https://video.tv.adobe.com/v/329331/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329331?quality=12&learn=on)
 
 ## 其他资源
 

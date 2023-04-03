@@ -9,7 +9,7 @@ role: Developer
 level: Intermediate
 exl-id: 1f13d82e-c1d0-4c8c-8468-b4a4c5897c71
 last-substantial-update: 2021-02-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 >!![NOTE]此视频中演示的功能需要AEM Forms 6.5.1
 
 
->[!VIDEO](https://video.tv.adobe.com/v/28145?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28145?quality=12&learn=on)
 
 要在服务器上测试此功能，请按照以下说明操作
 
@@ -37,5 +37,5 @@ ht-degree: 0%
    * 自适应表单，在提交时触发工作流。
 * 打开 [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). 填写详细信息并提交。 在提交表单时， [外部应用程序工作流](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) 触发。
 
-![ workflow ](assets/invokefdm651.PNG).
+![ 工作流 ](assets/invokefdm651.PNG).
 如果信用分数超过500，则工作流会利用或拆分组件将应用程序路由到管理员。 如果信用分数小于500，则申请将被路由到付款。

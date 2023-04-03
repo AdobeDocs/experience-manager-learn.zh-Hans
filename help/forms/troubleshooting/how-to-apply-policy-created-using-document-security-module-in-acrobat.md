@@ -1,23 +1,23 @@
 ---
 title: 如何在Acrobat中应用使用文档安全模块创建的策略
-description: '配置Acrobat以使用文档安全性将策略应用于文档 '
+description: 配置Acrobat以使用文档安全性将策略应用于文档
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 'Document Security '
-topic: '开发 '
+feature: Document Security
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 086afdf4-c9a4-4bb9-b242-e6337281ef9b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 5%
+source-wordcount: '49'
+ht-degree: 0%
 
 ---
-
 
 # 如何在Acrobat中应用使用文档安全模块创建的策略
 
 *此视频将演示应用使用Acrobat中的文档安全模块创建的策略的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335486?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335486?quality=12&learn=on)

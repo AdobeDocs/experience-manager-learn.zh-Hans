@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-03-17T00:00:00Z
 jira: KT-10841
 thumbnail: 3416906.jpeg
-source-git-commit: 024b2faac2e5a1a8d4bac64d1f70f292aac75dd0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 AEM无头应用程序支持集成的创作预览。 预览体验可将AEM作者的内容片段编辑器与您的自定义应用程序（可通过HTTP寻址）链接起来，从而允许在应用程序中提供一个深层链接，以呈现正在预览的内容片段。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416906/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
 
 要使用内容片段预览，必须满足以下几个条件：
 
@@ -46,7 +46,7 @@ AEM无头应用程序支持集成的创作预览。 预览体验可将AEM作者�
 
 每个内容片段模型都可以设置一个预览URL。 可以使用下表中列出的URL表达式，为每个内容片段参数化预览URL。 可在单个预览URL中使用多个URL表达式。
 
-|  | URL表达式 | 值 |
+|  | URL表达式 | 价值 |
 | --------------------------------------- | ----------------------------------- | ----------- |
 | 内容片段路径 | `${contentFragment.path}` | `/content/dam/wknd-shared/en/adventures/surf-camp-bali/surf-camp-bali` |
 | 内容片段ID | `${contentFragment.id}` | `12c34567-8901-2aa3-45b6-d7890aa1c23c` |

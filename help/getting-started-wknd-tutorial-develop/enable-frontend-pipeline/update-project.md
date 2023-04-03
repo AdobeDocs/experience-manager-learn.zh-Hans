@@ -11,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: 7c246c4f1af9dfe599485f68508c66fe29d2f0b6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 全栈AEM项目中配置更改概述
 
->[!VIDEO](https://video.tv.adobe.com/v/3409419/)
+>[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## 前提条件 {#prerequisites}
 
@@ -204,6 +204,6 @@ ht-degree: 0%
 
 恭喜，您已更新WKND Sites项目，以便为前端管道合同启用该项目。
 
-## 下面的步骤 {#next-steps}
+## 后续步骤 {#next-steps}
 
 在下一章中， [使用前端管道部署](create-frontend-pipeline.md)，您将创建并运行前端管道并验证我们的 __搬走了__ 从基于“/etc.clientlibs”的前端资源交付中。

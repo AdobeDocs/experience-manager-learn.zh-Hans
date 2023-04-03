@@ -10,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: b89ea04b-56dd-494f-a454-644166660a2a
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Adobe资产允许您直接从正在处理的创意应用程序中签出AEM Assets，并且可以立即开始进行编辑。 在AEM Assets应用程序中编辑完资产后，您可以使用正确的版本控制和注释轻松将资产签回Creative Cloud。
 
->[!VIDEO](https://video.tv.adobe.com/v/33886/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33886?quality=12&learn=on)

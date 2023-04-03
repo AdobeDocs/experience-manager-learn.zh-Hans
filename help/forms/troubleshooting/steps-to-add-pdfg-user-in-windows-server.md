@@ -1,24 +1,23 @@
 ---
 title: 在Windows Server2016中添加PDFG用户的步骤
-description: '在Windows Server 2016中配置PDF生成器 '
+description: 在Windows Server 2016中配置PDF生成器
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-feature: PDF 生成器
-topic: '管理 '
+feature: PDF Generator
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: f718470d-d48c-48ae-98b6-f5baf461098d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 7%
+source-wordcount: '39'
+ht-degree: 0%
 
 ---
-
 
 # 在Windows Server 2016中添加AEM Forms PDFG用户的步骤。
 
 *此视频将演示在Windows 2016中添加AEM Forms PDFG用户的其他步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335479?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/335479?quality=12&learn=on)

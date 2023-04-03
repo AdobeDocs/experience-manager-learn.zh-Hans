@@ -7,10 +7,10 @@ topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '990'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe Experience Manager资产可供设计人员和创意用户在其最喜爱�
 
 Adobe资产链接在Adobe资产链接和AEM之间提供InDesign直接链接支持。 借助InDesign直接链接支持，您可以将&#x200B;__置入链接的对象__ 或 __置入副本__)或通过“InDesign资产链接”面板将数字资产拖放到AEM的Adobe中。 此外，还引入了*仅用于置入+(FPO)呈现版本。
 
->[!VIDEO](https://video.tv.adobe.com/v/28988/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28988?quality=12&learn=on)
 
 >[!NOTE]
 >

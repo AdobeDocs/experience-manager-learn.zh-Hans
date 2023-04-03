@@ -15,7 +15,7 @@ topic: Localization
 role: User
 level: Beginner
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 12%
@@ -28,13 +28,13 @@ ht-degree: 12%
 
 ## Live Copy 概述 {#live-copy-overview}
 
->[!VIDEO](https://video.tv.adobe.com/v/17054/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17054?quality=12&learn=on)
 
 *Live Copy概述是一个触屏UI界面，用于管理Live Copy及其各自的蓝图。 此功能在AEM 6.3中引入，取代了经典UI Blueprint控制中心。*
 
 ## Blueprint配置管理器 — 触屏UI {#blueprint-config-mgr}
 
->[!VIDEO](https://video.tv.adobe.com/v/17056/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17056?quality=12&learn=on)
 
 *AEM 6.3引入了触屏UI界面，用于管理用于多站点管理器的Blueprint配置。*
 

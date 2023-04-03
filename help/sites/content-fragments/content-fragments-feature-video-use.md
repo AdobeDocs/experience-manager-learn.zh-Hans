@@ -11,7 +11,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 17%
@@ -38,13 +38,13 @@ AEM内容片段是基于文本的编辑内容，可能包含一些与之关联�
 
 ## 定义内容片段模型 {#defining-content-fragment-models}
 
->[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
 AEM内容片段模型（内容片段的数据架构）必须通过AEM启用 [[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)，允许根据每个配置定义内容片段模型。
 
 ## 创建内容片段 {#creating-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22451?quality=12&learn=on)
 
 AEM配置会应用于AEM Assets文件夹层次结构，以允许将其内容片段模型创建为内容片段。 内容片段支持基于表单的丰富创作体验，允许将内容建模为元素集合。
 
@@ -55,7 +55,7 @@ AEM配置会应用于AEM Assets文件夹层次结构，以允许将其内容片�
 
 ## 下载内容片段 {#downloading-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22450/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22450?quality=12&learn=on)
 
 AEM内容片段可以从AEM作者中下载为包含变体、元素和元数据的Zip文件。
 
@@ -64,7 +64,7 @@ AEM内容片段可以从AEM作者中下载为包含变体、元素和元数据�
 
 ## 内容片段编辑功能 {#editorial-capabilities}
 
->[!VIDEO](https://video.tv.adobe.com/v/25891/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25891?quality=12&learn=on)
 
 >[!NOTE]
 >

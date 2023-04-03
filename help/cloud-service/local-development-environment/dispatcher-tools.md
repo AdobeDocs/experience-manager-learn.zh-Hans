@@ -10,7 +10,7 @@ kt: 4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: eb31c5fb79e01e1c363fc153355e8d92d1a54021
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 9%
@@ -79,7 +79,7 @@ Dispatcher工具的版本与AEM SDK的版本不同。 确保Dispatcher工具的�
 
 下面发出的所有命令都假定当前工作目录包含扩展的调度程序工具内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30601?quality=12&learn=on)
 
 *此视频使用macOS作说明性用途。 可以使用等效的Windows/Linux命令来获得类似的结果。*
 
@@ -188,7 +188,7 @@ Dispatcher工具版本的增加频率低于Experience Manager，因此Dispatcher
 
 Apache和Dispatcher配置的基准集会定期得到增强，并随AEMas a Cloud ServiceSDK版本一起发布。 最佳做法是将基线配置增强功能整合到您的AEM项目中，并避免 [本地验证](#validate-configurations) 和Cloud Manager管道失败。 使用 `update_maven.sh` 脚本 `.../dispatcher-sdk-x.x.x/bin` 文件夹。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416744/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416744?quality=12&learn=on)
 
 *此视频使用macOS作说明性用途。 可以使用等效的Windows/Linux命令来获得类似的结果。*
 

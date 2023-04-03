@@ -9,7 +9,7 @@ role: Developer
 level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 用例演示
 
->[!VIDEO](https://video.tv.adobe.com/v/340344?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
 
 在本教程中，我使用了 [Geonames REST API](http://api.geonames.org/) 来演示此功能。
 有许多组织提供此类服务，只要他们有详实的REST API文档，您就可以使用数据集成功能轻松与AEM Forms集成

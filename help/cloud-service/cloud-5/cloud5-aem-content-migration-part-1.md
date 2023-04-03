@@ -9,7 +9,7 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342133.jpeg
 exl-id: 817ea20d-d902-4497-83d3-5800ed6aaa8f
-source-git-commit: 62a1deda2a4fda56edb0c3d0f34a5e804f78887b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 5%
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 Darin和James讨论了AEM Cloud中的调度程序，包括一些最佳实践以及与AMS/On-Prem的差异。 此外，他们还会在迁移到云时进行操作。 特邀嘉宾云专家， [阿普莱斯米特博士](https://twitter.com/DrApplesmith) 露面。
 
->[!VIDEO](https://video.tv.adobe.com/v/342133/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342133?quality=12&learn=on)
 
 ## 此视频中涵盖的内容
 

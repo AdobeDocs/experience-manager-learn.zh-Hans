@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 5%
@@ -19,11 +19,11 @@ ht-degree: 5%
 
 AEM Dynamic Media视频播放器过去依赖Flash运行时支持桌面客户端上的自适应视频流播放，而在基于flash的内容流播放中，浏览器变得更加积极。 随着HLS(Apple的HTTP实时流视频交付协议)的推出，现在无需依赖闪存即可对内容进行流式处理。
 
->[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
 
 ## 快速查看非Flash视频播放器 {#quick-look-into-non-flash-video-player}
 
->[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17429?quality=12&learn=on)
 
 HLS浏览器支持如下所示，对于不受支持的浏览器，我们回退到渐进式视频交付
 
@@ -41,34 +41,34 @@ HLS浏览器支持如下所示，对于不受支持的浏览器，我们回退�
  </thead>
  <tbody>
   <tr> 
-   <td> <p>桌面设备</p> </td>
+   <td> <p>桌面</p> </td>
    <td> <p>Internet Explorer 9和10</p> </td>
    <td> <p>渐进式下载</p> </td>
   </tr>
   <tr>
-   <td> <p>桌面设备</p> </td>
+   <td> <p>桌面</p> </td>
    <td> <p>Internet Explorer 11+</p> </td>
    <td> <p>Dynamic Media - Scene 7模式：HLS视频流</p> 
         <p>Dynamic Media — 混合模式：渐进式下载</p>
    </td>
   </tr>
   <tr>
-   <td> <p>桌面设备</p> </td>
+   <td> <p>桌面</p> </td>
    <td> <p>Firefox 23-44</p> </td>
    <td> <p>渐进式下载</p> </td>
   </tr>
   <tr> 
-   <td> <p>桌面设备</p> </td>
+   <td> <p>桌面</p> </td>
    <td> <p>Firefox 45或更高版本</p> </td>
    <td> <p>HLS视频流</p> </td>
   </tr>
   <tr> 
-   <td> <p>桌面设备</p> </td>
+   <td> <p>桌面</p> </td>
    <td> <p>铬黄</p> </td>
    <td> <p>HLS视频流</p> </td>
   </tr>
   <tr> 
-   <td> <p>桌面设备</p> </td>
+   <td> <p>桌面</p> </td>
    <td> <p>Safari(Mac)</p> </td>
    <td> <p>HLS视频流</p> </td>
   </tr>

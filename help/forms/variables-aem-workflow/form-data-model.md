@@ -1,20 +1,20 @@
 ---
 title: 表单数据模型类型的变量
 description: 在AEM工作流中使用表单数据模型类型的变量。
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.5
 kt: 6347
 thumbnail: 41238.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: ca972ad4-bb23-43ab-8676-f2cccf1765ba
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 4%
+source-wordcount: '61'
+ht-degree: 0%
 
 ---
-
 
 # 表单数据模型类型的变量
 
@@ -22,4 +22,4 @@ ht-degree: 4%
 
 
 
->[!VIDEO](https://video.tv.adobe.com/v/41238/quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41238?quality=12&learn=on)

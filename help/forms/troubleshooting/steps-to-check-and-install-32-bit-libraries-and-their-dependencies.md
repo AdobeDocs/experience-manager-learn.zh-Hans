@@ -1,23 +1,22 @@
 ---
 title: 检查所需的32位Microsoft Visual C++可再发行组件的步骤
-description: '安装32位Microsoft Visual C++可再发行版。 '
+description: 安装32位Microsoft Visual C++可再发行版。
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-topic: '管理   '
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: de4315b4-9e9b-4c5a-8c04-2c225a8b9f73
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 2%
+source-wordcount: '45'
+ht-degree: 0%
 
 ---
 
-
-# 检查和安装所需的32位Microsoft Visual C++可再发行版的步骤
+# 检查和安装所需的32位Microsoft Visual C++可再发行组件的步骤
 
 *此视频将演示检查和安装所需的32位Microsoft Visual C++可再发行组件的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335520?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/335520?quality=12&learn=on)

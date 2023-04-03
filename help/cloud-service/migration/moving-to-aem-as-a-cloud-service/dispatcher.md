@@ -9,10 +9,10 @@ level: Experienced
 kt: 8633
 thumbnail: 336962.jpeg
 exl-id: 81397b21-b4f3-4024-a6da-a9b681453eff
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 了解AEM Dispatcher for AEMas a Cloud Service，重点介绍对Dispatcher for AEM 6、Dispatcher转换工具以及如何使用Dispatcher Tools SDK做出的显着更改。
 
->[!VIDEO](https://video.tv.adobe.com/v/336962/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336962?quality=12&learn=on)
 
 ## Dispatcher Converter
 
@@ -42,7 +42,7 @@ ht-degree: 3%
 在尝试动手练习之前，请确保您已观看并了解上述视频，以及以下材料：
 
 + [AEM 现代化工具](./aem-modernization-tools.md)
-+ [入门](./onboarding.md)
++ [入门培训](./onboarding.md)
 + [Cloud Manager](./cloud-manager.md)
 
 此外，请确保您已完成之前的动手练习：

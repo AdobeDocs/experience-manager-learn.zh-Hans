@@ -13,7 +13,7 @@ role: Developer
 level: Intermediate
 exl-id: 54afd047-c6e6-4557-9336-39420f30df88
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 以下视频将演示在交互式通信中使用表组件打印渠道文档所需的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/27769?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27769?quality=12&learn=on)
 
 表格用于以表格形式显示数据。 表中的行需要根据数据源返回的数据而增大或收缩。 要在打印渠道文档中使用表，我们需要使用AEM Forms Designer创建布局文件（xdp文件）。 在此布局文件中，我们添加了具有所需列数的表。 根据您的要求，确保列字段对象类型为TextField或Numeric Field 。 对于每列，字段会确保数据绑定设置为“使用名称”。
 

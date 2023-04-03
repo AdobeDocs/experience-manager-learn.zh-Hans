@@ -1,10 +1,10 @@
 ---
 title: 为第一个交互式通信文档配置折线图
-seo-title: 为第一个交互式通信文档配置折线图
+seo-title: Configuring line chart for your first interactive communication document
 description: 这是为打印渠道创建首个交互式通信文档的多步教程的8部分。 在此部分中，我们将添加折线图以显示帐户余额。
-seo-description: 这是为打印渠道创建首个交互式通信文档的多步教程的8部分。 在此部分中，我们将添加折线图以显示帐户余额。
+seo-description: This is part 8 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will add a Line chart to display the account balance.
 uuid: a4394874-a080-4b6a-a3eb-ffc71504919d
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,18 +13,18 @@ version: 6.4,6.5
 discoiquuid: 9110e5c6-50ee-4c3e-a779-b680ff49ef23
 kt: 5993
 thumbnail: 22386.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 86a955e2-2463-4973-8d3c-4c694db8c787
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 1%
+source-wordcount: '130'
+ht-degree: 0%
 
 ---
 
-
-# 为第一个交互式通信文档{#configuring-line-chart-for-your-first-interactive-communication-document}配置折线图
+# 为第一个交互式通信文档配置折线图 {#configuring-line-chart-for-your-first-interactive-communication-document}
 
 在此部分中，我们将添加折线图以显示帐户余额。
 
@@ -38,5 +38,4 @@ ht-degree: 1%
 
 以下视频将指导您完成添加和配置图表组件的步骤
 
->[!VIDEO](https://video.tv.adobe.com/v/22386/?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/22386?quality=12&learn=on)

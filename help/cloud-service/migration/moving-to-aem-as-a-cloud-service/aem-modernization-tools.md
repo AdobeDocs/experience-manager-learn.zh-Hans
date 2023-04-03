@@ -8,10 +8,10 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '446'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -22,19 +22,19 @@ ht-degree: 5%
 
 ## 一体式转换器
 
->[!VIDEO](https://video.tv.adobe.com/v/338802/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338802?quality=12&learn=on)
 
 ## 页面转换
 
->[!VIDEO](https://video.tv.adobe.com/v/338799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338799?quality=12&learn=on)
 
 ## 组件转换
 
->[!VIDEO](https://video.tv.adobe.com/v/338788/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338788?quality=12&learn=on)
 
 ## 策略导入
 
->[!VIDEO](https://video.tv.adobe.com/v/338797/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338797?quality=12&learn=on)
 
 ## 使用AEM现代化工具
 

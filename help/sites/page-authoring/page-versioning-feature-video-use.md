@@ -12,7 +12,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: cc659581-031d-4f2a-90c1-cf721e481689
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 页面版本控制通过创建页面版本来帮助内容作者跟踪与页面关联的更改，并且还提供了用于预览版本、恢复版本以及将版本与页面的当前版本进行比较的选项。
 
->[!VIDEO](https://video.tv.adobe.com/v/32151?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32151?quality=12&learn=on)
 
-版本控制会创建页面在特定时间点的快照。通过版本控制，您可以执行以下操作：
+版本控制会创建页面在特定时间点的快照。 通过版本控制，您可以执行以下操作：
 * 为页面创建新版本
 * 将页面恢复到之前的版本，以撤消您对页面所做的更改，例如
 * 将页面的当前版本与之前版本进行比较，并突出显示文本和图像中的差异

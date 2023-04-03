@@ -11,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 2%
@@ -36,7 +36,7 @@ ht-degree: 2%
 >
 >此视频介绍并演示了两者的前端流程 **全栈和快速网站创建** 项目来概述前端资源构建、部署和交付模型中的细微差异。
 
->[!VIDEO](https://video.tv.adobe.com/v/3409344/)
+>[!VIDEO](https://video.tv.adobe.com/v/3409344?quality=12&learn=on)
 
 ## 前提条件 {#prerequisites}
 
@@ -154,6 +154,6 @@ ht-degree: 2%
 
 恭喜，您已查看了全栈项目的ui.frontend模块
 
-## 下面的步骤 {#next-steps}
+## 后续步骤 {#next-steps}
 
 在下一章中， [更新项目以使用前端管道](update-project.md)，您将更新AEM WKND Sites项目以为前端管道合同启用它。

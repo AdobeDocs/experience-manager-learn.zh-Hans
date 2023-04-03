@@ -11,7 +11,7 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: 6f33f121-5564-4c46-ab56-7ea382a0ab5a
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 组件控制台为开发人员和管理员提供了一个中心位置，用于管理站点实施中的所有各种组件。 以下视频详细介绍了组件控制台的功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/17417/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17417?quality=12&learn=on)
 
 组件控制台提供了以下功能：
 

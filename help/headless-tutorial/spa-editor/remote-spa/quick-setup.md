@@ -10,7 +10,7 @@ thumbnail: 333181.jpg
 last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 快速设置会直接将您转到本教程的结束状态。
 
->[!VIDEO](https://video.tv.adobe.com/v/333181/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333181?quality=12&learn=on)
 
 _快速设置的视频演示_
 

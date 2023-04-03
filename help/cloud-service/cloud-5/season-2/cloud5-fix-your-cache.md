@@ -7,10 +7,11 @@ level: Intermediate
 thumbnail: 343475.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 87d19ba3388b4a2ac3db1d2cf3838ed12dbbd2bc
+exl-id: 591ed430-80b3-49fa-b52f-0d07a2e5ac0e
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '70'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 在第二季的两部分系列中，我们将探索一些可了解的内容，以加快在AEM as a Cloud Service上缓存的速度。
 
->[!VIDEO](https://video.tv.adobe.com/v/343475)
+>[!VIDEO](https://video.tv.adobe.com/v/343475?quality=12&learn=on)
 
 ## 此视频中涵盖的内容
 

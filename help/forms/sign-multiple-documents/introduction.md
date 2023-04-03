@@ -9,7 +9,7 @@ role: Developer
 level: Experienced
 exl-id: 0260d4b6-8615-4d78-a920-b36766a0f8e9
 last-substantial-update: 2021-07-07T00:00:00Z
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 无论您是申请抵押贷款，还是开立新的银行账户，都需要填写并签署多份表格。 AEM Forms与Acrobat Sign之间的集成，可轻松填写和签署多个表单。
 以下视频将指导您完成对多个表单进行签名的用例。
 
->[!VIDEO](https://video.tv.adobe.com/v/330165?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330165?quality=12&learn=on)
 
 ## 前提条件
 

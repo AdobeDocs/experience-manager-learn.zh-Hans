@@ -1,20 +1,20 @@
 ---
 title: 向收入面板添加组件
 description: 我们将在收入小组中添加一个表格。 配置表行，并使用规则编辑器计算总计。
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 22198.jpg
 kt: 4211
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: e7674c46-259f-4dbd-96db-c40369534911
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 1%
+source-wordcount: '183'
+ht-degree: 0%
 
 ---
-
 
 # 向收入面板添加组件 {#adding-components-to-income-panel}
 
@@ -22,13 +22,13 @@ ht-degree: 1%
 
 **添加和配置表组件**
 
->[!VIDEO](https://video.tv.adobe.com/v/22198?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22198?quality=12&learn=on)
 
 
 
 ## 使收入表动态 {#make-the-income-table-dynamic}
 
-**确保您处于编辑模式。编辑按钮位于浏览器的右上方。**
+**确保您处于编辑模式。 编辑按钮位于浏览器的右上方。**
 
 * 默认情况下，在将表插入自适应表单时，该表不是动态的，这意味着在运行时不能向表添加新行。
 
@@ -43,6 +43,4 @@ ht-degree: 1%
 ## 创建规则以计算总计 {#create-rule-to-calculate-grand-total}
 
 
->[!VIDEO](https://video.tv.adobe.com/v/22197?quality=9&learn=on)
-
-
+>[!VIDEO](https://video.tv.adobe.com/v/22197?quality=12&learn=on)

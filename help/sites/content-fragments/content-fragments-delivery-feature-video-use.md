@@ -15,10 +15,10 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '548'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Manager(AEM)内容片段是基于文本的编辑内容，可能
 
 ## 在网页中使用内容片段 {#using-content-fragments-in-web-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
 
 内容片段可以在AEM Sites页面上使用，或通过AEM WCM核心组件以类似方式使用体验片段。 [内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans).
 
@@ -44,18 +44,18 @@ Adobe Experience Manager(AEM)内容片段是基于文本的编辑内容，可能
 
 ## 将内容片段公开为JSON {#exposing-content-fragments-as-json}
 
->[!VIDEO](https://video.tv.adobe.com/v/22448/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22448?quality=12&learn=on)
 
 AEM Content Services可帮助创建基于AEM页面的HTTP端点，以将内容演绎版为标准化的JSON格式。
 
-以上视频使用 [内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 以显示单个内容片段。 的 [内容片段列表组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) 是一个新组件，它允许作者定义一个查询，该查询将使用内容片段列表动态填充页面。 当需要公开多个内容片段时，首选使用内容片段列表组件。
+以上视频使用 [内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans) 以显示单个内容片段。 的 [内容片段列表组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) 是一个新组件，它允许作者定义一个查询，该查询将使用内容片段列表动态填充页面。 当需要公开多个内容片段时，首选使用内容片段列表组件。
 
 *Content Services端点JSON有效负载示例：*\
 **[aterys.json](assets/athletes.json)**
 
 ## 使用资产HTTP API
 
->[!VIDEO](https://video.tv.adobe.com/v/26390/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26390?quality=12&learn=on)
 
 AEM 6.5中首次引入，通过Assets HTTP API增强了对内容片段的支持。 这为开发人员提供了一种针对内容片段执行创建、读取、更新和删除(CRUD)操作的简单方法。
 
@@ -79,8 +79,8 @@ AEM 6.5中首次引入，通过Assets HTTP API增强了对内容片段的支持�
 ## 其他资源 {#additional-resources}
 
 * [创作内容片段](content-fragments-feature-video-use.md)
-* [AEM WCM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
-* [AEM WCM核心内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [AEM WCM核心内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)
 
 要在AEM 6.4+实例上下载并安装以下包，以获取视频系列的最终状态，请执行以下操作：\
 **[aem_demo_fluid-experiencecontent-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**

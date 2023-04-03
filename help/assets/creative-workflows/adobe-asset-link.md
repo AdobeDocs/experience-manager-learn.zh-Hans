@@ -9,7 +9,7 @@ level: Beginner
 thumbnail: 28988.jpg
 last-substantial-update: 2022-06-25T00:00:00Z
 exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 1%
@@ -30,7 +30,7 @@ Adobe Experience Manager资产可供设计人员和创意用户在其最喜爱�
 
 以下视频演示了在Adobe Creative Cloud应用程序中工作的创意人员使用的常见工作流，并使用Adobe资产链接直接与AEM集成。
 
->[!VIDEO](https://video.tv.adobe.com/v/335927/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335927?quality=12&learn=on)
 
 ## Adobe资产链接功能
 
@@ -61,7 +61,7 @@ Adobe Experience Manager资产可供设计人员和创意用户在其最喜爱�
 
 Adobe资产链接在Adobe资产链接和AEM之间提供InDesign直接链接支持。 借助InDesign直接链接支持，您可以将&#x200B;__置入链接的对象__ 或 __置入副本__)或通过“InDesign资产链接”面板将数字资产拖放到AEM的Adobe中。 此外，还引入了*仅用于置入+(FPO)呈现版本。
 
->[!VIDEO](https://video.tv.adobe.com/v/28988/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28988?quality=12&learn=on)
 
 >[!NOTE]
 >

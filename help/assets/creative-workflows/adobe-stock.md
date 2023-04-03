@@ -8,7 +8,7 @@ role: User
 level: Beginner
 last-substantial-update: 2022-06-26T00:00:00Z
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 AEM 6.4.2让用户能够直接从AEM搜索、预览、保存和许可Adobe Stock资产。 现在，组织可以将其Adobe Stock企业计划与AEM Assets相集成，以确保许可资产现在可广泛用于其创意和营销项目，并具有AEM的强大资产管理功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/24678/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/24678?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ Adobe Stock和AEM Assets集成允许内容作者和营销人员轻松地将库�
 
 AEM 6.4.2让用户能够直接从AEM搜索、预览、保存和许可Adobe Stock资产。 此视频介绍如何使用“Adobe控制台”在AEM Assets中设置Adobe I/O库。
 
->[!VIDEO](https://video.tv.adobe.com/v/25043/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25043?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ AEM 6.4.2让用户能够直接从AEM搜索、预览、保存和许可Adobe Stock
 
 >[!NOTE]
 >
->该集成需要 [企业Adobe Stock计划](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) 和AEM 6.4(至少 [Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=。%2Fjcr%3Content%2Fmetadata%2Fdc%3Rovase&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aem%2F6-4&amp;3_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fdc%3Ati&amp;orderby.st=st&amp;p.offset=0&amp;p.limit=24) 已部署。 有关AEM 6.4 Service Pack详细信息，请参阅以下内容 [发行说明](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html). 您还需要拥有 [Adobe I/O控制台](https://console.adobe.io/), [Adobe Admin Console](https://adminconsole.adobe.com/) 和Adobe Experience Manager来设置集成。
+>该集成需要 [企业Adobe Stock计划](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) 和AEM 6.4(至少 [Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=。%2Fjcr%3Content%2Fmetadata%2Fdc%3Rovase&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aem%2F6-4&amp;3_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fdc%3Ati&amp;orderby.st=st&amp;p.offset=0&amp;p.limit=24) 已部署。 有关AEM 6.4 Service Pack详细信息，请参阅以下内容 [发行说明](https://helpx.adobe.com/cn/experience-manager/6-4/release-notes/sp-release-notes.html). 您还需要拥有 [Adobe I/O控制台](https://console.adobe.io/), [Adobe Admin Console](https://adminconsole.adobe.com/) 和Adobe Experience Manager来设置集成。
 
 ### 安装 {#installations}
 

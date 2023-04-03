@@ -14,7 +14,7 @@ role: Developer
 level: Experienced
 exl-id: 88295af5-3022-4462-9194-46d8c979bc8b
 last-substantial-update: 2021-04-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 0%
@@ -34,4 +34,4 @@ ht-degree: 0%
 
 以下视频概述用例
 
->[!VIDEO](https://video.tv.adobe.com/v/29677?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29677?quality=12&learn=on)

@@ -1,23 +1,23 @@
 ---
 title: 启用详细ORB跟踪的步骤
-description: '配置详细的ORB日志，以对PDF生成器问题进行故障诊断 '
+description: 配置详细的ORB日志，以解决PDF生成器问题
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-feature: PDF 生成器
-topic: '管理   '
+feature: PDF Generator
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2ac84ee3-48ca-4c01-9dfe-add77c666ba9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 8%
+source-wordcount: '32'
+ht-degree: 0%
 
 ---
-
 
 # 启用详细ORB跟踪的步骤
 
 *此视频将逐步介绍如何启用详细的ORB跟踪。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335526?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335526?quality=12&learn=on)

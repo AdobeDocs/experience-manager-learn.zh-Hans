@@ -10,7 +10,7 @@ thumbnail: 340397.jpeg
 hidefromtoc: false
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 7d44e1b7-7216-431d-b866-6adcc8673d53
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 了解AEM增强型连接器的Workfront的高级设置，以及如何在AEM中配置高级工作流和启动器，以管理AEM和Workfront之间的数据同步。
 
->[!VIDEO](https://video.tv.adobe.com/v/340397/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340397?quality=12&learn=on)
 
 _a的第四部分 [关于Workfront for Experience Manager增强连接器的四部分专家系列](./overview.md)_

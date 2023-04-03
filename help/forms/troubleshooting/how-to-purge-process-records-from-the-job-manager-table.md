@@ -5,12 +5,13 @@ type: Troubleshooting
 role: Developer
 level: Experienced
 version: 6.5
-topic: '开发  '
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 090bba8d-3f1c-4370-9bc6-29bf0573bb77
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 2%
+source-wordcount: '43'
+ht-degree: 0%
 
 ---
 
@@ -18,4 +19,4 @@ ht-degree: 2%
 
 *此视频将逐步从作业管理器中清除流程记录。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335577?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335577?quality=12&learn=on)

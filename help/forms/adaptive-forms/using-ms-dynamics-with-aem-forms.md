@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 exl-id: 3e51767b-3571-4af7-8f01-5b6c5c74734c
 last-substantial-update: 2021-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
@@ -27,7 +27,7 @@ AEM Forms数据集成允许您配置不同的数据源并将其连接到不同�
 
 此视频将演示AEM Forms如何与Microsoft Dynamics作为后端数据源结合使用，以提供交互式个性化通信的工作流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/20971?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20971?quality=12&learn=on)
 
 >[!NOTE]
 >

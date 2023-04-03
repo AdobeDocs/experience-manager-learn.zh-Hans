@@ -9,7 +9,7 @@ kt: 7630
 thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '618'
 ht-degree: 5%
@@ -20,9 +20,9 @@ ht-degree: 5%
 
 欢迎参加多部分教程，面向希望使用AEM SPA编辑器将现有的基于React的（或Next.js）远程SPA内容与可编辑的AEM内容进行扩充的开发人员。
 
-本教程以 [WKND GraphQL应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)，一种通过AEM GraphQL API使用AEM内容片段内容的React应用程序，但不提供任何SPA内容的上下文内创作。
+本教程以 [WKND GraphQL应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)，一种在AEM GraphQL API上使用AEM内容片段内容的React应用程序，但不提供SPA内容的任何上下文内创作。
 
->[!VIDEO](https://video.tv.adobe.com/v/333272/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## 关于教程
 

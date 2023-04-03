@@ -9,7 +9,7 @@ level: Beginner
 jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 65d54f0137786c7e8ac9ac962c424dd20bf5f3dd
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 1%
@@ -28,7 +28,7 @@ ht-degree: 1%
 - 设置 [Adobe I/O Runtime可扩展CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 也称为 `aio CLI`
 - AEM RDE和Cloud Manager的设置和配置 `aio CLI` 插件
 
->[!VIDEO](https://video.tv.adobe.com/v/3415490/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3415490?quality=12&learn=on)
 
 ## 先决条件
 

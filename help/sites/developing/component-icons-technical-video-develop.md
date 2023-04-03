@@ -11,7 +11,7 @@ topic: Development
 role: User
 level: Intermediate
 exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 组件图标允许作者通过图标或有意义的缩写快速识别组件。 现在，作者可以比以往更快地找到构建其Web体验所需的组件。
 
->[!VIDEO](https://video.tv.adobe.com/v/16778/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16778?quality=12&learn=on)
 
 组件浏览器现在以一致的灰色主题显示，其中显示：
 

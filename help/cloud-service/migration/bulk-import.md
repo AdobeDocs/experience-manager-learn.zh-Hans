@@ -14,7 +14,7 @@ role: Architect, Developer
 level: Beginner
 last-substantial-update: 2022-10-05T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 通过AEMas a Cloud Service中的批量导入工具，管理员能够以安全、高效的方式从云存储(Azure Blob Storage或Amazon S3)批量导入资产。
 
->[!VIDEO](https://video.tv.adobe.com/v/329680/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
 
 ## 计划批量导入
 

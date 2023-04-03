@@ -1,20 +1,21 @@
 ---
-title: automated forms conversion服务
-description: automated forms conversion服务。 本文介绍了AEM管理员如何配置Automated forms conversion服务，以自动将其PDF forms转换为自适应表单。 此帮助适用于贵组织的IT和AEM管理员。
-feature: 自适应表单
+title: 自动化表单转换服务
+description: 自动化表单转换服务. 本文介绍了AEM管理员如何配置Automated forms conversion服务，以自动将其PDF forms转换为自适应表单。 此帮助适用于贵组织的IT和AEM管理员。
+feature: Adaptive Forms
 thumbnail: 39493.jpg
 kt: 6114
-topic: 开发
+topic: Development
 role: Admin
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 0715a2cc-c042-4ddc-85a1-7720f420351b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 1%
+source-wordcount: '253'
+ht-degree: 5%
 
 ---
 
-# automated forms conversion服务
+# 自动化表单转换服务
 
 本文介绍了AEM管理员如何配置Automated forms conversion服务，以自动将其PDF forms转换为自适应表单。 此帮助适用于贵组织的IT和AEM管理员。 提供的信息基于以下假设：阅读本帮助的任何人都熟悉以下技术：
 
@@ -36,5 +37,4 @@ ht-degree: 1%
 
 * 此视频介绍将本地AEM Forms实例连接到Adobe云上的Automated forms conversion服务时需要执行的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/39493/?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/39493?quality=12&learn=on)

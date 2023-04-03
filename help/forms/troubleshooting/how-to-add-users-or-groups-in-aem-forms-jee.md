@@ -5,18 +5,18 @@ type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-topic: 管理
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 595252dd-a882-4faa-938b-7aeb5a383056
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 2%
+source-wordcount: '44'
+ht-degree: 0%
 
 ---
-
 
 # 如何在AEM JEE中添加用户和群组
 
 *此视频将演示在“用户管理”中添加用户和群组的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335485?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335485?quality=12&learn=on)

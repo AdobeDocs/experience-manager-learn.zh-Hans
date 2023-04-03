@@ -8,7 +8,7 @@ role: User
 level: Beginner
 exl-id: a2d21f2e-3dbb-454f-8a02-101dc3af9b1e
 last-substantial-update: 2020-02-09T00:00:00Z
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 AEM 6.3在此版本中引入了一些新增功能和增强功能，以简化自适应表单和文档的创作体验。 这些增强功能有助于您缩短上市时间，并使企业用户能够处理表单和文档
 
->[!VIDEO](https://video.tv.adobe.com/v/19500/)
+>[!VIDEO](https://video.tv.adobe.com/v/19500?quality=12&learn=on)
 
 **自适应表单编辑器的一些主要改进包括：**
 

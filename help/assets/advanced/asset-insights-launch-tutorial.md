@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-04T00:00:00Z
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 资产分析概述。 安装核心组件、示例图像组件和其他内容包，以便为环境做好准备。
 
->[!VIDEO](https://video.tv.adobe.com/v/25943/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25943?quality=12&learn=on)
 
 ### 架构图 {#architecture-diagram}
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 增强了资产分析的核心组件和使用代理组件（示例图像组件）的功能。 编辑内容页面模板策略以启用用于引用站点的示例图像组件。
 
->[!VIDEO](https://video.tv.adobe.com/v/25944/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25944?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 为资产跟踪创建了具有实时数据收集的报表包。 AEM Assets分析配置是使用Adobe Analytics凭据设置的。
 
->[!VIDEO](https://video.tv.adobe.com/v/25945/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25945?quality=12&learn=on)
 
 >[!NOTE]
 需要为您的Adobe Analytics报表包启用实时数据收集和AEM资产报告功能。 启用AEM Asset Reporting会保留分析变量以跟踪资产分析。
@@ -80,7 +80,7 @@ ht-degree: 1%
 
 添加Adobe Analytics扩展、创建页面加载规则以及将AEM与Launch集成到Adobe IMS技术帐户。
 
->[!VIDEO](https://video.tv.adobe.com/v/25946/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
 确保将所有更改从创作实例复制到发布实例。
@@ -193,4 +193,4 @@ document.querySelectorAll(".cmp-image__image");
 
 配置AEM资产报告同步作业计划程序和资产分析报表
 
->[!VIDEO](https://video.tv.adobe.com/v/25947/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25947?quality=12&learn=on)

@@ -11,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 使用前端管道
 
->[!VIDEO](https://video.tv.adobe.com/v/3409420/)
+>[!VIDEO](https://video.tv.adobe.com/v/3409420?quality=12&learn=on)
 
 ## 前提条件 {#prerequisites}
 
@@ -106,6 +106,6 @@ ht-degree: 0%
 
 恭喜，您已创建、运行并验证前端管道，该管道仅构建和部署WKND Sites项目的“ui.frontend”模块。 现在，您的前端团队可以在整个AEM项目生命周期之外快速迭代网站的设计和前端行为。
 
-## 下面的步骤 {#next-steps}
+## 后续步骤 {#next-steps}
 
 在下一章中， [注意事项](considerations.md)，您将回顾对前端和后端开发流程的影响。

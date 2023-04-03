@@ -9,7 +9,7 @@ kt: 6923
 thumbnail: 330546.jpg
 last-substantial-update: 2022-01-01T00:00:00Z
 exl-id: 8aa97bdf-6a0b-4140-8183-a8f77212992d
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
@@ -20,4 +20,4 @@ ht-degree: 0%
 
 了解AEM的as a Cloud Service内容，以及它与其他版本的Adobe Experience Manager有何不同。
 
->[!VIDEO](https://video.tv.adobe.com/v/330546/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330546?quality=12&learn=on)

@@ -12,15 +12,15 @@ topic: Architecture
 role: Architect, Developer
 level: Beginner
 exl-id: 386b7d1f-d6aa-4c9f-95ae-d553aaeb9bf3
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 4%
 
 ---
 
-# [!DNL OSGi] 简介 {#introduction-osgi}
+# 简介 [!DNL OSGi] {#introduction-osgi}
 
-[!DNL OSGi]是[!DNL Java]应用程序的动态模块化架构，是Adobe Experience Manager的基础。
+简介 [!DNL OSGi]，动态的模块化架构 [!DNL Java] 作为Adobe Experience Manager基础的应用程序。
 
->[!VIDEO](https://video.tv.adobe.com/v/32031/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32031?quality=12&learn=on)

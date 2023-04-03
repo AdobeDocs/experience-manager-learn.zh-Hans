@@ -9,7 +9,7 @@ level: Intermediate, Experienced
 kt: 8632
 thumbnail: 336961.jpeg
 exl-id: 9c641a90-be62-49c1-b8c0-d45d26055b94
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 了解Cloud Manager for AEMas a Cloud Service，以及它与Cloud Manager for AEM on Adobe Manage Services(AMS)的差异。
 
->[!VIDEO](https://video.tv.adobe.com/v/336961/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336961?quality=12&learn=on)
 
 ## 动手练习
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 在尝试动手练习之前，请确保您已观看并了解上述视频，以及以下材料：
 
 + [对AEMas a Cloud Service的思考](./introduction.md)
-+ [入门](./onboarding.md)
++ [入门培训](./onboarding.md)
 
 此外，请确保您已完成之前的动手练习：
 

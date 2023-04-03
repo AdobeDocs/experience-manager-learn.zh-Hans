@@ -5,20 +5,19 @@ type: Troubleshooting
 role: Admin
 level: Beginner
 version: 6.5
-feature: 'Workbench '
-topic: 管理
+feature: Workbench
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: e3e3e3ff-c914-4ae0-9d41-1fcbcf6375bf
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '31'
-ht-degree: 6%
+source-wordcount: '29'
+ht-degree: 0%
 
 ---
-
-
 
 # 如何调整Workbench内存参数
 
 *此视频将演示调整Workbench内存参数的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335509?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335509?quality=12&learn=on)

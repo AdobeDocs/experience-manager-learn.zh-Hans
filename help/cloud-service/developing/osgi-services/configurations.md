@@ -3,23 +3,23 @@ title: OSGi配置属性
 description: 了解OSGi配置属性的基础知识以及如何在OSGi服务中使用这些属性。
 role: Developer
 level: Beginner
-topic: 开发
+topic: Development
 feature: OSGI
 kt: 8268
 thumbnail: 335729.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 096b0a95-7039-4570-b567-ba316bfc8709
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 3%
+source-wordcount: '75'
+ht-degree: 1%
 
 ---
-
 
 # OSGi配置属性
 
 了解使用OSGi配置键/值对定义OSGi配置数据并将其公开给OSGi服务的低级方法。
 
->[!VIDEO](https://video.tv.adobe.com/v/335729/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335729?quality=12&learn=on)
 
 ## 资源
 

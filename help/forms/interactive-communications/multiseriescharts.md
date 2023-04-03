@@ -12,7 +12,7 @@ role: Developer
 level: Beginner
 exl-id: f4af7cb9-cc3b-4bec-9428-ab4f1a3cf41a
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 0%
@@ -31,11 +31,11 @@ AEM Forms 6.5引入了创建和配置多个系列图的功能。 多个系列图
 
 ## 为多系列图创建表单数据模型
 
->[!VIDEO](https://video.tv.adobe.com/v/26352/quality=9)
+>[!VIDEO](https://video.tv.adobe.com/v/26352?quality=12&learn=on)
 
 ### 配置折线图
 
->[!VIDEO](https://video.tv.adobe.com/v/26353?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26353?quality=12&learn=on)
 
 要在系统上测试此功能，请执行以下步骤
 

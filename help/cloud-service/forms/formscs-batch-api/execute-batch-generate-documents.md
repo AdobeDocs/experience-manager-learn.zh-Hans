@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 kt: 9674
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+exl-id: 17f91f81-96d8-49d6-b1e3-53d8899695ae
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
@@ -29,4 +30,4 @@ ht-degree: 0%
 
 以下视频演示了批量配置的触发
 
->[!VIDEO](https://video.tv.adobe.com/v/340242/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340242?quality=12&learn=on)

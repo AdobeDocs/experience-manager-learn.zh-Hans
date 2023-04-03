@@ -1,35 +1,35 @@
 ---
 title: 将Dynamic Media查看器与Adobe Analytics和AdobeLaunch结合使用
-description: 用于 Adobe Launch 的 Dynamic Media 查看器扩展以及 Dynamic Media 查看器 5.13 版允许 Dynamic Media 客户、Adobe Analytics 客户和 Adobe Launch 客户在其 Adobe Launch 配置中使用特定于 Dynamic Media 查看器的事件和数据。
+description: 适用于Adobe启动的Dynamic Media查看器扩展以及Dynamic Media查看器5.13版，允许Dynamic Media、Adobe Analytics和Adobe启动的客户在其Adobe启动配置中使用特定于Dynamic Media查看器的事件和数据。
 sub-product: Dynamic Media
 feature: Asset Insights
 version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 9d807f4c-999c-45e6-a9db-6c1776bddda1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '360'
-ht-degree: 15%
+ht-degree: 11%
 
 ---
-
 
 # 将Dynamic Media查看器与Adobe Analytics和AdobeLaunch结合使用{#using-dynamic-media-viewers-adobe-analytics-launch}
 
 对于具有Dynamic Media和Adobe Analytics的客户，您现在可以使用Dynamic Media查看器扩展来跟踪Dynamic Media查看器在您网站上的使用情况。
 
->[!VIDEO](https://video.tv.adobe.com/v/29308/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29308?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 在Dynamic Media Scene7模式下运行Adobe Experience Manager，以实现此功能。 您还需要[将Adobe Experience Platform Launch与AEM实例](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)集成。
+> 在Dynamic Media Scene7模式下运行Adobe Experience Manager，以实现此功能。 您还需要 [将Adobe Experience Platform Launch与AEM实例集成](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
 
 通过引入Dynamic Media查看器扩展，Adobe Experience Manager现在为Dynamic Media查看器(5.13)提供的资产提供了高级分析支持，从而在站点页面上使用Dynamic Media查看器时，可以更加精细地控制事件跟踪。
 
 如果您已经拥有AEM Assets和Sites，则可以将Launch资产与AEM创作实例相集成。 将launch集成与您的网站关联后，您可以向页面添加Dynamic Media组件，并启用查看器事件跟踪。
 
-对于仅限AEM Assets的客户或Dynamic Media Classic客户，用户可以获取查看器的嵌入代码并将其添加到页面中。 然后，可以手动将Launch脚本库添加到页面，以便进行查看器事件跟踪。
+对于仅限AEM Assets的客户或Dynamic Media Classic客户，用户可以获取查看器的嵌入代码并将其添加到页面。 然后，可以手动将Launch脚本库添加到页面，以便进行查看器事件跟踪。
 
 下表列出了Dynamic Media查看器事件及其支持的参数：
 
@@ -165,5 +165,5 @@ ht-degree: 15%
 ## 其他资源{#additional-resources}
 
 * [将Adobe Experience Manager与Launch集成Adobe](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-* [在Dynamic Media Scene7模式下运行Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=en)
+* [在Dynamic Media Scene7模式下运行Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=zh-Hans)
 * [将 Dynamic Media 查看器与 Adobe Analytics 和 Adobe Launch 集成](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html)

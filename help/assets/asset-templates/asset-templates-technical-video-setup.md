@@ -6,7 +6,7 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: 5b764d86-8ced-46ed-838e-4bd2e75fd64c
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 资产模板允许营销人员创建、管理和交付用于数字和打印的数字资产。 与InDesign服务器集成后，使用资产模板可以更轻松地创建营销手册、名片、传单、广告和明信片。 使用AEM配置InDesign服务器的过程将在此部分中介绍。
 
->[!VIDEO](https://video.tv.adobe.com/v/17069/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17069?quality=12&learn=on)
 
 >[!NOTE]
 >

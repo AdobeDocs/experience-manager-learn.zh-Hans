@@ -9,10 +9,10 @@ level: Experienced
 kt: 8630
 thumbnail: 336958.jpeg
 exl-id: e9bd9035-1f2d-4a34-a581-9c1ec2c7bc04
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 4%
 
 了解存储库现代化、可变和不可变内容、包结构和存储库现代化器CLI工具。
 
->[!VIDEO](https://video.tv.adobe.com/v/336958/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336958?quality=12&learn=on)
 
 ## Repository Modernizer工具
 
-![Repository Modernizer](./assets/repository-modernizer.png)
+![存储库现代化器](./assets/repository-modernizer.png)
 
 在重构代码库时，请使用 [Repository Modernizer工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html) 将6.x代码库重构为更现代的结构。
 
@@ -32,5 +32,5 @@ ht-degree: 4%
 
 * 使用 [Adobe I/O存储库Modernizer](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationrepository-modernizer) 用于调整项目结构以匹配AEMas a Cloud Service项目的预期结构的工具。
 * 手动调整和修复更新的代码库中的任何生成错误。
-* 设置 [本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) 和部署更新的代码库。 迭代直到项目处于稳定状态。
+* 设置 [本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans) 和部署更新的代码库。 迭代直到项目处于稳定状态。
 * 将更新的代码库部署到AEMas a Cloud Service开发环境，并继续验证。

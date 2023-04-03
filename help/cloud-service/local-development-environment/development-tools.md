@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: e82c30e7f1a1fe04fd43ee639d74788f9bf100f6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1502'
 ht-degree: 7%
@@ -175,7 +175,7 @@ AEM开发主要由Java和前端（JavaScript、CSS等）开发和XML管理组成
 
 __[IntelliJ IDEA](https://www.jetbrains.com/idea/)__ 是一款功能强大的IDE for Java开发工具。 IntelliJ IDEA有两种版本，一种是免费的社区版本，另一种是商业（付费）Ultimate版本。 免费的社区版本足以用于AEM开发，但最终版本 [扩展其功能集](https://www.jetbrains.com/idea/download).
 
->[!VIDEO](https://video.tv.adobe.com/v/26089/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26089?quality=12&learn=on)
 
 + [下载IntelliJ IDEA](https://www.jetbrains.com/idea/download)
 + [下载Repo工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation)

@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 exl-id: 7e5dcc6e-fe56-49af-97e3-7dfaa9c8738f
 last-substantial-update: 2019-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 在AEM自适应Forms中添加和使用CAPTCHA。
 
->[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18336?quality=12&learn=on)
 
 *此视频介绍了使用内置的AEM CAPTCHA服务以及Google reCAPTCHA服务将CAPTCHA添加到AEM自适应表单的过程。*
 

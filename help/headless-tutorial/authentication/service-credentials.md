@@ -14,7 +14,7 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 1401710c19ae6ee6a2822ae06286bef4f92cda45
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1937'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 与Adobe Experience Manager(AEM)as a Cloud Service的集成必须能够安全地验证AEM服务。 AEM开发人员控制台授予对服务凭据的访问权限，服务凭据用于促进外部应用程序、系统和服务以编程方式通过HTTP与AEM创作或发布服务交互。
 
->[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
 服务凭据可能显示类似 [本地开发访问令牌](./local-development-access-token.md) 但在几个关键方面却有所不同：
 

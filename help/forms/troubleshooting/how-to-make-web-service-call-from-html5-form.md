@@ -1,22 +1,23 @@
 ---
-title: 如何从HTML5表单发起Web服务调用
-description: 从HTML5表单配置Web服务的步骤
+title: 如何从Web5表单发起Web服务调用HTML
+description: 从“HTML5”窗体配置web服务的步骤
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 移动设备表单
-topic: '开发  '
+feature: Mobile Forms
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 28fa5597-bab5-4fb9-8d30-e9fd41820749
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 6%
+source-wordcount: '41'
+ht-degree: 0%
 
 ---
 
-# 如何从HTML5表单发起Web服务调用
+# 如何从Web5表单发起Web服务调用HTML
 
-*此视频将逐步介绍从HTML5表单发起Web服务调用的过程。*
+*此视频将演示从HTML5表单发起Web服务调用的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335505?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335505?quality=12&learn=on)

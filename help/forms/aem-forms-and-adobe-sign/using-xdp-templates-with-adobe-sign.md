@@ -8,10 +8,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: faf0143a-0944-41fb-a211-0d83ae1978d4
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '67'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 利用AEM Forms和Sign集成中的现有XDP模板。
 
->[!VIDEO](https://video.tv.adobe.com/v/39705/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39705?quality=12&learn=on)
 
 可以通过以下链接下载与此视频相关的资产
 

@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 AEM 6.4中的Dynamic Media查看器增强功能包括添加全景图像查看器、虚拟现实全景图像查看器和垂直图像查看器。 全景查看器提供了一种轻松的方式，无需任何自定义开发，即可提供房间、资产、位置或景观的迷人、沉浸式体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/24156/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/24156?quality=12&learn=on)
 
 >[!NOTE]
 >

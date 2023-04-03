@@ -1,6 +1,6 @@
 ---
 title: AEM Headless快速设置AEMas a Cloud Service
-description: AEM Headless快速设置可让您使用WKND Site示例项目中的内容，以及通过AEM Headless GraphQL API使用内容的React应用程序，来实践AEM Headless。
+description: AEM Headless快速设置可让您通过WKND Site示例项目中的内容，以及一个React应用程序(该应用程序会通过AEM Headless GraphQL API使用内容)来动手操作AEM Headless。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -9,7 +9,7 @@ level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: b4c04a9ef7d8cfdaa5675fdfe259ab9d813fb7e0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # AEM Headless快速设置AEMas a Cloud Service
 
-AEM无头快速设置可让您使用WKND网站示例项目中的内容，以及通过AEM无头GraphQL API使用内容的示例React应用程序(SPA)，来实践AEM无头。
+AEM Headless快速设置可让您使用WKND网站示例项目中的内容来实践AEM Headless，以及一个可通过AEM Headless GraphQL API使用内容的示例React应用程序(SPA)。
 
 ## 前提条件
 
@@ -39,7 +39,7 @@ AEM无头快速设置可让您使用WKND网站示例项目中的内容，以及�
 首先，创建用于部署WKND站点的Cloud Manager Git存储库。 WKND网站是一个AEM网站项目示例，其中包含快速设置的React应用程序使用的内容（内容片段）和GraphQL AEM端点。
 
 _步骤的截屏_
->[!VIDEO](https://video.tv.adobe.com/v/339073/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339073?quality=12&learn=on)
 
 1. 导航到 [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com)
 1. 选择Cloud Manager __项目__ 其中包含用于此快速设置的AEMas a Cloud Service环境
@@ -55,7 +55,7 @@ _步骤的截屏_
 创建Cloud Manager Git存储库后，从GitHub克隆WKND站点项目的源代码，并将其推送到Cloud Manager Git存储库。 现在，Cloud Manager可以访问WKND Site项目并将其部署到AEMas a Cloud Service环境。
 
 _步骤的截屏_
->[!VIDEO](https://video.tv.adobe.com/v/339074/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339074?quality=12&learn=on)
 
 1. 从命令行中，从GitHub中克隆示例WKND站点项目的源代码
 
@@ -87,10 +87,10 @@ _步骤的截屏_
 
 将WKND Site项目推送到Cloud Manager Git存储库后，无法使用Cloud Manager管道将其部署到AEMas a Cloud Service。
 
-请记住，WKND Site项目提供了React应用程序通过AEM无头GraphQL API使用的示例内容。
+请记住，WKND Site项目提供了React应用程序在AEM Headless GraphQL API上使用的示例内容。
 
 _步骤的截屏_
->[!VIDEO](https://video.tv.adobe.com/v/339075/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339075?quality=12&learn=on)
 
 1. 附加 __非生产部署管道__ 到新的Git存储库
    1. 选择 __管道__ 在顶部导航中
@@ -118,10 +118,10 @@ _步骤的截屏_
 
 ## 4.下载并运行WKND React应用程序
 
-通过使用WKND站点项目中的内容引导AEMas a Cloud Service，下载并启动示例WKND React应用程序，该应用程序会通过AEM无头GraphQL API使用WKND站点的内容。
+通过使用WKND网站项目中的内容引导AEMas a Cloud Service，下载并启动示例WKND React应用程序，该应用程序会比AEM Headless GraphQL API使用WKND网站的内容。
 
 _步骤的截屏_
->[!VIDEO](https://video.tv.adobe.com/v/339076/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339076?quality=12&learn=on)
 
 1. 从命令行中，从GitHub中克隆React应用程序的源代码。
 
@@ -155,14 +155,14 @@ _步骤的截屏_
    $ npm start
    ```
 
-1. 在本地运行的React应用程序从 [http://localhost:3000](http://localhost:3000) 和显示冒险列表，这些冒险源自使用AEM Headless&#39; GraphQL API的AEMas a Cloud Service。
+1. 在本地运行的React应用程序从 [http://localhost:3000](http://localhost:3000) 和显示冒险列表，这些冒险源自使用AEM Headless的GraphQL API的AEM as a Cloud Service。
 
 ## 5.在AEM中编辑内容
 
-当示例WKND React应用程序连接到AEM Headless GraphQL API并使用其中的内容时，在AEM创作服务中创作内容，并查看React应用程序的体验如何协同更新。
+当示例WKND React应用程序连接到AEM Headless GraphQL API并使用其中的内容时，在AEM创作服务中创作内容，并查看React应用程序的体验如何一致更新。
 
 _步骤的截屏_
->[!VIDEO](https://video.tv.adobe.com/v/339077/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339077?quality=12&learn=on)
 
 1. 登录到AEMas a Cloud Service创作服务
 1. 导航到 __资产>文件> WKND共享>英语>冒险__

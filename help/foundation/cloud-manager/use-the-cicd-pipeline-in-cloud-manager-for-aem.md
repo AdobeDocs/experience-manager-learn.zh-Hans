@@ -12,10 +12,10 @@ level: Beginner
 exl-id: d5d59ef5-9343-4ac2-9053-a010decdb9b6
 last-substantial-update: 2022-08-15T00:00:00Z
 thumbnail: cm-pipeline.jpg
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -31,19 +31,19 @@ Cloud Manager和Cloud Manager程序简介。
 >
 >在这些视频中，构建、测试和部署时间都得到了加快，缩短了视频播放的时间。 根据项目大小、AEM实例数和UAT进程，完成管道执行通常需要45分钟或更长时间（包括强制性的30分钟性能测试）。
 
->[!VIDEO](https://video.tv.adobe.com/v/23082/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23082?quality=12&learn=on)
 
 ## 设置CI/CD管线
 
 本视频探讨如何在Cloud Manager中为项目设置管道。
 
->[!VIDEO](https://video.tv.adobe.com/v/23083/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23083?quality=12&learn=on)
 
 ## 管道执行失败
 
 本视频探索如何使用代码执行CI/CD管线，该代码会使Cloud Manager的所需质量检查失败，同时使用 **[!DNL yellow]** 存储库分支。
 
->[!VIDEO](https://video.tv.adobe.com/v/23084/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23084?quality=12&learn=on)
 
 ## 成功执行管道
 
@@ -51,7 +51,7 @@ Cloud Manager和Cloud Manager程序简介。
 
 此视频还会触及 [!UICONTROL 活动] 控制台中，该控制台允许重新进入活动执行，或查看已完成或失败的执行。
 
->[!VIDEO](https://video.tv.adobe.com/v/23085/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23085?quality=12&learn=on)
 
 ## 辅助材料
 

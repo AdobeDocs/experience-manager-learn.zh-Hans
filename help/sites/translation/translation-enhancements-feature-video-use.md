@@ -7,7 +7,7 @@ feature: Multi Site Manager, Language Copy
 role: User
 level: Beginner
 exl-id: 21633308-ffe4-4023-affe-59269504da69
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 5%
@@ -20,7 +20,7 @@ AEM强大的翻译框架允许受支持的翻译供应商无缝翻译AEM内容�
 
 ## AEM 6.5中的翻译增强功能
 
->[!VIDEO](https://video.tv.adobe.com/v/27405?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27405?quality=12&learn=on)
 
 AEM 6.5翻译增强功能包括：
 
@@ -34,7 +34,7 @@ AEM 6.5翻译增强功能包括：
 
 ## AEM 6.4中的翻译增强功能
 
->[!VIDEO](https://video.tv.adobe.com/v/21309?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21309?quality=12&learn=on)
 
 现在，作者可以直接从站点管理员或项目管理员快速轻松地创建多语言翻译项目，设置这些项目以自动提升启动项，甚至设置自动化计划。
 

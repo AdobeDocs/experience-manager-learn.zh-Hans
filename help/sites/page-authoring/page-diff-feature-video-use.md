@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 4d365957-9a5a-44f8-a117-95c1c0dd757d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 1%
@@ -28,7 +28,7 @@ AEM Sites的页面差异功能显示了一个以颜色编码的快速视图，�
 
 ## 比较页面版本 {#comparing-page-versions}
 
->[!VIDEO](https://video.tv.adobe.com/v/32152?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32152?quality=12&learn=on)
 
 **HTML更改**
 
@@ -43,7 +43,7 @@ AEM Sites的页面差异功能显示了一个以颜色编码的快速视图，�
 
 ## 比较启动页面 {#comparing-launch-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/17746/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17746?quality=12&learn=on)
 
 “页面差异”功能还可用于识别Blueprint和LiveCopie以及Blueprint和语言副本之间的差异。
 

@@ -10,10 +10,10 @@ kt: 647, 917
 thumbnail: 22132.jpg
 last-substantial-update: 2022-06-13T00:00:00Z
 exl-id: 0681e2c4-8661-436c-9170-9aa841a6fa27
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '260'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 3%
 
 ## 元数据导出 {#metadata-export}
 
->[!VIDEO](https://video.tv.adobe.com/v/22132/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22132?quality=12&learn=on)
 
 ## 元数据导入 {#metadata-import}
 
->[!VIDEO](https://video.tv.adobe.com/v/21374/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21374?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ ht-degree: 3%
 * 第一列默认为 `assetPath`，其中包含资产的绝对JCR路径。
 
 * 第一行中的后续列指向资产的其他元数据属性。
-   * 例如：`dc:title, dc:description, jcr:title`
+   * 例如： `dc:title, dc:description, jcr:title`
 
 * 单值属性格式
 

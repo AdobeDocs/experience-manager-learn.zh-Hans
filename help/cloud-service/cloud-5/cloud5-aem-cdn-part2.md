@@ -8,7 +8,7 @@ kt: 9904
 thumbnail: 340994.jpeg
 hidefromtoc: true
 exl-id: 3d6f3506-e1ec-4eeb-869f-02db2821b8c6
-source-git-commit: db701d42d111f1510645f795b2492ff69f76196d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 第二部分使用AEM CDN并深入了解各种选项。
 
->[!VIDEO](https://video.tv.adobe.com/v/340994/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340994?quality=12&learn=on)
 
 ## 本系列第二部分介绍的内容
 

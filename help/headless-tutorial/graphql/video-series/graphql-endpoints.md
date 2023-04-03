@@ -9,7 +9,7 @@ level: Beginner
 kt: 7875
 thumbnail: 333339.jpg
 exl-id: 190623cc-8959-46b3-95de-e7d01bf5acdb
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
@@ -26,6 +26,6 @@ ht-degree: 0%
 + 了解如何对端点执行GraphQL查询
 + 了解如何发布和保护GraphQL端点
 
->[!VIDEO](https://video.tv.adobe.com/v/333339/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333339?quality=12&learn=on)
 
-_下载整 [个AEM](./assets/aem-headless-video-series.postman_collection.json) 无头视频系列中使用的Postman Collection。_
+_下载 [Postman收藏集](./assets/aem-headless-video-series.postman_collection.json) 用于整个AEM Headless视频系列。_

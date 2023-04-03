@@ -3,17 +3,17 @@ title: OSGi组件生命周期
 description: 了解OSGi组件生命周期，包括如何将OSGi服务绑定到激活、修改和停用生命周期事件。
 role: Developer
 level: Beginner
-topic: 开发
+topic: Development
 feature: OSGI
 kt: 8228
 thumbnail: 335475.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 5a65dbcd-649b-464c-9c78-d31c2b6c49c3
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 5%
+source-wordcount: '94'
+ht-degree: 3%
 
 ---
-
 
 # OSGi组件生命周期
 
@@ -25,7 +25,7 @@ ht-degree: 5%
 
 ...生命周期事件。
 
->[!VIDEO](https://video.tv.adobe.com/v/335475/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335475?quality=12&learn=on)
 
 ## 资源
 

@@ -9,7 +9,7 @@ feature: Developer Tools
 kt: 6916
 thumbnail: 330539.jpg
 exl-id: 05e3f987-e9bf-4b61-93b4-62b43619969e
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 77%
@@ -26,4 +26,4 @@ ht-degree: 77%
 
 探索 Cloud Manager 中不同类型的管道以及如何配置它们以使项目取得成功。
 
->[!VIDEO](https://video.tv.adobe.com/v/330539/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330539?quality=12&learn=on)

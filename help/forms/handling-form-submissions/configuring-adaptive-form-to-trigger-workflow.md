@@ -14,7 +14,7 @@ role: Developer
 level: Beginner
 exl-id: 9f1dbd02-774a-4b84-90fa-02d4e468cbac
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 3%
@@ -41,8 +41,8 @@ ht-degree: 3%
 * 示例自适应表单放置在名为 [应用程序Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
 
 以下视频介绍如何配置自适应表单以触发AEM工作流
->[!VIDEO](https://video.tv.adobe.com/v/40258/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40258?quality=12&learn=on)
 
 以下视频展示了工作流有效负载以及crx存储库中的其他详细信息
 
->[!VIDEO](https://video.tv.adobe.com/v/40259/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40259?quality=12&learn=on)

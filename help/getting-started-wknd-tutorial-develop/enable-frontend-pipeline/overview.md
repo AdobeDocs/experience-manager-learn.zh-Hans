@@ -13,7 +13,7 @@ index: y
 recommendations: disable
 thumbnail: 53409343.jpg
 last-substantial-update: 2022-09-23T00:00:00Z
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 3%
@@ -39,7 +39,7 @@ ht-degree: 3%
 
 ## 前端管道的概述、优势和注意事项
 
->[!VIDEO](https://video.tv.adobe.com/v/3409343/)
+>[!VIDEO](https://video.tv.adobe.com/v/3409343?quality=12&learn=on)
 
 
 >[!NOTE]
@@ -52,7 +52,7 @@ ht-degree: 3%
 
 确保使用 [沙盒项目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) 和 [开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html) 完成本教程时。
 
-## 下面的步骤 {#next-steps}
+## 后续步骤 {#next-steps}
 
 分步教程将演示 [AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd) 转换，以便为前端管道启用它。
 

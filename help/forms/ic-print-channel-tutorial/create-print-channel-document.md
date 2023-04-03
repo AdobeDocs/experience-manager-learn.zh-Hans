@@ -1,10 +1,10 @@
 ---
 title: 为打印渠道创建交互式通信
-seo-title: 为打印渠道创建交互式通信
+seo-title: Create Interactive Communication For Print Channel
 description: 这是为打印渠道创建第一个交互式通信文档的多部分教程的6部分。 在本部分中，创建用于打印渠道的交互式通信文档。
-seo-description: 这是为打印渠道创建第一个交互式通信文档的多部分教程的6部分。 在本部分中，创建用于打印渠道的交互式通信文档。
+seo-description: This is part 6 of multipart tutorial for creating your first interactive communication document for the print channel. In this part, Interactive Communication Document for Print channel is created.
 uuid: 25318a2a-be9d-47d8-806b-d99c8e1c6a74
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,21 +13,21 @@ version: 6.4,6.5
 discoiquuid: 6e3f9c8c-8ec4-4084-bf35-1c97a5b463f1
 kt: 5972
 thumbnail: 37888.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: d4355f72-aefa-4ab3-ba7e-ebd7f7b536f0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 2%
+source-wordcount: '71'
+ht-degree: 0%
 
 ---
 
-
-# 为打印渠道创建交互式通信{#create-interactive-communication-for-print-channel}
+# 为打印渠道创建交互式通信 {#create-interactive-communication-for-print-channel}
 
 在本部分中，创建用于打印渠道的交互式通信文档。
 
 在定义和配置数据源和表单数据模型后，我们现在将为打印渠道创建交互式通信
 
->[!VIDEO](https://video.tv.adobe.com/v/37888/?quality=9)
+>[!VIDEO](https://video.tv.adobe.com/v/37888?quality=12&learn=on)

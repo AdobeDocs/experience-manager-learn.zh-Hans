@@ -9,9 +9,9 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 11077
-source-git-commit: aea43a705b3959f8be26238d32b816b3953e153e
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '72'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 提取表单附件并在电子邮件中以电源自动化工作流发送附件。
 以下视频介绍从提交的数据构建附件所需的步骤。
->[!VIDEO](https://video.tv.adobe.com/v/3409017/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409017?quality=12&learn=on)
 
 以下是解析JSON架构步骤中需要使用的附件对象架构
 

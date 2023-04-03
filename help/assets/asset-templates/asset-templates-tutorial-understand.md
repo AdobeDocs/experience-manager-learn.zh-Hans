@@ -6,7 +6,7 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: c418e94a-b18e-429a-b41c-2bf32e158598
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## 构建InDesign模板文件 {#constructing-the-indesign-template-file}
 
->[!VIDEO](https://video.tv.adobe.com/v/19293/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/19293?quality=12&learn=on)
 
 1. 下载并打开 [**InDesign文件模板**](assets/asset-templates-tutorial-video--supporting-files.zip)
 2. **打开“标记”面板，** 请查看标记命名约定，并注意InDesign文件中的可创作元素已标记。 请记住，只有标记的元素才可在AEM中编辑。
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 ## 在AEM Assets中创建和创作资产模板 {#creating-and-authoring-an-asset-template-in-aem-assets}
 
->[!VIDEO](https://video.tv.adobe.com/v/19294/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/19294?quality=12&learn=on)
 
 1. **开始InDesign Server** 在8080端口。
 2. 确保 **AEM创作实例配置为与您的InDesign Server交互**（反之亦然）。

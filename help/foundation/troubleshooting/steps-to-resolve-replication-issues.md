@@ -5,19 +5,19 @@ type: Troubleshooting
 role: Admin
 level: Beginner
 version: 6.5
-feature: 开发人员工具
-topic: 管理
+feature: Developer Tools
+topic: Administration
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: aa520806-3937-4100-b75a-78c2460c1b2f
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '38'
-ht-degree: 7%
+source-wordcount: '35'
+ht-degree: 0%
 
 ---
-
 
 # 解决AEM中复制问题的步骤
 
 *此视频将介绍如何解决AEM中的复制问题。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335471?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335471?quality=12&learn=on)

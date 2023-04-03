@@ -11,10 +11,10 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: 569069e8-7964-49f1-96ed-7dfa4f8ed96c
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 8%
+ht-degree: 6%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 8%
 
 了解如何设置和使用社交媒体共享组件。
 
->[!VIDEO](https://video.tv.adobe.com/v/18897/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18897?quality=12&learn=on)
 
 本视频探讨了社交媒体共享组件( [AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)) [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) 示例网站。
 

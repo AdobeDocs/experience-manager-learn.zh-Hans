@@ -10,7 +10,7 @@ kt: 11649
 thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: 5f0464d7bb8ffde9a9b3bd7fd67dc0e341970a6f
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1399'
 ht-degree: 1%
@@ -49,7 +49,7 @@ ht-degree: 1%
 
 此视频回顾了使用OpenAI或DALL.E 2扩展生成图像的示例，其工作方式以及开发方式。 视频具有章节标记，例如 __功能演示、设置和技术代码__ 来快速观看相关内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3413093/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413093?quality=12&learn=on)
 
 
 ## App Builder扩展应用程序

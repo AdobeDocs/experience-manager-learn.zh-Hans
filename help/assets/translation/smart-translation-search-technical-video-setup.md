@@ -7,7 +7,7 @@ topic: Content Management
 role: Developer
 level: Beginner
 exl-id: 7be8c3d5-b944-4421-97b3-bd5766c1b1b5
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 智能翻译搜索允许使用非英语搜索词解析为英文内容。 要设置AEM以进行智能翻译搜索，必须安装和配置Apache Oak Search Machine Translation OSGi包，以及包含翻译规则的相关免费开源Apache Joshua语言包。
 
->[!VIDEO](https://video.tv.adobe.com/v/21291/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21291?quality=12&learn=on)
 
 >[!NOTE]
 >

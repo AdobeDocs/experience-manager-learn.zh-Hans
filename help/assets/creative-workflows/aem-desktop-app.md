@@ -10,7 +10,7 @@ kt: 2551
 thumbnail: 28868.jpeg
 last-substantial-update: 2022-06-24T00:00:00Z
 exl-id: 6765758f-0719-4ed9-83be-8ed192a75b41
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 4%
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 使用AEM桌面应用程序可简化对桌面上AEM中管理的任何资产（适用于任何应用程序和文件格式）的访问。
 
->[!VIDEO](https://video.tv.adobe.com/v/28868/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28868?quality=12&learn=on)
 
 + 通过使用专用桌面应用程序浏览和搜索，在AEM中发现资产
 + 优化的带宽管理允许上传和下载许多大型资产

@@ -6,18 +6,18 @@ role: Admin
 level: Intermediate
 version: 6.5
 feature: Workbench
-topic: 管理
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 7715bf31-9f7c-4ff9-828f-a1b16e35fda7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 5%
+source-wordcount: '34'
+ht-degree: 0%
 
 ---
-
 
 # 如何为Workbench启用调试输出
 
 *此视频将逐步介绍为Workbench启用调试输出的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335497?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335497?quality=12&learn=on)

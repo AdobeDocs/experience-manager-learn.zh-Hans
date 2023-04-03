@@ -9,7 +9,7 @@ level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 thumbnail: 21297.jpg
 exl-id: 4f35e3f7-ae29-4f93-bba9-48c60b800238
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 智能翻译搜索支持跨AEM内容（包括资产和页面）自动进行跨语言搜索和发现，支持超过50种语言，并减少了手动内容翻译的需求。
 
->[!VIDEO](https://video.tv.adobe.com/v/21297/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21297?quality=12&learn=on)
 
 AEM智能翻译搜索允许用户使用非英语术语在AEM中搜索内容，以匹配AEM中具有相同英文术语的资产。
 

@@ -1,6 +1,6 @@
 ---
 title: 导航Cloud Acceleration Manager
-description: 探索Cloud Acceleration Manager的导航体验，以便将Experience Manager作为Cloud Service。
+description: 探索Cloud Acceleration Manager的导航体验，以了解Experience Manageras a Cloud Service。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -8,16 +8,16 @@ role: Architect, Developer
 level: Intermediate
 kt: 8667
 thumbnail: 336698.jpeg
-source-git-commit: 4c9d836881ad7cccd31c55fa5eddc24dff1200cd
+exl-id: 1a12d267-f9d0-48e1-9263-c53c038e4754
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 0%
 
 ---
 
-
 # 导航Cloud Acceleration Manager
 
-探索Cloud Acceleration Manager的导航体验，以便将Experience Manager作为Cloud Service。
+探索Cloud Acceleration Manager的导航体验，以了解Experience Manageras a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336698/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336698?quality=12&learn=on)

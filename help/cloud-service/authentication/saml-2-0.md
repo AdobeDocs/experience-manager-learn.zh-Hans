@@ -10,7 +10,7 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: 5522a22cc3ac12ce54297ee9f30570c29cfd5ce7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '2961'
 ht-degree: 1%
@@ -55,7 +55,7 @@ AEM发布SAML集成的典型流程如下：
 
 ## 配置演练
 
->[!VIDEO](https://video.tv.adobe.com/v/343040/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
 
 此视频将演示如何设置与AEMas a Cloud Service发布服务的SAML 2.0集成，以及如何使用Okta作为IDP。
 

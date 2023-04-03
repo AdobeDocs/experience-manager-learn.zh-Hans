@@ -7,7 +7,7 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 17%
@@ -18,7 +18,7 @@ ht-degree: 17%
 
 在此视频中，我们将探索Dynamic Media色彩管理，以及如何使用它在中为AEM Assets提供颜色校正预览功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -103,12 +103,12 @@ ht-degree: 17%
 | JapanColorUncoated | CMYK | 日本颜色2001无涂层 |
 | JapanColorWebCoated | CMYK | 日本Color 2003 Web Coated |
 | JapanWebCoated | CMYK | Japan Web Coated（广告） |
-| 新闻纸SNAP2007 | CMYK | 美国新闻纸（2007年快照） |
+| NewsprintSNAP2007 | CMYK | 美国新闻纸（2007年快照） |
 | NTSC | RGB | NTSC（1953年） |
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhotoRGB |
 | PS4Default | CMYK | Photoshop 4默认CMYK |
-| PS5默认 | CMYK | Photoshop 5默认CMYK |
+| PS5Default | CMYK | Photoshop 5默认CMYK |
 | SheetfedCoated | CMYK | 美国钣金涂层v2 |
 | SheetfedUncoated | CMYK | 美国平板纸未涂层v2 |
 | SMPTE | RGB | SMPTE-C |

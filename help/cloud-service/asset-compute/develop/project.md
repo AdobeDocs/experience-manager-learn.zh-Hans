@@ -8,7 +8,7 @@ feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: 839152aa67ba7ab2929f2c8093bfdc873761a645
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 2%
@@ -21,7 +21,7 @@ asset compute项目是使用Adobe I/OCLI生成的Node.js项目，符合允许将
 
 ## 生成项目
 
->[!VIDEO](https://video.tv.adobe.com/v/40197/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40197?quality=12&learn=on)
 
 _点进以生成Asset compute项目（无音频）_
 

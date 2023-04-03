@@ -1,5 +1,5 @@
 ---
-title: AEM无头的高级概念 — GraphQL
+title: AEM Headless的高级概念 — GraphQL
 description: 一个端到端教程，其中演示了Adobe Experience Manager(AEM)GraphQL API的高级概念。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
@@ -7,16 +7,16 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: ee6f65fba8db5ae30cc14aacdefbeba39803527b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1076'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 # AEM Headless的高级概念
 
-本端到端教程将继续 [基本教程](../multi-step/overview.md) 涵盖Adobe Experience Manager(AEM)无头和GraphQL的基础知识。 该高级教程深入说明了如何使用内容片段模型、内容片段和AEM GraphQL持久查询，包括在客户端应用程序中使用GraphQL持久查询。
+本端到端教程将继续 [基本教程](../multi-step/overview.md) 涵盖Adobe Experience Manager(AEM)Headless和GraphQL的基本面。 该高级教程深入说明了如何使用内容片段模型、内容片段和AEM GraphQL持久查询，包括在客户端应用程序中使用GraphQL持久查询。
 
 ## 前提条件
 
@@ -36,19 +36,19 @@ ht-degree: 1%
 
 * 使用验证规则和更高级的数据类型（如选项卡占位符、嵌套片段引用、JSON对象以及日期和时间数据类型）创建内容片段模型。
 * 使用嵌套内容和片段引用时创作内容片段，并为内容片段创作管理配置文件夹策略。
-* 使用带有变量和指令的GraphQL查询来浏览AEM GraphQL API功能。
-* 在AEM中使用参数保留GraphQL查询，并了解如何对保留的查询使用缓存控制参数。
+* 探索使用带有变量和指令的GraphQL查询的AEM GraphQL API功能。
+* 在AEM中使用参数保留GraphQL查询，并了解如何对持久查询使用缓存控制参数。
 * 使用AEM Headless JavaScript SDK将持久查询请求集成到示例WKND GraphQL React应用程序中。
 
 ## AEM Headless的高级概念概述
 
 以下视频简要介绍本教程中涵盖的概念。 本教程包括使用更高级的数据类型定义内容片段模型、嵌套内容片段，以及在AEM中保留GraphQL查询。
 
->[!VIDEO](https://video.tv.adobe.com/v/340035/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340035?quality=12&learn=on)
 
 >[!CAUTION]
 >
->此视频(2:25)提及有关通过包管理器安装GraphQL查询编辑器以浏览GraphQL查询的信息。 但是，在较新版本的AEM中，作为内置Cloud Service **GraphiQL资源管理器** 因此，不需要安装软件包。 请参阅 [使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 以了解更多信息。
+>此视频(2:25)提到了有关通过包管理器安装GraphiQL查询编辑器以浏览GraphQL查询的信息。 但是，在较新版本的AEM中，作为内置Cloud Service **GraphiQL资源管理器** 因此，不需要安装软件包。 请参阅 [使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 以了解更多信息。
 
 
 ## 项目设置
@@ -58,7 +58,7 @@ WKND Site项目具有所有必需的配置，因此您可以在完成 [快速设
 
 ### 查看现有配置
 
-在AEM中启动任何新项目的第一步是创建其配置（作为工作区）和创建GraphQL API端点。 要查看或创建配置，请导航到 **工具** > **常规** > **配置浏览器**.
+在AEM中启动任何新项目的第一步是创建其配置作为工作区和创建GraphQL API端点。 要查看或创建配置，请导航到 **工具** > **常规** > **配置浏览器**.
 
 ![导航到配置浏览器](assets/overview/create-configuration.png)
 
@@ -68,7 +68,7 @@ WKND Site项目具有所有必需的配置，因此您可以在完成 [快速设
 
 ### 查看GraphQL API端点
 
-接下来，必须配置API端点才能将GraphQL查询发送到。 要查看现有端点或创建一个端点，请导航到 **工具** > **常规** > **GraphQL**.
+接下来，您必须配置API端点，才能将GraphQL查询发送到。 要查看现有端点或创建一个端点，请导航到 **工具** > **常规** > **GraphQL**.
 
 ![配置端点](assets/overview/endpoints.png)
 
@@ -115,19 +115,19 @@ WKND Site项目具有所有必需的配置，因此您可以在完成 [快速设
 在AEM中创建您自己的项目时，最佳做法如下：
 
 * 文件夹层次结构应考虑本地化和翻译。 换言之，语言文件夹应嵌套在配置文件夹中，以便轻松翻译这些配置文件夹中的内容。
-* 文件夹层次结构应保持平直和直观。 请避免稍后移动或重命名文件夹和片段，尤其是在发布以用于实时用途后，因为它会更改可能影响片段引用和GraphQL查询的路径。
+* 文件夹层次结构应保持平直和直观。 避免稍后移动或重命名文件夹和片段，尤其是在发布以用于实时用途之后，因为它会更改可能影响片段引用和GraphQL查询的路径。
 
 ## 入门和解决方案包
 
 两个AEM **软件包** 可用，并可通过 [包管理器](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#sample-content)
 
 * [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip) 将在教程的后面部分使用，并包含示例图像和文件夹。
-* [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) 包含第1-4章的已完成解决方案，其中包括新的内容片段模型、内容片段和持久化图形QL查询。 对于要直接跳入 [客户端应用程序集成](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md) 章节。
+* [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) 包含第1-4章的已完成解决方案，其中包括新的内容片段模型、内容片段和持久化GraphQL查询。 对于要直接跳入 [客户端应用程序集成](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md) 章节。
 
 
 的 [React应用程序 — 高级教程 — WKND冒险](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) 项目可供查看和浏览示例应用程序。 此示例应用程序通过调用保留的GraphQL查询从AEM中检索内容，并以沉浸式体验呈现该内容。
 
-## 入门
+## 入门指南
 
 要开始使用此高级教程，请执行以下步骤：
 

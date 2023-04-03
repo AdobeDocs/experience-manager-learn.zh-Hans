@@ -14,7 +14,7 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 构建需要以编程方式访问AEMas a Cloud Service的集成的开发人员需要一种简单、快速的方法来获取AEM的临时访问令牌，以便于进行本地开发活动。 为了满足这一需求，AEM开发人员控制台允许开发人员自行生成临时访问令牌，这些令牌可用于以编程方式访问AEM。
 
->[!VIDEO](https://video.tv.adobe.com/v/330477/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330477?quality=12&learn=on)
 
 ## 生成本地开发访问令牌
 
@@ -269,7 +269,7 @@ ht-degree: 0%
 
 ![WKND有限使用元数据更新](./assets/local-development-access-token/asset-metadata.png)
 
-## 下面的步骤
+## 后续步骤
 
 现在，我们已使用本地开发令牌以编程方式访问AEMas a Cloud Service。 接下来，我们需要更新应用程序以使用服务凭据来处理，以便此应用程序可以在生产环境中使用。
 

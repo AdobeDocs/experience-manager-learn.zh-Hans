@@ -1,5 +1,5 @@
 ---
-title: AEM as a Cloud Service 入门
+title: AEM as a Cloud Service 入门培训
 description: 了解AEMas a Cloud Service入门，从合同阶段一直到使用Cloud Manager设置环境。
 version: Cloud Service
 feature: Onboarding
@@ -9,18 +9,18 @@ level: Experienced
 kt: 8631
 thumbnail: 336959.jpeg
 exl-id: 9d2004e5-e928-4190-8298-695635c8e92c
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '326'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
-# AEM as a Cloud Service 入门
+# AEM as a Cloud Service 入门培训
 
 了解从合同阶段开始，通过使用Cloud Manager设置环境，从头到尾AEMas a Cloud Service入门。
 
->[!VIDEO](https://video.tv.adobe.com/v/336959/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336959?quality=12&learn=on)
 
 ## Cloud Manager和Admin Console
 

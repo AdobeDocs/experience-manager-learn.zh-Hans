@@ -1,6 +1,6 @@
 ---
 title: 将富文本与AEM Headless结合使用
-description: 了解如何使用包含Adobe Experience Manager内容片段的多行富文本编辑器来创作内容和嵌入引用内容，以及如何将富文本由AEM GraphQL API作为JSON交付，以供无标题应用程序使用。
+description: 了解如何使用包含Adobe Experience Manager内容片段的多行富文本编辑器来创作内容和嵌入引用内容，以及AEM GraphQL API如何将富文本作为JSON交付，以供无标题应用程序使用。
 version: Cloud Service
 doc-type: article
 kt: 9985
@@ -8,7 +8,7 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1464'
 ht-degree: 0%
@@ -23,7 +23,7 @@ AEM GraphQL API提供了一项强大的功能，可将富文本作为HTML、纯�
 
 ## 多行编辑器
 
->[!VIDEO](https://video.tv.adobe.com/v/342104/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342104?quality=12&learn=on)
 
 在内容片段编辑器中，多行文本字段的菜单栏为作者提供了标准富文本格式功能，例如 **粗体**, *斜体*、和下划线。 以全屏模式打开多行字段时，可启用 [其他格式工具，如段落类型、查找和替换、拼写检查等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
@@ -85,7 +85,7 @@ query ($path: String!) {
 
 的 `$path` 变量 `_path` 过滤器需要内容片段的完整路径(例如， `/content/dam/wknd/en/magazine/sample-article`)。
 
-**GraphQL响应：**
+**GraphQL回应：**
 
 ```json
 {
@@ -147,7 +147,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL响应：**
+**GraphQL回应：**
 
 ```json
 {
@@ -184,7 +184,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL响应：**
+**GraphQL回应：**
 
 ```json
 {
@@ -221,7 +221,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL响应：**
+**GraphQL回应：**
 
 ```json
 {
@@ -351,9 +351,9 @@ const nodeMap = {
 
 上面的屏幕截图描述了另一个内容片段，即LA Skate Parks的Ultimate指南，该指南将插入到多行字段中。 可插入字段的内容片段类型由 **允许的内容片段模型** 配置 [多行数据类型](#multi-line-data-type) 在内容片段模型中。
 
-## 使用GraphQL查询内嵌引用
+## 使用GraphQL查询行内引用
 
-GraphQL API允许开发人员创建一个查询，该查询包含有关插入多行字段中的任何引用的其他属性。 JSON响应包含一个单独的 `_references` 列出这些额外属性的对象。 JSON响应使开发人员完全可以控制如何渲染引用或链接，而不必处理有意见的HTML。
+GraphQL API允许开发人员创建查询，该查询包含有关插入多行字段中的任何引用的其他属性。 JSON响应包含一个单独的 `_references` 列出这些额外属性的对象。 JSON响应使开发人员完全可以控制如何渲染引用或链接，而不必处理有意见的HTML。
 
 例如，您可能希望：
 
@@ -536,11 +536,11 @@ const renderReference = {
 
 ## 端到端示例
 
->[!VIDEO](https://video.tv.adobe.com/v/342105/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342105?quality=12&learn=on)
 
 以上视频演示了一个端到端示例：
 
 1. 更新内容片段模型的多行文本字段以允许片段引用
 1. 使用内容片段编辑器在多行文本字段中包含图像和对其他片段的引用。
-1. 创建GraphQL查询，该查询包含JSON形式的多行文本响应以及任何 `_references` 已使用。
+1. 创建GraphQL查询，该查询将多行文本响应包含为JSON以及任何 `_references` 已使用。
 1. 编写可呈现富文本响应的内嵌引用的React SPA。

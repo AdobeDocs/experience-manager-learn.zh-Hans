@@ -10,7 +10,7 @@ kt: 645
 thumbnail: 17019.jpg
 last-substantial-update: 2022-06-09T00:00:00Z
 exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 3%
@@ -21,14 +21,14 @@ ht-degree: 3%
 
 AEM Assets的图像智能标记通过自动向图像资产添加派生的元数据标记来增强AEM Assets的搜索功能，从而通过更轻松、更快速地查找正确的图像来改善创作体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/17019/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17019?quality=12&learn=on)
 
 ## 为AEM 6.x设置{#set-up}
 
 >[!NOTE]
 > 图像的智能标记会针对AEMas a Cloud Service自动进行配置。
 
->[!VIDEO](https://video.tv.adobe.com/v/17023/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17023?quality=12&learn=on)
 
 在使用智能内容服务之前，请确保满足以下条件以在Adobe I/O上创建集成：
 

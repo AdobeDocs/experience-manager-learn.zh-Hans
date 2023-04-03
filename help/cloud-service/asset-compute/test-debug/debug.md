@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 0%
@@ -46,7 +46,7 @@ asset compute工作程序可以通过多种方式进行调试，从简单的调�
 
 的 [wsdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模块，支持将调试器附加到Asset compute工作程序，包括能够在VS代码中设置断点并逐步完成代码。
 
->[!VIDEO](https://video.tv.adobe.com/v/40383/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40383?quality=12&learn=on)
 
 _使用wskdebug调试Asset compute工作程序的点进（无音频）_
 

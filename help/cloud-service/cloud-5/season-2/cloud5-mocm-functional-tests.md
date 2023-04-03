@@ -7,10 +7,10 @@ level: Intermediate
 thumbnail: 343624.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 AEM as a Cloud Service会默认完成许多功能测试，您的应用程序在顶部构建。 但是，这些测试可能并不涵盖您可能需要的所有必需测试。 定制功能测试大有帮助。
 
->[!VIDEO](https://video.tv.adobe.com/v/343624)
+>[!VIDEO](https://video.tv.adobe.com/v/343624?quality=12&learn=on)
 
 ## 此视频中涵盖的内容
 

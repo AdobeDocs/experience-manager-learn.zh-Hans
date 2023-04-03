@@ -4,10 +4,10 @@ description: Adobe Experience Manager(AEM)as a Cloud Service的教程集合
 sub-product: Experience Manager as a Cloud Service
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: 757749305a017d682322b2c2e024c2fbb3604fc2
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '267'
-ht-degree: 12%
+ht-degree: 11%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 12%
 
 Adobe Experience Manager (AEM) 现已作为云服务提供。AEM as a Cloud Service引入了新一代Experience Manager产品线，以过去的投资和创新为基础，保留和扩展所有用例和功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
 <div id="whats-new-section">
 
@@ -25,9 +25,9 @@ Adobe Experience Manager (AEM) 现已作为云服务提供。AEM as a Cloud Serv
 
    *了解如何使用基于令牌的身份验证通过HTTP与AEMas a Cloud Service进行交互*
 
-* **[无头图形QL（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+* **[无头GraphQL（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *了解如何使用AEM GraphQL API为外部应用程序中的体验提供动力。*
+   *了解如何使用AEM GraphQL API为外部应用程序中的体验提供支持。*
 
 * **[批量导入（视频）](./migration/bulk-import.md)**
 

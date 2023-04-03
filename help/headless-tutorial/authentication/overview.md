@@ -13,7 +13,7 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: 8fc36698f06fea0eaaf818867c7e713453e0452d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '641'
 ht-degree: 0%
@@ -26,7 +26,7 @@ AEM公开了各种可以无头方式进行交互的HTTP端点，从GraphQL、AEM
 
 在本教程中，您将详细了解外部应用程序如何使用访问令牌通过HTTP以编程方式对AEMas a Cloud Service进行身份验证并与之进行交互。
 
->[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
 
 ## 先决条件
 

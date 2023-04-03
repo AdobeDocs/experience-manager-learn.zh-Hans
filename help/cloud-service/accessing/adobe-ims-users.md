@@ -9,7 +9,7 @@ level: Beginner
 kt: 4997
 thumbnail: 39149.jpg
 exl-id: d35a7892-d707-4a5c-9e97-ec3abba0f30c
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 73%
@@ -27,7 +27,7 @@ ht-degree: 73%
 
 需要访问AEM创作服务的用户将作为 [Adobe IMS用户](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html) in [AdobeAdmin Console](https://adminconsole.adobe.com). 了解 Adobe IMS 用户的身份，以及如何在 Admin Console 中访问和管理他们。
 
->[!VIDEO](https://video.tv.adobe.com/v/39149/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39149?quality=12&learn=on)
 
 ## 其他资源
 

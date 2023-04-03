@@ -6,19 +6,18 @@ role: Admin
 level: Beginner
 version: 6.5
 feature: Designer
-topic: 管理
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 83e09f3f-1058-44d7-b068-a84eeb671e37
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 5%
+source-wordcount: '34'
+ht-degree: 0%
 
 ---
-
 
 # 如何安装Designer补丁
 
 *此视频将演示安装Designer补丁的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335504?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/335504?quality=12&learn=on)

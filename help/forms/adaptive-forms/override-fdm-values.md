@@ -10,7 +10,7 @@ level: Intermediate
 kt: 10537
 exl-id: 570de1e6-7221-4b8d-b226-a43317bfc166
 last-substantial-update: 2019-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
@@ -31,4 +31,4 @@ AEM Forms 6.5.13引入了覆盖表单数据模型属性的功能，以便轻松�
 
 >[!NOTE]
 >此视频中演示的功能需要AEM Forms 6.5.13
->[!VIDEO](https://video.tv.adobe.com/v/343762?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343762?quality=12&learn=on)

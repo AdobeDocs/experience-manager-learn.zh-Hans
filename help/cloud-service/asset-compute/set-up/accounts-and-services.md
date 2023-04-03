@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
 > 
 > 请查看下面有关如何设置和提供所需服务的章节。
 
-## AEMas a Cloud Service{#aem-as-a-cloud-service}
+## AEM as a Cloud Service{#aem-as-a-cloud-service}
 
 要配置AEM Assets处理配置文件以调用自定义Asset compute工作程序，需要访问AEMas a Cloud Service环境。
 
@@ -69,7 +69,7 @@ ht-degree: 1%
 
 但是，本教程将使用Azure Blob Storage [Amazon S3](#amazon-s3) 只能与本教程的次要变体一起使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/40377/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40377?quality=12&learn=on)
 
 _点进配置Azure Blob Storage（无音频）_
 

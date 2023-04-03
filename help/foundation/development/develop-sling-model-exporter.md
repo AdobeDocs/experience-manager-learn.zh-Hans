@@ -12,7 +12,7 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: fc321ed1-5cf7-4bbe-adc6-c4905af7b43c
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
@@ -29,25 +29,25 @@ Apache Sling提供了Jackson JSON导出程序，以涵盖将Sling模型导出为
 
 ## 为Sling模型导出程序配置AEM
 
->[!VIDEO](https://video.tv.adobe.com/v/16862/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16862?quality=12&learn=on)
 
 [!DNL Sling Model Exporter] 是 [!DNL Apache Sling] 项目，且未直接绑定到AEM产品发布周期。 [!DNL Sling Model Exporter] 与AEM 6.3及更高版本兼容。
 
 ## 的用例 [!DNL Sling Model Exporter]
 
->[!VIDEO](https://video.tv.adobe.com/v/16863/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16863?quality=12&learn=on)
 
 [!DNL Sling Model Exporter] 非常适合利用已包含业务逻辑的Sling模型，该业务逻辑通过HTL（或以前的JSP）支持HTML呈现，并显示与JSON相同的业务表示形式，以供编程Web服务或JavaScript应用程序使用。
 
 ## 创建Sling模型导出器
 
->[!VIDEO](https://video.tv.adobe.com/v/16864/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16864?quality=12&learn=on)
 
 启用 [!DNL Exporter] 在 [!DNL Sling Model] 就像添加 `@Exporter` Java类的注释。
 
 ## 应用Sling模型导出器选项
 
->[!VIDEO](https://video.tv.adobe.com/v/16865/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16865?quality=12&learn=on)
 
 [!DNL Sling Model Exporter] 支持将按模型导出器选项传递到导出器实施，以驱动 [!DNL Sling Model] 最终导出。 这些选项通常“全局”应用于 [!DNL Sling Model] 与通过下面描述的内联批注完成的每个数据点相比，将被导出。
 
@@ -58,7 +58,7 @@ Apache Sling提供了Jackson JSON导出程序，以涵盖将Sling模型导出为
 
 ## 应用 [!DNL Jackson] 批注
 
->[!VIDEO](https://video.tv.adobe.com/v/16866/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16866?quality=12&learn=on)
 
 导出程序实施还可能支持可在 [!DNL Sling Model] 类，可提供更精细的数据导出控制级别。
 

@@ -8,7 +8,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 6bcc5978-dac8-4112-8e50-de1722b1c289
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
@@ -19,4 +19,4 @@ ht-degree: 0%
 
 使用Adobe资产链接面板，您可以访问AEM Assets中资产的文件详细信息，例如缩略图、基本元数据和版本。 了解如何创建、预览和比较文件版本。
 
->[!VIDEO](https://video.tv.adobe.com/v/34048/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/34048?quality=12&learn=on)

@@ -11,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 本地开发考虑事项
 
->[!VIDEO](https://video.tv.adobe.com/v/3409421/)
+>[!VIDEO](https://video.tv.adobe.com/v/3409421?quality=12&learn=on)
 
 
 ## 调整后的发展方法

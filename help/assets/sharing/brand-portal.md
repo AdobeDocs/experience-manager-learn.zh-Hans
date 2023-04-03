@@ -8,7 +8,7 @@ role: User
 level: Beginner
 last-substantial-update: 2022-06-15T00:00:00Z
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 2%
@@ -27,7 +27,7 @@ Brand Portal于2019年9月推出了资产源，其中最引人注目的一项功
 
 Brand Portal的资产源用于从第三方代理和团队收集资产，并将它们无缝地同步回Experience Manager作者，以供审阅和使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/29365/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29365?quality=12&learn=on)
 
 *Experience Manager作者6.5 SP2(6.5.2)或更高版本才能使用资产源*
 
@@ -35,7 +35,7 @@ Brand Portal的资产源用于从第三方代理和团队收集资产，并将�
 
 ## Brand Portal 2019年2月版功能和增强功能{#brand-portal-features-and-enhancements-644}
 
->[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
 
 Brand Portal 2019年2月版重点关注对文本搜索和主要客户请求的增强。
 
@@ -116,7 +116,7 @@ Dynamic Media视频编码可从以下位置下载：
 
 ## Brand Portal 2018年12月版功能和增强功能{#brand-portal-features-and-enhancements-642}
 
->[!VIDEO](https://video.tv.adobe.com/v/23707/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23707?quality=12&learn=on)
 
 ### 来宾访问
 
@@ -163,7 +163,7 @@ Brand Portal使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legac
 
 新增功能增强了旨在将Brand Portal与AEM相协调的功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
 
 ### 导航改进
 
@@ -203,8 +203,8 @@ Brand Portal使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legac
 
 ## 其他资源{#additional-resources}
 
-* [Brand Portal的新增功能](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html)
-* [AEM创作复制代理](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
+* [Brand Portal的新增功能](https://helpx.adobe.com/cn/experience-manager/brand-portal/using/whats-new.html)
+* [AEM创作复制代理](https://helpx.adobe.com/cn/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [加速下载指南](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM Assets Brand PortalAdobe文档](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
 * [AEM Assets Dynamic MediaAdobe文档](https://experienceleague.adobe.com/docs/)

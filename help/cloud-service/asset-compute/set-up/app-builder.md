@@ -1,6 +1,6 @@
 ---
 title: 设置App Builder以实现Asset compute可扩展性
-description: asset compute项目是特别定义的应用程序生成器项目，因此，需要访问Adobe开发人员控制台中的应用程序生成器，才能设置和部署这些项目。
+description: asset compute项目是特别定义的应用程序生成器项目，因此，需要访问Adobe Developer控制台中的应用程序生成器，才能设置和部署这些项目。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 2b1d8786-592e-41f2-80cc-bc0b1c7e1b49
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '539'
 ht-degree: 0%
@@ -22,15 +22,15 @@ ht-degree: 0%
 
 # 设置应用程序生成器
 
-asset compute项目是特别定义的应用程序生成器项目，因此，需要访问Adobe开发人员控制台中的应用程序生成器，才能设置和部署这些项目。
+asset compute项目是特别定义的应用程序生成器项目，因此，需要访问Adobe Developer控制台中的应用程序生成器，才能设置和部署这些项目。
 
-## 在Adobe开发人员控制台中创建和设置应用程序生成器{#set-up}
+## 在Adobe Developer控制台中创建和设置应用程序生成器{#set-up}
 
->[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40183?quality=12&learn=on)
 
 _设置应用程序生成器的点进（无音频）_
 
-1. 登录到 [Adobe开发人员控制台](https://console.adobe.io) 使用与已配置的 [帐户和服务](./accounts-and-services.md). 确保您是 __系统管理员__ 或 __开发人员角色__ 的Adobe组织。
+1. 登录到 [Adobe Developer控制台](https://console.adobe.io) 使用与已配置的 [帐户和服务](./accounts-and-services.md). 确保您是 __系统管理员__ 或 __开发人员角色__ 的Adobe组织。
 1. 通过点按 __通过模板>应用程序生成器创建新项目>项目__
 
    _如果__&#x200B;创建新项目&#x200B;__按钮或__&#x200B;应用程序生成器&#x200B;__类型不可用，这表示您的Adobe组织不可用 [已配置App Builder](#request-adobe-project-app-builder)._
@@ -63,7 +63,7 @@ _设置应用程序生成器的点进（无音频）_
 
 本地Adobe I/O使用此项目的凭据 [asset compute开发工具](../develop/development-tool.md) 与Adobe I/O Runtime进行交互，并且需要纳入Asset compute项目。 熟悉服务帐户(JWT)凭据。
 
-![Adobe开发人员服务帐户凭据](./assets/app-builder/service-account.png)
+![Adobe Developer服务帐户凭据](./assets/app-builder/service-account.png)
 
 1. 从Adobe I/O项目应用程序生成器项目中，确保 `Development` 工作区被选中
 1. 点按 __服务帐户(JWT)__ 在 __凭据__

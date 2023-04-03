@@ -6,7 +6,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 45daa8e3-ce3b-43de-b3d6-276107215dd4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 AEM 6.4目录增强功能提供了使用AEM资产模板和InDesign Server创建目录页面的功能。  用户可以使用InDesign模板创建目录页面，并将产品属性映射到可编辑的字段，以后可使用这些字段为不同产品创建类似页面。
 
->[!VIDEO](https://video.tv.adobe.com/v/22540/)
+>[!VIDEO](https://video.tv.adobe.com/v/22540?quality=12&learn=on)
 
 >[!NOTE]
 >
