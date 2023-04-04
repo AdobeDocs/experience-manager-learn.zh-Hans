@@ -10,10 +10,10 @@ kt: 9165
 thumbnail: 337960.jpeg
 last-substantial-update: 2022-10-03T00:00:00Z
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 5%
+source-wordcount: '263'
+ht-degree: 4%
 
 ---
 
@@ -21,33 +21,15 @@ ht-degree: 5%
 
 了解如何通过为AEM Sites创建站点地图来帮助提升SEO。
 
+>[!WARNING]
+>
+>此视频演示了如何在站点地图中使用相对URL。 站点地图 [应使用绝对URL](https://sitemaps.org/protocol.html). 请参阅 [配置](#absolute-sitemap-urls) 了解如何启用绝对URL，因为以下视频中未介绍此问题。
+
 >[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
-
-## 资源
-
-+ [AEM Sitemap文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
-+ [Apache Sling Sitemap文档](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
-+ [Sitemap.org Sitemap文档](https://www.sitemaps.org/protocol.html)
-+ [Sitemap.org Sitemap索引文件文档](https://www.sitemaps.org/protocol.html#index)
-+ [Cronmaker](http://www.cronmaker.com/)
 
 ## 配置
 
-### Sitemap调度程序OSGi配置
-
-定义 [OSGi工厂配置](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) (使用 [cron表达式](http://www.cronmaker.com))站点地图会在AEM中重新生成和缓存。
-
-`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
-
-```json
-{
-  "scheduler.name": "WKND Sitemaps",
-  "scheduler.expression": "0 0 2 1/1 * ? *",
-  "searchPath": "/content/wknd"
-}
-```
-
-### 绝对站点地图URL
+### 绝对站点地图URL{#absolute-sitemap-urls}
 
 AEM Sitemap通过使用 [Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). 这是通过在AEM服务上创建映射节点以生成站点地图（通常为AEM发布服务）来完成的。
 
@@ -63,6 +45,20 @@ AEM Sitemap通过使用 [Sling映射](https://sling.apache.org/documentation/the
 
 ![Sitemap绝对URL配置](../assets/sitemaps/sitemaps-absolute-urls.jpg)
 
+
+### Sitemap调度程序OSGi配置
+
+定义 [OSGi工厂配置](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) (使用 [cron表达式](http://www.cronmaker.com))站点地图会在AEM中重新生成和缓存。
+
+`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
+
+```json
+{
+  "scheduler.name": "WKND Sitemaps",
+  "scheduler.expression": "0 0 2 1/1 * ? *",
+  "searchPath": "/content/wknd"
+}
+```
 
 ### 调度程序允许过滤器规则
 
@@ -88,3 +84,11 @@ AEM Sitemap通过使用 [Sling映射](https://sling.apache.org/documentation/the
 RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg|.xml)$
 RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 ```
+
+## 资源
+
++ [AEM Sitemap文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
++ [Apache Sling Sitemap文档](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
++ [Sitemap.org Sitemap文档](https://www.sitemaps.org/protocol.html)
++ [Sitemap.org Sitemap索引文件文档](https://www.sitemaps.org/protocol.html#index)
++ [Cronmaker](http://www.cronmaker.com/)

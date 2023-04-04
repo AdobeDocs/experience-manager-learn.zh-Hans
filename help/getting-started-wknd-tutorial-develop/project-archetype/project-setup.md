@@ -12,9 +12,9 @@ kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1839'
 ht-degree: 4%
 
 ---
@@ -87,6 +87,8 @@ ht-degree: 4%
    >[!NOTE]
    >
    > 定位AEM 6.5.14+替换 `aemVersion="cloud"` with `aemVersion="6.5.14"`.
+   >
+   > 此外，请始终使用最新的 `archetypeVersion` 指 [AEM项目原型>使用情况](https://github.com/adobe/aem-project-archetype#usage)
 
    用于配置项目的可用属性的完整列表 [可在此处找到](https://github.com/adobe/aem-project-archetype#available-properties).
 

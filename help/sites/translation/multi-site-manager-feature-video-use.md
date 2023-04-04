@@ -15,16 +15,16 @@ topic: Localization
 role: User
 level: Beginner
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 12%
+source-wordcount: '148'
+ht-degree: 17%
 
 ---
 
 # 使用多站点管理器 {#using-multi-site-manager-with-aem-sites}
 
-[!UICONTROL Live Copy概述] 和 [!UICONTROL Blueprint配置管理器] 是用于使用Adobe Experience Manager Sites的多站点管理器功能的AEM创作界面。
+Live Copy概述和Blueprint配置管理器是AEM创作界面，用于处理 [多站点管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html) 在Adobe Experience Manager Sites。
 
 ## Live Copy 概述 {#live-copy-overview}
 

@@ -7,9 +7,9 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
@@ -117,9 +117,8 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## 辅助材料 {#supporting-materials}
 
-* [AEM OSGi跨源资源共享策略配置工厂](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [吉夫斯为macOS](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)
-* [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) (与Windows/macOS/Linux兼容)
+* [Python SimpleHTTPServer](https://docs.python.o:qrg/2/library/simplehttpserver.html) (与Windows/macOS/Linux兼容)
 
 * [了解AEM中的跨域资源共享(CORS)](./understand-cross-origin-resource-sharing.md)
 * [跨源资源共享(W3C)](https://www.w3.org/TR/cors/)

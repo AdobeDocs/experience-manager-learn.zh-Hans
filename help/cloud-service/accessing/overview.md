@@ -10,10 +10,10 @@ kt: 5882
 thumbnail: KT-5882.jpg
 last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 27%
+source-wordcount: '626'
+ht-degree: 26%
 
 ---
 
@@ -33,6 +33,11 @@ AEMas a Cloud Service是利用AEM应用程序的云原生方式，因此，会�
 ## Adobe IMS用户
 
 需要访问AEM创作服务的用户将作为 [Adobe IMS用户](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html) in [Adobe的AdminConsole](https://adminconsole.adobe.com). 了解 Adobe IMS 用户的身份，以及如何在 Admin Console 中访问和管理他们。
+
+>[!NOTE]
+>
+>从AEM Console中删除IMS用户后，该用户不会自动从IMS中删除，但是，当AEM会话（令牌）过期后，他们将无法登录到IMS。
+
 
 [了解Adobe IMS用户](./adobe-ims-users.md)
 
