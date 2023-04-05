@@ -8,9 +8,9 @@ role: Developer
 level: Beginner, Intermediate
 thumbnail: 34338.jpeg
 exl-id: beac60c6-11ae-4d0c-a055-cd3d05aeb126
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 45e7c58efd1d89537752fe7f890c0e80f7be7d67
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,13 @@ AEM SDK的本地快速启动允许从IDE进行远程Java调试，从而允许您
 要将远程调试器连接到AEM，必须使用特定参数(`-agentlib:...`)允许IDE连接到它。
 
 ```
-$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar aem-author-p4502.jar   
+$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar aem-author-p4502.jar   
 ```
 
++ AEM SDK仅支持Java 11
 + `address` 指定AEM侦听远程调试连接的端口，并可更改为本地开发计算机上的任何可用端口。
 + 最后一个参数(例如 `aem-author-p4502.jar`)是AEM SKD快速入门Jar。 这可以是AEM创作服务(`aem-author-p4502.jar`)或AEM发布服务(`aem-publish-p4503.jar`)。
+
 
 ## IDE设置说明
 
