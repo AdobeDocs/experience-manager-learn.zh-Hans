@@ -9,9 +9,9 @@ level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1081'
 ht-degree: 1%
 
 ---
@@ -29,8 +29,7 @@ AEM Headless快速设置可让您使用WKND网站示例项目中的内容来实�
    + __AEM管理员__ 访问AEMas a Cloud Service
    + __Cloud Manager — 部署管理器__ 对Cloud Manager的访问权限
 + 必须在本地安装以下工具：
-   + [Node.js v10+](https://nodejs.org/en/)
-   + [npm 6+](https://www.npmjs.com/)
+   + [Node.js v18](https://nodejs.org/en/)
    + [Git](https://git-scm.com/)
    + IDE(例如， [Microsoft® Visual Studio代码](https://code.visualstudio.com/))
 

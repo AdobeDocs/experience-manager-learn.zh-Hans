@@ -1,5 +1,5 @@
 ---
-title: AEM Headless无头动手操作教程 — GraphQL
+title: AEM Headless动手操作入门教程 — GraphQL
 description: 一个端到端教程，其中演示了如何使用AEM GraphQL API构建和公开内容。
 doc-type: tutorial
 mini-toc-levels: 1
@@ -11,14 +11,14 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 1%
+source-wordcount: '287'
+ht-degree: 4%
 
 ---
 
-# AEM无头入门 — GraphQL
+# AEM Headless 快速入门 – GraphQL
 
 一个端到端教程，其中演示了如何在无头CMS场景中使用AEM GraphQL API构建和显示由外部应用程序使用的内容。
 
@@ -30,9 +30,8 @@ ht-degree: 1%
 * 创建内容片段模型以对数据进行建模
 * 根据先前制作的模型创建内容片段。
 * 了解如何使用集成的GraphiQL开发工具查询AEM中的内容片段。
-* 要存储GraphQL查询或将其保留到AEM
-* 从示例React应用程序中使用持久GraphQL查询
-
+* 存储GraphQL查询或将其保留到AEM
+* 从示例React应用程序中使用持久化GraphQL查询
 
 ## 前提条件 {#prerequisites}
 
@@ -40,8 +39,7 @@ ht-degree: 1%
 
 * 基本HTML和JavaScript技能
 * 必须在本地安装以下工具：
-   * [Node.js v14+](https://nodejs.org/en/)
-   * [npm 6+](https://www.npmjs.com/)
+   * [Node.js v18](https://nodejs.org/)
    * [Git](https://git-scm.com/)
    * IDE(例如， [Microsoft® Visual Studio代码](https://code.visualstudio.com/))
 
@@ -57,4 +55,4 @@ ht-degree: 1%
 
 源代码和内容包位于 [AEM指南 — WKND GraphQL GitHub项目](https://github.com/adobe/aem-guides-wknd-graphql).
 
-如果您发现本教程或代码存在问题，请保留 [GitHub问题](https://github.com/adobe/aem-guides-wknd-graphql/issues).
+如果您在教程或代码中发现问题，请保留 [GitHub问题](https://github.com/adobe/aem-guides-wknd-graphql/issues).

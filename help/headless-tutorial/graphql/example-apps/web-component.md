@@ -8,17 +8,17 @@ role: Developer
 level: Beginner
 kt: 10797
 thumbnail: kt-10797.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 4%
+source-wordcount: '566'
+ht-degree: 5%
 
 ---
 
 
 # Web组件
 
-示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此Web组件应用程序演示了如何使用AEM GraphQL API来查询内容，它使用持久化查询来呈现部分UI，这些操作是使用纯JavaScript代码完成的。
+示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此Web组件应用程序演示了如何使用持久化查询使用AEM GraphQL API查询内容，并渲染部分UI，这些操作是使用纯JavaScript代码完成的。
 
 ![具有AEM Headless的Web组件](./assets/web-component/web-component.png)
 
@@ -29,8 +29,7 @@ ht-degree: 4%
 应在本地安装以下工具：
 
 + [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Cont%2Fjcr%3Alast&amp;by.sort=desc&amp;list=0&amp;p.offset=14) (如果连接到本地AEM 6.5或AEM SDK)
-+ [Node.js v10+](https://nodejs.org/en/)
-+ [npm 6+](https://www.npmjs.com/)
++ [Node.js v18](https://nodejs.org/en/)
 + [Git](https://git-scm.com/)
 
 ## AEM要求
@@ -38,8 +37,8 @@ ht-degree: 4%
 Web组件可与以下AEM部署选项配合使用。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 使用进行本地设置 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
-+ [AEM 6.5 SP13+快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
++ 使用进行本地设置 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)
++ [AEM 6.5 SP13+快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans?lang=en#install-local-aem-instances)
 
 所有部署都需要 `tutorial-solution-content.zip` 从 [解决方案文件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html#solution-files) 安装和必要 [部署配置](../deployment/web-component.md) 执行。
 
@@ -97,7 +96,7 @@ Web组件可与以下AEM部署选项配合使用。
 
 ## 代码
 
-以下是Web组件的构建方式、它如何连接到AEM Headless以使用GraphQL持久查询检索内容，以及该数据如何呈现的摘要。 完整代码可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
+以下是Web组件的构建方式、如何连接到AEM Headless以使用GraphQL持久查询检索内容，以及如何显示该数据的摘要。 完整代码可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
 
 ### Web组件HTML标记
 

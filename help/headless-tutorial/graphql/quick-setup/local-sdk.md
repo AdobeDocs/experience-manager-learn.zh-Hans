@@ -1,5 +1,5 @@
 ---
-title: AEM Headless使用本地SDK快速设置
+title: AEM Headless使用本地AEM SDK快速设置
 description: 开始使用Adobe Experience Manager(AEM)和GraphQL。 安装AEM SDK、添加示例内容并部署使用GraphQL API从AEM中使用内容的应用程序。 了解AEM如何为全渠道体验提供支持。
 version: Cloud Service
 mini-toc-levels: 1
@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: f63ed212a5a8a6689b25bd0bc9438c605a129729
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 1%
+source-wordcount: '1257'
+ht-degree: 2%
 
 ---
 
-# AEM Headless使用本地SDK快速设置 {#setup}
+# AEM Headless使用本地AEM SDK快速设置 {#setup}
 
 AEM Headless快速设置可让您使用WKND网站示例项目中的内容来实践AEM Headless，以及一个可通过AEM Headless GraphQL API使用内容的示例React应用程序(SPA)。 本指南使用 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
 
@@ -26,7 +26,7 @@ AEM Headless快速设置可让您使用WKND网站示例项目中的内容来实�
 应在本地安装以下工具：
 
 * [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Cont%2Fjcr%3Alast&amp;by.sort=desc&amp;list=0&amp;p.offset=14)
-* [Node.js v14.x](https://nodejs.org/en/)
+* [Node.js v18](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
 
 ## 1.安装AEM SDK {#aem-sdk}

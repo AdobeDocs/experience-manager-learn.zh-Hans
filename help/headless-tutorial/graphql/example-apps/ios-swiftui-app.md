@@ -1,6 +1,6 @@
 ---
 title: iOS应用程序 — AEM Headless示例
-description: 示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此iOS应用程序演示了如何使用AEM GraphQL API来使用持久查询来查询内容。
+description: 示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此iOS应用程序演示了如何使用持久化查询来使用AEM GraphQL API查询内容。
 version: Cloud Service
 mini-toc-levels: 2
 kt: 10587
@@ -10,16 +10,16 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
 source-wordcount: '981'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
 # iOS应用程序
 
-示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此iOS应用程序演示了如何使用AEM GraphQL API来使用持久查询来查询内容。
+示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此iOS应用程序演示了如何使用持久化查询来使用AEM GraphQL API查询内容。
 
 ![iOS带AEM Headless的SwiftUI应用程序](./assets/ios-swiftui-app/ios-app.png)
 
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 应在本地安装以下工具：
 
-+ [Xcode 9.3+](https://developer.apple.com/xcode/) (需要macOS)
++ [Xcode](https://developer.apple.com/xcode/) (需要macOS)
 + [Git](https://git-scm.com/)
 
 ## AEM要求
@@ -37,8 +37,8 @@ ht-degree: 3%
 iOS应用程序可与以下AEM部署选项配合使用。 所有部署都需要 [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 安装。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 使用进行本地设置 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
-+ [AEM 6.5 SP13+快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
++ 使用进行本地设置 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)
++ [AEM 6.5 SP13+快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans?lang=en#install-local-aem-instances)
 
 iOS应用程序旨在连接到 __AEM发布__ 环境中，但是，如果在iOS应用程序配置中提供了身份验证，则可以从AEM Author中源内容。
 
@@ -74,7 +74,7 @@ iOS应用程序旨在连接到 __AEM发布__ 环境中，但是，如果在iOS�
 
    __令牌身份验证__
 
-   的 `AEM_TOKEN` 是 [访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) 对具有WKND GraphQL内容访问权限的AEM用户进行身份验证。
+   的 `AEM_TOKEN` 是 [访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) 向具有WKND GraphQL内容访问权限的AEM用户进行身份验证。
 
    ```plain
    AEM_AUTH_TYPE = token
@@ -86,11 +86,11 @@ iOS应用程序旨在连接到 __AEM发布__ 环境中，但是，如果在iOS�
 
 ## 代码
 
-以下是如何构建iOS应用程序的摘要，如何连接到AEM Headless以使用GraphQL持久查询检索内容，以及如何显示该数据。 完整代码可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
+以下是如何构建iOS应用程序、如何连接到AEM Headless以使用GraphQL持久查询检索内容，以及如何显示该数据的摘要。 完整代码可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
 
 ### 持久化查询
 
-遵循AEM无头最佳实践，iOS应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
+遵循AEM Headless最佳实践，iOS应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
 
 + `wknd/adventures-all` 持久查询，该查询会返回具有一组简略属性的AEM中的所有冒险。 此持久查询驱动初始视图的探险列表。
 
@@ -175,7 +175,7 @@ query($slug: String!) {
 
 ### 执行GraphQL持久查询
 
-AEM持久查询是通过HTTPGET执行的，因此，不能使用使用HTTPPOST（如Apollo）的常用GraphQL库。 而是创建一个自定义类，以执行对AEM的持久查询HTTPGET请求。
+AEM持久化查询是通过HTTPGET执行的，因此，使用HTTPPOST（如Apollo）的常用GraphQL库将无法使用。 而是创建一个自定义类，以执行对AEM的持久查询HTTPGET请求。
 
 `AEM/Aem.swift` 实例化 `Aem` 类，用于与AEM Headless的所有交互。 模式是：
 
@@ -324,5 +324,5 @@ SwiftUI用于应用程序中的各种视图。 Apple提供了 [使用SwiftUI构�
 
 ## 其他资源
 
-+ [AEM Headless入门 — GraphQL教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [AEM Headless快速入门 — GraphQL教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans)
 + [SwiftUI列表和导航教程](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)

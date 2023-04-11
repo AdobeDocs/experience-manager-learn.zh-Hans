@@ -8,16 +8,16 @@ role: Developer
 level: Beginner
 kt: 10798
 thumbnail: KT-10798.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 2%
+source-wordcount: '472'
+ht-degree: 4%
 
 ---
 
 # 服务器到服务器Node.js应用程序
 
-示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此服务器到服务器应用程序演示了如何使用AEM GraphQL API来使用持久查询查询查询内容，并在终端上打印该内容。
+示例应用程序是探索Adobe Experience Manager(AEM)无头功能的绝佳方式。 此服务器到服务器应用程序演示了如何使用持久查询使用AEM GraphQL API查询内容，并在终端上打印内容。
 
 ![带有AEM Headless的服务器到服务器Node.js应用程序](./assets/server-to-server-app/server-to-server-app.png)
 
@@ -27,8 +27,7 @@ ht-degree: 2%
 
 应在本地安装以下工具：
 
-+ [Node.js v10+](https://nodejs.org/en/)
-+ [npm 6+](https://www.npmjs.com/)
++ [Node.js v18](https://nodejs.org/en/)
 + [Git](https://git-scm.com/)
 
 ## AEM要求
@@ -77,13 +76,13 @@ Node.js应用程序可与以下AEM部署选项配合使用。 所有部署都需
 
 ## 代码
 
-以下是如何构建服务器到服务器Node.js应用程序、如何连接到AEM Headless以使用GraphQL持久查询检索内容，以及如何显示该数据的摘要。 完整代码可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
+以下是如何构建服务器到服务器Node.js应用程序、如何连接到AEM Headless以使用GraphQL持久查询检索内容以及如何显示该数据的摘要。 完整代码可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
 
 服务器到服务器AEM无头应用程序的常见用例是将内容片段数据从AEM同步到其他系统，但此应用程序特意很简单，会打印保留查询的JSON结果。
 
 ### 持久化查询
 
-遵循AEM无头最佳实践，应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
+遵循AEM Headless最佳实践，应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
 
 + `wknd/adventures-all` 持久查询，该查询会返回具有一组简略属性的AEM中的所有冒险。 此持久查询驱动初始视图的探险列表。
 
@@ -143,7 +142,7 @@ async function run() {
 
 ### 执行GraphQL持久查询
 
-AEM持久查询是通过HTTPGET执行的，因此， [AEM Headless客户端（用于Node.js）](https://github.com/adobe/aem-headless-client-nodejs) 用于 [执行持久GraphQL查询](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) ，并检索冒险内容。
+AEM持久查询是通过HTTPGET执行的，因此， [AEM Headless客户端（用于Node.js）](https://github.com/adobe/aem-headless-client-nodejs) 用于 [执行持久化GraphQL查询](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) ，并检索冒险内容。
 
 通过调用 `aemHeadlessClient.runPersistedQuery(...)`，并传递保留的GraphQL查询名称。 GraphQL返回数据后，将其传递到简化的 `doSomethingWithDataFromAEM(..)` 函数，该函数可打印结果 — 但通常会将数据发送到其他系统，或根据检索到的数据生成一些输出。
 
