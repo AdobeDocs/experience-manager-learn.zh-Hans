@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service 教程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 9917b16248ef1f0a9c86f03a024c634636b2304e
+source-git-commit: 1011c700a33b932c3c0a766727fc1d90bf2940f4
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 22%
+source-wordcount: '932'
+ht-degree: 21%
 
 ---
 
@@ -114,7 +114,7 @@ ht-degree: 22%
       + [开发人员控制台](./debugging/cloud-service/developer-console.md)
       + [存储库浏览器](./debugging/cloud-service/repository-browser.md)
       + 风险{#risks}
-         + [几个警告](./debugging/cloud-service/risks/traversals.md)
+         + [遍历警告](./debugging/cloud-service/risks/traversals.md)
 + 内容交付{#content-delivery}
    + [URL重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html)
 + 访问AEM{#accessing}
@@ -259,6 +259,9 @@ ht-degree: 22%
       + [创建表单数据模型](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [测试表单提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [测试点击事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
+   + 将表单提交存储在一个驱动器和sharepoint中{#one-drive}
+      + [将表单数据存储在一个驱动器中](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
+      + [在Sharepoint中存储表单数据](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
 + asset compute可扩展性{#asset-compute}
    + [概述](./asset-compute/overview.md)
    + 设置{#set-up}
