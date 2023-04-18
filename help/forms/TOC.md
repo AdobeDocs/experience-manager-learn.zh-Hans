@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
+source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
 workflow-type: tm+mt
-source-wordcount: '1784'
-ht-degree: 3%
+source-wordcount: '1806'
+ht-degree: 4%
 
 ---
 
@@ -152,7 +152,7 @@ ht-degree: 3%
    + [创建和配置自适应表单](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [为单个签名者配置自适应表单](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [为两个签名者配置自适应表单](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
-   + [配置Automated forms conversion服务](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
+   + [配置自动化表单转换服务](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [将PDF表单转换为自适应表单](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [配置已转换的自适应表单](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [在Acrobat Sign中使用XDP模板](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
@@ -230,7 +230,12 @@ ht-degree: 3%
    + [创建工作流组件](welcome-kit/create-workflow-component.md)
    + [测试解决方案](welcome-kit/testing-the-solution.md)
 
-
++ 使用Forms和Acrobat Sign响应应用程序 {#react-ic-sign}
+   + [简介](react-ic-sign/introduction.md)
+   + [生成IC文档](react-ic-sign/create-ic-document.md)
+   + [Acrobat Sign API包装器](react-ic-sign/wrapper-sign-api.md)
+   + [生成签名小组件](react-ic-sign/create-servlet-to-expose-endpoint.md)
+   + [部署示例资产](react-ic-sign/deploy-assets-on-your-server.md)
 + 文档服务 {#document-services}
    + [PDF forms类型](document-services/pdf-forms-and-documents.md)
    + [在自适应表单中嵌入PDF](document-services/embed-pdf-inline.md)
