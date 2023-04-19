@@ -8,9 +8,9 @@ role: Developer, Architect
 level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
-source-git-commit: 6f1000db880c3126a01fa0b74abdb39ffc38a227
+source-git-commit: cc78e59fe70686e909928e407899fcf629a651b9
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '619'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 1%
 # 跨源资源共享(CORS)
 
 Adobe Experience Manager as a Cloud Service的跨域资源共享(CORS)可帮助非AEM Web属性对AEM GraphQL API进行基于浏览器的客户端调用。
+
+以下文章介绍了如何配置 _单原点_ 通过CORS访问一组特定的AEM无头端点。 单源表示仅有单个非AEM域访问AEM，例如https://app.example.com连接到https://www.example.com。 由于存在缓存问题，使用此方法时，多源访问可能无法正常工作。
 
 >[!TIP]
 >
@@ -63,7 +65,6 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许条件。
     "https://spa.external.com/"
   ],
   "alloworiginregexp":[
-    "http://localhost:.*"
   ],
   "allowedpaths": [
     "/graphql/execute.json.*",
@@ -127,7 +128,7 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许条件。
 
 必须将AEM发布（和预览）服务的调度程序配置为支持CORS。
 
-| 客户端连接到 | AEM作者 | AEM 发布 | AEM预览 |
+| 客户端连接到 | AEM Author | AEM 发布 | AEM预览 |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
 | 需要Dispatcher CORS配置 | ✘ | ✔ | ✔ |
 
