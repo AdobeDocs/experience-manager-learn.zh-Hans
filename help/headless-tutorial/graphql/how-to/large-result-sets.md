@@ -10,9 +10,9 @@ doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
 jira: KT-13102
 thumbnail: 3418381.jpeg
-source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
+source-git-commit: 9eb706e49f12a3ebd5222e733f540db4cf2c8748
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '841'
 ht-degree: 1%
 
 ---
@@ -34,9 +34,11 @@ AEM Headless支持 [偏移/限制](#list-query) 和 [基于光标的分页](#pag
 
 使用大数据集时，可使用偏移和限制以及基于光标的分页来检索数据的特定子集。 但是，这两种技术之间存在一些差异，在某些情况下，这两种技术中一种更合适。
 
-### 列表查询
+### 偏移/限制
 
 列表查询，使用 `limit` 和 `offset` 提供一种直接的方法，以指定起始点(`offset`)和要检索的记录数(`limit`)。 此方法允许从完整结果集中的任意位置选择结果子集，例如跳转到特定的结果页面。 虽然实施起来很容易，但在处理大结果时却会很慢而且效率很低，因为检索许多记录时需要扫描所有以前的记录。 当偏移值较高时，此方法也可能会导致性能问题，因为可能需要检索和丢弃许多结果。
+
+#### GraphQL查询
 
 ```graphql
 # Retrieves a list of Adventures sorted price descending, and title ascending if there is the prices are the same.
@@ -51,7 +53,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
   }
 ```
 
-#### 查询变量
+##### 查询变量
 
 ```json
 {
@@ -60,7 +62,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 }
 ```
 
-### 列表响应
+#### GraphQL响应
 
 生成的JSON响应包含第2、第3、第4和第5个最昂贵的冒险。 结果中的前两个冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定价格相同的冒险项，然后按标题以升序排序。)
 
@@ -99,10 +101,11 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 
 基于光标的分页在分页查询中可用，涉及使用光标（对特定记录的引用）检索下一组结果。 这种方法更为有效，因为它避免了扫描所有以前的记录以检索所需数据子集的需要。 分页查询非常适用于从开头到中间的某个点或到结尾遍历大型结果集。 列表查询，使用 `limit` 和 `offset` 提供一种直接的方法，以指定起始点(`offset`)和要检索的记录数(`limit`)。 此方法允许从完整结果集中的任意位置选择结果子集，例如跳转到特定的结果页面。 虽然实施起来很容易，但在处理大结果时却会很慢而且效率很低，因为检索许多记录时需要扫描所有以前的记录。 当偏移值较高时，此方法也可能会导致性能问题，因为可能需要检索和丢弃许多结果。
 
+#### GraphQL查询
 
 ```graphql
 # Retrieves the most expensive Adventures (sorted by title ascending if there is the prices are the same)
-query adventuresByPaginated($first:Int!, $after:String) {
+query adventuresByPaginated($first:Int, $after:String) {
  adventurePaginated(first: $first, after: $after, sort: "price DESC, title ASC") {
        edges {
           cursor
@@ -120,7 +123,7 @@ query adventuresByPaginated($first:Int!, $after:String) {
   }
 ```
 
-#### 查询变量
+##### 查询变量
 
 ```json
 {
@@ -128,7 +131,7 @@ query adventuresByPaginated($first:Int!, $after:String) {
 }
 ```
 
-### 分页响应
+#### GraphQL响应
 
 生成的JSON响应包含第2、第3、第4和第5个最昂贵的冒险。 结果中的前两个冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定价格相同的冒险项，然后按标题以升序排序。)
 
@@ -171,11 +174,11 @@ query adventuresByPaginated($first:Int!, $after:String) {
 }
 ```
 
-### 下一组分页结果
+#### 下一组分页结果
 
 可以使用 `after` 参数和 `endCursor` 值。 如果没有可获取的结果， `hasNextPage` is `false`.
 
-#### 查询变量
+##### 查询变量
 
 ```json
 {
