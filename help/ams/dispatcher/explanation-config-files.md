@@ -7,7 +7,7 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
+source-git-commit: cc085af90b9b8ea0e650546c251fbf14cc222989
 workflow-type: tm+mt
 source-wordcount: '1705'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Apache Web Server使用 `Include` 或 `IncludeOptional` 语句。  使用可消
 | 文件名`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules` 文件存储 `mod_rewrite` 要由 `vhost` 文件 |
 | 文件名`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules` 文件从内部包含 `*.vhost` 文件。 它包含IP正则表达式或允许拒绝规则以允许将IP列入白名单。 如果您尝试根据IP地址限制查看虚拟主机，则将生成其中一个文件，并将其包含在 `*.vhost` 文件 |
 
-## conf.modules.d/中包含的文件
+## conf.dispatcher.d/中包含的文件
 
 | 文件 | 文件目标 | 描述 |
 | --- | --- | --- |
