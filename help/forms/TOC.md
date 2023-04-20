@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+source-git-commit: edba74f5ff5611687c05812de184243997ee7a35
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1809'
 ht-degree: 4%
 
 ---
@@ -284,6 +284,7 @@ ht-degree: 4%
    + [打印渠道文档中的两列布局](interactive-communications/two-column-layout-aem-forms-article-use.md)
    + [在AEM Forms打印渠道文档中使用表组件](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [使用监视文件夹为打印渠道生成交互式通信文档](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+   + [自定义文本编辑器](interactive-communications/customize-text-editor.md)
 
 + Web渠道的交互式通信 {#ic-web-channel-tutorial}
    + [简介](ic-web-channel-tutorial/introduction.md)
