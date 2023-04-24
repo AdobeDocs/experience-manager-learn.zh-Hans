@@ -10,10 +10,10 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 2096c207ce14985b550b055ea0f51451544c085c
+source-git-commit: 71b2dc0e8ebec1157694ae55118f2426558566e3
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 5%
+source-wordcount: '935'
+ht-degree: 6%
 
 ---
 
@@ -35,6 +35,11 @@ AEM无头内容建模中使用的内容片段，通常引用要用于在无头�
 
 的 `_dynamicUrl` 是用于图像资产的首选URL，应该替换了 `_path`, `_authorUrl`和 `_publishUrl` 尽可能。
 
+|  | AEM as a Cloud Service | AEMas a Cloud ServiceRDE | AEM SDK | AEM 6.5 |
+| ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
+| 是否支持Web优化的图像？ | ✔ | ✔ | ✘ | ✘ |
+
+
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
 >title="AEM Headless 图像"
@@ -52,7 +57,7 @@ AEM无头内容建模中使用的内容片段，通常引用要用于在无头�
 
 在GraphQL查询中，将字段返回为 `ImageRef` 类型，并请求 `_dynamicUrl` 字段。 例如，查询 [WKND站点项目](https://github.com/adobe/aem-guides-wknd) ，并在其中包含图像资产引用的图像URL `primaryImage` 字段，可以使用新的保留查询完成 `wknd-shared/adventure-image-by-path` 定义为：
 
-```graphql
+```graphql {highlight="11"}
 query($path: String!, $assetTransform: AssetTransform!) {
   adventureByPath(
     _path: $path
@@ -100,7 +105,7 @@ query($path: String!, $assetTransform: AssetTransform!) {
 
 生成的JSON响应包含请求的字段，其中包含到图像资产的Web优化URL。
 
-```json
+```json {highlight="8"}
 {
   "data": {
     "adventureByPath": {
@@ -197,12 +202,12 @@ function App() {
 
   /**
    * Update the dynamic URL with client-specific query parameters
-   * @param {*} dynamicUrl the base dynamic URL for the web-optimized image
+   * @param {*} imageUrl the image URL
    * @param {*} params the AEM web-optimized image query parameters
    * @returns the dynamic URL with the query parameters
    */
-  function setParams(dynamicUrl, params) {
-    let url = new URL(dynamicUrl);
+  function setOptimizedImageUrlParams(imageUrl, params) {
+    let url = new URL(imageUrl);
     Object.keys(params).forEach(key => {
       url.searchParams.set(key, params[key]);
     });
@@ -220,6 +225,9 @@ function App() {
   // Wait for AEM Headless APIs to provide data
   if (!data) { return <></> }
 
+  const alt = data.adventureByPath.item.title;
+  const imageUrl =  AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
+
   return (
     <div className="app">
       
@@ -230,11 +238,11 @@ function App() {
 
       <img
         alt={alt}
-        src={setParams(dynamicUrl, { width: 1000 })}
+        src={setOptimizedImageUrlParams(imageUrl, { width: 1000 })}
         srcSet={
-            `${setParams(dynamicUrl, { width: 1000 })} 1000w,
-             ${setParams(dynamicUrl, { width: 1600 })} 1600w,
-             ${setParams(dynamicUrl, { width: 2000 })} 2000w`
+            `${setOptimizedImageUrlParams(imageUrl, { width: 1000 })} 1000w,
+             ${setOptimizedImageUrlParams(imageUrl, { width: 1600 })} 1600w,
+             ${setOptimizedImageUrlParams(imageUrl, { width: 2000 })} 2000w`
         }
         sizes="calc(100vw - 10rem)"/>
 
@@ -243,11 +251,11 @@ function App() {
 
         <picture>
           {/* When viewport width is greater than 2001px */}
-          <source srcSet={setParams(dynamicUrl, { width : 2600 })} media="(min-width: 2001px)"/>        
+          <source srcSet={setOptimizedImageUrlParams(imageUrl, { width : 2600 })} media="(min-width: 2001px)"/>        
           {/* When viewport width is between 1000px and 2000px */}
-          <source srcSet={setParams(dynamicUrl, { width : 2000})} media="(min-width: 1000px)"/>
+          <source srcSet={setOptimizedImageUrlParams(imageUrl, { width : 2000})} media="(min-width: 1000px)"/>
           {/* When viewport width is less than 799px */}
-          <img src={setParams(dynamicUrl, { width : 400, crop: "550,300,400,400" })} alt={alt}/>
+          <img src={setOptimizedImageUrlParams(imageUrl, { width : 400, crop: "550,300,400,400" })} alt={alt}/>
         </picture>
     </div>
   );
