@@ -10,9 +10,9 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: ec2609ed256ebe6cdd7935f3e8d476c1ff53b500
+source-git-commit: 09f9530cab0ec651b7c37c8c078631c79e8cfe4a
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '934'
 ht-degree: 6%
 
 ---
@@ -97,7 +97,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 
 | GraphQL参数 | URL 参数 | 描述 | 必填 | GraphQL变量值 | URL参数值 | URL参数示例 |
 |:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | `format` | 图像资产的格式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | 不适用 | 不适用 |
+| `format` | 不适用 | 图像资产的格式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | 不适用 | 不适用 |
 | `seoName` | 不适用 | URL中文件区段的名称。 如果未提供，则使用图像资产名称。 | ✘ | 字母数字， `-`或 `_` | 不适用 | 不适用 |
 | `crop` | `crop` | 从图像中取出的裁剪帧必须在图像大小内 | ✘ | 在原始图像尺寸范围内定义裁剪区域的正整数 | 以逗号分隔的数字坐标字符串 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
 | `size` | `size` | 输出图像的大小（包括高度和宽度）（以像素为单位）。 | ✘ | 正整数 | 以逗号分隔的正整数 `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
