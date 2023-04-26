@@ -8,9 +8,9 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 117b67bd185ce5af9c83bd0c343010fab6cd0982
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1465'
 ht-degree: 0%
 
 ---
@@ -367,7 +367,7 @@ GraphQL API允许开发人员创建查询，该查询包含有关插入多行字
 
 ```graphql
 query ($path: String!) {
-  articleByPath(_path: $path)
+  articleByPath(_path: $path, _assetTransform: { format: JPG, preferWebp: true })
   {
     item {
       _path
@@ -377,17 +377,14 @@ query ($path: String!) {
     }
     _references {
       ...on ImageRef {
-        _path
-        _publishUrl
-        width
+        _dynamicUrl
         __typename
       }
       ...on ArticleModel {
         _path
         author
         __typename
-      }
-      
+      }  
     }
   }
 }
@@ -461,9 +458,7 @@ query ($path: String!) {
       },
       "_references": [
         {
-          "_path": "/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
-          "_publishUrl": "http://publish-p123-e456.adobeaemcloud.com/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
-          "width": 1920,
+          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--dd42d814-88ec-4c4d-b5ef-e3dc4bc0cb42/sport-climbing.jpg?preferwebp=true",
           "__typename": "ImageRef"
         },
         {
@@ -477,7 +472,7 @@ query ($path: String!) {
 }
 ```
 
-JSON响应包括将引用插入富文本中的位置，其中包含 `"nodeType": "reference"`. 的 `_references` 然后，对象包含每个引用以及请求的其他属性。 例如， `ImageRef` 返回 `width` 文章中引用的图像。
+JSON响应包括将引用插入富文本中的位置，其中包含 `"nodeType": "reference"`. 的 `_references` 然后，对象包含每个引用。
 
 ## 以富文本呈现内嵌引用
 
@@ -493,12 +488,12 @@ const nodeMap = {
             let reference;
             
             // asset reference
-            if(node.data.path) {
+            if (node.data.path) {
                 // find reference based on path
                 reference = references.find( ref => ref._path === node.data.path);
             }
             // Fragment Reference
-            if(node.data.href) {
+            if (node.data.href) {
                 // find in-line reference within _references array based on href and _path properties
                 reference = references.find( ref => ref._path === node.data.href);
             }
@@ -518,7 +513,7 @@ const renderReference = {
     // node contains merged properties of the in-line reference and _references object
     'ImageRef': (node) => {
         // when __typename === ImageRef
-        return <img src={node._publishUrl} alt={'in-line reference'} /> 
+        return <img src={node._dynamicUrl} alt={'in-line reference'} /> 
     },
     'ArticleModel': (node) => {
         // when __typename === ArticleModel
@@ -538,9 +533,14 @@ const renderReference = {
 
 >[!VIDEO](https://video.tv.adobe.com/v/342105?quality=12&learn=on)
 
+>[!NOTE]
+>
+> 以上视频使用 `_publishUrl` 来渲染图像引用。 相反，更喜欢 `_dynamicUrl` 如 [Web优化的图像操作方法](./images.md);
+
+
 以上视频演示了一个端到端示例：
 
 1. 更新内容片段模型的多行文本字段以允许片段引用
-1. 使用内容片段编辑器在多行文本字段中包含图像和对其他片段的引用。
-1. 创建GraphQL查询，该查询将多行文本响应包含为JSON以及任何 `_references` 已使用。
-1. 编写可呈现富文本响应的内嵌引用的React SPA。
+2. 使用内容片段编辑器在多行文本字段中包含图像和对其他片段的引用。
+3. 创建GraphQL查询，该查询将多行文本响应包含为JSON以及任何 `_references` 已使用。
+4. 编写可呈现富文本响应的内嵌引用的React SPA。
