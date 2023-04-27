@@ -10,10 +10,10 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
-source-git-commit: 593ef5767a5f2321c689e391f9c9019de7c94672
+source-git-commit: 3f129fb4fc53e55d118802d3a0e566a9a9bcb9a2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1153'
+ht-degree: 3%
 
 ---
 
@@ -79,6 +79,84 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418896?quality=12&learn=on)
 
+
++++ 数据元素和规则事件代码
+
++ 的 `Page Name` 数据元素代码。
+
+   ```javascript
+   if(event && event.component && event.component.hasOwnProperty('dc:title')) {
+       // return value of 'dc:title' from the data layer Page object, which is propogated via 'cmp:show` event
+       return event.component['dc:title'];
+   }
+   ```
+
++ 的 `Site Section` 数据元素代码。
+
+   ```javascript
+   if(event && event.component && event.component.hasOwnProperty('repo:path')) {
+   let pagePath = event.component['repo:path'];
+   
+   let siteSection = '';
+   
+   //Check of html String in URL.
+   if (pagePath.indexOf('.html') > -1) { 
+    siteSection = pagePath.substring(0, pagePath.lastIndexOf('.html'));
+   
+    //replace slash with colon
+    siteSection = siteSection.replaceAll('/', ':');
+   
+    //remove `:content`
+    siteSection = siteSection.replaceAll(':content:','');
+   }
+   
+       return siteSection 
+   }
+   ```
+
++ 的 `Host Name` 数据元素代码。
+
+   ```javascript
+   if(window && window.location && window.location.hostname) {
+       return window.location.hostname;
+   }
+   ```
+
++ 的 `all pages - on load` 规则事件代码
+
+   ```javascript
+   var pageShownEventHandler = function(evt) {
+   // defensive coding to avoid a null pointer exception
+   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
+       //trigger Launch Rule and pass event
+       console.debug("cmp:show event: " + evt.eventInfo.path);
+       var event = {
+           //include the path of the component that triggered the event
+           path: evt.eventInfo.path,
+           //get the state of the component that triggered the event
+           component: window.adobeDataLayer.getState(evt.eventInfo.path)
+       };
+   
+       //Trigger the Launch Rule, passing in the new 'event' object
+       // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
+       // i.e 'event.component['someKey']'
+       trigger(event);
+       }
+   }
+   
+   //set the namespace to avoid a potential race condition
+   window.adobeDataLayer = window.adobeDataLayer || [];
+   
+   //push the event listener for cmp:show into the data layer
+   window.adobeDataLayer.push(function (dl) {
+       //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
+       dl.addEventListener("cmp:show", pageShownEventHandler);
+   });
+   ```
+
++++
+
+
 的 [标记概述](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) 提供有关数据元素、规则和扩展等重要概念的深入知识。
 
 有关将AEM核心组件与Adobe客户端数据层集成的其他信息，请参阅 [将Adobe客户端数据层与AEM核心组件结合使用指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html).
@@ -121,3 +199,12 @@ ht-degree: 0%
 做得好！您已使用Adobe Experience Platform(Experience Platform)Web SDK完成AEM的设置，以从网站中收集和摄取数据。 借助此基础，您现在可以探索更多可能性来增强和集成诸如Analytics、Target、Customer Journey Analytics(CJA)等产品，以及为客户创建丰富的个性化体验。 不断学习和探索，充分发挥Adobe Experience Cloud的潜力。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418900?quality=12&learn=on)
+
+## 其他资源
+
++ [将 Adobe Client Data Layer 与核心组件配合使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
++ [集成Experience Platform数据收集标记和AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
++ [Adobe Experience Platform Web SDK和Edge Network概述](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
++ [数据收集教程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
++ [Adobe Experience Platform Debugger概述](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
+
