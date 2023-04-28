@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+exl-id: d97ff584-7fa0-48bc-9b83-ba45c26b7d87
+source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 0%
+source-wordcount: '113'
+ht-degree: 1%
 
 ---
 
@@ -314,4 +315,6 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
     }
 ```
 
+## 后续步骤
 
+编写 [用于公开Acrobat Sign API的OSGi服务包装器](./wrapper-sign-api.md)
