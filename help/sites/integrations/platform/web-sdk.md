@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
-source-git-commit: 1597fd87e11a27292b2b8897cf58c1670488b632
+exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
+source-git-commit: 63afa03de70d6f8f695d552018344d53a5cec6f5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1315'
+ht-degree: 3%
 
 ---
-
 
 # 集成Experience PlatformWeb SDK
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 您还了解如何收集和发送 [WKND — 示例Adobe Experience Manager项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) 页面查看 [Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html).
 
-完成此设置后，您可以继续实施Experience Platform和相关应用程序，例如 [Real-time Customer Data Platform(Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hans), [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html) 和 [Adobe Journey Optimizer(AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html). 通过标准化Web和客户数据来提高客户参与度。
+完成此设置后，您已实施了坚实的基础。 此外，您还可以使用诸如 [Real-time Customer Data Platform(Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hans), [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)和 [Adobe Journey Optimizer(AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html). 高级实施通过标准化Web和客户数据来帮助提高客户参与度。
 
 ## 前提条件
 
@@ -52,6 +52,8 @@ ht-degree: 0%
 
 体验数据模型(XDM)架构可帮助您标准化客户体验数据。 要收集 **WKND页面查看** 创建XDM架构并使用Adobe提供的字段组 `AEP Web SDK ExperienceEvent` 用于Web数据收集。
 
+有一些通用的和特定的行业，例如零售、金融服务、医疗保健等，这些都是一套参考数据模型，请参阅 [行业数据模型概述](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html) 以了解更多信息。
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418894?quality=12&learn=on)
 
@@ -76,8 +78,14 @@ ht-degree: 0%
 + 数据元素：自定义代码类型的数据元素，可使用WKND站点的Adobe客户端数据层提取page-name、site-section和host-name。 此外，符合之前新创建的WKND XDM架构内部版本的XDM对象类型数据元素 [创建XDM架构](#create-xdm-schema---experience-platform) 中。
 + 规则：每当使用触发的Adobe客户端数据层访问WKND网页时，都会将数据发送到Platform Edge Network `cmp:show` 事件。
 
+在使用 **发布流程**，则可以使用 **Add All Changed Resources** 按钮。 要选择所有资源，例如数据元素、规则和标记扩展，而不是标识和选取单个资源。 此外，在开发阶段，您还可以将库发布到 _开发_ 环境，然后验证并将其提升到 _阶段_ 或 _生产_ 环境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418896?quality=12&learn=on)
+
+
+>[!TIP]
+>
+>视频中显示的数据元素和规则事件代码可供您参考， **展开下面的折叠元素**. 但是，如果您没有使用Adobe客户端数据层，则必须修改以下代码，但定义数据元素并在规则定义中使用这些元素的概念仍然适用。
 
 
 +++ 数据元素和规则事件代码
@@ -207,4 +215,3 @@ ht-degree: 0%
 + [Adobe Experience Platform Web SDK和Edge Network概述](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [数据收集教程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Adobe Experience Platform Debugger概述](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
-
