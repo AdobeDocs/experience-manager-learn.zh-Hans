@@ -11,9 +11,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: 434f56e143bc0f969723de48abd26d49a308af9b
 workflow-type: tm+mt
-source-wordcount: '4066'
+source-wordcount: '4061'
 ht-degree: 0%
 
 ---
@@ -439,13 +439,13 @@ Sling模型是注释驱动的Java™ POJO(纯旧Java™对象)，可帮助将数
 
    自WKND源的Java™包起 `com.adobe.aem.guides.wknd.core.models` 声明版本 `1.0.0`，并且正在添加非中断的公共接口和方法，因此必须将版本增加到 `1.1.0`. 在以下位置打开文件 `core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java` 更新 `@Version("1.0.0")` to `@Version("2.1.0")`.
 
-       &quot;
-       @Version(&quot;2.1.0&quot;)
-       package com.adobe.aem.guides.wknd.core.models;
-       
-       import org.osgi.annotation.versioning.version;
-       &quot;
+   ```
+   @Version("2.1.0")
+   package com.adobe.aem.guides.wknd.core.models;
    
+   import org.osgi.annotation.versioning.Version;
+   ```
+
 每当对此包中的文件进行更改时， [必须从语义上调整包版本](https://semver.org/). 如果没有，Maven项目的 [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) 检测无效的包版本并中断已构建的。 幸运的是，在失败时，Maven插件会报告无效的Java™包版本及其应该的版本。 更新 `@Version("...")` 声明 `package-info.java` 到插件建议要修复的版本。
 
 ### 署名实施 {#byline-implementation}
