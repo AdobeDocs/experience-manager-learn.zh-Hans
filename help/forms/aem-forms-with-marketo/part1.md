@@ -8,9 +8,9 @@ role: Developer
 level: Experienced
 exl-id: 45047852-4fdb-4702-8a99-faaad7213b61
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -55,3 +55,7 @@ Marketo公开了一个REST API，它允许远程执行系统的许多功能。 �
 1. BlankTemplatePackage.zip — 这是自适应表单模板。 使用包管理器导入此文件。
 1. marketo.json — 这是用于配置数据源的swagger文件。
 1. MarketoAndForms.MarketoAndForms.core-1.0-SNAPSHOT.jar — 这是执行自定义身份验证的包。 如果您无法完成教程或包无法按预期工作，请随时使用此工具。
+
+## 后续步骤
+
+[创建自定义身份验证](./part2.md)

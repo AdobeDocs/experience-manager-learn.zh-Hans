@@ -7,10 +7,10 @@ role: Developer
 level: Beginner
 kt: 5859
 thumbnail: 37324.jpg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 3%
+source-wordcount: '135'
+ht-degree: 8%
 
 ---
 
@@ -28,5 +28,8 @@ ht-degree: 3%
 如果需要，您可以下载 [自适应表单模板](assets/peak-application-template.zip) ，然后使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 
 
+## 后续步骤
+
+[创建自适应表单片段](./create-form-fragment.md)
 
 

@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 0%
+source-wordcount: '340'
+ht-degree: 1%
 
 ---
 
@@ -234,3 +234,8 @@ return "Pre Fill Forms Using Campaign Profile";
 * [使用包管理器将示例自适应表单导入AEM](assets/pre-fill-af-from-campaign.zip)
 * 确保使用其电子邮件ID由Adobe Campaign中的用户档案共享的用户登录AEM。 例如，如果AEM用户的电子邮件ID为johndoe@adobe.com，则您需要在ACS中拥有电子邮件为johndoe@adobe.com的用户档案。
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).
+
+## 后续步骤
+
+[使用表单数据模型创建Adobe Campaign配置文件](./partfour.md)
+

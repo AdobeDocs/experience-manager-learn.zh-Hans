@@ -8,9 +8,9 @@ role: Developer
 level: Experienced
 exl-id: e028837b-13d8-4058-ac25-ed095f49524c
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
@@ -38,3 +38,7 @@ ACS拥有丰富的API公开，使ACS能够与我们选择的技术进行交互�
 * [创建本文所述的服务用户](/help/forms/adaptive-forms/service-user-tutorial-develop.md). 确保部署与文章关联的OSGi包。
 * 将ACS私钥存储在etc/key/campaign/private.key中。 您必须在etc/key下创建一个名为campaign的文件夹。
 * [为服务用户“data”提供对campaign文件夹的读取访问权限。](http://localhost:4502/useradmin)
+
+## 后续步骤
+
+[生成JWT和访问令牌](partone.md)

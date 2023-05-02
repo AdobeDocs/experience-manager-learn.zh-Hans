@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 1%
+source-wordcount: '363'
+ht-degree: 2%
 
 ---
 
@@ -201,3 +201,8 @@ public class MarketoConfigurationService {
 1. 在您的AEM服务器上构建并部署包。
 1. [将您的浏览器指向configMgr](http://localhost:4502/system/console/configMgr) 和搜索“Marketo凭据服务配置”
 1. 指定特定于您的Marketo实例的相应属性
+
+## 后续步骤
+
+[创建基于RESTful服务的数据源](./part3.md)
+

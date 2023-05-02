@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '1808'
-ht-degree: 4%
+source-wordcount: '1804'
+ht-degree: 3%
 
 ---
 
@@ -21,15 +21,15 @@ ht-degree: 4%
 + [要遵循的最佳实践](adaptive-forms/best-practices-adaptive-forms.md)
 + [使用AEM作者设置OKTA身份验证](adaptive-forms/single-sign-on-with-okta.md)
 + 创建您的第一个自适应表单 {#creating-your-first-adaptive-form}
-   + [简介和设置](creating-your-first-adaptive-form/introduction-and-setup.md)
-   + [创建自适应表单模板](creating-your-first-adaptive-form/create-adaptive-form-template.md)
-   + [创建表单片段](creating-your-first-adaptive-form/create-form-fragment.md)
-   + [创建自适应表单](creating-your-first-adaptive-form/create-adaptive-form.md)
-   + [配置根面板和添加子面板](creating-your-first-adaptive-form/configuring-root-panel-and-adding-child-panels.md)
-   + [将组件添加到“人员”面板](creating-your-first-adaptive-form/adding-components-to-people-panel.md)
-   + [向收入面板添加表](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
-   + [配置资产面板](creating-your-first-adaptive-form/configuring-assets-panel.md)
-   + [使用自定义函数和代码编辑器](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
+   + [1 — 简介和设置](creating-your-first-adaptive-form/introduction-and-setup.md)
+   + [2 — 创建自适应表单模板](creating-your-first-adaptive-form/create-adaptive-form-template.md)
+   + [3 — 创建表单片段](creating-your-first-adaptive-form/create-form-fragment.md)
+   + [4 — 创建自适应表单](creating-your-first-adaptive-form/create-adaptive-form.md)
+   + [5 — 配置根面板和添加子面板](creating-your-first-adaptive-form/configuring-root-panel-and-adding-child-panels.md)
+   + [6 — 将组件添加到“人员”面板](creating-your-first-adaptive-form/adding-components-to-people-panel.md)
+   + [7 — 将表添加到收入小组](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
+   + [8 — 配置资产面板](creating-your-first-adaptive-form/configuring-assets-panel.md)
+   + [9 — 使用自定义函数和代码编辑器](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
 + 处理表单提交 {#handling-af-form-submissions}
    + [创建审阅工作流](handling-form-submissions/creating-a-review-workflow.md)
    + [配置自适应表单以触发工作流](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
@@ -173,9 +173,9 @@ ht-degree: 4%
    + [将文档保存到文件系统](custom-workflow-steps/write-payload-document.md)
    + [将提交的数据保存在字符串变量中](custom-workflow-steps/save-submitted-data-in-string-variable.md)
 + 自定义工作流组件{#custom-workflow-component}
-   + [简介](custom-workflow-component/introduction.md)
-   + [写入Java代码](custom-workflow-component/custom-process-step-aem-workflow.md)
-   + [创建工作流组件](custom-workflow-component/custom-workflow-component.md)
+   + [1.导言](custom-workflow-component/introduction.md)
+   + [2写Java代码](custom-workflow-component/custom-process-step-aem-workflow.md)
+   + [3 — 创建工作流组件](custom-workflow-component/custom-workflow-component.md)
 + AEM工作流中的变量{#variables-aem-workflow}
    + [简介 — 工作流中的变量](variables-aem-workflow/introduction.md)
    + [XML变量](variables-aem-workflow/part1.md)
@@ -218,11 +218,11 @@ ht-degree: 4%
    + [第4部分 — 将所有内容拼合在一起](aem-forms-with-marketo/part4.md)
 
 + AEM Forms与Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
-   + [简介](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
-   + [第1部分 — 生成令牌](aem-forms-with-adobe-campaign/partone.md)
-   + [第2部分 — 在表单提交时创建ACS配置文件](aem-forms-with-adobe-campaign/parttwo.md)
-   + [第3部分 — 使用ACS用户档案信息预填表单](aem-forms-with-adobe-campaign/partthree.md)
-   + [第4部分 — 使用表单数据模型创建ACS配置文件](aem-forms-with-adobe-campaign/partfour.md)
+   + [1 — 导言](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
+   + [2 — 生成令牌](aem-forms-with-adobe-campaign/partone.md)
+   + [3 — 在表单提交时创建ACS配置文件](aem-forms-with-adobe-campaign/parttwo.md)
+   + [4 — 使用ACS用户档案信息预填表单](aem-forms-with-adobe-campaign/partthree.md)
+   + [5 — 使用表单数据模型创建ACS配置文件](aem-forms-with-adobe-campaign/partfour.md)
 
 + 欢迎工具包 {#welcome-kit}
    + [简介](welcome-kit/introduction.md)
@@ -231,10 +231,10 @@ ht-degree: 4%
    + [测试解决方案](welcome-kit/testing-the-solution.md)
 
 + 使用Forms和Acrobat Sign响应应用程序 {#react-ic-sign}
-   + [1.导言](react-ic-sign/introduction.md)
+   + [1 — 导言](react-ic-sign/introduction.md)
    + [2 — 生成文档](react-ic-sign/create-ic-document.md)
-   + [3-Acrobat Sign API包装器](react-ic-sign/wrapper-sign-api.md)
-   + [4 — 生成Sign小组件](react-ic-sign/create-servlet-to-expose-endpoint.md)
+   + [3 - Acrobat Sign API包装器](react-ic-sign/wrapper-sign-api.md)
+   + [4 — 生成Sign Widget](react-ic-sign/create-servlet-to-expose-endpoint.md)
    + [5 — 部署示例资产](react-ic-sign/deploy-assets-on-your-server.md)
 + 文档服务 {#document-services}
    + [PDF forms类型](document-services/pdf-forms-and-documents.md)

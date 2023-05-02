@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 404c345b-efc3-44b9-bc38-6d911627ff5a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -25,3 +25,8 @@ ht-degree: 3%
 请参阅 [自适应表单模板文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) 更多详细信息
 
 如果需要，您可以下载 [自适应表单模板](assets/peak-application-template.zip) ，然后使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+
+## 后续步骤
+
+[创建自适应表单片段](./create-form-fragment.md)
+

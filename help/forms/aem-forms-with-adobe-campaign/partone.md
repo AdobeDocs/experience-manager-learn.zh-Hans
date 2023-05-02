@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: a5e5aad4-064f-4638-a53a-88dfb1d27c8f
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -242,3 +242,7 @@ public class CampaignServiceImpl implements CampaignService {
 ## 生成访问令牌 {#generate-access-token}
 
 然后，我们通过进行POST调用，将生成的JWT交换为访问令牌。 然后，此访问令牌将作为授权密钥在HTTP标头中发送，以用于后续的REST调用
+
+## 后续步骤
+
+[在表单提交时在ACS中创建用户档案](./parttwo.md)

@@ -8,10 +8,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 86a67f43-882f-4e97-b528-17492689fcfc
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,3 +27,7 @@ ht-degree: 4%
 请参阅 [自适应表单模板文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html) 更多详细信息
 
 如果需要，您可以下载 [配偶详细信息片段 ](assets/spouse-details-fragment.zip) ，然后使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+
+## 后续步骤
+
+[创建自适应表单](./create-adaptive-form.md)
