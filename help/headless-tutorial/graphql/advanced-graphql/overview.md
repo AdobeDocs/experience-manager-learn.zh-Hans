@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%
@@ -78,7 +78,7 @@ WKND Site项目具有所有必需的配置，因此您可以在完成 [快速设
 
 >[!NOTE]
 >
-> 保存端点后，您将看到有关访问安全控制台的模式窗口，如果要配置对端点的访问，可通过该模式窗口调整安全设置。 但是，安全权限本身不在本教程的涵盖范围内。 有关更多信息，请参阅 [AEM文档](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security.html).
+> 保存端点后，您将看到有关访问安全控制台的模式窗口，如果要配置对端点的访问，可通过该模式窗口调整安全设置。 但是，安全权限本身不在本教程的涵盖范围内。 有关更多信息，请参阅 [AEM文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
 
 ### 查看WKND内容结构和语言根文件夹
 

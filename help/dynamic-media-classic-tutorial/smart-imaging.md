@@ -10,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 678671c3-af25-4da1-bc14-cbc4cc19be8d
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 Smart Imaging还得益于与Adobe中同类最佳的优质服务完全集成而带来的额外性能提升。 此服务可找到在服务器、网络和对等点之间的最佳Internet路由，这些路由的延迟和/或数据包丢失率低于Internet上的默认路由。
 
-详细了解 [智能成像](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html).
+详细了解 [智能成像](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
 
 ## 智能成像的优势
 
@@ -35,7 +35,7 @@ Smart Imaging还得益于与Adobe中同类最佳的优质服务完全集成而�
 
 如前所述，智能成像可利用Adobe Sensei AI功能并与现有的图像预设配合使用，将图像自动转换为最佳的下一代图像格式，如WebP，同时保持可视保真度。
 
-详细了解 [智能成像的工作原理](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)，包括诸如受支持的图像格式（以及如果您不使用这些格式会发生什么情况）等详细信息，以及这些格式对现有图像预设的影响。
+详细了解 [智能成像的工作原理](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)，包括诸如受支持的图像格式（以及如果您不使用这些格式会发生什么情况）等详细信息，以及这些格式对现有图像预设的影响。
 
 ## 智能成像的影响
 
@@ -53,7 +53,7 @@ Smart Imaging还得益于与Adobe中同类最佳的优质服务完全集成而�
 
 启用“智能成像”后，您将需要验证它是否按预期工作。
 
-您可能还有其他有关智能成像的问题。 我们汇编了一系列常见问题解答(FAQ)及其答案。 阅读 [常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html).
+您可能还有其他有关智能成像的问题。 我们汇编了一系列常见问题解答(FAQ)及其答案。 阅读 [常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
 
 ## 其他资源
 

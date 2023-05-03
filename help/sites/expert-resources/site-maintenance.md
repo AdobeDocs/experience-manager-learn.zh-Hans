@@ -4,13 +4,13 @@ seo-title: Your Routine Site Maintenance Guide
 description: 无论您是管理员、作者还是开发人员，站点维护都会处理您的AEM Sites实例的各个方面。 使用本指南可确保您的策略已设置为成功。
 seo-description: Whether you're an admin, author, or developer, site maintenance touches every aspect of your AEM Sites instance. Use this guide to ensure your strategy is set up for success.
 audience: author, marketer, developer
-source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
+exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1084'
 ht-degree: 5%
 
 ---
-
 
 # 网站维护提示和技巧
 
@@ -44,23 +44,23 @@ ht-degree: 5%
 
 对存储库的每次更新都会创建新的内容修订版本。 因此，每次更新时，存储库的大小都会增大。 为避免存储库增长失控，需要清理旧的修订版本以释放磁盘资源。
 
-#### [Lucene二进制文件清理](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/operations-dashboard.html?lang=en#automated-maintenance-tasks)
+#### [Lucene二进制文件清理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-dashboard.html#automated-maintenance-tasks)
 
 清除Lucene二进制文件并减少正在运行的数据存储大小要求。
 
-#### [数据存储垃圾](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/data-store-garbage-collection.html?lang=en)
+#### [数据存储垃圾](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html)
 
 删除AEM中的资产后，可能会从节点层次结构中删除对基础数据存储记录的引用，但数据存储记录本身会保留。 此未引用的数据存储记录将变为“垃圾”，无需保留。 如果存在大量未引用的资产，则最好删除这些资产，保留空间，优化备份和文件系统维护性能。
 
-#### [工作流清除](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/workflows-administering.html?lang=en)
+#### [工作流清除](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/workflows-administering.html)
 
 最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此，您可以定期从存储库中清除已完成或正在运行的工作流实例。
 
-#### [审核日志维护](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/operations-audit-log.html?lang=en)
+#### [审核日志维护](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html)
 
 符合审核日志记录条件的AEM事件会生成大量存档数据。 由于复制、资产上传和其他系统活动，此数据会随着时间而快速增长。
 
-#### [安全性](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en)
+#### [安全性](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=zh-Hans)
 
 确保密切遵循安全检查列表最佳实践，以确保最安全的AEM实例。
 
@@ -80,7 +80,7 @@ ht-degree: 5%
 
 启动项允许完成新的促销、销售或网站推广工作，而不会影响当前部署的页面。 此外，它们可以被安排自动上线，而无需出席或监督，从而允许作者今天完成下周（或下季度）的工作，并且不会在页面开发开始前一天匆忙进行页面开发 — 这真的是TIME的礼物！)
 
-### [内容片段](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments.html?lang=en)
+### [内容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
 
 内容片段是可自定义的“信息块”，可在整个站点上轻松重复使用。 如果需要更改，只需更改原始块，更新即可在所有使用的地方看到 — 立即！
 

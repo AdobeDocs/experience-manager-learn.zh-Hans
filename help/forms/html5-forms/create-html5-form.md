@@ -6,7 +6,7 @@ topics: development
 audience: developer
 doc-type: article
 activity: implement
-version: 6.4,6.5
+version: 6.5
 kt: 4419
 thumbnail: kt-4419.jpg
 topic: Development
@@ -14,7 +14,7 @@ role: User
 level: Beginner
 exl-id: 67a01c41-d284-4518-adb5-21702e22ccfa
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -59,6 +59,6 @@ xdp模板的高级属性允许您指定发布日期、提交处理程序、表�
 
 **提交URL**  — 这是将处理您的HTML5表单提交的URL。 我们将在下一课中介绍此内容。 如果未在此处指定提交URL，则会调用默认的提交处理程序，该处理程序会将表单数据返回到浏览器。
 
-**HTML渲染配置文件** - HTML5表单具有“用户档案”概念，这些用户档案作为REST端点公开，以便能够移动渲染表单模板。 大多数情况下，默认渲染配置文件应足以渲染表单。 如果默认渲染配置文件不满足您的需求，则 [自定义用户档案](https://experienceleague.adobe.com/docs/experience-manager-64/forms/html5-forms/custom-profile.html) 可以创建并与表单关联。
+**HTML渲染配置文件** - HTML5表单具有“用户档案”概念，这些用户档案作为REST端点公开，以便能够移动渲染表单模板。 大多数情况下，默认渲染配置文件应足以渲染表单。 如果默认渲染配置文件不满足您的需求，则 [自定义用户档案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/custom-profile.html) 可以创建并与表单关联。
 
 **预填充服务**  — 预填充服务通常用于使用从后端数据源获取的数据填充您的表单。

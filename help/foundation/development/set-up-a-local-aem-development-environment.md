@@ -1,7 +1,7 @@
 ---
 title: 设置本地AEM开发环境
 description: 了解如何设置本地开发环境以进行Experience Manager。 熟悉本地安装、Apache Maven、集成开发环境，以及调试和疑难解答。 使用Eclipse IDE、CRXDE-Lite、Visual Studio代码和IntelliJ。
-version: 6.4, 6.5
+version: 6.5
 feature: Developer Tools
 topics: development
 activity: develop
@@ -12,7 +12,7 @@ level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 thumbnail: aem-local-dev-env.jpg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '2603'
 ht-degree: 1%
@@ -138,7 +138,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ### [!DNL Eclipse] IDE
 
-的 **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** 是Java™开发中比较流行的IDE之一，这在很大程度上是因为它是开源的，而且 ***免费***! Adobe提供插件， **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**，对于 [!DNL Eclipse] 以便于使用良好的GUI进行开发，以便将代码与本地AEM实例同步。 的 [!DNL Eclipse] 对于很大程度上不熟悉AEM的开发人员，建议使用IDE，因为 [!DNL AEM Developer Tools].
+的 **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** 是Java™开发中比较流行的IDE之一，这在很大程度上是因为它是开源的，而且 ***免费***! Adobe提供插件， **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)**，对于 [!DNL Eclipse] 以便于使用良好的GUI进行开发，以便将代码与本地AEM实例同步。 的 [!DNL Eclipse] 对于很大程度上不熟悉AEM的开发人员，建议使用IDE，因为 [!DNL AEM Developer Tools].
 
 #### 安装和设置
 
@@ -194,7 +194,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ### [!DNL CRXDE Lite]
 
-[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html) 是基于浏览器的AEM存储库视图。 [!DNL CRXDE Lite] 嵌入在AEM中，允许开发人员执行标准开发任务，如编辑文件、定义组件、对话框和模板。 [!DNL CRXDE Lite] is ***not*** 旨在成为完整的开发环境，但可用作调试工具。 [!DNL CRXDE Lite] 在扩展或仅了解代码库以外的产品代码时，此变量将非常有用。 [!DNL CRXDE Lite] 提供了存储库的强大视图，以及有效测试和管理权限的方法。
+[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/developing-with-crxde-lite.html) 是基于浏览器的AEM存储库视图。 [!DNL CRXDE Lite] 嵌入在AEM中，允许开发人员执行标准开发任务，如编辑文件、定义组件、对话框和模板。 [!DNL CRXDE Lite] is ***not*** 旨在成为完整的开发环境，但可用作调试工具。 [!DNL CRXDE Lite] 在扩展或仅了解代码库以外的产品代码时，此变量将非常有用。 [!DNL CRXDE Lite] 提供了存储库的强大视图，以及有效测试和管理权限的方法。
 
 [!DNL CRXDE Lite] 应与其他IDE一起使用来测试和调试代码，但绝不能将其用作主要开发工具。 它具有有限的语法支持、无法自动完成的功能，以及与源代码管理系统的集成也有限。
 
