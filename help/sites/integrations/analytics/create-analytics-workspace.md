@@ -10,9 +10,9 @@ kt: 6409
 thumbnail: KT-6296.jpg
 exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 last-substantial-update: 2022-06-15T00:00:00Z
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: 5a8d3983a22df4e273034c8d8441b31e6bc764ba
 workflow-type: tm+mt
-source-wordcount: '2177'
+source-wordcount: '2161'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 了解如何将从Adobe Experience Manager网站捕获的数据映射到Adobe Analytics报表包中的量度和维度。 了解如何使用Adobe Analytics的Analysis Workspace功能构建详细的报表功能板。
 
-## 将构建的内容
+## 要构建的内容 {#what-build}
 
-WKND营销团队希望了解哪个行动动员(CTA)按钮在主页上的效果最佳。 在本教程中，我们将在Analysis Workspace中创建一个新项目，以可视化不同CTA按钮的性能并了解用户在网站上的行为。 当用户单击WKND主页上的行动动员(CTA)按钮时，将使用Adobe Analytics捕获以下信息。
+WKND营销团队希望了解 `Call to Action (CTA)` 按钮在主页上的效果最佳。 在本教程中，在 **Analysis Workspace** 可视化不同CTA按钮的性能并了解用户在网站上的行为。 当用户单击WKND主页上的行动动员(CTA)按钮时，将使用Adobe Analytics捕获以下信息。
 
 **Analytics变量**
 
@@ -41,8 +41,8 @@ WKND营销团队希望了解哪个行动动员(CTA)按钮在主页上的效果�
 
 ### 目标 {#objective}
 
-1. 创建新报表包或使用现有报表包。
-1. 配置 [转化变量(eVar)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) 和 [成功事件（事件）](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html) 中。
+1. 创建报表包或使用现有报表包。
+1. 配置 [转化变量(eVar)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html) 和 [成功事件（事件）](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html) 中。
 1. 创建 [Analysis Workspace项目](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) 借助工具分析数据，可让您快速构建、分析和共享分析。
 1. 与其他团队成员共享Analysis Workspace项目。
 
@@ -50,13 +50,13 @@ WKND营销团队希望了解哪个行动动员(CTA)按钮在主页上的效果�
 
 本教程是 [使用Adobe Analytics跟踪已单击的组件](./track-clicked-component.md) 并假定您具有：
 
-* A **Launch资产** 和 [Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html) 已启用
-* **Adobe Analytics** 测试/开发报表包ID和跟踪服务器。 请参阅以下文档以了解 [创建新报表包](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
-* [Experience Platform调试器](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) 在上加载的Launch资产中配置的浏览器扩展 [https://wknd.site/us/en.html](https://wknd.site/us/en.html) 或启用了Adobe数据层的AEM网站。
+* A **标记属性** 和 [Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) 已启用
+* **Adobe Analytics** 测试/开发报表包ID和跟踪服务器。 请参阅以下文档以了解 [创建报表包](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html).
+* [Experience Platform调试器](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) 浏览器扩展配置了在上加载的标记属性 [WKND站点](https://wknd.site/us/en.html) 或启用了Adobe数据层的AEM网站。
 
 ## 转化变量(eVar)和成功事件（事件）
 
-Custom Insight转化变量(或eVar)放置在网站选定网页上的Adobe代码中。 其主要目的是对自定义市场营销报告中的转化成功量度进行细分。 eVar可以基于访问，且功能与Cookie类似。 传递到eVar变量的值会在预定时间段内始终跟随用户。
+Custom Insight转化变量(或eVar)放置在网站选定网页上的Adobe代码中。 其主要目的是对自定义市场营销报告中的转化成功量度进行细分。 eVar可以是基于访问的，其功能与Cookie类似。 传递到eVar变量的值会在预定时间段内跟随用户。
 
 将eVar设置为访客的值后，Adobe会自动记住该值直到它过期。 访客在eVar值处于活动状态时遇到的任何成功事件将计入eVar值。
 
@@ -92,28 +92,28 @@ eVar最适用于衡量原因和影响，例如：
 
    ![添加新eVar](assets/create-analytics-workspace/add-new-evars.png)
 
-1. 为每个eVar和 **保存** 您的更改。 我们使用这些eVar在下一部分中创建Analysis Workspace项目。 因此，用户友好的名称使变量易于被发现。
+1. 为每个eVar和 **保存** 您的更改。 在Analysis Workspace项目中，会使用具有适当名称的eVar，因此，用户友好名称会使变量易于发现。
 
    ![eVar](assets/create-analytics-workspace/evars.png)
 
 ### 配置成功事件
 
-接下来，我们创建一个用于跟踪CTA按钮单击的事件。
+接下来，让我们创建一个事件以跟踪CTA按钮单击。
 
 1. 从 **报表包管理器** 窗口，选择 **报表包Id** 单击 **编辑设置**.
 1. 单击 **转化** > **成功事件**
-1. 使用 **新增** 选项，可创建新的自定义成功事件以跟踪CTA按钮的单击，然后 **保存** 您的更改。
+1. 使用 **新增** 选项，可创建自定义成功事件以跟踪CTA按钮单击，然后 **保存** 您的更改。
    * `Event` : `event8`
    * `Name`:`CTA Click`
    * `Type`:`Counter`
 
    ![eVar](assets/create-analytics-workspace/add-success-event.png)
 
-## 在Analysis Workspace中创建新项目 {#workspace-project}
+## 在Analysis Workspace中创建项目 {#workspace-project}
 
 Analysis Workspace是一个灵活的浏览器工具，允许您快速构建分析并共享分析。 使用拖放界面，您可以进行分析、添加可视化图表以生动呈现数据、组织数据集、与组织中的任何人共享项目并安排其时间。
 
-接下来，创建新 [项目](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace) 构建功能板以分析整个网站中CTA按钮的性能。
+接下来，创建 [项目](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace) 构建功能板以分析整个网站中CTA按钮的性能。
 
 1. 从Analytics工具栏中，选择 **工作区** 单击 **创建新项目**.
 
@@ -121,7 +121,7 @@ Analysis Workspace是一个灵活的浏览器工具，允许您快速构建分�
 
 1. 选择从 **空白项目** 或选择一个预建模板，由Adobe提供或由您的组织创建的自定义模板。 根据您所考虑的分析或用例，可以使用多个模板。 [了解更多](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) 关于可用的不同模板选项。
 
-   在工作区项目中，从左边栏访问面板、表格、可视化图表和组件。 这些是您的项目构建基块。
+   在工作区项目中，从左边栏访问面板、表格、可视化图表和组件。 它们是你项目的构件。
 
    * **[组件](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)**  — 组件包括维度、量度、区段或日期范围，所有这些组件都可以合并到自由格式表中，以开始回答您的业务问题。 请务必先熟悉每个组件类型，然后再开始投入分析。 掌握组件术语后，即可开始拖放到自由格式表中以构建分析。
    * **[可视化图表](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)**  — 然后，在数据的顶部添加可视化图表（如条形图或折线图），以便使其更加直观地呈现。 在最左侧的边栏中，选择中间的可视化图标，以查看所有可用的可视化图表。
@@ -131,7 +131,7 @@ Analysis Workspace是一个灵活的浏览器工具，允许您快速构建分�
 
 ### 使用Analysis Workspace添加数据可视化
 
-接下来，构建一个表格，以直观地表示用户如何与WKND网站主页上的行动动员(CTA)按钮进行交互。 要构建此类表示形式，让我们使用 [使用Adobe Analytics跟踪已单击的组件](./track-clicked-component.md). 以下是与WKND网站的行动动员按钮进行用户交互时跟踪的数据的快速摘要。
+接下来，构建一个表以创建用户如何与交互的可视表示形式 `Call to Action (CTA)` 按钮。 要构建此类表示形式，让我们使用 [使用Adobe Analytics跟踪已单击的组件](./track-clicked-component.md). 以下是与WKND网站的行动动员按钮进行用户交互时跟踪的数据的快速摘要。
 
 * `eVar5` -  `Page template`
 * `eVar6` - `Page Id`
@@ -149,7 +149,7 @@ Analysis Workspace是一个灵活的浏览器工具，允许您快速构建分�
 
    ![页面量度 — CTA点击](assets/create-analytics-workspace/evar8-cta-click.png)
 
-1. 让我们按页面的模板类型来划分。 从组件中选择页面模板量度，然后将页面模板量度拖放到页面名称维度上。 您现在可以查看按其模板类型划分的页面名称。
+1. 让我们按页面的模板类型划分页面。 从组件中选择页面模板量度，然后将页面模板量度拖放到页面名称维度上。 您现在可以查看按其模板类型划分的页面名称。
 
    * **之前**
 
@@ -159,7 +159,7 @@ Analysis Workspace是一个灵活的浏览器工具，允许您快速构建分�
 
       ![eVar5量度](assets/create-analytics-workspace/evar5-metrics.png)
 
-1. 要了解用户在WKND网站页面上与CTA按钮进行交互时，我们需要通过添加按钮ID(eVar8)量度来进一步划分“页面模板”量度。
+1. 要了解用户在WKND网站页面上与CTA按钮进行交互时如何进行交互，需要添加按钮ID(eVar8)量度以进一步细分。
 
    ![eVar8](assets/create-analytics-workspace/evar8.png)
 
@@ -235,7 +235,7 @@ Analytics分类是一种在生成报表时对Analytics变量数据进行分类�
 
 #### 将转化变量替换为分类变量
 
-1. 从Analytics工具栏中，选择 **工作区** 并打开我们在中创建的工作区 [在Analysis Workspace中创建新项目](#workspace-project) 部分。
+1. 从Analytics工具栏中，选择 **工作区** ，然后打开在 [在Analysis Workspace中创建项目](#create-a-project-in-analysis-workspace) 部分。
 
    ![工作区按钮ID](assets/create-analytics-workspace/workspace-report-button-id.png)
 
@@ -251,7 +251,7 @@ Analytics分类是一种在生成报表时对Analytics变量数据进行分类�
       ![工作区按钮之后](assets/create-analytics-workspace/wknd-button-after.png)
 
 1. 您可以注意到按钮ID量度中包含行动动员(CTA)按钮的按钮ID现在已替换为分类模板中提供的相应名称。
-1. 让我们将Analytics Workspace表与WKND主页进行比较，并了解CTA按钮点击计数及其分析。 根据工作区自由格式表数据，显然用户在 **立即滑雪** WKND Home Page Camping在西澳大利亚的四次 **了解更多** 按钮。
+1. 让我们将Analytics Workspace表与WKND主页进行比较，并了解CTA按钮点击计数及其分析。 根据工作区自由格式表数据，用户显然已22次单击 **立即滑雪** WKND Home Page Camping在西澳大利亚的四次 **了解更多** 按钮。
 
    ![CTA报表](assets/create-analytics-workspace/workspace-report-buttons-wknd.png)
 
@@ -265,4 +265,4 @@ Analytics分类是一种在生成报表时对Analytics变量数据进行分类�
 
 ## 恭喜！
 
-您刚刚学习了如何将从Adobe Experience Manager网站捕获的数据映射到Adobe Analytics报表包中的量度和维度，对量度执行分类，以及使用Adobe Analytics的Analysis Workspace功能构建详细的报表功能板。
+您刚刚学习了如何将从Adobe Experience Manager网站捕获的数据映射到Adobe Analytics报表包中的量度和维度。 此外，还对量度执行了分类，并使用Adobe Analytics的Analysis Workspace功能构建了详细的报表功能板。
