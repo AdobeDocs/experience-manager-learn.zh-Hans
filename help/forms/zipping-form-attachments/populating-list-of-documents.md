@@ -1,31 +1,31 @@
 ---
 title: 用于填充列表变量的自定义流程步骤
 description: 自定义流程步骤，用于填充文档和字符串类型的列表变量
-feature: 工作流
-topic: 开发
+feature: Workflow
+topic: Development
 version: 6.5
 role: Developer
 level: Beginner
 kt: kt-8063
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '167'
 ht-degree: 1%
 
 ---
 
-
 # 自定义流程步骤
 
 
-已实施自定义流程步骤来填充数组列表工作流变量。 如果您不熟悉如何创建OSGi包，请[按照以下说明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)操作
+实施了自定义流程步骤，以使用附件和附件名称填充“数组列表”类型的工作流变量。 然后，在发送电子邮件工作流组件中使用此变量。 如果您不熟悉创建OSGi包，请 [按照以下说明操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
 自定义流程步骤中的代码会执行以下操作
 
 * 在有效负荷文件夹下查询所有自适应表单附件。 文件夹名称将作为进程参数传递到进程步骤。
 
-* 填充`listOfDocuments`工作流变量
-* 填充`attachmentNames`工作流变量
+* 填充 `listOfDocuments` 工作流变量
+* 填充 `attachmentNames` 工作流变量
 * 设置工作流变量的值(`no_of_attachments`)
 
 ```java
@@ -112,6 +112,10 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 >[!NOTE]
 >
 > 请确保在工作流中定义了以下变量，以使代码正常工作
-> *listOfDocuments* - ArrayList of Documents类型的变量
-> *attachmentNames* — 字符串ArrayList类型的变量
-> *no_of_attachments* — 双精度类型的变量
+> *listOfDocuments*  — 文档数组列表类型的变量
+> *attachmentNames*  — 字符串数组列表类型的变量
+> *no_of_attachments*  — 双精度类型的变量
+
+## 后续步骤
+
+[在本地系统上测试解决方案](./test.md)

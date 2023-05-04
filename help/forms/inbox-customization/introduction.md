@@ -13,10 +13,10 @@ role: Developer
 level: Experienced
 exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 4%
+source-wordcount: '206'
+ht-degree: 5%
 
 ---
 
@@ -55,3 +55,7 @@ AEM收件箱可整合来自各种AEM组件(包括Forms工作流)的通知和任�
 * 隐藏导航选项
 
 ![收件箱品牌化](assets/branding-customization.PNG)
+
+## 后续步骤
+
+[添加已婚列](./add-married-column.md)

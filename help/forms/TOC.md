@@ -7,7 +7,7 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 3%
@@ -45,10 +45,10 @@ ht-degree: 3%
    + [级联下拉列表](some-useful-integrations/geonames-org.md)
    + [与ServiceNow集成](some-useful-integrations/service-now.md)
 + 创建OSGi包 {#creating-your-first-osgi-bundle}
-   + [设置环境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
-   + [创建OSGi服务](creating-your-first-osgi-bundle/create-osgi-service.md)
-   + [创建Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
-   + [包括第三方包](creating-your-first-osgi-bundle/include-third-party-jars.md)
+   + [1 — 设置环境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
+   + [2 — 创建OSGi服务](creating-your-first-osgi-bundle/create-osgi-service.md)
+   + [3 — 创建Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
+   + [4 — 包含第三方包](creating-your-first-osgi-bundle/include-third-party-jars.md)
 + 自适应表单 {#adaptive-forms}
    + [在Windows上安装AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [在Linux上安装32位包](adaptive-forms/installing-aem-form-on-linux.md)
@@ -101,16 +101,16 @@ ht-degree: 3%
    + [使用Salesforce形成数据模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [将项目动态添加到选择组件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
 + 选择和组合DAM文件夹内容{#select-dam-folder-content}
-   + [简介](display-and-assemble-dam-folder-contents/introduction.md)
-   + [填充选择组](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
-   + [组合选定资产](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
-   + [在本地部署资产](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
+   + [1 — 导言](display-and-assemble-dam-folder-contents/introduction.md)
+   + [2 — 填充选择组](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
+   + [3 — 组合选定的资产](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
+   + [4 — 在本地部署资产](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
 + 使用表单数据模型预填自适应表单{#prefill-fdm-db}
-   + [简介](prefill-fdm-db/introduction.md)
-   + [创建数据库表](prefill-fdm-db/create-database-tables.md)
-   + [配置表单数据模型](prefill-fdm-db/configuring-form-data-model.md)
-   + [获取请求参数](prefill-fdm-db/get-request-parameter.md)
-   + [创建自适应表单](prefill-fdm-db/create-adaptive-form.md)
+   + [1 — 导言](prefill-fdm-db/introduction.md)
+   + [2 — 创建数据库表](prefill-fdm-db/create-database-tables.md)
+   + [3 — 配置表单数据模型](prefill-fdm-db/configuring-form-data-model.md)
+   + [4 — 获取请求参数](prefill-fdm-db/get-request-parameter.md)
+   + [5 — 创建自适应表单](prefill-fdm-db/create-adaptive-form.md)
 + UI提示和技巧{#ui-tips-and-tricks}
    + [切换密码字段文本](ui-tips-tricks/toggle-password.md)
    + [空间工具栏按钮](ui-tips-tricks/toolbar-buttons.md)
@@ -118,14 +118,14 @@ ht-degree: 3%
    + [将图标添加到导航选项卡](ui-tips-tricks/active-complete.md)
    + [自动完成字段](ui-tips-tricks/auto-complete.md)
 + 自定义收件箱{#inbox-customization}
-   + [简介](inbox-customization/introduction.md)
-   + [添加自定义列](inbox-customization/add-married-column.md)
-   + [使用美观模板](inbox-customization/use-sightly-template.md)
+   + [1 — 导言](inbox-customization/introduction.md)
+   + [2 — 添加自定义列](inbox-customization/add-married-column.md)
+   + [3 — 使用美观模板](inbox-customization/use-sightly-template.md)
 + 电子邮件表单附件{#zipping-form-attachments}
-   + [简介](zipping-form-attachments/introduction.md)
-   + [Zip表单附件](zipping-form-attachments/custom-process-step.md)
-   + [电子邮件表单附件](zipping-form-attachments/populating-list-of-documents.md)
-   + [测试解决方案](zipping-form-attachments/test.md)
+   + [1 — 导言](zipping-form-attachments/introduction.md)
+   + [2 — 邮政编码表单附件](zipping-form-attachments/custom-process-step.md)
+   + [3 — 电子邮件表单附件](zipping-form-attachments/populating-list-of-documents.md)
+   + [4 — 测试解决方案](zipping-form-attachments/test.md)
 + 存储和检索自适应表单{#store-and-retrieve-af-with-2fa}
    + [简介](store-and-retrieve-af-with-2fa/introduction.md)
    + [配置数据源](store-and-retrieve-af-with-2fa/configure-data-source.md)

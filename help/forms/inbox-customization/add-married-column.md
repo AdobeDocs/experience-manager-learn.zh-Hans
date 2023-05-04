@@ -12,9 +12,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
@@ -95,3 +95,7 @@ return isMarried(inboxItem);
 提交表单将触发工作流，并且会向“管理员”用户分配任务。 您应会在“已婚”列下看到一个值，如此屏幕快照中所示
 
 ![已婚人士](assets/married-column.PNG)
+
+## 后续步骤
+
+[显示已婚列](./use-sightly-template.md)
