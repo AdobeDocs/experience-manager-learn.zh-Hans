@@ -1,20 +1,20 @@
 ---
 title: 更新数据库中表单的签名状态
 description: 使用AEM工作流更新数据库中已签名表单的签名状态
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6888
 thumbnail: 6888.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 75852a4b-7008-4c65-bab1-cc5dbf525e20
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 3%
+source-wordcount: '116'
+ht-degree: 2%
 
 ---
-
 
 # 更新签名状态
 
@@ -68,7 +68,10 @@ public class UpdateSignatureStatusWorkflowStep implements WorkflowProcess {
 }
 ```
 
-## 资产
+## Assets
 
-更新签名状态工作流可从此处[下载](assets/update-signature-status-workflow.zip)
+更新签名状态工作流可以 [从此处下载](assets/update-signature-status-workflow.zip)
 
+## 后续步骤
+
+[自定义摘要步骤以显示下一个用于签名的表单](./customize-summary-component.md)

@@ -1,26 +1,26 @@
 ---
 title: 为Web渠道创建交互式通信
-seo-title: 为Web渠道创建交互式通信
+seo-title: Create Interactive Communication for Web Channel
 description: 这是创建首个交互式通信文档的多步教程的6部分。 在本部分中，我们将为Web渠道创建交互式通信。
-seo-description: 这是创建首个交互式通信文档的多步教程的6部分。 在本部分中，我们将为Web渠道创建交互式通信。
+seo-description: This is part 6 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create Interactive Communication for Web Channel.
 uuid: a1b29c5b-a323-4bda-aa99-5fb98614b690
 discoiquuid: b44ff855-9ead-471e-8f0f-b562b88a5337
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a0a0c8dc-5302-446c-9fec-e23fe1320e34
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '177'
 ht-degree: 1%
 
 ---
-
 
 # 为Web渠道创建交互式通信
 
@@ -41,9 +41,12 @@ ht-degree: 1%
 
    1. 取消选中“打印渠道”复选框。 我们不会为打印渠道创建文档。
    1. Web:选择此选项可为Web渠道生成文档
-   1. 交互式通信：模板：**global>RetirementAccountStatemen** t（这是在前面的步骤中创建的模板）
+   1. 交互式通信：模板： **global>RetiementAccountStatemen** t（这是在前面的步骤中创建的模板）
    1. 主题：**引用主题 — >画布2.0**
 
 1. 点按创建
 1. 您可以单击完成或编辑以关闭该对话框。
 
+## 后续步骤
+
+[将文本和图像添加到文档](./partseven.md)

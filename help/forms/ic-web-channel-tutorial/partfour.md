@@ -15,10 +15,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: d742d77b-a064-46e8-862a-2d3e1cc56f63
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 0%
+source-wordcount: '123'
+ht-degree: 1%
 
 ---
 
@@ -34,3 +34,7 @@ ht-degree: 0%
 模板将具有目标区域/占位符，其中将包含各种类型的文档片段。 例如，模板可以具有徽标的目标区域和文本内容的另一个目标区域。
 
 创建Web渠道文档模板后，您便可以根据模板创建交互式通信文档。
+
+## 后续步骤
+
+[创建文档片段](./partfive.md)

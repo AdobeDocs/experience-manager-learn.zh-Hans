@@ -16,9 +16,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 4e64aa99-0b1c-49e9-95a7-d254017b80f4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -36,3 +36,7 @@ ht-degree: 0%
 表单数据模型是所有交互式通信的基础。 表单数据模型的获取/读取操作会从后端数据源获取数据，并用于填充交互式通信文档。
 
 创建表单数据模型后，可将其用作创建文档片段和交互式通信文档的基础。
+
+## 后续步骤
+
+[使用设计器创建模板](./create-xdp-layout-using-forms-designer.md)

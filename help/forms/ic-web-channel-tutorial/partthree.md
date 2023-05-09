@@ -7,9 +7,9 @@ version: 6.4,6.5
 role: Developer
 level: Beginner
 exl-id: 798012e5-5099-4fd0-82ad-a21f64a97aca
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -33,3 +33,9 @@ ht-degree: 0%
 有关详细信息，请参阅 [配置数据源](parttwo.md).
 
 创建表单数据模型后，可将其用作创建文档片段和交互式通信文档的基础。
+
+## 后续步骤
+
+[创建Web渠道文档模板](./partfour.md)
+
+

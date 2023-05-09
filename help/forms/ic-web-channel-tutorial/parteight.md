@@ -15,10 +15,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: ba9ce6a2-f6e8-4e84-a23a-f4803879f635
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '197'
+ht-degree: 2%
 
 ---
 
@@ -49,3 +49,7 @@ AEM Forms 6.4使用各种类型的图表显示数据非常简单。 我们将使
 **AEM Forms 6.5中的折线图设置**
 
 ![linechart64](assets/linechart65.PNG)
+
+## 后续步骤
+
+[配置表](./partnine.md)

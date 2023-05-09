@@ -1,20 +1,20 @@
 ---
 title: 自定义摘要组件
 description: 扩展摘要步骤组件以包含导航到包中下一个表单的功能。
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6894
 thumbnail: 6894.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: fb68579d-241c-414d-92f4-13194f4d1923
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 2%
+source-wordcount: '185'
+ht-degree: 1%
 
 ---
-
 
 # 自定义摘要步骤
 
@@ -31,9 +31,9 @@ ht-degree: 2%
 ![component-prop](assets/componentprop.PNG)
 
 我们添加了一个按钮，可导航到下一个表单进行签名
-![template-code](assets/template-code.PNG)
+![模板代码](assets/template-code.PNG)
 
-summary.jsp具有以下代码。 它引用了类别id **getnextform**&#x200B;标识的客户端库
+summary.jsp具有以下代码。 它引用了由类别ID标识的客户端库 **getnextform**
 
 ```java
 <%--
@@ -44,8 +44,10 @@ summary.jsp具有以下代码。 它引用了类别id **getnextform**&#x200B;标
 <ui:includeClientLib categories="getnextform"/>
 ```
 
-## 资产
+## Assets
 
-可从此处下载自定义摘要组件[](assets/custom-summary-step.zip)
+自定义摘要组件可以 [从此处下载](assets/custom-summary-step.zip)
 
+## 后续步骤
 
+[获取下一个用于签名的表单](./create-client-lib.md)

@@ -14,10 +14,10 @@ role: Developer
 level: Beginner
 exl-id: 1949aeff-ae56-4abd-8e63-23c2fb4859f2
 last-substantial-update: 2019-08-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 2%
+source-wordcount: '172'
+ht-degree: 4%
 
 ---
 
@@ -38,3 +38,8 @@ ht-degree: 2%
 * 创建文档片段
 * 配置表和图表
 * 使用监视文件夹在批处理模式下生成文档
+
+
+## 后续步骤
+
+[设置Tomcat](./set-up-tomcat.md)

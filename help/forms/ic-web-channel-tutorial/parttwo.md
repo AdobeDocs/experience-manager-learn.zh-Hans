@@ -15,10 +15,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 11145e87-7eef-4183-ac6f-efc8d35d0670
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 0%
+source-wordcount: '104'
+ht-degree: 5%
 
 ---
 
@@ -29,3 +29,7 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/22344?quality=12&learn=on)
 
 请将提供给您的swagger文件用作与本教程相关的资产的一部分。 资产可在 [简介](introduction.md) 本教程的。
+
+## 后续步骤
+
+[创建表单数据模型](./partthree.md)

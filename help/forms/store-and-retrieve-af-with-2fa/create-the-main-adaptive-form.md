@@ -11,9 +11,9 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 73de0ac4-ada6-4b8e-90a8-33b976032135
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
@@ -32,3 +32,8 @@ ht-degree: 0%
 * 已完成 [StoreAfWithAttachments表单](assets/store-af-with-attachments-form.zip) 可下载并导入到AEM实例中。
 
 * 的 [与此表单关联的AEM工作流](assets/workflow-model-store-af-with-attachments.zip) 需要将导入到AEM实例中，才能使表单正常工作。
+
+
+## 后续步骤
+
+[创建用于检索保存表单的表单](./retrieve-saved-form.md)

@@ -1,17 +1,18 @@
 ---
 title: 创建客户端库
 description: 用于获取要签名的下一个表单的客户端库代码
-feature: 自适应表单
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6907
 thumbnail: 6907.jpg
-topic: 开发
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 3c148b30-2c7d-428d-9a3c-f3067ca3a239
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 4%
+source-wordcount: '91'
+ht-degree: 3%
 
 ---
 
@@ -71,6 +72,10 @@ $(document).ready(function()
 });
 ```
 
-## 资产
+## Assets
 
 [可从此处下载clientlib](assets/get-next-form-client-lib.zip)
+
+## 后续步骤
+
+[为此用例创建自定义表单模板](./create-af-template.md)

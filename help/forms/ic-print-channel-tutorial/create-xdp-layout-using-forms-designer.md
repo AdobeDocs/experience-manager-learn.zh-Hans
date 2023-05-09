@@ -17,10 +17,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 1bda648c-01be-44f1-aa73-3f5e7365d094
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 0%
+source-wordcount: '131'
+ht-degree: 1%
 
 ---
 
@@ -28,8 +28,12 @@ ht-degree: 0%
 
 在本部分中，我们将查看使用AEM Forms Designer创建的布局文件。
 
-每个打印渠道文档都基于使用AEM Forms Designer工具创建的模板。 通常，在模板中创建用于保存文档片段、图像或布局片段的区域或目标区域。 理想情况下，布局未定义任何内容。 这会将布局与推荐做法的内容分离。
+每个打印渠道文档都基于使用AEM Forms Designer工具创建的模板。 通常，在模板中创建用于保存文档片段、图像或布局片段的区域或目标区域。 理想情况下，布局未定义任何内容。 这会将布局与推荐的内容分离。
 
 以下视频重点介绍了在本教程中使用的布局中定义的部分或目标区域。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37890?quality=12&learn=on)
+
+## 后续步骤
+
+[创建文档片段](./create-document-fragment.md)

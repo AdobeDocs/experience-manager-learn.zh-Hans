@@ -11,10 +11,10 @@ role: Developer
 level: Experienced
 exl-id: b278652f-6c09-4abc-b92e-20bfaf2e791a
 last-substantial-update: 2020-11-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 1%
+source-wordcount: '212'
+ht-degree: 2%
 
 ---
 
@@ -40,3 +40,8 @@ ht-degree: 1%
 * 表单数据模型
 * OSGi服务/组件
 * AEM客户端库
+
+
+## 后续步骤
+
+[配置数据源](./configure-data-source.md)

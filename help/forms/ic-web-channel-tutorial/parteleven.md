@@ -1,26 +1,26 @@
 ---
 title: 配置投资组合面板
-seo-title: 配置投资组合面板
+seo-title: Configuring Investment Mix Panel
 description: 这是创建您的第一个交互式通信文档的多步教程的11部分。在本部分中，我们将添加饼图以显示当前和模型投资组合。
-seo-description: 这是创建您的第一个交互式通信文档的多步教程的11部分。在本部分中，我们将添加饼图以显示当前和模型投资组合。
+seo-description: This is part 11 of multistep tutorial for creating your first interactive communications document.In this part, we will add pie charts to display the current and model investment mix.
 uuid: b0132912-cb6e-4dec-8309-5125d29ad291
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 77de4e76-53ee-467c-a71c-d1d3ea15283b
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 774d7a6e-2b8f-4a70-98c5-e7712478ff75
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
-
 
 # 配置投资组合面板
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 * 我们将增加2张饼图，以代表账户持有人目前和模型投资组合。
 
-## 流动资产组合{#current-asset-mix}
+## 流动资产组合 {#current-asset-mix}
 
 * 点按右侧的“CurrentAssetMix”面板，然后选择“+”图标并插入文本组件。 将默认文本更改为“当前资产组合”。
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 * ![currentassetmix](assets/currentassetmixchart.png)
 
-## 模型资产组合{#model-asset-mix}
+## 模型资产组合 {#model-asset-mix}
 
 * 点按右侧的“RecommendedAssetMix”面板，然后选择“+”图标并插入文本组件。 将默认文本更改为“模型资产组合”。
 
@@ -58,3 +58,6 @@ ht-degree: 0%
 
 * ![assettype](assets/modelassettypechart.png)
 
+## 后续步骤
+
+[准备发送Web渠道文档](./parttwelve.md)

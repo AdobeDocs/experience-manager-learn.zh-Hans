@@ -16,9 +16,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 2fe3f950-bc2a-4e91-8d91-00438691727a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -38,3 +38,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >确保插入到文档片段中的表单数据模型元素是根元素的后代。 例如，在此用例中，确保您选择的用户对象的元素是余额对象的子项
+
+## 后续步骤
+
+[创建打印渠道文档](./create-print-channel-document.md)

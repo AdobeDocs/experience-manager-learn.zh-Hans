@@ -1,10 +1,10 @@
 ---
 title: 使用监视文件夹生成打印渠道文档
-seo-title: 使用监视文件夹生成打印渠道文档
+seo-title: Generating Print Channel Documents Using Watched Folder
 description: 这是为打印渠道创建首个交互式通信文档的多步教程的10部分。 在本部分中，我们将使用监视文件夹机制生成打印渠道文档。
-seo-description: 这是为打印渠道创建首个交互式通信文档的多步教程的10部分。 在本部分中，我们将使用监视文件夹机制生成打印渠道文档。
+seo-description: This is part 10 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will generate print channel documents using the watched folder mechanism.
 uuid: 9e39f4e3-1053-4839-9338-09961ac54f81
-feature: 交互式通信
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,16 +12,16 @@ activity: implement
 version: 6.4,6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
-topic: 开发
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 9bb05c94-2a7b-4149-b567-186eb08b1c66
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
-
 
 # 使用监视文件夹生成打印渠道文档
 
@@ -31,11 +31,11 @@ ht-degree: 0%
 
 在AEM中配置监视文件夹时，会关联在将文件放入监视文件夹后执行的ECMA脚本或Java代码。 在本文中，我们将重点介绍ECMA脚本，该脚本将生成打印渠道文档并将其保存到文件系统中。
 
-已监视的文件夹配置和ECMA脚本是您在本教程[开头导入的资产的一部分](introduction.md)
+监视的文件夹配置和ECMA脚本是您在 [本教程的开头](introduction.md)
 
 放入监视文件夹的输入文件具有以下结构。 ECMA脚本读取帐号，并为每个帐户生成打印渠道文档。
 
-有关用于生成文档的ECMA脚本的更多详细信息，请[参阅本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+有关用于生成文档的ECMA脚本的更多详细信息， [请参阅本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 ```xml
 <accountnumbers>
@@ -78,6 +78,6 @@ ht-degree: 0%
 
 * 按照ECMA脚本中的指定，在保存位置中检查pdf文件。
 
+## 后续步骤
 
-
-
+[在表单提交时打开代理UI](./opening-agent-ui-on-form-submission.md)
