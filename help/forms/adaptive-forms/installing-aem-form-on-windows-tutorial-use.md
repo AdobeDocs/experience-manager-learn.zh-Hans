@@ -9,7 +9,7 @@ role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+source-git-commit: 757c8ad251d058bbe48cc3cd354fec533ec4e968
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 6%
@@ -40,10 +40,9 @@ ht-degree: 6%
 
 * 确保安装了相应的JDK
    * AEM 6.2，您需要：OracleSE 8 JDK 1.8.x（64位）
-* 
    * AEM 6.3和AEM 6.4中，您需要：OracleSE 8 JDK 1.8.x（64位）
-* AEM 6.5您需要JDK 8或JDK 11
-* [官方JDK要求](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=zh-Hans) 此处列出
+   * AEM 6.5您需要JDK 8或JDK 11
+   * [官方JDK要求](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=zh-Hans) 此处列出
 * 确保将JAVA_HOME设置为指向您安装的JDK。
    * 要在窗口中创建JAVA_HOME变量，请执行以下步骤：
       * 右键单击“My Computer（我的计算机）” ，然后选择“Properties（属性）”
@@ -71,20 +70,20 @@ ht-degree: 6%
 * 文档服务需要这两个属性才能正常工作
 * 保存sling.properties文件
 * [下载相应的表单附加包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)
-* 使用安装Forms Add on包 [包管理器。](http://localhost:4502/crx/packmgr/index.jsp)
+* 使用安装Forms Add on包 [包管理器](http://localhost:4502/crx/packmgr/index.jsp).
 * 在包上安装了添加后，需要执行以下步骤
 
-       * **确保所有包都处于活动状态。 （AEMFD签名包除外）。**
-       * **所有包通常需要5分钟或更长时间才能进入活动状态。**
-   
+   * **确保所有包都处于活动状态。 （AEMFD签名包除外）。**
+   * **所有包通常需要5分钟或更长时间才能进入活动状态。**
+
    * **所有包均处于活动状态（AEMFD签名包除外）后，请重新启动系统以完成AEM Forms安装**
 
 ## sun.util.calendar包到允许列表
 
 1. 在您的 [浏览器窗口](http://localhost:4502/system/console/configMgr)
-2. 搜索并打开反序列化防火墙配置： `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
-3. 添加 `sun.util.calendar` 作为 `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
-4. 保存更改。
+1. 搜索并打开反序列化防火墙配置： `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
+1. 添加 `sun.util.calendar` 作为 `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
+1. 保存更改。
 
 恭喜你!!! 您现在已在系统上安装并配置AEM Forms。
 根据您的需求，您可以配置  [Reader扩展](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) 或 [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) 在您的服务器上
