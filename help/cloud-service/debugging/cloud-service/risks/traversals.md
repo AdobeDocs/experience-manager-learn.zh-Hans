@@ -11,10 +11,10 @@ hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: 48943df64d9793066f8f19497ef42f8aa80e5795
+source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
 workflow-type: tm+mt
-source-wordcount: '838'
-ht-degree: 5%
+source-wordcount: '826'
+ht-degree: 10%
 
 ---
 
@@ -108,7 +108,7 @@ _什么是遍历警告？_
 
 ## 1.分析{#analyze}
 
-首先，识别哪些AEM发布服务显示遍历警告。 为此，请从Cloud Manager中， [下载发布服务&#39; `aemerror` 日志](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target=&quot;_blank&quot;}(来自所有环境（开发、暂存和生产）) __三天__.
+首先，识别哪些AEM发布服务显示遍历警告。 为此，请从Cloud Manager中， [下载发布服务&#39; `aemerror` 日志](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"} （开发、暂存和生产） __三天__.
 
 ![下载AEMas a Cloud Service日志](./assets/traversals/download-logs.jpg)
 
@@ -159,14 +159,14 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
 
 __更改查询__ 添加新查询限制，以将其解析为现有索引限制。 如有可能，请更改查询，而不是更改索引。
 
-+ [了解如何优化查询性能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target=&quot;_blank&quot;}
++ [了解如何优化查询性能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 
 ### 调整索引
 
 __更改（或创建）AEM索引__ 这样现有查询限制可解析为索引更新。
 
-+ [了解如何优化现有索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target=&quot;_blank&quot;}
-+ [了解如何创建索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target=&quot;_blank&quot;}
++ [了解如何优化现有索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [了解如何创建索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target="_blank"}
 
 ## 3.验证{#verify}
 
@@ -174,9 +174,9 @@ __更改（或创建）AEM索引__ 这样现有查询限制可解析为索引更
 
 ![解释查询](./assets/traversals/verify.gif)
 
-如果仅 [对查询的调整](#adjust-the-query) ，则可以通过开发人员控制台的，在AEMas a Cloud Service上直接测试查询 [解释查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target=&quot;_blank&quot;}。 Explain Query针对AEM创作服务运行，但是，由于索引定义在创作和发布服务中是相同的，因此对AEM创作服务验证查询就足够了。
+如果仅 [对查询的调整](#adjust-the-query) ，则可以通过开发人员控制台的，在AEMas a Cloud Service上直接测试查询 [解释查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. Explain Query针对AEM创作服务运行，但是，由于索引定义在创作和发布服务中是相同的，因此对AEM创作服务验证查询就足够了。
 
-如果 [对指数的调整](#adjust-the-index) ，则必须将索引部署到AEMas a Cloud Service。 部署索引调整后，开发人员控制台的 [解释查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target=&quot;_blank&quot;}可用于执行并进一步优化查询。
+如果 [对指数的调整](#adjust-the-index) ，则必须将索引部署到AEMas a Cloud Service。 部署索引调整后，开发人员控制台的 [解释查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} 可用于执行和优化查询。
 
 最终，所有更改（查询和代码）都将提交到Git，并使用Cloud Manager部署到AEMas a Cloud Service。 部署后，将测试与原始遍历警告关联的代码路径，并验证遍历警告是否不再显示在 `aemerror` 日志。
 
@@ -191,7 +191,7 @@ __更改（或创建）AEM索引__ 这样现有查询限制可解析为索引更
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜索与索引" tabindex="-1"><img class="is-bordered-r-small" src="../../../cloud-5/imgs/009-thumb.png" alt="Cloud 5 — 搜索与索引"></a>
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜索与索引" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 — 搜索与索引"></a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
@@ -199,7 +199,7 @@ __更改（或创建）AEM索引__ 这样现有查询限制可解析为索引更
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜索与索引">Cloud 5 — 搜索与索引</a></p>
                <p class="is-size-6">Cloud 5团队展示了在AEMas a Cloud Service上搜索和索引的进出方法。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                </a>
            </div>
        </div>
@@ -222,7 +222,7 @@ __更改（或创建）AEM索引__ 这样现有查询限制可解析为索引更
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="内容搜索与索引">内容搜索和索引文档</a></p>
                <p class="is-size-6">了解如何在AEMas a Cloud Service中创建和管理索引。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                </a>
            </div>
        </div>
@@ -244,7 +244,7 @@ __更改（或创建）AEM索引__ 这样现有查询限制可解析为索引更
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="实现您的Oak索引现代化">实现您的Oak索引现代化</a></p>
                <p class="is-size-6">了解如何将AEM 6 Oak索引定义转换为与AEMas a Cloud Service兼容，以及今后如何维护索引。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                </a>
            </div>
        </div>
@@ -266,7 +266,7 @@ __更改（或创建）AEM索引__ 这样现有查询限制可解析为索引更
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="索引定义文档">Lucene索引文档</a></p>
                <p class="has-ellipsis is-size-6">Apache Oak Jackrabbit Lucene索引引用，其中记录了所有支持的Lucene索引配置。</p>
                <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                </a>
            </div>
        </div>
