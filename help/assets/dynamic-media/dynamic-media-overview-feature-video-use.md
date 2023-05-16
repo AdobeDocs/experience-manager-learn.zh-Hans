@@ -7,9 +7,9 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 * 将URL复制到图像和响应式查看器
 * 智能裁剪URL变体
 
-## Dynamic Media与AEM Sites以及任何其他CMS
+## 与AEM Sites一起使用
 
 >[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
@@ -48,7 +48,7 @@ ht-degree: 0%
 * 使用图像预设从本地下载
 * 创建和发布交互式横幅
 
-## Dynamic Media构建混合媒体收集和自定义查看器
+## 构建混合媒体收集
 
 >[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 * 从旋转集、视频和照片创建混合媒体集
 * 编辑和使用自定义混合媒体查看器
 
-## Dynamic Media图像预设
+## 图像预设
 
 >[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 * 始终使用锐化
 * 用于为调整图像预设大小添加额外命令的URL修饰符字段
 
-## Dynamic Media高级URL修饰符
+## 高级URL修饰符
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
@@ -86,7 +86,7 @@ ht-degree: 0%
 * 裁剪到图像路径
 * 从Photoshop文件创建文本模板
 
-## Dynamic Media控制JPEG文件大小(KB)
+## JPEG文件大小管理
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
@@ -97,13 +97,13 @@ ht-degree: 0%
 
 使用2个命令调整jpeg压缩设置，以平衡jpeg图像质量与生成的文件大小（以千字节为单位），从而提高页面加载速度。 QLT通过调整jpeg压缩质量设置来定义图像质量。 JPEG大小命令允许您指定使用压缩需要达到的文件大小。
 
-## 将CC隐藏式字幕添加到Dynamic Media视频
+## 隐藏式字幕
 
 >[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 通过附加复制URL以指向附加的隐藏式字幕文件文档（web.VTT Sidecar文件，其中包含任何视频的CC信息），可轻松地将隐藏式字幕添加到Dynamic Media视频。
 
-## 在AEM Dynamic Media中使用图像锐化
+## 图像锐化
 
 此视频介绍了锐化图像对保持图像保真度至关重要的原因，以及如何使用高级设置来制作完美图像的原因。
 

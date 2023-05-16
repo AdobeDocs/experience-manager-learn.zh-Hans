@@ -6,10 +6,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 8bb7771effc95c70a9ddeffb1c54a1c2282e06dd
+source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 27%
+source-wordcount: '395'
+ht-degree: 25%
 
 ---
 
@@ -104,21 +104,26 @@ ht-degree: 27%
 
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media概述](dynamic-media/dynamic-media-overview-feature-video-use.md)
-   + [智能裁剪](dynamic-media/smart-crop-feature-video-use.md)
-   + [体验片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
-   + [交互式视频](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
-   + [视频播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
-   + [360视频](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
-   + [自定义视频缩略图](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
-   + [图像锐化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
-   + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + [查看器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
-   + [全景和垂直图像查看器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
-   + [查看器和Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
+   + [图像修饰符和智能成像](dynamic-media/dynamic-media-snapshot.md)
+   + 图像 {#images}
+      + [智能裁剪](dynamic-media/smart-crop-feature-video-use.md)
+      + [图像锐化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
+      + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
+   + 与AEM Sites一起使用 {#dm-with-aem-sites}
+      + [体验片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+      + [Dynamic Media核心组件](dynamic-media/dynamic-media-core-components.md)
+   + 视频 {#video}
+      + [交互式视频](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
+      + [视频播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
+      + [360视频](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
+      + [自定义视频缩略图](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
+      + [Dynamic Media智能裁剪视频](dynamic-media/dynamic-media-smart-crop-video.md)
+   + 查看器 {#viewers}
+      + [查看器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
+      + [全景和垂直图像查看器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
+      + [查看器和Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
    + [Dynamic Media Classic桌面应用程序](dynamic-media/dynamic-media-classic-desktop-application.md)
    + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + [Dynamic Media智能裁剪视频](dynamic-media/dynamic-media-smart-crop-video.md)
-   + [Dynamic Media核心组件](dynamic-media/dynamic-media-core-components.md)
 
    + 教程 {#tutorials}
       + [创建轮播集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
