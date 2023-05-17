@@ -10,9 +10,9 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: d049eb78e2302aa97de0d228b65fba842ad38b74
 workflow-type: tm+mt
-source-wordcount: '2961'
+source-wordcount: '2943'
 ht-degree: 1%
 
 ---
@@ -132,7 +132,6 @@ IDP的公共证书将添加到AEM全局信任存储，并用于验证由IDP发�
 _当 [SAML 2.0身份验证处理程序OSGi配置属性 `handleLogout` 设置为 `true`](#saml-20-authenticationsaml-2-0-authentication) 或 [AuthnRequest签名/SAML断言加密](#install-aem-public-private-key-pair) 必需_
 
 1. 以AEM管理员身份登录AEM作者，以上传私钥。
-1. 导航到 __工具>安全>信任存储__，然后选择 __身份验证服务__ 用户，然后选择 __属性__ 中。
 1. 导航到 __工具>安全>用户__，然后选择 __身份验证服务__ 用户，然后选择 __属性__ 中。
 1. 选择 __密钥库__ 选项卡。
 1. 创建或打开密钥库。 如果创建密钥库，请保护密码安全。
