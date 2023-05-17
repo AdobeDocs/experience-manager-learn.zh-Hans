@@ -10,10 +10,10 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: d049eb78e2302aa97de0d228b65fba842ad38b74
+source-git-commit: f6a9e7b32d876a8cd5ce7bf6a2e13aeb5faaf35b
 workflow-type: tm+mt
-source-wordcount: '2943'
-ht-degree: 1%
+source-wordcount: '3123'
+ht-degree: 2%
 
 ---
 
@@ -138,8 +138,21 @@ _当 [SAML 2.0身份验证处理程序OSGi配置属性 `handleLogout` 设置为 
    + A [公共/私有密钥库安装在此密钥库中](#install-aem-public-private-key-pair) 仅当需要AuthnRequest签名/SAML断言加密时。
    + 如果此SAML集成支持注销，但不支持AuthnRequest签名/SAML断言，则空密钥库就足够了。
 1. 选择 __保存并关闭__.
-1. 选择 __身份验证服务__ 用户，然后选择 __激活__ 中。
+1. 创建包含已更新项的包 __身份验证服务__ 用户。
 
+   _使用以下使用包的临时解决方法：_
+
+   1. 导航到&#x200B;__工具 > 部署 > 包__。
+   1. 创建资源包
+      + 包名称： `Authentication Service`
+      + 版本: `1.0.0`
+      + 组: `com.your.company`
+   1. 编辑新 __身份验证服务密钥存储__ 包。
+   1. 选择 __过滤器__ ，并为根路径添加过滤器 `/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`.
+      + 的 `<AUTHENTICATION SERVICE UUID>` 可导航到 __工具>安全>用户__，然后选择 __身份验证服务__ 用户。 UUID是URL的最后一部分。
+   1. 选择 __完成__ 然后 __保存__.
+   1. 选择 __生成__ 按钮 __身份验证服务密钥存储__ 包。
+   1. 生成后，选择 __更多__ > __复制__ 将身份验证服务密钥存储激活到AEM发布。
 
 ## 安装AEM公钥/私钥对{#install-aem-public-private-key-pair}
 
@@ -212,7 +225,21 @@ AuthnRequest签名和SAML断言加密都是可选的，但是，它们都通过 
 1. 新添加的证书显示在 __从CRT文件添加证书__ 中。
    + 记下 __别名__ 因为 [SAML 2.0身份验证处理程序OSGi配置](#saml-20-authentication-handler-osgi-configuration)
 1. 选择 __保存并关闭__.
-1. 选择 __身份验证服务__ 用户，然后选择 __激活__ 中。
+1. 创建包含已更新项的包 __身份验证服务__ 用户。
+
+   _使用以下使用包的临时解决方法：_
+
+   1. 导航到&#x200B;__工具 > 部署 > 包__。
+   1. 创建资源包
+      + 包名称： `Authentication Service`
+      + 版本: `1.0.0`
+      + 组: `com.your.company`
+   1. 编辑新 __身份验证服务密钥存储__ 包。
+   1. 选择 __过滤器__ ，并为根路径添加过滤器 `/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`.
+      + 的 `<AUTHENTICATION SERVICE UUID>` 可导航到 __工具>安全>用户__，然后选择 __身份验证服务__ 用户。 UUID是URL的最后一部分。
+   1. 选择 __完成__ 然后 __保存__.
+   1. 选择 __生成__ 按钮 __身份验证服务密钥存储__ 包。
+   1. 生成后，选择 __更多__ > __复制__ 将身份验证服务密钥存储激活到AEM发布。
 
 ## 配置SAML 2.0身份验证处理程序{#configure-saml-2-0-authentication-handler}
 
