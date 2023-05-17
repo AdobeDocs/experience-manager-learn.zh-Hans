@@ -1,0 +1,197 @@
+---
+title: 内容建模 — AEM Headless第一个教程
+description: 了解如何在AEM中利用内容片段、创建片段模型以及使用GraphQL端点。
+version: Cloud Service
+feature: Content Fragments, GraphQL API
+topic: Headless, Development
+role: Developer
+level: Intermediate
+doc-type: Tutorial
+last-substantial-update: 2023-05-16T00:00:00Z
+jira: KT-13270
+thumbnail: KT-13270.jpeg
+source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
+workflow-type: tm+mt
+source-wordcount: '785'
+ht-degree: 9%
+
+---
+
+
+# 内容建模
+
+欢迎阅读Adobe Experience Manager(AEM)中有关内容片段和GraphQL端点的教程章节。 我们将介绍如何利用内容片段、创建片段模型以及在AEM中使用GraphQL端点。
+
+内容片段提供了一种跨渠道管理内容的结构化方法，从而提供了灵活性和可重用性。 在AEM中启用内容片段允许创建模块化内容，从而增强一致性和适应性。
+
+首先，我们将指导您完成在AEM中启用内容片段的过程，其中涵盖实现无缝集成所需的配置和设置。
+
+接下来，我们将介绍如何创建片段模型，该模型定义结构和属性。 了解如何设计符合内容要求的模型并有效管理它们。
+
+然后，我们将演示如何从模型创建内容片段，并提供有关创作和发布的分步指导。
+
+此外，我们还将探索定义AEM GraphQL端点。 GraphQL可高效地从AEM中检索数据，我们将设置并配置端点以公开所需数据。 持久查询将优化性能和缓存。
+
+在整个教程中，我们将提供说明、代码示例和实用提示。 最后，您将具备启用内容片段、创建片段模型、生成片段以及定义AEM GraphQL端点和保留查询的技能。 开始吧！
+
+## 上下文感知配置
+
+1. 导航到 __工具>配置浏览器__ 为无头体验创建配置。
+
+   ![创建文件夹](./assets/1/create-configuration.png)
+
+   提供 __标题__ 和 __name__，然后检查 __GraphQL持久查询__ 和 __内容片段模型__.
+
+
+## 内容片段模型
+
+1. 导航到 __工具>内容片段模型__ ，然后选择名称为在步骤1中创建的配置的文件夹。
+
+   ![模型文件夹](./assets/1/model-folder.png)
+
+1. 在文件夹中，选择 __创建__ 并命名模型 __Teaser__. 将以下数据类型添加到 __Teaser__ 模型。
+
+   | 数据类型 | 名称 | 必填 | 选项 |
+   |----------|------|----------|---------|
+   | 内容引用 | 资产 | 是 | 如果需要，可添加默认图像。 例如：/content/dam/wknd-headless/assets/AdobeStock_307513975.mp4 |
+   | 单行文本 | 标题 | 是 |
+   | 单行文本 | 预标题 | 否 |
+   | 多行文本 | 描述 | 否 | 确保默认类型为富文本 |
+   | 枚举 | 样式 | 是 | 呈现为下拉菜单。 选项包括“主页” — >“主页”和“特色” — >“特色” |
+
+   ![Teaser模型](./assets/1/teaser-model.png)
+
+1. 在文件夹中，创建另一个名为 __选件__. 单击创建，并为模型指定名称“选件”，然后添加以下数据类型：
+
+   | 数据类型 | 名称 | 必填 | 选项 |
+   |----------|------|----------|---------|
+   | 内容引用 | 资产 | 是 | 添加默认图像。 例如: `/content/dam/wknd-headless/assets/AdobeStock_238607111.jpeg` |
+   | 多行文本 | 描述 | 否 |  |
+   | 多行文本 | 文章 | 否 |  |
+
+   ![选件模型](./assets/1/offer-model.png)
+
+1. 在文件夹中，创建名为 __图像列表__. 单击创建，并为模型指定名称“图像列表”，然后添加以下数据类型：
+
+   | 数据类型 | 名称 | 必填 | 选项 |
+   |----------|------|----------|---------|
+   | 片段引用 | 列表项目 | 是 | 呈现为多个字段。 允许的内容片段模型为选件。 |
+
+   ![图像列表模型](./assets/1/imagelist-model.png)
+
+## 内容片段
+
+1. 现在，导航到资产并为新站点创建文件夹。 单击创建并命名文件夹。
+
+   ![添加文件夹](./assets/1/create-folder.png)
+
+1. 创建文件夹后，选择文件夹并打开其 __属性__.
+1. 在文件夹的 __云配置__ 选项卡，选择配置 [已创建早期版本](#enable-content-fragments-and-graphql).
+
+   ![资产文件夹AEM Headless云配置](./assets/1/cloud-config.png)
+
+   单击新文件夹并创建Teaser。 单击 __创建__ 和 __内容片段__ ，然后选择 __Teaser__ 模型。 为模型命名 __英雄__ 单击 __创建__.
+
+   | 名称 | 注释 |
+   |----------|------|
+   | 资产 | 保留为默认值，或选择其他资产（视频或图像） |
+   | 标题 | `Explore. Discover. Live.` |
+   | 预标题 | `Join use for your next adventure.` |
+   | 描述 | 留空 |
+   | 样式 | `Hero` |
+
+   ![主页片段](./assets/1/teaser-model.png)
+
+## GraphQL 端点
+
+1. 导航到 __工具> GraphQL__
+
+   ![AEM GraphiQL](./assets/1/endpoint-nav.png)
+
+1. 单击 __创建__ 并为新端点指定一个名称并选择新创建的配置。
+
+   ![AEM无头GraphQL端点](./assets/1/endpoint.png)
+
+## GraphQL 持久查询
+
+1. 让我们测试新端点。 导航到 __工具> GraphQL查询编辑器__ 并选择窗口右上方下拉菜单的端点。
+
+1. 在查询编辑器中，创建一些不同的查询。
+
+
+   ```graphql
+   {
+       teaserList {
+           items {
+           title
+           }
+       }
+   }
+   ```
+
+   您应该获得一个包含已创建单个片段的列表 [以上](#create-content).
+
+   对于本练习，请创建一个AEM无头应用程序使用的完整查询。 创建按路径返回单个Teaser的查询。 在查询编辑器中，输入以下查询：
+
+   ```graphql
+   query TeaserByPath($path: String!) {
+   component: teaserByPath(_path: $path) {
+       item {
+       __typename
+       _path
+       _metadata {
+           stringMetadata {
+           name
+           value
+           }
+       }
+       title
+       preTitle
+       style
+       asset {
+           ... on MultimediaRef {
+           __typename
+           _authorUrl
+           _publishUrl
+           format
+           }
+           ... on ImageRef {
+           __typename
+           _authorUrl
+           _publishUrl
+           mimeType
+           width
+           height
+           }
+       }
+       description {
+           html
+           plaintext
+       }
+       }
+   }
+   }
+   ```
+
+   在 __查询变量__ 在底部输入，输入：
+
+   ```json
+   {
+       "path": "/content/dam/pure-headless/hero"
+   }
+   ```
+
+   >[!NOTE]
+   >
+   > 您可能需要调整查询变量 `path` 基于文件夹和片段名称。
+
+
+   运行查询以接收之前创建的内容片段的结果。
+
+1. 单击 __保存__  保留（保存）查询并命名查询 __Teaser__. 这允许我们在应用程序中按名称引用查询。
+
+## 后续步骤
+
+恭喜！您已成功配置AEM as a Cloud Service，以允许创建内容片段和GraphQL端点。 您还创建了内容片段模型和内容片段，并定义了GraphQL端点和持久查询。 现在，您已准备好继续进入下一个教程章节，在该章节中，您将学习如何创建使用本章中创建的内容片段和GraphQL端点的AEM Headless React应用程序。
+
+[下一章：AEM Headless API和React](./2-aem-headless-apis-and-react.md)
