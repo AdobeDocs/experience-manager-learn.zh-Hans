@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1816'
 ht-degree: 2%
 
 ---
@@ -229,6 +229,10 @@ ht-degree: 2%
    + [创建欢迎工具包组件](welcome-kit/create-welcomekit-component.md)
    + [创建工作流组件](welcome-kit/create-workflow-component.md)
    + [测试解决方案](welcome-kit/testing-the-solution.md)
++ 在SPA中嵌入自适应表单 {#embed-form-spa}
+   + [1 — 导言](headless-forms/introduction.md)
+   + [2 — 安装依赖项](headless-forms/install-af-react-libraries.md)
+   + [3 — 获取表单](headless-forms/fetch-the-form.md)
 
 + 使用Forms和Acrobat Sign响应应用程序 {#react-ic-sign}
    + [1 — 导言](react-ic-sign/introduction.md)
