@@ -1,6 +1,6 @@
 ---
-title: 将连接的资产与AEM Sites结合使用
-description: “连接的资产”功能允许AEM Sites作者无缝共享托管在AEM其他实例上的数字资产。
+title: 透過AEM Sites使用連線資產
+description: 連線資產功能可讓AEM Sites作者順暢地共用託管在不同的AEM執行個體上的數位資產。
 feature: Connected Assets
 version: 6.5
 topic: Content Management
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 ---
 
-# 将连接的资产与AEM Assets结合使用{#using-connected-assets-with-aem-assets}
+# 透過AEM Assets使用連線資產{#using-connected-assets-with-aem-assets}
 
-“连接的资产”功能允许AEM Sites作者无缝共享托管在AEM其他实例上的数字资产。
+連線資產功能可讓AEM Sites作者順暢地共用託管在不同的AEM執行個體上的數位資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26060?quality=12&learn=on)
 
-* 00:00 — 高级架构
-* 02:52 — 对连接的资产进行身份验证
-* 03:30 — 使用连接资产中的图像
-* 04:42 — 启用“连接的资产”功能的管理员配置
+* 00:00 — 高階架構
+* 02:52 — 驗證連線資產
+* 03:30 — 使用連線資產的影像
+* 04:42 — 啟用連線資產功能的管理員設定
 
-请查看 [连接的资产支持的部署](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) 以了解您的AEM部署是否可以支持连接的资产。
+請檢閱 [連線資產的支援部署](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) 以瞭解您的AEM部署是否可支援連線資產。

@@ -1,93 +1,93 @@
 ---
-title: AEM Dispatcher虚URL功能
-description: 了解AEM如何使用重写规则将内容映射到更靠近交付边缘的位置，从而处理虚URL和其他技术。
+title: AEM Dispatcher虛名URL功能
+description: 瞭解AEM如何處理虛名URL，以及使用重寫規則將內容對應到更接近傳送邊緣的其他技術。
 version: 6.5
 topic: Administration, Performance
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 4%
 
 ---
 
-
-# 调度程序虚URL
+# Dispatcher虛名URL
 
 [目录](./overview.md)
 
-[&lt; — 上一个：调度程序刷新](./disp-flushing.md)
+[&lt; — 上一步： Dispatcher排清](./disp-flushing.md)
 
 ## 概述
 
-本文档将帮助您了解AEM如何处理虚URL以及使用重写规则将内容映射到更靠近交付边缘的一些其他技术
+本檔案可協助您瞭解AEM如何處理虛名URL，以及使用重寫規則將內容對應到更接近傳送邊緣的其他技術
 
-## 什么是虚URL
+## 什麼是虛名URL
 
-如果您的内容位于合理的文件夹结构中，则并非总是位于易于引用的URL中。  虚URL就像快捷键一样。  引用实际内容所在位置的较短或唯一URL。
+當您的內容位於有意義的資料夾結構中時，它並不總是位於易於參照的URL中。  虛名URL就像捷徑。  參照真實內容所在位置的較短或唯一URL。
 
-示例： `/aboutus` 指向 `/content/we-retail/us/en/about-us.html`
+範例： `/aboutus` 指向 `/content/we-retail/us/en/about-us.html`
 
-AEM作者可以选择在AEM中为某段内容设置虚URL属性并发布该属性。
+AEM作者可以選擇在AEM中設定內容的虛名url屬性並發佈。
 
-要使用此功能，您必须调整调度程序过滤器，以允许虚通过。  对于以作者设置这些虚页面条目所需的速度调整Dispatcher配置文件，这变得不合理。
+若要使用此功能，您必須調整Dispatcher篩選器，以允許虛名通過。  以作者設定這些虛名頁面專案所需的速率調整Dispatcher設定檔案，會變得不合理。
 
-因此，Dispatcher模块具有自动允许内容树中列为虚值的任何内容的功能。
+因此，Dispatcher模組具有自動允許內容樹中列為虛名的任何內容的功能。
 
 
-## 工作原理
+## 運作方式
 
-### 创作虚URL
+### 製作虛名URL
 
-作者访问AEM中的页面，访问页面属性并在虚URL部分添加条目。
+作者在AEM中造訪頁面，然後造訪頁面屬性，並在虛名URL區段中新增專案。
 
-保存更改并激活页面后，现在会将虚值分配给此页面。
+一旦他們儲存變更並啟動頁面，現在會將虛名指派給此頁面。
 
 #### 触屏 UI:
 
-![站点编辑器屏幕上用于AEM创作UI的下拉对话框菜单](assets/disp-vanity-url/aem-page-properties-drop-down.png "aem-page-properties — 下拉列表")
+![網站編輯器畫面上AEM編寫UI的下拉式對話方塊選單](assets/disp-vanity-url/aem-page-properties-drop-down.png "aem-page-properties-drop-down")
 
-![aem页面属性对话框页面](assets/disp-vanity-url/aem-page-properties.png "aem-page-properties")
+![aem頁面屬性對話頁面](assets/disp-vanity-url/aem-page-properties.png "aem-page-properties")
 
-#### 经典内容查找器：
+#### 傳統內容尋找器：
 
-![AEM siteadmin classic ui sidekick页面属性](assets/disp-vanity-url/aem-page-properties-sidekick.png "aem-page-properties-sidekick")
+![AEM siteadmin classic ui sidekick頁面屬性](assets/disp-vanity-url/aem-page-properties-sidekick.png "aem-page-properties-sidekick")
 
-![经典UI页面属性对话框](assets/disp-vanity-url/aem-page-properties-classic.png "aem-page-properties-classic")
+![傳統UI頁面屬性對話方塊](assets/disp-vanity-url/aem-page-properties-classic.png "aem-page-properties-classic")
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-请了解，这很容易导致命名空间问题。
+請瞭解這極易發生名稱空間問題。
 
-虚条目对所有页面都是全局的，这只是您必须针对解决方法进行规划的不足之一，我们稍后会对其中一些解决方法进行解释。
+虛專案是所有頁面的全域專案，這只是您必須規劃的短期回應之一，稍後我們將對此進行解釋。
 </div>
 
-## 资源解析/映射
+## 資源解析/對應
 
-内部重定向的每个虚条目都是sling映射条目。
+每個虛名專案都是用於內部重新導向的sling對應專案。
 
-通过访问AEM实例Felix控制台( `/system/console/jcrresolver` )
+造訪AEM例項Felix主控台即可看到這些地圖( `/system/console/jcrresolver` )
 
-以下是由虚条目创建的映射条目的屏幕截图：
-![资源解析规则中虚条目的控制台屏幕截图](assets/disp-vanity-url/vanity-resource-resolver-entry.png "vanity-resource-resolver-entry")
+以下是虛專案建立的地圖專案的熒幕擷圖：
+![資源解析規則中虛專案的主控台熒幕擷圖](assets/disp-vanity-url/vanity-resource-resolver-entry.png "虛名 — 資源 — 解析器 — 專案")
 
-在上例中，当我们请求AEM实例访问 `/aboutus` 它将决心 `/content/we-retail/us/en/about-us.html`
+在上述範例中，當我們要求AEM執行個體造訪時 `/aboutus` 它將解析為 `/content/we-retail/us/en/about-us.html`
 
-## Dispatcher自动允许过滤器
+## Dispatcher自動允許篩選器
 
-处于安全状态的调度程序在路径上筛选出请求 `/` 通过Dispatcher，因为这是JCR树的根。
+處於安全狀態的Dispatcher會篩選掉路徑上的請求 `/` 透過Dispatcher，因為這是JCR樹的根目錄。
 
-务必确保发布者仅允许 `/content` 其他安全路径等……  而不是像 `/system` 等等。
+請務必確定發佈商僅允許來自 `/content` 和其他安全路徑等。  而不是類似的路徑 `/system` 等……
 
-以下是基本文件夹中存在的麻烦和虚URL `/` 那么，我们如何让他们在保持安全的同时接触出版商？
+以下是基本資料夾中的問題和虛名URL `/` 那麼，我們如何允許他們在保持安全的同時與發佈商取得聯絡？
 
-简单的Dispatcher具有自动过滤允许机制，您必须安装AEM包，然后配置Dispatcher以指向该包页面。
+簡單Dispatcher具有自動篩選允許機制，您必須安裝AEM套件，然後設定Dispatcher指向該套件頁面。
 
 [https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/vanityurls-components](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/vanityurls-components)
 
-Dispatcher的场文件中有一个配置部分：
+Dispatcher的伺服器陣列檔案中有設定區段：
 
 ```
 /vanity_urls { 
@@ -97,38 +97,38 @@ Dispatcher的场文件中有一个配置部分：
 }
 ```
 
-此配置告知Dispatcher从其AEM实例获取此URL，每300秒会前线一次，以获取我们允许通过的项目列表。
+此設定會告訴Dispatcher每300秒從它的AEM執行個體擷取此URL，以擷取我們希望允許通過的專案清單。
 
-它将响应的缓存存储在 `/file` 参数，在本例中为 `/tmp/vanity_urls`
+它會將其回應的快取儲存在 `/file` 引數，因此在此範例中 `/tmp/vanity_urls`
 
-因此，如果您在URI中访问AEM实例，您将看到其获取的内容：
-![从/libs/granite/dispatcher/content/vanityUrls.html呈现的内容屏幕截图](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")
+因此，如果您透過URI造訪AEM執行個體，將會看到其擷取的內容：
+![從/libs/granite/dispatcher/content/vanityUrls.html轉譯之內容的熒幕擷圖](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")
 
-这真的很简单
+其實就是一份清單，非常簡單
 
-## 将规则重写为虚规则
+## 將規則重寫為虛名規則
 
-为什么我们要提及使用重写规则，而不是如上所述内置到AEM中的默认机制？
+我們為什麼要提到使用重寫規則，而不使用如上所述的內建在AEM中的預設機制？
 
-简单地说明了命名空间问题、性能和更高级别的逻辑，这些逻辑可以得到更好的处理。
+簡單說明名稱空間問題、效能，以及可以更好處理的較高等級邏輯。
 
-让我们查看虚条目的示例 `/aboutus` 内容 `/content/we-retail/us/en/about-us.html` 使用Apache的 `mod_rewrite` 模块来完成此操作。
+讓我們再來看看虛專案範例 `/aboutus` 內容 `/content/we-retail/us/en/about-us.html` 使用Apache的 `mod_rewrite` 完成此作業的模組。
 
 ```
 RewriteRule ^/aboutus /content/we-retail/us/en/about-us.html [PT,L,NC]
 ```
 
-此规则将查找虚 `/aboutus` 并从具有PT标志（传递）的渲染器中获取完整路径。
+此規則將尋找虛名 `/aboutus` 並從具有PT旗標(Pass Through)的轉譯器中擷取完整路徑。
 
-它还将停止处理所有其他规则L标记（最后），这意味着它不必遍历大量规则列表，如JCR解析必须执行的操作。
+它也會停止處理所有其他規則L標幟（最後），這表示它不必周遊大量規則清單，例如JCR解析必須執行的規則。
 
-除了不必代理请求并等待AEM发布者响应此方法的这两个元素之外，还可以让其性能大大提高。
+而且不必代理要求並等待AEM發佈者回應此方法的這兩個元素，因此其效能更高。
 
-这里锦上添花的是NC标志（不区分大小写），这表示客户是否在 `/AboutUs` 而不是 `/aboutus` 仍然可以正常使用，并允许获取正确的页面。
+此處錦上添花的是NC標幟（不區分大小寫），表示如果客戶使用 `/AboutUs` 而非 `/aboutus` 仍然有效，並允許擷取正確的頁面。
 
-要创建重写规则以执行此操作，您应在Dispatcher上创建配置文件(示例： `/etc/httpd/conf.d/rewrites/examplevanity_rewrite.rules`)并将其包含在 `.vhost` 用于处理需要应用这些虚url的域的文件。
+若要建立重寫規則來執行此操作，您可在Dispatcher上建立設定檔案(例如： `/etc/httpd/conf.d/rewrites/examplevanity_rewrite.rules`)，並將其納入 `.vhost` 處理需要套用這些虛名url之網域的檔案。
 
-以下是内部包含的示例代码片段 `/etc/httpd/conf.d/enabled_vhosts/we-retail.vhost`
+以下是包含的範常式式碼片段 `/etc/httpd/conf.d/enabled_vhosts/we-retail.vhost`
 
 ```
 <VirtualHost *:80> 
@@ -144,26 +144,26 @@ RewriteRule ^/aboutus /content/we-retail/us/en/about-us.html [PT,L,NC]
 </VirtualHost>
 ```
 
-## 哪种方法和位置
+## 哪一種方法及何處
 
-使用AEM控制虚条目具有以下好处
-- 作者可以即时创建它们
-- 它们与内容一起生活，并可与内容一起打包
+使用AEM控制虛名專案具有以下優點
+- 作者可以即時建立這些檔案
+- 它們與內容共存，並可與內容一起封裝
 
-使用 `mod_rewrite` 控制虚条目具有以下好处
-- 更快地解析内容
-- 更接近最终用户内容请求的边缘
-- 更多可扩展性和选项，用于控制如何在其他条件上映射内容
-- 可能不区分大小写
+使用 `mod_rewrite` 若要控制虛名專案，具有以下優點
+- 解析內容的速度更快
+- 更接近使用者內容請求的邊緣
+- 可控制如何將內容對應到其他條件的可擴充性和選項更多
+- 可不區分大小寫
 
-请同时使用这两种方法，但以下是相关建议和标准，供您在以下情况下使用：
-- 如果虚值是临时的，并且计划的流量级别较低，则使用AEM内置功能
-- 如果虚值是不经常更改且经常使用的主要端点，则使用 `mod_rewrite` 规则。
-- 如果虚命名空间(例如： `/aboutus`)必须对同一AEM实例上的多个品牌重复使用，然后使用重写规则。
+請同時使用這兩種方法，以下是建議與准則，以瞭解何時應使用哪一種方法：
+- 如果虛值是暫時的，並且規劃的流量級別較低，則使用AEM內建功能
+- 如果虛值是不經常變更且頻繁使用的固定端點，則使用 `mod_rewrite` 規則。
+- 如果虛名名稱空間(例如： `/aboutus`)必須在同一AEM執行個體上重複使用多個品牌，然後使用重寫規則。
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
 
-如果要使用AEM虚功能并避免命名空间，可以制定命名约定。  使用嵌套为的虚URL `/brand1/aboutus`, `brand2/aboutus`, `brand3/aboutus`.
+如果您想使用AEM虛名功能並避免名稱空間，您可以制定命名慣例。  使用類似巢狀的虛名URL `/brand1/aboutus`， `brand2/aboutus`， `brand3/aboutus`.
 </div>
 
-[下一步 — >常见日志记录](./common-logs.md)
+[下一個 — >一般記錄](./common-logs.md)

@@ -1,6 +1,6 @@
 ---
-title: 创建JSON Web令牌(JWT)
-description: 创建可与Adobe IMS API交换的JSON Web令牌(JWT)，以获取AEM访问令牌。
+title: 建立JSON Web權杖(JWT)
+description: 建立可與Adobe IMS API交換的JSON Web權杖(JWT)以取得AEM存取權杖。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,12 +16,12 @@ ht-degree: 0%
 
 ---
 
-# 创建JSON Web令牌(JWT)
+# 建立JSON Web權杖(JWT)
 
-JSON Web令牌是一种开放的行业标准RFC 7519方法，用于在双方之间安全地表示声明。 此示例中使用了JWT.io库来生成JWT。
-您在上一步中下载的服务凭据包含PKCS#1格式中的私钥。要从我们使用的字符串中提取私钥 [邦西城堡](https://www.bouncycastle.org/) 库。 Java中的加密库不支持PKCS#1格式。
+JSON Web Token是開放的產業標準RFC 7519方法，可在兩方之間安全地表示宣告。 此範例中使用JWT.io資料庫來產生JWT。
+您在上一步中下載的服務認證包含PKCS#1格式的私密金鑰。若要擷取此字串的私密金鑰，我們使用 [彈回城堡](https://www.bouncycastle.org/) 程式庫。 屬於Java一部分的加密程式庫不支援PKCS#1格式。
 
-以下代码用于生成JWT:
+下列程式碼已用來產生JWT：
 
 ```java
 public String getJWTToken()

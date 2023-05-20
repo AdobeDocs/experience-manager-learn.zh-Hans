@@ -1,54 +1,54 @@
 ---
-title: 使用Cloud Services将Adobe Experience Manager与Adobe Target集成
+title: 使用Cloud Services整合Adobe Experience Manager與Adobe Target
 seo-title: Integrating Adobe Experience Manager (AEM) with Adobe Target using Legacy Cloud Services
-description: 分步说明如何使用AEMCloud Service将Adobe Experience Manager(AEM)与Adobe Target集成
+description: 如何使用AEM Cloud Service將Adobe Experience Manager (AEM)與Adobe Target整合的分步逐步解說
 seo-description: Step by step walkthrough on how to integrate Adobe Experience Manager (AEM) with Adobe Target using AEM Cloud Service
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 9b191211-2030-4b62-acad-c7eb45b807ca
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 3%
 
 ---
 
+# 使用AEM舊版Cloud Services
 
-# 使用AEM旧版Cloud Services
-
-在本节中，我们将讨论如何使用旧版Cloud Services与Adobe Target设置Adobe Experience Manager(AEM)。
+在本節中，我們將討論如何使用舊版Cloud Services透過Adobe Target設定Adobe Experience Manager (AEM)。
 
 >[!NOTE]
 >
-> 带有Adobe Target的AEM旧版Cloud Service **仅**&#x200B;用于建立AEM作者到Adobe Target后端的直接连接，以便于将内容从AEM发布到Target。 AdobeLaunch用于在AEM提供的面向公众的网站体验中公开Adobe Target。
+> 搭配Adobe Target的AEM舊版Cloud Service為 **僅限** 用來建立與Adobe Target的直接AEM Author後端連線，方便將內容從AEM發佈到Target。 Adobe Launch是用來在公開的AEM所提供的網站體驗上公開Adobe Target。
 
-为了使用AEM Experience Fragment选件来支持您的个性化活动，我们继续阅读下一章，并使用旧版云服务将AEM与Adobe Target集成。 要将体验片段作为HTML/JSON选件从AEM推送到Target，并使Target选件与AEM保持同步，需要此集成。 实施[概述部分](./overview.md#personalization-using-aem-experience-fragment)中讨论的情景1需要此集成。
+為了使用AEM體驗片段選件來強化您的個人化活動，請前往下一章，並使用舊版雲端服務整合AEM與Adobe Target。 從AEM以HTML/JSON選件的形式將體驗片段推送到Target，以及保持Target選件與AEM同步時，需要這項整合。 實作時需要這項整合 [概觀一節中討論的情境1](./overview.md#personalization-using-aem-experience-fragment).
 
 ## 前提条件
 
 * **AEM**
 
-   * AEM创作和发布实例是完成本教程所必需的。 如果您尚未设置AEM实例，可以按照[此处](./implementation.md#set-up-aem)的步骤操作。
+   * 完成本教學課程需要AEM作者和發佈執行個體。 如果您尚未設定AEM執行個體，您可以依照步驟進行 [此處](./implementation.md#set-up-aem).
 
 * **Experience Cloud**
-   * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
-   * Experience Cloud配置了以下解决方案
+   * 存取您的組織Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
+   * 布建了下列解決方案的Experience Cloud
       * [Adobe Target](https://experiencecloud.adobe.com)
 
       >[!NOTE]
       >
-      > 需要从[Adobe支持](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html)为客户配置Experience Platform Launch和Adobe I/O，或联系系统管理员
+      > 客戶需要布建以下Experience Platform Launch和Adobe I/O： [Adobe支援](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 或聯絡您的系統管理員
 
 
-### 将AEM与Adobe Target集成
+### 將AEM與Adobe Target整合
 
 >[!VIDEO](https://video.tv.adobe.com/v/28428?quality=12&learn=on)
 
-1. 使用AdobeIMS身份验证创建Adobe TargetCloud Service(*使用Adobe Target API*)(00:34)
-2. 获取Adobe Target客户端代码(01:50)
-3. 为Adobe Target创建AdobeIMS配置(02:08)
-4. 创建用于在Adobe I/O控制台中访问Target API的技术帐户(02:08)
-5. 将Adobe TargetCloud Service添加到AEM体验片段(04:12)
+1. 使用Adobe IMS驗證建立Adobe TargetCloud Service(*使用Adobe Target API*) (00:34)
+2. 取得Adobe Target使用者端代碼(01:50)
+3. 建立適用於Adobe Target的Adobe IMS設定(02:08)
+4. 建立技術帳戶以存取Adobe I/O控制檯中的Target API (02:08)
+5. 將Adobe TargetCloud Service新增至AEM體驗片段(04:12)
 
-此时，您已使用旧版Cloud Services](./using-aem-cloud-services.md#integrating-aem-target-options)成功将[AEM与Adobe Target集成，如选项2中所述。 现在，您应该能够在AEM中创建体验片段，并将体验片段作为HTML选件或JSON选件发布到Adobe Target，然后可用于创建活动。
+此時，您已成功整合 [AEM與Adobe Target搭配使用舊版Cloud Services](./using-aem-cloud-services.md#integrating-aem-target-options) 如選項2中詳述。 您現在應該能夠在AEM中建立體驗片段，並將體驗片段發佈為HTML選件或JSON選件至Adobe Target，然後可以使用建立活動。

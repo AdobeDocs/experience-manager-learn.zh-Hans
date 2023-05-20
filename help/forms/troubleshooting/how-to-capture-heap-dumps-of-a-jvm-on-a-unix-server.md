@@ -1,6 +1,6 @@
 ---
-title: 如何在Unix服务器上捕获JVM的堆转储
-description: 在UNIX服务器上捕获运行Java进程的堆转储
+title: 如何在unix伺服器上擷取JVM的棧積傾印
+description: 擷取在unix伺服器上執行Java處理序的棧積傾印
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何在Unix服务器上捕获JVM的堆转储
+# 如何在unix伺服器上擷取JVM的棧積傾印
 
-*此视频将介绍如何在unix服务器上捕获JVM的堆转储。*
+*此影片逐步解說在unix伺服器上擷取JVM棧積傾印的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335489?quality=12&learn=on)

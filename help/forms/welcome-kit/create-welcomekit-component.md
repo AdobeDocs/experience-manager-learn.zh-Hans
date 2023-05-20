@@ -1,24 +1,25 @@
 ---
-title: 创建欢迎工具包组件
-description: 创建一个AEM站点页面，其中包含根据已提交的表单数据下载资产的链接。
+title: 建立歡迎套件元件
+description: 建立AEM網站頁面，包含根據提交的表單資料下載資產的連結。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
+exl-id: 66496f0e-c121-4b6d-b371-084393ece3ca
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
 
 ---
 
-# 欢迎套件组件
+# 歡迎套件元件
 
-创建了页面组件，以列出页面中可供最终用户下载的资产。 单个资产的路径会保存在名为 **路径**. 提交的表单数据确定要包含的资产。
+已建立頁面元件，以列出頁面中可由一般使用者下載的資產。 個別資產的路徑會儲存在名為的屬性中 **路徑**. 提交的表單資料會決定要包含的資產。
 
-以下代码列出了页面上的资产：
+下列程式碼會列出頁面上的資產：
 
 ```html
    <p class="cmp-press-kit__press-kit-size">
@@ -40,6 +41,3 @@ ht-degree: 0%
 </sly>
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!ready}"></sly>
 ```
-
-
-

@@ -1,6 +1,6 @@
 ---
-title: 批量属性更新示例AEM内容片段控制台扩展
-description: 批量更新内容片段属性的AEM内容片段控制台扩展示例。
+title: 大量屬性更新範例AEM內容片段主控台擴充功能
+description: 大量更新內容片段屬性的AEM內容片段主控台擴充功能範例。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,69 +10,69 @@ kt: 11604
 thumbnail: KT-11604.png
 doc-type: article
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
 
 ---
 
+# 大量屬性更新範例擴充功能
 
-# 批量属性更新示例扩展
+![大量屬性更新](./assets/bulk-property-update/screenshot.png){align="center"}
 
-![批量属性更新](./assets/bulk-property-update/screenshot.png){align="center"}
+此範例AEM內容片段控制檯擴充功能為 [動作列](../action-bar.md) 將內容片段屬性大量更新為通用值的擴充功能。
 
-此示例AEM内容片段控制台扩展是 [操作栏](../action-bar.md) 可批量将内容片段属性更新为通用值的扩展。
+範例擴充功能的功能流程如下：
 
-示例扩展的功能流程如下所示：
+![Adobe I/O Runtime動作流程](./assets/bulk-property-update/flow.png){align="center"}
 
-![Adobe I/O Runtime操作流程](./assets/bulk-property-update/flow.png){align="center"}
+1. 選取內容片段，然後按一下 [動作列](#extension-registration) 開啟 [強制回應](#modal).
+1. 此 [強制回應](#modal) 顯示使用建立的自訂輸入表單 [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/).
+1. 提交表單會將所選內容片段的清單和AEM主機傳送至 [自訂Adobe I/O Runtime動作](#adobe-io-runtime-action).
+1. 此 [Adobe I/O Runtime動作](#adobe-io-runtime-action) 驗證輸入並向AEM發出HTTPPUT請求以更新所選的內容片段。
+1. 每個內容片段的一系列HTTPPUT可更新指定的屬性。
+1. AEMas a Cloud Service會儲存內容片段的屬性更新，並針對Adobe I/O Runtime動作傳回成功或失敗回應。
+1. 強制回應視窗收到來自Adobe I/O Runtime動作的回應，並顯示成功的大量更新清單。
 
-1. 选择内容片段，然后单击 [操作栏](#extension-registration) 打开 [模态](#modal).
-1. 的 [模态](#modal) 显示自定义输入表单(使用 [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/).
-1. 提交表单会将选定内容片段的列表，以及AEM主机发送到 [自定义Adobe I/O Runtime操作](#adobe-io-runtime-action).
-1. 的 [Adobe I/O Runtime行动](#adobe-io-runtime-action) 验证输入并向AEM发出HTTPPUT请求，以更新选定的内容片段。
-1. 每个内容片段的一系列HTTPPUT，用于更新指定的属性。
-1. AEMas a Cloud Service会保留对内容片段的属性更新，并返回对Adobe I/O Runtime操作的成功或失败响应。
-1. 该模式窗口收到了来自Adobe I/O Runtime操作的响应，并显示成功批量更新的列表。
-
-此视频将回顾批量资产更新扩展的示例、其工作方式以及开发方式。
+本影片將檢閱大量屬性更新擴充功能的範例、運作方式和開發方式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
-## App Builder扩展应用程序
+## App Builder擴充功能應用程式
 
-该示例使用现有的Adobe Developer控制台项目，并在初始化App Builder应用程序时通过 `aio app init`.
+此範例使用現有的Adobe Developer Console專案，並在透過初始化App Builder應用程式時使用以下選項 `aio app init`.
 
-+ 要搜索哪些模板？ `All Extension Points`
-+ 选择要安装的模板：` @adobe/aem-cf-admin-ui-ext-tpl`
-+ 要为扩展命名什么？: `Bulk property update`
-+ 请提供扩展的简短说明： `An example action bar extension that bulk updates a single property one or more content fragments.`
-+ 您希望从哪个版本开始？ `0.0.1`
-+ 您接下来想做什么？
++ 您要搜尋哪些範本？： `All Extension Points`
++ 選擇要安裝的範本：` @adobe/aem-cf-admin-ui-ext-tpl`
++ 您要將擴充功能取什麼名稱？： `Bulk property update`
++ 請提供擴充功能的簡短說明： `An example action bar extension that bulk updates a single property one or more content fragments.`
++ 您想要從哪個版本開始？： `0.0.1`
++ 您接下來想要做什麼？
    + `Add a custom button to Action Bar`
-      + 请为按钮提供标签名称： `Bulk property update`
-      + 是否需要显示按钮的模式窗口？ `y`
+      + 請提供按鈕的標簽名稱： `Bulk property update`
+      + 您是否需要顯示按鈕的強制回應視窗？ `y`
    + `Add server-side handler`
-      + Adobe I/O Runtime允许您按需调用无服务器代码。 要如何命名此操作？ `generic`
+      + Adobe I/O Runtime可讓您隨選叫用無伺服器程式碼。 您要如何命名此動作？： `generic`
 
-生成的App Builder扩展应用程序将进行更新，如下所述。
+產生的App Builder擴充功能應用程式已更新，如下所述。
 
-## 应用程序路由{#app-routes}
+## 應用程式路由{#app-routes}
 
-的 `src/aem-cf-console-admin-1/web-src/src/components/App.js` 包含 [React路由器](https://reactrouter.com/en/main).
+此 `src/aem-cf-console-admin-1/web-src/src/components/App.js` 包含 [React路由器](https://reactrouter.com/en/main).
 
-路由有两组逻辑：
+路由的邏輯集合有兩種：
 
-1. 第一条路由将请求映射到 `index.html`，用于调用负责 [扩展注册](#extension-registration).
+1. 第一個路由會將請求對應至 `index.html`，會叫用負責以下專案的React元件： [延伸註冊](#extension-registration).
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
    ```
 
-1. 第二组路由将URL映射到呈现扩展模式内容的React组件。 的 `:selection` 参数表示分隔列表内容片段路径。
+1. 第二組路由會將URL對應至轉譯擴充功能強制回應內容的React元件。 此 `:selection` param代表分隔的清單內容片段路徑。
 
-   如果扩展具有多个按钮来调用离散操作，则每个按钮 [扩展注册](#extension-registration) 映射到此处定义的路由。
+   如果擴充功能有多個按鈕可叫用分散式動作，則每個 [延伸註冊](#extension-registration) 對應至此處定義的路由。
 
    ```javascript
    <Route
@@ -81,13 +81,13 @@ ht-degree: 0%
        />
    ```
 
-## 扩展注册
+## 擴充功能註冊
 
-`ExtensionRegistration.js`，映射到 `index.html` route是AEM扩展的入口点，它定义：
+`ExtensionRegistration.js`，對應至 `index.html` route是AEM擴充功能的入口點，並定義：
 
-1. 扩展按钮的位置将显示在AEM创作体验(`actionBar` 或 `headerMenu`)
-1. 扩展按钮在 `getButton()` 函数
-1. 按钮的点击处理程序(位于 `onClick()` 函数
+1. 擴充功能按鈕的位置會顯示在AEM編寫體驗中(`actionBar` 或 `headerMenu`)
+1. 中的擴充功能按鈕定義 `getButton()` 函式
+1. 按鈕的點選處理常式，位於 `onClick()` 函式
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -137,20 +137,20 @@ function ExtensionRegistration() {
 
 ## 模态
 
-扩展的每条路由，定义如 [`App.js`](#app-routes)，映射到在扩展的模式中呈现的React组件。
+擴充功能的每個路由，如 [`App.js`](#app-routes)，對應至會在擴充功能強制回應中轉譯的React元件。
 
-在此示例应用程序中，有一个模式React组件(`BulkPropertyUpdateModal.js`)具有三个状态：
+在此範例應用程式中，有一個強制回應元件(`BulkPropertyUpdateModal.js`)有三個狀態：
 
-1. 正在加载，表示用户必须等待
-1. 批量属性更新表单，允许用户指定要更新的属性名称和值
-1. 批量属性更新操作的响应，其中列出了已更新的内容片段以及无法更新的内容片段
+1. 正在載入，表示使用者必須等待
+1. 允許使用者指定要更新的屬性名稱和值的「大量屬性更新」表單
+1. 大量屬性更新操作的回應，列出已更新的內容片段和無法更新的內容片段
 
-重要的是，扩展中与AEM的任何交互都应委派给 [AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，这是在中运行的独立无服务器进程 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
-使用Adobe I/O Runtime操作与AEM通信，是为了避免跨域资源共享(CORS)连接问题。
+重要的是，擴充功能與AEM的任何互動都應委派給 [AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，是在中執行的獨立無伺服器程式 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
+使用Adobe I/O Runtime動作與AEM通訊是為了避免跨原始資源共用(CORS)連線問題。
 
-提交批量属性更新表单后，将自定义 `onSubmitHandler()` 调用Adobe I/O Runtime操作，以传递当前AEM主机（域）和用户的AEM访问令牌，这反过来会调用 [AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 更新内容片段。
+提交大量屬性更新表單時，自訂 `onSubmitHandler()` 叫用Adobe I/O Runtime動作，傳遞目前的AEM主機（網域）和使用者的AEM存取權杖，然後呼叫 [AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 以更新內容片段。
 
-收到来自Adobe I/O Runtime操作的响应时，将更新模式以显示批量属性更新操作的结果。
+收到Adobe I/O Runtime動作的回應時，強制回應視窗會更新，以顯示大量屬性更新作業的結果。
 
 + `src/aem-cf-console-admin-1/web-src/src/components/BulkPropertyUpdateModal.js`
 
@@ -407,16 +407,16 @@ export default function BulkPropertyUpdateModal() {
 ```
 
 
-## Adobe I/O Runtime行动
+## Adobe I/O Runtime動作
 
-AEM扩展App Builder应用程序可以定义或使用0个或多个Adobe I/O Runtime操作。
-Adobe运行时操作应负责需要与AEM或其他AdobeWeb服务进行交互的工作。
+AEM擴充功能App Builder應用程式可以定義或使用0個或多個Adobe I/O Runtime動作。
+Adobe執行階段動作應負責需要與AEM或其他AdobeWeb服務互動的工作。
 
-在此示例应用程序中，Adobe I/O Runtime操作 — 使用默认名称 `generic`  — 负责：
+在此範例應用程式中，Adobe I/O Runtime動作 — 使用預設名稱 `generic`  — 負責：
 
-1. 向AEM内容片段API发出一系列HTTP请求，以更新内容片段。
-1. 收集这些HTTP请求的响应，并将它们整理为成功和失败
-1. 返回要由模式显示的成功和失败列表(`BulkPropertyUpdateModal.js`)
+1. 向AEM內容片段API提出一系列HTTP請求以更新內容片段。
+1. 收集這些HTTP請求的回應，將其歸類為成功和失敗
+1. 傳回成功和失敗清單以供強制回應視窗顯示(`BulkPropertyUpdateModal.js`)
 
 + `src/aem-cf-console-admin-1/actions/generic/index.js`
 

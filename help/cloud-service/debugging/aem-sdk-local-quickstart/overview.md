@@ -1,6 +1,6 @@
 ---
-title: 调试AEM SDK
-description: AEM SDK是开发人员使用的主要开发环境，支持多种调试AEM和已部署应用程序的方法。
+title: 偵錯AEM SDK
+description: AEM SDK是開發人員使用的主要開發環境，並支援多種方式對AEM和已部署的應用程式進行偵錯。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -19,30 +19,30 @@ ht-degree: 0%
 
 ---
 
-# 调试AEM SDK
+# 偵錯AEM SDK
 
-AEM SDK的本地快速入门是开发人员使用的主要开发环境，它支持多种调试AEM和已部署应用程序的方法。 本用户指南将介绍一些比较常见的调试工具和控制台，以便在AEM SDK的本地快速启动中调试应用程序。
+AEM SDK的本機Quickstart是開發人員使用的主要開發環境，並支援多種對AEM和已部署的應用程式進行偵錯的方式。 本使用手冊會帶您瞭解一些較常見的偵錯工具和控制檯，以便在AEM SDK的本機Quickstart上偵錯您的應用程式。
 
 ## 日志
 
-日志是调试AEM应用程序的首选工具，但取决于已部署的AEM应用程序中是否有足够的日志记录。
+記錄檔是AEM應用程式偵錯作業的最前線，但部署的AEM應用程式必須有充足的登入次數。
 
-[使用日志调试AEM SDK](./logs.md)
+[使用記錄檔偵錯AEM SDK](./logs.md)
 
-## 远程调试
+## 遠端偵錯
 
-对在AEM SDK的本地快速启动中运行的Java代码进行远程调试后，可以在AEM中从IDE中逐步执行实时代码。
+在AEM SDK的本機Quickstart中執行Java程式碼的遠端偵錯可讓您從IDE逐步執行AEM中的即時程式碼。
 
-[远程调试AEM SDK](./remote-debugging.md)
+[遠端偵錯AEM SDK](./remote-debugging.md)
 
-## OSGi Web控制台
+## OSGi Web主控台
 
-AEM SDK的本地快速启动具有一个OSGi Web控制台，该控制台在本地AEM运行时中提供了各种信息和介绍，有助于了解应用程序如何被识别以及AEM中的功能。
+AEM SDK的本機Quickstart有一個OSGi Web主控台，提供各種本機AEM執行階段的資訊和說明，有助於瞭解AEM如何辨識您的應用程式和發揮其功能。
 
-[使用OSGi Web控制台调试AEM SDK](./osgi-web-consoles.md)
+[使用OSGi Web主控台除錯AEM SDK](./osgi-web-consoles.md)
 
 ## 其他工具
 
-其他各种工具可帮助在AEM SDK的本地快速启动中调试应用程序。
+多種其他工具可協助您在AEM SDK的本機Quickstart上偵錯應用程式。
 
-[用于调试AEM SDK的其他工具](./other-tools.md)
+[偵錯AEM SDK的其他工具](./other-tools.md)

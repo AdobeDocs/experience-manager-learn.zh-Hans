@@ -1,6 +1,6 @@
 ---
-title: 在AEM Dynamic Media中创建视频配置文件
-description: 配置视频配置文件以在Dynamic Media中处理视频
+title: 在AEM Dynamic Media中建立視訊設定檔
+description: 設定視訊設定檔以在Dynamic Media中處理視訊
 version: Cloud Service
 role: Developer
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Dynamic Media中创建视频配置文件
+# 在AEM Dynamic Media中建立視訊設定檔
 
-此视频将指导创建视频配置文件以在Dynamic Media中处理视频的过程。
+本影片將逐步說明建立影片設定檔的程式，以便在Dynamic Media中處理影片。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335382?quality=12&learn=on)

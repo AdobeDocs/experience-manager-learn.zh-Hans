@@ -1,58 +1,58 @@
 ---
-title: 什么是“调度程序”
-description: 了解Dispatcher的实际含义。
+title: 什麼是「Dispatcher」
+description: 瞭解Dispatcher的實質。
 version: 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 829ad9733b4326c79b9b574b13b1d4c691abf877
+exl-id: 96c8dd09-e0a7-4abc-b04b-a805aaa67502
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 2%
 
 ---
 
-
-# 什么是“调度程序”
+# 什麼是「Dispatcher」
 
 [目录](./overview.md)
 
-从AEM Dispatcher的基本描述开始。
+從要求AEM Dispatcher的基本說明開始。
 
 ## Apache Web Server
 
-从在Linux服务器上安装基本的Apache Web Server开始。
+從Linux伺服器上的基本Apache Web Server安裝開始。
 
-Apache服务器功能的基本说明：
+Apache伺服器功能的基本說明：
 
-- 遵循通过HTTP协议从其静态文档目录(`DocumentRoot`)
-- 存储在默认位置(`/var/www/html`)会在请求时进行匹配，并在请求客户端的浏览器中呈现
-
-
+- 遵循簡單規則，從其靜態檔案目錄(`DocumentRoot`)
+- 儲存在預設位置的檔案(`/var/www/html`)會根據請求進行比對，並在請求使用者端的瀏覽器中呈現
 
 
-## AEM特定模块文件(`mod_dispatcher.so`)
 
-然后，向Apache Web Server中添加一个名为Dispatcher模块的插件
 
-AdobeAEM Dispatcher模块功能的基本说明：
+## AEM特定模組檔案(`mod_dispatcher.so`)
 
-- 增强默认文件处理程序
-- 过滤出错误请求/保护AEM软端点/端点
-- 如果存在多个渲染器，则负载平衡
-- 允许生命缓存目录/支持刷新停滞文件
-- 它是所有AMS安装的前门，可将网站和资产交付到客户端的浏览器
-- 它以比AEM服务器单独完成的速度快得多的速度缓存重新提供服务的请求
-- 更多……
+然後將稱為Dispatcher模組的外掛程式新增至Apache Web Server
 
-## Web流量工作流
+AdobeAEM Dispatcher模組功能的基本說明：
 
-了解哪些部分已安装在一起以构建基本的Dispatcher服务器，这将使您了解Adobe管理器服务配置的基本Web流量工作流程。
-这应该有助于您了解它在为AEM内容的访客提供内容的系统链中所起的作用。
+- 增加預設檔案處理常式
+- 篩選出不良請求/保護AEM軟腹部/端點
+- 如果存在多個轉譯器，則為負載平衡
+- 允許使用動態快取目錄/支援排清停滯檔案
+- 它是所有AMS安裝的前門，並為使用者端的瀏覽器提供網站和資產
+- 它會快取要求，以比AEM伺服器自行完成快得多的速度重新提供服務
+- 更多內容……
 
-<b>提供已缓存的内容</b>
+## 網站流量工作流程
+
+瞭解哪些片段會一起安裝在一起以建置基本Dispatcher伺服器，我們就能讓您瞭解Adobe管理員服務設定的基本網路流量工作流程。
+這應該有助於您瞭解它在向AEM內容的訪客提供內容的系統鏈中扮演什麼角色。
+
+<b>提供已快取的內容</b>
 
 ```
 End User's Browser request 
@@ -63,7 +63,7 @@ End User's Browser request
                     → End User
 ```
 
-<b>从AEM提供新内容</b>
+<b>從AEM提供最新內容</b>
 
 ```
 End User's Browser request 
@@ -76,7 +76,7 @@ End User's Browser request
                             → End User
 ```
 
-<b>内容发布/更改</b>
+<b>內容發佈/變更</b>
 
 ```
 AEM Author User activates content 
@@ -86,4 +86,4 @@ AEM Author User activates content
             * Next request for that content will request fresh copy from publisher *
 ```
 
-[下一步 — >基本文件布局](./basic-file-layout.md)
+[下一個 — >基本檔案配置](./basic-file-layout.md)

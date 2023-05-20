@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Analytics报告已提交的表单数据字段
-description: 将AEM Forms CS与Adobe Analytics集成以报告表单数据字段
+title: 使用Adobe Analytics提交表單資料欄位的相關報告
+description: 將AEM Forms CS與Adobe Analytics整合以報告表單資料欄位
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -9,45 +9,46 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
+exl-id: 9982e041-fff7-4be6-91c9-e322d2fd3e01
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
-# 定义规则
+# 定義規則
 
-在标记属性中，我们新建了2个 [规则](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) (**字段验证错误和表单提交**)。
+在Tags屬性中，我們建立了2個新的 [規則](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) (**欄位驗證錯誤和FormSubmit**)。
 
-![自适应表单](assets/rules.png)
-
-
-## 字段验证错误
-
-的 **字段验证错误** 每当自适应表单字段中出现验证错误时，都会触发规则。 例如，在我们的表单中，如果电话号码或电子邮件的格式不符合预期，则会显示验证错误消息。
-
-通过将事件设置为 _**Adobe Experience Manager Forms错误**_ 如屏幕快照中所示
+![Adaptive-form](assets/rules.png)
 
 
+## 欄位驗證錯誤
 
-![申请人 — 国家居住地](assets/field_validation_error_rule.png)
+此 **欄位驗證錯誤** 每當最適化表單欄位中出現驗證錯誤時，就會觸發規則。 例如，在我們的表單中，如果電話號碼或電子郵件不是預期的格式，則會顯示驗證錯誤訊息。
 
-Adobe Analytics — 设置变量的配置如下所示
+欄位驗證錯誤規則是透過將事件設定為來設定 _**Adobe Experience Manager Forms-Error**_ 如熒幕擷取畫面所示
 
-![设置操作](assets/field_validation_action_rule.png)
 
-## 表单提交规则
 
-每次成功提交自适应表单时，都会触发表单提交规则。
+![申請人 — 國家 — 居所](assets/field_validation_error_rule.png)
 
-表单提交规则使用 _**Adobe Experience Manager Forms — 提交**_ 事件
+Adobe Analytics — 設定變數的設定如下
+
+![設定動作](assets/field_validation_action_rule.png)
+
+## 表單提交規則
+
+每次成功提交最適化表單時，就會觸發表單提交規則。
+
+表單提交規則是使用 _**Adobe Experience Manager Forms — 提交**_ 事件
 
 ![form-submit-rule](assets/form-submit-rule.png)
 
-在表单提交规则中，数据元素的值 _**ApplicentsStateOfResidence**_ 映射到prop5，数据元素FormTitle的值映射到prop8。
+在表單提交規則中，資料元素的值 _**ApplicatesStateOfResidence**_ 對應至prop5，而資料元素FormTitle的值對應至prop8。
 
-Adobe Analytics — 设置变量的配置如下所示。
+Adobe Analytics — 設定變數的設定如下。
 ![form-submit-rule-set-variables](assets/form-submit-set-variable.png)
 
-准备好测试标记代码后，[发布对标记所做的更改](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html) 使用发布流程。
+當您準備好要測試您的標籤程式碼時，[發佈您對標籤所做的變更](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html) 使用發佈流程。

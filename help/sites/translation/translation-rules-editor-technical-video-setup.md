@@ -1,6 +1,6 @@
 ---
-title: 在AEM中设置翻译规则
-description: 翻译配置UI允许用户管理用于在AEM Sites中翻译内容的规则。 此视频详细介绍如何为自定义组件创建新的翻译规则。
+title: 在AEM中設定翻譯規則
+description: 翻譯設定UI可讓使用者管理在AEM Sites中翻譯內容的規則。 此影片詳細說明如何為自訂元件建立新的翻譯規則。
 feature: Language Copy
 topics: localization, content-architecture
 audience: developer, administrator
@@ -18,31 +18,31 @@ ht-degree: 6%
 
 ---
 
-# 设置翻译规则 {#set-up-translation-rules-in-aem}
+# 設定翻譯規則 {#set-up-translation-rules-in-aem}
 
-翻译配置UI允许用户管理用于在AEM Sites中翻译内容的规则。 此视频详细介绍如何为自定义组件创建新的翻译规则。
+翻譯設定UI可讓使用者管理在AEM Sites中翻譯內容的規則。 此影片詳細說明如何為自訂元件建立新的翻譯規則。
 
 >[!NOTE]
 >
-> 以下视频在AEM 6.3中录制。 AEM 6.4+引入了用于存储翻译规则XML文件的新存储库结构。 在AEM 6.4及更高版本中使用翻译配置UI时，规则会保存到该位置 `/conf/global/settings/translation/rules/translation_rules.xml`. 请参阅 [识别要翻译的内容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html) 以了解更多详细信息。
+> 以下影片錄製於AEM 6.3。AEM 6.4+引進了儲存翻譯規則XML檔案的新存放庫結構。 在AEM 6.4+中使用翻譯設定UI時，規則會儲存至位置 `/conf/global/settings/translation/rules/translation_rules.xml`. 另請參閱 [識別要翻譯的內容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html) 以取得更多詳細資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
 
-翻译规则识别AEM中要提取以进行翻译的内容。 现成的翻译规则涵盖常见用例，如文本组件和图像组件的替换文本。 根据项目翻译要求，可能需要使用其他规则。 通常，翻译规则允许用户指定：
+翻譯規則會識別AEM中要擷取以進行翻譯的內容。 現成可用的轉譯規則涵蓋常見的使用案例，例如「影像」元件的「文字」元件和「替代文字」。 根據專案翻譯要求，可能需要其他規則。 一般而言，翻譯規則允許使用者指定：
 
-1. 应根据路径和/或资源类型进行翻译的属性
-2. 不应翻译的属性过滤器
-3. 应翻译的引用内容（即图像或内容片段）
+1. 應根據路徑和/或資源型別轉譯的屬性
+2. 不應轉譯之屬性的篩選器
+3. 應翻譯的參考內容（即影像或內容片段）
 
-将更新翻译xml文件的翻译规则编辑器。 通过翻译配置UI，可以更轻松地管理各种翻译规则，并在直接编辑XML时防止拼写错误。
+將更新翻譯xml檔案的翻譯規則編輯器。 翻譯設定UI讓您可以更輕鬆地管理各種翻譯規則，並在直接編輯XML時防止出現拼寫錯誤。
 
-访问翻译配置UI:
+存取翻譯設定UI：
 
-* **[!UICONTROL AEM开始菜单] > [!UICONTROL 工具] > [!UICONTROL 常规] > [[!UICONTROL 翻译配置]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
+* **[!UICONTROL AEM開始功能表] > [!UICONTROL 工具] > [!UICONTROL 一般] > [[!UICONTROL 翻譯設定]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
 ## AEM 6.3之前 {#prior-to-aem}
 
-在以前的AEM版本翻译规则中，通过编辑位于翻译工作流下的XML文件来手动更新： `/etc/workflow/models/translation/translation_rules.xml`.
+在舊版AEM中，透過編輯位於翻譯工作流程下的XML檔案來手動更新翻譯規則： `/etc/workflow/models/translation/translation_rules.xml`.
 
 ## 其他资源 {#additional-resources}
 

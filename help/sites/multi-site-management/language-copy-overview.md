@@ -1,7 +1,7 @@
 ---
-title: 语言副本简介
+title: 語言副本簡介
 seo-title: Introduction to Language Copy
-description: 获取有关如何使用AEM Sites中的语言副本创建多语言站点的概述
+description: 概略瞭解如何使用AEM Sites中的語言副本建立多語言網站
 seo-description: Get an overview of how to create a multilingual site using Language Copy in AEM Sites
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
@@ -22,8 +22,8 @@ ht-degree: 0%
 
 ---
 
-# 语言副本简介 {#introduction-language-copy}
+# 語言副本簡介 {#introduction-language-copy}
 
-获取有关如何使用AEM Sites中的语言副本创建多语言站点的概述。
+概略瞭解如何使用AEM Sites中的語言副本建立多語言網站。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36487?quality=12&learn=on)

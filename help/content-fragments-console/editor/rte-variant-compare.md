@@ -1,6 +1,6 @@
 ---
-title: RTE变体比较 — 内容片段编辑器
-description: 了解AEM如何让您轻松地比较和同步内容片段变量中的RTE字段。 通过比较和同步这些变量，您可以确保在使用内容片段的所有渠道中的消息传送一致。
+title: RTE變體比較 — 內容片段編輯器
+description: 瞭解AEM如何讓您輕鬆比較和同步內容片段變數內的RTE欄位。 透過比較和同步這些變數，您可以確保在使用內容片段的所有管道間傳送一致的訊息。
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# RTE变体比较
+# RTE變體比較
 
-了解AEM如何让您轻松地比较和同步内容片段变量中的RTE字段。 通过比较和同步这些变量，您可以确保在使用内容片段的所有渠道中的消息传送一致。
+瞭解AEM如何讓您輕鬆比較和同步內容片段變數內的RTE欄位。 透過比較和同步這些變數，您可以確保在使用內容片段的所有管道間傳送一致的訊息。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419314/?learn=on)

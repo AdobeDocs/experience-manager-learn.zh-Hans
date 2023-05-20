@@ -1,6 +1,6 @@
 ---
-title: 了解Adobe Managed Services上使用AEM进行Adobe IMS身份验证
-description: Adobe Experience Manager引入了对AEM实例的Admin Console支持，以及基于Adobe IMS(Identity Management系统)的AEM Managed Services身份验证。   此集成允许AEM Managed Services客户在一个统一的Web控制台中管理所有Experience Cloud用户。 可以将用户和组分配给与AEM实例关联的产品配置文件，从而授予对特定AEM实例的集中管理访问权限。
+title: 瞭解Adobe Managed Services上使用AEM的Adobe IMS驗證
+description: Adobe Experience Manager推出適用於AEM執行個體的Admin Console支援，以及適用於Managed Services上AEM的Adobe IMS (Identity Management System)驗證功能。   這項整合可讓AEM Managed Services客戶在單一統一的Web主控台中管理所有Experience Cloud使用者。 可將使用者和群組指派給與AEM執行個體相關聯的產品設定檔，授與對特定AEM執行個體的集中管理存取權。
 version: 6.4, 6.5
 feature: User and Groups
 topics: authentication, security
@@ -21,33 +21,33 @@ ht-degree: 3%
 
 ---
 
-# 了解Adobe Managed Services上使用AEM进行Adobe IMS身份验证{#understanding-adobe-ims-authentication-with-aem-on-adobe-managed-services}
+# 瞭解Adobe Managed Services上使用AEM的Adobe IMS驗證{#understanding-adobe-ims-authentication-with-aem-on-adobe-managed-services}
 
-Adobe Experience Manager引入了对AEM实例和AdobeIdentity Management系统(IMS)的Admin Console支持，以便在Managed Services上对AEM进行身份验证。   此集成允许AEM Managed Services客户在一个统一的Web控制台中管理所有Experience Cloud用户。 可以将用户和组分配到与AEM实例关联的产品配置文件，从而授予对特定AEM实例的集中管理访问权限。
+Adobe Experience Manager推出AEM例項的Admin Console支援，以及針對Managed Services上的AEMAdobeIdentity Management System (IMS)式驗證。   這項整合可讓AEM Managed Services客戶在單一統一的Web主控台中管理所有Experience Cloud使用者。 可將使用者和群組指派給與AEM執行個體相關聯的產品設定檔，授與對特定AEM執行個體的集中管理存取權。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
 
-* Adobe Experience Manager IMS身份验证支持仅适用于“内部”用户（作者、审阅人、管理员、开发人员等），而不适用于外部最终用户（如网站访客）。
-* [Admin Console](https://adminconsole.adobe.com/) 将AEM Managed Services客户表示为IMS组织，将AEM实例表示为产品上下文。 Admin Console系统和产品管理员可以定义和管理。
-* AEM Managed Services将拓扑与Admin Console同步，从而创建Product Context与AEM实例之间的一对一映射。
-* Admin Console中的产品配置文件确定用户可以访问哪些AEM实例。
-* 身份验证支持包括客户符合SAML2的IDP，用于SSO。
-* 仅支持Enterprise ID或Federated ID（用于客户SSO）(不支持个人AdobeID)。
+* Adobe Experience Manager IMS驗證支援僅適用於「內部」使用者（作者、檢閱者、管理員、開發人員等），不適用於網站訪客等外部一般使用者。
+* [Admin Console](https://adminconsole.adobe.com/) 將AEM Managed Services客戶表示為IMS組織，並將AEM執行個體表示為產品內容。 Admin Console系統和產品管理員可以定義和管理。
+* AEM Managed Services會將您的拓撲與Admin Console同步，在產品內容和AEM執行個體之間建立1對1的對應。
+* Admin Console中的產品設定檔決定使用者可存取的AEM執行個體。
+* 驗證支援包括適用於SSO的客戶SAML2相容IDP。
+* 僅支援Enterprise ID或Federated ID （適用於客戶SSO） (不支援個人AdobeID)。
 
-*&#42;AEM 6.4 SP3及更高版本支持Adobe Managed Services客户使用此功能。*
+*&#42;Adobe Managed Services客戶的AEM 6.4 SP3及更新版本支援此功能。*
 
-## 最佳实践 {#best-practices}
+## 最佳實務 {#best-practices}
 
-### 在Admin Console中应用权限
+### 在Admin Console中套用許可權
 
-在Admin Console和Adobe Experience Manager中，应避免在用户级别应用权限和访问。
+在Admin Console和Adobe Experience Manager中，都應避免在使用者層級套用許可權和存取權。
 
-在中，Admin Console用户应通过产品上下文级别的用户组来授予访问权限。 用户组通常最好通过组织内的逻辑角色来表示，以促进组在Adobe Experience Cloud产品中的可重用性。
+在中，應透過「產品內容」層級的「使用者群組」授予Admin Console使用者存取權。 使用者群組通常最好以組織內的邏輯角色表示，以促進群組在Adobe Experience Cloud產品中的重複使用性。
 
 >[!NOTE]
 >
-> 如果使用AEMas a Cloud Service，请将Admin Console用户直接分配给产品配置文件。 AEM as a Cloud Service不支持Admin Console用户之间通过Admin Console用户组传递权限到产品配置文件。
+> 如果使用AEMas a Cloud Service，請將Admin Console使用者直接指派給產品設定檔。 AEMas a Cloud Service不支援透過Admin Console使用者群組將Admin Console使用者之間的許可權轉換為產品設定檔。
 
-### 在Adobe Experience Manager中应用权限
+### 在Adobe Experience Manager中套用許可權
 
-在Adobe Experience Manager中，从Adobe IMS同步的用户组应当添加到 [AEM提供的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)，预配置了在AEM中执行特定任务集的相应权限。 不应将从Adobe IMS同步的用户直接添加到 [AEM提供的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
+在Adobe Experience Manager中，與Adobe IMS同步的使用者群組應以期限新增至 [AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)，已預先設定適當的許可權，以便在AEM中執行一組特定工作。 從Adobe IMS同步的使用者不應直接新增至 [AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).

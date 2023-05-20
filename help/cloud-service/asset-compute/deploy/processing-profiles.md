@@ -1,6 +1,6 @@
 ---
-title: 将Asset compute工作程序与AEM处理配置文件集成
-description: AEM as a Cloud Service通过AEM Assets处理配置文件与部署到Adobe I/O Runtime的Asset compute工作程序集成。 处理配置文件在创作服务中进行了配置，以使用自定义工作程序处理特定资产，并将工作程序生成的文件存储为资产演绎版。
+title: 將Asset compute背景工作與AEM處理設定檔整合
+description: AEMas a Cloud Service會透過AEM Assets處理設定檔與部署至Adobe I/O Runtime的Asset compute背景工作整合。 處理設定檔是在Author服務中設定，以使用自訂背景工作處理特定資產，並將背景工作產生的檔案儲存為資產轉譯。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -20,74 +20,74 @@ ht-degree: 2%
 
 ---
 
-# 与AEM处理配置文件集成
+# 與AEM處理設定檔整合
 
-为了使Asset compute工作程序在AEMas a Cloud Service中生成自定义演绎版，必须通过处理用户档案在AEMas a Cloud Service作者服务中进行注册。 受该处理配置文件约束的所有资产都将在上传或重新处理时调用工作程序，并通过资产的演绎版生成并提供自定义演绎版。
+若要讓Asset compute背景工作在AEMas a Cloud Service中產生自訂轉譯，必須透過處理設定檔在AEMas a Cloud Service作者服務中註冊這些轉譯。 受該處理設定檔約束的所有資產將在上傳或重新處理時叫用背景工作，並產生自訂轉譯，且透過資產的轉譯提供使用。
 
-## 定义处理配置文件
+## 定義處理設定檔
 
-首先，创建一个新的处理配置文件，该配置文件将使用可配置参数调用工作程序。
+首先，建立新的處理設定檔，使用可設定的引數叫用背景工作。
 
-![处理配置文件](./assets/processing-profiles/new-processing-profile.png)
+![處理設定檔](./assets/processing-profiles/new-processing-profile.png)
 
-1. 登录AEMas a Cloud Service创作服务作为 __AEM管理员__. 由于这是一个教程，因此我们建议您使用开发环境或沙盒中的环境。
-1. 导航到 __工具>资产>处理配置文件__
-1. 点按 __创建__ 按钮
-1. 命名处理配置文件， `WKND Asset Renditions`
-1. 点按 __自定义__ 选项卡，然后点按 __新增__
-1. 定义新服务
-   + __演绎版名称：__ `Circle`
-      + 用于在AEM Assets中标识此演绎版的演绎版的文件名
-   + __扩展：__ `png`
-      + 生成的演绎版的扩展。 设置为 `png` 因为这是工作人员web服务支持的支持输出格式，因此在圆切出后会产生透明背景。
-   + __端点：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/worker`
-      + 这是通过获取的工作人员的URL `aio app get-url`. 根据AEMas a Cloud Service环境，确保URL指向正确的工作区。
-      + 确保工作URL指向正确的工作区。 AEMas a Cloud ServiceStage应使用Stage工作区URL，而AEMas a Cloud Service生产应使用生产工作区URL。
+1. 以身分登入AEMas a Cloud Service作者服務 __AEM管理員__. 由於此為教學課程，建議您使用開發環境或沙箱中的環境。
+1. 導覽至 __工具>資產>處理設定檔__
+1. 點選 __建立__ 按鈕
+1. 為處理設定檔命名， `WKND Asset Renditions`
+1. 點選 __自訂__ 標籤，然後點選 __新增__
+1. 定義新服務
+   + __轉譯名稱：__ `Circle`
+      + 用來在AEM Assets中識別此轉譯的轉譯檔案名稱
+   + __副檔名：__ `png`
+      + 產生的轉譯延伸。 設定為 `png` 因為這是worker的Web服務支援的輸出格式，並且會在圓切掉的圓後面產生透明背景。
+   + __端點：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/worker`
+      + 這是工作者的URL，取得途徑為 `aio app get-url`. 根據AEMas a Cloud Service環境，確保URL指向正確的工作區。
+      + 請確定背景工作URL指向正確的工作區。 AEMas a Cloud Service階段應使用階段工作區URL，而AEMas a Cloud Service生產應使用生產工作區URL。
    + __服务参数__
-      + 点按 __添加参数__
+      + 點選 __新增引數__
          + 键: `size`
-         + 值: `1000`
-      + 点按 __添加参数__
+         + 价值: `1000`
+      + 點選 __新增引數__
          + 键: `contrast`
-         + 值: `0.25`
-      + 点按 __添加参数__
+         + 价值: `0.25`
+      + 點選 __新增引數__
          + 键: `brightness`
-         + 值: `0.10`
-      + 这些键/值对将传递到Asset compute工作器，并可通过 `rendition.instructions` JavaScript对象。
+         + 价值: `0.10`
+      + 這些會傳遞至Asset compute背景工作區的索引鍵/值組，並可透過以下方式使用： `rendition.instructions` javascript物件。
    + __Mime 类型__
-      + __包括：__ `image/jpeg`, `image/png`, `image/gif`, `image/bmp`, `image/tiff`
-         + 这些MIME类型是工作程序npm模块中的唯一类型。 此列表限制了自定义工作程序处理的内容。
-      + __不包括：__ `Leave blank`
-         + 切勿使用此服务配置处理具有这些MIME类型的资产。 在这种情况下，我们只使用允许列表。
-1. 点按 __保存__ 在右上方
+      + __包括：__ `image/jpeg`， `image/png`， `image/gif`， `image/bmp`， `image/tiff`
+         + 這些MIME型別是工作者的npm模組。 此清單會限制由自訂背景工作程式處理的專案。
+      + __排除：__ `Leave blank`
+         + 使用此服務設定時，切勿以這些MIME型別處理資產。 在此情況下，我們僅使用允許清單。
+1. 點選 __儲存__ 在右上方
 
-## 应用并调用处理配置文件
+## 套用和叫用處理設定檔
 
-1. 选择新创建的处理配置文件， `WKND Asset Renditions`
-1. 点按 __将配置文件应用到文件夹__ 在顶部操作栏中
-1. 选择要将处理配置文件应用到的文件夹，例如 `WKND` 点按 __应用__
-1. 导航到处理配置文件未通过应用到的文件夹 __AEM > Assets >文件__ 并点按 `WKND`.
-1. 上传一些新图像资产([sample-1.jpg](../assets/samples/sample-1.jpg), [sample-2.jpg](../assets/samples/sample-2.jpg)和 [sample-3.jpg](../assets/samples/sample-3.jpg))，然后等待处理上传的资产。
-1. 点按资产以打开其详细信息
-   + 默认演绎版在AEM中的生成和显示速度可能比自定义演绎版快。
-1. 打开 __演绎版__ 从左侧边栏查看
-1. 点按名为的资产 `Circle.png` 并查看生成的演绎版
+1. 選取新建立的處理設定檔， `WKND Asset Renditions`
+1. 點選 __將設定檔套用至資料夾__ 在頂端動作列中
+1. 選取要套用處理設定檔的資料夾，例如 `WKND` 並點選 __套用__
+1. 透過瀏覽至未套用處理設定檔的資料夾 __AEM >資產>檔案__ 並點選 `WKND`.
+1. 上傳一些新影像資產([sample-1.jpg](../assets/samples/sample-1.jpg)， [sample-2.jpg](../assets/samples/sample-2.jpg)、和 [sample-3.jpg](../assets/samples/sample-3.jpg))的任何檔案夾中，並等候處理上傳的資產。
+1. 點選資產以開啟其詳細資料
+   + 預設轉譯在AEM中的產生和出現速度可能會比自訂轉譯更快。
+1. 開啟 __轉譯__ 從左側邊欄檢視
+1. 點選名為的資產 `Circle.png` 並檢閱產生的轉譯
 
-   ![生成的演绎版](./assets/processing-profiles/rendition.png)
+   ![產生的轉譯](./assets/processing-profiles/rendition.png)
 
 ## 已完成!
 
-恭喜！您已完成 [教程](../overview.md) 关于如何扩展AEMas a Cloud ServiceAsset compute微服务！ 现在，您应该能够设置、开发、测试、调试和部署自定义Asset compute工作程序，以供AEMas a Cloud Service创作服务使用。
+恭喜！您已完成 [教學課程](../overview.md) 如何延伸AEMas a Cloud ServiceAsset compute微服務！ 您現在應該能夠設定、開發、測試、除錯和部署自訂Asset compute背景工作，以供AEMas a Cloud Service作者服務使用。
 
-### 在Github上查看完整的项目源代码
+### 在Github上檢閱完整的專案原始程式碼
 
-最终Asset compute项目可在Github上获取，网址为：
+最終Asset compute專案可在Github上取得，網址為：
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_Github包含是项目的最终状态，已完全填充工作程序和测试用例，但不包含任何凭据，即。 `.env`, `.config.json` 或 `.aio`._
+_Github包含是專案的最終狀態，已完整填入Worker和測試案例，但不包含任何認證，例如。 `.env`, `.config.json` 或 `.aio`._
 
 ## 疑难解答
 
-+ [AEM资产中缺少自定义演绎版](../troubleshooting.md#custom-rendition-missing-from-asset)
-+ [资产处理在AEM中失败](../troubleshooting.md#asset-processing-fails)
++ [AEM資產中缺少自訂轉譯](../troubleshooting.md#custom-rendition-missing-from-asset)
++ [AEM中的資產處理失敗](../troubleshooting.md#asset-processing-fails)

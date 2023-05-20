@@ -1,6 +1,6 @@
 ---
-title: 内容发布在AEM中如何as a Cloud Service?
-description: 了解AEMas a Cloud Service中内容发布的工作方式，包括内容分发和Adobe管道的概念。
+title: AEM中的內容發佈如何進行as a Cloud Service？
+description: 探索AEMas a Cloud Service中內容發佈的運作方式，包括內容發佈和Adobe管道的概念。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 内容发布
+# 內容發佈
 
-了解AEMas a Cloud Service中内容发布的工作方式，包括内容分发和Adobe管道的概念。
+探索AEMas a Cloud Service中內容發佈的運作方式，包括內容發佈和Adobe管道的概念。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330554?quality=12&learn=on)

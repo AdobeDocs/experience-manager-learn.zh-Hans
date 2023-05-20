@@ -1,31 +1,31 @@
 ---
-title: AMS Dispatcher基本文件布局
-description: 了解Apache和Dispatcher的基本文件布局。
+title: AMS Dispatcher基本檔案配置
+description: 瞭解基本Apache和Dispatcher檔案配置。
 version: 6.5
 topic: Administration, Development
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
+exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 1%
 
 ---
 
-
-# 基本文件布局
+# 基本檔案配置
 
 [目录](./overview.md)
 
-[&lt; — 上一个：什么是“调度程序”](./what-is-the-dispatcher.md)
+[&lt; — 上一頁：什麼是「Dispatcher」](./what-is-the-dispatcher.md)
 
-本文档介绍AMS标准配置文件集以及此配置标准背后的思想
+本檔案說明AMS標準組態檔案集以及此組態標準背後的想法
 
-## 默认Enterprise Linux文件夹结构
+## 預設Enterprise Linux資料夾結構
 
-在AMS中，基本安装使用Enterprise Linux作为基本操作系统。 安装Apache Webserver时，它具有默认安装文件集。 以下是通过安装yum存储库提供的基本RPM来安装的默认文件
+在AMS中，基礎安裝使用Enterprise Linux作為基礎作業系統。 安裝Apache Webserver時，會設定預設的安裝檔案。 以下是透過安裝Yum儲存區域提供的基本RPM而安裝的預設檔案
 
 ```
 /etc/httpd/ 
@@ -50,129 +50,129 @@ ht-degree: 1%
 └── run -> /run/httpd
 ```
 
-在遵循并遵守安装设计/结构时，我们将获得以下好处：
+遵循並遵循安裝設計/結構時，我們可獲得下列優點：
 
-- 更易于支持可预测的布局
-- 过去曾使用过Enterprise Linux HTTPD安装的人员自动熟悉
-- 允许操作系统完全支持的修补周期，不发生任何冲突或手动调整
-- 避免SELinux违反错误标记的文件上下文
+- 更容易支援可預測的版面
+- 任何曾使用過Enterprise Linux HTTPD安裝的人都會自動熟悉
+- 允許完全由作業系統支援的修補週期，而不會產生任何衝突或手動調整
+- 避免SELinux違反錯誤標籤的檔案前後關聯
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-Adobe Managed Services服务器映像通常具有较小的操作系统根驱动器。  我们将数据放在一个单独的卷中，该卷通常装入“/mnt”中。然后，我们使用该卷，而不是下列默认目录的默认卷
+Adobe Managed Services伺服器映像通常具有小型作業系統根磁碟機。  我們將資料放入單獨的磁碟區，通常會掛載在'/mnt'中。然後我們會使用該磁碟區，而不是下列預設目錄的預設值
 
 `DocumentRoot`
 - 默认:`/var/www/html`
-- AMS:`/mnt/var/www/html`
+- AMS：`/mnt/var/www/html`
 
 `Log Directory`
 - 默认: `/var/log/httpd`
-- AMS: `/mnt/var/log/httpd`
+- AMS： `/mnt/var/log/httpd`
 
-请记住，旧目录和新目录会映射回原始装入点，以消除混淆。
-使用单独的卷并不重要，但值得一提
+請記住，舊目錄和新目錄會對應回原始掛載點，以避免混淆。
+使用單獨的磁碟區並不重要，但值得注意
 </div>
 
-## AMS附加组件
+## AMS附加元件
 
-AMS添加到Apache Web Server的基础安装中。
+AMS會將新增至Apache Web Server的基本安裝。
 
-### 文档根
+### 檔案根目錄
 
-AMS默认文档根：
+AMS預設檔案根：
 - 创作:
    - `/mnt/var/www/author/`
 - 发布:
    - `/mnt/var/www/html/`
-- 全面和运行状况检查维护
+- 全面掌握和健康情況檢查維護
    - `/mnt/var/www/default/`
 
-### 暂存和启用的VirtualHost目录
+### 暫存及啟用的虛擬主機目錄
 
-以下目录允许您构建配置文件，其中有一个暂存区域，您可以处理文件，并且只在文件准备就绪后启用暂存区域。
+下列目錄可讓您建置具有暫存區域的組態檔，您只能在檔案就緒時啟用暫存區域。
 - `/etc/httpd/conf.d/available_vhosts/`
-   - 此文件夹托管您所有名为 `.vhost`
+   - 此資料夾會託管您所有名為的VirtualHost /檔案 `.vhost`
 - `/etc/httpd/conf.d/enabled_vhosts/`
-   - 当您准备好使用 `.vhost` 文件，您内部 `available_vhosts` 文件夹会使用相对路径将他们符号链接到 `enabled_vhosts` 目录
+   - 當您準備好使用 `.vhost` 檔案，您將 `available_vhosts` 資料夾符號連結，使用相對路徑進入 `enabled_vhosts` 目錄
 
-### 其他 `conf.d` 目录
+### 其他 `conf.d` 目錄
 
-Apache配置中还有一些常见的子目录，我们创建了子目录，以便以简洁的方式分隔这些文件，而不是将所有文件都放在一个目录中
+Apache設定中有其他常見的片段，而且我們建立了子目錄，允許以簡潔的方式分隔這些檔案，而不是將所有檔案放在一個目錄中
 
-#### 重写目录
+#### 重寫目錄
 
-此目录可以包含 `_rewrite.rules` 您创建的文件，其中包含与Apache Web服务器交互的典型重写规则语法 [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 模块
+此目錄可包含所有 `_rewrite.rules` 您建立的檔案包含與Apache Web伺服器互動的典型RewriteRulesyntax [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 模組
 
 - `/etc/httpd/conf.d/rewrites/`
 
-#### 白名单目录
+#### 白名單目錄
 
-此目录可以包含 `_whitelist.rules` 您创建的文件，其中包含 `IP Allow` 或 `Require IP`使Apache Web服务器互动的语法 [访问控制](https://httpd.apache.org/docs/2.4/howto/access.html)
+此目錄可包含所有 `_whitelist.rules` 您建立的檔案(包含您的典型 `IP Allow` 或 `Require IP`與Apache Web伺服器互動的語法 [存取控制](https://httpd.apache.org/docs/2.4/howto/access.html)
 
 - `/etc/httpd/conf.d/whitelists/`
 
-#### 变量目录
+#### 變數目錄
 
-此目录可以包含 `.vars` 您创建的文件包含可在配置文件中使用的变量
+此目錄可包含所有 `.vars` 您建立的檔案，其中包含可在設定檔案中使用的變數
 
 - `/etc/httpd/conf.d/variables/`
 
-### 特定于调度程序模块的配置目录
+### Dispatcher模組專屬設定目錄
 
-Apache Web Server非常可扩展，当模块具有大量配置文件时，最佳做法是在安装基目录下创建您自己的配置目录，而不是堆满默认目录。
+Apache Web Server極具擴充性，當模組有許多設定檔案時，最佳實務是在安裝基底目錄下建立自己的設定目錄，而不是將預設目錄雜亂無章。
 
-我们遵循最佳实践并创建自己的
+我們遵循最佳實務，並建立自己的
 
-#### 模块配置文件目录
+#### 模組組態檔目錄
 
 - `/etc/httpd/conf.dispatcher.d/`
 
-#### 暂存和启用的场
+#### 暫存與啟用的陣列
 
-以下目录允许您构建配置文件，其中有一个暂存区域，您可以处理文件，并且只在文件准备就绪后启用暂存区域。
+下列目錄可讓您建置具有暫存區域的組態檔，您只能在檔案就緒時啟用暫存區域。
 - `/etc/httpd/conf.dispatcher.d/available_farms/`
-   - 此文件夹托管 `/myfarm {` 已调用 `_farm.any`
+   - 此資料夾會託管您的所有 `/myfarm {` 已呼叫的檔案 `_farm.any`
 - `/etc/httpd/conf.dispatcher.d/enabled_farms/`
-   - 准备好使用场文件后，在available_farms文件夹内有一个使用相对路径将它们符号链接到enabled_farms目录中
+   - 當您準備好使用伺服器陣列檔案時，您會在available_farms資料夾內使用相對路徑將它們與enabled_farms目錄建立符號連結
 
-### 其他 `conf.dispatcher.d` 目录
+### 其他 `conf.dispatcher.d` 目錄
 
-还有一些是Dispatcher场文件配置的子部分，我们创建了子目录，以便以简洁的方式分隔这些文件，而不是将所有文件都放在一个目录中
+還有其他片段是Dispatcher伺服器陣列檔案設定的子區段，而且我們建立了子目錄以允許簡潔的方式分隔這些檔案，而不會將所有檔案放在同一個目錄中
 
-#### 缓存目录
+#### 快取目錄
 
-此目录包含 `_cache.any`, `_invalidate.any` 您创建的文件包含您希望模块如何处理来自AEM的缓存元素以及失效规则语法的规则。  有关此部分的更多详细信息，请访问此处 [此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+此目錄包含所有 `_cache.any`， `_invalidate.any` 您建立的檔案包含您希望模組如何處理來自AEM的快取元素以及失效規則語法的規則。  如需此章節的詳細資訊，請參閱此處 [此處](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
 
 - `/etc/httpd/conf.dispatcher.d/cache/`
 
-#### 客户端头目录
+#### 使用者端標頭目錄
 
-此目录可以包含 `_clientheaders.any` 您创建的文件包含请求传入时要传递到AEM的Client Headers列表。  有关此部分的更多详细信息包括 [此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)
+此目錄可包含所有 `_clientheaders.any` 您建立的檔案包含您希望在請求傳入時傳遞到AEM的使用者端標題清單。  本節的詳細資訊如下 [此處](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 
-#### 筛选器目录
+#### 篩選器目錄
 
-此目录可以包含 `_filters.any` 您创建的文件，其中包含所有用于阻止或允许流量通过Dispatcher到达AEM的过滤器规则
+此目錄可包含所有 `_filters.any` 您建立的檔案包含要封鎖或允許透過Dispatcher的流量到達AEM的所有篩選規則
 
 - `/etc/httpd/conf.dispatcher.d/filters/`
 
-#### 呈现目录
+#### Renders目錄
 
-此目录可以包含 `_renders.any` 您创建的文件，其中包含与调度程序将从中使用的内容的每个后端服务器的连接详细信息
+此目錄可包含所有 `_renders.any` 您建立的檔案，其中包含與Dispatcher將使用其內容的每個後端伺服器的連線詳細資料
 
 - `/etc/httpd/conf.dispatcher.d/renders/`
 
-#### Vhosts目录
+#### Vhosts目錄
 
-此目录可以包含 `_vhosts.any` 您创建的文件，其中包含与特定场与特定后端服务器匹配的域名和路径列表
+此目錄可包含所有 `_vhosts.any` 您建立的檔案包含網域名稱和路徑的清單，以符合特定伺服器陣列和特定後端伺服器
 
 - `/etc/httpd/conf.dispatcher.d/vhosts/`
 
-## 完整文件夹结构
+## 完成資料夾結構
 
-AMS已使用自定义文件扩展名对每个文件进行了结构化，以避免命名空间问题/冲突和任何混淆。
+AMS已使用自訂副檔名來建構每個檔案，其目的是避免名稱空間問題/衝突及任何混淆。
 
-以下是AMS默认部署中的标准文件集示例：
+以下是來自AMS預設部署的標準檔案集範例：
 
 ```
 /etc/httpd/
@@ -265,36 +265,36 @@ AMS已使用自定义文件扩展名对每个文件进行了结构化，以避�
 └── run -> /run/httpd
 ```
 
-## 保持理想状态
+## 保持理想狀態
 
-Enterprise Linux具有Apache Webserver包(httpd)的修补周期。
+Enterprise Linux具有Apache Webserver套裝程式(httpd)的修補週期。
 
-如果默认文件安装较少，则更改的默认文件越好，因为如果有任何修补的安全修复或配置改进是通过RPM / Yum命令应用的，则不会在更改文件顶部应用这些修补。
+您變更的預設檔案越少安裝越好，原因在於，如果有任何修補的安全性修正或設定改進是透過RPM / Yum命令套用，則不會將修正套用至已變更檔案的頂端。
 
-它而是会创建一个 `.rpmnew` 文件。  这意味着您会错过一些可能需要的更改，并在您的配置文件夹中创建更多垃圾。
+而是會建立 `.rpmnew` 原始檔案旁邊的檔案。  這表示您會遺漏一些您可能想要的變更，並在設定資料夾中建立更多垃圾。
 
-例如，在更新安装期间， RPM将查看 `httpd.conf` 如果它在 `unaltered` 声明 *替换* 文件，你就会得到重要的更新。  如果 `httpd.conf` was `altered` 然后 *不会替换* 该文件将创建一个名为 `httpd.conf.rpmnew` 而且，该文件中将包含许多所需的修复，这些修复不适用于服务启动。
+即更新安裝期間的RPM將會檢查 `httpd.conf` 如果它位於 `unaltered` 說明它將 *replace* 檔案後，您將會取得重要更新。  如果 `httpd.conf` 為 `altered` 然後它 *不會取代* 檔案，而是建立一個名為的參考檔案 `httpd.conf.rpmnew` 而且該檔案中有許多需要的修正，不適用於服務啟動。
 
-已正确设置Enterprise Linux，以便更好地处理此用例。  它们会为您提供可扩展或覆盖其为您设置的默认值的区域。  在httpd的基本安装中，您将找到该文件 `/etc/httpd/conf/httpd.conf`，其语法如下：
+Enterprise Linux已正確設定，以便以更好的方式處理此使用案例。  它們為您提供可以延伸或覆寫其為您設定的預設值的區域。  在httpd的基本安裝內，您會找到檔案 `/etc/httpd/conf/httpd.conf`，而且有如下的語法：
 
 ```
 Include conf.modules.d/.conf
 IncludeOptional conf.d/.conf
 ```
 
-其构思是，Apache希望您在向 `/etc/httpd/conf.d/` 和 `/etc/httpd/conf.modules.d/` 文件扩展名为 `.conf`
+我們的想法是，Apache希望您在將新檔案新增到 `/etc/httpd/conf.d/` 和 `/etc/httpd/conf.modules.d/` 副檔名為的目錄 `.conf`
 
-作为将Dispatcher模块添加到Apache时创建模块的完美示例 `.so` 文件 ` /etc/httpd/modules/` 然后，通过将文件添加到 `/etc/httpd/conf.modules.d/02-dispatcher.conf` 包含要加载模块的内容 `.so` 文件
+將Dispatcher模組新增至Apache時，您會建立模組，這是最佳範例 `.so` 中的檔案 ` /etc/httpd/modules/` 然後在中新增檔案來包含它 `/etc/httpd/conf.modules.d/02-dispatcher.conf` 包含載入模組的內容 `.so` 檔案
 
 ```
 LoadModule dispatcher_module modules/mod_dispatcher.so
 ```
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-我们未修改Apache提供的任何现有文件。  而只是将我们的目录添加到他们要转到的目录中。
+我們並未修改Apache提供的任何現有檔案。  而是直接將我們的新增到他們原本要前往的目錄。
 </div><br/>
 
-现在，我们在文件中使用我们的模块 <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> 初始化模块并加载初始模块特定的配置文件
+現在我們會在檔案中使用模組 <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> 會初始化模組並載入初始模組特定設定檔
 
 ```
 <IfModule disp_apache2.c> 
@@ -303,6 +303,6 @@ LoadModule dispatcher_module modules/mod_dispatcher.so
 </IfModule>
 ```
 
-您会再次注意到，我们已添加了文件和模块，但未更改任何原始文件。  这为我们提供了所需的功能，并保护我们不会丢失所需的修补程序修复，同时与软件包的每次升级保持最高级别的兼容性。
+再次強調，您會注意到我們已新增檔案和模組，但未變更任何原始檔案。  這可提供我們所需的功能，並保護我們，避免遺失所需的修補程式修正，以及與套件每次升級保持最高相容性等級。
 
-[下一步 — >配置文件说明](./explanation-config-files.md)
+[下一個 — >組態檔說明](./explanation-config-files.md)

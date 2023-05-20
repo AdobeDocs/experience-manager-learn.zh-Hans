@@ -1,6 +1,6 @@
 ---
-title: 在AEM Sites开发资源状态
-description: 'Adobe Experience Manager的资源状态API是一个可插拔的框架，用于在AEM各种编辑器Web UI中公开状态消息。 '
+title: 在AEM Sites中開發資源狀態
+description: Adobe Experience Manager的資源狀態API是可插拔架構，可在AEM各種編輯器網頁UI中公開狀態訊息。
 topics: development
 audience: developer
 doc-type: tutorial
@@ -14,48 +14,48 @@ ht-degree: 2%
 ---
 
 
-# 开发资源状态 {#developing-resource-statuses-in-aem-sites}
+# 開發資源狀態 {#developing-resource-statuses-in-aem-sites}
 
-Adobe Experience Manager的资源状态API是一个可插拔的框架，用于在AEM各种编辑器Web UI中公开状态消息。
+Adobe Experience Manager的資源狀態API是可插拔架構，可在AEM各種編輯器網頁UI中公開狀態訊息。
 
 ## 概述 {#overview}
 
-编辑器资源状态框架提供了服务器端和客户端API，用于以标准和统一的方式显示和与编辑器状态交互。
+編輯器資源狀態架構提供伺服器端和使用者端API，以標準且統一的方式顯示編輯器狀態並與編輯器狀態互動。
 
-编辑器状态栏在AEM的页面、体验片段和模板编辑器中本地可用。
+編輯器狀態列原本可在AEM的頁面、體驗片段和範本編輯器中使用。
 
-自定义资源状态提供程序的示例用例包括：
+自訂資源狀態提供者的範例使用案例包括：
 
-* 在计划激活后2小时内通知作者页面
-* 通知作者页面在过去15分钟内被激活
-* 通知作者页面在过去5分钟内进行了编辑，并由谁进行编辑
+* 在頁面處於排程啟動後的2小時內時通知作者
+* 通知作者在過去15分鐘內啟用了頁面
+* 通知作者某個頁面在過去5分鐘內經過編輯，以及編輯者
 
-![AEM编辑器资源状态概述](assets/sample-editor-resource-status-screenshot.png)
+![AEM編輯器資源狀態概觀](assets/sample-editor-resource-status-screenshot.png)
 
-## 资源状态提供程序框架 {#resource-status-provider-framework}
+## 資源狀態提供者架構 {#resource-status-provider-framework}
 
-开发自定义资源状态时，开发工作包括：
+開發自訂資源狀態時，開發工作由以下部分組成：
 
-1. ResourceStatusProvider实施，负责确定是否需要状态，以及有关状态的基本信息：标题、消息、优先级、变体、图标和可用操作。
-2. （可选）用于实施任何可用操作功能的GraniteUI JavaScript。
+1. ResourceStatusProvider實作，負責判斷是否需要狀態，以及有關狀態的基本資訊：標題、訊息、優先順序、變體、圖示和可用動作。
+2. 可選擇實作任何可用動作功能的GraniteUI JavaScript。
 
-   ![资源状态架构](assets/sample-editor-resource-status-application-architecture.png)
+   ![資源狀態架構](assets/sample-editor-resource-status-application-architecture.png)
 
-3. 作为页面、体验片段和模板编辑器的一部分提供的状态资源通过资源“[!DNL statusType]“属性”。
+3. 作為頁面、體驗片段和範本編輯器的一部分提供的狀態資源會透過資源獲得型別»[!DNL statusType]」屬性。
 
-   * 页面编辑器： `editor`
-   * 体验片段编辑器： `editor`
+   * 頁面編輯器： `editor`
+   * 體驗片段編輯器： `editor`
    * 模板编辑器: `template-editor`
 
-4. 状态资源的 `statusType` 已匹配到注册 `CompositeStatusType` 已配置OSGi `name` 属性。
+4. 狀態資源的 `statusType` 符合已註冊的 `CompositeStatusType` OSGi已設定 `name` 屬性。
 
-   对于所有匹配， `CompositeStatusType's` 类型将被收集，并用于收集 `ResourceStatusProvider` 具有此类型的实施，通过 `ResourceStatusProvider.getType()`.
+   對於所有相符專案， `CompositeStatusType's` 型別會被收集並用來收集 `ResourceStatusProvider` 具有此型別的實作，透過 `ResourceStatusProvider.getType()`.
 
-5. 匹配 `ResourceStatusProvider` 已通过 `resource` ，并确定 `resource` 具有要显示的状态。 如果需要状态，则此实施负责构建0个或多个 `ResourceStatuses` 返回时，每个值都表示要显示的状态。
+5. 相符專案 `ResourceStatusProvider` 傳遞給 `resource` 在編輯器中，並決定 `resource` 具有要顯示的狀態。 如果需要狀態，則此實作負責建置0或許多 `ResourceStatuses` 要傳回，每個代表要顯示的狀態。
 
-   通常， `ResourceStatusProvider` 返回0或1 `ResourceStatus` per `resource`.
+   通常， `ResourceStatusProvider` 傳回0或1 `ResourceStatus` 每 `resource`.
 
-6. ResourceStatus是一个界面，可由客户或有用的 `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` 可用于构建状态。 状态包括：
+6. ResourceStatus是可由客戶實作的介面，或是 `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` 可用來建構狀態。 狀態包含：
 
    * 标题
    * 消息
@@ -65,7 +65,7 @@ Adobe Experience Manager的资源状态API是一个可插拔的框架，用于�
    * 操作
    * 数据
 
-7. （可选）如果 `Actions` 为 `ResourceStatus` 对象，需要支持clientlibs才能将功能绑定到状态栏中的操作链接。
+7. 選擇性，如果 `Actions` 提供給 `ResourceStatus` 物件，需要支援clientlibs才能將功能繫結到狀態列中的動作連結。
 
    ```js
    (function(jQuery, document) {
@@ -78,15 +78,15 @@ Adobe Experience Manager的资源状态API是一个可插拔的框架，用于�
    })(jQuery, document);
    ```
 
-8. 任何支持JavaScript或CSS的支持操作都必须通过每个编辑器各自的客户端库来代理，以确保前端代码在编辑器中可用。
+8. 任何支援動作的JavaScript或CSS必須透過每個編輯器的個別使用者端程式庫進行代理，以確保編輯器中可使用前端程式碼。
 
-   * 页面编辑器类别： `cq.authoring.editor.sites.page`
-   * 体验片段编辑器类别： `cq.authoring.editor.sites.page`
-   * 模板编辑器类别： `cq.authoring.editor.sites.template`
+   * 頁面編輯器類別： `cq.authoring.editor.sites.page`
+   * 體驗片段編輯器類別： `cq.authoring.editor.sites.page`
+   * 範本編輯器類別： `cq.authoring.editor.sites.template`
 
-## 查看代码 {#view-the-code}
+## 檢視程式碼 {#view-the-code}
 
-[查看GitHub上的代码](https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples/resourcestatus/impl/SampleEditorResourceStatusProvider.java)
+[檢視GitHub上的程式碼](https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples/resourcestatus/impl/SampleEditorResourceStatusProvider.java)
 
 ## 其他资源 {#additional-resources}
 

@@ -1,6 +1,6 @@
 ---
-title: 为AEM设置Sling动态包含
-description: 有关安装和使用Apache Sling Dynamic Include以及在Apache HTTP Web Server上运行的AEM Dispatcher的视频演示。
+title: 設定AEM的Sling動態包含
+description: 在Apache HTTP Web Server上執行AEM Dispatcher時，安裝和使用Apache Sling Dynamic Include的影片逐步解說。
 version: 6.4, 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
@@ -19,20 +19,20 @@ ht-degree: 5%
 
 ---
 
-# 设置 [!DNL Sling Dynamic Include]
+# 設定 [!DNL Sling Dynamic Include]
 
-安装和使用的视频演示 [!DNL Apache Sling Dynamic Include] with [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 运行 [!DNL Apache HTTP Web Server].
+安裝及使用的影片逐步解說 [!DNL Apache Sling Dynamic Include] 替換為 [AEM傳送器](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 執行於 [!DNL Apache HTTP Web Server].
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 确保本地安装了最新版本的AEM Dispatcher。
+> 確保本機已安裝最新版AEM Dispatcher。
 
-1. 下载并安装 [[!DNL Sling Dynamic Include] 捆束](https://sling.apache.org/downloads.cgi).
-1. 配置 [!DNL Sling Dynamic Include] 通过 [!DNL OSGi Configuration Factory] at **http://&lt;host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.配置**.
+1. 下載並安裝 [[!DNL Sling Dynamic Include] 組合](https://sling.apache.org/downloads.cgi).
+1. 設定 [!DNL Sling Dynamic Include] 透過 [!DNL OSGi Configuration Factory] 於 **http://&lt;host>：&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**.
 
-   或者，要添加到AEM代码库，请创建相应的 **sling:OsgiConfig** 节点：
+   或者，若要新增至AEM程式碼基底，請建立適當的 **sling：OsgiConfig** 節點位置：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -56,7 +56,7 @@ ht-degree: 5%
    -->
    ```
 
-1. （可选）重复最后一步，以在 [可编辑模板的锁定（初始）内容](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/page-templates-editable.html) 将通过 [!DNL SDI] 也是。 进行额外配置的原因是可编辑模板的锁定内容是从 `/conf` 而不是 `/content`.
+1. （可選）重複上一個步驟，以允許元件位於 [可編輯範本的鎖定（初始）內容](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/page-templates-editable.html) 將透過以下方式提供 [!DNL SDI] 以及。 額外設定的原因是提供可編輯範本的鎖定內容 `/conf` 而非 `/content`.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -80,7 +80,7 @@ ht-degree: 5%
    -->
    ```
 
-1. 更新 [!DNL Apache HTTPD Web server]&#39;s `httpd.conf` 文件以启用 [!DNL Include] 模块。
+1. 更新 [!DNL Apache HTTPD Web server]的 `httpd.conf` 檔案以啟用 [!DNL Include] 模組。
 
    ```shell
    $ sudo vi .../httpd.conf
@@ -90,7 +90,7 @@ ht-degree: 5%
    LoadModule include_module libexec/apache2/mod_include.so
    ```
 
-1. 更新 [!DNL vhost] 文件以遵循include指令。
+1. 更新 [!DNL vhost] 要遵循include指示的檔案。
 
    ```shell
    $ sudo vi .../vhosts/aem-publish.local.conf
@@ -115,7 +115,7 @@ ht-degree: 5%
    </VirtualHost>
    ```
 
-1. 更新dispatcher.any配置文件以支持(1) `nocache` 选择器和(2)启用TTL支持。
+1. 更新dispatcher.any設定檔案以支援(1) `nocache` 選擇器和(2)啟用TTL支援。
 
    ```shell
    $ sudo vi .../conf/dispatcher.any
@@ -133,7 +133,7 @@ ht-degree: 5%
 
    >[!TIP]
    >
-   > 离开尾随 `*` 在地球里 `*.nocache.html*` 规则，可能 [子资源请求中的问题](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16).
+   > 保留結尾 `*` 在glob中關閉 `*.nocache.html*` 以上規則，可能會導致 [子資源請求中的問題](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16).
 
    ```shell
    /cache {
@@ -142,7 +142,7 @@ ht-degree: 5%
    }
    ```
 
-1. 始终重新启动 [!DNL Apache HTTP Web Server] 更改其配置文件或 `dispatcher.any`.
+1. 一律重新啟動 [!DNL Apache HTTP Web Server] 變更其組態檔或 `dispatcher.any`.
 
    ```shell
    $ sudo apachectl restart
@@ -150,7 +150,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->如果您使用 [!DNL Sling Dynamic Includes] 对于提供边缘端包含(ESI)，请确保缓存相关 [dispatcher缓存中的响应标头](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). 可能的标头包括：
+>如果您使用 [!DNL Sling Dynamic Includes] 若要提供edge-side include (ESI)，請務必快取相關 [Dispatcher快取中的回應標頭](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). 可能的標頭包括：
 >
 >* &quot;Cache-Control&quot;
 >* &quot;Content-Disposition&quot;
@@ -163,7 +163,7 @@ ht-degree: 5%
 >
 
 
-## 辅助材料
+## 支援材料
 
-* [下载Sling动态包含包](https://sling.apache.org/downloads.cgi)
-* [Apache Sling动态包含文档](https://github.com/Cognifide/Sling-Dynamic-Include)
+* [下載Sling動態包含套件](https://sling.apache.org/downloads.cgi)
+* [Apache Sling動態包含檔案](https://github.com/Cognifide/Sling-Dynamic-Include)

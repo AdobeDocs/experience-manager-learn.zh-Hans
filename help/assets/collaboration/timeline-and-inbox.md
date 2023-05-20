@@ -1,6 +1,6 @@
 ---
-title: 时间轴和收件箱
-description: 熟悉AEM Assets中用于协作的关键Web控制台。
+title: 時間軸和收件匣
+description: 請熟悉AEM Assets中用於共同作業的關鍵網頁主控台。
 sub-product: Experience Manager Assets
 feature: Workflow
 version: Cloud Service
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 时间轴和收件箱
+# 時間軸和收件匣
 
-熟悉AEM Assets中用于协作的关键Web控制台。
+請熟悉AEM Assets中用於共同作業的關鍵網頁主控台。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32051?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 在Adobe Target中使用AEM Experience Fragment选件
-description: Adobe Experience Manager 6.4可重新构建AEM和Target之间的个性化工作流。 现在，在AEM中创建的体验可以作为HTML选件直接交付到Adobe Target。 它允许营销人员跨不同渠道无缝测试和个性化内容。
+title: 在Adobe Target中使用AEM體驗片段選件
+description: Adobe Experience Manager 6.4可重新想像AEM和Target之間的個人化工作流程。 在AEM中建立的體驗現在可以作為HTML選件直接傳遞到Adobe Target。 它可讓行銷人員順暢地測試及個人化不同管道的內容。
 feature: Experience Fragments
 version: 6.4, 6.5
 topic: Personalization
@@ -14,24 +14,24 @@ ht-degree: 1%
 
 ---
 
-# 在Adobe Target中使用体验片段选件{#using-experience-fragment-offers-within-adobe-target}
+# 在Adobe Target中使用體驗片段選件{#using-experience-fragment-offers-within-adobe-target}
 
-Adobe Experience Manager可重新构建AEM和Target之间的个性化工作流。 现在，在AEM中创建的体验可以作为HTML选件直接交付到Adobe Target。 它允许营销人员跨不同渠道无缝测试和个性化内容。
+Adobe Experience Manager會重新想像AEM和Target之間的個人化工作流程。 在AEM中建立的體驗現在可以作為HTML選件直接傳遞到Adobe Target。 它可讓行銷人員順暢地測試及個人化不同管道的內容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22383?quality=12&learn=on)
 
 >[!NOTE]
 >
->建议使用 `at.js` 客户端库和最佳实践是使用标签管理解决方案(如Launch by Adobe、AdobeDTM或任何第三方标签管理解决方案)将目标库添加到您的网站页面
+>建議使用 `at.js` 使用者端程式庫，最佳實務是使用標籤管理解決方案(例如Launch by Adobe、AdobeDTM或任何第三方標籤管理解決方案)，將target程式庫新增至您的網站頁面
 
 
-* Adobe Experience Manager简单易用且功能强大的内容创建机制以及Adobe Target的人工智能(AI)和机器学习功能，可帮助内容作者在一个集中的位置为所有渠道创建和管理内容。 由于能够将体验片段作为HTML选件导出到Adobe Target中，因此营销人员现在可以更灵活地使用这些选件创建更加个性化的体验，并且现在可以测试和扩展他们创建的每个体验。
-* HTML选件和体验片段选件之间的主要区别在于，只能在AEM中完成后续的编辑，然后再与Adobe Target同步
-* 应用于体验片段文件夹的Target云服务配置会继承到直接在父文件夹下创建的所有体验片段。 子文件夹不会继承父云服务配置。
-* 为了创建个性化优惠，我们现在可以轻松利用AEM中存储的内容。
-* 您可以创建Target活动类型，包括由Sensei提供支持的活动，如自动分配、自动定位和Automated Personalization
+* Adobe Experience Manager簡單易用且功能強大的內容建立機制，搭配Adobe Target的人工智慧(AI)和機器學習，可幫助內容作者在集中位置為所有管道建立和管理內容。 行銷人員現在可以將體驗片段匯出至Adobe Target做為HTML選件，擁有更多彈性可使用這些選件建立更個人化的體驗，而且現在可以測試及擴充他們建立的每個體驗。
+* HTML選件與體驗片段選件之間的主要差異在於，對後續選件的編輯只能在AEM中完成，然後與Adobe Target同步
+* 套用至體驗片段資料夾的Target雲端服務設定會繼承至直接在父資料夾下建立的所有體驗片段。 子資料夾不會繼承父雲端服務設定。
+* 為了建立個人化優惠方案，我們現在可以輕鬆運用AEM中儲存的內容。
+* 您可以建立Target活動的型別，包括Sensei支援的活動，例如自動分配、自動鎖定目標和Automated Personalization
 
 ## 其他资源 {#additional-resources}
 
-* [体验片段文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
+* [體驗片段檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
 * [使用体验片段](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)

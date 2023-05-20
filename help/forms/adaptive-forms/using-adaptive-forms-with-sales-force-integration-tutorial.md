@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms 6.3和6.4中使用Salesforce配置DataSource
-description: 使用表单数据模型将AEM Forms与Salesforce集成
+title: 在AEM Forms 6.3和6.4中使用Salesforce設定DataSource
+description: 使用表單資料模型整合AEM Forms與Salesforce
 feature: Adaptive Forms, Form Data Model
 topics: integrations
 version: 6.4,6.5
@@ -16,107 +16,107 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms 6.3和6.4中使用Salesforce配置DataSource{#configuring-datasource-with-salesforce-in-aem-forms-and}
+# 在AEM Forms 6.3和6.4中使用Salesforce設定DataSource{#configuring-datasource-with-salesforce-in-aem-forms-and}
 
 ## 前提条件 {#prerequisites}
 
-在本文中，我们将演练使用Salesforce创建数据源的过程
+在本文中，我們將逐步解說使用Salesforce建立資料來源的過程
 
-本教程的先决条件：
+本教學課程的先決條件：
 
-* 滚动到此页面底部，下载swagger文件并保存硬盘。
-* 启用SSL的AEM Forms
+* 捲動至本頁底部，下載swagger檔案並將其儲存至硬碟。
+* 已啟用SSL的AEM Forms
 
-   * [有关在AEM 6.3上启用SSL的正式文档](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
-   * [有关在AEM 6.4上启用SSL的正式文档](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
+   * [在AEM 6.3上啟用SSL的官方檔案](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
+   * [在AEM 6.4上啟用SSL的官方檔案](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
-* 您需要拥有Salesforce帐户
-* 您需要创建一个连接的应用程序。 此时会列出用于创建应用程序的Salesforce官方文档 [此处](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0).
-* 为应用程序提供相应的OAuth作用域（我已选择所有可用的OAuth作用域以进行测试）
-* 提供回调URL。 以我为例的回调URL是
+* 您需要有Salesforce帳戶
+* 您需要建立連線應用程式。 列出建立應用程式的官方檔案表單Salesforce [此處](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0).
+* 為應用程式提供適當的OAuth範圍（為了測試目的，我已選取所有可用的OAuth範圍）
+* 提供回撥URL。 在我的案例中，回撥URL是
 
-   * 如果您使用 **AEM Forms 6.3**，则回调URL为https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html。 在此URL中，创建潜在客户是我的表单数据模型的名称。
+   * 如果您使用 **AEM Forms 6.3**，則回呼URL為https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html。 在此URL中，建立的是我的表單資料模型的名稱。
 
-   * 如果您使用的是** AEM Forms 6.4**，则回调URL为https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
+   * 如果您使用**AEM Forms 6.4**，則回撥URL為https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
-在本示例中， gbedekar -w7-1:6443是我的服务器名称以及运行AEM的端口。
+在此範例中，gbedekar -w7-1:6443是我的伺服器名稱，以及執行AEM的連線埠。
 
-创建“连接的应用程序”后，请注意 **消费者密钥和密钥**. 在AEM Forms中创建数据源时，您需要使用这些参数。
+建立連線應用程式後，請留意 **使用者金鑰和秘密金鑰**. 在AEM Forms中建立資料來源時，需要這些資訊。
 
-现在，您已创建连接的应用程序，接下来需要为需要在salesforce中执行的操作创建一个swagger文件。 样例swagger文件将作为可下载资产的一部分包含在内。 利用此swagger文件，可在提交自适应表单时创建“潜在客户”对象。 请浏览此swagger文件。
+現在您已建立連線應用程式，您需要為需要在Salesforce中執行的操作建立Swagger檔案。 範例swagger檔案包含在可下載的資產中。 此Swagger檔案可讓您在提交最適化表單時建立「Lead」物件。 請探索此Swagger檔案。
 
-下一步是在AEM Forms中创建数据源。 请根据您的AEM Forms版本执行以下步骤
+下一步是在AEM Forms中建立資料來源。 請根據您的AEM Forms版本遵循下列步驟
 
 ## AEM Forms 6.3 {#aem-forms}
 
-* 使用https协议登录AEM Forms
-* 在https://中键入以导航到云服务&lt;servername>:&lt;serverport> /etc/cloudservices.html，例如https://gbedekar-w7-1:6443/etc/cloudservices.html
-* 向下滚动到“表单数据模型”。
-* 单击“显示配置”。
-* 单击“+”以添加新配置
-* 选择“Rest Full Service”。 为配置提供有意义的标题和名称。 例如，
+* 使用https通訊協定登入AEM Forms
+* 輸入https://以導覽至雲端服務&lt;servername>：&lt;serverport> /etc/cloudservices.html，例如https://gbedekar-w7-1:6443/etc/cloudservices.html
+* 向下捲動至「表單資料模型」。
+* 按一下「顯示設定」。
+* 按一下「+」以新增設定
+* 選取「Rest Full Service」。 為設定提供有意義的標題和名稱。 例如，
 
-   * 名称：CreateLeadInSalesForce
-   * 标题：CreateLeadInSalesForce
+   * 名稱： CreateLeadInSalesForce
+   * 標題： CreateLeadInSalesForce
 
-* 单击“创建”
+* 按一下「建立」
 
-**在下一个屏幕**
+**在下一個畫面**
 
-* 选择“文件”作为Swagger源文件的选项。 浏览到您之前下载的文件
-* 选择身份验证类型作为OAuth2.0
-* 提供ClientID和客户端密钥值
-* OAuth Url为 —  **https://login.salesforce.com/services/oauth2/authorize**
-* 刷新令牌Url - **https://na5.salesforce.com/services/oauth2/token**
-* **访问Toke Url - https://na5.salesforce.com/services/oauth2/token**
-* 授权范围：** api chatter_api完整id openid refresh_token visualforce web**
-* 身份验证处理程序：授权承载者
-* 单击“连接到OAUTH”。如果一切正常，您不应看到任何错误
+* 選取「檔案」作為Swagger來源檔案的選項。 瀏覽至您先前下載的檔案
+* 選取驗證型別作為OAuth2.0
+* 提供ClientID和使用者端密碼值
+* OAuth Url是 —  **https://login.salesforce.com/services/oauth2/authorize**
+* 重新整理記號Url - **https://na5.salesforce.com/services/oauth2/token**
+* **Access Toke Url - https://na5.salesforce.com/services/oauth2/token**
+* 授權範圍： ** api chatter_api完整id openid refresh_token visualforce web**
+* 驗證處理常式：授權持有者
+* 按一下「連線至OAUTH」。如果一切順利，您應該不會看到任何錯誤
 
-使用Salesforce创建表单数据模型后，您可以使用刚刚创建的数据源创建表单数据集成。 有关创建表单数据集成的正式文档为 [此处](https://helpx.adobe.com/aem-forms/6-3/data-integration.html).
+使用Salesforce建立表單資料模型後，您就可以使用剛剛建立的資料來源建立表單資料整合。 建立表單資料整合的官方檔案為 [此處](https://helpx.adobe.com/aem-forms/6-3/data-integration.html).
 
-确保将表单数据模型配置为包含POST服务，以在SFDC中创建潜在客户对象。
+請務必設定表單資料模型以包含POST服務，以便在SFDC中建立Lead物件。
 
-您还必须为潜在客户对象配置读写服务。 请参阅本页底部的屏幕截图。
+您也必須為Lead物件設定Read and Write Service。 請參閱本頁底部的熒幕擷取畫面。
 
-创建表单数据模型后，您可以基于此模型创建自适应Forms，并使用表单数据模型提交方法在SFDC中创建潜在客户。
+建立表單資料模型後，您可以根據此模型建立最適化Forms，並使用表單資料模型提交方法在SFDC中建立Lead。
 
 ## AEM Forms 6.4 {#aem-forms-1}
 
-* 创建数据源
+* 建立資料來源
 
-   * [导航到数据源](http://localhost:4502/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/global)
+   * [導覽至資料來源](http://localhost:4502/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/global)
 
-   * 单击“创建”按钮
-   * 提供一些有意义的值
+   * 按一下「建立」按鈕
+   * 提供一些有意義的值
 
-      * 名称：CreateLeadInSalesForce
-      * 标题：CreateLeadInSalesForce
-      * 服务类型：RESTful服务
-   * 单击下一步
-   * Swagger源：文件
-   * 浏览并选择您在上一步骤中下载的swagger文件
-   * 身份验证类型：OAuth 2.0。指定以下值
-   * 提供ClientID和客户端密钥值
-   * OAuth Url为 —  **https://login.salesforce.com/services/oauth2/authorize**
-   * 刷新令牌Url - **https://na5.salesforce.com/services/oauth2/token**
-   * 访问令牌Ur **l - https://na5.salesforce.com/services/oauth2/token**
-   * 授权范围：** api chatter_api完整id openid refresh_token visualforce web**
-   * 身份验证处理程序：授权承载者
-   * 单击“连接到OAuth”按钮。 如果您发现任何错误，请查看上述步骤，以确保准确输入所有信息。
+      * 名稱： CreateLeadInSalesForce
+      * 標題： CreateLeadInSalesForce
+      * 服務型別： RESTful服務
+   * 按「下一步」
+   * Swagger來源：檔案
+   * 瀏覽並選取您在上一步中下載的swagger檔案
+   * 驗證型別： OAuth 2.0。指定下列值
+   * 提供ClientID和使用者端密碼值
+   * OAuth Url是 —  **https://login.salesforce.com/services/oauth2/authorize**
+   * 重新整理記號Url - **https://na5.salesforce.com/services/oauth2/token**
+   * 存取Token Ur **l - https://na5.salesforce.com/services/oauth2/token**
+   * 授權範圍： ** api chatter_api完整id openid refresh_token visualforce web**
+   * 驗證處理常式：授權持有者
+   * 按一下「連線至OAuth」按鈕。 若您發現任何錯誤，請檢閱上述步驟，以確保所有資訊皆已正確輸入。
 
 
-使用SalesForce创建数据源后，您可以使用刚刚创建的数据源创建表单数据集成。 的文档链接为 [此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
+使用SalesForce建立資料來源後，您就可以使用剛剛建立的資料來源建立表單資料整合。 的檔案連結為 [此處](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
 
-确保将表单数据模型配置为包含POST服务，以在SFDC中创建潜在客户对象。
+請務必設定表單資料模型以包含POST服務，以便在SFDC中建立Lead物件。
 
-您还必须为潜在客户对象配置读写服务。 请参阅本页底部的屏幕截图。
+您也必須為Lead物件設定Read and Write Service。 請參閱本頁底部的熒幕擷取畫面。
 
-创建表单数据模型后，您可以基于此模型创建自适应Forms，并使用表单数据模型提交方法在SFDC中创建潜在客户。
+建立表單資料模型後，您可以根據此模型建立最適化Forms，並使用表單資料模型提交方法在SFDC中建立Lead。
 
 >[!NOTE]
 >
->确保swagger文件中的url与您所在的区域相对应。 例如，在北美地区创建帐户时，swagger示例文件中的url为“na46.salesforce.com”。 最简单的方法是登录Salesforce帐户并检查url 。
+>確保swagger檔案中的url與您的地區相對應。 例如，範例swagger檔案中的url為「na46.salesforce.com」，因為帳戶是在北美建立。 最簡單的方式是登入您的Salesforce帳戶並檢查url 。
 
 ![sfdc1](assets/sfdc1.gif)
 

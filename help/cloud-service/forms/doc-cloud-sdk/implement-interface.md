@@ -1,6 +1,6 @@
 ---
-title: 实现接口的方法
-description: 实施界面方法以使用Document CloudREST API创建PDF。
+title: 實作介面的方法
+description: 實作介面方法，以使用Document CloudREST API建立pdf。
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 ---
 
-# 界面实施
+# 介面實作
 
-下面是实现接口的类的完整代码。
+以下是實現介面的類別的完整程式碼。
 
-此类使用`getAccessToken`、`getJWTToken`和`GetContentAnalyser`类的静态方法`getContentAnalyserRequest`的2种实用程序方法。
+此類別使用2種公用程式方法 `getAccessToken`， `getJWTToken` 和靜態方法 `getContentAnalyserRequest` 之 `GetContentAnalyser` 類別。
 
 
 ```java

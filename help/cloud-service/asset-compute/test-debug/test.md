@@ -1,6 +1,6 @@
 ---
-title: 测试Asset compute工作程序
-description: asset compute项目定义了一种模式，用于轻松创建和执行Asset compute工作程序的测试。
+title: 測試Asset compute背景工作
+description: asset compute專案定義了一種模式，用於輕鬆建立及執行Asset compute背景工作的測試。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -20,15 +20,15 @@ ht-degree: 0%
 
 ---
 
-# 测试Asset compute工作程序
+# 測試Asset compute背景工作
 
-asset compute项目定义了一种模式，用于轻松创建和执行Asset compute工作程序](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html)的测试。[
+asset compute專案定義了一種模式，用於輕鬆建立及執行 [asset compute背景工作程式的測試](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
 
-## 工人考试剖析
+## 背景工作測試的剖析
 
-asset compute工作者的测试被划分为多个测试包，并且在每个测试包中，有一个或多个测试案例声明要测试的条件。
+asset compute工作者的測試會分成測試套裝，而在每個測試套裝中，會有一或多個測試案例宣告要測試的條件。
 
-asset compute项目中的测试结构如下：
+asset compute專案中的測試結構如下：
 
 ```
 /actions/<worker-name>/index.js
@@ -44,33 +44,33 @@ asset compute项目中的测试结构如下：
             ...
 ```
 
-每个测试转换都可以具有以下文件：
+每個測試轉換可以有下列檔案：
 
 + `file.<extension>`
-   + 要测试的源文件（扩展名可以是`.link`以外的任何内容）
+   + 要測試的來源檔案(副檔名可以是 `.link`)
    + 必填
 + `rendition.<extension>`
-   + 预期演绎版
-   + 必需，错误测试除外
+   + 預期的轉譯
+   + 必要，錯誤測試除外
 + `params.json`
-   + 单个呈现版本JSON说明
+   + 單一轉譯JSON指示
    + 可选
 + `validate`
-   + 将预期和实际的再现文件路径作为参数且在结果确定时必须返回退出代码0的脚本，或在验证或比较失败时返回非零退出代码的脚本。
-   + 可选，默认为`diff`命令
-   + 使用外壳脚本来封装Docker run命令以使用不同的验证工具
+   + 此指令碼會以引數形式取得預期和實際的轉譯檔案路徑，如果結果為正確，則必須傳回退出代碼0；如果驗證或比較失敗，則必須傳回非零的退出代碼。
+   + 選擇性，預設為 `diff` 命令
+   + 使用包裝Docker執行命令的外殼指令碼，以使用不同的驗證工具
 + `mock-<host-name>.json`
-   + [模拟外部服务调用](https://www.mock-server.com/mock_server/creating_expectations.html)的JSON格式HTTP响应。
-   + 可选，仅当工作代码自行发出HTTP请求时才使用
+   + JSON格式的HTTP回應 [嘲弄外部服務呼叫](https://www.mock-server.com/mock_server/creating_expectations.html).
+   + 選用，僅在背景工作程式碼提出自己的HTTP請求時使用
 
-## 编写测试用例
+## 撰寫測試案例
 
-此测试案例声明输入文件(`file.jpg`)的参数化输入(`params.json`)生成预期的PNG呈现(`rendition.png`)。
+此測試案例會宣告引數化的輸入(`params.json`)作為輸入檔案(`file.jpg`)產生預期的PNG轉譯(`rendition.png`)。
 
-1. 首先删除在`/test/asset-compute/simple-worker`自动生成的`simple-worker`测试案例，因为该测试案例无效，因为我们的工作人员不再只是将源复制到演绎版。
-1. 在`/test/asset-compute/worker/success-parameterized`处创建新的测试用例文件夹，以测试生成PNG呈现版本的工作程序是否成功执行。
-1. 在`success-parameterized`文件夹中，为此测试案例添加测试[输入文件](./assets/test/success-parameterized/file.jpg)，并将其命名为`file.jpg`。
-1. 在`success-parameterized`文件夹中，添加一个名为`params.json`的新文件，该文件定义工作程序的输入参数：
+1. 首先刪除自動產生的 `simple-worker` 測試案例於 `/test/asset-compute/simple-worker` 由於這是無效的，因為我們的背景工作不再只是將來源複製到轉譯。
+1. 建立新的測試案例資料夾： `/test/asset-compute/worker/success-parameterized` 測試產生PNG轉譯的背景工作程式是否成功執行。
+1. 在 `success-parameterized` 資料夾，新增測試 [輸入檔案](./assets/test/success-parameterized/file.jpg) 用於此測試案例並命名它 `file.jpg`.
+1. 在 `success-parameterized` 資料夾，新增名為的新檔案 `params.json` 定義背景工作程式的輸入引數時，請執行下列動作：
 
    ```json
    { 
@@ -80,22 +80,22 @@ asset compute项目中的测试结构如下：
    }
    ```
 
-   这些键/值与传递到[开发工具的Asset compute配置文件定义](../develop/development-tool.md)的键/值相同，减去`worker`键。
+   這些是傳遞至 [開發工具的Asset compute設定檔定義](../develop/development-tool.md)，減 `worker` 金鑰。
 
-1. 将预期的[呈现文件](./assets/test/success-parameterized/rendition.png)添加到此测试案例中，并将其命名为`rendition.png`。 此文件表示工作程序对给定输入`file.jpg`的预期输出。
-1. 在命令行中，通过执行`aio app test`来运行项目根
-   + 确保安装并启动[Docker Desktop](../set-up/development-environment.md#docker)和支持Docker映像
-   + 终止任何正在运行的开发工具实例
+1. 新增預期的 [轉譯檔案](./assets/test/success-parameterized/rendition.png) 至此測試案例並加以命名 `rendition.png`. 此檔案代表指定輸入之背景工作程式的預期輸出 `file.jpg`.
+1. 從命令列，透過執行來執行測試專案根目錄 `aio app test`
+   + 確定 [Docker案頭](../set-up/development-environment.md#docker) 和支援的Docker映像已安裝並啟動
+   + 終止任何執行中的開發工具例項
 
-![测试 — 成功  ](./assets/test/success-parameterized/result.png)
+![測試 — 成功 ](./assets/test/success-parameterized/result.png)
 
-## 编写错误检查测试用例
+## 寫入錯誤檢查測試案例
 
-此测试案例旨在确保当`contrast`参数设置为无效值时，工作程序会引发相应错误。
+此測試案例會進行測試以確保背景工作程式在以下情況下擲回適當的錯誤： `contrast` 引數已設定為無效值。
 
-1. 在`/test/asset-compute/worker/error-contrast`处创建新的测试用例文件夹，以测试因`contrast`参数值无效而导致的工作器重新执行。
-1. 在`error-contrast`文件夹中，为此测试案例添加测试[输入文件](./assets/test/error-contrast/file.jpg)，并将其命名为`file.jpg`。 此文件的内容对此测试不重要，它只需存在即可通过“损坏的源”检查，才能达到`rendition.instructions`有效性检查，此测试案例将验证。
-1. 在`error-contrast`文件夹中，添加一个名为`params.json`的新文件，该文件定义工作程序的输入参数，其内容如下：
+1. 建立新的測試案例資料夾： `/test/asset-compute/worker/error-contrast` 測試由於無效而錯誤執行背景工作程式的方式 `contrast` 引數值。
+1. 在 `error-contrast` 資料夾，新增測試 [輸入檔案](./assets/test/error-contrast/file.jpg) 用於此測試案例並命名它 `file.jpg`. 此檔案的內容對此測試而言並不重要，它只需存在以通過「損壞的來源」檢查，以達到 `rendition.instructions` 有效性檢查，此測試案例已驗證。
+1. 在 `error-contrast` 資料夾，新增名為的新檔案 `params.json` 定義背景工作程式的輸入引數及其內容：
 
    ```json
    {
@@ -104,23 +104,23 @@ asset compute项目中的测试结构如下：
    }
    ```
 
-   + 将`contrast`参数设置为`10`，这是一个无效值，因为对比度必须介于–1和1之间，才能引发`RenditionInstructionsError`。
-   + 通过将`errorReason`键设置为与预期错误关联的“reason”，断言测试中会引发相应错误。 此无效的对比度参数会引发[自定义错误](../develop/worker.md#errors)、`RenditionInstructionsError`，因此会将`errorReason`设置为此错误的原因，或将`rendition_instructions_error`设置为声明引发该错误。
+   + 設定 `contrast` 引數至 `10`，為無效值，因為對比度必須介於–1和1之間，才能擲回 `RenditionInstructionsError`.
+   + 透過設定「 」，斷言測試中擲回了適當的錯誤 `errorReason` 與預期錯誤相關聯之「原因」的索引鍵。 此無效的對比引數會擲回 [自訂錯誤](../develop/worker.md#errors)， `RenditionInstructionsError`，因此請設定 `errorReason` 此錯誤的原因，或`rendition_instructions_error` 以確認已擲回。
 
-1. 由于在执行错误期间不应生成任何呈现版本，因此不需要`rendition.<extension>`文件。
-1. 通过执行命令`aio app test`从项目的根运行测试包
-   + 确保安装并启动[Docker Desktop](../set-up/development-environment.md#docker)和支持Docker映像
-   + 终止任何正在运行的开发工具实例
+1. 由於在錯誤執行期間不應產生轉譯，否 `rendition.<extension>` 檔案為必要項。
+1. 執行命令，從專案的根目錄執行測試套裝 `aio app test`
+   + 確定 [Docker案頭](../set-up/development-environment.md#docker) 和支援的Docker映像已安裝並啟動
+   + 終止任何執行中的開發工具例項
 
-![测试 — 错误对比度](./assets/test/error-contrast/result.png)
+![測試 — 錯誤對比](./assets/test/error-contrast/result.png)
 
-## Github上的测试用例
+## Github上的測試案例
 
-Github上提供了最终的测试案例，具体网址为：
+Github提供的最終測試案例，網址為：
 
-+ [aem-guides-wknd-asset-compute/test/asset-compute-worker](https://github.com/adobe/aem-guides-wknd-asset-compute/tree/master/test/asset-compute/worker)
++ [aem-guides-wknd-asset-compute/test/asset-compute/worker](https://github.com/adobe/aem-guides-wknd-asset-compute/tree/master/test/asset-compute/worker)
 
 ## 疑难解答
 
-+ [测试执行期间未生成任何呈现版本](../troubleshooting.md#test-no-rendition-generated)
-+ [测试生成不正确的呈现版本](../troubleshooting.md#tests-generates-incorrect-rendition)
++ [測試執行期間未產生轉譯](../troubleshooting.md#test-no-rendition-generated)
++ [測試產生不正確的轉譯](../troubleshooting.md#tests-generates-incorrect-rendition)

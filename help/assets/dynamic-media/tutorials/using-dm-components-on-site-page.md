@@ -1,6 +1,6 @@
 ---
-title: 使用Dynamic Media核心组件
-description: 在“站点”页面上使用Dynamic Media组件的步骤
+title: 使用Dynamic Media核心元件
+description: 步驟在網站頁面上使用Dynamic Media元件
 role: Developer
 level: Intermediate
 version: Cloud Service
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 使用Dynamic Media核心组件
+# 使用Dynamic Media核心元件
 
-此视频将演示在AEM Sites网页上使用启用Dynamic Media的核心组件的过程。
+本影片逐步解說在AEM Sites網頁上使用啟用Dynamic Media的核心元件的程式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335461?quality=12&learn=on)

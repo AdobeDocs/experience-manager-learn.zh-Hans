@@ -1,6 +1,6 @@
 ---
-title: 创建OSGi服务
-description: 创建OSGi服务以存储要签名的表单
+title: 建立OSGi服務
+description: 建立OSGi服務以儲存要簽署的表單
 feature: Workflow
 version: 6.4,6.5
 thumbnail: 6886.jpg
@@ -16,13 +16,13 @@ ht-degree: 1%
 
 ---
 
-# 创建OSGi服务
+# 建立OSGi服務
 
-以下代码用于存储需要签名的表单。 每个要签名的表单都与唯一的GUID和客户ID关联。 因此，一个或多个表单可以与同一客户ID关联，但具有分配给表单的唯一GUID。
+下列程式碼是用來儲存需要簽署的表單。 每個要簽署的表單都與唯一的GUID和客戶ID相關聯。 因此，一或多個表單可以與相同的客戶ID建立關聯，但會將唯一的GUID指派給表單。
 
 ## 接口
 
-下面是使用的接口声明
+以下是使用的介面宣告
 
 ```java
 package com.aem.forms.signmultipleforms;
@@ -39,9 +39,9 @@ public interface SignMultipleForms
 
 
 
-## 插入数据
+## 插入資料
 
-插入数据方法在数据源标识的数据库中插入一行。 数据库中的每一行都对应一个表单，并由GUID和客户ID唯一标识。 表单数据和表单URL也存储在此行中。 状态列用于指示表单是否已填写和签名。 值0表示表单尚未签名。
+insert data方法會在資料來源所識別的資料庫中插入列。 資料庫中的每一列都與表單相對應，並由GUID和客戶ID唯一識別。 表單資料和表單URL也儲存在此列中。 狀態列用於指示表單是否已填寫和簽署。 0值表示表單尚未簽署。
 
 ```java
 @Override
@@ -101,9 +101,9 @@ log.debug(e.getMessage());
 ```
 
 
-## 获取表单数据
+## 取得表單資料
 
-以下代码用于获取与给定GUID关联的自适应表单数据。 然后，使用表单数据预填充自适应表单。
+下列程式碼用於擷取與特定GUID關聯的最適化表單資料。 然後，表單資料會用於預先填入最適化表單。
 
 ```java
 @Override
@@ -128,9 +128,9 @@ public String getFormData(String guid) {
 }
 ```
 
-## 更新签名状态
+## 更新簽章狀態
 
-成功完成签署仪式将触发与表单关联的AEM工作流。 工作流中的第一步是一个流程步骤，用于更新数据库中由guid和客户id标识的行的状态。 我们还将formdata中带符号元素的值设置为Y，以表示已填写并签名表单。 自适应表单中填充了此数据，xml数据中带符号的数据元素的值用于显示相应的消息。 可从自定义流程步骤中调用updateSignatureStatus代码。
+成功完成簽署儀式會觸發與表單相關聯的AEM工作流程。 工作流程的第一步是處理步驟，它會更新資料庫中由guid和客戶id所識別之列的狀態。 我們也會將formdata中帶正負號的元素的值設為Y，表示表單已填寫並簽署。 最適化表單會填入此資料，而xml資料中已簽署資料元素的值會用來顯示適當的訊息。 會從自訂程式步驟叫用updateSignatureStatus程式碼。
 
 
 ```java
@@ -162,9 +162,9 @@ public void updateSignatureStatus(String formData, String guid) {
 }
 ```
 
-## 获取下一张表格进行签名
+## 取得下一個要簽署的表單
 
-以下代码用于获取下一个用于为状态为0的给定customerID签名的表单。 如果sql查询未返回任何行，则我们将返回字符串 **&quot;AllDone&quot;** 表示不再有用于为给定客户id签名的表单。
+下列程式碼已用於取得狀態為0之指定customerID的下一個簽署表單。 如果sql查詢未傳回任何列，我們會傳回字串 **&quot;AllDone&quot;** 這表示指定的客戶id已沒有任何可供簽署的表單。
 
 ```java
 @Override
@@ -204,8 +204,8 @@ public String getNextFormToSign(int customerID) {
 
 ## Assets
 
-与上述服务相结合的OSGi包可以 [从此处下载](assets/sign-multiple-forms.jar)
+包含上述服務的OSGi套件組合可以是 [已從此處下載](assets/sign-multiple-forms.jar)
 
 ## 后续步骤
 
-[创建主工作流以处理初始表单提交](./create-main-workflow.md)
+[建立主要工作流程以處理初始表單提交](./create-main-workflow.md)

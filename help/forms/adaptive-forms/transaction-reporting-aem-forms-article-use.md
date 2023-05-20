@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms中使用交易报表
-description: 利用AEM Forms中的事务报表，可统计自AEM Forms部署中指定日期以来发生的所有事务。
+title: 在AEM Forms中使用交易報告
+description: AEM Forms中的交易報告可讓您保留自AEM Forms部署上的指定日期以來發生的所有交易的計數。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,37 +15,37 @@ ht-degree: 1%
 
 ---
 
-# 在AEM Forms中使用交易报表{#using-transaction-reporting-in-aem-forms}
+# 在AEM Forms中使用交易報告{#using-transaction-reporting-in-aem-forms}
 
-AEM Forms 6.4.1引入了交易报告功能，用于捕获表单提交数量、使用文档服务渲染文档以及渲染交互式通信（Web和打印渠道）。此功能主要适用于希望根据表单提交数量和/或文档渲染数量授权软件的客户。 此功能当前仅在AEM Forms OSGi堆栈上可用。
+AEM Forms 6.4.1已引入交易報告功能，可擷取提交的表單數量、使用檔案服務轉譯檔案以及轉譯互動式通訊（網頁和列印通道）。此功能主要適用於想要根據提交的表單和/或提供的檔案數量來授權軟體的客戶。 此功能目前僅適用於AEM Forms OSGI棧疊。
 
-## 启用交易报告 {#enabling-transaction-reporting}
+## 啟用交易報告 {#enabling-transaction-reporting}
 
-默认情况下，事务记录处于禁用状态。 要启用交易记录，请按照以下步骤操作：
+依預設，交易記錄為停用。 若要啟用交易記錄，請遵循下列步驟：
 
-* [打开configMgr](http://localhost:4502/system/console/configMgr)
-* 搜索“Forms Transaction Reporting”
-* 选中“记录交易”复选框
-* 保存更改
+* [開啟configMgr](http://localhost:4502/system/console/configMgr)
+* 搜尋「Forms交易報告」
+* 選取「記錄交易」核取方塊
+* 儲存您的變更
 
-启用事务报表后，您可以提交自适应Forms、使用文档服务生成文档或渲染Interactive Communication文档，以查看事务报表的实际操作情况。
+啟用交易報告後，您可以提交Adaptive Forms、使用檔案服務產生檔案或轉譯Interactive Communication檔案，以檢視交易報告的運作情況。
 
-## 查看交易报表 {#viewing-transaction-report}
+## 檢視交易報告 {#viewing-transaction-report}
 
-要查看事务报表，请以管理员身份登录AEM Forms。 只有fd-Administrator组的成员才能查看事务报表。
+若要檢視交易報告，請以管理員身分登入AEM Forms。 只有fd-Administrator群組的成員可以檢視交易報告。
 
-选择工具 | Forms |查看交易报表
+選取工具 |Forms |檢視交易報告
 
-或通过单击 [此处](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
+或按一下以檢視交易報告 [此處](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
 
-![TransactionReporting](assets/transactionreporting.gif)
+![交易報告](assets/transactionreporting.gif)
 
-在上面的屏幕截图中， Document Processed是使用文档服务生成的文档数。 呈现的文档是呈现的交互式通信文档（Web和打印）的数量。 Forms Submitted是自适应表单提交的数量。
+在上方的熒幕擷圖中，Document Processed是使用檔案服務產生的檔案數。 Documents rended是已轉譯的互動式通訊檔案（網頁和列印）數目。 Forms Submitted為最適化表單提交次數。
 
-事务在指定时段（刷新缓冲时间+反向复制时间）内保留在缓冲区中。 默认情况下，交易计数大约需要90秒才能反映在交易报表中。
+交易會在緩衝區中保留指定的期間（排清緩衝區時間+反向復寫時間）。 依預設，交易計數大約需要90秒才會反映在交易報告中。
 
-诸如提交PDF表单、使用代理UI预览交互式通信或使用非标准表单提交方法之类的操作不会计为交易。 AEM Forms提供了用于记录此类交易的API。 从自定义实施中调用API以记录交易。
+提交PDF表單、使用代理程式UI預覽互動式通訊或使用非標準表單提交方法等動作不會計為交易。 AEM Forms提供API來記錄這類交易。 從您的自訂實作呼叫API以記錄交易。
 
-如果要查看创作实例上的事务报表，请确保在所有发布实例上配置了反向复制。
+如果您在製作執行個體上檢視交易報告，請確定已在所有發佈執行個體上設定反向復寫。
 
-了解有关交易报告的更多信息 [请单击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+若要進一步瞭解交易報告 [請按這裡](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)

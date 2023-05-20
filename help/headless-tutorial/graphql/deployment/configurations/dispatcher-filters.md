@@ -1,6 +1,6 @@
 ---
-title: 适用于AEM GraphQL的Dispatcher过滤器
-description: 了解如何配置AEM Publish Dispatcher过滤器以与AEM GraphQL一起使用。
+title: 適用於AEM GraphQL的Dispatcher篩選器
+description: 瞭解如何設定AEM Publish Dispatcher篩選器以與AEM GraphQL搭配使用。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -8,38 +8,38 @@ role: Developer, Architect
 level: Intermediate
 kt: 10829
 thumbnail: kt-10829.jpg
-source-git-commit: 442020d854d8f42c5d8a1340afd907548875866e
+exl-id: b76b7c46-5cbd-4039-8fd6-9f0f10a4a84f
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 2%
 
 ---
 
+# Dispatcher篩選器
 
-# Dispatcher过滤器
+Adobe Experience Manager as a Cloud Service會使用AEM發佈Dispatcher篩選器，以確保只有可聯絡AEM的請求才能聯絡AEM。 預設會拒絕所有要求，而且必須明確新增允許URL的模式。
 
-Adobe Experience Manager as a Cloud Service使用AEM发布Dispatcher过滤器来确保仅应访问AEM的请求才能访问AEM。 默认情况下，所有请求都会被拒绝，并且必须明确添加允许的URL模式。
-
-| 客户端类型 | [单页应用程序(SPA)](../spa.md) | [Web组件/JS](../web-component.md) | [移动设备](../mobile.md) | [服务器到服务器](../server-to-server.md) |
+| 使用者端型別 | [單頁應用程式(SPA)](../spa.md) | [Web元件/JS](../web-component.md) | [移动设备](../mobile.md) | [伺服器對伺服器](../server-to-server.md) |
 |------------------------------------------:|:---------------------:|:----------------:|:---------:|:----------------:|
-| 需要Dispatcher过滤器配置 | ✔ | ✔ | ✔ | ✔ |
+| 需要Dispatcher篩選器設定 | ✔ | ✔ | ✔ | ✔ |
 
 >[!TIP]
 >
-> 以下配置是示例。 确保根据项目的要求进行调整。
+> 以下設定為範例。 請確定您調整這些值，以符合專案的要求。
 
-## 调度程序过滤器配置
+## Dispatcher篩選設定
 
-AEM发布调度程序过滤器配置定义允许访问AEM的URL模式，并且必须包含AEM持久查询端点的URL前缀。
+AEM發佈Dispatcher篩選設定會定義允許到達AEM的URL模式，且必須包含AEM持續查詢端點的URL首碼。
 
-| 客户端连接到 | AEM Author | AEM 发布 | AEM预览 |
+| 使用者端連線至 | AEM Author | AEM 发布 | AEM預覽 |
 |------------------------------------------:|:----------:|:-------------:|:-------------:|
-| 需要Dispatcher过滤器配置 | ✘ | ✔ | ✔ |
+| 需要Dispatcher篩選器設定 | ✘ | ✔ | ✔ |
 
-添加 `allow` URL模式的规则 `/graphql/execute.json/*`，并确保文件ID(例如 `/0600`，在示例场文件中是唯一的)。
-这允许对持久查询端点进行HTTPGET请求，例如 `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` 到AEM发布。
+新增 `allow` 具有URL模式的規則 `/graphql/execute.json/*`，並確保檔案ID (例如 `/0600`，在範例伺服器陣列檔案中是唯一的)。
+這可讓持續查詢端點收到HTTPGET要求，例如 `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` 到AEM Publish。
 
-如果在AEM无头体验中使用体验片段，请对这些路径执行相同的操作。
+如果您在AEM Headless體驗中使用體驗片段，請對這些路徑執行相同的操作。
 
 + `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
@@ -52,6 +52,6 @@ AEM发布调度程序过滤器配置定义允许访问AEM的URL模式，并且�
 ...
 ```
 
-### 过滤器配置示例
+### 篩選設定範例
 
-+ [可在WKND项目中找到Dispatcher过滤器的示例。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/filters/filters.any#L28)
++ [WKND專案中可以找到Dispatcher篩選的範例。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/filters/filters.any#L28)

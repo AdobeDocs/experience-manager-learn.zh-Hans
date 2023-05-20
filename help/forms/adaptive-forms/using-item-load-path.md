@@ -1,6 +1,6 @@
 ---
-title: 使用项目加载路径填充下拉列表
-description: 配置和填充下拉列表以从crx节点读取值
+title: 使用專案載入路徑來填入下拉式清單
+description: 設定並填入下拉式清單以從crx節點讀取值
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 10961
@@ -9,25 +9,26 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-20T00:00:00Z
 thumbnail: item-load.jpg
-source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
+exl-id: 89c486c8-95c3-4cd4-bf8e-a1b3558f17d6
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
 
 ---
 
-# AEM Forms中的项目加载属性
+# AEM Forms中的專案載入屬性
 
-使用项目加载路径属性配置和填充下拉列表。
-项目加载路径字段允许作者提供一个URL，从中加载下拉列表中可用的选项。
-要在crx中创建此类节点，请按照以下所述步骤操作：
-* 登录到crx
-* 创建一个名为assets的节点（您可以根据需要命名此节点），键入sling:folder（位于内容下）。
+使用專案載入路徑屬性來設定及填入下拉式清單。
+專案載入路徑欄位可讓作者提供URL，從中載入下拉式清單中可用的選項。
+若要在crx中建立這類節點，請遵循下列步驟：
+* 登入crx
+* 建立名為assets的節點（您可以依需求命名此節點），在「內容」下輸入sling：folder。
 * 保存
-* 单击新创建的资产节点，并设置其属性，如下所示
-* 您需要创建名为assettypes的字符串类型属性（您可以根据需要将其命名）。确保该属性是多值属性。 提供所需的值并进行保存。
-   ![项目加载路径](assets/item-load-path-crx.png)
+* 按一下新建立的資產節點並設定其屬性，如下所示
+* 您將需要建立一個名為assettypes （您可以視需要加以命名）的字串型別屬性。請確定屬性是多值。 提供您想要的值並儲存。
+   ![item-load-path](assets/item-load-path-crx.png)
 
-要在下拉列表中加载这些值，请在项目加载路径属性中提供以下路径  **/content/assets/assettypes**
+若要在下拉式清單中載入這些值，請在專案載入路徑屬性中提供下列路徑  **/content/assets/assettypes**
 
-示例包可以是 [从此处下载](assets/item-load-path-package.zip)
+範例套件可以是 [已從此處下載](assets/item-load-path-package.zip)

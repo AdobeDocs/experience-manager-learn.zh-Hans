@@ -1,6 +1,6 @@
 ---
-title: AEM Assets视频和教程
-description: 观看我们的视频，获取AEM资产支持和帮助。
+title: AEM Assets影片和教學課程
+description: 觀看我們的影片，以取得AEM Asset支援和協助。
 sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
@@ -11,9 +11,9 @@ ht-degree: 15%
 
 ---
 
-# AEM Assets视频和教程 {#overview}
+# AEM Assets影片和教學課程 {#overview}
 
-Adobe Experience Manager(AEM)Assets是AEM Platform上的一款数字资产管理工具，它允许用户在基于Web的存储库中创建、管理和共享其数字资产（图像、视频、文档和音频剪辑）。 本用户指南包含有关AEM Assets的众多特性和功能的视频和教程。
+Adobe Experience Manager (AEM) Assets是AEM平台上的數位資產管理工具，可讓使用者在網頁型存放庫中建立、管理和分享其數位資產（影像、影片、檔案和音訊片段）。 本使用手冊包含了AEM Assets許多功能的相關影片和教學課程。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_assets_overview"
@@ -23,7 +23,7 @@ Adobe Experience Manager(AEM)Assets是AEM Platform上的一款数字资产管理
 
 ## AEM Assets 演练
 
-了解AEM Assets的概念以及如何使用它来实现贵组织的业务目标。
+瞭解什麼是AEM Assets以及如何使用它來實現貴組織的業務目標。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336196?quality=12&learn=on)
 
@@ -36,7 +36,7 @@ Adobe Experience Manager(AEM)Assets是AEM Platform上的一款数字资产管理
 
 <div id="staff-picks-section">
 
-## 员工挑选
+## 工作人員選擇
 
 <table>
 <td>
@@ -45,47 +45,47 @@ Adobe Experience Manager(AEM)Assets是AEM Platform上的一款数字资产管理
    </a>
    <div>
       <a href="./creative-workflows/aem-desktop-app.md">
-      <strong>使用AEM桌面应用程序</strong>
+      <strong>使用AEM案頭應用程式</strong>
       </a>
    </div>
    <p>
-      <em>直接从桌面访问AEM中的资产</em>
+      <em>直接從案頭存取AEM中的資產</em>
    </p>
 </td>
 <td>
    <a href="./advanced/asset-insights-launch-tutorial.md">
-   <img alt="AEM Assets Insights" src="./assets/overview/asset-insights.png"/>
+   <img alt="AEM Assets深入分析" src="./assets/overview/asset-insights.png"/>
    </a>
    <div>
       <a href="./advanced/asset-insights-launch-tutorial.md">
-      <strong>在Launch中使用AEM资产分析</strong>
+      <strong>搭配Launch使用AEM Asset Insights</strong>
       </a>
    </div>
    <p>
-      <em>深入了解资产的使用方式</em>
+      <em>深入瞭解資產的使用方式</em>
    <p>
 </td>
 <td>
    <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-   <img alt="Dynamic Media概述" src="./assets/overview/dynamic-media.png" />
+   <img alt="Dynamic Media概觀" src="./assets/overview/dynamic-media.png" />
    </a>
    <div>
       <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-      <strong>Dynamic Media概述</strong>
+      <strong>Dynamic Media概觀</strong>
       </a>
    </div>
    <p>
-      <em>使用Dynamic Media管理和访问媒体内容</em>
+      <em>使用Dynamic Media管理和存取媒體內容</em>
    <p>
 </td>
 </table>
 
 </div>
 
-## 其他资源
+## 其他資源
 
 * [AEM Assets 文档](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
-* [AEMas a Cloud Service教程](/help/cloud-service/overview.md)
-* [AEM Sites教程](/help/sites/overview.md)
-* [AEM Forms教程](/help/forms/overview.md)
-* [AEM Foundation教程](/help/foundation/overview.md)
+* [AEMas a Cloud Service教學課程](/help/cloud-service/overview.md)
+* [AEM Sites教學課程](/help/sites/overview.md)
+* [AEM Forms教學課程](/help/forms/overview.md)
+* [AEM Foundation教學課程](/help/foundation/overview.md)

@@ -1,6 +1,6 @@
 ---
-title: 了解AEM中的Sling模型导出程序
-description: Apache Sling模型1.3.0引入了Sling模型导出器，这是一种将Sling模型对象导出或序列化为自定义抽象的优雅方法。 本文并列了使用Sling模型填充HTL脚本的传统用例，以及利用Sling模型导出器框架将Sling模型序列化为JSON。
+title: 瞭解AEM中的Sling模型匯出工具
+description: Apache Sling Model 1.3.0引入了Sling模型匯出工具，這是一種將Sling模型物件匯出或序列化為自訂抽象的簡潔方法。 本文將使用Sling模型填入HTL指令碼的傳統使用案例並置，利用Sling模型匯出工具框架將Sling模型序列化為JSON。
 version: 6.4, 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
@@ -19,61 +19,61 @@ ht-degree: 1%
 
 ---
 
-# 了解 [!DNL Sling Model Exporter]
+# 瞭解 [!DNL Sling Model Exporter]
 
-Apache [!DNL Sling Models] 1.3.0引入 [!DNL Sling Model Exporter]，一种导出或序列化的优雅方式 [!DNL Sling Model] 对象转换为自定义抽象。 本文并列了传统使用案例 [!DNL Sling Models] 以利用 [!DNL Sling Model Exporter] 序列化框架 [!DNL Sling Model] 到JSON中。
+Apache [!DNL Sling Models] 1.3.0引入 [!DNL Sling Model Exporter]，優雅的匯出或序列化方式 [!DNL Sling Model] 物件放入自訂抽象概念。 本文將使用的傳統使用案例並列 [!DNL Sling Models] 填入HTL指令碼，利用 [!DNL Sling Model Exporter] 序列化a的框架 [!DNL Sling Model] 轉換為JSON。
 
-## 传统Sling模型HTTP请求流程
+## 傳統Sling模型HTTP請求流程
 
-传统用例 [!DNL Sling Models] 是为资源或请求提供业务抽象，它为HTL脚本（或以前的JSP）提供用于访问业务函数的接口。
+的傳統使用案例 [!DNL Sling Models] 是為資源或請求提供業務抽象，這提供HTL指令碼（或以前的JSP）用於存取業務功能的介面。
 
-共同模式正在形成 [!DNL Sling Models] 表示AEM组件或页面，并使用 [!DNL Sling Model] 对象，用于向HTL脚本提供数据，且HTML的结束结果显示在浏览器中。
+正在開發常見模式 [!DNL Sling Models] 代表AEM元件或頁面，並使用 [!DNL Sling Model] 物件，用來向HTL指令碼提供資料，以及顯示在瀏覽器中的HTML結束結果。
 
-### Sling模型HTTP请求流程
+### Sling模型HTTP請求流程
 
-![Sling模型请求流](./assets/understand-sling-model-exporter/sling-model-request-flow.png)
+![Sling模型請求流程](./assets/understand-sling-model-exporter/sling-model-request-flow.png)
 
-1. [!DNL HTTP GET] 在AEM中请求资源。
+1. [!DNL HTTP GET] 向AEM中的資源提出請求。
 
    示例: `HTTP GET /content/my-resource.html`
 
-1. 基于请求资源的 `sling:resourceType`，则会解析相应的脚本。
+1. 根據請求資源的 `sling:resourceType`，則會解析適當的指令碼。
 
-1. 脚本会根据需要调整请求或资源 [!DNL Sling Model].
+1. 指令碼會將請求或資源調整至所需的內容 [!DNL Sling Model].
 
-1. 脚本使用 [!DNL Sling Model] 对象来生成HTML呈现版本。
+1. 指令碼會使用 [!DNL Sling Model] 物件以產生HTML轉譯。
 
-1. 脚本生成的HTML在HTTP响应中返回。
+1. 指令碼產生的HTML會傳回HTTP回應中。
 
-这种传统模式在生成HTML为 [!DNL Sling Model] 可以通过HTL轻松利用。 创建更结构化的数据（如JSON或XML）是一项更为繁琐的工作，因为HTL并不自然地适合这些格式的定义。
+此傳統模式在產生HTML的情境下運作良好，例如 [!DNL Sling Model] 可透過HTL輕鬆運用。 建立更具結構化的資料（例如JSON或XML）是一項非常枯燥的工作，因為HTL本身並不適合這些格式的定義。
 
-## [!DNL Sling Model Exporter] HTTP请求流程
+## [!DNL Sling Model Exporter] HTTP要求流程
 
-Apache [!DNL Sling Model Exporter] 附带一个Sling，Jackson Exporter提供自动序列化“普通” [!DNL Sling Model] 对象。 Jackson导出程序虽然可以进行配置，但其核心是检查 [!DNL Sling Model] 对象，并使用任何“getter”方法（作为JSON键）生成JSON，而getter返回值（作为JSON值）。
+Apache [!DNL Sling Model Exporter] 隨附於Sling提供的Jackson Exporter，可自動序列化 [!DNL Sling Model] 物件併入JSON。 Jackson Exporter雖然相當可設定，但其核心會檢查 [!DNL Sling Model] 物件，並使用任何「getter」方法作為JSON索引鍵產生JSON，而getter傳回值作為JSON值。
 
-直接序列化 [!DNL Sling Models] 允许他们通过使用传统方法创建的HTML响应来为普通Web请求提供服务 [!DNL Sling Model] 请求流程（请参阅上文），但也会显示Web服务或JavaScript应用程序可使用的JSON演绎版。
+的直接序列化 [!DNL Sling Models] 可讓他們透過使用傳統方式來建立的HTML回應，為一般網頁請求提供服務 [!DNL Sling Model] 請求流程（請參閱上文），但也會公開Web服務或JavaScript應用程式可使用的JSON轉譯。
 
-![Sling模型导出程序HTTP请求流程](./assets/understand-sling-model-exporter/sling-model-exporter-request-flow.png)
+![Sling模型匯出程式HTTP要求流程](./assets/understand-sling-model-exporter/sling-model-exporter-request-flow.png)
 
-*此流描述使用提供的Jackson导出程序生成JSON输出的流。 自定义导出程序的使用遵循相同的流程，但其输出格式相同。*
+*此流程說明使用提供的Jackson Exporter產生JSON輸出的流程。 自訂匯出工具的使用遵循相同的流程，但採用其輸出格式。*
 
-1. 在AEM中为资源发出HTTPGET请求，该资源的选择器和扩展已在中注册 [!DNL Sling Model]的导出程序。
+1. 在AEM中對資源發出HTTPGET請求，選擇器和擴充功能註冊到 [!DNL Sling Model]的匯出工具。
 
    示例: `HTTP GET /content/my-resource.model.json`
 
-1. Sling解析请求的资源的 `sling:resourceType`、选择器和扩展，以及动态生成的Sling导出程序Servlet，该Servlet已映射到 [!DNL Sling Model] 与导出程序。
-1. 已解析的Sling导出程序Servlet将调用 [!DNL Sling Model Exporter] 反对 [!DNL Sling Model] 根据请求或资源调整的对象（由Sling模型适配器确定）。
-1. 导出程序会序列化 [!DNL Sling Model] 基于导出器选项和特定于导出器的Sling模型批注，并将结果返回给Sling导出器Servlet。
-1. Sling导出程序Servlet返回 [!DNL Sling Model] 在HTTP响应中。
+1. Sling解析請求資源的 `sling:resourceType`，此元件為動態產生的Sling Exporter Servlet的選擇器和擴充功能，此元件已對應至 [!DNL Sling Model] 使用匯出程式。
+1. 已解析的Sling匯出程式Servlet會叫用 [!DNL Sling Model Exporter] 針對 [!DNL Sling Model] 從請求或資源改寫的物件（由Sling模型改寫決定）。
+1. 匯出工具會序列化 [!DNL Sling Model] 會根據「匯出工具選項」和「匯出工具專用」的Sling模型註解，並將結果傳回Sling匯出工具Servlet。
+1. Sling Exporter Servlet傳回 [!DNL Sling Model] HTTP回應中的。
 
 >[!NOTE]
 >
->而Apache Sling项目会提供可序列化的Jackson导出程序 [!DNL Sling Models] 对于JSON，导出程序框架还支持自定义导出程序。 例如，项目可以实施可序列化 [!DNL Sling Model] 到XML中。
+>而Apache Sling專案提供可序列化的Jackson Exporter [!DNL Sling Models] 對於JSON，匯出工具架構也支援自訂匯出工具。 例如，專案可實作自訂匯出工具，將 [!DNL Sling Model] 轉換為XML。
 
 >[!NOTE]
 >
->不仅如此 [!DNL Sling Model Exporter] *序列化* [!DNL Sling Models]，也可以将它们导出为Java对象。 导出到其他Java对象在HTTP请求流中不起作用，因此不会显示在上图中。
+>不僅如此 [!DNL Sling Model Exporter] *序列化* [!DNL Sling Models]，也可以將其匯出為Java物件。 匯出至其他Java物件在HTTP請求流程中不會發揮作用，因此不會出現在上圖中。
 
-## 辅助材料
+## 支援材料
 
-* [Apache [!DNL Sling Model Exporter] 框架文档](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
+* [Apache [!DNL Sling Model Exporter] 框架檔案](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)

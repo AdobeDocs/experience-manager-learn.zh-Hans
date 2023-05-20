@@ -1,6 +1,6 @@
 ---
-title: 与AEM Forms创建您的第一个OSGi包
-description: 使用Maven和Eclipse构建您的第一个OSGi包
+title: 使用AEM Forms建立您的第一個OSGi套件組合
+description: 使用Maven和Eclipse建立您的第一個OSGi套件組合
 version: 6.4,6.5
 feature: Adaptive Forms
 topic: Development
@@ -15,94 +15,94 @@ ht-degree: 1%
 
 ---
 
-# 创建您的第一个OSGi包
+# 建立您的第一個OSGi套件
 
-OSGi包是一个Java™存档文件，其中包含Java代码、资源以及描述包及其依赖项的清单。 包是应用程序的部署单元。 本文面向希望使用AEM Forms 6.4或6.5创建OSGi服务或Servlet的开发人员。要构建您的第一个OSGi包，请执行以下步骤：
+OSGi套件組合是一個Java™封存檔案，其中包含Java程式碼、資源以及說明套件組合及其相依性的資訊清單。 此套件組合是應用程式的部署單位。 本文章適用於想使用AEM Forms 6.4或6.5建立OSGi服務或servlet的開發人員。若要建置您的第一個OSGi套件，請遵循下列步驟：
 
 
-## 安装JDK
+## 安裝JDK
 
-安装支持的JDK版本。 我已使用JDK1.8。请确保已添加 **JAVA_HOME** ，并指向JDK安装的根文件夹。
-将%JAVA_HOME%/bin添加到路径中
+安裝支援的JDK版本。 我已使用JDK1.8。確定您已新增 **JAVA_HOME** ，且指向JDK安裝的根資料夾。
+將%JAVA_HOME%/bin新增至路徑
 
-![数据源](assets/java-home.JPG)
+![data-source](assets/java-home.JPG)
 
 >[!NOTE]
-> 请勿使用JDK 15。 AEM不支持此功能。
+> 請勿使用JDK 15。 AEM不支援。
 
-### 测试JDK版本
+### 測試您的JDK版本
 
-打开新的命令提示窗口并键入： `java -version`. 您应返回由 `JAVA_HOME` 变量
+開啟新的命令提示字元視窗並輸入： `java -version`. 您應該取回由所識別的JDK版本 `JAVA_HOME` 變數
 
-![数据源](assets/java-version.JPG)
+![data-source](assets/java-version.JPG)
 
-## 安装Maven
+## 安裝Maven
 
-Maven是一款主要用于Java项目的内部版本自动化工具。 请按照以下步骤在本地系统上安装maven。
+Maven是主要用於Java專案的組建自動化工具。 請依照下列步驟在本機系統上安裝maven。
 
-* 创建名为 `maven` 在C驱动器中
-* 下载 [二进制zip存档](https://maven.apache.org/download.cgi)
-* 将zip存档的内容解压缩到 `c:\maven`
-* 创建一个名为 `M2_HOME` 值为 `C:\maven\apache-maven-3.6.0`. 就我而言， **mvn** 版本为3.6.0。在编写本文时，最新的maven版本为3.6.3
-* 添加 `%M2_HOME%\bin` 你的路
-* 保存更改
-* 打开新的命令提示符并键入 `mvn -version`. 您应会看到 **mvn** 列出的版本，如以下屏幕截图所示
+* 建立名為的資料夾 `maven` 在您的C磁碟機中
+* 下載 [二進位zip封存](https://maven.apache.org/download.cgi)
+* 將zip封存的內容解壓縮至 `c:\maven`
+* 建立名為的環境變數 `M2_HOME` 具有值 `C:\maven\apache-maven-3.6.0`. 以我為例， **mvn** 版本是3.6.0。在撰寫本文時，最新的maven版本為3.6.3
+* 新增 `%M2_HOME%\bin` 至您的路徑
+* 儲存您的變更
+* 開啟新的命令提示字元並輸入 `mvn -version`. 您應該會看到 **mvn** 下列熒幕擷圖所示的版本
 
-![数据源](assets/mvn-version.JPG)
+![data-source](assets/mvn-version.JPG)
 
 
-## 安装Eclipse
+## 安裝Eclipse
 
-安装最新版本的 [eclipe](https://www.eclipse.org/downloads/)
+安裝最新版本的 [eclipse](https://www.eclipse.org/downloads/)
 
-## 创建您的第一个项目
+## 建立您的第一個專案
 
-原型是Maven项目模板工具包。 原型被定义为原始模式或模型，从中可以制造所有同类的其它事物。 此名称适合我们尝试提供一个系统，以提供一致的Maven项目生成方法。 原型可帮助作者为用户创建Maven项目模板，并为用户提供方法来生成这些项目模板的参数化版本。
-要创建您的第一个Maven项目，请执行以下步骤：
+Archetype是Maven專案範本工具組。 原型被定義為原始陣列或模型，其他所有同類物件都來自此原始陣列或模型。 此名稱適合我們嘗試提供的系統，提供產生Maven專案的一致方法。 Archetype可幫助作者為使用者建立Maven專案範本，並提供使用者產生這些專案範本引數化版本的方法。
+若要建立您的第一個maven專案，請遵循以下步驟：
 
-* 创建一个名为 `aemformsbundles` 在C驱动器中
-* 打开命令提示符并导航到 `c:\aemformsbundles`
-* 在命令提示符下运行以下命令
+* 建立名為的新資料夾 `aemformsbundles` 在您的C磁碟機中
+* 開啟命令提示字元並瀏覽至 `c:\aemformsbundles`
+* 在命令提示字元中執行以下命令
 
 ```java
 mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=36 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.13
 ```
 
-成功完成后，您应会在命令窗口中看到生成成功消息
+成功完成後，您應該會在命令視窗中看到建置成功訊息
 
-## 从maven项目创建Eclipse项目
+## 從您的maven專案建立eclipse專案
 
-* 将工作目录更改为 `mysite`
-* 执行 `mvn eclipse:eclipse` 命令行中。 该命令会读取您的pom文件并使用正确的元数据创建Eclipse项目，以便Eclipse了解项目类型、关系、类路径等。
+* 將工作目錄變更為 `mysite`
+* 執行 `mvn eclipse:eclipse` 命令列中的。 該命令會讀取您的pom檔案，並使用正確的中繼資料建立Eclipse專案，以便Eclipse瞭解專案型別、關係、類別路徑等。
 
-## 将项目导入Eclipse
+## 將專案匯入eclipse
 
 Launch **Eclipse**
 
-转到 **文件 — >导入** 选择 **现有Maven项目** 如下所示
+前往 **檔案 — >匯入** 並選取 **現有Maven專案** 如下所示
 
-![数据源](assets/import-mvn-project.JPG)
+![data-source](assets/import-mvn-project.JPG)
 
-单击下一步
+按「下一步」
 
-选择c:\aemformsbundles\mysite by clicking the **浏览** 按钮
+按一下「 」，選取c：\aemformsbundles\mysite **瀏覽** 按鈕
 
-![数据源](assets/mysite-eclipse-project.png)
+![data-source](assets/mysite-eclipse-project.png)
 
 >[!NOTE]
->您可以根据需要选择导入相应的模块。 仅当您只想在项目中创建Java代码时，才选择并导入核心模块。
+>您可以視需要選擇匯入適當的模組。 如果您只打算在專案中建立Java程式碼，請僅選取並匯入核心模組。
 
-单击 **完成** 启动导入流程
+按一下 **完成** 以開始匯入程式
 
-项目已导入到Eclipse中，您会看到 `mysite.xxxx` 文件夹
+專案已匯入至Eclipse，您會看到許多 `mysite.xxxx` 資料夾
 
-展开 `src/main/java` 下 `mysite.core` 文件夹。 这是您在其中编写大多数代码的文件夹。
+展開 `src/main/java` 在 `mysite.core` 資料夾。 這是您撰寫大部分程式碼的資料夾。
 
-![数据源](assets/mysite-core-project.png)
+![data-source](assets/mysite-core-project.png)
 
-## 包括AEMFD客户端SDK
+## 包含AEMFD使用者端SDK
 
-您需要在项目中包含AEMFD客户端sdk，以利用AEM Forms附带的各种服务。 请参阅 [AEMFD客户端SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) 以在您的Maven项目中包含相应的客户端SDK。 您必须在的依赖项部分中包含AEM FD客户端SDK `pom.xml` 的子项目，如下所示。
+您必須在專案中加入AEMFD使用者端SDK，才能運用AEM Forms隨附的各種服務。 請參考 [AEMFD使用者端SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) 以在您的Maven專案中包含適當的使用者端SDK。 您必須在的相依性區段中包含AEM FD使用者端SDK `pom.xml` ，如下所示。
 
 ```xml
 <dependency>
@@ -112,15 +112,15 @@ Launch **Eclipse**
 </dependency>
 ```
 
-要构建项目，请执行以下步骤：
+若要建置您的專案，請遵循下列步驟：
 
-* 打开 **命令提示符窗口**
+* 開啟 **命令提示視窗**
 * 导航至 `c:\aemformsbundles\mysite\core`
-* 执行命令 `mvn clean install -PautoInstallBundle`
-上述命令在运行的AEM服务器中生成并安装包 `http://localhost:4502`. 该包也可在位于的文件系统上使用
-   `C:\AEMFormsBundles\mysite\core\target` 和可以使用 [Felix Web控制台](http://localhost:4502/system/console/bundles)
+* 執行命令 `mvn clean install -PautoInstallBundle`
+上述命令會在執行的AEM伺服器上建置並安裝套件 `http://localhost:4502`. 檔案系統上也提供該套件，位於
+   `C:\AEMFormsBundles\mysite\core\target` 並且可以部署使用 [Felix Web主控台](http://localhost:4502/system/console/bundles)
 
 ## 后续步骤
 
-[创建OSGi服务](./create-osgi-service.md)
+[建立OSGi服務](./create-osgi-service.md)
 

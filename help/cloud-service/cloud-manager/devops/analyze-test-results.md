@@ -1,6 +1,6 @@
 ---
-title: 分析AEM Cloud Manager测试结果
-description: 浏览并修复AEM Cloud Manager中的报表结果
+title: 分析AEM Cloud Manager測試結果
+description: 探索並修正來自AEM Cloud Manager的報告結果
 role: Developer
 level: Beginner
 type: Tutorial
@@ -24,6 +24,6 @@ ht-degree: 51%
 >abstract="探索代码中的任何编译错误以及这段代码是否遵循 AEM as a Cloud Service 的最佳实践。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use" text="理解测试结果"
 
-探索代码中的任何编译错误，以及此代码是否遵循AEM as a Cloud Service的最佳实践
+探索程式碼中的任何編譯錯誤，以及此程式碼是否遵循AEMas a Cloud Service的最佳實務
 
 >[!VIDEO](https://video.tv.adobe.com/v/330540?quality=12&learn=on)

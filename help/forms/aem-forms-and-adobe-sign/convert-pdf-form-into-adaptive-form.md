@@ -1,6 +1,6 @@
 ---
-title: 将PDF表单转换为自适应表单
-description: AEM FormsAutomated forms conversion服务由Adobe Sensei提供支持，可自动将您的PDF forms转换为设备友好且响应迅速的自适应表单。 无论您使用的是非交互式PDF forms、Acro Forms还是基于XFA的PDF forms,Automated forms conversion服务都可以轻松地将这些表单转换为自适应表单。
+title: 將PDF表單轉換為最適化表單
+description: AEM FormsAutomated forms conversion服務由Adobe Sensei提供技術支援，可自動將您的PDF forms轉換為方便使用的裝置且回應式的最適化表單。 無論您是使用非互動式PDF forms、Acro Forms或XFA型PDF forms，Automated forms conversion服務都能輕鬆將這些表單轉換為最適化表單。
 feature: Adaptive Forms
 thumbnail: 39495.jpg
 kt: 6115
@@ -15,10 +15,10 @@ ht-degree: 0%
 
 ---
 
-# 将PDF表单转换为自适应表单
+# 將PDF表單轉換為最適化表單
 
-AEM FormsAutomated forms conversion服务由Adobe Sensei提供支持，可自动将您的PDF forms转换为设备友好且响应迅速的自适应表单。 无论您使用的是非交互式PDF forms、Acro Forms还是基于XFA的PDF forms,Automated forms conversion服务都可以轻松地将这些表单转换为自适应表单。
+AEM FormsAutomated forms conversion服務由Adobe Sensei提供技術支援，可自動將您的PDF forms轉換為方便使用的裝置且回應式的最適化表單。 無論您是使用非互動式PDF forms、Acro Forms或XFA型PDF forms，Automated forms conversion服務都能輕鬆將這些表單轉換為最適化表單。
 
-以下视频介绍使用PDF服务将Automated forms conversion表单转换为自适应表单所需的步骤
+以下影片說明使用Automated forms conversion服務將PDF表單轉換為最適化表單所需的步驟
 
 >[!VIDEO](https://video.tv.adobe.com/v/39495?quality=12&learn=on)

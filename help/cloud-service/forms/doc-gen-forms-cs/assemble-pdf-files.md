@@ -1,6 +1,6 @@
 ---
-title: 组合PDF文件
-description: 使用invokeDDX操作处理pdf文件。
+title: 組合PDF檔案
+description: 使用invokeDDX操作來操作pdf檔案。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,12 +16,12 @@ ht-degree: 0%
 
 ---
 
-# 使用调用DDX端点处理PDF文件
+# 使用叫用DDX端點操作PDF檔案
 
 
-下一步是使用必要的参数对端点进行HTTPPOST调用。 模板和数据文件将作为资源文件提供。 生成的pdf的属性通过请求中选项的参数指定。embedFonts属性用于在生成的pdf中嵌入自定义字体。 请关注 [本文档](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html) 将自定义字体部署到Forms云实例。 属性在options.json资源文件中指定。 因此，端点具有基于令牌的身份验证，我们会在请求标头中传递访问令牌。
+下一步是使用必要的引數向端點進行HTTPPOST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定的。embedFonts屬性用於將自訂字型嵌入產生的pdf中。 請關注 [本檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html) 將自訂字型部署至Forms cloud執行個體。 屬性是在options.json資源檔案中指定。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
 
-以下代码用于通过将数据与模板合并来生成PDF
+下列程式碼用於將資料與範本合併，以產生pdf
 
 ```java
 public class DocumentGeneration

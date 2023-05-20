@@ -1,7 +1,7 @@
 ---
-title: 安装和配置Tomcat视频
+title: 安裝及設定Tomcat視訊
 seo-title: Install and Configure Tomcat
-description: 这是创建首个交互式通信文档的多步教程的1部分。
+description: 這是建立第一個互動式通訊檔案的多步驟教學課程的第1部分。
 uuid: 835e2342-82b6-4f0c-9a6b-467bbbd8527a
 feature: Interactive Communication
 topics: development
@@ -22,32 +22,32 @@ ht-degree: 0%
 
 ---
 
-# 安装和配置Tomcat {#install-and-configure-tomcat}
+# 安裝及設定Tomcat {#install-and-configure-tomcat}
 
-在本部分中，我们安装了TOMCAT，并在TOMCAT中部署了sampleRest.war文件。 此WAR文件公开的REST端点是我们的数据源和表单数据模型的基础。
+在本部分中，我們會安裝TOMCAT並在TOMCAT中部署sampleRest.war檔案。 此WAR檔案公開的REST端點是我們資料來源和表單資料模型的基礎。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37815?quality=12&learn=on)
 
-要设置tomcat，请按照以下说明操作：
+若要設定tomcat，請遵循下列指示：
 
-1. 下载并安装JDK1.8。
-2. 将JAVA_HOME设置为指向JDK1.8。
-3. 下载 [tomcat](https://tomcat.apache.org/). 已使用Tomcat版本8.5.x和9.0.x对此War文件进行测试。
-4. 下载首选项的tomcat版本。 您可以下载核心部分下方的64位windows zip文件。
-5. 将内容解压缩到c:\tomcat文件夹。
-6. 您应该在c驱动器中看到类似的内容 **c:\tomcat\apache-tomcat-8.5.27** 根据tomcat的版本
-7. 创建一个名为“CATALINA_HOME”的环境变量，并将其值设置为tomcat安装文件夹示例c:\tomcat\apache- tomcat-8.5.27
-8. 将SampleRest.war文件复制到Tomcat安装的Webapps文件夹中
-9. 启动新的命令提示窗口。
-10. 导航到 &lt;tomcat install=&quot;&quot; folder=&quot;&quot;>\bin并运行startup.bat
-11. Tomcat启动后，测试由WAR File公开的端点(由 [单击此处](http://localhost:8080/SampleRest/webapi/getStatement/9586)
-12. 您应该会获得此调用的示例数据。
+1. 下載並安裝JDK1.8。
+2. 將JAVA_HOME設定為指向JDK1.8。
+3. 下載 [tomcat](https://tomcat.apache.org/). 此war檔案已通過Tomcat 8.5.x版和9.0.x版的測試。
+4. 下載您偏好設定的tomcat版本。 您可以在核心區段底下下載64位元windows zip。
+5. 將內容解壓縮至您的c：\tomcat。
+6. 您應該會在C磁碟中看到類似這樣的內容 **c：\tomcat\apache-tomcat-8.5.27** 視您的tomcat版本而定
+7. 建立名為「CATALINA_HOME」的環境變數，並將其值設定為tomcat安裝資料夾範例c：\tomcat\apache- tomcat-8.5.27
+8. 將SampleRest.war檔案複製到Tomcat安裝的webapps資料夾
+9. 啟動新的命令提示字元視窗。
+10. 導覽至 &lt;tomcat install=&quot;&quot; folder=&quot;&quot;>\bin並執行startup.bat
+11. 在您的tomcat啟動後，請以下列方式測試WAR檔案公開的端點 [按一下這裡](http://localhost:8080/SampleRest/webapi/getStatement/9586)
+12. 您應該會因此呼叫而取得範例資料。
 
-恭喜!!!。 您已设置tomcat并部署了SampleRest.war文件。
+恭喜!!!。 您已設定tomcat並部署SampleRest.war檔案。
 
-以下视频介绍了在Tomcat中部署示例应用程序
+以下影片說明如何在Tomcat中部署範例應用程式
 >[!VIDEO](https://video.tv.adobe.com/v/37815?quality=12&learn=on)
 
 ## 后续步骤
 
-[创建RESTful数据源](./create-data-source.md)
+[建立RESTful資料來源](./create-data-source.md)

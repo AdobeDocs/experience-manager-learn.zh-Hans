@@ -1,6 +1,6 @@
 ---
-title: 创建GraphQL查询
-description: 了解如何创建GraphQL查询以从Adobe Experience Manager(AEM)返回内容，以及如何使用GraphiQL工具快速测试、优化和调试查询。
+title: 建立GraphQL查詢
+description: 瞭解如何建立GraphQL查詢以從Adobe Experience Manager (AEM)傳回內容，以及如何使用GraphiQL工具快速測試、調整查詢並為其偵錯。
 version: Cloud Service
 topic: Headless, Content Management
 feature: Content Fragments, GraphQL API
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 ---
 
-# 创建GraphQL查询
+# 建立GraphQL查詢
 
-了解如何创建GraphQL查询以从Adobe Experience Manager(AEM)返回内容，以及如何使用GraphiQL工具快速测试、优化和调试查询。
+瞭解如何建立GraphQL查詢以從Adobe Experience Manager (AEM)傳回內容，以及如何使用GraphiQL工具快速測試、調整查詢並為其偵錯。
 
-在此视频中，您将：
+在本影片中，您將：
 
-+ 了解GraphQL语言背后的力量
-+ 了解如何查询内容片段和单个内容片段的列表
-+ 了解如何过滤和请求特定数据属性
++ 瞭解GraphQL語言背後的力量
++ 瞭解如何查詢內容片段清單和單一內容片段
++ 瞭解如何篩選和請求特定資料屬性
 
 >[!VIDEO](https://video.tv.adobe.com/v/332860?quality=12&learn=on)
 

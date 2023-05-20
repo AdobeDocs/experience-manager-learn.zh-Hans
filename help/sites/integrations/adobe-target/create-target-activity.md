@@ -1,6 +1,6 @@
 ---
-title: 使用体验片段选件创建Target活动
-description: 了解如何使用AEM Experience Fragment选件创建和测试Adobe Target活动。
+title: 使用體驗片段選件建立Target活動
+description: 瞭解如何使用AEM體驗片段選件建立和測試Adobe Target活動。
 feature: Experience Fragments
 topics: integrations, authoring, personalization, activity, offers
 audience: all
@@ -20,22 +20,22 @@ ht-degree: 0%
 
 ---
 
-# 使用体验片段选件创建Adobe Target活动 {#target-activity-experience-fragment}
+# 使用體驗片段選件建立Adobe Target活動 {#target-activity-experience-fragment}
 
-了解如何使用AEM Experience Fragment选件创建和测试Adobe Target活动。
+瞭解如何使用AEM體驗片段選件建立和測試Adobe Target活動。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41246?quality=12&learn=on)
 
 ## 前提条件
 
-要使用体验片段选件创建Adobe Target活动，必须完成以下设置：
+若要使用體驗片段選件建立Adobe Target活動，必須完成下列設定：
 
-1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
-1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
-1. [将AEM创作服务与Adobe Target集成](./setup-aem-target-cloud-service.md)
-1. [将AEM体验片段导出到Adobe Target](./export-experience-fragment-target.md)
+1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
+1. [將AEM作者服務與Adobe Target整合](./setup-aem-target-cloud-service.md)
+1. [將AEM體驗片段匯出至Adobe Target](./export-experience-fragment-target.md)
 
-## 支持链接
+## 支援連結
 
 * [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 * [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

@@ -1,6 +1,6 @@
 ---
 title: 管理Assets Essentials
-description: 了解创建文件夹结构的基础知识，以及移动、复制和重命名等基本操作。
+description: 瞭解建立檔案夾結構的基礎知識，以及移動、複製和重新命名等基本操作。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 管理Assets Essentials
 
-了解创建文件夹结构的基础知识，以及移动、复制和重命名等基本操作。
+瞭解建立檔案夾結構的基礎知識，以及移動、複製和重新命名等基本操作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335733?quality=12&learn=on)

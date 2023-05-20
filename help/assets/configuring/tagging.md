@@ -1,6 +1,6 @@
 ---
 title: 标记
-description: 标记是用于跨资产文件夹层次结构管理资产的不可或缺工具。 建立标记分类对于允许用户在AEM中发现和资产并组织资产至关重要。
+description: 標籤是用於跨資產資料夾階層管理資產的必要工具。 建立標籤分類法對於允許使用者在AEM中探索和整理資產至關重要。
 feature: Asset Management
 version: Cloud Service
 kt: 4871
@@ -19,6 +19,6 @@ ht-degree: 3%
 
 # 标记
 
-标记是用于跨资产文件夹层次结构管理资产的不可或缺工具。 建立标记分类对于允许用户在AEM中发现和资产并组织资产至关重要。
+標籤是用於跨資產資料夾階層管理資產的必要工具。 建立標籤分類法對於允許使用者在AEM中探索和整理資產至關重要。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34073?quality=12&learn=on)

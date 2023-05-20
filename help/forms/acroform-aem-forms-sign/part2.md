@@ -1,7 +1,7 @@
 ---
-title: 带有AEM Forms的Acroforms
+title: 使用AEM Forms的Acroform
 seo-title: Merge Adaptive Form data with Acroform
-description: Acroforms与AEM Forms集成的第2部分。 从Acroform创建架构。
+description: 將Acroforms與AEM Forms整合的第2部分。 從Acroform建立結構描述。
 feature: adaptive-forms
 topics: development
 audience: developer
@@ -16,21 +16,21 @@ ht-degree: 0%
 ---
 
 
-# 从Acroform创建架构
+# 從Acroform建立結構描述
 
-下一步是从前面步骤中创建的Acroform创建架构。 在本教程中，提供了一个用于创建模式的示例应用程序。 要创建架构，请按照以下说明操作：
+下一個步驟是從先前步驟建立的Acroform建立結構描述。 提供範例應用程式，以在本教學課程中建立結構。 若要建立結構描述，請遵循下列指示：
 
-1. 登录 [CRXDE Lite](http://localhost:4502/crx/de)
-2. 打开到文件 `/apps/AemFormsSamples/components/createxsd/POST.jsp`
-3. 更改 `saveLocation` 到硬盘上的相应文件夹。 确保已创建要保存到的文件夹。
-4. 将您的浏览器指向 [创建XSD](http://localhost:4502/content/DocumentServices/CreateXsd.html) 页面托管在AEM上。
+1. 登入 [CRXDE Lite](http://localhost:4502/crx/de)
+2. 開啟檔案 `/apps/AemFormsSamples/components/createxsd/POST.jsp`
+3. 變更 `saveLocation` 至硬碟上的適當資料夾。 確定已建立您要儲存的資料夾。
+4. 將瀏覽器指向 [建立XSD](http://localhost:4502/content/DocumentServices/CreateXsd.html) 在AEM上託管的頁面。
 5. 拖放Acroform。
-6. 选中步骤3中指定的文件夹。 架构文件将保存到此位置。
+6. 檢查步驟3中指定的資料夾。 結構描述檔案會儲存至此位置。
 
-## 上传Acroform
+## 上傳Acroform
 
-要使此演示在您的系统上工作，您需要创建一个名为 `acroforms` 在AEM Assets。 将Acroform上传到此 `acroforms` 文件夹。
+為了讓此示範在您的系統上運作，您將需要建立一個名為的資料夾 `acroforms` 在AEM Assets中。 將Acroform上傳至此 `acroforms` 資料夾。
 
 >[!NOTE]
 >
->示例代码会查找此文件夹中的Acroform。 合并自适应表单的提交数据时需要Acroform。
+>範常式式碼會在此資料夾中尋找字形。 合併最適化表單提交的資料需要Acroform。

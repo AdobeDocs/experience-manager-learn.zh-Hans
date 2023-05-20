@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 -Admin Console
-description: Adobe Admin Console及其与AEM的契合
+description: Adobe Admin Console及其如何融入AEM
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -17,11 +17,11 @@ ht-degree: 6%
 
 # Cloud 5 -Admin Console
 
-想知道为什么每个项目在Admin Console内AEM的上下文中都有什么用？ 团队会尝试解释一些人们应该了解的关于配置和访问的常见事项。
+曾經好奇為什麼每個專案在Admin Console內的AEM內容中都有作用？ 團隊會嘗試解釋關於布建和存取的一些人們應該知道的常見事情。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342866?quality=12&learn=on)
 
-## 此视频中涵盖的内容
+## 本影片涵蓋的內容
 
-+ [了解Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
-+ [Admin Console概述](https://helpx.adobe.com/cn/enterprise/using/admin-console.html)
++ [瞭解Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
++ [Admin Console概觀](https://helpx.adobe.com/cn/enterprise/using/admin-console.html)

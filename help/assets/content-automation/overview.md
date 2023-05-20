@@ -1,6 +1,6 @@
 ---
-title: 使用Creative Cloud服务实现内容自动化
-description: 将Photoshop和Lightroom功能与Adobe Experience Manager Assets内容自动化结合使用。
+title: 使用Creative Cloud服務實現內容自動化
+description: 透過Photoshop資產內容自動化套用Adobe Experience Manager和Lightroom功能。
 version: Cloud Service
 topic: Content Management
 feature: Asset Processing, Renditions
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 使用Creative Cloud服务实现内容自动化概述
+# 使用Creative Cloud服務的內容自動化概觀
 
-概述将Photoshop和Lightroom功能与Adobe Experience Manager Assets内容自动化结合使用。
+概述如何將Photoshop和Lightroom功能套用至Adobe Experience Manager Assets內容自動化。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333197?quality=12&learn=on)

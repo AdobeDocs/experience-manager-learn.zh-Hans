@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms JEE中为管理员重置默认密码的步骤
-description: 从默认密码重置管理员用户的密码
+title: 在AEM Forms JEE中重設管理員預設密碼的步驟
+description: 從預設密碼重設管理員使用者的密碼
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms JEE中为管理员重置默认密码的步骤
+# 在AEM Forms JEE中重設管理員預設密碼的步驟
 
-*此视频将演示在AEM Forms JEE中为管理员重置默认密码的步骤。*
+*本影片將逐步說明在AEM Forms JEE中重設管理員預設密碼的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335541?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
 title: Dispatcher Converter
-description: 了解Dispatcher Converter如何自动更新现有AEM Dispatcher配置，以与AEMas a Cloud Service兼容。
+description: 瞭解Dispatcher Converter如何自動地將現有AEM Dispatcher設定更新成相容於AEMas a Cloud Service。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -18,6 +18,6 @@ ht-degree: 9%
 
 # Dispatcher Converter
 
-了解Dispatcher Converter如何自动更新现有AEM Dispatcher配置，以与AEMas a Cloud Service兼容。
+瞭解Dispatcher Converter如何自動地將現有AEM Dispatcher設定更新成相容於AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336695?quality=12&learn=on)

@@ -1,7 +1,7 @@
 ---
 title: 翻译项目
 seo-title: Translation Projects
-description: 了解如何为语言副本创建、编辑和管理翻译项目。
+description: 瞭解如何建立、編輯及管理您的語言副本翻譯專案。
 seo-description: Learn how to create, edit and manage a translation project for your Language Copy.
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
@@ -24,6 +24,6 @@ ht-degree: 12%
 
 # 翻译项目 {#translation-projects}
 
-了解如何为语言副本创建、编辑和管理翻译项目。
+瞭解如何建立、編輯及管理您的語言副本翻譯專案。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36486?quality=12&learn=on)

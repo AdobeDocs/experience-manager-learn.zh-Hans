@@ -1,6 +1,6 @@
 ---
-title: 快速设置SPA Editor和远程SPA
-description: 了解如何在15分钟内启动和运行远程SPA和AEM SPA编辑器！
+title: 快速設定SPA編輯器和遠端SPA
+description: 瞭解如何在15分鐘內啟動並執行遠端SPA和AEM SPA Editor！
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
@@ -17,46 +17,46 @@ ht-degree: 3%
 
 ---
 
-# 快速设置
+# 快速設定
 
-快速设置是一个快速的演练步骤，用于说明如何安装和运行WKND应用程序并作为远程SPA，以及如何使用AEM SPA Editor创作它。
+快速設定是快速逐步解說，說明如何安裝和執行WKND應用程式及當做遠端SPA，並使用AEM SPA編輯器編寫它。
 
-快速设置会直接将您转到本教程的结束状态。
+快速設定會直接帶您進入本教學課程的結束狀態。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333181?quality=12&learn=on)
 
-_快速设置的视频演示_
+_快速設定的影片逐步解說_
 
 ## 前提条件
 
-本教程需要满足以下条件：
+本教學課程需要下列內容：
 
 + [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en)
 + [Node.js v18](https://nodejs.org/en/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
-+ 仅限macOS先决条件
-   + [Xcode](https://developer.apple.com/xcode/) 或 [Xcode命令行工具](https://developer.apple.com/xcode/resources/)
++ 僅限macOS的必要條件
+   + [Xcode](https://developer.apple.com/xcode/) 或 [Xcode命令列工具](https://developer.apple.com/xcode/resources/)
 + [aem-guides-wknd.all-2.1.0.zip或更高版本](https://github.com/adobe/aem-guides-wknd/releases)
-+ [aem-guides-wknd-graphql源代码(分支：feature/spa-editor)](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
++ [aem-guides-wknd-graphql原始碼(branch： feature/spa-editor)](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
 
 
-本教程假定：
+本教學課程假設：
 
-+ [Microsoft® Visual Studio代码](https://visualstudio.microsoft.com/) 作为IDE
-+ 工作目录 `~/Code/wknd-app`
-+ 在上运行AEM SDK作为创作服务 `http://localhost:4502`
-+ 使用本地运行AEM SDK `admin` 密码帐户 `admin`
-+ 在上运行SPA `http://localhost:3000`
++ [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/) 作為IDE
++ 的工作目錄 `~/Code/wknd-app`
++ 將AEM SDK當做作者服務執行於 `http://localhost:4502`
++ 使用本機執行AEM SDK `admin` 具有密碼的帳戶 `admin`
++ 執行SPA於 `http://localhost:3000`
 
-## 启动AEM SDK快速启动
+## 啟動AEM SDK快速入門
 
-在端口4502上下载并安装AEM SDK快速启动，默认情况下为 `admin/admin` 凭据。
+預設情況下，在連線埠4502上下載並安裝AEM SDK快速入門 `admin/admin` 認證。
 
-1. [下载最新的AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)
-1. 将AEM SDK解压缩到 `~/aem-sdk`
-1. 运行AEM SDK快速入门Jar
+1. [下載最新的AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)
+1. 將AEM SDK解壓縮至 `~/aem-sdk`
+1. 執行AEM SDK快速入門Jar
 
    ```
    $ java -jar aem-sdk-quickstart-xxx.jar
@@ -64,35 +64,35 @@ _快速设置的视频演示_
    # Provide `admin` as the admin user's password
    ```
 
-AEM SDK启动，并在 [http://localhost:4502](http://localhost:4502). 使用以下凭据登录：
+AEM SDK啟動並自動啟動： [http://localhost:4502](http://localhost:4502). 使用下列認證登入：
 
 + 用户名: `admin`
 + 密码: `admin`
 
-## 下载并安装WKND站点包
+## 下載並安裝WKND站台套件
 
-本教程依赖于 __WKND 2.1.0+秒__ 项目（用于内容）。
+本教學課程依存於 __WKND 2.1.0+的__ 專案（適用於內容）。
 
-1. [下载最新版本的 `aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
-1. 登录到AEM SDK的包管理器，网址为 [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) 和 `admin` 凭据。
-1. __上传__ the `aem-guides-wknd.all.x.x.x.zip` 在步骤1中下载
-1. 点按 __安装__ 按钮 `aem-guides-wknd.all-x.x.x.zip`
+1. [下載最新版的 `aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
+1. 登入AEM SDK的封裝管理員，網址為 [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) 使用 `admin` 認證。
+1. __上傳__ 此 `aem-guides-wknd.all.x.x.x.zip` 已在步驟1下載
+1. 點選 __安裝__ 專案按鈕 `aem-guides-wknd.all-x.x.x.zip`
 
-## 下载并安装WKND应用程序SPA包
+## 下載及安裝WKND應用程式SPA套件
 
-要执行快速设置，此处提供了AEM包，其中包含教程的最终AEM配置和内容。
+若要執行快速設定，此處提供AEM套件，其中包含教學課程的最終AEM設定和內容。
 
 1. [下载 ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
 1. [下载 ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
-1. 登录到AEM SDK的包管理器，网址为 [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) 和 `admin` 凭据。
-1. __上传__ the `wknd-app.all.x.x.x.zip` 在步骤1中下载
-1. 点按 __安装__ 按钮 `wknd-app.all.x.x.x.zip`
-1. __上传__ the `wknd-app.ui.content.sample.x.x.x.zip` 在步骤2中下载
-1. 点按 __安装__ 按钮 `wknd-app.ui.content.sample.x.x.x.zip`
+1. 登入AEM SDK的封裝管理員，網址為 [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) 使用 `admin` 認證。
+1. __上傳__ 此 `wknd-app.all.x.x.x.zip` 已在步驟1下載
+1. 點選 __安裝__ 專案按鈕 `wknd-app.all.x.x.x.zip`
+1. __上傳__ 此 `wknd-app.ui.content.sample.x.x.x.zip` 已在步驟2下載
+1. 點選 __安裝__ 專案按鈕 `wknd-app.ui.content.sample.x.x.x.zip`
 
-## 下载WKND应用程序源
+## 下載WKND應用程式來源
 
-从Github.com下载WKND应用程序的源代码，然后将包含对本教程中所执行的SPA所做更改的分支切换为。
+從Github.com下載WKND應用程式的原始程式碼，並切換包含在本教學課程中執行的SPA變更的分支。
 
 ```
 $ mkdir -p ~/Code/wknd-app
@@ -101,9 +101,9 @@ $ git clone --branch feature/spa-editor https://github.com/adobe/aem-guides-wknd
 $ cd aem-guides-wknd-graphql
 ```
 
-## 启动SPA应用程序
+## 啟動SPA應用程式
 
-从项目的根中，安装SPA项目npm依赖项并运行应用程序。
+從專案的根目錄中，安裝SPA專案npm相依性並執行應用程式。
 
 ```
 $ cd ~/Code/wknd-app/aem-guides-wknd-graphql/react-app
@@ -111,7 +111,7 @@ $ npm install
 $ npm run start
 ```
 
-如果运行时出错 `npm install` 尝试执行以下步骤：
+如果在執行時發生錯誤 `npm install` 請嘗試下列步驟：
 
 ```
 $ cd ~/Code/wknd-app/aem-guides-wknd-graphql/react-app
@@ -120,41 +120,41 @@ $ npm install --legacy-peer-deps
 $ npm run start
 ```
 
-验证SPA是否在 [http://localhost:3000](http://localhost:3000).
+驗證SPA執行於 [http://localhost:3000](http://localhost:3000).
 
-## 在AEM SPA编辑器中创作内容
+## 在AEM SPA Editor中編寫內容
 
-在创作内容之前，请安排浏览器窗口，以便AEM创作(`http://localhost:4502`)，并且远程SPA(`http://localhost:3000`)在右侧运行。 此安排允许您查看AEM源内容的更改如何立即反映在SPA中。
+在製作內容之前，請安排您的瀏覽器視窗，讓AEM Author (`http://localhost:4502`)在左側，而遠端SPA (`http://localhost:3000`)會在右側執行。 此安排可讓您檢視對AEM來源內容的變更如何立即反映在SPA中。
 
-1. 登录到 [AEM SDK创作服务](http://localhost:4502) as `admin`
-1. 导航到 __站点> WKND应用程序>美国> en__
-1. 编辑 __WKND应用程序主页__
-1. 切换到 __编辑__ 模式
+1. 登入 [AEM SDK作者服務](http://localhost:4502) 作為 `admin`
+1. 導覽至 __網站> WKND應用程式>我們>英文__
+1. 編輯 __wknd應用程式首頁__
+1. 切換至 __編輯__ 模式
 
-### 创作主页视图的固定组件
+### 編寫首頁檢視的固定元件
 
-1. 点按文本 __WKND冒险__ 激活固定标题组件(在SPA主页视图中硬编码)
-1. 点按 __扳手__ 图标
-1. 更改标题组件的内容并保存
-1. 刷新运行的SPA `http://localhost:3000` 并查看所反映的更改
+1. 點選文字 __WKND冒險__ 以啟動固定標題元件(硬式編碼至SPA首頁檢視)
+1. 點選 __扳手__ 圖示加以存取（位於標題元件的動作列上）
+1. 變更標題元件的內容並儲存
+1. 重新整理正在執行的SPA `http://localhost:3000` 並檢視變更是否反映在
 
-### 创作主页视图的容器组件
+### 編寫首頁檢視的容器元件
 
-1. 仍在编辑 __WKND应用程序主页__...
-1. 展开 __SPA编辑器的侧栏__ （左）
-1. 点按 __组件__ 图标
-1. 在WKND徽标下方和固定标题组件上方的容器组件中添加、更改或删除组件
-1. 刷新运行的SPA `http://localhost:3000` 并查看所反映的更改
+1. 同時仍在編輯 __wknd應用程式首頁__...
+1. 展開 __SPA編輯器的側欄__ （左側）
+1. 點選 __元件__ 圖示
+1. 從容器元件新增、變更或移除元件（位於WKND標誌下方和固定Title元件上方）
+1. 重新整理正在執行的SPA `http://localhost:3000` 並檢視變更是否反映在
 
-### 在动态路由上创作容器组件
+### 在動態路由上編寫容器元件
 
-1. 切换到 __预览__ 模式(在SPA编辑器中)
-1. 点按 __巴厘岛冲浪营__ 卡片，导航到其动态路线
-1. 在位于 __行程__ 标题
-1. 刷新运行的SPA `http://localhost:3000` 并查看所反映的更改
+1. 切換至 __預覽__ SPA編輯器中的模式
+1. 點選 __巴厘島衝浪營__ 卡片並導覽至其動態路由
+1. 新增、變更或移除容器元件（位於容器元件上方） __行程__ 標題
+1. 重新整理正在執行的SPA `http://localhost:3000` 並檢視變更是否反映在
 
-新的AEM页面 __WKND应用程序主页> Adventure__ _必须_ 具有与相应冒险的内容片段名称匹配的AEM页面名称。 这是因为SPA到AEM页面的路由映射基于路由的最后一段，即内容片段的名称。
+下的新AEM頁面 __WKND應用程式首頁>冒險__ _必須_ 具有與相應冒險的內容片段名稱相符的AEM頁面名稱。 這是因為SPA路徑至AEM頁面對應是以路徑的最後一個區段為基礎，該區段是內容片段的名稱。
 
 ## 恭喜！
 
-您只需快速了解AEM SPA Editor如何通过可控的可编辑区域来增强您的SPA! 如果您感兴趣 — 请查看本教程的其余部分，但请确保重新开始，因为在此快速设置中，您的本地开发环境现在处于教程的结束状态！
+您剛剛快速瞭解了AEM SPA Editor如何透過受控、可編輯的區域來增強SPA！ 如果您有興趣 — 請檢視教學課程的其餘部分，但請務必重新開始，因為在此快速設定中，您的本機開發環境現在處於教學課程的結束狀態！

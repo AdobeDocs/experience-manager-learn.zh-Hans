@@ -1,6 +1,6 @@
 ---
-title: 了解AEM中的身份验证支持
-description: 对AEM支持的身份验证（有时还是授权）机制的整合视图。
+title: 瞭解AEM中的驗證支援
+description: AEM支援的驗證（有時是授權）機制的整合檢視。
 version: 6.4, 6.5
 feature: User and Groups
 topics: authentication, security
@@ -21,11 +21,11 @@ ht-degree: 14%
 
 ---
 
-# 了解AEM 6.x中的身份验证支持
+# 瞭解AEM 6.x中的驗證支援
 
-对AEM支持的身份验证（有时还是授权）机制的整合视图。
+AEM支援的驗證（有時是授權）機制的整合檢視。
 
-*下表介绍了用户如何在AEM中进行身份验证。*
+*下表說明使用者如何在AEM中進行驗證。*
 
 <table>
     <tbody>
@@ -36,31 +36,31 @@ ht-degree: 14%
             <td><strong>AEM 6.5</strong></td>
         </tr>
         <tr>
-            <td><strong>AEM作为规范身份提供程序</strong></td>
+            <td><strong>AEM作為標準身分提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>基本身份验证</td>
+            <td>基本驗證</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td>Forms</td>
+            <td>Forms型</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td>基于令牌(带 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装令牌</a>)</td>
+            <td>權杖型(含 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝權杖</a>)</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>非AEM系统作为规范身份提供程序</strong></td>
+            <td><strong>非AEM系統作為標準身分提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -71,7 +71,7 @@ ht-degree: 14%
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html" target="_blank">单点登录</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html" target="_blank">SSO</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
@@ -97,4 +97,4 @@ ht-degree: 14%
     </tbody>
 </table>
 
-⁕ *通过社区项目提供，但不直接受Adobe支持。*
+⁕URL *透過社群專案提供，但Adobe不直接支援。*

@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms中使用Forms服务渲染交互式PDF
-description: 在AEM Forms中使用Forms服务API渲染交互式PDF
+title: 在AEM Forms中使用Forms服務呈現互動式PDF
+description: 在AEM Forms中使用Forms Service API來呈現互動式PDF
 feature: Forms Service
 version: 6.4,6.5
 topic: Development
@@ -15,17 +15,17 @@ ht-degree: 1%
 
 ---
 
-# 在AEM Forms中使用Forms服务渲染交互式PDF
+# 在AEM Forms中使用Forms服務呈現互動式PDF
 
-在AEM Forms中使用Forms服务API渲染交互式PDF
+在AEM Forms中使用Forms Service API來呈現互動式PDF
 
-在本文中，我们将了解以下服务
+在本文中，我們將瞭解以下服務
 
-* FormsService — 这是一项用途广泛的服务，它允许您将数据从导出/导入PDF文件，还可通过将xml数据合并到xdp模板中来生成交互式pdf
+* FormsService — 這是一項功能非常廣泛的服務，可讓您從PDF檔案匯出/匯入資料，也可以將xml資料合併到xdp範本中來產生互動式pdf
 
-官员 [此处列出了AEM Forms API的javadoc](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+官方 [此處列出適用於AEM Forms API的javadoc](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
-以下代码片段使用FormsService的renderPDFForm操作呈现交互式pdf。 申根.xdp是用于合并xml数据的模板。
+下列程式碼片段會使用FormsService的renderPDFForm作業來轉譯互動式pdf。 schengen.xdp是用於合併xml資料的範本。
 
 ```java
 String uri = "crx:///content/dam/formsanddocuments";
@@ -41,30 +41,30 @@ interactivePDF = formsService.renderPDFForm("schengen.xdp", xmlData, renderOptio
 return interactivePDF;
 ```
 
-第1行：包含xdp模板的文件夹的位置
+第1行：包含xdp範本的資料夾位置
 
-第2-4行：创建PDFFormRenderOptions并设置其属性
+Line2-4：建立PDFFormRenderOptions並設定其屬性
 
-第7行：使用FormsService的renderPDFForm服务操作生成交互式PDF
+第7行：使用FormsService的renderPDFForm服務操作產生互動式PDF
 
-第11行：将生成的交互式pdf返回给调用应用程序
+第11行：將產生的互動式pdf傳回呼叫應用程式
 
-**在系统上测试示例包**
-1. [下载并安装DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [使用Felix Web控制台下载并安装DocumentServices示例包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-1. [使用AEM包管理器下载和安装包](assets/downloadinteractivepdffrommobileform.zip)
+**在您的系統上測試範例套件的方式**
+1. [下載並安裝DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. [使用Felix Web Console下載並安裝DocumentServices範例套件](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+1. [使用AEM封裝管理員下載並安裝封裝](assets/downloadinteractivepdffrommobileform.zip)
 
-1. [登录到configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜索AdobeGranite CSRF过滤器
-1. 在排除的部分中添加以下路径并保存
+1. [登入configMgr](http://localhost:4502/system/console/configMgr)
+1. 搜尋AdobeGranite CSRF篩選器
+1. 在排除的區段中新增以下路徑並儲存
 1. /bin/generateinteractivepdf
-1. 搜索 _Apache Sling服务用户映射器服务_ ，然后单击以打开属性
-   1. 单击 *+* 图标（加号）以添加以下服务映射
+1. 搜尋 _Apache Sling服務使用者對應程式服務_ 並按一下以開啟屬性
+   1. 按一下 *+* 圖示（加號）以新增以下服務對應
       * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
-   1. 单击“保存”
-1. [打开移动设备表单](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
-1. 填写几个字段，然后单击 ***下载并填写…….*** 按钮
-1. 应将交互式pdf下载到您的本地系统
+   1. 按一下「儲存」
+1. [開啟行動表單](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
+1. 填寫一些欄位，然後按一下 ***下載並填寫....*** 按钮
+1. 互動式pdf應下載至您的本機系統
 
 
-示例包包含与移动设备表单关联的自定义用户档案。 请浏览 [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) 文件。 此jsp从移动表单中提取数据，并向装载在上的Servlet发出POST请求 ***/bin/generateinteractivepdf*** 路径。 Servlet将交互式PDF返回给调用应用程序。 customtoolbar.jsp中的代码，然后将该文件下载到您的本地系统
+範例套件包含與行動表單相關聯的自訂設定檔。 請探索 [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) 檔案。 此jsp會從行動表單中擷取資料，並向Servlet掛載提出POST請求 ***/bin/generateinteractivepdf*** 路徑。 此servlet會將互動式pdf傳回至呼叫的應用程式。 customtoolbar.jsp中的程式碼然後會將檔案下載到您的本機系統

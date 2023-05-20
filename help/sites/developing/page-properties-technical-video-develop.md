@@ -1,6 +1,6 @@
 ---
-title: 在AEM Sites中扩展页面属性
-description: 了解如何扩展Adobe Experience Manager Sites中页面属性的元数据字段。 此视频详细介绍了使用Sling资源合并器功能实现此目的的最有效方法。
+title: 在AEM Sites中擴充頁面屬性
+description: 瞭解如何延伸Adobe Experience Manager Sites中頁面屬性的中繼資料欄位。 本影片詳細介紹使用Sling資源合併功能最有效達成此目標的方式。
 topic: Development
 feature: Core Components
 role: Developer
@@ -15,18 +15,18 @@ ht-degree: 1%
 
 ---
 
-# 扩展页面属性 {#extending-page-properties-in-aem-sites}
+# 擴充頁面屬性 {#extending-page-properties-in-aem-sites}
 
-在任何站点实施中，都通常要求自定义页面属性的元数据字段。 此视频详细介绍了使用Sling资源合并器功能实现此目的的最有效方法。
+自訂「頁面屬性」的中繼資料欄位是任何Sites實作中的常見要求。 本影片詳細介紹使用Sling資源合併功能最有效達成此目標的方式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25173?quality=12&learn=on)
 
-以上视频演示了如何自定义 [WKND参考站点](https://github.com/adobe/aem-guides-wknd).
+上述影片顯示自訂的頁面屬性 [WKND參考網站](https://github.com/adobe/aem-guides-wknd).
 
-## WKND页面属性包示例
+## 範例WKND頁面屬性套件
 
-您可以使用提供的 [WKND页面属性包示例](./assets/WKND-PageProperties-Example-Dialog-1.0.zip) 包含 **WKND** 和 **基本** 选项卡自定义。 的 **社交媒体** 选项卡自定义未提供为 [WKND页面组件](https://github.com/adobe/aem-guides-wknd/blob/main/ui.apps/src/main/content/jcr_root/apps/wknd/components/page/.content.xml#L5) 现在使用V3版本的WCM核心组件，而V3版本的 [社交共享已弃用](https://github.com/adobe/aem-core-wcm-components/pull/1930).
+您可以使用提供的 [範例WKND頁面屬性套件](./assets/WKND-PageProperties-Example-Dialog-1.0.zip) 包含 **WKND** 和 **基本** 以上影片中顯示的標籤自訂。 此 **社群媒體** 索引標籤自訂未提供為 [WKND頁面元件](https://github.com/adobe/aem-guides-wknd/blob/main/ui.apps/src/main/content/jcr_root/apps/wknd/components/page/.content.xml#L5) 現在使用V3版本的WCM核心元件，而在V3版本中 [已棄用社交分享](https://github.com/adobe/aem-core-wcm-components/pull/1930).
 
-但是，为了便于学习，您可以使用 `sling:resourceSuperType` 属性值并叠加 [社交媒体](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95) 选项卡。 有关更多信息，请参阅 [配置页面属性](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
+出於學習目的，您可以使用將WKND頁面元件指向V2版的WCM核心元件 `sling:resourceSuperType` 屬性值並覆蓋 [社群媒體](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95) 標籤。 如需詳細資訊，請參閱 [設定頁面屬性](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
 
-出于学习目的，应将此示例包安装在本地AEM SDK或AEM 6.X.X实例上。
+本範例套件應安裝在本機AEM SDK或AEM 6.X.X執行個體上，以供學習之用。

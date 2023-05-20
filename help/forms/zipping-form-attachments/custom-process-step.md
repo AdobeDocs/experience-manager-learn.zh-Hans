@@ -1,6 +1,6 @@
 ---
-title: 自定义流程步骤，以压缩文件附件
-description: 自定义流程步骤，将自适应表单附件添加到zip文件，并将zip文件存储到工作流变量中
+title: 壓縮檔案附件的自訂程式步驟
+description: 自訂流程步驟，將最適化表單附件新增至zip檔案並將zip檔案儲存至工作流程變數
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -15,17 +15,17 @@ ht-degree: 1%
 
 ---
 
-# 自定义流程步骤
+# 自訂流程步驟
 
 
-实施了自定义流程步骤，以创建包含表单附件的zip文件。 如果您不熟悉创建OSGi包，请 [按照以下说明操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+已實作自訂流程步驟，以建立包含表單附件的zip檔案。 如果您不熟悉如何建立OSGi套件，請 [請依照下列指示操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
-自定义流程步骤中的代码会执行以下操作
+自訂流程步驟中的程式碼會執行下列動作
 
-* 在有效负荷文件夹下查询所有自适应表单附件。 文件夹名称将作为进程参数传递到进程步骤。
+* 查詢有效負載資料夾下的所有最適化表單附件。 資料夾名稱會作為流程引數傳遞給流程步驟。
 
-* 创建包含表单附件的zip文件，并将其存储在有效负载文件夹下。
-* 设置工作流变量的值(no_of_attachments)
+* 建立包含表單附件的zip檔案，並將其儲存在裝載資料夾下。
+* 設定工作流程變數的值(no_of_attachments)
 
 
 
@@ -159,8 +159,8 @@ public class ZipFormAttachments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> 请确保您有一个名为  *no_of_attachments* 类型为“双精度”(Double)，以便此代码正常工作。
+> 請確定您有一個名為的變數  *no_of_attachments* 工作流程中的Double型別讓此程式碼運作。
 
 ## 后续步骤
 
-[使用附件和附件名称填充ArrayList工作流变量](./custom-process-step.md)
+[使用附件和附件名稱填入ArrayList工作流程變數](./custom-process-step.md)

@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Assets和Launch设置Adobe分析
-description: 在这5部分视频系列中，我们将演练如何设置和配置资产分析，以便通过Launch by Adobe部署Experience Manager。
+title: 使用AEM Assets和Adobe Launch設定Asset Insights
+description: 在這段由5部分組成的影片系列中，我們將逐步介紹透過Launch by Adobe部署的Experience Manager的Asset Insights的設定和設定。
 feature: Asset Insights
 version: 6.4, 6.5
 topic: Integrations
@@ -15,77 +15,77 @@ ht-degree: 1%
 
 ---
 
-# 使用AEM Assets和Adobe Experience Platform Launch设置资产分析
+# 使用AEM Assets和Adobe Experience Platform Launch設定Asset Insights
 
-在这5部分视频系列中，我们将演练如何设置和配置资产分析，以便通过Launch部署Experience ManagerAdobe。
+在這段由5部分組成的影片系列中，我們將逐步介紹透過Adobe Launch部署的Experience Manager的Asset Insights的設定和設定。
 
-## 第一部分：资产分析概述 {#overview}
+## 第1部分：資產分析概觀 {#overview}
 
-资产分析概述。 安装核心组件、示例图像组件和其他内容包，以便为环境做好准备。
+資產分析概觀。 安裝核心元件、範例影像元件和其他內容套件，為您的環境做好準備。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25943?quality=12&learn=on)
 
-### 架构图 {#architecture-diagram}
+### 架構圖 {#architecture-diagram}
 
-![架构图](./assets/asset-insights-launch-tutorial/diagram.png)
+![架構圖](./assets/asset-insights-launch-tutorial/diagram.png)
 
 >[!CAUTION]
 >
->确保下载 [最新版核心组件](https://github.com/adobe/aem-core-wcm-components) ，以便您实施。
+>請務必下載 [最新版本的核心元件](https://github.com/adobe/aem-core-wcm-components) 以利您的實作。
 
-视频使用的是核心组件v2.2.2，该版本不再是最新版本；在继续阅读下一节之前，请务必使用最新版本。
+此影片使用核心元件v2.2.2，這已經不是最新版本；在繼續下一節之前，請務必使用最新版本。
 
-* 下载 [资产分析图像内容示例](./assets/asset-insights-launch-tutorial/aem-assets-insights-sample.zip)
-* 下载 [最新的AEM WCM核心组件](https://github.com/adobe/aem-core-wcm-components/releases)
+* 下載 [資產分析範例影像內容](./assets/asset-insights-launch-tutorial/aem-assets-insights-sample.zip)
+* 下載 [最新AEM WCM核心元件](https://github.com/adobe/aem-core-wcm-components/releases)
 
-## 第2部分：为示例图像组件启用资产分析跟踪 {#sample-image-component-asset-insights}
+## 第2部分：啟用範例影像元件的資產分析追蹤 {#sample-image-component-asset-insights}
 
-增强了资产分析的核心组件和使用代理组件（示例图像组件）的功能。 编辑内容页面模板策略以启用用于引用站点的示例图像组件。
+增強核心元件及使用Proxy元件（範例影像元件）進行Asset Insights。 編輯內容頁面範本原則，為參考網站啟用範例影像元件。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25944?quality=12&learn=on)
 
 >[!NOTE]
 >
->图像核心组件包含通过禁用资产UUID（JCR中创建的节点的唯一标识符值）跟踪来禁用UUID跟踪的功能
+>影像核心元件包含停用資產UUID （在JCR內建立的節點的唯一識別碼值）追蹤以停用UUID追蹤的功能
 
-核心图像组件使用 ***data-asset-id*** 属性 &lt;div> 用于启用/禁用此功能的图像标记。 代理组件会通过以下更改覆盖核心组件。
+核心影像元件使用 ***data-asset-id*** 父項中的屬性 &lt;div> 標籤中，以啟用/停用此功能。 Proxy元件會以下列變更覆寫核心元件。
 
-* 删除 ***data-asset-id*** 从image.html中元 &lt;img> 素的父div
-* 添加 ***data-aem-asset-id*** 直接转 &lt;img> 到image.html中的元素
-* 添加 ***data-trackable=&#39;true&#39;*** image.html &lt;img> 中元素的值
-* ***data-aem-asset-id*** 和 ***data-trackable=&#39;true&#39;*** 保留在同一节点级别
+* 移除 ***data-asset-id*** 從image.html中 &lt;img> 元素的父div
+* 新增 ***data-aem-asset-id*** 直接前往image.html中的 &lt;img> 元素
+* 新增 ***data-trackable=&#39;true&#39;*** image.html中 &lt;img> 元素的值
+* ***data-aem-asset-id*** 和 ***data-trackable=&#39;true&#39;*** 會保留在相同節點層級
 
 >[!NOTE]
 >
->*data-aem-asset-id=&#39;image.UUID&#39;* 和 *data-trackable=&#39;true&#39;* 是资产展示次数需要显示的关键属性。 对于资产点击分析，除了标记中存在的上述数据属性 &lt;img> 之外，父标记还必须具有有效的href值。
+>*data-aem-asset-id=&#39;image.UUID&#39;* 和 *data-trackable=&#39;true&#39;* 是資產曝光數需要呈現的關鍵屬性。 對於資產點選深入分析，除了上述出現在 &lt;img> 標籤中的資料屬性外，父標籤必須具有有效的href值。
 
-## 第三部分：Adobe Analytics — 创建报表包，启用实时数据收集和AEM Assets报告 {#adobe-analytics-asset-insights}
+## 第3部分：Adobe Analytics — 建立報表套裝，啟用即時資料收集和AEM Assets報表 {#adobe-analytics-asset-insights}
 
-为资产跟踪创建了具有实时数据收集的报表包。 AEM Assets分析配置是使用Adobe Analytics凭据设置的。
+具有即時資料收集的報表套裝是為資產追蹤所建立。 AEM Assets Insights設定是使用Adobe Analytics憑證。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25945?quality=12&learn=on)
 
 >[!NOTE]
-需要为您的Adobe Analytics报表包启用实时数据收集和AEM资产报告功能。 启用AEM Asset Reporting会保留分析变量以跟踪资产分析。
+需要為您的Adobe Analytics報表套裝啟用即時資料收集和AEM資產報表。 啟用AEM Asset Reporting可保留分析變數來追蹤資產分析。
 
-对于AEM Assets分析配置，您需要以下凭据
+如需AEM Assets Insights設定，您需要下列憑證
 
 * 数据中心
-* Analytics公司名称
-* Analytics用户名
-* 共享密钥(可从 *Adobe Analytics >管理员>公司设置> Web服务*)。
-* 报表包（确保选择用于资产报表的正确报表包）
+* Analytics公司名稱
+* Analytics使用者名稱
+* 共用機密(可從下列取得： *Adobe Analytics >管理員>公司設定> Web服務*)。
+* 報表套裝（請務必選取用於資產報表的正確報表套裝）
 
-## 第4部分：使用Adobe Experience Platform Launch添加Adobe Analytics扩展 {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
+## 第4部分：使用Adobe Experience Platform Launch新增Adobe Analytics擴充功能 {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
 
-添加Adobe Analytics扩展、创建页面加载规则以及将AEM与Launch集成到Adobe IMS技术帐户。
+新增Adobe Analytics擴充功能、建立頁面載入規則，以及將AEM與Launch與Adobe IMS技術帳戶整合。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
-确保将所有更改从创作实例复制到发布实例。
+請確定將所有變更從作者執行個體復寫至發佈執行個體。
 
-### 规则1 :页面跟踪器(pagetracker.js) {#rule-page-tracker-pagetracker-js}
+### 規則1 ：頁面追蹤器(pagetracker.js) {#rule-page-tracker-pagetracker-js}
 
 ```javascript
 //For AEM 6.3
@@ -97,17 +97,17 @@ ht-degree: 1%
 <script type="text/javascript" src="http://localhost:4503/etc.clientlibs/dam/clientlibs/assetinsights/pagetracker.js"></script>
 ```
 
-页面跟踪器实施两个回调（在asset-embed-code中注册）
+頁面追蹤器會實作兩個回呼（註冊於資產內嵌程式碼中）
 
-* **\&lt;code>assetAnalytics.core.assetLoaded\&lt;code>** :在为asset-DOM元素调度“load”事件时调用。
-* **\&lt;code>assetAnalytics.core.assetClicked\&lt;code>** :在为asset-DOM元素调度“click”事件时调用，仅当asset-DOM元素具有父标记且具有有效的外部“href”属性时，此事件才相关
+* **\&lt;code>assetAnalytics.core.assetLoaded\&lt;code>** ：在為asset-DOM-element傳送&#39;load&#39;事件時呼叫。
+* **\&lt;code>assetAnalytics.core.assetClicked\&lt;code>** ：在asset-DOM元素傳送「click」事件時呼叫，這只有在asset-DOM元素具有錨點標籤作為具有有效外部「href」屬性的父項時才會相關
 
-最后，Pagetracker将初始化函数实施为。
+最後，Pagetracker實作初始化函式為。
 
-* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** :调用以初始化页面跟踪器组件。 必须先调用此ID，然后才能从网页生成任何资产分析事件（展示次数和/或点击次数）。
-* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** :（可选）接受AppMeasurement对象 — 如果提供，则不会尝试创建AppMeasurement对象的新实例。
+* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** ：呼叫以初始化Pagetracker元件。 從網頁產生任何asset-insights-events （曝光數和/或點選數）之前，必須先叫用此選項。
+* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** ：可選擇接受AppMeasurement物件 — 如果提供，不會嘗試建立AppMeasurement物件的新例項。
 
-### 规则2:图像跟踪器 — 操作1(asset-insights.js) {#rule-image-tracker-action-asset-insights-js}
+### 規則2：影像追蹤器 — 動作1 (asset-insights.js) {#rule-image-tracker-action-asset-insights-js}
 
 ```javascript
 /*
@@ -142,7 +142,7 @@ _satellite.notify('in assetAnalytics customInit');
 })();
 ```
 
-### 规则2:图像跟踪器 — 操作2(image-tracker.js) {#rule-image-tracker-action-image-tracker-js}
+### 規則2：影像追蹤器 — 動作2 (image-tracker.js) {#rule-image-tracker-action-image-tracker-js}
 
 ```javascript
 /*
@@ -160,13 +160,13 @@ document.querySelectorAll('[data-aem-asset-id]').forEach(function(element) {
 });
 ```
 
-* assetAnalytics.core.assetLoaded():将在页面加载完成时调用，并会为所有可跟踪图像触发“资产展示次数”
-* 带有已加载资产列表的Analytics变量： **contextData[&#39;c.a.assets.idList&#39;]**
-* assetAnalytics.core.assetClicked():当资产DOM元素具有具有有效href值的锚点标记时，将调用。 单击资产后，将创建一个Cookie，并将点击的资产ID作为其值。**(Cookie名称：a.assets.clickedid)**
-* 带有已加载资产列表的Analytics变量： **contextData[“c.a.assets.clickedid”]**
-* 来源： **contextData[&#39;c.a.assets.source&#39;]**
+* assetAnalytics.core.assetLoaded() ：會在頁面載入完成時叫用，並會為所有可追蹤的影像觸發資產曝光數
+* 載有載入資產清單的Analytics變數： **contextData[&#39;c.a.assets.idList&#39;]**
+* assetAnalytics.core.assetClicked() ：在資產DOM元素具有錨點標籤（具有有效的href值）時叫用。 當資產被點按時，系統會建立Cookie，且被點按的資產ID會作為其值。**（Cookie名稱： a.assets.clickedid）**
+* 載有載入資產清單的Analytics變數： **contextData[&#39;c.a.assets.clickedid&#39;]**
+* 來源地： **contextData[&#39;c.a.assets.source&#39;]**
 
-### 控制台调试语句 {#console-debug-statements}
+### 主控台偵錯陳述式 {#console-debug-statements}
 
 ```javascript
 //Launch Build Info
@@ -182,15 +182,15 @@ assetAnalytics
 document.querySelectorAll(".cmp-image__image");
 ```
 
-视频中引用了两个Google Chrome浏览器扩展，用于调试Analytics。 其他浏览器也提供类似的扩展。
+影片中會參考兩個Google Chrome瀏覽器擴充功能，作為偵錯Analytics的方式。 其他瀏覽器也提供類似的擴充功能。
 
-* [Launch交换机Chrome扩展](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en)
+* [啟動Switch Chrome擴充功能](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en)
 * [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?hl=en)
 
-还可以使用以下Chrome扩展将DTM切换到调试模式： [Launch和DTM Switch](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en). 这样，便于查看是否存在与DTM部署相关的错误。 此外，您还可以通过任何浏览器手动将DTM切换到调试模式 *开发人员工具 — > JS控制台* 添加以下代码片段：
+也可以使用下列Chrome擴充功能，將DTM切換為除錯模式： [Launch與DTM交換器](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en). 這可讓您更容易檢視是否有任何與DTM部署相關的錯誤。 此外，您可以透過任何瀏覽器手動將DTM切換為除錯模式 *開發人員工具 — > JS主控台* 新增下列程式碼片段：
 
-## 第5部分：测试分析跟踪和同步分析数据{#analytics-tracking-asset-insights}
+## 第5部分：測試分析追蹤和同步分析資料{#analytics-tracking-asset-insights}
 
-配置AEM资产报告同步作业计划程序和资产分析报表
+設定AEM Asset Reporting同步工作排程器與Assets Insights報表
 
 >[!VIDEO](https://video.tv.adobe.com/v/25947?quality=12&learn=on)

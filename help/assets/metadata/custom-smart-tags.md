@@ -1,6 +1,6 @@
 ---
-title: 适用于AEM Assets中图像的自定义智能标记
-description: 了解如何培训AEM Assets的智能标记以将自定义术语应用到资产。
+title: AEM Assets中影像的自訂智慧標籤
+description: 瞭解如何訓練AEM Assets的智慧標籤，以將自訂辭彙套用至資產。
 feature: Smart Tags
 version: 6.4, 6.5, Cloud Service
 kt: 795
@@ -16,24 +16,24 @@ ht-degree: 1%
 
 ---
 
-# 图像的自定义智能标记
+# 影像的自訂智慧標籤
 
-图像的自定义智能标记允许使用特定于客户的术语来培训智能标记。
-随后可以利用自定义智能标记（即增强型智能标记）来改善用户搜索体验，并帮助在正确的时间查找资产。
+影像的自訂智慧標籤可讓智慧標籤接受客戶特定辭彙的培訓。
+接著，即可運用自訂智慧標籤（或增強智慧標籤）來改善使用者搜尋體驗，並有助於在適當的時間找到資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22254?quality=12&learn=on)
 
-## 为AEM 6.x的图像设置自定义智能标记{#set-up}
+## 設定AEM 6.x影像的自訂智慧標籤{#set-up}
 
 >[!NOTE]
-> 图像的自定义智能标记会针对AEMas a Cloud Service自动进行配置。
+> 影像的自訂智慧標籤會自動布建為AEMas a Cloud Service。
 
-图像的自定义智能标记需要 [要设置的图像的智能标记](./image-smart-tags.md#set-up).
+影像的自訂智慧標籤需要 [要設定影像的智慧標籤](./image-smart-tags.md#set-up).
 
-了解如何使用智能内容服务和Adobe I/O在AEM Assets中配置智能标记的培训。图像的自定义智能标记
+瞭解如何使用智慧內容服務和Adobe I/O，在AEM Assets中設定智慧標籤的培訓。影像的自訂智慧標籤
 
 >[!VIDEO](https://video.tv.adobe.com/v/23405?quality=12&learn=on)
 
 ## 其他资源
 
-* AEM 6.4要求 [最新Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64).
+* AEM 6.4需要 [最新Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64).

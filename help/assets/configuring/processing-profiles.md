@@ -1,6 +1,6 @@
 ---
 title: 处理配置文件
-description: 处理配置文件定义要为AEMas a Cloud Service中的资产创建的演绎版。
+description: 處理設定檔會定義要為AEMas a Cloud Service的資產建立的轉譯。
 feature: Asset Compute Microservices
 version: Cloud Service
 kt: 4993
@@ -19,6 +19,6 @@ ht-degree: 11%
 
 # 处理配置文件
 
-处理配置文件定义要为AEMas a Cloud Service中的资产创建的演绎版。
+處理設定檔會定義要為AEMas a Cloud Service的資產建立的轉譯。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35597?quality=12&learn=on)

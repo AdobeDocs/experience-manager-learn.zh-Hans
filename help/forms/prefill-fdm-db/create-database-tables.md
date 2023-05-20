@@ -1,6 +1,6 @@
 ---
-title: 创建数据库表
-description: 创建表单数据模型要使用的数据库
+title: 建立資料庫表格
+description: 建立供表單資料模型使用的資料庫
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 5811
@@ -16,21 +16,21 @@ ht-degree: 1%
 
 ---
 
-# 创建数据库表
+# 建立資料庫表格
 
-表单数据模型可以基于RDBMS、RESTfull、SOAP或OData源。 本课程的重点是使用由RDBMS数据源支持的表单数据模型预归档自适应表单。 本教程中使用了MYSQL数据库。 我们创建了以下两个表来演示用例
+表單資料模型可以以RDBMS、RESTfull、SOAP或OData來源為基礎。 本課程的重點是使用RDBMS資料來源支援的表單資料模型，預先填寫最適化表單。 在本教學課程中，使用了MYSQL資料庫。 我們建立了以下兩個表格來示範使用案例
 
-* **newhire** 表 — 此表存储新信息
+* **newhire** 表格 — 此表格儲存新資訊
 
    ![newhire](assets/newhire-table.png)
 
 
-* **受益人** 表 — 这家店的新受益人
+* **受益人** 表格 — 此表格儲存新的受益人
 
    ![受益人](assets/beneficiaries-table.png)
 
-您可以导入 [sql文件](assets/db-schema.sql) 使用MySQL Workbench创建包含某些示例数据的表。
+您可以匯入 [sql檔案](assets/db-schema.sql) 使用MySQL Workbench建立含有一些範例資料的資料表。
 
 ## 后续步骤
 
-[配置表单数据模型](./configuring-form-data-model.md)
+[設定表單資料模型](./configuring-form-data-model.md)

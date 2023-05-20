@@ -1,6 +1,6 @@
 ---
-title: 加载和触发Target调用
-description: 了解如何加载参数并将参数传递到页面请求，以及如何使用Launch规则从您的网站页面触发Target调用。 使用Adobe客户端数据层可检索页面信息并将其作为参数进行传递，该数据层允许您收集和存储有关访客在网页上的体验的数据，然后使访客能够轻松访问这些数据。
+title: 載入及觸發Target呼叫
+description: 瞭解如何使用Launch規則從您的網站頁面載入、傳遞引數至頁面請求，以及觸發Target呼叫。 系統會使用Adobe使用者端資料層來擷取頁面資訊，並將其作為引數傳遞，此資料層可讓您收集和儲存訪客在網頁上的體驗資料，然後讓此資料易於存取。
 feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
@@ -16,31 +16,31 @@ exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '608'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
-# 加载和触发Target调用 {#load-fire-target}
+# 載入及觸發Target呼叫 {#load-fire-target}
 
-了解如何加载参数并将参数传递到页面请求，以及如何使用Launch规则从您的网站页面触发Target调用。 使用Adobe客户端数据层可检索网页信息并将其作为参数进行传递，该数据层允许您收集和存储有关访客在网页上的体验的数据，然后使访客能够轻松访问这些数据。
+瞭解如何使用Launch規則從您的網站頁面載入、傳遞引數至頁面請求，以及觸發Target呼叫。 網頁資訊是使用Adobe使用者端資料層擷取並傳遞為引數，可讓您收集和儲存訪客在網頁上的體驗資料，然後讓此資料易於存取。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
-## 页面加载规则
+## 頁面載入規則
 
-Adobe客户端数据层是事件驱动的数据层。 加载AEM页面数据层时，将触发事件`cmp:show` 。 在视频中，使用自定义事件调用`Launch Library Loaded`规则。 在下面，您可以找到视频中用于自定义事件和数据元素的代码片段。
+Adobe使用者端資料層是事件導向的資料層。 載入AEM Page資料層時，會觸發事件 `cmp:show` . 在影片中， `Launch Library Loaded` 使用自訂事件叫用規則。 您可以在下方找到視訊中用於自訂事件及資料元素的程式碼片段。
 
-### 自定义页面显示事件{#page-event}
+### 自訂頁面顯示事件{#page-event}
 
-![页面显示的事件配置和自定义代码](assets/load-and-fire-target-call.png)
+![頁面顯示的事件設定和自訂程式碼](assets/load-and-fire-target-call.png)
 
-在Launch属性中，将新的&#x200B;**Event**&#x200B;添加到&#x200B;**Rule**&#x200B;中
+在Launch屬性中，新增 **事件** 至 **規則**
 
-+ __扩展：__ 核心
-+ __事件类型：__ 自定义代码
-+ __名称：__ 页面显示事件处理程序（或某些描述性内容）
++ __副檔名：__ 核心
++ __事件型別：__ 自訂程式碼
++ __名稱：__ 頁面顯示事件處理常式（或描述性內容）
 
-点按&#x200B;__打开编辑器__&#x200B;按钮，然后在以下代码片段中粘贴。 此代码&#x200B;__必须__&#x200B;添加到&#x200B;__事件配置__&#x200B;和后续的&#x200B;__操作__&#x200B;中。
+點選 __開啟編輯器__ 按鈕並貼入下列程式碼片段。 此程式碼 __必須__ 已新增至 __事件設定__ 和後續的 __動作__.
 
 ```javascript
 // Define the event handler function
@@ -80,22 +80,22 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-自定义函数定义`pageShownEventHandler`，监听AEM核心组件发出的事件，导出核心组件的相关信息，将其打包到事件对象中，并在有效负荷时使用派生事件信息触发启动事件。
+自訂函式定義 `pageShownEventHandler`，會接聽AEM核心元件發出的事件、衍生核心元件的相關資訊、將其封裝為事件物件，並在其裝載處以衍生的事件資訊觸發Launch事件。
 
-Launch规则使用Launch的`trigger(...)`函数触发，该函数&#x200B;__仅__&#x200B;可从规则事件的自定义代码片段定义中获取。
+Launch規則是使用Launch的 `trigger(...)` 函式為 __僅限__ 可從規則事件的自訂程式碼片段定義中使用。
 
-`trigger(...)`函数将事件对象作为参数，该参数又在Launch数据元素中以名为`event`的其他保留名称显示。 Launch中的数据元素现在可以使用`event.component['someKey']`之类的语法来引用`event`对象中此事件对象的数据。
+此 `trigger(...)` 函式會將事件物件視為引數，而此引數會由Launch中名為的另一個保留名稱在Launch資料元素中公開 `event`. Launch中的資料元素現在可以從參照此事件物件的資料 `event` 使用類似下列語法的物件 `event.component['someKey']`.
 
-如果在事件的“自定义代码”事件类型（例如，在操作中）的上下文之外使用`trigger(...)`，则在与Launch属性集成的网站上会引发JavaScript错误`trigger is undefined`。
+若 `trigger(...)` 在事件的自訂程式碼事件型別內容之外使用（例如，在動作中），JavaScript錯誤 `trigger is undefined` 在與Launch屬性整合的網站上擲回。
 
 
 ### 数据元素
 
 ![数据元素](assets/data-elements.png)
 
-AdobeLaunch数据元素通过核心扩展的自定义代码数据元素类型，将在自定义显示页面事件](#page-event)中触发的事件对象[的数据映射到Adobe Target中可用的变量。
+AdobeLaunch資料元素會對應事件物件的資料 [在自訂頁面顯示事件中觸發](#page-event) 至可在Adobe Target中取得的變數（透過核心擴充功能的「自訂程式碼資料元素型別」）。
 
-#### 页面ID数据元素
+#### 頁面ID資料元素
 
 ```
 if (event && event.id) {
@@ -103,11 +103,11 @@ if (event && event.id) {
 }
 ```
 
-此代码会返回核心组件的生成唯一ID。
+此程式碼會傳回核心元件的產生唯一ID。
 
-![页面ID](assets/pageid.png)
+![頁面ID](assets/pageid.png)
 
-### 页面路径数据元素
+### 頁面路徑資料元素
 
 ```
 if (event && event.component && event.component.hasOwnProperty('repo:path')) {
@@ -115,11 +115,11 @@ if (event && event.component && event.component.hasOwnProperty('repo:path')) {
 }
 ```
 
-此代码返回AEM页面的路径。
+此程式碼會傳回AEM頁面的路徑。
 
 ![页面路径](assets/pagepath.png)
 
-### 页面标题数据元素
+### 頁面標題資料元素
 
 ```
 if (event && event.component && event.component.hasOwnProperty('dc:title')) {
@@ -127,17 +127,17 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 }
 ```
 
-此代码返回AEM页面的标题。
+此程式碼會傳回AEM頁面的標題。
 
 ![页面标题](assets/pagetitle.png)
 
 ## 疑难解答
 
-### 为什么mbox没有在我的网页上触发？
+### 為什麼我的mbox沒有在我的網頁上觸發？
 
-#### 未设置mboxDisable Cookie时的错误消息
+#### 未設定mboxDisable Cookie時的錯誤訊息
 
-![Target Cookie域错误](assets/target-cookie-error.png)
+![Target Cookie網域錯誤](assets/target-cookie-error.png)
 
 ```
 > AT: [page-init] Adobe Target content delivery is disabled. Ensure that you can save cookies to your current domain, there is no "mboxDisable" cookie and there is no "mboxDisable" parameter in the query string.
@@ -145,8 +145,8 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 
 #### 解决方案
 
-Target客户有时会将基于云的实例与Target结合使用来进行测试或简单的概念验证。 这些域以及许多其他域都是公共后缀列表的一部分。
-除非使用`targetGlobalSettings()`自定义`cookieDomain`设置，否则在使用这些域时，新式浏览器将不会保存Cookie。
+客戶有時使用雲端型例項搭配Target進行測試或簡單的概念證明用途。 這些網域和許多其他網域均屬於公用字尾清單。
+如果您使用這些網域，則現代瀏覽器不會儲存Cookie，除非您自訂 `cookieDomain` 設定，使用 `targetGlobalSettings()`.
 
 ```
 window.targetGlobalSettings = {  
@@ -156,12 +156,12 @@ window.targetGlobalSettings = {
 
 ## 后续步骤
 
-+ [将体验片段导出到Adobe Target](./export-experience-fragment-target.md)
++ [將體驗片段匯出至Adobe Target](./export-experience-fragment-target.md)
 
-## 支持链接
+## 支援連結
 
-+ [Adobe客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe使用者端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
-+ [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
++ [使用Adobe使用者端資料層和核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Adobe Experience Platform Debugger簡介](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)

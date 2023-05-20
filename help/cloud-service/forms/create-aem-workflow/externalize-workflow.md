@@ -1,6 +1,6 @@
 ---
-title: '将工作流外部化 '
-description: 将工作流数据和附件存储在Azure存储中
+title: 將工作流程外部化
+description: 將工作流程資料和附件儲存在Azure儲存體中
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -9,15 +9,16 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 9542
-source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
+exl-id: 06621fc7-afde-4073-8f15-fe9eeab1d084
+source-git-commit: 11e334545fee8d24ef0d90bb25caa61efe189376
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
-# 将工作流数据的存储外部化到AEM Forms CS
+# 將AEM Forms CS中工作流程資料的儲存區外部化
 
-AEM Forms CS具有将工作流数据（如变量、附件等）存储在外部存储帐户中的新功能。此视频向您展示如何在Azure存储中存储工作流数据
+AEM Forms CS有新功能可將工作流程資料（例如變數、附件等）儲存在外部儲存體帳戶中。此影片說明如何將工作流程資料儲存在Azure儲存體
 
 >[!VIDEO](https://video.tv.adobe.com/v/339610?quality=12&learn=on)

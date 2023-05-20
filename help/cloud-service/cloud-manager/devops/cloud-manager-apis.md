@@ -1,6 +1,6 @@
 ---
-title: 使用API与Cloud Manager交互
-description: 了解如何使用Cloud Manager API来扩展和与其他系统集成。
+title: 使用API與Cloud Manager互動
+description: 探索Cloud Manager API如何用來擴充及整合其他系統。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Cloud Manager API
 
-了解如何使用Cloud Manager API来扩展和与其他系统集成。
+探索Cloud Manager API如何用來擴充及整合其他系統。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330541?quality=12&learn=on)

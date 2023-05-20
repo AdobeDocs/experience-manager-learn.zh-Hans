@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 AEM Dispatcher验证器
-description: 本集更深入地介绍了调度程序验证器及其提供的细微差别。
+title: Cloud 5 AEM Dispatcher Validator
+description: 本集更集中說明Dispatcher驗證器及其提供的細微差別。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -16,15 +16,15 @@ ht-degree: 2%
 
 ---
 
-# Cloud 5 AEM Dispatcher验证器
+# Cloud 5 AEM Dispatcher Validator
 
-有关如何在AEM开发工作流中使用调度程序验证器的快速示例。
+如何在AEM開發工作流程中使用Dispatcher驗證器的快速範例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342358?quality=12&learn=on)
 
-## 此视频中涵盖的内容
+## 本影片涵蓋的內容
 
-+ Dispatcher和SDK概述
++ Dispatcher和SDK概觀
 + [Dispatcher 工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html)
-+ 错误疑难解答
-+ 使用调度程序日志和运行模式进行调试
++ 疑難排解錯誤
++ 使用Dispatcher記錄和執行模式進行偵錯

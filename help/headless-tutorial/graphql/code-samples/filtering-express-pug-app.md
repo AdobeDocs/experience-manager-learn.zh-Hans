@@ -1,6 +1,6 @@
 ---
-title: 筛选Express应用程序
-description: 一个简单的Express应用程序，可过滤使用内容片段建模的WKND冒险。
+title: 篩選快速應用程式
+description: 簡易的Express應用程式，可篩選使用內容片段模組化的WKND冒險。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -12,21 +12,21 @@ index: false
 hide: true
 hidefromtoc: true
 recommendations: noCatalog, noDisplay
-source-git-commit: ac2b3a766caea1013165aedd3478bf859212cc89
+exl-id: b64f33ab-cd18-4cbc-a57e-baf505f1442a
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 0%
 
 ---
 
+# 篩選快速應用程式
 
-# 筛选Express应用程序
+探索AEM Headless GraphQL API使用 [Express](https://expressjs.com/) 和 [Pug](https://pugjs.org/) 應用程式。 此Express應用程式會建立可依活動型別篩選的WKND冒險清單。
 
-探索AEM无头GraphQL API使用 [快速](https://expressjs.com/) 和 [普格](https://pugjs.org/) 应用程序。 此Express应用程序会创建一个可按活动类型过滤的WKND冒险列表。
+此程式碼使用Adobe的 [NodeJS的AEM Headless使用者端](https://github.com/adobe/aem-headless-client-nodejs#aem-headless-client-for-nodejs) 使用以Node.js為基礎的JavaScript來叫用持續性GraphQL查詢。 此應用程式使用 `wknd-shared/adventures-all` 持續查詢以收集所有冒險活動，並衍生可用活動型別清單。 當使用者選擇活動型別時，選擇的型別傳遞到 `wknd-shared/adventures-by-activity` 持久查詢並擷取冒險詳細資料，只針對指定活動型別的那些冒險。 冒險詳細資料可透過AEM擷取 `wknd-shared/adventures-by-slug` 持久查詢。
 
-此代码可演示如何使用Adobe [AEM Headless Client for NodeJS](https://github.com/adobe/aem-headless-client-nodejs#aem-headless-client-for-nodejs) 使用基于Node.js的JavaScript调用持久化GraphQL查询。 此应用程序使用 `wknd-shared/adventures-all` 保留查询以收集所有历险，并派生可用活动类型列表。 当用户选择活动类型时，所选类型将传递到 `wknd-shared/adventures-by-activity` 保留查询，并仅检索指定活动类型的历程的冒险详细信息。 探险详情可通过以下路径从AEM中检索 `wknd-shared/adventures-by-slug` 保留查询。
+此程式碼：
 
-此代码：
-
-+ 连接到AEM发布服务，且不需要身份验证
-+ 使用WKND的持久查询： `wknd-shared/adventures-all`, `wknd-shared/adventures-by-activity`和 `wknd-shared/adventures-by-slug`
++ 連線到AEM Publish服務，且不需要驗證
++ 使用WKND的持續查詢： `wknd-shared/adventures-all`， `wknd-shared/adventures-by-activity`、和 `wknd-shared/adventures-by-slug`

@@ -1,6 +1,6 @@
 ---
-title: 如何在Acrobat中应用使用文档安全模块创建的策略
-description: 配置Acrobat以使用文档安全性将策略应用于文档
+title: 如何套用Acrobat中使用Document Security模組建立的原則
+description: 設定Acrobat以使用Document Security將原則套用至檔案
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何在Acrobat中应用使用文档安全模块创建的策略
+# 如何套用Acrobat中使用Document Security模組建立的原則
 
-*此视频将演示应用使用Acrobat中的文档安全模块创建的策略的过程。*
+*本影片將逐步說明套用在Acrobat中使用Document Security模組建立之原則的過程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335486?quality=12&learn=on)

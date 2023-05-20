@@ -1,6 +1,6 @@
 ---
-title: 改进了AEM Forms中的主题编辑器
-description: 对AEM 6.3中自适应表单的主题编辑器进行了改进
+title: AEM Forms中的主題編輯器改良
+description: AEM 6.3中適用性表單的主題編輯器改良
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 ---
 
-# 改进了AEM Forms中的主题编辑器{#theme-editor-improvements-in-aem-forms}
+# AEM Forms中的主題編輯器改良{#theme-editor-improvements-in-aem-forms}
 
-对AEM 6.3中自适应表单的主题编辑器进行了改进
+AEM 6.3中適用性表單的主題編輯器改良
 
 >[!VIDEO](https://video.tv.adobe.com/v/19497?quality=12&learn=on)
 
 >[!NOTE]
 >
->此功能仅在AEM 6.3之后可用。
+>此功能僅適用於AEM 6.3以後版本。

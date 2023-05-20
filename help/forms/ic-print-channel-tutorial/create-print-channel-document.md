@@ -1,7 +1,7 @@
 ---
-title: 为打印渠道创建交互式通信
+title: 為列印頻道建立互動式通訊
 seo-title: Create Interactive Communication For Print Channel
-description: 这是为打印渠道创建第一个交互式通信文档的多部分教程的6部分。 在本部分中，创建用于打印渠道的交互式通信文档。
+description: 這是為列印管道建立第一個互動式通訊檔案的多部分教學課程的第6部分。 在本部分中，會建立Interactive Communication Document for Print channel。
 seo-description: This is part 6 of multipart tutorial for creating your first interactive communication document for the print channel. In this part, Interactive Communication Document for Print channel is created.
 uuid: 25318a2a-be9d-47d8-806b-d99c8e1c6a74
 feature: Interactive Communication
@@ -24,14 +24,14 @@ ht-degree: 2%
 
 ---
 
-# 为打印渠道创建交互式通信 {#create-interactive-communication-for-print-channel}
+# 為列印頻道建立互動式通訊 {#create-interactive-communication-for-print-channel}
 
-在本部分中，创建用于打印渠道的交互式通信文档。
+在本部分中，會建立Interactive Communication Document for Print channel。
 
-在定义和配置数据源和表单数据模型后，我们现在将为打印渠道创建交互式通信
+定義並設定資料來源和表單資料模型後，我們現在將為Print Channel建立互動式通訊
 
 >[!VIDEO](https://video.tv.adobe.com/v/37888?quality=12&learn=on)
 
 ## 后续步骤
 
-[向目标区域添加内容](./add-content-to-target-areas.md)
+[新增內容至目標區域](./add-content-to-target-areas.md)

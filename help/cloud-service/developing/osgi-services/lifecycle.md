@@ -1,6 +1,6 @@
 ---
-title: OSGi组件生命周期
-description: 了解OSGi组件生命周期，包括如何将OSGi服务绑定到激活、修改和停用生命周期事件。
+title: OSGi元件生命週期
+description: 瞭解OSGi元件生命週期，包括如何將OSGi服務繫結至啟用、修改和停用生命週期事件。
 role: Developer
 level: Beginner
 topic: Development
@@ -15,15 +15,15 @@ ht-degree: 3%
 
 ---
 
-# OSGi组件生命周期
+# OSGi元件生命週期
 
-了解OSGi组件生命周期，包括如何将OSGi服务绑定到：
+瞭解OSGi元件生命週期，包括如何將OSGi服務繫結至：
 
 + 激活
 + 修改时间
 + 和停用
 
-...生命周期事件。
+...生命週期事件。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335475?quality=12&learn=on)
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 + [@Modified JavaDocs](https://javadoc.io/static/com.adobe.aem/aem-sdk-api/2021.7.5658.20210723T140305Z-210600/org/osgi/service/component/annotations/Modified.html)
 + [@Deactivate JavaDocs](https://javadoc.io/static/com.adobe.aem/aem-sdk-api/2021.7.5658.20210723T140305Z-210600/org/osgi/service/component/annotations/Deactivate.html)
 
-## 代码
+## 程式碼
 
 ### ActivitiesImpl.java
 

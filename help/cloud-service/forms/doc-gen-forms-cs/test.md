@@ -1,42 +1,41 @@
 ---
-title: 测试解决方案
-description: 运行Main.java以测试解决方案
+title: 測試解決方案
+description: 執行Main.java以測試解決方案
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
+exl-id: f6536af2-e4b8-46ca-9b44-a0eb8f4fdca9
+source-git-commit: 47d36e472719049de1346c5f0bba010c9af4e039
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
+# 匯入Eclipse專案
 
-# 导入Eclipse项目
+下載並解壓縮 [zip檔案](./assets/aem-forms-cs-doc-gen.zip)
 
-下载并解压缩 [zip文件](./assets/aem-forms-cs-doc-gen.zip)
+啟動Eclipse並將專案匯入Eclipse專案包含資源資料夾中的下列檔案：
 
-启动Eclipse并将项目导入Eclipse 。该项目在资源文件夹中包含以下文件：
+* DataFile1、DataFile2和DataFile3 — 要與範本合併以產生最終PDF檔案的範例xml資料檔案
+* custom_fonts.xdp - XDP範本。
+* service_token.json — 您必須以帳戶特定的認證取代此檔案的內容
+* options.json — 此檔案中指定的選項用於設定API產生的PDF檔案的屬性
 
-* DataFile1、DataFile2和DataFile3 — 要与模板合并以生成最终PDF文件的示例XML数据文件
-* custom_fonts.xdp - XDP模板。
-* service_token.json — 您必须将此文件的内容替换为您的帐户特定凭据
-* options.json — 此文件中指定的选项用于设置由API生成的PDF文件的属性
+![resources-file](./assets/resource-files.png)
 
-![资源文件](./assets/resource-files.png)
+## 測試解決方案
 
-## 测试解决方案
-
-* 将您的服务凭据复制并粘贴到项目的service_token.json资源文件中。
-* 打开DocumentGeneration.java文件，并指定要在其中保存生成的PDF文件的文件夹
-* 打开Main.java。 设置变量postURL的值以指向您的实例。
-* 将Main.java作为Java应用程序运行
+* 將您的服務認證複製並貼到專案的service_token.json資源檔案中。
+* 開啟DocumentGeneration.java檔案，並指定要儲存產生的PDF檔案的資料夾
+* 開啟Main.java。 設定變數postURL的值以指向您的執行個體。
+* 以Java應用程式執行Main.java
 
 >[!NOTE]
-> 第一次运行java程序时，您将收到HTTP 403错误。 要通过，请确保将 [在AEM中授予技术帐户用户的适当权限](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
+> 第一次執行Java程式時，您會收到HTTP 403錯誤。 若要通過此程式，請務必提供 [AEM中技術帳戶使用者的適當許可權](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
 
-**AEM Forms用户** 是我在本课程中所用的角色。
-
+**AEM Forms使用者** 是我在此課程中使用的角色。

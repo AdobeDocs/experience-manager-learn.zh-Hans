@@ -1,6 +1,6 @@
 ---
-title: 创建Azure存储备份表单数据模型
-description: 使用表单数据模型将AEM Forms CS与Azure存储集成
+title: 建立Azure儲存體支援的表單資料模型
+description: 使用表單資料模型整合AEM Forms CS與Azure儲存體
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 创建Azure存储备份表单数据模型
+# 建立Azure儲存體支援的表單資料模型
 
-创建Azure存储备份表单数据模型
+建立Azure儲存體支援的表單資料模型
 
 >[!VIDEO](https://video.tv.adobe.com/v/335385?quality=12&learn=on)

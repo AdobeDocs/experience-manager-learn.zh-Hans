@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media Classic最佳实践教程
-description: Dynamic Media Classic是客户创建、创作和交付富媒体内容的中心。 已创建此最佳实践教程，以帮助Dynamic Media Classic的当前和新用户更全面地了解他们可以使用Adobe这一功能强大的富媒体解决方案执行哪些操作。 在本教程的这一部分中，您将学习Dynamic Media Classic的概念，并简要了解其核心功能和用户界面。
+title: Dynamic Media Classic最佳實務教學課程
+description: Dynamic Media Classic是客戶建立、編寫及傳送多媒體內容的中心。 建立此最佳實務教學課程是為了協助Dynamic Media Classic的現有和新使用者更完全瞭解他們可以利用Adobe的這個強大的多媒體解決方案做什麼。 在本教學課程的這個部分，您將瞭解Dynamic Media Classic是什麼，並取得其核心功能和使用者介面的簡短介紹。
 doc-type: tutorial
 audience: all
 activity: develop, use
@@ -12,65 +12,65 @@ exl-id: 975b85af-ca6a-419e-ab2a-6e1781bfee4a
 source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '885'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# Dynamic Media Classic最佳实践教程
+# Dynamic Media Classic最佳實務教學課程
 
-本指南旨在帮助Dynamic Media Classic的当前和新用户更全面地了解他们可以使用Adobe的强大富媒体解决方案执行哪些操作。 我们将通过以下方式执行此操作：
+本指南旨在協助Dynamic Media Classic的現有和新使用者更完全瞭解他們可以透過Adobe提供的強大多媒體解決方案做什麼。 我們將透過以下方式達成此目的：
 
-- 向您介绍Dynamic Media Classic，介绍其内容，并概述其核心功能和用户界面(UI)。
-- 解释在解决方案中处理资产时将遵循的常规创建、创作和交付工作流。
-- 讨论在跳入和使用解决方案之前要设置的重要项目。
-- 深入了解如何使用解决方案的几项核心功能。
+- 向您介紹Dynamic Media Classic，說明其內容，並提供其核心功能和使用者介面(UI)的概觀。
+- 說明在解決方案中使用資產時，您會遵循的一般建立、編寫和傳遞工作流程。
+- 討論在跳入和使用解決方案之前要設定的重要專案。
+- 深入瞭解如何使用解決方案的幾項核心功能。
 
-在整个指南中，我们将提供示例、提示和最佳实践。 我们还将解释您在使用Dynamic Media Classic时应该熟悉的重要术语和概念。 当某个主题可用时，我们会向您介绍相关的网络研讨会、博客文章和在线文档。
+在本指南中，我們將提供範例、提示和最佳實務。 我們也會說明您在使用Dynamic Media Classic時應該熟悉的重要辭彙和概念。 如果特定主題有相關資訊，我們會將您引導至相關的網路研討會、部落格和線上檔案。
 
-我们希望本指南为您提供从Dynamic Media Classic解决方案中释放巨大价值所需的信息。 为了更轻松地浏览本指南的章节，请单击指南左侧的书签图标以查看其内容。
+我們希望本指南能提供您所需的資訊，協助您從Dynamic Media Classic解決方案中釋放巨大價值。 若要更輕鬆地導覽本指南的章節，請按一下指南左側的書籤圖示以檢視其內容。
 
-## Dynamic Media Classic概述
+## Dynamic Media Classic概觀
 
-Dynamic Media Classic是客户创建、创作和交付富媒体内容的中心。 Dynamic Media Classic是一个集成的富媒体管理、发布和服务环境。 富媒体可以交付到所有营销和销售渠道，包括Web、打印材料、电子邮件促销活动、Web应用程序、桌面和设备。
+Dynamic Media Classic是客戶建立、編寫及傳送多媒體內容的中心。 Dynamic Media Classic是整合式多媒體管理、發佈和服務環境。 豐富型媒體可傳送至所有行銷和銷售管道，包括網路、印刷品、電子郵件行銷活動、網頁應用程式、桌上型電腦和裝置。
 
-图像服务或许是Dynamic Media Classic最常用的功能。 事实上，大多数客户都使用Dynamic Media Classic来提供其网站上的所有图像，包括用于缩放或富媒体的图像。 但是，它也可用于许多其他目的，包括视频交付和使用AI优化交付的图像。
+影像伺服可能是Dynamic Media Classic最常使用的功能。 事實上，大部分的客戶都使用Dynamic Media Classic來提供其網站上的所有影像，包括縮放或多媒體影像。 不過，它也可用於許多其他用途，包括傳送視訊和使用AI最佳化傳送的影像。
 
 ## Dynamic Media Classic的核心功能
 
-在本指南中，我们将讨论以下Dynamic Media Classic的核心功能。
+在本指南中，我們將討論Dynamic Media Classic的下列核心功能。
 
-- **动态图像处理.** 实时编辑、格式化和大小调整、交互式缩放和平移的伞形术语；颜色和纹理切换；360度旋转；图像模板；和多媒体查看器。
-- **视频.** 上传最终视频、发布这些视频，并逐步将它们下载到可配置的视频查看器中。
-- **智能成像.** 此技术利用Adobe Sensei AI功能并与现有的“图像预设”配合使用，根据客户端浏览器功能自动优化图像格式、大小和质量，从而增强图像交付性能。
+- **Dynamic Imaging。** 此傘狀辭彙用於即時編輯、格式設定和調整大小，以及互動式縮放和平移；顏色和紋理色票；360度旋轉；影像範本；以及多媒體檢視器。
+- **视频.** 上傳最終影片、發佈影片，並逐步下載至可設定的影片檢視器中。
+- **智能成像.** 這項技術運用Adobe Sensei AI功能，並與現有的「影像預設集」搭配使用，根據使用者端瀏覽器功能自動最佳化影像格式、大小和品質，進而增強影像傳送效能。
 
-要发现解决方案的其他功能，请访问 [Dynamic Media Classic文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html).
+若要瞭解解決方案的其他功能，請造訪 [Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html).
 
-## Dynamic Media Classic用户界面(UI)
+## Dynamic Media Classic使用者介面(UI)
 
-Dynamic Media Classic主UI包含三个主要区域：全局导航栏、资产库和浏览面板/构建面板。
+Dynamic Media Classic主要UI包含三個主要區域：全域導覽列、資產庫和瀏覽面板/建置面板。
 
 ![图像](assets/overview/overview-dmc-ui-ew.png)
 
-_Dynamic Media Classic UI_
+_DYNAMIC MEDIA CLASSIC UI_
 
-**全局导航栏。** 位于屏幕顶部的按钮，您可以使用此栏上的按钮访问解决方案的关键区域和功能。 例如，您将使用它访问上传功能，打开各种资产构建区域（图像集、旋转集等），执行重要任务（如设置图像预设和查看器预设），以及发布您的资产。 在此，您还可以监控作业、查看最近的活动，以及从各种帮助选项中进行选择。
+**全域導覽列。** 位於熒幕頂端，您將使用此列上的按鈕來存取解決方案的關鍵區域和功能。 例如，您將用它來存取上傳功能、開啟各種資產建置區域（影像集、迴轉集等）、執行重要工作，例如設定影像預設集和檢視器預設集，以及發佈您的資產。 您也可以在此處監視工作、檢視最近的活動，以及從各種說明選項中進行選擇。
 
-**资产库.** 资产库位于屏幕左下方，是一个资产库面板，用于组织您创建的文件夹和子文件夹中的资产。 在面板顶部，您将找到搜索和过滤器，以帮助您查找资产。 高级搜索允许您通过指定多个选项作为搜索条件进行搜索，包括附加到该资产的隐藏元数据字段。 在面板底部，您可以通过单击垃圾桶图标来查看已删除的项目。 最初，您不会以任何文件夹开头，但顶级文件夹除外，该文件夹与您的帐户名称同名。
+**资产库.** 「資產庫」位於畫面左下，此面板可用來將資產整理在您建立的資料夾和子資料夾中。 在面板頂端，您可以找到搜尋和篩選器，協助您尋找資產。 進階搜尋可讓您指定多個選項作為搜尋條件，包括附加至該資產的隱藏中繼資料欄位，以進行搜尋。 在面板底部，您可以按一下垃圾桶圖示來檢視已刪除的專案。 最初，您不會從任何資料夾開始，除了頂層資料夾，其名稱與您的帳戶名稱相同。
 
 >[!NOTE]
 >
->垃圾桶中的资产在放置七天后将自动被永久删除，除非您恢复这些资产。
+>除非您還原，否則垃圾桶中的資產會在放置七天後自動永久刪除。
 
-**浏览/生成面板。** 这是UI的中心，您可以在此处以“浏览”模式浏览资产，或者，如果在“生成”模式下，您会将其用作画布，以在工作流中构建资产。 首次登录时，您将看到“浏览”面板。 屏幕中央是网格视图中图像的缩略图版本。 您可以更改为列表视图，或选择资产并使用详细信息视图查看有关该资产的详细信息。
+**瀏覽/建置面板。** 這是UI的中心，您可以在其中以「瀏覽」模式瀏覽資產，或在「建置」模式中，將它當作工作流程中建置資產的畫布。 第一次登入時，您會看到「瀏覽」面板。 畫面中央是格線檢視中影像的縮圖版本。 您可以變更為「清單」檢視，或選取資產，並使用「詳細資訊」檢視來檢視有關資產的詳細資訊。
 
 >[!IMPORTANT]
 >
->在每个资产ID旁边， **标记为发布** 切换。 当切换开启（绿色）时，表示资产已标记为发布。
+>在每個資產ID旁邊， **標籤為發佈** 切換。 當切換開啟（綠色）時，表示資產已標籤為發佈。
 
 ![图像](assets/overview/overview-mark-for-publish.png)
 
 >[!TIP]
 >
->选择 **上传后发布** 复选框，以在上传时自动发布资产。
+>選取 **上傳後發佈** 「上傳」對話方塊中的核取方塊，可於上傳時自動發佈資產。
 
-详细了解 [导航Dynamic Media Classic的UI](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html).
+進一步瞭解 [導覽Dynamic Media Classic的UI](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html).

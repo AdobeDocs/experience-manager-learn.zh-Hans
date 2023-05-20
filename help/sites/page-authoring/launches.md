@@ -1,6 +1,6 @@
 ---
-title: 如何在AEM Sites中使用启动项
-description: AEM Sites中的启动项提供了一种创建、创作和查看内容以供将来版本使用的方法。
+title: 如何在AEM Sites中使用啟動
+description: AEM Sites中的啟動提供一種建立、編寫和檢閱內容以供未來發行的方法。
 topic: Content Management
 feature: Launches
 level: Intermediate, Experienced
@@ -18,6 +18,6 @@ ht-degree: 1%
 
 # 启动项
 
-AEM Sites中的启动项提供了一种创建、创作和查看网站内容的方法，以供将来版本使用。 在创建启动项期间，生产网站可以继续像往常一样不断演变和变化。
+AEM Sites中的啟動提供一種建立、編寫和檢閱網站內容以供未來發行的方式。 在建立啟動期間，生產網站可以繼續如常進化並每天變更。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331285?quality=12&learn=on)

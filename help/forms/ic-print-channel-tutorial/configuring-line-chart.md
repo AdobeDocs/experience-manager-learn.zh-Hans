@@ -1,7 +1,7 @@
 ---
-title: 为第一个交互式通信文档配置折线图
+title: 為第一個互動式通訊檔案設定折線圖
 seo-title: Configuring line chart for your first interactive communication document
-description: 这是为打印渠道创建首个交互式通信文档的多步教程的8部分。 在此部分中，我们将添加折线图以显示帐户余额。
+description: 這是為列印頻道建立第一個互動式通訊檔案的多步驟教學課程的第8部分。 在本部分中，我們將新增折線圖以顯示帳戶餘額。
 seo-description: This is part 8 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will add a Line chart to display the account balance.
 uuid: a4394874-a080-4b6a-a3eb-ffc71504919d
 feature: Interactive Communication
@@ -24,18 +24,18 @@ ht-degree: 0%
 
 ---
 
-# 为第一个交互式通信文档配置折线图 {#configuring-line-chart-for-your-first-interactive-communication-document}
+# 為第一個互動式通訊檔案設定折線圖 {#configuring-line-chart-for-your-first-interactive-communication-document}
 
-在此部分中，我们将添加折线图以显示帐户余额。
+在本部分中，我們將新增折線圖以顯示帳戶餘額。
 
-登录AEM Forms，然后导航到Adobe Experience Manager > Forms > Forms和文档。
+登入AEM Forms並導覽至「Adobe Experience Manager > Forms > Forms和檔案」。
 
-打开401KStatementPrint文件夹。
+開啟401KStatementPrint資料夾。
 
-在编辑模式下打开401KStatementPrint。
+在編輯模式下開啟401KStatementPrint。
 
-从AEM Forms 6.4开始，使用各种类型的图表可以非常轻松地显示数据。 我们将使用折线图来按年显示余额。
+從AEM Forms 6.4開始，使用各種型別的圖表來輕鬆顯示資料。 我們將使用折線圖來依年份顯示餘額。
 
-以下视频将指导您完成添加和配置图表组件的步骤
+以下影片將逐步說明新增和設定圖表元件的步驟
 
 >[!VIDEO](https://video.tv.adobe.com/v/22386?quality=12&learn=on)

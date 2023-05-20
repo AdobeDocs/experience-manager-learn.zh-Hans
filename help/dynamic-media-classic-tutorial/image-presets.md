@@ -1,6 +1,6 @@
 ---
 title: 图像预设
-description: Dynamic Media Classic中的图像预设包含创建特定大小、格式、质量和锐化的图像所需的所有设置。 图像预设是动态大小调整的关键组件。 在Dynamic Media Classic中查看URL时，您可以轻松查看图像预设是否正在使用。 了解图像预设、为何有用以及如何创建图像预设。
+description: Dynamic Media Classic中的影像預設集包含以特定大小、格式、品質和銳利化建立影像所需的所有設定。 影像預設集是動態調整大小的關鍵元件。 當您在Dynamic Media Classic中檢視URL時，可以輕鬆檢視影像預設集是否在使用中。 瞭解影像預設集、其用途為何以及如何建立。
 feature: Dynamic Media Classic, Image Presets
 doc-type: tutorial
 topics: development, authoring, configuring
@@ -19,53 +19,53 @@ ht-degree: 1%
 
 # 图像预设 {#image-presets}
 
-图像预设实质上是一种方法，其中包含创建特定大小、格式、质量和锐化的图像所需的所有设置。 图像预设是动态大小调整的关键组件。
+影像預設集本質上是包含以特定大小、格式、品質和銳利化建立影像所需的所有設定的配方。 影像預設集是動態調整大小的關鍵元件。
 
-如果您查看的是任何Dynamic Media Classic客户的URL，您可能会看到正在使用的图像预设。 只需在URL的末尾查找$name$即可（名称中包含任何单词或单词）。
+如果您檢視幾乎任何Dynamic Media Classic客戶的URL，您可能會看到使用中的影像預設集。 只要在URL的結尾尋找$name$ （使用任何取代名稱的字詞或單字）。
 
-图像预设可缩短URL，因此您可以编写一个图像预设，而不是根据每个请求写出多个图像提供说明。 例如，这两个URL会生成具有锐化功能的相同300 x 300JPEG图像，但第二个URL会使用图像预设：
+影像預設集可縮短URL，因此您不必針對每個請求寫出數個「影像伺服」指示，而是可以撰寫單一影像預設集。 例如，這兩個URL會以銳利化產生相同的300 x 300JPEG影像，但第二個使用影像預設集：
 
 ![图像](assets/image-presets/image-preset-2.png)
 
-图像预设的真正价值在于，任何公司管理员都可以更新该图像预设的定义，并使用该格式影响每个图像，而无需更改任何Web代码。 清除URL的缓存后，您将看到对图像预设进行任何更改的结果。
+影像預設集的真正價值在於任何公司管理員都可以更新該影像預設集的定義，並影響使用該格式的所有影像，而無需變更任何網頁程式碼。 在URL的快取清除後，您將會看到影像預設集的任何變更結果。
 
 >[!IMPORTANT]
 >
->在调整图像大小时，长宽比、图像宽度与图像高度的比率应始终保持成比例，以便图像不会扭曲。
+>調整影像大小時，外觀比例（影像寬度與高度的比例）應一律保持成比例，以免影像扭曲。
 
-图像预设的名称两侧都有一个美元符号($)，并且该符号后面跟有问号(?) 分隔符.
-
->[!TIP]
->
->在您的网站上为每个唯一图像大小创建一个图像预设。 例如，如果您需要产品详细信息页面显示350 X 350图像，浏览/搜索页面显示120 X 120图像，交叉销售/特色项目显示90 X 90图像，则您需要三个图像预设，无论您有500张图像还是500,000张图像。
-
-- 详细了解 [图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
-- 了解如何 [创建图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
-
-## 图像预设和锐化
-
-图像预设通常会调整图像大小，每当您调整图像的原始大小时，都应该添加锐化。 这是因为调整大小会导致许多像素合并并混合到较小的空间中，从而使图像看起来柔和模糊。 锐化可增加图像中边缘和高对比度区域的对比度。
-
-我们希望您上传到Dynamic Media Classic的高分辨率图像在放大后全尺寸查看时不需要任何锐化。 但是，无论大小小，通常都需要进行一些锐化。
+影像預設集名稱兩側都有一個貨幣符號($)，並緊跟問號(？) 分隔符.
 
 >[!TIP]
 >
->在调整图像大小时始终锐化！ 这意味着您需要为每个图像预设（和查看器预设）添加锐化，我们稍后将讨论这些预设)。
+>在您的網站上針對每個不重複影像大小建立一個影像預設集。 例如，如果您需要產品詳細資料頁面為350 X 350影像、瀏覽/搜尋頁面為120 X 120影像，以及交叉銷售/精選專案為90 X 90影像，則無論您有500個影像或500,000個影像，都需要三個影像預設集。
+
+- 進一步瞭解 [影像預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
+- 瞭解如何 [建立影像預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
+
+## 影像預設集和銳利化
+
+影像預設集通常會調整影像大小，而每當根據原始大小調整影像大小時，您都應該新增銳利化。 這是因為調整大小會導致許多畫素合併並混合到一個較小的空間，使影像看起來柔和而模糊。 銳利化會增加影像中邊緣與高對比區域的對比。
+
+我們期望您上傳至Dynamic Media Classic的高解析度影像在完整尺寸檢視時不需要任何銳利化（放大時）。 不過，若是較小尺寸，通常需要某些銳利化。
+
+>[!TIP]
 >
->如果您的图像看起来不好，可能是因为需要锐化，或者最初的质量很差。
+>調整影像大小時一律銳利化！ 這表示您需要將銳利化新增至每個影像預設集（和檢視器預設集，稍後我們將討論）。
+>
+>如果您的影像看起來不理想，可能是因為需要銳利化，或可能一開始品質不佳。
 
-要加多少锐度完全是主观的。 有些人喜欢柔和的图像，而另一些人则非常锐利。 通过对图像运行锐化滤镜的组合，可以轻松增强图像。 但是，也很容易过头和过度锐化图像。
+要增加多少銳利化是完全主觀的。 有些人喜歡較柔和的影像，其他人則喜歡非常銳利的影像。 在影像上執行多種銳利化濾鏡的組合，可輕鬆增強影像。 不過，您也可以輕鬆將影像移到外部並過度銳利化。
 
-下图显示了三种锐化级别。 从右到左，您不会锐化，只会锐化右数量，而且量过大。
+下圖顯示三個銳利化階層。 從右至左，沒有銳利化、只有適當的數量，而且數量太多。
 
 ![图像](assets/image-presets/image-presets-1.jpg)
 
-Dynamic Media Classic允许进行三种类型的锐化：简单的锐化、重新取样模式和钝化蒙版。
+Dynamic Media Classic允許三種銳利化型別：簡單銳利化、重新取樣模式和遮色片銳利化。
 
-详细了解 [Dynamic Media Classic锐化选项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
+進一步瞭解 [Dynamic Media Classic銳利化選項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
 
 ## 其他资源
 
-[图像预设指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf). 用于优化图像质量和加载速度的设置。
+[影像預設集指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf). 用來最佳化影像品質和載入速度的設定。
 
-[图像是第2部分的一切：从来不是模糊 — 质量与速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). 讨论使用图像预设传送高质量、快速加载图像的博客文章。
+[影像是所有功能的第2部分：絕非只是模糊不清 — 品質與速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). 討論使用影像預設集來提供高品質、快速載入影像的部落格。

@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 AEM CDN第1部分
-description: 这是深入研究AEM as a Cloud Service CDN的第1步。
+description: 這是AEMas a Cloud ServiceCDN深入分析的第一部分。
 version: Cloud Service
 feature: Developer Tools
 role: Admin, Developer
@@ -19,15 +19,15 @@ ht-degree: 0%
 
 # Cloud 5 AEM CDN第1部分
 
-这是对作为AEMas a Cloud Service一部分提供的CDN的深入研究，包括CDN的功能以及是否自带CDN。 这是2的第1部分。
+深入瞭解作為AEMas a Cloud Service一部分提供的CDN，包括它的功能以及是否自備CDN。 這是2的第1部分。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340760?quality=12&learn=on)
 
-## 本系列第一部分介绍的内容
+## 本系列第一部分所涵蓋的內容
 
-+ AEM CDN [概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)
-+ Web应用程序防火墙(WAF)功能
++ AEM CDN [概觀](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)
++ Web應用程式防火牆(WAF)功能
 + IP限制
-+ DDOS保护
++ DDOS保護
 
-[查看第二部分](cloud5-aem-cdn-part2.md)
+[檢視第二部分](cloud5-aem-cdn-part2.md)

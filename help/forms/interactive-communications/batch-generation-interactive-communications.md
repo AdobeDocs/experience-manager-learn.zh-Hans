@@ -1,6 +1,6 @@
 ---
-title: 使用批处理API生成交互式通信文档
-description: 使用批处理API生成打印渠道文档的示例资产
+title: 使用批次API產生互動式通訊檔案
+description: 使用批次API產生列印管道檔案的資產範例
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -19,50 +19,50 @@ ht-degree: 2%
 
 ---
 
-# 批处理API
+# 批次API
 
-您可以使用批处理API从模板生成多个交互式通信。 模板是一种交互式通信，不含任何数据。 批处理API将数据与模板组合在一起，以生成交互式通信。 该API在大规模生产交互式通信中非常有用。 例如，电话单、多个客户的信用卡对帐单。
+您可以使用批次API從範本產生多個互動式通訊。 範本是沒有任何資料的互動式通訊。 Batch API會將資料與範本結合，以產生互動式通訊。 此API適用於大量生產互動式通訊。 例如，電話帳單、多個客戶的信用卡對帳單。
 
-[了解有关批量生成API的更多信息](https://experienceleague.adobe.com/docs/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html)
+[深入瞭解批次產生API](https://experienceleague.adobe.com/docs/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html)
 
-本文提供了使用批处理API生成交互式通信文档的示例资产。
+本文提供使用批次API產生互動式通訊檔案的資產範例。
 
-## 使用监视文件夹批量生成
+## 使用Watched資料夾產生批次
 
-* 导入 [交互式通信模板](assets/Beneficiaries-confirmation.zip) 到AEM Forms服务器中。
-* 导入 [监视文件夹配置](assets/batch-generation-api.zip). 这将创建一个名为 `batchAPI` 在你的C路上。
+* 匯入 [互動式通訊範本](assets/Beneficiaries-confirmation.zip) 至您的AEM Forms伺服器。
+* 匯入 [觀察資料夾設定](assets/batch-generation-api.zip). 這將會建立名為的資料夾 `batchAPI` 在您的C磁碟機中。
 
-**如果您在非windows操作系统上运行AEM Forms，请按照以下3个步骤操作：**
+**如果您在非Windows作業系統上執行AEM Forms，請遵循下列3個步驟：**
 
-1. [打开监视文件夹](http://localhost:4502/libs/fd/core/WatchfolderUI/content/UI.html)
-2. 选择BatchAPIWatchedFolder并单击“编辑”。
-3. 更改路径以匹配您的操作系统。
+1. [開啟watched資料夾](http://localhost:4502/libs/fd/core/WatchfolderUI/content/UI.html)
+2. 選取BatchAPIWatchedFolder，然後按一下「編輯」。
+3. 變更路徑以符合您的作業系統。
 
 ![路径](assets/watched-folder-batch-api-basic.PNG)
 
-* 下载和提取 [zip文件](assets/jsonfile.zip). zip文件包含名为 `jsonfile` 包含 `beneficiaries.json` 文件。 此文件具有用于生成3个文档的数据。
+* 下載並解壓縮的內容 [zip檔案](assets/jsonfile.zip). zip檔案包含名為的資料夾 `jsonfile` 其中包含 `beneficiaries.json` 檔案。 此檔案包含產生3份檔案的資料。
 
-* 删除 `jsonfile` 文件夹移入监视文件夹的输入文件夹中。
-* 提取文件夹进行处理后，请检查监视文件夹的结果文件夹。 您应会看到3个PDF文件已生成
+* 放下 `jsonfile` 資料夾放入您的watched資料夾的輸入資料夾。
+* 擷取資料夾以進行處理之後，請檢查您的watched資料夾的結果資料夾。 您應該會看到3個PDF檔案產生
 
-## 使用REST请求生成批量
+## 使用REST請求產生批次
 
-您可以调用 [批处理API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) 通过REST请求。 您可以为其他应用程序公开REST端点以调用API以生成文档。
-提供的示例资产公开了用于生成交互式通信文档的REST端点。 Servlet接受以下参数：
+您可以叫用 [批次API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) 透過REST要求。 您可以為其他應用程式公開REST端點，以叫用API來產生檔案。
+提供的資產範例會顯示用於產生互動式通訊檔案的REST端點。 此servlet接受下列引數：
 
-* fileName — 数据文件在文件系统上的位置。
-* templatePath - IC模板路径
-* saveLocation — 在文件系统上保存生成文档的位置
-* channelType — 打印、Web或两者
-* recordId — 用于设置交互式通信名称的元素的JSON路径
+* fileName — 資料檔案在檔案系統上的位置。
+* templatePath - IC範本路徑
+* saveLocation — 在檔案系統上儲存產生檔案的位置
+* channelType — 列印、網頁或兩者
+* recordId — 要設定互動式通訊名稱的元素的JSON路徑
 
-以下屏幕截图显示了参数及其值
-![示例请求](assets/generate-ic-batch-servlet.PNG)
+下列熒幕擷圖顯示引數及其值
+![範例要求](assets/generate-ic-batch-servlet.PNG)
 
-## 在服务器上部署示例资产
+## 在您的伺服器上部署範例資產
 
-* 导入 [ICT模板](assets/ICTemplate.zip) 使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* 导入 [自定义提交处理程序](assets/BatchAPICustomSubmit.zip) 使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* 导入 [自适应表单](assets/BatchGenerationAPIAF.zip) 使用 [Forms和文档界面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 部署和启动 [自定义OSGI包](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) 使用 [Felix Web控制台](http://localhost:4502/system/console/bundles)
-* [通过提交表单触发批生成](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)
+* 匯入 [ICT範本](assets/ICTemplate.zip) 使用 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+* 匯入 [自訂提交處理常式](assets/BatchAPICustomSubmit.zip) 使用 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+* 匯入 [最適化表單](assets/BatchGenerationAPIAF.zip) 使用 [Forms和檔案介面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 部署並開始 [自訂OSGI套件組合](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) 使用 [Felix Web主控台](http://localhost:4502/system/console/bundles)
+* [透過提交表單觸發批次產生](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)

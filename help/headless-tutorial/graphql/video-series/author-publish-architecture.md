@@ -1,6 +1,6 @@
 ---
-title: 使用AEM GraphQL创作和发布架构
-description: 了解在使用AEM GraphQL API时如何以及何时利用AEM创作和发布环境。
+title: 使用AEM GraphQL製作和發佈架構
+description: 瞭解在使用AEM GraphQL API時，如何以及何時運用AEM作者和發佈環境。
 version: Cloud Service
 topic: Headless, Content Management
 feature: Content Fragments, GraphQL API
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 ---
 
-# 创作和发布架构
+# 作者與發佈架構
 
-了解在使用AEM GraphQL API时如何以及何时利用AEM创作和发布环境。
+瞭解在使用AEM GraphQL API時，如何以及何時運用AEM作者和發佈環境。
 
-在此视频中，您将：
+在本影片中，您將：
 
-+ 了解AEM创作和发布架构以及内容的发布方式
-+ 了解使用AEM发布环境进行无头交付的最佳实践
++ 瞭解AEM作者和發佈架構以及內容的發佈方式
++ 瞭解透過AEM Publish環境進行Headless傳送的最佳實務
 
 >[!VIDEO](https://video.tv.adobe.com/v/333296?quality=12&learn=on)

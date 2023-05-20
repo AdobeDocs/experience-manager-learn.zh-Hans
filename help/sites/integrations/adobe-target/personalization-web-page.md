@@ -1,6 +1,6 @@
 ---
-title: 完整网页体验的个性化
-description: 了解如何创建Target活动，以使用Adobe Target将AEM网站页面重定向到新页面。
+title: 個人化完整網頁體驗
+description: 瞭解如何建立Target活動，以使用Adobe Target將AEM網站頁面重新導向至新頁面。
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
@@ -19,66 +19,66 @@ ht-degree: 0%
 
 ---
 
-# 完整网页体验的个性化 {#personalization-fpe}
+# 個人化完整網頁體驗 {#personalization-fpe}
 
-了解如何使用Adobe Target创建活动，将AEM上托管的网站页面重定向到新页面。
+瞭解如何建立活動，以使用Adobe Target將AEM上託管的網站頁面重新導向至新頁面。
 
 ## 前提条件
 
-要个性化AEM网站的完整页面，必须完成以下设置：
+為了個人化AEM網站的完整頁面，必須完成下列設定：
 
-1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
-1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
+1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
 
-## 方案概述
+## 案例概述
 
-WKND网站重新设计了其主页，并希望将其当前主页的访客重定向到新主页。 同时，还要了解重新设计的主页如何帮助提高用户参与度和收入。 作为营销人员，您已经分配了创建活动以将访客重定向到新主页的任务。 让我们浏览WKND站点主页，并了解如何使用Adobe Target创建活动。
+WKND網站重新設計了首頁，並且想要將其目前首頁訪客重新導向至新的首頁。 同時，也瞭解重新設計的首頁如何協助改善使用者參與度和收入。 行銷人員已指派您建立活動，以將訪客重新導向至新首頁。 讓我們探索WKND網站首頁，瞭解如何使用Adobe Target建立活動。
 
-## 使用可视化体验编辑器(VEC)创建A/B测试的步骤
+## 使用視覺化體驗撰寫器(VEC)建立A/B測試的步驟
 
-1. 登录Adobe Target，然后导航到活动选项卡
-1. 单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**A/B测试**&#x200B;活动
+1. 登入Adobe Target並導覽至「活動」標籤
+1. 按一下 **建立活動** 按鈕，然後選擇 **A/B測試** 活動
 
-   ![A/B活动](assets/ab-target-activity.png)
+   ![A/B活動](assets/ab-target-activity.png)
 
-1. 选择&#x200B;**可视化体验编辑器**&#x200B;选项，提供活动URL，然后单击&#x200B;**下一步**
+1. 選取 **視覺化體驗撰寫器** 選項，提供活動URL，然後按一下 **下一個**
 
-   ![活动URL](assets/ab-test-url.png)
+   ![活動URL](assets/ab-test-url.png)
 
-1. 创建新活动后，可视化体验编辑器在左侧显示两个选项卡：*体验A*&#x200B;和&#x200B;*体验B*。 从列表中选择体验。 您可以使用&#x200B;**添加体验**&#x200B;按钮，将新体验添加到列表。
+1. 建立新活動後，視覺化體驗撰寫器會在左側顯示兩個標籤： *體驗A* 和 *體驗B*. 從清單中選取體驗。 您可以使用將新體驗新增至清單 **新增體驗** 按鈕。
 
-   ![体验选项](assets/experience-options.png)
+   ![體驗選項](assets/experience-options.png)
 
-1. 查看体验A的可用选项，然后选择&#x200B;**重定向到URL**&#x200B;选项，并为新的WKND网站主页提供URL。
+1. 檢視體驗A可用的選項，然後選取 **重新導向至URL** 選項並提供新WKND網站首頁的URL。
 
-   ![重定向URL](assets/redirect-url.png)
+   ![重新導向URL](assets/redirect-url.png)
 
-1. 将&#x200B;*体验A*&#x200B;重命名为&#x200B;*新的WKND主页*&#x200B;和&#x200B;*体验B*&#x200B;重命名为&#x200B;*WKND主页*
+1. 重新命名 *體驗A* 至 *新增WKND首頁* 和 *體驗B* 至 *wknd首頁*
 
-   ![冒险](assets/new-experiences.png)
+   ![冒險](assets/new-experiences.png)
 
-1. 单击&#x200B;**Next**&#x200B;以转到“定位”，并在两个体验之间保持手动流量分配50-50。
+1. 按一下 **下一個** 移至目標定位，並保持兩個體驗之間的手動流量分配50-50。
 
    ![定位](assets/targeting.png)
 
-1. 对于“目标和设置”，选择报表源作为Adobe Target，然后在页面查看操作中选择目标量度作为转化。
+1. 對於目標和設定，選擇報表來源作為Adobe Target，然後選取目標量度作為轉換和頁面檢視動作。
 
-   ![目标](assets/goals.png)
+   ![目標](assets/goals.png)
 
-1. 提供活动名称并进行保存。
-1. 激活保存的活动以实时推送更改。
+1. 提供活動的名稱並儲存。
+1. 啟用已儲存的活動以即時推送您的變更。
 
-   ![目标](assets/activate.png)
+   ![目標](assets/activate.png)
 
-1. 在新选项卡中打开您的网站页面（步骤3中的活动URL），您应该能够从我们的A/B测试活动中查看任一体验（WKND主页或新的WKND主页）。 `us/en.html` 重定向到 `us/home.html`。
+1. 在新標籤中開啟您的網站頁面（步驟3中的活動URL），您應該能夠從A/B測試活動檢視任一體驗（WKND首頁或新WKND首頁）。 `us/en.html` 重新導向至 `us/home.html`.
 
-   ![目标](assets/redirect-test.png)
+   ![目標](assets/redirect-test.png)
 
 ## 摘要
 
-作为营销人员，您能够创建活动，使用Adobe Target将托管在AEM上的页面重定向到新页面。
+身為行銷人員，您可以建立活動，使用Adobe Target將AEM上託管的網頁重新導向至新頁面。
 
-## 支持链接
+## 支援連結
 
 * [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 * [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

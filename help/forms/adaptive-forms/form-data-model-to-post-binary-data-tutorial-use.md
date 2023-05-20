@@ -1,6 +1,6 @@
 ---
-title: 使用表单数据模型发布二进制数据
-description: 使用表单数据模型将二进制数据发布到AEM DAM
+title: 使用表單資料模型發佈二進位資料
+description: 使用表單資料模型將二進位資料發佈至AEM DAM
 feature: Workflow
 version: 6.4,6.5
 topic: Development
@@ -15,25 +15,25 @@ ht-degree: 0%
 
 ---
 
-# 使用表单数据模型发布二进制数据{#using-form-data-model-to-post-binary-data}
+# 使用表單資料模型發佈二進位資料{#using-form-data-model-to-post-binary-data}
 
-从AEM Forms 6.4开始，我们现在能够作为AEM工作流中的步骤调用表单数据模型服务。 本文将指导您完成使用表单数据模型服务发布记录文档的示例用例。
+從AEM Forms 6.4開始，我們現在能在AEM Workflow中呼叫表單資料模型服務。 本文將逐步引導您瞭解使用表單資料模型服務張貼記錄檔案的範例使用案例。
 
-用例如下：
+使用案例如下：
 
-1. 用户填写并提交自适应表单。
-1. 自适应表单配置为生成记录文档。
-1. 提交此自适应表单时，将触发AEM工作流，该工作流将使用调用表单数据模型服务将记录文档POST到AEM DAM。
+1. 使用者填寫並提交最適化表單。
+1. 最適化表單已設定為產生記錄檔案。
+1. 提交此最適化表單時會觸發AEM工作流程，它會使用叫用表單資料模型服務將記錄檔案POST到AEM DAM。
 
-![postdam](assets/posttodamshot1.png)
+![posttodam](assets/posttodamshot1.png)
 
-表单数据模型选项卡 — 属性
+表單資料模型標籤 — 屬性
 
-在“服务输入”(Service Input)选项卡中，我们映射以下内容
+在「服務輸入」標籤中，我們會對映下列專案
 
-* 文件（需要存储的二进制对象），其属性与有效负载相关。 这意味着，当提交自适应表单时，生成的记录文档将存储在一个名为DOR.pdf的文件中，该文件与工作流有效负载相关。**确保此DOR.pdf与配置自适应表单的提交属性时提供的DOR.pdf相同。**
+* 相對於承載具有DOR.pdf屬性的檔案（需要儲存的二進位物件）。 這表示在提交最適化表單時，產生的記錄檔案會儲存在名為DOR.pdf的檔案中，且與工作流程裝載相關。**請確定此DOR.pdf與您設定最適化表單的提交屬性時提供的相同。**
 
-* fileName — 这是在DAM中存储二进制对象的名称。 因此，您希望动态生成此属性，以便每个fileName在每次提交时都是唯一的。 为此，我们使用工作流中的流程步骤创建名为filename的元数据属性，并将其值设置为提交表单的人员的成员名称和帐号的组合。 例如，如果人员的成员名称为John Jacobs，其帐号为9846，则文件名为John Jacobs_9846.pdf
+* fileName — 這是用來在DAM中儲存二進位物件的名稱。 因此您想要動態產生此屬性，以便每個fileName在每次提交時都是唯一的。 為此，我們使用工作流程中的程式步驟來建立名為filename的中繼資料屬性，並將其值設定為提交表單之人員的「成員名稱」和「帳號」的組合。 例如，如果人員的成員名稱是John Jacobs，帳戶號碼是9846，則檔案名稱將是John Jacobs_9846.pdf
 
 ![fdmserviceinput](assets/fdminputservice.png)
 
@@ -41,24 +41,24 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->故障排除提示 — 如果由于某些原因未在DAM中创建DOR.pdf，请单击 [此处](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam). 这些是AEM身份验证设置，默认为管理员/管理员。
+>疑難排解提示 — 如果由於某種原因沒有在DAM中建立DOR.pdf，請按一下以重設資料來源驗證設定 [此處](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam). 這些是AEM驗證設定，預設為admin/admin。
 
-要在您的服务器上测试此功能，请按照以下步骤操作：
+若要在您的伺服器上測試此功能，請遵循下列步驟：
 
-1.[部署Developmingwithserviceuser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1.[部署Developing withserviceuser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [下载和部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar).此自定义OSGI包用于创建元数据属性并从提交的表单数据设置其值。
+1. [下載和部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar).此自訂OSGI套件組合用於建立中繼資料屬性，並從提交的表單資料中設定其值。
 
-1. [导入资产](assets/postdortodam.zip) 与本文相关联，并使用包管理器将其导入AEM。您将获得以下信息
+1. [匯入資產](assets/postdortodam.zip) 使用封裝管理程式將與本文相關連至AEM。您將獲得以下內容
 
    1. 工作流模型
-   1. 自适应表单，配置为提交到AEM工作流
-   1. 数据源配置为使用PostToDam.JSON文件
-   1. 使用数据源的表单数据模型
+   1. 最適化表單已設定為提交至AEM Workflow
+   1. 資料來源已設定為使用PostToDam.JSON檔案
+   1. 使用資料來源的表單資料模型
 
-1. 指向 [用于打开自适应表单的浏览器](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
-1. 填写表格并提交。
-1. 如果创建并存储了记录文档，请检查Assets应用程序。
+1. 指向您的 [瀏覽器以開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+1. 填寫表單並提交。
+1. 若記錄檔案已建立並儲存，請核取Assets應用程式。
 
 
-[Swagger文件](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) 在创建数据源时使用，可供您参考
+[Swagger檔案](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) 用於建立資料來源，可供您參考

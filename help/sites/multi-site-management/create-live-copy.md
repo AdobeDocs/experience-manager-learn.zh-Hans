@@ -1,6 +1,6 @@
 ---
-title: 创建Live Copy
-description: 了解如何使用创建Live Copy向导，从Blueprint为您的站点创建Live Copy。
+title: 建立即時副本
+description: 瞭解如何使用建立即時副本精靈，從Blueprint為您的網站建立即時副本。
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 ---
 
-# 创建Live Copy {#create-livecopy}
+# 建立即時副本 {#create-livecopy}
 
-了解如何使用创建Live Copy向导，从Blueprint为站点创建Live Copy。
+瞭解如何使用建立即時副本精靈，從Blueprint為您的網站建立即時副本。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36677?quality=12&learn=on)

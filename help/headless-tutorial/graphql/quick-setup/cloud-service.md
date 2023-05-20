@@ -1,6 +1,6 @@
 ---
-title: AEM Headless快速设置AEMas a Cloud Service
-description: AEM Headless快速设置可让您通过WKND Site示例项目中的内容，以及一个React应用程序(该应用程序会通过AEM Headless GraphQL API使用内容)来动手操作AEM Headless。
+title: AEMas a Cloud Service的AEM Headless快速設定
+description: AEM Headless快速設定可讓您使用WKND Site範例專案中的內容來實際操作AEM Headless，以及透過AEM Headless GraphQL API使用內容的React應用程式。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -16,47 +16,47 @@ ht-degree: 1%
 
 ---
 
-# AEM Headless快速设置AEMas a Cloud Service
+# AEMas a Cloud Service的AEM Headless快速設定
 
-AEM Headless快速设置可让您使用WKND网站示例项目中的内容来实践AEM Headless，以及一个可通过AEM Headless GraphQL API使用内容的示例React应用程序(SPA)。
+AEM Headless快速設定可讓您使用AEM Headless的實際操作，其中包含來自WKND Site範例專案的內容，以及一個透過AEM Headless GraphQL API使用內容的範例React應用程式(SPA)。
 
 ## 前提条件
 
-要执行此快速设置，需要满足以下条件：
+進行此快速設定需要下列專案：
 
-+ AEMas a Cloud Service沙盒环境（最好是开发）
-+ 访问AEMas a Cloud Service和Cloud Manager
-   + __AEM管理员__ 访问AEMas a Cloud Service
-   + __Cloud Manager — 部署管理器__ 对Cloud Manager的访问权限
-+ 必须在本地安装以下工具：
++ AEMas a Cloud Service沙箱環境（最好是開發環境）
++ 存取AEMas a Cloud Service和Cloud Manager
+   + __AEM管理員__ AEMas a Cloud Service的存取權
+   + __Cloud Manager — 部署管理員__ 存取Cloud Manager
++ 下列工具必須安裝在本機：
    + [Node.js v18](https://nodejs.org/en/)
    + [Git](https://git-scm.com/)
-   + IDE(例如， [Microsoft® Visual Studio代码](https://code.visualstudio.com/))
+   + IDE (例如， [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 
-## 1.创建Cloud Manager Git存储库
+## 1.建立Cloud Manager Git存放庫
 
-首先，创建用于部署WKND站点的Cloud Manager Git存储库。 WKND网站是一个AEM网站项目示例，其中包含快速设置的React应用程序使用的内容（内容片段）和GraphQL AEM端点。
+首先，建立用於部署WKND網站的Cloud Manager Git存放庫。 WKND網站是範例AEM網站專案，其中包含快速設定的React應用程式所使用的內容（內容片段）和GraphQL AEM端點。
 
-_步骤的截屏_
+_步驟的熒幕截圖_
 >[!VIDEO](https://video.tv.adobe.com/v/339073?quality=12&learn=on)
 
-1. 导航到 [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com)
-1. 选择Cloud Manager __项目__ 其中包含用于此快速设置的AEMas a Cloud Service环境
-1. 为WKND站点项目创建Git存储库
-   1. 选择 __存储库__ 在顶部导航中
-   1. 选择 __添加存储库__ 在顶部操作栏中
-   1. 将新的Git存储库命名为： `aem-headless-quick-setup-wknd`
-      + Git存储库名称必须是每个Adobe组织唯一的，
-   1. 选择 __保存__，然后等待Git存储库初始化
+1. 導覽至 [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com)
+1. 選取Cloud Manager __計畫__ 包含用於此快速設定的AEMas a Cloud Service環境
+1. 為WKND網站專案建立Git存放庫
+   1. 選取 __存放庫__ 在頂端導覽列中
+   1. 選取 __新增存放庫__ 在頂端動作列中
+   1. 命名新的Git存放庫： `aem-headless-quick-setup-wknd`
+      + 每個Adobe組織的Git存放庫名稱必須是唯一的，
+   1. 選取 __儲存__，並等待Git存放庫初始化
 
-## 2.将示例WKND站点项目推送到Cloud Manager Git存储库
+## 2.將範例WKND網站專案推送到Cloud Manager Git存放庫
 
-创建Cloud Manager Git存储库后，从GitHub克隆WKND站点项目的源代码，并将其推送到Cloud Manager Git存储库。 现在，Cloud Manager可以访问WKND Site项目并将其部署到AEMas a Cloud Service环境。
+建立Cloud Manager Git存放庫後，從GitHub複製WKND網站專案的原始程式碼，並將其推送到Cloud Manager Git存放庫。 Cloud Manager現在可存取WKND網站專案，並將其部署到AEMas a Cloud Service環境。
 
-_步骤的截屏_
+_步驟的熒幕截圖_
 >[!VIDEO](https://video.tv.adobe.com/v/339074?quality=12&learn=on)
 
-1. 从命令行中，从GitHub中克隆示例WKND站点项目的源代码
+1. 從命令列，從GitHub複製範例WKND網站專案的原始程式碼
 
    ```shell
    $ mkdir -p ~/Code
@@ -64,89 +64,89 @@ _步骤的截屏_
    $ git clone git@github.com:adobe/aem-guides-wknd.git
    ```
 
-1. 将Cloud Manager Git存储库添加为远程存储库
-   1. 选择 __存储库__ 在顶部导航中
-   1. 选择 __访问存储库信息__ 从顶部操作栏
-   1. 在中找到执行命令 __将远程存储库添加到Git存储库__ 从命令行
+1. 將Cloud Manager Git存放庫新增為遠端
+   1. 選取 __存放庫__ 在頂端導覽列中
+   1. 選取 __存取存放庫資訊__ 從頂端動作列
+   1. 執行命令發現於 __新增遠端至您的Git存放庫__ 從命令列
 
       ```shell
       $ cd aem-guides-wknd
       $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup-wknd/
       ```
 
-1. 将示例项目的源代码从本地Git存储库推送到Cloud Manager Git存储库
+1. 將範例專案的原始程式碼從您的本機Git存放庫推送到Cloud Manager Git存放庫
 
    ```shell
    $ git push adobe main:main
    ```
 
-   提示输入凭据时，请提供 __用户名__ 和 __密码__ 从Cloud Manager的 __存储库信息__ 模式窗口。
+   在系統提示輸入認證時，請提供 __使用者名稱__ 和 __密碼__ 來自Cloud Manager的 __存放庫資訊__ 強制回應視窗。
 
-## 3.将WKND站点部署到AEMas a Cloud Service
+## 3.將WKND網站部署至AEMas a Cloud Service
 
-将WKND Site项目推送到Cloud Manager Git存储库后，无法使用Cloud Manager管道将其部署到AEMas a Cloud Service。
+將WKND網站專案推送到Cloud Manager Git存放庫時，無法使用Cloud Manager管道將其部署到AEMas a Cloud Service。
 
-请记住，WKND Site项目提供了React应用程序在AEM Headless GraphQL API上使用的示例内容。
+請記住，WKND網站專案提供React應用程式透過AEM Headless GraphQL API使用的範例內容。
 
-_步骤的截屏_
+_步驟的熒幕截圖_
 >[!VIDEO](https://video.tv.adobe.com/v/339075?quality=12&learn=on)
 
-1. 附加 __非生产部署管道__ 到新的Git存储库
-   1. 选择 __管道__ 在顶部导航中
-   1. 选择 __添加管道__ 从顶部操作栏
-   1. 在 __配置__ 选项卡
-      1. 选择 __部署管道__ 选项
-      1. 设置 __非生产管道名称__ to `Dev Deployment pipeline`
-      1. 选择 __部署触发器> On Git更改__
-      1. 选择 __重要量度失败行为>立即继续__
-      1. 选择 __继续__
-   1. 在 __源代码__ 选项卡
-      1. 选择 __完整堆栈代码__ 选项
-      1. 选择 __AEMas a Cloud Service开发环境__ 从 __符合条件的部署环境__ 选择框
-      1. 选择 `aem-headless-quick-setup-wknd` 在 __存储库__ 选择框
-      1. 选择 `main` 从 __Git分支__ 选择框
-      1. 选择 __保存__
-1. 运行 __开发部署管道__
-   1. 选择 __概述__ 在顶部导航中
-   1. 找到新创建的 __开发部署管道__ 在 __管道__ 部分
-   1. 选择 __...__ 到管道入口的右侧
-   1. 选择 __运行__，并在模式窗口中确认
-   1. 选择 __...__ 在正在运行的管道的右侧
-   1. 选择 __查看详细信息__
-1. 从管道执行的详细信息中，监控进度，直到成功完成。 管道执行需要30到40分钟。
+1. 附加 __非生產部署管道__ 至新的Git存放庫
+   1. 選取 __管道__ 在頂端導覽列中
+   1. 選取 __新增管道__ 從頂端動作列
+   1. 於 __設定__ 標籤
+      1. 選取 __部署管道__ option
+      1. 設定 __非生產管道名稱__ 至 `Dev Deployment pipeline`
+      1. 選取 __部署觸發程式>開啟Git變更__
+      1. 選取 __重要量度失敗行為>立即繼續__
+      1. 選取 __繼續__
+   1. 於 __原始碼__ 標籤
+      1. 選取 __完整棧疊計畫碼__ option
+      1. 選取 __AEMas a Cloud Service開發環境__ 從 __符合資格的部署環境__ 選取方塊
+      1. 選取 `aem-headless-quick-setup-wknd` 在 __存放庫__ 選取方塊
+      1. 選取 `main` 從 __Git分支__ 選取方塊
+      1. 選取 __儲存__
+1. 執行 __開發部署管道__
+   1. 選取 __概觀__ 在頂端導覽列中
+   1. 找到新建立的 __開發部署管道__ 在 __管道__ 區段
+   1. 選取 __...__ 管道專案右側
+   1. 選取 __執行__，並在強制回應視窗中確認
+   1. 選取 __...__ 至目前執行中的管道右側
+   1. 選取 __檢視詳細資料__
+1. 從管道執行的詳細資訊中，監控進度，直到成功完成。 管道執行應需要30-40分鐘之間的時間。
 
-## 4.下载并运行WKND React应用程序
+## 4.下載並執行WKND React應用程式
 
-通过使用WKND网站项目中的内容引导AEMas a Cloud Service，下载并启动示例WKND React应用程序，该应用程序会比AEM Headless GraphQL API使用WKND网站的内容。
+使用WKND網站專案中的內容啟動AEMas a Cloud Service後，下載並啟動範例WKND React應用程式，該應用程式會透過AEM Headless GraphQL API使用WKND網站的內容。
 
-_步骤的截屏_
+_步驟的熒幕截圖_
 >[!VIDEO](https://video.tv.adobe.com/v/339076?quality=12&learn=on)
 
-1. 从命令行中，从GitHub中克隆React应用程序的源代码。
+1. 從命令列，從GitHub複製React應用程式的原始程式碼。
 
    ```shell
    $ cd ~/Code
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 打开文件夹 `~/Code/aem-guides-wknd-graphql/react-app` 在IDE中。
-1. 在IDE中，打开文件 `.env.development`.
-1. 指向AEMas a Cloud Service __发布__ 服务的主机URI(来自  `REACT_APP_HOST_URI` 属性。
+1. 開啟資料夾 `~/Code/aem-guides-wknd-graphql/react-app` 在IDE中。
+1. 在IDE中，開啟檔案 `.env.development`.
+1. 指向AEMas a Cloud Service __發佈__ 服務的主機URI，來自  `REACT_APP_HOST_URI` 屬性。
 
    ```plain
    REACT_APP_HOST_URI=https://publish-pXXXX-eYYYY.adobeaemcloud.com
    ...
    ```
 
-   要查找AEMas a Cloud Service发布服务的主机URI，请执行以下操作：
+   若要尋找AEMas a Cloud Service發佈服務的主機URI：
 
-   1. 在Cloud Manager中，选择 __环境__ 在顶部导航中
-   1. 选择 __开发__ 环境
-   1. 找到 __发布服务(AEM和Dispatcher)__ 链接 __环境区段__ 表
-   1. 复制链接的地址，并将其用作AEMas a Cloud Service发布服务的URI
+   1. 在Cloud Manager中，選取 __環境__ 在頂端導覽列中
+   1. 選取 __開發__ 環境
+   1. 找到 __發佈服務(AEM和Dispatcher)__ 連結 __環境區段__ 表格
+   1. 複製連結位址，並將其用作AEMas a Cloud Service發佈服務的URI
 
-1. 在IDE中，将更改保存到 `.env.development`
-1. 从命令行中，运行React App
+1. 在IDE中，將變更儲存至 `.env.development`
+1. 從命令列，執行React應用程式
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/react-app
@@ -154,44 +154,44 @@ _步骤的截屏_
    $ npm start
    ```
 
-1. 在本地运行的React应用程序从 [http://localhost:3000](http://localhost:3000) 和显示冒险列表，这些冒险源自使用AEM Headless的GraphQL API的AEM as a Cloud Service。
+1. 在本機執行的React應用程式會於 [http://localhost:3000](http://localhost:3000) 和顯示冒險清單，這些冒險是使用AEM Headless的GraphQL API從AEMas a Cloud Service取得。
 
-## 5.在AEM中编辑内容
+## 5.編輯AEM內容
 
-当示例WKND React应用程序连接到AEM Headless GraphQL API并使用其中的内容时，在AEM创作服务中创作内容，并查看React应用程序的体验如何一致更新。
+使用範例WKND React應用程式連線到AEM Headless GraphQL API並使用其內容，在AEM Author服務中創作內容，並檢視React應用程式的體驗如何一致更新。
 
-_步骤的截屏_
+_步驟的熒幕截圖_
 >[!VIDEO](https://video.tv.adobe.com/v/339077?quality=12&learn=on)
 
-1. 登录到AEMas a Cloud Service创作服务
-1. 导航到 __资产>文件> WKND共享>英语>冒险__
-1. 打开 __南犹他州自行车队__ 文件夹
-1. 选择 __南犹他州自行车队__ 内容片段，然后选择 __编辑__ 从顶部操作栏
-1. 更新内容片段的一些字段，例如：
+1. 登入AEMas a Cloud Service作者服務
+1. 導覽至 __資產>檔案> WKND共用>英文>冒險__
+1. 開啟 __騎車去猶他州南部__ 資料夾
+1. 選取 __騎車去猶他州南部__ 內容片段，並選取 __編輯__ 從頂端動作列
+1. 更新內容片段的某些欄位，例如：
    + 标题: `Cycling Utah's National Parks`
-   + 行程时长： `6 Days`
-   + 困难： `Intermediate`
+   + 運送航程長度： `6 Days`
+   + 困難： `Intermediate`
    + 价格: `3500`
-   + 主映像： `/content/dam/wknd-shared/en/activities/cycling/mountain-biking.jpg`
-1. 选择 __保存__ 在顶部操作栏中
-1. 选择 __快速发布__ 从顶部操作栏的 __...__
-1. 刷新运行在上的React应用程序 [http://localhost:3000](http://localhost:3000).
-1. 在React应用程序中，选择现在更新的循环冒险，然后验证对内容片段所做的内容更改。
+   + 主要影像： `/content/dam/wknd-shared/en/activities/cycling/mountain-biking.jpg`
+1. 選取 __儲存__ 在頂端動作列中
+1. 選取 __快速發佈__ 從頂端動作列的 __...__
+1. 重新整理執行中的React應用程式 [http://localhost:3000](http://localhost:3000).
+1. 在React應用程式中，選取現在更新的Cycling Adventure，並驗證對內容片段進行的內容變更。
 
-1. 在AEM创作服务中，使用相同的方法：
-   1. 取消发布现有的Adventure内容片段，并验证是否已从React应用程序体验中将其删除
-   1. 创建并发布新的Adventure内容片段，然后验证它是否显示在React应用程序体验中
+1. 使用相同方法，在AEM Author服務中：
+   1. 取消發佈現有的冒險內容片段，並確認已從React應用程式體驗中移除該片段
+   1. 建立並發佈新的冒險內容片段，並確認它出現在React應用程式體驗中
 
    >[!TIP]
    >
-   > 如果您不熟悉如何创建和发布新内容或取消发布现有内容片段，请观看上面的屏幕截图。
+   > 如果您不熟悉如何建立和發佈新的內容片段，或取消發佈現有的內容片段，請觀看上面的熒幕擷圖。
 
 ## 恭喜！
 
-恭喜！您已成功使用AEM Headless来为React应用程序提供支持！
+恭喜！您已成功使用AEM Headless來增強React應用程式！
 
-要详细了解React应用程序如何使用AEMas a Cloud Service中的内容，请参阅 [AEM Headless教程](../multi-step/overview.md). 本教程探讨了创建时AEM中的内容片段，以及此React应用程序如何将其内容用作JSON。
+若要詳細瞭解React應用程式如何使用AEMas a Cloud Service的內容，請檢視 [AEM Headless教學](../multi-step/overview.md). 本教學課程探討如何在AEM中建立內容片段，以及此React應用程式如何以JSON形式使用其內容。
 
 ### 后续步骤
 
-+ [启动AEM Headless教程](../multi-step/overview.md)
++ [開始AEM Headless教學課程](../multi-step/overview.md)

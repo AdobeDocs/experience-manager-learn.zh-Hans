@@ -1,6 +1,6 @@
 ---
-title: 使用Brand Portal配置资产源。
-description: 使用Brand Portal配置资产源的步骤
+title: 使用Brand Portal設定資產來源。
+description: 使用Brand Portal設定資產來源的步驟
 role: Developer
 level: Beginner
 version: Cloud Service
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 使用Brand Portal配置资产源
+# 使用Brand Portal設定資產來源
 
-*此视频将演示使用Brand Portal配置资产源的过程。*
+*本影片將逐步說明使用Brand Portal設定資產來源的過程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335451?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 内联显示记录文档
-description: 将自适应表单数据与XDP模板合并，并使用document cloud embed pdf API显示内嵌PDF。
+title: 內嵌顯示記錄檔案
+description: 將最適化表單資料與XDP範本合併，並使用Document Cloud內嵌PDF API顯示內嵌PDF。
 version: 6.4,6.5
 feature: Forms Service
 topic: Development
@@ -16,21 +16,21 @@ ht-degree: 1%
 
 ---
 
-# 内联显示DoR
+# 顯示DoR內嵌
 
-常见用例是显示一个PDF文档，其中包含由表单填充器输入的数据。
+常見的使用案例是顯示含有表單填寫者所輸入資料的pdf檔案。
 
-为了完成此用例，我们使用 [Adobe PDF嵌入API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
+為了完成此使用案例，我們利用 [Adobe PDF內嵌API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
 
-已执行以下步骤来完成集成
+已執行下列步驟以完成整合
 
-## 创建自定义组件以显示内联PDF
+## 建立自訂元件以內嵌顯示PDF
 
-创建了自定义组件(embed-pdf)，以嵌入POST调用返回的pdf。
+已建立自訂元件(embed-pdf)以內嵌POST呼叫傳回的pdf。
 
 ## 客户端库
 
-在 `viewPDF` 复选框。 我们将自适应表单数据和模板名称传递到端点以生成PDF。 然后，使用嵌入的pdf JavaScript库将生成的pdf显示到表单填充符中。
+下列程式碼會在 `viewPDF` 核取方塊按鈕已按一下。 我們將最適化表單資料、範本名稱傳遞至端點以產生pdf。 接著會使用內嵌PDF JavaScript程式庫將產生的PDF顯示給表單填寫器。
 
 ```javascript
 $(document).ready(function() {
@@ -82,41 +82,41 @@ $(document).ready(function() {
 });
 ```
 
-## 为XDP生成示例数据
+## 產生XDP的範例資料
 
-* 在AEM Forms设计器中打开XDP。
-* 单击文件 |表单属性 |预览
-* 单击生成预览数据
-* 单击生成
-* 提供有意义的文件名，如“form-data.xml”
+* 在AEM Forms Designer中開啟XDP。
+* 按一下檔案 |表單屬性 |預覽
+* 按一下產生預覽資料
+* 按一下「產生」
+* 提供有意義的檔案名稱，例如&quot;form-data.xml&quot;
 
-## 从xml数据生成XSD
+## 從xml資料產生XSD
 
-您可以使用任何免费的在线工具 [生成XSD](https://www.freeformatter.com/xsd-generator.html) 从上一步中生成的xml数据。
+您可以使用任何免費線上工具來 [產生XSD](https://www.freeformatter.com/xsd-generator.html) 來自上一步驟中產生的xml資料。
 
-## 上传模板
+## 上傳範本
 
-确保将xdp模板上传到 [AEM Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) 使用“创建”按钮
+請務必上傳xdp範本至 [AEM Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) 使用「建立」按鈕
 
 
-## 创建自适应表单
+## 建立最適化表單
 
-根据上一步中的XSD创建自适应表单。
-向自适应页面添加新选项卡。 向此选项卡中添加复选框组件和embed-pdf组件。确保将复选框命名为viewPDF。
-配置embed-pdf组件，如以下屏幕截图所示
+根據上一步的XSD建立最適化表單。
+新增索引標籤至最適化。 新增核取方塊元件和embed-pdf元件至此索引標籤請確定您將核取方塊命名為viewPDF。
+設定embed-pdf元件，如下列熒幕擷圖所示
 ![embed-pdf](assets/embed-pdf-configuration.png)
 
-**嵌入PDFAPI密钥**  — 这是可用于嵌入PDF的键。 此键将仅适用于localhost。 您可以创建 [您自己的密钥](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) 并将其与其他域关联。
+**內嵌PDFAPI金鑰**  — 這是可用來內嵌pdf的金鑰。 此金鑰僅適用於localhost。 您可以建立 [您自己的金鑰](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) 並將其與其他網域相關聯。
 
-**返回pdf的端点**  — 这是自定义Servlet，用于将数据与xdp模板合并并返回pdf。
+**端點傳回pdf**  — 這是自訂servlet，會將資料與xdp範本合併並傳回pdf。
 
-**模板名称**  — 这是xdp的路径。 通常，它存储在formsanddocuments文件夹下。
+**範本名稱**  — 這是xdp的路徑。 通常儲存在formsanddocuments資料夾下。
 
-**PDF文件名**  — 这是将在嵌入的pdf组件中显示的字符串。
+**PDF檔案名稱**  — 這是將顯示在內嵌pdf元件中的字串。
 
-## 创建自定义Servlet
+## 建立自訂servlet
 
-创建了自定义Servlet以将数据与XDP模板合并并返回PDF。 完成此操作的代码如下所示。 自定义Servlet是 [嵌入式pdf包](assets/embedpdf.core-1.0-SNAPSHOT.jar)
+已建立自訂servlet以將資料與XDP範本合併並傳回pdf。 完成此任務的程式碼如下。 自訂servlet是 [內嵌pdf套件組合](assets/embedpdf.core-1.0-SNAPSHOT.jar)
 
 ```java
 import java.io.ByteArrayInputStream;
@@ -222,15 +222,15 @@ public class StreamPDFToEmbed extends SlingAllMethodsServlet {
 ```
 
 
-## 在服务器上部署示例
+## 在您的伺服器上部署範例
 
-要在本地服务器上测试此功能，请执行以下步骤：
+若要在本機伺服器上測試此專案，請遵循下列步驟：
 
-1. [下载并安装嵌入式pdf包](assets/embedpdf.core-1.0-SNAPSHOT.jar).
-这有一个Servlet，用于将数据与XDP模板合并并并流回PDF。
-1. 使用将路径/bin/getPDFToEmbed添加到AdobeGranite CSRF筛选器的排除路径部分中 [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). 在生产环境中，建议使用 [CSRF保护框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
-1. [导入客户端库和自定义组件](assets/embed-pdf.zip)
-1. [导入自适应表单和模板](assets/embed-pdf-form-and-xdp.zip)
-1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)
-1. 填写几个表单字段
-1. 选项卡，单击查看PDF选项卡。 选中查看pdf复选框。 您应会看到表单中显示一个PDF，其中填充了自适应表单数据
+1. [下載並安裝內嵌pdf套件組合](assets/embedpdf.core-1.0-SNAPSHOT.jar).
+這有servlet可合併資料與XDP範本，並串流回pdf。
+1. 使用「 」，將/bin/getPDFToEmbed路徑新增到AdobeGranite CSRF篩選器的排除路徑區段中。 [AEM Configmgr](http://localhost:4502/system/console/configMgr). 在您的生產環境中，建議使用 [CSRF保護架構](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
+1. [匯入使用者端程式庫和自訂元件](assets/embed-pdf.zip)
+1. [匯入最適化表單和範本](assets/embed-pdf-form-and-xdp.zip)
+1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)
+1. 填寫一些表單欄位
+1. 按Tab鍵切換至「檢視PDF」標籤。 選取「檢視pdf」核取方塊。 您應該會看到在填入最適化表單資料的表單中顯示pdf

@@ -1,6 +1,6 @@
 ---
-title: AEM Assets Essentials视频
-description: 用于Adobe Experience Manager Assets Essentials的视频集合
+title: AEM Assets Essentials影片
+description: Adobe Experience Manager Assets Essentials的影片集合
 recommendations: disable
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: aem-assets-essentials-videos.jpg
@@ -12,28 +12,28 @@ ht-degree: 14%
 
 ---
 
-# Assets Essentials视频
+# Assets Essentials影片
 
 ![Assets Essentials](./assets/overview/hero.png)
 
-Experience Manager Assets Essentials提供了一个简化的用户界面，用于轻量级的资产管理和协作。
+Experience Manager Assets Essentials提供簡化的使用者介面，用於輕量版的資產管理和共同作業。
 
-请观看这些视频，了解如何使用Assets Essentials管理您的资产，以及如何将其与Adobe历程Orchestrator集成！
+請觀看這些影片，瞭解如何使用Assets Essentials管理您的資產，以及如何將其與Adobe Journey Orchestrator整合！
 
-## 进一步了解Assets Essentials
+## 進一步瞭解Assets Essentials
 
 <table>
 <td>
    <a href="./basics/managing.md">
-   <img alt="开始使用Assets Essentials" src="./assets/overview/getting-started.png" />
+   <img alt="Assets Essentials快速入門" src="./assets/overview/getting-started.png" />
    </a>
    <div>
       <a href="./basics/managing.md">
-      <strong>开始使用Assets Essentials</strong>
+      <strong>Assets Essentials快速入門</strong>
       </a>
    </div>
    <p>
-      <em>了解Assets Essentials的基础知识！</em>
+      <em>瞭解Assets Essentials的基本概念！</em>
    </p>
 </td>
 <td>
@@ -42,11 +42,11 @@ Experience Manager Assets Essentials提供了一个简化的用户界面，用�
    </a>
    <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
-      <strong>Assets Essentials文档</strong>
+      <strong>Assets Essentials檔案</strong>
       </a>
    </div>
    <p>
-      <em>请查看Assets Essentials产品文档！</em>
+      <em>請檢視Assets Essentials產品檔案！</em>
    <p>
 </td>
 <td>
@@ -55,11 +55,11 @@ Experience Manager Assets Essentials提供了一个简化的用户界面，用�
    </a>
    <div>
       <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
-      <strong>Adobe Journey Optimizer集成</strong>
+      <strong>Adobe Journey Optimizer整合</strong>
       </a>
    </div>
    <p>
-      <em>了解Assets Essentials如何与Adobe Journey Optimizer集成！</em>
+      <em>瞭解Assets Essentials如何與Adobe Journey Optimizer整合！</em>
    <p>
 </td>
 </table>

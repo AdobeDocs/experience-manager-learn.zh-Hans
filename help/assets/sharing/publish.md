@@ -1,6 +1,6 @@
 ---
-title: 如何使用AEM发布资产
-description: 了解如何将资产及其演绎版从AEM创作发布到AEM发布。
+title: 如何使用AEM發佈資產
+description: 瞭解如何將資產及其轉譯從AEM Author發佈到AEM Publish。
 feature: Asset Management
 version: Cloud Service
 kt: 330932
@@ -19,8 +19,8 @@ ht-degree: 2%
 
 # 发布
 
-了解如何将资产及其演绎版从AEM创作发布到AEM发布。
+瞭解如何將資產及其轉譯從AEM Author發佈到AEM Publish。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330932?quality=12&learn=on)
 
-_在发布资产之前，请确保AEM Assets部署已获得AEM发布服务的许可。_
+_在發佈資產之前，請確定AEM Assets部署具有AEM Publish服務授權。_

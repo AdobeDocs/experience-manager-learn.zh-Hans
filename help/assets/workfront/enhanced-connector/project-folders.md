@@ -1,6 +1,6 @@
 ---
-title: Workfront Enhanced Connector项目文件夹
-description: 了解使用Adobe Workfront和Experience Manager Assets增强连接器时的项目文件夹。
+title: Workfront增強型聯結器專案資料夾
+description: 瞭解使用Adobe Workfront和Experience Manager Assets增強型聯結器時的專案資料夾。
 version: Cloud Service
 topic: Content Management, Integrations
 role: Admin, User
@@ -16,12 +16,12 @@ ht-degree: 0%
 
 ---
 
-# Workfront enhanced connector项目文件夹
+# Workfront增強型聯結器專案資料夾
 
-了解使用Adobe Workfront和Experience Manager Assets增强连接器时的项目文件夹，包括：
+瞭解使用Adobe Workfront和Experience Manager Assets增強型聯結器時的專案資料夾，包括：
 
-+ 项目链接的文件夹
-+ 文件夹元数据映射
-+ 文件夹元数据继承
++ 專案連結的資料夾
++ 資料夾中繼資料對應
++ 資料夾中繼資料繼承
 
 >[!VIDEO](https://video.tv.adobe.com/v/337586?quality=12&learn=on)

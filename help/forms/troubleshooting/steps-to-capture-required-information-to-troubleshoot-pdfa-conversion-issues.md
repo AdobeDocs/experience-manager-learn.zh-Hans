@@ -1,6 +1,6 @@
 ---
-title: 捕获PDF/A问题疑难解答所需信息的步骤
-description: 对与汇编程序转换和验证相关的问题进行故障诊断
+title: 擷取疑難排解PDF/A問題所需資訊的步驟
+description: 疑難排解與組合器轉換和驗證相關的問題
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 对PDFA转换和验证问题进行故障诊断的步骤
+# 疑難排解PDFA轉換和驗證問題的步驟
 
-*此视频将演示如何捕获对Forms汇编程序服务中的PDF/A转换和验证问题进行故障诊断所需信息的步骤。*
+*本影片逐步解說在Forms Assembler服務中擷取疑難排解PDF/A轉換和驗證問題所需資訊的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335518?quality=12&learn=on)

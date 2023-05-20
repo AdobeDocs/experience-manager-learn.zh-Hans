@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Analytics报告已提交的表单数据字段
-description: 将AEM Forms CS与Adobe Analytics集成以报告表单数据字段
+title: 使用Adobe Analytics提交表單資料欄位的相關報告
+description: 將AEM Forms CS與Adobe Analytics整合以報告表單資料欄位
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -9,53 +9,49 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
+exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%
 
 ---
 
-# 测试您的解决方案
+# 測試您的解決方案
 
-使用多个表单值组合预览和提交表单。 在Adobe Analytics报表中，需要多到30分钟才能查看您的数据。 数据集为prop的数据在报表中显示的时间早于数据集为eVar的数据。
+使用多種表單值組合，預覽及提交您的表單。 請等數到30分鐘，在Adobe Analytics報表中檢視您的資料。 設定為Prop的資料比設定為eVar的資料更早出現在報表中。
 
 ## 报表包
 
-在Adobe Analytics中捕获的表单数据以圆环形格式显示
+Adobe Analytics中擷取的表單資料會以環形圖格式呈現
 
-**各国提交的材料**
+**依州的提交內容**
 
-![应用程序bystate](assets/donut.png)
+![applicantsbystate](assets/donut.png)
 
-字段验证错误
+欄位驗證錯誤
 
-![字段验证 — 错误](assets/donut-field-validation.png)
+![field-validation-error](assets/donut-field-validation.png)
 
 ## 调试
 
-确保自适应表单使用的配置容器与包含Adobe启动配置的容器相同。
+確認最適化表單使用的設定容器與包含Adobe啟動設定的設定容器相同。
 
-要确认表单正在向Adobe Analytics发送数据，请执行以下操作
+若要確認表單正在將資料傳送至Adobe Analytics，請執行下列動作
 
-* 在浏览器中打开开发人员工具。
-* 在控制台面板的以下文本中输入。
+* 在瀏覽器中開啟開發人員工具。
+* 在Console面板的下列文字中輸入。
 
 ```javascript
 _satellite.setDebug(true)
 ```
 
-在保持控制台窗口打开的同时与表单进行交互。 你应该看到这样的东西
+與表單互動，同時保持主控台視窗開啟。 您應該會看到類似這樣的內容
 
-![控制台调试](assets/debug.png)
+![console-debug](assets/debug.png)
 
 ## 使用Adobe Experience Platform Debugger
 
-添加 [AEP调试器扩展](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) 浏览器（您需要登录）以获取更多调试信息
+新增 [AEP偵錯工具擴充功能](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) （您必須登入）才能取得更多偵錯資訊
 
 ![platform-debugger](assets/platform-debugger.png)
-
-
-
-
-

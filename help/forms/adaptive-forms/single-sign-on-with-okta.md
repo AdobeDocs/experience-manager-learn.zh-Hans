@@ -1,6 +1,6 @@
 ---
-title: 使用AEM配置OKTA
-description: 了解使用okta进行单点登录的各种配置设置
+title: 使用AEM設定OKTA
+description: 瞭解使用okta使用單一登入的各種組態設定
 feature: Adaptive Forms
 version: 6.5
 topic: Administration
@@ -15,90 +15,90 @@ ht-degree: 1%
 
 ---
 
-# 使用OKTA验证AEM作者身份
+# 使用OKTA驗證AEM作者
 
-第一步是在OKTA门户上配置您的应用程序。 在您的应用程序获得OKTA管理员的批准后，您将有权访问IdP证书和URL单点登录。 以下是注册新应用程序时通常使用的设置。
+第一步是在OKTA入口網站上設定您的應用程式。 您的應用程式獲得OKTA管理員核准後，您就可以存取IdP憑證和單一登入URL。 以下是在註冊新應用程式時通常使用的設定。
 
-* **应用程序名称：** 这是您的应用程序名称。 确保为应用程序提供唯一的名称。
-* **SAML收件人：** 从OKTA进行身份验证后，这是将在AEM实例上点击的URL，并显示SAML响应。 SAML身份验证处理程序通常会通过/ saml_login截获所有URL，但最好在应用程序根目录之后附加它。
-* **SAML受众**:这是您的应用程序的域URL。 请勿在域URL中使用协议（http或https）。
-* **SAML名称ID:** 从下拉列表中选择电子邮件。
-* **环境**:选择适当的环境。
-* **属性**:这些是您在SAML响应中获取的与用户有关的属性。 根据您的需要指定它们。
+* **應用程式名稱：** 這是您的應用程式名稱。 請務必為應用程式指定唯一的名稱。
+* **SAML收件者：** 在從OKTA驗證之後，這是會在您的AEM執行個體上使用SAML回應點選的URL。 SAML驗證處理常式通常會使用/saml_login攔截所有URL，但最好將它附加在應用程式根之後。
+* **SAML對象**：這是您應用程式的網域URL。 請勿在網域URL中使用通訊協定（http或https）。
+* **SAML名稱ID：** 從下拉式清單中選取電子郵件。
+* **環境**：選擇適當的環境。
+* **屬性**：這些是您在SAML回應中取得關於使用者的屬性。 視需要指定。
 
 
 ![okta-application](assets/okta-app-settings-blurred.PNG)
 
 
-## 将OKTA(IdP)证书添加到AEM信任存储
+## 將OKTA (IdP)憑證新增至AEM信任存放區
 
-由于SAML断言已加密，因此我们需要将IdP(OKTA)证书添加到AEM信任存储，以便在OKTA和AEM之间进行安全通信。
-[初始化信任存储](http://localhost:4502/libs/granite/security/content/truststore.html)，如果尚未初始化。
-记住信任存储密码。 在此过程的后续阶段，我们需要使用此密码。
+由於SAML宣告已加密，因此我們需要將IdP (OKTA)憑證新增到AEM信任存放區，以允許OKTA和AEM之間的安全通訊。
+[初始化信任存放區](http://localhost:4502/libs/granite/security/content/truststore.html)，若尚未初始化。
+記住信任存放區密碼。 我們稍後將需要使用此密碼。
 
-* 导航到 [全局信任存储](http://localhost:4502/libs/granite/security/content/truststore.html).
-* 单击“从CER文件添加证书”。 添加由OKTA提供的IdP证书，然后单击提交。
+* 導覽至 [全域信任存放區](http://localhost:4502/libs/granite/security/content/truststore.html).
+* 按一下「從CER檔案新增憑證」。 新增OKTA提供的IdP憑證，然後按一下「提交」。
 
    >[!NOTE]
    >
-   >请勿将证书映射到任何用户
+   >請勿將憑證對應至任何使用者
 
-将证书添加到信任存储时，您应获得证书别名，如以下屏幕快照所示。 在您的用例中，别名可能不同。
+將憑證新增至信任存放區時，您應該取得憑證別名，如下方熒幕擷取畫面所示。 在您的案例中，別名可能不同。
 
-![证书别名](assets/cert-alias.PNG)
+![Certificate-alias](assets/cert-alias.PNG)
 
-**记下证书别名。 在后续步骤中，您需要执行此操作。**
+**記下憑證別名。 您需要在後續步驟中執行此操作。**
 
-### 配置SAML身份验证处理程序
+### 設定SAML驗證處理常式
 
-导航到 [configMgr](http://localhost:4502/system/console/configMgr).
-搜索并打开“AdobeGranite SAML 2.0身份验证处理程序”。
-提供以下指定的属性以下是需要指定的关键属性：
+導覽至 [configMgr](http://localhost:4502/system/console/configMgr).
+搜尋並開啟「AdobeGranite SAML 2.0驗證處理常式」。
+提供下列屬性，如下所示。以下是需要指定的主要屬性：
 
-* **路径**  — 这是触发身份验证处理程序的路径
-* **IdP Url**：这是由OKTA提供的您的IdP URL
-* **IDP证书别名**：这是您在将IdP证书添加到AEM信任存储时获得的别名
-* **服务提供商实体Id**：这是您的AEM Server的名称
-* **密钥存储的密码**：这是您使用的信任存储密码
-* **默认重定向**：这是成功身份验证后要重定向到的URL
-* **用户ID属性**:uid
-* **使用加密**:false
-* **自动创建CRX用户**:true
-* **添加到群组**:true
-* **默认组**:oktausers(这是将用户添加到的组。 您可以在AEM中提供任何现有群组)
-* **命名IDPolicy**:指定用于表示所请求主题的名称标识符的约束。 复制并粘贴以下突出显示的字符串 **urn:oasis:名称:tc:SAML:2.0:nameidformat:emailAddress**
-* **同步属性**  — 这些是从AEM配置文件的SAML断言中存储的属性
+* **路徑**  — 這是觸發驗證處理常式的路徑
+* **IdP Url**：這是您的IdP url，由OKTA提供
+* **IDP憑證別名**：這是您將IdP憑證新增至AEM Trust Store時獲得的別名
+* **服務提供者實體ID**：這是您的AEM伺服器的名稱
+* **金鑰庫的密碼**：這是您使用的信任存放區密碼
+* **預設重新導向**：這是成功驗證時重新導向到的URL
+* **UserID屬性**：uid
+* **使用加密**：false
+* **自動建立CRX使用者**：true
+* **新增至群組**：true
+* **預設群組**：oktausers(這是新增使用者的群組。 您可以在AEM中提供任何現有群組)
+* **NamedIDPolicy**：指定用來表示請求之主旨之名稱識別碼的限制。 複製並貼上下列醒目提示的字串 **urn:oasis:名稱:tc:SAML：2.0:nameidformat:電子郵件地址**
+* **已同步屬性**  — 這些是從AEM設定檔中的SAML判斷提示儲存的屬性
 
 ![saml-authentication-handler](assets/saml-authentication-settings-blurred.PNG)
 
-### 配置Apache Sling反向链接过滤器
+### 設定Apache Sling查閱者篩選器
 
-导航到 [configMgr](http://localhost:4502/system/console/configMgr).
-搜索并打开“Apache Sling反向链接过滤器”。按照以下指定设置以下属性：
+導覽至 [configMgr](http://localhost:4502/system/console/configMgr).
+搜尋並開啟「Apache Sling反向連結篩選器」。依照下列指定內容設定下列屬性：
 
-* **允许为空**:false
-* **允许主机**:IdP的主机名（这在您的用例中是不同的）
-* **允许Regexp主机**:IdP的主机名（在您的用例中不同）Sling反向链接过滤器反向链接属性屏幕截图
+* **允許空白**： false
+* **允許主機**： IdP的主機名稱（您的案例中會有所不同）
+* **允許Regexp主機**： IdP的主機名稱（在您的情況下會不同） Sling反向連結篩選反向連結屬性熒幕擷圖
 
 ![referrer-filter](assets/okta-referrer.png)
 
-#### 为OKTA集成配置调试日志记录
+#### 設定OKTA整合的DEBUG記錄
 
-在AEM上设置OKTA集成时，查看AEM SAML身份验证处理程序的调试日志可能会有所帮助。 要将日志级别设置为DEBUG，请通过AEM OSGi Web控制台创建新的Sling Logger配置。
+在AEM上設定OKTA整合時，檢閱AEM SAML驗證處理常式的DEBUG記錄會很有幫助。 若要將記錄層級設定為DEBUG，請透過AEM OSGi Web Console建立新的Sling Logger設定。
 
-请记住在暂存和生产环境中删除或禁用此日志记录器，以减少日志噪音。
+請記得在測試和生產環境中移除或停用此記錄器以減少記錄雜訊。
 
-在AEM上设置OKTA集成时，查看AEM SAML身份验证处理程序的调试日志可能会有所帮助。 要将日志级别设置为DEBUG，请通过AEM OSGi Web控制台创建新的Sling Logger配置。
-**请记住在暂存和生产环境中删除或禁用此日志记录器，以减少日志噪音。**
-* 导航到 [configMgr](http://localhost:4502/system/console/configMgr)
+在AEM上設定OKTA整合時，檢閱AEM SAML驗證處理常式的DEBUG記錄會很有幫助。 若要將記錄層級設定為DEBUG，請透過AEM OSGi Web Console建立新的Sling Logger設定。
+**請記得在測試和生產環境中移除或停用此記錄器以減少記錄雜訊。**
+* 導覽至 [configMgr](http://localhost:4502/system/console/configMgr)
 
-* 搜索并打开“Apache Sling日志记录器配置”
-* 使用以下配置创建日志记录器：
-   * **日志级别**:调试
-   * **日志文件**:logs/saml.log
-   * **记录器**:com.adobe.granite.auth.saml
-* 单击保存以保存设置
+* 搜尋並開啟「Apache Sling記錄器設定」
+* 使用下列設定建立記錄器：
+   * **記錄層級**：偵錯
+   * **記錄檔**： logs/saml.log
+   * **Logger**： com.adobe.granite.auth.saml
+* 按一下儲存以儲存您的設定
 
-#### 测试OKTA配置
+#### 測試您的OKTA設定
 
-注销AEM实例。 尝试访问链接。 您应会看到OKTA SSO正在运行。
+登出AEM執行個體。 請嘗試存取連結。 您應該會看到OKTA SSO的實際運作。

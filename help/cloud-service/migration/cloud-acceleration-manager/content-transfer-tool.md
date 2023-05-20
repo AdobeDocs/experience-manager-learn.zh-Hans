@@ -1,6 +1,6 @@
 ---
 title: 内容传输工具
-description: 了解内容传输工具如何让您高效地将内容从AEM 6.5移动到AEMas a Cloud Service。
+description: 瞭解內容轉移工具如何讓您有效率地將內容從AEM 6.5移至AEMas a Cloud Service。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -18,6 +18,6 @@ ht-degree: 13%
 
 # 内容传输工具
 
-了解内容传输工具如何让您高效地将内容从AEM 6.5移动到AEMas a Cloud Service。
+瞭解內容轉移工具如何讓您有效率地將內容從AEM 6.5移至AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336692?quality=12&learn=on)

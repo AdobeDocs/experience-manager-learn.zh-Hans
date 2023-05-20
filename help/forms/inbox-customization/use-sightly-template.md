@@ -1,6 +1,6 @@
 ---
-title: 使用Sightly模板显示收件箱数据
-description: 添加自定义列，以使用Sightly模板显示工作流的其他数据
+title: 使用Sightly範本顯示收件匣資料
+description: 新增自訂欄以顯示使用Sightly範本的工作流程其他資料
 feature: Adaptive Forms
 topics: development
 audience: developer
@@ -19,16 +19,16 @@ ht-degree: 0%
 
 ---
 
-# 使用Sightly模板显示收件箱数据
+# 使用Sightly範本顯示收件匣資料
 
-您可以使用Sightly模板来设置要显示在收件箱列中的数据的格式。 在本例中，我们将根据收入列的值显示coral-ui图标。 以下屏幕截图显示了收入列中图标的使用情况
-![收入图标](assets/income-column.PNG)
+您可以使用Sightly範本來格式化要顯示在收件匣欄中的資料。 在此範例中，我們將根據收入欄的值顯示coral-ui圖示。 下列熒幕擷圖顯示收入欄中的圖示使用情況
+![收入圖示](assets/income-column.PNG)
 
-[美观的模板](assets/sightly-template.zip) 本文中提供了用于显示自定义coral ui图标的图标。
+[Sightly範本](assets/sightly-template.zip) 用於顯示自訂coral ui圖示已納入本文章中。
 
-## Sightly模板
+## Sightly範本
 
-以下是美观的模板。 模板中的代码会根据收入显示图标。 这些图标在 [coral ui图标库](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) AEM附带的。
+以下是sightly範本。 範本中的程式碼會根據收入顯示圖示。 這些圖示是 [coral ui圖示程式庫](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) AEM隨附的其他功能。
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -43,11 +43,11 @@ ht-degree: 0%
 </template>
 ```
 
-## 服务实施
+## 服務實作
 
-以下代码是用于显示收入列的服务实施。
+下列程式碼是顯示「收入」欄的服務實作。
 
-第12行将列与Sightly模板关联
+第12行將欄與sightly範本建立關聯
 
 ```java
 import java.util.Map;
@@ -78,21 +78,21 @@ return val;
 }
 ```
 
-## 在服务器上测试
+## 在您的伺服器上測試
 
 >[!NOTE]
 >
->本文假定您已安装 [示例工作流](assets/review-workflow.zip) 和 [示例表单](assets/snap-form.zip) 从 [上一篇文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) 在此系列中。
+>本文假設您已安裝 [範例工作流程](assets/review-workflow.zip) 和 [範例表單](assets/snap-form.zip) 從 [上一篇文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) 在此系列中。
 
-* [以管理员用户身份登录crx](http://localhost:4502/crx/de/index.jsp)
-* [导入sightly模板](assets/sightly-template.zip)
-* [登录AEM Web控制台](http://localhost:4502/system/console/bundles)
-* [部署和启动收件箱自定义包](assets/income-column-customization.jar)
-* [打开您的收件箱](http://localhost:4502/aem/inbox)
-* 单击创建按钮旁边的列表视图以打开Admin Control
-* 将收入列添加到收件箱并保存您所做的更改
-* [预览表单](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* 选择 _婚姻状况_ 并提交表格
-* [查看收件箱](http://localhost:4502/aem/inbox)
+* [以管理員使用者身分登入crx](http://localhost:4502/crx/de/index.jsp)
+* [匯入sightly範本](assets/sightly-template.zip)
+* [登入AEM Web主控台](http://localhost:4502/system/console/bundles)
+* [部署並啟動收件匣自訂套裝](assets/income-column-customization.jar)
+* [開啟您的收件匣](http://localhost:4502/aem/inbox)
+* 按一下「建立」按鈕旁的「清單檢視」 ，開啟「管理控制」
+* 新增收入欄至收件匣並儲存變更
+* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
+* 選取 _婚姻狀況_ 並提交表單
+* [檢視收件匣](http://localhost:4502/aem/inbox)
 
-提交表单将触发工作流，并且会向“管理员”用户分配任务。 您应会在收入列下看到相应的图标
+提交表單會觸發工作流程，且任務會指派給「管理員」使用者。 您應該會在收入欄下看到適當的圖示

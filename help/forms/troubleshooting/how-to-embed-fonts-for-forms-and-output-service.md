@@ -1,6 +1,6 @@
 ---
-title: 如何为Forms和输出服务转化嵌入字体
-description: 为Forms和输出服务转换嵌入字体的步骤
+title: 如何嵌入Forms的字型和輸出服務轉換
+description: 為Forms和輸出服務轉換嵌入字型的步驟
 type: Troubleshooting
 role: Admin
 level: Experienced
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何为Forms和输出服务转化嵌入字体
+# 如何嵌入Forms的字型和輸出服務轉換
 
-*此视频将逐步介绍如何嵌入字体以进行Forms和输出服务转化。*
+*本影片逐步解說為Forms嵌入Fonts和輸出服務轉換的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335496?quality=12&learn=on)

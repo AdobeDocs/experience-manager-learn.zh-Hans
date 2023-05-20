@@ -1,6 +1,6 @@
 ---
-title: 将可编辑的固定组件添加到远程SPA
-description: 了解如何将可编辑的固定组件添加到远程SPA。
+title: 新增可編輯的固定元件至遠端SPA
+description: 瞭解如何將可編輯的固定元件新增至遠端SPA。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
@@ -17,34 +17,34 @@ ht-degree: 1%
 
 ---
 
-# 可编辑的固定组件
+# 可編輯的固定元件
 
-可编辑的React组件可以是“固定”的，也可以硬编码到SPA视图中。 这允许开发人员将与SPA Editor兼容的组件放入SPA视图中，并允许用户在AEM SPA Editor中创作组件内容。
+可編輯的React元件可以「固定」，或硬式編碼至SPA檢視中。 如此一來，開發人員就能將與SPA編輯器相容的元件放入SPA檢視中，且使用者能在AEM SPA編輯器中編寫元件的內容。
 
-![固定组件](./assets/spa-fixed-component/intro.png)
+![固定元件](./assets/spa-fixed-component/intro.png)
 
-在本章中，我们将替换主页视图的标题“当前历险”，该标题在 `Home.js` 具有固定但可编辑的标题组件。 固定的组件可确保标题的放置，但也允许创作标题的文本，并在开发周期之外进行更改。
+在本章中，我們將取代「首頁」檢視的標題「Current Adventures」，這是中的硬式編碼文字。 `Home.js` 具有固定但可編輯的標題元件。 固定元件可保證標題的放置，但也允許編寫標題的文字，以及在開發週期外進行變更。
 
-## 更新WKND应用程序
+## 更新WKND應用程式
 
-添加 __已修复__ 组件添加到主页视图：
+若要新增 __固定__ 元件至「首頁」檢視：
 
-+ 创建自定义可编辑的标题组件，并将其注册到项目的标题资源类型
-+ 将可编辑的标题组件放在SPA主页视图上
++ 建立自訂的可編輯標題元件並將其註冊到專案的標題資源型別
++ 將可編輯的標題元件放在SPA首頁檢視上
 
-### 创建可编辑的React标题组件
+### 建立可編輯的React Title元件
 
-在SPA主页视图中，替换硬编码的文本 `<h2>Current Adventures</h2>` 具有自定义可编辑的标题组件。 在使用标题组件之前，我们必须：
+在SPA首頁檢視中，取代硬式編碼文字 `<h2>Current Adventures</h2>` 具有自訂可編輯的標題元件。 在可以使用Title元件之前，我們必須：
 
-1. 创建自定义标题React组件
-1. 使用 `@adobe/aem-react-editable-components` 使其可编辑。
-1. 在中注册可编辑的标题组件 `MapTo` 这样它就可以用于 [容器组件稍后组件](./spa-container-component.md).
+1. 建立自訂Title React元件
+1. 使用來自的方法裝飾自訂標題元件 `@adobe/aem-react-editable-components` 使其可編輯。
+1. 將可編輯的標題元件註冊到 `MapTo` 因此可用於 [容器元件（稍後）](./spa-container-component.md).
 
 要执行此操作：
 
-1. 在以下位置打开远程SPA项目 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app` 在IDE中
-1. 在 `react-app/src/components/editable/core/Title.js`
-1. 将以下代码添加到 `Title.js`.
+1. 開啟遠端SPA專案： `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app` 在您的IDE中
+1. 在建立React元件 `react-app/src/components/editable/core/Title.js`
+1. 將下列程式碼新增至 `Title.js`.
 
    ```javascript
    import React from 'react'
@@ -89,12 +89,12 @@ ht-degree: 1%
    export const titleIsEmpty = (props) => props.text == null || props.text.trim().length === 0
    ```
 
-   请注意，此React组件尚不可使用AEM SPA Editor编辑。 此基本组件将在下一步中进行编辑。
+   請注意，此React元件尚不可使用AEM SPA Editor編輯。 此基本元件將在下一個步驟中變為可編輯。
 
-   阅读代码中有关实施详细信息的注释。
+   閱讀程式碼的註釋，以瞭解實作詳細資訊。
 
-1. 在 `react-app/src/components/editable/EditableTitle.js`
-1. 将以下代码添加到 `EditableTitle.js`.
+1. 在建立React元件 `react-app/src/components/editable/EditableTitle.js`
+1. 將下列程式碼新增至 `EditableTitle.js`.
 
    ```javascript
    // Import the withMappable API provided bu the AEM SPA Editor JS SDK
@@ -130,14 +130,14 @@ ht-degree: 1%
    export default EditableTitle;
    ```
 
-   此 `EditableTitle` React组件封装 `Title` React组件、封装和装饰组件，以便在AEM SPA Editor中可编辑。
+   此 `EditableTitle` React元件封裝 `Title` React元件，將其包裝和裝飾為可在AEM SPA Editor中編輯。
 
-### 使用React EditableTitle组件
+### 使用React EditableTitle元件
 
-现在， EditableTitle React组件已在中注册，并可在React应用程序中使用，请替换“主页”视图上硬编码的标题文本。
+現在EditableTitle React元件已在中註冊並可在React應用程式中使用，請取代「首頁」檢視上的硬式編碼標題文字。
 
 1. 编辑 `react-app/src/components/Home.js`
-1. 在 `Home()` 在底部，导入 `EditableTitle` 将硬编码的标题替换为 `AEMTitle` 组件：
+1. 在 `Home()` 在底部，匯入 `EditableTitle` 並將硬式編碼的標題取代為新的 `AEMTitle` 元件：
 
    ```javascript
    ...
@@ -157,41 +157,41 @@ ht-degree: 1%
    }
    ```
 
-的 `Home.js` 文件应该如下所示：
+此 `Home.js` 檔案應如下所示：
 
 ![Home.js](./assets/spa-fixed-component/home-js-update.png)
 
-## 在AEM中创作标题组件
+## 在AEM中編寫標題元件
 
-1. 登录到AEM作者
-1. 导航到 __站点> WKND应用程序__
-1. 点按 __主页__ 选择 __编辑__ 从顶部操作栏
-1. 选择 __编辑__ 从页面编辑器右上角的编辑模式选择器中
-1. 将鼠标悬停在WKND徽标下方和冒险列表上方的默认标题文本上，直到显示蓝色的编辑大纲
-1. 点按以显示组件的操作栏，然后点按 __扳手__  编辑
+1. 登入AEM Author
+1. 導覽至 __網站> WKND應用程式__
+1. 點選 __首頁__ 並選取 __編輯__ 從頂端動作列
+1. 選取 __編輯__ 從「頁面編輯器」右上角的編輯模式選擇器中
+1. 暫留在WKND標誌下方和冒險清單上方的預設標題文字上，直到顯示藍色編輯外框
+1. 點選以公開元件的動作列，然後點選 __扳手__  編輯
 
-   ![标题组件操作栏](./assets/spa-fixed-component/title-action-bar.png)
+   ![標題元件動作列](./assets/spa-fixed-component/title-action-bar.png)
 
-1. 创作标题组件：
-   + 标题： __WKND冒险__
-   + 类型/大小： __H2__
+1. 編寫標題元件：
+   + 標題： __WKND冒險__
+   + 型別/大小： __H2__
 
-      ![标题组件对话框](./assets/spa-fixed-component/title-dialog.png)
+      ![標題元件對話方塊](./assets/spa-fixed-component/title-dialog.png)
 
-1. 点按 __完成__ 保存
-1. 在AEM SPA编辑器中预览更改
-1. 刷新在本地运行的WKND应用程序 [http://localhost:3000](http://localhost:3000) 并立即查看所创作的标题更改。
+1. 點選 __完成__ 儲存
+1. 在AEM SPA Editor中預覽變更
+1. 重新整理在本機執行的WKND應用程式 [http://localhost:3000](http://localhost:3000) 和會立即反映編寫的標題變更。
 
-   ![SPA中的标题组件](./assets/spa-fixed-component/title-final.png)
+   ![SPA中的標題元件](./assets/spa-fixed-component/title-final.png)
 
 ## 恭喜！
 
-您已向WKND应用程序添加了一个固定的可编辑组件！ 您现在知道如何：
+您已將修正、可編輯的元件新增至WKND應用程式！ 您現在知道如何：
 
-+ 在SPA中创建了一个固定但可编辑的组件
-+ 在AEM中创作固定组件
-+ 在远程SPA中查看创作的内容
++ 已建立固定但可編輯的元件至SPA
++ 在AEM中編寫固定元件
++ 檢視遠端SPA中的編寫內容
 
-## 下面的步骤
+## 后续步骤
 
-接下来的步骤是 [添加AEM ResponsiveGrid容器组件](./spa-container-component.md) 添加到SPA中，以便作者向SPA中添加和可编辑的组件！
+接下來的步驟是 [新增AEM ResponsiveGrid容器元件](./spa-container-component.md) 可讓作者將可編輯的元件新增至SPA的SPA！

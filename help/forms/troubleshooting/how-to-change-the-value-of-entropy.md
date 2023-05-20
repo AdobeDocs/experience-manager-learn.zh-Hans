@@ -1,6 +1,6 @@
 ---
-title: 如何改变熵值
-description: 在操作系统级别更改熵值的步骤
+title: 如何變更平均資訊量值
+description: 在作業系統層級變更平均資訊量值的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何改变熵值
+# 如何變更平均資訊量值
 
-*此视频将逐步介绍如何更改熵值。*
+*此影片逐步解說變更平均資訊量值的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335494?quality=12&learn=on)

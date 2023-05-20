@@ -1,6 +1,6 @@
 ---
-title: AEM Sites中的多站点管理概述
-description: 以下视频概述了AEM Sites中多站点管理的基本概念。
+title: AEM Sites中的多網站管理概觀
+description: 以下影片概述AEM Sites中多網站管理的基本概念。
 feature: language-copy, live-copy, multi-site-manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# 多站点管理概述
+# 多網站管理概覽
 
-以下视频概述了AEM Sites中多站点管理的基本概念。
+以下影片概述AEM Sites中多網站管理的基本概念。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33594?quality=12&learn=on)

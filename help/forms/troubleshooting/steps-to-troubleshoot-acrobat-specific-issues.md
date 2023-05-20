@@ -1,6 +1,6 @@
 ---
-title: 对Windows设置中的Acrobat特定问题进行故障诊断的步骤
-description: 对Windows设置中Acrobat特定问题进行故障诊断
+title: 針對Windows安裝程式上的Acrobat特定問題進行疑難排解的步驟
+description: 疑難排解Windows安裝程式上的Acrobat特定問題
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 对Windows设置中的Acrobat特定问题进行故障诊断的步骤
+# 針對Windows安裝程式上的Acrobat特定問題進行疑難排解的步驟
 
-*此视频将指导您对AEM Forms PDFG的Windows设置中的Acrobat特定问题进行故障排除。*
+*本影片將逐步解說針對AEM Forms PDFG的Windows設定，疑難排解Acrobat特定問題的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335480?quality=12&learn=on)

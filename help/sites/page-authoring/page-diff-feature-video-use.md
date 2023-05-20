@@ -1,7 +1,7 @@
 ---
-title: 将页面差异与AEM Sites结合使用
+title: 搭配AEM Sites使用頁面差異
 seo-title: Using Page Difference with AEM Sites
-description: AEM Sites的页面差异功能显示了一个以颜色编码的快速视图，其中显示了页面中哪些内容发生了更改（版本、Live Copy、启动项、语言副本）。
+description: AEM Sites的頁面差異功能顯示以顏色編碼快速檢視頁面中的變更內容（版本、即時副本、啟動、語言副本）。
 seo-description: AEM Sites' page difference capabilities show provides a quick, color-coded view of what content has changed in a page (version, live copy, launches, language copy).
 topics: authoring
 audience: author, marketer
@@ -22,31 +22,31 @@ ht-degree: 1%
 
 ---
 
-# 使用“页面差异”功能 {#using-page-difference-with-aem-sites}
+# 使用頁面差異功能 {#using-page-difference-with-aem-sites}
 
-AEM Sites的页面差异功能显示了一个以颜色编码的快速视图，其中显示了页面中哪些内容发生了更改（版本、Live Copy、启动项、语言副本）。
+AEM Sites的頁面差異功能顯示以顏色編碼快速檢視頁面中的變更內容（版本、即時副本、啟動、語言副本）。
 
-## 比较页面版本 {#comparing-page-versions}
+## 比較頁面版本 {#comparing-page-versions}
 
 >[!VIDEO](https://video.tv.adobe.com/v/32152?quality=12&learn=on)
 
-**HTML更改**
+**HTML變更**
 
-* **绿色**:新内容
-* **红色**:已删除内容
+* **綠色**：新內容
+* **紅色**：移除的內容
 
-**组件更改**
+**元件變更**
 
-* **绿色**:新组件
-* **红色**:已删除的组件
-* **蓝色**:修改的组件
+* **綠色**：新元件
+* **紅色**：已移除元件
+* **藍色**：修改的元件
 
-## 比较启动页面 {#comparing-launch-pages}
+## 比較啟動頁面 {#comparing-launch-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17746?quality=12&learn=on)
 
-“页面差异”功能还可用于识别Blueprint和LiveCopie以及Blueprint和语言副本之间的差异。
+「頁面差異」功能也可用來識別Blueprint和即時副本、Blueprint和語言副本之間的差異。
 
 ## 其他资源 {#additional-resources}
 
-* [页面差异文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html)
+* [頁面差異檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html)

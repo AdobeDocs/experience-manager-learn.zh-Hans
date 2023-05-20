@@ -1,73 +1,68 @@
 ---
-title: 创建工作流组件以将表单附件保存到文件系统
-description: 使用自定义工作流组件将自适应表单附件写入文件系统
+title: 建立工作流程元件以將表單附件儲存至檔案系統
+description: 使用自訂工作流程元件將最適化表單附件寫入檔案系統
 feature: Workflow
 version: 6.5
 topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2021-11-28T00:00:00Z
-source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
+exl-id: acc701ec-b57d-4c20-8f97-a5a69bb180cd
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 1%
 
 ---
 
-# 自定义工作流组件
+# 自訂工作流程元件
 
-本教程面向需要创建自定义工作流组件的AEM Forms客户。 工作流组件将配置为执行在上一步中编写的代码。 工作流组件能够为代码指定进程参数。 在本文中，我们将探索与代码关联的工作流组件。
-
-
-[下载自定义工作流组件](assets/saveFiles.zip)
-导入工作流组件 [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-
-自定义工作流组件位于/apps/AEMFormsDemoListings/workflowcomponent/SaveFiles中
-
-选择SaveFiles节点并检查其属性
-
-**componentGroup**  — 此属性的值确定工作流组件的类别。
-
-**jcr:Title**  — 这是工作流组件的标题。
-
-**sling:resourceSuperType** 此属性的值将确定此组件的继承。 在这种情况下，我们将从流程组件继承
+本教學課程適用於需要建立自訂工作流程元件的AEM Forms客戶。 工作流程元件將設定為執行上一步驟中編寫的程式碼。 工作流程元件能夠指定程式碼的流程引數。 在本文中，我們將探索與程式碼相關聯的工作流程元件。
 
 
-![组件属性](assets/component-properties1.png)
+[下載自訂工作流程元件](assets/saveFiles.zip)
+匯入工作流程元件 [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
 
-## cq:dialog
+自訂工作流程元件位於/apps/AEMFormsDemoListings/workflowcomponent/SaveFiles
 
-对话框用于允许作者与组件进行交互。 cq:dialog位于SaveFiles节点下
+選取SaveFiles節點並檢查其屬性
+
+**componentGroup**  — 此屬性的值會決定工作流程元件的類別。
+
+**jcr：Title**  — 這是工作流程元件的標題。
+
+**sling：resourceSuperType** 此屬性的值將決定此元件的繼承。 在此案例中，我們繼承自程式元件
+
+
+![component-properties](assets/component-properties1.png)
+
+## cq：dialog
+
+對話方塊可用來允許作者與元件互動。 cq：dialog位於SaveFiles節點下
 ![cq-dialog](assets/cq-dialog.png)
 
-项目节点下的节点表示组件的选项卡，作者将通过这些选项卡与组件进行交互。 将隐藏常用和流程选项卡。 显示“常用”和“参数”选项卡。
+專案節點下的節點代表作者將透過其與元件互動之元件的標籤。 「一般」和「程式」標籤會隱藏。 「一般」和「引數」標籤可見。
 
-进程的进程参数位于processargs节点下
+流程的流程引數位於processargs節點下
 
 ![process-args](assets/process-arguments.png)
 
-作者指定参数，如下面的屏幕快照所示
-![工作流组件](assets/custom-workflow-component.png)
+作者會指定引數，如下方熒幕擷取畫面所示
+![workflow-component](assets/custom-workflow-component.png)
 
-这些值将作为元数据节点的属性进行存储。 例如，值 **c:\formsattachments** 将存储在元数据节点的saveToLocation属性中
-![保存位置](assets/save-to-location.png)
+這些值會儲存為中繼資料節點的屬性。 例如，值 **c：\formsattachments** 將會儲存在中繼資料節點的屬性saveToLocation中
+![save-location](assets/save-to-location.png)
 
-## cq:editConfig
+## cq：editConfig
 
-cq:EditConfig只是主类型cq:EditConfig的节点，组件根下具有名称cq:editConfig 。组件的编辑行为通过在组件节点（cq:Component类型）下添加cq:editConfig类型的cq:editConfig节点来配置
+cq：EditConfig只是一個節點，其主要型別cq：EditConfig和元件根目錄下的名稱cq：editConfig透過在元件節點下新增cq：EditConfig型別的cq：editConfig節點（型別為cq：Component）來設定元件的編輯行為
 
 ![edit-config](assets/cq-edit-config.png)
 
-cq:formParameters（节点类型nt:unstructured）：定义添加到对话框表单的其他参数。
+cq：formParameters （節點型別nt：unstructured）：定義新增至對話方塊表單的其他引數。
 
 
-请注意cq:formParameters节点的属性
+注意cq：formParameters節點的屬性
 ![from-parameters-properties](assets/form-parameters-properties.png)
 
-属性PROCESS的值指示将与工作流组件关联的Java代码。
-
-
-
-
-
-
+PROCESS屬性的值表示將與工作流程元件關聯的Java程式碼。

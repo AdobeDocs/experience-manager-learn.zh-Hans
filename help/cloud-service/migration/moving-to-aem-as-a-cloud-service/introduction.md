@@ -1,6 +1,6 @@
 ---
-title: AEMas a Cloud Service简介
-description: 了解如何以不同方式考虑AEMas a Cloud Service实施。
+title: AEMas a Cloud Service簡介
+description: 瞭解如何對AEMas a Cloud Service實作有不同的思考。
 version: Cloud Service
 topic: Migration, Upgrade
 role: Developer
@@ -17,6 +17,6 @@ ht-degree: 17%
 
 # AEM as a Cloud Service 简介
 
-了解如何以不同方式考虑AEMas a Cloud Service实施。
+瞭解如何對AEMas a Cloud Service實作有不同的思考。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336956?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 使用自适应表单数据生成交互式DoR
-description: 将自适应表单数据与XDP模板合并，以生成可下载的PDF
+title: 使用最適化表單資料產生互動式DoR
+description: 將最適化表單資料與XDP範本合併，以產生可下載的pdf
 version: 6.4,6.5
 feature: Forms Service
 topic: Development
@@ -16,23 +16,23 @@ ht-degree: 0%
 
 ---
 
-# 下载交互式DoR
+# 下載互動式DoR
 
-一个常见用例是能够下载包含自适应表单数据的交互式DoR。 随后，将使用Adobe Acrobat或Adobe Reader完成下载的DoR。
+常見的使用案例是下載含有最適化表單資料的互動式DoR。 下載的DoR將使用Adobe Acrobat或Adobe Reader完成。
 
-## 自适应表单不基于XSD架构
+## 最適化表單並非以XSD結構描述為基礎
 
-如果您的XDP和自适应表单不基于任何架构，请按照以下步骤生成交互式记录文档。
+如果您的XDP和最適化表單並非以任何結構描述為基礎，則請依照下列步驟產生互動式記錄檔案。
 
-### 创建自适应表单
+### 建立最適化表單
 
-创建自适应表单，并确保自适应表单字段名称的名称与xdp模板中的字段名称相同。
-记下xdp模板的根元素名称。
+建立最適化表單，並確保最適化表單欄位名稱的名稱與xdp範本中的欄位名稱相同。
+記下xdp範本的根元素名稱。
 ![根元素](assets/xfa-root-element.png)
 
-### 客户端库
+### 使用者端資料庫
 
-触发“下载”PDF按钮时将触发以下代码
+下列程式碼會在下載PDF按鈕觸發時觸發
 
 ```javascript
 $(document).ready(function() {
@@ -63,25 +63,25 @@ $(document).ready(function() {
 });
 ```
 
-## 基于XSD架构的自适应表单
+## 根據XSD結構描述的最適化表單
 
-如果您的xdp不基于XSD，请按照以下步骤创建XSD（架构），您将基于该XSD（架构）构建自适应表单
+如果您的xdp不是以XSD為基礎，則請遵循以下步驟來建立您將作為最適化表單基礎的XSD(schema)
 
-### 为XDP生成示例数据
+### 產生XDP的範例資料
 
-* 在AEM Forms设计器中打开XDP。
-* 单击文件 |表单属性 |预览
-* 单击生成预览数据
-* 单击生成
-* 提供有意义的文件名，如“form-data.xml”
+* 在AEM Forms Designer中開啟XDP。
+* 按一下檔案 |表單屬性 |預覽
+* 按一下產生預覽資料
+* 按一下「產生」
+* 提供有意義的檔案名稱，例如&quot;form-data.xml&quot;
 
-### 从xml数据生成XSD
+### 從xml資料產生XSD
 
-您可以使用任何免费的在线工具 [生成XSD](https://www.freeformatter.com/xsd-generator.html) 从上一步中生成的xml数据。
+您可以使用任何免費線上工具來 [產生XSD](https://www.freeformatter.com/xsd-generator.html) 來自上一步驟中產生的xml資料。
 
-### 创建自适应表单
+### 建立最適化表單
 
-根据上一步中的XSD创建自适应表单。 关联表单以使用客户端库“irs”。 此客户端库具有用于对Servlet进行POST调用的代码，该代码会将PDF返回到调用应用程序。以下代码将在 _下载PDF_ 点击
+根據上一步的XSD建立最適化表單。 建立表單關聯以使用使用者端程式庫「irs」。 此使用者端程式庫具有向servlet進行POST呼叫的程式碼，該程式碼會將PDF傳回至呼叫的應用程式。以下程式碼會在 _下載PDF_ 已點按
 
 ```javascript
 $(document).ready(function() {
@@ -114,9 +114,9 @@ $(document).ready(function() {
 
 
 
-## 创建自定义Servlet
+## 建立自訂servlet
 
-创建一个自定义Servlet，以将数据与XDP模板合并并返回pdf。 完成此操作的代码如下所示。 自定义Servlet是 [AEMFormsDocumentServices.core-1.0-SNAPSHOT包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar))。
+建立自訂servlet，將資料與XDP範本合併並傳回pdf。 完成此任務的程式碼如下。 自訂servlet是 [AEMFormsDocumentServices.core-1.0-SNAPSHOT套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar))。
 
 ```java
 public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
@@ -209,21 +209,21 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 }
 ```
 
-在示例代码中，我们从请求对象中提取xdp名称和其他参数。 如果表单不基于XSD，则会创建要与xdp合并的xml文档。如果表单基于XSD，则只需从自适应表单提交数据中提取相应的节点，以生成要与xdp模板合并的xml文档。
+在範常式式碼中，我們從請求物件中擷取xdp名稱和其他引數。 如果表單不是以XSD為基礎，則會建立要與xdp合併的xml檔案。如果表單是以XSD為基礎，我們只會從最適化表單提交的資料中擷取適當的節點，以產生xml檔案，以便與xdp範本合併。
 
-## 在服务器上部署示例
+## 在您的伺服器上部署範例
 
-要在本地服务器上测试此功能，请执行以下步骤：
+若要在本機伺服器上測試此專案，請遵循下列步驟：
 
-1. [下载并安装DevelopingWithServiceUser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. 在Apache Sling Service用户映射器服务DevelopingWithServiceUser.core:getformsresourceresolver=fd-service中添加以下条目
-1. [下载并安装自定义DocumentServices包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). 这有一个Servlet，用于将数据与XDP模板合并并并流回PDF
-1. [导入客户端库](assets/generate-interactive-dor-client-lib.zip)
-1. [导入文章资产（自适应表单、XDP模板和XSD）](assets/generate-interactive-dor-sample-assets.zip)
-1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
-1. 填写几个表单字段。
-1. 单击下载PDF以获取PDF。 您可能需要等待几秒钟才能下载PDF。
+1. [下載並安裝DevelopingWithServiceUser套裝](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. 在Apache Sling服務使用者對應程式服務DevelopingWithServiceUser.core：getformsresourceresolver=fd-service中新增以下專案
+1. [下載並安裝自訂DocumentServices套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). 這有servlet可合併資料與XDP範本，並串流PDF回來
+1. [匯入使用者端資源庫](assets/generate-interactive-dor-client-lib.zip)
+1. [匯入文章資產（最適化表單、XDP範本和XSD）](assets/generate-interactive-dor-sample-assets.zip)
+1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
+1. 填寫一些表單欄位。
+1. 按一下「下載PDF」以取得PDF。 您可能需要等候幾秒鐘，才能下載PDF。
 
 >[!NOTE]
 >
->您可以在 [基于xsd的自适应表单](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). 确保将相应的参数传递到位于irs clientlib中的streampdf.js中的后处理端点。
+>您可以嘗試相同的使用案例，透過 [非xsd型最適化表單](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). 請務必將適當的引數傳遞至irs clientlib中streampdf.js的貼文端點。

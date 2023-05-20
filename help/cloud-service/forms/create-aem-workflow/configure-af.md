@@ -1,6 +1,6 @@
 ---
-title: 配置自适应表单以触发工作流
-description: 在自适应表单提交时触发工作流。
+title: 設定最適化表單以觸發工作流程
+description: 在最適化表單提交時觸發工作流程。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 配置自适应表单以触发工作流
+# 設定最適化表單以觸發工作流程
 
-配置自适应表单以触发审阅工作流
+設定最適化表單以觸發稽核工作流程
 
 >[!VIDEO](https://video.tv.adobe.com/v/332435?quality=12&learn=on)

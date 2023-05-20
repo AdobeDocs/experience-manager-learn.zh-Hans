@@ -1,6 +1,6 @@
 ---
-title: 非标准端口上的HTTP/HTTPS连接可实现灵活的端口出口
-description: 了解如何使AEM的HTTP/HTTPS请求as a Cloud Service到外部Web服务，这些服务在非标准端口上运行，以实现灵活端口出口。
+title: 非標準連線埠上的HTTP/HTTPS連線，用於彈性連線埠輸出
+description: 瞭解如何將AEM的HTTP/HTTPS請求變成as a Cloud Service的，以在彈性連線埠輸出的非標準連線埠上執行的外部Web服務。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -16,30 +16,30 @@ ht-degree: 0%
 
 ---
 
-# 非标准端口上的HTTP/HTTPS连接可实现灵活的端口出口
+# 非標準連線埠上的HTTP/HTTPS連線，用於彈性連線埠輸出
 
-非标准端口(非80/443)上的HTTP/HTTPS连接必须在AEMas a Cloud Service之外进行代理，但它们不需要任何特殊 `portForwards` 规则，并可使用AEM的 `AEM_PROXY_HOST` 和保留的代理端口 `AEM_HTTP_PROXY_PORT` 或 `AEM_HTTPS_PROXY_PORT` 具体取决于目标是HTTP/HTTPS。
+非標準連線埠（非80/443）上的HTTP/HTTPS連線必須以AEMas a Cloud Service代理，但是它們不需要任何特殊的 `portForwards` 規則，並可使用AEM進階網路的 `AEM_PROXY_HOST` 和保留的Proxy連線埠 `AEM_HTTP_PROXY_PORT` 或 `AEM_HTTPS_PROXY_PORT` 視目的地為HTTP/HTTPS而定。
 
-## 高级网络支持
+## 進階網路支援
 
-以下高级网络选项支持以下代码示例。
+下列進階網路選項支援下列程式碼範例。
 
-确保 [适当](../advanced-networking.md#advanced-networking) 在完成本教程之前，已设置高级网络配置。
+確保 [適當的](../advanced-networking.md#advanced-networking) 在執行本教學課程之前，已設定進階網路設定。
 
-| 无高级网络 | [灵活的端口出口](../flexible-port-egress.md) | [专用出口IP地址](../dedicated-egress-ip-address.md) | [虚拟专用网](../vpn.md) |
+| 無進階網路 | [彈性的連線埠輸出](../flexible-port-egress.md) | [專用輸出IP位址](../dedicated-egress-ip-address.md) | [虛擬私人網路](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✔ | ✘ | ✘ |
 
 >[!CAUTION]
 >
-> 此代码示例仅适用于 [灵活的端口出口](../flexible-port-egress.md). 有一个相似但不同的代码示例可供使用 [专用出口IP地址和VPN的非标准端口上的HTTP/HTTPS连接](./http-dedicated-egress-ip-vpn.md).
+> 此程式碼範例僅適用於 [彈性連線埠輸出](../flexible-port-egress.md). 相似但不同的程式碼範例適用於 [專用輸出IP位址和VPN的非標準連線埠上的HTTP/HTTPS連線](./http-dedicated-egress-ip-vpn.md).
 
-## 代码示例
+## 程式碼範例
 
-此Java™代码示例是OSGi服务的一个示例，该服务可以在AEMas a Cloud Service中运行，该服务在8080上与外部Web服务器进行HTTP连接。 与HTTPS Web服务器的连接使用环境变量 `AEM_PROXY_HOST` 和 `AEM_HTTPS_PROXY_PORT` (默认为 `proxy.tunnel:3128` (在AEM版本&lt; 6094)中。
+此Java™程式碼範例屬於可在AEMas a Cloud Service中執行的OSGi服務，該服務會建立8080上外部Web伺服器的HTTP連線。 與HTTPS Web伺服器的連線會使用環境變數 `AEM_PROXY_HOST` 和 `AEM_HTTPS_PROXY_PORT` (預設為 `proxy.tunnel:3128` (在AEM版本&lt; 6094中)。
 
 >[!NOTE]
-> 建议使用 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) 用于从AEM发起HTTP/HTTPS调用。
+> 建議使用 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) 用於從AEM進行HTTP/HTTPS呼叫。
 
 + `core/src/com/adobe/aem/wknd/examples/connections/impl/HttpExternalServiceImpl.java`
 

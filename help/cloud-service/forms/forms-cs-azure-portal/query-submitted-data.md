@@ -1,6 +1,6 @@
 ---
-title: 在Azure Blob Storage中搜索提交的AEM Forms数据
-description: 了解如何使用表单数据模型元数据服务在Azure Blob Storage中查询AEM Forms提交的数据。
+title: 在Azure Blob儲存空間中搜尋已提交的AEM Forms資料
+description: 瞭解如何使用表單資料模型中繼資料服務，在Azure Blob儲存體中查詢AEM Forms提交的資料。
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 查询提交的数据
+# 查詢提交的資料
 
-了解如何使用AEM Forms的元数据服务在Azure Blob Storage中查询自适应表单数据。
+瞭解如何使用AEM Forms的中繼資料服務，在Azure Blob儲存體中查詢最適化表單資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335717?quality=12&learn=on)

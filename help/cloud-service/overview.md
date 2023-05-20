@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Manager as a Cloud Service视频和教程
-description: Adobe Experience Manager(AEM)as a Cloud Service的教程集合
+title: Adobe Experience Manager as a Cloud Service影片和教學課程
+description: Adobe Experience Manager (AEM) as a Cloud Service教學課程系列
 sub-product: Experience Manager as a Cloud Service
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
@@ -11,9 +11,9 @@ ht-degree: 11%
 
 ---
 
-# AEMas a Cloud Service视频和教程 {#overview}
+# AEMas a Cloud Service影片和教學課程 {#overview}
 
-Adobe Experience Manager (AEM) 现已作为云服务提供。AEM as a Cloud Service引入了新一代Experience Manager产品线，以过去的投资和创新为基础，保留和扩展所有用例和功能。
+Adobe Experience Manager (AEM) 现已作为云服务提供。AEMas a Cloud Service推出新一代Experience Manager產品線，以過去的投資和創新為基礎，保留並擴充所有使用案例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
@@ -21,25 +21,25 @@ Adobe Experience Manager (AEM) 现已作为云服务提供。AEM as a Cloud Serv
 
 ## 新增功能
 
-* **[基于令牌的身份验证（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
+* **[權杖型驗證（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
-   *了解如何使用基于令牌的身份验证通过HTTP与AEMas a Cloud Service进行交互*
+   *瞭解如何使用權杖型驗證，以透過HTTP與AEMas a Cloud Service互動*
 
-* **[无头GraphQL（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+* **[Headless GraphQL （教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *了解如何使用AEM GraphQL API为外部应用程序中的体验提供支持。*
+   *瞭解如何使用AEM GraphQL API在外部應用程式中強化體驗。*
 
-* **[批量导入（视频）](./migration/bulk-import.md)**
+* **[大量匯入（影片）](./migration/bulk-import.md)**
 
-   *了解如何将资产从Azure Blob Storage或Amazon S3批量导入AEM*
+   *瞭解如何從Azure Blob儲存或Amazon S3大量匯入資產至AEM*
 
-* **[asset compute元数据工作程序（教程）](./asset-compute/advanced/metadata.md)**
+* **[asset compute中繼資料背景工作（教學課程）](./asset-compute/advanced/metadata.md)**
 
-   *了解如何从Asset compute工作程序将资产元数据写回AEM*
+   *瞭解如何從Asset compute背景工作將資產中繼資料寫回AEM*
 
-* **[asset compute微服务可扩展性（教程）](./asset-compute/overview.md)**
+* **[asset compute微服務擴充性（教學課程）](./asset-compute/overview.md)**
 
-   *了解如何开发Asset compute工作程序以生成自定义资产演绎版*
+   *瞭解如何開發Asset compute背景工作以產生自訂資產轉譯*
 
 </div>
 
@@ -52,7 +52,7 @@ Adobe Experience Manager (AEM) 现已作为云服务提供。AEM as a Cloud Serv
 
 <div id="staff-picks-section">
 
-## 员工挑选
+## 工作人員選擇
 
 <table>
    <td>
@@ -61,43 +61,43 @@ Adobe Experience Manager (AEM) 现已作为云服务提供。AEM as a Cloud Serv
       </a>
       <div>
          <a href="./accessing/overview.md">
-         <strong>配置对AEM教程的访问权限</strong>
+         <strong>設定存取AEM教學課程</strong>
          </a>
       </div>
       <p>
-         <em>在Adobe Admin Console中配置IMS用户以访问AEM。</em>
+         <em>在Adobe Admin Console中設定IMS使用者以存取AEM。</em>
       <p>
    </td>   
    <td>
       <a href="./local-development-environment/overview.md">
-      <img alt="本地开发环境设置教程" src="./assets/overview/staff-pick__local-development-environment-set-up.png"/>
+      <img alt="本機開發環境設定教學課程" src="./assets/overview/staff-pick__local-development-environment-set-up.png"/>
       </a>
       <div>
          <a href="./local-development-environment/overview.md">
-         <strong>本地开发环境设置教程</strong>
+         <strong>本機開發環境設定教學課程</strong>
          </a>
       </div>
       <p>
-         <em>为AEMas a Cloud Service开发做好本地开发准备！</em>
+         <em>讓您的本機開發電腦準備好進行AEMas a Cloud Service開發！</em>
       <p>
    </td>   
    <td>
       <a href="./debugging/aem-sdk-local-quickstart/overview.md">
-      <img alt="调试AEM SDK的本地快速启动" src="./assets/overview/staff-pick__debugging.png"/>
+      <img alt="偵錯AEM SDK的本機Quickstart" src="./assets/overview/staff-pick__debugging.png"/>
       </a>
       <div>
          <a href="./debugging/aem-sdk-local-quickstart/overview.md">
-         <strong>调试AEM SDK</strong>
+         <strong>偵錯AEM SDK</strong>
          </a>
       </div>
       <p>
-         <em>浏览用于在AEMas a Cloud ServiceSDK的本地快速启动中调试应用程序的工具。</em>
+         <em>探索用於在AEMas a Cloud ServiceSDK的本機Quickstart上對您的應用程式進行偵錯的工具。</em>
       <p>
    </td>
 </table>
 
 </div>
 
-## 其他资源
+## 其他資源
 
-* [Adobe Experience Manager as a Cloud Service文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html?lang=zh-Hans)
+* [Adobe Experience Manager as a Cloud Service檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html?lang=zh-Hans)

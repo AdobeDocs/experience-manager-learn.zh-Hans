@@ -1,6 +1,6 @@
 ---
-title: 创建和配置数据源
-description: 创建并配置云服务配置以连接Microsoft Dynamics。
+title: 建立和設定Odata來源
+description: 建立並設定雲端服務設定以與Microsoft Dynamics連線。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -8,17 +8,17 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 9839
-source-git-commit: cfbc9078abf790034ec485dd3a5efbfcb9723eaa
+exl-id: de900e83-19aa-4404-a792-af2c6a58eeef
+source-git-commit: 3d182fb9b9002f9eb71d1e276ca77edd3277cdad
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
-# 为Microsoft Dynamics创建和配置云服务
+# 為Microsoft Dynamics建立和設定雲端服務
 
 
-以下视频将指导您完成创建云服务配置以连接Microsoft Dynamics的步骤。
+以下影片將逐步說明建立雲端服務設定以與Microsoft Dynamics連線的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340758?quality=12&learn=on)
-

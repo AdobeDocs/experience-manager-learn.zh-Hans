@@ -1,6 +1,6 @@
 ---
-title: AEM内容片段控制台扩展模式
-description: 了解如何创建AEM内容片段控制台扩展模式。
+title: AEM內容片段主控台擴充功能模組
+description: 瞭解如何建立AEM內容片段主控台擴充功能模組。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,34 +9,34 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+exl-id: e7376eaf-f7d7-48fe-9387-a0e4089806c2
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
 
 ---
 
+# 擴充功能模組
 
-# 扩展模式窗口
+![AEM內容片段擴充功能模組](./assets/modal/modal.png){align="center"}
 
-![AEM内容片段扩展模式](./assets/modal/modal.png){align="center"}
+AEM內容片段擴充功能模式提供一種將自訂UI附加至AEM內容片段擴充功能(不論是 [動作列](./action-bar.md) 或 [頁首功能表](./header-menu.md) 按鈕。
 
-AEM内容片段扩展模式提供了一种将自定义UI附加到AEM内容片段扩展的方法，无论是 [操作栏](./action-bar.md) 或 [标题菜单](./header-menu.md) 按钮。
+模式是React應用程式，根據 [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)，和可以建立擴充功能所需的任何自訂UI，包括但不限於：
 
-模型是React应用程序，基于 [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)，并可以创建扩展所需的任何自定义UI，包括但不限于：
++ 確認對話方塊
++ [輸入表單](https://react-spectrum.adobe.com/react-spectrum/#forms)
++ [進度指示器](https://react-spectrum.adobe.com/react-spectrum/#status)
++ [結果摘要](https://react-spectrum.adobe.com/react-spectrum/#collections)
++ 錯誤訊息
++ ...或是完整的多重檢視React應用程式！
 
-+ 确认对话框
-+ [输入表单](https://react-spectrum.adobe.com/react-spectrum/#forms)
-+ [进展指标](https://react-spectrum.adobe.com/react-spectrum/#status)
-+ [结果摘要](https://react-spectrum.adobe.com/react-spectrum/#collections)
-+ 错误消息
-+ ...甚至是全面、多视图的React应用程序！
+## 強制回應路由
 
-## 模式路由
+強制回應體驗是由下定義的擴充功能App Builder React應用程式所定義。 `web-src` 資料夾。 和任何React應用程式一樣，完整體驗也是使用來編排 [React路由](https://reactrouter.com/en/main/components/routes) 該轉譯器 [React元件](https://reactjs.org/docs/components-and-props.html).
 
-模式体验由App Builder React应用程序在 `web-src` 文件夹。 与任何React应用程序一样，整个体验都是使用 [React路由](https://reactrouter.com/en/main/components/routes) 呈现 [React组件](https://reactjs.org/docs/components-and-props.html).
-
-至少需要一条路由才能生成初始模式视图。 在 [扩展注册](#extension-registration)&#39;s `onClick(..)` 函数，如下所示。
+產生初始模組檢視至少需要一條路線。 系統會叫用此初始路由 [延伸註冊](#extension-registration)的 `onClick(..)` 函式，如下所示。
 
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/App.js`
@@ -76,16 +76,16 @@ function App(props) {
 }
 ```
 
-## 扩展注册
+## 擴充功能註冊
 
-要打开模式窗口，请调用 `guestConnection.host.modal.showUrl(..)` 由扩展的 `onClick(..)` 函数。 `showUrl(..)` 将传递一个具有键/值的JavaScript对象：
+若要開啟強制回應視窗，請呼叫 `guestConnection.host.modal.showUrl(..)` 由擴充功能的 `onClick(..)` 函式。 `showUrl(..)` 會傳遞一個具有索引鍵/值的JavaScript物件：
 
-+ `title` 提供向用户显示的模式的标题名称
-+ `url` 是调用 [React route](#modal-routes) 负责该模式的初始视图。
++ `title` 提供顯示給使用者的強制回應視窗標題名稱
++ `url` 是叫用 [React路由](#modal-routes) 負責強制回應視窗的初始檢視。
 
-当务之急是 `url` 传递到 `guestConnection.host.modal.showUrl(..)` 解析为在扩展中路由，否则该模式窗口中不显示任何内容。
+當務之急是 `url` 傳遞至 `guestConnection.host.modal.showUrl(..)` 解析成擴充功能中的路由，否則強制回應視窗中不會顯示任何內容。
 
-查看 [标题菜单](./header-menu.md#modal) 和 [操作栏](./action-bar.md#modal) 有关如何创建模式URL的文档。
+檢閱 [頁首功能表](./header-menu.md#modal) 和 [動作列](./action-bar.md#modal) 有關如何建立模組URL的檔案。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -106,13 +106,13 @@ function ExtensionRegistration() {
 }...
 ```
 
-## 模态组件
+## 模組元件
 
-扩展的每条路径， [那不是 `index` 路由](./extension-registration.md#app-routes)，映射到可在扩展的模式中呈现的React组件。
+每個延伸路徑， [這不是 `index` 路由](./extension-registration.md#app-routes)，對應至可在擴充功能強制回應視窗中呈現的React元件。
 
-模式可以由任意数量的React路由组成，从简单的单路由模式到复杂的多路由模式。
+強制回應可由任意數量的React路徑組成，從簡單的單路徑強制回應到複雜的多路徑強制回應。
 
-下面说明了一个简单的单路由模式，但此模式视图可能包含可调用其他路由或行为的React链接。
+以下說明一個簡單的單路徑強制回應，不過此強制回應檢視可能包含叫用其他路徑或行為的React連結。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/MyModal.js`
 
@@ -182,11 +182,11 @@ export default function MyModal() {
 }
 ```
 
-## 关闭模式窗口
+## 關閉強制回應視窗
 
-![AEM内容片段扩展模式关闭按钮](./assets/modal/close.png){align="center"}
+![AEM內容片段擴充功能強制關閉按鈕](./assets/modal/close.png){align="center"}
 
-模型必须提供自己的密切控制。 通过调用完成此操作 `guestConnection.host.modal.close()`.
+模組必須提供自己的嚴密控制。 這是透過叫用完成的 `guestConnection.host.modal.close()`.
 
 ```javascript
 <ButtonGroup align="end">

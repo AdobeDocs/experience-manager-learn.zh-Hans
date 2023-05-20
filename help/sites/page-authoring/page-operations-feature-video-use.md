@@ -1,6 +1,6 @@
 ---
-title: AEM Sites中的基本页面操作
-description: 以下视频重点介绍如何对Adobe Experience Manager Sites页面执行基本页面管理操作。
+title: AEM Sites中的基本頁面操作
+description: 以下影片著重說明如何對Adobe Experience Manager Sites頁面執行基本頁面管理操作。
 version: 6.4, 6.5
 topic: Content Management
 feature: Page Editor, Editable Templates
@@ -16,14 +16,14 @@ ht-degree: 11%
 
 ---
 
-# 基本页面操作 {#basic-page-operations-aem-sites}
+# 基本頁面操作 {#basic-page-operations-aem-sites}
 
-了解如何对Adobe Experience Manager Sites页面执行基本的页面管理操作。
+瞭解如何對Adobe Experience Manager Sites頁面執行基本頁面管理操作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32147?quality=12&learn=on)
 
 
 ## 其他资源 {#additional-resources}
 
-* [编辑页面内容文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
+* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
 * [页面创作快速入门指南](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)

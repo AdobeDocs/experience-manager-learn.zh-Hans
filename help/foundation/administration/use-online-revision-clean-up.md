@@ -1,6 +1,6 @@
 ---
-title: 使用在线修订清理
-description: 在线修订清理简介。 在线修订清理减少了频繁的离线修订清理的需要。
+title: 使用線上修訂清除
+description: 線上修訂清除的簡介。 線上修訂清除可減輕頻繁離線修訂清除的需求。
 version: 6.4, 6.5
 topics: operations, authoring, performance
 activity: use
@@ -17,14 +17,14 @@ ht-degree: 0%
 
 ---
 
-# 使用在线修订清理
+# 使用線上修訂清除
 
-对在线修订清理的简要介绍，可减轻对频繁离线修订清理的需求。
+簡要介紹「線上修訂清除」，其可減輕頻繁進行「離線修訂清除」的需求。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17004?quality=12&learn=on)
 
-## 辅助材料
+## 支援材料
 
 * [AEM [!DNL JMX MBean - SegmentRevisionGarbageCollection]](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+revision+garbage+collection%2Ctype%3DSegmentRevisionGarbageCollection)
 
-* [AEM [!DNL OSGi Configuration] - [!UICONTROL Oak区段NodeStore服务]](http://localhost:4502/system/console/configMgr/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService)
+* [AEM [!DNL OSGi Configuration] - [!UICONTROL Oak區段NodeStore服務]](http://localhost:4502/system/console/configMgr/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService)

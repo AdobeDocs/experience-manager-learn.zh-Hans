@@ -1,6 +1,6 @@
 ---
-title: 一些有用的UI提示和技巧
-description: 文档以演示一些有用的用户界面提示
+title: 一些實用的UI提示和技巧
+description: 檔案以示範一些實用的使用者介面提示
 feature: Adaptive Forms
 type: Tutorial
 version: 6.5
@@ -16,17 +16,17 @@ ht-degree: 2%
 
 ---
 
-# 切换密码字段可见性
+# 切換密碼欄位可見性
 
-一个常见用例是，允许表单填充程序切换到在密码字段中输入的文本的可见性。
-为了完成此用例，我使用了 [Font Awesome库](https://fontawesome.com/). 为此演示创建的客户端库中包含所需的CSS和eye.svg。
+常見的使用案例是允許表單填寫者切換至在密碼欄位中輸入文字的可見度。
+為了完成此使用案例，我使用了以下檔案中的眼睛圖示： [Font Awesome Library](https://fontawesome.com/). 必要的CSS和eye.svg包含在為此示範建立的使用者端資料庫中。
 
 
-## 示例代码
+## 程式碼範例
 
-自适应表单的字段类型为PasswordBox，称为 **ssnField**.
+最適化表單有一個欄位為PasswordBox型別，稱為 **ssnField**.
 
-加载表单时将执行以下代码
+載入表單時執行以下程式碼
 
 ```javascript
 $(document).ready(function() {
@@ -48,7 +48,7 @@ $(document).ready(function() {
 });
 ```
 
-以下CSS用于定位 **眼睛** 密码字段内的图标
+下列CSS是用來定位 **眼睛** 圖示在密碼欄位內
 
 ```javascript
 .svg-inline--fa {
@@ -63,12 +63,12 @@ $(document).ready(function() {
 }
 ```
 
-## 部署切换密码示例
+## 部署切換密碼範例
 
-* 下载 [客户端库](assets/simple-ui-tips.zip)
-* 下载 [示例表单](assets/simple-ui-tricks-form.zip)
-* 使用 [包管理器UI](http://localhost:4502/crx/packmgr/index.jsp)
-* 使用 [Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [预览表单](http://localhost:4502/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
+* 下載 [使用者端資源庫](assets/simple-ui-tips.zip)
+* 下載 [範例表單](assets/simple-ui-tricks-form.zip)
+* 使用匯入使用者端資料庫 [封裝管理員UI](http://localhost:4502/crx/packmgr/index.jsp)
+* 使用匯入範例表單 [Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
 
 

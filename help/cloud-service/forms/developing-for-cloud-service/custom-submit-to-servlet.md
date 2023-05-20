@@ -1,6 +1,6 @@
 ---
-title: 创建自定义提交操作处理程序
-description: 向自定义提交处理程序提交自适应表单
+title: 建立自訂提交動作處理常式
+description: 將最適化表單提交至自訂提交處理常式
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -15,10 +15,10 @@ ht-degree: 0%
 
 ---
 
-# 创建Servlet以处理提交的数据
+# 建立servlet以處理提交的資料
 
-在IntelliJ中启动您的aem银行项目。
-创建一个简单的Servlet，将提交的数据输出到日志文件。确保代码位于核心项目中，如以下屏幕截图所示
+在IntelliJ中啟動您的aem-banking專案。
+建立簡單的servlet，將提交的資料輸出至記錄檔。確認程式碼位於核心專案中，如下列熒幕擷圖所示
 ![create-servlet](assets/create-servlet.png)
 
 ```java
@@ -40,18 +40,18 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 }
 ```
 
-## 创建自定义提交
+## 建立自訂提交
 
-在应用程序/银行应用程序文件夹中创建自定义提交，其方式与在中创建的方式相同 [早期版本的AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en)
-post.POST.jsp中的以下代码只需将请求转发到/bin/formstutorial上挂载的servlet即可。 这与前面步骤中创建的Servlet相同
+在app/bankingapplication資料夾中建立自訂提交，就像在 [舊版AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en)
+post.request.jsp中的下列程式碼只會將POST轉送給掛載在/bin/formstutorial上的servlet。 這是先前步驟中建立的相同servlet
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
-## 配置自适应表单
+## 設定最適化表單
 
-您现在可以将自适应表单配置为提交到此名为的自定义提交处理程序 **提交到AEM Servlet**
+您現在可以設定最適化表單，以提交至這個自訂提交處理常式，稱為 **提交至AEM Servlet**
 
 
 

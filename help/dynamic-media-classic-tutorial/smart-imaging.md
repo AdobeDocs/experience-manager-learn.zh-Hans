@@ -1,6 +1,6 @@
 ---
 title: 智能成像
-description: Dynamic Media Classic中的“智能成像”功能可基于客户端浏览器功能自动优化图像格式和质量，从而增强图像交付性能。 它通过利用Adobe Sensei AI功能并使用现有图像预设来实现此目的。 进一步了解智能成像，以及如何通过加快页面加载速度来使用它提供更好的客户体验。
+description: Dynamic Media Classic中的智慧型影像可根據使用者端瀏覽器功能，自動最佳化影像格式和品質，進而增強影像傳送效能。 其做法是運用Adobe Sensei AI功能並使用現有的影像預設集。 進一步瞭解智慧型影像處理，以及如何透過更快的頁面載入來使用智慧型影像處理提供更佳的客戶體驗。
 feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, renditions, images
@@ -19,42 +19,42 @@ ht-degree: 2%
 
 # 智能成像 {#smart-imaging}
 
-客户在您的网站、移动设备网站或应用程序上体验的最重要方面之一是页面加载时间。 如果页面加载时间过长，客户通常会放弃网站或应用程序。 图像构成了页面加载时间的大部分。 Dynamic Media Classic中的“智能成像”功能可基于客户端浏览器功能自动优化图像格式和质量，从而增强图像交付性能。 它通过利用Adobe Sensei AI功能并使用现有图像预设来实现此目的。 “智能成像”功能将图像大小减少了30%或更多，这意味着页面加载速度更快，客户体验更佳。
+客戶在您網站或行動網站或應用程式上的體驗中，最重要的一個方面是頁面載入時間。 如果頁面載入時間過長，客戶通常會捨棄網站或應用程式。 影像構成了大部分的頁面載入時間。 Dynamic Media Classic中的智慧型影像可根據使用者端瀏覽器功能，自動最佳化影像格式和品質，進而增強影像傳送效能。 其做法是運用Adobe Sensei AI功能並使用現有的影像預設集。 智慧型影像處理可將影像大小減少30%或更多，進而加快頁面載入速度，並提供更佳的客戶體驗。
 
-Smart Imaging还得益于与Adobe中同类最佳的优质服务完全集成而带来的额外性能提升。 此服务可找到在服务器、网络和对等点之间的最佳Internet路由，这些路由的延迟和/或数据包丢失率低于Internet上的默认路由。
+智慧型影像還能與Adobe提供的同級最佳優質服務充分整合，進一步提升效能。 此服務會尋找伺服器、網路和對等點之間的最佳網際網路路由，其延遲和/或封包遺失率比網際網路上的預設路由要低。
 
-详细了解 [智能成像](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
+進一步瞭解 [智慧型影像](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
 
-## 智能成像的优势
+## 智慧型影像的優點
 
-由于图像是页面加载时间的大部分，因此，智能成像技术的性能提升可能会对业务KPI产生深远影响，例如更高的转化率、网站逗留时间和较低的网站跳出率。
+由於影像構成了頁面大部分的載入時間，因此智慧型影像的效能提升可能會對業務KPI產生深遠影響，例如更高的轉換率、網站逗留時間以及較低的網站跳出率。
 
 ![图像](assets/smart-imaging/smart-imaging-1.png)
 
-## 智能成像的工作原理
+## 智慧型影像如何運作
 
-如前所述，智能成像可利用Adobe Sensei AI功能并与现有的图像预设配合使用，将图像自动转换为最佳的下一代图像格式，如WebP，同时保持可视保真度。
+如先前所述，智慧型影像處理運用Adobe Sensei AI功能，並與現有的影像預設集搭配使用，自動將影像轉換為最佳的新一代影像格式，例如WebP，同時維持視覺逼真度。
 
-详细了解 [智能成像的工作原理](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)，包括诸如受支持的图像格式（以及如果您不使用这些格式会发生什么情况）等详细信息，以及这些格式对现有图像预设的影响。
+進一步瞭解 [智慧型影像如何運作](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)，包括支援的影像格式（以及若未使用這些格式會發生什麼情況）等詳細資料，及其對使用中的現有影像預設集的影響。
 
-## 智能成像的影响
+## 智慧型影像的影響
 
-您可能担心必须更改网站上的URL、图像预设和代码才能利用智能成像。 如果您满足使用智能成像的先决条件，并且您只能处理支持的JPEG和PNG图像格式的图像，则无需进行任何更改。
+您可能擔心您必須變更網站上的URL、影像預設集和程式碼，才能使用智慧型影像處理。 如果您符合使用智慧型影像的先決條件，而且您只處理支援的JPEG和PNG影像格式的影像，則不需要進行任何變更。
 
-智能成像可处理通过HTTP、HTTPS和HTTP/2传送的图像。
+智慧型影像處理透過HTTP、HTTPS和HTTP/2傳送的影像。
 
 >[!NOTE]
 >
->移动到智能成像会清除CDN中的缓存。 CDN中的缓存通常会在一两天内重新构建。
+>移到智慧型影像可清除CDN上的快取。 CDN中的快取通常會在一或兩天內重新建立。
 
-您现有的Dynamic Media Classic许可证中包含智能成像。 此功能不需要额外付费。 要利用此功能，您必须满足以下两个要求：拥有Adobe捆绑的CDN和专用域。 然后，您必须为您的帐户启用它，因为它未自动启用。
+智慧型影像包含於您現有的Dynamic Media Classic授權中。 此功能不需額外付費。 若要妥善運用，您必須符合兩項需求：具備Adobe隨附的CDN和專用網域。 然後，您必須為您的帳戶啟用它，因為它未自動啟用。
 
-启用智能成像时，首先需要通过 |创建支持案例| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). 支持团队将与您一起设置一个将与智能成像相关联的自定义域。 您将更改一个与缓存相关的参数（生存时间或TTL），并且支持将清除缓存。 如果需要，您还可以在推送到生产之前执行可选的暂存步骤。 然后，当启用“智能成像”功能后，您将为客户提供较小尺寸的图像，但质量与他们要求的相同。 这意味着他们的页面加载时间更短 — 所有这些操作都会自动完成，因为Adobe Sensei可帮助选择最高效的大小。
+若要啟用智慧型影像，您必須透過以下方式傳送技術支援請求： |建立支援案例| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). 支援人員將與您合作，設定您將與智慧型影像建立關聯的自訂網域。 您將變更一個與快取相關的引數（存留時間或TTL），支援將清除快取。 您也可以選擇在推送至生產環境前執行選擇性預備步驟。 之後，當「智慧型影像」開啟時，您會以客戶要求的相同品質，提供尺寸較小的影像。 這表示它們的頁面載入速度更快 — 而且所有這一切都是自動完成的，因為Adobe Sensei有助於選擇最有效率的大小。
 
-启用“智能成像”后，您将需要验证它是否按预期工作。
+啟用智慧型影像之後，您需要確認它是否如預期般運作。
 
-您可能还有其他有关智能成像的问题。 我们汇编了一系列常见问题解答(FAQ)及其答案。 阅读 [常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
+您可能有其他關於智慧型影像的問題。 我們已整理好常見問題集(FAQ)的清單，並提供解答。 閱讀 [常見問答](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
 
 ## 其他资源
 
-观看 [Dynamic Media Classic优化页面性能技能培养](https://seminars.adobeconnect.com/pzc1gw0cihpv) 按需网络研讨会，了解有关智能成像的更多信息。
+觀看 [Dynamic Media Classic頁面效能最佳化技能培養](https://seminars.adobeconnect.com/pzc1gw0cihpv) 隨選網路研討會，進一步瞭解智慧影像處理。

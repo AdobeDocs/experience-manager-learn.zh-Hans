@@ -1,45 +1,45 @@
 ---
-title: 对管理员有价值的报告
-description: 了解Dynamic Media Classic管理员应考虑设置的两个有价值的报表。
+title: 適合管理員的寶貴報表
+description: 探索Dynamic Media Classic管理員應考慮設定的兩個重要報表。
 feature: Dynamic Media Classic
 topic: Content Management
 role: Admin
 level: Intermediate
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: c3fbfb0b-3222-46ff-9248-dea70ce85a23
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
 
 ---
 
+# 適合管理員的寶貴報表 {#valuable-reports}
 
-# 对管理员有价值的报告 {#valuable-reports}
+在最後一章中，我們只是希望您瞭解如果您是管理員，可以考慮設定的兩個重要報表： 「頻寬與儲存」報表和「影像錯誤」報表。
 
-在最后一章中，我们仅希望您了解在您是管理员时可能考虑设置的两个重要报表：“带宽和存储”报告和“图像错误”报告。
+## 頻寬與儲存空間報告
 
-## 带宽和存储报告
-
-“带宽和存储”报表详细列出了每月使用的图像服务器带宽以及您在Dynamic Media Classic上使用的存储。 存储是合同金额，因此检查并确保您保持在您的限制下以避免超额费用，这一点很重要。
+「頻寬與儲存」報表詳細說明每個月消耗的Image Server頻寬以及您在Dynamic Media Classic上使用的儲存空間。 儲存量是合約金額，因此務必檢查並確保不超過您的限額，以避免超額費用。
 
 ![图像](assets/valuable-reports/reports-1.jpg)
 
-_“带宽和存储”报表显示此帐户已超过其30 GB存储限制。_
+_「頻寬與儲存」報表會顯示此帳戶已超出30GB的儲存限制。_
 
-## 图像错误报表
+## 影像錯誤報告
 
-每当URL请求缺少的图像时，图像服务器都会生成错误。 在这些情况下，您可以设置要显示的默认图像，但您仍应注意到错误。 “图像错误”报表会为您提供过去24小时内20个最常出现的图像错误的列表，以及错误发生次数、提供错误的图像以及出现问题图像的页面等详细信息。 如果响应为“DEFAULT”，则表示提供了默认图像。
+每當URL請求缺少影像時，影像伺服器都會產生錯誤。 您可以設定在這些情況下顯示的預設影像，但您仍應注意到錯誤。 「影像錯誤」報表提供您過去24小時內最常發生的20個影像錯誤清單，以及發生錯誤次數、發生錯誤的影像以及有問題影像的頁面等詳細資訊。 如果回應為「DEFAULT」，表示已改為提供預設影像。
 
 ![图像](assets/valuable-reports/reports-2.jpg)
 
-_图像错误报表。_
+_影像錯誤報告。_
 
-## 结论
+## 結論
 
-我们希望您在此最佳实践指南中找到的内容有助于您开始使用功能强大的富媒体解决方案，或从中获得更多的益处。
+我們希望您在本最佳實務指南中找到內容，可協助您開始使用功能強大的多媒體解決方案，或從中學到更多。
 
-要进一步了解Dynamic Media Classic，请查看以下资源：
+若要深入瞭解Dynamic Media Classic，請參閱下列資源：
 
-- [Dynamic Media Classic on Experience League — 实现价值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Dynamic Media Classic on Experience League — 执行更多操作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
-- [Dynamic Media快讯档案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
-- [Dynamic Media Classic文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)
+- [Experience League上的Dynamic Media Classic — 取得價值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- [Experience League上的Dynamic Media Classic — 完成更多工作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- [Dynamic Media電子報封存](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
+- [Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)

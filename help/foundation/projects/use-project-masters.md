@@ -1,6 +1,6 @@
 ---
-title: 如何在AEM中使用项目主页
-description: 使用AEM Projects，项目主管可以大大简化用户和团队管理。
+title: 如何在AEM中使用主要專案
+description: 主要專案透過AEM專案大幅簡化使用者和團隊管理。
 version: 6.4, 6.5, Cloud Service
 topic: Content Management, Collaboration
 feature: Projects
@@ -16,39 +16,39 @@ ht-degree: 0%
 
 ---
 
-# 使用项目主页
+# 使用主要專案
 
-项目管理员可通过 [!DNL AEM Projects].
+主要專案透過以下功能，大幅簡化使用者和團隊管理 [!DNL AEM Projects].
 
 >[!VIDEO](https://video.tv.adobe.com/v/17740?quality=12&learn=on)
 
-管理员现在可以创建 **[!DNL Master Project]** 并作为项目团队的一部分，将用户分配给角色/权限。 可以从主控项目创建项目，并自动继承团队成员资格。 这具有以下几个优势：
+管理員現在可以建立 **[!DNL Master Project]** 並將使用者指派給作為專案團隊一部分的角色/許可權。 可以從主要專案建立專案，並自動繼承團隊成員資格。 這提供下列幾項優點：
 
-* 在多个项目中重复使用现有团队
-* 加快了项目的创建速度，因为无需手动重新创建团队
-* 项目会自动从中心位置管理团队成员资格，并对团队进行的任何更新
-* 避免创建可能导致性能问题的重复ACL
+* 在多個專案中重複使用現有團隊
+* 加速專案建立，因為團隊不需要手動重新建立
+* 從中央位置管理團隊成員資格，且專案會自動繼承團隊的任何更新
+* 避免建立可能導致效能問題的重複ACL
 
-[!DNL Master Projects] 可在下创建 [!UICONTROL 大师] 文件夹 [!UICONTROL AEM项目]. 创建主控项目后，该项目会作为一个选项显示在创建新项目时向导中可用模板旁边。
+[!DNL Master Projects] 可建立於 [!UICONTROL 主版] 資料夾位於 [!UICONTROL AEM專案]. 建立主版專案後，在建立新專案時，會在精靈中顯示為可用範本旁邊的選項。
 
-[!DNL Project Masters] URL（本地AEM创作实例）： [http://localhost:4502/projects.html/content/projects/masters](http://localhost:4502/projects.html/content/projects/masters)
+[!DNL Project Masters] URL （本機AEM作者執行個體）： [http://localhost:4502/projects.html/content/projects/masters](http://localhost:4502/projects.html/content/projects/masters)
 
 ## 删除 [!DNL Project Masters]
 
-删除主控项目会导致派生项目不可用。
+刪除主要專案會導致衍生的專案無法使用。
 
-在删除主控项目之前，请确保完成所有派生项目并从AEM中删除。 在删除派生项目之前，请确保保存所有必需的项目数据。 从AEM中删除所有派生项目后，可以安全地删除主控项目。
+在刪除主要專案之前，請確定所有衍生的專案都已完成並從AEM中移除。 在移除衍生的專案之前，請務必儲存所有必要的專案資料。 從AEM移除所有衍生專案後，就可以安全地刪除主專案。
 
-## 标记 [!DNL Project Masters] 不活动
+## 標籤 [!DNL Project Masters] 作為非使用中
 
-通过将主控项目的状态更改为项目属性中的不活动状态，不活动的主控项目会从主控项目列表中消失。
+藉由將主要專案在專案屬性中的狀態變更為非作用中，非作用中的主要專案會從主要專案清單中消失。
 
-要显示不活动的主控项目，请切换顶部栏中的“显示活动”过滤器按钮（位于列表显示切换开关旁边）。 要使不活动的项目再次处于活动状态，只需选择不活动的主控项目，编辑项目属性，然后再次将其设置为活动。
+若要顯示非使用中的主專案，請切換頂端列中的「顯示使用中」篩選按鈕（在清單顯示切換旁邊）。 若要讓非使用中專案再次啟用，只需選取非使用中主要專案、編輯專案屬性，然後再次將其設定為啟用。
 
-## 了解 [!DNL Project Masters]
+## 瞭解 [!DNL Project Masters]
 
-![项目主技术视图](assets/use-project-masters/project-masters-architecture.png)
+![主要專案技術檢視](assets/use-project-masters/project-masters-architecture.png)
 
-[!DNL Project Masters] 通过使用定义一组AEM用户组（所有者、编辑者和观察者）并允许派生项目引用和重复使用这些集中定义的用户组来进行工作。
+[!DNL Project Masters] 可藉由定義一組AEM使用者群組（擁有者、編輯者和觀察者）來運作，並允許衍生的「專案」參照及重複使用這些集中定義的使用者群組。
 
-这会减少AEM中所需的用户组总数。 之前 [!DNL Project Masters]，每个项目都创建了3个用户组以及随附的ACE以强制执行权限授予，因此，100个项目产生了300个用户组。 项目主体允许任意数量的项目重复使用相同的三个组，前提是共享成员资格符合项目中的业务要求。
+這會減少AEM中所需的使用者群組總數。 早於 [!DNL Project Masters]，每個專案都會建立3個使用者群組及隨附的ACE以強制進行許可權管理，因此100個專案會產生300個使用者群組。 主要專案允許任意數量的專案重複使用相同的三個群組，前提是共用的成員資格符合整個專案的業務需求。

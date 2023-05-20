@@ -1,6 +1,6 @@
 ---
-title: 在JMX控制台中调整参数的步骤
-description: 配置JMX控制台参数
+title: 在JMX主控台上調整引數的步驟
+description: 設定JMX主控台引數
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# 在JMX控制台中调整参数的步骤
+# 在JMX主控台上調整引數的步驟
 
-*此视频将演示在JMX控制台中调整参数的步骤。*
+*本影片逐步解說在JMX主控台調整引數的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335554?quality=12&learn=on)

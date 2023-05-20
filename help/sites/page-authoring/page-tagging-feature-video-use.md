@@ -1,7 +1,7 @@
 ---
-title: 将页面标记与AEM Sites结合使用
+title: 搭配AEM Sites使用頁面標籤
 seo-title: Using Page Tagging with Adobe Experience Manager Sites
-description: 以下视频重点介绍如何使用页面标记快速轻松地对Adobe Experience Manager网站中的内容进行分类。
+description: 以下影片重點說明如何使用頁面標籤，快速輕鬆地分類Adobe Experience Manager網站中的內容。
 seo-description: The following video highlights how to quickly and easily classify content within a website in Adobe Experience Manager using page tags.
 feature: Page Editor
 topics: authoring
@@ -22,8 +22,8 @@ ht-degree: 0%
 
 ---
 
-# 标记页面 {#using-page-tagging-with-aem-sites}
+# 標籤頁面 {#using-page-tagging-with-aem-sites}
 
-了解如何使用标记在Adobe Experience Manager中维护和组织网页。
+瞭解如何使用標籤在Adobe Experience Manager中維護及組織您的網頁。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32150?quality=12&learn=on)

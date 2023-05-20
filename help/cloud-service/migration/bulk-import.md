@@ -1,6 +1,6 @@
 ---
-title: 在AEM Assets中使用批量导入
-description: 通过AEMas a Cloud Service中的批量导入工具，管理员能够以安全、高效的方式从云存储(Azure Blob Storage或Amazon S3)批量导入资产。
+title: 搭配AEM Assets使用大量匯入
+description: AEMas a Cloud Service中的大量匯入工具可讓管理員以安全又有效率的方式從雲端儲存空間(Azure Blob儲存空間或Amazon S3)大量匯入資產。
 version: Cloud Service
 doc-type: technical-video
 topics: Migration
@@ -21,17 +21,17 @@ ht-degree: 0%
 
 ---
 
-# 使用批量导入
+# 使用大量匯入
 
-通过AEMas a Cloud Service中的批量导入工具，管理员能够以安全、高效的方式从云存储(Azure Blob Storage或Amazon S3)批量导入资产。
+AEMas a Cloud Service中的大量匯入工具可讓管理員以安全又有效率的方式從雲端儲存空間(Azure Blob儲存空間或Amazon S3)大量匯入資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
 
-## 计划批量导入
+## 排程大量匯入
 
-批量导入支持按计划执行配置，包括：
+大量匯入支援排程執行的設定，包括：
 
-+ 在定义的日期和时间执行一次
-+ 每小时、每天或每周执行一次期间执行
++ 在定義的日期和時間執行單一
++ 週期執行，每小時、每天或每週
 
-![批量导入计划](./assets/bulk-import/schedule.png)
+![大量匯入排程](./assets/bulk-import/schedule.png)

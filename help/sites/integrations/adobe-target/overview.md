@@ -1,6 +1,6 @@
 ---
-title: AEM和Adobe Target概述
-description: 了解如何使用Adobe Experience Manager作为Cloud Service和Adobe Target来创建和提供个性化体验。
+title: AEM和Adobe Target概觀
+description: 瞭解如何使用Adobe Experience Manager as a Cloud Service和Adobe Target建立和提供個人化體驗。
 feature: Experience Fragments, Core Components, Adobe Client Data Layer
 topics: integrations, personalization, administration, development
 audience: all
@@ -22,28 +22,28 @@ ht-degree: 0%
 
 # AEM和Adobe Target
 
-Adobe Experience Manager(AEM)和Adobe Target是强大且具有免费功能的解决方案，不能被误解为竞争对手。 客户有时难以理解如何以及何时将这些产品与提供个性化体验结合使用。 为了为每个最终用户提供优化的体验，您组织内的不同团队应密切合作，并定义谁来做什么。
+Adobe Experience Manager (AEM)和Adobe Target是功能強大的解決方案，具有可以被誤解為競爭的免費功能。 客戶有時很難瞭解搭配使用這些產品來提供個人化體驗的方式和時機。 為了提供最佳化體驗給每位一般使用者，組織內不同的團隊應密切合作，並定義各自的職責。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41241?quality=12&learn=on)
 
-在此视频中，我们将讨论使用AEM和Target的三种方法，并帮助您了解哪些方法最适合您的组织。
+在這段影片中，我們將討論使用AEM和Target的三種方法，並幫助您瞭解什麼對您的組織最合適。
 
-* __场景1:__ 使用AEM Experience Fragment选件进行个性化
+* __案例1：__ 使用AEM體驗片段選件進行個人化
 
-   1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
-   1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
-   1. [将AEM创作服务与Adobe Target集成](./setup-aem-target-cloud-service.md)
-   1. [将AEM体验片段导出到Adobe Target](./export-experience-fragment-target.md)
-   1. [使用体验片段选件对网页的部分内容进行个性化](./create-target-activity.md)
+   1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+   1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
+   1. [將AEM作者服務與Adobe Target整合](./setup-aem-target-cloud-service.md)
+   1. [將AEM體驗片段匯出至Adobe Target](./export-experience-fragment-target.md)
+   1. [使用體驗片段選件個人化部分網頁](./create-target-activity.md)
 
-* __情景2:__ 使用可视化体验编辑器进行个性化(VEC)
+* __案例2：__ 使用視覺化體驗撰寫器(VEC)進行個人化
 
-   1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
-   1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
-   1. [使用可视化体验编辑器对网页的部分内容进行个性化](./personalization-using-vec.md)
+   1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+   1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
+   1. [使用視覺化體驗撰寫器個人化部分網頁](./personalization-using-vec.md)
 
-* __场景3:__ 完整网页体验的个性化
+* __案例3：__ 個人化完整網頁體驗
 
-   1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
-   1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
-   1. [个性化完整的网页体验](./personalization-web-page.md)
+   1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+   1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
+   1. [個人化完整的網頁體驗](./personalization-web-page.md)

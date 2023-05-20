@@ -1,6 +1,6 @@
 ---
-title: 解决AEM中复制问题的步骤
-description: 调查和解决与复制相关问题的步骤
+title: 解決AEM中復寫問題的步驟
+description: 調查及解決復寫相關問題的步驟
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 解决AEM中复制问题的步骤
+# 解決AEM中復寫問題的步驟
 
-*此视频将介绍如何解决AEM中的复制问题。*
+*本影片逐步解說解決AEM中復寫問題的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335471?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 对AEM内容片段的翻译支持
-description: 了解如何使用Adobe Experience Manager本地化和翻译内容片段。 与内容片段关联的混合媒体资产也有资格进行提取和翻译。
+title: AEM內容片段的翻譯支援
+description: 瞭解如何使用Adobe Experience Manager將內容片段當地語系化和翻譯。 與內容片段相關的混合媒體資產也有資格被擷取及翻譯。
 feature: Content Fragments, Multi Site Manager
 topic: Localization
 role: User
@@ -16,25 +16,25 @@ ht-degree: 2%
 
 ---
 
-# 对AEM内容片段的翻译支持 {#translation-support-content-fragments}
+# AEM內容片段的翻譯支援 {#translation-support-content-fragments}
 
-了解如何使用Adobe Experience Manager本地化和翻译内容片段。 与内容片段关联的混合媒体资产也有资格进行提取和翻译。
+瞭解如何使用Adobe Experience Manager將內容片段當地語系化和翻譯。 與內容片段相關的混合媒體資產也有資格被擷取及翻譯。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18131?quality=12&learn=on)
 
-## 内容片段翻译用例 {#content-fragment-translation-use-cases}
+## 內容片段翻譯使用案例 {#content-fragment-translation-use-cases}
 
-内容片段是AEM提取的可识别内容类型，可发送到外部翻译服务。 开箱即用地支持以下几个用例：
+內容片段是可辨識的內容型別，AEM會擷取該型別以傳送至外部翻譯服務。 提供開箱即用的數個使用案例：
 
-1. 内容片段可以是 [直接在“资产”控制台中选择以进行语言复制和翻译](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
-2. 在为语言副本选择站点页面时，在站点页面上引用的内容片段将会复制到相应的语言文件夹中，并提取以供翻译。
-3. 内容片段中嵌入的内联媒体资产有资格进行提取和翻译。
-4. 与内容片段关联的资产集合有资格进行提取和翻译。
+1. 內容片段可以是 [直接在Assets控制檯中選取以進行語言複製和翻譯](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
+2. 在網站頁面上參考的內容片段會複製到適當的語言資料夾，並在為語言副本選取網站頁面時擷取以供翻譯。
+3. 內嵌在內容片段中的內嵌媒體資產符合擷取和翻譯的條件。
+4. 與內容片段相關的資產集合符合擷取和翻譯的條件。
 
 ## 翻译规则编辑器 {#translation-rules-editor}
 
-Experience Manager翻译行为可使用 **翻译规则编辑器**. 要更新翻译，请导航至 **工具** > **常规** > **翻译配置** at [http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html).
+Experience Manager翻譯行為可透過使用更新 **翻譯規則編輯器**. 若要更新翻譯，請導覽至 **工具** > **一般** > **翻譯設定** 於 [http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html).
 
-开箱即用的配置引用了 `fragmentPath` 资源类型为 `core/wcm/components/contentfragment/v1/contentfragment`. 继承自 `v1/contentfragment` 被默认配置识别。
+開箱即用的設定參考內容片段，位於 `fragmentPath` 資源型別為 `core/wcm/components/contentfragment/v1/contentfragment`. 繼承自以下專案的所有元件： `v1/contentfragment` 會由預設設定識別。
 
 ![翻译规则编辑器](assets/translation-configuration.png)

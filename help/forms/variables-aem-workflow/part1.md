@@ -1,6 +1,6 @@
 ---
-title: AEM Workflow[Part1]中的变量
-description: 在AEM工作流中使用XML、JSON、ArrayList和Document类型的变量
+title: AEM工作流程中的變數[Part1]
+description: 在AEM工作流程中使用XML、JSON、ArrayList、檔案型別的變數
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -14,48 +14,48 @@ ht-degree: 0%
 
 ---
 
-# AEM工作流中的XML变量
+# AEM Workflow中的XML變數
 
-当您具有基于XSD的自适应表单，并希望从工作流中的自适应表单提交中提取值时，通常会使用XML类型的变量。
+如果您有以XSD為基礎的最適化表單，且想要從工作流程中的最適化表單提交中擷取值，通常會使用XML型別的變數。
 
-以下视频将指导您完成创建字符串和XML类型变量并在工作流中使用这些变量所需的步骤。
+以下影片將引導您完成建立字串和XML型別變數並在工作流程中使用它們所需的步驟。
 
-XML变量可用于预填充自适应表单或在工作流中存储自适应表单的提交数据。
+XML變數可用來預先填入最適化表單，或將最適化表單的提交資料儲存在您的工作流程中。
 
-字符串变量可以由Xpathing填充到XML变量中。 然后，此字符串变量通常用于填充“发送电子邮件”组件中的电子邮件模板占位符
+字串變數可由Xpathing填入XML變數中。 然後，此字串變數通常用於填入傳送電子郵件元件中的電子郵件範本預留位置
 
 >[!NOTE]
 >
->如果自适应表单未与XSD关联，则用于获取元素值的XPath将如下所示
+>如果您的調適型表單未與XSD相關聯，則用於取得元素值的XPath看起來會像
 >
 >**/afData/afUnboundData/data/submitterName**
 
-自适应表单数据存储在数据元素下，如上所示。 **_在上述XPath submitterName中，是自适应表单中文本字段的名称。_**
+最適化表單資料會儲存在資料元素下，如上所示。 **_上述XPath submitterName為最適化表單中文字欄位的名稱。_**
 
 >[!NOTE]
 >
->**AEM Forms 6.5.0**  — 创建XML类型的变量以在工作流模型中捕获提交的数据时，请不要将XSD与变量关联。 这是因为在提交基于XSD的自适应表单时，提交的数据与XSD不兼容。 XSD投诉数据将包含在/afData/afBoundData/元素中。
+>**AEM Forms 6.5.0**  — 當您建立型別為XML的變數來擷取工作流程模型中提交的資料時，請勿將XSD與變數建立關聯。 這是因為當您提交以XSD為基礎的最適化表單時，提交的資料與XSD不相容。 XSD申訴資料包含在/afData/afBoundData/元素中。
 >
->**AEM Forms 6.5.1**  — 如果将XSD与XML变量关联，则可以浏览架构元素以执行变量映射。 您将无法访问未绑定到架构元素的表单数据。 如果您的用例是访问绑定到架构元素的数据以及未绑定的数据，则不要在工作流中将架构与XML变量绑定。您必须使用适当的XPath表达式来获取您需要的数据
+>**AEM Forms 6.5.1**  — 如果您將XSD與XML變數建立關聯，可以瀏覽結構元素以進行變數對應。 您將無法存取未繫結至結構描述元素的表單資料。 如果您的使用案例是存取繫結至結構描述元素的資料以及未繫結的資料，則請勿在工作流程中繫結結構描述與XML變數。您必須使用適當的XPath運算式來取得您需要的資料
 
-## 创建XML变量
+## 建立XML變數
 
 >[!VIDEO](https://video.tv.adobe.com/v/26440?quality=12&learn=on)
 
-### 将架构与XML变量结合使用
+### 搭配使用結構描述和XML變數
 
-**使用架构映射XML变量。 从AEM Forms 6.5.1开始使用此功能**
+**使用結構描述對應XML變數。 自AEM Forms 6.5.1起使用此功能**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28098?quality=12&learn=on)
 
-#### 在发送电子邮件中使用变量
+#### 在傳送電子郵件中使用變數
 
 >[!VIDEO](https://video.tv.adobe.com/v/26441?quality=12&learn=on)
 
-要使资产在您的系统上工作，请执行以下步骤：
+若要讓資產在您的系統上運作，請遵循下列步驟：
 
-* [使用包管理器下载资产并将其导入AEM](assets/xmlandstringvariable.zip)
-* [探索工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/vacationrequest.html) 以了解工作流中使用的变量
-* [配置电子邮件服务](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
-* [打开自适应表单](http://localhost:4502/content/dam/formsanddocuments/applicationfortimeoff/jcr:content?wcmmode=disabled)
-* 填写详细信息并提交表格。
+* [使用封裝管理程式下載資產並將其匯入AEM](assets/xmlandstringvariable.zip)
+* [探索工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/vacationrequest.html) 瞭解工作流程中使用的變數
+* [設定電子郵件服務](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
+* [開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/applicationfortimeoff/jcr:content?wcmmode=disabled)
+* 填寫詳細資料並提交表單。

@@ -1,6 +1,6 @@
 ---
-title: 在本地AEM上设置资产共享共用
-description: 有关功能和技术了解的材料资产共享共用
+title: 在本機AEM上設定Asset Share Commons
+description: 適用於功能和技術瞭解Assets Share Commons的材料
 version: 6.4, 6.5
 topic: Content Management
 role: Developer
@@ -14,14 +14,14 @@ ht-degree: 0%
 
 ---
 
-# 在本地AEM上设置资产共享共用 {#setup-asset-share-commons}
+# 在本機AEM上設定Asset Share Commons {#setup-asset-share-commons}
 
-有关在本地AEM实例上运行资产共享共用的简短指南。
+本機AEM執行個體上執行Asset Share Commons的簡短指南。
 
 >[!NOTE]
 >
->Asset Share Commons要求安装Service Pack 1(SP1)时至少安装AEM 6.3。
+>Asset Share Commons至少需要安裝AEM 6.3 Service Pack 1 (SP1)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20499?quality=12&learn=on)
 
-有关下载和安装Asset Share Commons的简短视频演示，以及其在本地AEM实例上的示例内容。
+簡短影片逐步說明下載和安裝Asset Share Commons的功能，以及在本機AEM執行個體上的範例內容。

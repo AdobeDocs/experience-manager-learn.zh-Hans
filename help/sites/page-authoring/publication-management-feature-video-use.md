@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Sites发布页面
-description: Adobe Experience Manager Sites提供了多个用于发布和取消发布内容的选项。 本视频探讨了各种方法及其功能。
+title: 使用AEM Sites發佈頁面
+description: Adobe Experience Manager Sites提供幾個選項來發佈和取消發佈內容。 本影片會說明各種方法及其功能。
 feature-set: Experience Manager
 version: 6.4, 6.5, Cloud Service
 kt: 4322
@@ -17,22 +17,22 @@ ht-degree: 1%
 
 ---
 
-# 发布页面 {#using-publication-management-with-aem-sites}
+# 發佈頁面 {#using-publication-management-with-aem-sites}
 
-AEM Sites提供了多个用于发布和取消发布内容的选项。 本视频探讨了各种方法及其功能。
+AEM Sites提供幾個選項來發佈和取消發佈內容。 本影片會說明各種方法及其功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32193?quality=12&learn=on)
 
-AEM Sites根据作者的工作流程提供了几种用于发布和取消发布内容的方法。
+AEM Sites根據作者的工作流程，提供數種發佈和取消發佈內容的方法。
 
-* 从AEM Sites页面编辑器中发布当前页面
-   * 发布当前页面，并允许选择引用
-   * 取消发布当前页面
-* 从AEM Sites管理员快速发布
-   * 一键发布选定的页面，然后自动发布所有未发布的引用
-* 从AEM Sites管理员管理发布
-   * 用于对批量发布和取消发布内容进行详细管理的强大控制台。
+* 從AEM Sites頁面編輯器發佈目前頁面
+   * 發佈目前頁面，並允許選擇性選取引用
+   * 取消發佈目前頁面
+* 從AEM Sites管理員快速發佈
+   * 按一下即可發佈選取的頁面，並自動發佈所有未發佈的引用
+* 從AEM Sites管理員管理發布
+   * 強大的主控台可讓您詳細管理大量發佈和取消發佈的內容。
 
 ## 其他资源 {#additional-resources}
 
-* [发布页面文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html)
+* [發佈頁面檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html)

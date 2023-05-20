@@ -1,6 +1,6 @@
 ---
-title: 设计器预览HTML预览 — 如何启用预览HTML
-description: 在Designer中配置HTML预览的步骤
+title: Designer預覽HTML預覽 — 如何啟用預覽HTML
+description: 在Designer中設定HTML預覽的步驟
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# 如何启用预览HTML
+# 如何啟用預覽HTML
 
-*此视频将逐步介绍如何在Designer中启用预览HTML。*
+*本影片逐步說明在Designer中啟用預覽HTML的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335498?quality=12&learn=on)

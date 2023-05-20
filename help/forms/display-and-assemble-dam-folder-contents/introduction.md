@@ -1,6 +1,6 @@
 ---
-title: 选择并下载DAM文件夹内容
-description: 教程，用于使用DAM文件夹内容填充复选框组件并允许用户下载选定内容。
+title: 選取並下載DAM資料夾內容
+description: 教學課程將使用DAM資料夾內容填入核取方塊元件中，並允許使用者下載選取的內容。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -17,18 +17,18 @@ ht-degree: 3%
 
 # 简介
 
-一个常见用例是使用复选框组件列出DAM文件夹内容（pdf文件、word文档等），并允许用户选择要下载的文件。 所选文件将被组装成一个文件，供用户下载。
+常見的使用案例是使用核取方塊元件列出DAM資料夾內容（PDF檔案、Word檔案等），並允許使用者選取要下載的檔案。 選取的檔案將組合成一個檔案，供使用者下載。
 
-![用例](assets/newsletters-download1.png)
+![使用案例](assets/newsletters-download1.png)
 
 ## 前提条件
 
-您将需要满足以下条件：
+您將需要下列專案：
 
-* 安装了表单附加组件包的AEM的工作实例
+* 已安裝表單附加元件套件的AEM有效執行個體
 
-* [根据本文档设置的开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+* [根據此檔案設定的開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 
 ## 后续步骤
 
-[填充选择组](./populating-choice-group-with-dam-folder-content.md)
+[填入選擇群組](./populating-choice-group-with-dam-folder-content.md)

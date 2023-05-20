@@ -1,6 +1,6 @@
 ---
-title: 注释和批注
-description: 了解如何在AEM中使用注释和批注来交流和协作资产。
+title: 註解與註解
+description: 瞭解如何在AEM中使用評論和註解來溝通和合作使用資產。
 feature: Collaboration
 version: Cloud Service
 kt: 4541
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 注释和批注
+# 註解與註解
 
-了解如何在AEM中使用注释和批注来交流和协作资产。
+瞭解如何在AEM中使用評論和註解來溝通和合作使用資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32049?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 如何对与AEM中的Jetty配置相关的问题进行故障诊断
-description: 调查与jetty配置相关问题的步骤
+title: 如何疑難排解AEM中與Jetty設定相關的問題
+description: 調查與Jetty設定相關問題的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何对与AEM中的Jetty配置相关的问题进行故障诊断
+# 如何疑難排解AEM中與Jetty設定相關的問題
 
-*此视频将演示如何对与AEM中的Jetty配置相关的问题进行故障诊断。*
+*本影片逐步解說與AEM中Jetty設定相關問題的疑難排解步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335470?quality=12&learn=on)

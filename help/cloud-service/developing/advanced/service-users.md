@@ -1,6 +1,6 @@
 ---
-title: 服务用户
-description: 了解如何在AEM代码中创建和使用服务用户，以提供对AEM存储库的受控、编程访问。
+title: 服務使用者
+description: 瞭解如何在您的AEM程式碼中建立和使用服務使用者，以提供對AEM存放庫的受控制程式設計存取權。
 version: Cloud Service
 topic: Development
 feature: OSGI, Security
@@ -17,18 +17,18 @@ ht-degree: 8%
 
 ---
 
-# 服务用户
+# 服務使用者
 
-了解如何在AEM代码中创建和使用服务用户，以提供对AEM存储库的受控、编程访问。
+瞭解如何在您的AEM程式碼中建立和使用服務使用者，以提供對AEM存放庫的受控制程式設計存取權。
 
 >[!VIDEO](https://video.tv.adobe.com/v/337530?quality=12&learn=on)
 
 ## 资源
 
-+ [Sling存储库初始化（重新指示）文档](https://sling.apache.org/documentation/bundles/repository-initialization.html)
-+ [Sling服务身份验证文档](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)
++ [Sling存放庫初始化(repoinit)檔案](https://sling.apache.org/documentation/bundles/repository-initialization.html)
++ [Sling服務驗證檔案](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)
 
-## 代码
+## 程式碼
 
 ### ContentStatisticsImpl.java
 

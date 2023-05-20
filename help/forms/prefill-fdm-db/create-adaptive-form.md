@@ -1,113 +1,112 @@
 ---
-title: 创建自适应表单
-description: 创建并配置自适应表单以使用表单数据模型的预填充服务
-feature: 自适应表单
+title: 建立最適化表單
+description: 建立並設定最適化表單以使用表單資料模型的預填服務
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 5813
 thumbnail: kt-5813.jpg
-topic: 开发
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: c8d4eed8-9e2b-458c-90d8-832fc9e0ad3f
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 2%
+source-wordcount: '606'
+ht-degree: 1%
 
 ---
 
+# 建立最適化表單
 
-# 创建自适应表单
+到目前為止，我們已建立下列專案
 
-到目前为止，我们已经创建了以下
+* 具有2個資料表的資料庫 —  `newhire` 和 `beneficiaries`
+* 已設定的Apache Sling Connection Pooled DataSource
+* 以RDBMS為基礎的表單資料模型
 
-* 具有2个表的数据库 — `newhire`和`beneficiaries`
-* 已配置Apache Sling连接池化数据源
-* 基于RDBMS的表单数据模型
+下一步是建立和設定最適化表單，以使用表單資料模型。  若要搶先一步，您可以 [下載和匯入](assets/fdm-demo-af.zip) 範例表單。 範例表單有一個區段可顯示員工詳細資訊，另一個區段可列出員工的受益人。
 
-下一步是创建并配置自适应表单以使用表单数据模型。  要抢先一步，您可以下载并导入](assets/fdm-demo-af.zip)示例表单。 [示例表单有一个部分用于显示员工详细信息，另一个部分用于列出员工的受益人。
+## 將表單與表單資料模型建立關聯
 
-## 将表单与表单数据模型关联
+本課程隨附的範例表單未與任何表單資料模型建立關聯。 若要設定表單以使用表單資料模型，我們需要執行下列動作：
 
-本课程提供的示例表单与任何表单数据模型都不相关。 要配置表单以使用表单数据模型，我们需要执行以下操作：
+* 選取FDMDemo表單
+* 按一下 _屬性_->_表單模型_
+* 從下拉式清單中選取表單資料模型
+* 搜尋並選取您在上一堂課中建立的表單資料模型。
+* 按一下 _儲存並關閉_
 
-* 选择FDMDemo表单
-* 单击&#x200B;_属性_->_表单模型_
-* 从下拉列表中选择表单数据模型
-* 搜索并选择在前面的课程中创建的表单数据模型。
-* 单击&#x200B;_保存并关闭_
+## 設定預填服務
 
-## 配置预填充服务
+第一步是關聯表單的預填服務。 若要與預填服務建立關聯，請遵循下列步驟
 
-第一步是关联表单的预填充服务。 要关联预填充服务，请按照以下所述步骤操作
+* 選取 `FDMDemo` 表單
+* 按一下 _編輯_ 以編輯模式開啟表單
+* 在內容階層中選取「表單容器」，然後按一下扳手圖示以開啟其屬性工作表
+* 選取 _表單資料模型預填服務_ 從「預填服務」下拉式清單
+* 按一下藍色☑以儲存變更
 
-* 选择`FDMDemo`表单
-* 单击&#x200B;_编辑_&#x200B;以在编辑模式下打开表单
-* 在内容层次结构中选择“表单容器”，然后单击扳手图标以打开其属性表
-* 从预填充服务下拉列表中选择&#x200B;_表单数据模型预填充服务_
-* 单击蓝☑以保存更改
+* ![預填服務](assets/fdm-prefill.png)
 
-* ![预填充服务](assets/fdm-prefill.png)
+## 設定員工詳細資訊
 
-## 配置员工详细信息
-
-下一步是将自适应表单的文本字段绑定到表单数据模型元素。 您必须打开以下字段的属性表并设置其bindRef，如下所示
+下一個步驟是將最適化表單的文字欄位繫結至表單資料模型元素。 您必須開啟下列欄位的屬性表，並設定其bindRef，如下所示
 
 
-| 字段名称 | 绑定参考 |
+| 字段名 | 繫結參考 |
 |------------|--------------------|
 | 名字 | /newhire/FirstName |
 | 姓氏 | /newhire/lastName |
 
 >[!NOTE]
 >
->请随时添加其他文本字段，并将它们绑定到相应的表单数据模型元素
+>您可以新增其他文字欄位，並將其繫結至適當的表單資料模型元素
 
-## 配置受益人表
+## 設定受益人表格
 
-下一步是以表格形式显示员工的受益人。 提供的示例表单有一个表格，其中有4列和单行。 我们需要配置表以根据受益人的数量而增长。
+下一步是以表格方式顯示員工的受益人。 提供的範例表單有一個包含4欄和單列的表格。 我們需要設定表格以隨著受益人人數而成長。
 
-* 在编辑模式下打开表单。
-* 展开根面板 — >您的受益人 — >表
-* 选择Row1并单击扳手图标以打开其属性表。
-* 将绑定引用设置为&#x200B;**/newhire/GetEmployeeWeniters**
-* 将重复设置 — 最小计数设置为1，最大计数设置为5。
-* 您的Row1配置应类似于下面的屏幕快照
+* 在編輯模式下開啟表單。
+* 展開根面板 — >您的受益人 — >表格
+* 選取「列1」，然後按一下扳手圖示以開啟其屬性表。
+* 將繫結參考設定為 **/newhire/GetEmployeeRefineties**
+* 將「重複設定 — 最小計數」設定為1，將「最大計數」設定為5。
+* 您的Row1設定應該看起來像下面的熒幕擷圖
    ![row-configure](assets/configure-row.PNG)
-* 单击蓝色☑以保存更改
+* 按一下藍色☑鈕以儲存變更
 
-## 绑定行单元格
+## 繫結列儲存格
 
-最后，我们需要将行单元格绑定到表单数据模型元素。
+最後，我們需要將「列」儲存格繫結至「表單資料模型」元素。
 
-* 展开根面板 — >您的受益人 — >表 — >Row1
-* 根据下表设置每个行单元格的绑定引用
+* 展開根面板 — >您的受益人 — >表格 — >Row1
+* 依照下表設定每個資料列儲存格的繫結參考
 
-| 行单元格 | Bind 引用 |
+| 列儲存格 | Bind 引用 |
 |------------|----------------------------------------------|
-| 名字 | /newhire/GetEmployeeWinneters/firstname |
-| 姓氏 | /newhire/GetEmployeeWinenters/lastname |
-| 关系 | /newhire/GetEmployeeWinneters/relation |
-| 百分比 | /newhire/GetEmployeeWinneters/percentage |
+| 名字 | /newhire/GetEmployeeRefitures/firstname |
+| 姓氏 | /newhire/GetEmployeeInfelieves/lastname |
+| 關係 | /newhire/GetEmployeeRefineties/relation |
+| 百分比 | /newhire/GetEmployeeRefitures/percentage |
 
-* 单击蓝色☑以保存更改
+* 按一下藍色☑鈕以儲存變更
 
-## 测试表单
+## 測試您的表單
 
-现在，我们需要在url中打开具有相应empID的表单。 以下2个链接将使用来自数据库的信息填充表单
-[具有empID=207](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=207)的表单
-[具有empID=208](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=208)的表单
+我們現在需要在URL中使用適當的empID開啟表單。 下列2個連結會使用資料庫中的資訊填入表單
+[empID=207的表單](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=207)
+[empID=208的表單](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=208)
 
 ## 疑难解答
 
-我的表单为空，没有任何数据
+我的表單是空白的，沒有任何資料
 
-* 确保表单数据模型返回正确的结果。
-* 表单与正确的表单数据模型相关联
-* 检查字段绑定
-* 检查stdout日志文件。 您应会看到empID正在写入文件。如果您没有看到此值，则表单可能没有使用提供的自定义模板。
+* 請確定表單資料模型傳回正確結果。
+* 表單與正確的表單資料模型相關聯
+* 檢查欄位繫結
+* 請檢視stdout記錄檔。 您應該會看到正在寫入檔案的empID。如果您沒有看到此值，則表示您的表單可能未使用提供的自訂範本。
 
-未填充表
+未填入表格
 
-* 检查Row1绑定
-* 确保正确设置Row1的重复设置（最小=1，最大= 5或更多）
-
+* 檢查Row1繫結
+* 請確定Row1的重複設定已正確設定（最小值=1和最大值= 5或更多）

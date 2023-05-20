@@ -1,6 +1,6 @@
 ---
-title: 为AEM Editor和远程SPA配置SPA
-description: 需要AEM项目才能进行支持设置的配置和内容要求，以便AEM SPA Editor能够创作远程SPA。
+title: 為SPA編輯器和遠端SPA設定AEM
+description: 設定支援的設定和內容要求需要AEM專案，以允許AEM SPA Editor編寫遠端SPA。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
@@ -17,20 +17,20 @@ ht-degree: 1%
 
 ---
 
-# 为AEM编辑器配置SPA
+# 為SPA編輯器設定AEM
 
-虽然SPA代码库是在AEM之外管理的，但需要AEM项目才能设置支持配置和内容要求。 本章将介绍如何创建包含必要配置的AEM项目：
+雖然SPA程式碼庫是在AEM之外進行管理，但需要AEM專案來設定支援的設定和內容要求。 本章會逐步說明如何建立包含必要設定的AEM專案：
 
-+ AEM WCM核心组件代理
-+ AEM远程SPA页面代理
-+ AEM远程SPA页面模板
-+ 基线远程SPA AEM页面
-+ 用于定义SPA到AEM URL映射的子项目
-+ OSGi配置文件夹
++ AEM WCM Core Components代理
++ AEM遠端SPA頁面Proxy
++ AEM遠端SPA頁面範本
++ 基準遠端SPA AEM頁面
++ 用於定義SPA至AEM URL對應的子專案
++ OSGi設定資料夾
 
-## 从GitHub下载基础项目
+## 從GitHub下載基礎專案
 
-下载 `aem-guides-wknd-graphql` 项目。 这将包含此项目中使用的一些基线文件。
+下載 `aem-guides-wknd-graphql` 專案(從Github.com)。 這將包含此專案中使用的一些基準線檔案。
 
 ```
 $ mkdir -p ~/Code
@@ -38,11 +38,11 @@ $ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
 $ cd remote-spa-tutorial
 ```
 
-## 创建AEM项目
+## 建立AEM專案
 
-创建一个AEM项目，其中管理配置和基线内容。 此项目将在克隆内生成 `aem-guides-wknd-graphql` 项目的 `remote-spa-tutorial` 文件夹。
+建立管理設定和基準內容的AEM專案。 此專案將在複製的專案內產生 `aem-guides-wknd-graphql` 專案的 `remote-spa-tutorial` 資料夾。
 
-_始终使用 [AEM原型](https://github.com/adobe/aem-project-archetype)._
+_一律使用最新版本的 [AEM原型](https://github.com/adobe/aem-project-archetype)._
 
 ```
 $ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial
@@ -58,28 +58,28 @@ $ mvn -B archetype:generate \
 $ mv ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/wknd-app ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app
 ```
 
-_最后一个命令只需重命名AEM项目文件夹，这样就可以清楚地知道它是AEM项目，而不要与远程SPA混淆__
+_最後一個命令只會重新命名AEM專案資料夾，因此很清楚它是AEM專案，不要與遠端SPA混淆__
 
-While `frontendModule="react"` ，则 `ui.frontend` 项目不用于远程SPA用例。 SPA是在AEM外部开发和管理的，仅将AEM用作内容API。 的 `frontendModule="react"` 项目需要标记，包括  `spa-project` AEM Java™依赖项并设置远程SPA页面模板。
+當 `frontendModule="react"` 已指定，則 `ui.frontend` 專案不適用於遠端SPA使用案例。 SPA是在AEM外部開發和管理，僅使用AEM作為內容API。 此 `frontendModule="react"` 專案需要標幟包括  `spa-project` AEM Java™相依性及設定遠端SPA頁面範本。
 
-AEM项目原型会生成以下元素，这些元素用于配置AEM以与SPA集成。
+AEM專案原型會產生下列元素，用於設定AEM以與SPA整合。
 
-+ __AEM WCM核心组件代理__ at `ui.apps/src/.../apps/wknd-app/components`
-+ __AEM SPA Remote Page代理__ at `ui.apps/src/.../apps/wknd-app/components/remotepage`
-+ __AEM页面模板__ at `ui.content/src/.../conf/wknd-app/settings/wcm/templates`
-+ __用于定义内容映射的子项目__ at `ui.content/src/...`
-+ __基线远程SPA AEM页面__ at `ui.content/src/.../content/wknd-app`
-+ __OSGi配置文件夹__ at `ui.config/src/.../apps/wknd-app/osgiconfig`
++ __AEM WCM Core Components代理__ 於 `ui.apps/src/.../apps/wknd-app/components`
++ __AEM SPA遠端頁面Proxy__ 於 `ui.apps/src/.../apps/wknd-app/components/remotepage`
++ __AEM頁面範本__ 於 `ui.content/src/.../conf/wknd-app/settings/wcm/templates`
++ __定義內容對應的子專案__ 於 `ui.content/src/...`
++ __基準遠端SPA AEM頁面__ 於 `ui.content/src/.../content/wknd-app`
++ __OSGi設定資料夾__ 於 `ui.config/src/.../apps/wknd-app/osgiconfig`
 
-生成基本AEM项目后，进行一些调整可确保SPA编辑器与远程SPA兼容。
+產生基本AEM專案後，幾項調整可確保SPA Editor與遠端SPA相容。
 
-## 删除ui.frontend项目
+## 移除ui.frontend專案
 
-由于SPA是远程SPA，因此假定它是在AEM项目之外开发和管理的。 要避免冲突，请删除 `ui.frontend` 项目。 如果 `ui.frontend` 项目、两个SPA(在 `ui.frontend` 项目和远程SPA在AEM SPA编辑器中同时加载。
+由於SPA是遠端SPA，假設它是在AEM專案之外開發和管理的。 若要避免衝突，請移除 `ui.frontend` 部署專案。 如果 `ui.frontend` 未移除專案、兩個SPA、中提供的預設SPA `ui.frontend` 專案和遠端SPA會同時載入AEM SPA編輯器中。
 
-1. 打开AEM项目(`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app`)
-1. 打开根 `pom.xml`
-1. 注释 `<module>ui.frontend</module` 从 `<modules>` 列表
+1. 開啟AEM專案(`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app`)。
+1. 開啟根目錄 `pom.xml`
+1. 註解 `<module>ui.frontend</module` 從 `<modules>` 清單
 
    ```
    <modules>
@@ -99,12 +99,12 @@ AEM项目原型会生成以下元素，这些元素用于配置AEM以与SPA集�
    </modules>
    ```
 
-   的 `pom.xml` 文件应该如下所示：
+   此 `pom.xml` 檔案應如下所示：
 
-   ![从Reactor pom中删除ui.frontend模块](./assets/aem-project/uifrontend-reactor-pom.png)
+   ![從reactor pom移除ui.frontend模組](./assets/aem-project/uifrontend-reactor-pom.png)
 
-1. 打开 `ui.apps/pom.xml`
-1. 注释掉 `<dependency>` on `<artifactId>wknd-app.ui.frontend</artifactId>`
+1. 開啟 `ui.apps/pom.xml`
+1. 註解 `<dependency>` 於 `<artifactId>wknd-app.ui.frontend</artifactId>`
 
    ```
    <dependencies>
@@ -120,26 +120,26 @@ AEM项目原型会生成以下元素，这些元素用于配置AEM以与SPA集�
    </dependencies>
    ```
 
-   的 `ui.apps/pom.xml` 文件应该如下所示：
+   此 `ui.apps/pom.xml` 檔案應如下所示：
 
-   ![从ui.apps中删除ui.frontend依赖项](./assets/aem-project/uifrontend-uiapps-pom.png)
+   ![從ui.apps中移除ui.frontend相依性](./assets/aem-project/uifrontend-uiapps-pom.png)
 
-如果AEM项目是在这些更改之前构建的，请手动删除 `ui.frontend` 从生成的客户端库 `ui.apps` 项目 `ui.apps/src/main/content/jcr_root/apps/wknd-app/clientlibs/clientlib-react`.
+如果AEM專案是在這些變更之前建置，請手動刪除 `ui.frontend` 產生的使用者端資源庫 `ui.apps` 專案位置 `ui.apps/src/main/content/jcr_root/apps/wknd-app/clientlibs/clientlib-react`.
 
-## AEM内容映射
+## AEM內容對應
 
-要使AEM在SPA编辑器中加载远程SPA，必须建立SPA路由和用于打开和创作内容的AEM页面之间的映射。
+若要讓AEM在SPA編輯器中載入遠端SPA，必須建立SPA路由和用於開啟及編寫內容的AEM頁面之間的對應。
 
-此配置的重要性稍后会进行探讨。
+稍後會探討此設定的重要性。
 
-映射可通过 [Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html#root-level-mappings-1) 定义 `/etc/map`.
+對應可以透過完成 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html#root-level-mappings-1) 定義於 `/etc/map`.
 
-1. 在IDE中，打开 `ui.content` 子项目
+1. 在IDE中，開啟 `ui.content` 子專案
 1. 导航至  `src/main/content/jcr_root`
-1. 创建文件夹 `etc`
-1. 在 `etc`，创建文件夹 `map`
-1. 在 `map`，创建文件夹 `http`
-1. 在 `http`，创建文件 `.content.xml` 内容：
+1. 建立資料夾 `etc`
+1. 在 `etc`，建立資料夾 `map`
+1. 在 `map`，建立資料夾 `http`
+1. 在 `http`，建立檔案 `.content.xml` 包含下列內容：
 
    ```
    <?xml version="1.0" encoding="UTF-8"?>
@@ -149,8 +149,8 @@ AEM项目原型会生成以下元素，这些元素用于配置AEM以与SPA集�
    </jcr:root>
    ```
 
-1. 在 `http` ，创建文件夹 `localhost_any`
-1. 在 `localhost_any`，创建文件 `.content.xml` 内容：
+1. 在 `http` ，建立資料夾 `localhost_any`
+1. 在 `localhost_any`，建立檔案 `.content.xml` 包含下列內容：
 
    ```
    <?xml version="1.0" encoding="UTF-8"?>
@@ -161,8 +161,8 @@ AEM项目原型会生成以下元素，这些元素用于配置AEM以与SPA集�
    </jcr:root>
    ```
 
-1. 在 `localhost_any` ，创建文件夹 `wknd-app-routes-adventure`
-1. 在 `wknd-app-routes-adventure`，创建文件 `.content.xml` 内容：
+1. 在 `localhost_any` ，建立資料夾 `wknd-app-routes-adventure`
+1. 在 `wknd-app-routes-adventure`，建立檔案 `.content.xml` 包含下列內容：
 
    ```
    <?xml version="1.0" encoding="UTF-8"?>
@@ -180,7 +180,7 @@ AEM项目原型会生成以下元素，这些元素用于配置AEM以与SPA集�
        sling:internalRedirect="/content/wknd-app/us/en/home/adventure/$1"/>
    ```
 
-1. 将映射节点添加到 `ui.content/src/main/content/META-INF/vault/filter.xml` 包含在AEM包中。
+1. 將對應節點新增至 `ui.content/src/main/content/META-INF/vault/filter.xml` 以包含在AEM套件中。
 
    ```
    <?xml version="1.0" encoding="UTF-8"?>
@@ -195,26 +195,26 @@ AEM项目原型会生成以下元素，这些元素用于配置AEM以与SPA集�
    </workspaceFilter>
    ```
 
-文件夹结构和 `.context.xml` 文件应该如下所示：
+資料夾結構和 `.context.xml` 檔案應如下所示：
 
-![Sling映射](./assets/aem-project/sling-mapping.png)
+![Sling對應](./assets/aem-project/sling-mapping.png)
 
-的 `filter.xml` 文件应该如下所示：
+此 `filter.xml` 檔案應如下所示：
 
-![Sling映射](./assets/aem-project/sling-mapping-filter.png)
+![Sling對應](./assets/aem-project/sling-mapping-filter.png)
 
-现在，部署AEM项目时，会自动包含这些配置。
+現在，部署AEM專案時，這些設定會自動包含在內。
 
-Sling映射效果AEM运行于 `http` 和 `localhost`，因此仅支持本地开发。 部署到AEMas a Cloud Service时，必须添加与目标类似的Sling映射 `https` 和相应的AEMas a Cloud Service域。有关更多信息，请参阅 [Sling映射文档](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html).
+Sling對應影響AEM執行於 `http` 和 `localhost`，因此僅支援本機開發。 部署至AEMas a Cloud Service時，必須將類似的Sling對應新增至目標 `https` 以及適當的AEMas a Cloud Service網域。如需詳細資訊，請參閱 [Sling對應檔案](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html).
 
-## 跨源资源共享安全策略
+## 跨原始資源共用安全性原則
 
-接下来，配置AEM以保护内容，以便只有此SPA可以访问AEM内容。 配置 [AEM中的跨源资源共享](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html).
+接下來，設定AEM以保護內容，使只有此SPA可以存取AEM內容。 設定 [AEM中的跨原始資源共用](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html).
 
-1. 在IDE中，打开 `ui.config` Maven子项目
+1. 在IDE中，開啟 `ui.config` Maven子專案
 1. 导航 `src/main/content/jcr_root/apps/wknd-app/osgiconfig/config`
-1. 创建名为 `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-app_remote-spa.cfg.json`
-1. 将以下内容添加到文件中：
+1. 建立名為的檔案 `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-app_remote-spa.cfg.json`
+1. 將下列專案新增至檔案：
 
    ```
    {
@@ -250,24 +250,24 @@ Sling映射效果AEM运行于 `http` 和 `localhost`，因此仅支持本地开�
    }
    ```
 
-的 `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-app_remote-spa.cfg.json` 文件应该如下所示：
+此 `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-app_remote-spa.cfg.json` 檔案應如下所示：
 
-![SPA编辑器CORS配置](./assets/aem-project/cors-configuration.png)
+![SPA編輯器CORS設定](./assets/aem-project/cors-configuration.png)
 
-关键配置元素包括：
+主要組態元素包括：
 
-+ `alloworigin` 指定允许哪些主机从AEM检索内容。
-   + `localhost:3000` 添加了以支持在本地运行的SPA
-   + `https://external-hosted-app` 用作占位符，以替换为Remote SPA托管的域。
-+ `allowedpaths` 指定此CORS配置涵盖AEM中的哪些路径。 默认设置允许访问AEM中的所有内容，但其范围只能为SPA可访问的特定路径，例如： `/content/wknd-app`.
++ `alloworigin` 指定允許哪些主機從AEM擷取內容。
+   + `localhost:3000` 新增以支援在本機執行的SPA
+   + `https://external-hosted-app` 充當預留位置，以取代為遠端SPA託管所在的網域。
++ `allowedpaths` 指定此CORS設定涵蓋AEM中的哪些路徑。 預設允許存取AEM中的所有內容，不過這只能限定為SPA可以存取的特定路徑，例如： `/content/wknd-app`.
 
-## 将AEM页面设置为远程SPA页面模板
+## 將AEM頁面設定為遠端SPA頁面範本
 
-AEM项目原型会生成一个为AEM与远程SPA集成做准备的项目，但需要对自动生成的AEM页面结构进行细微而重要的调整。 自动生成的AEM页面必须将其类型更改为 __远程SPA页__，而不是 __SPA页面__.
+AEM專案原型會產生一個專案，以準備與遠端SPA進行AEM整合，但需要對自動產生的AEM頁面結構進行小幅但重要的調整。 自動產生的AEM頁面必須將其型別變更為 __遠端SPA頁面__，而非 __SPA頁面__.
 
-1. 在IDE中，打开 `ui.content` 子项目
-1. 打开到 `src/main/content/jcr_root/content/wknd-app/us/en/home/.content.xml`
-1. 更新此 `.content.xml` 文件：
+1. 在IDE中，開啟 `ui.content` 子專案
+1. 開啟至 `src/main/content/jcr_root/content/wknd-app/us/en/home/.content.xml`
+1. 更新此 `.content.xml` 檔案：
 
    ```
    <?xml version="1.0" encoding="UTF-8"?>
@@ -297,68 +297,68 @@ AEM项目原型会生成一个为AEM与远程SPA集成做准备的项目，但�
    </jcr:root>
    ```
 
-关键更改是 `jcr:content` 节点：
+主要變更為 `jcr:content` 節點的：
 
 + `cq:template` 到 `/conf/wknd-app/settings/wcm/templates/spa-remote-page`
 + `sling:resourceType` 到 `wknd-app/components/remotepage`
 
-的 `src/main/content/jcr_root/content/wknd-app/us/en/home/.content.xml` 文件应该如下所示：
+此 `src/main/content/jcr_root/content/wknd-app/us/en/home/.content.xml` 檔案應如下所示：
 
-![主页.content.xml更新](./assets/aem-project/home-content-xml.png)
+![首頁.content.xml更新](./assets/aem-project/home-content-xml.png)
 
-这些更改允许此页面(在AEM中充当SPA根)在SPA编辑器中加载远程SPA。
+這些變更可讓此頁面(在AEM中充當SPA根目錄)在SPA編輯器中載入遠端SPA。
 
 >[!NOTE]
 >
->如果此项目之前已部署到AEM，请确保将AEM页面删除为 __站点> WKND应用程序>用户> en > WKND应用程序主页__，作为 `ui.content`  项目设置为 __合并__ 节点，而不是 __更新__.
+>如果此專案先前已部署至AEM，請務必刪除AEM頁面，如下所示 __網站> WKND應用程式>我們>英文> WKND應用程式首頁__，作為 `ui.content`  專案已設定為 __合併__ 節點，而非 __更新__.
 
-此页面也可以在AEM中删除，并重新创建为远程SPA页面，但由于此页面是在 `ui.content` 项目最好在代码库中更新它。
+此頁面也可以在AEM本身中移除並重新建立為遠端SPA頁面，但由於此頁面是在 `ui.content` 專案最好在程式碼庫中更新。
 
-## 将AEM项目部署到AEM SDK
+## 將AEM專案部署至AEM SDK
 
-1. 确保AEM创作服务在端口4502上运行
-1. 从命令行中，导航到AEM Maven项目的根
-1. 使用Maven将项目部署到本地AEM SDK创作服务
+1. 請確定AEM Author服務正在連線埠4502上執行
+1. 從命令列，瀏覽至AEM Maven專案的根目錄
+1. 使用Maven將專案部署到您的本機AEM SDK作者服務
 
    ```
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   ![mvn clean install -PautoInstallSinglePackage](./assets/aem-project/mvn-install.png)
+   ![mvn全新安裝 — PautoInstallSinglePackage](./assets/aem-project/mvn-install.png)
 
-## 配置根AEM页面
+## 設定根AEM頁面
 
-部署AEM项目后，需要最后一步来准备SPA Editor以加载我们的远程SPA。 在AEM中，标记与SPA根目录对应的AEM页面，`/content/wknd-app/us/en/home`，由AEM项目原型生成。
+部署AEM專案後，最後一個步驟是準備SPA編輯器以載入我們的遠端SPA。 在AEM中，標示與SPA根目錄相對應的AEM頁面，`/content/wknd-app/us/en/home`，由AEM專案原型產生。
 
-1. 登录到AEM作者
-1. 导航到 __站点> WKND应用程序>美国> en__
-1. 选择 __WKND应用程序主页__，然后点按 __属性__
+1. 登入AEM Author
+1. 導覽至 __網站> WKND應用程式>我們>英文__
+1. 選取 __wknd應用程式首頁__，然後點選 __屬性__
 
-   ![WKND应用程序主页 — 属性](./assets/aem-content/edit-home-properties.png)
+   ![WKND應用程式首頁 — 屬性](./assets/aem-content/edit-home-properties.png)
 
-1. 导航到 __SPA__ 选项卡
-1. 填写 __远程SPA配置__
-   + __SPA主机URL__: `http://localhost:3000`
-      + 指向远程SPA根的URL
+1. 導覽至 __SPA__ 標籤
+1. 填寫 __遠端SPA設定__
+   + __SPA主機URL__： `http://localhost:3000`
+      + 遠端SPA根目錄的URL
 
-   ![WKND应用程序主页 — 远程SPA配置](./assets/aem-content/remote-spa-configuration.png)
+   ![WKND應用程式首頁 — 遠端SPA設定](./assets/aem-content/remote-spa-configuration.png)
 
-1. 点按 __保存并关闭__
+1. 點選 __儲存並關閉__
 
-请记住，我们已将此页面的类型更改为 __远程SPA页__，这就是为了查看 __SPA__ 选项卡 __页面属性__.
+請記住，我們已將此頁面的型別變更為的 __遠端SPA頁面__，因此可讓我們檢視 __SPA__ 標籤中的變數 __頁面屬性__.
 
-此配置只能在与SPA根对应的AEM页面上设置。 此页面下方的所有AEM页面都将继承该值。
+此設定只能在對應至SPA根目錄的AEM頁面上設定。 此頁面下的所有AEM頁面都會繼承值。
 
 ## 恭喜
 
-您现在已准备好AEM配置并将其部署到本地AEM作者！ 您现在知道如何：
+您現在已準備AEM設定，並將其部署至本機AEM作者！ 您現在知道如何：
 
-+ 通过注释掉AEM中的依赖项，删除生成的SPA项目原型 `ui.frontend`
-+ 将Sling映射添加到AEM，以将SPA路由映射到AEM中的资源
-+ 设置AEM跨源资源共享安全策略，以允许远程SPA使用AEM中的内容
-+ 将AEM项目部署到本地AEM SDK创作服务
-+ 使用AEM主机URL页面属性将SPA页面标记为远程SPA根
++ 將中的相依性註解，移除AEM專案原型產生的SPA `ui.frontend`
++ 新增Sling對應至AEM，將SPA路由對應至AEM中的資源
++ 設定AEM跨原始資源共用安全性原則，以允許遠端SPA使用來自AEM的內容
++ 將AEM專案部署到您的本機AEM SDK作者服務
++ 使用AEM主機URL頁面屬性，將SPA頁面標示為遠端SPA根目錄
 
 ## 后续步骤
 
-配置AEM后，我们可以 [引导远程SPA](./spa-bootstrap.md) 支持使用AEM SPA编辑器的可编辑区域！
+AEM設定完成後，我們可以 [啟動載入遠端SPA](./spa-bootstrap.md) 支援使用AEM SPA編輯器編輯區域！

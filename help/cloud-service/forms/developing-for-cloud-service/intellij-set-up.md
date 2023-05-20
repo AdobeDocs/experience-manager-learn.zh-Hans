@@ -1,6 +1,6 @@
 ---
-title: 安装IntelliJ社区版
-description: 将AEM项目安装并导入IntelliJ
+title: 安裝IntelliJ community edition
+description: 安裝並匯入AEM專案至IntelliJ
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -16,30 +16,30 @@ ht-degree: 0%
 
 ---
 
-# 安装IntelliJ
+# 安裝IntelliJ
 
-安装 [IntelliJ社区版](https://www.jetbrains.com/idea/download/#section=windows). 您可以接受默认设置，但建议在安装过程中使用。
+安裝 [IntelliJ社群版](https://www.jetbrains.com/idea/download/#section=windows). 在安裝期間建議時，您可以接受預設設定。
 
-## 导入AEM项目
+## 匯入AEM專案
 
-* 启动IntelliJ
-* 导入在前面步骤中创建的AEM项目。 导入项目后，屏幕应如下所示 ![aem-banking-app](assets/aem-banking-app.png). 您通常将使用核心项目、ui.apps、ui.config和ui.content子项目。
-* 如果看不到Maven和Terminal窗口，请转到“查看” — >“工具窗口”，然后选择“Maven和Terminal”
+* 啟動IntelliJ
+* 匯入您在上一步建立的AEM專案。 專案匯入後，您的畫面應該看起來像這樣 ![aem-banking-app](assets/aem-banking-app.png). 您通常會使用core、ui.apps、ui.config和ui.content子專案。
+* 如果您沒有看到Maven和終端機視窗，請前往「檢視 — >工具視窗」並選取「Maven和終端機」
 
-## 添加字体模块
+## 新增字型模組
 
-如果要在PDF文件中使用自定义字体，则需要将自定义字体推送到AEM Forms CS实例。 请按照以下步骤操作
+如果您想在PDF檔案中使用自訂字型，則需要將自訂字型推送到AEM Forms CS執行個體。 請遵循下列步驟
 
-* 创建名为 **字体** C:\CloudManager\aem-banking-application
-* 提取的内容 [font.zip](assets/fonts.zip) 到新创建的字体文件夹中
-* 字体模块中包含一些自定义字体。您可以将贵组织的自定义字体添加到C:\CloudManager\aem-banking-application\fonts\src\main\resources folder of the fonts module
-* 打开C:\CloudManager\aem-banking-application\pom.xml文件
-* 添加以下行  ```<module>fonts</module>``` 在pom.xml的“模块”部分中
-* 保存pom.xml
-* 在IntelliJ中刷新aem-banking-application项目
+* 建立名為的資料夾 **字型** 在C:\CloudManager\aem-banking-application中
+* 擷取以下專案的內容： [font.zip](assets/fonts.zip) 放入新建立的字型資料夾
+* 字型模組中包括一些自訂字型。您可以將組織的自訂字型新增至字型模組的C:\CloudManager\aem-banking-application\fonts\src\main\resources資料夾
+* 開啟C:\CloudManager\aem-banking-application\pom.xml檔案
+* 新增下列行  ```<module>fonts</module>``` 在pom.xml的「模組」區段中
+* 儲存您的pom.xml
+* 重新整理IntelliJ中的aem-banking-application專案
 
-具有字体模块的项目结构
-![字体模块](assets/fonts-module.png)
+具有字型模組的專案結構
+![fonts-module](assets/fonts-module.png)
 
-项目POM中包含的字体模块
+專案POM中包含的字型模組
 ![fonts-pom](assets/fonts-module-pom.png)

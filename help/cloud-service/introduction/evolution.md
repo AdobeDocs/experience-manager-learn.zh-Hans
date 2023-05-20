@@ -1,6 +1,6 @@
 ---
 title: AEM as a Cloud Service 的演变
-description: 探索AEM的历史以及内部部署AEM、Adobe Managed Services AEM和AEM as a Cloud Service之间的差异。
+description: 探索AEM的歷史以及內部部署AEM、Adobe Managed Services AEM和AEMas a Cloud Service之間的差異。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -18,6 +18,6 @@ ht-degree: 24%
 
 # AEM as a Cloud Service 的演变
 
-探索AEM的历史以及内部部署AEM、Adobe Managed Services AEM和AEM as a Cloud Service之间的差异。
+探索AEM的歷史以及內部部署AEM、Adobe Managed Services AEM和AEMas a Cloud Service之間的差異。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330543?quality=12&learn=on)

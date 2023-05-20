@@ -1,6 +1,6 @@
 ---
-title: Photoshop操作(使用AEM Assets内容自动化)
-description: 了解内容作者如何通过内容自动化附加组件，使用Creative CloudAPI在AEM Assets中执行Photoshop操作。
+title: 使用Photoshop Content Automation的AEM Assets動作
+description: 瞭解內容作者如何透過Creative Cloud API與內容自動化附加元件，在AEM Assets中執行Photoshop動作。
 version: Cloud Service
 topic: Content Management
 feature: Asset Processing, Renditions
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# Photoshop操作
+# Photoshop動作
 
-了解内容作者如何通过内容自动化附加组件，使用Creative CloudAPI在AEM Assets中执行Photoshop操作。
+瞭解內容作者如何透過Creative Cloud API與內容自動化附加元件，在AEM Assets中執行Photoshop動作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336539?quality=12&learn=on)

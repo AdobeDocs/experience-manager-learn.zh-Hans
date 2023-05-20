@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Assets内容自动化的创意操作
-description: 了解如何使用将Adobe Experience Manager Assetsas a Cloud Service与Adobe Creative Cloud服务API集成的内容自动化附加组件来处理您的资产。
+title: 使用AEM Assets內容自動化的創意操作
+description: 瞭解如何使用將Adobe Experience Manager Assetsas a Cloud Service與Adobe Creative Cloud Service API整合的Content Automation附加元件來處理您的資產。
 topic: Content Management
 feature: Asset Processing, Renditions
 role: Leader, Architect, Developer, Admin, User
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 创意运营
+# 創意經營
 
-了解如何使用将Adobe Experience Manager Assetsas a Cloud Service与Adobe Creative Cloud服务API集成的内容自动化附加组件来处理您的资产。
+瞭解如何使用將Adobe Experience Manager Assetsas a Cloud Service與Adobe Creative Cloud Service API整合的Content Automation附加元件來處理您的資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336540?quality=12&learn=on)

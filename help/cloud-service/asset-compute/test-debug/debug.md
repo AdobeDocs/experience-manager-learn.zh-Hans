@@ -1,6 +1,6 @@
 ---
-title: 调试Asset compute工作程序
-description: asset compute工作程序可以通过多种方式进行调试，从简单的调试日志语句，到作为远程调试器附加的VS Code ，再到为从AEM as a Cloud Service启动的Adobe I/O Runtime中的激活提取日志。
+title: 偵錯Asset compute背景工作
+description: asset compute背景工作可透過數種方式進行除錯，包括簡單的除錯記錄陳述式、附加的VS Code （作為遠端除錯工具），以及從AEMas a Cloud Service提取Adobe I/O Runtime中啟用的記錄。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -20,51 +20,51 @@ ht-degree: 0%
 
 ---
 
-# 调试Asset compute工作程序
+# 偵錯Asset compute背景工作
 
-asset compute工作程序可以通过多种方式进行调试，从简单的调试日志语句，到作为远程调试器附加的VS Code ，再到为从AEM as a Cloud Service启动的Adobe I/O Runtime中的激活提取日志。
+asset compute背景工作可透過數種方式進行除錯，包括簡單的除錯記錄陳述式、附加的VS Code （作為遠端除錯工具），以及從AEMas a Cloud Service提取Adobe I/O Runtime中啟用的記錄。
 
 ## 日志记录
 
-最基本的调试Asset compute工作程序使用传统 `console.log(..)` 工作代码中的语句。 的 `console` JavaScript对象是隐式的全局对象，因此无需导入或要求导入，因为它始终存在于所有上下文中。
+偵錯Asset compute背景工作程式的最基本形式是使用傳統 `console.log(..)` 背景工作程式碼中的陳述式。 此 `console` JavaScript物件是隱含的全域物件，因此不需要匯入或要求匯入，因為它始終存在於所有上下文中。
 
-根据Asset compute工作程序的执行方式，这些日志语句可以以不同的方式进行审阅：
+根據Asset compute背景工作程式的執行方式，這些記錄陳述式可用於檢閱：
 
-+ 从 `aio app run`，日志将打印为标准输出， [开发工具的](../develop/development-tool.md) 激活日志
-   ![aio app run console.log(...)](./assets/debug/console-log__aio-app-run.png)
-+ 从 `aio app test`，日志打印到 `/build/test-results/test-worker/test.log`
-   ![aio app test console.log(...)](./assets/debug/console-log__aio-app-test.png)
-+ 使用 `wskdebug`，日志语句将打印到VS代码调试控制台（查看>调试控制台），标准输出
++ 從 `aio app run`，記錄列印至標準輸出以及 [開發工具的](../develop/development-tool.md) 啟用記錄
+   ![aio應用程式執行console.log(...)](./assets/debug/console-log__aio-app-run.png)
++ 從 `aio app test`，記錄列印至 `/build/test-results/test-worker/test.log`
+   ![aio應用程式測試主控台.log(...)](./assets/debug/console-log__aio-app-test.png)
++ 使用 `wskdebug`，記錄陳述式列印至VS程式碼偵錯主控台（ 「檢視>偵錯主控台」），標準輸出
    ![wskdebug console.log(...)](./assets/debug/console-log__wskdebug.png)
-+ 使用 `aio app logs`，日志语句将打印到激活日志输出
++ 使用 `aio app logs`，記錄陳述式會列印至啟動記錄輸出
 
-## 通过附加的调试器进行远程调试
+## 透過附加的偵錯工具進行遠端偵錯
 
 >[!WARNING]
 >
->为了与wskdebug兼容，请使用Microsoft Visual Studio代码1.48.0或更高版本
+>使用Microsoft Visual Studio Code 1.48.0或更新版本，以與wskdebug相容
 
-的 [wsdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模块，支持将调试器附加到Asset compute工作程序，包括能够在VS代码中设置断点并逐步完成代码。
+此 [wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組，支援將偵錯工具附加至Asset compute背景工作，包括在VS程式碼中設定中斷點，以及逐步執行程式碼的功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40383?quality=12&learn=on)
 
-_使用wskdebug调试Asset compute工作程序的点进（无音频）_
+_使用wskdebug對Asset compute工作者進行偵錯的點進（無音訊）_
 
-1. 确保 [wsdebug](../set-up/development-environment.md#wskdebug) 和 [恩格罗克](../set-up/development-environment.md#ngork) npm模块已安装
-1. 确保 [Docker Desktop和支持Docker映像](../set-up/development-environment.md#docker) 安装并运行
-1. 关闭开发工具的任何活动运行实例。
-1. 使用部署最新代码 `aio app deploy`  和记录已部署的操作名称( `[...]`)。 用于更新 `launch.json` 中。
+1. 確定 [wskdebug](../set-up/development-environment.md#wskdebug) 和 [Ngrok](../set-up/development-environment.md#ngork) npm模組已安裝
+1. 確定 [Docker Desktop和支援的Docker映像](../set-up/development-environment.md#docker) 已安裝並執行
+1. 關閉開發工具的任何使用中執行中的例項。
+1. 使用部署最新的程式碼 `aio app deploy`  並記錄已部署的動作名稱(名稱介於 `[...]`)。 此專案用於更新 `launch.json` 步驟8.
 
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
 
 
-1. 使用命令启动Asset compute开发工具的新实例 `npx adobe-asset-compute devtool`
-1. 在VS代码中，点按左侧导航中的调试图标
-   + 如果出现提示，请点按 __创建launch.json文件> Node.js__ 创建新 `launch.json` 文件。
-   + 否则，点按 __齿轮__ 图标 __启动计划__ 用于打开现有 `launch.json` 在编辑器中。
-1. 将以下JSON对象配置添加到 `configurations` 数组：
+1. 使用命令啟動Asset compute開發工具的新執行個體 `npx adobe-asset-compute devtool`
+1. 在VS Code中，點選左側導覽中的偵錯圖示
+   + 如果出現提示，請點選 __建立launch.json檔案> Node.js__ 以建立新的 `launch.json` 檔案。
+   + 否則，點選 __齒輪__ 圖示右側 __啟動程式__ 下拉式清單以開啟現有的 `launch.json` 在編輯器中。
+1. 將下列JSON物件設定新增至 `configurations` 陣列：
 
    ```json
    {
@@ -86,30 +86,30 @@ _使用wskdebug调试Asset compute工作程序的点进（无音频）_
    }
    ```
 
-1. 选择新 __wsdebug__ 从下拉菜单中
-1. 点按绿色 __运行__ 按钮 __wsdebug__ 下拉列表
-1. 打开 `/actions/worker/index.js` 然后点按行号左侧以添加断点1。 导航到在步骤6中打开的Asset compute开发工具Web浏览器窗口
-1. 点按 __运行__ 用于执行工作程序的按钮
-1. 导航回VS代码，再导航回 `/actions/worker/index.js` 并逐步完成代码
-1. 要退出可调试的开发工具，请点按 `Ctrl-C` 在航站楼里 `npx adobe-asset-compute devtool` 步骤6中的命令
+1. 選取新的 __wskdebug__ 從下拉式清單
+1. 點選綠色 __執行__ 按鈕左側的 __wskdebug__ 下拉式清單
+1. 開啟 `/actions/worker/index.js` 並點選行號左側，以新增破斷點1。 導覽至在步驟6開啟的Asset compute開發工具網頁瀏覽器視窗
+1. 點選 __執行__ 執行背景工作程式的按鈕
+1. 導覽回至VS程式碼，並導覽至 `/actions/worker/index.js` 並逐步執行程式碼
+1. 若要退出可偵錯的開發工具，請點選 `Ctrl-C` 在執行的終端機中 `npx adobe-asset-compute devtool` 步驟6中的命令
 
-## 从Adobe I/O Runtime访问日志{#aio-app-logs}
+## 從Adobe I/O Runtime存取記錄{#aio-app-logs}
 
-[AEMas a Cloud Service通过处理用户档案来利用Asset compute工作程序](../deploy/processing-profiles.md) 直接在Adobe I/O Runtime调用。 由于这些调用不涉及本地开发，因此无法使用本地工具(如Asset compute开发工具或wskdebug)来调试其执行。 相反，可以使用Adobe I/OCLI从在Adobe I/O Runtime的特定工作区中执行的工作程序中获取日志。
+[AEMas a Cloud Service會透過處理設定檔運用Asset compute背景工作](../deploy/processing-profiles.md) 直接在Adobe I/O Runtime中叫用這些引數。 由於這些叫用不涉及本機開發，因此無法使用本機工具(例如Asset compute開發工具或wskdebug)來偵錯其執行。 反之，Adobe I/OCLI可用來從Adobe I/O Runtime中特定工作區執行的Worker擷取記錄。
 
-1. 确保 [特定于工作区的环境变量](../deploy/runtime.md) 通过 `AIO_runtime_namespace` 和 `AIO_runtime_auth`，基于需要调试的工作区。
-1. 从命令行中执行 `aio app logs`
-   + 如果工作区遇到大量流量，请通过 `--limit` 标记：
+1. 確保 [工作區特定環境變數](../deploy/runtime.md) 是透過以下方式設定 `AIO_runtime_namespace` 和 `AIO_runtime_auth`，根據需要偵錯的工作區。
+1. 從命令列，執行 `aio app logs`
+   + 如果工作區發生大量流量，請透過 `--limit` 標幟：
       `$ aio app logs --limit=25`
-1. 最近的(截至提供的 `--limit`)激活日志将作为命令的输出返回以供审阅。
+1. 最近（最多到提供的） `--limit`)啟用記錄會傳回作為命令的輸出以供檢閱。
 
-   ![aio应用程序日志](./assets/debug/aio-app-logs.png)
+   ![aio應用程式記錄](./assets/debug/aio-app-logs.png)
 
 ## 疑难解答
 
-+ [调试器未附加](../troubleshooting.md#debugger-does-not-attach)
-+ [断点不会暂停](../troubleshooting.md#breakpoints-no-pausing)
-+ [未附加VS代码调试器](../troubleshooting.md#vs-code-debugger-not-attached)
-+ [工作程序开始执行后附加的VS代码调试器](../troubleshooting.md#vs-code-debugger-attached-after-worker-execution-began)
-+ [调试时工作程序超时](../troubleshooting.md#worker-times-out-while-debugging)
-+ [无法终止调试器进程](../troubleshooting.md#cannot-terminate-debugger-process)
++ [偵錯工具未附加](../troubleshooting.md#debugger-does-not-attach)
++ [中斷點未暫停](../troubleshooting.md#breakpoints-no-pausing)
++ [未附加VS程式碼偵錯工具](../troubleshooting.md#vs-code-debugger-not-attached)
++ [背景工作執行開始後附加的VS程式碼偵錯工具](../troubleshooting.md#vs-code-debugger-attached-after-worker-execution-began)
++ [Worker在偵錯時逾時](../troubleshooting.md#worker-times-out-while-debugging)
++ [無法終止偵錯工具程式](../troubleshooting.md#cannot-terminate-debugger-process)

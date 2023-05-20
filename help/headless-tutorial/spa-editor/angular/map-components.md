@@ -1,6 +1,6 @@
 ---
-title: 将SPA组件映射到AEM组件 | AEM SPA Editor和Angular快速入门
-description: 了解如何使用AEM SPA Editor JS SDK将Angular组件映射到Adobe Experience Manager(AEM)组件。 组件映射允许用户在AEM SPA编辑器中对SPA组件进行动态更新，这与传统的AEM创作类似。
+title: 將SPA元件對應至AEM元件 | AEM SPA編輯器和Angular快速入門
+description: 瞭解如何使用AEM SPA Editor JS SDK將Angular元件對應至Adobe Experience Manager (AEM)元件。 元件對應可讓使用者在SPA SPA編輯器中對AEM元件進行動態更新，類似於傳統AEM編寫。
 feature: SPA Editor
 topics: development
 doc-type: tutorial
@@ -20,31 +20,31 @@ ht-degree: 1%
 
 ---
 
-# 将SPA组件映射到AEM组件 {#map-components}
+# 將SPA元件對應至AEM元件 {#map-components}
 
-了解如何使用AEM SPA Editor JS SDK将Angular组件映射到Adobe Experience Manager(AEM)组件。 组件映射允许用户在AEM SPA编辑器中对SPA组件进行动态更新，这与传统的AEM创作类似。
+瞭解如何使用AEM SPA Editor JS SDK將Angular元件對應至Adobe Experience Manager (AEM)元件。 元件對應可讓使用者在SPA SPA編輯器中對AEM元件進行動態更新，類似於傳統AEM編寫。
 
-本章更深入地介绍了AEM JSON模型API，以及如何将AEM组件公开的JSON内容自动作为prop注入到Angular组件中。
+本章深入探討AEM JSON模型API，以及如何將AEM元件公開的JSON內容作為prop自動插入Angular元件。
 
 ## 目标
 
-1. 了解如何将AEM组件映射到SPA组件。
-2. 了解 **容器** 组件和 **内容** 组件。
-3. 创建新的Angular组件，以映射到现有AEM组件。
+1. 瞭解如何將AEM元件對應至SPA元件。
+2. 瞭解兩者之間的差異 **容器** 元件和 **內容** 元件。
+3. 建立對應至現有AEM元件的新Angular元件。
 
-## 将构建的内容
+## 您將建置的內容
 
-本章将检查提供的 `Text` SPA组件已映射到AEM `Text`组件。 新 `Image` SPA组件已创建，可在SPA中使用并在AEM中创作。 的开箱即用功能 **布局容器** 和 **模板编辑器** 还将使用策略来创建外观稍有不同的视图。
+本章將檢查提供的如何 `Text` SPA元件已對應至AEM `Text`元件。 新 `Image` SPA元件是建立在SPA中使用以及在AEM中編寫的。 開箱即用的 **配置容器** 和 **範本編輯器** 原則也可用來建立外觀稍有變化的檢視。
 
-![章节示例最终创作](./assets/map-components/final-page.png)
+![章節範例最終製作](./assets/map-components/final-page.png)
 
 ## 前提条件
 
-查看设置 [本地开发环境](overview.md#local-dev-environment).
+檢閱設定「 」所需的工具和指示 [本機開發環境](overview.md#local-dev-environment).
 
-### 获取代码
+### 取得程式碼
 
-1. 通过Git下载本教程的起点：
+1. 透過Git下載本教學課程的起點：
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-spa.git
@@ -52,67 +52,67 @@ ht-degree: 1%
    $ git checkout Angular/map-components-start
    ```
 
-2. 使用Maven将代码库部署到本地AEM实例：
+2. 使用Maven將程式碼庫部署到本機AEM執行個體：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   如果使用 [AEM 6.x](overview.md#compatibility) 添加 `classic` 用户档案：
+   若使用 [AEM 6.x](overview.md#compatibility) 新增 `classic` 設定檔：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-您始终可以在 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution) 或通过切换到分支在本地检出代码 `Angular/map-components-solution`.
+您一律可以檢視完成的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution) 或切換至分支以在本機簽出程式碼 `Angular/map-components-solution`.
 
-## 映射方法
+## 對應方法
 
-基本概念是将SPA组件映射到AEM组件。 AEM组件、运行服务器端，将内容导出为JSON模型API的一部分。 SPA会使用JSON内容，并在浏览器中运行客户端。 将创建SPA组件与AEM组件之间的1:1映射。
+基本概念是對應SPA元件至AEM元件。 AEM元件、執行伺服器端、將內容匯出為JSON模型API的一部分。 JSON內容會由SPA使用，在瀏覽器中執行使用者端。 SPA元件和AEM元件之間會建立1:1對應。
 
-![将AEM组件映射到Angular组件的高级概述](./assets/map-components/high-level-approach.png)
+![將AEM元件對應至Angular元件的高階概觀](./assets/map-components/high-level-approach.png)
 
-*将AEM组件映射到Angular组件的高级概述*
+*將AEM元件對應至Angular元件的高階概觀*
 
-## Inspect文本组件
+## Inspect文字元件
 
-的 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 提供 `Text` 映射到AEM的组件 [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). 这是 **内容** 组件，在其中，它呈现 *内容* 从AEM。
+此 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 提供 `Text` 對應至AEM的元件 [文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). 以下範例說明 **內容** 元件，在其中呈現 *內容* 來自AEM。
 
-让我们看看组件的工作方式。
+讓我們看看元件的運作方式。
 
 ### Inspect JSON模型
 
-1. 在跳转到SPA代码之前，请务必了解AEM提供的JSON模型。 导航到 [核心组件库](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/text.html) 并查看文本组件的页面。 核心组件库提供了所有AEM核心组件的示例。
-2. 选择 **JSON** 选项卡，以查看以下示例：
+1. 在跳入SPA程式碼之前，請務必瞭解AEM提供的JSON模型。 導覽至 [核心元件程式庫](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/text.html) 並檢視文字元件的頁面。 核心元件庫提供所有AEM核心元件的範例。
+2. 選取 **JSON** 標籤以取得下列其中一個範例：
 
-   ![文本JSON模型](./assets/map-components/text-json.png)
+   ![文字JSON模型](./assets/map-components/text-json.png)
 
-   您应会看到三个资产： `text`, `richText`和 `:type`.
+   您應該會看到三個屬性： `text`， `richText`、和 `:type`.
 
-   `:type` 是一个保留属性，其中列出了 `sling:resourceType` （或路径）。 的值 `:type` 用于将AEM组件映射到SPA组件。
+   `:type` 是保留屬性，其中列出 `sling:resourceType` AEM （或路徑）。 的值 `:type` 是用來將AEM元件對應至SPA元件的專案。
 
-   `text` 和 `richText` 是显示给SPA组件的其他属性。
+   `text` 和 `richText` 是公開給SPA元件的其他屬性。
 
-### Inspect文本组件
+### Inspect文字元件
 
-1. 打开新终端并导航到 `ui.frontend` 文件夹。 运行 `npm install` 然后 `npm start` 开始 **WebPack开发服务器**:
+1. 開啟新終端機，並導覽至 `ui.frontend` 檔案夾。 執行 `npm install` 然後 `npm start` 以啟動 **webpack開發伺服器**：
 
    ```shell
    $ cd ui.frontend
    $ npm run start:mock
    ```
 
-   的 `ui.frontend` 模块当前设置为使用 [模拟JSON模型](./integrate-spa.md#mock-json).
+   此 `ui.frontend` 模組目前設定為使用 [模擬JSON模型](./integrate-spa.md#mock-json).
 
-2. 您应会看到一个新的浏览器窗口，该窗口将打开 [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)
+2. 您應該會看到新的瀏覽器視窗開啟 [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)
 
-   ![包含模拟内容的WebPack开发服务器](assets/map-components/initial-start.png)
+   ![含有模擬內容的Webpack開發伺服器](assets/map-components/initial-start.png)
 
-3. 在选择的IDE中，打开WKND SPA的AEM项目。 展开 `ui.frontend` 模块并打开文件 **text.component.ts** 在 `ui.frontend/src/app/components/text/text.component.ts`:
+3. 在您選擇的IDE中，開啟WKND SPA的AEM專案。 展開 `ui.frontend` 模組並開啟檔案 **text.component.ts** 在 `ui.frontend/src/app/components/text/text.component.ts`：
 
-   ![Text.jsAngular组件源代码](assets/map-components/vscode-ide-text-js.png)
+   ![Text.jsAngular元件原始碼](assets/map-components/vscode-ide-text-js.png)
 
-4. 首先要检查的是 `class TextComponent` 在第35行：
+4. 第一個要檢查的區域是 `class TextComponent` 於第35行：
 
    ```js
    export class TextComponent {
@@ -131,11 +131,11 @@ ht-degree: 1%
    }
    ```
 
-   [@Input()](https://angular.io/api/core/Input) decorator用于声明通过映射的JSON对象设置的值的字段，这些值在之前已审阅。
+   [@Input()](https://angular.io/api/core/Input) Decorator可用來宣告欄位，這些欄位的值是透過對應之JSON物件設定的，之前已加以檢閱。
 
-   `@HostBinding('innerHtml') get content()` 是一种方法，用于从的值公开创作的文本内容 `this.text`. 如果内容是富文本(由 `this.richText` 标记)会绕过Angular的内置安全性。 Angular [DomSanitizer](https://angular.io/api/platform-browser/DomSanitizer) 用于“清除”原始HTML并防止跨站点脚本漏洞。 方法绑定到 `innerHtml` 属性 [@HostBinding](https://angular.io/api/core/HostBinding) 装饰师。
+   `@HostBinding('innerHtml') get content()` 是公開所編寫文字內容的方法，其值來自 `this.text`. 在內容為RTF文字的情況下(由 `this.richText` flag)會略過Angular的內建安全性。 angular的 [DomSanitizer](https://angular.io/api/platform-browser/DomSanitizer) 用於「清除」原始HTML並防止跨網站指令碼漏洞。 方法已繫結至 `innerHtml` 屬性使用 [@HostBinding](https://angular.io/api/core/HostBinding) 裝飾者。
 
-5. 接下来，检查 `TextEditConfig` 在第24行：
+5. 接下來檢查 `TextEditConfig` 於第24行：
 
    ```js
    const TextEditConfig = {
@@ -145,21 +145,21 @@ ht-degree: 1%
    };
    ```
 
-   上述代码负责确定何时在AEM创作环境中渲染占位符。 如果 `isEmpty` 方法返回 **true** 然后，会呈现占位符。
+   上述程式碼負責決定何時在AEM製作環境中呈現預留位置。 如果 `isEmpty` 方法傳回 **true** 然後會呈現預留位置。
 
-6. 最后看看 `MapTo` 致电~53线：
+6. 最後，檢視 `MapTo` 呼叫第53行：
 
    ```js
    MapTo('wknd-spa-angular/components/text')(TextComponent, TextEditConfig );
    ```
 
-   **MapTo** 由AEM SPA Editor JS SDK提供(`@adobe/cq-angular-editable-components`)。 路径 `wknd-spa-angular/components/text` 表示 `sling:resourceType` 的AEM组件。 此路径与 `:type` 由之前观察到的JSON模型公开。 **MapTo** 解析JSON模型响应，并将正确的值传递到 `@Input()` SPA组件的变量。
+   **對應至** 由AEM SPA編輯器JS SDK提供(`@adobe/cq-angular-editable-components`)。 路徑 `wknd-spa-angular/components/text` 代表 `sling:resourceType` AEM元件的URL。 此路徑會與 `:type` 已由先前觀察到的JSON模型公開。 **對應至** 剖析JSON模型回應並將正確的值傳遞至 `@Input()` SPA元件的變數。
 
-   您可以找到AEM `Text` 组件定义 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/text`.
+   您可以找到AEM `Text` 元件定義於 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/text`.
 
-7. 通过修改 **en.model.json** 文件位置 `ui.frontend/src/mocks/json/en.model.json`.
+7. 藉由修改 **en.model.json** 檔案位於 `ui.frontend/src/mocks/json/en.model.json`.
 
-   第1次~第62行更新 `Text` 值 **`H1`** 和 **`u`** 标记：
+   在~line 62更新第一個 `Text` 值以使用 **`H1`** 和 **`u`** 標籤：
 
    ```json
        "text": {
@@ -169,17 +169,17 @@ ht-degree: 1%
        }
    ```
 
-   返回浏览器，查看 **WebPack开发服务器**:
+   返回瀏覽器以檢視 **webpack開發伺服器**：
 
-   ![更新了文本模型](assets/map-components/updated-text-model.png)
+   ![更新的文字模型](assets/map-components/updated-text-model.png)
 
-   尝试切换 `richText` 属性介于 **true** / **false** ，以查看正在操作的渲染逻辑。
+   嘗試切換 `richText` 屬性介於 **true** / **false** 以檢視執行中的轉譯器邏輯。
 
-8. Inspect **text.component.html** at `ui.frontend/src/app/components/text/text.component.html`.
+8. Inspect **text.component.html** 於 `ui.frontend/src/app/components/text/text.component.html`.
 
-   此文件为空，因为组件的整个内容由 `innerHTML` 属性。
+   此檔案是空的，因為元件的整個內容是由 `innerHTML` 屬性。
 
-9. Inspect **app.module.ts** at `ui.frontend/src/app/app.module.ts`.
+9. Inspect **app.module.ts** 於 `ui.frontend/src/app/app.module.ts`.
 
    ```js
    @NgModule({
@@ -196,29 +196,29 @@ ht-degree: 1%
    export class AppModule {}
    ```
 
-   的 **文本组件** 未明确包含，而是通过动态 **AEMResponsiveGridComponent** 由AEM SPA Editor JS SDK提供。 因此，必须在 **app.module.ts**&#39; [entryComponents](https://angular.io/guide/entry-components) 数组。
+   此 **文字元件** 並未明確納入，而是透過以下方式動態納入 **AEMResponsiveGridComponent** 由AEM SPA編輯器JS SDK提供。 因此，必須列於 **app.module.ts**&#39; [entryComponents](https://angular.io/guide/entry-components) 陣列。
 
-## 创建图像组件
+## 建立影像元件
 
-接下来，创建 `Image` Angular组件，已映射到AEM [图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html). 的 `Image` 组件是 **内容** 组件。
+接下來，建立 `Image` 對應至AEM的Angular元件 [影像元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html). 此 `Image` 元件是 **內容** 元件。
 
-### Inspect JSON
+### INSPECT JSON
 
-在跳转到SPA代码之前，请检查AEM提供的JSON模型。
+在跳入SPA程式碼之前，請檢查AEM提供的JSON模型。
 
-1. 导航到 [核心组件库中的图像示例](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html).
+1. 導覽至 [核心元件庫中的影像範例](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html).
 
-   ![图像核心组件JSON](./assets/map-components/image-json.png)
+   ![影像核心元件JSON](./assets/map-components/image-json.png)
 
-   属性 `src`, `alt`和 `title` 用于填充SPA `Image` 组件。
+   屬性： `src`， `alt`、和 `title` 用於填入SPA `Image` 元件。
 
    >[!NOTE]
    >
-   > 还显示了其他图像属性(`lazyEnabled`, `widths`)来创建自适应和延迟加载组件。 本教程中构建的组件非常简单，但是可以 **not** 使用这些高级属性。
+   > 公開其他影像屬性(`lazyEnabled`， `widths`)可讓開發人員建立最適化和延遲載入元件。 本教學課程中建置的元件非常簡單，而且可以 **not** 使用這些進階屬性。
 
-2. 返回到IDE并打开 `en.model.json` at `ui.frontend/src/mocks/json/en.model.json`. 由于这是我们项目的新组件，因此我们需要“模拟”图像JSON。
+2. 返回IDE並開啟 `en.model.json` 於 `ui.frontend/src/mocks/json/en.model.json`. 由於這是我們專案的全新元件，因此我們需要「模擬」影像JSON。
 
-   在第70行，为 `image` 模型(不要忘记尾随的逗号 `,` 在 `text_386303036`)并更新 `:itemsOrder` 数组。
+   在~line 70，為新增一個JSON專案 `image` 模型（別忘了結尾逗號） `,` 在秒數之後 `text_386303036`)並更新 `:itemsOrder` 陣列。
 
    ```json
    ...
@@ -243,24 +243,24 @@ ht-degree: 1%
            ],
    ```
 
-   该项目包含一个位于 `/mock-content/adobestock-140634652.jpeg` 与 **WebPack开发服务器**.
+   專案包含位於的範例影像 `/mock-content/adobestock-140634652.jpeg` 搭配 **webpack開發伺服器**.
 
-   您可以查看完整 [en.model.json，此处为](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/map-components-solution/ui.frontend/src/mocks/json/en.model.json).
+   您可以檢視完整的 [en.model.json此處](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/map-components-solution/ui.frontend/src/mocks/json/en.model.json).
 
-3. 添加要由组件显示的库存照片。
+3. 新增元件要顯示的庫存像片。
 
-   创建名为的新文件夹 **图像** 下 `ui.frontend/src/mocks`. 下载 [adobestock-140634652.jpeg](assets/map-components/adobestock-140634652.jpeg) 然后放在新创建的 **图像** 文件夹。 如有需要，请随时使用您自己的图像。
+   建立名為的新資料夾 **影像** 下 `ui.frontend/src/mocks`. 下載 [adobestock-140634652.jpeg](assets/map-components/adobestock-140634652.jpeg) 並將其放在新建立的 **影像** 資料夾。 如有需要，請隨意使用您自己的影像。
 
-### 实施图像组件
+### 實作影像元件
 
-1. 停止 **WebPack开发服务器** 。
-2. 通过运行AngularCLI创建新的映像组件 `ng generate component` 从内 `ui.frontend` 文件夹：
+1. 停止 **webpack開發伺服器** 若已啟動。
+2. 執行AngularCLI以建立新的影像元件 `ng generate component` 命令來自內部 `ui.frontend` 資料夾：
 
    ```shell
    $ ng generate component components/image
    ```
 
-3. 在IDE中，打开 **image.component.ts** at `ui.frontend/src/app/components/image/image.component.ts` 更新如下：
+3. 在IDE中，開啟 **image.component.ts** 於 `ui.frontend/src/app/components/image/image.component.ts` 並依照以下方式更新：
 
    ```js
    import {Component, Input, OnInit} from '@angular/core';
@@ -295,15 +295,15 @@ ht-degree: 1%
    MapTo('wknd-spa-angular/components/image')(ImageComponent, ImageEditConfig);
    ```
 
-   `ImageEditConfig` 是用于确定是否在AEM中渲染创作占位符的配置，具体取决于 `src` 属性。
+   `ImageEditConfig` 是判斷是否在AEM中轉譯作者預留位置的設定，根據 `src` 屬性已填入。
 
-   `@Input()` of `src`, `alt`和 `title` 是从JSON API映射的属性。
+   `@Input()` 之 `src`， `alt`、和 `title` 是從JSON API對應的屬性。
 
-   `hasImage()` 是一种方法，用于确定是否应渲染图像。
+   `hasImage()` 是判斷是否應轉譯影像的方法。
 
-   `MapTo` 将SPA组件映射到位于 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image`.
+   `MapTo` 將SPA元件對應至位於「 」的AEM元件 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image`.
 
-4. 打开 **image.component.html** 并按以下方式更新：
+4. 開啟 **image.component.html** 並依照以下方式更新：
 
    ```html
    <ng-container *ngIf="hasImage">
@@ -311,9 +311,9 @@ ht-degree: 1%
    </ng-container>
    ```
 
-   这将呈现 `<img>` 元素 `hasImage` 返回 **true**.
+   這將呈現 `<img>` 元素if `hasImage` 傳回 **true**.
 
-5. 打开 **image.component.scss** 并按以下方式更新：
+5. 開啟 **image.component.scss** 並依照以下方式更新：
 
    ```scss
    :host-context {
@@ -329,98 +329,98 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   > 的 `:host-context` 规则 **关键** 以使AEM SPA编辑器占位符正常运行。 要在AEM页面编辑器中创作的所有SPA组件都至少需要此规则。
+   > 此 `:host-context` 規則是 **關鍵** AEM SPA編輯器預留位置才能正常運作。 打算在SPA頁面編輯器中編寫的所有AEM元件至少都需要此規則。
 
-6. 打开 `app.module.ts` 并添加 `ImageComponent` 到 `entryComponents` 数组：
+6. 開啟 `app.module.ts` 並新增 `ImageComponent` 至 `entryComponents` 陣列：
 
    ```js
    entryComponents: [TextComponent, PageComponent, ImageComponent],
    ```
 
-   如 `TextComponent`, `ImageComponent` 是动态加载的，且必须包含在 `entryComponents` 数组。
+   喜歡 `TextComponent`，則 `ImageComponent` 動態載入，且必須包含在 `entryComponents` 陣列。
 
-7. 启动 **WebPack开发服务器** 查看 `ImageComponent` 呈现。
+7. 開始 **webpack開發伺服器** 以檢視 `ImageComponent` 轉譯。
 
    ```shell
    $ npm run start:mock
    ```
 
-   ![模拟中添加了图像](assets/map-components/image-added-mock.png)
+   ![新增至模擬的影像](assets/map-components/image-added-mock.png)
 
-   *图像已添加到SPA*
+   *影像已新增至SPA*
 
    >[!NOTE]
    >
-   > **奖金挑战**:实施新的方法来显示 `title` 图像下方的标题。
+   > **額外挑戰**：實作新方法來顯示值 `title` 做為影像下方的標題。
 
-## 在AEM中更新策略
+## 更新AEM中的原則
 
-的 `ImageComponent` 组件仅在 **WebPack开发服务器**. 接下来，将更新的SPA部署到AEM并更新模板策略。
+此 `ImageComponent` 元件僅在 **webpack開發伺服器**. 接下來，將更新的SPA部署至AEM並更新範本原則。
 
-1. 停止 **WebPack开发服务器** 和 **根** 在项目中，使用您的Maven技能部署对AEM所做的更改：
+1. 停止 **webpack開發伺服器** 和從 **根** 在專案中，使用您的Maven技能將變更部署到AEM：
 
    ```shell
    $ cd aem-guides-wknd-spa
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-2. 从AEM开始屏幕中，导航到 **[!UICONTROL 工具]** > **[!UICONTROL 模板]** > **[WKND SPAAngular](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-angular)**.
+2. 從AEM開始畫面瀏覽至 **[!UICONTROL 工具]** > **[!UICONTROL 範本]** > **[WKND SPAANGULAR](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-angular)**.
 
-   选择并编辑 **SPA页面**:
+   選取並編輯 **SPA頁面**：
 
-   ![编辑SPA页面模板](assets/map-components/edit-spa-page-template.png)
+   ![編輯SPA頁面範本](assets/map-components/edit-spa-page-template.png)
 
-3. 选择 **布局容器** 点击 **策略** 图标以编辑策略：
+3. 選取 **配置容器** 並按一下 **原則** 圖示以編輯原則：
 
-   ![布局容器策略](./assets/map-components/layout-container-policy.png)
+   ![配置容器原則](./assets/map-components/layout-container-policy.png)
 
-4. 在 **允许的组件** > **WKND SPAAngular — 内容** >检查 **图像** 组件：
+4. 下 **允許的元件** > **WKND SPAAngular — 內容** >檢查 **影像** 元件：
 
-   ![已选择图像组件](assets/map-components/check-image-component.png)
+   ![已選取影像元件](assets/map-components/check-image-component.png)
 
-   在 **默认组件** > **添加映射** 然后选择 **图像 — WKND SPAAngular — 内容** 组件：
+   下 **預設元件** > **新增對應** 並選擇 **影像 — WKND SPAAngular — 內容** 元件：
 
-   ![设置默认组件](assets/map-components/default-components.png)
+   ![設定預設元件](assets/map-components/default-components.png)
 
-   输入 **mime类型** of `image/*`.
+   輸入 **mime型別** 之 `image/*`.
 
-   单击 **完成** 以保存策略更新。
+   按一下 **完成** 以儲存原則更新。
 
-5. 在 **布局容器** 单击 **策略** 图标 **文本** 组件：
+5. 在 **配置容器** 按一下 **原則** 圖示 **文字** 元件：
 
-   ![文本组件策略图标](./assets/map-components/edit-text-policy.png)
+   ![文字元件原則圖示](./assets/map-components/edit-text-policy.png)
 
-   创建名为的新策略 **WKND SPA文本**. 在 **插件** > **格式** >选中所有框以启用其他格式选项：
+   建立名為的新原則 **WKND SPA文字**. 下 **外掛程式** > **格式設定** >勾選所有方塊以啟用其他格式選項：
 
-   ![启用RTE格式](assets/map-components/enable-formatting-rte.png)
+   ![啟用RTE格式](assets/map-components/enable-formatting-rte.png)
 
-   在 **插件** > **段落样式** >选中复选框 **启用段落样式**:
+   下 **外掛程式** > **段落樣式** >勾選方塊以 **啟用段落樣式**：
 
    ![启用段落样式](./assets/map-components/text-policy-enable-paragraphstyles.png)
 
-   单击 **完成** 以保存策略更新。
+   按一下 **完成** 以儲存原則更新。
 
-6. 导航到 **主页** [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html).
+6. 導覽至 **首頁** [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html).
 
-   您还应该能够编辑 `Text` 组件和在 **全屏** 模式。
+   您也應該能夠編輯 `Text` 元件並新增其他段落樣式 **全熒幕** 模式。
 
-   ![全屏富文本编辑](assets/map-components/full-screen-rte.png)
+   ![全熒幕RTF編輯](assets/map-components/full-screen-rte.png)
 
-7. 您还应该能够从 **资产查找器**:
+7. 您也應該能夠從以下位置拖放影像： **資產尋找器**：
 
-   ![拖放图像](./assets/map-components/drag-drop-image.gif)
+   ![拖放影像](./assets/map-components/drag-drop-image.gif)
 
-8. 通过 [AEM Assets](http://localhost:4502/assets.html/content/dam) 或为标准 [WKND参考站点](https://github.com/adobe/aem-guides-wknd/releases/latest). 的 [WKND参考站点](https://github.com/adobe/aem-guides-wknd/releases/latest) 包含许多可在WKND SPA中重复使用的图像。 可以使用 [AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp).
+8. 透過新增您自己的影像 [AEM Assets](http://localhost:4502/assets.html/content/dam) 或安裝完成的標準程式碼基底 [WKND參考網站](https://github.com/adobe/aem-guides-wknd/releases/latest). 此 [WKND參考網站](https://github.com/adobe/aem-guides-wknd/releases/latest) 包含可在WKND SPA上重複使用的許多影像。 套件可使用以下方式安裝： [AEM封裝管理員](http://localhost:4502/crx/packmgr/index.jsp).
 
-   ![包管理器安装wknd.all](./assets/map-components/package-manager-wknd-all.png)
+   ![封裝管理員安裝wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
-## Inspect布局容器
+## Inspect配置容器
 
-支持 **布局容器** 由AEM SPA Editor SDK自动提供。 的 **布局容器**，如名称所示，为 **容器** 组件。 容器组件是接受JSON结构(表示 *其他* 组件，并动态实例化它们。
+支援 **配置容器** 由AEM SPA Editor SDK自動提供。 此 **配置容器**&#x200B;如名稱所示，是 **容器** 元件。 容器元件是接受JSON結構的元件，表示 *其他* 元件並動態例項化它們。
 
-让我们进一步检查布局容器。
+讓我們進一步檢查配置容器。
 
-1. 在IDE打开中 **responsive-grid.component.ts** at `ui.frontend/src/app/components/responsive-grid`:
+1. 在IDE中開啟 **responsive-grid.component.ts** 於 `ui.frontend/src/app/components/responsive-grid`：
 
    ```js
    import { AEMResponsiveGridComponent,MapTo } from '@adobe/cq-angular-editable-components';
@@ -428,63 +428,63 @@ ht-degree: 1%
    MapTo('wcm/foundation/components/responsivegrid')(AEMResponsiveGridComponent);
    ```
 
-   的 `AEMResponsiveGridComponent` 作为AEM SPA Editor SDK的一部分实施，并通过包含在项目中 `import-components`.
+   此 `AEMResponsiveGridComponent` 實作為AEM SPA Editor SDK的一部分，並透過包含在專案中 `import-components`.
 
-2. 在浏览器中，导航到 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
+2. 在瀏覽器中導覽至 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
 
-   ![JSON模型API — 响应式网格](./assets/map-components/responsive-grid-modeljson.png)
+   ![JSON模型API — 回應式格線](./assets/map-components/responsive-grid-modeljson.png)
 
-   的 **布局容器** 组件具有 `sling:resourceType` of `wcm/foundation/components/responsivegrid` 且由SPA编辑器使用 `:type` 资产，就像 `Text` 和 `Image` 组件。
+   此 **配置容器** 元件具有 `sling:resourceType` 之 `wcm/foundation/components/responsivegrid` 和，可由SPA編輯器透過以下路徑識別： `:type` 屬性，就像 `Text` 和 `Image` 元件。
 
-   与使用 [布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) 在SPA编辑器中可用。
+   與使用重新調整元件大小的功能相同 [版面模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) 可透過SPA編輯器使用。
 
-3. 返回 [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html). 添加其他 **图像** 并尝试使用 **布局** 选项：
+3. 返回至 [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html). 新增其他 **影像** 元件，並嘗試使用 **版面** 選項：
 
-   ![使用布局模式重新调整图像大小](./assets/map-components/responsive-grid-layout-change.gif)
+   ![使用版面模式重新調整影像大小](./assets/map-components/responsive-grid-layout-change.gif)
 
-4. 重新打开JSON模型 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) 观察 `columnClassNames` 作为JSON的一部分：
+4. 重新開啟JSON模型 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) 並觀察 `columnClassNames` 做為JSON的一部分：
 
-   ![列类名称](./assets/map-components/responsive-grid-classnames.png)
+   ![欄類別名稱](./assets/map-components/responsive-grid-classnames.png)
 
-   类名称 `aem-GridColumn--default--4` 指示组件应宽4列（基于12列网格）。 有关 [可在此处找到响应式网格](https://adobe-marketing-cloud.github.io/aem-responsivegrid/).
+   類別名稱 `aem-GridColumn--default--4` 表示元件應以12欄格線為4欄寬。 更多有關「 」的詳細資訊 [可在此處找到回應式格線](https://adobe-marketing-cloud.github.io/aem-responsivegrid/).
 
-5. 返回到IDE和 `ui.apps` 模块中有一个在 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-grid`. 打开文件 `less/grid.less`.
+5. 返回IDE並在 `ui.apps` 模組有一個使用者端程式庫定義於 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-grid`. 開啟檔案 `less/grid.less`.
 
-   此文件确定断点(`default`, `tablet`和 `phone`) **布局容器**. 此文件将根据项目规范进行自定义。 当前断点设置为 `1200px` 和 `650px`.
+   此檔案會決定中斷點(`default`， `tablet`、和 `phone`)用於 **配置容器**. 此檔案旨在根據專案規格自訂。 目前中斷點設定為 `1200px` 和 `650px`.
 
-6. 您应该能够使用 `Text` 组件来创作视图，如下所示：
+6. 您應該能夠使用的回應式功能和更新的RTF原則 `Text` 元件以製作檢視，如下所示：
 
-   ![章节示例最终创作](assets/map-components/final-page.png)
+   ![章節範例最終製作](assets/map-components/final-page.png)
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您学习了如何将SPA组件映射到AEM组件，并且还实施了 `Image` 组件。 您还有机会探索 **布局容器**.
+恭喜，您已瞭解如何將SPA元件對應至AEM元件，並實作新的 `Image` 元件。 您也有機會探索的回應式功能 **配置容器**.
 
-您始终可以在 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution) 或通过切换到分支在本地检出代码 `Angular/map-components-solution`.
+您一律可以檢視完成的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution) 或切換至分支以在本機簽出程式碼 `Angular/map-components-solution`.
 
 ### 后续步骤 {#next-steps}
 
-[导航和路由](navigation-routing.md)  — 了解如何通过SPA Editor SDK将SPA中的多个视图映射到AEM页面来支持这些视图。 动态导航是使用Angular路由器实现的，并添加到现有的标头组件中。
+[導覽與路由](navigation-routing.md)  — 瞭解如何使用SPA編輯器SDK將對應到AEM頁面，以支援SPA中的多個檢視。 動態導覽是使用Angular路由器實作，並新增至現有的Header元件。
 
-## 附加练习 — 保留用于源代码控制的配置 {#bonus}
+## 額外優點 — 將設定保留至原始檔控制 {#bonus}
 
-在很多情况下，特别是在AEM项目开始时，将配置（如模板和相关内容策略）保留到源控制中非常有价值。 这可确保所有开发人员针对同一组内容和配置开展工作，并可确保各环境之间具有额外的一致性。 一旦项目达到一定的成熟度，管理模板的做法就可以交给一组特定的高级用户。
+在許多情況下，尤其是在AEM專案開始時，將設定（例如範本和相關內容原則）保留到原始檔控制中很有價值。 這可確保所有開發人員都針對相同的內容和設定集，並可確保環境之間的額外一致性。 一旦專案達到一定的成熟度，管理範本的實務就可以交給一組特殊的超級使用者。
 
-接下来的几个步骤将使用Visual Studio代码IDE和 [VSCode AEM同步](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) 但可以使用您配置的任何工具和IDE **提取** 或 **导入** 来自AEM本地实例的内容。
+接下來的幾個步驟將使用Visual Studio Code IDE和 [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) 但可以使用任何工具和您已設定的IDE **提取** 或 **匯入** 來自AEM本機執行個體的內容。
 
-1. 在Visual Studio代码IDE中，确保 **VSCode AEM同步** 通过Marketplace扩展安装：
+1. 在Visual Studio Code IDE中，確定您已 **VSCode AEM Sync** 透過Marketplace擴充功能安裝：
 
-   ![VSCode AEM同步](./assets/map-components/vscode-aem-sync.png)
+   ![VSCode AEM Sync](./assets/map-components/vscode-aem-sync.png)
 
-2. 展开 **ui.content** 模块，并导航到 `/conf/wknd-spa-angular/settings/wcm/templates`.
+2. 展開 **ui.content** 模組，並導覽至 `/conf/wknd-spa-angular/settings/wcm/templates`.
 
-3. **右键单击** the `templates` 文件夹，选择 **从AEM Server导入**:
+3. **按一下滑鼠右鍵** 此 `templates` 資料夾並選取 **從AEM伺服器匯入**：
 
-   ![VSCode导入模板](assets/map-components/import-aem-servervscode.png)
+   ![VSCode匯入範本](assets/map-components/import-aem-servervscode.png)
 
-4. 重复导入内容的步骤，但选择 **策略** 位于 `/conf/wknd-spa-angular/settings/wcm/policies`.
+4. 重複步驟以匯入內容，但選取 **原則** 資料夾位於 `/conf/wknd-spa-angular/settings/wcm/policies`.
 
-5. Inspect `filter.xml` 位于 `ui.content/src/main/content/META-INF/vault/filter.xml`.
+5. Inspect `filter.xml` 檔案位於 `ui.content/src/main/content/META-INF/vault/filter.xml`.
 
    ```xml
    <!--ui.content filter.xml-->
@@ -497,6 +497,6 @@ ht-degree: 1%
     </workspaceFilter>
    ```
 
-   的 `filter.xml` 文件负责标识随包一起安装的节点的路径。 请注意 `mode="merge"` 在指示不会修改现有内容的每个过滤器上，只会添加新内容。 由于内容作者可能正在更新这些路径，因此代码部署必须执行以下操作 **not** 覆盖内容。 请参阅 [FileVault文档](https://jackrabbit.apache.org/filevault/filter.html) 有关使用过滤器元素的更多详细信息。
+   此 `filter.xml` file負責識別隨套件安裝的節點路徑。 請注意 `mode="merge"` 在表示現有內容將不會被修改的每個篩選器上，只會新增新內容。 由於內容作者可能正在更新這些路徑，因此程式碼部署必須更新 **not** 覆寫內容。 請參閱 [FileVault檔案](https://jackrabbit.apache.org/filevault/filter.html) 以取得有關使用篩選元素的詳細資訊。
 
-   比较 `ui.content/src/main/content/META-INF/vault/filter.xml` 和 `ui.apps/src/main/content/META-INF/vault/filter.xml` 以了解每个模块管理的不同节点。
+   比較 `ui.content/src/main/content/META-INF/vault/filter.xml` 和 `ui.apps/src/main/content/META-INF/vault/filter.xml` 以瞭解由每個模組管理的不同節點。

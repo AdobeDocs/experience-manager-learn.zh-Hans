@@ -1,6 +1,6 @@
 ---
-title: 如何对AEM中与性能相关的问题进行故障诊断
-description: 调查与性能相关问题的步骤
+title: 如何疑難排解AEM中的效能相關問題
+description: 調查效能相關問題的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何对AEM中与性能相关的问题进行故障诊断
+# 如何疑難排解AEM中的效能相關問題
 
-*此视频将逐步介绍如何对AEM中与性能相关的问题进行故障诊断。*
+*本影片逐步解說在AEM中疑難排解效能相關問題的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335472?quality=12&learn=on)

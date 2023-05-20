@@ -1,6 +1,6 @@
 ---
-title: 如何在AEM Forms中启用性能日志记录以调试与Forms和输出服务相关的问题
-description: 启用性能日志记录以调试与Forms或输出服务相关的问题的步骤
+title: 如何在AEM Forms中啟用效能記錄，以偵錯與Forms和輸出服務相關的問題
+description: 啟用效能記錄以偵錯Forms或輸出服務相關問題的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何在AEM Forms中启用性能日志记录以调试与Forms和输出服务相关的问题
+# 如何在AEM Forms中啟用效能記錄，以偵錯與Forms和輸出服務相關的問題
 
-*此视频将演示在AEM Forms中启用性能日志记录以调试与Forms和输出服务相关的问题的过程。*
+*本影片逐步解說在AEM Forms中啟用效能記錄，以偵錯與Forms和輸出服務相關的問題。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335499?quality=12&learn=on)

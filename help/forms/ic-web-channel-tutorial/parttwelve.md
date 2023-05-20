@@ -1,7 +1,7 @@
 ---
-title: 设置Web渠道文档的提交
+title: 設定Web Channel檔案的傳送
 seo-title: Setting up the delivery of web channel document
-description: 这是创建首个交互式通信文档的多步教程的最后一个部分。 在本部分中，我们将介绍如何通过电子邮件交付Web渠道文档。
+description: 這是建立第一個互動式通訊檔案的多步驟教學課程的最後一部分。 在本部分中，我們將探討透過電子郵件傳送Web Channel檔案的方式。
 seo-description: This is the final part of a multistep tutorial for creating your first interactive communications document. In this part, we look at the delivery of web channel document via email.
 uuid: c1066600-1abd-4401-b04f-b93c28603cc7
 feature: Interactive Communication
@@ -22,59 +22,59 @@ ht-degree: 0%
 
 ---
 
-# 设置Web渠道文档的提交 {#setting-up-the-delivery-of-web-channel-document}
+# 設定Web Channel檔案的傳送 {#setting-up-the-delivery-of-web-channel-document}
 
 
-在本部分中，我们将介绍如何通过电子邮件交付Web渠道文档。
+在本部分中，我們將探討透過電子郵件傳送Web Channel檔案的方式。
 
-定义并测试Web渠道交互式通信文档后，您需要一种传送机制来将Web渠道文档传送给收件人。
+定義並測試Web Channel互動式通訊檔案後，您需要一種傳遞機制來將Web Channel檔案傳遞給收件者。
 
-为了能够将电子邮件用作Web渠道文档的投放机制，我们需要对表单数据模型进行细微更改。
+為了能夠使用電子郵件作為Web Channel檔案的傳送機制，我們需要對表單資料模型做些微變更。
 
-[了解有关通过电子邮件投放Web渠道的更多信息](/help/forms/interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
+[若要進一步瞭解透過電子郵件的Web Channel傳遞](/help/forms/interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
 
-登录AEM Forms。
+登入AEM Forms。
 
-* 导航到Forms ->数据集成
+* 導覽至Forms ->資料整合
 
-* 在编辑模式下打开ReriementAccountStatement数据模型。
+* 在編輯模式下開啟RetirationAccountStatement資料模型。
 
-* 选择余额对象并单击编辑按钮。
+* 選取餘額物件，然後按一下編輯按鈕。
 
-* 选择“铅笔”图标以在编辑模式下打开id参数。
+* 選取「鉛筆」圖示以在編輯模式中開啟id引數。
 
-* 将绑定更改为“RequestAttribute”。
+* 將繫結變更為「RequestAttribute」。
 
-* 在绑定值中设置帐号，如下所示。
+* 在繫結值中設定accountnumber，如下所示。
 
-* 这样，我们就会通过表单数据模型的请求属性传入accountnumber
+* 這樣我們就能將accountnumber透過請求屬性傳至表單資料模型
 
-* 确保保存更改。
+* 請務必儲存變更。
    ![fdm](assets/requestattribute.gif)
 
-## 测试Web渠道文档的电子邮件投放 {#test-email-delivery-of-web-channel-document}
+## 測試Web Channel檔案的電子郵件傳送 {#test-email-delivery-of-web-channel-document}
 
-* [使用包管理器安装示例资产](assets/webchanneldelivery.zip)
-* [登录到crx](http://localhost:4502/crx/de/index.jsp#)
+* [使用封裝管理程式安裝範例資產](assets/webchanneldelivery.zip)
+* [登入crx](http://localhost:4502/crx/de/index.jsp#)
 
-* 导航到/home/users
+* 導覽至/home/users
 
-* 在用户的节点下搜索管理员用户。
+* 在使用者的節點下搜尋管理員使用者。
 
-* 选择管理员用户的配置文件节点。
+* 選取管理員使用者的設定檔節點。
 
-* 创建名为“accountnumber”的属性。 确保属性类型是字符串。
+* 建立名為「accountnumber」的屬性。 確定屬性型別為字串。
 
-* 将此accountnumber属性的值设置为“3059827”。 您可以根据需要将此值设置为任意随机数。
+* 將此accountnumber屬性的值設為「3059827」。 您可以視需要將此值設定為任何隨機數。
 
-* [打开getad.html](http://localhost:4502/content/getad.html)
+* [開啟getad.html](http://localhost:4502/content/getad.html)
 
-* 与此URL关联的代码将获取已登录用户的帐号。 然后，此帐号将作为请求属性传递到FDM。 然后，FDM将获取与此帐号关联的数据并填充Web渠道文档。
+* 與此URL相關聯的程式碼將取得登入使用者的帳號。 然後，此帳號會作為requestattribute傳遞至FDM。 然後，FDM會擷取與此帳號關聯的資料，並填入Web Channel檔案。
 
 >[!NOTE]
 >
->请看 **/apps/AEMForms/fetchad/GET.jsp** 文件。 请确保字符串变量webChannelDocument指向有效的通信文档路径。
+>請檢視 **/apps/AEMForms/fetchad/GET.jsp** crx中的檔案。 請確定字串變數webChannelDocument指向有效的通訊檔案路徑。
 
 ## 后续步骤
 
-[设置电子邮件投放](../interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
+[設定電子郵件傳遞](../interactive-communications/delivery-of-web-channel-document-tutorial-use.md)

@@ -1,6 +1,6 @@
 ---
-title: 在Windows Server2016中添加PDFG用户的步骤
-description: 在Windows Server 2016中配置PDF生成器
+title: 在Windows Server2016中新增PDFG使用者的步驟
+description: 在Windows Server 2016中設定PDF產生器
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 在Windows Server 2016中添加AEM Forms PDFG用户的步骤。
+# 在Windows Server 2016中新增AEM Forms PDFG使用者的步驟。
 
-*此视频将演示在Windows 2016中添加AEM Forms PDFG用户的其他步骤。*
+*本影片逐步說明在Windows 2016中新增AEM Forms PDFG使用者的其他步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335479?quality=12&learn=on)

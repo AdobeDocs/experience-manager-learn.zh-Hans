@@ -1,33 +1,33 @@
 ---
-title: AEM Dispatcher常见日志
-description: 查看Dispatcher中的常见日志条目，了解它们的含义以及如何解决它们。
+title: AEM Dispatcher常見記錄檔
+description: 檢視Dispatcher中的常見記錄專案，並瞭解其含義以及如何解決它們。
 version: 6.5
 topic: Administration, Performance
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 0%
 
 ---
 
-
-# 常用日志
+# 通用記錄檔
 
 [目录](./overview.md)
 
-[&lt; — 上一个：虚URL](./disp-vanity-url.md)
+[&lt; — 上一頁：虛名URL](./disp-vanity-url.md)
 
 ## 概述
 
-文档将描述您将看到的常见日志条目及其含义和处理方法。
+檔案將說明您會看到的常見記錄專案、其含義以及如何處理。
 
 ## GLOB警告
 
-示例日志条目：
+範例記錄專案：
 
 ```
 Fri Jul 20 03:35:09 2018 W pid 8300 (tid 139937910880384) /etc/httpd/conf/publish-filters.any:5: Allowing requests with globs is considered unsafe.
@@ -35,34 +35,34 @@ Please consult the documentation at 'https://www.adobe.com/go/docs_dispatcher_co
 method/url/query/protocol/path/selectors/extension/suffix instead.
 ```
 
-自Dispatcher模块4.2.x起，他们开始阻止用户在其筛选器文件中使用以下类型的匹配：
+自Dispatcher模組4.2.x開始，他們就勸阻人們不要在其篩選器檔案中使用下列型別的相符專案：
 
 ```
 /0041 { /type "allow" /glob "* *.css *"   }
 ```
 
-相反，最好使用新语法，例如：
+最好改用新語法，例如：
 
 ```
 /0041 { /type "allow" /url "*.css" }
 ```
 
-或者最好不要在通配符匹配程序上进行匹配：
+或者，最好根本不使用萬用字元比對器進行比對：
 
 ```
 /0041 { /type "allow" /extension "css" }
 ```
 
-执行任一建议的方法都将从日志中删除该错误消息。
+執行其中一種建議的方法都會從記錄中移除該錯誤訊息。
 
-## 筛选拒绝
+## 篩選拒絕
 
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-即使在日志级别设置过低的情况下发生拒绝，这些条目也不会始终显示。 将其设置为“信息”或“调试”，以确保您能够查看过滤器是否拒绝了请求。
+如果記錄層級設定得太低，即使發生拒絕，也不會始終顯示這些專案。 將其設定為「資訊」或「除錯」，以確保您可檢視篩選器是否拒絕請求。
 </div>
 
-示例日志条目：
+範例記錄專案：
 
 ```
 Fri Jul 20 17:25:48 2018 D pid 25939 (tid 139937517123328) Filter rejects: GET /libs/granite/core/content/login.html HTTP/1.1
@@ -76,90 +76,90 @@ Fri Jul 20 22:16:55 2018 I pid 128803 "GET /system/console/" ! - 8ms publishfarm
 
 <div style="color: #000;border-left: 6px solid red;background-color:#ddffff;"><b>注意:</b>
 
-了解Dispatcher的规则已设置为过滤该请求。 在这种情况下，尝试访问的页面被有意拒绝，我们不想对此执行任何操作。
+瞭解Dispatcher的規則已設定為篩選掉該請求。 在此情況下，嘗試造訪的頁面會故意遭到拒絕，我們不需要執行任何動作。
 </div>
 
-如果您的日志类似于以下条目：
+如果您的記錄看起來像這個專案：
 
 ```
 Fri Jul 20 17:26:47 2018 D pid 20051 (tid 139937517123328) Filter rejects: 
 GET /etc/designs/exampleco/fonts/montserrat-regular/montserrat-regular-webfont.eot HTTP/1.1
 ```
 
-这让我们知道我们的设计文件 `.eot` 正被阻止，我们将想要解决这个问题。
-因此，我们应该查看过滤器文件，并添加以下行以允许 `.eot` 文件通过
+這讓我們知道我們的設計檔案 `.eot` 已遭到封鎖，我們將會修正此問題。
+因此，我們應該檢視篩選器檔案，並新增下列行以允許 `.eot` 檔案到
 
 ```
 /0011 { /type "allow" /method "GET" /extension 'eot' /path "/etc/designs/*" }
 ```
 
-这将允许文件通过并阻止其记录。
-如果要查看正在过滤的内容，可以在日志文件中运行以下命令：
+這將允許檔案通過並停止記錄。
+如果您想要檢視篩選掉的內容，可以在記錄檔上執行此命令：
 
 ```
 $ grep "Filter rejects\|\!" /var/log/httpd/dispatcher.log | awk 'match($0, /\/.*\//, m){ print m0 }' | awk '{ print $1 }'| sort | uniq -c | sort -rn
 ```
 
-## 渲染超时
+## 轉譯器逾時
 
-套接字超时示例日志条目：
+通訊端逾時範例記錄專案：
 
 ```
 Fri Jul 20 22:31:15 2018 W pid 3648 Unable to connect socket to 10.43.3.40:4502: Connection timed out 
 Fri Jul 20 22:31:15 2018 W pid 3648 Unable to connect to any backend in farm authorfarm
 ```
 
-当您在场的renders部分中配置了错误的IP地址时，会发生这种情况。 该或AEM实例已停止响应或侦听，且Dispatcher无法访问它。
+當您在陣列的轉譯器區段中設定了錯誤的IP位址時，就會發生這種情況。 該AEM執行個體停止回應或接聽，Dispatcher無法與其連線。
 
-检查您的防火墙规则，以及AEM实例是否正在运行且运行正常。
+檢查防火牆規則，確認AEM執行個體正在執行且狀況良好。
 
-网关超时示例日志条目：
+閘道逾時範例記錄專案：
 
 ```
 Fri Jul 20 22:32:42 2018 I pid 3648 "GET /favicon.ico" 502 - 54034ms authorfarm/- 
 Fri Jul 20 22:35:45 2018 I pid 3648 "GET /favicon.ico" 503 - 54234ms authorfarm/-
 ```
 
-这意味着AEM实例具有一个打开的套接字，该套接字可能会随响应而到达并超时。 这表示您的AEM实例运行过慢或运行不正常，并且Dispatcher已在场的呈现部分中达到其配置的超时设置。 增加超时设置或使AEM实例正常。
+這表示AEM執行個體有一個開啟的通訊端，它可以連線並透過回應逾時。 這表示您的AEM執行個體太慢或不正常，Dispatcher已在陣列的轉譯區中達到其設定的逾時設定。 請增加逾時設定或讓AEM執行個體正常運作。
 
-## 缓存级别
+## 快取層級
 
-示例日志条目：
+範例記錄專案：
 
 ```
 Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit ratio: 87.94 %
 ```
 
-这意味着测量从渲染级别与从缓存获取的数据。 您希望从缓存中达到80%以上，并应按照帮助 [此处](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html%3Flang%3Den):
+這表示會測量您從轉譯器層級和從快取擷取的情況。 您想要從快取中達到80%以上，且您應遵循說明 [此處](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html%3Flang%3Den)：
 
-以尽可能高地获得此数字。
+以儘可能提高此數字。
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-即使您在场文件中设置了缓存设置来缓存所有可能刷新的次数过多或过于频繁，可能会导致缓存命中率降低
+即使您在伺服器陣列檔案中設定快取設定來快取所有內容，您也可能過於頻繁或過於激進地排清，這可能會導致發生快取命中率的百分比較低
 </div>
 
-## 缺少目录
+## 缺少目錄
 
-示例日志条目：
+範例記錄專案：
 
 ```
 Fri Jul 20 14:02:43 2018 E pid 4728 (tid 140662586435328) Unable to create parent directory /mnt/var/www/author/libs/dam/content/asseteditors/formitems.overlay.infinity.json/application: Not a directory
 ```
 
-通常，当在获取项目的同时执行缓存清除时，会显示该内容。
+這通常會在擷取專案時同時進行快取清除時顯示。
 
-该或文档根目录对它的权限不正确，或者文件夹上的SELinux文件上下文错误，该文件上下文拒绝Apache创建新的所需子目录。
+該目錄或檔案根目錄的許可權不正確，或者資料夾上的SELinux檔案上下文錯誤，拒絕Apache建立新需要的子目錄來進行。
 
-有关权限问题，请查看documentroot的权限，并确保它们类似于：
+有關許可權問題，請檢視documentroot的許可權，並確保它們看起來類似於：
 
 ```
 dispatcher$ ls -Z /var/www/
 drwxr-xr-x+ apache apache system_u:object_r:httpd_sys_content_t:s0 html
 ```
 
-## 找不到虚URL
+## 找不到虛名URL
 
-示例日志条目：
+範例記錄專案：
 
 ```
 Thu Sep 27 17:35:11 2018 D pid 18936 Checking vanity URLs 
@@ -167,11 +167,11 @@ Thu Sep 27 17:35:11 2018 D pid 18936 Vanity URL file (/tmp/vanity_urls) not foun
 Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42:4503/libs/granite/dispatcher/content/vanityUrls.html: remote server returned: HTTP/1.1 404 Not Found
 ```
 
-当您将Dispatcher配置为使用动态自动过滤允许虚URL，但未通过在AEM渲染器上安装包来完成设置时，会发生此错误。
+當您將Dispatcher設定為使用動態自動篩選允許虛名URL，但未在AEM轉譯器上安裝套件來完成設定時，會發生此錯誤。
 
-要修复此问题，请在AEM实例上安装虚URL功能包，并允许匿名用户为其做好准备。 详细信息 [此处](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html%3Flang%3Den)
+若要修正此問題，請在AEM執行個體上安裝虛名URL功能套件，並允許匿名使用者準備就緒。 詳細資料 [此處](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html%3Flang%3Den)
 
-设置的工作虚URL如下所示：
+設定的有效虛名URL如下所示：
 
 ```
 Thu Sep 27 17:40:29 2018 D pid 21844 Checking vanity URLs 
@@ -179,28 +179,28 @@ Thu Sep 27 17:40:29 2018 D pid 21844 Vanity URL file (/tmp/vanity_urls) not foun
 Thu Sep 27 17:40:29 2018 D pid 21844 Loaded 18 vanity URLs from file /tmp/vanity_urls
 ```
 
-## 缺少场
+## 缺少陣列
 
-示例日志条目：
+範例記錄專案：
 
 ```
 Wed Nov 13 17:17:26 2019 W pid 19173:tid 140542738364160 No farm matches host 'we-retail.com', selected last farm 'publishfarm'
 ```
 
-此错误表示在 `/etc/httpd/conf.dispatcher.d/enabled_farms/` 他们无法从 `/virtualhost` 中。
+此錯誤表示從所有可用的伺服器陣列檔案 `/etc/httpd/conf.dispatcher.d/enabled_farms/` 他們無法從找到相符的專案 `/virtualhost` 區段。
 
-场文件根据请求传入的域名或路径匹配流量。 它使用全局匹配，如果它不匹配，则表示您未正确配置场、键入场中的条目，或者完全缺少该条目。 当场与任何条目不匹配时，它最终将默认为所包含场文件堆栈中包含的最后一个场。 在本例中是 `999_ams_publish_farm.any` 名称为publishfarm的通用名称。
+伺服器陣列檔案會根據要求傳入的網域名稱或路徑來比對流量。 這會使用glob比對，如果不符合，表示您未正確設定陣列、輸入陣列中的專案，或專案完全遺失。 當陣列不符合任何專案時，它最終只會預設為陣列檔案棧疊中包含的最後一個陣列。 在此範例中， `999_ams_publish_farm.any` 其名稱為publishfarm的一般名稱。
 
-以下是场文件示例 `/etc/httpd/conf.dispatcher.d/enabled_farms/300_weretail_publish_farm.any` 这个部分被缩小以突出相关部分。
+以下是範例伺服器陣列檔案 `/etc/httpd/conf.dispatcher.d/enabled_farms/300_weretail_publish_farm.any` 會減少以反白相關零件。
 
-## 提供的物料来源
+## 服務專案來源
 
-示例日志条目：
+範例記錄專案：
 
 ```
 Tue Nov 26 16:41:34 2019 I pid 9208 (tid 140112092391168) "GET /content/we-retail/us/en.html" - + 24034ms publishfarm/0
 ```
 
-通过GEThttp方法获取内容 `/content/we-retail/us/en.html` 用了24034毫秒。 我们最后要关注的是 `publishfarm/0`. 您会看到它已定位并与 `publishfarm`. 已从呈现0中获取请求。 这意味着必须先从AEM请求此页面，然后才能缓存。 现在，让我们再次请求此页，并查看日志会发生什么情况。
+已透過內容的GEThttp方法擷取頁面 `/content/we-retail/us/en.html` 花了24034毫秒。 我們需要注意的是最後部分 `publishfarm/0`. 您會看到它鎖定目標並符合 `publishfarm`. 已從轉譯器0擷取請求。 這表示必須從AEM要求此頁面，然後進行快取。 現在，讓我們再次要求此頁面，並檢視記錄的情況。
 
-[下一个 — >只读文件](./immutable-files.md)
+[下一個 — >唯讀檔案](./immutable-files.md)

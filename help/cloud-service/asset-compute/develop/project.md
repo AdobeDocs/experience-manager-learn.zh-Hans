@@ -1,6 +1,6 @@
 ---
-title: 创建Asset compute项目以实现Asset compute可扩展性
-description: asset compute项目是使用Adobe I/OCLI生成的Node.js项目，符合特定结构，允许将这些项目部署到Adobe I/O Runtime并与AEMas a Cloud Service集成。
+title: 為Asset compute的擴充性建立Asset compute專案
+description: asset compute專案是使用Adobe I/OCLI產生的Node.js專案，須符合特定結構，以便部署至Adobe I/O Runtime並與AEMas a Cloud Service整合。
 kt: 6269
 thumbnail: 40197.jpg
 topic: Integrations, Development
@@ -15,48 +15,48 @@ ht-degree: 2%
 
 ---
 
-# 创建Asset compute项目
+# 建立Asset compute專案
 
-asset compute项目是使用Adobe I/OCLI生成的Node.js项目，符合允许将这些项目部署到Adobe I/O Runtime并与AEM as a Cloud Service集成的特定结构。 单个Asset compute项目可以包含一个或多个Asset compute工作程序，每个工作程序都具有可从AEMas a Cloud Service处理配置文件引用的离散HTTP端点。
+asset compute專案是使用Adobe I/OCLI產生的Node.js專案，須符合特定結構，以便部署至Adobe I/O Runtime並與AEMas a Cloud Service整合。 單一Asset compute專案可包含一或多個Asset compute背景工作，且每個背景工作都有一個獨立的HTTP端點，可從AEMas a Cloud Service處理設定檔參照。
 
-## 生成项目
+## 產生專案
 
 >[!VIDEO](https://video.tv.adobe.com/v/40197?quality=12&learn=on)
 
-_点进以生成Asset compute项目（无音频）_
+_產生Asset compute專案的點進（無音訊）_
 
-使用 [Adobe I/OCLIAsset compute插件](../set-up/development-environment.md#aio-cli) 生成新的空Asset compute项目。
+使用 [Adobe I/OCLIAsset compute外掛程式](../set-up/development-environment.md#aio-cli) 以產生新的空白Asset compute專案。
 
-1. 在命令行中，导航到要包含项目的文件夹。
-1. 从命令行中执行 `aio app init` 开始交互式项目生成CLI。
-   + 此命令可能会生成Web浏览器，提示进行身份验证以Adobe I/O。如果存在，请提供与 [所需的Adobe服务和产品](../set-up/accounts-and-services.md). 如果您无法登录，请遵循 [有关如何生成项目的说明](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
-1. __选择组织__
-   + 选择具有AEMas a Cloud Service且已在中注册应用程序生成器的Adobe组织
+1. 從命令列，瀏覽至要包含專案的資料夾。
+1. 從命令列，執行 `aio app init` 以開始互動式專案產生CLI。
+   + 這個命令可能會產生一個Web瀏覽器，提示您Adobe I/O驗證。如果有，請提供您與以下專案相關聯的Adobe認證： [必要的Adobe服務和產品](../set-up/accounts-and-services.md). 如果您無法登入，請遵循 [以下是如何產生專案的指示](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+1. __選取組織__
+   + 選取已註冊AEMas a Cloud ServiceApp Builder的Adobe組織
 1. __选择项目__
-   + 找到并选择项目。 这是 [项目标题](../set-up/app-builder.md) 从应用程序生成器项目模板创建，在此例中为 `WKND AEM Asset Compute`
-1. __选择工作区__
-   + 选择 `Development` 工作区
-1. __您希望为此项目启用哪些Adobe I/O应用程序功能？ 选择要包含的组件__
+   + 找到並選取專案。 這是 [專案標題](../set-up/app-builder.md) 從App Builder專案範本建立（在此案例中為） `WKND AEM Asset Compute`
+1. __選取工作區__
+   + 選取 `Development` 工作區
+1. __您要為此專案啟用哪些Adobe I/O應用程式功能？ 選取要包含的元件__
    + 选择 `Actions: Deploy runtime actions`
-   + 使用箭头键选择和空格键取消选择/选择，然后按Enter键确认选择
-1. __选择要生成的操作类型__
+   + 使用箭頭鍵來選取，使用空格鍵來取消選取/選取，並使用Enter鍵來確認選取
+1. __選取要產生的動作型別__
    + 选择 `DX Asset Compute Worker v1`
-   + 使用箭头键进行选择，空格键进行取消选择/选择，Enter键进行确认选择
-1. __要如何命名此操作？__
-   + 使用默认名称 `worker`.
-   + 如果您的项目包含多个执行不同资产计算的工作程序，请在语义上为它们命名
+   + 使用箭頭鍵來選取、空格鍵來取消選取/選取，以及Enter鍵來確認選取
+1. __您要如何命名此動作？__
+   + 使用預設名稱 `worker`.
+   + 如果您的專案包含執行不同資產計算的多個背景工作，請以語義方式命名它們
 
-## 生成console.json
+## 產生console.json
 
-开发人员工具需要一个名为 `console.json` 包含连接到Adobe I/O所需的凭据。此文件将从Adobe I/O控制台下载。
+開發人員工具需要名為的檔案 `console.json` 包含連線至Adobe I/O所需的認證。此檔案是從Adobe I/O主控台下載。
 
-1. 打开Asset compute工的 [Adobe I/O](https://console.adobe.io) 项目
-1. 选择项目工作区以下载 `console.json` 的凭据，在此例中，选择 `Development`
-1. 转到Adobe I/O项目的根，然后点按 __全部下载__ 中。
-1. 文件将下载为 `.json` 带有项目和工作区前缀的文件，例如： `wkndAemAssetCompute-81368-Development.json`
+1. 開啟Asset compute工作者的 [Adobe I/O](https://console.adobe.io) 專案
+1. 選取要下載的專案工作區 `console.json` 認證，在此案例中選取 `Development`
+1. 前往Adobe I/O專案的根目錄並點選 __全部下載__ 右上角。
+1. 檔案下載為 `.json` 前置詞為專案和工作區的檔案，例如： `wkndAemAssetCompute-81368-Development.json`
 1. 您可以
-   + 将文件重命名为 `console.json` 并将其移到Asset compute工作项目的根中。 这是本教程中的方法。
-   + 将其移入任意文件夹，并从 `.env` 具有配置项的文件 `ASSET_COMPUTE_INTEGRATION_FILE_PATH`. 文件路径可以是绝对路径，也可以是相对于项目根路径的绝对路径。 例如：
+   + 將檔案重新命名為 `console.json` 並將其移至Asset compute工作者專案的根目錄中。 這就是本教學課程的方法。
+   + 將其移至任意資料夾，並從您的檔案夾中參照該資料夾。 `.env` 包含設定專案的檔案 `ASSET_COMPUTE_INTEGRATION_FILE_PATH`. 檔案路徑可以是絕對路徑，也可以是相對於專案根目錄的路徑。 例如：
       + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=/Users/example-user/secrets/wkndAemAssetCompute-81368-Development.json`
 
       或者
@@ -64,12 +64,12 @@ _点进以生成Asset compute项目（无音频）_
 
 
 > 注意
-> 文件包含凭据。 如果将文件存储在项目中，请确保将其添加到 `.gitignore` 文件来阻止共享。 这同样适用于 `.env` 文件 — 这些凭据文件不得共享或存储在Git中。
+> 檔案包含認證。 如果您將此檔案儲存在專案中，請務必將其新增至 `.gitignore` 檔案以防止共用。 這同樣適用於 `.env` 檔案 — 這些認證檔案不得共用或儲存在Git中。
 
-## asset computeGitHub上的项目
+## 在GitHub上Asset compute專案
 
-最终Asset compute项目可在GitHub上获取，网址为：
+最終Asset compute專案可在GitHub上取得，網址為：
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_GitHub包含项目的最终状态，已完全填充工作程序和测试案例，但不包含任何凭据，即 `.env`, `console.json` 或 `.aio`._
+_GitHub包含專案的最終狀態、填入完整背景工作程式和測試案例，但不包含任何認證，也就是 `.env`， `console.json` 或 `.aio`._

@@ -1,6 +1,6 @@
 ---
-title: 在AEM中开发项目
-description: 一个演示如何为AEM项目开发的开发教程。  在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建新项目，以管理内容创作工作流和任务。
+title: 在AEM中開發專案
+description: 說明如何為AEM專案開發的開發教學課程。  在本教學課程中，我們將建立一個自訂的專案範本，可用來在AEM中建立新的專案，以管理內容製作工作流程和任務。
 version: 6.4, 6.5
 feature: Projects, Workflow
 topics: collaboration, development, governance
@@ -18,38 +18,38 @@ ht-degree: 0%
 
 ---
 
-# 在AEM中开发项目
+# 在AEM中開發專案
 
-本开发教程将演示如何为 [!DNL AEM Projects].  在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建新项目，以管理内容创作工作流和任务。
+此開發教學課程說明如何開發 [!DNL AEM Projects].  在本教學課程中，我們將建立一個自訂的專案範本，可用來在AEM中建立新的專案，以管理內容製作工作流程和任務。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
-*此视频简要介绍在以下教程中创建的已完成工作流。*
+*此影片會簡短示範下列教學課程中建立的已完成工作流程。*
 
 ## 简介 {#introduction}
 
-[[!DNL AEM Projects]](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html) 是AEM的一项功能，旨在简化在AEM Sites或资产实施中管理和分组与内容创建相关的所有工作流和任务的过程。
+[[!DNL AEM Projects]](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html) 是AEM的一項功能，旨在讓您更輕鬆地管理與內容建立相關的所有工作流程和任務分組，這是AEM Sites或Assets實作的一部分。
 
-AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTemplates). 创建新项目时，作者可以从这些可用模板中进行选择。 具有独特业务需求的大型AEM实施将需要创建自定义项目模板，并根据其需求进行量身定制。 通过创建自定义项目模板，开发人员可以配置项目功能板、挂接到自定义工作流，以及为项目创建其他业务角色。 我们将查看项目模板的结构并创建一个示例模板。
+AEM專案隨附數個 [OOTB專案範本](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTemplates). 建立新專案時，作者可以從這些可用的範本中進行選擇。 具有獨特業務需求的大型AEM實作將想要建立自訂專案範本，以符合其需求。 透過建立自訂專案範本，開發人員可以設定專案控制面板、連結至自訂工作流程，以及為專案建立其他業務角色。 我們將檢視專案範本的結構，並建立範例範本。
 
-![自定义项目卡片](./assets/develop-aem-projects/custom-project-card.png)
+![自訂專案卡](./assets/develop-aem-projects/custom-project-card.png)
 
 ## 设置
 
-本教程将逐步完成创建自定义项目模板所需的代码。 您可以下载并安装 [附加包](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip) 到本地环境，以便与教程一起使用。 您还可以访问托管在的完整Maven项目 [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide).
+本教學課程將逐步說明建立自訂專案範本所需的程式碼。 您可以下載並安裝 [附加的封裝](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip) ，連同本教學課程一起進行。 您也可以存取上託管的完整Maven專案 [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide).
 
-* [已完成教程包](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
-* [GitHub上的完整代码存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
+* [完成的教學課程套件](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
+* [GitHub上的完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教程假定了 [AEM开发实践](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/the-basics.html) 和对 [AEM Maven项目设置](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/ht-projects-maven.html). 所有提及的代码都将用作引用，并且只应部署到 [本地开发AEM实例](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted).
+本教學課程假設您具備以下基本知識 [AEM開發實務](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/the-basics.html) 並且熟悉 [AEM Maven專案設定](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/ht-projects-maven.html). 所有提及的程式碼都是為了當作參考使用，且僅應部署至 [本機開發AEM執行個體](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted).
 
-## 项目模板的结构
+## 專案範本的結構
 
-项目模板应置于源代码管理下，并应位于/apps下的应用程序文件夹下。 理想情况下，应将它们放置在具有命名约定的子文件夹中 **&#42;/projects/templates/**&lt;my-template>. 通过遵循此命名约定，作者在创建项目时将自动使用任何新的自定义模板。 可用项目模板的配置在以下位置设置： **/content/projects/jcr:content** 节点 **cq:allowedTemplates** 属性。 默认情况下，这是正则表达式： **/(apps|libs)/。&#42;/projects/templates/.&#42;**
+專案範本應置於原始檔控制之下，且應位於/apps下的應用程式資料夾下方。 理想情況下，這些檔案應放置在子資料夾中，其命名慣例為 **&#42;/projects/templates/**&lt;my-template>. 透過遵循此命名慣例，任何新的自訂範本在建立專案時都可自動供作者使用。 可用專案範本的設定設定如下： **/content/projects/jcr：content** 節點依據 **cq：allowedTemplates** 屬性。 依預設，這是規則運算式： **/(apps|libs)/.&#42;/projects/templates/.&#42;**
 
-项目模板的根节点将具有 **jcr:primaryType** of **cq：模板**. 在的根节点下面有3个节点： **小工具**, **角色**&#x200B;和 **工作流**. 这些节点都 **nt：非结构化**. 根节点下方还可以是一个thumbnail.png文件，在“创建项目”向导中选择模板时，该文件会显示该文件。
+專案範本的根節點將具有 **jcr：primaryType** 之 **cq：Template**. 根節點底下有3個節點： **小工具**， **角色**、和 **工作流程**. 這些節點都是 **nt：unstructured**. 根節點下方也可以是thumbnail.png檔案，此檔案會在「建立專案」精靈中選取範本時顯示。
 
-全节点结构：
+完整的節點結構：
 
 ```shell
 /apps/<my-app>
@@ -61,25 +61,25 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
                    + workflows (nt:unstructured)
 ```
 
-### 项目模板根
+### 專案範本根目錄
 
-项目模板的根节点类型为 **cq：模板**. 在此节点上，您可以配置属性 **jcr:title** 和 **jcr:description** ，该值显示在创建项目向导中。 还有一个名为 **向导** 表单中，该表单将填充项目的属性。 默认值为： **/libs/cq/core/content/projects/wizard/steps/defaultproject.html** 在大多数情况下，应该可以正常使用，因为它允许用户填充基本的项目属性并添加组成员。
+專案範本的根節點為型別 **cq：Template**. 您可以在此節點上設定屬性 **jcr：title** 和 **jcr：description** 「建立專案精靈」中顯示的專案。 還有一個屬性稱為 **精靈** 會指向將填入專案屬性的表單。 預設值為： **/libs/cq/core/content/projects/wizard/steps/defaultproject.html** 大多數情況下應該都能正常運作，因為它可讓使用者填入基本專案屬性並新增群組成員。
 
-*&#42;请注意，创建项目向导不使用SlingPOSTServlet。 而是会将值发布到自定义Servlet:**com.adobe.cq.projects.impl.servlet.ProjectServlet**. 添加自定义字段时应考虑这一点。*
+*&#42;請注意，「建立專案精靈」不使用SlingPOSTservlet。 而是將值發佈到自訂servlet：**com.adobe.cq.projects.impl.servlet.ProjectServlet**. 新增自訂欄位時，應將此列入考量。*
 
-可以找到翻译项目模板的自定义向导示例： **/libs/cq/core/content/projects/wizard/translationproject/defaultproject**.
+翻譯專案範本的自訂精靈範例如下： **/libs/cq/core/content/projects/wizard/translationproject/defaultproject**.
 
 ### 小工具 {#gadgets}
 
-此节点上没有其他属性，但小工具节点的子项会控制在创建新项目时填充项目功能板的项目拼贴。 [项目图块](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTiles) （也称为小工具或pod）是填充项目工作区的简单卡片。 在下面可找到ootb拼贴的完整列表：**/libs/cq/gui/components/projects/admin/pod。 **项目所有者始终可以在创建项目后添加/删除图块。
+此節點上沒有其他屬性，但小工具節點的子節點可控制建立新專案時填入專案儀表板中的專案拼貼。 [專案動態磚](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTiles) （也稱為小工具或pod）是簡單卡片，會填入專案的工作場所。 您可在下列位置找到ootb圖磚的完整清單： **/libs/cq/gui/components/projects/admin/pod。 **專案所有者一律可在專案建立後新增/移除圖磚。
 
 ### 角色 {#roles}
 
-有3个 [默认角色](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#UserRolesinaProject) 对于每个项目： **观察员**, **编辑器**&#x200B;和 **所有者**. 通过在角色节点下添加子节点，您可以为模板添加其他特定于业务的项目角色。 然后，您可以将这些角色与与项目关联的特定工作流关联起来。
+共有3個 [預設角色](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#UserRolesinaProject) 對於每個專案： **觀察者**， **編輯者**、和 **擁有者**. 藉由在角色節點底下新增子節點，您可以為範本新增其他特定於業務的專案角色。 然後，您可以將這些角色連結到與專案關聯的特定工作流程。
 
 ### 工作流 {#workflows}
 
-创建自定义项目模板的其中一个最诱人的原因是，它使您能够配置可用的工作流以用于项目。 这些工作流可以是OOTB工作流或自定义工作流。 在 **工作流** 该节点需要 **模型** 节点(也 `nt:unstructured`)和子节点下指定可用的工作流模型。 属性**modelId **指向/etc/workflow下的工作流模型和属性 **向导** 指向启动工作流时使用的对话框。 “项目”的一大优势在于能够添加自定义对话框（向导），以在工作流开始时捕获特定于业务的元数据，该元数据可以在工作流中驱动进一步的操作。
+建立自訂專案範本的最誘人原因之一，是它使您能夠設定用於專案的可用工作流程。 這些功能可以是OOTB工作流程或自訂工作流程。 在 **工作流程** 節點中必須有一個 **模型** 節點(也 `nt:unstructured`)和底下的子節點指定可用的工作流程模型。 屬性**modelId **指向/etc/workflow下的工作流程模型和屬性 **精靈** 指向啟動工作流程時使用的對話方塊。 Projects的一大優勢是能夠新增自訂對話方塊（精靈），以在工作流程開始時擷取業務特定的中繼資料，這可以推動工作流程中的進一步動作。
 
 ```shell
 <projects-template-root> (cq:Template)
@@ -90,11 +90,11 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
                    - wizard = dialog used to start the workflow
 ```
 
-## 创建项目模板 {#creating-project-template}
+## 建立專案範本 {#creating-project-template}
 
-由于我们主要是复制/配置节点，因此我们将使用CRXDE Lite。 在本地AEM实例中打开 [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
+由於我們主要是複製/設定節點，因此將使用CRXDE Lite。 在本機AEM執行個體中，開啟 [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
 
-1. 首先，在下面创建新文件夹 `/apps/&lt;your-app-folder&gt;` 已命名 `projects`. 在该文件夹下创建另一个文件夹，该文件夹名为 `templates`.
+1. 首先，在下方建立新資料夾 `/apps/&lt;your-app-folder&gt;` 已命名 `projects`. 在該名稱下建立另一個資料夾 `templates`.
 
    ```shell
    /apps/aem-guides/projects-tasks/
@@ -102,9 +102,9 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
                                 + templates (nt:folder)
    ```
 
-1. 为了简化操作，我们将从现有的简单项目模板启动自定义模板。
+1. 為了更輕鬆辦事，我們將從現有的Simple Project範本開始自訂範本。
 
-   1. 复制并粘贴节点 **/libs/cq/core/content/projects/templates/default** 在 *模板* 文件夹。
+   1. 複製並貼上節點 **/libs/cq/core/content/projects/templates/default** 在 *範本* 在步驟1中建立的資料夾。
 
    ```shell
    /apps/aem-guides/projects-tasks/
@@ -112,11 +112,11 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
                      + default (cq:Template)
    ```
 
-1. 你现在应该有这样的路 **/apps/aem-guides/projects-tasks/projects/templates/authoring-project**.
+1. 您現在應該有類似以下的路徑 **/apps/aem-guides/projects-tasks/projects/templates/authoring-project**.
 
-   1. 编辑 **jcr:title** 和 **jcr:description** author-project节点的属性更改为自定义标题和描述值。
+   1. 編輯 **jcr：title** 和 **jcr：description** 「作者 — 專案」節點的屬性以自訂標題和說明值。
 
-      1. 离开 **向导** 属性。
+      1. 離開 **精靈** 指向預設Project屬性的屬性。
 
    ```shell
    /apps/aem-guides/projects-tasks/projects/
@@ -127,11 +127,11 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
                       - wizard = "/libs/cq/core/content/projects/wizard/steps/defaultproject.html"
    ```
 
-1. 对于此项目模板，我们要使用“任务”。
-   1. 添加新 **nt：非结构化** authoring project/gadgets下的节点，称为 **任务**.
-   1. 将字符串属性添加到任务节点 **cardWeight** = &quot;100&quot;, **jcr:title**=&quot;Tasks&quot;，和 **sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;。
+1. 我們想要針對此專案範本使用任務。
+   1. 新增 **nt：unstructured** 已呼叫authoring-project/gadgets下的節點 **任務**.
+   1. 將String屬性新增至Tasks節點 **cardWeight** = &quot;100&quot;， **jcr：title**=&quot;Tasks&quot;，和 **sling：resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;。
 
-   现在 [任务拼贴](https://experienceleague.adobe.com/docs/#Tasks) 默认情况下，将在创建新项目时显示。
+   現在 [「任務」圖磚](https://experienceleague.adobe.com/docs/#Tasks) 建立新專案時預設會顯示。
 
    ```shell
    ../projects/templates/authoring-project
@@ -148,14 +148,14 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
                  - sling:resourceType = "cq/gui/components/projects/admin/pod/taskpod"
    ```
 
-1. 我们将向项目模板添加自定义审批者角色。
+1. 我們將新增自訂核准者角色到我們的專案範本。
 
-   1. 在项目模板(authoring-project)节点下，添加新 **nt：非结构化** 节点标记 **角色**.
-   1. 添加其他 **nt：非结构化** 节点将批准者标记为角色节点的子项。
-   1. 添加字符串属性 **jcr:title** = &quot;**批准者**&quot;, **卷类** =&quot;**所有者**&quot;, **罗利德**=&quot;**批准者**&quot;
-      1. 批准者节点的名称以及jcr:title和roleid可以是任何字符串值（只要roleid是唯一的）。
-      1. **卷类** 根据 [3个OOTB角色](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User项目中的角色): **所有者**, **编辑者**&#x200B;和 **观察**.
-      1. 通常，如果自定义角色更像管理角色，则角色类可以 **所有者；** 如果它是更具体的创作角色（如摄影师或设计师），则 **编辑者** 卷类应该足够了。 两者之间的巨大区别 **所有者** 和 **编辑者** 项目所有者可以更新项目属性并向项目添加新用户。
+   1. 在專案範本(authoring-project)節點下新增一個 **nt：unstructured** 節點已標籤 **角色**.
+   1. 新增另一個 **nt：unstructured** 標示為「角色」節點子項的核准者節點。
+   1. 新增字串屬性 **jcr：title** = &quot;**核准者**&quot;， **roleclass** =&quot;**所有者**&quot;， **roleid**=&quot;**核准者**「。
+      1. 核准者節點的名稱以及jcr：title和roleid可以是任何字串值（只要roleid是唯一的）。
+      1. **roleclass** 會根據「 」控制套用至該角色的許可權 [3個OOTB角色](專案中的https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User角色)： **所有者**， **編輯者**、和 **觀察者**.
+      1. 一般而言，如果自訂角色主要是管理角色，則角色可以是 **所有者；** 如果它是更具體的創作角色，例如攝影師或設計師，則 **編輯者** 角色類別應該就足夠了。 兩者之間的重大差異 **所有者** 和 **編輯者** 是專案所有者可以更新專案屬性，並將新使用者新增至專案。
 
    ```shell
    ../projects/templates/authoring-project
@@ -167,7 +167,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
                 - roleid = "approver"
    ```
 
-1. 复制简单项目模板后，您将配置4个OOTB工作流。 工作流/模型下方的每个节点都指向特定的工作流以及该工作流的启动对话框向导。 在本教程的后面部分，我们将为此项目创建一个自定义工作流。 现在，删除工作流/模型下的节点：
+1. 複製簡單專案範本後，您將能設定4個OOTB工作流程。 工作流程/模型下的每個節點都指向該工作流程的特定工作流程和「開始」對話方塊精靈。 在本教學課程的稍後部分，我們將建立此專案的自訂工作流程。 現在請刪除工作流程/模型下的節點：
 
    ```shell
    ../projects/templates/authoring-project
@@ -178,10 +178,10 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
                - (remove ootb models)
    ```
 
-1. 为了便于内容作者识别项目模板，您可以添加自定义缩略图。 建议大小为319x319像素。
-   1. 在CRXDE Lite中，将新文件创建为小工具、角色和工作流节点的同级文件，这些节点名为 **thumbnail.png**.
-   1. 保存，然后导航到 `jcr:content` 节点，然后双击 `jcr:data` 属性（避免单击“view”）。
-      1. 这应会提示您进行编辑 `jcr:data` 文件对话框中，您可以上传自定义缩略图。
+1. 為了讓內容作者更容易識別專案範本，您可以新增自訂縮圖。 建議大小為319x319畫素。
+   1. 在CRXDE Lite中，建立新檔案作為小工具、角色和工作流程節點的同層級，並命名為 **thumbnail.png**.
+   1. 儲存，然後導覽至 `jcr:content` 節點，然後按兩下 `jcr:data` 屬性（請避免按一下「檢視」）。
+      1. 這會提示您進行編輯 `jcr:data` 檔案對話方塊，您可以上傳自訂縮圖。
 
    ```shell
    ../projects/templates/authoring-project
@@ -191,7 +191,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
        + thumbnail.png (nt:file)
    ```
 
-项目模板的已完成XML表示：
+已完成專案範本的XML表示：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -247,113 +247,113 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 </jcr:root>
 ```
 
-## 测试自定义项目模板
+## 測試自訂專案範本
 
-现在，我们可以通过创建新项目来测试项目模板。
+現在，我們可以建立新專案來測試專案範本。
 
-1. 您应会看到自定义模板作为项目创建选项之一。
+1. 您應該會看到自訂範本作為建立專案的選項之一。
 
-   ![选择模板](./assets/develop-aem-projects/choose-template.png)
+   ![選擇範本](./assets/develop-aem-projects/choose-template.png)
 
-1. 选择自定义模板后，单击“下一步”，并注意在填充项目成员时，您可以将他们添加为审批者角色。
+1. 選取自訂範本後，按一下「下一步」，並注意當填入專案成員時，您可以將其新增為核准者角色。
 
    ![批准](./assets/develop-aem-projects/user-approver.png)
 
-1. 单击“创建”以完成基于自定义模板的项目创建。 您会在“项目功能板”上注意到，任务拼贴以及在小工具下配置的其他拼贴会自动显示。
+1. 按一下「建立」即可根據自訂範本完成建立專案。 您會注意到「專案控制面板」上會自動顯示「任務拼貼」和在「小工具」下設定的其他拼貼。
 
-   ![任务拼贴](./assets/develop-aem-projects/tasks-tile.png)
+   ![任務拼貼](./assets/develop-aem-projects/tasks-tile.png)
 
 
-## 为什么选择工作流？
+## 為什麼是工作流程？
 
-传统上，以审批流程为中心的AEM工作流程会使用参与者工作流步骤。 AEM收件箱包含有关任务和工作流以及与AEM项目增强集成的详细信息。 这些功能使使用“项目创建任务”流程步骤更具吸引力。
+傳統上以核准程式為中心的AEM工作流程會使用參與者工作流程步驟。 AEM收件匣包含有關任務和工作流程的詳細資訊，並增強與AEM專案的整合。 這些功能讓使用「專案建立任務」處理步驟成為更具吸引力的選項。
 
-### 为什么要执行任务？
+### 為何要執行任務？
 
-与传统的参与者步骤相比，使用任务创建步骤具有以下几个优势：
+使用「任務建立步驟」來取代傳統的「參與者」步驟有幾個優點：
 
-* **开始日期和到期日期**  — 使作者能够轻松管理其时间，新的日历功能会利用这些日期。
-* **优先级**  — 内置的“低”、“正常”和“高”优先级允许作者优先处理工作
-* **线程化注释**  — 作者在执行一项任务时，能够留下评论，从而加强协作
-* **可见性**  — 任务图块和项目视图允许经理查看所用时间
-* **项目集成**  — 任务已与项目角色和功能板集成
+* **開始和到期日期**  — 讓作者更容易管理時間，新的「行事曆」功能會利用這些日期。
+* **優先順序**  — 內建「低」、「一般」和「高」優先順序，讓作者能安排工作的優先順序
+* **執行緒註解**  — 當作者處理任務時，他們能夠留下註解以增加共同作業
+* **可見度**  — 使用專案的任務圖磚和檢視可讓經理檢視時間的花費方式
+* **專案整合**  — 任務已與專案角色和儀表板整合
 
-与参与者步骤一样，任务可以动态分配和路由。 任务元数据（如标题、优先级）还可以根据之前的操作动态设置，下面的教程中将会看到这些操作。
+與參與者步驟一樣，可以動態地指派和路由任務。 如下列教學課程所示，工作中繼資料（例如標題、優先順序）也可以根據先前的動作來動態設定。
 
-虽然任务比参与者步骤具有一些优势，但它们确实会产生额外的开销，在项目之外没有这样的用处。 此外，必须使用ecma脚本对任务的所有动态行为进行编码，这些脚本具有自己的限制。
+雖然與參與者步驟相比，任務有一些優點，但它們的確會產生額外的額外負荷，並且在專案之外不那麼有用。 此外，任務的所有動態行為都必須使用有其自身限制的ecma指令碼來編碼。
 
-## 用例要求示例 {#goals-tutorial}
+## 範例使用案例需求 {#goals-tutorial}
 
-![工作流流程图](./assets/develop-aem-projects/workflow-process-diagram.png)
+![工作流程流程圖](./assets/develop-aem-projects/workflow-process-diagram.png)
 
-上图概述了我们的示例审批工作流程的高级要求。
+上圖概述範例核准工作流程的高層級需求。
 
-第一步是创建一个任务以完成对一段内容的编辑。 我们将允许工作流启动器选择此第一项任务的受分派人。
+第一步是建立一個「任務」以完成編輯一段內容。 我們將允許工作流程發起人選擇此第一項任務的受指派人。
 
-完成第一项任务后，被分派人将有三个用于传送工作流的选项：
+完成第一個任務後，受指派人將有三個選項可路由工作流程：
 
-**常规** — 常规路由创建一个分配给项目审批者组的任务，以进行审核和批准。 任务的优先级为“正常”，到期日期为创建后5天。
+**一般** — 一般路由會建立指派給專案核准者群組的任務，以進行複查和核准。 任務的優先順序為正常，到期日為建立日期起的5天。
 
-**拉什**  — 紧急传送还会创建分配给项目审批者组的任务。 任务的优先级为“高”，到期日期仅为1天。
+**匆忙**  — 快速路由也會建立指派給專案核准者群組的任務。 任務的優先順序為「高」，到期日只有1天。
 
-**绕过**  — 在此示例工作流中，初始参与者可以选择绕过批准组。 （是的，这可能会挫败“批准”工作流的目的，但它允许我们说明其他路由功能）
+**略過**  — 在此範例工作流程中，初始參與者可以選擇略過核准群組。 （是的，這可能會失去「核准」工作流程的目的，但可讓我們說明其他路由功能）
 
-审批者组可以批准内容或将其发送回初始代理人以重新工作。 如果被发送回以进行重新工作，则会创建新任务，并将其相应地标记为“已发回以进行重新工作”。
+核准者群組可以核准內容或將內容傳送回初始受指派人以重新工作。 如果送回重工，則會建立新任務並適當地標示為「送回重工」。
 
-工作流的最后一步是利用ootb激活页面/资产流程步骤并复制有效负载。
+工作流程的最後一個步驟會使用OOTB啟動頁面/資產程式步驟，並複製裝載。
 
-## 创建工作流模型
+## 建立工作流程模型
 
-1. 从“AEM开始”菜单中，导航到“工具” — >“工作流” — >“模型”。 单击右上角的“创建”以创建新的工作流模型。
+1. 從AEM「開始」功能表瀏覽至「工具」 — >「工作流程」 — >「模型」。 按一下右上角的「建立」以建立新的工作流程模型。
 
-   为新模型提供一个标题：“内容批准工作流”和URL名称：“content-approval-workflow”。
+   為新模型指定標題「內容核准工作流程」和URL名稱「content-approval-workflow」。
 
-   ![工作流创建对话框](./assets/develop-aem-projects/workflow-create-dialog.png)
+   ![工作流程建立對話方塊](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   有关 [创建工作流，阅读此处](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-models.html).
+   有關詳細資訊，請參閱： [建立工作流程，請閱讀此處](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-models.html).
 
-1. 作为最佳实践，自定义工作流应分组到/etc/workflow/models下其自己的文件夹中。 在CRXDE Lite中，创建新 **&#39;nt:folder&#39;** 在/etc/workflow/models下，名为 **&quot;aem-guides&quot;**. 添加子文件夹可确保在升级或Service Pack安装期间不会意外覆盖自定义工作流。
+1. 根據最佳實務，自訂工作流程應該分組到他們自己的資料夾中/etc/workflow/models下方。 在CRXDE Lite中建立新的 **&#39;nt：folder&#39;** /etc/workflow/models下名為 **&quot;aem-guides&quot;**. 新增子資料夾可確保自訂工作流程在升級或Service Pack安裝期間不會被意外覆寫。
 
-   &#42;请注意，切勿将文件夹或自定义工作流放在ootb子文件夹（如/etc/workflow/models/dam或/etc/workflow/models/projects）下，因为整个子文件夹也可能会被升级或Service Pack覆盖。
+   &#42;請注意切勿將資料夾或自訂工作流程放在ootb子資料夾（例如/etc/workflow/models/dam或/etc/workflow/models/projects）下方，因為整個子資料夾也可能被升級或Service Pack覆寫。
 
-   ![工作流模型在6.3中的位置](./assets/develop-aem-projects/custom-workflow-subfolder.png)
+   ![6.3中工作流程模型的位置](./assets/develop-aem-projects/custom-workflow-subfolder.png)
 
-   工作流模型在6.3中的位置
+   6.3中工作流程模型的位置
 
    >[!NOTE]
    >
-   >如果使用AEM 6.4+，则工作流的位置已发生更改。 请参阅 [有关更多详细信息，请参阅此处。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
+   >如果使用AEM 6.4+，工作流程的位置已變更。 另請參閱 [如需更多詳細資訊，請參閱此處。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
 
-   如果使用AEM 6.4+，则在下创建工作流模型 `/conf/global/settings/workflow/models`. 使用/conf目录重复上述步骤，并添加一个名为 `aem-guides` 然后移动 `content-approval-workflow` 下面。
+   如果使用AEM 6.4+，則會在 `/conf/global/settings/workflow/models`. 對/conf目錄重複上述步驟，並新增名為的子資料夾 `aem-guides` 並移動 `content-approval-workflow` 在其下方。
 
-   ![现代工作流定义位置](./assets/develop-aem-projects/modern-workflow-definition-location.png)
-工作流模型在6.4+中的位置
+   ![新式工作流程定義位置](./assets/develop-aem-projects/modern-workflow-definition-location.png)
+工作流程模型在6.4+中的位置
 
-1. AEM 6.3中引入了将工作流阶段添加到给定工作流的功能。 将从“工作流信息”(Workflow Info)选项卡上的收件箱中向用户显示阶段。 它将向用户显示工作流中的当前阶段以及该工作流之前和之后的阶段。
+1. AEM 6.3中推出的是將「工作流程階段」新增至指定工作流程的功能。 這些階段將顯示在「工作流程資訊」標籤上的「收件匣」中，供使用者使用。 它會向使用者顯示工作流程中的目前階段，以及它之前和之後的階段。
 
-   要配置阶段，请从SideKick打开“页面属性”对话框。 第四个选项卡标有“阶段”。 添加以下值以配置此工作流的三个阶段：
+   若要設定階段，請從SideKick開啟「頁面屬性」對話方塊。 第四個索引標籤標示為「階段」。 新增下列值以設定此工作流程的三個階段：
 
    1. 编辑内容
    1. 批准
    1. 发布
 
-   ![工作流阶段配置](./assets/develop-aem-projects/workflow-model-stage-properties.png)
+   ![工作流程階段設定](./assets/develop-aem-projects/workflow-model-stage-properties.png)
 
-   从页面属性对话框中配置工作流阶段。
+   從「頁面屬性」對話方塊設定「工作流程階段」。
 
-   ![工作流进度栏](./assets/develop-aem-projects/workflow-info-progress.png)
+   ![工作流程進度列](./assets/develop-aem-projects/workflow-info-progress.png)
 
-   工作流进度栏，如AEM收件箱中所示。
+   從AEM收件匣中看到的工作流程進度列。
 
-   （可选）您可以上传 **图像** 到页面属性，当用户选择页面属性时，该属性将用作工作流缩略图。 图像尺寸应为319x319像素。 添加 **描述** 当用户转到选择工作流时，页面属性也会显示。
+   或者，您可以上傳 **影像** 至當使用者選取時當作工作流程縮圖使用的頁面屬性。 影像尺寸應為319x319畫素。 新增 **說明** 至頁面屬性」也會在使用者前往選取工作流程時顯示。
 
-1. 创建项目任务工作流流程旨在作为工作流中的步骤创建任务。 只有完成任务后，工作流才会前进。 “创建项目任务”步骤的一个强大方面是，它可以读取工作流元数据值并使用这些值动态创建任务。
+1. 「建立專案任務」工作流程流程的設計目的，是建立任務作為工作流程中的步驟。 只有在完成任務後，工作流程才會前進。 「建立專案任務」步驟的強大方面是它可以讀取工作流程中繼資料值，並使用這些值來動態建立任務。
 
-   首先删除默认创建的参与者步骤。 从组件菜单的Sidekick中，展开 **&quot;项目&quot;** 下标题并拖放 **&quot;创建项目任务&quot;** 在模型上。
+   首先，刪除預設建立的「參與者步驟」。 從「元件」選單中的Sidekick展開 **&quot;專案&quot;** 子標題並拖放 **建立專案任務** 放到模型上。
 
-   双击“创建项目任务”步骤以打开工作流对话框。 配置以下属性：
+   連按兩下「建立專案任務」步驟以開啟工作流程對話方塊。 設定下列屬性：
 
-   此选项卡对于所有工作流流程步骤都是通用的，我们将设置标题和描述（最终用户看不到这些标题和描述）。 我们将设置的重要属性是工作流阶段 **&quot;编辑内容&quot;** 下拉菜单中。
+   此標籤在所有工作流程程式步驟中都很常見，我們將設定標題和說明（一般使用者看不到這些內容）。 我們將設定的重要屬性是「工作流程階段」 **編輯內容** 從下拉式功能表。
 
    ```shell
    Common Tab
@@ -363,7 +363,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
        Workflow Stage = "Edit Content"
    ```
 
-   创建项目任务工作流流程旨在作为工作流中的步骤创建任务。 “任务”选项卡允许我们设置任务的所有值。 在本例中，我们希望受让人是动态的，因此我们将其留空。 其余的属性值：
+   「建立專案任務」工作流程流程的設計目的，是建立任務作為工作流程中的步驟。 「工作」標籤可讓我們設定工作的所有值。 在我們的案例中，我們希望受指派人是動態的，因此我們會將其保留空白。 其餘屬性值：
 
    ```shell
    Task Tab
@@ -374,7 +374,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
        Due In - Days = "2"
    ```
 
-   路由选项卡是一个可选对话框，可为完成任务的用户指定可用的操作。 这些操作只是字符串值，会保存到工作流的元数据中。 这些值可以由脚本和/或后续工作流中的处理步骤读取，以动态“路由”工作流。 基于 [工作流目标](#goals-tutorial) 我们将在此选项卡中添加三个操作：
+   路由頁簽是一個可選的對話方塊，可指定使用者完成工作的可用動作。 這些動作只是字串值，會儲存至工作流程的中繼資料。 指令碼和/或稍後在工作流程中處理步驟可讀取這些值，以動態「路由」工作流程。 根據 [工作流程目標](#goals-tutorial) 我們將在此索引標籤中新增三個動作：
 
    ```shell
    Routing Tab
@@ -385,7 +385,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
            "Bypass Approval"
    ```
 
-   此选项卡允许我们配置预创建任务脚本，在创建任务之前，我们可以通过编程方式决定任务的各种值。 我们可以选择将脚本指向外部文件或直接在对话框中嵌入短脚本。 在本例中，我们将将“预创建任务脚本”指向外部文件。 在步骤5中，我们将创建该脚本。
+   此索引標籤可讓我們設定「建立任務前的指令碼」，我們以程式設計方式在任務建立之前決定任務的各種值。 我們可選擇將指令碼指向外部檔案，或直接在對話方塊中內嵌簡短指令碼。 在我們的案例中，我們會將「建立任務前的指令碼」指向外部檔案。 在步驟5中，我們將建立該指令碼。
 
    ```shell
    Advanced Settings Tab
@@ -393,11 +393,11 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
       Pre-Create Task Script = "/apps/aem-guides/projects/scripts/start-task-config.ecma"
    ```
 
-1. 在上一步中，我们引用了预创建任务脚本。 我们现在将创建该脚本，在该脚本中，我们将根据工作流元数据值“”的值设置任务的代理人&#x200B;**受让人**&quot; 的 **&quot;被分派人&quot;** 值会在工作流启动时设置。 我们还将读取工作流元数据，通过读取“**taskPriority”** 工作流元数据的值以及**&quot;taskDueDate&quot; **，以便在第一个任务到期时动态设置。
+1. 在上一步中，我們參考了建立任務前的指令碼。 我們現在將建立該指令碼，其中我們將根據工作流程中繼資料值&quot;**被指定者**「。 此 **「受託人」** 值是在啟動工作流程時設定。 我們也會閱讀工作流程中繼資料，透過閱讀&quot;**taskPriority&quot;** 工作流程的中繼資料值以及**「taskDueDate」**在第一項任務到期時動態設定。
 
-   出于组织目的，我们在应用程序文件夹下创建了一个文件夹，用于保存所有与项目相关的脚本： **/apps/aem-guides/projects-tasks/projects/scripts**. 在此文件夹下创建新文件，该文件名为 **&quot;start-task-config.ecma&quot;**. &#42;请注意，确保start-task-config.ecma文件的路径与步骤4中“高级设置”选项卡中设置的路径匹配。
+   基於組織目的，我們在應用程式資料夾下方建立了一個資料夾，用於存放所有與專案相關的指令碼： **/apps/aem-guides/projects-tasks/projects/scripts**. 在此資料夾下建立名為的新檔案 **&quot;start-task-config.ecma&quot;**. &#42;注意：請確定start-task-config.ecma檔案的路徑與步驟4中在「進階設定」標籤中設定的路徑相符。
 
-   将以下内容添加为文件的内容：
+   新增下列內容作為檔案內容：
 
    ```
    // start-task-config.ecma
@@ -418,7 +418,7 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
    task.setProperty("taskPriority", taskPriority);
    ```
 
-1. 导航回内容批准工作流。 拖放 **或拆分** 组件（位于“Workflow”类别下的Sidekick中） **启动任务** 步骤。 在“常用对话框”中，为3个分支选择单选按钮。 OR拆分将读取工作流元数据值 **&quot;lastTaskAction&quot;** 以确定工作流的路线。 的 **&quot;lastTaskAction&quot;** 属性设置为步骤4中配置的“路由”选项卡中的值之一。 对于每个“分支”选项卡，填写 **脚本** 文本区域，其值如下：
+1. 導覽回內容核准工作流程。 拖放 **OR分割** 元件（可在「工作流程」類別下方的Sidekick中找到） **開始任務** 步驟。 在「一般」對話方塊中，選取「3個分支」的選項按鈕。 OR拆分將會讀取工作流程中繼資料值 **&quot;lastTaskAction&quot;** 以決定工作流程的路徑。 此 **&quot;lastTaskAction&quot;** 屬性會設定為步驟4中所設定「路由」標籤中的其中一個值。 針對每個「分支」標籤，填寫 **指令碼** 文字區域包含下列值：
 
    ```
    function check() {
@@ -456,9 +456,9 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
    }
    ```
 
-   &#42;请注意，我们正在执行直接字符串匹配以确定路由，因此分支脚本中设置的值必须与步骤4中设置的路由值相匹配。
+   &#42;請注意，我們正在執行直接字串比對來判斷路由，因此在「分支」指令碼中設定的值務必與步驟4中設定的「路由」值相符。
 
-1. 拖放另一个“**创建项目任务**“在OR拆分下方的最左侧（分支1）的模型上继续。 使用以下属性填写对话框：
+1. 拖放另一個»**建立專案任務**「在OR分割下向模型最左邊（分支1）邁進。 使用下列屬性填寫對話方塊：
 
    ```
    Common Tab
@@ -480,11 +480,11 @@ AEM项目附带多个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
        "Send Back for Revision"
    ```
 
-   由于这是“正常批准”路由，因此任务的优先级将设置为“中”。 此外，我们还为批准者组提供5天时间来完成任务。 “任务”(Task)选项卡上的“被分派人”(Assignee)留空，因为我们将在“高级设置”(Advanced Settings)选项卡中动态分配此任务。 完成此任务时，我们会为批准者组提供两条可能的路由： **&quot;批准并发布&quot;** 是否批准了内容，并且该内容可以发布和 **&quot;发送回以进行修订&quot;** 如果原始编辑器需要更正的问题。 审批者可以留下评论，原始编辑者将看到该工作流是否返回给他/她。
+   由於這是「一般核准」路由，因此任務的優先順序設定為「中」。 此外，我們給核准者群組5天的時間來完成任務。 「工作」標籤上的被指定者會留空，因為我們將在「進階設定」標籤中動態地指定此被指定者。 完成此任務時，我們會為「核准者」群組提供兩種可能的路徑： **&quot;核准並發佈&quot;** 如果他們核准內容，且內容可以發佈和 **&quot;傳回以進行修訂&quot;** 如果原始編輯器需要更正一些問題。 如果工作流程傳回給核准者，核准者可以留下原始編輯者將看到的註解。
 
-在本教程的前面，我们创建了一个包含批准者角色的项目模板。 每次从此模板创建新项目时，都会为“批准者”角色创建特定于项目的组。 与参与者步骤一样，任务只能分配给用户或组。 我们希望将此任务分配给与审批者组对应的项目组。 从项目中启动的所有工作流都将具有元数据，可将项目角色映射到项目特定组。
+在本教學課程的前面，我們建立了一個包含核准者角色的專案範本。 每次從此範本建立新專案時，都會為核准者角色建立專案特定的群組。 就像參與者步驟一樣，只能將任務指派給使用者或群組。 我們想要將此任務指派給對應於「核准者群組」的專案群組。 所有從專案中啟動的工作流程都會有中繼資料，會將專案角色對應至專案特定的群組。
 
-复制并粘贴以下代码 **脚本** “高级设置”选项**的文本**域。 此代码将读取工作流元数据并将任务分配给项目的批准者组。 如果找不到批准者组值，则将回退到将任务分配给管理员组。
+將下列程式碼複製並貼到 **指令碼** **進階設定**標籤的文字區域。 此程式碼將讀取工作流程中繼資料，並將任務指派給專案的核准者群組。 如果找不到核准者群組值，則會退回將任務指派給管理員群組。
 
 ```
 var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -492,7 +492,7 @@ var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approv
 task.setCurrentAssignee(projectApproverGrp);
 ```
 
-1. 拖放另一个“**创建项目任务**“在模型上向OR拆分下的中间分支（分支2）进一步。 使用以下属性填写对话框：
+1. 拖放另一個»**建立專案任務**「在模型上踩到OR分割下的中間分支（分支2）。 使用下列屬性填寫對話方塊：
 
    ```
    Common Tab
@@ -514,9 +514,9 @@ task.setCurrentAssignee(projectApproverGrp);
        "Send Back for Revision"
    ```
 
-   由于这是紧急审批路线，因此任务的优先级将设置为“高”。 此外，我们仅为批准者组提供一天时间来完成任务。 “任务”(Task)选项卡上的“被分派人”(Assignee)留空，因为我们将在“高级设置”(Advanced Settings)选项卡中动态分配此任务。
+   由於這是「匆忙核准」路由，因此任務的優先順序會設定為「高」。 此外，我們只給核准者群組一天時間來完成任務。 「工作」標籤上的被指定者會留空，因為我們將在「進階設定」標籤中動態地指定此被指定者。
 
-   我们可以重复使用与步骤7中相同的脚本代码片段来填充 **脚本** “**高级设置**”选项卡上的文本区域。 复制并粘贴以下代码：
+   我們可以重複使用與步驟7相同的指令碼片段，以填入 **指令碼** 「進階設定」**標籤上的text-area **。 複製+貼上下列程式碼：
 
    ```
    var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -524,9 +524,9 @@ task.setCurrentAssignee(projectApproverGrp);
    task.setCurrentAssignee(projectApproverGrp);
    ```
 
-1. 将**无操作**组件拖放到最右侧的分支（分支3）。 “无操作”组件不执行任何操作，它将立即进行高级，这表示原始编辑器希望绕过批准步骤。 从技术上讲，我们可以不执行任何工作流步骤而离开此分支，但作为最佳实践，我们将添加一个“无操作”步骤。 这向其他开发人员明确说明了Branch 3的用途。
+1. 拖放a**無操作**元件至最右邊的分支（分支3）。 「無操作」元件不會執行任何動作，它會立即進階，代表原始編輯者要略過核准步驟。 技術上，我們可以離開此分支而不執行任何工作流程步驟，但作為最佳實務，我們將新增「無操作」步驟。 這使其他開發人員清楚瞭解分支3的用途。
 
-   双击工作流步骤并配置标题和描述：
+   按兩下工作流程步驟並設定標題和說明：
 
    ```
    Common Tab
@@ -535,13 +535,13 @@ task.setCurrentAssignee(projectApproverGrp);
        Description = "Placeholder step to indicate that the original editor decided to bypass the approver group."
    ```
 
-   ![工作流模型或拆分](./assets/develop-aem-projects/workflow-stage-after-orsplit.png)
+   ![工作流程模型OR分割](./assets/develop-aem-projects/workflow-stage-after-orsplit.png)
 
-   在配置了OR拆分中的所有三个分支后，工作流模型应该如下所示。
+   設定OR分割中的所有三個分支後，工作流程模型應該如下所示。
 
-1. 由于批准者组可以选择将工作流发送回原始编辑器以进行进一步修订，因此我们将依赖 **后藤** 步骤，以阅读上次执行的操作并将工作流路由到开头或继续。
+1. 由於「核准者」群組可選擇將工作流程傳送回原始編輯器，以供進一步修訂，因此我們將依賴 **轉至** 讀取上次採取的動作並將工作流程路由至開始位置的步驟，或讓工作流程繼續進行。
 
-   将跳转步骤组件（位于“工作流”下的Sidekick中）拖放到OR拆分下，该组件在该拆分中重新连接。 双击并在对话框中配置以下属性：
+   將「跳到步驟」元件（可在「工作流程」下的Sidekick中找到）拖放到OR分割下，放置該元件重新加入的位置。 連按兩下並在對話方塊中設定下列屬性：
 
    ```
    Common Tab
@@ -554,11 +554,11 @@ task.setCurrentAssignee(projectApproverGrp);
        The step to go to. = "Start Task Creation"
    ```
 
-   我们将配置的最后一段内容是“转到”流程步骤中的脚本。 脚本值可以通过对话框进行嵌入，也可以配置为指向外部文件。 跳转脚本必须包含 **函数check()** 如果工作流应转到指定的步骤，则返回true。 返回的假结果会导致工作流继续运行。
+   我們將設定的最後一個專案是移轉處理步驟中的指令碼。 Script值可透過對話方塊內嵌，或設定為指向外部檔案。 Goto指令碼必須包含 **函式check()** 如果工作流程應移至指定的步驟，則和會傳回true。 傳回false會導致工作流程繼續進行。
 
-   如果审批者组选择 **&quot;发送回以进行修订&quot;** 操作（在步骤7和8中配置），然后我们要将工作流返回到 **&quot;开始任务创建&quot;** 中。
+   如果核准者群組選擇 **&quot;傳回以進行修訂&quot;** 動作（在步驟7和8中設定），然後我們想要將工作流程傳回 **「開始建立任務」** 步驟。
 
-   在“流程”选项卡上，将以下代码片段添加到“脚本”文本区域：
+   在「程式」標籤上，將下列程式碼片段新增至「指令碼」文字區域：
 
    ```
    function check() {
@@ -572,17 +572,17 @@ task.setCurrentAssignee(projectApproverGrp);
    }
    ```
 
-1. 要发布有效负载，我们将使用ootb **激活页面/资产** 处理步骤。 此流程步骤需要很少的配置，并且会将工作流的有效负载添加到复制队列以进行激活。 我们将在跳转步骤下添加步骤，这样，只有在审批者组已批准发布内容或原始编辑者选择绕过审批路径时，才能访问该步骤。
+1. 若要發佈裝載，我們將使用ootb **啟動頁面/資產** 程式步驟。 此程式步驟幾乎不需要任何設定，而且會將工作流程的裝載新增至復寫佇列以進行啟用。 我們將在「跳至」步驟下方新增步驟，如此一來，只有在「核准者」群組核准要發佈的內容，或原始編輯者選擇「略過核准」路徑時，才能到達該步驟。
 
-   拖放 **激活页面/资产** 流程步骤（位于“WCM工作流”下的Sidekick中），位于模型中的跳转步骤下方。
+   拖放 **啟動頁面/資產** 在模型中「跳到步驟」下的程式步驟（可在WCM工作流程下的Sidekick中找到）。
 
-   ![工作流模型完成](assets/develop-aem-projects/workflow-model-final.png)
+   ![工作流程模型完成](assets/develop-aem-projects/workflow-model-final.png)
 
-   添加转到步骤和激活页面/资产步骤后，工作流模型应该是什么样子。
+   新增「跳至」步驟和「啟動頁面/資產」步驟後，工作流程模型看起來會是什麼樣子。
 
-1. 如果审批者组发回内容以进行修订，我们希望告知原始编辑者。 我们可以通过动态更改任务创建属性来完成此操作。 我们将关闭的lastActionTaked属性值 **&quot;发送回以进行修订&quot;**. 如果存在该值，我们将修改标题和描述，以指明此任务是内容被发送回修订版的结果。 我们还将把 **&quot;高&quot;** 这样编辑就会处理第一个项目。 最后，我们将任务到期日期设置为从工作流发送回进行修订的一天。
+1. 如果「核准者」群組將內容傳回以供修訂，我們想讓原始編輯器知道。 我們可以透過動態變更「任務」建立屬性來達到此目的。 我們將關閉的lastActionTooled屬性值 **&quot;傳回以進行修訂&quot;**. 如果該值存在，我們將修改標題和說明，以指出此工作是傳回內容進行修訂的結果。 我們也會將優先順序更新為 **&quot;高&quot;** ，以使其成為編輯器處理的第一個專案。 最後，我們將任務到期日設定為工作流程傳回修訂的一天後。
 
-   替换开始 `start-task-config.ecma` 脚本（在步骤5中创建），其中包含以下内容：
+   取代開頭 `start-task-config.ecma` 指令碼（在步驟5中建立），包含以下專案：
 
    ```
    // start-task-config.ecma
@@ -623,23 +623,23 @@ task.setCurrentAssignee(projectApproverGrp);
    }
    ```
 
-## 创建“启动工作流”向导 {#start-workflow-wizard}
+## 建立「開始工作流程」精靈 {#start-workflow-wizard}
 
-从项目中启动工作流时，必须指定一个向导以启动该工作流。 默认向导： `/libs/cq/core/content/projects/workflowwizards/default_workflow` 允许用户输入要运行工作流的工作流标题、开始注释和有效负荷路径。 下面还提供了几个其他示例： `/libs/cq/core/content/projects/workflowwizards`.
+從專案中啟動工作流程時，您必須指定精靈來啟動工作流程。 預設精靈： `/libs/cq/core/content/projects/workflowwizards/default_workflow` 可讓使用者輸入工作流程標題、開始註解及要執行的工作流程裝載路徑。 底下也有其他幾個範例： `/libs/cq/core/content/projects/workflowwizards`.
 
-创建自定义向导会非常强大，因为您可以在工作流启动之前收集关键信息。 数据将作为工作流元数据的一部分进行存储，工作流进程可以读取此数据并根据输入的值动态更改行为。 我们将创建一个自定义向导，以根据启动向导值动态分配工作流中的第一个任务。
+建立自訂精靈的功能非常強大，因為您可以在工作流程開始之前收集重要資訊。 資料會儲存為工作流程中繼資料的一部分，而工作流程程式可以讀取此資料，並根據輸入的值動態變更行為。 我們將建立自訂精靈，以根據啟動精靈值動態指派工作流程中的第一個任務。
 
-1. 在CRXDE-Lite中，我们将在下方创建一个子文件夹 `/apps/aem-guides/projects-tasks/projects` 名为“向导”的文件夹。 从以下位置复制默认向导： `/libs/cq/core/content/projects/workflowwizards/default_workflow` 在新创建的向导文件夹下，将其重命名为 **content-approval-start**. 现在，完整路径应为： `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
+1. 在CRXDE-Lite中，我們將在下方建立一個子資料夾 `/apps/aem-guides/projects-tasks/projects` 名為「精靈」的資料夾。 從下列位置複製預設精靈： `/libs/cq/core/content/projects/workflowwizards/default_workflow` 在新建立的精靈資料夾下方，並將其重新命名為 **content-approval-start**. 完整路徑現在應該是： `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
 
-   默认向导为两列向导，第一列显示选定工作流模型的标题、描述和缩略图。 第二列包含工作流标题、开始注释和有效负载路径的字段。 向导是标准的触屏UI表单，可利用标准 [Granite UI表单组件](https://experienceleague.adobe.com/docs/) 填充字段。
+   預設精靈為兩欄精靈，第一欄顯示所選工作流程模型的標題、說明和縮圖。 第二欄包含「工作流程標題」、「開始註解」和「裝載路徑」等欄位。 精靈是標準的觸控式UI表單，會使用標準 [Granite UI表單元件](https://experienceleague.adobe.com/docs/) 以填入欄位。
 
-   ![内容批准工作流向导](./assets/develop-aem-projects/content-approval-start-wizard.png)
+   ![內容核准工作流程精靈](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
-1. 我们将向向导中添加一个额外的字段，用于设置工作流中第一个任务的代理人(请参阅 [创建工作流模型](#create-workflow-model):步骤5)。
+1. 我們將在精靈中新增一個額外欄位，用於設定工作流程中第一個任務的受指派人(請參閱 [建立工作流程模型](#create-workflow-model)：步驟5)。
 
-   下 `../content-approval-start/jcr:content/items/column2/items` 创建类型的新节点 `nt:unstructured` 已命名 **&quot;assign&quot;**. 我们将使用项目用户选取器组件(该组件基于 [Granite用户选取器组件](https://experienceleague.adobe.com/docs/))。 通过此表单字段，可以轻松地将用户和组选择限制为仅属于当前项目的用户和组选择。
+   下方 `../content-approval-start/jcr:content/items/column2/items` 建立型別為的新節點 `nt:unstructured` 已命名 **&quot;assign&quot;**. 我們將使用Projects使用者選擇器元件(根據 [Granite使用者選取器元件](https://experienceleague.adobe.com/docs/))。 此表單欄位可讓您輕鬆地將使用者和群組選取限製為僅屬於目前專案的那些專案。
 
-   以下是 **分配** 节点：
+   以下是XML表示法 **指派** 節點：
 
    ```xml
    <assign
@@ -655,19 +655,19 @@ task.setCurrentAssignee(projectApproverGrp);
        required="{Boolean}true"/>
    ```
 
-1. 我们还将添加一个优先级选择字段，该字段将确定工作流中第一个任务的优先级(请参阅 [创建工作流模型](#create-workflow-model):步骤5)。
+1. 我們也會新增優先順序選擇欄位，以決定工作流程中第一個任務的優先順序(請參閱 [建立工作流程模型](#create-workflow-model)：步驟5)。
 
-   下 `/content-approval-start/jcr:content/items/column2/items` 创建类型的新节点 `nt:unstructured` 已命名 **优先级**. 我们将使用 [Granite UI选择组件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) 填充表单字段。
+   下方 `/content-approval-start/jcr:content/items/column2/items` 建立型別為的新節點 `nt:unstructured` 已命名 **優先順序**. 我們將使用 [Granite UI Select元件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) 以填入表單欄位。
 
-   在 **优先级** 添加节点 **项目** 节点 **nt：非结构化**. 在 **项目** 节点可添加3个节点，以填充“高”、“中”和“低”的选择选项。 每个节点的类型 **nt：非结构化** 应该有 **文本** 和 **值** 属性。 文本和值应该相同：
+   在 **優先順序** 節點，我們將新增 **個專案** 節點： **nt：unstructured**. 在 **個專案** 節點會再新增3個節點，以填入「高」、「中」和「低」的選取選項。 每個節點的型別為 **nt：unstructured** 且應該有 **文字** 和 **值** 屬性。 文字和值都應該為相同的值：
 
    1. 高
    1. 中
    1. 低
 
-   对于“媒体”节点，添加一个名为“**selected&quot;** 值设置为 **true**. 这将确保“中”是选择字段中的默认值。
+   對於Medium節點，請新增一個名為的額外布林屬性&#x200B;**已選取」** 值設定為 **true**. 這將確保選擇欄位中的「中」為預設值。
 
-   以下是节点结构和属性的XML表示形式：
+   以下是節點結構和屬性的XML表示法：
 
    ```xml
    <priority
@@ -693,9 +693,9 @@ task.setCurrentAssignee(projectApproverGrp);
    </priority>
    ```
 
-1. 我们将允许工作流启动器设置初始任务的到期日期。 我们将使用 [Granite UI日期选取器](https://experienceleague.adobe.com/docs/) 表单字段来捕获此输入。 我们还将添加一个隐藏字段，其中 [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) 以确保将输入存储为JCR中的Date类型属性。
+1. 我們將允許工作流程發起者設定初始任務的到期日。 我們將使用 [Granite UI DatePicker](https://experienceleague.adobe.com/docs/) 表單欄位以擷取此輸入。 我們也會新增隱藏欄位，其中包含 [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) 以確保在JCR中將輸入儲存為日期型別屬性。
 
-   添加2 **nt：非结构化** 具有以下属性的节点在XML中如下所示：
+   新增兩個 **nt：unstructured** 具有下列屬性的節點以XML表示：
 
    ```xml
    <duedate
@@ -715,17 +715,17 @@ task.setCurrentAssignee(projectApproverGrp);
        value="Calendar"/>
    ```
 
-1. 您可以查看启动向导对话框的完整代码 [此处](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/projects-tasks-guide/ui.apps/src/main/content/jcr_root/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start/.content.xml).
+1. 您可以檢視啟動精靈對話方塊的完整程式碼 [此處](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/projects-tasks-guide/ui.apps/src/main/content/jcr_root/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start/.content.xml).
 
-## 连接工作流和项目模板 {#connecting-workflow-project}
+## 連線工作流程和專案範本 {#connecting-workflow-project}
 
-我们最后需要做的就是确保可以从其中一个项目中启动工作流模型。 为此，我们需要重新访问在此系列第1部分中创建的项目模板。
+我們最不需做的就是確保工作流程模型可以從其中一個專案中啟動。 為此，我們需要重新造訪在此系列的第1部分建立的專案範本。
 
-工作流配置是项目模板的一个区域，用于指定要与该项目一起使用的可用工作流。 配置还负责在启动工作流(我们在 [先前步骤)](#start-workflow-wizard). 项目模板的工作流配置是“实时”的，这意味着更新工作流配置将影响新创建的项目以及使用该模板的现有项目。
+「工作流程」設定是專案範本的區域，可指定要用於該專案的可用工作流程。 啟動工作流程時，此設定也負責指定「啟動工作流程精靈」 (我們在 [先前的步驟)](#start-workflow-wizard). 專案範本的工作流程設定是「即時」的，這表示更新工作流程設定將會影響建立的新專案以及使用該範本的現有專案。
 
-1. 在CRXDE-Lite中，导航到之前在 `/apps/aem-guides/projects-tasks/projects/templates/authoring-project/workflows/models`.
+1. 在CRXDE-Lite中導覽至先前建立的編寫專案範本： `/apps/aem-guides/projects-tasks/projects/templates/authoring-project/workflows/models`.
 
-   在模型节点下，添加一个名为 **内容批准** 节点类型为 **nt：非结构化**. 将以下属性添加到节点：
+   在模型節點底下新增一個名為的節點 **contentapproval** 節點型別為 **nt：unstructured**. 將下列屬性新增至節點：
 
    ```xml
    <contentapproval
@@ -737,10 +737,10 @@ task.setCurrentAssignee(projectApproverGrp);
 
    >[!NOTE]
    >
-   >如果使用AEM 6.4，则工作流的位置已发生更改。 指向 `modelId` 属性到下运行时工作流模型的位置 `/var/workflow/models/aem-guides/content-approval-workflow`
+   >如果使用AEM 6.4，工作流程的位置已變更。 指向 `modelId` 屬性至下執行階段工作流程模型的位置 `/var/workflow/models/aem-guides/content-approval-workflow`
    >
    >
-   >请参阅 [此处提供了有关工作流位置更改的更多详细信息。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
+   >另請參閱 [此處以取得工作流程位置變更的詳細資訊。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
 
    ```xml
    <contentapproval
@@ -750,10 +750,10 @@ task.setCurrentAssignee(projectApproverGrp);
    />
    ```
 
-1. 将内容批准工作流添加到项目模板后，应该可以从项目的工作流拼贴中启动该工作流。 继续，启动并播放我们创建的各种路由。
+1. 將「內容核准」工作流程新增到「專案範本」後，就應該可以從專案的「工作流程表徵圖」啟動。 繼續進行，然後啟動並嘗試我們建立的各種製程。
 
-## 辅助材料
+## 支援材料
 
-* [下载已完成的教程包](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
-* [GitHub上的完整代码存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [AEM项目文档](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html)
+* [下載完成的教學課程套件](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
+* [GitHub上的完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
+* [AEM專案檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html)

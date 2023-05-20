@@ -1,6 +1,6 @@
 ---
-title: 创建Acrobat Sign应用程序
-description: Acrobat Sign应用程序是创建AEM Forms与Acrobat Sign集成的第一步。
+title: 建立Acrobat Sign應用程式
+description: Acrobat Sign應用程式是建立AEM Forms與Acrobat Sign之間整合的第一步。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 创建Acrobat Sign API应用程序
+# 建立Acrobat Sign API應用程式
 
-您必须在Acrobat Sign上创建API应用程序，才能与Acrobat Sign平台集成。 API应用程序充当客户端应用程序的代表，与Acrobat Sign平台进行交互。 您可以在客户或合作伙伴域上创建API应用程序……
+您必須在Acrobat Sign上建立API應用程式，才能與Acrobat Sign平台整合。 API應用程式可代表使用者端應用程式，與Acrobat Sign平台互動。 您可以在客戶或合作夥伴網域上建立API應用程式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332436?quality=12&learn=on)

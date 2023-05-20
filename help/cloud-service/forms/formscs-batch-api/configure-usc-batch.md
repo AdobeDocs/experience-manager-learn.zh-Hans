@@ -1,6 +1,6 @@
 ---
-title: 配置批量数据配置。
-description: 配置批量数据配置。
+title: 設定批次資料設定。
+description: 設定批次資料設定。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 批量数据配置
+# 批次資料設定
 
-批量数据配置可帮助您为批量API配置Blob存储的特定实例。 它允许您在客户拥有的Microsoft Azure Blob Storage中指定输入和输出位置。
+批次資料設定可協助您為批次API設定Blob儲存體的特定執行個體。 它可讓您指定客戶擁有的Microsoft Azure Blob儲存體中的輸入和輸出位置。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340128?quality=12&learn=on)

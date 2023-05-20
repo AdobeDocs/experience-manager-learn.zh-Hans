@@ -1,6 +1,6 @@
 ---
-title: 在自适应Forms Workflow中捕获工作流注释
-description: 在AEM工作流中捕获工作流注释
+title: 在最適化Forms Workflow中擷取工作流程註解
+description: 在AEM Workflow中擷取工作流程備註
 feature: Workflow
 version: 6.4
 topic: Development
@@ -15,39 +15,39 @@ ht-degree: 0%
 
 ---
 
-# 在自适应Forms Workflow中捕获工作流注释{#capturing-workflow-comments-in-adaptive-forms-workflow}
+# 在最適化Forms Workflow中擷取工作流程註解{#capturing-workflow-comments-in-adaptive-forms-workflow}
 
->[仅适用于AEM Forms 6.4。在AEM Forms 6.5中，请使用变量功能来实现此用例]
+>[僅適用於AEM Forms 6.4。在AEM Forms 6.5中，請使用變數功能來達成此使用案例]
 
-常见的请求是，在电子邮件中包含任务审阅人输入的注释。 在AEM Forms 6.4中，没有现成的机制来捕获用户输入的评论并将这些评论包含在电子邮件中。
+常見的要求是能夠包含任務稽核者輸入的註解，並透過電子郵件傳送給您。 在AEM Forms 6.4中，沒有現成的機制可擷取使用者輸入的註解，並在電子郵件中包含這些註解。
 
-为满足此要求，提供了一个示例OSGi包，可用于捕获注释并将这些注释存储为工作流元数据属性。
+為了滿足此需求，提供了一個OSGi套件組合範例，可用於擷取註解並將這些註解儲存為工作流程中繼資料屬性。
 
-以下屏幕截图显示了如何在 [AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) 以捕获注释并将其存储为元数据属性。 “捕获工作流注释”是流程步骤中需要使用的java类的名称。 您需要传递将包含注释的元数据属性名称。 在下面的屏幕截图中， managerComments是用于存储注释的元数据属性。
+下列熒幕擷圖顯示如何使用中的程式步驟 [AEM工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) 擷取註解並將其儲存為中繼資料屬性。 「擷取工作流程註解」是需要在程式步驟中使用的Java類別名稱。 您必須傳遞將保留評論的中繼資料屬性名稱。 在下方熒幕擷圖中，managerComments是將儲存註解的中繼資料屬性。
 
 ![workflowcomments1](assets/workflowcomments1.gif)
 
-要在系统上测试此功能，请执行以下步骤：
-* [确保将工作流中的流程步骤配置为使用捕获工作流注释](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
+若要在您的系統上測試此功能，請遵循下列步驟：
+* [請確定工作流程中的程式步驟已設定為使用「擷取工作流程註解」](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
 
-* [部署Developmingwithserviceuser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [部署Developing withserviceuser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [部署SetValue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 此包包含用于捕获注释并将其存储为元数据属性的示例代码
+* [部署SetValue套裝](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 此套件包含範常式式碼，可擷取註解並將其儲存為中繼資料屬性
 
-* [将与本文相关的资产下载并解压缩到您的文件系统](assets/capturecomments.zip) 资产包含工作流模型和示例自适应表单。
+* [將與本文相關的資產下載並解壓縮至您的檔案系統](assets/capturecomments.zip) 資產包含工作流程模型和最適化表單範例。
 
-* 使用包管理器将2个zip文件导入AEM
+* 使用封裝管理員將2個zip檔案匯入AEM
 
-* [浏览到此URL以预览表单](http://localhost:4502/content/dam/formsanddocuments/capturecomments/jcr:content?wcmmode=disabled)
+* [瀏覽至此URL以預覽表單](http://localhost:4502/content/dam/formsanddocuments/capturecomments/jcr:content?wcmmode=disabled)
 
-* 填写表单字段并提交表单
+* 填寫表單欄位並提交表單
 
-* [查看您的AEM收件箱](http://localhost:4502/aem/inbox)
+* [檢查您的AEM收件匣](http://localhost:4502/aem/inbox)
 
-* 从收件箱中打开任务并提交表单。 请在出现提示时输入一些评论。
+* 從收件匣開啟工作並提交表單。 出現提示時，請輸入一些註解。
 
-注释存储在名为 `managerComments` 在AEM存储库中。 以管理员身份检查注释登录到crx。 工作流实例存储在以下路径中：
+註解會儲存在名為的中繼資料屬性中 `managerComments` 在AEM存放庫中。 若要檢查註解，請以管理員身分登入crx。 工作流程例項會儲存在下列路徑中：
 
 `/var/workflow/instances/server0`
 
-选择相应的工作流实例，并在元数据节点中检查属性managerComments。
+選取適當的工作流程例項，並檢查中繼資料節點中的屬性managerComments。

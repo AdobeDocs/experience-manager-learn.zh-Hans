@@ -1,6 +1,6 @@
 ---
-title: AEM Dynamic Media Classic IPS API
-description: Dynamic Media Classic IPS API简介。
+title: AEM DYNAMIC MEDIA CLASSIC IPS API
+description: Dynamic Media Classic IPS API簡介。
 version: Cloud Service
 role: Developer
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# AEM Dynamic Media Classic IPS API
+# AEM DYNAMIC MEDIA CLASSIC IPS API
 
-此视频将演示Dynamic Media经典IPS API。
+本影片逐步解說Dynamic Media classic IPS API。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335453?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: AEM Workflow[Part3]中的变量
-description: 在AEM工作流中使用XML、JSON、ArrayList和Document类型的变量
+title: AEM工作流程中的變數[第3部分]
+description: 在AEM工作流程中使用XML、JSON、ArrayList、檔案型別的變數
 version: 6.5
 topic: Development
 role: Developer
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 ---
 
-# AEM工作流中的文档类型变量
+# AEM Workflow中的檔案型別變數
 
 
-文档类型的变量用于存储记录文档、自适应表单附件。 然后，可在“发送电子邮件”组件中使用这些变量通过电子邮件发送附件。
+檔案型別的變數可用來儲存記錄檔案、最適化表單附件。 然後，這些變數便可用於「傳送電子郵件」元件，以透過電子郵件傳送附件。
 
-此视频将重点介绍如何使用文档类型变量来存储生成的DoR，然后在AEM工作流的发送电子邮件步骤中使用文档变量。
+此影片會強調使用檔案型別變數來儲存產生的DoR，然後在AEM Workflow的傳送電子郵件步驟中使用檔案變數。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26452?quality=12&learn=on)

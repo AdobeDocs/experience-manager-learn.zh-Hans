@@ -1,6 +1,6 @@
 ---
-title: 部署AEM内容片段控制台扩展
-description: 了解如何部署AEM内容片段控制台扩展。
+title: 部署AEM內容片段主控台擴充功能
+description: 瞭解如何部署AEM內容片段主控台擴充功能。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,141 +9,141 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
+exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '804'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
+# 部署擴充功能
 
-# 部署扩展
+若要在AEMas a Cloud Service環境中使用，必須部署和核准擴充功能App Builder應用程式。
 
-要在AEMas a Cloud Service环境中使用，必须部署和批准扩展App Builder应用程序。
+部署擴充功能App Builder應用程式時，請注意以下幾點：
 
-部署扩展App Builder应用程序时，应注意以下几个注意事项：
-
-+ 扩展将部署到Adobe Developer控制台项目工作区。 默认工作区包括：
-   + __生产__ 工作区包含可在所有AEMas a Cloud Service中使用的扩展部署。
-   + __阶段__ 工作区充当开发人员工作区。 部署到Stage工作区的扩展在AEMas a Cloud Service中不可用。
-Adobe Developer控制台工作区与AEMas a Cloud Service环境类型没有任何直接关联。
-+ 部署到生产工作区的扩展将显示在Adobe组织中存在该扩展的所有AEMas a Cloud Service环境中。
-扩展不能通过添加 [检查AEMas a Cloud Service主机名的条件逻辑](https://developer.adobe.com/uix/docs/guides/publication/#enabling-extension-only-on-specific-aem-environments).
-+ 多个扩展可用于AEMas a Cloud Service。 Adobe建议使用每个扩展App Builder应用程序来解决单个业务目标。 也就是说，单个扩展App Builder应用程序可以实施多个支持常见业务目标的扩展点。
++ 擴充功能會部署至Adobe Developer Console專案工作區。 預設工作區為：
+   + __生產__ 工作區包含所有AEMas a Cloud Service中可用的擴充功能部署。
+   + __階段__ workspace可作為開發人員工作區。 部署至中繼工作區的擴充功能在AEMas a Cloud Service中無法使用。
+Adobe Developer Console工作區與AEMas a Cloud Service的環境型別沒有任何直接關聯。
++ 部署至生產工作區的擴充功能會顯示在該擴充功能所在的Adobe組織的所有AEMas a Cloud Service環境中。
+擴充功能不可僅限於透過新增來註冊的環境 [檢查AEMas a Cloud Service主機名稱的條件式邏輯](https://developer.adobe.com/uix/docs/guides/publication/#enabling-extension-only-on-specific-aem-environments).
++ AEMas a Cloud Service上可以使用多個擴充功能。 Adobe建議使用每個擴充功能App Builder應用程式來解決單一業務目標。 也就是說，單一擴充功能App Builder應用程式可實作支援共同業務目標的多個擴充功能點。
 
 ## 初始部署
 
-要使扩展在AEMas a Cloud Service环境中可用，必须将其部署到Adobe Developer控制台。
+若要讓擴充功能在AEMas a Cloud Service環境中可用，必須將其部署至Adobe Developer主控台。
 
-部署过程分为两个逻辑步骤：
+部署程式分為兩個邏輯步驟：
 
-1. 由开发人员将扩展App Builder应用程序部署到Adobe Developer Console。
-1. 部署管理员或业务所有者批准扩展。
+1. 開發人員將擴充功能App Builder應用程式部署至Adobe Developer主控台。
+1. 部署管理員或業務負責人核准擴充功能。
 
-### 部署扩展App Builder应用程序
+### 部署擴充功能App Builder應用程式
 
-将扩展部署到生产工作区。 部署到生产工作区的扩展会自动添加到Adobe组织中部署到该扩展的所有AEMas a Cloud Service创作服务。
+將擴充功能部署至生產工作區。 部署至生產工作區的擴充功能會自動新增至部署擴充功能的Adobe組織中的所有AEMas a Cloud Service作者服務。
 
-1. 在更新的扩展App Builder应用程序的根目录下打开命令行。
-1. 确保生产工作区处于活动状态
-
-   ```shell
-   $ aio app use -w Production
-   ```
-
-   合并对 `.env` 和 `.aio`.
-
-1. 部署更新的扩展App Builder应用程序。
-
-   ```shell
-   $ aio app deploy
-   ```
-
-#### 请求部署批准
-
-![提交扩展以供审批](./assets/deploy/submit-for-approval.png){align="center"}
-
-1. 登录到 [Adobe Developer控制台](https://developer.adobe.com)
-1. 选择 __控制台__
-1. 导航到 __项目__
-1. 选择与该扩展关联的项目
-1. 选择 __生产__ 工作区
-1. 选择 __提交以供审批__
-1. 填写并提交表单，并根据需要更新字段。
-
-请注意，需要一个图标。 如果您没有图标，则可以使用 [此图标](./assets/deploy/icon.png).
-
-### 批准部署请求
-
-![扩展批准](./assets/deploy/adobe-exchange.png){align="center"}
-
-1. 登录到 [Adobe交换](https://exchange.adobe.com/)
-1. 导航到 __管理__ > __应用程序待审核__
-1. __审阅__ 扩展App Builder应用程序
-1. 如果扩展更改是可接受的 __接受__ 评论。 这会立即在Adobe组织内的所有AEMas a Cloud Service创作服务上插入扩展。
-
-扩展请求获得批准后，该扩展会立即在AEMas a Cloud Service创作服务中变为活动状态。
-
-## 更新扩展
-
-更新和扩展App Builder应用程序的过程与 [初始部署](#initial-deployment)，并且必须首先撤消现有扩展部署。
-
-### 撤消扩展
-
-要部署扩展的新版本，必须先吊销（或删除）该扩展。 扩展处于“已吊销”状态，但在AEM控制台中不可用。
-
-1. 登录到 [Adobe交换](https://exchange.adobe.com/)
-1. 导航到 __管理__ > __应用程序生成器应用程序__
-1. __撤销__ 要更新的扩展
-
-### 部署扩展
-
-将扩展部署到生产工作区。 部署到生产工作区的扩展会自动添加到Adobe组织中部署到该扩展的所有AEMas a Cloud Service创作服务。
-
-1. 在更新的扩展App Builder应用程序的根目录下打开命令行。
-1. 确保生产工作区处于活动状态
+1. 開啟命令列，前往已更新擴充功能App Builder應用程式的根目錄。
+1. 確認生產工作區作用中
 
    ```shell
    $ aio app use -w Production
    ```
 
-   合并对 `.env` 和 `.aio`.
+   將任何變更合併至 `.env` 和 `.aio`.
 
-1. 部署更新的扩展App Builder应用程序。
+1. 部署更新的擴充功能App Builder應用程式。
 
    ```shell
    $ aio app deploy
    ```
 
-#### 请求部署批准
+#### 要求部署核准
 
-![提交扩展以供审批](./assets/deploy/submit-for-approval.png){align="center"}
+![提交擴充功能以供核准](./assets/deploy/submit-for-approval.png){align="center"}
 
-1. 登录到 [Adobe Developer控制台](https://developer.adobe.com)
-1. 选择 __控制台__
-1. 导航到 __项目__
-1. 选择与该扩展关联的项目
-1. 选择 __生产__ 工作区
-1. 选择 __提交以供审批__
-1. 填写并提交表单，并根据需要更新字段。
+1. 登入 [Adobe Developer主控台](https://developer.adobe.com)
+1. 選取 __主控台__
+1. 導覽至 __專案__
+1. 選取與擴充功能相關聯的專案
+1. 選取 __生產__ 工作區
+1. 選取 __提交以進行核准__
+1. 完成並提交表單，視需要更新欄位。
 
-#### 批准部署请求
+請注意，圖示為必填。 如果您沒有圖示，可以使用 [此圖示](./assets/deploy/icon.png).
 
-![扩展批准](./assets/deploy/adobe-exchange.png){align="center"}
+### 核准部署請求
 
-1. 登录到 [Adobe交换](https://exchange.adobe.com/)
-1. 导航到 __管理__ > __应用程序待审核__
-1. __审阅__ 扩展App Builder应用程序
-1. 如果扩展更改是可接受的 __接受__ 评论。 这会立即在Adobe组织内的所有AEMas a Cloud Service创作服务上插入扩展。
+![擴充功能核准](./assets/deploy/adobe-exchange.png){align="center"}
 
-扩展请求获得批准后，该扩展会立即在AEMas a Cloud Service创作服务中变为活动状态。
+1. 登入 [Adobe交換](https://exchange.adobe.com/)
+1. 導覽至 __管理__ > __擱置檢閱的應用程式__
+1. __檢閱__ 擴充功能App Builder應用程式
+1. 如果擴充功能變更是可接受的 __Accept__ 評論。 這會立即在Adobe組織內的所有AEMas a Cloud Service作者服務上注入擴充功能。
 
-## 删除扩展
+擴充功能要求獲得核准後，擴充功能會在AEMas a Cloud Service作者服務中立即啟用。
 
-![删除扩展](./assets/deploy/revoke.png)
+## 更新擴充功能
 
-要删除某个扩展，请从Exchange中撤消（或删除）该Adobe。 该扩展被撤消后，将从所有AEMas a Cloud Service创作服务中删除。
+更新及擴充功能App Builder應用程式的程式與 [初始部署](#initial-deployment)，但現有擴充功能部署必須先撤銷。
 
-1. 登录到 [Adobe交换](https://exchange.adobe.com/)
-1. 导航到 __管理__ > __应用程序生成器应用程序__
-1. __撤销__ 要删除的扩展
+### 撤銷擴充功能
+
+若要部署新版本的擴充功能，必須先撤銷（或移除）。 雖然擴充功能已撤銷，但在AEM主控台中無法使用。
+
+1. 登入 [Adobe交換](https://exchange.adobe.com/)
+1. 導覽至 __管理__ > __應用程式產生器應用程式__
+1. __撤銷__ 要更新的擴充功能
+
+### 部署擴充功能
+
+將擴充功能部署至生產工作區。 部署至生產工作區的擴充功能會自動新增至部署擴充功能的Adobe組織中的所有AEMas a Cloud Service作者服務。
+
+1. 開啟命令列，前往已更新擴充功能App Builder應用程式的根目錄。
+1. 確認生產工作區作用中
+
+   ```shell
+   $ aio app use -w Production
+   ```
+
+   將任何變更合併至 `.env` 和 `.aio`.
+
+1. 部署更新的擴充功能App Builder應用程式。
+
+   ```shell
+   $ aio app deploy
+   ```
+
+#### 要求部署核准
+
+![提交擴充功能以供核准](./assets/deploy/submit-for-approval.png){align="center"}
+
+1. 登入 [Adobe Developer主控台](https://developer.adobe.com)
+1. 選取 __主控台__
+1. 導覽至 __專案__
+1. 選取與擴充功能相關聯的專案
+1. 選取 __生產__ 工作區
+1. 選取 __提交以進行核准__
+1. 完成並提交表單，視需要更新欄位。
+
+#### 核准部署請求
+
+![擴充功能核准](./assets/deploy/adobe-exchange.png){align="center"}
+
+1. 登入 [Adobe交換](https://exchange.adobe.com/)
+1. 導覽至 __管理__ > __擱置檢閱的應用程式__
+1. __檢閱__ 擴充功能App Builder應用程式
+1. 如果擴充功能變更是可接受的 __Accept__ 評論。 這會立即在Adobe組織內的所有AEMas a Cloud Service作者服務上注入擴充功能。
+
+擴充功能要求獲得核准後，擴充功能會在AEMas a Cloud Service作者服務中立即啟用。
+
+## 移除擴充功能
+
+![移除擴充功能](./assets/deploy/revoke.png)
+
+若要移除擴充功能，請從Adobe交換撤銷（或移除）該擴充功能。 擴充功能撤銷時，會從所有AEMas a Cloud Service製作服務中移除。
+
+1. 登入 [Adobe交換](https://exchange.adobe.com/)
+1. 導覽至 __管理__ > __應用程式產生器應用程式__
+1. __撤銷__ 要移除的擴充功能

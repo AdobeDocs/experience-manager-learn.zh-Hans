@@ -1,6 +1,6 @@
 ---
-title: AEM Headless第一个教程
-description: 了解如何成为AEM Headless第一个应用程序。
+title: AEM Headless第一個教學課程
+description: 瞭解如何成為AEM Headless的第一個應用程式。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
@@ -18,47 +18,47 @@ ht-degree: 2%
 ---
 
 
-# AEM Headless第一个教程
+# AEM Headless第一個教學課程
 
-![AEM Headless第一个教程](./assets/overview/overview.png)
+![AEM Headless第一個教學課程](./assets/overview/overview.png)
 
-欢迎参加有关使用由AEM Headless API和GraphQL完全支持的React构建Web体验的教程。 在本教程中，我们将指导您完成通过结合React、Adobe Experience Manager(AEM)无头API和GraphQL的强大功能来创建动态交互式Web应用程序的过程。
+歡迎使用完全由AEM Headless API和GraphQL提供支援的React來建立網頁體驗教學課程。 在本教學課程中，我們將結合React、Adobe Experience Manager (AEM) Headless API和GraphQL的強大功能，引導您完成建立動態和互動式Web應用程式的程式。
 
-React是一款用于构建用户界面的常用JavaScript库，以其简单性、可重用性和基于组件的架构而闻名。 AEM提供了强大的内容管理功能，并公开了无头API，使开发人员能够通过各种渠道和应用程序访问AEM中存储的内容和数据。
+React是用於建置使用者介面的熱門JavaScript程式庫，以其簡易性、可重複使用性和元件架構而聞名。 AEM提供健全的內容管理功能，並公開Headless API，讓開發人員可透過各種管道和應用程式存取儲存在AEM中的內容和資料。
 
-利用AEM无头API，您可以从AEM实例中检索内容、资产和数据，并使用它们为React应用程序提供动力。 GraphQL是一种针对API的灵活查询语言，它提供了一种高效、精确的方式来从AEM实例请求特定数据，从而实现了React和AEM之间的无缝集成。
+運用AEM Headless API，您可以從AEM執行個體擷取內容、資產和資料，並使用它們來強化React應用程式。 GraphQL是API的彈性查詢語言，提供從AEM執行個體要求特定資料的高效且精確方式，實現了React與AEM之間的無縫整合。
 
-在本教程中，我们将指导您逐步完成使用React和AEM Headless API与GraphQL构建Web体验的过程。 您将学习如何设置开发环境、在React和AEM之间建立连接、使用GraphQL查询检索内容，以及在Web应用程序中动态渲染内容。
+在本教學課程中，我們將逐步引導您完成使用React和AEM Headless API搭配GraphQL來建置Web體驗的程式。 您將瞭解如何設定開發環境、在React和AEM之間建立連線、使用GraphQL查詢擷取內容，以及在Web應用程式中動態呈現。
 
-我们将介绍以下主题：配置React项目、使用AEM建立身份验证、使用GraphQL从AEM查询内容、处理React组件中的数据，以及通过缓存和分页优化性能。
+我們將介紹設定React專案、使用AEM建立驗證、使用GraphQL從AEM查詢內容、處理React元件中的資料，以及使用快取和分頁來最佳化效能等主題。
 
-在本教程结束时，您将充分了解如何利用React、AEM Headless API和GraphQL构建强大而引人入胜的Web体验。 因此，让我们深入研究并开始构建您的下一个Web应用程序！
+在本教學課程結束時，您將充分瞭解如何運用React、AEM Headless API和GraphQL來建立強大且吸引人的網頁體驗。 那麼，讓我們開始深入探討，並開始建置您的下一個網路應用程式！
 
 ## 前提条件
 
 ### 技能
 
-+ 反应能力
-+ 熟练掌握GraphQL
-+ AEMas a Cloud Service基础知识
++ 熟悉React
++ 熟練掌握GraphQL
++ AEMas a Cloud Service基本知識
 
 ### AEM as a Cloud Service
 
-本教程需要管理员对AEMas a Cloud Service环境的访问权限。
+本教學課程需要管理員存取AEMas a Cloud Service環境。
 
-### 软件
+### 軟體
 
 + [Node.js v16+](https://nodejs.org/en/)
-   + 通过运行 `node -v` 从命令行
+   + 執行以檢查您的節點版本 `node -v` 從命令列
 + [npm 6+](https://www.npmjs.com/)
-   + 通过运行检查npm版本 `npm -v` 从命令行
+   + 執行以檢查您的npm版本 `npm -v` 從命令列
 + [Git](https://git-scm.com/)
-   + 通过运行 `git -v` 从命令行
+   + 執行以檢查您的Git版本 `git -v` 從命令列
 
-使用 [节点版本管理器(nvm)](https://github.com/nvm-sh/nvm) 来解决在同一台计算机上具有多个版本的node.js的问题。
+使用 [節點版本管理員(nvm)](https://github.com/nvm-sh/nvm) 解決在同一部電腦上有多個node.js版本的問題。
 
-确保您有权在计算机上全局安装软件。
+確定您擁有在電腦上全域安裝軟體的許可權。
 
 ## 下一步
 
-现在，您的环境已设置完成，接下来让我们继续执行下一步： [在AEMas a Cloud Service中设置和创作内容](./1-content-modeling.md)
+現在您的環境已設定完畢，接下來請繼續進行下一個步驟： [在AEMas a Cloud Service中設定及編寫內容](./1-content-modeling.md)

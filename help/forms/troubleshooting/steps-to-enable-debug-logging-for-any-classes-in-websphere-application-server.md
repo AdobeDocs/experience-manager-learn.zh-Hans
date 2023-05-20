@@ -1,6 +1,6 @@
 ---
-title: 在WebSphere应用程序服务器中为任何类启用调试日志记录的步骤
-description: 配置调试日志记录，以解决与WebSphere应用程序服务器相关的问题
+title: 為WebSphere Application Server中的任何類別啟用偵錯記錄步驟
+description: 設定偵錯記錄，以疑難排解與WebSphere應用程式伺服器相關的問題
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 在Websphere应用程序服务器中为任何类启用调试日志记录的步骤
+# 為Websphere Application Server中的任何類別啟用偵錯記錄步驟
 
-*此视频将演示如何在Websphere应用程序服务器中为任何类启用调试日志记录的步骤。*
+*此影片會逐步說明在Websphere應用程式伺服器中啟用任何類別的偵錯記錄步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335523?quality=12&learn=on)

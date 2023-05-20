@@ -1,6 +1,6 @@
 ---
-title: 将可编辑的组件添加到远程SPA动态路由
-description: 了解如何将可编辑的组件添加到远程SPA中的动态路由。
+title: 新增可編輯的元件至遠端SPA動態路由
+description: 瞭解如何將可編輯的元件新增至遠端SPA中的動態路由。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
@@ -17,93 +17,93 @@ ht-degree: 1%
 
 ---
 
-# 动态路由和可编辑的组件
+# 動態路由和可編輯的元件
 
-在本章中，我们启用了两条动态冒险详细信息路径，以支持可编辑的组件； __巴厘岛冲浪营__ 和 __贝尔瓦娜在波特兰__.
+在本章中，我們啟用兩個動態冒險詳細資訊路徑來支援可編輯的元件； __巴厘島衝浪營__ 和 __波特蘭貝爾瓦納__.
 
-![动态路由和可编辑的组件](./assets/spa-dynamic-routes/intro.png)
+![動態路由和可編輯的元件](./assets/spa-dynamic-routes/intro.png)
 
-Adventure Detail SPA路由定义为 `/adventure/:slug` where `slug` 是冒险内容片段中的唯一标识符属性。
+Adventure Detail SPA路徑定義為 `/adventure/:slug` 位置 `slug` 是冒險內容片段上的唯一識別碼屬性。
 
-## 将SPA URL映射到AEM页面
+## 將SPA URL對應至AEM頁面
 
-在前两章中，我们将可编辑的组件内容从SPA主页视图映射到AEM中相应的远程SPA根页面(位于 `/content/wknd-app/us/en/`.
+在前兩章中，我們將可編輯的元件內容從SPA首頁檢視對應至AEM中對應的遠端SPA根目錄頁面 `/content/wknd-app/us/en/`.
 
-为SPA动态路由的可编辑组件定义映射相似，但我们必须在路由实例和AEM页面之间提出1:1映射方案。
+為SPA動態路由的可編輯元件定義對映類似，但是我們必須在路由的執行個體與AEM頁面之間進行1:1對映配置。
 
-在本教程中，我们将WKND冒险内容片段（路径的最后一段）的名称映射到下的简单路径 `/content/wknd-app/us/en/adventure`.
+在本教學課程中，我們將取得WKND冒險內容片段的名稱（此為路徑的最後一個區段），並將其對應至下的簡單路徑 `/content/wknd-app/us/en/adventure`.
 
-| 远程SPA路由 | AEM页面路径 |
+| 遠端SPA路由 | AEM頁面路徑 |
 |------------------------------------|--------------------------------------------|
 | / | /content/wknd-app/us/en/home |
-| /adventure/__巴厘岛冲浪营__ | /content/wknd-app/us/en/home/adventure/__巴厘岛冲浪营__ |
-| /adventure/__贝尔瓦纳 — 波特兰__ | /content/wknd-app/us/en/home/adventure/__贝尔瓦纳因波特兰__ |
+| /adventure/__bali-surf-camp__ | /content/wknd-app/us/en/home/adventure/__bali-surf-camp__ |
+| /adventure/__貝爾瓦納 — 波特蘭__ | /content/wknd-app/us/en/home/adventure/__波特蘭貝爾瓦納__ |
 
-因此，根据此映射，我们必须在以下位置创建两个新的AEM页面：
+因此，根據此對應，我們必須在以下位置建立兩個新的AEM頁面：
 
 + `/content/wknd-app/us/en/home/adventure/bali-surf-camp`
 + `/content/wknd-app/us/en/home/adventure/beervana-in-portland`
 
-## 远程SPA映射
+## 遠端SPA對應
 
-离开远程SPA的请求映射通过 `setupProxy` 配置完成 [BootstrapSPA](./spa-bootstrap.md).
+離開遠端SPA的請求對應是透過 `setupProxy` 設定完成於 [BootstrapSPA](./spa-bootstrap.md).
 
-## SPA编辑器映射
+## SPA編輯器對應
 
-通过AEM SPA编辑器打开SPA时，SPA请求的映射是通过 [配置AEM](./aem-configure.md).
+透過SPA SPA Editor開啟SPA時，AEM要求的對應可透過以下位置完成設定的Sling對應： [設定AEM](./aem-configure.md).
 
-## 在AEM中创建内容页面
+## 在AEM中建立內容頁面
 
-首先，创建中间人 `adventure` 页面区段：
+首先，建立中介 `adventure` 頁面區段：
 
-1. 登录到AEM作者
-1. 导航到 __站点> WKND应用程序>用户> en > WKND应用程序主页__
-   + 此AEM页面被映射为SPA的根，因此我们开始在此构建其他SPA路由的AEM页面结构。
-1. 点按 __创建__ 选择 __页面__
-1. 选择 __远程SPA页__ 模板，然后点按 __下一个__
-1. 填写页面属性
-   + __标题__:冒险
+1. 登入AEM Author
+1. 導覽至 __網站> WKND應用程式>我們>英文> WKND應用程式首頁__
+   + 此AEM頁面會對應為SPA的根目錄，所以我們在這裡開始為其他SPA路由建立AEM頁面結構。
+1. 點選 __建立__ 並選取 __頁面__
+1. 選取 __遠端SPA頁面__ 範本，然後點選 __下一個__
+1. 填寫頁面屬性
+   + __標題__：探險
    + __名称__: `adventure`
-      + 此值定义AEM页面的URL，因此必须匹配SPA的路由区段。
-1. 点按 __完成__
+      + 此值會定義AEM頁面的URL，因此必須符合SPA的路由區段。
+1. 點選 __完成__
 
-然后，创建与每个需要可编辑区域的SPA URL对应的AEM页面。
+然後，建立與需要可編輯區域的每個SPA URL相對應的AEM頁面。
 
-1. 导航到新 __冒险__ 站点管理员中的页面
-1. 点按 __创建__ 选择 __页面__
-1. 选择 __远程SPA页__ 模板，然后点按 __下一个__
-1. 填写页面属性
-   + __标题__:巴厘岛冲浪营
+1. 瀏覽至新的 __冒險__ 網站管理員中的頁面
+1. 點選 __建立__ 並選取 __頁面__
+1. 選取 __遠端SPA頁面__ 範本，然後點選 __下一個__
+1. 填寫頁面屬性
+   + __標題__：巴厘島衝浪營
    + __名称__: `bali-surf-camp`
-      + 此值定义AEM页面的URL，因此必须匹配SPA路径的最后一个区段
-1. 点按 __完成__
-1. 重复步骤3-6以创建 __贝尔瓦娜在波特兰__ 页面，其中：
-   + __标题__:贝尔瓦娜在波特兰
+      + 此值會定義AEM頁面的URL，因此必須符合SPA路由的最後一個區段
+1. 點選 __完成__
+1. 重複步驟3-6以建立 __波特蘭貝爾瓦納__ 頁面，包含：
+   + __標題__：波特蘭的Beervana
    + __名称__: `beervana-in-portland`
-      + 此值定义AEM页面的URL，因此必须匹配SPA路径的最后一个区段
+      + 此值會定義AEM頁面的URL，因此必須符合SPA路由的最後一個區段
 
-这两个AEM页面包含其各自创作的内容，以供其匹配的SPA路由使用。 如果其他SPA路由需要创作，则必须在其SPA URL的远程SPA页面根页面(`/content/wknd-app/us/en/home`)。
+這兩個AEM頁面會保留其相符SPA路由的個別編寫內容。 如果其他SPA路由需要編寫，則必須在其SPA SPA URL的遠端AEM頁面的根頁面(`/content/wknd-app/us/en/home`AEM )。
 
-## 更新WKND应用程序
+## 更新WKND應用程式
 
-我们把 `<ResponsiveGrid...>` 在中创建的组件 [最后一章](./spa-container-component.md)，到 `AdventureDetail` SPA组件，创建可编辑的容器。
+讓我們放置 `<ResponsiveGrid...>` 在中建立的元件 [最後一章](./spa-container-component.md)，放入我們的 `AdventureDetail` SPA元件，建立可編輯的容器。
 
-### 放置ResponsiveGrid SPA组件
+### 放置ResponsiveGrid SPA元件
 
-将 `<ResponsiveGrid...>` 在 `AdventureDetail` 组件会在该路径中创建一个可编辑的容器。 诀窍在于多条路线使用 `AdventureDetail` 要渲染的组件，我们必须动态调整  `<ResponsiveGrid...>'s pagePath` 属性。 的 `pagePath` 必须根据路由实例显示的历程派生，指向相应的AEM页面。
+放置 `<ResponsiveGrid...>` 在 `AdventureDetail` 元件會在該路徑中建立可編輯的容器。 訣竅在於多重路由會使用 `AdventureDetail` 要呈現的元件，我們必須動態調整  `<ResponsiveGrid...>'s pagePath` 屬性。 此 `pagePath` 必須衍生為根據路由例項顯示的冒險指向對應的AEM頁面。
 
-1. 打开和编辑 `react-app-/src/components/AdventureDetail.js`
-1. 导入 `ResponsiveGrid` 组件并将其放在 `<h2>Itinerary</h2>` 组件。
-1. 在 `<ResponsiveGrid...>` 组件。 请注意 `pagePath` 属性会添加当前 `slug` 根据上面定义的映射，该页面映射到冒险页面。
+1. 開啟並編輯 `react-app-/src/components/AdventureDetail.js`
+1. 匯入 `ResponsiveGrid` 元件並放置在上方 `<h2>Itinerary</h2>` 元件。
+1. 在 `<ResponsiveGrid...>` 元件。 請注意 `pagePath` 屬性新增目前的 `slug` 會依照上述定義的對應，對應至冒險頁面。
    + `pagePath = '/content/wknd-app/us/en/home/adventure/${slug}'`
    + `itemPath = 'root/responsivegrid'`
 
-   这会指示 `ResponsiveGrid` 用于从AEM资源检索其内容的组件：
+   這指示 `ResponsiveGrid` 元件以從AEM資源擷取其內容：
 
    + `/content/wknd-app/us/en/home/adventure/${slug}/jcr:content/root/responsivegrid`
 
 
-更新 `AdventureDetail.js` ，其中包含以下行：
+更新 `AdventureDetail.js` 包含以下行：
 
 ```javascript
 ...
@@ -135,45 +135,45 @@ function AdventureDetailRender(props) {
 }
 ```
 
-的 `AdventureDetail.js` 文件应该如下所示：
+此 `AdventureDetail.js` 檔案應如下所示：
 
 ![AdventureDetail.js](./assets/spa-dynamic-routes/adventure-detail-js.png)
 
-## 在AEM中创作容器
+## 在AEM中編寫容器
 
-使用 `<ResponsiveGrid...>` 就位，以及 `pagePath` 我们会根据所呈现的历程进行动态设置，并尝试在其中创作内容。
+使用 `<ResponsiveGrid...>` 就位，及其 `pagePath` 我們會根據呈現的冒險動態設定，嘗試在其中製作內容。
 
-1. 登录到AEM作者
-1. 导航到 __站点> WKND应用程序>美国> en__
-1. __编辑__ the __WKND应用程序主页__ 页面
-   + 导航到 __巴厘岛冲浪营__ 在SPA中路由以对其进行编辑
-1. 选择 __预览__ 从右上方的模式选择器中
-1. 点按 __巴厘岛冲浪营__ 卡以导航到SPA的路线
-1. 选择 __编辑__ 从模式选择器
-1. 找到 __布局容器__ 可编辑区域，就在 __行程__
-1. 打开 __页面编辑器的侧栏__，然后选择 __组件视图__
-1. 将一些已启用的组件拖到 __布局容器__
+1. 登入AEM Author
+1. 導覽至 __網站> WKND應用程式>我們>英文__
+1. __編輯__ 此 __wknd應用程式首頁__ 頁面
+   + 導覽至 __巴厘島衝浪營__ 在SPA中路由以進行編輯
+1. 選取 __預覽__ 從右上角的模式選擇器
+1. 點選 __巴厘島衝浪營__ SPA中的卡片以導覽至其路由
+1. 選取 __編輯__ 從模式選擇器
+1. 找到 __配置容器__ 上方的可編輯區域 __行程__
+1. 開啟 __頁面編輯器的側欄__，然後選取 __元件檢視__
+1. 將部分已啟用的元件拖曳至 __配置容器__
    + 图像
    + 文本
    + 标题
 
-   并制作一些促销营销材料。 它可能如下所示：
+   並建立一些促銷行銷資料。 它看起來可能像這樣：
 
-   ![《巴厘岛冒险细节创作》](./assets/spa-dynamic-routes/adventure-detail-edit.png)
+   ![Bali Adventure Detail製作](./assets/spa-dynamic-routes/adventure-detail-edit.png)
 
-1. __预览__ 您对AEM页面编辑器所做的更改
-1. 刷新在本地运行的WKND应用程序 [http://localhost:3000](http://localhost:3000)，导航到 __巴厘岛冲浪营__ 路由以查看创作的更改！
+1. __預覽__ 您在AEM頁面編輯器中進行的變更
+1. 重新整理在本機執行的WKND應用程式 [http://localhost:3000](http://localhost:3000)，導覽至 __巴厘島衝浪營__ 檢視所編寫變更的路由！
 
-   ![远程SPA Bali](./assets/spa-dynamic-routes/remote-spa-final.png)
+   ![遠端SPA巴厘島](./assets/spa-dynamic-routes/remote-spa-final.png)
 
-当导航到没有映射AEM页面的探险详细信息路由时，该路由实例上没有创作功能。 要在这些页面上启用创作功能，只需在 __冒险__ 页面！
+導覽至沒有對應AEM頁面的冒險詳細路徑時，該路徑例項沒有編寫能力。 若要在這些頁面上啟用撰寫功能，只需在「 」下使用相符名稱建立AEM頁面 __冒險__ 頁面！
 
 ## 恭喜！
 
-恭喜！您在SPA中为动态路由添加了创作功能！
+恭喜！您已在SPA中新增編寫動態路由的功能！
 
-+ 将AEM React可编辑组件的ResponsiveGrid组件添加到动态路由
-+ 创建AEM页面，以支持在SPA中创作两条特定路线（Bali Surf Camp和Beervana，波特兰）
-+ 在动态的巴厘岛冲浪营路线上创作了内容！
++ 將AEM React Editable元件的ResponsiveGrid元件新增至動態路由
++ 建立AEM頁面，以支援在SPA中製作兩個特定路線（Bali Surf Camp和Beervana in Portland）
++ 動態的巴厘島衝浪營路線上的編寫內容！
 
-您现在已完成探索如何使用AEM SPA Editor向远程SPA添加特定可编辑区域的首要步骤！
+您現在已經完成探索AEM SPA Editor如何用來將特定可編輯區域新增到遠端SPA的第一步！

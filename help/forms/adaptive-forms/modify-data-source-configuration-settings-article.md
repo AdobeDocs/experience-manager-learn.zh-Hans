@@ -1,6 +1,6 @@
 ---
-title: 修改数据源配置设置。
-description: 在数据源配置设置中修改主机名和其他设置。
+title: 修改資料來源組態設定。
+description: 修改資料來源組態設定中的主機名稱和其他設定。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -15,16 +15,16 @@ ht-degree: 0%
 
 ---
 
-# 能够修改数据源配置设置{#ability-to-modify-data-source-configuration-settings}
+# 修改資料來源組態設定的功能{#ability-to-modify-data-source-configuration-settings}
 
-在AEM Forms 6.4版本发布之前，一旦配置了数据源，您便无法更改RESTful服务的方案、主机、基本路径。 如果您想要针对不同的环境测试数据源，则会出现问题。
+直到AEM Forms 6.4版本，設定資料來源後，您就無法變更RESTful服務的配置、主機、基本路徑。 如果您想要針對不同環境測試資料來源，這會造成問題。
 
-在AEM Forms 6.5版本中，您现在可以轻松更改上述属性。 借助这项新功能，您现在可以针对开发环境创建表单数据模型，并且一旦您对结果满意，就可以更改属性以指向其他环境。
+隨著AEM Forms 6.5的發行，您現在可以輕鬆變更上述屬性。 透過這項新功能，您現在可以根據開發環境建立表單資料模型，並在對結果滿意後，變更屬性以指向不同的環境。
 
-以下屏幕截图显示了AEM Forms 6.4和Forms 6.5中的数据源配置设置
+以下熒幕擷取畫面顯示AEM Forms 6.4和Forms 6.5中的資料來源組態設定
 
-**AEM 6.4中的数据源配置**
+**AEM 6.4中的資料來源組態**
 
-![64数据源配置](assets/64release.gif)
-**AEM 6.5及更高版本中的可编辑数据源配置**
-![65数据源配置](assets/modifiabledatasource.jfif)
+![64DataSource設定](assets/64release.gif)
+**AEM 6.5及更高版本中的可編輯資料來源設定**
+![65DataSource設定](assets/modifiabledatasource.jfif)

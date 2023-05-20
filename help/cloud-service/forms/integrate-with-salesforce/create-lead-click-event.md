@@ -1,6 +1,6 @@
 ---
-title: 在按钮的点击事件上的Salesforce数据库中创建潜在客户对象
-description: 通过调用表单数据模型的后处理操作创建潜在客户
+title: 在按鈕的點選事件上建立Salesforce資料庫中的Lead物件
+description: 透過叫用表單資料模型的後續作業來建立s Lead
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 测试集成
+# 測試整合
 
-根据Sales Force表单数据模型创建自适应表单，并在按钮的点击事件中测试在Salesforce中创建潜在客户
+根據Sales Force表單資料模型建立最適化表單，並在按鈕的點選事件上測試Salesforce中銷售機會的建立
 
 >[!VIDEO](https://video.tv.adobe.com/v/331892?quality=12&learn=on)

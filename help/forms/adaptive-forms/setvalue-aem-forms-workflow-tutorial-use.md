@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms工作流中使用setvalue
-description: 在AEM Forms OSGi中设置自适应Forms提交数据中元素的值
+title: 在AEM Forms工作流程中使用setvalue
+description: 在AEM Forms OSGI中設定最適化Forms提交資料的元素值
 feature: Adaptive Forms
 topic: Development
 role: Developer
@@ -14,52 +14,52 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms工作流中使用setvalue
+# 在AEM Forms工作流程中使用setvalue
 
-在AEM Forms OSGi工作流中设置自适应Forms提交数据中XML元素的值。
+在AEM Forms OSGI工作流程中，設定最適化Forms中提交資料的XML元素值。
 
-![SetValue](assets/setvalue.png)
+![設定值](assets/setvalue.png)
 
-LiveCycle，用于具有设置值组件，该组件允许您设置XML元素的值。
+用來設定值元件的LiveCycle，可讓您設定XML元素的值。
 
-根据此值，在使用XML填充表单时，可以隐藏/禁用表单的某些字段或面板。
+根據此值，使用XML填入表單時，您可以隱藏/停用表單的某些欄位或面板。
 
-在AEM Forms OSGi中 — 我们必须编写自定义OSGi包才能在XML中设置值。 此包将作为本教程的一部分提供。
-我们使用AEM工作流中的流程步骤。 我们将“在XML中设置元素值”OSGi包与此流程步骤相关联。
-我们需要将两个参数传递到设置值包。 第一个参数是需要设置其值的XML元素的XPath。 第二个参数是需要设置的值。
-例如，在上面的屏幕截图中，我们将initialstep元素的值设置为“N”。
-根据此值，自适应Forms中的某些面板会被隐藏或显示。
-在本例中，我们有一个简单的结束请求表单。 此表单的发起者填写其姓名和结束日期。 提交后，此表单将转至“管理员”进行审核。 管理员打开表单时，第一个面板上的字段会被禁用。 这是因为我们已将XML中初始步骤元素的值设置为“N”。
+在AEM Forms OSGI中 — 我們必須撰寫自訂OSGi套件組合以在XML中設定值。 此套件組合已隨本教學課程提供。
+我們使用AEM工作流程中的「程式步驟」。 我們會將「在XML中設定元素的值」OSGi套件組合與此程式步驟建立關聯。
+我們需要傳遞兩個引數至設定值組合。 第一個引數是需要設定其值的XML元素的XPath。 第二個引數是需要設定的值。
+例如，在上述熒幕擷圖中，我們將intialstep元素的值設為「N」。
+根據此值，最適化Forms中的某些面板會隱藏或顯示。
+在我們的範例中，我們有一個簡單的休假請求表單。 此表單的發起人填寫其姓名和休假日期。 提交時，此表單會前往「管理員」進行稽核。 當管理員開啟表單時，第一個面板上的欄位會停用。 這是因為我們已將XML中初始步驟元素的值設定為「N」。
 
-根据初始步骤字段值，我们显示第二个面板，“管理员”可以在该面板中批准或拒绝请求
+根據初始步驟欄位值，我們顯示第二個面板，「管理員」可以在這裡核准或拒絕請求
 
-请使用规则编辑器查看针对“请求的结束时间”字段设置的规则。
+請使用規則編輯器檢視針對「要求休假時間」欄位設定的規則。
 
-要在本地系统上部署资产，请执行以下步骤：
+若要在本機系統上部署資產，請遵循下列步驟：
 
-* [部署Developmingwithserviceuser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [部署Developing withserviceuser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [部署示例包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 这是自定义OSGI包，用于设置提交的xml数据中元素的值
+* [部署範例套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 這是自訂OSGI套件組合，可讓您在提交的xml資料中設定元素的值
 
-* [下载并解压缩zip文件的内容](assets/setvalueassets.zip)
-* 将您的浏览器指向 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* 导入并安装setValueWorkflow.zip。 这里有工作流模型的示例。
-* 将您的浏览器指向 [Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 单击创建 |文件上传
-* 上载TimeOfRequestForm.zip
-* 打开 [TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
-* 填写3个必填字段并提交
-* 以“管理员”身份登录到AEM（如果尚未登录）
-* 转到 [&quot;AEM收件箱&quot;](http://localhost:4502/aem/inbox)
-* 打开“审核请求结束时间”窗体
-* 请注意，第一个面板中的字段处于禁用状态。 这是因为表单由审阅人打开。 此外，请注意，现在可以看到批准或拒绝请求的面板
+* [下載並解壓縮zip檔案的內容](assets/setvalueassets.zip)
+* 將瀏覽器指向 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+* 匯入並安裝setValueWorkflow.zip。 此範例為工作流程模型。
+* 將瀏覽器指向 [Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 按一下建立 |檔案上傳
+* 上傳TimeOfRequestForm.zip
+* 開啟 [TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
+* 填寫3個必填欄位並提交
+* 以「管理員」身分登入AEM （如果尚未登入）
+* 前往 [「AEM收件匣」](http://localhost:4502/aem/inbox)
+* 開啟「檢閱休假要求」表單
+* 請注意，第一個面板中的欄位已停用。 這是因為表單已由檢閱者開啟。 此外，請注意現在會顯示核准或拒絕請求的面板
 
 >[!NOTE]
 >
->您可以通过为启用日志记录器来启用调试日志记录
+>您可以透過啟用記錄器來啟用偵錯記錄
 >com.aemforms.setvalue.core.SetValueinXml
->将您的浏览器指向http://localhost:4502/system/console/slinglog
+>將瀏覽器指向http://localhost:4502/system/console/slinglog
 
 >[!NOTE]
 >
->确保将自适应表单提交选项中的数据文件路径设置为“Data.xml”。 这是因为流程步骤在有效负载文件夹下查找名为Data.xml的文件
+>請確定最適化表單提交選項中的資料檔案路徑已設為「Data.xml」。 這是因為程式步驟會在裝載資料夾下尋找名為Data.xml的檔案

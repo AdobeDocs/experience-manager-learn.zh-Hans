@@ -1,6 +1,6 @@
 ---
-title: 使用查询参数填充自适应Forms。
-description: 使用查询参数中的数据填充自适应Forms。
+title: 使用查詢引數填入最適化Forms。
+description: 使用查詢引數的資料填入最適化Forms。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -8,26 +8,27 @@ role: Developer
 level: Experienced
 kt: 11470
 last-substantial-update: 2020-11-12T00:00:00Z
-source-git-commit: fad7630d2d91d03b98a3982f73a689ef48700319
+exl-id: 14ac6ff9-36b4-415e-a878-1b01ff9d3888
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
-# 使用查询参数预填充自适应Forms
+# 使用查詢引數預先填入最適化Forms
 
-其中一位客户需要使用查询参数填充自适应表单。 例如，在以下url中，自适应表单中的FirstName和LastName字段分别设置为John和Doe
+我們其中一位客戶要求使用查詢引數填入最適化表單。 例如，在以下url中，最適化表單中的FirstName和LastName欄位分別設定為John和Doe
 
 ```html
 https://forms.enablementadobe.com/content/forms/af/testingxml.html?FirstName=John&LastName=Doe
 ```
 
-为了完成此用例，已创建新的自适应表单模板并与页面组件关联。 在此页面组件中，我们使用jsp来获取查询参数并创建可用于填充自适应表单的xml结构。
+為了完成此使用案例，已建立新的最適化表單範本並與頁面元件建立關聯。 在此頁面元件中，我們有jsp可取得查詢引數，並建立可用來填入調適型表單的xml結構。
 
-有关创建新的自适应表单模板和页面组件的详细信息包括 [此视频中进行了说明。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
+建立新最適化表單範本和頁面元件的詳細資訊如下 [本影片說明。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
 
-以下是在jsp页面中使用的代码
+以下是jsp頁面中使用的程式碼
 
 ```java
 java.util.Enumeration enumeration = request.getParameterNames();
@@ -46,13 +47,13 @@ slingRequest.setAttribute("data", dataXml);
 
 >[!NOTE]
 >
->如果您的表单使用架构，则xml的结构将不同，您必须相应地构建xml。
+>如果您的表單使用結構描述，則xml的結構將會不同，您必須據以建置xml。
 
 
-## 在您的系统上部署资产
+## 在您的系統上部署資產
 
-* [使用包管理器下载并安装自适应表单模板](assets/populate-with-xml.zip)
-* [下载并安装示例自适应表单](assets/populate-af-with-query-paramters-form.zip)
+* [使用封裝管理程式下載並安裝最適化表單範本](assets/populate-with-xml.zip)
+* [下載並安裝最適化表單範例](assets/populate-af-with-query-paramters-form.zip)
 
-* [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/testingxml/jcr:content?wcmmode=disabled&amp;FirstName=John&amp;LastName=Doe)
-您应会看到自适应表单中填充了值John和Doe
+* [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/testingxml/jcr:content?wcmmode=disabled&amp;FirstName=John&amp;LastName=Doe)
+您應該會看到最適化表單填入值John和Doe

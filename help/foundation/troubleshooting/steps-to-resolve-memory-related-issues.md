@@ -1,6 +1,6 @@
 ---
-title: 解决AEM中内存相关问题的步骤
-description: 调查和解决与内存相关问题的步骤
+title: 解決AEM中記憶體相關問題的步驟
+description: 調查和解決記憶體相關問題的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 解决AEM中内存相关问题的步骤
+# 解決AEM中記憶體相關問題的步驟
 
-*此视频将介绍如何解决AEM中与内存相关的问题。*
+*本影片逐步解說解決AEM中記憶體相關問題的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335473?quality=12&learn=on)

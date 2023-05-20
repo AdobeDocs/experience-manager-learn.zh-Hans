@@ -1,6 +1,6 @@
 ---
-title: 资产共享共用中的主题介绍
-description: 有关功能和技术了解的材料资产共享共用
+title: Asset Share Commons的主題設定簡介
+description: 適用於功能和技術瞭解Assets Share Commons的材料
 version: 6.4, 6.5
 topic: Content Management
 role: Developer
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 ---
 
-# 资产共享共用中的主题介绍 {#asset-share-commons-theme}
+# Asset Share Commons的主題設定簡介 {#asset-share-commons-theme}
 
-资产共享共用中的主题简介。 该视频将逐步介绍如何使用自定义颜色方案创建新主题。
+簡要介紹Asset Share Commons的主題。 影片會逐步說明使用自訂色彩配置建立新佈景主題的過程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20572?quality=12&learn=on)
 
-在此视频中，将根据资产共享共用深色主题创建新主题。 配色方案将与自定义徽标匹配，以便为网站提供一致的外观。
+此影片會根據Asset Share Commons Dark主題建立一個新主題。 色彩配置會比對自訂標誌，以提供一致的外觀和感覺。
 
-## 主题变量
+## 主題變數
 
 ```java
 /*******************************
@@ -73,9 +73,9 @@ ht-degree: 1%
 @msgWarningBackgroundColor: @yellow;
 ```
 
-下载 [自定义客户端库主题](assets/asc-theme-demo.zip)
+下載 [自訂使用者端資料庫主題](assets/asc-theme-demo.zip)
 
 ## 其他资源{#additional-resources}
 
-* [资产共享共用版本下载](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
-* [ACS AEM Commons 3.11.0+版本下载](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
+* [Asset Share Commons版本下載](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
+* [ACS AEM Commons 3.11.0+版本下載](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)

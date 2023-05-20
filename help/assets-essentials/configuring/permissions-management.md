@@ -1,6 +1,6 @@
 ---
-title: Assets Essentials权限管理
-description: 了解AEM Assets Essentials权限管理如何让组织控制对资产的访问、保护其品牌并确保法规遵从性。
+title: Assets Essentials許可權管理
+description: 瞭解AEM Assets Essentials許可權管理如何讓組織控制對資產的存取、保護其品牌並確保法規遵從性。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# Assets Essentials中的权限管理
+# Assets Essentials中的許可權管理
 
-了解AEM Assets Essentials权限管理如何让组织控制对资产的访问、保护其品牌并确保法规遵从性。
+瞭解AEM Assets Essentials許可權管理如何讓組織控制對資產的存取、保護其品牌並確保法規遵從性。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342113?quality=12&learn=on)

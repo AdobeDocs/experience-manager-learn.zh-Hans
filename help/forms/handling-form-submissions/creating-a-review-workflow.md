@@ -1,6 +1,6 @@
 ---
-title: 创建用于审核已提交数据的工作流
-description: 使用AEM Forms工作流组件创建AEM工作流模型以审核提交的数据。
+title: 建立工作流程以檢閱提交的資料
+description: 使用AEM工作流程元件建立AEM Forms工作流程模型，以檢閱提交的資料。
 feature: Workflow
 topics: integrations
 audience: developer
@@ -21,16 +21,16 @@ ht-degree: 4%
 
 ---
 
-# 创建用于审核已提交数据的工作流
+# 建立工作流程以檢閱提交的資料
 
-工作流通常用于传送提交的数据以供审核和批准。 使用AEM中的工作流编辑器创建工作流。 可在提交自适应表单时触发工作流。
+工作流程通常用於路由提交資料以供檢閱和核准。 工作流程是使用AEM中的工作流程編輯器建立的。 工作流程可以在最適化表單提交時觸發。
 
 ## 先决条件
 
-请确保您有AEM Forms的工作实例。 请按照 [安装指南](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) 安装和配置AEM Forms
+請確定您有AEM Forms的有效執行個體。 請遵循 [安裝指南](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) 安裝及設定AEM Forms
 
-以下视频介绍了如何使用AEM Forms组件创建审阅和批准工作流程
+以下影片說明如何使用AEM Forms元件建立檢閱和核准工作流程
 >[!VIDEO](https://video.tv.adobe.com/v/40242?quality=12&learn=on)
 
 
-如果由于某些原因您无法构建工作流，则可以从 [此处](assets/review-submitted-data-workflow.zip) ，然后使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp) 到AEM实例。
+如果由於某種原因無法建立工作流程，您可以從以下位置下載已完成的工作流程： [此處](assets/review-submitted-data-workflow.zip) 並使用匯入相同專案 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp) 在您的AEM執行個體中。

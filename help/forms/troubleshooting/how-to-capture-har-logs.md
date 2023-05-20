@@ -1,6 +1,6 @@
 ---
-title: 如何捕获HAR（HTTP存档）日志
-description: 捕获HTTP存档日志，以解决与网络相关的问题
+title: 如何擷取HAR （HTTP封存）記錄
+description: 擷取HTTP封存記錄檔以疑難排解網路相關問題
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何捕获HAR（HTTP存档）日志
+# 如何擷取HAR （HTTP封存）記錄
 
-*此视频将演示捕获HAR（HTTP存档）日志的步骤。*
+*此影片逐步解說擷取HAR （HTTP封存）記錄的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335488?quality=12&learn=on)

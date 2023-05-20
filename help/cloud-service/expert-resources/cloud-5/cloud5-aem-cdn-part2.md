@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 AEM CDN第2部分
-description: 第二部分使用AEM CDN并深入研究各种选项。
+description: 使用AEM CDN的第二部分並深入探究各種選項。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 # Cloud 5 AEM CDN第2部分
 
-第二部分使用AEM CDN并深入了解各种选项。
+使用AEM CDN的第二部分並深入探究各種選項。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340994?quality=12&learn=on)
 
-## 本系列第二部分介绍的内容
+## 本系列第二部分所涵蓋的內容
 
-+ 动态优化图像 — Dynamic Media用例
-+ 国家/地区代码重定向
-+ CDN流量分析和报告
-+ 自带CDN(BYOCDN)
++ 即時最佳化影像 — 動態媒體使用案例
++ 國家/地區代碼重新導向
++ CDN流量分析與報告
++ 自備CDN (BYOCDN)
 
-[查看第一部分](cloud5-aem-cdn-part1.md)
+[檢視第一部分](cloud5-aem-cdn-part1.md)

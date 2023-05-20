@@ -1,6 +1,6 @@
 ---
-title: 将资产模板与AEM Assets和InDesign Server结合使用
-description: AEM Assets模板允许营销人员创建、管理和交付用于数字和打印的数字资产。 与InDesign服务器集成后，使用资产模板可以更轻松地创建标记小册子、名片、传单、广告和明信片。
+title: 搭配AEM Assets和InDesign Server使用資產範本
+description: AEM Assets範本可讓行銷人員建立、管理和傳遞數位資產和列印資產。 與InDesign伺服器整合時，使用Assets範本可更輕鬆地建立行銷手冊、名片、傳單、廣告和明信片。
 version: 6.4, 6.5
 topic: Content Management
 role: User
@@ -15,22 +15,22 @@ ht-degree: 0%
 
 ---
 
-# 将资产模板与AEM Assets和InDesign Server结合使用{#using-asset-templates-with-aem-assets-and-indesign-server}
+# 搭配AEM Assets和InDesign Server使用資產範本{#using-asset-templates-with-aem-assets-and-indesign-server}
 
-AEM Assets模板允许营销人员创建、管理和交付用于数字和打印的数字资产。 与InDesign服务器集成后，使用资产模板可以更轻松地创建标记小册子、名片、传单、广告和明信片。
+AEM Assets範本可讓行銷人員建立、管理和傳遞數位資產和列印資產。 與InDesign伺服器整合時，使用Assets範本可更輕鬆地建立行銷手冊、名片、傳單、廣告和明信片。
 
 >[!NOTE]
 >
->有关配置InDesign Server的步骤，请查看 [使用InDesign Server设置资产模板](asset-templates-technical-video-setup.md).
+>如需設定InDesign Server的步驟，請檢閱 [使用InDesign Server設定資產範本](asset-templates-technical-video-setup.md).
 
 ## 概述 {#overview}
 
-此视频将介绍使用Adobe InDesign、Adobe InDesign Server和AEM Assets在AEM中生成可供打印的资产的概念和步骤。
+此影片會逐步說明使用Adobe InDesign、Adobe InDesign Server和AEM Assets在AEM中產生可列印資產的概念和步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25170?quality=12&learn=on)
 
-## 技术概述 {#technical-overview}
+## 技術概覽 {#technical-overview}
 
-此视频更详细地概述了AEM Assets断言模板功能，以及AEM如何通过InDesign来促进AEM Assets和内容的组合，以创建丰富、引人入胜的打印体验。
+此影片提供更技術性的AEM Assets Assert範本功能概觀，以及AEM如何透過InDesign協助AEM Assets和內容的組成，以建立豐富、吸引人的列印體驗。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17071?quality=12&learn=on)

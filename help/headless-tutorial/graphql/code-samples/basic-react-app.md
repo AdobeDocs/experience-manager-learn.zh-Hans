@@ -1,6 +1,6 @@
 ---
-title: 基本React应用程序
-description: 基本的React应用程序，可显示WKND冒险列表及其详细信息
+title: 基本React應用程式
+description: 顯示WKND冒險及其詳細資訊清單的基本React應用程式
 version: Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -12,21 +12,21 @@ thumbnail: KT-11134.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
+exl-id: 870be37f-68bb-4b0f-9918-e68b09be830e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
+# 基本React應用程式
 
-# 基本React应用程序
+此 [React](https://reactjs.org/) 應用程式示範如何使用AEM GraphQL API透過持續性查詢來查詢內容。 此應用程式會呈現WKND Adventures的可篩選內容，並在選取冒險後顯示該冒險的完整詳細資訊。
 
-此 [React](https://reactjs.org/) 应用程序演示了如何使用AEM GraphQL API使用持久查询来查询内容。 此应用程序会呈现WKND冒险的可过滤内容，并在选择冒险时显示冒险的完整详细信息。
+此程式碼：
 
-此代码：
++ 連線到AEM Publish服務，且不需要驗證
++ 使用WKND的持續查詢： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-slug`
 
-+ 连接到AEM发布服务，且不需要身份验证
-+ 使用WKND的持久查询： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-slug`
-
-要深入查看此Next.js应用程序的构建方式，请查看 [React应用程序文档示例](../example-apps/react-app.md).
+如需如何建立此Next.js應用程式的深入檢視，請檢閱 [React應用程式檔案範例](../example-apps/react-app.md).

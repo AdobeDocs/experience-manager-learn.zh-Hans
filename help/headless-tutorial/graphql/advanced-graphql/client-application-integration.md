@@ -1,6 +1,6 @@
 ---
-title: 客户端应用程序集成 — AEM无头 — GraphQL的高级概念
-description: 实施持久化查询并将其集成到WKND应用程序中。
+title: 使用者端應用程式整合 — AEM Headless的進階概念 — GraphQL
+description: 實作持續性查詢並將其整合至WKND應用程式。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -10,54 +10,54 @@ exl-id: d0576962-a86a-4742-8635-02be1ec3243f
 source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
 workflow-type: tm+mt
 source-wordcount: '962'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# 客户端应用程序集成
+# 使用者端應用程式整合
 
-在上一章中，您使用GraphiQL资源管理器创建并更新了持久化查询。
+在上一章中，您使用GraphiQL Explorer建立和更新持久查詢。
 
-本章将指导您完成使用现有HTTPGET请求将持久查询与WKND客户端应用程序（又称WKND应用程序）集成的步骤 **React组件**. 它还为应用AEM Headless学习知识、编码专业知识以增强WKND客户端应用程序提供了可选挑战。
+本章將逐步引導您使用現有專案中的HTTPGET要求，將持續查詢與WKND使用者端應用程式（亦稱為WKND應用程式）整合的步驟 **React元件**. 此外，您也可以選擇如何運用AEM Headless學習經驗、編碼專業知識來增強WKND使用者端應用程式。
 
 ## 前提条件 {#prerequisites}
 
-本文档是多部分教程的一部分。 在继续处理本章之前，请确保已完成前几章。 WKND客户端应用程序连接到AEM发布服务，因此务必要 **将以下内容发布到AEM发布服务**.
+本檔案是多部分教學課程的一部分。 在繼續本章之前，請確定已完成前面的章節。 WKND使用者端應用程式會連線至AEM發佈服務，因此您必須 **已將下列專案發佈至AEM發佈服務**.
 
-* 项目配置
+* 專案設定
 * GraphQL 端点
 * 内容片段模型
-* 创作内容片段
-* GraphQL持久查询
+* 編寫的內容片段
+* GraphQL持續查詢
 
-的 _本章中的IDE屏幕截图来自 [Visual Studio代码](https://code.visualstudio.com/)_
+此 _本章中的IDE熒幕擷取畫面來自 [Visual Studio Code](https://code.visualstudio.com/)_
 
-### 第1-4章解决方案包（可选） {#solution-package}
+### 第1-4章解決方案套件（選用） {#solution-package}
 
-可以安装一个解决方案包，以完成AEM UI中章节1-4中的步骤。 此包是 **不需要** 如果前几章已经完成。
+可安裝的解決方案套件可完成第1-4章的AEM UI中的步驟。 此封裝為 **不需要** 前幾章是否已完成。
 
-1. 下载 [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip).
-1. 在AEM中，导航到 **工具** > **部署** > **包** 访问 **包管理器**.
-1. 上载并安装在上一步中下载的包（zip文件）。
-1. 将包复制到AEM发布服务
+1. 下載 [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip).
+1. 在AEM中，導覽至 **工具** > **部署** > **套件** 存取 **封裝管理員**.
+1. 上傳並安裝上一步驟中下載的套件（zip檔案）。
+1. 將套件復寫至AEM Publish服務
 
-## 目标 {#objectives}
+## 目標 {#objectives}
 
-在本教程中，您将了解如何使用 [AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js).
+在本教學課程中，您將瞭解如何使用將持續查詢的請求整合到範例WKND GraphQL React應用程式中 [適用於JavaScript的AEM Headless使用者端](https://github.com/adobe/aem-headless-client-js).
 
-## 克隆并运行示例客户端应用程序 {#clone-client-app}
+## 複製並執行範例使用者端應用程式 {#clone-client-app}
 
-为了加快教程的进度，我们提供了一个React JS入门应用程序。
+為了加速教學課程，我們提供入門版React JS應用程式。
 
-1. 克隆 [adobe/aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql) 存储库：
+1. 原地複製 [adobe/aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql) 存放庫：
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 编辑 `aem-guides-wknd-graphql/advanced-tutorial/.env.development` 文件和设置 `REACT_APP_HOST_URI` 以指向target AEM发布服务。
+1. 編輯 `aem-guides-wknd-graphql/advanced-tutorial/.env.development` 檔案和集合 `REACT_APP_HOST_URI` 指向您的target AEM發佈服務。
 
-   如果连接到创作实例，请更新身份验证方法。
+   如果連線到作者執行個體，請更新驗證方法。
 
    ```plain
    # Server namespace
@@ -78,17 +78,17 @@ ht-degree: 1%
    REACT_APP_BASIC_AUTH_PASS=
    ```
 
-   ![React应用程序开发环境](assets/client-application-integration/react-app-dev-env-settings.png)
+   ![React應用程式開發環境](assets/client-application-integration/react-app-dev-env-settings.png)
 
 
    >[!NOTE]
    > 
-   > 上述说明是将React应用程序连接到 **AEM发布服务**，但要连接到 **AEM创作服务** 获取target AEMas a Cloud Service环境的本地开发令牌。
+   > 上述指示是將React應用程式連線至 **AEM Publish服務**，但若要連線至 **AEM作者服務** 取得目標AEMas a Cloud Service環境的本機開發權杖。
    >
-   > 也可以将应用程序连接到 [使用AEMaaCS SDK的本地创作实例](/help/headless-tutorial/graphql/quick-setup/local-sdk.md) 使用基本身份验证。
+   > 也可以將應用程式連線至 [使用AEMaaCS SDK的本機作者執行個體](/help/headless-tutorial/graphql/quick-setup/local-sdk.md) 使用基本驗證。
 
 
-1. 打开终端并运行命令：
+1. 開啟終端機並執行命令：
 
    ```shell
    $ cd aem-guides-wknd-graphql/advanced-tutorial
@@ -96,66 +96,66 @@ ht-degree: 1%
    $ npm start
    ```
 
-1. 应加载新的浏览器窗口 [http://localhost:3000](http://localhost:3000)
+1. 新瀏覽器視窗應載入於 [http://localhost:3000](http://localhost:3000)
 
 
-1. 点按 **露营** > **约塞米蒂背包** 查看Yosemite Backpacking探险详情。
+1. 點選 **露營** > **Yosemite揹包** 以檢視Yosemite Backpacking冒險細節。
 
-   ![Yosemite背包屏幕](assets/client-application-integration/yosemite-backpacking-adventure.png)
+   ![Yosemite揹包熒幕](assets/client-application-integration/yosemite-backpacking-adventure.png)
 
-1. 打开浏览器的开发人员工具并检查 `XHR` 请求
+1. 開啟瀏覽器的開發人員工具並檢查 `XHR` 請求
 
    ![POSTGraphQL](assets/client-application-integration/graphql-persisted-query.png)
 
-   您应会看到 `GET` 具有项目配置名称(`wknd-shared`)，保留的查询名称(`adventure-by-slug`)，变量名称(`slug`)，值(`yosemite-backpacking`)和特殊字符编码。
+   您應該會看到 `GET` GraphQL使用專案設定名稱(`wknd-shared`)，持續查詢名稱(`adventure-by-slug`)，變數名稱(`slug`)，值(`yosemite-backpacking`)和特殊字元編碼。
 
 >[!IMPORTANT]
 >
->    如果您想知道为什么针对 `http://localhost:3000` 和NOT针对AEM发布服务域，请查看 [在引擎罩下](../multi-step/graphql-and-react-app.md#under-the-hood) 从基本教程。
+>    如果您想知道為什麼GraphQL API請求是針對 `http://localhost:3000` 且不會針對AEM Publish Service網域，請檢閱 [潛藏於引擎蓋之下](../multi-step/graphql-and-react-app.md#under-the-hood) 基本教學課程中的。
 
 
-## 查看代码
+## 檢閱程式碼
 
-在 [基本教程 — 构建使用AEM GraphQL API的React应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object) 我们已审查并改进了几个关键文件，以获得实际操作的专业知识。 在增强WKND应用程序之前，请查看关键文件。
+在 [基本教學課程 — 建立使用AEM GraphQL API的React應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object) 步驟我們稽核並強化了幾個重要檔案，以獲得實際操作專業知識。 增強WKND應用程式之前，請先檢閱重要檔案。
 
-* [查看AEMHeadless对象](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)
+* [檢閱AEMHeadless物件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)
 
-* [实施以运行AEM GraphQL持久查询](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#implement-to-run-aem-graphql-persisted-queries)
+* [實作以執行AEM GraphQL持續查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#implement-to-run-aem-graphql-persisted-queries)
 
-### 审阅 `Adventures` React组件
+### 檢閱 `Adventures` React元件
 
-WKND React应用程序的主视图是所有历险的列表，您可以根据诸如之类的活动类型过滤这些历险 _野营、骑自行车_. 此视图由 `Adventures` 组件。 以下是主要实施详细信息：
+WKND React應用程式的主要檢視是所有冒險的清單，您可以根據活動型別篩選這些冒險，例如 _露營、騎腳踏車_. 此檢視由 `Adventures` 元件。 以下是主要實作詳細資料：
 
-* 的 `src/components/Adventures.js` 调用 `useAllAdventures(adventureActivity)` 钩子 `adventureActivity` 参数是活动类型。
+* 此 `src/components/Adventures.js` 呼叫 `useAllAdventures(adventureActivity)` 鉤點及此處 `adventureActivity` 引數是活動型別。
 
-* 的 `useAllAdventures(adventureActivity)` 挂钩在 `src/api/usePersistedQueries.js` 文件。 基于 `adventureActivity` 值时，它会确定要调用的持久查询。 如果不为null值，则会调用 `wknd-shared/adventures-by-activity`，否则将获得所有可用的冒险 `wknd-shared/adventures-all`.
+* 此 `useAllAdventures(adventureActivity)` 勾點定義於 `src/api/usePersistedQueries.js` 檔案。 根據 `adventureActivity` 值，它決定要呼叫哪個持續查詢。 如果不是null值，則會呼叫 `wknd-shared/adventures-by-activity`，否則會取得所有可用的冒險 `wknd-shared/adventures-all`.
 
-* 钩子使用主 `fetchPersistedQuery(..)` 将查询执行委派到的函数 `AEMHeadless` 通过 `aemHeadlessClient.js`.
+* 勾點使用主要 `fetchPersistedQuery(..)` 將查詢執行委派到的函式 `AEMHeadless` 透過 `aemHeadlessClient.js`.
 
-* 此挂接还仅返回AEM GraphQL响应(位于 `response.data?.adventureList?.items`，允许 `Adventures` React视图组件与父JSON结构无关。
+* 此連結也只會傳回位於AEM GraphQL回應中的相關資料 `response.data?.adventureList?.items`，允許 `Adventures` React會檢視與父JSON結構無關的元件。
 
-* 成功执行查询后， `AdventureListItem(..)` 从渲染函数 `Adventures.js` 添加HTML元素以显示 _图像、行程时长、价格和标题_ 信息。
+* 成功執行查詢後， `AdventureListItem(..)` 演算函式來源 `Adventures.js` 新增HTML元素以顯示 _影像、運送航程長度、價格和標題_ 資訊。
 
-### 审阅 `AdventureDetail` React组件
+### 檢閱 `AdventureDetail` React元件
 
-的 `AdventureDetail` React组件可渲染探险的详细信息。 以下是主要实施详细信息：
+此 `AdventureDetail` React元件會呈現冒險的詳細資訊。 以下是主要實作詳細資料：
 
-* 的 `src/components/AdventureDetail.js` 调用 `useAdventureBySlug(slug)` 钩子 `slug` 参数是查询参数。
+* 此 `src/components/AdventureDetail.js` 呼叫 `useAdventureBySlug(slug)` 鉤點及此處 `slug` 引數為查詢引數。
 
-* 如上所示， `useAdventureBySlug(slug)` 挂钩在 `src/api/usePersistedQueries.js` 文件。 它调用 `wknd-shared/adventure-by-slug` 将委派到 `AEMHeadless` 通过 `aemHeadlessClient.js`.
+* 如上所示， `useAdventureBySlug(slug)` 勾點定義於 `src/api/usePersistedQueries.js` 檔案。 It呼叫 `wknd-shared/adventure-by-slug` 透過委派至的持久查詢 `AEMHeadless` 透過 `aemHeadlessClient.js`.
 
-* 成功执行查询后， `AdventureDetailRender(..)` 从渲染函数 `AdventureDetail.js` 添加HTML元素以显示“冒险”详细信息。
+* 成功執行查詢後， `AdventureDetailRender(..)` 演算函式來源 `AdventureDetail.js` 新增HTML元素以顯示Adventure詳細資訊。
 
 
-## 增强代码
+## 增強程式碼
 
-### 使用 `adventure-details-by-slug` 持久化查询
+### 使用 `adventure-details-by-slug` 持久查詢
 
-在上一章中，我们创建了 `adventure-details-by-slug` 持久查询，它提供其他冒险信息，例如 _位置、instructorTeam和管理员_. 让我们替换 `adventure-by-slug` with `adventure-details-by-slug` 保留查询以呈现此附加信息。
+在上一章中，我們建立了 `adventure-details-by-slug` 持久查詢，它提供額外的冒險資訊，例如 _位置、講師團隊和管理員_. 讓我們取代 `adventure-by-slug` 替換為 `adventure-details-by-slug` 持續查詢以呈現此額外資訊。
 
 1. 打开 `src/api/usePersistedQueries.js`.
 
-1. 找到函数 `useAdventureBySlug()` 将查询更新为
+1. 找到函式 `useAdventureBySlug()` 並更新查詢為
 
 ```javascript
  ...
@@ -169,11 +169,11 @@ WKND React应用程序的主视图是所有历险的列表，您可以根据诸�
  ...
 ```
 
-### 显示其他信息
+### 顯示其他資訊
 
-1. 要显示其他冒险信息，请打开 `src/components/AdventureDetail.js`
+1. 若要顯示其他冒險資訊，請開啟 `src/components/AdventureDetail.js`
 
-1. 找到函数 `AdventureDetailRender(..)` 将返回函数更新为
+1. 找到函式 `AdventureDetailRender(..)` 並將傳回函式更新為
 
    ```javascript
    ...
@@ -198,9 +198,9 @@ WKND React应用程序的主视图是所有历险的列表，您可以根据诸�
    ...
    ```
 
-1. 还定义相应的渲染函数：
+1. 同時定義對應的轉譯器函式：
 
-   **LocationInfo**
+   **位置資訊**
 
    ```javascript
    function LocationInfo({name}) {
@@ -240,7 +240,7 @@ WKND React应用程序的主视图是所有历险的列表，您可以根据诸�
    }
    ```
 
-   **InstructorTeam**
+   **講師團隊**
 
    ```javascript
    function InstructorTeam({ _metadata }) {
@@ -282,9 +282,9 @@ WKND React应用程序的主视图是所有历险的列表，您可以根据诸�
    }
    ```
 
-### 定义新样式
+### 定義新樣式
 
-1. 打开 `src/components/AdventureDetail.scss` 添加以下类定义
+1. 開啟 `src/components/AdventureDetail.scss` 並新增下列類別定義
 
    ```CSS
    .adventure-detail-administrator,
@@ -303,22 +303,22 @@ WKND React应用程序的主视图是所有历险的列表，您可以根据诸�
 
 >[!TIP]
 >
->更新的文件位于 **AEM指南WKND - GraphQL** 项目，请参阅 [高级教程](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/advanced-tutorial) 中。
+>更新的檔案位於 **AEM Guides WKND - GraphQL** 專案，請參閱 [進階教學課程](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/advanced-tutorial) 區段。
 
 
-完成上述增强功能后，WKND应用程序如下所示，浏览器的开发人员工具显示 `adventure-details-by-slug` 持久查询调用。
+完成上述增強功能後，WKND應用程式如下所示，而瀏覽器的開發人員工具會顯示 `adventure-details-by-slug` 持久查詢呼叫。
 
-![增强的WKND应用程序](assets/client-application-integration/Enhanced-WKND-APP.gif)
+![增強型WKND應用程式](assets/client-application-integration/Enhanced-WKND-APP.gif)
 
-## 增强功能挑战（可选）
+## 增強功能挑戰（選購）
 
-WKND React应用程序的主视图允许您根据诸如之类的活动类型过滤这些冒险 _野营、骑自行车_. 但WKND业务团队希望 _位置_ 基于过滤功能。 要求包括
+WKND React應用程式的主要檢視可讓您根據活動型別篩選這些冒險活動，例如 _露營、騎腳踏車_. 不過WKND業務團隊想要額外的 _位置_ 篩選功能。 需求為
 
-* 在WKND应用程序的主视图中，左上角或右上角添加 _位置_ 过滤图标。
-* 单击 _位置_ 过滤图标应显示位置列表。
-* 从列表中单击所需位置选项应仅显示匹配的冒险。
-* 如果只有一个匹配的“冒险”，则会显示“冒险详细信息”视图。
+* 在WKND應用程式的主檢視上，在左上角或右上角新增 _位置_ 篩選圖示。
+* 按一下 _位置_ 篩選圖示應顯示位置清單。
+* 從清單中按一下所需的位置選項應只會顯示相符的「冒險」。
+* 如果只有一個相符的Adventure，則會顯示Adventure詳細資料檢視。
 
 ## 恭喜
 
-恭喜！现在，您已完成将持久查询集成并实施到示例WKND应用程序中。
+恭喜！您現在已完成整合，並將持續查詢實作到範例WKND應用程式中。

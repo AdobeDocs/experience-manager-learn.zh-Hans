@@ -1,6 +1,6 @@
 ---
-title: 了解资产共享共用的用户体验
-description: 有关功能和技术了解的材料资产共享共用
+title: 瞭解Asset Share Commons的使用者體驗
+description: 適用於功能和技術瞭解Assets Share Commons的材料
 version: 6.4, 6.5
 topic: Content Management
 role: User
@@ -14,23 +14,23 @@ ht-degree: 1%
 
 ---
 
-# 了解资产共享共用的用户体验{#understanding-asset-share-commons}
+# 瞭解Asset Share Commons的使用者體驗{#understanding-asset-share-commons}
 
-资产共享共用用户和创作体验简介。
+Asset Share Commons的使用者和撰寫體驗簡介。
 
-## 用户体验
+## 使用者體驗
 
 >[!VIDEO](https://video.tv.adobe.com/v/20497?quality=12&learn=on)
 
-该视频提供了资产共享共用用户体验的简略演练。 审核涉及“搜索”页面、“资产详细信息”页面的功能，以及一些操作（如下载、共享和添加到购物车）。
+影片提供Asset Share Commons的使用者體驗簡略逐步解說。 此檢閱會說明「搜尋」頁面、「資產詳細資訊」頁面的功能，以及「下載」、「共用」和「加入購物車」等多項動作。
 
-## 创作体验
+## 製作體驗
 
 >[!VIDEO](https://video.tv.adobe.com/v/20498?quality=12&learn=on)
 
-此视频简要概述了资产共享共用中的基本组件创作功能，以提供创作能力级别的感受。
+此影片提供Asset Share Commons中基本元件製作功能的簡短概觀，讓您瞭解製作能力的等級。
 
 ## 其他资源{#additional-resources}
 
-* [资产共享共用版本下载](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
-* [ACS AEM Commons 3.11.0+版本下载](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
+* [Asset Share Commons版本下載](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
+* [ACS AEM Commons 3.11.0+版本下載](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)

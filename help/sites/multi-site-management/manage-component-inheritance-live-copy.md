@@ -1,6 +1,6 @@
 ---
-title: 管理组件上的Live Copy继承
-description: 了解如何在组件级别管理Live Copy及其Blueprint之间的继承
+title: 管理元件的即時副本繼承
+description: 瞭解如何在元件層級管理即時副本與其Blueprint之間的繼承情形
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 ---
 
-# 管理组件上的Live Copy继承 {#manage-live-copy-component}
+# 管理元件的即時副本繼承 {#manage-live-copy-component}
 
-了解如何在组件级别管理Live Copy及其Blueprint之间的继承。
+瞭解如何在元件層級管理即時副本與其Blueprint之間的繼承情形。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36678?quality=12&learn=on)

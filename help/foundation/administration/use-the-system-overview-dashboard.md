@@ -1,35 +1,35 @@
 ---
-title: 在AEM中使用“系统概述”功能板
-description: 在以前的版本中，AEM管理员需要查看多个位置，才能全面了解AEM实例。 “系统概述”旨在通过从单个功能板提供AEM实例的配置、硬件和运行状况的高级视图来解决此问题。
+title: 使用AEM中的系統概觀儀表板
+description: 在舊版AEM中，管理員需要檢視多個位置，才能完整瞭解AEM執行個體。 「系統概覽」旨在透過單一儀表板提供AEM執行個體的設定、硬體和健康情況的高層級檢視，以解決此問題。
 version: 6.4, 6.5
 topics: administration, operations, monitoring
 activity: use
 audience: administrator, architect, developer, implementer
 doc-type: technical video
 contentOwner: dgordon
-topic: 管理
+topic: Administration
 role: Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: af8f499c-4955-44b5-8f21-085263ca31a3
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
+# 使用系統概觀儀表板
 
-# 使用系统概述功能板
-
-Adobe Experience Manager(AEM)[!UICONTROL 系统概述]从单个功能板提供AEM实例的配置、硬件和运行状况的高级视图。
+Adobe Experience Manager (AEM) [!UICONTROL 系統概觀] 從單一儀表板提供AEM執行個體的組態、硬體及健康情況的高層級檢視。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
-1. 系统概述可从以下位置访问：**AEM开始** > **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 系统概述]**
+1. 系統概觀可從下列位置存取： **AEM開始** > **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 系統概觀]**
 
-   直接在&#x200B;**`<server-host>/libs/granite/operations/content/systemoverview.html`**
+   直接在 **`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
-1. 单击[!UICONTROL Download]按钮可导出[!UICONTROL System Overview]中的信息。 此外，还可通过以下[!DNL REST]端点公开该信息：
-1. 以下是从[!UICONTROL System Overview]导出的JSON输出示例：
+1. 資訊來自 [!UICONTROL 系統概觀] 可透過按一下 [!UICONTROL 下載] 按鈕。 此資訊也會透過下列方式公開 [!DNL REST] 端點：
+1. 以下是從匯出的JSON輸出範例 [!UICONTROL 系統概觀]：
 
    ```json
    {

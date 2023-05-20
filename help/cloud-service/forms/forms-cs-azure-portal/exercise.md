@@ -1,6 +1,6 @@
 ---
-title: 简单练习以测试您对课程的理解
-description: 向表中添加额外的列，向搜索条件添加额外属性
+title: 測試您對課程的理解的簡單練習
+description: 新增額外欄至表格，新增額外屬性至搜尋條件
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ---
 
-# 测试您的理解
+# 測試您的理解
 
-增强此视频中显示的用例
+增強使用案例，如本影片所示
 
 >[!VIDEO](https://video.tv.adobe.com/v/335800?quality=12&learn=on)
 

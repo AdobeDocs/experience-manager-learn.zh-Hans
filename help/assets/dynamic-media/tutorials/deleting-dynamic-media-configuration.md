@@ -1,6 +1,6 @@
 ---
-title: 删除AEM Dynamic Media配置
-description: 从AEM Assets中删除AEM Dynamic Media配置的步骤。
+title: 刪除AEM Dynamic Media設定
+description: 從AEM Assets刪除AEM Dynamic Media設定的步驟。
 role: Developer
 level: Intermediate
 version: Cloud Service
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 删除AEM Dynamic Media配置
+# 刪除AEM Dynamic Media設定
 
-此视频将演示删除AEM Dynamic Media配置的步骤。
+本影片逐步解說刪除AEM Dynamic Media設定的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335363?quality=12&learn=on)

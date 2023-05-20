@@ -1,6 +1,6 @@
 ---
 title: 版本
-description: 了解AEM如何创建和维护资产版本。
+description: 探索AEM如何建立和維護資產版本。
 feature: Asset Management
 version: Cloud Service
 kt: 4671
@@ -19,6 +19,6 @@ ht-degree: 11%
 
 # 版本
 
-了解AEM如何创建和维护资产版本。
+探索AEM如何建立和維護資產版本。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32052?quality=12&learn=on)

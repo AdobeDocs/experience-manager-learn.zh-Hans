@@ -1,6 +1,6 @@
 ---
-title: 在AEM Dynamic Media中创建智能裁剪图像配置文件
-description: 在Dynamic Media中配置智能裁剪
+title: 在AEM Dynamic Media中建立智慧型裁切影像設定檔
+description: 在Dynamic Media中設定智慧型裁切
 version: Cloud Service
 role: Developer
 level: Intermediate
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Dynamic Media中创建智能裁剪图像配置文件
+# 在AEM Dynamic Media中建立智慧型裁切影像設定檔
 
-此视频将逐步介绍如何在AEM Dynamic Media中创建智能裁剪图像配置文件。
+本影片逐步說明在AEM Dynamic Media中建立智慧型裁切影像設定檔的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335460?quality=12&learn=on)

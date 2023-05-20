@@ -1,6 +1,6 @@
 ---
-title: Adobe资产链接面板概述
-description: Adobe资产链接使创意用户能够使用InDesign、Photoshop和Illustrator中的应用程序内面板浏览、搜索、签出和签入AEM Assets中存储的资产。 介绍AdobeAsset Link面板的UI及其功能。
+title: AdobeAsset Link面板概述
+description: Adobe Asset Link讓創意使用者能夠使用InDesign、Photoshop和Illustrator中的應用程式內面板，來瀏覽、搜尋、簽出和簽入AEM Assets中儲存的資產。 介紹AdobeAsset Link面板的UI及其功能。
 sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: Cloud Service
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# Adobe资产链接面板概述 {#adobe-asset-link-panel-overview}
+# AdobeAsset Link面板概述 {#adobe-asset-link-panel-overview}
 
-Adobe资产链接使创意用户能够使用InDesign、Photoshop和Illustrator中的应用程序内面板浏览、搜索、签出和签入AEM Assets中存储的资产。 介绍AdobeAsset Link面板的UI及其功能。
+Adobe Asset Link讓創意使用者能夠使用InDesign、Photoshop和Illustrator中的應用程式內面板，來瀏覽、搜尋、簽出和簽入AEM Assets中儲存的資產。 介紹AdobeAsset Link面板的UI及其功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33734?quality=12&learn=on)

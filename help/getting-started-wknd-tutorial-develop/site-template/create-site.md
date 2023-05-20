@@ -1,6 +1,6 @@
 ---
-title: 创建网站 | AEM快速网站创建
-description: 了解如何使用站点创建向导生成新网站。 由Adobe提供的标准网站模板是新网站的起点。
+title: 建立網站 | AEM快速網站建立
+description: 瞭解如何使用網站建立精靈來產生新網站。 Adobe提供的標準網站範本是新網站的起點。
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -18,123 +18,123 @@ ht-degree: 1%
 
 ---
 
-# 创建网站 {#create-site}
+# 建立網站 {#create-site}
 
-在“快速创建网站”中，可使用AEM Adobe Experience Manager中的“网站创建向导”来生成新网站。 由Adobe提供的标准网站模板用作新网站的起点。
+在「快速網站建立」過程中，請使用Adobe Experience Manager中的「網站建立精靈」 AEM來產生新網站。 Adobe提供的標準網站範本是作為新網站的起點。
 
 ## 前提条件 {#prerequisites}
 
-本章中的步骤将在Adobe Experience Manager as a Cloud Service环境中进行。 确保您拥有AEM环境的管理访问权限。 建议使用 [沙盒项目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) 和 [开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) 完成本教程时。
+本章中的步驟將在Adobe Experience Manager as a Cloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 建議使用 [沙箱計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) 和 [開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) 完成本教學課程時。
 
-查看 [入门文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html) 以了解更多详细信息。
+檢閱 [入門檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html) 以取得更多詳細資料。
 
 ## 目标 {#objective}
 
-1. 了解如何使用站点创建向导生成新站点。
-1. 了解网站模板的角色。
-1. 浏览生成的AEM网站。
+1. 瞭解如何使用網站建立精靈來產生新網站。
+1. 瞭解網站範本的作用。
+1. 探索產生的AEM網站。
 
-## 登录Adobe Experience Manager作者 {#author}
+## 登入Adobe Experience Manager Author {#author}
 
-首先，登录到AEMas a Cloud Service环境。 AEM环境在 **创作服务** 和 **发布服务**.
+首先，請登入您的AEMas a Cloud Service環境。 AEM環境分為 **作者服務** 和 **發佈服務**.
 
-* **创作服务**  — 创建、管理和更新网站内容的位置。 通常，只有内部用户才有权访问 **创作服务** 和位于登录屏幕后面。
-* **发布服务**  — 托管实时网站。 这是最终用户将看到并且通常公开提供的服务。
+* **作者服務**  — 建立、管理和更新網站內容的地方。 通常只有內部使用者才能存取 **作者服務** 和位於登入畫面後面。
+* **發佈服務**  — 託管已上線的網站。 這是一般使用者會看到且通常可公開使用的服務。
 
-大部分教程将使用 **创作服务**.
+大部分的教學課程將會使用 **作者服務**.
 
-1. 导航到Adobe Experience Cloud [https://experience.adobe.com/](https://experience.adobe.com/). 使用您的个人帐户或公司/学校帐户登录。
-1. 确保在菜单中选择了正确的组织，然后单击 **Experience Manager**.
+1. 導覽至Adobe Experience Cloud [https://experience.adobe.com/](https://experience.adobe.com/). 使用您的個人帳戶或公司/學校帳戶登入。
+1. 確定在選單中選取正確的「組織」，然後按一下 **Experience Manager**.
 
-   ![Experience Cloud主页](assets/create-site/experience-cloud-home-screen.png)
+   ![Experience Cloud首頁](assets/create-site/experience-cloud-home-screen.png)
 
-1. 在 **Cloud Manager** 单击 **Launch**.
-1. 将鼠标悬停在要使用的程序上，然后单击 **Cloud Manager计划** 图标。
+1. 下 **Cloud Manager** 按一下 **Launch**.
+1. 將滑鼠停留在您要使用的程式上，然後按一下 **Cloud Manager計畫** 圖示。
 
-   ![Cloud Manager项目图标](assets/create-site/cloud-manager-program-icon.png)
+   ![Cloud Manager計畫圖示](assets/create-site/cloud-manager-program-icon.png)
 
-1. 在顶部菜单中，单击 **环境** 查看已配置的环境。
+1. 在頂端功能表中，按一下 **環境** 以檢視布建的環境。
 
-1. 查找要使用的环境，然后单击 **创作URL**.
+1. 找到您要使用的環境，然後按一下 **作者URL**.
 
-   ![访问开发人员作者](assets/create-site/access-dev-environment.png)
+   ![存取開發作者](assets/create-site/access-dev-environment.png)
 
    >[!NOTE]
    >
-   >建议使用 **开发** 环境。
+   >建議使用 **開發** 本教學課程的環境。
 
-1. 随即会向AEM启动新选项卡 **创作服务**. 单击 **使用Adobe登录** 并且您应使用相同的Experience Cloud凭据自动登录。
+1. 新索引標籤會啟動至AEM **作者服務**. 按一下 **使用Adobe登入** 而且您應使用相同的Experience Cloud憑證自動登入。
 
-1. 经过重定向和身份验证后，您现在应会看到AEM开始屏幕。
+1. 在重新導向並驗證之後，您現在應該會看到AEM開始畫面。
 
-   ![AEM开始屏幕](assets/create-site/aem-start-screen.png)
+   ![AEM開始畫面](assets/create-site/aem-start-screen.png)
 
 >[!NOTE]
 >
-> 访问Experience Manager时遇到问题？ 查看 [入门文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
+> 存取Experience Manager時發生問題？ 檢閱 [入門檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
 
-## 下载基本网站模板
+## 下載基本網站範本
 
-网站模板为新网站提供了起点。 网站模板包括一些基本主题、页面模板、配置和示例内容。 网站模板中包含的具体内容取决于开发人员。 Adobe提供 **基本网站模板** 以加快新实施。
+網站範本提供新網站的起點。 網站範本包含一些基本主題、頁面範本、設定和範例內容。 網站範本中確切包含的內容由開發人員決定。 Adobe提供 **基本網站範本** 加速新實作。
 
-1. 打开新的浏览器选项卡，然后导航到GitHub上的“基本站点模板”项目： [https://github.com/adobe/aem-site-template-standard](https://github.com/adobe/aem-site-template-standard). 该项目是开放源的，并且许可供任何人使用。
-1. 单击 **版本** 并导航到 [最新版本](https://github.com/adobe/aem-site-template-standard/releases/latest).
-1. 展开 **资产** 下拉菜单并下载模板zip文件：
+1. 開啟新的瀏覽器索引標籤，並導覽至GitHub上的基本網站範本專案： [https://github.com/adobe/aem-site-template-standard](https://github.com/adobe/aem-site-template-standard). 此專案是開放原始碼並授權任何人使用。
+1. 按一下 **發行版本** 並導覽至 [最新版本](https://github.com/adobe/aem-site-template-standard/releases/latest).
+1. 展開 **資產** 下拉式清單並下載範本zip檔案：
 
-   ![基本网站模板Zip](assets/create-site/template-basic-zip-file.png)
+   ![基本網站範本Zip](assets/create-site/template-basic-zip-file.png)
 
-   下一个练习中将使用此zip文件。
-
-   >[!NOTE]
-   >
-   > 本教程是使用版本编写的 **1.1.0** “基本网站”模板的“页面查看次数”。 启动新项目以供生产使用时，始终建议使用最新版本。
-
-## 创建新站点
-
-接下来，使用上一个练习中的“网站模板”生成一个新网站。
-
-1. 返回AEM环境。 从AEM开始屏幕中，导航到 **站点**.
-1. 在右上角，单击 **创建** > **网站（模板）**. 这将显示 **创建站点向导**.
-1. 在 **选择网站模板** 单击 **导入** 按钮。
-
-   上传 **.zip** 模板文件。
-
-1. 选择 **基本AEM网站模板** 单击 **下一个**.
-
-   ![选择网站模板](assets/create-site/select-site-template.png)
-
-1. 在 **网站详细信息** > **网站标题** enter `WKND Site`.
-
-   在真实实施中，“WKND Site”将被公司或组织的品牌名称替换。 在本教程中，我们将模拟创建一个网站，以打造一个虚幻的生活方式品牌“WKND”。
-
-1. 在 **网站名称** enter `wknd`.
-
-   ![网站模板详细信息](assets/create-site/site-template-details.png)
+   此zip檔案用於下一個練習。
 
    >[!NOTE]
    >
-   > 如果使用共享AEM环境，请将唯一标识符附加到 **网站名称**. 例如 `wknd-site-johndoe`. 这将确保多个用户可以完成同一教程，而不会出现任何冲突。
+   > 本教學課程使用版本編寫 **1.1.0** 基本網站範本的URL。 啟動新專案以供生產使用時，一律建議使用最新版本。
 
-1. 单击 **创建** 以生成网站。 单击 **完成** 在 **成功** 对话框。
+## 建立新網站
 
-## 浏览新站点
+接下來，使用上一個練習中的「網站範本」產生新網站。
 
-1. 导航到AEM Sites控制台（如果尚未导航）。
-1. 新 **WKND站点** 已生成。 它将包括具有多语言层次结构的站点结构。
-1. 打开 **英语** > **主页** 页面，方法是选择页面并单击 **编辑** 按钮：
+1. 返回AEM環境。 從AEM開始畫面瀏覽至 **網站**.
+1. 在右上角按一下 **建立** > **網站（範本）**. 這會顯示 **建立網站精靈**.
+1. 下 **選取網站範本** 按一下 **匯入** 按鈕。
 
-   ![WKND站点层次结构](assets/create-site/wknd-site-starter-hierarchy.png)
+   上傳 **.zip** 從上一個練習下載的範本檔案。
 
-1. 已创建起始内容，可向页面添加多个组件。 试用这些组件，了解功能。 您将在下一章中学习组件的基础知识。
+1. 選取 **基本AEM網站範本** 並按一下 **下一個**.
 
-   ![开始主页](assets/create-site/start-home-page.png)
+   ![選取網站範本](assets/create-site/select-site-template.png)
 
-   *网站模板提供的示例内容*
+1. 下 **網站詳細資料** > **網站標題** 輸入 `WKND Site`.
+
+   在真實世界的實作中，「WKND網站」將由您公司或組織的品牌名稱取代。 在本教學課程中，我們將模擬為虛擬生活風格品牌「WKND」建立網站。
+
+1. 下 **網站名稱** 輸入 `wknd`.
+
+   ![網站範本詳細資料](assets/create-site/site-template-details.png)
+
+   >[!NOTE]
+   >
+   > 如果使用共用AEM環境，請將唯一識別碼附加至 **網站名稱**. 例如 `wknd-site-johndoe`. 這將確保多位使用者可以完成相同的教學課程，而不會發生衝突。
+
+1. 按一下 **建立** 以產生「網站」。 按一下 **完成** 在 **成功** AEM對話方塊。
+
+## 探索新網站
+
+1. 導覽至AEM Sites主控台（如果尚未導覽）。
+1. 新 **WKND網站** 「 」已產生。 它將包含具有多語言階層的網站結構。
+1. 開啟 **英文** > **首頁** 頁面，方法是選取頁面並按一下 **編輯** 功能表列中的按鈕：
+
+   ![WKND網站階層](assets/create-site/wknd-site-starter-hierarchy.png)
+
+1. 已建立入門內容，且有數個元件可新增至頁面。 嘗試使用這些元件，瞭解其功能。 您將在下一章中學習元件的基本知識。
+
+   ![開始首頁](assets/create-site/start-home-page.png)
+
+   *網站範本提供的範例內容*
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您刚刚创建了第一个AEM网站！
+恭喜，您剛才已建立您的第一個AEM網站！
 
 ### 后续步骤 {#next-steps}
 
-在AEM的Adobe Experience Manager中使用页面编辑器，更新网站的 [创作内容和发布](author-content-publish.md) 章节。 了解如何配置原子组件以更新内容。 了解AEM创作和发布环境之间的差异，并了解如何将更新发布到实时站点。
+使用Adobe Experience Manager、AEM中的頁面編輯器，在中更新網站內容 [製作內容與發佈](author-content-publish.md) 章節。 瞭解如何設定atomic Components以更新內容。 瞭解AEM作者和發佈環境之間的差異，並瞭解如何將更新發佈到即時網站。

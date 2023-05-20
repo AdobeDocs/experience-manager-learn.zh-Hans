@@ -1,6 +1,6 @@
 ---
-title: Workfront自定义表单与Workfront for AEM enhanced connector的元数据映射
-description: 了解如何配置Workfront和AEM Assets，以使用Workfront自定义表单和AEM元数据架构来管理和同步资产元数据。
+title: 使用Workfront for AEM增強型聯結器的Workfront自訂表單和中繼資料對應
+description: 瞭解如何設定Workfront和AEM Assets，以使用Workfront自訂表單和AEM中繼資料結構描述來管理和同步資產中繼資料。
 version: Cloud Service
 topic: Content Management, Integrations
 role: Admin, Architect, Developer
@@ -16,12 +16,12 @@ ht-degree: 0%
 
 ---
 
-# Workfront自定义表单和元数据映射
+# Workfront自訂表單和中繼資料對應
 
-![AEM专家系列](./assets/banner.png)
+![AEM Experts系列](./assets/banner.png)
 
-了解如何配置Workfront和AEM Assets，以使用Workfront自定义表单和AEM元数据架构来管理和同步资产元数据。
+瞭解如何設定Workfront和AEM Assets，以使用Workfront自訂表單和AEM中繼資料結構描述來管理和同步資產中繼資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340332?quality=12&learn=on)
 
-_a的第二部分 [关于Workfront for Experience Manager增强连接器的四部分专家系列](./overview.md)_
+_a的第二部分 [Workfront for Experience Manager增強型聯結器的四部分專家系列](./overview.md)_

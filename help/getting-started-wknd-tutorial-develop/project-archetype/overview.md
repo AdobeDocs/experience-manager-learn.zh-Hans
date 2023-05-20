@@ -1,6 +1,6 @@
 ---
-title: AEM Sites入门 — 项目原型
-description: AEM Sites入门 — 项目原型。 WKND教程是一个多部分教程，专为不熟悉Adobe Experience Manager的开发人员而设计。 本教程将指导您实施一个AEM网站，以打造一个虚构的生活方式品牌WKND。 本教程涵盖基本主题，如项目设置、Maven原型、核心组件、可编辑模板、客户端库和组件开发。
+title: AEM Sites — 專案原型快速入門
+description: AEM Sites — 專案原型快速入門。 WKND教學課程是多部分教學課程，專為Adobe Experience Manager的新手開發人員設計。 此教學課程會逐步引導您為虛擬生活風格品牌WKND實作AEM網站。 此教學課程涵蓋專案設定、maven原型、核心元件、可編輯範本、使用者端程式庫和元件開發等基本主題。
 version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
@@ -14,58 +14,58 @@ recommendations: disable
 source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 18%
+ht-degree: 20%
 
 ---
 
-# AEM Sites入门 — 项目原型 {#project-archetype}
+# AEM Sites — 專案原型快速入門 {#project-archetype}
 
-欢迎参加为初次使用Adobe Experience Manager(AEM)的开发人员而设计的多部分教程。 本教程介绍了虚拟生活方式品牌 WKND 的 AEM 站点的实现。 
+歡迎使用專為Adobe Experience Manager (AEM)的新手開發人員設計的多部分教學課程。 本教程介绍了虚拟生活方式品牌 WKND 的 AEM 站点的实现。 
 
-本教程首先使用 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 以生成新项目。
+本教學課程從使用開始 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 以產生新專案。
 
-本教程旨在与 **AEMas a Cloud Service** 并且向后兼容 **AEM 6.5.14+**. 站点的实施方式如下：
+本教學課程的設計用途為 **AEMas a Cloud Service** 並且向後相容於 **AEM 6.5.14+**. 使用下列專案實作網站：
 
-* [Maven AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Maven AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 * [可编辑模板](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hans)
 * [样式系统](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
-*估计需要1-2小时才能完成教程的每个部分。*
+*預計約需1-2小時完成教學課程的每個部分。*
 
-## 本地开发环境 {#local-dev-environment}
+## 本機開發環境 {#local-dev-environment}
 
-要完成本教程，需要本地开发环境。 使用在macOS环境中运行的AEMas a Cloud ServiceSDK捕获屏幕截图和视频，该SDK [Visual Studio代码](https://code.visualstudio.com/) 作为IDE。 除非另有说明，否则命令和代码应独立于本地操作系统。
+本機開發環境是完成本教學課程的必要條件。 熒幕截圖和影片都是使用在macOS環境中執行的AEMas a Cloud ServiceSDK擷取，並具有 [Visual Studio Code](https://code.visualstudio.com/) 作為IDE。 除非另有說明，否則命令和程式碼應獨立於本機作業系統。
 
-### 所需软件
+### 必要的軟體
 
-应在本地安装以下内容：
+下列專案應在本機安裝：
 
-* [本地AEM **作者** 实例](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK或6.5.14+)
+* [本機AEM **作者** 例項](https://experience.adobe.com/#/downloads) (Cloud Service SDK或6.5.14+)
 * [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
-* [阿帕奇·马文](https://maven.apache.org/) （3.3.9或更高版本）
-* [Node.js](https://nodejs.org/en/) （LTS — 长期支持）
+* [Apache Maven](https://maven.apache.org/) （3.3.9或更新版本）
+* [Node.js](https://nodejs.org/en/) （LTS — 長期支援）
 * [npm 6+](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
-* [Visual Studio代码](https://code.visualstudio.com/) 或等效的IDE
-   * [VSCode AEM同步](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  — 在整个教程中使用的工具
+* [Visual Studio Code](https://code.visualstudio.com/) 或同等的IDE
+   * [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  — 教學課程中使用的工具
 
 >[!NOTE]
 >
-> **是AEMas a Cloud Service的新用户？** 查看 [以下使用AEMas a Cloud Service SDK设置本地开发环境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).
+> **不熟悉AEMas a Cloud Service？** 檢視 [以下是使用AEMas a Cloud ServiceSDK設定本機開發環境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).
 >
-> **AEM 6.5的新增功能？** 查看 [设置本地开发环境的以下指南](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans).
+> **AEM 6.5的新手嗎？** 檢視 [遵循指南以設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans).
 
 ## GitHub {#github}
 
-可在GitHub上的AEM Guide存储库中找到本教程中的代码：
+本教學課程的程式碼可在AEM Guide存放庫的GitHub上找到：
 
-**[GitHub:WKND Sites项目](https://github.com/adobe/aem-guides-wknd)**
+**[GitHub： WKND網站專案](https://github.com/adobe/aem-guides-wknd)**
 
-此外，本教程的每个部分在GitHub中都有其自己的分支。 用户只需签出与上一部分对应的分支，即可随时开始教程。
+此外，教學課程的每一部分在GitHub中都有各自的分支。 使用者只需出庫與上一個零件對應的分支即可隨時開始進行教學課程。
 
 ## 后续步骤 {#next-steps}
 
-你在等什么？ 通过导航到 [项目设置](project-setup.md) 章节和了解如何使用AEM项目原型生成新的Adobe Experience Manager项目。
+您還在等什麼？ 導覽至「 」，開始進行教學課程 [專案設定](project-setup.md) 章節，並瞭解如何使用AEM專案原型產生新的Adobe Experience Manager專案。

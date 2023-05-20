@@ -1,6 +1,6 @@
 ---
 title: GraphQL 持久查询
-description: 了解如何在AEM中启用、创建、更新和执行持久查询。
+description: 瞭解如何在AEM中啟用、建立、更新及執行持續查詢。
 version: Cloud Service
 topic: Headless, Content Management
 feature: GraphQL API
@@ -19,12 +19,12 @@ ht-degree: 10%
 
 # GraphQL 持久查询
 
-了解如何在AEM中启用、创建、更新和执行持久查询。
+瞭解如何在AEM中啟用、建立、更新及執行持續查詢。
 
-在此视频中，您将：
+在本影片中，您將：
 
-+ 了解如何启用GraphQL持久化查询
-+ 了解如何创建、更新和执行GraphQL查询
-+ 了解持久查询对客户端查询的好处
++ 瞭解如何啟用GraphQL持續查詢
++ 瞭解如何建立、更新和執行GraphQL查詢
++ 瞭解在使用者端查詢上持續查詢的好處
 
 >[!VIDEO](https://video.tv.adobe.com/v/333429?quality=12&learn=on)

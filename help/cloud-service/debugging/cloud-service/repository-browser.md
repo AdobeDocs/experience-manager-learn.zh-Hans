@@ -1,6 +1,6 @@
 ---
-title: 使用存储库浏览器调试AEM
-description: 存储库浏览器是一款功能强大的工具，可显示AEM基础数据存储，从而轻松调试AEMas a Cloud Service环境。
+title: 使用存放庫瀏覽器偵錯AEM
+description: 存放庫瀏覽器是功能強大的工具，可提供AEM基礎資料存放區的可見度，允許輕鬆偵錯AEMas a Cloud Service環境。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -20,31 +20,31 @@ ht-degree: 0%
 
 ---
 
-# 使用存储库浏览器调试AEMas a Cloud Service
+# 使用存放庫瀏覽器偵錯AEMas a Cloud Service
 
-存储库浏览器是一款功能强大的工具，可显示AEM基础数据存储，从而轻松调试AEMas a Cloud Service环境。 存储库浏览器支持在生产、暂存和开发以及创作、发布和预览服务中以只读方式查看AEM的资源和属性。
+存放庫瀏覽器是功能強大的工具，可提供AEM基礎資料存放區的可見度，允許輕鬆偵錯AEMas a Cloud Service環境。 存放庫瀏覽器支援生產、暫存和開發以及作者、發佈和預覽服務上AEM的資源和屬性的唯讀檢視。
 
 >[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
 
-存储库浏览器是 __仅__ 可在AEMas a Cloud Service环境中使用(使用 [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite) 调试本地AEM SDK)。
+存放庫瀏覽器是 __僅限__ 可在AEMas a Cloud Service環境中取得(使用 [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite) 以偵錯本機AEM SDK)。
 
-## 访问存储库浏览器
+## 存取存放庫瀏覽器
 
-要在AEMas a Cloud Service上访问存储库浏览器，请执行以下操作：
+若要存取AEMas a Cloud Service上的存放庫瀏覽器：
 
-1. 确保您的用户已 [所需访问权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#access-prerequisites)
-1. 登录到 [Cloud Manager](https://my.cloudmanager.adobe.com)
-1. 选择包含要调试的AEMas a Cloud Service环境的程序
-1. 打开 [开发人员控制台](./developer-console.md) 对应于要调试的AEMas a Cloud Service环境
-1. 选择 __存储库浏览器__ 选项卡
-1. 选择要浏览的AEM服务层
+1. 確保您的使用者擁有 [必要的存取權](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#access-prerequisites)
+1. 登入 [Cloud Manager](https://my.cloudmanager.adobe.com)
+1. 選取包含AEMas a Cloud Service環境的程式以進行偵錯
+1. 開啟 [開發人員主控台](./developer-console.md) 與要偵錯的AEMas a Cloud Service環境相對應
+1. 選取 __存放庫瀏覽器__ 標籤
+1. 選取要瀏覽的AEM服務層
    + 所有作者
-   + 所有发布者
-   + 所有预览
-1. 选择 __打开存储库浏览器__
+   + 所有發行者
+   + 所有預覽
+1. 選取 __開啟存放庫瀏覽器__
 
-以只读模式打开选定服务层（创作、发布或预览）的存储库浏览器，显示用户有权访问的资源和属性。
+「存放庫瀏覽器」會以唯讀模式為選取的服務層（製作、發佈或預覽）開啟，顯示您的使用者有權存取的資源與屬性。
 
-## 发布和预览访问权限
+## 發佈和預覽存取權
 
-默认情况下，对“发布”或“预览”的访问权限会受到限制，从而会减少存储库浏览器中的可用资源。 [要在“发布”（或“预览”）中查看所有资源，请将用户添加到“发布”（或“预览”）“管理员”角色。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)
+預設情況下，對發佈或預覽的存取是有限的，減少了存放庫瀏覽器中的可用資源。 [若要檢視發佈（或預覽）上的所有資源，請將使用者新增至發佈（或預覽）管理員角色。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)

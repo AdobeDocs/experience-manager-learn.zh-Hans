@@ -1,6 +1,6 @@
 ---
-title: 从MySQL数据库存储和检索表单数据
-description: 多部分教程，指导您完成存储和检索表单数据时涉及的步骤
+title: 儲存和擷取MySQL資料庫的表單資料
+description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 ---
 
-# 创建OSGi服务以获取数据
+# 建立OSGi服務以擷取資料
 
-写入以下代码以存储和获取存储的自适应表单数据。 简单查询用于获取与给定GUID关联的自适应表单数据。 然后，获取的数据将返回到调用应用程序。 此代码会引用在前一步骤中创建的相同数据源
+下列程式碼是用來儲存及擷取儲存的最適化表單資料。 系統會使用簡單查詢來擷取與指定GUID相關聯的最適化表單資料。 然後，擷取的資料會傳回至呼叫應用程式。 此程式碼會參照先前步驟中建立的相同資料來源
 
 
 ```java
@@ -154,7 +154,7 @@ public class FetchFormData implements com.aemforms.saveandcontinue.core.FetchSto
 
 ## 接口
 
-下面是使用的接口声明
+以下是使用的介面宣告
 
 ```java
 package com.aemforms.saveandcontinue.core;

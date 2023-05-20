@@ -1,6 +1,6 @@
 ---
-title: 将选定的新闻稿合并到一个文件中
-description: 使用汇编程序服务组合选定的新闻稿
+title: 將所選電子報合併為一個檔案
+description: 使用組合器服務合併所選電子報
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -15,14 +15,14 @@ ht-degree: 1%
 
 ---
 
-# 将选定的新闻稿合并到一个pdf中
+# 將所選電子報合併為一個pdf
 
-用户的选择存储在隐藏字段中。 此隐藏字段的值将传递到Servlet，Servlet将使用将所做的选择合并到一个PDF中 [Forms汇编程序服务](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
+使用者的選擇儲存在隱藏欄位中。 此隱藏欄位的值會傳遞到servlet，它會使用將選取專案合併為一個pdf [Forms組合器服務](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
 
 
-## 用于组合PDF文件的Servlet
+## 用於組合pdf檔案的Servlet
 
-以下代码用于组合选定的新闻稿。 该代码根据用户的选择创建文档映射。 从此映射中创建DDX，该DDX连同文档映射一起被传递到汇编程序服务的调用方法，以获得组合的文档。 组装的PDF存储在存储库中，其路径返回到调用应用程序。
+下列程式碼會組合所選電子報。 程式碼會根據使用者的選擇建立檔案地圖。 從此對應建立DDX，此DDX與檔案對應會傳遞至Assembler服務的叫用方法，以取得合併檔案。 組合後的pdf會儲存在儲存庫中，其路徑會傳回至呼叫的應用程式。
 
 ```java
 protected void doPost(SlingHttpServletRequest request,SlingHttpServletResponse response)
@@ -78,9 +78,9 @@ protected void doPost(SlingHttpServletRequest request,SlingHttpServletResponse r
    }
 ```
 
-## 实用程序函数
+## 公用程式函式
 
-在组装新闻稿时使用了以下实用程序函数。 这些实用工具函数从文档映射创建DDX，并将org.w3c.dom.Document转换为AEMFD文档对象。
+組裝電子報時使用了下列公用程式函式。 這些公用程式函式會從檔案對應建立DDX，並將org.w3c.dom.Document轉換為AEMFD檔案物件。
 
 
 ```java
@@ -144,4 +144,4 @@ public Document orgw3cDocumentToAEMFDDocument( org.w3c.dom.Document xmlDocument)
 
 ## 后续步骤
 
-[在您的系统上部署示例资产](./deploy-on-your-system.md)
+[在您的系統上部署範例資產](./deploy-on-your-system.md)

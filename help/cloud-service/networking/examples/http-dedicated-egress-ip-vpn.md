@@ -1,6 +1,6 @@
 ---
-title: 用于专用出口IP地址和VPN的HTTP/HTTPS连接
-description: 了解如何为专用出口IP地址和VPN运行从AEMas a Cloud Service到外部Web服务的HTTP/HTTPS请求
+title: 專用輸出IP位址和VPN的HTTP/HTTPS連線
+description: 瞭解如何讓專用輸出IP位址和VPN執行的外部Web服務從AEMas a Cloud Service發出HTTP/HTTPS請求
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -16,30 +16,30 @@ ht-degree: 0%
 
 ---
 
-# 用于专用出口IP地址和VPN的HTTP/HTTPS连接
+# 專用輸出IP位址和VPN的HTTP/HTTPS連線
 
-使用专用出口IP地址或VPN，HTTP/HTTPS连接会自动从AEMas a Cloud Service中代理，它们不需要任何特殊 `portForwards` 规则。
+HTTP/HTTPS連線會自動使用專用輸出IP位址或VPN從AEMas a Cloud Service代理，並且不需要任何特殊的 `portForwards` 規則。
 
-## 高级网络支持
+## 進階網路支援
 
-以下高级网络选项支持以下代码示例。
+下列進階網路選項支援下列程式碼範例。
 
-确保 [专用出口IP地址或VPN](../advanced-networking.md#advanced-networking) 在完成本教程之前，已设置高级网络配置。
+確保 [專用輸出IP位址或VPN](../advanced-networking.md#advanced-networking) 在執行本教學課程之前，已設定進階網路設定。
 
-| 无高级网络 | [灵活的端口出口](../flexible-port-egress.md) | [专用出口IP地址](../dedicated-egress-ip-address.md) | [虚拟专用网](../vpn.md) |
+| 無進階網路 | [彈性的連線埠輸出](../flexible-port-egress.md) | [專用輸出IP位址](../dedicated-egress-ip-address.md) | [虛擬私人網路](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✘ | ✔ | ✔ |
 
 >[!CAUTION]
 >
-> 此代码示例仅适用于 [专用出口IP地址](../dedicated-egress-ip-address.md) 和 [VPN](../vpn.md). 有一个相似但不同的代码示例可供使用 [非标准端口上的HTTP/HTTPS连接用于灵活端口出口](./http-on-non-standard-ports-flexible-port-egress.md).
+> 此程式碼範例僅適用於 [專用輸出IP位址](../dedicated-egress-ip-address.md) 和 [VPN](../vpn.md). 相似但不同的程式碼範例適用於 [非標準連線埠上的HTTP/HTTPS連線，用於彈性連線埠輸出](./http-on-non-standard-ports-flexible-port-egress.md).
 
-## 代码示例
+## 程式碼範例
 
-此Java™代码示例是OSGi服务的一个示例，该服务可以在AEMas a Cloud Service中运行，该服务在8080上与外部Web服务器进行HTTP连接。 HTTPS（或HTTP）连接会自动从AEMas a Cloud Service中代理，无需进行特殊开发。
+此Java™程式碼範例屬於可在AEMas a Cloud Service中執行的OSGi服務，該服務會建立8080上外部Web伺服器的HTTP連線。 HTTPS （或HTTP）連線會自動從AEMas a Cloud Service代理出來，不需要特別開發。
 
 >[!NOTE]
-> 建议使用 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) 用于从AEM发起HTTP/HTTPS调用。
+> 建議使用 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) 用於從AEM進行HTTP/HTTPS呼叫。
 
 + `core/src/com/adobe/aem/wknd/examples/connections/impl/HttpExternalServiceImpl.java`
 

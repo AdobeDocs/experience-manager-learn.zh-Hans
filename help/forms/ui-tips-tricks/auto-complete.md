@@ -1,6 +1,6 @@
 ---
-title: AEM Forms中的自动完成功能
-description: 利用搜索和筛选，用户可在键入值时从预填充的值列表中快速查找和选择值。
+title: AEM Forms中的自動完成功能
+description: 可讓使用者利用搜尋和篩選功能，在輸入時快速尋找並選取預先填入的值清單。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.5
@@ -9,27 +9,28 @@ role: Developer
 level: Beginner
 kt: 11374
 last-substantial-update: 2022-11-01T00:00:00Z
-source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
+exl-id: e9a696f9-ba63-462d-93a8-e9a7a1e94e72
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
 
 ---
 
-# 实施自动完成
+# 實作自動完成
 
-使用jquery的自动完成功能在AEM表单中实施自动完成功能。
-本文中包含的示例使用各种数据源（静态数组、从REST API响应填充的动态数组）在用户开始在文本字段中键入内容时填充建议。
+使用jquery的自動完成功能，在AEM表單中實作自動完成功能。
+本文包含的範例使用各種資料來源（靜態陣列、從REST API回應填入的動態陣列）在使用者開始輸入文字欄位時填入建議。
 
-用于完成自动完成功能的代码与字段的初始化事件相关联。
+用來完成自動完成功能的程式碼與欄位的初始化事件相關聯。
 
-## 提供地址建议
+## 提供地址建議
 
-![国家建议](assets/auto-complete2.png)
+![country-suggestions](assets/auto-complete2.png)
 
 
 
-以下代码用于提供街道地址建议
+以下是用來提供街道地址建議的代碼
 
 ```javascript
 $(".streetAddress input").autocomplete({
@@ -62,11 +63,11 @@ $(".streetAddress input").autocomplete({
 
 
 
-## 关于表情符号的建议
+## 使用emoji的建議
 
-![国家建议](assets/auto-complete3.png)
+![country-suggestions](assets/auto-complete3.png)
 
-以下代码用于在建议列表中显示表情符号
+下列程式碼用於顯示建議清單中的表情符號
 
 ```javascript
 var values=["Wolf \u{1F98A}", "Lion \u{1F981}","Puppy \u{1F436}","Giraffe \u{1F992}","Frog \u{1F438}"];
@@ -77,8 +78,8 @@ minLength: 1, source: values, delay: 0
 );
 ```
 
-的 [示例表单可下载](assets/auto-complete-form.zip) 从这里。 请确保使用代码编辑器提供您自己的用户名/API密钥，以便成功进行REST调用。
+此 [可下載範例表單](assets/auto-complete-form.zip) 從這裡。 請務必使用程式碼的程式碼編輯器提供您自己的使用者名稱/API金鑰，以成功執行REST呼叫。
 
 >[!NOTE]
 >
-> 为了自动完成工作，请确保您的表单使用以下客户端库 **cq.jquery.ui**. 此客户端库随AEM一起提供。
+> 若要讓自動完成生效，請確認您的表單使用下列使用者端程式庫 **cq.jquery.ui**. 此使用者端程式庫隨附AEM。

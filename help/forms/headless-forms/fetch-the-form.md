@@ -1,6 +1,6 @@
 ---
-title: 获取要嵌入的自适应表单的JSON
-description: 使用API获取自适应表单的json
+title: 擷取最適化表單的JSON以內嵌
+description: 使用API擷取最適化表單的json
 feature: Adaptive Forms
 version: 6.5
 kt: 13285
@@ -15,13 +15,13 @@ ht-degree: 0%
 ---
 
 
-# 获取表单的JSON
+# 擷取表單的JSON
 
-登录AEM Forms创作实例，然后使用 **包含核心组件的空白** 模板。 将表单发布到发布实例。
+登入您的AEM Forms作者執行個體，並使用建立新的最適化 **使用核心元件空白** 範本。 將您的表單發佈至發佈執行個體。
 
-要嵌入表单，我们首先会通过对发布服务器发起get调用，来获取自适应表单的json。
+若要內嵌表單，我們先對發佈伺服器發出get呼叫，擷取最適化表單的json。
 
-以下代码片段将获取名为的自适应表单的json **contactus**
+下列程式碼片段會擷取適用性表單的json，稱為 **contactus**
 
 ```javascript
 const getForm = async () => {
@@ -32,7 +32,7 @@ const getForm = async () => {
       }
 ```
 
-Contact函数组件的完整代码如下所示
+Contact函式元件的完整程式碼如下
 
 ```javascript
 import Form from './components/Form';
@@ -75,4 +75,4 @@ export default function Contact(){
 }
 ```
 
-上述代码使用本机html组件，这些组件会映射到自适应表单中使用的组件。 例如，我们将文本输入的自适应表单组件映射到文本字段组件。 文章中使用的本机组件 [可从此处下载](./assets/native-components.zip)
+上述程式碼使用原生html元件，這些元件對應至最適化表單中使用的元件。 例如，我們將文字輸入最適化表單元件對應至TextField元件。 文章中使用的原生元件 [可從此處下載](./assets/native-components.zip)

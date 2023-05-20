@@ -1,6 +1,6 @@
 ---
-title: 单元测试
-description: 实施单元测试，以验证在自定义组件教程中创建的署名组件Sling模型的行为。
+title: 單元測試
+description: 實作單元測試，以驗證Byline元件（在自訂元件教學課程中建立）的Sling模型的行為。
 version: 6.5, Cloud Service
 type: Tutorial
 feature: APIs, AEM Project Archetype
@@ -19,32 +19,32 @@ ht-degree: 0%
 
 ---
 
-# 单元测试 {#unit-testing}
+# 單元測試 {#unit-testing}
 
-本教程涵盖单元测试的实施，该测试将验证在 [自定义组件](./custom-component.md) 教程。
+本教學課程涵蓋實作單元測試，以驗證Byline元件Sling模型(建立於 [自訂元件](./custom-component.md) 教學課程。
 
 ## 前提条件 {#prerequisites}
 
-查看设置 [本地开发环境](overview.md#local-dev-environment).
+檢閱設定「 」所需的工具和指示 [本機開發環境](overview.md#local-dev-environment).
 
-_如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行程序在执行测试时可能会选择较低的Java™运行时，从而导致测试失败。 如果发生这种情况，请卸载Java™ 8。_
+_如果系統上同時安裝了Java™ 8和Java™ 11，VS Code測試執行程式可能會在執行測試時挑選較低的Java™執行階段，從而導致測試失敗。 如果發生此情況，請解除安裝Java™ 8。_
 
-### 入门项目
+### 入門專案
 
 >[!NOTE]
 >
-> 如果您成功完成了上一章，则可以重复使用该项目并跳过签出起始项目的步骤。
+> 如果您成功完成上一章，您可以重複使用專案，並跳過出庫入門專案的步驟。
 
-查看本教程基于的基行代码：
+檢視教學課程建置的基礎行程式碼：
 
-1. 查看 `tutorial/unit-testing-start` 分支 [GitHub](https://github.com/adobe/aem-guides-wknd)
+1. 檢視 `tutorial/unit-testing-start` 分支來源 [GitHub](https://github.com/adobe/aem-guides-wknd)
 
    ```shell
    $ cd aem-guides-wknd
    $ git checkout tutorial/unit-testing-start
    ```
 
-1. 使用您的Maven技能将代码库部署到本地AEM实例：
+1. 使用您的Maven技能將程式碼庫部署到本機AEM執行個體：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -52,49 +52,49 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.5或6.4，请在 `classic` 配置文件。
+   > 如果使用AEM 6.5或6.4，請附加 `classic` 設定檔至任何Maven命令。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-您始终可以在 [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/unit-testing-start) 或通过切换到分支在本地签出代码 `tutorial/unit-testing-start`.
+您一律可以檢視完成的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/unit-testing-start) 或切換至分支以在本機簽出程式碼 `tutorial/unit-testing-start`.
 
 ## 目标
 
-1. 了解单元测试的基础知识。
-1. 了解常用于测试AEM代码的框架和工具。
-1. 了解在编写单元测试时用于模拟或模拟AEM资源的选项。
+1. 瞭解單元測試的基本概念。
+1. 瞭解測試AEM程式碼的常用架構和工具。
+1. 瞭解在編寫單元測試時模擬或模擬AEM資源的選項。
 
 ## 背景 {#unit-testing-background}
 
-在本教程中，我们将探讨如何编写 [单元测试](https://en.wikipedia.org/wiki/Unit_testing) 对于我们的署名组件 [Sling模型](https://sling.apache.org/documentation/bundles/models.html) (在中创建 [创建自定义AEM组件](custom-component.md))。 单元测试是使用Java™编写的内部版本时测试，用于验证Java™代码的预期行为。 每个单元测试通常都较小，并根据预期结果验证方法（或工作单元）的输出。
+在本教學課程中，我們將探索如何撰寫 [單元測試](https://en.wikipedia.org/wiki/Unit_testing) 對於署名元件的 [Sling模型](https://sling.apache.org/documentation/bundles/models.html) (建立於 [建立自訂AEM元件](custom-component.md))。 單元測試是以Java™撰寫的建置時間測試，可驗證Java™程式碼的預期行為。 每個單位測試通常都很小，會根據預期結果來驗證方法（或工作單位）的輸出。
 
-我们使用AEM最佳实践，并采用：
+我們採用AEM最佳實務，並採用：
 
 * [JUnit 5](https://junit.org/junit5/)
-* [Mockito测试框架](https://site.mockito.org/)
-* [wcm.io测试框架](https://wcm.io/testing/) (建立于 [Apache Sling Mocks](https://sling.apache.org/documentation/development/sling-mock.html))
+* [Mockito測試架構](https://site.mockito.org/)
+* [wcm.io測試架構](https://wcm.io/testing/) (建立在 [Apache Sling Mocks](https://sling.apache.org/documentation/development/sling-mock.html))
 
-## 单元测试和AdobeCloud Manager {#unit-testing-and-adobe-cloud-manager}
+## 單元測試和AdobeCloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[AdobeCloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) 集成单元测试执行和 [代码覆盖报告](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html) 到其CI/CD管道中，以帮助鼓励和促进单元测试AEM代码的最佳实践。
+[AdobeCloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) 整合單元測試執行和 [程式碼涵蓋範圍報告](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html) 放入其CI/CD管道中，以協助鼓勵並推廣單元測試AEM程式碼的最佳做法。
 
-虽然单元测试代码是任何代码库的最佳实践，但在使用Cloud Manager时，务必要通过为Cloud Manager运行单元测试来利用其代码质量测试和报告功能。
+雖然單元測試計畫碼對於任何計畫碼庫都是很好的做法，但在使用Cloud Manager時，透過提供單元測試供Cloud Manager執行來利用其計畫碼品質測試和報告設施非常重要。
 
-## 更新测试Maven依赖项 {#inspect-the-test-maven-dependencies}
+## 更新測試Maven相依性 {#inspect-the-test-maven-dependencies}
 
-第一步是检查Maven依赖项，以支持编写和运行测试。 需要四个依赖项：
+第一步是檢查Maven依賴項以支援編寫和執行測試。 需要四個相依性：
 
 1. JUnit5
-1. Mockito测试框架
+1. Mockito測試架構
 1. Apache Sling Mocks
-1. AEM Mocks测试框架（由io.wcm提供）
+1. AEM Mocks Test Framework （由io.wcm）
 
-的 **JUnit5**、 **Mockito和 **AEM Mocks** 在使用 [AEM Maven原型](project-setup.md).
+此 **JUnit5**、 **Mockito和 **AEM Mocks** 測試相依性會在設定期間使用 [AEM Maven原型](project-setup.md).
 
-1. 要查看这些依赖项，请在 **aem-guides-wknd/pom.xml**，导航到 `<dependencies>..</dependencies>` 并在io.wcm下查看JUnit、Mockito、Apache Sling Mocks和AEM Mok Tests的依赖项 `<!-- Testing -->`.
-1. 确保 `io.wcm.testing.aem-mock.junit5` 设置为 **4.1.0**:
+1. 若要檢視這些相依性，請開啟Parent Reactor POM，位於 **aem-guides-wknd/pom.xml**，導覽至 `<dependencies>..</dependencies>` 並檢視io.wcm在JUnit、Mockito、Apache Sling Mocks和AEM Mock Tests的相依性 `<!-- Testing -->`.
+1. 確定 `io.wcm.testing.aem-mock.junit5` 設為 **4.1.0**：
 
    ```xml
    <dependency>
@@ -107,44 +107,44 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
 
    >[!CAUTION]
    >
-   > 原型 **35** 生成项目时使用 `io.wcm.testing.aem-mock.junit5` 版本 **4.1.8**. 请降级为 **4.1.0** 以遵循本章的其余部分。
+   > 原型 **35** 產生專案，使用 `io.wcm.testing.aem-mock.junit5` 版本 **4.1.8**. 請降級為 **4.1.0** 以依照本章的其餘部分進行。
 
-1. 打开 **aem-guides-wknd/core/pom.xml** 并查看相应的测试依赖关系是否可用。
+1. 開啟 **aem-guides-wknd/core/pom.xml** 和檢視對應的測試相依性是否可用。
 
-   中的并行源文件夹 **核心** 项目将包含单元测试和任何支持测试文件。 此 **测试** 文件夹提供了与源代码分离的测试类，但允许测试像与源代码位于同一包中一样进行操作。
+   中的平行來源資料夾 **核心** project將包含單元測試和任何支援的測試檔案。 此 **測試** folder提供將測試類別與原始程式碼分開，但允許測試就像它們位於與原始程式碼相同的套件中一樣運作。
 
-## 创建JUnit测试 {#creating-the-junit-test}
+## 建立JUnit測試 {#creating-the-junit-test}
 
-单元测试通常使用Java™类将1对1映射。 在本章中，我们将为 **BylineImpl.java**，即支持Byline组件的Sling模型。
+單元測試通常使用Java™類別對應1對1。 在本章中，我們將為以下專案編寫JUnit測試： **BylineImpl.java**，此元件為支援Byline元件的Sling模型。
 
-![单元测试src文件夹](assets/unit-testing/core-src-test-folder.png)
+![單元測試src資料夾](assets/unit-testing/core-src-test-folder.png)
 
-*存储单元测试的位置。*
+*儲存Unit測試的位置。*
 
-1. 为 `BylineImpl.java` 通过在 `src/test/java` Java™包文件夹结构中，该文件夹结构反映要测试的Java™类的位置。
+1. 為以下專案建立單元測試： `BylineImpl.java` 藉由建立新的Java™類別於 `src/test/java` (在Java™套件資料夾結構中)，該結構會映象要測試的Java™類別的位置。
 
-   ![创建新的BylineImplTest.java文件](assets/unit-testing/new-bylineimpltest.png)
+   ![建立新的BylineImplTest.java檔案](assets/unit-testing/new-bylineimpltest.png)
 
-   因为我们在测试
+   由於我們正在測試
 
    * `src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`
 
-   在
+   在下列位置建立對應的單元測試Java™類別：
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
-   的 `Test` 单元测试文件的后缀， `BylineImplTest.java` 是一项公约，它允许我们
+   此 `Test` 單元測試檔案的字尾， `BylineImplTest.java` 是慣例，可讓我們
 
-   1. 轻松将其识别为测试文件 _表示_ `BylineImpl.java`
-   1. 但是，要区分测试文件 _从_ 正在接受测试的班级， `BylineImpl.java`
+   1. 輕鬆識別為測試檔案 _的_ `BylineImpl.java`
+   1. 此外，請區別測試檔案 _從_ 正在測試的類別， `BylineImpl.java`
 
 
 
-## 查看BylineImplTest.java {#reviewing-bylineimpltest-java}
+## 檢閱BylineImplTest.java {#reviewing-bylineimpltest-java}
 
-此时，JUnit测试文件是空Java™类。
+此時，JUnit測試檔案是空的Java™類別。
 
-1. 使用以下代码更新文件：
+1. 使用以下程式碼更新檔案：
 
    ```java
    package com.adobe.aem.guides.wknd.core.models.impl;
@@ -178,51 +178,51 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-1. 第一种方法 `public void setUp() { .. }` 带有JUnit注释 `@BeforeEach`，指示JUnit测试运行器在运行此类中的每个测试方法之前执行此方法。 这为初始化所有测试所需的常见测试状态提供了方便的位置。
+1. 第一個方法 `public void setUp() { .. }` 已使用JUnit註釋 `@BeforeEach`，會指示JUnit測試執行程式先執行此方法，然後再執行此類別中的每個測試方法。 這為初始化所有測試所需的通用測試狀態提供了一個方便的位置。
 
-1. 后续方法是测试方法，其名称前缀为 `test` 以公约为标志 `@Test` 注释。 请注意，默认情况下，由于我们尚未实施这些测试，因此所有测试都将设置为失败。
+1. 後續的方法是測試方法，其名稱會加上前置詞 `test` 依慣例，並以 `@Test` 註解。 請注意，根據預設，我們所有的測試都會設為失敗，因為我們尚未實作這些測試。
 
-   首先，我们从一个测试方法开始，针对我们测试的类中的每个公共方法，这样：
+   首先，我們先對我們測試的類別上的每個公用方法使用單一測試方法，因此：
 
    | BylineImpl.java |  | BylineImplTest.java |
    | ------------------|--------------|---------------------|
-   | getName() | 测试方式 | testGetName() |
-   | getScriptions() | 测试方式 | testGetSchories() |
-   | isEmpty() | 测试方式 | testIsEmpty() |
+   | getName() | 測試者 | testGetName() |
+   | getOccupations() | 測試者 | testGetOccupations() |
+   | isEmpty() | 測試者 | testIsEmpty() |
 
-   这些方法可以根据需要进行扩展，我们将在本章的后面部分看到。
+   您可以視需要展開這些方法，我們將在本章的稍後章節中瞭解這些方法。
 
-   运行此JUnit测试类（也称为JUnit测试案例）时，每个方法均使用 `@Test` 将作为测试执行，测试可能通过或失败。
+   執行此JUnit測試類別（也稱為JUnit測試案例）時，每個方法都標有 `@Test` 會作為測試執行，測試可能會通過或失敗。
 
-![生成的BylineImplTest](assets/unit-testing/bylineimpltest-stub-methods.png)
+![generated BylineImplTest](assets/unit-testing/bylineimpltest-stub-methods.png)
 
 *`core/src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`*
 
-1. 通过右键单击 `BylineImplTest.java` 文件，然后点按 **运行**.
-如预期，所有测试都会失败，因为尚未实施。
+1. 以滑鼠右鍵按一下 `BylineImplTest.java` 檔案，並點選 **執行**.
+如預期，所有測試都會失敗，因為它們尚未實作。
 
-   ![作为junit测试运行](assets/unit-testing/run-junit-tests.png)
+   ![執行為junit測試](assets/unit-testing/run-junit-tests.png)
 
-   *右键单击BylineImplTests.java >运行*
+   *在BylineImplTests.java >執行上按一下滑鼠右鍵*
 
-## 查看BylineImpl.java {#reviewing-bylineimpl-java}
+## 檢閱BylineImpl.java {#reviewing-bylineimpl-java}
 
-编写单元测试时，主要采用以下两种方法：
+編寫單元測試時，有兩種主要方法：
 
-* [TDD或测试驱动开发](https://en.wikipedia.org/wiki/Test-driven_development)，即在实施开发之前，逐步编写单元测试；编写测试，编写实现以使测试通过。
-* 实施优先开发，包括先开发工作代码，然后编写验证该代码的测试。
+* [TDD或測試導向式開發](https://en.wikipedia.org/wiki/Test-driven_development)，包括以漸進方式編寫單元測試，緊接在開發實作之前；編寫測試，編寫實作以讓測試通過。
+* 實作優先開發，包括先開發工作程式碼，然後撰寫測試以驗證該程式碼。
 
-在本教程中，将使用后一种方法(因为我们已经创建了一个 **BylineImpl.java** （在上一章中）。 因此，我们必须对其公共方法的行为进行审查和理解，并了解其实施细节。 这听上去可能相反，因为良好的测试应该只关心输入和输出，但在AEM中工作时，需要了解各种实施考虑因素，才能构建工作测试。
+在本教學課程中，會使用後一種方法(因為我們已建立一個 **BylineImpl.java** （位於上一章中）。 因此，我們必須檢閱並瞭解其公開方法的行為，但也要瞭解其部分實作細節。 這聽起來可能恰恰相反，因為良好的測試應該只關心輸入和輸出，但是當在AEM中工作時，需要理解各種實施考量才能建構工作測試。
 
-对于AEM,TDD需要一定的专业技能，最能被精通AEM代码开发和单元测试的AEM开发人员采用。
+在AEM的環境中，TDD需要一定的專業水準，最適合精通AEM開發和AEM程式碼單元測試的AEM開發人員採用。
 
-## 设置AEM测试上下文  {#setting-up-aem-test-context}
+## 設定AEM測試內容  {#setting-up-aem-test-context}
 
-为AEM编写的大多数代码都依赖于JCR、Sling或AEM API，而JCR、Sling或API又要求运行AEM的上下文才能正确执行。
+大部分為AEM撰寫的程式碼依賴JCR、Sling或AEM API，而這又需要執行AEM的內容才能正確執行。
 
-由于单元测试是在生成时执行的，因此在运行AEM实例的上下文之外，不存在此类上下文。 为了方便， [wcm.io的AEM Tacks](https://wcm.io/testing/aem-mock/usage.html) 创建允许这些API的模拟上下文 _大部分_ 就好像它们在AEM中运行一样。
+由於單元測試是在建置時執行，在執行中的AEM例項的前後關聯之外，沒有這類的前後關聯。 為了加速這項工作， [wcm.io的AEM Mocks](https://wcm.io/testing/aem-mock/usage.html) 建立模擬內容，讓這些API可以 _大部分_ 就好像它們在AEM中執行一樣。
 
-1. 使用创建AEM上下文 **wcm.io的** `AemContext` in **BylineImplTest.java** 添加为JUnit扩展，其中 `@ExtendWith` 到 **BylineImplTest.java** 文件。 扩展负责处理所有所需的初始化和清理任务。 为创建类变量 `AemContext` 可用于所有测试方法。
+1. 建立AEM內容，使用 **wcm.io的** `AemContext` 在 **BylineImplTest.java** 將其新增為裝飾有的JUnit擴充功能 `@ExtendWith` 至 **BylineImplTest.java** 檔案。 擴充功能會處理所有必要的初始化和清理工作。 建立類別變數，用於 `AemContext` 可用於所有測試方法。
 
    ```java
    import org.junit.jupiter.api.extension.ExtendWith;
@@ -236,18 +236,18 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
        private final AemContext ctx = new AemContext();
    ```
 
-   此变量， `ctx`，会公开一个可提供某些AEM和Sling抽象概念的模拟AEM上下文：
+   此變數， `ctx`，會顯示提供一些AEM和Sling抽象的模擬AEM上下文：
 
-   * BylineImpl Sling模型已注册到此上下文中
-   * 在此上下文中创建模拟JCR内容结构
-   * 可在此上下文中注册自定义OSGi服务
-   * 提供各种常见的必需模拟对象和帮助程序，如SlingHttpServletRequest对象、各种模拟Sling和AEM OSGi服务（如ModelFactory、PageManager、Page、Template、ComponentManager、Component、TagManager、Tag等）。
-      * *并非这些对象的所有方法都已实现！*
-   * 和 [更多](https://wcm.io/testing/aem-mock/usage.html)!
+   * BylineImpl Sling模型已登入至此內容
+   * 模擬JCR內容結構會在此內容中建立
+   * 可在此內容中註冊自訂OSGi服務
+   * 提供各種常見的必要模擬物件和協助程式，例如SlingHttpServletRequest物件、各種模擬Sling和AEM OSGi服務，例如ModelFactory、PageManager、Page、Template、ComponentManager、Component、TagManager、Tag等。
+      * *並非這些物件的所有方法都已實作！*
+   * 和 [更多內容](https://wcm.io/testing/aem-mock/usage.html)！
 
-   的 **`ctx`** 对象将作为我们大多数模拟上下文的入口点。
+   此 **`ctx`** 物件將做為大部分模擬內容的進入點。
 
-1. 在 `setUp(..)` 方法，在每个 `@Test` 方法，定义通用的模拟测试状态：
+1. 在 `setUp(..)` 方法，在每一個 `@Test` 方法，定義常見的模擬測試狀態：
 
    ```java
    @BeforeEach
@@ -257,13 +257,13 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-   * **`addModelsForClasses`** 在模拟AEM上下文中注册要测试的Sling模型，以便它可以在 `@Test` 方法。
-   * **`load().json`** 将资源结构加载到模拟上下文中，从而允许代码与这些资源进行交互，就像这些资源是由真实存储库提供的一样。 文件中的资源定义 **`BylineImplTest.json`** 将加载到下的模拟JCR上下文中 **/content**.
-   * **`BylineImplTest.json`** 尚不存在，因此我们创建它并定义测试所需的JCR资源结构。
+   * **`addModelsForClasses`** 將要測試的Sling模型註冊到模擬AEM Context中，以便它可以在以下位置被例項化： `@Test` 方法。
+   * **`load().json`** 將資源結構載入模擬前後關聯中，讓程式碼與這些資源互動，就好像它們是由真正的存放庫提供一樣。 檔案中的資源定義 **`BylineImplTest.json`** 載入下的模擬JCR內容 **/content**.
+   * **`BylineImplTest.json`** 還沒有，存在，所以讓我們建立它並定義測試所需的JCR資源結構。
 
-1. 表示模拟资源结构的JSON文件存储在 **核心/src/test/resources** 遵循与JUnit Java™测试文件相同的包路径。
+1. 代表模擬資源結構的JSON檔案儲存在 **core/src/test/resources** 會遵循與JUnit Java™測試檔案相同的套件路徑分析。
 
-   在以下位置创建JSON文件 `core/test/resources/com/adobe/aem/guides/wknd/core/models/impl` 已命名 **BylineImplTest.json** ，其内容如下：
+   建立JSON檔案於 `core/test/resources/com/adobe/aem/guides/wknd/core/models/impl` 已命名 **BylineImplTest.json** ，內容如下：
 
    ```json
    {
@@ -276,15 +276,15 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
 
    ![BylineImplTest.json](assets/unit-testing/bylineimpltest-json.png)
 
-   此JSON为Byline组件单元测试定义了一个模拟资源（JCR节点）。 此时，JSON具有表示署名组件内容资源( `jcr:primaryType` 和 `sling:resourceType`.
+   此JSON定義Byline元件單元測試的模擬資源（JCR節點）。 此時，JSON具有代表Byline元件內容資源所需的最小屬性集， `jcr:primaryType` 和 `sling:resourceType`.
 
-   使用单元测试时，一般规则是创建满足每个测试所需的最小模拟内容、上下文和代码集。 避免在编写测试之前构建完整的模拟上下文的诱惑，因为这通常会产生不需要的工件。
+   使用單元測試時的一般規則是建立滿足每個測試所需的最小模擬內容、上下文和程式碼集。 在撰寫測試之前，請避免嘗試建置完整的模擬內容，因為這通常會導致不需要的成品。
 
-   现在有了 **BylineImplTest.json**，当 `ctx.json("/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.json", "/content")` ，则模拟资源定义将加载到路径的上下文中 **/content.**
+   現在有了 **BylineImplTest.json**，時間 `ctx.json("/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.json", "/content")` 執行時，模擬資源定義會載入到路徑的前後關聯中 **/content.**
 
-## 测试getName() {#testing-get-name}
+## 測試getName() {#testing-get-name}
 
-既然我们有了基本的模拟上下文设置，让我们为 **BylineImpl的getName()**. 此测试必须确保方法 **getName()** 返回存储在资源“**name&quot;** 属性。
+現在我們已有基本的模擬上下文設定，接下來讓我們編寫第一個測試 **BylineImpl的getName()**. 此測試必須確定方法 **getName()** 傳回資源的「 」中儲存的正確編寫名稱&#x200B;**name」** 屬性。
 
 1. 更新 **testGetName**()方法 **BylineImplTest.java** 如下所示：
 
@@ -304,17 +304,17 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-   * **`String expected`** 设置预期值。 我们将此参数设置为“**珍·多内**&quot;
-   * **`ctx.currentResource`** 设置模拟资源的上下文以评估针对的代码，因此将其设置为 **/content/byline** 因为模拟署名内容资源就是在这里加载的。
-   * **`Byline byline`** 通过从模拟请求对象中对其进行改编，来实例化Byline Sling模型。
-   * **`String actual`** 调用我们测试的方法， `getName()`，位于Byline Sling模型对象上。
-   * **`assertEquals`** 声明预期值与署名Sling模型对象返回的值匹配。 如果这些值不相等，测试将失败。
+   * **`String expected`** 設定預期值。 我們會將此專案設為&quot;**簡已完成**「。
+   * **`ctx.currentResource`** 設定模擬資源的前後關聯以評估程式碼，因此這設定為 **/content/byline** 因為這是模擬署名內容資源的載入位置。
+   * **`Byline byline`** 從模擬請求物件改寫並具現化Byline Sling模型。
+   * **`String actual`** 叫用我們正在測試的方法， `getName()`，在Byline Sling模型物件上。
+   * **`assertEquals`** 斷言預期值與署名Sling模型物件傳回的值相符。 如果這些值不符，測試就會失敗。
 
-1. 运行测试……并且失败，但 `NullPointerException`.
+1. 執行測試……但失敗並出現 `NullPointerException`.
 
-   此测试不会失败，因为我们从未定义 `name` 属性，这会导致测试失败，但测试执行尚未达到该时间点！ 由于 `NullPointerException` 在署名对象本身上。
+   此測試不會失敗，因為我們從未定義 `name` 屬性，即使測試執行尚未到達臨界點，仍會導致測試失敗！ 此測試失敗的原因是 `NullPointerException` 在署名物件本身上。
 
-1. 在 `BylineImpl.java`，如果 `@PostConstruct init()` 会引发异常，从而阻止Sling模型实例化，并导致Sling模型对象为空。
+1. 在 `BylineImpl.java`，若為 `@PostConstruct init()` 擲回一個例外狀況，阻止Sling模型具現化，並導致Sling模型物件為空。
 
    ```java
    @PostConstruct
@@ -323,11 +323,11 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-   事实上，虽然ModelFactory OSGi服务是通过 `AemContext` （通过Apache Sling Context），并未实施所有方法，包括 `getModelFromWrappedRequest(...)` 在BylineImpl的 `init()` 方法。 这会导致 [AbstractMethodError](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/AbstractMethodError.html)，其原因 `init()` 失败，并随之调整 `ctx.request().adaptTo(Byline.class)` 是空对象。
+   事實證明，雖然ModelFactory OSGi服務是透過 `AemContext` （透過Apache Sling Context），並非所有方法都已實作，包括 `getModelFromWrappedRequest(...)` 這會在BylineImpl的 `init()` 方法。 這會導致 [AbstractMethodError](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/AbstractMethodError.html)，其詞語會導致 `init()` 會失敗，而產生的 `ctx.request().adaptTo(Byline.class)` 是null物件。
 
-   由于提供的吊床无法容纳我们的代码，因此我们必须自己实施模拟上下文。为此，我们可以使用Mockito创建一个模拟ModelFactory对象，该对象在 `getModelFromWrappedRequest(...)` 将对其调用。
+   由於提供的模擬無法容納我們的程式碼，我們必須自行實作模擬內容。為此，我們可以使用Mockito建立模擬ModelFactory物件，該物件會在下列情況下傳回模擬Image物件： `getModelFromWrappedRequest(...)` 會在其上叫用。
 
-   由于为了甚至实例化署名Sling模型，此模拟上下文必须就地，因此我们可以将其添加到 `@Before setUp()` 方法。 我们还需要将 `MockitoExtension.class` 到 `@ExtendWith` 注释上方 **BylineImplTest** 类。
+   由於甚至為了將Byline Sling模型例項化，此模擬上下文必須就位，我們可以將其新增到 `@Before setUp()` 方法。 我們還需要新增 `MockitoExtension.class` 至 `@ExtendWith` 註解在上 **BylineImplTest** 類別。
 
    ```java
    package com.adobe.aem.guides.wknd.core.models.impl;
@@ -379,21 +379,21 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** 标记要使用 [模仿JUnit Jupiter扩展](https://www.javadoc.io/static/org.mockito/mockito-junit-jupiter/4.11.0/org/mockito/junit/jupiter/MockitoExtension.html) 允许使用@Mock注释在类级别定义模拟对象。
-   * **`@Mock private Image`** 创建类型的模拟对象 `com.adobe.cq.wcm.core.components.models.Image`. 这是在类级别定义的，以便根据需要， `@Test` 方法可以根据需要更改其行为。
-   * **`@Mock private ModelFactory`** 创建ModelFactory类型的模拟对象。 这是一个纯粹的模仿模特，没有在其上实施任何方法。 这是在类级别定义的，以便根据需要， `@Test`方法可以根据需要更改其行为。
-   * **`when(modelFactory.getModelFromWrappedRequest(..)`** 在 `getModelFromWrappedRequest(..)` 在模拟ModelFactory对象中调用。 在中定义的结果 `thenReturn (..)` 是返回模拟图像对象。 仅在以下情况下才会调用此行为：第一个参数等于 `ctx`的请求对象，第二个参数是任何资源对象，第三个参数必须是核心组件图像类。 我们接受任何资源，因为在整个测试过程中，我们将设置 `ctx.currentResource(...)` 到 **BylineImplTest.json**. 请注意，我们将 **enlight()** 严格，因为我们稍后会希望覆盖ModelFactory的此行为。
-   * **`ctx.registerService(..)`。** 在AemContext中注册模拟ModelFactory对象，其服务排名最高。 由于BylineImpl中使用的ModelFactory `init()` 通过 `@OSGiService ModelFactory model` 字段。 用于插入AemContext **我们的** mock对象，用于处理调用 `getModelFromWrappedRequest(..)`，则必须将其注册为该类型(ModelFactory)的最高级别服务。
+   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** 標籤要搭配執行的測試案例類別 [Mockito JUnit Jupiter延伸模組](https://www.javadoc.io/static/org.mockito/mockito-junit-jupiter/4.11.0/org/mockito/junit/jupiter/MockitoExtension.html) 它允許使用類@Mock註釋來定義類別層級的模擬物件。
+   * **`@Mock private Image`** 建立型別的模擬物件 `com.adobe.cq.wcm.core.components.models.Image`. 這在類別層級定義，以便視需要 `@Test` 方法可依需要變更其行為。
+   * **`@Mock private ModelFactory`** 建立ModelFactory型別的模擬物件。 這是純粹的Mockito模型，而且未實作任何方法。 這在類別層級定義，以便視需要 `@Test`方法可依需要變更其行為。
+   * **`when(modelFactory.getModelFromWrappedRequest(..)`** 註冊模擬行為的時機 `getModelFromWrappedRequest(..)` 會在模擬ModelFactory物件上呼叫。 中定義的結果 `thenReturn (..)` 是傳回模擬影像物件。 唯有在下列情況才會叫用此行為：第一個引數等於 `ctx`的請求物件，第二個引數是任何Resource物件，第三個引數必須是核心元件影像類別。 我們接受任何資源，因為我們在整個測試中設定 `ctx.currentResource(...)` 至中定義的各種模擬資源 **BylineImplTest.json**. 請注意，我們新增 **lenient()** 嚴格性，因為我們稍後會想要覆寫ModelFactory的這個行為。
+   * **`ctx.registerService(..)`。** 將模擬ModelFactory物件註冊到AemContext中，具有最高的服務排名。 這是必要的，因為BylineImpl的 `init()` 會透過 `@OSGiService ModelFactory model` 欄位。 供AemContext插入 **我們的** 模擬物件，可處理對 `getModelFromWrappedRequest(..)`，我們必須將其註冊為該型別(ModelFactory)的最高等級Service。
 
-1. 重新运行测试，然后再次失败，但这一次，消息明确了测试失败的原因。
+1. 重新執行測試，再次失敗，但這次訊息已清楚說明失敗的原因。
 
-   ![测试名称失败断言](assets/unit-testing/testgetname-failure-assertion.png)
+   ![測試名稱失敗判斷提示](assets/unit-testing/testgetname-failure-assertion.png)
 
-   *testGetName()由于断言失败*
+   *testGetName()失敗，因為判斷提示*
 
-   我们收到 **断言错误** 这意味着测试中的断言条件失败，它告诉我们 **预期值为“Jane Doe”** 但 **实际值为空**. 这是有道理的，因为“**name&quot;** 未将属性添加到模拟 **/content/byline** 资源定义 **BylineImplTest.json**，因此，让我们添加它：
+   我們會收到 **AssertionError** 這表示測試中的判斷提示條件失敗，它告訴我們 **預期值為「Jane Doe」** 但 **實際值為null**. 這是有道理的，因為「**name」** 尚未將屬性新增至模擬 **/content/byline** 中的資源定義 **BylineImplTest.json**，所以讓我們將其新增：
 
-1. 更新 **BylineImplTest.json** 定义 `"name": "Jane Doe".`
+1. 更新 **BylineImplTest.json** 以定義 `"name": "Jane Doe".`
 
    ```json
    {
@@ -405,16 +405,16 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-1. 重新运行测试，然后 **`testGetName()`** 快过去！
+1. 重新執行測試，以及 **`testGetName()`** 現在通過！
 
-   ![测试名称通过](assets/unit-testing/testgetname-pass.png)
+   ![測試名稱通過](assets/unit-testing/testgetname-pass.png)
 
 
-## 测试getSchories() {#testing-get-occupations}
+## 測試getOccupations() {#testing-get-occupations}
 
-很好！ 第一个测试通过了！ 让我们继续测试 `getOccupations()`. 由于模拟上下文的初始化是在 `@Before setUp()`方法，它适用于所有 `@Test` 方法，包括 `getOccupations()`.
+很好！ 已通過第一個測試！ 讓我們繼續並測試 `getOccupations()`. 由於模擬內容的初始化是在 `@Before setUp()`方法，這可供所有人使用 `@Test` 此測試案例中的方法，包括 `getOccupations()`.
 
-请记住，此方法必须返回按字母顺序排序的职业列表（降序），这些职业列表存储在职业属性中。
+請記住，此方法必須傳回儲存在occupations屬性中按字母順序排序的職業清單（降序）。
 
 1. 更新 **`testGetOccupations()`** 如下所示：
 
@@ -439,15 +439,15 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-   * **`List<String> expected`** 定义预期结果。
-   * **`ctx.currentResource`** 设置当前资源以根据/content/byline上的模拟资源定义评估上下文。 这可确保 **BylineImpl.java** 在模拟资源的上下文中执行。
-   * **`ctx.request().adaptTo(Byline.class)`** 通过从模拟请求对象中对其进行改编，来实例化Byline Sling模型。
-   * **`byline.getOccupations()`** 调用我们测试的方法， `getOccupations()`，位于Byline Sling模型对象上。
-   * **`assertEquals(expected, actual)`** 断言预期列表与实际列表相同。
+   * **`List<String> expected`** 定義預期的結果。
+   * **`ctx.currentResource`** 設定目前資源，以根據/content/byline處的模擬資源定義來評估上下文。 這可確保 **BylineImpl.java** 會在模擬資源的內容中執行。
+   * **`ctx.request().adaptTo(Byline.class)`** 從模擬請求物件改寫並具現化Byline Sling模型。
+   * **`byline.getOccupations()`** 叫用我們正在測試的方法， `getOccupations()`，在Byline Sling模型物件上。
+   * **`assertEquals(expected, actual)`** 判斷預期清單與實際清單相同。
 
-1. 记住，就象 **`getName()`** 上面， **BylineImplTest.json** 不定义职业，因此如果我们运行它，测试将失败，因为 `byline.getOccupations()` 将返回空列表。
+1. 記住，就像 **`getName()`** 上圖為 **BylineImplTest.json** 不會定義職業，因此如果執行，此測試將會失敗，因為 `byline.getOccupations()` 將傳回空白清單。
 
-   更新 **BylineImplTest.json** 列入职业清单，并按非字母顺序排列，以确保我们的测试验证职业是否按字母顺序排序 **`getOccupations()`**.
+   更新 **BylineImplTest.json** 以納入職業清單，且這些職業是以非字母順序設定的，以確保我們的測試能驗證這些職業是否以字母順序排序 **`getOccupations()`**.
 
    ```json
    {
@@ -460,30 +460,30 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-1. 运行测试，再次通过！ 看来分类的职业很管用！
+1. 執行測試，然後再次通過！ 取得已排序職業的運作方式！
 
-   ![职业通过](assets/unit-testing/testgetoccupations-pass.png)
+   ![取得職位通過](assets/unit-testing/testgetoccupations-pass.png)
 
-   *testGetSchories()通过*
+   *testGetOccupations()通過*
 
-## 测试isEmpty() {#testing-is-empty}
+## 測試isEmpty() {#testing-is-empty}
 
-最后一种测试方法 **`isEmpty()`**.
+最後測試方法 **`isEmpty()`**.
 
-测试 `isEmpty()` 非常有趣，因为它需要对各种条件进行测试。 审核 **BylineImpl.java**&#39;s `isEmpty()` 方法必须测试以下条件：
+測試 `isEmpty()` 很有趣，因為它需要針對各種條件進行測試。 檢閱 **BylineImpl.java**&#x200B;的 `isEmpty()` 方法必須測試下列條件：
 
-* 名称为空时返回true
-* 当职业为空时返回true
-* 当图像为null或没有src URL时，返回true
-* 当名称、职业和图像（使用src URL）存在时，返回false
+* 名稱為空時傳回true
+* 當職業為null或空白時傳回true
+* 當影像為Null或沒有src URL時傳回true
+* 出現名稱、職業和影像（具有src URL）時，會傳回false
 
-为此，我们需要创建测试方法，每个测试都在 `BylineImplTest.json` 来进行这些测试。
+為此，我們需要建立測試方法，每個方法都會在中測試特定條件和新的模擬資源結構 `BylineImplTest.json` 以推動這些測試。
 
-此检查允许我们跳过测试的时间 `getName()`, `getOccupations()` 和 `getImage()` 为空，因为通过测试该状态的预期行为 `isEmpty()`.
+此檢查可讓我們略過以下時間的測試： `getName()`， `getOccupations()` 和 `getImage()` 空白，因為該狀態的預期行為是透過進行測試 `isEmpty()`.
 
-1. 第一个测试将测试没有设置属性的全新组件的条件。
+1. 第一個測試將會測試沒有屬性設定的全新元件的狀況。
 
-   将新资源定义添加到 `BylineImplTest.json`，为其提供语义名称“**空**&quot;
+   將新的資源定義新增至 `BylineImplTest.json`，為其提供語意名稱»**空白**&quot;
 
    ```json
    {
@@ -500,11 +500,11 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-   **`"empty": {...}`** 定义名为“empty”的新资源定义，该定义仅具有 `jcr:primaryType` 和 `sling:resourceType`.
+   **`"empty": {...}`** 定義名稱為「empty」且僅具有 `jcr:primaryType` 和 `sling:resourceType`.
 
-   记住我们加载了 `BylineImplTest.json` into `ctx` 执行 `@setUp`，因此，我们可在的测试中立即使用此新资源定义 **/content/empty。**
+   記住我們載入 `BylineImplTest.json` 到 `ctx` 執行中的每個測試方法之前 `@setUp`，因此我們立即可以在測試中使用此新資源定義 **/content/empty。**
 
-1. 更新 `testIsEmpty()` 如下所示，将当前资源设置为新的“**空**&quot;模拟资源定义。
+1. 更新 `testIsEmpty()` 如下所示，將目前資源設定為新&quot;**空白**&quot;模擬資源定義。
 
    ```java
    @Test
@@ -516,11 +516,11 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-   运行测试并确保测试通过。
+   執行測試並確保其通過。
 
-1. 接下来，创建一组方法，以确保当任何所需数据点（名称、职位或图像）为空时， `isEmpty()` 返回true。
+1. 接下來，建立一組方法，以確保如果任何必要的資料點（名稱、職業或影像）是空的， `isEmpty()` 傳回true。
 
-   对于每个测试，都使用离散的模拟资源定义，更新 **BylineImplTest.json** 的其他资源定义 **with-name** 和 **不从事职业**.
+   對於每項測試，都會使用分散式模擬資源定義，請更新 **BylineImplTest.json** 「 」的其他資源定義 **without-name** 和 **不從事任何工作**.
 
    ```json
    {
@@ -547,7 +547,7 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-   请创建以下测试方法来测试这些状态中的每种状态。
+   建立下列測試方法來測試每種狀態。
 
    ```java
    @Test
@@ -602,17 +602,17 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-   **`testIsEmpty()`** 针对空的模拟资源定义进行测试，并声明 `isEmpty()` 是真的。
+   **`testIsEmpty()`** 針對空白模擬資源定義進行測試，並斷言 `isEmpty()` 為true。
 
-   **`testIsEmpty_WithoutName()`** 针对有职业但没有名字的模拟资源定义进行测试。
+   **`testIsEmpty_WithoutName()`** 針對具有職務但沒有名稱的模擬資源定義進行測試。
 
-   **`testIsEmpty_WithoutOccupations()`** 针对名为但没有职业的模拟资源定义进行测试。
+   **`testIsEmpty_WithoutOccupations()`** 針對名稱為但無職業的模擬資源定義進行測試。
 
-   **`testIsEmpty_WithoutImage()`** 对名称和职业的模拟资源定义进行测试，但将模拟图像设置为返回空值。 请注意，我们要覆盖 `modelFactory.getModelFromWrappedRequest(..)`在 `setUp()` 以确保此调用返回的图像对象为null。 模仿作品存根功能很严格，不需要重复的代码。 因此我们用 **`lenient`** 要明确注意的设置，我们正在覆盖 `setUp()` 方法。
+   **`testIsEmpty_WithoutImage()`** 會針對具有名稱和職業的模擬資源定義進行測試，但會將模擬影像設定為傳回null。 請注意，我們想要覆寫 `modelFactory.getModelFromWrappedRequest(..)`行為定義於 `setUp()` 以確保此呼叫傳回的Image物件為Null。 Mockito stub功能非常嚴格，並且不想要重複的程式碼。 因此，我們將模型設定為 **`lenient`** 設定以明確說明我們正在覆寫 `setUp()` 方法。
 
-   **`testIsEmpty_WithoutImageSrc()`** 针对名称和职业的模拟资源定义进行测试，但将模拟图像设置为在 `getSrc()` 将调用。
+   **`testIsEmpty_WithoutImageSrc()`** 針對具有名稱和職業的模擬資源定義進行測試，但設定模擬影像以在下列情況時傳回空白字串 `getSrc()` 叫用的是。
 
-1. 最后，编写测试以确保 **isEmpty()** 正确配置组件后，返回false。 对于这种情况，我们可以重复使用 **/content/byline** 表示已完全配置的Byline组件。
+1. 最後，撰寫測試以確保 **isEmpty()** 正確設定元件後，會傳回false。 針對此情況，我們可以重複使用 **/content/byline** 代表完整設定的Byline元件。
 
    ```java
    @Test
@@ -626,28 +626,28 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS Code测试运行�
    }
    ```
 
-1. 现在，在BylineImplTest.java文件中运行所有单元测试，并查看Java™测试报告输出。
+1. 現在執行BylineImplTest.java檔案中的所有單元測試，並檢閱Java™測試報告輸出。
 
-![所有测试均通过](./assets/unit-testing/all-tests-pass.png)
+![所有測試均通過](./assets/unit-testing/all-tests-pass.png)
 
-## 运行单元测试作为内部版本的一部分 {#running-unit-tests-as-part-of-the-build}
+## 在建置過程中執行單元測試 {#running-unit-tests-as-part-of-the-build}
 
-将执行单元测试，并且需要在Maven内部版本中通过。 这可确保在部署应用程序之前成功通过所有测试。 执行Maven目标（如包或安装）时，会自动调用并要求通过项目中的所有单元测试。
-
-```shell
-$ mvn package
-```
-
-![mvn包成功](assets/unit-testing/mvn-package-success.png)
+執行單元測試，並且需要作為Maven構建的一部分通過。 這可確保在部署應用程式之前成功通過所有測試。 執行封裝或安裝等Maven目標會自動叫用，並需要通過專案中的所有單元測試。
 
 ```shell
 $ mvn package
 ```
 
-同样，如果我们将测试方法更改为失败，则生成会失败并报告测试失败的原因。
+![mvn封裝成功](assets/unit-testing/mvn-package-success.png)
 
-![mvn包失败](assets/unit-testing/mvn-package-fail.png)
+```shell
+$ mvn package
+```
 
-## 查看代码 {#review-the-code}
+同樣地，如果我們變更測試方法為失敗，建置會失敗並報告哪些測試失敗及原因。
 
-在上查看完成的代码 [GitHub](https://github.com/adobe/aem-guides-wknd) 或在本地的Git分支上查看和部署代码 `tutorial/unit-testing-solution`.
+![mvn封裝失敗](assets/unit-testing/mvn-package-fail.png)
+
+## 檢閱程式碼 {#review-the-code}
+
+檢視完成的程式碼： [GitHub](https://github.com/adobe/aem-guides-wknd) 或在Git分支上檢閱並部署程式碼 `tutorial/unit-testing-solution`.

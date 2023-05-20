@@ -1,6 +1,6 @@
 ---
-title: 如何设置本地AEM开发环境
-description: 了解如何使用AEMas a Cloud ServiceSDK下载和设置本地开发环境。
+title: 如何設定本機AEM開發環境
+description: 瞭解如何使用AEMas a Cloud ServiceSDK下載及設定本機開發環境。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -16,12 +16,12 @@ ht-degree: 7%
 
 ---
 
-# 设置本地开发环境
+# 設定本機開發環境
 
-了解如何使用AEMas a Cloud ServiceSDK下载和设置本地开发环境。
+瞭解如何使用AEMas a Cloud ServiceSDK下載及設定本機開發環境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330558?quality=12&learn=on)
 
-_的 `license.properties` 运行AEM SDK不再需要在此视频中显示。_
+_此 `license.properties` 本影片中顯示的已不再需要執行AEM SDK。_
 
-请查看以下说明，以 [使用AEM SDK设置完整的本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).
+檢閱這些指示至 [使用AEM SDK設定完整的本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).

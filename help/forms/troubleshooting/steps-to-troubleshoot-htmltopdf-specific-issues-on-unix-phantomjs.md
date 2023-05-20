@@ -1,6 +1,6 @@
 ---
-title: 对Unix设置(PhantomJS)上的HtmltoPDF特定问题进行故障诊断的步骤
-description: 在UNIX设置中使用PhantomJS解决HtmltoPDF问题。
+title: 針對Unix設定(PhantomJS)中的HtmltoPDF特定問題進行疑難排解的步驟
+description: 在UNIX設定中使用PhantomJS來疑難排解HtmltoPDF問題。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 对Unix设置(PhantomJS)上的HtmltoPDF特定问题进行故障诊断的步骤
+# 針對Unix設定(PhantomJS)中的HtmltoPDF特定問題進行疑難排解的步驟
 
-*此视频将逐步介绍如何对Unix设置(PhantomJS)上的HtmltoPDF特定问题进行故障诊断。*
+*本影片逐步解說在Unix設定(PhantomJS)中疑難排解HtmltoPDF特定問題的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335546?quality=12&learn=on)

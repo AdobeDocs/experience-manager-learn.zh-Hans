@@ -1,6 +1,6 @@
 ---
-title: 配置根面板
-description: 将子面板添加到根面板。
+title: 設定根面板
+description: 將子面板新增至根面板。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 配置根面板
+# 設定根面板
 
-将子面板添加到根面板并配置子面板的布局。
+將子面板新增至根面板，並設定子面板的版面配置。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332238?quality=12&learn=on)

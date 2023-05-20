@@ -1,6 +1,6 @@
 ---
 title: 元数据
-description: 了解如何在AEM Assets中访问元数据并与元数据进行交互。
+description: 瞭解如何在AEM Assets中存取中繼資料並與之互動。
 feature: Metadata
 role: User
 level: Beginner
@@ -19,6 +19,6 @@ ht-degree: 8%
 
 # 元数据
 
-了解如何在AEM Assets中访问元数据并与元数据进行交互。
+瞭解如何在AEM Assets中存取中繼資料並與之互動。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32045?quality=12&learn=on)

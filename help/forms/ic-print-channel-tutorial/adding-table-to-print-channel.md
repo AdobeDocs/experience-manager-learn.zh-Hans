@@ -1,7 +1,7 @@
 ---
-title: 向贡献部分添加表
+title: 新增表格至貢獻區段
 seo-title: Adding table to contributions section
-description: 这是创建您的第一个交互式通信文档的多步教程的第9部分。在本部分中，我们将在贡献部分添加一个表。
+description: 此為建立第一個互動式通訊檔案的多步驟教學課程的第9部分。在本部分中，我們會將表格新增至貢獻區段。
 seo-description: This is part 9 of multistep tutorial for creating your first interactive communication document.In this part, we will add a table to the contributions section.
 uuid: 9475e769-a3f8-4aec-9b46-e0dc182b78a0
 feature: Interactive Communication
@@ -24,21 +24,21 @@ ht-degree: 1%
 
 ---
 
-# 向贡献部分添加表
+# 新增表格至貢獻區段
 
-在本部分中，我们将在贡献部分添加一个表。
-请参阅 [在打印渠道中使用表](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) 有关在打印渠道文档中使用表格的更多详细信息。
+在本部分中，我們將新增表格至貢獻區段。
+請參閱 [在Print Channel中使用表格](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) 以取得在列印管道檔案中使用表格的詳細資訊。
 
-登录AEM Forms，然后导航到Adobe Experience Manager > Forms > Forms和文档。
+登入AEM Forms並導覽至「Adobe Experience Manager > Forms > Forms和檔案」。
 
-打开401KStatementPrint文件夹。
+開啟401KStatementPrint資料夾。
 
-在编辑模式下打开401KStatementPrint。
+在編輯模式下開啟401KStatementPrint。
 
-以下视频介绍在打印渠道文档中配置表格时涉及的步骤。
+以下影片會逐步說明在列印管道檔案中設定表格的相關步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27769?quality=12&learn=on)
 
 ## 后续步骤
 
-[使用监视文件夹生成打印渠道文档](./using-watched-folder-to-generate-document.md)
+[使用watched資料夾產生列印管道檔案](./using-watched-folder-to-generate-document.md)

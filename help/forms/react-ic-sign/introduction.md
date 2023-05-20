@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Forms和Acrobat Sign反应应用程序
-description: Acrobat Sign和AEM Forms可自动执行复杂的交易，并将合法的电子签名作为无缝数字体验的一部分。
+title: 使用AEM Forms和Acrobat Sign的React應用程式
+description: Acrobat Sign和AEM Forms可自動化複雜的交易，並加入法律電子簽章，以提供順暢的數位體驗。
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -16,25 +16,25 @@ ht-degree: 1%
 
 ---
 
-# AEM Forms与Acrobat Sign Web窗体
+# AEM Forms與Acrobat Sign網路表單
 
 
-本教程将指导您完成使用从 [React](https://react.dev/) 应用程序和演示生成的文档以使用Acrobat Sign Webform进行签名。
+本教學課程將逐步引導您瞭解使用提交的資料產生互動式通訊檔案的使用案例。 [React](https://react.dev/) 應用程式並展示產生的檔案，以供使用Acrobat Sign網頁表單簽名。
 
-以下是用例的流程
+以下是使用案例的流程
 
-* 用户在React应用程序中填写表单。
-* 表单数据被提交到AEM Forms端点以生成交互式通信文档。
-* 使用生成的文档创建Acrobat Sign小组件URL。
-* 向调用应用程序显示小组件URL，以供用户对文档进行签名。
+* 使用者在React應用程式中填寫表單。
+* 表單資料會提交至AEM Forms端點，以產生互動式通訊檔案。
+* 使用產生的檔案建立Acrobat Sign Widget url。
+* 向呼叫應用程式呈現Widget URL，以便使用者簽署檔案。
 
 ## 前提条件
 
-要使用案例正常工作，您需要满足以下条件：
+您需要下列專案使用案例：
 
-* 包含Forms的AEM服务器
-* 安 [Acrobat Sign应用程序的集成密钥](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
+* 具有Forms附加元件套件的AEM伺服器
+* 一個 [Acrobat Sign應用程式的整合金鑰](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
 
 ## 后续步骤
 
-编写 [自定义OSGi服务以生成交互式通信文档](./create-ic-document.md) 使用记录的API
+寫入 [自訂OSGi服務以產生互動式通訊檔案](./create-ic-document.md) 使用已記錄的API

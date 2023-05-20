@@ -1,6 +1,6 @@
 ---
-title: 如何在Brand Portal中启用演绎版下载。
-description: 在Brand Portal中启用下载演绎版的步骤
+title: 如何在Brand Portal中啟用下載轉譯。
+description: 在Brand Portal中啟用下載轉譯的步驟
 role: Developer
 level: Beginner
 version: Cloud Service
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 在Brand Portal中启用下载演绎版
+# 在Brand Portal中啟用轉譯下載
 
-*此视频将演示如何在Brand Portal中启用下载演绎版的步骤。*
+*本影片逐步說明在Brand Portal中啟用下載轉譯的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335449?quality=12&learn=on)

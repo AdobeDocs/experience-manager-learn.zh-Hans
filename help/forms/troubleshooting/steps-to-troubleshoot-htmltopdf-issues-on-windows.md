@@ -1,6 +1,6 @@
 ---
-title: 对Windows设置中HtmltoPDF特定问题进行故障诊断的步骤
-description: 在Windows上解决HtmltoPDF问题
+title: 疑難排解Windows設定中的HtmltoPDF特定問題的步驟
+description: 疑難排解Windows上的HtmltoPDF問題
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 对Windows设置中HtmltoPDF特定问题进行故障诊断的步骤
+# 疑難排解Windows設定中的HtmltoPDF特定問題的步驟
 
-*此视频将指导您对Windows设置中的HtmltoPDF特定问题进行故障诊断。*
+*此影片會逐步解說疑難排解Windows設定中的HtmltoPDF特定問題的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335545?quality=12&learn=on)

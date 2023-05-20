@@ -1,7 +1,7 @@
 ---
-title: 配置投资组合面板
+title: 設定投資組合面板
 seo-title: Configuring Investment Mix Panel
-description: 这是创建您的第一个交互式通信文档的多步教程的11部分。在本部分中，我们将添加饼图以显示当前和模型投资组合。
+description: 此為建立第一個互動式通訊檔案的多步驟教學課程第11部分。在此部分中，我們將新增圓形圖以顯示目前和模式投資組合。
 seo-description: This is part 11 of multistep tutorial for creating your first interactive communications document.In this part, we will add pie charts to display the current and model investment mix.
 uuid: b0132912-cb6e-4dec-8309-5125d29ad291
 feature: Interactive Communication
@@ -22,42 +22,42 @@ ht-degree: 0%
 
 ---
 
-# 配置投资组合面板
+# 設定投資組合面板
 
-在此部分中，我们将添加饼图以显示当前和模型投资组合。
+在本部分中，我們將新增圓形圖以顯示目前和模式投資組合。
 
-* 登录AEM Forms，然后导航到Adobe Experience Manager > Forms > Forms和文档。
+* 登入AEM Forms並導覽至「Adobe Experience Manager > Forms > Forms和檔案」。
 
-* 打开401KStatement文件夹。
+* 開啟401KStatement資料夾。
 
-* 在编辑模式下打开401KStatement。
+* 在編輯模式下開啟401KStatement。
 
-* 我们将增加2张饼图，以代表账户持有人目前和模型投资组合。
+* 我們將新增2個圓形圖，以代表帳戶持有人目前的和模型投資組合。
 
-## 流动资产组合 {#current-asset-mix}
+## 目前的資產組合 {#current-asset-mix}
 
-* 点按右侧的“CurrentAssetMix”面板，然后选择“+”图标并插入文本组件。 将默认文本更改为“当前资产组合”。
+* 點選右側的「CurrentAssetMix」面板，然後選取「+」圖示並插入文字元件。 將預設文字變更為「目前的資產組合」。
 
-* 点按“CurrentAssetMix”面板，然后选择“+”图标并插入图表组件。 点按新插入的图表组件，然后单击“扳手”图标以打开图表的配置属性工作表。
+* 點選「CurrentAssetMix」面板，然後選取「+」圖示並插入圖表元件。 點選新插入的圖表元件，然後按一下「扳手」圖示以開啟圖表的設定屬性表。
 
-* 设置如下图所示的属性。 确保图表类型为饼图。
+* 設定屬性，如下圖所示。 確定您的圖表型別為「圓形圖」。
 
-* 请注意绑定到X和Y轴的数据模型对象。 您需要选择表单数据模型的根元素，然后向下展开以选择相应的元素。
+* 請注意繫結到X和Y軸的資料模型物件。 您需要選取表單資料模型的根元素，然後向下展開以選取適當的元素。
 
 * ![currentassetmix](assets/currentassetmixchart.png)
 
-## 模型资产组合 {#model-asset-mix}
+## 模型資產組合 {#model-asset-mix}
 
-* 点按右侧的“RecommendedAssetMix”面板，然后选择“+”图标并插入文本组件。 将默认文本更改为“模型资产组合”。
+* 點選右側的「RecommendedAssetMix」面板，然後選取「+」圖示並插入文字元件。 將預設文字變更為「模型資產組合」。
 
-* 点按“RecommendedAssetMix”面板，然后选择“+”图标并插入图表组件。 点按新插入的图表组件，然后单击“扳手”图标以打开图表的配置属性工作表。
+* 點選「RecommendedAssetMix」面板，然後選取「+」圖示並插入圖表元件。 點選新插入的圖表元件，然後按一下「扳手」圖示以開啟圖表的設定屬性表。
 
-* 设置如下图所示的属性。 确保图表类型为饼图。
+* 設定屬性，如下圖所示。 確定您的圖表型別為「圓形圖」。
 
-* 请注意绑定到X和Y轴的数据模型对象。 您需要选择表单数据模型的根元素，然后向下展开以选择相应的元素。
+* 請注意繫結到X和Y軸的資料模型物件。 您需要選取表單資料模型的根元素，然後向下展開以選取適當的元素。
 
 * ![assettype](assets/modelassettypechart.png)
 
 ## 后续步骤
 
-[准备发送Web渠道文档](./parttwelve.md)
+[準備傳遞Web Channel檔案](./parttwelve.md)

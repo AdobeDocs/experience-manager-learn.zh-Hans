@@ -1,7 +1,7 @@
 ---
-title: 将页面编辑器与AEM Sites结合使用
+title: 搭配AEM Sites使用頁面編輯器
 seo-title: Using the Page Editor with Adobe Experience Manager Sites
-description: 以下视频重点介绍Adobe Experience Manager中触屏UI站点编辑器的几项主要功能。
+description: 以下影片重點說明Adobe Experience Manager中觸控式UI網站編輯器的幾項主要功能。
 seo-description: The following video highlights several of the top features of the Touch-UI Sites editor in Adobe Experience Manager.
 feature: Page Editor
 topics: authoring
@@ -18,43 +18,43 @@ exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '211'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
-# 使用页面编辑器 {#using-page-editor-with-aem-sites}
+# 使用頁面編輯器 {#using-page-editor-with-aem-sites}
 
-AEM Site的页面编辑器是用于创建和编辑Web内容的强大工具。 从页面编辑器的UI工具栏访问页面编辑器的工具和功能。
+AEM網站的頁面編輯器是建立和編輯網頁內容的強大工具。 頁面編輯器的工具和功能可從「頁面編輯器」的UI工具列存取。
 
-以下视频重点介绍页面编辑器的主要功能。
+以下影片重點說明「頁面編輯器」的主要功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
 
-页面编辑器的功能包括：
+頁面編輯器的功能包括：
 
-* 拖放组件和资产
-* 提供页面上所有组件索引的内容树面板
-* 通过页面信息面板，您可以访问其他信息以及为内容作者执行的快速操作
-   * 打开属性
-   * 转出页面
-   * 启动工作流
-   * 锁定页面/解锁页面
-   * 发布/取消发布页面
+* 拖放元件和資產
+* 提供頁面上所有元件索引的「內容樹」面板
+* 頁面資訊面板可讓您存取其他資訊和內容作者的快速動作
+   * 開啟屬性
+   * 轉出頁面
+   * 开始工作流
+   * 鎖定頁面/解鎖頁面
+   * 發佈/取消發佈頁面
    * 编辑模板
    * 以发布的形式查看
    * 以管理员身份查看
    * 帮助
-* 向组件面板添加了组件图标和说明
-* 用于编辑DAM中资产的直接链接
-* 在响应式网格上进行内联内容编辑和加快组件管理的模拟器
-* 页面编辑模式
+* 新增元件圖示和說明至元件面板
+* 在DAM中編輯資產的直接連結
+* 可在回應式格線上內嵌內容編輯及更快速地管理元件的模擬器
+* 頁面編輯模式
    * 编辑模式
    * 布局模式
    * 开发人员模式
-* 路径查找器表单字段的自动完成和关键字搜索
-* 当前页面的工作流状态栏
+* Pathfinder表單欄位的自動完成和關鍵字搜尋
+* 目前頁面的工作流程狀態列
 
 ## 其他资源 {#additional-resources}
 
-* [编辑页面内容文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Sites Authoring用户指南](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
+* [Sites Authoring使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)

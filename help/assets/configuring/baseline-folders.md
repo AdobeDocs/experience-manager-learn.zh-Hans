@@ -1,6 +1,6 @@
 ---
-title: 基线文件夹
-description: 在AEM Assets中定义基线文件夹有助于为您的数字资产管理建立坚实的内容架构和基础。
+title: 基線資料夾
+description: 在AEM Assets中定義基線資料夾，有助於建立穩固的內容架構，並為數位資產管理奠定基礎。
 feature: Asset Management
 version: Cloud Service
 kt: 4870
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 基线文件夹
+# 基線資料夾
 
-在AEM Assets中定义基线文件夹有助于为您的数字资产管理建立坚实的内容架构和基础。
+在AEM Assets中定義基線資料夾，有助於建立穩固的內容架構，並為數位資產管理奠定基礎。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33496?quality=12&learn=on)

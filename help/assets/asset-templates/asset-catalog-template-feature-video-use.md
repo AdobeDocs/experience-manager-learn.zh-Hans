@@ -1,6 +1,6 @@
 ---
-title: 将资产目录与AEM Commerce和InDesign Server结合使用
-description: AEM 6.4目录增强功能提供了使用AEM资产模板和InDesign Server创建目录页面的功能。  用户可以使用InDesign模板创建目录页面，并将产品属性映射到可编辑的字段，以后可使用这些字段为不同产品创建类似页面。
+title: 搭配AEM Commerce和InDesign Server使用資產目錄
+description: AEM 6.4目錄增強功能提供使用AEM Asset範本和InDesign Server建立目錄頁面的功能。  使用者可以使用InDesign範本建立目錄頁面，並將產品屬性對應到可編輯的欄位，這些欄位稍後可用於為不同產品建立類似的頁面。
 version: 6.4, 6.5
 topic: Content Management
 role: User
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 ---
 
-# 将资产目录与AEM Commerce和InDesign Server结合使用{#using-asset-catalog-with-aem-commerce-and-indesign-server}
+# 搭配AEM Commerce和InDesign Server使用資產目錄{#using-asset-catalog-with-aem-commerce-and-indesign-server}
 
-AEM 6.4目录增强功能提供了使用AEM资产模板和InDesign Server创建目录页面的功能。  用户可以使用InDesign模板创建目录页面，并将产品属性映射到可编辑的字段，以后可使用这些字段为不同产品创建类似页面。
+AEM 6.4目錄增強功能提供使用AEM Asset範本和InDesign Server建立目錄頁面的功能。  使用者可以使用InDesign範本建立目錄頁面，並將產品屬性對應到可編輯的欄位，這些欄位稍後可用於為不同產品建立類似的頁面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22540?quality=12&learn=on)
 
 >[!NOTE]
 >
->在将\.indd文件上传到AEM Assets之前，您的InDesign服务器应该正在运行。
+>將\.indd檔案上傳到AEM Assets之前，您的InDesign伺服器應該正在執行。
 
-* 创意用户可以使用InDesign文件标记内容。 InDesign文件在上传到AEM Assets后，其标记内容将被标识为可编辑字段。
-* 用户可以使用\.indd文件创建目录页面。 \.indd文件中的标记内容将作为“可编辑”字段提供，从而使内容作者能够修改这些字段的内容。
-* 如果产品属性的字段类型与其字段类型匹配，则可以将其映射到可编辑字段。
-* 类似产品的目录页面可以轻松创建。
-* 能够将不同的目录页面合并到单个PDF或\.indd文件中
+* 創意使用者可以使用InDesign檔案標籤內容。 含有標籤內容的InDesign檔案上傳至AEM Assets時，會被識別為可編輯欄位。
+* 使用者可以使用\.indd檔案建立「目錄」頁面。 \.indd檔案中的標籤內容會以可編輯欄位形式提供，因此內容作者可以修改這些欄位的內容。
+* 如果可編輯欄位的欄位型別相符，則可將產品屬性對應至這些欄位。
+* 可以輕鬆建立類似產品的目錄頁面。
+* 可將不同的目錄頁面合併為單一PDF或\.indd檔案

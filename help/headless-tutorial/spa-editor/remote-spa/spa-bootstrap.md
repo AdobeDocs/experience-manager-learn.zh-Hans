@@ -1,6 +1,6 @@
 ---
-title: BootstrapRemote SPA for SPA Editor
-description: 了解如何引导远程SPA以实现AEM SPA Editor兼容性。
+title: Bootstrap遠端SPA for SPA編輯器
+description: 瞭解如何啟動遠端SPA，以確保AEM SPA Editor相容性。
 topic: Headless, SPA, Development
 feature: SPA Editor, APIs, Developing
 role: Developer, Architect
@@ -16,17 +16,17 @@ ht-degree: 0%
 
 ---
 
-# BootstrapRemote SPA for SPA Editor
+# Bootstrap遠端SPA for SPA編輯器
 
-在将可编辑区域添加到远程SPA中之前，必须先通过AEM SPA Editor JavaScript SDK和其他一些配置将其引导。
+在將可編輯區域新增至遠端SPA之前，必須先使用AEM SPA編輯器JavaScript SDK和其他幾項設定來啟動該區域。
 
-## 安装AEM SPA Editor JS SDK npm依赖项
+## 安裝AEM SPA Editor JS SDK npm相依性
 
-首先，查看AEM SPA npm对React项目的依赖项并安装它们。
+首先，檢閱React專案的AEM SPA npm相依性，並加以安裝。
 
-+ [`@adobe/aem-spa-page-model-manager`](https://github.com/adobe/aem-spa-page-model-manager) :提供了用于从AEM检索内容的API。
-+ [`@adobe/aem-spa-component-mapping`](https://github.com/adobe/aem-spa-component-mapping) :提供了将AEM内容映射到SPA组件的API。
-+ [`@adobe/aem-react-editable-components` v2](https://github.com/adobe/aem-react-editable-components) :提供了用于构建自定义SPA组件的API，并提供了常用实施，例如 `AEMPage` React组件。
++ [`@adobe/aem-spa-page-model-manager`](https://github.com/adobe/aem-spa-page-model-manager) ：提供從AEM擷取內容的API。
++ [`@adobe/aem-spa-component-mapping`](https://github.com/adobe/aem-spa-component-mapping) ：提供將AEM內容對應至SPA元件的API。
++ [`@adobe/aem-react-editable-components` v2](https://github.com/adobe/aem-react-editable-components) ：提供用於建置自訂SPA元件的API，並提供常用實施，例如 `AEMPage` React元件。
 
 ```shell
 $ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app
@@ -35,13 +35,13 @@ $ npm install @adobe/aem-spa-component-mapping
 $ npm install @adobe/aem-react-editable-components 
 ```
 
-## 查看SPA环境变量
+## 檢閱SPA環境變數
 
-必须向远程SPA显示多个环境变量，以便其知道如何与AEM交互。
+有些環境變數必須向遠端SPA公開，以便其知道如何與AEM互動。
 
-1. 在以下位置打开远程SPA项目 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app` 在IDE中
-1. 打开文件 `.env.development`
-1. 在文件中，请特别注意密钥，并根据需要进行更新：
+1. 開啟遠端SPA專案： `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app` 在您的IDE中
+1. 開啟檔案 `.env.development`
+1. 在檔案中，請特別留意金鑰，並視需要更新：
 
    ```
    REACT_APP_HOST_URI=http://localhost:4502
@@ -54,30 +54,30 @@ $ npm install @adobe/aem-react-editable-components
    REACT_APP_BASIC_AUTH_PASS=admin
    ```
 
-   ![远程SPA环境变量](./assets/spa-bootstrap/env-variables.png)
+   ![遠端SPA環境變數](./assets/spa-bootstrap/env-variables.png)
 
-   *请记住，React中的自定义环境变量必须带有前缀 `REACT_APP_`.*
+   *請記住，React中的自訂環境變數必須加上前置詞 `REACT_APP_`.*
 
-   + `REACT_APP_HOST_URI`:远程SPA连接到的AEM服务的方案和主机。
-      + 此值会根据AEM环境（本地、开发、暂存或生产）和AEM服务类型（创作与发布）的情况而发生更改
-   + `REACT_APP_USE_PROXY`:这通过在开发过程中通知react开发服务器代理AEM请求(如 `/content, /graphql, .model.json` 使用 `http-proxy-middleware` 模块。
-   + `REACT_APP_AUTH_METHOD`:AEM提供的请求的身份验证方法，选项包括“服务令牌”、“开发令牌”、“基本”或留空（对于无身份验证用例）
-      + 与AEM作者一起使用时需要
-      + 可能需要用于AEM发布（如果内容受到保护）
-      + 针对AEM SDK进行开发支持通过基本身份验证进行本地帐户。 这是本教程中使用的方法。
-      + 与AEMas a Cloud Service集成时，请使用 [访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
-   + `REACT_APP_BASIC_AUTH_USER`:AEM __用户名__ 由SPA在检索AEM内容时进行身份验证。
-   + `REACT_APP_BASIC_AUTH_PASS`:AEM __密码__ 由SPA在检索AEM内容时进行身份验证。
+   + `REACT_APP_HOST_URI`：遠端SPA連線的AEM服務的配置和主機。
+      + 此值會根據AEM環境（本機、開發、階段或生產）和AEM服務型別（製作與發佈）而改變
+   + `REACT_APP_USE_PROXY`：這可透過告知react開發伺服器代理AEM請求(例如 `/content, /graphql, .model.json` 使用 `http-proxy-middleware` 模組。
+   + `REACT_APP_AUTH_METHOD`：適用於AEM服務請求的驗證方法，選項為「service-token」、「dev-token」、「basic」或對「無驗證」使用案例保留空白
+      + 搭配AEM Author使用所必需
+      + 可能需要搭配AEM Publish使用（如果內容受到保護）
+      + 針對AEM SDK進行開發時，可透過基本驗證支援本機帳戶。 這是本教學課程中使用的方法。
+      + 與AEMas a Cloud Service整合時，請使用 [存取權杖](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
+   + `REACT_APP_BASIC_AUTH_USER`：AEM __使用者名稱__ 由SPA在擷取AEM內容時進行驗證。
+   + `REACT_APP_BASIC_AUTH_PASS`：AEM __密碼__ 由SPA在擷取AEM內容時進行驗證。
 
-## 集成ModelManager API
+## 整合ModelManager API
 
-使用应用程序可用的AEM SPA npm依赖项，初始化AEM `ModelManager` 的 `index.js` 之前 `ReactDOM.render(...)` 将调用。
+使用應用程式可用的AEM SPA npm相依性，初始化AEM `ModelManager` 在專案的 `index.js` 早於 `ReactDOM.render(...)` 叫用的是。
 
-的 [ModelManager](https://github.com/adobe/aem-spa-page-model-manager/blob/master/src/ModelManager.ts) 负责连接到AEM以检索可编辑的内容。
+此 [模型管理員](https://github.com/adobe/aem-spa-page-model-manager/blob/master/src/ModelManager.ts) 負責連線到AEM以擷取可編輯的內容。
 
-1. 在IDE中打开远程SPA项目
-1. 打开文件 `src/index.js`
-1. 添加导入 `ModelManager` 并在之前初始化它 `root.render(..)` 调用，
+1. 在IDE中開啟遠端SPA專案
+1. 開啟檔案 `src/index.js`
+1. 新增匯入 `ModelManager` 並在 `root.render(..)` 叫用，
 
    ```javascript
    ...
@@ -91,17 +91,17 @@ $ npm install @adobe/aem-react-editable-components
    root.render(<App />);
    ```
 
-的 `src/index.js` 文件应该如下所示：
+此 `src/index.js` 檔案應如下所示：
 
 ![src/index.js](./assets/spa-bootstrap/index-js.png)
 
-## 设置内部SPA代理
+## 設定內部SPA Proxy
 
-创建可编辑的SPA时，最好设置 [SPA中的内部代理](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)，以将相应请求路由到AEM。 这是通过使用 [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) npm模块，该模块已由基本WKND GraphQL应用程序安装。
+建立可編輯的SPA時，最好設定 [SPA中的內部Proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)，這設定為將適當的請求路由到AEM。 這是透過以下方式完成： [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) npm模組，已由基本WKND GraphQL應用程式安裝。
 
-1. 在IDE中打开远程SPA项目
-1. 在以下位置打开文件 `src/proxy/setupProxy.spa-editor.auth.basic.js`
-1. 使用以下代码更新文件：
+1. 在IDE中開啟遠端SPA專案
+1. 開啟檔案於 `src/proxy/setupProxy.spa-editor.auth.basic.js`
+1. 使用以下程式碼更新檔案：
 
    ```javascript
    const { createProxyMiddleware } = require('http-proxy-middleware');
@@ -174,20 +174,20 @@ $ npm install @adobe/aem-react-editable-components
    };
    ```
 
-   的 `setupProxy.spa-editor.auth.basic.js` 文件应该如下所示：
+   此 `setupProxy.spa-editor.auth.basic.js` 檔案應如下所示：
 
    ![src/proxy/setupProxy.spa-editor.auth.basic.js](./assets/spa-bootstrap/setup-proxy-spaeditor-js.png)
 
-   此代理配置执行两项主要操作：
+   此Proxy設定主要執行兩項作業：
 
-   1. 特定于SPA的请求代理(`http://localhost:3000`)到AEM `http://localhost:4502`
-      + 它仅代理其路径与指示AEM应提供服务的模式匹配的请求，如 `toAEM(path, req)`.
-      + 它会将SPA路径重写到与之相对的AEM页面，如 `pathRewriteToAEM(path, req)`
-   1. 它会向所有请求添加CORS标头，以便允许访问AEM内容（由定义） `res.header("Access-Control-Allow-Origin", REACT_APP_HOST_URI);`
-      + 如果未添加，则在SPA中加载AEM内容时会发生CORS错误。
+   1. 代理向SPA提出的特定請求(`http://localhost:3000`)至AEM `http://localhost:4502`
+      + 它只會代理其路徑符合模式的請求，這些模式指出這些請求應該由AEM提供服務，如中的定義 `toAEM(path, req)`.
+      + 它會將SPA路徑重寫至其對應的AEM頁面，如中所定義 `pathRewriteToAEM(path, req)`
+   1. 它會將CORS標頭新增至所有請求，以允許存取AEM內容（如所定義） `res.header("Access-Control-Allow-Origin", REACT_APP_HOST_URI);`
+      + 如果未新增此專案，在SPA中載入AEM內容時就會發生CORS錯誤。
 
-1. 打开文件 `src/setupProxy.js`
-1. 查看指向 `setupProxy.spa-editor.auth.basic` 代理配置文件：
+1. 開啟檔案 `src/setupProxy.js`
+1. 檢閱指向 `setupProxy.spa-editor.auth.basic` proxy設定檔：
 
    ```
    ...
@@ -197,18 +197,18 @@ $ npm install @adobe/aem-react-editable-components
    ...
    ```
 
-请注意，对 `src/setupProxy.js` 或者引用的文件需要重新启动SPA。
+注意，任何對 `src/setupProxy.js` 或是參考的檔案需要重新啟動SPA。
 
-## 静态SPA资源
+## 靜態SPA資源
 
-静态SPA资源（如WKND徽标和加载图形）需要更新其src URL以强制从远程SPA主机加载。 如果为左侧相对，则在SPA Editor中加载SPA以进行创作时，这些URL默认使用AEM主机，而不是SPA，从而导致404个请求，如下图所示。
+靜態SPA資源（例如WKND標誌和載入圖形）需要更新其src URL，以強制從遠端SPA主機載入。 如果保留為相對，則在SPA編輯器中載入SPA以進行編寫時，這些URL預設為使用AEM主機而不是SPA，這會產生404個請求，如下圖所示。
 
-![静态资源损坏](./assets/spa-bootstrap/broken-static-resource.png)
+![中斷的靜態資源](./assets/spa-bootstrap/broken-static-resource.png)
 
-要解决此问题，请使由远程SPA托管的静态资源使用包含远程SPA源的绝对路径。
+若要解決此問題，請讓遠端SPA託管的靜態資源使用包含遠端SPA來源的絕對路徑。
 
-1. 在IDE中打开SPA项目
-1. 打开SPA环境变量文件 `src/.env.development` 并为SPA公共URI添加变量：
+1. 在IDE中開啟SPA專案
+1. 開啟SPA環境變數檔案 `src/.env.development` 並為SPA公用URI新增變數：
 
    ```
    ...
@@ -216,10 +216,10 @@ $ npm install @adobe/aem-react-editable-components
    REACT_APP_PUBLIC_URI=http://localhost:3000
    ```
 
-   _部署到AEMas a Cloud Service时，您需要为 `.env` 文件。_
+   _部署至AEMas a Cloud Service時，您需要 `.env` 檔案。_
 
-1. 打开文件 `src/App.js`
-1. 从SPA环境变量导入SPA公共URI
+1. 開啟檔案 `src/App.js`
+1. 從SPA環境變數匯入SPA公用URI
 
    ```javascript
    const {  REACT_APP_PUBLIC_URI } = process.env;
@@ -227,13 +227,13 @@ $ npm install @adobe/aem-react-editable-components
    function App() { ... }
    ```
 
-1. 为WKND徽标添加前缀 `<img src=.../>` with `REACT_APP_PUBLIC_URI` 以强制对SPA执行决议。
+1. 為WKND標誌加上前置詞 `<img src=.../>` 替換為 `REACT_APP_PUBLIC_URI` 以強制對SPA解決問題。
 
    ```html
    <img src={REACT_APP_PUBLIC_URI + '/' +  logo} className="logo" alt="WKND Logo"/>
    ```
 
-1. 在中加载图像时执行相同的操作 `src/components/Loading.js`
+1. 在中載入影像時執行相同動作 `src/components/Loading.js`
 
    ```javascript
    const { REACT_APP_PUBLIC_URI } = process.env;
@@ -248,7 +248,7 @@ $ npm install @adobe/aem-react-editable-components
    }
    ```
 
-1. 对于 __两个实例__ 中的“返回”按钮 `src/components/AdventureDetails.js`
+1. 對於 __兩個執行個體__ 中的「上一步」按鈕 `src/components/AdventureDetails.js`
 
    ```javascript
    const { REACT_APP_PUBLIC_URI } = process.env;
@@ -261,23 +261,23 @@ $ npm install @adobe/aem-react-editable-components
    }
    ```
 
-的 `App.js`, `Loading.js`和 `AdventureDetails.js` 文件应该如下所示：
+此 `App.js`， `Loading.js`、和 `AdventureDetails.js` 檔案應如下所示：
 
-![静态资源](./assets/spa-bootstrap/static-resources.png)
+![靜態資源](./assets/spa-bootstrap/static-resources.png)
 
-## AEM响应式网格
+## AEM回應式格線
 
-要支持SPA编辑器的布局模式用于SPA中的可编辑区域，我们必须将AEM响应式网格CSS集成到SPA中。 别担心 — 此网格系统仅适用于可编辑的容器，您可以使用所选的网格系统来驱动其余SPA的布局。
+若要為SPA中的可編輯區域支援SPA編輯器的版面模式，我們必須將AEM回應式格線CSS整合到SPA中。 別擔心 — 此格點系統僅適用於可編輯的容器，而且您可以使用您選擇的格點系統來驅動SPA其餘部分的版面。
 
-将AEM响应式网格SCSS文件添加到SPA。
+將AEM回應式格線SCSS檔案新增至SPA。
 
-1. 在IDE中打开SPA项目
-1. 下载以下两个文件并将其复制到 `src/styles`
-   + [_grid.scss](./assets/spa-bootstrap/_grid.scss)
-      + AEM响应式网格SCSS生成器
-   + [_grid-init.scss](./assets/spa-bootstrap/_grid-init.scss)
-      + 调用 `_grid.scss` 使用SPA特定的断点（桌面和移动设备）和列(12)。
-1. 打开 `src/App.scss` 导入 `./styles/grid-init.scss`
+1. 在IDE中開啟SPA專案
+1. 下載下列兩個檔案並複製到中 `src/styles`
+   + [_格線.scss](./assets/spa-bootstrap/_grid.scss)
+      + AEM回應式格線SCSS產生器
+   + [_格線 — init.scss](./assets/spa-bootstrap/_grid-init.scss)
+      + 叫用 `_grid.scss` 使用SPA特定的中斷點（桌上型電腦和行動裝置）和欄(12)。
+1. 開啟 `src/App.scss` 並匯入 `./styles/grid-init.scss`
 
    ```scss
    ...
@@ -285,29 +285,29 @@ $ npm install @adobe/aem-react-editable-components
    ...
    ```
 
-的 `_grid.scss` 和 `_grid-init.scss` 文件应该如下所示：
+此 `_grid.scss` 和 `_grid-init.scss` 檔案應如下所示：
 
-![AEM响应式网格SCSS](./assets/spa-bootstrap/aem-responsive-grid.png)
+![AEM回應式格線SCSS](./assets/spa-bootstrap/aem-responsive-grid.png)
 
-现在，SPA中包含为添加到AEM容器的组件支持AEM布局模式所需的CSS。
+現在SPA包含必要的CSS，以便支援新增至AEM容器的元件的AEM配置模式。
 
-## 实用程序类
+## 公用程式類別
 
-将以下实用程序类中的代码复制到您的React应用程序项目中。
+將下列公用程式類別中的複製到您的React應用程式專案中。
 
-+ [RoutedLink.js](./assets/spa-bootstrap/RoutedLink.js) to `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/RoutedLink.js`
-+ [EditorPlaceholder.js](./assets/spa-bootstrap/EditorPlaceholder.js) to `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/util/EditorPlaceholder.js`
-+ [withConditionalPlaceholder.js](./assets/spa-bootstrap/withConditionalPlaceholder.js) to `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/util/withConditionalPlaceholder.js`
-+ [withStandardBaseCssClass.js](./assets/spa-bootstrap/withStandardBaseCssClass.js) to `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/util/withStandardBaseCssClass.js`
++ [RoutedLink.js](./assets/spa-bootstrap/RoutedLink.js) 至 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/RoutedLink.js`
++ [editorplaceholder.js](./assets/spa-bootstrap/EditorPlaceholder.js) 至 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/util/EditorPlaceholder.js`
++ [withConditionalPlaceholder.js](./assets/spa-bootstrap/withConditionalPlaceholder.js) 至 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/util/withConditionalPlaceholder.js`
++ [withstandardBaseCssClass.js](./assets/spa-bootstrap/withStandardBaseCssClass.js) 至 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app/src/components/editable/core/util/withStandardBaseCssClass.js`
 
-![远程SPA实用程序类](./assets/spa-bootstrap/utility-classes.png)
+![遠端SPA公用程式類別](./assets/spa-bootstrap/utility-classes.png)
 
-## 启动SPA
+## 啟動SPA
 
-现在，SPA正在自动与AEM集成，让我们运行SPA并查看其外观！
+現在SPA已啟動以與AEM整合，讓我們執行SPA並檢視它是什麼樣子！
 
-1. 在命令行中，导航到SPA项目的根
-1. 使用常规命令启动SPA（如果尚未执行）
+1. 在命令列上，導覽至SPA專案的根目錄
+1. 使用一般指令啟動SPA （如果尚未完成）
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app
@@ -315,36 +315,36 @@ $ npm install @adobe/aem-react-editable-components
    $ npm run start
    ```
 
-1. 在上浏览SPA [http://localhost:3000](http://localhost:3000). 一切都应该好看！
+1. 瀏覽SPA於 [http://localhost:3000](http://localhost:3000). 一切應該看起來不錯！
 
-![SPA在http://localhost:3000上运行](./assets/spa-bootstrap/localhost-3000.png)
+![在http://localhost:3000上執行的SPA](./assets/spa-bootstrap/localhost-3000.png)
 
-## 在AEM SPA编辑器中打开SPA
+## 在SPA SPA編輯器中開啟AEM
 
-运行SPA时 [http://localhost:3000](http://localhost:3000)，则让我们使用AEM SPA Editor将其打开。 SPA中尚无任何内容可编辑，这仅会在AEM中验证SPA。
+SPA執行於 [http://localhost:3000](http://localhost:3000)，讓我們使用AEM SPA編輯器來開啟它。 在SPA中尚未有任何可編輯的內容，這只會驗證AEM中的SPA。
 
-1. 登录到AEM作者
-1. 导航到 __站点> WKND应用程序>美国> en__
-1. 选择 __WKND应用程序主页__ 点按 __编辑__，此时将显示SPA。
+1. 登入AEM Author
+1. 導覽至 __網站> WKND應用程式>我們>英文__
+1. 選取 __wknd應用程式首頁__ 並點選 __編輯__，則會顯示SPA。
 
-   ![编辑WKND应用程序主页](./assets/spa-bootstrap/edit-home.png)
+   ![編輯WKND應用程式首頁](./assets/spa-bootstrap/edit-home.png)
 
-1. 切换到 __预览__ 使用右上角的模式切换器
-1. 单击周围的SPA
+1. 切換至 __預覽__ 使用右上方的模式切換器
+1. 在SPA周圍按一下
 
-   ![SPA在http://localhost:3000上运行](./assets/spa-bootstrap/spa-editor.png)
+   ![在http://localhost:3000上執行的SPA](./assets/spa-bootstrap/spa-editor.png)
 
 ## 恭喜！
 
-您已引导远程SPA以兼容AEM SPA编辑器！ 您现在知道如何：
+您已啟動遠端SPA，使其與AEM SPA Editor相容！ 您現在知道如何：
 
-+ 将AEM SPA Editor JS SDK npm依赖项添加到SPA项目
-+ 配置SPA环境变量
-+ 将ModelManager API与SPA集成
-+ 为SPA设置内部代理，以便将相应的内容请求路由到AEM
-+ 解决在SPA Editor上下文中解决静态SPA资源的问题
-+ 添加AEM响应式网格CSS以支持在AEM可编辑的容器中进行布局
++ 將AEM SPA Editor JS SDK npm相依性新增至SPA專案
++ 設定您的SPA環境變數
++ 將ModelManager API與SPA整合
++ 設定SPA的內部Proxy，以便將適當的內容請求路由到AEM
++ 解決在SPA Editor內容中解析靜態SPA資源的問題
++ 新增AEM Responsive Grid CSS以支援AEM可編輯容器中的版面配置
 
 ## 后续步骤
 
-现在，我们已实现与AEM SPA Editor兼容性的基准，接下来可以开始引入可编辑的区域。 我们先看看如何 [固定可编辑组件](./spa-fixed-component.md) 中。
+我們已經達到AEM SPA Editor相容性的基準，現在我們可以開始引入可編輯區域。 我們先來看一下如何放置 [固定可編輯元件](./spa-fixed-component.md) 在SPA中。

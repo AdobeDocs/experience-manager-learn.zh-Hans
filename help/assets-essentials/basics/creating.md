@@ -1,6 +1,6 @@
 ---
-title: 使用Assets Essentials创建内容
-description: 了解如何使用Adobe Photoshop Express上传资产、创建版本，甚至编辑资产。
+title: 使用Assets Essentials建立內容
+description: 瞭解如何使用Adobe Photoshop Express上傳資產、建立版本，甚至編輯資產。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 使用Assets Essentials创建内容
+# 使用Assets Essentials建立內容
 
-了解如何使用Adobe Photoshop Express上传资产、创建版本，甚至编辑资产。
+瞭解如何使用Adobe Photoshop Express上傳資產、建立版本，甚至編輯資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335746?quality=12&learn=on)

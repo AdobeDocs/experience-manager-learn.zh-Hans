@@ -1,6 +1,6 @@
 ---
-title: 云5 — 重新点号
-description: 使用REPOINIT初始化AEM存储库
+title: Cloud 5 - REPOINIT
+description: 使用REPOINIT初始化AEM存放庫
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ---
 
-# 云5 — 重新点号
+# Cloud 5 - REPOINIT
 
-REPOINTIT — 或Sling存储库初始值设定项快速入门。 了解一些技巧，以释放使用此工具及其某些用例的强大功能。
+開始使用REPOINIT — 或Sling存放庫初始設定式。 瞭解一些技巧以釋放使用此工具的強大功能及其部分使用案例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343474?quality=12&learn=on)
 
-## 此视频中涵盖的内容
+## 本影片涵蓋的內容
 
-+ 重新定位概述
-+ [重新指向语法](https://sling.apache.org/documentation/bundles/repository-initialization.html#appendix-a-repoinit-syntax-parser-test-scenarios-1)
++ REPOINIT概觀
++ [REPOINIT語法](https://sling.apache.org/documentation/bundles/repository-initialization.html#appendix-a-repoinit-syntax-parser-test-scenarios-1)

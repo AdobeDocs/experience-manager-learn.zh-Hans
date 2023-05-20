@@ -1,6 +1,6 @@
 ---
-title: 在DAM中标记和存储AEM Forms DoR
-description: 本文将介绍在AEM DAM中存储和标记AEM Forms生成的DoR的用例。 文档的标记是根据提交的表单数据完成的。
+title: 在DAM中標籤和儲存AEM Forms DoR
+description: 本文將逐步解說在AEM DAM中儲存和標籤AEM Forms產生的DoR的使用案例。 檔案的標籤是根據提交的表單資料完成的。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,21 +15,21 @@ ht-degree: 0%
 
 ---
 
-# 在DAM中标记和存储AEM Forms DoR {#tagging-and-storing-aem-forms-dor-in-dam}
+# 在DAM中標籤和儲存AEM Forms DoR {#tagging-and-storing-aem-forms-dor-in-dam}
 
-本文将介绍在AEM DAM中存储和标记AEM Forms生成的DoR的用例。 文档的标记是根据提交的表单数据完成的。
+本文將逐步解說在AEM DAM中儲存和標籤AEM Forms產生的DoR的使用案例。 檔案的標籤是根據提交的表單資料完成的。
 
-客户的常见要求是在AEM DAM中存储并标记AEM Forms生成的记录文档(DoR)。 文档的标记必须基于自适应Forms提交的数据。 例如，如果提交数据中的雇佣状态为“已停用”，则我们希望使用“已停用”标记来标记文档，并将该文档存储在DAM中。
+客戶的一個常見要求是儲存和標籤AEM Forms在AEM DAM中產生的記錄檔案(DoR)。 檔案的標籤必須以Adaptive Forms提交的資料為基礎。 例如，如果提交資料中的僱用狀態為「已淘汰」，我們想使用「已淘汰」標籤檔案並將檔案儲存在DAM中。
 
-用例如下：
+使用案例如下：
 
-* 用户填写自适应表单。 在自适应表单中，捕获用户的婚姻状态（前单身）和就业状态（前已退休）。
-* 提交表单时，会触发AEM工作流。 此工作流会使用婚姻状态（单个）和雇佣状态（已停用）标记文档，并将文档存储在DAM中。
-* 文档存储到DAM中后，管理员应该能够通过这些标记来搜索文档。 例如，在“单个”或“已停用”上搜索将获取相应的DoR。
+* 使用者填寫最適化表單。 在最適化表單中，會擷取使用者的婚姻狀況（不含單身）和就業狀況（不含退休）。
+* 在表單提交時，會觸發AEM Workflow。 此工作流程會標籤具有婚姻狀態（單身）和僱用狀態（已淘汰）的檔案，並將檔案儲存在DAM中。
+* 將檔案儲存在DAM中後，管理員應該能夠按這些標籤搜尋檔案。 例如，搜尋「單一」或「已淘汰」會擷取適當的DoR。
 
-为了满足此用例的要求，编写了自定义流程步骤。 在此步骤中，我们将从提交的数据中获取相应数据元素的值。 然后，使用此值构建标记拼贴。 例如，如果婚姻状态元素的值为“Single”，则标记标题将变为**Peak:EmploymentStatus/Single。 **使用TagManager API ，我们会找到标记并将标记应用到DoR。
+為了滿足此使用案例，已編寫自訂流程步驟。 在此步驟中，我們會從提交的資料中擷取適當資料元素的值。 然後我們使用此值來建構標籤拼貼。 例如，如果婚姻狀況元素的值為「Single」，則標籤標題會變成**Peak：EmploymentStatus/Single。 **使用TagManager API ，我們會找到標籤並將標籤套用至DoR。
 
-以下是用于在AEM DAM中标记和存储记录文档的完整代码。
+以下是在AEM DAM中標籤和儲存記錄檔案的完整程式碼。
 
 ```java
 package com.aemforms.setvalue.core;
@@ -156,27 +156,27 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 }
 ```
 
-要使此示例在您的系统上工作，请按照下面列出的步骤操作：
-* [部署Developmingwithserviceuser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+若要讓此範例在您的系統上運作，請遵循下列步驟：
+* [部署Developing withserviceuser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下载和部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 这是自定义OSGI包，用于从提交的表单数据中设置标记。
+* [下載和部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 這是自訂OSGI套件組合，會從提交的表單資料中設定標籤。
 
-* [下载示例自适应表单](assets/tag-and-store-in-dam-adaptive-form.zip)
+* [下載最適化表單範例](assets/tag-and-store-in-dam-adaptive-form.zip)
 
-* [转到Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [前往Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* 单击Create |文件上传并上传dam-adaptive-form.zip中的标记和存储
+* 按一下建立 |檔案上傳和上傳tag-and-store-in-dam-adaptive-form.zip
 
-* [导入文章资产](assets/tag-and-store-in-dam-assets.zip) 使用AEM包管理器
-* 打开 [预览模式中的示例表单](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **填写所有字段** 并提交表格。
-* [导航到DAM中的“峰值”文件夹](http://localhost:4502/assets.html/content/dam/Peak). 您应会在Peak文件夹中看到DoR。 检查文档的属性。 应正确标记。
-恭喜你!! 您已成功在系统上安装示例
+* [匯入文章資產](assets/tag-and-store-in-dam-assets.zip) 使用AEM封裝管理員
+* 開啟 [預覽模式下的範例表單](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **填寫所有欄位** 並提交表單。
+* [導覽至DAM中的尖峰資料夾](http://localhost:4502/assets.html/content/dam/Peak). 您應該會在Peak資料夾中看見DoR。 檢查檔案的屬性。 應該適當地加以標籤。
+恭喜!! 您已成功在系統上安裝範例
 
-* 让我们来探索 [工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) 表单提交时触发的URL。
-* 工作流中的第一步是通过关联申请人姓名和居住县来创建唯一的文件名。
-* 工作流的第二步传递标记层次结构和需要标记的表单字段元素。 流程步骤从提交的数据中提取值，并构建需要标记文档的标记标题。
-* 如果要将DoR存储在DAM的其他文件夹中，请使用下面屏幕截图中指定的配置属性指定文件夹位置。
+* 讓我們來探索 [工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) 會在表單提交時觸發。
+* 工作流程的第一步是串連申請人名稱和居住縣，以建立唯一的檔案名稱。
+* 工作流程的第二個步驟會傳遞需要標籤的標籤階層與表單欄位元素。 處理步驟會從提交的資料中擷取值，並建構標籤檔案所需的標籤標題。
+* 如果您想要將DoR儲存在DAM中的其他資料夾，您可以使用以下熒幕擷取畫面中指定的設定屬性來指定資料夾位置。
 
-其他两个参数特定于“自适应表单提交”选项中指定的“DoR”和“数据文件路径”。 请确保此处指定的值与自适应表单提交选项中指定的值匹配。
+其他兩個引數專用於最適化表單提交選項中指定的DoR和資料檔案路徑。 請確定您在此指定的值與您在最適化表單提交選項中指定的值相符。
 
-![标记多尔](assets/tag_dor_service_configuration.gif)
+![標籤Dor](assets/tag_dor_service_configuration.gif)

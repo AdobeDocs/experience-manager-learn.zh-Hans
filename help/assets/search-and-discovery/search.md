@@ -1,6 +1,6 @@
 ---
 title: 搜索
-description: 了解如何使用AEM Omnisearch快速发现资产。
+description: 瞭解如何使用AEM Omnisearch快速探索資產。
 feature: Search
 version: Cloud Service
 kt: 4312
@@ -19,6 +19,6 @@ ht-degree: 9%
 
 # 搜索{#aem-assets-search}
 
-了解如何使用AEM Omnisearch快速发现资产。
+瞭解如何使用AEM Omnisearch快速探索資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32054?quality=12&learn=on)

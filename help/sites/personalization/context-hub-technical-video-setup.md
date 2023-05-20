@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Sites设置ContextHub进行个性化
-description: ContextHub是用于存储、处理和呈现上下文数据的框架。 ContextHub Javascript API允许您访问存储区，以根据需要创建、更新和删除数据。 因此， ContextHub表示页面上的数据层。 本页介绍如何将ContextHub添加到AEM网站页面。
+title: 使用AEM Sites設定ContextHub以進行個人化
+description: ContextHub是一種用於儲存、操控和呈現內容資料的架構。 ContextHub Javascript API可讓您存取存放區，以視需要建立、更新和刪除資料。 因此，ContextHub代表頁面上的資料層。 本頁面說明如何將Context Hub新增至AEM網站頁面。
 feature: Context Hub
 topics: personalization
 audience: developer, architect
@@ -18,44 +18,44 @@ ht-degree: 3%
 
 ---
 
-# 为个性化设置ContextHub {#set-up-contexthub}
+# 設定ContextHub以進行個人化 {#set-up-contexthub}
 
-ContextHub是用于存储、处理和呈现上下文数据的框架。 ContextHub Javascript API允许您访问存储区，以根据需要创建、更新和删除数据。 因此， ContextHub表示页面上的数据层。 本页介绍如何将ContextHub添加到AEM网站页面。
+ContextHub是一種用於儲存、操控和呈現內容資料的架構。 ContextHub Javascript API可讓您存取存放區，以視需要建立、更新和刪除資料。 因此，ContextHub代表頁面上的資料層。 本頁面說明如何將Context Hub新增至AEM網站頁面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23765?quality=12&learn=on)
 
 >[!NOTE]
 >
->我们为此视频使用WKND引用网站，但该网站未包含在AEM版本中。 您可以下载 [此处提供最新版本](https://github.com/adobe/aem-guides-wknd/releases).
+>我們對此影片使用WKND參考網站，它不是AEM版本的一部分。 您可以下載 [此處為最新版本](https://github.com/adobe/aem-guides-wknd/releases).
 
-将ContextHub添加到您的页面以启用ContextHub功能并链接到ContextHub JavaScript库。 ContextHub JavaScript API提供对ContextHub管理的上下文数据的访问。
+將ContextHub新增至您的頁面，以啟用ContextHub功能並連結至ContextHub JavaScript資料庫。 ContextHub JavaScript API可讓您存取ContextHub管理的內容資料。
 
-## 将ContextHub添加到页面组件 {#adding-contexthub-to-a-page-component}
+## 將ContextHub新增至頁面元件 {#adding-contexthub-to-a-page-component}
 
-要启用ContextHub功能并链接到ContextHub JavaScript库，请包括 `contexthub` 组件 `<head>` 的子代码。 页面组件的HTL代码类似于以下示例：
+若要啟用ContextHub功能並連結至ContextHub JavaScript程式庫，請包含 `contexthub` 中的元件 `<head>` 區段。 頁面元件的HTL程式碼類似於以下範例：
 
 ```java
 <!--/* Include Context Hub */-->
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
 ```
 
-## 网站配置和ContextHub区段 {#site-configuration-and-contexthub-segments}
+## 網站設定和ContextHub區段 {#site-configuration-and-contexthub-segments}
 
-ContextHub包括一个分段引擎，用于管理区段并确定哪些区段针对当前上下文进行解析。 定义了多个区段。 您可以使用Javascript API [确定已解析的区段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments). 在 [[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html).
+ContextHub包含區段引擎，可管理區段並決定針對目前內容解析哪些區段。 已定義數個區段。 您可以使用Javascript API來 [決定已解析的區段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments). 在底下啟用網站的ContextHub區段 [[!UICONTROL 設定瀏覽器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html).
 
-## 创建区段 {#create-segments}
+## 建立區段 {#create-segments}
 
-创建可用作Teaser规则的AEM区段。 即，定义Teaser中的内容在网页上显示的时间。 然后，可以根据访客的需求和兴趣明确定位内容，具体取决于他们匹配的区段。
+建立作為Teaser規則的AEM區段。 也就是說，它們定義了Teaser中的內容何時出現在網頁上。 接著，即可根據訪客的相符區段，針對其需求和興趣特別鎖定內容。
 
-## 将云配置、区段路径和ContextHub路径分配给您的网站 {#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
+## 指派雲端設定、區段路徑和ContextHub路徑至您的網站 {#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
 
-将云配置路径、分段路径和ContextHub路径分配到您的站点根节点，以便能够为受众创建个性化体验。 使用ContextHub，您可以处理上下文数据并测试已解析的区段。
+將雲端設定路徑、分段路徑和ContextHub路徑指派至您的網站根節點，好讓您可以為對象建立個人化體驗。 使用ContextHub，您可以操作內容資料並測試已解析的區段。
 
 ![CRXDE Lite](assets/crx-de-properties.png)
 
-您可以在下面阅读有关ContextHub和分段的更多信息：
+您可以閱讀以下有關ContextHub和區段的更多資訊：
 
 * [ContextHub](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub.html)
-* [将ContextHub添加到页面和访问存储](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html)
+* [將Context Hub新增至頁面並存取存放區](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html)
 * [了解分段](https://helpx.adobe.com/experience-manager/6-5/sites/classic-ui-authoring/using/classic-personalization-campaigns-segmentation.html)
 * [使用 ContextHub 配置分段](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/segmentation.html)

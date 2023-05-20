@@ -1,6 +1,6 @@
 ---
-title: 从提交的数据xml中提取节点
-description: 自定义进程步骤，将负载文件夹下的写文档添加到文件系统
+title: 從提交的資料xml擷取節點
+description: 自訂程式步驟，將位於承載資料夾下的寫入檔案新增至檔案系統
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -16,19 +16,19 @@ ht-degree: 0%
 
 ---
 
-# 从提交的数据xml中提取节点
+# 從提交的資料xml擷取節點
 
-此自定义流程步骤是通过从另一个xml文档中提取节点来创建新的xml文档。 当要将提交的数据与xdp模板合并以生成PDF时，您需要使用此模板。 例如，在提交自适应表单时，需要与xdp模板合并的数据就位于数据元素内。 在这种情况下，您需要通过提取相应的数据元素来创建另一个xml文档。
+此自訂流程步驟是從另一個xml檔案中擷取節點，以建立新的xml檔案。 當您想要將提交的資料與xdp範本合併以產生pdf時，需要使用此選項。 例如，當您提交最適化表單時，您需要與xdp範本合併的資料位於資料元素內。 在這種情況下，您需要透過擷取適當的資料元素來建立另一個xml檔案。
 
-以下屏幕快照显示了您需要传递到自定义流程步骤的参数
-![过程步骤](assets/create-xml-process-step.png)
-以下是参数
-* Data.xml — 要从中提取节点的xml文件
-* datamerge.xml — 使用提取的节点创建的新xml
-* /afData/afUnboundData/data — 要提取的节点
+以下熒幕擷圖顯示您需要傳遞至自訂流程步驟的引數
+![process-step](assets/create-xml-process-step.png)
+以下是引數
+* Data.xml — 您要從中擷取節點的xml檔案
+* datatomerge.xml — 使用擷取的節點建立的新xml
+* /afData/afUnboundData/data — 要擷取的節點
 
 
-以下屏幕截图显示了在有效负荷文件夹下创建datamerge.xml的内容
+以下熒幕擷圖顯示正在裝載資料夾下建立的datamerge.xml
 ![create-xml](assets/create-xml.png)
 
-[可从此处下载自定义包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
+[自訂套件組合可從這裡下載](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)

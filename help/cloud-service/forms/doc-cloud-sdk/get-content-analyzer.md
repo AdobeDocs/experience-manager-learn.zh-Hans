@@ -1,6 +1,6 @@
 ---
-title: 创建内容分析器
-description: 创建包含有关REST调用的输入参数信息的JSON部分。
+title: 建立內容分析器
+description: 建立包含REST呼叫輸入引數資訊的JSON部分。
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ---
 
-# 创建分析器请求
+# 建立分析器請求
 
-创建定义以下项的JSON片段：
+建立定義以下專案的JSON片段：
 
-+ 输入
-+ 参数
-+ 输出。
++ 輸入
++ 引數
++ 輸出。
 
-此处提供了此[表单参数的详细信息。](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
+此專案的詳細資料 [表單引數可在此處取得。](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
 
-下面列出的示例代码为所有Office 365文档类型生成JSON片段。
+下列範常式式碼會為所有Office 365檔案型別產生JSON片段。
 
 ```java
 package com.aemforms.doccloud.core.impl;

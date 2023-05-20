@@ -1,6 +1,6 @@
 ---
-title: 如何在AEM中关联和取消关联资产
-description: 了解如何在AEM中建立和管理资产之间的关系。
+title: 如何關聯和取消關聯AEM中的資產
+description: 瞭解如何在AEM中建立和管理資產之間的關係。
 feature: Asset Management
 role: User
 level: Beginner
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 关联和取消关联
+# 建立關聯和取消關聯
 
-了解如何在AEM中建立和管理资产之间的关系。
+瞭解如何在AEM中建立和管理資產之間的關係。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331107?quality=12&learn=on)

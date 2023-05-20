@@ -1,6 +1,6 @@
 ---
-title: 了解AEM Maven项目的结构。
-description: 了解AEM Maven项目的结构和子项目。
+title: 瞭解AEM Maven專案的結構。
+description: 瞭解AEM Maven專案的結構和子專案。
 role: Developer
 level: Beginner
 topic: Development
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# AEM Maven项目结构
+# AEM Maven專案結構
 
-快速查看AEM Maven项目的结构和子项目及其用途。
+快速瞭解AEM Maven專案的結構和子專案及其用途。
 
 >[!VIDEO](https://video.tv.adobe.com/v/334280?quality=12&learn=on)

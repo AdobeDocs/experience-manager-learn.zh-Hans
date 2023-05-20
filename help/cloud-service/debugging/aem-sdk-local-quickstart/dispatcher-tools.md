@@ -1,40 +1,40 @@
 ---
-title: 调试Dispatcher工具
-description: “调度程序工具”提供了一个容器化的Apache Web Server环境，该环境可用于在本地模拟AEM作为Cloud Services的AEM发布服务的调度程序。 调试AEM工具的日志和缓存内容对于确保端到端Dispatcher应用程序和支持缓存和安全配置正确至关重要。
+title: 偵錯Dispatcher工具
+description: Dispatcher工具提供容器化的Apache Web Server環境，可用於在本機模擬AEM作為Cloud Services的AEM Publish服務的Dispatcher。 偵錯Dispatcher工具的記錄和快取內容對於確保端對端AEM應用程式以及支援的快取和安全設定正確無誤至關重要。
 feature: Dispatcher
 kt: 5918
 topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
+exl-id: f0adf7a6-c7c2-449a-9fa5-402c54b812e5
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
+# 偵錯Dispatcher工具
 
-# 调试Dispatcher工具
+Dispatcher工具提供容器化的Apache Web Server環境，可用於在本機模擬AEM作為Cloud Services的AEM Publish服務的Dispatcher。
 
-“调度程序工具”提供了一个容器化的Apache Web Server环境，该环境可用于在本地模拟AEM作为Cloud Services的AEM发布服务的调度程序。
-
-调试AEM工具的日志和缓存内容对于确保端到端Dispatcher应用程序和支持缓存和安全配置正确至关重要。
+偵錯Dispatcher工具的記錄和快取內容對於確保端對端AEM應用程式以及支援的快取和安全設定正確無誤至關重要。
 
 >[!NOTE]
 >
->由于调度程序工具基于容器，因此每次重新启动它时，以前的日志和缓存内容都会被销毁。
+>由於Dispatcher工具是以容器為基礎，每次重新啟動時，先前的記錄和快取內容都會遭到破壞。
 
-## Dispatcher工具日志
+## Dispatcher工具記錄
 
-可通过`stdout`或`bin/docker_run`命令获取Dispatcher工具日志，或者通过`/etc/https/logs`的Docker容器获取更多详细信息。
+Dispatcher工具記錄可透過 `stdout` 或 `bin/docker_run` 命令或提供更多詳細資訊，可在Docker容器中找到，網址為 `/etc/https/logs`.
 
-有关如何直接访问Dispatcher工具Docker容器日志的说明，请参阅[Dispatcher日志](./logs.md#dispatcher-logs)。
+另請參閱 [Dispatcher記錄](./logs.md#dispatcher-logs) 有關如何直接存取Dispatcher工具的Docker容器記錄檔的說明。
 
-## Dispatcher工具缓存
+## Dispatcher工具快取
 
-### 访问Docker容器中的日志
+### 存取Docker容器中的日誌
 
-Dispatcher缓存可以直接在位于` /mnt/var/www/html`的Docker容器中访问。
+Dispatcher快取可以直接在Docker容器中存取，網址為 ` /mnt/var/www/html`.
 
 ```shell
 $ docker ps
@@ -52,9 +52,9 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-### 将Docker日志复制到本地文件系统
+### 將Docker日誌複製到本機檔案系統
 
-调度程序日志可以从位于`/mnt/var/www/html`的Docker容器复制到本地文件系统，以便使用您喜爱的工具进行检查。 请注意，这是一个时间点副本，不提供对缓存的实时更新。
+可以從Docker容器複製排程程式日誌，位置為 `/mnt/var/www/html` 至本機檔案系統以使用您最喜愛的工具進行檢查。 請注意，這是時間點復本，不會提供快取的即時更新。
 
 ```shell
 $ docker ps
@@ -66,4 +66,3 @@ CONTAINER ID        IMAGE                                       COMMAND         
 $ docker cp -L <CONTAINER ID>:/mnt/var/www/html cache 
 $ cd cache
 ```
-

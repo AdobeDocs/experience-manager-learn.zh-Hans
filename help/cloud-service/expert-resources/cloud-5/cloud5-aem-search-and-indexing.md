@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 AEM搜索和索引
-description: 我们的脚趾头伸进海洋，寻找和索引
+title: Cloud 5 AEM搜尋和索引
+description: 我們將腳趾伸進搜尋和索引的海洋
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -16,14 +16,14 @@ ht-degree: 8%
 
 ---
 
-# Cloud 5 AEM搜索和索引
+# Cloud 5 AEM搜尋和索引
 
-快速深入探索和索引的深海。 我们希望帮助教育您更有效地实现这一挑战性主题。
+快速深入探索搜尋和索引的深水區。 這是極具挑戰性的主題，我們希望可協助您更有效地完成交付工作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342374?quality=12&learn=on)
 
-## 此视频中涵盖的内容
+## 本影片涵蓋的內容
 
-+ 搜索和索引 [概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html)
-+ AEM [索引转换器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html)
-+ 专家系列 [深究](../../../cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
++ 搜尋和索引 [概觀](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html)
++ AEM [索引轉換器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html)
++ 專家系列 [深入分析](../../../cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)

@@ -1,6 +1,6 @@
 ---
-title: 如何生成自签名证书
-description: 生成用于应用SSL的自签名证书的步骤
+title: 如何產生自我簽署憑證
+description: 產生自我簽署憑證以套用SSL的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何生成自签名证书
+# 如何產生自我簽署憑證
 
-*此视频介绍如何生成自签名证书。*
+*本影片逐步解說產生自我簽署憑證的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335539?quality=12&learn=on)

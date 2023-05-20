@@ -1,6 +1,6 @@
 ---
-title: 配置开始面板
-description: 将静态文本组件添加到开始面板。
+title: 設定開始面板
+description: 將靜態文字元件新增至開始面板。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 配置开始面板
+# 設定開始面板
 
-使用富文本编辑器设置静态文本组件中的文本样式。
+使用RTF編輯器在靜態文字元件中設定文字的樣式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332235?quality=12&learn=on)

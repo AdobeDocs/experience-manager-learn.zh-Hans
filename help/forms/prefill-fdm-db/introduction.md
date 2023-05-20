@@ -1,6 +1,6 @@
 ---
-title: 使用表单数据模型预填表单
-description: 使用表单数据模型的请求属性预填自适应表单
+title: 使用表單資料模型預填表單
+description: 使用表單資料模型的請求屬性預填調適型表單
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4419
@@ -17,25 +17,25 @@ ht-degree: 2%
 
 ---
 
-# 使用表单数据模型预填表单
+# 使用表單資料模型預填表單
 
-您将学习如何使用表单数据模型的请求属性获取数据以填充自适应表单。
-完成本课程后，您将学习以下内容。
+您將瞭解如何使用表單資料模型的請求屬性來擷取資料以填入最適化表單。
+完成本課程後，您將學習下列內容。
 
-* 创建RDBMS支持的表单数据模型
-* 在2个实体之间创建关联
-* 使用返回的数据填充表 _get_ 表单数据模型服务
-* 使用表单数据模型的请求属性
+* 建立RDBMS支援的表單資料模型
+* 建立2個實體之間的關聯
+* 將傳回的資料填入表格中 _get_ 表單資料模型服務
+* 使用表單資料模型的請求屬性
 
-以下视频为您提供了课程的概述
+以下影片提供課程概覽
 >[!VIDEO](https://video.tv.adobe.com/v/36387?quality=12&learn=on)
 
 ## 前提条件
 
-* AEM Forms工作实例
-* 熟悉MySQL数据库和MySQL Workbench
-* 创建自适应Forms的一些经验
+* AEM Forms的工作執行個體
+* 熟悉MySQL資料庫和MySQL Workbench
+* 建立最適化Forms的部分經驗
 
 ## 后续步骤
 
-[创建数据库表](./create-database-tables.md)
+[建立資料庫表格](./create-database-tables.md)

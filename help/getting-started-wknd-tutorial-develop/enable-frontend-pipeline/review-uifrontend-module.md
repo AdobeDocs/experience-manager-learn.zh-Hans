@@ -1,6 +1,6 @@
 ---
-title: 查看全栈项目的ui.frontend模块
-description: 回顾基于Maven的全栈AEM Sites项目的前端开发、部署和交付生命周期。
+title: 檢閱完整棧疊專案的ui.frontend模組
+description: 審查Maven型全棧疊AEM Sites專案的前端開發、部署和傳送生命週期。
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -11,64 +11,64 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 2%
 
 ---
 
+# 檢閱完整棧疊AEM專案的「ui.frontend」模組 {#aem-full-stack-ui-frontent}
 
-# 查看全栈AEM项目的“ui.frontend”模块 {#aem-full-stack-ui-frontent}
-
-在中，我们将重点介绍全栈AEM项目的“ui.frontend”模块，以审查前端工件的开发、部署和交付 __WKND Sites项目__.
+在本章中，我們將檢閱完整棧疊AEM專案的前端成品開發、部署和交付，其重點為 __WKND網站專案__.
 
 
-## 目标 {#objective}
+## 目標 {#objective}
 
-* 了解AEM全栈项目中前端对象的构建和部署流程
-* 查看AEM全栈项目的 `ui.frontend` 模块 [webpack](https://webpack.js.org/) 配置
-* AEM客户端库（也称为clientlibs）生成过程
+* 瞭解AEM完整棧疊專案中前端成品的建置和部署流程
+* 檢閱AEM完整棧疊專案的 `ui.frontend` 模組的 [webpack](https://webpack.js.org/) 設定
+* AEM client library （也稱為clientlibs）產生程式
 
-## AEM全栈和快速站点创建项目的前端部署流程
+## AEM完整棧疊和快速網站建立專案的前端部署流程
 
 >[!IMPORTANT]
 >
->此视频介绍并演示了两者的前端流程 **全栈和快速网站创建** 项目来概述前端资源构建、部署和交付模型中的细微差异。
+>此影片說明並示範兩者的前端流程 **完整棧疊和快速網站建立** 專案，概述前端資源建置、部署和傳遞模型中的細微差異。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409344?quality=12&learn=on)
 
 ## 前提条件 {#prerequisites}
 
 
-* 克隆 [AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd)
-* 已构建并将克隆的AEM WKND Sites项目部署到AEMas a Cloud Service。
+* 原地複製 [AEM WKND網站專案](https://github.com/adobe/aem-guides-wknd)
+* 建立複製的AEM WKND Sites專案，並將其部署至AEMas a Cloud Service。
 
-请参阅AEM WKND Site项目 [README.md](https://github.com/adobe/aem-guides-wknd/blob/main/README.md) 以了解更多详细信息。
+請參閱AEM WKND網站專案 [README.md](https://github.com/adobe/aem-guides-wknd/blob/main/README.md) 以取得更多詳細資料。
 
-## AEM全栈项目前端项目流 {#flow-of-frontend-artifacts}
+## AEM完整棧疊專案前端成品流程 {#flow-of-frontend-artifacts}
 
-以下是 __开发、部署和交付__ 全栈AEM项目中前端工件的流量。
+以下是 __開發、部署和傳遞__ 完整棧疊AEM專案中的前端成品流程。
 
-![开发、部署和交付前端工件](assets/Dev-Deploy-Delivery-AEM-Project.png)
+![開發、部署及交付前端成品](assets/Dev-Deploy-Delivery-AEM-Project.png)
 
 
-在开发阶段，前端会通过更新 `ui.frontend/src/main/webpack` 文件夹。 然后，在构建时， [webpack](https://webpack.js.org/) module-bundler和maven插件会将这些文件转换为位于 `ui.apps` 模块。
+在開發階段，透過更新 `ui.frontend/src/main/webpack` 資料夾。 然後在建置期間， [webpack](https://webpack.js.org/) module-bundler和maven外掛程式可讓這些檔案變成底下最佳化的AEM clientlibs `ui.apps` 模組。
 
-运行 [__全栈__ Cloud Manager中的管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html).
+前端變更會在執行時部署至AEMas a Cloud Service環境 [__完整棧疊__ Cloud Manager中的管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html).
 
-前端资源通过以开头的URI路径传送到Web浏览器 `/etc.clientlibs/`，和通常缓存在AEM Dispatcher和CDN上。
+前端資源會透過開頭為的URI路徑傳送至網頁瀏覽器 `/etc.clientlibs/`和通常會在AEM Dispatcher和CDN上快取。
 
 
 >[!NOTE]
 >
-> 同样，在 __AEM快速网站创建历程__, [前端更改](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html) 通过运行 __前端__ 管道，请参阅 [设置管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html)
+> 同樣地，在 __AEM快速網站建立歷程__，則 [前端變更](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html) AEM as a Cloud Service藉由執行 __前端__ 管道，請參閱 [設定您的管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html)
 
-### 查看WKND Sites项目中的Web包配置 {#development-frontend-webpack-clientlib}
+### 檢閱WKND Sites專案中的Webpack設定 {#development-frontend-webpack-clientlib}
 
-* 有三个 __webpack__ 用于捆绑WKND站点前端资源的配置文件。
+* 共有三種 __webpack__ 用來捆綁WKND網站前端資源的設定檔案。
 
-   1. `webpack.common`  — 其中包含 __公共__ 配置以指导WKND资源捆绑和优化。 的 __输出__ 属性可告知在何处发出它创建的统一文件(也称为JavaScript包，但不要与AEM OSGi包混淆)。 默认名称设置为 `clientlib-site/js/[name].bundle.js`.
+   1. `webpack.common`  — 這包含 __一般__ 指示WKND資源套件組合和最佳化的設定。 此 __輸出__ 屬性會說明在何處發出它建立的整合檔案(也稱為JavaScript套件組合，但不要與AEM OSGi套件組合混淆)。 預設名稱設為 `clientlib-site/js/[name].bundle.js`.
 
    ```javascript
        ...
@@ -79,7 +79,7 @@ ht-degree: 2%
        ...    
    ```
 
-   1. `webpack.dev.js` 包含 __开发__ webpack-dev-serve的配置，并指向要使用的HTML模板。 它还包含运行于的AEM实例的代理配置 `localhost:4502`.
+   1. `webpack.dev.js` 包含 __開發__ webpack-dev-serve的設定，並指向要使用的HTML範本。 此外，它亦包含在上執行的AEM執行個體的Proxy設定 `localhost:4502`.
 
    ```javascript
        ...
@@ -91,7 +91,7 @@ ht-degree: 2%
        ...    
    ```
 
-   1. `webpack.prod.js` 包含 __生产__ 配置，并使用插件将开发文件转换为优化的包。
+   1. `webpack.prod.js` 包含 __生產__ 設定並使用外掛程式，將開發檔案轉換為最佳化的組合。
 
    ```javascript
        ...
@@ -107,7 +107,7 @@ ht-degree: 2%
    ```
 
 
-* 捆绑的资源将移至 `ui.apps` 模块使用 [aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator) 插件，使用 `clientlib.config.js` 文件。
+* 套件資源會移至 `ui.apps` 模組使用 [aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator) 外掛程式，使用中管理的設定 `clientlib.config.js` 檔案。
 
 ```javascript
     ...
@@ -127,18 +127,18 @@ ht-degree: 2%
     ...
 ```
 
-* 的 __frontend-maven-plugin__ 从 `ui.frontend/pom.xml` 在AEM项目构建期间协调webpack捆绑和clientlib生成。
+* 此 __frontend-maven-plugin__ 從 `ui.frontend/pom.xml` 在AEM專案建置期間，協調webpack套件組合和clientlib的產生。
 
 `$ mvn clean install -PautoInstallSinglePackage`
 
-### 部署到AEMas a Cloud Service {#deployment-frontend-aemaacs}
+### 部署至AEMas a Cloud Service {#deployment-frontend-aemaacs}
 
-的 [__全栈__ 管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#full-stack-pipeline) 将这些更改部署到AEMas a Cloud Service环境。
+此 [__完整棧疊__ 管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#full-stack-pipeline) 將這些變更部署到AEMas a Cloud Service環境。
 
 
-### 从AEMas a Cloud Service提交 {#delivery-frontend-aemaacs}
+### 從AEMas a Cloud Service傳遞 {#delivery-frontend-aemaacs}
 
-通过全栈管道部署的前端资源将从AEM Site传送到Web浏览器，如 `/etc.clientlibs` 文件。 您可以通过访问 [公共托管的WKND站点](https://wknd.site/content/wknd/us/en.html) 以及网页的查看来源。
+透過完整棧疊管道部署的前端資源會從AEM網站傳送至網頁瀏覽器，如下所示 `/etc.clientlibs` 檔案。 您可以造訪 [公開託管的WKND網站](https://wknd.site/content/wknd/us/en.html) 和檢視網頁的來源。
 
 ```html
     ....
@@ -152,8 +152,8 @@ ht-degree: 2%
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您已查看了全栈项目的ui.frontend模块
+恭喜，您已檢閱完整棧疊專案的ui.frontend模組
 
 ## 后续步骤 {#next-steps}
 
-在下一章中， [更新项目以使用前端管道](update-project.md)，您将更新AEM WKND Sites项目以为前端管道合同启用它。
+在下一章中， [更新專案以使用前端管道](update-project.md)，您將會更新AEM WKND Sites專案，以便為前端管道合約啟用它。

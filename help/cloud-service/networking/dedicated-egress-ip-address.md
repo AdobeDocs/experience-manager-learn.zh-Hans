@@ -1,6 +1,6 @@
 ---
-title: 专用出口IP地址
-description: 了解如何设置和使用专用出口IP地址，该地址允许来自AEM的出站连接源自专用IP。
+title: 專用輸出IP位址
+description: 瞭解如何設定和使用專用輸出IP位址，該位址允許來自AEM的輸出連線源自專用IP。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -16,47 +16,47 @@ ht-degree: 4%
 
 ---
 
-# 专用出口IP地址
+# 專用輸出IP位址
 
-了解如何设置和使用专用出口IP地址，该地址允许来自AEM的出站连接源自专用IP。
+瞭解如何設定和使用專用輸出IP位址，該位址允許來自AEM的輸出連線源自專用IP。
 
-## 什么是专用出口IP地址？
+## 什麼是專用輸出IP位址？
 
-专用出口IP地址允许来自AEMas a Cloud Service的请求使用专用IP地址，从而允许外部服务通过此IP地址过滤传入的请求。 赞 [灵活的出口端口](./flexible-port-egress.md)，专用出口IP允许您在非标准端口上出口。
+專用輸出IP位址允許來自AEMas a Cloud Service的請求使用專用IP位址，允許外部服務按此IP位址篩選傳入請求。 按讚 [彈性的輸出埠](./flexible-port-egress.md)，專用輸出IP可讓您從非標準連線埠輸出。
 
-Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专用出口IP地址是 [适当类型的网络基础架构](./advanced-networking.md)  的AEMas a Cloud Service。
+Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用輸出IP位址為最多 [適當型別的網路基礎結構](./advanced-networking.md)  的AEMas a Cloud Service。
 
 >[!MORELIKETHIS]
 >
-> 阅读AEMas a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedicated-egress-IP-address) 有关专用出口IP地址的更多详细信息。
+> 閱讀AEMas a Cloud Service [進階網路設定檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedicated-egress-IP-address) 以取得專用輸出IP位址的詳細資訊。
 
 ## 前提条件
 
-在设置专用出口IP地址时，需要满足以下条件：
+設定專用輸出IP位址時，需要下列專案：
 
-+ 包含的Cloud Manager API [Cloud Manager业务所有者权限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ 访问 [Cloud Manager API身份验证凭据](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
-   + 组织ID（也称IMS组织ID）
-   + 客户端ID（即API密钥）
-   + 访问令牌（也称载体令牌）
-+ Cloud Manager项目ID
-+ Cloud Manager环境ID
++ Cloud Manager API搭配 [Cloud Manager企業所有者許可權](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
++ 存取 [Cloud Manager API驗證認證](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
+   + 組織ID （亦稱為IMS組織ID）
+   + 使用者端ID （亦稱為API金鑰）
+   + 存取權杖（亦稱為持有人權杖）
++ Cloud Manager計畫ID
++ Cloud Manager環境ID
 
-有关更多详细信息，请观看以下演练，了解如何设置、配置和获取Cloud Manager API凭据，以及如何使用这些凭据进行Cloud Manager API调用。
+如需更多詳細資訊，請觀看以下逐步解說，瞭解如何設定、設定和取得Cloud Manager API認證，以及如何使用它們進行Cloud Manager API呼叫。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
-本教程使用 `curl` 以配置Cloud Manager API。 提供的 `curl` 命令采用Linux/macOS语法。 如果使用Windows命令提示符，请将 `\` 换行符 `^`.
+本教學課程使用 `curl` 以進行Cloud Manager API設定。 提供的 `curl` 命令會採用Linux/macOS語法。 如果使用Windows命令提示字元，請將 `\` 換行字元 `^`.
 
-## 在程序上启用专用出口IP地址
+## 在程式上啟用專用輸出IP位址
 
-首先，在AEMas a Cloud Service上启用并配置专用出口IP地址。
+首先，在AEMas a Cloud Service上啟用並設定專用輸出IP位址。
 
-1. 首先，使用Cloud Manager API确定需要高级网络的区域 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 的 `region name` 需要才能进行后续的Cloud Manager API调用。 通常，会使用生产环境所在的区域。
+1. 首先，使用Cloud Manager API判斷需要進階網路的地區 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 此 `region name` 進行後續Cloud Manager API呼叫所必需。 通常會使用生產環境所在的區域。
 
-   在 [Cloud Manager](https://my.cloudmanager.adobe.com) 下 [环境的详细信息](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中显示的区域名称可以是 [映射到区域代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 在Cloud Manager API中使用。
+   尋找您的AEMas a Cloud Service環境所在地區 [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [環境的詳細資訊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中顯示的區域名稱可以是 [已對應至地區代碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 用於Cloud Manager API。
 
-   __listRegions HTTP请求__
+   __listRegions HTTP要求__
 
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/regions \
@@ -66,9 +66,9 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
        -H 'Content-Type: application/json' 
    ```
 
-1. 使用Cloud Manager API为Cloud Manager计划启用专用出口IP地址 [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 使用适当的 `region` 从Cloud Manager API获取的代码 `listRegions` 操作。
+1. 使用Cloud Manager API為Cloud Manager計畫啟用專用輸出IP地址 [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 使用適當的 `region` 從Cloud Manager API取得的程式碼 `listRegions` 作業。
 
-   __createNetworkInfrastructure HTTP请求__
+   __createNetworkInfrastructure HTTP要求__
 
    ```shell
    $ curl -X POST https://cloudmanager.adobe.io/api/program/{programId}/networkInfrastructures \
@@ -79,11 +79,11 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
        -d '{ "kind": "dedicatedEgressIp", "region": "va7" }'
    ```
 
-   等待15分钟，让Cloud Manager计划配置网络基础架构。
+   等待15分鐘，讓Cloud Manager計畫布建網路基礎結構。
 
-1. 检查程序是否已完成 __专用出口IP地址__ 使用Cloud Manager API进行配置 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 从上一步中的createNetworkInfrastructure HTTP请求返回。
+1. 檢查程式是否已完成 __專用輸出IP位址__ 使用雲端管理員API進行設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 作業，使用 `id` 從上一步驟中的createNetworkInfrastructure HTTP要求傳回。
 
-   __getNetworkInfrastructure HTTP请求__
+   __getNetworkInfrastructure HTTP要求__
 
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/networkInfrastructure/{networkInfrastructureId} \
@@ -93,13 +93,13 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
        -H 'Content-Type: application/json'
    ```
 
-   验证HTTP响应是否包含 __状态__ of __就绪__. 如果尚未准备就绪，请每隔几分钟重新检查一次状态。
+   確認HTTP回應包含 __狀態__ 之 __就緒__. 如果尚未就緒，請每隔幾分鐘重新檢查一次狀態。
 
-## 为每个环境配置专用出口IP地址代理
+## 為每個環境設定專用輸出IP位址代理
 
-1. 配置 __专用出口IP地址__ 在每个AEMas a Cloud Service环境中使用Cloud Manager API进行配置 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
+1. 設定 __專用輸出IP位址__ 使用Cloud Manager API在每個AEMas a Cloud Service環境中進行設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。
 
-   __enableEnvironmentAdvancedNetworkingConfiguration HTTP请求__
+   __enableEnvironmentAdvancedNetworkingConfiguration HTTP要求__
 
    ```shell
    $ curl -X PUT https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
@@ -110,9 +110,9 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
        -d @./dedicated-egress-ip-address.json
    ```
 
-   在 `dedicated-egress-ip-address.json` 并通过 `... -d @./dedicated-egress-ip-address.json`.
+   在中定義JSON引數 `dedicated-egress-ip-address.json` 並提供給curl，透過 `... -d @./dedicated-egress-ip-address.json`.
 
-   [下载dedicated-express-ip-address.json示例](./assets/dedicated-egress-ip-address.json). 此文件仅是一个示例。 根据 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
+   [下載範例dedicated-egress-ip-address.json](./assets/dedicated-egress-ip-address.json). 此檔案只是一個範例。 根據以下網址記錄的選用/必填欄位，視需要設定您的檔案： [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
@@ -135,19 +135,19 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
    }
    ```
 
-   专用出口IP地址配置的HTTP签名仅与 [灵活的出口端口](./flexible-port-egress.md#enable-dedicated-egress-ip-address-per-environment) 因为它还支持可选 `nonProxyHosts` 配置。
+   專用輸出IP位址設定的HTTP簽章僅與 [彈性輸出連線埠](./flexible-port-egress.md#enable-dedicated-egress-ip-address-per-environment) 因為它也支援選用的 `nonProxyHosts` 設定。
 
-   `nonProxyHosts` 声明一组主机，端口80或443应通过默认的共享IP地址范围而不是专用出口IP路由。 `nonProxyHosts` 当通过共享IP的流量分配可以通过Adobe进一步自动优化时，可能会非常有用。
+   `nonProxyHosts` 宣告應透過預設共用IP位址範圍而不是專用輸出IP路由連線埠80或443的一組主機。 `nonProxyHosts` 當Adobe可進一步自動最佳化通過共用IP的流量時，這可能很有用。
 
-   对于 `portForwards` 映射时，高级网络定义了以下转发规则：
+   針對每個 `portForwards` 對應，進階網路會定義下列轉送規則：
 
-   | 代理主机 | 代理端口 |  | 外部主机 | 外部端口 |
+   | Proxy主機 | Proxy連線埠 |  | 外部主機 | 外部連線埠 |
    |---------------------------------|----------|----------------|------------------|----------|
    | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-1. 对于每个环境，使用Cloud Manager API验证出口规则是否有效 [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
+1. 對於每個環境，使用Cloud Manager API驗證輸出規則是否有效 [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。
 
-   __getEnvironmentAdvancedNetworkingConfiguration HTTP请求__
+   __getEnvironmentAdvancedNetworkingConfiguration HTTP要求__
 
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
@@ -157,41 +157,41 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
        -H 'Content-Type: application/json'
    ```
 
-1. 可以使用Cloud Manager API更新专用出口IP地址配置 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 记住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 操作，因此所有规则都必须随此操作的每次调用一起提供。
+1. 專用輸出IP位址設定可以使用Cloud Manager API更新 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 記住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 作業，因此每次呼叫此作業時，都必須提供所有規則。
 
-1. 获取 __专用出口IP地址__ 使用DNS解析程序(例如 [DNSChecker.org](https://dnschecker.org/)): `p{programId}.external.adobeaemcloud.com`，或通过运行 `dig` 命令行中。
+1. 取得 __專用輸出IP位址__ 使用DNS解析器(例如 [DNSChecker.org](https://dnschecker.org/))： `p{programId}.external.adobeaemcloud.com`，或透過執行 `dig` 命令列中的。
 
    ```shell
    $ dig +short p{programId}.external.adobeaemcloud.com
    ```
 
-   主机名不能为 `pinged`，因为它是出口和 _not_ 和入口。
+   主機名稱不可以是 `pinged`，因為它是輸出和 _not_ 和入口。
 
-   请注意 __专用出口IP地址__ 由程序中的所有AEMas a Cloud Service环境共享。
+   請注意 __專用輸出IP位址__ 由計畫中的所有AEMas a Cloud Service環境共用。
 
-1. 现在，您可以在自定义AEM代码和配置中使用专用出口IP地址。 通常，在使用专用出口IP地址时，外部服务AEMas a Cloud Service连接会配置为仅允许来自此专用IP地址的流量。
+1. 現在您可以在自訂AEM程式碼和設定中使用專用輸出IP位址。 使用專用輸出IP位址時，AEMas a Cloud Service連線的外部服務通常會設定為僅允許來自此專用IP位址的流量。
 
-## 通过专用出口IP地址连接到外部服务
+## 透過專用輸出IP位址連線到外部服務
 
-启用专用出口IP地址后，AEM代码和配置可以使用专用出口IP来调用外部服务。 AEM对外部调用的处理方式有两种：
+在啟用專用輸出IP位址的情況下，AEM程式碼和設定可以使用專用輸出IP來呼叫外部服務。 AEM會針對兩種風格的外部呼叫採取不同的處理方式：
 
-1. 对外部服务的HTTP/HTTPS调用
-   + 包括对在标准80或443端口以外的端口上运行的服务进行的HTTP/HTTPS调用。
-1. 对外部服务的非HTTP/HTTPS调用
-   + 包括任何非HTTP调用，例如与邮件服务器、SQL数据库或在其他非HTTP/HTTPS协议上运行的服务的连接。
+1. 對外部服務的HTTP/HTTPS呼叫
+   + 包含對標準80或443連線埠以外的連線埠上執行的服務發出的HTTP/HTTPS呼叫。
+1. 對外部服務的非HTTP/HTTPS呼叫
+   + 包含任何非HTTP呼叫，例如與Mail伺服器、SQL資料庫或在其他非HTTP/HTTPS通訊協定上執行的服務的連線。
 
-默认情况下，标准端口(80/443)上的AEM HTTP/HTTPS请求是允许的，但如果未按照以下所述正确配置，它们将不会使用专用出口IP地址。
+預設允許來自標準連線埠(80/443)上AEM的HTTP/HTTPS請求，但如果未依照以下所述正確設定，則它們不會使用專用輸出IP位址。
 
 >[!TIP]
 >
-> 请参阅AEMas a Cloud Service的专用出口IP地址文档，以了解 [整套路由规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedcated-egress-ip-traffic-routing=).
+> 請參閱AEMas a Cloud Service的專用輸出IP位址檔案，以瞭解 [完整的路由規則集](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedcated-egress-ip-traffic-routing=).
 
 
 ### HTTP/HTTPS
 
-从AEM创建HTTP/HTTPS连接时，如果使用专用出口IP地址，则使用专用出口IP地址自动从AEM中代理HTTP/HTTPS连接。 支持HTTP/HTTPS连接无需其他代码或配置。
+從AEM建立HTTP/HTTPS連線時，若使用專用輸出IP位址，HTTP/HTTPS連線會自動使用專用輸出IP位址代理出AEM。 不需要其他程式碼或設定即可支援HTTP/HTTPS連線。
 
-#### 代码示例
+#### 程式碼範例
 
 <table>
 <tr>
@@ -199,7 +199,7 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
     <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
     <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
     <p>
-        Java™代码示例，用于使用HTTP/HTTPS协议将AEM中的HTTP/HTTPS连接从as a Cloud Service连接到外部服务。
+        Java™程式碼範例使用HTTP/HTTPS通訊協定，使從AEM的HTTP/HTTPS連線as a Cloud Service到外部服務。
     </p>
 </td>   
 <td></td>   
@@ -207,41 +207,41 @@ Cloud Manager程序只能具有 __单个__ 网络基础架构类型。 确保专
 </tr>
 </table>
 
-### 与外部服务的非HTTP/HTTPS连接
+### 與外部服務的非HTTP/HTTPS連線
 
-创建非HTTP/HTTPS连接(例如 SQL、SMTP等)，连接必须通过AEM提供的特殊主机名进行。
+建立非HTTP/HTTPS連線時(例如 AEM SQL、SMTP等)，必須透過AEM提供的特殊主機名稱建立連線。
 
-|变量名称 |使用 | Java™代码 | OSGi配置 | | - | - | - | - | | `AEM_PROXY_HOST` |非HTTP/HTTPS连接的代理主机 | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
+|變數名稱 |使用 | Java™程式碼 | OSGi設定 | | - | - | - | - | | `AEM_PROXY_HOST` |非HTTP/HTTPS連線的Proxy主機 | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
-然后，将通过 `AEM_PROXY_HOST` 和映射的端口(`portForwards.portOrig`),AEM随后将其路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
+然後，會透過呼叫外部服務的連線。 `AEM_PROXY_HOST` 和對應的連線埠(`portForwards.portOrig`)，則AEM會路由至對應的外部主機名稱(`portForwards.name`)和連線埠(`portForwards.portDest`)。
 
-| 代理主机 | 代理端口 |  | 外部主机 | 外部端口 |
+| Proxy主機 | Proxy連線埠 |  | 外部主機 | 外部連線埠 |
 |---------------------------------|----------|----------------|------------------|----------|
 | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-#### 代码示例
+#### 程式碼範例
 
 <table><tr>
    <td>
-      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC DataSourcePool的SQL连接" src="./assets//code-examples__sql-osgi.png"/></a>
-      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC DataSourcePool的SQL连接</a></strong></div>
+      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC DataSourcePool的SQL連線" src="./assets//code-examples__sql-osgi.png"/></a>
+      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC DataSourcePool的SQL連線</a></strong></div>
       <p>
-            Java™代码示例通过配置AEM JDBC数据源池连接到外部SQL数据库。
+            Java™程式碼範例透過設定AEM JDBC資料來源集區來連線到外部SQL資料庫。
       </p>
     </td>   
    <td>
-      <a  href="./examples/sql-java-apis.md"><img alt="使用Java API的SQL连接" src="./assets/code-examples__sql-java-api.png"/></a>
-      <div><strong><a href="./examples/sql-java-apis.md">使用Java™ API的SQL连接</a></strong></div>
+      <a  href="./examples/sql-java-apis.md"><img alt="使用Java API的SQL連線" src="./assets/code-examples__sql-java-api.png"/></a>
+      <div><strong><a href="./examples/sql-java-apis.md">使用Java™ API的SQL連線</a></strong></div>
       <p>
-            Java™代码示例使用Java™的SQL API连接到外部SQL数据库。
+            使用Java™的SQL API連線至外部SQL資料庫的Java™程式碼範例。
       </p>
     </td>   
    <td>
       <a  href="./examples/email-service.md"><img alt="虚拟专用网络 (VPN)" src="./assets/code-examples__email.png"/></a>
-      <div><strong><a href="./examples/email-service.md">电子邮件服务</a></strong></div>
+      <div><strong><a href="./examples/email-service.md">電子郵件服務</a></strong></div>
       <p>
-        OSGi配置示例(使用AEM连接到外部电子邮件服务)。
+        使用AEM連線至外部電子郵件服務的OSGi設定範例。
       </p>
     </td>   
 </tr></table>

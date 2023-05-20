@@ -1,6 +1,6 @@
 ---
-title: OCR数据提取
-description: 从政府颁发的文档中提取数据以填充表单。
+title: OCR資料提取
+description: 從政府核發的檔案擷取資料以填入表單。
 feature: Barcoded Forms
 version: 6.4,6.5
 kt: 6679
@@ -16,40 +16,40 @@ ht-degree: 1%
 
 ---
 
-# OCR数据提取
+# OCR資料提取
 
-自动从各种政府颁发的文档中提取数据以填充您的自适应表单。
+自動從各種政府核發的檔案中擷取資料，以填入最適化表單。
 
-有许多组织提供此服务，只要他们有详实的REST API文档，您就可以使用数据集成功能轻松与AEM Forms集成。 在本教程中，我使用了 [ID Analyzer](https://www.idanalyzer.com/) 以演示已上传文档的OCR数据提取。
+有許多組織提供此服務，只要他們妥善記錄REST API，您就可以使用資料整合功能，輕鬆與AEM Forms整合。 在本教學課程中，我使用 [ID分析器](https://www.idanalyzer.com/) 示範已上傳檔案的OCR資料擷取。
 
-按照以下步骤，使用ID Analyzer服务在AEM Forms中实施OCR数据提取。
+依照下列步驟，使用ID分析器服務透過AEM Forms實作OCR資料擷取。
 
-## 创建开发人员帐户
+## 建立開發人員帳戶
 
-使用创建开发人员帐户 [ID Analyzer](https://portal.idanalyzer.com/signin.html). 记下API密钥。 调用ID分析器服务的REST API时需要此密钥。
+建立開發人員帳戶，使用 [ID分析器](https://portal.idanalyzer.com/signin.html). 記下API金鑰。 呼叫ID分析器服務的REST API時需要此金鑰。
 
-## 创建Swagger/OpenAPI文件
+## 建立Swagger/OpenAPI檔案
 
-OpenAPI规范（以前称为Swagger规范）是REST API的API描述格式。 OpenAPI文件允许您描述整个API，包括：
+OpenAPI Specification （前身為Swagger Specification）是REST API的API說明格式。 OpenAPI檔案可讓您說明整個API，包括：
 
-* 每个端点上的可用端点(/users)和操作(GET/用户、POST/用户)
-* 操作参数每个操作的输入和输出身份验证方法
-* 联系信息、许可证、使用条款和其他信息。
-* API规范可以使用YAML或JSON编写。 该格式易于学习，对人类和机器都易读。
+* 每個端點的可用端點(/users)和操作(GET/users、POST/users)
+* 作業引數每個作業的輸入和輸出驗證方法
+* 聯絡資訊、授權、使用條款及其他資訊。
+* API規格可以用YAML或JSON撰寫。 該格式簡單易學，且可供人類和機器讀取。
 
-要创建您的第一个swagger/OpenAPI文件，请按照 [OpenAPI文档](https://swagger.io/docs/specification/2-0/basic-structure/)
+若要建立您的第一個swagger/OpenAPI檔案，請遵循 [OpenAPI檔案](https://swagger.io/docs/specification/2-0/basic-structure/)
 
 >[!NOTE]
-> AEM Forms支持OpenAPI规范版本2.0(fka Swagger)。
+> AEM Forms支援OpenAPI規格2.0版(fka Swagger)。
 
-使用 [swagger编辑器](https://editor.swagger.io/) 创建swagger文件，以描述使用短信发送和验证OTP代码的操作。 可以以JSON或YAML格式创建swagger文件。 已完成的swagger文件可从 [此处](assets/drivers-license-swagger.zip)
+使用 [swagger編輯器](https://editor.swagger.io/) 建立您的swagger檔案，以說明傳送及驗證使用簡訊傳送之OTP代碼的作業。 Swagger檔案可以採用JSON或YAML格式建立。 完整的swagger檔案可從以下網址下載： [此處](assets/drivers-license-swagger.zip)
 
-## 定义swagger文件时的注意事项
+## 定義swagger檔案時的考量事項
 
-* 定义是必需的
-* 方法定义需要使用$ref
-* 倾向于使用并生成定义的节
-* 请勿定义内联请求正文参数或响应参数。 尽量模化。 例如，不支持以下定义
+* 需要定義
+* 方法定義需要使用$ref
+* 偏好定義使用量和產生區段
+* 請勿定義內嵌要求內文引數或回應引數。 儘可能模組化。 例如，不支援下列定義
 
 ```json
  "name": "body",
@@ -66,7 +66,7 @@ OpenAPI规范（以前称为Swagger规范）是REST API的API描述格式。 Ope
             }
 ```
 
-对requestBody定义的引用支持以下内容
+requestBody定義的參考支援下列專案
 
 ```json
  "name": "requestBody",
@@ -77,38 +77,38 @@ OpenAPI规范（以前称为Swagger规范）是REST API的API描述格式。 Ope
             }
 ```
 
-* [示例Swagger文件供您参考](assets/sample-swagger.json)
+* [Swagger檔案範例以供參考](assets/sample-swagger.json)
 
-## 创建数据源
+## 建立資料來源
 
-要将AEM/AEM Forms与第三方应用程序集成，我们需要 [创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) 云服务配置中的。 请使用 [swagger文件](assets/drivers-license-swagger.zip) 创建数据源。
+若要將AEM/AEM Forms與協力廠商應用程式整合，我們需要 [建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) 在雲端服務設定中。 請使用 [swagger檔案](assets/drivers-license-swagger.zip) 以建立您的資料來源。
 
 ## 创建表单数据模型
 
-AEM Forms数据集成提供了直观的用户界面，用于创建和使用 [表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). 将表单数据模型基于在前面步骤中创建的数据源。
+AEM Forms資料整合提供直覺式使用者介面，用於建立和使用 [表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). 使表單資料模型以先前步驟中建立的資料來源為基礎。
 
 ![fdm](assets/test-dl-fdm.PNG)
 
-## 创建客户端库
+## 建立使用者端程式庫
 
-我们需要获取已上传文档的base64编码字符串。 然后，此base64编码字符串将作为REST调用的参数之一进行传递。
-可以下载客户端库 [从这里。](assets/drivers-license-client-lib.zip)
+我們需要取得已上傳檔案的base64編碼字串。 然後，會將此base64編碼字串作為REST叫用的其中一個引數傳遞。
+可以下載使用者端程式庫 [從這裡。](assets/drivers-license-client-lib.zip)
 
-## 创建自适应表单
+## 建立最適化表單
 
-将表单数据模型的POST调用与自适应表单相集成，以从用户上传的表单文档中提取数据。 您可以自行创建自己的自适应表单，并使用表单数据模型的POST调用来发送已上传文档的base64编码字符串。
+將表單資料模型的POST叫用與您的最適化表單整合，以從表單中的使用者上傳的檔案中擷取資料。 您可以自由建立自己的最適化表單，並使用表單資料模型的POST引動來傳送上傳檔案的base64編碼字串。
 
-## 在服务器上部署
+## 在您的伺服器上部署
 
-如果要将示例资产与API密钥一起使用，请按照以下步骤操作：
+如果您想要搭配API金鑰使用範例資產，請遵循下列步驟：
 
-* [下载数据源](assets/drivers-license-source.zip) 使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* [下载表单数据模型](assets/drivers-license-fdm.zip) 使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* [下载客户端库](assets/drivers-license-client-lib.zip)
-* 下载示例自适应表单可以是 [从此处下载](assets/adaptive-form-dl.zip). 此示例表单使用作为本文一部分提供的表单数据模型的服务调用。
-* 将表单从导入AEM [Forms和文档UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 在中打开表单 [编辑模式。](http://localhost:4502/editor.html/content/forms/af/driverslicenseandpassport.html)
-* 在apikey字段中指定API密钥作为默认值，并保存更改
-* 打开Base 64 String字段的规则编辑器。 当此字段的值发生更改时，请注意服务调用。
-* 保存表单
-* [预览表单](http://localhost:4502/content/dam/formsanddocuments/driverslicenseandpassport/jcr:content?wcmmode=disabled)，上传您的驾驶执照前面的图片
+* [下載資料來源](assets/drivers-license-source.zip) 並使用匯入AEM [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+* [下載表單資料模型](assets/drivers-license-fdm.zip) 並使用匯入AEM [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+* [下載使用者端程式庫](assets/drivers-license-client-lib.zip)
+* 下載最適化表單範例可以是 [已從此處下載](assets/adaptive-form-dl.zip). 此範例表單會使用本文中提供的表單資料模型的服務呼叫。
+* 從將表單匯入AEM [Forms和檔案UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 在中開啟表單 [編輯模式。](http://localhost:4502/editor.html/content/forms/af/driverslicenseandpassport.html)
+* 在apikey欄位中將API金鑰指定為預設值，並儲存變更
+* 開啟「基礎64字串」欄位的規則編輯器。 當此欄位的值變更時，請注意服務叫用。
+* 儲存表單
+* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/driverslicenseandpassport/jcr:content?wcmmode=disabled)，上傳您的駕駛執照正面圖片

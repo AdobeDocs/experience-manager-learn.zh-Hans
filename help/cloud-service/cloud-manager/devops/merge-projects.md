@@ -1,6 +1,6 @@
 ---
-title: 使用Github Desktop合并AEM项目
-description: 使用Github Desktop，了解如何将多个项目合并到单个项目中，以便使用Cloud Manager部署到AEMas a Cloud Service。
+title: 使用Github Desktop合併AEM專案
+description: 使用Github Desktop，探索如何將多個專案合併到單一專案中，以使用Cloud Manager部署到AEMas a Cloud Service。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 合并AEM项目以使用Cloud Manager进行部署
+# 合併AEM專案以使用Cloud Manager進行部署
 
-探索如何将多个项目合并到单个项目中，以便使用Cloud Manager部署到AEMas a Cloud Service。
+探索如何將多個專案合併到單一專案中，以使用Cloud Manager部署到AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330535?quality=12&learn=on)

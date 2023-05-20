@@ -1,6 +1,6 @@
 ---
 title: 演绎版
-description: 了解AEM Assets中的演绎版以及如何预览它们。
+description: 瞭解AEM Assets中的轉譯以及如何加以預覽。
 feature: Renditions
 role: User
 level: Beginner
@@ -19,6 +19,6 @@ ht-degree: 7%
 
 # 演绎版
 
-了解AEM Assets中的演绎版以及如何预览它们。
+瞭解AEM Assets中的轉譯以及如何加以預覽。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32047?quality=12&learn=on)

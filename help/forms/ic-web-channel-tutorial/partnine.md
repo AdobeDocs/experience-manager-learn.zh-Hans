@@ -1,7 +1,7 @@
 ---
-title: 将表添加到帐户余额面板
+title: 新增表格至帳戶餘額面板
 seo-title: Adding table to account balance panel
-description: 这是创建您的第一个交互式通信文档的多步教程的第9部分。在本部分中，我们将向“帐户余额”面板添加一个表。
+description: 這是建立您的第一個互動式通訊檔案的多步驟教學課程的第9部分。在本部分中，我們將在「帳戶餘額」面板中新增一個表格。
 seo-description: This is part 9 of multistep tutorial for creating your first interactive communication document.In this part, we will add a table to the Account Balance panel.
 uuid: 8f268c73-c543-418d-b65e-5beaf9660e42
 feature: Interactive Communication
@@ -22,30 +22,30 @@ ht-degree: 1%
 
 ---
 
-# 将表添加到帐户余额面板{#adding-table-to-account-balance-panel}
+# 新增表格至帳戶餘額面板{#adding-table-to-account-balance-panel}
 
-在本部分中，我们将向“帐户余额”面板添加一个表。
+在本部分中，我們將在「帳戶餘額」面板中新增一個表格。
 
-登录AEM Forms，然后导航到Adobe Experience Manager > Forms > Forms和文档。
+登入AEM Forms並導覽至「Adobe Experience Manager > Forms > Forms和檔案」。
 
-打开401KStatement文件夹。
+開啟401KStatement資料夾。
 
-在编辑模式下打开401KStatement。
+在編輯模式下開啟401KStatement。
 
-点按“帐户余额”目标区域，然后单击“+”图标以调出“插入组件”对话框。
+點選「帳戶餘額」目標區域，然後按一下「+」圖示以開啟「插入元件」對話方塊。
 
-选择表以插入表组件。
+選取「表格」以插入表格元件。
 
-AEM Forms 6.4版本中引入了在交互式通信文档中使用表格显示表格数据的功能。 以下视频介绍在Web渠道文档中配置表时涉及的步骤。
+AEM Forms 6.4版本已引入使用互動式通訊檔案中的表格顯示表格資料的功能。 以下影片會逐步說明在Web Channel檔案中設定表格的相關步驟。
 
-**在Web渠道文档中配置表 — AEM Forms 6.4**
+**在Web Channel檔案中設定表格 — AEM Forms 6.4**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22360?quality=12&learn=on)
 
-在Web渠道文档中配置表 — AEM Form 6.5
+設定Web Channel檔案中的表格 — AEM Form 6.5
 
 >[!VIDEO](https://video.tv.adobe.com/v/27847?quality=12&learn=on)
 
 ## 后续步骤
 
-[配置列图](./partten.md)
+[設定柱狀圖](./partten.md)

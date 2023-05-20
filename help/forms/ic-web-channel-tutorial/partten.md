@@ -1,7 +1,7 @@
 ---
-title: 配置Retirement Outlook面板
+title: 正在設定處分前景面板
 seo-title: Configuring Retirement Outlook Panel
-description: 这是创建首个交互式通信文档的多步教程的10部分。 在本部分中，我们将通过添加文本和图表组件来配置Retirement Outlook面板。
+description: 這是建立第一個互動式通訊檔案的多步驟教學課程第10部分。 在本部分中，我們將藉由新增文字和圖表元件來設定「處分前景面板」。
 seo-description: This is part 10 of a multi-step tutorial for creating your first interactive communications document. In this part, we will configure Retirement Outlook Panel by adding text and chart components.
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
 feature: Interactive Communication
@@ -22,58 +22,58 @@ ht-degree: 1%
 
 ---
 
-# 配置Retirement Outlook面板{#configuring-retirement-outlook-panel}
+# 正在設定處分前景面板{#configuring-retirement-outlook-panel}
 
-* 这是创建首个交互式通信文档的多步教程的10部分。 在本部分中，我们将通过添加文本和图表组件来配置Retirement Outlook面板。
+* 這是建立第一個互動式通訊檔案的多步驟教學課程第10部分。 在本部分中，我們將藉由新增文字和圖表元件來設定「處分前景面板」。
 
-* 登录AEM Forms，然后导航到Adobe Experience Manager > Forms > Forms和文档。
+* 登入AEM Forms並導覽至「Adobe Experience Manager > Forms > Forms和檔案」。
 
-* 打开401KStatement文件夹。
+* 開啟401KStatement資料夾。
 
-* 在编辑模式下打开401KStatement文档。
+* 以編輯模式開啟401KStatement檔案。
 
-**配置LeftPanel目标区域**
+**設定LeftPanel目標區域**
 
-* 点按右侧的LeftPanel目标区域，然后单击“+”图标以调出插入组件对话框。
+* 點選右側的LeftPanel目標區域，然後按一下「+」圖示以開啟「插入元件」對話方塊。
 
-* 插入文本组件。
+* 插入文字元件。
 
-* 轻轻点按新添加的文本组件，以显示组件工具栏
+* 輕輕點選新新增的文字元件，開啟元件工具列
 
-* 选择“铅笔”图标以编辑默认文本。
+* 選取「鉛筆」圖示以編輯預設文字。
 
-* 将默认文本替换为“**你的退休收入展望”**
+* 將預設文字取代為&quot;**您的退休收入展望」**
 
-**配置RightPanel目标区域**
+**設定RightPanel目標區域**
 
-* 点按右侧的RightPanel目标区域，然后单击“+”图标以调出插入组件对话框。
+* 點選右側的RightPanel目標區域，然後按一下「+」圖示以開啟「插入元件」對話方塊。
 
-* 插入文本组件。
+* 插入文字元件。
 
-* 轻轻点按新添加的文本组件，以显示组件工具栏。
+* 輕輕點選新新增的文字元件，以顯示元件工具列。
 
-* 选择“铅笔”图标以编辑默认文本。
+* 選取「鉛筆」圖示以編輯預設文字。
 
-* 将默认文本替换为“**月度退休收入估计”**
+* 將預設文字取代為&quot;**預估每月退休收入」**
 
-## 添加退休收入展望文档片段 {#add-retirement-income-outlook-document-fragment}
+## 新增退休收入Outlook檔案片段 {#add-retirement-income-outlook-document-fragment}
 
-* 单击资产图标，然后应用过滤器以显示“文档片段”类型的资产。 将RetiementIncomeOutlook文档片段拖放到左面板目标区域。
+* 按一下「資產」圖示並套用篩選器，以顯示「檔案片段」型別的資產。 將RetirementIncomeOutlook檔案片段拖放至「左側面板」目標區域。
 
-* 您可以引用 [到此页](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) 在将文档片段添加到内容区域时。
+* 您可以參閱 [至此頁面](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) 新增檔案片段至內容區域時。
 
-## 添加预计月收入图 {#adding-estimated-monthly-income-chart}
+## 新增預估月收入圖表 {#adding-estimated-monthly-income-chart}
 
-* 单击右侧的RightPanel目标区域。 单击“+”图标以插入图表组件。 我们将用柱状图显示月收入估计值。 轻轻点按新插入的图表组件。 选择“扳手”图标以打开配置属性工作表。如下面的屏幕截图所示，使用以下属性配置图表。
+* 按一下右側的RightPanel目標區域。 按一下「+」圖示以插入圖表元件。 我們將使用直條圖來顯示預估的每月收入。 輕輕點選新插入的圖表元件。 選取「扳手」圖示以開啟設定屬性表。使用下列屬性設定圖表，如下方熒幕擷圖所示。
 
-**AEM Forms 6.4 — 配置预计每月收入列表**
+**AEM Forms 6.4 — 設定預估月收入柱狀圖**
 
 ![form64](assets/estimatedmonthlyincomechart.png)
 
-**AEM Forms 6.5 — 配置预计每月收入列表**
+**AEM Forms 6.5 — 設定預估月收入柱狀圖**
 
 ![forms65](assets/estimatedmonthlyincomechart65.PNG)
 
 ## 后续步骤
 
-[配置饼图](./parteleven.md)
+[設定圓形圖](./parteleven.md)

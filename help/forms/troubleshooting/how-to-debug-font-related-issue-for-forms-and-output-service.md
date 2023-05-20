@@ -1,6 +1,6 @@
 ---
-title: 如何调试与Forms和输出服务转换相关的字体问题
-description: 调试与Forms和输出服务相关的字体问题的步骤
+title: 如何針對Forms和輸出服務轉換的字型相關問題進行偵錯
+description: Forms和Output服務字型相關問題的偵錯步驟
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何获取抵押品以调试与Forms和输出服务转换相关的字体问题
+# 如何擷取並行，針對Forms和輸出服務轉換的字型相關問題進行偵錯
 
-*此视频将讲解捕获抵押品的过程，以调试与Forms和输出服务转化相关的字体问题。*
+*此影片逐步解說擷取文案以偵錯Forms和輸出服務轉換字型相關問題的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335487?quality=12&learn=on)

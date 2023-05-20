@@ -1,6 +1,6 @@
 ---
-title: 测试您的理解
-description: 完成练习
+title: 測試您的理解
+description: 完成練習
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 练习
+# 練習
 
-修改代码以将模板的URL作为POST请求参数之一进行传递。
+修改程式碼，將範本的URL當作POST要求引數之一傳遞。
 
-中的代码 `DocumentGeneration.java` 必须进行修改才能传递模板的URL。
+中的程式碼 `DocumentGeneration.java` 必須修改才能傳遞範本的URL。

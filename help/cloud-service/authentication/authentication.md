@@ -1,6 +1,6 @@
 ---
-title: AEMas a Cloud Service中的身份验证
-description: 了解AEMas a Cloud Service中的身份验证。
+title: AEMas a Cloud Service中的驗證
+description: 瞭解AEMas a Cloud Service中的驗證。
 version: Cloud Service
 feature: Security
 topic: Development, Integrations, Security
@@ -17,22 +17,22 @@ ht-degree: 3%
 
 ---
 
-# AEMas a Cloud Service身份验证
+# AEMas a Cloud Service驗證
 
-AEMas a Cloud Service支持多种身份验证选项，并且因服务类型而异。
+AEMas a Cloud Service支援多種驗證選項，且會因服務型別而異。
 
 |  | AEM Author | AEM 发布 |
 |-----------------------|:----------:|:-----------:|
 | [Adobe IMS](../accessing/overview.md) | ✔ | ✘ |
-| · [通过Adobe IMS的SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✘ |
+| · [透過Adobe IMS使用SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✘ |
 | [SAML 2.0](./saml-2-0.md) | ✘ | ✔ |
-| [单点登录(SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
+| [單一登入(SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
 | [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
-| [令牌身份验证](../../headless-tutorial/authentication/overview.md) | ✔ | ✔ |
+| [權杖驗證](../../headless-tutorial/authentication/overview.md) | ✔ | ✔ |
 
-## 身份验证选项
+## 驗證選項
 
-单击下面的相应链接，了解有关如何设置和使用身份验证方法的详细信息。
+按一下下方對應的連結，以取得有關如何設定和使用驗證方法的詳細資訊。
 
 <table>
   <tr>
@@ -40,21 +40,21 @@ AEMas a Cloud Service支持多种身份验证选项，并且因服务类型而�
       <a  href="../accessing/overview.md"><img alt="Adobe IMS" src="./assets/card--adobe-ims.png"/></a>
       <div><strong><a href="../accessing/overview.md">Adobe IMS</a></strong></div>
       <p>
-          通过Adobe Admin Console使用Adobe IMS管理AEM创作访问权限。
+          透過Adobe Admin Console使用Adobe IMS管理AEM作者存取權。
       </p>
     </td>   
    <td>
       <a  href="./saml-2-0.md"><img alt="SAML 2.0" src="./assets/card--saml-2-0.png"/></a>
       <div><strong><a href="./saml-2-0.md">SAML 2.0</a></strong></div>
       <p>
-        使用AEM发布服务的SAML 2.0集成向IDP验证网站用户。
+        使用AEM Publish服務的SAML 2.0整合，將您網站的使用者驗證給IDP。
       </p>
     </td>   
    <td>
       <a  href="../../headless-tutorial/authentication/overview.md"><img alt="令牌" src="./assets/card--token.png"/></a>
-      <div><strong><a href="../../headless-tutorial/authentication/overview.md">令牌身份验证</a></strong></div>
+      <div><strong><a href="../../headless-tutorial/authentication/overview.md">權杖驗證</a></strong></div>
       <p>
-        允许应用程序和中间件使用API服务令牌向AEM进行身份验证。
+        允許應用程式和中介軟體使用API服務權杖驗證AEM。
       </p>
     </td>   
   </tr>

@@ -1,7 +1,7 @@
 ---
-title: 保存并恢复信件
+title: 儲存並繼續字母
 seo-title: Save and resume letters
-description: 了解如何保存和检索草稿信件
+description: 瞭解如何儲存和擷取草稿信件
 seo-description: Learn how to save and retrieve draft letters
 feature: Interactive Communication
 topics: development
@@ -24,18 +24,18 @@ ht-degree: 0%
 
 # 简介
 
-交互式通信允许代理准备临时通信以保存部分完成的通信并检索该通信以继续工作。 AEM Forms为您提供 [服务提供商界面](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html). 客户应实施此界面以获取保存和恢复功能。
+互動式通訊可讓準備臨機通訊的代理程式儲存部分完成的通訊，並擷取相同的通訊以繼續工作。 AEM Forms提供您 [服務提供者介面](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html). 客戶應實作此介面以取得「儲存並繼續」功能。
 
-本文使用MySQL数据库来存储信件实例的元数据。 信件数据存储在文件系统中。
+本文使用MySQL資料庫來儲存信件執行個體的中繼資料。 信件資料儲存在檔案系統上。
 
-以下视频演示了用例：
+以下影片示範使用案例：
 
 >[!VIDEO](https://video.tv.adobe.com/v/342129?quality=12&learn=on)
 
-## 先决条件
+## 先決條件
 
-您将需要满足以下条件来实施解决方案以满足您的需求
+您將需要下列專案來實作解決方案，以符合您的需求
 
-* 使用AEM Forms的工作经验
-* AEM Server 6.5，带Forms Add
-* 在构建OSGi包时应该很熟悉
+* AEM Forms的使用體驗
+* AEM Server 6.5搭配Forms附加元件
+* 應該熟悉如何建立OSGI套件組合

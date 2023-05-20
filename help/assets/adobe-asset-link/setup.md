@@ -1,6 +1,6 @@
 ---
-title: Adobe资产链接设置
-description: 了解如何免费设置Adobe资产链接，以将您的Creative Cloud应用程序(包括Photoshop、Illustrator、InDesign和XD)连接到Adobe Experience Manager Assets。
+title: Adobe資產連結設定
+description: 瞭解如何免費設定Adobe Asset Link，將您的Creative Cloud應用程式(包括Photoshop、Illustrator、InDesign和XD)連結至Adobe Experience Manager Assets。
 feature: Adobe Asset Link
 version: Cloud Service
 topic: Content Management
@@ -16,25 +16,25 @@ ht-degree: 0%
 
 ---
 
-# Adobe资产链接设置
+# Adobe資產連結設定
 
-通过让创意团队和营销团队在内容创建过程中更轻松地协作处理资产，可为您的组织带来快速影响。 如果您在IT部门，请了解如何免费快速设置Adobe资产链接，以将您的Creative Cloud应用程序(包括Photoshop、Illustrator、InDesign和XD)连接到Adobe Experience Manager资产。
+讓創意和行銷團隊更輕鬆地在內容建立過程中進行資產合作，為您的組織帶來快速的影響。 如果您在IT業，可瞭解如何免費快速設定Adobe Asset Link，將您的Creative Cloud應用程式(包括Photoshop、Illustrator、InDesign和XD)連結至Adobe Experience Manager Assets。
 
-## 为AEM Asset Link设置as a Cloud Service
+## AEMas a Cloud Service的Asset Link設定
 
-了解如何为AEMas a Cloud Service设置Adobe资产链接、配置用户权限和AEMas a Cloud Service，以及如何安装和使用Adobe资产链接。
+瞭解如何設定AEMas a Cloud Service的Adobe Asset Link、設定使用者權益和AEMas a Cloud Service，以及如何安裝和使用AdobeAsset Link。
 
 >[!VIDEO](https://video.tv.adobe.com/v/338824?quality=12&learn=on)
 
-## 适用于Managed Services和内部部署的Asset Link设置
+## Managed Services和內部部署的Asset Link設定
 
-了解如何为在Adobe Managed Services或内部部署中运行的AEM 6设置Adobe资产链接，配置用户权限和AEMas a Cloud Service，以及如何安装和使用Adobe资产链接。
+瞭解如何設定在Adobe Managed Services或內部部署中執行之AEM 6的Adobe Asset Link、設定使用者權益和AEMas a Cloud Service，以及如何安裝和使用AdobeAsset Link。
 
 >[!VIDEO](https://video.tv.adobe.com/v/338823?quality=12&learn=on)
 
 
-## 域信任的资产链接设置
+## 網域信任的Asset Link設定
 
-了解什么是域信任，在Experience Manager Assets中使用Adobe资产链接意味着什么，以及如何设置域信任。
+瞭解什麼是網域信任、將Adobe Asset Link與Experience Manager Assets搭配使用有何意義，以及如何設定網域信任。
 
 >[!VIDEO](https://video.tv.adobe.com/v/338825?quality=12&learn=on)

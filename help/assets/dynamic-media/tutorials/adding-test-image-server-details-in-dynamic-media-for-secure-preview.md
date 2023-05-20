@@ -1,6 +1,6 @@
 ---
-title: 为AEM Dynamic Media配置安全预览服务器
-description: 使用AEM Dynamic Media Classic应用程序配置测试图像服务器以进行安全预览。
+title: 設定AEM Dynamic Media的安全預覽伺服器
+description: 使用AEM Dynamic Media Classic應用程式設定測試影像伺服器以進行安全預覽。
 version: Cloud Service
 role: Developer
 level: Intermediate
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# 为AEM Dynamic Media配置安全预览服务器
+# 設定AEM Dynamic Media的安全預覽伺服器
 
-此视频将讲解在Dynamic Media中添加测试图像服务器（客户端IP过滤器）详细信息的过程，以便使用Dynamic Media Classic应用程序进行安全预览。
+此影片會逐步說明在Dynamic Media中新增測試影像伺服器（使用者端IP篩選器）詳細資訊的程式，以便使用Dynamic Media Classic應用程式進行安全預覽。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335462?quality=12&learn=on)

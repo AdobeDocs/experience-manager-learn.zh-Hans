@@ -1,7 +1,7 @@
 ---
-title: 使用AEM体验片段和Adobe Target进行个性化
+title: 使用AEM體驗片段和Adobe Target進行個人化
 seo-title: Personalization using Adobe Experience Manager (AEM) Experience Fragments and Adobe Target
-description: 一个端到端教程，其中演示了如何使用Adobe Experience Manager体验片段和Adobe Target创建和提供个性化体验。
+description: 端對端教學課程，說明如何使用Adobe Experience Manager Experience Fragments和Adobe Target建立和傳遞個人化體驗。
 seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager Experience Fragments and Adobe Target.
 feature: Experience Fragments
 topic: Personalization
@@ -15,179 +15,179 @@ ht-degree: 1%
 
 ---
 
-# 使用AEM体验片段和Adobe Target进行个性化
+# 使用AEM體驗片段和Adobe Target進行個人化
 
-凭借将AEM体验片段作为HTML选件导出到Adobe Target的功能，您可以将AEM的易用性和强大功能与Target中强大的自动智能(AI)和机器学习(ML)功能结合使用，以测试和个性化大量体验。
+有了將AEM體驗片段匯出至Adobe Target做為HTML選件的功能，您可以將AEM的易用性和威力，結合Target中強大的自動化智慧(AI)和機器學習(ML)功能，以大規模測試並個人化體驗。
 
-AEM将您的所有内容和资产整合到一个中心位置，以助您实现个性化策略。 通过AEM，您可以在一个位置轻松地为台式机、平板电脑和移动设备创建内容，而无需编写代码。 无需为每个设备创建页面，因为AEM会使用您的内容自动调整每个体验。
+AEM會將您的所有內容和資產集中在一個位置，為您的個人化策略提供助力。 AEM可讓您在單一位置輕鬆建立桌上型電腦、平板電腦和行動裝置的內容，而不需撰寫程式碼。 不需要為每個裝置建立頁面，AEM會自動使用您的內容調整每個體驗。
 
-Target让您能够根据基于规则和AI驱动的机器学习方法的组合大规模提供个性化体验，这些方法包含行为、情境和离线变量。  借助Target，您可以轻松设置并运行A/B和多变量(MVT)活动，以确定最佳的选件、内容和体验。
+Target可讓您根據結合行為、情境和離線變數的規則型和AI驅動機器學習方法的組合，大規模提供個人化體驗。  透過Target，您可以輕鬆設定和執行A/B及多變數(MVT)活動，以決定最佳選件、內容和體驗。
 
-在将内容创建者与使用Target推动业务成果的营销人员关联方面，体验片段代表了向前迈出了一大步。
+體驗片段代表在連結內容建立者與使用Target推動業務成果的行銷人員方面邁出的巨大一步。
 
-## 方案概述
+## 案例概述
 
-WKND网站计划宣布 **SkateFest挑战赛** 在美国各地，通过他们的网站，希望让网站用户注册参加在各州进行的试镜。 作为营销人员，您已经被分配了在WKND网站主页上运行营销活动的任务，该任务中包含与用户位置相关的横幅消息以及指向事件详细信息页面的链接。 让我们浏览WKND网站主页，并了解如何根据用户的当前位置为其创建和提供个性化体验。
+WKND網站計畫宣佈 **SkateFest挑戰** 透過其網站前往全美各地，並且希望他們的網站使用者註冊參加在每個州進行的試聽。 行銷人員指派您在WKND網站首頁上執行行銷活動，其中包含與使用者位置相關的橫幅訊息以及事件詳細資訊頁面的連結。 讓我們探索WKND網站首頁，瞭解如何根據使用者目前所在的位置，為其建立和提供個人化體驗。
 
-### 涉及的用户
+### 相關使用者
 
-在本练习中，需要涉及以下用户，并且要执行一些可能需要管理访问权限的任务。
+在這個練習中，需要涉及以下使用者，並且要執行一些您可能需要管理存取權的任務。
 
-* **内容制作者/内容编辑器** (Adobe Experience Manager)
-* **营销人员** (Adobe Target/优化团队)
+* **內容製作者/內容編輯器** (Adobe Experience Manager)
+* **行銷人員** (Adobe Target /最佳化團隊)
 
 ### 前提条件
 
 * **AEM**
-   * [AEM创作和发布实例](./implementation.md#getting-aem) 分别在localhost 4502和4503上运行。
+   * [AEM作者和發佈執行個體](./implementation.md#getting-aem) 分別在localhost 4502和4503上執行。
 * **Experience Cloud**
-   * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
-   * Experience Cloud配置了以下解决方案
+   * 存取您的組織Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
+   * 布建了下列解決方案的Experience Cloud
       * [Adobe Target](https://experiencecloud.adobe.com)
 
-### WKND网站主页
+### wknd網站首頁
 
-![AEM Target方案1](assets/personalization-use-case-1/aem-target-use-case-1-4.png)
+![AEM目標案例1](assets/personalization-use-case-1/aem-target-use-case-1-4.png)
 
-1. 营销人员与AEM内容编辑器一起发起WKND SkateFest营销活动讨论，并详细介绍相关要求。
-   * ***要求***:在WKND网站主页上为来自美国每个州的访客提供个性化内容，以推广WKND SkateFest活动。 在主页轮播下方添加一个新的内容块，其中包含背景图像、文本和按钮。
-      * **背景图像**:图像应与用户从中访问WKND网站页面的状态相关。
-      * **文本**:&quot;注册Audition&quot;
-      * **按钮**:指向WKND SkateFest页面的“事件详细信息”
-      * **WKND SkateFest页面**:包含事件详细信息（包括audition地点、日期和时间）的新页面。
-1. 根据要求，AEM内容编辑器会为内容块创建一个体验片段，并将其作为选件导出到Adobe Target。 为了为美国的所有州提供个性化内容，内容作者可以创建一个体验片段主控变量，然后创建50个其他变量，每个州一个。 然后，可以手动编辑每个状态变体的内容以及相关的图像和文本。 在创作体验片段时，内容编辑器可以使用资产查找器选项快速访问AEM Assets中可用的所有资产。 当体验片段导出到Adobe Target时，其所有变量也会作为选件推送到Adobe Target。
+1. 行銷人員透過AEM內容編輯器啟動WKND SkateFest行銷活動討論，並詳細說明需求。
+   * ***需求***：在WKND網站首頁上推廣包含美國各州訪客個人化內容的WKND SkateFest行銷活動。 在含有背景影像、文字和按鈕的「首頁輪播」下方新增內容區塊。
+      * **背景影像**：影像應與使用者造訪WKND網站頁面時所使用的狀態相關。
+      * **文字**：「註冊Audition」
+      * **按鈕**：指向WKND SkateFest頁面的「事件詳細資料」
+      * **WKND SkateFest頁面**：包含活動詳細資訊的新頁面，包括試聽地點、日期和時間。
+1. AEM內容編輯器會根據需求，為內容區塊建立體驗片段，並將其以選件的形式匯出至Adobe Target。 為了向美國所有州提供個人化內容，內容作者可以建立一個體驗片段主要變數，然後建立50個其他變數，每個州各一個。 然後，可以手動編輯具有相關影像和文字的每個狀態變數的內容。 編寫體驗片段時，內容編輯人員可使用「資產尋找器」選項，快速存取AEM Assets中可用的所有資產。 當體驗片段匯出至Adobe Target時，其所有變數也會以選件形式推送至Adobe Target。
 
-1. 在将体验片段从AEM导出为“选件”后，营销人员可以使用这些选件在Target中创建活动。 根据WKND站点SkateFest营销活动，营销人员需要创建每个州的WKND站点访客并向其提供个性化体验。 要创建体验定位活动，营销人员需要识别受众。 对于WKND SkateFest活动，我们需要根据访客访问WKND网站的位置创建50个不同的受众。
-   * [受众](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) 为活动定义定位，可在任何有定位的地方使用。 Target受众是一组定义的访客标准。 选件可以定位到特定受众（或区段）。 只有属于该受众的访客才会看到针对他们的体验。  例如，您可以向由使用特定浏览器或来自特定地理位置的访客组成的受众交付选件。
-   * 安 [选件](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9) 是在营销活动或活动期间在您的网页上显示的内容。 在测试网页时，您可以使用不同位置的选件衡量每个体验的成功与否。 选件可以包含不同类型的内容，包括：
+1. 將體驗片段從AEM匯出至Adobe Target做為選件後，行銷人員可以使用這些選件在Target中建立活動。 根據WKND網站SkateFest行銷活動，行銷人員需要為每個州的WKND網站訪客建立並提供個人化體驗。 若要建立體驗鎖定目標活動，行銷人員必須識別對象。 針對我們的WKND SkateFest行銷活動，我們需要根據訪客WKND網站的來源位置，建立50個個別的對象。
+   * [受眾](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) 為您的活動定義目標，並用於可定位的任何地方。 Target受眾是一組已定義的訪客條件。 選件可定位至特定對象（或區段）。 只有屬於該受眾的訪客可以看到鎖定他們為目標的體驗。  例如，您可以將選件傳送給由使用特定瀏覽器或來自特定地理位置的訪客所組成的對象。
+   * 一個 [選件](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9) 是在行銷活動或活動期間顯示在您網頁上的內容。 當您測試網頁時，會使用您所在位置中的不同選件來衡量每個體驗的成功程度。 選件可包含不同型別的內容，包括：
       * 图像
       * 文本
       * **HTML**
-         * *HTML选件用于此方案的活动*
+         * *HTML選件用於此情境的活動*
       * 链接
       * 按钮
 
-## 内容编辑器活动
+## 內容編輯器活動
 
 >[!VIDEO](https://video.tv.adobe.com/v/28596?quality=12&learn=on)
 
 >[!NOTE]
 >
->在将体验片段导出到Adobe Target之前，先发布该体验片段。
+>先發佈體驗片段，再將其匯出至Adobe Target。
 
-## 营销人员活动
+## 行銷人員活動
 
-### 通过地域定位创建受众 {#marketer-audience}
+### 使用地理鎖定目標建立對象 {#marketer-audience}
 
-1. 导航到您的组织 [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`<https://<yourcompany>.experiencecloud.adobe.com`)
-1. 使用Adobe ID登录，并确保您所在的组织正确。
-1. 从解决方案切换器中，单击 **Target** 然后 **启动** Adobe Target。
+1. 導覽至您的組織 [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`<https://<yourcompany>.experiencecloud.adobe.com`)
+1. 使用您的Adobe ID登入，並確認您隸屬於正確的組織。
+1. 在解決方案切換器中，按一下 **Target** 然後 **啟動** Adobe Target。
 
    ![Experience Cloud- Adobe Target](assets/personalization-use-case-1/exp-cloud-adobe-target.png)
 
-1. 导航到 **选件** 选项卡，并搜索“WKND”选件。 您应该能够看到从AEM导出为HTML选件的体验片段变量列表。 每个选件都对应一个状态。 例如， *加州WKND滑冰节* 是提供给来自加利福尼亚的WKND网站访客的选件。
+1. 導覽至 **選件** 索引標籤並搜尋「WKND」選件。 您應該能夠檢視從AEM匯出為HTML選件的體驗片段變數清單。 每個選件都對應一個狀態。 例如， *WKND SkateFest加州* 是提供給來自加州之WKND網站訪客的選件。
 
    ![Experience Cloud- Adobe Target](assets/personalization-use-case-1/html-offers.png)
 
-1. 在主导航中，单击 **受众**.
+1. 在主要導覽列中，按一下 **受眾**.
 
-   营销人员需要为来自美国每个州的WKND网站访客创建50个单独的受众。
+   行銷人員需要為來自美國各州的WKND網站訪客建立50個不同的受眾。
 
-1. 要创建受众，请单击 **创建受众** 按钮，并为受众提供名称。
+1. 若要建立對象，請按一下 **建立對象** 按鈕，並為您的對象提供名稱。
 
-   **受众名称格式：WKND-\&lt;*state*\>**
+   **對象名稱格式：WKND-\&lt;*state*\>**
 
    ![Experience Cloud- Adobe Target](assets/personalization-use-case-1/audience-target-1.png)
 
-1. 单击 **添加规则>地域**.
-1. 单击 **选择**，然后选择以下选项之一：
+1. 按一下 **新增規則>地理**.
+1. 按一下 **選取**，然後選取下列其中一個選項：
    * 国家/地区
-   * **州** *（为WKND Site SkateFest营销活动选择状态）*
+   * **州** *（選取WKND Site SkateFest行銷活動的州）*
    * 城市
-   * 邮政编码
+   * 郵遞區號
    * 纬度
    * 经度
    * DMA
-   * 移动设备运营商
+   * 行動電信業者
 
-   **地域**  — 使用受众根据用户的地理位置（包括其国家/地区、省/自治区/直辖市、城市、邮编/邮政编码、DMA或移动设备运营商）定位用户。 地理位置参数允许您根据访客的地理位置定位活动和体验。 此数据随每个Target请求一起发送，并基于访客的IP地址。 与选择任何定位值一样，选择这些参数。
-
-   >[!NOTE]
-   >访客的IP地址会通过mbox请求进行传递，每次访问（会话）一次，以解析该访客的地理定位参数。
-
-1. 选择运算符作为 **匹配**，请提供适当的值(例如：California)和 **保存** 您的更改。 在本例中，请提供州名称。
-
-   ![Adobe Target — 地理规则](assets/personalization-use-case-1/audience-geo-rule.png)
+   **地理**  — 根據使用者的地理位置，包括其國家/地區、州/省、城市、郵遞區號、DMA或行動電信業者來鎖定使用者。 地理位置引數可讓您根據訪客的地理位置來鎖定目標活動和體驗。 此資料會根據訪客的IP位址，與每個Target請求一併傳送。 選取這些引數，就像任何鎖定目標值一樣。
 
    >[!NOTE]
-   >您可以为受众分配多个规则。
+   >訪客的IP位址會透過mbox要求傳遞(每次造訪（工作階段）一次)，以解析該訪客的地理鎖定目標引數。
 
-1. 重复步骤6-9，为其他状态创建受众。
+1. 選取運運算元為 **符合**，提供適當的值（例如：加州）和 **儲存** 您的變更。 在本例中，請提供州名。
 
-   ![Adobe Target - WKND受众](assets/personalization-use-case-1/adobe-target-audiences-50.png)
+   ![Adobe Target — 地理規則](assets/personalization-use-case-1/audience-geo-rule.png)
 
-此时，我们已成功为位于美国不同州的所有WKND网站访客创建了受众，并且还为每个州提供了相应的HTML选件。 现在，让我们创建一个体验定位活动，以使用WKND网站主页的相应选件来定位受众。
+   >[!NOTE]
+   >您可以指派多個規則給對象。
 
-### 通过地域定位创建活动
+1. 重複步驟6至9，為其他狀態建立對象。
 
-1. 从Adobe Target窗口中，导航到 **活动** 选项卡。
-1. 单击 **创建活动** ，然后选择 **体验定位** 活动类型。
-1. 选择 **Web** 渠道，然后选择 **可视化体验编辑器**.
-1. 输入 **活动URL** 单击 **下一个** 以打开可视化体验编辑器。
+   ![Adobe Target- WKND對象](assets/personalization-use-case-1/adobe-target-audiences-50.png)
 
-   WKND站点主页发布URL:http://localhost:4503/content/wknd/en.html
+此時，我們已成功針對美利堅合眾國各州的所有WKND網站訪客建立受眾，且每個州都有對應的HTML選件。 現在，讓我們建立體驗鎖定目標活動，以WKND網站首頁的對應選件來鎖定對象。
 
-   ![体验定位活动](assets/personalization-use-case-1/target-activity.png)
+### 使用地理鎖定目標建立活動
 
-1. 对于 **可视化体验编辑器** 要加载，请启用 **允许加载Unsafe脚本** 并重新加载页面。
+1. 從您的Adobe Target視窗，導覽至 **活動** 標籤。
+1. 按一下 **建立活動** 並選取 **體驗鎖定** 活動型別。
+1. 選取 **Web** 頻道並選擇 **視覺化體驗撰寫器**.
+1. 輸入 **活動URL** 並按一下 **下一個** 以開啟Visual Experience Composer。
 
-   ![体验定位活动](assets/personalization-use-case-1/load-unsafe-scripts.png)
+   WKND網站首頁發佈URL： http://localhost:4503/content/wknd/en.html
 
-1. 请注意在可视化体验编辑器编辑器中打开WKND站点主页。
+   ![體驗鎖定目標活動](assets/personalization-use-case-1/target-activity.png)
+
+1. 對象 **視覺化體驗撰寫器** 若要載入，請啟用 **允許載入Unsafe指令碼** ，然後重新載入頁面。
+
+   ![體驗鎖定目標活動](assets/personalization-use-case-1/load-unsafe-scripts.png)
+
+1. 請注意，WKND網站首頁會在視覺化體驗撰寫器編輯器中開啟。
 
    ![VEC](assets/personalization-use-case-1/vec.png)
 
-1. 要向VEC添加受众，请单击 **添加体验定位** 在“受众”下，选择WKND-California受众并单击 **下一个**.
+1. 若要新增對象至VEC，請按一下 **新增體驗鎖定目標** 在「對象」底下，選取WKND — 加州對象，然後按一下 **下一個**.
 
    ![VEC](assets/personalization-use-case-1/vec-select-audience.png)
 
-1. 单击VEC中的WKND网站页面，选择要为WKND-California受众添加选件的HTML元素，然后选择 **替换为** 选项，然后选择 **HTML选件**.
+1. 按一下VEC內的WKND網站頁面，選取HTML元素以新增WKND加州受眾的優惠方案，然後選擇 **取代為** 選項，然後選取 **HTML選件**.
 
-   ![体验定位活动](assets/personalization-use-case-1/vec-selecting-div.png)
+   ![體驗鎖定目標活動](assets/personalization-use-case-1/vec-selecting-div.png)
 
-1. 选择 **加州WKND滑冰节** HTML选件 **加利福利亚WKND** 选件中的受众选择UI并单击 **完成**.
-1. 您现在应该能够看到 **加州WKND滑冰节** HTML选件已添加到WKND-California受众的WKND站点页面。
-1. 重复第7-10步，为其他状态添加体验定位，然后选择相应的HTML选件。
-1. 单击 **下一个** ，您可以看到“受众”到“体验”的映射。
-1. 单击 **下一个** ，以移动到“目标和设置”。
-1. 选择报表源并确定活动的主要目标。 对于我们的方案，我们选择报表源作为 **Adobe Target**，将活动测量为 **转化**、页面上查看的操作，以及指向WKND SkateFest详细信息页面的URL。
+1. 選取 **WKND SkateFest加州** 的HTML選件 **WKND — 加利福尼亞** 選件選取UI並按一下 **完成**.
+1. 您現在應該能夠看到 **WKND SkateFest加州** HTML選件已新增至您的WKND網站頁面，供WKND — 加州受眾使用。
+1. 重複步驟7至10，為其他狀態新增體驗鎖定目標，並選擇對應的HTML選件。
+1. 按一下 **下一個** 若要繼續，您可以看到對象與體驗的對應。
+1. 按一下 **下一個** 以移至目標與設定。
+1. 選擇您的報告來源並識別活動的主要目標。 在「案例」中，選取「報表來源」作為 **Adobe Target**，將活動測量為 **轉換**、檢視頁面時的動作，以及指向WKND SkateFest詳細資訊頁面的URL。
 
-   ![目标和定位 — Target](assets/personalization-use-case-1/goal-metric-target.png)
+   ![目標與定位 — 目標](assets/personalization-use-case-1/goal-metric-target.png)
 
    >[!NOTE]
-   >您还可以选择Adobe Analytics作为报表源。
+   >您也可以選擇Adobe Analytics作為報表來源。
 
-1. 将鼠标悬停在当前活动名称上，您可以将其重命名为 **WKND滑冰节 — 美国**，然后 **保存并关闭** 您的更改。
-1. 从“活动详细信息”屏幕中，确保 **激活** 您的活动。
+1. 將游標停留在目前的活動名稱上，然後您可以將它重新命名為 **WKND SkateFest — 美國**，然後 **儲存並關閉** 您的變更。
+1. 從活動詳細資訊畫面，確認 **啟動** 您的活動。
 
-   ![激活活动](assets/personalization-use-case-1/activate-activity.png)
+   ![啟動活動](assets/personalization-use-case-1/activate-activity.png)
 
-1. 您的WKND SkateFest营销活动现已对所有WKND站点访客实时启用。
-1. 导航到 [WKND网站主页](http://localhost:4503/content/wknd/en.html)，并且您应该能够根据您的地理位置(*状态：加利福尼亚*)。
+1. 您的WKND SkateFest行銷活動現在已上線給所有WKND網站訪客。
+1. 導覽至 [wknd網站首頁](http://localhost:4503/content/wknd/en.html)，而且您應該能夠依據地理位置檢視WKND SkateFest選件(*州：加州*)。
 
-   ![活动QA](assets/personalization-use-case-1/wknd-california.png)
+   ![活動QA](assets/personalization-use-case-1/wknd-california.png)
 
-### Target活动QA
+### Target活動QA
 
-1. 在 **活动详细信息>概述** ，单击 **活动QA** 按钮，则您可以获得所有体验的直接QA链接。
+1. 下 **活動詳細資訊>概觀** 索引標籤上，按一下 **活動QA** 按鈕，您就可以取得所有體驗的直接QA連結。
 
-   ![活动QA](assets/personalization-use-case-1/activity-qa.png)
+   ![活動QA](assets/personalization-use-case-1/activity-qa.png)
 
-1. 导航到 [WKND网站主页](http://localhost:4503/content/wknd/en.html)，并且您应该能够根据您的地理位置（州）查看WKND SkateFest选件。
-1. 请观看以下视频，了解如何将选件交付到您的页面、如何自定义响应令牌以及执行质量检查。
+1. 導覽至 [wknd網站首頁](http://localhost:4503/content/wknd/en.html)，而且您應該能根據地理位置（州）看到WKND SkateFest選件。
+1. 觀看以下影片，瞭解如何將選件傳送至您的頁面、如何自訂回應Token以及執行品質檢查。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28658?quality=12&learn=on)
 
 ## 摘要
 
-在本章中，内容编辑器能够创建所有内容以支持Adobe Experience Manager中的WKND SkateFest营销活动，并将其导出到Adobe Target作为HTML选件，以便根据用户的地理位置创建体验定位。
+在本章中，內容編輯能夠建立所有內容以在Adobe Experience Manager中支援WKND SkateFest行銷活動，並將其匯出至Adobe Target作為HTML選件，用於根據使用者地理位置建立體驗鎖定目標。

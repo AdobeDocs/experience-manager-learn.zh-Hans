@@ -1,6 +1,6 @@
 ---
-title: 对上传的PDF应用使用权限
-description: 将使用权限应用于pdf
+title: 套用使用許可權至上傳的pdf
+description: 套用使用許可權至pdf
 version: 6.4,6.5
 feature: Reader Extensions
 topic: Development
@@ -15,16 +15,16 @@ ht-degree: 0%
 
 ---
 
-# 应用Reader扩展
+# 套用Reader延伸模組
 
-Reader扩展允许您处理PDF文档的使用权限。 使用权限与Acrobat中可用但Adobe Reader中不可用的功能有关。 由Reader扩展控制的功能包括向文档添加注释、填写表单和保存文档的功能。 添加了使用权限的PDF文档称为启用权限的文档。 在Adobe Reader中打开启用了权限的PDF文档的用户可以执行为该文档启用的操作。
+Reader擴充功能可讓您控制PDF檔案的使用許可權。 使用許可權與Acrobat中提供的功能有關，但不與Adobe Reader中的功能有關。 由Reader擴充功能控制的功能包括新增註釋至檔案、填寫表單及儲存檔案的功能。 已新增使用許可權的PDF檔案稱為許可權啟用檔案。 在Adobe Reader中開啟許可權啟用PDF檔案的使用者可以執行為該檔案啟用的操作。
 
-要完成此用例，我们需要执行以下操作：
-* [添加Reader扩展证书](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) to `fd-service` 用户。
+若要完成此使用案例，我們需要執行下列動作：
+* [新增Reader擴充功能憑證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) 至 `fd-service` 使用者。
 
-## 创建自定义OSGi服务
+## 建立自訂OSGi服務
 
-创建将对文档应用使用权限的自定义OSGi服务。 完成此操作的代码如下所示
+建立將套用使用許可權至檔案的自訂OSGi服務。 完成此工作的程式碼如下
 
 ```java
 import com.adobe.aemfd.docmanager.Document;
@@ -70,12 +70,12 @@ public class ApplyUsageRights implements ReaderExtendPDF {
 }
 ```
 
-## 创建Servlet以流式传输读取器扩展PDF
+## 建立servlet以串流處理讀取器延伸PDF
 
-下一步是使用POST方法创建一个Servlet，以将读取器扩展PDF返回给用户。 在这种情况下，系统会要求用户将PDF保存到其文件系统。 这是因为PDF呈现为动态PDF，而浏览器附带的pdf查看器不处理动态pdf。
+下一步是使用POST方法建立servlet，以將讀取器擴展PDF傳回給使用者。 在這種情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會呈現為動態PDF，而且瀏覽器隨附的pdf檢視器不會處理動態pdf。
 
-以下是Servlet的代码。 Servlet通过自适应表单的自定义提交操作来调用。
-Servlet会创建UsageRights对象，并根据用户在自适应表单中输入的值设置其属性。 然后，该Servlet将调用为此目的创建的服务的applyUsageRights方法。
+以下是servlet的程式碼。 此servlet會從最適化表單的自訂提交動作叫用。
+Servlet會建立UsageRights物件，並根據使用者在最適化表單中輸入的值來設定其屬性。 然後，servlet會呼叫為此目的建立之服務的applyUsageRights方法。
 
 ```java
 package com.aemforms.ares.core.servlets;
@@ -193,12 +193,12 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 }
 ```
 
-要在本地服务器上测试此功能，请执行以下步骤：
-1. [下载并安装DevelopingWithServiceUser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [下载并安装ares.ares.core-ares捆绑包](assets/ares.ares.core-ares.jar). 此服务具有自定义服务和Servlet，可应用使用权限并将PDF流传回
-1. [导入客户端库和自定义提交](assets/applyaresdemo.zip)
-1. [导入自适应表单](assets/applyaresform.zip)
-1. 将Reader扩展证书添加到“fd-service”用户。 确保别名为“ares”。
-1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
-1. 选择相应的权限并上传PDF文件
-1. 单击提交以获取Reader扩展PDF
+若要在本機伺服器上測試此專案，請遵循下列步驟：
+1. [下載並安裝DevelopingWithServiceUser套裝](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. [下載並安裝ares.ares.core-ares套件組合](assets/ares.ares.core-ares.jar). 此功能具有自訂服務和servlet，可套用使用許可權並將pdf串流回來
+1. [匯入使用者端程式庫和自訂提交](assets/applyaresdemo.zip)
+1. [匯入最適化表單](assets/applyaresform.zip)
+1. 將Reader延伸模組憑證新增至「fd-service」使用者。 請確定別名為「ares」。
+1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
+1. 選取適當的許可權並上傳PDF檔案
+1. 按一下提交以取得Reader延伸PDF

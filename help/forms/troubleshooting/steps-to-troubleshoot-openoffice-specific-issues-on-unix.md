@@ -1,6 +1,6 @@
 ---
-title: 对Unix设置上的OpenOffice特定问题进行故障诊断的步骤
-description: 对UNIX设置上的PDF生成器问题进行OpenOffice故障诊断。
+title: 針對Unix設定中的OpenOffice特定問題進行疑難排解的步驟
+description: 疑難排解UNIX安裝程式上的PDF產生器問題的OpenOffice問題。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 对Unix设置上OpenOffice特定故障进行故障诊断的步骤
+# 疑難排解Unix安裝程式上OpenOffice特定失敗的步驟
 
-*此视频将指导对AEM Forms PDFG的Unix设置上的OpenOffice特定故障进行故障诊断的过程。*
+*此影片會逐步解說針對AEM Forms PDFG的Unix設定，疑難排解OpenOffice特定失敗的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335551?quality=12&learn=on)

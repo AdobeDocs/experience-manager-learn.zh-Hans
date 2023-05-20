@@ -1,6 +1,6 @@
 ---
-title: 在工作流中使用表单数据模型服务作为步骤
-description: 从AEM Forms 6.4开始，我们现在能够将表单数据模型用作AEM工作流的一部分。 以下视频将演示在AEM工作流中配置表单数据模型步骤所需的步骤。
+title: 在工作流程中使用表單資料模型服務作為步驟
+description: 從AEM Forms 6.4開始，我們現在能使用表單資料模型做為AEM Workflow的一部分。 以下影片會逐步介紹在AEM Workflow中設定「表單資料模型」步驟所需的步驟。
 feature: Workflow
 type: Tutorial
 version: 6.4,6.5
@@ -16,25 +16,25 @@ ht-degree: 0%
 
 ---
 
-# 在工作流中使用表单数据模型服务作为步骤 {#using-form-data-model-service-as-step-in-workflow}
+# 在工作流程中使用表單資料模型服務作為步驟 {#using-form-data-model-service-as-step-in-workflow}
 
-从AEM Forms 6.4开始，我们现在能够将表单数据模型用作AEM工作流的一部分。 以下视频将演示在AEM工作流中配置表单数据模型步骤所需的步骤
+從AEM Forms 6.4開始，我們現在能使用表單資料模型做為AEM Workflow的一部分。 以下影片會逐步介紹在AEM Workflow中設定表單資料模型步驟所需的步驟
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)
 
-要在服务器上测试此功能，请按照以下说明操作
-* [下载和部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 这是用于设置元数据属性的自定义OSGI包。
->!![NOTE]在AEM Forms 6.5及更高版本中，此功能可开箱即用，如 [此处描述](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
+若要在您的伺服器上測試此功能，請遵循下列指示
+* [下載和部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 這是設定中繼資料屬性的自訂OSGI套件組合。
+>!![NOTE]在AEM Forms 6.5及更高版本中，此功能可立即用於 [請在此處說明](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* 如所述，使用SampleRest.war文件设置tomcat [此处](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html).Tomcat中部署的战争文件具有返回申请人信用评分的代码。 信用得分是200到800之间的随机数
+* 使用SampleRest.war檔案設定tomcat，如所述 [此處](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html).部署在Tomcat中的war檔案具有傳回申請人信用評分的代碼。 信用分數是介於200到800之間的隨機數字
 
-* [使用包管理器将资产导入AEM](assets/invoke-fdm-as-service-step.zip).该包包含以下内容：
+* [使用封裝管理程式將資產匯入AEM](assets/invoke-fdm-as-service-step.zip)此套件包含下列專案：
 
-   * 使用FDM步骤的工作流模型。
-   * 在FDM步骤中使用的表单数据模型。
-   * 自适应表单，在提交时触发工作流。
-* 打开 [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). 填写详细信息并提交。 在提交表单时， [外部应用程序工作流](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) 触发。
+   * 使用FDM步驟的工作流程模型。
+   * FDM步驟中使用的表單資料模型。
+   * 在提交時觸發工作流程的最適化表單。
+* 開啟 [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). 填寫詳細資料並提交。 在提交的表單上 [貸款應用程式工作流程](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) 觸發。
 
 ![ 工作流 ](assets/fdm-as-service-step-workflow.PNG).
-如果信用分数超过500，则工作流会利用或拆分组件将应用程序路由到管理员。 如果信用分数小于500，则将申请路由到付款
+如果信用評分超過500，工作流程會利用「或」分割元件，將應用模組傳送給管理員。 如果信用分數小於500，則會將應用模組傳送至cavery

@@ -1,6 +1,6 @@
 ---
 title: AEM Dispatcher 缓存教程
-description: 本教程的目标是帮助您更好地了解Dispatcher的工作方式以及如何使用它。
+description: 本教學課程的目標是協助您更瞭解Dispatcher的運作方式，以及您如何使用。
 feature: Dispatcher
 topic: Architecture
 role: Architect
@@ -15,15 +15,15 @@ ht-degree: 5%
 
 # AEM Dispatcher 缓存教程
 
-Dispatcher是大多数(即使不是所有AEM安装)安装中必不可少的一部分。 本教程的目标是帮助您更好地了解Dispatcher的工作方式以及如何使用它。
+Dispatcher是大部分的基本部分，如果不是所有AEM安裝的話。 本教學課程的目標是協助您更瞭解Dispatcher的運作方式，以及您如何使用。
 
-本教程分为三部分。
+本教學課程分為三個部分。
 
 1. [概念、模式和反模式](chapter-1.md)
-简要介绍Dispatcher的历史、机制并讨论这对AEM开发人员设计其组件的方式有何影响。
+簡要介紹Dispatcher的歷史和機制，並討論這會如何影響AEM開發人員如何設計其元件。
 
-1. [基础架构模式](chapter-2.md)
-讨论了各种拓扑，这些拓扑介绍了如何在前面使用一组发布系统和调度程序缓存来扩展AEM系统。
+1. [基礎架構模式](chapter-2.md)
+討論各種拓撲，瞭解如何在前方有一組發佈系統和Dispatcher快取來擴展AEM系統。
 
-1. [高级缓存主题](chapter-3.md)
-前两部分重点介绍Dispatcher中的纯http缓存以及存在哪些限制。 本部分讨论了如何克服这些限制的一些想法。
+1. [進階快取主題](chapter-3.md)
+前兩個部分著重於Dispatcher中的普通http快取，以及有哪些限制。 本部分討論如何克服這些限制的一些想法。

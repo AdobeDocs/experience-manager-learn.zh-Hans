@@ -1,6 +1,6 @@
 ---
-title: 将组件控制台与AEM Sites结合使用
-description: 组件控制台为开发人员和管理员提供了一个中心位置，用于管理站点实施中的所有各种组件。 以下视频详细介绍了组件控制台的功能。
+title: 搭配AEM Sites使用元件主控台
+description: 「元件主控台」為開發人員和管理員提供管理網站實施中所有不同元件的集中位置。 以下影片詳細說明元件主控台的功能。
 topics: components
 audience: all
 doc-type: feature video
@@ -18,22 +18,22 @@ ht-degree: 1%
 
 ---
 
-# 使用组件控制台 {#using-the-components-console-with-aem-sites}
+# 使用元件主控台 {#using-the-components-console-with-aem-sites}
 
-组件控制台为开发人员和管理员提供了一个中心位置，用于管理站点实施中的所有各种组件。 以下视频详细介绍了组件控制台的功能。
+「元件主控台」為開發人員和管理員提供管理網站實施中所有不同元件的集中位置。 以下影片詳細說明元件主控台的功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17417?quality=12&learn=on)
 
-组件控制台提供了以下功能：
+「元件主控台」提供下列功能：
 
-* 概述：当前AEM实例上所有可用已安装组件的列表
-* [!UICONTROL 属性]:显示元数据，如组件的标题、组和描述
-* [!UICONTROL 策略]:显示给定组件和关联的模板的任何现有策略
-* [!UICONTROL 实时使用情况]:显示包含组件的页面列表
+* 概覽：目前AEM執行個體上可用的所有已安裝元件清單
+* [!UICONTROL 屬性]：顯示中繼資料，例如元件的標題、群組和說明
+* [!UICONTROL 原則]：顯示指定元件和相關聯範本的任何現有原則
+* [!UICONTROL 即時使用情況]：顯示包含元件的頁面清單
 
-组件控制台可在 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 组件]**.
-组件控制台URL（本地AEM作者）： [http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
+元件主控台位於 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 元件]**.
+元件主控台URL （本機AEM作者）： [http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
 
 ## 其他资源 {#additional-resources}
 
-* [组件控制台文档](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/default-components-console.html)
+* [元件主控台檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/default-components-console.html)

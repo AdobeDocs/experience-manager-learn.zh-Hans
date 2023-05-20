@@ -1,6 +1,6 @@
 ---
-title: 为JBoss应用程序服务器中的任何类启用调试日志记录的步骤
-description: 配置调试日志记录，以解决与JBoss应用程序服务器相关的问题
+title: 為JBoss Application Server中的任何類別啟用偵錯記錄的步驟
+description: 設定偵錯記錄，以疑難排解與JBoss應用程式伺服器相關的問題
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 为JBoss应用程序服务器中的任何类启用调试日志记录的步骤
+# 為JBoss Application Server中的任何類別啟用偵錯記錄的步驟
 
-*此视频将演示如何为JBoss应用程序服务器中的任何类启用调试日志记录的步骤。*
+*此影片逐步解說在JBoss Application Server中啟用任何類別的偵錯記錄步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335522?quality=12&learn=on)

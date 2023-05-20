@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms中列出自定义资产类型
-description: 在AEM Forms中列出自定义资产类型的第2部分
+title: 列出AEM Forms中的自訂資產型別
+description: 在AEM Forms中列出自訂資產型別的第2部分
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
 feature: Adaptive Forms
 topics: development
@@ -21,20 +21,20 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms中列出自定义资产类型 {#listing-custom-asset-types-in-aem-forms}
+# 列出AEM Forms中的自訂資產型別 {#listing-custom-asset-types-in-aem-forms}
 
-## 创建自定义模板 {#creating-custom-template}
+## 建立自訂範本 {#creating-custom-template}
 
-为此，我们将创建一个自定义模板，以在同一页面上显示自定义资产类型和OOTB资产类型。 要创建自定义模板，请按照以下说明操作
+出於本文的目的，我們將建立自訂範本，以便在相同頁面上顯示自訂資產型別和OOTB資產型別。 若要建立自訂範本，請遵循下列指示
 
-1. 创建Sling:文件夹。 将其命名为“ myportalcomponent ”
-1. 添加“fpContentType”属性。 将其值设置为“**/libs/fd/ fp/formTemplate”。**
-1. 添加“title”属性，并将其值设置为“自定义模板”。 这是您将在搜索组件和Lister组件的下拉列表中看到的名称
-1. 在此文件夹下创建“template.html”。 此文件将保存要设置样式的代码，并显示各种资产类型。
+1. 在/apps下建立sling：資料夾。 將其命名為「 myportalcomponent 」
+1. 新增「fpContentType」屬性。 將其值設為&quot;**/libs/fd/ fp/formTemplate&quot;。**
+1. 新增「title」屬性，並將其值設為「custom template」。 這是您會在「搜尋並製表器」元件的下拉式清單中看到的名稱
+1. 在此資料夾下建立「template.html」。 此檔案會儲存程式碼，以設定樣式並顯示各種資產型別。
 
 ![appsfolder](assets/appsfolder_.png)
 
-以下代码使用搜索和列表组件列出了各种类型的资产。 我们会为每种类型的资产创建单独的html元素，如data-type = &quot;videos&quot;标记所示。 对于“视频”的资产类型，我们使用 &lt;video> 元素来在内联播放视频。 对于“worddocuments”的资产类型，我们会使用不同的html标记。
+下列程式碼會列出使用搜尋和清單產生器元件的各種資產型別。 我們會為每種型別的資產建立個別的html元素，如data-type = &quot;videos&quot;標籤所示。 若為「影片」的資產型別，請使用 &lt;video> 元素來內嵌播放視訊。 對於「文字檔案」的資產型別，我們使用不同的html標籤。
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -72,47 +72,47 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->第11行 — 请更改图像src以指向您在DAM中选择的图像。
+>第11行 — 請變更影像src以指向您在DAM中選擇的影像。
 >
->要在此模板中列出自适应Forms，请创建一个新div，并将其数据类型属性设置为“guide”。 您可以复制并粘贴其data-type=&quot;printForm&quot;的div，并将新复制的div的data-type设置为&quot;guide&quot;
+>若要在此範本中列出Adaptive Forms，請建立新的div並將其資料型別屬性設定為「guide」。 您可以複製並貼上其data-type=&quot;printForm的div，並將新複製的div的資料型別設定為&quot;guide&quot;
 
-## 配置搜索和制表器组件 {#configure-search-and-lister-component}
+## 設定搜尋和清單產生器元件 {#configure-search-and-lister-component}
 
-定义自定义模板后，我们现在必须将此自定义模板与“搜索和制表人”组件相关联。 将浏览器指向 [到此url ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
+定義自訂範本後，現在必須將此自訂範本與「搜尋並製表器」元件建立關聯。 指向您的瀏覽器 [至此url ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
 
-切换到设计模式，并配置段落系统，以在允许的组件组中包含搜索和制表器组件。 “搜索”和“制表人”组件是“文档服务”组的一部分。
+切換至設計模式，並將段落系統設定為將「搜尋和清單程式」元件納入允許的元件群組中。 Search and Lister元件是Document Services群組的一部分。
 
-切换到编辑模式，并将搜索和制表程序组件添加到ParSys中。
+切換至編輯模式，並將「搜尋並製表器」元件新增至ParSys。
 
-打开“搜索和制表人”组件的配置属性。 确保选中“资产文件夹”选项卡。 在搜索和列表组件中，选择要从中列出资产的文件夹。 为本文的目的，我已选择
+開啟「搜尋並製表器」元件的設定屬性。 請確定已選取「資產資料夾」索引標籤。 選取您要在搜尋和清單產生器元件中列出資產的資料夾。 為了撰寫本文檔，我已選取
 
-* /content/dam/videosAndWordDocuments
+* /content/dam/VideosAndWordDocuments
 * /content/dam/formsanddocuments/assettypes
 
 ![assetfolder](assets/selectingassetfolders.png)
 
-选项卡。 在此，您将选择要在搜索组件和列表组件中显示资产的模板。
+按Tab鍵前往「顯示」標籤。 您將在此處選擇要在搜尋和清單產生器元件中顯示資產的範本。
 
-从下拉菜单中选择“自定义模板”，如下所示。
+從下拉式清單中選取「自訂範本」，如下所示。
 
-![搜索器](assets/searchandlistercomponent.gif)
+![searchandlister](assets/searchandlistercomponent.gif)
 
-配置要在门户中列出的资产类型。 要在“资产列表”中配置资产的选项卡类型，并配置资产类型，请执行以下操作： 在本例中，我们配置了以下类型的资产
+設定您要在入口網站中列出的資產型別。 將資產索引標籤的型別設定為「資產清單」並設定資產型別。 在此範例中，我們已設定下列資產型別
 
-1. MP4文件
-1. Word文档
-1. 文档（这是OOTB资产类型）
-1. 表单模板（这是OOTB资产类型）
+1. MP4檔案
+1. Word檔案
+1. 檔案（這是OOTB資產型別）
+1. 表單範本（這是OOTB資產型別）
 
-以下屏幕快照显示了为列表配置的资产类型
+以下熒幕擷圖顯示已針對清單設定的資產型別
 
-![assettypes](assets/assettypes.png)
+![assettype](assets/assettypes.png)
 
-现在，您已配置了搜索和制表人门户组件，接下来该看看制表人的行动了。 将浏览器指向 [到此url ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). 结果应类似于下图所示。
+現在您已設定搜尋和製表人入口網站元件，是時候檢視製表人運作情況了。 指向您的瀏覽器 [至此url ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). 結果應該與下圖類似。
 
 >[!NOTE]
 >
->如果您的门户在发布服务器上列出了自定义资产类型，请确保您为“fd-service”用户向节点授予“读取”权限 **/apps/fd/fp/extensions/querybuilder**
+>如果您的入口網站在發佈伺服器上列出自訂資產型別，請務必將「讀取」許可權授與節點的「fd-service」使用者 **/apps/fd/fp/extensions/querybuilder**
 
-![assettypes](assets/assettypeslistings.png)
-[请使用包管理器下载并安装此包。](assets/customassettypekt1.zip) 其中包含示例mp4和word文档以及xdp文件，这些文件用作要使用搜索组件和Lister组件列出的资产类型
+![assettype](assets/assettypeslistings.png)
+[請使用封裝管理程式下載並安裝此封裝。](assets/customassettypekt1.zip) 這包含範例mp4和word檔案，以及用作資產型別的xdp檔案，以使用搜尋和清單產生器元件列出

@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe云管理器 — 程序
-description: Cloud Manager计划表示一组支持业务计划逻辑集的AEM环境，通常对应于购买的服务级别协议(SLA)。 例如，一个项目可以表示支持全球公共网站的AEM资源，而另一个项目则表示内部中央DAM。
+title: 使用Adobe Cloud Manager — 計畫
+description: Cloud Manager計畫代表支援邏輯業務計畫集合的AEM環境集合，通常會對應到已購買的服務等級協定(SLA)。 例如，一個計畫可能代表AEM資源以支援全球公共網站，而另一個計畫代表內部中央DAM。
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -19,8 +19,8 @@ ht-degree: 0%
 
 ---
 
-# 使用Adobe云管理器 — 程序
+# 使用Adobe Cloud Manager — 計畫
 
-Cloud Manager **程序** 表示支持逻辑业务计划集的AEM环境集，通常对应于购买的服务级别协议(SLA)。 例如，一个项目可以表示支持全球公共网站的AEM资源，而另一个项目则表示内部中央DAM。
+Cloud Manager **計畫** 代表支援邏輯業務計畫集合的AEM環境集合，通常會對應到已購買的服務等級協定(SLA)。 例如，一個計畫可能代表AEM資源以支援全球公共網站，而另一個計畫代表內部中央DAM。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 如何在AEM Headless中处理大结果集
-description: 了解如何使用AEM Headless处理大结果集。
+title: 如何在AEM Headless中使用大型結果集
+description: 瞭解如何使用AEM Headless處理大型結果集。
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -10,35 +10,35 @@ doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
 jira: KT-13102
 thumbnail: 3418381.jpeg
-source-git-commit: 9eb706e49f12a3ebd5222e733f540db4cf2c8748
+exl-id: f47ce344-310f-4b4c-9340-b0506289f468
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 1%
 
 ---
 
+# AEM Headless中的大型結果集
 
-# AEM Headless中的大结果集
+AEM Headless GraphQL查詢可傳回大量結果。 本文介紹如何在AEM Headless中使用大型結果，以確保您的應用程式的最佳效能。
 
-AEM无头GraphQL查询可返回大结果。 本文介绍了如何在AEM Headless中处理大结果，以确保应用程序的最佳性能。
+AEM Headless支援 [offset/limit](#list-query) 和 [游標型分頁](#paginated-query) 查詢到較大結果集的較小子集。 可以提出多個請求，以收集所需數量的結果。
 
-AEM Headless支持 [偏移/限制](#list-query) 和 [基于光标的分页](#paginated-query) 查询较大结果集的较小子集。 可以发出多个请求以收集所需数量的结果。
-
-以下示例使用结果的小子集（每个请求有四条记录）来演示这些技术。 在实际的应用程序中，为了提高性能，您需要在每个请求中使用更多的记录。 每个请求50条记录是一个良好的基准。
+以下範例使用結果的小子集（每個請求四個記錄）來示範技術。 在實際應用程式中，您可能會為每個請求使用較大量的記錄來改善效能。 每個請求50筆記錄是很好的基準。
 
 ## 内容片段模型
 
-可针对任何内容片段模型使用分页和排序。
+分頁和排序可用於任何內容片段模式。
 
-## GraphQL持久查询
+## GraphQL持續查詢
 
-使用大数据集时，可使用偏移和限制以及基于光标的分页来检索数据的特定子集。 但是，这两种技术之间存在一些差异，在某些情况下，这两种技术中一种更合适。
+使用大型資料集時，位移和限制以及游標型分頁都可用來擷取資料的特定子集。 不過，這兩種技術之間有些差異，可能會讓其中一種在某些情況下比另一種更合適。
 
-### 偏移/限制
+### 位移/限制
 
-列表查询，使用 `limit` 和 `offset` 提供一种直接的方法，以指定起始点(`offset`)和要检索的记录数(`limit`)。 此方法允许从完整结果集中的任意位置选择结果子集，例如跳转到特定的结果页面。 虽然实施起来很容易，但在处理大结果时却会很慢而且效率很低，因为检索许多记录时需要扫描所有以前的记录。 当偏移值较高时，此方法也可能会导致性能问题，因为可能需要检索和丢弃许多结果。
+清單查詢，使用 `limit` 和 `offset` 提供直接的方法，指定起點(`offset`)和要擷取的記錄數(`limit`)。 此方法允許從完整結果集內的任何位置選取結果子集，例如跳至結果的特定頁面。 雖然實作容易，但在處理大量結果時可能會變慢且效率低下，因為擷取許多記錄需要掃描所有先前的記錄。 當位移值很高時，此方法也可能導致效能問題，因為它可能需要擷取和捨棄許多結果。
 
-#### GraphQL查询
+#### GraphQL查詢
 
 ```graphql
 # Retrieves a list of Adventures sorted price descending, and title ascending if there is the prices are the same.
@@ -62,9 +62,9 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 }
 ```
 
-#### GraphQL响应
+#### GraphQL回應
 
-生成的JSON响应包含第2、第3、第4和第5个最昂贵的冒险。 结果中的前两个冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定价格相同的冒险项，然后按标题以升序排序。)
+產生的JSON回應會包含第2、第3、第4和第5最昂貴的冒險活動。 結果中的前兩個冒險具有相同的價格(`4500` 因此 [清單查詢](#list-queries) 會指定具有相同價格的Adventures，然後依標題遞增順序排序。)
 
 ```json
 {
@@ -97,11 +97,11 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 }
 ```
 
-### 分页查询
+### 分頁查詢
 
-基于光标的分页在分页查询中可用，涉及使用光标（对特定记录的引用）检索下一组结果。 这种方法更为有效，因为它避免了扫描所有以前的记录以检索所需数据子集的需要。 分页查询非常适用于从开头到中间的某个点或到结尾遍历大型结果集。 列表查询，使用 `limit` 和 `offset` 提供一种直接的方法，以指定起始点(`offset`)和要检索的记录数(`limit`)。 此方法允许从完整结果集中的任意位置选择结果子集，例如跳转到特定的结果页面。 虽然实施起来很容易，但在处理大结果时却会很慢而且效率很低，因为检索许多记录时需要扫描所有以前的记录。 当偏移值较高时，此方法也可能会导致性能问题，因为可能需要检索和丢弃许多结果。
+分頁查詢中可用的游標型分頁，涉及使用游標（對特定記錄的參照）來擷取下一組結果。 此方法更有效率，因為它不需要掃描所有先前的記錄來擷取所需的資料子集。 分頁查詢很適合從頭到中間的某個點或到結尾反複處理大型結果集。 清單查詢，使用 `limit` 和 `offset` 提供直接的方法，指定起點(`offset`)和要擷取的記錄數(`limit`)。 此方法允許從完整結果集內的任何位置選取結果子集，例如跳至結果的特定頁面。 雖然實作容易，但在處理大量結果時可能會變慢且效率低下，因為擷取許多記錄需要掃描所有先前的記錄。 當位移值很高時，此方法也可能導致效能問題，因為它可能需要擷取和捨棄許多結果。
 
-#### GraphQL查询
+#### GraphQL查詢
 
 ```graphql
 # Retrieves the most expensive Adventures (sorted by title ascending if there is the prices are the same)
@@ -131,9 +131,9 @@ query adventuresByPaginated($first:Int, $after:String) {
 }
 ```
 
-#### GraphQL响应
+#### GraphQL回應
 
-生成的JSON响应包含第2、第3、第4和第5个最昂贵的冒险。 结果中的前两个冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定价格相同的冒险项，然后按标题以升序排序。)
+產生的JSON回應會包含第2、第3、第4和第5最昂貴的冒險活動。 結果中的前兩個冒險具有相同的價格(`4500` 因此 [清單查詢](#list-queries) 會指定具有相同價格的Adventures，然後依標題遞增順序排序。)
 
 ```json
 {
@@ -174,9 +174,9 @@ query adventuresByPaginated($first:Int, $after:String) {
 }
 ```
 
-#### 下一组分页结果
+#### 下一組分頁結果
 
-可以使用 `after` 参数和 `endCursor` 值。 如果没有可获取的结果， `hasNextPage` is `false`.
+下一組結果可以使用以下擷取： `after` 引數和 `endCursor` 上一個查詢的值。 如果沒有更多可擷取的結果， `hasNextPage` 是 `false`.
 
 ##### 查询变量
 
@@ -187,19 +187,19 @@ query adventuresByPaginated($first:Int, $after:String) {
 }
 ```
 
-## React示例
+## React範例
 
-以下是演示如何使用的React示例 [偏移和限制](#offset-and-limit) 和 [基于光标的分页](#cursor-based-pagination) 方法。 通常，每个请求的结果数会更大，但就这些示例而言，限制设置为5。
+以下是React範例，示範如何使用 [位移和限制](#offset-and-limit) 和 [游標型分頁](#cursor-based-pagination) 方法。 通常每個請求的結果數量會較多，但就這些範例而言，上限設為5。
 
-### 偏移和限制示例
+### 位移和限制範例
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418381/?quality=12&learn=on)
 
-使用偏移和限制，可以轻松检索和显示结果子集。
+使用位移和限制，可輕鬆擷取和顯示結果子集。
 
-#### useEffect挂接
+#### useEffect鉤點
 
-的 `useEffect` 挂接会调用保留的查询(`adventures-by-offset-and-limit`)来检索历险记列表。 查询使用 `offset` 和 `limit` 参数以指定要检索的起始点和结果数。 的 `useEffect` 挂接在 `page` 值发生更改。
+此 `useEffect` 掛接會叫用持續查詢(`adventures-by-offset-and-limit`)以擷取Adventures清單。 查詢使用 `offset` 和 `limit` 用來指定起點和要擷取之結果數的引數。 此 `useEffect` 當以下情況時叫用鉤點： `page` 值變更。
 
 
 ```javascript
@@ -242,7 +242,7 @@ export function useOffsetLimitAdventures(page, limit) {
 
 #### 组件
 
-组件使用 `useOffsetLimitAdventures` 挂接以检索历险记列表。 的 `page` 值会递增和递减，以获取下一组和上一组结果。 的 `hasMore` 值用于确定是否应启用“下一页”按钮。
+元件使用 `useOffsetLimitAdventures` 勾選以擷取Adventures清單。 此 `page` 值會增加或減少，以擷取下一個和上一個結果集。 此 `hasMore` value可用來判斷是否應該啟用「下一頁」按鈕。
 
 ```javascript
 import { useState } from "react";
@@ -300,18 +300,18 @@ export default function OffsetLimitAdventures() {
 }
 ```
 
-### 分页示例
+### 分頁範例
 
-![分页示例](./assets/large-results/paginated-example.png)
+![分頁範例](./assets/large-results/paginated-example.png)
 
-_每个红色框表示一个离散的分页HTTP GraphQL查询。_
+_每個紅色方塊代表離散的分頁HTTP GraphQL查詢。_
 
-使用基于光标的分页，可以通过逐步收集结果并将其与现有结果关联来轻松检索和显示大型结果集。
+使用以游標為基礎的分頁，可以透過增量收集結果並將其串連到現有結果來輕鬆擷取和顯示大型結果集。
 
 
-#### UseEffect挂接
+#### UseEffect鉤點
 
-的 `useEffect` 挂接会调用保留的查询(`adventures-by-paginated`)来检索历险记列表。 查询使用 `first` 和 `after` 参数指定要检索的结果数和要从中开始的游标。 `fetchData` 会持续循环，收集下一组分页结果，直到没有可获取的结果。
+此 `useEffect` 掛接會叫用持續查詢(`adventures-by-paginated`)以擷取Adventures清單。 查詢使用 `first` 和 `after` 指定要擷取的結果數目和游標起始位置的引數。 `fetchData` 持續回圈，收集下一組分頁結果，直到沒有更多可擷取的結果為止。
 
 ```javascript
 import { useState, useEffect } from "react";
@@ -366,7 +366,7 @@ export function usePaginatedAdventures() {
 
 #### 组件
 
-组件使用 `usePaginatedAdventures` 挂接以检索历险记列表。 的 `queryCount` 值用于显示为检索历险列表而发出的HTTP请求数。
+元件使用 `usePaginatedAdventures` 勾選以擷取Adventures清單。 此 `queryCount` value用於顯示擷取Adventures清單所提出的HTTP要求數目。
 
 ```javascript
 import { useState } from "react";

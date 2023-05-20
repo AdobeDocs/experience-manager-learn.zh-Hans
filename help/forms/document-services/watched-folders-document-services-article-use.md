@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms中使用监视文件夹
-description: 在AEM Forms中配置和使用监视文件夹
+title: 在AEM Forms中使用Watched資料夾
+description: 在AEM Forms中設定及使用watched資料夾
 feature: Output Service
 version: 6.4,6.5
 topic: Development
@@ -15,36 +15,36 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms中使用监视文件夹{#using-watched-folders-in-aem-forms}
+# 在AEM Forms中使用Watched資料夾{#using-watched-folders-in-aem-forms}
 
-管理员可以配置网络文件夹（称为“监视文件夹”），以便当用户在“监视文件夹”中放置文件(如PDF文件)时，会启动预配置的工作流、服务或脚本操作来处理添加的文件。 服务执行指定操作后，会将结果文件保存在指定的输出文件夹中。 有关工作流、服务和脚本的更多信息。
+管理員可以設定網路資料夾（稱為Watched資料夾），以便在使用者將檔案(例如PDF檔案)放入Watched資料夾時，會啟動預先設定的工作流程、服務或指令碼操作，以處理新增的檔案。 服務執行指定的操作後，會將結果檔案儲存在指定的輸出資料夾中。 如需工作流程、服務和指令碼的詳細資訊。
 
-要了解有关创建监视文件夹的更多信息， [单击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html)
+若要進一步瞭解如何建立Watched資料夾， [按一下這裡](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html)
 
-“监视的文件夹”用于在批处理模式下生成文档。 使用监视文件夹机制，您可以为打印渠道生成交互式通信，或使用输出服务将数据与模板合并。
+Watched資料夾用於以批次模式產生檔案。 使用watched資料夾機制，您可以為列印通道產生互動式通訊，或使用輸出服務將資料與範本合併。
 
-本文将介绍利用输出服务通过监视文件夹机制将数据与模板合并的用例。
+本文將涵蓋透過watched資料夾機制使用輸出服務將資料與範本合併的使用案例。
 
-输出服务是AEM Document Services中的一项OSGi服务。 输出服务支持AEM Forms Designer的各种输出格式和输出设计功能。 输出服务可以转换XFA模板和XML数据，以生成各种格式的打印文档。
+Output服務是OSGi服務，屬於AEM Document Services的一部分。 輸出服務支援各種輸出格式和AEM Forms Designer的輸出設計功能。 輸出服務可以轉換XFA範本和XML資料，以產生多種格式的列印檔案。
 
-要进一步了解输出服务， [请单击此处](https://helpx.adobe.com/aem-forms/6/output-service.html).
-要在系统上设置监视文件夹，请执行以下步骤：
-* [下载并解压缩zip文件的内容](assets/outputservicewatchedfolderkt.zip).此zip文件包含用于创建监视文件夹的包和使用监视文件夹机制测试输出服务的示例文件
-   * Windows系统
+若要進一步瞭解輸出服務， [請按這裡](https://helpx.adobe.com/aem-forms/6/output-service.html).
+若要在系統上設定watched資料夾，請遵循下列步驟：
+* [下載並解壓縮zip檔案的內容](assets/outputservicewatchedfolderkt.zip).此zip檔案包含建立Watched資料夾的套件，以及使用Watched資料夾機制測試輸出服務的範例檔案
+   * Windows系統
 
-      * 使用包管理器将outputservicewatchedfolder.zip导入AEM中
-      * 这会在您的C驱动器上创建一个名为outputservicewatchedfolder的监视文件夹。
-   * 非Windows系统
-      * [打开监视文件夹的配置设置](http://localhost:4502/crx/de/index.jsp#/etc/fd/watchfolder/config/outputservice)
-      * 设置外部服务节点的文件夹路径属性以指向合适的位置
-      * 保存更改
-      * 上述位置是您的监视文件夹。
+      * 使用封裝管理員將outputservicewatchedfolder.zip匯入AEM
+      * 這會在您的C磁碟機上建立名為outputservicewatchedfolder的watched資料夾。
+   * 非Windows系統
+      * [開啟watched資料夾的組態設定](http://localhost:4502/crx/de/index.jsp#/etc/fd/watchfolder/config/outputservice)
+      * 設定輸出服務節點的資料夾路徑屬性，以指向適當的位置
+      * 儲存您的變更
+      * 上述位置是您的Watched資料夾。
 
-将SamplePdfFile和SampleXdpFile文件夹拖放到已监视文件夹的输入文件夹中。 成功处理文件后，结果会放置在已监视文件夹的结果文件夹下。
+將SamplePdfFile和SampleXdpFile資料夾拖放到watched資料夾的輸入資料夾中。 成功處理檔案時，結果會放置在監視資料夾的結果資料夾下。
 
 
 >[!NOTE]
 >
->如果与监视文件夹关联的脚本需要多个文件，则需要创建一个文件夹，并将所有必需的文件放置在该文件夹中，然后将该文件夹放入监视文件夹的输入文件夹中。
+>如果與watched資料夾關聯的指令碼需要多個檔案，您需要建立一個資料夾，並將所有需要的檔案放在資料夾中，並將資料夾放入您的watched資料夾的輸入資料夾中。
 >
->如果与监视文件夹关联的脚本只需要一个输入文件，则可以将该文件直接拖放到监视文件夹的输入文件夹中
+>如果與watched資料夾關聯的指令碼只需要一個輸入檔案，您可以將檔案直接拖放到watched資料夾的輸入資料夾中

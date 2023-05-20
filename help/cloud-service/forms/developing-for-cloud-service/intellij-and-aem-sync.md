@@ -1,6 +1,6 @@
 ---
-title: 使用Repo工具设置IntelliJ
-description: 准备IntelliJ以与AEM云就绪实例同步
+title: 使用存放庫工具設定IntelliJ
+description: 準備您的IntelliJ以與AEM cloud ready執行個體同步
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -16,72 +16,72 @@ ht-degree: 2%
 
 ---
 
-# 安装Cygwin
+# 安裝Cygwin
 
 
-Cygwin是一个与POSIX兼容的编程和运行时环境，在Microsoft Windows本地运行。
-安装 [齐格温](https://www.cygwin.com/). 我已安装在C:\cygwin64 folder中
+Cygwin是相容於POSIX的程式設計和執行階段環境，可在Microsoft Windows上原生執行。
+安裝 [Cygwin](https://www.cygwin.com/). 我已經安裝在C:\cygwin64資料夾中
 >[!NOTE]
-> 确保与cygwin安装一起安装zip、unzip、curl、rsync包
+> 請務必安裝zip、unzip、curl、rsync套件與cygwin安裝
 
-在c:\cloudmanager文件夹下创建一个名为adoberepo的文件夹。
+在c：\cloudmanager下建立名為adoberepo的資料夾。
 
-[安装存储库工具].(https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo).Installing)repo工具只是复制repo文件并将其放置在您的c:\cloudmanger\adoberepo folder中。
+[安裝存放庫工具].(https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo).Installing repo tool只是複製repo檔案，並將其置於c：\cloudmanger\adoberepo資料夾中。
 
-将以下内容添加到路径环境变量C:\cygwin64\bin;C:\CloudManager\adoberepo;
+將下列專案新增至路徑環境變數C:\cygwin64\bin；C:\CloudManager\adoberepo；
 
-## 设置外部工具
+## 設定外部工具
 
-* 启动IntelliJ
-* 按Ctrl+Alt+S键以启动设置窗口。
-* 选择“工具” — >“外部工具”，然后单击“+”符号，然后输入以下内容，如屏幕快照中所示。
+* 啟動IntelliJ
+* 按Ctrl+Alt+S鍵以啟動設定視窗。
+* 選取「工具」 — >「外部工具」，然後按一下+符號並輸入下列專案，如熒幕擷取畫面所示。
    ![rep](assets/repo.png)
-* 在“组”下拉字段中键入“repo”，并且您创建的所有命令都属于 **存储库** 群组
+* 在「群組」下拉式欄位中輸入「repo」，確保您建立名為repo的群組，且您建立的所有命令都屬於 **存放庫** 群組
 
 
 **Put命令**
-**项目**:C:\cygwin64\bin\bash
-**参数**:-l C:\CloudManager\adoberepo\repo put -f \$FilePath\$
-**工作目录**:\$ProjectFileDir\$
+**計畫**： C:\cygwin64\bin\bash
+**引數**： -l C:\CloudManager\adoberepo\repo put -f \$FilePath\$
+**工作目錄**： \$ProjectFileDir\$
 ![put-command](assets/put-command.png)
 
-**获取命令**
-**项目**:C:\cygwin64\bin\bash
-**参数**:-l C:\CloudManager\adoberepo\repo get -f \$FilePath\$
-**工作目录**:\$ProjectFileDir\$
+**取得命令**
+**計畫**： C:\cygwin64\bin\bash
+**引數**： -l C:\CloudManager\adoberepo\repo get -f \$FilePath\$
+**工作目錄**： \$ProjectFileDir\$
 ![get-command](assets/get-command.png)
 
-**状态命令**
-**项目**:C:\cygwin64\bin\bash
-**参数**:-l C:\CloudManager\adoberepo\repo st -f \$FilePath\$
-**工作目录**:\$ProjectFileDir\$
+**狀態命令**
+**計畫**： C:\cygwin64\bin\bash
+**引數**： -l C:\CloudManager\adoberepo\repo st -f \$FilePath\$
+**工作目錄**： \$ProjectFileDir\$
 ![status-command](assets/status-command.png)
 
-**差异命令**
-**项目**:C:\cygwin64\bin\bash
-**参数**:-l C:\CloudManager\adoberepo\repo diff -f $FilePath$
-**工作目录**:\$ProjectFileDir\$
-![diff命令](assets/diff-command.png)
+**差異命令**
+**計畫**： C:\cygwin64\bin\bash
+**引數**： -l C:\CloudManager\adoberepo\repo diff -f $FilePath$
+**工作目錄**： \$ProjectFileDir\$
+![diff-command](assets/diff-command.png)
 
-从中提取.repo文件 [repo.zip](assets/repo.zip) 并将其放在AEM项目根文件夹中。 (C:\CloudManager\aem-banking-application)。 打开.repo文件，并确保服务器和凭据设置与您的环境相匹配。
-打开.gitignore文件，向文件底部添加以下内容，然后保存更改\# repo .repo
+從擷取.repo檔案 [repo.zip](assets/repo.zip) 並將其放置在您的AEM專案根資料夾中。 (C:\CloudManager\aem-banking-application)。 開啟.repo檔案，並確認伺服器和認證設定符合您的環境。
+開啟.gitignore檔案，並將下列內容加入至檔案底部，然後儲存變更\# repo .repo
 
-在aem-banking-application项目中选择任何项目，如ui.content和右键单击，此时您应会看到repo选项，而在repo选项下，您将看到我们之前添加的4个命令。
+選取aem-banking-application專案中的任何專案（例如ui.content），然後按一下滑鼠右鍵，您應該會看到repo選項，而在repo選項下方，您會看到我們先前新增的4個命令。
 
-## 设置AEM创作实例
+## 設定AEM作者執行個體
 
-可以按照以下步骤在本地系统上快速设置云就绪实例。
-* [下载最新的AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
+您可以依照下列步驟操作，在本機系統上快速設定雲端就緒執行個體。
+* [下載最新的AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
 
-* [下载最新的AEM Forms Addon](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
+* [下載最新的AEM Forms附加元件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
 
-* 创建以下文件夹结构c:\aemformscs\aem-sdk\author
+* 建立下列資料夾結構c：\aemformscs\aem-sdk\author
 
-* 从AEM SDK zip文件中提取aem-sdk-quickstart-xxxxxxx.jar文件，并将其放在c:\aemformscs\aem-sdk\author folder.Rename jar文件中，转到aem-author-p4502.jar
+* 從AEM SDK zip檔案中解壓縮aem-sdk-quickstart-xxxxxxx.jar檔案，並將其置於c：\aemformscs\aem-sdk\author資料夾中。將jar檔案重新命名為aem-author-p4502.jar
 
-* 打开命令提示符，然后导航到c:\aemformscs\aem-sdk\author enter the following command java -jar aem-author-p4502.jar -gui。 这将开始安装AEM。
-* 使用管理员/管理员凭据登录
-* 停止AEM实例
-* 创建以下文件夹结构。C:\aemformscs\aem-sdk\author\crx-quickstart\install
-* 将aem-forms-addon-xxxxx.far复制到安装文件夹中
-* 打开命令提示符，然后导航到c:\aemformscs\aem-sdk\author enter the following command java -jar aem-author-p4502.jar -gui。 这将在您的AEM实例中部署Forms Add on包。
+* 開啟命令提示字元並瀏覽至c：\aemformscs\aem-sdk\author輸入以下命令java -jar aem-author-p4502.jar -gui。 這樣會開始安裝AEM。
+* 使用管理員/管理員憑證登入
+* 停止AEM執行個體
+* 建立下列資料夾結構。C:\aemformscs\aem-sdk\author\crx-quickstart\install
+* 將aem-forms-addon-xxxxxx.far複製到安裝資料夾
+* 開啟命令提示字元並瀏覽至c：\aemformscs\aem-sdk\author輸入以下命令java -jar aem-author-p4502.jar -gui。 這會在您的AEM執行個體中部署表單附加套件。

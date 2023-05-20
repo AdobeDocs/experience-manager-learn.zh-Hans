@@ -1,44 +1,44 @@
 ---
-title: AEM Sites视频和教程
-description: 通过我们的视频和教程了解Experience Manager Sites。 了解我们的员工挑选和AEM Sites的新增功能。
+title: AEM Sites影片和教學課程
+description: 從我們的影片和教學課程瞭解Experience Manager Sites。 瞭解我們員工的選擇和AEM Sites的新功能。
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
 source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '345'
-ht-degree: 14%
+ht-degree: 13%
 
 ---
 
-# AEM Sites视频和教程 {#overview}
+# AEM Sites影片和教學課程 {#overview}
 
-Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用户指南包含有关AEM Sites的众多特性和功能的视频和教程。
+Adobe Experience Manager (AEM) Sites是領先的體驗管理平台。 本使用手冊包含了AEM Sites許多功能的相關影片和教學課程。
 
 
 <div id="whats-new-section">
 
 ## 新增功能
 
-* **[将启动项与AEM Sites结合使用（视频）](./page-authoring/launches.md)**
+* **[搭配AEM Sites使用啟動（影片）](./page-authoring/launches.md)**
 
-   *了解AEM Sites的启动项，以及如何使用这些启动项来准备网站内容以供将来发行。*
+   *瞭解AEM Sites的啟動，以及如何使用它們來準備網站內容以供未來發行。*
 
-* **[使用AEM组件自定义Adobe客户端数据层（教程）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
+* **[使用AEM元件自訂Adobe使用者端資料層（教學課程）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
-   *了解如何使用自定义AEM组件中的内容更新Adobe客户端数据层。*
+   *瞭解如何使用自訂AEM元件的內容更新Adobe使用者端資料層。*
 
-* **[AEM无头GraphQL快速入门（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+* **[AEM Headless GraphQL快速入門（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *如何使用AEM GraphQL API从AEM中显示内容以供本机移动设备应用程序使用。*
+   *如何使用AEM GraphQL API公開來自AEM的內容，以供原生行動應用程式使用。*
 
-* **[使用内容片段（视频系列）](./content-fragments/content-fragments-feature-video-use.md)**
+* **[使用內容片段（影片系列）](./content-fragments/content-fragments-feature-video-use.md)**
 
-   *内容片段是与渠道无关的内容片段，可重复使用。*
+   *內容片段是可重複使用的內容片段，不受通道限制。*
 
-* **[使用SPA编辑器（视频）](./spa-editor/spa-editor-framework-feature-video-use.md)**
+* **[使用SPA編輯器（影片）](./spa-editor/spa-editor-framework-feature-video-use.md)**
 
-   *了解AEM针对单页应用程序(SPA)的编辑功能。*
+   *瞭解適用於單頁應用程式(SPA)的AEM編輯功能。*
 
 </div>
 
@@ -51,7 +51,7 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 
 <div id="staff-picks-section">
 
-## 员工挑选
+## 工作人員選擇
 
 <table>
 <tr>
@@ -60,12 +60,12 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
       <img alt="《AEM Sites 快速入门》 - WKND 教程" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
-    <strong>开始使用AEM Sites</strong>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans">
+    <strong>AEM Sites快速入門</strong>
     </a>
     </div>
     <p>
-    <em>面向希望实施AEM Sites的开发人员的快速入门指南。</em>
+    <em>適用於希望實作AEM Sites的開發人員的快速入門手冊。</em>
     <p>
   </td>
   <td>
@@ -73,25 +73,25 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
     <img alt="AEM Headless 快速入门" src="./assets/aem-headless-tutorial.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans">
     <strong>AEM Headless 快速入门</strong>
     </a>
     </div>
     <p>
-    <em>面向希望将AEM用作无头CMS的开发人员的快速入门指南。</em>
+    <em>適用於希望使用AEM做為Headless CMS的開發人員的快速入門手冊。</em>
     </p>
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-      <img alt="AEM SPA Editor快速入门" src="./assets/aem-wknd-spa-editor-tutorial.png" />
+      <img alt="AEM SPA編輯器快速入門" src="./assets/aem-wknd-spa-editor-tutorial.png" />
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-        <strong>AEM SPA Editor快速入门</strong>
+        <strong>AEM SPA編輯器快速入門</strong>
       </a>
     </div>
     <p>
-    <em>面向开发人员的入门指南，用于将单页应用程序(SPA)与AEM集成。</em>
+    <em>開發人員整合單頁應用程式(SPA)與AEM的快速入門手冊。</em>
     <p>
   </td>
 </tr>
@@ -99,13 +99,13 @@ Adobe Experience Manager(AEM)Sites是一款领先的体验管理平台。 本用
 
 </div>
 
-## 其他资源
+## 其他資源
 
-* [AEM Sites创作文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-* [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEMas a Cloud Service教程](/help/cloud-service/overview.md)
-* [AEM Assets教程](/help/assets/overview.md)
-* [AEM Forms教程](/help/forms/overview.md)
-* [AEM Foundation教程](/help/foundation/overview.md)
+* [AEM Sites編寫檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites開發檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites管理檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites部署檔案](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [AEMas a Cloud Service教學課程](/help/cloud-service/overview.md)
+* [AEM Assets教學課程](/help/assets/overview.md)
+* [AEM Forms教學課程](/help/forms/overview.md)
+* [AEM Foundation教學課程](/help/foundation/overview.md)

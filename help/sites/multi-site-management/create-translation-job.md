@@ -1,6 +1,6 @@
 ---
-title: 翻译作业
-description: 了解如何将翻译作业添加到现有翻译项目。
+title: 翻譯工作
+description: 瞭解如何將翻譯工作新增至現有翻譯專案。
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 ---
 
-# 翻译作业 {#translation-jobs}
+# 翻譯工作 {#translation-jobs}
 
-了解如何将翻译作业添加到现有翻译项目。
+瞭解如何將翻譯工作新增至現有翻譯專案。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36488?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 创建Acrobat Sign API应用程序
-description: Acrobat Sign API应用程序允许您将AEM Forms与Acrobat Sign集成
+title: 建立Acrobat Sign API應用程式
+description: Acrobat Sign API應用程式可讓您將AEM Forms與Acrobat Sign整合
 feature: Adaptive Forms,Acrobat Sign
 kt: 6032
 thumbnail: 38178.jpg
@@ -15,10 +15,10 @@ ht-degree: 0%
 
 ---
 
-# 创建Acrobat Sign API应用程序
+# 建立Acrobat Sign API應用程式
 
-您必须在Acrobat Sign上创建API应用程序，才能与Acrobat Sign平台集成。 API应用程序充当客户端应用程序的代表，与Acrobat Sign平台进行交互。 您可以在客户或合作伙伴域上创建API应用程序。
+您必須在Acrobat Sign上建立API應用程式，才能與Acrobat Sign平台整合。 API應用程式可代表使用者端應用程式，與Acrobat Sign平台互動。 您可以在客戶或合作夥伴網域上建立API應用程式。
 
-以下视频介绍创建Acrobat Sign API应用程序所需的步骤
+以下影片說明建立Acrobat Sign API應用程式所需的步驟
 
 >[!VIDEO](https://video.tv.adobe.com/v/38178?quality=12&learn=on)

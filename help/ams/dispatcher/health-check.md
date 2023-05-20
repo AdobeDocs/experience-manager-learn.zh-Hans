@@ -1,49 +1,50 @@
 ---
-title: AMS Dispatcher运行状况检查
-description: AMS提供运行状况检查cgi-bin脚本，云负载平衡器将运行该脚本以查看AEM是否正常，并且应继续为公共流量提供服务。
+title: AMS Dispatcher健康情況檢查
+description: AMS提供健康情況檢查cgi-bin指令碼，雲端負載平衡器會執行指令碼，以檢視AEM是否健康且應該持續為公共流量提供服務。
 version: 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: df3afc60f765c18915eca3bb2d3556379383fafc
+exl-id: 69b4e469-52cc-441b-b6e5-2fe7ef18da90
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 1%
 
 ---
 
-# AMS Dispatcher运行状况检查
+# AMS Dispatcher健康情況檢查
 
 [目录](./overview.md)
 
-[&lt; — 上一个：只读文件](./immutable-files.md)
+[&lt; — 上一步：唯讀檔案](./immutable-files.md)
 
-安装AMS基线调度程序后，会附带一些免费赠品。  其中一项功能是一组运行状况检查脚本。
-这些脚本使前面的AEM堆栈负载平衡器能够知道哪些腿部正常，并使它们保持服务。
+安裝AMS基準線後，Dispatcher會隨附一些免費贈品。  其中一項功能是一組健康情況檢查指令碼。
+這些指令碼可讓前端AEM棧疊的負載平衡器知道哪些腿狀況良好並保持其運作。
 
-![显示流量的动画GIF](assets/load-balancer-healthcheck/health-check.gif "运行状况检查步骤")
+![顯示流量流量的動畫GIF](assets/load-balancer-healthcheck/health-check.gif "健康情況檢查步驟")
 
-## 基本负载平衡器运行状况检查
+## 基本負載平衡器健康狀態檢查
 
-当客户流量通过Internet到达您的AEM实例时，他们将通过负载平衡器
+當客戶流量透過網際網路到達您的AEM執行個體時，他們將透過負載平衡器
 
-![此图显示了通过负载平衡器从Internet到aem的流量](assets/load-balancer-healthcheck/load-balancer-traffic-flow.png "负载平衡器流量流")
+![影像顯示透過負載平衡器從網際網路到aem的流量](assets/load-balancer-healthcheck/load-balancer-traffic-flow.png "負載平衡器流量流量")
 
-通过负载平衡器的每个请求都将循环到每个实例。  负载平衡器内置了运行状况检查机制，以确保它向正常主机发送流量。
+通過負載平衡器的每個請求都會將robin循環到每個執行個體。  負載平衡器已內建健康情況檢查機制，以確保它將流量傳送至健康的主機。
 
-默认检查通常是端口检查，以查看负载平衡器中目标服务器是否正在侦听端口流量（即TCP 80和443）
+預設檢查通常是連線埠檢查，以檢視負載平衡器中鎖定的伺服器是否接聽連線埠流量進入（即TCP 80和443）
 
-> `Note:` 虽然这样做起作用，但AEM是否健康还没有真正的衡量标准。  它仅测试Dispatcher（Apache Web服务器）是否已启动且正在运行。
+> `Note:` 雖然此功能可運作，但AEM是否運作狀況良好，沒有實際的測量結果。  它只會測試Dispatcher (Apache Web Server)是否啟動並執行。
 
-## AMS运行状况检查
+## AMS健康情況檢查
 
-为避免将流量发送到正在处理不正常AEM实例的正常调度程序，AMS创建了一些额外功能来评估腿的健康状况，而不只是评估调度程序的运行状况。
+為避免將流量傳送給遇到不健康的AEM執行個體的狀況良好的Dispatcher，AMS建立了一些額外專案來評估Leg的健康狀況，而不只是Dispatcher。
 
-![图像显示了运行状况检查的不同部分](assets/load-balancer-healthcheck/health-check-pieces.png "健康检查件")
+![此影像顯示運作狀況檢查的不同部分](assets/load-balancer-healthcheck/health-check-pieces.png "健康狀態檢查專案")
 
-健康检查包括以下部分
+健康情況檢查包含下列片段
 - 1 `Load balancer`
 - 1 `Apache web server`
 - 3 `Apache *VirtualHost* config files`
@@ -51,35 +52,35 @@ ht-degree: 1%
 - 1 `AEM instance`
 - 1 `AEM package`
 
-我们将介绍每件作品的布置及其重要性
+我們將說明每個專案的設定及其重要性
 
-### AEM包
+### AEM套件
 
-要指示AEM是否正常运行，您需要它执行一些基本的页面编译并提供页面。  Adobe Managed Services创建了一个包含测试页的基本包。  页面会测试存储库是否已打开，以及资源和页面模板是否可以呈现。
+若要指示AEM是否正常運作，您需要它執行一些基本頁面編譯並提供頁面。  Adobe Managed Services已建立包含測試頁面的基本套件。  頁面會測試存放庫是否啟動，以及資源與頁面範本是否可呈現。
 
-![此图显示了CRX包管理器中的AMS包](assets/load-balancer-healthcheck/health-check-package.png "healt-check-package")
+![影像顯示CRX封裝管理員中的AMS封裝](assets/load-balancer-healthcheck/health-check-package.png "healt-check-package")
 
-这是页面。  将显示安装的存储库ID
+以下是頁面。  它會顯示安裝的存放庫ID
 
-![此图显示了“AMS摄政”页](assets/load-balancer-healthcheck/health-check-page.png "健康检查页")
+![此影像顯示「AMS攝影」頁面](assets/load-balancer-healthcheck/health-check-page.png "health-check-page")
 
-> `Note:` 我们确保页面不能缓存。  如果每次只返回缓存的页面，则不会检查实际状态！
+> `Note:` 我們確定頁面不可快取。  如果每次傳回快取頁面時，都不會檢查實際狀態！
 
-这是我们可以测试的轻量端点，用于查看AEM是否已启动且正在运行。
+這是我們可以測試的輕量端點，以檢視AEM是否正常運作。
 
-### 负载平衡器配置
+### 負載平衡器設定
 
-我们将负载平衡器配置为指向CGI-BIN端点，而不是使用端口检查。
+我們將負載平衡器設定為指向CGI-BIN端點，而不使用連線埠檢查。
 
-![此图显示了AWS负载平衡器运行状况检查配置](assets/load-balancer-healthcheck/aws-settings.png "aws-lb设置")
+![影像顯示AWS負載平衡器健康情況檢查設定](assets/load-balancer-healthcheck/aws-settings.png "aws-lb-settings")
 
-![此图显示了Azure负载平衡器运行状况检查配置](assets/load-balancer-healthcheck/azure-settings.png "azure-lb设置")
+![影像顯示Azure負載平衡器健康情況檢查設定](assets/load-balancer-healthcheck/azure-settings.png "azure-lb-settings")
 
-### Apache运行状况检查虚拟主机
+### Apache健康情況檢查虛擬主機
 
-#### CGI-BIN虚拟主机 `(/etc/httpd/conf.d/available_vhosts/ams_health.vhost)`
+#### CGI-BIN虛擬主機 `(/etc/httpd/conf.d/available_vhosts/ams_health.vhost)`
 
-这是 `<VirtualHost>` Apache配置文件，用于启用CGI-Bin文件的运行。
+這是 `<VirtualHost>` 可執行CGI-Bin檔案的Apache設定檔。
 
 ```
 Listen 81
@@ -90,19 +91,19 @@ Listen 81
 </VirtualHost>
 ```
 
-> `Note:` cgi-bin文件是可以运行的脚本。  这可能是一个易受攻击的攻击矢量，而AMS使用的这些脚本并不可公开访问，只有负载平衡器才能针对其进行测试。
+> `Note:` cgi-bin檔案是可執行的指令碼。  這可能是一個易受攻擊的攻擊向量，並且AMS使用的這些指令碼無法公開存取，只能供負載平衡器測試。
 
 
-#### 虚拟主机维护不正常
+#### 維護不健全的虛擬主機
 
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_author.vhost`
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_publish.vhost`
 
-这些文件名为 `000_` 作为前缀。  内部配置为使用与实时网站相同的域名。  其目的在于，当运行状况检查检测到某个AEM后端存在问题时，启用此文件。  然后提供错误页面，而不是仅提供没有页面的503 HTTP响应代码。  会偷走正常交通 `.vhost` 文件，因为它在 `.vhost` 文件 `ServerName` 或 `ServerAlias`.  导致发往特定域的页面转到不健康的主机，而不是正常流量通过的默认主机。
+這些檔案已命名 `000_` 作為字首。  其原本設定為使用與即時網站相同的網域名稱。  其目的是讓此檔案在健康情況檢查偵測到其中一個AEM後端發生問題時啟用。  然後提供錯誤頁面，而不只是沒有頁面的503 HTTP回應代碼。  它會竊取正常情況下的流量 `.vhost` 檔案，因為它是在該檔案之前載入 `.vhost` 檔案共用相同檔案 `ServerName` 或 `ServerAlias`.  導致目的地為特定網域的頁面移至不正常的主機，而不是正常流量流經的預設主機。
 
-运行运行状况检查脚本时，它们会注销其当前运行状况状态。  服务器上每分钟运行一次cronjob，该作业在日志中查找不正常的条目。  如果它检测到创作AEM实例不正常，则将启用符号链接：
+健康情況檢查指令碼執行時，會登出目前的健康情況狀態。  每分鐘一次，伺服器上會執行一個cronjob，在記錄中尋找不健康的專案。  如果偵測到作者AEM執行個體狀況不良，則會啟用符號連結：
 
-日志条目：
+記錄專案：
 
 ```
 # grep "ERROR\|publish" /var/log/lb/health_check.log
@@ -110,32 +111,32 @@ E, [2022-11-23T20:13:54.984379 #26794] ERROR -- : AUTHOR -- Exception caught: Co
 I, [2022-11-23T20:13:54.984403 #26794]  INFO -- : [checkpublish]-author:0-publish:1-[checkpublish]
 ```
 
-触发：
+Cron發現錯誤並做出反應：
 
 ```
 # grep symlink /var/log/lb/health_check_reload.log
 I, [2022-11-23T20:34:19.213179 #2275]  INFO -- : ADDING VHOST symlink /etc/httpd/conf.d/available_vhosts/000_unhealthy_author.vhost => /etc/httpd/conf.d/enabled_vhosts/000_unhealthy_author.vhost
 ```
 
-您可以通过在 `/var/www/cgi-bin/health_check.conf`
+您可以透過在中設定重新載入模式設定，來控制作者或已發佈網站是否可載入此錯誤頁面 `/var/www/cgi-bin/health_check.conf`
 
 ```
 # grep RELOAD_MODE /var/www/cgi-bin/health_check.conf
 RELOAD_MODE='author'
 ```
 
-有效选项：
+有效選項：
 - 作者
-   - 这是默认选项。
-   - 这会为作者设置一个维护页面，当它不正常时
+   - 這是預設選項。
+   - 這會在作者狀況不佳時為其建立維護頁面
 - 发布
-   - 此选项将为发布者设置一个维护页面，当它不正常时
+   - 此選項會在publisher狀況不良時為其建立維護頁面
 - 全部
-   - 此选项将为作者或发布者设置一个维护页面，或者如果两者变得不正常，则会同时设置这两个页面
+   - 此選項會為作者或發佈者（或兩者）建立維護頁面（如果它們變得不正常）
 - 无
-   - 此选项会跳过运行状况检查的此功能
+   - 此選項會略過健康狀態檢查的這個功能
 
-在查看 `VirtualHost` 为这些请求设置时，您会看到它们加载的文档与启用请求后出现的每个请求的错误页面相同：
+若檢視 `VirtualHost` 針對這些專案設定時，您會看到它們載入相同的檔案，作為啟用時每個請求的錯誤頁面：
 
 ```
 <VirtualHost *:80>
@@ -163,7 +164,7 @@ RELOAD_MODE='author'
 </VirtualHost>
 ```
 
-响应代码仍为 `HTTP 503`
+回應代碼仍為 `HTTP 503`
 
 ```
 # curl -I https://we-retail.com/
@@ -172,42 +173,42 @@ X-Dispatcher: dispatcher1useast1
 X-Vhost: unhealthy-author
 ```
 
-他们将获取此页面，而不是空白页面。
+他們將會取得此頁面，而不是空白頁面。
 
-![图像显示默认维护页面](assets/load-balancer-healthcheck/unhealthy-page.png "unhealty-page")
+![影像顯示預設的維護頁面](assets/load-balancer-healthcheck/unhealthy-page.png "不健康頁面")
 
-### CGI-Bin脚本
+### CGI-Bin指令碼
 
-当从负载平衡器中拉出Dispatcher时，CSE可以在负载平衡器设置中配置5个不同的脚本，以更改这些脚本的行为或标准。
+您的CSE可以在負載平衡器設定中設定5個不同的指令碼，這些指令碼會變更將Dispatcher提取出負載平衡器的行為或條件。
 
 #### /bin/checkauthor
 
-使用时，此脚本将检查并记录其正面的所有实例，但仅在 `author` AEM实例不正常
+此指令碼在使用時會檢查並記錄其前面的任何執行個體，但只有在 `author` AEM執行個體狀況不良
 
-> `Note:` 请记住，如果发布AEM实例不正常，调度程序将继续运行以允许流量流向创作AEM实例
+> `Note:` 請記住，如果發佈AEM執行個體不正常，Dispatcher將保留服務以允許流量流向創作AEM執行個體
 
-#### /bin/checkpublish（默认）
+#### /bin/checkpublish （預設）
 
-使用时，此脚本将检查并记录其正面的所有实例，但仅在 `publish` AEM实例不正常
+此指令碼在使用時會檢查並記錄其前面的任何執行個體，但只有在 `publish` AEM執行個體狀況不良
 
-> `Note:` 请记住，如果作者AEM实例不正常，调度程序将继续运行以允许流量流向发布AEM实例
+> `Note:` 請記住，如果編寫AEM執行個體不正常，Dispatcher將保留在服務中以允許流量流向發佈AEM執行個體
 
 #### /bin/checkeither
 
-使用时，此脚本将检查并记录其正面的所有实例，但仅在 `author` 或 `publisher` AEM实例不正常
+此指令碼在使用時會檢查並記錄其前面的任何執行個體，但只有在 `author` 或 `publisher` AEM執行個體狀況不良
 
-> `Note:` 请记住，如果发布AEM实例或创作AEM实例不正常，调度程序将会退出服务。  这意味着，如果其中一个运行正常，它也不会收到流量
+> `Note:` 請記住，如果發佈AEM執行個體或編寫AEM執行個體不正常，Dispatcher會退出服務。  這表示如果其中一個變數正常，也不會收到流量
 
 #### /bin/checkboth
 
-使用时，此脚本将检查并记录其正面的所有实例，但仅在 `author` 和 `publisher` AEM实例不正常
+此指令碼在使用時會檢查並記錄其前面的任何執行個體，但只有在 `author` 和 `publisher` AEM執行個體狀況不良
 
-> `Note:` 请记住，如果发布AEM实例或创作AEM实例不正常，则调度程序不会退出服务。  这意味着，如果其中一个设备不健康，它将继续接收流量，并给请求资源的人员造成错误。
+> `Note:` 請記住，如果發佈AEM執行個體或編寫AEM執行個體不正常，Dispatcher不會退出服務。  這表示如果其中一個不健康，就會繼續收到流量，並給要求資源的人造成錯誤。
 
-#### /bin/heathy
+#### /bin/healthy
 
-使用时，此脚本将检查并记录其正面的所有实例，但无论AEM是否返回错误，都只会返回正常状态。
+使用此指令碼時，會檢查並記錄其目前所在的任何執行個體，但無論AEM是否傳回錯誤，都會正常傳回。
 
-> `Note:` 当运行状况检查未按预期运行且允许覆盖将AEM实例保留在负载平衡器中时，将使用此脚本。
+> `Note:` 健康情況檢查無法如預期運作，且允許覆寫將AEM執行個體保留在負載平衡器時，會使用此指令碼。
 
-[下一个 — > GIT符号链接](./git-symlinks.md)
+[下一頁 — > GIT符號連結](./git-symlinks.md)

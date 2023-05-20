@@ -1,6 +1,6 @@
 ---
-title: 持久GraphQL查询 — AEM无头的高级概念 — GraphQL
-description: 在Adobe Experience Manager(AEM)无头的高级概念的本章中，了解如何使用参数创建和更新持久化的GraphQL查询。 了解如何在保留查询中传递缓存控制参数。
+title: 持續性GraphQL查詢 — AEM Headless的進階概念 — GraphQL
+description: 本章的Adobe Experience Manager (AEM) Headless進階概念中，瞭解如何使用引數建立和更新持續的GraphQL查詢。 瞭解如何在持續性查詢中傳遞快取控制引數。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -16,36 +16,36 @@ ht-degree: 1%
 
 # 持久 GraphQL 查询
 
-持久化查询是存储在Adobe Experience Manager(AEM)服务器上的查询。 客户端可以发送包含查询名称的HTTPGET请求以执行该请求。 这种方法的好处是可缓存。 虽然客户端GraphQL查询也可以使用HTTPPOST请求执行（无法缓存），但持久查询可通过HTTP缓存或CDN进行缓存，从而提高性能。 持久化查询允许您简化请求并提高安全性，因为您的查询封装在服务器上，并且AEM管理员完全控制这些请求。 是 **最佳实践，强烈推荐** 使用AEM GraphQL API时使用持久查询。
+持續查詢是儲存在Adobe Experience Manager (AEM)伺服器上的查詢。 使用者端可以傳送具有查詢名稱的HTTPGET要求來執行它。 此方法的好處是可快取。 雖然使用者端GraphQL查詢也可以使用無法快取的HTTPPOST請求來執行，但持久查詢可以由HTTP快取或CDN快取，從而提高效能。 持續查詢可讓您簡化請求並提高安全性，因為您的查詢會封裝在伺服器上，且AEM管理員可完全控制這些查詢。 它是 **最佳實務與強烈建議** 以便在使用AEM GraphQL API時使用持久查詢。
 
-在上一章中，您探索了一些高级GraphQL查询来收集WKND应用程序的数据。 在本章中，您将查询保留到AEM，并了解如何对保留的查询使用缓存控制。
+在上一章中，您已探索一些進階GraphQL查詢來收集WKND應用程式的資料。 在本章中，您會將查詢保留到AEM，並瞭解如何對保留的查詢使用快取控制。
 
 ## 前提条件 {#prerequisites}
 
-本文档是多部分教程的一部分。 请确保 [上一章节](explore-graphql-api.md) 已完成，然后才能继续处理本章。
+本檔案是多部分教學課程的一部分。 請確保 [上一章](explore-graphql-api.md) 已完成，再繼續本章節。
 
-## 目标 {#objectives}
+## 目標 {#objectives}
 
-在本章中，了解如何：
+在本章中，瞭解如何：
 
-* 使用参数保留GraphQL查询
-* 对保留查询使用缓存控制参数
+* 使用引數保留GraphQL查詢
+* 對持久查詢使用快取控制引數
 
-## 审阅 _GraphQL持久查询_ 配置设置
+## 檢閱 _GraphQL持續查詢_ 組態設定
 
-让我们回顾一下 _GraphQL持久查询_ 在AEM实例中为WKND Site项目启用。
+讓我們來檢視一下 _GraphQL持續查詢_ 已在AEM執行個體中為WKND網站專案啟用。
 
-1. 导航到 **工具** > **常规** > **配置浏览器**.
+1. 導覽至 **工具** > **一般** > **設定瀏覽器**.
 
-1. 选择 **WKND共享**，然后选择 **属性** ，以打开配置属性。 在配置属性页面上，您应会看到 **GraphQL永久查询** 权限。
+1. 選取 **WKND已共用**，然後選取 **屬性** 以開啟設定屬性。 在組態特性頁面上，您應該會看到 **GraphQL持續查詢** 許可權已啟用。
 
    ![配置属性](assets/graphql-persisted-queries/configuration-properties.png)
 
-## 使用内置GraphQL资源管理器工具保留GraphQL查询
+## 使用內建GraphiQL Explorer工具保留GraphQL查詢
 
-在此部分中，让我们保留稍后在客户端应用程序中用于获取和渲染Adventure内容片段数据的GraphQL查询。
+在本節中，我們將持續儲存GraphQL查詢，該查詢稍後用於使用者端應用程式中，以擷取及轉譯Adventure內容片段資料。
 
-1. 在GraphiQL资源管理器中输入以下查询：
+1. 在GraphiQL Explorer中輸入以下查詢：
 
    ```graphql
    query getAdventureDetailsBySlug($slug: String!) {
@@ -154,51 +154,51 @@ ht-degree: 1%
    }
    ```
 
-   在保存查询之前，请验证查询是否可用。
+   在儲存查詢之前，請先確認查詢可運作。
 
-1. 下一步点按另存为，然后输入 `adventure-details-by-slug` 作为查询名称。
+1. 接著點選「另存新檔」並輸入 `adventure-details-by-slug` 作為「查詢名稱」。
 
-   ![Persist GraphQL查询](assets/graphql-persisted-queries/persist-graphql-query.png)
+   ![保留GraphQL查詢](assets/graphql-persisted-queries/persist-graphql-query.png)
 
-## 通过对特殊字符进行编码来使用变量执行持久查询
+## 透過編碼特殊字元來執行變數的持續查詢
 
-让我们了解客户端应用程序如何通过对特殊字符进行编码来执行带有变量的持久查询。
+讓我們瞭解使用者端應用程式如何藉由編碼特殊字元來執行具有變數的持續查詢。
 
-要执行持久查询，客户端应用程序使用以下语法发出GET请求：
+若要執行持續查詢，使用者端應用程式會使用下列語法發出GET要求：
 
 ```
 GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
 ```
 
-执行保留查询 _变量_，则上述语法将更改为：
+執行持續查詢 _使用變數_，則上述語法會變更為：
 
 ```
 GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>;variable1=value1;variable2=value2
 ```
 
-必须转换特殊字符(如分号(;)、等号(=)、斜杠(/)和空格)，才能使用相应的UTF-8编码。
+特殊字元(如分號(；)、等號(=)、斜線(/)和空格)必須轉換為使用對應的UTF-8編碼。
 
-通过运行 `getAllAdventureDetailsBySlug` 从命令行终端查询，我们将在操作中查看这些概念。
+藉由執行 `getAllAdventureDetailsBySlug` 從命令列終端機進行查詢時，我們會檢閱這些概念的實際運作情況。
 
-1. 打开GraphiQL资源管理器，然后单击 **省略号** (...) `getAllAdventureDetailsBySlug`，然后单击 **复制URL**. 将复制的URL粘贴到文本键盘中，如下所示：
+1. 開啟GraphiQL Explorer並按一下 **橢圓** (...)永久查詢旁邊 `getAllAdventureDetailsBySlug`，然後按一下 **複製URL**. 將複製的URL貼到文字輸入板中，如下所示：
 
    ```code
        http://<AEM_HOST>/graphql/execute.json/wknd-shared/getAllAdventureDetailsBySlug;slug=
    ```
 
-1. 添加 `yosemite-backpacking` 作为变量值
+1. 新增 `yosemite-backpacking` 作為變數值
 
    ```code
        http://<AEM_HOST>/graphql/execute.json/wknd-shared/getAllAdventureDetailsBySlug;slug=yosemite-backpacking
    ```
 
-1. 对分号(;)和等号(=)特殊字符进行编码
+1. 編碼分號(；)和等號(=)特殊字元
 
    ```code
        http://<AEM_HOST>/graphql/execute.json/wknd-shared/getAllAdventureDetailsBySlug%3Bslug%3Dyosemite-backpacking
    ```
 
-1. 打开命令行终端并使用 [卷曲](https://curl.se/) 运行查询
+1. 開啟命令列終端機並使用 [Curl](https://curl.se/) 執行查詢
 
    ```shell
    $ curl -X GET http://<AEM_HOST>/graphql/execute.json/wknd-shared/getAllAdventureDetailsBySlug%3Bslug%3Dyosemite-backpacking
@@ -206,37 +206,37 @@ GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
 
 >[!TIP]
 >
->    如果针对AEM创作环境运行上述查询，则必须发送凭据。 请参阅 [本地开发访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) 来演示 [调用AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api) 以了解文档详细信息。
+>    如果針對AEM作者環境執行上述查詢，您必須傳送認證。 另請參閱 [本機開發存取權杖](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) 以示範 [呼叫AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api) 以取得檔案詳細資訊。
 
-另外，请查阅 [如何执行持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query), [使用查询变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables)和 [对查询URL进行编码，以供应用程序使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url) 了解客户端应用程序持久执行的查询。
+此外，請檢閱 [如何執行持久查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query)， [使用查詢變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables)、和 [為應用程式使用的查詢URL編碼](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url) 以瞭解使用者端應用程式的持久查詢執行。
 
-## 更新保留查询中的缓存控制参数 {#cache-control-all-adventures}
+## 更新持續性查詢中的快取控制引數 {#cache-control-all-adventures}
 
-AEM GraphQL API允许您为查询更新默认的缓存控制参数，以提高性能。 默认的缓存控制值为：
+AEM GraphQL API可讓您更新查詢的預設快取控制引數，以改進效能。 預設cache-control值為：
 
-* 对于客户端（例如，浏览器），默认为60秒(maxage=60)TTL
+* 60秒是使用者端（例如瀏覽器）的預設(maxage=60) TTL
 
-* 对于调度程序和CDN，默认为7200秒(s-maxage=7200)TTL;也称为共享缓存
+* 7200秒是Dispatcher和CDN的預設(s-maxage=7200) TTL；也稱為共用快取
 
-使用 `adventures-all` 查询以更新cache-control参数。 查询响应较大，控制其非常有用 `age` 在缓存中。 此持久查询稍后用于更新 [客户端应用程序](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md).
+使用 `adventures-all` 查詢以更新快取控制引數。 查詢回應很大，可用來控制其 `age` 在快取中。 此持久查詢稍後用於更新 [使用者端應用程式](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md).
 
-1. 打开GraphiQL资源管理器，然后单击 **省略号** (...)，然后单击永久查询旁边的 **标题** 打开 **缓存配置** 模式窗口。
+1. 開啟GraphiQL Explorer並按一下 **橢圓** (...)，然後按一下 **標頭** 以開啟 **快取設定** 強制回應視窗。
 
-   ![Persist GraphQL标头选项](assets/graphql-persisted-queries/persist-graphql-header-option.png)
-
-
-1. 在 **缓存配置** 模式窗口，更新 `max-age` 标题值到 `600 `秒（10分钟），然后单击 **保存**
-
-   ![保留GraphQL缓存配置](assets/graphql-persisted-queries/persist-graphql-cache-config.png)
+   ![保留GraphQL標頭選項](assets/graphql-persisted-queries/persist-graphql-header-option.png)
 
 
-审阅 [缓存保留的查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#caching-persisted-queries) 有关默认缓存控制参数的详细信息。
+1. 在 **快取設定** 強制回應視窗，更新 `max-age` 標題值至 `600 `秒（10分鐘），然後按一下 **儲存**
+
+   ![保留GraphQL快取設定](assets/graphql-persisted-queries/persist-graphql-cache-config.png)
+
+
+檢閱 [快取您的持續查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#caching-persisted-queries) 以取得預設快取控制引數的詳細資訊。
 
 
 ## 恭喜！
 
-恭喜！您现在已学习如何通过参数保留GraphQL查询、更新持久化查询，以及将缓存控制参数与持久化查询一起使用。
+恭喜！您現在已瞭解如何使用引數保留GraphQL查詢、更新持久查詢，以及使用快取控制引數保留查詢。
 
-## 下面的步骤
+## 后续步骤
 
-在 [下一章](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)，您将在WKND应用程序中实施对保留查询的请求。
+在 [下一個章節](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)，您將會在WKND應用程式中實施持續查詢的要求。
