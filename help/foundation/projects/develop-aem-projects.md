@@ -154,7 +154,7 @@ AEM專案隨附數個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
    1. 新增另一個 **nt：unstructured** 標示為「角色」節點子項的核准者節點。
    1. 新增字串屬性 **jcr：title** = &quot;**核准者**&quot;， **roleclass** =&quot;**所有者**&quot;， **roleid**=&quot;**核准者**「。
       1. 核准者節點的名稱以及jcr：title和roleid可以是任何字串值（只要roleid是唯一的）。
-      1. **roleclass** 會根據「 」控制套用至該角色的許可權 [3個OOTB角色](專案中的https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User角色)： **所有者**， **編輯者**、和 **觀察者**.
+      1. **roleclass** 會根據「 」控制套用至該角色的許可權 [3個OOTB角色](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html)： **所有者**， **編輯者**、和 **觀察者**.
       1. 一般而言，如果自訂角色主要是管理角色，則角色可以是 **所有者；** 如果它是更具體的創作角色，例如攝影師或設計師，則 **編輯者** 角色類別應該就足夠了。 兩者之間的重大差異 **所有者** 和 **編輯者** 是專案所有者可以更新專案屬性，並將新使用者新增至專案。
 
    ```shell
