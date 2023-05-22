@@ -7,7 +7,7 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 758fa40240b12f5bfa83ac5c0300b71f41e2326d
+source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 7%
@@ -15,6 +15,8 @@ ht-degree: 7%
 ---
 
 # AEM中的HeadlessTutorials{#aem-headless-tutorials}
+
+{{aem-headless-trials-promo}}
 
 Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON格式傳送其內容。 使用實作教學課程來探索如何使用各種選項並選擇適合您的選項。
 

@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
+source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 2%
@@ -20,13 +20,15 @@ ht-degree: 2%
 
 # AEM Headless第一個教學課程
 
-![AEM Headless第一個教學課程](./assets/overview/overview.png)
+{{aem-headless-trials-promo}}
 
 歡迎使用完全由AEM Headless API和GraphQL提供支援的React來建立網頁體驗教學課程。 在本教學課程中，我們將結合React、Adobe Experience Manager (AEM) Headless API和GraphQL的強大功能，引導您完成建立動態和互動式Web應用程式的程式。
 
 React是用於建置使用者介面的熱門JavaScript程式庫，以其簡易性、可重複使用性和元件架構而聞名。 AEM提供健全的內容管理功能，並公開Headless API，讓開發人員可透過各種管道和應用程式存取儲存在AEM中的內容和資料。
 
 運用AEM Headless API，您可以從AEM執行個體擷取內容、資產和資料，並使用它們來強化React應用程式。 GraphQL是API的彈性查詢語言，提供從AEM執行個體要求特定資料的高效且精確方式，實現了React與AEM之間的無縫整合。
+
+![AEM Headless第一個教學課程](./assets/overview/overview.png)
 
 在本教學課程中，我們將逐步引導您完成使用React和AEM Headless API搭配GraphQL來建置Web體驗的程式。 您將瞭解如何設定開發環境、在React和AEM之間建立連線、使用GraphQL查詢擷取內容，以及在Web應用程式中動態呈現。
 
