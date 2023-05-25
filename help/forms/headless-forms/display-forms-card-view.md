@@ -1,0 +1,106 @@
+---
+title: 在卡片视图中显示获取的表单
+description: 使用listforms API显示表单
+feature: Adaptive Forms
+version: 6.5
+kt: 13311
+topic: Development
+role: User
+level: Intermediate
+source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+workflow-type: tm+mt
+source-wordcount: '213'
+ht-degree: 0%
+
+---
+
+
+# 以卡片格式获取并显示表单
+
+卡片视图格式是以卡片形式显示信息或数据的设计模式。 每个信息卡表示一个单独的内容或数据条目，通常由一个视觉上截然不同的容器组成，其中排列了特定元素。 在本文中，我们将使用 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) 获取表单并以卡片格式显示表单，如下所示
+
+![卡片视图](./assets/card-view-forms.png)
+
+## 信息卡模板
+
+以下代码用于设计信息卡模板。 卡片模板显示自适应表单的标题和描述以及Adobe徽标。 [材料UI组件](https://mui.com/) 已用于创建此布局。
+
+```javascript
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import { Typography } from "@mui/material";
+import { Box } from "@mui/system";
+const FormCard =({headlessForm}) => {
+    return (
+              <Grid item xs={3}>
+                <Paper elevation={3}>
+                    <img src="/content/dam/formsanddocuments/registrationform/jcr:content/renditions/cq5dam.thumbnail.48.48.png" className="img"/>
+                    <Box padding={3}>
+                    <Typography variant="subtititle2" component="h2">
+                        {headlessForm.title}
+                    
+                    </Typography>
+                    <Typography variant="subtititle3" component="h4">
+                        {headlessForm.description}
+                    
+                    </Typography>
+                    </Box>
+                </Paper>
+                </Grid>
+          
+
+
+    );
+    
+
+};
+export default FormCard;
+```
+
+## 获取表单
+
+listforms API用于从AEM服务器获取表单。 API返回JSON对象数组，每个JSON对象表示表单。
+
+```javascript
+import { useState,useEffect } from "react";
+import React, { Component } from "react";
+import FormCard from "./components/FormCard";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Container from "@mui/material/Container";
+ 
+export default function ListForm(){
+    const [fetchedForms,SetHeadlessForms] = useState([])
+    const getForms=async()=>{
+        const response = fetch("/adobe/forms/af/listforms")
+        let headlessForms = await (await response).json();
+        console.log(headlessForms.items);
+        SetHeadlessForms(headlessForms.items);
+    }
+    useEffect( ()=>{
+        getForms()
+        
+
+    },[]);
+    return(
+        <div>
+             <div>
+                <Container>
+                   <Grid container spacing={3}>
+                       {
+                            fetchedForms.map( (afForm,index) =>
+                                <FormCard headlessForm={afForm} key={index}/>
+                         
+                            )
+                        }
+                    </Grid>
+                </Container>
+             </div>
+
+        </div>
+    )
+}
+```
+
+在上述代码中，我们使用map函数对fetchedForms进行迭代，并且为fetchedForms数组中的每个项目创建一个FormCard组件并将其添加到网格容器中。 您现在可以根据自己的要求在React应用程序中使用ListForm组件。

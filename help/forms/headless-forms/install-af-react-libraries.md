@@ -1,37 +1,41 @@
 ---
-title: 安裝必要的最適化表單react程式庫
-description: 將所需的相依性新增至您的react專案
+title: 安装所需的自适应表单react库
+description: 将所需的依赖项添加到您的react项目
 feature: Adaptive Forms
 version: 6.5
 kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
+source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 1%
+source-wordcount: '209'
+ht-degree: 0%
 
 ---
 
 
-# 安裝必要的相依性
+# 安装所需的依赖项
 
-若要開始在react專案中使用Headless調適型表單，請在react專案中安裝下列相依性
+要在react项目中使用Headless自适应表单，请在react项目中安装以下依赖项
 
 * @aemforms/af-react-components
 * @aemforms/af-react-renderer
 
-更新package.json以包含以下相依性。 在撰寫時，0.22.41是目前的版本
+更新package.json以包含以下依赖项。 在编写本报告时，0.22.41是当前版本
 
 ```json
 "@aemforms/af-react-components": "^0.22.41",
 "@aemforms/af-react-renderer": "^0.22.41",
 ```
 
-## 設定Proxy
+>[!NOTE]
+>
+>本教程中的下拉列表和卡片布局是使用 [材料UI库](https://mui.com/). 您需要下载相应的材料UI包，以使代码在您的系统中正常工作。
 
-跨原始資源共用(CORS)是一種安全性機制，可限制Web瀏覽器向應用程式託管所在的網域以外的不同網域提出請求。 當您嘗試從託管在不同網域上的API擷取資料時，可能會發生CORS錯誤。 透過設定Proxy，您可以略過CORS限制，並從React應用程式向API提出請求。 我在src資料夾中名為setUpProxy.js的檔案中使用了下列程式碼。 **請務必將目標變更為指向您的發佈執行個體。**
+## 设置代理
+
+跨源资源共享(CORS)是一种安全机制，可限制Web浏览器向应用程序托管位置以外的其他域发出请求。 当您尝试从托管在不同域上的API获取数据时，可能会发生CORS错误。 通过设置代理，您可以绕过CORS限制，从React应用程序向API发出请求。 我已在src文件夹中名为setUpProxy.js的文件中使用了以下代码。 **确保将目标更改为指向发布实例。**
 
 ```
 const { createProxyMiddleware } = require('http-proxy-middleware');
@@ -51,8 +55,8 @@ module.exports = function(app) {
 };
 ```
 
-您還需要安裝並新增 **http-proxy-middleware** 模組。
+您还需要安装并添加 **http-proxy-middleware** 模块到项目。
 
 ## 后续步骤
 
-[擷取表單以內嵌](./fetch-the-form.md)
+[获取要嵌入的表单](./fetch-the-form.md)
