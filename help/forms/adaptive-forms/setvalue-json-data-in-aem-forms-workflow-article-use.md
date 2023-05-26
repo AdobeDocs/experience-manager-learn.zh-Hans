@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms工作流程中設定Json資料元素的值
-description: 由於最適化表單在AEM Workflow中路由給不同的使用者，因此需要根據檢閱表單的人來隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 您可以根據此隱藏欄位的值來編寫商業規則，以隱藏/停用適當的面板或欄位。
+title: 在AEM Forms Workflow中设置Json数据元素的值
+description: 由于自适应表单在AEM Workflow中被路由到不同的用户，因此需要根据审阅表单的人来隐藏或禁用某些字段或面板。 为了满足这些用例，我们通常设置隐藏字段的值。 可以基于此隐藏字段的值创作业务规则以隐藏/禁用相应的面板或字段。
 feature: Adaptive Forms
 version: 6.4
 topic: Development
@@ -15,56 +15,56 @@ ht-degree: 1%
 
 ---
 
-# 在AEM Forms工作流程中設定JSON資料元素的值 {#setting-value-of-json-data-element-in-aem-forms-workflow}
+# 在AEM Forms Workflow中设置JSON数据元素的值 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-由於最適化表單在AEM Workflow中路由給不同的使用者，因此需要根據檢閱表單的人來隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 您可以根據此隱藏欄位的值來編寫商業規則，以隱藏/停用適當的面板或欄位。
+由于自适应表单在AEM Workflow中被路由到不同的用户，因此需要根据审阅表单的人来隐藏或禁用某些字段或面板。 为了满足这些用例，我们通常设置隐藏字段的值。 可以基于此隐藏字段的值创作业务规则以隐藏/禁用相应的面板或字段。
 
-![在JSON資料中設定元素的值](assets/capture-3.gif)
+![在json数据中设置元素的值](assets/capture-3.gif)
 
-在AEM Forms OSGi — 我們必須建立自訂OSGi套件組合以設定JSON資料元素的值。 此套件組合已隨本教學課程提供。
+在AEM Forms OSGi中 — 我们必须创建一个自定义OSGi捆绑包以设置JSON数据元素的值。 该捆绑包作为本教程的一部分提供。
 
-我們使用AEM工作流程中的「程式步驟」。 我們會將「在Json中設定元素值」的OSGi套件組合與此程式步驟建立關聯。
+我们使用AEM工作流中的“流程步骤”。 我们将“在Json中设置元素的值”OSGi捆绑包与此流程步骤关联。
 
-我們需要傳遞兩個引數至設定值組合。 第一個引數是需要設定其值的元素的路徑。 第二個引數是需要設定的值。
+我们需要将两个参数传递给设置值捆绑包。 第一个参数是需要设置其值的元素的路径。 第二个参数是需要设置的值。
 
-例如，在上述熒幕擷圖中，我們將initialStep元素的值設為「N」
+例如，在上面的屏幕快照中，我们将initialStep元素的值设置为“N”
 
 afData.afUnboundData.data.initialStep,N
 
-在我們的範例中，我們有一個簡單的休假請求表單。 此表單的發起人填寫其姓名和休假日期。 提交時，此表單會前往「經理」進行稽核。 當管理員開啟表單時，第一個面板上的欄位會停用。 這是因為我們已將JSON資料中初始步驟元素的值設定為N。
+在我们的示例中，我们提供了一个简单的休息时间请求表。 此表单的发起人填写其姓名和休息日期。 提交后，此表单将转至“经理”进行审核。 当经理打开表单时，第一个面板上的字段被禁用。 这是因为我们已在JSON数据中将initial step元素的值设置为N。
 
-根據初始步驟欄位值，我們顯示「核准者」面板，「經理」可以核准或拒絕請求。
+根据初始步骤字段值，我们显示“审批者”面板，“经理”可以批准或拒绝请求。
 
-請檢視針對「初始步驟」設定的規則。 我們會根據initialStep欄位的值，使用表單資料模型擷取使用者詳細資訊，並填入適當的欄位和隱藏/停用適當的面板。
+请查看针对“初始步骤”设置的规则。 我们根据initialStep字段的值，使用表单数据模型提取用户详细信息，并填充相应的字段和隐藏/禁用相应的面板。
 
-若要在本機系統上部署資產：
+要在本地系统上部署资产，请执行以下操作：
 
-* [下載並部署DevelopingWidthServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [下载并部署DevelopingWidthServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下載和部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 這是自訂OSGI套件組合，可讓您在提交的json資料中設定元素值。
+* [下载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 这是自定义OSGI捆绑包，允许您在提交的json数据中设置元素的值。
 
-* [下載並解壓縮zip檔案的內容](assets/set-value-jsondata.zip)
-   * 將瀏覽器指向 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-      * 匯入並安裝SetValueOfElementInJSONDataWorkflow.zip。此套件包含與表單相關聯的範例工作流程模型和表單資料模型。
+* [下载并解压缩zip文件的内容](assets/set-value-jsondata.zip)
+   * 将浏览器指向 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+      * 导入并安装SetValueOfElementInJSONDataWorkflow.zip。此包具有示例工作流模型和与表单关联的表单数据模型。
 
-* 將瀏覽器指向 [Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 按一下建立 |檔案上傳
-* 上傳TimeOffRequestForm.zip檔案
-   **此表單是使用AEM Forms 6.4建立的。請確定您使用的是AEM Forms 6.4或更高版本**
-* 開啟 [表單](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
-* 填寫「開始日期」和「結束日期」並提交表單。
-* 前往 [&quot;收件匣&quot;](http://localhost:4502/aem/inbox)
-* 開啟與任務相關聯的表單。
-* 請注意，第一個面板中的欄位已停用。
-* 請注意，核准或拒絕請求的面板現在可見。
-
->[!NOTE]
->
->由於我們使用使用者設定檔預先填入最適化表單，請向管理員確認 [使用者設定檔資訊 ](http://localhost:4502/security/users.html). 至少要確定您已設定FirstName、LastName和Email欄位值。
->您可以啟用com.aemforms.setvalue.core.SetValueInJson的記錄器來啟用偵錯記錄 [從這裡](http://localhost:4502/system/console/slinglog)
+* 将浏览器指向 [Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 单击“创建” |文件上传
+* 上传TimeOffRequestForm.zip文件
+   **此表单是使用AEM Forms 6.4构建的。请确保您使用的是AEM Forms 6.4或更高版本**
+* 打开 [表单](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
+* 填写开始日期和结束日期并提交表单。
+* 转到 [&quot;收件箱&quot;](http://localhost:4502/aem/inbox)
+* 打开与任务关联的表单。
+* 请注意，第一个面板中的字段已禁用。
+* 请注意，用于批准或拒绝请求的面板现在可见。
 
 >[!NOTE]
 >
->在JSON資料中設定資料元素值的OSGi套件組合目前支援一次設定一個元素值的功能。 如果要設定多個元素值，則需要多次使用處理步驟。
+>由于我们使用用户配置文件预填充自适应表单，因此请确保管理员 [用户配置文件信息 ](http://localhost:4502/security/users.html). 至少确保您已设置FirstName、LastName和Email字段值。
+>您可以通过启用com.aemforms.setvalue.core.SetValueInJson的记录器来启用调试日志记录 [从此处](http://localhost:4502/system/console/slinglog)
+
+>[!NOTE]
 >
->請確定最適化表單提交選項中的資料檔案路徑已設為「Data.xml」。 這是因為程式步驟中的程式碼會在裝載資料夾下尋找名為Data.xml的檔案。
+>用于在JSON数据中设置数据元素值的OSGi包当前支持一次设置一个元素值的功能。 如果要设置多个元素值，则需要多次使用流程步骤。
+>
+>确保自适应表单提交选项中的数据文件路径设置为“Data.xml”。 这是因为流程步骤中的代码将在有效负荷文件夹下查找名为Data.xml的文件。

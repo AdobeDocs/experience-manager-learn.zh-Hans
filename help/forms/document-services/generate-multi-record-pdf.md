@@ -1,6 +1,6 @@
 ---
-title: 從單一資料檔案產生多個pdf
-description: OutputService提供許多使用表單設計建立檔案的方法，以及要與表單設計合併的資料。 瞭解如何從包含多個個別記錄的一個大型xml產生多個pdf。
+title: 从一个数据文件生成多个PDF
+description: OutputService提供了许多使用表单设计创建文档的方法，以及要与表单设计合并的数据。 了解如何从包含多个单独记录的一个大型xml生成多个PDF。
 feature: Output Service
 version: 6.4,6.5
 topic: Development
@@ -15,29 +15,29 @@ ht-degree: 0%
 
 ---
 
-# 從一個xml資料檔案產生一組PDF檔案
+# 从一个xml数据文件生成一组PDF文档
 
-OutputService提供許多使用表單設計建立檔案的方法，以及要與表單設計合併的資料。 以下文章將說明使用案例，以從包含多個個別記錄的一個大型xml產生多個pdf。
-以下是包含多個記錄的xml檔案的熒幕擷取畫面。
+OutputService提供了许多使用表单设计创建文档的方法，以及要与表单设计合并的数据。 以下文章说明了使用包含多个单独记录的一个大型xml生成多个pdf的用例。
+以下是包含多个记录的xml文件的屏幕截图。
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-資料xml有2筆記錄。 每個記錄由form1元素表示。 此xml傳遞至OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) 我們會取得pdf檔案清單（每個記錄一個） generatePDFOutputBatch方法的簽章會採用下列引數
+数据xml有2条记录。 每个记录由form1元素表示。 此xml传递到OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) 我们获得pdf文档的列表（每条记录一个） generatePDFOutputBatch方法的签名采用以下参数
 
-* 範本 — 包含範本的對應，以索引鍵識別
-* 資料 — 包含xml資料檔案的對應，以索引鍵識別
-* pdfOutputOptions — 設定pdf產生程式的選項
-* batchoptions — 設定批次的選項
+* 模板 — 包含模板的映射，用键进行标识
+* 数据 — 包含xml数据文档的映射，按键进行标识
+* pdfOutputOptions — 用于配置pdf生成的选项
+* batchOptions — 用于配置批次的选项
 
 
 
-## 使用案例詳細資訊{#use-case-details}
+## 用例详细信息{#use-case-details}
 
-在此使用案例中，我們將提供簡單的網頁介面來上傳範本和資料(xml)檔案。 一旦檔案上傳完成，系統就會將POST要求傳送至AEM servlet。 此servlet會擷取檔案並呼叫OutputService的generatePDFOutputBatch方法。 產生的pdf會壓縮成zip檔案，以供一般使用者從網頁瀏覽器下載。
+在此使用案例中，我们将提供一个简单的Web界面来上传模板和数据(xml)文件。 文件上传完成并向AEM servlet发送POST请求后。 此servlet提取文档并调用OutputService的generatePDFOutputBatch方法。 生成的pdf将压缩为zip文件，以供最终用户从Web浏览器下载。
 
-## Servlet程式碼{#servlet-code}
+## Servlet代码{#servlet-code}
 
-以下是servlet的程式碼片段。 程式碼會從要求中擷取範本(xdp)和資料檔案(xml)。 範本檔案會儲存至檔案系統。 已建立兩個對映 — 分別包含範本和xml（資料）檔案的templateMap和dataFileMap。 然後呼叫DocumentServices服務的generateMultipleRecords方法。
+以下是servlet中的代码段。 代码从请求中提取模板(xdp)和数据文件(xml)。 模板文件将保存到文件系统。 创建两个映射：templateMap和dataFileMap，分别包含模板和xml（数据）文件。 然后调用DocumentServices服务的generateMultipleRecords方法。
 
 ```java
 for (final java.util.Map.Entry < String, org.apache.sling.api.request.RequestParameter[] > pairs: params
@@ -70,9 +70,9 @@ Document zippedDocument = documentServices.generateMultiplePdfs(templateMap, dat
 ....
 ```
 
-### 介面實作程式碼{#Interface-Implementation-Code}
+### 界面实现代码{#Interface-Implementation-Code}
 
-下列程式碼會使用OutputService的generatePDFOutputBatch產生多個pdf，並將包含pdf檔案的zip檔案傳回至呼叫的servlet
+以下代码使用OutputService的generatePDFOutputBatch生成多个pdf，并将包含pdf文件的zip文件返回到调用servlet
 
 ```java
 public Document generateMultiplePdfs(HashMap < String, String > templateMap, HashMap < String, Document > dataFileMap, String saveLocation) {
@@ -121,19 +121,19 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 }
 ```
 
-### 在您的伺服器上部署{#Deploy-on-your-server}
+### 在您的服务器上部署{#Deploy-on-your-server}
 
-若要在您的伺服器上測試此功能，請遵循下列指示：
+要在您的服务器上测试此功能，请按照以下说明操作：
 
-* [下載並解壓縮zip檔案內容至您的檔案系統](assets/mult-records-template-and-xml-file.zip).此zip檔案包含範本和xml資料檔案。
-* [將瀏覽器指向Felix網頁主控台](http://localhost:4502/system/console/bundles)
-* [部署DevelopingWithServiceUser套裝](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
-* [部署自訂AEMFormsDocumentServices套裝](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).使用OutputService API產生PDF的自訂套件
-* [將瀏覽器指向封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* [匯入並安裝套件](assets/generate-multiple-pdf-from-xml.zip). 此套件包含html頁面，可讓您放置範本和資料檔案。
-* [將瀏覽器指向MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html？)
-* 將範本和xml資料檔案拖放在一起
-* 下載已建立的zip檔案。 此zip檔案包含輸出服務產生的pdf檔案。
+* [将zip文件内容下载并解压缩到您的文件系统](assets/mult-records-template-and-xml-file.zip).此zip文件包含模板和xml数据文件。
+* [将浏览器指向Felix Web控制台](http://localhost:4502/system/console/bundles)
+* [部署DevelopingWithServiceUser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
+* [部署自定义AEMFormsDocumentServices捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).使用OutputService API生成PDF的自定义包
+* [将浏览器指向包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* [导入并安装资源包](assets/generate-multiple-pdf-from-xml.zip). 此包包含html页面，通过该页面可删除模板和数据文件。
+* [将浏览器指向MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html？)
+* 将模板和xml数据文件拖放到一起
+* 下载创建的zip文件。 此zip文件包含输出服务生成的pdf文件。
 
 >[!NOTE]
->有多種方式可觸發此功能。 在此範例中，我們使用網頁介面放入範本和資料檔案來示範此功能。
+>有多种方法可触发此功能。 在此示例中，我们使用Web界面放置了模板和数据文件来演示此功能。

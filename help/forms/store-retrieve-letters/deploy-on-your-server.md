@@ -1,6 +1,6 @@
 ---
-title: 在您的伺服器上部署範例資產
-description: 測試互動式通訊的另存為草稿功能
+title: 在服务器上部署示例资产
+description: 测试交互式通信的另存为草稿功能
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -19,30 +19,30 @@ ht-degree: 2%
 
 ---
 
-# 在您的伺服器上部署範例資產
+# 在服务器上部署示例资产
 
-請依照下列指示，讓此功能在您的AEM伺服器上運作
+请按照以下说明使此功能在您的AEM服务器上工作
 
-* [建立資料庫綱要](assets/icdrafts.sql)
-* [匯入使用者端資源庫](assets/icdrafts.zip)
-* [匯入最適化表單](assets/SavedDraftsAdaptiveForm.zip)
-* 建立資料來源，稱為 _SaveAndContent_
+* [创建数据库模式](assets/icdrafts.sql)
+* [导入客户端库](assets/icdrafts.zip)
+* [导入自适应表单](assets/SavedDraftsAdaptiveForm.zip)
+* 创建数据源调用 _保存并继续_
 
-![建立資料來源](assets/data-source.png)
+![创建数据源](assets/data-source.png)
 
 | 属性名称 | 属性值 |
 |---|---|
-| 資料來源名稱 | SaveAndContent |
-| JDBC驅動程式類別 | com.mysql.cj.jdbc.Driver |
-| JDBC連線URL | jdbc:mysql://localhost：3306/aemformstutorial？autoReconnect=true&amp;useSSL=false&amp;characterEncoding=utf8&amp;useUnicode=true |
+| 数据源名称 | 保存并继续 |
+| JDBC驱动程序类 | com.mysql.cj.jdbc.Driver |
+| JDBC连接URL | jdbc:mysql://localhost：3306/aemformstutorial？autoReconnect=true&amp;useSSL=false&amp;characterEncoding=utf8&amp;useUnicode=true |
 
-* [部署草稿組合](assets/icdrafts.icdrafts.core-1.0-SNAPSHOT.jar)
-* 請確定 _使用CCRDocumentInstanceService啟用儲存_ 在OSGI設定中，如下所示
-   ![啟用草稿](assets/enable-drafts.png)
-* 開啟任何互動式通訊。 按一下另存為草稿以儲存
-* [檢視已儲存的草稿](http://localhost:4502/content/dam/formsanddocuments/saveddrafts/jcr:content?wcmmode=disabled)
+* [部署icdrafts包](assets/icdrafts.icdrafts.core-1.0-SNAPSHOT.jar)
+* 确保您 _使用CCRDocumentInstanceService启用保存_ 在OSGI配置中，如下所示
+   ![启用草稿](assets/enable-drafts.png)
+* 打开任意交互式通信。 单击另存为草稿以保存
+* [查看已保存的草稿](http://localhost:4502/content/dam/formsanddocuments/saveddrafts/jcr:content?wcmmode=disabled)
 
 >[!NOTE]
->xml檔案儲存在AEM伺服器安裝的根資料夾中。 Eclipse專案是提供給您根據您的需求自訂解決方案。
+>xml文件存储在AEM Server安装的根文件夹中。 Eclipse项目旨在根据您的要求自定义解决方案。
 
-實作範例的eclipse專案可以是 [已從此處下載](assets/icdrafts-eclipse-project.zip)
+示例实施的eclipse项目可以是 [已从此处下载](assets/icdrafts-eclipse-project.zip)

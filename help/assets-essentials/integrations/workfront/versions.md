@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Workfront和Assets Essentials維護版本記錄
-description: 瞭解Adobe Workfront和Experience Manager Assets Essentials如何協助您維護Workfront檔案和Assets Essentials資產的版本。
+title: 使用Adobe Workfront和Assets Essentials维护版本历史记录
+description: 了解Adobe Workfront和Experience Manager Assets Essentials如何帮助您维护Workfront文档和Assets Essentials资源的版本。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management, Integrations
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 維護版本記錄
+# 维护版本历史记录
 
-瞭解Adobe Workfront和Experience Manager Assets Essentials如何協助您維護Workfront檔案和Assets Essentials資產的版本。
+了解Adobe Workfront和Experience Manager Assets Essentials如何帮助您维护Workfront文档和Assets Essentials资源的版本。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336314?quality=12&learn=on)

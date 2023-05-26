@@ -1,6 +1,6 @@
 ---
-title: 適用於GraphQL的進階模型
-description: 瞭解如何在Adobe Experience Manager (AEM)中建立不同內容片段模型之間的關係，以及如何在GraphQL查詢中利用這些關係。
+title: GraphQL的高级建模
+description: 了解如何在Adobe Experience Manager (AEM)中的内容片段模型之间创建关系以及如何在GraphQL查询中利用这些关系。
 version: Cloud Service
 topic: Headless, Content Management
 feature: Content Fragments, GraphQL API
@@ -17,14 +17,14 @@ ht-degree: 0%
 
 ---
 
-# 適用於GraphQL的進階模型
+# GraphQL的高级建模
 
-瞭解如何在Adobe Experience Manager (AEM)中建立不同內容片段模型之間的關係，以及如何在GraphQL查詢中利用這些關係。
+了解如何在Adobe Experience Manager (AEM)中的内容片段模型之间创建关系以及如何在GraphQL查询中利用这些关系。
 
-在本影片中，您將：
+在本视频中，您将执行以下操作：
 
-+ 瞭解如何使用內容片段參考來連結一或多個內容片段
-+ 瞭解如何在RTF文字欄位中深層連結至其他內容片段
-+ 建立可從參照內容片段中傳回資料的GraphQL查詢
++ 了解如何使用内容片段引用链接一个或多个内容片段
++ 了解如何在富文本字段中深层链接到其他内容片段
++ 创建从引用的内容片段中返回数据的GraphQL查询
 
 >[!VIDEO](https://video.tv.adobe.com/v/332859?quality=12&learn=on)

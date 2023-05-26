@@ -1,6 +1,6 @@
 ---
-title: 建立最適化表單主題
-description: 主題是AEM使用者端資料庫，定義您最適化表單的外觀。
+title: 创建自适应表单主题
+description: 主题是一个AEM客户端库，它定义自适应表单的外观。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 建立主題
+# 创建主题
 
-主題包含元件和面板的樣式細節，您可以重複使用不同表單上的主題。 樣式包含背景顏色、狀態顏色、透明度、對齊方式及大小等屬性。 將主題套用至表單時，指定的樣式會反映在表單的對應元件上。
+主题包含组件和面板的样式详细信息，您可以在不同表单上重用主题。 样式包括诸如背景颜色、状态颜色、透明度、对齐方式和大小等属性。 将主题应用于表单时，指定的样式会反映在表单的相应组件上。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332229?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Analytics提交表單資料欄位的相關報告
-description: 將AEM Forms CS與Adobe Analytics整合以報告表單資料欄位
+title: 使用Adobe Analytics报告提交的表单数据字段
+description: 将AEM Forms CS与Adobe Analytics集成以报告表单数据字段
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 ---
 
-# 建立適當的資料元素
+# 创建适当的数据元素
 
-在Tags屬性中，我們新增了兩個新資料元素（ApplicatesStateOfResidence和validationError）。
+在Tags属性中，我们添加了两个新数据元素（ApplicationsStateOfResidence和validationError）。
 
-![Adaptive-form](assets/data_elements.png)
+![自适应表单](assets/data_elements.png)
 
 ## ApplicatorStateOfResidence
 
-此 **ApplicatorStateOfResidence** 資料元素的設定方式為：選取 **核心** 「擴充功能」下拉式清單中的 **自訂程式碼** 的資料元素型別，如下方熒幕擷取畫面所示
-![申請人 — 國家 — 居所](assets/applicantstateofresidence.png)
+此 **ApplicatorStateOfResidence** 数据元素是通过选择 **核心** “扩展”下拉列表中的和 **自定义代码** 的数据元素类型，如下面的屏幕快照所示
+![申请人 — 国家 — 居所](assets/applicantstateofresidence.png)
 
-下列自訂程式碼是用來從 **_state_** 最適化表單欄位。
+以下自定义代码用于从捕获值 **_state_** 自适应表单字段。
 
 ```javascript
 // use the GuideBridge API to access adaptive form elements
@@ -40,11 +40,11 @@ return ApplicantsStateOfResidence;
 
 ## validationError
 
-此 **ValidationError** 資料元素的設定方式為：選取 **核心** 「擴充功能」下拉式清單中的 **自訂程式碼** 的資料元素型別，如下方熒幕擷取畫面所示
+此 **ValidationError** 数据元素是通过选择 **核心** “扩展”下拉列表中的和 **自定义代码** 的数据元素类型，如下面的屏幕快照所示
 
 ![validation-error](assets/validation-error.png)
 
-下列自訂程式碼是用來設定validationError資料元素值。
+编写了以下自定义代码以设置validationError数据元素值。
 
 ```javascript
 var validationError = "";

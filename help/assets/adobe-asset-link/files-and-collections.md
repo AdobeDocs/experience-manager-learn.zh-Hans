@@ -1,6 +1,6 @@
 ---
-title: 檔案和集合
-description: 瞭解如何從Asset Link面板快速輕鬆地存取AEM Assets檔案和集合。
+title: 文件和收藏集
+description: 了解如何从Asset Link面板中快速轻松地访问AEM Assets文件和收藏集。
 feature: Adobe Asset Link
 version: 6.4, 6.5, Cloud Service
 thumbnail: 33884.jpg
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 檔案和集合 {#files-and-collections}
+# 文件和收藏集 {#files-and-collections}
 
-瞭解如何從Asset Link面板快速輕鬆地存取AEM Assets檔案和集合。
+了解如何从Asset Link面板中快速轻松地访问AEM Assets文件和收藏集。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33884?quality=12&learn=on)

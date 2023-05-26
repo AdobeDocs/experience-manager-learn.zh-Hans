@@ -1,6 +1,6 @@
 ---
-title: 啟用詳細ORB追蹤的步驟
-description: 設定詳細的ORB記錄檔，以疑難排解PDF產生器問題
+title: 启用详细ORB跟踪的步骤
+description: 配置详细的ORB日志以解决PDF生成器问题
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 啟用詳細ORB追蹤的步驟
+# 启用详细ORB跟踪的步骤
 
-*此影片會逐步說明啟用詳細ORB追蹤的步驟。*
+*本视频介绍启用详细ORB跟踪的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335526?quality=12&learn=on)

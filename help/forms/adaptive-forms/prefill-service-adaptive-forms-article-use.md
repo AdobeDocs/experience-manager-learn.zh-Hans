@@ -1,6 +1,6 @@
 ---
-title: Adaptive Forms中的預填服務
-description: 從後端資料來源擷取資料，預先填入調適型表單。
+title: 自适应Forms中的预填充服务
+description: 通过从后端数据源获取数据，预填充自适应表单。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,17 +15,17 @@ ht-degree: 0%
 
 ---
 
-# 在最適化Forms中使用預填服務
+# 在自适应Forms中使用预填充服务
 
-您可以使用現有資料預先填寫最適化表單的欄位。 當使用者開啟表單時，這些欄位的值會預先填充。 有多種方式可預先填寫最適化表單欄位。 在本文中，我們將瞭解如何使用AEM Forms預填服務預填最適化表單。
+您可以使用现有数据预填自适应表单的字段。 当用户打开表单时，这些字段的值会预先填充。 预填充自适应表单字段的方法有多种。 在本文中，我们将了解如何使用AEM Forms预填充服务预填充自适应表单。
 
-若要進一步瞭解預先填入最適化表單的各種方法， [請依照本檔案操作](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+要了解有关预填充自适应表单的各种方法的更多信息， [请按照此文档操作](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
 
-若要使用預填服務預填調適型表單，您必須建立實作以下專案的類別： `com.adobe.forms.common.service.DataXMLProvider` 介面。 方法 `getDataXMLForDataRef` 具有邏輯，可建置並傳回最適化表單用來預先填入欄位的資料。 在此方法中，您可以從任何來源擷取資料，並傳回資料檔案的輸入資料流。 下列程式碼範例會擷取登入使用者的使用者設定檔資訊，並建構一個XML檔案，其輸入資料流會傳回供調適型表單使用。
+要使用预填充服务预填充自适应表单，您必须创建一个实现 `com.adobe.forms.common.service.DataXMLProvider` 界面。 方法 `getDataXMLForDataRef` 将具有生成和返回自适应表单用于预填充字段的数据的逻辑。 在此方法中，您可以从任何源提取数据并返回数据文档的输入流。 以下示例代码获取登录用户的用户配置文件信息，并构造一个XML文档，该文档的输入流返回供自适应表单使用。
 
-在下面的程式碼片段中，我們有一個實作DataXMLProvider介面的類別。 我們取得登入使用者的存取權，然後擷取登入使用者的設定檔資訊。 然後，我們會使用名為「data」的根節點元素來建立XML檔案，並將適當的元素附加至此資料節點。 一旦建構XML檔案，就會傳回XML檔案的輸入資料流。
+在下面的代码片段中，我们有一个实现DataXMLProvider接口的类。 我们获得对登录用户的访问权限，然后获取登录用户的配置文件信息。 然后，我们使用名为“data”的根节点元素创建XML文档，并将相应的元素附加到此数据节点。 一旦构造了XML文档，就返回XML文档的输入流。
 
-然後，此類別會成為OSGi套件組合併部署至AEM。 部署套件組合後，即可使用此預填服務作為最適化表單的預填服務。
+然后，此类将成为OSGi捆绑包并部署到AEM中。 部署包后，此预填充服务将用作自适应表单的预填充服务。
 
 ```java
 package com.aem.prefill.core;
@@ -132,16 +132,16 @@ public class PrefillAdaptiveForm implements DataXMLProvider {
 }
 ```
 
-若要在您的伺服器上測試此功能，請執行下列動作
+要在您的服务器上测试此功能，请执行以下操作
 
-* 請確定已登入 [使用者設定檔](http://localhost:4502/security/users.html) 資訊已填寫。 範例會尋找登入使用者的FirstName、LastName和Email屬性。
-* [將zip檔案的內容下載並解壓縮至您的電腦](assets/prefillservice.zip)
-* 使用部署prefill.core-1.0.0-SNAPSHOT套件組合 [AEM網頁主控台](http://localhost:4502/system/console/bundles)
-* 使用「建立」匯入最適化表單 |檔案上傳來源 [FormsAndDocuments節](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 確定 [表單](http://localhost:4502/editor.html/content/forms/af/prefill.html) 正在使用 **「自訂AEM Forms預填服務」** 作為預填服務。 這可以從 **表單容器** 區段。
-* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/prefill/jcr:content?wcmmode=disabled). 您應該會看到表單填入了正確的值。
+* 确保已登录 [用户配置文件](http://localhost:4502/security/users.html) 信息已填写。 该示例查找登录用户的FirstName、LastName和Email属性。
+* [将zip文件的内容下载并解压缩到您的计算机上](assets/prefillservice.zip)
+* 使用以下方式部署prefill.core-1.0.0-SNAPSHOT捆绑包 [AEM Web控制台](http://localhost:4502/system/console/bundles)
+* 使用创建导入自适应表单 |文件上传来自 [FormsAndDocuments节](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 确保 [表单](http://localhost:4502/editor.html/content/forms/af/prefill.html) 正在使用 **“自定义AEM Forms预填充服务”** 作为预填充服务。 这可以从的配置属性中验证 **表单容器** 部分。
+* [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefill/jcr:content?wcmmode=disabled). 您应该会看到表单已填入正确的值。
 
 >[!NOTE]
 >
->如果您已啟用com.aem.prefill.core.PrefillAdaptiveForm的偵錯，則產生的xml資料檔會寫入您的AEM伺服器安裝資料夾。
+>如果已为com.aem.prefill.core.PrefillAdaptiveForm启用了调试，则生成的xml数据文件将写入AEM服务器安装文件夹。
 

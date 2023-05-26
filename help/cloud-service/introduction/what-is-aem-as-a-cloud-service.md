@@ -1,6 +1,6 @@
 ---
-title: 什麼是AEMas a Cloud Service？
-description: 探索AEMas a Cloud Service是什麼，以及它與其他Adobe Experience Manager版本有何不同。
+title: 什么是AEMas a Cloud Service？
+description: 探索AEMas a Cloud Service是什么，以及它与其他Adobe Experience Manager版本有何不同。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 什麼是AEMas a Cloud Service？
+# 什么是AEMas a Cloud Service？
 
-探索AEMas a Cloud Service是什麼，以及它與其他Adobe Experience Manager版本有何不同。
+探索AEMas a Cloud Service是什么，以及它与其他Adobe Experience Manager版本有何不同。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330546?quality=12&learn=on)

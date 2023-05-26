@@ -1,6 +1,6 @@
 ---
-title: 使用AEM體驗片段
-description: 體驗片段可讓內容作者重複使用跨管道的內容，包括Sites頁面和協力廠商系統。
+title: 使用AEM Experience Fragments
+description: 体验片段使内容创作者能够跨渠道（包括Sites页面和第三方系统）重用内容。
 sub-product: Experience Manager Sites
 feature: Experience Fragments
 topic: Content Management
@@ -21,15 +21,15 @@ ht-degree: 2%
 
 # 使用体验片段 {#using-aem-experience-fragments}
 
-體驗片段可讓內容作者重複使用跨管道的內容，包括Sites頁面和協力廠商系統。
+体验片段使内容创作者能够跨渠道（包括Sites页面和第三方系统）重用内容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
 
-體驗片段是一組元件，組合後會建立體驗。 例如， *標題*， *影像*， *說明*、和 *呼叫動作按鈕* 可結合以形成Teaser體驗。
+体验片段是一组组件，组合这些组件时会创建体验。 例如， *标题*， *图像*， *描述*、和 *行动号召按钮* 可组合在一起形成Teaser体验。
 
-透過體驗片段，行銷人員可以：
+借助体验片段，营销人员可以：
 
-* 跨管道重複使用體驗（自有管道和協力廠商接觸點）
-* 針對特定使用案例建立體驗的變體
-* 讓變數與使用即時副本保持同步
-* facebook和Pinterest中的社交貼文體驗（開箱即用）
+* 跨渠道（自有渠道和第三方接触点）重用体验
+* 为特定用例创建体验的变体
+* 使变体与使用Live Copy保持同步
+* 开箱即用地将Social Post体验发送到Facebook和Pinterest

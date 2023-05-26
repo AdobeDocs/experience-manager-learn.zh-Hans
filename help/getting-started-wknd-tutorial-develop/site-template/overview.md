@@ -1,6 +1,6 @@
 ---
-title: AEM Sites快速入門 | AEM快速網站建立
-description: 瞭解如何使用低程式碼方法，利用「快速網站建立」和預先定義的網站範本在Adobe Experience Manager中建立您的第一個網站。 使用現成的元件和範本快速啟動並執行網站。 使用Adobe XD導向的主題工作流程，僅以CSS和JavaScript套用品牌特定的樣式和自訂。 建議新專案和開發人員使用。
+title: AEM Sites快速入门 | AEM快速站点创建
+description: 了解如何使用低代码方法通过快速网站创建和预定义网站模板在Adobe Experience Manager中创建您的第一个网站。 使用现成的组件和模板快速启动并运行站点。 使用Adobe XD驱动的主题化工作流，仅通过CSS和JavaScript应用品牌特定的样式和自定义设置。 建议新项目和开发人员使用。
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -17,21 +17,21 @@ ht-degree: 0%
 
 ---
 
-# AEM Sites快速入門 — 快速網站建立 {#site-template}
+# AEM Sites快速入门 — 快速网站创建 {#site-template}
 
-瞭解如何使用低程式碼方法，利用「快速網站建立」和預先定義的網站範本在Adobe Experience Manager中建立您的第一個網站。 使用現成的元件和範本快速啟動並執行網站。 使用Adobe XD導向的主題工作流程，僅以CSS和JavaScript套用品牌特定的樣式和自訂。 建議新專案和開發人員使用。
+了解如何使用低代码方法通过快速网站创建和预定义网站模板在Adobe Experience Manager中创建您的第一个网站。 使用现成的组件和模板快速启动并运行站点。 使用Adobe XD驱动的主题化工作流，仅通过CSS和JavaScript应用品牌特定的样式和自定义设置。 建议新项目和开发人员使用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333477?quality=12&learn=on)
 
 * [Adobe XD UI套件](https://github.com/adobe/aem-site-template-basic/blob/main/files/wireframe.xd)
-* [AEM網站範本](https://github.com/adobe/aem-site-template-basic)
+* [AEM站点模板](https://github.com/adobe/aem-site-template-basic)
 
-## AEMas a Cloud Service環境 {#environment}
+## AEMas a Cloud Service环境 {#environment}
 
-本教學課程中的步驟將在Adobe Experience Manager as a Cloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 建議使用 [沙箱計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) 和 [開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) 完成本教學課程時。
+本教程中的步骤将在Adobe Experience Manager as a Cloud Service环境中执行。 确保您对AEM环境具有管理访问权限。 建议使用 [沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) 和 [开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) 完成本教程时。
 
 ## 后续步骤 {#next-steps}
 
-逐步教學課程會使用「快速網站建立」功能，逐步引導您為虛擬生活風格品牌WKND實作AEM網站。
+分步教程介绍如何使用“快速站点创建”功能为虚构的生活方式品牌WKND实施AEM站点。
 
-您還在等什麼?!導覽至「 」，開始進行教學課程 [建立網站](create-site.md) 章節，並瞭解如何使用網站範本產生新的Adobe Experience Manager專案。
+你在等什么?!通过导航到 [创建站点](create-site.md) 章节，并了解如何使用站点模板生成新的Adobe Experience Manager项目。

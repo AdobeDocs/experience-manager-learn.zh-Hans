@@ -1,6 +1,6 @@
 ---
 title: 资源工作流迁移工具
-description: 瞭解資產工作流程移轉工具如何協助您將現有AEM Assets工作流程移轉至AEMas a Cloud Service。
+description: 了解资源工作流迁移工具如何帮助您将现有AEM Assets工作流迁移到AEMas a Cloud Service。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -18,6 +18,6 @@ ht-degree: 16%
 
 # 资源工作流迁移工具
 
-瞭解資產工作流程移轉工具如何協助您將現有AEM Assets工作流程移轉至AEMas a Cloud Service。
+了解资源工作流迁移工具如何帮助您将现有AEM Assets工作流迁移到AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336697?quality=12&learn=on)

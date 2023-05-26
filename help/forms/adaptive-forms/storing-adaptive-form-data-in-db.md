@@ -1,6 +1,6 @@
 ---
-title: 儲存最適化表單資料
-description: 將最適化表單資料儲存至DataBase，作為AEM Workflow的一部分
+title: 存储自适应表单数据
+description: 将自适应表单数据存储到数据库中，作为AEM Workflow的一部分
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -15,35 +15,35 @@ ht-degree: 2%
 
 ---
 
-# 在資料庫中儲存最適化表單提交
+# 在数据库中存储自适应表单提交
 
-有多種方式可將提交的表單資料儲存在您選擇的資料庫中。 JDBC資料來源可用來直接將資料儲存到資料庫中。 可以寫入自訂OSGI套件組合以將資料儲存至資料庫。 本文使用AEM工作流程中的自訂流程步驟來儲存資料。
-使用案例是在提交最適化表單時觸發AEM工作流程，且工作流程中的步驟會將提交的資料儲存至資料庫。
-
-
-
-## JDBC連線集區
-
-* 前往 [ConfigMgr](http://localhost:4502/system/console/configMgr)
-
-   * 搜尋「JDBC連線集區」。 建立新的Day Commons JDBC連線集區。 指定資料庫的特定設定。
-
-   * ![JDBC連線集區OSGi設定](assets/aemformstutorial-jdbc.png)
-
-## 指定資料庫詳細資訊
-
-* 搜尋&quot;**指定資料庫詳細資訊**&quot;
-* 指定資料庫的特定屬性。
-   * DataSourceName：您先前設定的資料來源名稱。
-   * TableName — 您要儲存AF資料的表格名稱
-   * FormName — 保留表單名稱的欄名稱
-   * ColumnName — 儲存AF資料的欄名稱
-
-   ![指定資料庫詳細資訊OSGi設定](assets/specify-database-details.png)
+有多种方式可以将提交的表单数据存储到您选择的数据库中。 JDBC数据源可用于将数据直接存储到数据库中。 可以写入自定义OSGI捆绑包以将数据存储到数据库中。 本文使用AEM工作流中的自定义流程步骤来存储数据。
+用例是在提交自适应表单时触发AEM工作流，工作流中的一个步骤将提交的数据存储到数据库中。
 
 
 
-## OSGi設定的代碼
+## JDBC连接池
+
+* 转到 [ConfigMgr](http://localhost:4502/system/console/configMgr)
+
+   * 搜索“JDBC连接池”。 创建新的Day Commons JDBC连接池。 指定特定于数据库的设置。
+
+   * ![JDBC连接池OSGi配置](assets/aemformstutorial-jdbc.png)
+
+## 指定数据库详细信息
+
+* 搜索“”**指定数据库详细信息**”
+* 指定特定于数据库的属性。
+   * DataSourceName：您之前配置的数据源的名称。
+   * TableName — 要存储AF数据的表的名称
+   * FormName — 用于保存表单名称的列名称
+   * ColumnName — 保存AF数据的列名称
+
+   ![指定数据库详细信息OSGi配置](assets/specify-database-details.png)
+
+
+
+## OSGi配置的代码
 
 ```java
 package com.aemforms.dbsamples.core.insertFormData;
@@ -66,7 +66,7 @@ public @interface InsertFormDataConfiguration {
 }
 ```
 
-## 讀取設定值
+## 读取配置值
 
 ```java
 package com.aemforms.dbsamples.core.insertFormData;
@@ -109,7 +109,7 @@ public class InsertFormDataConfigurationService {
 }
 ```
 
-## 實作處理步驟的程式碼
+## 实施流程步骤的代码
 
 ```java
 package com.aemforms.dbsamples.core.insertFormData;
@@ -206,15 +206,15 @@ public class InsertAfData implements WorkflowProcess {
 }
 ```
 
-## 部署範例資產
+## 部署示例资源
 
-* 請確定您已設定JDBC連線集區
-* 使用configMgr指定資料庫詳細資訊
-* [下載Zip檔案並將檔案內容解壓縮至您的硬碟](assets/article-assets.zip)
+* 确保已配置JDBC连接池
+* 使用configMgr指定数据库详细信息
+* [下载Zip文件并将其内容解压缩到硬盘上](assets/article-assets.zip)
 
-   * 部署jar檔案，使用 [AEM網頁主控台](http://localhost:4502/system/console/bundles). 此jar檔案包含儲存資料庫中表單資料的程式碼。
+   * 使用以下方式部署jar文件 [AEM Web控制台](http://localhost:4502/system/console/bundles). 此jar文件包含用于将表单数据存储到数据库中的代码。
 
-   * 將兩個zip檔案匯入 [使用封裝管理程式的AEM](http://localhost:4502/crx/packmgr/index.jsp). 這樣您就可以 [範例工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) 和 [最適化表單範例](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 這會觸發表單提交的工作流程。 請注意工作流程步驟中的程式引數。 這些引數會指出將包含最適化表單資料的資料檔的表單名稱和名稱。 資料檔案儲存在crx存放庫的裝載資料夾下。 請留意 [最適化表單](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 設定為在提交時觸發AEM工作流程，並設定資料檔案設定(data.xml)
+   * 将两个zip文件导入 [使用包管理器的AEM](http://localhost:4502/crx/packmgr/index.jsp). 这样您就可以 [示例工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) 和 [自适应表单示例](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 将在提交表单时触发工作流。 请注意工作流步骤中的流程参数。 这些参数指示将包含自适应表单数据的数据文件的表单名称和名称。 数据文件存储在crx存储库的有效负荷文件夹下。 注意 [自适应表单](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 配置为在提交时触发AEM工作流以及数据文件配置(data.xml)
 
-   * 預覽並填寫表單並提交。 您應該會看到資料庫中建立的新列
+   * 预览并填写表单并提交。 您应该会看到数据库中创建了一个新行
 

@@ -1,6 +1,6 @@
 ---
-title: AEM Champion秘訣與技巧 — Cloud Manager環境型別
-description: 檢視這些來自AEM冠軍和專家Rakesh Pasupuleti的Cloud Manager環境型別提示。
+title: AEM冠军提示和技巧 — Cloud Manager环境类型
+description: 查看这些来自AEM冠军和专家Rakesh Pasupuleti的有关Cloud Manager环境类型的提示。
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -17,13 +17,13 @@ ht-degree: 1%
 ---
 
 
-# AEM Champion秘訣與技巧 — Cloud Manager環境型別
+# AEM冠军提示和技巧 — Cloud Manager环境类型
 
-檢視您的技術負責人Rakesh Pasupuleti提供的這些秘訣。 Rakesh是Adobe Experience Manager達人，他說明如何瞭解Cloud Manager的環境型別。
+查看技术领导同事Rakesh Pasupuleti给出的这些提示。 Rakesh是Adobe Experience Manager冠军，他介绍了如何了解Cloud Manager的环境类型。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419297?quality=12&learn=on)
 
 ## 其他资源 {#additional-resources}
 
-* [管理環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html)  — 有關AEMas a Cloud Service環境管理的檔案
-* [快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html) - AEMas a Cloud Service的RDE檔案
+* [管理环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html)  — 有关AEMas a Cloud Service中环境管理的文档
+* [快速开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html)  — 有关AEMas a Cloud Service中的RDE的文档

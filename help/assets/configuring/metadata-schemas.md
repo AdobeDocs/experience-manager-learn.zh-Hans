@@ -1,6 +1,6 @@
 ---
 title: 元数据架构
-description: 中繼資料結構會定義使用者與AEM中資產中繼資料互動的介面，其定義和資產應用程式對於數位資產管理至關重要。
+description: 元数据架构定义了用户与AEM中资源元数据的交互界面，其定义及其应用于资源对于数字资源管理至关重要。
 feature: Metadata
 version: Cloud Service
 kt: 4981
@@ -19,6 +19,6 @@ ht-degree: 7%
 
 # 元数据架构
 
-中繼資料結構會定義使用者與AEM中資產中繼資料互動的介面，其定義和資產應用程式對於數位資產管理至關重要。
+元数据架构定义了用户与AEM中资源元数据的交互界面，其定义及其应用于资源对于数字资源管理至关重要。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33696?quality=12&learn=on)

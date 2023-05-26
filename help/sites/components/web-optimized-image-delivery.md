@@ -1,6 +1,6 @@
 ---
-title: 網頁最佳化的影像傳遞
-description: 瞭解如何使用AEM核心元件在AEMas a Cloud Service網站上啟用Web最佳化影像傳送。
+title: Web优化图像投放
+description: 了解如何使用AEM核心组件在AEMas a Cloud Service站点上启用Web优化图像交付。
 version: Cloud Service
 feature: Core Components, Configuring, Editable Templates
 topic: Performance, Administration
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 網頁最佳化的影像傳遞
+# Web优化图像投放
 
-瞭解如何使用AEM核心元件在AEMas a Cloud Service網站上啟用Web最佳化影像傳送。
+了解如何使用AEM核心组件在AEMas a Cloud Service站点上启用Web优化图像交付。
 
 >[!VIDEO](https://video.tv.adobe.com/v/346064?quality=12&learn=on)

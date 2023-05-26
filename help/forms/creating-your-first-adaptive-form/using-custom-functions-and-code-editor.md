@@ -1,6 +1,6 @@
 ---
-title: 使用函式和程式碼編輯器
-description: 使用函式和程式碼編輯器編寫商業規則
+title: 使用函数和代码编辑器
+description: 使用函数和代码编辑器创作业务规则
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4270
@@ -16,28 +16,28 @@ ht-degree: 0%
 
 ---
 
-# 使用自訂函式和程式碼編輯器 {#using-functions-and-code-editor}
+# 使用自定义函数和代码编辑器 {#using-functions-and-code-editor}
 
-在本部分中，我們將使用自訂函式和程式碼編輯器來編寫商業規則。
+在本部分中，我们将使用自定义函数和代码编辑器来创作业务规则。
 
-您已安裝 [具有自訂函式的ClientLib](assets/client-libs-and-logo.zip) 在本教學課程的前面部分。
+您已安装 [具有自定义函数的ClientLib](assets/client-libs-and-logo.zip) 在本教程的前面部分。
 
-通常使用者端資料庫會包含CSS和Javascript檔案。 此使用者端程式庫包含JavaScript檔案，此檔案會顯示一個函式以填入下拉式清單值。
+通常，客户端库由CSS和Javascript文件组成。 此客户端库包含javascript文件，该文件公开了用于填充下拉列表值的函数。
 
 
-## 要填入下拉式清單的函式 {#function-to-populate-drop-down-list}
+## 用于填充下拉列表的函数 {#function-to-populate-drop-down-list}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=12&learn=on)
 
-### 設定面板的摘要標題 {#set-the-summary-title-of-panels}
+### 设置面板的摘要标题 {#set-the-summary-title-of-panels}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
 
-#### 驗證面板 {#validate-panels-using-rule-editor}
+#### 验证面板 {#validate-panels-using-rule-editor}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28409?quality=12&learn=on)
 
-以下是用來驗證面板欄位的程式碼
+以下是用于验证面板字段的代码
 
 ```javascript
 //debugger;
@@ -60,12 +60,12 @@ else
   }
 ```
 
-您可以取消註解第1行，以在瀏覽器視窗中偵錯程式碼。
+您可以取消注释第1行，以便在浏览器窗口中调试代码。
 
-第4行 — 取得目前的面板
+第4行 — 获取当前面板
 
-第5行 — 驗證目前的面板。
+第5行 — 验证当前面板。
 
-第9行 — 如果沒有錯誤，則移至下一個面板
+第9行 — 如果没有错误，则移至下一个面板
 
-預覽表單，並測試新啟用的功能。
+预览表单，并测试新启用的功能。

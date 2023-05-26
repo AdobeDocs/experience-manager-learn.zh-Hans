@@ -1,7 +1,7 @@
 ---
-title: 提交至感謝頁面
+title: 提交以感谢页面
 seo-title: Submitting To Thank You Page
-description: 在提交最適化表單時顯示感謝頁面
+description: 在提交自适应表单时显示感谢页面
 seo-description: Display a thank you page on submitting Adaptive Form
 uuid: ec695b87-083a-47f6-92ac-c9a6dc2b85fb
 feature: Adaptive Forms
@@ -23,25 +23,25 @@ ht-degree: 0%
 
 ---
 
-# 提交至感謝頁面 {#submitting-to-thank-you-page}
+# 提交以感谢页面 {#submitting-to-thank-you-page}
 
-「提交至REST端點」選項會將表單中填入的資料傳遞至已設定的確認頁面，作為HTTPGET要求的一部分。 您可以新增要請求的欄位名稱。 請求的格式為：
+“提交到REST端点”选项将表单中填写的数据作为HTTPGET请求的一部分传递到配置的确认页面。 您可以添加要请求的字段的名称。 请求的格式为：
 
-\{fieldName\} = \{parameterName\}。 例如，submitterName是適用性表單欄位的名稱，submitter是引數的名稱。 在感謝頁面中，您可以使用request.getParameter(&quot;submitter&quot;)存取提交者引數，以保留提交者名稱欄位的值。
+\{fieldName\} = \{parameterName\}。 例如，submitterName是自适应表单字段的名称，submitter是参数的名称。 在感谢页面中，您可以使用request.getParameter(&quot;submitter&quot;)访问提交者参数以获取对提交者名称字段值的保留。
 
 `submitterName=submitter`
 
-在下方熒幕擷圖中，我們提交最適化表單以感謝位於/content/thankyou的頁面。 在此感謝頁面中，我們將傳遞3個保留表單欄位值的請求屬性。
+在下面的屏幕快照中，我们将提交自适应表单以感谢位于/content/thankyou的页面。 在此感谢页面中，我们将传递3个包含表单字段值的请求属性。
 
-![感謝頁面](assets/thankyoupage.gif)
+![感谢页面](assets/thankyoupage.gif)
 
-您也可以透過POST提交至外部端點。 若要完成此操作，您只需選取「啟用貼文請求」核取方塊，並提供外部端點的URL。 提交表單時，您會看到感謝頁面，並同時叫用POST端點。
+您还可以通过POST提交到外部端点。 要完成此操作，您只需选中“启用post请求”复选框并提供外部端点的URL。 当您提交表单时，您会看到一个感谢页面，并且同时调用POST端点。
 
-![擷取設定](assets/capture.gif)
+![捕获配置](assets/capture.gif)
 
-若要在您的伺服器上測試此功能，請遵循下列指示：
+要在您的服务器上测试此功能，请按照以下说明操作：
 
-* 匯入 [使用套件管理器將與本文相關的資產檔案匯入AEM](assets/submittingtorestendpoint.zip)
-* 將瀏覽器指向 [休假請求表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
-* 填寫必填欄位並提交表單
-* 您應該會收到感謝頁面，並在頁面上填入資訊
+* 导入 [使用包管理器将与本文关联的资源文件导入AEM](assets/submittingtorestendpoint.zip)
+* 将浏览器指向 [休假请求表单](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* 填写必填字段并提交表单
+* 您应该会获得一个感谢页面，并在该页面中填充了您的信息

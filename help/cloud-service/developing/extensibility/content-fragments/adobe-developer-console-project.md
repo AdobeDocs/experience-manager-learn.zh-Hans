@@ -1,6 +1,6 @@
 ---
-title: 為內容片段主控台擴充性建立Adobe Developer主控台專案
-description: 瞭解如何建立Adobe Developer Console專案，以定義其存取其他Adobe服務的許可權，並管理其部署。
+title: 为内容片段控制台扩展性创建一个Adobe Developer控制台项目
+description: 了解如何创建一个Adobe Developer Console项目，该项目定义了其对其他Adobe服务的访问权限，并管理其部署。
 version: Cloud Service
 feature: Developer Tools
 topic: Development
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 ---
 
-# Adobe Developer Console專案建立
+# Adobe Developer Console项目创建
 
-建立Adobe Developer Console專案，定義其存取其他Adobe服務的許可權，並管理其部署。
+创建一个Adobe Developer Console项目，以定义对其他Adobe服务的访问权限，并管理其部署。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412875?quality=12&learn=on)
 
-請參閱Adobe Developer檔案以瞭解 [建立Adobe Developer主控台專案的詳細逐步解說](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console).
+请参阅Adobe Developer文档，了解 [创建Adobe Developer控制台项目的详细演练](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console).

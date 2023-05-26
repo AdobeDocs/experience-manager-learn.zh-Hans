@@ -1,6 +1,6 @@
 ---
-title: 製作和發佈層級簡介
-description: 介紹Adobe Experience Manager架構中的「作者」和「發佈」階層。
+title: 创作层和发布层简介
+description: 简单介绍作为Adobe Experience Manager架构一部分的创作层和发布层。
 topics: publishing, architecture
 audience: administrator, developer
 doc-type: technical video
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 ---
 
-# 製作和發佈層級簡介 {#introduction-author-publish}
+# 创作层和发布层简介 {#introduction-author-publish}
 
-介紹Adobe Experience Manager架構中的「作者」和「發佈」階層。
+简单介绍作为Adobe Experience Manager架构一部分的创作层和发布层。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32033?quality=12&learn=on)

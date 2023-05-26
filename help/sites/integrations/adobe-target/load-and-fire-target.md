@@ -1,6 +1,6 @@
 ---
-title: 載入及觸發Target呼叫
-description: 瞭解如何使用Launch規則從您的網站頁面載入、傳遞引數至頁面請求，以及觸發Target呼叫。 系統會使用Adobe使用者端資料層來擷取頁面資訊，並將其作為引數傳遞，此資料層可讓您收集和儲存訪客在網頁上的體驗資料，然後讓此資料易於存取。
+title: 加载和触发Target调用
+description: 了解如何使用Launch规则从网站页面加载、将参数传递到页面请求和触发Target调用。 通过Adobe客户端数据层，可检索页面信息并将其作为参数进行传递，这样可收集并存储有关访客在网页上的体验数据，然后可轻松访问这些数据。
 feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
@@ -20,27 +20,27 @@ ht-degree: 4%
 
 ---
 
-# 載入及觸發Target呼叫 {#load-fire-target}
+# 加载和触发Target调用 {#load-fire-target}
 
-瞭解如何使用Launch規則從您的網站頁面載入、傳遞引數至頁面請求，以及觸發Target呼叫。 網頁資訊是使用Adobe使用者端資料層擷取並傳遞為引數，可讓您收集和儲存訪客在網頁上的體驗資料，然後讓此資料易於存取。
+了解如何使用Launch规则从网站页面加载、将参数传递到页面请求和触发Target调用。 网页信息是使用Adobe客户端数据层检索并作为参数传递的，通过该数据层，您可以收集和存储有关访客在网页上的体验数据，然后轻松访问这些数据。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
-## 頁面載入規則
+## 页面加载规则
 
-Adobe使用者端資料層是事件導向的資料層。 載入AEM Page資料層時，會觸發事件 `cmp:show` . 在影片中， `Launch Library Loaded` 使用自訂事件叫用規則。 您可以在下方找到視訊中用於自訂事件及資料元素的程式碼片段。
+Adobe客户端数据层是一个事件驱动的数据层。 加载AEM Page数据层时，将触发一个事件 `cmp:show` . 在视频中， `Launch Library Loaded` 使用自定义事件调用规则。 在下面，您可以找到视频中用于自定义事件和数据元素的代码片段。
 
-### 自訂頁面顯示事件{#page-event}
+### 自定义页面显示事件{#page-event}
 
-![頁面顯示的事件設定和自訂程式碼](assets/load-and-fire-target-call.png)
+![页面显示的事件配置和自定义代码](assets/load-and-fire-target-call.png)
 
-在Launch屬性中，新增 **事件** 至 **規則**
+在Launch资产中，添加新的 **事件** 到 **规则**
 
-+ __副檔名：__ 核心
-+ __事件型別：__ 自訂程式碼
-+ __名稱：__ 頁面顯示事件處理常式（或描述性內容）
++ __扩展名：__ 核心
++ __事件类型：__ 自定义代码
++ __名称：__ 页面显示事件处理程序（或描述性内容）
 
-點選 __開啟編輯器__ 按鈕並貼入下列程式碼片段。 此程式碼 __必須__ 已新增至 __事件設定__ 和後續的 __動作__.
+点按 __打开编辑器__ 按钮并粘贴以下代码片段。 此代码 __必须__ 已添加到 __事件配置__ 和后续的 __操作__.
 
 ```javascript
 // Define the event handler function
@@ -80,22 +80,22 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-自訂函式定義 `pageShownEventHandler`，會接聽AEM核心元件發出的事件、衍生核心元件的相關資訊、將其封裝為事件物件，並在其裝載處以衍生的事件資訊觸發Launch事件。
+自定义函数定义 `pageShownEventHandler`，并侦听AEM核心组件发出的事件，派生核心组件的相关信息，将其打包到一个事件对象中，然后在其有效负荷处使用派生的事件信息触发Launch事件。
 
-Launch規則是使用Launch的 `trigger(...)` 函式為 __僅限__ 可從規則事件的自訂程式碼片段定義中使用。
+Launch规则是使用Launch的 `trigger(...)` 函数为 __仅限__ 可从规则事件的Custom Code代码段定义中获取。
 
-此 `trigger(...)` 函式會將事件物件視為引數，而此引數會由Launch中名為的另一個保留名稱在Launch資料元素中公開 `event`. Launch中的資料元素現在可以從參照此事件物件的資料 `event` 使用類似下列語法的物件 `event.component['someKey']`.
+此 `trigger(...)` 函数将事件对象作为参数，该参数依次在Launch数据元素中公开，并使用Launch中另一个名为的保留名称 `event`. Launch中的数据元素现在可以从以下位置引用此事件对象中的数据： `event` 对象使用语法，如 `event.component['someKey']`.
 
-若 `trigger(...)` 在事件的自訂程式碼事件型別內容之外使用（例如，在動作中），JavaScript錯誤 `trigger is undefined` 在與Launch屬性整合的網站上擲回。
+如果 `trigger(...)` 在事件的Custom Code事件类型的上下文（例如，在操作中）之外使用，表示JavaScript错误 `trigger is undefined` 在与Launch属性集成的网站上引发。
 
 
 ### 数据元素
 
 ![数据元素](assets/data-elements.png)
 
-AdobeLaunch資料元素會對應事件物件的資料 [在自訂頁面顯示事件中觸發](#page-event) 至可在Adobe Target中取得的變數（透過核心擴充功能的「自訂程式碼資料元素型別」）。
+Adobe启动数据元素映射来自事件对象的数据 [在自定义页面显示事件中触发](#page-event) 到Adobe Target中可用的变量（通过核心扩展的Custom Code Data Element Type）。
 
-#### 頁面ID資料元素
+#### 页面ID数据元素
 
 ```
 if (event && event.id) {
@@ -103,11 +103,11 @@ if (event && event.id) {
 }
 ```
 
-此程式碼會傳回核心元件的產生唯一ID。
+此代码返回核心组件的生成唯一ID。
 
-![頁面ID](assets/pageid.png)
+![页面ID](assets/pageid.png)
 
-### 頁面路徑資料元素
+### 页面路径数据元素
 
 ```
 if (event && event.component && event.component.hasOwnProperty('repo:path')) {
@@ -115,11 +115,11 @@ if (event && event.component && event.component.hasOwnProperty('repo:path')) {
 }
 ```
 
-此程式碼會傳回AEM頁面的路徑。
+此代码返回AEM页面的路径。
 
 ![页面路径](assets/pagepath.png)
 
-### 頁面標題資料元素
+### 页面标题数据元素
 
 ```
 if (event && event.component && event.component.hasOwnProperty('dc:title')) {
@@ -127,17 +127,17 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 }
 ```
 
-此程式碼會傳回AEM頁面的標題。
+此代码返回AEM页面的标题。
 
 ![页面标题](assets/pagetitle.png)
 
 ## 疑难解答
 
-### 為什麼我的mbox沒有在我的網頁上觸發？
+### 为什么我的mbox没有在我的网页上触发？
 
-#### 未設定mboxDisable Cookie時的錯誤訊息
+#### 未设置mboxDisable Cookie时的错误消息
 
-![Target Cookie網域錯誤](assets/target-cookie-error.png)
+![Target Cookie域错误](assets/target-cookie-error.png)
 
 ```
 > AT: [page-init] Adobe Target content delivery is disabled. Ensure that you can save cookies to your current domain, there is no "mboxDisable" cookie and there is no "mboxDisable" parameter in the query string.
@@ -145,8 +145,8 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 
 #### 解决方案
 
-客戶有時使用雲端型例項搭配Target進行測試或簡單的概念證明用途。 這些網域和許多其他網域均屬於公用字尾清單。
-如果您使用這些網域，則現代瀏覽器不會儲存Cookie，除非您自訂 `cookieDomain` 設定，使用 `targetGlobalSettings()`.
+Target客户有时会将基于云的实例与Target结合使用来进行测试或简单的概念验证。 这些域以及许多其他域均包含在公共后缀列表中。
+如果您使用这些域，新式浏览器不会保存Cookie，除非您自定义 `cookieDomain` 设置使用 `targetGlobalSettings()`.
 
 ```
 window.targetGlobalSettings = {  
@@ -156,12 +156,12 @@ window.targetGlobalSettings = {
 
 ## 后续步骤
 
-+ [將體驗片段匯出至Adobe Target](./export-experience-fragment-target.md)
++ [将体验片段导出到Adobe Target](./export-experience-fragment-target.md)
 
-## 支援連結
+## 支持链接
 
-+ [Adobe使用者端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [使用Adobe使用者端資料層和核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
-+ [Adobe Experience Platform Debugger簡介](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
++ [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)

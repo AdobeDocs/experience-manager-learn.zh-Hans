@@ -1,6 +1,6 @@
 ---
-title: 設定與AEM Forms的資料整合
-description: 設定與JDBC資料來源的資料連線
+title: 设置与AEM Forms的数据集成
+description: 设置与JDBC数据源的数据连接
 feature: Adaptive Forms,Workflow
 version: 6.4,6.5
 topic: Development
@@ -15,18 +15,18 @@ ht-degree: 0%
 
 ---
 
-# 設定與AEM Forms的資料整合 {#set-up-data-integration-with-aem-forms}
+# 设置与AEM Forms的数据集成 {#set-up-data-integration-with-aem-forms}
 
-設定與JDBC資料來源的資料連線
+设置与JDBC数据源的数据连接
 
 >[!VIDEO](https://video.tv.adobe.com/v/17724?quality=12&learn=on)
 
 >[!NOTE]
 >
->MySQL JDBC驅動程式必須透過AEM執行個體上的OSGi套件組合安裝。
+>必须通过AEM实例上的OSGi捆绑包安装MySQL JDBC驱动程序。
 
-## 支援材料 {#supporting-materials}
+## 支持材料 {#supporting-materials}
 
-* [下載MySQL JDBC OSGi套件](https://dev.mysql.com/downloads/connector/j/)
+* [下载MySQL JDBC OSGi包](https://dev.mysql.com/downloads/connector/j/)
 
-   * 透過以下網站下載、解壓縮並安裝JAR檔案： [AEM Web Console](http://localhost:4502/system/console/bundles)
+   * 通过下载、解压缩并安装JAR文件 [AEM Web控制台](http://localhost:4502/system/console/bundles)

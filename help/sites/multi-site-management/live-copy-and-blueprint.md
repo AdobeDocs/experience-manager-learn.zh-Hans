@@ -1,6 +1,6 @@
 ---
-title: 瞭解即時副本與其Blueprint之間的關係
-description: 以下影片說明即時副本如何與其AEM Sites中的Blueprint相關聯。
+title: 了解Live Copy及其Blueprint之间的关系
+description: 以下视频介绍Live Copy如何与其AEM Sites中的Blueprint相关联。
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 # Live Copy和Blue Print {#livecopy-blueprint}
 
-瞭解AEM Sites中即時副本與其Blueprint之間的關係。
+了解AEM Sites中Live Copy及其Blueprint之间的关系。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36676?quality=12&learn=on)

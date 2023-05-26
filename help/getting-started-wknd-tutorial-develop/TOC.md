@@ -2,13 +2,12 @@
 user-guide-title: 《AEM Sites 快速入门》 - WKND 教程
 user-guide-description: 面向不熟悉 AEM 的开发人员的多节教程。为一个虚构的生活方式品牌 WKND 实施 AEM 网站。启用前端管道以加快从开发到部署的周期。
 breadcrumb-title: AEM Sites WKND 教程
-solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Cloud Service
 activity: develop
 audience: developer
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 46%

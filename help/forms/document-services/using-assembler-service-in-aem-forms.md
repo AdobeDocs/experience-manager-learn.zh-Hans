@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms中使用組合器服務
-description: 在AEM Forms中使用組合器服務來組合多個pdf檔案
+title: 在AEM Forms中使用汇编程序服务
+description: 在AEM Forms中使用Assembler服务来汇编多个PDF文件
 feature: Assembler
 version: 6.4,6.5
 topic: Development
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 ---
 
-# 在AEM Forms中使用組合器服務{#using-assembler-service-in-aem-forms}
+# 在AEM Forms中使用汇编程序服务{#using-assembler-service-in-aem-forms}
 
-本文提供的資產，可讓您示範將多個PDF檔案拖放至瀏覽器，並將組合的pdf檔案儲存至檔案系統的功能。 以下是servlet的程式碼，它會組合使用瀏覽器上傳的pdf檔案。
+本文为您提供了用于演示将多个PDF文件拖放到浏览器中并将组合好的pdf文件保存到您的文件系统中的功能的资源。 以下是servlet的代码，该代码可组合使用浏览器上传的pdf文件。
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -100,27 +100,27 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-若要讓此功能在您的AEM伺服器上運作
+使此功能在您的AEM Server上工作
 
-* 下載 [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) 至您的本機系統。
-* 使用上傳和安裝套件 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* 下載[自訂檔案服務套裝](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* 下載 [使用服務使用者套件進行開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* 使用部署及啟動套件組合 [felix web主控台](http://localhost:4502/system/console/bundles)
-* 將瀏覽器指向 [AssemblePdf.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
-* 拖放多個PDF檔案檔案
+* 下载 [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) 到您的本地系统。
+* 使用上传并安装包 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 下载[自定义文档服务捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* 下载 [使用服务用户捆绑包进行开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* 使用部署和启动包 [felix web控制台](http://localhost:4502/system/console/bundles)
+* 将浏览器指向 [AssemblePdf.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
+* 拖放多个PDF文件
 
 >[!NOTE]
 >
->請確定您的AEM Forms安裝已完成。 您的所有套件組合都必須處於作用中狀態。
+>确保您的AEM Forms安装已完成。 您的所有包都必须处于活动状态。
 >
->請確定您已新增 — 開機委派RSA和BouncyCastle程式庫（如本中所述） [安裝AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>确保已添加 — 引导委派RSA和BouncyCastle库，如本中所述 [安装AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
 >
->**此示範的注意事項**
+>**此演示的注意事项**
 >
-> * 程式碼不會處理XFA型PDF檔案
+> * 该代码不处理基于XFA的PDF文档
 >
-> * 請確定您只拖放PDF檔案
+> * 确保仅拖放PDF文件
 >
 >
 

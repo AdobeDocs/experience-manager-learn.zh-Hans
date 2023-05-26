@@ -1,6 +1,6 @@
 ---
-title: Adobe Managed Services Dispatcher手冊
-description: 用於在Dispatcher設定上獲得適當支援的AMS流程。
+title: Adobe Managed Services Dispatcher手册
+description: 用于在Dispatcher设置上获得适当支持的AMS进程。
 version: 6.5
 topic: Administration, Performance, Security
 feature: Dispatcher
@@ -15,22 +15,22 @@ ht-degree: 5%
 
 ---
 
-# Adobe Managed Services Dispatcher手冊
+# Adobe Managed Services Dispatcher手册
 
-如果您的AEM安裝是在Adobe Managed Service上託管，那麼您將需要閱讀本手冊。
-以下特定檔案將涵蓋AMS程式，以便正確自訂和使用提供的Dispatcher設定。
+如果您的AEM安装托管在Adobe托管服务上，那么您将需要阅读本手册。
+以下给定文档将介绍AMS流程，以便正确自定义和使用提供的Dispatcher设置。
 
 ## 目录
 
-以下是構成Dispatcher手冊的子頁面和主題：
+以下是构成Dispatcher手册的子页面和主题：
 
-- [什麼是「Dispatcher」](./what-is-the-dispatcher.md)
-- [基本檔案配置](./basic-file-layout.md)
-- [組態檔說明](./explanation-config-files.md)
-- [瞭解快取](./understanding-cache.md)
-- [使用及瞭解變數](./variables.md)
-- [Dispatcher排清](./disp-flushing.md)
+- [什么是“调度程序”](./what-is-the-dispatcher.md)
+- [基本文件布局](./basic-file-layout.md)
+- [配置文件说明](./explanation-config-files.md)
+- [了解缓存](./understanding-cache.md)
+- [使用和了解变量](./variables.md)
+- [Dispatcher刷新](./disp-flushing.md)
 - [虚 URL](./disp-vanity-url.md)
-- [通用記錄](./common-logs.md)
-- [唯讀檔案](./immutable-files.md)
-- [Dispatcher健康情況檢查](./health-check.md)
+- [常见日志记录](./common-logs.md)
+- [只读文件](./immutable-files.md)
+- [Dispatcher运行状况检查](./health-check.md)

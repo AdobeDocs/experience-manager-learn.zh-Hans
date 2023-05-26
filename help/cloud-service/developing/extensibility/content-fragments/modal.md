@@ -1,6 +1,6 @@
 ---
-title: AEM內容片段主控台擴充功能模組
-description: 瞭解如何建立AEM內容片段主控台擴充功能模組。
+title: AEM内容片段控制台扩展模式窗口
+description: 了解如何创建AEM内容片段控制台扩展模式窗口。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -17,26 +17,26 @@ ht-degree: 0%
 
 ---
 
-# 擴充功能模組
+# 扩展模式
 
-![AEM內容片段擴充功能模組](./assets/modal/modal.png){align="center"}
+![AEM内容片段扩展模式窗口](./assets/modal/modal.png){align="center"}
 
-AEM內容片段擴充功能模式提供一種將自訂UI附加至AEM內容片段擴充功能(不論是 [動作列](./action-bar.md) 或 [頁首功能表](./header-menu.md) 按鈕。
+AEM内容片段扩展模式提供了一种将自定义UI附加到AEM内容片段扩展的方法，无论 [操作栏](./action-bar.md) 或 [标题菜单](./header-menu.md) 按钮。
 
-模式是React應用程式，根據 [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)，和可以建立擴充功能所需的任何自訂UI，包括但不限於：
+模式是React应用程序，基于 [React频谱](https://react-spectrum.adobe.com/react-spectrum/)，和可以创建扩展所需的任何自定义UI，包括但不限于：
 
-+ 確認對話方塊
-+ [輸入表單](https://react-spectrum.adobe.com/react-spectrum/#forms)
-+ [進度指示器](https://react-spectrum.adobe.com/react-spectrum/#status)
-+ [結果摘要](https://react-spectrum.adobe.com/react-spectrum/#collections)
-+ 錯誤訊息
-+ ...或是完整的多重檢視React應用程式！
++ 确认对话框
++ [输入表单](https://react-spectrum.adobe.com/react-spectrum/#forms)
++ [进度指示器](https://react-spectrum.adobe.com/react-spectrum/#status)
++ [结果摘要](https://react-spectrum.adobe.com/react-spectrum/#collections)
++ 错误消息
++ ...甚至是一个全面的多视图React应用程序！
 
-## 強制回應路由
+## 模式路由
 
-強制回應體驗是由下定義的擴充功能App Builder React應用程式所定義。 `web-src` 資料夾。 和任何React應用程式一樣，完整體驗也是使用來編排 [React路由](https://reactrouter.com/en/main/components/routes) 該轉譯器 [React元件](https://reactjs.org/docs/components-and-props.html).
+模式体验由下定义的App Builder React扩展应用程序定义 `web-src` 文件夹。 与任何React应用程序一样，可以使用来编排完整体验 [React路由](https://reactrouter.com/en/main/components/routes) 该渲染 [React组件](https://reactjs.org/docs/components-and-props.html).
 
-產生初始模組檢視至少需要一條路線。 系統會叫用此初始路由 [延伸註冊](#extension-registration)的 `onClick(..)` 函式，如下所示。
+至少需要一条路由才能生成初始模态视图。 此初始路由将在 [分机注册](#extension-registration)的 `onClick(..)` 函数，如下所示。
 
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/App.js`
@@ -76,16 +76,16 @@ function App(props) {
 }
 ```
 
-## 擴充功能註冊
+## 延期注册
 
-若要開啟強制回應視窗，請呼叫 `guestConnection.host.modal.showUrl(..)` 由擴充功能的 `onClick(..)` 函式。 `showUrl(..)` 會傳遞一個具有索引鍵/值的JavaScript物件：
+要打开模式窗口，请调用 `guestConnection.host.modal.showUrl(..)` 是从扩展的 `onClick(..)` 函数。 `showUrl(..)` 是通过键/值传递的JavaScript对象：
 
-+ `title` 提供顯示給使用者的強制回應視窗標題名稱
-+ `url` 是叫用 [React路由](#modal-routes) 負責強制回應視窗的初始檢視。
++ `title` 提供向用户显示的模式模式的标题名称
++ `url` 是调用 [React路由](#modal-routes) 负责模态的初始视图。
 
-當務之急是 `url` 傳遞至 `guestConnection.host.modal.showUrl(..)` 解析成擴充功能中的路由，否則強制回應視窗中不會顯示任何內容。
+当务之急是 `url` 传递到 `guestConnection.host.modal.showUrl(..)` 解析以在扩展中路由，否则模式中不会显示任何内容。
 
-檢閱 [頁首功能表](./header-menu.md#modal) 和 [動作列](./action-bar.md#modal) 有關如何建立模組URL的檔案。
+查看 [标题菜单](./header-menu.md#modal) 和 [操作栏](./action-bar.md#modal) 有关如何创建模态URL的文档。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -106,13 +106,13 @@ function ExtensionRegistration() {
 }...
 ```
 
-## 模組元件
+## 模式组件
 
-每個延伸路徑， [這不是 `index` 路由](./extension-registration.md#app-routes)，對應至可在擴充功能強制回應視窗中呈現的React元件。
+每条延伸路线， [那不是 `index` 路由](./extension-registration.md#app-routes)，映射到可以在扩展的模式中渲染的React组件。
 
-強制回應可由任意數量的React路徑組成，從簡單的單路徑強制回應到複雜的多路徑強制回應。
+一个模式可以包含任意数量的React路由，从简单的一路由模式到复杂的多路由模式。
 
-以下說明一個簡單的單路徑強制回應，不過此強制回應檢視可能包含叫用其他路徑或行為的React連結。
+下面说明了一个简单的一路由模式，但此模式视图可能包含调用其他路由或行为的React链接。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/MyModal.js`
 
@@ -182,11 +182,11 @@ export default function MyModal() {
 }
 ```
 
-## 關閉強制回應視窗
+## 关闭模式窗口
 
-![AEM內容片段擴充功能強制關閉按鈕](./assets/modal/close.png){align="center"}
+![AEM内容片段扩展模式关闭按钮](./assets/modal/close.png){align="center"}
 
-模組必須提供自己的嚴密控制。 這是透過叫用完成的 `guestConnection.host.modal.close()`.
+模范必须提供自己的严密控制。 这是通过调用完成的 `guestConnection.host.modal.close()`.
 
 ```javascript
 <ButtonGroup align="end">

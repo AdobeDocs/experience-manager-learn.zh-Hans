@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media與AEM Assets概述
-description: 此影片系列會提供您如何使用Adobe Experience Manager Dynamic Media作為內容服務來管理及存取媒體內容的概觀。 Dynamic Media可讓您管理和發佈動態數位體驗 — Experience Manager Assets獨有的功能。 我們的架構和元件套件可讓行銷人員自訂並跨所有裝置提供互動式多媒體體驗。
+title: Dynamic Media和AEM Assets概述
+description: 本视频系列概述了如何使用Adobe Experience Manager Dynamic Media作为内容服务提供服务来管理和访问媒体内容。 通过Dynamic Media，您可以管理和发布动态数字体验，这是Experience Manager Assets独有的功能。 我们的框架和组件包允许营销人员跨所有设备自定义和提供交互式多媒体体验。
 feature: Smart Crop, Video Profiles, Image Profiles, Viewer Presets, 360 VR Video, Image Sets, Spin Sets
 version: 6.4, 6.5
 topic: Content Management
@@ -14,97 +14,97 @@ ht-degree: 0%
 
 ---
 
-# 搭配AEM Assets使用Dynamic Media {#understanding-aem-dynamic-media}
+# 将Dynamic Media与AEM Assets结合使用 {#understanding-aem-dynamic-media}
 
-此多部分影片系列會提供您如何使用Adobe Experience Manager Dynamic Media作為內容服務來管理及存取媒體內容的概觀。 Dynamic Media可讓您管理和發佈動態數位體驗 — Experience Manager Assets獨有的功能。 我們的架構和元件套件可讓行銷人員自訂並跨所有裝置提供互動式多媒體體驗。
+此多部分视频系列概述了如何使用Adobe Experience Manager Dynamic Media作为内容服务服务来管理和访问媒体内容。 通过Dynamic Media，您可以管理和发布动态数字体验，这是Experience Manager Assets独有的功能。 我们的框架和组件包允许营销人员跨所有设备自定义和提供交互式多媒体体验。
 
-## Dynamic Media概觀
+## Dynamic Media概述
 
 >[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
 >[!NOTE]
 >
->此處示範的功能適用於Dynamic Media DMS7執行模式（我們目前支援的執行模式），不一定是DMS7已取代的DMHybrid執行模式。
+>此处演示的功能适用于Dynamic Media DMS7运行模式（我们当前支持的运行模式），但不一定是DMS7已替换的DMHybrid运行模式。
 
-此影片說明如何使用Adobe Experience Manager Dynamic Media作為內容服務來管理和存取媒體內容。 Dynamic Media在單一主要資產方法中運作，上傳影像資產或視訊資產，您可請求這些資產完成無限制的一組必要可消耗變數或衍生轉譯。 包含：
+此视频介绍如何使用Adobe Experience Manager Dynamic Media作为内容服务服务来管理和访问媒体内容。 Dynamic Media在单个主控Asset方法上运行，您可以上传图像资源或视频资源，可以请求它们完成无限组所需的可消耗变化或衍生演绎版。 包括：
 
-* 說明單一主要資產至URL產品交付專案
-* 影像處理選項
-* 內容檢視器選項
-* 將URL複製到影像和回應式檢視器
-* URL的智慧型裁切變化
+* 说明从“单个主控资源”到“URL”的产品交付内容
+* 图像处理选项
+* 内容查看器选项
+* 将URL复制到图像和响应式查看器
+* 将智能裁剪变体裁剪为URL
 
-## 搭配AEM Sites使用
+## 与AEM Sites一起使用
 
 >[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
 >[!NOTE]
 >
->此處示範的功能適用於Dynamic Media DMS7執行模式（我們目前支援的執行模式），不一定是DMS7已取代的DMHybrid執行模式。 本影片參考第1部分影片(Dynamic Media概觀)中說明的概念。
+>此处演示的功能适用于Dynamic Media DMS7运行模式（我们当前支持的运行模式），但不一定是DMS7已替换的DMHybrid运行模式。 本视频引用第1部分视频(Dynamic Media概述)中描述的概念。
 
-此影片說明如何在Adobe Experience Manager Dynamic Media中管理媒體內容，並可透過元件在AEM Sites中輕鬆使用，以進行簡單並自動裁切，以根據回應式頁面寬度進行最佳化。 輕鬆建立互動式影像橫幅，並產生復本URL，以用於任何內容管理系統。
+此视频介绍如何在Adobe Experience Manager Dynamic Media中管理媒体内容，以及如何通过组件在AEM Sites中轻松使用，以实现简单且自动裁剪以根据响应式页面宽度进行优化。 轻松创建交互式图像横幅并生成副本URL以用于任何内容管理系统。
 
-* AEM Sites Dynamic Media元件彈性
-* 使用影像預設集在本機下載
-* 建立和發佈互動式橫幅
+* AEM Sites Dynamic Media组件灵活性
+* 使用图像预设本地下载
+* 创建和发布交互式横幅
 
-## 建立混合媒體集合
+## 构建混合媒体收藏集
 
 >[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
 >[!NOTE]
 >
->此處示範的功能適用於Dynamic Media DMS7執行模式（我們目前支援的執行模式），不一定是DMS7已取代的DMHybrid執行模式。 本影片參考第1部分影片(Dynamic Media概觀)中說明的概念。
+>此处演示的功能适用于Dynamic Media DMS7运行模式（我们当前支持的运行模式），但不一定是DMS7已替换的DMHybrid运行模式。 本视频引用第1部分视频(Dynamic Media概述)中描述的概念。
 
-本影片說明混合媒體檢視器媒體資產集合（包括迴轉集、影片和產品影像集合）的簡單建立流程。 新增內容至混合媒體集，並建立自訂檢視器，從最終複製URL或AEM Sites元件中選擇。
+此视频介绍混合媒体查看器媒体资产集合（包括旋转集、视频和产品图像集合）的简单创建过程。 将内容添加到混合媒体集，并创建一个自定义的查看器，以在最终复制URL或AEM Sites组件中进行选择。
 
-* 從適當的產品像片建立迴轉集
-* 上傳並編碼Dynamic Media影片的母片影片
-* 從迴轉集、視訊和像片建立混合媒體集
-* 編輯及使用自訂混合媒體檢視器
+* 从相应的产品照片创建旋转集
+* 上传并编码Dynamic Media视频的母版视频
+* 从旋转集、视频和照片创建混合媒体集
+* 编辑和使用自定义混合媒体查看器
 
 ## 图像预设
 
 >[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
-此影片說明如何建立影像預設集，以及什麼是影像預設集，這是一系列Image Server引數的URL簡稱，會在URL要求時對影像進行操作。 瞭解延伸及編輯影像預設集的寶貴技術。
+此视频介绍如何创建图像预设，以及什么是图像预设，它是一系列URL参数的简称，这些参数会在URL请求时对图像进行操作。 了解用于扩展和编辑图像预设的有价值技术。
 
-* 影像預設集縮短程式隱藏明確影像伺服器命令的集合
-* 僅使用一個畫素尺寸 — 寬度或高度 — 來符合調整大小的新影像，而不使用邊框間距
-* 一律使用銳利化
-* URL修飾元欄位，可新增其他命令以調整影像預設集大小
+* 图像预设缩短程序隐藏显式图像服务器命令的集合
+* 仅使用一个像素尺寸（宽度或高度）来使调整大小的新图像一致，而不使用内边距
+* 始终使用锐化
+* 用于添加其他命令以调整图像预设大小的URL修饰符字段
 
-## 進階URL修飾元
+## 高级URL修饰符
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
-本影片說明如何超越調整影像大小，以利用來源檔案本身的功能（背景透明度、內建剪裁路徑，以及將文字裁切為變數），並搭配使用Dynamic Media的URL修飾元。
+本视频介绍如何超越调整图像大小的功能，利用源文件本身的功能（背景透明度，内置于剪切路径中，并以Dynamic Media的URL修饰符裁切和文本作为变量）。
 
-* 在Dynamic Media修飾詞欄位中使用URL修飾詞
-* 變更具有透明度的影像的背景顏色
-* 剪裁至影像路徑
-* 裁切至影像路徑
-* 從Photoshop檔案建立文字範本
+* 在Dynamic Media修饰符字段中使用URL修饰符
+* 更改具有透明度的图像的背景颜色
+* 剪切到图像路径
+* 裁切到图像路径
+* 从Photoshop文件创建文本模板
 
-## JPEG檔案大小管理
+## JPEG文件大小管理
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
 
 >[!NOTE]
 >
->「影像品質」是以反向壓縮的百分比來測量，其中100%品質的壓縮率最低，因此會產生高品質的影像，但檔案大小相對較大。 Jpeg壓縮是一種有失真壓縮配置，其中壓縮設定會決定影像品質和檔案大小。
+>图像质量以逆压缩的百分比来衡量，其中100%的压缩质量最差，从而产生高质量的图像，但文件大小相对较大。 Jpeg压缩是一种有损压缩方案，其中压缩设置决定图像质量和文件大小。
 
-使用2個指令調整jpeg壓縮設定，平衡jpeg影像品質與產生的檔案大小（以KB為單位）以提升頁面載入速度。 QLT透過調整jpeg壓縮品質設定來定義影像品質。 「JPEG大小」指令可讓您指定需要使用壓縮來達到的檔案大小。
+使用2个命令调整jpeg压缩设置，将jpeg图像质量与结果文件大小（以KB为单位）平衡以提高页面加载速度。 QLT通过调整jpeg压缩质量设置来定义图像质量。 “JPEG大小”命令允许您指定需要使用compression实现的文件大小。
 
-## 隱藏式字幕
+## 隐藏字幕
 
 >[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
-藉由附加複製URL以指向其他隱藏式字幕檔案檔案（包含任何視訊的CC資訊的web.VTT側邊檔案），輕鬆將隱藏式字幕新增至Dynamic Media視訊。
+通过附加复制URL以指向其他隐藏式字幕文件文档（一个web.VTT侧边栏文件，其中包含任何视频的CC信息），轻松地将隐藏式字幕添加到Dynamic Media视频中。
 
-## 影像銳利化
+## 图像锐化
 
-本影片說明銳利化影像為何對維持影像精確度至關重要，以及如何使用進階設定來打造完美影像。
+本视频介绍为何锐化图像对于保持图像保真度至关重要，以及如何使用高级设置制作完美的图像。
 
 >[!VIDEO](https://demos-pub.assetsadobe.com/etc/dam/viewers/s7viewers/html5/VideoViewer.html?asset=%2Fcontent%2Fdam%2Fdm-public-facing-upgrade-portal-video%2F04_DynamicImagery_AdvancedSettings_071917_BH.mp4&amp;config=/etc/dam/presets/viewer/Video_social&amp;serverUrl=https%3A%2F%2Fadobedemo62-h.assetsadobe.com%2Fis%2Fimage%2F&amp;contenturl=%2F&amp;config2=/etc/dam/presets/analytics&amp;videoserverurl=https://gateway-na.assetsadobe.com/DMGateway/public/demoCo&amp;posterimage=/content/dam/dm-public-facing-upgrade-portal-video/04_DynamicImagery_AdvancedSettings_071917_BH.mp4)

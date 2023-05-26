@@ -1,6 +1,6 @@
 ---
-title: 建立最適化表單
-description: 建立並設定最適化表單以使用表單資料模型的預填服務
+title: 创建自适应表单
+description: 创建和配置自适应表单以使用表单数据模型的预填充服务
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 5813
@@ -16,97 +16,97 @@ ht-degree: 1%
 
 ---
 
-# 建立最適化表單
+# 创建自适应表单
 
-到目前為止，我們已建立下列專案
+到目前为止，我们已经创建了以下内容
 
-* 具有2個資料表的資料庫 —  `newhire` 和 `beneficiaries`
-* 已設定的Apache Sling Connection Pooled DataSource
-* 以RDBMS為基礎的表單資料模型
+* 具有2个表的数据库 —  `newhire` 和 `beneficiaries`
+* 已配置Apache Sling连接池化数据源
+* 基于RDBMS的表单数据模型
 
-下一步是建立和設定最適化表單，以使用表單資料模型。  若要搶先一步，您可以 [下載和匯入](assets/fdm-demo-af.zip) 範例表單。 範例表單有一個區段可顯示員工詳細資訊，另一個區段可列出員工的受益人。
+下一步是创建和配置自适应表单以使用表单数据模型。  要抢先一步，你可以 [下载和导入](assets/fdm-demo-af.zip) 示例表单。 示例表单中有一个部分用于显示员工详细信息，另一个部分用于列出员工的受益人。
 
-## 將表單與表單資料模型建立關聯
+## 将表单与表单数据模型关联
 
-本課程隨附的範例表單未與任何表單資料模型建立關聯。 若要設定表單以使用表單資料模型，我們需要執行下列動作：
+本课程随附的示例表单未与任何表单数据模型相关联。 要将表单配置为使用表单数据模型，我们需要执行以下操作：
 
-* 選取FDMDemo表單
-* 按一下 _屬性_->_表單模型_
-* 從下拉式清單中選取表單資料模型
-* 搜尋並選取您在上一堂課中建立的表單資料模型。
-* 按一下 _儲存並關閉_
+* 选择FDMDemo表单
+* 单击 _属性_->_表单模型_
+* 从下拉列表中选择表单数据模型
+* 搜索并选择您在前面的课程中创建的表单数据模型。
+* 单击 _保存并关闭_
 
-## 設定預填服務
+## 配置预填充服务
 
-第一步是關聯表單的預填服務。 若要與預填服務建立關聯，請遵循下列步驟
+第一步是关联表单的预填充服务。 要关联预填充服务，请按照以下步骤操作
 
-* 選取 `FDMDemo` 表單
-* 按一下 _編輯_ 以編輯模式開啟表單
-* 在內容階層中選取「表單容器」，然後按一下扳手圖示以開啟其屬性工作表
-* 選取 _表單資料模型預填服務_ 從「預填服務」下拉式清單
-* 按一下藍色☑以儲存變更
+* 选择 `FDMDemo` 表单
+* 单击 _编辑_ 在编辑模式下打开表单
+* 在内容层次结构中选择表单容器，然后单击扳手图标以打开其属性表
+* 选择 _表单数据模型预填充服务_ 从“预填充服务”下拉列表中
+* 单击蓝☑以保存更改
 
-* ![預填服務](assets/fdm-prefill.png)
+* ![预填充服务](assets/fdm-prefill.png)
 
-## 設定員工詳細資訊
+## 配置员工详细信息
 
-下一個步驟是將最適化表單的文字欄位繫結至表單資料模型元素。 您必須開啟下列欄位的屬性表，並設定其bindRef，如下所示
+下一步是将自适应表单的文本字段绑定到表单数据模型元素。 您必须打开以下字段的属性表并设置其bindRef，如下所示
 
 
-| 字段名 | 繫結參考 |
+| 字段名 | 绑定引用 |
 |------------|--------------------|
-| 名字 | /newhire/FirstName |
+| 名字 | /newhire/名字 |
 | 姓氏 | /newhire/lastName |
 
 >[!NOTE]
 >
->您可以新增其他文字欄位，並將其繫結至適當的表單資料模型元素
+>您可以随意添加其他文本字段并将它们绑定到适当的表单数据模型元素
 
-## 設定受益人表格
+## 配置受益人表
 
-下一步是以表格方式顯示員工的受益人。 提供的範例表單有一個包含4欄和單列的表格。 我們需要設定表格以隨著受益人人數而成長。
+下一步是以表格形式显示员工的受益人。 提供的示例表单有一个表，其中有4列和单行。 我们需要根据受益人数量来设定增长表。
 
-* 在編輯模式下開啟表單。
-* 展開根面板 — >您的受益人 — >表格
-* 選取「列1」，然後按一下扳手圖示以開啟其屬性表。
-* 將繫結參考設定為 **/newhire/GetEmployeeRefineties**
-* 將「重複設定 — 最小計數」設定為1，將「最大計數」設定為5。
-* 您的Row1設定應該看起來像下面的熒幕擷圖
+* 在编辑模式下打开表单。
+* 展开根面板 — >您的受益人 — >表
+* 选择Row1并单击扳手图标以打开其属性表。
+* 将绑定引用设置为 **/newhire/GetEmployeeRefineties**
+* 将“Repeat Settings - Minimum Count（重复设置 — 最小计数）”设置为1，“Maximum Count（最大计数）”设置为5。
+* 您的Row1配置应类似于下面的屏幕快照
    ![row-configure](assets/configure-row.PNG)
-* 按一下藍色☑鈕以儲存變更
+* 单击蓝☑以保存更改
 
-## 繫結列儲存格
+## 绑定行单元格
 
-最後，我們需要將「列」儲存格繫結至「表單資料模型」元素。
+最后，我们需要将行单元格绑定到表单数据模型元素。
 
-* 展開根面板 — >您的受益人 — >表格 — >Row1
-* 依照下表設定每個資料列儲存格的繫結參考
+* 展开根面板 — >您的受益人 — >表 — >行1
+* 按照下表设置每个行单元格的绑定引用
 
-| 列儲存格 | Bind 引用 |
+| 行单元格 | Bind 引用 |
 |------------|----------------------------------------------|
-| 名字 | /newhire/GetEmployeeRefitures/firstname |
-| 姓氏 | /newhire/GetEmployeeInfelieves/lastname |
-| 關係 | /newhire/GetEmployeeRefineties/relation |
+| 名字 | /newhire/GetEmployeeRefineties/firstname |
+| 姓氏 | /newhire/GetEmployeeRefineties/lastname |
+| 关系 | /newhire/GetEmployeeRefidentials/relation |
 | 百分比 | /newhire/GetEmployeeRefitures/percentage |
 
-* 按一下藍色☑鈕以儲存變更
+* 单击蓝☑以保存更改
 
-## 測試您的表單
+## 测试您的表单
 
-我們現在需要在URL中使用適當的empID開啟表單。 下列2個連結會使用資料庫中的資訊填入表單
-[empID=207的表單](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=207)
-[empID=208的表單](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=208)
+现在，我们需要在URL中使用适当的empID打开表单。 以下2个链接将使用数据库中的信息填充表单
+[empID=207的表单](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=207)
+[empID=208的表单](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=208)
 
 ## 疑难解答
 
-我的表單是空白的，沒有任何資料
+我的表单是空白的，没有任何数据
 
-* 請確定表單資料模型傳回正確結果。
-* 表單與正確的表單資料模型相關聯
-* 檢查欄位繫結
-* 請檢視stdout記錄檔。 您應該會看到正在寫入檔案的empID。如果您沒有看到此值，則表示您的表單可能未使用提供的自訂範本。
+* 确保表单数据模型返回正确结果。
+* 表单与正确的表单数据模型相关联
+* 检查字段绑定
+* 查看stdout日志文件。 您应该会看到正在写入该文件的empID。如果您没有看到此值，则表示您的表单可能未使用提供的自定义模板。
 
-未填入表格
+未填充表
 
-* 檢查Row1繫結
-* 請確定Row1的重複設定已正確設定（最小值=1和最大值= 5或更多）
+* 检查Row1绑定
+* 确保正确设置Row1的重复设置（最小值=1和最大值=5或更多）

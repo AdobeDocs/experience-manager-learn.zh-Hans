@@ -1,6 +1,6 @@
 ---
-title: 檔案版本設定與註解
-description: 使用AdobeAsset Link面板，您可以存取AEM Assets中資產的檔案詳細資訊，例如縮圖、基本中繼資料和面板內的版本。 探索如何建立、預覽和比較檔案版本。
+title: 文件版本控制和注释
+description: 使用AdobeAsset Link面板，您可以访问AEM Assets中资源的文件详细信息，例如缩略图、基本元数据和版本。 了解如何创建、预览和比较文件版本。
 feature: Adobe Asset Link
 version: 6.4, 6.5, Cloud Service
 thumbnail: 34048.jpg
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 檔案版本設定與註解{#file-versioning-and-comments}
+# 文件版本控制和注释{#file-versioning-and-comments}
 
-使用AdobeAsset Link面板，您可以存取AEM Assets中資產的檔案詳細資訊，例如縮圖、基本中繼資料和面板內的版本。 探索如何建立、預覽和比較檔案版本。
+使用AdobeAsset Link面板，您可以访问AEM Assets中资源的文件详细信息，例如缩略图、基本元数据和版本。 了解如何创建、预览和比较文件版本。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34048?quality=12&learn=on)

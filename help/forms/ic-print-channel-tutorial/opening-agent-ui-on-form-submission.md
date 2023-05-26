@@ -1,7 +1,7 @@
 ---
-title: 在POST提交時開啟代理程式UI
+title: 在POST提交时打开代理用户界面
 seo-title: Opening Agent UI On POST Submission
-description: 這是多步驟教學課程的第11部分，說明如何為列印頻道建立您的第一個互動式通訊檔案。 在本部分中，我們將啟動代理程式ui介面，以在表單提交時建立隨選通訊。
+description: 这是为打印渠道创建第一个交互式通信文档的多步教程的第11部分。 在本部分中，我们将启动代理ui界面，用于在表单提交时创建临时通信。
 seo-description: This is part 11 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will launch the agent ui interface for creating ad-hoc correspondence on form submission.
 uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
 feature: Interactive Communication
@@ -23,13 +23,13 @@ ht-degree: 1%
 
 ---
 
-# 在POST提交時開啟代理程式UI
+# 在POST提交时打开代理用户界面
 
-在本部分中，我們將啟動代理程式ui介面，以在表單提交時建立隨選通訊。
+在本部分中，我们将启动代理ui界面，用于在表单提交时创建临时通信。
 
-本文將逐步引導您完成在提交表單時開啟代理程式ui介面的步驟。 典型的使用案例是客戶服務代理使用一些輸入引數填寫表單，並且在表單提交代理程式ui上開啟了預先填入來自表單資料模型預填服務的資料。表單資料模型預填服務的輸入引數提取自表單提交。
+本文将引导您完成在提交表单时打开代理ui界面所涉及的步骤。 典型的使用案例是客户服务代理使用一些输入参数填写表单，在表单提交代理ui上打开由表单数据模型预填充服务预填充的数据。表单数据模型预填充服务的输入参数是从表单提交中提取的。
 
-以下影片說明使用案例
+以下视频展示了用例
 
 >[!VIDEO](https://video.tv.adobe.com/v/40122?quality=12&learn=on)
 
@@ -49,27 +49,27 @@ CustomParameterRequest wrapperRequest = new CustomParameterRequest(slingRequest,
 wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").include(wrapperRequest, response);
 ```
 
-第1行：從requestparameter取得accountnumber
+第1行：从requestparameter获取accountnumber
 
-第2-8行：建立引數對映並設定適當的索引鍵和值，以反映documentId，Random。
+第2-8行：创建参数映射并设置适当的键和值以反映documentId，Random。
 
-第9-10行：建立另一個Map物件以保留表單資料模型中定義的輸入引數。
+第9-10行：创建另一个Map对象以保存表单数据模型中定义的输入参数。
 
-第11行：設定slingRequest屬性&quot;paramMap&quot;
+第11行：设置slingRequest属性“paramMap”
 
-第12-13行：將請求轉送至servlet
+第12-13行：将请求转发到servlet
 
-若要在您的伺服器上測試此功能
+要在您的服务器上测试此功能，请执行以下操作
 
-* [使用封裝管理程式匯入和安裝與本文相關的資產。](assets/launch-agent-ui.zip)
-* [登入configMgr](http://localhost:4502/system/console/configMgr)
-* 搜尋 _AdobeGranite CSRF篩選器_
-* 新增 _/content/getprintchannel_ 在排除的路徑中
-* 儲存您的變更。
-* [開啟POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp). 請確定傳遞至FormFieldRequestParameter的字串是有效的documentId。（第19行）。
-* [開啟網頁](http://localhost:4502/content/OpenPrintChannel.html) 並輸入accountnumber並提交表單。
-* Agent UI介面應會開啟，並預先填入表單中輸入accountnumber的特定資料。
+* [使用包管理器导入和安装与本文相关的资产。](assets/launch-agent-ui.zip)
+* [登录configMgr](http://localhost:4502/system/console/configMgr)
+* 搜索 _AdobeGranite CSRF筛选器_
+* 添加 _/content/getprintchannel_ 在排除的路径中
+* 保存更改。
+* [打开POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp). 确保传递到FormFieldRequestParameter的字符串是有效的documentId。（第19行）。
+* [打开网页](http://localhost:4502/content/OpenPrintChannel.html) 并输入accountnumber并提交表单。
+* 打开代理UI界面时，应当预先填充特定于在表单中输入的帐号的数据。
 
 >[!NOTE]
 >
->請確定您的表單資料模型的Get作業輸入引數已繫結至名為「accountnumber」的請求屬性，這樣才能運作。 如果您將bindingvalue的名稱變更為任何其他名稱，請確定變更反映在POST.jsp的第25行上
+>确保将表单数据模型的Get操作的输入参数绑定到名为“accountnumber”的请求属性，以便此操作正常工作。 如果将bindingvalue的名称更改为任何其他名称，请确保更改反映在POST.jsp的第25行上

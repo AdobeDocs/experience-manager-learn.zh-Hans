@@ -1,6 +1,6 @@
 ---
-title: 安裝及設定Git
-description: 初始化您的本機Git存放庫
+title: 安装和设置Git
+description: 初始化您的本地Git存储库
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -16,67 +16,67 @@ ht-degree: 0%
 
 ---
 
-# 安裝Git
+# 安装Git
 
 
-[安裝Git](https://git-scm.com/downloads). 您可以選取預設設定並完成安裝程式。
-前往命令提示字元導覽至Git —version中的c：\cloudmanager\aem-banking-app type 。 您應該會看到系統上已安裝的GIT版本
+[安装Git](https://git-scm.com/downloads). 您可以选择默认设置并完成安装过程。
+转到命令提示符在git —version中导航到c：\cloudmanager\aem-banking-app type 。 您应该会看到系统上安装的GIT版本
 
-## 初始化本機Git存放庫
+## 初始化本地Git存储库
 
-確定您位於c：\cloudmanager\aem-banking-app資料夾中
+确保您位于c：\cloudmanager\aem-banking-app文件夹中
 
 ```
 git init
 ```
 
-上述命令會將專案初始化為Git本機存放庫
+上述命令将初始化项目作为Git本地存储库
 
 ```
 git add .
 ```
 
-這會將所有專案檔案新增到Git存放庫，以準備提交到Git存放庫
+这会将所有项目文件添加到Git存储库，以便提交到Git存储库
 
 ```
 git commit -m "initial commit"
 ```
 
-這會將檔案提交至Git存放庫
+这会将文件提交到Git存储库
 
 
 
-## 在本機Git存放庫中註冊Cloud Manager存放庫
+## 向我们的本地Git存储库注册Cloud Manager存储库
 
-存取您的cloud manager存放庫
-![存取代表資訊](assets/cloud-manager-repo.png)
-取得Cloud Manager存放庫認證
+访问您的Cloud Manager存储库
+![访问代表信息](assets/cloud-manager-repo.png)
+获取Cloud Manager存储库凭据
 ![get-credentials](assets/cloud-manager-repo1.png)
 
-將使用者名稱儲存在設定檔案中
+将用户名保存在配置文件中
 
 ```java
 git config --global credential.username "gbedekar-adobe-com"
 ```
 
-將密碼儲存在設定檔案中
+将密码保存在配置文件中
 
 ```java
 git config --global user.password "XXXX"
 ```
 
-（密碼是您的cloud manager git存放庫密碼）
+（密码是您的cloud manager git存储库密码）
 
-在本機Git存放庫中註冊Cloud Manager Git存放庫。 下列指令會建立關聯 **Bankingapp** 使用遠端cloud manager git存放庫。 您可以使用任何名稱，而不是 **Bankingapp**
+向本地Git存储库注册Cloud Manager Git存储库。 以下命令将关联 **bankingapp** 使用远程cloud manager git存储库。 您可以使用任何名称，而不是 **bankingapp**
 
 
 ```shell
 git remote add bankingapp https://git.cloudmanager.adobe.com/<cloud-manager-repo-path>
 ```
 
-（請務必使用您的存放庫URL）
+（确保使用存储库URL）
 
-檢查遠端存放庫是否已註冊
+检查远程存储库是否已注册
 
 ```java
 git remote -v

@@ -1,6 +1,6 @@
 ---
-title: 建立檔案片段
-description: 這是建立第一個互動式通訊檔案的多步驟教學課程的第5部分。 在本部分中，我們將建立檔案片段來儲存收件者名稱和地址。
+title: 创建文档片段
+description: 这是创建您的第一个交互式通信文档的多步教程的第5部分。 在本部分中，我们将创建文档片段来保存收件人姓名和地址。
 seo-description: This is part 5 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create document fragment to hold the recipient name and address.
 uuid: 7fd8a0f2-a921-4e70-91c9-908dae9aeab2
 feature: Interactive Communication
@@ -23,22 +23,22 @@ ht-degree: 0%
 
 ---
 
-# 建立檔案片段
+# 创建文档片段
 
-在本部分中，我們將建立檔案片段來儲存收件者名稱和地址。
+在本部分中，我们将创建文档片段来保存收件人姓名和地址。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22350?quality=12&learn=on)
 
-檔案片段包含互動式通訊檔案的文字內容。 此文字內容可以是靜態文字，或從基礎資料模型元素值插入。 例如 **親愛的 _{name}_**，其中Dear是靜態文字，name是表單資料模型元素名稱。 在執行階段，這將會解析為&#x200B;**親愛的Gloria Rios**或&#x200B;**親愛的約翰·雅各布斯**取決於name元素的值。
+文档片段包含交互式通信文档的文本内容。 此文本内容可以是静态文本，也可以从基础数据模型元素值插入。 例如 **亲爱的 _{name}_**，其中Dear是静态文本，name是表单数据模型元素名称。 在运行时，这将解析为&#x200B;**亲爱的Gloria Rios**或&#x200B;**亲爱的约翰·雅各布斯**取决于name元素的值。
 
-RTF編輯器足夠直覺，讓業務使用者可以編寫文字並插入表單資料元素。 檔案片段編輯器能夠格式化文字、指定字型型別和樣式、插入特殊字元和建立超連結。
+富文本编辑器非常直观，便于商业用户创作文本并插入表单数据元素。 文档片段编辑器能够设置文本格式、指定字体类型和样式、插入特殊字符和创建超链接。
 
-檔案片段編輯器也可以在文字中插入內嵌條件，如下所述 [視訊](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+文档片段编辑器还能够在文本中插入内联条件，如下所述 [视频](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
 
 >[!NOTE]
 >
->請確定您插入檔案片段中的表單資料模型元素是根元素的子代。 例如，在此使用案例中，請確定您選取的使用者物件元素是餘額物件的子項
+>确保插入到文档片段中的表单数据模型元素是根元素的子项。 例如，在此用例中，确保您选择的用户对象的元素是余额对象的子项
 
 ## 后续步骤
 
-[建立列印管道檔案](./create-print-channel-document.md)
+[创建打印渠道文档](./create-print-channel-document.md)

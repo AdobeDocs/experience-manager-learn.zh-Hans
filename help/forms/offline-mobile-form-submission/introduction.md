@@ -1,7 +1,7 @@
 ---
-title: 在HTM5表單提交時觸發AEM工作流程
+title: 在HTM5表单提交时触发AEM工作流简介
 seo-title: Trigger AEM Workflow on HTML5 Form Submission
-description: 繼續以離線模式填寫行動表單並提交行動表單以觸發AEM工作流程
+description: 继续以离线模式填写移动表单并提交移动表单以触发AEM Workflow
 seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
 feature: Mobile Forms
 topics: development
@@ -21,17 +21,17 @@ ht-degree: 0%
 
 ---
 
-# 下載部分完成的行動表單並提交至AEM工作流程
+# 下载部分完成的移动表单并提交到AEM Workflow
 
-常見的使用案例是能夠將XDP轉譯為資料擷取活動的HTML。 當表單簡單且可以線上上填寫和提交時，這項功能便可正常運作。 但是，如果表單很複雜，使用者可能無法線上上完成表單，我們需要提供讓表單填寫者下載互動式表單版本的功能，以便使用Acrobat/Reader離線方式填寫。 填寫表單後，使用者可以線上上提交表單。
-若要完成此使用案例，我們需要執行下列步驟：
+一个常见用例是能够将XDP渲染为数据捕获活动的HTML。 当表单很简单并且可以在线填写和提交时，这项操作会很有效。 但是，如果表单很复杂，用户可能无法在线完成表单，我们需要提供相应的功能，以便表单填写者能够使用Acrobat/Reader以离线方式下载要填写的交互式表单版本。 填写完表单后，用户即可在线提交表单。
+要完成此用例，我们需要执行以下步骤：
 
-* 能夠使用在行動表單中輸入的資料產生互動式/可填寫的PDF
-* 處理來自Acrobat/Reader的PDF提交
-* 觸發Adobe Experience Manager (AEM)工作流程以檢閱提交的PDF
+* 能够使用在移动设备表单中输入的数据生成交互式/可填写的PDF
+* 处理从Acrobat/Reader提交的PDF
+* 触发Adobe Experience Manager (AEM)工作流以查看提交的PDF
 
-本教學課程會逐步引導您完成上述使用案例所需的步驟。 與本教學課程相關的範常式式碼和資產包括 [此處提供。](part-four.md)
+本教程将逐步介绍完成上述用例所需的步骤。 与本教程相关的示例代码和资产包括 [此处提供。](part-four.md)
 
-以下影片提供使用案例的概觀
+以下视频概述了用例
 
 >[!VIDEO](https://video.tv.adobe.com/v/29677?quality=12&learn=on)

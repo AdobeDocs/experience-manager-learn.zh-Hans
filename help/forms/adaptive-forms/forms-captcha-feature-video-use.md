@@ -1,6 +1,6 @@
 ---
-title: 搭配AEM Adaptive Forms使用驗證碼
-description: 透過AEM Adaptive Forms新增及使用驗證碼。
+title: 在AEM自适应Forms中使用CAPTCHA
+description: 在AEM自适应Forms中添加和使用验证码。
 feature: Adaptive Forms,Workflow
 version: 6.4,6.5
 topic: Development
@@ -15,43 +15,43 @@ ht-degree: 0%
 
 ---
 
-# 搭配AEM Adaptive Forms使用驗證碼{#using-captchas-with-aem-adaptive-forms}
+# 在AEM自适应Forms中使用CAPTCHA{#using-captchas-with-aem-adaptive-forms}
 
-透過AEM Adaptive Forms新增及使用驗證碼。
+在AEM自适应Forms中添加和使用验证码。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336?quality=12&learn=on)
 
-*本影片會逐步解說使用內建AEM CAPTCHA服務及Google reCAPTCHA服務，將CAPTCHA新增至AEM最適化表單的程式。*
+*本视频介绍如何使用内置的AEM CAPTCHA服务和Google的reCAPTCHA服务将验证码添加到AEM自适应表单的过程。*
 
 >[!NOTE]
 >
->此功能僅適用於AEM 6.3以後版本。
+>此功能仅在AEM 6.3之后可用。
 
 >[!NOTE]
 >
->**若要在發佈執行個體上設定reCaptcha，請依照步驟操作**
+>**要在发布实例上配置reCaptcha，请执行以下步骤**
 >
->在作者執行個體上設定reCaptach
+>在创作实例上配置reCaptach
 >
->開啟Felix [網頁主控台](http://localhost:4502/system/console/bundles) 在作者執行個體上
+>打开Felix [Web控制台](http://localhost:4502/system/console/bundles) 在创作实例上
 >
->搜尋com.adobe.granite.crypto.file套件組合
+>搜索com.adobe.granite.crypto.file包
 >
->記下套件組合ID。 在我的執行個體上，這個數字是20
+>记下捆绑包ID。 在我的实例上，此值为20
 >
->導覽至作者執行個體上檔案系統上的套件組合ID
+>导航到创作实例上文件系统上的捆绑包ID
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
-* 複製HMAC和主檔案
+* 复制HMAC和主控文件
 >
-開啟 [felix web主控台](http://localhost:4502/system/console/bundles) 發佈執行個體上的。 搜尋com.adobe.granite.crypto.file套件組合。 記下套件組合ID
-導覽至發佈執行個體檔案系統上的套件組合ID
+打开 [felix web控制台](http://localhost:4502/system/console/bundles) 发布实例上的。 搜索com.adobe.granite.crypto.file捆绑包。 记下捆绑包ID
+导航到发布实例的文件系统中的包ID
 * &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
-* 刪除現有的HMAC和主檔案。
-* 貼上從製作執行個體複製的HMAC和主檔案
+* 删除现有的HMAC和主控文件。
+* 粘贴从创作实例复制的HMAC和主控文件
 >
-重新啟動AEM發佈伺服器
+重新启动AEM发布服务器
 
-## 支援材料 {#supporting-materials}
+## 支持材料 {#supporting-materials}
 
 * [Google reCAPTCHA](https://www.google.com/recaptcha)

@@ -1,6 +1,6 @@
 ---
-title: 將表單附件插入資料庫
-description: 使用AEM工作流程在資料庫中插入表單附件。
+title: 将表单附件插入数据库
+description: 使用AEM工作流在数据库中插入表单附件。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -16,29 +16,29 @@ ht-degree: 1%
 
 ---
 
-# 在資料庫中插入表單附件
+# 在数据库中插入表单附件
 
-本文將逐步說明在MySQL資料庫中儲存表單附件的使用案例。
+本文将逐步介绍在MySQL数据库中存储表单附件的用例。
 
-客戶通常會要求將擷取的表單資料與表單附件儲存在資料庫表格中。
-要完成此使用案例，請遵循下列步驟
+客户的一个常见要求是将捕获的表单数据和表单附件存储在数据库表中。
+要完成此用例，请执行以下步骤
 
-## 建立資料庫表格以存放表單資料和附件
+## 创建数据库表以保存表单数据和附件
 
-已建立名為newhire的表格來儲存表單資料。 注意欄名稱圖片型別 **LONGBLOB** 儲存表單附件
+已创建一个名为newhire的表格来保存表单数据。 请注意类型的列名图片 **LONGBLOB** 用于存储表单附件
 ![table-schema](assets/insert-picture-table.png)
 
 ## 创建表单数据模型
 
-已建立表單資料模型，以與MySQL資料庫通訊。 您需要建立下列專案
+创建了表单数据模型以与MySQL数据库通信。 您需要创建以下项
 
-* [AEM中的JDBC資料來源](./data-integration-technical-video-setup.md)
-* [以JDBC資料來源為基礎的表單資料模型](./jdbc-data-model-technical-video-use.md)
+* [AEM中的JDBC数据源](./data-integration-technical-video-setup.md)
+* [基于JDBC数据源的表单数据模型](./jdbc-data-model-technical-video-use.md)
 
-## 建立工作流程
+## 创建工作流
 
-將最適化表單設定為提交至AEM工作流程，您可以選擇將表單附件儲存在工作流程變數中，或將附件儲存在有效負載下的指定資料夾中。 對於此使用案例，我們需要將附件儲存在型別為ArrayList of Document的工作流程變數中。 我們需要從這個ArrayList擷取第一個專案並初始化檔案變數。 工作流程變數稱為 **listOfDocuments** 和 **employeePhoto** 「 」已建立。
-提交最適化表單以觸發工作流程時，工作流程中的步驟將使用ECMA指令碼初始化employeePhoto變數。 以下是ECMA指令碼
+将自适应表单配置为提交到AEM工作流，您可以选择将表单附件保存在工作流变量中，或将附件保存在有效负荷下的指定文件夹中。 对于此用例，我们需要将附件保存在类型为“文档的数组列表”的工作流变量中。 从这个ArrayList中，我们需要提取第一个项并初始化一个文档变量。 工作流变量名为 **listOfDocuments** 和 **employeePhoto** 创建。
+提交自适应表单以触发工作流时，工作流中的一个步骤将使用ECMA脚本初始化employeePhoto变量。 以下是ECMA脚本代码
 
 ```javascript
 log.info("executing script now...");
@@ -53,14 +53,14 @@ metaDataMap.put("employeePhoto", employeePhoto);
 log.info("Employee Photo updated");
 ```
 
-工作流程的下一步是使用叫用表單資料模型服務元件，將資料和表單附件插入表格中。
+工作流中的下一步是使用调用表单数据模型服务组件将数据和表单附件插入到表中。
 ![insert-pic](assets/fdm-insert-pic.png)
-[包含範例ecma指令碼的完整工作流程可從這裡下載](assets/add-new-employee.zip).
+[可以从此处下载包含示例ecma脚本的完整工作流](assets/add-new-employee.zip).
 
 >[!NOTE]
-> 您必須建立新的以JDBC為基礎的表單資料模型，並在工作流程中使用該表單資料模型
+> 您必须创建新的基于JDBC的表单数据模型，并在工作流中使用该表单数据模型
 
-## 建立最適化表單
+## 创建自适应表单
 
-根據上一步建立的表單資料模型建立最適化表單。 將表單資料模型元素拖放至表單上。 設定表單提交以觸發工作流程，並指定下列屬性，如下方熒幕擷取畫面所示
-![表單附件](assets/form-attachments.png)
+根据上一步中创建的表单数据模型创建自适应表单。 将表单数据模型元素拖放到表单上。 配置表单提交以触发工作流，并指定以下属性，如下面的屏幕快照所示
+![表单附件](assets/form-attachments.png)

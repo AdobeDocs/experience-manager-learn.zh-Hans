@@ -1,6 +1,6 @@
 ---
-title: 儲存和擷取MySQL資料庫的表單資料 — 部署
-description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
+title: 存储和检索MySQL数据库中的表单数据 — 部署
+description: 多部分教程将指导您完成存储和检索表单数据所涉及的步骤
 feature: Adaptive Forms
 topic: Development
 role: Developer
@@ -14,34 +14,34 @@ ht-degree: 4%
 
 ---
 
-# 將此部署在您的伺服器上
+# 将此部署在您的服务器上
 
 >[!NOTE]
 >
->若要讓此專案在您的系統上執行，需要下列專案
+>要在您的系统上运行此命令，需要满足以下条件
 >
->* AEM Forms （6.3版或更新版本）
->* MySql資料庫
+>* AEM Forms（版本6.3或更高版本）
+>* MySql数据库
 
 
-若要在您的AEM Forms執行個體上測試此功能，請遵循下列步驟
+要在您的AEM Forms实例上测试此功能，请执行以下步骤
 
-* 下載並部署 [MySql驅動程式Jar](assets/mysqldriver.jar) 檔案使用 [felix web主控台](http://localhost:4502/system/console/bundles)
-* 下載並部署 [OSGi套裝](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) 使用 [felix web主控台](http://localhost:4502/system/console/bundles)
-* 下載並安裝 [包含使用者端程式庫、最適化表單範本和自訂頁面元件的套件](assets/store-and-fetch-af-with-data.zip) 使用 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* 匯入 [最適化表單範例](assets/sample-adaptive-form.zip) 使用 [FormsAndDocuments介面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 下载并部署 [MySql驱动程序Jar](assets/mysqldriver.jar) 文件使用 [felix web控制台](http://localhost:4502/system/console/bundles)
+* 下载并部署 [OSGi包](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) 使用 [felix web控制台](http://localhost:4502/system/console/bundles)
+* 下载并安装 [包含客户端库、自适应表单模板和自定义页面组件的包](assets/store-and-fetch-af-with-data.zip) 使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 导入 [自适应表单示例](assets/sample-adaptive-form.zip) 使用 [FormsAndDocuments界面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* 匯入 [form-data-db.sql](assets/form-data-db.sql) 使用MySql Workbench。 這會在您的資料庫中建立必要的綱要和表格，讓本教學課程可順利運作。
-* 登入 [configMgr。](http://localhost:4502/system/console/configMgr) 搜尋「Apache Sling Connection Pooled DataSource」。 建立新的Apache Sling Connection Pooled Datasource專案，稱為 **SaveAndContent** 使用下列屬性：
+* 导入 [form-data-db.sql](assets/form-data-db.sql) 使用MySql Workbench。 这将在数据库中创建必要的架构和表，以便本教程能够正常运行。
+* 登录 [configMgr.](http://localhost:4502/system/console/configMgr) 搜索“Apache Sling连接池化数据源”。 创建新的Apache Sling连接池数据源条目，名为 **保存并继续** 使用以下属性：
 
 | 属性名称 | 价值 |
 | ------------------------|---------------------------------------|
-| 資料來源名稱 | SaveAndContent |
-| JDBC驅動程式類別 | com.mysql.cj.jdbc.Driver |
-| JDBC連線URI | jdbc:mysql://localhost：3306/aemformstutorial |
+| 数据源名称 | 保存并继续 |
+| JDBC驱动程序类 | com.mysql.cj.jdbc.Driver |
+| JDBC连接URI | jdbc:mysql://localhost：3306/aemformstutorial |
 
-* 開啟 [最適化表單](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
-* 填寫一些詳細資訊，然後按一下「儲存並稍後繼續」按鈕。
-* 您應可取回含有GUID的URL。
-* 複製URL並將其貼到新的瀏覽器標籤中。 **請確定URL結尾沒有空格。**
-* 最適化表單應填入上一步驟的資料。
+* 打开 [自适应表单](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
+* 填写一些详细信息，然后单击“保存并稍后继续”按钮。
+* 您应该获取包含GUID的URL。
+* 复制URL并将其粘贴到新的浏览器选项卡中。 **确保URL末尾没有空格。**
+* 自适应表单应使用上一步的数据进行填充。

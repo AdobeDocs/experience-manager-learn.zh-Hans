@@ -1,6 +1,6 @@
 ---
-title: AEM內容片段主控台擴充功能Adobe I/O Runtime動作
-description: 瞭解如何建立AEM內容片段主控台擴充功能模組。
+title: AEM内容片段控制台扩展Adobe I/O Runtime操作
+description: 了解如何创建AEM内容片段控制台扩展模式窗口。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -17,39 +17,39 @@ ht-degree: 2%
 
 ---
 
-# Adobe I/O Runtime動作
+# Adobe I/O Runtime操作
 
-![AEM內容片段延伸執行階段動作](./assets/runtime-action/action-runtime-flow.png){align="center"}
+![AEM内容片段扩展运行时操作](./assets/runtime-action/action-runtime-flow.png){align="center"}
 
-AEM內容片段擴充功能可選擇包含任意數量的 [Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/).
+AEM内容片段扩展可以选择包含任意数量的 [Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/).
 
-Adobe I/O Runtime動作是可由擴充功能叫用的無伺服器函式。 執行需要與AEM或其他AdobeWeb服務互動的工作時，動作會很有用。
-動作通常最適合用於執行長時間執行（超過幾秒的任何時間）的工作，或向AEM或其他Web服務發出HTTP請求。
+Adobe I/O Runtime操作是可由扩展调用的无服务器函数。 操作对于执行需要与AEM或其他AdobeWeb服务交互的工作非常有用。
+通常，操作最适合执行长时间运行的（超过几秒的任何时间）任务，或向AEM或其他Web服务发出HTTP请求。
 
-使用Adobe I/O Runtime動作執行工作的優點包括：
+使用Adobe I/O Runtime操作执行工作的好处包括：
 
-+ 動作是在瀏覽器內容之外執行的無伺服器函式，無需擔心CORS
-+ 使用者無法中斷動作（例如，重新整理瀏覽器）
-+ 動作為非同步，因此可在需要時隨時執行，而不會封鎖使用者
++ 操作是在浏览器上下文之外运行的无服务器函数，无需担心CORS
++ 用户无法中断操作（例如，刷新浏览器）
++ 操作是异步执行的，因此它们可以根据需要运行多久而不阻止用户
 
-在AEM內容片段擴充功能的內容中，動作最常用於直接與AEMas a Cloud Service通訊，通常：
+在AEM内容片段扩展的上下文中，操作最常用于直接与AEMas a Cloud Service通信，通常是：
 
-+ 從AEM收集有關內容片段的相關資料
-+ 對內容片段執行自訂操作
-+ 內容片段的客制建立
++ 从AEM收集有关内容片段的相关数据
++ 对内容片段执行自定义操作
++ 定制创建内容片段
 
-雖然AEM內容片段擴充功能出現在內容片段主控台中，但擴充功能及其支援動作可叫用任何可用的AEM HTTP API，包括自訂AEM API端點。
+虽然AEM内容片段扩展显示在内容片段控制台中，但扩展及其支持操作可以调用任何可用的AEM HTTP API，包括自定义AEM API端点。
 
-## 叫用動作
+## 调用操作
 
-Adobe I/O Runtime動作主要從AEM內容片段擴充功能中的兩個位置叫用：
+Adobe I/O Runtime操作主要从AEM内容片段扩展中的两个位置调用：
 
-1. 此 [擴充功能註冊](./extension-registration.md) `onClick(..)` 處理常式
-1. 在 [強制回應](./modal.md)
+1. 此 [扩展注册](./extension-registration.md) `onClick(..)` 处理程序
+1. 在 [模态](./modal.md)
 
-### 從擴充功能註冊
+### 从扩展注册
 
-可直接從擴充功能註冊代碼呼叫Adobe I/O Runtime動作。 最常見的使用案例是將動作繫結到 [頁首功能表](./header-menu.md#no-modal)不使用的按鈕 [模態](./modal.md).
+可直接从扩展注册代码中调用Adobe I/O Runtime操作。 最常见的使用案例是将操作绑定到 [标题菜单](./header-menu.md#no-modal)的未使用按钮 [模态](./modal.md).
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -105,11 +105,11 @@ function ExtensionRegistration() {
 }
 ```
 
-### 從強制回應視窗
+### 从模式
 
-可以直接從模式呼叫Adobe I/O Runtime動作來執行更多涉及的工作，特別是依賴與AEMas a Cloud Service、AdobeWeb服務或甚至第三方服務通訊的工作。
+可以从模块直接调用Adobe I/O Runtime操作以执行更多涉及的工作，特别是依赖与AEMas a Cloud Service、AdobeWeb服务甚至第三方服务通信的工作。
 
-Adobe I/O Runtime動作是以Node.js為基礎的JavaScript應用程式，可在無伺服器Adobe I/O Runtime環境中執行。 這些動作可由擴充功能SPA透過HTTP定址。
+Adobe I/O Runtime操作是基于Node.js的JavaScript应用程序，在无服务器Adobe I/O Runtime环境中运行。 这些操作可由扩展SPA通过HTTP寻址。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/MyModal.js`
 
@@ -225,7 +225,7 @@ export default function MyModal() {
 }
 ```
 
-## Adobe I/O Runtime動作
+## Adobe I/O Runtime操作
 
 + `src/aem-cf-console-admin-1/actions/generic/index.js`
 
@@ -301,27 +301,27 @@ async function main (params) {
 
 ## AEM HTTP API
 
-以下AEM HTTP API通常用於從擴充功能與AEM互動：
+以下AEM HTTP API通常用于从扩展与AEM交互：
 
 + [AEM GRAPHQL API](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
 + [AEM ASSETS HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
    + [AEM Assets HTTP API 中的内容片段支持](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html)
 + [AEM QueryBuilder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html)
-+ [完整AEMas a Cloud ServiceAPI參考資料](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
++ [完整的AEMas a Cloud ServiceAPI参考](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
 
 
-## Adobenpm模組
+## Adobenpm模块
 
-以下是開發Adobe I/O Runtime動作的實用npm模組：
+以下是用于开发Adobe I/O Runtime操作的有用npm模块：
 
 + [@adobe/aio-sdk](https://www.npmjs.com/package/@adobe/aio-sdk)
    + [核心SDK](https://github.com/adobe/aio-sdk-core)
-   + [狀態程式庫](https://github.com/adobe/aio-lib-state)
-   + [檔案庫](https://github.com/adobe/aio-lib-files)
-   + [Adobe Target資料庫](https://github.com/adobe/aio-lib-target)
-   + [Adobe Analytics資料庫](https://github.com/adobe/aio-lib-analytics)
-   + [Adobe Campaign Standard資料庫](https://github.com/adobe/aio-lib-campaign-standard)
-   + [Adobe客戶設定檔程式庫](https://github.com/adobe/aio-lib-customer-profile)
+   + [状态库](https://github.com/adobe/aio-lib-state)
+   + [文件库](https://github.com/adobe/aio-lib-files)
+   + [Adobe Target Library](https://github.com/adobe/aio-lib-target)
+   + [Adobe Analytics Library](https://github.com/adobe/aio-lib-analytics)
+   + [Adobe Campaign Standard Library](https://github.com/adobe/aio-lib-campaign-standard)
+   + [Adobe客户配置文件库](https://github.com/adobe/aio-lib-customer-profile)
    + [Adobe Audience Manager Customer Data Library](https://github.com/adobe/aio-lib-audience-manager-cd)
    + [Adobe I/O事件](https://github.com/adobe/aio-lib-events)
 + [@adobe/aio-lib-core-networking](https://github.com/adobe/aio-lib-core-networking)

@@ -1,6 +1,6 @@
 ---
-title: 將規則編輯器限制在AEM Forms中的特定群組
-description: 將最適化表單規則編輯器限制在AEM中的特定群組
+title: 将规则编辑器限制在AEM Forms中的特定组
+description: 将自适应表单规则编辑器限制为AEM中的特定组
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Administration
@@ -15,14 +15,14 @@ ht-degree: 0%
 
 ---
 
-# 將規則編輯器限制在AEM Forms中的特定群組 {#restricting-the-rule-editor-to-specific-groups-in-aem-forms}
+# 将规则编辑器限制在AEM Forms中的特定组 {#restricting-the-rule-editor-to-specific-groups-in-aem-forms}
 
-將最適化表單規則編輯器限制在AEM中的特定群組
+将自适应表单规则编辑器限制为AEM中的特定组
 
 >[!VIDEO](https://video.tv.adobe.com/v/19470?quality=12&learn=on)
 
-*本影片逐步說明將最適化表單規則編輯器限制在AEM中特定群組的程式。*
+*本视频介绍将自适应表单规则编辑器限制在AEM中的特定组的过程。*
 
 >[!NOTE]
 >
->此功能僅適用於AEM 6.3以後版本。
+>此功能仅在AEM 6.3之后可用。

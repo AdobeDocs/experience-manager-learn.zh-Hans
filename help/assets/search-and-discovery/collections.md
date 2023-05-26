@@ -1,6 +1,6 @@
 ---
 title: 收藏集
-description: 瞭解集合如何提供AEM Assets的替代檢視。
+description: 了解收藏集如何提供AEM Assets的替代视图和替代视图。
 feature: Collections
 version: Cloud Service
 kt: 4301
@@ -19,6 +19,6 @@ ht-degree: 9%
 
 # 收藏集
 
-瞭解集合如何提供AEM Assets的替代檢視。
+了解收藏集如何提供AEM Assets的替代视图和替代视图。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32053?quality=12&learn=on)

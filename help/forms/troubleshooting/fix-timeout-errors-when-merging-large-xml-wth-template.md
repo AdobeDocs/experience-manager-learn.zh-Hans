@@ -1,6 +1,6 @@
 ---
-title: 修正將大型xml資料檔案與xdp範本合併時的逾時錯誤
-description: 在AEM Forms中將大型xml檔案與範本合併
+title: 修复将大型xml数据文件与xdp模板合并时的超时错误
+description: 在AEM Forms中将大型xml文件与模板合并
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,29 +16,29 @@ ht-degree: 5%
 
 ---
 
-# 如何將大型xml資料檔案與xdp範本合併，以建立pdf檔案
+# 如何通过将大型xml数据文件与xdp模板合并来启用pdf文件的创建
 
-將大型xml資料檔案與xdp範本合併時，您可能會在記錄檔中看到以下錯誤
+将大型xml数据文件与xdp模板合并时，可能会在日志文件中看到以下错误
 
 ```txt
 POST /services/OutputService/GeneratePdfOutput HTTP/1.1] com.adobe.fd.output.internal.exception.OutputServiceException AEM_OUT_001_003:Unexpected Exception: client timeout reached org.omg.CORBA.TIMEOUT: client timeout reached
 ```
 
-若要修正上述錯誤，請執行下列動作
+要修复上述错误，请执行以下操作
 
-## 變更aries逾時
+## 更改aries超时
 
-* 停止AEM伺服器
-* 建立名為的資料夾 **安裝** 在AEM安裝的crx-quickstart資料夾下
-* 建立名為的檔案 **org.apache.aries.transaction.config** 安裝資料夾底下具有下列content aries.transaction.timeout=&quot;1200&quot;。 您可以依需求變更逾時值。 逾時值以秒為單位
+* 停止AEM服务器
+* 创建名为的文件夹 **安装** 在AEM安装的crx-quickstart文件夹下
+* 创建一个名为的文件 **org.apache.aries.transaction.config** 安装文件夹下包含以下content aries.transaction.timeout=&quot;1200&quot;。 您可以根据需要更改超时值。 超时值以秒为单位
 
 >[!NOTE]
-> 建立org.apache.aries.transaction設定後，您就可以從 [configMgr](http://localhost:4502/system/console/configMgr) 不要編輯檔案
+> 创建org.apache.aries.transaction配置后，您可以从以下位置编辑事务超时值： [configMgr](http://localhost:4502/system/console/configMgr) 而不是编辑文件
 
 
-## 變更Jacorb ORB提供者設定
+## 更改Jacorb ORB提供程序设置
 
-* [開啟OSGi ConfigMgr](http://localhost:4502/system/console/configMgr)
-* 搜尋 **Jacorb ORB提供者**
-* 新增下列專案jacorb.connection.client.pending_reply_timeout=600000上述設定會將擱置中的回覆逾時（也稱為CORBA使用者端逾時）設定為600秒。
-* 儲存您的變更
+* [打开OSGi ConfigMgr](http://localhost:4502/system/console/configMgr)
+* 搜索 **Jacorb ORB提供程序**
+* 添加以下条目jacorb.connection.client.pending_reply_timeout=600000以上设置将挂起回复超时（也称为CORBA客户端超时）设置为600秒。
+* 保存更改

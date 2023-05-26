@@ -1,6 +1,6 @@
 ---
-title: 設定最適化表單以觸發AEM Workflow概述
-description: 在表單提交時觸發AEM工作流程時設定裝載選項
+title: 配置自适应表单以触发AEM Workflow概述
+description: 在表单提交时触发AEM工作流时配置有效负载选项
 feature: Workflow
 topics: integrations
 audience: developer
@@ -21,28 +21,28 @@ ht-degree: 3%
 
 ---
 
-# 設定最適化表單以觸發AEM Workflow
+# 配置自适应表单以触发AEM Workflow
 
 ## 前提条件
 
-此工作流程中使用的範例表單是根據自訂的最適化表單範本，需要匯入您的AEM伺服器。 匯入範本後，需要匯入提供的範例表單。
+此工作流中使用的示例表单基于自定义自适应表单模板，需要将其导入您的AEM服务器。 在导入模板后，需要导入提供的示例表单。
 
-### 取得最適化表單範本
+### 获取自适应表单模板
 
-* 下載 [自適應表單範本](assets/af-form-template.zip)
-* [使用封裝管理程式匯入範本](http://localhost:4502/crx/packmgr/index.jsp)
-* 上傳並安裝最適化表單範本
+* 下载 [自适应表单模板](assets/af-form-template.zip)
+* [使用包管理器导入模板](http://localhost:4502/crx/packmgr/index.jsp)
+* 上传并安装自适应表单模板
 
-### 取得最適化表單範例
+### 获取自适应表单示例
 
-* 下載 [最適化表單](assets/peak-application-form.zip)
-* 瀏覽至 [表單和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 按一下「建立 — >檔案上傳」
-* 最適化表單範例放置在名為的資料夾中 [應用程式Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
+* 下载 [自适应表单](assets/peak-application-form.zip)
+* 浏览到 [表单和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 单击创建 — >文件上传
+* 自适应表单示例放置在名为的文件夹中 [应用程序Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
 
-以下影片說明如何設定最適化表單以觸發AEM Workflow
+以下视频介绍如何配置自适应表单以触发AEM Workflow
 >[!VIDEO](https://video.tv.adobe.com/v/40258?quality=12&learn=on)
 
-以下影片說明工作流程裝載和crx存放庫中的其他詳細資訊
+以下视频说明了crx存储库中的工作流有效负载和其他详细信息
 
 >[!VIDEO](https://video.tv.adobe.com/v/40259?quality=12&learn=on)

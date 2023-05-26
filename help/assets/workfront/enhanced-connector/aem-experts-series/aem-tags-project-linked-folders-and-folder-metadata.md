@@ -1,6 +1,6 @@
 ---
-title: 適用於AEM增強型聯結器的Workfront的AEM Tags、專案連結資料夾和資料夾中繼資料
-description: 瞭解如何透過Workfront資料推動在資產上使用AEM Tags、使用專案連結資料夾和Workfront資料至AEM資產資料夾中繼資料結構。
+title: 适用于AEM增强型连接器的Workfront的AEM Tags、项目链接文件夹和文件夹元数据
+description: 了解如何通过Workfront数据推动在资源上使用AEM Tags，将项目链接文件夹和Workfront数据用于AEM资源文件夹元数据架构。
 version: Cloud Service
 topic: Content Management, Integrations
 role: Admin, Architect, Developer
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 ---
 
-# AEM Tags、專案連結資料夾和資料夾中繼資料
+# AEM Tags、项目链接文件夹和文件夹元数据
 
 ![AEM Experts系列](./assets/banner.png)
 
-瞭解如何透過Workfront資料推動在資產上使用AEM Tags、設定和使用專案連結資料夾，以及Workfront資料至AEM資產資料夾中繼資料結構。
+了解如何通过Workfront数据推动AEM Tags在资源上的使用、设置和使用项目链接文件夹以及Workfront数据到AEM资源文件夹元数据架构。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340333?quality=12&learn=on)
 
-_a的第三部分 [Workfront for Experience Manager增強型聯結器的四部分專家系列](./overview.md)_
+_a第三部分 [关于Workfront for Experience Manager增强型连接器的四部分专家系列](./overview.md)_
 
 ## 更正
 
-+ __@ 4:34和6:20__ AEM標籤語法不正確。 視訊顯示器 `we-retail:apparel/footwear`. 正確語法為 `["we-retail:apparel/footwear"]` 或更一般地 `["namespace:tag/childtag"]`.
++ __4:34和6:20__ AEM标记语法不正确。 视频显示 `we-retail:apparel/footwear`. 正确的语法是 `["we-retail:apparel/footwear"]` 或更一般地 `["namespace:tag/childtag"]`.

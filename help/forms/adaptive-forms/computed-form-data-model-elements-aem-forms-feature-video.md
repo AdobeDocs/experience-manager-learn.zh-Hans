@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms中建立計算表單資料模型元素
-description: 建立計算表單資料模型元素
+title: 在AEM Forms中创建计算表单数据模型元素
+description: 创建计算表单数据模型元素
 feature: Workflow
 version: 6.4,6.5
 topic: Development
@@ -15,20 +15,20 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms中建立計算表單資料模型元素{#creating-computed-form-data-model-elements-in-aem-forms}
+# 在AEM Forms中创建计算表单数据模型元素{#creating-computed-form-data-model-elements-in-aem-forms}
 
-計算表單資料模型元素可讓您儲存一或多個表單資料模型元素的操作結果。 例如，您可能會想要對薪資欄位執行數學運算，以計算並儲存每月薪資。 若要這麼做，您會將薪資除以12，並將結果儲存在名為monthlySalary的計算表單資料模型元素中。
+计算表单数据模型元素允许您将操作结果存储在一个或多个表单数据模型元素上。 例如，您可能希望通过对salary字段执行数学运算来计算并存储每月薪金。 为此，您将薪金除以12，并将结果存储在名为monthlySalary的计算表单数据模型元素中。
 
-建立計算表單資料模型的另一個範例是串連兩個或多個表單資料模型元素。 例如，您可以串連狀態和Zip表單資料模型元素，並在兩個元素之間使用連字型大小。
+创建计算表单数据模型的另一个示例是连接两个或多个表单数据模型元素。 例如，您可以连接状态和zip表单数据模型元素，并在两个元素之间使用连字符。
 
-下列熒幕擷圖顯示計算元素StateandZip和monthlySalary
+以下屏幕截图显示了计算元素StateandZip和monthlySalary
 
 ![computedfdmelement](assets/computedfdmelement.gif)
 
-## 建立月薪計算要素
+## 创建每月薪金计算要素
 
 >[!VIDEO](https://video.tv.adobe.com/v/23855?quality=12&learn=on)
 
-### 建立StateandZip計算元素
+### 正在创建StateandZip计算元素
 
 >[!VIDEO](https://video.tv.adobe.com/v/23856?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 存取Adobe資產連結
-description: AdobeAsset Link可加強創意人員與行銷人員在內容建立過程中的合作。 您可以存取儲存在Adobe Experience Manager Assets (AEM Assets)中的內容，無需離開最熟悉的Creative Cloud案頭應用程式。 瞭解如何從Creative Cloud案頭應用程式啟動AdobeAsset Link面板。
+title: 访问AdobeAsset Link
+description: AdobeAsset Link可在内容创建过程中加强创意人员和营销人员之间的协作。 您可以访问存储在Adobe Experience Manager Assets (AEM Assets)中的内容，而无需离开您最熟悉的Creative Cloud桌面应用程序。 了解如何从Creative Cloud桌面应用程序启动AdobeAsset Link面板。
 sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: Cloud Service
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 存取Adobe資產連結 {#access-adobe-asset-link}
+# 访问AdobeAsset Link {#access-adobe-asset-link}
 
-AdobeAsset Link可加強創意人員與行銷人員在內容建立過程中的合作。 您可以存取儲存在Adobe Experience Manager Assets (AEM Assets)中的內容，無需離開最熟悉的Creative Cloud案頭應用程式。 瞭解如何從Creative Cloud案頭應用程式啟動AdobeAsset Link面板。
+AdobeAsset Link可在内容创建过程中加强创意人员和营销人员之间的协作。 您可以访问存储在Adobe Experience Manager Assets (AEM Assets)中的内容，而无需离开您最熟悉的Creative Cloud桌面应用程序。 了解如何从Creative Cloud桌面应用程序启动AdobeAsset Link面板。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33733?quality=12&learn=on)

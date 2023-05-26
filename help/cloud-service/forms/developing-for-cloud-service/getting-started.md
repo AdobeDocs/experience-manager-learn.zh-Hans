@@ -1,6 +1,6 @@
 ---
-title: 安裝先決條件
-description: 安裝必要的軟體以設定您的開發環境
+title: 安装先决条件
+description: 安装必要的软件以设置开发环境
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -16,21 +16,21 @@ ht-degree: 0%
 
 ---
 
-# 安裝必要的軟體
+# 安装所需的软件
 
-本教學課程將引導您完成建立AEM Forms專案所需的步驟，以及使用IntelliJ和repo工具將AEM Forms專案與本機AEM執行個體同步。 您還將瞭解如何將專案新增到本機Git存放庫並將本機Git存放庫推送到Cloud Manager存放庫。
-
-
+本教程将指导您完成创建AEM Forms项目、使用IntelliJ和repo工具将AEM Forms项目与本地AEM实例同步所需的步骤。 您还将了解如何将项目添加到本地Git存储库并将本地Git存储库推送到Cloud Manager存储库。
 
 
-本教學課程日後將參考此資料夾結構。
 
-* [安裝JDK 11](https://www.oracle.com/java/technologies/downloads/#java11-windows). 我已下載jdk-11.0.6_windows-x64_bin.zip
-* [Maven](https://maven.apache.org/guides/getting-started/windows-prerequisites.html)例如，如果您已將Maven安裝在c：\maven資料夾中，則需要使用值C:\maven\apache-maven-3.6.0建立名為M2_HOME的環境變數。然後將M2_HOME\bin新增至路徑並儲存您的設定。
 
-## 使用AEM專案原型建立Maven專案
+本教程以后将引用此文件夹结构。
 
-* 建立名為的資料夾 **cloudmanager**（您可以為其指定任何名稱）
-* 開啟命令提示視窗並瀏覽至 **c：\cloudmanager**
-* 複製並貼上內容 [文字檔](assets/creating-maven-project.txt) 在命令提示字元視窗中。 您可能必須變更DarchetypeVersion=30，視 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 撰寫本文時，最新版本是30版。
-* 按Enter鍵執行命令。如果一切順利，您應該會看到建置成功訊息。
+* [安装JDK 11](https://www.oracle.com/java/technologies/downloads/#java11-windows). 我已下载jdk-11.0.6_windows-x64_bin.zip
+* [Maven](https://maven.apache.org/guides/getting-started/windows-prerequisites.html)例如，如果您在c：\maven文件夹中安装了Maven，则需要创建一个名为M2_HOME的环境变量，其值为C:\maven\apache-maven-3.6.0。然后将M2_HOME\bin添加到路径并保存设置。
+
+## 使用AEM项目原型创建Maven项目
+
+* 创建名为的文件夹 **cloudmanager**（您可以为其指定任何名称）
+* 打开命令提示符窗口并导航至 **c：\cloudmanager**
+* 复制并粘贴的内容 [文本文件](assets/creating-maven-project.txt) 命令提示符窗口中的。 您可能需要更改DarchetypeVersion=30，具体取决于 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 在撰写本文时，最新版本是30版。
+* 通过按Enter键执行命令。如果一切运行正常，您应会看到生成成功消息。

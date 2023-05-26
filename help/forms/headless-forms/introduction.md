@@ -7,9 +7,9 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '133'
 ht-degree: 2%
 
 ---
@@ -17,11 +17,8 @@ ht-degree: 2%
 
 # 嵌入Headless自适应表单
 
-此 [教程将介绍各种Headless API](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) 允许您列出、显示和提交表单。
-
-本文将介绍提供的各种Headless API，它们允许您以Headless方式列出、显示和提交自适应表单。
-
-本文假设您有一个现有的单页应用程序，并希望在spa网站中列出和显示Headless自适应表单。
+本文将介绍在spa网站中嵌入Headless自适应表单的基础知识。 本文假设您有一个现有的单页应用程序，并希望使用核心组件嵌入在AEM Forms 6.5.16中创作的自适应表单。
+通过将表单包含在单页应用程序中，用户可以无缝地输入和提交数据，而无需刷新页面。 这增强了应用程序的交互性和效率。
 
 以下屏幕截图显示了嵌入到SPA中的联系我们表单
 

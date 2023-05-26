@@ -1,6 +1,6 @@
 ---
-title: 使用最新原型更新雲端服務專案
-description: 使用最新原型更新AEM Forms雲端服務專案
+title: 使用最新原型更新云服务项目
+description: 使用最新原型更新AEM Forms云服务项目
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -16,42 +16,42 @@ ht-degree: 0%
 
 ---
 
-# 從舊的aem原型移轉
+# 从旧的aem原型迁移
 
-若要使用最新的maven原型更新您現有的AEM Forms專案，您必須手動將程式碼/設定等從舊專案複製到新專案。
+要使用最新的maven原型更新您现有的AEM Forms项目，您必须手动将代码/配置等从旧项目复制到新项目。
 
-依照下列步驟，將使用原型30建立的專案移轉至原型33專案
+执行以下步骤，将使用原型30创建的项目迁移到原型33项目
 
-## 使用最新原型建立maven專案
+## 使用最新原型创建maven项目
 
-* 開啟命令提示字元並瀏覽至c：\cloudmanager
-* 使用最新原型建立maven專案。
-* 複製並貼上內容 [文字檔](assets/creating-maven-project.txt) 在命令提示字元視窗中。 您可能必須變更DarchetypeVersion=33，取決於 [最新版本](https://github.com/adobe/aem-project-archetype/releases). Archetype 33包含新的AEM Forms主題。
-由於我們在cloudmanager資料夾中建立了新的maven專案，而該資料夾中已有aem-banking-application專案，因此您應該變更 **DartifactId** 從aem-banking-application到其他不同名稱。 我已在本文中使用aem-banking-application1。
+* 打开命令提示符并导航到c：\cloudmanager
+* 使用最新的原型创建maven项目。
+* 复制并粘贴的内容 [文本文件](assets/creating-maven-project.txt) 命令提示符窗口中的。 您可能需要更改DarchetypeVersion=33，具体取决于 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 原型33包括新的AEM Forms主题。
+由于我们在cloudmanager文件夹中创建新的maven项目，而该文件夹已具有aem-banking-application项目，因此您应该更改 **DartifactId** 从aem-banking-application到其他应用程序。 本文使用了aem-banking-application1。
 
 >[!NOTE]
 >
->如果您依原樣部署此新專案，雲端服務執行個體將不會有HandleFormSubmission和SubmitToAEMServlet。 這是因為每次您使用Cloud Manager部署專案時， `/apps` 資料夾會被刪除和覆寫。
+>如果您按原样部署此新项目，则云服务实例将没有HandleFormSubmission和SubmitToAEMServlet。 这是因为每次使用Cloud Manager部署项目时， `/apps` 文件夹已被删除和覆盖。
 
-## 複製您的Java程式碼
+## 复制您的Java代码
 
-成功建立專案後，您就可以開始將程式碼/設定等從舊專案複製到此新專案
+成功创建项目后，您就可以开始将代码/配置等从旧项目复制到此新项目
 
-* 複製HandleFormSubmission servlet來源 ```C:\CloudManager\aem-banking-application\core\src\main\java\com\aem\bankingapplication\core\servlets```
-至
+* 从以下位置复制HandleFormSubmission servlet： ```C:\CloudManager\aem-banking-application\core\src\main\java\com\aem\bankingapplication\core\servlets```
+到
 
    ```C:\CloudManager\aem-banking-application1\core\src\main\java\com\aem\bankingapplication\core\servlets```
 
-* 複製自訂提交來源
-   ```C:\CloudManager\aem-banking-application\ui.apps\src\main\content\jcr_root\apps\bankingapplication\SubmitToAEMServlet``` 從aem-banking-application到aem-banking-application1專案
+* 复制自定义提交来源
+   ```C:\CloudManager\aem-banking-application\ui.apps\src\main\content\jcr_root\apps\bankingapplication\SubmitToAEMServlet``` 从aem-banking-application到aem-banking-application1项目
 
-* 將新專案匯入IntelliJ
+* 将新项目导入IntelliJ
 
-* 更新aem-banking-application1專案ui.apps模組中的filter.xml，以包含下列行
+* 更新aem-banking-application1项目的ui.apps模块中的filter.xml以包含以下行
    ```<filter root="/apps/bankingapplication/SubmitToAEMServlet"/>```
 
-將所有程式碼複製到新專案後，您可以將此專案推送到Cloud Manager。
+将所有代码复制到新项目后，您可以将此项目推送到Cloud Manager。
 
 >[!NOTE]
 >
->若要將內容(最適化Forms、表單資料模型等)同步到新專案中，您必須在IntelliJ專案中建立適當的資料夾結構，然後使用repo工具的「取得」命令將IntelliJ專案與AEM執行個體同步。
+>要将内容(自适应Forms、表单数据模型等)同步到新项目中，您必须在IntelliJ项目中创建相应的文件夹结构，然后使用repo工具的“获取”命令将IntelliJ项目与AEM实例同步。

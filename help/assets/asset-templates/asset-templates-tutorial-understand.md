@@ -1,6 +1,6 @@
 ---
-title: 瞭解AEM Assets中的InDesign檔案和資產範本
-description: 本影片教學課程會逐步解說如何定義AEM Assets資產範本功能中使用的InDesign檔案，以及隨附的所有考量事項。
+title: 了解AEM Assets中的InDesign文件和资源模板
+description: 本视频教程介绍了如何定义用于AEM Assets的InDesign模板功能的Asset文件以及随附的所有注意事项。
 version: 6.4, 6.5
 topic: Content Management
 role: User
@@ -13,64 +13,64 @@ ht-degree: 1%
 
 ---
 
-# 瞭解AEM Assets中的InDesign檔案和資產範本 {#understanding-indesign-files-and-asset-templates-in-aem-assets}
+# 了解AEM Assets中的InDesign文件和资源模板 {#understanding-indesign-files-and-asset-templates-in-aem-assets}
 
-本影片教學課程會逐步解說如何定義AEM Assets資產範本功能中使用的InDesign檔案，以及隨附的所有考量事項。
+本视频教程介绍了如何定义用于AEM Assets的InDesign模板功能的Asset文件以及随附的所有注意事项。
 
-## 建構InDesign範本檔案 {#constructing-the-indesign-template-file}
+## 构建InDesign模板文件 {#constructing-the-indesign-template-file}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19293?quality=12&learn=on)
 
-1. 下載並開啟 [**InDesign檔案範本**](assets/asset-templates-tutorial-video--supporting-files.zip)
-2. **開啟「標籤」面板，** 請檢閱標籤命名慣例，並注意InDesign檔案中的可作者元素已加上標籤。 請記住，在AEM中只能編輯已標籤的元素。
+1. 下载并打开 [**InDesign文件模板**](assets/asset-templates-tutorial-video--supporting-files.zip)
+2. **打开“标记”面板，** 查看标记命名约定，并注意InDesign文件中的可创作元素已标记。 请记住，在AEM中，只能编辑已标记的元素。
 
-   * **「視窗>公用程式>標籤」**
+   * **“窗口”>“实用程序”>“标记”**
 
-3. 在頁面上，新增文字元素、提供文字「Header」並套用 **標題** 段落樣式。
+3. 在页面上，添加新文本元素，提供文本“标题”并应用 **标题** 段落样式。
 
-   * **視窗>樣式>段落樣式**
+   * **“窗口”>“样式”>“段落样式”**
 
-   然後，建立並套用名為的新標籤 **Page2Heading。**
+   然后，创建并应用名为的新标记 **Page2Heading。**
 
-4. 新增FPO標誌影像([提供於zip中](assets/asset-templates-tutorial-video--supporting-files.zip))至主版頁面上的Logo元素。
+4. 添加FPO徽标图像([在zip文件中提供](assets/asset-templates-tutorial-video--supporting-files.zip))到主控页面上的Logo元素。
 
-   * **按一下右鍵**&#x200B;並選取&#x200B;**「符合」>「框架符合選項……」>「內容符合」>「按比例填滿框架」**
-   [深入瞭解框架彎管頭選項](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)，，而此設定適用於您的使用案例。
+   * **右键单击**&#x200B;并选择&#x200B;**“拟合”>“框架拟合选项……”>“内容拟合”>“填充框架”**
+   [了解有关框架拟合选项的更多信息](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)，并且这适合您的用例。
 
-5. 透過「原地貼上」，從「頁面」和「頁面」的主版範本中向下複製頁首（標誌和公司名稱）。
+5. 通过“粘贴就地”，从“页面”和“页面”中的主控模板向下复制标题（徽标和公司名称）。
 
-   * 在第1頁上，按住Shift鍵並按一下macOS或Shift鍵並按一下Windows，以選取從「主版」頁面公開的「頁首」，然後將其刪除。
-   * 從「主版」頁面，透過「就地貼上」將頁首複製到第1頁
-   * 對第2頁重複這些步驟
+   * 在第1页上，按住Shift-Cmd并单击macOS，或按住Shift-Alt并单击Windows，以选择从主控页面中公开的页眉，并将其删除。
+   * 从主控页面，通过原位粘贴将页眉复制到第1页
+   * 对第2页重复这些步骤
 
-6. 開啟「結構」面板，連按兩下每個面板，確定所有結構元素都對應到InDesign檔案中的真實元素。 移除任何未使用或不需要的元素。 請確認所有標籤皆為語意，且元素已正確標籤。
+6. 打开“结构”面板，通过双击每个面板，确保所有结构元素都对应于InDesign文件中的实际元素。 删除任何未使用或不需要的元素。 确保所有标记都是语义的，并且元素已正确标记。
 
    >[!NOTE]
    >
-   >請記住，構造不良的InDesign檔案是AEM資產範本出現問題的最常見原因，因此請確保標籤和結構乾淨正確。
+   >请记住，构造不当的InDesign文件是AEM Asset Templates出现问题的最常见原因，因此请确保标记和结构干净且正确。
 
-## 在AEM Assets中建立和編寫資產範本 {#creating-and-authoring-an-asset-template-in-aem-assets}
+## 在AEM Assets中创建和创作资源模板 {#creating-and-authoring-an-asset-template-in-aem-assets}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19294?quality=12&learn=on)
 
-1. **開始InDesign Server** 在連線埠8080上。
-2. 確保 **AEM作者執行個體已設定為與您的InDesign Server互動**（反之亦然）。
+1. **启动InDesign Server** 8080端口。
+2. 确保 **AEM创作实例配置为与您的InDesign Server交互**（反之亦然）。
 
-   * [IDS背景工作Cloud Service設定](http://localhost:4502/etc/cloudservices/proxy/ids.html)
-   * [雲端ProxyCloud Service設定](http://localhost:4502/etc/cloudservices/proxy.html)
-   * [AEM Externalizer OSGi設定](http://localhost:4502/system/console/configMgr)
+   * [IDS工作程序Cloud Service配置](http://localhost:4502/etc/cloudservices/proxy/ids.html)
+   * [云代理Cloud Service配置](http://localhost:4502/etc/cloudservices/proxy.html)
+   * [AEM外部化器OSGi配置](http://localhost:4502/system/console/configMgr)
 
-3. **已將InDesign檔案上傳至AEM Assets** 並允許AEM工作流程和InDesign Server完全處理資產。
-4. **建立新範本** 在 **資產>範本** 並在Step #4中選取上傳至AEM的InDesign檔案。
-5. **編輯資產範本** 建立於步驟#5，並編寫可編輯欄位。
-6. 按一下 **完成** 以產生「資產範本」的最終高保真度轉譯。
-7. 按一下「資產範本」卡片以開啟，並檢閱「資產轉譯」以下載高保真度轉譯。
+3. **已将InDesign文件上传到AEM Assets** 并允许AEM Workflow和InDesign Server完全处理资源。
+4. **创建新模板** 下 **Assets >模板** ，然后在步骤#4中选择上传到AEM的InDesign文件。
+5. **编辑资源模板** 在步骤#5中创建，并创作可编辑的字段。
+6. 单击 **完成** 以生成资产模板的最终高保真演绎版。
+7. 单击资产模板卡以打开，然后查看资产演绎版以下载高保真演绎版。
 
 ## 其他资源 {#additional-resources}
 
-InDesign範本檔案和支援的影像
+InDesign模板文件和支持的图像
 
-下載 [InDesign範本檔案和支援的影像](assets/asset-templates-tutorial-video--supporting-files-1.zip)
+下载 [InDesign模板文件和支持的图像](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
-* [InDesignCC試用版下載](https://creative.adobe.com/products/download/indesign)
-* InDesign Server試用版可從以下網址下載： [Adobe發行前網站](https://www.adobeprerelease.com/) 或 [CC Enterprise客戶可以聯絡其客戶主管，要求InDesign Server試用版授權](https://www.adobe.com/products/indesignserver/faq.html)
+* [InDesignCC试用版下载](https://creative.adobe.com/products/download/indesign)
+* InDesign Server试用版可从以下网址下载： [Adobe预发行版网站](https://www.adobeprerelease.com/) 或 [CC Enterprise客户可以联系其客户经理以请求InDesign Server试用许可证](https://www.adobe.com/products/indesignserver/faq.html)

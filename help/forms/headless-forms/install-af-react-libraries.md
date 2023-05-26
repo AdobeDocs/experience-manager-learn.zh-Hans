@@ -7,10 +7,10 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 0%
+source-wordcount: '173'
+ht-degree: 1%
 
 ---
 
@@ -28,10 +28,6 @@ ht-degree: 0%
 "@aemforms/af-react-components": "^0.22.41",
 "@aemforms/af-react-renderer": "^0.22.41",
 ```
-
->[!NOTE]
->
->本教程中的下拉列表和卡片布局是使用 [材料UI库](https://mui.com/). 您需要下载相应的材料UI包，以使代码在您的系统中正常工作。
 
 ## 设置代理
 

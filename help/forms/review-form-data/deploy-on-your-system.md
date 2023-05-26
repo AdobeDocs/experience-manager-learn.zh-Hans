@@ -1,6 +1,6 @@
 ---
-title: 部署教學課程資產
-description: 有關建立摘要元件的教學課程，用於在提交前稽核表單資料。
+title: 部署教程资源
+description: 有关创建摘要组件的教程，用于在提交之前查看表单数据。
 feature: Adaptive Forms
 topics: development
 audience: developer
@@ -19,12 +19,12 @@ ht-degree: 0%
 
 ---
 
-# 在您的系統上部署資產
+# 在您的系统上部署资产
 
-部署 [summary-component](assets/summarize-component.zip).
+部署 [摘要组件](assets/summarize-component.zip).
 
-[部署範例最適化表單](assets/sample-adaptive-form.zip).
+[部署自适应表单示例](assets/sample-adaptive-form.zip).
 
-[預覽範例表單](http://localhost:4502/content/dam/formsanddocuments/testsummary/jcr:content?wcmmode=disabled)
+[预览示例表单](http://localhost:4502/content/dam/formsanddocuments/testsummary/jcr:content?wcmmode=disabled)
 
-填寫表單欄位，並按一下 **下一個** 按鈕以檢視表單資料。 您也可以按一下鉛筆圖示來編輯表單資料。
+填写表单字段，然后单击 **下一个** 按钮以查看表单数据。 您还可以通过单击铅笔图标来编辑表单数据。

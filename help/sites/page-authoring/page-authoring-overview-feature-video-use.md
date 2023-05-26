@@ -1,7 +1,7 @@
 ---
-title: 在AEM Sites中編寫頁面
+title: 在AEM Sites中创作页面
 seo-title: The following video highlights how to author a new page in Adobe Experience Manager Sites using the Site Editor's UI
-description: 以下影片重點說明如何使用網站編輯器UI在Adobe Experience Manager Sites中編寫新頁面
+description: 以下视频重点介绍如何使用站点编辑器的UI在Adobe Experience Manager Sites中创作新页面
 seo-description: The following video highlights how to author a new page in Adobe Experience Manager Sites using the Site Editor's UI
 feature: Page Editor, Editable Templates
 topics: authoring, publishing
@@ -22,32 +22,32 @@ ht-degree: 21%
 
 ---
 
-# 編寫頁面 {#authoring-page-aem-sites}
+# 创作页面 {#authoring-page-aem-sites}
 
-瞭解如何使用網站編輯器的UI在Adobe Experience Manager Sites中編寫頁面。
+了解如何使用站点编辑器的用户界面在Adobe Experience Manager Sites中创作页面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31828?quality=12&learn=on)
 
-本影片涵蓋下列功能或特色：
+在本视频中，介绍了以下功能或特性：
 
-* 根據範本建立頁面
-* 為頁面匯入不同的撰寫模式
+* 基于模板创建页面
+* 为页面引入不同的创作模式
    * 编辑
    * 布局
    * 开发人员
    * 时间扭曲
-* 頁面編輯器功能
-   * 元件尋找器
+* 页面编辑器功能
+   * 组件查找器
    * 资产查找器
-* 將內容新增至現有元件
-* 將新元件新增至頁面
-* 頁面屬性
+* 向现有组件添加内容
+* 向页面中添加新组件
+* 页面属性
    * 发布页面
-   * 取消發佈頁面
+   * 取消发布页面
    * 编辑模板
    * 以发布的形式查看
 
 ## 其他资源 {#additional-resources}
 
-* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [编辑页面内容文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
 * [页面创作快速入门指南](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)

@@ -1,6 +1,6 @@
 ---
-title: AEM Headless伺服器對伺服器部署
-description: 瞭解伺服器對伺服器AEM Headless部署的部署考量事項。
+title: AEM Headless服务器到服务器部署
+description: 了解服务器到服务器AEM Headless部署的部署注意事项。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -16,31 +16,31 @@ ht-degree: 1%
 
 ---
 
-# AEM Headless伺服器對伺服器部署
+# AEM Headless服务器到服务器部署
 
-AEM Headless伺服器對伺服器部署涉及伺服器端應用程式或程式，這些應用程式或程式會以Headless方式使用並與AEM中的內容互動。
+AEM Headless服务器到服务器部署涉及服务器端应用程序或进程，这些应用程序或进程以Headless方式使用AEM中的内容并与之交互。
 
-伺服器對伺服器的部署需要最少的設定，因為與AEM Headless API的HTTP連線不會在瀏覽器的內容中啟動。
+服务器到服务器部署需要最少的配置，因为到AEM Headless API的HTTP连接不在浏览器的上下文中启动。
 
-## 部署設定
+## 部署配置
 
-伺服器對伺服器應用程式部署必須有以下部署設定。
+以下部署配置必须就地才能进行服务器到服务器应用程序部署。
 
-| 伺服器對伺服器應用程式連線至 | AEM Author | AEM 发布 | AEM預覽 |
+| 服务器到服务器应用程序连接到 | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------------------:|:----------:|:-----------:|:-----------:|
-| [Dispatcher篩選器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
-| 跨原始資源共用(CORS) | ✘ | ✘ | ✘ |
-| [AEM主機](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
+| [Dispatcher过滤器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
+| 跨源资源共享(CORS) | ✘ | ✘ | ✘ |
+| [AEM主机](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
-## 授權需求
+## 授权要求
 
-對AEM GraphQL API的授權請求通常會發生在伺服器對伺服器應用程式的內容中，因為其他應用程式型別，例如 [單頁應用程式](./spa.md)， [行動裝置](./mobile.md)，或 [Web元件](./web-component.md)通常使用授權，因為很難保護認證。
+对AEM GraphQL API的授权请求通常发生在服务器到服务器应用程序的上下文中，因为其他应用程序类型，例如 [单页应用程序](./spa.md)， [移动设备](./mobile.md)，或 [Web组件](./web-component.md)，通常使用授权，因为凭据安全很困难。
 
-將請求授權給AEMas a Cloud Service時，請使用 [服務認證型權杖驗證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html). 若要進一步瞭解向AEMas a Cloud Service驗證請求，請檢閱 [權杖型驗證教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). 本教學課程會探索使用下列專案進行權杖型驗證： [AEM ASSETS HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html) 但這些概念和方法同樣適用於與AEM Headless GraphQL API互動的應用程式。
+向AEMas a Cloud Service授权请求时，使用 [基于服务凭据的令牌身份验证](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html). 要了解有关向AEMas a Cloud Service验证请求的更多信息，请查看 [基于令牌的身份验证教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). 本教程探讨了基于令牌的身份验证，使用 [AEM ASSETS HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html) 但这些概念和方法同样适用于与AEM Headless GraphQL API交互的应用程序。
 
-## 範例伺服器對伺服器應用程式
+## 示例服务器到服务器应用程序
 
-Adobe提供Node.js中編碼的伺服器對伺服器應用程式範例。
+Adobe提供了一个在Node.js中编码的示例服务器到服务器应用程序。
 
 <div class="columns is-multiline">
     <!-- Server-to-server app -->
@@ -48,17 +48,17 @@ Adobe提供Node.js中編碼的伺服器對伺服器應用程式範例。
        <div class="card">
            <div class="card-image">
                <figure class="image is-16by9">
-                   <a href="../example-apps/server-to-server-app.md" title="伺服器對伺服器應用程式" tabindex="-1">
-                       <img class="is-bordered-r-small" src="../example-apps/assets/server-to-server-app/server-to-server-card.png" alt="伺服器對伺服器應用程式">
+                   <a href="../example-apps/server-to-server-app.md" title="服务器到服务器应用程序" tabindex="-1">
+                       <img class="is-bordered-r-small" src="../example-apps/assets/server-to-server-app/server-to-server-card.png" alt="服务器到服务器应用程序">
                    </a>
                </figure>
            </div>
            <div class="card-content is-padded-small">
                <div class="content">
-                   <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/server-to-server-app.md" title="伺服器對伺服器應用程式">伺服器對伺服器應用程式</a></p>
-                   <p class="is-size-6">以Node.js撰寫的範例伺服器對伺服器應用程式，會使用AEM Headless GraphQL API的內容。</p>
+                   <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/server-to-server-app.md" title="服务器到服务器应用程序">服务器到服务器应用程序</a></p>
+                   <p class="is-size-6">以Node.js编写的示例服务器到服务器应用程序，它使用AEM Headless GraphQL API中的内容。</p>
                    <a href="../example-apps/server-to-server-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視範例</span>
+                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                    </a>
                </div>
            </div>

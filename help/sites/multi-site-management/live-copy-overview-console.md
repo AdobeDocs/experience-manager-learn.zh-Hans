@@ -1,6 +1,6 @@
 ---
-title: 即時副本主控台
-description: 以下影片說明如何使用「即時副本概觀」主控台檢視或管理網站上的繼承，或執行轉出作業。
+title: Live Copy控制台
+description: 以下视频介绍如何使用Live Copy概述控制台查看或管理站点中的继承或执行转出操作。
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 ---
 
-# 即時副本主控台 {#live-copy-console}
+# Live Copy控制台 {#live-copy-console}
 
-瞭解如何使用「即時副本概述」主控台檢視或管理網站上的繼承，或執行轉出作業。
+了解如何使用Live Copy概述控制台查看或管理站点中的继承或执行转出操作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36680?quality=12&learn=on)

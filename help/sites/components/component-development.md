@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Manager Sites中的元件開發
-description: 使用Adobe Experience Manager Sites開發元件的概觀。 包括對話方塊、Sling模型、HTL指令碼和使用者端資料庫的簡介。
+title: Adobe Experience Manager Sites中的组件开发
+description: 使用Adobe Experience Manager Sites开发组件的概述。 包括对对话框、Sling模型、HTL脚本和客户端库的简介。
 version: 6.4, 6.5, Cloud Service
 topic: Development
 feature: Sling Model, HTL or HTML Template Language
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 元件開發簡介
+# 组件开发简介
 
-使用Adobe Experience Manager Sites開發元件的概觀。 包括對話方塊、Sling模型、HTL指令碼和使用者端資料庫的簡介。
+使用Adobe Experience Manager Sites开发组件的概述。 包括对对话框、Sling模型、HTL脚本和客户端库的简介。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32547?quality=12&learn=on)

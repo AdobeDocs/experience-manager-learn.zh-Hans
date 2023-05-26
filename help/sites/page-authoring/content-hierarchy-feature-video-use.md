@@ -1,7 +1,7 @@
 ---
-title: AEM Sites內容階層簡介
+title: AEM Sites内容层次结构简介
 seo-title: Introduction to AEM Sites Content Hierarchy
-description: 以下影片重點說明網站頁面如何儲存在貴組織的AEM中。
+description: 以下视频重点介绍如何将网站页面存储在贵组织的AEM中。
 seo-description: The following video highlights how site pages are stored within AEM for your organization.
 feature: Page Editor
 topics: authoring, publishing
@@ -22,8 +22,8 @@ ht-degree: 0%
 
 ---
 
-# 內容結構和階層 {#content-hierarchy}
+# 内容结构和层级 {#content-hierarchy}
 
-瞭解如何在AEM Sites中建立及組織組織的網站頁面。
+了解如何在AEM Sites中创建和组织组织的网站页面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31785?quality=12&learn=on)

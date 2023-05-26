@@ -1,6 +1,6 @@
 ---
-title: 頁面範本
-description: 瞭解如何建立和修改頁面範本。 瞭解頁面範本和頁面之間的關係。 瞭解如何設定頁面範本的原則，為內容提供精細的控管和品牌一致性。  系統會根據Adobe XD的模型建立結構良好的雜誌文章範本。
+title: 页面模板
+description: 了解如何创建和修改页面模板。 了解页面模板与页面之间的关系。 了解如何配置页面模板的策略，以便为内容提供精细的管理和品牌一致性。  根据Adobe XD的模型创建了一个结构良好的杂志文章模板。
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -18,77 +18,77 @@ ht-degree: 1%
 
 ---
 
-# 頁面範本 {#page-templates}
+# 页面模板 {#page-templates}
 
-在本章中，我們將探索頁面範本與頁面之間的關係。 我們將根據以下來源的一些模型，建置無樣式雜誌文章範本 [AdobeXD](https://www.adobe.com/products/xd.html). 在建置範本的過程中，將涵蓋核心元件和進階原則設定。
+在本章中，我们将探讨页面模板与页面之间的关系。 我们将基于来自的一些模型构建一个无样式的杂志文章模板 [AdobeXD](https://www.adobe.com/products/xd.html). 在构建模板的过程中，涵盖了核心组件和高级策略配置。
 
 ## 前提条件 {#prerequisites}
 
-此教學課程包含多個部分，並假設您已完成下列步驟： [製作內容和發佈變更](./author-content-publish.md) 章節已完成。
+这是一个多部分教程，并假定中概述的步骤 [创作内容和发布更改](./author-content-publish.md) 章节已完成。
 
 ## 目标
 
-1. 瞭解頁面範本的詳細資訊，以及如何使用原則來強制實施對頁面內容的精細控制。
-1. 瞭解範本和頁面的連結方式。
-1. 建立新範本並編寫頁面。
+1. 了解页面模板的详细信息，以及如何使用策略对页面内容实施精细控制。
+1. 了解如何链接模板和页面。
+1. 创建新模板并创作页面。
 
-## 您將建置的內容 {#what-you-will-build}
+## 您将构建的内容 {#what-you-will-build}
 
-在本教學課程的這個部分，您將建立新的Magazine文章頁面範本，此範本可用來建立新的Magazine文章，並符合通用結構。 此範本是根據設計和在AdobeXD中產生的UI套件。 本章僅著重於建置範本的結構或骨架。 未實作任何樣式，但範本和頁面運作正常。
+在本教程的这一可选部分中，您将构建一个新的“杂志文章页面”模板，该模板可用于创建新的杂志文章，并与通用结构保持一致。 该模板基于AdobeXD中的设计和生成的UI套件。 本章仅侧重于构建模板的结构或骨架。 未实施任何样式，但模板和页面可正常使用。
 
-## 建立Magazine文章頁面範本
+## 创建杂志文章页面模板
 
-建立頁面時，您必須選取範本，作為建立新頁面的基礎。 範本會定義結果頁面的結構、初始內容和允許的元件。
+创建页面时，必须选择一个模板，该模板用作创建新页面的基础。 模板定义生成页面的结构、初始内容和允许的组件。
 
-有3個主要區域 [頁面範本](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=zh-Hans)：
+有3个主要区域 [页面模板](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=zh-Hans)：
 
-1. **結構**  — 定義屬於範本一部分的元件。 內容作者無法編輯這些內容。
-1. **初始內容**  — 定義範本開始使用的元件，這些元件可由內容作者編輯和/或刪除
-1. **原則**  — 定義有關元件行為方式以及作者有哪些可用選項的設定。
+1. **结构**  — 定义属于模板一部分的组件。 内容作者无法编辑这些内容。
+1. **初始内容**  — 定义模板开始使用的组件，这些组件可由内容作者编辑和/或删除
+1. **策略**  — 定义有关组件的行为方式以及作者可用的选项的配置。
 
-接下來，在AEM中建立符合模型結構的新範本。 這會在AEM的本機執行個體中發生。 請依照下列影片中的步驟操作：
+接下来，在AEM中创建一个与模型结构匹配的新模板。 这将在AEM的本地实例中发生。 按照以下视频中的步骤操作：
 
 >[!VIDEO](https://video.tv.adobe.com/v/332915?quality=12&learn=on)
 
-您可以使用以下縮圖來識別您的範本（或上傳您自己的範本！）
+您可以使用以下缩略图来标识您的模板（或上传您自己的模板！）
 
-![文章頁面範本縮圖](./assets/page-templates/article-page-template-thumbnail.png)
+![文章页面模板缩略图](./assets/page-templates/article-page-template-thumbnail.png)
 
 
-### 解決方案套件
+### 解决方案包
 
-已完成 [雜誌範本的解決方案](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.1.zip) 可透過「封裝管理程式」下載及安裝。
+已完成 [杂志模板的解决方案](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.1.zip) 可以通过包管理器下载和安装。
 
-## 使用體驗片段更新頁首和頁尾 {#experience-fragments}
+## 使用体验片段更新页眉和页脚 {#experience-fragments}
 
-建立全域內容（例如頁首或頁尾）的常見做法是使用 [體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html). 體驗片段，可讓使用者結合多個元件，以建立單一可參考的元件。 體驗片段的優點在於支援多網站管理和 [本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure).
+创建全局内容（如页眉或页脚）时的常见做法是使用 [体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html). 体验片段，允许用户组合多个组件以创建单个可引用的组件。 体验片段具有支持多站点管理和 [本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure).
 
-網站範本產生頁首和頁尾。 接下來，更新體驗片段以符合模型。 請依照下列影片中的步驟操作：
+站点模板生成了页眉和页脚。 接下来，更新体验片段以匹配模型。 按照以下视频中的步骤操作：
 
 >[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
 
-以下影片的高層級步驟：
+下面是视频的高级步骤：
 
-1. 下載範例內容套件 **[WKND-Starter-Assets-Skate-Article-1.2.zip](assets/page-templates/WKND-Starter-Assets-Skate-Article-1.2.zip)**.
-1. 使用封裝管理員上傳和安裝內容封裝。
-1. 更新頁首和頁尾體驗片段以使用WKND標誌
+1. 下载示例内容包 **[WKND-Starter-Assets-Skate-Article-1.2.zip](assets/page-templates/WKND-Starter-Assets-Skate-Article-1.2.zip)**.
+1. 使用包管理器上传并安装内容包。
+1. 更新页眉和页脚体验片段以使用WKND徽标
 
-## 建立雜誌文章頁面
+## 创建杂志文章页面
 
-接下來，使用Magazine文章頁面範本建立新頁面。 編寫頁面內容以符合網站模型。 請依照下列影片中的步驟操作：
+接下来，使用杂志文章页面模板创建一个新页面。 创作页面的内容以匹配站点模型。 按照以下视频中的步骤操作：
 
 >[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
 
-使用 [提供的文字](./assets/page-templates/la-skateparks-copy.txt) 以填入文章內文。
+使用 [提供的文本](./assets/page-templates/la-skateparks-copy.txt) 以填充文章正文。
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您剛才已使用Adobe Experience Manager Sites建立新範本和頁面。
+恭喜，您刚刚使用Adobe Experience Manager Sites创建了新模板和页面。
 
 ### 后续步骤 {#next-steps}
 
-此時，雜誌文章頁面和網站不符合WKND的品牌樣式。 請遵循 [主題設定](theming.md) 教學課程，瞭解更新CSS和Javascript前端程式碼的最佳作法，這些程式碼用於將全域樣式套用至網站。
+此时，杂志文章页面和网站与WKND的品牌样式不匹配。 请遵循 [主题](theming.md) 本教程将介绍更新用于将全局样式应用于站点的CSS和Javascript前端代码的最佳实践。
 
-### 解決方案套件
+### 解决方案包
 
-本章的解決方案套件可供下載： [WKND-Magazine-Template-SOLUTION-1.0.zip](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.0.zip).
+本章的解决方案包可供下载： [WKND-Magazine-Template-SOLUTION-1.0.zip](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.0.zip).

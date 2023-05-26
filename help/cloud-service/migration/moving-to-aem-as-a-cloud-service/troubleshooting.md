@@ -1,6 +1,6 @@
 ---
-title: 疑難排解AEMas a Cloud Service
-description: 瞭解如何針對AEM SDK、AEMas a Cloud Service和建置及部署程式進行疑難排解和偵錯。
+title: AEMas a Cloud Service故障诊断
+description: 了解如何对AEM SDK、AEMas a Cloud Service以及构建和部署过程进行故障排除和调试。
 version: Cloud Service
 topic: Migration, Upgrade
 role: Developer
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 疑難排解AEMas a Cloud Service
+# AEMas a Cloud Service故障诊断
 
-瞭解如何針對AEM SDK、AEMas a Cloud Service和建置及部署程式進行疑難排解和偵錯。
+了解如何对AEM SDK、AEMas a Cloud Service以及构建和部署过程进行故障排除和调试。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336964?quality=12&learn=on)

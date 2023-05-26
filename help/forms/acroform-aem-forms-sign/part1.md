@@ -1,7 +1,7 @@
 ---
-title: 使用AEM Forms的Acroform
+title: 包含AEM Forms的Acroforms
 seo-title: Merge Adaptive Form data with Acroform
-description: 將Acroforms與AEM Forms整合的第1部分。 使用Acroform建立最適化表單並合併資料以取得PDF。
+description: 将Acroforms与AEM Forms集成的第1部分。 使用Acroform创建自适应表单并合并数据以获取PDF。
 feature: adaptive-forms
 topics: development
 audience: developer
@@ -16,34 +16,34 @@ ht-degree: 0%
 ---
 
 
-# 建立Acroform
+# 创建Acroform
 
-Acroform是使用Acrobat建立的表單。 您可以使用Acrobat從頭開始建立新表單，或採用在Microsoft Word中建立的現有表單，並使用Acrobat將其轉換為Acroform。 若要將在Microsoft Word中建立的表單轉換為Acroform，請依照下列步驟操作。
+Acroform是使用Acrobat创建的表单。 您可以使用Acrobat从头开始创建新表单，也可以使用在Microsoft Word中创建的现有表单，并使用Acrobat将其转换为Acroform。 需要执行以下步骤，将在Microsoft Word中创建的表单转换为Acroform。
 
-* 使用Acrobat開啟Word檔案
-* 使用Acrobat準備表單工具來識別表單上的表單欄位。
-* 儲存pdf。 請確定檔案名稱中沒有任何空格。
+* 使用Acrobat打开Word文档
+* 使用Acrobat准备表单工具来标识表单上的表单字段。
+* 保存PDF。 请确保文件名中没有任何空格。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/22575?quality=12&learn=on)
 
 >[!NOTE]
 >
->如果您想要傳送可填寫的Acroform以供使用Acrobat Sign簽署，請為欄位命名相應。 例如，您可以為欄位命名 **Sig_es_:signer1:簽名**. 這是Acrobat Sign瞭解的語法。
+>如果要发送可填写的acroform以使用Acrobat Sign进行签名，请相应地命名字段。 例如，您可以命名字段 **Sig_es_:signer1:签名**. 这是Acrobat Sign了解的语法。
 
 >[!NOTE]
 >
->如果您要傳送以XFA為基礎的檔案，您必須將檔案平面化，且Acrobat Sign簽名標籤必須顯示為檔案中的靜態文字。
+>如果要发送基于XFA的文档，则需要拼合该文档，并且Acrobat Sign签名标记需要作为静态文本显示在文档中。
 
-[Acrobat Sign文字標籤檔案](https://helpx.adobe.com/sign/using/text-tag.html)
+[Acrobat Sign文本标记文档](https://helpx.adobe.com/sign/using/text-tag.html)
 
 >[!NOTE]
 >
->請確定Acroform檔案名稱中沒有空格。 目前的範常式式碼不處理空格。
+>确保acroform文件名中没有任何空格。 当前示例代码不处理空格。
 >
->表單欄位名稱只能包含下列內容：
+>表单字段名称只能包含以下内容：
 >
->* 單一空間
->* 單底線
->* 英數字元
+>* 单次空格
+>* 单下划线
+>* 字母数字字符
 

@@ -1,6 +1,6 @@
 ---
-title: 第4章 — 定義Content Services範本 — 內容服務
-description: AEM Headless教學課程的第4章涵蓋AEM Content Services內容中AEM可編輯範本的角色。 可編輯的範本可用來定義AEM Content Services最終公開的JSON內容結構。
+title: 第4章 — 定义Content Services模板 — 内容服务
+description: AEM Headless教程的第4章介绍了AEM可编辑模板在AEM Content Services上下文中的作用。 可编辑模板用于定义AEM Content Services最终公开的JSON内容结构。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
@@ -13,90 +13,90 @@ ht-degree: 0%
 
 ---
 
-# 第4章 — 定義內容服務範本
+# 第4章 — 定义Content Services模板
 
-AEM Headless教學課程的第4章涵蓋AEM Content Services內容中AEM可編輯範本的角色。 可編輯的範本可用來定義AEM Content Services透過啟用Content Services的AEM元件的組合向使用者端公開的JSON內容結構。
+AEM Headless教程的第4章介绍了AEM可编辑模板在AEM Content Services上下文中的作用。 可编辑模板用于定义AEM Content Services通过组合启用Content Services的AEM组件向客户端公开的JSON内容结构。
 
-## 瞭解範本在AEM Content Services中的角色
+## 了解模板在AEM Content Services中的作用
 
-AEM可編輯範本用於定義存取的HTTP端點，以將事件內容公開為JSON。
+AEM可编辑模板用于定义访问的HTTP端点，以将事件内容公开为JSON。
 
-傳統上，AEM可編輯範本是用來定義網頁，不過這僅是慣例。 可編輯的範本可用於撰寫 **任何** 內容集；內容的存取方式：瀏覽器中的HTML、JavaScript (AEM SPA Editor)使用的JSON或行動應用程式，是該頁面請求方式的函式。
+传统上，使用AEM可编辑模板来定义网页，但这种用法只是惯例。 可编辑的模板可用于撰写 **任意** 内容集；内容的访问方式：作为浏览器中的HTML，作为JavaScript(AEM SPA编辑器)或移动设备应用程序使用的JSON取决于请求该页面的方式。
 
-在AEM Content Services中，可編輯的範本可用來定義JSON資料的公開方式。
+在AEM Content Services中，可编辑模板用于定义JSON数据的公开方式。
 
-對於 [!DNL WKND Mobile] 應用程式，我們將建立單一可編輯的範本，用來驅動單一API端點。 雖然此範例只是簡單說明AEM Headless的概念，但您可以建立多個頁面（或端點），每個頁面都會公開不同的內容集，以建立更複雜、更有組織的API。
+对于 [!DNL WKND Mobile] 应用程序时，我们将创建一个可编辑的模板，用于驱动单个API端点。 虽然此示例可以简单说明AEM Headless的概念，但您可以创建多个页面（或端点），每个页面或端点都会公开不同的内容集，以便创建更复杂、更有条理的API。
 
-## 瞭解API端點
+## 了解API端点
 
-瞭解如何撰寫我們的API端點，以及應向我們的網站公開哪些內容 [!DNL WKND Mobile] 應用程式，讓我們重新審視設計。
+了解如何构建API端点，以及应向我们的网站展示哪些内容 [!DNL WKND Mobile] 应用程序，让我们重新访问设计。
 
-![事件API頁面分解](./assets/chapter-4/design-to-component-mapping.png)
+![事件API页面分解](./assets/chapter-4/design-to-component-mapping.png)
 
-如我們所見，我們有三個邏輯內容集可提供給行動應用程式。
+正如我们所看到的，我们有三个逻辑内容集要提供给移动设备应用程序。
 
-1. 此 **標誌**
-2. 此 **標籤行**
-3. 以下專案的清單： **事件**
+1. 此 **徽标**
+2. 此 **标记行**
+3. 列表 **事件**
 
-為此，我們可以將這些需求對應至AEM元件(在此例中為AEM WCM核心元件)，以便以JSON格式公開必要內容。
+为此，我们可以将这些要求映射到AEM组件(在本例中为AEM WCM核心组件)，以便以JSON形式公开必需的内容。
 
-1. 此 **標誌** 是透過 **影像元件**
-2. 此 **標籤行** 是透過 **文字元件**
-3. 以下專案的清單： **事件** 是透過 **內容片段清單元件** 這進而會參考一組事件內容片段。
+1. 此 **徽标** 是通过 **图像组件**
+2. 此 **标记行** 是通过 **文本组件**
+3. 列表 **事件** 是通过 **内容片段列表组件** 这进而会引用一组事件内容片段。
 
 >[!NOTE]
 >
->若要支援AEM Content Service的頁面和元件JSON匯出，頁面和元件必須 **衍生自AEM WCM Core Components**.
+>要支持AEM Content Service的页面和组件的JSON导出，页面和组件必须 **从AEM WCM核心组件派生**.
 >
->[AEM WCM Core Components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components) 具有內建功能，可支援已匯出頁面和元件的標準化JSON架構。 本教學課程中使用的所有WKND Mobile元件（頁面、影像、文字和內容片段清單）衍生自AEM WCM核心元件。
+>[AEM WCM核心组件](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components) 具有内置功能，可支持导出的页面和组件的标准化JSON架构。 本教程中使用的所有WKND Mobile组件（页面、图像、文本和内容片段列表）均派生自AEM WCM核心组件。
 
-## 定義事件API範本
+## 定义事件API模板
 
-1. 導覽至 **[!UICONTROL 工具] > [!UICONTROL 一般] > [!UICONTROL 範本] >[!DNL WKND Mobile]**.
+1. 导航到 **[!UICONTROL 工具] > [!UICONTROL 常规] > [!UICONTROL 模板] >[!DNL WKND Mobile]**.
 
-1. 建立 **[!DNL Events API]** 範本：
+1. 创建 **[!DNL Events API]** 模板：
 
-   1. 點選 **[!UICONTROL 建立]** 在頂端動作列中
-   1. 選取 **[!DNL WKND Mobile - Empty Page]** 範本
-   1. 點選 **[!UICONTROL 下一個]** 在頂端動作列中
-   1. 輸入 **[!DNL Events API]** 在 [!UICONTROL 範本標題] 欄位
-   1. 點選 **[!UICONTROL 建立]** 在頂端動作列中
-   1. 點選 **[!UICONTROL 開啟]** 開啟新範本以進行編輯
+   1. 点按 **[!UICONTROL 创建]** 在顶部操作栏中
+   1. 选择 **[!DNL WKND Mobile - Empty Page]** 模板
+   1. 点按 **[!UICONTROL 下一个]** 在顶部操作栏中
+   1. 输入 **[!DNL Events API]** 在 [!UICONTROL 模板标题] 字段
+   1. 点按 **[!UICONTROL 创建]** 在顶部操作栏中
+   1. 点按 **[!UICONTROL 打开]** 打开新模板进行编辑
 
-1. 首先，我們允許三個已識別的AEM元件，以透過編輯以下專案為內容建模： [!UICONTROL 原則] 根目錄的 [!UICONTROL 配置容器]. 確保 **[!UICONTROL 結構]** 模式為作用中，選取 **[!DNL Layout Container \[Root\]]**，然後點選 **[!UICONTROL 原則]** 按鈕。
-1. 下 **[!UICONTROL 屬性] > [!UICONTROL 允許的元件]** 搜尋 **[!DNL WKND Mobile]**. 允許以下元件來自 [!DNL WKND Mobile] 元件群組，以便用於 [!DNL Events] API頁面。
+1. 首先，我们允许我们通过编辑内容来为内容建模所需的三个已识别的AEM组件 [!UICONTROL 策略] 根目录的 [!UICONTROL 布局容器]. 确保 **[!UICONTROL 结构]** 模式处于活动状态，请选择 **[!DNL Layout Container \[Root\]]**，然后点按 **[!UICONTROL 策略]** 按钮。
+1. 下 **[!UICONTROL 属性] > [!UICONTROL 允许的组件]** 搜索 **[!DNL WKND Mobile]**. 允许以下组件来自 [!DNL WKND Mobile] 组件组，以便它们可用于 [!DNL Events] API页面。
 
    * **[!DNL WKND Mobile > Image]**
 
-      * 應用程式的標誌
+      * 应用程序的徽标
    * **[!DNL WKND Mobile > Text]**
 
-      * 應用程式的簡介文字
+      * 应用程序的介绍性文本
    * **[!DNL WKND Mobile > Content Fragment List]**
 
-      * 可在應用程式中顯示的事件類別清單
+      * 应用程序中可显示的事件类别列表
 
 
 
-1. 點選 **[!UICONTROL 完成]** 完成時，右上角的check-mark 。
-1. **重新整理** 要新檢視的瀏覽器視窗 [!UICONTROL 允許的元件] 清單中找到。
-1. 從左側欄中的「元件」尋找器，拖曳下列AEM元件：
-   1. **[!DNL Image]** （代表標誌）
-   2. **[!DNL Text]** （標籤行）
+1. 点按 **[!UICONTROL 完成]** 完成后，右上角的check-mark。
+1. **刷新** 要查看的浏览器窗口 [!UICONTROL 允许的组件] 左侧边栏中的列表。
+1. 从左边栏中的组件查找器中，拖入以下AEM组件：
+   1. **[!DNL Image]** 对于徽标
+   2. **[!DNL Text]** （对于标记行）
    3. **[!DNL Content Fragment List]** 事件
-1. **針對上述每個元件**，選擇並按下 **解鎖** 按鈕。
-1. 不過，請確保 **配置容器** 是 **已鎖定** 以防止新增其他元件，或防止移除這三個元件。
-1. 點選 **[!UICONTROL 頁面資訊] > [!UICONTROL 在管理員中檢視]** 以返回 [!DNL WKND Mobile] 範本清單。 選取新建立的 **[!DNL Events API]** 範本並點選 **[!UICONTROL 啟用]** 在頂端動作列中。
+1. **对于上述每个组件**，选择它们并按 **解锁** 按钮。
+1. 但是，请确保 **布局容器** 是 **已锁定** 以阻止添加其他组件，或阻止删除这三个组件。
+1. 点按 **[!UICONTROL 页面信息] > [!UICONTROL 以管理员身份查看]** 以返回 [!DNL WKND Mobile] 模板列表。 选择新创建的 **[!DNL Events API]** 模板并点按 **[!UICONTROL 启用]** 在顶部操作栏中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28342?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 請注意，用來表面內容的元件會新增至範本本身，並加以鎖定。 這是為了讓作者可編輯預先定義的元件，但不可任意新增或移除元件，因為變更API本身可能會破壞JSON結構的假設，並破壞耗用應用程式。 所有API都必須穩定。
+> 请注意，用于显示内容的元件已添加到模板本身中，并被锁定。 这是为了让作者能够编辑预定义的组件，但不能随意添加或删除组件，因为更改API本身可能会破坏有关JSON结构的假设并破坏消费应用程序。 所有API都必须稳定。
 
 ## 后续步骤
 
-或者，您也可以安裝 [com.adobe.aem.guides.wknd-mobile.content.chapter-4.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) AEM Author上的內容套件，透過 [AEM封裝管理員](http://localhost:4502/crx/packmgr/index.jsp). 此套件包含本教學課程及先前章節中概述的設定和內容。
+（可选）安装 [com.adobe.aem.guides.wknd-mobile.content.chapter-4.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) AEM作者上的内容包，通过 [AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp). 此资源包包含本教程及前面章节中概述的配置和内容。
 
-* [第5章 — 編寫Content Services頁面](./chapter-5.md)
+* [第5章 — 创作Content Services页面](./chapter-5.md)

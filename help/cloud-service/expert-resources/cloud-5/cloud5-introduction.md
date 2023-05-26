@@ -1,6 +1,6 @@
 ---
-title: Cloud 5簡介
-description: AEM Engineering Cloud 5系列簡介。
+title: Cloud 5简介
+description: AEM Engineering Cloud 5系列简介。
 version: Cloud Service
 feature: Developer Tools
 role: Admin, Developer
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# Cloud 5簡介
+# Cloud 5简介
 
-歡迎使用AEM Engineering的Cloud 5系列。 任何產品實作階段的主要問題之一，就是這些範例、工具或API的程式碼範例和/或即時示範是否足夠。 此系列的目標是在5分鐘或更短時間內提供關於AEMas a Cloud Service的有用資訊。
+欢迎使用AEM Engineering的Cloud 5系列。 任何产品在实施阶段的主要问题之一就是要有足够的代码示例和/或这些示例、工具或API的实时演示。 本系列的目标是在5分钟或更短的时间内提供有关AEMas a Cloud Service的有用信息。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340667?quality=12&learn=on)

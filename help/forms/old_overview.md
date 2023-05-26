@@ -1,6 +1,6 @@
 ---
-title: AEM FormsTutorials和影片
-description: 供初學者和經驗豐富的AEM Forms開發人員使用的AEM Forms資源集合
+title: AEM FormsTutorials和视频
+description: 面向初学者和经验丰富的AEM Forms开发人员的AEM Forms资源集合
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
@@ -11,65 +11,65 @@ ht-degree: 6%
 
 ---
 
-# AEM FormsTutorials和影片 {#overview}
+# AEM FormsTutorials和视频 {#overview}
 
-Adobe Experience Manager (AEM)提供易用的解決方案，可建立、管理、發佈和更新複雜的數位表格，同時與後端流程、商業規則和資料整合。 本使用手冊包含了AEM Forms許多功能的相關影片和教學課程
+Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用于创建、管理、发布和更新复杂的数字表单，同时与后端流程、业务规则和数据集成。 本用户指南包含了有关AEM Forms的众多特性和功能的视频和教程
 
 ## 新增功能
 
-* **[處理呼叫表單資料模型服務步驟中的錯誤訊息](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
+* **[处理调用表单数据模型服务步骤中的错误消息](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
 
-   *工作流程模型中的變數是根據其資料型別儲存值的方法*
+   *工作流模型中的变量是一种根据其数据类型存储值的方法*
 
-* **[互動式通訊檔案中的多系列圖表（影片）](./interactive-communications/multiseriescharts.md)**
+* **[交互式通信文档中的多系列图（视频）](./interactive-communications/multiseriescharts.md)**
 
-   *在同一張圖表中繪製多個系列。 多系列圖表通常與折線圖、長條圖、直條圖型別關聯使用。*
+   *在同一张图表中绘制多个系列。 多系列图表通常与折线图、条形图、柱状图类型结合使用。*
 
-* **[建立可重複使用的工作流程模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
+* **[创建可重用工作流模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
-   *建立未繫結至特定表單的工作流程模型*
+   *创建未绑定到特定表单的工作流模型*
 
-## 工作人員選擇
+## 员工精选
 
 <table>
 <tr>
   <td>
     <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
-      <img alt="建立第一個最適化表單" src="./assets/afhero.png" />
+      <img alt="创建您的第一个自适应表单" src="./assets/afhero.png" />
     </a>
     <div>
       <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
-    <strong>建立第一個最適化表單</strong>
+    <strong>创建您的第一个自适应表单</strong>
     </a>
     </div>
     <p>
-    <em>調適型表單是新一代的表單，可動態且回應。 您可以使用調適型表單來提供個人化體驗</em>
+    <em>自适应表单是新一代的表单，具有动态性和响应性。 您可以使用自适应表单来提供个性化体验</em>
     <p>
   </td>
    <td>
     <a href="./ic-print-channel-tutorial/introduction.md">
-      <img alt="建立您的第一個Print Channel檔案" src="./assets/correspondence-management1.png" />
+      <img alt="创建您的第一个Print Channel文档" src="./assets/correspondence-management1.png" />
     </a>
     <div>
       <a href="./ic-print-channel-tutorial/introduction.md">
-    <strong>建立您的第一個Print Channel檔案</strong>
+    <strong>创建您的第一个Print Channel文档</strong>
     </a>
     </div>
     <p>
-    <em>互動式通訊可集中處理及管理安全、個人化與互動式通訊的建立、集合與傳遞，例如商務信函、檔案、對帳單、利益通知、行銷郵件、帳單和歡迎套件。 </em>
+    <em>交互式通信可以集中管理安全、个性化的交互式信函的创建、编排和交付，例如业务信函、文档、对帐单、福利通知、营销邮件、账单和欢迎资料包。 </em>
     <p>
   </td>
   <td>
     <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-      <img alt="在AEM Workflow中使用表單資料模型" src="./assets/fdmlogo.png" />
+      <img alt="在AEM Workflow中使用表单数据模型" src="./assets/fdmlogo.png" />
     </a>
     <div>
       <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-    <strong>在AEM Workflow中使用表單資料模型</strong>
+    <strong>在AEM Workflow中使用表单数据模型</strong>
     </a>
     </div>
     <p>
-    <em>在AEM Workflow中啟動表單資料模型服務作為步驟</em>
+    <em>在AEM Workflow中作为步骤调用表单数据模型的服务</em>
     <p>
   </td>
 </tr>
@@ -77,96 +77,96 @@ Adobe Experience Manager (AEM)提供易用的解決方案，可建立、管理�
 
 >[!TIP]
 >
->此範例集合用於示範AEM Forms的各種功能。
+>此示例集合用于演示AEM Forms的各种功能。
 
 
-## 最適化表單範例
+## 自适应表单示例
 
 <table>
 <tr>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
-      <img alt= "在AEM Forms中截圖" src="./assets/captcha1.png" />
+      <img alt= "AEM Forms中的Captch" src="./assets/captcha1.png" />
     </a>
     <div>
       <a href="https://forms.enablementadobe.com/content/forms/af/registerfornewsletter.html">
-    <strong>最適化表單中的Google驗證碼</strong>
+    <strong>自适应表单中的Google验证码</strong>
     </a>
     </div>
     <p>
-    <em> 區分人工和自動存取表單</em>
+    <em> 区分人工和自动访问表单</em>
     <p>
   </td>
   <td>
     <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
-    <img alt="預覽表單資料" src="./assets/preview.png" />
+    <img alt="预览表单数据" src="./assets/preview.png" />
     </a>
     <div>
     <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
-    <strong>檢閱表單資料</strong>
+    <strong>查看表单数据</strong>
     </a>
     </div>
     <p>
-    <em>在提交表單之前預覽表單資料。</em>
+    <em>在提交表单之前预览表单数据。</em>
     </p>
   </td>
   <td>
     <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
-      <img alt=" 內嵌影像" src="./assets/preview.png" />
+      <img alt=" 内嵌图像" src="./assets/preview.png" />
     </a>
      <div>
       <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
-        <strong>顯示內嵌影像</strong>
+        <strong>显示内嵌图像</strong>
       </a>
     </div>
     <p>
-    <em>顯示新增至表單的影像。</em>
+    <em>显示添加到表单的图像。</em>
     <p>
   </td>
 </tr>
 </table>
 
-## 最適化表單和簽名範例
+## 自适应表单和签名示例
 
 <table>
 <tr>
   <td>
     <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
-      <img alt="租賃合約" src="./assets/rental-agreement.png" />
+      <img alt="租赁协议" src="./assets/rental-agreement.png" />
     </a>
     <div>
       <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
-    <strong>租借合約表單範例</strong>
+    <strong>租赁协议表单示例</strong>
     </a>
     </div>
     <p>
-    <em>使用AEM Forms和Acrobat Sign填寫並簽署的租使用者與業主之間的租賃合約</em>
+    <em>租户与房东之间使用AEM Forms和Acrobat Sign填写并签署的租赁协议</em>
     <p>
   </td>
   <td>
     <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
-    <img alt="NDA合約" src="./assets/nda1.png" />
+    <img alt="NDA协议" src="./assets/nda1.png" />
     </a>
     <div>
     <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
-    <strong>產生保密協定</strong>
+    <strong>生成保密协议</strong>
     </a>
     </div>
     <p>
-    <em>動態建立NDA並使用Acrobat Sign傳送以供簽署</em>
+    <em>动态创建NDA并使用Acrobat Sign发送以供签名</em>
     </p>
   </td>
   <td>
     <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
-      <img alt="簽署檔案封裝" src="./assets/sign.png" />
+      <img alt="签署文档包" src="./assets/sign.png" />
     </a>
      <div>
       <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
-        <strong>簽署檔案套件</strong>
+        <strong>签署文档包</strong>
       </a>
     </div>
     <p>
-    <em>使用Forms和Acrobat Sign無縫簽署多份檔案</em>
+    <em>使用Forms和Acrobat Sign无缝地签署多个文档</em>
     <p>
   </td>
 </tr>
@@ -177,11 +177,11 @@ Adobe Experience Manager (AEM)提供易用的解決方案，可建立、管理�
 
 ## 其他资源
 
-* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Sites編寫檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites開發檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-* [AEM Sites管理檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites部署檔案](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [Experience League — 浏览AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [AEM Sites创作文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
 * [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
 * [AEM Assets 教程](/help/assets/overview.md)
 * [AEM Forms 教程](/help/forms/overview.md)

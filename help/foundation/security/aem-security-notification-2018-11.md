@@ -1,7 +1,7 @@
 ---
-title: AEM安全性通知（2018年11月）
+title: AEM安全通知（2018年11月）
 seo-title: AEM Security Notification (November 2018)
-description: AEMExperience Manager安全性通知Dispatcher
+description: AEMExperience Manager安全通知Dispatcher
 seo-description: AEM Experience Manager Security Notification Dispatcher
 version: 6.4
 feature: Dispatcher
@@ -22,34 +22,34 @@ ht-degree: 14%
 
 ---
 
-# AEM安全性通知（2018年11月）
+# AEM安全通知（2018年11月）
 
 ## 摘要
 
-本文說明AEM最近回報的幾項近期和舊有漏洞。 請注意，最常識別的漏洞是AEM產品的已知問題，而且先前已識別出緩解問題，新的漏洞有新的Dispatcher版本可用。 Adobe也敦促客戶完成 [AEM安全性檢查清單](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/security-checklist.html) 並遵循相關准則。
+本文介绍了最近在AEM中报告的一些新旧漏洞。 请注意，大多数已识别的漏洞是AEM产品的已知问题，并且以前已识别到缓解，新漏洞有可用的新Dispatcher版本。 Adobe还敦促客户完成 [AEM安全核对清单](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/security-checklist.html) 并遵循相关准则。
 
 ## 需要采取操作
 
-* AEM部署應開始使用最新的Dispatcher版本。
-* 必須根據建議的設定套用Dispatcher安全性規則。
-* 此 [AEM安全性檢查清單](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/security-checklist.html) 應完成AEM部署。
+* AEM部署应开始使用最新的Dispatcher版本。
+* 必须按照建议的配置应用Dispatcher安全规则。
+* 此 [AEM安全核对清单](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/security-checklist.html) 应完成AEM部署。
 
-## 弱點和解決方法
+## 漏洞和解决方案
 
 | 问题 | 解决方法 | 链接 |
 |-------|------------|-------|
-| 略過AEM Dispatcher規則 | 安裝最新版Dispatcher (4.3.1)，並遵循建議的Dispatcher設定。 | 另請參閱 [AEM Dispatcher發行說明](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html) 和 [設定Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html). |
-| URL篩選器略過可用來迴避Dispatcher規則的漏洞 — CVE-2016-0957 | 舊版Dispatcher已修正此問題，但現在建議您安裝最新版Dispatcher (4.3.1)，並遵循建議的Dispatcher設定。 | 另請參閱 [AEM Dispatcher發行說明](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html) 和 [設定Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html). |
-| 與儲存的SWF檔案相關的XSS漏洞 | 這個問題已透過先前發行的安全性修正解決。 | 請參閱 [AEM安全性公告APSB18-10](https://helpx.adobe.com/security/products/experience-manager/apsb18-10.html). |
-| 密碼相關利用漏洞 | 請依照安全性檢查清單中的建議，取得更強大的密碼。 | 另請參閱 [AEM安全性檢查清單](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/security-checklist.html) |
-| 匿名使用者的磁碟使用量暴露 | AEM 6.1及更新版本已解決此問題，AEM 6.0的現成可用許可權可修改為更具限制性。 | 另請參閱 [發行說明](https://helpx.adobe.com/cn/experience-manager/aem-previous-versions.html)適用於AEM 6.1和更舊版本。 |
-| 匿名使用者公開Open Social Proxy | 6.0 SP2以上的版本已解決此問題。 | 另請參閱 [發行說明](https://helpx.adobe.com/cn/experience-manager/aem-previous-versions.html) 適用於AEM 6.1和更舊版本。 |
-| 在生產執行個體上存取CRX總管 | 管理CRX Explorer存取權已包含在安全性檢查清單中，CRX Explorer應從生產作者和發佈中移除，且安全性健康情況檢查會報告它（如果未移除）。 | 另請參閱 [AEM安全性檢查清單](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security-checklist.html). |
-| BGServlets已公開 | 自AEM 6.2起，此問題便已解決。 | 另請參閱 [AEM 6.2發行說明](https://helpx.adobe.com/cn/experience-manager/6-2/release-notes.html) |
+| 绕过AEM Dispatcher规则 | 安装最新版本的Dispatcher(4.3.1)，并遵循推荐的Dispatcher配置。 | 参见 [AEM Dispatcher发行说明](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html) 和 [配置Dispatch](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html). |
+| 用于绕过Dispatcher规则的URL过滤器绕过漏洞 — CVE-2016-0957 | 此问题已在旧版Dispatcher中修复，但现在建议您安装最新版本的Dispatcher (4.3.1)，并遵循推荐的Dispatcher配置。 | 参见 [AEM Dispatcher发行说明](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html) 和 [配置Dispatch](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html). |
+| 与存储的SWF文件相关的XSS漏洞 | 之前发布的安全修复程序已解决了此问题。 | 请参阅 [AEM安全公告APSB18-10](https://helpx.adobe.com/security/products/experience-manager/apsb18-10.html). |
+| 密码相关漏洞 | 遵循安全检查清单中的建议以获得更安全的密码。 | 参见 [AEM安全核对清单](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/security-checklist.html) |
+| 匿名用户的磁盘使用风险 | 此问题已在AEM 6.1及更高版本中得以解决，对于AEM 6.0，可以将开箱即用权限修改为更具限制性。 | 参见 [发行说明](https://helpx.adobe.com/cn/experience-manager/aem-previous-versions.html)适用于AEM 6.1及更低版本。 |
+| 匿名用户公开Open Social Proxy | 从6.0 SP2开始的版本中已解决此问题。 | 参见 [发行说明](https://helpx.adobe.com/cn/experience-manager/aem-previous-versions.html) 适用于AEM 6.1及更低版本。 |
+| 在生产实例上访问CRX资源管理器 | 安全检查清单中已涵盖了管理CRX资源管理器访问，应从生产作者和发布中删除CRX资源管理器，并且安全运行状况检查报告未删除的情况。 | 参见 [AEM安全核对清单](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security-checklist.html). |
+| BGServlet已公开 | 自AEM 6.2起，此问题已得到解决。 | 参见 [AEM 6.2发行说明](https://helpx.adobe.com/cn/experience-manager/6-2/release-notes.html) |
 
 >[!MORELIKETHIS]
 >
->* [AEM Dispatcher使用手冊](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)
+>* [AEM Dispatcher用户指南](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)
 >* [AEM Dispatcher 发行说明](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html)
->* [AEM安全性公告](https://helpx.adobe.com/security.html#experience-manager)
+>* [AEM安全公告](https://helpx.adobe.com/security.html#experience-manager)
 

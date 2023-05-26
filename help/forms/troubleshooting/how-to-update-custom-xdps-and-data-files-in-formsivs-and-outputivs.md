@@ -1,6 +1,6 @@
 ---
-title: 如何更新FormsIVS和OutputIVS中的自訂XDP和資料檔案以進行測試
-description: 新增或移除FormsIVS和OutputIVS中的自訂XDP和資料檔案
+title: 如何更新FormsIVS和OutputIVS中的自定义XDP和数据文件以进行测试
+description: 添加或删除FormsIVS和OutputIVS中的自定义XDP和数据文件
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何更新FormsIVS和OutputIVS中的自訂XDP和資料檔案
+# 如何更新FormsIVS和OutputIVS中的自定义XDP和数据文件
 
-*本影片逐步解說在FormsIVS和OutputIVS中更新自訂XDP和資料檔案的步驟，以進行測試。*
+*本视频介绍为测试目的而更新FormsIVS和OutputIVS中的自定义XDP和数据文件的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335513?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 建立主要的最適化表單
-description: 建立最適化表單以擷取應徵者資訊，並建立最適化表單以擷取已儲存的最適化表單
+title: 创建主自适应表单
+description: 创建自适应表单以捕获申请人信息，并创建自适应表单以检索保存的自适应表单
 feature: Adaptive Forms
 type: Tutorial
 activity: implement
@@ -18,22 +18,22 @@ ht-degree: 0%
 
 ---
 
-# 建立主要的最適化表單
+# 创建主自适应表单
 
-表單 **StoreAFWithAttachments** 是主要的最適化表單。 此最適化表單是使用案例的入口點。 在此表單中，會擷取使用者詳細資訊，包括行動電話號碼。 此表單也可新增一些附件。 按一下「儲存並退出」按鈕時，會執行伺服器端程式碼以將表單資料儲存在資料庫中，並產生唯一的應用程式ID並將其呈現給使用者以便安全儲存。 此應用程式ID可用來擷取與應用程式相關聯的行動電話號碼。
+表单 **StoreAFWithAttachments** 是主要的自适应表单。 此自适应表单是用例的入口点。 在此表单中捕获了包括手机号码的用户详细信息。 此表单还可以添加一些附件。 当单击“保存并退出”按钮时，执行服务器端代码以将表单数据存储在数据库中，并且生成唯一的应用程序ID并将其呈现给用户以便安全保存。 此应用程序ID用于检索与应用程序关联的手机号码。
 
-![主要應用程式表單](assets/6552.JPG)
+![主申请表](assets/6552.JPG)
 
-此表單已與 **bootboxjs540、storeAFWithAttachments** 在課程中先前建立的使用者端程式庫，以及在提交表單時觸發的AEM工作流程。
+此表单已与 **bootboxjs540、storeAFWithAttachments** 本课程中先前创建的客户端库以及在提交表单时触发的AEM工作流。
 
 
-* 範例表單是根據 [自訂自適應表單範本](assets/custom-template-with-page-component.zip) 這些資料需要匯入至AEM，範例表單才能正確呈現。
+* 示例表单基于 [自定义自适应表单模板](assets/custom-template-with-page-component.zip) 这些内容需要导入到AEM中，才能正确呈现示例表单。
 
-* 已完成 [StoreAfWithAttachments表單](assets/store-af-with-attachments-form.zip) 可下載並匯入您的AEM執行個體。
+* 已完成 [StoreAfWithAttachments表单](assets/store-af-with-attachments-form.zip) 可以下载并导入到您的AEM实例中。
 
-* 此 [與此表單關聯的AEM工作流程](assets/workflow-model-store-af-with-attachments.zip) 需要匯入至您的AEM執行個體，表單才能運作。
+* 此 [与此表单关联的AEM工作流](assets/workflow-model-store-af-with-attachments.zip) 需要将导入到您的AEM实例中才能使表单正常工作。
 
 
 ## 后续步骤
 
-[建立表單擷取儲存的表單](./retrieve-saved-form.md)
+[创建表单检索保存的表单](./retrieve-saved-form.md)

@@ -1,6 +1,6 @@
 ---
-title: 最適化Forms快速入門
-description: 本教學課程將逐步引導您完成建立多索引標籤「最適化表單」的步驟。 您將瞭解如何使用表格、摺疊式面板版面配置和規則編輯器來編寫商業規則。
+title: 自适应Forms快速入门
+description: 本教程将指导您完成创建多选项卡式自适应表单所涉及的步骤。 您将学习使用表、折叠布局和规则编辑器来创作业务规则。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,26 +15,26 @@ ht-degree: 14%
 
 ---
 
-# 最適化Forms快速入門 {#getting-started-with-adaptive-forms}
+# 自适应Forms快速入门 {#getting-started-with-adaptive-forms}
 
-本教學課程將逐步引導您完成建立多索引標籤「最適化表單」的步驟。 您將瞭解如何使用表格、摺疊式面板版面配置和規則編輯器來編寫商業規則。
+本教程将指导您完成创建多选项卡式自适应表单所涉及的步骤。 您将学习使用表、折叠布局和规则编辑器来创作业务规则。
 
-最適化表單可讓您建立吸引人、回應式、動態且最適化的表單。 AEM Forms提供直覺式使用者介面和現成元件，用於建立和使用調適型表單。 您可以選擇根據表單模型或結構描述或不使用表單模型來建立最適化表單。 请务必仔细选择不仅符合您的要求，而且可扩展现有基础设施投资和资产的表单模型。
+自适应表单允许您创建有吸引力、响应式、动态和自适应的Forms。 AEM Forms为创建和使用自适应表单提供了直观的用户界面和现成的组件。 您可以选择基于表单模型或架构创建自适应表单，也可以选择不使用表单模型。 请务必仔细选择不仅符合您的要求，而且可扩展现有基础设施投资和资产的表单模型。
 
-本教學課程在建立最適化表單時未使用任何表單模型。
+本教程在创建自适应表单时不使用任何表单模型。
 
 ## 前提条件 {#prerequisites}
 
-您將需要下列專案：
+您将需要以下各项：
 
-* 已安裝表單附加元件套件的AEM有效執行個體
+* 已安装表单附加组件包的AEM工作实例
 
-* **假設您在localhost：4502上執行AEM Forms 6.4版或更新版本。**
+* **假定您运行的是localhost：4502上的AEM Forms版本6.4或更高版本。**
 
-* [下載client-libs-and-logo](assets/client-libs-and-logo.zip) 和 [getting-started — 片段](assets/getting-started-fragment.zip) 至您的硬碟。
+* [下载client-libs-and-logo](assets/client-libs-and-logo.zip) 和 [getting-started-fragment](assets/getting-started-fragment.zip) 到您的硬盘上。
 
-* 使用將zip檔案匯入AEM [封裝管理員 ](http://localhost:4502/crx/packmgr/index.jsp)
+* 使用以下方式将zip文件导入AEM [包管理器 ](http://localhost:4502/crx/packmgr/index.jsp)
 
 ## 后续步骤
 
-[建立最適化表單範本](./create-adaptive-form-template.md)
+[创建自适应表单模板](./create-adaptive-form-template.md)

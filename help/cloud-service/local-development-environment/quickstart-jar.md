@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Quickstart Jar
-description: 瞭解如何使用AEM Quickstart Jar在幾分鐘內安裝並執行Adobe Experience Manager的本機執行個體。 AEM Quickstart jar是AEM執行階段，可以安裝在本機電腦上執行。
+title: 使用AEM快速入门Jar
+description: 了解如何使用AEM Quickstart jar在几分钟内安装和运行Adobe Experience Manager的本地实例。 AEM Quickstart jar是一个AEM运行时，可以在本地计算机上安装和运行。
 topic: Development
 version: Cloud Service
 kt: 4677
@@ -13,10 +13,10 @@ ht-degree: 0%
 ---
 
 
-# 使用AEM Quickstart Jar
+# 使用AEM快速入门Jar
 
-瞭解如何使用AEM Quickstart Jar在幾分鐘內安裝並執行Adobe Experience Manager的本機執行個體。 AEM Quickstart jar是AEM執行階段，可以安裝在本機電腦上執行。
+了解如何使用AEM Quickstart jar在几分钟内安装和运行Adobe Experience Manager的本地实例。 AEM Quickstart jar是一个AEM运行时，可以在本地计算机上安装和运行。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32551?quality=12&learn=on)
 
-如需更詳細的設定
+有关更详细的设置

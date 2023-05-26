@@ -1,6 +1,6 @@
 ---
-title: 手動啟動步驟
-description: 如果資料庫初始化無法正常運作，請手動啟動資料庫的步驟
+title: 手动引导的步骤
+description: 如果数据库初始化不起作用，手动引导数据库的步骤
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如果資料庫初始化無法正常運作，請手動啟動程式
+# 如果数据库初始化不起作用，则手动引导的步骤
 
-*此影片會逐步說明在資料庫初始化無法運作時手動啟動的程式。*
+*本视频介绍在数据库初始化不正常时手动引导的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335515?quality=12&learn=on)

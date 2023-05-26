@@ -1,6 +1,6 @@
 ---
-title: 如何為JBoss Admin Console新增管理使用者
-description: 設定JBOSS管理主控台的管理使用者
+title: 如何为JBoss管理控制台添加管理用户
+description: 为JBOSS管理控制台配置管理用户
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何為JBoss Admin Console新增管理使用者
+# 如何为JBoss管理控制台添加管理用户
 
-*本影片逐步解說為JBoss Admin Console新增管理使用者的步驟。*
+*本视频介绍为JBoss Admin Console添加管理用户的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335484?quality=12&learn=on)

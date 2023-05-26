@@ -1,6 +1,6 @@
 ---
-title: AEM Headless和Target個人化
-description: 本教學課程探討如何將AEM內容片段匯出至Adobe Target，然後使用AdobeWeb SDK來個人化Headless體驗。
+title: AEM Headless和Target个性化
+description: 本教程探讨了如何将AEM内容片段导出到Adobe Target，然后使用AdobeWeb SDK将Headless体验个性化。
 version: Cloud Service
 feature: Content Fragments, Integrations
 topic: Personalization, Headless
@@ -17,59 +17,59 @@ ht-degree: 1%
 
 ---
 
-# 使用內容片段個人化AEM Headless體驗
+# 使用内容片段个性化AEM Headless体验
 
 >[!IMPORTANT]
 >
-> AEMas a Cloud Service提供Adobe Experience Manager內容片段匯出至Adobe Target的功能 [發行前通道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=zh-Hans#new-features).
+> 在AEMas a Cloud Service中提供了Adobe Experience Manager内容片段导出到Adobe Target [预发行渠道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=zh-Hans#new-features).
 
 
 
-本教學課程探討如何將AEM內容片段匯出至Adobe Target，然後使用AdobeWeb SDK來個人化Headless體驗。 此 [React WKND應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) 用於探索如何使用內容片段選件將個人化Target活動新增到體驗，以促進WKND冒險。
+本教程探讨了如何将AEM内容片段导出到Adobe Target，然后使用AdobeWeb SDK将Headless体验个性化。 此 [React WKND应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) 用于探索如何使用内容片段选件向体验中添加个性化的Target活动，以促进WKND冒险。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
 
-本教學課程涵蓋設定AEM和Adobe Target的相關步驟：
+本教程介绍了设置AEM和Adobe Target所涉及的步骤：
 
-1. [建立適用於Adobe Target的Adobe IMS設定](#adobe-ims-configuration) 在AEM作者中
-1. [建立Adobe TargetCloud Service](#adobe-target-cloud-service) 在AEM作者中
-1. [將Adobe TargetCloud Service套用至AEM Assets資料夾](#configure-asset-folders) 在AEM作者中
-1. [許可Adobe TargetCloud Service](#permission) 在Adobe Admin Console中
-1. [匯出內容片段](#export-content-fragments) 從AEM Author到Target
-1. [使用內容片段選件建立活動](#activity) 在Adobe Target中
-1. [建立Experience Platform資料流](#datastream-id) 在Experience Platform中
-1. [將個人化整合至以React為基礎的AEM Headless應用程式](#code) 使用AdobeWeb SDK。
+1. [为Adobe Target创建Adobe IMS配置](#adobe-ims-configuration) 在AEM创作中
+1. [创建Adobe TargetCloud Service](#adobe-target-cloud-service) 在AEM创作中
+1. [将Adobe TargetCloud Service应用于AEM Assets文件夹](#configure-asset-folders) 在AEM创作中
+1. [权限Adobe TargetCloud Service](#permission) 在Adobe Admin Console中
+1. [导出内容片段](#export-content-fragments) 从AEM Author到Target
+1. [使用内容片段选件创建活动](#activity) 在Adobe Target中
+1. [创建Experience Platform数据流](#datastream-id) 在Experience Platform中
+1. [将个性化集成到基于React的AEM Headless应用程序中](#code) 使用AdobeWeb SDK。
 
-## Adobe IMS設定{#adobe-ims-configuration}
+## Adobe IMS配置{#adobe-ims-configuration}
 
-有助於在AEM和Adobe Target之間進行驗證的Adobe IMS設定。
+便于在AEM和Adobe Target之间进行身份验证的Adobe IMS配置。
 
-檢閱 [說明檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims.html) 以取得如何建立Adobe IMS設定的逐步指示。
+审核 [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims.html) 有关如何创建Adobe IMS配置的分步说明。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416495/?quality=12&learn=on)
 
 ## Adobe TargetCloud Service{#adobe-target-cloud-service}
 
-在AEM中建立Adobe TargetCloud Service，以促進將內容片段匯出至Adobe Target。
+在AEM中创建Adobe TargetCloud Service，以便于将内容片段导出到Adobe Target。
 
-檢閱 [說明檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html) 以取得如何建立Adobe TargetCloud Service的逐步指示。
+审核 [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html) 有关如何创建Adobe TargetCloud Service的分步说明。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
 
 
-## 設定資產資料夾{#configure-asset-folders}
+## 配置资源文件夹{#configure-asset-folders}
 
-在內容感知設定中設定的Adobe TargetCloud Service，必須套用至包含要匯出至Adobe Target之內容片段的AEM Assets資料夾階層。
+在上下文感知配置中配置的Adobe TargetCloud Service，必须应用于包含要导出到Adobe Target的AEM Assets文件夹层次结构。
 
-+++展開以取得逐步指示
++++有关分步说明，请展开
 
-1. 登入 __AEM作者服務__ 作為DAM管理員
-1. 導覽至 __「資產」>「檔案」__，找出具有 `/conf` 套用至
-1. 選取資產資料夾，然後選取 __屬性__ 從頂端動作列
-1. 選取 __Cloud Services__ 標籤
-1. 確保雲端設定已設定為內容感知設定(`/conf`)包含Adobe Target Cloud Services設定。
-1. 選取 __Adobe Target__ 從 __Cloud Service設定__ 下拉式清單。
-1. 選取 __儲存並關閉__ 在右上方
+1. 登录 __AEM作者服务__ 作为DAM管理员
+1. 导航到 __资产>文件__，找到具有 `/conf` 应用于
+1. 选择资源文件夹，然后选择 __属性__ 从顶部操作栏中
+1. 选择 __Cloud Services__ 选项卡
+1. 确保将云配置设置为上下文感知配置(`/conf`)，其中包含Adobe Target Cloud Services配置。
+1. 选择 __Adobe Target__ 从 __Cloud Service配置__ 下拉菜单。
+1. 选择 __保存并关闭__ 右上角
 
 +++
 
@@ -77,18 +77,18 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416504/?quality=12&learn=on)
 
-## 許可AEM Target整合{#permission}
+## 许可AEM Target集成{#permission}
 
-Adobe Target整合(顯示為developer.adobe.com專案)必須授予 __編輯者__ Adobe Admin Console產品角色，用於將內容片段匯出至Adobe Target。
+作为developer.adobe.com项目显示的Adobe Target集成必须获得 __编辑者__ Adobe Admin Console产品角色，用于将内容片段导出到Adobe Target。
 
-+++展開以取得逐步指示
++++有关分步说明，请展开
 
-1. 以可在Adobe Admin Console中管理Adobe Target產品的使用者身分登入Experience Cloud
-1. 開啟 [Adobe Admin Console](https://adminconsole.adobe.com)
-1. 選取 __產品__ 然後開啟 __Adobe Target__
-1. 於 __產品設定檔__ 索引標籤，選取 __*預設工作區*__
-1. 選取 __API認證__ 標籤
-1. 在此清單中找出您的developer.adobe.com應用程式並設定其 __產品角色__ 至 __編輯者__
+1. 以可在Adobe Admin Console中管理Adobe Target产品的用户的身份登录Experience Cloud
+1. 打开 [Adobe Admin Console](https://adminconsole.adobe.com)
+1. 选择 __产品__ 然后打开 __Adobe Target__
+1. 在 __产品配置文件__ 选项卡，选择 __*默认工作区*__
+1. 选择 __API凭据__ 选项卡
+1. 在此列表中找到您的developer.adobe.com应用程序并设置其 __产品角色__ 到 __编辑者__
 
 +++
 
@@ -96,30 +96,30 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予 __編輯者__
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416505/?quality=12&learn=on)
 
-## 將內容片段匯出至目標{#export-content-fragments}
+## 将内容片段导出到目标{#export-content-fragments}
 
-存在於下的內容片段 [已設定的AEM Assets資料夾階層](#apply-adobe-target-cloud-service-to-aem-assets-folders) 可作為內容片段選件匯出至Adobe Target。 這些內容片段選件（Target中特殊形式的JSON選件）可用於Target活動，在Headless應用程式中提供個人化體驗。
+存在于下的内容片段 [已配置AEM Assets文件夹层次结构](#apply-adobe-target-cloud-service-to-aem-assets-folders) 可导出到Adobe Target作为内容片段选件。 这些内容片段选件（Target中特殊形式的JSON选件）可以在Target活动中使用，以在Headless应用程序中提供个性化体验。
 
-+++展開以取得逐步指示
++++有关分步说明，请展开
 
-1. 登入 __AEM作者__ 作為DAM使用者
-1. 導覽至 __「資產」>「檔案」__，並在「已啟用Adobe Target」資料夾下找到要匯出為JSON至Target的內容片段
-1. 選取要匯出至Adobe Target的內容片段
-1. 選取 __匯出至Adobe Target選件__ 從頂端動作列
-   + 此動作會將內容片段的完全水合JSON表示法以「內容片段選件」的形式匯出至Adobe Target
-   + 可以在AEM中檢閱完全水合的JSON表示法
-      + 選取內容片段
-      + 展開側面板
-      + 選取 __預覽__ 圖示來顯示左側面板
-      + 匯出至Adobe Target的JSON表示會顯示在主檢視中
-1. 登入 [Adobe Experience Cloud](https://experience.adobe.com) 具有Adobe Target的編輯者角色的使用者
-1. 從 [Experience Cloud](https://experience.adobe.com)，選取 __Target__ 從右上方的產品切換器開啟Adobe Target。
-1. 請確定已選取「預設工作區」於 __工作區切換器__ 右上角。
-1. 選取 __選件__ 索引標籤在頂端導覽
-1. 選取 __型別__ 下拉式清單，並選取 __內容片段__
-1. 驗證從AEM匯出的內容片段是否顯示在清單中
-   + 將游標停留在選件上，然後選取 __檢視__ 按鈕
-   + 檢閱 __選件資訊__ 並檢視 __AEM深層連結__ 直接在AEM Author服務中開啟內容片段的
+1. 登录 __AEM创作__ 作为DAM用户
+1. 导航到 __资产>文件__，并在“已启用Adobe Target”文件夹下找到要导出为JSON到Target的内容片段
+1. 选择要导出到Adobe Target的内容片段
+1. 选择 __导出到Adobe Target选件__ 从顶部操作栏中
+   + 此操作将内容片段的完全水合JSON表示形式作为“内容片段选件”导出到Adobe Target
+   + 可以在AEM中查看完全水合的JSON表示形式
+      + 选择内容片段
+      + 展开侧面板
+      + 选择 __预览__ 图标图标
+      + 导出到Adobe Target的JSON表示形式将显示在主视图中
+1. 登录 [Adobe Experience Cloud](https://experience.adobe.com) 具有Adobe Target的“编辑者”角色的用户
+1. 从 [Experience Cloud](https://experience.adobe.com)，选择 __Target__ 从右上方的产品切换器中打开Adobe Target。
+1. 确保在 __工作区切换器__ 右上角。
+1. 选择 __选件__ 选项卡
+1. 选择 __类型__ 下拉列表，然后选择 __内容片段__
+1. 验证从AEM导出的内容片段是否显示在列表中
+   + 将鼠标悬停在选件上，然后选择 __视图__ 按钮
+   + 查看 __选件信息__ 并查看 __AEM深层链接__ 以直接在AEM创作服务中打开内容片段
 
 +++
 
@@ -127,38 +127,38 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予 __編輯者__
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416506/?quality=12&learn=on)
 
-## 使用內容片段選件的Target活動{#activity}
+## 使用内容片段选件的Target活动{#activity}
 
-在Adobe Target中，可建立使用內容片段選件JSON作為內容的活動，允許在Headless應用程式中使用在AEM中建立和管理內容的個人化體驗。
+在Adobe Target中，可以创建使用内容片段选件JSON作为内容的活动，允许在Headless应用程序中通过AEM中创建和管理内容提供个性化体验。
 
-在此範例中，我們使用簡單的A/B活動，但可使用任何Target活動。
+在本例中，我们使用简单的A/B活动，但可以使用任何Target活动。
 
-+++展開以取得逐步指示
++++有关分步说明，请展开
 
-1. 選取 __活動__ 索引標籤在頂端導覽
-1. 選取 __+建立活動__，然後選取要建立的活動型別。
-   + 此範例會建立一個 __A/B測試__ 但內容片段選件可支援任何活動型別
-1. 在 __建立活動__ 精靈
-   + 選取 __Web__
-   + 在 __選擇體驗撰寫器__，選取 __表單__
-   + 在 __選擇工作區__，選取 __預設工作區__
-   + 在 __選擇屬性__，選取活動中可用的屬性，或選取 __無屬性限制__ 以允許在所有「屬性」中使用。
-   + 選取 __下一個__ 建立活動的方式
-1. 透過選取重新命名活動 __重新命名__ 在左上方
-   + 為活動提供有意義的名稱
-1. 在初始體驗中，設定 __位置1__ 針對要定位的活動
-   + 在此範例中，鎖定名為的自訂位置 `wknd-adventure-promo`
-1. 下 __內容__ 選取預設內容，然後選取 __變更內容片段__
-1. 選取要用於此體驗的匯出內容片段，然後選取 __完成__
-1. 檢閱內容文字區域中的內容片段選件JSON，這是透過內容片段的預覽動作在AEM作者服務中提供的相同JSON。
-1. 在左側邊欄中，新增體驗，然後選取要提供的不同內容片段選件
-1. 選取 __下一個__，並視活動需求設定鎖定目標規則
-   + 在此範例中，請將A/B測試保留為手動50/50分割。
-1. 選取 __下一個__，並完成活動設定
-1. 選取 __儲存並關閉__ 並為它取一個有意義的名稱
-1. 在Adobe Target的活動中，選取 __啟動__ 從右上角的「非使用中/啟動/封存」下拉式清單。
+1. 选择 __活动__ 选项卡
+1. 选择 __+创建活动__，然后选择要创建的活动类型。
+   + 此示例创建一个简单的 __A/B测试__ 但内容片段选件可以支持任何活动类型
+1. 在 __创建活动__ 向导
+   + 选择 __Web__
+   + In __选择体验编辑器__，选择 __表单__
+   + In __选择工作区__，选择 __默认工作区__
+   + In __选择属性__，选择活动可用的属性，或选择 __无资产限制__ 以允许在所有“属性”中使用它。
+   + 选择 __下一个__ 创建活动
+1. 通过选择重命名活动 __重命名__ 左上角
+   + 为活动提供一个有意义的名称
+1. 在初始体验中，设置 __位置1__ 针对要定位的活动
+   + 在此示例中，定位名为的自定义位置 `wknd-adventure-promo`
+1. 下 __内容__ 选择默认内容，然后选择 __更改内容片段__
+1. 选择要为此体验提供的导出内容片段，然后选择 __完成__
+1. 查看内容文本区域中的内容片段选件JSON，这是通过内容片段的预览操作在AEM创作服务中提供的相同JSON。
+1. 在左边栏中，添加一个体验，然后选择要提供的其他内容片段选件
+1. 选择 __下一个__，并根据活动需要配置定位规则
+   + 在此示例中，将A/B测试保留为手动的50/50拆分。
+1. 选择 __下一个__，并完成活动设置
+1. 选择 __保存并关闭__ 给它取个有意义的名称
+1. 在Adobe Target的活动中，选择 __激活__ 从右上角的非活动/激活/存档下拉菜单中。
 
-鎖定目標的Adobe Target活動 `wknd-adventure-promo` 位置現在可以在AEM Headless應用程式中整合和公開。
+定位的Adobe Target活动 `wknd-adventure-promo` 位置现在可以在AEM Headless应用程序中集成和公开。
 
 +++
 
@@ -166,29 +166,29 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予 __編輯者__
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416507/?quality=12&learn=on)
 
-## Experience Platform資料串流ID{#datastream-id}
+## Experience Platform的数据流ID{#datastream-id}
 
-一個 [Adobe Experience Platform資料串流](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html) AEM Adobe Target Headless應用程式需要ID才能使用 [AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html).
+An [Adobe Experience Platform数据流](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html) AEM Adobe Target Headless应用程序需要ID才能使用 [AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html).
 
-+++展開以取得逐步指示
++++有关分步说明，请展开
 
-1. 導覽至 [Adobe Experience Cloud](https://experience.adobe.com/)
-1. 開啟 __Experience Platform__
-1. 選取 __資料收集>資料串流__ 並選取 __新增資料串流__
-1. 在「新增資料流」精靈中，輸入：
+1. 导航到 [Adobe Experience Cloud](https://experience.adobe.com/)
+1. 打开 __Experience Platform__
+1. 选择 __数据收集>数据流__ 并选择 __新建数据流__
+1. 在“新建数据流”向导中，输入：
    + 名称: `AEM Target integration`
    + 描述: `Datastream used by the Adobe Web SDK to serve personalized Content Fragments Offers.`
-   + 事件結構描述： `Leave blank`
-1. 選取 __儲存__
-1. 選取 __新增服務__
-1. 在 __服務__ 選取 __Adobe Target__
-   + 已啟用： __是__
-   + 屬性代號： __留空__
-   + 目標環境ID： __留空__
-      + 可在Adobe Target中設定目標環境，網址為 __管理>主機__.
-   + Target第三方ID名稱空間： __留空__
-1. 選取 __儲存__
-1. 在右側，複製 __資料串流ID__ 用於 [AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html) 設定呼叫。
+   + 事件架构： `Leave blank`
+1. 选择 __保存__
+1. 选择 __添加服务__
+1. In __服务__ 选择 __Adobe Target__
+   + 已启用： __是__
+   + 资产令牌： __留空__
+   + 目标环境ID： __留空__
+      + 可在Adobe Target中设置目标环境，网址为 __管理>主机__.
+   + 目标第三方ID命名空间： __留空__
+1. 选择 __保存__
+1. 在右侧，复制 __数据流ID__ 在中使用 [AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html) 配置调用。
 
 +++
 
@@ -196,29 +196,29 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予 __編輯者__
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416500/?quality=12&learn=on)
 
-## 將個人化新增至AEM Headless應用程式{#code}
+## 向AEM Headless应用程序添加个性化设置{#code}
 
-本教學課程透過以下方式，探索使用Adobe Target中的內容片段選件來個人化簡單的React應用程式 [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html). 此方法可用於個人化任何以JavaScript為基礎的網頁體驗。
+本教程探讨了如何在Adobe Target中使用“内容片段选件”，通过以下方式个性化一个简单的React应用程序 [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html). 此方法可用于个性化任何基于JavaScript的Web体验。
 
-Android™和iOS行動體驗可透過以下類似模式進行個人化： [Adobe的行動SDK](https://developer.adobe.com/client-sdks/documentation/).
+Android™和iOS移动体验可以使用以下类似模式进行个性化 [Adobe的移动SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ### 前提条件
 
 + Node.js 14
 + Git
-+ [WKND共用2.1.4+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) 安裝在AEM as a Cloud製作和發佈服務上
++ [WKND共享2.1.4+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) 安装在AEM as a Cloud创作和发布服务上
 
-### 設定
+### 设置
 
-1. 從下載範例React應用程式的原始碼 [Github.com](https://github.com/adobe/aem-guides-wknd-graphql)
+1. 从下载示例React应用程序的源代码 [Github.com](https://github.com/adobe/aem-guides-wknd-graphql)
 
    ```shell
    $ mkdir -p ~/Code
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 開啟程式碼基底於 `~/Code/aem-guides-wknd-graphql/personalization-tutorial` 在您最愛的IDE中
-1. 更新您要應用程式連線的AEM服務主機 `~/Code/aem-guides-wknd-graphql/personalization-tutorial/src/.env.development`
+1. 打开代码库位置 `~/Code/aem-guides-wknd-graphql/personalization-tutorial` 在您最喜爱的IDE中
+1. 更新您希望应用程序连接到的AEM服务主机 `~/Code/aem-guides-wknd-graphql/personalization-tutorial/src/.env.development`
 
    ```
    ...
@@ -226,7 +226,7 @@ Android™和iOS行動體驗可透過以下類似模式進行個人化： [Adobe
    ...
    ```
 
-1. 執行應用程式，並確保其連線至設定的AEM服務。 從命令列，執行：
+1. 运行应用程序，并确保它连接到配置的AEM服务。 在命令行中，执行：
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/personalization-tutorial
@@ -234,21 +234,21 @@ Android™和iOS行動體驗可透過以下類似模式進行個人化： [Adobe
    $ npm run start
    ```
 
-1. 安裝 [AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html#option-3%3A-using-the-npm-package) 作為NPM套件。
+1. 安装 [AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html#option-3%3A-using-the-npm-package) 作为NPM包。
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/personalization-tutorial
    $ npm install @adobe/alloy
    ```
 
-   Web SDK可用於程式碼中，以依活動位置擷取內容片段選件JSON。
+   Web SDK可用于代码中，以按活动位置获取内容片段选件JSON。
 
-   設定Web SDK時，需要兩個ID：
+   配置Web SDK时，需要两个ID：
 
-   + `edgeConfigId` 這就是 [資料串流ID](#datastream-id)
-   + `orgId` AEMas a Cloud Service/TargetAdobe組織ID可在以下網址找到： __Experience Cloud>設定檔>帳戶資訊>目前組織ID__
+   + `edgeConfigId` 即 [数据流ID](#datastream-id)
+   + `orgId` AEMas a Cloud Service/TargetAdobe组织ID，可在 __Experience Cloud>配置文件>帐户信息>当前组织ID__
 
-   叫用Web SDK時，Adobe Target活動位置(在我們的範例中， `wknd-adventure-promo`)必須設定為 `decisionScopes` 陣列。
+   调用Web SDK时，Adobe Target活动位置(在我们的示例中， `wknd-adventure-promo`)必须设置为 `decisionScopes` 数组。
 
    ```javascript
    import { createInstance } from "@adobe/alloy";
@@ -260,7 +260,7 @@ Android™和iOS行動體驗可透過以下類似模式進行個人化： [Adobe
 
 ### 实施
 
-1. 建立React元件 `AdobeTargetActivity.js` 以顯示Adobe Target活動。
+1. 创建React组件 `AdobeTargetActivity.js` 显示Adobe Target活动。
 
    __src/components/AdobeTargetActivity.js__
 
@@ -343,15 +343,15 @@ Android™和iOS行動體驗可透過以下類似模式進行個人化： [Adobe
    };
    ```
 
-   使用叫用AdobeTargetActivity React元件，如下所示：
+   使用以下方式调用AdobeTargetActivity React组件：
 
    ```jsx
    <AdobeTargetActivity activityLocation={"wknd-adventure-promo"} OfferComponent={AdventurePromo}/>
    ```
 
-1. 建立React元件 `AdventurePromo.js` 以呈現JSON Adobe Target提供的冒險活動。
+1. 创建React组件 `AdventurePromo.js` 来演绎冒险JSON Adobe Target的作品。
 
-   此React元件採用完全水合的JSON來表示冒險內容片段，並以促銷方式顯示。 根據匯出至Adobe Target的內容片段，顯示從Adobe Target內容片段選件提供JSON服務的React元件可能視需要而多樣且複雜。
+   此React组件采用完全水合的JSON，表示冒险内容片段，并以促销方式显示。 根据导出到Adobe Target的内容片段，显示从Adobe Target内容片段选件提供的JSON服务的React组件可以视需要而有所不同，也非常复杂。
 
    __src/components/AdventurePromo.js__
 
@@ -431,13 +431,13 @@ Android™和iOS行動體驗可透過以下類似模式進行個人化： [Adobe
    }
    ```
 
-   叫用此React元件的方式如下：
+   按如下方式调用此React组件：
 
    ```jsx
    <AdventurePromo adventure={adventureJSON}/>
    ```
 
-1. 將AdobeTargetActivity元件新增至React應用程式的 `Home.js` 在冒險清單之上。
+1. 将AdobeTargetActivity组件添加到React应用程序的 `Home.js` 在冒险清单之上。
 
    __src/components/Home.js__
 
@@ -458,14 +458,14 @@ Android™和iOS行動體驗可透過以下類似模式進行個人化： [Adobe
    }
    ```
 
-1. 如果React應用程式未執行，請使用 `npm run start`.
+1. 如果React应用程序未运行，请使用 `npm run start`.
 
-   在兩種不同的瀏覽器中開啟React應用程式，以允許A/B測試向每個瀏覽器提供不同的體驗。 如果兩個瀏覽器顯示相同的冒險選件，請嘗試關閉/重新開啟其中一個瀏覽器，直到顯示另一個體驗。
+   在两种不同的浏览器中打开React应用程序，以便允许A/B测试向每个浏览器提供不同的体验。 如果两个浏览器显示相同的冒险选件，请尝试关闭/重新打开其中一个浏览器，直到显示另一个体验。
 
-   下圖顯示兩個不同的內容片段選件，分別用於 `wknd-adventure-promo` 活動，根據Adobe Target的邏輯。
+   下图显示了为显示的两个不同的内容片段选件 `wknd-adventure-promo` 活动，基于Adobe Target的逻辑。
 
-   ![體驗選件](./assets/target/offers-in-app.png)
+   ![体验选件](./assets/target/offers-in-app.png)
 
 ## 恭喜！
 
-現在我們已將AEMas a Cloud Service設定為將內容片段匯出至Adobe Target、在Adobe Target活動中使用內容片段選件，並在AEM Headless應用程式中顯示該活動，進而個人化體驗。
+现在，我们已将AEMas a Cloud Service配置为将内容片段导出到Adobe Target，已在Adobe Target活动中使用内容片段选件，并在AEM Headless应用程序中显示该活动，从而个性化体验。

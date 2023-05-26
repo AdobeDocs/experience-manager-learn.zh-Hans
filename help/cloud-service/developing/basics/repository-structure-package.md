@@ -1,6 +1,6 @@
 ---
-title: 什麼是AEM專案中的存放庫結構套件？
-description: 探索AEM應用程式的存放庫結構套件、其重要性以及如何正確定義它。
+title: AEM项目中的存储库结构包是什么？
+description: 探索AEM应用程序的存储库结构包、其重要性以及如何正确定义它。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -16,8 +16,8 @@ ht-degree: 14%
 
 ---
 
-# 存放庫結構套件
+# 存储库结构包
 
-探索AEM應用程式的 [存放庫結構套件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html)、其重要性以及如何以最佳方式定義它。
+浏览AEM应用程序的 [存储库结构包](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html)、其重要性和如何对其进行最佳定义。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330550?quality=12&learn=on)

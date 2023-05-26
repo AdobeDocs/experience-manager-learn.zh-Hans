@@ -1,6 +1,6 @@
 ---
-title: AEM服務認證
-description: 從AEM開發人員控制檯下載服務認證。
+title: AEM服务凭据
+description: 从AEM开发人员控制台下载服务凭据。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,10 +16,10 @@ ht-degree: 0%
 
 ---
 
-# 服務認證
+# 服务凭据
 
-與AEMas a Cloud Service的整合必須能夠安全地向AEM進行驗證。 AEM開發人員控制檯會產生服務憑證，外部應用程式、系統和服務會使用這些憑證，以程式設計方式透過HTTP與AEM作者或發佈服務互動。
+与AEMas a Cloud Service的集成必须能够安全地向AEM进行身份验证。 AEM开发人员控制台生成服务凭据，外部应用程序、系统和服务使用这些凭据以编程方式通过HTTP与AEM创作或发布服务进行交互。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
-下載的服務認證檔案會儲存為所提供eclipse中名為service_token.json的資源檔案。 service_token檔案中的值用於產生JWT並將JWT交換為存取權杖。 公用程式類別GetServiceCredentials是用來從service_token.json資源檔案擷取屬性值。
+下载的服务凭据文件作为名为service_token.json的资源文件存储在提供的eclipse中。 service_token文件中的值用于生成JWT并将JWT交换为访问令牌。 实用程序类GetServiceCredentials用于从service_token.json资源文件中获取属性值。

@@ -1,7 +1,7 @@
 ---
-title: 建立表單資料模型
+title: 创建表单数据模型
 seo-title: Creating Form Data Model
-description: 這是建立第一個互動式通訊檔案的多步驟教學課程的第3部分。 在本部分中，我們將建立「表單資料模型」。 表單資料模型可讓您設定並連線至不同的資料來源。它提供直覺式使用者介面，可跨連線的資料來源建立業務實體和服務的統一資料表示架構。以下影片會逐步解說建立表單資料模型的步驟。
+description: 这是创建您的第一个交互式通信文档的多步教程的第3部分。 在本部分中，我们将创建表单数据模型。 表单数据模型允许您配置和连接到不同的数据源。它提供了一个直观的用户界面，用于跨连接的数据源创建业务实体和服务的统一数据表示架构。以下视频介绍了创建表单数据模型的步骤。
 seo-description: This is part 3 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create Form Data Model. Form Data Model allows you to configure and connect to disparate data sources.It provides an intuitive user interface to create a unified data representation schema of business entities and services across connected data sources. The following video walks through the steps to create Form Data Model.
 uuid: 4cba42f3-860a-4bd3-b4b0-79c63195b36d
 feature: Interactive Communication
@@ -23,20 +23,20 @@ ht-degree: 0%
 
 ---
 
-# 建立表單資料模型
+# 创建表单数据模型
 
-在本部分中，我們將建立「表單資料模型」。 表單資料模型可讓您設定並連線至不同的資料來源。它提供直覺式使用者介面，以跨連線的資料來源建立商業實體和服務的統一資料呈現結構描述。 以下影片會逐步介紹建立表單資料模型的步驟。
+在本部分中，我们将创建表单数据模型。 表单数据模型允许您配置和连接到不同的数据源。它提供了一个直观的用户界面，用于跨连接的数据源创建业务实体和服务的统一数据表示架构。 以下视频介绍创建表单数据模型的步骤。
 
-**在AEM Forms中建立表單資料模型**
+**在AEM Forms中创建表单数据模型**
 
 >[!VIDEO](https://video.tv.adobe.com/v/27763?quality=12&learn=on)
 
-表單資料模型需視正確設定的資料來源而定。 我們使用先前步驟中設定的資料來源作為此表單資料模型的基礎。
+表单数据模型依赖于正确配置的数据源。 我们使用上一步中配置的数据源作为此表单数据模型的基础。
 
-表單資料模型是所有互動式通訊的基礎。 表單資料模型的取得/讀取作業會從後端資料來源擷取資料，並用來填入互動式通訊檔案。
+表单数据模型是所有交互式通信的基础。 表单数据模型的获取/读取操作从后端数据源获取数据，并用于填充交互式通信文档。
 
-建立表單資料模型後，您就可以用它作為建立檔案片段和互動式通訊檔案的基礎。
+创建表单数据模型后，您可以将其用作创建文档片段和交互式通信文档的基础。
 
 ## 后续步骤
 
-[使用設計工具建立範本](./create-xdp-layout-using-forms-designer.md)
+[使用设计器创建模板](./create-xdp-layout-using-forms-designer.md)

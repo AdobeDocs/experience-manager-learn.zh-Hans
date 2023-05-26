@@ -1,5 +1,5 @@
 ---
-title: 使用AdobeCloud Manager - CI/CD非生產管道
+title: 使用AdobeCloud Manager - CI/CD非生产管道
 description: CI/CD 非生产管道分为两个类别：代码质量管道和部署管道。代码质量管道从 Git 分支获取所有代码以生成并对照 Cloud Manager 的代码质量扫描接受评估。部署管道支持将代码从 Git 存储库自动部署到任意非生产环境，这意味着任何已配置的 AEM 环境不是暂存环境或生产环境。
 topics: Administration
 audience: administrator
@@ -19,7 +19,7 @@ ht-degree: 93%
 
 ---
 
-# 使用AdobeCloud Manager - CI/CD生產管道 {#using-adobe-cloud-manager-ci-cd-production-pipeline}
+# 使用AdobeCloud Manager - CI/CD生产管道 {#using-adobe-cloud-manager-ci-cd-production-pipeline}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_nonprodpipeline"

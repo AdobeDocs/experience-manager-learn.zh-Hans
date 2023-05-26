@@ -1,6 +1,6 @@
 ---
-title: 搭配AEM Forms工作流程使用LDAP
-description: 指派AEM Forms工作流程任務給提交者的管理員
+title: 在AEM Forms工作流程中使用LDAP
+description: 将AEM Forms工作流任务分配给提交者的管理器
 feature: Adaptive Forms, Workflow
 topic: Integrations
 role: Developer
@@ -15,29 +15,29 @@ ht-degree: 0%
 
 ---
 
-# 搭配AEM Forms工作流程使用LDAP
+# 在AEM Forms工作流程中使用LDAP
 
-指派AEM Forms工作流程任務給提交者的管理員。
+将AEM Forms工作流任务分配给提交者的经理。
 
-在AEM工作流程中使用最適化表單時，您會想要動態地將任務指派給表單提交者的管理員。 為了完成此使用案例，我們必須使用Ldap設定AEM。
+在AEM Workflow中使用自适应表单时，您需要将任务动态分配给表单提交者的经理。 要完成此用例，我们必须使用Ldap配置AEM。
 
-有關使用LDAP設定AEM所需步驟的說明，請參閱 [詳細資訊。](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
+有关使用LDAP配置AEM所需步骤的说明，请参见 [详情见此处。](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
 
-出於本文的目的，我附加了使用Adobe Ldap設定AEM時使用的設定檔案。 這些檔案包含在套件中，可使用套件管理員匯入這些檔案。
+出于本文的目的，我附加了使用AdobeLDAP配置AEM时使用的配置文件。 这些文件包含在包中，可使用包管理器导入这些文件。
 
-在下方熒幕擷圖中，我們將擷取屬於特定成本中心的所有使用者。 如果您想要擷取LDAP中的所有使用者，則不能使用額外的篩選器。
+在下面的屏幕快照中，我们将获取属于某个特定成本中心的所有用户。 如果要获取LDAP中的所有用户，则不能使用额外的筛选器。
 
-![LDAP設定](assets/costcenterldap.gif)
+![LDAP配置](assets/costcenterldap.gif)
 
-在下方熒幕擷圖中，我們將群組指派給從LDAP擷取到AEM的使用者。 請注意指派給匯入使用者的表單 — 使用者群組。 使用者必須是此群組的成員，才能與AEM Forms互動。 我們也會將管理員屬性儲存在AEM中的設定檔/管理員節點下。
+在下面的屏幕快照中，我们将这些组分配给从LDAP获取到AEM中的用户。 请注意分配给导入用户的表单 — 用户组。 用户需要成为此组的成员才能与AEM Forms交互。 我们还将manager属性存储在AEM中的profile/manager节点下。
 
 ![Synchandler](assets/synchandler.gif)
 
-設定LDAP並將使用者匯入AEM後，我們就可以建立工作流程，將任務指派給提交者的管理員。 為了撰寫本文章的目的，我們已開發一個簡單的單步驟核准工作流程。
+配置LDAP并将用户导入AEM后，我们可以创建一个工作流，将任务分配给提交者的管理器。 为此，我们开发了一个简单的一步式审批工作流。
 
-工作流程的第一步是將initialstep的值設定為「否」。 最適化表單中的商業規則將停用「提交者詳細資料」面板，並根據初始步驟值顯示「核准者」面板。
+工作流中的第一个步骤将initialstep的值设置为“否”。 自适应表单中的业务规则将禁用“提交者详细信息”面板，并根据初始步骤值显示“批准者”面板。
 
-第二個步驟會將任務指派給提交者的管理員。 我們會使用自訂程式碼來取得提交者的管理員。
+第二个步骤将任务分配给提交者的管理器。 我们使用自定义代码获取提交者的经理。
 
 ![分配任务](assets/assigntask.gif)
 
@@ -55,25 +55,25 @@ String managerPorperty = workflowInitiator.getProperty("profile/manager")[0].get
 }
 ```
 
-程式碼片段負責擷取管理員ID並將任務指派給管理員。
+代码段负责获取管理器ID并将任务分配给管理器。
 
-我們掌握啟動工作流程的人員。 然後我們取得管理員屬性的值。
+我们将联系启动工作流的用户。 然后，我们获取管理器属性的值。
 
-視管理員屬性儲存在LDAP中的方式而定，您可能必須執行一些字串操作才能取得管理員ID。
+根据Manager属性在LDAP中的存储方式，您可能需要执行一些字符串操作才能获取管理器ID。
 
-請閱讀本文章以實作您自己的 [  參與者選擇器。](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
+请阅读本文章以实施您自己的 [  参与者选择器。](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
 
-要在您的系統上測試此專案(對於Adobe員工，您可以立即使用此範例)
+要在您的系统上对此进行测试(对于Adobe员工，您可以开箱即用此示例)
 
-* [下載和部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 這是用於設定管理員屬性的自訂OSGI套件組合。
-* [下載並安裝DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* [使用封裝管理程式，將與本文相關的資產匯入AEM](assets/aem-forms-ldap.zip).LDAP組態檔、工作流程以及最適化表單都包含在此套件中。
-* 使用適當的LDAP認證設定AEM與LDAP。
-* 使用您的LDAP憑證登入AEM。
-* 開啟 [timeoffrequestform](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
-* 填寫表單並提交。
-* 提交者的經理應取得表單以供檢閱。
+* [下载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 这是用于设置管理器的属性的自定义OSGI包。
+* [下载并安装DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [使用包管理器将与本文关联的资源导入AEM](assets/aem-forms-ldap.zip).作为此包的一部分，包括LDAP配置文件、工作流和自适应表单。
+* 使用适当的LDAP凭据在LDAP中配置AEM。
+* 使用您的LDAP凭据登录AEM。
+* 打开 [timeoffrequestform](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* 填写表单并提交。
+* 提交者的经理应获取表单以供审阅。
 
 >[!NOTE]
 >
->此用於擷取管理員名稱的自訂程式碼已針對AdobeLDAP進行測試。 如果您要針對不同的LDAP執行此程式碼，您必須修改或撰寫您自己的getParticipant實作才能取得管理員名稱。
+>此用于提取管理器名称的自定义代码已针对AdobeLDAP进行了测试。 如果您要针对其他LDAP执行此代码，则必须修改或编写自己的getParticipant实施才能获取经理的名称。

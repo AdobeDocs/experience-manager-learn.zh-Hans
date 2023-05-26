@@ -1,6 +1,6 @@
 ---
-title: 使用Workfront for AEM增強型聯結器的Workfront自訂表單和中繼資料對應
-description: 瞭解如何設定Workfront和AEM Assets，以使用Workfront自訂表單和AEM中繼資料結構描述來管理和同步資產中繼資料。
+title: Workfront自定义表单和元数据映射与Workfront for AEM增强型连接器
+description: 了解如何配置Workfront和AEM Assets以使用Workfront自定义表单和AEM元数据架构管理和同步资源元数据。
 version: Cloud Service
 topic: Content Management, Integrations
 role: Admin, Architect, Developer
@@ -16,12 +16,12 @@ ht-degree: 0%
 
 ---
 
-# Workfront自訂表單和中繼資料對應
+# Workfront自定义表单和元数据映射
 
 ![AEM Experts系列](./assets/banner.png)
 
-瞭解如何設定Workfront和AEM Assets，以使用Workfront自訂表單和AEM中繼資料結構描述來管理和同步資產中繼資料。
+了解如何配置Workfront和AEM Assets以使用Workfront自定义表单和AEM元数据架构管理和同步资源元数据。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340332?quality=12&learn=on)
 
-_a的第二部分 [Workfront for Experience Manager增強型聯結器的四部分專家系列](./overview.md)_
+_a的第二部分 [关于Workfront for Experience Manager增强型连接器的四部分专家系列](./overview.md)_

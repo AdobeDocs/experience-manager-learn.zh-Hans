@@ -1,6 +1,6 @@
 ---
-title: AEM工作流程中的變數[Part2]
-description: 在AEM工作流程中使用XML、JSON、ArrayList、檔案型別的變數
+title: AEM Workflow[Part2]中的变量
+description: 在AEM工作流中使用XML、JSON、ArrayList、文档类型的变量
 version: 6.5
 topic: Development
 role: Developer
@@ -13,27 +13,27 @@ ht-degree: 0%
 
 ---
 
-# AEM Workflow中JSON型別的變數
+# AEM Workflow中的JSON类型变量
 
-從AEM Forms 6.5開始，我們現在可以在AEM Workflow中建立JSON型別的變數。 通常，如果您根據JSON結構描述提交最適化Forms至AEM Workflow，或想要儲存表單資料模型叫用作業的結果，則會建立JSON型別的變數。 以下影片將逐步說明在AEM工作流程中建立及使用JSON型別變數所需的步驟
+从AEM Forms 6.5开始，我们现在可以在AEM Workflow中创建JSON类型的变量。 通常，如果您将基于JSON架构的自适应Forms提交到AEM Workflow，或者希望存储表单数据模型调用操作的结果，则您将创建JSON类型的变量。 以下视频将指导您完成在AEM工作流中创建和使用JSON类型变量所需的步骤
 
 **如果使用AEM Forms 6.5.0**
 
-建立JSON型別的變數來擷取工作流程模型中提交的資料時，請勿將JSON結構描述與變數建立關聯。 這是因為當您提交以JSON結構描述為基礎的最適化表單時，提交的資料與JSON結構描述不相容。 JSON結構描述投訴資料包含在afData.afBoundData.data元素中。
+创建类型为JSON的变量以在工作流模型中捕获提交的数据时，请勿将JSON架构与变量关联。 这是因为当您提交基于JSON架构的自适应表单时，提交的数据不符合JSON架构。 JSON架构投诉数据包含在afData.afBoundData.data元素中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26444?quality=12&learn=on)
 
 
 **如果使用AEM Forms 6.5.1及更高版本**
 
-您可以在工作流程模型中將結構描述與JSON型別的變數對應。 然後，您可以使用結構描述瀏覽器將結構描述元素與工作流程模型中的字串/數字變數對應
+您可以在工作流模型中使用JSON类型的变量映射架构。 然后，您可以使用架构浏览器将架构元素映射到工作流模型中的字符串/数字变量
 
 >[!VIDEO](https://video.tv.adobe.com/v/28097?quality=12&learn=on)
 
-若要讓資產在您的系統上運作，請遵循下列步驟：
+要使资源在您的系统上正常工作，请执行以下步骤：
 
-* [使用封裝管理程式下載資產並將其匯入AEM](assets/jsonandstringvariable.zip)
-* [探索工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html) 瞭解工作流程中使用的變數
-* [設定電子郵件服務](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
-* [開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/afbasedonjson/jcr:content?wcmmode=disabled)
-* 填寫詳細資料並提交表單
+* [使用包管理器下载资产并将其导入AEM](assets/jsonandstringvariable.zip)
+* [浏览工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html) 了解工作流中使用的变量
+* [配置电子邮件服务](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
+* [打开自适应表单](http://localhost:4502/content/dam/formsanddocuments/afbasedonjson/jcr:content?wcmmode=disabled)
+* 填写详细信息并提交表单

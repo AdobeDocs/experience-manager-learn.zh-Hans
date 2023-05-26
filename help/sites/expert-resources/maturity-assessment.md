@@ -1,7 +1,7 @@
 ---
-title: 您的AEM Sites成熟度評估
+title: 您的AEM Sites成熟度评估
 seo-title: AEM Sites Maturity Assessment
-description: 此檢查清單提供您和您的團隊在評估AEM Sites執行個體成熟度時應回答的關鍵問題概述
+description: 此清单概述了您和您的团队在评估AEM Sites实例的成熟度时应回答的关键问题
 seo-description: This checklist provides an overview of key questions you and your team should be answering when evaluating the maturity of your AEM Sites instance
 audience: author, marketer, developer
 exl-id: 22164a0e-7239-43f4-8356-c12f68133255
@@ -12,26 +12,26 @@ ht-degree: 0%
 
 ---
 
-# 您的AEM Sites成熟度評估檢查清單
+# 您的AEM Sites成熟度评估清单
 
-評估AEM Sites執行個體的目前狀態可能會讓您感到不知所措。 一般來說，最佳開始做法是稽核您的執行個體，現在您可以使用這個成熟度評估檢查清單來引導您完成此程式！
+评估AEM Sites实例的当前状态可能会让人觉得不知所措。 通常，最好的开始做法是审核您的实例，现在您可以使用这个成熟度评估清单来指导您完成此过程！
 
-[下載檢查清單](assets/AEM-Sites-Maturity-Assessment.xlsx)
+[下载核对清单](assets/AEM-Sites-Maturity-Assessment.xlsx)
 
-AEM成熟度評估主要針對內部部署和託管服務實作。 每個AEM實作都是獨一無二的，原因在於每個客戶在探索階段和上線至AEM部署階段期間都設定了成功定義和目標。 成熟度評估在上線後的健康狀態檢查中發揮作用。
+AEM成熟度评估主要针对内部部署和托管服务实施。 由于每个客户在发现阶段以及一直到AEM部署阶段的预先载入过程中都设定了成功定义和目标，因此每个AEM实施都是唯一的。 成熟度评估在上线后的运行状况检查中发挥作用。
 
-成熟度評估可讓您進行評估並符合AEM標準和最佳實務。
+成熟度评估有助于评估并遵循AEM标准和最佳实践。
 
-如需管理、開發或撰寫的最佳實務，請參閱下列資源：
+有关管理、开发或创作的最佳实践，请参阅以下资源：
 
-* [管理最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/bestpractices/administer-best-practices.html?lang=en)
-* [開發最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=en)
-* [製作最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/best-practices.html?lang=en)
+* [管理最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/administering/bestpractices/administer-best-practices.html?lang=en)
+* [制定最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=en)
+* [创作最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/best-practices.html?lang=en)
 
-上述每一個最佳實務領域也包含編寫、開發和部署AEM的進一步最佳實務。
+上述每个最佳实践领域还都包括创作、开发和部署AEM方面的更多最佳实践。
 
-在大多數情況下，AEM成熟度評估將有助於執行AEM最佳實務的診斷性審查，並產生主動發現、解決和預防潛在問題的藍圖。 建議與同時是AEM實施探索階段(AEM移轉前)一部分的團隊完成評估。 應涉及的角色包括：應用程式擁有者、網站擁有者、開發團隊、技術負責人、安全性/基礎架構團隊、SEO團隊和支援團隊（例如內容作者、管理員）。
+在大多数情况下，AEM成熟度评估将有助于对AEM最佳实践进行诊断性审查，并产生一个用于主动发现、解决和预防潜在问题的路线图。 建议与还属于AEM实施发现阶段(AEM前迁移)的团队一起完成评估。 应涉及的角色包括：应用程序所有者、站点所有者、开发团队、技术负责人、安全/基础架构团队、SEO团队和支持团队（例如内容作者、管理员）。
 
-建議的AEM成熟度評估重點領域：設計和架構、產品管理和策略、數位資產管理和交付、分析、測試和安全性。
+建议的AEM成熟度评估重点领域：设计和架构、产品管理和策略、数字资产管理和交付、分析、测试和安全性。
 
-向AEM Champion Greg Dimeris發出巨大呼籲，要求他從多個Experience League文章中彙集此資訊和他的最佳實務！
+强烈呼吁AEM Champion Greg Dimeris从多篇Experience League文章中聚合此信息以及他自己的最佳实践！

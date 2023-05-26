@@ -1,6 +1,6 @@
 ---
-title: AEM Dispatcher清除
-description: 瞭解AEM如何讓來自Dispatcher的舊快取檔案失效。
+title: AEM Dispatcher刷新
+description: 了解AEM如何使Dispatcher中的旧缓存文件失效。
 version: 6.5
 topic: Administration
 feature: Dispatcher
@@ -15,82 +15,82 @@ ht-degree: 0%
 
 ---
 
-# Dispatcher虛名URL
+# Dispatcher虚URL
 
 [目录](./overview.md)
 
-[&lt; — 上一步：使用及瞭解變數](./variables.md)
+[&lt; — 上一步：使用和了解变量](./variables.md)
 
-本檔案將提供有關排清發生的方式，並解釋執行快取排清和失效的機制。
+本文档将提供刷新的发生方式，并解释执行缓存刷新和失效的机制。
 
 
-## 運作方式
+## 工作原理
 
-### 作業順序
+### 操作顺序
 
-對典型的工作流程的最佳說明是，當內容作者啟動頁面時，發佈商收到新內容時會觸發對Dispatcher的排清請求，如下圖所示：
-![作者啟用內容，這會觸發發佈者傳送排清請求給Dispatcher](assets/disp-flushing/dispatcher-flushing-order-of-events.png "dispatcher-flushing-order-of-events")
-此事件鏈結強調我們僅在專案是新的或已變更時排清專案。  這可確保在清除快取之前發行者已收到內容，以避免在發行者能夠擷取變更之前可能發生排清的競爭條件。
+对典型的工作流的最佳描述是，当内容作者激活页面时，发布者收到新内容时，会触发对Dispatcher的刷新请求，如下图所示：
+![作者激活内容，这会触发发布者发送刷新请求到Dispatcher](assets/disp-flushing/dispatcher-flushing-order-of-events.png "dispatcher-flushing-order-of-events")
+此事件链接突出显示，我们仅在项目为新项目或发生更改时刷新项目。  这样可以确保在清除缓存之前，发布者已接收到内容，以避免出现争用情况，即在能够向发布者提取更改之前可能会发生刷新。
 
 ## 复制代理
 
-在作者上，有一個復寫代理程式設定為指向發行者，當有東西啟動時，它會觸發將檔案及其所有相依性傳送給發行者。
+在作者上，有一个配置为指向发布者的复制代理，当激活某些内容时，它会触发将文件及其所有依赖项发送到发布者。
 
-當發行者收到檔案時，會設定復寫代理程式指向接收時觸發的Dispatcher。  然後它會序列化排清請求，並將其發佈到Dispatcher。
+当发布者收到文件时，会将复制代理配置为指向接收事件触发的Dispatcher。  然后，它将序列化刷新请求并将其发布到Dispatcher。
 
-### 作者復寫代理
+### 创作复制代理
 
-以下是設定的標準復寫代理程式熒幕擷取畫面範例
-![AEM網頁/etc/replication.html中的標準復寫代理程式熒幕擷圖](assets/disp-flushing/author-rep-agent-example.png "author-rep-agent-example")
+以下是配置的标准复制代理屏幕截图示例
+![AEM网页/etc/replication.html中的标准复制代理屏幕截图](assets/disp-flushing/author-rep-agent-example.png "author-rep-agent-example")
 
-在作者上，通常會為其復寫內容的每個發行者設定1或2個復寫代理。
+对于作者将内容复制到的每个发布者，通常为其配置了1个或2个复制代理。
 
-第一個是將內容啟用推送到的標準復寫代理。
+第一个是将内容激活推送到的标准复制代理。
 
-第二個是反向代理。  這是選擇性的，並設定為檢查每個發佈者的寄件匣，以檢視是否有新內容可作為反向復寫活動提取至作者
+第二个是反向代理。  这是可选的，设置为检查每个发布者的发件箱，以查看是否有新内容可作为反向复制活动提取到作者中
 
-### 發行者復寫代理
+### 发布者复制代理
 
-以下是已設定的標準排清復寫代理程式的熒幕擷取畫面範例
-![AEM網頁/etc/replication.html中的標準排清復寫代理程式熒幕擷圖](assets/disp-flushing/publish-flush-rep-agent-example.png "publish-flush-rep-agent-example")
+以下是配置的标准刷新复制代理的屏幕截图示例
+![AEM网页/etc/replication.html中的标准刷新复制代理屏幕截图](assets/disp-flushing/publish-flush-rep-agent-example.png "publish-flush-rep-agent-example")
 
-### DISPATCHER FLUSH復寫接收虛擬主機
+### DISPATCHER刷新复制接收虚拟主机
 
-Dispatcher模組會尋找特定標頭，以瞭解POST請求何時可以傳遞給AEM轉譯器，或是該請求是否已序列化為排清請求，且需要由Dispatcher處理常式本身處理。
+Dispatcher模块会查找特定的标头，以了解POST请求何时可以传递给AEM渲染，或者该请求是否被序列化为刷新请求，以及是否需要由Dispatcher处理程序本身进行处理。
 
-以下是顯示這些值的設定頁面熒幕擷圖：
-![「序列化型別」顯示為「Dispatcher排清」的主要設定畫面設定索引標籤的圖片](assets/disp-flushing/disp-flush-agent1.png "disp-flush-agent1")
+以下是显示这些值的配置页面的屏幕截图：
+![“序列化类型”显示为“调度程序刷新”的主配置屏幕设置选项卡图片](assets/disp-flushing/disp-flush-agent1.png "disp-flush-agent1")
 
-預設設定頁面會顯示 `Serialization Type` 作為 `Dispatcher Flush` 並設定錯誤層級
+默认设置页面显示 `Serialization Type` 作为 `Dispatcher Flush` 并设置错误级别
 
-![復寫代理程式之傳輸頁簽的熒幕擷圖。  這會顯示將排清請求發佈到的URI。  /dispatcher/invalidate.cache](assets/disp-flushing/disp-flush-agent2.png "disp-flush-agent2")
+![复制代理的传输选项卡屏幕截图。  这显示了将刷新请求发布到的URI。  /dispatcher/invalidate.cache](assets/disp-flushing/disp-flush-agent2.png "disp-flush-agent2")
 
-於 `Transport` 標籤您可以看到 `URI` 設為指向將接收排清請求的Dispatcher的IP位址。  路徑 `/dispatcher/invalidate.cache` 模組無法判斷其是否為排清，而只是您可於存取記錄中看到的明顯端點，用來判斷其為排清請求。  於 `Extended` 索引標籤：我們將詳閱現有內容，確認這是Dispatcher模組的排清請求。
+在 `Transport` 选项卡，您可以看到 `URI` 设置为指向将接收刷新请求的Dispatcher的IP地址。  路径 `/dispatcher/invalidate.cache` 模块无法确定是否属于刷新，它只是您可以在访问日志中看到的明显端点，用来确定它是刷新请求。  在 `Extended` 选项卡，我们将检查所有内容以确认这是对Dispatcher模块的刷新请求。
 
-![復寫代理程式「延伸」索引標籤的熒幕擷圖。  請注意，隨著傳送的POST請求傳送以告知Dispatcher排清的標頭](assets/disp-flushing/disp-flush-agent3.png "disp-flush-agent3")
+![复制代理的扩展选项卡屏幕截图。  请注意与发送的POST请求一起发送以告知Dispatcher刷新的标头](assets/disp-flushing/disp-flush-agent3.png "disp-flush-agent3")
 
-此 `HTTP Method` 對於排清請求只是 `GET` 具有某些特殊請求標頭的請求：
-- CQ-Action
-   - 這會根據請求來使用AEM變數，其值通常為 *啟動或刪除*
+此 `HTTP Method` 对于刷新请求，只需 `GET` 带一些特殊请求标头的请求：
+- cq-Action
+   - 此标头根据请求来使用AEM变量，其值通常为 *激活或删除*
 - CQ-Handle
-   - 這會根據請求來使用AEM變數，例如，值通常是已清除專案的完整路徑 `/content/dam/logo.jpg`
+   - 此标头根据请求来使用AEM变量，例如，值通常是刷新项目的完整路径 `/content/dam/logo.jpg`
 - CQ-Path
-   - 這會根據請求來使用AEM變數，例如，值通常是刷新專案的完整路徑 `/content/dam`
+   - 此标头根据请求来使用AEM变量，例如，该值通常是刷新项目的完整路径 `/content/dam`
 - 主机
-   - 這就是 `Host` 頁首遭到欺騙，目標為特定 `VirtualHost` 在Dispatcher Apache網頁伺服器上設定的(`/etc/httpd/conf.d/enabled_vhosts/aem_flush.vhost`)。  此為硬式編碼值，符合 `aem_flush.vhost` 檔案的 `ServerName` 或 `ServerAlias`
+   - 这就是 `Host` 标头被欺骗以定位特定 `VirtualHost` 在Dispatcher Apache Web Server上配置的(`/etc/httpd/conf.d/enabled_vhosts/aem_flush.vhost`)。  它是与 `aem_flush.vhost` 文件 `ServerName` 或 `ServerAlias`
 
-![標準復寫代理的畫面，顯示當從作者發佈內容收到來自復寫事件的新專案時，復寫代理會做出反應並觸發](assets/disp-flushing/disp-flush-agent4.png "disp-flush-agent4")
+![标准复制代理屏幕，显示当从作者发布内容中收到来自复制事件的新项目时，复制代理会做出反应并触发](assets/disp-flushing/disp-flush-agent4.png "disp-flush-agent4")
 
-於 `Triggers` 索引標籤我們會記下我們使用的切換觸發器及其內容
+在 `Triggers` 选项卡，我们将记录我们使用的切换触发器及其内容
 
 - `Ignore default`
-   - 啟用此功能，頁面啟用時就不會觸發復寫代理程式。  這是指當作者執行個體對頁面進行變更時會觸發排清。  因為這是發行者，所以我們不想觸發該型別的事件。
+   - 启用此功能，页面激活时不会触发复制代理。  也就是说，当作者实例对页面进行更改时，将触发刷新。  由于这是发布者，因此我们不想触发该类型的事件。
 - `On Receive`
-   - 收到新檔案時，我們想要觸發排清。  因此，當作者傳送更新的檔案給我們時，我們將觸發並傳送排清請求給Dispatcher。
+   - 收到新文件后，我们要触发刷新。  因此，当作者向我们发送更新的文件时，我们将触发并向调度程序发送刷新请求。
 - `No Versioning`
-   - 核取此項以避免發行者因為收到新檔案而產生新版本。  我們將僅取代現有的檔案，並仰賴作者而非發佈者來追蹤版本。
+   - 我们选中此项以避免发布者因为接收到新文件而生成新版本。  我们将只替换已有的文件，并依靠作者而非发布者来跟踪版本。
 
-現在，如果我們檢視一般排清請求的外觀，其形式為 `curl` 命令
+现在，我们来看看典型的刷新请求是什么样的 `curl` 命令
 
 ```
 $ curl \ 
@@ -103,87 +103,87 @@ $ curl \
 http://10.43.0.32:80/dispatcher/invalidate.cache
 ```
 
-此排清範例會排清 `/content/dam` 路徑(透過更新 `.stat` 檔案的路徑。
+此刷新示例将刷新 `/content/dam` 路径(通过更新 `.stat` 那个目录里的文件。
 
-## 此 `.stat` 檔案
+## 此 `.stat` 文件
 
-排清機制本質上很簡單，我們想要說明 `.stat` 在要建立快取檔案的檔案根目錄中產生的檔案。
+冲洗机制本质上很简单，我们想解释一下 `.stat` 文件是在创建缓存文件的文档根目录中生成的。
 
-內部 `.vhost` 和 `_farm.any` 檔案我們設定檔案根指令，以指定當一般使用者的請求進入時，快取的位置以及儲存/服務檔案的位置。
+内部 `.vhost` 和 `_farm.any` 文件我们配置文档根指令以指定缓存的位置以及当来自最终用户的请求传入时存储/服务文件的位置。
 
-如果您要在Dispatcher伺服器上執行下列命令，您會開始發現 `.stat` 檔案
+如果您要在Dispatcher服务器上运行以下命令，您会开始发现 `.stat` 文件
 
 ```
 $ find /mnt/var/www/html/ -type f -name ".stat"
 ```
 
-下圖說明當快取中有專案，且Dispatcher模組傳送並處理排清請求時，此檔案結構的外觀
+下图显示了当缓存中有项目，并且调度程序模块发送并处理了刷新请求时，此文件结构的外观
 
-![含有顯示統計層級之內容和日期的statfiles](assets/disp-flushing/dispatcher-statfiles.png "dispatcher-statfiles")
+![带有显示统计级别的内容和日期的statfiles](assets/disp-flushing/dispatcher-statfiles.png "dispatcher-statfiles")
 
-### stat檔案層級
+### STAT文件级别
 
-請注意，每個目錄中有一個 `.stat` 檔案存在。  這是表示已發生排清的指標。  在上述範例中， `statfilelevel` 設定已設為 `3` 在對應陣列設定檔案中。
+请注意，每个目录中都有一个 `.stat` 文件存在。  这是表示已发生刷新的指示器。  在上面的示例中， `statfilelevel` 设置已设置为 `3` 在相应的场配置文件中。
 
-此 `statfilelevel` 設定可指出模組將周遊並更新的資料夾深度。 `.stat` 檔案。  .stat檔案是空的，只不過是帶有datestamp的檔案名稱，甚至可以手動建立，但在Dispatcher伺服器的命令列上執行touch命令。
+此 `statfilelevel` 设置指示模块将遍历和更新多少个文件夹 `.stat` 文件。  .stat文件为空，它只不过是带有datestamp的文件名，甚至可以手动创建，但可以在Dispatcher服务器的命令行上运行touch命令。
 
-如果stat檔案層級設定得太高，則每個排清請求都會周遊接觸stat檔案的目錄樹狀結構。  這可能會嚴重影響大型快取樹狀結構的效能，並可能會影響Dispatcher的整體效能。
+如果stat文件级别设置过高，则每个刷新请求都将遍历接触stat文件的目录树。  这可能会严重影响大型缓存树的性能，并可能会影响Dispatcher的整体性能。
 
-將此檔案層級設定得太低，可能會導致排清請求清除的內容超出預期。  這進而會導致快取經常流失，而從快取中提供的請求較少，並可能導致效能問題。
+将此文件级别设置过低会导致刷新请求清除的内容超出预期。  这进而会导致缓存更频繁地流失，从而使缓存中提供的请求更少，并且可能会导致性能问题。
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
 
-設定 `statfilelevel` 在合理的層級。  檢視您的資料夾結構，並確定其設定為允許簡潔的排清，而不必周遊太多目錄。   在系統效能測試期間進行測試並確定它符合您的需求。
+设置 `statfilelevel` 在合理水平上。  查看您的文件夹结构，确保设置为允许简洁的刷新，而不必遍历太多目录。   在系统性能测试期间对其进行测试并确保它符合您的需求。
 
-支援語言的網站就是一個很好的範例。  典型的內容樹狀結構會包含下列目錄
+一个支持语言的网站就是一个很好的示例。  典型的内容树具有以下目录
 
 `/content/brand1/en/us/`
 
-在此範例中，使用stat檔案層級設定4。  這可確保您何時排清位於下的內容 <b>`us`</b> 不會造成語言資料夾被排清的資料夾。
+在此示例中，使用stat文件级别设置4。  这将确保您刷新下的内容时 <b>`us`</b> 不会导致语言文件夹被刷新的文件夹。
 </div>
 
-### STAT檔案時間戳記交握
+### STAT文件时间戳握手
 
-當對內容的請求進入時，相同的常式會發生
+当对内容的请求进入时相同的例程
 
-1. 的時間戳記 `.stat` 會將檔案與請求檔案的時間戳記進行比較
-2. 如果 `.stat` 檔案比要求的檔案新，它會刪除快取的內容，並從AEM擷取新的內容，然後快取該內容。  然後提供內容
-3. 如果 `.stat` 檔案比要求的檔案舊，然後知道檔案是新的，可以提供內容。
+1. 的时间戳 `.stat` 会将文件与请求文件的时间戳进行比较
+2. 如果 `.stat` 文件比请求的文件新，它会删除缓存的内容，从AEM中获取新内容并缓存该内容。  然后提供内容
+3. 如果 `.stat` 文件比请求的文件旧，然后它知道文件已刷新，可以提供内容。
 
-### 快取交握 — 範例1
+### 缓存握手 — 示例1
 
-在上述範例中，請求內容 `/content/index.html`
+在上述示例中，对内容的请求 `/content/index.html`
 
-時間 `index.html` 檔案為2019-11-01 @ 6:21PM
+时间 `index.html` 文件为2019-11-01 @ 6:21 PM
 
-最接近的時間 `.stat` 檔案為2019-11-01 @ 12:22PM
+距离最近的 `.stat` 文件为2019-11-01 @ 12:22PM
 
-瞭解我們上述所讀內容後，您會發現索引檔案比 `.stat` 檔案和檔案會從快取中提供給提出請求的一般使用者
+了解我们上述内容后，您可以看到索引文件比 `.stat` 文件和文件将从缓存提供给发出请求的最终用户
 
-### 快取交握 — 範例2
+### 缓存握手 — 示例2
 
-在上述範例中，請求內容 `/content/dam/logo.jpg`
+在上述示例中，对内容的请求 `/content/dam/logo.jpg`
 
-時間 `logo.jpg` 檔案為2019-10-31 @ 1:13PM
+时间 `logo.jpg` 文件为2019-10-31 @ 1:13PM
 
-最接近的時間 `.stat` 檔案為2019-11-01 @ 12:22PM
+距离最近的 `.stat` 文件为2019-11-01 @ 12:22PM
 
-如本範例所示，檔案的年齡大於 `.stat` 檔案和將會移除，而從AEM提取新的檔案會取代快取中的檔案，然後才會提供給提出請求的一般使用者。
+如本示例所示，该文件早于 `.stat` 文件和将被删除，从AEM中提取新的文件以替换缓存中的文件，然后提供给请求该文件的最终用户。
 
-## 伺服器陣列檔案設定
+## 场文件设置
 
-如需完整的設定選項集，請參閱以下檔案： [https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)
+以下是一组完整配置选项的文档： [https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)
 
-我們將重點說明其中幾個與快取排清相關的設定
+我们将重点介绍其中一些与缓存刷新相关的设置
 
-### 排清陣列
+### 刷新场
 
-有兩個索引鍵 `document root` 將快取作者和發佈者流量中的檔案的目錄。  為了以最新內容保持這些目錄為最新，我們需要清除快取。  這些排清請求不想與可能拒絕請求或執行不需要之作業的正常客戶流量陣列設定糾結。  我們改為為此任務提供兩個排清陣列：
+有两个关键 `document root` 将缓存来自作者和发布者流量的文件的目录。  要使这些目录与最新内容保持同步，我们需要刷新缓存。  这些刷新请求不希望与可能拒绝请求或执行不需要的操作的常规客户流量场配置纠缠在一起。  相反，我们为此任务提供了两个刷新场：
 
 - `/etc/httpd.conf.d/available_farms/001_ams_author_flush_farm.any`
 - `/etc/httpd.conf.d/available_farms/001_ams_publish_flush_farm.any`
 
-這些伺服器陣列檔案只會清除檔案根目錄，不會執行任何動作。
+这些场文件只刷新文档根目录，不执行任何操作。
 
 ```
 /publishflushfarm {  
@@ -213,9 +213,9 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 }
 ```
 
-### 檔案根目錄
+### 文档根目录
 
-此設定專案位於伺服器陣列檔案的以下區段：
+此配置条目位于场文件的以下部分：
 
 ```
 /myfarm { 
@@ -223,17 +223,17 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
         /docroot
 ```
 
-您可以指定要Dispatcher填入並管理的目錄作為快取目錄。
+您可以指定希望Dispatcher填充并管理的目录作为缓存目录。
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-此目錄應該與網頁伺服器設定要使用的網域的Apache檔案根目錄設定相符。
+此目录应与Web服务器配置为使用的域的Apache文档根目录设置匹配。
 
-出於許多原因，不適合將每個陣列的巢狀docroot資料夾放置在Apache檔案根目錄的子資料夾中。
+出于多种原因，不适合将每个场的嵌套docroot文件夹放置在Apache文档根目录的子文件夹中。
 </div>
 
-### stat檔案層級
+### stat文件级别
 
-此設定專案位於伺服器陣列檔案的以下區段：
+此配置条目位于场文件的以下部分：
 
 ```
 /myfarm { 
@@ -241,31 +241,31 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
         /statfileslevel
 ```
 
-此設定會判斷深度有多深 `.stat` 傳入排清請求時，需要產生檔案。
+此设置可测量深度 `.stat` 收到刷新请求时，需要生成文件。
 
-`/statfileslevel` 在下列編號處設定，且主目錄為 `/var/www/html/` 排清時會產生下列結果 `/content/dam/brand1/en/us/logo.jpg`
+`/statfileslevel` 在文档根目录的以下编号处设置 `/var/www/html/` 刷新时会出现以下结果 `/content/dam/brand1/en/us/logo.jpg`
 
-- 0 — 將建立下列stat檔案
+- 0 — 将创建以下stat文件
    - `/var/www/html/.stat`
-- 1 — 將建立下列stat檔案
+- 1 — 将创建以下stat文件
    - `/var/www/html/.stat`
    - `/var/www/html/content/.stat`
-- 2 — 將建立下列stat檔案
+- 2 — 将创建以下stat文件
    - `/var/www/html/.stat`
    - `/var/www/html/content/.stat`
    - `/var/www/html/content/dam/.stat`
-- 3 — 將建立下列stat檔案
+- 3 — 将创建以下stat文件
    - `/var/www/html/.stat`
    - `/var/www/html/content/.stat`
    - `/var/www/html/content/dam/.stat`
    - `/var/www/html/content/dam/brand1/.stat`
-- 4 — 將建立下列stat檔案
+- 4 — 将创建以下stat文件
    - `/var/www/html/.stat`
    - `/var/www/html/content/.stat`
    - `/var/www/html/content/dam/.stat`
    - `/var/www/html/content/dam/brand1/.stat`
    - `/var/www/html/content/dam/brand1/en/.stat`
-- 5 — 將建立下列stat檔案
+- 5 — 将创建以下stat文件
    - `/var/www/html/.stat`
    - `/var/www/html/content/.stat`
    - `/var/www/html/content/dam/.stat`
@@ -276,14 +276,14 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
 
-請記住，發生時間戳記交握時，會尋找最近的 `.stat` 檔案。
+请记住，发生时间戳握手时，它会查找最近的 `.stat` 文件。
 
-具有 `.stat` 檔案層級0和stat檔案僅限於 `/var/www/html/.stat` 表示下方的內容 `/var/www/html/content/dam/brand1/en/us/` 會尋找最接近的 `.stat` 檔案並遍歷5個資料夾以尋找唯一的 `.stat` 位於層級0的檔案，並將日期與其比較。  這表示在如此高的層級進行排清實際上會使所有快取的專案失效。
+拥有 `.stat` 文件级别0和一个stat文件(仅限于 `/var/www/html/.stat` 表示存在于其下的内容 `/var/www/html/content/dam/brand1/en/us/` 将查找最近的 `.stat` 并遍历5个文件夹以查找唯一的 `.stat` 文件级别为0，并将日期与该级别进行比较。  这意味着如此高级别的刷新将最终使所有缓存项目失效。
 </div>
 
-### 允許失效
+### 允许失效
 
-此設定專案位於伺服器陣列檔案的以下區段：
+此配置条目位于场文件的以下部分：
 
 ```
 /myfarm { 
@@ -291,15 +291,15 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
         /allowedClients {
 ```
 
-在此設定內部，放置允許傳送排清請求的IP位址清單。  如果排清請求進入Dispatcher，則必須來自受信任的IP。  如果您設定錯誤或從不受信任的IP位址傳送排清請求，您會在記錄檔中看到以下錯誤：
+在此配置内部，放置了允许发送刷新请求的IP地址列表。  如果Dispatcher收到了刷新请求，则该请求必须来自受信任的IP。  如果配置错误或从不受信任的IP地址发送刷新请求，您将在日志文件中看到以下错误：
 
 ```
 [Mon Nov 11 22:43:05 2019] [W] [pid 3079 (tid 139859875088128)] Flushing rejected from 10.43.0.57
 ```
 
-### 失效規則
+### 失效规则
 
-此設定專案位於伺服器陣列檔案的以下區段：
+此配置条目位于场文件的以下部分：
 
 ```
 /myfarm { 
@@ -307,9 +307,9 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
         /invalidate {
 ```
 
-這些規則通常會指出哪些檔案可透過排清請求失效。
+这些规则通常指示允许通过刷新请求使哪些文件失效。
 
-若要避免重要檔案因頁面啟用而失效，您可以啟動規則，指定哪些檔案可以失效以及哪些檔案必須手動失效。  以下是僅允許html檔案失效的設定集範例：
+为了避免重要文件因页面激活而失效，您可以设置规则以指定哪些文件可以失效以及哪些文件必须手动失效。  以下是仅允许html文件失效的配置示例：
 
 ```
 /invalidate { 
@@ -318,13 +318,13 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 }
 ```
 
-## 測試/疑難排解
+## 测试/故障排除
 
-當您啟動頁面並獲得成功啟動頁面的綠燈時，您應該會預期您啟動的內容也會從快取中清除。
+当您激活页面并获得成功激活页面的绿灯时，您应该期望激活的内容也从缓存中清除。
 
-您重新整理頁面並檢視舊內容！ 什麼!? 有綠燈?!
+您刷新页面并查看旧内容！ 什么!? 有绿灯?!
 
-讓我們依照幾個手動步驟完成排清程式，深入瞭解可能出現的問題。  從發行者殼層，使用curl執行下列排清請求：
+让我们按照几个手动步骤完成刷新过程，以了解哪里可能出现问题。  在发布者shell中使用curl运行以下刷新请求：
 
 ```
 $ curl -H "CQ-Action: Activate" \ 
@@ -335,7 +335,7 @@ $ curl -H "CQ-Action: Activate" \
 http://<DISPATCHER IP ADDRESS>/dispatcher/invalidate.cache
 ```
 
-測試排清請求範例
+测试刷新请求示例
 
 ```
 $ curl -H "CQ-Action: Activate" \ 
@@ -346,7 +346,7 @@ $ curl -H "CQ-Action: Activate" \
 http://169.254.196.222/dispatcher/invalidate.cache
 ```
 
-向Dispatcher發出請求命令後，您會想要在記錄中檢視該命令已完成的作業，以及該命令已完成的作業。 `.stat files`.  追蹤記錄檔，您應該會看到下列專案，以確認排清請求點選Dispatcher模組
+向Dispatcher发出请求命令后，您将需要在日志中查看它已完成的操作以及它对 `.stat files`.  跟踪日志文件，您应该会看到以下条目，以确认刷新请求已点击Dispatcher模块
 
 ```
 [Wed Nov 13 16:54:12 2019] [I] [pid 19173:tid 140542721578752] Activation detected: action=Activate [/content/dam/logo.jpg] 
@@ -356,13 +356,13 @@ http://169.254.196.222/dispatcher/invalidate.cache
 [Wed Nov 13 16:54:12 2019] [I] [pid 19173:tid 140542721578752] "GET /dispatcher/invalidate.cache" 200 purge [publishfarm/-] 0ms
 ```
 
-現在我們看到模組已擷取並確認排清請求，我們需要看看它如何影響 `.stat` 檔案。  執行以下命令，並在您發出另一個排清時觀看時間戳記更新：
+现在，我们看到模块已提取并确认刷新请求，我们需要了解它对 `.stat` 文件。  运行以下命令，并在发出另一个刷新时观察时间戳更新：
 
 ```
 $ watch -n 3 "find /mnt/var/www/html/ -type f -name ".stat" | xargs ls -la $1"
 ```
 
-如您在命令輸出中所見，目前的時間戳記 `.stat` 檔案
+从命令输出中可以看到当前时间戳 `.stat` 文件
 
 ```
 -rw-r--r--. 1 apache apache 0 Nov 13 16:54 /mnt/var/www/html/content/dam/.stat 
@@ -370,7 +370,7 @@ $ watch -n 3 "find /mnt/var/www/html/ -type f -name ".stat" | xargs ls -la $1"
 -rw-r--r--. 1 apache apache 0 Nov 13 16:54 /mnt/var/www/html/.stat
 ```
 
-現在，如果我們再次執行排清，您將看到時間戳記更新
+现在，如果我们再次运行刷新，您将看到时间戳更新
 
 ```
 -rw-r--r--. 1 apache apache 0 Nov 13 17:17 /mnt/var/www/html/content/dam/.stat 
@@ -378,7 +378,7 @@ $ watch -n 3 "find /mnt/var/www/html/ -type f -name ".stat" | xargs ls -la $1"
 -rw-r--r--. 1 apache apache 0 Nov 13 17:17 /mnt/var/www/html/.stat
 ```
 
-讓我們比較內容的時間戳記和我們的 `.stat` 檔案時間戳記
+让我们将内容时间戳与我们的 `.stat` 文件时间戳
 
 ```
 $ stat /mnt/var/www/html/content/customer/en-us/.stat 
@@ -400,8 +400,8 @@ Modify: 2019-11-11 22:41:59.642450601 +0000
 Change: 2019-11-11 22:41:59.642450601 +0000
 ```
 
-如果您檢視任何時間戳記，您會注意到內容的時間比 `.stat` 檔案，告訴模組從快取中提供檔案，因為它的版本比 `.stat` 檔案。
+如果您查看任何时间戳，您会注意到内容的时间戳比 `.stat` 文件，指示模块从缓存中提供文件，因为该文件比 `.stat` 文件。
 
-簡單地說，更新了此檔案的時間戳記，但並不符合「清除」或取代的條件。
+简而言之，更新了该文件的时间戳并不意味着该文件将被“刷新”或替换。
 
-[下一個 — >虛名URL](./disp-vanity-url.md)
+[下一个 — >虚URL](./disp-vanity-url.md)

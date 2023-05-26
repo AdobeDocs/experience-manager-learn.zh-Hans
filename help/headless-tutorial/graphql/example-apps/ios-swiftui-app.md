@@ -1,6 +1,6 @@
 ---
-title: iOS應用程式 — AEM Headless範例
-description: 範例應用程式是探索Adobe Experience Manager (AEM)的Headless功能的絕佳方式。 此iOS應用程式示範了如何使用AEM GraphQL API透過持續性查詢來查詢內容。
+title: iOS应用程序 — AEM Headless示例
+description: 示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此iOS应用程序演示了如何使用AEM GraphQL API通过持久查询来查询内容。
 version: Cloud Service
 mini-toc-levels: 2
 kt: 10587
@@ -17,41 +17,41 @@ ht-degree: 4%
 
 ---
 
-# iOS應用程式
+# iOS应用程序
 
-範例應用程式是探索Adobe Experience Manager (AEM)的Headless功能的絕佳方式。 此iOS應用程式示範了如何使用AEM GraphQL API透過持續性查詢來查詢內容。
+示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此iOS应用程序演示了如何使用AEM GraphQL API通过持久查询来查询内容。
 
-![iOS SwiftUI應用程式搭配AEM Headless](./assets/ios-swiftui-app/ios-app.png)
+![带有AEM Headless的iOS SwiftUI应用程序](./assets/ios-swiftui-app/ios-app.png)
 
-檢視 [GitHub上的原始程式碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)
+查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)
 
 ## 前提条件 {#prerequisites}
 
-下列工具應安裝在本機：
+应在本地安装以下工具：
 
 + [Xcode](https://developer.apple.com/xcode/) (需要macOS)
 + [Git](https://git-scm.com/)
 
-## AEM需求
+## AEM要求
 
-iOS應用程式可與下列AEM部署選項搭配使用。 所有部署都需要 [WKND網站v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 即將安裝。
+iOS应用程序可与以下AEM部署选项配合使用。 所有部署都需要 [WKND站点v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 即将安装。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 本機設定，使用 [AEM CLOUD SERVICE SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)
-+ [AEM 6.5 SP13+快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans？lang=en#install-local-aem-instances)
++ 使用进行本地设置 [AEM CLOUD SERVICE SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)
++ [AEM 6.5 SP13+快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans？lang=en#install-local-aem-instances)
 
-iOS應用程式是專為連線至 __AEM發佈__ 不過，如果在iOS應用程式的設定中提供驗證，則它可以從AEM Author取得內容。
+iOS应用程序旨在连接到 __AEM发布__ 但是，如果在iOS应用程序的配置中提供身份验证，则它可以从AEM Author获取内容。
 
-## 使用方式
+## 使用方法
 
-1. 原地複製 `adobe/aem-guides-wknd-graphql` 存放庫：
+1. 克隆 `adobe/aem-guides-wknd-graphql` 存储库：
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Launch [Xcode](https://developer.apple.com/xcode/) 並開啟資料夾 `ios-app`
-1. 修改檔案 `Config.xcconfig` 檔案和更新 `AEM_SCHEME` 和 `AEM_HOST` 以符合您的目標AEM Publish服務。
+1. Launch [Xcode](https://developer.apple.com/xcode/) 并打开文件夹 `ios-app`
+1. 修改文件 `Config.xcconfig` 文件和更新 `AEM_SCHEME` 和 `AEM_HOST` 以匹配您的目标AEM Publish服务。
 
    ```plain
    // The http/https protocol scheme used to access the AEM_HOST
@@ -60,11 +60,11 @@ iOS應用程式是專為連線至 __AEM發佈__ 不過，如果在iOS應用程�
    AEM_HOST = localhost:4503
    ```
 
-   如果連線到AEM Author，請新增 `AEM_AUTH_TYPE` 和支援的驗證屬性 `Config.xcconfig`.
+   如果连接到AEM Author，请添加 `AEM_AUTH_TYPE` 并支持身份验证属性到 `Config.xcconfig`.
 
-   __基本驗證__
+   __基本身份验证__
 
-   此 `AEM_USERNAME` 和 `AEM_PASSWORD` 驗證可存取WKND GraphQL內容的本機AEM使用者。
+   此 `AEM_USERNAME` 和 `AEM_PASSWORD` 验证有权访问WKND GraphQL内容的本地AEM用户。
 
    ```plain
    AEM_AUTH_TYPE = basic
@@ -72,27 +72,27 @@ iOS應用程式是專為連線至 __AEM發佈__ 不過，如果在iOS應用程�
    AEM_PASSWORD = admin
    ```
 
-   __權杖驗證__
+   __令牌身份验证__
 
-   此 `AEM_TOKEN` 是 [存取權杖](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) 會向可存取WKND GraphQL內容的AEM使用者進行驗證。
+   此 `AEM_TOKEN` 是 [访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) 能够向有权访问WKND GraphQL内容的AEM用户进行身份验证。
 
    ```plain
    AEM_AUTH_TYPE = token
    AEM_TOKEN = abcd...0123
    ```
 
-1. 使用Xcode建置應用程式，並將應用程式部署到iOS模擬器
-1. WKND網站中的冒險清單應顯示在應用程式上。 選取冒險會開啟冒險細節。 在冒險清單檢視上，提取以從AEM重新整理資料。
+1. 使用Xcode构建应用程序并将应用程序部署到iOS模拟器
+1. 应用程序上应显示WKND站点中的冒险列表。 选择冒险会打开冒险详细信息。 在冒险列表视图中，拉取以从AEM刷新数据。
 
-## 程式碼
+## 代码
 
-以下是如何建立iOS應用程式、如何連線至AEM Headless以使用GraphQL持續查詢擷取內容，以及資料如何呈現的摘要。 完整程式碼可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
+以下摘要介绍了iOS应用程序的构建方式、它如何连接到AEM Headless以使用GraphQL持久查询检索内容，以及数据如何呈现。 完整代码可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
 
-### 持久查詢
+### 持久查询
 
-依照AEM Headless最佳實務，iOS應用程式會使用AEM GraphQL持續查詢來查詢冒險資料。 應用程式使用兩個持續查詢：
+遵循AEM Headless最佳实践，iOS应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
 
-+ `wknd/adventures-all` 持久查詢，這會傳回AEM中所有冒險和屬性刪節集。 此持續查詢會驅動初始檢視的冒險清單。
++ `wknd/adventures-all` 持久查询，该查询返回AEM中的所有冒险以及一组删节的资产。 此持久查询驱动初始视图的冒险列表。
 
 ```
 # Retrieves a list of all adventures
@@ -117,7 +117,7 @@ iOS應用程式是專為連線至 __AEM發佈__ 不過，如果在iOS應用程�
 }
 ```
 
-+ `wknd/adventure-by-slug` 持久查詢，會依據以下條件傳回單一冒險 `slug` （可唯一識別冒險的自訂屬性）和完整的屬性集。 此持續查詢可支援冒險詳細資料檢視。
++ `wknd/adventure-by-slug` 持久查询，返回一次冒险的方法是 `slug` （唯一标识冒险的自定义属性）和一组完整的属性。 此持久查询支持冒险详细信息视图。
 
 ```
 # Retrieves an adventure Content Fragment based on it's slug
@@ -173,17 +173,17 @@ query($slug: String!) {
 }
 ```
 
-### 執行GraphQL持續查詢
+### 执行GraphQL持久查询
 
-AEM持續性查詢會透過HTTPGET執行，因此，使用HTTPPOST（例如Apollo）的常見GraphQL程式庫無法使用。 請改為建立自訂類別，執行對AEM的持續查詢HTTPGET請求。
+AEM持久查询通过HTTPGET执行，因此，无法使用使用HTTPPOST（例如Apollo）的常用GraphQL库。 而是创建一个自定义类，用于执行对AEM的持久查询HTTPGET请求。
 
-`AEM/Aem.swift` 例項化 `Aem` 用於與AEM Headless的所有互動的類別。 模式為：
+`AEM/Aem.swift` 实例化 `Aem` 用于与AEM Headless的所有交互的类。 模式是：
 
-1. 每個持續查詢都有對應的公用函式(例如： `getAdventures(..)` 或 `getAdventureBySlug(..)`)叫用iOS應用程式的檢視來取得冒險資料。
-1. 公用函式呼叫私人函式 `makeRequest(..)` 會叫用對AEM Headless的非同步HTTPGET請求，並傳回JSON資料。
-1. 接著，每個公用函式都會解碼JSON資料，並執行任何必要的檢查或轉換，然後才會將Adventure資料傳回檢視。
+1. 每个持久查询都有一个对应的公共函数(例如， `getAdventures(..)` 或 `getAdventureBySlug(..)`)iOS应用程序的视图调用，以获取冒险数据。
+1. 公共基金称为私人基金 `makeRequest(..)` 调用对AEM Headless的非同步HTTPGET请求并返回JSON数据。
+1. 然后，每个公共函数都会对JSON数据进行解码，并执行任何所需的检查或转换，然后将冒险数据返回到视图。
 
-   + AEM GraphQL JSON資料會使用中定義的結構/類別解碼 `AEM/Models.swift`，對應到傳回我的AEM Headless的JSON物件。
+   + AEM GraphQL JSON数据使用中定义的结构/类进行解码 `AEM/Models.swift`，映射到JSON对象后返回我的AEM Headless。
 
 ```swift
     /// # getAdventures(..)
@@ -240,43 +240,43 @@ AEM持續性查詢會透過HTTPGET執行，因此，使用HTTPPOST（例如Apoll
     ...
 ```
 
-### GraphQL回應資料模型
+### GraphQL响应数据模型
 
-iOS偏好將JSON物件對應至型別的資料模型。
+iOS首选将JSON对象映射到类型化数据模型。
 
-此 `src/AEM/Models.swift` 定義 [可解碼](https://developer.apple.com/documentation/swift/decodable) Swift結構和類別會對應至AEM JSON回應所傳回的AEM JSON回應。
+此 `src/AEM/Models.swift` 定义 [可解码](https://developer.apple.com/documentation/swift/decodable) Swift结构和类映射到由AEM JSON响应返回的AEM JSON响应。
 
 ### 视图
 
-SwiftUI用於應用程式中的各種檢視。 Apple提供快速入門教學課程，適用於 [使用SwiftUI建立清單和導覽](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation).
+SwiftUI用于应用程序中的各种视图。 Apple提供了入门教程，用于 [使用SwiftUI构建列表和导航](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation).
 
 + `WKNDAdventuresApp.swift`
 
-   應用程式的專案，包括 `AdventureListView` 其 `.onAppear` 事件處理常式是用來透過擷取所有冒險資料 `aem.getAdventures()`. 共用的 `aem` 在此初始化物件，並以 [環境物件](https://developer.apple.com/documentation/swiftui/environmentobject).
+   应用程序的条目，包括 `AdventureListView` 其 `.onAppear` 事件处理程序用于通过获取所有冒险数据 `aem.getAdventures()`. 共享 `aem` 在此初始化对象，并将对象作为 [环境对象](https://developer.apple.com/documentation/swiftui/environmentobject).
 
 + `Views/AdventureListView.swift`
 
-   顯示冒險清單(根據以下來源的資料： `aem.getAdventures()`)和顯示每個冒險的清單專案，使用 `AdventureListItemView`.
+   显示冒险列表（基于来自的数据） `aem.getAdventures()`)，并使用显示每个冒险的列表项 `AdventureListItemView`.
 
 + `Views/AdventureListItemView.swift`
 
-   顯示冒險清單中的每個專案(`Views/AdventureListView.swift`)。
+   显示冒险列表中的每个项目(`Views/AdventureListView.swift`)。
 
 + `Views/AdventureDetailView.swift`
 
-   顯示冒險的詳細資訊，包括標題、說明、價格、活動型別和主要影像。 此檢視會使用以下專案查詢AEM的完整冒險詳細資訊 `aem.getAdventureBySlug(slug: slug)`，其中 `slug` 會根據選取清單列傳入引數。
+   显示冒险的详细信息，包括标题、描述、价格、活动类型和主图像。 此视图使用以下方式查询AEM以获取完整的冒险详细信息 `aem.getAdventureBySlug(slug: slug)`，其中 `slug` 根据选择列表行传入参数。
 
-### 遠端影像
+### 远程图像
 
-冒險內容片段參考的影像由AEM提供。 此iOS應用程式使用路徑 `_path` GraphQL欄位中輸入的「 」字元，並在字首 `AEM_SCHEME` 和 `AEM_HOST` 以建立完整限定的URL。
+冒险内容片段引用的图像由AEM提供。 此iOS应用程序使用路径 `_path` GraphQL字段，并在其前面 `AEM_SCHEME` 和 `AEM_HOST` 以创建完全限定的URL。
 
-如果連線到AEM上需要授權的受保護資源，則還必須將憑證新增到影像請求。
+如果连接到AEM上需要授权的受保护资源，则还必须将凭据添加到图像请求。
 
-[SdwebimageswiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI) 和 [Sdwebimage](https://github.com/SDWebImage/SDWebImage) 用於從AEM載入遠端影像，這些影像會填入 `AdventureListItemView` 和 `AdventureDetailView` 檢視。
+[SdwebimageswiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI) 和 [Sdwebimage](https://github.com/SDWebImage/SDWebImage) 用于从填充Adventure图像的AEM加载远程图像 `AdventureListItemView` 和 `AdventureDetailView` 视图。
 
-此 `aem` 類別(在 `AEM/Aem.swift`)可透過兩種方式促進使用AEM影像：
+此 `aem` 类(在 `AEM/Aem.swift`)通过两种方式便于使用AEM图像：
 
-1. `aem.imageUrl(path: String)` 在檢視中使用，在AEM配置的前面加上，並託管到影像的路徑，以建立完全限定的URL。
+1. `aem.imageUrl(path: String)` 在视图中使用以在AEM方案之前添加并托管到图像的路径，从而创建完全限定的URL。
 
    ```swift
    // adventure.image() => /content/dam/path/to/an/image.png
@@ -284,9 +284,9 @@ SwiftUI用於應用程式中的各種檢視。 Apple提供快速入門教學課�
    // imageUrl => http://localhost:4503/content/dam/path/to/an/image.png
    ```
 
-2. 此 `convenience init(..)` 在 `Aem` 根據iOS應用程式設定，在影像HTTP請求上設定HTTP授權標頭。
+2. 此 `convenience init(..)` 在 `Aem` 根据iOS应用程序配置，在图像HTTP请求上设置HTTP授权标头。
 
-   + 若 __基本驗證__ 設定，然後將基本驗證附加至所有影像要求。
+   + 如果 __基本身份验证__ 配置，然后将基本身份验证附加到所有图像请求。
 
    ```swift
    /// AEM/Aem.swift
@@ -301,7 +301,7 @@ SwiftUI用於應用程式中的各種檢視。 Apple提供快速入門教學課�
    }
    ```
 
-   + 若 __權杖驗證__ 完成設定後，權杖驗證就會附加至所有影像要求。
+   + 如果 __令牌身份验证__ 配置，然后将令牌身份验证附加到所有图像请求。
 
    ```swift
    /// AEM/Aem.swift
@@ -316,13 +316,13 @@ SwiftUI用於應用程式中的各種檢視。 Apple提供快速入門教學課�
    }
    ```
 
-   + 若 __無驗證__ 設定，則影像要求不會附加任何驗證。
+   + 如果 __无身份验证__ 配置，则不会将身份验证附加到图像请求。
 
 
 
-類似的做法可用於SwiftUI原生 [AsyncImage](https://developer.apple.com/documentation/swiftui/asyncimage). `AsyncImage` 在iOS 15.0+上支援。
+类似的方法可用于SwiftUI原生 [AsyncImage](https://developer.apple.com/documentation/swiftui/asyncimage). `AsyncImage` 在iOS 15.0+上受支持。
 
-## 其他資源
+## 其他资源
 
-+ [AEM Headless快速入門 — GraphQL教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans)
-+ [SwiftUI清單和導覽教學課程](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)
++ [AEM Headless快速入门 — GraphQL教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans)
++ [SwiftUI列表和导航教程](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)

@@ -1,6 +1,6 @@
 ---
-title: 使用對話方塊實作自訂流程步驟
-description: 使用自訂程式步驟將最適化表單附件寫入檔案系統
+title: 通过对话框实施自定义流程步骤
+description: 使用自定义流程步骤将自适应表单附件写入文件系统
 feature: Workflow
 version: 6.5
 topic: Development
@@ -15,26 +15,26 @@ ht-degree: 0%
 
 ---
 
-# 自訂流程步驟
+# 自定义流程步骤
 
-本教學課程適用於需要實作自訂工作流程元件的AEM Forms客戶。建立工作流程元件的第一步是撰寫將與工作流程元件關聯的Java程式碼。 在本教學課程中，我們將編寫簡單的Java類別，以將最適化表單附件儲存至檔案系統。此Java程式碼將讀取工作流程元件中指定的引數。
+本教程面向需要实施自定义工作流组件的AEM Forms客户。创建工作流组件的第一步是编写将与该工作流组件关联的Java代码。 在本教程中，我们将编写简单的java类，以将自适应表单附件存储到文件系统。此java代码将读取工作流组件中指定的参数。
 
-寫入Java類別並將類別部署為OSGi套件組合時，需要執行下列步驟
+需要执行以下步骤来编写java类并将该类部署为OSGi捆绑包
 
-## 建立Maven專案
+## 创建Maven项目
 
-第一步是使用適當的AdobeMaven原型建立Maven專案。 詳細步驟列於此 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). 將您的maven專案匯入到eclipse中後，您就可以開始編寫可在流程步驟中使用的第一個OSGi元件了。
+第一步是使用相应的AdobeMaven原型创建一个Maven项目。 此处列出了详细步骤 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). 将您的maven项目导入eclipse后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
 
 
-### 建立實作WorkflowProcess的類別
+### 创建实现WorkflowProcess的类
 
-在eclipse IDE中開啟maven專案。 展開 **projectname** > **核心** 資料夾。 展開src/main/java資料夾。 您應該會看到結尾為「core」的套件。 建立在此封裝中實作WorkflowProcess的Java類別。 您需要覆寫執行方法。 執行方法的簽章如下public void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)throws WorkflowException
+在eclipse IDE中打开maven项目。 展开 **projectname** > **核心** 文件夹。 展开src/main/java文件夹。 您应会看到一个以“core”结尾的包。 在此包中创建实现WorkflowProcess的Java类。 您需要覆盖execute方法。 执行方法的签名为public void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)throws WorkflowException
 
-在本教學課程中，我們會將新增至最適化表單的附件寫入檔案系統，作為AEM Workflow的一部分。
+在本教程中，我们将把添加到自适应表单的附件作为AEM Workflow的一部分写入文件系统。
 
-為了完成此使用案例，已撰寫下列java類別
+为了完成此用例，编写了以下java类
 
-讓我們來看看此程式碼
+让我们看一下此代码
 
 ```java
 package com.mysite.core;
@@ -116,20 +116,20 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 ```
 
 
-* attachmentsPath — 這是您在調適型表單中指定的位置(當您設定調適型表單的提交動作以叫用AEM Workflow時)。 這是您希望附件相對於工作流程裝載儲存在AEM中的資料夾名稱。
+* attachmentsPath — 这与您在自适应表单中指定位置(在配置自适应表单的提交操作以调用AEM Workflow时)相同。 这是您希望将附件保存在AEM中相对于工作流有效负荷的文件夹的名称。
 
-* saveToLocation — 這是您希望附件儲存在AEM伺服器檔案系統中的位置。
+* saveToLocation — 这是您希望附件保存在AEM服务器文件系统中的位置。
 
-這兩個值會使用工作流程元件的對話方塊作為程式引數傳遞
+这两个值将作为进程参数使用工作流组件的对话框传递
 
-![ProcessStep](assets/custom-workflow-component.png)
+![Processstep](assets/custom-workflow-component.png)
 
-QueryBuilder服務用於查詢attachmentsPath資料夾下nt：file型別的節點。 其餘程式碼會逐一瀏覽搜尋結果，以建立Document物件並將其儲存至檔案系統
+QueryBuilder服务用于查询attachmentsPath文件夹下nt：file类型的节点。 其余代码遍历搜索结果以创建Document对象并将其保存到文件系统
 
 
 >[!NOTE]
 >
->由於我們使用的是AEM Forms專屬的Document物件，因此您需要在maven專案中包含aemfd-client-sdk相依性。
+>由于我们使用的是AEM Forms专属的Document对象，因此需要在maven项目中包含该aemfd-client-sdk依赖项。
 
 ```xml
 <dependency>
@@ -139,12 +139,12 @@ QueryBuilder服務用於查詢attachmentsPath資料夾下nt：file型別的節�
 </dependency>
 ```
 
-#### 建置和部署
+#### 生成和部署
 
-[依照此處的說明建置套件組合](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
-[請確定該套件組合已部署且處於作用中狀態](http://localhost:4502/system/console/bundles)
+[按照此处所述构建捆绑包](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[确保包已部署且处于活动状态](http://localhost:4502/system/console/bundles)
 
 ## 后续步骤
 
-建立您的 [自訂工作流程元件](./custom-workflow-component.md)
+创建您的 [自定义工作流组件](./custom-workflow-component.md)
 

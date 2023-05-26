@@ -1,6 +1,6 @@
 ---
-title: 在表單資料模型服務中擷取錯誤訊息，作為工作流程中的步驟
-description: 從AEM Forms 6.5.1開始，我們現在能擷取使用叫用表單資料模型服務產生的錯誤訊息，做為AEM Workflow中的步驟。 工作流.
+title: 将表单数据模型服务中的错误消息捕获为工作流中的步骤
+description: 从AEM Forms 6.5.1开始，我们现在能够捕获在将调用表单数据模型服务作为AEM Workflow中的步骤时生成的错误消息。 工作流.
 feature: Workflow
 version: 6.5
 topic: Development
@@ -15,19 +15,19 @@ ht-degree: 0%
 
 ---
 
-# 在呼叫表單資料模型服務步驟中擷取錯誤訊息
+# 在调用表单数据模型服务步骤中捕获错误消息
 
-從AEM Forms 6.5.1開始，我們現在可以選擇擷取錯誤訊息並指定驗證選項。 已增強叫用表單資料模型服務步驟，以提供下列功能。
+从AEM Forms 6.5.1开始，我们现在可以选择捕获错误消息并指定验证选项。 已增强调用表单数据模型服务步骤，以提供以下功能。
 
-* 提供3層驗證（「關閉」、「基本」和「完整」）的選項，以處理叫用表單資料模型服務時遇到的例外狀況。 這3個選項相繼表示檢查資料庫特定需求的更嚴格版本。
+* 提供三层验证（“OFF”、“BASIC”和“FULL”）选项，以处理调用表单数据模型服务时遇到的异常。 这3个选项依次表示检查特定于数据库的要求的更严格版本。
    ![validation-levels](assets/validation-level.PNG)
 
-* 提供自訂工作流程執行的核取方塊。 因此，即使「叫用表單資料模型」步驟擲回例外狀況，使用者現在仍可靈活地繼續進行工作流程執行。
+* 提供用于自定义工作流执行的复选框。 因此，用户现在可以灵活地继续执行工作流，即使调用表单数据模型步骤引发异常也是如此。
 
-* 儲存因驗證例外狀況所引起錯誤的重要資訊。 已合併三個自動完成型別的變數選取器，以選取相關變數來儲存ErrorCode(String)、ErrorMessage(String)和ErrorDetails(JSON)。 不過，如果例外狀況不是DermisValidationException，ErrorDetails會設為null。
-   ![擷取錯誤訊息](assets/fdm-error-details.PNG)
+* 存储因验证异常而出现的错误的重要信息。 采用三个自动完成类型的变量选择器来选择相关变量以存储ErrorCode(String)、ErrorMessage(String)和ErrorDetails(JSON)。 但是，如果异常不是DermisValidationException，则ErrorDetails将设置为null。
+   ![捕获错误消息](assets/fdm-error-details.PNG)
 
-透過這些變更，叫用表單資料模型服務步驟可確保輸入值遵守swagger檔案中提供的資料限制。 例如，當accountId和餘額值不符合swagger檔案中指定的資料限制時，會擲回以下錯誤訊息。
+通过这些更改，调用表单数据模型服务步骤确保输入值遵循swagger文件中提供的数据约束。 例如，当accountId和余额值不符合swagger文件中指定的数据约束时，将引发以下错误消息。
 
 ```json
 {

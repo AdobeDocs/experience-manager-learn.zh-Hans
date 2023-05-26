@@ -7,10 +7,10 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 1%
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -76,7 +76,3 @@ export default function Contact(){
 ```
 
 上述代码使用映射到自适应表单中使用的组件的本机html组件。 例如，我们将文本输入自适应表单组件映射到TextField组件。 文章中使用的本机组件 [可以从此处下载](./assets/native-components.zip)
-
-## 后续步骤
-
-[从下拉列表中选择表单](./select-form-from-drop-down-list.md)

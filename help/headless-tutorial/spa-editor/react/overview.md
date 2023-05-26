@@ -21,50 +21,50 @@ ht-degree: 24%
 
 ---
 
-# 在AEM中建立您的第一個React SPA {#overview}
+# 在AEM中创建您的第一个React SPA {#overview}
 
-歡迎使用專為「 」的新手開發人員設計的多部分教學課程 **SPA編輯器** Adobe Experience Manager (AEM)中的功能。 本教學課程會逐步引導您為虛擬生活風格品牌WKND實作React應用程式。 React應用程式是使用AEM SPA Editor開發並設計來部署，可將React元件對應至AEM元件。 部署至AEM的完整SPA可透過AEM的傳統內嵌編輯工具動態撰寫。
+欢迎使用专为新手的开发人员设计的多部分教程 **SPA编辑器** Adobe Experience Manager (AEM)中的功能。 本教程介绍了如何为虚构的生活方式品牌WKND实施React应用程序。 React应用程序是使用AEM SPA Editor开发和设计的，该编辑器将React组件映射到AEM组件。 部署到AEM的已完成SPA可以使用传统的AEM内联编辑工具动态创作。
 
-![實作的最終SPA](assets/wknd-spa-implementation.png)
+![已实施的最终SPA](assets/wknd-spa-implementation.png)
 
-*WKND SPA實作*
+*WKND SPA实施*
 
 ## 关于
 
-本教學課程的設計用途為 **AEMas a Cloud Service** 並且向後相容於 **AEM 6.5.4+** 和 **AEM 6.4.8+**.
+本教程设计用于 **AEMas a Cloud Service** 向后兼容 **AEM 6.5.4+** 和 **AEM 6.4.8+**.
 
-## 最新程式碼
+## 最新代码
 
-您可在上找到教學課程的所有程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-spa).
+所有教程代码均可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-spa).
 
-此 [最新的程式碼基底](https://github.com/adobe/aem-guides-wknd-spa/releases) 可作為可下載的AEM套件使用。
+此 [最新的代码库](https://github.com/adobe/aem-guides-wknd-spa/releases) 作为可下载的AEM包提供。
 
 ## 前提条件
 
-在開始進行本教學課程之前，您需要具備下列條件：
+在开始本教程之前，您需要满足以下条件：
 
-* HTML、CSS和JavaScript的基本知識
-* 基本熟悉 [React](https://reactjs.org/tutorial/tutorial.html)
+* HTML、CSS和JavaScript的基础知识
+* 对的基本了解 [React](https://reactjs.org/tutorial/tutorial.html)
 
-*雖然不一定需要，但若能大致瞭解 [開發傳統AEM Sites元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans).*
+*虽然不一定需要，但了解以下内容会很有帮助 [开发传统AEM Sites组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans).*
 
-## 本機開發環境 {#local-dev-environment}
+## 本地开发环境 {#local-dev-environment}
 
-本機開發環境是完成本教學課程的必要條件。 熒幕截圖和影片都是使用在Mac作業系統環境上執行的AEMas a Cloud ServiceSDK擷取，並具有 [Visual Studio Code](https://code.visualstudio.com/) 作為IDE。 除非另有說明，否則命令和程式碼應獨立於本機作業系統。
+需要本地开发环境来完成本教程。 使用在Mac OS环境中运行的AEMas a Cloud ServiceSDK捕获屏幕截图和视频，并具有 [Visual Studio Code](https://code.visualstudio.com/) 作为IDE。 除非另有说明，否则命令和代码应独立于本地操作系统。
 
-### 必要的軟體
+### 所需的软件
 
 * [AEMAS A CLOUD SERVICESDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html)， [AEM 6.5.4+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en#aem-65) 或 [AEM 6.4.8+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en#aem-64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
-* [Apache Maven](https://maven.apache.org/) （3.3.9或更新版本）
+* [Apache Maven](https://maven.apache.org/) （3.3.9或更高版本）
 * [Node.js](https://nodejs.org/en/) 和 [npm](https://www.npmjs.com/)
 
 >[!NOTE]
 >
-> **不熟悉AEMas a Cloud Service？** 檢視 [以下是使用AEMas a Cloud ServiceSDK設定本機開發環境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).
+> **不熟悉AEMas a Cloud Service？** 查看 [以下指南介绍了如何使用AEMas a Cloud ServiceSDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).
 >
-> **AEM 6.5的新手嗎？** 檢視 [遵循指南以設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans).
+> **AEM 6.5的新手？** 查看 [以下指南介绍了如何设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans).
 
 ## 后续步骤 {#next-steps}
 
-您還在等什麼?!導覽至「 」，開始進行教學課程 [建立專案](create-project.md) 章節，並瞭解如何使用SPA專案原型產生啟用AEM編輯器的專案。
+你在等什么?!通过导航到 [创建项目](create-project.md) 章节并了解如何使用SPA项目原型生成启用AEM编辑器的项目。

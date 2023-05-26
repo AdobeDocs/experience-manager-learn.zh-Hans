@@ -1,6 +1,6 @@
 ---
-title: 使用本機AEM SDK的AEM Headless快速設定
-description: 開始使用Adobe Experience Manager (AEM)和GraphQL。 安裝AEM SDK、新增範例內容，以及使用其GraphQL API部署使用AEM內容的應用程式。 瞭解AEM如何支援全頻道體驗。
+title: 使用本地AEM SDK快速设置AEM Headless
+description: Adobe Experience Manager (AEM)和GraphQL快速入门。 安装AEM SDK、添加示例内容并使用其GraphQL API部署使用AEM中的内容的应用程序。 了解AEM如何支持全渠道体验。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6386
@@ -17,101 +17,101 @@ ht-degree: 2%
 
 ---
 
-# 使用本機AEM SDK的AEM Headless快速設定 {#setup}
+# 使用本地AEM SDK快速设置AEM Headless {#setup}
 
-AEM Headless快速設定可讓您使用AEM Headless的實際操作，其中包含來自WKND Site範例專案的內容，以及一個透過AEM Headless GraphQL API使用內容的範例React應用程式(SPA)。 本指南使用 [AEMAS A CLOUD SERVICESDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
+AEM Headless快速设置使用AEM Headless示例项目（WKND Site示例项目）中的内容以及一个通过AEM Headless GraphQL API使用内容的示例React应用程序(SPA)，帮助您实际操作Headless。 本指南使用 [AEMAS A CLOUD SERVICESDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
 
 ## 前提条件 {#prerequisites}
 
-下列工具應安裝在本機：
+应在本地安装以下工具：
 
 * [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=limit&amp;p.limit=0&amp;p.limit=144)
 * [Node.js v18](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
 
-## 1.安裝AEM SDK {#aem-sdk}
+## 1.安装AEM SDK {#aem-sdk}
 
-此設定使用 [AEMAS A CLOUD SERVICESDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?#aem-as-a-cloud-service-sdk) 探索AEM GraphQL API。 本節提供快速指南，說明如何安裝AEM SDK並以作者模式執行。 有關設定本機開發環境的更詳細指南 [可在此處找到](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html#local-development-environment-set-up).
+此设置使用 [AEMAS A CLOUD SERVICESDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?#aem-as-a-cloud-service-sdk) 以探索AEM GraphQL API。 此部分提供了有关安装AEM SDK并在创作模式下运行该软件的快速指南。 有关设置本地开发环境的更详细指南 [可在此处找到](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html#local-development-environment-set-up).
 
 >[!NOTE]
 >
-> 您也可以在本教學課程之後，使用 [AEMas a Cloud Service環境](./cloud-service.md). 使用雲端環境的其他注意事項已包含在本教學課程中。
+> 也可以在本教程之后使用 [AEMas a Cloud Service环境](./cloud-service.md). 在本教程中，还包含有关使用云环境的其他说明。
 
-1. 導覽至 **[軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)** > **AEMas a Cloud Service** 並下載最新版的 **AEM SDK**.
+1. 导航到 **[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)** > **AEMas a Cloud Service** 并下载最新版本的 **AEM SDK**.
 
    ![软件分发门户](assets/quick-setup/aem-sdk/downloads__aem-sdk.png)
 
-1. 解壓縮下載內容並複製Quickstart jar (`aem-sdk-quickstart-XXX.jar`)至專用資料夾，即 `~/aem-sdk/author`.
-1. 將jar檔案重新命名為 `aem-author-p4502.jar`.
+1. 解压缩下载内容并复制快速入门jar (`aem-sdk-quickstart-XXX.jar`)到专用文件夹，即 `~/aem-sdk/author`.
+1. 将jar文件重命名为 `aem-author-p4502.jar`.
 
-   此 `author` name會指定Quickstart jar以「作者」模式啟動。 此 `p4502` 指定連線埠4502上的Quickstart執行。
+   此 `author` 名称指定快速入门jar以创作模式启动。 此 `p4502` 指定快速入门在端口4502上运行。
 
-1. 若要安裝並啟動AEM執行個體，請在包含jar檔案的資料夾中開啟命令提示字元，然後執行下列命令：
+1. 要安装和启动AEM实例，请在包含jar文件的文件夹下打开命令提示符，然后运行以下命令：
 
    ```shell
    $ cd ~/aem-sdk/author
    $ java -jar aem-author-p4502.jar
    ```
 
-1. 提供管理員密碼作為 `admin`. 可接受任何管理員密碼，但建議使用 `admin` 本機開發，減少重新設定的需求。
-1. AEM服務安裝完畢後，新的瀏覽器視窗應開啟於 [http://localhost:4502](http://localhost:4502).
-1. 使用使用者名稱登入 `admin` 和AEM初始啟動期間選取的密碼(通常是 `admin`)。
+1. 提供管理员密码作为 `admin`. 可接受任何管理员密码，但建议使用 `admin` 本地开发，减少重新配置的需要。
+1. 当AEM服务完成安装时，应打开一个新的浏览器窗口，网址为 [http://localhost:4502](http://localhost:4502).
+1. 使用用户名登录 `admin` 和AEM初始启动期间选择的密码(通常为 `admin`)。
 
-## 2.安裝範例內容 {#install-sample-content}
+## 2.安装示例内容 {#install-sample-content}
 
-內容範例： **WKND參考網站** 用於加速教學課程。 WKND是虛構的生活風格品牌，通常與AEM訓練搭配使用。
+示例内容来自 **WKND引用站点** 用于加速教程。 WKND是一个虚构的生活风格品牌，通常与AEM培训一起使用。
 
-WKND網站包含公開 [GraphQL端點](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html). 在實際實施中，請依照檔案說明的步驟 [包含GraphQL端點](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html) （在您的客戶專案中）。 A [CORS](#cors-config) 也已封裝為WKND網站的一部分。 授與外部應用程式的存取權需要CORS設定，瞭解更多關於 [CORS](#cors-config) 可在下方找到。
+WKND站点包含公开 [GraphQL端点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html). 在实际的实施中，请按照文档记录的步骤执行 [包含GraphQL端点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html) 在您的客户项目中。 A [CORS](#cors-config) 也已打包为WKND站点的一部分。 授予对外部应用程序的访问权限需要CORS配置，了解有关 [CORS](#cors-config) 可在下方找到。
 
-1. 下載適用於WKND網站的最新編譯AEM套件： [aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest).
+1. 下载适用于WKND站点的最新编译的AEM包： [aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest).
 
    >[!NOTE]
    >
-   > 請務必下載與AEMas a Cloud Service相容的標準版本，並且 **not** 此 `classic` 版本。
+   > 确保下载与AEMas a Cloud Service兼容的标准版本，并且 **非** 此 `classic` 版本。
 
-1. 從 **AEM開始** 功能表，導覽至 **工具** > **部署** > **套件**.
+1. 从 **AEM开始** 菜单，导航到 **工具** > **部署** > **包**.
 
-   ![導覽至套件](assets/quick-setup/aem-sdk/aem-sdk__packages.png)
+   ![导航到包](assets/quick-setup/aem-sdk/aem-sdk__packages.png)
 
-1. 按一下 **上傳套裝** 並選擇在先前步驟中下載的WKND套件。 单击&#x200B;**安装**&#x200B;可安装软件包。
+1. 单击 **上传包** 并选择在之前步骤中下载的WKND包。 单击&#x200B;**安装**&#x200B;可安装软件包。
 
-1. 從 **AEM開始** 功能表，導覽至 **資產** > **檔案** > **WKND已共用** > **英文** > **冒險**.
+1. 从 **AEM开始** 菜单，导航到 **资产** > **文件** > **WKND已共享** > **英语** > **冒险**.
 
-   ![冒險的資料夾檢視](assets/quick-setup/aem-sdk/aem-sdk__assets-folder.png)
+   ![冒险的文件夹视图](assets/quick-setup/aem-sdk/aem-sdk__assets-folder.png)
 
-   這是構成WKND品牌所宣傳各種冒險的所有資產的資料夾。 這包括影像和視訊等傳統媒體型別，以及AEM特有的媒體，例如 **內容片段**.
+   这是构成WKND品牌推广的各种冒险的所有资产的文件夹。 这包括传统媒体类型（如图像和视频）以及AEM特有的媒体(如 **内容片段**.
 
-1. 按一下 **懷俄明州下山滑雪** 資料夾，然後按一下 **懷俄明州下山滑雪內容片段** 卡片：
+1. 单击 **怀俄明州下山滑雪** 文件夹，然后单击 **怀俄明州下坡滑雪内容片段** 信息卡：
 
-   ![內容片段卡片](assets/quick-setup/aem-sdk/aem-sdk__content-fragment.png)
+   ![内容片段信息卡](assets/quick-setup/aem-sdk/aem-sdk__content-fragment.png)
 
-1. 內容片段編輯器隨即開啟，以進行Downhill Sking Wyoming冒險活動。
+1. 内容片段编辑器将在怀俄明州下山滑雪冒险中打开。
 
    ![内容片段编辑器](assets/quick-setup/aem-sdk/aem-sdk__content-fragment-editor.png)
 
-   觀察各種欄位，例如 **標題**， **說明**、和 **活動** 定義片段。
+   观察各种字段，例如 **标题**， **描述**、和 **活动** 定义片段。
 
-   **內容片段** 是在AEM中管理內容的其中一種方式。 內容片段是可重複使用的、與呈現方式無關的內容，由結構化資料元素（例如文字、RTF文字、日期）組成，或對其他內容片段的參考。 內容片段稍後會在快速設定中更詳細地探討。
+   **内容片段** 是在AEM中管理内容的其中一种方式。 内容片段是可重复使用的、与呈现无关的内容，由结构化数据元素（如文本、富文本、日期或对其他内容片段的引用）组成。 稍后在快速设置中会更详细地探讨内容片段。
 
-1. 按一下 **取消** 以關閉片段。 您可以隨意導覽至其他資料夾，並探索其他冒險內容。
+1. 单击 **取消** 以关闭片段。 您可以随意导航到其他某些文件夹，并探索其他冒险内容。
 
 >[!NOTE]
 >
-> 如果使用Cloud Service環境，請參閱檔案，瞭解如何 [將程式碼基底（例如WKND參考網站）部署到Cloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version).
+> 如果使用Cloud Service环境，请参阅文档以了解如何 [将代码库（如WKND引用站点）部署到Cloud Service环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version).
 
-## 3.下載並執行WKND React應用程式 {#sample-app}
+## 3.下载并运行WKND React应用程序 {#sample-app}
 
-本教學課程的目標之一，是說明如何使用GraphQL API從外部應用程式使用AEM內容。 本教學課程使用範例React App。 React應用程式經過刻意簡化，專注於AEM GraphQL API的整合。
+本教程的目标之一是演示如何使用GraphQL API从外部应用程序使用AEM内容。 本教程使用示例React应用程序。 React应用程序有意设计得非常简单，以便专注于与AEM GraphQL API的集成。
 
-1. 開啟新的命令提示字元，並從GitHub複製範例React應用程式：
+1. 打开新的命令提示符并从GitHub克隆示例React应用程序：
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    $ cd aem-guides-wknd-graphql/react-app
    ```
 
-1. 在中開啟React應用程式 `aem-guides-wknd-graphql/react-app` 在您選擇的IDE中。
-1. 在IDE中，開啟檔案 `.env.development` 於 `/.env.development`. 驗證 `REACT_APP_AUTHORIZATION` 行已取消註解，且檔案會宣告以下變數：
+1. 在中打开React应用程序 `aem-guides-wknd-graphql/react-app` 在您选择的IDE中。
+1. 在IDE中，打开文件 `.env.development` 在 `/.env.development`. 验证 `REACT_APP_AUTHORIZATION` 行被取消注释，并且文件声明以下变量：
 
    ```plain
    REACT_APP_HOST_URI=http://localhost:4502
@@ -120,14 +120,14 @@ WKND網站包含公開 [GraphQL端點](https://experienceleague.adobe.com/docs/e
    REACT_APP_AUTHORIZATION=admin:admin
    ```
 
-   確定 `REACT_APP_HOST_URI` 指向您的本機AEM SDK。 為方便起見，此快速入門會將React應用程式連線至  **AEM作者**. **作者** 服務需要驗證，因此應用程式會使用 `admin` 建立連線的使用者。 將應用程式連線至AEM Author是開發期間的常見做法，因為這有助於在無需發佈變更的情況下快速迭代內容。
+   确保 `REACT_APP_HOST_URI` 指向您的本地AEM SDK。 为了方便起见，此快速入门将React应用程序连接到  **AEM创作**. **作者** 服务需要身份验证，因此应用程序使用 `admin` 建立其连接的用户。 将应用程序连接到AEM作者是开发过程中的一种常见做法，因为它有助于在不发布更改的情况下快速迭代内容。
 
    >[!NOTE]
    >
-   > 在生產案例中，應用程式將連線至AEM **發佈** 環境。 如需詳細資訊，請參閱 _生產部署_ 區段。
+   > 在生产方案中，应用程序将连接到AEM **Publish** 环境。 有关更多详细信息，请参见 _生产部署_ 部分。
 
 
-1. 安裝並啟動React應用程式：
+1. 安装和启动React应用程序：
 
    ```shell
    $ cd aem-guides-wknd-graphql/react-app
@@ -135,52 +135,52 @@ WKND網站包含公開 [GraphQL端點](https://experienceleague.adobe.com/docs/e
    $ npm start
    ```
 
-1. 新的瀏覽器視窗會自動開啟應用程式： [http://localhost:3000](http://localhost:3000).
+1. 新的浏览器窗口会自动打开应用程序 [http://localhost:3000](http://localhost:3000).
 
-   ![React入門應用程式](assets/quick-setup/aem-sdk/react-app__home-view.png)
+   ![React入门应用程序](assets/quick-setup/aem-sdk/react-app__home-view.png)
 
-   隨即顯示來自AEM的冒險內容清單。
+   此时将显示AEM中的冒险内容列表。
 
-1. 按一下其中一個冒險影像以檢視冒險詳細資料。 系統會向AEM提出要求，要求您傳回冒險的詳細資訊。
+1. 单击其中一个冒险图像以查看冒险详细信息。 系统会向AEM发出请求，要求返回冒险的细节。
 
-   ![冒險詳細資料檢視](assets/quick-setup/aem-sdk/react-app__adventure-view.png)
+   ![冒险详细信息视图](assets/quick-setup/aem-sdk/react-app__adventure-view.png)
 
-1. 使用瀏覽器的開發人員工具來檢查 **網路** 要求。 檢視 **XHR** 要求並觀察多個GET要求 `/graphql/execute.json/...`. 此路徑首碼會叫用AEM持續查詢端點，使用首碼後面的名稱和編碼引數選取要執行的持續查詢。
+1. 使用浏览器的开发人员工具检查 **网络** 请求。 查看 **XHR** 请求并观察多个GET请求 `/graphql/execute.json/...`. 此路径前缀将调用AEM持久查询端点，使用前缀后的名称和编码参数选择要执行的持久查询。
 
-   ![GraphQL端點XHR請求](assets/quick-setup/aem-sdk/react-app__graphql-request.png)
+   ![GraphQL端点XHR请求](assets/quick-setup/aem-sdk/react-app__graphql-request.png)
 
-## 4.在AEM中編輯內容
+## 4.在AEM中编辑内容
 
-在React應用程式執行時，對AEM中的內容進行更新，並檢視變更是否反映在應用程式中。
+在React应用程序运行时，对AEM中的内容进行更新，并查看更改是否反映在应用程序中。
 
-1. 導覽至AEM [http://localhost:4502](http://localhost:4502).
-1. 導覽至 **資產** > **檔案** > **WKND已共用** > **英文** > **冒險** > **[巴厘島衝浪營](http://localhost:4502/assets.html/content/dam/wknd-shared/en/adventures/bali-surf-camp)**.
+1. 导航到AEM [http://localhost:4502](http://localhost:4502).
+1. 导航到 **资产** > **文件** > **WKND已共享** > **英语** > **冒险** > **[巴厘岛冲浪营](http://localhost:4502/assets.html/content/dam/wknd-shared/en/adventures/bali-surf-camp)**.
 
-   ![Bali Surf Camp資料夾](assets/setup/bali-surf-camp-folder.png)
+   ![巴厘岛冲浪营文件夹](assets/setup/bali-surf-camp-folder.png)
 
-1. 按一下 **巴厘島衝浪營** 內容片段，以開啟內容片段編輯器。
-1. 修改 **標題** 和 **說明** 探險之旅。
+1. 单击 **巴厘岛冲浪营** 用于打开内容片段编辑器的内容片段。
+1. 修改 **标题** 和 **描述** 探险之旅。
 
-   ![修改內容片段](assets/setup/modify-content-fragment-bali.png)
+   ![修改内容片段](assets/setup/modify-content-fragment-bali.png)
 
-1. 按一下 **儲存** 以儲存變更。
-1. 重新整理React應用程式： [http://localhost:3000](http://localhost:3000) 若要檢視您的變更：
+1. 单击 **保存** 以保存更改。
+1. 刷新React应用程序，网址为 [http://localhost:3000](http://localhost:3000) 要查看您所做的更改，请执行以下操作：
 
-   ![更新巴厘島衝浪營地冒險活動](assets/setup/overnight-bali-surf-camp-changes.png)
+   ![巴厘岛冲浪营地冒险活动最新消息](assets/setup/overnight-bali-surf-camp-changes.png)
 
-## 5.探索GraphiQL {#graphiql}
+## 5.浏览GraphiQL {#graphiql}
 
-1. 開啟 [GraphiQL](http://localhost:4502/aem/graphiql.html) 瀏覽至 **工具** > **一般** > **GraphQL查詢編輯器**
-1. 選取左側的現有持續查詢，並執行它們以檢視結果。
+1. 打开 [GraphiQL](http://localhost:4502/aem/graphiql.html) 导航到 **工具** > **常规** > **GraphQL查询编辑器**
+1. 选择左侧的现有持久查询，然后运行它们以查看结果。
 
    >[!NOTE]
    >
-   > GraphiQL工具和GraphQL API是 [稍後在教學課程中會更詳細地探討](../multi-step/explore-graphql-api.md).
+   > GraphiQL工具和GraphQL API是 [稍后在教程中会更详细地探讨](../multi-step/explore-graphql-api.md).
 
 ## 恭喜！{#congratulations}
 
-恭喜，您現在有外部應用程式使用GraphQL的AEM內容。 歡迎在React應用程式中檢查程式碼，並繼續實驗修改現有內容片段。
+恭喜，您现在有一个外部应用程序正在使用GraphQL的AEM内容。 欢迎在React应用程序中检查代码，并继续尝试修改现有内容片段。
 
 ### 后续步骤
 
-* [開始AEM Headless教學課程](../multi-step/overview.md)
+* [启动AEM Headless教程](../multi-step/overview.md)

@@ -1,6 +1,6 @@
 ---
-title: Android應用程式 — AEM Headless範例
-description: 範例應用程式是探索Adobe Experience Manager (AEM)的Headless功能的絕佳方式。 此Android應用程式示範了如何使用AEM的GraphQL API來查詢內容。
+title: Android应用程序 — AEM Headless示例
+description: 示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此Android应用程序演示了如何使用AEM的GraphQL API查询内容。
 version: Cloud Service
 mini-toc-levels: 2
 kt: 10588
@@ -17,50 +17,50 @@ ht-degree: 6%
 
 ---
 
-# Android應用程式
+# Android应用程序
 
-範例應用程式是探索Adobe Experience Manager (AEM)的Headless功能的絕佳方式。 此Android應用程式示範了如何使用AEM的GraphQL API來查詢內容。 此 [適用於Java的AEM Headless使用者端](https://github.com/adobe/aem-headless-client-java) 用於執行GraphQL查詢，並將資料對應至Java物件以支援應用程式。
+示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此Android应用程序演示了如何使用AEM的GraphQL API查询内容。 此 [适用于Java的AEM Headless客户端](https://github.com/adobe/aem-headless-client-java) 用于执行GraphQL查询，并将数据映射到Java对象以为应用程序提供支持。
 
-![使用AEM Headless的Android Java應用程式](./assets/android-java-app/android-app.png)
+![带有AEM Headless的Android Java应用程序](./assets/android-java-app/android-app.png)
 
 
-檢視 [GitHub上的原始程式碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)
+查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)
 
 ## 前提条件 {#prerequisites}
 
-下列工具應安裝在本機：
+应在本地安装以下工具：
 
 + [Android Studio](https://developer.android.com/studio)
 + [Git](https://git-scm.com/)
 
-## AEM需求
+## AEM要求
 
-Android應用程式可與下列AEM部署選項搭配使用。 所有部署都需要 [WKND網站v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 即將安裝。
+Android应用程序可与以下AEM部署选项配合使用。 所有部署都需要 [WKND站点v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 即将安装。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 本機設定，使用 [AEM CLOUD SERVICE SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)
-+ [AEM 6.5 SP13+快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans？lang=en#install-local-aem-instances)
++ 使用进行本地设置 [AEM CLOUD SERVICE SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)
++ [AEM 6.5 SP13+快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans？lang=en#install-local-aem-instances)
 
-Android應用程式是專為連線至 __AEM發佈__ 不過，如果在Android應用程式的設定中提供驗證，則它可以從AEM Author取得內容。
+Android应用程序旨在连接到 __AEM发布__ 但是，如果在Android应用程序的配置中提供身份验证，则它可以从AEM Author获取内容。
 
-## 使用方式
+## 使用方法
 
-1. 原地複製 `adobe/aem-guides-wknd-graphql` 存放庫：
+1. 克隆 `adobe/aem-guides-wknd-graphql` 存储库：
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Launch [Android Studio](https://developer.android.com/studio) 並開啟資料夾 `android-app`
-1. 修改檔案 `config.properties` 於 `app/src/main/assets/config.properties` 和更新 `contentApi.endpoint` 若要符合您的目標AEM環境：
+1. Launch [Android Studio](https://developer.android.com/studio) 并打开文件夹 `android-app`
+1. 修改文件 `config.properties` 在 `app/src/main/assets/config.properties` 和更新 `contentApi.endpoint` 要匹配您的目标AEM环境，请执行以下操作：
 
    ```plain
    contentApi.endpoint=http://10.0.2.2:4503
    ```
 
-   __基本驗證__
+   __基本身份验证__
 
-   此 `contentApi.user` 和 `contentApi.password` 驗證可存取WKND GraphQL內容的本機AEM使用者。
+   此 `contentApi.user` 和 `contentApi.password` 验证有权访问WKND GraphQL内容的本地AEM用户。
 
    ```plain
    contentApi.endpoint=http://10.0.2.2:4502
@@ -68,15 +68,15 @@ Android應用程式是專為連線至 __AEM發佈__ 不過，如果在Android應
    contentApi.password=admin
    ```
 
-1. 下載 [Android虛擬裝置](https://developer.android.com/studio/run/managing-avds) （最低API 28）。
-1. 使用Android模擬器建置和部署應用程式。
+1. 下载 [Android虚拟设备](https://developer.android.com/studio/run/managing-avds) （最低API 28）。
+1. 使用Android模拟器构建和部署应用程序。
 
 
-### 連線到AEM環境
+### 连接到AEM环境
 
-`10.0.2.2` 是 [特殊別名IP](https://developer.android.com/studio/run/emulator-networking) 適用於localhost （使用模擬器製作時） `10.0.2.2:4502` 相當於 `localhost:4502`. 如果連線到AEM發佈環境（建議），則不需要授權，並且 `contentAPi.user` 和 `contentApi.password` 可保留空白。
+`10.0.2.2` 是 [特殊别名IP](https://developer.android.com/studio/run/emulator-networking) （使用模拟器时）为localhost `10.0.2.2:4502` 相当于 `localhost:4502`. 如果连接到AEM发布环境（推荐），则无需授权，并且 `contentAPi.user` 和 `contentApi.password` 可留空。
 
-如果連線到AEM作者環境 [授權](https://github.com/adobe/aem-headless-client-java#using-authorization) 為必填欄位。 依預設，應用程式設定為使用基本驗證，使用者名稱和密碼為 `admin:admin`. 此 [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) 提供使用 [權杖型驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). 若要在中使用權杖型驗證更新使用者端產生器 `AdventureLoader.java` 和 `AdventuresLoader.java`：
+如果连接到AEM创作环境 [授权](https://github.com/adobe/aem-headless-client-java#using-authorization) 为必填项。 默认情况下，应用程序设置为使用用户名和密码为的基本身份验证 `admin:admin`. 此 [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) 提供了使用 [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). 要在中使用基于令牌的身份验证更新客户端生成器，请执行以下操作 `AdventureLoader.java` 和 `AdventuresLoader.java`：
 
 ```java
 /* Comment out basicAuth
@@ -89,15 +89,15 @@ Android應用程式是專為連線至 __AEM發佈__ 不過，如果在Android應
 builder.tokenAuth(token)
 ```
 
-## 程式碼
+## 代码
 
-以下是用來支援應用程式的重要檔案和程式碼摘要。 完整程式碼可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app).
+下面简要概述了用于为应用程序提供电源的重要文件和代码。 完整代码可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app).
 
-### 持久查詢
+### 持久查询
 
-依照AEM Headless最佳實務，iOS應用程式會使用AEM GraphQL持續查詢來查詢冒險資料。 應用程式使用兩個持續查詢：
+遵循AEM Headless最佳实践，iOS应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
 
-+ `wknd/adventures-all` 持久查詢，這會傳回AEM中所有冒險和屬性刪節集。 此持續查詢會驅動初始檢視的冒險清單。
++ `wknd/adventures-all` 持久查询，该查询返回AEM中的所有冒险以及一组删节的资产。 此持久查询驱动初始视图的冒险列表。
 
 ```
 # Retrieves a list of all adventures
@@ -122,7 +122,7 @@ builder.tokenAuth(token)
 }
 ```
 
-+ `wknd/adventure-by-slug` 持久查詢，會依據以下條件傳回單一冒險 `slug` （可唯一識別冒險的自訂屬性）和完整的屬性集。 此持續查詢可支援冒險詳細資料檢視。
++ `wknd/adventure-by-slug` 持久查询，返回一次冒险的方法是 `slug` （唯一标识冒险的自定义属性）和一组完整的属性。 此持久查询支持冒险详细信息视图。
 
 ```
 # Retrieves an adventure Content Fragment based on it's slug
@@ -178,19 +178,19 @@ query($slug: String!) {
 }
 ```
 
-### 執行GraphQL持續查詢
+### 执行GraphQL持久查询
 
-AEM持續查詢會透過HTTPGET執行，因此， [適用於Java的AEM Headless使用者端](https://github.com/adobe/aem-headless-client-java) 用於對AEM執行持續的GraphQL查詢，並將冒險內容載入應用程式。
+AEM持久查询通过HTTPGET执行，因此， [适用于Java的AEM Headless客户端](https://github.com/adobe/aem-headless-client-java) 用于对AEM执行持久的GraphQL查询，并将冒险内容加载到应用程序中。
 
-每個持續查詢都有對應的「loader」類別，可非同步呼叫AEM HTTPGET端點，並使用自訂定義傳回冒險資料 [資料模型](#data-models).
+每个持久查询都有一个相应的“loader”类，该类异步调用AEM HTTPGET端点，并使用自定义的返回冒险数据 [数据模型](#data-models).
 
 + `loader/AdventuresLoader.java`
 
-   使用在應用程式的主畫面上擷取冒險清單 `wknd-shared/adventures-all` 持久查詢。
+   使用在应用程序的主屏幕上获取冒险列表 `wknd-shared/adventures-all` 持久查询。
 
 + `loader/AdventureLoader.java`
 
-   透過以下方式擷取單一冒險選項： `slug` 引數，使用 `wknd-shared/adventure-by-slug` 持久查詢。
+   获取一个冒险通过 `slug` 参数，使用 `wknd-shared/adventure-by-slug` 持久查询。
 
 ```java
 //AdventuresLoader.java
@@ -212,27 +212,27 @@ AEMHeadlessClient client = builder.build();
 GraphQlResponse response = client.runPersistedQuery(PERSISTED_QUERY_NAME);
 ```
 
-### GraphQL回應資料模型{#data-models}
+### GraphQL响应数据模型{#data-models}
 
-`Adventure.java` 是一種Java POJO，會使用GraphQL請求中的JSON資料初始化，並為冒險建模，以用於Android應用程式的檢視。
+`Adventure.java` 是一个使用GraphQL请求中的JSON数据初始化的Java POJO，并为冒险建模，以在Android应用程序的视图中使用。
 
 ### 视图
 
-Android應用程式使用兩個檢視，在行動體驗中呈現冒險資料。
+Android应用程序使用两个视图在移动体验中呈现冒险数据。
 
 + `AdventureListFragment.java`
 
-   叫用 `AdventuresLoader` 並在清單中顯示傳回的冒險活動。
+   调用 `AdventuresLoader` 并将返回的冒险显示在列表中。
 
 + `AdventureDetailFragment.java`
 
-   叫用 `AdventureLoader` 使用 `slug` 引數是透過 `AdventureListFragment` 檢視，並顯示單一冒險的詳細資訊。
+   调用 `AdventureLoader` 使用 `slug` param通过 `AdventureListFragment` 查看，并显示单次冒险的详细信息。
 
-### 遠端影像
+### 远程图像
 
-`loader/RemoteImagesCache.java` 是一個公用程式類別，可協助您在快取中準備遠端影像，以便與Android UI元素搭配使用。 冒險內容會透過URL參考AEM Assets中的影像，此類別用於顯示該內容。
+`loader/RemoteImagesCache.java` 是一个实用程序类，可帮助在缓存中准备远程图像，以便将其用于Android UI元素。 冒险内容通过URL引用AEM Assets中的图像，此类用于显示该内容。
 
-## 其他資源
+## 其他资源
 
-+ [AEM Headless快速入門 — GraphQL教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans)
-+ [適用於Java的AEM Headless使用者端](https://github.com/adobe/aem-headless-client-java)
++ [AEM Headless快速入门 — GraphQL教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans)
++ [适用于Java的AEM Headless客户端](https://github.com/adobe/aem-headless-client-java)

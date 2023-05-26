@@ -1,6 +1,6 @@
 ---
-title: AEM內容片段主控台擴充功能
-description: 瞭解如何建置和部署AEMas a Cloud Service內容片段主控台擴充功能
+title: AEM内容片段控制台扩展
+description: 了解如何构建和部署AEMas a Cloud Service内容片段控制台扩展
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -18,40 +18,40 @@ ht-degree: 4%
 
 ---
 
-# AEM內容片段主控台擴充功能
+# AEM内容片段控制台扩展
 
-[AEM內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) 擴充功能可透過兩個擴充功能點新增： [內容片段主控台的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) 頁首功能表或動作列。 擴充功能以JavaScript撰寫而成，可當作App Builder應用程式執行，並可實作自訂Web UI和無伺服器Adobe I/O Runtime動作，以執行更密集、長時間執行的工作。
+[AEM内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) 扩展可通过两个扩展点添加：中的按钮 [内容片段控制台的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) 标题菜单或操作栏。 这些扩展使用作为App Builder应用程序运行的JavaScript编写，可以实施自定义Web UI和无服务器Adobe I/O Runtime操作，以执行更密集、长时间运行的工作。
 
-![AEM內容片段主控台擴充功能](./assets/overview/example.png){align="center"}
+![AEM内容片段控制台扩展](./assets/overview/example.png){align="center"}
 
-| 擴充功能型別 | 描述 | 引數 |
+| 扩展类型 | 描述 | 参数 |
 | :--- | :--- | :--- |
-| 頁首功能表 | 將按鈕新增至下列時間顯示的標題： __零__ 已選取內容片段。 | 无。 |
-| 動作列 | 新增按鈕至動作列，該動作列會在 __一或多個__ 已選取內容片段。 | 所選內容片段的路徑陣列。 |
+| 标题菜单 | 将按钮添加到以下情况下显示的标题： __零__ 已选择内容片段。 | 无。 |
+| 操作栏 | 向操作栏添加一个按钮，该按钮在 __一个或多个__ 已选择内容片段。 | 所选内容片段的路径的数组。 |
 
-單一AEM內容片段主控台擴充功能可包含零個或一個標題功能表，以及零個或一個動作列擴充功能型別。 如果需要相同型別的多個擴充功能型別，則必須建立多個AEM內容片段主控台擴充功能。
+单个AEM内容片段控制台扩展可以包含零个或一个标题菜单，以及零个或一个操作栏扩展类型。 如果需要同一类型的多个扩展类型，则必须创建多个AEM内容片段控制台扩展。
 
-AEM內容片段主控台擴充功能，需要 [Adobe Developer Console專案](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console) 和 [應用程式產生器應用程式](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) 使用 `@adobe/aem-cf-admin-ui-ext-tpl` 範本，與Adobe Developer Console專案相關聯。
+AEM内容片段控制台扩展，需要 [Adobe Developer控制台项目](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console) 和 [App Builder应用程序](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) 使用 `@adobe/aem-cf-admin-ui-ext-tpl` 模板，与Adobe Developer Console项目关联。
 
-根據擴充功能的功能，在產生App Builder應用程式時從下列功能中選取。 擴充功能中可以使用任何選項組合。
+在生成App Builder应用程序时，根据扩展的用途，从以下功能中进行选择。 可以在扩展中使用任何选项组合。
 
-|  | 新增按鈕至 [頁首功能表](./header-menu.md) | 新增按鈕至 [動作列](./action-bar.md) | 顯示 [強制回應視窗](./modal.md) | 新增 [伺服器端處理常式](./runtime-action.md) |
+|  | 将按钮添加到 [标题菜单](./header-menu.md) | 将按钮添加到 [操作栏](./action-bar.md) | 显示 [模态](./modal.md) | 添加 [服务器端处理程序](./runtime-action.md) |
 | ------------------------------------------ | :-----------------------: | :----------------------: | :--------: | :--------------------:  |
-| 未選取內容片段時可用 | ✔ |  |  |  |
-| 在選取一或多個內容片段時可用 |  | ✔ |  |  |
-| 從使用者收集自訂輸入 |  |  | ✔️ |  |
-| 顯示使用者的自訂意見回饋 |  |  | ✔️ |  |
-| 對AEM叫用HTTP請求 |  |  |  | ✔ |
-| 對Adobe/第三方服務叫用HTTP請求 |  |  |  | ✔ |
+| 未选择内容片段时可用 | ✔ |  |  |  |
+| 在选择一个或多个内容片段时可用 |  | ✔ |  |  |
+| 从用户处收集自定义输入 |  |  | ✔️ |  |
+| 向用户显示自定义反馈 |  |  | ✔️ |  |
+| 调用AEM的HTTP请求 |  |  |  | ✔ |
+| 调用HTTP请求以Adobe/第三方服务 |  |  |  | ✔ |
 
 
-## Adobe Developer檔案
+## Adobe Developer文档
 
-Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細資訊。 請檢閱 [Adobe Developer內容，以取得進一步的技術詳細資訊](https://developer.adobe.com/uix/docs/).
+Adobe Developer包含有关AEM内容片段控制台扩展的开发人员详细信息。 请查看 [Adobe Developer内容，了解更多技术详细信息](https://developer.adobe.com/uix/docs/).
 
-## 開發擴充功能
+## 开发扩展
 
-請依照下列步驟操作，瞭解如何產生、開發和部署AEMas a Cloud Service的AEM內容片段主控台擴充功能。
+按照下面列出的步骤了解如何为AEMas a Cloud Service生成、开发和部署AEM内容片段控制台扩展。
 
 <div class="columns is-multiline">
     <!-- Create Adobe Developer Project -->
@@ -59,17 +59,17 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./adobe-developer-console-project.md" title="建立Adobe Developer專案" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./assets/project/card.png" alt="建立Adobe Developer專案">
+                    <a href="./adobe-developer-console-project.md" title="创建Adobe Developer项目" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./assets/project/card.png" alt="创建Adobe Developer项目">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">1.建立專案</p>
-                    <p class="is-size-6">建立Adobe Developer Console專案，定義其存取其他Adobe服務的許可權，並管理其部署。</p>
+                    <p class="headline is-size-5 has-text-weight-bold">1.创建项目</p>
+                    <p class="is-size-6">创建一个Adobe Developer Console项目，以定义对其他Adobe服务的访问权限，并管理其部署。</p>
                     <a href="./adobe-developer-console-project.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">建立Adobe Developer專案</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">创建Adobe Developer项目</span>
                     </a>
                 </div>
             </div>
@@ -80,17 +80,17 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./app-initialization.md" title="產生擴充功能應用程式" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./assets/initialize-app/card.png" alt="初始化擴充功能應用程式">
+                    <a href="./app-initialization.md" title="生成扩展应用程序" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./assets/initialize-app/card.png" alt="初始化扩展应用程序">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">2.初始化擴充功能應用程式</p>
-                    <p class="is-size-6">初始化AEM內容片段主控台擴充功能App Builder應用程式，定義擴充功能出現的位置及其執行的工作。</p>
+                    <p class="headline is-size-5 has-text-weight-bold">2.初始化扩展应用程序</p>
+                    <p class="is-size-6">初始化一个AEM内容片段控制台扩展应用程序生成器应用程序，该应用程序定义扩展出现的位置及其执行的工作。</p>
                     <a href="./app-initialization.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">初始化擴充功能應用程式</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">初始化扩展应用程序</span>
                     </a>
                 </div>
             </div>
@@ -101,17 +101,17 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./extension-registration.md" title="擴充功能註冊" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./assets/extension-registration/card.png" alt="擴充功能註冊">
+                    <a href="./extension-registration.md" title="延期注册" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./assets/extension-registration/card.png" alt="延期注册">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">3.延長註冊</p>
-                    <p class="is-size-6">在AEM內容片段控制檯中註冊擴充功能，作為標題功能表或動作列擴充功能型別。</p>
+                    <p class="headline is-size-5 has-text-weight-bold">3.延期登记</p>
+                    <p class="is-size-6">在AEM内容片段控制台中，将该扩展注册为标题菜单或操作栏扩展类型。</p>
                     <a href="./extension-registration.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">註冊擴充功能</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">注册扩展</span>
                     </a>
                 </div>
             </div>
@@ -122,17 +122,17 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./header-menu.md" title="頁首功能表" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./assets/header-menu/card.png" alt="頁首功能表">
+                    <a href="./header-menu.md" title="标题菜单" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./assets/header-menu/card.png" alt="标题菜单">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">4a. 頁首功能表</p>
-                    <p class="is-size-6">瞭解如何建立AEM內容片段主控台標題功能表擴充功能。</p>
+                    <p class="headline is-size-5 has-text-weight-bold">4a. 标题菜单</p>
+                    <p class="is-size-6">了解如何创建AEM内容片段控制台标题菜单扩展。</p>
                     <a href="./header-menu.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">延伸頁首功能表</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">扩展标题菜单</span>
                     </a>
                 </div>
             </div>
@@ -151,9 +151,9 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">4b. 操作栏</p>
-                    <p class="is-size-6">瞭解如何建立AEM內容片段主控台動作列擴充功能。</p>
+                    <p class="is-size-6">了解如何创建AEM内容片段控制台操作栏扩展。</p>
                     <a href="./action-bar.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">擴充動作列</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">扩展操作栏</span>
                     </a>
                 </div>
             </div>
@@ -171,10 +171,10 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">5.強制回應視窗</p>
-                    <p class="is-size-6">新增自訂強制回應至擴充功能，以便建立適合使用者的自訂體驗。 模組通常會收集使用者的輸入，並顯示作業的結果。</p>
+                    <p class="headline is-size-5 has-text-weight-bold">5.模态</p>
+                    <p class="is-size-6">向扩展中添加自定义模式窗口，以便用于为用户创建定制体验。 模型通常会收集用户的输入，并显示操作的结果。</p>
                     <a href="./modal.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">新增強制回應視窗</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">添加模态</span>
                     </a>
                 </div>
             </div>
@@ -185,17 +185,17 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./runtime-action.md" title="Adobe I/O Runtime動作" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./assets/runtime-action/card.png" alt="Adobe I/O Runtime動作">
+                    <a href="./runtime-action.md" title="Adobe I/O Runtime操作" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./assets/runtime-action/card.png" alt="Adobe I/O Runtime操作">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">6. Adobe I/O Runtime動作</p>
-                    <p class="is-size-6">新增無伺服器的Adobe I/O Runtime動作，讓擴充功能可以叫用，與內容片段和AEM互動，以執行自訂業務作業。</p>
+                    <p class="headline is-size-5 has-text-weight-bold">6.Adobe I/O Runtime行动</p>
+                    <p class="is-size-6">添加无服务器Adobe I/O Runtime操作，扩展可以调用该操作与内容片段和AEM交互，以执行自定义业务操作。</p>
                     <a href="./runtime-action.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">新增Adobe I/O Runtime動作</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">添加Adobe I/O Runtime操作</span>
                     </a>
                 </div>
             </div>
@@ -213,10 +213,10 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">7.測試</p>
-                    <p class="is-size-6">在開發期間測試擴充功能，並使用特殊URL將完成的擴充功能共用給QA或UAT測試者。</p>
+                    <p class="headline is-size-5 has-text-weight-bold">7.测试</p>
+                    <p class="is-size-6">在开发过程中测试扩展，并使用特殊URL将已完成的扩展共享到QA或UAT测试者。</p>
                     <a href="./test.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">測試擴充功能</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">测试扩展</span>
                     </a>
                 </div>
             </div>
@@ -227,17 +227,17 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./deploy.md" title="擴充功能部署" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./assets/deploy/card.png" alt="擴充功能部署">
+                    <a href="./deploy.md" title="扩展部署" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./assets/deploy/card.png" alt="扩展部署">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">8.生產部署</p>
-                    <p class="is-size-6">將擴充功能部署至Adobe I/O，以供AEM使用者使用。 擴充功能也可以更新和移除。</p>
+                    <p class="headline is-size-5 has-text-weight-bold">8.生产部署</p>
+                    <p class="is-size-6">将扩展部署到Adobe I/O，以使其可供AEM用户使用。 也可以更新和删除扩展。</p>
                     <a href="./deploy.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">部署到生產</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">部署到生产</span>
                     </a>
                 </div>
             </div>
@@ -245,9 +245,9 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
     </div>
 </div>
 
-## 範例擴充功能
+## 扩展示例
 
-範例AEM內容片段主控台擴充功能。
+示例AEM内容片段控制台扩展。
 
 <div class="columns is-multiline">
     <!-- Bulk property update extension -->
@@ -255,17 +255,17 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./example-extensions/bulk-property-update.md" title="大量屬性更新擴充功能" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./example-extensions/assets/bulk-property-update/card.png" alt="大量屬性更新擴充功能">
+                    <a href="./example-extensions/bulk-property-update.md" title="批量属性更新扩展" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./example-extensions/assets/bulk-property-update/card.png" alt="批量属性更新扩展">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">大量屬性更新擴充功能</p>
-                    <p class="is-size-6">探索大量更新所選內容片段屬性的動作列擴充功能範例。</p>
+                    <p class="headline is-size-5 has-text-weight-bold">批量属性更新扩展</p>
+                    <p class="is-size-6">探索批量更新选定内容片段上属性的操作栏扩展示例。</p>
                     <a href="./example-extensions/bulk-property-update.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">探索範例擴充功能</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">探索扩展示例</span>
                     </a>
                 </div>
             </div>
@@ -276,17 +276,17 @@ Adobe Developer包含AEM內容片段主控台擴充功能的開發人員詳細�
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./example-extensions/image-generation-and-image-upload.md" title="以OpenAI為基礎的影像產生和上傳至AEM擴充功能" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./example-extensions/assets/digital-image-generation/screenshot.png" alt="以OpenAI為基礎的影像產生和上傳至AEM擴充功能">
+                    <a href="./example-extensions/image-generation-and-image-upload.md" title="基于OpenAI的图像生成和上传到AEM扩展" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./example-extensions/assets/digital-image-generation/screenshot.png" alt="基于OpenAI的图像生成和上传到AEM扩展">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">以OpenAI為基礎的影像產生和上傳至AEM擴充功能</p>
-                    <p class="is-size-6">探索使用OpenAI產生影像、上傳至AEM並更新所選內容片段上影像屬性的動作列擴充功能範例。</p>
+                    <p class="headline is-size-5 has-text-weight-bold">基于OpenAI的图像生成和上传到AEM扩展</p>
+                    <p class="is-size-6">探索一个示例操作栏扩展，该扩展使用OpenAI生成图像，将其上传到AEM并更新所选内容片段上的图像属性。</p>
                     <a href="./example-extensions/image-generation-and-image-upload.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">探索範例擴充功能</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">探索扩展示例</span>
                     </a>
                 </div>
             </div>

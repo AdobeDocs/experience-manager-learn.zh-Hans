@@ -1,6 +1,6 @@
 ---
-title: 將Forms與Microsoft power automate整合
-description: 在最適化表單提交上觸發Power Automate流程
+title: 将Forms与Microsoft power automate集成
+description: 在自适应表单提交时触发Power Automate流程
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Forms CS和Microsoft Power Automate
 
-在最適化表單提交上叫用您的Power Automate流程。 以下影片說明設定和整合Forms CS與Microsoft Power Automate所需的步驟。
+对自适应表单提交调用Power Automate流程。 以下视频演示了配置和将Forms CS与Microsoft Power Automate集成所需的步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/345675?quality=12&learn=on)

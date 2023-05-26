@@ -1,6 +1,6 @@
 ---
-title: 搭配AEM Forms使用Microsoft Dynamics
-description: 此影片會逐步解說一個工作流程，說明AEM Forms如何搭配Microsoft Dynamics作為後端資料來源，提供互動式個人化通訊。
+title: 将Microsoft Dynamics与AEM Forms结合使用
+description: 此视频介绍一个工作流，该工作流显示AEM Forms如何将Microsoft Dynamics用作后端数据源，以提供交互式个性化通信。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,20 +15,20 @@ ht-degree: 0%
 
 ---
 
-# 搭配AEM Forms使用Microsoft Dynamics{#using-microsoft-dynamics-with-aem-forms}
+# 将Microsoft Dynamics与AEM Forms结合使用{#using-microsoft-dynamics-with-aem-forms}
 
-AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列為支援的現成可用功能。 不過，只需少量自訂，您也可以整合其他資料來源。
+AEM Forms数据集成允许您配置并连接到不同的数据源。 支持开箱即用的以下功能。 但是，只需少量自定义，您也可以集成其他数据源。
 
-關聯式資料庫 — MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS
-1. AEM使用者設定檔
-1. RESTful Web服務
-1. 以SOAP為基礎的網站服務
-1. OData服務
+关系数据库 — MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS
+1. AEM用户配置文件
+1. RESTful Web服务
+1. 基于SOAP的Web服务
+1. OData服务
 
-此影片會逐步解說一個工作流程，說明AEM Forms如何搭配Microsoft Dynamics作為後端資料來源，提供互動式個人化通訊。
+此视频介绍一个工作流，该工作流显示AEM Forms如何将Microsoft Dynamics用作后端数据源，以提供交互式个性化通信。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20971?quality=12&learn=on)
 
 >[!NOTE]
 >
->此功能僅適用於AEM 6.3 FP1及更高版本。 設定之前，請務必先安裝AEM Forms附加元件。
+>此功能仅在AEM 6.3 FP1及更高版本上可用。 在设置之前，请务必安装AEM Forms加载项。

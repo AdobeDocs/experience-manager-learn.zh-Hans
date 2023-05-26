@@ -1,7 +1,7 @@
 ---
-title: 在最適化表單提交時傳送電子郵件
+title: 发送有关自适应表单提交的电子邮件
 seo-title: Sending Email on Adaptive Form Submission
-description: 使用傳送電子郵件元件，針對自適應表單提交傳送確認電子郵件
+description: 使用发送电子邮件组件发送有关自适应表单提交的确认电子邮件
 seo-description: Send confirmation email on adaptive form submission using the send email component
 uuid: 6c9549ba-cb56-4d69-902c-45272a8fd17e
 feature: Adaptive Forms
@@ -22,32 +22,32 @@ ht-degree: 3%
 
 ---
 
-# 在最適化表單提交時傳送電子郵件 {#sending-email-on-adaptive-form-submission}
+# 发送有关自适应表单提交的电子邮件 {#sending-email-on-adaptive-form-submission}
 
-常見的動作之一，是在成功提交最適化表單時傳送確認電子郵件給提交者。 若要完成此操作，我們將選取「傳送電子郵件」作為提交動作。
+其中一个常见操作是在自适应表单成功提交时向提交者发送确认电子邮件。 要完成此操作，我们将选择“发送电子邮件”作为提交操作。
 
-您可以使用電子郵件範本，或只要輸入電子郵件的內文，如下方熒幕擷圖所示。
+您可以使用电子邮件模板，也可以只键入电子邮件的正文，如下面的屏幕快照所示。
 
-請注意在電子郵件中插入表單欄位值的語法。我們也可以選取設定屬性中的「包含附件」核取方塊，以在電子郵件中包含表單附件。
+请注意在电子邮件中插入表单字段值的语法。我们还可以选择在电子邮件中包含表单附件，方法是选中配置属性中的“包含附件”复选框。
 
-提交最適化表單時，收件者會收到電子郵件。
+提交自适应表单后，收件人将收到电子邮件。
 
 ![SendEmail](assets/sendemailaction.gif)
 
-## 所需設定 {#configurations-needed}
+## 所需配置 {#configurations-needed}
 
-您必須設定Day CQ郵件服務。 您可透過將瀏覽器指向 [Felix設定管理員](http://localhost:4502/system/console/configMgr)
+您必须配置Day CQ邮件服务。 可通过将浏览器指向 [Felix配置管理器](http://localhost:4502/system/console/configMgr)
 
-此熒幕擷圖顯示Adobe郵件伺服器的設定屬性。
+此屏幕快照显示Adobe邮件服务器的配置属性。
 
-![mailservice](assets/mailservice.png)
+![邮件服务](assets/mailservice.png)
 
-若要在您的伺服器上嘗試此方法，請遵循下列指示：
+要在您的服务器上尝试此操作，请按照以下说明操作：
 
-* [匯入資產](assets/timeoffrequest.zip) 使用封裝管理程式在AEM中與此文章相關聯。
+* [导入资源](assets/timeoffrequest.zip) 使用包管理器在AEM中与此文章关联。
 
-* 開啟 [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
+* 打开 [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
 
-* 填寫詳細資料。請務必在電子郵件欄位中提供有效的電子郵件地址。
+* 填写详细信息。确保在电子邮件字段中提供有效的电子邮件地址。
 
 * 提交表单.

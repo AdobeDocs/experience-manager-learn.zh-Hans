@@ -1,6 +1,6 @@
 ---
-title: URL重新導向
-description: 瞭解在AEM中執行URL重新導向的各種選項。
+title: URL重定向
+description: 了解在AEM中执行URL重定向的各种选项。
 version: 6.4, 6.5, Cloud Service
 topic: Development, Administration
 feature: Operations, Dispatcher
@@ -17,68 +17,68 @@ ht-degree: 1%
 
 ---
 
-# URL重新導向
+# URL重定向
 
-URL重新導向是網站作業中常見的方面。 對於如何以及在何處管理URL重新導向，架構師和管理員必須尋找最佳解決方案，以提供彈性和快速的重新導向部署時間。
+URL重定向是网站操作中一个常见的方面。 架构师和管理员需要找到最佳解决方案，了解如何以及在何处管理URL重定向，从而提供灵活性和快速的重定向部署时间。
 
-請務必熟悉 [AEM (6.x) aka AEM Classic](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-2.html#the-%E2%80%9Clegacy%E2%80%9D-setup) 和 [AEMas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/architecture.html#runtime-architecture) 基礎結構。 主要差異如下：
+确保您熟悉 [AEM (6.x)又称AEM Classic](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-2.html#the-%E2%80%9Clegacy%E2%80%9D-setup) 和 [AEMas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/architecture.html#runtime-architecture) 基础架构。 主要区别包括：
 
-1. AEMas a Cloud Service具有 [內建CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)但是，客戶可以在AEM管理的CDN之前提供CDN (BYOCDN)。
-1. AEM 6.x (無論是內部部署或Adobe Managed Services (AMS))不包含AEM管理的CDN，且客戶必須自備。
+1. AEMas a Cloud Service具有 [内置CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)但是，客户可以在AEM管理的CDN之前提供CDN (BYOCDN)。
+1. AEM 6.x(无论是内部部署还是Adobe Managed Services (AMS))均不包含AEM管理的CDN，并且客户必须自带。
 
-其他AEM服務（AEM Author/Publish和Dispatcher）在AEM 6.x和AEMas a Cloud Service之間的概念類似。
+其他AEM服务（AEM Author/Publish和Dispatcher）在AEM 6.x和AEMas a Cloud Service之间在概念上是相似的。
 
-AEM URL重新導向解決方案如下：
+AEM URL重定向解决方案如下所示：
 
-|  | 作為AEM專案程式碼管理及部署 | 可依行銷/內容團隊變更 | AEM as Cloud Service相容 | 發生重新導向執行的位置 |
+|  | 作为AEM项目代码托管和部署 | 能够按营销/内容团队进行更改 | AEM与Cloud Service兼容 | 发生重定向执行的位置 |
 |---------------------------------------------------|:-----------------------:|:---------------------:|:---------------------:| :---------------------:|
-| [At Edge透過自備CDN](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge/CDN |
-| [Apache `mod_rewrite` 規則作為Dispatcher設定 ](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
-| [ACS Commons — 重新導向地圖管理員](#redirect-map-manager) | ✘ | ✔ | ✘ | Dispatcher |
-| [ACS Commons — 重新導向管理員](#redirect-manager) | ✘ | ✔ | ✔ | AEM |
-| [此 `Redirect` 頁面屬性](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
+| [在Edge，通过自带CDN](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge/CDN |
+| [Apache `mod_rewrite` 规则作为Dispatcher配置 ](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
+| [ACS Commons — 重定向映射管理器](#redirect-map-manager) | ✘ | ✔ | ✘ | Dispatcher |
+| [ACS Commons — 重定向管理器](#redirect-manager) | ✘ | ✔ | ✔ | AEM |
+| [此 `Redirect` 页面属性](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
 
 
-## 解決方案選項
+## 解决方案选项
 
-以下是解決方案選項，順序為更接近網站訪客的瀏覽器。
+以下是从离网站访客的浏览器较近的顺序排列的解决方案选项。
 
-### At Edge透過自備CDN
+### 在Edge，通过自带CDN
 
-有些CDN服務提供邊緣層級的重新導向解決方案，因此可減少前往原點的來回次數。 另請參閱 [Akamai Edge重新導向程式](https://techdocs.akamai.com/cloudlets/docs/what-edge-redirector)， [AWS CloudFront函式](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-functions.html). 如需邊緣層級重新導向功能，請洽詢您的CDN服務提供者。
+某些CDN服务提供边缘级别的重定向解决方案，从而减少到原点的往返次数。 参见 [Akamai Edge重定向器](https://techdocs.akamai.com/cloudlets/docs/what-edge-redirector)， [AWS CloudFront函数](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-functions.html). 有关边缘级别重定向功能，请咨询您的CDN服务提供商。
 
-在Edge或CDN層級管理重新導向具有效能優勢，但是這些優勢並非作為AEM的一部分來管理，而是作為獨立專案來管理。 管理及部署重新導向規則的深思熟慮程式對避免問題至關重要。
+在Edge或CDN级别管理重定向具有性能优势，但是它们不是作为AEM的一部分进行管理，而是作为离散项目进行管理。 管理和部署重定向规则的深思熟虑过程对于避免问题至关重要。
 
 
-### Apache `mod_rewrite` 模組
+### Apache `mod_rewrite` 模块
 
-常見的解決方案使用 [Apache模組mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html). 此 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 為兩者提供Dispatcher專案結構 [AEM 6.x](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.ams#file-structure) 和 [AEMas a Cloud Service](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud#file-structure) 專案。 預設（不可變）和自訂重寫規則定義於 `conf.d/rewrites` 資料夾，而且重新寫入引擎已開啟 `virtualhosts` 在連線埠上接聽的 `80` 透過 `conf.d/dispatcher_vhost.conf` 檔案。 實作範例可在以下取得： [AEM WKND網站專案](https://github.com/adobe/aem-guides-wknd/tree/main/dispatcher/src/conf.d/rewrites).
+一种常见的解决方案使用 [Apache模块mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html). 此 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 为两者都提供Dispatcher项目结构 [AEM 6.x](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.ams#file-structure) 和 [AEMas a Cloud Service](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud#file-structure) 项目。 默认（不可变）和自定义重写规则定义于 `conf.d/rewrites` 文件夹打开了重写引擎 `virtualhosts` 监听端口 `80` via `conf.d/dispatcher_vhost.conf` 文件。 示例实施位于 [AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd/tree/main/dispatcher/src/conf.d/rewrites).
 
-在AEMas a Cloud Service中，這些重新導向規則會作為AEM程式碼的一部分進行管理，並透過Cloud Manager部署 [Web層設定管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html#web-tier-config-pipelines) 或 [完整棧疊管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html#full-stack-pipeline). 因此，您的AEM專案特定程式將用於管理、部署和追蹤重新導向規則。
+在AEMas a Cloud Service中，这些重定向规则作为AEM代码的一部分进行管理，并通过Cloud Manager进行部署 [Web层配置管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html#web-tier-config-pipelines) 或 [全栈管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html#full-stack-pipeline). 因此，您的AEM项目特定流程将用于管理、部署和跟踪重定向规则。
 
-大部分的CDN服務都會快取HTTP 301和302重新導向，視其 `Cache-Control` 或 `Expires` 標頭。 這有助於避免最初在Apache/Dispatcher處重新導向之後的來回。
+大多数CDN服务都会缓存HTTP 301和302重定向，具体取决于它们的 `Cache-Control` 或 `Expires` 标头。 这有助于避免在Apache/Dispatcher处发起初始重定向后的来回。
 
 
 ### ACS AEM Commons
 
-內有兩項可用的功能 [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) 管理URL重新導向。 請注意，ACS AEM Commons是社群運作的開放原始碼專案，Adobe不支援。
+中提供了两项功能 [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) 管理URL重定向。 请注意，ACS AEM Commons是一个社区运营的开源项目，不受Adobe支持。
 
-#### 重新導向地圖管理員
+#### 重定向映射管理器
 
-[重新導向地圖管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) 可讓AEM 6.x管理員輕鬆維護和發佈 [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) 檔案不需直接存取Apache Web Server或要求Apache Web Server重新啟動。 此功能可讓許可權使用者從AEM中的主控台建立、更新和刪除重新導向規則，無需開發團隊或AEM部署協助。 重新導向地圖管理員是 **與AEMas a Cloud Service不相容**.
+[重定向映射管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) 使AEM 6.x管理员能够轻松维护和发布 [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) 文件无需直接访问Apache Web Server或要求重新启动Apache Web Server。 此功能允许用户从AEM中的控制台创建、更新和删除重定向规则，而无需开发团队或AEM部署。 重定向映射管理器为 **与AEMas a Cloud Service不兼容**.
 
-#### 重新導向管理員
+#### 重定向管理器
 
-[重新導向管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) 可讓AEM的使用者輕鬆維護和發佈AEM的重新導向。 實作是以Java™ servlet篩選為基礎，因此是典型的JVM資源消耗。 此功能也會消除對AEM開發團隊和AEM部署的相依性。 重新導向管理員是兩者 **AEMas a Cloud Service** 和 **AEM 6.x** 相容。 雖然初始重新導向請求預設必須點選AEM Publish服務來產生301/302 （大多數） CDN的快取301/302，允許後續請求被重新導向到edge/CDN。
+[重定向管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) 允许AEM中的用户轻松地维护和发布AEM中的重定向。 该实现基于Java™ servlet过滤器，因而典型的JVM资源消耗。 此功能还可消除对AEM开发团队和AEM部署的依赖性。 重定向管理器是两者 **AEMas a Cloud Service** 和 **AEM 6.x** 兼容。 默认情况下，初始重定向请求必须命中AEM Publish服务以生成301/302（大多数） CDN的缓存301/302，从而允许后续请求重定向到edge/CDN。
 
-### 此 `Redirect` 頁面屬性
+### 此 `Redirect` 页面属性
 
-開箱即用(OOTB) `Redirect` 頁面屬性 [進階索引標籤](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/page-properties.html#advanced) 可讓內容作者定義目前頁面的重新導向位置。 此解決方案最適合每個頁面重新導向案例，而且沒有可檢視和管理頁面重新導向的中央位置。
+开箱即用(OOTB) `Redirect` 页面属性 [“高级”选项卡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/page-properties.html#advanced) 允许内容作者定义当前页面的重定向位置。 此解决方案最适合每页面重定向方案，并且没有用于查看和管理页面重定向的中心位置。
 
-## 哪個解決方案適合實施
+## 哪个解决方案适合实施
 
-以下是判斷正確解決方案的一些條件。 此外，貴組織的IT和行銷流程應有助於挑選正確的解決方案。
+下面是确定正确解决方案的一些标准。 此外，贵组织的IT和营销流程应该有助于选择正确的解决方案。
 
-1. 讓行銷團隊或超級使用者在沒有AEM開發團隊和AEM部署的情況下管理重新導向規則。
-1. 管理、驗證、追蹤及回覆變更或降低風險的程式。
-1. 的可用性 _主題專業知識_ 的 **At Edge （透過CDN服務）** 解決方案。
+1. 使营销团队或超级用户能够在没有AEM开发团队和AEM部署的情况下管理重定向规则。
+1. 管理、验证、跟踪和恢复更改或降低风险的过程。
+1. 可用性 _主题专业知识_ 对象 **At Edge（通过CDN服务）** 解决方案。

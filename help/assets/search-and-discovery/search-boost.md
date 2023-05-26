@@ -1,6 +1,6 @@
 ---
-title: 什麼是AEM Assets中的Search Boost？
-description: 瞭解如何在Adobe Experience Manager中新增關鍵字和片語，以提高資產的搜尋相關性。
+title: 什么是AEM Assets中的Search Boost？
+description: 了解如何在Adobe Experience Manager中添加关键词和短语以提高资源的搜索相关性。
 topic: Content Management
 feature: Search
 role: User

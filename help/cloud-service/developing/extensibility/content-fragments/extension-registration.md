@@ -1,6 +1,6 @@
 ---
-title: AEM內容片段主控台擴充功能註冊
-description: 瞭解如何註冊內容片段主控台擴充功能。
+title: AEM内容片段控制台扩展注册
+description: 了解如何注册内容片段控制台扩展。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ---
 
-# 擴充功能註冊
+# 延期注册
 
-AEM內容片段主控台擴充功能是專門的應用程式產生器應用程式，以React為基礎，並使用 [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/) UI框架。
+AEM内容片段控制台扩展是专门的应用程序生成器应用程序，它基于React并使用 [React频谱](https://react-spectrum.adobe.com/react-spectrum/) 用户界面框架。
 
-若要定義擴充功能的AEM內容片段主控台出現位置及方式，擴充功能的App Builder應用程式中需要兩個特定設定：應用程式路由和擴充功能註冊。
+要定义扩展在AEM内容片段控制台中的显示位置和方式，扩展的App Builder应用程序中需要两个特定的配置：应用程序路由和扩展注册。
 
-## 應用程式路由{#app-routes}
+## 应用程序路由{#app-routes}
 
-擴充功能的 `App.js` 宣告 [React路由器](https://reactrouter.com/en/main) 其中包括在AEM內容片段主控台中註冊擴充功能的索引路由。
+扩展的 `App.js` 声明 [React路由器](https://reactrouter.com/en/main) 该路由包括在AEM内容片段控制台中注册扩展的索引路由。
 
-索引路由會在最初載入AEM內容片段主控台時叫用，而且此路由的目標會定義擴充功能在主控台中的公開方式。
+最初加载AEM内容片段控制台时，将调用索引路由，此路由的目标定义扩展在控制台中的公开方式。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/App.js`
 
@@ -50,26 +50,26 @@ function App(props) {
 }
 ```
 
-## 擴充功能註冊
+## 延期注册
 
-`ExtensionRegistration.js` 必須透過擴充功能的索引路徑立即載入，並做為擴充功能的註冊點，定義：
+`ExtensionRegistration.js` 必须立即通过扩展的索引路径加载，并充当扩展的注册点，定义：
 
-1. 擴充功能型別； a [頁首功能表](./header-menu.md) 或 [動作列](./action-bar.md) 按鈕。
-   + [頁首功能表](./header-menu.md#extension-registration) 擴充功能由 `headerMenu` 下的屬性 `methods`.
-   + [動作列](./action-bar.md#extension-registration) 擴充功能由 `actionBar` 下的屬性 `methods`.
-1. 擴充功能按鈕的定義，在 `getButton()` 函式。 此函式傳回包含欄位的物件：
-   + `id` 是按鈕的唯一ID
-   + `label` 是AEM內容片段主控台中的擴充功能按鈕標籤
-   + `icon` 是AEM內容片段主控台中的擴充功能按鈕圖示。 圖示為 [React Spectrum](https://spectrum.adobe.com/page/icons/) 圖示名稱，移除空格。
-1. 按鈕的點選處理常式，在 `onClick()` 函式。
-   + [頁首功能表](./header-menu.md#extension-registration) 擴充功能不會將引數傳遞至點選處理常式。
-   + [動作列](./action-bar.md#extension-registration) 擴充功能提供 `selections` 引數。
+1. 扩展类型； a [标题菜单](./header-menu.md) 或 [操作栏](./action-bar.md) 按钮。
+   + [标题菜单](./header-menu.md#extension-registration) 扩展由 `headerMenu` 下的属性 `methods`.
+   + [操作栏](./action-bar.md#extension-registration) 扩展由 `actionBar` 下的属性 `methods`.
+1. 扩展按钮的定义，在 `getButton()` 函数。 此函数返回一个包含字段的对象：
+   + `id` 是按钮的唯一ID
+   + `label` 是AEM内容片段控制台中的扩展按钮的标签
+   + `icon` 是AEM内容片段控制台中的扩展按钮的图标。 图标是 [React频谱](https://spectrum.adobe.com/page/icons/) 图标名称，删除了空格。
+1. 按钮的点击处理程序，在 `onClick()` 函数。
+   + [标题菜单](./header-menu.md#extension-registration) 扩展不会将参数传递给点击处理程序。
+   + [操作栏](./action-bar.md#extension-registration) 扩展在中提供选定内容片段路径的列表 `selections` 参数。
 
-### 頁首功能表擴充功能
+### 标题菜单扩展
 
-![頁首功能表擴充功能](./assets/extension-registration/header-menu.png)
+![标题菜单扩展](./assets/extension-registration/header-menu.png)
 
-未選取任何內容片段時，會顯示標題功能表擴充功能按鈕。 由於頁首功能表擴充功能不會作用於內容片段選擇，因此不會向其提供任何內容片段 `onClick()` 處理常式。
+未选择内容片段时，会显示标题菜单扩展按钮。 由于标题菜单扩展不作用于内容片段选择，因此不会向其提供内容片段 `onClick()` 处理程序。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -107,22 +107,22 @@ function ExtensionRegistration() {
 ">
   <div class="is-flex is-padded-small is-padded-big-mobile">
     <div>
-      <p class="has-text-weight-bold is-size-36 is-size-27-touch is-margin-bottom-big has-text-blackest">跳至建立頁首功能表擴充功能</p>
-      <p class="has-text-blackest">瞭解如何在AEM內容片段主控台中註冊和定義標題功能表擴充功能。</p>
+      <p class="has-text-weight-bold is-size-36 is-size-27-touch is-margin-bottom-big has-text-blackest">跳至构建标题菜单扩展</p>
+      <p class="has-text-blackest">了解如何在AEM内容片段控制台中注册和定义标题菜单扩展。</p>
       <div class="has-align-start is-margin-top-big">
         <a href="./header-menu.md" target="_blank" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-          <span class="spectrum-Button-label has-no-wrap has-text-weight-bold" title="瞭解如何建立頁首功能表擴充功能">瞭解如何建立頁首功能表擴充功能</span>
+          <span class="spectrum-Button-label has-no-wrap has-text-weight-bold" title="了解如何构建标题菜单扩展">了解如何构建标题菜单扩展</span>
         </a>
       </div>
     </div>
   </div>
 </div>
 
-### 動作列擴充功能
+### 操作栏扩展
 
-![動作列擴充功能](./assets/extension-registration/action-bar.png)
+![操作栏扩展](./assets/extension-registration/action-bar.png)
 
-選取一或多個內容片段時，就會顯示動作列擴充功能按鈕。 所選內容片段的路徑可透過以下路徑提供給擴充功能使用： `selections` 引數，在按鈕的 `onClick(..)` 處理常式。
+选择一个或多个内容片段时，将显示操作栏扩展按钮。 所选内容片段的路径可通过以下路径提供给扩展： `selections` 参数，在按钮的 `onClick(..)` 处理程序。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -160,34 +160,34 @@ function ExtensionRegistration() {
 ">
   <div class="is-flex is-padded-small is-padded-big-mobile">
     <div>
-      <p class="has-text-weight-bold is-size-36 is-size-27-touch is-margin-bottom-big has-text-blackest">跳至建立動作列擴充功能</p>
-      <p class="has-text-blackest">瞭解如何在AEM內容片段主控台中註冊和定義動作列擴充功能。</p>
+      <p class="has-text-weight-bold is-size-36 is-size-27-touch is-margin-bottom-big has-text-blackest">跳至构建操作栏扩展</p>
+      <p class="has-text-blackest">了解如何在AEM内容片段控制台中注册和定义操作栏扩展。</p>
       <div class="has-align-start is-margin-top-big">
         <a href="./action-bar.md" target="_blank" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-          <span class="spectrum-Button-label has-no-wrap has-text-weight-bold" title="瞭解如何建立動作列擴充功能">瞭解如何建立動作列擴充功能</span>
+          <span class="spectrum-Button-label has-no-wrap has-text-weight-bold" title="了解如何构建操作栏扩展">了解如何构建操作栏扩展</span>
         </a>
       </div>
     </div>
   </div>
 </div>
 
-## 有條件地包含擴充功能
+## 有条件地包含扩展
 
-AEM內容片段主控台擴充功能可執行自訂邏輯，以限制擴充功能出現在AEM內容片段主控台中的時間。 此檢查是在 `register` 呼叫中的 `ExtensionRegistration` 元件，如果不應該顯示擴充功能，則會立即傳回。
+AEM内容片段控制台扩展可以执行自定义逻辑，以限制扩展出现在AEM内容片段控制台中的时间。 此检查在 `register` 在中调用 `ExtensionRegistration` 组件，如果不应显示扩展，则会立即返回。
 
-此檢查可用的內容有限：
+此检查的可用上下文有限：
 
-+ 正在載入擴充功能的AEM主機。
-+ 目前使用者的AEM存取權杖。
++ 加载扩展的AEM主机。
++ 当前用户的AEM访问令牌。
 
-載入擴充功能的最常見檢查為：
+加载扩展时最常见的检查包括：
 
-+ 使用AEM主機(`new URLSearchParams(window.location.search).get('repo')`)以決定是否應載入擴充功能。
-   + 只在屬於特定計劃一部分的AEM環境中顯示擴充功能（如下例所示）。
-   + 僅顯示特定AEM環境(即AEM主機)上的擴充功能。
-+ 使用 [Adobe I/O Runtime動作](./runtime-action.md) 對AEM進行HTTP呼叫，以判斷目前使用者是否應該看到擴充功能。
++ 使用AEM主机(`new URLSearchParams(window.location.search).get('repo')`)以确定是否应加载扩展。
+   + 仅在属于特定程序的AEM环境中显示扩展（如下例所示）。
+   + 仅显示特定AEM环境(即AEM主机)上的扩展。
++ 使用 [Adobe I/O Runtime操作](./runtime-action.md) 对AEM进行HTTP调用，以确定当前用户是否应该看到该分机。
 
-以下範例說明如何將擴充功能限制在程式中的所有環境 `p12345`.
+以下示例说明了如何将扩展限制在程序中的所有环境 `p12345`.
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 

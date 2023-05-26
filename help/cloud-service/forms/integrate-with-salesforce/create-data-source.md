@@ -1,6 +1,6 @@
 ---
-title: 建立雲端服務設定
-description: 使用OAuth憑證建立資料來源以連線至Salesforce
+title: 创建云服务配置
+description: 使用OAuth凭据创建数据源以连接到Salesforce
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 建立資料來源
+# 创建数据源
 
-使用先前步驟中建立的Swagger檔案建立REST支援的資料來源
+使用上一步创建的swagger文件创建REST支持的数据源
 
 >[!VIDEO](https://video.tv.adobe.com/v/331755?quality=12&learn=on)

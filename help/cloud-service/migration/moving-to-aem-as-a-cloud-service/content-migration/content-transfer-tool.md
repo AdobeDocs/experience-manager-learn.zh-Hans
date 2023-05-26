@@ -1,6 +1,6 @@
 ---
-title: 使用內容轉移工具進行內容移轉
-description: 瞭解內容轉移工具如何協助您將內容從AEM 6移轉至AEMas a Cloud Service。
+title: 使用内容传输工具迁移内容
+description: 了解内容传输工具如何帮助您将内容从AEM 6迁移到AEMas a Cloud Service。
 version: Cloud Service
 topic: Migration, Upgrade
 role: Developer
@@ -18,65 +18,65 @@ ht-degree: 2%
 
 # 内容传输工具
 
-瞭解內容轉移工具如何協助您將內容從AEM 6.3+移轉至AEMas a Cloud Service。
+了解内容传输工具如何帮助您将内容从AEM 6.3+迁移到AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336970?quality=12&learn=on)
 
-## 使用內容轉移工具
+## 使用内容传输工具
 
-![內容轉移工具生命週期](../assets/content-transfer-tool.png)
+![内容传输工具生命周期](../assets/content-transfer-tool.png)
 
-「內容轉移工具」已安裝在AEM 6.3+上，可將內容轉移到AEMas a Cloud Service。
+内容传输工具安装在AEM 6.3+上，可将内容传输到AEMas a Cloud Service。
 
-## 重要活動
+## 关键活动
 
-+ 下載 [最新的內容轉移工具](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2).
-+ 將AEM Author 6.3+最終內容轉移到AEMas a Cloud ServiceAuthor服務。
-   + 在AEM 6.3+作者上安裝「內容轉移工具」，其中包含要轉移的最終內容。
-   + 以批次方式執行「內容轉移工具」，轉移內容集。
-+ 將AEM Publish 6.3+最終內容轉移到AEMas a Cloud Service發佈服務。
-   + 在包含要轉移之最終內容的AEM 6.3+發佈上安裝內容轉移工具。
-   + 以批次方式執行「內容轉移工具」，轉移內容集。
-+ 可選擇在AEMas a Cloud Service上使用「追加」內容，方式為自上次內容轉移以來轉移新內容
++ 下载 [最新的内容传输工具](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2).
++ 将AEM Author 6.3+最终内容传输到AEMas a Cloud Service创作服务。
+   + 在包含要传输的最终内容的AEM 6.3+ Author上安装内容传输工具。
+   + 批量运行内容传输工具，传输内容集。
++ 将AEM Publish 6.3+最终内容传输到AEMas a Cloud Service发布服务。
+   + 在包含要传输的最终内容的AEM 6.3+ Publish上安装内容传输工具。
+   + 批量运行内容传输工具，传输内容集。
++ （可选）在AEMas a Cloud Service上添加“增补”内容，方式是自上次内容传输以来传输新内容
 
-## 實作練習
+## 动手练习
 
-透過這個實作練習來嘗試您學到的知識，以運用您的知識。
+通过尝试通过这个实践练习学到的知识来应用您的知识。
 
-在嘗試實作練習之前，請確定您已觀看並瞭解上述影片和下列資料：
+在尝试动手练习之前，请确保您已观看并了解上述视频以及以下材料：
 
 + [AEM 现代化工具](../aem-modernization-tools.md)
 + [入门培训](../onboarding.md)
 + [Cloud Manager](../cloud-manager.md)
 
-此外，請確定您已完成先前的實作練習：
+此外，请确保您已完成之前的实践练习：
 
-+ [Dispatcher實作練習](../dispatcher.md#hands-on-exercise)
++ [Dispatcher实践练习](../dispatcher.md#hands-on-exercise)
 
 <table style="border-width:0">
     <tr>
         <td style="width:150px">
             <a  rel="noreferrer"
                 target="_blank"
-                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session6-transfercontent#cloud-acceleration-bootcamp---session-6-content"><img alt="實作練習GitHub存放庫" src="../assets/github.png"/>
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session6-transfercontent#cloud-acceleration-bootcamp---session-6-content"><img alt="实践练习GitHub存储库" src="../assets/github.png"/>
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
-            <div style="font-size:1.25rem;font-weight:400;">透過內容轉移工具動手操作</div>
+            <div style="font-size:1.25rem;font-weight:400;">使用内容传输工具动手</div>
             <p style="margin:1rem 0">
-                探索「內容轉移工具」如何自動將內容從AEM 6移至AEMas a Cloud Service。
+                探索内容传输工具如何自动将内容从AEM 6移动到AEMas a Cloud Service。
             </p>
             <a  rel="noreferrer"
                 target="_blank"
                 href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session6-transfercontent#cloud-acceleration-bootcamp---session-6-content" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">試用內容轉移工具</span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">试用内容传输工具</span>
             </a>
         </td>
     </tr>
 </table>
 
-## 其他資源
+## 其他资源
 
-+ [下載內容轉移工具](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2)
-+ [大量匯入服務操作影片](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/bulk-import.html)
++ [下载内容传输工具](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2)
++ [批量导入服务操作方法视频](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/bulk-import.html)
 

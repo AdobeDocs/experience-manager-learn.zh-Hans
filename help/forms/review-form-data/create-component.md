@@ -1,6 +1,6 @@
 ---
-title: 建立元件以列出表單資料
-description: 有關建立摘要元件的教學課程，用於在提交前稽核表單資料。
+title: 创建用于列出表单数据的组件
+description: 有关创建摘要组件的教程，用于在提交之前查看表单数据。
 feature: Adaptive Forms
 topics: development
 doc-type: tutorial
@@ -17,14 +17,14 @@ ht-degree: 1%
 
 ---
 
-# 建立元件以彙總表單資料
+# 创建用于汇总表单数据的组件
 
-已建立簡單元件以列出表單資料以供檢閱。 此 [guidebridge API的造訪功能](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html?q=visit) 用於循環檢視表單欄位。 與此元件相關聯的clientlibrary程式碼會取得表單上的面板/表格元件。 此面板/表格元件表單欄位標題、值和SOM運算式的子元素是使用GuidBridge API方法擷取。 然後會使用標題、值和SOM運算式來建構簡單的HTML表格，供一般使用者在提交表單之前檢閱/編輯表單資料。
+创建了一个简单组件以列出表单数据以供审阅。 此 [guidebridge API的访问函数](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html?q=visit) 用于循环访问表单字段。 clientlibrary中与此组件关联的代码将获取表单上的面板/表组件。 从此面板/表组件的子元素表单字段title、value和SOM表达式中，使用GuidBridge API方法提取。 然后，使用标题、值和SOM表达式构建一个简单的HTML表，以供最终用户在提交表单之前查看/编辑表单数据。
 
-例如，下面的熒幕擷圖顯示您建立的表格，其中列出了 **您的詳細資料**. TR中的最後一個TD是用來編輯欄位的值，使用欄位SOM運算式。
+例如，下面的屏幕快照显示了为列出以下项的字段及其值而创建的表： **您的详细信息**. TR中的最后一个TD用于使用字段SOM表达式编辑字段的值。
 
-![造訪函式](assets/visit-function.png)
+![visit-func](assets/visit-function.png)
 
 ## 后续步骤
 
-[在本機系統上測試解決方案](./deploy-on-your-system.md)
+[在本地系统上测试解决方案](./deploy-on-your-system.md)

@@ -1,6 +1,6 @@
 ---
-title: 建立最適化表單片段
-description: 片段是可重複使用的表單部分。 例如，片段可以包含位址區塊或合法文字。
+title: 创建自适应表单片段
+description: 片段是表单中可重复使用的部分。 例如，片段可以包含地址块或合法文本。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 建立自適應表單片段
+# 创建自适应表单片段
 
-使用片段可簡化並加速大量表單的建立與維護。 建立表單時，插入所需片段的參考，片段就會顯示在表單中。
+使用片段可简化并加速大量表单的创建和维护。 创建表单时，插入对所需片段的引用，片段会显示在表单中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332231?quality=12&learn=on)

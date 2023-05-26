@@ -1,6 +1,6 @@
 ---
-title: 在Adobe Workfront和AEM Assets Essentials之間對應中繼資料
-description: 瞭解如何設定Workfront欄位和Assets Essentials屬性之間的中繼資料對應，以及設定Assets Essentials以顯示對應的中繼資料。
+title: 在Adobe Workfront和AEM Assets Essentials之间映射元数据
+description: 了解如何配置Workfront字段和Assets Essentials属性之间的元数据映射，以及配置Assets Essentials以显示映射的元数据。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management, Integrations
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 對應中繼資料
+# 映射元数据
 
-瞭解如何設定Workfront欄位和Assets Essentials屬性之間的中繼資料對應，以及設定Assets Essentials以顯示對應值。
+了解如何配置Workfront字段和Assets Essentials属性之间的元数据映射，以及配置Assets Essentials以显示映射的值。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336458?quality=12&learn=on)

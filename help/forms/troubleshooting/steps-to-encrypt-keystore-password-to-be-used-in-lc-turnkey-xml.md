@@ -1,6 +1,6 @@
 ---
-title: 加密要在lc_turnkey.xml中使用的金鑰庫密碼的步驟
-description: 加密金鑰庫密碼以在lc_turnkey.xml檔案中設定
+title: 加密要在lc_turnkey.xml中使用的密钥库密码的步骤
+description: 加密密钥库密码以在lc_turnkey.xml文件中配置
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 加密要在lc_turnkey.xml中使用的金鑰庫密碼的步驟
+# 加密要在lc_turnkey.xml中使用的密钥库密码的步骤
 
-*本影片逐步解說在lc_turnkey.xml中所使用的Keystore密碼加密步驟。*
+*本视频介绍加密要在lc_turnkey.xml中使用的密钥库密码的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335538?quality=12&learn=on)

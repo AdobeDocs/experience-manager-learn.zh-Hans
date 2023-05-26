@@ -1,6 +1,6 @@
 ---
-title: 使用最適化表單建立及顯示潛在客戶物件
-description: 使用Dynamics整合，以最適化表單建立並列出潛在客戶物件。
+title: 使用自适应表单创建和显示潜在客户对象
+description: 使用Dynamics集成在自适应表单中创建和列出潜在客户对象。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ---
 
-# 建立及設定最適化表單
+# 创建和配置自适应表单
 
 
-以下影片將逐步帶您瞭解建立和設定最適化表單的步驟，以建立和顯示潛在客戶物件。
+以下视频将指导您完成创建和配置自适应表单以创建和显示潜在客户对象的步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340791?quality=12&learn=on)

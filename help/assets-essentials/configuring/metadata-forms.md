@@ -1,6 +1,6 @@
 ---
-title: Assets Essentials中繼資料Forms
-description: 瞭解如何快速輕鬆地設定Assets Essentials中繼資料Forms，以量身打造資產中繼資料。
+title: Assets Essentials元数据Forms
+description: 了解如何快速轻松地配置Assets Essentials元数据Forms以定制资源元数据。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# Assets Essentials中的中繼資料Forms
+# Assets Essentials中的元数据Forms
 
-瞭解如何快速輕鬆地設定Assets Essentials中繼資料Forms以量身打造資產。
+了解如何快速轻松地配置Assets Essentials元数据Forms以定制资源。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342154?quality=12&learn=on)

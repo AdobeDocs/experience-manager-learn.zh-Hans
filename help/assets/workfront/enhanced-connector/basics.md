@@ -1,6 +1,6 @@
 ---
-title: Workfront增強型聯結器基本需知
-description: 瞭解Adobe Workfront和Experience Manager Assets增強型聯結器的基本概念。
+title: Workfront增强型连接器基础知识
+description: 了解Adobe Workfront和Experience Manager Assets增强型连接器的基础知识。
 version: Cloud Service
 topic: Content Management, Integrations
 role: Admin, User
@@ -16,14 +16,14 @@ ht-degree: 0%
 
 ---
 
-# Workfront增強型聯結器基本需知
+# Workfront增强型连接器基础知识
 
-瞭解Adobe Workfront和Experience Manager Assetsenhanced聯結器的基本知識，包括如何：
+了解Adobe Workfront和Experience Manager资产增强型连接器的基础知识，包括如何：
 
-+ 連結資產和資料夾
-+ 定義中繼資料對應
-+ 將資產傳送至AEM
-+ 版本資產
-+ 自動發佈資產
++ 链接资源和文件夹
++ 定义元数据映射
++ 将资源发送到AEM
++ 版本资产
++ 自动发布资产
 
 >[!VIDEO](https://video.tv.adobe.com/v/337575?quality=12&learn=on)

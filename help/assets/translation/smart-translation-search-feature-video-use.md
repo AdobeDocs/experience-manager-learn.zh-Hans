@@ -1,6 +1,6 @@
 ---
-title: 搭配使用Smart Translation Search與AEM Assets
-description: Smart Translation Search可跨AEM內容（資產和頁面）自動進行跨語言搜尋和探索，支援超過50種語言，並減少手動內容翻譯的需求。
+title: 在AEM Assets中使用智能翻译搜索
+description: Smart Translation Search支持跨AEM内容（资产和页面）自动进行跨语言搜索和发现，支持50多种语言，并减少对手动内容翻译的需求。
 version: 6.4, 6.5
 feature: Search
 topic: Content Management
@@ -16,28 +16,28 @@ ht-degree: 0%
 
 ---
 
-# 搭配使用Smart Translation Search與AEM Assets{#using-smart-translation-search-with-aem-assets}
+# 在AEM Assets中使用智能翻译搜索{#using-smart-translation-search-with-aem-assets}
 
-Smart Translation Search可跨AEM內容（資產和頁面）自動進行跨語言搜尋和探索，支援超過50種語言，並減少手動內容翻譯的需求。
+Smart Translation Search支持跨AEM内容（资产和页面）自动进行跨语言搜索和发现，支持50多种语言，并减少对手动内容翻译的需求。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21297?quality=12&learn=on)
 
-AEM Smart Translation搜尋可讓使用者使用非英文辭彙在AEM中執行內容搜尋，以比對AEM中擁有同等英文辭彙的資產。
+AEM Smart Translation Search允许用户在AEM中使用非英语术语执行内容搜索，以匹配AEM中具有等同英语术语的资源。
 
-智慧型翻譯搜尋是套用至英文資產的AEM智慧型標籤的完美補充。
+智能翻译搜索是对应用于英语资源的AEM智能标记的完美补充。
 
-本影片假設 [AEM智慧型翻譯搜尋](smart-translation-search-technical-video-setup.md) 已設定。
+本视频假定 [AEM Smart Translation搜索](smart-translation-search-technical-video-setup.md) 已设置。
 
-## 智慧型翻譯搜尋如何運作 {#how-smart-translation-search-works}
+## 智能翻译搜索的工作原理 {#how-smart-translation-search-works}
 
-![智慧型翻譯搜尋流程圖](assets/smart-translation-search-flow.png)
+![智能翻译搜索流程图](assets/smart-translation-search-flow.png)
 
-1. AEM使用者執行全文搜尋，提供當地語系化的搜尋字詞(例如 西班牙文中的&#39;man&#39;、&#39;hombre&#39;一詞)。
-2. Apache Oak Machine Translation OSGi套件組合提供的Smart Translation Search會參與，並評估所提供的搜尋辭彙是否可使用註冊的語言套件進行翻譯。
-3. 系統會收集步驟#2中的所有翻譯辭彙，並在內部擴充查詢，以納入這些辭彙作為搜尋辭彙。 如果針對AEM搜尋索引正常評估並找出相關相符專案，則此搜尋辭彙集擴大。
-4. 系統會收集符合原始字詞(「hombre」)或翻譯字詞(「man」)的搜尋結果，並將使用者傳回作為搜尋結果。
+1. AEM用户执行全文搜索，提供本地化的搜索词(例如 西班牙语中的“man”、“hombre”一词)。
+2. 参与由Apache Oak机器翻译OSGi捆绑包提供的智能翻译搜索，并评估所提供的搜索词是否可以使用注册的语言包进行翻译。
+3. 将收集步骤#2中的所有翻译词，并且查询将在内部扩充以包含这些翻译词作为搜索词。 如果针对查找相关匹配项的AEM搜索索引进行正常评估，则此搜索词集将会增加。
+4. 将收集与原始搜索词(“hombre”)或翻译搜索词(“man”)匹配的搜索结果，并将用户作为搜索结果返回。
 
 ## 其他资源{#additional-resources}
 
-* [使用AEM Assets設定智慧型翻譯搜尋](smart-translation-search-technical-video-setup.md)
-* [Apache Joshua語言套件](https://cwiki.apache.org/confluence/display/JOSHUA/Language+Packs)
+* [使用AEM Assets设置智能翻译搜索](smart-translation-search-technical-video-setup.md)
+* [Apache Joshua语言包](https://cwiki.apache.org/confluence/display/JOSHUA/Language+Packs)

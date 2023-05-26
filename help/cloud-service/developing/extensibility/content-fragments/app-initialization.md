@@ -1,6 +1,6 @@
 ---
-title: 針對內容片段主控台擴充性初始化App Builder應用程式
-description: 瞭解如何初始化AEM內容片段主控台擴充功能應用程式產生器應用程式，定義擴充功能出現的位置及其執行的工作。
+title: 初始化应用程序生成器应用程序以实现内容片段控制台可扩展性
+description: 了解如何初始化AEM内容片段控制台扩展应用程序生成器应用程序，该应用程序定义扩展出现的位置及其执行的工作。
 version: Cloud Service
 feature: Developer Tools
 topic: Development
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 ---
 
-# 應用程式初始化
+# 应用程序初始化
 
-初始化AEM內容片段主控台擴充功能App Builder應用程式，定義擴充功能出現的位置及其執行的工作。
+初始化一个AEM内容片段控制台扩展应用程序生成器应用程序，该应用程序定义扩展出现的位置及其执行的工作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412876?quality=12&learn=on)
 
-請參閱Adobe Developer檔案以瞭解 [應用程式初始化程式的詳細逐步解說](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation/#launch-code-generation-during-project-initialization).
+请参阅Adobe Developer文档，了解 [应用程序初始化过程的详细演练](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation/#launch-code-generation-during-project-initialization).

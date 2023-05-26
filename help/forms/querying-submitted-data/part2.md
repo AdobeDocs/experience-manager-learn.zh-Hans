@@ -1,7 +1,7 @@
 ---
-title: 具有JSON結構描述和資料的AEM Forms[Part2]
+title: 具有JSON架构和数据的AEM Forms[Part2]
 seo-title: AEM Forms with JSON Schema and Data[Part2]
-description: 多部分教學課程將逐步引導您完成使用JSON結構描述建立調適型表單和查詢已提交資料的相關步驟。
+description: 多部分教程将指导您完成使用JSON模式创建自适应表单和查询提交的数据所涉及的步骤。
 seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
@@ -20,18 +20,18 @@ ht-degree: 0%
 
 ---
 
-# 將提交的資料儲存在資料庫中
+# 将提交的数据存储在数据库中
 
 
 >[!NOTE]
 >
->建議您使用MySQL 8作為資料庫，因為它支援JSON資料型別。 您還需要為MySQL DB安裝適當的驅動程式。 我已使用此位置https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12提供的驅動程式
+>建议使用MySQL 8作为数据库，因为它支持JSON数据类型。 您还需要为MySQL数据库安装适当的驱动程序。 我已使用此位置https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12中提供的驱动程序
 
-為了將提交的資料儲存在資料庫中，我們將撰寫servlet來擷取繫結的資料以及表單名稱並儲存。 以下提供處理表單提交及將afBoundData儲存在資料庫中的完整程式碼。
+为了将提交的数据存储在数据库中，我们编写一个servlet来提取绑定数据和表单名称并存储。 下面给出了处理表单提交并将afBoundData存储在数据库中的完整代码。
 
-我們已建立自訂提交來處理表單提交。 在此自訂提交的post.request.jsp中，我們將POST轉寄給我們的servlet。
+我们创建了自定义提交来处理表单提交。 在此自定义提交的post.request.jsp中，我们将POST转发到我们的servlet。
 
-若要進一步瞭解自訂提交，請閱讀此 [文章](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
+要了解有关自定义提交请求的详细信息，请阅读此 [文章](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
 
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest，&quot;/bin/storeafsubmission&quot;，null，null)；
 
@@ -141,16 +141,16 @@ public class HandleAdaptiveFormSubmission extends SlingAllMethodsServlet {
 }
 ```
 
-![connectionpool](assets/connectionpooled.gif)
+![连接池](assets/connectionpooled.gif)
 
-若要讓系統運作正常，請遵循下列步驟
+要使此功能在您的系统中正常工作，请执行以下步骤
 
-* [下載並解壓縮zip檔案](assets/aemformswithjson.zip)
-* 使用JSON結構描述建立最適化表單。 您可以使用本文資產中提供的JSON結構描述。 請確認表單的提交動作已適當設定。 提交動作需要設定為「CustomSubmitHelpx」。
-* 使用MySQL Workbench工具匯入schema.sql檔案，在MySQL執行個體中建立結構描述。 schema.sql檔案也隨附在本教學課程資產中。
-* 從Felix Web主控台設定Apache Sling Connection Pooled DataSource
-* 請務必將資料來源命名為「aemformswithjson」。 這是提供給您的範例OSGi套件組合所使用的名稱
-* 如需屬性，請參閱上圖。 這是假設您將使用MySQL作為資料庫。
-* 部署作為本文資產一部分提供的OSGi套件組合。
-* 預覽表單並提交。
-* JSON資料會儲存在您匯入「schema.sql」檔案時建立的資料庫中。
+* [下载并解压缩zip文件](assets/aemformswithjson.zip)
+* 创建具有JSON架构的自适应表单。 您可以使用作为本文资产的一部分提供的JSON架构。 确保表单的提交操作已正确配置。 提交操作需要配置到“CustomSubmitHelpx”。
+* 通过使用MySQL Workbench工具导入schema.sql文件，在MySQL实例中创建架构。 schema.sql文件也作为本教程资源的一部分提供给您。
+* 从Felix Web控制台配置Apache Sling Connection Pooled DataSource
+* 确保将数据源命名为“aemformswithjson”。 这是提供给您的示例OSGi捆绑包使用的名称
+* 有关属性，请参阅上图。 这是假设您将使用MySQL作为数据库。
+* 部署作为本文资源的一部分提供的OSGi捆绑包。
+* 预览表单并提交。
+* JSON数据存储在导入“schema.sql”文件时创建的数据库中。

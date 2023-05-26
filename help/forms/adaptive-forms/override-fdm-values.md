@@ -1,6 +1,6 @@
 ---
-title: 使用OSGi設定覆寫表單資料模型屬性
-description: AEM Forms 6.5.13匯入了覆寫表單資料模型屬性的功能，以便更輕鬆地針對不同端點測試一個表單資料模型。
+title: 使用OSGi配置覆盖表单数据模型属性
+description: AEM Forms 6.5.13引入了覆盖表单数据模型属性的功能，以便更轻松地针对不同端点测试一个表单数据模型。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.5
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 ---
 
-# 覆寫表單資料模型屬性{#using-form-data-model-service-as-step-in-workflow}
+# 覆盖表单数据模型属性{#using-form-data-model-service-as-step-in-workflow}
 
-在AEM Forms 6.5.13之前，您必須手動變更表單資料模型的雲端服務設定，以指向不同的端點，或建立全新的表單資料模型。
+在AEM Forms 6.5.13之前，您必须手动更改表单数据模型的云服务配置，以指向不同的端点，或创建全新的表单数据模型。
 
-## 覆寫表單資料模型屬性
+## 覆盖表单数据模型属性
 
-在AEM Forms 6.5.13之前，您必須手動變更表單資料模型的雲端服務設定，以指向不同的端點，或建立全新的表單資料模型。
+在AEM Forms 6.5.13之前，您必须手动更改表单数据模型的云服务配置，以指向不同的端点，或创建全新的表单数据模型。
 
-AEM Forms 6.5.13引入覆寫表單資料模型屬性的功能，以便針對不同的服務端點輕鬆測試表單資料模型。
+AEM Forms 6.5.13引入了覆盖表单数据模型属性的功能，以便轻松针对不同的服务端点测试表单数据模型。
 
-以下影片示範該功能和使用案例
+以下视频演示了该功能和用例
 
 >[!NOTE]
->本影片中顯示的功能需要AEM Forms 6.5.13
+>本视频中演示的功能需要AEM Forms 6.5.13
 >[!VIDEO](https://video.tv.adobe.com/v/343762?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 搭配AEM Assets使用Dynamic Media 3D
-description: Adobe Experience Manager的Dynamic Media 3D支援可讓您輕鬆自訂並大規模提供互動式3D體驗
+title: 将Dynamic Media 3D与AEM Assets结合使用
+description: 面向Adobe Experience Manager的Dynamic Media 3D支持可让您轻松定制和大规模提供交互式3D体验
 version: 6.5
 topic: Content Management
 feature: 3D Assets
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 搭配AEM Assets使用Dynamic Media 3D
+# 将Dynamic Media 3D与AEM Assets结合使用
 
-Adobe Experience Manager的Dynamic Media 3D支援可讓您輕鬆自訂並大規模提供互動式3D體驗。
+通过Adobe Experience Manager的Dynamic Media 3D支持，您可以轻松定制和大规模提供交互式3D体验。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35156?quality=12&learn=on)

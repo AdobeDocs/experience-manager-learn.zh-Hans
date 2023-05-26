@@ -1,6 +1,6 @@
 ---
-title: 開發考量事項
-description: 啟用前端管道後，請考量對前端和後端開發流程的影響。
+title: 开发注意事项
+description: 考虑启用前端管道后对前端和后端开发过程的影响。
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -19,26 +19,26 @@ ht-degree: 0%
 
 ---
 
-# 開發考量事項
+# 开发注意事项
 
-啟用前端管道後，僅在AEMas a Cloud Service環境中部署前端資源，對本機AEM開發有一些影響，您必須調整Git分支模型。
+在启用前端管道以仅在AEMas a Cloud Service环境中部署前端资源后，对本地AEM开发有一些影响，您必须调整Git分支模型。
 
 ## 目标
 
-* 如何擁有順暢的前端與後端開發流程
-* 檢閱完整棧疊和前端管道之間的相依性
+* 如何实现流畅的前端和后端开发流程
+* 查看全栈管道和前端管道之间的依赖关系
 
 
-## 本機開發考量事項
+## 本地开发注意事项
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409421?quality=12&learn=on)
 
 
-## 調整後的開發方法
+## 调整后的发展方法
 
-* 對於使用AEM SDK的本機開發，後端開發團隊仍然需要透過以下方式產生clientlib `ui.frontend` 模組，但在Cloud Manager部署到AEMas a Cloud Service環境期間您必須略過。 這顯示如何隔離中概述的專案設定變更的難題 [更新專案](update-project.md) 章節。
+* 对于使用AEM SDK的本地开发，后端开发团队仍需要通过生成clientlib `ui.frontend` 模块，但在Cloud Manager部署到AEMas a Cloud Service环境期间，您必须跳过它。 这给如何隔离中概述的项目配置更改带来了挑战 [更新项目](update-project.md) 章节。
 
-A __解決方案__ 可能是調整您的Git分支模型，並確保AEM專案設定變更絕不會回到 __本機開發__ AEM後端開發人員使用的分支。
+A __解决方案__ 可以是调整您的Git分支模型，并确保AEM项目配置更改绝不会流回 __本地开发__ AEM后端开发人员使用的分支。
 
 
-* 如果您匯入新元件或更新同時變更的現有元件，作為AEM專案持續增強功能的一部分 `ui.app` 和 `ui.frontend` 模組，您必須執行完整棧疊和前端管道。
+* 作为对AEM项目持续增强的一部分，如果您引入新组件或更新了两个组件中都有更改的现有组件 `ui.app` 和 `ui.frontend` 模块，您必须同时运行全栈管道和前端管道。

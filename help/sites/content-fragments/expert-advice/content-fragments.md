@@ -1,6 +1,6 @@
 ---
-title: 內容片段提示與秘訣
-description: 網站階層、分類法和標籤提示最佳實務
+title: 内容片段提示和技巧
+description: 网站层级、分类和标记提示最佳实践
 hide: true
 hidefromtoc: true
 source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
@@ -11,4 +11,4 @@ ht-degree: 0%
 ---
 
 
-# 內容片段提示與秘訣
+# 内容片段提示和技巧

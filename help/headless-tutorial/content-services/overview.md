@@ -1,5 +1,5 @@
 ---
-title: AEM Headless — 內容服務快速入門
+title: AEM Headless快速入门 — Content Services
 description: 一个端到端教程，它演示了如何使用 AEM Headless 构建和展示内容。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
@@ -15,37 +15,37 @@ ht-degree: 6%
 
 # AEM Headless 快速入门 - Content Services
 
-AEM Content Services運用傳統AEM頁面來撰寫Headless REST API端點，而AEM元件會定義或參考要在這些端點上公開的內容。
+AEM Content Services利用传统AEM Pages来撰写Headless REST API端点，并且AEM组件定义或引用要在这些端点上公开的内容。
 
-AEM Content Services允許在AEM Sites中製作網頁時所使用的相同內容抽象化，以定義這些HTTP API的內容和結構。 使用AEM頁面和AEM元件可讓行銷人員快速撰寫和更新可支援任何應用程式的彈性JSON API。
+AEM Content Services允许使用与在AEM Sites中创作网页相同的内容抽象，以定义这些HTTP API的内容和架构。 通过使用AEM Pages和AEM组件，营销人员能够快速撰写和更新可以为任何应用程序提供支持的灵活JSON API。
 
-## 內容服務教學課程
+## 内容服务教程
 
-端對端教學課程，說明如何在Headless CMS案例中使用AEM建置和公開內容，並由原生行動應用程式使用。
+一个端到端教程，说明如何在Headless CMS场景中使用AEM构建和公开内容并由本机移动设备应用程序使用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28315?quality=12&learn=on)
 
-本教學課程探索AEM Content Services如何用來強化顯示事件資訊（音樂、效能、藝術等）的行動應用程式體驗。 由WKND團隊所策劃。
+本教程探讨如何使用AEM Content Services增强移动设备应用程序显示事件信息（音乐、性能、艺术等）的体验。 由WKND团队策划。
 
-本教學課程將涵蓋下列主題：
+本教程将涵盖以下主题：
 
-* 使用內容片段建立代表事件的內容
-* 使用AEM Sites的範本和頁面將事件資料公開為JSON，以定義AEM Content Services端點
-* 探索如何使用AEM WCM核心元件讓行銷人員編寫JSON端點
-* 從行動應用程式使用AEM Content Services JSON
-   * 使用Android是因為它有跨平台模擬器，本教學課程的所有使用者(Windows、macOS和Linux)都可以使用它來執行原生應用程式。
+* 使用内容片段创建表示事件的内容
+* 使用AEM Sites的模板和页面定义将事件数据公开为JSON的AEM Content Services端点
+* 探索如何使用AEM WCM核心组件使营销人员能够创作JSON端点
+* 从移动应用程序使用AEM Content Services JSON
+   * Android的使用是因为它具有一个跨平台模拟器，本教程的所有用户(Windows、macOS和Linux)都可以使用它来运行本机应用程序。
 
-## github專案
+## GitHub项目
 
-原始程式碼和內容套件可在 [AEM Guides - WKND Mobile GitHub專案](https://github.com/adobe/aem-guides-wknd-mobile).
+源代码和内容包位于 [AEM指南 — WKND Mobile GitHub项目](https://github.com/adobe/aem-guides-wknd-mobile).
 
-如果您發現教學課程或程式碼有問題，請留下 [GitHub問題](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+如果您发现教程或代码有问题，请保留 [GitHub问题](https://github.com/adobe/aem-guides-wknd-mobile/issues).
 
-## AEM GraphQL與AEM Content Services
+## AEM GraphQL与AEM内容服务
 
-|  | AEM GRAPHQL API | AEM內容服務 |
+|  | AEM GRAPHQL API | AEM内容服务 |
 |--------------------------------|:-----------------|:---------------------|
-| 結構描述定義 | 結構化內容片段模型 | AEM Components |
-| 内容 | 内容片段 | AEM Components |
-| 內容探索 | 依GraphQL查詢 | 依AEM頁面 |
-| 傳遞格式 | GRAPHQL JSON | AEM ComponentExporter JSON |
+| 架构定义 | 结构化内容片段模型 | AEM组件 |
+| 内容 | 内容片段 | AEM组件 |
+| 内容发现 | 按GraphQL查询 | 按AEM页 |
+| 投放格式 | GRAPHQL JSON | AEM ComponentExporter JSON |

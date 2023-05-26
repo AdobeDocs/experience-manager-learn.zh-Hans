@@ -1,6 +1,6 @@
 ---
-title: 為Asset compute擴充性設定本機開發環境
-description: 開發Asset compute背景工作（屬於Node.js JavaScript應用程式）需要與傳統AEM開發不同的特定開發工具，從Node.js和各種npm模組到Docker Desktop和Microsoft Visual Studio Code。
+title: 为Asset compute可扩展性设置本地开发环境
+description: 开发Asset compute工作程序（即Node.js JavaScript应用程序）需要与传统AEM开发不同的特定开发工具，这些工具包括Node.js和各种npm模块、Docker Desktop和Microsoft Visual Studio Code。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -20,91 +20,91 @@ ht-degree: 0%
 
 ---
 
-# 設定本機開發環境
+# 设置本地开发环境
 
-AdobeAsset compute專案無法與AEM SDK提供的本機AEM執行階段整合，且是使用其自己的工具鏈進行開發，不同於以AEM Maven專案原型為基礎的AEM應用程式所需的工具鏈。
+AdobeAsset compute项目无法与AEM SDK提供的本地AEM运行时集成，而是使用自己的工具链进行开发，这与基于AEM Maven项目原型的AEM应用程序所需的工具链不同。
 
-若要擴充Asset compute微服務，下列工具必須安裝在本機開發人員電腦上。
+要扩展Asset compute微服务，必须在本地开发人员计算机上安装以下工具。
 
-## 簡略的設定指示
+## 简略的设置说明
 
-以下是節選設定指示。 這些開發工具的詳細資訊將於下文個別章節中說明。
+以下是简要的设置说明。 有关这些开发工具的详细信息，请参见下面各个部分。
 
-1. [安裝Docker案頭](https://www.docker.com/products/docker-desktop) 並提取所需的Docker影像：
+1. [安装Docker Desktop](https://www.docker.com/products/docker-desktop) 并提取所需的Docker图像：
 
    ```
    $ docker pull openwhisk/action-nodejs-v12:latest
    $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
    ```
 
-1. [安裝Visual Studio Code](https://code.visualstudio.com/download)
-1. [安裝Node.js 10+](../../local-development-environment/development-tools.md#node-js)
-1. 從命令列安裝必要的npm模組和Adobe I/OCLI外掛程式：
+1. [安装Visual Studio Code](https://code.visualstudio.com/download)
+1. [安装Node.js 10+](../../local-development-environment/development-tools.md#node-js)
+1. 从命令行安装所需的npm模块和Adobe I/OCLI插件：
 
    ```
    $ npm i -g @adobe/aio-cli@7.1.0 @openwhisk/wskdebug ngrok --unsafe-perm=true \
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
-如需簡略安裝指示的詳細資訊，請閱讀以下章節。
+有关简化的安装说明的更多信息，请阅读以下部分。
 
-## 安裝Visual Studio Code{#vscode}
+## 安装Visual Studio Code{#vscode}
 
-[Microsoft Visual Studio Code](https://code.visualstudio.com/download) 用於開發及偵錯Asset compute背景工作。 其他 [與JavaScript相容的IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) 可用於開發背景工作，只有Visual Studio Code可以整合至 [偵錯](../test-debug/debug.md) asset compute背景工作。
+[Microsoft Visual Studio Code](https://code.visualstudio.com/download) 用于开发和调试Asset compute工作程序。 其他 [与JavaScript兼容的IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) 可用于开发工作程序，只有Visual Studio代码可以集成到 [调试](../test-debug/debug.md) 工作程序Asset compute。
 
-本教學課程假設您使用Visual Studio Code，因為它為擴充Asset compute提供了最佳的開發人員體驗。
+本教程假定使用Visual Studio Code，因为它为扩展Asset compute提供了最佳的开发人员体验。
 
-## 安裝Docker案頭{#docker}
+## 安装Docker Desktop{#docker}
 
-下載並安裝最新版的穩定版 [Docker案頭](https://www.docker.com/products/docker-desktop)，因為這需要 [測試](../test-debug/test.md) 和 [偵錯](../test-debug/debug.md) 在本機Asset compute專案。
+下载并安装最新的稳定版本 [Docker桌面](https://www.docker.com/products/docker-desktop)，因为这是为了 [测试](../test-debug/test.md) 和 [调试](../test-debug/debug.md) 在本地Asset compute项目。
 
-安裝Docker Desktop後，啟動它並從命令列安裝以下Docker映像：
+安装Docker Desktop后，启动它并从命令行安装以下Docker映像：
 
 ```
 $ docker pull openwhisk/action-nodejs-v12:latest
 $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
 ```
 
-Windows電腦上的開發人員應確保針對上述影像使用Linux容器。 有關切換至Linux容器的步驟的描述，請參閱 [適用於Windows的Docker檔案](https://docs.docker.com/docker-for-windows/).
+Windows计算机上的开发人员应确保对上述图像使用Linux容器。 有关切换到Linux容器的步骤，请参见 [Docker for Windows文档](https://docs.docker.com/docker-for-windows/).
 
-## 安裝Node.js （和npm）{#node-js}
+## 安装Node.js（和npm）{#node-js}
 
-asset compute背景工作程式為 [Node.js](https://nodejs.org/)-based，因此需要Node.js 10+ （和npm）才能開發和建置。
+asset compute工作人员为 [Node.js](https://nodejs.org/)基于，因此需要Node.js 10+（和npm）才能开发和构建。
 
-+ [安裝Node.js （和npm）](../../local-development-environment/development-tools.md#node-js) 與傳統AEM開發的方式相同。
++ [安装Node.js（和npm）](../../local-development-environment/development-tools.md#node-js) 与传统AEM开发的方式相同。
 
-## 安裝Adobe I/OCLI{#aio}
+## 安装Adobe I/OCLI{#aio}
 
-[安裝Adobe I/OCLI](../../local-development-environment/development-tools.md#aio-cli)，或 __aio__ 是一個命令列(CLI) npm模組，可協助使用者使用及與Adobe I/O技術互動，並用於產生和本機開發自訂Asset compute背景工作。
+[安装Adobe I/OCLI](../../local-development-environment/development-tools.md#aio-cli)，或 __aio__ 是一个命令行(CLI) npm模块，便于使用Adobe I/O技术并与之交互，用于生成和本地开发自定义Asset compute工作程序。
 
 ```
 $ npm install -g @adobe/aio-cli@7.1.0
 ```
 
-_需要Adobe I/OCLI 7.1.0版。 目前不支援更新版本的Adobe I/OCLI。_
+_需要Adobe I/OCLI版本7.1.0。 目前不支持更高版本的Adobe I/OCLI。_
 
 
-## 安裝Adobe I/OCLIAsset compute外掛程式{#aio-asset-compute}
+## 安装Adobe I/OCLIAsset compute插件{#aio-asset-compute}
 
-此 [Adobe I/OCLIAsset compute外掛程式](https://github.com/adobe/aio-cli-plugin-asset-compute)
+此 [Adobe I/OCLIAsset compute插件](https://github.com/adobe/aio-cli-plugin-asset-compute)
 
 ```
 $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 ```
 
-## 安裝wskdebug{#wskdebug}
+## 安装wskdebug{#wskdebug}
 
-下載並安裝 [Apache OpenWhisk偵錯](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組，可促進Asset compute背景工作程式的本機偵錯。
+下载并安装 [Apache OpenWhisk调试](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模块，便于对Asset compute工作程序进行本地调试。
 
-_需要Visual Studio Code 1.48.x+才能使用 [wskdebug](#wskdebug) 才能運作。_
+_需要Visual Studio Code 1.48.x+才能使用 [wskdebug](#wskdebug) 去工作。_
 
 ```
 $ npm install -g @openwhisk/wskdebug
 ```
 
-## 安裝ngrok{#ngrok}
+## 安装Ngrok{#ngrok}
 
-下載並安裝 [Ngrok](https://www.npmjs.com/package/ngrok) npm模組，可讓您公開存取本機開發電腦，以利本機偵錯Asset compute背景工作。
+下载并安装 [Ngrok](https://www.npmjs.com/package/ngrok) npm模块，用于向公众提供对本地开发计算机的访问权限，以便于Asset compute工作程序的本地调试。
 
 ```
 $ npm install -g ngrok --unsafe-perm=true

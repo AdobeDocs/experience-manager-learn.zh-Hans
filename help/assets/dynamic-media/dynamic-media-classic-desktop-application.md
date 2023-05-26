@@ -1,6 +1,6 @@
 ---
-title: 使用Dynamic Media Classic案頭應用程式
-description: Adobe推出適用於Dynamic Media Classic使用者的案頭應用程式，不再依賴瀏覽器中的AdobeFlash技術。
+title: 使用Dynamic Media Classic桌面应用程序
+description: Adobe为Dynamic Media Classic用户引入了一个桌面应用程序，该应用程序不再依赖浏览器中的AdobeFlash技术。
 feature: Dynamic Media Classic
 version: 6.5
 kt: 5808
@@ -16,25 +16,25 @@ ht-degree: 1%
 
 ---
 
-# 使用Dynamic Media Classic案頭應用程式{#using-dynamic-media-desktop-application}
+# 使用Dynamic Media Classic桌面应用程序{#using-dynamic-media-desktop-application}
 
-Adobe推出適用於Dynamic Media Classic的案頭應用程式，提供類似瀏覽器的體驗和功能相等的介面，不依賴AdobeFlash播放器。
+Adobe引入了Dynamic Media Classic桌面应用程序，该应用程序提供了与浏览器类似的体验，以及不依赖于AdobeFlash播放器的功能等效的界面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36645?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 建議您在2020年10月1日前安裝新的Adobe Dynamic Media Classic案頭應用程式。 這麼做可確保AdobeFlash Player在2020年12月31日淘汰之前能順利轉換。 當天，您將無法再登入瀏覽器版本的Adobe Dynamic Media Classic使用者介面，該產品中標示為Scene7 Publishing System。
+> 我们建议您在2020年10月1日之前安装新的Adobe Dynamic Media Classic桌面应用程序。 这样做可确保在2020年12月31日弃用AdobeFlash Player之前实现顺利过渡。 从那天起，您将无法再登录到浏览器版本的Adobe Dynamic Media Classic用户界面，该产品中标有Scene7 Publishing System。
 
 ## 系统要求
 
-Adobe Dynamic Media Classic案頭應用程式與下列作業系統相容：
+Adobe Dynamic Media Classic桌面应用程序与以下操作系统兼容：
 
-* macOS 10.10或更新版本
-* Windows 7或更新版本
+* macOS 10.10或更高版本
+* Windows 7或更高版本
 
-## 支援材料
+## 支持材料
 
-* [Adobe Dynamic Media Classic案頭應用程式檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
-* [AdobeDynamic Media常見問題](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
-* [下載Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
+* [Adobe Dynamic Media Classic桌面应用程序文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
+* [AdobeDynamic Media常见问题解答](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
+* [下载Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)

@@ -1,6 +1,6 @@
 ---
-title: 內容片段編輯器 — 快速篩選
-description: 瞭解AEM內容片段UI如何讓您使用快速篩選輕鬆找到內容片段。 透過此功能，尋找特定內容片段變得快速輕鬆。
+title: 内容片段编辑器 — 快速筛选
+description: 了解AEM内容片段UI如何让您使用快速筛选轻松地找到内容片段。 利用此功能，可以快速轻松地查找特定内容片段。
 version: Cloud Service
 role: User
 level: Beginner
@@ -16,8 +16,8 @@ ht-degree: 0%
 ---
 
 
-# 快速篩選
+# 快速筛选
 
-瞭解AEM內容片段UI如何讓您使用快速篩選輕鬆找到內容片段。 透過此功能，尋找特定內容片段變得快速輕鬆。
+了解AEM内容片段UI如何让您使用快速筛选轻松地找到内容片段。 利用此功能，可以快速轻松地查找特定内容片段。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419310/?learn=on)

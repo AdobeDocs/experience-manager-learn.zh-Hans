@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 AEM記錄檔
-description: 本課程深入探討如何存取AEMas a Cloud Service的記錄檔，包括如何透過使用者介面及API存取記錄檔。
+title: Cloud 5 AEM日志文件
+description: 本课程深入介绍如何访问AEMas a Cloud Service中的日志，包括如何通过用户界面以及从API访问它们。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,17 +15,17 @@ ht-degree: 14%
 
 ---
 
-# Cloud 5 AEM記錄檔
+# Cloud 5 AEM日志文件
 
-本課程深入探討如何存取AEMas a Cloud Service的記錄檔，包括如何透過使用者介面及API存取記錄檔。
+本课程深入介绍如何访问AEMas a Cloud Service中的日志，包括如何通过用户界面以及从API访问它们。
 
 >[!VIDEO](https://video.tv.adobe.com/v/341156?quality=12&learn=on)
 
-## 本影片涵蓋的內容
+## 本视频中涵盖的内容
 
-+ 記錄檔 [概觀](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
-+ 透過UI存取記錄檔
++ 日志文件 [概述](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
++ 通过用户界面访问日志文件
 + 使用AdobeCLI
-   + [Adobe I/O可擴充CLI](https://github.com/adobe/aio-cli)
+   + [Adobe I/O可扩展CLI](https://github.com/adobe/aio-cli)
    + [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
-+ 追蹤記錄檔
++ 尾随日志文件

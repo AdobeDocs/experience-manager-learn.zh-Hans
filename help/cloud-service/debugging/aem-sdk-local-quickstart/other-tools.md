@@ -1,6 +1,6 @@
 ---
-title: 偵錯AEM SDK的其他工具
-description: 多種其他工具可協助偵錯AEM SDK的本機Quickstart。
+title: 用于调试AEM SDK的其他工具
+description: 多种其他工具可以帮助调试AEM SDK的本地快速启动。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -19,74 +19,74 @@ ht-degree: 1%
 
 ---
 
-# 偵錯AEM SDK的其他工具
+# 用于调试AEM SDK的其他工具
 
-多種其他工具可協助您在AEM SDK的本機Quickstart上偵錯應用程式。
+其他各种工具有助于在AEM SDK的本地快速启动页面上调试应用程序。
 
 ## CRXDE Lite
 
 ![CRXDE Lite](./assets/other-tools/crxde-lite.png)
 
-CRXDE Lite是與JCR、AEM資料存放庫互動的網頁型介面。 CRXDE Lite可讓您完全瞭解JCR，包括節點、屬性、屬性值和許可權。
+CRXDE Lite是一个基于Web的界面，用于与JCR、AEM数据存储库交互。 CRXDE Lite提供对JCR的完全可见性，包括节点、属性、属性和权限。
 
-CRXDE Lite位於：
+CRXDE Lite位于：
 
-+ 「工具」>「一般」>「CRXDE Lite」
++ “工具”>“常规”>“CRXDE Lite”
 + 或直接在 [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 
-### 偵錯內容
+### 调试内容
 
-CRXDE Lite提供對JCR的直接存取。 透過CRXDE Lite看到的內容受限於授予您的使用者的許可權，這表示您可能無法檢視或修改JCR中的所有內容，具體取決於您的存取權。
+CRXDE Lite提供对JCR的直接访问。 通过CRXDE Lite显示的内容受授予您的用户的权限限制，这意味着您可能无法查看或修改JCR中的所有内容，具体取决于您的访问权限。
 
-+ 使用左側導覽窗格導覽和操作JCR結構
-+ 在左側導覽窗格中選取節點，會在底部窗格中顯示node屬性的。
-   + 可以從窗格新增、移除或變更屬性
-+ 在左側導覽中連按兩下檔案節點，會在右上窗格中開啟檔案的內容
-+ 點選左上方的「全部儲存」按鈕以保留已變更的專案，或點選「全部儲存」旁的向下箭頭以還原任何未儲存的變更。
++ 使用左侧导航窗格导航和操作JCR结构
++ 在左侧导航窗格中选择节点，将显示底部窗格中的node属性。
+   + 可以从窗格添加、删除或更改属性
++ 双击左侧导航中的文件节点，会在右上窗格中打开文件的内容
++ 点按左上方的全部保存按钮以保留所做的更改，或点按全部保存旁边的向下箭头以还原任何未保存的更改。
 
-![CRXDE Lite — 偵錯內容](./assets/other-tools/crxde-lite__debugging-content.png)
+![CRXDE Lite — 调试内容](./assets/other-tools/crxde-lite__debugging-content.png)
 
-透過CRXDE Lite直接對AEM SDK所做的任何變更可能難以追蹤和控管。 視情況而定，請確保透過CRXDE Lite所做的變更能夠回到AEM專案的可變內容套件(`ui.content`)並提交至Git。 理想情況下，所有應用程式內容變更都源自程式碼基底，並透過部署流入AEM SDK，而不是直接透過CRXDE Lite變更AEM SDK。
+通过CRXDE Lite直接对AEM SDK所做的任何更改可能难以跟踪和治理。 根据需要，确保通过CRXDE Lite所做的更改能够返回到AEM项目的可变内容包(`ui.content`)，并承诺使用Git。 理想情况下，所有应用程序内容更改都源自代码库并通过部署流入AEM SDK，而不是通过CRXDE Lite直接对AEM SDK进行更改。
 
-### 偵錯存取控制
+### 调试访问控制
 
-CRXDE Lite提供一種在特定節點上測試和評估特定使用者或群組（亦稱為主體）之存取控制的方法。
+CRXDE Lite提供了一种在特定节点上测试和评估特定用户或组（亦即主体）的访问控制的方法。
 
-若要存取CRXDE Lite中的「測試存取控制」主控台，請瀏覽至：
+要访问CRXDE Lite中的测试访问控制控制台，请导航到：
 
-+ CRXDE Lite>工具>測試存取控制……
++ CRXDE Lite>工具>测试访问控制……
 
-![CRXDE Lite — 測試存取控制](./assets/other-tools/crxde-lite__test-access-control.png)
+![CRXDE Lite — 测试访问控制](./assets/other-tools/crxde-lite__test-access-control.png)
 
-1. 使用「路徑」欄位，選取要評估的JCR路徑
-1. 使用「主參與者」欄位，選取路徑評估對象或群組
-1. 點選「測試」按鈕
+1. 使用路径字段，选择要计算的JCR路径
+1. 使用“承担者”字段，选择要作为路径评估依据的用户或组
+1. 点按测试按钮
 
-結果顯示如下：
+结果显示如下：
 
-+ __路徑__ 會再次確認已評估的路徑
-+ __主體__ 重申評估路徑的使用者或群組
-+ __主體__ 列出所選主體所屬的所有主體。
-   + 這有助於瞭解透過繼承提供許可權的可傳遞群組成員資格
-+ __路徑上的許可權__ 列出所選主體在評估路徑上的所有JCR許可權
++ __路径__ 重申已评估的路径
++ __主体__ 重申评估路径的用户或组
++ __主体__ 列出所选主体所属的所有主体。
+   + 这有助于了解可通过继承提供权限的可传递组成员资格
++ __路径上的权限__ 列出所选承担者在评估路径上拥有的所有JCR权限
 
 ## 说明查询
 
 ![说明查询](./assets/other-tools/explain-query.png)
 
-說明AEM SDK本機Quickstart中的查詢Web型工具，該工具可提供AEM如何解讀和執行查詢的關鍵深入分析，以及確保AEM以高效方式執行查詢的寶貴工具。
+解释AEM SDK的本地快速入门中的基于Web的查询工具，该工具提供了有关AEM如何解释和执行查询的关键见解，并且是确保AEM以高性能方式执行查询的宝贵工具。
 
-說明查詢位於：
+Explain查询位于：
 
-+ 「工具」 > 「診斷」 > 「查詢效能」 > 「說明查詢」標籤
-+ [http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) >說明查詢索引標籤
++ “工具”>“诊断”>“查询性能”>“解释查询”选项卡
++ [http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) >说明查询选项卡
 
 ## QueryBuilder Debugger
 
 ![QueryBuilder Debugger](./assets/other-tools/query-debugger.png)
 
-QueryBuilder Debugger是網頁型工具，可協助您使用AEM偵錯並瞭解搜尋查詢 [Querybuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) 語法。
+QueryBuilder Debugger是基于Web的工具，可帮助您使用AEM调试和了解搜索查询 [Querybuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) 语法。
 
-QueryBuilder Debugger位於：
+QueryBuilder Debugger位于：
 
 + [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)

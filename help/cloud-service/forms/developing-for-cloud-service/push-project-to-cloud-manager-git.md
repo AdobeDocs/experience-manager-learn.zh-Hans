@@ -1,6 +1,6 @@
 ---
-title: 將AEM專案推送到Cloud Manager存放庫
-description: 將本機Git存放庫推送到Cloud Manager存放庫
+title: 将AEM项目推送到Cloud Manager存储库
+description: 将本地Git存储库推送到Cloud Manager存储库
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -16,26 +16,26 @@ ht-degree: 0%
 
 ---
 
-# 將AEM專案推送到Cloud Manager Git存放庫
+# 将AEM项目推送到Cloud Manager Git存储库
 
-在上一步中，我們將AEM專案與AEM例項中建立的最適化Forms和主題同步。
-我們現在需要將這些變更新增到本機Git存放庫，然後將本機Git存放庫推送到Cloud Manager Git存放庫。
-開啟命令提示字元並瀏覽至c：\cloudmanager\aem-banking-app執行以下命令
+在上一步中，我们将AEM项目与在AEM实例中创建的自适应Forms和主题同步。
+现在，我们需要将这些更改添加到本地Git存储库，然后将本地Git存储库推送到Cloud Manager Git存储库。
+打开命令提示符并导航到c：\cloudmanager\aem-banking-app执行以下命令
 
 ```
 git add .
 ```
 
-這會將新檔案新增至本機Git存放庫的階段分支
+这会将新文件添加到本地Git存储库的暂存分支中
 
 ```
 git commit -m "My First AF"
 ```
 
-這會將檔案提交至本機Git存放庫的主要分支
+这会将文件提交到本地Git存储库的主控分支
 
 ```
 git push -f bankingapp master:"MyFirstAF"
 ```
 
-在上述命令中，我們將主分支從本機Git存放庫推送到Cloud Manager存放庫的MyFirstAF分支，該分支由銀行應用程式易記名稱識別。
+在上面命令中，我们将我们的主控分支从本地Git存储库推送到Cloud Manager存储库的MyFirstAF分支，该分支由银行应用程序友好名称标识。

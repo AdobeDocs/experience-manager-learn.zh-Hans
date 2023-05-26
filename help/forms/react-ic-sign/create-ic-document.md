@@ -1,6 +1,6 @@
 ---
-title: 使用API產生互動式通訊檔案
-description: 合併來自react應用程式的資料來產生互動式通訊檔案
+title: 使用API生成交互式通信文档
+description: 通过合并react应用程序中的数据生成交互式通信文档
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -16,14 +16,14 @@ ht-degree: 1%
 
 ---
 
-# 產生互動式通訊檔案
+# 生成交互式通信文档
 
-若要使用API產生互動式通訊檔案，我們需要執行下列動作
+要使用API生成交互式通信文档，我们需要执行以下操作
 
-* 建立預填服務
-* 產生互動式通訊檔案
+* 创建预填充服务
+* 生成交互式通信文档
 
-服務名稱 `ccm-print-test` 用於存取此服務。 定義此預填服務後，您可以在您的servlet或工作流程處理步驟實作中存取此服務，以產生列印管道檔案。
+服务名称 `ccm-print-test` 用于访问此服务。 定义此预填充服务后，您可以在servlet或工作流流程步骤实施中访问此服务以生成打印渠道文档。
 
 ```java
 package com.acrobatsign.core;
@@ -67,7 +67,7 @@ public class PrintChannelPrefill implements DataProvider {
 }
 ```
 
-## 產生檔案
+## 生成文档
 
 ```java
 package com.acrobatsign.core.impl;
@@ -199,9 +199,9 @@ public class AcrobatSignConfigurationService {
 }
 ```
 
-## 取得暫時性檔案ID
+## 获取临时文档ID
 
-已寫入下列程式碼以建立暫時性檔案
+编写了以下代码以创建临时文档
 
 ```java
 public String getTransientDocumentID(Document documentForSigning) throws IOException {
@@ -229,7 +229,7 @@ public String getTransientDocumentID(Document documentForSigning) throws IOExcep
 }
 ```
 
-## 取得Widget ID
+## 获取构件ID
 
 ```java
 public String getWidgetID(String transientDocumentID) {
@@ -278,7 +278,7 @@ public String getWidgetID(String transientDocumentID) {
 }
 ```
 
-## 取得Widget URL
+## 获取构件URL
 
 ```java
 public String getWidgetURL(String widgetId) throws ClientProtocolException, IOException {
@@ -317,4 +317,4 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
 
 ## 后续步骤
 
-寫入 [公開Acrobat Sign API的OSGi服務包裝函式](./wrapper-sign-api.md)
+写入 [用于公开Acrobat Sign API的OSGi服务包装器](./wrapper-sign-api.md)

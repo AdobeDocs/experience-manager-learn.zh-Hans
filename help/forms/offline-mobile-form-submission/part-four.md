@@ -1,7 +1,7 @@
 ---
-title: 在HTM5表單提交時觸發AEM工作流程 — 讓使用案例發揮作用
+title: 在HTM5表单提交时触发AEM工作流 — 让用例发挥作用
 seo-title: Trigger AEM Workflow on HTML5 Form Submission
-description: 繼續以離線模式填寫行動表單並提交行動表單以觸發AEM工作流程
+description: 继续以离线模式填写移动表单并提交移动表单以触发AEM Workflow
 seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
 feature: Mobile Forms
 topics: development
@@ -20,31 +20,31 @@ ht-degree: 1%
 
 ---
 
-# 讓此使用案例在您的系統上運作
+# 让此用例在您的系统上工作
 
 >[!NOTE]
 >
->為了讓範例資產在您的系統上運作，假設您已在連線埠4502和4503上分別執行AEM Author和Publish執行個體。 此外，也假設您可透過以下方式存取AEM作者： `admin`/`admin`. 如果連線埠號碼或管理員密碼已變更，這些範例資產將無法運作。 您必須使用提供的範常式式碼建立自己的資產。
+>要使示例资产在您的系统上工作，假定您分别在端口4502和4503上运行AEM创作和发布实例。 此外，还假设AEM作者可通过以下方式访问 `admin`/`admin`. 如果端口号或管理员密码已更改，则这些示例资源将无法工作。 您必须使用提供的示例代码创建自己的资产。
 
-若要讓此使用案例在本機系統上正常運作，請遵循下列步驟：
+要使该用例在本地系统上正常工作，请执行以下步骤：
 
-* 在連線埠4502上安裝AEM編寫執行個體，並在連線埠4503上安裝AEM發佈執行個體
-* [依照使用AEM Forms中的服務使用者開發中指定的指示操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html). 請務必建立服務使用者，並將套件組合部署在您的AEM作者和發佈執行個體上。
-* [開啟osgi設定 ](http://localhost:4503/system/console/configMgr).
-* 搜尋  **Apache Sling查閱者篩選器**. 請確定已選取「允許空白」核取方塊。
-* [部署自訂AEMFormDocumentService套裝](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).此套件組合需要部署在您的AEM Publish執行個體上。 此套件組合具有從行動表單產生互動式PDF的程式碼。
-* [下載並解壓縮與本文相關的資產。](assets/offline-pdf-submission-assets.zip) 您將獲得以下內容
-   * **offline-submission-profile.zip**  — 此AEM套件包含自訂設定檔，可讓您將互動式pdf下載至本機檔案系統。 在您的AEM Publish執行個體上部署此套件。
-   * **xdp-form-and-workflow.zip**  — 此AEM套件包含XDP、範例工作流程、在節點內容/pdfsubmissions上設定的啟動器。 在您的AEM作者和發佈執行個體上部署此套件。
-   * **HandlePDFSubmission.HandlePDFSubmission.core-1.0-SNAPSHOT.jar**  — 這是可執行大部分工作的AEM套件組合。 此套件組合包含掛載在 `/bin/startworkflow`. 此servlet會將提交的表單資料儲存在 `/content/pdfsubmissions` AEM存放庫中的節點。 在您的AEM作者和發佈執行個體上部署此套件組合。
-* [預覽行動表單](http://localhost:4503/content/dam/formsanddocuments/testsubmision.xdp/jcr:content)
-* 填寫數個欄位，然後按一下工具列上的按鈕以下載互動式PDF。
-* 使用Acrobat填寫已下載PDF並按一下提交按鈕。
-* 您應該會收到一則成功訊息
-* 以管理員身分登入AEM作者執行個體
-* [檢查AEM收件匣](http://localhost:4502/aem/inbox)
-* 您應該要有工作專案來稽核已提交的PDF
+* 在端口4502上安装AEM创作实例，在端口4503上安装AEM发布实例
+* [按照使用AEM Forms中的服务用户进行开发中指定的说明进行操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html). 请确保创建服务用户并在您的AEM创作和发布实例上部署捆绑包。
+* [打开osgi配置 ](http://localhost:4503/system/console/configMgr).
+* 搜索  **Apache Sling引用过滤器**. 确保选中允许空复选框。
+* [部署自定义AEMFormDocumentService捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).此捆绑包需要部署在AEM发布实例上。 此捆绑包具有从移动设备表单生成交互式PDF的代码。
+* [下载并解压缩与本文相关的资产。](assets/offline-pdf-submission-assets.zip) 您将获得以下内容
+   * **offline-submission-profile.zip**  — 此AEM包包含自定义配置文件，通过该配置文件可将交互式pdf下载到本地文件系统。 在AEM发布实例上部署此包。
+   * **xdp-form-and-workflow.zip**  — 此AEM包包含XDP、示例工作流、在节点content/pdfsubmissions上配置的启动器。 在您的AEM创作实例和发布实例上部署此包。
+   * **HandlePDFSubmission.HandlePDFSubmission.core-1.0-SNAPSHOT.jar**  — 这是执行大部分工作的AEM捆绑包。 此捆绑包包含装载在 `/bin/startworkflow`. 此servlet将提交的表单数据保存在 `/content/pdfsubmissions` AEM节点。 在您的AEM创作实例和发布实例上部署此捆绑包。
+* [预览移动设备表单](http://localhost:4503/content/dam/formsanddocuments/testsubmision.xdp/jcr:content)
+* 填写多个字段，然后单击工具栏上的按钮以下载交互式PDF。
+* 使用Acrobat填写下载的PDF并单击“提交”按钮。
+* 您应会收到一条成功消息
+* 以管理员身份登录AEM创作实例
+* [检查AEM收件箱](http://localhost:4502/aem/inbox)
+* 您应该有工作项目来审核提交的PDF
 
 >[!NOTE]
 >
->有些客戶沒有將PDF提交到發佈執行個體上執行的servlet，而是將servlet部署在Tomcat之類的servlet容器中。 這完全取決於客戶熟悉的拓撲。在本教學課程中，我們將使用部署在發佈執行個體上的servlet來處理pdf提交。
+>一些客户没有将PDF提交到发布实例上运行的servlet，而是在servlet容器（如Tomcat）中部署了servlet。 这完全取决于客户熟悉的拓扑。在本教程中，我们将使用在发布实例上部署的servlet来处理pdf提交。

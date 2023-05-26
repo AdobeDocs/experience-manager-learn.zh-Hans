@@ -1,6 +1,6 @@
 ---
-title: 實用公用程式服務
-description: AEM Forms開發人員的一些實用工具服務
+title: 有用的实用工具服务
+description: AEM Forms开发人员的一些实用工具服务
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 ---
 
-# 實用公用程式服務
+# 有用的实用工具服务
 
-此範例套件提供有用的公用程式服務，可供AEM Forms開發人員使用。 可使用下列服務。
+此示例捆绑包提供了可供AEM Forms开发人员使用的有用实用程序服务。 可以使用以下服务。
 
 
 ```java
@@ -34,11 +34,11 @@ public abstract String saveDocumentInCrx(String jcrPath,String fileExtension, Do
 }
 ```
 
-範例組合可以是 [已從此處下載](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)
+示例捆绑包可以是 [已从此处下载](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)
 
-## 使用公用程式服務的範常式式碼
+## 使用实用程序服务的示例代码
 
-以下是在JSP頁面中用來從字串建立org.w3c.dom.Document，並轉換檔案並將其儲存在CRX存放庫中的程式碼，如下列程式碼片段所示。
+以下代码是在JSP页面中用于从字符串创建org.w3c.dom.Document并转换文档的代码，然后将其存储在CRX存储库中，如以下代码片段所示。
 
 ```java
  aemformsutilityfunctions.core.AemFormsUtilities aemFormsUtilities = sling.getService(aemformsutilityfunctions.core.AemFormsUtilities.class);
@@ -49,7 +49,7 @@ aemFormsUtilities.saveDocumentInCrx("/content/xmlfiles",".xml",xmlStringDoc);
 ## 前提条件
 
 
-您需要部署 [DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar) 並啟動套件組合。
+您需要部署 [DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar) 然后启动捆绑包。
 
 
-如果您要使用這些公用程式服務將檔案儲存在CRX存放庫中，請遵循 [使用服務使用者文章開發](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms). 請務必提供 [必要許可權](http://localhost:4502/useradmin) 將適當的CRX資料夾上傳給fd-service使用者。
+如果要使用这些实用程序服务将文档保存在CRX存储库中，请按照 [使用服务用户文章进行开发](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms). 确保您提供 [所需权限](http://localhost:4502/useradmin) 将相应的CRX文件夹添加到fd-service用户。

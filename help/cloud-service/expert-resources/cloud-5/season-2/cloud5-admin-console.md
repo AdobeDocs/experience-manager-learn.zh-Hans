@@ -17,11 +17,11 @@ ht-degree: 6%
 
 # Cloud 5 -Admin Console
 
-曾經好奇為什麼每個專案在Admin Console內的AEM內容中都有作用？ 團隊會嘗試解釋關於布建和存取的一些人們應該知道的常見事情。
+想知道为什么每个项目在Admin Console内的AEM上下文中都有什么作用？ 该团队试图解释关于配置和访问的一些人们应该知道的常见问题。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342866?quality=12&learn=on)
 
-## 本影片涵蓋的內容
+## 本视频中涵盖的内容
 
-+ [瞭解Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
-+ [Admin Console概觀](https://helpx.adobe.com/cn/enterprise/using/admin-console.html)
++ [了解Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
++ [Admin Console概述](https://helpx.adobe.com/cn/enterprise/using/admin-console.html)

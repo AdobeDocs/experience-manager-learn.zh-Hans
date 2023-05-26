@@ -1,6 +1,6 @@
 ---
-title: 如何更新PDFG服務中的伺服器轉換和伺服器全域逾時
-description: 設定PDF產生器的伺服器轉換和伺服器全域逾時
+title: 如何更新PDFG服务中的服务器转换和服务器全局超时
+description: 为PDF生成器配置服务器转换和服务器全局超时
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何更新PDFG服務中的伺服器轉換和全域逾時
+# 如何更新PDFG服务中的服务器转换和全局超时
 
-*此影片說明在Forms PDFG服務中更新伺服器轉換和伺服器全域逾時的程式。*
+*此视频介绍在Forms PDFG服务中更新服务器转换和服务器全局超时的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335514?quality=12&learn=on)

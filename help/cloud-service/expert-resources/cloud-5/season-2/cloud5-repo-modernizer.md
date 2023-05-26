@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 — 儲存庫現代化工具
-description: AEM存放庫現代化及其運作方式
+title: Cloud 5 — 存储库现代化器
+description: AEM存储库现代化及其工作原理
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 3%
 
 ---
 
-# Cloud 5 — 儲存庫現代化工具
+# Cloud 5 — 存储库现代化器
 
-夥計們將研究存放庫現代化工具如何幫助您過渡到AEMas a Cloud Service，並提供其工作方式和原因的有用概覽。
+这些专家将详细了解存储库现代化器如何帮助您过渡到AEMas a Cloud Service，并提供其工作方式及其原因的有用概述。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342865?quality=12&learn=on)
 
-## 本影片涵蓋的內容
+## 本视频中涵盖的内容
 
 + [AIO CLI](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration)
 + [存储库现代化器](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer)

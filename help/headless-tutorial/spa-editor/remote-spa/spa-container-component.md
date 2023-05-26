@@ -1,6 +1,6 @@
 ---
-title: 新增可編輯的React容器元件至遠端SPA
-description: 瞭解如何將可編輯的容器元件新增至遠端SPA，讓AEM作者可將元件拖放至其中。
+title: 将可编辑的React容器组件添加到远程SPA
+description: 了解如何将可编辑的容器组件添加到远程SPA，以便AEM作者将组件拖放到其中。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
@@ -17,38 +17,38 @@ ht-degree: 1%
 
 ---
 
-# 可編輯的容器元件
+# 可编辑的容器组件
 
-[固定元件](./spa-fixed-component.md) 為編寫SPA內容提供一些靈活性，但這種方法很嚴格，需要開發人員定義可編輯內容的確切構成。 為了支援作者建立卓越的體驗，SPA編輯器支援在SPA中使用容器元件。 容器元件可讓作者將允許的元件拖放至容器中並加以製作，就像在傳統AEM Sites製作中一樣！
+[固定组件](./spa-fixed-component.md) 为创作SPA内容提供了一些灵活性，但这种方法很严格，并且要求开发人员定义可编辑内容的确切组成。 为了支持作者创建卓越体验，SPA编辑器支持在SPA中使用容器组件。 容器组件允许作者将允许的组件拖放到容器中并进行创作，就像在传统AEM Sites创作中一样！
 
-![可編輯的容器元件](./assets/spa-container-component/intro.png)
+![可编辑的容器组件](./assets/spa-container-component/intro.png)
 
-在本章中，我們將可編輯的容器新增至首頁檢視，讓作者直接在SPA中使用可編輯的React元件來撰寫和配置豐富的內容體驗。
+在本章中，我们向“主页”视图添加了一个可编辑的容器，以允许作者直接在SPA中使用可编辑的React组件来撰写和布局丰富的内容体验。
 
-## 更新WKND應用程式
+## 更新WKND应用程序
 
-若要將容器元件新增至「首頁」檢視：
+要将容器组件添加到“主页”视图，请执行以下操作：
 
-+ 匯入AEM React可編輯元件的 `ResponsiveGrid` 元件
-+ 匯入並註冊自訂的可編輯React元件（文字和影像），以用於ResponsiveGrid元件
++ 导入AEM React可编辑组件的 `ResponsiveGrid` 组件
++ 导入和注册自定义的可编辑React组件（文本和图像），以便在ResponsiveGrid组件中使用
 
-### 使用ResponsiveGrid元件
+### 使用ResponsiveGrid组件
 
-若要將可編輯區域新增至「首頁」檢視：
+要将可编辑区域添加到“主页”视图，请执行以下操作：
 
-1. 開啟並編輯 `react-app/src/components/Home.js`
-1. 匯入 `ResponsiveGrid` 元件來源 `@adobe/aem-react-editable-components` 並將其新增至 `Home` 元件。
-1. 在 `<ResponsiveGrid...>` 元件
+1. 打开并编辑 `react-app/src/components/Home.js`
+1. 导入 `ResponsiveGrid` 组件来源 `@adobe/aem-react-editable-components` 并将其添加到 `Home` 组件。
+1. 在上设置以下属性 `<ResponsiveGrid...>` 组件
    + `pagePath = '/content/wknd-app/us/en/home'`
    + `itemPath = 'root/responsivegrid'`
 
-   這指示 `ResponsiveGrid` 元件以從AEM資源擷取其內容：
+   这说明 `ResponsiveGrid` 从AEM资源检索其内容的组件：
 
    + `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
-   此 `itemPath` 對應至 `responsivegrid` 節點定義於 `Remote SPA Page` AEM範本，並會在從建立的新AEM頁面上自動建立 `Remote SPA Page` AEM範本。
+   此 `itemPath` 映射到 `responsivegrid` 中定义的节点 `Remote SPA Page` AEM模板，并在从创建的新AEM页面上自动创建 `Remote SPA Page` AEM模板。
 
-   更新 `Home.js` 新增 `<ResponsiveGrid...>` 元件。
+   更新 `Home.js` 以添加 `<ResponsiveGrid...>` 组件。
 
    ```javascript
    ...
@@ -72,21 +72,21 @@ ht-degree: 1%
    }
    ```
 
-此 `Home.js` 檔案應如下所示：
+此 `Home.js` 文件应如下所示：
 
 ![Home.js](./assets/spa-container-component/home-js.png)
 
-## 建立可編輯的元件
+## 创建可编辑的组件
 
-以充分發揮SPA Editor中彈性撰寫體驗容器的功效。 我們已建立可編輯的Title元件，但讓我們再做一些讓作者在新增的ResponsiveGrid元件中使用可編輯的Text和Image元件。
+充分利用SPA编辑器中提供的灵活创作体验容器。 我们已经创建了一个可编辑的标题组件，但让我们再创建一些组件，以允许作者在新添加的ResponsiveGrid组件中使用可编辑的文本和图像组件。
 
-新的可編輯文字和影像React元件是使用中公開的可編輯元件定義模式建立的 [可編輯的固定元件](./spa-fixed-component.md).
+新的可编辑文本和图像React组件是使用中公开的可编辑组件定义模式创建的 [可编辑的固定组件](./spa-fixed-component.md).
 
-### 可編輯文字元件
+### 可编辑文本组件
 
-1. 在IDE中開啟SPA專案
-1. 在建立React元件 `src/components/editable/core/Text.js`
-1. 將下列程式碼新增至 `Text.js`
+1. 在IDE中打开SPA项目
+1. 在上创建React组件 `src/components/editable/core/Text.js`
+1. 将以下代码添加到 `Text.js`
 
    ```javascript
    import React from 'react'
@@ -113,8 +113,8 @@ ht-degree: 1%
    }
    ```
 
-1. 建立可編輯的React元件，位於 `src/components/editable/EditableText.js`
-1. 將下列程式碼新增至 `EditableText.js`
+1. 创建可编辑的React组件，位于 `src/components/editable/EditableText.js`
+1. 将以下代码添加到 `EditableText.js`
 
    ```javascript
    import React from 'react'
@@ -143,15 +143,15 @@ ht-degree: 1%
    export default EditableText;
    ```
 
-可編輯的文字元件實作應如下所示：
+可编辑的文本组件实施应如下所示：
 
-![可編輯文字元件](./assets/spa-container-component/text-js.png)
+![可编辑文本组件](./assets/spa-container-component/text-js.png)
 
 ### 图像组件
 
-1. 在IDE中開啟SPA專案
-1. 在建立React元件 `src/components/editable/core/Image.js`
-1. 將下列程式碼新增至 `Image.js`
+1. 在IDE中打开SPA项目
+1. 在上创建React组件 `src/components/editable/core/Image.js`
+1. 将以下代码添加到 `Image.js`
 
    ```javascript
    import React from 'react'
@@ -200,8 +200,8 @@ ht-degree: 1%
    };
    ```
 
-1. 建立可編輯的React元件，位於 `src/components/editable/EditableImage.js`
-1. 將下列程式碼新增至 `EditableImage.js`
+1. 创建可编辑的React组件，位于 `src/components/editable/EditableImage.js`
+1. 将以下代码添加到 `EditableImage.js`
 
 ```javascript
 import { EditableComponent, MapTo } from '@adobe/aem-react-editable-components';
@@ -232,8 +232,8 @@ export default EditableImage;
 ```
 
 
-1. 建立SCSS檔案 `src/components/editable/EditableImage.scss` 提供自訂樣式的 `EditableImage.scss`. 這些樣式以可編輯React元件的CSS類別為目標。
-1. 將下列SCSS新增至 `EditableImage.scss`
+1. 创建SCSS文件 `src/components/editable/EditableImage.scss` 提供自定义样式的 `EditableImage.scss`. 这些样式以可编辑React组件的CSS类为目标。
+1. 将以下SCSS添加到 `EditableImage.scss`
 
    ```css
    .cmp-image__image {
@@ -243,7 +243,7 @@ export default EditableImage;
     }
    ```
 
-1. 匯入 `EditableImage.scss` 在 `EditableImage.js`
+1. 导入 `EditableImage.scss` 在 `EditableImage.js`
 
    ```javascript
    ...
@@ -251,18 +251,18 @@ export default EditableImage;
    ...
    ```
 
-可編輯的影像元件實作應如下所示：
+可编辑的图像组件实施应如下所示：
 
-![可編輯的影像元件](./assets/spa-container-component/image-js.png)
+![可编辑的图像组件](./assets/spa-container-component/image-js.png)
 
 
-### 匯入可編輯的元件
+### 导入可编辑的组件
 
-新建立的 `EditableText` 和 `EditableImage` React元件在SPA中參照，並根據AEM傳回的JSON動態具現化。 若要確保這些元件可供SPA使用，請在中建立這些元件的匯入陳述式 `Home.js`
+新创建的 `EditableText` 和 `EditableImage` React组件在SPA中引用，并根据AEM返回的JSON动态实例化。 要确保这些组件可供SPA使用，请在以下位置为它们创建import语句： `Home.js`
 
-1. 在IDE中開啟SPA專案
-1. 開啟檔案 `src/Home.js`
-1. 新增匯入陳述式 `AEMText` 和 `AEMImage`
+1. 在IDE中打开SPA项目
+1. 打开文件 `src/Home.js`
+1. 为添加import语句 `AEMText` 和 `AEMImage`
 
    ```javascript
    ...
@@ -272,108 +272,108 @@ export default EditableImage;
    ...
    ```
 
-結果應如下所示：
+结果应如下所示：
 
 ![Home.js](./assets/spa-container-component/home-js-imports.png)
 
-如果這些匯入為 _not_ 已新增， `EditableText` 和 `EditableImage` SPA不會叫用程式碼，因此元件不會對應到提供的資源型別。
+如果这些导入为 _非_ 已添加， `EditableText` 和 `EditableImage` SPA不会调用代码，因此组件不会映射到提供的资源类型。
 
-## 在AEM中設定容器
+## 在AEM中配置容器
 
-AEM容器元件會使用原則來指定其允許的元件。 使用SPA編輯器時，這是很重要的設定，因為SPA只能轉譯對應了SPA元件的AEM元件。 確保僅允許我們提供SPA實作的元件：
+AEM容器组件使用策略来指定其允许的组件。 使用SPA编辑器时，这是一个关键配置，因为SPA只能呈现已映射SPA组件的AEM组件。 确保仅允许我们为提供的SPA实施的组件：
 
-+ `EditableTitle` 對應至 `wknd-app/components/title`
-+ `EditableText` 對應至 `wknd-app/components/text`
-+ `EditableImage` 對應至 `wknd-app/components/image`
++ `EditableTitle` 已映射到 `wknd-app/components/title`
++ `EditableText` 已映射到 `wknd-app/components/text`
++ `EditableImage` 已映射到 `wknd-app/components/image`
 
-若要設定「遠端SPA頁面」範本的responsivegrid容器：
+要配置远程SPA页模板的responsivegrid容器，请执行以下操作：
 
-1. 登入AEM Author
-1. 導覽至 __工具>一般>範本> WKND應用程式__
-1. 編輯 __報表SPA頁面__
+1. 登录AEM作者
+1. 导航到 __工具>常规>模板> WKND应用程序__
+1. 编辑 __“报表SPA”页__
 
-   ![回應式格線原則](./assets/spa-container-component/templates-remote-spa-page.png)
+   ![响应式网格策略](./assets/spa-container-component/templates-remote-spa-page.png)
 
-1. 選取 __結構__ 在右上角的模式切換器中
-1. 點選以選取 __配置容器__
-1. 點選 __原則__ 圖示來識別
+1. 选择 __结构__ 在右上角的模式切换器中
+1. 点按以选择 __布局容器__
+1. 点按 __策略__ 图标时，单击此按钮
 
-   ![回應式格線原則](./assets/spa-container-component/templates-policies-action.png)
+   ![响应式网格策略](./assets/spa-container-component/templates-policies-action.png)
 
-1. 在右側下方的 __允許的元件__ 標籤，展開 __WKND應用程式 — 內容__
-1. 請確定僅選取下列專案：
+1. 在右边，下方 __允许的组件__ 选项卡，展开 __WKND应用程序 — 内容__
+1. 确保仅选择以下内容：
    + 图像
    + 文本
    + 标题
 
-   ![遠端SPA頁面](./assets/spa-container-component/templates-allowed-components.png)
+   ![“远程SPA”页](./assets/spa-container-component/templates-allowed-components.png)
 
-1. 點選 __完成__
+1. 点按 __完成__
 
-## 在AEM中編寫容器
+## 在AEM中创作容器
 
-在SPA更新以內嵌 `<ResponsiveGrid...>`，三個可編輯React元件的包裝函式(`EditableTitle`， `EditableText`、和 `EditableImage`)，而AEM已更新成相符的範本原則，我們就可以開始編寫容器元件中的內容。
+更新SPA以嵌入 `<ResponsiveGrid...>`，三个可编辑React组件的包装器(`EditableTitle`， `EditableText`、和 `EditableImage`)，并且AEM更新了匹配的模板策略，我们可以开始在容器组件中创作内容。
 
-1. 登入AEM Author
-1. 導覽至 __網站> WKND應用程式__
-1. 點選 __首頁__ 並選取 __編輯__ 從頂端動作列
-   + 「Hello World」文字元件隨即顯示，因為從AEM專案原型產生專案時會自動新增此元件
-1. 選取 __編輯__ 從「頁面編輯器」右上角的模式選擇器
-1. 找到 __配置容器__ 標題下方的可編輯區域
-1. 開啟 __頁面編輯器的側欄__，然後選取 __元件檢視__
-1. 將下列元件拖曳至 __配置容器__
+1. 登录AEM作者
+1. 导航到 __站点> WKND应用程序__
+1. 点按 __主页__ 并选择 __编辑__ 从顶部操作栏中
+   + 此时将显示“Hello World”文本组件，因为从AEM项目原型生成项目时，会自动添加此组件
+1. 选择 __编辑__ 从页面编辑器右上角的模式选择器中
+1. 找到 __布局容器__ 标题下方的可编辑区域
+1. 打开 __页面编辑器的侧栏__，并选择 __“组件”视图__
+1. 将以下组件拖动到 __布局容器__
    + 图像
    + 标题
-1. 拖曳元件以將其重新排序為下列順序：
+1. 将组件拖动以按照以下顺序重新排序：
    1. 标题
    1. 图像
    1. 文本
-1. __作者__ 此 __標題__ 元件
-   1. 點選「標題」元件，然後點選 __扳手__ 圖示至 __編輯__ 標題元件
-   1. 新增下列文字：
-      + 標題： __夏天即將到來，讓我們充分利用這個機會！__
-      + 型別： __H1__
-   1. 點選 __完成__
-1. __作者__ 此 __影像__ 元件
-   1. 在「影像」元件上，從側邊欄（切換至「資產」檢視後）將影像拖曳到中
-   1. 點選影像元件，然後點選 __扳手__ 圖示以編輯
-   1. 檢查 __裝飾性影像__ 核取方塊
-   1. 點選 __完成__
-1. __作者__ 此 __文字__ 元件
-   1. 點選「文字」元件，然後點選 __扳手__ 圖示
-   1. 新增下列文字：
-      + _現在，您可以在所有的一週冒險中獲得15%，在所有兩週或更長時間的冒險中獲得20%的折扣！ 結帳時，新增促銷活動代碼SUMMERISCOMING即可取得折扣！_
-   1. 點選 __完成__
+1. __作者__ 此 __标题__ 组件
+   1. 点按标题组件，然后点按 __扳手__ 图标 __编辑__ 标题组件
+   1. 添加以下文本：
+      + 标题： __夏天就要来了，充分利用吧！__
+      + 类型： __H1__
+   1. 点按 __完成__
+1. __作者__ 此 __图像__ 组件
+   1. 在图像组件上，将图像从侧栏（切换到资产视图后）拖入
+   1. 点按图像组件，然后点按 __扳手__ 要编辑的图标
+   1. 查看 __图像是装饰性的__ 复选框
+   1. 点按 __完成__
+1. __作者__ 此 __文本__ 组件
+   1. 通过点按文本组件并点按来编辑文本组件 __扳手__ 图标
+   1. 添加以下文本：
+      + _现在，您可以享受所有1周探险15%的折扣，以及所有2周或更长探险20%的折扣！ 在结帐时，添加促销活动代码SUMMERISCOMING以获取折扣！_
+   1. 点按 __完成__
 
-1. 您的元件現在已編寫，但垂直棧疊。
+1. 您的组件现在已创作，但垂直栈叠。
 
-   ![編寫的元件](./assets/spa-container-component/authored-components.png)
+   ![创作的组件](./assets/spa-container-component/authored-components.png)
 
-使用AEM配置模式可允許我們調整元件的大小和配置。
+使用AEM布局模式可允许我们调整组件的大小和布局。
 
-1. 切換至 __版面模式__ 使用右上方的模式選取器
-1. __調整大小__ 「影像」和「文字」元件，使它們並排
-   + __影像__ 元件應為 __8欄寬__
-   + __文字__ 元件應為 __3欄寬__
+1. 切换到 __布局模式__ 使用右上角的模式选择器
+1. __调整大小__ “图像”和“文本”组件，以使它们并排
+   + __图像__ 组件应为 __8列宽__
+   + __文本__ 组件应为 __3列宽__
 
-   ![配置元件](./assets/spa-container-component/layout-components.png)
+   ![布局组件](./assets/spa-container-component/layout-components.png)
 
-1. __預覽__ 您在AEM頁面編輯器中進行的變更
-1. 重新整理在本機執行的WKND應用程式 [http://localhost:3000](http://localhost:3000) 以檢視編寫的變更！
+1. __预览__ 在AEM页面编辑器中进行的更改
+1. 刷新本地运行的WKND应用程序 [http://localhost:3000](http://localhost:3000) 以查看所编写的更改！
 
-   ![SPA中的容器元件](./assets/spa-container-component/localhost-final.png)
+   ![SPA中的容器组件](./assets/spa-container-component/localhost-final.png)
 
 
 ## 恭喜！
 
-您已新增容器元件，作者可將此可編輯元件新增至WKND應用程式！ 您現在知道如何：
+您已添加一个容器组件，该组件允许作者将可编辑组件添加到WKND应用程序！ 您现在知道如何：
 
-+ 使用AEM React Editable元件的 `ResponsiveGrid` SPA中的元件
-+ 建立並註冊可編輯的React元件（文字和影像），以透過容器元件用於SPA
-+ 設定遠端SPA頁面範本以允許啟用SPA的元件
-+ 將可編輯的元件新增至容器元件
-+ SPA編輯器中的作者和配置元件
++ 使用AEM React可编辑组件的 `ResponsiveGrid` SPA中的组件
++ 创建并注册可编辑的React组件（文本和图像），以便通过容器组件在SPA中使用
++ 配置远程SPA页模板以允许启用SPA的组件
++ 将可编辑组件添加到容器组件
++ SPA编辑器中的创作和布局组件
 
 ## 后续步骤
 
-下一個步驟會使用此相同技術來 [新增可編輯的元件至「冒險詳細資料」路徑](./spa-dynamic-routes.md) 在SPA中。
+下一步将使用此相同技术来 [将可编辑组件添加到“冒险详细信息”路由](./spa-dynamic-routes.md) 在SPA中。

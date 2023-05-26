@@ -1,6 +1,6 @@
 ---
-title: 建立Acrobat Sign雲端設定Cloud Service
-description: 使用雲端服務設定建立AEM Forms和Acrobat Sign整合。
+title: 创建Acrobat Sign云配置Cloud Service
+description: 使用Cloud Services配置创建AEM Forms和Acrobat Sign集成。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,21 +18,21 @@ ht-degree: 0%
 
 ---
 
-# 建立Acrobat Sign雲端設定
+# 创建Acrobat Sign云配置
 
-AEM中的雲端服務設定可讓您建立AEM與其他雲端應用程式之間的整合。
+AEM中的云服务配置允许您创建AEM与其他云应用程序之间的集成。
 
-以下影片將逐步引導您完成建立雲端服務設定以將AEM與Acrobat Sign整合所需的步驟
+以下视频将指导您完成创建AEM与Acrobat Sign集成的云服务配置所需的步骤
 
 >[!VIDEO](https://video.tv.adobe.com/v/332437?quality=12&learn=on)
 
 ## 疑难解答
 
-如果您在設定Abobe Sign雲端設定時發生錯誤，可採取下列步驟進行疑難排解
-* 請確定Acrobat Sign API應用程式中指定的重新導向URL為以下格式
+如果您在配置Abobe Sign云配置时遇到错误，可以采取以下步骤进行故障诊断
+* 确保Acrobat Sign API应用程序中指定的重定向URL的格式如下
 &lt;your instance=&quot;&quot; name=&quot;&quot;>/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/&lt;container>.
-例如 — https://author-p24107-e32034.adobeaemcloud.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/FormsCS。 FormsCS是要保留雲端設定的容器名稱
-* 請確定oAuth URL正確
-* 檢查您的使用者端Id和使用者端密碼
-* 嘗試無痕視窗模式
+例如 — https://author-p24107-e32034.adobeaemcloud.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/FormsCS。 FormsCS是要包含云配置的容器的名称
+* 确保oAuth URL正确
+* 检查您的客户端Id和客户端密钥
+* 尝试无痕窗口模式
 

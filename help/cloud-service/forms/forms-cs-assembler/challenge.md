@@ -1,6 +1,6 @@
 ---
-title: 測試您對Forms組合器的瞭解
-description: 完成練習
+title: 检验您对Forms汇编器的理解
+description: 完成练习
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,10 +16,10 @@ ht-degree: 0%
 
 ---
 
-# 練習
+# 练习
 
-## 組合PDF檔案
+## 组合PDF文件
 
-修改 `assemble2pdfs.ddx` 檔案組合3個PDF檔案。
+修改 `assemble2pdfs.ddx` 文件来组合3个PDF文件。
 
-您將第三個pdf放在resources/pdf資料夾下。
+您将第三个pdf放在resources/pdf文件夹下。

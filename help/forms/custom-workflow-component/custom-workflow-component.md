@@ -1,6 +1,6 @@
 ---
-title: 建立工作流程元件以將表單附件儲存至檔案系統
-description: 使用自訂工作流程元件將最適化表單附件寫入檔案系統
+title: 创建工作流组件以将表单附件保存到文件系统
+description: 使用自定义工作流组件将自适应表单附件写入文件系统
 feature: Workflow
 version: 6.5
 topic: Development
@@ -15,54 +15,54 @@ ht-degree: 1%
 
 ---
 
-# 自訂工作流程元件
+# 自定义工作流组件
 
-本教學課程適用於需要建立自訂工作流程元件的AEM Forms客戶。 工作流程元件將設定為執行上一步驟中編寫的程式碼。 工作流程元件能夠指定程式碼的流程引數。 在本文中，我們將探索與程式碼相關聯的工作流程元件。
-
-
-[下載自訂工作流程元件](assets/saveFiles.zip)
-匯入工作流程元件 [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-
-自訂工作流程元件位於/apps/AEMFormsDemoListings/workflowcomponent/SaveFiles
-
-選取SaveFiles節點並檢查其屬性
-
-**componentGroup**  — 此屬性的值會決定工作流程元件的類別。
-
-**jcr：Title**  — 這是工作流程元件的標題。
-
-**sling：resourceSuperType** 此屬性的值將決定此元件的繼承。 在此案例中，我們繼承自程式元件
+本教程面向需要创建自定义工作流组件的AEM Forms客户。 工作流组件将配置为执行在上一步中编写的代码。 工作流组件能够指定代码的进程参数。 在本文中，我们将探索与代码关联的工作流组件。
 
 
-![component-properties](assets/component-properties1.png)
+[下载自定义工作流组件](assets/saveFiles.zip)
+导入工作流组件 [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+
+自定义工作流组件位于/apps/AEMFormsDemoListings/workflowcomponent/SaveFiles中
+
+选择SaveFiles节点并检查其属性
+
+**组件组**  — 此属性的值确定工作流组件的类别。
+
+**jcr：Title**  — 这是工作流组件的标题。
+
+**sling：resourceSuperType** 此属性的值将决定此组件的继承。 在本例中，我们继承自流程组件
+
+
+![component — 属性](assets/component-properties1.png)
 
 ## cq：dialog
 
-對話方塊可用來允許作者與元件互動。 cq：dialog位於SaveFiles節點下
+对话框用于允许作者与组件交互。 cq：dialog位于SaveFiles节点下
 ![cq-dialog](assets/cq-dialog.png)
 
-專案節點下的節點代表作者將透過其與元件互動之元件的標籤。 「一般」和「程式」標籤會隱藏。 「一般」和「引數」標籤可見。
+项目节点下的节点表示组件的选项卡，作者将通过这些选项卡与组件进行交互。 “常用”和“流程”选项卡处于隐藏状态。 “常用”和“参数”选项卡可见。
 
-流程的流程引數位於processargs節點下
+进程的进程参数位于processargs节点下
 
 ![process-args](assets/process-arguments.png)
 
-作者會指定引數，如下方熒幕擷取畫面所示
+作者指定参数，如下面的屏幕快照中所示
 ![workflow-component](assets/custom-workflow-component.png)
 
-這些值會儲存為中繼資料節點的屬性。 例如，值 **c：\formsattachments** 將會儲存在中繼資料節點的屬性saveToLocation中
+这些值存储为元数据节点的属性。 例如，值 **c：\formsattachments** 将存储在元数据节点的属性saveToLocation中
 ![save-location](assets/save-to-location.png)
 
 ## cq：editConfig
 
-cq：EditConfig只是一個節點，其主要型別cq：EditConfig和元件根目錄下的名稱cq：editConfig透過在元件節點下新增cq：EditConfig型別的cq：editConfig節點（型別為cq：Component）來設定元件的編輯行為
+cq：EditConfig只是一个节点，其主要类型为cq：EditConfig ，在组件根目录下名为cq：editConfig。组件的编辑行为通过在组件节点下添加cq：EditConfig类型的cq：editConfig节点来配置（类型为cq：Component）
 
 ![edit-config](assets/cq-edit-config.png)
 
-cq：formParameters （節點型別nt：unstructured）：定義新增至對話方塊表單的其他引數。
+cq：formParameters （节点类型nt：unstructured）：定义添加到对话框表单的其他参数。
 
 
-注意cq：formParameters節點的屬性
+注意cq：formParameters节点的属性
 ![from-parameters-properties](assets/form-parameters-properties.png)
 
-PROCESS屬性的值表示將與工作流程元件關聯的Java程式碼。
+属性PROCESS的值指示将与工作流组件关联的Java代码。

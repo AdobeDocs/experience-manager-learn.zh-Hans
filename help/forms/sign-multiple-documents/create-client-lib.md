@@ -1,6 +1,6 @@
 ---
-title: 建立使用者端資源庫
-description: 用於擷取下一個要簽署的表單的使用者端程式庫代碼
+title: 创建客户端库
+description: 用于提取下一个要签名的表单的客户端库代码
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6907
@@ -16,11 +16,11 @@ ht-degree: 3%
 
 ---
 
-# 建立使用者端資源庫
+# 创建客户端库
 
-建立自訂使用者端資料庫（簡稱clientlib），以擷取url引數，並在GET呼叫中傳遞這些引數。 會對/bin/getnextformtosign上掛接的servlet進行GET呼叫，該servlet會傳回下一個表單的url，以登入套件。
+创建一个自定义客户端库（简称clientlib），以提取url参数，并在GET调用中传递这些参数。 对/bin/getnextformtosign上挂载的servlet进行GET调用，该调用将返回用于登录包的下一个表单的url。
 
-以下是clientlib javascript函式中使用的程式碼
+以下是clientlib javascript函数中使用的代码
 
 
 ```java
@@ -74,8 +74,8 @@ $(document).ready(function()
 
 ## Assets
 
-[clientlib可從這裡下載](assets/get-next-form-client-lib.zip)
+[可以从此处下载clientlib](assets/get-next-form-client-lib.zip)
 
 ## 后续步骤
 
-[建立此使用案例的自訂表單範本](./create-af-template.md)
+[为此用例创建自定义表单模板](./create-af-template.md)

@@ -1,6 +1,6 @@
 ---
-title: AEM Formsas a Cloud Service通訊
-description: 瞭解AEM Formsas a Cloud Service如何支援通訊使用案例。
+title: AEM Formsas a Cloud Service通信
+description: 了解AEM Formsas a Cloud Service如何支持通信用例。
 version: Cloud Service
 feature: Output Service
 topic: Migration, Upgrade
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 通訊（輸出服務）
+# 通信（输出服务）
 
-瞭解AEM Formsas a Cloud Service如何支援通訊使用案例。
+了解AEM Formsas a Cloud Service如何支持通信用例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336967?quality=12&learn=on)

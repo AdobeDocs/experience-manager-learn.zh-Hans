@@ -1,6 +1,6 @@
 ---
-title: 如何設定快速開發環境
-description: 瞭解如何設定AEMas a Cloud Service的快速開發環境。
+title: 如何建立快速开发环境
+description: 了解如何为AEMas a Cloud Service设置快速开发环境。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -17,41 +17,41 @@ ht-degree: 1%
 
 ---
 
-# 如何設定快速開發環境
+# 如何建立快速开发环境
 
-瞭解 **如何設定** AEMas a Cloud Service中的快速開發環境(RDE)。
+了解 **如何设置** AEMas a Cloud Service中的快速开发环境(RDE)。
 
-此影片顯示：
+此视频显示：
 
-- 使用Cloud Manager將RDE新增到您的計畫
-- 使用Adobe IMS的RDE登入流程，如何與任何其他AEMas a Cloud Service環境相似
-- 設定 [Adobe I/O Runtime可擴充CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 也稱為 `aio CLI`
-- AEM RDE和Cloud Manager的設定和設定 `aio CLI` 外掛程式
+- 使用Cloud Manager将RDE添加到程序
+- 使用Adobe IMS的RDE登录流程，它如何与任何其他AEMas a Cloud Service环境相似
+- 设置 [Adobe I/O Runtime可扩展CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 也称为 `aio CLI`
+- AEM RDE和Cloud Manager的设置和配置 `aio CLI` 插件
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415490?quality=12&learn=on)
 
 ## 先决条件
 
-下列專案應在本機安裝：
+以下内容应安装在本地：
 
-- [Node.js](https://nodejs.org/en/) （LTS — 長期支援）
+- [Node.js](https://nodejs.org/en/) （LTS — 长期支持）
 - [npm 8+](https://docs.npmjs.com/)
 
-## 本機設定
+## 本地设置
 
-若要部署 [WKND網站專案的](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) 將程式碼和內容從本機電腦移至RDE上，請完成下列步驟。
+要部署 [WKND站点项目的](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) 代码和内容从本地计算机进入RDE，请完成以下步骤。
 
-### Adobe I/O Runtime可擴充CLI
+### Adobe I/O Runtime可扩展CLI
 
-安裝Adobe I/O Runtime可擴充CLI，也稱為 `aio CLI` 從命令列執行下列命令。
+安装Adobe I/O Runtime可扩展CLI，也称为 `aio CLI` 从命令行运行以下命令。
 
 ```shell
 $ npm install -g @adobe/aio-cli
 ```
 
-### AEM外掛程式
+### AEM插件
 
-使用安裝Cloud Manager和AEM RDE外掛程式 `aio cli`的 `plugins:install` 命令。
+使用安装Cloud Manager和AEM RDE插件 `aio cli`的 `plugins:install` 命令。
 
 ```shell
 $ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
@@ -59,27 +59,27 @@ $ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
 $ aio plugins:install @adobe/aio-cli-plugin-aem-rde
 ```
 
-Cloud Manager外掛程式，可讓開發人員從命令列與Cloud Manager互動。
+Cloud Manager插件，允许开发人员从命令行与Cloud Manager交互。
 
-AEM RDE外掛程式可讓開發人員從本機電腦部署程式碼和內容。
+AEM RDE插件允许开发人员从本地计算机部署代码和内容。
 
-此外，若要更新外掛程式，請使用 `aio plugins:update` 命令。
+此外，要更新插件，请使用 `aio plugins:update` 命令。
 
-## 設定AEM外掛程式
+## 配置AEM插件
 
-AEM外掛程式必須設定為與您的RDE互動。 首先，使用Cloud Manager UI複製組織、計畫和環境ID的值。
+必须配置AEM插件才能与RDE交互。 首先，使用Cloud Manager UI复制组织、项目和环境ID的值。
 
-1. 組織識別碼：複製值來源 **設定檔圖片>帳戶資訊（內部） >強制回應視窗>目前組織ID**
+1. 组织ID：复制值 **配置文件图片>帐户信息（内部）>模式窗口>当前组织ID**
 
    ![组织 ID](./assets/Org-ID.png)
 
-1. 方案ID：複製值 **計畫總覽>環境> {ProgramName} — 代碼>瀏覽器URI >數字介於 `program/` 和`/environment`**
+1. 项目ID：复制值 **项目概述>环境> {ProgramName} — 代码>浏览器URI >编号介于 `program/` 和`/environment`**
 
-1. 環境ID：複製值 **計畫總覽>環境> {ProgramName} — 代碼>瀏覽器URI >之後的數字`environment/`**
+1. 环境ID：复制值 **程序概述>环境> {ProgramName} — 代码>浏览器URI >之后的数字`environment/`**
 
-   ![程式和環境ID](./assets/Program-Environment-Id.png)
+   ![项目和环境ID](./assets/Program-Environment-Id.png)
 
-1. 然後，透過使用 `aio cli`的 `config:set` 命令可透過執行以下命令來設定這些值。
+1. 然后，通过使用 `aio cli`的 `config:set` 命令通过运行以下命令来设置这些值。
 
    ```shell
    $ aio config:set cloudmanager_orgid <org-id>
@@ -89,41 +89,41 @@ AEM外掛程式必須設定為與您的RDE互動。 首先，使用Cloud Manager
    $ aio config:set cloudmanager_environmentid <env-id>
    ```
 
-您可以執行下列命令來驗證目前的設定值。
+可以通过运行以下命令来验证当前配置值。
 
 ```shell
 $ aio config:list
 ```
 
-此外，若要切換或知道您目前登入的組織，您可以使用以下指令。
+此外，要切换或知道您当前登录到哪个组织，您可以使用以下命令。
 
 ```shell
 $ aio where
 ```
 
-## 驗證RDE存取權
+## 验证RDE访问权限
 
-執行下列命令，驗證AEM RDE外掛程式的安裝和設定。
+通过运行以下命令验证AEM RDE插件的安装和配置。
 
 ```shell
 $ aio aem:rde:status
 ```
 
-RDE狀態資訊的顯示方式與以下專案清單的環境狀態類似： _您的AEM專_ 製作和發佈服務的套件組合和設定。
+RDE状态信息的显示方式类似于环境状态、列表 _您的AEM项目_ 创作和发布服务的包和配置。
 
 ## 后续步骤
 
-瞭解 [使用方式](./how-to-use.md) 從您喜愛的整合式開發環境(IDE)部署程式碼和內容的RDE，以加快開發週期。
+了解 [使用方法](./how-to-use.md) 一个RDE，用于从您喜爱的集成开发环境(IDE)中部署代码和内容，以加快开发周期。
 
 
-## 其他資源
+## 其他资源
 
-[在程式檔案中啟用RDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#enabling-rde-in-a-program)
+[在程序文档中启用RDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#enabling-rde-in-a-program)
 
-設定 [Adobe I/O Runtime可擴充CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 也稱為 `aio CLI`
+设置 [Adobe I/O Runtime可扩展CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 也称为 `aio CLI`
 
-[AIO CLI使用方式和命令](https://github.com/adobe/aio-cli#usage)
+[AIO CLI用法和命令](https://github.com/adobe/aio-cli#usage)
 
-[用於與AEM快速開發環境互動的Adobe I/O Runtime CLI外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
+[用于与AEM快速开发环境交互的Adobe I/O Runtime CLI插件](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[Cloud Manager AIO CLI外掛程式](https://github.com/adobe/aio-cli-plugin-cloudmanager)
+[Cloud Manager AIO CLI插件](https://github.com/adobe/aio-cli-plugin-cloudmanager)

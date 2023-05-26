@@ -1,6 +1,6 @@
 ---
-title: 如何調整Workbench記憶體引數
-description: 調整Workbench記憶體引數的步驟
+title: 如何调整Workbench内存参数
+description: 调整Workbench内存参数的步骤
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何調整Workbench記憶體引數
+# 如何调整Workbench内存参数
 
-*本影片逐步解說調整Workbench記憶體引數的程式。*
+*本视频介绍调整Workbench内存参数的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335509?quality=12&learn=on)

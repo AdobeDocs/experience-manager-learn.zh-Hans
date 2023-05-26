@@ -1,6 +1,6 @@
 ---
-title: AEM架構棧疊簡介
-description: 介紹Adobe Experience Manager技術棧疊中的OSGi、JCR、Oak和Sling技術。
+title: AEM架构栈栈简介
+description: 介绍Adobe Experience Manager技术栈栈中的OSGi、JCR、Oak和Sling技术。
 topics: architecture
 audience: administrator, developer
 doc-type: technical video
@@ -19,8 +19,8 @@ ht-degree: 0%
 
 ---
 
-# AEM架構棧疊簡介 {#introduction-architecture}
+# AEM架构栈栈简介 {#introduction-architecture}
 
-介紹以下各項的技術 [!DNL OSGi]， [!DNL JCR]， [!DNL Oak]、和 [!DNL Sling] 作為Adobe Experience Manager技術棧疊的一部分。
+介绍 [!DNL OSGi]， [!DNL JCR]， [!DNL Oak]、和 [!DNL Sling] 作为Adobe Experience Manager技术栈栈的一部分。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32034?quality=12&learn=on)

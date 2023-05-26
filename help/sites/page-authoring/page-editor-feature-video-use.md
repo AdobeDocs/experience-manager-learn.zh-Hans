@@ -1,7 +1,7 @@
 ---
-title: 搭配AEM Sites使用頁面編輯器
+title: 在AEM Sites中使用页面编辑器
 seo-title: Using the Page Editor with Adobe Experience Manager Sites
-description: 以下影片重點說明Adobe Experience Manager中觸控式UI網站編輯器的幾項主要功能。
+description: 以下视频重点介绍Adobe Experience Manager中触屏UI站点编辑器的几项主要功能。
 seo-description: The following video highlights several of the top features of the Touch-UI Sites editor in Adobe Experience Manager.
 feature: Page Editor
 topics: authoring
@@ -22,39 +22,39 @@ ht-degree: 9%
 
 ---
 
-# 使用頁面編輯器 {#using-page-editor-with-aem-sites}
+# 使用页面编辑器 {#using-page-editor-with-aem-sites}
 
-AEM網站的頁面編輯器是建立和編輯網頁內容的強大工具。 頁面編輯器的工具和功能可從「頁面編輯器」的UI工具列存取。
+AEM站点的页面编辑器是一个用于创建和编辑Web内容的强大工具。 可从页面编辑器的UI工具栏访问页面编辑器的工具和功能。
 
-以下影片重點說明「頁面編輯器」的主要功能。
+以下视频重点介绍页面编辑器的主要功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
 
-頁面編輯器的功能包括：
+页面编辑器的功能包括：
 
-* 拖放元件和資產
-* 提供頁面上所有元件索引的「內容樹」面板
-* 頁面資訊面板可讓您存取其他資訊和內容作者的快速動作
-   * 開啟屬性
-   * 轉出頁面
+* 拖放组件和资产
+* 内容树面板，提供页面上所有组件的索引
+* 通过“页面信息”面板，可访问内容作者的其他信息和快速操作
+   * 打开属性
+   * 转出页面
    * 开始工作流
-   * 鎖定頁面/解鎖頁面
-   * 發佈/取消發佈頁面
+   * 锁定页面/解锁页面
+   * 发布/取消发布页面
    * 编辑模板
    * 以发布的形式查看
    * 以管理员身份查看
    * 帮助
-* 新增元件圖示和說明至元件面板
-* 在DAM中編輯資產的直接連結
-* 可在回應式格線上內嵌內容編輯及更快速地管理元件的模擬器
-* 頁面編輯模式
+* 向组件面板中添加了组件图标和描述
+* 在DAM中编辑资产的直接链接
+* 用于在响应式网格上内联内容编辑和加快组件管理的模拟器
+* 页面编辑模式
    * 编辑模式
    * 布局模式
    * 开发人员模式
-* Pathfinder表單欄位的自動完成和關鍵字搜尋
-* 目前頁面的工作流程狀態列
+* 路径查找器表单字段的自动完成和关键词搜索
+* 当前页面的工作流状态栏
 
 ## 其他资源 {#additional-resources}
 
-* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Sites Authoring使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [编辑页面内容文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
+* [Sites创作用户指南](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)

@@ -1,6 +1,6 @@
 ---
-title: 建立服務介面
-description: 在您要公開的介面中定義方法
+title: 创建服务接口
+description: 在要公开的接口中定义方法
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 # 接口
 
-使用下列2種方法定義建立介面。
+使用以下2个方法定义创建一个接口。
 
 ```java
 package com.aemforms.doccloud.core;

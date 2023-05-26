@@ -1,6 +1,6 @@
 ---
-title: AEM Assets中的封閉式使用者群組
-description: 封閉式使用者群組(CUG)是一項功能，用來將內容的存取許可權製為已發佈網站上的選定使用者群組。 此影片說明如何將封閉式使用者群組與Adobe Experience Manager資產搭配使用，以限制對資產的特定資料夾的存取權。
+title: AEM Assets中的封闭用户组
+description: 封闭用户组(CUG)是一项功能，用于限制对已发布网站上一组选定用户的内容访问。 本视频说明封闭用户组如何与Adobe Experience Manager Assets一起使用，以限制对资源的特定文件夹的访问。
 version: 6.4, 6.5, Cloud Service
 topic: Administration, Security
 feature: User and Groups
@@ -17,32 +17,32 @@ ht-degree: 0%
 
 ---
 
-# 已關閉的使用者群組{#using-closed-user-groups-with-aem-assets}
+# 封闭用户组{#using-closed-user-groups-with-aem-assets}
 
-封閉式使用者群組(CUG)是一項功能，用來將內容的存取許可權製為已發佈網站上的選定使用者群組。 此影片說明如何將封閉式使用者群組與Adobe Experience Manager資產搭配使用，以限制對資產的特定資料夾的存取權。 AEM 6.4首先推出了透過AEM Assets支援封閉式使用者群組。
+封闭用户组(CUG)是一项功能，用于限制对已发布网站上一组选定用户的内容访问。 本视频说明封闭用户组如何与Adobe Experience Manager Assets一起使用，以限制对资源的特定文件夹的访问。 AEM 6.4中首次引入了AEM Assets对封闭用户组的支持。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22155?quality=12&learn=on)
 
-## 具AEM Assets的封閉式使用者群組(CUG)
+## AEM Assets的封闭用户组(CUG)
 
-* 旨在限制對AEM Publish執行個體上資產的存取。
-* 授予一組使用者/群組的讀取存取權。
-* CUG只能在資料夾層級設定。 無法在個別資產上設定CUG。
-* 任何子資料夾和套用的資產都會自動繼承CUG原則。
-* 藉由設定新的CUG原則，子資料夾可以覆寫CUG原則。 請謹慎使用，這並非最佳作法。
+* 旨在限制对AEM发布实例上资产的访问。
+* 授予对一组用户/组的读取权限。
+* CUG只能在文件夹级别配置。 无法在单个资产上设置CUG。
+* 任何子文件夹和应用的资产都会自动继承CUG策略。
+* 通过设置新的CUG策略，子文件夹可以覆盖CUG策略。 应谨慎使用，这不应被视为最佳实践。
 
-## 已關閉的使用者群組與存取控制清單 {#closed-user-groups-vs-access-control-lists}
+## 封闭用户组与访问控制列表 {#closed-user-groups-vs-access-control-lists}
 
-封閉式使用者群組(CUG)和存取控制清單(ACL)都是用來根據AEM Security使用者和群組來控制對AEM中內容的存取。 不過，這些功能的應用與實作差異極大。 下表總結了這兩項功能之間的差異。
+封闭用户组(CUG)和访问控制列表(ACL)均可用于根据AEM Security用户和组控制对AEM中内容的访问。 然而，这些功能的应用和实施方式却大相径庭。 下表总结了这两项功能之间的区别。
 
 |  | ACL | CUG |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 預期用途 | 為上的內容設定並套用許可權 **目前** AEM執行個體。 | 為AEM上的內容設定CUG原則 **作者** 執行個體。 針對AEM上的內容套用CUG原則 **發佈** 執行個體。 |
-| 許可權層級 | 為所有層級定義使用者/群組授予/拒絕的許可權：讀取、修改、建立、刪除、讀取ACL、編輯ACL、復寫。 | 授予一組使用者/群組的讀取存取權。 拒絕對的讀取存取權 *所有其他* 使用者/群組。 |
-| 发布 | ACL是 *not* 已隨內容發佈。 | CUG原則 *是* 已隨內容發佈。 |
+| 目标用途 | 为上的内容配置和应用权限 **当前** AEM实例。 | 为AEM上的内容配置CUG策略 **作者** 实例。 对AEM上的内容应用CUG策略 **发布** 实例。 |
+| 权限级别 | 为用户/组定义所有级别的授予/拒绝权限：读取、修改、创建、删除、读取ACL、编辑ACL、复制。 | 授予对一组用户/组的读取权限。 拒绝对的读取权限 *所有其他* 用户/组。 |
+| 发布 | ACL是 *非* 随内容一起发布。 | CUG策略 *是* 随内容一起发布。 |
 
-## 支援連結 {#supporting-links}
+## 支持链接 {#supporting-links}
 
-* [管理資產和封閉式使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en#closed-user-group)
-* [建立已關閉的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html)
-* [Oak已關閉使用者群組檔案](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html)
+* [管理资产和封闭用户组](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en#closed-user-group)
+* [创建已关闭的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html)
+* [Oak封闭用户组文档](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html)

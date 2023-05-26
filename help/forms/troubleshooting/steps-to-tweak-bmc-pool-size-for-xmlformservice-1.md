@@ -1,6 +1,6 @@
 ---
-title: 調整XMLForm服務bmc集區大小的步驟（第1個，共2個）
-description: 設定XMLFormService引數
+title: 调整XMLForm服务的bmc池大小的步骤（第1步，共2步）
+description: 配置XMLFormService参数
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# 調整XMLFormService的bmc集區大小的步驟（第1個，共2個）
+# 调整XMLFormService的bmc池大小的步骤（第1步，共2步）
 
-*此影片逐步解說調整XMLFormService （第1個，共2個）的bmc集區大小的步驟。*
+*本视频介绍调整XMLFormService（第1个，共2个）的bmc池大小的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335552?quality=12&learn=on)

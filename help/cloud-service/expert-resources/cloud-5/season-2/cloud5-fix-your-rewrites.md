@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 — 修正您的……重寫
-description: 提供一些簡單的秘訣，協助您最佳化重寫作業，並加快網站速度
+title: Cloud 5 — 修复您的……重写
+description: 一些优化重写并加快网站速度的简单提示
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 10%
 
 ---
 
-# Cloud 5 — 修正您的……重寫
+# Cloud 5 — 修复您的……重写
 
-在系列的第二部分，我們探索一些您可以瞭解的事項，以加快您在AEMas a Cloud Service上的重寫開發和最佳化。
+在本系列的第二部分中，我们探究了一些您可以了解的内容，它们将加快您在AEMas a Cloud Service上的重写开发和优化。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343600?quality=12&learn=on)
 
-## 本影片涵蓋的內容
+## 本视频中涵盖的内容
 
-+ mod_rewrite概觀
-+ [mod_rewrite檔案](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
++ mod_rewrite概述
++ [mod_rewrite文档](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)

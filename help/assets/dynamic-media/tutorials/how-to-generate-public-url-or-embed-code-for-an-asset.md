@@ -1,6 +1,6 @@
 ---
-title: 為AEM Dynamic Media資產產生URL和內嵌程式碼
-description: 在Dynamic Media中產生資產的公用URL和內嵌程式碼的步驟
+title: 为AEM Dynamic Media资源生成URL和嵌入代码
+description: 在Dynamic Media中为资源生成公共URL和嵌入代码的步骤
 role: Developer
 level: Intermediate
 version: Cloud Service
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# 為AEM Dynamic Media資產產生URL和內嵌程式碼
+# 为AEM Dynamic Media资源生成URL和嵌入代码
 
-本影片逐步解說為資產產生公開URL或內嵌程式碼的步驟。
+本视频介绍为资产生成公共URL或嵌入代码的步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335364?quality=12&learn=on)

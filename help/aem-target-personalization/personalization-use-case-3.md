@@ -1,7 +1,7 @@
 ---
-title: 使用Adobe Target視覺化體驗撰寫器進行個人化
+title: 使用Adobe Target可视化体验编辑器进行个性化
 seo-title: Personalization using Adobe Target Visual Experience Composer (VEC)
-description: 端對端教學課程，說明如何使用Adobe Target視覺化體驗撰寫器(VEC)建立和傳遞個人化體驗。
+description: 一个端到端教程，其中演示了如何使用Adobe Target可视化体验编辑器(VEC)创建和提供个性化体验。
 seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target Visual Experience Composer (VEC).
 feature: Experience Fragments
 topic: Personalization
@@ -15,61 +15,61 @@ ht-degree: 2%
 
 ---
 
-# 使用視覺化體驗撰寫器進行個人化
+# 使用可视化体验编辑器进行个性化
 
-在本章中，我們將探索使用建立體驗 **視覺化體驗撰寫器** 從Target內拖放、交換及修改網頁的版面和內容。
+在本章中，我们将探索使用创建体验 **可视化体验编辑器** 方法是从Target中拖放、交换和修改网页的布局和内容。
 
-## 案例概述
+## 方案概述
 
-WKND網站首頁以卡片版面的形式顯示當地活動或城市周圍的最佳做法。 身為行銷人員，您已被指派透過重新排列卡片版面配置來修改首頁的任務，以瞭解其對使用者參與度和推動轉換的影響。
+WKND站点主页以卡片布局的形式显示城市周围的本地活动或最佳操作。 作为营销人员，您已被分派通过重新排列卡片布局来修改主页的任务，以便查看它对用户参与度和推动转化有何影响。
 
-### 相關使用者
+### 涉及的用户
 
-在這個練習中，需要涉及以下使用者，並且要執行一些您可能需要管理存取權的任務。
+在本练习中，需要涉及以下用户，要执行某些任务，您可能需要管理访问权限。
 
-* **內容製作者/內容編輯器** (Adobe Experience Manager)
-* **行銷人員** (Adobe Target /最佳化團隊)
+* **内容制作者/内容编辑器** (Adobe Experience Manager)
+* **营销人员** (Adobe Target/优化团队)
 
-### wknd網站首頁
+### WKND站点主页
 
-![AEM目標案例1](assets/personalization-use-case-3/aem-target-use-case-3.png)
+![AEM Target场景1](assets/personalization-use-case-3/aem-target-use-case-3.png)
 
 ### 前提条件
 
 * **AEM**
-   * [AEM發佈執行個體](./implementation.md#getting-aem) 在4503上執行
-   * [使用Adobe Experience Platform Launch與Adobe Target整合的AEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [AEM发布实例](./implementation.md#getting-aem) 在4503上运行
+   * [使用Adobe Experience Platform Launch将AEM与Adobe Target集成](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * 存取您的組織Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
-   * 布建的Experience Cloud [Adobe Target](https://experiencecloud.adobe.com)
+   * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
+   * Experience Cloud配置有 [Adobe Target](https://experiencecloud.adobe.com)
 
-## 行銷人員活動
+## 营销人员活动
 
-1. 行銷人員會在Adobe Target中建立A/B目標活動。
-   1. 從您的Adobe Target視窗，導覽至 **活動** 標籤。
-   2. 按一下 **建立活動** 按鈕並選取活動型別 **A/B測試**
+1. 营销人员在Adobe Target中创建A/B定位活动。
+   1. 在Adobe Target窗口中，导航到 **活动** 选项卡。
+   2. 单击 **创建活动** 按钮并选择活动类型 **A/B测试**
 
-      ![Adobe Target — 建立活動](assets/personalization-use-case-2/create-ab-activity.png)
-   3. 選取 **Web** 頻道並選擇 **視覺化體驗撰寫器**.
-   4. 輸入 **活動URL** 並按一下 **下一個** 以開啟Visual Experience Composer。
-      ![Adobe Target — 建立活動](assets/personalization-use-case-2/create-activity-ab-name.png)
-   5. 對象 **視覺化體驗撰寫器** 若要載入，請啟用 **允許載入Unsafe指令碼** ，然後重新載入頁面。
-      ![體驗鎖定目標活動](assets/personalization-use-case-1/load-unsafe-scripts.png)
-   6. 請注意，WKND網站首頁會在視覺化體驗撰寫器編輯器中開啟。
+      ![Adobe Target — 创建活动](assets/personalization-use-case-2/create-ab-activity.png)
+   3. 选择 **Web** 渠道并选择 **可视化体验编辑器**.
+   4. 输入 **活动URL** 并单击 **下一个** 以打开可视化体验编辑器。
+      ![Adobe Target — 创建活动](assets/personalization-use-case-2/create-activity-ab-name.png)
+   5. 对象 **可视化体验编辑器** 要加载，请启用 **允许加载Unsafe脚本** ，然后重新加载页面。
+      ![体验定位活动](assets/personalization-use-case-1/load-unsafe-scripts.png)
+   6. 请注意，WKND站点主页在可视化体验编辑器中打开。
       ![VEC](assets/personalization-use-case-2/vec.png)
-   7. **體驗A** 提供預設的WKND首頁，讓我們編輯內容版面 **體驗B**.
+   7. **体验A** 提供默认的WKND主页，让我们编辑内容布局 **体验B**.
       ![体验 B](assets/personalization-use-case-3/use-case3-experience-b.png)
-   8. 按一下其中一個卡片配置容器(*最佳烘焙師*)並選取 **重新排列** 選項。
-      ![容器選擇](assets/personalization-use-case-3/container-selection.png)
-   9. 按一下您要重新排列的容器，然後將其拖放至所需的位置。 讓我們重新排列 *最佳烘焙師* 容器從第一列第一欄到第一列第三欄。 現在 *最佳烘焙師* 容器在旁邊 *攝影展覽* 容器。
-      ![容器交換](assets/personalization-use-case-3/container-swap.png)
+   8. 单击其中一个卡片布局容器(*最佳烘烤师*)并选择 **重新排列** 选项。
+      ![容器选择](assets/personalization-use-case-3/container-selection.png)
+   9. 单击要重新排列的容器，并将其拖放到所需位置。 让我们重新排列 *最佳烘烤师* 容器从第一行第一列到第一行第三列。 现在， *最佳烘烤师* 容器位于 *摄影展览* 容器。
+      ![容器交换](assets/personalization-use-case-3/container-swap.png)
 
-      **交換後**
-      ![已交換容器](assets/personalization-use-case-3/after-swap-1-3.png)
-   10. 同樣地，重新排列其他卡片容器的位置。
-      ![已交換容器](assets/personalization-use-case-3/after-swap-all.png)
-   11. 讓我們也在轉盤元件下方和卡片版面配置上方新增標題文字。
-   12. 按一下輪播容器並選取 **在以下位置後插入>HTML** 新增HTML的選項。
+      **交换后**
+      ![已交换容器](assets/personalization-use-case-3/after-swap-1-3.png)
+   10. 同样，重新排列其他卡容器的位置。
+      ![已交换容器](assets/personalization-use-case-3/after-swap-all.png)
+   11. 此外，我们还要在轮盘组件下方和卡片布局上方添加标题文本。
+   12. 单击轮盘容器，然后选择 **此项后插入>HTML** 选项以添加HTML。
       ![添加文本](assets/personalization-use-case-3/add-text.png)
 
       ```html
@@ -77,20 +77,20 @@ WKND網站首頁以卡片版面的形式顯示當地活動或城市周圍的最�
       ```
 
       ![添加文本](assets/personalization-use-case-3/after-changes.png)
-   13. 按一下 **下一個** 以繼續您的活動。
-   14. 選取 **流量分配方法** 作為手動，並分配100%流量給 **體驗B**.
-      ![體驗B流量](assets/personalization-use-case-2/traffic.png)
+   13. 单击 **下一个** 以继续您的活动。
+   14. 选择 **流量分配方法** 作为手动，将100%的流量分配给 **体验B**.
+      ![体验B流量](assets/personalization-use-case-2/traffic.png)
    15. 单击&#x200B;**下一步**。
-   16. 提供 **目標量度** ，並儲存及關閉A/B測試。
-      ![A/B測試目標量度](assets/personalization-use-case-2/goal-metric.png)
-   17. 提供名稱(**WKND首頁重新整理**)並儲存變更。
-   18. 從活動詳細資訊畫面，確認 **啟動** 您的活動。
-      ![啟動活動](assets/personalization-use-case-3/save-activity.png)
-   19. 導覽至WKND首頁(http://localhost:4503/content/wknd/en.html)，您會注意到我們新增至WKND首頁重新整理A/B測試活動的變更。
-      ![WKND首頁已重新整理](assets/personalization-use-case-3/activity-result.png)
-   20. 開啟瀏覽器主控台，然後檢查網路索引標籤，尋找WKND首頁重新整理A/B測試活動的目標回應。
-      ![網路活動](assets/personalization-use-case-3/activity-result.png)
+   16. 提供 **目标量度** ，并保存并关闭A/B测试。
+      ![A/B测试目标量度](assets/personalization-use-case-2/goal-metric.png)
+   17. 提供名称(**WKND主页刷新**)，并保存更改。
+   18. 在活动详细信息屏幕中，确保 **激活** 您的活动。
+      ![激活活动](assets/personalization-use-case-3/save-activity.png)
+   19. 导航到WKND主页(http://localhost:4503/content/wknd/en.html)，您会注意到我们在WKND主页刷新A/B测试活动中添加的更改。
+      ![已刷新WKND主页](assets/personalization-use-case-3/activity-result.png)
+   20. 打开浏览器控制台，并检查“网络”选项卡以查找“WKND主页刷新A/B测试”活动的目标响应。
+      ![网络活动](assets/personalization-use-case-3/activity-result.png)
 
 ## 摘要
 
-在本章中，行銷人員可以拖放、交換和修改網頁的版面和內容，而不需變更任何程式碼來執行測試，藉以使用視覺化體驗撰寫器建立體驗。
+在本章中，营销人员能够通过拖放、交换和修改网页的布局和内容来创建使用可视化体验编辑器的体验，而无需更改任何代码来运行测试。

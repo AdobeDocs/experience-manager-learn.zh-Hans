@@ -1,7 +1,7 @@
 ---
-title: 使用Adobe Target進行個人化
+title: 使用Adobe Target进行个性化
 seo-title: Personalization using Adobe Target
-description: 端對端教學課程，說明如何使用Adobe Target建立和提供個人化體驗。
+description: 一个端到端教程，其中演示了如何使用Adobe Target创建和提供个性化体验。
 seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target.
 feature: Experience Fragments
 topic: Personalization
@@ -15,73 +15,73 @@ ht-degree: 2%
 
 ---
 
-# 使用Adobe Target個人化完整網頁體驗
+# 使用Adobe Target使整个网页体验个性化
 
-在上一章中，我們瞭解如何使用以HTML選件形式建立的和從AEM匯出的內容在Adobe Target中建立地理位置型活動。
+在上一章中，我们了解了如何使用作为HTML片段创建并从AEM导出的内容在Adobe Target中创建基于地理位置的活动。
 
-在本章中，我們將探索建立活動，以使用Adobe Target將AEM上託管的網站頁面重新導向至新頁面。
+在本章中，我们将探究如何创建活动，以使用Adobe Target将AEM上托管的网站页面重定向到新页面。
 
-## 案例概述
+## 方案概述
 
-WKND網站重新設計了首頁，並且想要將其目前首頁訪客重新導向至新的首頁。 同時，也瞭解重新設計的首頁如何協助改善使用者參與度和收入。 行銷人員已指派您建立活動，以將訪客重新導向至新首頁。 讓我們探索WKND網站首頁，瞭解如何使用Adobe Target建立活動。
+WKND站点重新设计了其主页，并希望将其当前主页访客重定向到新主页。 同时，还要了解重新设计的主页如何有助于提高用户参与度和收入。 作为营销人员，您已被分派创建活动的任务，以将访客重定向到新主页。 让我们探索WKND网站主页，了解如何使用Adobe Target创建活动。
 
-### 相關使用者
+### 涉及的用户
 
-在這個練習中，需要涉及以下使用者，並且要執行一些您可能需要管理存取權的任務。
+在本练习中，需要涉及以下用户，要执行某些任务，您可能需要管理访问权限。
 
-* **內容製作者/內容編輯器** (Adobe Experience Manager)
-* **行銷人員** (Adobe Target /最佳化團隊)
+* **内容制作者/内容编辑器** (Adobe Experience Manager)
+* **营销人员** (Adobe Target/优化团队)
 
-### wknd網站首頁
+### WKND站点主页
 
-![AEM目標案例1](assets/personalization-use-case-2/aem-target-use-case-2.png)
+![AEM Target场景1](assets/personalization-use-case-2/aem-target-use-case-2.png)
 
 ### 前提条件
 
 * **AEM**
-   * [AEM作者和發佈執行個體](./implementation.md#getting-aem) 分別在localhost 4502和4503上執行。
-   * [使用Adobe Experience Platform Launch與Adobe Target整合的AEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [AEM创作和发布实例](./implementation.md#getting-aem) 分别在localhost 4502和4503上运行。
+   * [使用Adobe Experience Platform Launch将AEM与Adobe Target集成](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * 存取您的組織Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
-   * 布建了下列解決方案的Experience Cloud
+   * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
+   * 使用以下解决方案配置的Experience Cloud
       * [Adobe Target](https://experiencecloud.adobe.com)
 
-## 內容編輯器活動
+## 内容编辑器活动
 
-1. 行銷人員透過AEM內容編輯器啟動WKND首頁重新設計討論並詳細說明要求。
-   * ***需求*** ：使用卡片式設計重新設計WKND網站首頁。
-2. 接著，AEM內容編輯器會根據需求，以卡片式設計建立新的WKND網站首頁，並發佈新首頁。
+1. 营销人员通过AEM内容编辑器启动WKND主页重新设计讨论并详细说明要求。
+   * ***要求*** ：使用基于信息卡的设计重新设计WKND站点主页。
+2. 然后，AEM内容编辑器将根据要求，使用基于信息卡的设计创建一个新的WKND站点主页，并发布该新主页。
 
-## 行銷人員活動
+## 营销人员活动
 
-1. 行銷人員會建立A/B目標活動，使用重新導向選件作為體驗，並將所有網站流量分配給新增了成功目標和量度的新首頁。
-   1. 從您的Adobe Target視窗，導覽至 **活動** 標籤。
-   2. 按一下 **建立活動** 按鈕並選取活動型別 **A/B測試**
+1. 营销人员创建A/B目标活动，并将重定向选件作为体验，将100%的网站流量分配给添加了成功目标和量度的新主页。
+   1. 在Adobe Target窗口中，导航到 **活动** 选项卡。
+   2. 单击 **创建活动** 按钮并选择活动类型 **A/B测试**
 
-      ![Adobe Target — 建立活動](assets/personalization-use-case-2/create-ab-activity.png)
-   3. 選取 **Web** 頻道並選擇 **視覺化體驗撰寫器**.
-   4. 輸入 **活動URL** 並按一下 **下一個** 以開啟Visual Experience Composer。
-      ![Adobe Target — 建立活動](assets/personalization-use-case-2/create-activity-ab-name.png)
-   5. 對象 **視覺化體驗撰寫器** 若要載入，請啟用 **允許載入Unsafe指令碼** ，然後重新載入頁面。
-      ![體驗鎖定目標活動](assets/personalization-use-case-1/load-unsafe-scripts.png)
-   6. 請注意，WKND網站首頁會在視覺化體驗撰寫器編輯器中開啟。
+      ![Adobe Target — 创建活动](assets/personalization-use-case-2/create-ab-activity.png)
+   3. 选择 **Web** 渠道并选择 **可视化体验编辑器**.
+   4. 输入 **活动URL** 并单击 **下一个** 以打开可视化体验编辑器。
+      ![Adobe Target — 创建活动](assets/personalization-use-case-2/create-activity-ab-name.png)
+   5. 对象 **可视化体验编辑器** 要加载，请启用 **允许加载Unsafe脚本** ，然后重新加载页面。
+      ![体验定位活动](assets/personalization-use-case-1/load-unsafe-scripts.png)
+   6. 请注意，WKND站点主页在可视化体验编辑器中打开。
       ![VEC](assets/personalization-use-case-2/vec.png)
-   7. 暫留在 **體驗B** 並選取「檢視其他選項」。
+   7. 将鼠标悬停在 **体验B** 并选择“查看其他选项”。
       ![体验 B](assets/personalization-use-case-2/redirect-url.png)
-   8. 選取 **重新導向至URL** 選項並輸入新WKND首頁的URL。 (http://localhost:4503/content/wknd/en1.html)
+   8. 选择 **重定向到URL** 选项并输入新WKND主页的URL。 (http://localhost:4503/content/wknd/en1.html)
       ![体验 B](assets/personalization-use-case-2/redirect-url-2.png)
-   9. **儲存** 您的變更，然後繼續活動建立的後續步驟。
-   10. 選取 **流量分配方法** 作為手動，並分配100%流量給 **體驗B**.
-      ![體驗B流量](assets/personalization-use-case-2/traffic.png)
+   9. **保存** 所做的更改，然后继续执行活动创建的后续步骤。
+   10. 选择 **流量分配方法** 作为手动，将100%的流量分配给 **体验B**.
+      ![体验B流量](assets/personalization-use-case-2/traffic.png)
    11. 单击&#x200B;**下一步**。
-   12. 提供 **目標量度** ，並儲存及關閉A/B測試。
-      ![A/B測試目標量度](assets/personalization-use-case-2/goal-metric.png)
-   13. 提供名稱(**WKND首頁重新設計**)並儲存變更。
-   14. 從活動詳細資訊畫面，確認 **啟動** 您的活動。
-      ![啟動活動](assets/personalization-use-case-2/ab-activate.png)
-   15. 導覽至WKND首頁(http://localhost:4503/content/wknd/en.html)，系統會將您重新導向重新設計的WKND網站首頁(http://localhost:4503/content/wknd/en1.html)。
-      ![WKND首頁重新設計](assets/personalization-use-case-2/WKND-home-page-redesign.png)
+   12. 提供 **目标量度** ，并保存并关闭A/B测试。
+      ![A/B测试目标量度](assets/personalization-use-case-2/goal-metric.png)
+   13. 提供名称(**WKND主页重新设计**)，并保存更改。
+   14. 在活动详细信息屏幕中，确保 **激活** 您的活动。
+      ![激活活动](assets/personalization-use-case-2/ab-activate.png)
+   15. 导航到WKND主页(http://localhost:4503/content/wknd/en.html)，您会被重定向到重新设计的WKND站点主页(http://localhost:4503/content/wknd/en1.html)。
+      ![WKND主页重新设计](assets/personalization-use-case-2/WKND-home-page-redesign.png)
 
 ## 摘要
 
-在本章中，行銷人員能夠建立活動，使用Adobe Target將AEM上託管的網站頁面重新導向至新頁面。
+在本章中，营销人员能够创建一个活动，以使用Adobe Target将AEM上托管的网站页面重定向到新页面。

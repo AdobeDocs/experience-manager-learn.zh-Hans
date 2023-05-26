@@ -1,6 +1,6 @@
 ---
-title: Asset Share Commons Asset Kit
-description: 瞭解如何使用Asset Share Common的資產套件產生客製化、可共用的網頁，這些網頁會列出AEM Assets資料夾或集合中的資產。
+title: Asset Share Commons资产套件
+description: 了解如何使用Asset Share Common的资产套件生成定制的可共享网页，这些网页列出来自AEM Assets文件夹或收藏集的资产。
 version: Cloud Service
 topic: Content Management
 role: Admin, Architect, Developer, User
@@ -17,10 +17,10 @@ ht-degree: 0%
 
 ---
 
-# Asset Share Commons Asset Kit
+# Asset Share Commons资产套件
 
-瞭解如何使用資產共用共用的 [資產套件](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) 產生客製化、可共用的網頁，這些網頁會列出AEM Assets資料夾或收藏集中的資產。
+了解如何使用资产共享公共 [资产套件](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) 用于生成可共享的预定制网页，这些网页会列出AEM Assets文件夹或收藏集中的资源。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415467?quality=12&learn=on)
 
-_[資產套件](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) 僅適用於Asset Share Commons 2.5.4+_
+_[资产套件](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) 仅在Asset Share Commons 2.5.4+上可用_

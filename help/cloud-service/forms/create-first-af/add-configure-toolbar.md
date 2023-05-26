@@ -1,6 +1,6 @@
 ---
-title: 新增和設定工具列
-description: 新增在表單面板之間導覽的功能。
+title: 添加和配置工具栏
+description: 添加在表单面板之间导航的功能。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 新增和設定工具列
+# 添加和配置工具栏
 
-工具列通常新增在表單容器層級。 工具列可以包含按鈕，用於瀏覽表單的下一個和上一個面板、提交表單、儲存表單資料等。
+工具栏通常在表单容器级别添加。 工具栏可以包含按钮，用于导航到表单的下一个和上一个面板、提交表单、保存表单数据等。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332236?quality=12&learn=on)

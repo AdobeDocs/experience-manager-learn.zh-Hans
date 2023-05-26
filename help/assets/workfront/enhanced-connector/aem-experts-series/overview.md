@@ -1,6 +1,6 @@
 ---
-title: Workfront for Experience Manager增強型聯結器工作階段
-description: 瞭解Adobe Workfront和Experience Manager Assets增強型聯結器的基本概念。
+title: 用于Experience Manager增强型连接器会话的Workfront
+description: 了解Adobe Workfront和Experience Manager Assets增强型连接器的基础知识。
 version: Cloud Service
 topic: Content Management, Integrations
 role: Admin, User
@@ -16,77 +16,77 @@ ht-degree: 0%
 
 ---
 
-# Workfront for Experience Manager增強型聯結器專家系列
+# Workfront for Experience Manager增强型连接器专家系列
 
 ![AEM Experts系列](./assets/banner.png)
 
-與Adobe的Workfront和Experience Manager Assets專家一起加入這個由四部分組成的影片系列，他們將示範和討論Workfront的來龍去脈，以便Experience Manager增強型聯結器。
+与Adobe的Workfront和Experience Manager Assets专家一起观看这个由四部分组成的视频系列，他们将演示和讨论Workfront for Experience Manager增强型连接器的细节。
 
-這四部分專家系列將跟隨一群Adobe專家(從產品經理、顧問到Adobe合作夥伴)討論：
+这四部分专家系列由产品经理、咨询师和Adobe合作伙伴等一组Adobe专家组成，他们讨论了以下问题：
 
-1. [在Workfront和AEM中執行初始設定設定](./setup.md)
-2. [設定Workfront自訂表單與AEM之間的中繼資料同步](./custom-forms.md)
-3. [使用AEM Tags、專案連結資料夾、Adobe資產連結和資料夾中繼資料結構描述來最大化價值](./aem-tags-project-linked-folders-and-folder-metadata.md)
-4. [使用進階AEM工作流程，簡化AEM和Workfront之間的業務流程以及其他進階設定](./advanced-settings-and-workflows.md)
+1. [在Workfront和AEM中执行初始设置配置](./setup.md)
+2. [配置Workfront自定义表单与AEM之间的元数据同步](./custom-forms.md)
+3. [使用AEM Tags、项目链接的文件夹、Adobe资源链接和文件夹元数据架构最大化价值](./aem-tags-project-linked-folders-and-folder-metadata.md)
+4. [使用高级AEM工作流简化跨AEM和Workfront的业务流程以及其他高级设置](./advanced-settings-and-workflows.md)
 
 <table>
   <td>
       <a href="./setup.md">
-        <img alt="設定和初始設定" 
+        <img alt="设置和初始配置" 
              src="./assets/setup.png">
       </a>
       <div>
-         <a href="./setup.md"><strong>設定和初始設定</strong></a>
+         <a href="./setup.md"><strong>设置和初始配置</strong></a>
          <br/><em>第1/4部分</em>
       </div>
       <p>
         <br/>
-         瞭解如何設定和執行Workfront的初始設定，以便Experience Manager增強型聯結器。
+         了解如何设置并执行Workfront for Experience Manager增强连接器的初始配置。
       </p>
    </td>
    <!-- Workfront custom forms and metadata mapping -->
    <td>
       <a href="./custom-forms.md">
-        <img alt="Workfront自訂表單和中繼資料對應" 
+        <img alt="Workfront自定义表单和元数据映射" 
              src="./assets/custom-forms.png">
       </a>
       <div>
-         <a href="./custom-forms.md"><strong>Workfront自訂表單和中繼資料對應</strong></a>
+         <a href="./custom-forms.md"><strong>Workfront自定义表单和元数据映射</strong></a>
          <br/><em>第2/4部分</em>
       </div>
       <p>
         <br/>
-         瞭解Workfront自訂表單，以及這些表單如何對應至Experience Manager Assets中繼資料結構以同步資料。
+         了解Workfront自定义表单以及如何将这些表单映射到Experience Manager Assets元数据架构以同步数据。
       </p>
     </td>
     <!-- AEM Tags, project linked folders, and folder metadata -->
     <td>
       <a href="./aem-tags-project-linked-folders-and-folder-metadata.md">
-        <img alt="AEM Tags、專案連結資料夾和資料夾中繼資料" 
+        <img alt="AEM Tags、项目链接文件夹和文件夹元数据" 
              src="./assets/aem-tags.png">
       </a>
       <div>
-         <a href="./aem-tags-project-linked-folders-and-folder-metadata.md"><strong>AEM Tags、專案連結資料夾和資料夾中繼資料</strong></a>
+         <a href="./aem-tags-project-linked-folders-and-folder-metadata.md"><strong>AEM Tags、项目链接文件夹和文件夹元数据</strong></a>
          <br/><em>第3/4部分</em> 
       </div>
       <p>
         <br/>
-            瞭解如何從Workfront推動AEM分類、使用專案連結資料夾，以及資料至AEM資產資料夾中繼資料。
+            了解如何从Workfront驱动AEM分类、使用项目链接文件夹和数据到AEM资源文件夹元数据。
       </p>
    </td>   
    <!-- Advanced workflows -->
     <td>
       <a href="./advanced-settings-and-workflows.md">
-        <img alt="進階設定和工作流程" 
+        <img alt="高级设置和工作流" 
              src="./assets/advanced.png">
       </a>
       <div>
-         <a href="./advanced-settings-and-workflows.md"><strong>進階設定和工作流程</strong></a>
+         <a href="./advanced-settings-and-workflows.md"><strong>高级设置和工作流</strong></a>
          <br/><em>第4/4部分</em>
       </div>
       <p>
         <br/>
-            瞭解關於AEM增強型聯結器Workfront的進階設定，使用進階工作流程管理資料同步。
+            了解Workfront for AEM增强型连接器的高级设置，使用高级工作流管理数据同步。
       </p>
    </td>
   </tr>  

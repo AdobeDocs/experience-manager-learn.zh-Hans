@@ -1,6 +1,6 @@
 ---
-title: 什麼是AEMas a Cloud Service中的可變動和不可變動內容？
-description: 探索存放庫和套裝軟體如何使用可變和不可變內容，以及它在AEMas a Cloud Service中為何重要。
+title: AEM中的“可变”和“不可变”内容是as a Cloud Service的？
+description: 探索存储库和包如何使用可变和不可变内容，以及为什么它在AEMas a Cloud Service中很重要。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -16,8 +16,8 @@ ht-degree: 10%
 
 ---
 
-# 可變和不可變的內容
+# 可变和不可变内容
 
-瞭解的重要性和差異 [可變和不可變的內容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 以及AEM as a Cloud如何影響您的開發方式。
+了解的重要性和差异 [可变和不可变内容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) AEM以及它如何影响您的开发方式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330555?quality=12&learn=on)

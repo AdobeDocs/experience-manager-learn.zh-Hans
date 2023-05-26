@@ -1,6 +1,6 @@
 ---
-title: 建立使用者端資料庫
-description: 建立clientlibrary以處理「儲存並退出」按鈕的點選事件
+title: 创建客户端库
+description: 创建客户端库以处理“保存并退出”按钮的单击事件
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -17,11 +17,11 @@ ht-degree: 6%
 
 ---
 
-# 建立使用者端程式庫
+# 创建客户端库
 
-建立 [使用者端程式庫](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) 其中將包含呼叫方法的程式碼 `doAjaxSubmitWithFileAttachment` 的 `guideBridge` CSS類別所識別之按鈕的點選事件上的API **儲存按鈕**.  我們會傳遞最適化表單資料， `fileMap`，以及 `mobileNumber` 至接聽端點 `**/bin/storeafdatawithattachments`
+创建 [客户端库](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) 其中包括用于调用方法的代码 `doAjaxSubmitWithFileAttachment` 的 `guideBridge` CSS类标识的按钮的点击事件上的API **savebutton**.  我们传递自适应表单数据， `fileMap`，以及 `mobileNumber` 到侦听的端点 `**/bin/storeafdatawithattachments`
 
-儲存表單資料後，系統會產生唯一的應用程式ID，並在對話方塊中呈現給使用者。 關閉對話方塊時，使用者會被帶入表單，表單可讓他們使用唯一應用程式ID擷取已儲存的最適化表單。
+保存表单数据后，会生成一个唯一的应用程序ID，并在对话框中向用户显示。 关闭对话框时，用户将被带入表单，该表单允许用户使用唯一的应用程序ID检索保存的自适应表单。
 
 ```java
 $(document).ready(function () {
@@ -67,10 +67,10 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> 我們已使用 [bootbox javascript程式庫](http://bootboxjs.com/examples.html) 顯示對話方塊
+> 我们已经使用了 [bootbox javascript库](http://bootboxjs.com/examples.html) 显示对话框
 
-此範例中使用的使用者端資料庫可以是 [已從此處下載](assets/client-libraries.zip)
+此示例中使用的客户端库可以是 [已从此处下载](assets/client-libraries.zip)
 
 ## 后续步骤
 
-[使用OTP服務驗證使用者](./verify-users-with-otp.md)
+[使用OTP服务验证用户](./verify-users-with-otp.md)

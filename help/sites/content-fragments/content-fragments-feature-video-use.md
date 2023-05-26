@@ -1,6 +1,6 @@
 ---
-title: 在AEM中製作內容片段
-description: 內容片段是AEM中的內容抽象概念，可讓您獨立於其支援的管道之外撰寫和管理文字型內容。
+title: 在AEM中创作内容片段
+description: 内容片段是AEM中的内容抽象，它允许独立于支持的渠道创作和管理基于文本的内容。
 feature: Content Fragments
 topics: authoring, content-architecture
 audience: all
@@ -20,16 +20,16 @@ ht-degree: 17%
 
 # 创作内容片段 {#authoring-content-fragments}
 
-內容片段是AEM中的內容抽象概念，可讓您獨立於其支援的管道之外撰寫和管理文字型內容。
+内容片段是AEM中的内容抽象，它允许独立于支持的渠道创作和管理基于文本的内容。
 
-AEM內容片段是文字型編輯內容，其中可能包含某些相關聯的結構化資料元素，但被視為不含設計或版面配置資訊的純內容。 內容片段通常建立為與管道無關的內容，其用途為跨管道使用和重複使用，這反過來又會在內容特定的體驗中包裝內容。
+AEM内容片段是基于文本的编辑内容，其中可能包含一些关联但被视为纯内容（没有设计或布局信息）的结构化数据元素。 内容片段通常作为与渠道无关的内容创建，这些内容旨在跨渠道使用和重复使用，这反过来又会将内容包装在特定上下文的体验中。
 
-本影片系列涵蓋AEM中內容片段的製作生命週期。 詳細資訊 [遞送內容片段可在此處找到](content-fragments-delivery-feature-video-use.md).
+本视频系列涵盖AEM中内容片段的创作生命周期。 详细信息 [可在此处找到交付内容片段](content-fragments-delivery-feature-video-use.md).
 
-1. 啟用和定義內容片段模型
+1. 启用和定义内容片段模型
 2. 创作内容片段
-3. 下載內容片段
-4. 編輯功能
+3. 下载内容片段
+4. 编辑功能
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_admin_content_fragments"
@@ -40,46 +40,46 @@ AEM內容片段是文字型編輯內容，其中可能包含某些相關聯的�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
-AEM內容片段模型（內容片段的資料結構）必須透過AEM啟用 [[!UICONTROL 設定瀏覽器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)，可讓您根據設定來定義內容片段模型。
+AEM内容片段模型（内容片段的数据架构）必须通过AEM启用 [[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)，允许根据配置定义内容片段模型。
 
 ## 创建内容片段 {#creating-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22451?quality=12&learn=on)
 
-AEM設定會套用至AEM Assets資料夾階層，以便將其內容片段模型建立為內容片段。 內容片段支援豐富的表單式製作體驗，可將內容模型化為元素集合。
+AEM配置将应用于AEM Assets文件夹层次结构，以允许将其内容片段模型创建为内容片段。 内容片段支持丰富的基于表单的创作体验，允许将内容建模为元素集合。
 
-內容片段可以有多個變體，每個變體解決內容的不同使用案例（思考，不一定是管道）。
+内容片段可以有多个变体，每个变体用于解决内容的不同用例（思考，不一定是渠道）。
 
-*匯入的運動員傳記範例：*\
+*供导入的运动员传记示例：*\
 **[sandra-sprient-bio.txt](assets/sandra-sprient-bio.txt)**
 
-## 下載內容片段 {#downloading-content-fragments}
+## 下载内容片段 {#downloading-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22450?quality=12&learn=on)
 
-AEM內容片段可以從AEM作者下載為包含變體、元素和中繼資料的Zip檔案。
+AEM内容片段可以从AEM创作中下载为包含变体、元素和元数据的Zip文件。
 
-*範例內容片段下載Zip檔案：*\
+*示例内容片段下载Zip文件：*\
 **[daniel_schreder.zip](assets/daniel_schreder.zip)**
 
-## 內容片段編輯功能 {#editorial-capabilities}
+## 内容片段编辑功能 {#editorial-capabilities}
 
 >[!VIDEO](https://video.tv.adobe.com/v/25891?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 中引進了內容片段的註解和版本比較 [AEM 6.4 Service Pack 2](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html) 和 [AEM 6.3 Service Pack 3](https://helpx.adobe.com/cn/experience-manager/6-3/release-notes/sp3-release-notes.html).
+> 中引入了内容片段的注释和版本比较 [AEM 6.4 Service Pack 2](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html) 和 [AEM 6.3 Service Pack 3](https://helpx.adobe.com/cn/experience-manager/6-3/release-notes/sp3-release-notes.html).
 
 ## 后续步骤
 
-瞭解 [傳遞內容片段](content-fragments-delivery-feature-video-use.md).
+了解 [投放内容片段](content-fragments-delivery-feature-video-use.md).
 
 ## 其他资源 {#additional-resources}
 
-* [傳送內容片段](content-fragments-delivery-feature-video-use.md)
+* [交付内容片段](content-fragments-delivery-feature-video-use.md)
 * [AEM WCM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
-* [AEM WCM核心內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)
+* [AEM WCM核心内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)
 
-若要從影片系列下載並安裝以下套件至最終狀態的AEM 6.4+執行個體：
+要从视频系列中下载包并将其安装在最终状态的AEM 6.4+实例上：
 
 **[aem_demo_fluid-experiencescontent-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**

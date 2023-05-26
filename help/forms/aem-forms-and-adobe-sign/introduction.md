@@ -1,6 +1,6 @@
 ---
-title: 搭配Acrobat Sign使用AEM Forms
-description: Acrobat Sign和AEM Forms可自動化複雜的交易，並加入法律電子簽章，以提供順暢的數位體驗。
+title: 将AEM Forms与Acrobat Sign结合使用
+description: Acrobat Sign和AEM Forms可自动执行复杂的交易，并包括法律电子签名，作为无缝数字体验的一部分。
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -15,19 +15,19 @@ ht-degree: 11%
 
 ---
 
-# 搭配Acrobat Sign使用AEM Forms
+# 将AEM Forms与Acrobat Sign结合使用
 
-Acrobat Sign可啟用最適化表單的電子簽章工作流程。 电子签名改进了法律、销售、工资单、人力资源管理和其他许多方面的文档的处理工作流。AEM Forms與Acrobat Sign之間的整合可讓您進行下列工作
+Acrobat Sign支持自适应表单的电子签名工作流。 电子签名改进了法律、销售、工资单、人力资源管理和其他许多方面的文档的处理工作流。AEM Forms与Acrobat Sign之间的集成将允许您执行以下操作
 
-* 使用最適化Forms來擷取資料，並顯示自動產生的記錄檔案(DoR)以供簽名
-* 根據您的PDF範本建立最適化Forms。 將資料與pdf範本合併，並顯示相同的資料以供簽名
-* 使用「簽署檔案」工作流程元件傳送檔案以供簽署
+* 使用自适应Forms捕获数据并显示自动生成的记录文档(DoR)以供签名
+* 根据您的PDF模板创建自适应Forms。 将数据与PDF模板合并，并对签名提供相同的内容
+* 使用签名文档工作流组件发送文档以供签名
 
 ## 前提条件
 
-您需要下列專案才能將Acrobat Sign與AEM Forms整合：
+要将Acrobat Sign与AEM Forms集成，您需要以下项：
 
-* 啟用SSL的AEM Forms伺服器
-* 作用中的Acrobat Sign開發人員帳戶。
-* Acrobat Sign API應用計畫
-* Acrobat Sign API應用程式的認證（使用者端ID和使用者端密碼）。
+* 启用SSL的AEM Forms服务器
+* 有效的Acrobat Sign开发人员帐户。
+* Acrobat Sign API应用程序
+* Acrobat Sign API应用程序的凭据（客户端ID和客户端密码）。

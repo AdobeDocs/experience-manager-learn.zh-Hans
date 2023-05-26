@@ -1,6 +1,6 @@
 ---
-title: AEM Forms中的多系列圖表
-description: 建立適當的表單資料模型，以在列印和Web Channel檔案中建立多系列圖表。
+title: AEM Forms中的多系列图表
+description: 创建相应的表单数据模型，以便在打印文档和Web渠道文档中创建多系列图表。
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -19,30 +19,30 @@ ht-degree: 0%
 
 ---
 
-# 多系列圖表
+# 多系列图表
 
-AEM Forms 6.5匯入了建立及設定多系列圖表的功能。 多系列圖表通常與折線圖、橫條圖、直條圖型別關聯使用。 下列圖表是多系列圖表的良好範例。 圖表顯示3個不同共同基金在一段時間內以$10,000美元的速度增長。 若要能夠在AEM Forms中建立和使用這類圖表，您必須建立適當的表單資料模型。
+AEM Forms 6.5引入了创建和配置多系列图表的功能。 多系列图表通常与折线图、条形图、柱状图类型结合使用。 以下图表是多系列图表的良好示例。 图表显示了3个不同共同基金在一段时期内增长1万美元的情况。 为了能够在AEM Forms中创建和使用此类图表，您需要创建相应的表单数据模型。
 
-![多系列圖表](assets/seriescharts.jfif)
+![多系列图表](assets/seriescharts.jfif)
 
-若要在AEM Forms中建立多系列圖表，您需要建立適當的表單資料模型，其中包含必要的實體和實體之間的關聯。 下列熒幕擷圖會反白顯示實體與3個實體之間的關聯。 在最上層，我們有一個稱為「組織」的實體，它與Fund實體有一對多關聯。 Fund實體則與Performance實體具有一對多關聯。
+要在AEM Forms中创建多系列图表，您需要创建相应的表单数据模型，其中包含必要的实体和实体之间的关联。 以下屏幕截图突出显示实体和3个实体之间的关联。 在最顶层，我们有一个称为“组织”的实体，它与Fund实体有一对多关系。 而基金实体则与业绩实体有一对多关系。
 
-![表單資料模型](assets/formdatamodel.jfif)
+![表单数据模型](assets/formdatamodel.jfif)
 
-## 建立多系列圖表的表單資料模型
+## 为多系列图表创建表单数据模型
 
 >[!VIDEO](https://video.tv.adobe.com/v/26352?quality=12&learn=on)
 
-### 設定折線圖
+### 配置折线图
 
 >[!VIDEO](https://video.tv.adobe.com/v/26353?quality=12&learn=on)
 
-若要在您的系統上測試此專案，請遵循下列步驟
+要在您的系统上对此进行测试，请执行以下步骤
 
-* [使用AEM Package Manager下載並匯入MutualFundFactSheet.zip。](assets/mutualfundfactsheet.zip)
-* [將SeriesChartSampleData.json下載至您的硬碟。](assets/serieschartsampledata.json) 這是用來填入圖表的範例資料。
-* [導覽至Forms和檔案。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 輕輕選取「MutualFundGrowthFactSheet」互動式通訊範本。
-* 按一下預覽 |列印頻道 |上傳範例資料。
-* 瀏覽至本文提供的範例資料檔案。
-* 使用在上一步中下載的範例資料，預覽「MutualFundGrowthFactSheet」互動式通訊的列印管道。
+* [使用AEM包管理器下载并导入MutualFundFactSheet.zip。](assets/mutualfundfactsheet.zip)
+* [将SeriesChartSampleData.json下载到硬盘上。](assets/serieschartsampledata.json) 这是用于填充图表的示例数据。
+* [导航到Forms和文档。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 轻轻选择“MutualFundGrowthFactSheet”交互式通信模板。
+* 单击预览 |打印渠道 |上传示例数据。
+* 浏览到本文中提供的示例数据文件。
+* 使用上一步中下载的示例数据预览“MutualFundGrowthFactSheet”交互式通信的打印渠道。

@@ -1,6 +1,6 @@
 ---
-title: 建立表單片段
-description: AEM forms提供一種便利的機制，只需建立一次表單區段（例如面板或欄位群組），即可在調適型表單中重複使用。
+title: 创建表单片段
+description: AEM forms提供了一种便捷的机制，只需像创建面板或一组字段那样创建表单片段一次，即可在自适应表单中重复使用。
 feature: Adaptive Forms
 kt: 5862
 thumbnail: 37325.jpg
@@ -15,19 +15,19 @@ ht-degree: 6%
 
 ---
 
-# 建立表單片段
+# 创建表单片段
 
-片段是可重複使用的表單部分。 例如，片段可以包含位址區塊或合法文字。 使用片段可簡化並加速大量表單的建立與維護。
+片段是表单中可重复使用的部分。 例如，片段可以包含地址块或合法文本。 使用片段可简化并加速大量表单的创建和维护。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/37325?quality=12&learn=on)
 
 
 
-請參閱 [最適化表單範本檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html) 以取得更多詳細資料
+请参阅 [自适应表单模板文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html) 了解更多详细信息
 
-如有需要，您可以下載 [配偶 — 詳細資料 — 片段 ](assets/spouse-details-fragment.zip) 並使用匯入AEM [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+如果需要，您可以下载 [配偶 — 详细信息 — 片段 ](assets/spouse-details-fragment.zip) 并使用导入AEM [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 
 ## 后续步骤
 
-[建立最適化表單](./create-adaptive-form.md)
+[创建自适应表单](./create-adaptive-form.md)

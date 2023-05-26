@@ -1,6 +1,6 @@
 ---
-title: 擷取已儲存的最適化表單
-description: Servlet可呈現具有已儲存資料的最適化表單
+title: 检索保存的自适应表单
+description: 用于渲染具有保存数据的自适应表单的Servlet
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -17,10 +17,10 @@ ht-degree: 1%
 
 ---
 
-# 擷取儲存的表單
+# 检索已保存的表单
 
-下一步是建立一個servlet，以使用儲存的資料及其附件演算最適化表單。
-下列servlet程式碼會在驗證OTP程式碼之後執行。 會從資料庫擷取與唯一應用程式ID相關聯的最適化表單資料及其檔案附件地圖。 請求物件會填入已儲存的最適化表單資料和檔案附件對應。 然後轉送請求以轉譯「storeafwithattachments」表單，該表單已預先填入原始資料及其附件。
+下一步是创建一个servlet，以呈现具有保存数据及其附件的自适应表单。
+在验证OTP代码之后，执行以下servlet代码。 从数据库获取与唯一应用程序ID关联的自适应表单数据及其文件附件映射。 使用保存的自适应表单数据和文件附件映射填充请求对象。 然后，转发请求以呈现“storeafwithattachments”表单，该表单已预先填充了原始数据及其附件。
 
 ```java
 package store.and.fetch.core.servlets;
@@ -107,4 +107,4 @@ public class RenderForm extends SlingAllMethodsServlet {
 
 ## 后续步骤
 
-[建立使用者端程式庫以叫用servlet來儲存表單資料](./create-client-lib.md)
+[创建客户端库以调用servlet存储表单数据](./create-client-lib.md)

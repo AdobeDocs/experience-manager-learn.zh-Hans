@@ -1,6 +1,6 @@
 ---
-title: Sitemap
-description: 瞭解如何透過為AEM Sites建立Sitemap來協助提升SEO。
+title: 站点地图
+description: 了解如何通过为AEM Sites创建站点地图来帮助提升SEO。
 version: Cloud Service
 feature: Core Components
 topic: Content Management
@@ -17,38 +17,38 @@ ht-degree: 4%
 
 ---
 
-# Sitemap
+# 站点地图
 
-瞭解如何透過為AEM Sites建立Sitemap來協助提升SEO。
+了解如何通过为AEM Sites创建站点地图来帮助提升SEO。
 
 >[!WARNING]
 >
->此影片示範如何在網站地圖中使用相對URL。 Sitemap [應使用絕對URL](https://sitemaps.org/protocol.html). 另請參閱 [設定](#absolute-sitemap-urls) 瞭解如何啟用絕對URL，因為以下影片未說明此問題。
+>此视频演示了如何在站点地图中使用相对URL。 站点地图 [应使用绝对URL](https://sitemaps.org/protocol.html). 参见 [配置](#absolute-sitemap-urls) 了解如何启用绝对URL，因为下面的视频中未涉及这一点。
 
 >[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
 
 ## 配置
 
-### 絕對網站地圖URL{#absolute-sitemap-urls}
+### 绝对站点地图URL{#absolute-sitemap-urls}
 
-AEM Sitemap透過使用支援絕對URL [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). 這是透過在產生Sitemap (通常是AEM Publish服務)的AEM服務上建立對應節點來完成的。
+AEM Sitemap支持使用创建绝对URL [Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). 这是通过在生成站点地图(通常是AEM Publish服务)的AEM服务上创建映射节点来完成的。
 
-Sling對應節點定義的範例 `https://wknd.com` 可定義於 `/etc/map/https` 如下所示：
+的Sling映射节点定义示例 `https://wknd.com` 可以在以下位置定义 `/etc/map/https` 如下所示：
 
-| 路径 | 属性名称 | 屬性型別 | 屬性值 |
+| 路径 | 属性名称 | 属性类型 | 属性值 |
 |------|----------|---------------|-------|
 | `/etc/map/https/wknd-site` | `jcr:primaryType` | 字符串 | `nt:unstructured` |
 | `/etc/map/https/wknd-site` | `sling:internalRedirect` | 字符串 | `/content/wknd/(.*)` |
 | `/etc/map/https/wknd-site` | `sling:match` | 字符串 | `wknd.com/$1` |
 
-以下熒幕擷圖說明類似的設定，但 `http://wknd.local` (執行於的本機主機名稱對應 `http`)。
+下面的屏幕快照演示了类似配置，但 `http://wknd.local` (本地主机名映射运行于 `http`)。
 
-![網站地圖絕對URL設定](../assets/sitemaps/sitemaps-absolute-urls.jpg)
+![站点地图绝对URL配置](../assets/sitemaps/sitemaps-absolute-urls.jpg)
 
 
-### Sitemap排程器OSGi設定
+### Sitemap计划程序OSGi配置
 
-定義 [OSGi工廠設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 對於頻率(使用 [cron運算式](http://www.cronmaker.com))在AEM中重新/產生並快取sitemap。
+定义 [OSGi工厂配置](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 对于频率(使用 [cron表达式](http://www.cronmaker.com))在AEM中重新/生成和缓存sitemap。
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -60,9 +60,9 @@ Sling對應節點定義的範例 `https://wknd.com` 可定義於 `/etc/map/https
 }
 ```
 
-### Dispatcher允許篩選規則
+### Dispatcher允许筛选规则
 
-允許Sitemap索引和Sitemap檔案的HTTP要求。
+允许站点地图索引和站点地图文件的HTTP请求。
 
 `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
@@ -73,9 +73,9 @@ Sling對應節點定義的範例 `https://wknd.com` 可定義於 `/etc/map/https
 /0200 { /type "allow" /path "/content/*" /selectors '(sitemap-index|sitemap)' /extension "xml" }
 ```
 
-### Apache Webserver重寫規則
+### Apache Webserver重写规则
 
-確定 `.xml` Sitemap HTTP請求會路由至正確的基礎AEM頁面。 如果未使用URL縮短功能，或使用Sling對應來縮短URL，則不需要此設定。
+确保 `.xml` Sitemap HTTP请求被路由到正确的基础AEM页面。 如果未使用URL缩短功能，或使用Sling映射实现URL缩短功能，则无需此配置。
 
 `dispatcher/src/conf.d/rewrites/rewrite.rules`
 
@@ -87,8 +87,8 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 
 ## 资源
 
-+ [AEM Sitemap檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
-+ [Apache Sling Sitemap檔案](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
-+ [Sitemap.org Sitemap檔案](https://www.sitemaps.org/protocol.html)
-+ [Sitemap.org Sitemap索引檔案檔案](https://www.sitemaps.org/protocol.html#index)
++ [AEM Sitemap文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
++ [Apache Sling Sitemap文档](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
++ [Sitemap.org Sitemap文档](https://www.sitemaps.org/protocol.html)
++ [Sitemap.org站点地图索引文件文档](https://www.sitemaps.org/protocol.html#index)
 + [Cronmaker](http://www.cronmaker.com/)

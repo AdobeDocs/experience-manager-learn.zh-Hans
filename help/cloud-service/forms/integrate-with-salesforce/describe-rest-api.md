@@ -1,6 +1,6 @@
 ---
-title: 建立Swagger檔案以說明Salesforce REST API
-description: Swagger檔案將定義API端點以及輸入和輸出引數
+title: 创建swagger文件以描述Salesforce REST API
+description: Swagger文件将定义API端点以及输入和输出参数
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,10 +18,10 @@ ht-degree: 0%
 
 ---
 
-# 建立Swagger檔案
+# 创建Swagger文件
 
-說明使用的Salesforce REST API [OPEN API 2.0規格](https://swagger.io/docs/specification/2-0/basic-structure/)
+使用描述Salesforce REST API [OPEN API 2.0规范](https://swagger.io/docs/specification/2-0/basic-structure/)
 
 >[!VIDEO](https://video.tv.adobe.com/v/331754?quality=12&learn=on)
 
-可以下載的swagger檔案為 [此處提供](assets/sfdc-rest-swagger.zip)
+可以下载的swagger文件是 [此处提供](assets/sfdc-rest-swagger.zip)

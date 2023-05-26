@@ -1,6 +1,6 @@
 ---
-title: 建立AF範本
-description: 建立AF範本並將其與頁面呈現元件建立關聯
+title: 创建AF模板
+description: 创建AF模板并将其与页面渲染组件关联
 feature: Adaptive Forms
 topics: development
 audience: developer
@@ -20,20 +20,20 @@ ht-degree: 2%
 
 ---
 
-# 建立AF範本
+# 创建AF模板
 
-我們將根據本教學課程目的，建立新的調適型表單範本。 亦已建立新頁面元件並與此範本建立關聯。 頁面元件中的JSP會從用來預先填入最適化表單的MySql資料庫擷取資料。
+我们将为本教程创建新的自适应表单模板。 此外，还创建了一个新页面组件并将其与此模板关联。 页面组件中的JSP从MySql数据库中提取数据，该数据用于预填充自适应表单。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=12&learn=on)
 
-[您可以依照本文章瞭解建立最適化表單範本和頁面元件的程式](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en#storing-and-retrieving-form-data)
+[您可以阅读本文章以了解创建自适应表单模板和页面组件的过程](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en#storing-and-retrieving-form-data)
 
 
 ## Assets
 
-本教學課程使用的範本和頁面元件可以是 [已從此處下載](assets/sign-multiple-forms-template.zip)
+本教程中使用的模板和页面组件可以是 [已从此处下载](assets/sign-multiple-forms-template.zip)
 
 ## 后续步骤
 
-[選取要由使用者簽署的表單](./create-initial-form.md)
+[选择要由使用的签署的表单](./create-initial-form.md)

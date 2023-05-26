@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 - Cloud Manager的秘密 — 體驗稽核
-description: 檢查Cloud Manager並深入瞭解體驗稽核功能
+title: Cloud 5 - Cloud Manager的秘密 — 体验审核
+description: 检查Cloud Manager并深入了解体验审核功能
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ---
 
-# Cloud 5 - Cloud Manager的秘密 — 體驗稽核
+# Cloud 5 - Cloud Manager的秘密 — 体验审核
 
-在三部分系列的第一部分，我們探索Cloud Manager的基礎知識，並深入瞭解體驗稽核功能。
+在三个部分系列的第一部分，我们探讨了Cloud Manager的基础知识并深入了解体验审核功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343620?quality=12&learn=on)
 
-## 本影片涵蓋的內容
+## 本视频中涵盖的内容
 
-+ Cloud Manager總覽
-+ 熟悉介面
++ Cloud Manager概述
++ 熟悉界面

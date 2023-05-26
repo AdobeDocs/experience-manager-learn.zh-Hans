@@ -1,6 +1,6 @@
 ---
-title: 將Adobe Experience Manager Forms作為Cloud Service與Acrobat Sign整合
-description: 整合Forms CS與Acrobat Sign課程簡介影片
+title: 将Adobe Experience Manager Forms作为Cloud Service与Acrobat Sign集成
+description: 将Forms CS与Acrobat Sign集成的课程简介视频
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ---
 
-# 簡介影片
+# 简介视频
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/332706?quality=12&learn=on)

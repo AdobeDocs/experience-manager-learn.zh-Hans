@@ -1,6 +1,6 @@
 ---
-title: 瞭解升級的原因
-description: 為考慮升級至最新版Adobe Experience Manager 6的客戶提供主要功能的高層級劃分。
+title: 了解升级的原因
+description: 面向考虑升级到最新版Adobe Experience Manager 6的客户，对关键功能进行了详尽的划分。
 version: 6.5
 topic: Upgrade
 role: Leader, Architect, Developer, Admin, User
@@ -13,82 +13,82 @@ ht-degree: 3%
 
 ---
 
-# 瞭解升級的原因
+# 了解升级原因
 
-為考慮升級至最新版Adobe Experience Manager 6的客戶提供主要功能的高層級劃分。
+面向考虑升级到最新版Adobe Experience Manager 6的客户，对关键功能进行了详尽的划分。
 
-## 升級至AEM 6.5的主要功能
+## 升级到AEM 6.5的主要功能
 
-+ [Adobe Experience Manager 6.5發行說明](https://helpx.adobe.com/cn/experience-manager/6-5/release-notes.html)
++ [Adobe Experience Manager 6.5发行说明](https://helpx.adobe.com/cn/experience-manager/6-5/release-notes.html)
 
-### 基礎改良
+### 基础改进
 
-Adobe Experience Manager 6.5透過下列方式，持續增強系統的穩定性、效能和支援能力：
+Adobe Experience Manager 6.5继续通过以下方式增强系统的稳定性、性能和可支持性：
 
-+ **Java 11** 支援（同時維持Java 8支援）。
++ **Java 11** 支持（同时保持Java 8支持）。
 
-### 網站建立與管理
+### 网站创建和管理
 
-AEM Sites推出多項功能，旨在加速網站的建立和建置：
+AEM Sites引入了一系列旨在加快网站创建和构建的功能：
 
-+ **SPA編輯器** 支援可讓SPA （單頁應用程式）在AEM中完全撰寫，支援豐富、方便行銷人員的撰寫體驗。
-+_ **JavaScript SDK的**&#x200B;是一套SPA專案入門套件和支援的建置工具，可讓前端開發人員獨立於AEM開發與SPA編輯器相容的單頁應用程式。
-+ **核心元件** 新增許多新元件，例如 **元件資料庫** 以及對現有核心元件的各種增強功能。
-+ 進一步的 **翻譯** 增強功能可簡化AEM Sites的翻譯。
++ **SPA编辑器** 借助支持，可在AEM中完全创作SPA（单页应用程序），从而支持丰富、对营销人员友好的创作体验。
++_ **JavaScript SDK的**&#x200B;是一套SPA项目入门套件和支持的构建工具，允许前端开发人员独立于AEM开发与SPA编辑器兼容的单页应用程序。
++ **核心组件** 添加大量新组件，即 **组件库** 以及现有核心组件的各种增强功能。
++ 更多 **翻译** 增强功能简化了AEM Sites的翻译。
 
-### 流暢的使用體驗
+### 流畅的体验
 
-AEM持續採用流動體驗，提供全新及改良的工具，協助您使用AEM以外的內容。
+AEM通过新的和改进的工具继续拥抱流畅的体验，这些工具便于在AEM之外使用内容。
 
-+ **內容片段** 支援版本比較/比較和註解。
-+ **AEM Assets HTTP API** 支援公開 **內容片段** 直接在DAM中作為 **JSON**.
-   **體驗片段** 支援 **全文搜尋** 和 **AEM Dispatcher快取失效** 以供參考 **頁面**.
++ **内容片段** 支持版本比较/差异和注释。
++ **AEM Assets HTTP API** 支持公开 **内容片段** 直接在DAM中作为 **JSON**.
+   **体验片段** 支持 **全文搜索** 和 **AEM Dispatcher缓存失效** 以供参考 **页面**.
 
-### 資產管理
+### 资产管理
 
-AEM Assets繼續以其豐富的資產管理功能集為基礎進行擴充，以改進對DAM的使用、管理和瞭解。 AEM 6.5持續改善Adobe Creative Cloud與創意工作流程之間的整合。
+AEM Assets继续以其丰富的资产管理功能集为基础，改进对DAM的使用、管理和了解。 AEM 6.5继续改进Adobe Creative Cloud与创意工作流程之间的集成。
 
-+ **Adobe資產連結** 從Adobe Creative Cloud工具將創意內容直接連線至AEM Assets。
-+ **Adobe Stock** 整合可讓您直接從AEM Assets體驗存取Adobe Stock影像，創造順暢的內容探索體驗。
-+ **AEM案頭應用程式** 發行版本2.0，在改善效能和穩定性的同時重新構想自身。
-+ **連線資產** 支援獨立的AEM Sites執行個體，以便順暢地存取和使用其他AEM Assets執行個體的資產。
-+ 更新中的視訊支援 **Dynamic Media**，包括 **360度影片** 和 **自訂視訊縮圖**.
++ **Adobe资源链接** 将创意内容从Adobe Creative Cloud工具直接连接到AEM Assets。
++ **Adobe Stock** 集成允许直接从AEM Assets experience访问Adobe Stock图像，从而创造无缝的内容发现体验。
++ **AEM桌面应用程序** 版本2.0，并重新规划自身，同时提高性能和稳定性。
++ **连接的资产** 支持独立的AEM Sites实例，以便无缝地访问和使用其他AEM Assets实例中的资产。
++ 更新了中的视频支持 **Dynamic Media**，包括 **360视频** 和 **自定义视频缩略图**.
 
-### 內容智慧
+### 内容智能
 
-AEM持續與智慧技術建立整合，利用機器學習和人工智慧來改善所有體驗。
+AEM继续构建与智能技术的集成，利用机器学习和人工智能改善所有体验。
 
-+ **Adobe資產連結** 新增 **視覺相似性搜尋**，可讓您輕鬆探索和使用類似影像 **Adobe Creative Cloud工具**.
++ **Adobe资源链接** 添加 **视觉相似性搜索**，允许在中轻松发现和使用类似图像 **Adobe Creative Cloud工具**.
 
 ### 集成
 
-AEM提升與其他Adobe服務整合的能力：
+AEM提高了与其他Adobe服务集成的能力：
 
-+ **體驗片段** 深化與的整合 **Adobe Target** 支援 **匯出為JSON** 至Adobe Target以及以下功能 **刪除體驗片段型選件** 從 **Adobe Target**.
++ **体验片段** 深化与的集成 **Adobe Target** 支持 **导出为JSON** 到Adobe Target以及能够 **删除基于体验片段的选件** 起始日期 **Adobe Target**.
 
 ### AMS Cloud Manager
 
-[Cloud Manager](https://adobe.ly/2HODmsv)是Adobe Managed Services (AMS)客戶的專屬產品，提供下列功能：
+[Cloud Manager](https://adobe.ly/2HODmsv)是Adobe Managed Services (AMS)客户独有的一项功能，可提供以下功能：
 
-+ Cloud Manager支援將AEM部署支援從AEM Sites擴充到 **AEM Assets**，包括 **資產處理的自動化效能測試**.
-+ **自動縮放** 達到預先定義的臨界值的AEM Publish層級，確保最佳的一般使用者體驗。
-+ **非生產管道** 允許開發團隊利用Cloud Manager持續檢查計畫碼品質並部署到較低環境（開發和QA）。
-+ **CI/CD管道API** 允許客戶以程式設計方式與Cloud Manager互動，深化與內部部署開發基礎結構的整合可能性。
++ Cloud Manager支持将AEM部署支持从AEM Sites扩展到 **AEM Assets**，包括 **资产处理的自动化性能测试**.
++ **自动缩放** 达到预定义阈值的AEM发布层，确保最佳最终用户体验。
++ **非生产管道** 允许开发团队利用Cloud Manager持续检查代码质量并部署到较低环境（开发和QA）。
++ **CI/CD管道API** 允许客户以编程方式与Cloud Manager交互，深化与内部部署开发基础架构的集成可能性。
 
-## 基礎功能
+## 基础功能
 
-以下為AEM所提供的重要基礎功能矩陣。 其中部分功能已在每個版本的舊版中新增的增量增強功能中引入。
+以下是AEM提供的主要基础功能列表。 早期版本中引入了其中一些功能，每个版本中添加了增量增强功能。
 
-+ [AEM Foundation發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html)
++ [AEM Foundation发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html)
 
-***✔<sup>+</sup> 此版本大幅增強功能。***
+***✔<sup>+</sup> 显着增强了此版本中的功能。***
 
-***✔<sup>SP</sup> 表示此功能可透過Service Pack或Feature Pack取得。***
+***✔<sup>SP</sup> 表示通过Service Pack或Feature Pack提供的功能。***
 
 <table>
     <thead>
         <tr>
-            <td>基礎功能</td>
+            <td>基础功能</td>
             <td>5.6.x</td>
             <td>6.0</td>
             <td>6.1</td>
@@ -101,7 +101,7 @@ AEM提升與其他Adobe服務整合的能力：
     <tbody>
         <tr>
             <td>
-                <strong>Java 11支援：</strong> AEM支援Java 11 （以及Java 8）。
+                <strong>Java 11支持：</strong> AEM支持Java 11（以及Java 8）。
             </td>
             <td> </td>
             <td> </td>
@@ -113,7 +113,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td>
-                <strong><a href="https://jackrabbit.apache.org/oak/docs/index.html" target="_blank">Oak內容存放庫</a>：</strong> 比前身的Jackrabbit 2提供更優異的效能和擴充性。</td>
+                <strong><a href="https://jackrabbit.apache.org/oak/docs/index.html" target="_blank">Oak内容存储库</a>：</strong> 与前代产品Jackrabbit 2相比，性能和可扩展性大大提高。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -123,7 +123,7 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/indexing-via-the-oak-run-jar.html">oak-run.jar索引支援</a>：</strong> 改善Oak索引的重新索引、統計資料收集和一致性檢查。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/indexing-via-the-oak-run-jar.html">oak-run.jar索引支持</a>：</strong> 改进了Oak索引的重新索引、统计信息收集和一致性检查。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -133,8 +133,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html" target="_blank">自訂搜尋索引</a>： </strong>
-                可新增自訂索引定義，以最佳化查詢效能和搜尋相關性。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html" target="_blank">自定义搜索索引</a>： </strong>
+                能够添加自定义索引定义以优化查询性能和搜索相关性。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -144,8 +144,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">線上修訂清除</a>：</strong>
-                執行存放庫維護作業，避免伺服器停機。</td>
+            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">在线修订版清理</a>：</strong>
+                执行存储库维护，无需服务器停机。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -155,9 +155,9 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/storage-elements-in-aem-6.html" target="_blank">TarMK或MongoMK存放庫儲存</a>：</strong>
-                <br> 可選擇使用簡單、高效能的TarMK檔案式儲存（新一代的TarPM版本）
-                <br> 或使用MongoDB支援的存放庫和MongoMK水平縮放。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/storage-elements-in-aem-6.html" target="_blank">TarMK或MongoMK存储库存储</a>：</strong>
+                <br> 使用简单、高性能的TarMK文件存储（下一代版TarPM）的选项
+                <br> 或使用MongoDB支持的带MongoMK的存储库水平扩展。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -167,8 +167,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/aem-with-mongodb.html" target="_blank">MongoMK效能與穩定性</a>：</strong>
-            自MongoMK推出AEM 6.0以來，已持續增強功能。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/aem-with-mongodb.html" target="_blank">MongoMK性能和稳定性</a>：</strong>
+            自MongoMK引入AEM 6.0以来，它一直得到增强。</td>
             <td> </td>
             <td> </td>
             <td>✔</td>
@@ -178,8 +178,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/data-store-config.html#AmazonS3DataStore">Amazon S3 DataStore</a>：</strong>
-            運用可擴充的雲端儲存解決方案來儲存二進位資產。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/data-store-config.html#AmazonS3DataStore">Amazon S3数据存储</a>：</strong>
+            利用可扩展的云存储解决方案存储二进制资产。</td>
             <td>✔</td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -189,8 +189,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>Touch UI功能比較：</strong>
-                持續增強編寫UI的速度，並透過傳統UI提高生產力和功能對等性。</td>
+            <td><strong>触屏UI对等功能：</strong>
+                继续增强创作UI的速度，提高了生产力，并实现了与经典UI的功能对等性。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -201,7 +201,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong>Omnisearch：</strong>
-                快速搜尋和導覽AEM。</td>
+                快速搜索和导航AEM。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -211,8 +211,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/operations-dashboard.html" target="_blank">操作控制面板</a>：</strong>
- 從AEM內執行維護、監控伺服器健康狀態並分析效能。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/operations-dashboard.html" target="_blank">操作功能板</a>：</strong>
+ 从AEM内执行维护、监控服务器运行状况和分析性能。</td>
             <td></td>
             <td>✔</td>
             <td>✔</td>
@@ -222,8 +222,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/upgrade.html" target="_blank">升級改善</a>：</strong>
-            升級改良功能可讓您更輕鬆、更快速地就地升級AEM。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/upgrade.html" target="_blank">升级改进</a>：</strong>
+            升级改进使AEM就地升级变得更轻松、更快。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -233,8 +233,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/htl/using/overview.html" target="_blank">HTL範本語言</a>：</strong>
-            將表示與邏輯分隔的現代範本引擎。 大幅縮短元件開發時間。 每個版本都新增了增量功能。</td>
+            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/htl/using/overview.html" target="_blank">HTL模板语言</a>：</strong>
+            一种将表示与逻辑分离的现代模板化引擎。 显着缩短组件开发时间。 每个版本中添加了增量功能。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -245,7 +245,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong><a href="https://sling.apache.org/documentation/bundles/models.html" target="_blank">Sling模型</a>：</strong>
-            將JCR資源模型化為商業物件和邏輯的彈性架構。 每個版本都新增了增量功能。
+            将JCR资源建模为业务对象和逻辑的灵活框架。 每个版本中添加了增量功能。
             </td>
             <td> </td>
             <td>✔</td>
@@ -257,7 +257,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong><a href="https://adobe.ly/2HODmsv" target="_blank">Cloud Manager</a>： </strong>
-                Adobe Managed Services (AMS)客戶專有，Cloud Manager透過最先進的CI/CD管道加速開發和部署。</td>
+                Cloud Manager是Adobe Managed Services (AMS)客户专属的产品，它通过先进的CI/CD管道加快了开发和部署。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -269,20 +269,20 @@ AEM提升與其他Adobe服務整合的能力：
     </tbody>
 </table>
 
-## 安全性功能
+## 安全功能
 
-以下為AEM所提供之主要安全性功能的對照表。 其中部分功能已在每個版本的舊版中新增的增量增強功能中引入。
+以下是AEM提供的主要安全功能列表。 早期版本中引入了其中一些功能，每个版本中添加了增量增强功能。
 
-+ [安全性發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html#Security)
++ [安全性发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html#Security)
 
-***✔表示此版本中的功能有重大增強功能。***
+***✔表示此版本中的功能得到了显着增强。***
 
-***✔<sup>+</sup> 表示此功能可透過Service Pack或Feature Pack取得。***
+***✔<sup>+</sup> 表示通过Service Pack或Feature Pack提供的功能。***
 
 <table>
     <thead>
         <tr>
-            <td>安全性功能</td>
+            <td>安全功能</td>
             <td>5.6.x</td>
             <td>6.0</td>
             <td>6.1</td>
@@ -294,8 +294,8 @@ AEM提升與其他Adobe服務整合的能力：
     </thead>
     <tbody>
         <tr>
-        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-service-users.html" target="_blank">服務使用者</a></strong>
-            <br> 劃分許可權以避免不必要地使用管理員許可權。</td>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-service-users.html" target="_blank">服务用户</a></strong>
+            <br> 划分权限以避免不必要地使用管理员权限。</td>
         <td></td>
         <td>✔</td>
         <td>✔</td>
@@ -305,8 +305,8 @@ AEM提升與其他Adobe服務整合的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank">金鑰庫管理</a></strong>
-            <br> 全域信任存放區、憑證和金鑰都在存放庫中管理。</td>
+        <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank">密钥存储管理</a></strong>
+            <br> 全局信任存储区、证书和密钥都在存储库中管理。</td>
         <td></td>
         <td>✔</td>
         <td>✔</td>
@@ -316,8 +316,8 @@ AEM提升與其他Adobe服務整合的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong>CSRF</strong> <strong>保護</strong></a>
-            <br> 立即可用的跨網站請求偽造保護。</td>
+        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong>CSRF</strong> <strong>保护</strong></a>
+            <br> 开箱即用的跨站点请求伪造保护。</td>
         <td></td>
         <td></td>
         <td>✔</td>
@@ -327,8 +327,8 @@ AEM提升與其他Adobe服務整合的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong>CORS</strong> <strong>支援</strong></a>
-            <br> 跨原始資源共用支援，可提供更優異的應用程式彈性。</td>
+        <td><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong>CORS</strong> <strong>支持</strong></a>
+            <br> 跨源资源共享支持提高应用程序灵活性。</td>
         <td></td>
         <td></td>
         <td></td>
@@ -338,8 +338,8 @@ AEM提升與其他Adobe服務整合的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">改善SAML驗證支援</a><br>
- </strong>改善SAML重新導向、最佳化的群組資訊和金鑰加密問題。
+        <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">改进了SAML身份验证支持</a><br>
+ </strong>改进了SAML重定向、优化了组信息和解决了密钥加密问题。
             <br>
         </td>
         <td></td>
@@ -351,8 +351,8 @@ AEM提升與其他Adobe服務整合的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html" target="_blank">LDAP作為OSGi設定</a><br>
- </strong>簡化LDAP驗證的管理和更新。</td>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html" target="_blank">LDAP作为OSGi配置</a><br>
+ </strong>简化了LDAP身份验证的管理和更新。</td>
         <td></td>
         <td>✔</td>
         <td>✔</td>
@@ -362,8 +362,8 @@ AEM提升與其他Adobe服務整合的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong>純文字密碼的OSGi加密支援<br>
- </strong>密碼和其他敏感值可以加密形式儲存並自動解密。</td>
+        <td><strong>对纯文本密码的OSGi加密支持<br>
+ </strong>密码和其他敏感值可以加密形式保存并自动解密。</td>
         <td></td>
         <td></td>
         <td></td>
@@ -373,8 +373,8 @@ AEM提升與其他Adobe服務整合的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/user-group-ac-admin.html" target="_blank">CUG增強功能</a><br>
- </strong>封閉式使用者群組實作已重新寫入，以解決效能和擴充性問題。</td>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/user-group-ac-admin.html" target="_blank">CUG增强功能</a><br>
+ </strong>封闭用户组实施已重新编写，以解决性能和可扩展性问题。</td>
         <td></td>
         <td></td>
         <td></td>
@@ -384,8 +384,8 @@ AEM提升與其他Adobe服務整合的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/platform-repository/using/ssl-wizard-technical-video-use.html" target="_blank">SSL精靈</a></strong>
-            <br> UI以簡化SSL的設定和管理。</td>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/platform-repository/using/ssl-wizard-technical-video-use.html" target="_blank">SSL向导</a></strong>
+            <br> UI可简化SSL的设置和管理。</td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -395,8 +395,8 @@ AEM提升與其他Adobe服務整合的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/encapsulated-token.html" target="_blank">封裝權杖支援</a></strong>
-            <br> 「粘性」工作階段不再需要支援跨發佈執行個體的水準驗證。</td>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/encapsulated-token.html" target="_blank">封装令牌支持</a></strong>
+            <br> 不再需要“粘性”会话来支持跨发布实例的水平身份验证。</td>
         <td> </td>
         <td> </td>
         <td>✔</td>
@@ -406,8 +406,8 @@ AEM提升與其他Adobe服務整合的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Adobe IMS驗證支援</a><br>
- </strong>Adobe Managed Services (AMS)專屬，透過Adobe IMS (Identity Management System)集中管理AEM作者執行個體的存取權。</td>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Adobe IMS身份验证支持</a><br>
+ </strong>Adobe Managed Services (AMS)独有，它通过Adobe IMS (Identity Management System)集中管理对AEM创作实例的访问。</td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -421,18 +421,18 @@ AEM提升與其他Adobe服務整合的能力：
 
 ## Sites功能
 
-以下為AEM所提供之主要Sites功能的矩陣。 其中部分功能已在每個版本的舊版中新增的增量增強功能中引入。
+以下是AEM提供的关键Sites功能列表。 早期版本中引入了其中一些功能，每个版本中添加了增量增强功能。
 
-+ [AEM Sites發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/sites.html)
++ [AEM Sites发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/sites.html)
 
-***✔<sup>+</sup> 此版本大幅增強功能。***
+***✔<sup>+</sup> 显着增强了此版本中的功能。***
 
-***✔<sup>SP</sup> 表示此功能可透過Service Pack或Feature Pack取得。***
+***✔<sup>SP</sup> 表示通过Service Pack或Feature Pack提供的功能。***
 
 <table>
     <thead>
         <tr>
-            <td><strong>Sites功能</strong></td>
+            <td><strong>站点功能</strong></td>
             <td>5.6.x</td>
             <td>6.0</td>
             <td>6.1</td>
@@ -444,8 +444,8 @@ AEM提升與其他Adobe服務整合的能力：
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/page-editor-feature-video-use.html" target="_blank">觸控最佳化的頁面製作</a>：</strong>
-            可讓編輯器運用平板電腦和配備觸控熒幕的電腦。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/page-editor-feature-video-use.html" target="_blank">触控优化页面创作</a>：</strong>
+            允许编辑人员利用配备触摸屏的平板电脑和计算机。</td>
             <td></td>
             <td>✔</td>
             <td>✔<sup>+</sup></td>
@@ -455,8 +455,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/responsive-layout.html" target="_blank">回應式網站編寫</a>：</strong>
-                版面模式可讓編輯器根據回應式網站的裝置寬度調整元件大小。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/responsive-layout.html" target="_blank">响应式网站创作</a>：</strong>
+                布局模式允许编辑器根据响应式站点的设备宽度调整组件大小。</td>
             <td></td>
             <td></td>
             <td>✔</td>
@@ -466,8 +466,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/template-editor-feature-video-use.html" target="_blank">可編輯的範本</a>：</strong>
-            允許專門的作者建立和編輯頁面範本。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/template-editor-feature-video-use.html" target="_blank">可编辑的模板</a>：</strong>
+            允许专门的作者创建和编辑页面模板。</td>
             <td></td>
             <td></td>
             <td></td>
@@ -477,8 +477,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/core-components/user-guide.html" target="_blank">核心元件</a>：</strong>
-            加速網站開發。 GitHub提供頻繁發行排程和彈性。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/core-components/user-guide.html" target="_blank">核心组件</a>：</strong>
+            加快站点开发。 可在GitHub上获取，以便频繁发布计划并灵活处理。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -488,8 +488,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/spa-overview.html" target="_blank">SPA編輯器</a>：</strong>
-            使用以React為基礎建立的單頁應用程式(SPA)架構，建立可編寫、可啟動的網頁體驗。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/spa-overview.html" target="_blank">SPA编辑器</a>：</strong>
+            使用基于React构建的单页应用程序(SPA)框架，创建可创作、可管理的Web体验。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -499,8 +499,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong>樣式系統：</strong>
-            透過使用上下文內樣式系統定義其視覺外觀，增加AEM元件的重複使用率。</td>
+            <td><strong>样式系统：</strong>
+            通过使用上下文内样式系统定义组件的可视外观，提高AEM组件的重用率。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -510,8 +510,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/msm.html" target="_blank">多站點管理員(MSM)</a>：</strong>
-            管理共用相同內容的多個網站（即多語言、多個品牌）。</td>
+            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/msm.html" target="_blank">多站点管理器(MSM)</a>：</strong>
+            管理共享相同内容的多个网站（即多语言、多个品牌）。</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -521,8 +521,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/translation.html" target="_blank">內容翻譯</a>：</strong>
-            隨插即用架構整合了業界領先的第三方翻譯服務。</td>
+            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/translation.html" target="_blank">内容翻译</a>：</strong>
+            即插即用框架与业界领先的第三方翻译服务集成。</td>
             <td></td>
             <td></td>
             <td>✔</td>
@@ -533,7 +533,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub.html" target="_blank">ContextHub</a>：</strong>
-            用於個人化內容的新一代使用者端內容架構。</td>
+            用于内容个性化的下一代客户端上下文框架。</td>
             <td></td>
             <td>✔</td>
             <td>✔<sup>+</sup></td>
@@ -543,8 +543,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/launches.html" target="_blank">啟動</a>：</strong>
-            在不中斷日常製作的情況下，為未來版本開發內容。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/launches.html" target="_blank">启动次数</a>：</strong>
+            在不中断日常创作的情况下为未来版本开发内容。</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -554,8 +554,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>內容片段：</strong>
-            建立和組織從簡報中分離的編輯內容，以便重複使用。</td>
+            <td><strong>内容片段：</strong>
+            创建和管理与演示文稿脱钩的可编辑内容，以便重复使用。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -565,8 +565,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/experience-fragments-feature-video-use.html" target="_blank">體驗片段</a>：</strong>
-            建立針對案頭、行動裝置和社交頻道最佳化的可重複使用體驗和變數。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/experience-fragments-feature-video-use.html" target="_blank">体验片段</a>：</strong>
+            创建针对桌面、移动和社交渠道优化的可重用体验和变体。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -576,8 +576,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong>內容服務：</strong>
-            從AEM將內容匯出為JSON，以便跨裝置和應用程式使用。</td>
+            <td><strong>内容服务：</strong>
+            将内容从AEM导出为JSON，以便跨设备和应用程序使用。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -587,8 +587,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>Adobe Analytics整合與內容深入分析：</strong>
-                輕鬆整合Adobe Analytics和DTM。 在作者環境中顯示效能資訊。</td>
+            <td><strong>Adobe Analytics集成和内容分析：</strong>
+                轻松集成Adobe Analytics和DTM。 在创作环境中显示性能信息。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -598,8 +598,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/content-targeting-touch.html" target="_blank">Adobe Target整合</a>：</strong>
-            逐步精靈可建立鎖定目標的體驗，以及可重複使用的選件程式庫。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/content-targeting-touch.html" target="_blank">Adobe Target集成</a>：</strong>
+            分步向导可创建目标体验、可重复使用的选件库。</td>
             <td> </td>
             <td> </td>
             <td>✔</td>
@@ -609,8 +609,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/campaign.html" target="_blank">Adobe Campaign整合</a>：</strong>
-            與新一代電子郵件行銷活動解決方案輕鬆整合。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/campaign.html" target="_blank">Adobe Campaign集成</a>：</strong>
+            与新一代电子邮件促销活动解决方案轻松集成。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -620,8 +620,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/using/aem_launch_adobeio_integration.html" target="_blank">Adobe Launch整合</a>：</strong>
-            整合Adobe的新一代標籤管理雲端服務。</td>
+            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/using/aem_launch_adobeio_integration.html" target="_blank">Adobe启动集成</a>：</strong>
+            与Adobe的新一代标签管理云服务集成。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -631,8 +631,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>畫面：</strong>
-            管理數位看板和資訊站體驗。</td>
+            <td><strong>屏幕：</strong>
+            管理数字标牌和网亭的体验。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -642,8 +642,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ecommerce.html" target="_blank">電子商務</a>：</strong>
-            在網路、行動裝置和社交接觸點之間，提供品牌和個人化的購物體驗。
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ecommerce.html" target="_blank">电子商务</a>：</strong>
+            跨Web、移动和社交接触点交付品牌化、个性化的购物体验。
             </td>
             <td>✔</td>
             <td>✔</td>
@@ -655,7 +655,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/overview.html" target="_blank">Communities</a>：</strong>
-            論壇、執行緒評論、活動行事曆和許多其他功能都允許與網站訪客進行深入互動。</td>
+            论坛、线程评论、活动日历和许多其他功能允许与网站访客进行深入互动。</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔<sup>+</sup></td>
@@ -669,13 +669,13 @@ AEM提升與其他Adobe服務整合的能力：
 
 ## Assets功能
 
-以下為AEM所提供之主要Assets功能的矩陣。 其中部分功能已在每個版本的舊版中新增的增量增強功能中引入。
+以下是AEM提供的关键Assets功能列表。 早期版本中引入了其中一些功能，每个版本中添加了增量增强功能。
 
-+ [AEM Assets發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/assets.html)
++ [AEM Assets发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/assets.html)
 
-***✔表示此版本中的功能有重大增強功能。***
+***✔表示此版本中的功能得到了显着增强。***
 
-***✔<sup>+</sup> 表示此功能可透過Service Pack或Feature Pack取得。***
+***✔<sup>+</sup> 表示通过Service Pack或Feature Pack提供的功能。***
 
 <table>
     <thead>
@@ -692,8 +692,8 @@ AEM提升與其他Adobe服務整合的能力：
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets-touch-ui.html" target="_blank">觸控最佳化的UI</a>：</strong>
-            在桌上型電腦或觸控式裝置上管理資產。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets-touch-ui.html" target="_blank">触控优化的UI</a>：</strong>
+            在台式计算机上或触屏设备上管理资产。</td>
             <td> </td>
             <td>✔</td>
             <td>✔<sup>+</sup></td>
@@ -703,8 +703,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/metadata.html" target="_blank">進階中繼資料管理</a>：</strong>
-            中繼資料範本、中繼資料結構編輯器和大量中繼資料編輯。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/metadata.html" target="_blank">高级元数据管理</a>：</strong>
+            元数据模板、元数据架构编辑器和批量元数据编辑。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -714,8 +714,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank">任務</a> 和 <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects-with-workflows.html" target="_blank">工作流程</a> 管理：</strong>
-            運用AEM專案稽核和核准數位資產的預先建立工作流程和任務。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank">任务</a> 和 <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects-with-workflows.html" target="_blank">工作流</a> 管理：</strong>
+            利用AEM项目审阅和批准数字资产的预建工作流和任务。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -725,8 +725,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>擴充性與效能：</strong>
-            增強對大規模擷取、上傳和儲存的支援。</td>
+            <td><strong>可扩展性和性能：</strong>
+            增强了对大规模摄取、上传和存储的支持。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -736,8 +736,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/mac-api-assets.html" target="_blank">Assets HTTP API</a>：</strong>
-            透過HTTP和JSON以程式設計方式與資產互動。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/mac-api-assets.html" target="_blank">资源HTTP API</a>：</strong>
+            通过HTTP和JSON以编程方式与资产交互。</td>
             <td> </td>
             <td> </td>
             <td>✔</td>
@@ -747,8 +747,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/link-sharing.html" target="_blank">連結共用</a>：</strong>
-            無需登入即可輕鬆臨機共用數位資產。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/link-sharing.html" target="_blank">链接共享</a>：</strong>
+            无需登录即可轻松临时共享数字资产。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -759,7 +759,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html" target="_blank">Brand Portal</a>：</strong>
-            雲端服務SAAS解決方案，可順暢共用及發佈數位資產。</td>
+            云服务SAAS解决方案，用于无缝共享和分发数字资产。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -769,8 +769,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/use-assets-across-connected-assets-instances.html" target="_blank">連線資產</a>：</strong>
-            AEM Sites執行個體可順暢地存取和使用其他AEM Assets執行個體的資產。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/use-assets-across-connected-assets-instances.html" target="_blank">连接的资产</a>：</strong>
+            AEM Sites实例可以无缝地访问和使用其他AEM Assets实例中的资产。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -780,8 +780,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/touch-ui-asset-insights.html" target="_blank">Asset Insights</a>：</strong>
-            運用Adobe Analytics來擷取客戶與數位資產的互動，並在AEM中檢視。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/touch-ui-asset-insights.html" target="_blank">资产分析</a>：</strong>
+            利用Adobe Analytics捕获客户对数字资源的交互并在AEM中查看。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -791,8 +791,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/multilingual-assets.html" target="_blank">多語言資產</a>：</strong>
-            使用語言根自動支援資產中繼資料。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/multilingual-assets.html" target="_blank">多语言资产</a>：</strong>
+            使用语言根自动翻译支持资源元数据。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -802,8 +802,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/enhanced-smart-tags.html" target="_blank">智慧標籤與管制</a>：</strong>
-            運用Adobe Sensei自動使用有用的中繼資料標籤影像。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/enhanced-smart-tags.html" target="_blank">智能标记和审核</a>：</strong>
+            利用Adobe Sensei自动使用有用的元数据标记图像。</td>
             <td> </td>
             <td></td>
             <td> </td>
@@ -813,8 +813,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/assets/using/smart-translation-search-feature-video-use.html" target="_blank">智慧型翻譯搜尋</a>：</strong>
-            搜尋AEM Assets時自動翻譯搜尋字詞。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/assets/using/smart-translation-search-feature-video-use.html" target="_blank">智能翻译搜索</a>：</strong>
+            在搜索AEM Assets时自动翻译搜索词。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -824,8 +824,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/indesign.html" target="_blank">Adobe InDesign Server整合</a>：</strong>
-            產生產品目錄。 根據InDesign範本製作手冊、傳單和印刷廣告。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/indesign.html" target="_blank">Adobe InDesign Server集成</a>：</strong>
+            生成产品目录。 根据InDesign模板制作宣传册、传单和印刷广告。</td>
             <td> </td>
             <td> </td>
             <td>✔</td>
@@ -835,8 +835,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/desktop-app/aem-desktop-app.html" target="_blank">AEM案頭應用程式</a>：</strong>
-            將資產同步至本機案頭，以便使用Creative Suite產品進行編輯。
+            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/desktop-app/aem-desktop-app.html" target="_blank">AEM桌面应用程序</a>：</strong>
+            将资源同步到本地桌面以使用Creative Suite产品进行编辑。
             </td>
             <td> </td>
             <td> </td>
@@ -848,7 +848,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe Imaging Library</a>：</strong>
-                <br> 用於高品質檔案操控的Photoshop和AcrobatPDF資料庫。</td>
+                <br> Photoshop和AcrobatPDF库用于高质量文件操作。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -858,8 +858,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://www.adobe.com/cn/creativecloud/business/enterprise/adobe-asset-link.html" target="_blank">Adobe資產連結</a>：</strong>
-            直接從Adobe建立雲端應用程式存取AEM Assets。</td>
+            <td><strong><a href="https://www.adobe.com/cn/creativecloud/business/enterprise/adobe-asset-link.html" target="_blank">Adobe资源链接</a>：</strong>
+            直接从Adobe创建云应用程序访问AEM Assets。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -869,8 +869,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html" target="_blank">Adobe Stock整合</a>：</strong>
-            直接從AEM無縫存取及使用Adobe Stock影像。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html" target="_blank">Adobe Stock集成</a>：</strong>
+            直接从AEM无缝访问和使用Adobe Stock图像。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -884,9 +884,9 @@ AEM提升與其他Adobe服務整合的能力：
 
 ### AEM Assets Dynamic Media
 
-***✔<sup>+</sup> 此版本大幅增強功能。***
+***✔<sup>+</sup> 显着增强了此版本中的功能。***
 
-***✔<sup>SP</sup> 表示此功能可透過Service Pack或Feature Pack取得。***
+***✔<sup>SP</sup> 表示通过Service Pack或Feature Pack提供的功能。***
 
 
 <table>
@@ -904,8 +904,8 @@ AEM提升與其他Adobe服務整合的能力：
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets.html" target="_blank">影像</a>：</strong>
-            以不同大小和格式（包括智慧型裁切）動態傳送影像。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets.html" target="_blank">成像</a>：</strong>
+            动态地提供不同大小和格式的图像，包括智能裁切。</td>
             <td> </td>
             <td></td>
             <td></td>
@@ -915,8 +915,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/video-profiles.html" target="_blank">視訊</a>：</strong>
-            進階視訊編碼和自我調整視訊串流</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/video-profiles.html" target="_blank">视频</a>：</strong>
+            高级视频编码和自适应视频流</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -926,8 +926,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/interactive-images.html" target="_blank">互動媒體</a>：</strong>
-            建立互動式橫幅、包含可點按內容的影片，以展示重要選件。
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/interactive-images.html" target="_blank">交互式媒体</a>：</strong>
+            创建交互式横幅、包含可点击内容的视频以展示关键选件。
             </td>
             <td> </td>
             <td> </td>
@@ -938,8 +938,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>集合(<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/image-sets.html" target="_blank">影像</a>， <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/spin-sets.html" target="_blank">迴轉</a>， <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/mixed-media-sets.html" target="_blank">混合媒體</a>)：</strong>
-            允許使用者縮放、平移、旋轉和模擬360度的檢視體驗。</td>
+            <td><strong>集(<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/image-sets.html" target="_blank">图像</a>， <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/spin-sets.html" target="_blank">旋转</a>， <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/mixed-media-sets.html" target="_blank">混合媒体</a>)：</strong>
+            允许用户缩放、平移、旋转和模拟360度的观看体验。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -949,8 +949,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">檢視者</a>：</strong>
-            自訂品牌豐富型媒體播放器和預設集，並支援不同熒幕/裝置。</td>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">查看器</a>：</strong>
+            自定义品牌富媒体播放器和预设，支持不同的屏幕/设备。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -960,8 +960,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/delivering-dynamic-media-assets.html" target="_blank">傳遞</a>：</strong>
-            透過HTTP/2通訊協定連結或內嵌Dynamic Media內容及傳遞的彈性選項。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/delivering-dynamic-media-assets.html" target="_blank">投放</a>：</strong>
+            通过HTTP/2协议链接或嵌入Dynamic Media内容和交付的灵活选项。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -971,8 +971,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>從Scene7升級至Dynamic Media：</strong>
-            可移轉主要資產並繼續使用現有S7 URL。</td>
+            <td><strong>从Scene7升级到Dynamic Media：</strong>
+            能够迁移主控资源并继续使用现有S7 URL。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -986,11 +986,11 @@ AEM提升與其他Adobe服務整合的能力：
 
 ## Forms功能
 
-以下是AEM提供的重要AEM Forms附加元件功能對照表。 其中部分功能已在每個版本的舊版中新增的增量增強功能中引入。
+以下是AEM提供的关键AEM Forms附加功能列表。 早期版本中引入了其中一些功能，每个版本中添加了增量增强功能。
 
-***✔<sup>+</sup> 此版本大幅增強功能。***
+***✔<sup>+</sup> 显着增强了此版本中的功能。***
 
-***✔<sup>SP</sup> 表示此功能可透過Service Pack或Feature Pack取得。***
+***✔<sup>SP</sup> 表示通过Service Pack或Feature Pack提供的功能。***
 
 <table>
     <thead>
@@ -1007,8 +1007,8 @@ AEM提升與其他Adobe服務整合的能力：
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html" target="_blank">最適化Forms編輯器</a>：</strong>
-            根據裝置和瀏覽器設定，建立引人入勝、回應式且最適化的表單。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html" target="_blank">自适应Forms编辑器</a>：</strong>
+            根据设备和浏览器设置创建引人入胜、响应式且自适应表单。</td>
             <td> </td>
             <td>✔</td>
             <td>✔<sup>+</sup></td>
@@ -1018,8 +1018,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html" target="_blank">記錄檔案</a>：</strong>
-            建立檔案，以確保資料擷取體驗或可供列印版本長期儲存。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html" target="_blank">记录文档</a>：</strong>
+            创建文档以确保数据捕获体验或打印就绪版本的长期存储。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -1029,8 +1029,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html" target="_blank">主題編輯器</a>：</strong>
-            建立可重複使用的主題來設定表單元件和面板的樣式。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html" target="_blank">主题编辑器</a>：</strong>
+            创建可重复使用的主题以设置表单组件和面板的样式。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1040,8 +1040,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html" target="_blank">範本編輯器</a>：</strong>
-            標準化及實作最適化表單的最佳作法。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html" target="_blank">模板编辑器</a>：</strong>
+            实现自适应表单最佳实践的标准化和实施。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1051,8 +1051,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#EnhancedintegrationwithAdobeSign" target="_blank">Acrobat Sign整合</a>：</strong>
-            允許部署以Acrobat Sign整合式表單為基礎的簽署情境。</td>
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#EnhancedintegrationwithAdobeSign" target="_blank">Acrobat Sign集成</a>：</strong>
+            允许部署基于Acrobat Sign集成表单的签名方案。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1062,8 +1062,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/cm-overview.html" target="_blank">通訊管理</a>：</strong>
-            透過AEM Forms，您可以建立、管理和提供個人化和互動式客戶信函。
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/cm-overview.html" target="_blank">通信管理</a>：</strong>
+            借助AEM Forms，您可以创建、管理和提供个性化的交互式客户信函。
             </td>
             <td> </td>
             <td>✔</td>
@@ -1074,8 +1074,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#AEMFormsdataintegration" target="_blank">協力廠商資料整合</a>：</strong>
-            透過資料整合，系統會根據使用者在表單中的輸入，從不同的資料來源擷取資料。 在提交表單時，擷取的資料會回寫至資料來源。
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#AEMFormsdataintegration" target="_blank">第三方数据集成</a>：</strong>
+            使用数据集成，根据表单中的用户输入从不同的数据源获取数据。 在提交表单时，捕获的数据将写回数据源。
             </td>
             <td> </td>
             <td> </td>
@@ -1086,8 +1086,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#FormscentricAEMWorkflowsforAEMFormsonOSGi" target="_blank">Forms處理的工作流程（在OSGi上）</a>：</strong>
-            簡化表單核准流程的部署。</td>
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#FormscentricAEMWorkflowsforAEMFormsonOSGi" target="_blank">用于Forms处理的工作流（在OSGi上）</a>：</strong>
+            简化了表单批准流程的部署。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1097,8 +1097,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/user-guide.html?topic=/experience-manager/6-5/forms/morehelp/integrations.ug.js" target="_blank">與Marketing Cloud整合</a>：</strong>
-            與Adobe Analytics和Adobe Target整合，以強化和測量客戶體驗。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/user-guide.html?topic=/experience-manager/6-5/forms/morehelp/integrations.ug.js" target="_blank">与Marketing Cloud集成</a>：</strong>
+            与Adobe Analytics和Adobe Target集成，以增强和衡量客户体验。</td>
             <td> </td>
             <td> </td>
             <td>✔</td>
@@ -1108,8 +1108,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-managing-forms.html" target="_blank">表單管理員</a>：</strong>
-            管理所有表單/檔案/信函的單一位置，例如啟用分析、翻譯、A/B測試、稽核和發佈。
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-managing-forms.html" target="_blank">表单管理器</a>：</strong>
+            单个位置管理所有表单/文档/通信，如启用分析、翻译、A/B测试、审阅和发布。
             </td>
             <td> </td>
             <td>✔</td>
@@ -1120,8 +1120,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/aem-forms-app.html" target="_blank">AEM Forms應用程式</a>：</strong>
-            允許在iOS、Android或Windows上的應用程式內進行線上/離線表單處理。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/aem-forms-app.html" target="_blank">AEM Forms应用程序</a>：</strong>
+            允许在iOS、Android或Windows上的应用程序中处理在线/离线表单。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -1131,8 +1131,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/adaptive-document.html" target="_blank">互動式通訊</a>：</strong>
-            使用互動式元素(例如圖表（以前稱為Adaptive Documents）)建立豐富通訊（例如目標陳述式）。</td>
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/adaptive-document.html" target="_blank">交互式通信</a>：</strong>
+            使用交互式元素(如图表（以前称为自适应文档）)创建丰富的通信（如目标语句）。</td>
             <td> </td>
             <td> </td>
             <td>✔</td>
@@ -1142,8 +1142,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong>Forms處理的工作流程(J2EE)：</strong>
-            使用直覺式IDE建置複雜的表單/以檔案為中心的工作流程。</td>
+            <td><strong>Forms处理的工作流(J2EE)：</strong>
+            使用直观的IDE构建复杂的表单/以文档为中心的工作流。</td>
             <td></td>
             <td>✔</td>
             <td>✔</td>
@@ -1153,8 +1153,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#EnhancedDocumentSecurity" target="_blank">AEM Forms檔案安全性</a>：</strong>
-            安全地存取和授權PDF和Office檔案。
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#EnhancedDocumentSecurity" target="_blank">AEM Forms Document Security</a>：</strong>
+            对PDF和Office文档的安全访问和授权。
             </td>
             <td> </td>
             <td>✔</td>
@@ -1165,8 +1165,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#Simplifiedauthoringexperience" target="_blank">測試架構</a>：</strong>
-            使用Calvin框架和Chrome外掛程式來支援和偵錯調適型表單。</td>
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#Simplifiedauthoringexperience" target="_blank">测试框架</a>：</strong>
+            使用Calvin框架和Chrome插件支持和调试自适应表单。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1180,17 +1180,17 @@ AEM提升與其他Adobe服務整合的能力：
 
 ## Communities功能
 
-以下是AEM提供的重要AEM Communities附加元件功能對照表。 其中部分功能已在每個版本的舊版中新增的增量增強功能中引入。
+以下是AEM提供的关键AEM Communities附加功能列表。 早期版本中引入了其中一些功能，每个版本中添加了增量增强功能。
 
-***✔<sup>+</sup> 此版本大幅增強功能。***
+***✔<sup>+</sup> 显着增强了此版本中的功能。***
 
-***✔<sup>SP</sup> 表示此功能可透過Service Pack或Feature Pack取得。***
+***✔<sup>SP</sup> 表示通过Service Pack或Feature Pack提供的功能。***
 
 <table>
     <thead>
         <tr>
             <td> </td>
-            <td>社群功能</td>
+            <td>Communities功能</td>
             <td>6.0</td>
             <td>6.1</td>
             <td>6.2</td>
@@ -1201,8 +1201,8 @@ AEM提升與其他Adobe服務整合的能力：
     </thead>
     <tbody>
         <tr>
-            <td rowspan="7">社群功能</td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/forum.html" target="_blank">論壇</a>：</strong> （社交元件架構）建立新主題，或檢視、關注、搜尋和移動現有主題。</td>
+            <td rowspan="7">社区功能</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/forum.html" target="_blank">论坛</a>：</strong> （社交组件框架）创建新主题，或查看、关注、搜索和移动现有主题。</td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
             <td>✔</td>
@@ -1212,8 +1212,8 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td>
-                <p><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/working-with-qna.html" target="_blank">QnA</a>：</strong>
-                詢問、檢視和回答問題。</p>
+                <p><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/working-with-qna.html" target="_blank">问题与解答</a>：</strong>
+                询问、查看和回答问题。</p>
             </td>
             <td></td>
             <td>✔<sup>+</sup></td>
@@ -1224,8 +1224,8 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td>
-                <strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/blog-feature.html" target="_blank">部落格</a>：</strong>
-                在發佈端建立部落格和評論。
+                <strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/blog-feature.html" target="_blank">博客</a>：</strong>
+                在发布端创建博客文章和评论。
             </td>
             <td> </td>
             <td>✔<sup>+</sup></td>
@@ -1236,8 +1236,8 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td>
-                <strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/ideation-feature.html" target="_blank">構思</a>：</strong>
-                建立並與社群分享想法，或檢視、關注並評論現有想法。
+                <strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/ideation-feature.html" target="_blank">构思</a>：</strong>
+                创建想法并与社区分享想法，或查看、关注现有想法并对其发表评论。
             </td>
             <td> </td>
             <td> </td>
@@ -1248,8 +1248,8 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td>
-                <strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/calendar.html" target="_blank">行事曆</a>：</strong>
-                （社交元件架構）為網站訪客提供社群事件資訊。
+                <strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/calendar.html" target="_blank">日历</a>：</strong>
+                （社交组件框架）为网站访客提供社区事件信息。
             </td>
             <td>✔<sup>+</sup></td>
             <td>✔<sup>+</sup></td>
@@ -1260,8 +1260,8 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td>
-                <strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/file-library.html" target="_blank">檔案庫</a>：</strong>
-                上傳、管理和下載社群網站內的檔案。</td>
+                <strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/file-library.html" target="_blank">文件库</a>：</strong>
+                在社区站点中上传、管理和下载文件。</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -1270,8 +1270,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/users.html#AboutCommunityGroups" target="_blank">使用者群組</a>：
-            </strong>一組使用者可以屬於成員群組，也可以被集體指派角色。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/users.html#AboutCommunityGroups" target="_blank">用户组</a>：
+            </strong>一组用户可以属于成员组，并且可以集体分配角色。</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -1281,8 +1281,8 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong> </strong></td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resource.html" target="_blank">指定任務</a>：</strong>
-            建立並指派學習資源給社群成員。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resource.html" target="_blank">分配</a>：</strong>
+            创建学习资源并将其分配给社区成员。</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -1292,8 +1292,8 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td rowspan="5">启用</td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/catalog.html" target="_blank">目錄</a> 和 <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resource.html" target="_blank">資源管理</a>：</strong>
-            從目錄存取啟用資源。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/catalog.html" target="_blank">目录</a> 和 <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resource.html" target="_blank">资源管理</a>：</strong>
+            从目录访问启用资源。</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -1302,8 +1302,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resources.html#CreateaLearningPath" target="_blank">學習路徑管理</a>：</strong>
-            管理課程或啟用資源群組。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resources.html#CreateaLearningPath" target="_blank">学习路径管理</a>：</strong>
+            管理课程或支持资源组。</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -1312,8 +1312,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/reports.html#main-pars_text_1739724213" target="_blank">啟用報告</a>：</strong>
-            有關啟用資源和學習路徑的報告。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/reports.html#main-pars_text_1739724213" target="_blank">启用报表</a>：</strong>
+            有关启用资源和学习路径的报告。</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -1322,8 +1322,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resources.html#main-pars_text_899882038" target="_blank">啟用時的參與</a>：</strong>
-            新增啟用資源的註解。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resources.html#main-pars_text_899882038" target="_blank">参与启用</a>：</strong>
+            添加有关启用资源的注释。</td>
             <td> </td>
             <td> </td>
             <td>✔<sup>+</sup></td>
@@ -1332,8 +1332,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/analytics.html" target="_blank">啟用Analytics</a>：</strong>
-            視訊分析、進度報告和指派報告</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/analytics.html" target="_blank">启用Analytics</a>：</strong>
+            视频分析、进度报告和分配报告</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -1343,8 +1343,8 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td rowspan="8">Commons</td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/comments.html" target="_blank">註解</a> 和附件：</strong>
-            （社交元件架構）身為社群成員，可分享關於Communities網站內容的意見與知識。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/comments.html" target="_blank">注释</a> 和附件：</strong>
+            （社交组件框架）作为社区成员，共享关于社区站点内容的意见和知识。</td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
             <td>✔<sup>+</sup></td>
@@ -1353,8 +1353,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>內容片段轉換：</strong>
-            將UGC貢獻內容轉換為內容片段。</td>
+            <td><strong>内容片段转换：</strong>
+            将UGC贡献内容转换为内容片段。</td>
             <td> </td>
             <td> </td>
             <td>✔<sup>+</sup></td>
@@ -1363,8 +1363,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/reviews.html" target="_blank">評論</a>：</strong>
-                （社交元件架構）身為社群成員，可使用評論和評等功能組合來檢閱內容。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/reviews.html" target="_blank">审核</a>：</strong>
+                （社交组件框架）作为社区成员，使用评论和评级功能的组合审核一段内容。</td>
             <td>✔<sup>+</sup></td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -1373,7 +1373,7 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/rating.html" target="_blank">評等</a>：/strong&gt; （社交元件架構）身為社群成員，對內容內容進行評分。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/rating.html" target="_blank">评级</a>：/strong&gt;（社交组件框架）作为社区成员对一段内容进行评级。</td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
             <td>✔</td>
@@ -1383,7 +1383,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/voting.html" target="_blank">投票</a>：</strong>
-                （社交元件架構）身為社群成員的某段內容可投贊成票或反對票。</td>
+                （社交组件框架）作为社区成员对一段内容进行投票或投票否决。</td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
             <td>✔</td>
@@ -1392,8 +1392,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/tag-ugc.html" target="_blank">標籤</a>：</strong>
-            將標籤（關鍵字或標籤）與內容附加以快速找到內容。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/tag-ugc.html" target="_blank">标记</a>：</strong>
+            将标记（关键字或标签）与内容连接以快速定位内容。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1402,8 +1402,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/search.html" target="_blank">搜尋</a>：</strong>
-            預測性和建議性搜尋。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/search.html" target="_blank">搜索</a>：</strong>
+            预测性搜索和提示性搜索。</td>
             <td> </td>
             <td> </td>
             <td>✔<sup>+</sup></td>
@@ -1412,8 +1412,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/translate-ugc.html" target="_blank">翻譯</a>：</strong>
-            使用者產生內容的機器翻譯。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/translate-ugc.html" target="_blank">翻译</a>：</strong>
+            用户生成内容的机器翻译。</td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
             <td>✔<sup>+</sup></td>
@@ -1423,8 +1423,8 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td rowspan="10">管理</td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/create-site.html" target="_blank">網站管理</a>：</strong>
-            建立具有社群功能的網站。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/create-site.html" target="_blank">站点管理</a>：</strong>
+            创建具有社区功能的站点。</td>
             <td> </td>
             <td>✔</td>
             <td>✔<sup>+</sup></td>
@@ -1433,8 +1433,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/sites.html" target="_blank">範本</a>：</strong>
-                <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/sites.html" target="_blank">網站</a> 和 <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/tools-groups.html" target="_blank">群組</a> 以精靈為基礎建立完整功能的社群網站的範本。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/sites.html" target="_blank">模板</a>：</strong>
+                <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/sites.html" target="_blank">站点</a> 和 <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/tools-groups.html" target="_blank">群组</a> 用于创建功能齐全的社区站点的基于向导的模板。</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -1443,8 +1443,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>可編輯的範本：</strong>
-            讓社群管理員能夠使用AEM可編輯範本建置豐富的體驗。</td>
+            <td><strong>可编辑的模板：</strong>
+            使社区管理员能够使用AEM可编辑模板构建丰富的体验。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1453,8 +1453,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/creating-groups.html" target="_blank">群組或子社群</a>：</strong>
-            在社群網站內動態建立子社群。
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/creating-groups.html" target="_blank">组或子社区</a>：</strong>
+            在社区站点内动态创建子社区。
             </td>
             <td> </td>
             <td>✔<sup>+</sup></td>
@@ -1464,8 +1464,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/in-context.html" target="_blank">稽核</a>：</strong>
-            稽核使用者產生的內容。
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/in-context.html" target="_blank">审核</a>：</strong>
+            审核用户生成的内容。
             </td>
             <td>✔</td>
             <td>✔</td>
@@ -1475,8 +1475,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/moderation.html" target="_blank">大量稽核</a>：</strong>
-            管理主控台，大量管理使用者產生的內容。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/moderation.html" target="_blank">批量审核</a>：</strong>
+            用于批量管理用户生成内容的审核控制台。</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -1485,8 +1485,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/moderate-ugc.html#CommonModerationConcepts" target="_blank">垃圾郵件偵測和髒話篩選器</a>：</strong>
-            自動偵測垃圾郵件。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/moderate-ugc.html#CommonModerationConcepts" target="_blank">垃圾邮件检测和脏话过滤器</a>：</strong>
+            自动垃圾邮件检测。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1495,8 +1495,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/members.html" target="_blank">成員管理</a>：</strong>
-            從成員管理區域管理使用者設定檔和群組。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/members.html" target="_blank">成员管理</a>：</strong>
+            从成员管理区域管理用户配置文件和组。</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -1505,8 +1505,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/overview.html#main-pars_text_866731966" target="_blank">回應式設計</a>：</strong>
-            AEM Communities網站有回應。
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/overview.html#main-pars_text_866731966" target="_blank">响应式设计</a>：</strong>
+            AEM Communities网站具有响应性。
             </td>
             <td> </td>
             <td>✔</td>
@@ -1517,7 +1517,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/analytics.html" target="_blank">分析</a>：</strong>
-            與Adobe Analytics整合，以取得社群網站使用情形的重要深入分析。</td>
+            与Adobe Analytics集成，以洞察社区站点使用情况的关键信息。</td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
             <td>✔</td>
@@ -1527,8 +1527,8 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td rowspan="4">成员</td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/advanced.html" target="_blank">評分和徽章</a>：</strong>
-            (由Adobe Sensei提供支援的進階評分)將社群成員識別為專家並給予獎勵。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/advanced.html" target="_blank">评分和徽章</a>：</strong>
+            (由Adobe Sensei提供支持的高级评分)将社区成员识别为专家并给予奖励。</td>
             <td> </td>
             <td> </td>
             <td>✔</td>
@@ -1537,8 +1537,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/activities.html" target="_blank">活動</a> 和 <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/notifications.html" target="_blank">通知</a>：</strong>
-            檢視最近的活動資料流，並取得有關感興趣事件的通知。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/activities.html" target="_blank">活动</a> 和 <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/notifications.html" target="_blank">通知</a>：</strong>
+            查看最近的活动流，并获取有关感兴趣事件的通知。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1547,8 +1547,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td> </td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/configure-messaging.html" target="_blank">訊息</a>：</strong>
-            直接傳送訊息給使用者和群組。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/configure-messaging.html" target="_blank">消息</a>：</strong>
+            直接传送消息给用户和群组。</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -1557,8 +1557,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/social-login.html" target="_blank">社交登入</a>：</strong>
-            使用其Facebook或Twitter帳戶登入。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/social-login.html" target="_blank">社交登录</a>：</strong>
+            使用他们的Facebook或Twitter帐户登录。</td>
             <td> </td>
             <td> </td>
             <td>✔<sup>+</sup></td>
@@ -1568,8 +1568,8 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td rowspan="5">Platform</td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/working-with-srp.html" target="_blank">MSRP （Mongo儲存）</a>：</strong>
-            使用者產生的內容(UGC)會直接保留在本機MongoDB執行個體中</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/working-with-srp.html" target="_blank">MSRP （Mongo存储）</a>：</strong>
+            用户生成的内容(UGC)直接保留在本地MongoDB实例中</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
@@ -1578,8 +1578,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/working-with-srp.html" target="_blank">DSRP （資料庫儲存）</a>：</strong>
-            使用者產生的內容(UGC)會直接保留在本機MySQL資料庫執行個體中。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/working-with-srp.html" target="_blank">DSRP（数据库存储）</a>：</strong>
+            用户生成的内容(UGC)直接保留在本地MySQL数据库实例中。</td>
             <td> </td>
             <td> </td>
             <td>✔<sup>+</sup></td>
@@ -1588,8 +1588,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/working-with-srp.html" target="_blank">SRP （雲端儲存空間）</a>：</strong>
-                使用者產生的內容(UGC)會從遠端儲存在由Adobe託管和管理的雲端服務中。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/working-with-srp.html" target="_blank">SRP（云存储）</a>：</strong>
+                用户生成的内容(UGC)远程保留在由Adobe托管和管理的云服务中。</td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
             <td>✔</td>
@@ -1599,7 +1599,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/working-with-srp.html" target="_blank"><strong>JSRP</a>：</strong>
-                社群內容儲存在JCR中，UGC可從發佈該內容的author （或publish）執行個體存取。</td>
+                社区内容存储在JCR中，可从发布该内容的创作（或发布）实例访问UGC。</td>
             <td> </td>
             <td> </td>
             <td>✔<sup>+</sup></td>
@@ -1608,8 +1608,8 @@ AEM提升與其他Adobe服務整合的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/sync.html" target="_blank">使用者和群組同步</a>：</strong>
-            使用發佈伺服器陣列拓撲時，跨發佈執行個體同步化使用者和群組。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/sync.html" target="_blank">用户和组同步</a>：</strong>
+            使用发布场拓扑时，跨发布实例同步用户和组。</td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
             <td>✔</td>
@@ -1620,10 +1620,10 @@ AEM提升與其他Adobe服務整合的能力：
     </tbody>
 </table>
 
-AEM Communities透過發行版本新增增強功能，讓組織能夠透過以下方式與其使用者互動並提升其使用能力：
+AEM Communities通过各个版本添加了增强功能，使组织能够通过以下方式与其用户互动并使其用户受益：
 
-+ **@mention** 支援使用者產生的內容。
-+ 改善協助工具，透過 **鍵盤導覽** 在 **啟用** 元件。
-+ 已改善 **大量仲裁** 使用 **自訂篩選器**.
-+ **可編輯的範本** 讓社群管理員能夠在AEM中建立豐富的社群體驗。
-+ 使用者現在可以傳送 **大量直接訊息** 至群組的所有成員。
++ **@mention** 支持用户生成的内容。
++ 通过改进辅助功能 **键盘导航** 在 **启用** 组件。
++ 已改进 **批量审核** 使用 **自定义筛选条件**.
++ **可编辑的模板** 使社区管理员能够在AEM中构建丰富的社区体验。
++ 用户现在可以发送 **批量发送直邮** 组的所有成员。

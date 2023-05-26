@@ -1,6 +1,6 @@
 ---
-title: 在AEM中開發Sling模型匯出工具
-description: 此技術逐步解說會逐步解說如何設定AEM以與Sling模型匯出工具搭配使用、使用匯出工具架構增強現有的Sling模型以轉譯為JSON，以及如何使用匯出工具選項和Jackson註解來進一步自訂輸出。
+title: 在AEM中开发Sling模型导出程序
+description: 本技术演练将逐步介绍如何设置AEM以用于Sling模型导出器、使用导出器框架增强现有Sling模型以呈现为JSON，以及如何使用导出器选项和Jackson注释进一步自定义输出。
 version: 6.4, 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
@@ -19,56 +19,56 @@ ht-degree: 0%
 
 ---
 
-# 開發Sling模型匯出工具
+# 开发Sling模型导出程序
 
-此技術逐步解說會逐步解說如何設定AEM以與Sling模型匯出工具搭配使用、使用匯出工具架構增強現有的Sling模型以轉譯為JSON，以及如何使用匯出工具選項和Jackson註解來進一步自訂輸出。
+本技术演练将逐步介绍如何设置AEM以用于Sling模型导出器、使用导出器框架增强现有Sling模型以呈现为JSON，以及如何使用导出器选项和Jackson注释进一步自定义输出。
 
-Sling模型匯出工具在Sling模型v1.3.0中引入。此新功能可讓您將新註釋新增至Sling模型，以定義如何將模型匯出為不同的Java物件，或更常見的是，匯出為不同的格式，例如JSON。
+Sling模型导出器在Sling模型v1.3.0中引入。这项新功能允许向Sling模型添加新注释，这些注释定义如何将模型导出为不同的Java对象，或者更常见的是，导出为不同的格式，如JSON。
 
-Apache Sling提供Jackson JSON匯出程式，以涵蓋將Sling模型匯出為JSON物件以供程式化Web消費者（例如其他Web服務和JavaScript應用程式）使用的最常見案例。
+Apache Sling提供了Jackson JSON导出器，以涵盖将Sling模型导出为JSON对象以供程序化Web使用者（如其他Web服务和JavaScript应用程序）使用的最常见案例。
 
-## 設定Sling模型匯出程式的AEM
+## 为Sling模型导出器配置AEM
 
 >[!VIDEO](https://video.tv.adobe.com/v/16862?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 是 [!DNL Apache Sling] 專案且未直接與AEM產品發行週期繫結。 [!DNL Sling Model Exporter] 與AEM 6.3和更新版本相容。
+[!DNL Sling Model Exporter] 是 [!DNL Apache Sling] 而不是直接捆绑到AEM产品发行周期。 [!DNL Sling Model Exporter] 与AEM 6.3及更高版本兼容。
 
-## 的使用案例 [!DNL Sling Model Exporter]
+## 的用例 [!DNL Sling Model Exporter]
 
 >[!VIDEO](https://video.tv.adobe.com/v/16863?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 非常適合運用已包含商業邏輯的Sling模型，這些商業邏輯可透過HTL （或以前的JSP）支援HTML轉譯，並顯示與JSON相同的商業表示以供程式化Web服務或JavaScript應用程式使用。
+[!DNL Sling Model Exporter] 非常适合利用已包含业务逻辑的Sling模型，这些业务逻辑通过HTL（或以前的JSP）支持HTML呈现，并显示与JSON相同的业务表示以供程序化Web服务或JavaScript应用程序使用。
 
-## 建立Sling模型匯出程式
+## 创建Sling模型导出程序
 
 >[!VIDEO](https://video.tv.adobe.com/v/16864?quality=12&learn=on)
 
-正在啟用 [!DNL Exporter] 支援 [!DNL Sling Model] 與新增一樣簡單 `@Exporter` Java類別的註解。
+正在启用 [!DNL Exporter] 支持 [!DNL Sling Model] 与添加 `@Exporter` Java类的注释。
 
-## 套用Sling模型匯出工具選項
+## 应用Sling模型导出程序选项
 
 >[!VIDEO](https://video.tv.adobe.com/v/16865?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 支援將每個模型的匯出工具選項傳遞至匯出工具實作，以驅動 [!DNL Sling Model] 最後匯出。 這些選項通常會「全域」套用至 [!DNL Sling Model] 會匯出，而非根據資料點，而後者可透過下文所述的內嵌註解完成。
+[!DNL Sling Model Exporter] 支持将每个模型的导出程序选项传递给导出程序实施，以驱动 [!DNL Sling Model] 最后导出。 这些选项通常“全局”应用于 [!DNL Sling Model] 导出，而不是按数据点导出，后者可通过下面所述的内联注释完成。
 
-[!DNL Jackson Exporter] 選項包括：
+[!DNL Jackson Exporter] 选项包括：
 
-* [對應程式功能選項](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
-* [序列化功能選項](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
+* [映射器功能选项](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
+* [序列化功能选项](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
 
-## 套用 [!DNL Jackson] 註解
+## 正在应用 [!DNL Jackson] 批注
 
 >[!VIDEO](https://video.tv.adobe.com/v/16866?quality=12&learn=on)
 
-匯出工具實作可能也支援可內巢狀用在 [!DNL Sling Model] 類別，可提供更精細的控制層級來控制資料的匯出方式。
+导出程序实施还支持可内联应用的注释 [!DNL Sling Model] 类，可以提供更细的控制数据导出方式。
 
 * [[!DNL Jackson Exporter] 注释](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)
 
-## 檢視程式碼 {#view-the-code}
+## 查看代码 {#view-the-code}
 
 [SampleSlingModelExporter.java](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleSlingModelExporter.java)
 
-## 支援材料 {#supporting-materials}
+## 支持材料 {#supporting-materials}
 
 * [[!DNL Jackson Mapper] 功能Javadoc](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
 * [[!DNL Jackson Serialization] 功能Javadoc](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)

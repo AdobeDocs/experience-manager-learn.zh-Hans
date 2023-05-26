@@ -1,6 +1,6 @@
 ---
-title: 瞭解不同型別的PDF forms和檔案
-description: PDF實際上是一系列檔案格式，本文介紹對表單開發人員而言重要和相關的PDF型別。
+title: 了解不同类型的PDF forms和文档
+description: PDF实际上是一系列文件格式，本文介绍了对表单开发人员重要且相关的PDF类型。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -19,103 +19,103 @@ ht-degree: 0%
 
 # PDF
 
-可攜式檔案格式(PDF)實際上是一系列檔案格式，本文會詳細說明與表單開發人員最相關的格式。 各種PDF型別的許多技術細節和標準都在不斷演化和變化。 其中部分格式與規格為國際標準化組織(ISO)標準，部分為Adobe所擁有的特定智慧財產。
+可移植文档格式(PDF)实际上是一系列文件格式，本文详细介绍了与表单开发人员最相关的文件格式。 各种PDF类型的许多技术细节和标准都在不断演变和变化。 其中一些格式和规范是国际标准化组织(ISO)标准，一些是Adobe拥有的特定知识产权。
 
-本文說明如何建立各種型別的PDF。 它可協助您瞭解如何使用及為何要使用各種。 所有這些型別在用於檢視和使用PDF的Premier使用者端工具(Adobe Acrobat DC)中都能發揮最佳效能。
+本文介绍如何创建各种类型的PDF。 它有助于您了解如何使用以及为何使用每一个。 所有这些类型在用于查看和使用PDF的Premier Client工具(Adobe Acrobat DC)中都能发挥最佳效果。
 
-以下範例為Acrobat DC中的PDF/A檔案。
+以下是Acrobat DC中的PDF/A文件示例。
 
 ![Pdfa](assets/pdfa-file-in-acrobat.png)
 
-範例檔案可以是 [已從此處下載](assets/pdf-file-types.zip)
+示例文件可以是 [已从此处下载](assets/pdf-file-types.zip)
 
-## XML Forms架構PDF(XFAPDF)
+## XML Forms架构PDF(XFAPDF)
 
-Adobe使用術語XFAPDF表單，來指稱您使用AEM Forms Designer建立的互動式和動態Forms。 您使用Designer建立的Forms和檔案是以Adobe的XML Forms架構(XFA)為基礎。 在許多方面，XFAPDF檔案格式比HTML檔案更接近傳統PDF檔案。 例如，下列程式碼會向您展示XFAPDF檔案中簡單文字物件的外觀。
+Adobe使用术语XFAPDF表单来指代您使用AEM Forms Designer创建的交互式和动态Forms。 使用Designer创建的Forms和文件基于Adobe的XML Forms架构(XFA)。 在许多方面，XFAPDF文件格式与HTML文件相比更接近PDF文件。 例如，以下代码显示了简单文本对象在XFAPDF文件中的外观。
 
-![文字欄位](assets/text-field.JPG)
+![文本字段](assets/text-field.JPG)
 
-XFA Forms以XML為基礎。 此良好的架構和彈性的格式可讓AEM Forms伺服器將您的設計工具檔案轉換為不同的格式，包括傳統的PDF、PDF/A和HTML。 您可以選取「版面配置編輯器」的「XML來源」標籤，在Designer中檢視Forms的完整XML結構。 您可以在AEM Forms Designer中建立靜態和動態XFA Forms。
+XFA Forms基于XML。 这种结构良好且灵活的格式使AEM Forms Server能够将您的Designer文件转换为各种格式，包括传统的PDF、PDF/A和HTML。 您可以通过选择布局编辑器的“XML源”选项卡，在Designer中查看Forms的完整XML结构。 您可以在AEM Forms Designer中创建静态和动态XFA Forms。
 
-## 靜態PDF
+## 静态PDF
 
-靜態XFAPDF forms版面在執行階段從不變更，但可為使用者提供互動式。 以下是靜態XFAPDF forms的一些優點：
+静态XFAPDF forms布局在运行时从不更改，但可为用户交互操作。 以下是静态XFAPDF forms的一些优势：
 
-* 靜態XFAPDF forms版面在執行階段從不變更，但可為使用者提供互動式。
-* 靜態Forms支援Acrobat的評論和標籤工具。
-* 靜態Forms可讓您匯入和匯出Acrobat註解。
-* 靜態Forms支援字型子設定，此技術可在AEM Forms伺服器上完成。
-* 靜態Forms可使用現代瀏覽器隨附的內建PDF檢視器呈現。
-
->[!NOTE]
->
-> 您可以將XDP儲存為PDF靜態PDF表單，以使用AEM Forms Designer建立靜態Adobe
-
-
-
-### 動態Forms
-
-動態XFAPDF可在執行階段變更其配置，因此不支援註釋和標籤功能。 不過，動態XFAPDF確實提供下列優點：
-
-* 動態表單支援可變更表單版面配置與分頁的使用者端指令碼。 例如，如果您將Purchase Order.xdp儲存為動態表單，它會展開並編頁，以因應無窮無盡的資料量
-* 動態表單在執行階段支援表單的所有屬性，而靜態表單僅支援子集
+* 静态XFAPDF forms布局在运行时从不更改，但可为用户交互操作。
+* 静态Forms支持Acrobat的注释和标记工具。
+* 静态Forms允许您导入和导出Acrobat注释。
+* 静态Forms支持font子设置，这是一种可以在AEM Forms Server上完成的技术。
+* 可以使用现代浏览器附带的内置PDF查看器呈现静态Forms。
 
 >[!NOTE]
 >
-> 您可以將XDP儲存為Adobe動態XML表單，以使用AEM Forms Designer建立動態PDF
+> 您可以将XDP另存为“静态PDF表单”，从而使用AEM Forms Designer创建AdobePDF
+
+
+
+### 动态Forms
+
+动态XFAPDF可在运行时更改其布局，因此不支持注释和标记功能。 但是，动态XFAPDF具有以下优势：
+
+* 动态表单支持可更改表单布局和分页的客户端脚本。 例如，如果您将Purchase Order.xdp另存为动态表单，它将进行扩展和分页，以适应无限量的数据
+* 动态表单在运行时支持表单的所有属性，而静态表单仅支持一个子集
 
 >[!NOTE]
 >
-> 動態表單無法使用現代瀏覽器的內建pdf檢視器呈現。
+> 您可以将XDP另存为Adobe动态XML表单，从而使用AEM Forms Designer创建动态PDF
 
-### PDF檔案(傳統PDF)
+>[!NOTE]
+>
+> 无法使用现代浏览器的内置的PDF查看器呈现动态表单。
 
-認證檔案可為PDF檔案和Forms收件者提供對其真實性和完整性的更多保證。
+### PDF文件(传统PDF)
 
-最受歡迎和普及的PDF格式是傳統的PDF檔案。 建立傳統PDF檔案有許多方式，包括使用Acrobat和許多協力廠商工具。 Acrobat提供下列所有方式來建立傳統PDF檔案。 如果您尚未安裝Acrobat，則電腦上可能看不到這些選項。
+经认证的文档为PDF文档和Forms接收者增加了对其真实性和完整性的保证。
 
-* 擷取案頭應用程式的列印資料流：選擇製作應用程式的「列印」命令，並選取Adobe PDF印表機圖示。 您將建立檔案的PDF檔案，而不是列印的檔案復本
-* 搭配Microsoft Office應用程式使用Acrobat PDFMaker外掛程式：安裝Acrobat時，它會將Adobe PDF功能表新增至Microsoft Office應用程式，並將圖示新增至Office功能區。 您可以使用這些新增的功能，直接在Microsoft Office中建立PDF檔案
-* 使用Acrobat Distiller將Postscript和封裝的Postscript (EPS)檔案轉換為PDF：Distiller通常用於列印發佈和其他需要從Postscript格式轉換為PDF格式的工作流程
-* 本質上，傳統PDF與XFAPDF非常不同。 它沒有相同的XML結構，而且由於它是透過擷取檔案的列印資料流建立的，所以傳統的PDF是靜態且唯讀的檔案。
+最流行和普及的PDF格式是传统的PDF文件。 创建传统PDF文件的方法很多，包括使用Acrobat和许多第三方工具。 Acrobat提供了以下所有创建传统PDF文件的方法。 如果您未安装Acrobat，则可能无法在计算机上看到这些选项。
 
-認證檔案可為PDF檔案及表單收件者提供其真實性和完整性的額外保證。
+* 通过捕获桌面应用程序的打印流：选择创作应用程序的“打印”命令，然后选择Adobe PDF打印机图标。 您创建的不是文档的打印副本，而是文档的PDF文件
+* 通过将Acrobat PDFMaker插件与Microsoft Office应用程序结合使用：安装Acrobat时，它会将Adobe PDF菜单添加到Microsoft Office应用程序，并将图标添加到Office功能区。 您可以使用这些添加的功能直接在Microsoft Office中创建PDF文件
+* 通过使用Acrobat Distiller将Postscript和封装的Postscript (EPS)文件转换为PDF： Distiller通常用于打印发布和其他需要从Postscript格式转换为PDF格式的工作流
+* 本质上，传统PDF与XFAPDF非常不同。 它没有相同的XML结构，并且由于它是通过捕获文件的打印流创建的，因此传统的PDF是静态的只读文件。
+
+经认证的文档为PDF文档提供并表单接收者增加了对其真实性和完整性的保证。
 
 ### Acroforms
 
-Acroform是Adobe的舊版互動式表單技術，可追溯至Acrobat第3版。 Adobe提供 [Acrobat Forms API參考](assets/FormsAPIReference.pdf)日期為2003年5月，目的是提供此技術的技術細節。 Acroform是下列專案的組合：
+Acroform是Adobe的旧交互式表单技术；它们可追溯到Acrobat版本3。 Adobe提供 [Acrobat Forms API参考](assets/FormsAPIReference.pdf)日期为2003年5月，目的是提供此技术的技术详细信息。 Acroform是以下项目的组合：
 
-* 定義表單靜態版面與圖形的傳統PDF。
-* 使用Adobe Acrobat程式的表單工具錨定在頂端的互動式表單欄位。 這些表單工具是AEM Forms Designer中可用工具的一小部分。
+* 定义表单的静态布局和图形的传统PDF。
+* 使用Adobe Acrobat程序的表单工具固定到顶部的交互式表单字段。 这些表单工具只是AEM Forms Designer中可用功能的一小部分。
 
-### PDF/A (封存PDF)
+### PDF/A(存档PDF)
 
-PDF/A (封存PDF)以傳統PDF的檔案儲存優點為基礎，有許多特定細節，可強化長期封存。 傳統的PDF檔案格式為長期檔案儲存提供了許多好處。 PDF的精巧特性有助於輕鬆傳輸並節省空間，而其結構良好的特性可啟用強大的索引和搜尋功能。 傳統PDF廣泛支援中繼資料，而PDF在支援不同電腦環境方面擁有悠久的歷史。
+PDF/A (归档PDF)建立在传统PDF的文档存储优势之上，具有许多增强长期归档的特定细节。 传统的PDF文件格式为长期文档存储提供了许多好处。 PDF的紧凑性便于传输并节约空间，其良好的结构特性支持强大的索引和搜索功能。 传统PDF对元数据的支持非常广泛，而PDF在支持各种计算机环境方面有着悠久的历史。
 
-就像PDF一樣，PDF/A是ISO標準規格。 它由包括資訊與影像管理協會(AIIM)、國家印刷裝置協會(NPES)和美國法院管理辦公室在內的一個工作組所開發。 由於PDF/A規格的目標是提供長期的封存格式，因此會省略許多PDF功能，讓檔案可自我包含。 以下是有關規格的幾個要點，這些要點可增強PDF/A檔案的長期可重複性：
+与PDF一样，PDF/A也是ISO标准规范。 它是由一个包括信息和图像管理协会(AIIM)、国家印刷设备协会(NPES)和美国法院行政办公室的工作队制定的。 由于PDF/A规范的目标是提供长期的存档格式，因此省略了许多PDF功能，因此文件可以自包含。 以下是有关规范的一些要点，这些要点增强了PDF/A文件的长期可重现性：
 
-* 所有內容都必須包含在檔案中，而且外部來源（例如超連結、字型或軟體程式）不能有相依性。
-* 所有字型都必須內嵌，而且它們必須是擁有電子檔案無限使用授權的字型。
-* 不允許JavaScript
-* 不允許透明度
-* 不允許加密
-* 不允許音訊和視訊內容
-* 必須以與裝置無關的方式定義色彩空間
-* 所有中繼資料都必須遵循特定標準
+* 所有内容都必须包含在文件中，并且不能依赖于外部源，如超链接、字体或软件程序。
+* 所有字体都必须嵌入，并且它们必须是拥有电子文档无限使用许可证的字体。
+* 不允许使用JavaScript
+* 不允许透明
+* 不允许加密
+* 不允许音频和视频内容
+* 必须以与设备无关的方式定义颜色空间
+* 所有元数据都必须遵循某些标准
 
-### 檢視PDF/A檔案
+### 查看PDF/文件
 
-範例檔案中的兩個檔案是從相同的Microsoft Word檔案建立的。 一個建立為傳統PDF，另一個建立為PDF/A檔案。 在Acrobat Professional中開啟這兩個檔案：
+示例文件中的两个文件是从同一Microsoft Word文件创建的。 一个作为传统PDF创建，另一个作为PDF/A文件创建。 在Acrobat Professional中打开这两个文件：
 
 * simpleWordFile.pdf
 * simpleWordFilePDFA.pdf
 
-雖然檔案看起來相同，但PDF/A檔案會開啟，頂端有一個藍色列，表示您正在以PDF/A模式檢視此檔案。 這個藍色列是Acrobat的檔案訊息列，當您開啟特定型別的PDF檔案時，就會看到這個訊息列。
+尽管文档看起来相同，但PDF/A文件打开，顶部有一个蓝色条，表示您正在以PDF/A模式查看此文档。 此蓝色条是Acrobat的文档消息栏，打开特定类型的PDF文件时将会看到该消息栏。
 
 ![Pdf-img](assets/pdfa-message.png)
 
-檔案訊息列包含指示，以及可能有助於您完成任務的按鈕。 它標示有色彩，當您開啟特殊型別的PDF(例如這個PDF/A檔案)以及經過認證和數位簽署的PDF時，您會看到藍色。 當您參與PDF稽核時，PDF forms的橫條會變更為紫色，而黃色會變更為橫條。
+文档消息栏包括帮助您完成任务的说明和可能的按钮。 它标有颜色，当您打开特殊类型的PDF(如此PDF/A文件)以及经过认证和数字签名的PDF时，您会看到蓝色。 当您参与PDF审核时，PDF forms的栏会变为紫色，而黄色会变为黄色。
 
 >[!NOTE]
 >
-> 如果您按一下「啟用編輯」，您會將此檔案從PDF/A規範中移除。
+> 如果单击“启用编辑”，则会使此文档不符合PDF/A规范。

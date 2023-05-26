@@ -1,6 +1,6 @@
 ---
 title: 部署SPA for AEM GraphQL
-description: 瞭解單頁應用程式(SPA) AEM Headless部署的部署考量事項。
+description: 了解单页应用程序(SPA) AEM Headless部署的部署注意事项。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -19,79 +19,79 @@ ht-degree: 1%
 
 # AEM Headless SPA部署
 
-AEM Headless單頁應用程式(SPA)部署涉及使用React或Vue等架構建立的JavaScript型應用程式，這些架構會以Headless方式使用並與AEM中的內容互動。
+AEM无头单页应用程序(SPA)部署涉及使用框架（如React或Vue）构建的基于JavaScript的应用程序，这些框架以Headless方式使用AEM中的内容并与之交互。
 
-部署以Headless方式與AEM互動的SPA時，需要託管SPA並使其可透過網頁瀏覽器存取。
+部署以Headless方式与AEM交互的SPA涉及托管SPA并使其可通过Web浏览器访问。
 
-## 託管SPA
+## 托管SPA
 
-SPA由原生網頁資源的集合組成： **HTML、CSS和JavaScript**. 這些資源產生於 _建置_ 程式(例如， `npm run build`)並部署至主機，以供一般使用者使用。
+SPA由一系列本机Web资源组成： **HTML、CSS和JavaScript**. 这些资源是在以下期间生成的 _生成_ 进程(例如， `npm run build`)，并部署到主机以供最终用户使用。
 
-有各種 **託管** 選項視您組織的需求而定：
+有多种类型 **托管** 选项取决于贵组织的要求：
 
-1. **雲端服務供應商** 例如 **Azure** 或 **AWS**.
+1. **云提供商** 例如 **Azure** 或 **AWS**.
 
-2. **內部部署** 在公司內託管 **資料中心**
+2. **内部部署** 在公司中托管 **数据中心**
 
-3. **前端託管平台** 例如 **AWS Amplify**， **Azure應用程式服務**， **Netlify**， **赫羅庫**， **Vercel**&#x200B;等。
+3. **前端托管平台** 例如 **AWS放大**， **Azure应用程序服务**， **Netlify**， **赫罗库**， **韦尔塞尔**&#x200B;等。
 
-## 部署設定
+## 部署配置
 
-託管與AEM Headless互動的SPA時，主要考量為透過AEM網域（或主機）存取SPA，或是在其他網域上存取。  原因是SPA是在網頁瀏覽器中執行的網頁應用程式，因此受網頁瀏覽器安全性原則的約束。
+在托管与AEM Headless交互的SPA时，主要考虑是通过AEM域（或主机）访问SPA，还是将其放在其他域中。  原因是SPA是在Web浏览器中运行的Web应用程序，因此受Web浏览器安全策略的约束。
 
-### 共用網域
+### 共享域
 
-SPA和AEM會共用網域，當兩者均由來自相同網域的一般使用者存取時。 例如：
+当SPA和AEM均由来自同一域的最终用户访问时，它们会共享域。 例如：
 
-+ AEM可透過以下方式存取： `https://wknd.site/`
-+ SPA存取方式： `https://wknd.site/spa`
++ 通过以下方式访问AEM： `https://wknd.site/`
++ 通过以下方式访问SPA `https://wknd.site/spa`
 
-由於AEM和SPA都可從相同網域存取，因此網頁瀏覽器可讓SPA對AEM Headless端點執行XHR而不需要CORS，並允許共用HTTP Cookie (例如AEM) `login-token` Cookie)。
+由于AEM和SPA都可从同一域访问，因此Web浏览器允许SPA对AEM Headless端点执行XHR而不需要CORS，并允许共享HTTP Cookie(例如AEM) `login-token` Cookie)。
 
-如何在共用網域上路由SPA和AEM流量，由您決定：具有多種來源的CDN、具有反向Proxy的HTTP伺服器、直接在AEM中託管SPA等。
+如何在共享域上路由SPA和AEM流量，具体取决于您：具有多个源的CDN、具有反向代理的HTTP服务器、直接在AEM中托管SPA等等。
 
-以下是SPA生產部署所需的部署設定(當託管在與AEM相同的網域上時)。
+以下是SPA生产部署所需的部署配置，当托管在与AEM相同的域上时。
 
-| SPA連線至 | AEM Author | AEM 发布 | AEM預覽 |
+| SPA连接到 | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
-| [Dispatcher篩選器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
-| 跨原始資源共用(CORS) | ✘ | ✘ | ✘ |
-| AEM主機 | ✘ | ✘ | ✘ |
+| [Dispatcher过滤器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
+| 跨源资源共享(CORS) | ✘ | ✘ | ✘ |
+| AEM主机 | ✘ | ✘ | ✘ |
 
-### 不同的網域
+### 不同的域
 
-當一般使用者從不同網域存取SPA和AEM時，這些網域會有所不同。 例如：
+当最终用户从不同域访问SPA和AEM时，这两个域各不相同。 例如：
 
-+ AEM可透過以下方式存取： `https://wknd.site/`
-+ SPA存取方式： `https://wknd-app.site/`
++ 通过以下方式访问AEM： `https://wknd.site/`
++ 通过以下方式访问SPA `https://wknd-app.site/`
 
-由於AEM和SPA可從不同網域存取，因此網頁瀏覽器會強制實施安全性原則，例如 [跨原始資源共用(CORS)](./configurations/cors.md)，並防止共用HTTP Cookie (例如AEM `login-token` Cookie)。
+由于AEM和SPA可从不同域访问，因此Web浏览器会强制实施安全策略，例如 [跨源资源共享(CORS)](./configurations/cors.md)，并阻止共享HTTP Cookie(例如AEM `login-token` Cookie)。
 
-以下是SPA生產部署所需的部署設定(託管在不同於AEM的網域上)。
+以下是SPA生产部署所需的部署配置(当托管在不同于AEM的域上时)。
 
-| SPA連線至 | AEM Author | AEM 发布 | AEM預覽 |
+| SPA连接到 | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
-| [Dispatcher篩選器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
-| [跨原始資源共用(CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
-| [AEM主機](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
+| [Dispatcher过滤器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
+| [跨源资源共享(CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
+| [AEM主机](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
-#### 不同網域上的SPA部署範例
+#### 不同域上的SPA部署示例
 
-在此範例中，SPA會部署至Netlify網域(`https://main--sparkly-marzipan-b20bf8.netlify.app/`)和SPA會使用AEM發佈網域中的AEM GraphQL API (`https://publish-p65804-e666805.adobeaemcloud.com`)。 以下熒幕擷取畫面強調CORS需求。
+在此示例中，SPA部署到Netlify域(`https://main--sparkly-marzipan-b20bf8.netlify.app/`)和SPA使用AEM发布域中的AEM GraphQL API (`https://publish-p65804-e666805.adobeaemcloud.com`)。 以下屏幕截图突出显示CORS要求。
 
-1. SPA是從Netlify網域提供，但會向不同網域上的AEM GraphQL API發出XHR呼叫。 此跨網站請求需要 [CORS](./configurations/cors.md) 在AEM上設定，以允許來自Netlify網域的請求存取其內容。
+1. SPA从Netlify域提供，但会向其他域上的AEM GraphQL API发起XHR调用。 此跨站点请求需要 [CORS](./configurations/cors.md) AEM ，以允许来自Netlify域的请求访问其内容。
 
-   ![由SPA &amp; AEM主機提供的SPA要求 ](assets/spa/cors-requirement.png)
+   ![从SPA &amp; AEM主机提供的SPA请求 ](assets/spa/cors-requirement.png)
 
-2. 檢查AEM GraphQL API的XHR請求， `Access-Control-Allow-Origin` 存在，向網頁瀏覽器表示AEM允許來自此Netlify網域的請求存取其內容。
+2. 检查对AEM GraphQL API的XHR请求， `Access-Control-Allow-Origin` 存在，指示AEM允许来自此Netlify域的请求访问其内容。
 
-   如果AEM [CORS](./configurations/cors.md) 遺失或不包含Netlify網域，網頁瀏覽器會失敗XHR要求，並回報CORS錯誤。
+   如果AEM [CORS](./configurations/cors.md) 缺失或不包含Netlify域，Web浏览器会失败XHR请求，并报告CORS错误。
 
-   ![CORS回應標頭AEM GraphQL API](assets/spa/cors-response-headers.png)
+   ![CORS响应标头AEM GraphQL API](assets/spa/cors-response-headers.png)
 
-## 單頁應用程式範例
+## 单页应用程序示例
 
-Adobe提供在React中編碼的範例單頁應用程式。
+Adobe提供了一个在React中编码的示例单页应用程序。
 
 <div class="columns is-multiline">
 <!-- React app -->
@@ -99,17 +99,17 @@ Adobe提供在React中編碼的範例單頁應用程式。
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="../example-apps/react-app.md" title="React應用程式" tabindex="-1">
-                   <img class="is-bordered-r-small" src="../example-apps/assets/react-app/react-app-card.png" alt="React應用程式">
+               <a href="../example-apps/react-app.md" title="React应用程序" tabindex="-1">
+                   <img class="is-bordered-r-small" src="../example-apps/assets/react-app/react-app-card.png" alt="React应用程序">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/react-app.md" title="React應用程式">React應用程式</a></p>
-               <p class="is-size-6">以React撰寫的範例單頁應用程式，會使用AEM Headless GraphQL API的內容。</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/react-app.md" title="React应用程序">React应用程序</a></p>
+               <p class="is-size-6">一个使用AEM Headless GraphQL API内容的示例单页应用程序，使用React编写。</p>
                <a href="../example-apps/react-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視範例</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                </a>
            </div>
        </div>
@@ -120,17 +120,17 @@ Adobe提供在React中編碼的範例單頁應用程式。
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="../example-apps/next-js.md" title="Next.js應用程式" tabindex="-1">
-                   <img class="is-bordered-r-small" src="../example-apps/assets/next-js/next-js-card.png" alt="Next.js應用程式">
+               <a href="../example-apps/next-js.md" title="Next.js应用程序" tabindex="-1">
+                   <img class="is-bordered-r-small" src="../example-apps/assets/next-js/next-js-card.png" alt="Next.js应用程序">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/next-js.md" title="Next.js應用程式">Next.js應用程式</a></p>
-               <p class="is-size-6">以Next.js撰寫的範例單頁應用程式，會使用AEM Headless GraphQL API的內容。</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/next-js.md" title="Next.js应用程序">Next.js应用程序</a></p>
+               <p class="is-size-6">以Next.js编写的示例单页应用程序，使用AEM Headless GraphQL API中的内容。</p>
                <a href="../example-apps/next-js.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視範例</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                </a>
            </div>
        </div>

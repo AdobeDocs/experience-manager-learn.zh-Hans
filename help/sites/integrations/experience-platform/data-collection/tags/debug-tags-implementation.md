@@ -1,6 +1,6 @@
 ---
-title: 對標籤實作除錯
-description: 介紹對標籤實作進行偵錯的一些常用工具和技術。 瞭解如何使用瀏覽器的開發人員主控台和Experience Platform Debugger擴充功能，識別及疑難排解Tags實作的重大問題。
+title: 调试标记实施
+description: 介绍调试标记实施的一些常用工具和技术。 了解如何使用浏览器的开发人员控制台和Experience Platform调试器扩展功能，识别Tags实施的关键方面并执行相应的故障诊断。
 topics: integrations
 audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
@@ -19,40 +19,40 @@ ht-degree: 0%
 
 ---
 
-# 對標籤實作除錯 {#debug-tags-implementation}
+# 调试标记实施 {#debug-tags-implementation}
 
-介紹用於偵錯Tags實作的常見工具和技術。 瞭解如何使用瀏覽器的開發人員主控台和Experience Platform Debugger擴充功能，識別及疑難排解Tags實作的重大問題。
+介绍用于调试Tags实施的常用工具和技术。 了解如何使用浏览器的开发人员控制台和Experience Platform调试器扩展功能，识别Tags实施的关键方面并执行相应的故障诊断。
 
 >[!VIDEO](https://video.tv.adobe.com/v/38567?quality=12&learn=on)
 
-## 透過Satellite物件進行使用者端除錯
+## 通过Satellite对象进行客户端调试
 
-使用者端除錯有助於驗證Tag屬性規則載入或執行順序。 每當將Tag屬性新增至網站時， `_satellite` JavaScript物件存在於瀏覽器中，以促進使用者端事件和資料追蹤。
+客户端调试有助于验证Tag属性规则的加载或执行顺序。 每当Tag属性添加到网站时， `_satellite` JavaScript对象存在于浏览器中，便于客户端事件和数据跟踪。
 
-若要啟用使用者端除錯，請呼叫 `setDebug(true)` 上的方法 `_satellite` 物件。
+要启用客户端调试，请调用 `setDebug(true)` 上的方法 `_satellite` 对象。
 
-1. 開啟瀏覽器主控台，然後執行下列命令。
+1. 打开浏览器控制台，然后运行以下命令。
 
    ```javascript
        _satellite.setDebug(true);
    ```
 
-1. 重新載入AEM網站頁面，並確認主控台記錄檔顯示 _規則已引發_ 訊息如下。
+1. 重新加载AEM站点页面，并验证控制台日志显示 _已触发规则_ 下面这样的消息。
 
-   ![製作和發佈頁面上的標籤屬性](assets/satellite-object-debugging.png)
+   ![创作和发布页面上的标记属性](assets/satellite-object-debugging.png)
 
-## 透過Adobe Experience Platform Debugger進行偵錯
+## 通过Adobe Experience Platform调试器进行调试
 
-Adobe提供Adobe Experience Platform Debugger [Chrome擴充功能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 和 [Firefox附加元件](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) 偵錯、瞭解及深入分析整合。
+Adobe提供了Adobe Experience Platform Debugger [Chrome扩展](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 和 [Firefox加载项](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) 调试、了解和深入了解集成。
 
-1. 開啟Adobe Experience Platform Debugger擴充功能，然後在發佈執行個體上開啟網站頁面
+1. 打开Adobe Experience Platform Debugger扩展，然后在发布实例上打开站点页面
 
-1. 在 **Adobe Experience Platform Debugger >摘要> Adobe Experience Platform標籤** 區段，確認您的Tag屬性詳細資訊，例如，名稱、版本、建置日期、環境和擴充功能。
+1. 在 **Adobe Experience Platform Debugger >摘要> Adobe Experience Platform标记** 部分，验证标记属性的详细信息，例如名称、版本、内部版本日期、环境和扩展。
 
-   ![Adobe Experience Platform Debugger和標籤屬性詳細資料](assets/tag-property-details.png)
+   ![Adobe Experience Platform Debugger和标记属性详细信息](assets/tag-property-details.png)
 
 ## 其他资源 {#additional-resources}
 
-+ [Adobe Experience Platform Debugger簡介](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
 
-+ [Satellite物件參考](https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html)
++ [卫星对象引用](https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html)

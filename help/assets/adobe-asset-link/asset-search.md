@@ -1,6 +1,6 @@
 ---
-title: 資產搜尋
-description: 透過AdobeAsset Link面板，創意使用者可以使用關鍵字搜尋AEM Assets中儲存的資產，或在特定位置下執行搜尋。 除了基本搜尋選項外，Adobe資產連結也可讓您使用資產，在AEM Assets中搜尋視覺上類似的結果。 視覺搜尋由Adobe Sensei的機器學習所支援，會顯示與目標影像相關的審美特徵結果。
+title: 资产搜索
+description: 借助AdobeAsset Link面板，创意用户可以使用关键字搜索存储在AEM Assets中的资源，或在特定位置下执行搜索。 除了基本搜索选项之外，Adobe资源链接还允许您使用资源在AEM Assets中搜索视觉上相似的结果。 借助带有Adobe Sensei的机器学习技术，可视化搜索可显示包含与目标图像相关的美学特征的结果。
 feature: Adobe Asset Link
 version: Cloud Service
 thumbnail: 34260.jpg
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 資產搜尋 {#asset-search}
+# 资产搜索 {#asset-search}
 
-透過AdobeAsset Link面板，創意使用者可以使用關鍵字搜尋AEM Assets中儲存的資產，或在特定位置下執行搜尋。 除了基本搜尋選項外，Adobe資產連結也可讓您使用資產，在AEM Assets中搜尋視覺上類似的結果。 視覺搜尋由Adobe Sensei的機器學習所支援，會顯示與目標影像相關的審美特徵結果。
+借助AdobeAsset Link面板，创意用户可以使用关键字搜索存储在AEM Assets中的资源，或在特定位置下执行搜索。 除了基本搜索选项之外，Adobe资源链接还允许您使用资源在AEM Assets中搜索视觉上相似的结果。 借助带有Adobe Sensei的机器学习技术，可视化搜索可显示包含与目标图像相关的美学特征的结果。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)

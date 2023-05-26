@@ -1,6 +1,6 @@
 ---
-title: 交換JWT以取得存取權杖
-description: 將JSON Web權杖(JWT)與Adobe IMS API交換為AEM存取權杖。
+title: 用JWT交换访问令牌
+description: 将JSON Web令牌(JWT)与Adobe IMS API交换为AEM访问令牌。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -17,12 +17,12 @@ ht-degree: 0%
 
 ---
 
-# 交換JWT以取得存取權杖
+# 用JWT交换访问令牌
 
 
-在上一步中建立的JWT會透過Adobe IMS API換取存取權杖，然後可以使用它來存取AEMas a Cloud Service。 若要請求存取權杖，請將包含JWT、client_id、client_secret的POST請求傳送至IMS驗證服務。
+在上一步中创建的JWT会与Adobe IMS API交换访问令牌，然后该令牌可用于访问AEMas a Cloud Service。 要请求访问令牌，请将包含JWT、client_id、client_secret的POST请求发送到IMS身份验证服务。
 
-下列程式碼已用於產生存取Token的Exchange JWT
+以下代码用于为访问令牌生成Exchange JWT
 
 ```java
 public String getAccessToken() {

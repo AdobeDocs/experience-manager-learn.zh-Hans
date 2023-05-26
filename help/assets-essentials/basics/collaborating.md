@@ -1,6 +1,6 @@
 ---
-title: Assets Essentials中的共同作業
-description: 瞭解如何使用評論、註解和工作在資產管理內部共同作業。
+title: Assets Essentials中的协作
+description: 了解如何使用评论、注释和任务在资产管理内部协作。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# Assets Essentials中的共同作業
+# Assets Essentials中的协作
 
-瞭解如何使用評論、註解和工作在資產管理上共同作業。
+了解如何使用评论、注释和任务协作进行资产管理。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335856?quality=12&learn=on)

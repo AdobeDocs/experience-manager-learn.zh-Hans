@@ -1,6 +1,6 @@
 ---
-title: 設定資產面板
-description: 將「摺疊式面板」版面配置面板新增至「資產」面板。
+title: “配置资源”面板
+description: 将折叠布局面板添加到资源面板。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 設定資產面板
+# “配置资源”面板
 
-使用帶有摺疊式佈局的可重複面板擷取申請者的資產。
+使用带有折叠布局的可重复面板捕获申请人的资产。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336473?quality=12&learn=on)

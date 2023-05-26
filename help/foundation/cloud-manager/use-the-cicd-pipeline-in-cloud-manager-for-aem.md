@@ -1,6 +1,6 @@
 ---
-title: 在Adobe Cloud Manager中使用CI/CD管道
-description: Adobe Cloud Manager提供簡單但彈性的自助CI/CD管道，可讓AEM專案團隊快速、安全且一致地將程式碼部署至AMS中代管的所有AEM環境。 本影片系列會說明如何在失敗和成功案例中設定和執行Cloud Manager的CI/CD管道。
+title: 在AdobeCloud Manager中使用CI/CD管线
+description: AdobeCloud Manager提供了一个简单但灵活的自助CI/CD管道，允许AEM项目团队快速、安全且一致地将代码部署到在AMS中托管的所有AEM环境。 本视频系列探讨如何在失败和成功情况下设置和执行Cloud Manager的CI/CD管道。
 sub-product: Experience Manager Cloud Manager, Experience Manager
 topics: cicd, performance, best-practices, development, governance
 doc-type: feature video
@@ -19,43 +19,43 @@ ht-degree: 2%
 
 ---
 
-# 在Adobe Cloud Manager中使用CI/CD管道
+# 在AdobeCloud Manager中使用CI/CD管线
 
-Adobe Cloud Manager提供簡單但彈性的自助CI/CD管道，可讓AEM專案團隊快速、安全且一致地將程式碼部署至AMS中代管的所有AEM環境。 本影片系列會說明如何在失敗和成功案例中設定和執行Cloud Manager的CI/CD管道。
+AdobeCloud Manager提供了一个简单但灵活的自助CI/CD管道，允许AEM项目团队快速、安全且一致地将代码部署到在AMS中托管的所有AEM环境。 本视频系列探讨如何在失败和成功情况下设置和执行Cloud Manager的CI/CD管道。
 
 ## 简介
 
-Cloud Manager和Cloud Manager計畫的簡介。
+Cloud Manager和Cloud Manager程序简介。
 
 >[!NOTE]
 >
->透過這些影片，組建、測試和部署時間都已加快，以縮短影片播放時間。 根據專案大小、AEM執行個體數量和UAT流程，完整的管道執行通常需要45分鐘或更長時間（包括強制性的30分鐘效能測試）。
+>通过这些视频，加快了构建、测试和部署时间，从而减少了视频播放时间。 根据项目大小、AEM实例数和UAT流程，完整的管道执行通常需要45分钟或更长时间（包括强制性的30分钟性能测试）。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23082?quality=12&learn=on)
 
-## 設定CI/CD管道
+## 设置CI/CD管道
 
-本影片會說明如何在Cloud Manager中設定計畫的管道。
+本视频探讨了在Cloud Manager中为项目设置管道。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23083?quality=12&learn=on)
 
-## 管道執行失敗
+## 管道执行失败
 
-本影片探討如何使用程式碼執行CI/CD管道，該程式碼會使用 **[!DNL yellow]** 存放庫分支。
+本视频探讨了如何使用代码执行CI/CD管道，该代码未通过Cloud Manager所需的质量检查，使用的是 **[!DNL yellow]** 存储库分支。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23084?quality=12&learn=on)
 
-## 管道執行成功
+## 管道执行成功
 
-本影片探討如何使用程式碼成功執行CI/CD管道，該程式碼透過Cloud Manager的必需品質檢查，使用 **[!DNL master]** 存放庫分支。
+本视频探讨了如何使用代码成功执行CI/CD管道，代码通过Cloud Manager所需的质量检查，使用 **[!DNL master]** 存储库分支。
 
-本影片也會介紹 [!UICONTROL 活動] Cloud Manager中的主控台，允許重新進入作用中的執行，或檢視已完成或失敗的執行。
+此视频还介绍了 [!UICONTROL 活动] cloud Manager中的控制台，允许重新进入活动执行，或查看已完成的或失败的执行。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23085?quality=12&learn=on)
 
-## 支援材料
+## 支持材料
 
-* [Cloud Manager使用手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
-* [下載程式碼掃描 [!DNL SonarQube] 規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)
-   * *連結區段底部可用的XLSX*
-* [[!DNL SonarQube] Java™規則索引](https://rules.sonarsource.com/java/)
+* [Cloud Manager用户指南](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+* [下载代码扫描 [!DNL SonarQube] 规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)
+   * *链接部分底部的XLSX*
+* [[!DNL SonarQube] Java™规则索引](https://rules.sonarsource.com/java/)

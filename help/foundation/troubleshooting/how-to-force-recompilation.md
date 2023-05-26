@@ -1,6 +1,6 @@
 ---
-title: 如何強制重新編譯所有Sling指令碼jsps、Java和Sightly
-description: 強制重新編譯jsp的步驟
+title: 如何强制重新编译所有Sling脚本jsps、Java和Sightly
+description: 强制重新编译jsp的步骤
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何強制重新編譯所有Sling指令碼jsps、Java和Sightly
+# 如何强制重新编译所有Sling脚本jsps、Java和Sightly
 
-*本影片逐步解說強制重新編譯所有Sling指令碼jsps、Java和Sightly的步驟。*
+*本视频介绍强制重新编译所有Sling脚本jsps、Java和Sightly的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335464?quality=12&learn=on)

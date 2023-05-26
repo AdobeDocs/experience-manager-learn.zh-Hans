@@ -1,6 +1,6 @@
 ---
-title: 開始使用AEM Headless - GraphQL
-description: 瞭解Experience ManagerGraphQL API及其功能。
+title: AEM Headless入门 — GraphQL
+description: 了解Experience ManagerGraphQL API及其功能。
 feature: Content Fragments, GraphQL API, APIs
 topic: Headless, Content Management
 role: Developer
@@ -19,18 +19,18 @@ ht-degree: 11%
 
 {{aem-headless-trials-promo}}
 
-內容片段的AEM GraphQL API支援Headless CMS案例，其中外部使用者端應用程式會使用AEM中管理的內容呈現體驗。
+内容片段的AEM GraphQL API支持Headless CMS方案，其中外部客户端应用程序使用AEM中管理的内容呈现体验。
 
-現代化的內容傳送API是Javascript型前端應用程式效率和效能的關鍵。 使用REST API會帶來挑戰：
+现代化的内容交付API对于基于Javascript的前端应用程序的效率和性能至关重要。 使用REST API会带来一些挑战：
 
-* 一次擷取一個物件的大量請求
-* 通常「超量傳遞」內容，這表示應用程式收到的內容多於其需求
+* 一次获取一个对象的大量请求
+* 通常“超额交付”内容，这意味着应用程序收到的内容多于其需要的内容
 
-為克服這些挑戰，GraphQL提供查詢式API，讓使用者端只要查詢AEM所需的內容，並使用單一API呼叫進行接收。
+为了克服这些挑战，GraphQL提供了基于查询的API，允许客户端仅查询AEM所需的内容，并使用单个API调用接收。
 
 >[!VIDEO](https://video.tv.adobe.com/v/328618?quality=12&learn=on)
 
-這部影片會概略介紹在AEM中實作的GraphQL API。 AEM中的GraphQL API主要是為了將AEM內容片段的傳送給下游應用程式，作為Headless部署的一部分。
+此视频概述了在AEM中实现的GraphQL API。 AEM中的GraphQL API主要用于将AEM内容片段的交付给下游应用程序，作为Headless部署的一部分。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_overview"
@@ -38,23 +38,23 @@ ht-degree: 11%
 >abstract="了解如何使用 GraphQL 交付内容片段。"
 >additional-url="https://video.tv.adobe.com/v/328618" text="AEM 中的 GraphQL 概述"
 
-## AEM Headless GraphQL影片系列
+## AEM Headless GraphQL视频系列
 
-透過內容片段和AEM GraphQL API及開發工具的深入逐步解說，瞭解AEM GraphQL功能。
+通过内容片段和AEM GraphQL API及开发工具的深入演练了解AEM GraphQL功能。
 
-* [AEM Headless GraphQL影片系列](./video-series/modeling-basics.md)
+* [AEM Headless GraphQL视频系列](./video-series/modeling-basics.md)
 
-## AEM Headless GraphQL實作教學課程
+## AEM Headless GraphQL实践教程
 
-透過AEM GraphQL API建置使用內容片段的React應用程式，探索AEM GraphQL功能。
+通过构建通过AEM GraphQL API使用内容片段的React应用程序来探索AEM GraphQL功能。
 
-* [AEM Headless GraphQL實作教學課程](./multi-step/overview.md)
+* [AEM Headless GraphQL实践教程](./multi-step/overview.md)
 
-## AEM GraphQL與AEM Content Services
+## AEM GraphQL与AEM内容服务
 
-|  | AEM GRAPHQL API | AEM內容服務 |
+|  | AEM GRAPHQL API | AEM内容服务 |
 |--------------------------------|:-----------------|:---------------------|
-| 結構描述定義 | 結構化內容片段模型 | AEM Components |
-| 内容 | 内容片段 | AEM Components |
-| 內容探索 | 依GraphQL查詢 | 依AEM頁面 |
-| 傳遞格式 | GRAPHQL JSON | AEM ComponentExporter JSON |
+| 架构定义 | 结构化内容片段模型 | AEM组件 |
+| 内容 | 内容片段 | AEM组件 |
+| 内容发现 | 按GraphQL查询 | 按AEM页 |
+| 投放格式 | GRAPHQL JSON | AEM ComponentExporter JSON |

@@ -1,7 +1,7 @@
 ---
-title: 使用AEM Forms的Acroform
+title: 包含AEM Forms的Acroforms
 seo-title: Merge Adaptive Form data with Acroform
-description: 整合Acroforms與AEM Forms的教學課程第3部分。 在您的系統上測試工作流程與最適化表單。
+description: 将Acroforms与AEM Forms集成的教程的第3部分。 在系统上测试工作流和自适应表单。
 feature: adaptive-forms
 topics: development
 audience: developer
@@ -16,28 +16,28 @@ ht-degree: 1%
 ---
 
 
-# 在您的系統上測試此功能
+# 在您的系统上测试此功能
 
-[下載此套件並將其匯入至AEM](assets/acro-form-aem-form.zip)
-此套件包含範例工作流程和html頁面，可讓您從上傳的Acroform建立結構。
+[下载此包并将其导入AEM](assets/acro-form-aem-form.zip)
+此资源包包含示例工作流和html页面，您可以通过该页面从上传的Acroform创建架构。
 
-## 設定工作流程
+## 配置工作流
 
-1. [在編輯模式下開啟工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/MergeAcroformData.html).
-2. 開啟MergeAcroformData步驟的設定屬性。
-3. 按一下「處理」標籤。
-4. 請確定您傳遞的引數是伺服器上的有效資料夾。
+1. [在编辑模式下打开工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/MergeAcroformData.html).
+2. 打开MergeAcroformData步骤的配置属性。
+3. 单击“流程”选项卡。
+4. 确保您传递的参数是服务器上的有效文件夹。
 5. 保存更改。
 
-## 建立最適化表單
+## 创建自适应表单
 
-1. 使用先前步驟中建立的結構描述來建立調適型表單。
-2. 將一些結構描述元素拖放到最適化表單上。
-3. 設定最適化表單的提交動作，以提交至AEM工作流程(MergeAcroformData)。
-4. **請務必指定資料檔案路徑為「Data.xml」。 這非常重要，因為範常式式碼會在工作流程裝載中尋找名為Data.xml的檔案。**
-5. 預覽最適化表單、填寫表單並提交。
-6. 您應該會在設定工作流程下，看到合併至步驟4所指定資料夾之資料的PDF
+1. 使用上一步骤中创建的架构创建自适应表单。
+2. 将几个架构元素拖放到自适应表单上。
+3. 配置自适应表单的提交操作以提交到AEM Workflow (MergeAcroformData)。
+4. **确保将数据文件路径指定为“Data.xml”。 这一点非常重要，因为示例代码将在工作流有效载荷中查找名为Data.xml的文件。**
+5. 预览自适应表单、填写表单并提交。
+6. 您应会在“配置”工作流下看到合并数据的PDF，该数据已保存到步骤4中指定的文件夹
 
 >[!NOTE]
 >
->將資料與Acroform合併所產生的PDF會儲存為pdfdocument.pdf，位於工作流程的裝載資料夾下。 然後，此檔案可用於作為工作流程的一部分進行進一步處理
+>通过将数据与acroform合并而生成的pdf将保存为pdfdocument.pdf，位于工作流的有效负荷文件夹下。 然后，可以将本文档用作工作流的一部分进行进一步处理

@@ -1,6 +1,6 @@
 ---
-title: 正確新增符號連結至GIT
-description: 有關在使用Dispatcher設定時如何以及在何處新增符號連結的說明。
+title: 将符号链接正确添加到GIT中
+description: 有关在使用Dispatcher配置时如何以及在何处添加符号链接的说明。
 version: 6.5
 topic: Administration
 feature: Dispatcher
@@ -15,21 +15,21 @@ ht-degree: 0%
 
 ---
 
-# 將符號連結新增至GIT
+# 在GIT中添加符号链接
 
 [目录](./overview.md)
 
-[&lt; — 上一步：Dispatcher健康情況檢查](./health-check.md)
+[&lt; — 上一步：Dispatcher运行状况检查](./health-check.md)
 
-在AMS中，您會獲得一個預先填入的GIT存放庫，其中包含排程程式的原始程式碼成熟度，可讓您開始開發和自訂。
+在AMS中，您将获得一个预填充的GIT存储库，其中包含已成熟的Dispatcher源代码，可供您开始开发和自定义。
 
-建立您的第一個 `.vhost` 檔案或頂層 `farm.any` 檔案，您將需要從 `available_*` 目錄到 `enabled_*` 目錄。 使用正確的連結型別將是透過Cloud Manager管道成功部署的關鍵。 此頁面將幫助您瞭解如何執行此操作。
+创建您的第一个 `.vhost` 文件或顶级 `farm.any` 文件，您将需要从 `available_*` 目录到 `enabled_*` 目录。 使用正确的链接类型将是通过Cloud Manager管道成功部署的关键。 此页面将帮助您了解如何执行此操作。
 
 ## Dispatcher原型
 
-AEM開發人員通常從以下位置開始他們的專案 [AEM原型](https://github.com/adobe/aem-project-archetype)
+AEM开发人员通常从以下位置启动项目： [AEM原型](https://github.com/adobe/aem-project-archetype)
 
-以下是原始程式碼區域的範例，您可以在此看到使用的符號連結：
+以下是源代码区域的一个示例，您可以从中查看使用的符号链接：
 
 ```
 $ tree dispatcher
@@ -65,30 +65,30 @@ dispatcher
 17 directories, 60 files
 ```
 
-例如， `/etc/httpd/conf.d/available_vhosts/` 目錄包含暫存的潛在 `.vhost` 我們可在執行組態中使用的檔案。
+例如， `/etc/httpd/conf.d/available_vhosts/` 目录包含暂存潜力 `.vhost` 可在运行配置中使用的文件。
 
-已啟用 `.vhost` 檔案將顯示為相對路徑 `symlinks` 內部 `/etc/httpd/conf.d/enabled_vhosts/` 目錄。
+已启用 `.vhost` 文件将显示为相对路径 `symlinks` 内部 `/etc/httpd/conf.d/enabled_vhosts/` 目录。
 
-## 建立符號連結
+## 创建符号链接
 
-我們使用指向檔案的符號連結，因此Apache Webserver會將目的地檔案視為相同的檔案。  我們不想在兩個目錄中複製檔案。  而只是從一個目錄（符號連結）到另一個目錄的捷徑。
+我们使用指向文件的符号链接，以便Apache Webserver会将目标文件视为同一文件。  我们不希望同时在这两个目录中复制文件。  而只是从一个目录（符号链接）到另一个目录的快捷方式。
 
-瞭解您部署的設定會針對Linux主機。  建立與目標系統不相容的符號連結將會導致失敗和不需要的結果。
+识别您部署的配置将针对Linux主机。  创建与目标系统不兼容的符号链接将导致故障和不需要的结果。
 
-如果您的工作站不是Linux電腦，您可能會想知道要使用哪些命令來正確建立這些連結，以便這些連結可以提交到GIT中。
+如果您的工作站不是Linux计算机，您可能会想知道要使用什么命令来正确创建这些链接，以便它们可以提交到GIT中。
 
-> `TIP:` 使用相對連結很重要，因為如果您安裝Apache Webserver的本機復本，且安裝基礎不同，連結仍可運作。  如果您使用絕對路徑，那麼您的工作站或其他系統必須匹配相同的確切目錄結構。
+> `TIP:` 使用相对链接很重要，因为如果您安装了Apache Webserver的本地副本并且具有不同的安装基础，则链接仍然有效。  如果您使用绝对路径，则您的工作站或其他系统必须匹配相同的确切目录结构。
 
 ### OSX / Linux
 
-符號連結是這些作業系統的原生連結，以下是如何建立這些連結的一些範例。  開啟您最愛的終端機應用程式，並使用下列範例命令來建立連結：
+符号链接是这些操作系统的固有链接，下面是创建这些链接的一些示例。  打开您喜爱的终端应用程序，然后使用以下示例命令创建链接：
 
 ```
 $ cd <LOCATION OF CLONED GIT REPO>\src\conf.d\enabled_vhosts
 $ ln -s ../available_vhosts/<Destination File Name> <Target File Name>
 ```
 
-以下是供參考的填入命令範例：
+以下是供参考的填充命令示例：
 
 ```
 $ git clone https://github.com/adobe/aem-project-archetype.git
@@ -96,7 +96,7 @@ $ cd aem-project-archetype/src/main/archetype/dispatcher.ams/src/conf.d/enabled_
 $ ln -s ../available_vhosts/aem_flush.vhost aem_flush.vhost
 ```
 
-如果您使用「 」列出檔案，以下為現在連結的範例 `ls` 命令：
+如果您使用 `ls` 命令：
 
 ```
 ls -l
@@ -106,24 +106,24 @@ lrwxrwxrwx. 1 root root 35 Oct 13 21:38 aem_flush.vhost -> ../available_vhosts/a
 
 ### Windows
 
-> `Note:` 原來MS Windows （NTFS更好）支援符號連結，因為……Windows Vista！
+> `Note:` 原来MS Windows（更好的是NTFS）支持符号链接，因为……Windows Vista！
 
-![顯示mklink命令說明輸出的Windows命令提示字元圖片](./assets/git-symlinks/windows-terminal-mklink.png)
+![显示mklink命令帮助输出的Windows命令提示符图片](./assets/git-symlinks/windows-terminal-mklink.png)
 
-> `Warning:` 建立symlink的mklink命令需要管理員許可權才能正確執行。 即使您是管理員帳戶，除非您已啟用開發人員模式，否則您必須以管理員身分執行命令提示字元
-> <br/>不適當的許可權：
-> ![顯示命令因許可權而失敗的Windows命令提示字元圖片](./assets/git-symlinks/windows-mklink-underpriv.png)
-> <br/>適當的許可權：
-> ![以管理員身分執行Windows命令提示字元圖片](./assets/git-symlinks/windows-mklink-properpriv.png)
+> `Warning:` 创建symlink的mklink命令需要管理员权限才能正常运行。 即使作为管理员帐户，您仍需要以管理员身份运行命令提示符，除非您已启用开发人员模式
+> <br/>权限不正确：
+> ![显示命令因权限而失败的Windows命令提示符图片](./assets/git-symlinks/windows-mklink-underpriv.png)
+> <br/>适当的权限：
+> ![以管理员身份运行的Windows命令提示符图片](./assets/git-symlinks/windows-mklink-properpriv.png)
 
-以下是建立連結的命令：
+以下是创建链接的命令：
 
 ```
 C:\<PATH TO SRC>\enabled_vhosts> mklink <Target File Name> ..\available_vhosts\<Destination File Name>
 ```
 
 
-以下是供參考的填入命令範例：
+以下是供参考的填充命令示例：
 
 ```
 C:\> git clone https://github.com/adobe/aem-project-archetype.git
@@ -132,60 +132,60 @@ C:\aem-project-archetype\src\main\archetype\dispatcher.ams\src\conf.d\enabled_vh
 symbolic link created for aem_flush.vhost <<===>> ..\available_vhosts\aem_flush.vhost
 ```
 
-#### 開發人員模式( Windows 10 )
+#### 开发人员模式( Windows 10 )
 
-放入 [開發人員模式](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development)，Windows 10可讓您更輕鬆地測試您正在開發的應用程式、使用Ubuntu Bash殼層環境、變更各種以開發人員為中心的設定，以及執行其他類似動作。
+放入时 [开发人员模式](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development)，Windows 10允许您更轻松地测试正在开发的应用程序、使用Ubuntu Bash shell环境、更改各种以开发人员为中心的设置以及执行其他此类操作。
 
-Microsoft似乎會持續新增功能至開發人員模式，或是在這些功能獲得更廣泛採用且視為穩定後，預設會啟用其中的部分功能（例如，有了建立者更新，Ubuntu Bash Shell環境不再需要開發人員模式）。
+Microsoft似乎不断向开发人员模式添加功能，或者在获得更广泛的采用并且视为稳定后，默认启用其中一些功能（例如，使用创建者更新，Ubuntu Bash Shell环境不再需要开发人员模式）。
 
-符號連結呢？ 啟用開發人員模式後，就不需要以提升的許可權執行命令提示字元來建立符號連結。 因此，一旦啟用開發人員模式，任何使用者都可以建立符號連結。
+符号链接呢？ 启用“开发人员模式”后，无需以提升的权限运行命令提示符即可创建符号链接。 因此，一旦启用了开发人员模式，任何用户都可以创建符号链接。
 
-> 啟用「開發人員模式」後，使用者應登出/登入，變更才會生效。
+> 启用“开发人员模式”后，用户应注销/登录以使更改生效。
 
-現在您無需以管理員身分執行命令即可看到
+现在，您无需以管理员身份即可看到该命令正在运行
 
-![以一般使用者身分執行Windows命令提示字元並啟用開發人員模式的圖片](./assets/git-symlinks/windows-mklink-devmode.png)
+![Windows命令提示符图片以启用开发者模式的普通用户身份运行](./assets/git-symlinks/windows-mklink-devmode.png)
 
-#### 替代/程式化方法
+#### 替代/程序化方法
 
-有特定原則可允許特定使用者建立符號連結→ [建立符號連結(Windows 10) - Windows安全性 | Microsoft檔案](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links)
+有一个特定策略可允许特定用户创建符号链接→ [创建符号链接(Windows 10) - Windows安全 | Microsoft文档](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links)
 
-PRO：
-- 客戶可運用此功能，以程式設計方式允許在其組織（即Active Directory）內為所有開發人員建立符號連結，而無須在每個裝置上手動啟用開發人員模式。
-- 此外，此原則應該在不提供開發人員模式的舊版MS Windows中提供。
+专业版：
+- 客户可以利用这一点以编程方式允许以符号链接创建到其组织中的所有开发人员（即Active Directory），而无需在每个设备上手动启用开发人员模式。
+- 此外，此策略应在不提供开发人员模式的MS Windows的早期版本中可用。
 
-CON：
-- 此原則似乎對屬於Administrators群組的使用者沒有影響。 管理員仍需以提升的許可權執行命令提示字元。 奇怪。
+图标：
+- 此策略似乎对属于管理员组的用户没有影响。 管理员仍需要以提升的权限运行命令提示符。 奇怪。
 
-> 使用者必須登出/登入，本機/群組原則變更才會生效。
+> 用户需要注销/登录才能使对本地/组策略的更改生效。
 
-執行 `gpedit.msc`，視需要新增/變更使用者。 管理員預設存在
+运行 `gpedit.msc`，根据需要添加/更改用户。 默认情况下，管理员在那里
 
-![群組原則編輯器視窗顯示調整許可權](./assets/git-symlinks/windows-localpolicies-symlinks.png)
+![显示调整权限的“组策略编辑器”窗口](./assets/git-symlinks/windows-localpolicies-symlinks.png)
 
-#### 在GIT中啟用符號連結
+#### 在GIT中启用符号链接
 
-Git會根據core.symlinks選項處理符號連結
+Git根据core.symlinks选项处理符号链接
 
-來源： [Git - git-config檔案](https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks)
+来源： [Git - git配置文档](https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks)
 
-*如果core.symlinks為false，符號連結會簽出為包含連結文字的小型純檔案。 `git-update-index[1]` 和 `git-add[1]` 不會將記錄的型別變更為一般檔案。 適用於不支援符號連結的檔案系統，例如FAT。
-預設值為true，但以下情況除外 `git-clone[1]` 或 `git-init[1] will probe and set core.symlinks false if appropriate when the repository is created.` 在大多數情況下，Git會假設Windows對符號連結沒有好處，並將此設定為false。*
+*如果core.symlinks为false，符号链接会作为包含链接文本的小普通文件签出。 `git-update-index[1]` 和 `git-add[1]` 不会将记录的类型更改为常规文件。 对于不支持符号链接的文件系统（如FAT）很有用。
+默认值为true，但以下情况除外 `git-clone[1]` 或 `git-init[1] will probe and set core.symlinks false if appropriate when the repository is created.` 在大多数情况下，Git会假设Windows对符号链接没有好处，并将此条件设置为false。*
 
-以下說明Git在Windows上的行為：符號連結· git-for-windows/git Wiki · GitHub
+此处详细解释了Git在Windows上的行为：符号链接· git-for-windows/git Wiki · GitHub
 
-> `Info`：上述連結的檔案中所列的假設似乎是正確的，因為AEM Developer可能會在Windows上進行設定，尤其是NTFS，而且我們只有檔案符號連結而不是目錄符號連結
+> `Info`：上面链接的文档中列出的假设假设与可能由AEM开发人员在Windows上进行的设置（尤其是NTFS）以及我们只有文件符号链接与目录符号链接这一事实似乎没有关系
 
-好消息如下，因為 [Windows 2.10.2版Git](https://github.com/git-for-windows/git/releases/tag/v2.10.2.windows.1) 安裝程式有 [啟用符號連結支援的明確選項。](https://github.com/git-for-windows/git/issues/921)
+好消息是 [适用于Windows的Git 2.10.2版](https://github.com/git-for-windows/git/releases/tag/v2.10.2.windows.1) 安装程序具有 [用于启用符号链接支持的显式选项。](https://github.com/git-for-windows/git/issues/921)
 
-> `Warning`：可在複製存放庫時在執行階段提供core.symlink選項，或可儲存為全域設定。
+> `Warning`：可在克隆存储库时在运行时提供core.symlink选项，否则可存储为全局配置。
 
-![顯示GIT安裝程式顯示對符號連結的支援](./assets/git-symlinks/windows-git-install-symlink.png)
+![显示GIT安装程序显示对符号链接的支持](./assets/git-symlinks/windows-git-install-symlink.png)
 
-Windows適用的Git會將全域偏好設定儲存在 `"C:\Program Files\Git\etc\gitconfig"` . 其他Git案頭使用者端應用程式可能不會考慮這些設定。
-有個竅門是，並非所有開發人員都會使用Git原生使用者端（即Git Cmd、Git Bash），而某些Git案頭應用程式（例如GitHub Desktop、Atlassian Sourcetree）可能有不同的設定/預設來使用System或內嵌Git
+Git for Windows将全局首选项存储在 `"C:\Program Files\Git\etc\gitconfig"` . 其他Git桌面客户端应用程序可能不考虑这些设置。
+这里有一个问题，并不是所有开发人员都会使用Git Native客户端（即Git Cmd、Git Bash），并且某些Git桌面应用程序（例如GitHub Desktop、Atlassian Sourcetree）可能具有不同的设置/默认值以使用系统或嵌入式Git
 
-以下為內含專案的範例。 `gitconfig` 檔案
+以下是 `gitconfig` 文件
 
 ```
 [diff "astextplain"]
@@ -212,13 +212,13 @@ Windows適用的Git會將全域偏好設定儲存在 `"C:\Program Files\Git\etc\
     defaultBranch = master
 ```
 
-#### Git命令列提示
+#### Git命令行提示
 
-在某些情況下，您可能會必須建立新的符號連結（例如新增新主機或新陣列）。
+在某些情况下，您可能需要创建新符号链接（例如，添加新主机或新场）。
 
-我們在上述檔案中看到，Windows提供「mklink」命令來建立符號連結。
+我们在上述文档中看到，Windows提供了“mklink”命令来创建符号链接。
 
-如果您在Git Bash環境中工作，您可以改用標準Bash指令 `ln -s` 但前置詞必須以特殊指示字元括住，如下列範例：
+如果您在Git Bash环境中工作，则可以改用标准Bash命令 `ln -s` 但是它必须以特殊指令作为前缀，例如下面的示例：
 
 ```
 MSYS=winsymlinks:nativestrict ln -s test_vhost_symlink ../dispatcher/src/conf.d/available_vhosts/default.vhost
@@ -226,14 +226,14 @@ MSYS=winsymlinks:nativestrict ln -s test_vhost_symlink ../dispatcher/src/conf.d/
 
 #### 摘要
 
-若要讓Git在Microsoft Windows作業系統上正確處理符號連結(至少是在目前AEM Dispatcher設定基準線的範圍內)，您需要：
+要在Microsoft Windows操作系统上让Git正确处理符号链接(至少对于当前AEM Dispatcher配置基线的范围)，您将需要：
 
-| 项目 | 最低版本/設定 | 建議的版本/設定 |
+| 项目 | 最低版本/配置 | 建议的版本/配置 |
 |------|---------------------------------|-------------------------------------|
-| 操作系统 | Windows Vista或更新版本 | Windows 10 Creator Update或更新版本 |
-| 檔案系統 | NTFS | NTFS |
-| 可為Windows使用者處理符號連結 | `"Create symbolic links"` 群組/本機原則 `under "Group Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment"` | Windows 10開發人員模式已啟用 |
-| GIT | Native client 1.5.3版 | Native Client 2.10.2或更新版本 |
-| Git設定 | `--core.symlinks=true` 選項（從命令列執行Git原地複製時） | Git全域設定<br/>`[core]`<br/>    symlinks = true <br/> 原生Git使用者端設定路徑： `C:\Program Files\Git\etc\gitconfig` <br/>Git案頭使用者端的標準位置： `%HOMEPATH%\.gitconfig` |
+| 操作系统 | Windows Vista或更高版本 | Windows 10创建者更新或更高版本 |
+| 文件系统 | NTFS | NTFS |
+| 能够为Windows用户处理符号链接 | `"Create symbolic links"` 组/本地策略 `under "Group Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment"` | 已启用Windows 10开发人员模式 |
+| GIT | Native client版本1.5.3 | Native Client版本2.10.2或更高版本 |
+| Git配置 | `--core.symlinks=true` 从命令行执行git clone时的选项 | Git全局配置<br/>`[core]`<br/>    symlinks = true <br/> 本机Git客户端配置路径： `C:\Program Files\Git\etc\gitconfig` <br/>Git桌面客户端的标准位置： `%HOMEPATH%\.gitconfig` |
 
-> `Note:` 如果您已經有本機存放庫，則需要從來源重新複製。 您可以複製至新位置，並手動將未認可/未暫存的本機變更合併至新複製的存放庫。
+> `Note:` 如果您已经拥有本地存储库，则需要从源重新克隆。 您可以克隆到一个新位置，并将未提交/未暂存的本地更改手动合并到新克隆的存储库中。

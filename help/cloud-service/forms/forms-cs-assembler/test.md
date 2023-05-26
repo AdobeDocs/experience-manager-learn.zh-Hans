@@ -1,6 +1,6 @@
 ---
-title: 測試Forms組合器解決方案
-description: 執行ExecuteAssemblerService.java以測試解決方案
+title: 测试Forms汇编程序解决方案
+description: 运行ExecuteAssemblerService.java以测试解决方案
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -15,36 +15,36 @@ ht-degree: 0%
 
 ---
 
-# 匯入Eclipse專案
+# 导入Eclipse项目
 
-* 下載並解壓縮 [zip檔案](./assets/pdf-manipulation.zip)
-* 啟動Eclipse並將專案匯入Eclipse
-* 專案在資源資料夾中包含下列資料夾：
-   * ddxFiles — 此資料夾包含描述您要產生的輸出的ddx檔案
-   * pdf — 此資料夾包含您要組合的pdf檔案和測試PDFA公用程式的pdf檔案
-   * 認證 — 此資料夾包含pdfa-options.json檔案
+* 下载并解压缩 [zip文件](./assets/pdf-manipulation.zip)
+* 启动Eclipse并将项目导入Eclipse
+* 该项目在资源文件夹中包含以下文件夹：
+   * ddxFiles — 此文件夹包含用于描述要生成的输出的ddx文件
+   * pdf — 此文件夹包含要汇编的pdf文件和要测试PDFA实用程序的pdf文件
+   * 凭据 — 此文件夹包含pdfa-options.json文件
 
 ![resources-file](./assets/resources.png)
 
-## 測試組裝PDF檔案
+## 测试组装PDF文件
 
-* 將您的服務認證複製並貼到專案的service_token.json資源檔案中。
-* 開啟AssemblePDFFiles.java檔案，並指定要儲存產生的PDF檔案的資料夾
-* 開啟ExecuteAssemblerService.java。 設定變數的值 _AEM_FORMS_CS_ 以指向您的執行個體。
-* 取消註解適當的行，以測試組裝兩個或多個PDF檔案
-* 以Java應用程式執行ExecuteAssemblerService.java
+* 将服务凭据复制并粘贴到项目的service_token.json资源文件中。
+* 打开AssemblePDFFiles.java文件，并指定要保存生成的PDF文件的文件夹
+* 打开ExecuteAssemblerService.java。 设置变量的值 _AEM_FORMS_CS_ 指向您的实例。
+* 取消注释相应的行，以测试装配两个或多个PDF文件
+* 将ExecuteAssemblerService.java作为Java应用程序运行
 
-### 測試PDFA公用程式
+### 测试PDFA实用程序
 
-* 將您的服務認證複製並貼到專案的service_token.json資源檔案中。
-* 開啟PDFAUtilities.java檔案，並指定要儲存產生的PDF檔案的資料夾。
-* 開啟ExecuteAssemblerService.java。 設定變數的值 _AEM_FORMS_CS_ 以指向您的執行個體。
-* 取消註解適當的行以測試PDFA操作。
-* 以Java應用程式執行ExecuteAssemblerService.java。
+* 将服务凭据复制并粘贴到项目的service_token.json资源文件中。
+* 打开PDFAUtilities.java文件，并指定要保存生成的PDF文件的文件夹。
+* 打开ExecuteAssemblerService.java。 设置变量的值 _AEM_FORMS_CS_ 指向您的实例。
+* 取消注释相应的行以测试PDFA操作。
+* 以Java应用程序形式运行ExecuteAssemblerService.java。
 
 
 
 >[!NOTE]
-> 第一次執行Java程式時，您會收到HTTP 403錯誤。 若要通過此程式，請務必提供 [AEM中技術帳戶使用者的適當許可權](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
+> 第一次运行Java程序时，您会收到HTTP 403错误。 要通过此项，请确保您将 [AEM中技术帐户用户的适当权限](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
 
-**AEM Forms使用者** 是我在此課程中使用的角色。
+**AEM Forms用户** 是我在本课程中使用的角色。

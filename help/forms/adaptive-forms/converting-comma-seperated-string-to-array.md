@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms Workflow中將逗號分隔字串轉換為字串陣列
-description: 當您的表單資料模型具有作為輸入引數之一的字串陣列時，您需要先對從調適型表單的提交動作產生的資料進行按摩，然後再叫用表單資料模型的提交動作。
+title: 在AEM Forms Workflow中将逗号分隔字符串转换为字符串数组
+description: 当表单数据模型具有字符串数组作为输入参数之一时，您需要先按压从自适应表单的提交操作生成的数据，然后再调用表单数据模型的提交操作。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -16,30 +16,30 @@ ht-degree: 0%
 
 ---
 
-# 將逗號分隔字串轉換為字串陣列 {#setting-value-of-json-data-element-in-aem-forms-workflow}
+# 将逗号分隔的字符串转换为字符串数组 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-當您的表單是以具有作為輸入引數的字串陣列的表單資料模型為基礎時，您需要操作提交的最適化表單資料以插入字串陣列。 例如，如果您將核取方塊欄位繫結至字串陣列型別的表單資料模型元素，則核取方塊欄位的資料會以逗號分隔的字串格式顯示。 下列範常式式碼會示範如何以字串陣列取代逗號分隔的字串。
+当您的表单基于表单数据模型（具有字符串数组作为输入参数）时，您需要处理提交的自适应表单数据以插入字符串数组。 例如，如果您已将复选框字段绑定到字符串数组类型的表单数据模型元素，则复选框字段中的数据将以逗号分隔的字符串格式显示。 下面列出的示例代码说明了如何将逗号分隔的字符串替换为字符串数组。
 
-## 建立流程步驟
+## 创建流程步骤
 
-當我們想要工作流程執行特定邏輯時，AEM工作流程會使用程式步驟。 處理步驟可以與ECMA指令碼或OSGi服務相關聯。 我們的自訂流程步驟會執行OSGi服務。
+我们希望工作流执行特定逻辑时，在AEM工作流中使用流程步骤。 流程步骤可以与ECMA脚本或OSGi服务相关联。 我们的自定义流程步骤执行OSGi服务。
 
-提交的資料採用以下格式。 businessUnits元素的值是以逗號分隔的字串，需要轉換為字串陣列。
+提交的数据采用以下格式。 businessUnits元素的值是一个以逗号分隔的字符串，需要将其转换为字符串数组。
 
-![submit-data](assets/submitted-data-string.png)
+![提交的数据](assets/submitted-data-string.png)
 
-與表單資料模型相關聯之rest端點的輸入資料預期的是如本熒幕擷取畫面所示的字串陣列。 處理步驟中的自訂程式碼會將提交的資料轉換為正確的格式。
+与表单数据模型关联的rest端点的输入数据需要字符串数组，如此屏幕快照中所示。 流程步骤中的自定义代码会将提交的数据转换为正确的格式。
 
 ![fdm-string-array](assets/string-array-fdm.png)
 
-我們會將JSON物件路徑和元素名稱傳遞至程式步驟。 處理步驟中的程式碼會將元素的逗號分隔值取代為字串陣列。
+我们将JSON对象路径和元素名称传递给流程步骤。 流程步骤中的代码会将元素的逗号分隔值替换为一个字符串数组。
 ![process-step](assets/create-string-array.png)
 
 >[!NOTE]
 >
->請確定最適化表單提交選項中的資料檔案路徑已設為「Data.xml」。 這是因為程式步驟中的程式碼會在裝載資料夾下尋找名為Data.xml的檔案。
+>确保自适应表单提交选项中的数据文件路径设置为“Data.xml”。 这是因为流程步骤中的代码将在有效负荷文件夹下查找名为Data.xml的文件。
 
-## 處理步驟程式碼
+## 流程步骤代码
 
 ```java
 import java.io.BufferedReader;
@@ -141,4 +141,4 @@ public class CreateStringArray implements WorkflowProcess {
 }
 ```
 
-範例組合可以是 [已從此處下載](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)
+示例捆绑包可以是 [已从此处下载](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)

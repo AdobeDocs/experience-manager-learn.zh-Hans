@@ -1,6 +1,6 @@
 ---
 title: 导航
-description: 探索AEM Assets導覽的基本概念。
+description: 探索AEM Assets导航的基础知识。
 feature: Asset Management
 role: User
 level: Beginner
@@ -19,6 +19,6 @@ ht-degree: 12%
 
 # 导航
 
-探索AEM Assets導覽的基本概念。
+探索AEM Assets导航的基础知识。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32046?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 擷取Power Automate流程中的表單欄位值
-description: 在Microsoft Power Automate工作流程中，傳送電子郵件通知至表單提交者
+title: 提取Power Automate流中的表单字段值
+description: 在Microsoft Power Automate工作流中向表单提交者发送电子邮件通知
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 在Power Automate流程中擷取表單欄位值
+# 在Power Automate流中提取表单字段值
 
-透過從表單提交中擷取欄位值，使用Microsoft Power Automate將電子郵件通知傳送給最適化表單提交者。
+通过从表单提交中提取字段值，使用Microsoft Power Automate将电子邮件通知发送给自适应表单提交者。
 
 >[!VIDEO](https://video.tv.adobe.com/v/345957?quality=12&learn=on)

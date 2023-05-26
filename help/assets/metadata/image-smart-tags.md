@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Assets的影像適用的智慧標籤
-description: 影像的智慧標籤可依據影像內容，自動且聰明地將中繼資料標籤新增至影像資產，藉此增強AEM搜尋功能。
+title: AEM Assets的图像智能标记
+description: 图像的智能标记通过根据图像的内容自动且智能地向图像资源添加元数据标记来增强AEM搜索功能。
 topic: Content Management
 feature: Smart Tags
 role: User
@@ -17,31 +17,31 @@ ht-degree: 3%
 
 ---
 
-# 影像的智慧標籤
+# 图像的智能标记
 
-影像適用的AEM Assets智慧標籤可自動將衍生的中繼資料標籤新增至影像資產，讓您更輕鬆快速地找到正確的影像，進而改善撰寫體驗，藉此增強AEM Assets的搜尋功能。
+AEM Assets的图像智能标记通过自动将派生的元数据标记添加到图像资产来增强AEM Assets的搜索，通过更轻松快速地找到正确的图像来改善创作体验。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17019?quality=12&learn=on)
 
-## 設定AEM 6.x{#set-up}
+## 为AEM 6.x设置{#set-up}
 
 >[!NOTE]
-> 影像的智慧標籤會自動針對AEMas a Cloud Service布建。
+> 自动为AEMas a Cloud Service配置图像的智能标记。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17023?quality=12&learn=on)
 
-使用Smart Content Service之前，請確定下列專案會在Adobe I/O上建立整合：
+在使用Smart Content Service之前，请确保满足以下条件，以便在Adobe I/O上创建集成：
 
-* 具有組織管理員許可權的Adobe ID帳戶
-* 您的組織已啟用「智慧內容服務」
+* 具有组织管理员权限的Adobe ID帐户
+* 已为您的组织启用智能内容服务服务
 
-影片詳細說明設定用於智慧標籤影像的Adobe I/O智慧內容服務所需的下列工作。
+此视频详细介绍了配置用于智能标记图像的Adobe I/O智能内容服务所需的以下任务。
 
-* 在AEM中建立Smart Content Service設定以產生公開金鑰。 为 OAuth 集成获取公共证书。
-* 在Adobe I/O中建立整合，並上傳產生的公開金鑰。
-* 從Adobe I/O使用API金鑰和其他憑證設定您的AEM執行個體。
-* 可選擇在資產上傳時啟用自動標籤。
+* 在AEM中创建Smart Content Service配置以生成公钥。 为 OAuth 集成获取公共证书。
+* 在Adobe I/O中创建集成并上传生成的公共密钥。
+* 使用Adobe I/O中的API密钥和其他凭据配置AEM实例。
+* （可选）在资产上传时启用自动标记。
 
 ## 其他资源
 
-* [AEM Assets智慧標籤檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/smart-tags.html)
+* [AEM Assets智能标记文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/smart-tags.html)

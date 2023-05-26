@@ -1,6 +1,6 @@
 ---
-title: 擷取行動表單除錯記錄的步驟
-description: 設定與行動表單相關之偵錯問題的偵錯記錄
+title: 捕获移动表单的调试日志的步骤
+description: 配置调试日志以调试与移动表单相关的问题
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 擷取行動表單除錯記錄的步驟
+# 捕获移动表单的调试日志的步骤
 
-*本影片逐步解說擷取行動表單除錯記錄的步驟。*
+*本视频介绍捕获移动表单的调试日志的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335516?quality=12&learn=on)

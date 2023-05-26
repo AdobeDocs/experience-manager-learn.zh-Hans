@@ -1,6 +1,6 @@
 ---
-title: 簡單SvelteKit應用程式
-description: 顯示使用內容片段模組化之WKND冒險的簡單SvelteKit應用程式。
+title: 简单SvelteKit应用程序
+description: 一个简单的SvelteKit应用程序，可显示使用内容片段建模的WKND冒险。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -20,13 +20,13 @@ ht-degree: 0%
 
 ---
 
-# 正在篩選SvelteKit應用程式
+# 筛选SvelteKit应用程序
 
-探索AEM Headless GraphQL API使用 [SvelteKit](https://kit.svelte.dev/) 應用程式。 此SvelteKit應用程式會建立WKND冒險清單，您可以選取這些來顯示冒險的詳細資訊。
+探索AEM Headless GraphQL API使用列出数据的能力 [SvelteKit](https://kit.svelte.dev/) 应用程序。 此SvelteKit应用程序创建WKND冒险列表，可以选择该列表以显示冒险的详细信息。
 
-此程式碼使用Adobe的 [適用於JavaScript的AEM Headless使用者端](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) 從SvelteKit叫用持續性GraphQL查詢。 此應用程式使用 `wknd-shared/adventures-all` 持續查詢以收集所有冒險活動，並衍生可用活動型別清單。 如需冒險的詳細資訊，請前往 `wknd-shared/adventures-by-slug` 持久查詢。
+此代码演示使用Adobe的 [适用于JavaScript的AEM Headless客户端](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) 以从SvelteKit调用持久化GraphQL查询。 此应用程序使用 `wknd-shared/adventures-all` 持久查询以收集所有冒险并派生可用活动类型的列表。 冒险详情请通过以下网站查询： `wknd-shared/adventures-by-slug` 持久查询。
 
-此程式碼：
+此代码：
 
-+ 連線到AEM Publish服務，且不需要驗證
-+ 使用WKND的持續查詢： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-slug`
++ 连接到AEM Publish服务，无需身份验证
++ 使用WKND的持久查询： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-slug`

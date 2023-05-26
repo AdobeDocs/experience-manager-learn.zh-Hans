@@ -1,7 +1,7 @@
 ---
-title: AEM Forms中的規則編輯器改良
+title: AEM Forms中的规则编辑器改进
 seo-title: Rule Editor Improvements in AEM Forms
-description: 規則編輯器可讓使用者將邏輯新增至AEM Adaptive Forms。 AEM 6.3以多種方式改善了規則編輯器，讓技術和非技術使用者都能夠更輕鬆快速地新增情報。
+description: 规则编辑器允许用户向AEM自适应Forms添加逻辑。 AEM 6.3以多种方式改进了规则编辑器，让技术用户和非技术用户均可更轻松、更快速地添加智能。
 seo-description: The rule editor enables users to add logic to AEM Adaptive Forms. AEM 6.3 improves the rule editor in several ways making it easier and faster for both technical and non-technical users alike to add intelligence.
 uuid: 35e8cc7c-04cf-43b4-bbc7-41bfd909cfba
 feature: Adaptive Forms
@@ -23,19 +23,19 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms中的規則編輯器改良 {#rule-editor-improvements-in-aem-forms}
+# AEM Forms中的规则编辑器改进 {#rule-editor-improvements-in-aem-forms}
 
-規則編輯器可讓使用者將邏輯新增至AEM Adaptive Forms。 AEM 6.3以多種方式改善了規則編輯器，讓技術和非技術使用者都能夠更輕鬆快速地新增情報。
+规则编辑器允许用户向AEM自适应Forms添加逻辑。 AEM 6.3以多种方式改进了规则编辑器，让技术用户和非技术用户均可更轻松、更快速地添加智能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/19653?quality=12&learn=on)
 
-**規則編輯器的部分改善包括：**
+**对规则编辑器的一些改进包括：**
 
-* 多值表單元件會自動顯示元件選項
-* 在視覺化編輯器中指定WSDL Web服務的功能
-* 停用規則的功能
-* 程式碼編輯器的增強功能，例如：
-* 語法醒目提示
-   * 自動縮排
-   * 表單物件、函式和屬性的提示和建議
-   * 自動完成元件名稱和通用Javascript函式
+* 多值表单组件会自动显示组件选项
+* 在可视编辑器中指定WSDL Web服务的功能
+* 禁用规则的功能
+* 对代码编辑器的增强，例如：
+* 语法突出显示
+   * 自动缩进
+   * 表单对象、函数和属性的提示和建议
+   * 自动完成组件名称和常用Javascript函数

@@ -1,6 +1,6 @@
 ---
-title: 如何從「工作管理員」資料庫中清除處理記錄
-description: 從「工作管理員」資料庫設定記錄清除程式
+title: 如何从作业管理器数据库中清除进程记录
+description: 配置作业管理器数据库中记录的进程清除
 type: Troubleshooting
 role: Developer
 level: Experienced
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何從「工作管理員」中永久刪除處理記錄
+# 如何从作业管理器中清除流程记录
 
-*本影片逐步解說從「工作管理員」中清除程式記錄的步驟。*
+*本视频介绍从作业管理器中清除进程记录的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335577?quality=12&learn=on)

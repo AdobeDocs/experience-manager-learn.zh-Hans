@@ -1,7 +1,7 @@
 ---
-title: 搭配AEM Sites使用可編輯的頁面範本
+title: 在AEM Sites中使用可编辑的页面模板
 seo-title: Using Editable Page Templates with Adobe Experience Manager Sites
-description: 可編輯的範本可讓專業作者建立和更新頁面範本，並透過AEM Sites管理進階原則設定。
+description: 通过可编辑的模板，专业作者可以使用AEM Sites创建和更新页面模板以及管理高级策略配置。
 seo-description: Editable templates allow specialized authors to create and update page templates and manage advanced policy configurations with Adobe Experience Manager Sites.
 feature: Editable Templates
 topics: authoring
@@ -21,26 +21,26 @@ ht-degree: 4%
 
 ---
 
-# 使用可編輯的頁面範本{#using-template-editor-with-aem-sites}
+# 使用可编辑的页面模板{#using-template-editor-with-aem-sites}
 
-可編輯的範本可讓專業作者建立和更新頁面範本，並透過Adobe Experience Manager (AEM) Sites管理進階原則設定。
+通过可编辑的模板，专业作者可以使用Adobe Experience Manager (AEM) Sites创建和更新页面模板以及管理高级策略配置。
 
 >[!VIDEO](https://video.tv.adobe.com/v/326784?quality=12&learn=on)
 
-可編輯的範本是建立新AEM Sites的建議。
+可编辑的模板是构建新AEM Sites的建议。
 
-**一致的作者體驗** - AEM Sites製作中的增強功能會延續至範本編輯，包括內嵌版面模式和內容樹面板。
+**一致的创作体验** -AEM Sites创作中的增强功能会转移到模板编辑中，包括内联布局模式和内容树面板。
 
-**進階原則設定**  — 下列重點說明可編輯範本提供的一些進階原則設定：
+**高级策略配置**  — 下面突出显示了“可编辑模板”中提供的一些高级策略配置：
 
-* **配置容器**  — 可設定允許的元件、管理資產的拖放對應和回應式格線欄。
-* **文字元件**  — 可使用新的UI設定RTF編輯器外掛程式，並在所有範本中重複使用RTE原則。
-* **影像元件**  — 可開啟/關閉裁切、透過新UI上傳案頭檔案等功能，並在所有範本中重複使用影像原則。
+* **布局容器**  — 能够配置允许的组件、管理资产的拖放映射和响应式网格列。
+* **文本组件**  — 能够使用新的UI配置富文本编辑器插件，并在各个模板中重复使用RTE策略。
+* **图像组件**  — 能够打开/关闭裁切、使用新UI上传桌面文件等功能，并在模板间重用图像策略。
 
-可編輯的範本位於 **工具** `>` **一般** `>` **範本**.\
-可編輯的範本URL (本機AEM執行個體)： [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
+可编辑的模板位于 **工具** `>` **常规** `>` **模板**.\
+可编辑模板URL(本地AEM实例)： [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 ## 其他资源 {#additional-resources}
 
-* [可編輯的頁面範本 — 檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
-* [建立頁面範本 — 檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)
+* [可编辑页面模板 — 文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
+* [创建页面模板 — 文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)

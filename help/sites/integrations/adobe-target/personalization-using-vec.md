@@ -1,6 +1,6 @@
 ---
-title: 使用視覺化體驗撰寫器進行個人化
-description: 瞭解如何使用視覺化體驗撰寫器建立Adobe Target活動。
+title: 使用可视化体验编辑器进行个性化
+description: 了解如何使用可视化体验编辑器创建Adobe Target活动。
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
@@ -19,74 +19,74 @@ ht-degree: 1%
 
 ---
 
-# 使用視覺化體驗撰寫器進行個人化 {#personalization-vec}
+# 使用可视化体验编辑器进行个性化 {#personalization-vec}
 
-瞭解如何使用視覺化體驗撰寫器(VEC)建立A/B測試Target活動。
+了解如何使用可视化体验编辑器(VEC)创建A/B测试Target活动。
 
 ## 前提条件
 
-若要在AEM網站上使用VEC，必須完成下列設定：
+要在AEM网站上使用VEC，必须完成以下设置：
 
-1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
-1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
+1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
+1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
 
-## 案例概述
+## 方案概述
 
-WKND網站首頁會以資訊卡的形式顯示當地活動或城市周圍的最佳做法。 身為行銷人員，您已被指派修改首頁的任務，方法是變更冒險區段Teaser的文字，並瞭解它如何改善轉換。
+WKND站点主页以信息卡的形式显示本地活动或城市周围的最佳做法。 作为营销人员，您已被分配了修改主页的任务，方法是更改冒险部分Teaser的文本并了解它如何提高转化率。
 
-## 使用視覺化體驗撰寫器(VEC)建立A/B測試的步驟
+## 使用可视化体验编辑器(VEC)创建A/B测试的步骤
 
-1. 登入 [Adobe Experience Cloud](https://experience.adobe.com/)，點選 __Target__，導覽至 __活動__ 標籤
+1. 登录 [Adobe Experience Cloud](https://experience.adobe.com/)，点按 __Target__，导航到 __活动__ 选项卡
 
-   + 如果您沒有看見 __Target__ 在Experience Cloud控制面板上，確保在右上角的組織切換器中選取正確的Adobe組織，並且您的使用者已被授予在中存取Target的許可權。 [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + 如果您没有看到 __Target__ 在Experience Cloud功能板上，确保在右上角的Adobe切换器中选择了正确的组织组织，并且已授予您在中访问Target的权限。 [Adobe Admin Console](https://adminconsole.adobe.com/).
 
-1. 按一下 **建立活動** 按鈕，然後選擇 **A/B測試** 活動
+1. 单击 **创建活动** 按钮，然后选择 **A/B测试** 活动
 
-   ![A/B活動](assets/ab-target-activity.png)
+   ![A/B活动](assets/ab-target-activity.png)
 
-1. 選取 **視覺化體驗撰寫器** 選項，提供活動URL，然後按一下 **下一個**
+1. 选择 **可视化体验编辑器** 选项，提供活动URL，然后单击 **下一个**
 
-   ![活動URL](assets/ab-test-url.png)
+   ![活动URL](assets/ab-test-url.png)
 
-1. 建立新活動後，視覺化體驗撰寫器會在左側顯示兩個標籤： *體驗A* 和 *體驗B*. 從清單中選取體驗。 您可以使用將新體驗新增至清單 **新增體驗** 按鈕。
+1. 创建新活动后，可视化体验编辑器在左侧显示两个选项卡： *体验A* 和 *体验B*. 从列表中选择体验。 您可以使用向列表中添加新体验 **添加体验** 按钮。
 
-   ![體驗A](assets/experience.png)
+   ![体验A](assets/experience.png)
 
-1. 在頁面上選取影像或文字，以開始進行修改，或使用代碼編輯器來挑選和HTML元素。
+1. 在页面上选择图像或文本以开始进行修改，或者使用代码编辑器选取和HTML元素。
 
    ![元素](assets/select-element.png)
 
-1. 變更文字 *西澳洲露營* 至 *澳洲歷險*. 「修改」下會顯示新增至體驗的變更清單。 您可以按一下並編輯修改的專案，以檢視其CSS選取器以及新增至該專案的新內容。
+1. 更改文本 *西澳大利亚露营* 到 *澳大利亚历险记*. 添加到体验的更改列表显示在修改下。 您可以单击并编辑修改后的项目，以查看其CSS选择器以及添加到该项目的新内容。
 
-   ![冒險](assets/adventures.png)
+   ![冒险](assets/adventures.png)
 
-1. 重新命名 *體驗A* 至 *冒險*
-1. 同樣地，更新上的文字 *體驗B* 從 *西澳洲露營* 至 *探索澳洲荒野*.
+1. 重命名 *体验A* 到 *冒险*
+1. 同样，更新上的文本 *体验B* 起始日期 *西澳大利亚露营* 到 *探索澳大利亚荒野*.
 
    ![探索](assets/explore.png)
 
-1. 按一下 **下一個** 移至「鎖定目標」，在兩個體驗之間保留50-50的手動流量分配。
+1. 单击 **下一个** 以转到定位，让我们将两个体验之间的手动流量分配保持为50-50。
 
    ![定位](assets/targeting.png)
 
-1. 對於目標和設定，選擇報表來源作為Adobe Target，然後選取目標量度作為轉換和頁面檢視動作。
+1. 对于“目标”和设置，选择报表源作为Adobe Target，然后选择“目标”量度作为具有页面查看操作的转化。
 
-   ![目標](assets/goals.png)
+   ![目标](assets/goals.png)
 
-1. 提供活動的名稱並儲存。
-1. 啟用已儲存的活動以即時推送您的變更。
+1. 提供活动的名称并保存。
+1. 激活保存的活动以实时推送更改。
 
-   ![目標](assets/activate.png)
+   ![目标](assets/activate.png)
 
-1. 在新標籤中開啟您的網站頁面（步驟3中的活動URL），您應該能夠從A/B測試活動檢視任一體驗（冒險或探索）。
+1. 在新选项卡中打开您的网站页面（步骤3中的活动URL），您应该能够从A/B测试活动中查看任一体验（探索或探索）。
 
-   ![目標](assets/publish.png)
+   ![目标](assets/publish.png)
 
 ## 摘要
 
-在本章中，行銷人員可以拖放、交換和修改網頁的版面和內容，而不需變更任何程式碼來執行測試，藉以使用視覺化體驗撰寫器建立體驗。
+在本章中，营销人员能够通过拖放、交换和修改网页的布局和内容来创建使用可视化体验编辑器的体验，而无需更改任何代码来运行测试。
 
-## 支援連結
+## 支持链接
 
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

@@ -1,6 +1,6 @@
 ---
-title: 在AEM Assets中使用中繼資料匯入和匯出
-description: 瞭解如何使用Adobe Experience Manager Assets的匯入和匯出中繼資料功能。 匯入和匯出功能可讓內容作者大量更新現有資產的中繼資料。
+title: 在AEM Assets中使用元数据导入和导出
+description: 了解如何使用Adobe Experience Manager Assets的导入和导出元数据功能。 导入和导出功能允许内容作者批量更新现有资源的元数据。
 version: 6.4, 6.5, Cloud Service
 topic: Content Management
 feature: Metadata
@@ -17,9 +17,9 @@ ht-degree: 2%
 
 ---
 
-# 在AEM Assets中使用中繼資料匯入和匯出 {#metadata-import-and-export}
+# 在AEM Assets中使用元数据导入和导出 {#metadata-import-and-export}
 
-瞭解如何使用Adobe Experience Manager Assets的匯入和匯出中繼資料功能。 匯入和匯出功能可讓內容作者大量更新現有資產的中繼資料。
+了解如何使用Adobe Experience Manager Assets的导入和导出元数据功能。 导入和导出功能允许内容作者批量更新现有资源的元数据。
 
 ## 元数据导出 {#metadata-export}
 
@@ -31,34 +31,34 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-> 在準備要匯入的CSV檔案時，使用「中繼資料匯出」功能更容易產生包含資產清單的CSV。 然後您可以修改產生的CSV檔案，並使用「匯入」功能匯入它。
+> 在准备导入的CSV文件时，使用“元数据导出”功能更容易生成包含资源列表的CSV。 然后，您可以修改生成的CSV文件，并使用“导入”功能导入该文件。
 
-## 中繼資料CSV檔案格式 {#metadata-file-format}
+## 元数据CSV文件格式 {#metadata-file-format}
 
-### 第一列
+### 第一行
 
-* CSV檔案的第一列會定義中繼資料結構。
-* 第一欄預設為 `assetPath`，可儲存資產的絕對JCR路徑。
+* CSV文件的第一行定义元数据架构。
+* 第一列默认为 `assetPath`，保存资产的绝对JCR路径。
 
-* 第一列中的後續欄會指向資產的其他中繼資料屬性。
+* 第一行中的后续列指向资源的其他元数据属性。
    * 例如： `dc:title, dc:description, jcr:title`
 
-* 單值屬性格式
+* 单值属性格式
 
    * `<metadata property name> {{<property type}}`
-   * 如果未指定屬性型別，其預設值為String。
+   * 如果未指定属性类型，则默认为String。
    * 例如：`dc:title {{String}}`
 
-* 屬性名稱區分大小寫
-   * 正確： `dc:title {{String}}`
-   * 不正確： `Dc:Title {{String}}`
+* 属性名称区分大小写
+   * 正确： `dc:title {{String}}`
+   * 不正确： `Dc:Title {{String}}`
 
-* 屬性型別區分大小寫
-* 全部有效 [JCR屬性型別](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html) 受支援
+* 属性类型区分大小写
+* 全部有效 [JCR属性类型](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html) 受支持
 
-* 多值屬性格式 —  `<metadata property name> {{<property type : MULTI }}`
+* 多值属性格式 —  `<metadata property name> {{<property type : MULTI }}`
 
-### 第二列至N列
+### 第二行到N行
 
-* 第一欄包含資產的絕對JCR路徑。 例如： /content/dam/asset1.jpg
-* 資產的中繼資料屬性CSV檔案中可能缺少值。 遺失該特定資產的中繼資料屬性不會更新。
+* 第一列包含资源的绝对JCR路径。 例如： /content/dam/asset1.jpg
+* 资源的元数据属性在CSV文件中可能缺少值。 缺少该特定资源的元数据属性不会更新。

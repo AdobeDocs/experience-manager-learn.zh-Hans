@@ -1,6 +1,6 @@
 ---
-title: 將AEM Forms與Microsoft Sharepoint整合
-description: 瞭解如何將Adobe Experience Manager Forms作為Cloud Service提交資料儲存在Microsoft Sharepoint中
+title: 将AEM Forms与Microsoft Sharepoint集成
+description: 了解如何将Adobe Experience Manager Forms作为Cloud Service提交数据存储在Microsoft Sharepoint中
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms作為Microsoft Sharepoint的Cloud Service
+# AEM Forms作为Microsoft Sharepoint的Cloud Service
 
-瞭解如何在Microsoft Sharepoint中設定和儲存最適化表單資料。
+了解如何在Microsoft Sharepoint中配置和存储自适应表单数据。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415793/?quality=12&learn=on)

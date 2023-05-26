@@ -1,6 +1,6 @@
 ---
 title: 基本操作
-description: 瞭解AEM Assets的基本操作，包括如何建立資料夾，以及上傳、複製、移動和刪除資產。
+description: 了解AEM Assets的基本操作，包括如何创建文件夹以及上传、复制、移动和删除资源。
 feature: Asset Management
 role: User
 level: Beginner
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 基本操作
 
-瞭解AEM Assets的基本操作，包括如何建立資料夾，以及上傳、複製、移動和刪除資產。
+了解AEM Assets的基本操作，包括如何创建文件夹以及上传、复制、移动和删除资源。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32044?quality=12&learn=on)

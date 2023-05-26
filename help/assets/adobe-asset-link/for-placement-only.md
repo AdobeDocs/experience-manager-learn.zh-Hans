@@ -1,6 +1,6 @@
 ---
-title: 僅供刊登(FPO)轉譯
-description: 設計師和創意使用者現在可在他們最愛的Adobe Creative Cloud案頭應用程式中使用Adobe Experience Manager資產。 適用於Adobe Creative Cloud Enterprise的Adobe Asset Link擴充功能加強在Adobe Photoshop、InDesign和Illustrator等Creative Cloud工具中搜尋和瀏覽、排序、預覽、上傳資產、取出、修改、存回和檢視AEM資產的中繼資料的功能。
+title: 仅用于置入(FPO)演绎版
+description: 设计人员和创意用户现在可以在他们喜爱的Adobe Creative Cloud桌面应用程序中使用Adobe Experience Manager资源。 适用于Adobe Creative Cloud Enterprise的AdobeAsset Link扩展增强了在Adobe Photoshop、InDesign和Illustrator等Creative Cloud工具中搜索和浏览、排序、预览、上传资源、签出、修改、签入和查看AEM资源元数据的功能。
 sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: Cloud Service
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 僅供刊登(FPO)轉譯{#for-placement-only-rendition}
+# 仅用于置入(FPO)演绎版{#for-placement-only-rendition}
 
-探索如何為AEM資產建立和使用For Placement Only (FPO)轉譯。
+了解如何为AEM Assets创建和使用“仅用于置入”(FPO)演绎版。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34259?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: AEM Headless Web元件部署
-description: 瞭解網頁元件/純JS型AEM Headless部署的部署考量事項。
+title: AEM Headless Web组件部署
+description: 了解基于Web组件/纯JS的AEM Headless部署的部署注意事项。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -16,24 +16,24 @@ ht-degree: 2%
 
 ---
 
-# AEM Headless Web元件部署
+# AEM Headless Web组件部署
 
-AEM Headless [網頁元件](https://developer.mozilla.org/en-US/docs/Web/Web_Components)/JS部署是在網頁瀏覽器中執行的純JavaScript應用程式，以Headless方式使用及與AEM中的內容互動。 Web元件/JS部署與 [SPA部署](./spa.md) 因為它們不使用強大的SPA架構，且預期會嵌入到任何網站的內容中，以傳遞來自AEM的內容。
+AEM Headless [Web组件](https://developer.mozilla.org/en-US/docs/Web/Web_Components)/JS部署是在Web浏览器中运行的纯JavaScript应用程序，这些应用程序以Headless方式使用AEM中的内容并与之交互。 Web组件/JS部署与 [SPA部署](./spa.md) 因为它们不使用强大的SPA框架，并且预期嵌入在任何网站上下文中，交付，以从AEM呈现内容。
 
 
-## 部署設定
+## 部署配置
 
-下列部署設定必須就Web元件/JS部署。
+以下部署配置必须适用于Web组件/JS部署。
 
-| 連線至的Web元件/JS應用程式 | AEM Author | AEM 发布 | AEM預覽 |
+| Web组件/JS应用程序连接到 | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
-| [Dispatcher篩選器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
-| [跨原始資源共用(CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
-| [AEM主機](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
+| [Dispatcher过滤器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
+| [跨源资源共享(CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
+| [AEM主机](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
-## 範例Web元件
+## 示例Web组件
 
-Adobe提供範例Web元件。
+Adobe提供了一个示例Web组件。
 
 <div class="columns is-multiline">
     <!-- Web Component -->
@@ -41,17 +41,17 @@ Adobe提供範例Web元件。
        <div class="card">
            <div class="card-image">
                <figure class="image is-16by9">
-                   <a href="../example-apps/web-component.md" title="網頁元件" tabindex="-1">
-                       <img class="is-bordered-r-small" src="../example-apps/assets/web-component/web-component-card.png" alt="網頁元件">
+                   <a href="../example-apps/web-component.md" title="Web组件" tabindex="-1">
+                       <img class="is-bordered-r-small" src="../example-apps/assets/web-component/web-component-card.png" alt="Web组件">
                    </a>
                </figure>
            </div>
            <div class="card-content is-padded-small">
                <div class="content">
-                   <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/web-component.md" title="網頁元件">網頁元件</a></p>
-                   <p class="is-size-6">以純JavaScript撰寫的範例Web元件會使用AEM Headless GraphQL API的內容。</p>
+                   <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/web-component.md" title="Web组件">Web组件</a></p>
+                   <p class="is-size-6">以纯JavaScript编写的示例Web组件，它使用来自AEM Headless GraphQL API的内容。</p>
                    <a href="../example-apps/web-component.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視範例</span>
+                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                    </a>
                </div>
            </div>

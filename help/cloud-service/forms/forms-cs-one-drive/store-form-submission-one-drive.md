@@ -1,6 +1,6 @@
 ---
-title: 將AEM Forms與Microsoft OneDrive整合
-description: 瞭解如何將Adobe Experience Manager Formsas a Cloud Service提交資料儲存在Microsoft OneDrive。
+title: 将AEM Forms与Microsoft OneDrive集成
+description: 了解如何在Microsoft OneDrive中存储Adobe Experience Manager Formsas a Cloud Service提交数据。
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms Formsas a Cloud Service與Microsoft OneDrive
+# AEM Forms Formsas a Cloud Service与Microsoft OneDrive
 
-將最適化表單資料儲存在Microsoft OneDrive。
+将自适应表单数据存储在Microsoft OneDrive中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415792/?quality=12&learn=on)

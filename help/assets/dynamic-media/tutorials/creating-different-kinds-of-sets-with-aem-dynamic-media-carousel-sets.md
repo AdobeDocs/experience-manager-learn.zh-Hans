@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Dynamic Media建立輪播集
-description: 使用Dynamic Media設定輪播集
+title: 使用AEM Dynamic Media创建轮播集
+description: 使用Dynamic Media配置轮播集
 version: Cloud Service
 role: Developer
 level: Intermediate
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# 使用AEM Dynamic Media建立輪播集
+# 使用AEM Dynamic Media创建轮播集
 
-本影片將逐步說明使用AEM Dynamic Media建立轉盤集的程式。
+本视频介绍使用AEM Dynamic Media创建轮播集的过程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335380?quality=12&learn=on)

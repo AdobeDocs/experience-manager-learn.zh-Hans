@@ -1,6 +1,6 @@
 ---
 title: 简介
-description: 簽署多份表單使用案例的影片示範
+description: 签名多表单用例的视频演示
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 330165.jpg
@@ -18,22 +18,22 @@ ht-degree: 4%
 
 # 简介
 
-無論您是要申請抵押貸款還是要開立新的銀行帳戶，都需要填寫並簽署多個表單。 AEM Forms與Acrobat Sign的整合可讓您輕鬆填寫和簽署多個表單。
-以下影片將逐步說明簽署多個表單的使用案例。
+无论您是申请抵押贷款还是开立新的银行账户，都需要填写并签署多个表单。 AEM Forms与Acrobat Sign之间的集成使填写和签署多个表单变得更轻松。
+以下视频向您介绍签署多个表单的用例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330165?quality=12&learn=on)
 
 ## 前提条件
 
-本課程假設如下：
+本课程假设如下：
 
-* 您可以存取已安裝並設定Forms附加套件的AEM 6.4或6.5伺服器
-* 使用Acrobat Sign設定的AEM
-* 存取SMTP伺服器
-* AEM/AEM Forms的部分使用體驗
+* 您可以访问已安装并配置了Forms附加组件包的AEM 6.4或6.5 Server
+* 使用Acrobat Sign配置的AEM
+* 访问SMTP服务器
+* AEM/AEM Forms使用的一些经验
 
-依照本教學課程並安裝所提供的資產，您將擁有可簽署多個表單的有效解決方案。
+按照本教程并安装提供的资产，您将拥有一个有效的解决方案来签署多个表单。
 
 ## 后续步骤
 
-[設定資料庫支援的資料來源 ](./configure-data-source.md)
+[配置数据库支持的数据源 ](./configure-data-source.md)

@@ -1,7 +1,7 @@
 ---
-title: 建立Web Channel的互動式通訊
+title: 为Web渠道创建交互式通信
 seo-title: Create Interactive Communication for Web Channel
-description: 這是建立第一個互動式通訊檔案的多步驟教學課程的第6部分。 在本部分中，我們將建立Web Channel的互動式通訊。
+description: 这是创建您的第一个交互式通信文档的多步教程的第6部分。 在本部分中，我们将为Web渠道创建交互式通信。
 seo-description: This is part 6 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create Interactive Communication for Web Channel.
 uuid: a1b29c5b-a323-4bda-aa99-5fb98614b690
 discoiquuid: b44ff855-9ead-471e-8f0f-b562b88a5337
@@ -22,31 +22,31 @@ ht-degree: 1%
 
 ---
 
-# 建立Web Channel的互動式通訊
+# 为Web渠道创建交互式通信
 
-在本部分中，我們將建立Web Channel的互動式通訊。
+在本部分中，我们将为Web渠道创建交互式通信。
 
-1. 登入AEM編寫執行個體，並導覽至「Adobe Experience Manager > Forms > Forms &amp; Documents」。
-1. 開啟401KStatment資料夾。
-1. 點選「建立」並選取「互動式通訊」。 「建立互動式通訊」頁面隨即顯示。
-1. 輸入下列資訊
+1. 登录到AEM创作实例，然后导航到Adobe Experience Manager > Forms > Forms &amp; Documents。
+1. 打开401KStatment文件夹。
+1. 点按创建并选择交互式通信。 此时会显示“创建交互式通信”页。
+1. 输入以下信息
 
-   1. 標題：401KStatement
-   1. 說明：適用於個別參與者的401KStatement
-   1. 表單資料模型：RetirationAccountStatement
-   1. 預填服務：表單資料模型預填服務
+   1. 标题：401KStatement
+   1. 描述：适用于个人参与者的401KStatement
+   1. 表单数据模型：RetirementAccountStatement
+   1. 预填充服务：表单数据模型预填充服务
 
-1. 點選「下一步」
-1. 指定下列專案
+1. 点按“下一步”
+1. 指定以下内容
 
-   1. 取消勾選「列印管道」核取方塊。 我們並未針對列印管道建立檔案。
-   1. Web：選取此選項即可產生Web管道的檔案
-   1. 互動式通訊：範本： **global>RetirationAccountStatemen** t（這是先前步驟中建立的範本）
-   1. 主題：**參考主題 — >畫布2.0**
+   1. 取消选中“Print channel（打印渠道）”复选框。 我们不是在为打印渠道创建文档。
+   1. Web：选择此选项可为Web渠道生成文档
+   1. 交互式通信：模板： **global>RetirationAccountStatemen** t（这是在上一步中创建的模板）
+   1. 主题：**参考主题 — >画布2.0**
 
-1. 點選「建立」
-1. 您可以按一下「完成」或「編輯」來關閉對話方塊。
+1. 点按创建
+1. 您可以单击完成或编辑来关闭对话框。
 
 ## 后续步骤
 
-[新增文字和影像至檔案](./partseven.md)
+[将文本和图像添加到文档](./partseven.md)

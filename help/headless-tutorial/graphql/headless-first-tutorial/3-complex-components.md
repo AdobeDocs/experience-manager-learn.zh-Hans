@@ -1,6 +1,6 @@
 ---
-title: 建立複雜的影像清單元件 — AEM Headless第一個教學課程
-description: 瞭解如何使用內容片段、內容參考和影像。
+title: 构建复杂的图像列表组件 — AEM Headless第一个教程
+description: 了解如何使用内容片段、内容引用和图像。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
@@ -18,29 +18,29 @@ ht-degree: 2%
 ---
 
 
-# 建置複雜元件
+# 构建复杂组件
 
-歡迎使用本教學課程章節，我們將探索如何建立複雜的「影像清單」元件，以轉譯內容片段、巢狀內容片段參考和參照的影像資產。 我們將使用Universal Editor讓React應用程式可編輯，以更進一步操作。
+欢迎阅读本教程一章，我们将在此章节中探究如何创建一个复杂的图像列表组件，该组件渲染内容片段、嵌套内容片段引用和引用的图像资产。 我们将使用通用编辑器使React应用程序可编辑，从而更进一步。
 
-Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化方法。 我們會運用內容片段來填入影像清單元件、處理巢狀參考並顯示參考的影像資產。
+Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法来管理内容。 我们使用内容片段填充图像列表组件，处理嵌套引用并显示引用的图像资产。
 
-在本教學課程中，我們將引導您建立影像清單元件、處理巢狀參照、演算參照的影像資產以及整合通用編輯器。 您將瞭解如何設定相依性、設計元件結構、擷取和分析內容片段，以及使用通用編輯器使應用程式可編輯。
+在本教程中，我们将指导您构建图像列表组件、处理嵌套引用、渲染引用的图像资产以及集成通用编辑器。 您将了解如何设置依赖关系、设计组件结构、检索和分析内容片段以及使用通用编辑器使应用程序可编辑。
 
-在本教學課程章節結束時，您將擁有功能齊全且可編輯的「影像清單」元件。 您將具備在React應用程式中建立動態元件所需的知識和技能，能透過Universal Editor增強內容製作體驗。 讓我們開始建置可編輯的影像清單元件！
+在本教程章节结束时，您将拥有一个功能齐全且可编辑的图像列表组件。 您将具备在React应用程序中创建动态组件的知识和技能，从而增强使用通用编辑器的内容创作体验。 让我们开始构建可编辑的图像列表组件！
 
-## 建立影像清單
+## 创建图像列表
 
-1. 我們現在必須建立一些選件片段和影像清單元件。  導覽至內容片段主控台。
+1. 我们现在必须创建一些选件片段和一个图像列表组件。  导航到内容片段控制台。
 
    ![create-imagelist-fragment](./assets/3/create-imagelist-fragment.png)
 
-   我們要建立型別的片段 `imagelist` (模型為 `imagelist`)，我們將賦予其標題 `imagelist`.
+   我们要创建类型的片段 `imagelist` (模型为 `imagelist`)，我们将为其指定标题 `imagelist`.
 
-   在內容片段編輯器中，我們有機會選取要包含或建立片段的片段。  選取「建立片段」。
+   在内容片段编辑器中，我们有机会选择要包含的片段或创建片段。  选择创建片段。
 
-   我們的模型型別為「影像清單」。  為片段提供標題和名稱。
+   我们的模型类型为“图像列表”。  为片段提供一个标题和名称。
 
-1. 由於影像清單是包含其他片段參照的容器型別片段，因此可以直接從編輯器建立新選件。  建立選件片段、包含和影像說明及文章。  您可以從下方剪下並貼上文字。  我們使用片段的標題作為卡片的標題。
+1. 由于图像列表是包含对其他片段引用的容器类型片段，因此可以直接从编辑器创建新选件。  创建选件片段、包含和图像描述及文章。  您可以从下面剪切和粘贴文本。  我们将片段的标题用作信息卡的标题。
 
    __文章 1__
 
@@ -124,7 +124,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    Then there's the surf. A pointbreak breaking for 300 meters down a shallow coral shelf, producing immaculate almond-shaped barrels, grinding down the reef at a barely makeable speed. Even though many of the waves race past me on my struggling backhand, the few that I make it to the end of are some of the best I've ever experienced, and I have a hard time containing my excitement, hooting and hollering to Sofia on the cliffs, with her Canon 5D in hand. The line-up out back is an eclectic mix of old salty men on oversized gun surfboards, young semi-pros with stickered boards, girlfriends on longboards and hippies with dreadlocks and big smiles. Nothing of the notorious localism I have read about online, even though I quickly learn to respect the noticeable pecking order, letting the obviously more skilled crowd get the biggest set waves. There are still plenty of action for everyone, and a friendly smile opens up even the grumpiest old-timer. After the sun has set, the same faces are seen around campfires and tailgate barbeques all over the campground, where many seem to have gotten stuck for the season, ignoring distant calls of civilization urging them to return to normal lives. As the stars come out, we set up our cameras for timelapses, hoping to capture some of the magic that is happening above us, all the while our heads turn heavy from the five hours in the water and the beverages that followed.
    ```
 
-   __Article 3__
+   __第三条　__
 
    _标题_
 
@@ -157,7 +157,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    Fast forward 5000 years, and although human ingenuity, competition and spirit for invention has further evolved this once crude way of transportation, the principles remain the same. We designed our now countless different models of wooden planks to float on top of powder snow, crafted metal edges to cut through ice, we shaved off every superfluous gram we could find to help us on our journeys, to reach farther, higher and steeper. And today, when in many places, multi-billion dollar corporations charge us big money to ride down over-crowded slopes, many of us are returning to the original way of skiing. Exchanging lift queues for solitude, quantity for quality, and apres-ski beer for trail mix, a new generation of skiers are rediscovering the virtue of earning one's turns, the silence of the mountains, and how far into the unknown a little off-season cardio training can get you.
    ```
 
-   __Article 4__
+   __第4条__
 
    _标题_
 
@@ -190,7 +190,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    Eu facilisis sed odio morbi quis. Consequat semper viverra nam libero justo laoreet sit amet. Eget mi proin sed libero enim sed faucibus. Vitae tempus quam pellentesque nec nam aliquam sem. Justo donec enim diam vulputate ut pharetra sit. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Mauris pellentesque pulvinar pellentesque habitant morbi. Iaculis at erat pellentesque adipiscing. Libero id faucibus nisl tincidunt eget nullam non nisi est. Interdum consectetur libero id faucibus nisl tincidunt. Volutpat odio facilisis mauris sit amet massa. Tristique senectus et netus et malesuada fames ac turpis egestas. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Sapien et ligula ullamcorper malesuada proin libero. Interdum consectetur libero id faucibus nisl tincidunt.
    ```
 
-1. 讓我們返回查詢編輯器並擷取此新元件。  請注意，我們正在參照 `OfferModel` 以及中繼資料中，用於卡片標題。
+1. 让我们返回到查询编辑器并获取此新组件。  请注意，我们正在引用 `OfferModel` 以及元数据，我们将将这些用作卡片的标题。
 
    ```graphql
    query imageList {
@@ -226,13 +226,13 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    }
    ```
 
-1. 現在將此連線至我們的應用程式。  在我們的 `home.js`，請參考我們的新查詢。 以上 `useEffect()` 我們將設定 `list` 和 `setList`.
+1. 现在，将此连接到我们的应用程序。  在我们的 `home.js`，我们将引用新查询。 以上 `useEffect()` 我们将设置 `list` 和 `setList`.
 
    ```javascript
    const [list, setList] = useState({});
    ```
 
-   內部 `useEffect()` imagelist查詢的新請求。
+   内部 `useEffect()` imagelist查询的新请求。
 
    ```javascript
    sdk.runPersistedQuery('pure-headless/imagelist')
@@ -246,13 +246,13 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    });
    ```
 
-   現在，讓我們將此專案新增至應用程式的DOM。
+   现在，让我们将其添加到应用程序的DOM中。
 
    ```javascript
    <div>{list.cards && <ImageList content={list.cards} />}</div>
    ```
 
-   讓我們來看看我們的imagelist元件。  在imagelist中，我們會重複執行每個選件。
+   让我们看一下图像列表组件。  在imagelist中，我们循环访问每个选件。
 
    ```javascript
    {content.items && content.items.map((items) => (
@@ -260,7 +260,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    ))}
    ```
 
-   在卡片元件中，我們會轉譯每個卡片。
+   在卡组件中，我们渲染每个卡。
 
    ```javascript
    const Cards = ({ content }) => {
@@ -279,9 +279,9 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    };
    ```
 
-   另請注意，我們參考了影像元件，並將其傳遞至動態URL。
+   此外，请注意，我们引用了一个图像组件，并向其传递了一个动态URL。
 
-   在影像元件中，我們使用動態URL來建立具有多個URL的來源集。
+   在图像组件中，我们使用动态URL创建一个包含多个URL的源集。
 
    ```javascript
    const srcset = [
@@ -292,15 +292,15 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    ];
    ```
 
-## 啟用通用編輯器
+## 启用通用编辑器
 
-1. 新增 `<meta />` 至應用程式。  開啟 `App.js` ，並在檔案頂端插入匯入。
+1. 添加 `<meta />` 到应用程序。  打开 `App.js` 并在文件顶部插入import。
 
    ```javascript
    import { Helmet } from 'react-helmet';
    ```
 
-   而應用程式內傳回下列程式碼：
+   并且在应用程序中，return添加以下代码：
 
    ```javascript
    <Helmet>
@@ -310,39 +310,39 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
 
    >[!TIP]
    >
-   > 我們使用Helmet程式庫，根據 `.env` 檔案，不過您可以將此檔案硬式編碼至 `index.html`.
+   > 我们使用Helmet库根据 `.env` 文件，但您可以将其硬编码到 `index.html`.
 
-1. 現在讓我們更新資訊卡，以識別片段和資料型別，以便編輯每個資訊卡。
+1. 现在，让我们更新信息卡，以标识用于编辑每个信息卡的片段和数据类型。
 
-   範圍 `<div className='card' key={card._path}>`
+   范围 `<div className='card' key={card._path}>`
 
-   新增
+   添加
 
    ```javascript
    itemID={`urn:aemconnection:${card._path}/jcr:content/data/master`} itemfilter='cf' itemType='reference' itemScope
    ```
 
-   您現在應該有：
+   现在，您应该拥有：
 
    ```javascript
    <div className='card' key={card._path} itemID={`urn:aemconnection:${card._path}/jcr:content/data/master`} itemfilter='cf' itemType='reference' itemScope>
    ```
 
-1. 現在確定哪些是可編輯的。
+1. 现在，确定哪些内容可编辑。
 
-   至 `<h3 />` 新增：
+   至 `<h3 />` 添加：
 
    ```javascript
    itemProp="_metadata" itemType="text"
    ```
 
-   敬我們的 `<div />` 新增：
+   敬我们的 `<div />` 添加：
 
    ```javascript
    itemProp="description" itemType="richtext"
    ```
 
-   卡片的最終程式碼：
+   卡片的最终代码：
 
    ```javascript
    const Cards = ({ content }) => {
@@ -361,7 +361,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    };
    ```
 
-的最終程式碼 `home.js`：
+的最终代码 `home.js`：
 
 ```javascript
 import React, { useContext, useEffect, useState } from 'react';
@@ -421,4 +421,4 @@ export default Home;
 
 ## 恭喜！
 
-您已成功建立AEM Headless體驗，該體驗完全由AEM Headless API提供技術支援，並可使用通用編輯器進行編輯。
+您已成功创建了AEM Headless体验，该体验完全由AEM Headless API提供支持，并且可以使用通用编辑器进行编辑。

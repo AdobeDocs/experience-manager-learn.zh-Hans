@@ -1,6 +1,6 @@
 ---
-title: 如何調查AEM中的SAML相關問題
-description: 調查與SAML相關問題的步驟
+title: 如何调查AEM中的SAML相关问题
+description: 调查与SAML有关的问题的步骤
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何調查SAML相關問題
+# 如何调查SAML相关问题
 
-*本影片逐步解說在AEM中調查SAML相關問題的步驟。*
+*本视频介绍调查AEM中SAML相关问题的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335466?quality=12&learn=on)

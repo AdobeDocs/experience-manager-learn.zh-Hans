@@ -1,6 +1,6 @@
 ---
-title: AEM Headless實作教學課程快速入門 — GraphQL
-description: 端對端教學課程，說明如何使用AEM GraphQL API建置和公開內容。
+title: AEM Headless实践教程快速入门 — GraphQL
+description: 一个端到端教程，其中演示了如何使用AEM GraphQL API构建和公开内容。
 doc-type: tutorial
 mini-toc-levels: 1
 kt: 6678
@@ -22,39 +22,39 @@ ht-degree: 4%
 
 {{aem-headless-trials-promo}}
 
-端對端教學課程，說明如何在Headless CMS案例中使用AEM GraphQL API建置和公開內容，並由外部應用程式使用。
+一个端到端教程，说明如何在Headless CMS场景中使用AEM GraphQL API构建和公开内容并由外部应用程序使用。
 
-本教學課程探討如何使用AEM GraphQL API和Headless功能來增強外部應用程式中浮現的體驗。
+本教程探讨了如何使用AEM GraphQL API和Headless功能增强在外部应用程序中浮现的体验。
 
-本教學課程涵蓋下列主題：
+本教程涵盖以下主题：
 
-* 建立專案設定
-* 建立內容片段模型以模型化資料
-* 根據先前建立的模型建立內容片段。
-* 探索如何使用整合的GraphiQL開發工具查詢AEM中的內容片段。
-* 儲存或保留GraphQL查詢至AEM
-* 從範例React應用程式使用持續的GraphQL查詢
+* 创建项目配置
+* 创建内容片段模型以建模数据
+* 根据之前创建的模型创建内容片段。
+* 探索如何使用集成的GraphiQL开发工具查询AEM中的内容片段。
+* 将GraphQL查询存储或保留到AEM
+* 使用示例React应用程序中的持久GraphQL查询
 
 ## 前提条件 {#prerequisites}
 
-依照本教學課程操作，須具備下列條件：
+遵循本教程需要完成以下操作：
 
 * 基本HTML和JavaScript技能
-* 下列工具必須安裝在本機：
+* 必须本地安装以下工具：
    * [Node.js v18](https://nodejs.org/)
    * [Git](https://git-scm.com/)
-   * IDE (例如， [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
+   * IDE(例如， [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 
-### AEM環境
+### AEM环境
 
-若要完成本教學課程，建議使用AEM管理員存取AEMas a Cloud Service環境。 如果您無法存取AEMas a Cloud Service環境，您可以使用 [本機AEMas a Cloud Service快速入門SDK](/help/cloud-service/local-development-environment/aem-runtime.md). 不過，請務必注意，某些產品UI畫面（例如內容片段導覽）不同。
+要完成本教程，建议使用AEM管理员访问AEMas a Cloud Service环境。 如果您无权访问AEMas a Cloud Service环境，则可以使用 [本地AEMas a Cloud Service快速入门SDK](/help/cloud-service/local-development-environment/aem-runtime.md). 但是，请务必注意，某些产品UI屏幕（例如内容片段导航）是不同的。
 
-## 讓我們開始吧！
+## 让我们开始吧！
 
-開始教學課程，使用 [定義內容片段模型](content-fragment-models.md).
+开始教程，使用 [定义内容片段模型](content-fragment-models.md).
 
-## github專案
+## GitHub项目
 
-原始程式碼和內容套件可在 [AEM Guides - WKND GraphQL GitHub專案](https://github.com/adobe/aem-guides-wknd-graphql).
+源代码和内容包位于 [AEM指南 — WKND GraphQL GitHub项目](https://github.com/adobe/aem-guides-wknd-graphql).
 
-如果您發現教學課程或程式碼有問題，請保留 [GitHub問題](https://github.com/adobe/aem-guides-wknd-graphql/issues).
+如果您发现教程或代码有问题，请保留 [GitHub问题](https://github.com/adobe/aem-guides-wknd-graphql/issues).

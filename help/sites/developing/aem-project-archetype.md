@@ -22,11 +22,11 @@ ht-degree: 50%
 
 # [!DNL AEM Project Archetype] {#aem-project-archetype}
 
-AEM專案包含實作的所有程式碼和設定。 此 [!DNL AEM Project Archetype] 建立依最佳實務為根據的最小Adobe Experience Manager專案，作為您專屬AEM專案的開端。
+AEM项目包含实施的所有代码和配置。 此 [!DNL AEM Project Archetype] 创建一个最少、基于最佳实践的Adobe Experience Manager项目作为您自己的AEM项目的起点。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32550?quality=12&learn=on)
 
 ## 其他资源 {#additional-resources}
 
-* [github專案](https://github.com/adobe/aem-project-archetype)
-* [AEM專案原型檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [GitHub项目](https://github.com/adobe/aem-project-archetype)
+* [AEM项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)

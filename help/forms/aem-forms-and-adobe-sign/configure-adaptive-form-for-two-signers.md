@@ -1,6 +1,6 @@
 ---
-title: 與2位簽署者訂立租賃合約
-description: 2位簽署者的租賃合約。 影片說明使用2位簽署者設定最適化表單所需的各種步驟。
+title: 与2个签名者签订的租赁协议
+description: 与2个签名者签订租赁协议。 此视频介绍使用2个签名者配置自适应表单所需的各种步骤。
 feature: Adaptive Forms,Acrobat Sign
 thumbnail: 39294.jpg
 kt: 6071
@@ -15,13 +15,13 @@ ht-degree: 5%
 
 ---
 
-# 與2位簽署者訂立租賃合約
+# 与2个签名者签订的租赁协议
 
-影片說明使用2位簽署者設定最適化表單所需的各種步驟。
+此视频介绍使用2个签名者配置自适应表单所需的各种步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39294?quality=12&learn=on)
 
-可從下列連結下載與此影片相關的資產
+可以从以下链接下载与此视频相关的资产
 
 * [自适应表单模板](assets/tenancy-agreement-template.zip)
-* [租賃合約表單](assets/rental-agreement-form.zip)
+* [租赁协议表单](assets/rental-agreement-form.zip)

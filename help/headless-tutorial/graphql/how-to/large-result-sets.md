@@ -1,6 +1,6 @@
 ---
-title: 如何在AEM Headless中使用大型結果集
-description: 瞭解如何使用AEM Headless處理大型結果集。
+title: 如何在AEM Headless中使用大型结果集
+description: 了解如何使用AEM Headless处理大型结果集。
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -18,27 +18,27 @@ ht-degree: 1%
 
 ---
 
-# AEM Headless中的大型結果集
+# AEM Headless中的大型结果集
 
-AEM Headless GraphQL查詢可傳回大量結果。 本文介紹如何在AEM Headless中使用大型結果，以確保您的應用程式的最佳效能。
+AEM Headless GraphQL查询可能会返回大量结果。 本文介绍了如何在AEM Headless中使用大型结果以确保应用程序的最佳性能。
 
-AEM Headless支援 [offset/limit](#list-query) 和 [游標型分頁](#paginated-query) 查詢到較大結果集的較小子集。 可以提出多個請求，以收集所需數量的結果。
+AEM Headless支持 [偏移/限制](#list-query) 和 [基于游标的分页](#paginated-query) 查询到较大结果集的较小子集。 可以提出多个请求来收集所需数量的结果。
 
-以下範例使用結果的小子集（每個請求四個記錄）來示範技術。 在實際應用程式中，您可能會為每個請求使用較大量的記錄來改善效能。 每個請求50筆記錄是很好的基準。
+以下示例使用结果的小子集（每个请求四个记录）来演示这些技术。 在真实应用程序中，您将为每个请求使用更多的记录来提高性能。 很好的基线是每个请求50条记录。
 
 ## 内容片段模型
 
-分頁和排序可用於任何內容片段模式。
+分页和排序可用于任何内容片段模型。
 
-## GraphQL持續查詢
+## GraphQL持久查询
 
-使用大型資料集時，位移和限制以及游標型分頁都可用來擷取資料的特定子集。 不過，這兩種技術之間有些差異，可能會讓其中一種在某些情況下比另一種更合適。
+处理大型数据集时，偏移和限制以及基于游标的分页都可以用于检索数据的特定子集。 然而，这两种技术之间存在一些差异，使得其中一种技术可能在某些情况下比另一种技术更合适。
 
-### 位移/限制
+### 偏移/限制
 
-清單查詢，使用 `limit` 和 `offset` 提供直接的方法，指定起點(`offset`)和要擷取的記錄數(`limit`)。 此方法允許從完整結果集內的任何位置選取結果子集，例如跳至結果的特定頁面。 雖然實作容易，但在處理大量結果時可能會變慢且效率低下，因為擷取許多記錄需要掃描所有先前的記錄。 當位移值很高時，此方法也可能導致效能問題，因為它可能需要擷取和捨棄許多結果。
+列出查询，使用 `limit` 和 `offset` 提供直接的方法，指定起点(`offset`)和要检索的记录数(`limit`)。 这种方法允许从完整结果集中的任何位置选择结果子集，例如跳转到结果的特定页面。 虽然它易于实施，但在处理大量结果时速度可能会很慢而且效率低下，因为检索许多记录需要扫描所有以前的记录。 当偏移值较高时，此方法还可能导致性能问题，因为它可能需要检索和丢弃许多结果。
 
-#### GraphQL查詢
+#### GraphQL查询
 
 ```graphql
 # Retrieves a list of Adventures sorted price descending, and title ascending if there is the prices are the same.
@@ -62,9 +62,9 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 }
 ```
 
-#### GraphQL回應
+#### GraphQL响应
 
-產生的JSON回應會包含第2、第3、第4和第5最昂貴的冒險活動。 結果中的前兩個冒險具有相同的價格(`4500` 因此 [清單查詢](#list-queries) 會指定具有相同價格的Adventures，然後依標題遞增順序排序。)
+生成的JSON响应包含第2、第3、第4和第5最昂贵的冒险。 结果中的前两次冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定具有相同价格的冒险，然后按标题的升序排序。)
 
 ```json
 {
@@ -97,11 +97,11 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 }
 ```
 
-### 分頁查詢
+### 分页查询
 
-分頁查詢中可用的游標型分頁，涉及使用游標（對特定記錄的參照）來擷取下一組結果。 此方法更有效率，因為它不需要掃描所有先前的記錄來擷取所需的資料子集。 分頁查詢很適合從頭到中間的某個點或到結尾反複處理大型結果集。 清單查詢，使用 `limit` 和 `offset` 提供直接的方法，指定起點(`offset`)和要擷取的記錄數(`limit`)。 此方法允許從完整結果集內的任何位置選取結果子集，例如跳至結果的特定頁面。 雖然實作容易，但在處理大量結果時可能會變慢且效率低下，因為擷取許多記錄需要掃描所有先前的記錄。 當位移值很高時，此方法也可能導致效能問題，因為它可能需要擷取和捨棄許多結果。
+基于游标的分页可用于分页查询，它涉及使用游标（对特定记录的引用）来检索下一组结果。 这种方法效率更高，因为它无需扫描所有先前的记录来检索所需的数据子集。 分页查询非常适合迭代从头到中间的某个点或到结尾的大型结果集。 列出查询，使用 `limit` 和 `offset` 提供直接的方法，指定起点(`offset`)和要检索的记录数(`limit`)。 这种方法允许从完整结果集中的任何位置选择结果子集，例如跳转到结果的特定页面。 虽然它易于实施，但在处理大量结果时速度可能会很慢而且效率低下，因为检索许多记录需要扫描所有以前的记录。 当偏移值较高时，此方法还可能导致性能问题，因为它可能需要检索和丢弃许多结果。
 
-#### GraphQL查詢
+#### GraphQL查询
 
 ```graphql
 # Retrieves the most expensive Adventures (sorted by title ascending if there is the prices are the same)
@@ -131,9 +131,9 @@ query adventuresByPaginated($first:Int, $after:String) {
 }
 ```
 
-#### GraphQL回應
+#### GraphQL响应
 
-產生的JSON回應會包含第2、第3、第4和第5最昂貴的冒險活動。 結果中的前兩個冒險具有相同的價格(`4500` 因此 [清單查詢](#list-queries) 會指定具有相同價格的Adventures，然後依標題遞增順序排序。)
+生成的JSON响应包含第2、第3、第4和第5最昂贵的冒险。 结果中的前两次冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定具有相同价格的冒险，然后按标题的升序排序。)
 
 ```json
 {
@@ -174,9 +174,9 @@ query adventuresByPaginated($first:Int, $after:String) {
 }
 ```
 
-#### 下一組分頁結果
+#### 下一组分页结果
 
-下一組結果可以使用以下擷取： `after` 引數和 `endCursor` 上一個查詢的值。 如果沒有更多可擷取的結果， `hasNextPage` 是 `false`.
+下一组结果可以使用获取 `after` 参数和 `endCursor` 值。 如果没有更多要获取的结果， `hasNextPage` 是 `false`.
 
 ##### 查询变量
 
@@ -187,19 +187,19 @@ query adventuresByPaginated($first:Int, $after:String) {
 }
 ```
 
-## React範例
+## React示例
 
-以下是React範例，示範如何使用 [位移和限制](#offset-and-limit) 和 [游標型分頁](#cursor-based-pagination) 方法。 通常每個請求的結果數量會較多，但就這些範例而言，上限設為5。
+以下是演示如何使用的React示例 [偏移和限制](#offset-and-limit) 和 [基于游标的分页](#cursor-based-pagination) 方法。 通常，每个请求的结果数会更多，但是对于这些示例，限制设置为5。
 
-### 位移和限制範例
+### 偏移和限制示例
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418381/?quality=12&learn=on)
 
-使用位移和限制，可輕鬆擷取和顯示結果子集。
+通过使用偏移和限制，可以轻松地检索和显示结果子集。
 
-#### useEffect鉤點
+#### useEffect挂钩
 
-此 `useEffect` 掛接會叫用持續查詢(`adventures-by-offset-and-limit`)以擷取Adventures清單。 查詢使用 `offset` 和 `limit` 用來指定起點和要擷取之結果數的引數。 此 `useEffect` 當以下情況時叫用鉤點： `page` 值變更。
+此 `useEffect` 挂接调用持久查询(`adventures-by-offset-and-limit`)以检索Adventures列表。 查询使用 `offset` 和 `limit` 用于指定起点和要检索的结果数的参数。 此 `useEffect` 在以下情况下调用挂接： `page` 值更改。
 
 
 ```javascript
@@ -242,7 +242,7 @@ export function useOffsetLimitAdventures(page, limit) {
 
 #### 组件
 
-元件使用 `useOffsetLimitAdventures` 勾選以擷取Adventures清單。 此 `page` 值會增加或減少，以擷取下一個和上一個結果集。 此 `hasMore` value可用來判斷是否應該啟用「下一頁」按鈕。
+组件使用 `useOffsetLimitAdventures` 检索冒险的列表。 此 `page` 值会递增或递减以获取下一组或上一组结果。 此 `hasMore` value用于确定是否应启用“下一页”按钮。
 
 ```javascript
 import { useState } from "react";
@@ -300,18 +300,18 @@ export default function OffsetLimitAdventures() {
 }
 ```
 
-### 分頁範例
+### 分页示例
 
-![分頁範例](./assets/large-results/paginated-example.png)
+![分页示例](./assets/large-results/paginated-example.png)
 
-_每個紅色方塊代表離散的分頁HTTP GraphQL查詢。_
+_每个红色框表示一个离散的分页HTTP GraphQL查询。_
 
-使用以游標為基礎的分頁，可以透過增量收集結果並將其串連到現有結果來輕鬆擷取和顯示大型結果集。
+通过使用基于游标的分页，可以增量收集结果并将其连接到现有结果，从而轻松检索和显示大型结果集。
 
 
-#### UseEffect鉤點
+#### UseEffect挂钩
 
-此 `useEffect` 掛接會叫用持續查詢(`adventures-by-paginated`)以擷取Adventures清單。 查詢使用 `first` 和 `after` 指定要擷取的結果數目和游標起始位置的引數。 `fetchData` 持續回圈，收集下一組分頁結果，直到沒有更多可擷取的結果為止。
+此 `useEffect` 挂接调用持久查询(`adventures-by-paginated`)以检索Adventures列表。 查询使用 `first` 和 `after` 指定要检索的结果数和游标起始位置的参数。 `fetchData` 不断循环，收集下一组分页结果，直到没有更多可提取的结果为止。
 
 ```javascript
 import { useState, useEffect } from "react";
@@ -366,7 +366,7 @@ export function usePaginatedAdventures() {
 
 #### 组件
 
-元件使用 `usePaginatedAdventures` 勾選以擷取Adventures清單。 此 `queryCount` value用於顯示擷取Adventures清單所提出的HTTP要求數目。
+组件使用 `usePaginatedAdventures` 检索冒险的列表。 此 `queryCount` value用于显示为检索冒险列表而发出的HTTP请求数。
 
 ```javascript
 import { useState } from "react";

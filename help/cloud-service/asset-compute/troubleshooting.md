@@ -1,6 +1,6 @@
 ---
-title: 疑難排解AEM Assets的Asset compute擴充性
-description: 以下是開發和部署AEM Assets的自訂Asset compute背景工作時可能遇到的常見問題和錯誤的索引，以及解決方法。
+title: AEM Assets的Asset compute可扩展性故障诊断
+description: 以下是开发和部署AEM Assets的自定义Asset compute工作程序时可能遇到的常见问题和错误以及解决方案的索引。
 feature: Asset Compute Microservices
 topics: renditions, metadata, development
 version: Cloud Service
@@ -20,149 +20,149 @@ ht-degree: 0%
 
 ---
 
-# 疑難排解Asset compute擴充性
+# asset compute可扩展性故障诊断
 
-以下是開發和部署AEM Assets的自訂Asset compute背景工作時可能遇到的常見問題和錯誤的索引，以及解決方法。
+以下是开发和部署AEM Assets的自定义Asset compute工作程序时可能遇到的常见问题和错误以及解决方案的索引。
 
 ## 开发{#develop}
 
-### 轉譯已傳回部分繪製/損毀{#rendition-returned-partially-drawn-or-corrupt}
+### 呈现版本被部分绘制/损坏{#rendition-returned-partially-drawn-or-corrupt}
 
-+ __錯誤__：轉譯未完全轉譯（影像時）或已損毀，無法開啟。
++ __错误__：演绎版未完全渲染（图像时）或已损坏，无法打开。
 
-   ![傳回部分繪製的轉譯](./assets/troubleshooting/develop__await.png)
+   ![已返回部分绘制的演绎版](./assets/troubleshooting/develop__await.png)
 
-+ __原因__：工作者的 `renditionCallback` 函式即將結束，轉譯才能完全寫入 `rendition.path`.
-+ __解析度__：檢閱自訂背景工作程式碼，並確保所有非同步呼叫均透過以下方式進行： `await`.
++ __原因__：工作人员的 `renditionCallback` 函数在完全写入演绎版之前退出 `rendition.path`.
++ __分辨率__：查看自定义工作进程代码，并确保使用同步执行所有异步调用 `await`.
 
-## 開發工具{#development-tool}
+## 开发工具{#development-tool}
 
-### asset compute專案中缺少Console.json檔案{#missing-console-json}
+### asset compute项目中缺少Console.json文件{#missing-console-json}
 
-+ __錯誤：__ 錯誤：驗證時遺失必要檔案(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY)於async setupAssetCompute (.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
-+ __原因：__ 此 `console.json` asset compute專案的根目錄中缺少檔案
-+ __解析度：__ 下載新的 `console.json` 形成您的Adobe I/O專案
-   1. 在console.adobe.io中，開啟Asset compute專案設定為使用的Adobe I/O專案
-   1. 點選 __下載__ 右上角的按鈕
-   1. 使用檔案名稱將下載的檔案儲存至Asset compute專案的根目錄 `console.json`
++ __错误：__ 错误：验证(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js)时缺少必需的文件:XX:YY)异步安装AssetCompute (.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __原因：__ 此 `console.json` asset compute项目的根目录中缺少文件
++ __分辨率：__ 下载新的 `console.json` 形成您的Adobe I/O项目
+   1. 在console.adobe.io中，打开将Asset compute项目配置为使用的Adobe I/O项目
+   1. 点按 __下载__ 右上角的按钮
+   1. 使用文件名将下载的文件保存到Asset compute项目的根目录 `console.json`
 
-### manifest.yml中的YAML縮排不正確{#incorrect-yaml-indentation}
+### manifest.yml中的YAML缩进不正确{#incorrect-yaml-indentation}
 
-+ __錯誤：__ YAMLException：行X、欄Y：（透過標準輸出自）對應專案的縮排錯誤 `aio app run` 命令)
-+ __原因：__ Yaml檔案的空白間距很敏感，您的縮排可能不正確。
-+ __解析度：__ 檢閱您的 `manifest.yml` 並確保所有縮排都正確。
++ __错误：__ YAMLException：第X行、第Y列的映射条目的缩进错误：(通过标准输出自 `aio app run` 命令)
++ __原因：__ Yaml文件具有空格敏感性，您的缩进可能不正确。
++ __分辨率：__ 查看您的 `manifest.yml` 并确保所有缩进都正确。
 
-### memorySize限制設定得太低{#memorysize-limit-is-set-too-low}
+### memorySize限制设置过低{#memorysize-limit-is-set-too-low}
 
-+ __錯誤：__  本機開發伺服器OpenWhiskError：PUThttps://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true傳回HTTP 400 （錯誤請求） —> 「請求內容格式錯誤：需求失敗：記憶體比允許的134217728 B臨界值低64 MB」
-+ __原因：__ A `memorySize` 中背景工作者的限制 `manifest.yml` 設定為低於錯誤訊息所報告的最小允許臨界值（位元組）。
-+ __解析度：__  檢閱 `memorySize` 中的限制 `manifest.yml` 並確保它們都大於允許的最小臨界值。
++ __错误：__  本地Dev Server OpenWhiskError：PUThttps://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true返回HTTP 400（错误请求） — >“请求内容格式错误：请求失败：内存比允许的阈值134217728 B低64 MB”
++ __原因：__ A `memorySize` 工作人员在 `manifest.yml` 设置为低于错误消息报告的最小允许阈值（字节）。
++ __分辨率：__  查看 `memorySize` 中的限制 `manifest.yml` 并确保它们都大于允许的最小阈值。
 
-### 開發工具無法啟動，因為遺失private.key{#missing-private-key}
+### 由于缺少private.key，开发工具无法启动{#missing-private-key}
 
-+ __錯誤：__ 本機Dev ServerError：在validatePrivateKeyFile遺漏必要的檔案.... (透過標準輸出自 `aio app run` 命令)
-+ __原因：__ 此 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 中的值 `.env` 檔案，未指向 `private.key` 或 `private.key` 目前使用者無法讀取。
-+ __解析度：__ 檢閱 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 中的值 `.env` 檔案，並確保其包含 `private.key` 檔案系統上的。
++ __错误：__ 本地Dev ServerError：在validatePrivateKeyFile中缺少必需的文件.... (通过标准输出自 `aio app run` 命令)
++ __原因：__ 此 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 中的值 `.env` 文件，未指向 `private.key` 或 `private.key` 当前用户无法读取。
++ __分辨率：__ 查看 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 中的值 `.env` 文件，并确保它包含指向 `private.key` 文件系统中的所有文件。
 
-### 來源檔案下拉式清單不正確{#source-files-dropdown-incorrect}
+### 源文件下拉列表不正确{#source-files-dropdown-incorrect}
 
-asset compute開發工具可能會進入提取過時資料的狀態，在 __來源檔案__ 下拉式清單顯示不正確的專案。
+asset compute开发工具可能会进入提取陈旧数据的状态，这种情况在 __源文件__ 下拉菜单显示不正确的项目。
 
-+ __錯誤：__ 來源檔案下拉式清單顯示不正確的專案。
-+ __原因：__ 過時的快取瀏覽器狀態導致
-+ __解析度：__ 在瀏覽器中完全清除瀏覽器標籤的「應用程式狀態」、瀏覽器快取、本機儲存空間和Service Worker。
++ __错误：__ 源文件下拉列表显示不正确的项目。
++ __原因：__ 过时的缓存浏览器状态导致
++ __分辨率：__ 在浏览器中，完全清除浏览器选项卡的“应用程序状态”、浏览器缓存、本地存储和Service Worker。
 
-### 缺少或無效的devToolToken查詢引數{#missing-or-invalid-devtooltoken-query-parameter}
+### devToolToken查询参数缺失或无效{#missing-or-invalid-devtooltoken-query-parameter}
 
-+ __錯誤：__ asset compute開發工具中的「未獲授權」通知
-+ __原因：__ `devToolToken` 遺失或無效
-+ __解析度：__ 關閉「Asset compute開發工具」瀏覽器視窗，終止透過啟動的任何執行中的「開發工具」程式。 `aio app run` 指令，然後重新啟動開發工具(使用 `aio app run`)。
++ __错误：__ asset compute开发工具中的“未授权”通知
++ __原因：__ `devToolToken` 缺失或无效
++ __分辨率：__ 关闭“Asset compute开发工具”浏览器窗口，终止通过启动的任何正在运行的开发工具进程。 `aio app run` 命令，然后重新启动开发工具(使用 `aio app run`)。
 
-### 無法移除來源檔案{#unable-to-remove-source-files}
+### 无法删除源文件{#unable-to-remove-source-files}
 
-+ __錯誤：__ 無法從開發工具UI中移除新增的源檔案
-+ __原因：__ 此功能尚未實作
-+ __解析度：__ 使用中定義的憑證登入您的雲端儲存空間提供者 `.env`. 找出開發工具所使用的容器(也指定於 `.env`)，導覽至 __source__ 資料夾，並刪除任何來源影像。 您可能需要執行中概述的步驟 [來源檔案下拉式清單不正確](#source-files-dropdown-incorrect) 如果刪除的來源檔案繼續顯示在下拉式清單中，因為它們可能在開發工具「應用程式狀態」中快取到本機。
++ __错误：__ 无法从开发工具UI中删除添加的源文件
++ __原因：__ 此功能尚未实施
++ __分辨率：__ 使用中定义的凭据登录到您的云存储提供商 `.env`. 找到开发工具使用的容器(也在 `.env`)，导航到 __源__ 文件夹，并删除任何源图像。 您可能需要执行中概述的步骤 [源文件下拉列表不正确](#source-files-dropdown-incorrect) 如果删除的源文件继续显示在下拉菜单中，因为它们可能缓存在开发工具的“应用程序状态”本地。
 
-   ![Microsoft Azure Blob儲存體](./assets/troubleshooting/dev-tool__remove-source-files.png)
+   ![Microsoft Azure Blob存储](./assets/troubleshooting/dev-tool__remove-source-files.png)
 
 ## 测试{#test}
 
-### 測試執行期間未產生轉譯{#test-no-rendition-generated}
+### 测试执行期间未生成演绎版{#test-no-rendition-generated}
 
-+ __錯誤：__ 失敗：未產生轉譯。
-+ __原因：__ 背景工作無法產生轉譯，因為發生非預期的錯誤，例如JavaScript語法錯誤。
-+ __解析度：__ 檢閱測試執行的 `test.log` 於 `/build/test-results/test-worker/test.log`. 找到此檔案中對應失敗測試案例的區段，並檢閱錯誤。
++ __错误：__ 失败：未生成演绎版。
++ __原因：__ 辅助进程由于意外错误（如JavaScript语法错误）未能生成演绎版。
++ __分辨率：__ 查看测试执行的 `test.log` 在 `/build/test-results/test-worker/test.log`. 找到此文件中与测试失败案例对应的部分，并检查错误。
 
-   ![疑難排解 — 未產生轉譯](./assets/troubleshooting/test__no-rendition-generated.png)
+   ![故障诊断 — 未生成演绎版](./assets/troubleshooting/test__no-rendition-generated.png)
 
-### 測試產生錯誤的轉譯，導致測試失敗{#tests-generates-incorrect-rendition}
+### 测试生成错误的演绎版，导致测试失败{#tests-generates-incorrect-rendition}
 
-+ __錯誤：__ 失敗：轉譯「rendition.xxx」未如預期般運作。
-+ __原因：__ 背景工作會輸出與不相同的轉譯 `rendition.<extension>` 在測試案例中提供。
-   + 若預期 `rendition.<extension>` 檔案的建立方式與測試案例中本機產生的轉譯不完全相同，測試可能會失敗，因為位元之間可能有些差異。 例如，如果Asset compute背景工作使用API變更對比，並且透過調整Adobe Photoshop CC中的對比建立了預期的結果，則檔案可能看起來相同，但位元中的細微變化可能不同。
-+ __解析度：__ 導覽至，檢閱測試的轉譯輸出 `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`，並和測試案例中的預期轉譯檔案進行比較。 若要建立完全預期的資產，請執行下列任一項作業：
-   + 使用開發工具來產生轉譯、驗證其正確無誤，並當做預期的轉譯檔案使用
-   + 或者，驗證測試產生的檔案： `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`，驗證其正確性，並作為預期的轉譯檔案使用
++ __错误：__ 失败：演绎版“rendition.xxx”与预期不同。
++ __原因：__ 工作进程输出与不相同的演绎版 `rendition.<extension>` 在测试用例中提供。
+   + 如果预期 `rendition.<extension>` 文件创建方式与测试用例中本地生成的演绎版不完全相同，测试可能会失败，因为比特之间存在一些差异。 例如，如果Asset compute工作进程使用API更改对比度，并通过调整Adobe Photoshop CC中的对比度创建预期结果，则文件可能显示相同，但位中的细微变化可能不同。
++ __分辨率：__ 通过导航到，查看测试中的演绎版输出 `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`，并将其与测试用例中的预期演绎版文件进行比较。 要创建完全预期的资产，请执行下列任一操作：
+   + 使用开发工具生成演绎版，验证它是否正确，并将其用作预期的演绎版文件
+   + 或者，验证测试生成的文件： `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`，验证它是否正确，并将其用作预期的演绎版文件
 
 ## 调试
 
-### 偵錯工具未附加{#debugger-does-not-attach}
+### Debugger未连接{#debugger-does-not-attach}
 
-+ __錯誤__：處理啟動時發生錯誤：錯誤：無法連線到偵錯目標位置……
-+ __原因__：Docker Desktop未在本機系統上執行。 檢閱VS程式碼偵錯主控台（「檢視>偵錯主控台」）以確認此錯誤，加以確認。
-+ __解析度__：開始 [Docker案頭並確認已安裝必要的Docker映像](./set-up/development-environment.md#docker).
++ __错误__：处理启动项时出错：错误：无法连接到位于……的调试目标
++ __原因__：Docker Desktop未在本地系统上运行。 通过查看VS代码调试控制台（“查看”>“调试控制台”）来验证这一点，确认报告了此错误。
++ __分辨率__：开始 [Docker Desktop并确认安装了必需的Docker映像](./set-up/development-environment.md#docker).
 
-### 中斷點未暫停{#breakpoints-no-pausing}
+### 断点未暂停{#breakpoints-no-pausing}
 
-+ __錯誤__：從可偵錯的開發工具執行Asset compute工作者時，VS Code不會暫停在中斷點。
++ __错误__：从可调试的开发工具运行Asset compute工作程序时，VS Code不会在断点处暂停。
 
-#### 未附加VS程式碼偵錯工具{#vs-code-debugger-not-attached}
+#### 未附加VS代码调试器{#vs-code-debugger-not-attached}
 
-+ __原因：__ VS Code Debugger已停止/中斷連線。
-+ __解析度：__ 重新啟動VS程式碼偵錯工具，並透過觀看VS程式碼偵錯輸出主控台（「檢視>偵錯主控台」）來驗證其附加功能
++ __原因：__ VS代码调试器已停止/断开连接。
++ __分辨率：__ 重新启动VS代码调试器，并通过查看VS代码调试输出控制台（查看>调试控制台）来验证其是否附加
 
-#### 背景工作執行開始後附加的VS程式碼偵錯工具{#vs-code-debugger-attached-after-worker-execution-began}
+#### 辅助进程执行开始后附加的VS代码调试器{#vs-code-debugger-attached-after-worker-execution-began}
 
-+ __原因：__ VS Code Debugger未在點選前附加 __執行__ 在開發工具中。
-+ __解析度：__ 請檢閱VS Code的Debug Console （檢視> Debug Console），然後從開發工具中重新執行Asset compute背景工作，以確保已附加除錯工具。
++ __原因：__ VS代码调试器在点击之前未连接 __运行__ 在开发工具中。
++ __分辨率：__ 通过查看VS Code的Debug Console（“查看”>“Debug Console”），确保已附加Debugger，然后从开发工具中重新运行Asset compute工作程序。
 
-### Worker在偵錯時逾時{#worker-times-out-while-debugging}
+### Worker在调试时超时{#worker-times-out-while-debugging}
 
-+ __錯誤__：除錯主控台報告「動作將在 — XXX毫秒內逾時」或 [asset compute開發工具的](./develop/development-tool.md) 轉譯預覽會無限期旋轉或
-+ __原因__：背景工作逾時(如 [manifest.yml](./develop/manifest.md) 在偵錯期間超過。
-+ __解析度__：暫時增加背景工作程式的逾時，在 [manifest.yml](./develop/manifest.md) 或加速偵錯活動。
++ __错误__：调试控制台报告“操作将在 — XXX毫秒内超时”或 [asset compute开发工具的](./develop/development-tool.md) 演绎版预览无限期旋转或
++ __原因__：中定义的Worker超时 [manifest.yml](./develop/manifest.md) 调试期间超出了。
++ __分辨率__：在中临时增加工作线程的超时 [manifest.yml](./develop/manifest.md) 或加速调试活动。
 
-### 無法終止偵錯工具程式{#cannot-terminate-debugger-process}
+### 无法终止调试器进程{#cannot-terminate-debugger-process}
 
-+ __錯誤__： `Ctrl-C` 在命令列上不會終止偵錯工具處理序(`npx adobe-asset-compute devtool`)。
-+ __原因__：中的錯誤 `@adobe/aio-cli-plugin-asset-compute` 1.3.x，結果 `Ctrl-C` 未被識別為終止命令。
-+ __解析度__：更新 `@adobe/aio-cli-plugin-asset-compute` 至1.4.1+版
++ __错误__： `Ctrl-C` 不会终止调试器进程(`npx adobe-asset-compute devtool`)。
++ __原因__：中的错误 `@adobe/aio-cli-plugin-asset-compute` 1.3.x，结果 `Ctrl-C` 未被识别为终止命令。
++ __分辨率__：更新 `@adobe/aio-cli-plugin-asset-compute` 到版本1.4.1+
 
    ```
    $ aio update
    ```
 
-   ![疑難排解 — aio更新](./assets/troubleshooting/debug__terminate.png)
+   ![故障排除 — aio更新](./assets/troubleshooting/debug__terminate.png)
 
 ## 部署{#deploy}
 
-### AEM資產中缺少自訂轉譯{#custom-rendition-missing-from-asset}
+### AEM中的资源缺少自定义演绎版{#custom-rendition-missing-from-asset}
 
-+ __錯誤：__ 已成功處理新增和重新處理的資產，但缺少自訂轉譯
++ __错误：__ 已成功新建和重新处理资源，但缺少自定义演绎版
 
-#### 處理設定檔未套用至上級資料夾
+#### 处理配置文件未应用于上级文件夹
 
-+ __原因：__ 該資產不存在於具有使用自訂背景工作程式的處理設定檔的資料夾下
-+ __解析度：__ 將處理設定檔套用至資產的上階資料夾
++ __原因：__ 资产不存在于具有使用自定义工作线程的处理配置文件的文件夹下
++ __分辨率：__ 将处理配置文件应用到资源的上级文件夹
 
-#### 由較低層處理設定檔取代的處理設定檔
+#### 处理配置文件被较低的处理配置文件取代
 
-+ __原因：__ 資產存在於已套用自訂背景工作處理設定檔的資料夾下方，但已在該資料夾與資產之間套用未使用客戶背景工作的不同處理設定檔。
-+ __解析度：__ 合併或以其他方式協調兩個處理設定檔，並移除中繼處理設定檔
++ __原因：__ 资产存在于应用了自定义工作程序处理配置文件的文件夹下，但已在该文件夹和资产之间应用了未使用客户工作程序的不同处理配置文件。
++ __分辨率：__ 合并或以其他方式协调两个处理配置文件，并删除中间处理配置文件
 
-### AEM中的資產處理失敗{#asset-processing-fails}
+### AEM中的资源处理失败{#asset-processing-fails}
 
-+ __錯誤：__ 資產上顯示的資產處理失敗徽章
-+ __原因：__ 執行自訂背景工作時發生錯誤
-+ __解析度：__ 請依照以下說明操作： [偵錯Adobe I/O Runtime啟用](./test-debug/debug.md#aio-app-logs) 使用 `aio app logs`.
++ __错误：__ 资产上显示“资产处理失败”标记
++ __原因：__ 执行自定义工作进程时出错
++ __分辨率：__ 按照上的说明操作 [调试Adobe I/O Runtime激活](./test-debug/debug.md#aio-app-logs) 使用 `aio app logs`.

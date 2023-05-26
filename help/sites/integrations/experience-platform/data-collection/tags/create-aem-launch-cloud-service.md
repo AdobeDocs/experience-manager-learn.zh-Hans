@@ -1,6 +1,6 @@
 ---
-title: 在AEM中建立LaunchCloud Service設定
-description: 瞭解如何在AEM中建立LaunchCloud Service設定。 LaunchCloud Service設定隨後可套用至現有網站，且可在製作和發佈環境中觀察標籤程式庫的載入情況。
+title: 在AEM中创建LaunchCloud Service配置
+description: 了解如何在AEM中创建LaunchCloud Service配置。 然后，可以将LaunchCloud Service配置应用于现有站点，并且可以在创作环境和发布环境中观察到Tag库加载情况。
 topics: integrations
 audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
@@ -19,56 +19,56 @@ ht-degree: 0%
 
 ---
 
-# 在AEM中建立LaunchCloud Service設定 {#create-launch-cloud-service}
+# 在AEM中创建LaunchCloud Service配置 {#create-launch-cloud-service}
 
 >[!NOTE]
 >
->AEM產品UI、內容和檔案正在實施將Adobe Experience Platform Launch重新命名為一組資料收集技術的程式，因此此處仍使用Launch一詞。
+>AEM产品UI、内容和文档正在实施将Adobe Experience Platform Launch重命名为一组数据收集技术的过程，因此此处仍使用Launch一词。
 
-瞭解如何在Adobe Experience Manager中建立LaunchCloud Service設定。 AEM LaunchCloud Service設定隨後可套用至現有的網站，在製作和發佈環境中都可以觀察到標籤程式庫載入的情況。
+了解如何在Adobe Experience Manager中创建LaunchCloud Service配置。 随后，可以将AEM LaunchCloud Service配置应用于现有站点，并且可以在创作和发布环境中观察Tags库加载情况。
 
-## 建立Launch雲端服務
+## 创建Launch云服务
 
-使用以下步驟建立Launch雲端服務設定。
+使用以下步骤创建Launch云服务配置。
 
-1. 從 **工具** 功能表，選取 **Cloud Services** 區段並按一下 **AdobeLaunch設定**
+1. 从 **工具** 菜单，选择 **Cloud Services** 部分并单击 **AdobeLaunch配置**
 
-1. 選取您網站的設定資料夾或選取 **WKND網站** （如果使用WKND指南專案），然後按一下 **建立**
+1. 选择您站点的配置文件夹或选择 **WKND站点** （如果使用WKND指南项目），然后单击 **创建**
 
-1. 從 _一般_ 索引標籤，使用為您的設定命名 **標題** 欄位，並選取 **Adobe啟動** 從 _關聯的Adobe IMS設定_ 下拉式清單。 然後，從中選擇您的公司名稱 _公司_ 下拉式清單，選取先前建立的屬性 _屬性_ 下拉式清單。
+1. 从 _常规_ 选项卡，使用为您的配置命名 **标题** 字段，然后选择 **Adobe启动** 从 _关联的Adobe IMS配置_ 下拉菜单。 然后，从中选择公司名称 _公司_ 下拉菜单并从中选择之前创建的资产 _属性_ 下拉菜单。
 
-1. 從 _分段_ 和 _生產_ tab鍵會保留預設設定。 不過，我們建議您檢閱並變更實際生產設定的設定，尤其是 _非同步載入程式庫_ 根據您的效能和最佳化需求進行切換。 另請注意 _資料庫URI_ 測試和生產環境的值不同。
+1. 从 _暂存_ 和 _生产_ 选项卡保留默认配置。 但是，建议复查并更改实际生产设置的配置，特别是 _异步加载库_ 根据您的性能和优化要求进行切换。 另请注意 _库URI_ 对于暂存和生产环境，值是不同的。
 
-1. 最後，按一下 **建立** 以完成Launch雲端服務。
+1. 最后，单击 **创建** 以完成Launch云服务。
 
-   ![啟動Cloud Services設定](assets/launch-cloud-services-config.png)
+   ![启动Cloud Services配置](assets/launch-cloud-services-config.png)
 
-## 將Launch雲端服務套用至網站
+## 将Launch云服务应用到站点
 
-若要將Tag屬性及其程式庫載入AEM網站，Launch雲端服務設定會套用至網站。 在上一步中，雲端服務設定是在網站名稱資料夾（WKND網站）下建立，因此應自動套用，讓我們驗證一下。
+要将Tag属性及其库加载到AEM站点，需将Launch云服务配置应用于该站点。 在上一步中，在站点名称文件夹（WKND站点）下创建了云服务配置，因此应该自动应用它，让我们验证它。
 
-1. 從 **導覽** 功能表，選取 **網站** 圖示。
+1. 从 **导航** 菜单，选择 **站点** 图标。
 
-1. 選取AEM網站的根頁面，然後按一下 **屬性**. 然後，導覽至 **進階** 標籤和底下 **設定** 區段，確認雲端設定值指向您的網站特定 `conf` 資料夾。
+1. 选择AEM Site的根页面，然后单击 **属性**. 然后，导航到 **高级** 选项卡和下 **配置** 部分，验证云配置值是否指向您的网站特定 `conf` 文件夹。
 
-   ![將Cloud Services設定套用至網站](assets/apply-cloud-services-config-to-site.png)
+   ![将Cloud Services配置应用于站点](assets/apply-cloud-services-config-to-site.png)
 
-## 驗證在製作和發佈頁面上載入標籤屬性
+## 验证是否在“创作”和“发布”页面上加载标记属性
 
-現在該確認Tag屬性及其程式庫已載入至AEM網站頁面。
+现在，需要验证Tag属性及其库是否已加载到AEM网站页面上。
 
-1. 在「 」中開啟您最愛的網站頁面 **檢視已發佈** 模式，您應該會在瀏覽器主控台中看到記錄訊息。 這就是Tag屬性規則的JavaScript程式碼片段所引發的相同訊息。 _程式庫已載入（頁面頂端）_ 事件已觸發。
+1. 在中打开您喜爱的网站页面 **查看已发布的项目** 模式，则您应会在浏览器控制台中看到日志消息。 这就是Tag属性规则的JavaScript代码片段中触发的相同消息。 _Library Loaded (Page Top)_ 事件触发。
 
-1. 若要在發佈時驗證，請先發佈您的 **Launch cloud service** 設定，並在發佈執行個體上開啟網站頁面。
+1. 要在发布时验证，请先发布 **启动云服务** 配置，并在发布实例上打开站点页面。
 
-   ![製作和發佈頁面上的標籤屬性](assets/tag-property-on-author-publish-pages.png)
+   ![创作和发布页面上的标记属性](assets/tag-property-on-author-publish-pages.png)
 
-恭喜！您已完成AEM和資料收集標籤整合，將JavaScript程式碼插入AEM網站而不更新AEM專案程式碼。
+恭喜！您已完成AEM和数据收集标记集成，该集成会将JavaScript代码注入AEM网站而不更新AEM项目代码。
 
-## 挑戰 — 更新並發佈標籤屬性中的規則
+## 挑战 — 更新和发布标记属性中的规则
 
-使用從前一個事件中汲取的經驗教訓 [建立標籤屬性](./create-tag-property.md) 若要完成簡單的挑戰，請更新現有規則以新增其他主控台陳述式並使用 _發佈流程_ 將其部署至AEM網站。
+利用从前一次学习中获得的经验教训 [创建标记属性](./create-tag-property.md) 要完成简单的质询，请更新现有规则以添加其他控制台语句并使用 _发布流_ 将其部署到AEM网站。
 
 ## 后续步骤
 
-[對標籤實作除錯](debug-tags-implementation.md)
+[调试标记实施](debug-tags-implementation.md)

@@ -1,6 +1,6 @@
 ---
 title: AEM Headless部署
-description: 瞭解AEM Headless應用程式的各種部署考量事項。
+description: 了解AEM Headless应用程序的各种部署注意事项。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -19,25 +19,25 @@ ht-degree: 0%
 
 # AEM Headless部署
 
-AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、網站、行動應用程式，甚至伺服器對伺服器程式。
+AEM Headless客户端部署采用多种形式；AEM托管的SPA、外部SPA、网站、移动应用程序，甚至服务器到服务器进程。
 
-根據使用者端和部署方式，AEM Headless部署有不同的考量因素。
+根据客户端及其部署方式，AEM Headless部署有不同的注意事项。
 
-## AEM服務架構
+## AEM服务架构
 
-在探索部署考量之前，您必須瞭解AEM邏輯架構，以及AEMas a Cloud Service服務層的分離和角色。 AEMas a Cloud Service由兩個邏輯服務組成：
+在探索部署注意事项之前，必须了解AEM逻辑架构，以及AEMas a Cloud Service服务层的分离和作用。 AEMas a Cloud Service由两个逻辑服务组成：
 
-+ __AEM作者__ 是團隊建立、共同作業和發佈內容片段（和其他資產）的服務。
-+ __AEM發佈__ 是已發佈的內容片段（和其他資產）已復寫以供一般使用的服務。
-+ __AEM預覽__ 此服務會模擬AEM Publish的行為，但發佈內容給它，以供預覽或檢閱。 AEM預覽適用於內部對象，而非一般內容傳送。 根據所需的工作流程，AEM預覽的使用是選用的。
++ __AEM创作__ 是团队用于创建、协作和发布内容片段（和其他资产）的服务。
++ __AEM发布__ 是已发布的内容片段（和其他资产）已复制以供一般使用的服务。
++ __AEM预览__ 是一项模拟AEM Publish行为的服务，但其已发布内容以供预览或审阅。 AEM预览适用于内部受众，而不是用于内容的常规交付。 根据所需的工作流，AEM预览的使用是可选的。
 
-![AEM服務架構](./assets/overview/aem-service-architecture.png)
+![AEM服务架构](./assets/overview/aem-service-architecture.png)
 
-典型AEMas a Cloud Service無周邊部署架構_
+典型AEMas a Cloud ServiceHeadless部署架构_
 
-以生產產能作業的AEM Headless使用者端通常會與AEM Publish （其中包含已核准的已發佈內容）互動。 與AEM Author互動的使用者端需要特別小心，因為AEM Author預設是安全的，所有請求都需要授權，並且可能還包含進行中的工作或未核准的內容。
+以生产能力运行的AEM Headless客户端通常会与AEM Publish（其中包含已批准的已发布内容）进行交互。 与AEM作者交互的客户需要特别谨慎，因为AEM作者在默认情况下是安全的，所有请求都需要授权，并且可能还包含正在进行的工作或未批准的内容。
 
-## Headless客戶端部署
+## Headless客户端部署
 
 <div class="columns is-multiline">
     <!-- Single-page App (SPA) -->
@@ -45,17 +45,17 @@ AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、�
        <div class="card">
            <div class="card-image">
                <figure class="image is-16by9">
-                   <a href="./spa.md" title="單頁應用程式(SPA)" tabindex="-1">
-                       <img class="is-bordered-r-small" src="./assets/spa/spa-card.png" alt="單頁應用程式(SPA)">
+                   <a href="./spa.md" title="单页应用程序(SPA)" tabindex="-1">
+                       <img class="is-bordered-r-small" src="./assets/spa/spa-card.png" alt="单页应用程序(SPA)">
                    </a>
                </figure>
            </div>
            <div class="card-content is-padded-small">
                <div class="content">
-                   <p class="headline is-size-6 has-text-weight-bold"><a href="./spa.md" title="單頁應用程式(SPA)">單頁應用程式(SPA)</a></p>
-                   <p class="is-size-6">瞭解單頁應用程式(SPA)的部署考量事項。</p>
+                   <p class="headline is-size-6 has-text-weight-bold"><a href="./spa.md" title="单页应用程序(SPA)">单页应用程序(SPA)</a></p>
+                   <p class="is-size-6">了解单页应用程序(SPA)的部署注意事项。</p>
                    <a href="./spa.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解</span>
+                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解</span>
                    </a>
                </div>
            </div>
@@ -66,17 +66,17 @@ AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、�
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="./web-component.md" title="Web元件/JS" tabindex="-1">
-                   <img class="is-bordered-r-small" src="./assets/web-component/web-component-card.png" alt="Web元件/JS">
+               <a href="./web-component.md" title="Web组件/JS" tabindex="-1">
+                   <img class="is-bordered-r-small" src="./assets/web-component/web-component-card.png" alt="Web组件/JS">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="./web-component.md" title="Web元件/JS">Web元件/JS</a></p>
-               <p class="is-size-6">瞭解Web元件和瀏覽器型JavaScript Headless使用者的部署考量事項。</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="./web-component.md" title="Web组件/JS">Web组件/JS</a></p>
+               <p class="is-size-6">了解Web组件和基于浏览器的JavaScript Headless使用者的部署注意事项。</p>
                <a href="./web-component.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解</span>
                </a>
            </div>
        </div>
@@ -87,17 +87,17 @@ AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、�
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="./mobile.md" title="行動應用程式" tabindex="-1">
-                   <img class="is-bordered-r-small" src="./assets/mobile/mobile-card.png" alt="行動應用程式">
+               <a href="./mobile.md" title="移动应用程序" tabindex="-1">
+                   <img class="is-bordered-r-small" src="./assets/mobile/mobile-card.png" alt="移动应用程序">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="./mobile.md" title="行動應用程式">行動應用程式</a></p>
-               <p class="is-size-6">瞭解行動應用程式的部署考量事項。</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="./mobile.md" title="移动应用程序">移动应用程序</a></p>
+               <p class="is-size-6">了解移动应用程序的部署注意事项。</p>
                <a href="./mobile.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解</span>
                </a>
            </div>
        </div>
@@ -108,17 +108,17 @@ AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、�
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="./server-to-server.md" title="伺服器對伺服器應用程式" tabindex="-1">
-                   <img class="is-bordered-r-small" src="./assets/server-to-server/server-to-server-card.png" alt="伺服器對伺服器應用程式">
+               <a href="./server-to-server.md" title="服务器到服务器应用程序" tabindex="-1">
+                   <img class="is-bordered-r-small" src="./assets/server-to-server/server-to-server-card.png" alt="服务器到服务器应用程序">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="./server-to-server.md" title="伺服器對伺服器應用程式">伺服器對伺服器應用程式</a></p>
-               <p class="is-size-6">瞭解伺服器對伺服器應用程式的部署考量</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="./server-to-server.md" title="服务器到服务器应用程序">服务器到服务器应用程序</a></p>
+               <p class="is-size-6">了解服务器到服务器应用程序的部署注意事项</p>
                <a href="./server-to-server.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解</span>
                </a>
            </div>
        </div>

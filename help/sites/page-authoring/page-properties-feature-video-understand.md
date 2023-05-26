@@ -1,6 +1,6 @@
 ---
-title: 瞭解AEM Sites中的頁面屬性
-description: 以下影片會介紹與Adobe Experience Manager中的頁面相關聯的頁面屬性中繼資料。
+title: 了解AEM Sites中的页面属性
+description: 以下视频介绍了与Adobe Experience Manager中的页面关联的页面属性元数据。
 version: 6.4, 6.5
 topic: Content Management
 feature: Page Editor
@@ -16,13 +16,13 @@ ht-degree: 42%
 
 ---
 
-# 瞭解頁面屬性 {#understanding-page-properties-aem-sites}
+# 了解页面属性 {#understanding-page-properties-aem-sites}
 
-以下影片會介紹與Adobe Experience Manager中的頁面相關聯的頁面屬性。
+以下视频介绍了与Adobe Experience Manager中的页面关联的页面属性。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32192?quality=12&learn=on)
 
-此影片涵蓋下列頁面屬性元素：
+在本视频中，介绍了以下页面属性元素：
 
 * 基本
    * 标题和标记
@@ -56,6 +56,6 @@ ht-degree: 42%
 
 ## 其他资源 {#additional-resources}
 
-* [編輯頁面屬性檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
-* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
+* [编辑页面属性文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
+* [编辑页面内容文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
 * [页面创作快速入门指南](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)

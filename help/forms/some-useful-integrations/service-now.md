@@ -1,6 +1,6 @@
 ---
-title: 整合 [!DNL ServiceNow]
-description: 使用表單資料模型建立並顯示所有事件。
+title: 集成 [!DNL ServiceNow]
+description: 使用表单数据模型创建并显示所有事件。
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 9957
@@ -16,44 +16,44 @@ ht-degree: 2%
 
 ---
 
-# 將AEM Forms與整合 [!DNL ServiceNow]
+# 将AEM Forms与集成 [!DNL ServiceNow]
 
-在中建立及顯示事件 [!DNL ServiceNow] 使用AEM Forms中的表單資料模型。
+在中创建和显示事件 [!DNL ServiceNow] 使用AEM Forms中的表单数据模型。
 
 ## 前提条件
 
-* [!DNL ServiceNow] 帳戶。
-* 熟悉 [建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
-* 熟悉 [表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)
+* [!DNL ServiceNow] 帐户。
+* 熟悉 [创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
+* 熟悉 [表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)
 
-## 資產範例
+## 示例资源
 
-本文提供的範例資產包括
+本文提供的示例资源包括
 
-* 雲端服務設定
-* Swagger檔案以建立事件並擷取所有事件
-* 以Swagger檔案為基礎的表單資料模型
-* 要建立和清單的最適化表單 [!DNL ServiceNow] 事件
+* 云服务配置
+* Swagger文件用于创建事件并获取所有事件
+* 基于swagger文件的表单数据模型
+* 要创建并列出的自适应表单 [!DNL ServiceNow] 事件
 
-## 在您的伺服器上部署資產
+## 在服务器上部署资产
 
-* 下載 [資產範例](assets/service-now.zip)
-* 使用將資產匯入AEM [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* 用於這項整合的swagger檔案位於 ```/conf/9957/settings/cloudconfigs/fdm``` crx存放庫中的資料夾
-* 編輯 [CreateIncident雲端服務設定](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)以符合您的ServiceNow執行個體。
-* 編輯 [GetAllIncidents雲端服務設定](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) 以符合您的ServiceNow執行個體。 您需要變更主機、使用者名稱和密碼，以符合您的ServiceNow執行個體認證。
+* 下载 [示例资源](assets/service-now.zip)
+* 使用以下方式将资源导入AEM [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 用于此集成的swagger文件位于 ```/conf/9957/settings/cloudconfigs/fdm``` crx存储库中的文件夹
+* 编辑 [CreateIncident云服务配置](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)以匹配您的ServiceNow实例。
+* 编辑 [GetAllIncidents云服务配置](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) 以匹配您的ServiceNow实例。 您需要更改主机、用户名和密码，以匹配您的ServiceNow实例凭据。
 
-## 存取ServiceNow執行個體認證
+## 访问ServiceNow实例凭据
 
-* 按一下您的使用者設定檔
-   ![按一下使用者設定檔](assets/snow-1.png)
+* 单击您的用户配置文件
+   ![单击用户配置文件](assets/snow-1.png)
 
-* 按一下管理執行個體密碼
-* 執行個體詳細資料如下所示
-   ![執行個體詳細資訊](assets/snow-3.png)
+* 单击管理实例密码
+* 实例详细信息如下所示
+   ![实例详细信息](assets/snow-3.png)
 
-## 測試整合
+## 测试集成
 
-* [開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/create-incident-in-service-now/jcr:content?wcmmode=disabled)
-* 在說明與註解欄位中輸入一些值，然後按一下「建立事件」按鈕
-* 新建立事件的事件ID應填入文字欄位中，下表應列出所有事件。
+* [打开自适应表单](http://localhost:4502/content/dam/formsanddocuments/create-incident-in-service-now/jcr:content?wcmmode=disabled)
+* 在说明和备注字段中输入一些值，然后单击创建意外事件按钮
+* 应在文本字段中填充新创建的事件的事件ID，下表应列出所有事件。

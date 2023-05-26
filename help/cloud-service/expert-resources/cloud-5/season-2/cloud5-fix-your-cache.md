@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 — 修正您的……快取
-description: 最佳化快取記憶體並加速網站運作的一些簡單技巧
+title: Cloud 5 — 修复您的……缓存
+description: 一些优化缓存和加快网站速度的简单提示
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 11%
 
 ---
 
-# Cloud 5 — 修正您的……快取
+# Cloud 5 — 修复您的……缓存
 
-在兩部分第二季系列中，我們探索一些可讓您在AEMas a Cloud Service上加速快取的內容。
+在分为两部分的第二季系列中，我们探究了一些可加快您在AEMas a Cloud Service上缓存速度的内容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343475?quality=12&learn=on)
 
-## 本影片涵蓋的內容
+## 本视频中涵盖的内容
 
-+ [快取與內容傳送](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html)
-+ [Google燈塔](https://developers.google.com/web/tools/lighthouse)
++ [缓存和内容交付](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html)
++ [Google灯塔](https://developers.google.com/web/tools/lighthouse)

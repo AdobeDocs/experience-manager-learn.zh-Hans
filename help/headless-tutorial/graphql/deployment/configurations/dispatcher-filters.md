@@ -1,6 +1,6 @@
 ---
-title: 適用於AEM GraphQL的Dispatcher篩選器
-description: 瞭解如何設定AEM Publish Dispatcher篩選器以與AEM GraphQL搭配使用。
+title: 适用于AEM GraphQL的Dispatcher过滤器
+description: 了解如何配置AEM Publish Dispatcher过滤器以用于AEM GraphQL。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -16,30 +16,30 @@ ht-degree: 2%
 
 ---
 
-# Dispatcher篩選器
+# Dispatcher过滤器
 
-Adobe Experience Manager as a Cloud Service會使用AEM發佈Dispatcher篩選器，以確保只有可聯絡AEM的請求才能聯絡AEM。 預設會拒絕所有要求，而且必須明確新增允許URL的模式。
+Adobe Experience Manager as a Cloud Service使用AEM发布Dispatcher过滤器，以确保只有可以访问AEM的请求才能访问AEM。 默认情况下，拒绝所有请求，必须明确添加允许URL的模式。
 
-| 使用者端型別 | [單頁應用程式(SPA)](../spa.md) | [Web元件/JS](../web-component.md) | [移动设备](../mobile.md) | [伺服器對伺服器](../server-to-server.md) |
+| 客户端类型 | [单页应用程序(SPA)](../spa.md) | [Web组件/JS](../web-component.md) | [移动设备](../mobile.md) | [服务器到服务器](../server-to-server.md) |
 |------------------------------------------:|:---------------------:|:----------------:|:---------:|:----------------:|
-| 需要Dispatcher篩選器設定 | ✔ | ✔ | ✔ | ✔ |
+| 需要Dispatcher过滤器配置 | ✔ | ✔ | ✔ | ✔ |
 
 >[!TIP]
 >
-> 以下設定為範例。 請確定您調整這些值，以符合專案的要求。
+> 以下配置是示例。 确保调整它们以符合项目的要求。
 
-## Dispatcher篩選設定
+## Dispatcher过滤器配置
 
-AEM發佈Dispatcher篩選設定會定義允許到達AEM的URL模式，且必須包含AEM持續查詢端點的URL首碼。
+AEM发布Dispatcher过滤器配置定义允许到达AEM的URL模式，必须包含AEM持久查询端点的URL前缀。
 
-| 使用者端連線至 | AEM Author | AEM 发布 | AEM預覽 |
+| 客户端连接到 | AEM Author | AEM 发布 | AEM预览 |
 |------------------------------------------:|:----------:|:-------------:|:-------------:|
-| 需要Dispatcher篩選器設定 | ✘ | ✔ | ✔ |
+| 需要Dispatcher过滤器配置 | ✘ | ✔ | ✔ |
 
-新增 `allow` 具有URL模式的規則 `/graphql/execute.json/*`，並確保檔案ID (例如 `/0600`，在範例伺服器陣列檔案中是唯一的)。
-這可讓持續查詢端點收到HTTPGET要求，例如 `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` 到AEM Publish。
+添加 `allow` 具有URL模式的规则 `/graphql/execute.json/*`，并确保文件ID(例如 `/0600`，在示例场文件中是唯一的)。
+这允许对持久查询端点执行HTTPGET请求，例如 `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` 到AEM发布。
 
-如果您在AEM Headless體驗中使用體驗片段，請對這些路徑執行相同的操作。
+如果您在AEM Headless体验中使用体验片段，请对这些路径执行相同的操作。
 
 + `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
@@ -52,6 +52,6 @@ AEM發佈Dispatcher篩選設定會定義允許到達AEM的URL模式，且必須�
 ...
 ```
 
-### 篩選設定範例
+### 示例筛选条件配置
 
-+ [WKND專案中可以找到Dispatcher篩選的範例。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/filters/filters.any#L28)
++ [在WKND项目中可以找到Dispatcher筛选器的示例。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/filters/filters.any#L28)

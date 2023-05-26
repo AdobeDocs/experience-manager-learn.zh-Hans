@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Analytics提交表單資料欄位的相關報告
-description: 將AEM Forms CS與Adobe Analytics整合以報告表單資料欄位
+title: 使用Adobe Analytics报告提交的表单数据字段
+description: 将AEM Forms CS与Adobe Analytics集成以报告表单数据字段
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -17,38 +17,38 @@ ht-degree: 0%
 
 ---
 
-# 定義規則
+# 定义规则
 
-在Tags屬性中，我們建立了2個新的 [規則](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) (**欄位驗證錯誤和FormSubmit**)。
+在Tags属性中，我们创建了2个新的 [规则](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) (**字段验证错误和表单提交**)。
 
-![Adaptive-form](assets/rules.png)
-
-
-## 欄位驗證錯誤
-
-此 **欄位驗證錯誤** 每當最適化表單欄位中出現驗證錯誤時，就會觸發規則。 例如，在我們的表單中，如果電話號碼或電子郵件不是預期的格式，則會顯示驗證錯誤訊息。
-
-欄位驗證錯誤規則是透過將事件設定為來設定 _**Adobe Experience Manager Forms-Error**_ 如熒幕擷取畫面所示
+![自适应表单](assets/rules.png)
 
 
+## 字段验证错误
 
-![申請人 — 國家 — 居所](assets/field_validation_error_rule.png)
+此 **字段验证错误** 每当自适应表单字段中存在验证错误时，就会触发规则。 例如，在我们的表单中，如果电话号码或电子邮件不是预期的格式，则会显示验证错误消息。
 
-Adobe Analytics — 設定變數的設定如下
+字段验证错误规则是通过将事件设置为来配置的 _**Adobe Experience Manager Forms-Error**_ 如屏幕快照中所示
 
-![設定動作](assets/field_validation_action_rule.png)
 
-## 表單提交規則
 
-每次成功提交最適化表單時，就會觸發表單提交規則。
+![申请人 — 国家 — 居所](assets/field_validation_error_rule.png)
 
-表單提交規則是使用 _**Adobe Experience Manager Forms — 提交**_ 事件
+Adobe Analytics — 设置变量的配置如下
+
+![设置操作](assets/field_validation_action_rule.png)
+
+## 表单提交规则
+
+每次成功提交自适应表单时都会触发表单提交规则。
+
+可使用配置表单提交规则 _**Adobe Experience Manager Forms — 提交**_ 事件
 
 ![form-submit-rule](assets/form-submit-rule.png)
 
-在表單提交規則中，資料元素的值 _**ApplicatesStateOfResidence**_ 對應至prop5，而資料元素FormTitle的值對應至prop8。
+在表单提交规则中，数据元素的值 _**ApplicationsStateOfResidence**_ 映射到prop5，并且数据元素FormTitle的值映射到prop8。
 
-Adobe Analytics — 設定變數的設定如下。
+Adobe Analytics — 设置变量的配置如下。
 ![form-submit-rule-set-variables](assets/form-submit-set-variable.png)
 
-當您準備好要測試您的標籤程式碼時，[發佈您對標籤所做的變更](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html) 使用發佈流程。
+当您准备好测试标记代码时，[发布对标记所做的更改](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html) 使用发布流。

@@ -1,6 +1,6 @@
 ---
-title: 建立沒有資料來源的表單資料模型
-description: 從AEM Forms 6.4開始，我們現在能定義表單資料模型(FDM)，而不需將其與資料來源建立關聯。 以下影片會逐步解說不使用任何資料來源建立FDM的步驟。
+title: 在不使用数据源的情况下创建表单数据模型
+description: 从AEM Forms 6.4开始，我们现在能够定义表单数据模型(FDM)，而无需将其与数据源关联。 以下视频介绍了在不使用任何数据源的情况下创建FDM的步骤。
 feature: Workflow
 version: 6.4,6.5
 topic: Development
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 ---
 
-# 建立沒有資料來源的表單資料模型 {#creating-form-data-model-without-data-source}
+# 在不使用数据源的情况下创建表单数据模型 {#creating-form-data-model-without-data-source}
 
-從AEM Forms 6.4開始，我們現在能定義表單資料模型(FDM)，而不需將其與資料來源建立關聯。 以下影片會逐步解說不使用任何資料來源建立FDM的步驟。
+从AEM Forms 6.4开始，我们现在能够定义表单数据模型(FDM)，而无需将其与数据源关联。 以下视频介绍了在不使用任何数据源的情况下创建FDM的步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21414?quality=12&learn=on)
 
-這可讓您享有下列優點：
+这为您提供了以下优势：
 
-* 加速互動式通訊檔案/Forms的開發。
-* 互動式通訊檔案/Forms的開發可以與資料來源開發並行進行。
-* 開發資料來源後，您就可以使用視覺化編輯器進行繫結。
-* 自動繫結功能對應類似的元素。
+* 加快交互式通信文档/Forms的发展。
+* 交互式通信文档/Forms的开发可以与数据源开发并行完成。
+* 开发数据源后，您可以使用可视编辑器进行绑定。
+* 自动绑定功能映射相似元素。

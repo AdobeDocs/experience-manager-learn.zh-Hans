@@ -1,6 +1,6 @@
 ---
-title: 啟用AEM Forms Portal元件
-description: 使用核心元件建置AEM Forms入口網站
+title: 启用AEM Forms Portal组件
+description: 使用核心组件构建AEM Forms门户
 solution: Experience Manager
 role: Developer
 level: Beginner, Intermediate
@@ -15,32 +15,32 @@ ht-degree: 0%
 
 ---
 
-# Forms入口網站元件
+# Forms Portal组件
 
-AEM Forms提供下列立即可用的入口網站元件：
+AEM Forms提供以下现成的门户组件：
 
-**搜尋和製表人**：此元件可讓您將表單存放庫中的表單清單到入口網站頁面，並提供根據指定條件列出表單的設定選項。
+**搜索和列表程序**：利用此组件，可将表单存储库中的表单列出到门户页面上，并提供根据指定条件列出表单的配置选项。
 
-**草稿和提交**：雖然「搜尋和清單程式」元件會顯示Forms作者公開的表單，但「草稿和提交」元件會顯示儲存為草稿的表單，以便稍後完成和提交的表單。 此元件可為任何登入使用者提供個人化體驗。
+**草稿和提交**：当Search &amp; Lister组件显示Forms作者公开表单时，Drafts &amp; Submissions组件显示另存为草稿的表单，以供以后填写和提交的表单。 此组件可为任何登录用户提供个性化体验。
 
-**連結**：此元件可讓您在頁面上的任何位置建立表單的連結。
+**链接**：利用此组件，可创建指向页面上任何位置的表单的链接。
 
-## 啟用Forms Portal元件
+## 启用Forms Portal组件
 
-啟動IntelliJ並開啟在中建立的BankingApplication專案。 [更早的步驟。](./getting-started.md) 展開ui.apps->src->main->content->jcr_root->apps.bankingapplication->components
+启动IntelliJ并打开在 [更早的步骤。](./getting-started.md) 展开ui.apps->src->main->content->jcr_root->apps.bankingapplication->components
 
-若要在Adobe Experience Manager (AEM)網站中使用任何核心元件（包括現成可用的入口網站元件），您必須建立Proxy元件並為您的網站啟用它。
-新建立的Proxy元件需要指向現成可用的表單元件，以便它們繼承來自它們的一切。 這可透過變更Proxy元件的content.xml中的resourceSuperType來完成。 在content.xml中，我們也會指定標題和元件群組。
+要在Adobe Experience Manager (AEM)站点中使用任何核心组件（包括现成的门户组件），您必须创建一个代理组件并为您的站点启用它。
+新创建的代理组件需要指向现成的表单组件，以便它们继承来自它们的所有内容。 这是通过更改代理组件的content.xml中的resourceSuperType来完成的。 在content.xml中，我们还指定标题和组件组。
 >[!NOTE]
 >
-> 您可以建構每個的資源超級型別 [從此處取得這些元件](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)
+> 您可以为的每个ID构建资源超类型 [这些组件来自此处](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)
 
 
 ### 草稿和提交
 
-複製現有元件(例如 `button`)，並將其命名為 _草稿和提交內容_.
-![草稿和提交內容](assets/forms-portal-components2.png)
-取代以下專案中的內容： `.content.xml` 使用下列XML：
+制作现有组件的副本(例如 `button`)，并将其命名为 _草稿和提交_.
+![草稿和提交](assets/forms-portal-components2.png)
+替换中的内容 `.content.xml` 与以下XML一起使用：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -51,10 +51,10 @@ AEM Forms提供下列立即可用的入口網站元件：
           componentGroup="BankingApplication - Content"/>
 ```
 
-### 搜尋和製表人
+### 搜索和列表程序
 
-製作按鈕元件的副本並將其重新命名為 _searchandlister_.
-取代以下專案中的內容： `.content.xml` 使用下列XML：
+制作按钮组件的副本并将其重命名为 _searchandlister_.
+替换中的内容 `.content.xml` 与以下XML一起使用：
 
 
 ```xml
@@ -66,10 +66,10 @@ AEM Forms提供下列立即可用的入口網站元件：
           componentGroup="BankingApplication - Content"/>
 ```
 
-### 連結元件
+### 链接组件
 
-製作按鈕元件的副本並將其重新命名為 _連結_.
-取代以下專案中的內容： `.content.xml` 使用下列XML：
+制作按钮组件的副本并将其重命名为 _链接_.
+替换中的内容 `.content.xml` 与以下XML一起使用：
 
 
 ```xml
@@ -81,4 +81,4 @@ AEM Forms提供下列立即可用的入口網站元件：
           componentGroup="BankingApplication - Content"/>
 ```
 
-部署專案後，您應該就能在AEM頁面中使用這些元件來建立Forms入口網站。
+部署项目后，您应该能够在您的AEM页面中使用这些组件来创建Forms门户。

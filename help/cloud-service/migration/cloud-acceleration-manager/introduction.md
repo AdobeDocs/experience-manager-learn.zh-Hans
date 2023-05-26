@@ -1,6 +1,6 @@
 ---
 title: Cloud Acceleration Manager 简介
-description: 瞭解Cloud Acceleration Manager如何協助您快速輕鬆地移至Experience Manageras a Cloud Service。
+description: 了解Cloud Acceleration Manager如何帮助您快速轻松地移至Experience Manageras a Cloud Service。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -18,6 +18,6 @@ ht-degree: 20%
 
 # Cloud Acceleration Manager 简介
 
-瞭解Cloud Acceleration Manager如何協助您快速輕鬆地移至Experience Manageras a Cloud Service。
+了解Cloud Acceleration Manager如何帮助您快速轻松地移至Experience Manageras a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336689?quality=12&learn=on)

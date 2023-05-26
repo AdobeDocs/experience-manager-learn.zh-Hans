@@ -2,11 +2,10 @@
 user-guide-title: Dynamic Media Classic 简介
 user-guide-description: 本教程演示如何使用 Dynamic Media Classic 创建、创作和交付富媒体内容。
 breadcrumb-title: Dynamic Media Classic 教程
-solution: Experience Manager, Experience Manager Assets
 sub-product: Experience Manager Assets
 version: 6.4, 6.5
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 49%

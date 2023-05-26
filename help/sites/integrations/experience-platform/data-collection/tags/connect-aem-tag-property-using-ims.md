@@ -1,6 +1,6 @@
 ---
-title: 使用IMS連線AEM與標籤屬性
-description: 瞭解如何使用AEM中的IMS設定連線AEM與標籤屬性。 此設定可使用Launch API驗證AEM，並允許AEM透過Launch API通訊以存取標籤屬性。
+title: 使用IMS连接AEM与标记属性
+description: 了解如何使用AEM中的IMS配置将AEM与标记属性连接。 此设置通过Launch API验证AEM，并允许AEM通过Launch API通信以访问标记属性。
 topics: integrations
 audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
@@ -19,33 +19,33 @@ ht-degree: 0%
 
 ---
 
-# 使用IMS連線AEM與標籤屬性{#connect-aem-and-tag-property-using-ims}
+# 使用IMS连接AEM与标记属性{#connect-aem-and-tag-property-using-ims}
 
 >[!NOTE]
 >
->AEM產品UI、內容和檔案正在實施將Adobe Experience Platform Launch重新命名為一組資料收集技術的程式，因此此處仍使用Launch一詞。
+>AEM产品UI、内容和文档正在实施将Adobe Experience Platform Launch重命名为一组数据收集技术的过程，因此此处仍使用Launch一词。
 
-瞭解如何使用AEM中的IMS (Identity Management系統)設定來連結AEM與標籤屬性。 此設定可使用Launch API驗證AEM，並允許AEM透過Launch API通訊以存取標籤屬性。
+了解如何使用AEM中的IMS (Identity Management System)配置将AEM与标记属性连接。 此设置通过Launch API验证AEM，并允许AEM通过Launch API通信以访问标记属性。
 
-## 建立或重新使用IMS設定
+## 创建或重用IMS配置
 
-需要使用Adobe Developer控制檯專案的IMS設定，才能將AEM與新建立的標籤屬性整合。 此設定可讓AEM使用Launch API與Tags應用程式通訊，而IMS會處理此整合的安全性方面。
+需要使用Adobe Developer Console项目的IMS配置来将AEM与新创建的标记属性集成。 此配置允许AEM使用Launch API与标记应用程序通信，并且IMS处理此集成的安全方面。
 
-每當布建AEM as Cloud Service環境時，就會自動建立一些IMS設定，例如Asset compute、Adobe Analytics和Adobe Launch。 已自動建立 **Adobe啟動** 如果您使用AEM 6.X環境，則可以使用IMS設定或應建立新的IMS設定。
+每当设置AEM as Launch环境时，都会自动创建一些IMS配置，例如Asset compute、Adobe Analytics和AdobeCloud Service。 已自动创建 **Adobe启动** 如果您使用的是AEM 6.X环境，则可以使用IMS配置或创建新的IMS配置。
 
-評論自動建立 **Adobe啟動** 使用以下步驟進行IMS設定。
+已自动创建审核 **Adobe启动** 使用以下步骤配置IMS。
 
-1. 在AEM中開啟 **工具** 功能表
+1. 在AEM中，打开 **工具** 菜单
 
-1. 在「安全性」區段中，選取「Adobe IMS設定」。
+1. 在安全性部分中，选择Adobe IMS配置。
 
-1. 選取 **Adobe啟動** 卡片並按一下 **屬性**，檢閱以下專案的詳細資料： **憑證** 和 **帳戶** 索引標籤。 然後按一下 **取消** 返回，而不修改任何自動建立的詳細資訊。
+1. 选择 **Adobe启动** 信息卡并单击 **属性**，查看详细信息 **证书** 和 **帐户** 选项卡。 然后单击 **取消** 返回而不修改任何自动创建的详细信息。
 
-1. 選取 **Adobe啟動** 卡片，這次按一下 **檢查健康狀態**，您應該會看到 **成功** 訊息如下。
+1. 选择 **Adobe启动** 信息卡，这次单击 **检查运行状况**，您应该会看到 **成功** 下面这样的消息。
 
-   ![Adobe啟動狀況良好的IMS設定](assets/adobe-launch-healthy-ims-config.png)
+   ![Adobe启动正常IMS配置](assets/adobe-launch-healthy-ims-config.png)
 
 
 ## 后续步骤
 
-[在AEM中建立LaunchCloud Service設定](create-aem-launch-cloud-service.md)
+[在AEM中创建LaunchCloud Service配置](create-aem-launch-cloud-service.md)

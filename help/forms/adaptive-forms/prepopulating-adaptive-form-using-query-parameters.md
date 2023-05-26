@@ -1,6 +1,6 @@
 ---
-title: 使用查詢引數填入最適化Forms。
-description: 使用查詢引數的資料填入最適化Forms。
+title: 使用查询参数填充自适应Forms。
+description: 使用查询参数中的数据填充自适应Forms。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -16,19 +16,19 @@ ht-degree: 0%
 
 ---
 
-# 使用查詢引數預先填入最適化Forms
+# 使用查询参数预填充自适应Forms
 
-我們其中一位客戶要求使用查詢引數填入最適化表單。 例如，在以下url中，最適化表單中的FirstName和LastName欄位分別設定為John和Doe
+我们的一位客户要求使用查询参数填充自适应表单。 例如，在以下url中，自适应表单中的FirstName和LastName字段分别设置为John和Doe
 
 ```html
 https://forms.enablementadobe.com/content/forms/af/testingxml.html?FirstName=John&LastName=Doe
 ```
 
-為了完成此使用案例，已建立新的最適化表單範本並與頁面元件建立關聯。 在此頁面元件中，我們有jsp可取得查詢引數，並建立可用來填入調適型表單的xml結構。
+为完成此用例，创建了新的自适应表单模板并将其与页面组件关联。 在此页面组件中，我们使用jsp获取查询参数并创建可用于填充自适应表单的xml结构。
 
-建立新最適化表單範本和頁面元件的詳細資訊如下 [本影片說明。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
+有关创建新的自适应表单模板和页面组件的详细信息包括 [此视频中对此进行了说明。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
 
-以下是jsp頁面中使用的程式碼
+以下是jsp页面中使用的代码
 
 ```java
 java.util.Enumeration enumeration = request.getParameterNames();
@@ -47,13 +47,13 @@ slingRequest.setAttribute("data", dataXml);
 
 >[!NOTE]
 >
->如果您的表單使用結構描述，則xml的結構將會不同，您必須據以建置xml。
+>如果您的表单使用架构，则xml的结构将不同，您必须相应地构建xml。
 
 
-## 在您的系統上部署資產
+## 在您的系统上部署资产
 
-* [使用封裝管理程式下載並安裝最適化表單範本](assets/populate-with-xml.zip)
-* [下載並安裝最適化表單範例](assets/populate-af-with-query-paramters-form.zip)
+* [使用包管理器下载并安装自适应表单模板](assets/populate-with-xml.zip)
+* [下载并安装自适应表单示例](assets/populate-af-with-query-paramters-form.zip)
 
-* [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/testingxml/jcr:content?wcmmode=disabled&amp;FirstName=John&amp;LastName=Doe)
-您應該會看到最適化表單填入值John和Doe
+* [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/testingxml/jcr:content?wcmmode=disabled&amp;FirstName=John&amp;LastName=Doe)
+您应该会看到自适应表单中填充了值John和Doe

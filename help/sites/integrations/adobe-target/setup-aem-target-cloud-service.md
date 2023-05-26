@@ -1,6 +1,6 @@
 ---
-title: 在AEM中建立Adobe TargetCloud Service帳戶
-description: 使用Cloud Service和Adobe IMS驗證整合Adobe Experience Manager as a Cloud Service與Adobe Target。
+title: 在AEM中创建Adobe TargetCloud Service帐户
+description: 使用Cloud Service和Adobe IMS身份验证将Adobe Experience Manager as a Cloud Service与Adobe Target集成。
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
@@ -19,14 +19,14 @@ ht-degree: 0%
 
 ---
 
-# 建立Adobe TargetCloud Service帳戶 {#adobe-target-cloud-service}
+# 创建Adobe TargetCloud Service帐户 {#adobe-target-cloud-service}
 
-以下影片提供如何將AEMas a Cloud Service與Adobe Target連結的逐步解說。
+以下视频介绍了如何将AEMas a Cloud Service与Adobe Target连接。
 
-此整合可讓AEM Author服務直接與Adobe Target通訊，並將體驗片段以選件的形式從AEM推送到Target。  此整合會 *not* 將Adobe Target JavaScript (AT.js)新增至AEM Sites網頁，以便整合 [使用Target擴充功能搭配Launch使用的AEM](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md).
+此集成允许AEM创作服务直接与Adobe Target通信，并将体验片段作为选件从AEM推送到Target。  此集成 *非* 将Adobe Target JavaScript (AT.js)添加到AEM Sites网页，以便进行集成 [使用Target扩展的AEM与Launch](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
 
 >[!CAUTION]
 >
->影片中顯示的Adobe Target Cloud Services設定有已知問題。 在此問題解決之前，請遵循影片中的相同步驟，但使用 [舊版Adobe Target Cloud Services設定](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html).
+>视频中显示的Adobe Target Cloud Services配置存在一个已知问题。 在解决此问题之前，请执行视频中的相同步骤，但使用 [旧版Adobe Target Cloud Services配置](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html).

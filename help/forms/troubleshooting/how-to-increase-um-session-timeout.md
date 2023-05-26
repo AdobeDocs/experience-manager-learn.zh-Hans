@@ -1,6 +1,6 @@
 ---
-title: 如何增加UM工作階段逾時
-description: 增加使用者的使用者管理工作階段逾時的步驟
+title: 如何增加UM会话超时
+description: 增加用户的用户管理会话超时的步骤
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 ---
 
 
-# 如何增加UM工作階段逾時
+# 如何增加UM会话超时
 
-*此影片逐步解說增加UM工作階段逾時的程式。*
+*本视频介绍增加UM会话超时的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335503?quality=12&learn=on)

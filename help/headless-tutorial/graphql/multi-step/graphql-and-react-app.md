@@ -1,6 +1,6 @@
 ---
-title: 使用GraphQL API建置React應用程式以查詢AEM - AEM Headless快速入門 — GraphQL
-description: 開始使用Adobe Experience Manager (AEM)和GraphQL。 建置從AEM GraphQL API擷取內容/資料的React應用程式，也瞭解AEM Headless JS SDK的使用方式。
+title: 使用GraphQL API构建查询AEM的React应用程序 — AEM Headless快速入门 — GraphQL
+description: Adobe Experience Manager (AEM)和GraphQL快速入门。 构建从AEM GraphQL API获取内容/数据的React应用程序，并了解如何使用AEM Headless JS SDK。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6716
@@ -18,69 +18,69 @@ ht-degree: 2%
 ---
 
 
-# 建立使用AEM GraphQL API的React應用程式
+# 构建使用AEM GraphQL API的React应用程序
 
-在本章中，您將探索AEM GraphQL API如何推動外部應用程式中的體驗。
+在本章中，您将探索AEM GraphQL API如何推动外部应用程序中的体验。
 
-使用簡單的React應用程式來查詢和顯示 **團隊** 和 **個人** AEM GraphQL API公開的內容。 React的使用基本上不重要，而且消費型外部應用程式可以寫入任何平台的任何框架中。
+使用简单的React应用程序进行查询和显示 **团队** 和 **人员** AEM GraphQL API公开的内容。 React的使用在很大程度上并不重要，而且消费型外部应用程序可以在任何平台的任何框架中编写。
 
 ## 前提条件
 
-假設已完成此多部分教學課程先前部分中概述的步驟，或 [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip) 安裝在您的AEMas a Cloud Service製作和發佈服務上。
+假定已完成本多部分教程前面部分中概述的步骤，或者 [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip) 安装在您的AEMas a Cloud Service创作和发布服务上。
 
-_本章中的IDE熒幕擷取畫面來自 [Visual Studio Code](https://code.visualstudio.com/)_
+_本章中的IDE屏幕截图来自 [Visual Studio Code](https://code.visualstudio.com/)_
 
-必須安裝下列軟體：
+必须安装以下软件：
 
 - [Node.js v18](https://nodejs.org/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
-## 目標
+## 目标
 
-瞭解如何：
+了解如何：
 
-- 下載並啟動範例React應用程式
-- 使用查詢AEM GraphQL端點 [AEM Headless JS SDK](https://github.com/adobe/aem-headless-client-js)
-- 查詢AEM以取得團隊及其參考成員的清單
-- 查詢AEM以取得團隊成員的詳細資訊
+- 下载并启动示例React应用程序
+- 使用查询AEM GraphQL端点 [AEM Headless JS SDK](https://github.com/adobe/aem-headless-client-js)
+- 查询AEM以获取团队及其引用的成员的列表
+- 查询AEM以获取团队成员的详细信息
 
-## 取得範例React應用程式
+## 获取示例React应用程序
 
-在本章中，將以與AEM GraphQL API互動，並顯示從這些API取得的團隊和人員資料所需的程式碼來實作截圖的React應用程式範例。
+在本章中，使用与AEM GraphQL API交互以及显示从它们获得的团队和人员数据所需的代码实施了一个截短的示例React应用程序。
 
-React應用程式原始碼範例位於Github.com <https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial>
+Github.com上提供了示例React应用程序源代码，网址为 <https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial>
 
-若要取得React應用程式：
+要获取React应用程序，请执行以下操作：
 
-1. 複製範例WKND GraphQL React應用程式，從 [Github.com](https://github.com/adobe/aem-guides-wknd-graphql).
+1. 从克隆示例WKND GraphQL React应用程序 [Github.com](https://github.com/adobe/aem-guides-wknd-graphql).
 
    ```shell
    $ cd ~/Code
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 導覽至 `basic-tutorial` 資料夾，並在IDE中開啟。
+1. 导航到 `basic-tutorial` 文件夹并在IDE中将其打开。
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/basic-tutorial
    $ code .
    ```
 
-   ![VSCode中的React應用程式](./assets/graphql-and-external-app/react-app-in-vscode.png)
+   ![VSCode中的React应用程序](./assets/graphql-and-external-app/react-app-in-vscode.png)
 
-1. 更新 `.env.development` 以連線至AEMas a Cloud Service發佈服務。
+1. 更新 `.env.development` 以连接到AEMas a Cloud Service发布服务。
 
-   - 設定 `REACT_APP_HOST_URI`的值設為您的AEMas a Cloud Service的發佈URL (例如 `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`)和 `REACT_APP_AUTH_METHOD`的值至 `none`
+   - 设置 `REACT_APP_HOST_URI`的值设为您的AEMas a Cloud Service的发布URL(例如 `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`)和 `REACT_APP_AUTH_METHOD`的值到 `none`
    >[!NOTE]
    >
-   > 請確定您已發佈專案設定、內容片段模型、編寫的內容片段、GraphQL端點，並保留先前步驟中的查詢。
+   > 确保您已发布项目配置、内容片段模型、创作的内容片段、GraphQL端点以及之前步骤中的持久查询。
    >
-   > 如果您在本機AEM Author SDK上執行上述步驟，您可以指向 `http://localhost:4502` 和 `REACT_APP_AUTH_METHOD`的值至 `basic`.
+   > 如果您在本地AEM Author SDK上执行了上述步骤，则可以指向 `http://localhost:4502` 和 `REACT_APP_AUTH_METHOD`的值到 `basic`.
 
 
-1. 從命令列，前往 `aem-guides-wknd-graphql/basic-tutorial` 資料夾
+1. 从命令行转到 `aem-guides-wknd-graphql/basic-tutorial` 文件夹
 
-1. 啟動React應用程式
+1. 启动React应用程序
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/basic-tutorial
@@ -88,47 +88,47 @@ React應用程式原始碼範例位於Github.com <https://github.com/adobe/aem-g
    $ npm start
    ```
 
-1. React應用程式於以下日期以開發模式啟動： [http://localhost:3000/](http://localhost:3000/). 在教學課程中對React應用程式所做的變更會立即反映出來。
+1. React应用程序在开发模式下启动 [http://localhost:3000/](http://localhost:3000/). 在整个教程中对React应用程序所做的更改会立即反映出来。
 
-![部分實作的React應用程式](./assets/graphql-and-external-app/partially-implemented-react-app.png)
+![部分实施的React应用程序](./assets/graphql-and-external-app/partially-implemented-react-app.png)
 
 >[!IMPORTANT]
 >
->   此React應用程式已部分實作。 依照本教學課程中的步驟完成實施。 需要實施作業的JavaScript檔案有下列註解，請務必使用本教學課程中指定的程式碼，新增/更新這些檔案中的程式碼。
+>   此React应用程序已部分实施。 按照本教程中的步骤完成实施。 需要实施工作的JavaScript文件包含以下注释，请确保使用本教程中指定的代码添加/更新这些文件中的代码。
 >
 >
 > //*********************************
 >
->  // TODO ：：依照AEM Headless教學課程中的步驟來實作此專案
+>  // TODO ：按照AEM Headless教程中的步骤实施此功能
 >
 >  //*********************************
 
-## React應用程式的剖析
+## React应用程序的剖析
 
-範例React應用程式有三個主要部分：
+示例React应用程序有三个主要部分：
 
-1. 此 `src/api` 資料夾包含用來向AEM提出GraphQL查詢的檔案。
-   - `src/api/aemHeadlessClient.js` 初始化並匯出用於與AEM通訊的AEM Headless使用者端
-   - `src/api/usePersistedQueries.js` 實作 [自訂React鉤點](https://react.dev/docs/hooks-custom.html) 將資料從AEM GraphQL傳回至 `Teams.js` 和 `Person.js` 檢視元件。
+1. 此 `src/api` 文件夹包含用于向AEM进行GraphQL查询的文件。
+   - `src/api/aemHeadlessClient.js` 初始化并导出用于与AEM通信的AEM Headless客户端
+   - `src/api/usePersistedQueries.js` 实施 [自定义React挂钩](https://react.dev/docs/hooks-custom.html) 将数据从AEM GraphQL返回到 `Teams.js` 和 `Person.js` 查看组件。
 
-1. 此 `src/components/Teams.js` 檔案會使用清單查詢來顯示團隊及其成員的清單。
-1. 此 `src/components/Person.js` 檔案會使用引數化的單一結果查詢，顯示單一人員的詳細資訊。
+1. 此 `src/components/Teams.js` 文件使用列表查询显示团队及其成员的列表。
+1. 此 `src/components/Person.js` 文件使用参数化单结果查询显示单个人员的详细信息。
 
-## 檢閱AEMHeadless物件
+## 查看AEMHeadless对象
 
-檢閱 `aemHeadlessClient.js` 檔案以瞭解如何建立 `AEMHeadless` 用來與AEM通訊的物件。
+查看 `aemHeadlessClient.js` 有关如何创建 `AEMHeadless` 用于与AEM通信的对象。
 
 1. 打开 `src/api/aemHeadlessClient.js`.
 
-1. 複查明細行1-40：
+1. 复查行1-40：
 
-   - 匯入 `AEMHeadless` 來自的宣告 [適用於JavaScript的AEM Headless使用者端](https://github.com/adobe/aem-headless-client-js)，第11行。
+   - 导入 `AEMHeadless` 声明来自 [适用于JavaScript的AEM Headless客户端](https://github.com/adobe/aem-headless-client-js)，第11行。
 
-   - 根據中定義的變數設定授權 `.env.development`，第14-22行，以及，箭頭函式運算式 `setAuthorization`，第31-40行。
+   - 基于中定义的变量的授权配置 `.env.development`，第14-22行，和，箭头函数表达式 `setAuthorization`，第31-40行。
 
-   - 此 `serviceUrl` 包含的設定 [開發proxy](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app#proxy-api-requests) configuration （設定），第27行。
+   - 此 `serviceUrl` 包含的设置 [开发代理](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app#proxy-api-requests) 配置，27行。
 
-1. 第42到49行是最重要的字元，因為它們會將 `AEMHeadless` 使用者端並匯出，以便在整個React應用程式中使用。
+1. 第42-49行是最为重要的，因为它们将 `AEMHeadless` 客户端并导出，以在整个React应用程序中使用。
 
 ```javascript
 // Initialize the AEM Headless Client and export it for other files to use
@@ -141,13 +141,13 @@ const aemHeadlessClient = new AEMHeadless({
 export default aemHeadlessClient;
 ```
 
-## 實作以執行AEM GraphQL持續查詢
+## 实施以运行AEM GraphQL持久查询
 
-實作一般模型 `fetchPersistedQuery(..)` 執行AEM GraphQL持續查詢的函式開啟 `usePersistedQueries.js` 檔案。 此 `fetchPersistedQuery(..)` 函式使用 `aemHeadlessClient` 物件的 `runPersistedQuery()` 函式以非同步方式執行查詢、承諾型行為。
+要实施通用规则，请执行以下操作 `fetchPersistedQuery(..)` 用于运行AEM GraphQL持久查询的函数打开 `usePersistedQueries.js` 文件。 此 `fetchPersistedQuery(..)` 函数使用 `aemHeadlessClient` 对象的 `runPersistedQuery()` 函数以异步运行基于promise的行为。
 
-稍後，自訂React `useEffect` hook呼叫此函式以從AEM擷取特定資料。
+稍后，自定义React `useEffect` hook调用此函数以从AEM检索特定数据。
 
-1. 在 `src/api/usePersistedQueries.js` **更新** `fetchPersistedQuery(..)`，第35行，程式碼如下。
+1. In `src/api/usePersistedQueries.js` **更新** `fetchPersistedQuery(..)`，第35行，代码如下。
 
 ```javascript
 /**
@@ -183,24 +183,24 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 }
 ```
 
-## 實作Teams功能
+## 实施Teams功能
 
-接下來，建立在React應用程式的主要檢視上顯示「團隊」及其成員的功能。 此功能需要：
+接下来，构建在React应用程序的主视图上显示团队及其成员的功能。 此功能需要：
 
-- 新 [自訂React useEffect鉤點](https://react.dev/docs/hooks-custom.html) 在 `src/api/usePersistedQueries.js` 會叫用 `my-project/all-teams` 持久查詢，傳回AEM中的團隊內容片段清單。
-- 位於的React元件 `src/components/Teams.js` 會叫用新的自訂React `useEffect` 鉤點，並轉譯團隊資料。
+- 新 [自定义React useEffect挂钩](https://react.dev/docs/hooks-custom.html) 在 `src/api/usePersistedQueries.js` 调用 `my-project/all-teams` 持久查询，返回AEM中的团队内容片段列表。
+- React组件，位于 `src/components/Teams.js` 调用新的自定义React `useEffect` 挂接，并渲染团队数据。
 
-完成後，應用程式的主要檢視會填入來自AEM的Teams資料。
+完成后，应用程序的主视图将使用来自AEM的团队数据填充。
 
-![團隊檢視](./assets/graphql-and-external-app/react-app__teams-view.png)
+![团队视图](./assets/graphql-and-external-app/react-app__teams-view.png)
 
 ### 步骤
 
 1. 打开 `src/api/usePersistedQueries.js`.
 
-1. 找到函式 `useAllTeams()`
+1. 找到函数 `useAllTeams()`
 
-1. 若要建立 `useEffect` 叫用持久查詢的連結 `my-project/all-teams` 透過 `fetchPersistedQuery(..)`，新增下列程式碼。 此連結也只會傳回位於AEM GraphQL回應中的相關資料 `data?.teamList?.items`，可讓React檢視元件與父JSON結構無關。
+1. 创建 `useEffect` 调用持久查询的挂接 `my-project/all-teams` via `fetchPersistedQuery(..)`，添加以下代码。 该挂接还仅返回来自AEM GraphQL响应的相关数据，该响应位于 `data?.teamList?.items`，从而使React视图组件与父JSON结构无关。
 
    ```javascript
    /**
@@ -235,7 +235,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 1. 打开 `src/components/Teams.js`
 
-1. 在 `Teams` AEM React元件，使用 `useAllTeams()` 勾點。
+1. 在 `Teams` React组件，使用从AEM获取团队列表 `useAllTeams()` 钩子。
 
    ```javascript
    import { useAllTeams } from "../api/usePersistedQueries";
@@ -249,7 +249,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 
 
-1. 執行檢視型資料驗證，根據傳回的資料顯示錯誤訊息或載入指標。
+1. 执行基于视图的数据验证，根据返回的数据显示错误消息或加载指示器。
 
    ```javascript
    function Teams() {
@@ -267,7 +267,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
    }
    ```
 
-1. 最後，呈現Teams資料。 從GraphQL查詢傳回的每個團隊都會使用提供的呈現 `Team` React子元件。
+1. 最后，渲染团队数据。 从GraphQL查询返回的每个团队都会使用提供的 `Team` React子组件。
 
    ```javascript
    import React from "react";
@@ -331,25 +331,25 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
    ```
 
 
-## 實作人員功能
+## 实施人员功能
 
-使用 [Teams功能](#implement-teams-functionality) 完成，讓我們實作功能以處理團隊成員或個人詳細資訊上的顯示。
+使用 [团队功能](#implement-teams-functionality) 完成，我们实施相应的功能以处理团队成员或人员的详细信息显示。
 
 此功能需要：
 
-- 新 [自訂React useEffect鉤點](https://react.dev/docs/hooks-custom.html) 在 `src/api/usePersistedQueries.js` 會叫用引數化 `my-project/person-by-name` 持久查詢，並傳回單一人員記錄。
+- 新 [自定义React useEffect挂钩](https://react.dev/docs/hooks-custom.html) 在 `src/api/usePersistedQueries.js` 调用参数化 `my-project/person-by-name` 持久查询，并返回单个人员记录。
 
-- 位於的React元件 `src/components/Person.js` 以個人全名作為查詢引數的系統，會叫用新的自訂React `useEffect` 鉤點，並呈現個人資料。
+- React组件，位于 `src/components/Person.js` 使用人员全名作为查询参数的活动，会调用新的自定义React `useEffect` 挂接，并呈现人员数据。
 
-完成之後，在「團隊」檢視中選取人員名稱會呈現人員檢視。
+完成后，在“团队”视图中选择人员姓名，将渲染人员视图。
 
 ![人员](./assets/graphql-and-external-app/react-app__person-view.png)
 
 1. 打开 `src/api/usePersistedQueries.js`.
 
-1. 找到函式 `usePersonByName(fullName)`
+1. 找到函数 `usePersonByName(fullName)`
 
-1. 若要建立 `useEffect` 叫用持久查詢的連結 `my-project/all-teams` 透過 `fetchPersistedQuery(..)`，新增下列程式碼。 此連結也只會傳回位於AEM GraphQL回應中的相關資料 `data?.teamList?.items`，可讓React檢視元件與父JSON結構無關。
+1. 创建 `useEffect` 调用持久查询的挂接 `my-project/all-teams` via `fetchPersistedQuery(..)`，添加以下代码。 该挂接还仅返回来自AEM GraphQL响应的相关数据，该响应位于 `data?.teamList?.items`，从而使React视图组件与父JSON结构无关。
 
    ```javascript
    /**
@@ -392,7 +392,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
    ```
 
 1. 打开 `src/components/Person.js`
-1. 在 `Person` React元件，剖析 `fullName` AEM route引數，並使用 `usePersonByName(fullName)` 勾點。
+1. 在 `Person` React组件，解析 `fullName` AEM route参数，并使用 `usePersonByName(fullName)` 钩子。
 
    ```javascript
    import { useParams } from "react-router-dom";
@@ -408,7 +408,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
    }
    ```
 
-1. 執行檢視型資料驗證，根據傳回的資料顯示錯誤訊息或載入指標。
+1. 执行基于视图的数据验证，根据返回的数据显示错误消息或加载指示器。
 
    ```javascript
    function Person() {
@@ -428,7 +428,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
    }
    ```
 
-1. 最後，轉譯人員資料。
+1. 最后，渲染人员数据。
 
    ```javascript
    import React from "react";
@@ -484,19 +484,19 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
    export default Person;
    ```
 
-## 試用應用程式
+## 尝试应用程序
 
-檢閱應用程式 [http://localhost:3000/](http://localhost:3000/) 並按一下 _成員_ 連結。 您也可以在AEM中新增內容片段，以新增更多團隊和/或成員至Team Alpha。
+查看应用程序 [http://localhost:3000/](http://localhost:3000/) 并单击 _成员_ 链接。 您还可以通过在AEM中添加内容片段来向团队Alpha添加更多团队和/或成员。
 
-## 潛藏於引擎蓋之下
+## 在幕后工作
 
-開啟瀏覽器的 **開發人員工具** > **網路** 和 _篩選_ 的 `all-teams` 要求。 注意GraphQL API請求 `/graphql/execute.json/my-project/all-teams` 針對 `http://localhost:3000` 和 **NOT** 與的值比較 `REACT_APP_HOST_URI` (例如， <https://publish-p123-e456.adobeaemcloud.com>)。 系統會針對React應用程式的網域提出要求，原因如下 [Proxy設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) 已啟用，使用 `http-proxy-middleware` 模組。
-
-
-![透過Proxy的GraphQL API請求](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
+打开浏览器的 **开发人员工具** > **网络** 和 _筛选条件_ 对象 `all-teams` 请求。 注意GraphQL API请求 `/graphql/execute.json/my-project/all-teams` 是针对 `http://localhost:3000` 和 **NOT** 与的值相比 `REACT_APP_HOST_URI` (例如， <https://publish-p123-e456.adobeaemcloud.com>)。 这些请求是针对React应用程序的域发出的，因为 [代理设置](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) 使用以下方式启用 `http-proxy-middleware` 模块。
 
 
-檢閱主要 `../setupProxy.js` 檔案和範圍 `../proxy/setupProxy.auth.**.js` 檔案注意如何 `/content` 和 `/graphql` 已代理路徑並指示它不是靜態資產。
+![通过代理的GraphQL API请求](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
+
+
+查看主要 `../setupProxy.js` 文件和 `../proxy/setupProxy.auth.**.js` 文件注意如何 `/content` 和 `/graphql` 已代理路径并指示它不是静态资源。
 
 ```javascript
 module.exports = function(app) {
@@ -505,8 +505,8 @@ module.exports = function(app) {
   ...
 ```
 
-使用本機Proxy不適合用於生產部署，如需更多詳細資訊，請參閱 _生產部署_ 區段。
+使用本地代理不是生产部署的合适选项，可以在以下位置找到更多详细信息 _生产部署_ 部分。
 
 ## 恭喜！{#congratulations}
 
-恭喜！您已成功建立React應用程式，以便在基本教學課程中使用和顯示AEM GraphQL API的資料！
+恭喜！您已成功创建React应用程序，以便在基础教程中使用和显示AEM GraphQL API中的数据！

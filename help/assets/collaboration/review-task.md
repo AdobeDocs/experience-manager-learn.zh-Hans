@@ -1,6 +1,6 @@
 ---
 title: 审核任务
-description: 探索AEM Assets的稽核任務如何協助進行最常見的稽核和核准工作流程。
+description: 探索AEM Assets的审核任务如何促进最常见的审核和批准工作流。
 sub-product: Experience Manager Assets
 feature: Collaboration
 version: Cloud Service
@@ -19,6 +19,6 @@ ht-degree: 12%
 
 # 审核任务
 
-探索AEM Assets的稽核任務如何協助進行最常見的稽核和核准工作流程。
+探索AEM Assets的审核任务如何促进最常见的审核和批准工作流。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32050?quality=12&learn=on)

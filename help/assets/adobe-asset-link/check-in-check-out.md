@@ -1,6 +1,6 @@
 ---
-title: 簽入簽出
-description: Adobe資產連結可讓您直接從目前使用的創意應用程式簽出AEM Assets，並立即開始進行編輯。 在Creative Cloud應用程式中編輯完資產後，您可以使用適當的版本設定和註解輕鬆地將資產簽回到AEM Assets。
+title: 签入和签出
+description: AdobeAsset Link允许您直接从正在处理的创意应用程序中签出AEM Assets，并立即开始进行编辑。 在Creative Cloud应用程序中编辑完资源后，您可以通过适当的版本控制和注释轻松地将资源签回到AEM Assets。
 sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: 6.4, 6.5, Cloud Service
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 簽入簽出 {#check-in-check-out}
+# 签入和签出 {#check-in-check-out}
 
-Adobe資產可讓您直接從目前使用的創意應用程式簽出AEM Assets，並立即開始進行編輯。 在Creative Cloud應用程式中編輯完資產後，您可以使用適當的版本設定和註解輕鬆地將資產簽回到AEM Assets。
+Adobe资源允许您直接从正在处理的创意应用程序中签出AEM Assets，并立即开始进行编辑。 在Creative Cloud应用程序中编辑完资源后，您可以通过适当的版本控制和注释轻松地将资源签回到AEM Assets。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33886?quality=12&learn=on)

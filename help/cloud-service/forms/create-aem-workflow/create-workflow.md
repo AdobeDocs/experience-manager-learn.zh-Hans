@@ -1,6 +1,6 @@
 ---
-title: 建立AEM工作流程
-description: 建立工作流程模型以模擬您的業務流程。
+title: 创建AEM工作流
+description: 创建工作流模型以模拟业务流程。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 建立AEM工作流程
+# 创建AEM工作流
 
-使用AEM Forms工作流程元件建立工作流程模型。 使用Or-Split元件，根據狀態變數的值來分支工作流程。
+使用AEM Forms工作流组件创建工作流模型。 使用Or-Split组件根据状态变量的值分支工作流。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332434?quality=12&learn=on)

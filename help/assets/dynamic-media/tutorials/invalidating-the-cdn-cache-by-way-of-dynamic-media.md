@@ -1,6 +1,6 @@
 ---
-title: 使AEM Dynamic Media的CDN快取失效
-description: 使AEM Dynamic Media的CDN快取失效的步驟
+title: 使AEM Dynamic Media的CDN缓存失效
+description: 使AEM Dynamic Media的CDN缓存失效的步骤
 role: Developer
 level: Intermediate
 version: Cloud Service
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# 使AEM Dynamic Media的CDN快取失效
+# 使AEM Dynamic Media的CDN缓存失效
 
-本影片會逐步說明透過Dynamic Media讓CDN快取失效的程式。
+本视频介绍通过Dynamic Media使CDN缓存失效的过程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335457?quality=12&learn=on)

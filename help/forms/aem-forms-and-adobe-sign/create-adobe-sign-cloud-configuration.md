@@ -1,6 +1,6 @@
 ---
-title: 建立Acrobat Sign雲端設定
-description: AEM中的雲端服務設定可讓您建立AEM與其他雲端應用程式之間的整合。 以下影片將逐步引導您完成建立雲端服務設定以將AEM與Acrobat Sign整合所需的步驟。
+title: 创建Acrobat Sign云配置
+description: AEM中的云服务配置允许您创建AEM与其他云应用程序之间的集成。 以下视频将指导您完成创建Cloud Services配置以将AEM与Acrobat Sign集成所需的步骤。
 feature: Adaptive Forms
 thumbnail: 38179.jpg
 kt: 6033
@@ -15,10 +15,10 @@ ht-degree: 0%
 
 ---
 
-# 建立Acrobat Sign雲端設定
+# 创建Acrobat Sign云配置
 
-AEM中的雲端服務設定可讓您建立AEM與其他雲端應用程式之間的整合。
+AEM中的云服务配置允许您创建AEM与其他云应用程序之间的集成。
 
-以下影片將逐步引導您完成建立雲端服務設定以將AEM與Acrobat Sign整合所需的步驟
+以下视频将指导您完成创建AEM与Acrobat Sign集成的云服务配置所需的步骤
 
 >[!VIDEO](https://video.tv.adobe.com/v/38179?quality=12&learn=on)

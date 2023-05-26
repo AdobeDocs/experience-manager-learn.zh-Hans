@@ -1,6 +1,6 @@
 ---
-title: 設定Adobe Workfront與Assets Essentials整合
-description: 瞭解如何設定Workfront和Assets Essentials整合。
+title: 配置Adobe Workfront与Assets Essentials集成
+description: 了解如何配置Workfront和Assets Essentials集成。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management, Integrations
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 設定整合
+# 配置集成
 
-瞭解如何設定Adobe Workfront和Assets Essentials整合。
+了解如何配置Adobe Workfront和Assets Essentials集成。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336254?quality=12&learn=on)

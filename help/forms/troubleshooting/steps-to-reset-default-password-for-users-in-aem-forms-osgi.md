@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms OSGi中重設管理員預設密碼的步驟
-description: 在AEM Forms OSGi中重設管理員預設密碼的步驟
+title: 在AEM Forms OSGi中为管理员重置默认密码的步骤
+description: 在AEM Forms OSGi中为管理员重置默认密码的步骤
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms OSGi中重設管理員預設密碼的步驟
+# 在AEM Forms OSGi中为管理员重置默认密码的步骤
 
-*本影片逐步解說在AEM Forms OSGi中重設管理員預設密碼的步驟。*
+*本视频介绍在AEM Forms OSGi中重置管理员的默认密码的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335542?quality=12&learn=on)

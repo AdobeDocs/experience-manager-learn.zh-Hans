@@ -1,6 +1,6 @@
 ---
-title: 建立MyAccountForm
-description: 建立myaccount表單以在成功驗證應用程式ID和電話號碼時擷取部分完成的表單。
+title: 创建MyAccountForm
+description: 创建myaccount表单以在成功验证应用程序ID和电话号码时检索部分完成的表单。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -17,38 +17,38 @@ ht-degree: 0%
 
 ---
 
-# 建立MyAccountForm
+# 创建MyAccountForm
 
-表單 **我的帳戶表單** 用於在使用者驗證應用程式id以及與應用程式id相關聯的行動電話號碼後，擷取部分完成的最適化表單。
+表单 **MyAccountForm** 用于在用户验证应用程序id以及与应用程序id关联的手机号码后检索部分完成的自适应表单。
 
-![我的帳戶表單](assets/6599.JPG)
+![我的帐户表单](assets/6599.JPG)
 
-當使用者輸入應用程式ID並按一下 **FetchApplication** 按鈕，會使用表單資料模型的「取得」操作，從資料庫擷取與應用程式id關聯的行動裝置號碼。
+当用户输入应用程序ID并单击 **FetchApplication** 按钮，则使用表单数据模型的Get操作从数据库中获取与应用程序ID关联的手机号码。
 
-此表單會使用表單資料模型的POST引動來使用OTP驗證行動電話號碼。 使用下列程式碼成功驗證行動電話號碼時，會觸發表單的提交動作。 我們正在觸發提交按鈕的點選事件，按鈕名稱為 **submitForm**.
+该表单利用表单数据模型的POST调用，利用OTP验证手机号码。 使用以下代码成功验证手机号码时，将触发表单提交操作。 我们将触发提交按钮的点击事件，该按钮名为 **submitform**.
 
 >[!NOTE]
-> 您需要提供API金鑰和特定於您的 [Nexmo](https://dashboard.nexmo.com/) 在MyAccountForm的適當欄位中的帳戶
+> 您需要提供特定于的API密钥和API密钥值 [Nexmo](https://dashboard.nexmo.com/) 帐户在MyAccountForm的相应字段中
 
 ![trigger-submit](assets/trigger-submit.JPG)
 
 
 
-此表單與自訂提交動作相關聯，該自訂提交動作會將表單提交轉送至所掛載的servlet **/bin/renderaf**
+此表单与将表单提交转发到所挂载的servlet的自定义提交操作相关联 **/bin/renderaf**
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/renderaf",null,null);
 ```
 
-掛載在servlet中的程式碼 **/bin/renderaf** 轉寄要求以轉譯已儲存資料預先填入的storeafwithattachments最適化表單。
+装载在servlet中的代码 **/bin/renderaf** 转发请求以渲染已保存数据预填充的storeafwithattachments自适应表单。
 
 
-* 我的帳戶表單可以是 [已從此處下載](assets/my-account-form.zip)
+* MyAccountForm可以 [已从此处下载](assets/my-account-form.zip)
 
-* 範例表單是根據 [自訂自適應表單範本](assets/custom-template-with-page-component.zip) 這些資料需要匯入至AEM，範例表單才能正確呈現。
+* 示例表单基于 [自定义自适应表单模板](assets/custom-template-with-page-component.zip) 这些内容需要导入到AEM中，才能正确呈现示例表单。
 
-* [自訂提交處理常式](assets/custom-submit-my-account-form.zip) 與MyAccountForm提交相關聯的專案需要匯入至AEM。
+* [自定义提交处理程序](assets/custom-submit-my-account-form.zip) 需要将与提交的MyAccountForm关联的导入到AEM中。
 
 ## 后续步骤
 
-[部署範例資產以測試解決方案](./deploy-this-sample.md)
+[通过部署示例资产来测试解决方案](./deploy-this-sample.md)

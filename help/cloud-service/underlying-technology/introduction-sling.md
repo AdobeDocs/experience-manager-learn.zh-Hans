@@ -1,6 +1,6 @@
 ---
-title: Sling簡介
-description: 介紹Sling，開放原始碼RESTful Web架構，它是Adobe Experience Manager基礎技術棧疊的一部分。
+title: Sling简介
+description: 简单介绍Sling，它是一种开源RESTful Web框架，是Adobe Experience Manager底层技术栈栈的一部分。
 topics: sling, architecture
 audience: administrator, developer
 doc-type: technical video
@@ -21,6 +21,6 @@ ht-degree: 4%
 
 # 简介 [!DNL Sling] {#introduction-sling}
 
-簡介 [!DNL Sling]，開放原始碼 [!DNL RESTful] 屬於Adobe Experience Manager基礎技術棧疊一部分的網頁架構。
+简介 [!DNL Sling]，开源 [!DNL RESTful] Web框架，它是Adobe Experience Manager底层技术栈栈的一部分。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32032?quality=12&learn=on)

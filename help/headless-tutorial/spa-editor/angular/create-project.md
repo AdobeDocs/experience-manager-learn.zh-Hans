@@ -1,6 +1,6 @@
 ---
-title: SPA編輯器專案 | AEM SPA編輯器和Angular快速入門
-description: 瞭解如何使用Adobe Experience Manager (AEM) Maven專案作為與AEM SPA編輯器整合的Angular應用程式的起點。
+title: SPA编辑器项目 | AEM SPA编辑器和Angular快速入门
+description: 了解如何使用Adobe Experience Manager (AEM) Maven项目作为与AEM SPA编辑器集成的Angular应用程序的起点。
 feature: SPA Editor, AEM Project Archetype
 topics: development
 version: Cloud Service
@@ -20,36 +20,36 @@ ht-degree: 2%
 
 ---
 
-# SPA編輯器專案 {#create-project}
+# SPA编辑器项目 {#create-project}
 
-瞭解如何使用Adobe Experience Manager (AEM) Maven專案作為與AEM SPA編輯器整合的Angular應用程式的起點。
+了解如何使用Adobe Experience Manager (AEM) Maven项目作为与AEM SPA编辑器集成的Angular应用程序的起点。
 
 ## 目标
 
-1. 瞭解從Maven原型建立的新AEM SPA Editor專案結構。
-2. 將起始專案部署至AEM的本機執行個體。
+1. 了解从Maven原型构建的新AEM SPA Editor项目的结构。
+2. 将起始项目部署到AEM的本地实例。
 
-## 您將建置的內容
+## 您将构建的内容
 
-在本章中，我們將根據以下部署新的AEM專案： [AEM專案原型](https://github.com/adobe/aem-project-archetype). AEM專案是以AngularSPA的非常簡單的起點啟動。 本章中使用的專案將作為WKND SPA實作的基礎，並在未來的章節中建置。
+在本章中，将部署一个新的AEM项目，该项目基于 [AEM项目原型](https://github.com/adobe/aem-project-archetype). AEM项目通过非常简单的AngularSPA起点引导。 本章中使用的项目将作为WKND SPA实施的基础，并在以后的章节中构建该项目。
 
-![wknd SPAAngular入門專案](./assets/create-project/what-you-will-build.png)
+![WKND SPAAngular入门项目](./assets/create-project/what-you-will-build.png)
 
-*經典的Hello World訊息。*
+*经典的Hello World消息。*
 
 ## 前提条件
 
-檢閱設定「 」所需的工具和指示 [本機開發環境](overview.md#local-dev-environment). 請確定已在中啟動新的Adobe Experience Manager執行個體 **作者** 模式，正在本機執行。
+查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment). 确保已在中启动新的Adobe Experience Manager实例 **作者** 模式，正在本地运行。
 
-## 取得專案
+## 获取项目
 
-有幾個選項可為AEM建立Maven多模組專案。 本教學課程使用最新的 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 作為教學課程程式碼的基礎。 專案程式碼已修改，以支援多個AEM版本。 請檢閱 [關於回溯相容性的注意事項](overview.md#compatibility).
+有几个选项可为AEM创建Maven多模块项目。 本教程使用了最新的 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 作为教程代码的基础。 为了支持多个AEM版本，已对项目代码进行了修改。 请查阅 [关于向后兼容性的说明](overview.md#compatibility).
 
 >[!CAUTION]
 >
->最佳實務是使用 **最新** 版本 [原型](https://github.com/adobe/aem-project-archetype) 產生新專案以進行實際實施。 AEM專案目標應是單一版本的AEM，使用 `aemVersion` 原型的屬性。
+>最佳做法是使用 **最新** 的版本 [原型](https://github.com/adobe/aem-project-archetype) 为实际实施生成新项目。 AEM项目应使用以下工具定位单个版本的AEM： `aemVersion` 原型的属性。
 
-1. 透過Git下載本教學課程的起點：
+1. 通过Git下载本教程的起点：
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-spa.git
@@ -57,7 +57,7 @@ ht-degree: 2%
    $ git checkout Angular/create-project-start
    ```
 
-2. 以下資料夾和檔案結構代表本機檔案系統上Maven原型產生的AEM專案：
+2. 以下文件夹和文件结构表示由本地文件系统上的Maven原型生成的AEM项目：
 
    ```plain
    |--- aem-guides-wknd-spa
@@ -75,28 +75,28 @@ ht-degree: 2%
        |--- archetype.properties
    ```
 
-3. 產生AEM專案時，使用以下屬性： [AEM專案原型](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/releases/tag/aem-project-archetype-14)：
+3. 从生成AEM项目时，使用了以下属性 [AEM项目原型](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/releases/tag/aem-project-archetype-14)：
 
    | 属性 | 价值 |
    |-----------------|---------------------------------------|
-   | aemVersion | 雲端 |
+   | aemVersion | 云 |
    | appTitle | WKND SPAANGULAR |
    | appId | wknd-spa-angular |
    | groupId | com.adobe.aem.guides |
-   | frontendModule | angular |
-   | 封裝 | com.adobe.aem.guides.wknd.spa.angular |
+   | frontendemodule | angular |
+   | 包 | com.adobe.aem.guides.wknd.spa.angular |
    | includeExamples | n |
 
    >[!NOTE]
    >
-   > 請注意 `frontendModule=angular` 屬性。 這會告訴AEM專案原型使用入門程式啟動該專案 [angular程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) 與AEM SPA Editor搭配使用。
+   > 请注意 `frontendModule=angular` 属性。 这会告知AEM项目原型使用启动程序引导项目 [angular代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) 与AEM SPA编辑器一起使用。
 
-## 建立專案
+## 生成项目
 
-接下來，使用Maven編譯、建置專案計畫碼並將其部署到AEM的本機執行個體。
+接下来，使用Maven编译、生成项目代码并将其部署到AEM的本地实例。
 
-1. 確保AEM的執行個體正在連線埠上本機執行 **4502**.
-2. 從命令列終端機確認Maven已安裝：
+1. 确保AEM的实例在端口上本地运行 **4502**.
+2. 从命令行终端验证是否已安装Maven：
 
    ```shell
    $ mvn --version
@@ -105,19 +105,19 @@ ht-degree: 2%
    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
-3. 從以下位置執行以下Maven命令 `aem-guides-wknd-spa` 要建置專案並將其部署到AEM的目錄：
+3. 从运行以下Maven命令 `aem-guides-wknd-spa` 要生成项目并将其部署到AEM的目录：
 
    ```shell
    $ mvn -PautoInstallSinglePackage clean install
    ```
 
-   若使用 [AEM 6.x](overview.md#compatibility)：
+   如果使用 [AEM 6.x](overview.md#compatibility)：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-   專案的多個模組應該編譯並部署到AEM。
+   应编译项目的多个模块并将其部署到AEM。
 
    ```plain
    [INFO] ------------------------------------------------------------------------
@@ -138,49 +138,49 @@ ht-degree: 2%
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven設定檔 ***Autoinstallsinglepackage*** 編譯專案的個別模組，並將單一套件部署至AEM執行個體。 依預設，此套件會部署至在本機於連線埠上執行的AEM執行個體 **4502** 且具備以下憑證： **admin：admin**.
+   Maven配置文件 ***autoInstallSinglePack*** 编译项目的各个模块，并将单个包部署到AEM实例。 默认情况下，此包将部署到本地在端口上运行的AEM实例 **4502** 并且拥有 **admin：admin**.
 
-4. 導覽至 **[!UICONTROL 封裝管理員]** 在本機AEM執行個體上： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
+4. 导航到 **[!UICONTROL 包管理器]** 在本地AEM实例上： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
 
-5. 您應該會看到下列三個套件 `wknd-spa-angular.all`， `wknd-spa-angular.ui.apps` 和 `wknd-spa-angular.ui.content`.
+5. 您应该会看到以下三个包： `wknd-spa-angular.all`， `wknd-spa-angular.ui.apps` 和 `wknd-spa-angular.ui.content`.
 
-   ![WKND SPA套件](./assets/create-project/package-manager.png)
+   ![WKND SPA包](./assets/create-project/package-manager.png)
 
-   專案所需的所有自訂程式碼都會整合到這些套件中，並安裝在AEM執行階段上。
+   项目所需的所有自定义代码都捆绑到这些包中，并安装在AEM运行时中。
 
-6. 您也應該會看到以下專案的數個套件 `spa.project.core` 和 `core.wcm.components`. 這些是原型自動包含的相依性。 更多關於的資訊 [您可以在此處找到AEM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans).
+6. 您还应该看到以下项目的多个包： `spa.project.core` 和 `core.wcm.components`. 这些是原型自动包含的依赖关系。 有关以下内容的更多信息 [可以在此处找到AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans).
 
-## 作者內容
+## 创作内容
 
-接下來，開啟原型產生的入門SPA並更新部分內容。
+接下来，打开原型生成的入门SPA并更新某些内容。
 
-1. 導覽至 **[!UICONTROL 網站]** 主控台： [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content).
+1. 导航到 **[!UICONTROL 站点]** 控制台： [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content).
 
-   WKND SPA包含基本網站結構，其中包含國家/地區、語言和首頁。 此階層是以原型的預設值為基礎 `language_country` 和 `isSingleCountryWebsite`. 這些值可透過更新 [可用屬性](https://github.com/adobe/aem-project-archetype#available-properties) 產生專案時。
+   WKND SPA包括基本站点结构，其中包含国家/地区、语言和主页。 此层次结构基于原型的默认值 `language_country` 和 `isSingleCountryWebsite`. 可以通过更新 [可用属性](https://github.com/adobe/aem-project-archetype#available-properties) 生成项目时。
 
-2. 開啟 **[!DNL us]** > **[!DNL en]** > **[!DNL WKND SPA Angular Home Page]** 頁面，方法是選取頁面並按一下 **[!UICONTROL 編輯]** 功能表列中的按鈕：
+2. 打开 **[!DNL us]** > **[!DNL en]** > **[!DNL WKND SPA Angular Home Page]** ，然后单击 **[!UICONTROL 编辑]** 菜单栏中的按钮：
 
-   ![網站主控台](./assets/create-project/open-home-page.png)
+   ![站点控制台](./assets/create-project/open-home-page.png)
 
-3. A **[!UICONTROL 文字]** 元件已新增至頁面。 您可以像在AEM中編輯任何其他元件一樣編輯此元件。
+3. A **[!UICONTROL 文本]** 组件已添加到页面中。 您可以像AEM中的任何其他组件一样编辑此组件。
 
-   ![更新文字元件](./assets/create-project/update-text-component.gif)
+   ![更新文本组件](./assets/create-project/update-text-component.gif)
 
-4. 新增其他 **[!UICONTROL 文字]** 元件至頁面。
+4. 添加其他 **[!UICONTROL 文本]** 组件添加到页面。
 
-   請注意，製作體驗類似於傳統AEM Sites頁面的製作體驗。 目前可用的元件數量有限。 在本教學課程中會新增更多內容。
+   请注意，创作体验类似于传统AEM Sites页面的创作体验。 当前可用的组件数量有限。 在本教程中会添加更多内容。
 
-## Inspect單頁應用程式
+## Inspect单页应用程序
 
-接下來，確認這是使用瀏覽器開發人員工具的單頁應用程式。
+接下来，使用浏览器的开发人员工具验证这是一个单页应用程序。
 
-1. 在 **[!UICONTROL 頁面編輯器]**，按一下 **[!UICONTROL 頁面資訊]** 功能表> **[!UICONTROL 檢視已發佈]**：
+1. 在 **[!UICONTROL 页面编辑器]**，单击 **[!UICONTROL 页面信息]** 菜单> **[!UICONTROL 查看已发布的项目]**：
 
-   ![以發佈的形式檢視按鈕](./assets/create-project/view-as-published.png)
+   ![“以发布的形式查看”按钮](./assets/create-project/view-as-published.png)
 
-   這將使用查詢引數開啟一個新索引標籤 `?wcmmode=disabled` 會有效關閉AEM編輯器： [http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)
+   这将使用查询参数打开一个新选项卡 `?wcmmode=disabled` 可以有效地关闭AEM编辑器： [http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)
 
-2. 檢視頁面來源，並注意文字內容 **[!DNL Hello World]** 或找不到任何其他內容。 相反地，您應該會看到類似以下的HTML：
+2. 查看页面的源，并注意文本内容 **[!DNL Hello World]** 或找不到任何其他内容。 您应该会看到如下所示的HTML：
 
    ```html
    ...
@@ -193,20 +193,20 @@ ht-degree: 2%
    ...
    ```
 
-   `clientlib-angular.min.js` 是載入至頁面的AngularSPA，負責轉譯內容。
+   `clientlib-angular.min.js` 是加载到页面上的AngularSPA，负责呈现内容。
 
-   *內容來自何處？*
+   *内容来自何处？*
 
-3. 返回標籤： [http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)
-4. 開啟瀏覽器的開發人員工具，並在重新整理期間檢查頁面的網路流量。 檢視 **XHR** 要求：
+3. 返回到选项卡： [http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)
+4. 打开浏览器的开发人员工具，并在刷新期间检查页面的网络流量。 查看 **XHR** 请求：
 
-   ![XHR要求](./assets/create-project/xhr-requests.png)
+   ![XHR请求](./assets/create-project/xhr-requests.png)
 
-   應該會有一個要求 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). 這包含所有將驅動SPA的內容（以JSON格式化）。
+   应该有一个请求 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). 该文档包含所有将驱动SPA的内容（格式为JSON）。
 
-5. 在新標籤中，開啟 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
+5. 在新选项卡中，打开 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
 
-   請求 `en.model.json` 代表將驅動應用程式的內容模型。 Inspect JSON輸出，而且您應該能夠找到代表 **[!UICONTROL 文字]** 元件。
+   请求 `en.model.json` 表示将驱动应用程序的内容模型。 Inspect JSON输出，您应该能够找到表示 **[!UICONTROL 文本]** 组件。
 
    ```json
    ...
@@ -224,18 +224,18 @@ ht-degree: 2%
    ...
    ```
 
-   在下一章中，我們將檢查JSON內容如何從AEM元件對應到SPA元件，以形成AEM SPA編輯器體驗的基礎。
+   在下一章中，我们将检查JSON内容如何从AEM组件映射到SPA组件，从而形成AEM SPA编辑器体验的基础。
 
    >[!NOTE]
    >
-   > 安裝瀏覽器擴充功能以自動格式化JSON輸出可能會有幫助。
+   > 安装浏览器扩展以自动格式化JSON输出可能很有帮助。
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您剛才已建立第一個AEM SPA Editor專案！
+恭喜，您刚刚创建了第一个AEM SPA Editor项目！
 
-現在相當簡單，但在接下來的幾個章節中，會新增更多功能。
+现在很简单，但在接下来的几个章节中，添加了更多功能。
 
 ### 后续步骤 {#next-steps}
 
-[整合SPA](integrate-spa.md)  — 瞭解SPA原始程式碼如何與AEM專案整合，並瞭解可用於快速開發SPA的工具。
+[集成SPA](integrate-spa.md)  — 了解SPA源代码如何与AEM项目集成，并了解可用于快速开发SPA的工具。

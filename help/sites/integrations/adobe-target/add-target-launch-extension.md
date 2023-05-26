@@ -1,6 +1,6 @@
 ---
-title: 將Target擴充功能新增至Launch屬性
-description: 瞭解如何將Adobe Target擴充功能新增至Adobe Experience Platform Launch屬性。
+title: 将Target扩展添加到Launch资产
+description: 了解如何将Adobe Target扩展添加到Adobe Experience Platform Launch资产。
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
@@ -19,20 +19,20 @@ ht-degree: 1%
 
 ---
 
-# 將Target擴充功能新增至Launch屬性 {#adobe-target-extension}
+# 将Target扩展添加到Launch资产 {#adobe-target-extension}
 
-若要觀看此影片，您必須先將 [與AEM整合Experience Platform Launch](../experience-platform/data-collection/tags/overview.md).
+要观看此视频，您必须已拥有 [与AEM集成Experience Platform Launch](../experience-platform/data-collection/tags/overview.md).
 
-瞭解如何使用Experience Platform Launch將Adobe Target啟用至您的AEM網站。
+了解如何使用Experience Platform Launch在您的AEM网站上启用Adobe Target。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
 
 ## 后续步骤
 
-+ [載入及觸發Target呼叫](./load-and-fire-target.md)
++ [加载和触发Target调用](./load-and-fire-target.md)
 
-## 支援連結
+## 支持链接
 
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [Adobe Experience Platform Debugger簡介](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
++ [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)

@@ -1,6 +1,6 @@
 ---
-title: 建置和部署
-description: Adobe Cloud Manager有助於程式碼構建和部署到AEMas a Cloud Service。 在建置流程的步驟中可能會發生失敗，需要採取行動來解決。 本指南會逐步引導您瞭解部署中的常見故障，以及如何以最佳方式解決這些故障。
+title: 构建和部署
+description: AdobeCloud Manager有助于代码构建和部署到AEMas a Cloud Service。 在构建过程中的步骤中可能会发生故障，需要采取措施来解决这些故障。 本指南将逐步引导您了解部署中的常见故障，以及如何以最佳方式解决这些故障。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -20,75 +20,75 @@ ht-degree: 0%
 
 ---
 
-# 偵錯AEMas a Cloud Service建置和部署
+# 调试AEMas a Cloud Service构建和部署
 
-Adobe Cloud Manager有助於程式碼構建和部署到AEMas a Cloud Service。 在建置流程的步驟中可能會發生失敗，需要採取行動來解決。 本指南會逐步引導您瞭解部署中的常見故障，以及如何以最佳方式解決這些故障。
+AdobeCloud Manager有助于代码构建和部署到AEMas a Cloud Service。 在构建过程中的步骤中可能会发生故障，需要采取措施来解决这些故障。 本指南将逐步引导您了解部署中的常见故障，以及如何以最佳方式解决这些故障。
 
-![雲端管理建置管道](./assets/build-and-deployment/build-pipeline.png)
+![云管理构建管道](./assets/build-and-deployment/build-pipeline.png)
 
 ## 验证
 
-驗證步驟只會確保基本Cloud Manager設定有效。 常見的驗證失敗包括：
+验证步骤只需确保基本Cloud Manager配置有效。 常见的验证失败包括：
 
-### 環境處於無效狀態
+### 环境处于无效状态
 
-+ __錯誤訊息：__ 環境處於無效狀態。
-   ![環境處於無效狀態](./assets/build-and-deployment/validation__invalid-state.png)
-+ __原因：__ 管道的目標環境處於轉換狀態，此時無法接受新的組建。
-+ __解析度：__ 等候狀態解析為執行中（或更新可用）狀態。 如果要刪除環境，請重新建立環境，或選擇要建置到的不同環境。
++ __错误消息：__ 环境处于无效状态。
+   ![环境处于无效状态](./assets/build-and-deployment/validation__invalid-state.png)
++ __原因：__ 管道的目标环境处于过渡状态，此时无法接受新内部版本。
++ __分辨率：__ 等待状态解析为正在运行（或更新可用）状态。 如果要删除环境，请重新创建环境，或选择要生成的其他环境。
 
-### 找不到與管道關聯的環境
+### 找不到与管道关联的环境
 
-+ __錯誤訊息：__ 環境已標籤為已刪除。
-   ![環境已標籤為已刪除](./assets/build-and-deployment/validation__environment-marked-as-deleted.png)
-+ __原因：__ 管道設定為使用的環境已刪除。
-即使重新建立了相同名稱的新環境，Cloud Manager也不會自動將管道重新關聯到該同名環境。
-+ __解析度：__ 編輯管道設定，然後重新選取要部署到的環境。
++ __错误消息：__ 该环境被标记为已删除。
+   ![环境标记为已删除](./assets/build-and-deployment/validation__environment-marked-as-deleted.png)
++ __原因：__ 管道配置为使用的环境已被删除。
+即使重新创建了具有相同名称的新环境，Cloud Manager也不会自动将管道重新关联到该同名环境。
++ __分辨率：__ 编辑管道配置，并重新选择要部署到的环境。
 
-### 找不到與管道相關聯的Git分支
+### 找不到与管道关联的Git分支
 
-+ __錯誤訊息：__ 無效的管道： XXXXXX。 在存放庫中找不到Reason=Branch=xxxx。
-   ![無效的管道： XXXXXX。 在存放庫中找不到Reason=Branch=xxxx](./assets/build-and-deployment/validation__branch-not-found.png)
-+ __原因：__ 管道設定為使用的Git分支已刪除。
-+ __解析度：__ 使用完全相同的名稱重新建立缺少的Git分支，或重新設定管道以從不同的現有分支建置。
++ __错误消息：__ 无效的管道： XXXXXX。 在存储库中找不到Reason=Branch=xxxx。
+   ![无效的管道： XXXXXX。 在存储库中找不到Reason=Branch=xxxx](./assets/build-and-deployment/validation__branch-not-found.png)
++ __原因：__ 管道配置为使用的Git分支已被删除。
++ __分辨率：__ 使用完全相同的名称重新创建缺失的Git分支，或重新配置管道以从其他现有分支构建。
 
-## 建置和單元測試
+## 构建和单元测试
 
-![建置和單元測試](./assets/build-and-deployment/build-and-unit-testing.png)
+![构建和单元测试](./assets/build-and-deployment/build-and-unit-testing.png)
 
-建置和單元測試階段會執行Maven建置(`mvn clean package`)從管道設定的Git分支簽出的專案。
+构建和单元测试阶段执行Maven构建(`mvn clean package`)从管道配置的Git分支签出的项目。
 
-此階段中發現的錯誤應可重新產生於本機建置專案，但有下列例外：
+此阶段中发现的错误应该可以在本地重新生成项目，但以下情况除外：
 
-+ Maven相依性不可用於 [Maven Central](https://search.maven.org/) 會使用，且包含相依性的Maven存放庫為：
-   + 無法從Cloud Manager聯絡，例如私人內部Maven存放庫或Maven存放庫需要驗證並提供不正確的認證。
-   + 未明確登入在專案的 `pom.xml`. 請注意，不建議加入Maven存放庫，因為這樣會增加建置時間。
-+ 由於計時問題，單元測試失敗。 當單元測試時效性很強時，就可能發生這種情況。 一個強大的指標依賴 `.sleep(..)` 在測試程式碼中。
-+ 使用不支援的Maven外掛程式。
++ Maven依赖项不可用于 [Maven Central](https://search.maven.org/) 使用，并且包含依赖项的Maven存储库满足以下任一条件：
+   + 无法从Cloud Manager访问，例如专用内部Maven存储库或Maven存储库需要身份验证，并且提供的凭据不正确。
+   + 未在项目的 `pom.xml`. 请注意，建议不要包含Maven存储库，因为它会增加构建时间。
++ 由于计时问题，单元测试失败。 当单元测试对时间敏感时，可能会发生这种情况。 一个强有力的指标所依赖的 `.sleep(..)` 在测试代码中。
++ 使用不支持的Maven插件。
 
-## 程式碼掃描
+## 代码扫描
 
-![程式碼掃描](./assets/build-and-deployment/code-scanning.png)
+![代码扫描](./assets/build-and-deployment/code-scanning.png)
 
-程式碼掃描會混合使用Java和AEM專屬的最佳實務來執行靜態程式碼分析。
+代码扫描会结合使用Java和特定于AEM的最佳实践来执行静态代码分析。
 
-如果程式碼中存在嚴重安全性弱點，程式碼掃描會導致組建失敗。 可以覆寫較小的違規，但建議加以修正。 請注意，程式碼掃描功能並不完善，可能會導致 [誤判](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives).
+如果代码中存在严重安全漏洞，则代码扫描会导致生成失败。 可以覆盖较小的违规，但建议修复这些违规。 请注意，代码扫描并不完善，可能会导致 [误报](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives).
 
-若要解決程式碼掃描問題，請透過以下方式下載Cloud Manager提供的CSV格式報表： **下載詳細資料** 按鈕並檢閱任何專案。
+要解决代码扫描问题，请下载Cloud Manager通过 **下载详细信息** 按钮并查看任何条目。
 
-如需更多詳細資訊，請參閱AEM特定規則，請參閱Cloud Manager檔案 [自訂AEM特定的程式碼掃描規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html).
+有关更多详细信息，请参阅AEM特定规则，请参阅Cloud Manager文档 [自定义AEM特定的代码扫描规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html).
 
-## 建置影像
+## 生成图像
 
-![建置影像](./assets/build-and-deployment/build-images.png)
+![生成图像](./assets/build-and-deployment/build-images.png)
 
-建置影像負責將在「建置和單位測試」步驟中建立的建置程式碼成品與AEM版本結合，以形成單一可部署成品。
+构建图像负责将在“构建和单元测试”步骤中创建的构建代码工件与AEM版本相结合，以形成一个可部署工件。
 
-雖然在建置和單元測試期間發現任何程式碼建置和編譯問題，但在嘗試將自訂建置成品與AEM版本結合時，可能會發現設定或結構問題。
+虽然在构建和单元测试期间发现任何代码构建和编译问题，但在尝试将自定义构建工件与AEM版本结合时，可能会发现配置或结构问题。
 
-### 複製OSGi設定
+### 复制OSGi配置
 
-當目標AEM環境透過執行模式解析多個OSGi設定時，建置影像步驟失敗並出現錯誤：
+当目标AEM环境通过运行模式解析多个OSGi配置时，构建图像步骤失败并出现错误：
 
 ```
 [ERROR] Unable to convert content-package [/tmp/packages/enduser.all-1.0-SNAPSHOT.zip]: 
@@ -98,45 +98,45 @@ set the 'mergeConfigurations' flag to 'true' if you want to merge multiple confi
 
 #### 原因1
 
-+ __原因：__ AEM專案的所有套件包含多個程式碼套件，且多個程式碼套件會提供相同的OSGi設定，導致衝突，導致建置影像步驟無法決定應使用哪個套件，進而導致建置失敗。 請注意，這不適用於OSGi工廠設定，只要它們具有唯一名稱。
-+ __解析度：__ 檢閱作為AEM應用程式的一部分部署的所有程式碼套件（包括任何包含的第三方程式碼套件），尋找透過執行模式解析到目標環境的重複OSGi設定。 在AEM as a Cloud Service中不可能有錯誤訊息「將mergeConfigurations標幟設定為true」的指引，應該予以忽略。
++ __原因：__ AEM项目的all包包含多个代码包，并且多个代码包提供了相同的OSGi配置，这会导致冲突，从而导致“生成图像”步骤无法决定应该使用哪个代码包，进而导致生成失败。 请注意，这不适用于OSGi工厂配置，只要它们具有唯一的名称。
++ __分辨率：__ 查看作为AEM应用程序的一部分部署的所有代码包（包括任何包含的第三方代码包），查找通过运行模式解析到目标环境的重复OSGi配置。 在AEM as a Cloud Service中不可能使用错误消息的“将mergeConfigurations标志设置为true”指南，应当忽略该指南。
 
 #### 原因2
 
-+ __原因：__ AEM專案錯誤地包含相同的程式碼套件兩次，導致所述套件中包含的任何OSGi設定重複。
-+ __解析度：__ 檢閱所有專案中內嵌的所有pom.xml套件，並確定它們具有 `filevault-package-maven-plugin` [設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) 設定為 `<cloudManagerTarget>none</cloudManagerTarget>`.
++ __原因：__ AEM项目错误地包含两次相同的代码包，从而导致重复所述包中包含的任何OSGi配置。
++ __分辨率：__ 查看嵌入到所有项目中的所有pom.xml包，并确保它们具有 `filevault-package-maven-plugin` [配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) 设置为 `<cloudManagerTarget>none</cloudManagerTarget>`.
 
-### 格式錯誤的repoinit指令碼
+### 格式错误的repoinit脚本
 
-Repoinit指令碼可定義基準內容、使用者、ACL等。 在AEMas a Cloud Service中，Repoinit指令碼會在建置影像期間套用，但在AEM SDK的本機Quickstart上，會在OSGi Repoinit工廠設定啟動時套用。 因此，Repoinit指令碼可能會在AEM SDK的本機Quickstart上悄悄地失敗（記錄），但會導致「建置影像」步驟失敗，暫停部署。
+Repoinit脚本定义基线内容、用户、ACL等。 在AEMas a Cloud Service中，repoinit脚本在构建图像期间应用，但在AEM SDK的本地快速启动中，这些脚本在激活OSGi repoinit工厂配置时应用。 因此，Repoinit脚本可能会在AEM SDK的本地快速启动中悄然失败（进行日志记录），但会导致“生成图像”步骤失败，从而停止部署。
 
-+ __原因：__ repoinit指令碼格式錯誤。 這可能會使您的存放庫處於不完整狀態，因為任何失敗的repoinit指令碼都不會對存放庫執行。
-+ __解析度：__ 部署了repoinit指令碼OSGi設定時，請檢閱AEM SDK的本機Quickstart ，以判斷錯誤是否及其內容。
++ __原因：__ repoinit脚本的格式不正确。 这可能会使存储库处于不完整状态，因为不会针对存储库执行失败脚本之后的任何repoinit脚本。
++ __分辨率：__ 在部署repoinit脚本OSGi配置时，查看AEM SDK的本地快速启动，以确定错误是否及其内容。
 
-### 不滿意的repoinit內容相依性
+### 不满意的repoinit内容依赖性
 
-Repoinit指令碼可定義基準內容、使用者、ACL等。 在AEM SDK的本機Quickstart中，Repoinit指令碼會在Repoinit OSGi工廠設定啟動時套用，換言之，在存放庫啟動且可能直接或透過內容套件產生內容變更後。 在AEMas a Cloud Service中，Repoinit指令碼會在「建置影像」期間套用至可能不包含Repoinit指令碼所相依內容的存放庫。
+Repoinit脚本定义基线内容、用户、ACL等。 在AEM SDK的本地快速入门中，当激活repoinit OSGi工厂配置时，或者在存储库处于活动状态且可能直接或通过内容包引起内容更改后，会应用repoinit脚本。 在AEMas a Cloud Service中，在生成图像期间对repoinit脚本可能不包含repoinit脚本所依赖内容的存储库应用repoinit脚本。
 
-+ __原因：__ repoinit指令碼取決於不存在的內容。
-+ __解析度：__ 請確定repoinit指令碼所依賴的內容存在。 這通常表示未充分定義的repoinit指令碼遺漏了定義這些遺漏但必要的內容結構的指令。 可以刪除AEM、解壓縮Jar並將包含repoinit指令碼的repoinit OSGi設定新增到安裝資料夾，然後啟動AEM在本機上重現它。 錯誤會顯示在AEM SDK本機Quickstart的error.log中。
++ __原因：__ repoinit脚本依赖于不存在的内容。
++ __分辨率：__ 确保repoinit脚本所依赖的内容存在。 通常，这表示未充分定义的repoinit脚本缺少定义这些缺失但必需的内容结构的指令。 通过删除AEM、解压缩Jar并将包含repoinit脚本的repoinit OSGi配置添加到安装文件夹并启动AEM，可以在本地重现这种情况。 该错误将出现在AEM SDK本地快速入门的error.log中。
 
 
-### 應用程式的核心元件版本高於部署的版本
+### 应用程序的核心组件版本高于部署的版本
 
-_此問題只會影響不會自動更新至最新AEM版本的非生產環境。_
+_此问题仅影响不会自动更新到最新AEM版本的非生产环境。_
 
-AEMas a Cloud Service會在每個AEM發行版本中自動包含最新核心元件版本，這表示在自動或手動更新AEMas a Cloud Service環境且已部署最新版本的核心元件之後。
+AEMas a Cloud Service会在每个AEM版本中自动包含最新的核心组件版本，这意味着AEMas a Cloud Service环境在自动或手动更新后才会部署最新版本的核心组件。
 
-建置影像步驟是否會在下列情況下失敗：
+在以下情况下，“生成图像”步骤可能会失败：
 
-+ 部署應用程式會更新中的核心元件Maven相依性版本 `core` （OSGi套裝）專案
-+ 然後，部署應用程式會部署到沙箱（非生產） AEMas a Cloud Service環境，該環境尚未更新為使用包含新核心元件版本的AEM版本。
++ 部署应用程序会更新中的核心组件maven依赖项版本 `core` （OSGi包）项目
++ 然后，部署应用程序将部署到沙盒（非生产）AEMas a Cloud Service环境，该环境尚未更新为使用包含新核心组件版本的AEM版本。
 
-為防止此失敗，只要有AEMas a Cloud Service環境的更新可用，請將更新納入下一次建置/部署中，並一律確保在應用程式程式碼庫中增加核心元件版本後納入更新。
+为防止出现此故障，只要有AEMas a Cloud Service环境的更新可用，就应将该更新作为下一个构建/部署的一部分包括在内，并始终确保在应用程序代码库中增加核心组件版本后包含这些更新。
 
-+ __症狀：__
-「建置影像」步驟失敗並出現「錯誤」報告，指出 
-`com.adobe.cq.wcm.core.components...` 特定版本範圍內的套件無法由匯入 `core` 專案。
++ __症状：__
+“构建映像”步骤失败，并出现一个ERROR报告 
+`com.adobe.cq.wcm.core.components...` 特定版本范围内的包无法由导入 `core` 项目。
 
    ```
    [ERROR] Bundle com.example.core:0.0.3-SNAPSHOT is importing package(s) Package com.adobe.cq.wcm.core.components.models;version=[12.13,13) in start level 20 but no bundle is exporting these for that start level in the required version range.
@@ -146,76 +146,76 @@ AEMas a Cloud Service會在每個AEM發行版本中自動包含最新核心元�
    [INFO] ------------------------------------------------------------------------
    ```
 
-+ __原因：__  應用程式的OSGi套件(定義於 `core` 專案)從核心元件核心相依性匯入Java類別，且版本層級與部署至AEMas a Cloud Service的版本層級不同。
++ __原因：__  应用程序的OSGi包(在 `core` 项目)从核心组件核心依赖项导入Java类，但版本级别与部署到AEMas a Cloud Service的版本级别不同。
 + __解决方法:__
-   + 使用Git時，請還原至核心元件版本增加之前已存在的工作認可。 將此認可推送至Cloud Manager Git分支，並從此分支執行環境更新。 這會將AEMas a Cloud Service升級至最新的AEM版本，其中包含較新的核心元件版本。 AEMas a Cloud Service更新至最新的AEM版本後（其中包含最新的核心元件版本），請重新部署原本失敗的程式碼。
-   + 若要在本機重現此問題，請確定AEM SDK版本與AEMas a Cloud Service環境使用的AEM發行版本相同。
+   + 使用Git，还原到核心组件版本增量之前存在的工作提交。 将此承诺推送到Cloud Manager Git分支，并从该分支执行环境更新。 此操作会将AEMas a Cloud Service升级到最新的AEM版本，该版本将包括较新的核心组件版本。 在将AEMas a Cloud Service更新到最新的AEM版本（将具有最新的核心组件版本）后，重新部署最初失败的代码。
+   + 要在本地重现此问题，请确保AEM SDK版本与AEMas a Cloud Service环境使用的AEM发行版本相同。
 
 
-### 建立Adobe支援案例
+### 创建Adobe支持案例
 
-如果上述的疑難排解方法無法解決問題，請透過以下方式建立Adobe支援案例：
+如果上述故障诊断方法不能解决问题，请通过以下方式创建Adobe支持案例：
 
-+ [Adobe Admin Console](https://adminconsole.adobe.com) >支援標籤>建立案例
++ [Adobe Admin Console](https://adminconsole.adobe.com) >支持选项卡>创建案例
 
-   _如果您是多個Adobe組織的成員，請在建立案例之前，確定已在Adobe組織切換器中選取管道失敗的Adobe組織。_
+   _如果您是多个Adobe组织的成员，请确保在创建案例之前在Adobe组织切换器中选择具有失败管道的Adobe组织。_
 
-## 部署至
+## 部署到
 
-「部署至」步驟負責取得在「建置影像」中產生的程式碼成品、啟動使用它的新AEM作者和發佈服務，並在成功後移除任何舊的AEM作者和發佈服務。 在此步驟中也會安裝並更新可變內容套件和索引。
+“部署到”步骤负责获取在构建映像中生成的代码构件，使用该构件启动新的AEM创作和发布服务，并在成功后删除任何旧的AEM创作和发布服务。 在此步骤中还会安装和更新可变内容包和索引。
 
-熟悉以下內容 [AEMas a Cloud Service記錄](./logs.md) 在偵錯「部署至」步驟之前。 此 `aemerror` 記錄檔包含與部署至問題相關的Pod啟動和關閉資訊。 請注意，透過Cloud Manager部署至步驟中的下載記錄按鈕可用的記錄並非 `aemerror` 記錄，且不包含與您的應用程式啟動相關的詳細資訊。
+熟悉以下内容 [AEMas a Cloud Service日志](./logs.md) 在调试“部署到”步骤之前。 此 `aemerror` 日志包含有关pod启动和关闭的信息，这些信息可能与部署到问题有关。 请注意，通过Cloud Manager的部署到步骤中的下载日志按钮可用的日志不是 `aemerror` 日志，但不包含与您的应用程序启动相关的详细信息。
 
-![部署至](./assets/build-and-deployment/deploy-to.png)
+![部署到](./assets/build-and-deployment/deploy-to.png)
 
-「部署至」步驟可能失敗的三個主要原因：
+“部署到”步骤可能失败的三个主要原因是：
 
-### Cloud Manager管道儲存舊的AEM版本
+### Cloud Manager管道包含旧的AEM版本
 
-+ __原因：__ Cloud Manager管道儲存的AEM版本比部署到目標環境的版本舊。 重複使用管道並指向執行較新版本AEM的新環境時，可能會發生這種情況。 這可以透過檢視環境的AEM版本是否大於管道的AEM版本來識別。
-   ![Cloud Manager管道儲存舊的AEM版本](./assets/build-and-deployment/deploy-to__pipeline-holds-old-aem-version.png)
++ __原因：__ Cloud Manager管道包含的AEM版本比部署到目标环境的版本旧。 当重复使用管道并指向运行更高版本AEM的新环境时，可能会发生这种情况。 可以通过检查环境的AEM版本是否大于管道的AEM版本来识别它。
+   ![Cloud Manager管道包含旧的AEM版本](./assets/build-and-deployment/deploy-to__pipeline-holds-old-aem-version.png)
 + __解决方法:__
-   + 如果目標環境有可用的更新，請從環境的動作中選取更新，然後重新執行組建。
-   + 如果目標環境沒有可用的更新，這表示它正在執行最新版的AEM。 若要解決此問題，請刪除管道並重新建立它。
+   + 如果目标环境具有可用更新，请从环境的操作中选择更新，然后重新运行内部版本。
+   + 如果目标环境没有可用更新，则意味着它运行的是最新版本的AEM。 要解决此问题，请删除管道并重新创建它。
 
 
-### Cloud Manager逾時
+### Cloud Manager超时
 
-在新部署的AEM服務啟動期間執行的程式碼需要很長時間，以至於Cloud Manager在部署完成之前逾時。 在這些情況下，部署可能最終成功，即使認為Cloud Manager狀態報告失敗。
+在新部署的AEM服务启动期间运行的代码需要很长时间，以至于Cloud Manager在部署完成之前超时。 在这些情况下，部署可能最终成功，即使认为Cloud Manager状态报告为失败。
 
-+ __原因：__ 自訂程式碼可能會執行作業（例如大型查詢或內容周遊），這些作業是在OSGi套件組合或元件生命週期的早期觸發，會大幅延遲AEM的啟動時間。
-+ __解析度：__ 檢閱在OSGi Bundle生命週期初期執行的程式碼實作，並檢閱 `aemerror` Cloud Manager所顯示的失敗時間（以GMT記錄時間）前後的AEM作者和發佈服務記錄，並尋找指出任何自訂記錄執行流程的記錄訊息。
++ __原因：__ 自定义代码可以执行在OSGi捆绑包或组件生命周期早期触发的操作（如大型查询或内容遍历），这会显着延迟AEM的启动时间。
++ __分辨率：__ 查看在OSGi捆绑包的生命周期早期运行的代码实施，并查看 `aemerror` Cloud Manager显示的故障时间（以GMT为单位记录时间）前后的AEM创作和发布服务的日志，并查找指示任何自定义日志运行进程的日志消息。
 
-### 不相容的程式碼或設定
+### 不兼容的代码或配置
 
-大部分的程式碼和設定違規都會在組建的先前階段擷取，不過自訂程式碼或設定可能會與AEMas a Cloud Service不相容，並且直到在容器中執行才會被偵測到。
+大多数代码和配置违规是在内部版本中的早期捕获的，但是，自定义代码或配置可能与AEMas a Cloud Service不兼容，并且在容器中执行之前无法检测到。
 
-+ __原因：__ 自訂程式碼可能會叫用較長的操作，例如大型查詢或內容周遊，這些操作在OSGi套件組合或元件生命週期的早期觸發會大幅延遲AEM的啟動時間。
-+ __解析度：__ 檢閱 `aemerror` Cloud Manager顯示的失敗時間前後的AEM作者和發佈服務記錄（以GMT記錄時間）。
-   1. 檢閱記錄檔，瞭解自訂應用程式提供的Java類別所擲回的任何ERRORS。 如果找到任何問題，請解決，推送修復的程式碼，然後重新建置管道。
-   1. 檢閱記錄檔，瞭解您在自訂應用程式中延伸/互動之AEM的各個層面所回報的任何「錯誤」，並調查這些錯誤；這些「錯誤」可能不是直接歸因於Java類別。 如果找到任何問題，請解決，推送修復的程式碼，然後重新建置管道。
++ __原因：__ 自定义代码可能会调用很长的操作，例如大型查询或内容遍历，这些操作在OSGi捆绑包或组件生命周期的早期触发时会显着延迟AEM的启动时间。
++ __分辨率：__ 查看 `aemerror` Cloud Manager显示的失败时间（以GMT为单位记录时间）前后的AEM创作和发布服务的日志。
+   1. 在日志中查看由自定义应用程序提供的Java类引发的任何错误。 如果发现任何问题，请解决，推送修复的代码，然后重新构建管道。
+   1. 查看日志中有关您在自定义应用程序中扩展/交互的AEM方面报告的任何“错误”，并调查这些错误；这些“错误”可能不是直接归因于Java类。 如果发现任何问题，请解决，推送修复的代码，然后重新构建管道。
 
-### 在內容套件中包含/var
+### 在内容包中包含/var
 
-`/var` 是可變的，包含各種暫時性、執行階段內容。 包含 `/var` 在內容套件中(例如： `ui.content`)透過Cloud Manager部署可能會導致部署步驟失敗。
+`/var` 可变，包含各种瞬态运行时内容。 包括 `/var` 在内容包中(例如， `ui.content`)通过Cloud Manager部署可能会导致部署步骤失败。
 
-此問題很難識別，因為它不會導致初始部署失敗，只會發生在後續部署中。 明顯的症狀包括：
+此问题很难识别，因为它不会导致初始部署失败，而只会导致后续部署。 显着症状包括：
 
-+ 初始部署成功，但作為部署一部分的新增或變更的可變內容似乎不存在於AEM Publish服務上。
-+ 已封鎖AEM Author中內容的啟用/停用
-+ 後續部署會在「部署至」步驟中失敗，而「部署至」步驟會在約60分鐘後失敗。
++ 初始部署成功，但AEM Publish服务上似乎不存在作为部署一部分的新增或更改的可变内容。
++ 已阻止AEM创作中的内容激活/停用
++ 后续部署在“部署到”步骤中失败，且“部署到”步骤在大约60分钟后失败。
 
-若要驗證此問題是失敗行為的原因：
+验证此问题是导致失败行为的原因：
 
-1. 判斷部署中至少有一個內容套件會將寫入 `/var`.
-1. 驗證主要（粗體）散發佇列是否已在下列位置封鎖：
-   + AEM作者>工具>部署>發佈
-      ![封鎖的分發佇列](./assets/build-and-deployment/deploy-to__var--distribution.png)
-1. 後續部署失敗時，使用下載記錄按鈕下載Cloud Manager的「部署到」記錄：
+1. 确定作为部署一部分的至少一个内容包写入 `/var`.
+1. 验证主（粗体）分发队列是否在以下位置被阻止：
+   + AEM创作>工具>部署>分发
+      ![已阻止的分发队列](./assets/build-and-deployment/deploy-to__var--distribution.png)
+1. 后续部署失败时，使用下载日志按钮下载Cloud Manager的“部署到”日志：
 
-   ![下載部署至記錄檔](./assets/build-and-deployment/deploy-to__var--download-logs.png)
+   ![将部署下载到日志](./assets/build-and-deployment/deploy-to__var--download-logs.png)
 
-   ...並驗證記錄陳述式之間是否有大約60分鐘的間隔：
+   ...并验证日志语句之间是否间隔了约60分钟：
 
    ```
    2020-01-01T01:01:02+0000 Begin deployment in aem-program-x-env-y-dev [CorrelationId: 1234]
@@ -227,19 +227,19 @@ AEMas a Cloud Service會在每個AEM發行版本中自動包含最新核心元�
    2020-01-01T02:04:10+0000 Failed deployment in aem-program-x-env-y-dev
    ```
 
-   請注意，在報告為成功的初始部署中，此記錄不會包含這些指標，而只會在後續的失敗部署中。
+   请注意，此日志不会包含有关报告为成功的初始部署的这些指标，而只会在后续失败的部署中包含。
 
-+ __原因：__ 用於將內容套件部署至AEM Publish服務的AEM復寫服務使用者無法寫入 `/var` 在AEM Publish上。 這會導致將內容套件部署到AEM Publish服務時失敗。
-+ __解析度：__ 以下是解決此問題的方法會依優先順序列出：
-   1. 如果 `/var` 資源不需要移除 `/var` 來自部署為應用程式一部分的內容套件。
-   2. 如果 `/var` 資源是必要的，請使用定義節點結構 [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit指令碼可以透過OSGi執行模式鎖定為AEM Author、AEM Publish或兩者。
-   3. 如果 `/var` 資源僅在AEM author上為必要，且無法合理使用模型化 [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)，將其移至僅安裝在AEM Author上的獨立內容套件，安裝者為 [內嵌](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds) 它位在 `all` 封裝在AEM Author執行模式資料夾中(`<target>/apps/example-packages/content/install.author</target>`)。
-   4. 提供適當的ACL給 `sling-distribution-importer` 服務使用者，如本中所述 [ADOBEKB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html).
++ __原因：__ 用于将内容包部署到AEM Publish服务的AEM复制服务用户无法写入 `/var` 在AEM发布上。 这会导致将内容包部署到AEM Publish服务失败。
++ __分辨率：__ 以下是解决此问题的方法按优先顺序列出：
+   1. 如果 `/var` 资源不是必需的，请删除下的任何资源 `/var` 从作为应用程序的一部分部署的内容包中。
+   2. 如果 `/var` 资源是必需的，请使用定义节点结构 [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). 可以通过OSGi运行模式，将Repoinit脚本定位到AEM创作、AEM发布或两者。
+   3. 如果 `/var` 资源仅在AEM author上需要，不能使用进行合理建模 [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)，将它们移动到仅由安装在AEM Author上的离散内容包 [嵌入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds) 它位于 `all` 打包到AEM Author runmode文件夹中(`<target>/apps/example-packages/content/install.author</target>`)。
+   4. 向提供适当的ACL `sling-distribution-importer` 服务用户，如本中所述 [Adobe知识库](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html).
 
-### 建立Adobe支援案例
+### 创建Adobe支持案例
 
-如果上述的疑難排解方法無法解決問題，請透過以下方式建立Adobe支援案例：
+如果上述故障诊断方法不能解决问题，请通过以下方式创建Adobe支持案例：
 
-+ [Adobe Admin Console](https://adminconsole.adobe.com) >支援標籤>建立案例
++ [Adobe Admin Console](https://adminconsole.adobe.com) >支持选项卡>创建案例
 
-   _如果您是多個Adobe組織的成員，請在建立案例之前，確定已在Adobe組織切換器中選取管道失敗的Adobe組織。_
+   _如果您是多个Adobe组织的成员，请确保在创建案例之前在Adobe组织切换器中选择具有失败管道的Adobe组织。_

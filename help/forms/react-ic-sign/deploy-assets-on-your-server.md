@@ -1,6 +1,6 @@
 ---
-title: 在您的伺服器上部署範例資產
-description: 取得在本機伺服器上運作的使用案例
+title: 在服务器上部署示例资产
+description: 获取在本地服务器上工作的用例
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -16,23 +16,23 @@ ht-degree: 0%
 
 ---
 
-# 部署資產
+# 部署资源
 
-下列資產/設定部署在AEM Forms發佈伺服器上。
+以下资产/配置部署在AEM Forms发布服务器上。
 
-* [Adobe Sign包裝函式套件](assets/AcrobatSign.core-1.0.0-SNAPSHOT.jar)
+* [Adobe Sign包装包](assets/AcrobatSign.core-1.0.0-SNAPSHOT.jar)
 
-* [互動式通訊範本範例](assets/waiver-interactive-communication.zip)
-* [部署DevelopingWithServiceUser套裝](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
-* 使用OSGi configMgr在Apache Sling服務使用者對應程式服務中新增以下專案
+* [交互式通信模板示例](assets/waiver-interactive-communication.zip)
+* [部署DevelopingWithServiceUser捆绑包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
+* 使用OSGi configMgr在Apache Sling服务用户映射器服务中添加以下条目
    **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**
-* [可從這裡下載React應用程式程式碼範例](assets/src.zip)
+* [可以从此处下载示例React应用程序代码](assets/src.zip)
 
 
 
-範例react應用程式需要部署在本機環境中
+需要在本地环境中部署示例react应用程序
 
-您必須變更端點URL以符合您的環境。 開啟EmergencyContact.js檔案，並變更擷取方法中的URL
+您必须更改端点URL以匹配您的环境。 打开EmergencyContact.js文件并在fetch方法中更改URL
 
 ```javascript
  const getWebForm=async()=>
@@ -49,6 +49,6 @@ ht-degree: 0%
  
 ```
 
-若要啟用從REACT應用程式對AEM端點進行POST呼叫，您需要在AdobeGranite跨原始資源共用原則設定的「允許的原始項」欄位中指定適當的專案
+要启用从REACT应用程序对AEM端点的POST调用，您需要在AdobeGranite跨源资源共享策略配置的允许的原始项字段中指定相应的条目
 
-![cors — 設定](assets/cors-settings.png)
+![cors-setting](assets/cors-settings.png)

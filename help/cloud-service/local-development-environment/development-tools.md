@@ -1,6 +1,6 @@
 ---
-title: 設定AEMas a Cloud Service開發的開發工具
-description: 設定本機開發機器，其中包含針對AEM進行本機開發所需的所有基準線工具。
+title: 设置AEMas a Cloud Service开发的开发工具
+description: 设置一个本地开发计算机，该计算机具有在本地针对AEM进行开发所需的所有基线工具。
 feature: Developer Tools
 version: Cloud Service
 kt: 4267
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 ---
 
-# 設定開發工具 {#set-up-development-tools}
+# 设置开发工具 {#set-up-development-tools}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_devtools"
@@ -26,178 +26,178 @@ ht-degree: 7%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="开发准则"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=zh-Hans" text="开发基础"
 
-Adobe Experience Manager (AEM) 开发需要在开发人员计算机上，安装和设置一组必不可少的开发工具。這些工具可支援AEM專案的開發和建置。
+Adobe Experience Manager (AEM) 开发需要在开发人员计算机上，安装和设置一组必不可少的开发工具。这些工具支持AEM项目的开发和构建。
 
-請注意 `~` 用作使用者目錄的簡寫。 在Windows中，這相當於 `%HOMEPATH%`.
+请注意 `~` 用作用户目录的简写。 在Windows中，这等同于 `%HOMEPATH%`.
 
-## 安裝Java
+## 安装Java
 
-Experience Manager是一種Java應用程式，因此需要Java SDK來支援開發和AEMas a Cloud ServiceSDK。
+Experience Manager是一种Java应用程序，因此需要Java SDK支持开发和AEMas a Cloud ServiceSDK。
 
-1. [下載並安裝最新版Java 11 SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=limit&amp;p.limit=0&amp;p.limit=144)
-1. 執行命令以確認是否已安裝Java 11 SDK：
+1. [下载并安装最新版本的Java 11 SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=limit&amp;p.limit=0&amp;p.limit=144)
+1. 通过运行以下命令验证是否已安装Java 11 SDK：
    + Windows: `java -version`
-   + macOS / Linux： `java --version`
+   + macOS/Linux： `java --version`
 
 ![Java](./assets/development-tools/java.png)
 
-## 安裝Homebrew
+## 安装Homebrew
 
-_使用Homebrew為選用，但建議使用。_
+_使用Homebrew是可选的，但建议使用。_
 
-Homebrew是適用於macOS、Windows和Linux的開放原始碼套件管理員。 所有支援工具均可單獨安裝，Homebrew提供安裝及更新Experience Manager開發所需各種開發工具的便利方式。
+Homebrew是适用于macOS、Windows和Linux的开源包管理器。 所有的支持工具都可以单独安装，Homebrew为安装和更新Experience Manager开发所需的各种开发工具提供了便捷的方式。
 
-1. 開啟您的終端機
-1. 執行命令以檢查是否已安裝Homebrew： `brew --version`.
-1. 如果未安裝Homebrew，請安裝Homebrew
-   + [在macOS上安裝Homebrew](https://brew.sh/)
-      + macOS上的Homebrew需要 [Xcode](https://apps.apple.com/us/app/xcode/id497799835) 或 [命令列工具](https://developer.apple.com/download/more/)，可透過命令安裝：
+1. 打开终端
+1. 通过运行以下命令检查是否已安装Homebrew： `brew --version`.
+1. 如果未安装Homebrew，请安装Homebrew
+   + [在macOS上安装Homebrew](https://brew.sh/)
+      + macOS上的Homebrew要求 [Xcode](https://apps.apple.com/us/app/xcode/id497799835) 或 [命令行工具](https://developer.apple.com/download/more/)，可通过以下命令安装：
          + `xcode-select --install`
-   + [在Linux上安裝Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
-   + [在Windows 10上安裝Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
-1. 執行下列命令，驗證是否已安裝Homebrew： `brew --version`
+   + [在Linux上安装Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+   + [在Windows 10上安装Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+1. 通过运行以下命令验证是否已安装Homebrew： `brew --version`
 
 ![Homebrew](./assets/development-tools/homebrew.png)
 
-如果您使用Homebrew，請遵循 __使用Homebrew安裝__ 以下各節中的指示。 如果您是 __not__ 使用Homebrew，使用作業系統特定的連結來安裝工具。
+如果您使用的是Homebrew，请按照 __使用Homebrew安装__ 以下各节中的说明。 如果您是 __非__ 使用Homebrew，使用特定于操作系统的链接安装工具。
 
-## 安裝Git
+## 安装Git
 
-[Git](https://git-scm.com/) 原始檔控制管理系統是由 [AdobeCloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html)，因此為開發所必需。
+[Git](https://git-scm.com/) 源代码管理由以下组件使用： [AdobeCloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html)因此，是开发所必需的。
 
-+ 使用Homebrew安裝Git
-   1. 開啟您的終端機/命令提示字元
-   1. 執行命令： `brew install git`
-   1. 使用下列命令確認是否已安裝Git： `git --version`
-+ 或者，下載並安裝Git (macOS、Linux或Windows)
-   1. [下載並安裝Git](https://git-scm.com/downloads)
-   1. 開啟您的終端機/命令提示字元
-   1. 使用下列命令確認是否已安裝Git： `git --version`
++ 使用Homebrew安装Git
+   1. 打开终端/命令提示符
+   1. 执行命令： `brew install git`
+   1. 使用命令验证Git是否已安装： `git --version`
++ 或者，下载并安装Git(macOS、Linux或Windows)
+   1. [下载并安装Git](https://git-scm.com/downloads)
+   1. 打开终端/命令提示符
+   1. 使用命令验证Git是否已安装： `git --version`
 
 ![Git](./assets/development-tools/git.png)
 
-## 安裝Node.js （和npm）{#node-js}
+## 安装Node.js（和npm）{#node-js}
 
-[Node.js](https://nodejs.org) 是用來處理AEM專案的前端資產的JavaScript執行階段環境 __ui.frontend__ 子專案。 Node.js的發佈方式 [npm](https://www.npmjs.com/)是實際的Node.js套件管理員，用來管理JavaScript相依性。
+[Node.js](https://nodejs.org) 是一个用于处理AEM项目的前端资源的JavaScript运行时环境 __ui.frontend__ 子项目。 Node.js的分布方式 [npm](https://www.npmjs.com/)，是用于管理JavaScript依赖项的实际Node.js包管理器。
 
-+ 使用Homebrew安裝Node.js
-   1. 開啟您的終端機/命令提示字元
-   1. 執行命令： `brew install node`
-   1. 使用下列命令確認已安裝Node.js： `node -v`
-   1. 使用下列命令驗證是否已安裝npm： `npm -v`
-+ 或者，下載並安裝Node.js (macOS、Linux或Windows)
-   1. [下載並安裝Node.js](https://nodejs.org/en/download/)
-   1. 開啟您的終端機/命令提示字元
-   1. 使用下列命令確認已安裝Node.js： `node -v`
-   1. 使用下列命令驗證是否已安裝npm： `npm -v`
++ 使用Homebrew安装Node.js
+   1. 打开终端/命令提示符
+   1. 执行命令： `brew install node`
+   1. 使用命令验证是否已安装Node.js： `node -v`
+   1. 使用命令验证是否已安装npm： `npm -v`
++ 或者，下载并安装Node.js(macOS、Linux或Windows)
+   1. [下载并安装Node.js](https://nodejs.org/en/download/)
+   1. 打开终端/命令提示符
+   1. 使用命令验证是否已安装Node.js： `node -v`
+   1. 使用命令验证是否已安装npm： `npm -v`
 
 ![Node.js和npm](./assets/development-tools/nodejs-and-npm.png)
 
 >[!TIP]
 >
->[AEM專案原型](https://github.com/adobe/aem-project-archetype)-based AEM專案會在建置時安裝獨立版本的Node.js。 最好讓本機開發系統的版本與AEM Maven專案的Reactor pom.xml中指定的Node.js和npm版本保持同步（或接近）。
+>[AEM项目原型](https://github.com/adobe/aem-project-archetype)基于的AEM项目在构建时安装独立版本的Node.js。 最好使本地开发系统的版本与AEM Maven项目的Reactor pom.xml中指定的Node.js和npm版本保持同步（或接近）。
 >
->檢視此範例 [AEM Project Reactor pom.xml](https://github.com/adobe/aem-guides-wknd/blob/9ac94f3f40c978a53ec88fae79fbc17dd2db72f2/pom.xml#L117-L118) 用於找到Node.js和npm組建版本的位置。
+>查看此示例 [AEM Project Reactor pom.xml](https://github.com/adobe/aem-guides-wknd/blob/9ac94f3f40c978a53ec88fae79fbc17dd2db72f2/pom.xml#L117-L118) 用于找到Node.js和npm内部版本的位置。
 
-## 安裝Maven
+## 安装Maven
 
-Apache Maven是開放原始碼Java命令列工具，用於建置從AEM專案Maven原型產生的AEM專案。 所有主要IDE ([IntelliJ IDEA](https://www.jetbrains.com/idea/)， [Visual Studio Code](https://code.visualstudio.com/)， [Eclipse](https://www.eclipse.org/)、等) 已整合Maven支援。
+Apache Maven是一个开源Java命令行工具，用于构建从AEM项目Maven原型生成的AEM项目。 所有主要IDE ([IntelliJ IDEA](https://www.jetbrains.com/idea/)， [Visual Studio Code](https://code.visualstudio.com/)， [Eclipse](https://www.eclipse.org/)、等) 集成了Maven支持。
 
-+ 使用Homebrew安裝Maven
-   1. 開啟您的終端機/命令提示字元
-   1. 執行命令： `brew install maven`
-   1. 使用命令確認已安裝Maven： `mvn -v`
-+ 或者，下載並安裝Maven (macOS、Linux或Windows)
-   1. [下載Maven](https://maven.apache.org/download.cgi)
-   1. [安裝Maven](https://maven.apache.org/install.html)
-   1. 開啟您的終端機/命令提示字元
-   1. 使用命令確認已安裝Maven： `mvn -v`
++ 使用Homebrew安装Maven
+   1. 打开终端/命令提示符
+   1. 执行命令： `brew install maven`
+   1. 使用命令验证是否已安装Maven： `mvn -v`
++ 或者，下载并安装Maven(macOS、Linux或Windows)
+   1. [下载Maven](https://maven.apache.org/download.cgi)
+   1. [安装Maven](https://maven.apache.org/install.html)
+   1. 打开终端/命令提示符
+   1. 使用命令验证是否已安装Maven： `mvn -v`
 
 ![Maven](./assets/development-tools/maven.png)
 
-## 設定Adobe I/OCLI{#aio-cli}
+## 设置Adobe I/OCLI{#aio-cli}
 
-此 [ADOBE I/OCLI](https://github.com/adobe/aio-cli)，或 `aio`，提供各種Adobe服務的命令列存取權，包括 [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) 和 [asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). Adobe I/OCLI在AEMas a Cloud Service的開發中起著不可或缺的作用，因為它讓開發人員能夠：
+此 [ADOBE I/OCLI](https://github.com/adobe/aio-cli)，或 `aio`，提供对各种Adobe服务的命令行访问，包括 [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) 和 [asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). Adobe I/OCLI在AEMas a Cloud Service的开发中起着不可或缺的作用，因为它使开发人员能够：
 
-+ AEM as aCloud Services服務的尾部記錄
-+ 從CLI管理Cloud Manager管道
-+ 部署至 [AEM快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
++ AEM as aCloud Services服务的尾日志
++ 从CLI管理Cloud Manager管道
++ 部署到 [AEM快速开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
 
-### 安裝Adobe I/OCLI
+### 安装Adobe I/OCLI
 
-1. 確定 [已安裝Node.js](#node-js) 因為Adobe I/OCLI是npm模組
-   + 執行 `node --version` 確認
-1. 執行 `npm install -g @adobe/aio-cli` 安裝 `aio` npm模組全域
+1. 确保 [已安装Node.js](#node-js) 因为Adobe I/OCLI是npm模块
+   + 运行 `node --version` 确认
+1. 执行 `npm install -g @adobe/aio-cli` 安装 `aio` npm模块（全球）
 
-### 設定Adobe I/OCLI Cloud Manager外掛程式{#aio-cloud-manager}
+### 设置Adobe I/OCLI Cloud Manager插件{#aio-cloud-manager}
 
-Adobe I/OAdobe Cloud Manager外掛程式允許aio CLI透過 `aio cloudmanager` 命令。
+Adobe I/OAdobe Cloud Manager插件允许aio CLI通过 `aio cloudmanager` 命令。
 
-1. 執行 `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` 安裝 [aio Cloud Manager外掛程式](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+1. 执行 `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` 安装 [aio Cloud Manager插件](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
-#### 設定Adobe I/OCLI驗證
+#### 设置Adobe I/OCLI身份验证
 
-為了讓Adobe I/OCLI與Cloud Manager通訊， [必須在Adobe I/O控制檯中建立Cloud Manager整合](https://github.com/adobe/aio-cli-plugin-cloudmanager)，且必須取得認證才能成功驗證。
+为了使Adobe I/OCLI与Cloud Manager通信， [必须在Adobe I/O控制台中创建Cloud Manager集成](https://github.com/adobe/aio-cli-plugin-cloudmanager)必须获取和凭据才能成功进行身份验证。
 
-1. 登入 [console.adobe.io](https://console.adobe.io)
-1. 確保包含要連線的Cloud Manager產品的組織在Adobe組織切換器中處於活動狀態
-1. 建立新的或開啟現有的 [Adobe I/O計畫](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
-   + Adobe I/O控制檯程式只是根據您想要管理整合的方式，對整合、建立或使用以及現有程式進行組織分組
-   + 如果建立新專案，請在出現提示時選取「空白專案」（與「從範本建立」的比較）
-   + Adobe I/O控制檯程式是與Cloud Manager程式的不同概念
-1. 使用「開發人員 — Cloud Service」設定檔建立新的Cloud Manager API整合
-1. 取得服務帳戶(JWT)憑證需要填入Adobe I/OCLI的 [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication)
-1. 載入 `config.json` 檔案放入Adobe I/OCLI
+1. 登录 [console.adobe.io](https://console.adobe.io)
+1. 确保包含要连接的Cloud Manager产品的您的组织在Adobe组织切换器中处于活动状态
+1. 创建新或打开现有 [Adobe I/O计划](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
+   + Adobe I/O控制台程序只是基于您想要如何管理集成的组织性集成分组、创建或使用以及现有程序
+   + 如果创建新项目，请在出现提示时选择“空项目”（与“从模板创建”）
+   + Adobe I/O控制台程序是Cloud Manager程序的不同概念
+1. 创建与“开发人员 — Cloud Service”配置文件的新Cloud Manager API集成
+1. 获取服务帐户(JWT)凭据需要填充Adobe I/OCLI的 [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication)
+1. 加载 `config.json` 文件进入Adobe I/OCLI
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager PATH_TO_CONFIG_JSON_FILE --file --json`
-1. 載入 `private.key` 檔案放入Adobe I/OCLI
+1. 加载 `private.key` 文件进入Adobe I/OCLI
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
-開始 [正在執行命令](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) 適用於Cloud Manager，透過Adobe I/OCLI。
+开始 [执行命令](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) 适用于Cloud Manager的，通过Adobe I/OCLI。
 
-### 設定AEM快速開發環境外掛程式{#rde}
+### 设置AEM快速开发环境插件{#rde}
 
-AEM快速開發環境外掛程式可讓aio CLI與AEMas a Cloud Service互動 [快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html) 透過 `aio aem:rde` 命令。
+AEM Rapid Development Environment插件允许aio CLI与AEMas a Cloud Service交互 [快速开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html) 通过 `aio aem:rde` 命令。
 
-1. 執行 `aio plugins:install @adobe/aio-cli-plugin-aem-rde` 安裝 [AEM快速開發環境外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde).
+1. 执行 `aio plugins:install @adobe/aio-cli-plugin-aem-rde` 安装 [AEM快速开发环境插件](https://github.com/adobe/aio-cli-plugin-aem-rde).
 
-### 設定Adobe I/OCLIAsset compute外掛程式{#aio-asset-compute}
+### 设置Adobe I/OCLIAsset compute插件{#aio-asset-compute}
 
-Adobe I/OAsset compute Cloud Manager外掛程式可讓aio CLI透過 `aio asset-compute` 命令。
+Adobe I/OAsset compute Cloud Manager插件允许aio CLI通过 `aio asset-compute` 命令。
 
-1. 執行 `aio plugins:install @adobe/aio-cli-plugin-asset-compute` 安裝 [aioAsset compute外掛程式](https://github.com/adobe/aio-cli-plugin-asset-compute).
+1. 执行 `aio plugins:install @adobe/aio-cli-plugin-asset-compute` 安装 [aioAsset compute插件](https://github.com/adobe/aio-cli-plugin-asset-compute).
 
 
-## 設定開發IDE
+## 设置开发IDE
 
-AEM開發主要包括了Java和前端（JavaScript、CSS等）開發以及XML管理。 以下是AEM開發中最常用的IDE。
+AEM开发主要包括了Java和前端（JavaScript、CSS等）开发以及XML管理。 以下是AEM开发中最常用的IDE。
 
 ### IntelliJ IDEA
 
-__[IntelliJ IDEA](https://www.jetbrains.com/idea/)__ 是適用於Java開發的強大IDE。 IntelliJ IDEA提供兩種口味：免費社群版和商業（付費） Ultimate版。 免費的社群版本足以進行AEM開發，但Ultimate [擴充其功能集](https://www.jetbrains.com/idea/download).
+__[IntelliJ IDEA](https://www.jetbrains.com/idea/)__ 是一个用于Java开发的功能强大的IDE。 IntelliJ IDEA有两种风格：免费社区版和商业（付费）Ultimate版。 免费的社区版本足以支持AEM开发，但最终版本是 [扩展其功能集](https://www.jetbrains.com/idea/download).
 
 >[!VIDEO](https://video.tv.adobe.com/v/26089?quality=12&learn=on)
 
-+ [下載IntelliJ IDEA](https://www.jetbrains.com/idea/download)
-+ [下載Repo工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation)
++ [下载IntelliJ IDEA](https://www.jetbrains.com/idea/download)
++ [下载Repo工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation)
 
 ### Microsoft Visual Studio Code
 
-__[Visual Studio Code](https://code.visualstudio.com/)__ (VS Code)是適用於前端開發人員的免費開放原始碼工具。 Visual Studio Code可設定為在Adobe工具的協助下，整合與AEM同步的內容。 __[存放庫](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)__.
+__[Visual Studio Code](https://code.visualstudio.com/)__ (VS Code)是面向前端开发人员的免费开源工具。 可以设置Visual Studio Code以通过Adobe工具将content sync与AEM集成， __[存储库](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)__.
 
-Visual Studio Code是前端開發人員主要建立前端計畫碼、JavaScript、CSS和HTML的理想選擇。 VS Code透過以下方式支援Java： [擴充功能](https://code.visualstudio.com/docs/java/java-tutorial)，可能缺乏更特定Java所提供的某些進階功能。
+Visual Studio Code是前端开发人员主要创建前端代码(JavaScript、CSS和HTML)的理想选择。 虽然VS Code通过以下方式支持Java [扩展](https://code.visualstudio.com/docs/java/java-tutorial)中，它可能缺少由更特定于Java提供的某些高级功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 
-+ [下載Visual Studio Code](https://code.visualstudio.com/Download)
-+ [下載Repo工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)
-+ [下載預設的VS程式碼擴充功能](https://aemfed.io/)
-+ [下載AEM Sync VS Code擴充功能](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)
++ [下载Visual Studio Code](https://code.visualstudio.com/Download)
++ [下载Repo工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)
++ [下载嵌入的VS代码扩展](https://aemfed.io/)
++ [下载AEM Sync VS代码扩展](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__ 是Java開發的熱門IDE，並支援  __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)__ Adobe此外掛程式，提供IDE內部的GUI，用於撰寫及同步JCR內容與本機AEM執行個體。
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ 是用于Java开发的常用IDE，并且支持  __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)__ 插件提供了用于创作和将JCR内容与本地AEM实例同步的IDE内GUI。Adobe提供了此插件。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
-+ [下載Eclipse](https://www.eclipse.org/ide/)
-+ [下載Eclipse開發工具](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
++ [下载Eclipse](https://www.eclipse.org/ide/)
++ [下载Eclipse开发工具](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)

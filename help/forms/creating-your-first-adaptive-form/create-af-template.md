@@ -1,6 +1,6 @@
 ---
-title: 建立最適化表單範本
-description: 範本定義最適化表單的結構和初始內容。
+title: 创建自适应表单模板
+description: 模板定义自适应表单的结构和初始内容。
 feature: Adaptive Forms
 topic: Development
 role: Developer
@@ -15,17 +15,17 @@ ht-degree: 8%
 ---
 
 
-# 建立最適化表單範本
+# 创建自适应表单模板
 
-每個最適化表單都以最適化表單範本為基礎。 範本會定義最適化表單繼承的結構、初始內容、主題等。 您可以建立新的最適化表單範本，或在建立最適化表單時使用現成的範本。
-此處建立的範本是我們日後最適化表單的基礎。
-以下影片說明建立最適化表單範本的基本程式
+每个自适应表单都基于自适应表单模板。 模板定义了自适应表单继承的结构、初始内容、主题等。 您可以创建新的自适应表单模板，或在创建自适应表单时使用现成的模板。
+此处创建的模板是我们今后自适应表单的基础。
+以下视频介绍了创建自适应表单模板的基本过程
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324?quality=12&learn=on)
 
-請參閱 [最適化表單範本檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) 以取得更多詳細資料
+请参阅 [自适应表单模板文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) 了解更多详细信息
 
-如有需要，您可以下載 [自適應表單範本](assets/peak-application-template.zip) 並使用匯入AEM [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+如果需要，您可以下载 [自适应表单模板](assets/peak-application-template.zip) 并使用导入AEM [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 
 
 ## 后续步骤

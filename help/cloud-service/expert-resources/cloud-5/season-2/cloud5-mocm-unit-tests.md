@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 - Cloud Manager的秘密 — 單元測試
-description: 使用AEM和Cloud Manager進行單元測試
+title: Cloud 5 - Cloud Manager的秘密 — 单元测试
+description: 使用AEM和Cloud Manager进行单元测试
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 4%
 
 ---
 
-# Cloud 5 - Cloud Manager的秘密 — 單元測試
+# Cloud 5 - Cloud Manager的秘密 — 单元测试
 
-單元測試是軟體開發中一個經常被忽略的步驟，是每個開發人員都應該完成的極為重要的活動。 AEM本身會提供許多預設品質檢查，但無法測試您已自訂或變更的所有專案。
+单元测试是软件开发中一个经常被忽视的步骤，是每个开发人员都应该完成的极其重要的活动。 AEM本身提供了许多默认质量检查，但它们不能测试您已自定义或更改的所有内容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343623?quality=12&learn=on)
 
-## 本影片涵蓋的內容
+## 本视频中涵盖的内容
 
-+ 自動檢查概觀
++ 自动检查概述
 + [自定义代码质量规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html)

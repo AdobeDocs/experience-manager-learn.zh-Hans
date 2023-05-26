@@ -1,7 +1,7 @@
 ---
-title: 為Web Channel建立您的第一個互動式通訊
+title: 为Web渠道创建您的第一个交互式通信
 seo-title: Creating your first interactive communication for the web channel
-description: 互動式通訊是AEM Forms 6.4的新功能。本檔案將引導您完成為Web Channel建立互動式通訊所需的步驟。
+description: 交互式通信是AEM Forms 6.4的新功能。本文档将指导您完成为Web渠道创建交互式通信所需的步骤。
 seo-description: Interactive Communications is new to AEM Forms 6.4. This document will walk you through the steps needed to create an interactive communication for the web channel.
 feature: Interactive Communication
 topics: development
@@ -21,24 +21,24 @@ ht-degree: 4%
 
 ---
 
-# 為Web Channel建立您的第一個互動式通訊
+# 为Web渠道创建您的第一个交互式通信
 
-互動式通訊是AEM Forms 6.4的新功能。本檔案將引導您完成為列印頻道建立互動式通訊所需的步驟。
+交互式通信是AEM Forms 6.4的新功能。本文档将指导您完成为打印渠道创建交互式通信所需的步骤。
 
 ## 前提条件 {#prerequistes}
 
-[使用封裝管理程式，將本教學課程的相關資產下載並匯入至AEM。](assets/gettingstartedassets.zip). 此zip檔案包含本教學課程中使用的影像和檔案片段
+[使用包管理器下载与本教程相关的资源并将其导入AEM。](assets/gettingstartedassets.zip). 此zip文件包含本教程中使用的图像和文档片段
 
-[下載並解壓縮此檔案。](assets/warfileandswaggerfile.zip) 此檔案包含需要部署至Tomcat的SampleRest.war檔案，以及需要用來設定資料來源的Swagger檔案。
+[下载并解压缩此文件。](assets/warfileandswaggerfile.zip) 此文件包含需要部署到Tomcat的SampleRest.war文件和需要用于配置数据源的swagger文件。
 
-完成本教學課程後，您已學習下列內容：
+完成本教程后，您已学习以下内容：
 
-* 建立資料來源
+* 创建数据源
 * 创建表单数据模型
-* 建立檔案片段
-* 設定表格和圖表
-* 傳遞Web Channel檔案
+* 创建文档片段
+* 配置表和图表
+* 投放Web渠道文档
 
 ## 后续步骤
 
-[安裝Tomcat](./partone.md)
+[安装Tomcat](./partone.md)

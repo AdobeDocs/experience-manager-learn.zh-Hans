@@ -1,6 +1,6 @@
 ---
-title: 如何設定Oak登入權杖工作階段有效期
-description: 設定Oak原始權杖工作階段到期逾時的步驟
+title: 如何设置Oak登录令牌会话过期
+description: 设置Oak源令牌会话过期超时的步骤
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何設定Oak登入權杖工作階段有效期
+# 如何设置Oak登录令牌会话过期
 
-*此影片逐步解說設定Oak登入權杖工作階段到期的步驟。*
+*本视频介绍设置Oak登录令牌会话到期的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335468?quality=12&learn=on)

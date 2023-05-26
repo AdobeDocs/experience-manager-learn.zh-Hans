@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms中建立您的第一個servlet
-description: 建立您的第一個Sling servlet以合併資料與表單範本。
+title: 在AEM Forms中创建您的第一个servlet
+description: 构建您的第一个sling servlet以将数据与表单模板合并。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -17,13 +17,13 @@ ht-degree: 1%
 
 # Sling Servlet
 
-Servlet是一種類別，用來擴充裝載應用程式的伺服器的功能，這些應用程式可透過要求 — 回應程式設計模型來存取。 對於這類應用程式，Servlet技術會定義HTTP特定的servlet類別。
-所有servlet都必須實作Servlet介面，該介面定義生命週期方法。
+Servlet类用于扩展服务器的功能，这些服务器托管通过请求 — 响应编程模型访问的应用程序。 对于此类应用程序，Servlet技术定义特定于HTTP的servlet类。
+所有servlet都必须实现Servlet接口，该接口定义了生命周期方法。
 
 
-AEM中的servlet可註冊為OSGi服務：您可以將SlingSafeMethodsServlet擴充為唯讀實作或SlingAllMethodsServlet，以實作所有RESTful作業。
+AEM中的servlet可以注册为OSGi服务：您可以扩展SlingSafeMethodsServlet以实现只读实现，也可以扩展SlingAllMethodsServlet以实现所有RESTful操作。
 
-## Servlet程式碼
+## Servlet代码
 
 ```java
 package com.mysite.core.servlets;
@@ -70,28 +70,28 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 }
 ```
 
-## 建置和部署
+## 生成和部署
 
-若要建置您的專案，請遵循下列步驟：
+要构建项目，请执行以下步骤：
 
-* 開啟 **命令提示視窗**
+* 打开 **命令提示符窗口**
 * 导航至 `c:\aemformsbundles\mysite\core`
-* 執行命令 `mvn clean install -PautoInstallBundle`
-* 上述命令會自動建置套件組合，並將其部署至在localhost：4502上執行的AEM執行個體
+* 执行命令 `mvn clean install -PautoInstallBundle`
+* 上述命令会自动构建捆绑包，并将其部署到在localhost：4502上运行的AEM实例
 
-該組合也可在以下位置使用 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用將套件組合部署至AEM [Felix網頁主控台。](http://localhost:4502/system/console/bundles)
+该捆绑包还可在以下位置使用 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用将捆绑包部署到AEM中 [Felix Web控制台。](http://localhost:4502/system/console/bundles)
 
 
-## 測試Servlet解析程式
+## 测试Servlet解析程序
 
-將瀏覽器指向 [servlet解析器URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). 這會告訴您針對指定路徑叫用的servlet，如下方熒幕擷取所示
+将浏览器指向 [servlet解析器URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). 这会告诉您为给定路径调用的servlet，如下面的屏幕快照所示
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
-## 使用Postman測試servlet
+## 使用Postman测试servlet
 
-![使用Postman測試servlet](assets/test-servlet-postman.JPG)
+![使用Postman测试servlet](assets/test-servlet-postman.JPG)
 
 ## 后续步骤
 
-[包含協力廠商jar的](./include-third-party-jars.md)
+[包含第三方Jar的](./include-third-party-jars.md)
 

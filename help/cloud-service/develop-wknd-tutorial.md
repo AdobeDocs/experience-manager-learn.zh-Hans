@@ -26,20 +26,20 @@ ht-degree: 49%
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-本教學課程的設計用途為 **AEMas a Cloud Service** 並且向後相容於 **AEM 6.5+** 和 **AEM 6.4.2+**.
+本教程设计用于 **AEMas a Cloud Service** 向后兼容 **AEM 6.5+** 和 **AEM 6.4.2+**.
 
-**[請在這裡檢視教學課程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)**
+**[请在此处查看教程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)**
 
-## 將WKND部署至AEMas a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## 将WKND部署到AEMas a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
-完成WKND教學課程後，觀看以下影片以瞭解如何將WKND專案部署到AEMas a Cloud Service。
+完成WKND教程后，请观看以下视频，大致了解如何将WKND项目部署到AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30191?quality=12&learn=on)
 
-影片說明WKND網站專案可能的用途：
+此视频说明如何实施WKND站点项目：
 
-1. 來源為第三方Git存放庫，在此例中為Github.com ，但可以是任何Git存放庫
-2. 推播至向AEMas a Cloud Service程式註冊的上游AdobeCloud Manager Git存放庫
-3. 透過Cloud Manager管道部署到AEMas a Cloud Service環境
+1. 源自第三方Git存储库，在本例中为Github.com ，但可以是任何Git存储库
+2. 已推送到在AEMas a Cloud Service项目中注册的上游AdobeCloud Manager Git存储库
+3. 通过Cloud Manager管道部署到AEMas a Cloud Service环境
 
-如需如何將AEM專案部署到AEM as a Cloud Service的完整總覽，請觀看以下說明的相關影片系列： [將Git與Adobe Cloud Manager整合](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html).
+有关如何将AEM项目部署到AEM as a Cloud Service的完整概述，请观看以下视频系列，了解如何 [将Git与AdobeCloud Manager集成](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html).

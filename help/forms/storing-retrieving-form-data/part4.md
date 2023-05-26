@@ -1,6 +1,6 @@
 ---
-title: 儲存和擷取MySQL資料庫的表單資料 — 建立使用者端程式庫
-description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
+title: 存储和检索MySQL数据库中的表单数据 — 创建客户端库
+description: 多部分教程将指导您完成存储和检索表单数据所涉及的步骤
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ---
 
-# 建立使用者端資源庫
+# 创建客户端库
 
-AEM使用者端資料庫會管理您的所有使用者端JavaScript程式碼。 針對本文，我建立了一個簡單的JavaScript，以使用Guide Bridge API擷取最適化表單資料。 擷取調適型表單資料後，會對servlet進行POST呼叫，以在資料庫中插入或更新調適型表單資料。 函式getALLUrlParams會傳回URL中的引數。 如果URL中有guid引數，則我們需要執行更新操作（如果不是插入操作）。其餘功能會在與.savebutton類別的click事件相關聯的程式碼中處理。
+AEM客户端库管理您的所有客户端JavaScript代码。 对于本文，我创建了一个简单的JavaScript，用于使用引导桥API获取自适应表单数据。 获取自适应表单数据后，将对servlet进行POST调用，以在数据库中插入或更新自适应表单数据。 getALLUrlParams函数返回URL中的参数。 如果URL中存在guid参数，那么我们需要执行更新操作（如果不是插入操作）。其余功能将在与.savebutton类的click事件关联的代码中处理。
 
 >[!NOTE]
 >
->使用者端資料庫是本教學課程資產的一部分
+>客户端库作为本教程资产的一部分提供
 
 ```javascript
 function getAllUrlParams(url) {
