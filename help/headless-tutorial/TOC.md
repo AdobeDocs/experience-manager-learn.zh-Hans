@@ -3,11 +3,12 @@ user-guide-title: AEM Headless 快速入门
 user-guide-description: 一个端到端教程，它演示了如何使用 AEM Headless 构建和展示内容。
 breadcrumb-title: AEM Headless 教程
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
+solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
+source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 19%

@@ -3,13 +3,14 @@ feature-set: Experience Manager Forms, Experience Manager
 role: Developer
 user-guide-title: AEM Forms 视频和教程
 user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员的 AEM Forms 资源集合。
+solution: Experience Manager, Experience Manager Forms
 breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
+source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1822'
 ht-degree: 2%
 
 ---
@@ -229,10 +230,12 @@ ht-degree: 2%
    + [创建欢迎套件组件](welcome-kit/create-welcomekit-component.md)
    + [创建工作流组件](welcome-kit/create-workflow-component.md)
    + [测试解决方案](welcome-kit/testing-the-solution.md)
-+ 在SPA中嵌入自适应表单 {#embed-form-spa}
++ Headless Forms API {#embed-form-spa}
    + [1 — 简介](headless-forms/introduction.md)
    + [2 — 安装依赖项](headless-forms/install-af-react-libraries.md)
    + [3 — 获取表单](headless-forms/fetch-the-form.md)
+   + [4 — 选择要填充的表单](headless-forms/select-form-from-drop-down-list.md)
+   + [5 — 以卡片格式显示表单](headless-forms/display-forms-card-view.md)
 
 + 使用Forms和Acrobat Sign的React应用程序 {#react-ic-sign}
    + [1 — 简介](react-ic-sign/introduction.md)

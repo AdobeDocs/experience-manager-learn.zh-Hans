@@ -2,11 +2,12 @@
 user-guide-title: AEM Assets 视频和教程
 user-guide-description: Adobe Experience Manager Assets 的视频和教程集合。
 breadcrumb-title: AEM Assets 教程
+solution: Experience Manager, Experience Manager Assets
 sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: a864f4f19135f7d6fb345a76f1d5c7dc3ee9a9dc
+source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 25%
