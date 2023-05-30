@@ -10,10 +10,10 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
-source-git-commit: 19c31819f3df7c6c43753d6ec4de8f6ecf4e55dd
+source-git-commit: 3831c6ed1467018c9f5bf15aa9f6b8ee78034c02
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 3%
+source-wordcount: '1646'
+ht-degree: 2%
 
 ---
 
@@ -73,7 +73,7 @@ In **Experience Platform**：
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-有关应包含在SDR文档中的概念和各种元素的更多信息，请访问 [创建和维护解决方案设计参考(SDR)文档](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). 您还可以下载示例Excel模板，但特定于WKND的版本也可用 [此处](./assets/Analytics-SDR-Template.xlsx).
+有关应包含在SDR文档中的概念和各种元素的更多信息，请访问 [创建和维护解决方案设计参考(SDR)文档](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). 您还可以下载示例Excel模板，但特定于WKND的版本也可用 [此处](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
 
 ## 设置Analytics — 报表包、Analysis Workspace
 
@@ -83,7 +83,7 @@ In **Experience Platform**：
 
 为了分析、收集见解并和其他人分享从收集到的数据中的见解，在Analysis Workspace中创建了一个项目。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419875?quality=12&learn=on)
 
 要了解有关Analytics设置和概念的更多信息，强烈建议使用以下资源：
 
@@ -121,6 +121,10 @@ In **Experience Platform**：
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419882?quality=12&learn=on)
+
+>[!TIP]
+>
+>视频中显示的数据元素和规则事件代码可供您参考， **展开以下折叠元素**. 但是，如果您未使用Adobe客户端数据层，则必须修改以下代码，但定义数据元素并在规则定义中使用数据元素的概念仍然适用。
 
 +++ 数据元素和规则事件代码
 
@@ -209,6 +213,13 @@ In **Experience Platform**：
 
 有关将AEM核心组件与Adobe客户端数据层集成的其他信息，请参阅 [将Adobe客户端数据层用于AEM核心组件指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html).
 
+
+>[!INFO]
+>
+>全面了解 **变量映射** 选项卡属性详细信息在解决方案设计参考(SDR)文档中，访问已完成的特定于WKND的版本以供下载 [此处](./assets/Final-WKND-WebSDK-BRD-SDR.xlsx).
+
+
+
 ## 验证WKND上已更新的标记属性
 
 确保在WKND网站页面上生成、发布并正确使用更新的标记属性。 使用Google Chrome Web浏览器的 [Adobe Experience Platform Debugger扩展](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)：
@@ -235,7 +246,7 @@ In **Experience Platform**：
 
 Analysis Workspace是Adobe Analytics中的一个功能强大的工具，允许以灵活且交互的方式探索和可视化数据。 它提供了一个拖放界面，用于创建自定义报表、执行高级分段和应用各种数据可视化图表。
 
-让我们重新打开在中创建的Analysis Workspace项目 [设置Analytics](#setup-analytics---report-suite-analysis-workspace) 步骤。 在 **热门页面** 部分，检查各种量度，例如访问次数、独特访客数、条目数、跳出率等。 要评估WKND页面和主页CTA的性能，请拖放特定于WKND的维度（WKND页面名称、WKND CTA名称）和量度（WKND CTA点击事件）。 这些见解对于营销人员了解哪些CTA更有效，以及制定与其业务目标一致的数据驱动型决策非常有价值。
+让我们重新打开在中创建的Analysis Workspace项目 [设置Analytics](#setup-analytics---report-suite-analysis-workspace) 步骤。 在 **热门页面** 部分，检查各种量度，例如访问次数、独特访客数、条目数、跳出率等。 要评估WKND页面和主页CTA的性能，请拖放特定于WKND的维度（WKND页面名称、WKND CTA名称）和量度（WKND CTA点击事件）。 这些见解对于营销人员了解哪些CTA更有效，并按照其业务目标制定数据驱动型决策非常有价值。
 
 要可视化用户历程，请使用流量可视化图表，从 **WKND页面名称** 并扩展到不同的路径。
 
@@ -250,6 +261,12 @@ Analysis Workspace是Adobe Analytics中的一个功能强大的工具，允许�
 通过实施建议的步骤并使用提供的资源(如解决方案设计参考(SDR)文档)和了解关键Analytics概念，营销人员可以有效地收集和分析数据。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419888?quality=12&learn=on)
+
+
+>[!AVAILABILITY]
+>
+>如果您更喜欢 **端到端视频** ，它涵盖了整个集成过程，而不是单独的设置步骤视频，您可以单击 [此处](https://video.tv.adobe.com/v/3419889/) 以访问它。
+
 
 ## 其他资源
 
