@@ -11,9 +11,9 @@ last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
 exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
-source-git-commit: 63afa03de70d6f8f695d552018344d53a5cec6f5
+source-git-commit: 32472c8591aeb47a7c6a7253afd7ad9ab0e45171
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1340'
 ht-degree: 3%
 
 ---
@@ -207,6 +207,11 @@ In **Experience Platform**：
 做得好！您已使用Experience PlatformWeb SDK完成AEM的设置，以便从网站收集并摄取数据。 利用此基础，您现在可以探索增强和集成Analytics、Target、Customer Journey Analytics(CJA)和其他许多产品的更多可能性，为您的客户创造丰富的个性化体验。 不断学习和探索，以充分发挥Adobe Experience Cloud的潜力。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418900?quality=12&learn=on)
+
+
+>[!AVAILABILITY]
+>
+>如果您更喜欢 **端到端视频** ，它涵盖了整个集成过程，而不是单独的设置步骤视频，您可以单击 [此处](https://video.tv.adobe.com/v/3418905/) 以访问它。
 
 ## 其他资源
 
