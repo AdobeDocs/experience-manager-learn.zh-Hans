@@ -7,17 +7,20 @@ kt: 13311
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+exl-id: 7316ca02-be57-4ecf-b162-43a736b992b3
+source-git-commit: 3bbf80d5c301953b3a34ef8256702ac7445c40da
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
 
-
 # 以卡片格式获取并显示表单
 
-卡片视图格式是以卡片形式显示信息或数据的设计模式。 每个信息卡表示一个单独的内容或数据条目，通常由一个视觉上截然不同的容器组成，其中排列了特定元素。 在本文中，我们将使用 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) 获取表单并以卡片格式显示表单，如下所示
+卡片视图格式是以卡片形式显示信息或数据的设计模式。 每个信息卡表示一个单独的内容或数据条目，通常由一个视觉上截然不同的容器组成，其中排列了特定元素。
+React中的可单击卡片是类似于卡片或图块的交互式组件，用户可以单击或点按。 当用户单击或点按可单击的卡片时，会触发指定的操作或行为，例如导航到其他页面、打开模式或更新UI。
+
+在本文中，我们将使用 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) 以提取表单并以卡片格式显示表单，然后在单击事件中打开自适应表单。
 
 ![卡片视图](./assets/card-view-forms.png)
 
@@ -25,37 +28,59 @@ ht-degree: 0%
 
 以下代码用于设计信息卡模板。 卡片模板显示自适应表单的标题和描述以及Adobe徽标。 [材料UI组件](https://mui.com/) 已用于创建此布局。
 
+
+
 ```javascript
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import { Typography } from "@mui/material";
+import Form from './Form';
+import PlainText from './plainText'
+import TextField from './TextField'
+import Button from './Button';
+import { AdaptiveForm } from "@aemforms/af-react-renderer";
+
+import { CardActionArea, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-const FormCard =({headlessForm}) => {
+import { useState,useEffect } from "react";
+import DisplayForm from "../DisplayForm";
+import { Link } from "react-router-dom";
+export default function FormCard({headlessForm}) {
+const extendMappings =
+    {
+        'plain-text' : PlainText,
+        'text-input' : TextField,
+        'button' : Button,
+        'form': Form
+    };
+    const[formPath, setFormPath] = useState('');
+    const [selectedForm, setForm] = useState('');
     return (
-              <Grid item xs={3}>
+        
+            <Grid item xs={3}>
                 <Paper elevation={3}>
                     <img src="/content/dam/formsanddocuments/registrationform/jcr:content/renditions/cq5dam.thumbnail.48.48.png" className="img"/>
                     <Box padding={3}>
-                    <Typography variant="subtititle2" component="h2">
-                        {headlessForm.title}
-                    
-                    </Typography>
-                    <Typography variant="subtititle3" component="h4">
-                        {headlessForm.description}
-                    
-                    </Typography>
+                        <Link style={{ textDecoration: 'none' }} to={`/displayForm${headlessForm.path}`}>
+                            <Typography variant="subtititle2" component="h2">
+                                {headlessForm.title}
+                            </Typography>
+                            <Typography variant="subtititle3" component="h4">
+                                {headlessForm.description}
+                            </Typography>
+                        </Link>
+                
                     </Box>
                 </Paper>
-                </Grid>
-          
-
-
+            </Grid>
     );
     
 
 };
-export default FormCard;
+```
+
+以下路由是在Main.js中定义的，用于导航到DisplayForm.js
+
+```javascript
+    <Route path="/displayForm/*" element={<DisplayForm/>} exact/>
 ```
 
 ## 获取表单
@@ -104,3 +129,7 @@ export default function ListForm(){
 ```
 
 在上述代码中，我们使用map函数对fetchedForms进行迭代，并且为fetchedForms数组中的每个项目创建一个FormCard组件并将其添加到网格容器中。 您现在可以根据自己的要求在React应用程序中使用ListForm组件。
+
+## 后续步骤
+
+[用户单击信息卡时显示自适应表单](./open-form-card-view.md)
