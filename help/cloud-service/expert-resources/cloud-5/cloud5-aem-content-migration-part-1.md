@@ -9,16 +9,16 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342133.jpeg
 exl-id: 817ea20d-d902-4497-83d3-5800ed6aaa8f
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 5%
+source-wordcount: '100'
+ht-degree: 6%
 
 ---
 
 # 迁移到云 — 第1部分
 
-Darin和James讨论了AEM Cloud中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 他们还谈到了向云的迁移。 特邀嘉宾和云专家， [Applesmith博士](https://twitter.com/DrApplesmith) 做了一个外表。
+Darin和James讨论了AEM Cloud中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 他们还谈到了向云的迁移。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342133?quality=12&learn=on)
 

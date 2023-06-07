@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1188'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ _本章中的IDE屏幕截图来自 [Visual Studio Code](https://code.visualstudi
 
 必须安装以下软件：
 
-- [Node.js v18](https://nodejs.org/)
+- [Node.js v18](https://nodejs.org/en)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## 目标
@@ -109,7 +109,7 @@ Github.com上提供了示例React应用程序源代码，网址为 <https://gith
 
 1. 此 `src/api` 文件夹包含用于向AEM进行GraphQL查询的文件。
    - `src/api/aemHeadlessClient.js` 初始化并导出用于与AEM通信的AEM Headless客户端
-   - `src/api/usePersistedQueries.js` 实施 [自定义React挂钩](https://react.dev/docs/hooks-custom.html) 将数据从AEM GraphQL返回到 `Teams.js` 和 `Person.js` 查看组件。
+   - `src/api/usePersistedQueries.js` 实施 [自定义React挂钩](https://react.dev/learn/reusing-logic-with-custom-hooks#custom-hooks-sharing-logic-between-components) 将数据从AEM GraphQL返回到 `Teams.js` 和 `Person.js` 查看组件。
 
 1. 此 `src/components/Teams.js` 文件使用列表查询显示团队及其成员的列表。
 1. 此 `src/components/Person.js` 文件使用参数化单结果查询显示单个人员的详细信息。
@@ -187,7 +187,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 接下来，构建在React应用程序的主视图上显示团队及其成员的功能。 此功能需要：
 
-- 新 [自定义React useEffect挂钩](https://react.dev/docs/hooks-custom.html) 在 `src/api/usePersistedQueries.js` 调用 `my-project/all-teams` 持久查询，返回AEM中的团队内容片段列表。
+- 新 [自定义React useEffect挂钩](https://react.dev/reference/react/useEffect#useeffect) 在 `src/api/usePersistedQueries.js` 调用 `my-project/all-teams` 持久查询，返回AEM中的团队内容片段列表。
 - React组件，位于 `src/components/Teams.js` 调用新的自定义React `useEffect` 挂接，并渲染团队数据。
 
 完成后，应用程序的主视图将使用来自AEM的团队数据填充。
@@ -337,7 +337,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 此功能需要：
 
-- 新 [自定义React useEffect挂钩](https://react.dev/docs/hooks-custom.html) 在 `src/api/usePersistedQueries.js` 调用参数化 `my-project/person-by-name` 持久查询，并返回单个人员记录。
+- 新 [自定义React useEffect挂钩](https://react.dev/reference/react/useEffect#useeffect) 在 `src/api/usePersistedQueries.js` 调用参数化 `my-project/person-by-name` 持久查询，并返回单个人员记录。
 
 - React组件，位于 `src/components/Person.js` 使用人员全名作为查询参数的活动，会调用新的自定义React `useEffect` 挂接，并呈现人员数据。
 

@@ -10,10 +10,10 @@ level: Beginner
 kt: 11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '2283'
-ht-degree: 1%
+source-wordcount: '2296'
+ht-degree: 0%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 ### 问：我已从源系统中获得最新的BPA报告，应该如何处理？
 
-将报表导出为CSV，然后将其上传到Cloud Acceleration Manager， [与您的IMS组织关联](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html). 然后作为审阅流程进行审核 [在就绪阶段中概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
+将报表导出为CSV，然后将其上传到Cloud Acceleration Manager， [与您的IMS组织关联](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html). 然后作为审阅流程进行审核 [在就绪阶段中概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
 
 请查看工具提供的代码和内容复杂性评估，并记下导致代码重构积压或云迁移评估的相关操作项。
 
@@ -80,7 +80,7 @@ CTT提取过程所用的资源量取决于节点数、Blob数及其聚合大小�
 
 简短的答案是“**是**“。
 
-CTT提取和摄取 **不含** 用户映射仅将内容、关联的原则（用户、组）从源AEM迁移到AEMaaCS。 但是，Adobe IMS中要求这些用户（身份）具有（设置的）AEMaaCS实例的访问权限，才能成功进行身份验证。 工作 [用户映射工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.html) 是将本地AEM用户映射到IMS用户，以便身份验证和授权一起工作。
+CTT提取和摄取 **不含** 用户映射仅将内容、关联的原则（用户、组）从源AEM迁移到AEMaaCS。 但是，Adobe IMS中要求这些用户（身份）具有（设置的）AEMaaCS实例的访问权限，才能成功进行身份验证。 工作 [用户映射工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html) 是将本地AEM用户映射到IMS用户，以便身份验证和授权一起工作。
 
 在这种情况下，SAML身份提供程序将针对Adobe IMS配置为使用联合/Enterprise ID，而不是使用身份验证处理程序直接配置给AEM。
 
@@ -88,15 +88,15 @@ CTT提取和摄取 **不含** 用户映射仅将内容、关联的原则（用�
 
 简短的答案是“**是**“。
 
-没有用户映射的CTT提取和摄取确实将内容、相关原则（用户、组）从源AEM迁移到AEMaaCS。 但是，Adobe IMS中要求这些用户（身份）具有（设置的）AEMaaCS实例的访问权限，才能成功进行身份验证。 工作 [用户映射工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.html) 是将本地AEM用户映射到IMS用户，以便身份验证和授权一起工作。
+没有用户映射的CTT提取和摄取确实将内容、相关原则（用户、组）从源AEM迁移到AEMaaCS。 但是，Adobe IMS中要求这些用户（身份）具有（设置的）AEMaaCS实例的访问权限，才能成功进行身份验证。 工作 [用户映射工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html) 是将本地AEM用户映射到IMS用户，以便身份验证和授权一起工作。
 
 在这种情况下，用户使用个人Adobe ID，IMS管理员使用Adobe ID提供对AEMaaCS的访问权限。
 
 ### 问：在CTT的上下文中，“划出”和“覆盖”这两个术语表示什么？
 
-在上下文中 [萃取阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-servicemoving/cloud-migration/content-transfer-tool/extracting-content.html)，选项包括覆盖暂存容器中以前提取周期的数据，或将差异（添加/更新/删除）添加到其中。 暂存容器只是一个与迁移集关联的blob存储容器。 每个迁移集都有各自的暂存容器。
+在上下文中 [萃取阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase)，选项包括覆盖暂存容器中以前提取周期的数据，或将差异（添加/更新/删除）添加到其中。 暂存容器只是一个与迁移集关联的blob存储容器。 每个迁移集都有各自的暂存容器。
 
-在上下文中 [摄取阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/ingesting-content.html)，选项为+以替换AEMaaCS的整个内容存储库，或从暂存迁移容器同步差异（添加/更新/删除）内容。
+在上下文中 [摄取阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html)，选项为+以替换AEMaaCS的整个内容存储库，或从暂存迁移容器同步差异（添加/更新/删除）内容。
 
 ### 问：源系统中有多个网站、关联的资产、用户和组。 是否可以分阶段将它们迁移到AEMaaCS？
 
@@ -224,6 +224,6 @@ CTT流程需要连接到以下资源：
 
 + [迁移到云中Experience Manager的提示和技巧( Summit 2022)](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
 
-+ [CTT专家系列视频](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-servicemigration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
++ [CTT专家系列视频](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
 
-+ [其他AEMaaCS主题的专家系列视频](https://experienceleague.adobe.com/docs/experience-manager-learncloud-service/aem-experts-series.html)
++ [其他AEMaaCS主题的专家系列视频](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-experts-series.html)

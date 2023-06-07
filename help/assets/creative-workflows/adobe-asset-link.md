@@ -9,10 +9,10 @@ level: Beginner
 thumbnail: 28988.jpg
 last-substantial-update: 2022-06-25T00:00:00Z
 exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 1%
+source-wordcount: '1047'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
-> 详细了解 [Adobe XD Premium培训方案](https://spark.adobe.com/page/wU7OXv8qKGugO/) 可以帮助您将Asset Link与Adobe Experience Manager工作流集成。
+> 详细了解 [Adobe XD Premium培训方案](https://helpx.adobe.com/support/xd.html) 可以帮助您将Asset Link与Adobe Experience Manager工作流集成。
 
 ## AdobeAsset Link和AEM Creative Workflow
 
@@ -65,7 +65,7 @@ AdobeAsset Link在AdobeAsset Link和AEM之间提供InDesign直接链接支持。
 
 >[!NOTE]
 >
->仅使用您的Adobe Creative CloudEnterprise ID或Federated ID。 确保您 [为AdobeAsset Link配置AEM](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html).
+>仅使用您的Adobe Creative CloudEnterprise ID或Federated ID。 确保您 [为AdobeAsset Link配置AEM](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html).
 
 您可以使用以下选项之一将资源置于InDesign布局中：
 

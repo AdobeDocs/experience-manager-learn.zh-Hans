@@ -9,9 +9,9 @@ level: Beginner
 kt: 10798
 thumbnail: KT-10798.jpg
 exl-id: 39b21a29-a75f-4a6c-ba82-377cf5cc1726
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '471'
 ht-degree: 4%
 
 ---
@@ -22,18 +22,18 @@ ht-degree: 4%
 
 ![带有AEM Headless的服务器到服务器Node.js应用程序](./assets/server-to-server-app/server-to-server-app.png)
 
-查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app)
+查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server)
 
 ## 前提条件 {#prerequisites}
 
 应在本地安装以下工具：
 
-+ [Node.js v18](https://nodejs.org/en/)
++ [Node.js v18](https://nodejs.org/en)
 + [Git](https://git-scm.com/)
 
 ## AEM要求
 
-Node.js应用程序可与以下AEM部署选项配合使用。 所有部署都需要 [WKND站点v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 即将安装。
+Node.js应用程序可与以下AEM部署选项配合使用。 所有部署都需要 [WKND站点v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases) 即将安装。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 + （可选） [服务凭据](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html) 如果授权请求（例如，连接到AEM作者服务）。
@@ -77,7 +77,7 @@ Node.js应用程序可与以下AEM部署选项配合使用。 所有部署都需
 
 ## 代码
 
-以下摘要介绍了如何构建服务器到服务器Node.js应用程序，它如何连接到AEM Headless以使用GraphQL持久查询检索内容，以及数据如何呈现。 完整代码可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
+以下摘要介绍了如何构建服务器到服务器Node.js应用程序，它如何连接到AEM Headless以使用GraphQL持久查询检索内容，以及数据如何呈现。 完整代码可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server).
 
 服务器到服务器AEM Headless应用程序的常见用例是将内容片段数据从AEM同步到其他系统，但此应用程序有意地简单，并会打印来自持久查询的JSON结果。
 

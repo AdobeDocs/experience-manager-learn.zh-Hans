@@ -11,9 +11,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 434f56e143bc0f969723de48abd26d49a308af9b
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '4061'
+source-wordcount: '4057'
 ht-degree: 0%
 
 ---
@@ -446,7 +446,7 @@ Byline Sling模型依赖于AEM提供的多个Java™ API。 这些API通过以�
    import org.osgi.annotation.versioning.Version;
    ```
 
-每当对此包中的文件做出更改时， [必须在语义上调整包版本](https://semver.org/). 如果不能，Maven项目的 [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) 检测无效的包版本，并中断内置。 幸运的是，如果失败，Maven插件将报告无效的Java™包版本及其应有的版本。 更新 `@Version("...")` 违反的Java™包中的声明 `package-info.java` 到插件建议修复的版本。
+每当对此包中的文件做出更改时， [必须在语义上调整包版本](https://semver.org/). 如果不能，Maven项目的 [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd) 检测无效的包版本，并中断内置。 幸运的是，如果失败，Maven插件将报告无效的Java™包版本及其应有的版本。 更新 `@Version("...")` 违反的Java™包中的声明 `package-info.java` 到插件建议修复的版本。
 
 ### 署名实施 {#byline-implementation}
 
