@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 19c31819f3df7c6c43753d6ec4de8f6ecf4e55dd
+source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '458'
 ht-degree: 24%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 24%
    + [样式系统](page-authoring/style-system-feature-video-use.md)
    + [时间扭曲](page-authoring/timewarp-feature-video-use.md)
    + [启动项](page-authoring/launches.md)
-   + 专家建议 {#expert-advice}
+   + 向同行学习 {#expert-advice}
       + [网站层次结构提示](page-authoring/expert-advice/site-hierarchy.md)
 + 组件 {#components}
    + [组件开发](components/component-development.md)
@@ -123,7 +123,7 @@ ht-degree: 24%
       + [使用体验片段选件创建Target活动](integrations/adobe-target/create-target-activity.md)
       + [使用可视化体验编辑器进行个性化](integrations/adobe-target/personalization-using-vec.md)
       + [完整网页体验的个性化](integrations/adobe-target/personalization-web-page.md)
-+ 专家资源 {#expert-resources}
++ 向同行学习 {#expert-resources}
    + [AEM Sites成熟度评估](expert-resources/maturity-assessment.md)
    + [站点维护](expert-resources/site-maintenance.md)
    + [AEM Champion提示和技巧：第1场会议](expert-resources/champion-tips-1.md)
