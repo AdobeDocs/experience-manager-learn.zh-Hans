@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
 workflow-type: tm+mt
 source-wordcount: '953'
-ht-degree: 21%
+ht-degree: 22%
 
 ---
 
@@ -61,20 +61,22 @@ ht-degree: 21%
    + 可扩展性{#extensibility}
       + App Builder{#app-builder}
          + [生成访问令牌](./developing/extensibility/app-builder/jwt-auth.md)
-      + 内容片段控制台{#content-fragments}
-         + [概述](./developing/extensibility/content-fragments/overview.md)
-         + [Adobe Developer控制台项目](./developing/extensibility/content-fragments/adobe-developer-console-project.md)
-         + [应用程序初始化](./developing/extensibility/content-fragments/app-initialization.md)
-         + [延期注册](./developing/extensibility/content-fragments/extension-registration.md)
-         + [标题菜单](./developing/extensibility/content-fragments/header-menu.md)
-         + [操作栏](./developing/extensibility/content-fragments/action-bar.md)
-         + [模态](./developing/extensibility/content-fragments/modal.md)
-         + [Adobe I/O Runtime操作](./developing/extensibility/content-fragments/runtime-action.md)
-         + [测试](./developing/extensibility/content-fragments/test.md)
-         + [部署](./developing/extensibility/content-fragments/deploy.md)
-         + 扩展示例{#example-extensions}
-            + [批量属性更新](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
-            + [使用OpenAI生成AEM图像资源](./developing/extensibility/content-fragments/example-extensions/image-generation-and-image-upload.md)
+      + UI可扩展性{#ui}
+         + [概述](./developing/extensibility/ui/overview.md)
+         + [Adobe Developer控制台项目](./developing/extensibility/ui/adobe-developer-console-project.md)
+         + [初始化应用程序](./developing/extensibility/ui/app-initialization.md)
+         + [注册扩展](./developing/extensibility/ui/extension-registration.md)
+         + [模态](./developing/extensibility/ui/modal.md)
+         + [Adobe I/O Runtime操作](./developing/extensibility/ui/runtime-action.md)
+         + [验证](./developing/extensibility/ui/verify.md)
+         + [部署](./developing/extensibility/ui/deploy.md)
+         + 内容片段{#content-fragments}
+            + [概述](./developing/extensibility/ui/content-fragments/overview.md)
+            + 示例{#examples}
+               + [批量属性更新](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
+               + [AI图像生成](./developing/extensibility/ui/content-fragments/examples/console-image-generation-and-image-upload.md)
+               + [自定义网格列](./developing/extensibility/ui/content-fragments/examples/custom-grid-columns.md)
+               + [导出为XML](./developing/extensibility/ui/content-fragments/examples/editor-export-to-xml.md)
    + 开发基础{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本地开发环境](./developing/basics/local-development-environment.md)
