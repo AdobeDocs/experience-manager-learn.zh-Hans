@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
-source-git-commit: 3831c6ed1467018c9f5bf15aa9f6b8ee78034c02
+source-git-commit: 542313c0da6f5eab5befe0da1b80ab38948156ac
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1647'
 ht-degree: 2%
 
 ---
@@ -102,7 +102,7 @@ In **Experience Platform**：
 
 体验数据模型(XDM)架构帮助您标准化收集的数据。 在 [上一个教程](./web-sdk.md)，一个XDM架构，具有 `AEP Web SDK ExperienceEvent` 将创建一个字段组。 此外，使用此XDM架构会创建一个数据集，以将收集的数据存储在Experience Platform中。
 
-但是，此XDM架构没有特定于Adobe Analytics的字段组来发送eVar事件数据。 将创建一个新的XDM架构，而不是更新现有架构，以避免将eVar事件数据存储在平台中。
+但是，该XDM架构没有特定于Adobe Analytics的字段组来发送eVar事件数据。 将创建一个新的XDM架构，而不是更新现有架构，以避免将eVar事件数据存储在平台中。
 
 新创建的XDM架构具有 `AEP Web SDK ExperienceEvent` 和 `Adobe Analytics ExperienceEvent Full Extension` 字段组。
 
@@ -130,84 +130,84 @@ In **Experience Platform**：
 
 + 此 `Component ID` 数据元素代码。
 
-   ```javascript
-   if(event && event.path && event.path.includes('.')) {    
-       // split on the `.` to return just the component ID for e.g. button-06bc532b85, tabs-bb27f4f426-item-cc9c2e6718
-       return event.path.split('.')[1];
-   }else {
-       //return dummy ID
-       return "WKND-CTA-ID";
-   }
-   ```
+  ```javascript
+  if(event && event.path && event.path.includes('.')) {    
+      // split on the `.` to return just the component ID for e.g. button-06bc532b85, tabs-bb27f4f426-item-cc9c2e6718
+      return event.path.split('.')[1];
+  }else {
+      //return dummy ID
+      return "WKND-CTA-ID";
+  }
+  ```
 
 + 此 `Component Name` 数据元素代码。
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('dc:title')) {
-       // Return the Button, Link, Image, Tab name, for e.g. View Trips, Full Article, See Trips
-       return event.component['dc:title'];
-   }else {
-       //return dummy ID
-       return "WKND-CTA-Name";    
-   }    
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('dc:title')) {
+      // Return the Button, Link, Image, Tab name, for e.g. View Trips, Full Article, See Trips
+      return event.component['dc:title'];
+  }else {
+      //return dummy ID
+      return "WKND-CTA-Name";    
+  }    
+  ```
 
 + 此 `all pages - on load` **Rule-Condition** 代码
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('@type') && event.component.hasOwnProperty('xdm:template')) {
-       return true;
-   }else{
-       return false;
-   }    
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('@type') && event.component.hasOwnProperty('xdm:template')) {
+      return true;
+  }else{
+      return false;
+  }    
+  ```
 
 + 此 `home page - cta click` **Rule-Event** 代码
 
-   ```javascript
-   var componentClickedHandler = function(evt) {
-   // defensive coding to avoid a null pointer exception
-   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-       //trigger Tag Rule and pass event
-       console.log("cmp:click event: " + evt.eventInfo.path);
-   
-       var event = {
-           //include the path of the component that triggered the event
-           path: evt.eventInfo.path,
-           //get the state of the component that triggered the event
-           component: window.adobeDataLayer.getState(evt.eventInfo.path)
-       };
-   
-       //Trigger the Tag Rule, passing in the new `event` object
-       // the `event` obj can now be referenced by the reserved name `event` by other Tag Property data elements
-       // i.e `event.component['someKey']`
-       trigger(event);
-   }
-   }
-   
-   //set the namespace to avoid a potential race condition
-   window.adobeDataLayer = window.adobeDataLayer || [];
-   //push the event listener for cmp:click into the data layer
-   window.adobeDataLayer.push(function (dl) {
-   //add event listener for `cmp:click` and callback to the `componentClickedHandler` function
-   dl.addEventListener("cmp:click", componentClickedHandler);
-   });    
-   ```
+  ```javascript
+  var componentClickedHandler = function(evt) {
+  // defensive coding to avoid a null pointer exception
+  if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
+      //trigger Tag Rule and pass event
+      console.log("cmp:click event: " + evt.eventInfo.path);
+  
+      var event = {
+          //include the path of the component that triggered the event
+          path: evt.eventInfo.path,
+          //get the state of the component that triggered the event
+          component: window.adobeDataLayer.getState(evt.eventInfo.path)
+      };
+  
+      //Trigger the Tag Rule, passing in the new `event` object
+      // the `event` obj can now be referenced by the reserved name `event` by other Tag Property data elements
+      // i.e `event.component['someKey']`
+      trigger(event);
+  }
+  }
+  
+  //set the namespace to avoid a potential race condition
+  window.adobeDataLayer = window.adobeDataLayer || [];
+  //push the event listener for cmp:click into the data layer
+  window.adobeDataLayer.push(function (dl) {
+  //add event listener for `cmp:click` and callback to the `componentClickedHandler` function
+  dl.addEventListener("cmp:click", componentClickedHandler);
+  });    
+  ```
 
 + 此 `home page - cta click` **Rule-Condition** 代码
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('@type')) {
-       //Check for Button Type OR Teaser CTA type
-       if(event.component['@type'] === 'wknd/components/button' ||
-       event.component['@type'] === 'wknd/components/teaser/cta') {
-           return true;
-       }
-   }
-   
-   // none of the conditions are met, return false
-   return false;    
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('@type')) {
+      //Check for Button Type OR Teaser CTA type
+      if(event.component['@type'] === 'wknd/components/button' ||
+      event.component['@type'] === 'wknd/components/teaser/cta') {
+          return true;
+      }
+  }
+  
+  // none of the conditions are met, return false
+  return false;    
+  ```
 
 +++
 
