@@ -7,9 +7,9 @@ kt: 13372
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 3bbf80d5c301953b3a34ef8256702ac7445c40da
+source-git-commit: 529e98269a08431152686202a8a2890712b9c835
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,6 @@ export default function DisplayForm()
 {
    const [selectedForm, setForm] = useState("");
    const params = useParams();
-   const pathParam = params["*"];
    const extendMappings =
     {
         'plain-text' : PlainText,
@@ -40,15 +39,14 @@ export default function DisplayForm()
         'form': Form
     };
     
-    // Add the leading '/' back on 
-   const path = '/' + pathParam;
+    
    const getAFForm = async () =>
     {
            
-        const resp = await fetch(`${path}/jcr:content/guideContainer.model.json`);
+        const resp = await fetch(`/adobe/forms/af/${params.formID}`);
         let formJSON = await resp.json();
         console.log("The contact form json is "+formJSON);
-        setForm(formJSON)
+        setForm(formJSON.afModelDefinition)
     }
     
     useEffect( ()=>{
@@ -62,12 +60,4 @@ export default function DisplayForm()
         </div>
     )
 }
-```
-
-在上述代码中，将从url中提取要渲染的表单的路径，并将其用于提取表单JSON的提取调用。 然后，获取的JSON将放入以下代码中
-
-```javascript
-        <div>
-           <AdaptiveForm mappings={extendMappings} formJson={selectedForm}/>
-        </div>
 ```
