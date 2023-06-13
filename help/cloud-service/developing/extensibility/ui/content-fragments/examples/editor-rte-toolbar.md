@@ -10,7 +10,7 @@ jira: KT-13464
 thumbnail: KT-13464.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: c54d078c6282f8ace936dd4a9ee0d5cc39490230
+source-git-commit: e59c9d1f17c6ade169e834a21b9d5f50ac3a569e
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 将自定义按钮添加到富文本编辑器(RTE)工具栏
 
-![内容片段编辑器工具栏扩展示例](./assets/rte-toolbar/hero.png){align="center"}
+![内容片段编辑器工具栏扩展示例](./assets/rte/rte-toolbar-hero.png){align="center"}
 
 可以将自定义按钮添加到 **RTE工具栏** 在内容片段编辑器中，使用 `rte` 扩展点。 此示例说明如何添加名为的自定义按钮 _添加笔尖_ 到RTE工具栏并修改RTE中的内容。
 
