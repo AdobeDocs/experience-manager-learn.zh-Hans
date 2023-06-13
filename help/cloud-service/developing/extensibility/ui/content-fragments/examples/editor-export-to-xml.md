@@ -10,7 +10,7 @@ jira: KT-13309
 thumbnail: KT-13309.jpg
 doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: c54d078c6282f8ace936dd4a9ee0d5cc39490230
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 | AEM UI已扩展 | 扩展点 |
 | ------------------------ | --------------------- | 
-| [内容片段控制台](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [标题菜单](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
+| [内容片段编辑器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [标题菜单](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
 
 ## 扩展示例
 
