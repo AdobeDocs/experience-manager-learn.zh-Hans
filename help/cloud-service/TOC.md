@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 82df468bc9a5f83133adbd7aa7332bb5c21a695c
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '956'
 ht-degree: 22%
 
 ---
@@ -73,10 +73,11 @@ ht-degree: 22%
          + 内容片段{#content-fragments}
             + [概述](./developing/extensibility/ui/content-fragments/overview.md)
             + 示例{#examples}
-               + [批量属性更新](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
                + [AI图像生成](./developing/extensibility/ui/content-fragments/examples/console-image-generation-and-image-upload.md)
+               + [批量属性更新](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
                + [自定义网格列](./developing/extensibility/ui/content-fragments/examples/custom-grid-columns.md)
                + [导出为XML](./developing/extensibility/ui/content-fragments/examples/editor-export-to-xml.md)
+               + [RTE工具栏按钮](./developing/extensibility/ui/content-fragments/examples/editor-rte-toolbar.md)
    + 开发基础{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本地开发环境](./developing/basics/local-development-environment.md)
