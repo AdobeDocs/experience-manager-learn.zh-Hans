@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 9006
 exl-id: 77c00a35-43bf-485f-ac12-0fffb307dc16
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -46,3 +46,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >现在，当您使用Cloud Manager构建和部署项目时，必须在云服务配置中重新输入Azure访问密钥。 为避免重新输入访问键，建议使用环境变量创建上下文感知配置，如中所述 [下一篇文章](./context-aware-fdm.md)
+
+## 后续步骤
+
+[创建上下文感知配置](./context-aware-fdm.md)

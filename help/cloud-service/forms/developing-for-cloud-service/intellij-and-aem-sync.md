@@ -9,10 +9,10 @@ version: Cloud Service
 topic: Development
 kt: 8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 2%
+source-wordcount: '515'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +26,7 @@ Cygwin是一种与POSIX兼容的编程和运行时环境，在Microsoft Windows�
 
 在c：\cloudmanager下创建一个名为adoberepo的文件夹。
 
-[安装repo工具].(https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo).Installing repo tool只是复制repo文件并将其放置到c：\cloudmanger\adoberepo文件夹中。
+[安装repo工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) 安装repo工具只不过是复制repo文件并将其放在c：\cloudmanger\adoberepo文件夹中。
 
 将以下内容添加到路径环境变量C:\cygwin64\bin；C:\CloudManager\adoberepo；
 
@@ -35,7 +35,7 @@ Cygwin是一种与POSIX兼容的编程和运行时环境，在Microsoft Windows�
 * 启动IntelliJ
 * 按Ctrl+Alt+S键以启动设置窗口。
 * 选择工具 — >外部工具，然后单击+符号并输入以下内容，如屏幕快照中所示。
-   ![rep](assets/repo.png)
+  ![rep](assets/repo.png)
 * 确保在组下拉字段中键入“repo”来创建名为repo的组，并且您创建的所有命令都属于 **存储库** 群组
 
 
@@ -85,3 +85,7 @@ Cygwin是一种与POSIX兼容的编程和运行时环境，在Microsoft Windows�
 * 创建以下文件夹结构。C:\aemformscs\aem-sdk\author\crx-quickstart\install
 * 将aem-forms-addon-xxxxxx.far复制到安装文件夹中
 * 打开命令提示符并导航到c：\aemformscs\aem-sdk\author输入以下命令java -jar aem-author-p4502.jar -gui。 这将在AEM实例中部署表单加载项包。
+
+## 后续步骤
+
+[将AEM表单和模板与AEM项目同步](./deploy-your-first-form.md)

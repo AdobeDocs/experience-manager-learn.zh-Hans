@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 8848
 exl-id: 31487027-d528-48ea-b626-a740b94dceb8
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
@@ -81,3 +81,7 @@ git remote add bankingapp https://git.cloudmanager.adobe.com/<cloud-manager-repo
 ```java
 git remote -v
 ```
+
+## 后续步骤
+
+[在IntelliJ中将AEM与AEM项目同步](./intellij-and-aem-sync.md)

@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8852
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -40,18 +40,28 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 }
 ```
 
-## 创建自定义提交
+## 创建自定义提交处理程序
 
-在app/bankingapplication文件夹中创建自定义提交，方法与在 [AEM Forms的早期版本](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en)
+在中创建自定义提交操作 `apps/bankingapplication` 文件夹创建方式 [AEM Forms的早期版本](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en). 出于本教程的目的，我在文件夹下创建了一个名为SubmitToAEMServlet的文件夹， `apps/bankingapplication` CRX存储库中的节点。
+
 post.request.jsp中的以下代码只是将POST转发到挂载在/bin/formstutorial上的servlet。 这与上一步中创建的servlet相同
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
+在IntelliJ的AEM项目中，右键单击 `apps/bankingapplication` 文件夹并选择“新建” |在“新建包”对话框的apps.bankingapplication后面打包并键入SubmitToAEMServlet。 右键单击SubmitToAEMServlet节点并选择repo |获取用于将AEM项目与AEM服务器存储库同步的命令。
+
+
 ## 配置自适应表单
 
-您现在可以配置自适应表单以提交到此自定义提交处理程序，其名称为 **提交到AEM Servlet**
+您现在可以将任何自适应表单配置为提交到此自定义提交处理程序，称为 **提交到AEM Servlet**
+
+## 后续步骤
+
+[启用Forms Portal组件](./forms-portal-components.md)
+
+
 
 
 

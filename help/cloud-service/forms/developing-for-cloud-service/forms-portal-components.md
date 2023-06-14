@@ -8,10 +8,10 @@ version: Cloud Service
 topic: Development
 kt: 10373
 exl-id: ab01573a-e95f-4041-8ccf-16046d723aba
-source-git-commit: 69cd5022d136e9fa84f33d2fc5ca249ac0fb6490
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 0%
+source-wordcount: '349'
+ht-degree: 2%
 
 ---
 
@@ -51,7 +51,7 @@ AEM Forms提供以下现成的门户组件：
           componentGroup="BankingApplication - Content"/>
 ```
 
-### 搜索和列表程序
+### 搜索和侦听器
 
 制作按钮组件的副本并将其重命名为 _searchandlister_.
 替换中的内容 `.content.xml` 与以下XML一起使用：
@@ -82,3 +82,7 @@ AEM Forms提供以下现成的门户组件：
 ```
 
 部署项目后，您应该能够在您的AEM页面中使用这些组件来创建Forms门户。
+
+## 后续步骤
+
+[包括云服务配置](./azure-storage-fdm.md)

@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e59c9d1f17c6ade169e834a21b9d5f50ac3a569e
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '961'
 ht-degree: 22%
 
 ---
@@ -183,17 +183,18 @@ ht-degree: 22%
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + Forms{#forms}
    + 针对Formsas a Cloud Service开发{#developing-for-cloud-service}
-      + [快速入门](./forms/developing-for-cloud-service/getting-started.md)
-      + [安装IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
-      + [设置Git](./forms/developing-for-cloud-service/setup-git.md)
-      + [将IntelliJ与AEM同步](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
-      + [构建表单](./forms/developing-for-cloud-service/deploy-your-first-form.md)
-      + [启用Forms Portal组件](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [包括Cloud Services和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
-      + [上下文感知云配置](./forms/developing-for-cloud-service/context-aware-fdm.md)
-      + [推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
-      + [部署到开发环境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
-      + [更新maven原型](./forms/developing-for-cloud-service/updating-project-archetype.md)
+      + [1 — 快速入门](./forms/developing-for-cloud-service/getting-started.md)
+      + [2 — 安装IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
+      + [3 — 设置Git](./forms/developing-for-cloud-service/setup-git.md)
+      + [4 — 将IntelliJ与AEM同步](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
+      + [5 — 构建表单](./forms/developing-for-cloud-service/deploy-your-first-form.md)
+      + [6 — 自定义提交处理程序](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
+      + [7 — 启用Forms Portal组件](./forms/developing-for-cloud-service/forms-portal-components.md)
+      + [8 — 包括Cloud Services和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [9 — 上下文感知云配置](./forms/developing-for-cloud-service/context-aware-fdm.md)
+      + [10 — 推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [11 — 部署到开发环境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [12 — 更新maven原型](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + 创建自适应表单{#create-first-af}
       + [简介](./forms/create-first-af/introduction.md)
       + [创建名称](./forms/create-first-af/create-theme.md)
