@@ -10,17 +10,17 @@ jira: KT-13465
 thumbnail: KT-13465.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: e59c9d1f17c6ade169e834a21b9d5f50ac3a569e
+exl-id: be4c0a6a-5c1f-4408-9ac6-56b8f0653d42
+source-git-commit: 9c8c03df7c510ab697d5222f9dffd5111519b712
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
 
-
 # 将构件添加到富文本编辑器(RTE)
 
-![内容片段编辑器构件示例](./assets/rte/rte-widget-hero.png){align="center"}
+>[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
 要在富文本编辑器(RTE)中添加动态内容，请 **构件** 功能可用。 这些小组件有助于在RTE中集成简单或复杂的UI，并且可以使用您选择的JS框架创建UI。 它们可以视为通过按打开对话框 `{` RTE中的特殊键。
 
@@ -230,4 +230,3 @@ const DiscountCodes = () => {
 
 export default DiscountCodes;
 ```
-
