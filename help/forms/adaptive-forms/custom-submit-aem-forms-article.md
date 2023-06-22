@@ -8,10 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 0%
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
 
@@ -24,11 +24,15 @@ ht-degree: 0%
 * 登录crx
 * 在应用程序下创建“sling ：folder”类型的节点。 让我们调用此节点CustomSubmitHelpx。
 * 保存新创建的节点。
-* 将以下两个属性添加到新创建的节点
-* 属性名称 |属性值
-* guideComponentType | fd/af/components/guidesubmittype
-* guideDataModel | xfa、xsd、basic
-* jcr：description | CustomSubmitHelp
+* 将以下三个属性添加到新创建的节点
+
+| 属性名称 | 属性值 |
+|----------------    | ---------------------------------|
+| guideComponentType | fd/af/components/guidesubmittype |
+| guideDataModel | xfa、xsd、basic |
+| jcr：description | CustomSubmitHelp |
+
+
 * 保存更改
 * 在CustomSubmitHelpxPOST下创建一个名为post.submit.jsp的新文件。提交自适应表单时，将调用此JSP。 您可以根据需要在此文件中编写JSP代码。 以下代码将请求转发到servlet。
 

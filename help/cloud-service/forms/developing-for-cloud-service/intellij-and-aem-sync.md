@@ -9,7 +9,7 @@ version: Cloud Service
 topic: Development
 kt: 8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
@@ -68,7 +68,7 @@ Cygwin是一种与POSIX兼容的编程和运行时环境，在Microsoft Windows�
 
 选择aem-banking-application项目中的任何项目（如ui.content），然后单击右键，此时，您应会看到repo选项，而在repo选项下，您会看到我们之前添加的4个命令。
 
-## 设置AEM创作实例
+## 设置AEM创作实例{#set-up-aem-author-instance}
 
 可以执行以下步骤，在本地系统上快速设置云就绪实例。
 * [下载最新的AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
