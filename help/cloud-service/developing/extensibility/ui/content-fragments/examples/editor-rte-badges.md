@@ -10,9 +10,9 @@ jira: KT-13466
 thumbnail: KT-13466.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
+source-git-commit: c965d5ff3f49f4859779e657674dab8602fb831b
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 将徽章添加到富文本编辑器(RTE)
 
-![内容片段编辑器徽章示例](./assets/rte/rte-badge-home.png){align="center"}
+>[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
 [富文本编辑器徽章](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)  是使富文本编辑器(RTE)中的文本不可编辑的扩展。 这意味着声明为此类的徽章只能完全移除，不能部分编辑。 这些徽章还支持RTE中的特殊颜色，明确向内容作者指示文本是徽章，因此不可编辑。 此外，它们提供有关徽章文本含义的视觉提示。
 
