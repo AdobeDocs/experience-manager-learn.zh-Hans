@@ -2,6 +2,7 @@
 title: 使用联机修订版清理
 description: 在线修订清理的简介。 在线修订版清理可减轻频繁进行离线修订版清理的需要。
 version: 6.4, 6.5
+feature: JCR
 topics: operations, authoring, performance
 activity: use
 audience: administrator, architect, implementer
@@ -10,7 +11,7 @@ topic: Administration
 role: Admin
 level: Intermediate
 exl-id: 62a36ab1-3245-43ac-b943-e28ff95661bf
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%

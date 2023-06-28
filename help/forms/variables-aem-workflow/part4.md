@@ -3,10 +3,11 @@ title: AEM Workflow[Part4]中的变量
 description: 在AEM工作流中使用XML、JSON、ArrayList、文档类型的变量
 version: 6.5
 topic: Development
+feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: 269e43f7-24cf-4786-9439-f51bfe91d39c
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -79,4 +80,4 @@ AEM Forms 6.5中引入了ArrayList类型的变量。使用ArrayList变量的常�
 * 您应该会看到一个标题为“分配给费用管理员”的新任务
 * 打开与任务关联的表单
 * 您应会看到两个具有经理名称的自定义路由
-   [探索ReviewExpenseReportWorkflow。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) 此工作流使用或拆分组件中的ArrayList变量、JSON类型变量和规则编辑器
+  [探索ReviewExpenseReportWorkflow。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) 此工作流使用或拆分组件中的ArrayList变量、JSON类型变量和规则编辑器

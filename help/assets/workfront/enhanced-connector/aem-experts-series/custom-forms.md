@@ -3,13 +3,14 @@ title: Workfront自定义表单和元数据映射与Workfront for AEM增强型�
 description: 了解如何配置Workfront和AEM Assets以使用Workfront自定义表单和AEM元数据架构管理和同步资源元数据。
 version: Cloud Service
 topic: Content Management, Integrations
+feature: Asset Management
 role: Admin, Architect, Developer
 level: Beginner
 kt: 9718
 thumbnail: 340332.jpeg
 hidefromtoc: false
 exl-id: 40d76e0c-69f3-4003-9f34-f393e6fb8561
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%

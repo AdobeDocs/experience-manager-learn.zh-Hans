@@ -3,10 +3,11 @@ title: 了解升级的原因
 description: 面向考虑升级到最新版Adobe Experience Manager 6的客户，对关键功能进行了详尽的划分。
 version: 6.5
 topic: Upgrade
+feature: Release Information
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '2602'
 ht-degree: 4%
@@ -42,7 +43,7 @@ AEM通过新的和改进的工具继续拥抱流畅的体验，这些工具便�
 
 + **内容片段** 支持版本比较/差异和注释。
 + **AEM Assets HTTP API** 支持公开 **内容片段** 直接在DAM中作为 **JSON**.
-   **体验片段** 支持 **全文搜索** 和 **AEM Dispatcher缓存失效** 以供参考 **页面**.
+  **体验片段** 支持 **全文搜索** 和 **AEM Dispatcher缓存失效** 以供参考 **页面**.
 
 ### 资产管理
 

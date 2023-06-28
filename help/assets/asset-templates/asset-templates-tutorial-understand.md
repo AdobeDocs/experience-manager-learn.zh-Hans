@@ -3,10 +3,11 @@ title: 了解AEM Assets中的InDesign文件和资源模板
 description: 本视频教程介绍了如何定义用于AEM Assets的InDesign模板功能的Asset文件以及随附的所有注意事项。
 version: 6.4, 6.5
 topic: Content Management
+feature: Templates
 role: User
 level: Intermediate
 exl-id: c418e94a-b18e-429a-b41c-2bf32e158598
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 1%
@@ -35,6 +36,7 @@ ht-degree: 1%
 4. 添加FPO徽标图像([在zip文件中提供](assets/asset-templates-tutorial-video--supporting-files.zip))到主控页面上的Logo元素。
 
    * **右键单击**&#x200B;并选择&#x200B;**“拟合”>“框架拟合选项……”>“内容拟合”>“填充框架”**
+
    [了解有关框架拟合选项的更多信息](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)，并且这适合您的用例。
 
 5. 通过“粘贴就地”，从“页面”和“页面”中的主控模板向下复制标题（徽标和公司名称）。

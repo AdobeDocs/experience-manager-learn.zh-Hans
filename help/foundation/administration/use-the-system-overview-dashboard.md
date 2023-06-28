@@ -3,6 +3,7 @@ title: 使用AEM中的系统概述功能板
 description: 在AEM的早期版本中，管理员需要查看多个位置，才能全面了解AEM实例。 “系统概述”旨在通过单个仪表板提供AEM实例的配置、硬件和运行状况的高级视图，来解决此问题。
 version: 6.4, 6.5
 topics: administration, operations, monitoring
+feature: Operations
 activity: use
 audience: administrator, architect, developer, implementer
 doc-type: technical video
@@ -11,7 +12,7 @@ topic: Administration
 role: Admin
 level: Beginner
 exl-id: af8f499c-4955-44b5-8f21-085263ca31a3
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%

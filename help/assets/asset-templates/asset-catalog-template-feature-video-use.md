@@ -3,10 +3,11 @@ title: 在AEM Commerce和InDesign Server中使用资源目录
 description: AEM 6.4目录增强功能提供了使用AEM Asset Templates和InDesign Server创建目录页的功能。  用户可以使用InDesign模板创建目录页，并将产品属性映射到可编辑字段，这些字段以后可用于为不同产品创建相似页面。
 version: 6.4, 6.5
 topic: Content Management
+feature: Templates
 role: User
 level: Beginner
 exl-id: 45daa8e3-ce3b-43de-b3d6-276107215dd4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%

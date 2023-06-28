@@ -3,12 +3,13 @@ title: 使用批量导入服务迁移内容
 description: 了解如何使用AEM as aCloud Services的批量导入服务从非AEM源导入资源。
 version: Cloud Service
 topic: Migration, Upgrade
+feature: Migration
 role: Developer
 level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%

@@ -3,10 +3,11 @@ title: 使用AEM Assets和InDesign Server设置资源模板
 description: 资产模板允许营销人员创建、管理和交付数字资产和打印资产。 与InDesign服务器集成后，使用“资产模板”可更轻松地创建营销宣传册、名片、传单、广告和明信片。 本节将介绍使用AEM配置InDesign服务器。
 version: 6.4, 6.5
 topic: Content Management
+feature: Templates
 role: Developer
 level: Intermediate
 exl-id: 5b764d86-8ced-46ed-838e-4bd2e75fd64c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
