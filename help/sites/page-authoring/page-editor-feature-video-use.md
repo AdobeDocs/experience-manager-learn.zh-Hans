@@ -15,10 +15,10 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
-source-git-commit: d0027647ce3157173d2592728757150199db930d
+source-git-commit: 1623e1eaf966e625e1ec402a2996e8beb1e1cd03
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 8%
+ht-degree: 15%
 
 ---
 
@@ -35,6 +35,6 @@ AEM站点的页面编辑器是一个用于创建和编辑Web内容的强大工�
 
 ## 其他资源 {#additional-resources}
 
-* [AEM页面编辑器文档[(https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)
+* [AEM页面编辑器文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)
 * [编辑页面内容文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
 * [Sites创作用户指南](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
