@@ -12,9 +12,9 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 325c0204c33686e09deb82dd159557e0b8743df6
+source-git-commit: d2a9596ddadd897793a0fce8421aa8b246b45b12
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '1007'
 ht-degree: 2%
 
 ---
@@ -64,7 +64,7 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略表示为一
 #### [!UICONTROL 公开的标头]
 
 * `"exposedheaders" <header>`
-* 标头参数列表，指示允许浏览器访问的响应标头。
+* 标头参数列表，指示允许浏览器访问的响应标头。 对于CORS请求（非预检），如果不为空，则这些值将复制到 `Access-Control-Expose-Headers` 响应标头。 随后，浏览器将可以访问列表中的值（标头名称）；如果没有该值，浏览器将无法读取这些标头。
 
 #### [!UICONTROL 最长使用期限]
 
@@ -74,7 +74,7 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略表示为一
 #### [!UICONTROL 支持的标头]
 
 * `"supportedheaders" <header>`
-* 列表 `header` 指示发出实际请求时可以使用哪些HTTP标头的参数。
+* 列表 `header` 指示发出实际请求时可以使用哪些HTTP请求标头的参数。
 
 #### [!UICONTROL 允许的方法]
 
@@ -98,8 +98,7 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略表示为一
   ],
   "supportedmethods":[
     "GET",
-    "HEAD",
-    "OPTIONS"
+    "HEAD"
   ],
   "alloworigin":[
     "http://127.0.0.1:3000",
@@ -140,7 +139,6 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略表示为一
     "HEAD"
     "POST",
     "DELETE",
-    "OPTIONS",
     "PUT"
   ],
   "alloworigin":[
