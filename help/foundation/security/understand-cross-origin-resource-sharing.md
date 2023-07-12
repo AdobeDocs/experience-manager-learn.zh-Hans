@@ -12,10 +12,10 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 73bb813c961cf988355984b0385998a493ee3716
+source-git-commit: 325c0204c33686e09deb82dd159557e0b8743df6
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 1%
+source-wordcount: '966'
+ht-degree: 2%
 
 ---
 
@@ -182,7 +182,22 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略表示为一
 | 否 | AEM 发布 | 已验证 | 避免在经过身份验证的请求上缓存CORS标头。 这符合不缓存经过身份验证的请求的常见指南，因为很难确定请求用户的身份验证/授权状态将如何影响投放的资源。 |
 | 是 | AEM 发布 | 匿名 | 可在Dispatcher中缓存的匿名请求也可以缓存其响应标头，从而确保未来的CORS请求可以访问缓存的内容。 AEM Publish上的任何CORS配置更改 **必须** 随后使受影响的缓存资源失效。 最佳实践要求在代码或配置部署中清除Dispatcher缓存，因为很难确定哪些缓存内容可能会受到影响。 |
 
-要允许缓存CORS标头，请将以下配置添加到所有支持的AEM Publish dispatcher.any文件。
+### 允许CORS请求标头
+
+允许必需的 [传递到AEM以进行处理的HTTP请求标头](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，它们必须在Disaptcher的 `/clientheaders` 配置。
+
+```
+/clientheaders {
+   ...
+   "Origin"
+   "Access-Control-Request-Method"
+   "Access-Control-Request-Headers"
+}
+```
+
+### 缓存CORS响应标头
+
+要允许在缓存的内容上缓存和提供CORS标头，请添加以下内容 [/cache /headers配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#caching-http-response-headers) 到AEM发布 `dispatcher.any` 文件。
 
 ```
 /publishfarm {
