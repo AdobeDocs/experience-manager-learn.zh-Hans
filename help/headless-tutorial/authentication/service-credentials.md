@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 96d576ae24305c1f41073921fbb904e07c1206f6
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 0%
 1. 外部应用程序使用服务凭据中的信息构建JWT令牌
 1. JWT令牌会发送到Adobe IMS以交换访问令牌
 1. Adobe IMS返回可用于访问AEMas a Cloud Service的访问令牌
-   + 访问令牌可请求过期。 最好缩短访问令牌的生命周期，并在需要时进行刷新。
+   + 访问令牌无法更改到期时间。
 1. 外部应用程序向AEM发出as a Cloud ServiceHTTP请求，将访问令牌作为持有者令牌添加到HTTP请求的授权标头
 1. AEMas a Cloud Service接收HTTP请求、验证该请求并执行HTTP请求所请求的工作，然后将HTTP响应返回给外部应用程序
 
