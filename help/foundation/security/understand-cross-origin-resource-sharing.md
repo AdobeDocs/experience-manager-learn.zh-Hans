@@ -12,7 +12,7 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: c6ca64d1b66bbf5bedf73736b5d94130bc21f6c8
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 1%
@@ -64,7 +64,7 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略表示为一
 #### [!UICONTROL 公开的标头]
 
 * `"exposedheaders" <header>`
-* 标头参数列表，指示允许浏览器访问的请求标头。
+* 标头参数列表，指示允许浏览器访问的响应标头。
 
 #### [!UICONTROL 最长使用期限]
 
