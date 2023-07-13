@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 96d576ae24305c1f41073921fbb904e07c1206f6
+source-git-commit: f8ed9fddb5f244860ba229b46a80638a7269d95e
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1925'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 0%
 技术帐户只创建一次，但私钥用于管理与技术帐户关联的服务凭据可随时间进行管理。 例如，必须在当前私钥过期之前生成新的私钥/服务凭据，以允许用户不间断地访问服务凭据。
 
 1. 确保您以下列身份登录：
-   + __Adobe IMS组织管理员__
+   + __Adobe IMS组织的系统管理员__
    + 成员 __AEM管理员__ 上的IMS产品配置文件 __AEM创作__
 1. 登录 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 打开包含AEMas a Cloud Service环境的程序以集成为设置服务凭据
