@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1832'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 2%
    + [OCR数据提取](some-useful-integrations/ocr-data-extraction.md)
    + [级联下拉列表](some-useful-integrations/geonames-org.md)
    + [与ServiceNow集成](some-useful-integrations/service-now.md)
+   + [使用SendGrid发送电子邮件](some-useful-integrations/send-grid.md)
 + 创建OSGi捆绑包 {#creating-your-first-osgi-bundle}
    + [1 — 设置环境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 — 创建OSGi服务](creating-your-first-osgi-bundle/create-osgi-service.md)

@@ -9,9 +9,9 @@ level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 44f4261b-d6fe-42ad-a3aa-2a36ca897b5e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
@@ -25,14 +25,21 @@ ht-degree: 0%
 * [交互式通信模板示例](assets/waiver-interactive-communication.zip)
 * [部署DevelopingWithServiceUser捆绑包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
 * 使用OSGi configMgr在Apache Sling服务用户映射器服务中添加以下条目
-   **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**
-* [可以从此处下载示例React应用程序代码](assets/src.zip)
+  **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**
 
+## 部署示例react应用程序
 
+* [下载示例react应用程序](assets/mult-step-form1.zip)
+* 将react应用程序的内容解压缩到一个新文件夹中
+* 导航到文件夹并运行以下命令
 
-需要在本地环境中部署示例react应用程序
+```java
+npm install
+npm start
+```
 
-您必须更改端点URL以匹配您的环境。 打开EmergencyContact.js文件并在fetch方法中更改URL
+打开EmergencyContact.js文件，更改fetch方法中的URL以匹配您的环境。
+
 
 ```javascript
  const getWebForm=async()=>
@@ -49,6 +56,6 @@ ht-degree: 0%
  
 ```
 
-要启用从REACT应用程序对AEM端点的POST调用，您需要在AdobeGranite跨源资源共享策略配置的允许的原始项字段中指定相应的条目
+要启用从REACT应用程序对AEM端点的POST调用，您需要在AdobeGranite跨源资源共享策略配置的允许的原始项字段中指定相应的条目。
 
 ![cors-setting](assets/cors-settings.png)
