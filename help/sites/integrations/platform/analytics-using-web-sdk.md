@@ -1,6 +1,6 @@
 ---
-title: 使用Platform Web SDK集成Adobe Analytics
-description: 了解有关如何使用Platform Web SDK集成Adobe Experience Manager (AEM)和Adobe Analytics的现代方法。 本教程将指导您完成收集页面查看和CTA单击数据以在Adobe Analytics Workspace中获取数据分析。
+title: 将AEM Sites和Adobe Analytics与平台Web SDK集成
+description: 使用现代Platform Web SDK方法集成AEM Sites和Adobe Analytics。
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
@@ -10,15 +10,17 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
-source-git-commit: 542313c0da6f5eab5befe0da1b80ab38948156ac
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+exl-id: 9f54995f-4ce7-45f2-9021-6fdfe42ff89a
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1647'
-ht-degree: 2%
+source-wordcount: '1637'
+ht-degree: 3%
 
 ---
 
-
-# 使用Platform Web SDK集成Adobe Analytics
+# 将AEM Sites和Adobe Analytics与平台Web SDK集成
 
 了解 **现代方法** 有关如何使用Platform Web SDK集成Adobe Experience Manager (AEM)和Adobe Analytics的信息。 此全面的教程将指导您完成无缝收集的过程 [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) pageview和CTA点击数据。 通过在AdobeAnalysis Workspace中可视化收集的数据（您可以在其中浏览各种量度和维度）来获得有价值的见解。 此外，还可以探索Platform数据集以验证和分析数据。 加入我们的历程，利用AEM和Adobe Analytics的强大功能制定数据驱动型决策。
 

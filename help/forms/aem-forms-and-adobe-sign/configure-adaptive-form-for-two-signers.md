@@ -7,11 +7,13 @@ kt: 6071
 topic: Development
 role: Admin
 level: Beginner
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 5d450605-31bb-4c2e-a500-e9219f55b7c7
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '58'
-ht-degree: 5%
+source-wordcount: '68'
+ht-degree: 16%
 
 ---
 
@@ -25,3 +27,7 @@ ht-degree: 5%
 
 * [自适应表单模板](assets/tenancy-agreement-template.zip)
 * [租赁协议表单](assets/rental-agreement-form.zip)
+
+## 后续步骤
+
+[配置自动化表单转换服务](./configure-automated-forms-conversion-service.md)

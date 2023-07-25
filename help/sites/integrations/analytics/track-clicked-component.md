@@ -8,11 +8,12 @@ role: Developer
 level: Intermediate
 kt: 6296
 thumbnail: KT-6296.jpg
+badgeIntegration: label="集成" type="positive"
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
-source-git-commit: 5a8d3983a22df4e273034c8d8441b31e6bc764ba
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1885'
-ht-degree: 1%
+source-wordcount: '1886'
+ht-degree: 2%
 
 ---
 
@@ -148,7 +149,7 @@ Adobe客户端数据层是 **事件** 驱动数据层。 无论何时单击任�
 
    此 `event` 对象传递自 `trigger()` 在自定义事件中调用的方法。 此 `component` object是从数据层派生的组件的当前状态 `getState()` 方法，是触发点击的元素。
 
-1. 保存更改并运行 [生成](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) 标记属性中的代码，以将代码提升到 [环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) 在您的AEM网站上使用。
+1. 保存更改并运行 [生成](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) 标记属性中的代码，以将代码提升到 [环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hans) 在您的AEM网站上使用。
 
    >[!NOTE]
    >

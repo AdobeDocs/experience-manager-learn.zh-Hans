@@ -10,11 +10,13 @@ feature: Adaptive Forms
 topic: Development
 kt: 7428
 thumbnail: 332437.jpg
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 exl-id: a55773a5-0486-413f-ada6-bb589315f0b1
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 0%
+source-wordcount: '166'
+ht-degree: 1%
 
 ---
 

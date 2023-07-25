@@ -7,17 +7,19 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
-topic: Development
+topic: Integrations, Development
 kt: 12557
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 exl-id: b9dc505d-72c8-4b6a-974b-fc619ff7c256
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 0%
+source-wordcount: '138'
+ht-degree: 2%
 
 ---
 
-# 创建适当的数据元素
+# 创建数据元素
 
 在Tags属性中，我们添加了两个新数据元素（ApplicationsStateOfResidence和validationError）。
 
@@ -34,7 +36,7 @@ ht-degree: 0%
 // use the GuideBridge API to access adaptive form elements
 //The state field's SOM expression is used to access the state field
 var ApplicantsStateOfResidence = guideBridge.resolveNode("guide[0].guide1[0].guideRootPanel[0].state[0]").value;
-_satellite.logger.log(" Returning  Applicants State Of Residence is "+ApplicantsStateOfResidence);
+_satellite.logger.log("Returning  Applicants State Of Residence is "+ApplicantsStateOfResidence);
 return ApplicantsStateOfResidence;
 ```
 
@@ -44,26 +46,30 @@ return ApplicantsStateOfResidence;
 
 ![validation-error](assets/validation-error.png)
 
-编写了以下自定义代码以设置validationError数据元素值。
+编写了以下自定义代码以设置 `validationError` 数据元素值。
 
 ```javascript
 var validationError = "";
 // Using GuideBridge API to access adaptive forms fields using the fields SOM expression
 var tel = guideBridge.resolveNode("guide[0].guide1[0].guideRootPanel[0].telephone[0]");
 var email = guideBridge.resolveNode("guide[0].guide1[0].guideRootPanel[0].email[0]");
+
 _satellite.logger.log("Got tel in Tags custom script "+tel.isValid)
 _satellite.logger.log("Got email in Tags custom script "+email.isValid)
-if(tel.isValid == false)
-{  
+
+if (tel.isValid == false) {  
   validationError = "error: telephone number";
   _satellite.logger.log("Validation error is "+ validationError);
 }
 
-if(email.isValid == false)
-{  
+if (email.isValid == false) {  
   validationError = "error: invalid email";
   _satellite.logger.log("Validation error is "+ validationError);
 }
 
 return validationError;
 ```
+
+## 后续步骤
+
+[创建规则](./rules.md)

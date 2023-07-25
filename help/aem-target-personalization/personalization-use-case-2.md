@@ -7,10 +7,12 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '589'
 ht-degree: 2%
 
 ---
@@ -57,7 +59,6 @@ WKND站点重新设计了其主页，并希望将其当前主页访客重定向�
 1. 营销人员创建A/B目标活动，并将重定向选件作为体验，将100%的网站流量分配给添加了成功目标和量度的新主页。
    1. 在Adobe Target窗口中，导航到 **活动** 选项卡。
    2. 单击 **创建活动** 按钮并选择活动类型 **A/B测试**
-
       ![Adobe Target — 创建活动](assets/personalization-use-case-2/create-ab-activity.png)
    3. 选择 **Web** 渠道并选择 **可视化体验编辑器**.
    4. 输入 **活动URL** 并单击 **下一个** 以打开可视化体验编辑器。

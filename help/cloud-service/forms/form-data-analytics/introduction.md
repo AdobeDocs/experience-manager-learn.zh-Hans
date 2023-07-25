@@ -1,36 +1,40 @@
 ---
-title: 使用Adobe Analytics报告提交的表单数据字段
-description: 将AEM Forms CS与Adobe Analytics集成以报告表单数据字段
+title: 将AEM Forms与Adobe Analytics集成以报告表单数据字段
+description: 将AEM Formsas a Cloud Service与Adobe Analytics集成以报告表单数据字段
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
-topic: Development
+topic: Integrations, Development
 kt: 12557
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 exl-id: 369c563e-c847-438a-a783-bc6a9f81b77c
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 0%
+source-wordcount: '157'
+ht-degree: 2%
 
 ---
 
-# 使用Adobe Analytics报告表单数据字段值和表单字段验证错误
+# 将AEM Forms与Adobe Analytics集成以报告表单数据字段
 
-了解如何使用Tags和Adobe Analytics在自适应表单上实施Analytics。 此示例将指导您完成配置和实施步骤，以便生成关于访客如何与您的表单进行交互的富有见解的报告。
+了解如何使用Experience Platform标记将AEM Formsas a Cloud Service与Adobe Analytics集成到您的自适应表单中。 此示例将指导您完成配置和实施步骤，以便生成关于访客如何与您的表单进行交互的富有见解的报告。
 
 ## 前提条件
 
 要充分利用本教程，建议您满足以下先决条件：
 
-* 在AEM Forms CS方面的一些经验
-* 访问Adobe标签
+* 在AEM Formsas a Cloud Service方面有一些经验
+* 访问Experience Platform标签
 * 对Adobe Analytics的访问权限
-
-
 
 本教程使用AEM Forms中内置的一个简单自适应表单，测量居住状态值的表单提交以及生成验证错误的字段。
 
 ![自适应表单](assets/use-case.png)
+
+## 后续步骤
+
+[创建数据元素](./data-elements.md)

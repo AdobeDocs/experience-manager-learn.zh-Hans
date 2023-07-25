@@ -1,6 +1,6 @@
 ---
-title: 使用IMS连接AEM与标记属性
-description: 了解如何使用AEM中的IMS配置将AEM与标记属性连接。 此设置通过Launch API验证AEM，并允许AEM通过Launch API通信以访问标记属性。
+title: 使用IMS将AEM Sites与标记属性连接
+description: 了解如何使用AEM中的IMS配置将AEM Sites与标记属性连接。 此设置通过Launch API验证AEM，并允许AEM通过Launch API通信以访问标记属性。
 topics: integrations
 audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
@@ -12,15 +12,17 @@ topic: Integrations
 feature: Integrations
 role: Developer
 level: Intermediate
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 92dbd185-bad4-4a4d-b979-0d8f5d47c54b
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
 
-# 使用IMS连接AEM与标记属性{#connect-aem-and-tag-property-using-ims}
+# 使用IMS将AEM Sites与标记属性连接{#connect-aem-and-tag-property-using-ims}
 
 >[!NOTE]
 >

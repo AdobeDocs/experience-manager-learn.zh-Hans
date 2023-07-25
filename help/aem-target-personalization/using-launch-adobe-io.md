@@ -7,10 +7,12 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: b1d7ce04-0127-4539-a5e1-802d7b9427dd
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1067'
 ht-degree: 4%
 
 ---
@@ -27,9 +29,8 @@ ht-degree: 4%
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe I/O控制台](https://console.adobe.io)
 
-      >[!NOTE]
-      >您应具有在Launch中开发、批准、发布、管理扩展和管理环境的权限。 如果您由于用户界面选项不可用而无法完成其中的任何步骤，请联系Experience Cloud管理员以请求获取访问权限。 有关Launch权限的更多信息， [请参阅文档](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
-
+     >[!NOTE]
+     >您应具有在Launch中开发、批准、发布、管理扩展和管理环境的权限。 如果您由于用户界面选项不可用而无法完成其中的任何步骤，请联系Experience Cloud管理员以请求获取访问权限。 有关Launch权限的更多信息， [请参阅文档](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
 
 * **浏览器插件**
    * Adobe Experience Cloud Debugger ([铬黄](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj))

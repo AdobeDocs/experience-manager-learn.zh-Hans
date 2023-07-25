@@ -3,14 +3,16 @@ title: AEM Forms与Marketo（第4部分）
 description: 教程介绍如何使用AEM Forms表单数据模型将AEM Forms与Marketo集成。
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
-topic: Development
+topic: Integrations, Development
 role: Developer
 level: Experienced
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 1%
+source-wordcount: '332'
+ht-degree: 2%
 
 ---
 
@@ -38,3 +40,7 @@ ht-degree: 1%
 
 + `com.marketoandforms.core.impl.MarketoServiceImpl`
 + `com.marketoandforms.core.MarketoConfigurationService`
+
+## 恭喜
+
+您已成功使用AEM Forms表单数据模型将AEM Forms与Marketo集成。

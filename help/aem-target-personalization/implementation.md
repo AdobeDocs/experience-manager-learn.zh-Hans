@@ -1,29 +1,30 @@
 ---
-title: 将Adobe Experience Manager与Adobe Target集成
-seo-title: An article covering different ways to integrate Adobe Experience Manager(AEM) with Adobe Target for delivering personalized content.
+title: 将AEM Sites与Adobe Target集成
+seo-title: An article covering different ways to integrate Adobe Experience Manager (AEM) Sites with Adobe Target for delivering personalized content.
 description: 一篇介绍如何针对不同场景使用Adobe Target设置Adobe Experience Manager的文章。
 seo-description: An article covering how to set up Adobe Experience Manager with Adobe Target for different scenarios.
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 54a30cd9-d94a-4de5-82a1-69ab2263980d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '661'
 ht-degree: 3%
 
 ---
 
-# 将Adobe Experience Manager与Adobe Target集成
+# 将AEM Sites与Adobe Target集成
 
-在此部分中，我们将讨论如何为各种场景使用Adobe Target设置Adobe Experience Manager。 根据您的方案和组织要求。
+在此部分中，我们将讨论如何为各种场景使用Adobe Target设置Adobe Experience Manager Sites。 根据您的方案和组织要求。
 
 * **添加Adobe Target JavaScript库（所有方案均需要）**
 对于在AEM上托管的站点，您可以使用将Target库添加到您的站点， [Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html). Launch提供了一种简单的方式来部署和管理所有必要的标记，以便加强相关客户体验。
 * **添加Adobe TargetCloud Services（体验片段方案所必需的）**
-对于希望使用体验片段选件在Adobe Target中创建活动的AEM客户，您需要使用旧版Cloud Services将Adobe Target与AEM集成。 要将体验片段作为HTML/JSON选件从AEM推送到Target，并保持选件与AEM同步，需要此集成。 
-*实施场景1需要此集成。*
+对于希望使用体验片段选件在Adobe Target中创建活动的AEM客户，您需要使用旧版Cloud Services将Adobe Target与AEM集成。 要将体验片段作为HTML/JSON选件从AEM推送到Target，并保持选件与AEM同步，需要此集成。 *实施场景1需要此集成。*
 
 ## 前提条件
 

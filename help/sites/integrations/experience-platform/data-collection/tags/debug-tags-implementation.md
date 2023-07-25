@@ -12,11 +12,13 @@ topic: Integrations
 feature: Integrations
 role: Developer
 level: Intermediate
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 0%
+source-wordcount: '291'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +46,7 @@ ht-degree: 0%
 
 ## 通过Adobe Experience Platform Debugger调试
 
-Adobe提供了Adobe Experience Platform Debugger [Chrome扩展](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 和 [Firefox加载项](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) 调试、了解和深入了解集成。
+Adobe提供Adobe Experience Platform Debugger [Chrome扩展](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 和 [Firefox加载项](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) 调试、了解和深入了解集成。
 
 1. 打开Adobe Experience Platform Debugger扩展，然后在发布实例上打开站点页面
 

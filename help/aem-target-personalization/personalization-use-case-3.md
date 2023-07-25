@@ -7,10 +7,12 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '585'
 ht-degree: 2%
 
 ---
@@ -48,7 +50,6 @@ WKND站点主页以卡片布局的形式显示城市周围的本地活动或最�
 1. 营销人员在Adobe Target中创建A/B定位活动。
    1. 在Adobe Target窗口中，导航到 **活动** 选项卡。
    2. 单击 **创建活动** 按钮并选择活动类型 **A/B测试**
-
       ![Adobe Target — 创建活动](assets/personalization-use-case-2/create-ab-activity.png)
    3. 选择 **Web** 渠道并选择 **可视化体验编辑器**.
    4. 输入 **活动URL** 并单击 **下一个** 以打开可视化体验编辑器。
@@ -63,7 +64,6 @@ WKND站点主页以卡片布局的形式显示城市周围的本地活动或最�
       ![容器选择](assets/personalization-use-case-3/container-selection.png)
    9. 单击要重新排列的容器，并将其拖放到所需位置。 让我们重新排列 *最佳烘烤师* 容器从第一行第一列到第一行第三列。 现在， *最佳烘烤师* 容器位于 *摄影展览* 容器。
       ![容器交换](assets/personalization-use-case-3/container-swap.png)
-
       **交换后**
       ![已交换容器](assets/personalization-use-case-3/after-swap-1-3.png)
    10. 同样，重新排列其他卡容器的位置。

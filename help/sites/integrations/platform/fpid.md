@@ -1,6 +1,6 @@
 ---
-title: 使用AEM生成Adobe Experience Platform FPID
-description: 了解如何使用AEM生成或刷新Adobe Experience Platform FPID Cookie。
+title: 使用AEM Sites生成Adobe Experience Platform FPID
+description: 了解如何使用AEM Sites生成或刷新Adobe Experience Platform FPID Cookie。
 version: Cloud Service
 feature: Integrations, APIs, Dispatcher
 topic: Integrations, Personalization, Development
@@ -9,17 +9,19 @@ level: Beginner
 last-substantial-update: 2022-10-20T00:00:00Z
 kt: 11336
 thumbnail: kt-11336.jpeg
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
 
-# 使用AEM生成Experience PlatformFPID
+# 使用AEM Sites生成Experience PlatformFPID
 
-将Adobe Experience Manager (AEM)与Adobe Experience Platform (AEP)集成需要AEM生成和维护唯一的第一方设备ID (FPID) Cookie，以唯一跟踪用户活动。
+将Adobe Experience Manager (AEM) Sites与Adobe Experience Platform (AEP)集成需要AEM生成和维护唯一的第一方设备ID (FPID) Cookie，以唯一跟踪用户活动。
 
 请阅读支持文档，以了解 [了解第一部分设备ID和Experience CloudID如何配合使用的详细信息](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=en).
 

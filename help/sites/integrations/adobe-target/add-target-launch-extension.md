@@ -12,11 +12,13 @@ topic: Integrations
 feature: Integrations
 role: Developer
 level: Intermediate
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 1%
+source-wordcount: '115'
+ht-degree: 2%
 
 ---
 

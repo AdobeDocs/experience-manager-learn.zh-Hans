@@ -10,10 +10,12 @@ kt: 10718
 thumbnail: KT-10718.png
 last-substantial-update: 2022-11-17T00:00:00Z
 mini-toc-levels: 1
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '928'
 ht-degree: 17%
 
 ---
@@ -23,24 +25,24 @@ ht-degree: 17%
 了解AEMas a Cloud Service支持的与其他Adobe Experience Cloud产品的集成。
 单击Experience Cloud产品，获取有关如何配置和使用集成的文档。
 
-|  | AEM Sites | AEM Assets | AEM Forms |
+|                                                                   | AEM Sites | AEM Assets | AEM Forms |
 |-------------------------------------------------------------------|:---------:|:----------:|:---------:|
-| [Acrobat Sign](#adobe-acrobat-sign) |  |  | ✔ |
-| 广告 |  |  |  |
+| [Acrobat Sign](#adobe-acrobat-sign) |           |            | ✔ |
+| 广告 |           |            |          |
 | [分析](#adobe-analytics) | ✔ | ✔ | ✔ |
-| Audience Manager |  |  |  |
-| Campaign Classic |  |  |  |
-| Campaign Standard |  |  |  |
-| [商务](#adobe-commerce) | ✔ | ✔ |  |
-| Customer Journey Analytics |  |  |  |
-| [Experience Platform标记](#adobe-experience-platform-tags) | ✔ |  | ✔ |
-| [Journey Optimizer](#adobe-journey-optimizer) |  | ✔ |  |
-| [学习经理](#adobe-learning-manager) | ✔ |  |  |
-| Marketo Engage |  |  |  |
-| Real-time CDP |  |  |  |
+| Audience Manager |           |            |          |
+| Campaign Classic |           |            |          |
+| Campaign Standard |           |            |          |
+| [商务](#adobe-commerce) | ✔ | ✔ |          |
+| Customer Journey Analytics |           |            |          |
+| [Experience Platform标记](#adobe-experience-platform-tags) | ✔ |            | ✔ |
+| [Journey Optimizer](#adobe-journey-optimizer) |           | ✔ |          |
+| [学习经理](#adobe-learning-manager) | ✔ |            |          |
+| Marketo Engage |           |            |          |
+| Real-time CDP |           |            |          |
 | [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
-| [目标](#adobe-target) | ✔ |  |  |
-| [Workfront](#adobe-workfront) |  | ✔ |  |
+| [目标](#adobe-target) | ✔ |            |          |
+| [Workfront](#adobe-workfront) |           | ✔ |          |
 
 
 ## Adobe Acrobat Sign

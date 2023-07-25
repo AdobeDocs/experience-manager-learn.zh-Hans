@@ -1,6 +1,6 @@
 ---
-title: 集成Experience PlatformWeb SDK
-description: 了解如何将AEMas a Cloud Service与Experience PlatformWeb SDK集成。 此基础步骤对于集成Adobe Experience Cloud产品(例如Adobe Analytics、Target)或近期的创新产品(例如Real-time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至关重要。
+title: 集成AEM Sites和Experience PlatformWeb SDK
+description: 了解如何将AEM Sitesas a Cloud Service与Experience PlatformWeb SDK集成。 此基础步骤对于集成Adobe Experience Cloud产品(例如Adobe Analytics、Target)或近期的创新产品(例如Real-time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至关重要。
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
@@ -10,15 +10,17 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
-source-git-commit: 32472c8591aeb47a7c6a7253afd7ad9ab0e45171
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 3%
+source-wordcount: '1354'
+ht-degree: 4%
 
 ---
 
-# 集成Experience PlatformWeb SDK
+# 集成AEM Sites和Experience PlatformWeb SDK
 
 了解如何将AEMas a Cloud Service与Experience Platform集成 [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html). 此基础步骤对于集成Adobe Experience Cloud产品(例如Adobe Analytics、Target)或近期的创新产品(例如Real-time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至关重要。
 
@@ -92,75 +94,75 @@ In **Experience Platform**：
 
 + 此 `Page Name` 数据元素代码。
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('dc:title')) {
-       // return value of 'dc:title' from the data layer Page object, which is propogated via 'cmp:show` event
-       return event.component['dc:title'];
-   }
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('dc:title')) {
+      // return value of 'dc:title' from the data layer Page object, which is propogated via 'cmp:show` event
+      return event.component['dc:title'];
+  }
+  ```
 
 + 此 `Site Section` 数据元素代码。
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('repo:path')) {
-   let pagePath = event.component['repo:path'];
-   
-   let siteSection = '';
-   
-   //Check of html String in URL.
-   if (pagePath.indexOf('.html') > -1) { 
-    siteSection = pagePath.substring(0, pagePath.lastIndexOf('.html'));
-   
-    //replace slash with colon
-    siteSection = siteSection.replaceAll('/', ':');
-   
-    //remove `:content`
-    siteSection = siteSection.replaceAll(':content:','');
-   }
-   
-       return siteSection 
-   }
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('repo:path')) {
+  let pagePath = event.component['repo:path'];
+  
+  let siteSection = '';
+  
+  //Check of html String in URL.
+  if (pagePath.indexOf('.html') > -1) { 
+   siteSection = pagePath.substring(0, pagePath.lastIndexOf('.html'));
+  
+   //replace slash with colon
+   siteSection = siteSection.replaceAll('/', ':');
+  
+   //remove `:content`
+   siteSection = siteSection.replaceAll(':content:','');
+  }
+  
+      return siteSection 
+  }
+  ```
 
 + 此 `Host Name` 数据元素代码。
 
-   ```javascript
-   if(window && window.location && window.location.hostname) {
-       return window.location.hostname;
-   }
-   ```
+  ```javascript
+  if(window && window.location && window.location.hostname) {
+      return window.location.hostname;
+  }
+  ```
 
 + 此 `all pages - on load` 规则事件代码
 
-   ```javascript
-   var pageShownEventHandler = function(evt) {
-   // defensive coding to avoid a null pointer exception
-   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-       //trigger Launch Rule and pass event
-       console.debug("cmp:show event: " + evt.eventInfo.path);
-       var event = {
-           //include the path of the component that triggered the event
-           path: evt.eventInfo.path,
-           //get the state of the component that triggered the event
-           component: window.adobeDataLayer.getState(evt.eventInfo.path)
-       };
-   
-       //Trigger the Launch Rule, passing in the new 'event' object
-       // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
-       // i.e 'event.component['someKey']'
-       trigger(event);
-       }
-   }
-   
-   //set the namespace to avoid a potential race condition
-   window.adobeDataLayer = window.adobeDataLayer || [];
-   
-   //push the event listener for cmp:show into the data layer
-   window.adobeDataLayer.push(function (dl) {
-       //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
-       dl.addEventListener("cmp:show", pageShownEventHandler);
-   });
-   ```
+  ```javascript
+  var pageShownEventHandler = function(evt) {
+  // defensive coding to avoid a null pointer exception
+  if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
+      //trigger Launch Rule and pass event
+      console.debug("cmp:show event: " + evt.eventInfo.path);
+      var event = {
+          //include the path of the component that triggered the event
+          path: evt.eventInfo.path,
+          //get the state of the component that triggered the event
+          component: window.adobeDataLayer.getState(evt.eventInfo.path)
+      };
+  
+      //Trigger the Launch Rule, passing in the new 'event' object
+      // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
+      // i.e 'event.component['someKey']'
+      trigger(event);
+      }
+  }
+  
+  //set the namespace to avoid a potential race condition
+  window.adobeDataLayer = window.adobeDataLayer || [];
+  
+  //push the event listener for cmp:show into the data layer
+  window.adobeDataLayer.push(function (dl) {
+      //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
+      dl.addEventListener("cmp:show", pageShownEventHandler);
+  });
+  ```
 
 +++
 

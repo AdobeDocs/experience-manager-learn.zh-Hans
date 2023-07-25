@@ -7,10 +7,12 @@ topic: Integrations
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-04T00:00:00Z
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '830'
 ht-degree: 1%
 
 ---
@@ -66,6 +68,7 @@ ht-degree: 1%
 >[!VIDEO](https://video.tv.adobe.com/v/25945?quality=12&learn=on)
 
 >[!NOTE]
+>
 需要为您的Adobe Analytics报表包启用实时数据收集和AEM资产报表。 启用AEM资产报表可保留Analytics变量以跟踪资产分析。
 
 对于AEM Assets Insights配置，您需要以下凭据
@@ -83,6 +86,7 @@ ht-degree: 1%
 >[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
+>
 确保将所有更改从创作实例复制到发布实例。
 
 ### 规则1：页面跟踪器(pagetracker.js) {#rule-page-tracker-pagetracker-js}
@@ -105,7 +109,7 @@ ht-degree: 1%
 最后，Pagetracker将初始化函数实现为。
 
 * **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** ：调用以初始化Pagetracker组件。 在从网页生成任何资产分析事件（展示次数和/或点击次数）之前，必须调用此项。
-* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** ：可以选择接受AppMeasurement对象 — 如果提供，它不会尝试创建AppMeasurement对象的新实例。
+* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** ：可选地接受AppMeasurement对象 — 如果提供，它不会尝试创建新的AppMeasurement对象实例。
 
 ### 规则2：图像跟踪器 — 操作1 (asset-insights.js) {#rule-image-tracker-action-asset-insights-js}
 

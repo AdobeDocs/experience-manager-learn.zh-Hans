@@ -7,10 +7,12 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 9b191211-2030-4b62-acad-c7eb45b807ca
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '354'
 ht-degree: 3%
 
 ---
@@ -36,10 +38,9 @@ ht-degree: 3%
    * 使用以下解决方案配置的Experience Cloud
       * [Adobe Target](https://experiencecloud.adobe.com)
 
-      >[!NOTE]
-      >
-      > 客户需要从中配置Experience Platform Launch和Adobe I/O [Adobe支持](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 或联系您的系统管理员
-
+     >[!NOTE]
+     >
+     > 客户需要从中配置Experience Platform Launch和Adobe I/O [Adobe支持](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 或联系您的系统管理员
 
 ### 将AEM与Adobe Target集成
 

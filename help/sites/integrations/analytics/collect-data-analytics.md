@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Analytics收集页面数据
-description: 使用事件驱动的Adobe客户端数据层，收集有关使用Adobe Experience Manager构建的网站上的用户活动数据。 了解如何使用标记规则来侦听这些事件，并将数据发送到Adobe Analytics报表包。
+title: 将AEM Sites与Adobe Analytics与Adobe Analytics标记扩展集成
+description: 将AEM Sites与Adobe Analytics集成，使用事件驱动的Adobe客户端数据层收集有关使用Adobe Experience Manager构建的网站上的用户活动数据。 了解如何使用标记规则来侦听这些事件，并将数据发送到Adobe Analytics报表包。
 version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
@@ -8,22 +8,23 @@ role: Developer
 level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
+badgeIntegration: label="集成" type="positive"
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: 6a5e62a2a897adc421585e79c5f36f6aa759feaa
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '2447'
+source-wordcount: '2470'
 ht-degree: 2%
 
 ---
 
-# 使用Adobe Analytics收集页面数据
+# 集成AEM Sites和Adobe Analytics
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch已更名为Adobe Experience Platform中的一套数据收集技术。 因此，在整个产品文档中推出了几项术语更改。 请参阅以下内容 [文档](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) ，以了解术语更改的综合参考。
 
 
-了解如何使用 [使用AEM核心组件Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) 收集有关Adobe Experience Manager Sites中某个页面的数据。 [Experience Platform中的标记](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) 和 [Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) 用于创建规则以将页面数据发送到Adobe Analytics。
+了解如何使用AEM Sites的内置功能将Adobe Analytics和Adobe Analytics标记扩展集成 [使用AEM核心组件Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) 收集有关Adobe Experience Manager Sites中某个页面的数据。 [Experience Platform中的标记](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) 和 [Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) 用于创建规则以将页面数据发送到Adobe Analytics。
 
 ## 您即将构建的内容 {#what-build}
 
@@ -57,7 +58,7 @@ ht-degree: 2%
 您可以使用Experience Platform调试器执行以下操作，而不是设置AEM环境和安装WKND代码库 **切换** 实时 [WKND站点](http://wknd.site/us/en.html) 到 *您的* 标记属性。 但是，如果您自己的AEM站点已经具有 [Adobe客户端数据层已启用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
 
 1. 登录Experience Platform和 [创建标记属性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html) （如果您尚未这样做）。
-1. 确保初始标记JavaScript [已创建库](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) 并提升到标记 [环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html).
+1. 确保初始标记JavaScript [已创建库](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) 并提升到标记 [环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hans).
 1. 从已将库发布到的标记环境中复制JavaScript嵌入代码。
 
    ![复制标记属性嵌入代码](assets/collect-data-analytics/launch-environment-copy.png)
@@ -179,7 +180,7 @@ Adobe客户端数据层是 **事件** 驱动数据层。 加载AEM Page数据层
 
    此 `event` 对象传递自 `trigger()` 在自定义事件中调用的方法。 此处 `component` 是从数据层派生的当前页面 `getState` 在自定义事件中。
 
-1. 保存更改并运行 [生成](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) 标记属性中的代码，以将代码提升到 [环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) 在您的AEM网站上使用。
+1. 保存更改并运行 [生成](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) 标记属性中的代码，以将代码提升到 [环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hans) 在您的AEM网站上使用。
 
    >[!NOTE]
    >

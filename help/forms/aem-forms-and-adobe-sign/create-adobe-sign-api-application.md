@@ -7,11 +7,13 @@ thumbnail: 38178.jpg
 topic: Development
 role: Admin
 level: Beginner
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 0fea826c-b481-4c8f-872f-e429430ed3a6
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 0%
+source-wordcount: '92'
+ht-degree: 3%
 
 ---
 
@@ -22,3 +24,7 @@ ht-degree: 0%
 以下视频介绍了创建Acrobat Sign API应用程序所需的步骤
 
 >[!VIDEO](https://video.tv.adobe.com/v/38178?quality=12&learn=on)
+
+## 后续步骤
+
+[创建Acrobat Sign云配置](./create-adobe-sign-cloud-configuration.md)

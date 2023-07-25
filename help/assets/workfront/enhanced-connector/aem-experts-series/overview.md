@@ -1,6 +1,6 @@
 ---
-title: 用于Experience Manager增强型连接器会话的Workfront
-description: 了解Adobe Workfront和Experience Manager Assets增强型连接器的基础知识。
+title: 使用增强型连接器集成Workfront和AEM Assets
+description: 了解Adobe Workfront和Experience Manager Assets增强型连接器集成的基础知识。
 version: Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
@@ -9,19 +9,21 @@ level: Beginner
 kt: 9754
 thumbnail: kt-9754.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
+badgeIntegration: label="集成" type="positive"
+badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
 
-# Workfront for Experience Manager增强型连接器专家系列
+# 将Workfront和AEM Assets与增强型连接器集成
 
 ![AEM Experts系列](./assets/banner.png)
 
-与Adobe的Workfront和Experience Manager Assets专家一起观看这个由四部分组成的视频系列，他们将演示和讨论Workfront for Experience Manager增强型连接器的细节。
+与Adobe的Workfront和Experience Manager Assets专家一起观看这个由四部分组成的视频系列，他们将演示和讨论使用增强型连接器集成Workfront和AEM Assets的来龙去脉。
 
 这四部分专家系列由产品经理、咨询师和Adobe合作伙伴等一组Adobe专家组成，他们讨论了以下问题：
 
