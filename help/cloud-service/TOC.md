@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 695cccfdd03618505b2d3419b1ad82d8dbd0a122
+source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1015'
 ht-degree: 21%
 
 ---
@@ -248,6 +248,15 @@ ht-degree: 21%
       + [将表单数据存储在Azure存储中](./forms/forms-cs-azure-portal/create-af.md)
       + [预填表单](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [查询提交](./forms/forms-cs-azure-portal/query-submitted-data.md)
+   + 保存并继续填写表单{#prefill-azure-storage}
+      + [1.简介](./forms/prefill-azure-storage/introduction.md)
+      + [2 — 创建页面组件](./forms/prefill-azure-storage/page-component.md)
+      + [3 — 创建自适应表单模板](./forms/prefill-azure-storage/associate-page-component.md)
+      + [4 — 创建Azure存储集成](./forms/prefill-azure-storage/create-fdm.md)
+      + [5 — 创建SendGrid集成](./forms/prefill-azure-storage/send-grid-fdm.md)
+      + [6 — 创建自适应表单](./forms/prefill-azure-storage/create-af.md)
+      + [7 — 部署示例资产](./forms/prefill-azure-storage/deploy-sample-assets.md)
+
    + 创建审阅工作流{#create-aem-workflow}
       + [将工作流存储外部化](./forms/create-aem-workflow/externalize-workflow.md)
       + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
