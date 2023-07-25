@@ -10,7 +10,7 @@ doc-type: Code Sample
 last-substantial-update: 2023-07-14T00:00:00Z
 jira: KT-13651
 thumbnail: KT-13651.jpeg
-source-git-commit: ebb4b6eaafff9eb1f3f1dc81beb1b21df18a6a04
+source-git-commit: 9cd2c5b6337ae7a4b05380d6a3fb945f28a14299
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
@@ -29,7 +29,7 @@ CSRF令牌不是 __GET__ 请求，或 __匿名__ 请求。
 如果CSRF令牌未随POST、PUT或DELETE请求一起发送，则AEM会返回403禁止响应，并且AEM会记录以下错误：
 
 ```log
-[INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] isValidRequest: empty CSRF token - rejecting
+[INFO][POST path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] isValidRequest: empty CSRF token - rejecting
 [INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] doFilter: the provided CSRF token is invalid
 ```
 
@@ -50,10 +50,10 @@ AEM提供了一个客户端库，该库可用于生成和添加CSRF令牌XHR，�
 
 ```javascript
 // Attach submit handler event to form onSubmit
-document.querySelector('form').addEventListener('submit', async (event) => {
-    event.preventDefault();
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    const form = event.target;
+    const form = e.target;
     const response = await fetch('/libs/granite/csrf/token.json');
     const json = await response.json();
     
@@ -66,7 +66,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
         // If the form already has a CSRF token input, update the value.
         csrfTokenInput.value = json.token;
     }
-    // Submit the form with the hidden input containing the CSRF token
+
     form.submit();
 });
 ```
@@ -84,12 +84,12 @@ document.querySelector('form').addEventListener('submit', async (event) => {
  * 
  * @returns {Promise<string>} that resolves to the CSRF token.
  */
-async function getCsrfToken() {
+async getCsrfToken() {
     const response = await fetch('/libs/granite/csrf/token.json');
     const json = await response.json();
     return json.token;
 }
-
+...
 // Fetch from AEM with CSRF token in a header named 'CSRF-Token'.
 await fetch('/path/to/aem/endpoint', {
     method: 'POST',
