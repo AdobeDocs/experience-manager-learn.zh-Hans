@@ -1,6 +1,6 @@
 ---
 title: 将徽章添加到富文本编辑器(RTE)
-description: 了解如何在AEM内容片段编辑器中将徽章添加到富文本编辑器(RTE)
+description: 了解如何在AEM内容片段编辑器中向富文本编辑器(RTE)添加徽章
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -10,9 +10,9 @@ jira: KT-13466
 thumbnail: KT-13466.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: c965d5ff3f49f4859779e657674dab8602fb831b
+source-git-commit: 6a82bbb2bbfc95e3292735ac8490eecd5e7ddb84
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -20,25 +20,27 @@ ht-degree: 0%
 
 # 将徽章添加到富文本编辑器(RTE)
 
+了解如何在AEM内容片段编辑器中向富文本编辑器(RTE)添加徽章。
+
 >[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
-[富文本编辑器徽章](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)  是使富文本编辑器(RTE)中的文本不可编辑的扩展。 这意味着声明为此类的徽章只能完全移除，不能部分编辑。 这些徽章还支持RTE中的特殊颜色，明确向内容作者指示文本是徽章，因此不可编辑。 此外，它们提供有关徽章文本含义的视觉提示。
+[富文本编辑器徽章](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)  是使富文本编辑器(RTE)中的文本不可编辑的扩展。 这意味着声明为此类的徽章只能完全删除，不能部分编辑。 这些徽章还支持RTE中的特殊着色，明确向内容作者指示文本是徽章，因此不可编辑。 此外，它们提供有关徽章文本含义的视觉提示。
 
-RTE徽章的最常见用例是将其与结合使用 [RTE小组件](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/). 这允许RTE小部件插入到RTE中的内容不可编辑。
+RTE徽章最常见的使用案例是将其与结合使用 [RTE小组件](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/). 这允许RTE构件插入到RTE中的内容不可编辑。
 
-通常，与构件关联的徽章用于添加具有外部系统依赖关系，但 _内容作者无法修改_ 插入的动态内容以保持完整性。 它们只能作为整个项目删除。
+通常，与小组件关联的徽章用于添加具有外部系统依赖关系，但 _内容作者无法修改_ 插入的动态内容以保持完整性。 它们只能作为整个项目删除。
 
-此 **徽章** 添加到 **RTE** 在内容片段编辑器中，使用 `rte` 扩展点。 使用 `rte` 扩展点的 `getBadges()` 方法添加一个或多个徽章。
+此 **徽章** 都会添加到 **RTE** 在内容片段编辑器中使用 `rte` 扩展点。 使用 `rte` 扩展点的 `getBadges()` 方法添加一个或多个徽章。
 
-此示例说明如何添加名为的小部件 _大型集团预订客户服务_ 查找、选择并添加特定于WKND冒险的客户服务详细信息，例如 **代表姓名** 和 **电话号码** 在RTE内容中。 使用徽章功能 **电话号码** 已制作 **不可编辑** 但是，WKND内容作者可以编辑代表名称。
+此示例说明如何添加名为的小部件 _大型团体预订客户服务_ 查找、选择并添加特定于WKND冒险的客户服务详细信息，例如 **代表姓名** 和 **电话号码** 在RTE内容中。 使用徽章功能 **电话号码** 已制作 **不可编辑** 但WKND内容作者可以编辑代表名称。
 
 此外， **电话号码** 样式不同（蓝色），这是徽章功能的额外用例。
 
-为了保持简单，此示例使用 [Adobe反应谱](https://react-spectrum.adobe.com/react-spectrum/index.html) 框架，用于开发小组件或对话框UI和硬编码WKND客户服务电话号码。 要控制内容的非编辑和不同的样式方面，请 `#` 字符用于 `prefix` 和 `suffix` 徽章定义的属性。
+为了保持简单，本示例使用 [AdobeReact频谱](https://react-spectrum.adobe.com/react-spectrum/index.html) 框架，用于开发小组件或对话框UI和硬编码的WKND客户服务电话号码。 要控制内容的非编辑和不同的样式方面，请 `#` 字符用于 `prefix` 和 `suffix` 徽章定义的属性。
 
 ## 扩展点
 
-此示例扩展到扩展点 `rte` 在内容片段编辑器中向RTE添加徽章。
+此示例将扩展到扩展点 `rte` 在内容片段编辑器中将徽章添加到RTE。
 
 | AEM UI已扩展 | 扩展点 |
 | ------------------------ | --------------------- | 
@@ -46,18 +48,18 @@ RTE徽章的最常见用例是将其与结合使用 [RTE小组件](https://devel
 
 ## 扩展示例
 
-以下示例创建 _大型集团预订客户服务_ 构件。 通过按下 `{` 键，将打开RTE构件上下文菜单。 通过选择 _大型集团预订客户服务_ 上下文菜单中的选项，自定义模式随即打开。
+以下示例创建 _大型团体预订客户服务_ 构件。 通过按下 `{` 键，打开RTE构件上下文菜单。 通过选择 _大型团体预订客户服务_ 上下文菜单中的选项，自定义模式将打开。
 
-从模式中添加所需的客户服务编号后，徽章会使 _电话号码不可编辑_ 并将其设置为蓝色样式。
+从模式中添加所需的客户服务编号后，徽章会使 _电话号码不可编辑_ 并将其样式设置为蓝色。
 
 ### 延期注册
 
-`ExtensionRegistration.js`，映射到 `index.html` route是AEM扩展的入口点，并定义：
+`ExtensionRegistration.js`，映射到 `index.html` route，是AEM扩展的入口点，并定义：
 
-+ 徽章的定义定义见于 `getBadges()` 使用配置属性 `id`， `prefix`， `suffix`， `backgroundColor` 和 `textColor`.
-+ 在此示例中， `#` 字符用于定义此徽章的边界 — 表示RTE中由以下对象包围的任何字符串 `#` 将被视为此徽章的实例。
++ 在中定义徽章的定义 `getBadges()` 使用配置属性 `id`， `prefix`， `suffix`， `backgroundColor` 和 `textColor`.
++ 在此示例中， `#` 字符用于定义此徽章的边界，这意味着RTE中由以下对象包围的任何字符串 `#` 将被视为此徽章的实例。
 
-此外，请查看RTE小部件的关键详细信息：
+此外，请参阅RTE小部件的关键详细信息：
 
 + 中的构件定义 `getWidgets()` 函数为 `id`， `label` 和 `url` 属性。
 + 此 `url` 属性值，相对URL路径(`/index.html#/largeBookingsCustomerService`)以加载该模式窗口。
@@ -132,18 +134,18 @@ function ExtensionRegistration() {
 
 ### 创建 `LargeBookingsCustomerService` React组件{#create-widget-react-component}
 
-使用创建构件或对话框UI [Adobe反应谱](https://react-spectrum.adobe.com/react-spectrum/index.html) 框架。
+使用创建构件或对话框UI [AdobeReact频谱](https://react-spectrum.adobe.com/react-spectrum/index.html) 框架。
 
-在添加客户服务详细信息时，React组件代码将电话号码变量周围加上 `#` 注册徽章字符，以将其转换为徽章，如 `#${phoneNumber}#`，因此使其不可编辑。
+添加客户服务详细信息时，React组件代码将在电话号码变量周围加上 `#` 注册徽章字符，以将其转换为徽章，如 `#${phoneNumber}#`，因此使其不可编辑。
 
 以下是的主要亮点 `LargeBookingsCustomerService` 代码：
 
 + UI使用React Spectrum组件渲染，例如 [组合框](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html)， [按钮组](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html)， [按钮](https://react-spectrum.adobe.com/react-spectrum/Button.html)
-+ 此 `largeGroupCustomerServiceList` 数组具有代表名称和电话号码的硬编码映射。 在真实场景中，此数据可以从AdobeAppBuilder操作或外部系统、自主开发或基于云提供商的API网关中检索。
-+ 此 `guestConnection` 已使用 `useEffect` [React挂钩](https://react.dev/reference/react/useEffect) 和作为组件状态进行管理。 用于与AEM主机通信。
++ 此 `largeGroupCustomerServiceList` 数组具有代表性名称和电话号码的硬编码映射。 在现实场景中，此数据可以从AdobeAppBuilder操作或外部系统、自主开发或基于云提供商的API网关中检索。
++ 此 `guestConnection` 已使用 `useEffect` [React挂钩](https://react.dev/reference/react/useEffect) 并作为组件状态进行管理。 用于与AEM主机通信。
 + 此 `handleCustomerServiceChange` 函数获取代表性姓名和电话号码，并更新组件状态变量。
-+ 此 `addCustomerServiceDetails` 函数使用 `guestConnection` 对象提供要执行的RTE指令。 在这种情况下 `insertContent` 指令和HTML代码段。
-+ 要制作 **电话号码不可编辑** 使用徽章， `#` 特殊字符添加在之前和之后 `phoneNumber` 变量，如 `...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>`.
++ 此 `addCustomerServiceDetails` 函数使用 `guestConnection` 对象提供要执行的RTE指令。 在本例中 `insertContent` 指令和HTML代码段。
++ 创建 **电话号码不可编辑** 使用徽章， `#` 特殊字符添加在 `phoneNumber` 变量，如 `...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>`.
 
 `src/aem-cf-editor-1/web-src/src/components/LargeBookingsCustomerService.js`
 

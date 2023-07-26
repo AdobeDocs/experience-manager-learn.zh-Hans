@@ -11,30 +11,32 @@ thumbnail: KT-13465.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: be4c0a6a-5c1f-4408-9ac6-56b8f0653d42
-source-git-commit: 9c8c03df7c510ab697d5222f9dffd5111519b712
+source-git-commit: 6a82bbb2bbfc95e3292735ac8490eecd5e7ddb84
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
 
 # 将构件添加到富文本编辑器(RTE)
 
+了解如何在AEM内容片段编辑器中向富文本编辑器(RTE)添加构件。
+
 >[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
-要在富文本编辑器(RTE)中添加动态内容，请 **构件** 功能可用。 这些小组件有助于在RTE中集成简单或复杂的UI，并且可以使用您选择的JS框架创建UI。 它们可以视为通过按打开对话框 `{` RTE中的特殊键。
+要在富文本编辑器(RTE)中添加动态内容，请 **构件** 功能可用。 这些小组件有助于在RTE中集成简单或复杂的UI，并且可以使用您选择的JS框架创建UI。 它们可以视为通过按打开的对话框 `{` RTE中的特殊键。
 
-通常，构件用于插入具有外部系统依赖关系或可以根据当前上下文更改的动态内容。
+通常，小组件用于插入具有外部系统依赖关系或可以根据当前上下文更改的动态内容。
 
-此 **构件** 添加到 **RTE** 在内容片段编辑器中，使用 `rte` 扩展点。 使用 `rte` 扩展点的 `getWidgets()` 方法添加了一个或多个小组件。 它们通过按下 `{` 用于打开上下文菜单选项的特殊键，然后选择所需的构件以加载自定义对话框UI。
+此 **构件** 都会添加到 **RTE** 在内容片段编辑器中使用 `rte` 扩展点。 使用 `rte` 扩展点的 `getWidgets()` 方法添加一个或多个构件。 它们通过按下 `{` 用于打开上下文菜单选项的特殊键，然后选择所需的构件以加载自定义对话框UI。
 
-此示例说明如何添加名为的小部件 _折扣代码列表_ 在RTE内容中查找、选择并添加WKND冒险特定的折扣代码。 这些折扣代码可以在外部系统中进行管理，例如订单管理系统(OMS)、产品信息管理(PIM)、自主开发的应用程序或AdobeAppBuilder操作。
+此示例说明如何添加名为的小部件 _折扣代码列表_ 在RTE内容中查找、选择并添加WKND冒险特定折扣代码。 这些折扣代码可以在外部系统中进行管理，如订单管理系统(OMS)、产品信息管理(PIM)、自主开发的应用程序或AdobeAppBuilder操作。
 
-为了保持简单，此示例使用 [Adobe反应谱](https://react-spectrum.adobe.com/react-spectrum/index.html) 框架，用于开发小组件或对话框UI和硬编码WKND冒险名称、折扣代码数据。
+为了保持简单，本示例使用 [AdobeReact频谱](https://react-spectrum.adobe.com/react-spectrum/index.html) 框架来开发构件或对话框UI和硬编码的WKND冒险名称、折扣代码数据。
 
 ## 扩展点
 
-此示例扩展到扩展点 `rte` 在内容片段编辑器中向RTE添加构件。
+此示例将扩展到扩展点 `rte` 在内容片段编辑器中将小组件添加到RTE。
 
 | AEM UI已扩展 | 扩展点 |
 | ------------------------ | --------------------- | 
@@ -111,13 +113,13 @@ function ExtensionRegistration() {
 
 ### 创建 `DiscountCodes` React组件{#create-widget-react-component}
 
-使用创建构件或对话框UI [Adobe反应谱](https://react-spectrum.adobe.com/react-spectrum/index.html) 框架。 此 `DiscountCodes` 组件代码如下所示，以下是主要亮点：
+使用创建构件或对话框UI [AdobeReact频谱](https://react-spectrum.adobe.com/react-spectrum/index.html) 框架。 此 `DiscountCodes` 组件代码如下所示，以下是主要亮点：
 
 + UI使用React Spectrum组件渲染，例如 [组合框](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html)， [按钮组](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html)， [按钮](https://react-spectrum.adobe.com/react-spectrum/Button.html)
-+ 此 `adventureDiscountCodes` 数组具有冒险名称和折扣代码的硬编码映射。 在真实场景中，此数据可以从AdobeAppBuilder操作或外部系统（如PIM、OMS或自行开发的或基于云提供商的API网关）中检索。
-+ 此 `guestConnection` 已使用 `useEffect` [React挂钩](https://react.dev/reference/react/useEffect) 和作为组件状态进行管理。 用于与AEM主机通信。
++ 此 `adventureDiscountCodes` 数组具有冒险名称和折扣代码的硬编码映射。 在真实场景中，此数据可以从AdobeAppBuilder操作或外部系统（如PIM、OMS或自主开发的或基于云提供商的API网关）中检索。
++ 此 `guestConnection` 已使用 `useEffect` [React挂钩](https://react.dev/reference/react/useEffect) 并作为组件状态进行管理。 用于与AEM主机通信。
 + 此 `handleDiscountCodeChange` 函数获取所选冒险名称的折扣代码并更新状态变量。
-+ 此 `addDiscountCode` 函数使用 `guestConnection` 对象提供要执行的RTE指令。 在这种情况下 `insertContent` 要插入RTE中的实际折扣代码的说明和HTML代码段。
++ 此 `addDiscountCode` 函数使用 `guestConnection` 对象提供要执行的RTE指令。 在本例中 `insertContent` 要插入RTE中的实际折扣代码的说明和HTML代码段。
 
 `src/aem-cf-editor-1/web-src/src/components/DiscountCodes.js`
 
