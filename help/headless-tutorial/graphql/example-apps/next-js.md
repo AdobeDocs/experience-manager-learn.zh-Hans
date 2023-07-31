@@ -9,20 +9,20 @@ role: Developer
 level: Beginner
 kt: 10721
 thumbnail: KT-10721.jpg
-last-substantial-update: 2022-10-03T00:00:00Z
+last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '811'
 ht-degree: 1%
 
 ---
 
 # Next.js应用程序
 
-示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此Next.js应用程序演示了如何使用AEM GraphQL API通过持久查询来查询内容。 适用于JavaScript的AEM Headless客户端用于执行为应用程序提供支持的GraphQL持久查询。
+示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此Next.js应用程序演示了如何使用AEM GraphQL API通过持久查询来查询内容。 适用于JavaScript的AEM Headless Client用于执行为应用程序提供支持的GraphQL持久查询。
 
-![带有AEM Headless的Next.js应用程序](./assets/next-js/next-js.png)
+![使用AEM Headless的Next.js应用程序](./assets/next-js/next-js.png)
 
 查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/next-js)
 
@@ -35,13 +35,13 @@ ht-degree: 1%
 
 ## AEM要求
 
-Next.js应用程序可与以下AEM部署选项配合使用。 所有部署都需要 [WKND共享v2.1.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) 或 [WKND站点v2.1.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 安装在AEMas a Cloud Service环境中。
+Next.js应用程序可与以下AEM部署选项配合使用。 所有部署都需要 [WKND共享版本3.0.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) 或 [WKND站点v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) ，以安装在AEMas a Cloud Service环境中。
 
-此示例Next.js应用程序设计用于连接到 __AEM发布__ 服务。
+此示例Next.js应用程序旨在连接到 __AEM发布__ 服务。
 
 ### AEM作者要求
 
-Next.js旨在连接到 __AEM发布__ 服务，并访问不受保护的内容。 Next.js可以配置为通过 `.env` 属性如下所述。 由AEM作者提供的图像需要进行身份验证，因此，访问Next.js应用程序的用户还必须登录到AEM作者。
+Next.js旨在连接到 __AEM发布__ 服务，并访问不受保护的内容。 Next.js可以配置为通过连接到AEM作者 `.env` 属性如下所述。 由AEM作者提供的图像需要身份验证，因此访问Next.js应用程序的用户还必须登录到AEM作者。
 
 ## 使用方法
 
@@ -59,9 +59,9 @@ Next.js旨在连接到 __AEM发布__ 服务，并访问不受保护的内容。 
    ...
    ```
 
-   如果连接到AEM Author服务，则必须提供身份验证，因为AEM Author服务在默认情况下是安全的。
+   如果连接到AEM Author服务，则必须提供身份验证，因为默认情况下，AEM Author服务是安全的。
 
-   使用本地AEM帐户集 `AEM_AUTH_METHOD=basic` 并在中提供用户名和密码 `AEM_AUTH_USER` 和 `AEM_AUTH_PASSWORD` 属性。
+   使用本地AEM帐户集 `AEM_AUTH_METHOD=basic` 并在以下位置提供用户名和密码： `AEM_AUTH_USER` 和 `AEM_AUTH_PASSWORD` 属性。
 
    ```plain
    ...
@@ -71,7 +71,7 @@ Next.js旨在连接到 __AEM发布__ 服务，并访问不受保护的内容。 
    AEM_AUTH_PASSWORD=password-for-the-aem-user-account
    ```
 
-   使用 [AEMas a Cloud Service本地开发令牌](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#generating-the-access-token) 设置 `AEM_AUTH_METHOD=dev-token` 并在中提供完整的开发令牌值 `AEM_AUTH_DEV_TOKEN` 属性。
+   要使用 [AEMas a Cloud Service本地开发令牌](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#generating-the-access-token) 设置 `AEM_AUTH_METHOD=dev-token` 并在中提供完整的开发令牌值 `AEM_AUTH_DEV_TOKEN` 属性。
 
    ```plain
    ...
@@ -99,7 +99,7 @@ Next.js旨在连接到 __AEM发布__ 服务，并访问不受保护的内容。 
    ```
 
 1. 新的浏览器窗口将在以下位置打开Next.js应用程序： [http://localhost:3000](http://localhost:3000)
-1. Next.js应用程序显示冒险列表。 选择冒险会在新页面中打开其详细信息。
+1. Next.js应用程序显示冒险列表。 选择冒险将在新页面中打开其详细信息。
 
 ## 代码
 
@@ -109,46 +109,76 @@ Next.js旨在连接到 __AEM发布__ 服务，并访问不受保护的内容。 
 
 遵循AEM Headless最佳实践，Next.js应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
 
-+ `wknd/adventures-all` 持久查询，该查询返回AEM中的所有冒险以及一组删节的资产。 此持久查询驱动初始视图的冒险列表。
++ `wknd/adventures-all` 持久查询，该查询返回在AEM中使用一组删节的属性进行的所有冒险。 此持久查询驱动初始视图的冒险列表。
 
 ```
-# Retrieves a list of all adventures
-{
-    adventureList {
-        items {
-            _path
-            slug
-            title
-            price
-            tripLength
-            primaryImage {
-                ... on ImageRef {
-                _path
-                mimeType
-                width
-                height
-                }
-            }
+# Retrieves a list of all Adventures
+#
+# Optional query variables:
+# - { "offset": 10 }
+# - { "limit": 5 }
+# - { 
+#    "imageFormat": "JPG",
+#    "imageWidth": 1600,
+#    "imageQuality": 90 
+#   }
+query ($offset: Int, $limit: Int, $sort: String, $imageFormat: AssetTransformFormat=JPG, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  adventureList(
+    offset: $offset
+    limit: $limit
+    sort: $sort
+    _assetTransform: {
+      format: $imageFormat
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
+    items {
+      _path
+      slug
+      title
+      activity
+      price
+      tripLength
+      primaryImage {
+        ... on ImageRef {
+          _path
+          _dynamicUrl
         }
+      }
     }
+  }
 }
 ```
 
-+ `wknd/adventure-by-slug` 持久查询，返回一次冒险的方法是 `slug` （唯一标识冒险的自定义属性）和一组完整的属性。 此持久查询支持冒险详细信息视图。
++ `wknd/adventure-by-slug` 持久查询，返回一次冒险 `slug` （唯一标识冒险的自定义属性）和一组完整的属性。 此持久查询为冒险详细信息视图提供支持。
 
 ```
-# Retrieves an adventure Content Fragment based on it's slug
-# Example query variables: 
-# {"slug": "bali-surf-camp"} 
-# Technically returns an adventure list but since the the slug 
-# property is set to be unique in the CF Model, only a single CF is expected
+# Retrieves an Adventure Fragment based on it's unique slug.
+#
+# Required query variables:
+# - {"slug": "bali-surf-camp"}
+#
+# Optional query variables:
+# - { 
+#     "imageFormat": "JPG",
+#     "imageSeoName": "my-adventure",
+#     "imageWidth": 1600,
+#     "imageQuality": 90 
+#   }
+#  
+# This query returns an adventure list but since the the slug property is set to be unique in the Content Fragment Model, only a single Content Fragment is expected.
 
-query($slug: String!) {
-  adventureList(filter: {
-        slug: {
-          _expressions: [ { value: $slug } ]
-        }
-      }) {
+query ($slug: String!, $imageFormat:AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  adventureList(
+    filter: {slug: {_expressions: [{value: $slug}]}}
+    _assetTransform: {
+      format: $imageFormat
+      seoName: $imageSeoName
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
     items {
       _path
       title
@@ -163,22 +193,22 @@ query($slug: String!) {
       primaryImage {
         ... on ImageRef {
           _path
-          mimeType
-          width
-          height
+          _dynamicUrl
         }
       }
       description {
         json
         plaintext
+        html
       }
       itinerary {
         json
         plaintext
+        html
       }
     }
     _references {
-      ...on AdventureModel {
+      ... on AdventureModel {
         _path
         slug
         title
@@ -192,7 +222,7 @@ query($slug: String!) {
 
 ### 执行GraphQL持久查询
 
-AEM持久查询通过HTTPGET执行，因此， [适用于JavaScript的AEM Headless客户端](https://github.com/adobe/aem-headless-client-js) 已用于 [执行持久的GraphQL查询](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) 针对AEM并将冒险内容加载到应用程序中。
+AEM持久查询通过HTTPGET执行，因此， [适用于JavaScript的AEM Headless客户端](https://github.com/adobe/aem-headless-client-js) 用于 [执行持久的GraphQL查询](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) 针对AEM将冒险内容加载到应用程序中。
 
 每个持久查询在中都有相应的函数 `src/lib//aem-headless-client.js`调用AEM GraphQL端点并返回冒险数据。
 
@@ -219,32 +249,32 @@ async getAllAdventures() {
 
 // And so on, and so forth ... 
 
-async getAdventureSlugs() { ... }
+async getAdventureSlugs(queryVariables) { ... }
 
-async getAdventuresBySlug(slug) { ... }
+async getAdventuresBySlug(slug, queryVariables) { ... }
 ...
 ```
 
 ### 页面
 
-Next.js应用程序使用两个页面来呈现冒险数据。
+Next.js应用程序使用两个页面展示冒险数据。
 
 + `src/pages/index.js`
 
-   用途 [Next.js的getServerSideProps()](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props) 以调用 `getAllAdventures()` 并把每个冒险都当卡片来显示。
+  用途 [Next.js的getServerSideProps()](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props) 以调用 `getAllAdventures()` 并把每一次冒险都当做一张卡片来展示。
 
-   使用 `getServerSiteProps()` 允许服务器端呈现此Next.js页面。
+  使用 `getServerSiteProps()` 允许在服务器端呈现此Next.js页面。
 
 + `src/pages/adventures/[...slug].js`
 
-   A [Next.js动态路由](https://nextjs.org/docs/routing/dynamic-routes) 显示单次冒险的细节。 此动态路径使用以下方式预取每个冒险的数据 [Next.js的getStaticProps()](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) 通过调用 `getAdventureBySlug(..)` 使用 `slug` param通过 `adventures/index.js` 页面。
+  A [Next.js动态路由](https://nextjs.org/docs/routing/dynamic-routes) 显示单次冒险的细节。 此动态路由会使用预取每个冒险的数据 [Next.js的getStaticProps()](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) 通过调用 `getAdventureBySlug(slug, queryVariables)` 使用 `slug` param通过 `adventures/index.js` 页面，以及 `queryVariables` 控制图像格式、宽度和质量。
 
-   动态路由能够使用预取所有冒险的详细信息 [Next.js的getStaticPaths()](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) 并根据GraphQL查询返回的冒险完整列表填充所有可能的路由排列  `getAdventurePaths()`
+  动态路由能够使用预取所有冒险的详细信息 [Next.js的getStaticPaths()](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) 并根据GraphQL查询返回的冒险完整列表填充所有可能的路由排列  `getAdventurePaths()`
 
-   使用 `getStaticPaths()` 和 `getStaticProps(..)` 允许生成这些Next.js页面的静态站点。
+  使用 `getStaticPaths()` 和 `getStaticProps(..)` 允许生成这些Next.js页面的静态站点。
 
 ## 部署配置
 
 Next.js应用程序，尤其是在服务器端渲染(SSR)和服务器端生成(SSG)的上下文中，不需要高级安全配置，例如跨源资源共享(CORS)。
 
-但是，如果Next.js确实从客户端上下文中向AEM发出HTTP请求，则可能需要AEM中的安全配置。 查看 [AEM Headless单页应用程序部署教程](../deployment/spa.md) 了解更多详细信息。
+但是，如果Next.js确实从客户端上下文中向AEM发出HTTP请求，则可能需要AEM中的安全配置。 查看 [AEM Headless单页应用程序部署教程](../deployment/spa.md) 以了解更多详细信息。

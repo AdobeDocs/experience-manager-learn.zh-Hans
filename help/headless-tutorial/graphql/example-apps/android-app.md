@@ -9,17 +9,18 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
-source-git-commit: 985d52f02025dc9cb2b9c70ead4a88af07c63f29
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 6%
+source-wordcount: '681'
+ht-degree: 5%
 
 ---
 
 # Android应用程序
 
-示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此Android应用程序演示了如何使用AEM的GraphQL API查询内容。 此 [适用于Java的AEM Headless客户端](https://github.com/adobe/aem-headless-client-java) 用于执行GraphQL查询，并将数据映射到Java对象以为应用程序提供支持。
+示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此Android应用程序演示了如何使用AEM的GraphQL API查询内容。 此 [适用于Java的AEM Headless客户端](https://github.com/adobe/aem-headless-client-java) 用于执行GraphQL查询并将数据映射到Java对象以向应用程序提供支持。
 
 ![带有AEM Headless的Android Java应用程序](./assets/android-java-app/android-app.png)
 
@@ -35,13 +36,11 @@ ht-degree: 6%
 
 ## AEM要求
 
-Android应用程序可与以下AEM部署选项配合使用。 所有部署都需要 [WKND站点v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 即将安装。
+Android应用程序可与以下AEM部署选项配合使用。 所有部署都需要 [WKND站点v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 即将安装。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 使用进行本地设置 [AEM CLOUD SERVICE SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)
-+ [AEM 6.5 SP13+快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans？lang=en#install-local-aem-instances)
 
-Android应用程序旨在连接到 __AEM发布__ 但是，如果在Android应用程序的配置中提供身份验证，则它可以从AEM Author获取内容。
+Android应用程序旨在连接到 __AEM发布__ 但是，如果在Android应用程序的配置中提供身份验证，则它可以从AEM Author源内容。
 
 ## 使用方法
 
@@ -52,10 +51,10 @@ Android应用程序旨在连接到 __AEM发布__ 但是，如果在Android应用
    ```
 
 1. Launch [Android Studio](https://developer.android.com/studio) 并打开文件夹 `android-app`
-1. 修改文件 `config.properties` 在 `app/src/main/assets/config.properties` 和更新 `contentApi.endpoint` 要匹配您的目标AEM环境，请执行以下操作：
+1. 修改文件 `config.properties` 在 `app/src/main/assets/config.properties` 和更新 `contentApi.endpoint` 要匹配您的target AEM环境，请执行以下操作：
 
    ```plain
-   contentApi.endpoint=http://10.0.2.2:4503
+   contentApi.endpoint=https://publish-p123-e456.adobeaemcloud.com
    ```
 
    __基本身份验证__
@@ -63,7 +62,7 @@ Android应用程序旨在连接到 __AEM发布__ 但是，如果在Android应用
    此 `contentApi.user` 和 `contentApi.password` 验证有权访问WKND GraphQL内容的本地AEM用户。
 
    ```plain
-   contentApi.endpoint=http://10.0.2.2:4502
+   contentApi.endpoint=https://author-p123-e456.adobeaemcloud.com
    contentApi.user=admin
    contentApi.password=admin
    ```
@@ -74,9 +73,7 @@ Android应用程序旨在连接到 __AEM发布__ 但是，如果在Android应用
 
 ### 连接到AEM环境
 
-`10.0.2.2` 是 [特殊别名IP](https://developer.android.com/studio/run/emulator-networking) （使用模拟器时）为localhost `10.0.2.2:4502` 相当于 `localhost:4502`. 如果连接到AEM发布环境（推荐），则无需授权，并且 `contentAPi.user` 和 `contentApi.password` 可留空。
-
-如果连接到AEM创作环境 [授权](https://github.com/adobe/aem-headless-client-java#using-authorization) 为必填项。 默认情况下，应用程序设置为使用用户名和密码为的基本身份验证 `admin:admin`. 此 [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) 提供了使用 [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). 要在中使用基于令牌的身份验证更新客户端生成器，请执行以下操作 `AdventureLoader.java` 和 `AdventuresLoader.java`：
+如果连接到AEM创作环境 [授权](https://github.com/adobe/aem-headless-client-java#using-authorization) 为必填项。 此 [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) 提供了使用 [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). 要在中使用基于令牌的身份验证更新客户端生成器，请执行以下操作 `AdventureLoader.java` 和 `AdventuresLoader.java`：
 
 ```java
 /* Comment out basicAuth
@@ -91,13 +88,13 @@ builder.tokenAuth(token)
 
 ## 代码
 
-下面简要概述了用于为应用程序提供电源的重要文件和代码。 完整代码可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app).
+下面简要总结了用于为应用程序提供电源的重要文件和代码。 完整代码可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app).
 
 ### 持久查询
 
-遵循AEM Headless最佳实践，iOS应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
+遵循AEM Headless最佳实践，iOS应用程序使用AEM GraphQL持久查询来查询冒险数据。 该应用程序使用两个持久查询：
 
-+ `wknd/adventures-all` 持久查询，该查询返回AEM中的所有冒险以及一组删节的资产。 此持久查询驱动初始视图的冒险列表。
++ `wknd/adventures-all` 持久查询，该查询返回在AEM中使用一组删节的属性进行的所有冒险。 此持久查询驱动初始视图的冒险列表。
 
 ```
 # Retrieves a list of all adventures
@@ -111,10 +108,7 @@ builder.tokenAuth(token)
             tripLength
             primaryImage {
                 ... on ImageRef {
-                _path
-                mimeType
-                width
-                height
+                _dynamicUrl
                 }
             }
         }
@@ -122,7 +116,7 @@ builder.tokenAuth(token)
 }
 ```
 
-+ `wknd/adventure-by-slug` 持久查询，返回一次冒险的方法是 `slug` （唯一标识冒险的自定义属性）和一组完整的属性。 此持久查询支持冒险详细信息视图。
++ `wknd/adventure-by-slug` 持久查询，返回一次冒险 `slug` （唯一标识冒险的自定义属性）和一组完整的属性。 此持久查询为冒险详细信息视图提供支持。
 
 ```
 # Retrieves an adventure Content Fragment based on it's slug
@@ -150,10 +144,7 @@ query($slug: String!) {
       price
       primaryImage {
         ... on ImageRef {
-          _path
-          mimeType
-          width
-          height
+          _dynamicUrl
         }
       }
       description {
@@ -180,17 +171,17 @@ query($slug: String!) {
 
 ### 执行GraphQL持久查询
 
-AEM持久查询通过HTTPGET执行，因此， [适用于Java的AEM Headless客户端](https://github.com/adobe/aem-headless-client-java) 用于对AEM执行持久的GraphQL查询，并将冒险内容加载到应用程序中。
+AEM持久查询通过HTTPGET执行，因此， [适用于Java的AEM Headless客户端](https://github.com/adobe/aem-headless-client-java) 用于对AEM执行持久GraphQL查询，并将冒险内容加载到应用程序中。
 
 每个持久查询都有一个相应的“loader”类，该类异步调用AEM HTTPGET端点，并使用自定义的返回冒险数据 [数据模型](#data-models).
 
 + `loader/AdventuresLoader.java`
 
-   使用在应用程序的主屏幕上获取冒险列表 `wknd-shared/adventures-all` 持久查询。
+  使用获取应用程序主屏幕上的冒险列表 `wknd-shared/adventures-all` 持久查询。
 
 + `loader/AdventureLoader.java`
 
-   获取一个冒险通过 `slug` 参数，使用 `wknd-shared/adventure-by-slug` 持久查询。
+  通过获取一个历险来选择它 `slug` 参数，使用 `wknd-shared/adventure-by-slug` 持久查询。
 
 ```java
 //AdventuresLoader.java
@@ -214,7 +205,7 @@ GraphQlResponse response = client.runPersistedQuery(PERSISTED_QUERY_NAME);
 
 ### GraphQL响应数据模型{#data-models}
 
-`Adventure.java` 是一个使用GraphQL请求中的JSON数据初始化的Java POJO，并为冒险建模，以在Android应用程序的视图中使用。
+`Adventure.java` 是一个使用GraphQL请求中的JSON数据初始化的Java POJO，它为Android应用程序视图中使用的冒险建模。
 
 ### 视图
 
@@ -222,11 +213,11 @@ Android应用程序使用两个视图在移动体验中呈现冒险数据。
 
 + `AdventureListFragment.java`
 
-   调用 `AdventuresLoader` 并将返回的冒险显示在列表中。
+  调用 `AdventuresLoader` 并在列表中显示返回的冒险。
 
 + `AdventureDetailFragment.java`
 
-   调用 `AdventureLoader` 使用 `slug` param通过 `AdventureListFragment` 查看，并显示单次冒险的详细信息。
+  调用 `AdventureLoader` 使用 `slug` param通过 `AdventureListFragment` 视图，并显示单次冒险的详细信息。
 
 ### 远程图像
 
