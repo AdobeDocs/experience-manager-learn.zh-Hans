@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
+source-git-commit: e7e5a07ecada8e5760cd1496bdb44b3d035373dd
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '459'
 ht-degree: 24%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 24%
    + [时间扭曲](page-authoring/timewarp-feature-video-use.md)
    + [启动项](page-authoring/launches.md)
    + 向同行学习 {#expert-advice}
-      + [网站层次结构提示](page-authoring/expert-advice/site-hierarchy.md)
+      + [站点层次结构提示](page-authoring/expert-advice/site-hierarchy.md)
 + 组件 {#components}
    + [组件开发](components/component-development.md)
    + [核心组件](components/core-components-feature-video-understand.md)
@@ -100,7 +100,7 @@ ht-degree: 24%
    + Experience Platform {#experience-platform}
       + [生成FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
-      + [使用Platform Web SDK进行分析](integrations/platform/analytics-using-web-sdk.md)
+      + [使用Platform Web SDK的分析](integrations/platform/analytics-using-web-sdk.md)
    + Experience Platform数据收集标记(Launch) {#experience-platform-data-collection-tags}
       + [概述](integrations/experience-platform/data-collection/tags/overview.md)
       + [创建标记属性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
@@ -124,7 +124,8 @@ ht-degree: 24%
       + [使用可视化体验编辑器进行个性化](integrations/adobe-target/personalization-using-vec.md)
       + [完整网页体验的个性化](integrations/adobe-target/personalization-web-page.md)
 + 向同行学习 {#expert-resources}
+   + [概述](expert-resources/learn-from-your-peers-overview.md)
    + [AEM Sites成熟度评估](expert-resources/maturity-assessment.md)
    + [站点维护](expert-resources/site-maintenance.md)
-   + [AEM Champion提示和技巧：第1场会议](expert-resources/champion-tips-1.md)
-   + [AEM Champion提示和技巧：第2场会议](expert-resources/champion-tips-2.md)
+   + [AEM Champion提示和技巧：第1场](expert-resources/champion-tips-1.md)
+   + [AEM Champion提示和技巧：第2场讲座](expert-resources/champion-tips-2.md)
