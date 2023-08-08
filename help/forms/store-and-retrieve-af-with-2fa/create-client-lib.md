@@ -1,6 +1,6 @@
 ---
 title: 创建客户端库
-description: 创建客户端库以处理“保存并退出”按钮的单击事件
+description: 创建clientlibrary以处理“保存并退出”按钮的单击事件
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -10,7 +10,7 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: c90eea73-bd44-40af-aa98-d766aa572415
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 6%
@@ -19,9 +19,9 @@ ht-degree: 6%
 
 # 创建客户端库
 
-创建 [客户端库](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) 其中包括用于调用方法的代码 `doAjaxSubmitWithFileAttachment` 的 `guideBridge` CSS类标识的按钮的点击事件上的API **savebutton**.  我们传递自适应表单数据， `fileMap`，以及 `mobileNumber` 到侦听的端点 `**/bin/storeafdatawithattachments`
+创建 [客户端库](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) 其中包括用于调用方法的代码 `doAjaxSubmitWithFileAttachment` 的 `guideBridge` CSS类标识的按钮的点击事件上的API **savebutton**.  我们传递自适应表单数据， `fileMap`，和 `mobileNumber` 到侦听的端点 `**/bin/storeafdatawithattachments`
 
-保存表单数据后，会生成一个唯一的应用程序ID，并在对话框中向用户显示。 关闭对话框时，用户将被带入表单，该表单允许用户使用唯一的应用程序ID检索保存的自适应表单。
+保存表单数据后，会生成一个唯一的应用程序ID并在对话框中向用户显示。 在禁用对话框时，用户将被带入表单，表单允许他们使用唯一的应用程序ID检索保存的自适应表单。
 
 ```java
 $(document).ready(function () {
@@ -45,7 +45,7 @@ $(document).ready(function () {
             success: function (x) {
               bootbox.alert(
                 "This is your reference number.<br>" +
-                  x.data.path +
+                  x.data.applicationID +
                   " <br>You will need this to retrieve your application",
                 function () {
                   console.log(
@@ -69,8 +69,8 @@ $(document).ready(function () {
 >[!NOTE]
 > 我们已经使用了 [bootbox javascript库](http://bootboxjs.com/examples.html) 显示对话框
 
-此示例中使用的客户端库可以是 [已从此处下载](assets/client-libraries.zip)
+此示例中使用的客户端库可以是 [从此处下载](assets/store-af-with-attachments-client-lib.zip)
 
 ## 后续步骤
 
-[使用OTP服务验证用户](./verify-users-with-otp.md)
+[验证具有OTP服务的用户](./verify-users-with-otp.md)
