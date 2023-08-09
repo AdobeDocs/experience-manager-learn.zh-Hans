@@ -10,7 +10,7 @@ kt: 10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2023-08-08T00:00:00Z
-source-git-commit: 181023c9584bcd5084778ebf00d34f8ecaa74524
+source-git-commit: f8fd13d3f315aa0bd9f268b9fe81b9d9c17b243c
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 2%
@@ -140,7 +140,7 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 1. 在Dispatcher配置项目中打开AEM Publish服务的vhost配置文件，通常位于 `dispatcher/src/conf.d/available_vhosts/<example>.vhost`
 2. 复制 `<IfDefine ENABLE_CORS>...</IfDefine>` 阻止以下内容，将其添加到已启用的vhost配置文件中。
 
-   ```{line-numbers="true"}
+   ```{ highlight="19"}
    <VirtualHost *:80>
      ...
      <IfModule mod_headers.c>
