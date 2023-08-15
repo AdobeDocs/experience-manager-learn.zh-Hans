@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation 教程
 user-guide-description: Adobe Experience Manager Foundation 的视频和教程集合。
 sub-product: Experience Manager
 index: y
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: fc183d88bf772944562d0dd825b4d590266f3ffd
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 17%
+source-wordcount: '219'
+ht-degree: 16%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 17%
 + 管理 {#administration}
    + [了解升级AEM的原因](./administration/understand-reasons-to-upgrade.md)
    + [使用oak-run.jar管理索引](./administration/use-oak-run-jar-to-manage-indexes.md)
-   + [使用联机修订版清理](./administration/use-online-revision-clean-up.md)
+   + [使用在线修订版清理](./administration/use-online-revision-clean-up.md)
    + [使用系统概述功能板](./administration/use-the-system-overview-dashboard.md)
    + [URL重定向](./administration/url-redirection.md)
 + 身份验证 {#authentication}
@@ -40,9 +40,10 @@ ht-degree: 17%
    + [使用项目母版](./projects/use-project-masters.md)
 + 安全性 {#security}
    + [AEM安全通知（2018年11月）](./security/aem-security-notification-2018-11.md)
-   + [为跨源资源共享(CORS)开发](./security/develop-for-cross-origin-resource-sharing.md)
+   + [为跨源资源共享(CORS)而开发](./security/develop-for-cross-origin-resource-sharing.md)
    + [了解跨源资源共享 (CORS)](./security/understand-cross-origin-resource-sharing.md)
    + [使用SSL向导](./security/use-the-ssl-wizard.md)
+   + [ModSecurity CRS DoS攻击防护](./security/modsecurity-crs-dos-attack-protection.md)
 + 工作流 {#workflow}
    + [使用工作流编辑器](./workflow/use-the-workflow-editor.md)
    + [使用工作流](./workflow/use-workflow.md)
@@ -54,7 +55,7 @@ ht-degree: 17%
    + [如何调查AEM中的SAML相关问题](./troubleshooting/how-to-investigate-saml-related-issues.md)
    + [如何调查AEM中与搜索相关的问题](./troubleshooting/how-to-investigate-search-related-issues.md)
    + [如何设置Oak登录令牌会话过期](./troubleshooting/how-to-set-the-oak-login-token-session-expiration.md)
-   + [如何解决与Jetty配置相关的问题](./troubleshooting/how-to-troubleshoot-issues-related-to-jetty-configuration.md)
+   + [如何排除与Jetty配置相关的问题](./troubleshooting/how-to-troubleshoot-issues-related-to-jetty-configuration.md)
    + [如何解决性能相关问题](./troubleshooting/how-to-troubleshoot-performance-related-issues.md)
    + [解决AEM中内存相关问题的步骤](./troubleshooting/steps-to-resolve-memory-related-issues.md)
    + [解决AEM中复制问题的步骤](./troubleshooting/steps-to-resolve-replication-issues.md)
