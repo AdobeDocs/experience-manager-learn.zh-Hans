@@ -1,5 +1,5 @@
 ---
-title: 启用ModSecurity以保护AEM站点免受DoS攻击
+title: 使用ModSecurity保护AEM站点免受DoS攻击
 description: 了解如何使用OWASP ModSecurity核心规则集(CRS)启用ModSecurity以保护您的站点免受拒绝服务(DoS)攻击。
 feature: Security
 version: 6.5, Cloud Service
@@ -10,7 +10,7 @@ kt: 10385
 thumbnail: KT-10385.png
 doc-type: article
 last-substantial-update: 2023-08-15T00:00:00Z
-source-git-commit: fc183d88bf772944562d0dd825b4d590266f3ffd
+source-git-commit: 31d54b14fc6381e8b231cf85d3c808b88c7df098
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 1%
@@ -53,7 +53,7 @@ OWSAP®还提供 [OWASP® ModSecurity核心规则集(CRS)](https://github.com/co
 
 1. 创建 `modsec/crs` 文件夹范围 `dispatcher/src/conf.d/` 在您的AEM项目代码中。 例如，在 [AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd).
 
-   ![AEM项目代码中的CRS文件夹 — ModSecurity](assets/modsecurity-crs/crs-folder-in-aem-dispatcher-module.png)
+   ![AEM项目代码中的CRS文件夹 — ModSecurity](assets/modsecurity-crs/crs-folder-in-aem-dispatcher-module.png){width="200" zoomable="yes"}
 
 1. 复制 `coreruleset-X.Y.Z/rules` 将下载的CRS发行包中的文件夹移至 `dispatcher/src/conf.d/modsec/crs` 文件夹。
 1. 复制 `coreruleset-X.Y.Z/crs-setup.conf.example` 文件从下载的CRS发行版软件包下载到 `dispatcher/src/conf.d/modsec/crs` 文件夹并将其重命名为 `crs-setup.conf`.
@@ -69,7 +69,7 @@ OWSAP®还提供 [OWASP® ModSecurity核心规则集(CRS)](https://github.com/co
 
    请参阅WKND项目代码中重命名的CRS规则和配置文件。
 
-   ![AEM项目代码中已禁用CRS规则 — ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="100" zoomable="yes"}
+   ![AEM项目代码中已禁用CRS规则 — ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="200" zoomable="yes"}
 
 ## 启用和配置拒绝服务(DoS)保护规则
 
