@@ -5,9 +5,9 @@ recommendations: disable
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: aem-assets-essentials-videos.jpg
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 137f7166a6a10ecd95a85114b27a1a3bd608b965
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '134'
 ht-degree: 14%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 14%
 
 Experience Manager Assets Essentials提供了简化的用户界面，以实现轻量级的资源管理和协作。
 
-请观看这些视频，了解如何使用Assets Essentials管理您的资源，以及如何将其与Adobe历程Orchestrator集成！
+请观看这些视频，了解如何使用Assets Essentials管理您的资源，以及如何将其与Adobe Workfront和Adobe历程Orchestrator集成！
 
 ## 了解有关Assets Essentials的更多信息
 
@@ -46,7 +46,7 @@ Experience Manager Assets Essentials提供了简化的用户界面，以实现�
       </a>
    </div>
    <p>
-      <em>查看Assets Essentials产品文档！</em>
+      <em>请查看Assets Essentials产品文档！</em>
    <p>
 </td>
 <td>

@@ -1,6 +1,6 @@
 ---
-title: 在服务器上部署示例资产
-description: 获取在本地服务器上工作的用例
+title: 在服务器上部署示例资源
+description: 在本地服务器上获取使用案例
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -9,9 +9,9 @@ level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 44f4261b-d6fe-42ad-a3aa-2a36ca897b5e
-source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
+source-git-commit: 137f7166a6a10ecd95a85114b27a1a3bd608b965
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 ## 部署示例react应用程序
 
 * [下载示例react应用程序](assets/mult-step-form1.zip)
-* 将react应用程序的内容解压缩到一个新文件夹中
+* 在新文件夹中解压缩react应用程序的内容
 * 导航到文件夹并运行以下命令
 
 ```java
@@ -56,6 +56,8 @@ npm start
  
 ```
 
-要启用从REACT应用程序对AEM端点的POST调用，您需要在AdobeGranite跨源资源共享策略配置的允许的原始项字段中指定相应的条目。
+要启用从REACT应用程序对AEM端点的POST调用，您需要在AdobeGranite跨源资源共享策略配置的允许源字段中指定相应的条目。
 
-![cors-setting](assets/cors-settings.png)
+![cors设置](assets/cors-settings.png)
+
+请参阅 [使用AEM了解CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html) 有关CORS配置选项的更多详细信息。
