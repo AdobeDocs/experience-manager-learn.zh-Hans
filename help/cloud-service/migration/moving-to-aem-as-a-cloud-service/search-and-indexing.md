@@ -1,5 +1,5 @@
 ---
-title: 在AEMas a Cloud Service中搜索和编制索引
+title: 在AEMas a Cloud Service中搜索和索引
 description: 了解AEMas a Cloud Service的搜索索引、如何转换AEM 6索引定义以及如何部署索引。
 version: Cloud Service
 feature: Search
@@ -9,9 +9,9 @@ level: Experienced
 kt: 8634
 thumbnail: 336963.jpeg
 exl-id: f752df86-27d4-4dbf-a3cb-ee97b7d9a17e
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 77b960315c07ba194642a412a0cc6049edcf7bd2
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '332'
 ht-degree: 2%
 
 ---
@@ -28,20 +28,22 @@ ht-degree: 2%
 
 作为重构代码库的一部分，请使用 [索引转换器工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) 将自定义Oak索引定义转换为与AEMas a Cloud Service兼容的索引定义。
 
+查看 [索引转换器文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html) 获取完整的和当前的Index Converter功能。
+
 ## 关键活动
 
 + 使用 [Adobe I/O工作流迁移程序](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) 工具，用于迁移资源处理工作流以使用Asset compute微服务。
 + 设置 [本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans) 并部署自定义索引。 确保更新的索引是最新的。
 + 将更新的代码库部署到AEMas a Cloud Service开发环境，并继续验证。
-+ 如果修改开箱即用索引 **始终** 从最新版本上运行的AEMas a Cloud Service环境中复制最新的索引定义。 修改复制的索引定义以满足您的需要。
++ 如果修改开箱即用索引 **始终** 从最新版本上运行的AEMas a Cloud Service环境中复制最新索引定义。 修改复制的索引定义以满足您的需要。
 
-## 动手练习
+## 实践练习
 
 通过尝试通过这个实践练习学到的知识来应用您的知识。
 
 在尝试动手练习之前，请确保您已观看并了解上述视频以及以下材料：
 
-+ [对AEMas a Cloud Service有不同的思考](./introduction.md)
++ [以不同的方式思考AEMas a Cloud Service](./introduction.md)
 + [存储库现代化](./repository-modernization.md)
 
 此外，请确保您已完成之前的实践练习：
