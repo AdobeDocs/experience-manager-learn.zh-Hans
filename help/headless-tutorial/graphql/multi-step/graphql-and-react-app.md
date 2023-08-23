@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
+source-git-commit: 65244bf81666c20fd5d9d804ad8ea97df8b83d9f
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1218'
 ht-degree: 2%
 
 ---
@@ -489,6 +489,10 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 ## 尝试该应用程序
 
 查看应用程序 [http://localhost:3000/](http://localhost:3000/) 并单击 _成员_ 链接。 此外，您还可以通过在AEM中添加内容片段来向团队Alpha添加更多团队和/或成员。
+
+>[!IMPORTANT]
+>
+>要验证您的实施更改，或者如果在进行上述更改后无法使应用程序正常工作，请参阅 [基础教程](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial) 解决方案分支。
 
 ## 在幕后工作
 
