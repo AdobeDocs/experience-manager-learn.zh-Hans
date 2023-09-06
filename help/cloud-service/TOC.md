@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+source-git-commit: 6cbd8f3c49d44e75337715c35c198008da8ae7b9
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1023'
 ht-degree: 21%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 21%
                + [导出为XML](./developing/extensibility/ui/content-fragments/examples/editor-export-to-xml.md)
                + [RTE工具栏按钮](./developing/extensibility/ui/content-fragments/examples/editor-rte-toolbar.md)
                + [RTE小组件](./developing/extensibility/ui/content-fragments/examples/editor-rte-widget.md)
-               + [RTE徽章](./developing/extensibility/ui/content-fragments/examples/editor-rte-badges.md)
+               + [RTE标记](./developing/extensibility/ui/content-fragments/examples/editor-rte-badges.md)
    + 开发基础{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本地开发环境](./developing/basics/local-development-environment.md)
@@ -94,12 +94,12 @@ ht-degree: 21%
       + [AEM Maven项目](./developing/projects/maven-project-structure.md)
       + [清理AEM Maven项目](./developing/projects/remove-samples.md)
    + OSGi服务{#osgi-services}
-      + [OSGi服务基础](./developing/osgi-services/basics.md)
+      + [OSGi服务基础知识](./developing/osgi-services/basics.md)
       + [OSGi组件生命周期](./developing/osgi-services/lifecycle.md)
       + [OSGi配置基础](./developing/osgi-services/configurations.md)
       + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
    + 高级{#advanced}
-      + [缓存页面变体](./developing/advanced/variant-caching.md)
+      + [缓存页面变量](./developing/advanced/variant-caching.md)
       + [CSRF保护](./developing/advanced/csrf-protection.md)
       + [自定义命名空间](./developing/advanced/custom-namespaces.md)
       + [服务用户](./developing/advanced/service-users.md)
@@ -121,13 +121,17 @@ ht-degree: 21%
    + 调试AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [概述](./debugging/cloud-service/overview.md)
       + [日志](./debugging/cloud-service/logs.md)
-      + [构建和部署](./debugging/cloud-service/build-and-deployment.md)
+      + [生成和部署](./debugging/cloud-service/build-and-deployment.md)
       + [开发人员控制台](./debugging/cloud-service/developer-console.md)
       + [存储库浏览器](./debugging/cloud-service/repository-browser.md)
       + 风险{#risks}
          + [遍历警告](./debugging/cloud-service/risks/traversals.md)
 + 内容交付{#content-delivery}
    + [URL重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html)
++ 缓存{#caching}
+   + [概述](./caching/overview.md)
+   + [AEM Publish服务](./caching/publish.md)
+   + [AEM Author服务](./caching/author.md)
 + 访问AEM{#accessing}
    + [概述](./accessing/overview.md)
    + [Adobe IMS用户](./accessing/adobe-ims-users.md)
@@ -144,14 +148,14 @@ ht-degree: 21%
    + [专用出口IP地址](./networking/dedicated-egress-ip-address.md)
    + [虚拟专用网络](./networking/vpn.md)
    + 代码示例{#examples}
-      + [非标准端口上的HTTP/HTTPS，用于灵活端口出口](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
+      + [非标准端口上的HTTP/HTTPS，实现灵活端口出口](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
       + [专用出口IP地址/VPN的HTTP/HTTPS](./networking/examples/http-dedicated-egress-ip-vpn.md)
-      + [使用数据源池的SQL连接](./networking/examples/sql-datasourcepool.md)
-      + [使用Java SQL API的SQL连接](./networking/examples/sql-java-apis.md)
+      + [使用DataSourcePool的SQL连接](./networking/examples/sql-datasourcepool.md)
+      + [SQL连接使用Java SQL API](./networking/examples/sql-java-apis.md)
       + [电子邮件服务](./networking/examples/email-service.md)
 + 迁移 {#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
-   + [批量导入资产](./migration/bulk-import.md)
+   + [批量导入资源](./migration/bulk-import.md)
    + 移动到 AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
       + [简介](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
       + [入门培训](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
@@ -173,7 +177,7 @@ ht-degree: 21%
          + [通信](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
    + Cloud Acceleration Manager {#cloud-acceleration-manager}
       + [简介](./migration/cloud-acceleration-manager/introduction.md)
-      + [就绪状态和Best Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
+      + [准备工作和Best Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [实施阶段](./migration/cloud-acceleration-manager/implementation-phase.md)
       + [内容传输工具](./migration/cloud-acceleration-manager/content-transfer-tool.md)
       + [代码重构工具](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
@@ -185,7 +189,7 @@ ht-degree: 21%
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + [内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html)
 + Forms{#forms}
-   + 针对Formsas a Cloud Service开发{#developing-for-cloud-service}
+   + 针对Formsas a Cloud Service进行开发{#developing-for-cloud-service}
       + [1 — 快速入门](./forms/developing-for-cloud-service/getting-started.md)
       + [2 — 安装IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [3 — 设置Git](./forms/developing-for-cloud-service/setup-git.md)
@@ -193,7 +197,7 @@ ht-degree: 21%
       + [5 — 构建表单](./forms/developing-for-cloud-service/deploy-your-first-form.md)
       + [6 — 自定义提交处理程序](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
       + [7 — 启用Forms Portal组件](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [8 — 包括Cloud Services和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [8 — 包括Cloud Service和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [9 — 上下文感知云配置](./forms/developing-for-cloud-service/context-aware-fdm.md)
       + [10 — 推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [11 — 部署到开发环境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
@@ -209,8 +213,8 @@ ht-degree: 21%
       + [配置收入面板](./forms/create-first-af/configure-income-panel.md)
       + [“配置资源”面板](./forms/create-first-af/configure-assets-panel.md)
       + [配置开始面板](./forms/create-first-af/configure-start-panel.md)
-      + [添加和配置工具栏](./forms/create-first-af/add-configure-toolbar.md)
-   + 使用Headless表单的自定义提交服务{#custom-submit-headless-forms}
+      + [添加并配置工具栏](./forms/create-first-af/add-configure-toolbar.md)
+   + 带Headless表单的自定义提交服务{#custom-submit-headless-forms}
       + [1 — 简介](./forms/custom-submit-headless-forms/introduction.md)
       + [2 — 创建自定义提交服务](./forms/custom-submit-headless-forms/custom-submit-service.md)
       + [3 — 显示响应](./forms/custom-submit-headless-forms/handle-response-react-app.md)
@@ -249,13 +253,13 @@ ht-degree: 21%
       + [预填表单](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [查询提交](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + 保存并继续填写表单{#prefill-azure-storage}
-      + [1.简介](./forms/prefill-azure-storage/introduction.md)
+      + [1 — 简介](./forms/prefill-azure-storage/introduction.md)
       + [2 — 创建页面组件](./forms/prefill-azure-storage/page-component.md)
       + [3 — 创建自适应表单模板](./forms/prefill-azure-storage/associate-page-component.md)
       + [4 — 创建Azure存储集成](./forms/prefill-azure-storage/create-fdm.md)
       + [5 — 创建SendGrid集成](./forms/prefill-azure-storage/send-grid-fdm.md)
       + [6 — 创建自适应表单](./forms/prefill-azure-storage/create-af.md)
-      + [7 — 部署示例资产](./forms/prefill-azure-storage/deploy-sample-assets.md)
+      + [7 — 部署示例资源](./forms/prefill-azure-storage/deploy-sample-assets.md)
 
    + 创建审阅工作流{#create-aem-workflow}
       + [将工作流存储外部化](./forms/create-aem-workflow/externalize-workflow.md)
@@ -285,7 +289,7 @@ ht-degree: 21%
       + [创建表单数据模型](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [测试表单提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [测试点击事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
-   + 将表单提交存储在一个驱动器和Sharepoint中{#one-drive}
+   + 将表单提交存储在一个驱动器和SharePoint中{#one-drive}
       + [将表单数据存储在一个驱动器中](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [将表单数据存储在SharePoint中](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
 + asset compute可扩展性{#asset-compute}
