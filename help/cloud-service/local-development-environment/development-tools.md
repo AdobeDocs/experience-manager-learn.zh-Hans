@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
+source-git-commit: 7a240374c42e2555be25e682c803f51f442fb7f7
 workflow-type: tm+mt
-source-wordcount: '1484'
+source-wordcount: '1483'
 ht-degree: 7%
 
 ---
@@ -70,11 +70,27 @@ Homebrew是适用于macOS、Windows和Linux的开源包管理器。 所有的支
 1. 打开终端
 1. 通过运行以下命令检查是否已安装Homebrew： `brew --version`.
 1. 如果未安装Homebrew，请安装Homebrew
-   + [在macOS上安装Homebrew](https://brew.sh/)
-      + macOS上的Homebrew要求 [Xcode](https://apps.apple.com/us/app/xcode/id497799835) 或 [命令行工具](https://developer.apple.com/download/more/)，可通过命令安装：
-         + `xcode-select --install`
-   + [在Linux上安装Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
-   + [在Windows 10上安装Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+[macOS上的自述](https://brew.sh/) 需要 [Xcode](https://apps.apple.com/us/app/xcode/id497799835) 或 [命令行工具](https://developer.apple.com/download/more/)，可通过命令安装：
+
+```shell
+$ xcode-select --install
+```
+
+>[!TAB Windows]
+
+[在Windows 10上安装Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!TAB Linux]
+
+[在Linux上安装Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!ENDTABS]
+
 1. 通过运行以下命令验证是否已安装Homebrew： `brew --version`
 
 ![Homebrew](./assets/development-tools/homebrew.png)
@@ -161,7 +177,7 @@ Apache Maven是一个开源Java命令行工具，用于构建从AEM项目Maven�
 
 此 [ADOBE I/OCLI](https://github.com/adobe/aio-cli)，或 `aio`，提供对各种Adobe服务的命令行访问，包括 [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) 和 [asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). Adobe I/OCLI在AEMas a Cloud Service的开发中起着不可或缺的作用，因为它使开发人员能够：
 
-+ AEM as aCloud Services服务中的尾日志
++ AEM as aCloud Service服务中的尾日志
 + 从CLI管理Cloud Manager管道
 + 部署到 [AEM快速开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
 
