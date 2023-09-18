@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: adfb805615d2abe34458d5aea685ae47517c5548
+source-git-commit: bac637440d1cc5af0e0abb119ca2f4e93f69cf34
 workflow-type: tm+mt
-source-wordcount: '1845'
+source-wordcount: '1851'
 ht-degree: 2%
 
 ---
@@ -176,6 +176,7 @@ ht-degree: 2%
    + [从xml文档提取节点](custom-workflow-steps/extract-xml-node.md)
    + [将文档保存到文件系统](custom-workflow-steps/write-payload-document.md)
    + [将提交的数据保存在字符串变量中](custom-workflow-steps/save-submitted-data-in-string-variable.md)
+   + [从文档列表中提取文档](custom-workflow-steps/extract-document-from-list.md)
 + 自定义工作流组件{#custom-workflow-component}
    + [1 — 简介](custom-workflow-component/introduction.md)
    + [2写Java代码](custom-workflow-component/custom-process-step-aem-workflow.md)
