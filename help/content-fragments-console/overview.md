@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Catalog
 last-substantial-update: 2023-05-12T00:00:00Z
 exl-id: 68caf431-8d81-4a72-a768-7b04082870d3
-source-git-commit: 73c7a13586edc5dbe16c16e017ee6f8ac91c1380
+source-git-commit: 89bc02b9ead98063ea31301b2e1f5a4d43cb5760
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 12%
+source-wordcount: '241'
+ht-degree: 11%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 12%
 
 ![AEM内容片段编辑器](./assets/main.png)
 
-Adobe Experience Manager的内容片段控制台使管理和创作内容片段更轻松！ 了解如何通过这些视频充分利用内容片段控制台。
+Adobe Experience Manager的内容片段控制台使管理和创作内容片段更加容易！ 了解如何通过这些视频充分利用内容片段控制台。
 
 查看 [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html)  以了解内容片段控制台及其功能的完整详细信息。
 
@@ -28,17 +28,17 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
 
 
 <div class="columns is-multiline">
-    <!-- Overview -->
+    <!-- Console overview -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Overview" tabindex="1">
+      aria-label="Console overview" tabindex="1">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./basics/content-fragments-console.md" title="概述"
+            <a href="./basics/content-fragments-console.md" title="控制台概述"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3409492?format=jpeg"
-                alt="概述">
+                alt="控制台概述">
             </a>
           </figure>
         </div>
@@ -47,7 +47,7 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">5 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./basics/content-fragments-console.md" title="概述">概述</a>
+              <a href="./basics/content-fragments-console.md" title="概述">控制台概述</a>
             </p>
             <p class="is-size-6">内容片段控制台的简要概述。</p>
             <a href="./basics/content-fragments-console.md" class="spectrum-Button
@@ -60,6 +60,38 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
         </div>
       </div>
     </div>
+    <!-- Editor overview -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Editor overview" tabindex="1">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./basics/content-fragment-editor.md" title="编辑器概述"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3424373?format=jpeg"
+                alt="编辑器概述">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">4 分钟</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./basics/content-fragment-editor.md" title="概述">编辑器概述</a>
+            </p>
+            <p class="is-size-6">内容片段编辑器的简短概述。</p>
+            <a href="./basics/content-fragment-editor.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">观看视频</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>    
     <!-- Fast filtering -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
       aria-label="Fast filtering" tabindex="2">
@@ -173,7 +205,7 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./editor/rte-variant-compare.md" title="RTE变量比较">RTE变量比较</a>
             </p>
-            <p class="is-size-6">轻松地跨渠道对齐富文本内容。</p>
+            <p class="is-size-6">跨渠道轻松对齐富文本内容。</p>
             <a href="./editor/rte-variant-compare.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">

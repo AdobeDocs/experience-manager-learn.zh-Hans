@@ -10,10 +10,10 @@ feature: Content Fragments
 topic: Content Management
 role: User
 team: TM
-source-git-commit: 73c7a13586edc5dbe16c16e017ee6f8ac91c1380
+source-git-commit: 89bc02b9ead98063ea31301b2e1f5a4d43cb5760
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 25%
+source-wordcount: '70'
+ht-degree: 22%
 
 ---
 
@@ -22,13 +22,14 @@ ht-degree: 25%
 
 + [概述](overview.md)
 + 基本信息{#basics}
-   + [概述](./basics/content-fragments-console.md)
+   + [控制台概述](./basics/content-fragments-console.md)
+   + [编辑器概述](./basics/content-fragment-editor.md)
 + 搜索和发现{#search}
    + [快速筛选](search/fast-filtering.md)
    + [引用](search/references.md)
 + 编辑器{#editor}
    + [语言副本](editor/language-copies.md)
-   + [新编辑器切换](editor/new-editor-toggle.md)
+   + [新建编辑器切换](editor/new-editor-toggle.md)
    + [非资产内容引用](editor/non-asset-content-references.md)
    + [RTE变量比较](editor/rte-variant-compare.md)
 + [可扩展性](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/extensibility/content-fragments/overview.html)
