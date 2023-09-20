@@ -7,24 +7,29 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 46728ac6ad37590413e247d23262233626b0575b
+source-git-commit: 6754ccd7c17bcfa30b7200cb67f5ebd290912cb4
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '376'
 ht-degree: 3%
 
 ---
 
-# 为跨源资源共享(CORS)开发
+# 为跨源资源共享(CORS)而开发
 
-利用的简短示例 [!DNL CORS] 通过客户端JavaScript从外部Web应用程序访问AEM内容。
+利用的简短示例 [!DNL CORS] 通过客户端JavaScript从外部Web应用程序访问AEM内容。 此示例使用CORS OSGi配置在AEM上启用CORS访问。 在以下情况下，OSGi配置方法是可行的：
+
++ 访问AEM Publish内容的来源只有一个
++ AEM创作需要CORS访问权限
+
+如果需要对AEM Publish的多源访问，请参阅 [本文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
-在本视频中：
+在此视频中：
 
 * **www.example.com** 通过以下方式映射到本地主机 `/etc/hosts`
 * **aem-publish.local** 通过以下方式映射到本地主机 `/etc/hosts`
-* SimpleHTTPServer(的包装器 [[!DNL Python]的SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html))通过端口8000为HTML页提供服务。
+* SimpleHTTPServer（的包装器） [[!DNL Python]的SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html))通过端口8000提供HTML页面。
    * _Mac App Store中不再提供。 使用类似于 [吉夫](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)._
 * [!DNL AEM Dispatcher] 运行于 [!DNL Apache HTTP Web Server] 2.4和反向代理请求 `aem-publish.local` 到 `localhost:4503`.
 
@@ -35,9 +40,9 @@ ht-degree: 3%
 此网页的逻辑是
 
 1. 单击按钮时
-1. 发出 [!DNL AJAX GET] 请求 `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
+1. 发出 [!DNL AJAX GET] 请求给 `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
 1. 检索 `jcr:title` 形成JSON响应
-1. 注入 `jcr:title` 进入DOM
+1. 插入 `jcr:title` 进入DOM
 
 ```xml
 <html>
@@ -96,7 +101,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### 允许CORS请求标头
 
-允许必需的 [传递到AEM以进行处理的HTTP请求标头](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，它们必须在Disaptcher的 `/clientheaders` 配置。
+允许必需的 [要传递到AEM以进行处理的HTTP请求标头](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，它们必须在Dispatcher的 `/clientheaders` 配置。
 
 ```
 /clientheaders {
