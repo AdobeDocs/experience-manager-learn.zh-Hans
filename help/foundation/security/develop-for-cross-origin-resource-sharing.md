@@ -7,7 +7,7 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 6754ccd7c17bcfa30b7200cb67f5ebd290912cb4
+source-git-commit: 1114ec01555baa1c6ffc2ccc5e77165ec9827e4d
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 3%
@@ -18,8 +18,8 @@ ht-degree: 3%
 
 利用的简短示例 [!DNL CORS] 通过客户端JavaScript从外部Web应用程序访问AEM内容。 此示例使用CORS OSGi配置在AEM上启用CORS访问。 在以下情况下，OSGi配置方法是可行的：
 
-+ 访问AEM Publish内容的来源只有一个
-+ AEM创作需要CORS访问权限
+* 访问AEM Publish内容的来源只有一个
+* AEM创作需要CORS访问权限
 
 如果需要对AEM Publish的多源访问，请参阅 [本文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
 
