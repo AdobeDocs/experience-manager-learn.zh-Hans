@@ -10,7 +10,7 @@ kt: 10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2023-08-08T00:00:00Z
-source-git-commit: f619c431d91271b2031dcb233f3e08c3008b78ed
+source-git-commit: 58347d4f8ef50375385342671f68c26502aecba4
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 2%
@@ -46,7 +46,7 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 | 需要CORS OSGi配置 | ✔ | ✘ | ✘ |
 
 
-以下示例为AEM作者定义OSGi配置(`../config.author/..`)，因此它仅在AEM Author服务上处于活动状态。
+以下示例为AEM Author (`../config.author/..`)，因此它仅在AEM Author服务上处于活动状态。
 
 关键配置属性包括：
 
@@ -56,7 +56,7 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
    + 要支持体验片段，请添加以下模式： `/content/experience-fragments/.*`
 + `supportedmethods` 指定CORS请求允许的HTTP方法。 要支持AEM GraphQL持久查询（和体验片段），请添加 `GET` .
 + `supportedheaders` 包含 `"Authorization"` 因为应该授权向AEM作者发出请求。
-+ `supportscredentials` 设置为 `true` 由于请求给AEM作者，因此应获得授权。
++ `supportscredentials` 设置为 `true` 由于请求给AEM Author，因此应获得授权。
 
 [了解有关CORS OSGi配置的更多信息。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
 
@@ -101,12 +101,12 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 
 ## AEM 发布
 
-在AEM Publish（和预览）服务上启用CORS与AEM Author服务不同。 AEM发布服务要求将AEM Dispatcher配置添加到AEM发布的Dispatcher配置中。 AEM发布不使用 [OSGi配置](#osgi-configuration).
+在AEM Publish （和Preview）服务上启用CORS与AEM Author服务不同。 AEM Publish服务要求将AEM Dispatcher配置添加到AEM Publish的Dispatcher配置。 AEM Publish不使用 [OSGi配置](#osgi-configuration).
 
 在AEM发布上配置CORS时，请确保：
 
-+ 此 `Origin` 无法通过删除 `Origin` 标头（如果之前已添加）来自AEM Dispatcher项目的 `clientheaders.any` 文件。 任何 `Access-Control-` 标头应从 `clientheaders.any` 文件和Dispatcher管理它们，而不是AEM Publish服务。
-+ 如果您拥有任何 [CORS OSGi配置](#osgi-configuration) 在AEM Publish服务上启用后，您必须删除它们并将其配置迁移到 [Dispatcher vhost配置](#set-cors-headers-in-vhost) 如下所述。
++ 此 `Origin` AEM无法通过删除 `Origin` 标头（如果之前已添加）来自AEM Dispatcher项目的 `clientheaders.any` 文件。 任何 `Access-Control-` 标头应从 `clientheaders.any` 文件和Dispatcher管理它们，而不是AEM Publish服务。
++ 如果您拥有任何 [CORS OSGi配置](#osgi-configuration) 已在AEM Publish服务上启用，您必须删除它们并将其配置迁移到 [Dispatcher vhost配置](#set-cors-headers-in-vhost) 如下所述。
 
 ### Dispatcher 配置
 
@@ -121,7 +121,7 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 1. 在Dispatcher配置项目中打开AEM Publish服务的vhost配置文件，通常位于 `dispatcher/src/conf.d/available_vhosts/<example>.vhost`
 2. 复制 `<IfDefine ENABLE_CORS>...</IfDefine>` 阻止以下内容，将其添加到已启用的vhost配置文件中。
 
-   ```{ highlight="19"}
+   ```{ highlight="17"}
    <VirtualHost *:80>
      ...
      <IfModule mod_headers.c>
@@ -176,7 +176,7 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
    </VirtualHost>
    ```
 
-3. 通过更新以下行中的正则表达式，匹配访问AEM Publish服务的所需源。 如果需要多个原点，请复制此行并更新每个原点/原点阵列。
+3. 通过更新以下行中的正则表达式，匹配访问您的AEM Publish服务的所需源。 如果需要多个原点，请复制此行并更新每个原点/原点阵列。
 
    ```
    SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*.your-domain.tld(:\d+)?$)#" CORSTrusted=true
