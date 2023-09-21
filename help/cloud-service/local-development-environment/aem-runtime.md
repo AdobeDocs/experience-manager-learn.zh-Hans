@@ -1,6 +1,6 @@
 ---
-title: 为AEMas a Cloud Service开发设置本地AEM运行时
-description: 使用AEMas a Cloud ServiceSDK的快速入门Jar设置本地AEM运行时。
+title: 为AEMas a Cloud Service开发设置本地AEM SDK
+description: 使用AEMas a Cloud ServiceSDK的快速入门Jar设置本地AEM SDK运行时。
 feature: Developer Tools
 version: Cloud Service
 kt: 4678, 4677
@@ -10,14 +10,14 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
+source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1793'
 ht-degree: 10%
 
 ---
 
-# 设置本地AEM运行时 {#set-up-local-aem-runtime}
+# 设置本地AEM SDK {#set-up-local-aem-sdk}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
@@ -76,13 +76,13 @@ AEMas a Cloud ServiceSDK(或AEM SDK)包含用于在本地运行AEM创作和发�
 
 1. 解压缩下载的 `aem-sdk-XXX.zip` 文件
 
-## 设置本地AEM作者服务{#set-up-local-aem-author-service}
+## 设置本地AEM创作服务{#set-up-local-aem-author-service}
 
 本地AEM创作服务为开发人员提供了一个本地体验，数字营销人员/内容作者可以共享该体验来创建和管理内容。  AEM Author Service设计作为创作和预览环境，允许可以针对它执行大多数功能开发验证，使其成为本地开发过程的重要元素。
 
 1. 创建文件夹 `~/aem-sdk/author`
 1. 复制 __快速入门JAR__ 文件到  `~/aem-sdk/author` 并将其重命名为 `aem-author-p4502.jar`
-1. 通过从命令行执行以下命令来启动本地AEM创作服务：
+1. 通过从命令行执行以下命令来启动本地AEM Author Service：
    + `java -jar aem-author-p4502.jar`
       + 提供管理员密码作为 `admin`. 可接受任何管理员密码，但建议使用默认密码进行本地开发，以减少重新配置的需要。
 
@@ -121,13 +121,13 @@ $ java -jar aem-author-p4502.jar
 >[!ENDTABS]
 
 
-## 设置本地AEM发布服务
+## 设置本地AEM Publish服务
 
-本地AEM发布服务为开发人员提供AEM的最终用户将拥有的本地体验，例如浏览驻留在AEM上的网站。 本地AEM发布服务非常重要，因为它与AEM SDK的 [Dispatcher工具](./dispatcher-tools.md) 并允许开发人员对面向最终用户的体验进行抽烟测试和微调。
+本地AEM Publish Service为开发人员提供了AEM的本地体验最终用户，例如浏览基于AEM的网站。 本地AEM发布服务非常重要，因为它与AEM SDK的集成 [Dispatcher工具](./dispatcher-tools.md) 并允许开发人员对面向最终用户的体验进行抽烟测试和微调。
 
 1. 创建文件夹 `~/aem-sdk/publish`
 1. 复制 __快速入门JAR__ 文件到  `~/aem-sdk/publish` 并将其重命名为 `aem-publish-p4503.jar`
-1. 通过从命令行执行以下操作来启动本地AEM发布服务：
+1. 通过从命令行执行以下操作来启动本地AEM Publish Service：
    + `java -jar aem-publish-p4503.jar`
       + 提供管理员密码作为 `admin`. 可接受任何管理员密码，但建议使用默认密码进行本地开发，以减少重新配置的需要。
 
@@ -168,7 +168,7 @@ $ java -jar aem-publish-p4503.jar
 
 ## 在预发行模式中设置本地AEM服务
 
-可以在中启动本地AEM运行时 [预发行模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html) 允许开发人员针对AEMas a Cloud Service的下一个版本的功能进行构建。 通过传递 `-r prerelease` 本地AEM运行时的第一个启动时的参数。 这可以同时用于本地AEM创作和AEM发布服务。
+可以在中启动本地AEM运行时 [预发行模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html) 允许开发人员针对AEMas a Cloud Service的下一个版本的功能进行构建。 通过传递 `-r prerelease` 本地AEM运行时的第一个启动时的参数。 这可以同时用于本地AEM Author和AEM Publish服务。
 
 
 >[!BEGINTABS]
@@ -259,14 +259,14 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 请注意，端口号可以是本地开发计算机上的任何可用端口，但按照惯例可以：
 
-+ 端口 __4502__ 用于 __本地AEM创作服务__
-+ 端口 __4503__ 用于 __本地AEM发布服务__
++ 端口 __4502__ 用于 __本地AEM Author服务__
++ 端口 __4503__ 用于 __本地AEM Publish服务__
 
 更改这些配置文件可能需要调整AEM SDK配置
 
 ## 停止本地AEM运行时
 
-要停止本地AEM运行时（AEM创作或发布服务），请打开用于启动AEM运行时的命令行窗口，然后点击 `Ctrl-C`. 等待AEM关闭。 当关闭过程完成时，命令行提示符可用。
+要停止本地AEM运行时(AEM Author或Publish服务)，请打开用于启动AEM运行时的命令行窗口，然后点击 `Ctrl-C`. 等待AEM关闭。 当关闭过程完成时，命令行提示符可用。
 
 ## 可选的本地AEM运行时设置任务
 
