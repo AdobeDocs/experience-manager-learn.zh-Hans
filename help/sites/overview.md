@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: d24649d4b1411f57a46595edddb601ac49b51643
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 13%
@@ -14,7 +14,9 @@ ht-degree: 13%
 
 # AEM Sites视频和教程 {#overview}
 
-Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本用户指南包含了有关AEM Sites的众多特性和功能的视频和教程。
+{{edge-delivery-services}}
+
+Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本用户指南包含有关AEM Sites的众多特性和功能的视频和教程。
 
 
 <div id="whats-new-section">
@@ -22,24 +24,19 @@ Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本�
 ## 新增功能
 
 * **[将启动项与AEM Sites结合使用（视频）](./page-authoring/launches.md)**
-
-   *了解AEM Sites的启动以及如何使用它们为未来版本准备网站内容。*
+  *了解AEM Sites的启动项以及如何使用它们为未来发布准备网站内容。*
 
 * **[使用AEM组件自定义Adobe客户端数据层（教程）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
-
-   *了解如何使用自定义AEM组件中的内容更新Adobe客户端数据层。*
+  *了解如何使用自定义AEM组件中的内容更新Adobe客户端数据层。*
 
 * **[AEM Headless GraphQL快速入门（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
-
-   *如何使用AEM GraphQL API显示AEM中的内容以供本机移动设备应用程序使用。*
+  *如何使用AEM GraphQL API公开要由本机移动设备应用程序使用的AEM中的内容。*
 
 * **[使用内容片段（视频系列）](./content-fragments/content-fragments-feature-video-use.md)**
-
-   *内容片段是可重复使用的与渠道无关的内容片段。*
+  *内容片段是与渠道无关且可以重复使用的内容片段。*
 
 * **[使用SPA编辑器（视频）](./spa-editor/spa-editor-framework-feature-video-use.md)**
-
-   *了解单页应用程序(SPA)的AEM编辑功能。*
+  *了解针对单页应用程序(SPA)的AEM编辑功能。*
 
 </div>
 
@@ -84,11 +81,11 @@ Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本�
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-      <img alt="AEM SPA Editor快速入门" src="./assets/aem-wknd-spa-editor-tutorial.png" />
+      <img alt="AEM SPA编辑器快速入门" src="./assets/aem-wknd-spa-editor-tutorial.png" />
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-        <strong>AEM SPA Editor快速入门</strong>
+        <strong>AEM SPA编辑器快速入门</strong>
       </a>
     </div>
     <p>

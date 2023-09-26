@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: a14c511f-504a-48ce-864b-b1a30cbaea9a
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 21%
@@ -24,11 +24,13 @@ ht-degree: 21%
 
 # 创作页面 {#authoring-page-aem-sites}
 
-了解如何使用站点编辑器的用户界面在Adobe Experience Manager Sites中创作页面。
+{{edge-delivery-services-and-page-editor}}
+
+了解如何使用站点编辑器的UI在Adobe Experience Manager Sites中创作页面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31828?quality=12&learn=on)
 
-在本视频中，介绍了以下功能或特性：
+在此视频中，介绍了以下功能或特性：
 
 * 基于模板创建页面
 * 为页面引入不同的创作模式

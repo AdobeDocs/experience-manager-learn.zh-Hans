@@ -1,6 +1,6 @@
 ---
 title: 如何使用体验片段构建基块
-description: 构建基块是体验片段的子功能，它可以在体验片段的各个变体之间重用创作的组件。
+description: 构建基块是体验片段的一项子功能，可重用体验片段的各个变体中的已创作组件。
 sub-product: Experience Manager Sites
 version: Cloud Service
 feature: Experience Fragments
@@ -11,7 +11,7 @@ doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
 exl-id: cc758602-3c20-4eca-9b87-f04b6dc96bfe
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
@@ -20,8 +20,9 @@ ht-degree: 0%
 
 # 包含体验片段的构建基块 {#building-blocks}
 
+{{edge-delivery-services-and-page-editor}}
 
-构建基块是体验片段的一项子功能。 通过构建基块，内容作者可以在体验片段的不同变体之间重用组件。
+构建基块是体验片段的一项子功能。 通过构建基块，内容作者可在体验片段的不同变体之间重用组件。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331786?quality=12&learn=on)
 
@@ -29,5 +30,5 @@ ht-degree: 0%
 >
 > 用于体验片段的模板必须包括 **构建基块** 作为允许的组件。
 
-* 构建基块可让您轻松地跨变体重用组件。
-* 对主构建基块所做的更改将自动反映在任何引用中。 对构建基块的布局所做的更改不会受到影响。
+* 通过构建基块，可以轻松地跨变体重用组件。
+* 对主构建基块所做的更改将自动反映在任何引用中。 对构建基块布局所做的更改不会受到影响。

@@ -1,7 +1,7 @@
 ---
 title: 在AEM Sites中使用页面编辑器
 seo-title: Using the Page Editor with Adobe Experience Manager Sites
-description: 以下视频重点介绍Adobe Experience Manager中触屏UI站点编辑器的几项主要功能。
+description: 以下视频重点介绍了Adobe Experience Manager中触屏UI站点编辑器的几项主要功能。
 seo-description: The following video highlights several of the top features of the Touch-UI Sites editor in Adobe Experience Manager.
 feature: Page Editor
 topics: authoring
@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
-source-git-commit: 1623e1eaf966e625e1ec402a2996e8beb1e1cd03
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 15%
@@ -24,7 +24,9 @@ ht-degree: 15%
 
 # 使用页面编辑器 {#using-page-editor-with-aem-sites}
 
-AEM站点的页面编辑器是一个用于创建和编辑Web内容的强大工具。 可从页面编辑器的UI工具栏访问页面编辑器的工具和功能。
+{{edge-delivery-services-and-page-editor}}
+
+AEM站点的页面编辑器是一个用于创建和编辑Web内容的强大工具。 通过页面编辑器的UI工具栏访问页面编辑器的工具和功能。
 
 以下视频重点介绍页面编辑器的一些常用功能。
 

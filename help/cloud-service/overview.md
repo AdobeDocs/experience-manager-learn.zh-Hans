@@ -4,7 +4,7 @@ description: Adobe Experience Manager (AEM)as a Cloud Service教程集合
 sub-product: Experience Manager as a Cloud Service
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 11%
@@ -12,6 +12,8 @@ ht-degree: 11%
 ---
 
 # AEMas a Cloud Service视频和教程 {#overview}
+
+{{edge-delivery-services}}
 
 Adobe Experience Manager (AEM) 现已作为云服务提供。AEMas a Cloud Service推出了新一代Experience Manager产品线，以过去的投资和创新为基础，保留和扩展了所有用例和功能。
 
@@ -22,24 +24,19 @@ Adobe Experience Manager (AEM) 现已作为云服务提供。AEMas a Cloud Servi
 ## 新增功能
 
 * **[基于令牌的身份验证（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
-
-   *了解如何使用基于令牌的身份验证通过HTTP与AEMas a Cloud Service交互*
+  *了解如何使用基于令牌的身份验证通过HTTP与AEMas a Cloud Service交互*
 
 * **[Headless GraphQL（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
-
-   *了解如何使用AEM GraphQL API为外部应用程序中的体验提供支持。*
+  *了解如何使用AEM GraphQL API在外部应用程序中增强体验。*
 
 * **[批量导入（视频）](./migration/bulk-import.md)**
-
-   *了解如何从Azure Blob Storage或Amazon S3将资产批量导入AEM*
+  *了解如何将资源从Azure Blob Storage或Amazon S3批量导入AEM*
 
 * **[asset compute元数据工作程序（教程）](./asset-compute/advanced/metadata.md)**
-
-   *了解如何从Asset compute工作进程将资源元数据写回AEM*
+  *了解如何从Asset compute工作进程将资源元数据写回AEM*
 
 * **[asset compute微服务可扩展性（教程）](./asset-compute/overview.md)**
-
-   *了解如何开发Asset compute工作程序以生成自定义资源演绎版*
+  *了解如何开发Asset compute工作程序以生成自定义资源演绎版*
 
 </div>
 
@@ -61,7 +58,7 @@ Adobe Experience Manager (AEM) 现已作为云服务提供。AEMas a Cloud Servi
       </a>
       <div>
          <a href="./accessing/overview.md">
-         <strong>配置AEM访问权限教程</strong>
+         <strong>配置对AEM的访问权限教程</strong>
          </a>
       </div>
       <p>

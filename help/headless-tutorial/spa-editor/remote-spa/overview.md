@@ -1,6 +1,6 @@
 ---
 title: SPA编辑器和远程SPA快速入门 — 概述
-description: 对于希望使用AEM SPA编辑器通过可编辑的SPA内容来扩充现有远程AEM的开发人员，欢迎使用多部分教程。
+description: 欢迎阅读多部分教程，该教程面向那些希望使用AEM SPA编辑器用可编辑的SPA内容充实现有远程AEM的开发人员。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
@@ -9,7 +9,7 @@ kt: 7630
 thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: 0fff8b53e3dffb835e070444b55a72f0b0cc3d14
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 4%
@@ -18,9 +18,11 @@ ht-degree: 4%
 
 # 概述
 
-对于希望使用AEM SPA编辑器将现有基于React（或Next.js）的远程SPA替换为可编辑AEM内容的开发人员，欢迎阅读此多部分教程。
+{{edge-delivery-services}}
 
-本教程以 [WKND GraphQL应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)，这是一个React应用程序，它通过AEM GraphQL API使用AEM内容片段内容，但不提供任何SPA内容的上下文创作。
+对于希望使用AEM SPA编辑器将现有基于React（或Next.js）的SPA内容扩充为可编辑AEM内容的开发人员，欢迎使用多部分教程。
+
+本教程基于 [WKND GraphQL应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)，这是一个React应用程序，它通过AEM GraphQL API使用AEM内容片段内容，但不提供任何SPA内容的上下文创作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
@@ -28,12 +30,12 @@ ht-degree: 4%
 
 本教程旨在说明如何更新远程SPA或在AEM上下文之外运行的SPA，以便使用和交付在AEM中创作的内容。
 
-本教程中的大多数活动都侧重于JavaScript开发，但其中涵盖了围绕AEM的关键方面。 这些方面包括定义在AEM中创作和存储内容的位置，并将SPA路由映射到AEM Pages。
+本教程中的大多数活动都重点介绍JavaScript开发，但其中涵盖了围绕AEM的关键方面。 这些方面包括定义在AEM中创作和存储内容的位置，并将SPA路由映射到AEM Pages。
 
-本教程设计用于 **AEMas a Cloud Service** 并且由两个项目组成：
+本教程专门设计用于 **AEMas a Cloud Service** 并且由两个项目组成：
 
 1. 此 __AEM项目__ 包含必须部署到AEM的配置和内容。
-1. __WKND应用程序__ project是要与AEM SPA编辑器集成的SPA
+1. __WKND应用程序__ 项目是要与SPA SPA编辑器集成的AEM
 
 ## 最新代码
 
@@ -53,9 +55,9 @@ ht-degree: 4%
 
 本教程假定：
 
-+ [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/) 作为IDE
-+ 工作目录 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial`
-+ 在上将AEM SDK作为Author服务运行 `http://localhost:4502`
++ [Microsoft® Visual Studio代码](https://visualstudio.microsoft.com/) 作为IDE
++ 的工作目录 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial`
++ 在上将AEM SDK作为创作服务运行 `http://localhost:4502`
 + 使用本地运行AEM SDK `admin` 具有密码的帐户 `admin`
 + 运行SPA `http://localhost:3000`
 
@@ -77,19 +79,19 @@ ht-degree: 4%
 
 ## 3.可编辑的固定组件
 
-首先，探索如何向SPA添加可编辑的“固定组件”。 这说明了开发人员如何在SPA中放置特定的可编辑组件。 虽然作者可以更改组件的内容，但他们无法删除组件或更改其放置、位置或大小。
+首先，浏览向SPA添加可编辑的“固定组件”。 这说明了开发人员如何在SPA中放置特定的可编辑组件。 虽然作者可以更改组件的内容，但他们不能移除组件或更改其放置、位置或大小。
 
 + [了解可编辑的固定组件](./spa-fixed-component.md)
 
 ## 4.可编辑的容器组件
 
-接下来，探索如何向SPA添加可编辑的“容器组件”。 这说明了开发人员如何在SPA中放置容器组件。 容器组件允许作者将允许的组件放入其中，并调整组件的布局。
+接下来，探索如何向SPA添加可编辑的“容器组件”。 这说明了开发人员如何在SPA中放置容器组件。 容器组件允许作者将允许的组件放入容器组件中，并调整组件的布局。
 
 + [了解可编辑的容器组件](./spa-container-component.md)
 
 ## 5.动态路由和可编辑组件
 
-最后，将前几章中介绍的概念用于动态路由；根据路由的参数显示不同内容的路由。 这说明了如何使用AEM SPA Editor创作以编程方式驱动和派生的路由上的内容。
+最后，将前面几章中介绍的概念用于动态路由；根据路由的参数显示不同内容的路由。 这说明了如何使用AEM SPA Editor创作以编程方式驱动和派生的路由的内容。
 
 + [了解动态路由和可编辑组件](./spa-dynamic-routes.md)
 

@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 2ad1554e-312a-4150-b365-7e00eab1fa43
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%
@@ -24,6 +24,8 @@ ht-degree: 0%
 
 # 创建页面 {#creating-page-aem-sites}
 
-了解如何使用Adobe Experience Manager中的页面模板创建网站页面。
+{{edge-delivery-services-and-page-editor}}
+
+了解如何使用Adobe Experience Manager中的页面模板创建网页。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31827?quality=12&learn=on)

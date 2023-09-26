@@ -1,10 +1,10 @@
 ---
 title: AEM Foundation视频和教程
-description: 观看我们的视频和教程，获取有关Adobe Experience Manager Foundation的帮助。
+description: 观看我们的视频和教程，获取Adobe Experience Manager Foundation的相关帮助。
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
@@ -13,6 +13,8 @@ ht-degree: 0%
 
 # AEM Foundation视频和教程 {#overview}
 
+{{edge-delivery-services}}
+
 Adobe Experience Manager为AEM Sites、Assets和Forms的用户提供了一组常用功能。
 
 <div id="whats-new-section">
@@ -20,14 +22,13 @@ Adobe Experience Manager为AEM Sites、Assets和Forms的用户提供了一组常
 ## 新增功能
 
 * **[使用工作流AEM（视频）](./workflow/use-workflow.md)**
-
-   *AEM Workflow提供了一种在AEM中协作、管理和处理内容的方法。*
+  *AEM Workflow提供了一种在AEM中协作、管理和处理内容的方法。*
 
 * **[了解Cloud Manager for AEM（视频）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   *Cloud Manager for AEM允许轻松管理、检查和自助服务AEM环境。*
+  *Cloud Manager for AEM允许轻松管理、检查和自助服务AEM环境。*
 
 * **[使用Cloud Manager CI/CD管道（视频）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   *了解如何使用Cloud Manager的CI/CD管道来确保安全一致的部署。*
+  *了解如何使用Cloud Manager的CI/CD管道来确保安全一致的部署。*
 
 </div>
 
@@ -59,15 +60,15 @@ Adobe Experience Manager为AEM Sites、Assets和Forms的用户提供了一组常
   </td>
    <td>
     <a href="./development/set-up-sling-dynamic-include.md">
-    <img alt="设置Sling Dynamic Include (SDI)" src="./development/assets/set-up-sling-dynamic-include/thumbnail.png" />
+    <img alt="设置Sling动态包含(SDI)" src="./development/assets/set-up-sling-dynamic-include/thumbnail.png" />
     </a>
      <div>
      <a href="./development/set-up-sling-dynamic-include.md">
-    <strong>设置Sling Dynamic Include (SDI)</strong>
+    <strong>设置Sling动态包含(SDI)</strong>
     </a>
     </div>
     <p>
-    <em>了解如何设置Sling Dynamic Include (SDI)并允许动态AEM组件始终提供最新内容。</em>
+    <em>了解如何设置Sling动态包含(SDI)并允许动态AEM组件始终提供最新内容。</em>
     <p>
   </td>
   <td>

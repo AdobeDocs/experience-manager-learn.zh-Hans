@@ -4,7 +4,7 @@ description: 观看我们的视频以获取AEM Asset支持和帮助。
 sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 15%
@@ -13,7 +13,9 @@ ht-degree: 15%
 
 # AEM Assets视频和教程 {#overview}
 
-Adobe Experience Manager (AEM) Assets是AEM平台上的数字资产管理工具，它允许用户在基于Web的存储库中创建、管理和共享其数字资产（图像、视频、文档和音频剪辑）。 本用户指南包含了有关AEM Assets的众多特性和功能的视频和教程。
+{{edge-delivery-services}}
+
+Adobe Experience Manager (AEM) Assets是AEM Platform上的一款数字资产管理工具，它允许用户在基于Web的存储库中创建、管理和共享其数字资产（图像、视频、文档和音频剪辑）。 本用户指南包含有关AEM Assets的众多特性和功能的视频和教程。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_assets_overview"
@@ -54,7 +56,7 @@ Adobe Experience Manager (AEM) Assets是AEM平台上的数字资产管理工具�
 </td>
 <td>
    <a href="./advanced/asset-insights-launch-tutorial.md">
-   <img alt="AEM Assets分析" src="./assets/overview/asset-insights.png"/>
+   <img alt="AEM Assets Insights" src="./assets/overview/asset-insights.png"/>
    </a>
    <div>
       <a href="./advanced/asset-insights-launch-tutorial.md">
