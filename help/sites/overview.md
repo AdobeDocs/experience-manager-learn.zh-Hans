@@ -5,9 +5,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 237560dc634cb3d6c3553dd57386d2a9548ed4e5
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '361'
 ht-degree: 13%
 
 ---
@@ -18,27 +18,22 @@ ht-degree: 13%
 
 Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本用户指南包含有关AEM Sites的众多特性和功能的视频和教程。
 
-
-<div id="whats-new-section">
+<div id="whats-new-section-skip"></div>
 
 ## 新增功能
 
-* **[将启动项与AEM Sites结合使用（视频）](./page-authoring/launches.md)**
-  *了解AEM Sites的启动项以及如何使用它们为未来发布准备网站内容。*
+* **[AEM和Edge Delivery Services概述（视频）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=zh-Hans)**
+  *在此信息性概述视频中探索全面的Adobe Experience Manager (AEM)，包括AEM Sites、AEM Assets、AEM Headless、AEM Forms和Edge Delivery Services。*
 
-* **[使用AEM组件自定义Adobe客户端数据层（教程）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
-  *了解如何使用自定义AEM组件中的内容更新Adobe客户端数据层。*
+* **[什么是AEM和Edge Delivery Services？ (视频)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html)**
+  *了解Adobe Experience Manager (AEM)和Edge Delivery Services提供的价值。*
 
-* **[AEM Headless GraphQL快速入门（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
-  *如何使用AEM GraphQL API公开要由本机移动设备应用程序使用的AEM中的内容。*
+* **[了解AEM的演变（视频）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/evolution.html)**
+  *了解AEM的演变及其所提供的价值，从AEM 6.5到AEMas a Cloud Service，最后到Edge Delivery Services。*
 
-* **[使用内容片段（视频系列）](./content-fragments/content-fragments-feature-video-use.md)**
-  *内容片段是与渠道无关且可以重复使用的内容片段。*
+* **[带有Edge Delivery Services的AEM架构概述（视频）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)**
+  *全面了解AEMas a Cloud Service的架构！*
 
-* **[使用SPA编辑器（视频）](./spa-editor/spa-editor-framework-feature-video-use.md)**
-  *了解针对单页应用程序(SPA)的AEM编辑功能。*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
