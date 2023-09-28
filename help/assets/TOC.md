@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 7b98f583f8b54fb9c9c706521c310282dcc17ea3
+source-git-commit: 90d0d4876869b05c2ce00fd8cf18c474a6a00e27
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 25%
+source-wordcount: '401'
+ht-degree: 24%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 25%
    + [元数据架构](configuring/metadata-schemas.md)
    + [元数据配置文件](configuring/metadata-profiles.md)
    + [元数据文件夹架构](configuring/metadata-folder-schemas.md)
-   + [资产管理搜索边栏](configuring/assets-admin-search-rail.md)
+   + [资产管理员搜索边栏](configuring/assets-admin-search-rail.md)
    + [处理配置文件](configuring/processing-profiles.md)
    + [自动启动工作流](configuring/auto-start-workflows.md)
 
@@ -64,6 +64,9 @@ ht-degree: 25%
    + [视频智能标记](metadata/video-smart-tags.md)
    + [导入和导出元数据](metadata/metadata-import-export.md)
 
++ Edge交付服务{#edge-delivery-services}
+   + [Sidekick插件](./edge-delivery-services/sidekick-plugin.md)
+
 + 共享和分发{#sharing}
    + [下载资产](./sharing/download.md)
    + [发布资产](./sharing/publish.md)
@@ -75,10 +78,10 @@ ht-degree: 25%
       + [启用演绎版下载](brand-portal/enable-renditions-download.md)
 
    + 资产共享{#assets-share}
-      + [资产共享公域](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
+      + [资产共享公用](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [在本地AEM上设置资源共享公域](./sharing/asset-share-commons-technical-video-setup.md)
       + [主题资产共享公域](./sharing/asset-share-commons-feature-video-theming.md)
-      + [Asset Share Commons资产包](./sharing/asset-share/asset-share-commons-asset-kits.md)
+      + [Asset Share Commons资产套件](./sharing/asset-share/asset-share-commons-asset-kits.md)
    + [连接的资源](./sharing/connected-assets.md)
 
 + 与创意工作流集成{#creative-workflows}
@@ -88,14 +91,14 @@ ht-degree: 25%
 
 + Adobe Asset Link{#adobe-asset-link}
    + [设置](./adobe-asset-link/setup.md)
-   + [访问AdobeAsset Link](./adobe-asset-link/launch-adobe-asset-link.md)
+   + [访问Adobe资源链接](./adobe-asset-link/launch-adobe-asset-link.md)
    + [面板概述](./adobe-asset-link/panel-overview.md)
    + [文件和收藏集](./adobe-asset-link/files-and-collections.md)
    + [下载和上传](./adobe-asset-link/download-and-upload.md)
    + [签入和签出](./adobe-asset-link/check-in-check-out.md)
    + [版本控制和注释](./adobe-asset-link/file-versioning-and-comments.md)
    + [置入副本](./adobe-asset-link/place-copy.md)
-   + [置入已链接](./adobe-asset-link/place-linked.md)
+   + [置入链接的对象](./adobe-asset-link/place-linked.md)
    + [仅用于放置(FPO)](./adobe-asset-link/for-placement-only.md)
    + [资产搜索](./adobe-asset-link/asset-search.md)
 
@@ -109,7 +112,7 @@ ht-degree: 25%
    + [Dynamic Media Classic桌面应用程序](dynamic-media/dynamic-media-classic-desktop-application.md)
    + 图像 {#images}
       + [Dynamic Media快照](dynamic-media/dynamic-media-snapshot.md)
-      + [智能裁剪](dynamic-media/smart-crop-feature-video-use.md)
+      + [智能裁切](dynamic-media/smart-crop-feature-video-use.md)
       + [图像锐化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + 视频 {#video}
@@ -129,7 +132,7 @@ ht-degree: 25%
       + [Dynamic Media核心组件](dynamic-media/dynamic-media-core-components.md)
 
    + 教程 {#tutorials}
-      + [创建轮播集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
+      + [创建传送集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [创建图像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [创建图像预设](dynamic-media/tutorials/creating-image-presets.md)
       + [创建智能裁剪图像配置文件](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
@@ -163,7 +166,7 @@ ht-degree: 25%
 + 资产模板{#asset-templates}
    + [了解资产模板](asset-templates/asset-templates-tutorial-understand.md)
    + [使用资产模板](asset-templates/asset-templates-feature-video-use.md)
-   + [设置资源模板](asset-templates/asset-templates-technical-video-setup.md)
+   + [设置资产模板](asset-templates/asset-templates-technical-video-setup.md)
    + [使用资产目录](asset-templates/asset-catalog-template-feature-video-use.md)
 
 + 部署{#deployment}

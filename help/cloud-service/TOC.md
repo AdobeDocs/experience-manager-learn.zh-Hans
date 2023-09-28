@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
+source-git-commit: 90d0d4876869b05c2ce00fd8cf18c474a6a00e27
 workflow-type: tm+mt
-source-wordcount: '1023'
-ht-degree: 21%
+source-wordcount: '1038'
+ht-degree: 20%
 
 ---
 
@@ -38,6 +38,8 @@ ht-degree: 21%
    + [Sling](./underlying-technology/introduction-sling.md)
    + [创作和发布服务](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
++ Edge交付服务 {#edge-delivery-services}
+   + [AEM AssetsSidekick插件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/assets/edge-delivery-services/sidekick-plugin.md)
 + Cloud Manager {#cloud-manager}
    + [项目](./cloud-manager/programs.md)
    + [环境](./cloud-manager/environments.md)
