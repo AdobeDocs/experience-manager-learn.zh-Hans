@@ -1,5 +1,5 @@
 ---
-title: 双向传输层安全性(mTLS)身份验证
+title: 来自AEM的双向传输层安全性(mTLS)身份验证
 description: 了解如何从AEM对需要相互传输层安全性(mTLS)身份验证的Web API进行HTTPS调用。
 feature: Security
 version: 6.5, Cloud Service
@@ -10,15 +10,15 @@ kt: 13881
 thumbnail: KT-13881.png
 doc-type: article
 last-substantial-update: 2023-10-10T00:00:00Z
-source-git-commit: 2f0490263eaf5e3458e2d71113411a4fdd0aa94c
+source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
 
 
-# 双向传输层安全性(mTLS)身份验证
+# 来自AEM的双向传输层安全性(mTLS)身份验证
 
 了解如何从AEM对需要相互传输层安全性(mTLS)身份验证的Web API进行HTTPS调用。
 
@@ -81,7 +81,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
 ### 证书交换
 
-如果对AEM证书使用自签名CA（如上所述），请将证书或内部证书颁发机构(CA)证书与API提供商交换。
+如果对AEM证书使用自签名CA（如上所述），请将证书或内部证书颁发机构(CA)证书发送到API提供程序。
 
 此外，如果API提供商使用自签名CA证书，则从API提供商接收证书或内部证书颁发机构(CA)证书。
 
