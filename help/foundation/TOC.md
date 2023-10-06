@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation 教程
 user-guide-description: Adobe Experience Manager Foundation 的视频和教程集合。
 sub-product: Experience Manager
 index: y
-source-git-commit: d4859d8af066d456f16f76869e99432aaa5b9863
+source-git-commit: 2f0490263eaf5e3458e2d71113411a4fdd0aa94c
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '230'
 ht-degree: 16%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 16%
    + [使用SSL向导](./security/use-the-ssl-wizard.md)
    + [ModSecurity CRS DoS攻击防护](./security/modsecurity-crs-dos-attack-protection.md)
    + [通过专用证书连接到API的HTTPS连接](./security/call-internal-apis-having-private-certificate.md)
+   + [双向TLS (mTLS)身份验证](./security/mutual-tls-authentication.md)
 + 工作流 {#workflow}
    + [使用工作流编辑器](./workflow/use-the-workflow-editor.md)
    + [使用工作流](./workflow/use-workflow.md)
