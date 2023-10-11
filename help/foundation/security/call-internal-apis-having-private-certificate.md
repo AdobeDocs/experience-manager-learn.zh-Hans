@@ -10,17 +10,19 @@ kt: 11548
 thumbnail: KT-11548.png
 doc-type: article
 last-substantial-update: 2023-08-25T00:00:00Z
-source-git-commit: d4859d8af066d456f16f76869e99432aaa5b9863
+exl-id: c88aa724-9680-450a-9fe8-96e14c0c6643
+source-git-commit: 68aaa58c8f95e72e1a7cb89f849c77d1210f31ee
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
 
-
 # 调用具有私有证书的内部API
 
 了解如何使用专用证书或自签名证书从AEM向Web API进行HTTPS调用。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424853?quality=12&learn=on)
 
 默认情况下，在尝试与使用自签名证书的Web API建立HTTPS连接时，连接会失败，并出现以下错误：
 
@@ -148,3 +150,10 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 使用私有证书有效调用内部API的传统方法涉及修改JVM密钥库。 通过使用Java导入私有证书来实现这一点™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) 命令。
 
 但是，此方法不符合安全最佳实践，AEM通过利用 **全局信任存储区** 和 [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html).
+
+
+## 解决方案包
+
+可以从下载视频中降级的Node.js示例项目 [此处](assets/internal-api-call/REST-APIs.zip).
+
+AEM servlet代码在WKND站点项目的 `tutorial/web-api-invocation` 分支， [请参阅](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
