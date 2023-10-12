@@ -14,16 +14,16 @@ level: Intermediate
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
 
 # 完整网页体验的个性化 {#personalization-fpe}
 
-了解如何使用Adobe Target创建活动，将AEM上托管的网站页面重定向到新页面。
+了解如何使用Adobe Target创建活动，将AEM上托管的网页重定向到新页面。
 
 ## 前提条件
 
@@ -34,11 +34,11 @@ ht-degree: 0%
 
 ## 方案概述
 
-WKND站点重新设计了其主页，并希望将其当前主页访客重定向到新主页。 同时，还要了解重新设计的主页如何有助于提高用户参与度和收入。 作为营销人员，您已被分派创建活动的任务，以将访客重定向到新主页。 让我们探索WKND网站主页，了解如何使用Adobe Target创建活动。
+WKND站点重新设计了其主页，并希望将其当前主页访客重定向到新主页。 同时，还要了解重新设计的主页如何有助于提高用户参与度和收入。 作为营销人员，您已被分派创建活动的任务，以将访客重定向到新主页。 让我们来探索WKND网站主页，了解如何使用Adobe Target创建活动。
 
 ## 使用可视化体验编辑器(VEC)创建A/B测试的步骤
 
-1. 登录Adobe Target并导航到“活动”选项卡
+1. 登录Adobe Target并导航到活动选项卡
 1. 单击 **创建活动** 按钮，然后选择 **A/B测试** 活动
 
    ![A/B活动](assets/ab-target-activity.png)
@@ -47,7 +47,7 @@ WKND站点重新设计了其主页，并希望将其当前主页访客重定向�
 
    ![活动URL](assets/ab-test-url.png)
 
-1. 创建新活动后，可视化体验编辑器在左侧显示两个选项卡： *体验A* 和 *体验B*. 从列表中选择体验。 您可以使用向列表中添加新体验 **添加体验** 按钮。
+1. 创建活动后，可视化体验编辑器在左侧显示两个选项卡： *体验A* 和 *体验B*. 从列表中选择体验。 您可以使用向列表中添加新体验 **添加体验** 按钮。
 
    ![体验选项](assets/experience-options.png)
 
@@ -59,16 +59,16 @@ WKND站点重新设计了其主页，并希望将其当前主页访客重定向�
 
    ![冒险](assets/new-experiences.png)
 
-1. 单击 **下一个** 以转到定位，并保持两个体验之间手动流量分配为50-50。
+1. 单击 **下一个** 以转到定位，并保持两个体验之间的手动流量分配为50-50。
 
    ![定位](assets/targeting.png)
 
-1. 对于“目标”和设置，选择报表源作为Adobe Target，然后选择“目标”量度作为具有页面查看操作的转化。
+1. 对于“目标”和“设置”，选择报表源作为Adobe Target，然后选择“目标”量度作为具有页面查看操作的转化。
 
    ![目标](assets/goals.png)
 
 1. 提供活动的名称并保存。
-1. 激活保存的活动以实时推送更改。
+1. 激活已保存的活动以实时推送更改。
 
    ![目标](assets/activate.png)
 
@@ -78,9 +78,9 @@ WKND站点重新设计了其主页，并希望将其当前主页访客重定向�
 
 ## 摘要
 
-作为营销人员，您可以创建一个活动，以使用Adobe Target将AEM上托管的网站页面重定向到新页面。
+作为营销人员，您可以使用Adobe Target创建活动，将AEM上托管的网页重定向到新页面。
 
 ## 支持链接
 
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
+* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 * [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

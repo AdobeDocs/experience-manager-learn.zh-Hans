@@ -15,7 +15,7 @@ level: Intermediate
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 # 将Target扩展添加到Launch资产 {#adobe-target-extension}
 
-要观看此视频，您必须已拥有 [与AEM集成Experience Platform Launch](../experience-platform/data-collection/tags/overview.md).
+要观看本视频，您必须已拥有 [与AEM集成的Experience Platform Launch](../experience-platform/data-collection/tags/overview.md).
 
 了解如何使用Experience Platform Launch在您的AEM网站上启用Adobe Target。
 
@@ -36,6 +36,6 @@ ht-degree: 2%
 
 ## 支持链接
 
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
++ [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

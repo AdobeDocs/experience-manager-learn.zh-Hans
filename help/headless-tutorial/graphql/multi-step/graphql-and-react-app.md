@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 65244bf81666c20fd5d9d804ad8ea97df8b83d9f
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 2%
@@ -89,7 +89,7 @@ Github.com上提供了示例React应用程序源代码，网址为 <https://gith
    $ npm start
    ```
 
-1. React应用程序在开发模式下启动 [http://localhost:3000/](http://localhost:3000/). 在整个教程中，都会立即反映对React应用程序所做的更改。
+1. React应用程序在开发模式下启动 [http://localhost:3000/](http://localhost:3000/). 在整个教程中对React应用程序所做的更改会立即反映出来。
 
 ![部分实施的React应用程序](./assets/graphql-and-external-app/partially-implemented-react-app.png)
 
@@ -100,7 +100,7 @@ Github.com上提供了示例React应用程序源代码，网址为 <https://gith
 >
 > //*********************************
 >
->  // TODO ：按照AEM Headless教程中的步骤实施此功能
+>  // TODO按照AEM Headless教程中的步骤实施此操作
 >
 >  //*********************************
 >
@@ -496,7 +496,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ## 在幕后工作
 
-打开浏览器的 **开发人员工具** > **网络** 和 _筛选_ 对象 `all-teams` 请求。 请注意GraphQL API请求 `/graphql/execute.json/my-project/all-teams` 制造反对 `http://localhost:3000` 和 **NOT** 相对于的值 `REACT_APP_HOST_URI` (例如， <https://publish-p123-e456.adobeaemcloud.com>)。 这些请求是针对React应用程序的域发起的，因为 [代理设置](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) 使用以下方式启用 `http-proxy-middleware` 模块。
+打开浏览器的 **开发人员工具** > **网络** 和 _筛选_ 对象 `all-teams` 请求。 请注意GraphQL API请求 `/graphql/execute.json/my-project/all-teams` 制造反对 `http://localhost:3000` 和 **NOT** 相对于的值 `REACT_APP_HOST_URI`例如 `<https://publish-pxxx-exxx.adobeaemcloud.com`. 这些请求是针对React应用程序的域发起的，因为 [代理设置](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) 使用以下方式启用 `http-proxy-middleware` 模块。
 
 
 ![通过代理的GraphQL API请求](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)

@@ -1,6 +1,6 @@
 ---
 title: 将体验片段导出到Adobe Target
-description: 了解如何作为Adobe Target选件发布和导出AEM Experience Fragment。
+description: 了解如何将AEM Experience Fragment发布和导出为Adobe Target选件。
 feature: Experience Fragments
 topics: integrations, authoring
 audience: all
@@ -14,16 +14,16 @@ level: Intermediate
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 3%
+source-wordcount: '200'
+ht-degree: 4%
 
 ---
 
-# 将体验片段导出到Adobe Target {#experience-fragment-target}
+# 导出Experience Fragment到Adobe Target {#experience-fragment-target}
 
-了解如何将AEM体验片段导出为Adobe Target选件。
+了解如何将AEM Experience Fragment导出为Adobe Target优惠。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41245?quality=12&learn=on)
 
@@ -39,9 +39,9 @@ ht-degree: 3%
 
 如果将Experience Fragment导出到Adobe Target时没有Adobe Admin Console中的正确权限，则会导致AEM Author服务出现以下错误：
 
-    ![Target API UI错误](assets/error-target-offer.png)
+    ！[Target API UI错误](assets/error-target-offer.png)
 
-...和以下日志消息 `aemerror` 日志：
+...以及中的以下日志消息 `aemerror` 日志：
 
     ![Target API控制台错误](assets/target-console-error.png)
 
@@ -49,14 +49,14 @@ ht-degree: 3%
 
 1. 登录 [Admin Console](https://adminconsole.adobe.com/) 已使用Adobe Target产品配置文件的管理权限，但AEM集成
 2. 选择 __产品> Adobe Target >产品配置文件__
-3. 下 __集成__ 选项卡，为您的AEMas a Cloud Service环境选择集成(与Adobe I/O项目同名)
+3. 下 __集成__ 选项卡，为您的AEMas a Cloud Service环境选择集成(与Adobe Developer项目同名)
 4. 分配 __编辑者__ 或 __审批者__ 角色
 
    ![Target API错误](assets/target-permissions.png)
 
-将正确的权限添加到您的Adobe Target集成应可解决此错误。
+将正确的权限添加到Adobe Target集成应可解决此错误。
 
 ## 支持链接
 
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
