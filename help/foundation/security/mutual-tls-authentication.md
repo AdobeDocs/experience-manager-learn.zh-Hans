@@ -10,17 +10,19 @@ kt: 13881
 thumbnail: KT-13881.png
 doc-type: article
 last-substantial-update: 2023-10-10T00:00:00Z
-source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
+exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
+source-git-commit: 549b444d0a195fb9b5b8fd7ff48cf133746e5fd2
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
 
-
 # 来自AEM的双向传输层安全性(mTLS)身份验证
 
 了解如何从AEM对需要相互传输层安全性(mTLS)身份验证的Web API进行HTTPS调用。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
 
 mTLS或双向TLS身份验证通过要求 **客户端和服务器相互进行身份验证**. 此身份验证通过使用数字证书来完成。 它通常用于高度安全性和身份验证至关重要的场景。
 
@@ -221,3 +223,9 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 使用私有证书有效调用mTLS API的传统方法涉及修改JVM密钥库。 通过使用Java导入私有证书来实现这一点™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) 命令。
 
 但是，此方法不符合安全最佳实践，AEM通过利用 **用户特定的KeyStore和全局TrustStore** 和 [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html).
+
+## 解决方案包
+
+可以从下载视频中降级的Node.js示例项目 [此处](assets/internal-api-call/REST-APIs.zip).
+
+AEM servlet代码在WKND站点项目的 `tutorial/web-api-invocation` 分支， [请参阅](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
