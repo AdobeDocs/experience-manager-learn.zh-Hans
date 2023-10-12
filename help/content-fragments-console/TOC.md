@@ -10,7 +10,7 @@ feature: Content Fragments
 topic: Content Management
 role: User
 team: TM
-source-git-commit: 89bc02b9ead98063ea31301b2e1f5a4d43cb5760
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 22%
@@ -33,4 +33,4 @@ ht-degree: 22%
    + [非资产内容引用](editor/non-asset-content-references.md)
    + [RTE变量比较](editor/rte-variant-compare.md)
 + [可扩展性](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/extensibility/content-fragments/overview.html)
-+ [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html)
++ [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html){target=_blank}

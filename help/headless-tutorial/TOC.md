@@ -8,7 +8,7 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 19%
@@ -20,7 +20,7 @@ ht-degree: 19%
 
 + [AEM Headless概述](./overview.md)
 + GraphQL {#graphql}
-   + [AEM Headless开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
+   + [AEM Headless开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans){target=_blank}
    + [概述](./graphql/overview.md)
    + 快速设置 {#quick-setup}
       + [云服务](./graphql/quick-setup/cloud-service.md)
@@ -43,7 +43,7 @@ ht-degree: 19%
       + [概述](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
       + [1 — 创建内容片段模型](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
       + [2 — 创作内容片段](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
-      + [3 — 探索AEM GraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
+      + [3 — 浏览AEM GraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4 — 持久GraphQL查询](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 — 客户端应用程序集成](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
    + Headless第一个教程{#headless-first}
@@ -117,9 +117,9 @@ ht-degree: 19%
    + [7 — 从移动设备应用程序使用AEM Content Services](./content-services/chapter-7.md)
 + 代码示例 {#code-samples}
    + [筛选React应用程序](./graphql/code-samples/filtering-react-app.md)
-   + [过滤预操作应用程序](./graphql/code-samples/filtering-preact-app.md)
+   + [过滤前置应用程序](./graphql/code-samples/filtering-preact-app.md)
    + [筛选Angular应用程序](./graphql/code-samples/filtering-angular-app.md)
-   + [筛选值应用程序](./graphql/code-samples/filtering-vue-app.md)
+   + [正在筛选值应用程序](./graphql/code-samples/filtering-vue-app.md)
    + [使用jQuery和Handlebars进行筛选](./graphql/code-samples/filtering-jquery-handlebars.md)
    + [筛选SvelteKit应用程序](./graphql/code-samples/filtering-sveltekit-app.md)
    + [筛选ExpressJS和Pug应用程序](./graphql/code-samples/filtering-express-pug-app.md)

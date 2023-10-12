@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 90d0d4876869b05c2ce00fd8cf18c474a6a00e27
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '401'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 24%
    + [视频智能标记](metadata/video-smart-tags.md)
    + [导入和导出元数据](metadata/metadata-import-export.md)
 
-+ Edge交付服务{#edge-delivery-services}
++ Edge Delivery Services{#edge-delivery-services}
    + [Sidekick插件](./edge-delivery-services/sidekick-plugin.md)
 
 + 共享和分发{#sharing}
@@ -172,4 +172,4 @@ ht-degree: 24%
 + 部署{#deployment}
    + [多租户和并行开发](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hans)
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hans){target=_blank}

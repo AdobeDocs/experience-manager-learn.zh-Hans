@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 18b9d7c952027165598c8a55e250d846f10bfd74
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 20%
@@ -38,7 +38,7 @@ ht-degree: 20%
    + [Sling](./underlying-technology/introduction-sling.md)
    + [创作和发布服务](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
-+ Edge交付服务 {#edge-delivery-services}
++ Edge Delivery Services {#edge-delivery-services}
    + [AEM AssetsSidekick插件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [项目](./cloud-manager/programs.md)
@@ -111,7 +111,7 @@ ht-degree: 20%
       + [如何设置](./developing/rde/how-to-setup.md)
       + [使用方法](./developing/rde/how-to-use.md)
       + [开发生命周期](./developing/rde/development-life-cycle.md)
-   + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
+   + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html){target=_blank}
 + 调试AEM{#debugging}
    + 调试AEM SDK{#debugging-aem-sdk}
       + [概述](./debugging/aem-sdk-local-quickstart/overview.md)
@@ -129,7 +129,7 @@ ht-degree: 20%
       + 风险{#risks}
          + [遍历警告](./debugging/cloud-service/risks/traversals.md)
 + 内容交付{#content-delivery}
-   + [URL重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html)
+   + [URL重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + 缓存{#caching}
    + [概述](./caching/overview.md)
    + [AEM Publish服务](./caching/publish.md)
@@ -189,7 +189,7 @@ ht-degree: 20%
       + [资源工作流迁移工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [浏览Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
-+ [内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html)
++ [内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
    + 针对Formsas a Cloud Service进行开发{#developing-for-cloud-service}
       + [1 — 快速入门](./forms/developing-for-cloud-service/getting-started.md)
@@ -317,11 +317,11 @@ ht-degree: 20%
    + [疑难解答](./asset-compute/troubleshooting.md)
 
 + 多步Tutorials{#multi-step-tutorials}
-   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
-   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
-   + [SPA编辑器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
-   + [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
+   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html){target=_blank}
+   + [SPA编辑器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
+   + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html){target=_blank}
+   + [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html){target=_blank}
 + 专家资源 {#expert-resources}
    + AEM Champions {#aem-champions}
       + [Cloud Manager入门行动手册](./expert-resources/aem-champions/onboarding-playbook.md)
