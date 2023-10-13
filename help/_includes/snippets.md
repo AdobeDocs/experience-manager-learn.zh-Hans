@@ -2,7 +2,7 @@
 source-git-commit: 7f7bffa24539d0bba0dc9ac8cc94d0c8d1f2e871
 workflow-type: tm+mt
 source-wordcount: '129'
-ht-degree: 26%
+ht-degree: 44%
 
 ---
 # 代码片段
@@ -11,7 +11,7 @@ ht-degree: 26%
 
 [![通过 30 天试用了解我们的 Headless CMS](./assets/aem-headless-trial-promo.png){align="left"}](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en)
 
-## Edge交付服务{#edge-delivery-services}
+## Edge Delivery Services{#edge-delivery-services}
 
 [!BADGE 要使用Edge Delivery Services从AEM Sites中发布，请单击此处。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="从AEM发布到Edge Delivery Services"}
 

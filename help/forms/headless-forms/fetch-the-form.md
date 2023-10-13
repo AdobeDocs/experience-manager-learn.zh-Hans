@@ -7,8 +7,8 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-exl-id: 5953a1ad-0eaf-43f0-b356-6d20c0b59fee
-source-git-commit: 529e98269a08431152686202a8a2890712b9c835
+exl-id: ee534724-54ea-48e1-8c92-de1c56a928d4
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 1%
@@ -17,9 +17,9 @@ ht-degree: 1%
 
 # 获取表单的JSON
 
-登录AEM Forms创作实例，然后使用创建一个新的自适应 **带核心组件的空白** 模板。 将表单发布到发布实例。
+登录AEM Forms创作实例并使用 **带核心组件的空白** 模板。 将表单发布到发布实例。
 
-要嵌入表单，我们首先通过针对发布服务器发起get调用来获取自适应表单的json。
+要嵌入表单，我们首先通过针对发布服务器进行get调用来获取自适应表单的json。
 
 以下代码片段提取名为的自适应表单的json **contactact**
 
@@ -77,7 +77,7 @@ export default function Contact(){
 }
 ```
 
-上述代码使用映射到自适应表单中使用的组件的本机html组件。 例如，我们将文本输入自适应表单组件映射到TextField组件。 文章中使用的本机组件 [可以从此处下载](./assets/native-components.zip)
+上述代码使用本机html组件，这些组件映射到自适应表单中使用的组件。 例如，我们将文本输入自适应表单组件映射到TextField组件。 文章中使用的本机组件 [可以从此处下载](./assets/native-components.zip)
 
 ## 后续步骤
 

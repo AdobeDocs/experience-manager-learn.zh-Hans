@@ -8,8 +8,8 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-exl-id: b7ddc0bd-db93-44e0-83cc-bccde604bd91
-source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
+exl-id: 15364571-070c-4497-a256-f0483d6f9585
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 开发了一个自定义AEM捆绑包，用于创建网页表单并将其返回给最终用户
 
-* [创建临时文档](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument). 通过此调用上传的文档称作临时文档，因为它仅在上传后7天内可用。 在需要引用已上传文件的API调用中，可以使用返回的临时文档ID。 临时文档请求是由三个部分组成的多部分请求 — 文件名、MIME类型和文件流。 在此请求中，您一次只能上传一个文件。
-* [创建Web窗体](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget)这是用于创建新Web表单的主端点。 创建Web窗体时处于ACTIVE状态，以立即承载Web窗体。
-* [检索Web窗体](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widget/getWidget).Retrieve的Web窗体。 然后将此Web窗体呈现给调用的应用程序，用于对文档进行签名。
+* [创建临时文档](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument). 通过此调用上传的文档称为临时文档，因为它仅在上传后的7天内可用。 在需要引用已上传文件的API调用中，可以使用返回的临时文档ID。 临时文档请求是一个多部分请求，由三部分组成 — 文件名、MIME类型和文件流。 在此请求中，一次只能上传一个文件。
+* [创建Web窗体](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget)这是用于创建新Web表单的主端点。 创建Web窗体时处于“活动”状态，以便立即承载Web窗体。
+* [检索Web窗体](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets).Retrieve的Web表单用户。 然后将此Web窗体呈现给调用的应用程序，用于对文档进行签名。
 
 ## 创建Acrobat Sign OSGi配置
 
@@ -198,4 +198,4 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
 
 ## 后续步骤
 
-[生成Acrobat Sign小组件URL](./create-servlet-to-expose-endpoint.md)
+[生成Acrobat Sign构件URL](./create-servlet-to-expose-endpoint.md)

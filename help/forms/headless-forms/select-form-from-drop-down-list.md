@@ -7,8 +7,8 @@ kt: 13346
 topic: Development
 role: User
 level: Intermediate
-exl-id: 31008bb3-316b-4035-89ea-e830b429b927
-source-git-commit: 529e98269a08431152686202a8a2890712b9c835
+exl-id: 49b6a172-8c96-4fc6-8d31-c2109f65faac
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 # 从下拉列表中选择要填充的表单
 
-下拉列表提供了一种简洁而有序的方式，向用户显示选项列表。 下拉列表中的项目将填充以下项的结果： [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)
+下拉列表提供了一种简洁而有序的方式，向用户显示选项列表。 下拉列表中的项目将填充以下项的结果 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)
 
 ![卡片视图](./assets/forms-drop-down.png)
 
@@ -125,10 +125,10 @@ const getAFForms =async()=>
 
 创建此用户界面时使用了以下两个API调用
 
-* [列表表单](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). 渲染组件时，仅调用一次获取表单。 API调用的结果存储在afForms变量中。
-在上述代码中，我们使用map函数对afForms进行迭代，并对afForms数组中的每个项目创建一个MenuItem组件并将其添加到Select组件中。
+* [列表表单](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). 在呈现组件时，仅会发出一次获取表单的调用。 API调用的结果存储在afForms变量中。
+在上面的代码中，我们使用map函数对afForms进行迭代，对于afForms数组中的每个项，将创建一个MenuItem组件并将其添加到Select组件中。
 
-* 获取表单 — 对进行get调用 [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition)，其中id是用户在下拉列表中选择的自适应表单的id。 此GET调用的结果存储在selectedForm中。
+* 获取表单 — 对 [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition)，其中id是用户在下拉列表中选择的自适应表单的id。 此GET调用的结果存储在selectedForm中。
 
 ```
 const resp = await fetch(`/adobe/forms/af/${formID}`);
@@ -137,7 +137,7 @@ console.log(formJSON.afModelDefinition);
 setForm(formJSON.afModelDefinition);
 ```
 
-* 显示选定的表单。 以下代码用于显示选定的表单。 AdaptiveForm元素在aemforms/af-react-renderer npm包中提供，它需要映射和formJson作为其属性
+* 显示所选表单。 以下代码用于显示所选的表单。 AdaptiveForm元素在aemforms/af-react-renderer npm包中提供，它需要映射和formJson作为其属性
 
 ```
 <div><AdaptiveForm mappings={extendMappings} formJson={selectedForm}/></div>

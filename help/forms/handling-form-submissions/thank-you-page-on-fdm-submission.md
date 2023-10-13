@@ -14,7 +14,8 @@ role: Developer
 level: Beginner
 kt: 13900
 last-substantial-update: 2023-09-09T00:00:00Z
-source-git-commit: adfb805615d2abe34458d5aea685ae47517c5548
+exl-id: 18648914-91cc-470d-8f27-30b750eb2f32
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
@@ -52,6 +53,3 @@ if(request.getParameter("fdmSubmitResult")!=null)
 基于此模板创建感谢表单将此感谢页面与主表单关联在中修改jsp代码 [createXml.jsp](http://localhost:4502/apps/thank-you-page-template/component/page/thankyoupage/createxml.jsp) 构建预填充自适应表单所需的xml。
 预览并提交您的自适应表单。
 此时将显示感谢页面，并预填充在XML中指定的数据
-
-
-

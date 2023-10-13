@@ -1,6 +1,6 @@
 ---
 title: 创建Azure存储支持的表单数据模型
-description: 使用表单数据模型将AEM Forms CS与Azure存储集成
+description: 使用表单数据模型将AEM Forms CS与Azure Storage集成
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -8,7 +8,8 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+exl-id: afc0df42-b4fc-4d04-a36e-63e5a9438597
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 2%
@@ -28,4 +29,3 @@ ht-degree: 2%
 ## 后续步骤
 
 [创建自适应表单](./create-af.md)
-

@@ -12,11 +12,11 @@ level: Beginner
 feature: Interactive Communication
 last-substantial-update: 2023-04-19T00:00:00Z
 kt: 13126
-exl-id: f12ab119-ac8e-4cc8-af86-cbffa30e72c5
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+exl-id: e551ac8d-0bfc-4c94-b773-02ff9bba202e
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '603'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 您可以自定义用于创建文档片段的文本编辑器，以添加更多字体和字体大小。 这些字体包括英语和非英语（如日语）字体。
 
-可以自定义以更改字体设置中的以下内容：
+您可以自定义以更改字体设置中的以下内容：
 
 * 字体系列和大小
 * 高度和字母间距等属性
@@ -43,7 +43,7 @@ ht-degree: 0%
 要通过编辑tbxeditor-config.xml文件来自定义字体，请执行以下操作：
 
 1. 转到 `https://'[server]:[port]'/[ContextPath]/crx/de` 并以管理员身份登录。
-1. 在apps文件夹中，创建一个名为config的文件夹，其路径/结构与config文件夹（位于libs/fd/cm/config）类似，请执行以下步骤：
+1. 在apps文件夹中，创建一个名为config的文件夹，其路径/结构与config文件夹（位于libs/fd/cm/config）类似，具体步骤如下：
 
    1. 右键单击以下路径的items文件夹并选择 **覆盖节点**：
 
@@ -61,9 +61,9 @@ ht-degree: 0%
 
       ![覆盖节点](assets/overlay1.png)
 
-   1. 单击&#x200B;**确定**。文件夹结构是在apps文件夹中创建的。
+   1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
 
-   1. 单击 **全部保存**.
+   1. 单击&#x200B;**全部保存**。
 
 1. 使用下列步骤，在新创建的配置文件夹中创建tbxeditor-config.xml文件的副本：
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
    1. 默认情况下，粘贴文件的名称为 `copy of tbxeditor-config.xml.` 将文件重命名为 `tbxeditor-config.xml` 并单击 **全部保存**.
 
-1. 在apps/fd/cm/config中打开tbxeditor-config.xml文件，然后进行所需的更改。
+1. 打开apps/fd/cm/config上的tbxeditor-config.xml文件，然后进行所需的更改。
 
    1. 双击apps/fd/cm/config上的tbxeditor-config.xml文件。 文件随即打开。
 
@@ -163,7 +163,7 @@ ht-degree: 0%
       </editorConfig>
       ```
 
-   1. 在文件中进行所需的更改，以更改字体设置中的以下内容：
+   1. 在文件中进行所需的更改，以更改字体设置的以下内容：
 
       * 添加或删除字体系列和大小
       * 高度和字母间距等属性
@@ -172,14 +172,13 @@ ht-degree: 0%
 
       例如，要添加名为Sazanami Mincho Medium的日语字体，需要在XML文件中输入以下条目： `<font>Sazanami Mincho Medium</font>`. 您还需要将此字体安装在用于访问和使用字体自定义的客户端计算机上。 有关更多信息，请参阅 [将自定义字体添加到客户端计算机](#addcustomfonts).
 
-      您还可以更改文本各个方面的默认值，并通过删除条目从文本编辑器中删除字体。
+      您还可以更改文本各方面的默认值，通过删除条目从文本编辑器中删除字体。
 
-   1. 单击 **全部保存**.
-
+   1. 单击&#x200B;**全部保存**。
 
 ## 将自定义字体添加到客户端计算机 {#addcustomfonts}
 
-在交互式通信文本编辑器中访问字体时，该字体需要出现在用于访问交互式通信的客户端计算机中。 要在文本编辑器中使用自定义字体，首先需要在客户端计算机上安装该字体。
+在交互式通信文本编辑器中访问字体时，它需要出现在用于访问交互式通信的客户端计算机中。 要在文本编辑器中使用自定义字体，首先需要在客户端计算机上安装该字体。
 
 有关安装字体的详细信息，请参阅以下内容：
 
@@ -188,12 +187,12 @@ ht-degree: 0%
 
 ## 访问字体自定义 {#access-font-customizations}
 
-在CRX中对tbxeditor-config.xml文件中的字体进行了更改，并在用于访问AEM Forms的客户端计算机上安装了所需的字体后，这些更改将显示在文本编辑器中。
+在CRX的tbxeditor-config.xml文件中更改了字体，并在用于访问AEM Forms的客户端计算机上安装了所需的字体后，这些更改将显示在文本编辑器中。
 
 例如， Sazanami Mincho Medium字体已添加到 [通过在CRX中编辑tbxeditor-config.xml文件来自定义字体](#customizefonts) 过程显示在文本编辑器UI中，如下所示：
 
-![Sazanamiminchointext](assets/sazanamiminchointext.png)
+![sazanamiminchointext](assets/sazanamiminchointext.png)
 
 >[!NOTE]
 >
->要查看日语文本，您首先需要输入包含日语字符的文本。 应用自定日语字体时，只能按特定方式设置文本的格式。 应用自定义日语字体不会将英语或其他字符更改为日语字符。
+>要查看日文文本，首先需要输入包含日文字符的文本。 应用自定日文字体时，只按某种方式设置文本格式。 应用自定日文字体不会将英文或其他字符更改为日文字符。

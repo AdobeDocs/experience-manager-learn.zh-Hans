@@ -1,6 +1,6 @@
 ---
 title: AEM冠军提示和技巧 — Cloud Manager UI
-description: 查看这些来自AEM冠军和专家Rakesh Pasupuleti有关如何使用Cloud Manager UI的提示。
+description: 查看这些来自AEM冠军和专家Rakesh Pasupuleti的有关如何使用Cloud Manager UI的提示。
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -9,17 +9,17 @@ level: Beginner
 doc-type: Value Video
 last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13230
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+exl-id: a89860ed-9ea4-494c-bce9-91ec550361fe
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 2%
 
 ---
 
-
 # AEM冠军提示和技巧 — Cloud Manager UI
 
-查看技术领导同事Rakesh Pasupuleti给出的这些提示。 Rakesh是Adobe Experience Manager冠军，他介绍了如何导航和了解Cloud Manager的UI。
+查看技术主管同事Rakesh Pasupuleti给出的这些提示。 Rakesh是Adobe Experience Manager冠军，他介绍了如何导航和了解Cloud Manager的UI。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419298?quality=12&learn=on)
 

@@ -10,21 +10,21 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
+exl-id: ad06b0f3-afa7-4661-aa66-0674d2e6bb43
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 2%
 
 ---
 
-
 # 构建复杂组件
 
-欢迎阅读本教程一章，我们将在此章节中探究如何创建一个复杂的图像列表组件，该组件渲染内容片段、嵌套内容片段引用和引用的图像资产。 我们将使用通用编辑器使React应用程序可编辑，从而更进一步。
+欢迎阅读本教程一章，我们将在此章节中探究如何创建一个复杂的图像列表组件，该组件可呈现内容片段、嵌套内容片段引用和引用的图像资产。 我们将使用通用编辑器使React应用程序可编辑，从而更进一步。
 
 Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法来管理内容。 我们使用内容片段填充图像列表组件，处理嵌套引用并显示引用的图像资产。
 
-在本教程中，我们将指导您构建图像列表组件、处理嵌套引用、渲染引用的图像资产以及集成通用编辑器。 您将了解如何设置依赖关系、设计组件结构、检索和分析内容片段以及使用通用编辑器使应用程序可编辑。
+在本教程中，我们将指导您构建图像列表组件、处理嵌套引用、渲染引用的图像资产及集成通用编辑器。 您将学习如何使用通用编辑器设置依赖项、设计组件结构、检索和分析内容片段以及使应用程序可编辑。
 
 在本教程章节结束时，您将拥有一个功能齐全且可编辑的图像列表组件。 您将具备在React应用程序中创建动态组件的知识和技能，从而增强使用通用编辑器的内容创作体验。 让我们开始构建可编辑的图像列表组件！
 
@@ -34,13 +34,13 @@ Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法�
 
    ![create-imagelist-fragment](./assets/3/create-imagelist-fragment.png)
 
-   我们要创建类型的片段 `imagelist` (模型为 `imagelist`)，我们将为其指定标题 `imagelist`.
+   我们要创建此类型的片段 `imagelist` (模型为 `imagelist`)，我们将为其指定标题 `imagelist`.
 
-   在内容片段编辑器中，我们有机会选择要包含的片段或创建片段。  选择创建片段。
+   在内容片段编辑器中，我们有机会选择要包含或创建片段的片段。  选择创建片段。
 
    我们的模型类型为“图像列表”。  为片段提供一个标题和名称。
 
-1. 由于图像列表是包含对其他片段引用的容器类型片段，因此可以直接从编辑器创建新选件。  创建选件片段、包含和图像描述及文章。  您可以从下面剪切和粘贴文本。  我们将片段的标题用作信息卡的标题。
+1. 由于图像列表是包括对其他片段的引用的容器类型片段，因此可以直接从编辑器创建新选件。  创建选件片段、包含和图像描述以及文章。  您可以从下面剪切并粘贴文本。  我们将片段的标题用作信息卡的标题。
 
    __文章 1__
 
@@ -81,7 +81,7 @@ Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法�
    Like a faint torch, a striking green hue shines through the tent fabric, disappearing just as quickly. The sound of zippers does its best to penetrate the ocean's roar, as we curiously peek our heads out into the freezing wind. Moments after, we sprint out in sweatpants, cameras in hand to document the fabled phenomenon the past week's cloud layer has prevented us from seeing; the Aurora Borealis. It starts with only the faintest streaks of green and blue, seemingly appearing out of thin air, only to vanish before our eyes have had a chance to adjust to the dark. Every pulse becoming more radiant, and before we know it we are gazing in awe at the dancing curtains, shifting colors under starry skies. After a week of battling the elements, it's as if Mother Nature has decided to treat us with just a taste of the breathtaking beauty she is capable of, as if we have finally proven ourselves worthy. With our jaws still open, we watch on as the mesmerizing curtains of emerald green are veiled in a dark cloud layer, and the winds once again take hold of the bay. The exhibition is over for now, but these islands will stay in our minds forever. See you next time, Lofoten, may the forces of life yet again gravitate us towards your majestic shores, because in the hardship of finding what we came for, something else has emerged, a yearning for the undisturbed, the unknown and the truly magical. It's waiting for you no matter where you are in the world.
    ```
 
-   __Article 2__
+   __第2条__
 
    _标题_
 
@@ -157,7 +157,7 @@ Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法�
    Fast forward 5000 years, and although human ingenuity, competition and spirit for invention has further evolved this once crude way of transportation, the principles remain the same. We designed our now countless different models of wooden planks to float on top of powder snow, crafted metal edges to cut through ice, we shaved off every superfluous gram we could find to help us on our journeys, to reach farther, higher and steeper. And today, when in many places, multi-billion dollar corporations charge us big money to ride down over-crowded slopes, many of us are returning to the original way of skiing. Exchanging lift queues for solitude, quantity for quality, and apres-ski beer for trail mix, a new generation of skiers are rediscovering the virtue of earning one's turns, the silence of the mountains, and how far into the unknown a little off-season cardio training can get you.
    ```
 
-   __第4条__
+   __第四条　__
 
    _标题_
 
@@ -190,7 +190,7 @@ Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法�
    Eu facilisis sed odio morbi quis. Consequat semper viverra nam libero justo laoreet sit amet. Eget mi proin sed libero enim sed faucibus. Vitae tempus quam pellentesque nec nam aliquam sem. Justo donec enim diam vulputate ut pharetra sit. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Mauris pellentesque pulvinar pellentesque habitant morbi. Iaculis at erat pellentesque adipiscing. Libero id faucibus nisl tincidunt eget nullam non nisi est. Interdum consectetur libero id faucibus nisl tincidunt. Volutpat odio facilisis mauris sit amet massa. Tristique senectus et netus et malesuada fames ac turpis egestas. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Sapien et ligula ullamcorper malesuada proin libero. Interdum consectetur libero id faucibus nisl tincidunt.
    ```
 
-1. 让我们返回到查询编辑器并获取此新组件。  请注意，我们正在引用 `OfferModel` 以及元数据，我们将将这些用作卡片的标题。
+1. 让我们返回到查询编辑器并获取此新组件。  请注意，我们正在引用 `OfferModel` 和元数据中，我们将用于卡片的标题。
 
    ```graphql
    query imageList {
@@ -260,7 +260,7 @@ Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法�
    ))}
    ```
 
-   在卡组件中，我们渲染每个卡。
+   在卡组件中，我们呈现每个卡。
 
    ```javascript
    const Cards = ({ content }) => {
@@ -300,7 +300,7 @@ Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法�
    import { Helmet } from 'react-helmet';
    ```
 
-   并且在应用程序中，return添加以下代码：
+   并在应用程序返回中，添加以下代码：
 
    ```javascript
    <Helmet>
@@ -310,9 +310,9 @@ Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法�
 
    >[!TIP]
    >
-   > 我们使用Helmet库根据 `.env` 文件，但您可以将其硬编码到 `index.html`.
+   > 我们使用Helmet库，使此动态基于 `.env` 文件，但您可以将其硬编码到 `index.html`.
 
-1. 现在，让我们更新信息卡，以标识用于编辑每个信息卡的片段和数据类型。
+1. 现在让我们更新卡片，以标识用于编辑每个卡片的片段和数据类型。
 
    范围 `<div className='card' key={card._path}>`
 
@@ -330,7 +330,7 @@ Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法�
 
 1. 现在，确定哪些内容可编辑。
 
-   至 `<h3 />` 添加：
+   到 `<h3 />` 添加：
 
    ```javascript
    itemProp="_metadata" itemType="text"
@@ -342,7 +342,7 @@ Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法�
    itemProp="description" itemType="richtext"
    ```
 
-   卡片的最终代码：
+   卡的最终代码：
 
    ```javascript
    const Cards = ({ content }) => {
@@ -421,4 +421,4 @@ export default Home;
 
 ## 恭喜！
 
-您已成功创建了AEM Headless体验，该体验完全由AEM Headless API提供支持，并且可以使用通用编辑器进行编辑。
+您已成功创建了AEM Headless体验，该体验由AEM Headless API完全提供技术支持，并且可以使用通用编辑器进行编辑。

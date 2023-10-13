@@ -7,26 +7,26 @@ kt: 13311
 topic: Development
 role: User
 level: Intermediate
-exl-id: 7316ca02-be57-4ecf-b162-43a736b992b3
-source-git-commit: 529e98269a08431152686202a8a2890712b9c835
+exl-id: c01ad68e-23c9-4564-8e3e-1924af34a493
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
 
 ---
 
-# 以卡片格式获取并显示表单
+# 获取并以卡片格式显示表单
 
-卡片视图格式是以卡片形式显示信息或数据的设计模式。 每个信息卡表示一个单独的内容或数据条目，通常由一个视觉上截然不同的容器组成，其中排列了特定元素。
+卡片视图格式是以卡片形式显示信息或数据的设计模式。 每个信息卡表示一段单独的内容或数据条目，通常由一个直观上不同的容器组成，其中排列了特定元素。
 React中的可单击卡片是类似于卡片或图块的交互式组件，用户可以单击或点按。 当用户单击或点按可单击的卡片时，会触发指定的操作或行为，例如导航到其他页面、打开模式或更新UI。
 
-在本文中，我们将使用 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) 以提取表单并以卡片格式显示表单，然后在单击事件中打开自适应表单。
+在本文中，我们将使用 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) 以提取表单并以卡片格式显示表单，然后在单击事件时打开自适应表单。
 
 ![卡片视图](./assets/card-view-forms.png)
 
 ## 信息卡模板
 
-以下代码用于设计信息卡模板。 卡片模板显示自适应表单的标题和描述以及Adobe徽标。 [材料UI组件](https://mui.com/) 已用于创建此布局。
+以下代码用于设计卡片模板。 卡片模板显示自适应表单的标题和描述以及Adobe徽标。 [材料UI组件](https://mui.com/) 已用于创建此布局。
 
 
 
@@ -76,7 +76,7 @@ const extendMappings =
 };
 ```
 
-以下路由是在Main.js中定义的，用于导航到DisplayForm.js
+在Main.js中定义了以下路由以导航到DisplayForm.js
 
 ```javascript
     <Route path="/displayForm/:formID" element={<DisplayForm/>} exact/>
@@ -84,7 +84,7 @@ const extendMappings =
 
 ## 获取表单
 
-listforms API用于从AEM服务器获取表单。 API返回JSON对象数组，每个JSON对象表示表单。
+listforms API用于从AEM服务器获取表单。 该API返回JSON对象数组，每个JSON对象表示表单。
 
 ```javascript
 import { useState,useEffect } from "react";
@@ -127,7 +127,7 @@ export default function ListForm(){
 }
 ```
 
-在上述代码中，我们使用map函数对fetchedForms进行迭代，并且为fetchedForms数组中的每个项目创建一个FormCard组件并将其添加到网格容器中。 您现在可以根据自己的要求在React应用程序中使用ListForm组件。
+在上述代码中，我们使用map函数对fetchedForms进行迭代，并对fetchedForms数组中的每个项目创建一个FormCard组件并将其添加到网格容器中。 您现在可以根据要求在React应用程序中使用ListForm组件。
 
 ## 后续步骤
 

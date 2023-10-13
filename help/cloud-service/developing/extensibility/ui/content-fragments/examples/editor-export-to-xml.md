@@ -10,25 +10,25 @@ jira: KT-13309
 thumbnail: KT-13309.jpg
 doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
-source-git-commit: c54d078c6282f8ace936dd4a9ee0d5cc39490230
+exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
 
 ---
 
-
 # 将内容片段导出到XML
 
 ![内容片段编辑器标题菜单扩展示例](./assets/export-to-xml/hero.png){align="center"}
 
-可以使用将自定义按钮添加到内容片段编辑器标题菜单 `headerMenu` 扩展点。 此示例说明如何向标题菜单添加按钮，以及如何处理点击事件，以将活动内容片段导出为XML或CSV。
+可以使用将自定义按钮添加到内容片段编辑器标题菜单 `headerMenu` 扩展点。 此示例说明如何向标题菜单添加按钮，以及如何处理单击事件以将活动内容片段导出为XML或CSV。
 
 标题按钮可以作为一个按钮存在，也可以作为具有子项目的按钮存在。 此示例说明如何使用子项实施按钮，但包含用于实施单个按钮的注释掉的代码。
 
 ## 扩展点
 
-此示例扩展到扩展点 `headerBar` 以向内容片段编辑器添加自定义按钮。
+此示例将扩展到扩展点 `headerBar` 向内容片段编辑器添加自定义按钮。
 
 | AEM UI已扩展 | 扩展点 |
 | ------------------------ | --------------------- | 
@@ -36,9 +36,9 @@ ht-degree: 0%
 
 ## 扩展示例
 
-以下示例创建一个标头菜单按钮，该按钮包含两个子项，一个用于将活动内容片段导出为XML（已实施），另一个用于将活动内容片段导出为CSV（未实施）。
+以下示例创建了一个标头菜单按钮，该按钮具有两个子项，一个用于将活动内容片段导出为XML（已实施），另一个用于将活动内容片段导出为CSV（未实施）。
 
-该代码显示了如何在扩展的注册文件中获取内容片段的内容，以及如何导出内容片段的JSON内容。
+此代码显示了如何在扩展的注册文件中获取内容片段的内容，以及如何导出内容片段的JSON内容。
 
 ### 延期注册
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 + 此时将显示扩展按钮的位置(`headerMenu`AEM )创作体验
 + getButton()函数中扩展按钮的定义
-+ 按钮的点击处理程序(在onClick()函数中)或子项列表及其点击处理程序中)。
++ 按钮的点击处理程序(在onClick()函数中)或子项列表及其点击处理程序。
 
 `src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
@@ -145,7 +145,7 @@ export default ExtensionRegistration;
 
 #### 内容片段数据
 
-可以使用检索活动内容片段 `getContentFragment()` 上的方法 `guestConnection.host.contentFragment` 对象。
+可以使用检索活动的内容片段 `getContentFragment()` 上的方法 `guestConnection.host.contentFragment` 对象。
 
 ```javascript
 const contentFragment = await guestConnection.host.contentFragment.getContentFragment();

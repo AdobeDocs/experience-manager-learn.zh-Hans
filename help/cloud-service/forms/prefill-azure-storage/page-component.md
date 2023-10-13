@@ -8,24 +8,24 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+exl-id: 7469aa7f-1794-40dd-990c-af5d45e85223
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 9%
 
 ---
 
-
 # 页面组件
 
-页面组件是负责呈现页面的常规组件。 我们将创建一个新的页面组件，并将该页面组件与新的自适应表单模板关联。 这可确保仅在自适应表单基于此特定模板时执行我们的代码。
+页面组件是负责呈现页面的常规组件。 我们将创建一个新的页面组件，并将该页面组件与新的自适应表单模板相关联。 这可确保仅在自适应表单基于此特定模板时执行我们的代码。
 
 ## 创建页面组件
 
 登录到本地云就绪的AEM Forms实例。 在apps文件夹下创建以下结构
-![page-component](./assets/page-component1.png)
+![页面组件](./assets/page-component1.png)
 
-1. 右键单击页面文件夹并创建一个名为storeandfetch的节点，类型为cq：Component
+1. 右键单击页面文件夹并创建一个名为storedfetch的节点，类型为cq：Component
 1. 保存更改
 1. 将以下属性添加到 `storeandfetch` 节点并保存
 
@@ -36,7 +36,7 @@ ht-degree: 9%
 | jcr:title | 字符串 | 自适应表单模板页面 |
 | sling:resourceSuperType | 字符串 | `fd/af/components/page2/aftemplatedpage` |
 
-复制 `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp` 然后将其粘贴到 `storeandfetch` 节点。 重命名 `aftemplatedpage.jsp` 到 `storeandfetch.jsp`.
+复制 `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp` 然后粘贴到 `storeandfetch` 节点。 重命名 `aftemplatedpage.jsp` 到 `storeandfetch.jsp`.
 
 打开 `storeandfetch.jsp` 并添加以下行：
 
@@ -84,4 +84,3 @@ ht-degree: 9%
 ### 后续步骤
 
 [将页面组件与模板关联](./associate-page-component.md)
-

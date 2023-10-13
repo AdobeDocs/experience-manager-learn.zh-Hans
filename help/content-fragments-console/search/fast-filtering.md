@@ -1,6 +1,6 @@
 ---
 title: 内容片段编辑器 — 快速筛选
-description: 了解AEM内容片段UI如何让您使用快速筛选轻松地找到内容片段。 利用此功能，可以快速轻松地查找特定内容片段。
+description: 了解AEM内容片段UI如何让您使用快速筛选轻松找到内容片段。 利用此功能，可以快速轻松地查找特定内容片段。
 version: Cloud Service
 role: User
 level: Beginner
@@ -8,16 +8,16 @@ doc-type: Feature Video
 last-substantial-update: 2023-05-12T00:00:00Z
 jira: KT-13238
 thumbnail: 3419310.jpeg
-source-git-commit: cf37733d0fd22d560c8021eb25e6df273c1a16f7
+exl-id: cf1a3f0b-1d0e-4526-a9eb-013a3c73401f
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
 
 ---
 
-
 # 快速筛选
 
-了解AEM内容片段UI如何让您使用快速筛选轻松地找到内容片段。 利用此功能，可以快速轻松地查找特定内容片段。
+了解AEM内容片段UI如何让您使用快速筛选轻松找到内容片段。 利用此功能，可以快速轻松地查找特定内容片段。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419310/?learn=on)

@@ -8,7 +8,8 @@ thumbnail: 3419421.jpeg
 topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: a864f4f19135f7d6fb345a76f1d5c7dc3ee9a9dc
+exl-id: 3f2f3fe4-a3cf-4494-a318-bf82aee20dc7
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 3%
@@ -17,7 +18,7 @@ ht-degree: 3%
 
 # Dynamic Media快照 {#snapshot}
 
-Dynamic Media Snapshot是一款可视化演示工具，旨在说明Dynamic Media在优化和动态图像投放方面的强大功能。 试验测试图像或Dynamic Media URL，以直观地观察各种Dynamic Media图像修饰符的输出，并对文件大小（使用WebP和AVIF交付）、网络和设备像素比(DPR)进行智能成像优化。
+Dynamic Media Snapshot是一款可视化演示工具，旨在说明Dynamic Media在优化和动态图像投放方面的强大功能。 试验测试图像或Dynamic Media URL，以可视化方式观察各种Dynamic Media图像修饰符的输出，以及针对文件大小（使用WebP和AVIF交付）、网络和设备像素比(DPR)的智能成像优化。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419421/?learn=on)
 

@@ -1,5 +1,5 @@
 ---
-title: 将AEM Sites和Adobe Analytics与平台Web SDK集成
+title: 将AEM Sites和Adobe Analytics与Platform Web SDK集成
 description: 使用现代Platform Web SDK方法集成AEM Sites和Adobe Analytics。
 version: Cloud Service
 feature: Integrations
@@ -12,23 +12,23 @@ jira: KT-13328
 thumbnail: KT-13328.jpeg
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
-exl-id: 9f54995f-4ce7-45f2-9021-6fdfe42ff89a
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 3%
 
 ---
 
-# 将AEM Sites和Adobe Analytics与平台Web SDK集成
+# 将AEM Sites和Adobe Analytics与Platform Web SDK集成
 
-了解 **现代方法** 有关如何使用Platform Web SDK集成Adobe Experience Manager (AEM)和Adobe Analytics的信息。 此全面的教程将指导您完成无缝收集的过程 [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) pageview和CTA点击数据。 通过在AdobeAnalysis Workspace中可视化收集的数据（您可以在其中浏览各种量度和维度）来获得有价值的见解。 此外，还可以探索Platform数据集以验证和分析数据。 加入我们的历程，利用AEM和Adobe Analytics的强大功能制定数据驱动型决策。
+了解 **现代方法** 有关如何使用Platform Web SDK集成Adobe Experience Manager (AEM)和Adobe Analytics的信息。 本全面的教程将指导您完成无缝收集的过程 [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) pageview和CTA点击数据。 通过在AdobeAnalysis Workspace中可视化收集的数据，探索各种量度和维度，获得有价值的见解。 此外，还可以探索Platform数据集以验证和分析数据。 加入我们的历程，利用AEM和Adobe Analytics的强大功能制定数据驱动型决策。
 
 ## 概述
 
-洞察用户行为是每个营销团队的重要目标。 通过了解用户如何与其内容交互，团队可以做出明智的决策、优化策略并取得更好的结果。 WKND营销团队是一个虚构的实体，为了实现此目标，其目标是在其网站上实施Adobe Analytics。 主要目标是收集以下两个关键量度的数据：页面查看次数和主页行动号召(CTA)点击次数。
+了解用户行为是每个营销团队的重要目标。 通过了解用户如何与其内容交互，团队可以做出明智决策、优化策略并取得更好的结果。 WKND营销团队是一个虚构的实体，其目标是在其网站上实施Adobe Analytics以实现此目标。 主要目标是收集关于两个关键量度的数据：页面查看次数和主页行动号召(CTA)点击次数。
 
-通过跟踪页面查看，团队能够分析哪些页面最受用户关注。 此外，跟踪主页CTA点击量，可以针对团队行动号召元素的有效性提供有价值的见解。 这些数据可能会揭示哪些CTA正在与用户产生共鸣，哪些需要调整，并可能发现提高用户参与度和促进转化的新机会。
+通过跟踪页面查看，团队能够分析哪些页面最受用户关注。 此外，跟踪主页CTA点击量，可针对团队行动号召元素的有效性提供宝贵的见解。 此数据可能会揭示哪些CTA正在与用户引起共鸣，哪些需要调整，并可能发现提升用户参与度和促进转化的新机会。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419872?quality=12&learn=on)
@@ -39,51 +39,51 @@ ht-degree: 3%
 
 您已完成 **[集成Experience PlatformWeb SDK](./web-sdk.md)** 教程。
 
-In **AEM作为Cloud Service**：
+在 **AEM作为Cloud Service**：
 
 + [AEM管理员对AEMas a Cloud Service环境的访问权限](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=zh-Hans)
 + 部署管理员对Cloud Manager的访问权限
 + 克隆和部署 [WKND — 示例Adobe Experience Manager项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) 到您的AEMas a Cloud Service环境。
 
-In **Adobe Analytics**：
+在 **Adobe Analytics**：
 
 + 创建权限 **报表包**
 + 创建权限 **Analysis Workspace**
 
-In **Experience Platform**：
+在 **Experience Platform**：
 
 + 访问默认生产， **Prod** 沙盒。
 + 访问 **架构** 在“数据管理”下
 + 访问 **数据集** 在“数据管理”下
 + 访问 **数据流** 在数据收集下
-+ 访问 **标记** （以前称为Launch），位于“数据收集”下
++ 访问 **标记** （以前称为Launch）位于“数据收集”下
 
-如果您没有必要权限，您的系统管理员将使用以下命令： [Adobe Admin Console](https://adminconsole.adobe.com/) 可以授予必要的权限。
+如果您没有必要权限，您的系统管理员使用 [Adobe Admin Console](https://adminconsole.adobe.com/) 可以授予必要的权限。
 
-在深入探讨AEM与Analytics使用Platform Web SDK的集成过程之前，让我们 _回顾基本组件和关键元素_ 于2014年12月31日在 [集成Experience PlatformWeb SDK](./web-sdk.md) 教程。 它为集成提供了坚实的基础。
+在深入研究使用Platform Web SDK的AEM与Analytics的集成过程之前，让我们先了解一下 _回顾基本组件和关键元素_ 建立于 [集成Experience PlatformWeb SDK](./web-sdk.md) 教程。 为集成提供了坚实的基础。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419873?quality=12&learn=on)
 
-回顾XDM架构、数据流、数据集、标记属性以及AEM和标记属性连接后，我们开始集成历程。
+回顾XDM架构、数据流、数据集、标记属性以及AEM和标记属性连接后，我们开始集成之旅。
 
 ## 定义Analytics解决方案设计参考(SDR)文档
 
-作为实施过程的一部分，建议创建解决方案设计参考(SDR)文档。 本文档作为蓝图在定义业务需求和设计有效的数据收集策略方面起着关键作用。
+作为实施过程的一部分，建议创建解决方案设计参考(SDR)文档。 此文档作为定义业务需求和设计有效数据收集策略的蓝图，将发挥关键作用。
 
 特别提款权文件提供了实施计划的全面概览，确保所有利益相关者一致并了解项目的目标和范围。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-有关应包含在SDR文档中的概念和各种元素的更多信息，请访问 [创建和维护解决方案设计参考(SDR)文档](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). 您还可以下载示例Excel模板，但特定于WKND的版本也可用 [此处](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
+有关SDR文档中应包含的概念和各种元素的更多信息，请访问 [创建和维护解决方案设计参考(SDR)文档](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). 您还可以下载示例Excel模板，但也可以使用特定于WKND的版本 [此处](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
 
 ## 设置Analytics — 报表包、Analysis Workspace
 
-第一步是设置Adobe Analytics，特别是包含转化变量(或eVar)和成功事件的报表包。 使用转化变量来衡量因果关系。 成功事件用于跟踪操作。
+第一步是设置Adobe Analytics，特别是包含转化变量(或eVar)和成功事件的报表包。 转化变量用于衡量因果关系。 成功事件用于跟踪操作。
 
 在本教程中，  `eVar5, eVar6, and eVar7` track  _WKND页面名称、WKND CTA ID和WKND CTA名称_ 分别，和 `event7` 用于跟踪  _WKND CTA点击事件_.
 
-为了分析、收集见解并和其他人分享从收集到的数据中的见解，在Analysis Workspace中创建了一个项目。
+为了分析、收集见解并和其他人分享这些见解来自收集的数据，在Analysis Workspace中创建了一个项目。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419875?quality=12&learn=on)
 
@@ -96,15 +96,15 @@ In **Experience Platform**：
 
 ## 更新数据流 — 添加Analytics服务
 
-数据流指示Platform Edge Network将收集的数据发送到何处。 在 [上一个教程](./web-sdk.md)，则数据流配置为将数据发送到Experience Platform。 更新此数据流，以将数据发送到在中配置的Analytics报表包 [以上](#setup-analytics---report-suite-analysis-workspace) 步骤。
+数据流指示Platform Edge Network将收集的数据发送到何处。 在 [上一教程](./web-sdk.md)，则数据流会配置为将数据发送到Experience Platform。 更新此数据流以将数据发送到中配置的Analytics报表包 [以上](#setup-analytics---report-suite-analysis-workspace) 步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419876?quality=12&learn=on)
 
 ## 创建XDM架构
 
-体验数据模型(XDM)架构帮助您标准化收集的数据。 在 [上一个教程](./web-sdk.md)，一个XDM架构，具有 `AEP Web SDK ExperienceEvent` 将创建一个字段组。 此外，使用此XDM架构会创建一个数据集，以将收集的数据存储在Experience Platform中。
+体验数据模型(XDM)架构帮助您标准化收集的数据。 在 [上一教程](./web-sdk.md)，一种XDM架构，具有 `AEP Web SDK ExperienceEvent` 将创建一个字段组。 此外，使用此XDM架构会创建一个数据集，以将收集的数据存储在Experience Platform中。
 
-但是，该XDM架构没有特定于Adobe Analytics的字段组来发送eVar事件数据。 将创建一个新的XDM架构，而不是更新现有架构，以避免将eVar事件数据存储在平台中。
+但是，该XDM架构没有特定于Adobe Analytics的字段组来发送eVar事件数据。 将创建一个新的XDM架构，而不是更新现有架构以避免将eVar事件数据存储在平台中。
 
 新创建的XDM架构具有 `AEP Web SDK ExperienceEvent` 和 `Adobe Analytics ExperienceEvent Full Extension` 字段组。
 
@@ -113,7 +113,7 @@ In **Experience Platform**：
 
 ## 更新标记属性
 
-在 [上一个教程](./web-sdk.md)，创建了一个标记属性，其中包含数据元素和一个用于收集、映射和发送pageview数据的规则。 必须为以下项增强该功能：
+在 [上一教程](./web-sdk.md)，创建标记属性，其中包含Data Elements和一个规则以收集、映射和发送pageview数据。 必须为以下项增强此功能：
 
 + 将页面名称映射到 `eVar5`
 + 触发 **pageview** Analytics调用（或发送信标）
@@ -126,7 +126,7 @@ In **Experience Platform**：
 
 >[!TIP]
 >
->视频中显示的数据元素和规则事件代码可供您参考， **展开以下折叠元素**. 但是，如果您未使用Adobe客户端数据层，则必须修改以下代码，但定义数据元素并在规则定义中使用数据元素的概念仍然适用。
+>视频中显示的数据元素和规则事件代码可供您参考， **展开下面的折叠元素**. 但是，如果您未使用Adobe客户端数据层，则必须修改以下代码，但是定义数据元素并在规则定义中使用数据元素的概念仍然适用。
 
 +++ 数据元素和规则事件代码
 
@@ -213,20 +213,20 @@ In **Experience Platform**：
 
 +++
 
-有关将AEM核心组件与Adobe客户端数据层集成的其他信息，请参阅 [将Adobe客户端数据层用于AEM核心组件指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html).
+有关将AEM核心组件与Adobe客户端数据层集成的其他信息，请参阅 [将Adobe客户端数据层与AEM核心组件结合使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html).
 
 
 >[!INFO]
 >
->全面了解 **变量映射** 选项卡属性详细信息在解决方案设计参考(SDR)文档中，访问已完成的特定于WKND的版本以供下载 [此处](./assets/Final-WKND-WebSDK-BRD-SDR.xlsx).
+>全面了解 **变量映射** 选项卡属性详细信息在解决方案设计参考(SDR)文档中，访问已完成的特定于WKND的版本进行下载 [此处](./assets/Final-WKND-WebSDK-BRD-SDR.xlsx).
 
 
 
 ## 验证WKND上已更新的标记属性
 
-确保在WKND网站页面上生成、发布并正确使用更新的标记属性。 使用Google Chrome Web浏览器的 [Adobe Experience Platform Debugger扩展](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)：
+确保在WKND网站页面上生成、发布并正确工作更新的标记属性。 使用Google Chrome Web浏览器的 [Adobe Experience Platform Debugger扩展](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)：
 
-+ 要确保tag属性是最新版本，请检查构建日期。
++ 要确保标记属性是最新版本，请检查构建日期。
 
 + 要验证PageView和HomePage CTA的XDM事件数据，请单击，使用扩展中的Experience PlatformWeb SDK菜单选项。
 
@@ -234,13 +234,13 @@ In **Experience Platform**：
 
 ## 模拟Web流量 — Selenium自动化
 
-为了生成有意义的流量以进行测试，开发了Selenium自动化脚本。 此自定义脚本模拟用户与WKND网站的交互，如页面查看和单击CTA。
+为了生成有意义的流量用于测试，开发了Selenium自动化脚本。 此自定义脚本可模拟用户与WKND网站的交互，如页面查看和单击CTA。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419884?quality=12&learn=on)
 
-## 数据集验证 — WKND页面查看、CTA数据
+## 数据集验证 — WKND页面视图、CTA数据
 
-数据集是用于数据集合的存储和管理结构，如跟踪架构的数据库表。 在中创建的数据集 [上一个教程](./web-sdk.md) 用于验证pageview和CTA点击数据是否已摄取到Experience Platform数据集中。 在数据集UI中，各种详细信息（如总记录数、大小和摄取的批次）都会与视觉上吸引人的条形图一起显示。
+数据集是用于数据集合的存储和管理结构，如跟踪架构的数据库表。 在中创建的数据集 [上一教程](./web-sdk.md) 用于验证pageview和CTA点击数据是否已摄取到Experience Platform数据集中。 在数据集UI中，各种详细信息（如总记录数、大小和摄取的批次）都会与直观的条形图一起显示。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419885?quality=12&learn=on)
 
@@ -248,26 +248,26 @@ In **Experience Platform**：
 
 Analysis Workspace是Adobe Analytics中的一个功能强大的工具，允许以灵活且交互的方式探索和可视化数据。 它提供了一个拖放界面，用于创建自定义报表、执行高级分段和应用各种数据可视化图表。
 
-让我们重新打开在中创建的Analysis Workspace项目 [设置Analytics](#setup-analytics---report-suite-analysis-workspace) 步骤。 在 **热门页面** 部分，检查各种量度，例如访问次数、独特访客数、条目数、跳出率等。 要评估WKND页面和主页CTA的性能，请拖放特定于WKND的维度（WKND页面名称、WKND CTA名称）和量度（WKND CTA点击事件）。 这些见解对于营销人员了解哪些CTA更有效，并按照其业务目标制定数据驱动型决策非常有价值。
+让我们重新打开在中创建的Analysis Workspace项目 [设置Analytics](#setup-analytics---report-suite-analysis-workspace) 步骤。 在 **热门页面** 部分中，检查各种量度，例如访问次数、独特访客、登入次数、跳出率等。 要评估WKND页面和主页CTA的性能，请拖放特定于WKND的维度（WKND页面名称、WKND CTA名称）和量度（WKND CTA点击事件）。 这些见解对于营销人员了解哪些CTA更有效，并根据其业务目标制定数据驱动型决策非常有价值。
 
-要可视化用户历程，请使用流量可视化图表，从 **WKND页面名称** 并扩展到不同的路径。
+要将用户历程可视化，请使用流量可视化图表，从 **WKND页面名称** 并扩展到不同的路径。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419886?quality=12&learn=on)
 
 ## 摘要
 
-做得好！您已使用Platform Web SDK完成AEM和Adobe Analytics的设置，以便收集、分析pageview和CTA点击数据。
+做得好！您已使用Platform Web SDK完成AEM和Adobe Analytics的设置，以便收集、分析页面查看和CTA点击数据。
 
-实施Adobe Analytics对于营销团队深入了解用户行为、做出明智决策、优化其内容并做出数据驱动型决策至关重要。
+实施Adobe Analytics对于营销团队深入了解用户行为、做出明智决策、优化内容并做出数据驱动型决策至关重要。
 
-通过实施建议的步骤并使用提供的资源(如解决方案设计参考(SDR)文档)和了解关键Analytics概念，营销人员可以有效地收集和分析数据。
+通过实施建议的步骤并利用提供的资源(如解决方案设计参考(SDR)文档)和了解关键Analytics概念，营销人员可以有效地收集和分析数据。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419888?quality=12&learn=on)
 
 
 >[!AVAILABILITY]
 >
->如果您更喜欢 **端到端视频** ，它涵盖了整个集成过程，而不是单独的设置步骤视频，您可以单击 [此处](https://video.tv.adobe.com/v/3419889/) 以访问它。
+>如果您更喜欢 **端到端视频** ，而不是单个设置步骤视频，您可以 [此处](https://video.tv.adobe.com/v/3419889/) 以访问它。
 
 
 ## 其他资源

@@ -7,7 +7,8 @@ kt: 13490
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+exl-id: 489970a6-1b05-4616-84e8-52b8c87edcda
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 # 显示配置的感谢消息
 
-在提交表单时发送感谢信息，是对用户填写和提交表单表示认可和感谢的深思熟虑的方法。 这可以确认他们的提交内容已经收到并受到赞赏。 使用自适应表单指南容器的提交选项卡配置感谢消息
+在提交表单时向您发送感谢邮件，这是一种周到的方法，用于确认和感谢用户填写和提交表单。 这可以确认他们的提交内容已收到并受到赞赏。 可以使用自适应表单指南容器的提交选项卡配置感谢消息
 
 ![感谢信息](assets/thank-you-message.png)
 
@@ -104,5 +105,4 @@ export default function Contact(){
 }
 ```
 
-上述代码使用映射到自适应表单中使用的组件的本机html组件。 例如，我们将文本输入自适应表单组件映射到TextField组件。 文章中使用的本机组件 [可以从此处下载](./assets/native-components.zip)
-
+上述代码使用本机html组件，这些组件映射到自适应表单中使用的组件。 例如，我们将文本输入自适应表单组件映射到TextField组件。 文章中使用的本机组件 [可以从此处下载](./assets/native-components.zip)

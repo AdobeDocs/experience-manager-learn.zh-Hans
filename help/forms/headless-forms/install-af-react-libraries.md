@@ -7,13 +7,13 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+exl-id: 0ed44016-d52a-4980-a0b1-06da149c3cb1
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
 
 ---
-
 
 # 安装所需的依赖项
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## 设置代理
 
-跨源资源共享(CORS)是一种安全机制，可限制Web浏览器向应用程序托管位置以外的其他域发出请求。 当您尝试从托管在不同域上的API获取数据时，可能会发生CORS错误。 通过设置代理，您可以绕过CORS限制，从React应用程序向API发出请求。 我已在src文件夹中名为setUpProxy.js的文件中使用了以下代码。 **确保将目标更改为指向发布实例。**
+跨源资源共享(CORS)是一种安全机制，可限制Web浏览器向应用程序托管的域以外的其他域发出请求。 当您尝试从托管在不同域上的API获取数据时，可能会发生CORS错误。 通过设置代理，您可以绕过CORS限制，从React应用程序向API发出请求。 我在src文件夹中名为setUpProxy.js的文件中使用了以下代码。 **确保将目标更改为指向发布实例。**
 
 ```
 const { createProxyMiddleware } = require('http-proxy-middleware');
@@ -55,7 +55,7 @@ module.exports = function(app) {
 };
 ```
 
-您还需要安装并添加 **http-proxy-middleware** 模块到项目。
+您还需要安装和添加 **http-proxy-middleware** 模块到您的项目。
 
 ## 后续步骤
 

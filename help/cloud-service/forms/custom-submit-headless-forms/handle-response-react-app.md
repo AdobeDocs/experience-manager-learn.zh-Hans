@@ -1,6 +1,6 @@
 ---
 title: 从自定义提交中提取响应
-description: 在表单提交成功时提取自定义响应
+description: 在成功提交表单时提取自定义响应
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -9,13 +9,13 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 13520
-source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
+exl-id: e5f76d6a-2ea8-4909-9cfb-b673077cf8fd
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '51'
 ht-degree: 0%
 
 ---
-
 
 # 从响应中提取json对象
 
@@ -35,14 +35,3 @@ const onSuccess=(action) =>{
         
       }
 ```
-
-
-
-
-
-
-
-
-
-
-

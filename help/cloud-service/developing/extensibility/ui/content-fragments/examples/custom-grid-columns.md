@@ -10,23 +10,23 @@ jira: KT-13453
 thumbnail: KT-13453.jpeg
 doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
-
 # 自定义网格列
 
 ![内容片段控制台自定义网格列](./assets/custom-grid-columns/hero.png){align="center"}
 
-可以使用将自定义网格列添加到内容片段控制台  `contentFragmentGrid` 扩展点。 此示例说明如何添加自定义列，该列根据内容片段的上次修改日期，以人类可读的格式显示内容片段页面。
+可以使用将自定义网格列添加到内容片段控制台  `contentFragmentGrid` 扩展点。 此示例说明如何添加自定义列，该列以人类可读的格式显示基于上次修改日期的内容片段时限。
 
 ## 扩展点
 
-此示例扩展到扩展点 `contentFragmentGrid` 以向内容片段控制台添加自定义列。
+此示例将扩展到扩展点 `contentFragmentGrid` 以向内容片段控制台添加自定义列。
 
 | AEM UI已扩展 | 扩展点 |
 | ------------------------ | --------------------- | 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 该代码显示了如何在扩展的注册文件中获取内容片段的元数据，以及如何导出内容片段的JSON内容。
 
-此示例使用 [吕克松](https://moment.github.io/luxon/) 用于计算内容片段存在时间的库，通过以下方式安装： `npm i luxon`.
+此示例使用 [吕克松](https://moment.github.io/luxon/) 用于计算内容片段存在时间的库，通过以下方式安装 `npm i luxon`.
 
 ### 延期注册
 
@@ -159,7 +159,7 @@ render: async function (fragments) {
 }
 ```
 
-示例内容片段JSON，它作为 `fragments` 中的参数 `render(..)` 方法。
+示例内容片段JSON，可用作 `fragments` 中的参数 `render(..)` 方法。
 
 ```json
 {
@@ -202,13 +202,13 @@ render: async function (fragments) {
 }
 ```
 
-如果需要其他数据来填充自定义列，可以向AEM作者发出HTTP请求以检索数据。
+如果需要其他数据来填充自定义列，可以向AEM Author发出HTTP请求以检索数据。
 
 >[!IMPORTANT]
 >
-> 确保AEM创作实例配置为允许 [跨源请求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) 运行AppBuilder应用程序的源位置。 允许的源包括 `https://localhost:9080`、AppBuilder暂存源和AppBuilder生产源。
+> 确保将AEM创作实例配置为允许 [跨源请求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) 运行AppBuilder应用程序的源位置。 允许的源包括 `https://localhost:9080`、AppBuilder暂存源和AppBuilder生产源。
 >
-> 或者，扩展也可以调用自定义 [AppBuilder操作](../../runtime-action.md) 会代表该扩展向AEM作者发出请求。
+> 或者，扩展也可以调用自定义 [AppBuilder操作](../../runtime-action.md) 代表扩展向AEM Author发出请求。
 
 
 ```javascript

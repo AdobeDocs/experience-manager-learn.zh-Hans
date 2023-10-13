@@ -10,8 +10,8 @@ doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
 jira: KT-13102
 thumbnail: 3418381.jpeg
-exl-id: f47ce344-310f-4b4c-9340-b0506289f468
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 1%
@@ -22,9 +22,9 @@ ht-degree: 1%
 
 AEM Headless GraphQL查询可能会返回大量结果。 本文介绍了如何在AEM Headless中使用大型结果以确保应用程序的最佳性能。
 
-AEM Headless支持 [偏移/限制](#list-query) 和 [基于游标的分页](#paginated-query) 查询到较大结果集的较小子集。 可以提出多个请求来收集所需数量的结果。
+AEM Headless支持 [offset/limit](#list-query) 和 [基于光标的分页](#paginated-query) 查询到较大结果集的较小子集。 可以提出多个请求来收集所需数量的结果。
 
-以下示例使用结果的小子集（每个请求四个记录）来演示这些技术。 在真实应用程序中，您将为每个请求使用更多的记录来提高性能。 很好的基线是每个请求50条记录。
+下面的示例使用结果的小子集（每个请求四个记录）来演示这些技术。 在实际的应用程序中，您将为每个请求使用更多的记录以提高性能。 很好的基线是每个请求50条记录。
 
 ## 内容片段模型
 
@@ -32,11 +32,11 @@ AEM Headless支持 [偏移/限制](#list-query) 和 [基于游标的分页](#pag
 
 ## GraphQL持久查询
 
-处理大型数据集时，偏移和限制以及基于游标的分页都可以用于检索数据的特定子集。 然而，这两种技术之间存在一些差异，使得其中一种技术可能在某些情况下比另一种技术更合适。
+处理大型数据集时，可使用偏移和限制以及基于游标的分页来检索数据的特定子集。 但是，这两种技术之间存在一些差异，使得其中一种在某些情况下可能比另一种更合适。
 
 ### 偏移/限制
 
-列出查询，使用 `limit` 和 `offset` 提供直接的方法，指定起点(`offset`)和要检索的记录数(`limit`)。 这种方法允许从完整结果集中的任何位置选择结果子集，例如跳转到结果的特定页面。 虽然它易于实施，但在处理大量结果时速度可能会很慢而且效率低下，因为检索许多记录需要扫描所有以前的记录。 当偏移值较高时，此方法还可能导致性能问题，因为它可能需要检索和丢弃许多结果。
+列出查询，使用 `limit` 和 `offset` 提供直接的方法，指定起始点(`offset`)和要检索的记录数(`limit`)。 这种方法允许从完整结果集中的任何位置选择结果的子集，例如跳转到结果的特定页面。 虽然它易于实施，但在处理大量结果时可能会变得缓慢而低效，因为检索许多记录需要扫描所有以前的记录。 当偏移值较高时，此方法还可能导致性能问题，因为它可能需要检索和丢弃许多结果。
 
 #### GraphQL查询
 
@@ -64,7 +64,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 
 #### GraphQL响应
 
-生成的JSON响应包含第2、第3、第4和第5最昂贵的冒险。 结果中的前两次冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定具有相同价格的冒险，然后按标题的升序排序。)
+生成的JSON响应包含第2、第3、第4和第5最昂贵的冒险。 结果中的前两次冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定具有相同价格的冒险，然后按标题以升序排序。)
 
 ```json
 {
@@ -99,7 +99,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 
 ### 分页查询
 
-基于游标的分页可用于分页查询，它涉及使用游标（对特定记录的引用）来检索下一组结果。 这种方法效率更高，因为它无需扫描所有先前的记录来检索所需的数据子集。 分页查询非常适合迭代从头到中间的某个点或到结尾的大型结果集。 列出查询，使用 `limit` 和 `offset` 提供直接的方法，指定起点(`offset`)和要检索的记录数(`limit`)。 这种方法允许从完整结果集中的任何位置选择结果子集，例如跳转到结果的特定页面。 虽然它易于实施，但在处理大量结果时速度可能会很慢而且效率低下，因为检索许多记录需要扫描所有以前的记录。 当偏移值较高时，此方法还可能导致性能问题，因为它可能需要检索和丢弃许多结果。
+基于游标的分页（在分页查询中可用）涉及使用游标（对特定记录的引用）检索下一组结果。 这种方法效率更高，因为它无需扫描所有先前的记录来检索所需的数据子集。 分页查询非常适合迭代从头到中间的某个点或到结尾的大型结果集。 列出查询，使用 `limit` 和 `offset` 提供直接的方法，指定起始点(`offset`)和要检索的记录数(`limit`)。 这种方法允许从完整结果集中的任何位置选择结果的子集，例如跳转到结果的特定页面。 虽然它易于实施，但在处理大量结果时可能会变得缓慢而低效，因为检索许多记录需要扫描所有以前的记录。 当偏移值较高时，此方法还可能导致性能问题，因为它可能需要检索和丢弃许多结果。
 
 #### GraphQL查询
 
@@ -133,7 +133,7 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 #### GraphQL响应
 
-生成的JSON响应包含第2、第3、第4和第5最昂贵的冒险。 结果中的前两次冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定具有相同价格的冒险，然后按标题的升序排序。)
+生成的JSON响应包含第2、第3、第4和第5最昂贵的冒险。 结果中的前两次冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定具有相同价格的冒险，然后按标题以升序排序。)
 
 ```json
 {
@@ -176,7 +176,7 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 #### 下一组分页结果
 
-下一组结果可以使用获取 `after` 参数和 `endCursor` 值。 如果没有更多要获取的结果， `hasNextPage` 是 `false`.
+可以使用获取下一组结果 `after` 参数和 `endCursor` 值。 如果没有更多要获取的结果， `hasNextPage` 是 `false`.
 
 ##### 查询变量
 
@@ -189,13 +189,13 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 ## React示例
 
-以下是演示如何使用的React示例 [偏移和限制](#offset-and-limit) 和 [基于游标的分页](#cursor-based-pagination) 方法。 通常，每个请求的结果数会更多，但是对于这些示例，限制设置为5。
+以下是演示如何使用的React示例 [偏移和限制](#offset-and-limit) 和 [基于光标的分页](#cursor-based-pagination) 方法。 通常，每个请求的结果数会更多，但就这些示例而言，限制设置为5。
 
 ### 偏移和限制示例
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418381/?quality=12&learn=on)
 
-通过使用偏移和限制，可以轻松地检索和显示结果子集。
+利用偏移和限制，可以方便地检索和显示结果子集。
 
 #### useEffect挂钩
 
@@ -242,7 +242,7 @@ export function useOffsetLimitAdventures(page, limit) {
 
 #### 组件
 
-组件使用 `useOffsetLimitAdventures` 检索冒险的列表。 此 `page` 值会递增或递减以获取下一组或上一组结果。 此 `hasMore` value用于确定是否应启用“下一页”按钮。
+组件使用 `useOffsetLimitAdventures` 挂接以检索冒险列表。 此 `page` 值会递增或递减以获取下一组或上一组结果。 此 `hasMore` value用于确定是否应启用“下一页”按钮。
 
 ```javascript
 import { useState } from "react";
@@ -306,7 +306,7 @@ export default function OffsetLimitAdventures() {
 
 _每个红色框表示一个离散的分页HTTP GraphQL查询。_
 
-通过使用基于游标的分页，可以增量收集结果并将其连接到现有结果，从而轻松检索和显示大型结果集。
+使用基于光标的分页，通过增量收集结果并将其连接到现有结果，可以轻松检索和显示大型结果集。
 
 
 #### UseEffect挂钩
@@ -366,7 +366,7 @@ export function usePaginatedAdventures() {
 
 #### 组件
 
-组件使用 `usePaginatedAdventures` 检索冒险的列表。 此 `queryCount` value用于显示为检索冒险列表而发出的HTTP请求数。
+组件使用 `usePaginatedAdventures` 挂接以检索冒险列表。 此 `queryCount` value用于显示为检索Adventures列表而发出的HTTP请求数。
 
 ```javascript
 import { useState } from "react";

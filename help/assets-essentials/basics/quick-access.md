@@ -1,6 +1,6 @@
 ---
 title: 快速访问
-description: 了解快速访问如何通过将您的个人镜头加入AEM Assets而提高您的工作效率并简化您的工作流程，让分配任务所需的所有资源触手可及。
+description: 了解快速访问如何通过将您的个人镜头用作AEM Assets中的镜头来提高工作效率并简化工作流，轻松获取分配任务所需的所有资源。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -10,16 +10,16 @@ doc-type: Feature Video
 last-substantial-update: 2023-06-27T00:00:00Z
 jira: KT-13223
 thumbnail: 3420975.jpeg
-source-git-commit: cdc34a11cf9f6edd54f7423218cb66a93a104a92
+exl-id: 0f62da34-b6d7-42ac-a6f6-08a50483fb25
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '75'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
-
 # 快速访问
 
-了解“我的工作区”的快速访问小组件如何通过将您的个人镜头加入AEM Assets，触手可及地保留分配任务所需的所有资源，从而提高您的工作效率并简化您的工作流程。
+了解“我的工作区”的快速访问小组件如何通过将您的个人镜头置于AEM Assets中，触手可及地保留分配任务所需的所有资源，从而提高您的工作效率并简化工作流。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420975/?learn=on)
