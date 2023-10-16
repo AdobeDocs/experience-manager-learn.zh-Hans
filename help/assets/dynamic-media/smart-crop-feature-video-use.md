@@ -6,8 +6,9 @@ version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
+jira: KT-784
 exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: af9fe46643ce9bc4adf71b77eb49535d0ec5f949
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 2%
@@ -34,4 +35,4 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->智能裁剪坐标与纵横比相关。 也就是说，对于图像配置文件中的各种智能裁剪设置，如果图像配置文件中添加的维度的纵横比相同，则向Dynamic Media发送相同的纵横比。 因此，建议在智能裁切编辑器中使用相同的裁切区域。 例如，裁切设置为100x100和200x200将导致系统生成相同的智能裁切。
+>智能裁剪坐标与纵横比相关。 也就是说，对于图像配置文件中的各种智能裁剪设置，如果图像配置文件中添加的维度的纵横比相同，则相同的纵横比将发送到Dynamic Media。 因此，在智能裁切编辑器中建议使用相同的裁切区域。 例如，100x100和200x200的裁切设置将导致系统生成相同的智能裁切。
