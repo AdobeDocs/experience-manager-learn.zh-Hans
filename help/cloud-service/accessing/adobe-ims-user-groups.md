@@ -24,6 +24,6 @@ ht-degree: 60%
 >title="Adobe IMS 用户组"
 >abstract="Adobe IMS 用户组建立了对 AEM 公开的用户逻辑集，这些逻辑集可用来定义 AEM 用户的微调权限。"
 
- Adobe IMS用户组建立了对AEM公开的用户逻辑集，这些逻辑集可用于定义AEM用户的微调权限。
+ Adobe IMS用户组建立了对AEM公开的用户逻辑集，这些逻辑集可用来定义AEM用户的微调权限。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39150?quality=12&learn=on)

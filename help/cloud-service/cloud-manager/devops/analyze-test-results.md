@@ -1,6 +1,6 @@
 ---
 title: 分析AEM Cloud Manager测试结果
-description: 从AEM Cloud Manager中浏览并修复报告结果
+description: 浏览并修复来自AEM Cloud Manager的报告结果
 role: Developer
 level: Beginner
 type: Tutorial

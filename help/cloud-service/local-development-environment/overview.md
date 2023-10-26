@@ -24,10 +24,10 @@ ht-degree: 14%
 >id="aemcloud_localdev_overview"
 >title="概述"
 >abstract="为 AEM as a Cloud Service 设置本地开发环境包括开发、构建和编译 AEM 项目所需的开发工具，以及允许开发人员在通过 Adobe Cloud Manager 将新功能部署到 AEM as a Cloud Service 之前在本地快速验证这些新功能的本地运行时。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="开发准则"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=zh-Hans" text="开发准则"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=zh-Hans" text="开发基础"
 
-本教程将指导您使用AEMas a Cloud ServiceSDK为Adobe Experience Manager (AEM)设置本地开发环境。 其中包括开发、构建和编译AEM项目所需的开发工具，以及允许开发人员在通过AdobeCloud Manager将新功能部署到AEMas a Cloud Service之前，在本地快速验证新功能的本地运行时间。
+本教程介绍如何使用AEMas a Cloud ServiceSDK为Adobe Experience Manager (AEM)设置本地开发环境。 其中包括开发、构建和编译AEM项目所需的开发工具，以及允许开发人员在通过AdobeCloud Manager将新功能部署到AEMas a Cloud Service之前，在本地快速验证新功能的本地运行时间。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32565?quality=12&learn=on)
 
@@ -36,7 +36,7 @@ ht-degree: 14%
 AEM的本地开发环境可以划分为三个逻辑组：
 
 + 此 __AEM项目__ 包含自定义代码、配置和自定义AEM应用程序内容。
-+ 此 __本地AEM运行时__ 在本地运行AEM创作和发布服务的本地版本。
++ 此 __本地AEM运行时__ 在本地运行AEM Author和Publish服务的本地版本。
 + 此 __本地Dispatcher运行时__ 运行Apache HTTP Web Server和Dispatcher的本地版本。
 
 本教程将介绍如何安装和设置上图中突出显示的项目，为AEM开发提供稳定的本地开发环境。
@@ -45,9 +45,9 @@ AEM的本地开发环境可以划分为三个逻辑组：
 
 本教程建立了AEMas a Cloud ServiceSDK工件和AEM项目代码的位置，如下所示：
 
-+ `~/aem-sdk` 是一个组织文件夹，其中包含AEMas a Cloud ServiceSDK提供的各种工具
-+ `~/aem-sdk/author` 包含AEM作者服务
-+ `~/aem-sdk/publish` 包含AEM发布服务
++ `~/aem-sdk` 是一个组织文件夹，其中包含由AEMas a Cloud ServiceSDK提供的各种工具
++ `~/aem-sdk/author` 包含AEM Author服务
++ `~/aem-sdk/publish` 包含AEM Publish服务
 + `~/aem-sdk/dispatcher` 包含Dispatcher工具
 + `~/code/<project name>` 包含自定义AEM项目源代码
 
@@ -64,7 +64,7 @@ AEM项目是一个自定义代码库，其中包含通过Cloud Manager部署到A
 + 安装 [!DNL Maven]
 + 安装 [!DNL Git]
 
-[设置AEM项目的开发工具](./development-tools.md)
+[为AEM项目设置开发工具](./development-tools.md)
 
 ## 本地 AEM 运行时
 
@@ -81,7 +81,7 @@ AEMas a Cloud ServiceSDK提供了 [!DNL QuickStart Jar] 运行AEM的本地版本
 
 ## 本地 [!DNL Dispatcher] 运行时
 
-AEMas a Cloud ServiceSDK的Dispatcher工具提供了设置本地所需的全部功能 [!DNL Dispatcher] 运行时。 [!DNL Dispatcher] 工具包括 [!DNL Docker]基于并提供命令行工具以传输 [!DNL Apache HTTP] Web服务器和 [!DNL Dispatcher] 配置文件采用兼容的格式并部署到 [!DNL Dispatcher] 在中运行 [!DNL Docker] 容器。
+AEMas a Cloud ServiceSDK的Dispatcher Tools提供了设置本地所需的全部功能 [!DNL Dispatcher] 运行时。 [!DNL Dispatcher] 工具为 [!DNL Docker]基于并提供命令行工具以传输 [!DNL Apache HTTP] Web服务器和 [!DNL Dispatcher] 配置文件采用兼容格式并将其部署到 [!DNL Dispatcher] 在中运行 [!DNL Docker] 容器。
 
 本教程的此部分将演示如何：
 

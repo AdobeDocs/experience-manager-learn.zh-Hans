@@ -21,12 +21,12 @@ ht-degree: 11%
 
 内容片段的AEM GraphQL API支持Headless CMS方案，其中外部客户端应用程序使用AEM中管理的内容呈现体验。
 
-现代化的内容交付API对于基于Javascript的前端应用程序的效率和性能至关重要。 使用REST API会带来一些挑战：
+现代化的内容交付API是基于Javascript的前端应用程序效率和性能的关键。 使用REST API会带来挑战：
 
-* 一次获取一个对象的大量请求
-* 通常“超额交付”内容，这意味着应用程序收到的内容多于其需要的内容
+* 每次获取一个对象的请求数量很大
+* 通常“超量提供”内容，这意味着应用程序收到的内容多于其需要的内容
 
-为了克服这些挑战，GraphQL提供了基于查询的API，允许客户端仅查询AEM所需的内容，并使用单个API调用接收。
+为了克服这些挑战，GraphQL提供了基于查询的API，允许客户端仅查询AEM所需的内容，并使用单个API调用进行接收。
 
 >[!VIDEO](https://video.tv.adobe.com/v/328618?quality=12&learn=on)
 
@@ -40,21 +40,21 @@ ht-degree: 11%
 
 ## AEM Headless GraphQL视频系列
 
-通过内容片段和AEM GraphQL API及开发工具的深入演练了解AEM GraphQL功能。
+通过内容片段和AEM GraphQL API及开发工具的深入演练，了解AEM GraphQL功能。
 
 * [AEM Headless GraphQL视频系列](./video-series/modeling-basics.md)
 
 ## AEM Headless GraphQL实践教程
 
-通过构建通过AEM GraphQL API使用内容片段的React应用程序来探索AEM GraphQL功能。
+通过构建一个React应用程序来探索AEM GraphQL的功能，该应用程序可通过AEM GraphQL API使用内容片段。
 
 * [AEM Headless GraphQL实践教程](./multi-step/overview.md)
 
 ## AEM GraphQL与AEM内容服务
 
-|  | AEM GRAPHQL API | AEM内容服务 |
+|                                | AEM GRAPHQL API | AEM内容服务 |
 |--------------------------------|:-----------------|:---------------------|
 | 架构定义 | 结构化内容片段模型 | AEM组件 |
 | 内容 | 内容片段 | AEM组件 |
 | 内容发现 | 按GraphQL查询 | 按AEM页 |
-| 投放格式 | GRAPHQL JSON | AEM ComponentExporter JSON |
+| 投放格式 | GRAPHQL JSON | AEM组件导出程序JSON |

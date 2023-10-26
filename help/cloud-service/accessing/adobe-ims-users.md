@@ -23,7 +23,7 @@ ht-degree: 73%
 >title="Adobe IMS 用户"
 >abstract="需要访问 AEM Author 服务的用户在 Adobe Admin Console 中作为 Adobe IMS 用户进行管理。了解 Adobe IMS 用户的身份，以及如何在 Admin Console 中访问和管理他们。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#how-to-set-up" text="在 Admin Console 中载入用户"
->additional-url="https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="Adobe Admin Console 标识概述"
+>additional-url="https://helpx.adobe.com/cn/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="Adobe Admin Console 标识概述"
 
 需要访问AEM创作服务的用户被管理为 [Adobe IMS用户](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html) 在 [AdobeAdmin Console](https://adminconsole.adobe.com). 了解 Adobe IMS 用户的身份，以及如何在 Admin Console 中访问和管理他们。
 
