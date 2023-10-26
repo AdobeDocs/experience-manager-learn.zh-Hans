@@ -9,9 +9,9 @@ level: Beginner
 last-substantial-update: 2023-08-14T00:00:00Z
 kt: 13781
 exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,6 @@ ht-degree: 0%
 
 [登录您的Azure门户帐户并创建存储帐户](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal#create-a-storage-account-1). 为存储帐户提供一个有意义的名称，单击“查看” ，然后单击“创建”。 这将创建具有所有默认值的存储帐户。 出于本文的目的，我们命名了我们的存储帐户 `aemformstutorial`.
 
-## 创建共享访问
-
-我们将使用共享访问签名或SAS授权方法来与Azure存储容器交互。
-在门户的存储帐户页面中，单击左侧的共享访问签名菜单项以打开新的共享访问签名密钥设置页面。 确保指定如下面的屏幕快照所示的设置和相应的结束日期，然后单击“生成SAS和连接字符串”按钮。 复制Blob服务SAS url。 我们将使用此URL进行HTTP调用
-![共享访问密钥](./assets/shared-access-signature.png)
 
 ## 创建容器
 
@@ -37,39 +32,74 @@ ht-degree: 0%
 在存储帐户页面中，单击左侧的容器菜单项，然后创建一个名为的容器 `formssubmissions`. 确保将公共访问级别设置为私有
 ![容器](./assets/new-container.png)
 
+## 在容器上创建SAS
+
+我们将使用共享访问签名或SAS授权方法来与Azure存储容器交互。
+导航到存储帐户中的容器，单击省略号并选择生成SAS选项，如屏幕快照中所示
+![容器上的sas](./assets/sas-on-container.png)
+请确保指定如下面的屏幕快照所示的适当权限和适当结束日期，然后单击生成SAS令牌和URL。 复制Blob SAS令牌和Blob SAS URL。 我们将使用这两个值来进行HTTP调用
+![共享访问密钥](./assets/shared-access-signature.png)
+
+
+## 提供Blob SAS令牌和存储URI
+
+为了使代码更通用，可以使用OSGi配置来配置这两个属性，如下所示。 此 _**服饰**_ 是存储帐户的名称， _**formsubmissions**_ 是将存储数据的容器。
+![osgi配置](./assets/azure-portal-osgi-configuration.png)
+
+
 ## 创建PUT请求
 
-下一步是创建PUT请求，以将提交的表单数据存储在Azure Storage中。 我们必须修改Blob服务SAS URL，以便在URL中包含容器名称和BLOB ID。 每个表单提交都需要使用唯一的BLOB ID进行标识。 唯一BLOB ID通常在代码中创建并插入PUT请求的URL中。
+下一步是创建PUT请求，以将提交的表单数据存储在Azure Storage中。 每个表单提交都需要使用唯一的BLOB ID进行标识。 唯一BLOB ID通常在代码中创建并插入PUT请求的URL中。
 以下是PUT请求的部分URL。 此 `aemformstutorial` 是存储帐户的名称，formsubmissions是将使用唯一BLOB ID存储数据的容器。 URL的其余部分将保持不变。
-https://aemformstutorial.blob.core.windows.net/formsubmissions/00cb1a0c-a891-4dd7-9bd2-67a22bef3b8b?...............
-
-以下是使用PUT请求将提交的表单数据存储在Azure Storage中的函数。 请注意是否在URL中使用了容器名称和uuid。 您可以使用下面列出的示例代码创建OSGi服务或Sling Servlet，并将表单提交存储在Azure存储中。
+https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken以下是使用PUT请求将提交的表单数据存储在Azure Storage中的函数。 请注意是否在URL中使用了容器名称和uuid。 您可以使用下面列出的示例代码创建OSGi服务或Sling Servlet，并将表单提交存储在Azure存储中。
 
 ```java
  public String saveFormDatainAzure(String formData) {
-        System.out.println("in SaveFormData!!!!!"+formData);
-        org.apache.http.impl.client.CloseableHttpClient httpClient = HttpClientBuilder.create().build();
-        UUID uuid = UUID.randomUUID();
-        
-        String url = "https://aemformstutorial.blob.core.windows.net/formsubmissions/"+uuid.toString();
-        url = url+"?sv=2022-11-02&ss=bf&srt=o&sp=rwdlaciytfx&se=2024-06-28T00:42:59Z&st=2023-06-27T16:42:59Z&spr=https&sig=v1MR%2FJuhEledioturDFRTd9e2fIDVSGJuAiUt6wNlkLA%3D";
-        HttpPut httpPut = new HttpPut(url);
-        httpPut.addHeader("x-ms-blob-type","BlockBlob");
-        httpPut.addHeader("Content-Type","text/plain");
-        try {
-            httpPut.setEntity(new StringEntity(formData));
-            CloseableHttpResponse response = httpClient.execute(httpPut);
-            log.debug("Response code "+response.getStatusLine().getStatusCode());
-        } catch (IOException e) {
-            log.error("Error: "+e.getMessage());
-            throw new RuntimeException(e);
+    log.debug("in SaveFormData!!!!!" + formData);
+    String sasToken = azurePortalConfigurationService.getSASToken();
+    String storageURI = azurePortalConfigurationService.getStorageURI();
+    log.debug("The SAS Token is " + sasToken);
+    log.debug("The Storage URL is " + storageURI);
+    org.apache.http.impl.client.CloseableHttpClient httpClient = HttpClientBuilder.create().build();
+    UUID uuid = UUID.randomUUID();
+    String putRequestURL = storageURI + uuid.toString();
+    putRequestURL = putRequestURL + sasToken;
+    HttpPut httpPut = new HttpPut(putRequestURL);
+    httpPut.addHeader("x-ms-blob-type", "BlockBlob");
+    httpPut.addHeader("Content-Type", "text/plain");
+
+    try {
+        httpPut.setEntity(new StringEntity(formData));
+
+        CloseableHttpResponse response = httpClient.execute(httpPut);
+        log.debug("Response code " + response.getStatusLine().getStatusCode());
+        if (response.getStatusLine().getStatusCode() == 201) {
+            return uuid.toString();
         }
-        return uuid.toString();
-
-
+    } catch (IOException e) {
+        log.error("Error: " + e.getMessage());
+        throw new RuntimeException(e);
     }
+    return null;
+
+}
 ```
 
 ## 验证容器中存储的数据
 
 ![form-data-in-container](./assets/form-data-in-container.png)
+
+## 测试解决方案
+
+* [部署自定义OSGi捆绑包](./assets/SaveAndFetchFromAzure.core-1.0.0-SNAPSHOT.jar)
+
+* [导入自定义自适应表单模板以及与模板关联的页面组件](./assets/store-and-fetch-from-azure.zip)
+
+* [导入自适应表单示例](./assets/bank-account-sample-form.zip)
+
+* 使用OSGi配置控制台在Azure门户配置中指定适当的值
+* [预览和提交BankAccount表单](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
+
+* 验证数据是否存储在您选择的Azure存储容器中。 复制Blob ID。
+* [预览BankAccount表单](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) 并将Blob ID指定为URL中的guid参数，以便使用Azure存储中的数据预填充表单
+

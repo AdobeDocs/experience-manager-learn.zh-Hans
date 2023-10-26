@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: bac637440d1cc5af0e0abb119ca2f4e93f69cf34
+source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
 workflow-type: tm+mt
-source-wordcount: '1851'
+source-wordcount: '1874'
 ht-degree: 2%
 
 ---
@@ -48,6 +48,7 @@ ht-degree: 2%
    + [与ServiceNow集成](some-useful-integrations/service-now.md)
    + [使用SendGrid发送电子邮件](some-useful-integrations/send-grid.md)
    + [将表单数据存储在Azure存储中](some-useful-integrations/store-form-data-in-azure-storage.md)
+   + [用Azure Blob填充表单](some-useful-integrations/fetch-form-data-from-azure-storage.md)
 + 创建OSGi捆绑包 {#creating-your-first-osgi-bundle}
    + [1 — 设置环境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 — 创建OSGi服务](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -142,6 +143,12 @@ ht-degree: 2%
    + [9 — 创建主表单](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
    + [10 — 创建MyAccount表单](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
    + [11 — 部署示例](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
++ 从PDF文件导入数据{#import-data-from-pdf-form}
+   + [1 — 简介](import-data-from-pdf-form/introduction.md)
+   + [2 — 创建自适应表单](import-data-from-pdf-form/create-adaptive-form.md)
+   + [3 — 创建OSGi服务](import-data-from-pdf-form/create-osgi-service.md)
+   + [4 — 填充自适应表单](import-data-from-pdf-form/populate-adaptive-form.md)
+   + [5 — 测试解决方案](import-data-from-pdf-form/test-the-solution.md)
 + 以CSV格式导出提交的数据{#export-submitted-data-csv-format}
    + [导出提交的数据](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 表单{#html5-forms}
