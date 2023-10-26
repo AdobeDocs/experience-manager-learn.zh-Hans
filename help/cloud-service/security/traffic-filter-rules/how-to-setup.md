@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
+source-git-commit: 67e0a7530549a0d380e9ef82e3747c40d17b1b75
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '564'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 3%
 
 - _创建规则_ 具有适当的AEM项目结构和配置文件。
 - _部署规则_ 使用Adobe云管理器的配置管道。
-- _测试规则_ 使用各种工具生成流量
+- _测试规则_ 使用各种工具生成流量。
 - _分析结果_ 使用AEMCS CDN日志和功能板工具。
 
 ### 在AEM项目中创建规则
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 1. 在AEM项目的顶层，创建一个文件夹 `config`.
 
-1. 在 `config` 文件夹，新建一个名为 `cdn.yaml`.
+1. 在 `config` 文件夹，创建一个名为的新文件 `cdn.yaml`.
 
 1. 将以下元数据添加到 `cdn.yaml` 文件：
 
