@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 示例
 
-让我们探索各种流量过滤器规则示例，包括WAF规则。 请确保您已完成之前的说明中要求的设置过程 [如何设置](./how-to-setup.md) 章节中，您已克隆 [AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+让我们探索各种流量过滤器规则的示例，包括WAF规则。 请确保您已完成之前的说明中要求的设置过程 [如何设置](./how-to-setup.md) 章节中，您已克隆 [AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
 ### 记录请求
 

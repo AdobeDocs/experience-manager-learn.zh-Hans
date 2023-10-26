@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '266'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,8 @@ ht-degree: 0%
 流量过滤器规则部署到 [内置CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html) 在请求到达AEM基础架构之前对和进行评估。 利用此功能，您可以显着增强网站的安全性，确保只允许合法请求访问AEM基础架构。
 
 本教程将指导您完成创建、部署、测试和分析流量过滤器规则（包括WAF规则）结果的过程。
+
+有关流量过滤器规则的更多信息，请参阅 [本文](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en)
 
 >[!IMPORTANT]
 >
