@@ -7,10 +7,10 @@ topic: Security, Administration, Architecture
 role: Admin, Architect
 level: Intermediate
 doc-type: Tutorial
-last-substantial-update: 2023-10-20T00:00:00Z
+last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
+source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 0%
@@ -86,7 +86,7 @@ data:
 
 - 复制下载的日志文件(例如， `publish_cdn_2023-10-24.log` （如下面的屏幕截图所示） `logs/dev` “弹性”操控板工具项目的文件夹。
 
-  ![ELK工具日志文件夹](./assets/elk-tool-logs-folder.png)
+  ![ELK工具日志文件夹](./assets/elk-tool-logs-folder.png){width="800" zoomable="yes"}
 
 - 刷新弹性仪表板工具页面。
    - 在顶部 **全局筛选器** 部分，编辑 `aem_env_name.keyword` 筛选并选择 `dev` 环境值。
