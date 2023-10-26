@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
+source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1054'
 ht-degree: 20%
 
 ---
@@ -155,6 +155,12 @@ ht-degree: 20%
       + [使用DataSourcePool的SQL连接](./networking/examples/sql-datasourcepool.md)
       + [SQL连接使用Java SQL API](./networking/examples/sql-java-apis.md)
       + [电子邮件服务](./networking/examples/email-service.md)
++ 安全性 {#security}
+   + 包含WAF规则的流量过滤器规则{#traffic-filter-and-waf-rules}
+      + [概述](./security/traffic-filter-rules/overview.md)
+      + [如何设置](./security/traffic-filter-rules/how-to-setup.md)
+      + [示例和结果分析](./security/traffic-filter-rules/examples-and-analysis.md)
+      + [最佳实践](./security/traffic-filter-rules/best-practices.md)
 + 迁移 {#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
    + [批量导入资源](./migration/bulk-import.md)
