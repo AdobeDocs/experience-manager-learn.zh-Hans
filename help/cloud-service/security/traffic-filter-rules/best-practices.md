@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## 流量过滤器规则的最佳实践
 
-为您的AEM项目启用以下流量过滤器规则。 但是， `rateLimit` 和 `clientCountry` 属性必须与您的安全团队协作确定。
+为您的AEM项目启用下面的流量过滤器规则。 但是， `rateLimit` 和 `clientCountry` 属性必须与您的安全团队协作确定。
 
 ```yaml
 kind: CDN
@@ -84,7 +84,7 @@ data:
 
 >[!WARNING]
 >
->对于您的生产环境，请与Web安全团队协作，确定以下项的适当值： `rateLimit`，
+>对于您的生产环境，请与Web安全团队协作，确定以下项的适当值： `rateLimit`
 
 ## WAF规则的最佳实践
 

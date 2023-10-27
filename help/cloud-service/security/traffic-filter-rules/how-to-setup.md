@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 3%
@@ -27,7 +27,7 @@ ht-degree: 3%
 设置过程涉及以下内容：
 
 - _创建规则_ 具有适当的AEM项目结构和配置文件。
-- _部署规则_ 使用Adobe云管理器的配置管道。
+- _部署规则_ 使用AdobeCloud Manager的配置管道。
 - _测试规则_ 使用各种工具生成流量。
 - _分析结果_ 使用AEMCS CDN日志和功能板工具。
 

@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
-source-wordcount: '1510'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 0%
 
 了解如何使用Adobe Experience Manager as a Cloud Service (AEMCS) CDN日志和仪表板工具声明各种类型的流量过滤器规则并分析结果。
 
-在此部分中，您将探索流量过滤器规则的实用示例，包括WAF规则。 您将学习如何使用，根据URI（或路径）、IP地址、请求数量和不同的攻击类型来记录、允许和阻止请求。 [AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+在此部分中，您将探索流量过滤器规则的实际示例，包括WAF规则。 您将了解如何使用，根据URI（或路径）、IP地址、请求数量和不同的攻击类型来记录、允许和阻止请求。 [AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
-此外，您会发现如何使用功能板工具摄取AEMCS CDN日志，通过Adobe提供的示例功能板可视化基本指标。
+此外，您将了解如何使用功能板工具来摄取AEMCS CDN日志，以通过Adobe提供的示例功能板可视化基本指标。
 
-为了符合您的特定要求，您可以增强和创建自定义功能板，从而更深入地了解您的AEM站点并优化规则配置。
+为了与您的特定要求保持一致，您可以增强和创建自定义功能板，从而获取更深入的见解并优化AEM站点的规则配置。
 
 ## 示例
 
-让我们探索各种流量过滤器规则的示例，包括WAF规则。 请确保您已完成之前的说明中要求的设置过程 [如何设置](./how-to-setup.md) 章节中，您已克隆 [AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+让我们探索各种流量过滤器规则的示例，包括WAF规则。 请确保您已完成之前的说明中要求的设置过程 [如何设置](./how-to-setup.md) 章节，而且您已克隆 [AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
 ### 记录请求
 
@@ -68,7 +68,7 @@ data:
 
   ![Cloud Manager配置管道](./assets/cloud-manager-config-pipeline.png)
 
-- 在Publish服务上登录并退出项目的WKND站点以测试规则(例如， `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`)。 您可以使用 `asmith/asmith` 作为用户名和密码。
+- 通过在Publish服务上登录并退出项目的WKND站点来测试规则(例如， `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`)。 您可以使用 `asmith/asmith` 作为用户名和密码。
 
   ![WKND登录](./assets/wknd-login.png)
 
@@ -104,11 +104,11 @@ data:
 
 ### 阻止请求
 
-在本例中，我们来添加一个页面， _内部_ 文件夹位置 `/content/wknd/internal` 已部署的WKND项目中的路径。 然后声明一个流量过滤器规则，该规则 **阻止流量** 从与您的组织匹配的指定IP地址以外的任何位置（例如，公司VPN）的子页面。
+在本例中，我们来添加一个页面， _内部_ 路径下的文件夹 `/content/wknd/internal` 在已部署的WKND项目中。 然后声明一个流量过滤器规则，该规则 **阻止流量** 从与您的组织匹配的指定IP地址以外的任何位置（例如，公司VPN）的子页面。
 
-您可以创建自己的内部页面(例如， `demo-page.html`)或使用 [附加的包](./assets/demo-internal-pages-package.zip)
+您可以创建自己的内部页面(例如， `demo-page.html`)或使用 [附加的包](./assets/demo-internal-pages-package.zip).
 
-- 在WKND项目的 `/config/cdn.yaml` 文件。
+- 在WKND项目的 `/config/cdn.yaml` 文件：
 
 ```yaml
 kind: CDN
@@ -200,7 +200,7 @@ data:
   $ echo "GET https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html" | vegeta attack -rate=120 -duration=5s | vegeta report
   ```
 
-  此命令在5秒内发出120个请求并输出报告。 如您所见，成功率为32.5%，其余部分收到406 HTTP响应代码，表明流量被阻止。
+  此命令在5秒内发出120个请求并输出报告。 如您所见，成功率为32.5%；其余部分接收到406 HTTP响应代码，表明流量被阻止。
 
   ![Vegeta DoS攻击](./assets/vegeta-dos-attack.png)
 
@@ -212,7 +212,7 @@ data:
 
 ![学习工具功能板DoS请求](./assets/elk-tool-dashboard-dos.png)
 
-此外， **按客户端IP、国家/地区和用户代理列出的100大攻击** 面板会显示其他详细信息，这些信息可用于进一步优化规则配置。
+此外， **按客户端IP、国家/地区和用户代理列出的100大攻击** 面板会显示其他详细信息，可用于进一步优化规则配置。
 
 ![ELK工具功能板DoS前100项请求](./assets/elk-tool-dashboard-dos-top-100.png)
 
@@ -220,7 +220,7 @@ data:
 
 迄今为止，流量过滤器规则示例可以由所有Sites和Forms客户配置。
 
-接下来，让我们探讨一下已购买增强型安全性或WAF-DDoS保护许可证的客户的体验。 这使您能够配置高级规则来保护AEM站点免受更复杂的攻击。
+接下来，让我们探讨一下已购买增强安全性或WAF-DDoS保护许可证的客户的体验，该许可证允许他们配置高级规则以保护网站免受更复杂的攻击。
 
 在继续操作之前，请按照流量过滤器规则文档中的说明，为程序启用WAF-DDoS保护 [设置步骤](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en#setup).
 
@@ -248,7 +248,7 @@ data:
 
 ![ELK工具功能板WAF标记请求](./assets/elk-tool-dashboard-waf-flagged.png)
 
-请注意 **WAF标记分发和顶级攻击** 面板会显示其他详细信息，可用于进一步优化规则配置。
+请注意 **WAF标记分发** 和 **热门攻击** 面板会显示其他详细信息，可用于进一步优化规则配置。
 
 ![ELK工具仪表板WAF标记攻击请求](./assets/elk-tool-dashboard-waf-flagged-top-attacks-1.png)
 
@@ -319,7 +319,7 @@ data:
 
 ![ELK工具功能板WAF阻止的请求](./assets/elk-tool-dashboard-waf-blocked.png)
 
-此外， **WAF标记分发和顶级攻击** 面板显示其他详细信息。
+此外， **WAF标记分发** 和 **热门攻击** 面板显示其他详细信息。
 
 ![ELK工具仪表板WAF标记攻击请求](./assets/elk-tool-dashboard-waf-blocked-top-attacks-1.png)
 
@@ -327,7 +327,7 @@ data:
 
 ### 综合分析
 
-在上面 _分析_ 部分，您已了解如何分析 **特定规则** 使用操控板工具。 您可以进一步探索使用其他仪表板面板来分析结果，包括：
+在上面 _分析_ 部分，您已了解如何使用仪表板工具分析特定规则的结果。 您可以进一步探索使用其他仪表板面板来分析结果，包括：
 
 
 - 已分析、已标记和已阻止的请求

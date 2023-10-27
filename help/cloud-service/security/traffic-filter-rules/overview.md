@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -30,12 +30,13 @@ ht-degree: 0%
 
 本教程将指导您完成创建、部署、测试和分析流量过滤器规则（包括WAF规则）结果的过程。
 
-有关流量过滤器规则的更多信息，请参阅 [本文](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en)
+有关流量过滤器规则的更多信息，请参阅 [本文](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en).
 
 >[!IMPORTANT]
 >
-> 名为“WAF规则”的流量过滤器规则的子类别需要WAF-DDoS保护许可证
+> 名为“WAF规则”的流量过滤器规则的子类别需要“WAF-DDoS保护”或“增强安全性”许可证。
 
+我们邀请您通过电子邮件发送反馈或询问有关流量过滤器规则的问题 **aemcs-waf-adopter@adobe.com**.
 
 ## 下一步
 
