@@ -5,29 +5,28 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: 1756ba04a39f65655618288e19cbaefb1bbda38d
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
 
-# Cloud 5
+# Cloud 5第2季
 
-![AEM Experts系列](./imgs/masthead-s2.png)
 >[!VIDEO](https://video.tv.adobe.com/v/346567?quality=12&learn=on)
 
 ## 简介
 
-欢迎观看AEM Engineering第二季的Cloud 5系列。 任何产品在实施阶段的主要问题之一就是要有足够的代码示例和/或这些示例、工具或API的实时演示。 本系列的目标是在5分钟或更短的时间内提供有关AEMas a Cloud Service的有用信息。
+欢迎观看AEM Engineering第二季的Cloud 5系列。 任何产品实施阶段的主要问题之一就是要有足够的代码示例和/或这些示例、工具或API的实时演示。 本系列的目标是在5分钟或更短的时间内提供关于AEMas a Cloud Service的有用信息。
 
 ## 建议框
 
-访问 [建议框](https://forms.office.com/r/74P5Xz4UH0) 用于提交主题想法。
+访问 [建议框](https://forms.office.com/r/74P5Xz4UH0) 用于提交主题建议。
 
 ## 第2季
 
-每季的发布时间长短不一，发布时间固定。 第2季的主题主要来自我们在与客户和合作伙伴的日常合作中遇到的过去请求。 请访问此页面以了解每周更新或关注您选择的社交网络。
+每一季的时间长度各异，并按照固定计划发布。 第二季的主题主要来自我们在与客户和合作伙伴的日常接触中遇到的过去请求。 请访问此页面以了解每周更新，或关注您选择的社交网络。
 
 <table>
     <tr>
@@ -41,7 +40,7 @@ ht-degree: 1%
             </div>
             <p>
                 <br/>
-                以丰富多彩的方式呈现体验和内容片段之间的差异。 剧透：每个人都赢。
+                以丰富多彩的方式呈现体验与内容片段之间的差异。 剧透者：每个人都赢了。
             </p>
         </td>   
          <td>
@@ -49,7 +48,7 @@ ht-degree: 1%
                  <img alt="存储库现代化器" src="./imgs/s2/001-thumb.png"/>
             </a>
             <div>
-                <a href="season-2/cloud5-repo-modernizer.md"><strong>Repository Modernizer</strong></a> 
+                <a href="season-2/cloud5-repo-modernizer.md"><strong>存储库现代化器</strong></a> 
                <br/><em>高级云架构师Darin Kuntze和James Talbot</em>
             </div>
             <p>
@@ -67,7 +66,7 @@ ht-degree: 1%
             </div>
             <p>
             <br/>
-               Darin和James讨论了人们应该了解的一些关于Admin Console、配置和访问的常见问题。
+               Darin和James讨论了人们应该了解的一些有关Admin Console、配置和访问的常见问题。
             </p>
          </td> 
   </tr>
@@ -82,7 +81,7 @@ ht-degree: 1%
             </div>
             <p>
             <br/>
-               Darin和James讨论了AEM as a cloud service中的任务安排和消耗注意事项和注意事项。
+               Darin和James讨论了AEM as a cloud service中的任务安排和消耗情况。
             </p>
          </td> 
          <td>
@@ -95,7 +94,7 @@ ht-degree: 1%
             </div>
             <p>
             <br/>
-              了解一些解锁使用Sling存储库初始值设定项的功能的技巧，即repoinit。
+              学习一些技巧以解锁使用Sling存储库初始值设定项（即repoinit）的强大功能。
             </p>
          </td>   
      <td>
@@ -108,7 +107,7 @@ ht-degree: 1%
       </div>
       <p>
          <br/>
-             探索区域以优化缓存并加快站点在AEMas a Cloud Service上运行的速度。
+             浏览区域以优化缓存并加快站点在AEMas a Cloud Service上运行的速度。
       </p>
    </td> 
   </tr>
@@ -123,7 +122,7 @@ ht-degree: 1%
       </div>
       <p>
         <br/>
-         快速洞察有助于加快您在AEMas a Cloud Service上的重写开发和优化的情况。
+         快速洞察将有助于加快您在AEMas a Cloud Service上的重写开发和优化的事项。
       </p>
      </td>   
      <td>
