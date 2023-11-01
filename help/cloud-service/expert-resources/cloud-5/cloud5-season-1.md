@@ -1,30 +1,28 @@
 ---
 title: Cloud 5 — 第1季
-description: 了解Adobe Experience Manager (AEM)as a Cloud Service于Adobe自己的专业工程师来构建它，以及了解提供它的专业服务。
+description: 了解Adobe Experience Manager (AEM)，其as a Cloud Service于Adobe自己的专业工程师来构建它，以及了解提供它的专业服务。
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: cacac9b58678316cea6a3cac5ebdb56427690d7d
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
 
-# Cloud 5
-
-![AEM Experts系列](./imgs/masthead.png)
+# Cloud 5第1季
 
 ## 简介
 
-欢迎使用AEM Engineering的Cloud 5系列。 任何产品在实施阶段的主要问题之一就是要有足够的代码示例和/或这些示例、工具或API的实时演示。 本系列的目标是在5分钟或更短的时间内提供有关AEMas a Cloud Service的有用信息。
+欢迎使用AEM Engineering的Cloud 5系列。 任何产品实施阶段的主要问题之一就是要有足够的代码示例和/或这些示例、工具或API的实时演示。 本系列的目标是在5分钟或更短的时间内提供关于AEMas a Cloud Service的有用信息。
 
-访问 [建议框](https://forms.office.com/r/74P5Xz4UH0) 用于提交主题想法。
+访问 [建议框](https://forms.office.com/r/74P5Xz4UH0) 用于提交主题建议。
 
 ## 第1季
 
-每季的发布时间长短不一，发布时间固定。 第1季的主题主要来自我们在与客户和合作伙伴的日常接触中遇到的过去请求。 请访问此页面以了解每周更新或关注您选择的社交网络。
+每一季的时间长度各异，并按照固定计划发布。 第1季的主题主要来自我们在与客户和合作伙伴的日常接触中遇到的过去请求。 请访问此页面以了解每周更新，或关注您选择的社交网络。
 
 <table>
   <tr>
@@ -51,7 +49,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-         第2部分是我们对AEMas a Cloud ServiceCDN的延续。 我们回答了一些关于您使用新CDN获得的功能的更常见问题和误解。
+         第2部分是我们对AEMas a Cloud ServiceCDN的延续。 我们回答了一些关于您使用新CDN可以获得哪些功能的更常见问题和误解。
       </p>
    </td>
      <td>
@@ -79,7 +77,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-         与登录令牌交互以在云服务环境中进行集成工作的快速概述和演示。
+         与登录令牌交互以在云服务环境中执行集成工作的快速概述和演示。
       </p>
      </td>   
      <td>
@@ -92,7 +90,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-        Darin和James讨论了AEM Cloud中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 
+        Darin和James讨论了AEM云中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 
       </p>
    </td>
      <td>
@@ -105,7 +103,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-         迁移到云的提示和技巧的第一部分（共两部分）。 我们第一部分的主要重点是帮助您做好迁移准备的最佳实践和准备工作。
+         我们迁移到cloud的提示和技巧的第一部分（共两部分）。 我们第一部分的主要重点是帮助您做好迁移准备的最佳实践和准备工作。
       </p>
    </td> 
   </tr>
@@ -120,7 +118,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-         迁移到云的提示和技巧的第二（二）部分。 第二部分主要介绍如何使用可用的迁移工具。
+         我们迁移到cloud的提示和技巧中的第二部分（共两部分）。 第二部分主要介绍如何使用可用的迁移工具。
       </p>
      </td>   
      <td>
@@ -133,7 +131,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-         作为之前迁移讨论的一个分支，我们将看一下Dispatcher验证器及其可以完成的一些任务。
+         作为前面迁移讨论的一个分支，我们将看一下Dispatcher验证器及其可以完成的一些任务。
       </p>
    </td>
      <td>
@@ -146,7 +144,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-         对于像索引和搜索这样复杂的问题，团队会向您展示一些可以优化开发时间并在问题出现之前解决问题的简单方法。
+         对于像索引和搜索这样复杂的东西，团队会向您展示一些优化开发时间和在问题出现之前解决问题的简单方法。
       </p>
    </td> 
   </tr>
@@ -157,10 +155,10 @@ ht-degree: 0%
             </a>
             <div>
                 <a href="./cloud5-adobe-app-builder.md"><strong>Adobe应用程序生成器</strong></a><br/>        
-                <em>高级云架构师Darin Kuntze和James Talbot以及Amol Anand</em>
+                <em>高级云架构师兼Amol Anand的Darin Kuntze和James Talbot</em>
             </div>
             <p><br/>
-                来看看您可以使用AdobeApp Builder做的一些很酷的事情，并了解关于云中自定义的未来的一些新信息。
+                来看看您可以使用AdobeApp Builder做的一些有趣的事情，并了解关于云中自定义项未来的一些新信息。
             </p>
         </td>
         <td></td>

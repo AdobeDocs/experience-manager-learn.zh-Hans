@@ -1,29 +1,27 @@
 ---
 title: Adobe Experience Manager as a Cloud Service Experts系列
-description: 了解Adobe Experience Manager (AEM)as a Cloud Service于Adobe自己的专业工程师来构建它，以及了解专业服务来构建它。
+description: 了解Adobe Experience Manager (AEM)，其as a Cloud Service于Adobe自己的专业工程师来构建它，以及专业服务来交付它。
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 topic: Administration, Development
 feature: Developer Tools
 exl-id: ae1cdbe3-0863-41de-bb27-2e88c4640866
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 4b634d8b3063375f7c135a3e3ef81b90c84e2579
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '700'
 ht-degree: 2%
 
 ---
 
-# Adobe Experience Manager as a Cloud Service Experts系列
+# AEMas a Cloud Service专家系列
 
-![AEM Experts系列](./assets/masthead.png)
-
-了解Adobe Experience Manager (AEM)as a Cloud Service于Adobe的专业工程师来构建它，以及专业服务团队来交付它。 与Adobe的专家一起探索什么是AEMas a Cloud Service、它与AEM 6有何相同和不同，以及如何从AEM 6迁移到AEMas a Cloud Service。
+与构建Adobe Experience Manager (AEM)的Adobe专家工程师和提供该产品的专业服务团队as a Cloud Service，了解该产品。 与Adobe的专家一起探索什么是AEMas a Cloud Service、它与AEM 6有何相同和不同，以及如何从AEM 6迁移至AEMas a Cloud Service。
 
 <br/> 
 <br/>
 
-## AEMas a Cloud Service快速入门
+## AEMas a Cloud Service入门
 
-了解AEM as aCloud Services的基础知识，以及它与AEM 6和Adobe工程部门的高级云架构师有何不同。
+了解AEM as aCloud Service的基础知识，以及它与AEM 6和Adobe工程部门的高级云架构师有何不同。
 
 <table>
   <tr>
@@ -46,7 +44,7 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/onboarding.md"><strong>AEMas a Cloud Service入门</strong></a>
-         <br/><em>高级云架构师Damian Langsweirdt</em>
+         <br/><em>与高级云架构师Damian Langsweirdt一起</em>
       </div>
       <p>
         <br/>
@@ -60,11 +58,11 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/cloud-manager.md"><strong>Cloud Manager for AEMas a Cloud Service</strong></a>
-         <br/><em>与高级云架构师Bryan Stopp一起</em>
+         <br/><em>与高级云架构师Bryan Stopp合作</em>
       </div>
       <p>
         <br/>
-         了解Cloud Manager for AEMas a Cloud Service及其与Cloud Manager for AEM on Adobe Manage Services (AMS)的区别。
+         了解Cloud Manager for AEMas a Cloud Service，以及它与Cloud Manager for AEM onAdobe管理服务(AMS)的区别。
       </p>
    </td> 
   </tr>
@@ -72,7 +70,7 @@ ht-degree: 2%
 
 ## 迁移到 AEM as a Cloud Service?
 
-是否计划从AEM 6迁移到AEMas a Cloud Service？ 了解Adobe迁移到AEMas a Cloud Service的方法，以及使迁移平稳过渡的各种工具和功能。
+是否计划从AEM 6迁移到AEMas a Cloud Service？ 了解Adobe迁移到AEMas a Cloud Service的方法以及使迁移顺利进行的各种工具和功能。
 
 <table>
   <tr>
@@ -95,7 +93,7 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md" target="_aem-experts-series-video"><strong>实现内容现代化</strong></a>
-         <br/><em>与高级云架构师Bryan Stopp一起</em>
+         <br/><em>与高级云架构师Bryan Stopp合作</em>
       </div>
       <p>
         <br/>
@@ -105,15 +103,15 @@ ht-degree: 2%
    </td>   
      <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/repository-modernization.md" target="_aem-experts-series-video">
-      <img alt="实现您的AEM Maven项目现代化" src="./assets/repository-modernizer.png"/>
+      <img alt="实现您的AEM Maven项目的现代化" src="./assets/repository-modernizer.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/repository-modernization.md" target="_aem-experts-series-video"><strong>实现您的AEM Maven项目现代化</strong></a>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/repository-modernization.md" target="_aem-experts-series-video"><strong>实现您的AEM Maven项目的现代化</strong></a>
          <br/><em>云架构师Varun Mitra</em>
       </div>
       <p>
         <br/>
-         了解如何自动使自定义AEM应用程序的Maven项目结构和组织符合现代化要求，以便AEMas a Cloud Service兼容并符合Adobe的最新最佳实践。
+         了解如何自动使自定义AEM应用程序的Maven项目结构和组织现代化以便AEMas a Cloud Service兼容并符合Adobe的最新最佳实践。
       </p>
    </td> 
   </tr>
@@ -128,7 +126,7 @@ ht-degree: 2%
       </div>
       <p>
         <br/>
-        了解如何自动将AEM 6 Oak索引定义转换为与AEMas a Cloud Service兼容的定义，以及如何在未来维护AEMas a Cloud Service的Oak索引。
+        了解如何将AEM 6 Oak索引定义自动转换为AEMas a Cloud Service兼容的定义，以及如何在未来维护AEMas a Cloud Service的Oak索引。
       </p>
    </td>   
      <td>
@@ -137,7 +135,7 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/dispatcher.md" target="_aem-experts-series-video"><strong>实现调度程序配置的现代化</strong></a>
-         <br/><em>与高级云架构师Bryan Stopp一起</em>
+         <br/><em>与高级云架构师Bryan Stopp合作</em>
       </div>
       <p>
         <br/>
@@ -151,18 +149,18 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md" target="_aem-experts-series-video"><strong>将您的内容传输到AEMas a Cloud Service</strong></a>
-         <br/><em>高级云架构师Kiran Murugulla</em>
+         <br/><em>与高级云架构师Kiran Murugulla一起</em>
       </div>
       <p>
         <br/>
-         了解内容传输工具如何帮助您将内容从AEM 6.3+迁移到AEMas a Cloud Service。
+         了解内容传输工具如何帮助您将内容从AEM 6.3+as a Cloud Service迁移到AEM。
       </p>
    </td> 
   </tr>  
 </table>
 
 
-## AEM即Cloud Services功能
+## AEM as aCloud Service功能
 
 向Adobe的专家了解AEMas a Cloud Service的独特功能。
 
@@ -174,7 +172,7 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md" target="_aem-experts-series-video"><strong>asset compute微服务</strong></a>
-         <br/><em>首席云架构师Amol Anand</em>
+         <br/><em>首席云架构师，Amol Anand</em>
       </div>
       <p>
         <br/>
@@ -187,18 +185,18 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video"><strong>批量导入内容</strong></a>
-         <br/><em>高级云架构师Kiran Murugulla</em>
+         <br/><em>与高级云架构师Kiran Murugulla一起</em>
       </div>
       <p>
         <br/>
-        了解如何使用批量导入服务和AEM包管理器安全高效地将内容批量导入AEMas a Cloud Service。
+        了解如何使用批量导入服务和AEM包管理器安全而高效地将内容批量导入AEMas a Cloud Service。
       </p>
    </td> 
     <td></td>
   </tr>
 </table>
 
-## 需要有关AEM as aCloud Services的帮助？
+## 需要AEM as aCloud Service方面的帮助？
 
 从专家那里了解如何对AEMas a Cloud Service和AEM SDK进行调试和故障排除！
 
@@ -215,7 +213,7 @@ ht-degree: 2%
       </div>
       <p>
         <br/>
-        了解如何对AEMas a Cloud Service的各个方面进行故障排除，从AEM SDK和AEMas a Cloud Service调试到Cloud Manager构建和部署失败。
+        了解如何对AEMas a Cloud Service的各个方面进行故障诊断，从调试AEM SDK和AEMas a Cloud Service到Cloud Manager构建和部署失败。
       </p>
    </td>   
     <td></td>
