@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 0%
 
 ---
-
 
 # 包含WAF规则的流量过滤器规则的示例和结果分析
 
@@ -27,6 +27,8 @@ ht-degree: 0%
 此外，您将了解如何使用功能板工具来摄取AEMCS CDN日志，以通过Adobe提供的示例功能板可视化基本指标。
 
 为了与您的特定要求保持一致，您可以增强和创建自定义功能板，从而获取更深入的见解并优化AEM站点的规则配置。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425404?quality=12&learn=on)
 
 ## 示例
 
@@ -351,4 +353,3 @@ data:
 [流量过滤规则语法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#rules-syntax)
 
 [CDN日志格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#cdn-log-format)
-

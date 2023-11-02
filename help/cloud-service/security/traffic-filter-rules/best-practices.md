@@ -10,17 +10,19 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '416'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # 流量过滤器规则（包括WAF规则）的最佳实践
 
 了解流量过滤器规则（包括WAF规则）的建议最佳实践。 请务必注意，本文中描述的最佳实践并非详尽无遗，也不会替代您自己的安全策略和程序。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425408?quality=12&learn=on)
 
 ## 一般最佳实践
 
@@ -150,3 +152,6 @@ data:
 ## 摘要
 
 总之，本教程已为您提供了在Adobe Experience Manager as a Cloud Service (AEMCS)中增强Web应用程序安全性所需的知识和工具。 通过实用的规则示例和对结果分析的洞察，您可以有效地保护您的网站和应用程序。
+
+
+

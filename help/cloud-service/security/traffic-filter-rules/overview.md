@@ -10,17 +10,19 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: e6d67204-2f76-441c-a178-a34798fe266d
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '285'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
-
 
 # 使用流量过滤器规则（包括WAF规则）保护网站
 
 了解 **流量过滤器规则**，包括其子类别 **Web应用程序防火墙(WAF)规则** 在AEMas a Cloud Service(AEMCS)中。 阅读有关如何创建、部署和测试规则的信息。 此外，分析结果可保护您的AEM站点。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425401?quality=12&learn=on)
 
 ## 概述
 
@@ -36,11 +38,10 @@ ht-degree: 0%
 >
 > 名为“WAF规则”的流量过滤器规则的子类别需要“WAF-DDoS保护”或“增强安全性”许可证。
 
-我们邀请您通过电子邮件发送反馈或询问有关流量过滤器规则的问题 **aemcs-waf-adopter@adobe.com**.
+我们邀请您通过发送电子邮件至 **aemcs-waf-adopter@adobe.com** 提供反馈或询问有关流量过滤规则的问题。
 
 ## 下一步
 
 学习 [如何设置](./how-to-setup.md) 该功能允许您创建、部署和测试流量过滤器规则。 阅读有关设置的信息 **Elasticsearch、Logstash和Kibana (ELK)** 栈叠功能板工具以分析AEMCS CDN日志的结果。
-
 
 
