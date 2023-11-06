@@ -1,5 +1,5 @@
 ---
-title: AEM Assets视频和教程
+title: AEM Assets 视频和教程
 description: 观看我们的视频以获取AEM Asset支持和帮助。
 sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
@@ -7,11 +7,11 @@ exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 15%
+ht-degree: 20%
 
 ---
 
-# AEM Assets视频和教程 {#overview}
+# AEM Assets 视频和教程 {#overview}
 
 {{edge-delivery-services}}
 

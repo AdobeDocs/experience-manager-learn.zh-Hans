@@ -14,11 +14,11 @@ exl-id: 8b12f34c-be98-4f47-853c-411bb601990c
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '546'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
-# 本地开发环境设置 {#local-development-environment-set-up}
+# 设置本地开发环境 {#local-development-environment-set-up}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_overview"

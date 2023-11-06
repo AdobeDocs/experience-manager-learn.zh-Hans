@@ -22,7 +22,7 @@ ht-degree: 77%
 >id="aemcloud_devops_configurepipeline"
 >title="配置管道"
 >abstract="探索 Cloud Manager 中不同类型的管道以及如何配置它们以使项目取得成功。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#config-pipeline-video" text="在 Cloud Manager 中配置管道"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=zh-Hans#config-pipeline-video" text="在 Cloud Manager 中配置管道"
 
 探索 Cloud Manager 中不同类型的管道以及如何配置它们以使项目取得成功。
 

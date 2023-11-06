@@ -17,7 +17,7 @@ ht-degree: 6%
 
 ---
 
-# 使用AEM Headless优化图像 {#images-with-aem-headless}
+# 用 AEM Headless 优化的图像 {#images-with-aem-headless}
 
 图像是的关键方面 [开发丰富、引人注目的AEM Headless体验](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans). AEM Headless支持管理图像资源及其优化交付。
 

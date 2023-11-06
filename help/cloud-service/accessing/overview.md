@@ -13,7 +13,7 @@ exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
 source-wordcount: '626'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
@@ -30,7 +30,7 @@ AEMas a Cloud Service是利用AEM应用程序的云原生方式，因此，会�
 
 了解 Adobe IMS 用户、组和产品配置文件如何与 AEM 组和权限结合使用，以提供对 AEM Author 服务的精细访问。
 
-## Adobe IMS用户
+## Adobe IMS 用户
 
 需要访问AEM创作服务的用户被管理为 [Adobe IMS用户](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html) 在 [Adobe的管理控制台](https://adminconsole.adobe.com). 了解 Adobe IMS 用户的身份，以及如何在 Admin Console 中访问和管理他们。
 
@@ -41,13 +41,13 @@ AEMas a Cloud Service是利用AEM应用程序的云原生方式，因此，会�
 
 [了解Adobe IMS用户](./adobe-ims-users.md)
 
-## Adobe IMS用户组
+## Adobe IMS 用户组
 
 访问AEM Author服务的用户应使用分组为逻辑组 [Adobe IMS用户组](https://helpx.adobe.com/cn/enterprise/using/user-groups.html) 在 [Adobe的管理控制台](https://adminconsole.adobe.com). Adobe IMS用户组不提供对AEM的直接权限或访问权限(此作业属于 [Adobe IMS产品配置文件](#adobe-ims-product-profiles))，但是，它们也是定义用户逻辑分组的绝佳方法，而这些逻辑分组又可以使用AEM组和权限转换为AEM Author服务中的特定访问级别。
 
 [了解Adobe IMS用户组](./adobe-ims-user-groups.md)
 
-## Adobe IMS产品配置文件
+## Adobe IMS 产品配置文件
 
 [Adobe IMS产品配置文件](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)，在中管理 [Adobe的管理控制台](https://adminconsole.adobe.com)，是提供 [Adobe IMS用户](#adobe-ims-users) 具有基本访问级别登录AEM Author服务的权限。
 

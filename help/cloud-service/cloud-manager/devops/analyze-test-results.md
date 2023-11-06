@@ -22,7 +22,7 @@ ht-degree: 51%
 >id="aemcloud_devops_testresult"
 >title="分析测试结果"
 >abstract="探索代码中的任何编译错误以及这段代码是否遵循 AEM as a Cloud Service 的最佳实践。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use" text="理解测试结果"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=zh-Hans#how-to-use" text="理解测试结果"
 
 探索代码中的任何编译错误，以及此代码是否遵循AEMas a Cloud Service的最佳实践
 

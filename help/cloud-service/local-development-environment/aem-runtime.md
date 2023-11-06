@@ -17,7 +17,7 @@ ht-degree: 10%
 
 ---
 
-# 设置本地AEM SDK {#set-up-local-aem-sdk}
+# 设置本地 AEM SDK {#set-up-local-aem-sdk}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"

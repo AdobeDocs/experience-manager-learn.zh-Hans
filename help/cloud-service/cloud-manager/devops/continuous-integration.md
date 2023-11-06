@@ -22,7 +22,7 @@ ht-degree: 88%
 >id="aemcloud_devops_cicd"
 >title="持续集成与 Cloud Manager"
 >abstract="了解最佳实践以及使用 Adobe Cloud Manager 进行持续集成。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#non-production-pipelines" text="配置 CI-CD 管道"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=zh-Hans#non-production-pipelines" text="配置 CI-CD 管道"
 
 了解最佳实践以及使用 Adobe Cloud Manager 进行持续集成。
 
