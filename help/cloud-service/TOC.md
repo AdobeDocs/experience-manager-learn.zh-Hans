@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: ea9bf14d9a8f62382c43a50dbf65c4d2b88e6bcf
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 20%
+source-wordcount: '1053'
+ht-degree: 22%
 
 ---
 
@@ -21,7 +21,6 @@ ht-degree: 20%
    + [图像](./aem-trials/images.md)
 + AEM as a Cloud Service 简介{#introduction}
    + [什么是AEMas a Cloud Service？](./introduction/what-is-aem-as-a-cloud-service.md)
-   + [演变](./introduction/evolution.md)
    + [架构](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
    + 战略与思想领导力{#strategy}
@@ -136,9 +135,9 @@ ht-degree: 20%
    + [AEM Author服务](./caching/author.md)
 + 访问AEM{#accessing}
    + [概述](./accessing/overview.md)
-   + [Adobe IMS用户](./accessing/adobe-ims-users.md)
-   + [Adobe IMS用户组](./accessing/adobe-ims-user-groups.md)
-   + [Adobe IMS产品配置文件](./accessing/adobe-ims-product-profiles.md)
+   + [Adobe IMS 用户](./accessing/adobe-ims-users.md)
+   + [Adobe IMS 用户组](./accessing/adobe-ims-user-groups.md)
+   + [Adobe IMS 产品配置文件](./accessing/adobe-ims-product-profiles.md)
    + [AEM用户、组和权限](./accessing/aem-users-groups-and-permissions.md)
    + [配置对 AEM 演练的访问权限](./accessing/walk-through.md)
 + 身份验证{#authentication}

@@ -5,10 +5,10 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 237560dc634cb3d6c3553dd57386d2a9548ed4e5
+source-git-commit: ea9bf14d9a8f62382c43a50dbf65c4d2b88e6bcf
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 13%
+source-wordcount: '324'
+ht-degree: 16%
 
 ---
 
@@ -28,10 +28,7 @@ Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本�
 * **[什么是AEM和Edge Delivery Services？ (视频)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html)**
   *了解Adobe Experience Manager (AEM)和Edge Delivery Services提供的价值。*
 
-* **[了解AEM的演变（视频）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/evolution.html)**
-  *了解AEM的演变及其所提供的价值，从AEM 6.5到AEMas a Cloud Service，最后到Edge Delivery Services。*
-
-* **[带有Edge Delivery Services的AEM架构概述（视频）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)**
+* **[带有Edge Delivery Services的AEM架构概述（视频）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=zh-Hans)**
   *全面了解AEMas a Cloud Service的架构！*
 
 
