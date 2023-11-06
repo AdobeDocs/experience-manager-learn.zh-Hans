@@ -14,9 +14,9 @@ level: Intermediate
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+source-git-commit: e9c0974d35493a607969124b2906564fc97bcdea
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '196'
 ht-degree: 4%
 
 ---
@@ -39,11 +39,11 @@ ht-degree: 4%
 
 如果将Experience Fragment导出到Adobe Target时没有Adobe Admin Console中的正确权限，则会导致AEM Author服务出现以下错误：
 
-    ！[Target API UI错误](assets/error-target-offer.png)
+![Target API UI错误](assets/error-target-offer.png)
 
 ...以及中的以下日志消息 `aemerror` 日志：
 
-    ![Target API控制台错误](assets/target-console-error.png)
+![Target API控制台错误](assets/target-console-error.png)
 
 #### 解决方法
 
