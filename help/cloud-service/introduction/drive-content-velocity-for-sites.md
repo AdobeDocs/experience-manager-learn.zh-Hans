@@ -3,9 +3,9 @@ title: 如何使用Adobe Experience Manager提高内容速度
 description: 了解内容周转率及其在企业组织中的价值。 深入探讨有效实施的四项原则以及实施过程中需要注意的隐患。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: bd886704f10834bb07b42d6b5c0f116496da36de
 workflow-type: tm+mt
-source-wordcount: '2814'
+source-wordcount: '2795'
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ AEM是一个企业级解决方案，涉及公司或品牌的许多方面，并�
 一般来说，最好遵循以下经验法则：
 
 * 目标是让不少于80%的体验通过 [开箱即用的组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 和 [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). 通过客户证言，这不仅会创建一个更可扩展的基础，使您能够利用产品路线图，而且速度还会提高50%。
-* [设置](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[e](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[可编辑的模板](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) 并远离静态模板。 设置可编辑模板（使用样式系统所必需的）时，需要分配模板作者，该作者将控制可用于网站页面或部分的不同样式。 这些对模板本身的更新在日常工作方面微不足道。
+* [设置可编辑模板](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) 并远离静态模板。 设置可编辑模板（使用样式系统所必需的）时，需要分配模板作者，该作者将控制可用于网站页面或部分的不同样式。 这些对模板本身的更新在日常工作方面微不足道。
 * 使用 [体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en) 在可能的情况下。 尽管体验片段的常规用例用于多渠道分发，但它们也可以在整个站点中有效用于一次在一个区域中填充内容，而不是在多个区域中手动更新内容。 这样可节省过多的时间和精力，并使创作团队腾出时间从事更具体和更丰富的体验。
 * 创造更丰富的体验。 通过使用80/20规则（上述），组织可以为所选体验利用特定的CSS和后端开发，而不是通用的维护更新。
 * 选择可扩展的基础和快速品牌重塑。 基于现代实施执行的样式系统允许跨平台高效地重新命名。 通过更改CSS外观来更新内容的广泛扇区允许快速测试和验证，并提高网站的体验质量，直接影响ROI。
