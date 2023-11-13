@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
 jira: KT-13312
 thumbnail: KT-13312.jpeg
-source-git-commit: bfc4d843c53373010ee04cfa590272cedea7a686
+source-git-commit: be503ba477d63a566b687866289a81a0aa7d01f7
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1231'
 ht-degree: 2%
 
 ---
@@ -41,11 +41,11 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 
 1. 对于所需的AEMCS环境，选择 **下载日志** 从省略号菜单中。
 
-   ![下载日志 — Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="200" zoomable="yes"}
+   ![下载日志 — Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
 1. 在 **下载日志** 对话框，选择 **Publish** 服务，然后单击旁边的下载图标 **cdn** 行。
 
-   ![CDN日志 — Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="200" zoomable="yes"}
+   ![CDN日志 — Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
 
 如果下载的日志文件来自 _今天_ 文件扩展名为 `.log` 否则，对于过去的日志文件，扩展名为 `.log.gz`.
@@ -71,11 +71,11 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 
    1. 打开 **CDN缓存命中率** 通过单击汉堡菜单> Analytics >功能板> CDN缓存命中率，创建功能板。
 
-      ![CDN缓存命中率 — Kibana功能板](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="200" zoomable="yes"}
+      ![CDN缓存命中率 — Kibana功能板](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
    1. 从右上角选择所需的时间范围。
 
-      ![时间范围 — Kibana仪表板](assets/cdn-logs-analysis/time-range.png){width="200" zoomable="yes"}
+      ![时间范围 — Kibana仪表板](assets/cdn-logs-analysis/time-range.png){width="500" zoomable="yes"}
 
    1. 此 **CDN缓存命中率** 报告面板的含义一目了然。
 
@@ -83,14 +83,14 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
       - 按高速缓存类型列出的高速缓存比率
       - 按缓存类型列出的缓存计数
 
-      ![请求分析总数 — Kibana仪表板](assets/cdn-logs-analysis/total-request-analysis.png){width="200" zoomable="yes"}
+      ![请求分析总数 — Kibana仪表板](assets/cdn-logs-analysis/total-request-analysis.png){width="500" zoomable="yes"}
 
    1. 此 _按请求或Mime类型分析_ 显示以下详细信息：
       - 按高速缓存类型列出的高速缓存比率
       - 按缓存类型列出的缓存计数
       - 主要缺失和通过URL
 
-      ![按请求或Mime类型分析 — Kibana仪表板](assets/cdn-logs-analysis/analysis-by-request-or-mime-types.png){width="200" zoomable="yes"}
+      ![按请求或Mime类型分析 — Kibana仪表板](assets/cdn-logs-analysis/analysis-by-request-or-mime-types.png){width="500" zoomable="yes"}
 
 #### 按环境名称或项目ID筛选
 
@@ -98,11 +98,11 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 
 1. 在“CDN缓存命中率”功能板中，单击 **添加筛选器** 图标。
 
-   ![过滤器 — Kibana仪表板](assets/cdn-logs-analysis/filter.png){width="200" zoomable="yes"}
+   ![过滤器 — Kibana仪表板](assets/cdn-logs-analysis/filter.png){width="500" zoomable="yes"}
 
 1. 在 **添加筛选器** 模式中，选择 `aem_env_name.keyword` 字段，并且 `is` 运算符和所需的环境名称，最后点击 _添加筛选器_.
 
-   ![添加筛选器 — Kibana仪表板](assets/cdn-logs-analysis/add-filter.png){width="200" zoomable="yes"}
+   ![添加筛选器 — Kibana仪表板](assets/cdn-logs-analysis/add-filter.png){width="500" zoomable="yes"}
 
 #### 按主机名筛选
 
@@ -110,11 +110,11 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 
 1. 在“CDN缓存命中率”功能板中，单击 **添加筛选器** 图标。
 
-   ![过滤器 — Kibana仪表板](assets/cdn-logs-analysis/filter.png){width="200" zoomable="yes"}
+   ![过滤器 — Kibana仪表板](assets/cdn-logs-analysis/filter.png){width="500" zoomable="yes"}
 
 1. 在 **添加筛选器** 模式中，选择 `host.keyword` 字段，并且 `is` 运算符，并为下一个字段提供所需的主机名，最后点击 _添加筛选器_.
 
-   ![主机过滤器 — Kibana功能板](assets/cdn-logs-analysis/add-host-filter.png){width="200" zoomable="yes"}
+   ![主机过滤器 — Kibana功能板](assets/cdn-logs-analysis/add-host-filter.png){width="500" zoomable="yes"}
 
 同样，根据分析要求向功能板添加更多过滤器。
 
@@ -127,7 +127,7 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 下载的 `aemcs_cdn_logs_analysis.ipynb` “交互式Python笔记本”文件含义一目了然，但每个部分的关键亮点包括：
 
 - **安装其他库**：安装 `termcolor` 和 `tabulate` Python库。
-- **加载CDN日志文件**：使用以下方式加载CDN日志文件 `log_file` 变量值，请确保更新其值。 它还会将此CDN日志转换为 [熊猫数据帧](https://pandas.pydata.org/docs/reference/frame.html).
+- **加载CDN日志**：使用以下方式加载CDN日志文件 `log_file` 变量值，请确保更新其值。 它还会将此CDN日志转换为 [熊猫数据帧](https://pandas.pydata.org/docs/reference/frame.html).
 - **执行分析**：第一个代码块是 _显示总计、HTML、JS/CSS和图像请求的分析结果_，它提供缓存命中率百分比、条形图和饼图。
 第二个代码块是 _HTML、JS/CSS和图像的5大未命中请求和传递请求URL_，以表格式显示URL及其计数。
 
@@ -141,33 +141,33 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 
 1. 登录到 [Adobe Experience Cloud](https://experience.adobe.com/)，在主页中> **快速访问** 部分>单击 **Experience Platform**
 
-   ![Experience Platform](assets/cdn-logs-analysis/experience-platform.png){width="200" zoomable="yes"}
+   ![Experience Platform](assets/cdn-logs-analysis/experience-platform.png){width="500" zoomable="yes"}
 
 1. 在Adobe Experience Platform主页>数据科学部分中，单击 **Notebooks** 菜单项。 要启动Jupyter Notebooks环境，请单击 **JupyterLab** 选项卡。
 
-   ![笔记本日志文件值更新](assets/cdn-logs-analysis/datascience-notebook.png){width="200" zoomable="yes"}
+   ![笔记本日志文件值更新](assets/cdn-logs-analysis/datascience-notebook.png){width="500" zoomable="yes"}
 
 1. 在JupyterLab菜单中，使用 **上载文件** 图标，上传下载的CDN日志文件并 `aemcs_cdn_logs_analysis.ipynb` 文件。
 
-   ![上传文件 — JupyteLab](assets/cdn-logs-analysis/jupyterlab-upload-file.png){width="200" zoomable="yes"}
+   ![上传文件 — JupyteLab](assets/cdn-logs-analysis/jupyterlab-upload-file.png){width="500" zoomable="yes"}
 
 1. 打开 `aemcs_cdn_logs_analysis.ipynb` 通过双击保存文件。
 
 1. 在 **加载CDN日志文件** 笔记本部分，更新 `log_file` 值。
 
-   ![笔记本日志文件值更新](assets/cdn-logs-analysis/notebook-update-variable.png){width="200" zoomable="yes"}
+   ![笔记本日志文件值更新](assets/cdn-logs-analysis/notebook-update-variable.png){width="500" zoomable="yes"}
 
 1. 要运行选定的单元格并前进，请单击 **播放** 图标。
 
-   ![笔记本日志文件值更新](assets/cdn-logs-analysis/notebook-run-cell.png){width="200" zoomable="yes"}
+   ![笔记本日志文件值更新](assets/cdn-logs-analysis/notebook-run-cell.png){width="500" zoomable="yes"}
 
 1. 运行 **显示总计、HTML、JS/CSS和图像请求的分析结果** 代码单元格中，输出显示缓存命中率百分比、条形图和饼图。
 
-   ![笔记本日志文件值更新](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="200" zoomable="yes"}
+   ![笔记本日志文件值更新](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="500" zoomable="yes"}
 
 1. 运行 **HTML、JS/CSS和图像的5大未命中请求和传递请求URL** 代码单元格中，输出显示前5个未命中和通过请求URL。
 
-   ![笔记本日志文件值更新](assets/cdn-logs-analysis/output-top-urls.png){width="200" zoomable="yes"}
+   ![笔记本日志文件值更新](assets/cdn-logs-analysis/output-top-urls.png){width="500" zoomable="yes"}
 
 您可以增强Jupyter Notebook以根据您的要求分析CDN日志。
 
