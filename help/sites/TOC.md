@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
+source-git-commit: d17544c4f8dda03e5147a1f48dbbdae005ee9438
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 25%
+source-wordcount: '520'
+ht-degree: 24%
 
 ---
 
@@ -17,6 +17,23 @@ ht-degree: 25%
 # AEM Sites 视频和教程 {#sites}
 
 + [概述](overview.md)
++ 文档创作 {#document-authoring}
+   + [设置](document-authoring/set-up.md)
+   + [预览和发布](document-authoring/preview-and-publish.md)
+   + [文档结构](document-authoring/document-structure.md)
+   + [块和自动块](document-authoring/blocks-and-auto-blocks.md)
+   + [重定向](document-authoring/redirects.md)
+   + [批量元数据](document-authoring/bulk-metadata.md)
+   + [页面元数据](document-authoring/page-metadata.md)
+   + [响应式导航](document-authoring/responsive-navigation.md)
+   + 操作方法{#how-to}
+      + [文档审核](./document-authoring/how-to/document-audit.md)
+      + [文档权限](./document-authoring/how-to/document-permissions.md)
+      + [文档版本](./document-authoring/how-to/document-versions.md)
+      + [文档工作流](./document-authoring/how-to/document-workflows.md)
+      + [嵌入iFrame](./document-authoring/how-to/iframes.md)
+      + [图像替换文本](./document-authoring/how-to/image-alt-text.md)
+      + [阻止搜索引擎索引](./document-authoring/how-to/no-index.md)
 + 页面创作 {#page-authoring}
    + [创作](page-authoring/aem-sites-authoring-overview.md)
    + [导航](page-authoring/basic-handling-sites-feature-video-use.md)
@@ -52,8 +69,19 @@ ht-degree: 25%
    + [使用体验片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [构建块](experience-fragments/building-blocks.md)
    + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
-
++ Edge Delivery Services{#edge-delivery-services}
+   + 开发{#developing}
+      + [前提条件](./edge-delivery-services/developing/prerequisites.md)
+      + [内容存储库](./edge-delivery-services/developing/content-repository.md)
+      + [预览和发布](./edge-delivery-services/developing/preview-and-publish.md)
+      + [AEM Sidekick](./edge-delivery-services/developing/sidekick.md)
+      + [文档结构](./edge-delivery-services/developing/document-structure.md)
+      + [本地开发](./edge-delivery-services/developing/local-development.md)
+      + [Git](./edge-delivery-services/developing/git.md)
+   + 操作方法{#how-to}
+      + [RSS源](./edge-delivery-services/how-to/rss.md)
 + 开发 {#developing}
+   + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 项目原型](developing/aem-project-archetype.md)
    + [AEM Sites快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
    + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans){target=_blank}
