@@ -14,16 +14,20 @@ role: Architect, Developer
 level: Beginner
 last-substantial-update: 2022-10-05T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4912087feb69ccbed3c66a34941fa6d083af6319
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---
 
 # 使用批量导入
 
-AEMas a Cloud Service中的批量导入工具允许管理员以安全高效的方式从云存储(Azure Blob Storage或Amazon S3)批量导入资源。
+AEMas a Cloud Service中的批量导入工具允许管理员以安全高效的方式从云存储批量导入资源。
+
+>[!TIP]
+>
+> 此视频中的输入源仅显示Azure Blob Storage和Amazon S3；但是，可用源会随着时间的推移而继续增长。 有关支持的输入源的完整列表，请参阅产品中的可用选项，或者 [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
 
 >[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
 
