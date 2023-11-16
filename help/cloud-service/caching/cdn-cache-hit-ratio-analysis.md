@@ -10,20 +10,22 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
 jira: KT-13312
 thumbnail: KT-13312.jpeg
-source-git-commit: be503ba477d63a566b687866289a81a0aa7d01f7
+source-git-commit: 4e93bc88b0ee5a805f2aaf1e66900f084ae01247
 workflow-type: tm+mt
-source-wordcount: '1231'
-ht-degree: 2%
+source-wordcount: '1433'
+ht-degree: 1%
 
 ---
 
 
 # CDN缓存命中率分析
 
-了解如何分析提供的AEMas a Cloud Service **CDN日志** 并获得以下见解 **缓存命中率**、和 **的热门URL _小姐_ 和 _通过_ 缓存类型** 进行优化。
+在CDN中缓存的内容可减少网站用户遇到的延迟，这些用户无需等待请求返回Apache/Dispatcher或AEM发布。 考虑到这一点，优化CDN缓存命中率以最大限度地增加CDN可缓存的内容量是值得的。
+
+了解如何分析提供的AEMas a Cloud Service **CDN日志** 并获得以下见解 **缓存命中率**、和 **的热门URL _小姐_ 和 _通过_ 缓存类型**，以进行优化。
 
 
-CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache`，有关更多信息，请参阅 [CDN日志格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs). 此 `cache` 字段提供有关 _缓存的状态_ 其可能值包括HIT、MISS或PASS。 让我们查看可能值的详细信息。
+CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache`. 欲了解更多信息，请参见 [CDN日志格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs). 此 `cache` 字段提供有关 _缓存的状态_ 其可能值包括HIT、MISS或PASS。 让我们查看可能值的详细信息。
 
 | 缓存状态 </br> 可能值 | 描述 |
 |------------------------------------|:-----------------------------------------------------:|
@@ -32,6 +34,11 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 | 通过 | 请求的数据为 _明确设置为不缓存_ 并始终从AEM服务器中检索。 |
 
 在本教程中， [AEM WKND项目](https://github.com/adobe/aem-guides-wknd) 部署到AEMas a Cloud Service环境，并通过触发小规模性能测试 [Apache JMeter](https://jmeter.apache.org/).
+
+本教程旨在引导您完成以下过程：
+1. 通过Cloud Manager下载CDN日志
+1. 分析这些CDN日志，可通过两种方法执行这些操作：本地安装的仪表板或远程访问的Jupityer Notebook(适用于许可Adobe Experience Platform的用户)
+1. 优化CDN缓存配置
 
 ## 下载CDN日志
 
@@ -54,10 +61,10 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 
 要获得诸如缓存命中率以及MISS和PASS缓存类型的顶级URL等见解，请分析下载的CDN日志文件。 这些见解有助于优化 [CDN缓存配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html) 并提升站点性能。
 
-为了分析CDN日志，本文使用 **Elasticsearch、Logstash和Kibana (ELK)** [仪表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) 和 [Jupyter Notebook](https://jupyter.org/).
+为了分析CDN日志，本文提出两个选项： **Elasticsearch、Logstash和Kibana (ELK)** [仪表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) 和 [Jupyter Notebook](https://jupyter.org/). ELK仪表板工具可以本地安装在笔记本电脑上，而Jupityr笔记本工具可以远程访问 [作为Adobe Experience Platform的一部分](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en) 对于已获得Adobe Experience Platform许可的用户，无需安装其他软件。
 
 
-### 使用功能板工具
+### 选项1：使用ELK仪表板工具
 
 此 [麋鹿栈栈](https://www.elastic.co/elastic-stack) 是一套工具，可提供用于搜索、分析和可视化数据的可扩展解决方案。 它由Elasticsearch、Logstash和Kibana组成。
 
@@ -69,7 +76,7 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 
    1. 在特定环境的文件夹内复制下载的CDN日志文件。
 
-   1. 打开 **CDN缓存命中率** 通过单击汉堡菜单> Analytics >功能板> CDN缓存命中率，创建功能板。
+   1. 打开 **CDN缓存命中率** 通过单击左上角的导航菜单> Analytics >功能板> CDN缓存命中率，构建功能板。
 
       ![CDN缓存命中率 — Kibana功能板](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -118,26 +125,24 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 
 同样，根据分析要求向功能板添加更多过滤器。
 
-### 使用Jupyter Notebook
+### 选项2：使用Jupyter Notebook
 
-此 [Jupyter Notebook](https://jupyter.org/) 是一个开源Web应用程序，通过它，可创建包含代码、文本和可视化图表的文档。 它用于数据转换、可视化和统计建模。
+对于那些不想在本地安装软件的用户（即上一部分的ELK功能板工具），还有一个选项，但需要拥有Adobe Experience Platform的许可证。
 
-要加速CDN日志分析，请下载 [AEM-as-a-CloudService - CDN日志分析 — Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb) 文件。
+此 [Jupyter Notebook](https://jupyter.org/) 是一个开源Web应用程序，通过它，可创建包含代码、文本和可视化图表的文档。 它用于数据转换、可视化和统计建模。 可以远程访问 [作为Adobe Experience Platform的一部分](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en).
 
-下载的 `aemcs_cdn_logs_analysis.ipynb` “交互式Python笔记本”文件含义一目了然，但每个部分的关键亮点包括：
+#### 下载交互式Python笔记本文件
+
+首先，下载 [AEM-as-a-CloudService - CDN日志分析 — Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb) 文件，这将有助于CDN日志分析。 这个“交互式Python笔记本”文件不言自明，但每个部分的关键亮点包括：
 
 - **安装其他库**：安装 `termcolor` 和 `tabulate` Python库。
-- **加载CDN日志**：使用以下方式加载CDN日志文件 `log_file` 变量值，请确保更新其值。 它还会将此CDN日志转换为 [熊猫数据帧](https://pandas.pydata.org/docs/reference/frame.html).
-- **执行分析**：第一个代码块是 _显示总计、HTML、JS/CSS和图像请求的分析结果_，它提供缓存命中率百分比、条形图和饼图。
-第二个代码块是 _HTML、JS/CSS和图像的5大未命中请求和传递请求URL_，以表格式显示URL及其计数。
+- **加载CDN日志**：使用以下方式加载CDN日志文件 `log_file` 变量值；请确保更新其值。 它还会将此CDN日志转换为 [熊猫数据帧](https://pandas.pydata.org/docs/reference/frame.html).
+- **执行分析**：第一个代码块是 _显示总计、HTML、JS/CSS和图像请求的分析结果_；它提供缓存命中率百分比、条形图和饼图。
+第二个代码块是 _HTML、JS/CSS和图像的5大未命中请求和传递请求URL_；它以表格式显示URL及其计数。
 
-#### 在Experience Platform中运行Jupyter笔记本
+#### 运行Jupyter Notebook
 
->[!IMPORTANT]
->
->如果您使用或授予了该Experience Platform使用许可，则无需安装其他软件即可运行Jupyter Notebook。
-
-要在Experience Platform中运行Jupyter Notebook，请执行以下步骤：
+接下来，在Adobe Experience Platform中运行Jupyter Notebook，请执行以下步骤：
 
 1. 登录到 [Adobe Experience Cloud](https://experience.adobe.com/)，在主页中> **快速访问** 部分>单击 **Experience Platform**
 
