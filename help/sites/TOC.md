@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 3f27a728bbaba1ff5a4c7d25e23c3979e59d73ea
+source-git-commit: 155790de88f6775a6624637dce3f98a018de4afc
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '522'
 ht-degree: 24%
 
 ---
@@ -67,6 +67,7 @@ ht-degree: 24%
 + Edge Delivery Services{#edge-delivery-services}
    + 开发{#developing}
       + [前提条件](./edge-delivery-services/developing/prerequisites.md)
+      + [AEM样板](./edge-delivery-services/developing/aem-boilerplate.md)
       + [内容存储库](./edge-delivery-services/developing/content-repository.md)
       + [预览和发布](./edge-delivery-services/developing/preview-and-publish.md)
       + [AEM Sidekick](./edge-delivery-services/developing/sidekick.md)
