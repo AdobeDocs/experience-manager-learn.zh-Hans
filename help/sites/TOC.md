@@ -6,7 +6,7 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: d17544c4f8dda03e5147a1f48dbbdae005ee9438
+source-git-commit: 3f27a728bbaba1ff5a4c7d25e23c3979e59d73ea
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 24%
@@ -25,7 +25,6 @@ ht-degree: 24%
    + [重定向](document-authoring/redirects.md)
    + [批量元数据](document-authoring/bulk-metadata.md)
    + [页面元数据](document-authoring/page-metadata.md)
-   + [响应式导航](document-authoring/responsive-navigation.md)
    + 操作方法{#how-to}
       + [文档审核](./document-authoring/how-to/document-audit.md)
       + [文档权限](./document-authoring/how-to/document-permissions.md)
@@ -34,6 +33,7 @@ ht-degree: 24%
       + [嵌入iFrame](./document-authoring/how-to/iframes.md)
       + [图像替换文本](./document-authoring/how-to/image-alt-text.md)
       + [阻止搜索引擎索引](./document-authoring/how-to/no-index.md)
+      + [响应式导航](document-authoring/how-to/responsive-navigation.md)
 + 页面创作 {#page-authoring}
    + [创作](page-authoring/aem-sites-authoring-overview.md)
    + [导航](page-authoring/basic-handling-sites-feature-video-use.md)
@@ -54,11 +54,6 @@ ht-degree: 24%
    + [启动项](page-authoring/launches.md)
    + 向同行学习 {#expert-advice}
       + [站点层次结构提示](page-authoring/expert-advice/site-hierarchy.md)
-+ 组件 {#components}
-   + [组件开发](components/component-development.md)
-   + [核心组件](components/core-components-feature-video-understand.md)
-   + [Web优化图像交付](components/web-optimized-image-delivery.md)
-   + [组件控制台](components/components-console-feature-video-use.md)
 + 内容片段 {#content-fragments}
    + [内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [创作内容片段](content-fragments/content-fragments-feature-video-use.md)
@@ -99,6 +94,11 @@ ht-degree: 24%
    + [设置体验片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [在Adobe Target中使用体验片段](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [设置ContextHub](personalization/context-hub-technical-video-setup.md)
++ 组件 {#components}
+   + [组件开发](components/component-development.md)
+   + [核心组件](components/core-components-feature-video-understand.md)
+   + [Web优化图像交付](components/web-optimized-image-delivery.md)
+   + [组件控制台](components/components-console-feature-video-use.md)
 + SEO {#seo}
    + [站点地图](./seo/sitemaps.md)
 + 单页应用程序 {#spa-editor}
