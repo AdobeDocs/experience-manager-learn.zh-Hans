@@ -1,6 +1,6 @@
 ---
-title: 默认内容和部分
-description: 深入了解文档创作中默认内容和部分的概念。
+title: 在文档创作中阻止和自动阻止
+description: 如何在文档创作中使用块和自动块。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -10,18 +10,18 @@ doc-type: Feature Video
 last-substantial-update: 2023-11-15T00:00:00Z
 jira: KT-14468
 thumbnail: 3425702.jpeg
-source-git-commit: d17544c4f8dda03e5147a1f48dbbdae005ee9438
+source-git-commit: 931c48b3687c8d7f8ec0ae8ef5d6dd2390fc119f
 workflow-type: tm+mt
-source-wordcount: '46'
+source-wordcount: '38'
 ht-degree: 0%
 
 ---
 
 
-# 默认内容和部分
+# 块和自动块
 
 {{edge-delivery-services}}
 
-深入了解文档创作中默认内容和部分的概念，以及这些概念如何帮助您获得更好的Web体验。
+探索如何在文档创作中使用块和自动块，以及如何改进站点和创作体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425702/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3425703/?learn=on)
