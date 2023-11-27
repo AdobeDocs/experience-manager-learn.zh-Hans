@@ -1,6 +1,6 @@
 ---
 title: 虚拟专用网络 (VPN)
-description: 了解如何将AEMas a Cloud Service与您的VPN连接，以便在AEM和内部服务之间创建安全通信渠道。
+description: 了解如何将AEMas a Cloud Service与您的VPN连接起来，以便在AEM和内部服务之间创建安全的通信渠道。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -9,26 +9,26 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bccaccd386d065720cddfd689cbadc220609b8a8
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1319'
 ht-degree: 5%
 
 ---
 
 # 虚拟专用网络 (VPN)
 
-了解如何将AEMas a Cloud Service与您的VPN连接，以便在AEM和内部服务之间创建安全通信渠道。
+了解如何将AEMas a Cloud Service与您的VPN连接起来，以便在AEM和内部服务之间创建安全的通信渠道。
 
 ## 什么是虚拟专用网络？
 
-虚拟专用网络(VPN)允许AEMas a Cloud Service客户连接 **AEM环境** 从Cloud Manager项目到现有， [支持](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) VPN。 这可以在AEMas a Cloud Service与客户网络内的服务之间实现安全且受控制的连接。
+虚拟专用网络(VPN)允许AEMas a Cloud Service客户连接 **AEM环境** Cloud Manager项目到现有， [支持](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) VPN。 这可以在AEMas a Cloud Service与客户网络中的服务之间实现安全且受控制的连接。
 
-Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚拟专用网络最多 [适当类型的网络基础架构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#general-vpn-considerations) ，然后才可执行AEMas a Cloud Service。
+Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚拟专用网络最大 [适当类型的网络基础架构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#general-vpn-considerations) 的AEMas a Cloud Service。
 
 >[!NOTE]
 >
->请注意，不支持将构建环境从Cloud Manager连接到VPN。 如果必须从专用存储库访问二进制工件，则必须使用公共Internet上可用的URL设置受密码保护的安全存储库 [如此处所述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
+>请注意，不支持将构建环境从Cloud Manager连接到VPN。 如果必须从专用存储库访问二进制工件，则必须使用公共Internet上可用的URL设置一个安全且受密码保护的存储库 [如此处所述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
 
 >[!MORELIKETHIS]
 >
@@ -45,13 +45,13 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
    + 访问令牌（又称持有者令牌）
 + Cloud Manager项目ID
 + Cloud Manager环境ID
-+ 虚拟专用网络，可访问所有必要的连接参数。
++ A **基于路由** 虚拟专用网络，可访问所有必要的连接参数。
 
 有关更多详细信息，请观看以下演练，了解如何设置、配置和获取Cloud Manager API凭据，以及如何使用它们进行Cloud Manager API调用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
-本教程使用 `curl` 以配置Cloud Manager API。 提供的 `curl` 命令采用Linux/macOS语法。 如果使用Windows命令提示符，请将 `\` 换行符 `^`.
+本教程使用 `curl` 以进行Cloud Manager API配置。 提供的 `curl` 命令采用Linux/macOS语法。 如果使用Windows命令提示符，请将 `\` 换行符 `^`.
 
 ## 为每个项目启用虚拟专用网络
 
@@ -59,7 +59,7 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
 
 1. 首先，使用Cloud Manager API确定需要高级联网的区域 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 此 `region name` 进行后续Cloud Manager API调用时需要使用。 通常，会使用生产环境所在的区域。
 
-   在中查找您的AEMas a Cloud Service环境所在的地区 [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [环境详细信息](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中显示的区域名称可以是 [映射到区域代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 在Cloud Manager API中使用。
+   在以下位置查找您的AEMas a Cloud Service环境所在的地区： [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [环境详细信息](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中显示的区域名称可以是 [映射到区域代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 在Cloud Manager API中使用。
 
    __listRegions HTTP请求__
 
@@ -84,9 +84,9 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
        -d @./vpn-create.json
    ```
 
-   在中定义JSON参数 `vpn-create.json` 提供给curl via `... -d @./vpn-create.json`.
+   在中定义JSON参数 `vpn-create.json` 提供给curl的 `... -d @./vpn-create.json`.
 
-   [下载示例vpn-create.json](./assets/vpn-create.json).  此文件只是一个示例。 根据以下位置记录的可选/必填字段，根据需要配置文件： [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
+   [下载示例vpn-create.json](./assets/vpn-create.json).  此文件只是一个示例。 根据中介绍的可选/必填字段，根据需要配置文件。 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
@@ -135,7 +135,7 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
    }
    ```
 
-   等待45-60分钟，让Cloud Manager计划配置网络基础架构。
+   等待45-60分钟，让Cloud Manager项目配置网络基础架构。
 
 1. 检查环境是否已完成 __虚拟专用网络__ 使用Cloud Manager API进行配置 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 从上一步中的createNetworkInfrastructure HTTP请求返回。
 
@@ -151,7 +151,7 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
 
    验证HTTP响应中是否包含 __状态__ 之 __就绪__. 如果尚未准备就绪，请每隔几分钟重新检查一次状态。
 
-## 按环境配置虚拟专用网络代理
+## 为每个环境配置虚拟专用网络代理
 
 1. 启用并配置 __虚拟专用网络__ 使用Cloud Manager API在每个AEMas a Cloud Service环境中进行配置 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
 
@@ -166,7 +166,7 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
        -d @./vpn-configure.json
    ```
 
-   在中定义JSON参数 `vpn-configure.json` 提供给curl via `... -d @./vpn-configure.json`.
+   在中定义JSON参数 `vpn-configure.json` 提供给curl的 `... -d @./vpn-configure.json`.
 
 [下载示例vpn-configure.json](./assets/vpn-configure.json)
 
@@ -191,15 +191,15 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
    }
    ```
 
-   `nonProxyHosts` 声明了一组主机，应通过默认共享IP地址范围而不是专用出口IP为其路由端口80或443。 `nonProxyHosts` 可能很有用，因为通过共享IP传出的流量可由Adobe进一步自动优化。
+   `nonProxyHosts` 声明了一组主机，应通过默认共享IP地址范围而不是专用出口IP为其路由端口80或443。 `nonProxyHosts` 通过Adobe可进一步自动优化通过共享IP传出的流量，因此可能会很有用。
 
-   针对每个 `portForwards` 映射，高级联网定义以下转发规则：
+   对于每个 `portForwards` 映射，高级联网定义以下转发规则：
 
    | 代理主机 | 代理端口 |  | 外部主机 | 外部端口 |
    |---------------------------------|----------|----------------|------------------|----------|
    | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-   如果您的AEM部署 __仅限__ 需要HTTP/HTTPS连接到外部服务，请保留 `portForwards` 数组为空，因为只有非HTTP/HTTPS请求才需要这些规则。
+   如果您的AEM部署 __仅限__ 需要外部服务的HTTP/HTTPS连接，请保留 `portForwards` 数组为空，因为只有非HTTP/HTTPS请求才需要这些规则。
 
 
 1. 对于每个环境，使用Cloud Manager API的 [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
@@ -214,7 +214,7 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
        -H 'Content-Type: application/json'
    ```
 
-1. 可使用Cloud Manager API的 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 记住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 因此，每次调用此操作时，都必须向所有规则提供。
+1. 可使用Cloud Manager API的 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 记住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 因此，所有规则都必须随此操作的每次调用一起提供。
 
 1. 现在，您可以在自定义AEM代码和配置中使用虚拟专用网络出口配置。
 
@@ -227,11 +227,11 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
 1. 对外部服务的非HTTP/HTTPS调用
    + 包括任何非HTTP调用，例如与Mail服务器、SQL数据库或在其他非HTTP/HTTPS协议上运行的服务的连接。
 
-默认情况下，允许标准端口(80/443)上来自AEM的HTTP/HTTPS请求，但如果未按照以下所述进行适当配置，则这些请求不会使用VPN连接。
+默认情况下，允许来自标准端口(80/443)上AEM的HTTP/HTTPS请求，但如果未按照以下所述进行适当配置，则这些请求不会使用VPN连接。
 
 ### HTTP/HTTPS
 
-从AEM创建HTTP/HTTPS连接时，使用VPN时，HTTP/HTTPS连接会自动代理出AEM。 无需其他代码或配置即可支持HTTP/HTTPS连接。
+从AEM创建HTTP/HTTPS连接时，如果使用VPN，则会自动从AEM中代理HTTP/HTTPS连接。 无需其他代码或配置即可支持HTTP/HTTPS连接。
 
 >[!TIP]
 >
@@ -257,10 +257,12 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
 
 创建非HTTP/HTTPS连接时(例如 AEM SQL、SMTP等)，必须通过AEM提供的特殊主机名建立连接。
 
-|变量名称 |使用 | Java™代码 | OSGi配置 | | - | - | - | - | | `AEM_PROXY_HOST` |非HTTP/HTTPS连接的代理主机 | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
+| 变量名称 | 使用 | Java™代码 | OSGi配置 |
+| - |  - | - | - |
+| `AEM_PROXY_HOST` | 非HTTP/HTTPS连接的代理主机 | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
-然后，通过调用与外部服务的连接 `AEM_PROXY_HOST` 和映射的端口(`portForwards.portOrig`)，然后AEM将路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
+然后，通过调用与外部服务的连接 `AEM_PROXY_HOST` 和映射的端口(`portForwards.portOrig`)，则AEM会路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
 
 | 代理主机 | 代理端口 |  | 外部主机 | 外部端口 |
 |---------------------------------|----------|----------------|------------------|----------|
@@ -271,10 +273,10 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
 
 <table><tr>
    <td>
-      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC数据源池的SQL连接" src="./assets//code-examples__sql-osgi.png"/></a>
-      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC数据源池的SQL连接</a></strong></div>
+      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC DataSourcePool的SQL连接" src="./assets//code-examples__sql-osgi.png"/></a>
+      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC DataSourcePool的SQL连接</a></strong></div>
       <p>
-            通过配置AEM JDBC数据源池连接到外部SQL数据库的Java™代码示例。
+            Java™代码示例通过配置AEM JDBC数据源池连接到外部SQL数据库。
       </p>
     </td>
    <td>
@@ -304,7 +306,7 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保虚
       <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="应用IP允许列表" src="./assets/code_examples__vpn-allow-list.png"/></a>
       <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">应用IP允许列表</a></strong></div>
       <p>
-            配置IP 允许列表，以便只有VPN流量可以访问AEM。
+            列入允许列表配置IP，以便只有VPN通信可以访问AEM。
       </p>
     </td>
    <td>
