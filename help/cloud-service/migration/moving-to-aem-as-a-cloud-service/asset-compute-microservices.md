@@ -1,15 +1,15 @@
 ---
 title: AEM Assets微服务和迁移到AEMas a Cloud Service
-description: 了解AEM Assetsas a Cloud Service的asset compute微服务如何让您自动高效地为资源生成任何演绎版，从而取代传统AEM Workflow的这一角色。
+description: 了解AEM Assets as a Cloud Service的asset compute微服务如何让您自动高效地为资源生成任何演绎版，从而取代传统AEM Workflow的这一角色。
 version: Cloud Service
 feature: Asset Compute Microservices
 topic: Migration, Upgrade
 role: Developer
 level: Experienced
-kt: 8635
+jira: KT-8635
 thumbnail: 336990.jpeg
 exl-id: 327e8663-086b-4b31-b159-a0cf30480b45
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 5%
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 # AEM Assets微服务 — 移至AEMas a Cloud Service
 
-了解AEM Assetsas a Cloud Service的asset compute微服务如何让您自动高效地为资源生成任何演绎版，从而取代传统AEM Workflow的这一角色。
+了解AEM Assets as a Cloud Service的asset compute微服务如何让您自动高效地为资源生成任何演绎版，从而取代传统AEM Workflow的这一角色。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
 
@@ -35,13 +35,13 @@ ht-degree: 5%
 + 继续使用AEM SDK在本地开发环境中进行迭代，直到更新的工作流与功能对等相匹配。
 + 将更新的代码库部署到AEMas a Cloud Service开发环境，并继续验证。
 
-## 动手练习
+## 实践练习
 
 通过尝试通过这个实践练习学到的知识来应用您的知识。
 
 在尝试动手练习之前，请确保您已观看并了解上述视频以及以下材料：
 
-+ [对AEMas a Cloud Service有不同的思考](./introduction.md)
++ [以不同的方式思考AEMas a Cloud Service](./introduction.md)
 + [入门培训](./onboarding.md)
 
 此外，请确保您已完成之前的实践练习：
@@ -59,7 +59,7 @@ ht-degree: 5%
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">上传资产的实际操作</div>
             <p style="margin:1rem 0">
-                了解如何使用“aem-upload”npm CLI模块定义AEM Assets处理配置文件并将其分配给文件夹，以及将资产上传到AEM。
+                了解如何使用“aem-upload”npm CLI模块定义AEM Assets处理配置文件并将其分配给文件夹以及将资产上传到AEM。
             </p>
             <a  rel="noreferrer"
                 target="_blank"

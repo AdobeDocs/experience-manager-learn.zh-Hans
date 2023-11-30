@@ -1,15 +1,15 @@
 ---
 title: 在云中使用调度程序
-description: Darin和James讨论了AEM Cloud中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 他们还谈到了向云的迁移。
+description: Darin和James讨论了AEM云中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 他们还谈到了向云的迁移。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
-kt: 10054
+jira: KT-10054
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342067.jpeg
 exl-id: 90c61bfb-46ff-4941-b89e-ce38d1025de8
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # 在云中使用调度程序
 
-Darin和James讨论了AEM Cloud中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 他们还谈到了向云的迁移。
+Darin和James讨论了AEM云中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 他们还谈到了向云的迁移。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342067?quality=12&learn=on)
 

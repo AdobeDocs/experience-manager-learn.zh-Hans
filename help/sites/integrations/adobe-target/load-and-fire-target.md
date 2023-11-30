@@ -2,19 +2,17 @@
 title: 加载和触发Target调用
 description: 了解如何使用Launch规则加载参数并将参数传递到页面请求，以及从网站页面触发Target调用。 使用Adobe客户端数据层可检索页面信息并将其作为参数传递，这样您便可以收集和存储有关访客在网页上的体验数据，然后轻松访问这些数据。
 feature: Core Components, Adobe Client Data Layer
-topics: integrations, administration, development
-audience: administrator, developer
-doc-type: technical video
 version: Cloud Service
-kt: 6133
+jira: KT-6133
 thumbnail: 41243.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 4%

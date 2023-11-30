@@ -1,15 +1,15 @@
 ---
 title: 在App Builder操作中生成访问标记
-description: 了解如何使用JWT凭据生成访问令牌以用于App Builder操作。
+description: 了解如何使用JWT凭据生成访问令牌，以便在App Builder操作中使用。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
 role: Developer
 level: Intermediate
-kt: 11743
+jira: KT-11743
 last-substantial-update: 2023-01-17T00:00:00Z
 exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 1%
@@ -18,20 +18,20 @@ ht-degree: 1%
 
 # 在App Builder操作中生成访问标记
 
-App Builder操作可能需要与与Adobe Developer Console项目关联的AdobeAPI进行交互，App Builder应用程序也已部署。
+App Builder操作可能需要与与Adobe Developer Console项目关联的AdobeAPI进行交互，并且还将部署App Builder应用程序。
 
-这可能需要应用生成器操作来生成与所需Adobe Developer控制台项目关联的自身访问令牌。
+为此，可能需要执行App Builder操作以生成与所需Adobe Developer控制台项目关联的访问令牌。
 
 >[!IMPORTANT]
 >
-> 审核 [App Builder安全文档](https://developer.adobe.com/app-builder/docs/guides/security/) 以了解何时应该生成访问令牌而不是使用提供的访问令牌。
+> 审核 [App Builder安全文档](https://developer.adobe.com/app-builder/docs/guides/security/) 以了解何时应生成访问令牌而不是使用提供的访问令牌。
 >
 > 自定义操作可能需要提供自己的安全检查，以确保只有允许的用户才能访问App Builder操作及其后的Adobe服务。
 
 
 ## .env文件
 
-在App Builder项目的 `.env` 文件，为每个Adobe Developer控制台项目的JWT凭据附加自定义密钥。 JWT凭据值可以从Adobe Developer控制台项目的 __凭据__ > __服务帐户(JWT)__ 对于给定的工作区。
+在App Builder项目的 `.env` 文件，为每个Adobe Developer控制台项目的JWT凭据附加自定义密钥。 JWT凭据值可以从Adobe Developer Console项目的 __凭据__ > __服务帐户(JWT)__ 对于给定工作区。
 
 ![Adobe Developer控制台JWT服务凭据](./assets/jwt-auth/jwt-credentials.png)
 
@@ -49,10 +49,10 @@ JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 
 ### Metascopes
 
-确定App Builder操作与之交互的AdobeAPI及其元数据。 在中用逗号分隔符列出元组 `JWT_METASCOPES` 键。 中列出了有效的metascope [Adobe的JWT Metascope文档](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/).
+确定App Builder操作与之交互的AdobeAPI及其元数据。 在中列出带有逗号分隔符的元组 `JWT_METASCOPES` 键。 中列出了有效的metascope [Adobe的JWT Metascope文档](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/).
 
 
-例如，可以将以下值添加到 `JWT_METASCOPES` 中的键 `.env`：
+例如，可将以下值添加到 `JWT_METASCOPES` 键入 `.env`：
 
 ```
 ...
@@ -62,7 +62,7 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 
 ### 私钥
 
-此 `JWT_PRIVATE_KEY` 必须特别设置格式，因为它本身是多行值，不支持此功能 `.env` 文件。 最简单的方法是对私钥进行base64编码。 私钥的Base64编码(`-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----`)可以使用操作系统提供的本机工具完成。
+此 `JWT_PRIVATE_KEY` 必须特别设置格式，因为它本身是多行值，不支持此功能 `.env` 文件。 最简单的方法是对私钥进行base64编码。 Base64对私钥进行编码(`-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----`)可以使用操作系统提供的本机工具完成。
 
 >[!BEGINTABS]
 
@@ -90,7 +90,7 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 
 >[!ENDTABS]
 
-例如，可以将以下base64编码的私钥添加到 `JWT_PRIVATE_KEY` 中的键 `.env`：
+例如，可以将以下base64编码的私钥添加到 `JWT_PRIVATE_KEY` 键入 `.env`：
 
 ```
 ...
@@ -99,7 +99,7 @@ JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 
 ## 输入映射
 
-将JWT凭据值设置为 `.env` 文件，必须将它们映射到AppBuilder操作输入，以便可在操作本身中读取它们。 为此，请在每个变量中添加相应的条目 `ext.config.yaml` 操作 `inputs` 格式为： `PARAMS_INPUT_NAME: $ENV_KEY`.
+在JWT凭据值设置于 `.env` 文件，必须将它们映射到AppBuilder操作输入，以便可在操作本身中读取它们。 为此，请在每个变量中添加相应的条目 `ext.config.yaml` 操作 `inputs` 采用以下格式： `PARAMS_INPUT_NAME: $ENV_KEY`.
 
 例如：
 
@@ -130,7 +130,7 @@ runtimeManifest:
             final: true
 ```
 
-下定义的键 `inputs` 可在以下网站获取： `params` 提供给App Builder操作的对象。
+下定义的键 `inputs` 可在 `params` 提供给App Builder操作的对象。
 
 
 ## 用于访问令牌的JWT凭据

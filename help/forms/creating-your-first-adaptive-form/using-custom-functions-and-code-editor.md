@@ -3,13 +3,13 @@ title: 使用函数和代码编辑器
 description: 使用函数和代码编辑器创作业务规则
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 4270
+jira: KT-4270
 thumbnail: 22282.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 7b2a4075-bfdf-49f3-b507-34d86193bf64
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 您已安装 [具有自定义函数的ClientLib](assets/client-libs-and-logo.zip) 在本教程的前面部分。
 
-通常，客户端库由CSS和Javascript文件组成。 此客户端库包含javascript文件，该文件公开了用于填充下拉列表值的函数。
+通常，客户端库包含CSS和Javascript文件。 此客户端库包含javascript文件，该文件公开了用于填充下拉列表值的函数。
 
 
 ## 用于填充下拉列表的函数 {#function-to-populate-drop-down-list}
@@ -60,7 +60,7 @@ else
   }
 ```
 
-您可以取消注释第1行，以便在浏览器窗口中调试代码。
+您可以取消注释第1行以在浏览器窗口中调试代码。
 
 第4行 — 获取当前面板
 

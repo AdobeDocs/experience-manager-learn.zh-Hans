@@ -7,14 +7,14 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-kt: 5269
+jira: KT-5269
 thumbnail: kt-5269.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 93e1262b-0e93-4ba8-aafc-f9c517688ce9
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 3%
@@ -27,9 +27,9 @@ ht-degree: 3%
 
 ## 创建提交处理程序
 
-可以创建简单的servlet来处理HTML5表单提交。 然后，可以使用以下代码提取提交的数据。 此 [servlet](assets/html5-submit-handler.zip) 在本教程中可供您使用。 请安装 [servlet](assets/html5-submit-handler.zip) 使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+可以创建简单的servlet来处理HTML5表单提交。 然后，可以使用以下代码提取提交的数据。 此 [servlet](assets/html5-submit-handler.zip) 在本教程中提供给您使用。 请安装 [servlet](assets/html5-submit-handler.zip) 使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 
-第9行的代码可用于调用J2EE进程。 请确保您已配置 [AdobeLiveCycle客户端SDK配置](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) 如果您打算使用代码调用J2EE进程。
+第9行的代码可用于调用J2EE进程。 请确保您已配置 [AdobeLiveCycle客户端SDK配置](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) 如果您打算使用代码来调用J2EE进程。
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();
@@ -64,7 +64,7 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 ![submit-url](assets/submit-url.PNG)
 
 * 点按xdp并单击 _属性_->_高级_
-* 复制http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html ，并将其粘贴到提交URL文本字段中
+* 复制http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html并将其粘贴到提交URL文本字段中
 * 单击 _SaveAndClose_ 按钮。
 
 ### 在排除路径中添加条目
@@ -80,7 +80,7 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 * 点按xdp模板。
 * 单击 _预览_->预览为HTML
 * 在表单中输入一些数据，然后单击提交
-* 您应该会看到提交的数据写入到服务器的stdout.log文件中
+* 您应该会看到提交的数据已写入服务器的stdout.log文件
 
 ### 附加阅读
 

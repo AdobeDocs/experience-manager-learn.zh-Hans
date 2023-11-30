@@ -2,18 +2,17 @@
 title: AEM 项目原型
 description: AEM 项目原型创建最小的基于最佳实践的 Adobe Experience Manager 项目作为您自己的 AEM 项目的起点。
 feature: AEM Project Archetype
-topics: development
 audience: developer
-doc-type: technical video
 activity: understand
 version: 6.4, 6.5, Cloud Service
-kt: 4675
+jira: KT-4675
 thumbnail: 32550.jpg
 topic: Development
 role: Developer
 level: Beginner
+doc-type: Technical Video
 exl-id: 9f46ce7e-9c6d-429d-9d8a-c93c274f70d7
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 50%
@@ -22,7 +21,7 @@ ht-degree: 50%
 
 # [!DNL AEM Project Archetype] {#aem-project-archetype}
 
-AEM项目包含实施的所有代码和配置。 此 [!DNL AEM Project Archetype] 创建一个最少、基于最佳实践的Adobe Experience Manager项目作为您自己的AEM项目的起点。
+AEM项目包含实施的所有代码和配置。 此 [!DNL AEM Project Archetype] 创建一个基于最佳实践的、最基础的Adobe Experience Manager项目，作为您自己的AEM项目的起点。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32550?quality=12&learn=on)
 

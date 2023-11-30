@@ -6,10 +6,10 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10797
+jira: KT-10797
 thumbnail: kt-10797.jpg
 exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 2%
@@ -18,14 +18,14 @@ ht-degree: 2%
 
 # AEM Headless Web组件部署
 
-AEM Headless [Web组件](https://developer.mozilla.org/en-US/docs/Web/Web_Components)/JS部署是在Web浏览器中运行的纯JavaScript应用程序，这些应用程序以Headless方式使用AEM中的内容并与之交互。 Web组件/JS部署与 [SPA部署](./spa.md) 因为它们不使用强大的SPA框架，并且预期嵌入在任何网站上下文中，交付，以从AEM呈现内容。
+AEM Headless [Web组件](https://developer.mozilla.org/en-US/docs/Web/Web_Components)/JS部署是在Web浏览器中运行的纯JavaScript应用程序，它们以Headless方式在AEM中使用内容并与之交互。 Web组件/JS部署与 [SPA部署](./spa.md) 因为它们不使用强大的SPA框架，并且预期嵌入在任何网站上下文中，交付，以从AEM呈现内容。
 
 
 ## 部署配置
 
-以下部署配置必须适用于Web组件/JS部署。
+必须为Web组件/JS部署就地以下部署配置。
 
-| Web组件/JS应用程序连接到 | AEM Author | AEM 发布 | AEM预览 |
+| 连接到的Web组件/JS应用程序 | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher过滤器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [跨源资源共享(CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
@@ -49,7 +49,7 @@ Adobe提供了一个示例Web组件。
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/web-component.md" title="Web组件">Web组件</a></p>
-                   <p class="is-size-6">以纯JavaScript编写的示例Web组件，它使用来自AEM Headless GraphQL API的内容。</p>
+                   <p class="is-size-6">以纯JavaScript编写的示例Web组件使用AEM Headless GraphQL API中的内容。</p>
                    <a href="../example-apps/web-component.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                    </a>

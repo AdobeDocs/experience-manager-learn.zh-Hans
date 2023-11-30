@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: Code Deployment
-kt: 8851
+jira: KT-8851
 exl-id: daf7d316-e9ec-41b5-89c8-fe4f4ada9701
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 部署到开发环境
 
-在上一步中，我们将主控分支从本地Git存储库推送到Cloud Manager存储库的MyFirstAF分支。
+在上一步中，我们将主分支从本地Git存储库推送到Cloud Manager存储库的MyFirstAF分支。
 
 下一步是将代码部署到开发环境中。
 登录Cloud Manager并选择您的项目

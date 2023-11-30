@@ -1,5 +1,5 @@
 ---
-title: 使用存储库工具设置IntelliJ
+title: 使用Repo工具设置IntelliJ
 description: 准备IntelliJ以与AEM云就绪实例同步
 solution: Experience Manager
 type: Documentation
@@ -7,9 +7,9 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
-kt: 8844
+jira: KT-8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
@@ -24,7 +24,7 @@ Cygwin是一种与POSIX兼容的编程和运行时环境，在Microsoft Windows�
 >[!NOTE]
 > 确保在cygwin安装中安装zip、unzip、curl和rsync包
 
-在c：\cloudmanager下创建一个名为adoberepo的文件夹。
+在c：\cloudmanager下创建名为adoberepo的文件夹。
 
 [安装repo工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) 安装repo工具只不过是复制repo文件并将其放在c：\cloudmanger\adoberepo文件夹中。
 
@@ -36,7 +36,7 @@ Cygwin是一种与POSIX兼容的编程和运行时环境，在Microsoft Windows�
 * 按Ctrl+Alt+S键以启动设置窗口。
 * 选择工具 — >外部工具，然后单击+符号并输入以下内容，如屏幕快照中所示。
   ![rep](assets/repo.png)
-* 确保在组下拉字段中键入“repo”来创建名为repo的组，并且您创建的所有命令都属于 **存储库** 群组
+* 确保在组下拉字段中键入“repo”来创建名为repo的组，并且您创建的所有命令都属于 **repo** 组
 
 
 **Put命令**
@@ -63,10 +63,10 @@ Cygwin是一种与POSIX兼容的编程和运行时环境，在Microsoft Windows�
 **工作目录**： \$ProjectFileDir\$
 ![差异命令](assets/diff-command.png)
 
-从提取.repo文件 [repo.zip](assets/repo.zip) 并将其放置在您的AEM项目根文件夹中。 (C:\CloudManager\aem-banking-application)。 打开.repo文件，并确保服务器和凭据设置与您的环境匹配。
-打开.gitignore文件并将以下内容添加到文件底部，然后保存更改\# repo .repo
+从提取.repo文件 [repo.zip](assets/repo.zip) 并将其放入您的AEM项目根文件夹中。 (C:\CloudManager\aem-banking-application)。 打开.repo文件，并确保服务器和凭据设置与您的环境相匹配。
+打开.gitignore文件并向文件底部添加以下内容并保存更改\# repo .repo
 
-选择aem-banking-application项目中的任何项目（如ui.content），然后单击右键，此时，您应会看到repo选项，而在repo选项下，您会看到我们之前添加的4个命令。
+选择aem-banking-application项目中的任何项目（如ui.content），然后右键单击，此时您应会看到“repo”选项，而在“repo”选项下方，您会看到我们之前添加的4个命令。
 
 ## 设置AEM创作实例{#set-up-aem-author-instance}
 
@@ -77,7 +77,7 @@ Cygwin是一种与POSIX兼容的编程和运行时环境，在Microsoft Windows�
 
 * 创建以下文件夹结构c：\aemformscs\aem-sdk\author
 
-* 从AEM SDK zip文件中提取aem-sdk-quickstart-xxxxxxx.jar文件，并将其放置在c：\aemformscs\aem-sdk\author文件夹中。将jar文件重命名为aem-author-p4502.jar
+* 从AEM SDK zip文件中提取aem-sdk-quickstart-xxxxxxx.jar文件并将其放置在c：\aemformscs\aem-sdk\author文件夹中。将jar文件重命名为aem-author-p4502.jar
 
 * 打开命令提示符并导航到c：\aemformscs\aem-sdk\author输入以下命令java -jar aem-author-p4502.jar -gui。 这将开始安装AEM。
 * 使用管理员/管理员凭据登录

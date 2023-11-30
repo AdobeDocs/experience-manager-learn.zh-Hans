@@ -1,27 +1,28 @@
 ---
-title: Asset Share Commons的主题简介
-description: 有关功能和技术了解Assets共享公域的材料
+title: 资产共享共用中的主题简介
+description: 有关功能和技术方面了解资产共享公域的材料
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-22T00:00:00Z
+doc-type: Tutorial
 exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 1%
 
 ---
 
-# Asset Share Commons的主题简介 {#asset-share-commons-theme}
+# 资产共享共用中的主题简介 {#asset-share-commons-theme}
 
 简单介绍资产共享共用中的主题。 该视频介绍了使用自定义颜色方案创建新主题的过程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20572?quality=12&learn=on)
 
-在此视频中，根据资产共享Commons Dark主题创建了新主题。 颜色方案将匹配自定义徽标，使网站具有一致的外观。
+在此视频中，根据资产共享公域深色主题创建新主题。 颜色方案将匹配自定义徽标，以提供一致的外观和感觉。
 
 ## 主题变量
 

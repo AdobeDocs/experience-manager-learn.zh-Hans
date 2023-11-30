@@ -8,16 +8,16 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: AEM Project Archetype
-kt: 9534
+jira: KT-9534
 exl-id: c2cd9c52-6f00-4cfe-a972-665093990e5d
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
-# 从旧的aem原型迁移
+# 从旧aem原型迁移
 
 要使用最新的maven原型更新您现有的AEM Forms项目，您必须手动将代码/配置等从旧项目复制到新项目。
 
@@ -26,19 +26,19 @@ ht-degree: 0%
 ## 使用最新原型创建maven项目
 
 * 打开命令提示符并导航到c：\cloudmanager
-* 使用最新的原型创建maven项目。
-* 复制并粘贴的内容 [文本文件](assets/creating-maven-project.txt) 命令提示符窗口中的。 您可能需要更改DarchetypeVersion=33，具体取决于 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 原型33包括新的AEM Forms主题。
-由于我们在cloudmanager文件夹中创建新的maven项目，而该文件夹已具有aem-banking-application项目，因此您应该更改 **DartifactId** 从aem-banking-application到其他应用程序。 本文使用了aem-banking-application1。
+* 使用最新原型创建maven项目。
+* 复制并粘贴的内容 [文本文件](assets/creating-maven-project.txt) 命令提示符窗口中。 您可能需要更改DarchetypeVersion=33，具体取决于 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 原型33包括新的AEM Forms主题。
+由于我们在cloudmanager文件夹中创建的新maven项目已经具有aem-banking-application项目，因此您应该更改 **DartifactId** 从aem-banking-application到其他应用程序。 本文使用了aem-banking-application1。
 
 >[!NOTE]
 >
->如果您按原样部署此新项目，则云服务实例将没有HandleFormSubmission和SubmitToAEMServlet。 这是因为每次使用Cloud Manager部署项目时， `/apps` 文件夹已被删除和覆盖。
+>如果按原样部署此新项目，则云服务实例将没有HandleFormSubmission和SubmitToAEMServlet。 这是因为每次使用Cloud Manager部署项目时， `/apps` 文件夹将被删除和覆盖。
 
 ## 复制您的Java代码
 
-成功创建项目后，您就可以开始将代码/配置等从旧项目复制到此新项目
+成功创建项目后，您可以开始将代码/配置等从旧项目复制到此新项目
 
-* 从以下位置复制HandleFormSubmission servlet： ```C:\CloudManager\aem-banking-application\core\src\main\java\com\aem\bankingapplication\core\servlets```
+* 从以下位置复制HandleFormSubmission servlet ```C:\CloudManager\aem-banking-application\core\src\main\java\com\aem\bankingapplication\core\servlets```
 到
   ```C:\CloudManager\aem-banking-application1\core\src\main\java\com\aem\bankingapplication\core\servlets```
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 * 将新项目导入IntelliJ
 
-* 更新aem-banking-application1项目的ui.apps模块中的filter.xml以包含以下行
+* 更新aem-banking-application1项目的ui.apps模块中的filter.xml，以包含以下行
   ```<filter root="/apps/bankingapplication/SubmitToAEMServlet"/>```
 
 将所有代码复制到新项目后，您可以将此项目推送到Cloud Manager。

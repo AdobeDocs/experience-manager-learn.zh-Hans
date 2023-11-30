@@ -1,6 +1,6 @@
 ---
 title: 创建内容分析器
-description: 创建包含有关REST调用的输入参数信息的JSON部分。
+description: 创建包含有关REST调用的输入参数的信息的JSON部分。
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 thumbnail: 7836.jpg
-kt: 7836
+jira: KT-7836
 exl-id: 548a21b9-5487-4b48-9782-19b537a48f98
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 创建Analyser请求
 
-创建定义以下内容的JSON片段：
+创建用于定义以下内容的JSON片段：
 
 + 输入
 + 参数

@@ -7,13 +7,13 @@ audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-kt: 6891
+jira: KT-6891
 thumbnail: 6891.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: c6e0fb92-28c1-4025-85ef-b99bad46f07a
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 2%
@@ -22,17 +22,17 @@ ht-degree: 2%
 
 # 创建AF模板
 
-我们将为本教程创建新的自适应表单模板。 此外，还创建了一个新页面组件并将其与此模板关联。 页面组件中的JSP从MySql数据库中提取数据，该数据用于预填充自适应表单。
+我们将为本教程创建新的自适应表单模板。 此外，还创建了一个新的页面组件并将其与此模板关联。 页面组件中的JSP从MySql数据库获取用于预填充自适应表单的数据。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=12&learn=on)
 
-[您可以阅读本文章以了解创建自适应表单模板和页面组件的过程](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en#storing-and-retrieving-form-data)
+[您可以阅读本文以了解创建自适应表单模板和页面组件的过程](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en#storing-and-retrieving-form-data)
 
 
-## Assets
+## 资源
 
-本教程中使用的模板和页面组件可以是 [已从此处下载](assets/sign-multiple-forms-template.zip)
+本教程中使用的模板和页面组件可以 [从此处下载](assets/sign-multiple-forms-template.zip)
 
 ## 后续步骤
 

@@ -7,8 +7,9 @@ topic: Content Management
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-23T00:00:00Z
+doc-type: Feature Video
 exl-id: 2eceb65f-362a-48e1-a8c6-e9f6954dc2a0
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 * 00:00 — 高级体系结构
 * 02:52 — 对连接的资产进行身份验证
-* 03:30 — 使用来自连接资产的图像
+* 03:30 — 使用“连接的资产”中的图像
 * 04:42 — 用于启用“连接的资产”功能的管理员配置
 
-请查看 [连接的资产支持的部署](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) 以了解您的AEM部署是否可以支持“连接的资产”。
+请查阅 [连接的资产支持的部署](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) 以了解您的AEM部署是否可支持“连接的资产”。

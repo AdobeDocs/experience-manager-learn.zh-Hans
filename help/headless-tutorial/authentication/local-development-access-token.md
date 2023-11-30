@@ -2,19 +2,19 @@
 title: 本地开发访问令牌
 description: AEM本地开发访问令牌用于加快与AEMas a Cloud Service的集成开发，以便通过HTTP以编程方式与AEM创作或发布服务交互。
 version: Cloud Service
-doc-type: tutorial
 topics: Development, Security
 feature: APIs
 activity: develop
 audience: developer
-kt: 6785
+jira: KT-6785
 thumbnail: 330477.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
+doc-type: Tutorial
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 # 本地开发访问令牌
 
-构建集成需要以编程方式访问AEMas a Cloud Service的开发人员，需要一种简单、快速的方式获取AEM的临时访问令牌，以促进本地开发活动。 为了满足此需求，AEM Developer Console允许开发人员自行生成可用于以编程方式访问AEM的临时访问令牌。
+在构建集成时，如果开发人员需要以编程方式访问AEMas a Cloud Service，则需要一种简单、快速的方式获取AEM的临时访问令牌，以便利本地开发活动。 为了满足此需求，AEM Developer Console允许开发人员自行生成可用于以编程方式访问AEM的临时访问令牌。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330477?quality=12&learn=on)
 
@@ -31,19 +31,19 @@ ht-degree: 0%
 
 ![获取本地开发访问令牌](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-本地开发访问令牌允许作为生成令牌的用户访问AEM创作和发布服务及其权限。 尽管这是一个开发令牌，但请不要共享此令牌，也不要将其存储在源代码管理中。
+本地开发访问令牌允许作为生成令牌的用户访问AEM创作和发布服务，以及这些服务的权限。 尽管这是一个开发令牌，但请不要共享此令牌，或将其存储在源代码管理中。
 
-1. In [Adobe Admin Console](https://adminconsole.adobe.com/) 确保作为开发人员的您是以下成员之一：
+1. 在 [Adobe Admin Console](https://adminconsole.adobe.com/) 确保您（开发人员）是以下成员之一：
    + __Cloud Manager — 开发人员__ IMS产品配置文件(授予对AEM开发人员控制台的访问权限)
-   + 或是 __AEM管理员__ 或 __AEM用户__ 访问令牌与集成的AEM环境服务的IMS产品配置文件
-   + Sandbox AEMas a Cloud Service环境只需要以下任意一项 __AEM管理员__ 或 __AEM用户__ 产品配置文件
+   + 或者是 __AEM管理员__ 或 __AEM用户__ 访问令牌与集成的AEM环境服务的IMS产品配置文件
+   + 沙盒AEMas a Cloud Service环境只需要以下任一成员资格 __AEM管理员__ 或 __AEM用户__ 产品配置文件
 1. 登录 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 打开包含要与集成的AEMas a Cloud Service环境的程序
 1. 点按 __省略号__ 中的环境旁边 __环境__ 部分，然后选择 __开发人员控制台__
-1. 点按 __集成__ 选项卡
+1. 点击 __集成__ 选项卡
 1. 点按 __本地令牌__ 选项卡
 1. 点按 __获取本地开发令牌__ 按钮
-1. 点按 __下载按钮__ ，以下载包含以下内容的JSON文件： `accessToken` 值，并将JSON文件保存到开发计算机上的安全位置。
+1. 点击 __下载按钮__ ，以下载包含的JSON文件 `accessToken` 并将JSON文件保存到开发计算机上的安全位置。
    + 这是您的24小时开发人员访问AEMas a Cloud Service环境的令牌。
 
 ![AEM开发人员控制台 — 集成 — 获取本地开发令牌](./assets/local-development-access-token/developer-console.png)
@@ -57,18 +57,18 @@ ht-degree: 0%
 1. 正在开发一个以编程方式与AEMas a Cloud Service交互的外部应用程序
 1. 外部应用程序读取本地开发访问令牌
 1. 外部应用程序构造对AEMas a Cloud Service的HTTP请求，将本地开发访问令牌作为持有者令牌添加到HTTP请求的授权标头
-1. AEMas a Cloud Service接收HTTP请求、验证该请求并执行HTTP请求所请求的工作，然后将HTTP响应返回给外部应用程序
+1. AEMas a Cloud Service接收HTTP请求，对请求进行身份验证，并执行HTTP请求所请求的工作，并将HTTP响应返回给外部应用程序
 
 ### 示例外部应用程序
 
-我们将创建一个简单的外部JavaScript应用程序，以说明如何使用本地开发人员访问令牌以编程方式通过HTTPS访问AEMas a Cloud Service。 这说明了如何 _任意_ 在AEM外部运行的应用程序或系统，无论框架或语言如何，都可以使用访问令牌以编程方式向AEMas a Cloud Service进行身份验证和访问。 在 [下一节](./service-credentials.md)中，我们将更新此应用程序代码以支持用于生成生产用令牌的方法。
+我们将创建一个简单的外部JavaScript应用程序，以说明如何使用本地开发人员访问令牌以编程方式通过HTTPS访问AEMas a Cloud Service。 这说明了如何 _任意_ 在AEM之外运行的应用程序或系统，无论框架或语言如何，都可以使用访问令牌以编程方式向AEMas a Cloud Service进行身份验证和访问。 在 [下一节](./service-credentials.md)中，我们将更新此应用程序代码以支持用于生成生产用令牌的方法。
 
 此示例应用程序从命令行运行，并使用AEM Assets HTTP API通过以下流程更新AEM资源元数据：
 
 1. 从命令行读取参数(`getCommandLineParams()`)
 1. 获取用于向AEMas a Cloud Service进行身份验证的访问令牌(`getAccessToken(...)`)
 1. 列出在命令行参数中指定的AEM asset文件夹中的所有资源(`listAssetsByFolder(...)`)
-1. 使用命令行参数中指定的值更新列出的资源元数据(`updateMetadata(...)`)
+1. 使用命令行参数(`updateMetadata(...)`)
 
 使用访问令牌以编程方式向AEM进行身份验证的关键元素是，按照以下格式向向AEM发出的所有HTTP请求添加授权HTTP请求标头：
 
@@ -212,7 +212,7 @@ ht-degree: 0%
    }
    ```
 
-   查看 `fetch(..)` 中的调用 `listAssetsByFolder(...)` 和 `updateMetadata(...)`，并注意 `headers` 定义 `Authorization` 值为HTTP请求标头 `Bearer ACCESS_TOKEN`. 这是源自外部应用程序的HTTP请求向AEMas a Cloud Service进行身份验证的方式。
+   查看 `fetch(..)` 中的调用 `listAssetsByFolder(...)` 和 `updateMetadata(...)`，并注意 `headers` 定义 `Authorization` 值为的HTTP请求头 `Bearer ACCESS_TOKEN`. 这是源自外部应用程序的HTTP请求向AEMas a Cloud Service进行身份验证的方式。
 
    ```javascript
    ...
@@ -225,7 +225,7 @@ ht-degree: 0%
    })...
    ```
 
-   对AEM发出的任何HTTP请求as a Cloud Service，必须在授权标头中设置持有者访问令牌。 请记住，每个AEMas a Cloud Service环境都需要其自身的访问令牌。 开发的访问令牌不适用于暂存或生产，暂存的令牌不适用于开发或生产，生产的令牌不适用于开发或暂存！
+   对AEM发出任何HTTP请求as a Cloud Service，必须在授权标头中设置持有者访问令牌。 请记住，每个AEMas a Cloud Service环境都需要其自身的访问令牌。 开发的访问令牌不适用于暂存或生产，暂存的令牌不适用于开发或生产，生产的令牌不适用于开发或暂存！
 
 1. 使用命令行，从项目的根目录执行应用程序，传入以下参数：
 
@@ -238,12 +238,12 @@ ht-degree: 0%
        file=local_development_token.json
    ```
 
-   传入了以下参数：
+   以下参数在中传递：
 
    + `aem`：应用程序与之交互的AEMas a Cloud Service环境的方案和主机名(例如， `https://author-p1234-e5678.adobeaemcloud.com`)。
-   + `folder`：其资源已更新为的资源文件夹路径 `propertyValue`；请勿添加 `/content/dam` 前缀(例如 `/wknd-shared/en/adventures/napa-wine-tasting`)
+   + `folder`：其资源已使用更新的资源文件夹路径 `propertyValue`；请勿添加 `/content/dam` 前缀(例如 `/wknd-shared/en/adventures/napa-wine-tasting`)
    + `propertyName`：要更新的资产属性名称，相对于 `[dam:Asset]/jcr:content` (例如： `metadata/dc:rights`)。
-   + `propertyValue`：用于设置 `propertyName` 到；带有空格的值需要用封装 `"` (例如： `"WKND Limited Use"`)
+   + `propertyValue`：用于设置 `propertyName` 到；带有空格的值需要封装为 `"` (例如： `"WKND Limited Use"`)
    + `file`：从AEM开发人员控制台下载的JSON文件的相对文件路径。
 
    成功执行每个资源的应用程序结果输出已更新：
@@ -261,11 +261,11 @@ ht-degree: 0%
 通过登录到AEMas a Cloud Service环境，验证元数据是否已更新(确保将相同的主机传递到 `aem` 命令行参数)。
 
 1. 登录到外部应用程序与之交互的AEMas a Cloud Service环境（使用中提供的相同主机） `aem` 命令行参数)
-1. 导航到 __资产__ > __文件__
-1. 导航到指定的资源文件夹 `folder` 命令行参数，例如 __WKND__ > __英语__ > __冒险__ > __纳帕品酒__
+1. 导航至 __资产__ > __文件__
+1. 导航到指定的资源文件夹。 `folder` 命令行参数，例如 __WKND__ > __英语__ > __冒险__ > __纳帕品酒会__
 1. 打开 __属性__ 文件夹中的任何（非内容片段）资产
-1. 点按 __高级__ 选项卡
-1. 查看已更新属性的值，例如 __版权__ 映射到更新的 `metadata/dc:rights` JCR属性，该属性反映了 `propertyValue` 参数，例如 __WKND有限使用__
+1. 点按至 __高级__ 选项卡
+1. 查看已更新属性的值，例如 __版权__ 映射到已更新的 `metadata/dc:rights` JCR属性，它反映了 `propertyValue` 参数，例如 __WKND有限使用__
 
 ![WKND有限使用元数据更新](./assets/local-development-access-token/asset-metadata.png)
 

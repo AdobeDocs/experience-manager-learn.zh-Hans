@@ -6,11 +6,12 @@ topic: Content Management
 feature: Metadata
 role: User
 level: Intermediate
-kt: 616
+jira: KT-616
 thumbnail: 20702.jpg
 last-substantial-update: 2022-06-08T00:00:00Z
+doc-type: Feature Video
 exl-id: 73e793e0-a20e-4954-ba1a-471b2cd85120
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
@@ -25,8 +26,8 @@ ht-degree: 0%
 
 可以为给定元数据字段启用三个动态规则集：
 
-1. **要求** ：一个字段可以动态标记为必需，以基于另一个下拉字段的值。
+1. **要求** ：可以根据其他下拉字段的值动态地将字段标记为必填字段。
 
-2. **可见性** ：字段可以始终可见，也可以仅根据其他下拉字段的值可见。
+2. **可见性** ：字段可以始终可见，也可以仅根据另一个下拉字段的值可见。
 
 3. **选项** ：（仅适用于下拉字段）根据另一个下拉字段的当前选定值筛选向用户显示的选项。

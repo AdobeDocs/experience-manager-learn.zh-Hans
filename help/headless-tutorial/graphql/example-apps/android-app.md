@@ -3,7 +3,7 @@ title: Android应用程序 — AEM Headless示例
 description: 示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此Android应用程序演示了如何使用AEM的GraphQL API查询内容。
 version: Cloud Service
 mini-toc-levels: 2
-kt: 10588
+jira: KT-10588
 thumbnail: KT-10588.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -12,7 +12,7 @@ level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
-source-git-commit: 679b9bf9f0948e2b24d613b530d3ae644c92057d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 5%

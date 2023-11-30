@@ -6,11 +6,11 @@ topic: Development, Content Management
 feature: Metadata
 role: Developer
 level: Intermediate
-kt: 11618
+jira: KT-11618
 thumbnail: 3412319.jpg
 last-substantial-update: 2022-12-14T00:00:00Z
 exl-id: e86ddc9d-ce44-407a-a20c-fb3297bb0eb2
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 6%
@@ -19,20 +19,20 @@ ht-degree: 6%
 
 # 自定义命名空间
 
-了解如何定义和部署自定义 [命名空间](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/4.5_Namespaces.html) AEMas a Cloud Service。
+了解如何定义和部署自定义 [命名空间](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/4.5_Namespaces.html) 到AEMas a Cloud Service。
 
-自定义命名空间是JCR属性前面的可选部分 `:`. AEM使用几个命名空间，例如：
+自定义命名空间是JCR属性前面的可选部分 `:`. AEM使用多个命名空间，例如：
 
-+ `jcr` JCR系统属性
++ `jcr` 用于JCR系统属性
 + `cq` for AEM(以前称为Adobe CQ)资产
 + `dam` 特定于DAM资产的AEM资产
 + `dc` （都柏林核心资产）
 
-...和许多其他人。
+...和其他很多人。
 
-命名空间可用于表示属性的范围和意图。 创建自定义命名空间（通常是您的公司名称）有助于明确识别AEM实施特定的节点或属性，并包含特定于您的业务的数据。
+命名空间可用于表示属性的范围和用途。 创建自定义命名空间（通常是您的公司名称）有助于明确识别AEM实施特定的节点或属性，并包含特定于您的业务的数据。
 
-自定义命名空间在中管理 [Sling存储库初始化(repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) 脚本，并作为OSGi配置部署到AEMas a Cloud Service — 并添加到您的 [AEM项目的](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) `ui.config` 项目。
+在中管理自定义命名空间 [Sling存储库初始化(repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) 脚本，并作为OSGi配置部署到AEMas a Cloud Service — 并添加到您的 [AEM项目的](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) `ui.config` 项目。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
 
@@ -57,4 +57,4 @@ ht-degree: 6%
 }
 ```
 
-这允许自定义属性使用 `wknd` 命名空间，表示为 `register namespace` 指令，用于AEM。 有关更高级的脚本定义，请查看 [Sling存储库初始化(repoinit)文档](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).
+这允许自定义属性使用 `wknd` 命名空间，表示为 `register namespace` 指令，以便在AEM中使用。 有关更高级的脚本定义，请查看 [Sling存储库初始化(repoinit)文档](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).

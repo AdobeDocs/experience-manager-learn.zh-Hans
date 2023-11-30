@@ -6,10 +6,10 @@ topic: Headless
 feature: GraphQL API
 role: Developer
 level: Intermediate
-kt: 10269
+jira: KT-10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
-source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 10%
@@ -18,9 +18,9 @@ ht-degree: 10%
 
 # AEM Headless SDK
 
-AEM Headless SDK是一组库，客户端可以使用它们通过HTTP快速、轻松地与AEM Headless API交互。
+AEM Headless SDK是一组库，客户端可以使用它通过HTTP与AEM Headless API快速轻松地交互。
 
-AEM Headless SDK可用于各种平台：
+AEM Headless SDK适用于各种平台：
 
 + [适用于客户端浏览器的 AEM Headless SDK (JavaScript)](https://github.com/adobe/aem-headless-client-js)
 + [适用于服务器端/Node.js 的 AEM Headless SDK (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
@@ -30,7 +30,7 @@ AEM Headless SDK可用于各种平台：
 
 使用GraphQL通过持久查询查询AEM(与 [客户端定义的GraphQL查询](#graphl-queries))允许开发人员在AEM中保留查询（但不保留其结果），然后请求按名称执行查询。 持久查询与SQL数据库中存储过程的概念类似。
 
-持久查询比客户端定义的GraphQL查询性能更高，因为持久查询使用HTTPGET执行，该HTTP查询可在CDN和AEM Dispatcher层缓存。 持久查询也有效，定义了API，并降低了开发人员了解每个内容片段模型详细信息的需求。
+持久查询比客户端定义的GraphQL查询性能更高，因为持久查询使用HTTPGET执行，该HTTP查询可在CDN和AEM Dispatcher层缓存。 持久查询也有效，定义了API，并降低了开发人员了解每个内容片段模型详细信息的需要。
 
 ### 代码示例{#persisted-graphql-queries-code-examples}
 
@@ -38,13 +38,13 @@ AEM Headless SDK可用于各种平台：
 
 +++ JavaScript示例
 
-安装 [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) 通过运行 `npm install` 命令从Node.js项目的根目录删除。
+安装 [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) 通过运行 `npm install` Node.js项目的根目录中的命令。
 
 ```
 $ npm i @adobe/aem-headless-client-js
 ```
 
-此代码示例说明如何使用查询AEM [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm模块使用 `async/await` 语法。 适用于JavaScript的AEM Headless SDK还支持 [承诺语法](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client).
+此代码示例说明如何使用查询AEM [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm模块使用 `async/await` 语法。 适用于JavaScript的AEM Headless SDK还支持 [Promise语法](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client).
 
 此代码假定一个名为的持久查询 `wknd/adventureNames` 已在AEM Author上创建，并已发布到AEM Publish。
 
@@ -99,8 +99,8 @@ $ npm i @adobe/aem-headless-client-js
 
 使用 `useEffect` 在React中进行异步GraphQL调用很有用，因为：
 
-1. 它为AEM的异步调用提供同步包装。
-1. 它减少了不必要地请求AEM。
+1. 它为AEM的异步调用提供同步包装器。
+1. 它减少了不必要的请求AEM。
 
 此代码假定一个名为的持久查询 `wknd-shared/adventure-by-slug` 已在AEM Author上创建，并使用GraphiQL发布到AEM Publish。
 
@@ -193,7 +193,7 @@ import useAdventureBySlug from '...';
 let { data, errors } = useAdventureBySlug('bali-surf-camp');
 ```
 
-新 `useEffect` 可以为React应用程序使用的每个持久查询创建挂接。
+新建 `useEffect` 可以为React应用程序使用的每个持久查询创建挂接。
 
 +++
 
@@ -236,4 +236,4 @@ If you don't want to include a polyfill, you can use an empty module like this:
   },
 ```
 
-然后运行 `npm install` 安装依赖项。
+然后运行 `npm install` 以安装依赖项。

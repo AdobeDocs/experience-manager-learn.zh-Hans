@@ -1,14 +1,14 @@
 ---
 title: 获取集成的登录令牌
-description: 有关如何获取Cloud Service集成的登录令牌的详细指南以及一些相关用例。
+description: 有关如何获取Cloud Service集成的登录令牌的深入指南以及一些相关用例。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
-kt: 9981
+jira: KT-9981
 hidefromtoc: true
 thumbnail: 341277.jpeg
 exl-id: 41d78e6b-7076-4f4f-8d2c-4bf969b61024
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # 获取集成的登录令牌
 
-有关如何获取Cloud Service集成的登录令牌的详细指南以及一些相关用例。
+有关如何获取Cloud Service集成的登录令牌的深入指南以及一些相关用例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/341277?quality=12&learn=on)
 
@@ -31,4 +31,4 @@ ht-degree: 0%
 + 技术帐户验证
 + 简单使用生成的令牌
 
-有关此主题的更详细介绍，您可以参考以下教程： [基于令牌的身份验证](/help/headless-tutorial/authentication/overview.md).
+有关此主题的更详细介绍，您可以参考以下方面的教程： [基于令牌的身份验证](/help/headless-tutorial/authentication/overview.md).

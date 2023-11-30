@@ -1,15 +1,15 @@
 ---
 title: 将组件添加到收入面板
-description: 我们将向“收入”面板添加一个表格。 配置表行并使用规则编辑器计算总计。
+description: 我们将向收入面板添加一个表格。 配置表行并使用规则编辑器计算总计。
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 22198.jpg
-kt: 4211
+jira: KT-4211
 topic: Development
 role: Developer
 level: Beginner
 exl-id: e7674c46-259f-4dbd-96db-c40369534911
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 将组件添加到收入面板 {#adding-components-to-income-panel}
 
-我们将向“收入”面板添加一个表格。 配置表行并使用规则编辑器计算总计。
+我们将向收入面板添加一个表格。 配置表行并使用规则编辑器计算总计。
 
 **添加和配置表组件**
 
@@ -26,11 +26,11 @@ ht-degree: 1%
 
 
 
-## 使收入表成为动态表 {#make-the-income-table-dynamic}
+## 使收入表成为动态的 {#make-the-income-table-dynamic}
 
 **确保您处于编辑模式。 编辑按钮位于浏览器的右上角。**
 
-* 默认情况下，将表插入到自适应表单中时，该表不是动态的，这意味着在运行时不能向表中添加新行。
+* 默认情况下，将表插入自适应表单时，该表不是动态的，这意味着在运行时不能向表中添加新行。
 
 * 刷新浏览器。
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 * 单击扳手图标以打开属性表。
 
-* 在“Repeat Settings（重复设置）”下将“Minimum and Maximum count（最小和最大计数）”设置为1和5，然后单击蓝色复选标记图标保存更改。 这意味着该表最多可以有5行。 要无限行数，请将最大计数设置为–1。
+* 在“Repeat Settings（重复设置）”下将“Minimum and Maximum count（最小和最大计数）”设置为1和5，然后单击蓝色复选标记图标保存更改。 这意味着该表最多可以有5行。 要使行数不确定，请将最大计数设置为–1。
 
 ## 创建规则以计算总计 {#create-rule-to-calculate-grand-total}
 

@@ -6,10 +6,10 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9355
+jira: KT-9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # 使用JDBC数据源池的SQL连接
 
-必须从AEM代理与SQL数据库（以及其他非HTTP/HTTPS服务）的连接，包括使用AEM DataSourcePool OSGi服务管理这些连接的连接。
+到SQL数据库（以及其他非HTTP/HTTPS服务）的连接必须通过AEM代理，包括使用AEM DataSourcePool OSGi服务管理这些连接建立的连接。
 
 ## 高级联网支持
 
 以下高级联网选项支持以下代码示例。
 
-确保 [适当的](../advanced-networking.md#advanced-networking) 在执行本教程之前，已设置高级联网配置。
+确保 [适当](../advanced-networking.md#advanced-networking) 在执行本教程之前，已设置高级联网配置。
 
 | 无高级联网 | [灵活端口出口](../flexible-port-egress.md) | [专用出口IP地址](../dedicated-egress-ip-address.md) | [虚拟专用网络](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -34,10 +34,10 @@ ht-degree: 0%
 
 OSGi配置的连接字符串使用：
 
-+ `AEM_PROXY_HOST` 值(通过 [OSGi配置环境变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` 作为连接的主机
++ `AEM_PROXY_HOST` 值通过 [OSGi配置环境变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` 作为连接的主机
 + `30001` 即 `portOrig` cloud Manager端口转发映射的值 `30001` → `mysql.example.com:3306`
 
-由于密码不能存储在代码中，因此最好通过OSGi配置变量（使用AIO CLI或Cloud Manager API设置）提供SQL连接的用户名和密码。
+由于密码不能存储在代码中，因此最好通过OSGi配置变量、使用AIO CLI或Cloud Manager API设置来提供SQL连接的用户名和密码。
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/config/com.day.commons.datasource.jdbcpool.JdbcPoolService~wknd-examples-mysql.cfg.json`
 
@@ -59,8 +59,8 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 
 ## 代码示例
 
-此Java™代码示例是一个OSGi服务，该服务通过AEM DataSourcePool OSGi服务连接到外部MySQL数据库。
-DataSourcePool OSGi工厂配置依次指定端口(`30001`)，映射到 `portForwards` 中的规则 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作到外部主机和端口， `mysql.example.com:3306`.
+此Java™代码示例是一种OSGi服务，该服务通过AEM DataSourcePool OSGi服务连接到外部MySQL数据库。
+DataSourcePool OSGi工厂配置依次指定端口(`30001`)映射到 `portForwards` 中的规则 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作到外部主机和端口， `mysql.example.com:3306`.
 
 ```json
 ...
@@ -133,7 +133,7 @@ public class JdbcExternalServiceImpl implements ExternalService {
 
 ## MySQL驱动程序依赖关系
 
-AEMas a Cloud Service通常要求您提供Java™数据库驱动程序来支持连接。 AEM通常，提供驱动程序的最佳做法是通过 `all` 包。
+AEMas a Cloud Service通常要求您提供Java™数据库驱动程序来支持连接。 提供驱动程序的最佳方法通常是通过将包含这些驱动程序的OSGi捆绑包工件嵌入到AEM项目 `all` 包。
 
 ### Reactor pom.xml
 

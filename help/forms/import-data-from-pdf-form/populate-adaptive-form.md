@@ -6,8 +6,9 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 14196
-source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
+jira: KT-14196
+exl-id: f380d589-6520-4955-a6ac-2d0fcd5aaf3f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 1%
@@ -62,5 +63,3 @@ function handleFiles(formData) {
 ## 后续步骤
 
 [部署示例资源](./test-the-solution.md)
-
-

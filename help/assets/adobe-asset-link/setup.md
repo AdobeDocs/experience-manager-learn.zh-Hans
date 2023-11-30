@@ -1,15 +1,16 @@
 ---
 title: AdobeAsset Link设置
-description: 了解如何免费设置Adobe Asset Link，以便将您的Creative Cloud应用程序(包括Photoshop、Illustrator、InDesign和XD)连接到Adobe Experience Manager Assets。
+description: 了解如何免费设置AdobeAsset Link，以便将您的Creative Cloud应用程序(包括Photoshop、Illustrator、InDesign和XD)连接到Adobe Experience Manager Assets。
 feature: Adobe Asset Link
 version: Cloud Service
 topic: Content Management
 role: Admin, User
 level: Beginner
-kt: 9401
+jira: KT-9401
 thumbnail: 338824.jpg
+doc-type: Feature Video
 exl-id: a62e936f-c231-474d-9671-58815b2cb652
-source-git-commit: 288eaf8bab20cfb0ecbfa8455198fa63252e2e71
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 0%

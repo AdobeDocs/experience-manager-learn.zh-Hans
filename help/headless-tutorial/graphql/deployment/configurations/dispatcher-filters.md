@@ -6,10 +6,10 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10829
+jira: KT-10829
 thumbnail: kt-10829.jpg
 exl-id: b76b7c46-5cbd-4039-8fd6-9f0f10a4a84f
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 2%
@@ -18,26 +18,26 @@ ht-degree: 2%
 
 # Dispatcher过滤器
 
-Adobe Experience Manager as a Cloud Service使用AEM发布Dispatcher过滤器，以确保只有可以访问AEM的请求才能访问AEM。 默认情况下，拒绝所有请求，必须明确添加允许URL的模式。
+Adobe Experience Manager as a Cloud Service使用AEM发布Dispatcher过滤器，以确保只有可访问AEM的请求才能访问AEM。 默认情况下，拒绝所有请求，必须明确添加允许URL的模式。
 
 | 客户端类型 | [单页应用程序(SPA)](../spa.md) | [Web组件/JS](../web-component.md) | [移动设备](../mobile.md) | [服务器到服务器](../server-to-server.md) |
 |------------------------------------------:|:---------------------:|:----------------:|:---------:|:----------------:|
-| 需要Dispatcher过滤器配置 | ✔ | ✔ | ✔ | ✔ |
+| 需要配置Dispatcher过滤器 | ✔ | ✔ | ✔ | ✔ |
 
 >[!TIP]
 >
-> 以下配置是示例。 确保调整它们以符合项目的要求。
+> 以下配置是示例。 确保根据项目要求对其进行调整。
 
 ## Dispatcher过滤器配置
 
-AEM发布Dispatcher过滤器配置定义允许到达AEM的URL模式，必须包含AEM持久查询端点的URL前缀。
+AEM发布Dispatcher过滤器配置定义允许到达AEM的URL模式，必须包括AEM持久查询端点的URL前缀。
 
 | 客户端连接到 | AEM Author | AEM 发布 | AEM预览 |
 |------------------------------------------:|:----------:|:-------------:|:-------------:|
-| 需要Dispatcher过滤器配置 | ✘ | ✔ | ✔ |
+| 需要配置Dispatcher过滤器 | ✘ | ✔ | ✔ |
 
-添加 `allow` 具有URL模式的规则 `/graphql/execute.json/*`，并确保文件ID(例如 `/0600`，在示例场文件中是唯一的)。
-这允许对持久查询端点执行HTTPGET请求，例如 `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` 到AEM发布。
+添加 `allow` URL模式的规则 `/graphql/execute.json/*`，并确保文件ID(例如 `/0600`，在示例场文件中是唯一的)。
+这允许对持久查询端点发送HTTPGET请求，例如 `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` 到AEM Publish。
 
 如果您在AEM Headless体验中使用体验片段，请对这些路径执行相同的操作。
 

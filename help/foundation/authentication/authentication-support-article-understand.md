@@ -1,20 +1,17 @@
 ---
 title: 了解AEM中的身份验证支持
-description: AEM支持的身份验证（有时还包括授权）机制的综合视图。
+description: AEM支持的身份验证（有时是授权）机制的综合视图。
 version: 6.4, 6.5
 feature: User and Groups
-topics: authentication, security
-activity: understand
-audience: architect, developer, implementer
-doc-type: article
-kt: 406
+doc-type: Article
+jira: KT-406
 topic: Architecture
 role: Architect
 level: Experienced
 exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
 last-substantial-update: 2022-09-10T00:00:00Z
 thumbnail: KT-406.jpg
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 14%
@@ -23,7 +20,7 @@ ht-degree: 14%
 
 # 了解AEM 6.x中的身份验证支持
 
-AEM支持的身份验证（有时还包括授权）机制的综合视图。
+AEM支持的身份验证（有时是授权）机制的综合视图。
 
 *下表描述了用户如何在AEM中进行身份验证。*
 
@@ -54,13 +51,13 @@ AEM支持的身份验证（有时还包括授权）机制的综合视图。
             <td>✔</td>
         </tr>
         <tr>
-            <td>基于令牌(带/ <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装令牌</a>)</td>
+            <td>基于令牌(带 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装令牌</a>)</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>非AEM系统作为规范标识提供者</strong></td>
+            <td><strong>非AEM系统作为规范身份提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -97,4 +94,4 @@ AEM支持的身份验证（有时还包括授权）机制的综合视图。
     </tbody>
 </table>
 
-⁕ *通过社区项目提供，但不受Adobe直接支持。*
+⁕AEM *通过社区项目提供，但Adobe不直接支持。*

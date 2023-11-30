@@ -6,11 +6,11 @@ topic: Headless, Content Management
 feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
-kt: 7874
+jira: KT-7874
 thumbnail: 333295.jpg
 last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: c7fb28b8-494f-47d6-95b7-01ef444abe99
-source-git-commit: 30f6d3fb736f2db045e812c40f84d09eba96db6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 8%
@@ -24,7 +24,7 @@ ht-degree: 8%
 在本视频中，您将执行以下操作：
 
 + 了解如何创建内容片段的变体
-+ 了解如何在真实情景中使用变体
++ 了解如何在现实场景中使用变体
 + 查看GraphQL语法以请求特定变体
 
 >[!VIDEO](https://video.tv.adobe.com/v/333295?quality=12&learn=on)

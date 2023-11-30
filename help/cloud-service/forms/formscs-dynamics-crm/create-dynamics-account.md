@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms, Integrations
 topic: Development
-kt: 9839
+jira: KT-9839
 exl-id: ec4ed3e1-98ae-41ce-9891-09da3321edd5
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%

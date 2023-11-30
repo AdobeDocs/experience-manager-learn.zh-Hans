@@ -6,13 +6,13 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9350
+jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1133'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 5%
 
 灵活的端口出口允许将自定义、特定的端口转发规则附加到AEMas a Cloud Service，从而允许建立从AEM到外部服务的连接。
 
-Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保专用出口IP地址最多 [适当类型的网络基础架构](./advanced-networking.md)  ，然后才可执行AEMas a Cloud Service。
+Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保专用出口IP地址最多 [适当类型的网络基础架构](./advanced-networking.md)  的AEMas a Cloud Service。
 
 >[!MORELIKETHIS]
 >
@@ -34,7 +34,7 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保专
 
 设置灵活端口出口时，需要满足以下条件：
 
-+ 启用了Cloud Manager API和的Adobe Developer控制台项目 [Cloud Manager业务负责人权限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
++ 启用了Adobe Developer API并启用了Cloud Manager的Cloud Console项目 [Cloud Manager业务负责人权限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + 访问 [Cloud Manager API的身份验证凭据](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
    + 组织ID （又称IMS组织ID）
    + 客户端ID（又称API密钥）
@@ -46,15 +46,15 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保专
 
 >[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
-本教程使用 `curl` 以配置Cloud Manager API。 提供的 `curl` 命令采用Linux/macOS语法。 如果使用Windows命令提示符，请将 `\` 换行符 `^`.
+本教程使用 `curl` 以进行Cloud Manager API配置。 提供的 `curl` 命令采用Linux/macOS语法。 如果使用Windows命令提示符，请将 `\` 换行符 `^`.
 
 ## 为每个程序启用灵活端口出口
 
 首先在AEMas a Cloud Service上启用灵活端口出口。
 
-1. 首先，确定使用Cloud Manager API在中设置高级联网的区域 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 此 `region name` 进行后续Cloud Manager API调用时需要使用。 通常，会使用生产环境所在的区域。
+1. 首先，使用Cloud Manager API确定在中设置了高级联网的区域 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 此 `region name` 进行后续Cloud Manager API调用时需要使用。 通常，会使用生产环境所在的区域。
 
-   在中查找您的AEMas a Cloud Service环境所在的地区 [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [环境详细信息](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中显示的区域名称可以是 [映射到区域代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 在Cloud Manager API中使用。
+   在以下位置查找您的AEMas a Cloud Service环境所在的地区： [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [环境详细信息](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中显示的区域名称可以是 [映射到区域代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 在Cloud Manager API中使用。
 
    __listRegions HTTP请求__
 
@@ -110,9 +110,9 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保专
        -d @./flexible-port-egress.json
    ```
 
-   在中定义JSON参数 `flexible-port-egress.json` 提供给curl via `... -d @./flexible-port-egress.json`.
+   在中定义JSON参数 `flexible-port-egress.json` 提供给curl的 `... -d @./flexible-port-egress.json`.
 
-   [下载示例flexible-port-egress.json](./assets/flexible-port-egress.json). 此文件只是一个示例。 根据以下位置记录的可选/必填字段，根据需要配置文件： [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
+   [下载示例flexible-port-egress.json](./assets/flexible-port-egress.json). 此文件只是一个示例。 根据中介绍的可选/必填字段，根据需要配置文件。 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
@@ -131,7 +131,7 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保专
    }
    ```
 
-   针对每个 `portForwards` 映射，高级联网定义以下转发规则：
+   对于每个 `portForwards` 映射，高级联网定义以下转发规则：
 
    | 代理主机 | 代理端口 |  | 外部主机 | 外部端口 |
    |---------------------------------|----------|----------------|------------------|----------|
@@ -151,9 +151,9 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保专
        -H 'Content-Type: application/json'
    ```
 
-1. 可以使用Cloud Manager API更新灵活的端口出口配置 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 记住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 因此，每次调用此操作时，都必须向所有规则提供。
+1. 可以使用Cloud Manager API更新灵活的端口出口配置 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 记住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 因此，所有规则都必须随此操作的每次调用一起提供。
 
-1. 现在，您可以在自定义AEM代码和配置中使用灵活的端口出口配置。
+1. 现在，您可以在自定义AEM代码和配置中使用灵活端口出口配置。
 
 
 ## 通过灵活的端口出口连接到外部服务
@@ -165,18 +165,22 @@ Cloud Manager程序只能具有 __单身__ 网络基础架构类型。 确保专
 1. 对外部服务的非HTTP/HTTPS调用
    + 包括任何非HTTP调用，例如与Mail服务器、SQL数据库或在其他非HTTP/HTTPS协议上运行的服务的连接。
 
-默认情况下，允许标准端口(80/443)上来自AEM的HTTP/HTTPS请求，无需额外配置或注意事项。
+默认情况下，允许来自标准端口(80/443)上AEM的HTTP/HTTPS请求，而无需额外的配置或注意事项。
 
 
 ### 非标准端口上的HTTP/HTTPS
 
-从AEM创建到非标准端口（非–80/443）的HTTP/HTTPS连接时，必须通过通过占位符提供的特殊主机和端口建立连接。
+在从AEM创建到非标准端口（非80/443）的HTTP/HTTPS连接时，必须通过通过占位符提供的特殊主机和端口建立连接。
 
 AEM提供两组映射到AEM HTTP/HTTPS代理的特殊Java™系统变量。
 
-|变量名称 |使用 | Java™代码 | OSGi配置 | | - | - | - | - | | `AEM_PROXY_HOST` |两个HTTP/HTTPS连接的代理主机 | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` | | `AEM_HTTP_PROXY_PORT` | HTTPS连接的代理端口(将回退设置为 `3128`) | `System.getenv().getOrDefault("AEM_HTTP_PROXY_PORT", 3128)` | `$[env:AEM_HTTP_PROXY_PORT;default=3128]` | | `AEM_HTTPS_PROXY_PORT` | HTTPS连接的代理端口(将回退设置为 `3128`) | `System.getenv().getOrDefault("AEM_HTTPS_PROXY_PORT", 3128)` | `$[env:AEM_HTTPS_PROXY_PORT;default=3128]` |
+| 变量名称 | 使用 | Java™代码 | OSGi配置 |
+| - |  - | - | - |
+| `AEM_PROXY_HOST` | 两个HTTP/HTTPS连接的代理主机 | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
+| `AEM_HTTP_PROXY_PORT` | HTTPS连接的代理端口(将回退设置为 `3128`) | `System.getenv().getOrDefault("AEM_HTTP_PROXY_PORT", 3128)` | `$[env:AEM_HTTP_PROXY_PORT;default=3128]` |
+| `AEM_HTTPS_PROXY_PORT` | HTTPS连接的代理端口(将回退设置为 `3128`) | `System.getenv().getOrDefault("AEM_HTTPS_PROXY_PORT", 3128)` | `$[env:AEM_HTTPS_PROXY_PORT;default=3128]` |
 
-对非标准端口上的外部服务进行HTTP/HTTPS调用时，没有相应的 `portForwards` 必须使用Cloud Manager API定义 `enableEnvironmentAdvancedNetworkingConfiguration` 操作，因为端口转发“规则”定义为“代码中”。
+对非标准端口上的外部服务进行HTTP/HTTPS调用时，没有相应的 `portForwards` 必须使用Cloud Manager API定义 `enableEnvironmentAdvancedNetworkingConfiguration` 操作，因为端口转发“rules”定义为“在代码中”。
 
 >[!TIP]
 >
@@ -198,14 +202,16 @@ AEM提供两组映射到AEM HTTP/HTTPS代理的特殊Java™系统变量。
 </tr>
 </table>
 
-### 到外部服务的非HTTP/HTTPS连接
+### 与外部服务的非HTTP/HTTPS连接
 
 创建非HTTP/HTTPS连接时(例如 AEM SQL、SMTP等)，必须通过AEM提供的特殊主机名建立连接。
 
-|变量名称 |使用 | Java™代码 | OSGi配置 | | - | - | - | - | | `AEM_PROXY_HOST` |非HTTP/HTTPS连接的代理主机 | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
+| 变量名称 | 使用 | Java™代码 | OSGi配置 |
+| - |  - | - | - |
+| `AEM_PROXY_HOST` | 非HTTP/HTTPS连接的代理主机 | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
 
 
-然后，通过调用与外部服务的连接 `AEM_PROXY_HOST` 和映射的端口(`portForwards.portOrig`)，然后AEM将路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
+然后，通过调用与外部服务的连接 `AEM_PROXY_HOST` 和映射的端口(`portForwards.portOrig`)，则AEM会路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
 
 | 代理主机 | 代理端口 |  | 外部主机 | 外部端口 |
 |---------------------------------|----------|----------------|------------------|----------|
@@ -215,10 +221,10 @@ AEM提供两组映射到AEM HTTP/HTTPS代理的特殊Java™系统变量。
 
 <table><tr>
    <td>
-      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC数据源池的SQL连接" src="./assets/code-examples__sql-osgi.png"/></a>
-      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC数据源池的SQL连接</a></strong></div>
+      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC DataSourcePool的SQL连接" src="./assets/code-examples__sql-osgi.png"/></a>
+      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC DataSourcePool的SQL连接</a></strong></div>
       <p>
-            通过配置AEM JDBC数据源池连接到外部SQL数据库的Java™代码示例。
+            Java™代码示例通过配置AEM JDBC数据源池连接到外部SQL数据库。
       </p>
     </td>   
    <td>

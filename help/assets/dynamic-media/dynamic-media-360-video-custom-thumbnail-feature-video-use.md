@@ -1,13 +1,14 @@
 ---
 title: 在AEM Assets中使用Dynamic Media 360视频和自定义视频缩略图
-description: AEM 6.5中的Dynamic Media Viewer增强功能包括额外支持360个视频渲染、360个媒体查看器（video360Social和video360VR）以及选择自定义视频缩略图的功能。
+description: AEM 6.5中的Dynamic Media Viewer增强功能包括额外支持360个视频渲染、360个媒体查看器（video360Social和video360VR），以及选择自定义视频缩略图的功能。
 feature: Video Profiles
 version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 4ee0b68f-3897-4104-8615-9de8dbb8f327
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 4%
@@ -16,13 +17,13 @@ ht-degree: 4%
 
 # 在AEM Assets中使用Dynamic Media 360视频和自定义视频缩略图
 
-AEM 6.5中的Dynamic Media Viewer增强功能包括额外支持360个视频渲染、360个媒体查看器（video360Social和video360VR）以及选择自定义视频缩略图的功能。
+AEM 6.5中的Dynamic Media Viewer增强功能包括额外支持360个视频渲染、360个媒体查看器（video360Social和video360VR），以及选择自定义视频缩略图的功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26391?quality=12&learn=on)
 
 >[!NOTE]
 >
->视频假定您的AEM实例在Dynamic Media S7模式下运行。  [有关使用Dynamic Media设置AEM的说明，请访问此处](https://helpx.adobe.com/cn/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). 上传视频时，默认情况下，如果长宽比为2:1，Dynamic Media会将视频处理为360视频。 即，宽高比为2:1。
+>视频假定您的AEM实例在Dynamic Media S7模式下运行。  [有关使用Dynamic Media设置AEM的说明，请访问此处](https://helpx.adobe.com/cn/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). 上传视频时，默认情况下，如果长宽比为2:1，Dynamic Media会将素材处理为360视频。 即，宽高比为2:1。
 
 >[!NOTE]
 >
@@ -30,7 +31,7 @@ AEM 6.5中的Dynamic Media Viewer增强功能包括额外支持360个视频渲�
 
 ## Dynamic Media 360视频
 
-360度视频，也称为球面视频，是一种同时记录每个方向的视图的视频记录，使用全方位相机或相机集合拍摄。 在平面显示器上播放期间，用户可控制观看方向，在移动设备上播放通常利用内置的陀螺仪控制。  它让您能够超越单个摄影的极限。 营销人员可通过360个视频的帮助，为用户提供引人入胜的体验。  让我们开始吧。 通过指定位于/conf/global/settings/cloudconfigs/dmscene7/jcr：content的双精度属性s7PanoramicAR ，可以在公司的DMS7配置中修改全景图像长宽比标准。
+360度视频，也称为球形视频，是一种同时录制每个方向的视图的视频记录，使用全方位相机或相机集合拍摄。 在平面显示器上播放期间，用户可控制观看方向，移动设备上的播放通常利用内置的陀螺仪控制。  它可让您超越单个摄影的极限。 营销人员可以在360个视频的帮助下为用户提供引人入胜的体验。  我们开始吧。 通过指定位于/conf/global/settings/cloudconfigs/dmscene7/jcr：content的双属性s7PanoramicAR，可以修改公司的DMS7配置中的全景图像长宽比标准。
 
 ## Dynamic Media 360视频
 
@@ -77,7 +78,7 @@ Dynamic Media视频现在支持为您的视频选择自定义缩略图。 用户
       <td>
          <ul>
             <li>鼠标拖动（在桌面系统上）</li>
-            <li>滑动（触控设备）</li>
+            <li>轻扫（触控设备）</li>
          </ul>
       </td>
       <td>

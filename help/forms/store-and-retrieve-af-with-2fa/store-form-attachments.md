@@ -1,16 +1,16 @@
 ---
 title: 存储表单附件
-description: 提取表单附件并存储在CRX存储库中的新位置。
+description: 提取表单附件并存储在CRX存储库的新位置。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6537
+jira: KT-6537
 thumbnail: 6537.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: ec50b9b1-e28c-4d84-ae90-6a21c9700688
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 1%
@@ -21,8 +21,8 @@ ht-degree: 1%
 
 向自适应表单添加附件时，附件存储在CRX存储库中的临时位置。 要使用例正常工作，我们需要将表单附件存储在CRX存储库中的新位置。
 
-创建OSGi服务以将表单附件存储在CRX存储库中的新位置。 使用附件在CRX中的新位置创建新文件映射，并返回到调用应用程序。
-以下是发送到servlet的FileMap。 键是自适应表单字段，值是附件的临时位置。 在我们的servlet中，我们将提取附件并将其存储在AEM存储库中的新位置，并使用新位置更新FileMap
+创建OSGi服务以将表单附件存储在CRX存储库中的新位置。 在CRX中使用附件的新位置创建新文件映射，并返回到调用应用程序。
+以下是发送到servlet的FileMap。 关键是自适应表单字段，值是附件的临时位置。 在我们的servlet中，我们将提取附件，并将其存储在AEM存储库中的新位置，并使用新位置更新FileMap
 
 ```java
 {
@@ -31,7 +31,7 @@ ht-degree: 1%
 }
 ```
 
-以下代码可从请求中提取附件，并将其存储在下 **/content/afattachments** 文件夹
+以下代码可从请求中提取附件并将其存储在下 **/content/afattachments** 文件夹
 
 ```java
 public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest request) {

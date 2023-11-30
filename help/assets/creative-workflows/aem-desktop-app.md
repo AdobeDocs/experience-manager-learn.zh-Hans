@@ -1,16 +1,17 @@
 ---
 title: AEM桌面应用程序
-description: 使用AEM桌面应用程序可简化对在AEM桌面版中管理的任何资产（任何应用程序和文件格式）的访问。
+description: 使用AEM桌面应用程序可简化对桌面上AEM中管理的任何资产（任何应用程序和文件格式）的访问。
 version: 6.5, 6.4
 topic: Content Management
 feature: Desktop App
 role: User
 level: Beginner
-kt: 2551
+jira: KT-2551
 thumbnail: 28868.jpeg
 last-substantial-update: 2022-06-24T00:00:00Z
+doc-type: Feature Video
 exl-id: 6765758f-0719-4ed9-83be-8ed192a75b41
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 4%
@@ -19,11 +20,11 @@ ht-degree: 4%
 
 # 使用 AEM 桌面应用程序
 
-使用AEM桌面应用程序可简化对在AEM桌面版中管理的任何资产（任何应用程序和文件格式）的访问。
+使用AEM桌面应用程序可简化对桌面上AEM中管理的任何资产（任何应用程序和文件格式）的访问。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28868?quality=12&learn=on)
 
-+ 使用专用桌面应用程序通过浏览和搜索来发现AEM中的资源
++ 通过专用桌面应用程序的Browse和Search功能发现AEM中的资源
 + 优化的带宽管理允许上传和下载许多大型资产
 + 批量上传和下载文件夹和资产
 + 脱机访问已同步的资产

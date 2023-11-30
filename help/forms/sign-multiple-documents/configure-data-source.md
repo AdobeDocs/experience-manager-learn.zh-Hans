@@ -6,10 +6,10 @@ topic: Development
 role: Developer
 level: Beginner
 version: 6.4,6.5
-kt: 6899
+jira: KT-6899
 thumbnail: 6899.jpg
 exl-id: 2e851ae5-6caa-42e3-8af2-090766a6f36a
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 5%
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 AEM可通过多种方式实现与外部数据库的集成。 集成数据库的最常见方法之一是通过使用Apache Sling连接池化数据源配置属性 [configMgr](http://localhost:4502/system/console/configMgr).
 第一步是下载并部署相应的 [MySql驱动程序](https://mvnrepository.com/artifact/mysql/mysql-connector-java) 在AEM中。
-创建Apache Sling Connection Pooled DataSource并提供以下屏幕快照中指定的属性。 数据库架构作为本教程资源的一部分提供给您。
+创建Apache Sling连接池化数据源，并提供以下屏幕快照中指定的属性。 数据库架构作为本教程资源的一部分提供给您。
 
 ![数据源](assets/data-source.PNG)
 
@@ -30,17 +30,17 @@ AEM可通过多种方式实现与外部数据库的集成。 集成数据库的�
 
 
 >[!NOTE]
->请确保为数据源命名 **姿势**. 示例代码使用名称连接到数据库。
+>请确保为数据源命名 **服饰**. 示例代码使用名称连接到数据库。
 
 | 属性名称 | 价值 |
 | ------------------------|--------------------------------------- |
-| 数据源名称 | 保存并继续 |
+| 数据源名称 | SaveAndContinue |
 | JDBC驱动程序类 | com.mysql.cj.jdbc.Driver |
-| JDBC连接URI | jdbc:mysql://localhost：3306/aemformstutorial |
+| JDBC连接uri | jdbc:mysql://localhost：3306/aemformstutorial |
 
-## Assets
+## 资源
 
-用于创建架构的SQL文件可以是 [已从此处下载](assets/sign-multiple-forms.sql). 您需要使用MySql Workbench导入此文件以创建架构和表。
+用于创建架构的SQL文件可以是 [从此处下载](assets/sign-multiple-forms.sql). 您需要使用MySql Workbench导入此文件以创建架构和表。
 
 ## 后续步骤
 

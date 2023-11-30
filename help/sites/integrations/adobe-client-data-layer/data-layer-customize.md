@@ -6,11 +6,12 @@ topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
 level: Intermediate, Experienced
-kt: 6265
+jira: KT-6265
 thumbnail: KT-6265.jpg
 last-substantial-update: 2022-09-20T00:00:00Z
+doc-type: Tutorial
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
-source-git-commit: 99b3ecf7823ff9a116c47c88abc901f8878bbd7a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '2008'
 ht-degree: 1%
@@ -19,13 +20,13 @@ ht-degree: 1%
 
 # 使用AEM组件自定义Adobe客户端数据层 {#customize-data-layer}
 
-了解如何使用自定义AEM组件中的内容自定义Adobe客户端数据层。 了解如何使用提供的API [要扩展的AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html) 并自定义数据层。
+了解如何使用自定义AEM组件中的内容自定义Adobe客户端数据层。 了解如何使用由提供的API [要扩展的AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html) 并自定义数据层。
 
 ## 您即将构建的内容
 
 ![署名数据层](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
-在本教程中，让我们浏览通过更新WKND来扩展Adobe客户端数据层的各种选项 [署名组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html). 此 _署名_ 组件是 **自定义组件** 以及从本教程中学到的经验教训也可应用于其他自定义组件。
+在本教程中，让我们探讨通过更新WKND来扩展Adobe客户端数据层的各种选项 [署名组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html). 此 _署名_ 组件是 **自定义组件** 以及从本教程中学到的经验教训也适用于其他自定义组件。
 
 ### 目标 {#objective}
 
@@ -37,15 +38,15 @@ ht-degree: 1%
 
 A **本地开发环境** 是完成本教程所必需的。 使用在macOS上运行的AEMas a Cloud ServiceSDK捕获屏幕截图和视频。 除非另有说明，否则命令和代码与本地操作系统无关。
 
-**不熟悉AEMas a Cloud Service？** 查看 [以下指南介绍了如何使用AEMas a Cloud ServiceSDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).
+**还不熟悉AEMas a Cloud Service？** 查看 [以下指南介绍了如何使用AEMas a Cloud ServiceSDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).
 
-**AEM 6.5的新手？** 查看 [以下指南介绍了如何设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans).
+**还不熟悉AEM 6.5？** 查看 [以下指南介绍了如何设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans).
 
-## 下载和部署WKND引用站点 {#set-up-wknd-site}
+## 下载和部署WKND参考站点 {#set-up-wknd-site}
 
-本教程扩展了WKND引用站点中的Byline组件。 克隆并安装WKND代码库到本地环境。
+本教程扩展了WKND引用站点中的Byline组件。 克隆WKND代码库并将其安装到本地环境。
 
-1. 启动本地快速入门 **作者** AEM实例运行于 [http://localhost:4502](http://localhost:4502).
+1. 启动本地快速入门 **作者** AEM的实例，运行在 [http://localhost:4502](http://localhost:4502).
 1. 打开终端窗口并使用Git克隆WKND代码库：
 
    ```shell
@@ -61,32 +62,32 @@ A **本地开发环境** 是完成本教程所必需的。 使用在macOS上运�
 
    >[!NOTE]
    >
-   > 对于AEM 6.5和最新的Service Pack ，请添加 `classic` 配置文件更改为Maven命令：
+   > 对于AEM 6.5和最新的Service Pack，请添加 `classic` profile to the Maven command：
    >
    > `mvn clean install -PautoInstallSinglePackage -Pclassic`
 
-1. 打开新的浏览器窗口并登录到AEM。 打开 **杂志** 页面例如： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
+1. 打开新的浏览器窗口并登录到AEM。 打开 **杂志** 页面类似： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
 
    ![页面上的署名组件](assets/adobe-client-data-layer/byline-component-onpage.png)
 
-   您应该会看到作为体验片段的一部分添加到页面的署名组件示例。 您可以在以下位置查看体验片段 [http://localhost:4502/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/byline.html](http://localhost:4502/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/byline.html)
+   您应该看到作为体验片段的一部分添加到页面的署名组件示例。 您可以在以下位置查看体验片段 [http://localhost:4502/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/byline.html](http://localhost:4502/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/byline.html)
 1. 打开您的开发人员工具，然后在 **控制台**：
 
    ```js
    window.adobeDataLayer.getState();
    ```
 
-   要查看AEM站点上数据层的当前状态，请检查响应。 您应会看到有关页面和各个组件的信息。
+   要查看AEM站点上数据层的当前状态，请检查响应。 您应该会看到有关页面和各个组件的信息。
 
    ![Adobe数据层响应](assets/data-layer-state-response.png)
 
-   请注意， Byline组件未列在Data Layer中。
+   请注意，Data Layer中未列出Byline组件。
 
 ## 更新署名Sling模型 {#sling-model}
 
-要在数据层中插入有关组件的数据，让我们先更新组件的Sling模型。 接下来，更新Byline的Java™接口和Sling模型实施以使用新方法 `getData()`. 此方法包含要插入数据层的属性。
+要在数据层中插入有关组件的数据，我们先更新组件的Sling模型。 接下来，更新Byline的Java™接口和Sling模型实施以使用新方法 `getData()`. 此方法包含要插入数据层的属性。
 
-1. 打开 `aem-guides-wknd` 项目。 导航到 `core` 模块。
+1. 打开 `aem-guides-wknd` 在您选择的IDE中的项目。 导航至 `core` 模块。
 1. 打开文件 `Byline.java` 在 `core/src/main/java/com/adobe/aem/guides/wknd/core/models/Byline.java`.
 
    ![署名Java接口](assets/adobe-client-data-layer/byline-java-interface.png)
@@ -104,7 +105,7 @@ A **本地开发环境** 是完成本教程所必需的。 使用在macOS上运�
    }
    ```
 
-1. 打开文件 `BylineImpl.java` 在 `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`. 它是 `Byline` 接口并作为Sling模型实现。
+1. 打开文件 `BylineImpl.java` 在 `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`. 它是的实施 `Byline` 接口并作为Sling模型实现。
 
 1. 将以下import语句添加到文件开头：
 
@@ -158,7 +159,7 @@ A **本地开发环境** 是完成本教程所必需的。 使用在macOS上运�
    }
    ```
 
-   在上述方法中，将使用 `HashMap` 用于捕获要公开为JSON的属性。 请注意，现有方法如 `getName()` 和 `getOccupations()` 已使用。 此 `@type` 表示组件的唯一资源类型，它允许客户端根据组件的类型轻松识别事件和/或触发器。
+   在上述方法中，将 `HashMap` 用于捕获要公开为JSON的属性。 请注意，现有方法如 `getName()` 和 `getOccupations()` 使用。 此 `@type` 表示组件的唯一资源类型，它允许客户端根据组件的类型轻松识别事件和/或触发器。
 
    此 `ObjectMapper` 用于序列化属性并返回JSON字符串。 然后，可以将此JSON字符串注入数据层。
 
@@ -173,9 +174,9 @@ A **本地开发环境** 是完成本教程所必需的。 使用在macOS上运�
 
 接下来，更新 `Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en). HTL(HTML模板语言)是用于呈现组件HTML的模板。
 
-特殊数据属性 `data-cmp-data-layer` AEM ，用于公开其数据层。 AEM核心组件提供的JavaScript将查找此数据属性。 此数据属性的值使用署名Sling模型的 `getData()` 方法，并注入到Adobe客户端数据层。
+特殊数据属性 `data-cmp-data-layer` AEM ，用于公开其数据层。 AEM核心组件提供的JavaScript将查找此数据属性。 此数据属性的值使用署名Sling模型的 `getData()` 方法，并注入到Adobe客户端数据层中。
 
-1. 打开 `aem-guides-wknd` 投影到IDE中。 导航到 `ui.apps` 模块。
+1. 打开 `aem-guides-wknd` 在IDE中进行项目。 导航至 `ui.apps` 模块。
 1. 打开文件 `byline.html` 在 `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`.
 
    ![署名HTML](assets/adobe-client-data-layer/byline-html-template.png)
@@ -191,7 +192,7 @@ A **本地开发环境** 是完成本教程所必需的。 使用在macOS上运�
        ...
    ```
 
-   的值 `data-cmp-data-layer` 已设置为 `"${byline.data}"` 位置 `byline` 是之前更新的Sling模型。 `.data` 是调用的HTL中的Java™ Getter方法的标准表示法 `getData()` 在上一次练习中实施。
+   的值 `data-cmp-data-layer` 已设置为 `"${byline.data}"` 位置 `byline` Sling模型是否已更新。 `.data` 是调用的HTL中的Java™ Getter方法的标准表示法 `getData()` 已在上次练习中实施。
 
 1. 打开终端窗口。 仅构建和部署 `ui.apps` 使用Maven技能模块：
 
@@ -202,7 +203,7 @@ A **本地开发环境** 是完成本教程所必需的。 使用在macOS上运�
 
 1. 返回浏览器，然后使用署名组件重新打开页面： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
 
-1. 打开开发人员工具，并检查Byline组件的页面HTML源：
+1. 打开开发人员工具，并检查页面的HTML源以查找署名组件：
 
    ![署名数据层](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
@@ -214,11 +215,11 @@ A **本地开发环境** 是完成本教程所必需的。 使用在macOS上运�
    window.adobeDataLayer.getState();
    ```
 
-1. 在响应下方导航 `component` 以查找 `byline` 组件已添加到数据层：
+1. 在响应下方导航 `component` 以查找 `byline` 已将组件添加到数据层：
 
    ![数据层的署名部分](assets/adobe-client-data-layer/byline-part-of-datalayer.png)
 
-   您应会看到类似以下内容的条目：
+   您应会看到如下条目：
 
    ```json
    byline-136073cfcb:
@@ -229,18 +230,18 @@ A **本地开发环境** 是完成本教程所必需的。 使用在macOS上运�
        parentId: "page-30d989b3f8"
    ```
 
-   请注意，显示的属性与在中添加的属性相同 `HashMap` 在Sling模型中。
+   请注意，公开的属性与在中添加的属性相同 `HashMap` 在Sling模型中。
 
 ## 添加点击事件 {#click-event}
 
-Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一是 `cmp:click` 事件。 AEM核心组件使得使用数据元素注册组件更加容易： `data-cmp-clickable`.
+AdobeClient Data Layer是事件驱动的，触发操作的最常见事件之一是 `cmp:click` 事件。 AEM核心组件使得使用数据元素注册组件变得轻而易举： `data-cmp-clickable`.
 
-可单击元素通常是CTA按钮或导航链接。 不幸的是，署名组件不包含任何这些内容，但我们仍要注册它，因为这可能适用于其他自定义组件。
+可单击元素通常是CTA按钮或导航链接。 很遗憾，署名组件没有这些内容，但我们仍要注册它，因为这对于其他自定义组件可能很常见。
 
 1. 打开 `ui.apps` ide中的模块
 1. 打开文件 `byline.html` 在 `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`.
 
-1. 更新 `byline.html` 以包含 `data-cmp-clickable` 署名中的属性 **name** 元素：
+1. 更新 `byline.html` 以包含 `data-cmp-clickable` 署名的属性 **name** 元素：
 
    ```diff
      <h2 class="cmp-byline__name" 
@@ -258,7 +259,7 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
 
 1. 返回浏览器，然后重新打开添加了署名组件的页面： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
 
-   为了测试我们的事件，我们将使用开发人员控制台手动添加一些JavaScript。 参见 [将Adobe客户端数据层与AEM核心组件结合使用](data-layer-overview.md) 以获取有关如何执行此操作的视频。
+   为了测试我们的事件，我们将使用开发人员控制台手动添加一些JavaScript。 请参阅 [将Adobe客户端数据层与AEM核心组件结合使用](data-layer-overview.md) 以获取有关如何执行此操作的视频。
 
 1. 打开浏览器的开发人员工具，然后在 **控制台**：
 
@@ -274,7 +275,7 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
 
    此简单方法应处理对Byline组件名称的单击。
 
-1. 在 **控制台**：
+1. 在中，输入以下方法 **控制台**：
 
    ```javascript
    window.adobeDataLayer.push(function (dl) {
@@ -292,13 +293,13 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
 
    ![已单击署名组件](assets/adobe-client-data-layer/byline-component-clicked.png)
 
-   您应会看到控制台消息 `Byline Clicked!` 和署名之间的关联。
+   您应该会看到控制台消息 `Byline Clicked!` 和署名之间的关联。
 
-   此 `cmp:click` 事件是最容易联系到的。 对于更复杂的组件以及跟踪其他行为，可以添加自定义JavaScript以添加和注册新事件。 一个很好的示例是轮盘组件，它触发 `cmp:show` 切换幻灯片时发生的事件。 请参阅 [源代码，以了解更多详细信息](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js).
+   此 `cmp:click` 事件是最容易联系到的。 对于更复杂的组件以及跟踪其他行为，可以添加自定义JavaScript以添加和注册新事件。 一个很好的示例是轮盘组件，它触发 `cmp:show` 切换幻灯片时发生的事件。 请参阅 [源代码以了解更多详细信息](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js).
 
 ## 使用DataLayerBuilder实用程序 {#data-layer-builder}
 
-当Sling模型 [已更新](#sling-model) 在本章的早些时候，我们选择使用来创建JSON字符串 `HashMap` 和手动设置每个属性。 此方法适用于小型一次性组件，但适用于扩展AEM核心组件的组件这可能会导致大量额外代码。
+当Sling模型 [已更新](#sling-model) 在本章早些时候，我们选择使用 `HashMap` 和手动设置每个属性。 此方法适用于小型一次性组件，但适用于扩展AEM核心组件的组件这可能会导致大量额外代码。
 
 实用程序类， `DataLayerBuilder`，用来执行大部分的举重任务。 这允许实施仅扩展所需的属性。 让我们更新Sling模型以使用 `DataLayerBuilder`.
 
@@ -319,7 +320,7 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
    }
    ```
 
-   `ComponentData` 是由AEM核心组件提供的对象。 它将生成一个JSON字符串（与上一个示例中一样），但还会执行许多其他工作。
+   `ComponentData` 是由AEM核心组件提供的对象。 它将生成一个JSON字符串，就像上一个示例一样，但也会执行许多其他工作。
 
 1. 打开文件 `BylineImpl.java` 在 `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`.
 
@@ -330,7 +331,7 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
    import com.adobe.cq.wcm.core.components.models.datalayer.builder.DataLayerBuilder;
    ```
 
-1. 更换 `getData()` 方法：
+1. 替换 `getData()` 方法：
 
    ```java
    @Override
@@ -349,9 +350,9 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
    }
    ```
 
-   署名组件重用图像核心组件的某些部分以显示表示作者的图像。 在上面的代码片段中， [DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) 用于扩展的数据层 `Image` 组件。 这会使用与所用图像相关的所有数据预填充JSON对象。 它还会执行一些常规功能，如设置 `@type` 和组件的唯一标识符。 请注意，方法较小！
+   “署名”组件重用部分图像核心组件以显示表示作者的图像。 在上面的代码片段中， [DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) 用于扩展的数据层 `Image` 组件。 这会使用有关所用图像的所有数据预填充JSON对象。 它还会执行一些常规功能，如设置 `@type` 和组件的唯一标识符。 请注意，方法很小！
 
-   唯一一个属性扩展了 `withTitle` ，此值将替换为 `getName()`.
+   唯一的属性扩展了 `withTitle` ，此值将替换为 `getName()`.
 
 1. 打开终端窗口。 仅构建和部署 `core` 使用Maven技能模块：
 
@@ -360,7 +361,7 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
    $ mvn clean install -PautoInstallBundle
    ```
 
-1. 返回IDE并打开 `byline.html` 文件位于 `ui.apps`
+1. 返回到IDE并打开 `byline.html` 文件位于 `ui.apps`
 1. 更新要使用的HTL `byline.data.json` 以填充 `data-cmp-data-layer` 属性：
 
    ```diff
@@ -371,7 +372,7 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
    +   data-cmp-data-layer="${byline.data.json}"
    ```
 
-   请记住，我们现在返回的对象类型为 `ComponentData`. 此对象包括getter方法 `getJson()` 并且这用于填充 `data-cmp-data-layer` 属性。
+   请记住，我们现在返回的对象类型为 `ComponentData`. 此对象包括getter方法 `getJson()` 用于填充 `data-cmp-data-layer` 属性。
 
 1. 打开终端窗口。 仅构建和部署 `ui.apps` 使用Maven技能模块：
 
@@ -391,7 +392,7 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
 
    ![署名数据层已更新](assets/adobe-client-data-layer/byline-data-layer-builder.png)
 
-   您应会看到类似以下内容的条目：
+   您应会看到如下条目：
 
    ```json
    byline-136073cfcb:
@@ -407,22 +408,22 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
        repo:modifyDate: "2019-10-18T20:17:24Z"
    ```
 
-   请注意，现在有一个 `image` 中的对象 `byline` 组件条目。 这包含有关DAM中资产的更多信息。 另请注意 `@type` 和唯一ID（在本例中） `byline-136073cfcb`)已自动填充，并且 `repo:modifyDate` 指示何时修改组件。
+   请注意，现在有一个 `image` 中的对象 `byline` 组件条目。 这包含有关DAM中资产的更多信息。 另请注意 `@type` 和唯一id（在本例中） `byline-136073cfcb`)自动填充，并且 `repo:modifyDate` 指示何时修改组件。
 
 ## 其他示例 {#additional-examples}
 
 1. 通过检查 `ImageList` WKND代码库中的组件：
    * `ImageList.java`  — 中的Java接口 `core` 模块。
-   * `ImageListImpl.java`  — 中的Sling模型 `core` 模块。
-   * `image-list.html` - HTL模板，位于 `ui.apps` 模块。
+   * `ImageListImpl.java` - Sling模型位于 `core` 模块。
+   * `image-list.html` - HTL模板位于 `ui.apps` 模块。
 
    >[!NOTE]
    >
-   > 包含自定义属性(例如 `occupation` 使用 [DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html). 但是，如果扩展包含图像或页面的核心组件，则该实用程序会节省大量时间。
+   > 包含自定义属性比较困难，例如 `occupation` 使用 [DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html). 但是，如果扩展包含图像或页面的核心组件，则该实用程序会节省大量时间。
 
    >[!NOTE]
    >
-   > 如果为在整个实施中重复使用的对象构建高级数据层，则建议将数据层元素提取到它们自己的数据层特定Java™对象中。 例如，Commerce核心组件已添加接口 `ProductData` 和 `CategoryData` 因为这些组件可以在Commerce实施中的许多组件上使用。 审核 [aem-cif-core-components存储库中的代码](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) 了解更多详细信息。
+   > 如果为在整个实施中重复使用的对象构建高级数据层，则建议将数据层元素提取到它们自己的数据层特定Java™对象中。 例如，Commerce核心组件为添加了界面 `ProductData` 和 `CategoryData` 因为这些组件可以在Commerce实施中的许多组件上使用。 审核 [aem-cif-core-components存储库中的代码](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) 以了解更多详细信息。
 
 ## 恭喜！ {#congratulations}
 
@@ -431,5 +432,5 @@ Adobe客户端数据层是事件驱动的，触发操作的最常见事件之一
 ## 其他资源 {#additional-resources}
 
 * [Adobe客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [数据层与核心组件的集成](https://github.com/adobe/aem-core-wcm-components/blob/main/DATA_LAYER_INTEGRATION.md)
+* [Data Layer与核心组件的集成](https://github.com/adobe/aem-core-wcm-components/blob/main/DATA_LAYER_INTEGRATION.md)
 * [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)

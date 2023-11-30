@@ -2,17 +2,17 @@
 title: 单元测试
 description: 实施单元测试，以验证在自定义组件教程中创建的Byline组件的Sling模型的行为。
 version: 6.5, Cloud Service
-type: Tutorial
 feature: APIs, AEM Project Archetype
 topic: Content Management, Development
 role: Developer
 level: Beginner
-kt: 4089
+jira: KT-4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
+doc-type: Tutorial
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
 recommendations: noDisplay, noCatalog
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '2980'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 单元测试 {#unit-testing}
 
-本教程介绍了单元测试的实施，该测试将验证在中创建的Byline组件的Sling模型的行为。 [自定义组件](./custom-component.md) 教程。
+本教程介绍单元测试的实施，该测试将验证在中创建的署名组件的Sling模型的行为。 [自定义组件](./custom-component.md) 教程。
 
 ## 前提条件 {#prerequisites}
 
@@ -33,11 +33,11 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
 >[!NOTE]
 >
-> 如果您成功完成了上一章，则可以重用该项目并跳过签出入门项目的步骤。
+> 如果成功完成了上一章，则可以重用该项目并跳过签出入门项目的步骤。
 
-查看本教程所基于的基线代码：
+查看本教程所基于的基本行代码：
 
-1. 查看 `tutorial/unit-testing-start` 分支来源 [GitHub](https://github.com/adobe/aem-guides-wknd)
+1. 查看 `tutorial/unit-testing-start` 分支自 [GitHub](https://github.com/adobe/aem-guides-wknd)
 
    ```shell
    $ cd aem-guides-wknd
@@ -58,7 +58,7 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-您始终可以在以下位置查看完成的代码 [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/unit-testing-start) 或通过切换到分行在本地签出代码 `tutorial/unit-testing-start`.
+您始终可以在上查看完成的代码 [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/unit-testing-start) 或者切换到分支机构在本地签出代码 `tutorial/unit-testing-start`.
 
 ## 目标
 
@@ -68,7 +68,7 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
 ## 背景 {#unit-testing-background}
 
-在本教程中，我们将探索如何编写 [单元测试](https://en.wikipedia.org/wiki/Unit_testing) 对于署名组件的 [Sling模型](https://sling.apache.org/documentation/bundles/models.html) (创建于 [创建自定义AEM组件](custom-component.md))。 单元测试是使用Java™编写的构建时测试，用于验证Java™代码的预期行为。 每个单元测试通常都很小，并且根据预期结果来验证方法（或工作单元）的输出。
+在本教程中，我们将探讨如何编写代码 [单元测试](https://en.wikipedia.org/wiki/Unit_testing) 对于我们的署名组件的 [Sling模型](https://sling.apache.org/documentation/bundles/models.html) (创建于 [创建自定义AEM组件](custom-component.md))。 单元测试是用Java™编写的构建时测试，用于验证Java™代码的预期行为。 每个单元测试通常很小，可根据预期结果验证方法（或工作单元）的输出。
 
 我们采用AEM最佳实践，并采用：
 
@@ -78,9 +78,9 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
 ## 单元测试和AdobeCloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[AdobeCloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) 集成单元测试执行和 [代码覆盖率报告](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html) 添加到其CI/CD管道中，以帮助鼓励和推广单元测试AEM代码的最佳实践。
+[AdobeCloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) 集成单元测试执行和 [代码覆盖率报表](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html) 添加到其CI/CD管道中，以帮助鼓励和推广单元测试AEM代码的最佳实践。
 
-虽然单元测试代码对于任何代码库都是很好的做法，但在使用Cloud Manager时，通过为Cloud Manager运行提供单元测试来利用其代码质量测试和报告工具非常重要。
+虽然单元测试代码是任何代码库的一个良好实践，但在使用Cloud Manager时，通过为Cloud Manager运行提供单元测试来利用其代码质量测试和报告工具非常重要。
 
 ## 更新测试Maven依赖项 {#inspect-the-test-maven-dependencies}
 
@@ -93,7 +93,7 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
 此 **JUnit5**、 **Mockito和 **AEM Mocks** 测试依赖项在设置过程中使用自动添加到项目中 [AEM Maven原型](project-setup.md).
 
-1. 要查看这些依赖关系，请在以下位置打开父Reactor POM： **aem-guides-wknd/pom.xml**，导航到 `<dependencies>..</dependencies>` 和查看下的由io.wcm提供的JUnit、Mockito、Apache Sling Mocks和AEM Mock Tests的依赖关系 `<!-- Testing -->`.
+1. 要查看这些依赖关系，请在以下位置打开父Reactor POM **aem-guides-wknd/pom.xml**，导航到 `<dependencies>..</dependencies>` AEM并查看io.wcm在 `<!-- Testing -->`.
 1. 确保 `io.wcm.testing.aem-mock.junit5` 设置为 **4.1.0**：
 
    ```xml
@@ -107,15 +107,15 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
    >[!CAUTION]
    >
-   > 原型 **35** 生成项目，使用 `io.wcm.testing.aem-mock.junit5` version **4.1.8**. 请降级到 **4.1.0** 以遵循本章的其余部分。
+   > 原型 **35** 生成项目，使用 `io.wcm.testing.aem-mock.junit5` 版本 **4.1.8**. 请降级到 **4.1.0** 以遵循本章的其余部分。
 
 1. 打开 **aem-guides-wknd/core/pom.xml** 并查看相应的测试依赖项是否可用。
 
-   中的并行源文件夹 **核心** 项目将包含单元测试和任何支持的测试文件。 此 **测试** 文件夹提供了测试类与源代码的分离，但允许测试像它们与源代码位于同一包中一样运行。
+   中的并行源文件夹 **核心** 项目将包含单元测试和任何支持的测试文件。 此 **测试** 文件夹将测试类与源代码分离，但允许测试像它们与源代码位于同一包中一样运行。
 
 ## 创建JUnit测试 {#creating-the-junit-test}
 
-单元测试通常使用Java™类映射1到1。 在本章中，我们将为以下内容编写JUnit测试： **BylineImpl.java**，这是支持Byline组件的Sling模型。
+单元测试通常使用Java™类将1映射到1。 在本章中，我们将为 **BylineImpl.java**，这是支持Byline组件的Sling模型。
 
 ![单元测试src文件夹](assets/unit-testing/core-src-test-folder.png)
 
@@ -129,20 +129,18 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
    * `src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`
 
-   在以下位置创建相应的单元测试Java™类：
+   在上创建相应的单元测试Java™类
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
    此 `Test` 单元测试文件上的后缀， `BylineImplTest.java` 是一个惯例，允许我们
 
-   1. 轻松识别为测试文件 _对象_ `BylineImpl.java`
-   1. 此外，还要区分测试文件 _起始日期_ 正在测试的课程， `BylineImpl.java`
-
-
+   1. 轻松将其识别为测试文件 _对象_ `BylineImpl.java`
+   1. 但是，还要区分测试文件 _从_ 被测试的班级， `BylineImpl.java`
 
 ## 查看BylineImplTest.java {#reviewing-bylineimpltest-java}
 
-此时，JUnit测试文件是空的Java™类。
+此时，JUnit测试文件是一个空的Java™类。
 
 1. 使用以下代码更新文件：
 
@@ -178,17 +176,17 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    }
    ```
 
-1. 第一种方法 `public void setUp() { .. }` 用JUnit的注释 `@BeforeEach`，它会指示JUnit测试运行程序先执行此方法，然后再运行此类中的每个测试方法。 这为初始化所有测试所需的通用测试状态提供了一个方便的位置。
+1. 第一种方法 `public void setUp() { .. }` 用JUnit注释 `@BeforeEach`，它会指示JUnit测试运行程序先执行此方法，然后再运行此类中的每个测试方法。 这为初始化所有测试所需的通用测试状态提供了一个方便的位置。
 
-1. 后续的方法是测试方法，其名称带有前缀 `test` 按惯例，并以 `@Test` 注释。 请注意，默认情况下，我们所有的测试都设置为失败，因为我们尚未实施它们。
+1. 后续的方法是测试方法，其名称带有前缀 `test` 按惯例，并以 `@Test` 注释。 请注意，默认情况下，我们的所有测试都设置为失败，因为尚未实施它们。
 
-   首先，我们针对要测试的类上的每个公共方法使用一个测试方法，因此：
+   首先，我们先对我们测试的类中的每个公共方法使用一个测试方法，因此：
 
-   | BylineImpl.java |  | BylineImplTest.java |
+   | BylineImpl.java |              | BylineImplTest.java |
    | ------------------|--------------|---------------------|
-   | getName() | 测试者 | testGetName() |
-   | getOccupations() | 测试者 | testGetOccupations() |
-   | isEmpty() | 测试者 | testIsEmpty() |
+   | getName() | 测试方 | testGetName() |
+   | getOccupations() | 测试方 | testGetOccupations() |
+   | isEmpty() | 测试方 | testIsEmpty() |
 
    这些方法可根据需要进行扩展，我们将在本章的后面部分中看到。
 
@@ -199,30 +197,30 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 *`core/src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`*
 
 1. 通过右键单击 `BylineImplTest.java` 文件，并点按 **运行**.
-如预期，所有测试都会失败，因为它们尚未实施。
+如预期的那样，所有测试都会失败，因为它们尚未实施。
 
    ![作为junit测试运行](assets/unit-testing/run-junit-tests.png)
 
-   *右键单击BylineImplTests.java >运行*
+   *右键单击“BylineImplTests.java”>“运行”*
 
 ## 查看BylineImpl.java {#reviewing-bylineimpl-java}
 
 在编写单元测试时，有两种主要方法：
 
-* [TDD或测试驱动开发](https://en.wikipedia.org/wiki/Test-driven_development)：包括增量写入单元测试，紧接在实施开发之前；编写测试，编写实现以使测试通过。
+* [TDD或测试驱动开发](https://en.wikipedia.org/wiki/Test-driven_development)，包括增量写入单元测试，紧接着在实施开发之前；编写测试，编写实现以使测试通过。
 * 以实施为先的开发，包括先开发工作代码，然后编写测试来验证该代码。
 
-在本教程中，将使用后一种方法(因为我们已经创建了一个 **BylineImpl.java** （例如在上一章中）。 因此，除了一些具体的实现细节之外，我们还必须了解和掌握其公共方法的行为。 这听起来可能恰恰相反，因为一个良好的测试应该只关心输入和输出，但是当在AEM中工作时，需要理解各种实施考虑因素，才能构建工作测试。
+在本教程中，将使用后一种方法(因为我们已经创建了一个 **BylineImpl.java** （例如在上一章中）。 因此，我们必须回顾和了解其公共方法的行为，同时也要了解其实施细节。 这听起来可能恰恰相反，因为一个良好的测试应该只关注输入和输出，然而在AEM中工作时，为了构建工作测试，需要理解各种实施注意事项。
 
-在AEM的上下文中，TDD需要一定程度的专业知识，并且最容易被精通AEM代码的AEM开发和单元测试的AEM开发人员采用。
+在AEM的上下文中，TDD需要一定程度的专业知识，并且最适合于精通AEM代码的AEM开发和单元测试的AEM开发人员。
 
 ## 设置AEM测试上下文  {#setting-up-aem-test-context}
 
-大多数为AEM编写的代码依赖于JCR、Sling或AEM API，而这又需要运行的AEM的上下文才能正确执行。
+大多数为AEM编写的代码依赖于JCR、Sling或AEM API，这反过来又需要运行的AEM的上下文才能正确执行。
 
-由于单元测试是在构建时执行的，在正在运行的AEM实例的上下文之外，因此没有此类上下文。 为了促进这一进程， [wcm.io的AEM模拟](https://wcm.io/testing/aem-mock/usage.html) 创建模拟上下文，使这些API能够 _大部分_ 就像它们在AEM中运行一样。
+由于单元测试是在构建时执行的，因此在正在运行的AEM实例的上下文之外，没有此类上下文。 为了促进这一进程， [wcm.io的AEM模拟](https://wcm.io/testing/aem-mock/usage.html) 创建模拟上下文以允许这些API _大部分_ 就像它们在AEM中运行一样。
 
-1. 使用以下方式创建AEM上下文 **wcm.io的** `AemContext` 在 **BylineImplTest.java** 添加为装饰有的JUnit扩展 `@ExtendWith` 到 **BylineImplTest.java** 文件。 该扩展会处理所有所需的初始化和清理任务。 为创建类变量 `AemContext` 可用于所有测试方法。
+1. 创建AEM上下文，使用 **wcm.io的** `AemContext` 在 **BylineImplTest.java** 添加为装饰有的JUnit扩展 `@ExtendWith` 到 **BylineImplTest.java** 文件。 该扩展会处理所有所需的初始化和清理任务。 创建类变量 `AemContext` 可用于所有测试方法。
 
    ```java
    import org.junit.jupiter.api.extension.ExtendWith;
@@ -243,11 +241,11 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    * 可在此上下文中注册自定义OSGi服务
    * 提供各种常见的必需模拟对象和帮助程序，如SlingHttpServletRequest对象；各种模拟Sling和AEM OSGi服务，如ModelFactory、PageManager、Page、Template、ComponentManager、Component、TagManager、Tag等。
       * *并非针对这些对象的所有方法都已实现！*
-   * 和 [更多内容](https://wcm.io/testing/aem-mock/usage.html)！
+   * 和 [更多](https://wcm.io/testing/aem-mock/usage.html)！
 
    此 **`ctx`** 对象将作为大多数模拟上下文的入口点。
 
-1. 在 `setUp(..)` 方法，在每种 `@Test` 方法，定义常见的模拟测试状态：
+1. 在 `setUp(..)` 方法，该方法在每次 `@Test` 方法，定义一个常见的模拟测试状态：
 
    ```java
    @BeforeEach
@@ -258,12 +256,12 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    ```
 
    * **`addModelsForClasses`** 将要测试的Sling模型注册到模拟AEM上下文中，以便可在 `@Test` 方法。
-   * **`load().json`** 将资源结构加载到模拟上下文中，允许代码与这些资源交互，就像它们由真实存储库提供一样。 文件中的资源定义 **`BylineImplTest.json`** 加载到下的模拟JCR上下文中 **/content**.
-   * **`BylineImplTest.json`** 还不存在，因此让我们创建它并定义测试所需的JCR资源结构。
+   * **`load().json`** 将资源结构加载到模拟上下文中，使代码能够与这些资源交互，就像它们由真实存储库提供一样。 文件中的资源定义 **`BylineImplTest.json`** 加载到模拟JCR上下文中 **/content**.
+   * **`BylineImplTest.json`** 尚不存在，因此让我们创建它并定义测试所需的JCR资源结构。
 
 1. 表示模拟资源结构的JSON文件存储在 **core/src/test/resources** 执行与JUnit Java™测试文件相同的包路径。
 
-   在创建JSON文件 `core/test/resources/com/adobe/aem/guides/wknd/core/models/impl` 已命名 **BylineImplTest.json** ，内容如下：
+   在上创建JSON文件 `core/test/resources/com/adobe/aem/guides/wknd/core/models/impl` 已命名 **BylineImplTest.json** ，内容如下：
 
    ```json
    {
@@ -276,15 +274,15 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
    ![BylineImplTest.json](assets/unit-testing/bylineimpltest-json.png)
 
-   此JSON为Byline组件单元测试定义模拟资源（JCR节点）。 此时，JSON具有表示署名组件内容资源所需的最小属性集， `jcr:primaryType` 和 `sling:resourceType`.
+   此JSON为Byline组件单元测试定义了一个模拟资源（JCR节点）。 此时，JSON具有表示署名组件内容资源所需的最小属性集， `jcr:primaryType` 和 `sling:resourceType`.
 
-   处理单元测试时的一般规则是创建满足每个测试所需的最小模拟内容、上下文和代码集。 避免在编写测试之前构建完整的模拟上下文的诱惑，因为这通常会导致不需要的构件。
+   处理单元测试时的一般规则是创建满足每个测试所需的最小模拟内容、上下文和代码集。 避免在编写测试之前构建完整的模拟上下文的诱惑，因为这通常会导致不需要的工件。
 
-   现在，由于存在 **BylineImplTest.json**，时间 `ctx.json("/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.json", "/content")` 执行，模拟资源定义将加载到路径下的上下文中 **/content.**
+   现在，随着 **BylineImplTest.json**，时间 `ctx.json("/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.json", "/content")` 执行时，模拟资源定义将加载到路径下的上下文中 **/content.**
 
 ## 测试getName() {#testing-get-name}
 
-现在，我们有一个基本的模拟上下文设置，让我们编写第一个测试 **BylineImpl的getName()**. 此测试必须确保方法 **getName()** 返回存储在资源的“”中的经过正确编写的名称&#x200B;**name”** 属性。
+现在，我们有了基本的模拟上下文设置，让我们编写第一个测试 **BylineImpl的getName()**. 此测试必须确保方法 **getName()** 返回在资源的&#39;&#39;中存储的正确编写的名称&#x200B;**name”** 属性。
 
 1. 更新 **testGetName**()方法 **BylineImplTest.java** 如下所示：
 
@@ -306,15 +304,15 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
    * **`String expected`** 设置预期值。 我们会将此参数设置为&quot;**珍已完成**“。
    * **`ctx.currentResource`** 设置模拟资源的上下文以评估代码，因此将此值设置为 **/content/byline** 因为这是加载模拟署名内容资源的位置。
-   * **`Byline byline`** 通过从模拟请求对象中调整来实例化署名Sling模型。
+   * **`Byline byline`** 通过从模拟请求对象中调整来实例化Byline Sling模型。
    * **`String actual`** 调用我们正在测试的方法， `getName()`，在Byline Sling模型对象上。
    * **`assertEquals`** 声明预期值与署名Sling模型对象返回的值匹配。 如果这些值不相等，测试将失败。
 
 1. 运行测试……但测试失败 `NullPointerException`.
 
-   此测试不会失败，因为我们从未定义 `name` 属性，这将导致测试失败，但测试执行尚未到达该点！ 此测试失败的原因是 `NullPointerException` 署名对象本身。
+   此测试不会失败，因为我们从未定义 `name` 属性，即使测试尚未达到该阶段，模拟JSON中的属性仍会导致测试失败！ 此测试失败的原因是 `NullPointerException` 署名对象本身。
 
-1. 在 `BylineImpl.java`，如果 `@PostConstruct init()` 引发异常，阻止Sling模型实例化，并导致Sling模型对象为空。
+1. 在 `BylineImpl.java`， if `@PostConstruct init()` 引发异常，阻止Sling模型实例化，并导致Sling模型对象为空。
 
    ```java
    @PostConstruct
@@ -323,9 +321,9 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    }
    ```
 
-   事实证明，虽然ModelFactory OSGi服务是通过 `AemContext` （通过Apache Sling Context），并非所有方法都已实现，包括 `getModelFromWrappedRequest(...)` 在BylineImpl `init()` 方法。 这会导致 [AbstractMethodError](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/AbstractMethodError.html)，具体而言会导致 `init()` 失败，从而导致对 `ctx.request().adaptTo(Byline.class)` 是null对象。
+   原来，虽然ModelFactory OSGi服务是通过 `AemContext` （通过Apache Sling Context），未实现所有方法，包括 `getModelFromWrappedRequest(...)` 在BylineImpl的 `init()` 方法。 这会导致 [AbstractMethodError](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/AbstractMethodError.html)，具体而言会导致 `init()` 失败的情况，以及由此产生的 `ctx.request().adaptTo(Byline.class)` 是null对象。
 
-   由于提供的模拟无法容纳我们的代码，因此我们必须自己实现模拟上下文。为此，我们可以使用Mockito创建一个模拟ModelFactory对象，该对象在以下情况下会返回模拟Image对象： `getModelFromWrappedRequest(...)` 将在其中调用。
+   由于提供的模拟无法容纳我们的代码，因此我们必须自己实现模拟上下文。为此，我们可以使用Mockito创建一个模拟ModelFactory对象，该对象将在以下情况下返回模拟Image对象： `getModelFromWrappedRequest(...)` 将在其中调用。
 
    由于甚至要实例化Byline Sling模型，此模拟上下文必须到位，因此我们可以将其添加到 `@Before setUp()` 方法。 我们还需要添加 `MockitoExtension.class` 到 `@ExtendWith` 注释位于 **BylineImplTest** 类。
 
@@ -379,19 +377,19 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    }
    ```
 
-   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** 标记要与一起运行的测试用例类 [Mockito JUnit Jupiter扩展](https://www.javadoc.io/static/org.mockito/mockito-junit-jupiter/4.11.0/org/mockito/junit/jupiter/MockitoExtension.html) 允许使用@Mock注释在类级别定义模拟对象。
-   * **`@Mock private Image`** 创建类型的模拟对象 `com.adobe.cq.wcm.core.components.models.Image`. 它在类级别进行定义，以便 `@Test` 方法可以根据需要更改其行为。
-   * **`@Mock private ModelFactory`** 创建ModelFactory类型的模拟对象。 这是一个纯粹的Mockito模拟，没有实现任何方法。 它在类级别进行定义，以便 `@Test`方法可以根据需要更改其行为。
-   * **`when(modelFactory.getModelFromWrappedRequest(..)`** 在以下情况下注册模拟行为 `getModelFromWrappedRequest(..)` 在模拟ModelFactory对象上调用。 中定义的结果 `thenReturn (..)` 是返回模拟图像对象。 仅在以下情况下调用此行为：第一个参数等于 `ctx`的请求对象，第二个参数是任何Resource对象，第三个参数必须是核心组件Image类。 我们接受任何资源，因为在整个测试中，我们设置 `ctx.currentResource(...)` 到中定义的各种模拟资源 **BylineImplTest.json**. 请注意，我们将 **lenient()** 严格性，因为我们以后会希望覆盖ModelFactory的这种行为。
-   * **`ctx.registerService(..)`。** 将模拟ModelFactory对象注册到AemContext中，具有最高的服务排名。 这是必需的，因为BylineImpl的 `init()` 通过 `@OSGiService ModelFactory model` 字段。 要插入的AemContext **我们的** 模拟对象，用于处理对 `getModelFromWrappedRequest(..)`，我们必须将其注册为该类型中最高级别的服务(ModelFactory)。
+   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** 标记要与一起运行的测试用例类 [Mockito JUnit Jupiter扩展](https://www.javadoc.io/static/org.mockito/mockito-junit-jupiter/4.11.0/org/mockito/junit/jupiter/MockitoExtension.html) 允许使用@Mock批注在类级别定义模拟对象。
+   * **`@Mock private Image`** 创建类型为的模拟对象 `com.adobe.cq.wcm.core.components.models.Image`. 在类级别上定义，这样在需要时即可， `@Test` 方法可以根据需要更改其行为。
+   * **`@Mock private ModelFactory`** 创建ModelFactory类型的模拟对象。 这是一个纯粹的Mockito模拟，没有实现任何方法。 在类级别上定义，这样在需要时即可， `@Test`方法可以根据需要更改其行为。
+   * **`when(modelFactory.getModelFromWrappedRequest(..)`** 注册模拟行为时间 `getModelFromWrappedRequest(..)` 在模拟ModelFactory对象上调用。 中定义的结果 `thenReturn (..)` 是返回模拟Image对象。 仅当出现以下情况时才会调用此行为：第一个参数等于 `ctx`的请求对象，第二个参数是任何Resource对象，第三个参数必须是核心组件Image类。 我们接受任何资源，因为在整个测试中，我们设置 `ctx.currentResource(...)` 中定义的各种模拟资源 **BylineImplTest.json**. 请注意，我们将 **lenient()** 严格性，因为我们以后会想要覆盖ModelFactory的这种行为。
+   * **`ctx.registerService(..)`。** 将模拟ModelFactory对象注册到AemContext中，具有最高的服务排名。 这是必需的，因为BylineImpl的 `init()` 通过 `@OSGiService ModelFactory model` 字段。 要插入的AemContext **我们的** 模拟对象，处理对的调用 `getModelFromWrappedRequest(..)`，我们必须将其注册为该类型的最高级别服务(ModelFactory)。
 
-1. 重新运行测试，再次尝试失败，但这次消息清楚地说明了失败的原因。
+1. 重新运行测试，再次失败，但这次消息清楚地表明了失败的原因。
 
    ![测试名称失败断言](assets/unit-testing/testgetname-failure-assertion.png)
 
-   *由于断言，testGetName()失败*
+   *testGetName()失败，因为断言*
 
-   我们收到 **AssertionError** 这意味着测试中的断言条件失败了，它告诉我们 **预期值为“Jane Doe”** 但是 **实际值为null**. 这是有道理的，因为“**name”** 属性尚未添加到模拟中 **/content/byline** 中的资源定义 **BylineImplTest.json**，因此让我们添加它：
+   我们收到 **AssertionError** 这意味着测试中的断言条件失败了，它告诉我们 **预期值为“Jane Doe”** 但是 **实际值为null**. 这是有道理的，因为“**name”** 属性尚未添加到模拟 **/content/byline** 中的资源定义 **BylineImplTest.json**，因此让我们添加它：
 
 1. 更新 **BylineImplTest.json** 以定义 `"name": "Jane Doe".`
 
@@ -405,7 +403,7 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    }
    ```
 
-1. 重新运行测试，并且 **`testGetName()`** 现在过去了！
+1. 重新运行测试，并且 **`testGetName()`** 现在过去！
 
    ![测试名称通过](assets/unit-testing/testgetname-pass.png)
 
@@ -414,7 +412,7 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
 太好了！ 第一个测试已经通过！ 让我们继续并测试 `getOccupations()`. 由于模拟上下文的初始化是在 `@Before setUp()`方法，这适用于所有 `@Test` 本测试用例中的方法，包括 `getOccupations()`.
 
-请记住，此方法必须返回存储在occupations属性中的按字母顺序排序的职业列表（降序）。
+请记住，此方法必须返回按字母顺序排序的占有列表（降序）存储在occutions属性中。
 
 1. 更新 **`testGetOccupations()`** 如下所示：
 
@@ -440,14 +438,14 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    ```
 
    * **`List<String> expected`** 定义预期结果。
-   * **`ctx.currentResource`** 设置当前资源以根据/content/byline上的模拟资源定义评估上下文。 这可确保 **BylineImpl.java** 在模拟资源的上下文中执行。
-   * **`ctx.request().adaptTo(Byline.class)`** 通过从模拟请求对象中调整来实例化署名Sling模型。
+   * **`ctx.currentResource`** 设置当前资源以根据/content/byline处的模拟资源定义评估上下文。 这可确保 **BylineImpl.java** 在模拟资源的上下文中执行。
+   * **`ctx.request().adaptTo(Byline.class)`** 通过从模拟请求对象中调整来实例化Byline Sling模型。
    * **`byline.getOccupations()`** 调用我们正在测试的方法， `getOccupations()`，在Byline Sling模型对象上。
-   * **`assertEquals(expected, actual)`** 声明预期列表与实际列表相同。
+   * **`assertEquals(expected, actual)`** 断言预期列表与实际列表相同。
 
 1. 记住，就象 **`getName()`** 在上面， **BylineImplTest.json** 不定义职业，因此如果运行该测试，测试将失败，因为 `byline.getOccupations()` 将返回空列表。
 
-   更新 **BylineImplTest.json** 以包括职业列表，职业列表将按非字母顺序设置，以确保我们的测试可以验证职业是否按字母顺序排序 **`getOccupations()`**.
+   更新 **BylineImplTest.json** 以包含职业列表，这些职业将按非字母顺序设置，以确保我们的测试验证职业是否按字母顺序排序 **`getOccupations()`**.
 
    ```json
    {
@@ -460,9 +458,9 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    }
    ```
 
-1. 运行测试，然后再次通过！ 好像获取排序的职业可以正常进行！
+1. 运行测试，再次通过！ 好像获取已排序的职业可以正常进行！
 
-   ![获取职位通过](assets/unit-testing/testgetoccupations-pass.png)
+   ![获取占用通过](assets/unit-testing/testgetoccupations-pass.png)
 
    *testGetOccupations()通过*
 
@@ -474,16 +472,16 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
 * 当名称为空时返回true
 * 当占用为null或空时返回true
-* 如果图像为null或没有src URL，则返回true
-* 当存在名称、职业和图像（带有src URL）时，返回false
+* 当图像为null或没有src URL时返回true
+* 当名称、占用和图像（带有src URL）存在时，返回false
 
 为此，我们需要创建测试方法，每个测试方法都在中测试特定条件和新的模拟资源结构 `BylineImplTest.json` 来推动这些测试。
 
-此检查允许我们跳过以下时间的测试： `getName()`， `getOccupations()` 和 `getImage()` 为空，因为通过测试该状态的预期行为 `isEmpty()`.
+此检查允许我们跳过以下时间的测试： `getName()`， `getOccupations()` 和 `getImage()` 为空，因为该状态的预期行为是通过测试的 `isEmpty()`.
 
 1. 第一个测试将测试未设置属性的全新组件的状态。
 
-   将新的资源定义添加到 `BylineImplTest.json`，为其提供语义名称“**空**”
+   将新的资源定义添加到 `BylineImplTest.json`，为其提供语义名称“**空**&quot;
 
    ```json
    {
@@ -500,9 +498,9 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    }
    ```
 
-   **`"empty": {...}`** 定义名为“empty”且只具有 `jcr:primaryType` 和 `sling:resourceType`.
+   **`"empty": {...}`** 定义名为“empty”的新资源定义，该定义只具有 `jcr:primaryType` 和 `sling:resourceType`.
 
-   记住我们加载 `BylineImplTest.json` 到 `ctx` 执行中的每个测试方法之前 `@setUp`，因此我们可以在以下位置的测试中立即使用这个新的资源定义 **/content/empty。**
+   记住我们要加载 `BylineImplTest.json` 到 `ctx` 执行中的每个测试方法之前 `@setUp`，因此我们可以在以下位置的测试中立即找到此新资源定义： **/content/empty.**
 
 1. 更新 `testIsEmpty()` 如下所示，将当前资源设置为新&#39;&#39;**空**”模拟资源定义。
 
@@ -518,9 +516,9 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
    运行测试并确保测试通过。
 
-1. 接下来，创建一组方法，以确保如果任何所需的数据点（名称、职位或图像）为空， `isEmpty()` 返回真。
+1. 接下来，创建一组方法，以确保如果任何所需的数据点（名称、职业或图像）为空， `isEmpty()` 返回真。
 
-   对于每个测试，使用离散模拟资源定义，请更新 **BylineImplTest.json** ，其中包含其他资源定义 **without-name** 和 **不从事任何工作**.
+   对于每个测试，使用离散模拟资源定义，更新 **BylineImplTest.json** ，其中包含其他资源定义 **without-name** 和 **不占用**.
 
    ```json
    {
@@ -602,17 +600,17 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    }
    ```
 
-   **`testIsEmpty()`** 针对空模拟资源定义进行测试，并断言 `isEmpty()` 为true。
+   **`testIsEmpty()`** 针对空模拟资源定义进行测试，并断言 `isEmpty()` 是真的。
 
    **`testIsEmpty_WithoutName()`** 针对具有占用但没有名称的模拟资源定义进行测试。
 
-   **`testIsEmpty_WithoutOccupations()`** 针对名称为但无占用空间的模拟资源定义进行测试。
+   **`testIsEmpty_WithoutOccupations()`** 针对具有名称但不占用资源的模拟资源定义进行测试。
 
    **`testIsEmpty_WithoutImage()`** 针对具有名称和占用情况的模拟资源定义进行测试，但将模拟图像设置为返回空值。 请注意，我们要覆盖 `modelFactory.getModelFromWrappedRequest(..)`在中定义的行为 `setUp()` 以确保此调用返回的Image对象为null。 Mockito桩模块功能非常严格，并且不需要重复的代码。 因此我们用这个模型 **`lenient`** 设置明确说明我们正在覆盖 `setUp()` 方法。
 
-   **`testIsEmpty_WithoutImageSrc()`** 针对具有名称和占用情况的模拟资源定义进行测试，但在以下情况下将模拟图像设置为返回空白字符串 `getSrc()` 将会调用。
+   **`testIsEmpty_WithoutImageSrc()`** 针对具有名称和占用情况的模拟资源定义进行测试，但在以下情况下将模拟图像设置为返回空白字符串 `getSrc()` 将调用。
 
-1. 最后，编写一个测试，以确保 **isEmpty()** 正确配置组件后，会返回false。 对于这种情况，我们可以重用 **/content/byline** 表示完全配置的署名组件。
+1. 最后，编写测试以确保 **isEmpty()** 正确配置组件后返回false。 对于这种情况，我们可以重用 **/content/byline** 表示完全配置的Byline组件。
 
    ```java
    @Test
@@ -644,10 +642,10 @@ $ mvn package
 $ mvn package
 ```
 
-同样，如果我们将测试方法更改为“失败”，则构建将失败并报告哪些测试失败以及失败原因。
+同样，如果将测试方法更改为“失败”，则构建将失败并报告哪些测试失败以及失败原因。
 
 ![mvn包失败](assets/unit-testing/mvn-package-fail.png)
 
 ## 查看代码 {#review-the-code}
 
-查看完成的代码 [GitHub](https://github.com/adobe/aem-guides-wknd) 或在Git分支上查看并本地部署代码 `tutorial/unit-testing-solution`.
+查看完成的代码 [GitHub](https://github.com/adobe/aem-guides-wknd) 或在Git分支上本地查看和部署代码 `tutorial/unit-testing-solution`.

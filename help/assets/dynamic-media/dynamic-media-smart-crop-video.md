@@ -1,15 +1,16 @@
 ---
 title: 使用适用于视频的Dynamic Media智能裁剪
-description: 适用于视频的Dynamic Media智能裁剪使用Adobe Sensei智能跟踪视频中的目标点，确保视频在所有屏幕大小上都具有最佳外观。
+description: 适用于视频的Dynamic Media智能裁剪使用Adobe Sensei智能跟踪视频中的兴趣点，确保视频在所有屏幕大小上都具有最佳外观。
 feature: Smart Crop, Video Profiles, Viewer Presets
 version: Cloud Service
-kt: 5977
+jira: KT-5977
 thumbnail: 37958.jpg
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 15eb725c-d6f6-4ab9-8d39-dc05fbba1ff3
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 # 使用适用于视频的Dynamic Media智能裁剪 {#using-smart-crop-video}
 
-适用于视频的Dynamic Media智能裁剪使用Adobe Sensei智能跟踪视频中的目标点，确保视频在所有屏幕大小上都具有最佳外观。
+适用于视频的Dynamic Media智能裁剪使用Adobe Sensei智能跟踪视频中的兴趣点，确保视频在所有屏幕大小上都具有最佳外观。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37958?quality=12&learn=on)
 

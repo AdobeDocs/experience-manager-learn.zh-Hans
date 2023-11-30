@@ -2,10 +2,11 @@
 title: AEM 教程
 description: Adobe Experience Manager的视频和教程集合。
 exl-id: fe83a2dc-b43a-4e71-9b03-d31ec4f6a6ff
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+doc-type: Catalog
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 31%
+ht-degree: 28%
 
 ---
 
@@ -20,7 +21,7 @@ Adobe Experience Manager (AEM)是领先的体验管理平台。 本用户指南�
 + [AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 + [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html)
 + [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html)
-+ [AEM as Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=zh-Hans)
++ [AEM作为Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=zh-Hans)
 + [AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/overview.html)
 + [AEM Guides 教程](https://experienceleague.adobe.com/docs/experience-manager-guides-learn/tutorials/overview.html)
 

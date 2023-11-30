@@ -1,15 +1,16 @@
 ---
 title: 在AEM Sites中使用SPA编辑器
-description: AEM单页应用程序编辑器框架使作者能够编辑单页应用程序或SPA的内容。 使用React框架的开发人员可创建SPA，然后将SPA的区域映射到AEM组件，从而让作者可以使用熟悉的AEM Sites编辑工具。
+description: AEM单页应用程序编辑器框架使作者能够编辑单页应用程序或SPA的内容。 使用React框架的开发人员可创建SPA，然后将SPA的区域映射到AEM组件，从而让作者使用熟悉的AEM Sites编辑工具。
 version: 6.4, 6.5, Cloud Service
 topic: SPA
 feature: SPA Editor
 role: Developer
 level: Beginner
-kt: 1047
+jira: KT-1047
 thumbnail: 22229.jpg
+doc-type: Feature Video
 exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 6%
@@ -20,7 +21,7 @@ ht-degree: 6%
 
 有关在AEM Sites中为单页应用程序创作内容的视频概述。
 
-通过AEM SPA Editor，作者可以编辑单页应用程序或SPA的内容。 使用React框架的开发人员可创建SPA，然后将SPA的区域映射到AEM组件，从而让作者可以使用熟悉的AEM Sites编辑工具。 以下视频演示了WKND SPA示例站点的一些上下文内编辑功能。 WKND SPA项目包括两个React实施。
+AEM SPA Editor使作者能够编辑单页应用程序或SPA的内容。 使用React框架的开发人员会创建一个SPA，然后将SPA的区域映射到AEM组件，从而使作者可以使用熟悉的AEM Sites编辑工具。 以下视频演示了WKND SPA示例站点的某些上下文内编辑功能。 WKND SPA项目包括React实施。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22229?quality=12&learn=on)
 
@@ -28,7 +29,7 @@ ht-degree: 6%
 >
 > 单页应用程序(SPA)编辑器功能需要AEM 6.4 Service Pack 2或更高版本。
 >
-> 对于需要基于SPA框架进行客户端渲染的项目，建议使用SPA编辑器。
+> SPA编辑器是推荐的解决方案，适用于需要基于SPA框架的客户端呈现的项目。
 
 ## 其他资源 {#additional-resources}
 

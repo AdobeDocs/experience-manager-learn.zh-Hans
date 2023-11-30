@@ -5,12 +5,13 @@ topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
 level: Beginner
-kt: 7629
+jira: KT-7629
 thumbnail: 333181.jpg
 last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '793'
 ht-degree: 3%
@@ -44,9 +45,9 @@ _快速设置的视频演练_
 
 本教程假定：
 
-+ [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/) 作为IDE
-+ 工作目录 `~/Code/wknd-app`
-+ 在上将AEM SDK作为Author服务运行 `http://localhost:4502`
++ [Microsoft® Visual Studio代码](https://visualstudio.microsoft.com/) 作为IDE
++ 的工作目录 `~/Code/wknd-app`
++ 在上将AEM SDK作为创作服务运行 `http://localhost:4502`
 + 使用本地运行AEM SDK `admin` 具有密码的帐户 `admin`
 + 运行SPA `http://localhost:3000`
 
@@ -64,18 +65,18 @@ _快速设置的视频演练_
    # Provide `admin` as the admin user's password
    ```
 
-AEM SDK启动并自动启动 [http://localhost:4502](http://localhost:4502). 使用以下凭据登录：
+AEM SDK启动并自动启动于 [http://localhost:4502](http://localhost:4502). 使用以下凭据登录：
 
 + 用户名: `admin`
 + 密码: `admin`
 
 ## 下载并安装WKND站点包
 
-本教程依赖于 __WKND 2.1.0及更高版本__ 项目（用于内容）。
+本教程依赖于 __WKND 2.1.0+的__ 项目（用于内容）。
 
 1. [下载最新版本的 `aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
 1. 登录到AEM SDK的包管理器，网址为 [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) 使用 `admin` 凭据。
-1. __上传__ 此 `aem-guides-wknd.all.x.x.x.zip` 已在步骤1中下载
+1. __上传__ 该 `aem-guides-wknd.all.x.x.x.zip` 已在步骤1中下载
 1. 点按 __安装__ 条目的按钮 `aem-guides-wknd.all-x.x.x.zip`
 
 ## 下载并安装WKND应用程序SPA包
@@ -85,9 +86,9 @@ AEM SDK启动并自动启动 [http://localhost:4502](http://localhost:4502). 使
 1. [下载 ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
 1. [下载 ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
 1. 登录到AEM SDK的包管理器，网址为 [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) 使用 `admin` 凭据。
-1. __上传__ 此 `wknd-app.all.x.x.x.zip` 已在步骤1中下载
+1. __上传__ 该 `wknd-app.all.x.x.x.zip` 已在步骤1中下载
 1. 点按 __安装__ 条目的按钮 `wknd-app.all.x.x.x.zip`
-1. __上传__ 此 `wknd-app.ui.content.sample.x.x.x.zip` 已在步骤2中下载
+1. __上传__ 该 `wknd-app.ui.content.sample.x.x.x.zip` 已在步骤2中下载
 1. 点按 __安装__ 条目的按钮 `wknd-app.ui.content.sample.x.x.x.zip`
 
 ## 下载WKND应用程序源
@@ -103,7 +104,7 @@ $ cd aem-guides-wknd-graphql
 
 ## 启动SPA应用程序
 
-从项目的根目录中，安装SPA项目npm依赖项并运行应用程序。
+从项目的根目录中，安装SPA项目npm依赖关系并运行应用程序。
 
 ```
 $ cd ~/Code/wknd-app/aem-guides-wknd-graphql/react-app
@@ -111,7 +112,7 @@ $ npm install
 $ npm run start
 ```
 
-如果运行时出现错误 `npm install` 请尝试以下步骤：
+如果运行时出错 `npm install` 请尝试执行以下步骤：
 
 ```
 $ cd ~/Code/wknd-app/aem-guides-wknd-graphql/react-app
@@ -131,14 +132,14 @@ $ npm run start
 1. 编辑 __WKND应用程序主页__
 1. 切换到 __编辑__ 模式
 
-### 创作Home视图的固定组件
+### 创作主页视图的固定组件
 
 1. 点按文本 __WKND冒险__ 激活固定标题组件(硬编码到SPA主页视图中)
 1. 点按 __扳手__ 标题组件操作栏上的图标
 1. 更改标题组件的内容并保存
 1. 刷新运行的SPA `http://localhost:3000` 并看到更改反映在
 
-### 编写Home视图的容器组件
+### 创作主页视图的容器组件
 
 1. 同时仍在编辑 __WKND应用程序主页__...
 1. 展开 __SPA编辑的侧栏__ （左侧）
@@ -149,12 +150,12 @@ $ npm run start
 ### 在动态路由上创作容器组件
 
 1. 切换到 __预览__ SPA编辑器中的模式
-1. 点按 __巴厘岛冲浪营__ 信息卡并导航到其动态路由
-1. 在站点上方的容器组件中添加、更改或删除组件 __行程__ 标题
+1. 点击 __巴厘岛冲浪营__ 信息卡并导航到其动态路由
+1. 在站点上方的容器组件中添加、更改或删除组件 __日程表__ 标题
 1. 刷新运行的SPA `http://localhost:3000` 并看到更改反映在
 
-下的新AEM页面 __WKND应用程序主页>冒险__ _必须_ 具有与相应冒险的内容片段名称匹配的AEM页面名称。 这是因为SPA路由到AEM页面的映射基于路由的最后一个区段，即内容片段的名称。
+下的新AEM页面 __WKND应用程序主页>冒险__ _必须_ 具有与相应冒险的内容片段名称匹配的AEM页面名称。 这是因为SPA到AEM页面的路由映射基于路由的最后一个区段，即内容片段的名称。
 
 ## 恭喜！
 
-您刚刚快速了解了AEM SPA Editor如何通过受控、可编辑的区域来增强SPA！ 如果您有兴趣 — 请查看教程的其余部分，但请确保重新开始，因为在此快速设置中，您的本地开发环境现在已处于教程的结束状态！
+您刚刚快速了解了AEM SPA Editor如何通过受控、可编辑的区域来增强SPA！ 如果您感兴趣，请查看本教程的其余部分，但请确保重新开始，因为在本快速设置中，您的本地开发环境现在已处于本教程的结束状态！

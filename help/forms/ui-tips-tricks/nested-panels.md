@@ -7,10 +7,10 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 9335
+jira: KT-9335
 exl-id: c60d019e-da26-4f67-8579-ef707e2348bb
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%
@@ -23,28 +23,28 @@ ht-degree: 0%
 
 ## 创建自适应表单
 
-创建具有以下结构的自适应表单。 根面板具有子面板，这些子面板在左侧显示为选项卡。 其中一些是”**选项卡**”具有其他子面板。 例如，“家庭”选项卡有两个名为“配偶”和“子女”的子项面板。
+创建具有以下结构的自适应表单。 根面板具有子面板，这些子面板在左侧显示为选项卡。 其中一些是”**选项卡**”具有其他子面板。 例如，“家庭”选项卡有两个名为“配偶”和“子女”的子面板。
 
-在FormContainer下还添加了一个工具栏，其中包含“上一个”和“下一个”按钮
+在FormContainer下还添加了工具栏，其中包含“上一个”和“下一个”按钮
 
 ![工具栏间距](assets/multiple-panels.png)
 
 
 
-此表单的默认行为是在左侧显示所有面板，然后单击下一步按钮从一个选项卡导航到另一个选项卡。
+此表单的默认行为是显示左侧的所有面板，然后单击下一步按钮从一个选项卡导航到另一个选项卡。
 
 要更改此默认行为，我们需要执行以下操作
 
 >[!VIDEO](https://video.tv.adobe.com/v/338369?quality=12&learn=on)
 
 
-将以下代码添加到的click事件 **下一个** 使用代码编辑器的按钮
+将以下代码添加到的 **下一个** 使用代码编辑器的按钮
 
 ```javascript
 window.guideBridge.setFocus(null, 'nextItemDeep', true);
 ```
 
-将以下代码添加到的click事件 **上一个** 使用代码编辑器的按钮
+将以下代码添加到的 **上一页** 使用代码编辑器的按钮
 
 ```javascript
 window.guideBridge.setFocus(null, 'prevItemDeep', true);

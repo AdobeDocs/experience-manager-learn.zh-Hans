@@ -1,13 +1,14 @@
 ---
 title: 了解如何为AEM样式系统编码
-description: 在本视频中，我们将了解CSS（或更少）和JavaScript的剖析，这些样式用于通过样式系统设置Adobe Experience Manager的核心标题组件的样式，以及这些样式如何应用于HTML和DOM。
+description: 在本视频中，我们将介绍CSS（或LESS）和JavaScript的剖析，这些样式用于通过样式系统为AdobeExperience Manager的核心标题组件设置样式，以及这些样式如何应用于HTML和DOM。
 feature: Style System
-version: 6.4, 6.5
+version: 6.4, 6.5, Cloud Service
 topic: Development
 role: Developer
 level: Intermediate, Experienced
+doc-type: Technical Video
 exl-id: 8fbc3819-3214-4c58-8629-a27eb6f0c545
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1090'
 ht-degree: 1%
@@ -33,7 +34,7 @@ ht-degree: 1%
 
 * `/apps/demo/sites/style-system/clientlib-example/components/titles/styles/example.less`
 
-对于首选CSS的代码，此代码片段的下面是CSS this [!DNL LESS] 编译为。
+对于首选CSS的代码，此代码片段的下面是CSS [!DNL LESS] 编译到。
 
 ```css
 /* LESS */
@@ -88,9 +89,9 @@ ht-degree: 1%
 
 ### JavaScript {#example-javascript}
 
-将示例样式应用于标题组件时，以下JavaScript将在标题文本下方收集并注入当前页面的上次修改日期和时间。
+将示例样式应用于标题组件时，以下JavaScript将在标题文本下方收集并注入当前页面的最后修改日期和时间。
 
-jQuery的使用是可选的，其命名约定也是可选的。
+jQuery的使用以及使用的命名约定都是可选的。
 
 以下是 [!DNL LESS] 在以下位置找到的示例样式的定义：
 
@@ -147,7 +148,7 @@ jQuery(function ($) {
 ### HTML最佳实践 {#html-best-practices}
 
 * HTML（通过HTL生成）应尽可能具有结构语义；避免对元素进行不必要的分组/嵌套。
-* HTML元素应可通过BEM样式CSS类进行寻址。
+* HTML元素应可通过BEM样式的CSS类进行寻址。
 
 **好**  — 组件中的所有元素均可通过BEM表示法寻址：
 
@@ -171,45 +172,45 @@ jQuery(function ($) {
 </div>
 ```
 
-* 公开更多的数据并隐藏这些数据比公开太少的数据而要求未来进行后端开发以公开这些数据要好。
+* 公开更多数据并隐藏这些数据比公开太少需要未来后端开发才能公开的数据要好。
 
-   * 实施可创作内容切换有助于保持此HTML简洁，从而作者可以选择将哪些内容元素写入HTML。 在将图像写入可能无法用于所有样式的HTML时，可能特别重要。
-   * 此规则的例外情况是默认情况下公开昂贵的资源（例如图像），因为在此例中，CSS隐藏的事件图像会被不必要地获取。
+   * 实施可创作内容切换可有助于保持此HTML简洁，从而使作者能够选择将哪些内容元素写入HTML。 在将图像写入可能无法用于所有样式的HTML时，可能特别重要。
+   * 此规则的例外情况是默认情况下会公开昂贵的资源（例如图像），因为在此例中，CSS隐藏的事件图像会被不必要地获取。
 
       * 现代图像组件通常将使用JavaScript选择和加载最适合用例（视区）的图像。
 
-### css最佳实践 {#css-best-practices}
+### CSS最佳做法 {#css-best-practices}
 
 >[!NOTE]
 >
->样式系统从技术层面上稍有不同 [BEM](https://en.bem.info/)，其中 `BLOCK` 和 `BLOCK--MODIFIER` 不应用于相同的元素，如所指定 [BEM](https://en.bem.info/).
+>样式系统与 [BEM](https://en.bem.info/)，在 `BLOCK` 和 `BLOCK--MODIFIER` 未应用于指定的相同元素 [BEM](https://en.bem.info/).
 >
 >相反，由于产品限制， `BLOCK--MODIFIER` 应用于的父项 `BLOCK` 元素。
 >
->所有其他租户 [BEM](https://en.bem.info/) 应与。
+>所有其他租户 [BEM](https://en.bem.info/) 应该与。
 
-* 使用预处理器，例如 [更少](https://lesscss.org/) (由AEM本机支持)或 [SCSS](https://sass-lang.com/) （需要自定义构建系统）以允许清除CSS定义和可重复使用。
+* 使用预处理器，例如 [更少](https://lesscss.org/) (由AEM本机支持)或 [SCSS](https://sass-lang.com/) （需要自定义构建系统）以允许清除CSS定义以及可重复使用。
 
-* 保持选择器权重/具体性一致；这有助于避免和解决难以识别的CSS级联冲突。
-* 将每个样式组织成一个离散的文件。
-   * 这些文件可以使用LESS/SCSS组合 `@imports` 或者，如果需要原始CSS，可通过HTML客户端库文件包含或自定义前端资源构建系统。
+* 保持选择器权重/特异性一致；这有助于避免和解决难以识别的CSS级联冲突。
+* 将每种样式组织为一个独立文件。
+   * 可使用LESS/SCSS组合这些文件 `@imports` 或者，如果需要原始CSS，则通过HTML客户端库文件包含或自定义前端资源构建系统。
 * 避免混合使用许多复杂的样式。
-   * 可以一次应用于某个组件的样式越多，排列的多样性就越大。 这可能变得难以维护/QA/确保品牌一致性。
+   * 可以一次性应用于某个组件的样式越多，排列的多样性就越大。 这可能变得难以维护/QA/确保品牌一致性。
 * 始终使用CSS类（遵循BEM表示法）来定义CSS规则。
-   * 如果选择不含CSS类的元素（即空元素）是绝对必要的，请在CSS定义中将它们移到较高位置，以清楚地表明它们的特定性比与该类型具有可选择CSS类的元素的任何冲突都低。
+   * 如果绝对有必要选择不含CSS类的元素（即裸元素），请在CSS定义中将它们移到较高位置，以清楚地表明它们的特定性比与该类型具有可选择CSS类的元素的任何冲突都要低。
 * 避免设置 `BLOCK--MODIFIER` 直接访问，因为它已附加到响应式网格。 更改此元素的显示可能会影响响应式网格的渲染和功能，因此，仅当要更改响应式网格的行为时，才应在此级别设置样式。
 * 使用以下方式应用样式范围 `BLOCK--MODIFIER`. 此 `BLOCK__ELEMENT--MODIFIERS` 可以在组件中使用，但由于 `BLOCK` 表示组件，组件是已设置样式的组件，样式是“定义的”，其作用范围通过 `BLOCK--MODIFIER`.
 
-示例CSS选择器结构应如下所示：
+CSS选择器结构示例应如下所示：
 
 <table> 
  <tbody> 
   <tr> 
    <td valign="bottom"><p>第1级选择器</p> <p>块 — 修饰符</p> </td> 
    <td valign="bottom"><p>第二级选择器</p> <p>块</p> </td> 
-   <td valign="bottom"><p>第3级选择器</p> <p>块__元素</p> </td> 
+   <td valign="bottom"><p>第3级选择器</p> <p>块__素</p> </td> 
    <td> </td> 
-   <td valign="middle">有效CSS选择器</td> 
+   <td valign="middle">有效的CSS选择器</td> 
   </tr> 
   <tr> 
    <td valign="middle"><span class="code">.cmp-list — 深色</span></td> 
@@ -228,27 +229,27 @@ jQuery(function ($) {
  </tbody> 
 </table>
 
-对于嵌套的组件，这些嵌套的组件元素的CSS选择器深度将超过第三级选择器。 对嵌套组件重复相同的模式，但范围由父组件的 `BLOCK`. 换句话说，启动嵌套组件的 `BLOCK` 位于第3级，而嵌套组件的 `ELEMENT` 位于第4选择器级别。
+对于嵌套组件，这些嵌套组件元素的CSS选择器深度将超过第三级选择器。 对嵌套组件重复相同的模式，但范围由父组件的 `BLOCK`. 换句话说，启动嵌套组件的 `BLOCK` 位于第3级，而嵌套组件的 `ELEMENT` 位于第4选择器级别。
 
-### JavaScript最佳做法 {#javascript-best-practices}
+### javascript最佳实践 {#javascript-best-practices}
 
-本节中定义的最佳实践与“style-JavaScript”或JavaScript相关，后者专门用于处理组件以提供样式而非功能目的。
+此部分中定义的最佳实践与“style-JavaScript”或JavaScript相关，后者专门用于处理组件以达到风格目的而非功能目的。
 
 * Style-JavaScript应谨慎使用，并且是少数用例。
 * Style-JavaScript主要用于处理组件的DOM以支持CSS的样式。
-* 重新评估Javascript的使用（如果组件在页面上出现多次），并了解计算/和重新绘制成本。
-* 如果Javascript异步(通过AJAX)引入新数据/内容，并且组件可能在页面上多次出现，则重新评估其使用情况。
-* 处理“发布”和“创作”体验。
+* 如果组件在页面上出现多次，请重新评估Javascript的使用，并了解计算/和重新绘制成本。
+* 如果Javascript异步(通过AJAX)引入新数据/内容，并且组件可能会在页面上出现多次，请重新评估其使用情况。
+* 处理发布和创作体验。
 * 尽可能重复使用style-Javascript。
-   * 例如，如果一个组件的多种样式要求将其图像移动到背景图像，则可以实施一次style-JavaScript并将其附加到多个 `BLOCK--MODIFIERs`.
-* 尽可能将style-JavaScript与功能性JavaScript分隔开。
+   * 例如，如果组件的多种样式要求将其图像移动到背景图像，则可以实施一次style-JavaScript并将其附加到多个 `BLOCK--MODIFIERs`.
+* 如果可能，请将style-JavaScript与功能性JavaScript分开。
 * 评估JavaScript的成本与直接通过HTL在HTML中显示这些DOM更改的成本。
    * 当使用style-JavaScript的组件需要服务器端修改时，请评估此时是否可以引入JavaScript操作，以及这对组件的性能和可支持性有何影响/影响。
 
 #### 性能注意事项 {#performance-considerations}
 
-* Style-JavaScript应保持轻便和清爽。
-* 为避免闪烁和不必要的重新绘制，最初通过以下方式隐藏组件： `BLOCK--MODIFIER BLOCK`，并在JavaScript中的所有DOM操作完成后显示它。
+* Style-JavaScript应保持精简和简洁。
+* 为避免闪烁和不必要的重新绘制，最初通过以下方式隐藏组件： `BLOCK--MODIFIER BLOCK`，并在JavaScript中的所有DOM操作完成时显示它。
 * style-JavaScript操作的性能类似于附加和修改DOMReady上的元素的基本jQuery插件。
 * 确保请求已压缩，并且CSS和JavaScript已缩小。
 

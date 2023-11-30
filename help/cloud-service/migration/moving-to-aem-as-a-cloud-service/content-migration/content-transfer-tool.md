@@ -1,15 +1,15 @@
 ---
-title: 使用内容传输工具迁移内容
-description: 了解内容传输工具如何帮助您将内容从AEM 6迁移到AEMas a Cloud Service。
+title: 使用内容传输工具进行内容迁移
+description: 了解内容传输工具如何帮助您将内容从AEM 6迁移到as a Cloud ServiceAEM。
 version: Cloud Service
 topic: Migration, Upgrade
 feature: Migration
 role: Developer
 level: Experienced
-kt: 8919
+jira: KT-8919
 thumbnail: 336970.jpeg
 exl-id: c51ce8e3-e83c-4f8b-a835-70335ed3a5b9
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # 内容传输工具
 
-了解内容传输工具如何帮助您将内容从AEM 6.3+迁移到AEMas a Cloud Service。
+了解内容传输工具如何帮助您将内容从AEM 6.3+as a Cloud Service迁移到AEM。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336970?quality=12&learn=on)
 
@@ -27,20 +27,20 @@ ht-degree: 2%
 
 ![内容传输工具生命周期](../assets/content-transfer-tool.png)
 
-内容传输工具安装在AEM 6.3+上，可将内容传输到AEMas a Cloud Service。
+内容传输工具安装在AEM 6.3+上，并且会将内容传输到AEMas a Cloud Service。
 
 ## 关键活动
 
-+ 下载 [最新的内容传输工具](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2).
-+ 将AEM Author 6.3+最终内容传输到AEMas a Cloud Service创作服务。
-   + 在包含要传输的最终内容的AEM 6.3+ Author上安装内容传输工具。
++ 下载 [最新内容传输工具](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2).
++ 将AEM Author 6.3+的最终内容传输到AEMas a Cloud Service创作服务。
+   + 在包含要传输的最终内容的AEM 6.3+作者上安装内容传输工具。
    + 批量运行内容传输工具，传输内容集。
-+ 将AEM Publish 6.3+最终内容传输到AEMas a Cloud Service发布服务。
++ 将AEM Publish 6.3+的最终内容传输到AEMas a Cloud Service发布服务。
    + 在包含要传输的最终内容的AEM 6.3+ Publish上安装内容传输工具。
    + 批量运行内容传输工具，传输内容集。
-+ （可选）在AEMas a Cloud Service上添加“增补”内容，方式是自上次内容传输以来传输新内容
++ （可选）在AEMas a Cloud Service上使用“增补”内容，方式是自上次内容传输以来传输新内容
 
-## 动手练习
+## 实践练习
 
 通过尝试通过这个实践练习学到的知识来应用您的知识。
 
@@ -65,7 +65,7 @@ ht-degree: 2%
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">使用内容传输工具动手</div>
             <p style="margin:1rem 0">
-                探索内容传输工具如何自动将内容从AEM 6移动到AEMas a Cloud Service。
+                探索内容传输工具如何自动将内容从AEM 6移至AEMas a Cloud Service。
             </p>
             <a  rel="noreferrer"
                 target="_blank"

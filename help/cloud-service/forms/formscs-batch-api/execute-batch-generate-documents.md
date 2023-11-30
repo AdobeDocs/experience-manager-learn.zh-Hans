@@ -1,5 +1,5 @@
 ---
-title: 执行批处理配置
+title: 执行批次配置
 description: 通过执行批处理启动文档生成过程
 type: Documentation
 role: Developer
@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 9674
+jira: KT-9674
 exl-id: 17f91f81-96d8-49d6-b1e3-53d8899695ae
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%

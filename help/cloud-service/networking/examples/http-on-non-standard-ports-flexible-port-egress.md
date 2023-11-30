@@ -6,10 +6,10 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9354
+jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # 非标准端口上的HTTP/HTTPS连接，实现灵活端口出口
 
-非标准端口（非80/443）上的HTTP/HTTPS连接必须通过AEMas a Cloud Service进行代理，但它们不需要任何特殊的 `portForwards` 规则，并可使用AEM的 `AEM_PROXY_HOST` 和保留的代理端口 `AEM_HTTP_PROXY_PORT` 或 `AEM_HTTPS_PROXY_PORT` 目标为HTTP/HTTPS，具体取决于是。
+非标准端口（非80/443）上的HTTP/HTTPS连接必须通过AEMas a Cloud Service代理，但它们不需要任何特殊的 `portForwards` 规则，并可使用AEM的 `AEM_PROXY_HOST` 和保留的代理端口 `AEM_HTTP_PROXY_PORT` 或 `AEM_HTTPS_PROXY_PORT` 目标为HTTP/HTTPS，具体取决于是。
 
 ## 高级联网支持
 
 以下高级联网选项支持以下代码示例。
 
-确保 [适当的](../advanced-networking.md#advanced-networking) 在执行本教程之前，已设置高级联网配置。
+确保 [适当](../advanced-networking.md#advanced-networking) 在执行本教程之前，已设置高级联网配置。
 
 | 无高级联网 | [灵活端口出口](../flexible-port-egress.md) | [专用出口IP地址](../dedicated-egress-ip-address.md) | [虚拟专用网络](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## 代码示例
 
-此Java™代码示例是一个可在AEMas a Cloud Service中运行的OSGi服务，该服务通过HTTP连接到8080上的外部Web服务器。 与HTTPS Web服务器的连接使用环境变量 `AEM_PROXY_HOST` 和 `AEM_HTTPS_PROXY_PORT` (默认为 `proxy.tunnel:3128` (在AEM版本6094之前)。
+此Java™代码示例是一个可在AEMas a Cloud Service中运行的OSGi服务，该服务与8080上的外部Web服务器建立HTTP连接。 与HTTPS Web服务器的连接使用环境变量 `AEM_PROXY_HOST` 和 `AEM_HTTPS_PROXY_PORT` (默认为 `proxy.tunnel:3128` (在AEM版本6094之前)。
 
 >[!NOTE]
 > 建议使用 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) 用于从AEM进行HTTP/HTTPS调用。

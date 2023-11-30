@@ -1,15 +1,15 @@
 ---
 title: 将表单和主题同步到AEM项目
-description: 将AEM Forms资源同步到AEM项目
+description: 将AEM Forms资源同步到AEM项目中
 solution: Experience Manager
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: Code Deployment
-kt: 8852
+jira: KT-8852
 exl-id: 81a53f52-2a6c-44ef-a13f-ac372b4a33b9
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 1%
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## 创建自适应Forms
 
-创建两个名为（FormTemplates和BankingApplication）的文件夹。随时向FormTemplates文件夹添加任意数量的xdp模板，并使用BankingApplication主题在BankingApplication文件夹中创建至少一个表单。
+创建两个名为（FormTemplates和BankingApplication）的文件夹。随时向FormTemplates文件夹中添加任意数量的xdp模板，并使用BankingApplication主题在BankingApplication文件夹中创建至少一个表单。
 
 要使用IntelliJ和Repo工具将这些资源同步到您的AEM项目中，请观看以下视频
 

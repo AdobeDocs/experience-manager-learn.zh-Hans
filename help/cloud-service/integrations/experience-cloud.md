@@ -6,24 +6,24 @@ feature: Integrations
 topic: Integrations
 role: Leader, Architect, Admin, Developer
 level: Beginner
-kt: 10718
+jira: KT-10718
 thumbnail: KT-10718.png
 last-substantial-update: 2022-11-17T00:00:00Z
 mini-toc-levels: 1
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '928'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
 # AEM与Adobe Experience Cloud的as a Cloud Service集成
 
 了解AEMas a Cloud Service支持的与其他Adobe Experience Cloud产品的集成。
-单击Experience Cloud产品，获取有关如何配置和使用集成的文档。
+单击Experience Cloud产品以获取有关如何配置和使用集成的文档。
 
 |                                                                   | AEM Sites | AEM Assets | AEM Forms |
 |-------------------------------------------------------------------|:---------:|:----------:|:---------:|
@@ -35,9 +35,9 @@ ht-degree: 17%
 | Campaign Standard |           |            |          |
 | [商务](#adobe-commerce) | ✔ | ✔ |          |
 | Customer Journey Analytics |           |            |          |
-| [Experience Platform标记](#adobe-experience-platform-tags) | ✔ |            | ✔ |
+| [Experience Platform标签](#adobe-experience-platform-tags) | ✔ |            | ✔ |
 | [Journey Optimizer](#adobe-journey-optimizer) |           | ✔ |          |
-| [学习经理](#adobe-learning-manager) | ✔ |            |          |
+| [学习管理器](#adobe-learning-manager) | ✔ |            |          |
 | Marketo Engage |           |            |          |
 | Real-time CDP |           |            |          |
 | [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
@@ -56,7 +56,7 @@ Adobe Acrobat Sign(以前称为Acrobat Sign)通过改进用于处理法律、销
 
 ## Adobe Analytics
 
-Adobe Analytics与AEMas a Cloud Service集成，允许您从客户历程中的任何位置跟踪内容活动和分析数据。 此外，您还可以获得多用途报表、预测智能等。
+Adobe Analytics与AEMas a Cloud Service集成，让您能够在客户历程的任意位置跟踪内容活动和分析数据。 此外，您还可以获得通用报表、预测智能等。
 
 ### AEM Sites
 
@@ -64,7 +64,7 @@ Adobe Analytics与AEMas a Cloud Service集成，允许您从客户历程中的�
 + [AEM Sites和Analytics教程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/analytics/collect-data-analytics.html)
 + Adobe客户端数据层(ACDL)
 
-   + [扩展AEM WCM核心组件中的ACDL](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)
+   + [在AEM WCM核心组件中扩展ACDL](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)
    + [将ACDL与AEM WCM核心组件集成](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/integrations.html)
    + [使用ACDL进行事件驱动的数据处理](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/adobe-client-data-layer.html)
    + [Adobe客户端数据层(ACDL)教程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
@@ -87,7 +87,7 @@ Adobe Analytics与AEMas a Cloud Service集成，允许您从客户历程中的�
 
 ## Adobe Commerce
 
-Adobe Commerce与AEMas a Cloud Service的集成，使品牌可以更快地扩展和创新，以彰显商业体验并抓住线上支出加速的机遇。 AEM with Commerce将Experience Manager中沉浸式、全渠道和个性化的体验与任意数量的商业解决方案相结合，为购物历程的所有部分提供差异化体验，从而缩短实现价值的时间并促进更高转化。
+Adobe Commerce与AEMas a Cloud Service集成，使品牌可以更快地扩展和创新，以彰显商业体验并加快在线支出。 AEM with Commerce将Experience Manager中的沉浸式、全渠道和个性化体验与任意数量的商业解决方案整合在一起，为购物历程的所有部分提供差异化体验，减少实现价值的时间并促进更高转化。
 
 ### AEM Sites
 
@@ -110,7 +110,7 @@ Adobe Experience Platform标签(以前称为AdobeLaunch、DTM)与AEM无缝集成
 
 ## Adobe Journey Optimizer
 
-Adobe Journey Optimizer可帮助您通过单个应用程序与数百万客户安排全渠道营销活动和一对一互动时刻，整个历程都通过智能决策和见解得到了优化。
+Adobe Journey Optimizer可帮助您通过单个应用程序与数百万客户计划全渠道营销活动和一对一互动时刻，整个历程都通过智能决策和见解得到了优化。
 
 ### AEM Assets
 
@@ -126,18 +126,18 @@ Adobe学习管理器(以前称为Adobe Captivate Prime)为客户和员工提供�
 
 ## Adobe Sensei
 
-Adobe Sensei提供AI和机器学习技术，通过智能标记、智能裁切、可视化搜索等来转换内容管理的过程！
+Adobe Sensei提供了AI和机器学习技术，通过智能标记、智能裁切、可视化搜索等功能来转变内容管理的过程！
 
 ### AEM Sites
 
-+ [总结内容片段中的文本](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-variations.html#summarizing-text)
++ [在内容片段中总结文本](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-variations.html#summarizing-text)
 
 ### AEM Assets
 
 + [图像的智能标记](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
 + [图像的自定义智能标记](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/custom-smart-tags.html)
 + [视频的智能标记](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/video-smart-tags.html)
-+ [智能裁切](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html)
++ [智能裁剪](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html)
 + [可视搜索](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search.html)
 
 ### AEM Forms
@@ -147,7 +147,7 @@ Adobe Sensei提供AI和机器学习技术，通过智能标记、智能裁切、
 
 ## Adobe Target
 
-Adobe Target与AEMas a Cloud Service集成，为所有最终用户提供优化的Web体验，所有这一切均由AEM中的内容提供支持。
+Adobe Target与AEMas a Cloud Service集成，为每个最终用户提供优化的Web体验，所有功能均由AEM中的内容提供支持。
 
 ### AEM Sites
 
@@ -157,12 +157,12 @@ Adobe Target与AEMas a Cloud Service集成，为所有最终用户提供优化�
    + [将体验片段发布到Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
    + [以JSON形式将体验片段发布到Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
 
-+ [将AEM Context Hub与Target一起使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html#creating-an-adobe-target-audience-using-the-audience-console)
++ [将AEM上下文中心与Target结合使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html#creating-an-adobe-target-audience-using-the-audience-console)
 + [AEM Sites和Target教程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/target/overview.html)
 
 ## Adobe Workfront
 
-Adobe Workfront与AEM s aCloud Service的集成简化了数字资源的创建、协作和生命周期管理过程。
+Adobe Workfront与AEM s aCloud Service集成简化了数字资源的创建、协作和生命周期管理过程。
 
 ### AEM Assets
 
@@ -170,5 +170,5 @@ Adobe Workfront与AEM s aCloud Service的集成简化了数字资源的创建、
 + [Workfront增强型连接器视频](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
 + AEM Assets Essentials
 
-   + [适用于Assets Essentials的Adobe Workfront用户指南](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
+   + [Adobe WorkfrontAssets Essentials版用户指南](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
    + [Adobe Workfront和Assets Essentials视频](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)

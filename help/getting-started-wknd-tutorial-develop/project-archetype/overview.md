@@ -2,16 +2,16 @@
 title: AEM Sites — 项目原型快速入门
 description: AEM Sites — 项目原型快速入门。 WKND教程是一个多部分教程，专为不熟悉Adobe Experience Manager的开发人员设计。 本教程介绍了虚拟生活方式品牌WKND的AEM站点的实施。 此教程涵盖了项目设置、maven原型、核心组件、可编辑模板、客户端库和组件开发等基本主题。
 version: 6.5, Cloud Service
-type: Tutorial
 feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
 topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 index: y
+doc-type: Tutorial
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 21%

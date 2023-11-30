@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
-kt: 11603
+jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 3062900a-0461-4c6f-81e6-c76a7f613804
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 2%
@@ -21,15 +21,15 @@ ht-degree: 2%
 
 ![AEM UI扩展运行时操作](./assets/runtime-action/action-runtime-flow.png){align="center"}
 
-AEM UI扩展可以选择包括任意数量的 [Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/).
+AEM UI扩展可以选择包含任意数量的 [Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/).
 
-Adobe I/O Runtime操作是可由扩展调用的无服务器函数。 操作对于执行需要与AEM或其他AdobeWeb服务交互的工作非常有用。 通常，操作最适合执行长时间运行的（超过几秒的任何时间）任务，或向AEM或其他Web服务发出HTTP请求。
+Adobe I/O Runtime操作是可由扩展调用的无服务器函数。 操作对于执行需要与AEM或其他AdobeWeb服务交互的工作很有用。 通常，操作对执行长时间运行（超过几秒钟）的任务，或向AEM或其他Web服务发出HTTP请求最有用。
 
 使用Adobe I/O Runtime操作执行工作的好处包括：
 
 + 操作是在浏览器上下文之外运行的无服务器函数，无需担心CORS
 + 用户无法中断操作（例如，刷新浏览器）
-+ 操作是异步执行的，因此它们可以根据需要运行多久而不阻止用户
++ 操作是异步执行的，因此可以根据需要运行这些操作而不阻止用户
 
 在AEM UI扩展的上下文中，操作通常用于直接与AEMas a Cloud Service通信：
 
@@ -37,18 +37,18 @@ Adobe I/O Runtime操作是可由扩展调用的无服务器函数。 操作对�
 + 对内容执行自定义操作
 + 定制内容创建
 
-虽然AEM UI扩展出现在特定的AEM UI中，但扩展及其支持操作可以调用任何可用的AEM HTTP API，包括自定义AEM API端点。
+虽然AEM UI扩展出现在特定AEM UI中，但扩展及其支持操作可以调用任何可用的AEM HTTP API，包括自定义AEM API端点。
 
 ## 调用操作
 
 Adobe I/O Runtime操作主要从AEM UI扩展中的两个位置调用：
 
-1. 此 [扩展注册](./extension-registration.md) `onClick(..)` 处理程序
+1. 此 [延期注册](./extension-registration.md) `onClick(..)` 处理程序
 1. 在 [模态](./modal.md)
 
 ### 从扩展注册
 
-可直接从扩展注册代码中调用Adobe I/O Runtime操作。 最常见的使用案例是将操作绑定到 [标题菜单](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/)的未使用按钮 [模态](./modal.md).
+可直接从扩展注册代码中调用Adobe I/O Runtime操作。 最常见的用例是将操作绑定到 [标题菜单](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/)的未使用按钮 [模态](./modal.md).
 
 + `./src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
@@ -106,9 +106,9 @@ function ExtensionRegistration() {
 
 ### 从模式
 
-可以从模块直接调用Adobe I/O Runtime操作以执行更多涉及的工作，特别是依赖与AEMas a Cloud Service、AdobeWeb服务甚至第三方服务通信的工作。
+Adobe I/O Runtime操作可以直接从模式中调用，以执行更多涉及的工作，特别是依赖与AEMas a Cloud Service、AdobeWeb服务甚至第三方服务通信的工作。
 
-Adobe I/O Runtime操作是基于Node.js的JavaScript应用程序，在无服务器Adobe I/O Runtime环境中运行。 这些操作可由扩展SPA通过HTTP寻址。
+Adobe I/O Runtime操作是在无服务器Adobe I/O Runtime环境中运行的基于Node.js的JavaScript应用程序。 这些操作可由扩展SPA通过HTTP寻址。
 
 + `./src/aem-ui-extension/web-src/src/components/MyModal.js`
 
@@ -300,13 +300,13 @@ async function main (params) {
 
 ## AEM HTTP API
 
-以下AEM HTTP API通常用于从扩展与AEM交互：
+以下AEM HTTP API通常用于通过扩展与AEM交互：
 
 + [AEM GRAPHQL API](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
 + [AEM ASSETS HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
    + [AEM Assets HTTP API 中的内容片段支持](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html)
 + [AEM QueryBuilder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html)
-+ [完整的AEMas a Cloud ServiceAPI参考](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
++ [完成AEMas a Cloud ServiceAPI参考](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
 
 
 ## Adobenpm模块

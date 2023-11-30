@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-kt: 9980
+jira: KT-9980
 exl-id: 4c5173f1-d57d-43ac-83e6-399ce4ead203
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 服务凭据
 
-与AEMas a Cloud Service的集成必须能够安全地向AEM进行身份验证。 AEM开发人员控制台生成服务凭据，外部应用程序、系统和服务使用这些凭据以编程方式通过HTTP与AEM创作或发布服务进行交互。
+与AEMas a Cloud Service的集成必须能够安全地向AEM进行身份验证。 AEM开发人员控制台生成服务凭据，外部应用程序、系统和服务使用这些凭据以编程方式通过HTTP与AEM Author或Publish服务交互。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 

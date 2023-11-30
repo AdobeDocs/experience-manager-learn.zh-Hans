@@ -9,8 +9,9 @@ level: Intermediate
 kt: 647, 917
 thumbnail: 22132.jpg
 last-substantial-update: 2022-06-13T00:00:00Z
+doc-type: Feature Video
 exl-id: 0681e2c4-8661-436c-9170-9aa841a6fa27
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 2%
@@ -31,7 +32,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-> 在准备导入的CSV文件时，使用“元数据导出”功能更容易生成包含资源列表的CSV。 然后，您可以修改生成的CSV文件，并使用“导入”功能导入该文件。
+> 在准备导入的CSV文件时，使用“元数据导出”功能可更轻松地生成包含资源列表的CSV。 然后，您可以修改生成的CSV文件，并使用“导入”功能导入该文件。
 
 ## 元数据CSV文件格式 {#metadata-file-format}
 

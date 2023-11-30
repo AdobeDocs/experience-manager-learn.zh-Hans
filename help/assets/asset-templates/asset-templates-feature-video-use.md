@@ -1,6 +1,6 @@
 ---
 title: 在AEM Assets和InDesign Server中使用资源模板
-description: 通过AEM Assets Template，营销人员可以创建、管理和交付数字资产和打印资产。 与InDesign服务器集成后，使用Assets Templates可更轻松地创建营销宣传册、名片、传单、广告和明信片。
+description: AEM Assets Template允许营销人员创建、管理和交付数字资产和打印资产。 与InDesign服务器集成后，使用Assets Templates可更轻松地创建营销宣传册、名片、传单、广告和明信片。
 version: 6.4, 6.5
 topic: Content Management
 feature: Templates
@@ -8,8 +8,9 @@ role: User
 level: Beginner
 last-substantial-update: 2022-09-01T00:00:00Z
 thumbnail: 25170.jpg
+doc-type: Feature Video
 exl-id: 45e0f3d5-db56-44e7-ad68-4d60991a6d77
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -18,11 +19,11 @@ ht-degree: 0%
 
 # 在AEM Assets和InDesign Server中使用资源模板{#using-asset-templates-with-aem-assets-and-indesign-server}
 
-通过AEM Assets Template，营销人员可以创建、管理和交付数字资产和打印资产。 与InDesign服务器集成后，使用Assets Templates可更轻松地创建营销宣传册、名片、传单、广告和明信片。
+AEM Assets Template允许营销人员创建、管理和交付数字资产和打印资产。 与InDesign服务器集成后，使用Assets Templates可更轻松地创建营销宣传册、名片、传单、广告和明信片。
 
 >[!NOTE]
 >
->有关配置InDesign Server的步骤，请查看 [使用InDesign Server设置Assets模板](asset-templates-technical-video-setup.md).
+>有关配置InDesign Server的步骤，请查看 [使用InDesign Server设置资源模板](asset-templates-technical-video-setup.md).
 
 ## 概述 {#overview}
 
@@ -32,6 +33,6 @@ ht-degree: 0%
 
 ## 技术概述 {#technical-overview}
 
-此视频从技术层面更全面概述了AEM Assets声明模板功能，以及AEM如何通过InDesign来简化AEM Assets和内容的构成，以创建丰富且引人入胜的打印体验。
+此视频从技术层面更全面概述了AEM Assets声明模板功能，以及AEM如何通过InDesign来简化AEM Assets和内容的构成，以创建丰富且引人注目的打印体验。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17071?quality=12&learn=on)

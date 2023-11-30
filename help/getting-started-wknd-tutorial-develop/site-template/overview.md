@@ -2,15 +2,15 @@
 title: AEM Sites快速入门 | AEM快速站点创建
 description: 了解如何使用低代码方法通过快速网站创建和预定义网站模板在Adobe Experience Manager中创建您的第一个网站。 使用现成的组件和模板快速启动和运行站点。 使用Adobe XD驱动的主题工作流，仅通过CSS和JavaScript应用品牌特定的样式和自定义设置。 建议新项目和开发人员使用。
 version: Cloud Service
-type: Tutorial
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
 level: Beginner
-kt: 7985
+jira: KT-7985
 thumbnail: 333477.jpg
+doc-type: Tutorial
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%

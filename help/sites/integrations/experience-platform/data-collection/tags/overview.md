@@ -1,12 +1,8 @@
 ---
 title: 集成Experience Platform数据收集标记(Launch)和AEM
 description: Experience Platform数据收集中的标记是Adobe的下一代标记管理解决方案，是部署Adobe Analytics、Target、Audience Manager和更多解决方案的最佳方法。 获取标记（以前称为Launch）的概述以及与Adobe Experience Manager集成的建议。
-topics: integrations
-audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
-doc-type: technical video
-activity: setup
-kt: 5979
+jira: KT-5979
 thumbnail: 39090.jpg
 topic: Integrations
 feature: Integrations
@@ -15,8 +11,9 @@ level: Intermediate
 last-substantial-update: 2022-07-10T00:00:00Z
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 3%
@@ -29,10 +26,10 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已更名为Adobe Experience Platform中的一套数据收集技术。 因此，在整个产品文档中推出了几项术语更改。 请参阅以下内容 [文档](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) ，以了解术语更改的综合参考。
+>Adobe Experience Platform Launch已更名为Adobe Experience Platform中的一套数据收集技术。 因此，产品文档中的术语有一些改动。 请参阅以下内容 [文档](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) 以获取术语更改的综合参考。
 
 
-标记是Adobe Experience Platform的下一代标记管理技术。 标记提供了部署Adobe Analytics、Target、Audience Manager和更多解决方案的最简单方法。 获取标记概述以及与Adobe Experience Manager集成的建议。
+标记是Adobe Experience Platform的下一代标记管理技术。 标记提供了用于部署Adobe Analytics、Target、Audience Manager和更多解决方案的最简单方法。 获取标记概述以及与Adobe Experience Manager集成的建议。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
 
@@ -49,7 +46,7 @@ ht-degree: 3%
 
 ## 高级步骤
 
-+ 在Adobe Experience Platform数据收集中，创建标记属性并将其编辑为 _添加规则_. 则 _添加库_，选择新添加的规则，批准并发布它。
++ 在Adobe Experience Platform数据收集中，创建Tag属性并对其进行编辑 _添加规则_. 则 _添加库_，选择新添加的规则，批准并发布它。
 + 使用现有（或新的）IMS配置连接AEM和标记
 + 在AEM中，创建Launch云服务配置，然后将其应用于现有站点，最后验证Tags属性及其库是否已加载到Published或Author站点上。
 

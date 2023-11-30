@@ -1,15 +1,15 @@
 ---
 title: 专用出口IP地址和VPN的HTTP/HTTPS连接
-description: 了解如何使专用出口IP地址和VPN运行的AEM对外部Web服务发出HTTP/HTTPS请求as a Cloud Service
+description: 了解如何使AEM中的HTTP/HTTPS请求as a Cloud Service于为专用出口IP地址和VPN运行的外部Web服务
 version: Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9354
+jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
-source-git-commit: bdce84fdcc949c8f8d0690ee7110238d8e8d3e42
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 专用出口IP地址和VPN的HTTP/HTTPS连接
 
-HTTP/HTTPS连接会自动用专用出口IP地址或VPN代理出AEMas a Cloud Service，并且它们不需要任何特殊的 `portForwards` 规则。
+HTTP/HTTPS连接会自动用专用出口IP地址或VPN从AEMas a Cloud Service代理，并且它们不需要任何特殊的 `portForwards` 规则。
 
 ## 高级联网支持
 
@@ -36,7 +36,7 @@ HTTP/HTTPS连接会自动用专用出口IP地址或VPN代理出AEMas a Cloud Ser
 
 ## 代码示例
 
-此Java™代码示例是一个可在AEMas a Cloud Service中运行的OSGi服务，该服务通过HTTP连接到8080上的外部Web服务器。 HTTPS（或HTTP）连接会自动通过AEMas a Cloud Service代理，而无需特殊开发。
+此Java™代码示例是一个可在AEMas a Cloud Service中运行的OSGi服务，该服务与8080上的外部Web服务器建立HTTP连接。 HTTPS（或HTTP）连接会自动通过AEMas a Cloud Service进行代理，而无需特殊开发。
 
 >[!NOTE]
 > 建议使用 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) 用于从AEM进行HTTP/HTTPS调用。

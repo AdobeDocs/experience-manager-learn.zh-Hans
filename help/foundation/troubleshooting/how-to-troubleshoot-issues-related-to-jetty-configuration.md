@@ -1,5 +1,5 @@
 ---
-title: 如何解决与AEM中的Jetty配置相关的问题
+title: 如何解决AEM中与Jetty配置相关的问题
 description: 调查与Jetty配置相关问题的步骤
 type: Troubleshooting
 role: Admin
@@ -8,15 +8,16 @@ version: 6.5, Cloud Service
 feature: Developer Tools
 topic: Administration
 index: y
+doc-type: Technical Video
 exl-id: 9025f5a7-1602-47d2-8287-42b5cfd18265
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%
 
 ---
 
-# 如何解决与AEM中的Jetty配置相关的问题
+# 如何解决AEM中与Jetty配置相关的问题
 
 *本视频介绍与AEM中的Jetty配置相关的问题故障排除步骤。*
 

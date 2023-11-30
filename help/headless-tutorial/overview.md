@@ -1,30 +1,31 @@
 ---
-title: AEM中的HeadlessTutorials
+title: AEM 中的 Headless 教程
 description: Adobe Experience Manager的Headless CMS教程集合。 按API、框架和示例应用程序浏览教程。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '503'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
-# AEM中的HeadlessTutorials{#aem-headless-tutorials}
+# AEM 中的 Headless 教程{#aem-headless-tutorials}
 
 {{aem-headless-trials-promo}}
 
-Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将其内容作为JSON交付。 使用实践教程来探索如何使用各种选项并选择适合您的选项。
+Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将其内容作为JSON交付。 使用动手实践教程以了解如何使用各种选项并选择适合您的选项。
 
 >[!TIP]
 >
->本教程集专为喜欢 **通过做来学习**. 如果您偏好从头开始学习概念，请查看 [AEM Headless开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). 这组教程和历程是互补的。
+>本教程集专为喜欢 **通过实践学习**. 如果您希望从头开始学习概念，请查看 [AEM Headless开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). 这组教程和历程是互补的。
 
-## 按API列出的Tutorials
+## 按API显示的Tutorials
 
 <table>
 <tr>
@@ -72,7 +73,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
 
 ## 示例应用程序
 
-示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 下载并安装这些完成的示例以立即开始。
+示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 请下载并安装这些完成的示例以立即开始。
 
 <table>
 <tr>
@@ -120,7 +121,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
 
 ## 按框架Tutorials
 
-根据使用的技术浏览以下教程。 了解AEM如何超越单纯的Headless用例，提供上下文创作和体验管理选项。
+根据使用的技术浏览以下教程。 了解AEM如何超越单纯的Headless用例，提供用于上下文创作和体验管理的选项。
 
 <table>
 <tr>
@@ -175,7 +176,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
     </a>
     </div>
     <p>
-    <em>使用Content Services和REST为移动设备Android™应用程序提供支持。</em>
+    <em>使用Content Services和REST可支持移动设备Android™应用程序。</em>
     </p>
   </td>
   <td>

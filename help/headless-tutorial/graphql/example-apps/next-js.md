@@ -7,12 +7,12 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 10721
+jira: KT-10721
 thumbnail: KT-10721.jpg
 last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
-source-git-commit: 29b9e4a23d8f4ae0494fc43f76f7449062364843
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 1%
@@ -40,9 +40,9 @@ Next.js应用程序可与以下AEM部署选项配合使用。 所有部署都需
 
 此示例Next.js应用程序旨在连接到 __AEM发布__ 服务。
 
-### AEM作者要求
+### AEM创作要求
 
-Next.js旨在连接到 __AEM发布__ 服务，并访问不受保护的内容。 Next.js可以配置为通过连接到AEM作者 `.env` 属性如下所述。 由AEM作者提供的图像需要身份验证，因此访问Next.js应用程序的用户还必须登录到AEM作者。
+Next.js旨在连接到 __AEM发布__ 服务，并访问不受保护的内容。 AEM Next.js可以配置为通过 `.env` 属性如下所述。 由AEM Author提供的图像需要进行身份验证，因此访问Next.js应用程序的用户还必须登录到AEM Author。
 
 ## 使用方法
 
@@ -60,7 +60,7 @@ Next.js旨在连接到 __AEM发布__ 服务，并访问不受保护的内容。 
    ...
    ```
 
-   如果连接到AEM Author服务，则必须提供身份验证，因为默认情况下，AEM Author服务是安全的。
+   如果连接到AEM Author服务，则必须提供身份验证，因为默认情况下AEM Author服务是安全的。
 
    使用本地AEM帐户集 `AEM_AUTH_METHOD=basic` 并在以下位置提供用户名和密码： `AEM_AUTH_USER` 和 `AEM_AUTH_PASSWORD` 属性。
 

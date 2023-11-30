@@ -7,8 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
+doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 1%
@@ -19,9 +20,9 @@ ht-degree: 1%
 
 [目录](./overview.md)
 
-[&lt; — 上一步：什么是“Dispatcher”](./what-is-the-dispatcher.md)
+[&lt; — 上一页：“调度程序”是什么](./what-is-the-dispatcher.md)
 
-本文档说明了AMS标准配置文件集以及此配置标准背后的想法
+本文档介绍AMS标准配置文件集以及此配置标准背后的思路
 
 ## 默认Enterprise Linux文件夹结构
 
@@ -53,12 +54,12 @@ ht-degree: 1%
 当遵循并遵循安装设计/结构时，我们将获得以下好处：
 
 - 更容易支持可预测的布局
-- 以前曾参与过Enterprise Linux HTTPD安装的任何人员都会自动熟悉
-- 允许修补程序周期，操作系统完全支持这些周期，而不会产生任何冲突或进行手动调整
-- 避免误标记文件上下文的SELinux违规
+- 以前在Enterprise Linux HTTPD安装中工作过的人都会自动熟悉
+- 允许修补完全受操作系统支持的周期，不会出现任何冲突或手动调整
+- 避免错误标记的文件上下文的SELinux违规
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-Adobe Managed Services服务器映像通常具有小型操作系统根驱动器。  我们将数据放入一个单独的卷中，该卷通常装载在“/mnt”中。然后我们使用该卷而不是下列默认目录的默认值
+AdobeManaged Services服务器映像通常具有小型操作系统根驱动器。  我们将数据放入一个单独的卷中，该卷通常装载在“/mnt”中。然后，我们将使用该卷而不是下列默认目录的默认值
 
 `DocumentRoot`
 - 默认:`/var/www/html`
@@ -68,8 +69,8 @@ Adobe Managed Services服务器映像通常具有小型操作系统根驱动器�
 - 默认: `/var/log/httpd`
 - AMS： `/mnt/var/log/httpd`
 
-请记住，旧目录和新目录将映射回原始装入点以消除混淆。
-使用单独的卷虽不重要，但值得注意
+请记住，旧目录和新目录将映射回原始装载点，以消除混淆。
+使用单独卷并不重要，但值得注意
 </div>
 
 ## AMS插件
@@ -83,30 +84,30 @@ AMS默认文档根：
    - `/mnt/var/www/author/`
 - 发布:
    - `/mnt/var/www/html/`
-- 全面捕获和运行状况检查维护
+- 全面覆盖和健康检查维护
    - `/mnt/var/www/default/`
 
 ### 暂存和启用的虚拟主机目录
 
-以下目录允许您构建具有暂存区的配置文件，您可以处理文件，并且只能在文件就绪时启用暂存区。
+以下目录允许您构建配置文件，这些文件具有暂存区，您可以处理文件，并且只能在文件准备就绪时启用。
 - `/etc/httpd/conf.d/available_vhosts/`
-   - 此文件夹托管您所有名为的VirtualHost /文件 `.vhost`
+   - 此文件夹托管所有名为的VirtualHost /文件 `.vhost`
 - `/etc/httpd/conf.d/enabled_vhosts/`
-   - 当您准备好使用 `.vhost` 文件，您将 `available_vhosts` 文件夹符号链接，使用相对路径进入 `enabled_vhosts` 目录
+   - 当您准备好使用 `.vhost` 文件，您拥有 `available_vhosts` 使用相对路径将它们与文件夹符号链接 `enabled_vhosts` 目录
 
 ### 其他 `conf.d` 目录
 
-还有一些在Apache配置中常见的片段，我们创建了子目录，以便以一种简洁的方式分隔这些文件，而不是将所有文件放在一个目录中
+还有一些在Apache配置中常见的片段，我们创建了子目录，以便采用简洁的方式分隔这些文件，而不是将所有文件放在一个目录中
 
 #### 重写目录
 
-此目录可以包含所有 `_rewrite.rules` 您创建的包含与Apache Web服务器配合使用的典型RewriteRulesyntax的文件 [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 模块
+此目录可以包含所有 `_rewrite.rules` 您创建的包含与Apache Web服务器相连的典型RewriteRulesyntax的文件 [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 模块
 
 - `/etc/httpd/conf.d/rewrites/`
 
 #### 白名单目录
 
-此目录可以包含所有 `_whitelist.rules` 您创建的包含您的典型 `IP Allow` 或 `Require IP`与Apache Web Server配合使用的语法 [访问控制](https://httpd.apache.org/docs/2.4/howto/access.html)
+此目录可以包含所有 `_whitelist.rules` 您创建的包含您的典型 `IP Allow` 或 `Require IP`与Apache Web Server接触的语法 [访问控制](https://httpd.apache.org/docs/2.4/howto/access.html)
 
 - `/etc/httpd/conf.d/whitelists/`
 
@@ -118,9 +119,9 @@ AMS默认文档根：
 
 ### 特定于Dispatcher模块的配置目录
 
-Apache Web Server极具可扩展性，当模块具有大量配置文件时，最佳实践是在安装基目录下创建自己的配置目录，而不是将默认目录乱七八糟。
+Apache Web Server极具可扩展性，当模块具有大量配置文件时，最佳做法是在安装基目录下创建自己的配置目录，而不是将默认目录乱七八糟。
 
-我们遵循最佳实践，并创建了自己的
+我们遵循最佳实践，创建自己的
 
 #### 模块配置文件目录
 
@@ -128,31 +129,31 @@ Apache Web Server极具可扩展性，当模块具有大量配置文件时，最
 
 #### 暂存和已启用的场
 
-以下目录允许您构建具有暂存区的配置文件，您可以处理文件，并且只能在文件就绪时启用暂存区。
+以下目录允许您构建配置文件，这些文件具有暂存区，您可以处理文件，并且只能在文件准备就绪时启用。
 - `/etc/httpd/conf.dispatcher.d/available_farms/`
    - 此文件夹托管您的所有 `/myfarm {` 已调用的文件 `_farm.any`
 - `/etc/httpd/conf.dispatcher.d/enabled_farms/`
-   - 当您准备好使用场文件时，您可以在available_farms文件夹内使用指向enabled_farms目录的相对路径将它们符号链接
+   - 当您准备好使用场文件时，您可以在available_farms文件夹内使用enabled_farms目录的相对路径将它们与符号链接
 
 ### 其他 `conf.dispatcher.d` 目录
 
-还有其他作为Dispatcher场文件配置的子部分的片段，并且我们创建了子目录以允许干净的方式分隔这些文件，而不会将所有文件放在一个目录中
+还有一些其他片段是Dispatcher场文件配置的子部分，我们创建了子目录，以便以一种简洁的方式分隔这些文件，而不是将所有文件放在一个目录中
 
 #### 缓存目录
 
-此目录包含所有 `_cache.any`， `_invalidate.any` 您创建的文件，其中包含您希望模块如何处理来自AEM的缓存元素以及失效规则语法的规则。  有关本部分的其他详细信息，请参阅此处 [此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+此目录包含所有 `_cache.any`， `_invalidate.any` 您创建的文件，其中包含您希望模块如何处理来自AEM的缓存元素以及失效规则语法的规则。  有关本部分的更多详细信息，请参阅此处 [此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
 
 - `/etc/httpd/conf.dispatcher.d/cache/`
 
 #### 客户端标头目录
 
-此目录可以包含所有 `_clientheaders.any` 您创建的文件，其中包含您希望在收到请求时传递到AEM的客户端标头列表。  有关此部分的更多详细信息，请参阅 [此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)
+此目录可以包含所有 `_clientheaders.any` 您创建的文件，其中包含您希望在请求传入时传递到AEM的客户端标头列表。  有关本部分的更多详细信息包括 [此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 
 #### 筛选器目录
 
-此目录可以包含所有 `_filters.any` 您创建的包含要阻止或允许流量通过Dispatcher到达AEM的所有筛选规则的文件
+此目录可以包含所有 `_filters.any` 您创建的文件，其中包含要阻止或允许流量通过Dispatcher到达AEM的所有筛选规则
 
 - `/etc/httpd/conf.dispatcher.d/filters/`
 
@@ -164,13 +165,13 @@ Apache Web Server极具可扩展性，当模块具有大量配置文件时，最
 
 #### Vhosts目录
 
-此目录可以包含所有 `_vhosts.any` 您创建的文件，其中包含要与特定场与特定后端服务器匹配的域名和路径的列表
+此目录可以包含所有 `_vhosts.any` 您创建的文件，其中包含要与特定场匹配到特定后端服务器的域名和路径列表
 
 - `/etc/httpd/conf.dispatcher.d/vhosts/`
 
 ## 完成文件夹结构
 
-AMS已使用自定义文件扩展名构建每个文件，目的是避免命名空间问题/冲突及任何混淆。
+AMS已使用自定义文件扩展名构建每个文件，旨在避免命名空间问题/冲突及任何混淆。
 
 以下是AMS默认部署中的标准文件集示例：
 
@@ -267,24 +268,24 @@ AMS已使用自定义文件扩展名构建每个文件，目的是避免命名�
 
 ## 保持理想状态
 
-Enterprise Linux具有Apache Webserver软件包(httpd)的修补周期。
+Enterprise Linux具有Apache Webserver包(httpd)的打补丁周期。
 
 安装的默认文件越少，更改就越好，原因在于，如果通过RPM / Yum命令应用了任何修补的安全修复或配置改进，则不会将修复应用到已更改文件的顶部。
 
-相反，它会创建 `.rpmnew` 文件（在原始文件旁边）。  这意味着您将遗漏一些您可能需要的更改，并在配置文件夹中创建更多垃圾。
+相反，它会创建 `.rpmnew` 文件（在原始文件旁边）。  这意味着您将丢失一些您可能想要的更改，并在配置文件夹中创建更多垃圾。
 
-即更新安装期间的RPM将检查 `httpd.conf` 如果它位于 `unaltered` 声明它将 *replace* 文件将得到重要更新。  如果 `httpd.conf` 为 `altered` 那么它 *不会替换* 文件，而是将创建一个名为的引用文件 `httpd.conf.rpmnew` 并且许多所需的修补程序将位于该文件中，不适用于服务启动。
+即更新安装期间的RPM将检查 `httpd.conf` 如果它位于 `unaltered` 声明它将 *replace* 文件将得到重要更新。  如果 `httpd.conf` 是 `altered` 那么它 *不会替换* 文件，而是将创建一个名为的引用文件 `httpd.conf.rpmnew` 并且许多所需的修补程序将位于该文件中，不适用于服务启动。
 
-Enterprise Linux已正确设置，可更好地处理此用例。  它们为您提供了可以扩展或覆盖它们为您设置的缺省的区域。  在httpd的基本安装中，您将找到文件 `/etc/httpd/conf/httpd.conf`，并且其中包含如下语法：
+Enterprise Linux已正确设置，可更好地处理此用例。  它们为您提供了可以扩展或覆盖它们为您设置的默认值的区域。  在httpd的基本安装中，您将找到文件 `/etc/httpd/conf/httpd.conf`，并且其中具有以下语法：
 
 ```
 Include conf.modules.d/.conf
 IncludeOptional conf.d/.conf
 ```
 
-其想法是，Apache希望您在向添加新文件时扩展模块和配置 `/etc/httpd/conf.d/` 和 `/etc/httpd/conf.modules.d/` 文件扩展名为 `.conf`
+其想法是，Apache希望您在向添加新文件时扩展模块和配置 `/etc/httpd/conf.d/` 和 `/etc/httpd/conf.modules.d/` 文件扩展名为的目录 `.conf`
 
-作为将Dispatcher模块添加到Apache时的完美示例，您将创建一个模块 `.so` 文件位置 ` /etc/httpd/modules/` 然后通过将文件添加到来包含它 `/etc/httpd/conf.modules.d/02-dispatcher.conf` 包含加载模块的内容 `.so` 文件
+作为将Dispatcher模块添加到Apache时的完美示例，您将创建一个模块 `.so` 文件位置 ` /etc/httpd/modules/` 然后通过添加文件将其包含在 `/etc/httpd/conf.modules.d/02-dispatcher.conf` 包含加载模块的内容 `.so` 文件
 
 ```
 LoadModule dispatcher_module modules/mod_dispatcher.so
@@ -294,7 +295,7 @@ LoadModule dispatcher_module modules/mod_dispatcher.so
 我们没有修改Apache提供的任何现有文件。  相反，只是将我们的添加到他们打算使用的目录中。
 </div><br/>
 
-现在，我们在文件中使用了模块 <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> 它会初始化模块并加载初始模块特定的配置文件
+现在，我们在文件中使用了模块 <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> 它会初始化模块并加载特定于初始模块的配置文件
 
 ```
 <IfModule disp_apache2.c> 
@@ -303,6 +304,6 @@ LoadModule dispatcher_module modules/mod_dispatcher.so
 </IfModule>
 ```
 
-再次重申，您会注意到我们添加了文件和模块，但没有更改任何原始文件。  这为我们提供了所需的功能，并保护我们免受缺少所需的修补程序修补程序以及保持与包每次升级的最高兼容性级别的影响。
+您会再次注意到我们添加了文件和模块，但没有更改任何原始文件。  这为我们提供了所需的功能，并保护我们免受缺少所需的修补程序修补程序以及保持与包每次升级的最高兼容性级别的影响。
 
 [下一步 — >配置文件说明](./explanation-config-files.md)

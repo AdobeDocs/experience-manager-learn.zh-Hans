@@ -6,10 +6,10 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9356
+jira: KT-9356
 thumbnail: KT-9356.jpeg
 exl-id: ec9d37cb-70b6-4414-a92b-3b84b3f458ab
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 以下高级联网选项支持以下代码示例。
 
-确保 [适当的](../advanced-networking.md#advanced-networking) 在执行本教程之前，已设置高级联网配置。
+确保 [适当](../advanced-networking.md#advanced-networking) 在执行本教程之前，已设置高级联网配置。
 
 | 无高级联网 | [灵活端口出口](../flexible-port-egress.md) | [专用出口IP地址](../dedicated-egress-ip-address.md) | [虚拟专用网络](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -53,7 +53,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 
 ## 代码示例
 
-此Java™代码示例属于通过以下Cloud Manager连接到外部SQL Server Web服务器的OSGi服务 `portForwards` 规则 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作。
+此Java™代码示例是一种OSGi服务，该服务通过以下Cloud Manager连接到外部SQL Server Web服务器 `portForwards` 的规则 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作。
 
 ```json
 ...
@@ -150,7 +150,7 @@ public class MySqlExternalServiceImpl implements ExternalService {
 
 ## MySQL驱动程序依赖关系
 
-AEMas a Cloud Service通常要求您提供Java™数据库驱动程序来支持连接。 AEM通常，提供驱动程序的最佳做法是通过 `all` 包。
+AEMas a Cloud Service通常要求您提供Java™数据库驱动程序来支持连接。 提供驱动程序的最佳方法通常是通过将包含这些驱动程序的OSGi捆绑包工件嵌入到AEM项目 `all` 包。
 
 ### Reactor pom.xml
 

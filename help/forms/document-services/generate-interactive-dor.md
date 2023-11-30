@@ -6,10 +6,10 @@ feature: Forms Service
 topic: Development
 role: Developer
 level: Experienced
-kt: 9226
+jira: KT-9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 0%
@@ -26,13 +26,13 @@ ht-degree: 0%
 
 ### 创建自适应表单
 
-创建自适应表单，并确保自适应表单字段名称的名称与xdp模板中的字段名称相同。
+创建自适应表单并确保自适应表单字段名称的名称与xdp模板中的字段名称相同。
 记下xdp模板的根元素名称。
 ![根元素](assets/xfa-root-element.png)
 
 ### 客户端库
 
-在触发“下载PDF”按钮时，将触发以下代码
+以下代码在触发“下载PDF”按钮时触发
 
 ```javascript
 $(document).ready(function() {
@@ -65,7 +65,7 @@ $(document).ready(function() {
 
 ## 基于XSD架构的自适应表单
 
-如果您的xdp不是基于XSD，请按照以下步骤创建您的自适应表单所基于的XSD（架构）
+如果您的XDP不是基于XSD，请按照以下步骤创建您的自适应表单所基于的XSD（架构）
 
 ### 为XDP生成示例数据
 
@@ -81,7 +81,7 @@ $(document).ready(function() {
 
 ### 创建自适应表单
 
-根据上一步中的XSD创建自适应表单。 关联表单以使用客户端库“irs”。 此客户端库的代码用于对servlet进行POST调用，从而将PDF返回到调用应用程序。以下代码在 _下载PDF_ 已单击
+根据上一步的XSD创建自适应表单。 关联表单以使用客户端库“irs”。 此客户端库具有向servlet进行POST调用的代码，该调用会将PDF返回到调用应用程序。以下代码将在 _下载PDF_ 已单击
 
 ```javascript
 $(document).ready(function() {
@@ -209,7 +209,7 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 }
 ```
 
-在示例代码中，我们从请求对象中提取xdp名称和其他参数。 如果表单不是基于XSD的，则创建要与xdp合并的xml文档。如果表单是基于XSD的，我们只需从自适应表单提交的数据中提取适当的节点，生成xml文档以与xdp模板合并。
+在示例代码中，我们从请求对象中提取xdp名称和其他参数。 如果表单不是基于XSD的，则创建要与xdp合并的xml文档。如果表单是基于XSD的，我们只需从自适应表单提交数据中提取相应的节点，以生成xml文档并与xdp模板合并。
 
 ## 在服务器上部署示例
 
@@ -217,7 +217,7 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 
 1. [下载并安装DevelopingWithServiceUser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. 在Apache Sling服务用户映射器服务DevelopingWithServiceUser.core：getformsresourceresolver=fd-service中添加以下条目
-1. [下载并安装自定义DocumentServices捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). 这有了servlet将数据与XDP模板合并，并使pdf流回
+1. [下载并安装自定义DocumentServices捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). 这有了servlet将数据与XDP模板合并，并流式传输PDF
 1. [导入客户端库](assets/generate-interactive-dor-client-lib.zip)
 1. [导入文章资产（自适应表单、XDP模板和XSD）](assets/generate-interactive-dor-sample-assets.zip)
 1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
@@ -226,4 +226,4 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 
 >[!NOTE]
 >
->您可以使用尝试相同的用例 [不基于xsd的自适应表单](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). 确保将相应的参数传递给irs clientlib中的streampdf.js中的帖子端点。
+>您可以尝试相同的用例，使用 [不基于xsd的自适应表单](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). 确保将相应的参数传递到irs clientlib中的streampdf.js中的post端点。

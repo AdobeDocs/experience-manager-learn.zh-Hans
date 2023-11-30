@@ -1,18 +1,15 @@
 ---
-title: 设置适用于AEM的Sling Dynamic Include
-description: 在Apache HTTP Web Server上运行的AEM Dispatcher中安装和使用Apache Sling Dynamic Include的视频演练。
+title: 为AEM设置Sling Dynamic Include
+description: 有关在Apache HTTP Web Server上运行的AEM Dispatcher中安装和使用Apache Sling Dynamic Include的视频演练。
 version: 6.4, 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
-topics: caching
-activity: develop
-audience: architect, developer
-doc-type: technical video
+doc-type: Technical Video
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 6c504710-be8f-4b44-bd8a-aaf480ae6d8a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 5%
@@ -32,7 +29,7 @@ ht-degree: 5%
 1. 下载并安装 [[!DNL Sling Dynamic Include] 捆绑](https://sling.apache.org/downloads.cgi).
 1. 配置 [!DNL Sling Dynamic Include] 通过 [!DNL OSGi Configuration Factory] 在 **http://&lt;host>：&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**.
 
-   或者，要添加到AEM代码库，请创建相应的 **sling：OsgiConfig** 节点位置：
+   或者，要将添加到AEM代码库，请创建适当的 **sling：OsgiConfig** 节点位于：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -56,7 +53,7 @@ ht-degree: 5%
    -->
    ```
 
-1. （可选）重复上一步以允许组件开启 [可编辑模板的锁定（初始）内容](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/page-templates-editable.html) 将通过提供 [!DNL SDI] 也是。 额外配置的原因是，提供的可编辑模板的锁定内容来自 `/conf` 而不是 `/content`.
+1. （可选）重复上一步，以允许组件位于 [可编辑模板的锁定（初始）内容](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/page-templates-editable.html) 通过以下方式提供 [!DNL SDI] 也一样。 额外配置的原因是，提供的可编辑模板的锁定内容来自 `/conf` 而不是 `/content`.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -150,10 +147,10 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->如果您使用 [!DNL Sling Dynamic Includes] 用于提供edge-side include (ESI)，请确保缓存相关 [调度程序缓存中的响应标头](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). 可能的标头包括：
+>如果您使用 [!DNL Sling Dynamic Includes] 为了提供edge-side include (ESI)，请确保缓存相关 [调度程序缓存中的响应标头](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). 可能的标头包括：
 >
 >* &quot;Cache-Control&quot;
->* &quot;Content-Disposition&quot;
+>* &quot;内容处置&quot;
 >* &quot;Content-Type&quot;
 >* &quot;截止日期&quot;
 >* &quot;Last-Modified&quot;
@@ -161,7 +158,6 @@ ht-degree: 5%
 >* &quot;X-Content-Type-Options&quot;
 >* &quot;Last-Modified&quot;
 >
-
 
 ## 支持材料
 

@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Technical Video
 recommendations: noDisplay, noCatalog
 last-substantial-update: 2023-06-02T00:00:00Z
-kt: 11659
+jira: KT-11659
 thumbnail: 3412876.jpeg
 exl-id: ef5ad335-7278-4c00-beb6-233a3d1e330e
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
@@ -29,4 +29,4 @@ ht-degree: 0%
 >
 > 上面的视频展示了如何使用内容片段控制台扩展来说明App Builder扩展应用程序初始化。 但是，请务必注意，所涵盖的概念可应用于所有AEM UI扩展。
 
-请参阅Adobe Developer文档，了解 [应用程序初始化过程的详细演练](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation/#launch-code-generation-during-project-initialization).
+请参阅Adobe Developer文档以了解 [应用程序初始化过程的详细演练](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation/#launch-code-generation-during-project-initialization).

@@ -3,11 +3,12 @@ title: AEM Foundation视频和教程
 description: 观看我们的视频和教程，获取Adobe Experience Manager Foundation的相关帮助。
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
+doc-type: Catalog
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -93,5 +94,5 @@ Adobe Experience Manager为AEM Sites、Assets和Forms的用户提供了一组常
 
 * [AEMas a Cloud Service教程](/help/cloud-service/overview.md)
 * [AEM Sites视频和教程](/help/sites/overview.md)
-* [AEM Assets视频和教程](/help/assets/overview.md)
+* [AEM Assets 视频和教程](/help/assets/overview.md)
 * [AEM Forms视频和教程](/help/forms/overview.md)

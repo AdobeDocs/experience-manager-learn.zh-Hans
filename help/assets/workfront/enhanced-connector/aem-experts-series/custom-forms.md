@@ -6,13 +6,13 @@ topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, Architect, Developer
 level: Beginner
-kt: 9718
+jira: KT-9718
 thumbnail: 340332.jpeg
 hidefromtoc: false
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 40d76e0c-69f3-4003-9f34-f393e6fb8561
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 1%

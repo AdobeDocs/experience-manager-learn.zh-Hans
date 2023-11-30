@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 9673
+jira: KT-9673
 exl-id: db25e5a2-e1a8-40ad-af97-35604d515450
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 创建批次配置
 
-要使用批处理API，请创建批处理配置并基于该配置执行运行。 以下视频演示了使用API创建批量配置
+要使用批处理API，请创建批处理配置并根据该配置执行运行。 以下视频演示了如何使用API创建批量配置
 
 >[!NOTE]
 >请确保AEM用户属于 ```forms-users``` 组进行API调用。
@@ -34,7 +34,7 @@ ht-degree: 0%
 <baseURL>/config
 ```
 
-以下是创建批处理配置时需要指定的最低配置。 需要在HTTP请求正文中将此作为JSON对象传递
+以下是创建批处理配置时需要指定的最低配置。 这需要在HTTP请求正文中作为JSON对象传递
 
 ```
 {
@@ -50,11 +50,11 @@ ht-degree: 0%
 
 ## 验证批次配置
 
-要验证是否成功创建了批量配置，您可以对以下端点进行GET请求调用
+要验证是否成功创建了批次配置，您可以对以下端点进行GET请求调用
 
 
 ```xml
 <baseURL>/config/monthlystatements
 ```
 
-您只需在HTTP请求正文中传递空JSON对象即可
+您只需在HTTP请求正文中传递一个空JSON对象即可

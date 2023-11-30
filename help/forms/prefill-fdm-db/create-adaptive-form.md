@@ -3,13 +3,13 @@ title: 创建自适应表单
 description: 创建和配置自适应表单以使用表单数据模型的预填充服务
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 5813
+jira: KT-5813
 thumbnail: kt-5813.jpg
 topic: Development
 role: User
 level: Beginner
 exl-id: c8d4eed8-9e2b-458c-90d8-832fc9e0ad3f
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 1%
@@ -18,17 +18,17 @@ ht-degree: 1%
 
 # 创建自适应表单
 
-到目前为止，我们已经创建了以下内容
+到目前为止，我们已经创建了
 
-* 具有2个表的数据库 —  `newhire` 和 `beneficiaries`
+* 包含2个表的数据库 —  `newhire` 和 `beneficiaries`
 * 已配置Apache Sling连接池化数据源
 * 基于RDBMS的表单数据模型
 
-下一步是创建和配置自适应表单以使用表单数据模型。  要抢先一步，你可以 [下载和导入](assets/fdm-demo-af.zip) 示例表单。 示例表单中有一个部分用于显示员工详细信息，另一个部分用于列出员工的受益人。
+下一步是创建和配置自适应表单以使用表单数据模型。  要抢先一步，您可以 [下载和导入](assets/fdm-demo-af.zip) 示例表单。 此示例表单中有一个部分用于显示员工详细信息，另一个部分用于列出员工的受益人。
 
 ## 将表单与表单数据模型关联
 
-本课程随附的示例表单未与任何表单数据模型相关联。 要将表单配置为使用表单数据模型，我们需要执行以下操作：
+本课程随附的示例表单未关联任何表单数据模型。 要将表单配置为使用表单数据模型，我们需要执行以下操作：
 
 * 选择FDMDemo表单
 * 单击 _属性_->_表单模型_
@@ -38,11 +38,11 @@ ht-degree: 1%
 
 ## 配置预填充服务
 
-第一步是关联表单的预填充服务。 要关联预填充服务，请按照以下步骤操作
+第一步是关联表单的预填充服务。 要关联预填充服务，请按照以下所述步骤操作
 
 * 选择 `FDMDemo` 表单
 * 单击 _编辑_ 在编辑模式下打开表单
-* 在内容层次结构中选择表单容器，然后单击扳手图标以打开其属性表
+* 在内容层次结构中选择表单容器，然后单击扳手图标以打开其属性工作表
 * 选择 _表单数据模型预填充服务_ 从“预填充服务”下拉列表中
 * 单击蓝☑以保存更改
 
@@ -60,19 +60,19 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->您可以随意添加其他文本字段并将它们绑定到适当的表单数据模型元素
+>您可以随意添加其他文本字段，并将其绑定到适当的表单数据模型元素
 
 ## 配置受益人表
 
-下一步是以表格形式显示员工的受益人。 提供的示例表单有一个表，其中有4列和单行。 我们需要根据受益人数量来设定增长表。
+下一步是以表格形式显示员工的受益人。 提供的示例表单有一个表，其中有4列和单行。 我们需要根据受益人数量来配置表格。
 
 * 在编辑模式下打开表单。
 * 展开根面板 — >您的受益人 — >表
 * 选择Row1并单击扳手图标以打开其属性表。
-* 将绑定引用设置为 **/newhire/GetEmployeeRefineties**
-* 将“Repeat Settings - Minimum Count（重复设置 — 最小计数）”设置为1，“Maximum Count（最大计数）”设置为5。
-* 您的Row1配置应类似于下面的屏幕快照
-   ![row-configure](assets/configure-row.PNG)
+* 将绑定引用设置为 **/newhire/GetEmployeeRefitures**
+* 将“Repeat Settings - Minimum Count（重复设置 — 最小计数）”设置为1， Maximum Count（最大计数）设置为5。
+* 您的Row1配置应当与下面的屏幕快照类似
+  ![row-configure](assets/configure-row.PNG)
 * 单击蓝☑以保存更改
 
 ## 绑定行单元格
@@ -84,9 +84,9 @@ ht-degree: 1%
 
 | 行单元格 | Bind 引用 |
 |------------|----------------------------------------------|
-| 名字 | /newhire/GetEmployeeRefineties/firstname |
-| 姓氏 | /newhire/GetEmployeeRefineties/lastname |
-| 关系 | /newhire/GetEmployeeRefidentials/relation |
+| 名字 | /newhire/GetEmployeeRefoldificators/firstname |
+| 姓氏 | /newhire/GetEmployeeRefitures/lastname |
+| 关系 | /newhire/GetEmployeeRefliants/relation |
 | 百分比 | /newhire/GetEmployeeRefitures/percentage |
 
 * 单击蓝☑以保存更改
@@ -99,14 +99,14 @@ ht-degree: 1%
 
 ## 疑难解答
 
-我的表单是空白的，没有任何数据
+我的表单为空白，没有任何数据
 
 * 确保表单数据模型返回正确结果。
 * 表单与正确的表单数据模型相关联
 * 检查字段绑定
-* 查看stdout日志文件。 您应该会看到正在写入该文件的empID。如果您没有看到此值，则表示您的表单可能未使用提供的自定义模板。
+* 查看stdout日志文件。 您应该会看到正在写入文件的empID。如果没有看到此值，则表示您的表单可能未使用提供的自定义模板。
 
 未填充表
 
 * 检查Row1绑定
-* 确保正确设置Row1的重复设置（最小值=1和最大值=5或更多）
+* 确保正确设置Row1的重复设置（最小值= 1且最大值= 5或更大）

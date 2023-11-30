@@ -2,19 +2,17 @@
 title: 将体验片段导出到Adobe Target
 description: 了解如何将AEM Experience Fragment发布和导出为Adobe Target选件。
 feature: Experience Fragments
-topics: integrations, authoring
-audience: all
-doc-type: feature video
 version: Cloud Service
-kt: 6350
+jira: KT-6350
 thumbnail: 41245.jpg
 topic: Integrations
 role: User
 level: Intermediate
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: e9c0974d35493a607969124b2906564fc97bcdea
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 4%

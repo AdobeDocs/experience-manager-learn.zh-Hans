@@ -6,10 +6,10 @@ version: 6.5
 topic: Development
 role: Developer
 level: Experienced
-kt: 11470
+jira: KT-11470
 last-substantial-update: 2020-11-12T00:00:00Z
 exl-id: 14ac6ff9-36b4-415e-a878-1b01ff9d3888
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%
@@ -24,11 +24,11 @@ ht-degree: 0%
 https://forms.enablementadobe.com/content/forms/af/testingxml.html?FirstName=John&LastName=Doe
 ```
 
-为完成此用例，创建了新的自适应表单模板并将其与页面组件关联。 在此页面组件中，我们使用jsp获取查询参数并创建可用于填充自适应表单的xml结构。
+要完成此用例，需创建新的自适应表单模板并将其与页面组件关联。 在此页面组件中，我们使用jsp获取查询参数并创建可用于填充自适应表单的xml结构。
 
 有关创建新的自适应表单模板和页面组件的详细信息包括 [此视频中对此进行了说明。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
 
-以下是jsp页面中使用的代码
+以下是在jsp页面中使用的代码
 
 ```java
 java.util.Enumeration enumeration = request.getParameterNames();
@@ -50,7 +50,7 @@ slingRequest.setAttribute("data", dataXml);
 >如果您的表单使用架构，则xml的结构将不同，您必须相应地构建xml。
 
 
-## 在您的系统上部署资产
+## 在系统上部署资源
 
 * [使用包管理器下载并安装自适应表单模板](assets/populate-with-xml.zip)
 * [下载并安装自适应表单示例](assets/populate-af-with-query-paramters-form.zip)

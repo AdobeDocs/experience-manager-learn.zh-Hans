@@ -6,10 +6,10 @@ feature: GraphQL API
 topic: Headless
 role: Developer
 level: Intermediate
-kt: 10254
+jira: KT-10254
 thumbnail: KT-10254.jpeg
 exl-id: 5e3d115b-f3a1-4edc-86ab-3e0713a36d54
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 3%
@@ -18,15 +18,15 @@ ht-degree: 3%
 
 # AEM Headless的本地化内容
 
-AEM提供 [翻译集成框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) 对于Headless内容，允许轻松翻译内容片段和支持资产，以便跨区域设置使用。 该框架用于翻译其他AEM内容，例如页面、体验片段、资源和Forms。 一次 [headless内容已翻译](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=zh-Hans)和发布后，即可供Headless应用程序使用。
+AEM提供 [翻译集成框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) 对于Headless内容，允许轻松翻译内容片段和支持资产，以便跨区域设置使用。 该框架与用于翻译其他AEM内容(如页面、体验片段、资源和Forms)的框架相同。 一次 [headless内容已翻译](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=zh-Hans)和发布后，它便可用于headless应用程序使用。
 
-## 资源文件夹结构{#assets-folder-structure}
+## 资产文件夹结构{#assets-folder-structure}
 
 确保AEM中的本地化内容片段遵循 [推荐的本地化结构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html#recommended-structure).
 
-![本地化的AEM assets文件夹](./assets/localized-content/asset-folders.jpg)
+![本地化的AEM资源文件夹](./assets/localized-content/asset-folders.jpg)
 
-区域设置文件夹必须是同级文件夹，并且文件夹名称而不是标题必须是有效的 [ISO 639-1代码](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 表示文件夹中所包含内容的区域设置。
+区域设置文件夹必须是同级，并且文件夹名称而不是标题必须是有效的 [ISO 639-1代码](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 表示文件夹中所包含内容的区域设置。
 
 区域设置代码也是用于筛选GraphQL查询返回的内容片段的值。
 
@@ -38,7 +38,7 @@ AEM提供 [翻译集成框架](https://experienceleague.adobe.com/docs/experienc
 
 ## GraphQL持久查询
 
-AEM提供 `_locale` GraphQL筛选器，可按区域设置代码自动筛选内容。 例如，查询 [WKND站点项目](https://github.com/adobe/aem-guides-wknd) 可以使用新的持久查询完成 `wknd-shared/adventures-by-locale` 定义为：
+AEM提供 `_locale` 可按区域设置代码自动筛选内容的GraphQL筛选器。 例如，查询 [WKND站点项目](https://github.com/adobe/aem-guides-wknd) 可以使用新的持久查询完成 `wknd-shared/adventures-by-locale` 定义为：
 
 ```graphql
 query($locale: String!) {
@@ -51,13 +51,13 @@ query($locale: String!) {
 }
 ```
 
-此 `$locale` 中使用的变量 `_locale` 筛选器需要区域设置代码(例如 `en`， `en_us`，或 `de`)，如中所指定 [基于AEM资产文件夹的本地化惯例](#assets-folder-structure).
+此 `$locale` 中使用的变量 `_locale` 筛选器需要区域设置代码(例如 `en`， `en_us`，或 `de`)，如中所指定 [基于资产文件夹的AEM本地化惯例](#assets-folder-structure).
 
 ## React示例
 
-让我们创建一个简单的React应用程序，该应用程序通过使用区域设置选择器，控制要从AEM查询的Adventure内容 `_locale` 筛选条件。
+让我们创建一个简单的React应用程序，该应用程序通过使用区域设置选择器控制要从AEM查询哪些Adventure内容 `_locale` 筛选。
 
-时间 __英语__ 在区域设置选择器中选中，然后在 `/content/dam/wknd/en` 在以下情况下返回 __西班牙语__ 选择，然后选择下的西班牙语内容片段 `/content/dam/wknd/es`，等等。
+时间 __英语__ 在区域设置选择器中选中，然后在 `/content/dam/wknd/en` 返回值，当 __西班牙语__ 选择，然后选择下的西班牙语内容片段 `/content/dam/wknd/es`，等等。
 
 ![本地化React示例应用程序](./assets/localized-content/react-example.png)
 
@@ -106,13 +106,13 @@ export default function LocaleSwitcher() {
 }
 ```
 
-### 使用查询内容 `_locale` 过滤器{#adventures}
+### 使用查询内容 `_locale` 筛选{#adventures}
 
-Adventures组件按区域设置查询AEM的所有冒险并列出其标题。 这是通过使用将存储在React上下文中的区域设置值传递到查询来实现的 `_locale` 筛选条件。
+Adventures组件按区域设置查询AEM的所有冒险并列出其标题。 这是通过使用将存储在React上下文中的区域设置值传递到查询来实现的 `_locale` 筛选。
 
 此方法可以扩展到应用程序中的其他查询，确保所有查询仅包含由用户的区域设置选择指定的内容。
 
-在自定义React挂接中执行针对AEM的查询 [getAdventuresByLocale，有关“查询AEM GraphQL”文档的更多详细信息，请参阅](./aem-headless-sdk.md).
+在自定义React挂接中执行针对AEM的查询 [getAdventuresByLocale，有关查询AEM GraphQL文档的更多详细信息](./aem-headless-sdk.md).
 
 ```javascript
 // src/Adventures.js
@@ -140,7 +140,7 @@ export default function Adventures() {
 
 ### 定义 `App.js`{#app-js}
 
-最后，通过将React应用程序与封装在一起， `LanguageContext.Provider` 并设置区域设置值。 这允许其他React组件， [区域设置切换器](#locale-switcher)、和 [冒险](#adventures) 以共享区域设置选择状态。
+最后，通过将React应用程序与封装在一起 `LanguageContext.Provider` 并设置区域设置值。 这允许其他React组件， [区域设置切换器](#locale-switcher)、和 [冒险](#adventures) 以共享区域设置选择状态。
 
 ```javascript
 // src/App.js

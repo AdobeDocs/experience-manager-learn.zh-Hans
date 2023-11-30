@@ -1,14 +1,15 @@
 ---
 title: 在本地AEM上设置资源共享公域
-description: 有关功能和技术了解Assets共享公域的材料
+description: 有关功能和技术方面了解资产共享公域的材料
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-21T00:00:00Z
+doc-type: Technical Video
 exl-id: ab16d5e0-71d9-4518-a03b-4aa5d2ec95a7
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%

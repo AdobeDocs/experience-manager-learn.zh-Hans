@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 9980
+jira: KT-9980
 exl-id: 0e4fd0a0-eaa8-490d-b036-713b25974d60
-source-git-commit: e925b9fa02dc8d4695b85377c5f7f43fbd45ebc8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 # 用JWT交换访问令牌
 
 
-在上一步中创建的JWT会与Adobe IMS API交换访问令牌，然后该令牌可用于访问AEMas a Cloud Service。 要请求访问令牌，请将包含JWT、client_id、client_secret的POST请求发送到IMS身份验证服务。
+在上一步创建的JWT与Adobe IMS API交换访问令牌，然后该令牌可用于访问AEMas a Cloud Service。 要请求访问令牌，请将包含JWT、client_id、client_secret的POST请求发送到IMS身份验证服务。
 
 以下代码用于为访问令牌生成Exchange JWT
 

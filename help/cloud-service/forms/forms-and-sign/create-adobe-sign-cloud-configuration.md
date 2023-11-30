@@ -1,6 +1,6 @@
 ---
 title: 创建Acrobat Sign云配置Cloud Service
-description: 使用Cloud Services配置创建AEM Forms和Acrobat Sign集成。
+description: 使用AEM Forms服务配置创建Cloud Services与Acrobat Sign集成。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -8,12 +8,12 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-kt: 7428
+jira: KT-7428
 thumbnail: 332437.jpg
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 exl-id: a55773a5-0486-413f-ada6-bb589315f0b1
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 1%
@@ -35,6 +35,6 @@ AEM中的云服务配置允许您创建AEM与其他云应用程序之间的集�
 &lt;your instance=&quot;&quot; name=&quot;&quot;>/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/&lt;container>.
 例如 — https://author-p24107-e32034.adobeaemcloud.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/FormsCS。 FormsCS是要包含云配置的容器的名称
 * 确保oAuth URL正确
-* 检查您的客户端Id和客户端密钥
+* 检查您的客户端ID和客户端密码
 * 尝试无痕窗口模式
 

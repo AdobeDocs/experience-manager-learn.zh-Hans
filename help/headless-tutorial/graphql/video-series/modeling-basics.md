@@ -1,23 +1,23 @@
 ---
-title: GraphQL建模基础知识
+title: GraphQL建模基础
 description: 了解如何在Adobe Experience Manager (AEM)中定义和使用内容片段，以便与GraphQL一起使用。
 version: Cloud Service
 topic: Headless, Content Management
 feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
-kt: 7619
+jira: KT-7619
 thumbnail: 332858.jpg
 last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 0d22b06f-bf78-4a54-85be-6a932177f36f
-source-git-commit: c7848e180ab7f95b8c97aef1ea50556cb1566533
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
 
 ---
 
-# GraphQL建模基础知识
+# GraphQL建模基础
 
 了解如何在Adobe Experience Manager (AEM)中定义和使用内容片段，以便与GraphQL一起使用。
 

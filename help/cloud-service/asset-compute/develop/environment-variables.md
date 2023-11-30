@@ -7,13 +7,13 @@ version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6270
+jira: KT-6270
 thumbnail: KT-6270.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: c63c5c75-1deb-4c16-ba33-e2c338ef6251
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 0%
@@ -24,18 +24,18 @@ ht-degree: 0%
 
 ![点环境文件](assets/environment-variables/dot-env-file.png)
 
-在开始开发Asset compute工作人员之前，请确保为项目配置了Adobe I/O和云存储信息。 此信息存储在项目的 `.env`  仅用于本地开发，而不保存在Git中。 此 `.env` file提供了一种向本地Asset compute本地开发环境公开键/值对的便捷方法。 时间 [部署](../deploy/runtime.md) 将员工Asset compute到Adobe I/O Runtime， `.env` 文件未被使用，而是通过环境变量传入值的子集。 其他自定义参数和密钥可以存储在 `.env` 文件，例如第三方Web服务的开发凭据。
+在开始开发Asset compute工作人员之前，请确保为项目配置了Adobe I/O和云存储信息。 此信息存储在项目的 `.env`  仅用于本地开发，而不保存在Git中。 此 `.env` file提供了一种将键/值对公开到本地Asset compute本地开发环境的简便方法。 时间 [部署](../deploy/runtime.md) 将员工Asset compute到Adobe I/O Runtime， `.env` 文件未被使用，而是通过环境变量传入值的子集。 其他自定义参数和密钥可以存储在 `.env` 文件，例如第三方Web服务的开发凭据。
 
 ## 参考 `private.key`
 
 ![私钥](assets/environment-variables/private-key.png)
 
-打开 `.env` 文件，取消注释 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 键，并提供文件系统上到 `private.key` 与添加到Adobe I/OApp Builder项目中的公共证书配对。
+打开 `.env` 文件，取消注释 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 键，并提供文件系统上到 `private.key` 证书与添加到Adobe I/OApp Builder项目中的公共证书配对。
 
 + 如果您的密钥对是由Adobe I/O生成的，则会作为  `config.zip`.
 + 如果您向Adobe I/O提供了公钥，则您还应拥有匹配的私钥。
-+ 如果您没有这些密钥对，可以在底部生成新的密钥对或上传新的公钥：
-   [https://console.adobe.com](https://console.adobe.io) >您的Asset computeApp Builder项目>工作区@开发>服务帐户(JWT)。
++ 如果您没有这些密钥对，则可以在底部生成新的密钥对或上传新的公钥：
+  [https://console.adobe.com](https://console.adobe.io) >您的Asset computeApp Builder项目>工作区@开发>服务帐户(JWT)。
 
 记住 `private.key` 不应将文件签入Git，因为它包含密钥，而是应将其存储在项目外部的安全位置。
 
@@ -49,9 +49,9 @@ ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=/Users/example-user/credentials/aem-guides-w
 
 ## 配置云存储凭据
 
-asset compute工作者的本地发展需要获得 [云存储](../set-up/accounts-and-services.md#cloud-storage). 用于本地开发的云存储凭据在中提供 `.env` 文件。
+asset compute工人在当地的发展需要获得 [云存储](../set-up/accounts-and-services.md#cloud-storage). 用于本地开发的云存储凭据在中提供 `.env` 文件。
 
-本教程倾向于使用Azure Blob Storage，但Amazon S3及其对应的密钥应位于 `.env` 可以改用文件。
+本教程倾向于使用Azure Blob Storage，但Amazon S3及其在中的相应密钥 `.env` 可以改用文件。
 
 ### 使用Azure Blob存储
 
@@ -63,7 +63,7 @@ asset compute工作者的本地发展需要获得 [云存储](../set-up/accounts
 1. 的值 `AZURE_STORAGE_ACCOUNT` 键
 1. 的值 `AZURE_STORAGE_KEY` 键
 
-例如，它看起来可能像（值仅用于图示）：
+例如，它类似于（值仅供说明）：
 
 ```
 ...
@@ -75,15 +75,15 @@ AZURE_STORAGE_CONTAINER_NAME=asset-compute
 
 结果 `.env` 文件如下所示：
 
-![Azure Blob Storage凭据](assets/environment-variables/cloud-storage-credentials.png)
+![Azure Blob存储凭据](assets/environment-variables/cloud-storage-credentials.png)
 
-如果您未使用Microsoft Azure Blob Storage，请删除或将其注释掉(通过添加前缀 `#`)。
+如果您未使用Microsoft Azure Blob Storage，请删除或保留这些注释项(使用前缀 `#`)。
 
 ### 使用Amazon S3云存储{#amazon-s3}
 
 如果您使用的是Amazon S3云存储，请取消注释并填充 `.env` 文件。
 
-例如，它看起来可能像（值仅用于图示）：
+例如，它类似于（值仅供说明）：
 
 ```
 ...
@@ -96,22 +96,22 @@ AWS_REGION=us-east-1
 
 ## 验证项目配置
 
-配置生成的Asset compute项目后，在进行代码更改之前验证配置，以确保在中配置支持服务。 `.env` 文件。
+在配置生成的Asset compute项目后，请在更改代码之前验证配置，以确保在中配置支持服务。 `.env` 文件。
 
-要启动Asset compute项目的Asset compute开发工具，请执行以下操作：
+要为Asset compute项目启动Asset compute开发工具，请执行以下操作：
 
-1. 在Asset compute项目根中打开命令行（在VS代码中，可以直接在IDE中通过“终端”>“新建终端”打开命令行），然后执行命令：
+1. 在Asset compute项目根中打开命令行（在VS代码中，这可以直接在IDE中通过“终端”>“新建终端”打开），然后执行命令：
 
    ```
    $ aio app run
    ```
 
-1. 本地Asset compute开发工具将在默认Web浏览器中打开，网址为 __http://localhost:9000__.
+1. 本地Asset compute开发工具将在您的默认Web浏览器中打开，网址为 __http://localhost:9000__.
 
    ![aio应用程序运行](assets/environment-variables/aio-app-run.png)
 
 1. 在开发工具初始化时，请观察命令行输出和Web浏览器中的错误消息。
-1. 要停止“Asset compute开发工具”，请点按 `Ctrl-C` 在执行 `aio app run` 以终止进程。
+1. 要停止“Asset compute开发工具”，请点按 `Ctrl-C` 在窗口中执行 `aio app run` 以终止进程。
 
 ## 疑难解答
 

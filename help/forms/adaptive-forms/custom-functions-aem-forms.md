@@ -6,10 +6,10 @@ version: 6.5
 topic: Development
 role: User
 level: Beginner
-kt: 9685
+jira: KT-9685
 exl-id: 07fed661-0995-41ab-90c4-abde35a14a4c
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -18,20 +18,20 @@ ht-degree: 0%
 
 # 自定义函数
 
-AEM Forms 6.5引入了定义JavaScript函数的功能，这些函数可用于使用规则编辑器定义复杂的业务规则。
+AEM Forms 6.5引入了用于定义JavaScript函数的功能，这些函数可用于通过规则编辑器定义复杂的业务规则。
 AEM Forms提供了许多现成的此类自定义函数，但您需要定义自己的自定义函数并在多个表单中使用它们。
 
 要定义您的第一个自定义函数，请执行以下步骤：
 * [登录crx](http://localhost:4502/crx/de/index.jsp#/apps/experience-league/clientlibs)
-* 在名为experience-league的应用程序下创建一个新文件夹（此文件夹名称可以是您选择的名称）
+* 在名为experience-league的应用程序下创建新文件夹（此文件夹名称可以是您选择的名称）
 * 保存更改。
 * 在experience-league文件夹下，创建一个名为clientlibs的cq：ClientLibraryFolder类型的新节点。
-* 选择新创建的clientlibs文件夹，然后添加allowProxy和类别属性（如屏幕快照中所示）并保存更改。
+* 选择新创建的clientlibs文件夹并添加allowProxy和类别属性，如屏幕快照中所示，并保存更改。
 
 ![client-lib](assets/custom-functions.png)
 * 创建名为的文件夹 **js** 在 **clientlibs** 文件夹
-* 创建一个名为的文件 **函数.js** 在 **js** 文件夹
-* 创建一个名为的文件 **js.txt** 在 **clientlibs** 文件夹。 保存更改。
+* 创建名为的文件 **函数.js** 在 **js** 文件夹
+* 创建名为的文件 **js.txt** 在 **clientlibs** 文件夹。 保存更改。
 * 您的文件夹结构应类似于下面的屏幕快照。
 
 ![规则编辑器](assets/folder-structure.png)
@@ -71,7 +71,7 @@ function convertUTC(strUTCString)
 }
 ```
 
-请 [请参阅jsdoc ](https://jsdoc.app/index.html)有关对javascript函数添加注释的更多详细信息。
+请 [请参阅jsdoc](https://jsdoc.app/index.html)有关对javascript函数添加注释的更多详细信息。
 上述代码具有两个功能：
 **getCountyNamesList**  — 返回字符串数组
 **convertUTC**  — 将UTC时间戳转换为本地时区
@@ -83,7 +83,7 @@ function convertUTC(strUTCString)
 functions.js
 ```
 
-行#base=js指定JavaScript文件所在的目录。
+#base=js行指定JavaScript文件所在的目录。
 以下行指示JavaScript文件相对于基本位置的位置。
 
 如果您在创建自定义函数时遇到问题，请随时 [下载并安装此包](assets/custom-functions.zip) 在您的AEM实例中。

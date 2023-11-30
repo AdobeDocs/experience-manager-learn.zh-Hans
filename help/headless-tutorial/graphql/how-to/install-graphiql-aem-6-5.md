@@ -6,10 +6,10 @@ topic: Headless
 feature: GraphQL API
 role: Developer
 level: Intermediate
-kt: 11614
+jira: KT-11614
 thumbnail: KT-10253.jpeg
 exl-id: 04fcc24c-7433-4443-a109-f01840ef1a89
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 17%
@@ -37,12 +37,12 @@ ht-degree: 17%
 1. 在 **属性** 选项卡更改值 `endpoint` 属性至 `/content/_cq_graphql/wknd-shared/endpoint.json`.
    ![终结点属性值更改](assets/graphiql/endpoint-prop-value-change.png)
 
-1. 导航到 **Web控制台配置** UI >搜索 **CSRF筛选器** 配置(例如，<http://localhost:4502/system/console/configMgr/com.adobe.granite.csrf.impl.CSRFFilter)>
+1. 导航至 **Web控制台配置** UI >搜索 **CSRF筛选器** 配置(例如，<http://localhost:4502/system/console/configMgr/com.adobe.granite.csrf.impl.CSRFFilter)>
 1. 在 `Excluded Paths` 属性名称字段更新，WKND GraphQL端点路径 `/content/cq:graphql/wknd-shared/endpoint`.
 
-![排除路径属性值更改](assets/graphiql/exclude-paths-value-change.png)
+![Exclude Paths属性值更改](assets/graphiql/exclude-paths-value-change.png)
 
-1. 使用以下方式访问GraphiQL编辑器 `//HOST:PORT/content/graphiql.html`，并确认您可以构建新查询或执行现有查询。 (例如 <http://localhost:4502/content/graphiql.html>)
+1. 使用以下方式访问GraphiQL编辑器 `//HOST:PORT/content/graphiql.html`，并验证您是否可以构造新查询或执行现有查询。 (例如 <http://localhost:4502/content/graphiql.html>)
 
 ![GraphiQL编辑器](assets/graphiql/graphiql-editor.png)
 

@@ -7,9 +7,9 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
-kt: 8848
+jira: KT-8848
 exl-id: 31487027-d528-48ea-b626-a740b94dceb8
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 
 [安装Git](https://git-scm.com/downloads). 您可以选择默认设置并完成安装过程。
-转到命令提示符在git —version中导航到c：\cloudmanager\aem-banking-app type 。 您应该会看到系统上安装的GIT版本
+转到命令提示符在git —version中导航到c：\cloudmanager\aem-banking-app类型。 您应该会看到系统上安装的GIT版本
 
 ## 初始化本地Git存储库
 
@@ -30,13 +30,13 @@ ht-degree: 0%
 git init
 ```
 
-上述命令将初始化项目作为Git本地存储库
+上述命令将作为Git本地存储库初始化项目
 
 ```
 git add .
 ```
 
-这会将所有项目文件添加到Git存储库，以便提交到Git存储库
+这会将所有项目文件添加到Git存储库中，以便提交到Git存储库
 
 ```
 git commit -m "initial commit"
@@ -46,7 +46,7 @@ git commit -m "initial commit"
 
 
 
-## 向我们的本地Git存储库注册Cloud Manager存储库
+## 在本地Git存储库中注册Cloud Manager存储库
 
 访问您的Cloud Manager存储库
 ![访问代表信息](assets/cloud-manager-repo.png)
@@ -65,9 +65,9 @@ git config --global credential.username "gbedekar-adobe-com"
 git config --global user.password "XXXX"
 ```
 
-（密码是您的cloud manager git存储库密码）
+（密码是您的Cloud Manager Git存储库密码）
 
-向本地Git存储库注册Cloud Manager Git存储库。 以下命令将关联 **bankingapp** 使用远程cloud manager git存储库。 您可以使用任何名称，而不是 **bankingapp**
+在本地git存储库中注册cloud manager git存储库。 以下命令将关联 **bankingapp** 使用远程cloud manager git存储库。 您可以使用任何名称，而不是 **bankingapp**
 
 
 ```shell

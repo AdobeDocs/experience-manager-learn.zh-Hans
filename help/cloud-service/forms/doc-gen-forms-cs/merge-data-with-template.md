@@ -7,10 +7,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 8185
+jira: KT-8185
 thumbnail: 332439.jpg
 exl-id: d144b3f6-7c7a-46a7-bc5f-1767895749d0
-source-git-commit: 47d36e472719049de1346c5f0bba010c9af4e039
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 # 进行POST调用
 
 
-下一步是使用必要的参数向端点进行HTTPPOST调用。 模板和数据文件作为资源文件提供。 生成的pdf的属性通过请求中的选项参数指定。embedFonts属性用于在生成的pdf中嵌入自定义字体。[请按照本文档将自定义字体部署到您的Forms云实例。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en) 这些属性在options.json资源文件中指定。 由于端点具有基于令牌的身份验证，因此我们在请求标头中传递访问令牌。
+下一步是使用必要的参数向端点进行HTTPPOST调用。 模板和数据文件作为资源文件提供。 生成的pdf的属性通过请求中的选项参数指定。embedFonts属性用于在生成的pdf中嵌入自定义字体。[请按照本文档将自定义字体部署到Forms云实例。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en) 这些属性在options.json资源文件中指定。 由于端点具有基于令牌的身份验证，因此我们在请求标头中传递访问令牌。
 
 以下代码用于通过将数据与模板合并来生成pdf
 

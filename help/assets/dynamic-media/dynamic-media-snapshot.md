@@ -3,13 +3,14 @@ title: 使用快照探索Dynamic Media映像
 description: Dynamic Media Snapshot是一款可视化演示工具，旨在说明Dynamic Media在优化和动态图像投放方面的强大功能。
 feature: Smart Services, Image Sets, Image Profiles
 version: Cloud Service
-kt: 13269
+jira: KT-13269
 thumbnail: 3419421.jpeg
 topic: Content Management
 role: User
 level: Intermediate
+doc-type: Feature Video
 exl-id: 3f2f3fe4-a3cf-4494-a318-bf82aee20dc7
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 3%

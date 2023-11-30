@@ -3,13 +3,13 @@ title: 将AEM Forms与SendGrid集成
 description: 使用AEM Forms利用基于SengGrid云的电子邮件投放平台。
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 13605
+jira: KT-13605
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2023-07-14T00:00:00Z
 exl-id: 62b73f4b-69d8-4ede-9d57-3d6472d25d5a
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%

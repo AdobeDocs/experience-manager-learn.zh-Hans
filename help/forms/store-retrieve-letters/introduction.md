@@ -1,5 +1,5 @@
 ---
-title: 保存和恢复书信
+title: 保存并恢复信件
 seo-title: Save and resume letters
 description: 了解如何保存和检索草稿信件
 seo-description: Learn how to save and retrieve draft letters
@@ -12,10 +12,10 @@ version: 6.5
 topic: Development
 role: Developer
 level: Intermediate
-kt: 10208
+jira: KT-10208
 exl-id: e032070b-7332-4c2f-97ee-7e887a61aa7a
 last-substantial-update: 2022-01-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 # 简介
 
-交互式通信允许准备临时通信的代理保存部分完成的通信，并检索该通信以继续工作。 AEM Forms为您提供 [服务提供程序接口](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html). 客户应实施此界面以获取保存和恢复功能。
+交互式通信允许准备临时通信的代理保存部分完成的通信并检索该通信以继续工作。 AEM Forms为您提供 [服务提供商接口](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html). 客户应实施此界面以获取保存和恢复功能。
 
 本文使用MySQL数据库存储信件实例的元数据。 信件数据存储在文件系统中。
 
@@ -36,6 +36,6 @@ ht-degree: 0%
 
 您需要以下各项来实施解决方案，以满足您的需求
 
-* AEM Forms的使用体验
-* 带Forms加载项的AEM Server 6.5
+* 使用AEM Forms的工作体验
+* 带Forms附加组件的AEM Server 6.5
 * 在构建OSGi包时应该熟悉

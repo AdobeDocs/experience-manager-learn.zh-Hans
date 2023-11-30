@@ -1,15 +1,15 @@
 ---
 title: 在迁移到AEMas a Cloud Service时配置Dispatcher
-description: 了解对AEM Dispatcher for AEMas a Cloud Service、Dispatcher转换工具以及如何使用Dispatcher Tools SDK的重要更改。
+description: 了解对AEM Dispatcher for AEMas a Cloud Service的重要更改、 Dispatcher转换工具以及如何使用Dispatcher Tools SDK。
 version: Cloud Service
 feature: Dispatcher
 topic: Migration, Upgrade
 role: Developer
 level: Experienced
-kt: 8633
+jira: KT-8633
 thumbnail: 336962.jpeg
 exl-id: 81397b21-b4f3-4024-a6da-a9b681453eff
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 6%
@@ -27,7 +27,7 @@ ht-degree: 6%
 
 ![Dispatcher Converter](./assets/dispatcher-converter-diagram.png)
 
-作为重构代码库的一部分，请使用 [AEM Dispatcher转换器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/dispatcher-transformation-utility-tools.html) 将现有的内部部署或Adobe Managed Services Dispatcher配置重构为与AEMas a Cloud Service兼容的Dispatcher配置。
+作为重构代码库的一部分，请使用 [AEM Dispatcher转换器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/dispatcher-transformation-utility-tools.html) 将现有的内部部署或AdobeManaged Services Dispatcher配置重构为与AEMas a Cloud Service兼容的Dispatcher配置。
 
 ## 关键活动
 
@@ -35,7 +35,7 @@ ht-degree: 6%
 + 从引用Dispatcher模块 [AEM项目原型](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud) 作为最佳实践。
 + [设置本地Dispatcher工具](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) 以验证Dispatcher，然后在Cloud Service环境中进行测试。
 
-## 动手练习
+## 实践练习
 
 通过尝试通过这个实践练习学到的知识来应用您的知识。
 
@@ -60,7 +60,7 @@ ht-degree: 6%
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">使用Dispatcher工具进行操作</div>
             <p style="margin:1rem 0">
-                探索使用AEM SDK的Dispatcher工具来验证Dispatcher配置，以及使用Docker在本地运行AEM Dispatcher。
+                探索使用AEM SDK的Dispatcher工具验证Dispatcher配置以及使用Docker在本地运行AEM Dispatcher。
             </p>
             <a  rel="noreferrer"
                 target="_blank"

@@ -1,11 +1,8 @@
 ---
 title: 在AdobeCloud Manager中使用CI/CD管线
-description: AdobeCloud Manager提供了一个简单但灵活的自助CI/CD管道，允许AEM项目团队快速、安全且一致地将代码部署到在AMS中托管的所有AEM环境。 本视频系列探讨如何在失败和成功情况下设置和执行Cloud Manager的CI/CD管道。
+description: AdobeCloud Manager提供了一个简单但灵活的自助CI/CD管道，允许AEM项目团队快速、安全且一致地将代码部署到AMS中托管的所有AEM环境。 本视频系列探讨如何在失败和成功情况下设置和执行Cloud Manager的CI/CD管道。
 sub-product: Experience Manager Cloud Manager, Experience Manager
-topics: cicd, performance, best-practices, development, governance
-doc-type: feature video
-activity: understand
-audience: all
+doc-type: Feature Video
 topic: Architecture
 feature: Cloud Manager
 role: Developer
@@ -13,7 +10,7 @@ level: Beginner
 exl-id: d5d59ef5-9343-4ac2-9053-a010decdb9b6
 last-substantial-update: 2022-08-15T00:00:00Z
 thumbnail: cm-pipeline.jpg
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 2%
@@ -22,15 +19,15 @@ ht-degree: 2%
 
 # 在AdobeCloud Manager中使用CI/CD管线
 
-AdobeCloud Manager提供了一个简单但灵活的自助CI/CD管道，允许AEM项目团队快速、安全且一致地将代码部署到在AMS中托管的所有AEM环境。 本视频系列探讨如何在失败和成功情况下设置和执行Cloud Manager的CI/CD管道。
+AdobeCloud Manager提供了一个简单但灵活的自助CI/CD管道，允许AEM项目团队快速、安全且一致地将代码部署到AMS中托管的所有AEM环境。 本视频系列探讨如何在失败和成功情况下设置和执行Cloud Manager的CI/CD管道。
 
 ## 简介
 
-Cloud Manager和Cloud Manager程序简介。
+Cloud Manager和Cloud Manager程序的简单介绍。
 
 >[!NOTE]
 >
->通过这些视频，加快了构建、测试和部署时间，从而减少了视频播放时间。 根据项目大小、AEM实例数和UAT流程，完整的管道执行通常需要45分钟或更长时间（包括强制性的30分钟性能测试）。
+>通过这些视频，加快了构建、测试和部署时间，从而减少了视频时间。 根据项目大小、AEM实例数和UAT流程，完整的管道执行通常需要45分钟或更长时间（包括强制性的30分钟性能测试）。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23082?quality=12&learn=on)
 
@@ -42,15 +39,15 @@ Cloud Manager和Cloud Manager程序简介。
 
 ## 管道执行失败
 
-本视频探讨了如何使用代码执行CI/CD管道，该代码未通过Cloud Manager所需的质量检查，使用的是 **[!DNL yellow]** 存储库分支。
+本视频探讨了如何使用代码执行CI/CD管道，该代码未通过Cloud Manager所要求的质量检查，使用的是 **[!DNL yellow]** 存储库分支。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23084?quality=12&learn=on)
 
 ## 管道执行成功
 
-本视频探讨了如何使用代码成功执行CI/CD管道，代码通过Cloud Manager所需的质量检查，使用 **[!DNL master]** 存储库分支。
+本视频探讨了如何使用代码成功执行CI/CD管道，这些代码通过Cloud Manager所需的质量检查，使用 **[!DNL master]** 存储库分支。
 
-此视频还介绍了 [!UICONTROL 活动] cloud Manager中的控制台，允许重新进入活动执行，或查看已完成的或失败的执行。
+本视频还介绍了 [!UICONTROL 活动] cloud Manager中的控制台，允许重新进入活动执行，或查看已完成的或失败的执行。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23085?quality=12&learn=on)
 

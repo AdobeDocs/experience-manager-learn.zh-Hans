@@ -1,15 +1,16 @@
 ---
 title: Java&trade；AEM中的API最佳实践
-description: AEM构建在丰富的开源软件栈栈之上，其中公开许多Java&trade； API以供在开发过程中使用。 本文探讨了主要API以及何时应该使用这些API以及为什么使用它们。
+description: AEM构建在丰富的开源软件栈栈上，其中公开许多Java&trade； API以供在开发期间使用。 本文探讨了主要API以及何时使用它们以及为什么使用它们。
 version: 6.4, 6.5
 feature: APIs
 topic: Development
 role: Developer
 level: Beginner
+doc-type: Article
 exl-id: b613aa65-f64b-4851-a2af-52e28271ce88
 last-substantial-update: 2022-06-24T00:00:00Z
 thumbnail: aem-java-bp.jpg
-source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 2%
@@ -18,7 +19,7 @@ ht-degree: 2%
 
 # Java™ API最佳实践
 
-Adobe Experience Manager (AEM)基于丰富的开源软件栈栈构建，该栈栈公开许多Java™ API以供在开发期间使用。 本文探讨了主要API以及何时应该使用这些API以及为什么使用它们。
+Adobe Experience Manager (AEM)构建在丰富的开源软件栈栈上，该栈栈公开许多Java™ API以供在开发期间使用。 本文探讨了主要API以及何时使用它们以及为什么使用它们。
 
 AEM基于四个主要Java™ API集构建。
 
@@ -38,7 +39,7 @@ AEM基于四个主要Java™ API集构建。
 
    * OSGi应用程序容器抽象，例如服务和(OSGi)组件。
 
-## Java™ API首选项“经验规则”
+## Java™ API首选项“经验法则”
 
 一般规则是按照以下顺序优先使用API/抽象：
 
@@ -47,12 +48,12 @@ AEM基于四个主要Java™ API集构建。
 1. **JCR**
 1. **osgi**
 
-如果AEM提供了API，则首选它而不是 [!DNL Sling]、 JCR和OSGi。 如果AEM不提供API，则首选 [!DNL Sling] JCR和OSGi。
+如果API由AEM提供，则首选它而不是 [!DNL Sling]、 JCR和OSGi。 如果AEM不提供API，则首选 [!DNL Sling] 超过JCR和OSGi。
 
 此顺序是一般规则，表示存在例外。 可以接受脱离此规则的原因包括：
 
 * 众所周知的例外，如下所述。
-* 高级API中没有所需的功能。
+* 所需功能在更高级别的API中不可用。
 * 在现有代码(自定义或AEM产品代码)的上下文中操作，而现有代码本身使用不太首选的API，迁移到新API的成本是不合理的。
 
    * 始终使用较低级别的API比创建混合更好。
@@ -63,9 +64,9 @@ AEM基于四个主要Java™ API集构建。
 
 AEM API提供了特定于产品化用例的抽象和功能。
 
-例如，AEM [PageManager](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) 和 [页面](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) API为以下对象提供抽象概念 `cq:Page` AEM中表示网页的节点。
+例如，AEM [PageManager](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) 和 [页面](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) API为以下对象提供抽象： `cq:Page` AEM中表示网页的节点。
 
-虽然这些节点可通过 [!DNL Sling] API作为资源，JCR API作为节点，AEM API为常见用例提供抽象概念。 使用AEM API可确保AEM产品与AEM的自定义项和扩展之间的行为一致。
+虽然这些节点可通过以下方式使用 [!DNL Sling] API作为资源，JCR API作为节点，AEM API为常见用例提供抽象。 使用AEM API可确保AEM产品与AEM的自定义项和扩展之间的行为一致。
 
 ### com.adobe.&#42; vs com.day.&#42; API
 
@@ -75,11 +76,11 @@ AEM API具有包内首选项，按首选项顺序由以下Java™包标识：
 1. `com.adobe.granite`
 1. `com.day.cq`
 
-此 `com.adobe.cq` 包支持产品用例，而 `com.adobe.granite` 支持跨产品平台用例，例如工作流或任务(跨产品使用：AEM Assets、Sites等)。
+此 `com.adobe.cq` package支持产品用例，而 `com.adobe.granite` 支持跨产品平台用例，例如工作流或任务(跨产品：AEM Assets、Sites等)。
 
-此 `com.day.cq` 包中包含“原始”API。 这些API用于解决在Adobe收购之前和/或收购前后存在的核心抽象和功能 [!DNL Day CQ]. 这些API受支持，应避免使用，除非 `com.adobe.cq` 或 `com.adobe.granite` 包不提供（较新的）替代方案。
+此 `com.day.cq` 包中包含“原始”API。 这些API处理在Adobe收购之前和/或收购前后存在的核心抽象和功能 [!DNL Day CQ]. 这些API受支持，应避免使用，除非 `com.adobe.cq` 或 `com.adobe.granite` 包不提供（较新的）替代方案。
 
-新的抽象概念，例如 [!DNL Content Fragments] 和 [!DNL Experience Fragments] 构建于 `com.adobe.cq` 空格而不是 `com.day.cq` 如下所述。
+新的抽象，例如 [!DNL Content Fragments] 和 [!DNL Experience Fragments] 构建于 `com.adobe.cq` 空格而不是 `com.day.cq` 如下所述。
 
 ### 查询API
 
@@ -87,21 +88,22 @@ AEM支持多种查询语言。 三种主要语言是 [JCR-SQL2](https://docs.jbo
 
 最重要的考虑是在代码库中维护一致的查询语言，以降低复杂性和理解成本。
 
-所有查询语言实际上都具有相同的性能配置文件，例如 [!DNL Apache Oak] 将它们转换为JCR-SQL2以便最终执行查询，与JCR-SQL2的查询时间本身相比，其转换时间可以忽略不计。
+与一样，所有查询语言都有效地具有相同的性能配置文件 [!DNL Apache Oak] 将它们转换到JCR-SQL2以供最终查询执行，并且与JCR-SQL2的查询时间本身相比，转换时间可以忽略不计。
 
-首选的API是 [AEM查询生成器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)，这是最高级别的抽象，为构建、执行和检索查询结果提供了一个强大的API，并提供了以下内容：
+首选的API为 [AEM查询生成器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)，这是最高级别的抽象，提供了一个用于构建、执行和检索查询结果的强大API，并提供了以下内容：
 
-* 简单参数化查询构建（以Map建模的查询参数）
-* 本机 [Java™ API和HTTP API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)
+* 简单、参数化查询构造（以Map建模的查询参数）
+* 原生 [Java™ API和HTTP API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
 * [AEM查询调试器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)
 * [AEM谓词](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-predicate-reference.html) 支持常见查询要求
 
-* 可扩展的API，允许开发自定义 [查询谓词](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)
-* JCR-SQL2和XPath可以直接通过执行 [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) 和 [JCR API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)，返回结果 [[!DNL Sling] 资源](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) 或 [JCR节点](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html)，则不会显示任何内容。
+* 可扩展的API，允许开发自定义 [查询谓词](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
+* JCR-SQL2和XPath可以直接通过执行 [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) 和 [JCR API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)，返回结果 [[!DNL Sling] 资源](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) 或 [JCR节点](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html)、ID名称和ID名称等。
 
 >[!CAUTION]
 >
 >AEM QueryBuilder API泄漏ResourceResolver对象。 要缓解此泄露，请按照以下步骤操作 [代码示例](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/search/querybuilder/impl/SampleQueryBuilder.java#L164).
+>
 
 ## [!DNL Sling] API
 
@@ -109,7 +111,7 @@ AEM支持多种查询语言。 三种主要语言是 [JCR-SQL2](https://docs.jbo
 
 [Apache [!DNL Sling]](https://sling.apache.org/) 是支持AEM的RESTful Web框架。 [!DNL Sling] 提供HTTP请求路由，将JCR节点建模为资源，提供安全上下文等。
 
-[!DNL Sling] API具有为扩展而构建的附加好处，这意味着增强使用构建的应用程序的行为通常更容易、更安全 [!DNL Sling] API比扩展性较低的JCR API好。
+[!DNL Sling] API具有为扩展而构建的其他好处，这意味着增强使用构建的应用程序的行为通常更容易、更安全 [!DNL Sling] API比扩展性较低的JCR API好。
 
 ### 的常见用法 [!DNL Sling] API
 
@@ -123,7 +125,7 @@ AEM支持多种查询语言。 三种主要语言是 [JCR-SQL2](https://docs.jbo
    * [Servlet](https://sling.apache.org/documentation/the-sling-engine/servlets.html)
    * [Servlet过滤器](https://sling.apache.org/documentation/the-sling-engine/filters.html)
 
-* 异步工作处理构建基块
+* 异步处理构建基块
 
    * [事件和作业处理程序](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html)
    * [调度程序](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
@@ -135,15 +137,15 @@ AEM支持多种查询语言。 三种主要语言是 [JCR-SQL2](https://docs.jbo
 
 * **[JCR 2.0 JavaDocs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-此 [JCR (Java™ Content Repository) 2.0 API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) 是JCR实施规范的一部分(对于AEM， [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/))。 所有JCR实施都必须符合并实施这些API，因此，它是与AEM内容进行交互的最低级别API。
+此 [JCR (Java™ Content Repository) 2.0 API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) 是JCR实现规范的一部分(在AEM中， [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/))。 所有JCR实施都必须符合并实施这些API，因此，它是与AEM内容进行交互的最低级别API。
 
-JCR本身是一种基于分层/树的NoSQL数据存储，AEM将其用作内容存储库。 JCR具有大量受支持的API，从内容CRUD到查询内容。 尽管拥有这种强大的API，但相比更高级别的AEM和 [!DNL Sling] 抽象化。
+JCR本身是一种基于分层/树的NoSQL数据存储，AEM将其用作内容存储库。 JCR具有大量受支持的API，从内容CRUD到查询内容。 尽管拥有这种强大的API，但与更高级别的AEM相比，它们很少受到青睐 [!DNL Sling] 抽象。
 
-与Apache Jackrabbit Oak API相比，JCR API始终优先。 JCR API用于 ***交互*** JCR存储库，而Oak API用于 ***实现*** JCR存储库。
+与Apache Jackrabbit Oak API相比，JCR API始终优先。 JCR API用于 ***交互*** JCR存储库，而Oak API用于 ***实施*** JCR存储库。
 
 ### 关于JCR API的常见误解
 
-虽然JCR是AEM内容存储库，但其API不是与内容进行交互的首选方法。 相反，偏好AEM API（Page、Assets、Tag等）或Sling资源API，因为它们提供了更好的抽象化。
+虽然JCR是AEM内容存储库，但其API不是与内容进行交互的首选方法。 相反，您更喜欢AEM API（Page、Assets、Tag等）或Sling资源API，因为它们提供了更好的抽象。
 
 >[!CAUTION]
 >
@@ -156,7 +158,7 @@ JCR本身是一种基于分层/树的NoSQL数据存储，AEM将其用作内容�
 * JCR观察（侦听JCR事件）
 * 创建深层节点结构
 
-   * 虽然Sling API支持创建资源，但JCR API在以下方面提供了便利的方法： [JcrUtils](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/commons/JcrUtils.html) 和 [JcrUtil](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/jcr/JcrUtil.html) 加速深层次结构的形成。
+   * 虽然Sling API支持创建资源，但JCR API在中提供了一些方便的方法 [JcrUtils](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/commons/JcrUtils.html) 和 [JcrUtil](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/jcr/JcrUtil.html) 会加速创造深层的结构。
 
 ## OSGi API
 
@@ -165,17 +167,17 @@ JCR本身是一种基于分层/树的NoSQL数据存储，AEM将其用作内容�
 * **[OSGi Declarative Services 1.2元类型注释JavaDocs](https://docs.osgi.org/javadoc/r6/cmpn/org/osgi/service/metatype/annotations/package-summary.html)**
 * [**OSGi框架JavaDocs**](https://docs.osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html)
 
-OSGi API与更高级别的API (AEM， [!DNL Sling]、和JCR)中，很少需要使用OSGi API，并且需要高水平的AEM开发专业知识。
+OSGi API与更高级的API(AEM， [!DNL Sling]、和JCR)，并且使用OSGi API的需要很少并且需要高水平的AEM开发专业知识。
 
 ### OSGi与Apache Felix API
 
-OSGi定义了所有OSGi容器都必须实现并遵循的规范。 AEM OSGi实施Apache Felix也提供了几个自己的API。
+OSGi定义所有OSGi容器都必须实现并遵循的规范。 AEM OSGi实施Apache Felix也提供了若干自己的API。
 
-* 首选OSGi API (`org.osgi`)通过Apache Felix API (`org.apache.felix`)。
+* 首选OSGi API (`org.osgi`)通过Apache Felix API(`org.apache.felix`)。
 
 ### OSGi API的常见用法
 
-* 声明OSGi服务和组件的OSGi注释。
+* 用于声明OSGi服务和组件的OSGi注释。
 
    * 首选 [OSGi Declarative Services (DS) 1.2注释](https://docs.osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html) 超过 [Felix SCR注释](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html) 声明OSGi服务和组件
 
@@ -189,20 +191,20 @@ OSGi定义了所有OSGi容器都必须实现并遵循的规范。 AEM OSGi实施
 
 ### OSGi API
 
-在处理低级OSGi抽象概念（例如在OSGi组件属性中定义或读取）时，提供的较新抽象概念 `org.osgi` 优先于更高级别的Sling抽象概念。 与之竞争的Sling抽象概念尚未标记为 `@Deprecated` 并提出建议 `org.osgi` 替代项。
+在处理低级OSGi抽象概念（例如在OSGi组件属性中定义或读取）时，提供的较新抽象概念 `org.osgi` 比更高级别的Sling抽象概念更可取。 与之竞争的Sling抽象概念尚未标记为 `@Deprecated` 并提出建议 `org.osgi` 替代项。
 
-另请注意OSGi配置节点定义首选项 `cfg.json` 超过 `sling:OsgiConfig` 格式。
+另请注意OSGi配置节点定义首选 `cfg.json` 超过 `sling:OsgiConfig` 格式。
 
 ### AEM资源API
 
-* 首选 [ `com.day.cq.dam.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/dam/api/package-summary.html) 超过 [ `com.adobe.granite.asset.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/asset/api/package-summary.html).
+* 首选 [`com.day.cq.dam.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/dam/api/package-summary.html) 超过 [`com.adobe.granite.asset.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/asset/api/package-summary.html).
 
-   * 而 `com.day.cq` Assets API为AEM资源管理用例提供了更多免费工具。
+   * 而 `com.day.cq` Assets API为AEM资产管理用例提供了更加免费的工具。
    * Granite Assets API支持低级资产管理用例（版本、关系）。
 
 ### 查询API
 
-* AEM QueryBuilder不支持某些查询函数，例如 [建议](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions)、拼写检查和索引提示以及其他不太常见的函数。 首选使用这些函数进行查询JCR-SQL2。
+* AEM QueryBuilder不支持某些查询函数，例如 [建议](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions)、拼写检查和索引提示以及其他不太常见的函数。 首选使用JCR-SQL2函数进行查询。
 
 ### [!DNL Sling] Servlet注册 {#sling-servlet-registration}
 
@@ -214,7 +216,7 @@ OSGi定义了所有OSGi容器都必须实现并遵循的规范。 AEM OSGi实施
 
 ## 有用的代码段
 
-以下是有用的Java™代码段，这些代码段说明了使用讨论的API的常见用例的最佳实践。 这些代码段还说明了如何从不太首选的API迁移到更首选的API。
+下面是一些有用的Java™代码片段，它们说明了使用讨论的API的常见用例的最佳实践。 这些代码片段还说明了如何从不太首选的API迁移到更首选的API。
 
 ### JCR会话至 [!DNL Sling] ResourceResolver
 
@@ -263,13 +265,13 @@ try {
 Resource resource = ResourceResolver.getResource("/path/to/the/resource");
 ```
 
-### JCR节点至 [!DNL Sling] [!DNL Resource]
+### JCR节点到 [!DNL Sling] [!DNL Resource]
 
 ```java
 Resource resource = resourceResolver.getResource(node.getPath());
 ```
 
-### [!DNL Sling] [!DNL Resource] 到AEM Asset
+### [!DNL Sling] [!DNL Resource] 到AEM资产
 
 #### 推荐的方法
 
@@ -281,13 +283,13 @@ Asset asset = DamUtil.resolveToAsset(resource);
 
 #### 替代方法
 
-将资源调整为适应资源要求资源本身 `dam:Asset` 节点。
+将资源调整为适应资产需要资源本身 `dam:Asset` 节点。
 
 ```java
 Asset asset = resource.adaptTo(Asset.class);
 ```
 
-### [!DNL Sling] “要AEM的资源”页
+### [!DNL Sling] “资源到AEM”页
 
 #### 推荐的方法
 
@@ -301,7 +303,7 @@ Page page2 = pageManager.getContainingPage("/content/path/to/page/jcr:content/or
 
 #### 替代方法 {#alternative-approach-1}
 
-使资源适应页面需要资源本身 `cq:Page` 节点。
+将资源调整为页面需要资源本身 `cq:Page` 节点。
 
 ```java
 Page page = resource.adaptTo(Page.class);
@@ -319,7 +321,7 @@ Calendar value = page.getProperties().get("cq:lastModified", Calendar.getInstanc
 
 ### 读取AEM资源元数据属性
 
-Asset API提供了从读取属性的简便方法 `[dam:Asset]/jcr:content/metadata` 节点。 这不是ValueMap，不支持第二个参数（默认值和自动类型转换）。
+Asset API提供了从读取属性的简便方法 `[dam:Asset]/jcr:content/metadata` 节点。 这不是ValueMap，不支持第二个参数（缺省值和自动类型转换）。
 
 ```java
 Asset asset = resource.adaptTo(Asset.class);
@@ -329,7 +331,7 @@ Calendar lastModified = (Calendar) asset.getMetadata("cq:lastModified");
 
 ### 读取 [!DNL Sling] [!DNL Resource] 属性 {#read-sling-resource-properties}
 
-当资产存储在AEM API(Page、Asset)无法直接访问的位置（资产或相关资源）时， [!DNL Sling] 资源和ValueMaps可用于获取数据。
+当资产存储在AEM API(Page、Asset)无法直接访问的位置（资产或相对资源）时， [!DNL Sling] 可使用资源和ValueMap获取数据。
 
 ```java
 ValueMap properties = resource.getValueMap();
@@ -345,7 +347,7 @@ String relativeResourceValue = properties.get("relative/propertyName", "Default 
 Resource resource = page.adaptTo(Resource.class);
 ```
 
-#### 将AEM资源设置为 [!DNL Sling] [!DNL Resource]
+#### 将AEM资产发送至 [!DNL Sling] [!DNL Resource]
 
 ```java
 Resource resource = asset.adaptTo(Resource.class);
@@ -355,7 +357,7 @@ Resource resource = asset.adaptTo(Resource.class);
 
 使用 [!DNL Sling]的 [ModifiableValueMap](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ModifiableValueMap.html) 将属性写入节点。 这只能写入直接节点（不支持相对属性路径）。
 
-记下对的调用 `.adaptTo(ModifiableValueMap.class)` 需要资源的写入权限，否则返回空值。
+记下对的调用 `.adaptTo(ModifiableValueMap.class)` 需要资源的写入权限，否则返回null。
 
 ```java
 ModifiableValueMap properties = resource.adaptTo(ModifiableValueMap.class);
@@ -369,7 +371,7 @@ resource.getResourceResolver().commit();
 
 ### 创建AEM页面
 
-始终使用PageManager创建页面，因为它需要页面模板，这是在AEM中正确定义和初始化页面所必需的。
+始终使用PageManager创建页面，因为它需要使用“页面模板”，这是在AEM中正确定义和初始化页面所必需的。
 
 ```java
 String templatePath = "/conf/my-app/settings/wcm/templates/content-page";

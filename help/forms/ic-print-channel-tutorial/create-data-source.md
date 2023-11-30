@@ -12,12 +12,12 @@ activity: implement
 version: 6.4,6.5
 targetaudience: target-audience ongoing
 thumbnail: 27765.jpg
-kt: 5954
+jira: KT-5954
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 1f4d88ad-ace1-4f78-be40-da80b3b4d40c
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 1%
@@ -34,4 +34,4 @@ ht-degree: 1%
 
 ## 后续步骤
 
-[根据数据源创建表单数据模型](./create-form-data-model.md)
+[基于数据源创建表单数据模型](./create-form-data-model.md)

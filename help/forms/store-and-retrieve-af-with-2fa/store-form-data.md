@@ -4,13 +4,13 @@ description: 将表单数据与新的附件映射一起存储在数据库中
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6538
+jira: KT-6538
 thumbnail: 6538.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 2bd9fe63-8f42-4b89-95a0-13ade49bc31b
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 2%
@@ -19,8 +19,8 @@ ht-degree: 2%
 
 # 存储表单数据
 
-下一步是创建一个服务，在数据库中插入新行，以存储自适应表单数据和关联的附件sinfo。
-以下屏幕抓图显示了数据库中的行。
+下一步是创建一个服务，在数据库中插入新行，以存储自适应表单数据和关联的附件信息。
+以下屏幕抓图显示了数据库中的一行。
 
 
 ![示例行](assets/sample-row.JPG)

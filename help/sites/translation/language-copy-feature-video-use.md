@@ -1,17 +1,14 @@
 ---
 title: 在AEM Sites中使用语言副本
-description: 通过AEM创建语言副本向导站点翻译增强功能，用户可以使用主控语言创建语言副本，而无需创建根页面。
+description: 利用AEM创建语言副本向导站点翻译增强功能，用户可以从主语言创建语言副本，而无需创建根页面。
 feature: Language Copy
-topics: localization, authoring, content-architecture
-audience: all
-doc-type: feature video
-activity: use
 version: 6.4, 6.5
 topic: Localization
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 49613808-6369-4e43-bc26-fd3041265339
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 5%
@@ -20,7 +17,7 @@ ht-degree: 5%
 
 # 使用语言副本 {#using-language-copy}
 
-通过AEM 6.3 “创建语言副本向导”站点翻译增强功能，用户可以使用主控语言创建语言副本，而无需创建根页面。
+利用AEM 6.3创建语言副本向导站点翻译增强功能，用户可以从主语言创建语言副本，而无需创建根页面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17116?quality=12&learn=on)
 

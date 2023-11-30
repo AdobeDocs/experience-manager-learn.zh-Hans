@@ -7,9 +7,9 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
-kt: 8842
+jira: KT-8842
 exl-id: 274018b9-91fe-45ad-80f2-e7826fddb37e
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 
 
-本教程以后将引用此文件夹结构。
+本教程将引用此文件夹结构。
 
 * [安装JDK 11](https://www.oracle.com/java/technologies/downloads/#java11-windows). 我已下载jdk-11.0.6_windows-x64_bin.zip
 * [Maven](https://maven.apache.org/guides/getting-started/windows-prerequisites.html)例如，如果您在c：\maven文件夹中安装了Maven，则需要创建一个名为M2_HOME的环境变量，其值为C:\maven\apache-maven-3.6.0。然后将M2_HOME\bin添加到路径并保存设置。
@@ -33,8 +33,8 @@ ht-degree: 0%
 
 * 创建名为的文件夹 **cloudmanager**（您可以为其指定任何名称）
 * 打开命令提示符窗口并导航至 **c：\cloudmanager**
-* 复制并粘贴的内容 [文本文件](assets/creating-maven-project.txt) 命令提示符窗口中的。 您可能需要更改DarchetypeVersion=30，具体取决于 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 在撰写本文时，最新版本是30版。
-* 通过按Enter键执行命令。如果一切运行正常，您应会看到生成成功消息。
+* 复制并粘贴的内容 [文本文件](assets/creating-maven-project.txt) 命令提示符窗口中。 您可能需要更改DarchetypeVersion=30，具体取决于 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 在撰写本文时，最新版本是30版。
+* 按Enter键执行命令。如果一切运行正常，您应会看到生成成功消息。
 
 ## 后续步骤
 

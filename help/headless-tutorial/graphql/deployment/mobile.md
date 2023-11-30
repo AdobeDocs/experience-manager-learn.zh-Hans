@@ -6,10 +6,10 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10796
+jira: KT-10796
 thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 2%
@@ -18,13 +18,13 @@ ht-degree: 2%
 
 # AEM Headless移动部署
 
-AEM Headless移动部署是适用于iOS、Android™等的本机移动应用程序。 这些资源以Headless方式消费和与AEM中的内容交互。
+AEM Headless移动部署是iOS、Android™等的原生移动应用程序。 这些组件以Headless方式消费和交互AEM中的内容。
 
 移动部署需要最少的配置，因为到AEM Headless API的HTTP连接不是在浏览器的上下文中启动的。
 
 ## 部署配置
 
-移动应用程序部署必须就地以下部署配置。
+必须为移动应用程序部署就地以下部署配置。
 
 | 移动设备应用程序连接到 | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
@@ -50,7 +50,7 @@ Adobe提供了iOS和Android™移动设备应用程序的示例。
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/ios-swiftui-app.md" title="iOS应用程序">iOS应用程序</a></p>
-                   <p class="is-size-6">以SwiftUI编写的示例iOS应用程序，它使用AEM Headless GraphQL API中的内容。</p>
+                   <p class="is-size-6">以SwiftUI编写的示例iOS应用程序，使用AEM Headless GraphQL API中的内容。</p>
                    <a href="../example-apps/ios-swiftui-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                    </a>

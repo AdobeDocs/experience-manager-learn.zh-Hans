@@ -6,14 +6,14 @@ feature: Security
 topic: Development, Integrations, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9354
+jira: KT-9354
 thumbnail: KT-9354.png
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '468'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -21,14 +21,14 @@ ht-degree: 3%
 
 AEMas a Cloud Service提供高级联网功能，允许精确管理与AEMas a Cloud Service程序的连接。
 
-|  | [生产程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
+|                                                   | [生产项目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
 |---------------------------------------------------|:-----------------------:|:---------------------:|
 | 支持高级联网 | ✔ | ✘ |
 
 
 AEM高级联网包含三个选项，用于管理与外部服务的连接。 Cloud Manager程序及其AEMas a Cloud Service环境一次只能使用一种类型的高级联网配置，因此请确保选择最合适的类型。
 
-|  | 标准端口上的HTTP/HTTPS | 非标准端口上的HTTP/HTTPS | 非HTTP/HTTPS连接 | 专用出口IP | “无代理主机”列表 | 连接到受VPN保护的服务 | 按IP限制AEM发布流量 |
+|                                   | 标准端口上的HTTP/HTTPS | 非标准端口上的HTTP/HTTPS | 非HTTP/HTTPS连接 | 专用出口IP | “无代理主机”列表 | 连接到受VPN保护的服务 | 按IP限制AEM发布流量 |
 |-----------------------------------|:----------------------------:|:--------------------------------:|:--------------------------:|:-------------------:|:-------------------------------------:|:-------------------------------------:|:----:|
 | __无高级联网__ | ✔ | ✘ | ✘ | ✘ | ✘ | ✘ | ✘ |
 | [__灵活端口出口__](./flexible-port-egress.md) | ✔ | ✔ | ✔ | ✘ | ✘ | ✘ | ✘ |
@@ -48,7 +48,7 @@ AEM高级联网包含三个选项，用于管理与外部服务的连接。 Clou
       <a  href="./flexible-port-egress.md"><img alt="灵活端口出口" src="./assets/flexible-port-egress.png"/></a>
       <div><strong><a href="./flexible-port-egress.md">灵活端口出口</a></strong></div>
       <p>
-          允许非标准端口上的出站AEMas a Cloud Service通信。
+          允许非标准端口上的出站AEMas a Cloud Service流量。
       </p>
     </td>   
    <td>
@@ -90,10 +90,10 @@ AEM高级联网包含三个选项，用于管理与外部服务的连接。 Clou
         </p>
     </td>
     <td>
-      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC数据源池的SQL连接" src="./assets//code-examples__sql-osgi.png"/></a>
-      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC数据源池的SQL连接</a></strong></div>
+      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC DataSourcePool的SQL连接" src="./assets//code-examples__sql-osgi.png"/></a>
+      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC DataSourcePool的SQL连接</a></strong></div>
       <p>
-            通过配置AEM JDBC数据源池连接到外部SQL数据库的Java™代码示例。
+            Java™代码示例通过配置AEM JDBC数据源池连接到外部SQL数据库。
       </p>
     </td>   
     </tr><tr>
@@ -108,7 +108,7 @@ AEM高级联网包含三个选项，用于管理与外部服务的连接。 Clou
       <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="应用IP允许列表" src="./assets/code_examples__vpn-allow-list.png"/></a>
       <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">应用IP允许列表</a></strong></div>
       <p>
-            配置IP 允许列表，以便只有VPN流量可以访问AEM。
+            列入允许列表配置IP，以便只有VPN通信可以访问AEM。
       </p>
     </td>
    <td>

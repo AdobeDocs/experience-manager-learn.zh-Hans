@@ -1,14 +1,14 @@
 ---
 title: 远程调试AEM SDK
-description: AEM SDK的本地快速入门允许从IDE进行远程Java调试，从而允许您在AEM中逐步执行实时代码，以了解确切的执行流程。
-kt: 5251
+description: AEM SDK的本地快速启动允许从IDE进行远程Java调试，从而允许您在AEM中逐步执行实时代码，以了解确切的执行流程。
+jira: KT-5251
 topic: Development
 feature: Developer Tools
 role: Developer
 level: Beginner, Intermediate
 thumbnail: 34338.jpeg
 exl-id: beac60c6-11ae-4d0c-a055-cd3d05aeb126
-source-git-commit: 45e7c58efd1d89537752fe7f890c0e80f7be7d67
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -19,24 +19,24 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/34338?quality=12&learn=on)
 
-AEM SDK的本地快速入门允许从IDE进行远程Java调试，从而允许您在AEM中逐步执行实时代码，以了解确切的执行流程。
+AEM SDK的本地快速启动允许从IDE进行远程Java调试，从而允许您在AEM中逐步执行实时代码，以了解确切的执行流程。
 
-要将远程调试器连接到AEM AEM，必须使用特定参数(`-agentlib:...`)允许IDE连接到它。
+要将远程调试器连接到AEM AEM，必须使用特定参数(`-agentlib:...`)允许IDE连接到该节点。
 
 ```
 $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar aem-author-p4502.jar   
 ```
 
 + AEM SDK仅支持Java 11
-+ `address` 指定AEM侦听远程调试连接的端口，并可更改为本地开发计算机上的任何可用端口。
++ `address` 指定AEM侦听远程调试连接的端口，并且可以更改为本地开发计算机上的任何可用端口。
 + 最后一个参数(例如 `aem-author-p4502.jar`)是AEM SKD快速入门Jar。 这可以是AEM Author服务(`aem-author-p4502.jar`)或AEM Publish服务(`aem-publish-p4503.jar`)。
 
 
 ## IDE设置说明
 
-大多数Java IDE都支持Java程序的远程调试，但每个IDE的具体设置步骤各不相同。 请查看IDE的远程调试设置说明，以了解确切步骤。 通常，IDE配置需要：
+大多数Java IDE都支持对Java程序进行远程调试，但每个IDE的具体设置步骤各不相同。 请查看IDE的远程调试设置说明，了解确切步骤。 通常，IDE配置需要：
 
-+ 主机AEM SDK的本地快速入门正在侦听，该快速入门是 `localhost`.
++ 主机AEM SDK的本地快速启动正在侦听，即 `localhost`.
 + AEM SDK的本地快速启动端口正在侦听远程调试连接，该连接是由 `address` 启动AEM SDK的本地快速启动时的参数。
 + 有时候，必须指定向远程调试提供源代码的Maven项目；这是您的OSGi捆绑包maven项目项目。
 

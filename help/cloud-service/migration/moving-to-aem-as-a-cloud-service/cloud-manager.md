@@ -1,15 +1,15 @@
 ---
-title: 将Cloud Manager与AEMas a Cloud Service结合使用
-description: 了解Cloud Manager for AEMas a Cloud Service及其与Cloud Manager for AEM on Adobe Manage Services (AMS)的区别。
+title: 将Cloud Manager与AEMas a Cloud Service配合使用
+description: 了解Cloud Manager for AEMas a Cloud Service，以及它与Cloud Manager for AEM onAdobe管理服务(AMS)的区别。
 version: Cloud Service
 feature: Cloud Manager
 topic: Migration, Upgrade
 role: Architect, Developer
 level: Intermediate, Experienced
-kt: 8632
+jira: KT-8632
 thumbnail: 336961.jpeg
 exl-id: 9c641a90-be62-49c1-b8c0-d45d26055b94
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 2%
@@ -18,17 +18,17 @@ ht-degree: 2%
 
 # Cloud Manager
 
-了解Cloud Manager for AEMas a Cloud Service及其与Cloud Manager for AEM on Adobe Manage Services (AMS)的区别。
+了解Cloud Manager for AEMas a Cloud Service，以及它与Cloud Manager for AEM onAdobe管理服务(AMS)的区别。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336961?quality=12&learn=on)
 
-## 动手练习
+## 实践练习
 
 通过尝试通过这个实践练习学到的知识来应用您的知识。
 
 在尝试动手练习之前，请确保您已观看并了解上述视频以及以下材料：
 
-+ [对AEMas a Cloud Service有不同的思考](./introduction.md)
++ [以不同的方式思考AEMas a Cloud Service](./introduction.md)
 + [入门培训](./onboarding.md)
 
 此外，请确保您已完成之前的实践练习：
@@ -45,7 +45,7 @@ ht-degree: 2%
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
-            <div style="font-size:1.25rem;font-weight:400;">使用Cloud Manager的实践</div>
+            <div style="font-size:1.25rem;font-weight:400;">使用Cloud Manager实践</div>
             <p style="margin:1rem 0">
                 探索使用AIO CLI Cloud Manager插件触发Cloud Manager管道。
             </p>

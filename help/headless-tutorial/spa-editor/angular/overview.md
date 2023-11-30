@@ -3,17 +3,17 @@ title: AEM SPA Editor 和 Angular 快速入门
 description: 创建您的首个 Angular 单页面应用程序 (SPA)，该应用程序可在带 WKND SPA 的 Adobe Experience Manager (AEM) 中编辑。
 topics: development
 version: Cloud Service
-doc-type: tutorial
 activity: develop
 audience: developer
-kt: 5913
+jira: KT-5913
 thumbnail: 5913-spa-angular.jpg
 feature: SPA Editor
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 14%

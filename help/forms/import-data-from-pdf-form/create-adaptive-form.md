@@ -6,8 +6,9 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 14196
-source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
+jira: KT-14196
+exl-id: b286c3e9-70df-46e8-b0bc-21599ab1ec06
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 1%
@@ -48,8 +49,3 @@ ht-degree: 1%
 ## 后续步骤
 
 [创建OSGi服务](./create-osgi-service.md)
-
-
-
-
-

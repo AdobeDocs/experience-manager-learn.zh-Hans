@@ -6,11 +6,11 @@ feature: Security
 topic: Development, Integrations, Security
 role: Architect, Developer
 level: Intermediate
-kt: 10436
+jira: KT-10436
 thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
-source-git-commit: 171daf292355203b903a6c29bebad9216dfd95b7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 3%
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 AEMas a Cloud Service支持多种身份验证选项，并且因服务类型而异。
 
-|  | AEM Author | AEM 发布 |
+|                       | AEM Author | AEM 发布 |
 |-----------------------|:----------:|:-----------:|
 | [Adobe IMS](../accessing/overview.md) | ✔ | ✘ |
 | · [通过Adobe IMS的SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✘ |
@@ -32,7 +32,7 @@ AEMas a Cloud Service支持多种身份验证选项，并且因服务类型而�
 
 ## 身份验证选项
 
-单击下面的相应链接，了解有关如何设置和使用身份验证方法的详细信息。
+有关如何设置和使用身份验证方法的详细信息，请单击下面的相应链接。
 
 <table>
   <tr>

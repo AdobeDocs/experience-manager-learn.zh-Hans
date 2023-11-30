@@ -3,12 +3,12 @@ title: 在SPA中使用Headless自适应表单
 description: 在SPA中实施Headless联系我们表单
 feature: Adaptive Forms
 version: 6.5
-kt: 13285
+jira: KT-13285
 topic: Development
 role: User
 level: Intermediate
 exl-id: 7b457ce8-f11a-4e2b-8548-6ac3910cb61e
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 2%

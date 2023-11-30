@@ -1,19 +1,19 @@
 ---
-title: 与外部应用程序as a Cloud Service向AEM进行身份验证
-description: 探索外部应用程序如何使用本地开发访问令牌和服务凭据以编程方式通过HTTP验证并与AEMas a Cloud Service交互。
+title: as a Cloud Service于外部应用程序向AEM进行身份验证
+description: 探索外部应用程序可怎样使用本地开发访问令牌和服务凭据以编程方式通过HTTP验证并与AEMas a Cloud Service交互。
 version: Cloud Service
-doc-type: tutorial
 topics: Development, Security
 feature: APIs
 activity: develop
 audience: developer
-kt: 6785
+jira: KT-6785
 thumbnail: 330460.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
+doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '641'
 ht-degree: 0%
@@ -22,9 +22,9 @@ ht-degree: 0%
 
 # 向AEMas a Cloud Service进行基于令牌的身份验证
 
-AEM公开了各种可以以无头方式交互的HTTP端点，从GraphQL、AEM Content Services到Assets HTTP API。 通常，这些Headless使用者可能需要向AEM进行身份验证，才能访问受保护的内容或操作。 为了方便此过程，AEM支持对来自外部应用程序、服务或系统的HTTP请求进行基于令牌的身份验证。
+AEM公开了各种可以以无头方式与交互的HTTP端点，从GraphQL、AEM Content Services到Assets HTTP API。 通常，这些Headless使用者可能需要向AEM进行身份验证，才能访问受保护的内容或操作。 为此，AEM支持对来自外部应用程序、服务或系统的HTTP请求进行基于令牌的身份验证。
 
-在本教程中，您将很好地探索外部应用程序如何以编程方式使用访问令牌通过HTTP向AEMas a Cloud Service进行身份验证和与之交互。
+在本教程中，您将很好地探索外部应用程序可怎样使用访问令牌以编程方式通过HTTP向AEMas a Cloud Service进行身份验证和与之交互。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
 
@@ -33,8 +33,8 @@ AEM公开了各种可以以无头方式交互的HTTP端点，从GraphQL、AEM Co
 在执行本教程之前，请确保已满足以下条件：
 
 1. 访问AEMas a Cloud Service环境（最好是开发环境或沙盒程序）
-1. AEMas a Cloud Service环境的Author services AEM管理员产品配置文件中的成员资格
-1. 成为Adobe IMS组织管理员的成员或授予其访问权限(他们将必须执行 [服务凭据](./service-credentials.md))
+1. AEMas a Cloud Service环境的Author services AEM Administrator产品配置文件中的成员资格
+1. 成为Adobe IMS组织管理员的成员或授予其访问权限(这些管理员必须执行 [服务凭据](./service-credentials.md))
 1. 最新 [WKND站点](https://github.com/adobe/aem-guides-wknd) 部署到您的Cloud Service环境
 
 ## 外部应用程序概述
@@ -48,26 +48,26 @@ Node.js应用程序的执行流程如下所示：
 1. 从命令行调用Node.js应用程序
 1. 命令行参数定义：
    + 要连接的AEMas a Cloud Service创作服务主机(`aem`)
-   + 更新了资产的AEM资产文件夹(`folder`)
+   + 资源已更新的AEM资源文件夹(`folder`)
    + 要更新的元数据属性和值(`propertyName` 和 `propertyValue`)
    + 提供访问AEMas a Cloud Service所需的凭据的文件的本地路径(`file`)
-1. 用于对AEM进行身份验证的访问令牌源自通过命令行参数提供的JSON文件 `file`
+1. 用于对AEM进行身份验证的访问令牌派生自通过命令行参数提供的JSON文件 `file`
 
    a.如果在JSON文件中提供了用于非本地开发的服务凭据(`file`)，则从Adobe IMS API中检索访问令牌
 1. 应用程序使用访问令牌访问AEM，并列出在命令行参数中指定的文件夹中的所有资源 `folder`
-1. 对于文件夹中的每个资源，应用程序会根据命令行参数中指定的属性名称和值更新其元数据 `propertyName` 和 `propertyValue`
+1. 对于文件夹中的每个资产，应用程序会根据命令行参数中指定的属性名称和值更新其元数据 `propertyName` 和 `propertyValue`
 
-虽然此示例应用程序是Node.js，但这些交互可以使用不同的编程语言进行开发，并从其他外部系统执行。
+虽然此示例应用程序是Node.js，但这些交互可以使用不同的编程语言进行开发，并从其他外部系统中执行。
 
 ## 本地开发访问令牌
 
-本地开发访问令牌是为特定的AEMas a Cloud Service环境生成的，用于提供对创作和发布服务的访问权限。  这些访问令牌是临时的，只能在开发通过HTTP与AEM交互的外部应用程序或系统期间使用。 开发人员无需获取和管理真实的服务凭据，他们可以快速轻松地自行生成临时访问令牌，从而开发集成。
+本地开发访问令牌是为特定的AEMas a Cloud Service环境生成的，用于提供对创作和发布服务的访问权限。  这些访问令牌是临时的，仅在开发通过HTTP与AEM交互的外部应用程序或系统期间使用。 开发人员无需获取和管理真正的服务凭据，而是可以快速轻松地自行生成临时访问令牌，以便开发集成。
 
 + [如何使用本地开发访问令牌](./local-development-access-token.md)
 
 ## 服务凭据
 
-服务凭据是在任何非开发场景（最明显的是生产场景）中使用的真实凭据，有助于外部应用程序或系统通过HTTP向AEMas a Cloud Service进行身份验证并与之交互。 服务凭据本身不会发送到AEM进行身份验证，而是由外部应用程序使用这些凭据生成JWT，与Adobe IMS的API交换 _对象_ 访问令牌，随后可用于向AEMas a Cloud Service验证HTTP请求。
+服务凭据是在任何非开发场景（最明显的是生产场景）中使用的真实凭据，它们有助于外部应用程序或系统通过HTTP向AEMas a Cloud Service进行身份验证并与之交互。 服务凭据本身不会发送到AEM进行身份验证，外部应用程序会使用这些凭据生成JWT，与Adobe IMS的API交换 _对象_ 访问令牌，随后可用于向AEMas a Cloud Service验证HTTP请求。
 
 + [如何使用服务凭据](./service-credentials.md)
 

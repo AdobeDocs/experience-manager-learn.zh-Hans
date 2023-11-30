@@ -1,15 +1,15 @@
 ---
 title: 创建和配置Dynamics支持的表单数据模型
-description: 创建和配置表单数据模型，以便与Microsoft Dynamics中的实体交互。
+description: 在Microsoft Dynamics中创建并配置表单数据模型以与实体交互。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms, Integrations
 topic: Development
-kt: 9839
+jira: KT-9839
 exl-id: cb26970f-f975-4405-bef6-782d27ab2906
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%

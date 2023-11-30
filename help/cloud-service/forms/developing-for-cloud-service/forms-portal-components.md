@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: Core Components
-kt: 10373
+jira: KT-10373
 exl-id: ab01573a-e95f-4041-8ccf-16046d723aba
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 2%
@@ -18,23 +18,23 @@ ht-degree: 2%
 
 # Forms Portal组件
 
-AEM Forms提供以下现成的门户组件：
+AEM Forms提供了以下开箱即用的门户组件：
 
-**搜索和列表程序**：利用此组件，可将表单存储库中的表单列出到门户页面上，并提供根据指定条件列出表单的配置选项。
+**搜索和列表程序**：利用此组件可将表单存储库中的表单列出到门户页面上，并提供配置选项以根据指定条件列出表单。
 
-**草稿和提交**：当Search &amp; Lister组件显示Forms作者公开表单时，Drafts &amp; Submissions组件显示另存为草稿的表单，以供以后填写和提交的表单。 此组件可为任何登录用户提供个性化体验。
+**草稿和提交**：虽然Search &amp; Lister组件显示由Forms作者公开的表单，但Drafts &amp; Submissions组件显示另存为草稿的表单，以供以后填写和提交的表单。 此组件可为任何登录用户提供个性化体验。
 
-**链接**：利用此组件，可创建指向页面上任何位置的表单的链接。
+**链接**：利用此组件可在页面上的任意位置创建指向表单的链接。
 
 ## 启用Forms Portal组件
 
-启动IntelliJ并打开在 [更早的步骤。](./getting-started.md) 展开ui.apps->src->main->content->jcr_root->apps.bankingapplication->components
+启动IntelliJ并打开在 [之前的步骤。](./getting-started.md) 展开ui.apps->src->main->content->jcr_root->apps.bankingapplication->components
 
-要在Adobe Experience Manager (AEM)站点中使用任何核心组件（包括现成的门户组件），您必须创建一个代理组件并为您的站点启用它。
+要在Adobe Experience Manager (AEM)站点中使用任何核心组件（包括现成的门户组件），您必须创建代理组件并为您的站点启用它。
 新创建的代理组件需要指向现成的表单组件，以便它们继承来自它们的所有内容。 这是通过更改代理组件的content.xml中的resourceSuperType来完成的。 在content.xml中，我们还指定标题和组件组。
 >[!NOTE]
 >
-> 您可以为的每个ID构建资源超类型 [这些组件来自此处](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)
+> 您可以为每个构建资源超类型 [这些组件来自此处](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)
 
 
 ### 草稿和提交

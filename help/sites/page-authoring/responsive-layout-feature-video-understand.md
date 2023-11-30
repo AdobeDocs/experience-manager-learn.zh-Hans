@@ -1,21 +1,16 @@
 ---
 title: 使用AEM Sites了解响应式布局
-seo-title: Understanding Responsive Layout with AEM Sites
 description: AEM 让您能够使用布局容器组件为页面实现响应式布局。通过响应式布局，内容作者可以为不同设备创建响应式内容并预览AEM中的最终用户体验。
-seo-description: Covers the steps to author responsive layout for different devices
 feature: Page Editor, Editable Templates
-topics: authoring, responsive
-audience: author, marketer
-doc-type: feature video
-activity: use
 version: 6.4, 6.5
-kt: 4252
+jira: KT-4252
 thumbnail: 32012.jpg
 topic: Content Management
 role: User
 level: Intermediate
+doc-type: Feature Video
 exl-id: c125c0e0-1ed2-463e-bd34-767d009479eb
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 17%

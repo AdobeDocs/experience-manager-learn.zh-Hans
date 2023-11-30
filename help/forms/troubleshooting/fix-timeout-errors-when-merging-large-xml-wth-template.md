@@ -7,16 +7,16 @@ level: Intermediate
 version: 6.5
 feature: Output Service,Forms Service
 topic: Administration
-kt: 11091
+jira: KT-11091
 exl-id: 933ec5f6-3e9c-4271-bc35-4ecaf6dbc434
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 5%
 
 ---
 
-# 如何通过将大型xml数据文件与xdp模板合并来启用pdf文件的创建
+# 如何通过将大型xml数据文件与xdp模板合并来创建pdf文件
 
 将大型xml数据文件与xdp模板合并时，可能会在日志文件中看到以下错误
 
@@ -30,7 +30,7 @@ POST /services/OutputService/GeneratePdfOutput HTTP/1.1] com.adobe.fd.output.int
 
 * 停止AEM服务器
 * 创建名为的文件夹 **安装** 在AEM安装的crx-quickstart文件夹下
-* 创建一个名为的文件 **org.apache.aries.transaction.config** 安装文件夹下包含以下content aries.transaction.timeout=&quot;1200&quot;。 您可以根据需要更改超时值。 超时值以秒为单位
+* 创建名为的文件 **org.apache.aries.transaction.config** 的安装文件夹下包含以下content aries.transaction.timeout=&quot;1200&quot;。 您可以根据需要更改超时值。 超时值以秒为单位
 
 >[!NOTE]
 > 创建org.apache.aries.transaction配置后，您可以从以下位置编辑事务超时值： [configMgr](http://localhost:4502/system/console/configMgr) 而不是编辑文件

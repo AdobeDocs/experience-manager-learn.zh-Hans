@@ -1,15 +1,16 @@
 ---
 title: 简单搜索实施指南
-description: 简单搜索实施来自2017 Summit实验室AEM Search Demystified的材料。 本页包含本实验中的资料。 有关引导式实验教程，请查看本页“演示”部分中的“实验”工作簿。
+description: 简单搜索实现来自2017 Summit实验室AEM Search Demystified的材料。 本页包含本实验中的资料。 有关引导式实验教程，请查看本页“演示文稿”部分中的“实验”工作簿。
 version: 6.4, 6.5
 feature: Search
 topic: Development
 role: Developer
 level: Intermediate, Experienced
+doc-type: Tutorial
 exl-id: aa268c5f-d29e-4868-a58b-444379cb83be
 last-substantial-update: 2022-08-10T00:00:00Z
 thumbnail: 32090.jpg
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 3%
@@ -18,13 +19,13 @@ ht-degree: 3%
 
 # 简单搜索实施指南{#simple-search-implementation-guide}
 
-Simple search实施提供的资料来自 **Adobe Summit实验室AEM Search Demystified**. 本页包含本实验中的资料。 有关引导式实验教程，请查看本页“演示”部分中的“实验”工作簿。
+Simple search实施是来自 **Adobe Summit实验室AEM Search Demystified**. 本页包含本实验中的资料。 有关引导式实验教程，请查看本页“演示文稿”部分中的“实验”工作簿。
 
 ![搜索架构概述](assets/l4080/simple-search-application.png)
 
 ## 演示材料 {#bookmarks}
 
-* [Lab工作簿](assets/l4080/l4080-lab-workbook.pdf)
+* [实验室工作簿](assets/l4080/l4080-lab-workbook.pdf)
 * [演示文稿](assets/l4080/l4080-presentation.pdf)
 
 ## 书签 {#bookmarks-1}
@@ -40,7 +41,7 @@ Simple search实施提供的资料来自 **Adobe Summit实验室AEM Search Demys
 
 ### 章 {#chapters}
 
-*以下章节链接假定 [初始包](#initialpackages) 安装在AEM作者上的`http://localhost:4502`*
+*以下章节链接采用 [初始包](#initialpackages) 在AEM Author上安装`http://localhost:4502`*
 
 * [第1章](http://localhost:4502/editor.html/content/summit/l4080/chapter-1.html)
 * [第2章](http://localhost:4502/editor.html/content/summit/l4080/chapter-2.html)
@@ -65,7 +66,7 @@ Simple search实施提供的资料来自 **Adobe Summit实验室AEM Search Demys
 * [第2章解决方案](assets/l4080/l4080-chapter2.zip)
 * [第3章解决方案](assets/l4080/l4080-chapter3.zip)
 * [第4章解决方案](assets/l4080/l4080-chapter4.zip)
-* [第5章设置](assets/l4080/l4080-chapter5-setup.zip)
+* [第五章　设置](assets/l4080/l4080-chapter5-setup.zip)
 * [第5章解决方案](assets/l4080/l4080-chapter5-solution.zip)
 * [第6章解决方案](assets/l4080/l4080-chapter6.zip)
 * [第9章解决方案](assets/l4080/l4080-chapter9.zip)
@@ -80,42 +81,41 @@ Simple search实施提供的资料来自 **Adobe Summit实验室AEM Search Demys
 
 ## 更正和跟进 {#corrections-and-follow-up}
 
-实验室讨论的更正和澄清，以及与会者提出的后续问题的回答。
+实验室讨论的更正和说明，以及与会者后续提问的回答。
 
-1. **如何停止重新索引？**
+1. **如何停止重新编制索引？**
 
    可以通过以下方式提供的IndexStats MBean停止重新索引： [AEM Web控制台> JMX](http://localhost:4502/system/console/jmx)
 
    * [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
-      * 执行 `abortAndPause()` 以中止重新索引。 这将锁定索引以进一步重新索引，直到 `resume()` 将会调用。
+      * 执行 `abortAndPause()` 以中止重新编制索引。 这将锁定索引以进一步重新索引，直至 `resume()` 将调用。
       * 正在执行 `resume()` 将重新启动索引过程。
    * 文档： [https://jackrabbit.apache.org/oak/docs/query/indexing.html#async-index-mbean](https://jackrabbit.apache.org/oak/docs/query/indexing.html#async-index-mbean)
 
 2. **Oak索引如何支持多个租户？**
 
-   Oak支持将索引放置到整个内容树中，并且这些索引将仅在该子树中建立索引。 例如 **`/content/site-a/oak:index/cqPageLucene`** 可以创建以仅索引以下内容 **`/content/site-a`.**
+   Oak支持将索引放置到内容树之外，并且这些索引将仅在该子树中索引。 例如 **`/content/site-a/oak:index/cqPageLucene`** 只能创建以索引以下内容 **`/content/site-a`.**
 
-   一个等效的方法是使用 **`includePaths`** 和 **`queryPaths`** 下的索引的属性 **`/oak:index`**. 例如：
+   等效的方法是使用 **`includePaths`** 和 **`queryPaths`** 下的索引的属性 **`/oak:index`**. 例如：
 
    * `/oak:index/siteAcqPageLucene@includePaths=/content/site-a`
    * `/oak:index/siteAcqPageLucene@queryPaths=/content/site-a`
 
    此方法的注意事项包括：
 
-   * 查询必须指定与索引的查询路径范围相等的路径限制，或为索引的查询路径范围的后代。
-   * 范围更广的索引(例如 `/oak:index/cqPageLucene`)也将索引数据，从而导致重复引入和磁盘使用成本。
+   * 查询必须指定与索引的查询路径范围相等的路径限制，或为其子级。
+   * 范围更广的索引(例如 `/oak:index/cqPageLucene`)也将索引数据，从而导致重复摄取和磁盘使用成本。
    * 可能需要重复的配置管理(例如 在多个租户索引中添加相同的indexRules（如果它们必须满足相同的查询集）
-   * 此方法最适合在AEM发布层上用于自定义站点搜索，就像在AEM创作中一样，对于不同的租户（例如，通过OmniSearch），通常在内容树的高处执行查询 — 不同的索引定义可能仅根据路径限制导致不同的行为。
+   * 这种方法最好在AEM发布层上用于自定义站点搜索，就像在AEM Author上一样，对于不同的租户，通常在内容树的高处执行查询（例如，通过OmniSearch） — 不同的索引定义可能会导致仅基于路径限制的不同行为。
 
-
-3. **其中列出了所有可用的Analyser？**
+3. **所有可用Analyser的列表在何处？**
 
    Oak公开了一组用于AEM的lucene提供的分析器配置元素。
 
-   * [Apache Oak Analyser文档](https://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
-      * [Tokenizers](https://cwiki.apache.org/confluence/display/solr/Tokenizers)
+   * [Apache Oak Analysers文档](https://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
+      * [令牌器](https://cwiki.apache.org/confluence/display/solr/Tokenizers)
       * [过滤器](https://cwiki.apache.org/confluence/display/solr/Filter+Descriptions)
-      * [CharFilter](https://cwiki.apache.org/confluence/display/solr/CharFilterFactories)
+      * [CharFilters](https://cwiki.apache.org/confluence/display/solr/CharFilterFactories)
 
 4. **如何在同一查询中搜索页面和资产？**
 
@@ -129,7 +129,7 @@ Simple search实施提供的资料来自 **Adobe Summit实验室AEM Search Demys
    # add all asset restrictions to this group
    ```
 
-   结果产生以下查询和查询计划：
+   查询和查询计划中的结果：
 
    ```plain
    QUERY:(//element(*, cq:Page) | //element(*, dam:Asset))
@@ -139,7 +139,7 @@ Simple search实施提供的资料来自 **Adobe Summit实验室AEM Search Demys
 
    通过以下方式浏览查询和结果 [QueryBuilder Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group) 和 [AEM Chrome插件](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
 
-5. **如何在同一查询中跨多个路径搜索？**
+5. **如何在同一查询中搜索多个路径？**
 
    AEM 6.3的新增功能是在同一提供的查询中跨多个路径进行查询。 以下QueryBuilder查询。 请注意，每个“子查询”都可以解析为自己的索引。
 

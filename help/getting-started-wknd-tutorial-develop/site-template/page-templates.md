@@ -1,17 +1,17 @@
 ---
 title: 页面模板
-description: 了解如何创建和修改页面模板。 了解页面模板与页面之间的关系。 了解如何配置页面模板的策略，以便为内容提供精细的管理和品牌一致性。  根据Adobe XD的模型创建了一个结构良好的杂志文章模板。
+description: 了解如何创建和修改页面模板。 了解页面模板与页面之间的关系。 了解如何配置页面模板的策略，以便为内容提供精细的治理和品牌一致性。  基于Adobe XD的模型创建了一个结构良好的杂志文章模板。
 version: Cloud Service
-type: Tutorial
 topic: Content Management
 feature: Core Components, Editable Templates, Page Editor
 role: Developer
 level: Beginner
-kt: 7498
+jira: KT-7498
 thumbnail: KT-7498.jpg
+doc-type: Tutorial
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 1%
@@ -20,11 +20,11 @@ ht-degree: 1%
 
 # 页面模板 {#page-templates}
 
-在本章中，我们将探讨页面模板与页面之间的关系。 我们将基于来自的一些模型构建一个无样式的杂志文章模板 [AdobeXD](https://www.adobe.com/products/xd.html). 在构建模板的过程中，涵盖了核心组件和高级策略配置。
+在本章中，我们将探讨页面模板与页面之间的关系。 我们将基于来自的一些模型构建一个无样式的杂志文章模板 [AdobeXD](https://www.adobe.com/products/xd.html). 在构建模板的过程中，将涵盖核心组件和高级策略配置。
 
 ## 前提条件 {#prerequisites}
 
-这是一个多部分教程，并假定中概述的步骤 [创作内容和发布更改](./author-content-publish.md) 章节已完成。
+这是一个多部分教程，假定其中包含了 [创作内容和发布更改](./author-content-publish.md) 章节已完成。
 
 ## 目标
 
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 ## 您将构建的内容 {#what-you-will-build}
 
-在本教程的这一可选部分中，您将构建一个新的“杂志文章页面”模板，该模板可用于创建新的杂志文章，并与通用结构保持一致。 该模板基于AdobeXD中的设计和生成的UI套件。 本章仅侧重于构建模板的结构或骨架。 未实施任何样式，但模板和页面可正常使用。
+在本教程的这一可选部分中，您将构建一个新的“杂志文章页面”模板，该模板可用于创建新的杂志文章并与通用结构保持一致。 该模板基于设计和在AdobeXD中生成的UI套件。 本章仅侧重于构建模板的结构或框架。 未实施任何样式，但模板和页面可正常使用。
 
 ## 创建杂志文章页面模板
 
@@ -43,10 +43,10 @@ ht-degree: 1%
 有3个主要区域 [页面模板](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=zh-Hans)：
 
 1. **结构**  — 定义属于模板一部分的组件。 内容作者无法编辑这些内容。
-1. **初始内容**  — 定义模板开始使用的组件，这些组件可由内容作者编辑和/或删除
+1. **初始内容**  — 定义模板开始的组件，内容作者可以编辑和/或删除这些组件
 1. **策略**  — 定义有关组件的行为方式以及作者可用的选项的配置。
 
-接下来，在AEM中创建一个与模型结构匹配的新模板。 这将在AEM的本地实例中发生。 按照以下视频中的步骤操作：
+接下来，在AEM中创建一个与模型结构匹配的新模板。 这将发生在AEM的本地实例中。 按照以下视频中的步骤进行操作：
 
 >[!VIDEO](https://video.tv.adobe.com/v/332915?quality=12&learn=on)
 
@@ -63,19 +63,19 @@ ht-degree: 1%
 
 创建全局内容（如页眉或页脚）时的常见做法是使用 [体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html). 体验片段，允许用户组合多个组件以创建单个可引用的组件。 体验片段具有支持多站点管理和 [本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure).
 
-站点模板生成了页眉和页脚。 接下来，更新体验片段以匹配模型。 按照以下视频中的步骤操作：
+站点模板生成了页眉和页脚。 接下来，更新体验片段以匹配模型。 按照以下视频中的步骤进行操作：
 
 >[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
 
 下面是视频的高级步骤：
 
 1. 下载示例内容包 **[WKND-Starter-Assets-Skate-Article-1.2.zip](assets/page-templates/WKND-Starter-Assets-Skate-Article-1.2.zip)**.
-1. 使用包管理器上传并安装内容包。
+1. 使用包管理器上载并安装内容包。
 1. 更新页眉和页脚体验片段以使用WKND徽标
 
 ## 创建杂志文章页面
 
-接下来，使用杂志文章页面模板创建一个新页面。 创作页面的内容以匹配站点模型。 按照以下视频中的步骤操作：
+接下来，使用“杂志文章页面”模板创建一个新页面。 创作页面的内容以匹配站点模型。 按照以下视频中的步骤进行操作：
 
 >[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
 
@@ -87,7 +87,7 @@ ht-degree: 1%
 
 ### 后续步骤 {#next-steps}
 
-此时，杂志文章页面和网站与WKND的品牌样式不匹配。 请遵循 [主题](theming.md) 本教程将介绍更新用于将全局样式应用于站点的CSS和Javascript前端代码的最佳实践。
+此时，杂志文章页面和站点与WKND的品牌样式不匹配。 请遵循 [主题](theming.md) 本教程将介绍更新用于将全局样式应用于站点的CSS和Javascript前端代码的最佳实践。
 
 ### 解决方案包
 

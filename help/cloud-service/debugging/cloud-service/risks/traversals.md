@@ -1,17 +1,17 @@
 ---
 title: AEMas a Cloud Service中的遍历警告
-description: 了解如何在AEMas a Cloud Service中减轻遍历警告。
+description: 了解如何在AEMas a Cloud Service中缓解遍历警告。
 topics: Migration
 feature: Migration
 role: Architect, Developer
 level: Beginner
-kt: 10427
+jira: KT-10427
 hidefromtoc: true
 hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 11%
@@ -25,16 +25,16 @@ ht-degree: 11%
 
 _什么是遍历警告？_
 
-遍历警告包括 __aemerror__ 日志语句指示AEM Publish服务上正在执行性能不佳的查询。 遍历警告通常以两种方式显示在AEM中：
+遍历警告为 __aemerror__ 日志语句指示AEM Publish服务上正在执行性能不佳的查询。 遍历警告通常以两种方式显示在AEM中：
 
 1. __查询速度慢__ 不使用索引，从而导致响应时间缓慢。
-1. __查询失败__，会掷出 `RuntimeNodeTraversalException`，从而导致体验中断。
+1. __失败的查询__，会掷出 `RuntimeNodeTraversalException`，从而导致体验中断。
 
-允许未选中遍历警告会减慢AEM性能，并可能导致用户体验受损。
+允许取消选中遍历警告会减慢AEM性能，并可能导致用户体验受损。
 
 ## 如何解决遍历警告
 
-可以使用三个简单的步骤来缓解遍历警告：分析、调整和验证。 在确定最佳调整之前，需要反复调整和验证。
+可通过三个简单的步骤来缓解遍历警告：分析、调整和验证。 在确定最优调整之前，需要多次反复调整和验证。
 
 <div class="columns is-multiline">
 
@@ -95,7 +95,7 @@ _什么是遍历警告？_
        <div class="card-content is-padded-small">
            <div class="content">
                 <p class="headline is-size-5 has-text-weight-bold">验证调整是否有效</p>                       
-               <p class="is-size-6">验证对查询和索引的更改会移除遍历。</p>
+               <p class="is-size-6">验证对查询和索引的更改将移除遍历。</p>
                <a href="#verify" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">验证</span>
                </a>
@@ -123,7 +123,7 @@ called by apps.wknd.components.search.example__002e__jsp._jspService;
 consider creating an index or changing the query
 ```
 
-根据查询执行的上下文，log语句可能包含有关查询发起者的有用信息：
+根据查询执行的上下文，日志语句可能包含有关查询发起者的有用信息：
 
 + 与查询执行关联的HTTP请求URL
 
@@ -141,7 +141,7 @@ consider creating an index or changing the query
 
    + 示例:  `apps.wknd.components.search.example__002e__jsp._jspService` → `/apps/wknd/components/search/example.html`
 
-__查询失败__ 后跟一个 `RuntimeNodeTraversalException` 语句，类似于：
+__失败的查询__ 后面跟有 `RuntimeNodeTraversalException` 语句，类似于：
 
 ```log
 24.05.2022 14:18:47.240 [cm-p123-e456-aem-author-9876-edcba] *WARN* [192.150.10.214 [1653401908419] GET /content/wknd/us/en/example.html HTTP/1.1] 
@@ -153,19 +153,19 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
 
 ## 2.调整{#adjust}
 
-一旦发现违规查询及其调用代码，必须进行调整。 可以进行两种类型的调整以减轻遍历警告：
+一旦发现违规查询及其调用代码，必须进行调整。 可以进行两种类型的调整以缓解遍历警告：
 
 ### 调整查询
 
-__更改查询__ 添加可解析为现有索引限制的新查询限制。 如果可能，建议更改查询而不是更改索引。
+__更改查询__ 添加可解决现有索引限制的新查询限制。 如果可能，最好更改查询而不是更改索引。
 
-+ [了解如何调整查询性能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [了解如何优化查询性能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 
 ### 调整索引
 
-__更改（或创建）AEM索引__ 使得现有查询限制对于索引更新是可解析的。
+__更改（或创建）AEM索引__ 以使现有查询限制可解析为索引更新。
 
-+ [了解如何调整现有索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [了解如何优化现有索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 + [了解如何创建索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target="_blank"}
 
 ## 3.验证{#verify}
@@ -174,15 +174,15 @@ __更改（或创建）AEM索引__ 使得现有查询限制对于索引更新是
 
 ![说明查询](./assets/traversals/verify.gif)
 
-如果仅 [查询的调整](#adjust-the-query) 之后，可以通过开发人员控制台在AEMas a Cloud Service上直接测试查询 [说明查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. Explain查询将针对AEM Author服务运行，但是，由于索引定义在Author和Publish服务中是相同的，因此针对AEM Author服务验证查询就足够了。
+如果 [查询的调整](#adjust-the-query) 可以通过开发人员控制台在AEMas a Cloud Service上直接测试查询 [说明查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. 解释查询将针对AEM Author服务运行，但是，由于索引定义在Author和Publish服务中是相同的，因此验证针对AEM Author服务的查询就足够了。
 
-如果 [指数调整](#adjust-the-index) 将索引部署到AEMas a Cloud Service。 部署索引调整后，开发人员控制台将 [说明查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} 可用于进一步执行和优化查询。
+如果 [指数调整](#adjust-the-index) 将生成索引，索引必须部署到AEMas a Cloud Service。 在部署了索引调整后，开发人员控制台将 [说明查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} 可用于进一步执行和优化查询。
 
-最终，所有更改（查询和代码）都会提交到Git并使用Cloud Manager部署到AEMas a Cloud Service。 部署后，将重新测试与原始遍历警告关联的代码路径，并验证遍历警告是否不再出现在 `aemerror` 日志。
+最终，所有更改（查询和代码）都会提交到Git并使用Cloud Manager部署到AEMas a Cloud Service。 部署后，重新测试与原始遍历警告关联的代码路径，并验证遍历警告是否不再出现在 `aemerror` 日志。
 
 ## 其他资源
 
-查看这些其他有用的资源，以了解AEM索引、搜索和遍历警告。
+查看这些其他有用资源，以了解AEM索引、搜索和遍历警告。
 
 <div class="columns is-multiline">
 
@@ -197,7 +197,7 @@ __更改（或创建）AEM索引__ 使得现有查询限制对于索引更新是
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜索和索引">Cloud 5 — 搜索和索引</a></p>
-               <p class="is-size-6">Cloud 5团队展示如何在AEMas a Cloud Service上探索搜索和索引编制的细节。</p>
+               <p class="is-size-6">Cloud 5团队展示如何在AEMas a Cloud Service上探索搜索和索引的细节。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                </a>
@@ -242,7 +242,7 @@ __更改（或创建）AEM索引__ 使得现有查询限制对于索引更新是
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="实现Oak索引的现代化">实现Oak索引的现代化</a></p>
-               <p class="is-size-6">了解如何将AEM 6 Oak索引定义转换为AEMas a Cloud Service兼容的定义，并维护以后的索引。</p>
+               <p class="is-size-6">了解如何将AEM 6 Oak索引定义转换为AEMas a Cloud Service兼容的定义，并在以后维护索引。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                </a>
@@ -264,7 +264,7 @@ __更改（或创建）AEM索引__ 使得现有查询限制对于索引更新是
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="索引定义文档">Lucene索引文档</a></p>
-               <p class="has-ellipsis is-size-6">Apache Oak Jackrabbit Lucene索引引用记录了所有支持的Lucene索引配置。</p>
+               <p class="has-ellipsis is-size-6">Apache Oak Jackrabbit Lucene索引引用记录了所有受支持的Lucene索引配置。</p>
                <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                </a>

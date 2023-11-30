@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
-kt: 11603
+jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: ef2290d9-ba40-429b-b10d-e82d6c1c20f6
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 延期注册
 
-AEM UI扩展是专用的App Builder应用程序，基于React并使用 [React频谱](https://react-spectrum.adobe.com/react-spectrum/) 用户界面框架。
+AEM UI扩展是专门的App Builder应用程序，基于React并使用 [React频谱](https://react-spectrum.adobe.com/react-spectrum/) 用户界面框架。
 
 要定义AEM UI扩展的显示位置和方式，扩展的App Builder应用程序中需要两个配置：应用程序路由和扩展注册。
 
@@ -54,7 +54,7 @@ function App(props) {
 
 `ExtensionRegistration.js` 必须立即通过扩展的索引路径加载，并充当扩展的注册点。
 
-基于在以下情况下选择的AEM UI扩展模板 [初始化App Builder应用程序扩展](./app-initialization.md)中，支持不同的扩展点。
+基于以下情况下选择的AEM UI扩展模板 [初始化App Builder应用程序扩展](./app-initialization.md)中，支持不同的扩展点。
 
 + [内容片段UI扩展点](./content-fragments/overview.md#extension-points)
 
@@ -71,11 +71,11 @@ AEM UI扩展可以执行自定义逻辑以限制该扩展所显示的AEM环境�
 加载扩展时最常见的检查包括：
 
 + 使用AEM主机(`new URLSearchParams(window.location.search).get('repo')`)以确定是否应加载扩展。
-   + 仅在属于特定程序的AEM环境中显示扩展（如下例所示）。
+   + 仅在属于特定项目的AEM环境中显示扩展（如下例所示）。
    + 仅显示特定AEM环境(AEM主机)上的扩展。
-+ 使用 [Adobe I/O Runtime操作](./runtime-action.md) 对AEM进行HTTP调用，以确定当前用户是否应该看到该分机。
++ 使用 [Adobe I/O Runtime操作](./runtime-action.md) 对AEM进行HTTP调用，以确定当前用户是否应看到该扩展。
 
-以下示例说明了如何将扩展限制在程序中的所有环境 `p12345`.
+以下示例说明如何将扩展限制为程序中的所有环境 `p12345`.
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 

@@ -1,15 +1,15 @@
 ---
 title: 将表单附件插入数据库
-description: 使用AEM工作流在数据库中插入表单附件。
+description: 使用AEM Workflow在数据库中插入表单附件。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
 role: Developer
 level: Experienced
-kt: 10488
+jira: KT-10488
 exl-id: e8a6cab8-423b-4a8e-b2b7-9b24ebe23834
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 1%
@@ -25,8 +25,8 @@ ht-degree: 1%
 
 ## 创建数据库表以保存表单数据和附件
 
-已创建一个名为newhire的表格来保存表单数据。 请注意类型的列名图片 **LONGBLOB** 用于存储表单附件
-![table-schema](assets/insert-picture-table.png)
+已创建名为newhire的表，以保存表单数据。 请注意类型的列名图片 **LONGBLOB** 用于存储表单附件
+![表模式](assets/insert-picture-table.png)
 
 ## 创建表单数据模型
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 ## 创建工作流
 
-将自适应表单配置为提交到AEM工作流，您可以选择将表单附件保存在工作流变量中，或将附件保存在有效负荷下的指定文件夹中。 对于此用例，我们需要将附件保存在类型为“文档的数组列表”的工作流变量中。 从这个ArrayList中，我们需要提取第一个项并初始化一个文档变量。 工作流变量名为 **listOfDocuments** 和 **employeePhoto** 创建。
+将自适应表单配置为提交到AEM工作流，您可以选择将表单附件保存在工作流变量中，或将附件保存在有效负荷下的指定文件夹中。 对于此用例，我们需要将附件保存在“文档”的ArrayList类型的工作流变量中。 从此ArrayList中，我们需要提取第一项并初始化文档变量。 工作流变量名为 **listOfDocuments** 和 **employeePhoto** 创建。
 提交自适应表单以触发工作流时，工作流中的一个步骤将使用ECMA脚本初始化employeePhoto变量。 以下是ECMA脚本代码
 
 ```javascript
@@ -53,8 +53,8 @@ metaDataMap.put("employeePhoto", employeePhoto);
 log.info("Employee Photo updated");
 ```
 
-工作流中的下一步是使用调用表单数据模型服务组件将数据和表单附件插入到表中。
-![insert-pic](assets/fdm-insert-pic.png)
+工作流中的下一步是使用调用表单数据模型服务组件将数据和表单附件插入表中。
+![插入图片](assets/fdm-insert-pic.png)
 [可以从此处下载包含示例ecma脚本的完整工作流](assets/add-new-employee.zip).
 
 >[!NOTE]
@@ -62,5 +62,5 @@ log.info("Employee Photo updated");
 
 ## 创建自适应表单
 
-根据上一步中创建的表单数据模型创建自适应表单。 将表单数据模型元素拖放到表单上。 配置表单提交以触发工作流，并指定以下属性，如下面的屏幕快照所示
+根据上一步中创建的表单数据模型创建自适应表单。 将表单数据模型元素拖放到表单上。 配置表单提交以触发工作流，并指定以下属性，如下面的屏幕快照中所示
 ![表单附件](assets/form-attachments.png)

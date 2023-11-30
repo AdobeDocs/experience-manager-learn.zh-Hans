@@ -7,10 +7,10 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 9270
+jira: KT-9270
 exl-id: 13b9cd28-2797-4da9-a300-218e208cd21b
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 2%
@@ -20,13 +20,13 @@ ht-degree: 2%
 # 切换密码字段可见性
 
 一个常见用例是允许表单填充器切换到显示在密码字段中输入的文本。
-为了完成此用例，我使用了 [Font Awesome Library](https://fontawesome.com/). 所需的CSS和eye.svg包含在为此演示创建的客户端库中。
+为完成此用例，我使用了 [Font Awesome Library](https://fontawesome.com/). 所需的CSS和eye.svg包含在为此演示创建的客户端库中。
 
 
 
 ## 示例代码
 
-自适应表单中有一个PasswordBox类型的字段，名为 **ssnField**.
+自适应表单中有一个名为PasswordBox类型的字段 **ssnField**.
 
 加载表单时执行以下代码
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
 });
 ```
 
-以下CSS用于定位 **眼睛** 密码字段中的图标
+以下CSS用于定位 **眼睛** “密码”字段中的图标
 
 ```javascript
 .svg-inline--fa {
@@ -69,6 +69,6 @@ $(document).ready(function() {
 
 * 下载 [客户端库](assets/simple-ui-tips.zip)
 * 下载 [示例表单](assets/simple-ui-tricks-form.zip)
-* 使用导入客户端库 [包管理器UI](http://localhost:4502/crx/packmgr/index.jsp)
+* 使用导入客户端库 [包管理器用户界面](http://localhost:4502/crx/packmgr/index.jsp)
 * 使用导入示例表单 [Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)

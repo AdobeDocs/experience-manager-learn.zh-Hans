@@ -1,18 +1,15 @@
 ---
 title: 在AEM中开发Sling模型导出程序
-description: 本技术演练将逐步介绍如何设置AEM以用于Sling模型导出器、使用导出器框架增强现有Sling模型以呈现为JSON，以及如何使用导出器选项和Jackson注释进一步自定义输出。
+description: 此技术演练将逐步介绍如何设置AEM以与Sling模型导出器一起使用、如何使用导出器框架增强现有Sling模型以呈现为JSON，以及如何使用导出器选项和Jackson注释进一步自定义输出。
 version: 6.4, 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
-topics: content-delivery, development, headless
-activity: develop
-audience: developer
-doc-type: technical video
+doc-type: Technical Video
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: fc321ed1-5cf7-4bbe-adc6-c4905af7b43c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
@@ -21,7 +18,7 @@ ht-degree: 0%
 
 # 开发Sling模型导出程序
 
-本技术演练将逐步介绍如何设置AEM以用于Sling模型导出器、使用导出器框架增强现有Sling模型以呈现为JSON，以及如何使用导出器选项和Jackson注释进一步自定义输出。
+此技术演练将逐步介绍如何设置AEM以与Sling模型导出器一起使用、如何使用导出器框架增强现有Sling模型以呈现为JSON，以及如何使用导出器选项和Jackson注释进一步自定义输出。
 
 Sling模型导出器在Sling模型v1.3.0中引入。这项新功能允许向Sling模型添加新注释，这些注释定义如何将模型导出为不同的Java对象，或者更常见的是，导出为不同的格式，如JSON。
 
@@ -31,13 +28,13 @@ Apache Sling提供了Jackson JSON导出器，以涵盖将Sling模型导出为JSO
 
 >[!VIDEO](https://video.tv.adobe.com/v/16862?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 是 [!DNL Apache Sling] 而不是直接捆绑到AEM产品发行周期。 [!DNL Sling Model Exporter] 与AEM 6.3及更高版本兼容。
+[!DNL Sling Model Exporter] 是 [!DNL Apache Sling] 而不是直接绑定到AEM产品发行周期。 [!DNL Sling Model Exporter] 与AEM 6.3及更高版本兼容。
 
 ## 的用例 [!DNL Sling Model Exporter]
 
 >[!VIDEO](https://video.tv.adobe.com/v/16863?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 非常适合利用已包含业务逻辑的Sling模型，这些业务逻辑通过HTL（或以前的JSP）支持HTML呈现，并显示与JSON相同的业务表示以供程序化Web服务或JavaScript应用程序使用。
+[!DNL Sling Model Exporter] 非常适合利用已包含业务逻辑的Sling模型，这些业务逻辑通过HTL（或以前的JSP）支持HTML呈现，并展示与JSON相同的业务表示以供程序化Web服务或JavaScript应用程序使用。
 
 ## 创建Sling模型导出程序
 
@@ -45,22 +42,22 @@ Apache Sling提供了Jackson JSON导出器，以涵盖将Sling模型导出为JSO
 
 正在启用 [!DNL Exporter] 支持 [!DNL Sling Model] 与添加 `@Exporter` Java类的注释。
 
-## 应用Sling模型导出程序选项
+## 应用Sling模型导出器选项
 
 >[!VIDEO](https://video.tv.adobe.com/v/16865?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 支持将每个模型的导出程序选项传递给导出程序实施，以驱动 [!DNL Sling Model] 最后导出。 这些选项通常“全局”应用于 [!DNL Sling Model] 导出，而不是按数据点导出，后者可通过下面所述的内联注释完成。
+[!DNL Sling Model Exporter] 支持将每个模型的导出器选项传递给导出器实施，以驱动 [!DNL Sling Model] 最终导出。 这些选项通常“全局”应用于 [!DNL Sling Model] 导出，而不是按数据点导出，后者可通过下面所述的内联注释完成。
 
 [!DNL Jackson Exporter] 选项包括：
 
 * [映射器功能选项](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
 * [序列化功能选项](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
 
-## 正在应用 [!DNL Jackson] 批注
+## 正在应用 [!DNL Jackson] 注释
 
 >[!VIDEO](https://video.tv.adobe.com/v/16866?quality=12&learn=on)
 
-导出程序实施还支持可内联应用的注释 [!DNL Sling Model] 类，可以提供更细的控制数据导出方式。
+导出程序实施还支持可在页面上内联应用的注释。 [!DNL Sling Model] 类，可以提供更细的控制数据导出方式。
 
 * [[!DNL Jackson Exporter] 注释](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)
 

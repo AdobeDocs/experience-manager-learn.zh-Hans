@@ -1,5 +1,5 @@
 ---
-title: 测试您对课程的理解的简单练习
+title: 简单的练习可检验您对课程的理解程度
 description: 向表中添加额外的列，向搜索条件添加额外的属性
 feature: Adaptive Forms
 type: Documentation
@@ -8,15 +8,15 @@ level: Beginner
 version: Cloud Service
 topic: Integrationa
 thumbnail: 335800.jpg
-kt: 8481
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+jira: KT-8481
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
-# 检验您对内容的理解
+# 检验您的理解
 
 增强用例，如本视频中所示
 

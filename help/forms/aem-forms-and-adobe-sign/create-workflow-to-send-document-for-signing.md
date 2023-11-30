@@ -1,16 +1,16 @@
 ---
 title: 使用工作流发送文档以供签名
-description: 使用工作流发送文档以供签名。 使用签名文档组件创建AEM工作流。 利用自动生成的DoR发送签名以使用sign组件。 此视频介绍创建有效工作流以发送文档进行签名所需的各种步骤。
+description: 使用工作流发送文档以供签名。 使用签名文档组件创建AEM工作流。 利用自动生成的DoR发送签名（使用签名组件）。 此视频介绍创建有效工作流以发送文档进行签名所需的各种步骤。
 feature: Adaptive Forms,Acrobat Sign
 thumbnail: 38182.jpg
-kt: 6035
+jira: KT-6035
 topic: Development
 role: Developer
 level: Intermediate
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 20093733-2d19-4405-b453-1a8c2722adeb
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # 使用工作流发送文档以供签名
 
-使用签名文档组件创建AEM工作流。 利用自动生成的DoR发送签名以使用sign组件。
+使用签名文档组件创建AEM工作流。 利用自动生成的DoR发送签名（使用签名组件）。
 此视频介绍创建有效工作流以发送文档进行签名所需的各种步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/38182?quality=12&learn=on)

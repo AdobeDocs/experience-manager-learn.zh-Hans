@@ -7,8 +7,8 @@ role: Developer
 level: Beginner
 version: Cloud Service
 topic: Integrations
-kt: 8474
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+jira: KT-8474
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 表单数据保存到Azure Blob Storage中后，会向用户发送一封电子邮件，其中包含指向所保存表单的链接。 此电子邮件使用SendGrid REST API发送。
 
-发送电子邮件所需的swagger文件、表单数据模型和云服务配置作为文章资源的一部分提供给您。
+发送电子邮件所需的Swagger文件、表单数据模型和云服务配置将作为文章资源的一部分提供给您。
 
 您将必须创建一个SendGrid帐户，这是一个动态模板，可以摄取在自适应表单中捕获的数据。
 

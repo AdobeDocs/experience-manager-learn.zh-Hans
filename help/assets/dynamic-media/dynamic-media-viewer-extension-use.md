@@ -1,5 +1,5 @@
 ---
-title: 在Adobe Analytics和Adobe Launch中使用Dynamic Media查看器
+title: 将Dynamic Media查看器与Adobe Analytics和Adobe Launch结合使用
 description: 用于 Adobe Launch 的 Dynamic Media 查看器扩展以及 Dynamic Media 查看器 5.13 版允许 Dynamic Media 客户、Adobe Analytics 客户和 Adobe Launch 客户在其 Adobe Launch 配置中使用特定于 Dynamic Media 查看器的事件和数据。
 sub-product: Dynamic Media
 feature: Asset Insights
@@ -7,15 +7,16 @@ version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 9d807f4c-999c-45e6-a9db-6c1776bddda1
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 22%
 
 ---
 
-# 在Adobe Analytics和Adobe Launch中使用Dynamic Media查看器{#using-dynamic-media-viewers-adobe-analytics-launch}
+# 将Dynamic Media查看器与Adobe Analytics和Adobe Launch结合使用{#using-dynamic-media-viewers-adobe-analytics-launch}
 
 对于具有Dynamic Media和Adobe Analytics的客户，您现在可以使用Dynamic Media Viewer扩展跟踪您的网站上Dynamic Media Viewer的使用情况。
 
@@ -27,9 +28,9 @@ ht-degree: 22%
 
 通过引入Dynamic Media Viewer扩展，Adobe Experience Manager现在为通过Dynamic Media查看器(5.13)交付的资源提供高级分析支持，从而当在Sites页面上使用Dynamic Media Viewer时，提供对事件跟踪的更细粒度控制。
 
-如果您已经拥有AEM Assets和Sites，则可以将Launch资产与AEM创作实例集成。 将Launch集成与您的网站关联后，您可以向页面添加Dynamic Media组件，并为查看器启用事件跟踪。
+如果您已经拥有AEM Assets和Sites，则可以将Launch资产与AEM创作实例集成。 将Launch集成与您的网站关联后，您可以将Dynamic Media组件添加到页面，并启用查看器事件跟踪。
 
-对于仅AEM Assets客户或Dynamic Media Classic客户，用户可以获取查看器的嵌入代码并将其添加到页面中。 然后，可以手动将Launch脚本库添加到页面以进行查看器事件跟踪。
+对于仅AEM Assets客户或Dynamic Media Classic客户，用户可以获取查看器的嵌入代码并将其添加到页面。 然后，可以手动将Launch脚本库添加到页面以进行查看器事件跟踪。
 
 下表列出了Dynamic Media Viewer事件及其支持的参数：
 

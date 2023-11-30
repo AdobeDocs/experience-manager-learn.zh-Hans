@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-kt: 9980
+jira: KT-9980
 exl-id: 0e3e186b-9fbe-40ad-a6cc-bdbf58b23009
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 # 创建JSON Web令牌(JWT)
 
 JSON Web令牌是一种开放的行业标准RFC 7519方法，用于在两方之间安全地表示声明。 在此示例中，使用JWT.io库来生成JWT。
-您在上一步中下载的服务凭据包含PKCS#1格式的私钥。要从此字符串中提取私钥，我们使用了 [弹城堡](https://www.bouncycastle.org/) 库。 属于java一部分的加密库不支持PKCS#1格式。
+您在上一步中下载的服务凭据包含PKCS#1格式的私钥。若要从此字符串中提取私钥，我们使用了 [邦西城堡](https://www.bouncycastle.org/) 库。 属于java一部分的加密库不支持PKCS#1格式。
 
 以下代码用于生成JWT：
 

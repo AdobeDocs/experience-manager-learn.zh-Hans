@@ -5,8 +5,8 @@ product: experience manager
 sub-product: Experience Manager Sites
 version: 6.5
 index: y
-kt: 2214
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+jira: KT-2214
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 46%
@@ -23,4 +23,4 @@ ht-degree: 46%
 + 实施 {#aem-target-implementation}
    + [简介](./implementation.md)
    + [使用Launch和Adobe I/O的AEM和Adobe Target](./using-launch-adobe-io.md)
-   + [使用旧版Cloud Services的AEM和Adobe Target](./using-aem-cloud-services.md)
+   + [使用旧版Cloud Service的AEM和Adobe Target](./using-aem-cloud-services.md)

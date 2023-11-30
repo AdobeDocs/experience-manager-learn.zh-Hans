@@ -6,10 +6,10 @@ feature: Developer Tools
 topic: Migration, Upgrade
 role: Developer
 level: Experienced
-kt: 8627
+jira: KT-8627
 thumbnail: 336957.jpeg
 exl-id: f8289dd4-b293-4b8f-b14d-daec091728c0
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 4%
@@ -26,22 +26,22 @@ ht-degree: 4%
 
 ![BPA和CAM高级图](assets/bpa-cam-diagram.png)
 
-应将BPA软件包安装在AEM 6.x生产环境的克隆上。 BPA将生成一份报告，该报告随后可上载到CAM中，该报告将针对迁移到AEMas a Cloud Service所需执行的关键活动提供指导。
+BPA软件包应安装在AEM 6.x生产环境的克隆上。 BPA将生成一份报告，之后可将其上载到CAM中，该报告将指导您完成迁移到AEMas a Cloud Service所需的关键操作。
 
 ## 关键活动
 
 + 克隆生产6.x环境。 在迁移内容和重构代码时，克隆生产环境对于测试各种工具和更改很有用。
-+ 从下载最新的BPA工具 [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) 并安装在您的AEM 6.x克隆环境中。
++ 从下载最新的BPA工具 [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) 并在您的AEM 6.x克隆环境中安装。
 + 使用BPA工具生成可上传到Cloud Acceleration Manager (CAM)的报告。 通过访问CAM [https://experience.adobe.com/](https://experience.adobe.com/) > **Experience Manager** > **Cloud Acceleration Manager**.
-+ 使用CAM提供指导，说明需要更新当前代码库和环境才能移至AEMas a Cloud Service。
++ 使用CAM提供有关当前代码库和环境需要哪些更新才能移至AEMas a Cloud Service的指导。
 
-## 动手练习
+## 实践练习
 
 通过尝试通过这个实践练习学到的知识来应用您的知识。
 
 在尝试动手练习之前，请确保您已观看并了解上述视频以及以下材料：
 
-+ [对AEMas a Cloud Service有不同的思考](./introduction.md)
++ [以不同的方式思考AEMas a Cloud Service](./introduction.md)
 + [什么是AEMas a Cloud Service？](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=en)
 + [AEM as a Cloud Service 的架构](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=en)
 + [可变和不可变内容](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=en)
@@ -56,14 +56,14 @@ ht-degree: 4%
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
-            <div style="font-size:1.25rem;font-weight:400;">使用Best Practices Analyzer实际操作</div>
+            <div style="font-size:1.25rem;font-weight:400;">使用Best Practices Analyzer实践</div>
             <p style="margin:1rem 0">
                 探索最佳实践分析器(BPA)，并通过针对包含示例违规的旧版WKND代码库运行该分析器来查看结果。
             </p>
             <a  rel="noreferrer"
                 target="_blank"
                 href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session1-differently#bootcamp---session-1-introduction-and-thinking-differently" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">试用最佳实践分析器</span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">尝试使用最佳实践分析器</span>
             </a>
         </td>
     </tr>

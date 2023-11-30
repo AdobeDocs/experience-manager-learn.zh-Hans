@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-kt: 10782
+jira: KT-10782
 exl-id: 67ccf040-013c-4641-96df-d5e494efdaeb
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Forms CS和Microsoft Power Automate
 
-对自适应表单提交调用Power Automate流程。 以下视频演示了配置和将Forms CS与Microsoft Power Automate集成所需的步骤。
+对自适应表单提交调用Power Automate流程。 以下视频介绍了将Forms CS与Microsoft Power Automate配置和集成所需的步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/345675?quality=12&learn=on)

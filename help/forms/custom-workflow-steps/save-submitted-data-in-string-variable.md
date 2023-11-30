@@ -6,11 +6,11 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 11199
+jira: KT-11199
 last-substantial-update: 2022-10-02T00:00:00Z
 thumbnail: string-variable.jpg
 exl-id: 65dcbfbb-7eb5-4fa3-aeb3-587c59ee2fe9
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 提取绑定数据并将其保存在字符串变量中
 
-此功能允许您在电子邮件正文中包含提交的数据。 自定义流程步骤可提取 **绑定的数据** ，并使用数据填充字符串类型的变量。 然后，您可以使用此字符串变量将数据插入电子邮件模板。
+此功能允许您在电子邮件正文中包含提交的数据。 自定义流程步骤提取 **绑定数据** 并使用数据填充字符串类型的变量。 然后，您可以使用此字符串变量将数据插入电子邮件模板。
 以下屏幕抓图显示了您需要传递给自定义流程步骤的参数
 ![process-step](assets/save-submitted-data-string.png)
 
@@ -27,10 +27,10 @@ ht-degree: 0%
 
 * `data.xml`  — 包含已提交数据的文件。 如果格式为json，则文件的名称可以是data.json
 
-然后，自定义流程步骤将提取绑定的数据，并将其存储在工作流中定义的submittedDataString变量中
+自定义流程步骤随后将提取绑定数据，并将其存储在工作流中定义的submittedDataString变量中
 
 
-[可以从此处下载自定义捆绑包](assets/AEMFormsProcessStep.core-1.0.0-SNAPSHOT.jar)
+[可从此处下载自定义捆绑包](assets/AEMFormsProcessStep.core-1.0.0-SNAPSHOT.jar)
 
 ```java
 package AEMFormsProcessStep.core;

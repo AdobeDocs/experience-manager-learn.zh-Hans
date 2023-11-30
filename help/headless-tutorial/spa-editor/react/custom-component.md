@@ -2,16 +2,16 @@
 title: 创建自定义天气组件 | AEM SPA Editor和React快速入门
 description: 了解如何创建要与AEM SPA编辑器一起使用的自定义天气组件。 了解如何开发创作对话框和Sling模型，以扩展JSON模型来填充自定义组件。 使用Open Weather API和React Open Weather组件。
 feature: SPA Editor
-doc-type: tutorial
 topics: development
 version: Cloud Service
-kt: 5878
+jira: KT-5878
 thumbnail: 5878-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 3%
@@ -20,27 +20,27 @@ ht-degree: 3%
 
 # 创建自定义天气组件 {#custom-component}
 
-了解如何创建要与AEM SPA编辑器一起使用的自定义天气组件。 了解如何开发创作对话框和Sling模型，以扩展JSON模型来填充自定义组件。 此 [打开天气API](https://openweathermap.org) 和 [React Open Weather组件](https://www.npmjs.com/package/react-open-weather) 已使用。
+了解如何创建要与AEM SPA编辑器一起使用的自定义天气组件。 了解如何开发创作对话框和Sling模型，以扩展JSON模型来填充自定义组件。 此 [开放天气API](https://openweathermap.org) 和 [React Open Weather组件](https://www.npmjs.com/package/react-open-weather) 使用。
 
 ## 目标
 
-1. 了解Sling模型在操作AEM提供的JSON模型API中的作用。
+1. 了解Sling模型在操作AEM提供的JSON模型API方面的作用。
 2. 了解如何创建新的AEM组件对话框。
 3. 了解如何创建 **自定义** 与AEM编辑器框架兼容的SPA组件。
 
 ## 您将构建的内容
 
-构建一个简单的天气组件。 此组件可以由内容作者添加到SPA。 利用AEM对话框，作者可以设置天气的显示位置。  此组件的实施说明了创建与AEM SPA Editor Framework兼容的全新AEM组件所需的步骤。
+构建简单的天气组件。 此组件可以由内容作者添加到SPA。 利用AEM对话框，作者可以设置天气的显示位置。  此组件的实施说明了创建与AEM SPA Editor Framework兼容的全新AEM组件所需的步骤。
 
 ![配置开放天气组件](assets/custom-component/enter-dialog.png)
 
 ## 前提条件
 
-查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment). 本章是 [导航和路由](navigation-routing.md) 但是，接下来要遵循的章节是一个部署到本地SPA实例的启用AEM的AEM项目。
+查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment). 本章是 [导航和路由](navigation-routing.md) 但是，本章是部署到本地SPA实例中的启用AEM的AEM项目，您需要这样做。
 
 ### 打开天气API密钥
 
-来自的API密钥 [开放天气](https://openweathermap.org/) ，但需要在该教程中查找。 [免费注册](https://home.openweathermap.org/users/sign_up) 有限数量的API调用。
+来自的API密钥 [开放天气](https://openweathermap.org/) ，以及教程。 [免费注册](https://home.openweathermap.org/users/sign_up) 有限数量的API调用。
 
 ## 定义AEM组件
 
@@ -48,7 +48,7 @@ AEM组件被定义为节点和属性。 在项目中，这些节点和属性在 
 
 >[!NOTE]
 >
-> 快速刷新 [AEM组件的基础知识可能会有所帮助](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html).
+> 快速刷新页面 [AEM组件的基础知识可能会有所帮助](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html).
 
 1. 在您选择的IDE中，打开 `ui.apps` 文件夹。
 2. 导航到 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components` 并创建一个名为的新文件夹 `open-weather`.
@@ -66,10 +66,10 @@ AEM组件被定义为节点和属性。 在项目中，这些节点和属性在 
 
    `jcr:primaryType="cq:Component"`  — 标识此节点是AEM组件。
 
-   `jcr:title` 是显示给内容作者和 `componentGroup` 确定创作UI中的组件分组。
+   `jcr:title` 是向内容作者显示的值，并且 `componentGroup` 确定创作UI中的组件分组。
 
-4. 在 `custom-component` 文件夹，创建另一个名为 `_cq_dialog`.
-5. 在 `_cq_dialog` 文件夹创建一个名为的新文件 `.content.xml` 并填充以下内容：
+4. 在 `custom-component` 创建另一个名为的文件夹 `_cq_dialog`.
+5. 在 `_cq_dialog` 文件夹创建新文件，名为 `.content.xml` 并填充以下内容：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -136,24 +136,24 @@ AEM组件被定义为节点和属性。 在项目中，这些节点和属性在 
 
    ![自定义组件定义](assets/custom-component/dialog-custom-component-defintion.png)
 
-   上述XML文件生成的对话框非常简单， `Weather Component`. 文件的关键部分是内部 `<label>`， `<lat>` 和 `<lon>` 节点。 此对话框包含两个 `numberfield`s和a `textfield` 该功能允许用户配置要显示的天气。
+   上述XML文件为以下内容生成了一个非常简单的对话框 `Weather Component`. 文件的关键部分是内部 `<label>`， `<lat>` 和 `<lon>` 节点。 此对话框包含两个 `numberfield`s和a `textfield` 这允许用户配置要显示的天气。
 
-   随后将创建一个Sling模型，以显示 `label`，`lat` 和 `long` 属性。
+   随后将创建一个Sling模型以公开 `label`，`lat` 和 `long` 属性。
 
    >[!NOTE]
    >
-   > 您可以查看更多内容 [通过查看核心组件定义显示的对话框示例](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components). 您还可以查看其他表单字段，如 `select`， `textarea`， `pathfield`，可在下找到 `/libs/granite/ui/components/coral/foundation/form` 在 [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form).
+   > 您可以查看更多内容 [通过查看核心组件定义显示的对话框示例](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components). 您还可以查看其他表单字段，如 `select`， `textarea`， `pathfield`，可在下方使用 `/libs/granite/ui/components/coral/foundation/form` 在 [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form).
 
-   对于传统AEM组件， [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hans) 通常需要脚本。 由于SPA将渲染组件，因此无需HTL脚本。
+   对于传统的AEM组件， [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hans) 通常需要脚本。 由于SPA将渲染组件，因此不需要HTL脚本。
 
 ## 创建Sling模型
 
 Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于将数据从JCR映射到Java变量。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=en#sling-models) 通常用于为AEM组件封装复杂的服务器端业务逻辑。
 
-在SPA编辑器的上下文中，Sling模型使用功能，通过JSON模型公开组件的内容。 [Sling模型导出程序](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hans).
+在SPA编辑器的上下文中，Sling模型使用功能，通过JSON模型展示组件的内容。 [Sling模型导出程序](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hans).
 
 1. 在您选择的IDE中，打开 `core` 模块位于 `aem-guides-wknd-spa.react/core`.
-1. 创建名为的文件，位于 `OpenWeatherModel.java` 在 `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.
+1. 创建名为的文件 `OpenWeatherModel.java` 在 `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.
 1. 填充 `OpenWeatherModel.java` ，如下所示：
 
    ```java
@@ -169,7 +169,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于
    }
    ```
 
-   这是组件的Java接口。 为了使我们的Sling模型与SPA编辑器框架兼容，它必须扩展 `ComponentExporter` 类。
+   这是组件的Java接口。 要使Sling模型与SPA编辑器框架兼容，它必须扩展 `ComponentExporter` 类。
 
 1. 创建名为的文件夹 `impl` 下 `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.
 1. 创建名为的文件 `OpenWeatherModelImpl.java` 下 `impl` 并使用以下内容填充：
@@ -245,14 +245,14 @@ Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于
 
 接下来，更新React代码以包含 [React Open Weather组件](https://www.npmjs.com/package/react-open-weather) 并将其映射到在之前步骤中创建的AEM组件。
 
-1. 将React Open Weather组件安装为 **npm** 依赖关系：
+1. 安装React Open Weather组件作为 **npm** 依赖关系：
 
    ```shell
    $ cd aem-guides-wknd-spa.react/ui.frontend
    $ npm i react-open-weather
    ```
 
-1. 新建一个名为的文件夹 `OpenWeather` 在 `ui.frontend/src/components/OpenWeather`.
+1. 创建新文件夹，名为 `OpenWeather` 在 `ui.frontend/src/components/OpenWeather`.
 1. 添加名为的文件 `OpenWeather.js` 并填充以下内容：
 
    ```js
@@ -324,7 +324,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于
    + import './OpenWeather/OpenWeather';
    ```
 
-1. 使用您的Maven技能，从项目目录的根目录将所有更新部署到本地AEM环境：
+1. 使用您的Maven技能，从项目目录的根目录中将所有更新部署到本地AEM环境：
 
    ```shell
    $ cd aem-guides-wknd-spa.react
@@ -335,7 +335,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于
 
 接下来，导航到AEM以验证更新，并允许 `OpenWeather` 要添加到SPA的组件。
 
-1. 导航到，验证新Sling模型的注册 [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels).
+1. 通过导航到“ ”，验证新Sling模型的注册 [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels).
 
    ```plain
    com.adobe.aem.guides.wkndspa.react.core.models.impl.OpenWeatherModelImpl - wknd-spa-react/components/open-weather
@@ -343,14 +343,14 @@ Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于
    com.adobe.aem.guides.wkndspa.react.core.models.impl.OpenWeatherModelImpl exports 'wknd-spa-react/components/open-weather' with selector 'model' and extension '[Ljava.lang.String;@2fd80fc5' with exporter 'jackson'
    ```
 
-   您应该会看到上面两行表示 `OpenWeatherModelImpl` 与 `wknd-spa-react/components/open-weather` 组件并通过Sling模型导出程序进行注册。
+   您应该会看到上面两行表示 `OpenWeatherModelImpl` 已与 `wknd-spa-react/components/open-weather` 组件并通过Sling模型导出器注册。
 
-1. 导航到SPA页面模板，网址为 [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
+1. 导航至SPA页面模板，网址为 [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
 1. 更新布局容器的策略以添加新的 `Open Weather` 作为允许的组件：
 
    ![更新布局容器策略](assets/custom-component/custom-component-allowed.png)
 
-   保存对策略所做的更改，并遵守 `Open Weather` 作为允许的组件：
+   保存对策略所做的更改，并观察 `Open Weather` 作为允许的组件：
 
    ![将自定义组件作为允许的组件](assets/custom-component/custom-component-allowed-layout-container.png)
 
@@ -359,17 +359,17 @@ Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于
 接下来，创作 `Open Weather` 组件使用AEM SPA编辑器。
 
 1. 导航到 [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html).
-1. In `Edit` 模式，添加 `Open Weather` 到 `Layout Container`：
+1. 在 `Edit` 模式，添加 `Open Weather` 到 `Layout Container`：
 
    ![插入新组件](assets/custom-component/insert-custom-component.png)
 
-1. 打开组件的对话框并输入 **标签**， **纬度**、和 **经度**. 例如 **圣地亚哥**， **32.7157**、和 **-117.1611**. 使用开放天气API，西半球和南半球的数字表示为负数
+1. 打开组件的对话框并输入 **标签**， **纬度**、和 **经度**. 例如 **圣迭戈**， **32.7157**、和 **-117.1611**. 西半球和南半球的数字在开放天气API中表示为负数
 
    ![配置开放天气组件](assets/custom-component/enter-dialog.png)
 
-   这是根据章节中前面的XML文件创建的对话框。
+   这是本章前面基于XML文件创建的对话框。
 
-1. 保存更改。观察天气 **圣地亚哥** 现在显示：
+1. 保存更改。观察天气 **圣迭戈** 将显示：
 
    ![天气组件已更新](assets/custom-component/weather-updated.png)
 
@@ -388,8 +388,8 @@ Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您已了解如何创建要与AEM编辑器一起使用的自定义SPA组件。 您还学习了对话框、JCR属性和Sling模型如何交互以输出JSON模型。
+恭喜，您已了解如何创建要与AEM编辑器一起使用的自定义SPA组件。 您还了解了对话框、JCR属性和Sling模型如何交互以输出JSON模型。
 
 ### 后续步骤 {#next-steps}
 
-[扩展核心组件](extend-component.md)  — 了解如何扩展要与AEM SPA编辑器一起使用的现有AEM核心组件。 了解如何将属性和内容添加到现有组件是一种强大的技术，可扩展AEM SPA Editor实施的功能。
+[扩展核心组件](extend-component.md)  — 了解如何扩展要与AEM SPA编辑器一起使用的现有AEM核心组件。 了解如何向现有组件添加属性和内容是扩展AEM SPA Editor实施功能的强大技术。

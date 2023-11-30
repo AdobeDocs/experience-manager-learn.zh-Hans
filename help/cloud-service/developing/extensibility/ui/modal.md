@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
-kt: 11603
+jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: e7376eaf-f7d7-48fe-9387-a0e4089806c2
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 AEM UI扩展模式提供了一种将自定义UI附加到AEM UI扩展的方法。
 
-模式是React应用程序，基于 [React频谱](https://react-spectrum.adobe.com/react-spectrum/)，和可以创建扩展所需的任何自定义UI，包括但不限于：
+模块是React应用程序，基于 [React频谱](https://react-spectrum.adobe.com/react-spectrum/)，和可以创建扩展所需的任何自定义UI，包括但不限于：
 
 + 确认对话框
 + [输入表单](https://react-spectrum.adobe.com/react-spectrum/#forms)
@@ -34,9 +34,9 @@ AEM UI扩展模式提供了一种将自定义UI附加到AEM UI扩展的方法。
 
 ## 模式路由
 
-模式体验由下定义的App Builder React扩展应用程序定义 `web-src` 文件夹。 与任何React应用程序一样，可以使用来编排完整体验 [React路由](https://reactrouter.com/en/main/components/routes) 该渲染 [React组件](https://reactjs.org/docs/components-and-props.html).
+模式体验由下定义的扩展App Builder React应用程序定义 `web-src` 文件夹。 与任何React应用程序一样，可以使用来编排完整体验 [React路由](https://reactrouter.com/en/main/components/routes) 该渲染 [React组件](https://reactjs.org/docs/components-and-props.html).
 
-至少需要一条路由才能生成初始模态视图。 此初始路由将在 [分机注册](#extension-registration)的 `onClick(..)` 函数，如下所示。
+至少需要一条路由才能生成初始模态视图。 此初始路由将在 [扩展注册](#extension-registration)的 `onClick(..)` 函数，如下所示。
 
 
 + `./src/aem-ui-extension/web-src/src/components/App.js`
@@ -80,12 +80,12 @@ function App(props) {
 
 ## 延期注册
 
-要打开模式窗口，请调用 `guestConnection.host.modal.showUrl(..)` 是从扩展的 `onClick(..)` 函数。 `showUrl(..)` 是通过键/值传递的JavaScript对象：
+要打开模式窗口，请调用 `guestConnection.host.modal.showUrl(..)` 由扩展的 `onClick(..)` 函数。 `showUrl(..)` 传递了包含键/值的JavaScript对象：
 
-+ `title` 提供向用户显示的模式模式的标题名称
++ `title` 提供向用户显示的模式窗口标题的名称
 + `url` 是调用 [React路由](#modal-routes) 负责模态的初始视图。
 
-当务之急是 `url` 传递到 `guestConnection.host.modal.showUrl(..)` 解析以在扩展中路由，否则模式中不会显示任何内容。
+当务之急是 `url` 传递给 `guestConnection.host.modal.showUrl(..)` 解析以在扩展中路由，否则模式中不会显示任何内容。
 
 + `./src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
@@ -108,11 +108,11 @@ function ExtensionRegistration() {
 
 ## 模式组件
 
-每条延伸路线， [那不是 `index` 路由](./extension-registration.md#app-routes)，映射到可以在扩展的模式中渲染的React组件。
+每条路的延伸， [那不是 `index` 路由](./extension-registration.md#app-routes)，映射到可以在扩展的模式中呈现的React组件。
 
 一个模式可以包含任意数量的React路由，从简单的一路由模式到复杂的多路由模式。
 
-下面说明了一个简单的一路由模式，但此模式视图可能包含调用其他路由或行为的React链接。
+下面显示了一个简单的一路由模式，但此模式视图可能包含调用其他路由或行为的React链接。
 
 + `./src/aem-ui-extension/web-src/src/components/MyModal.js`
 
@@ -182,11 +182,11 @@ export default function MyModal() {
 }
 ```
 
-## 关闭模式窗口
+## 关闭该模式窗口
 
 ![AEM UI扩展模式关闭按钮](./assets/modal/close.png){align="center"}
 
-模范必须提供自己的严密控制。 这是通过调用完成的 `guestConnection.host.modal.close()`.
+模范必须提供自己的严密控制。 这可以通过调用 `guestConnection.host.modal.close()`.
 
 ```javascript
 <ButtonGroup align="end">

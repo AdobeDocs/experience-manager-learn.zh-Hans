@@ -1,6 +1,6 @@
 ---
 title: 创建自适应表单片段
-description: 片段是表单中可重复使用的部分。 例如，片段可以包含地址块或合法文本。
+description: 片段是表单中可重用的一部分。 例如，片段可以包含地址块或法律文本。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -8,10 +8,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-kt: 7383
+jira: KT-7383
 thumbnail: 332231.jpg
 exl-id: 845383f2-71e4-44fb-8637-323e956b2808
-source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 0%

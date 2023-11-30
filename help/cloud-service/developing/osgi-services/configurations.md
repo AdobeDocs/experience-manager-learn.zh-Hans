@@ -5,10 +5,10 @@ role: Developer
 level: Beginner
 topic: Development
 feature: OSGI
-kt: 8268
+jira: KT-8268
 thumbnail: 335729.jpeg
 exl-id: 096b0a95-7039-4570-b567-ba316bfc8709
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 # OSGi配置属性
 
-了解使用OSGi配置键/值对定义并向其OSGi服务公开OSGi配置数据的低级别方法。
+了解使用OSGi配置键/值对定义并将OSGi配置数据公开给OSGi服务的低级别方法。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335729?quality=12&learn=on)
 

@@ -3,7 +3,7 @@ title: iOS应用程序 — AEM Headless示例
 description: 示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此iOS应用程序演示了如何使用AEM GraphQL API通过持久查询来查询内容。
 version: Cloud Service
 mini-toc-levels: 2
-kt: 10587
+jira: KT-10587
 thumbnail: KT-10587.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -12,7 +12,7 @@ level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: 3e4960bf2d243e33fb9f36fd3fbb45f57260229a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 3%
@@ -41,7 +41,7 @@ iOS应用程序可与以下AEM部署选项配合使用。 所有部署都需要 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 + 使用进行本地设置 [AEM CLOUD SERVICE SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)
 
-iOS应用程序旨在连接到 __AEM发布__ 但是，如果在iOS应用程序的配置中提供身份验证，则它可以从AEM Author源内容。
+iOS应用程序旨在连接到 __AEM发布__ 但是，如果在AEM应用程序的配置中提供身份验证，则它可以从iOS Author源内容。
 
 ## 使用方法
 
@@ -52,7 +52,7 @@ iOS应用程序旨在连接到 __AEM发布__ 但是，如果在iOS应用程序�
    ```
 
 1. Launch [Xcode](https://developer.apple.com/xcode/) 并打开文件夹 `ios-app`
-1. 修改文件 `Config.xcconfig` 文件和更新 `AEM_SCHEME` 和 `AEM_HOST` 以匹配您的目标AEM发布服务。
+1. 修改文件 `Config.xcconfig` 文件和更新 `AEM_SCHEME` 和 `AEM_HOST` 以匹配您的Target AEM发布服务。
 
    ```plain
    // The http/https protocol scheme used to access the AEM_HOST

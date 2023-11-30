@@ -3,7 +3,7 @@ title: React应用程序 — AEM Headless示例
 description: 示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此React应用程序演示了如何通过AEM GraphQL API，使用持久化查询来查询内容。
 version: Cloud Service
 mini-toc-levels: 1
-kt: 10715
+jira: KT-10715
 thumbnail: KT-10715.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -12,7 +12,7 @@ level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
-source-git-commit: 6f874fd3da09ce808920a7f8ea3386beda726272
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 4%
@@ -299,9 +299,9 @@ React应用程序使用两个视图在Web体验中展示冒险数据。
 + `REACT_APP_AUTH_METHOD=`：首选身份验证方法。 可选，根据默认情况，不使用身份验证。
    + `service-token`：使用服务凭据获取AEMas a Cloud Service上的访问令牌
    + `dev-token`：使用开发令牌进行AEMas a Cloud Service上的本地开发
-   + `basic`：使用用户/通行证进行本地AEM创作实例的本地开发
+   + `basic`：使用用户/通行证进行本地AEM创作实例上的本地开发
    + 留空以在不进行身份验证的情况下连接到AEM
-+ `REACT_APP_AUTHORIZATION=admin:admin`：设置连接到AEM创作环境时要使用的基本身份验证凭据（仅用于开发）。 如果连接到“发布”环境，则不需要此设置。
++ `REACT_APP_AUTHORIZATION=admin:admin`：设置连接到AEM创作环境时使用的基本身份验证凭据（仅用于开发）。 如果连接到“发布”环境，则不需要此设置。
 + `REACT_APP_DEV_TOKEN`：开发令牌字符串。 要连接到远程实例，在基本身份验证(user：pass)旁边，您可以从云控制台将持有者身份验证与开发令牌结合使用
 + `REACT_APP_SERVICE_TOKEN`：服务凭据文件的路径。 要连接到远程实例，还可以使用服务令牌进行身份验证（从开发人员控制台下载文件）。
 

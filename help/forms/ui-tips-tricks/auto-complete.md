@@ -1,16 +1,16 @@
 ---
 title: AEM Forms中的自动完成功能
-description: 使用户能够利用搜索和筛选功能，在键入值时从预填充的值列表中快速查找和选择。
+description: 使用户能够利用搜索和筛选功能，在键入值时快速查找并从中进行选择。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 11374
+jira: KT-11374
 last-substantial-update: 2022-11-01T00:00:00Z
 exl-id: e9a696f9-ba63-462d-93a8-e9a7a1e94e72
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
@@ -19,8 +19,8 @@ ht-degree: 0%
 
 # 实施自动完成
 
-使用jquery的自动完成功能在AEM表单中实施自动完成功能。
-本文包含的示例使用各种数据源（静态数组、通过REST API响应填充的动态数组）在用户开始键入文本字段时填充建议。
+使用jquery的自动完成功能，在AEM表单中实施自动完成功能。
+本文包含的示例使用各种数据源（静态数组，通过REST API响应填充的动态数组）在用户开始键入文本字段时填充建议。
 
 用于完成自动完成功能的代码与字段的初始化事件相关联。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 
 
-以下是用于提供街道地址建议的代码
+下面是用来提供街道地址建议的代码
 
 ```javascript
 $(".streetAddress input").autocomplete({
@@ -63,7 +63,7 @@ $(".streetAddress input").autocomplete({
 
 
 
-## 带有表情符号的建议
+## 使用表情符号的建议
 
 ![country-suggestions](assets/auto-complete3.png)
 

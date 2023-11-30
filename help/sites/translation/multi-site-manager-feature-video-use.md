@@ -1,21 +1,14 @@
 ---
-title: 在AEM Sites中使用多站点管理器
-seo-title: Using Multi Site Manager Touch UI Interfaces with Adobe Experience Manager
-description: Live Copy概述和Blueprint Configuration Manager是支持触屏UI的界面，可用于处理多站点管理器。
-seo-description: Live Copy Overview and Blueprint Configuration Manager are Touch UI Enabled interfaces for working with Multi Site Manager with Adobe Experience Manager.
+title: 将多站点管理器与AEM Sites结合使用
+description: Live Copy概述和Blueprint Configuration Manager是支持Touch UI的界面，用于处理多站点管理器。
 feature: Multi Site Manager
-topics: localization, authoring, content-architecture
-audience: all
-doc-type: feature video
-activity: use
 version: 6.4, 6.5
-uuid: 76f295d0-78dd-429c-9129-9182b3a706a6
-discoiquuid: a0dc581e-300f-45ef-916a-1cbac0429899
 topic: Localization
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 17%
@@ -24,7 +17,7 @@ ht-degree: 17%
 
 # 使用多站点管理器 {#using-multi-site-manager-with-aem-sites}
 
-Live Copy概述和Blueprint Configuration Manager是用于使用的AEM创作界面 [多站点管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html) 在Adobe Experience Manager Sites中。
+Live Copy概述和Blueprint Configuration Manager是用于处理的AEM创作界面 [多站点管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html) 在Adobe Experience Manager Sites中。
 
 ## Live Copy 概述 {#live-copy-overview}
 
@@ -32,11 +25,11 @@ Live Copy概述和Blueprint Configuration Manager是用于使用的AEM创作界�
 
 *Live Copy概述是一个Touch UI界面，用于管理活动副本及其各自的Blueprint。 AEM 6.3中引入的这项功能取代了经典UI Blueprint控制中心。*
 
-## Blueprint配置管理器 — 触控UI {#blueprint-config-mgr}
+## Blueprint配置管理器 — 触屏UI {#blueprint-config-mgr}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17056?quality=12&learn=on)
 
-*AEM 6.3引入了触屏UI界面，用于管理Blueprint配置，以便在多站点管理器中使用。*
+*AEM 6.3引入了触屏UI界面，用于管理在多站点管理器中使用的Blueprint配置。*
 
 ## 其他资源 {#additional-resources}
 

@@ -4,12 +4,12 @@ description: 创建OSGi服务以存储要签名的表单
 feature: Workflow
 version: 6.4,6.5
 thumbnail: 6886.jpg
-kt: 6886
+jira: KT-6886
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 49e7bd65-33fb-44d4-aaa2-50832dffffb0
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 创建OSGi服务
 
-编写了以下代码以存储需要签名的表单。 每个要签名的表单都与一个唯一的guid和一个客户id相关联。 因此，一个或多个表单可以与同一客户ID关联，但会为表单分配唯一的GUID。
+编写了以下代码以存储需要签名的表单。 每个要签名的表单都与唯一的guid和客户id相关联。 因此，一个或多个表单可以与同一客户ID关联，但将为表单分配唯一的GUID。
 
 ## 接口
 
@@ -41,7 +41,7 @@ public interface SignMultipleForms
 
 ## 插入数据
 
-insert data方法会在数据源标识的数据库中插入一行。 数据库中的每一行都与一个表单相对应，并由GUID和客户ID唯一标识。 表单数据和表单URL也存储在此行中。 状态列用于指示表单是否已填写和签名。 值为0表示表单尚未签名。
+插入数据方法在数据源标识的数据库中插入一行。 数据库中的每一行都对应于一个表单，并由GUID和客户ID唯一标识。 表单数据和表单URL也存储在此行中。 状态列用于指示表单是否已填写和签名。 值为0表示表单尚未签名。
 
 ```java
 @Override
@@ -130,7 +130,7 @@ public String getFormData(String guid) {
 
 ## 更新签名状态
 
-成功完成签名仪式会触发与表单关联的AEM工作流。 工作流中的第一步是流程步骤，它会更新数据库中由guid和客户id标识的行的状态。 我们还将formdata中带符号的元素的值设置为Y，以指示表单已填写并带符号。 自适应表单中填充了此数据，并且使用xml数据中带符号数据元素的值来显示相应的消息。 从自定义流程步骤调用updateSignatureStatus代码。
+成功完成签名仪式会触发与表单关联的AEM工作流。 工作流中的第一步是流程步骤，它会更新数据库中由guid和客户id标识的行的状态。 我们还将formdata中带符号的元素的值设置为Y，以指示表单已填写并已签名。 自适应表单中会填充此数据，并且会使用xml数据中带符号的数据元素的值来显示相应的消息。 从自定义流程步骤调用updateSignatureStatus代码。
 
 
 ```java
@@ -164,7 +164,7 @@ public void updateSignatureStatus(String formData, String guid) {
 
 ## 获取下一个要签名的表单
 
-以下代码用于获取对状态为0的给定customerID进行签名的下一个表单。 如果sql查询未返回任何行，则返回字符串 **&quot;AllDone&quot;** 表示给定的客户id没有其他签名表单。
+下面的代码用于获取下一个表单，用于对状态为0的给定customerID进行签名。 如果sql查询未返回任何行，则返回字符串 **“全部完成”** 这表示没有更多表单需要签名给定的客户id。
 
 ```java
 @Override
@@ -202,9 +202,9 @@ public String getNextFormToSign(int customerID) {
 
 
 
-## Assets
+## 资源
 
-包含上述服务的OSGi捆绑包可以是 [已从此处下载](assets/sign-multiple-forms.jar)
+包含上述服务的OSGi捆绑包可以 [从此处下载](assets/sign-multiple-forms.jar)
 
 ## 后续步骤
 

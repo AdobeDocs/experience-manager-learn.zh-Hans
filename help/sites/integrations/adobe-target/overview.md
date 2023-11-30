@@ -2,18 +2,17 @@
 title: 集成AEM Sites和Adobe Target
 description: 了解如何集成AEM Sites和Adobe Target以提供个性化体验。
 feature: Experience Fragments, Core Components, Adobe Client Data Layer
-audience: all
-doc-type: feature video
 version: Cloud Service
-kt: 6043
+jira: KT-6043
 thumbnail: 41241.jpg
 topic: Integrations, Personalization
 role: User
 level: Beginner
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%

@@ -1,5 +1,5 @@
 ---
-title: 使用Adobe Analytics报告提交的表单数据字段
+title: 使用Adobe Analytics报告已提交的表单数据字段
 description: 将AEM Forms CS与Adobe Analytics集成以报告表单数据字段
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -8,11 +8,11 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Integrations, Development
-kt: 12557
+jira: KT-12557
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 exl-id: b9dc505d-72c8-4b6a-974b-fc619ff7c256
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 2%
@@ -25,9 +25,9 @@ ht-degree: 2%
 
 ![自适应表单](assets/data_elements.png)
 
-## ApplicatorStateOfResidence
+## ApplicantStateOfResidence
 
-此 **ApplicatorStateOfResidence** 数据元素是通过选择 **核心** “扩展”下拉列表中的和 **自定义代码** 的数据元素类型，如下面的屏幕快照所示
+此 **ApplicantStateOfResidence** 数据元素通过选择进行配置 **核心** “扩展”下拉列表中的和 **自定义代码** 类型的数据元素类型，如下面的屏幕快照所示
 ![申请人 — 国家 — 居所](assets/applicantstateofresidence.png)
 
 以下自定义代码用于从捕获值 **_state_** 自适应表单字段。
@@ -42,7 +42,7 @@ return ApplicantsStateOfResidence;
 
 ## validationError
 
-此 **ValidationError** 数据元素是通过选择 **核心** “扩展”下拉列表中的和 **自定义代码** 的数据元素类型，如下面的屏幕快照所示
+此 **ValidationError** 数据元素通过选择进行配置 **核心** “扩展”下拉列表中的和 **自定义代码** 类型的数据元素类型，如下面的屏幕快照所示
 
 ![validation-error](assets/validation-error.png)
 

@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: Developer Tools
-kt: 9006
+jira: KT-9006
 exl-id: 77c00a35-43bf-485f-ac12-0fffb307dc16
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 在您的项目中包含云服务配置
 
-创建一个名为“FormTutorial”的配置容器来存放云服务配置通过提供Azure存储帐户详细信息和Azure访问密钥，在“FormTutorial”容器中为Azure存储创建一个名为“FormsCSAndAzureBlob”的云服务配置。
+创建名为“FormTutorial”的配置容器以保存云服务配置通过在“FormTutorial”容器中提供Azure存储帐户详细信息和Azure访问密钥，为Azure存储创建一个名为“FormsCSAndAzureBlob”的云服务配置。
 
 在IntelliJ中打开您的AEM项目。 确保添加文件夹FormTutorial，如ui.content项目中所示
 ![cloud-services-configuration](assets/cloud-services-configuration.png)
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ## 在您的项目中包含表单数据模型
 
-基于您在上一步中创建的云服务配置创建表单数据模型。 要在项目中包含表单数据模型，请在intelliJ的AEM项目中创建相应的文件夹结构。 例如，我的表单数据模型位于名为“注册”的文件夹中
+根据您在上一步中创建的云服务配置创建表单数据模型。 要在项目中包含表单数据模型，请在intelliJ中的AEM项目中创建相应的文件夹结构。 例如，我的表单数据模型位于名为“注册”的文件夹中
 ![fdm-content](assets/ui-content-fdm.png)
 
 在ui.content项目的filter.xml中包含相应的条目

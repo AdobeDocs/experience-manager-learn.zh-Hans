@@ -1,16 +1,16 @@
 ---
 title: 创建Acrobat Sign云配置
-description: AEM中的云服务配置允许您创建AEM与其他云应用程序之间的集成。 以下视频将指导您完成创建Cloud Services配置以将AEM与Acrobat Sign集成所需的步骤。
+description: AEM中的云服务配置允许您创建AEM与其他云应用程序之间的集成。 以下视频将指导您完成创建AEM与Acrobat Sign集成的云服务配置所需的步骤。
 feature: Adaptive Forms
 thumbnail: 38179.jpg
-kt: 6033
+jira: KT-6033
 topic: Development
 role: Developer
 level: Beginner
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7a62ae37-d391-4136-99f3-b32181afd475
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 3%
@@ -27,4 +27,4 @@ AEM中的云服务配置允许您创建AEM与其他云应用程序之间的集�
 
 ## 后续步骤
 
-[创建工作流以发送文档进行签名](./create-workflow-to-send-document-for-signing.md)
+[创建工作流以发送文档供签名](./create-workflow-to-send-document-for-signing.md)

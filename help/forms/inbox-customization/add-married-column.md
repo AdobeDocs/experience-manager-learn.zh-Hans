@@ -7,12 +7,12 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.5
-kt: 5830
+jira: KT-5830
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 添加自定义列
 
-要在收件箱中显示工作流数据，我们需要在工作流中定义和填充变量。 在将任务分配给用户之前，需要设置变量的值。 为了让您开一个好头，我们提供了示例工作流，该工作流已准备好部署在您的AEM服务器上。
+要在收件箱中显示工作流数据，我们需要在工作流中定义和填充变量。 在将任务分配给用户之前，需要设置变量的值。 为了让您开一个好头，我们提供了准备好部署在AEM服务器上的示例工作流。
 
 * [登录AEM](http://localhost:4502/crx/de/index.jsp)
 * [导入审核工作流](assets/review-workflow.zip)
@@ -87,10 +87,10 @@ return isMarried(inboxItem);
 * 通过单击打开Admin Control _列表视图_ 图标旁边 _创建_ 按钮
 * 将“已婚”列添加到收件箱并保存更改
 * [转到FormsAndDocuments UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [导入示例表单](assets/snap-form.zip) 通过选择 _文件上传_ 起始日期 _创建_ 菜单
+* [导入示例表单](assets/snap-form.zip) 通过选择 _文件上传_ 从 _创建_ 菜单
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
 * 选择 _婚姻状况_ 并提交表单
-   [查看收件箱](http://localhost:4502/aem/inbox)
+  [查看收件箱](http://localhost:4502/aem/inbox)
 
 提交表单将触发工作流，并且任务会分配给“管理员”用户。 您应会在“已婚”列下看到一个值，如此屏幕快照中所示
 

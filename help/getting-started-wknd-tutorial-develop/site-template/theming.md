@@ -1,50 +1,50 @@
 ---
-title: 主题设定工作流 | AEM快速站点创建
+title: 主题化工作流 | AEM快速站点创建
 description: 了解如何更新Adobe Experience Manager站点的主题源以应用品牌特定的样式。 了解如何使用代理服务器查看CSS和Javascript更新的实时预览。 本教程还将介绍如何使用AdobeCloud Manager的前端管道将主题更新部署到AEM站点。
 version: Cloud Service
-type: Tutorial
 feature: Core Components
 topic: Content Management, Development
 role: Developer
 level: Beginner
-kt: 7498
+jira: KT-7498
 thumbnail: KT-7498.jpg
+doc-type: Tutorial
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 1%
 
 ---
 
-# 主题设定工作流 {#theming}
+# 主题化工作流 {#theming}
 
-在本章中，我们更新了Adobe Experience Manager站点的主题源以应用品牌特定的样式。 我们了解如何使用代理服务器在针对实时站点进行编码时查看CSS和Javascript更新的预览。 本教程还将介绍如何使用AdobeCloud Manager的前端管道将主题更新部署到AEM站点。
+在本章中，我们更新了Adobe Experience Manager Site的主题源以应用品牌特定的样式。 我们了解如何使用代理服务器在针对实时站点进行编码时查看CSS和Javascript更新的预览。 本教程还将介绍如何使用AdobeCloud Manager的前端管道将主题更新部署到AEM站点。
 
 最终，我们的网站将更新为包含符合WKND品牌的样式。
 
 ## 前提条件 {#prerequisites}
 
-这是一个多部分教程，并假定中概述的步骤 [页面模板](./page-templates.md) 章节已完成。
+这是一个多部分教程，假定其中包含了 [页面模板](./page-templates.md) 章节已完成。
 
 ## 目标
 
 1. 了解如何下载和修改站点的主题源。
-1. 了解针对实时网站的代码如何用于实时预览。
+1. 了解针对实时网站的代码如何实现实时预览。
 1. 了解使用AdobeCloud Manager的前端管道将编译的CSS和JavaScript更新作为主题的一部分交付的端到端工作流。
 
 ## 更新主题 {#theme-update}
 
-接下来，对主题源进行更改，使站点与WKND品牌的外观和感觉相匹配。
+接下来，对主题源进行更改，使站点与WKND品牌的外观相匹配。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332918?quality=12&learn=on)
 
 视频的高级步骤：
 
-1. 在AEM中创建本地用户以与代理开发服务器一起使用。
+1. 在AEM中创建用于代理开发服务器的本地用户。
 1. 从AEM下载主题源并使用本地IDE（如VSCode）打开。
-1. 修改主题源并使用代理开发服务器实时预览CSS和JavaScript更改。
+1. 修改主题源，并使用代理开发服务器实时预览CSS和JavaScript更改。
 1. 更新主题源，使杂志文章与WKND品牌样式和模型匹配。
 
 ### 解决方案文件
@@ -71,7 +71,7 @@ ht-degree: 1%
    ```
 
 1. 配置 [前端管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html) 在Cloud Manager中部署前端代码。
-1. 运行前端管道以将更新部署到目标AEM环境。
+1. 运行前端管道将更新部署到目标AEM环境。
 
 ### 示例存储库
 

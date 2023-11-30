@@ -3,13 +3,13 @@ title: OCR数据提取
 description: 从政府颁发的文档中提取数据以填充表单。
 feature: Barcoded Forms
 version: 6.4,6.5
-kt: 6679
+jira: KT-6679
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 1532a865-4664-40d9-964a-e64463b49587
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 自动从各种政府颁发的文档中提取数据以填充您的自适应表单。
 
-有许多组织提供此服务，只要他们有详细记录的REST API，您就可以使用数据集成功能轻松与AEM Forms集成。 在本教程中，我使用 [ID分析器](https://www.idanalyzer.com/) 演示已上传文档的OCR数据提取。
+有许多组织提供此服务，只要他们对REST API进行了详尽的记录，您就可以使用数据集成功能轻松与AEM Forms集成。 在本教程中，我使用 [ID分析器](https://www.idanalyzer.com/) 演示已上传文档的OCR数据提取。
 
 执行以下步骤，使用ID分析器服务通过AEM Forms实施OCR数据提取。
 
@@ -30,12 +30,12 @@ ht-degree: 1%
 
 ## 创建Swagger/OpenAPI文件
 
-OpenAPI规范（以前称为Swagger规范）是REST API的API描述格式。 OpenAPI文件允许您描述整个API，包括：
+OpenAPI规范（以前称为Swagger规范）是适用于REST API的API描述格式。 OpenAPI文件允许您描述整个API，包括：
 
-* 每个端点的可用端点(/users)和操作(GET/users、POST/users)
+* 每个端点的可用端点(/users)和操作(GET/users，POST/users)
 * 操作参数每个操作的输入和输出身份验证方法
 * 联系信息、许可证、使用条款和其他信息。
-* API规范可以用YAML或JSON编写。 该格式简单易学，对人和机器均可读取。
+* API规范可以使用YAML或JSON编写。 该格式简单易学，对人和机器均可读取。
 
 要创建您的第一个swagger/OpenAPI文件，请按照 [OpenAPI文档](https://swagger.io/docs/specification/2-0/basic-structure/)
 
@@ -77,38 +77,38 @@ OpenAPI规范（以前称为Swagger规范）是REST API的API描述格式。 Ope
             }
 ```
 
-* [示例Swagger文件供您参考](assets/sample-swagger.json)
+* [示例Swagger文件以供您参考](assets/sample-swagger.json)
 
 ## 创建数据源
 
-要将AEM/AEM Forms与第三方应用程序集成，我们需要 [创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) 在cloud services配置中。 请使用 [swagger文件](assets/drivers-license-swagger.zip) 以创建数据源。
+要将AEM/AEM Forms与第三方应用程序集成，我们需要 [创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) 在云服务配置中。 请使用 [swagger文件](assets/drivers-license-swagger.zip) 以创建您的数据源。
 
 ## 创建表单数据模型
 
-AEM Forms数据集成提供了一个直观的用户界面来创建和使用 [表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). 使表单数据模型基于上一步中创建的数据源。
+AEM Forms数据集成提供了直观的用户界面以供创建和使用 [表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). 使表单数据模型基于上一步中创建的数据源。
 
 ![fdm](assets/test-dl-fdm.PNG)
 
 ## 创建客户端库
 
-我们需要获取已上传文档的base64编码字符串。 然后将此base64编码字符串作为REST调用的参数之一进行传递。
+我们需要获取已上传文档的base64编码字符串。 然后，此base64编码字符串将作为REST调用的参数之一传递。
 可以下载客户端库 [从这里。](assets/drivers-license-client-lib.zip)
 
 ## 创建自适应表单
 
-将表单数据模型的POST调用与您的自适应表单集成，以从表单中的用户上传的文档中提取数据。 您可以自由创建自己的自适应表单，并使用表单数据模型的POST调用发送已上传文档的base64编码字符串。
+将表单数据模型的POST调用与您的自适应表单集成，以从表单中的用户上传文档中提取数据。 您可以自由创建自己的自适应表单，并使用表单数据模型的POST调用发送上传文档的base64编码字符串。
 
 ## 在您的服务器上部署
 
-如果要在API密钥中使用示例资源，请执行以下步骤：
+如果要将示例资源与API密钥一起使用，请执行以下步骤：
 
-* [下载数据源](assets/drivers-license-source.zip) 并使用导入AEM [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* [下载表单数据模型](assets/drivers-license-fdm.zip) 并使用导入AEM [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* [下载数据源](assets/drivers-license-source.zip) 并使用导入到AEM [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* [下载表单数据模型](assets/drivers-license-fdm.zip) 并使用导入到AEM [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 * [下载客户端库](assets/drivers-license-client-lib.zip)
-* 下载自适应表单示例可以是 [已从此处下载](assets/adaptive-form-dl.zip). 此示例表单使用本文中提供的表单数据模型的服务调用。
+* 下载自适应表单示例可以是 [从此处下载](assets/adaptive-form-dl.zip). 此示例表单使用了本文中提供的表单数据模型的服务调用。
 * 将表单从导入AEM [Forms和文档UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 在中打开表单 [编辑模式。](http://localhost:4502/editor.html/content/forms/af/driverslicenseandpassport.html)
-* 在apikey字段中将API密钥指定为默认值，并保存更改
+* 在apikey字段中指定API密钥作为默认值，并保存更改
 * 打开Base 64字符串字段的规则编辑器。 当此字段的值更改时，请注意服务调用。
 * 保存表单
-* [预览表单](http://localhost:4502/content/dam/formsanddocuments/driverslicenseandpassport/jcr:content?wcmmode=disabled)，上传您的驱动程序许可证的前面图片
+* [预览表单](http://localhost:4502/content/dam/formsanddocuments/driverslicenseandpassport/jcr:content?wcmmode=disabled)，上传您的驾驶执照的正面图片

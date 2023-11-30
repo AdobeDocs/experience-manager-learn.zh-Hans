@@ -2,16 +2,16 @@
 title: 创建站点 | AEM快速站点创建
 description: 了解如何使用站点创建向导生成新网站。 由Adobe提供的标准站点模板是新站点的起点。
 version: Cloud Service
-type: Tutorial
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
 level: Beginner
-kt: 7496
+jira: KT-7496
 thumbnail: KT-7496.jpg
+doc-type: Tutorial
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
 recommendations: noDisplay, noCatalog
-source-git-commit: 0c6294ac468ad4ead041a68f381c6781a5c29b44
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 1%

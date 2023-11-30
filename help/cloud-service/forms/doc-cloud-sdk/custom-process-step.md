@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 thumbnail: 7837.jpg
-kt: 7837
+jira: KT-7837
 exl-id: 24a788bb-f0dc-4774-91ab-26fde2de098f
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
@@ -19,8 +19,8 @@ ht-degree: 0%
 
 # 自定义流程步骤
 
-以下是自定义流程步骤的完整代码，该代码使用转换后的pdf转换和替换原生文件。此自定义步骤将搜索作为工作流中的流程参数提供的文件夹名称下的所有附件。
-此自定义流程步骤使用自定义DocumentCloudSDKService的方法创建PDF。
+下面是自定义流程步骤的完整代码，该代码将转换原生文件并将其替换为转换后的pdf。此自定义步骤将搜索作为工作流中的流程参数提供的文件夹名称下的所有附件。
+此自定义流程步骤使用自定义DocumentCloudSDKService的方法创建PDF的。
 
 
 ```java

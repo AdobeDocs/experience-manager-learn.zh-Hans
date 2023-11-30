@@ -2,17 +2,17 @@
 title: 更新全栈AEM项目以使用前端管道
 description: 了解如何更新全栈AEM项目以便为前端管道启用它，以便它仅构建和部署前端工件。
 version: Cloud Service
-type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
 level: Intermediate
-kt: 10689
+jira: KT-10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 更新全栈AEM项目以使用前端管道 {#update-project-enable-frontend-pipeline}
 
-在本章中，我们对 __WKND站点项目__ 使用前端管道来部署JavaScript和CSS，而不是要求执行完整的全栈管道。 这将使前端和后端工件的开发和部署生命周期脱钩，从而允许总体上实现更快速、迭代的开发过程。
+在本章中，我们对 __WKND站点项目__ 使用前端管道来部署JavaScript和CSS，而不是要求完全的全栈管道执行。 这将前端和后端工件的开发和部署生命周期分离，从而允许在整个开发过程中实现更快速、迭代的开发过程。
 
 ## 目标 {#objectives}
 
@@ -33,12 +33,12 @@ ht-degree: 0%
 
 ## 前提条件 {#prerequisites}
 
-本教程包含多个部分，并假定您已查看 [&#39;ui.frontend&#39;模块](./review-uifrontend-module.md).
+本教程包含多个部分，并假定您已查看 [“ui.frontend”模块](./review-uifrontend-module.md).
 
 
 ## 对全栈AEM项目的更改
 
-有三项与项目相关的配置更改和一项样式更改要为测试运行部署，因此WKND项目中总共有四项特定的更改，以便为前端管道合同启用它。
+有三项与项目相关的配置更改和一项要为测试运行部署的样式更改，因此WKND项目中总共有四项特定的更改，以便为前端管道合同启用它。
 
 1. 删除 `ui.frontend` 全栈构建周期中的模块
 
@@ -99,7 +99,7 @@ ht-degree: 0%
    ...
    ```
 
-   * 复制现有 `webpack.prod.js` 作为 `webpack.theme.prod.js`，并更改 `common` 变量对上述文件的位置为
+   * 复制现有 `webpack.prod.js` 作为 `webpack.theme.prod.js`，并更改 `common` 变量在上述文件中的位置为
 
    ```javascript
    ...
@@ -111,12 +111,12 @@ ht-degree: 0%
    >
    >以上两个“webpack”配置更改将具有不同的输出文件和文件夹名称，因此我们可以轻松区分clientlib（全栈）和生成的主题（前端）管道前端工件。
    >
-   >如您所知，也可以跳过上述更改以使用现有Webpack配置，但需要进行以下更改。
+   >如您所知，也可以跳过上述更改以使用现有Webpack配置，但需要以下更改。
    >
-   >这取决于您希望如何命名或组织它们。
+   >这取决于您想要如何命名或组织它们。
 
 
-   * 在 `package.json` 文件，确保  `name` 属性值与 `/conf` 节点。 在 `scripts` 属性， a `build` 指导如何从该模块构建前端文件的脚本。
+   * 在 `package.json` 文件，确保  `name` 属性值与中的网站名称相同 `/conf` 节点。 在 `scripts` 属性， a `build` 指导如何从该模块构建前端文件的脚本。
 
    ```javascript
        {
@@ -132,9 +132,9 @@ ht-degree: 0%
        }
    ```
 
-1. 准备 `ui.content` 用于前端管道的模块，添加两个Sling配置。
+1. 准备 `ui.content` 模块，用于前端管道，添加两个Sling配置。
 
-   * 创建文件位置 `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig`  — 这包括 `ui.frontend` 模块生成于 `dist` 文件夹使用webpack构建过程。
+   * 创建文件于 `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig`  — 这包括 `ui.frontend` 模块在下生成 `dist` 文件夹中的webpack构建过程。
 
    ```xml
    ...
@@ -177,7 +177,7 @@ ht-degree: 0%
    >
    >    请参见，完整的 [站点配置](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.aem.wcm.site.manager.config.SiteConfig/.content.xml) 在 __AEM WKND站点项目__.
 
-1. 主题或样式更改为通过测试运行的前端管道部署，我们正在更改 `text-color` Adobe为红色（或者您也可以自行选择），方法是更新 `ui.frontend/src/main/webpack/base/sass/_variables.scss`.
+1. 主题或样式更改为通过测试运行的前端管道部署，我们正在更改 `text-color` Adobe为红色（或者您也可以选择自己的颜色），方法是 `ui.frontend/src/main/webpack/base/sass/_variables.scss`.
 
    ```css
        $black:     #a40606;
@@ -194,11 +194,11 @@ ht-degree: 0%
 
 ## 注意 —  _启用前端管道_ 按钮
 
-此 [边栏选择器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) 的 [站点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) 选项显示 **启用前端管道** 按钮时，选择站点根或站点页面。 点击 **启用前端管道** 按钮将覆盖上述内容 **Sling配置**，确保 **您没有单击** 在通过Cloud Manager管道执行部署上述更改后，可使用此按钮。
+此 [边栏选择器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) 的 [站点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) 选项显示 **启用前端管道** 按钮时，选择您的站点根或站点页面。 点击 **启用前端管道** 按钮将覆盖上述内容 **Sling配置**，请确保 **您不单击** 在通过Cloud Manager管道执行部署上述更改后，可使用此按钮。
 
 ![启用前端管道按钮](assets/enable-front-end-Pipeline-button.png)
 
-如果错误地单击它，则必须重新运行管道以确保恢复前端管道合同和更改。
+如果错误地单击它，则必须重新运行管道，以确保前端管道合同和更改恢复。
 
 ## 恭喜！ {#congratulations}
 
@@ -206,4 +206,4 @@ ht-degree: 0%
 
 ## 后续步骤 {#next-steps}
 
-在下一章中， [使用前端管道部署](create-frontend-pipeline.md)，您将创建并运行前端管道，并验证如何 __已移开__ 从基于“/etc.clientlibs”的前端资源投放中获取。
+在下一章中， [使用前端管道部署](create-frontend-pipeline.md)，您将创建并运行前端管道，并验证如何 __已移开__ 从基于“/etc.clientlibs”的前端资源投放中。

@@ -1,15 +1,15 @@
 ---
 title: 在AEM Forms Workflow中将逗号分隔字符串转换为字符串数组
-description: 当表单数据模型具有字符串数组作为输入参数之一时，您需要先按压从自适应表单的提交操作生成的数据，然后再调用表单数据模型的提交操作。
+description: 当表单数据模型具有字符串数组作为输入参数之一时，您需要先消息传递从自适应表单的提交操作生成的数据，然后再调用表单数据模型的提交操作。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
-kt: 8507
+jira: KT-8507
 exl-id: 9ad69407-2413-416f-9cec-43f88989b31d
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
@@ -18,15 +18,15 @@ ht-degree: 0%
 
 # 将逗号分隔的字符串转换为字符串数组 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-当您的表单基于表单数据模型（具有字符串数组作为输入参数）时，您需要处理提交的自适应表单数据以插入字符串数组。 例如，如果您已将复选框字段绑定到字符串数组类型的表单数据模型元素，则复选框字段中的数据将以逗号分隔的字符串格式显示。 下面列出的示例代码说明了如何将逗号分隔的字符串替换为字符串数组。
+当您的表单基于表单数据模型，该模型具有字符串数组作为输入参数时，您需要处理提交的自适应表单数据以插入字符串数组。 例如，如果您已将复选框字段绑定到字符串数组类型的表单数据模型元素，则复选框字段中的数据将为逗号分隔的字符串格式。 下面列出的示例代码说明了如何将逗号分隔的字符串替换为字符串数组。
 
 ## 创建流程步骤
 
-我们希望工作流执行特定逻辑时，在AEM工作流中使用流程步骤。 流程步骤可以与ECMA脚本或OSGi服务相关联。 我们的自定义流程步骤执行OSGi服务。
+我们希望工作流执行特定逻辑时，会在AEM工作流中使用流程步骤。 流程步骤可以与ECMA脚本或OSGi服务相关联。 我们的自定义流程步骤执行OSGi服务。
 
-提交的数据采用以下格式。 businessUnits元素的值是一个以逗号分隔的字符串，需要将其转换为字符串数组。
+提交的数据采用以下格式。 businessUnits元素的值是以逗号分隔的字符串，需要转换为字符串数组。
 
-![提交的数据](assets/submitted-data-string.png)
+![submitted-data](assets/submitted-data-string.png)
 
 与表单数据模型关联的rest端点的输入数据需要字符串数组，如此屏幕快照中所示。 流程步骤中的自定义代码会将提交的数据转换为正确的格式。
 
@@ -141,4 +141,4 @@ public class CreateStringArray implements WorkflowProcess {
 }
 ```
 
-示例捆绑包可以是 [已从此处下载](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)
+示例包可以是 [从此处下载](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)

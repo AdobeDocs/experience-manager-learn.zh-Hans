@@ -1,5 +1,5 @@
 ---
-title: 提取Power Automate流中的表单字段值
+title: 在Power Automate流中提取表单字段值
 description: 在Microsoft Power Automate工作流中向表单提交者发送电子邮件通知
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-kt: 10828
+jira: KT-10828
 exl-id: 6e9b91a0-327f-4af1-8308-c938fc9a13b9
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
