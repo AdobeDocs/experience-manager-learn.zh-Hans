@@ -2,21 +2,19 @@
 title: 开发人员控制台
 description: AEMas a Cloud Service为每个环境提供了一个开发人员控制台，该控制台显示运行的AEM服务的各种详细信息，这些详细信息对调试很有帮助。
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5433
 thumbnail: kt-5433.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 388
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1471'
-ht-degree: 1%
+source-wordcount: '1408'
+ht-degree: 0%
 
 ---
 

@@ -8,10 +8,11 @@ role: Developer
 level: Experienced
 exl-id: 9a3b2128-a383-46ea-bcdc-6015105c70cc
 last-substantial-update: 2023-01-26T00:00:00Z
-source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
+duration: 102
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 1%
+source-wordcount: '239'
+ht-degree: 0%
 
 ---
 
@@ -68,17 +69,17 @@ session.save();
 1. 确保已安装并启动作为一部分提供的DevelopingWithServiceUser捆绑包 [创建服务用户文章](service-user-tutorial-develop.md)
 1. [登录configMgr](http://localhost:4502/system/console/configMgr)
 1. 搜索Apache Sling服务用户映射器服务
-1. 确保输入以下内容 _DevelopingWithServiceUser.core：getformsresourceresolver=fd-service_ 在“服务映射”部分中
-1. [打开窗体](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
+1. 确保您输入以下条目 _DevelopingWithServiceUser.core：getformsresourceresolver=fd-service_ 在“服务映射”部分中
+1. [打开表单](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
 1. 填写表单并单击“查看PDF”
 1. 您应该会在浏览器的新选项卡中看到DOR
 
 
 **疑难解答提示**
 
-PDF不会显示在新的“浏览器”选项卡中：
+PDF不会显示在新的浏览器选项卡中：
 
 1. 确保没有阻止浏览器中的弹出窗口
-1. 确保您以管理员身份启动AEM服务器（至少在windows上）
+1. 确保以管理员身份启动AEM服务器（至少在windows上）
 1. 确保“DevelopingWithServiceUser”捆绑包位于 *活动状态*
 1. [确保系统用户](http://localhost:4502/useradmin) “ fd-service”在以下节点上具有“读取”、“修改”和“创建”权限 `/content/usergenerated/content/aemformsenablement`

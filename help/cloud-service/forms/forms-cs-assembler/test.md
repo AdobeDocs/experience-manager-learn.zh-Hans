@@ -8,9 +8,10 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 exl-id: 5139aa84-58d5-40e3-936a-0505bd407ee8
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+duration: 80
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
@@ -21,24 +22,24 @@ ht-degree: 0%
 * 启动Eclipse并将项目导入Eclipse
 * 该项目在资源文件夹中包含以下文件夹：
    * ddxFiles — 此文件夹包含用于描述要生成的输出的ddx文件
-   * pdf — 此文件夹包含要汇编的pdf文件和要测试PDFA实用程序的pdf文件
+   * pdf — 此文件夹包含您要汇编的pdf文件以及用于测试PDFA实用程序的pdf文件
    * 凭据 — 此文件夹包含pdfa-options.json文件
 
 ![resources-file](./assets/resources.png)
 
-## 测试组装PDF文件
+## 测试组合PDF文件
 
 * 将服务凭据复制并粘贴到项目的service_token.json资源文件中。
 * 打开AssemblePDFFiles.java文件，并指定要保存生成的PDF文件的文件夹
-* 打开ExecuteAssemblerService.java。 设置变量的值 _AEM_FORMS_CS_ 指向您的实例。
-* 取消注释相应的行，以测试装配两个或多个PDF文件
-* 将ExecuteAssemblerService.java作为Java应用程序运行
+* 打开ExecuteAssemblerService.java。 设置变量的值 _AEM_FORMS_CS_ 以指向您的实例。
+* 取消注释相应的行以测试装配两个或多个PDF文件
+* 以Java应用程序形式运行ExecuteAssemblerService.java
 
 ### 测试PDFA实用程序
 
 * 将服务凭据复制并粘贴到项目的service_token.json资源文件中。
 * 打开PDFAUtilities.java文件，并指定要保存生成的PDF文件的文件夹。
-* 打开ExecuteAssemblerService.java。 设置变量的值 _AEM_FORMS_CS_ 指向您的实例。
+* 打开ExecuteAssemblerService.java。 设置变量的值 _AEM_FORMS_CS_ 以指向您的实例。
 * 取消注释相应的行以测试PDFA操作。
 * 以Java应用程序形式运行ExecuteAssemblerService.java。
 

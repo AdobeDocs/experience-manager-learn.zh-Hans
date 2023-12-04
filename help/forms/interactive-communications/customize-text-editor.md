@@ -1,10 +1,7 @@
 ---
 title: 自定义文本编辑器
-seo-title: Customize text editor
 description: 了解如何自定义文本编辑器。
-seo-description: Learn how to customize text editor.
 doc-type: article
-activity: implement
 version: 6.5
 topic: Development
 role: Developer
@@ -13,9 +10,10 @@ feature: Interactive Communication
 last-substantial-update: 2023-04-19T00:00:00Z
 jira: KT-13126
 exl-id: e551ac8d-0bfc-4c94-b773-02ff9bba202e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 193
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '596'
 ht-degree: 1%
 
 ---
@@ -61,7 +59,7 @@ ht-degree: 1%
 
       ![覆盖节点](assets/overlay1.png)
 
-   1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
+   1. 单击 **确定**. 文件夹结构将在apps文件夹中创建。
 
    1. 单击&#x200B;**全部保存**。
 

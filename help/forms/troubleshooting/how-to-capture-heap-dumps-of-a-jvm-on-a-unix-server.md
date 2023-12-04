@@ -8,7 +8,8 @@ version: 6.5
 topic: Administration
 index: y
 exl-id: 6bb1d501-80c5-4f4d-af09-bbfcfcf51aa6
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 108
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 0%
@@ -17,6 +18,6 @@ ht-degree: 0%
 
 # 如何在unix服务器上捕获JVM的栈转储
 
-*本视频介绍在unix服务器上捕获JVM栈转储的步骤。*
+*此视频介绍在unix服务器上捕获JVM栈转储的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335489?quality=12&learn=on)

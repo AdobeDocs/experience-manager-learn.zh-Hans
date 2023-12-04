@@ -8,10 +8,11 @@ role: Developer
 level: Experienced
 exl-id: 3dd552da-fc7c-4fc7-97ec-f20b6cc33df0
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 224
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 2%
+source-wordcount: '382'
+ht-degree: 0%
 
 ---
 
@@ -32,14 +33,14 @@ ht-degree: 2%
 
 ## 指定数据库详细信息
 
-* 搜索“”**指定数据库详细信息**”
+* 搜索&quot;**指定数据库详细信息**&quot;
 * 指定特定于数据库的属性。
    * DataSourceName：您之前配置的数据源的名称。
    * TableName — 要存储AF数据的表的名称
    * FormName — 用于保存表单名称的列名称
    * ColumnName — 保存AF数据的列名称
 
-   ![指定数据库详细信息OSGi配置](assets/specify-database-details.png)
+  ![指定数据库详细信息OSGi配置](assets/specify-database-details.png)
 
 
 
@@ -210,11 +211,11 @@ public class InsertAfData implements WorkflowProcess {
 
 * 确保已配置JDBC连接池
 * 使用configMgr指定数据库详细信息
-* [下载Zip文件并将其内容解压缩到硬盘上](assets/article-assets.zip)
+* [下载Zip文件并将其内容解压到硬盘上](assets/article-assets.zip)
 
-   * 使用以下方式部署jar文件 [AEM Web控制台](http://localhost:4502/system/console/bundles). 此jar文件包含用于将表单数据存储到数据库中的代码。
+   * 使用部署jar文件 [AEM Web控制台](http://localhost:4502/system/console/bundles). 此jar文件包含用于将表单数据存储到数据库中的代码。
 
-   * 将两个zip文件导入 [使用包管理器的AEM](http://localhost:4502/crx/packmgr/index.jsp). 这样您就可以 [示例工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) 和 [自适应表单示例](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 将在提交表单时触发工作流。 请注意工作流步骤中的流程参数。 这些参数指示将包含自适应表单数据的数据文件的表单名称和名称。 数据文件存储在crx存储库的有效负荷文件夹下。 注意 [自适应表单](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 配置为在提交时触发AEM工作流以及数据文件配置(data.xml)
+   * 将两个zip文件导入 [使用包管理器的AEM](http://localhost:4502/crx/packmgr/index.jsp). 这样您就可以 [示例工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) 和 [自适应表单示例](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 这会在提交表单时触发工作流。 请注意工作流步骤中的进程参数。 这些参数指示将包含自适应表单数据的数据文件的表单名称和名称。 数据文件存储在crx存储库的有效负荷文件夹下。 注意 [自适应表单](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 配置为在提交时触发AEM工作流以及数据文件配置(data.xml)
 
    * 预览并填写表单并提交。 您应该会看到数据库中创建了一个新行
 

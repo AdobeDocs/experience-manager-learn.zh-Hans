@@ -1,35 +1,36 @@
 ---
 title: 持久GraphQL查询 — AEM Headless的高级概念 — GraphQL
-description: 在本章Adobe Experience Manager (AEM) Headless的高级概念中，了解如何使用参数创建和更新持久化GraphQL查询。 了解如何在持久查询中传递缓存控制参数。
+description: 在Adobe Experience Manager (AEM) Headless的高级概念的这一章中，了解如何使用参数创建和更新持久GraphQL查询。 了解如何在持久查询中传递缓存控制参数。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 6a8e90ae-0765-4066-9df4-a3e4d2cda285
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+duration: 253
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '760'
 ht-degree: 1%
 
 ---
 
 # 持久 GraphQL 查询
 
-持久查询是存储在Adobe Experience Manager (AEM)服务器上的查询。 客户端可以通过查询名称发送HTTPGET请求以执行它。 这种方法的好处是可缓存性。 虽然客户端GraphQL查询也可以使用HTTPPOST请求执行（无法缓存），但持久查询可以由HTTP缓存或CDN缓存，从而提高性能。 持久查询允许您简化请求并提高安全性，因为您的查询将封装在服务器上，并且AEM管理员可以完全控制它们。 它是 **最佳实践和强烈建议** 以便在使用AEM GraphQL API时使用持久查询。
+持久查询是存储在Adobe Experience Manager (AEM)服务器上的查询。 客户端可以发送一个具有查询名称的HTTPGET请求来执行它。 这种方法的好处是可缓存性。 虽然客户端GraphQL查询也可以使用HTTPPOST请求执行（无法缓存），但持久查询可以由HTTP缓存或CDN缓存，从而提高性能。 持久查询允许您简化请求并提高安全性，因为您的查询已封装在服务器上，并且AEM管理员可以完全控制它们。 它是 **最佳实践和强烈建议** 在使用AEM GraphQL API时使用持久查询。
 
-在上一章中，您已探索了一些高级GraphQL查询来收集WKND应用程序的数据。 在本章中，您将查询保留到AEM，并了解如何对保留的查询使用缓存控制。
+在上一章中，您已探索了一些高级GraphQL查询以收集WKND应用程序的数据。 在本章中，您将查询保留到AEM，并了解如何在保留的查询上使用缓存控制。
 
 ## 前提条件 {#prerequisites}
 
-本文档是多部分教程的一部分。 请确保 [上一章](explore-graphql-api.md) 已完成，然后才能继续阅读本章内容。
+本文档是多部分教程的一部分。 请确保 [上一章](explore-graphql-api.md) 已完成，然后再继续本章。
 
 ## 目标 {#objectives}
 
 在本章中，了解如何：
 
 * 使用参数保留GraphQL查询
-* 对持久查询使用cache-control参数
+* 将cache-control参数用于持久查询
 
 ## 审核 _GraphQL持久查询_ 配置设置
 
@@ -37,13 +38,13 @@ ht-degree: 1%
 
 1. 导航到 **工具** > **常规** > **配置浏览器**.
 
-1. 选择 **WKND已共享**，然后选择 **属性** 以打开配置属性。 在“配置属性”页面上，您应该看到 **GraphQL持久查询** 权限已启用。
+1. 选择 **WKND已共享**，然后选择 **属性** 以打开配置属性。 在配置属性页面上，您应该看到 **GraphQL持久查询** 权限已启用。
 
    ![配置属性](assets/graphql-persisted-queries/configuration-properties.png)
 
-## 使用内置GraphiQL资源管理器工具保留GraphQL查询
+## 使用内置GraphiQL Explorer工具持久GraphQL查询
 
-在此部分中，我们将保留GraphQL查询，该查询稍后将在客户端应用程序中使用来获取和渲染冒险内容片段数据。
+在此部分中，我们将保留GraphQL查询，该查询以后在客户端应用程序中使用来获取和渲染冒险内容片段数据。
 
 1. 在GraphiQL Explorer中输入以下查询：
 
@@ -156,9 +157,9 @@ ht-degree: 1%
 
    在保存查询之前，请验证查询是否有效。
 
-1. 接下来，点按另存为，然后输入 `adventure-details-by-slug` 作为“查询名称”。
+1. 接下来，点按另存为，并输入 `adventure-details-by-slug` 作为查询名称。
 
-   ![保留GraphQL查询](assets/graphql-persisted-queries/persist-graphql-query.png)
+   ![持久GraphQL查询](assets/graphql-persisted-queries/persist-graphql-query.png)
 
 ## 通过编码特殊字符执行带变量的持久查询
 
@@ -170,7 +171,7 @@ ht-degree: 1%
 GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
 ```
 
-执行持久查询 _带有变量_，则上述语法将更改为：
+执行持久查询 _带变量_，则上述语法将更改为：
 
 ```
 GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>;variable1=value1;variable2=value2
@@ -206,37 +207,37 @@ GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
 
 >[!TIP]
 >
->    如果针对AEM创作环境运行上述查询，则必须发送凭据。 参见 [本地开发访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) 以示范 [调用AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api) 以了解文档详细信息。
+>    如果对AEM创作环境运行上述查询，则必须发送凭据。 请参阅 [本地开发访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) 演示和 [调用AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api) 以了解文档详细信息。
 
-此外，查看 [如何执行持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query)， [使用查询变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables)、和 [为应用程序使用的查询URL编码](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url) 了解客户端应用程序的持久查询执行。
+此外，查看 [如何执行持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query)， [使用查询变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables)、和 [为应用程序使用的查询URL编码](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url) 以了解客户端应用程序的持久查询执行。
 
 ## 更新持久查询中的缓存控制参数 {#cache-control-all-adventures}
 
-AEM GraphQL API允许您更新查询的默认缓存控制参数，以提高性能。 默认的cache-control值包括：
+AEM GraphQL API允许您更新查询的默认缓存控制参数，以提高性能。 默认的cache-control值为：
 
-* 60秒是客户端（例如，浏览器）的默认(maxage=60) TTL
+* 60秒是客户端（例如浏览器）的默认(maxage=60) TTL
 
 * 7200秒是Dispatcher和CDN的默认(s-maxage=7200) TTL；也称为共享缓存
 
-使用 `adventures-all` 查询以更新cache-control参数。 查询响应很大，控制查询响应很有用 `age` 在缓存中。 此持久查询稍后用于更新 [客户端应用程序](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md).
+使用 `adventures-all` 查询以更新cache-control参数。 查询响应很大，控制其大小很有用 `age` 在缓存中。 此持久查询稍后用于更新 [客户端应用程序](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md).
 
-1. 打开GraphiQL Explorer并单击 **椭圆** (...)，然后单击 **标头** 打开 **缓存配置** 模式。
+1. 打开GraphiQL Explorer并单击 **椭圆** (...)，然后单击 **标题** 以打开 **缓存配置** 模式。
 
    ![保留GraphQL标题选项](assets/graphql-persisted-queries/persist-graphql-header-option.png)
 
 
-1. 在 **缓存配置** 模式，更新 `max-age` 标头值至 `600 `秒（10分钟），然后单击 **保存**
+1. 在 **缓存配置** 模式，更新 `max-age` 标题值至 `600 `秒（10分钟），然后单击 **保存**
 
    ![保留GraphQL缓存配置](assets/graphql-persisted-queries/persist-graphql-cache-config.png)
 
 
-审核 [正在缓存您的持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#caching-persisted-queries) 以了解有关默认cache-control参数的详细信息。
+审核 [正在缓存您的持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#caching-persisted-queries) 以获取有关默认cache-control参数的详细信息。
 
 
 ## 恭喜！
 
-恭喜！您现在已了解如何使用参数持久GraphQL查询、更新持久查询和对持久查询使用缓存控制参数。
+恭喜！您现在已了解如何使用参数持久GraphQL查询，更新持久查询，以及对持久查询使用缓存控制参数。
 
 ## 后续步骤
 
-在 [下一章节](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)，则将在WKND应用程序中实施对持久查询的请求。
+在 [下一章](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)，则将在WKND应用程序中实施对持久查询的请求。

@@ -10,10 +10,11 @@ level: Beginner
 jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 580
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2296'
-ht-degree: 2%
+source-wordcount: '2146'
+ht-degree: 0%
 
 ---
 
@@ -46,9 +47,9 @@ ht-degree: 2%
 
 ### 问：可以使用CTT传输的内容数量是否有限制？
 
-否. CTT作为一种工具可以从AEM源中提取并摄取到AEMaaCS中。 但是，在迁移之前应考虑对AEMaaCS平台的特定限制。
+不适用。 CTT作为一种工具可以从AEM源中提取并摄取到AEMaaCS中。 但是，在迁移之前应考虑对AEMaaCS平台的特定限制。
 
-有关更多信息，请参阅 [云迁移先决条件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=zh-Hans).
+有关更多信息，请参阅 [云迁移先决条件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html).
 
 ### 问：我已收到来自源系统的最新BPA报告，应该对其执行哪些操作？
 
@@ -167,7 +168,7 @@ CTT流程需要连接到以下资源：
 
 ### 问：资产在AEMaaCS中摄取后是否会自动重新处理？
 
-否. 要处理资产，必须启动重新处理的请求。
+不适用。 要处理资产，必须启动重新处理的请求。
 
 ### 问：资产在AEMaaCS中引入后是否会自动重新索引？
 

@@ -1,7 +1,6 @@
 ---
 title: AEMas a Cloud Service中的遍历警告
 description: 了解如何在AEMas a Cloud Service中缓解遍历警告。
-topics: Migration
 feature: Migration
 role: Architect, Developer
 level: Beginner
@@ -11,10 +10,11 @@ hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 327
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 11%
+source-wordcount: '715'
+ht-degree: 4%
 
 ---
 
@@ -127,19 +127,19 @@ consider creating an index or changing the query
 
 + 与查询执行关联的HTTP请求URL
 
-   + 示例: `GET /content/wknd/us/en/example.html HTTP/1.1`
+   + 示例： `GET /content/wknd/us/en/example.html HTTP/1.1`
 
 + Oak查询语法
 
-   + 示例: `select [jcr:path], [jcr:score], * from [nt:base] as a where [xyz] = 'abc' and isdescendantnode(a, '/content')`
+   + 示例： `select [jcr:path], [jcr:score], * from [nt:base] as a where [xyz] = 'abc' and isdescendantnode(a, '/content')`
 
 + XPath查询
 
-   + 示例: `/jcr:root/content//element(*, nt:base)[(@xyz = 'abc')] */, path=/content//*, property=[xyz=[abc]])`
+   + 示例： `/jcr:root/content//element(*, nt:base)[(@xyz = 'abc')] */, path=/content//*, property=[xyz=[abc]])`
 
 + 执行查询的代码
 
-   + 示例:  `apps.wknd.components.search.example__002e__jsp._jspService` → `/apps/wknd/components/search/example.html`
+   + 示例：  `apps.wknd.components.search.example__002e__jsp._jspService` → `/apps/wknd/components/search/example.html`
 
 __失败的查询__ 后面跟有 `RuntimeNodeTraversalException` 语句，类似于：
 

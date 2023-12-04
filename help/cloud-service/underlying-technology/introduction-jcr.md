@@ -1,10 +1,7 @@
 ---
 title: Java内容存储库(JCR)简介
 description: 对Adobe Experience Manager使用的JCR (Java Content Repository)的简单介绍。 JCR是AEM技术栈栈的基本级别，负责底层内容持久性、存储、搜索、访问控制等！
-topics: jcr, architecture
-audience: administrator, developer
 doc-type: technical video
-activity: understand
 version: Cloud Service
 jira: KT-4643
 thumbnail: 32030.jpg
@@ -13,7 +10,8 @@ feature: JCR
 role: Architect, Developer
 level: Beginner
 exl-id: 1e419597-3f60-4110-bafd-a4acb0fad7a0
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 333
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%

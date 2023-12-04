@@ -4,10 +4,11 @@ description: 面向初学者和经验丰富的AEM Forms开发人员的AEM Forms�
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
+duration: 152
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 6%
+source-wordcount: '405'
+ht-degree: 5%
 
 ---
 
@@ -18,16 +19,13 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
 ## 新增功能
 
 * **[处理调用表单数据模型服务步骤中的错误消息](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
+  *工作流模型中的变量是一种根据其数据类型存储值的方法*
 
-   *工作流模型中的变量是一种根据其数据类型存储值的方法*
-
-* **[交互式通信文档中的多系列图（视频）](./interactive-communications/multiseriescharts.md)**
-
-   *在同一张图表中绘制多个系列。 多系列图表通常与折线图、条形图、柱状图类型结合使用。*
+* **[交互式通信文档中的多系列图表（视频）](./interactive-communications/multiseriescharts.md)**
+  *在同一张图表中绘制多个系列。 多系列图表通常与折线图、条形图、柱形图类型结合使用。*
 
 * **[创建可重用工作流模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
-
-   *创建未绑定到特定表单的工作流模型*
+  *创建未绑定到特定表单的工作流模型*
 
 ## 员工精选
 
@@ -43,7 +41,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em>自适应表单是新一代的表单，具有动态性和响应性。 您可以使用自适应表单来提供个性化体验</em>
+    <em>自适应表单是动态且响应灵敏的新一代表单。 您可以使用自适应表单提供个性化体验</em>
     <p>
   </td>
    <td>
@@ -56,7 +54,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em>交互式通信可以集中管理安全、个性化的交互式信函的创建、编排和交付，例如业务信函、文档、对帐单、福利通知、营销邮件、账单和欢迎资料包。 </em>
+    <em>交互式通信可以集中管理安全、个性化的交互式信函的创建、编排和交付，例如业务信函、文档、声明、福利通知、市场营销邮件、账单和欢迎资料包。 </em>
     <p>
   </td>
   <td>
@@ -140,7 +138,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em>租户与房东之间使用AEM Forms和Acrobat Sign填写并签署的租赁协议</em>
+    <em>使用AEM Forms和Acrobat Sign填写并签署了租户与房东之间的租赁协议</em>
     <p>
   </td>
   <td>
@@ -166,7 +164,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
       </a>
     </div>
     <p>
-    <em>使用Forms和Acrobat Sign无缝地签署多个文档</em>
+    <em>使用Forms和Acrobat Sign无缝签署多个文档</em>
     <p>
   </td>
 </tr>

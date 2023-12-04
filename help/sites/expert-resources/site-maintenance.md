@@ -4,14 +4,14 @@ description: 无论您是管理员、作者还是开发人员，站点维护都�
 role: Admin
 level: Beginner, Intermediate
 topic: Administration
-audience: author, marketer, developer
 feature: Learn From Your Peers
 jira: KT-14255
 exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+duration: 266
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 7%
+source-wordcount: '998'
+ht-degree: 3%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 7%
 
 ### 日常维护
 
-#### [索引维护](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=zh-Hans)
+#### [索引维护](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=en)
 
 索引允许查询尽可能快地运行，从而腾出资源用于其他操作。 确保索引处于顶部形状！ AEM会取消遍历的查询，而不是使用索引来防止一个错误的查询影响整体AEM性能。
 
@@ -63,7 +63,7 @@ ht-degree: 7%
 
 符合审核日志记录条件的AEM事件会生成大量存档数据。 由于复制、资产上传和其他系统活动，这些数据会随着时间的推移而快速增长。
 
-#### [安全性](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=zh-Hans)
+#### [安全性](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en)
 
 确保严格遵循安全清单最佳实践，以确保AEM的最安全实例。
 

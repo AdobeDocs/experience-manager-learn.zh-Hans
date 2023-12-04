@@ -8,16 +8,17 @@ thumbnail: 342865.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: de4c2a3b-e5a3-4b2c-aaa0-c0f7028dd61e
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+duration: 318
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 3%
+source-wordcount: '52'
+ht-degree: 0%
 
 ---
 
 # Cloud 5 — 存储库现代化器
 
-这些专家将详细了解存储库现代化器如何帮助您过渡到AEMas a Cloud Service，并提供其工作方式及其原因的有用概述。
+这些人员将介绍存储库现代化器如何帮助您过渡到AEMas a Cloud Service，并提供有关其工作方式及其原因的有用概述。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342865?quality=12&learn=on)
 

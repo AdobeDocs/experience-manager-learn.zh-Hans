@@ -2,10 +2,7 @@
 title: as a Cloud Service于外部应用程序向AEM进行身份验证
 description: 探索外部应用程序可怎样使用本地开发访问令牌和服务凭据以编程方式通过HTTP验证并与AEMas a Cloud Service交互。
 version: Cloud Service
-topics: Development, Security
 feature: APIs
-activity: develop
-audience: developer
 jira: KT-6785
 thumbnail: 330460.jpg
 topic: Headless, Integrations
@@ -13,9 +10,10 @@ role: Developer
 level: Intermediate, Experienced
 doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 171
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---

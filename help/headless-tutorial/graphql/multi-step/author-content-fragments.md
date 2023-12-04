@@ -10,10 +10,11 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 227
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 4%
+source-wordcount: '789'
+ht-degree: 3%
 
 ---
 
@@ -84,7 +85,7 @@ ht-degree: 4%
 1. 在左侧边栏中，展开 **我的项目** 并点击 **英语**.
 1. 点按 **创建** 以调出 **新内容片段** 对话框，并输入以下值：
 
-   * 位置: `/content/dam/my-project/en`
+   * 位置： `/content/dam/my-project/en`
    * 内容片段模型： **人员**
    * 标题： **John Doe**
    * 名称：`john-doe`
@@ -93,7 +94,7 @@ ht-degree: 4%
 1. 点按&#x200B;**创建**。
 1. 重复上述步骤以创建片段，表示 **艾莉森·史密斯**：
 
-   * 位置: `/content/dam/my-project/en`
+   * 位置： `/content/dam/my-project/en`
    * 内容片段模型： **人员**
    * 标题： **艾莉森·史密斯**
    * 名称：`alison-smith`
@@ -102,7 +103,7 @@ ht-degree: 4%
 
 1. 接下来，重复这些步骤以创建 **团队** 片段表示 **团队Alpha**：
 
-   * 位置: `/content/dam/my-project/en`
+   * 位置： `/content/dam/my-project/en`
    * 内容片段模型： **团队**
    * 标题： **团队Alpha**
    * 名称：`team-alpha`

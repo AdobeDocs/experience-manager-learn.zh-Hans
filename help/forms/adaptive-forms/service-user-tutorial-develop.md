@@ -7,10 +7,11 @@ role: Developer
 level: Experienced
 exl-id: 5fa3d52a-6a71-45c4-9b1a-0e6686dd29bc
 last-substantial-update: 2020-09-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 187
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 1%
+source-wordcount: '415'
+ht-degree: 0%
 
 ---
 
@@ -18,14 +19,14 @@ ht-degree: 1%
 
 本文向您介绍在AEM Forms中创建服务用户的过程
 
-在Adobe Experience Manager (AEM)的早期版本中，管理资源解析程序用于后端处理，这需要访问存储库。 AEM 6.3中不建议使用管理资源解析程序。而是使用存储库中具有特定权限的系统用户。
+在Adobe Experience Manager (AEM)的早期版本中，管理资源解析程序用于需要访问存储库的后端处理。 AEM 6.3中不建议使用管理资源解析程序。而是使用存储库中具有特定权限的系统用户。
 
 详细了解 [在AEM中创建和使用服务用户](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
 
-本文逐步介绍如何创建系统用户和配置用户映射器属性。
+本文介绍了如何创建系统用户和配置用户映射器属性。
 
 1. 导航到 [http://localhost:4502/crx/explorer/index.jsp](http://localhost:4502/crx/explorer/index.jsp)
-1. 以“ admin ”身份登录
+1. 以“管理员”身份登录
 1. 单击“用户管理”
 1. 单击“创建系统用户”
 1. 将用户ID类型设置为“ data ”，然后单击绿色图标以完成创建系统用户的过程
@@ -44,17 +45,17 @@ ht-degree: 1%
 
 1. [下载并解压缩与本文关联的zip文件。](assets/developingwithserviceuser.zip)
 1. 导航到 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
-1. 上传和启动OSGi捆绑包
-1. 确保包处于活动状态
-1. 您现在已成功创建 *系统用户* 并部署了 *服务用户捆绑包*.
+1. 上传并启动OSGi捆绑包
+1. 确保捆绑包处于活动状态
+1. 您现在已成功创建了 *系统用户* 并部署了 *服务用户捆绑包*.
 
    要提供对/content的访问权限，请授予系统用户（“数据”）对内容节点的读取权限。
 
    1. 导航到 [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
-   1. 搜索用户“ data ”。 这是您在上一步中创建的系统用户。
-   1. 双击该用户，然后单击“权限”选项卡
-   1. 授予“content”文件夹的“读取”访问权限。
-   1. 要使用服务用户获得对/content文件夹的访问权限，请使用以下代码
+   1. 搜索用户“ data ”。 这是您在上一步中创建的相同系统用户。
+   1. 双击用户，然后单击“权限”选项卡
+   1. 授予“内容”文件夹的“读取”访问权限。
+   1. 要使用服务用户访问/content文件夹，请使用以下代码
 
 
 
@@ -68,7 +69,7 @@ resourceResolver = aemDemoListings.getServiceResolver();
 Resource contentResource = resourceResolver.getResource("/content/forms/af/sandbox/abc.pdf");
 ```
 
-如果要访问捆绑包中的/content/dam/data.json文件，将使用以下代码。 此代码假定您已授予/content/dam/节点上的“data”用户读取权限
+如果要访问捆绑包中的/content/dam/data.json文件，将使用以下代码。 此代码假定您已经为/content/dam/节点上的“data”用户授予了读取权限
 
 ```java
 @Reference

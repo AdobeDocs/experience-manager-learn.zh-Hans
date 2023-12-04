@@ -2,10 +2,7 @@
 title: 创建用于审阅已提交数据的工作流
 description: 使用AEM工作流组件创建AEM Forms工作流模型以查看提交的数据。
 feature: Workflow
-topics: integrations
-audience: developer
 doc-type: article
-activity: setup
 version: 6.4,6.5
 jira: KT-4271
 thumbnail: 40242.jpg
@@ -14,10 +11,11 @@ role: Developer
 level: Beginner
 exl-id: 0aafd97a-2e72-4257-ad4d-e0993263b11f
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1061
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 4%
+source-wordcount: '127'
+ht-degree: 1%
 
 ---
 

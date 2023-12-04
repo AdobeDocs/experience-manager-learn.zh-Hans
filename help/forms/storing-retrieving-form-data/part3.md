@@ -8,7 +8,8 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 9cce47e7-07b4-43c3-8746-197620855c3f
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+duration: 135
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 1%
@@ -17,7 +18,7 @@ ht-degree: 1%
 
 # 创建OSGi服务以提取数据
 
-编写了以下代码以存储和提取存储的自适应表单数据。 简单查询用于获取与给定GUID关联的自适应表单数据。 然后将获取的数据返回到调用应用程序。 此代码引用了上一步中创建的相同数据源
+编写了以下代码以存储和提取存储的自适应表单数据。 简单查询用于获取与给定GUID关联的自适应表单数据。 然后将获取的数据返回到调用应用程序。 此代码引用了上一步中创建的同一数据源
 
 
 ```java

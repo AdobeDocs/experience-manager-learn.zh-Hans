@@ -1,5 +1,5 @@
 ---
-title: 使用权限将XDP渲染为PDF
+title: 使用权限将XDP呈现为PDF
 description: 对PDF应用使用权限
 version: 6.4,6.5
 feature: Forms Service
@@ -8,35 +8,36 @@ role: Developer
 level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 221
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 2%
+source-wordcount: '411'
+ht-degree: 0%
 
 ---
 
-# 使用权限将XDP渲染为PDF{#rendering-xdp-into-pdf-with-usage-rights}
+# 使用权限将XDP呈现为PDF{#rendering-xdp-into-pdf-with-usage-rights}
 
 一个常见用例是将xdp渲染到PDF并将Reader扩展应用于渲染的PDF。
 
-例如，在AEM Forms的Forms Portal中，当用户单击XDP时，我们可以将XDP渲染为PDF，读者可以扩展PDF。
+例如，在AEM Forms的Forms Portal中，当用户单击XDP时，我们可以呈现XDP作为PDF，读者可以扩展PDF。
 
 
 要完成此用例，我们需要执行以下操作。
 
-* 将Reader扩展证书添加到“fd-service”用户。 列出了添加Reader扩展凭据的步骤 [此处](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=zh-Hans)
+* 将Reader扩展证书添加到“fd-service”用户。 列出了添加Reader扩展凭据的步骤 [此处](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)
 
 
-* 您也可以参阅以下视频： [配置Reader扩展凭据](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
+* 您也可以参考以下视频： [配置Reader扩展凭据](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
 
 
-* 创建可渲染和应用使用权限的自定义OSGi服务。 下面列出了完成此任务的代码
+* 创建可呈现和应用使用权限的自定义OSGi服务。 下面列出了完成此任务的代码
 
-## 渲染XDP并应用使用权限 {#render-xdp-and-apply-usage-rights}
+## 呈现XDP并应用使用权限 {#render-xdp-and-apply-usage-rights}
 
 * 第7行：我们使用FormsService的renderPDFForm从XDP生成PDF。
 
-* 第8-14行：设置了适当的使用权限。 这些使用权限是从OSGi配置设置中获取的。
+* 第8-14行：设置了适当的使用权限。 将从OSGi配置设置获取这些使用权限。
 
 * 第20行：使用与服务用户fd-service关联的resourceresolver
 
@@ -82,7 +83,7 @@ ht-degree: 2%
  }
 ```
 
-以下屏幕截图显示了显示的配置属性。 大多数常见使用权限都通过此配置公开。
+以下屏幕截图显示了公开的配置属性。 大多数常见使用权限均通过此配置公开。
 
 ![配置属性](assets/configurationproperties.gif)
 
@@ -123,7 +124,7 @@ public @interface DocSvcConfiguration {
 
 ## 创建Servlet以流式传输PDF {#create-servlet-to-stream-the-pdf}
 
-下一步是使用GET方法创建一个servlet，以将读取器扩展PDF返回给用户。 在这种情况下，要求用户将PDF保存到其文件系统。 这是因为PDF呈现为动态PDF，并且浏览器附带的pdf查看器无法处理动态pdf。
+下一步是使用GET方法创建一个servlet以将读取器扩展PDF返回给用户。 在这种情况下，要求用户将PDF保存到其文件系统。 这是因为PDF呈现为动态PDF，并且浏览器附带的PDF查看器无法处理动态PDF。
 
 以下是servlet的代码。 我们将CRX存储库中XDP的路径传递到此servlet。
 

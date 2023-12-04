@@ -10,18 +10,19 @@ jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
-source-git-commit: 27d065761643030de68176ebb4ca10bc152844df
+duration: 883
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 # 如何使用快速开发环境
 
-了解 **使用方法** AEMas a Cloud Service中的快速开发环境(RDE)。 从您喜爱的集成开发环境(IDE)中，将代码和内容部署到RDE，以加快近乎最终版本的开发周期。
+学习 **使用方法** AEMas a Cloud Service中的快速开发环境(RDE)。 从您喜爱的集成开发环境(IDE)将代码和内容部署到RDE，以加快近乎最终代码的开发周期。
 
-使用 [AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) 您将了解如何通过运行AEM-RDE将各种AEM工件部署到RDE `install` 命令。
+使用 [AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) 您将了解如何通过运行AEMAEM的 `install` 命令。
 
 - AEM代码和内容包(all， ui.apps)部署
 - OSGi捆绑包和配置文件部署
@@ -52,7 +53,7 @@ $ mvn clean package
 
 ### 部署 `all` 和 `dispatcher` 包
 
-一个常见的起点是首先部署 `all` 和 `dispatcher` 通过运行以下命令来部署包。
+一个常见的起点是首先部署 `all` 和 `dispatcher` 通过运行以下命令来打包。
 
 ```shell
 # Install the 'all' package
@@ -68,7 +69,7 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
 
 让我们增强 `Hello World Component` 并将其部署到RDE。
 
-1. 打开对话框XML (`.content.xml`)文件来源 `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/` 文件夹
+1. 打开对话框XML (`.content.xml`)文件来自 `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/` 文件夹
 1. 添加 `Description` 文本字段位于现有字段之后 `Text` 对话框字段
 
    ```xml
@@ -93,7 +94,7 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. 通过执行maven构建或同步各个文件，验证本地AEM-SDK上的更改。
+1. 通过执行maven构建或同步单个文件来验证本地AEM-SDK上的更改。
 
 1. 通过以下方式将更改部署到RDE `ui.apps` 软件包或部署单个对话框和HTL文件。
 
@@ -112,24 +113,24 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    $ aio aem:rde:install ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/.content.xml -t content-xml -p /apps/wknd/components/helloworld/_cq_dialog/.content.xml
    ```
 
-1. 通过添加或编辑 `Hello World Component` 在WKND网站页面上。
+1. 通过在RDE上添加或编辑 `Hello World Component` 在WKND网站页面上。
 
 ### 查看 `install` 命令选项
 
-在上述单个文件部署命令示例中， `-t` 和 `-p` 标记用于分别指示JCR路径的类型和目标。 让我们查看可用的 `install` 命令选项。
+在上述单个文件部署命令示例中， `-t` 和 `-p` 标记分别用于指示JCR路径的类型和目标。 让我们查看可用的 `install` 命令选项。
 
 ```shell
 $ aio aem:rde:install --help
 ```
 
-旗子很明晰， `-s` 标记可用于将部署仅定位到创作或发布服务。 使用 `-t` 在部署时标记 **content-file或content-xml** 文件以及 `-p` 用于指定AEM RDE环境中的目标JCR路径的标志。
+这些旗帜很能说明问题， `-s` 标记可用于将部署仅定位到创作或发布服务。 使用 `-t` 部署时标记 **content-file或content-xml** 文件以及 `-p` 用于指定AEM RDE环境中的目标JCR路径的标志。
 
 ### 部署OSGi捆绑包
 
-要了解如何部署OSGi捆绑包，让我们增强 `HelloWorldModel` Java™类并将其部署到RDE。
+要了解如何部署OSGi捆绑包，让我们增强 `HelloWorldModel` Java™类并将其部署到RDE中。
 
 1. 打开 `HelloWorldModel.java` 文件来源 `core/src/main/java/com/adobe/aem/guides/wknd/core/models` 文件夹
-1. 更新 `init()` 方法：
+1. 更新 `init()` 方法如下：
 
    ```java
    ...
@@ -149,11 +150,11 @@ $ aio aem:rde:install --help
    $ aio aem:rde:install target/aem-guides-wknd.core-2.1.3-SNAPSHOT.jar
    ```
 
-1. 通过添加或编辑 `Hello World Component` 在WKND网站页面上。
+1. 通过在RDE上添加或编辑 `Hello World Component` 在WKND网站页面上。
 
 ### 部署OSGi配置
 
-例如，您可以部署单个配置文件或完整的配置包，例如：
+您可以部署单个配置文件或完整的配置包，例如：
 
 ```shell
 # Deploy individual config file
@@ -187,7 +188,7 @@ Apache或Dispatcher配置文件 **无法单独部署**，但整个Dispatcher文�
    ...
    ```
 
-1. 在本地验证更改，请参见 [在本地运行Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#run-dispatcher-locally) 了解更多详细信息。
+1. 在本地验证更改，请参见 [在本地运行Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#run-dispatcher-locally) 以了解更多详细信息。
 1. 通过运行以下命令将更改部署到RDE：
 
    ```shell

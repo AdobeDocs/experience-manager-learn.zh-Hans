@@ -11,10 +11,11 @@ last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: ad06b0f3-afa7-4661-aa66-0674d2e6bb43
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+duration: 1162
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 2%
+source-wordcount: '594'
+ht-degree: 1%
 
 ---
 
@@ -42,7 +43,7 @@ Adobe Experience Manager (AEM)中的内容片段提供了一种结构化方法�
 
 1. 由于图像列表是包括对其他片段的引用的容器类型片段，因此可以直接从编辑器创建新选件。  创建选件片段、包含和图像描述以及文章。  您可以从下面剪切并粘贴文本。  我们将片段的标题用作信息卡的标题。
 
-   __文章 1__
+   __Article 1__
 
    _标题_
 

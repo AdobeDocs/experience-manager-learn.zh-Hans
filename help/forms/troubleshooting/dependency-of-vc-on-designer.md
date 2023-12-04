@@ -1,5 +1,5 @@
 ---
-title: 如何解决Designer中C++库的依赖性问题
+title: 如何解决Designer中C++库的依赖项问题
 description: 为Designer安装所需的C++库
 type: Troubleshooting
 role: Developer
@@ -9,14 +9,15 @@ feature: Designer
 topic: Development
 index: y
 exl-id: 9cffce45-c853-440f-9ddf-2e179dff6745
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 56
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
-# 如何解决Designer中C++库的依赖性问题
+# 如何解决Designer中C++库的依赖项问题
 
 *本视频介绍在Designer中对C++库进行依赖性问题故障排除的步骤。*
 

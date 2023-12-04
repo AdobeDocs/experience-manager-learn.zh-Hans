@@ -1,6 +1,6 @@
 ---
-title: 如何从“帮助”菜单收集Workbench日志
-description: 从“帮助”菜单中收集Workbench日志的步骤
+title: 如何从帮助菜单收集Workbench日志
+description: 从“帮助”菜单收集Workbench日志的步骤
 type: Troubleshooting
 role: Developer
 level: Beginner
@@ -9,15 +9,16 @@ feature: Workbench
 topic: Development
 index: y
 exl-id: c0078e02-34b0-496c-9c06-b7b5fc0304f7
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 46
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%
 
 ---
 
-# 从“帮助”菜单中收集Workbench日志
+# 从帮助菜单中收集Workbench日志
 
-*本视频介绍从“帮助”菜单收集Workbench日志的过程。*
+*本视频介绍从帮助菜单收集Workbench日志的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335501?quality=12&learn=on)

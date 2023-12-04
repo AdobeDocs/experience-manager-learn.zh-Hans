@@ -12,10 +12,11 @@ index: y
 recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 416
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 2%
+source-wordcount: '560'
+ht-degree: 0%
 
 ---
 

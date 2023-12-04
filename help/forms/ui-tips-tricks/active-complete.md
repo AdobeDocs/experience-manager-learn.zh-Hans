@@ -10,10 +10,11 @@ level: Beginner
 jira: KT-9359
 exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 111
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 15%
+source-wordcount: '328'
+ht-degree: 14%
 
 ---
 
@@ -45,7 +46,7 @@ ht-degree: 15%
 
 | 类别 | 属性名称 | 属性值 |
 |:---|:---|:---|
-| Dimension和位置 | 宽度 | 50px |
+| Dimension和位置 | 宽度 | 50像素 |
 | 文本 | 字体粗细 | 粗体 |
 | 文本 | 颜色 | #FFF |
 | 文本 | 行高 | 3 |
@@ -66,7 +67,7 @@ ht-degree: 15%
 
 | 类别 | 属性名称 | 属性值 |
 |:---|:---|:---|
-| Dimension和位置 | 宽度 | 50px |
+| Dimension和位置 | 宽度 | 50像素 |
 | 文本 | 字体粗细 | 粗体 |
 | 文本 | 颜色 | #FFF |
 | 文本 | 行高 | 3 |

@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 kt: kt-8063
 exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 110
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '157'
 ht-degree: 1%
 
 ---
@@ -18,11 +19,11 @@ ht-degree: 1%
 # 自定义流程步骤
 
 
-实施了一个自定义流程步骤，以使用附件和附件名称填充“数组列表”类型的工作流变量。 然后，此变量在发送电子邮件工作流组件中使用。 如果您不熟悉如何创建OSGi捆绑包，请 [按照以下说明操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+实施了一个自定义流程步骤，以使用附件和附件名称填充“数组列表”类型的工作流变量。 然后，在发送电子邮件工作流组件中使用此变量。 如果您不熟悉如何创建OSGi捆绑包，请 [按照以下说明操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
 自定义流程步骤中的代码执行以下操作
 
-* 查询有效负荷文件夹下的所有自适应表单附件。 文件夹名称作为流程参数传递给流程步骤。
+* 查询有效负荷文件夹下的所有自适应表单附件。 文件夹名称将作为进程参数传递给进程步骤。
 
 * 填充 `listOfDocuments` 工作流变量
 * 填充 `attachmentNames` 工作流变量

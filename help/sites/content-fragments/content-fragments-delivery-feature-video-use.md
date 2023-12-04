@@ -1,8 +1,6 @@
 ---
 title: 在AEM中交付内容片段
-seo-title: Delivering Content Fragments in Adobe Experience Manager
 description: 内容片段与布局无关，可直接在包含核心组件的AEM Sites中使用，也可以以Headless方式交付到下游渠道。
-seo-description: Content Fragments, independent of layout, can be used directly in AEM Sites with Core Components or can be delivered in a headless manner to downstream channels.
 feature: Content Fragments
 version: 6.4, 6.5
 topic: Content Management
@@ -10,10 +8,11 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 913
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 7%
+source-wordcount: '520'
+ht-degree: 2%
 
 ---
 

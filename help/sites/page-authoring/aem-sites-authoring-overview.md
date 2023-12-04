@@ -1,6 +1,6 @@
 ---
 title: AEM Sites中的创作概述
-description: 以下视频概述了在AEM创作环境中创作的基本概念。 它使用 Sites 控制台作为基础。
+description: 以下视频概述了在AEM创作环境中创作的基本概念。 它使用站点控制台作为基础。
 feature: Page Editor, Editable Templates
 version: 6.4, 6.5, Cloud Service
 jira: KT-4242
@@ -10,10 +10,11 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: e71b106d-a44b-44af-ba85-7fb5806cdb83
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 226
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '79'
-ht-degree: 30%
+source-wordcount: '65'
+ht-degree: 13%
 
 ---
 

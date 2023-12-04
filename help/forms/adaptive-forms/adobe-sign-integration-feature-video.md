@@ -1,10 +1,9 @@
 ---
-title: 将Acrobat Sign与AEM Forms结合使用
-description: 将Acrobat Sign与AEM Forms结合使用
+title: 将Acrobat Sign与AEM Forms一起使用
+description: 将Acrobat Sign与AEM Forms一起使用
 feature: Acrobat Sign
 role: Admin
 level: Beginner
-uuid: cbccea0f-969c-445d-9390-a236bb1fd2c4
 product: Experience Manager
 topic-tags: forms, adaptive_forms
 topic: Integrations
@@ -14,21 +13,22 @@ index: y
 internal: n
 snippet: y
 last-substantial-update: 2020-10-20T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 641
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '75'
 ht-degree: 0%
 
 ---
 
 
-# 将Acrobat Sign与AEM Forms结合使用{#using-adobe-sign-with-aem-forms}
+# 将Acrobat Sign与AEM Forms一起使用{#using-adobe-sign-with-aem-forms}
 
-将Acrobat Sign与AEM Forms结合使用
+将Acrobat Sign与AEM Forms一起使用
 
 >[!VIDEO](https://video.tv.adobe.com/v/18696?quality=12&learn=on)
 
-*本视频介绍设置Acrobat Sign Cloud Service并将多个签名字段添加到AEM自适应表单的过程。*
+*本视频介绍设置Acrobat Sign云服务和将多个签名字段添加到AEM自适应表单的过程。*
 
 >[!NOTE]
 >

@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms中创建您的第一个servlet
-description: 构建您的第一个sling servlet以将数据与表单模板合并。
+title: 在AEM Forms中创建第一个servlet
+description: 构建您的第一个Sling Servlet以将数据与表单模板合并。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -8,20 +8,21 @@ role: Developer
 level: Beginner
 exl-id: 72728ed7-80a2-48b5-ae7f-d744db8a524d
 last-substantial-update: 2021-04-23T00:00:00Z
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 88
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 1%
+source-wordcount: '201'
+ht-degree: 0%
 
 ---
 
 # Sling Servlet
 
-Servlet类用于扩展服务器的功能，这些服务器托管通过请求 — 响应编程模型访问的应用程序。 对于此类应用程序，Servlet技术定义特定于HTTP的servlet类。
-所有servlet都必须实现Servlet接口，该接口定义了生命周期方法。
+Servlet是用来扩展服务器功能的类，这些服务器承载通过请求 — 响应编程模型访问的应用程序。 对于此类应用程序，Servlet技术定义特定于HTTP的servlet类。
+所有Servlet都必须实施Servlet接口，该接口定义生命周期方法。
 
 
-AEM中的servlet可以注册为OSGi服务：您可以扩展SlingSafeMethodsServlet以实现只读实现，也可以扩展SlingAllMethodsServlet以实现所有RESTful操作。
+AEM中的Servlet可以注册为OSGi服务：您可以为只读实现扩展SlingSafeMethodsServlet，或者为实施所有RESTful操作扩展SlingAllMethodsServlet。
 
 ## Servlet代码
 
@@ -75,16 +76,16 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 要构建项目，请执行以下步骤：
 
 * 打开 **命令提示符窗口**
-* 导航至 `c:\aemformsbundles\mysite\core`
+* 导航到 `c:\aemformsbundles\mysite\core`
 * 执行命令 `mvn clean install -PautoInstallBundle`
 * 上述命令会自动构建捆绑包，并将其部署到在localhost：4502上运行的AEM实例
 
-该捆绑包还可在以下位置使用 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用将捆绑包部署到AEM中 [Felix Web控制台。](http://localhost:4502/system/console/bundles)
+该捆绑包还可在以下位置使用 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用将捆绑包部署到AEM中。 [Felix Web控制台。](http://localhost:4502/system/console/bundles)
 
 
 ## 测试Servlet解析程序
 
-将浏览器指向 [servlet解析器URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). 这会告诉您为给定路径调用的servlet，如下面的屏幕快照所示
+将浏览器指向 [servlet解析程序URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). 这会告诉您为给定路径调用的servlet，如下面的屏幕快照所示
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
 ## 使用Postman测试servlet
@@ -93,5 +94,5 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 
 ## 后续步骤
 
-[包含第三方Jar的](./include-third-party-jars.md)
+[包含第三方jar的](./include-third-party-jars.md)
 

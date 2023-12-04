@@ -1,6 +1,6 @@
 ---
-title: 捕获必要信息以解决DDX相关问题的步骤
-description: 捕获解决与汇编程序有关的问题所需的详细信息
+title: 捕获解决DDX相关问题所需的信息的步骤
+description: 捕获解决与汇编程序相关问题所需的详细信息
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -9,7 +9,8 @@ feature: Assembler
 topic: Development
 index: y
 exl-id: 88972dcc-8c0b-4ff3-aab7-6a3ebc173a8b
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 129
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
@@ -18,6 +19,6 @@ ht-degree: 0%
 
 # 解决DDX相关问题的步骤
 
-*本视频介绍捕获在Forms Assembler服务中解决DDX相关问题所需的信息的步骤。*
+*本视频介绍了在Forms Assembler服务中捕获解决DDX相关问题所需的信息的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335517?quality=12&learn=on)

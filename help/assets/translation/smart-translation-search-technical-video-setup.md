@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 doc-type: Technical Video
 exl-id: 7be8c3d5-b944-4421-97b3-bd5766c1b1b5
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 664
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ ht-degree: 0%
    * 验证计算机是否具有此数量的额外可用内存。
    * 更新AEM启动脚本以调整新栈大小
 
-      * 例如. `java -Xmx12g -jar cq-author-p4502.jar`
+      * 例如 `java -Xmx12g -jar cq-author-p4502.jar`
 
    * 在栈大小增加的情况下重新启动AEM。
 

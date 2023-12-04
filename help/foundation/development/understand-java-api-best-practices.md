@@ -10,10 +10,11 @@ doc-type: Article
 exl-id: b613aa65-f64b-4851-a2af-52e28271ce88
 last-substantial-update: 2022-06-24T00:00:00Z
 thumbnail: aem-java-bp.jpg
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 564
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 2%
+source-wordcount: '1726'
+ht-degree: 0%
 
 ---
 
@@ -128,7 +129,7 @@ AEM支持多种查询语言。 三种主要语言是 [JCR-SQL2](https://docs.jbo
 * 异步处理构建基块
 
    * [事件和作业处理程序](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html)
-   * [调度程序](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
+   * [计划程序](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
    * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 
 * [服务用户](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)

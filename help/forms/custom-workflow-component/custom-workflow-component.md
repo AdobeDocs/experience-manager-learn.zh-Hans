@@ -8,16 +8,17 @@ role: Developer
 level: Experienced
 last-substantial-update: 2021-11-28T00:00:00Z
 exl-id: acc701ec-b57d-4c20-8f97-a5a69bb180cd
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 95
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 1%
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
 # 自定义工作流组件
 
-本教程面向需要创建自定义工作流组件的AEM Forms客户。 工作流组件将配置为执行在上一步中编写的代码。 工作流组件能够指定代码的进程参数。 在本文中，我们将探索与代码关联的工作流组件。
+本教程面向需要创建自定义工作流组件的AEM Forms客户。 工作流组件将配置为执行在上一步中编写的代码。 工作流组件能够为代码指定进程参数。 在本文中，我们将探讨与代码关联的工作流组件。
 
 
 [下载自定义工作流组件](assets/saveFiles.zip)
@@ -31,17 +32,17 @@ ht-degree: 1%
 
 **jcr：Title**  — 这是工作流组件的标题。
 
-**sling：resourceSuperType** 此属性的值将决定此组件的继承。 在本例中，我们继承自流程组件
+**sling：resourceSuperType** 此属性的值将决定此组件的继承。 在这种情况下，我们继承了流程组件
 
 
-![component — 属性](assets/component-properties1.png)
+![component-properties](assets/component-properties1.png)
 
 ## cq：dialog
 
 对话框用于允许作者与组件交互。 cq：dialog位于SaveFiles节点下
 ![cq-dialog](assets/cq-dialog.png)
 
-项目节点下的节点表示组件的选项卡，作者将通过这些选项卡与组件进行交互。 “常用”和“流程”选项卡处于隐藏状态。 “常用”和“参数”选项卡可见。
+项目节点下的节点表示作者将与组件交互的组件选项卡。 “常用”和“流程”选项卡处于隐藏状态。 “常用”和“参数”选项卡可见。
 
 进程的进程参数位于processargs节点下
 
@@ -50,12 +51,12 @@ ht-degree: 1%
 作者指定参数，如下面的屏幕快照中所示
 ![workflow-component](assets/custom-workflow-component.png)
 
-这些值存储为元数据节点的属性。 例如，值 **c：\formsattachments** 将存储在元数据节点的属性saveToLocation中
+这些值将存储为元数据节点的属性。 例如，值 **c：\formsattachments** 将存储在元数据节点的属性saveToLocation中
 ![save-location](assets/save-to-location.png)
 
 ## cq：editConfig
 
-cq：EditConfig只是一个节点，其主要类型为cq：EditConfig ，在组件根目录下名为cq：editConfig。组件的编辑行为通过在组件节点下添加cq：EditConfig类型的cq：editConfig节点来配置（类型为cq：Component）
+cq：EditConfig只是具有主类型cq：EditConfig和组件根目录下名称cq：editConfig的节点。组件的编辑行为通过在组件节点下添加类型为cq：EditConfig的cq：editConfig节点（类型为cq：Component）来配置
 
 ![edit-config](assets/cq-edit-config.png)
 

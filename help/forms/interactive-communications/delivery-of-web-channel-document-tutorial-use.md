@@ -2,30 +2,29 @@
 title: 交互式通信文档的交付 — Web渠道AEM Forms
 description: 通过电子邮件中的链接投放Web渠道文档
 feature: Interactive Communication
-audience: developer
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 50858100-3d0c-42bd-87b8-f626212669e2
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 85
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
 
 # Web渠道文档的电子邮件投放
 
-定义并测试Web渠道交互式通信文档后，您需要一种传送机制来将Web渠道文档传送给收件人。
+定义并测试Web渠道交互式通信文档后，您需要一种交付机制将Web渠道文档交付给收件人。
 
-在本文中，我们将电子邮件看作Web渠道文档的投放机制。 收件人将通过电子邮件获得指向Web渠道文档的链接。单击该链接时，将要求用户进行身份验证，并且使用特定于登录用户的数据填充Web渠道文档。
+在本文中，我们将电子邮件看作Web渠道文档的投放机制。 收件人将通过电子邮件获取指向Web渠道文档的链接。单击该链接时，将要求用户进行身份验证，并且使用特定于登录用户的数据填充Web渠道文档。
 
-让我们看一下以下代码片段。 此代码是GET.jsp的一部分，当用户单击电子邮件中的链接以查看Web渠道文档时，将触发该代码。 我们使用jackrabbit UserManager获取登录用户。 获得登录用户后，我们会获得与用户配置文件关联的accountNumber属性的值。
+下面我们看一看以下代码片段。 此代码是GET.jsp的一部分，当用户单击电子邮件中的链接以查看Web渠道文档时，将触发该代码。 我们使用jackrabbit UserManager获取登录用户。 获得登录用户后，我们会获得与用户配置文件关联的accountNumber属性的值。
 
-然后，我们将accountNumber值与映射中名为accountnumber的键关联。 密钥 **accountnumber** 在表单数据模式中定义为请求属性。 此属性的值作为输入参数传递给表单数据模式读取服务方法。
+然后，我们将accountNumber值与映射中名为accountnumber的键关联。 键 **accountnumber** 在表单数据模式中定义为请求属性。 此属性的值作为输入参数传递给表单数据模式读取服务方法。
 
 第7行：我们将根据交互式通信文档URL标识的资源类型，将收到的请求发送给另一个servlet。 此第二个servlet返回的响应包含在第一个servlet的响应中。
 
@@ -39,7 +38,7 @@ CustomParameterRequest wrapperRequest = new CustomParameterRequest(slingRequest,
 wrapperRequest.getRequestDispatcher("/content/forms/af/401kstatement/irastatement/channels/web.html").include(wrapperRequest, response);
 ```
 
-![Include方法方法](assets/includemethod.jpg)
+![Include方法](assets/includemethod.jpg)
 
 7行代码的可视表示形式
 

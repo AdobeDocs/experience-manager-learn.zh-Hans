@@ -1,6 +1,6 @@
 ---
 title: 创建欢迎套件组件
-description: 创建一个AEM站点页面，其中包含根据提交的表单数据下载资产的链接。
+description: 创建一个AEM站点页面，其中包含根据提交的表单数据下载资源的链接。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -8,7 +8,8 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
 exl-id: 66496f0e-c121-4b6d-b371-084393ece3ca
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 36
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
@@ -17,9 +18,9 @@ ht-degree: 0%
 
 # 欢迎套件组件
 
-创建了页面组件，以列出页面中可由最终用户下载的资产。 各个资产的路径将保存在名为的属性中 **路径**. 提交的表单数据确定要包含的资产。
+创建了页面组件，以列出页面中可由最终用户下载的资源。 各个资产的路径将保存在名为的属性中 **路径**. 提交的表单数据确定要包含的资产。
 
-以下代码列出了页面上的资产：
+以下代码列出了页面上的资源：
 
 ```html
    <p class="cmp-press-kit__press-kit-size">

@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 kt: kt-8049
 exl-id: ce9b9203-b44c-4a52-821c-ae76e93312d2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+duration: 62
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
@@ -25,13 +26,13 @@ ht-degree: 0%
 
 
 * 部署 [SendFormAttachmentsViaEmail工作流。](assets/zipped-form-attachments-model.zip) 此工作流使用发送电子邮件组件发送zipped_attachments.zip文件，该文件通过自定义流程步骤保存在有效负荷文件夹下。 根据需要配置发件人和收件人的电子邮件地址。
-* 导入 [示例表单](assets/zip-form-attachments-form.zip) 起始日期 [Forms和文档UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 导入 [示例表单](assets/zip-form-attachments-form.zip) 从 [Forms和文档UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/zippformattachments/jcr:content?wcmmode=disabled) 并添加几个附件并提交表单。
 * 应触发工作流，并发送包含zip文件的电子邮件通知。
 
 ## 将表单附件作为单个文件发送
 
-* 部署 [SendForm工作流。](assets/send-form-attachments-model.zip) 此工作流使用“发送电子邮件”组件将表单附件作为单独的文件发送。 根据需要配置发件人和收件人的电子邮件地址。
-* 导入 [示例表单](assets/send-list-attachments-form.zip) 起始日期 [Forms和文档UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 部署 [SendForm工作流。](assets/send-form-attachments-model.zip) 此工作流使用发送电子邮件组件以单个文件的形式发送表单附件。 根据需要配置发件人和收件人的电子邮件地址。
+* 导入 [示例表单](assets/send-list-attachments-form.zip) 从 [Forms和文档UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/sendlistofattachments/jcr:content?wcmmode=disabled) 并添加几个附件并提交表单。
 * 应触发工作流，并发送包含表单附件的电子邮件通知。

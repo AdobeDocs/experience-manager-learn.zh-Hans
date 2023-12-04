@@ -8,16 +8,17 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
 exl-id: 91fbea23-4886-4892-87ad-1bc4fff5896a
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 31
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 3%
+source-wordcount: '98'
+ht-degree: 4%
 
 ---
 
 # 简介
 
-常见的用例是使用复选框组件列出DAM文件夹内容（PDF文件、Word文档等），并允许用户选择要下载的文件。 选定的文件将组装成一个用户可下载的文件。
+常见的用例是使用复选框组件列出DAM文件夹内容（PDF文件、Word文档等），并允许用户选择要下载的文件。 选定的文件将组合成一个可供用户下载的文件。
 
 ![用例](assets/newsletters-download1.png)
 

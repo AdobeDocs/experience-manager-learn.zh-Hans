@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
-source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
+duration: 74
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '205'
 ht-degree: 1%
 
 ---
@@ -30,7 +31,7 @@ ht-degree: 1%
 |----------------    | ---------------------------------|
 | guideComponentType | fd/af/components/guidesubmittype |
 | guideDataModel | xfa、xsd、basic |
-| jcr：description | CustomSubmitHelp |
+| jcr ：description | CustomSubmitHelpx |
 
 
 * 保存更改
@@ -66,6 +67,6 @@ ht-degree: 1%
 
 * 保存更改
 
-现在，您将在自适应表单的提交操作中开始看到“CustomSubmitHelpx”，如下图所示。
+现在，您将在自适应表单的提交操作中开始看到“CustomSubmitHelpx”，如本图所示。
 
 ![带有自定义提交的自适应表单](assets/capture-2.gif)

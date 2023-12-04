@@ -8,10 +8,11 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 541
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1747'
-ht-degree: 1%
+source-wordcount: '1716'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +35,7 @@ ht-degree: 1%
 
 当每个请求遍历Dispatcher时，请求遵循配置的规则以保留本地缓存的版本来响应符合条件的项目
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 我们刻意将已发布的工作负载与创作工作负载分开，因为当Apache在DocumentRoot中查找文件时，它不知道文件来自哪个AEM实例。 因此，即使您在作者场中禁用了缓存，如果作者的DocumentRoot与publisher相同，则它将在存在时从缓存中提供文件。 这意味着您将从已发布的缓存为提供创作文件，并为您的访客创造非常糟糕的混合匹配体验。
 
@@ -94,7 +95,7 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 
 这里要注意的重要事项是 `/docroot` 设置为创作实例的缓存目录。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 确保 `DocumentRoot` 在作者的 `.vhost` 文件与场匹配 `/docroot` 参数
 </div>
@@ -135,7 +136,7 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 在创作场景中，内容会随时随意更改。 您只想缓存不经常更改的项目。
 我们有规则要缓存 `/libs` 因为它们是基准AEM安装的一部分，在安装Service Pack、累积修补程序包、升级或修补程序之前可能会发生更改。 因此，缓存这些元素非常合理，并且真正为使用站点的最终用户的创作体验带来了巨大好处。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 请记住，这些规则也会缓存 <b>`/apps`</b> 这是自定义应用程序代码所在的位置。 如果您在此实例上开发代码，则在保存文件时会发现非常混乱，并且不会看到是否在UI中反映，因为它提供缓存的副本。 这样做的意图是，如果您将代码部署到AEM中，那么这种部署也是不频繁的，并且部署步骤的一部分应当是清除创作缓存。 同样，其优势也是巨大的，可缓存的代码可为最终用户更快地运行。
 </div>
@@ -145,7 +146,7 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 
 这是Dispatcher的一项功能带来的好处之一。 如果发布者负载不足或变得无响应，它通常会引发502或503 http响应代码。 如果发生这种情况并启用了此功能，将指示Dispatcher尽最大努力仍在缓存中提供任何内容，即使它不是新副本也是如此。 如果您已获得某些内容，则最好提供该内容，而不是只显示一条不提供任何功能的错误消息。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 请记住，如果发布者渲染器存在套接字超时或500错误消息，则此功能不会触发。 如果AEM无法访问，则此功能不执行任何操作
 </div>
@@ -159,7 +160,7 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 
 ## 使用查询参数/参数缓存页面
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 Dispatcher模块的正常行为之一是，如果请求在URI中有查询参数（通常如下所示） `/content/page.html?myquery=value`)它将跳过文件缓存，直接转到AEM实例。 它将此请求视为动态页面，不应缓存。 这可能会对缓存效率产生不良影响。
 </div>
@@ -197,7 +198,7 @@ Dispatcher模块的正常行为之一是，如果请求在URI中有查询参数�
 
 下面是每个搜索的html源：
 
-`/search.html?q=fruit`:
+`/search.html?q=fruit`：
 
 ```
 <html>
@@ -216,7 +217,7 @@ Dispatcher模块的正常行为之一是，如果请求在URI中有查询参数�
 </html>
 ```
 
-`/search.html?q=vegetables`:
+`/search.html?q=vegetables`：
 
 ```
 <html>
@@ -252,7 +253,7 @@ Dispatcher模块的正常行为之一是，如果请求在URI中有查询参数�
 
 通过Javascript使用查询参数的页面仍可完全发挥作用，忽略此设置中的参数。  因为它们不会更改静态的html文件。  他们使用javascript在本地浏览器上实时更新浏览器。  这意味着如果您使用javascript查询参数，则很有可能在页面缓存中忽略此参数。  允许该页面缓存并享受性能提升！
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 跟踪这些页面确实需要一些维护，但性能提升非常值得。  您可以要求您的CSE对您的网站流量运行报告，为您提供过去90天内使用查询参数的所有页面列表，以便您进行分析并确保您知道要查看的页面以及不能忽略的查询参数
 </div>
@@ -288,7 +289,7 @@ AEM可以处理的不只是UTF-8编码
 
 在示例中，他们已将AEM配置为提供标头，CDN将查找以了解何时将其缓存失效。 这意味着现在AEM可以正确规定哪些文件将根据标头失效。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 请记住，您不能使用正则表达式或glob匹配。 它是要缓存的标头的文字列表。 仅放入要缓存的文本标头的列表中。
 </div>

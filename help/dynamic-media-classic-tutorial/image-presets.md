@@ -7,9 +7,10 @@ role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: e472db7c-ac3f-4f66-85af-5a4c68ba609e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 164
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '648'
 ht-degree: 1%
 
 ---
@@ -30,7 +31,7 @@ ht-degree: 1%
 >
 >在调整图像大小时，宽高比（图像的宽度与高度的比率）应始终保持正比，以便图像不会失真。
 
-图像预设的名称两侧有一个美元符号($)，并且跟在问号(？)后面。 分隔符.
+图像预设的名称两侧有一个美元符号($)，并且跟在问号(？)后面。 分隔符。
 
 >[!TIP]
 >

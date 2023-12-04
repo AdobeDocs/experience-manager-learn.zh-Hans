@@ -9,10 +9,11 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 286
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 4%
+source-wordcount: '988'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +48,7 @@ AEM作者可以选择在AEM中为某段内容设置虚URL属性并将其发布�
 
 作者还可以选择 _重定向虚URL_ 添加时的复选框 _虚URL_ 条目数，这会导致虚URL充当302重定向。 这意味着浏览器被告知转到新URL(通过 `Location` 响应标头)和浏览器对新URL发出新请求。
 
-#### 触屏 UI:
+#### 触控UI：
 
 ![站点编辑器屏幕上AEM创作UI的下拉对话框菜单](assets/disp-vanity-url/aem-page-properties-drop-down.png "aem-page-properties-drop-down")
 
@@ -165,7 +166,7 @@ RewriteRule ^/aboutus /content/we-retail/us/en/about-us.html [PT,L,NC]
 - 如果虚值是不经常更改且频繁使用的固定端点，则使用 `mod_rewrite` 规则。
 - 如果虚命名空间(例如： `/aboutus`)必须在同一AEM实例上为多个品牌重用，然后使用重写规则。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 如果要使用AEM虚功能并避免命名空间，可以制定命名约定。 使用嵌套如下的虚URL `/brand1/aboutus`， `brand2/aboutus`， `brand3/aboutus`.
 </div>

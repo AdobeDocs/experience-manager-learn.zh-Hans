@@ -2,20 +2,18 @@
 title: 开发Asset compute工作人员
 description: asset compute工作进程是Asset compute项目的核心，因为它提供自定义功能，该功能执行或协调为创建新演绎版而对资源执行的工作。
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6282
 thumbnail: KT-6282.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 7d51ec77-c785-4b89-b717-ff9060d8bda7
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 652
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1386'
 ht-degree: 0%
 
 ---

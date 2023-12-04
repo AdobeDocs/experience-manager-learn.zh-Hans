@@ -3,8 +3,6 @@ title: 集成SPA | AEM SPA编辑器和Angular快速入门
 description: 了解如何将Angular编写的单页应用程序(SPA)的源代码与Adobe Experience Manager (AEM)项目集成。 了解如何使用现代前端工具(如Angular的CLI工具)快速针对AEM JSON模型API开发SPA。
 feature: SPA Editor
 version: Cloud Service
-activity: develop
-audience: developer
 jira: KT-5310
 thumbnail: 5310-spa-angular.jpg
 topic: SPA
@@ -12,9 +10,10 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 760
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2045'
 ht-degree: 0%
 
 ---
@@ -237,7 +236,7 @@ ht-degree: 0%
    ES5 bundle generation complete.
    ```
 
-8. 导航到 `ui.apps` 文件夹。下 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular` 您应该会看到编译的SPA文件是从`ui.frontend/build` 文件夹。
+8. 导航至 `ui.apps` 文件夹。 下 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular` 您应该会看到编译的SPA文件是从`ui.frontend/build` 文件夹。
 
    ![在ui.apps中生成的客户端库](assets/integrate-spa/compiled-spa-uiapps.png)
 

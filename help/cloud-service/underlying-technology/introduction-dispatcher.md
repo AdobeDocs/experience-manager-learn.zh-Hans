@@ -1,9 +1,7 @@
 ---
-title: Dispatcher 简介
+title: Dispatcher简介
 description: 简单介绍作为AEM架构一部分的Dispatcher的功能和特性。
-audience: administrator, developer
 doc-type: technical video
-activity: understand
 version: Cloud Service
 jira: KT-4644
 thumbnail: 32029.jpg
@@ -12,10 +10,11 @@ feature: Dispatcher
 role: Architect, Developer
 level: Beginner
 exl-id: 06954993-c8bb-47f3-8ab6-76d6b1b8e8b0
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 363
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 31%
+source-wordcount: '40'
+ht-degree: 7%
 
 ---
 

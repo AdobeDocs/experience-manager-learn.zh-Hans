@@ -1,6 +1,6 @@
 ---
 title: 如何在PDFG服务中更改应用服务器的事务超时
-description: 增加或减少PDF生成器的应用程序服务器事务超时的步骤
+description: 增加或减少用于PDF Generator的应用程序服务器的事务超时的步骤
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -9,7 +9,8 @@ feature: PDF Generator
 topic: Administration
 index: y
 exl-id: ec190f18-1ab8-4fac-adec-3b64caee290a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 93
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%

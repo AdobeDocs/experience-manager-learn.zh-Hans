@@ -11,10 +11,11 @@ last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 715
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 3%
+source-wordcount: '726'
+ht-degree: 1%
 
 ---
 
@@ -67,8 +68,8 @@ _快速设置的视频演练_
 
 AEM SDK启动并自动启动于 [http://localhost:4502](http://localhost:4502). 使用以下凭据登录：
 
-+ 用户名: `admin`
-+ 密码: `admin`
++ 用户名： `admin`
++ 密码： `admin`
 
 ## 下载并安装WKND站点包
 

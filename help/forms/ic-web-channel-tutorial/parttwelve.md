@@ -1,23 +1,18 @@
 ---
 title: 设置Web渠道文档投放
-seo-title: Setting up the delivery of web channel document
-description: 这是有关创建第一个交互式通信文档的多步教程的最后一个部分。 在本部分中，我们将讨论Web渠道文档通过电子邮件投放。
-seo-description: This is the final part of a multistep tutorial for creating your first interactive communications document. In this part, we look at the delivery of web channel document via email.
-uuid: c1066600-1abd-4401-b04f-b93c28603cc7
+description: 这是创建您的第一个交互式通信文档的多步教程的最后一个部分。 在本部分中，我们将讨论Web渠道文档通过电子邮件进行的投放。
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 510d1782-59b9-41a6-a071-a16170f2cd06
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+duration: 97
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -25,19 +20,19 @@ ht-degree: 0%
 # 设置Web渠道文档投放 {#setting-up-the-delivery-of-web-channel-document}
 
 
-在本部分中，我们将讨论Web渠道文档通过电子邮件投放。
+在本部分中，我们将讨论Web渠道文档通过电子邮件进行的投放。
 
-定义并测试Web渠道交互式通信文档后，您需要一种传送机制来将Web渠道文档传送给收件人。
+定义并测试Web渠道交互式通信文档后，您需要一种交付机制将Web渠道文档交付给收件人。
 
 为了能够将电子邮件用作Web渠道文档的投放机制，我们需要对表单数据模型进行细微的更改。
 
-[要了解有关通过电子邮件投放Web渠道的更多信息，请执行以下操作](/help/forms/interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
+[要了解有关通过电子邮件进行Web渠道投放的更多信息，请执行以下操作](/help/forms/interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
 
 登录AEM Forms。
 
 * 导航到Forms ->数据集成
 
-* 在编辑模式下打开RetilementAccountStatement数据模型。
+* 在编辑模式下打开RetilationAccountStatement数据模型。
 
 * 选择余额对象并单击编辑按钮。
 
@@ -45,12 +40,12 @@ ht-degree: 0%
 
 * 将绑定更改为“RequestAttribute”。
 
-* 在绑定值中设置accountnumber，如下所示。
+* 在绑定值中设置帐号，如下所示。
 
 * 这样，我们就可以将accountnumber通过请求属性传递到表单数据模型
 
 * 确保保存更改。
-   ![fdm](assets/requestattribute.gif)
+  ![fdm](assets/requestattribute.gif)
 
 ## 测试Web渠道文档的电子邮件投放 {#test-email-delivery-of-web-channel-document}
 

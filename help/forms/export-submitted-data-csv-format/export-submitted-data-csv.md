@@ -2,38 +2,36 @@
 title: 以CSV格式导出提交的表单数据
 description: 以CSV格式导出提交的自适应表单数据
 feature: Adaptive Forms
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 6cd892e4-82c5-4201-8b6a-40c2ae71afa9
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 316
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
 
 # 简介
 
-客户通常希望将提交的表单数据导出为CSV格式。 本文将重点介绍以CSV格式导出表单数据所需的步骤。 本文假定提交的表单存储在RDBMS表中。 以下屏幕截图详细说明了存储提交的表单所需的最低表结构。
+客户通常希望以CSV格式导出提交的表单数据。 本文将重点介绍以CSV格式导出表单数据所需的步骤。 本文假定提交的表单存储在RDBMS表格中。 以下屏幕截图详细说明了存储提交的表单所需的最低表结构。
 
 >[!NOTE]
 >
 >此示例仅适用于不基于架构或表单数据模型的自适应Forms
 
-![表结构](assets/tablestructure.PNG)
-如您所见，架构的名称为aemformstutorial。在此架构内是表formsubmissions，其中定义了以下列
+![表格结构](assets/tablestructure.PNG)
+如您所见，架构的名称为aemformstutorial。在此架构内是表单提交表，其中定义了以下列
 
 * formdata：此列保存提交的formdata
-* formname：此列包含提交的表单的名称
+* formname：此列保存提交的表单的名称
 * id：这是主键，设置为自动递增
 
-表名和两列名作为OSGi配置属性显示，如下面的屏幕快照所示：
+表名和两列名称作为OSGi配置属性显示，如下面的屏幕快照所示：
 ![osgi配置](assets/configuration.PNG)
 该代码读取这些值，并构造要执行的相应SQL查询。 例如，根据上述值执行以下查询
 
@@ -43,7 +41,7 @@ ht-degree: 0%
 
 ## **创建OSGi服务**
 
-已创建以下OSGI服务，以将提交的数据导出为CSV格式。
+创建了以下OSGI服务，以将提交的数据导出为CSV格式。
 
 * 第37行：我们正在访问Apache Sling Connection Pooled DataSource。
 
@@ -51,7 +49,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->该代码假定您已在Felix Web Console中定义了名为“aemformstutorial”的连接池DataSource。该代码还假定您在数据库中有一个名为aemformstutorial的架构
+>该代码假定您已在Felix Web控制台中定义了名为“aemformstutorial”的连接池DataSource。该代码还假定您在数据库中具有一个名为aemformstutorial的架构
 
 ```java
 package com.aemforms.storeandexport.core;
@@ -267,7 +265,7 @@ public @interface StoreAndExportConfiguration {
 
 ## Servlet
 
-以下是调用 `getCSVFile(..)` 服务的方法。 该服务返回StringBuffer对象，然后将该对象流式传输回调用应用程序
+以下是调用 `getCSVFile(..)` 服务的方法。 该服务返回StringBuffer对象，该对象随后被流式传输回调用应用程序
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -309,6 +307,6 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 
 ### 在您的服务器上部署
 
-* 导入 [SQL文件](assets/formsubmissions.sql) 使用MySQL Workbench导入MySQL服务器。 这将创建名为的架构 **姿势** 和表调用 **表单提交** 包含一些示例数据。
+* 导入 [SQL文件](assets/formsubmissions.sql) 使用MySQL Workbench导入MySQL服务器。 这将创建名为的架构 **服饰** 调用了表 **formsubmissions** 包含一些示例数据。
 * 部署 [OSGi包](assets/store-export.jar) 使用Felix Web控制台
-* [获取TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform). 您应会将CSV文件流式传输回您。
+* [获取TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform). 您应会将CSV文件流式传输回给您。

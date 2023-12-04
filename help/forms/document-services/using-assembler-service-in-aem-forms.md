@@ -1,5 +1,5 @@
 ---
-title: 在AEM Forms中使用汇编程序服务
+title: 在AEM Forms中使用Assembler服务
 description: 在AEM Forms中使用Assembler服务来汇编多个PDF文件
 feature: Assembler
 version: 6.4,6.5
@@ -8,16 +8,17 @@ role: Developer
 level: Experienced
 exl-id: 18da12ea-b1ea-48e4-979e-3cb59584dfbd
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 121
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 2%
+source-wordcount: '192'
+ht-degree: 0%
 
 ---
 
-# 在AEM Forms中使用汇编程序服务{#using-assembler-service-in-aem-forms}
+# 在AEM Forms中使用Assembler服务{#using-assembler-service-in-aem-forms}
 
-本文为您提供了用于演示将多个PDF文件拖放到浏览器中并将组合好的pdf文件保存到您的文件系统中的功能的资源。 以下是servlet的代码，该代码可组合使用浏览器上传的pdf文件。
+本文为您提供了用于演示将多个PDF文件拖放到浏览器中，并将组合的pdf文件保存到文件系统中的功能。 以下是servlet的代码，该代码可组合使用浏览器上传的pdf文件。
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -100,27 +101,26 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-使此功能在您的AEM Server上工作
+使此功能在您的AEM服务器上正常工作
 
 * 下载 [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) 到您的本地系统。
-* 使用上传并安装包 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 使用上载并安装包 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 * 下载[自定义文档服务捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 * 下载 [使用服务用户捆绑包进行开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * 使用部署和启动包 [felix web控制台](http://localhost:4502/system/console/bundles)
 * 将浏览器指向 [AssemblePdf.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
-* 拖放多个PDF文件
+* 拖放PDF文件的几个文件
 
 >[!NOTE]
 >
 >确保您的AEM Forms安装已完成。 您的所有包都必须处于活动状态。
 >
->确保已添加 — 引导委派RSA和BouncyCastle库，如本中所述 [安装AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>确保已添加 — 引导代理RSA和BouncyCastle库，如本中所述 [安装AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
 >
 >**此演示的注意事项**
 >
-> * 该代码不处理基于XFA的PDF文档
+> * 该代码无法处理基于XFA的PDF文档
 >
 > * 确保仅拖放PDF文件
 >
 >
-

@@ -1,14 +1,12 @@
 ---
 title: 在AEM Sites中开发资源状态
 description: Adobe Experience Manager的资源状态API是一个可插件的框架，用于在AEM的各种编辑器Web UI中公开状态消息传递。
-topics: development
-audience: developer
 doc-type: Tutorial
-activity: develop
 version: 6.4, 6.5
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 133
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '410'
 ht-degree: 2%
 
 ---
@@ -45,7 +43,7 @@ Adobe Experience Manager的资源状态API是一个可插件的框架，用于�
 
    * 页面编辑器： `editor`
    * 体验片段编辑器： `editor`
-   * 模板编辑器: `template-editor`
+   * 模板编辑器： `template-editor`
 
 4. 状态资源的 `statusType` 与已注册的匹配 `CompositeStatusType` 已配置OSGi `name` 属性。
 

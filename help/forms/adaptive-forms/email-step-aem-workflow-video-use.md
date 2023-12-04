@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 exl-id: 21e58bbc-c1d6-4d41-a4d4-f522a3a5d4a7
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 345
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 1%
+source-wordcount: '418'
+ht-degree: 0%
 
 ---
 
@@ -23,33 +24,33 @@ AEM Forms 6.4中引入了“发送电子邮件”步骤。通过此步骤，我�
 
 作为本文的一部分，我们将引导您完成以下用例：
 
-1. 用户填写休假请求表单
+1. 用户填写休息时间申请表
 1. 在提交表单时，会触发AEM Workflow
-1. AEM Workflow利用发送电子邮件组件发送包含DoR作为附件的电子邮件
+1. AEM Workflow利用发送电子邮件组件，发送包含DoR作为附件的电子邮件
 
-在使用“发送电子邮件”步骤之前，请确保从以下位置配置Day CQ邮件服务 [configMgr](http://localhost:4502/system/console/configMgr). 提供特定于您的环境的值
+在使用“发送电子邮件”步骤之前，请确保从以下位置配置Day CQ Mail Service： [configMgr](http://localhost:4502/system/console/configMgr). 提供特定于您的环境的值
 
 ![配置Day CQ邮件服务](assets/mailservice.png)
 
 作为与本文关联的资源的一部分，您将获得以下内容
 
-1. 自适应表单，提交时将触发工作流
+1. 自适应表单，在提交时将触发工作流
 1. 将发送带有DOR作为附件的电子邮件的示例工作流
 1. 创建元数据属性的OSGi包
 
 要在系统上运行示例，请执行以下操作：
 
-1. [部署Developing withserviceuser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. [部署Developingwithserviceuser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [下载并安装setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)此捆绑包包含用于在工作流的流程步骤中创建元数据属性的代码。
+1. [下载并安装setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)此捆绑包中包含用于在工作流的流程步骤中创建元数据属性的代码。
 1. [配置Day CQ邮件服务](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html)
-1. [使用包管理器将与此文章关联的资产导入和安装到CRX中](assets/emaildoraemformskt.zip)
+1. [使用包管理器将与此文章关联的资产导入并安装到CRX中](assets/emaildoraemformskt.zip)
 1. 启动 [自适应表单](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled). 填写必填字段并提交。
-1. 您应会收到一封包含DocumentOfRecord作为附件的电子邮件
+1. 您应会收到包含DocumentOfRecord作为附件的电子邮件
 
-探索 [工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/emaildor.html)
+浏览 [工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/emaildor.html)
 
-了解工作流的流程步骤。 与流程步骤关联的自定义代码将创建元数据属性名称，并根据提交的数据设置其值。然后，发送电子邮件组件会使用这些值。
+了解工作流的流程步骤。 与流程步骤关联的自定义代码将创建元数据属性名称，并根据提交的数据设置其值。随后，发送电子邮件组件会使用这些值。
 
 >[!NOTE]
 >

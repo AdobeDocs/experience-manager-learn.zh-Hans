@@ -1,10 +1,7 @@
 ---
 title: AEM Sites - WKND教程快速入门
 description: 了解如何为名为WKND的虚构生活方式品牌实施AEM站点。 获取有关基本Experience Manager主题的演练，如项目设置、maven原型、核心组件、可编辑模板、客户端库和组件开发。
-topics: development
 version: Cloud Service
-activity: develop
-audience: developer
 jira: KT-13565
 mini-toc-levels: 1
 index: y
@@ -16,10 +13,10 @@ level: Beginner
 doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 7%
+source-wordcount: '577'
+ht-degree: 5%
 
 ---
 

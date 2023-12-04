@@ -8,10 +8,11 @@ role: User
 level: Intermediate
 doc-type: Technical Video
 exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 411
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 1%
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +26,7 @@ ht-degree: 1%
 
 * **[!UICONTROL 组件组]**
 * **[!UICONTROL 组件标题]**
-* **[!UICONTROL 组件描述]**
+* **[!UICONTROL 组件说明]**
 * **[!UICONTROL 组件图标]**
    * 组件标题的前两个字母 *（默认）*
    * 自定义PNG图像 *（由开发人员配置）*

@@ -8,16 +8,17 @@ role: Developer
 level: Beginner
 exl-id: e84b70a0-c51b-4fe3-80e8-f3156931297a
 last-substantial-update: 2020-01-26T00:00:00Z
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+duration: 40
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '107'
 ht-degree: 8%
 
 ---
 
 # AEM Workflow中的变量
 
-从AEM 6.5开始，您现在可以在AEM Workflow中创建和使用变量。 在此功能之前，工作流作者通常使用工作流元数据映射创建键。 这意味着编写一些自定义代码以创建和填充这些密钥。 借助这个新的功能工作流，作者现在可以轻松创建变量并在工作流中的任意位置使用这些变量。
+从AEM 6.5开始，您现在可以在AEM Workflow中创建和使用变量。 在此功能之前，工作流作者通常使用工作流元数据映射创建键。 这意味着编写一些自定义代码来创建和填充这些密钥。 借助这个新的功能工作流，作者现在可以轻松创建变量并在工作流中的任意位置使用这些变量。
 
 变量可以是以下类型
 
@@ -37,5 +38,5 @@ ht-degree: 8%
 * [XML变量](part1.md)
 * [JSON变量](part2.md)
 * [文档变量](part3.md)
-* [数组列表变量](part4.md)
+* [Arraylist变量](part4.md)
 * [AEM Workflow中的规则编辑器](part5.md)

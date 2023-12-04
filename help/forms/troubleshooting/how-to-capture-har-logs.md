@@ -1,6 +1,6 @@
 ---
 title: 如何捕获HAR （HTTP存档）日志
-description: 捕获HTTP存档日志以解决网络相关问题
+description: 捕获HTTP存档日志，以解决与网络相关的问题
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -8,7 +8,8 @@ version: 6.5
 topic: Administration
 index: y
 exl-id: cfadacf9-ec54-433b-beaa-d38dbe003438
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 128
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '35'
 ht-degree: 0%

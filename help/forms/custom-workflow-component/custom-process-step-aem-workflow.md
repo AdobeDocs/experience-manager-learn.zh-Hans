@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 149d2c8c-bf44-4318-bba8-bec7e25da01b
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+duration: 192
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -19,16 +20,16 @@ ht-degree: 0%
 
 本教程面向需要实施自定义工作流组件的AEM Forms客户。创建工作流组件的第一步是编写将与该工作流组件关联的Java代码。 在本教程中，我们将编写简单的java类，以将自适应表单附件存储到文件系统。此java代码将读取工作流组件中指定的参数。
 
-需要执行以下步骤来编写java类并将该类部署为OSGi捆绑包
+编写java类并将该类部署为OSGi捆绑包时，需要执行以下步骤
 
 ## 创建Maven项目
 
-第一步是使用相应的AdobeMaven原型创建一个Maven项目。 此处列出了详细步骤 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). 将您的maven项目导入eclipse后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
+第一步是使用相应的AdobeMaven原型创建一个Maven项目。 此页面中列出了详细步骤 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). 将您的maven项目导入到eclipse中后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
 
 
 ### 创建实现WorkflowProcess的类
 
-在eclipse IDE中打开maven项目。 展开 **projectname** > **核心** 文件夹。 展开src/main/java文件夹。 您应会看到一个以“core”结尾的包。 在此包中创建实现WorkflowProcess的Java类。 您需要覆盖execute方法。 执行方法的签名为public void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)throws WorkflowException
+在eclipse IDE中打开maven项目。 展开 **projectname** > **核心** 文件夹。 展开src/main/java文件夹。 您应该看到以“core”结尾的包。 创建在此包中实现WorkflowProcess的Java类。 您需要覆盖execute方法。 execute方法的签名如下public void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)引发WorkflowException
 
 在本教程中，我们将把添加到自适应表单的附件作为AEM Workflow的一部分写入文件系统。
 
@@ -116,13 +117,13 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 ```
 
 
-* attachmentsPath — 这与您在自适应表单中指定位置(在配置自适应表单的提交操作以调用AEM Workflow时)相同。 这是您希望将附件保存在AEM中相对于工作流有效负荷的文件夹的名称。
+* attachmentsPath — 这与您在自适应表单中配置自适应表单的提交操作以调用AEM Workflow时指定的位置相同。 这是您希望附件保存在AEM中的文件夹的名称，相对于工作流的负荷。
 
-* saveToLocation — 这是您希望附件保存在AEM服务器文件系统中的位置。
+* saveToLocation — 这是您希望将附件保存在AEM服务器文件系统中的位置。
 
 这两个值将作为进程参数使用工作流组件的对话框传递
 
-![Processstep](assets/custom-workflow-component.png)
+![流程步骤](assets/custom-workflow-component.png)
 
 QueryBuilder服务用于查询attachmentsPath文件夹下nt：file类型的节点。 其余代码遍历搜索结果以创建Document对象并将其保存到文件系统
 

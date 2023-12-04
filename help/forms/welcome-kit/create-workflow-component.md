@@ -1,6 +1,6 @@
 ---
 title: 创建欢迎套件工作流过程
-description: 创建一个AEM站点页面，其中包含根据提交的表单数据下载资产的链接。
+description: 创建一个AEM站点页面，其中包含根据提交的表单数据下载资源的链接。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -8,22 +8,23 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
 exl-id: ba9e80af-aecd-4558-a236-798c823e695c
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 151
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
 # 工作流组件
 
-工作流组件捕获与列出资产的页面相关的信息，例如页面模板、组件资源类型以及用于存储所生成页面的基本文件夹。
+工作流组件捕获与页面相关的信息，该页面列出诸如页面模板、组件资源类型和用于存储所生成页面的基本文件夹等资产。
 
 ![workflow-component](assets/workflow-component.png)
 
 ## 工作流流程实施
 
-以下Java代码与工作流组件关联。 该代码创建欢迎套件页面，从工作流变量（submitterName和documentsSelected）中提取值。 然后，将这些值设置为页面中使用的组件的属性。 该代码还会设置工作流进程变量的值 **welcomekiturl**.
+以下Java代码与工作流组件关联。 代码将创建欢迎套件页面，并从工作流变量（submitterName和documentsSelected）中提取值。 然后，将这些值设置为页面中使用的组件的属性。 该代码还会设置工作流进程变量的值 **welcomekiturl**.
 
 ```java
 package com.welcomekit.core.workflowprocess;

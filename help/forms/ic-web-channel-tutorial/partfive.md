@@ -1,42 +1,37 @@
 ---
-title: 创建用于保存收件人姓名和地址的文档片段
-seo-title: Creating Document Fragments to hold the recipient name and address
+title: 创建文档片段以保存收件人名称和地址
 description: 这是创建您的第一个交互式通信文档的多步教程的第5部分。 在本部分中，我们将创建文档片段来保存收件人姓名和地址。
-seo-description: This is part 5 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create document fragment to hold the recipient name and address.
-uuid: 689931e4-a026-4e62-9acd-552918180819
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 discoiquuid: 404eed65-ec55-492a-85b5-59773896b217
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 1d7093a8-3765-46ec-912a-b5a5503fd5af
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+duration: 238
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
-# 创建用于保存收件人姓名和地址的文档片段 {#creating-document-fragments-to-hold-the-recipient-name-and-address}
+# 创建文档片段以保存收件人名称和地址 {#creating-document-fragments-to-hold-the-recipient-name-and-address}
 
 在本部分中，我们将创建文档片段来保存收件人姓名和地址。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22350?quality=12&learn=on)
 
-文档片段包含交互式通信文档的文本内容。 此文本内容可以是静态文本，也可以从基础数据模型元素值插入。 例如，Dear {name}，其中Dear是静态文本，{name}是表单数据元素名称。 运行时，这将解析为Dear Gloria Rios或Dear John Jacobs，具体取决于name元素的值。
+文档片段包含交互式通信文档的文本内容。 此文本内容可以是静态文本，也可以从基础数据模型元素值插入。 例如，尊敬的 {name}，其中， Dear是静态文本和 {name} 是表单数据元素名称。 在运行时，这将解析为Dear Gloria Rios或Dear John Jacobs，具体取决于name元素的值。
 
-富文本编辑器非常直观，便于商业用户创作文本并插入表单数据元素。 文档片段编辑器能够设置文本格式、指定字体类型和样式、插入特殊字符和创建超链接。
+富文本编辑器非常直观，可供企业用户创作文本并插入表单数据元素。 文档片段编辑器能够设置文本格式、指定字体类型和样式、插入特殊字符和创建超链接。
 
-文档片段编辑器还能够在文本中插入内联条件，如下所述 [视频](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+文档片段编辑器还能够在您的文本中插入内联条件，如以下所示 [视频](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
 
 >[!NOTE]
 >
->确保插入到文档片段中的表单数据模型元素是根元素的子项。 例如，在此用例中，确保您选择的用户对象的元素是余额对象的子项
+>确保插入到文档片段中的表单数据模型元素是根元素的子项。 例如，在此使用案例中，确保您选择的User对象的元素是余额对象的子项
 
 ## 后续步骤
 

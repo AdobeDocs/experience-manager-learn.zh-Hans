@@ -1,24 +1,24 @@
 ---
-title: 在自适应Forms中显示内嵌图像
+title: 在自适应Forms中显示内联图像
 description: 在自适应Forms中显示内联上传的图像
 feature: Adaptive Forms
-topics: development
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 4a69513d-992c-435a-a520-feb9085820e7
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 87
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
 
 # 自适应Forms中的内嵌图像
 
-一个常见用例是在自适应表单中将上传的图像显示为内联图像。 默认情况下，上传的图像显示为链接，可以通过在自适应表单中显示图像来增强此体验。 本文将引导您完成显示内联图像所涉及的步骤。
+一个常见用例是在自适应表单中将上传的图像显示为内嵌图像。 默认情况下，上传的图像会显示为链接，可以通过在自适应表单中显示图像来增强此体验。 本文将指导您完成显示内联图像所涉及的步骤。
 
 ## 添加占位符图像
 
@@ -65,7 +65,7 @@ function consumeImage (file) {
 
 ### 在您的服务器上部署
 
-* 下载并安装 [客户端库](assets/inline-image-client-library.zip) (在您的AEM实例上使用AEM包管理器)。
-* 下载并安装 [示例表单](assets/inline-image-af.zip) ，以使用AEM包管理器的AEM实例。
+* 下载并安装 [客户端库](assets/inline-image-client-library.zip) 使用AEM包管理器的AEM实例上。
+* 下载并安装 [示例表单](assets/inline-image-af.zip) 使用AEM包管理器的AEM实例。
 * 将浏览器指向 [添加内联图像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * 单击“附加照片”按钮添加图像

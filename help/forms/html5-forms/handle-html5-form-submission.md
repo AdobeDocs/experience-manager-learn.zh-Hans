@@ -2,10 +2,7 @@
 title: 处理HTML5表单提交
 description: 创建HTML5表单提交处理程序
 feature: Mobile Forms
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 jira: KT-5269
 thumbnail: kt-5269.jpg
@@ -14,10 +11,11 @@ role: Developer
 level: Experienced
 exl-id: 93e1262b-0e93-4ba8-aafc-f9c517688ce9
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 99
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 3%
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 

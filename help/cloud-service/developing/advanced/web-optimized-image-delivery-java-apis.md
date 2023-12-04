@@ -1,6 +1,6 @@
 ---
 title: Web优化图像交付Java&trade； API
-description: 了解如何使用AEMas a Cloud Service的Web优化图像交付Java&trade； API开发高性能Web体验。
+description: 了解如何使用AEMas a Cloud Service的Web优化图像交付Java&trade； API开发高性能的Web体验。
 version: Cloud Service
 feature: APIs, Sling Model, OSGI, HTL or HTML Template Language
 topic: Performance, Development
@@ -11,10 +11,11 @@ last-substantial-update: 2023-03-30T00:00:00Z
 jira: KT-13014
 thumbnail: KT-13014.jpeg
 exl-id: c6bb9d6d-aef0-42d5-a189-f904bbbd7694
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 527
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '849'
-ht-degree: 2%
+source-wordcount: '810'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +25,7 @@ ht-degree: 2%
 
 AEMas a Cloud Service支持 [Web优化图像交付](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) ，可自动生成资产的优化图像Web演绎版。 Web优化图像投放可以使用三种主要方法：
 
-1. [使用AEM核心WCM组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+1. [使用AEM核心WCM组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 2. 创建具有以下特征的自定义组件 [扩展AEM核心WCM组件图像组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html#tackling-the-image-problem)
 3. 创建自定义组件，该组件使用AssetDelivery Java™ API生成Web优化图像URL。
 
@@ -32,14 +33,14 @@ AEMas a Cloud Service支持 [Web优化图像交付](https://experienceleague.ado
 
 ## Java™ API
 
-此 [资产交付API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html) 是一项OSGi服务，可为图像资产生成Web优化交付URL。 `AssetDelivery.getDeliveryURL(...)` 允许的选项包括 [在此处记录](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html#can-i-use-web-optimized-image-delivery-with-my-own-component%3F).
+此 [资产交付API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html) 是一项OSGi服务，可为图像资产生成Web优化交付URL。 `AssetDelivery.getDeliveryURL(...)` 允许的选项为 [此处记录](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html#can-i-use-web-optimized-image-delivery-with-my-own-component%3F).
 
-此 `AssetDelivery` 只有在AEMas a Cloud Service中运行时，才满足OSGi服务。 在AEM SDK上，对 `AssetDelivery` OSGi服务返回 `null`. 在AEMas a Cloud Service上运行时，最好有条件地使用Web优化的URL，并在AEM SDK上使用替代图像URL。 通常，资产的Web演绎版是一个足够的回退。
+此 `AssetDelivery` 仅在AEMas a Cloud Service中运行时，才满足OSGi服务。 在AEM SDK上，对 `AssetDelivery` OSGi服务返回 `null`. 在AEMas a Cloud Service上运行时，最好有条件地使用Web优化的URL，并在AEM SDK上使用回退图像URL。 通常，资产的Web演绎版是一个足够的后备。
 
 
 ### OSGi服务中使用的API
 
-标记`AssetDelivery` 在自定义OSGi服务中作为可选引用进行引用，以便自定义OSGi服务在AEM SDK中仍然可用。
+标记`AssetDelivery` 在自定义OSGi服务中作为可选引用进行引用，以便自定义OSGi服务在AEM SDK中保持可用。
 
 ```java
 import com.adobe.cq.wcm.spi.AssetDelivery;
@@ -50,7 +51,7 @@ private volatile AssetDelivery assetDelivery;
 
 ### Sling模型中使用的API
 
-标记`AssetDelivery` 在自定义Sling模型中引用为可选，以便自定义Sling模型在AEM SDK上保持可用。
+标记`AssetDelivery` 在自定义Sling模型中引用为可选内容，以便自定义Sling模型在AEM SDK中保持可用。
 
 ```java
 import com.adobe.cq.wcm.spi.AssetDelivery;
@@ -61,7 +62,7 @@ private AssetDelivery assetDelivery;
 
 ### 有条件地使用API
 
-有条件地返回基于 `AssetDelivery` OSGi服务的可用性。 条件使用允许代码在AEM SDK上运行代码时正常运行。
+有条件地返回Web优化图像URL或回退URL，该URL基于 `AssetDelivery` OSGi服务的可用性。 条件使用允许代码在AEM SDK上运行代码时正常运行。
 
 ```java
 if (assetDelivery != null ) {
@@ -78,33 +79,33 @@ if (assetDelivery != null ) {
 
 以下代码创建一个示例组件，该组件使用Web优化图像URL显示图像资产列表。
 
-当代码在AEMas a Cloud Service上运行时，将在自定义组件中使用Web优化的Web图像演绎版。
+当代码在AEMas a Cloud Service上运行时，会在自定义组件中使用Web优化的Web图像演绎版。
 
 ![AEMas a Cloud Service上的Web优化图像](./assets/web-optimized-image-delivery-java-apis/cloud-service.png)
 
 _AEMas a Cloud Service支持AssetDelivery API，因此使用Web优化的Web演绎版_
 
-当代码在AEM SDK上运行时，将使用不太优化的静态Web演绎版，从而使组件能够在本地开发期间正常运行。
+当代码在AEM SDK上运行时，将使用不太理想的静态Web演绎版，从而使组件在本地开发期间正常工作。
 
-![AEM SDK上的Web优化后备图像](./assets/web-optimized-image-delivery-java-apis/aem-sdk.png)
+![AEM SDK上优化了Web的回退图像](./assets/web-optimized-image-delivery-java-apis/aem-sdk.png)
 
 _AEM SDK不支持AssetDelivery API，因此使用回退静态Web演绎版(PNG或JPEG)_
 
-实施分为三个逻辑部分：
+此实施分为三个逻辑部分：
 
 1. 此 `WebOptimizedImage` OSGi服务充当AEM提供的“智能代理” `AssetDelivery` 可处理同时在AEMas a Cloud Service和AEM SDK中运行的OSGi服务。
-2. 此 `ExampleWebOptimizedImages` Sling Model提供了用于收集图像资产列表及其Web优化URL以供显示的业务逻辑。
+2. 此 `ExampleWebOptimizedImages` Sling Model提供了用于收集图像资产及其要显示的Web优化URL列表的业务逻辑。
 3. 此 `example-web-optimized-images` AEM组件实施HTL以显示Web优化图像的列表。
 
-可在代码库中复制以下示例代码，并根据需要进行更新。
+可以在代码库中复制以下示例代码，并根据需要进行更新。
 
 ### OSGi服务
 
-此 `WebOptimizedImage` OSGi服务被拆分为可寻址公共接口(`WebOptimizedImage`)和内部实施(`WebOptimizedImageImpl`)。 此 `WebOptimizedImageImpl` 在AEMas a Cloud Service上运行Web优化图像URL时，以及AEM SDK上运行的静态Web演绎版URL，从而使组件在AEM SDK上保持正常运行。
+此 `WebOptimizedImage` OSGi服务被拆分为可寻址公共接口(`WebOptimizedImage`)和内部实施(`WebOptimizedImageImpl`)。 此 `WebOptimizedImageImpl` 在AEMas a Cloud Service上运行时返回Web优化图像URL，在AEM SDK上返回静态Web演绎版URL，从而使组件在AEM SDK上保持正常运行。
 
 #### 接口
 
-该界面定义其他代码（如Sling模型）可以与之交互的OSGi服务合同。
+界面定义其他代码（如Sling模型）可以与的OSGi服务合同。
 
 ```java
 package com.adobe.aem.guides.wknd.core.images;
@@ -223,11 +224,11 @@ public class WebOptimizedImageImpl implements WebOptimizedImage {
 
 此 `ExampleWebOptimizedImages` Sling模型被拆分为可寻址公共接口(`ExampleWebOptimizedImages`)和内部实施(`ExampleWebOptimizedImagesImpl`)；
 
-此 `ExampleWebOptimizedImagesImpl` Sling模型收集要显示的图像资产列表，并调用自定义 `WebOptimizedImage` 用于获取Web优化图像URL的OSGi服务。 由于此Sling模型表示一个AEM组件，因此它具有常用方法，例如 `isEmpty()`， `getId()`、和 `getData()` 但是，这些方法与使用Web优化图像不直接相关。
+此 `ExampleWebOptimizedImagesImpl` Sling模型收集要显示的图像资源列表，并调用自定义 `WebOptimizedImage` OSGi服务，用于获取Web优化图像URL。 由于此Sling模型表示一个AEM组件，因此它具有常用方法，例如 `isEmpty()`， `getId()`、和 `getData()` 但是，这些方法与使用Web优化图像不直接相关。
 
 #### 接口
 
-界面定义其他代码（如HTL）可以与之交互的Sling模型协定。
+界面定义Sling模型契约，其他代码（如HTL）可以与之交互。
 
 ```java
 package com.adobe.aem.guides.wknd.core.models;
@@ -442,11 +443,11 @@ AEM组件绑定到的Sling资源类型 `WebOptimizedImagesImpl` Sling模型实�
 
 
 
-组件将接收 `Img` 对象，通过 `getImages()` ，其中包括在AEMas a Cloud Service上运行时的Web优化WEBP图像。 组件将接收 `Img` 对象，通过 `getImages()` 其中包含在AEM SDK上运行时的静态PNG/JPEGWeb图像。
+组件收到 `Img` 对象通过 `getImages()` 包括在AEMas a Cloud Service上运行时优化的WEBP图像。 组件收到 `Img` 对象通过 `getImages()` 其中包含在AEM SDK上运行时的静态PNG/JPEGWeb图像。
 
 #### HTL
 
-HTL使用 `WebOptimizedImages` Sling模型，并呈现  `Img` 对象返回方式 `getImages()`.
+HTL使用 `WebOptimizedImages` Sling模型，并呈现以下列表  `Img` 对象返回方式 `getImages()`.
 
 ```html
 <style>

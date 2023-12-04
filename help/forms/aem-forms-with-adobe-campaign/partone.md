@@ -1,6 +1,6 @@
 ---
 title: 生成JSON Web令牌和访问令牌
-description: 本文说明了生成JWT所需的代码和对Adobe Campaign Standard进行REST调用所需的访问令牌
+description: 本文介绍了生成JWT所需的代码以及对Adobe Campaign Standard进行REST调用所需的访问令牌
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Integrations, Development
@@ -9,28 +9,29 @@ level: Experienced
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: a5e5aad4-064f-4638-a53a-88dfb1d27c8f
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 236
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '241'
 ht-degree: 1%
 
 ---
 
 # 生成JSON Web令牌和访问令牌 {#generating-json-web-token-and-access-token}
 
-本文说明了生成JWT所需的代码和对Adobe Campaign Standard进行REST调用所需的访问令牌
+本文介绍了生成JWT所需的代码以及对Adobe Campaign Standard进行REST调用所需的访问令牌
 
 ## 生成JSON Web令牌 {#generate-json-web-token}
 
-使用Adobe Campaign API的第一步是生成JWT。 有关如何为ACS生成JWT的代码示例有很多。 您可以关注此 [Java代码示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) 以生成JWT。
+使用Adobe Campaign API的第一步是生成JWT。 有关如何为ACS生成JWT的代码示例很多。 您可以关注此 [java代码示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) 以生成JWT。
 
-为了将ACS API与AEM Forms结合使用，我们需要在OSGi捆绑包中创建JWT。 以下代码片段用于在此示例OSGI捆绑包中生成JWT。 从如上所示设置的OSGI配置属性中获取有关ACS实例的详细信息。
+要将ACS API与AEM Forms结合使用，我们需要在OSGi捆绑包中创建JWT。 以下代码片段用于在此示例OSGI包中生成JWT。 从OSGI配置属性中获取有关ACS实例的详细信息，如上所示设置。
 
 ![配置](assets/campaignconfiguration.gif)
 
-**答：** 此处显示的值是虚值
+**答：** 此处显示的值为虚值
 
-以下代码从OSGI配置中获取有关Adobe Campaign Server的详细信息。 我们创建一个从80行到104行的私钥。
+以下代码从OSGI配置中获取有关Adobe Campaign服务器的详细信息。 我们创建了80到104行的私钥。
 
 获得私钥后，我们会创建JSON Web令牌。
 
@@ -243,7 +244,7 @@ public class CampaignServiceImpl implements CampaignService {
 
 ## 生成访问令牌 {#generate-access-token}
 
-然后，我们通过进行POST调用，将生成的JWT交换为访问令牌。 然后，此访问令牌将作为授权密钥在HTTP标头中发送，以供后续REST调用使用
+然后，通过进行POST调用，将生成的JWT交换为访问令牌。 然后，此访问令牌将作为授权密钥在HTTP标头中发送，以供后续REST调用使用
 
 ## 后续步骤
 

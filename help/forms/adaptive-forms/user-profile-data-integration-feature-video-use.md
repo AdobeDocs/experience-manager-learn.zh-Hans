@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 exl-id: 4f2b6669-d61e-400d-8657-dddb28ae35f4
 last-substantial-update: 2019-03-20T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 368
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ AEM Forms数据集成允许您配置并连接到不同的数据源。 支持开�
 1. AEM用户配置文件
 1. RESTful Web服务
 1. 基于SOAP的Web服务
-1. OData服务本文将重点介绍AEM用户配置文件信息与Adaptive Forms的集成。
+1. OData服务本文将重点介绍如何将AEM用户配置文件信息与Adaptive Forms集成。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17432?quality=12&learn=on)
 

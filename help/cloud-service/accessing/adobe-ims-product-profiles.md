@@ -1,6 +1,6 @@
 ---
 title: Adobe IMS产品配置文件和AEM
-description: Adobe IMS 产品配置文件授权用户登录 AEM Author 服务，并根据用户所属的产品配置文件提供访问权限基准。
+description: Adobe IMS产品配置文件授权用户登录AEM Author服务，并根据用户所属的产品配置文件提供访问权限基准。
 topic: Administration, Security
 feature: User and Groups
 role: Admin
@@ -9,10 +9,11 @@ jira: KT-5000
 thumbnail: 39156.jpg
 last-substantial-update: 2023-05-19T00:00:00Z
 exl-id: 089a557c-5155-489c-bccf-0cb97e95840c
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 327
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 83%
+source-wordcount: '132'
+ht-degree: 40%
 
 ---
 
@@ -24,7 +25,7 @@ ht-degree: 83%
 >abstract="Adobe IMS 产品配置文件授权用户登录 AEM Author 服务，并根据用户所属的产品配置文件提供访问权限基准。了解有关 Adobe IMS 产品配置文件的更多信息。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=zh-Hans#introduction" text="在 Admin Console 中管理产品和用户访问权限"
 
-Adobe IMS 产品配置文件授权用户登录 AEM Author 服务，并根据用户所属的产品配置文件提供访问权限基准。
+Adobe IMS产品配置文件授权用户登录AEM Author服务，并根据用户所属的产品配置文件提供访问权限基准。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39156?quality=12&learn=on)
 

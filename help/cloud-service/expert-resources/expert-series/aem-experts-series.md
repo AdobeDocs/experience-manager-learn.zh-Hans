@@ -5,10 +5,11 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 topic: Administration, Development
 feature: Developer Tools
 exl-id: ae1cdbe3-0863-41de-bb27-2e88c4640866
-source-git-commit: 4b634d8b3063375f7c135a3e3ef81b90c84e2579
+duration: 240
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 2%
+source-wordcount: '709'
+ht-degree: 1%
 
 ---
 
@@ -68,7 +69,7 @@ ht-degree: 2%
   </tr>
 </table>
 
-## 迁移到 AEM as a Cloud Service?
+## 迁移到AEMas a Cloud Service？
 
 是否计划从AEM 6迁移到AEMas a Cloud Service？ 了解Adobe迁移到AEMas a Cloud Service的方法以及使迁移顺利进行的各种工具和功能。
 

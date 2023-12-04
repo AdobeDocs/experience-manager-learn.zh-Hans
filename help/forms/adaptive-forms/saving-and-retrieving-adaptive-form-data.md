@@ -7,9 +7,10 @@ role: Developer
 type: Tutorial
 version: 6.4,6.5
 last-substantial-update: 2019-06-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 851
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 # 保存和检索自适应表单数据
 
-本文将引导您完成从数据库保存和检索自适应表单数据所涉及的步骤。 MySQL数据库用于存储自适应表单数据。 从较高层面来看，以下是实施用例的步骤：
+本文将指导您完成从数据库中保存和检索自适应表单数据所涉及的步骤。 MySQL数据库用于存储自适应表单数据。 从较高层面来看，以下是实施用例的步骤：
 
 * [配置数据源](#Configure-Data-Source)
 * [创建Servlet以将数据写入数据库](#create-servlet)
@@ -29,7 +30,7 @@ ht-degree: 0%
 
 ## 配置数据源 {#Configure-Data-Source}
 
-Apache Sling Connection Pooled DataSource配置为指向将用于存储自适应表单数据的数据库。 以下屏幕截图显示了我的实例的配置。 可以复制和粘贴以下属性
+Apache Sling连接池化数据源配置为指向将用于存储自适应表单数据的数据库。 以下屏幕截图显示了我的实例的配置。 可以复制和粘贴以下属性
 
 * 数据源名称：aemformstutorial — 这是我的代码中使用的名称。
 
@@ -37,11 +38,11 @@ Apache Sling Connection Pooled DataSource配置为指向将用于存储自适应
 
 * JDBC连接URL:jdbc:mysql://localhost:3306/aemformstutorial
 
-![连接池](assets/storingdata.PNG)
+![connectionpool](assets/storingdata.PNG)
 
 ### 创建Servlet {#create-servlet}
 
-以下是在数据库中插入/更新自适应表单数据的servlet代码。 Apache Sling Connection Pooled DataSource是使用AEM ConfigMgr配置的，第26行中引用了该数据源。 其余代码相当简单明了。 该代码在数据库中插入新行或更新现有行。 存储的自适应表单数据与GUID相关联。 然后，使用相同的GUID更新表单数据。
+以下是在数据库中插入/更新自适应表单数据的servlet代码。 Apache Sling连接池化数据源是使用AEM ConfigMgr配置的，第26行中引用了相同的配置。 其余代码相当简单明了。 该代码在数据库中插入新行或更新现有行。 存储的自适应表单数据与GUID相关联。 然后，使用相同的GUID更新表单数据。
 
 ```java
 package com.techmarketing.core.servlets;
@@ -276,7 +277,7 @@ public class AemformWithDB implements AemFormsAndDB {
 
 ## 创建客户端库 {#create-client-library}
 
-AEM客户端库管理您的所有客户端Javascript代码。 对于本文，我创建了一个简单的javascript，用于使用Guide Bridge API获取自适应表单数据。 获取自适应表单数据后，将对servlet进行POST调用，以在数据库中插入或更新自适应表单数据。 getALLUrlParams函数返回URL中的参数。 当您要更新数据时，可使用此选项。 其余功能在与.savebutton类的click事件关联的代码中处理。 如果URL中存在guid参数，则需要执行更新操作（如果不是插入操作）。
+AEM客户端库管理您的所有客户端Javascript代码。 对于本文，我创建了一个简单的javascript，用于使用Guide Bridge API获取自适应表单数据。 在获取自适应表单数据后，将对servlet进行POST调用以在数据库中插入或更新自适应表单数据。 函数getALLUrlParams返回URL中的参数。 当您要更新数据时，可使用此选项。 其余功能在与.savebutton类的click事件关联的代码中进行处理。 如果URL中存在guid参数，则需要执行更新操作（如果不是插入操作）。
 
 ```javascript
 function getAllUrlParams(url) {
@@ -407,7 +408,7 @@ $(document).ready(function()
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=12&learn=on)
 
-### 能力演示 {#capability-demo}
+### 功能演示 {#capability-demo}
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=12&learn=on)
 
@@ -415,13 +416,13 @@ $(document).ready(function()
 
 要在您的AEM Forms实例上测试此功能，请执行以下步骤
 
-* [将DemoAssets.zip下载并解压缩到您的本地系统](assets/demoassets.zip)
+* [将DemoAssets.zip下载并解压缩到本地系统](assets/demoassets.zip)
 * 使用Felix Web控制台部署和启动techmarketingdemos.jar和mysqldriver.jar捆绑包。
 ***使用MYSQL Workbench导入aemformstutorial.sql。 这将在数据库中创建必要的方案和表
-* 使用AEM包管理器导入StoreAndRetrieve.zip。 该软件包包含自适应表单模板、页面组件客户端库以及自适应表单和数据源配置示例。
-* 登录到configMgr。 搜索“Apache Sling连接池化数据源”。 打开与aemformstudial关联的数据源条目，然后输入特定于数据库实例的用户名和密码。
+* 使用AEM包管理器导入StoreAndRetrieve.zip。 此资源包中包含自适应表单模板、页面组件客户端库以及自适应表单和数据源配置示例。
+* 登录到configMgr。 搜索“Apache Sling连接池化数据源”。 打开与aemformstutorial关联的数据源条目，然后输入特定于数据库实例的用户名和密码。
 * 打开自适应表单
 * 填写一些详细信息，然后单击“保存并稍后继续”按钮
-* 您应该获取包含GUID的URL。
+* 您应该获取其中包含GUID的URL。
 * 复制URL并将其粘贴到新的浏览器选项卡中
 * 自适应表单应使用上一步的数据进行填充**

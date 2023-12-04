@@ -9,9 +9,10 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 559
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1688'
 ht-degree: 0%
 
 ---
@@ -295,7 +296,7 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 让我们看一下其中几个包含的语法，以了解每个子包含是什么样的
 
-`/etc/httpd/conf.dispatcher.d/vhosts/weretail_publish_vhosts.any`:
+`/etc/httpd/conf.dispatcher.d/vhosts/weretail_publish_vhosts.any`：
 
 ```
 "brand1.weretail.com" 

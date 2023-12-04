@@ -1,22 +1,18 @@
 ---
 title: 使用监视文件夹机制为打印渠道生成交互式通信文档
-seo-title: Generating Interactive Communications Document for print channel using watch folder mechanism
 description: 使用watched文件夹生成打印渠道文档
-seo-description: Use watched folder to generate print channel documents
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: f5ab4801-cde5-426d-bfe4-ce0a985e25e8
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 161
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 0%
 
 本文介绍了使用watched文件夹机制生成打印渠道文档的用例。
 
-当您将文件放入watched文件夹时，会执行与watched文件夹关联的脚本。 下面的文章中对此脚本进行了说明。
+将文件放入watched文件夹时，会执行与watched文件夹关联的脚本。 下面的文章中对此脚本进行了说明。
 
 放入watched文件夹中的文件具有以下结构。 该代码将为XML文档中列出的所有帐号生成语句。
 
@@ -59,9 +55,9 @@ ht-degree: 0%
 
 第39-40行 — 将生成的文档保存到文件系统。
 
-表单数据模型的REST端点需要一个ID作为输入参数。 此id被映射到名为accountnumber的请求属性，如下面的屏幕快照所示。
+表单数据模型的REST端点需要将ID作为输入参数。 此id映射到名为accountnumber的请求属性，如下面的屏幕快照所示。
 
-![request属性](assets/requestattributeprintchannel.gif)
+![请求属性](assets/requestattributeprintchannel.gif)
 
 ```java
 var interactiveCommunicationsDocument = "/content/forms/af/retirementstatementprint/channels/print/";
@@ -113,9 +109,9 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **要在本地系统上对此进行测试，请按照以下说明操作：**
 
-* 按照此说明设置Tomcat [文章。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成样本数据的war文件。
+* 按照本说明设置Tomcat [文章。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成样本数据的war文件。
 * 设置服务（即系统用户），如中所述 [文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
-确保此系统用户拥有以下节点的读取权限。 要授予权限登录至 [用户管理员](https://localhost:4502/useradmin) 和搜索系统用户“data”，并通过将tab键放置到“权限”选项卡来授予对以下节点的读取权限
+确保此系统用户具有下列节点的读取权限。 授予权限登录至 [用户管理员](https://localhost:4502/useradmin) 和搜索系统用户“data”，并通过tab键转到“权限”选项卡，为以下节点授予读取权限
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
@@ -128,7 +124,7 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 * 打开/etc/fd/watchfolder/scripts/PrintPDF.ecma文件。 确保第1行中interactiveCommunicationsDocument的路径指向要打印的正确文档
 
-* 根据您的偏好设置，在第2行上修改saveLocation
+* 根据您的首选项第2行修改saveLocation
 
 * 创建包含以下内容的accountnumbers.xml文件
 
@@ -144,12 +140,12 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-* 将accountnumbers.xml拖到C:\RenderPrintChannel\input文件夹中。
+* 将accountnumbers.xml拖放到C:\RenderPrintChannel\input文件夹中。
 
 * 生成的PDF文件将写入ecma脚本中指定的saveLocation。
 
 >[!NOTE]
 >
->如果您计划在非Windows操作系统上使用它，请导航到
+>如果您计划在非Windows操作系统上使用此功能，请导航至
 >
 >/etc/fd/watchfolder /config/PrintChannelDocument ，并根据您的首选项更改folderPath

@@ -1,18 +1,17 @@
 ---
 title: 第2章 — 定义事件内容片段模型 — 内容服务
-seo-title: Getting Started with AEM Content Services - Chapter 2 - Defining Event Content Fragment Models
 description: AEM Headless教程的第2章涵盖了启用和定义内容片段模型，这些模型用于定义规范化的数据结构和用于创建事件的创作界面。
-seo-description: Chapter 2 of the AEM Headless tutorial covers enabling and defining Content Fragment Models used to define a normalized data structure and authoring interface for creating Events.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 472
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '962'
-ht-degree: 9%
+source-wordcount: '940'
+ht-degree: 1%
 
 ---
 
@@ -56,7 +55,7 @@ AEM内容片段模型定义了内容架构，可用于对AEM作者创建的原�
    >此配置更改不可从 [!UICONTROL AEM配置] Web UI。 要撤消此配置，请执行以下操作：
    >    
    >    1. 打开 [CRXDE Lite](http://localhost:4502/crx/de)
-   >    1. 导航至 `/conf/wknd-mobile/settings/dam/cfm`
+   >    1. 导航到 `/conf/wknd-mobile/settings/dam/cfm`
    >    1. 删除 `models` 节点
    >    
    >在此配置下创建的任何现有内容片段模型都将被删除，并且其定义将存储在中 `/conf/wknd-mobile/settings/dam/cfm/models`.
@@ -88,7 +87,7 @@ AEM内容片段模型定义了内容架构，可用于对AEM作者创建的原�
 
 ## 创建内容片段模型
 
-1. 导航到 **[!UICONTROL 工具] > [!UICONTROL 常规] > [!UICONTROL 内容片段模型]**.
+1. 导航到&#x200B;**[!UICONTROL 工具] > [!UICONTROL 常规] > [!UICONTROL 内容片段模型]**。
 1. 点按 **[!DNL WKND Mobile]** 要打开的文件夹。
 1. 点按 **[!UICONTROL 创建]** 以打开内容片段模型创建向导。
 1. 输入 **[!DNL Event]** 作为 **[!UICONTROL 模型标题]** *（说明是可选的）* 并点击 **[!UICONTROL 创建]** 以保存。
@@ -102,9 +101,9 @@ AEM内容片段模型定义了内容架构，可用于对AEM作者创建的原�
 1. 从 **[!UICONTROL 数据类型] 选项卡** 在右侧，将 **[!UICONTROL 单行文本输入]** 放入左侧放置区域以定义 **[!DNL Question]** 字段。
 1. 确保新的 **[!UICONTROL 单行文本输入]** 左侧选定的，并且 **[!UICONTROL 属性] 选项卡** ，则会在右侧选中。 按如下方式填充属性字段：
 
-   * [!UICONTROL 呈现为] : `textfield`
-   * [!UICONTROL 字段标签] : `Event Title`
-   * [!UICONTROL 属性名称] : `eventTitle`
+   * [!UICONTROL 呈现为] ： `textfield`
+   * [!UICONTROL 字段标签] ： `Event Title`
+   * [!UICONTROL 属性名称] ： `eventTitle`
    * [!UICONTROL 最大长度] ：25
    * [!UICONTROL 必填] ： `Yes`
 
@@ -116,57 +115,57 @@ AEM内容片段模型定义了内容架构，可用于对AEM作者创建的原�
 
 ### 事件描述
 
-* [!UICONTROL 数据类型] : `Multi-line text`
-* [!UICONTROL 字段标签] : `Event Description`
-* [!UICONTROL 属性名称] : `eventDescription`
-* [!UICONTROL 默认类型] : `Rich text`
+* [!UICONTROL 数据类型] ： `Multi-line text`
+* [!UICONTROL 字段标签] ： `Event Description`
+* [!UICONTROL 属性名称] ： `eventDescription`
+* [!UICONTROL 默认类型] ： `Rich text`
 
 ### 活动日期和时间
 
-* [!UICONTROL 数据类型] : `Date and time`
-* [!UICONTROL 字段标签] : `Event Date and Time`
-* [!UICONTROL 属性名称] : `eventDateAndTime`
+* [!UICONTROL 数据类型] ： `Date and time`
+* [!UICONTROL 字段标签] ： `Event Date and Time`
+* [!UICONTROL 属性名称] ： `eventDateAndTime`
 * [!UICONTROL 必填] ： `Yes`
 
 ### 事件类型
 
-* [!UICONTROL 数据类型] : `Enumeration`
-* [!UICONTROL 字段标签] : `Event Type`
-* [!UICONTROL 属性名称] : `eventType`
+* [!UICONTROL 数据类型] ： `Enumeration`
+* [!UICONTROL 字段标签] ： `Event Type`
+* [!UICONTROL 属性名称] ： `eventType`
 * [!UICONTROL 选项] ： `Art,Music,Performance,Photography`
 
 ### 票价
 
-* [!UICONTROL 数据类型] : `Number`
-* [!UICONTROL 呈现为] : `numberfield`
-* [!UICONTROL 字段标签] : `Ticket Price`
-* [!UICONTROL 属性名称] : `eventPrice`
-* [!UICONTROL 类型]：`Integer`
+* [!UICONTROL 数据类型] ： `Number`
+* [!UICONTROL 呈现为] ： `numberfield`
+* [!UICONTROL 字段标签] ： `Ticket Price`
+* [!UICONTROL 属性名称] ： `eventPrice`
+* [!UICONTROL 类型] ： `Integer`
 * [!UICONTROL 必填] ： `Yes`
 
 ### 事件图像
 
-* [!UICONTROL 数据类型] : `Content Reference`
-* [!UICONTROL 呈现为] : `contentreference`
-* [!UICONTROL 字段标签] : `Event Image`
-* [!UICONTROL 属性名称] : `eventImage`
-* [!UICONTROL 根路径] : `/content/dam/wknd-mobile/images`
+* [!UICONTROL 数据类型] ： `Content Reference`
+* [!UICONTROL 呈现为] ： `contentreference`
+* [!UICONTROL 字段标签] ： `Event Image`
+* [!UICONTROL 属性名称] ： `eventImage`
+* [!UICONTROL 根路径] ： `/content/dam/wknd-mobile/images`
 * [!UICONTROL 必填] ： `Yes`
 
 ### 地点名称
 
-* [!UICONTROL 数据类型] : `Single-line text`
-* [!UICONTROL 呈现为] : `textfield`
-* [!UICONTROL 字段标签] : `Venue Name`
-* [!UICONTROL 属性名称] : `venueName`
+* [!UICONTROL 数据类型] ： `Single-line text`
+* [!UICONTROL 呈现为] ： `textfield`
+* [!UICONTROL 字段标签] ： `Venue Name`
+* [!UICONTROL 属性名称] ： `venueName`
 * [!UICONTROL 最大长度] ：20
 * [!UICONTROL 必填] ： `Yes`
 
 ### 地点城市
 
-* [!UICONTROL 数据类型] : `Enumeration`
-* [!UICONTROL 字段标签] : `Venue City`
-* [!UICONTROL 属性名称] : `venueCity`
+* [!UICONTROL 数据类型] ： `Enumeration`
+* [!UICONTROL 字段标签] ： `Venue City`
+* [!UICONTROL 属性名称] ： `venueCity`
 * [!UICONTROL 选项] ： `Basel,London,Los Angeles,Paris,New York,Tokyo`
 
 >[!VIDEO](https://video.tv.adobe.com/v/28335?quality=12&learn=on)

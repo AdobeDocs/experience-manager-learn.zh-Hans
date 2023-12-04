@@ -10,10 +10,11 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 437
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1471'
-ht-degree: 3%
+source-wordcount: '1321'
+ht-degree: 0%
 
 ---
 
@@ -311,11 +312,11 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
 
    这是本章前面基于XML文件创建的对话框。
 
-4. 保存更改。请注意，显示的消息全部大写。
+4. 保存更改。 请注意，显示的消息全部大写。
 
    ![以全部大写形式显示的消息](assets/custom-component/message-displayed.png)
 
-5. 导航到，查看JSON模型 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). 搜索 `wknd-spa-angular/components/custom-component`:
+5. 导航到，查看JSON模型 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). 搜索 `wknd-spa-angular/components/custom-component`：
 
    ```json
    "custom_component_208183317": {

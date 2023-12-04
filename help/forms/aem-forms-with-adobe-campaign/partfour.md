@@ -9,9 +9,10 @@ level: Experienced
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 59d5ba6d-91c1-48c7-8c87-8e0caf4f2d7e
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 157
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '431'
 ht-degree: 3%
 
 ---
@@ -22,7 +23,7 @@ ht-degree: 3%
 
 ## 创建自定义身份验证 {#create-custom-authentication}
 
-使用swagger文件创建数据源时，AEM Forms支持以下身份验证类型
+使用swagger文件创建数据源时，AEM Forms支持以下类型的身份验证
 
 * 无
 * OAuth 2.0
@@ -38,7 +39,7 @@ ht-degree: 3%
 
 需要实施getAuthDetails方法。 此方法将返回AuthenticationDetails对象。 此AuthenticationDetails对象将具有对Adobe Campaign进行REST API调用所需的HTTP标头集。
 
-以下是创建自定义身份验证时使用的代码。 getAuthDetails方法可执行所有工作。 我们将创建AuthenticationDetails对象。 然后，我们将相应的HttpHeaders添加到此对象并返回此对象。
+以下是创建自定义身份验证时使用的代码。 getAuthDetails方法可完成所有工作。 我们将创建AuthenticationDetails对象。 然后，我们将相应的HttpHeaders添加到此对象并返回此对象。
 
 ```java
 package aemfd.campaign.core;
@@ -105,18 +106,18 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 
 第一步是创建swagger文件。 swagger文件定义将用于在Adobe Campaign Standard中创建配置文件的REST API。 swagger文件定义REST API的输入参数和输出参数。
 
-使用swagger文件创建数据源。 创建数据源时，可以指定身份验证类型。 在这种情况下，我们将使用自定义身份验证来对Adobe Campaign进行身份验证。上面列出的代码用于对Adobe Campaign进行身份验证。
+使用swagger文件创建数据源。 在创建数据源时，可以指定身份验证类型。 在这种情况下，我们将使用自定义身份验证来对Adobe Campaign进行身份验证。上面列出的代码用于对Adobe Campaign进行身份验证。
 
-示例swagger文件作为与本文相关的资产的一部分提供给您。**确保更改swagger文件中的host和basePath以匹配您的ACS实例**
+示例swagger文件将作为与本文相关的资产的一部分提供给您。**确保更改swagger文件中的host和basePath以匹配您的ACS实例**
 
 ## 测试解决方案 {#test-the-solution}
 
 要测试解决方案，请执行以下步骤：
-* [确保已执行此处描述的步骤](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [确保已按照此处所述的步骤进行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [下载并解压缩此文件以获取swagger文件](assets/create-acs-profile-swagger-file.zip)
 * 使用swagger文件创建表单数据模型创建数据源，并将其基于上一步中创建的数据源
 * 根据上一步中创建的表单数据模型创建自适应表单。
-* 将以下元素从数据源选项卡拖放到自适应表单中
+* 将下列元素从数据源选项卡拖放到自适应表单上
 
    * 电子邮件
    * 名字

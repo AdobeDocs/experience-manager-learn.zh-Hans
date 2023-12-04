@@ -2,21 +2,19 @@
 title: 将Asset compute工作程序与AEM处理用户档案集成
 description: AEMas a Cloud Service通过AEM Assets处理配置文件与部署到Adobe I/O Runtime的Asset compute工作程序集成。 处理用户档案在创作服务中配置为使用自定义工作程序处理特定资产，并将工作程序生成的文件存储为资产演绎版。
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6287
 thumbnail: KT-6287.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 179
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 2%
+source-wordcount: '622'
+ht-degree: 0%
 
 ---
 
@@ -45,16 +43,16 @@ ht-degree: 2%
       + 确保Worker URL指向正确的工作区。 AEMas a Cloud Service暂存应使用暂存工作区URL，AEMas a Cloud Service生产应使用生产工作区URL。
    + __服务参数__
       + 点按 __添加参数__
-         + 键: `size`
-         + 价值: `1000`
+         + 键： `size`
+         + 值： `1000`
       + 点按 __添加参数__
-         + 键: `contrast`
-         + 价值: `0.25`
+         + 键： `contrast`
+         + 值： `0.25`
       + 点按 __添加参数__
-         + 键: `brightness`
-         + 价值: `0.10`
+         + 键： `brightness`
+         + 值： `0.10`
       + 这些键/值对将传递到Asset compute工作程序，并可通过使用 `rendition.instructions` javascript对象。
-   + __Mime 类型__
+   + __Mime类型__
       + __包括：__ `image/jpeg`， `image/png`， `image/gif`， `image/bmp`， `image/tiff`
          + 这些MIME类型是工作人员的npm模块中仅有的类型。 此列表限制由自定义工作进程处理的工作。
       + __排除：__ `Leave blank`
@@ -75,7 +73,7 @@ ht-degree: 2%
 
    ![生成的演绎版](./assets/processing-profiles/rendition.png)
 
-## 已完成!
+## 已完成！
 
 恭喜！您已完成 [教程](../overview.md) 了解如何扩展AEMas a Cloud ServiceAsset compute微服务！ 您现在应该能够设置、开发、测试、调试和部署自定义Asset compute工作程序，以供AEMas a Cloud Service创作服务使用。
 
@@ -85,7 +83,7 @@ Github上提供了最终Asset compute项目，网址为：
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_Github包含是项目的最终状态，已完全填充工作程序和测试用例，但不包含任何凭据，即 `.env`, `.config.json` 或 `.aio`._
+_Github包含是项目的最终状态，已完全填充工作程序和测试用例，但不包含任何凭据，即 `.env`， `.config.json` 或 `.aio`._
 
 ## 疑难解答
 

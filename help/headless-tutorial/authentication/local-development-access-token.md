@@ -2,10 +2,7 @@
 title: 本地开发访问令牌
 description: AEM本地开发访问令牌用于加快与AEMas a Cloud Service的集成开发，以便通过HTTP以编程方式与AEM创作或发布服务交互。
 version: Cloud Service
-topics: Development, Security
 feature: APIs
-activity: develop
-audience: developer
 jira: KT-6785
 thumbnail: 330477.jpg
 topic: Headless, Integrations
@@ -14,7 +11,8 @@ level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 715
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%

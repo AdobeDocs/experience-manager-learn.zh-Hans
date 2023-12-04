@@ -8,16 +8,17 @@ role: Developer
 level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 193
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
 
 # 应用Reader扩展
 
-Reader扩展允许您处理PDF文档的使用权限。 使用权限与Acrobat中可用，但Adobe Reader中不可用的功能有关。 由Reader扩展控制的功能包括向文档添加注释、填写表单和保存文档的功能。 已添加使用权限的PDF文档称为启用权限的文档。 在Adobe Reader中打开启用了权限的PDF文档的用户可以执行为该文档启用的操作。
+Reader扩展允许您处理PDF文档的使用权限。 使用权限与Acrobat中提供的功能有关，但不与Adobe Reader中的功能有关。 由Reader扩展控制的功能包括向文档添加注释、填写表单和保存文档的功能。 已添加使用权限的PDF文档称为启用权限的文档。 在Adobe Reader中打开启用了权限的PDF文档的用户可以执行为该文档启用的操作。
 
 要完成此用例，我们需要执行以下操作：
 * [添加Reader扩展证书](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) 到 `fd-service` 用户。
@@ -70,11 +71,11 @@ public class ApplyUsageRights implements ReaderExtendPDF {
 }
 ```
 
-## 创建servlet以流式传输读取器扩展PDF
+## 创建Servlet以流式传输读取器扩展PDF
 
-下一步是使用POST方法创建一个servlet，以将读取器扩展PDF返回给用户。 在这种情况下，要求用户将PDF保存到其文件系统。 这是因为PDF呈现为动态PDF，并且浏览器附带的pdf查看器无法处理动态pdf。
+下一步是使用POST方法创建一个servlet以将读取器扩展PDF返回给用户。 在这种情况下，要求用户将PDF保存到其文件系统。 这是因为PDF呈现为动态PDF，并且浏览器附带的PDF查看器无法处理动态PDF。
 
-以下是servlet的代码。 从自适应表单的自定义提交操作调用servlet。
+以下是servlet的代码。 从自适应表单的customsubmit操作调用servlet。
 Servlet创建UsageRights对象，并根据用户在自适应表单中输入的值设置其属性。 然后，servlet调用为此目的创建的服务的applyUsageRights方法。
 
 ```java
@@ -195,7 +196,7 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 
 要在本地服务器上对此进行测试，请执行以下步骤：
 1. [下载并安装DevelopingWithServiceUser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [下载并安装ares.ares.core-ares捆绑包](assets/ares.ares.core-ares.jar). 它具有自定义服务和servlet以应用使用权限并流式传输pdf
+1. [下载并安装ares.ares.core-ares捆绑包](assets/ares.ares.core-ares.jar). 它有自定义服务和servlet以应用使用权限并流式传输PDF
 1. [导入客户端库和自定义提交](assets/applyaresdemo.zip)
 1. [导入自适应表单](assets/applyaresform.zip)
 1. 将Reader扩展证书添加到“fd-service”用户。 确保别名为“ares”。

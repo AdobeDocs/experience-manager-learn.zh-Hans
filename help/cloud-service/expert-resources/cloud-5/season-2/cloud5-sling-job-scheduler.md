@@ -1,5 +1,5 @@
 ---
-title: 云5 - Sling作业计划程序
+title: Cloud 5 - Sling作业计划程序
 description: 云中的AEM作业计划
 version: Cloud Service
 role: Admin, Developer
@@ -8,16 +8,17 @@ thumbnail: 343473.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 8784d77f-1c70-4694-bd08-79b71adbda48
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+duration: 322
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '57'
+source-wordcount: '59'
 ht-degree: 0%
 
 ---
 
-# 云5 - Sling作业计划程序
+# Cloud 5 - Sling作业计划程序
 
-作业计划和消耗与非群集AEM部署不同。 本视频说明运行这些任务时需要注意的一些问题和事项。
+作业计划和消耗与非群集化AEM部署不同。 本视频说明运行这些任务时需要注意的一些难题和事项。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343473?quality=12&learn=on)
 

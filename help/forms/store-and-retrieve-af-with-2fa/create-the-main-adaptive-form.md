@@ -3,7 +3,6 @@ title: 创建主自适应表单
 description: 创建自适应表单以捕获申请人信息和自适应表单以检索保存的自适应表单
 feature: Adaptive Forms
 type: Tutorial
-activity: implement
 version: 6.4,6.5
 jira: KT-6552
 thumbnail: 6552.jpg
@@ -11,9 +10,10 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 73de0ac4-ada6-4b8e-90a8-33b976032135
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 60
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---

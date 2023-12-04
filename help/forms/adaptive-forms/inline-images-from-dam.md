@@ -2,7 +2,6 @@
 title: 在自适应Forms中内联显示DAM图像
 description: 在自适应Forms中内联显示DAM图像
 feature: Adaptive Forms
-topics: development
 version: 6.4,6.5
 topic: Development
 role: Developer
@@ -11,9 +10,10 @@ last-substantial-update: 2022-10-20T00:00:00Z
 thumbnail: inline-dam.jpg
 kt: kt-11307
 exl-id: 339eb16e-8ad8-4b98-939c-b4b5fd04d67e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 92
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 添加占位符图像
 
-第一步是在面板组件前附加占位符div。 在下面的代码中，面板组件由其CSS类名称photo-upload标识。 JavaScript函数是与自适应表单关联的客户端库的一部分。 在文件附件组件的初始化事件中调用此函数。
+第一步是在面板组件前添加占位符div。 在下面的代码中，面板组件由其CSS类名称photo-upload标识。 JavaScript函数是与自适应表单关联的客户端库的一部分。 在文件附件组件的初始化事件中调用此函数。
 
 ```javascript
 /**
@@ -38,7 +38,7 @@ function addPlaceholderDiv(){
 
 ### 显示内嵌图像
 
-用户选择图像后，使用选定的图像名称填充隐藏字段ImageName。 然后，将此图像名称传递到damURLToFile函数，该函数调用createFile函数以将URL转换为FileReader.readAsDataURL()的Blob。
+用户选择图像后，隐藏字段ImageName将填充所选的图像名称。 然后，此图像名称将传递到damURLToFile函数，该函数会调用createFile函数以将URL转换为FileReader.readAsDataURL()的Blob。
 
 ```javascript
 /**
@@ -83,8 +83,8 @@ async function createFile(imageName){
 
 ### 在您的服务器上部署
 
-* 下载并安装 [客户端库和示例图像](assets/InlineDAMImage.zip) (在您的AEM实例上使用AEM包管理器)。
-* 下载并安装 [示例表单](assets/FieldInspectionForm.zip) ，以使用AEM包管理器的AEM实例。
-* 将浏览器指向 [字段检查表单](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
-* 选取一个夹具
+* 下载并安装 [客户端库和示例图像](assets/InlineDAMImage.zip) 使用AEM包管理器的AEM实例上。
+* 下载并安装 [示例表单](assets/FieldInspectionForm.zip) 使用AEM包管理器的AEM实例。
+* 将浏览器指向 [文件检查表单](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
+* 选取夹具之一
 * 您应会看到表单中显示的图像

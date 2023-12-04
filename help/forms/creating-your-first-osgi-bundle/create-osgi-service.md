@@ -8,22 +8,23 @@ role: Developer
 level: Beginner
 exl-id: 2f15782e-b60d-40c6-b95b-6c7aa8290691
 last-substantial-update: 2021-04-23T00:00:00Z
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 126
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 2%
+source-wordcount: '337'
+ht-degree: 0%
 
 ---
 
 # OSGi服务
 
-OSGi服务是Java类或服务接口，以及许多作为名称/值对的服务属性。 服务属性区分使用同一服务接口提供服务的不同服务提供商。
+OSGi服务是一个Java类或服务接口，以及许多作为名称/值对的服务属性。 服务属性区分使用相同服务接口提供服务的不同服务提供商。
 
 OSGi服务由其服务接口语义定义，并作为服务对象实现。 服务的功能由其实现的接口定义。 因此，不同的应用程序可以实现相同的服务。 服务接口允许捆绑包通过绑定接口而不是实现进行交互。 指定服务接口时应尽可能少地提供实现详细信息。
 
-## 定义界面
+## 定义接口
 
-一个简单界面，通过一种方法将数据与 <span class="x x-first x-last">XDP</span> 模板。
+一个简单接口，通过一种方法将数据与 <span class="x x-first x-last">XDP</span> 模板。
 
 ```java
 package com.mysite.samples;
@@ -79,17 +80,17 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 
 注释 `@Component(...)` 第10行将此Java类标记为OSGi组件，并将其注册为OSGi服务。
 
-此 `@Reference` annotation是OSGi声明性服务的一部分，用于插入 [Outputservice](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 到变量中 `outputService`.
+此 `@Reference` 注释是OSGi声明性服务的一部分，用于注入 [输出服务](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 到变量中 `outputService`.
 
 
-## 生成和部署捆绑包
+## 生成并部署捆绑包
 
 * 打开 **命令提示符窗口**
-* 导航至 `c:\aemformsbundles\mysite\core`
+* 导航到 `c:\aemformsbundles\mysite\core`
 * 执行命令 `mvn clean install -PautoInstallBundle`
 * 上述命令将自动构建捆绑包，并将其部署到在localhost：4502上运行的AEM实例
 
-该捆绑包还将在以下位置提供 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用将捆绑包部署到AEM中 [Felix Web控制台。](http://localhost:4502/system/console/bundles)
+该捆绑包还将在以下位置提供 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用将捆绑包部署到AEM中。 [Felix Web控制台。](http://localhost:4502/system/console/bundles)
 
 ## 使用服务
 
@@ -100,7 +101,7 @@ MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.mysite.samp
 com.adobe.aemfd.docmanager.Document generatedDocument = myFirstAEMFormsService.mergeDataWithXDPTemplate(xdp_or_pdf_template,xmlDocument);
 ```
 
-包含JSP页的示例包可以是 [已从此处下载](assets/learning_aem_forms.zip)
+包含JSP页的示例包可以是 [从此处下载](assets/learning_aem_forms.zip)
 
 [完整的捆绑包可供下载](assets/mysite.core-1.0.0-SNAPSHOT.jar)
 

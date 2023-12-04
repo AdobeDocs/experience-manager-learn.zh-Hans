@@ -7,14 +7,15 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 5aa32791-861a-48e3-913c-36028373b788
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 342
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 6%
+source-wordcount: '327'
+ht-degree: 4%
 
 ---
 
-# AEM Headless 快速入门 - Content Services
+# AEM Headless快速入门 — Content Services
 
 AEM Content Services利用传统AEM Pages来构建Headless REST API端点，并且AEM组件定义或引用要在这些端点上公开的内容。
 

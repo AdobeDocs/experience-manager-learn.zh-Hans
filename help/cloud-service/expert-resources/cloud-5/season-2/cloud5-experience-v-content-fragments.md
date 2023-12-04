@@ -1,6 +1,6 @@
 ---
 title: 云5 — 体验与内容片段
-description: 与呈现体验片段与内容片段之间的区别
+description: 与呈现体验片段与内容片段之间的差异
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -8,10 +8,11 @@ thumbnail: 342864.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: bfd455c4-9a51-4537-ae6d-548d552e13e6
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+duration: 290
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 3%
+source-wordcount: '59'
+ht-degree: 5%
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 带有自适应Forms的条形码服务
-description: 使用条形码服务对条形码进行解码，并从提取的数据中填充表单字段。
+description: 使用条形码服务对条形码进行解码，并根据提取的数据填充表单字段。
 feature: Barcoded Forms
 version: 6.4,6.5
 topic: Development
@@ -8,16 +8,17 @@ role: Developer
 level: Intermediate
 exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
 last-substantial-update: 2020-02-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 169
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
 
 # 带有自适应Forms的条形码服务{#barcode-service-with-adaptive-forms}
 
-本文将演示如何使用条形码服务填充自适应表单。 用例如下所示：
+本文将演示使用条形码服务填充自适应表单。 用例如下所示：
 
 1. 用户添加带有条形码的PDF作为自适应表单附件
 1. 附件的路径将发送到servlet
@@ -54,7 +55,7 @@ public JSONObject extractBarCode(Document pdfDocument) {
  }
 ```
 
-以下是servlet代码。 当用户将附件添加到自适应表单时，将调用此servlet。 此servlet会将JSON对象返回给调用应用程序。 然后，调用应用程序使用从JSON对象中提取的值填充自适应表单。
+以下是servlet代码。 当用户将附件添加到自适应表单时，将调用此servlet。 此servlet会将JSON对象返回给调用应用程序。 然后，调用应用程序会使用从JSON对象提取的值填充自适应表单。
 
 ```java
 @Component(service = Servlet.class, property = {
@@ -133,7 +134,7 @@ $(document).ready(function()
 >
 >此包中包含的自适应表单是使用AEM Forms 6.4构建的。如果您打算在AEM Forms 6.3环境中使用此包，请在AEM Form 6.3中创建自适应表单
 
-第12行 — 用于获取服务解析器的自定义代码。 此捆绑包包含在此文章资源中。
+第12行 — 用于获取服务解析程序的自定义代码。 此捆绑包作为此文章资源的一部分包含。
 
 第23行 — 调用DocumentServices extractBarCode方法以使用解码的数据填充JSON对象
 

@@ -1,5 +1,5 @@
 ---
-title: 捕获解决PDF/A问题所需信息的步骤
+title: 捕获解决PDF/A问题所需的信息的步骤
 description: 排除与汇编程序转换和验证相关的问题
 type: Troubleshooting
 role: Developer
@@ -9,15 +9,16 @@ feature: Assembler
 topic: Development
 index: y
 exl-id: 2753326a-2f8c-49f8-91a4-88cc8d500f66
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 131
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
-# 解决PDFA转换和验证问题的步骤
+# PDFA转换和验证问题疑难解答步骤
 
-*本视频介绍捕获在Forms Assembler服务中对PDF/A转换和验证问题进行故障排除所需的信息的步骤。*
+*本视频介绍为Forms Assembler服务中的PDF/A转换和验证问题排除故障而捕获所需信息的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335518?quality=12&learn=on)

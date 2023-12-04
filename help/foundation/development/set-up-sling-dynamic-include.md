@@ -9,10 +9,11 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 6c504710-be8f-4b44-bd8a-aaf480ae6d8a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 910
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 5%
+source-wordcount: '230'
+ht-degree: 0%
 
 ---
 
@@ -53,7 +54,7 @@ ht-degree: 5%
    -->
    ```
 
-1. （可选）重复上一步，以允许组件位于 [可编辑模板的锁定（初始）内容](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/page-templates-editable.html) 通过以下方式提供 [!DNL SDI] 也一样。 额外配置的原因是，提供的可编辑模板的锁定内容来自 `/conf` 而不是 `/content`.
+1. （可选）重复上一步，以允许组件位于 [可编辑模板的锁定（初始）内容](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html) 通过以下方式提供 [!DNL SDI] 也一样。 额外配置的原因是，提供的可编辑模板的锁定内容来自 `/conf` 而不是 `/content`.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -152,7 +153,7 @@ ht-degree: 5%
 >* &quot;Cache-Control&quot;
 >* &quot;内容处置&quot;
 >* &quot;Content-Type&quot;
->* &quot;截止日期&quot;
+>* &quot;过期&quot;
 >* &quot;Last-Modified&quot;
 >* &quot;ETag&quot;
 >* &quot;X-Content-Type-Options&quot;

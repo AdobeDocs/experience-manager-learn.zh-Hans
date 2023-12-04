@@ -1,27 +1,25 @@
 ---
 title: 通过合并数据生成打印渠道文档
-description: 了解如何通过合并输入流中包含的数据来生成打印渠道文档
+description: 了解如何通过合并输入流中包含的数据生成打印渠道文档
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 223
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 1%
+source-wordcount: '445'
+ht-degree: 0%
 
 ---
 
-# 使用提交的数据生成Print Channel文档
+# 使用提交的数据生成打印渠道文档
 
-打印渠道文档通常是通过表单数据模型的get服务从后端数据源获取数据而生成的。 在某些情况下，您可能需要使用提供的数据生成打印渠道文档。 例如 — 客户填写受益人表单的更改，您可能希望使用提交的表单中的数据生成打印渠道文档。 要完成此用例，需要执行以下步骤
+打印渠道文档通常通过表单数据模型的get服务从后端数据源获取数据来生成。 在某些情况下，您可能需要使用提供的数据生成打印渠道文档。 例如 — 客户填写受益人表单的更改，您可能希望使用提交的表单中的数据生成打印渠道文档。 要完成此用例，需要执行以下步骤
 
 ## 创建预填充服务
 
@@ -73,8 +71,8 @@ workflowProcess实现代码片段如下所示。当AEM Workflow中的流程步�
 * 打印渠道模板的名称
 * 生成的打印渠道文档的名称
 
-第98行 — 由于自适应表单基于表单数据模型，所以提取驻留在afBoundData的数据节点中的数据。
-行128 — 设置了Data Options服务名称。 记下服务名称。 它必须与上一个代码列表的第45行中返回的名称匹配。
+第98行 — 由于自适应表单基于表单数据模型，因此将提取afBoundData的数据节点中的数据。
+行128 — 设置了Data Options服务名称。 记下服务名称。 它必须与在上一个代码列表的第45行中返回的名称匹配。
 行135 — 使用PrintChannel对象的渲染方法生成文档
 
 
@@ -164,7 +162,7 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
 
 要在您的服务器上对此进行测试，请执行以下步骤：
 
-* [配置Day CQ邮件服务。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) 发送包含作为附件生成的文档的电子邮件时需要此信息。
+* [配置Day CQ邮件服务。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) 发送带有作为附件生成的文档的电子邮件时需要此信息。
 * [部署Developing with Service用户包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * 确保已在Apache Sling服务用户映射器服务配置中添加了以下条目
 * **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**
@@ -175,11 +173,11 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
    3. generatebeneficiaryworkflow.zip
 * [使用AEM Felix Web控制台部署以下内容](http://localhost:4502/system/console/bundles)
 
-   * GenerateIC.GenerateIC.core-1.0-SNAPSHOT.jar。 此捆绑包包含本文中提到的代码。
+   * GenerateIC.GenerateIC.core-1.0-SNAPSHOT.jar。 此捆绑包中包含本文中提到的代码。
 
-* [打开ChangeOfRefiniorForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
+* [打开ChangeOfRegionalForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
 * 确保将自适应表单配置为提交到AEM Workflow，如下所示
-   ![图像](assets/generateic.PNG)
+  ![图像](assets/generateic.PNG)
 * [配置工作流模型。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)确保根据您的环境配置流程步骤和发送电子邮件组件
-* [预览ChangeOfFineorForm。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 填写一些详细信息并提交
-* 应调用工作流，并将IC打印渠道文档作为附件发送给发送电子邮件组件中指定的收件人
+* [预览ChangeOfReviewantForm。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 填写一些详细信息并提交
+* 应调用工作流，并将IC打印渠道文档作为附件发送给在发送电子邮件组件中指定的收件人

@@ -9,10 +9,11 @@ level: Experienced
 jira: KT-8635
 thumbnail: 336990.jpeg
 exl-id: 327e8663-086b-4b31-b159-a0cf30480b45
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1006
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 5%
+source-wordcount: '291'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +25,7 @@ ht-degree: 5%
 
 ## 工作流迁移工具
 
-![资源工作流迁移工具](./assets/asset-workflow-migration.png)
+![资产工作流迁移工具](./assets/asset-workflow-migration.png)
 
 作为重构代码库的一部分，请使用 [资产工作流迁移工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html) 迁移现有工作流以使用AEMas a Cloud Service中的Asset compute微服务。
 

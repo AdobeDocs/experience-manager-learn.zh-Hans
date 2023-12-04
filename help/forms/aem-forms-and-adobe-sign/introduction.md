@@ -1,6 +1,6 @@
 ---
 title: 将AEM Forms与Acrobat Sign集成
-description: 集成Acrobat Sign和AEM Forms以自动化复杂的交易，并将法律电子签名作为无缝数字体验的一部分。
+description: 集成Acrobat Sign和AEM Forms以自动执行复杂的交易，并包括法律电子签名，以提供无缝的数字体验。
 feature: Adaptive Forms, Acrobat Sign
 version: 6.4,6.5
 topic: Integrations, Development
@@ -10,16 +10,17 @@ exl-id: 0be61f04-c3ed-4ecb-bab7-73fd308c14e0
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 49
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '171'
 ht-degree: 12%
 
 ---
 
 # 将AEM Forms与Acrobat Sign集成
 
-了解如何将AEM表单与Acrobat Sign集成，为自适应表单启用电子签名工作流。 电子签名改进了法律、销售、工资单、人力资源管理和其他许多方面的文档的处理工作流。
+了解如何将AEM表单与Acrobat Sign集成，启用自适应表单的电子签名工作流。 电子签名改进了法律、销售、工资单、人力资源管理和其他许多方面的文档的处理工作流。
 
 AEM Forms与Acrobat Sign之间的集成允许执行以下操作：
 

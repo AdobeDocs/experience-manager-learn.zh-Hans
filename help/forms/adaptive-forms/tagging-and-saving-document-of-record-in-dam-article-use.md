@@ -1,6 +1,6 @@
 ---
 title: 在DAM中标记和存储AEM Forms DoR
-description: 本文将逐步介绍在AEM DAM中存储和标记AEM Forms生成的DoR的用例。 文档的标记基于提交的表单数据完成。
+description: 本文将介绍在AEM DAM中存储和标记AEM Forms生成的DoR的用例。 文档的标记是根据提交的表单数据完成的。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -8,22 +8,23 @@ role: Developer
 level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
 last-substantial-update: 2019-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 274
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
 
 # 在DAM中标记和存储AEM Forms DoR {#tagging-and-storing-aem-forms-dor-in-dam}
 
-本文将逐步介绍在AEM DAM中存储和标记AEM Forms生成的DoR的用例。 文档的标记基于提交的表单数据完成。
+本文将介绍在AEM DAM中存储和标记AEM Forms生成的DoR的用例。 文档的标记是根据提交的表单数据完成的。
 
-客户的一个常见问题是，如何在AEM DAM中存储和标记AEM Forms生成的记录文档(DoR)。 文档的标记需要基于自适应Forms提交的数据。 例如，如果提交数据中的雇用状态为“已停用”，则我们希望使用“已停用”标记标记文档并将文档存储在DAM中。
+客户的一个常见问题是，在AEM DAM中存储和标记AEM Forms生成的记录文档(DoR)。 文档的标记需要基于自适应Forms提交的数据。 例如，如果提交数据中的雇用状态为“已停用”，则我们希望使用“已停用”标记标记文档并将文档存储在DAM中。
 
 用例如下所示：
 
-* 用户填写自适应表单。 在自适应表单中，捕获用户的婚姻状况（包括单身）和就业状况（包括已退休）。
+* 用户填写自适应表单。 在自适应表单中，记录用户的婚姻状况（如单身）和就业状况（如已退休）。
 * 在提交表单时，会触发AEM Workflow。 此工作流使用婚姻状态（单身）和就业状态（已停用）标记文档，并将文档存储在DAM中。
 * 文档存储在DAM中后，管理员应该能够按这些标记搜索文档。 例如，搜索“单个”或“已停用”将获取相应的DoR。
 
@@ -156,8 +157,8 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 }
 ```
 
-要使此示例在您的系统上正常工作，请按照下面列出的步骤操作：
-* [部署Developing withserviceuser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+要使此示例在您的系统上正常工作，请按照以下步骤操作：
+* [部署Developingwithserviceuser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
 * [下载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 这是自定义OSGI捆绑包，用于从提交的表单数据设置标记。
 
@@ -165,7 +166,7 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 
 * [转到Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* 单击“创建” |文件上传和上传tag-and-store-in-dam-adaptive-form.zip
+* 单击“创建” |文件上传并上传tag-and-store-in-dam-adaptive-form.zip
 
 * [导入文章资源](assets/tag-and-store-in-dam-assets.zip) 使用AEM包管理器
 * 打开 [预览模式下的示例表单](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **填写所有字段** 并提交表格。
@@ -173,10 +174,10 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 恭喜!! 您已在系统上成功安装示例
 
 * 让我们来探索 [工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) 在提交表单时触发。
-* 工作流中的第一步是通过连接申请人姓名和居住地县创建唯一的文件名。
+* 工作流中的第一个步骤通过连接申请人姓名和居住地县创建唯一的文件名。
 * 工作流的第二步是传递标记层次结构和需要标记的表单字段元素。 处理步骤从提交的数据中提取值，并构建需要标记文档的标记标题。
 * 如果要将DoR存储在DAM的其他文件夹中，请使用以下屏幕快照中指定的配置属性指定文件夹位置。
 
-其他两个参数特定于自适应表单提交选项中指定的DoR和数据文件路径。 请确保您在此处指定的值与您在自适应表单提交选项中指定的值匹配。
+其他两个参数专用于在“自适应表单”提交选项中指定的DoR和数据文件路径。 请确保您在此处指定的值与您在自适应表单提交选项中指定的值匹配。
 
 ![标记Dor](assets/tag_dor_service_configuration.gif)

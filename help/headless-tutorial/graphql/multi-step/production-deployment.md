@@ -10,10 +10,11 @@ mini-toc-levels: 1
 jira: KT-7131
 thumbnail: KT-7131.jpg
 exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 655
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2357'
-ht-degree: 9%
+source-wordcount: '2137'
+ht-degree: 5%
 
 ---
 
@@ -35,7 +36,7 @@ ht-degree: 9%
 
 ## 作者发布部署模式 {#deployment-pattern}
 
-完整的 AEM 环境由创作、发布和 Dispatcher 构成。Author 服务是内部用户创建、管理和预览内容的地方。Publish服务被视为“实时”环境，通常是最终用户与之交互的对象。 在 Author 服务上编辑和审批之后的内容，分发到 Publish 服务。
+完整的 AEM 环境由创作、发布和 Dispatcher 构成。Author服务是内部用户创建、管理和预览内容的地方。 Publish服务被视为“实时”环境，通常是最终用户与之交互的对象。 在Author服务上编辑和批准之后的内容，分发到Publish服务。
 
 AEM Headless 应用程序最常见的部署模式是将应用程序的生产版本连接到 AEM Publish 服务。
 
@@ -46,7 +47,7 @@ AEM Headless 应用程序最常见的部署模式是将应用程序的生产版�
 1. A **内容作者** 使用AEM创作服务创建、编辑和管理内容。
 2. **内容作者**&#x200B;和其他内部用户可直接在 Author 服务上预览内容。应用程序的预览版本可以设置为连接到 Author 服务。
 3. 内容获得批准后，可以 **已发布** 到AEM Publish服务。
-4. **最终用户与应用程序的生产版本交互。**&#x200B;生产应用程序连接到Publish服务，并使用GraphQL API请求和使用内容。
+4. **最终用户** 与应用程序的生产版本交互。 生产应用程序连接到Publish服务，并使用GraphQL API请求和使用内容。
 
 本教程通过将一个AEM Publish实例添加到当前设置来模拟上述部署。 在前面的章节中，React应用程序通过直接连接到Author实例来充当预览。 React应用程序的生产内部版本将部署到连接到新发布实例的静态Node.js服务器。
 
@@ -407,7 +408,7 @@ React应用程序可以通过使用webpack服务器启动，但这仅适用于�
 
 有关内容片段和GraphQL的更多详细信息，请参阅以下资源：
 
-* [通过 GraphQL 使用内容片段投放 Headless 内容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html?lang=zh-Hans)
+* [使用带有GraphQL的内容片段的Headless内容投放](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html?lang=zh-Hans)
 * [用于内容片段的 AEM GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html?lang=zh-Hans)
 * [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en#authentication)
 * [将代码部署到AEMas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=en#cloud-manager)

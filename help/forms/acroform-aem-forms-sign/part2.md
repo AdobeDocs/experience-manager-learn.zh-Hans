@@ -1,18 +1,15 @@
 ---
 title: 包含AEM Forms的Acroforms
-seo-title: Merge Adaptive Form data with Acroform
 description: 将Acroforms与AEM Forms集成的第2部分。 从Acroform创建架构。
 feature: adaptive-forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.5
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 54
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '176'
 ht-degree: 0%
 
 ---
@@ -20,7 +17,7 @@ ht-degree: 0%
 
 # 从Acroform创建架构
 
-下一步是使用在上一步中创建的Acroform创建架构。 在本教程中，提供了一个用于创建架构的示例应用程序。 要创建架构，请按照以下说明操作：
+下一步是从上一步创建的Acroform创建架构。 在本教程中提供了一个用于创建架构的示例应用程序。 要创建架构，请按照以下说明操作：
 
 1. 登录 [CRXDE Lite](http://localhost:4502/crx/de)
 2. 打开文件 `/apps/AemFormsSamples/components/createxsd/POST.jsp`
@@ -31,8 +28,8 @@ ht-degree: 0%
 
 ## 上传Acroform
 
-要使此演示在您的系统上正常工作，您需要创建一个名为的文件夹 `acroforms` 在AEM Assets中。 将Acroform上载到此 `acroforms` 文件夹。
+要使此演示在您的系统上正常工作，您需要创建一个名为的文件夹 `acroforms` 在AEM Assets中。 将Acroform上传到此 `acroforms` 文件夹。
 
 >[!NOTE]
 >
->示例代码将在此文件夹中查找缩写。 合并自适应表单提交的数据需要使用acroform。
+>示例代码将在此文件夹中查找该缩写。 合并自适应表单提交的数据需要使用acroform。

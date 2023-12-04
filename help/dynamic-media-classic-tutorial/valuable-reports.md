@@ -7,10 +7,11 @@ role: Admin
 level: Intermediate
 doc-type: Tutorial
 exl-id: c3fbfb0b-3222-46ff-9248-dea70ce85a23
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 85
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 0%
+source-wordcount: '292'
+ht-degree: 1%
 
 ---
 

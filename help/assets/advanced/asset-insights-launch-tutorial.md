@@ -11,10 +11,11 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 2096
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 1%
+source-wordcount: '811'
+ht-degree: 0%
 
 ---
 

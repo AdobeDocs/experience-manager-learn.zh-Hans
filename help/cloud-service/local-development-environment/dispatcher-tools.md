@@ -10,10 +10,11 @@ jira: KT-4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 765
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1695'
-ht-degree: 9%
+source-wordcount: '1622'
+ht-degree: 4%
 
 ---
 
@@ -26,9 +27,9 @@ ht-degree: 9%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="云中的 Dispatcher"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下载 AEM as a Cloud Service SDK"
 
-Adobe Experience Manager (AEM)的Dispatcher是一个Apache HTTP Web服务器模块，在CDN和AEM发布层之间提供一个安全和性能层。 Dispatcher 是整个 Experience Manager 架构的组成部分，应该是本地开发设置的一部分。
+Adobe Experience Manager (AEM)的Dispatcher是一个Apache HTTP Web服务器模块，在CDN和AEM发布层之间提供一个安全和性能层。 Dispatcher是整个Experience Manager架构的一个组成部分，应当是本地开发设置的一部分。
 
-AEM as a Cloud Service SDK 包括推荐的 Dispatcher 工具版本，该版本有助于在本地配置、验证和模拟 Dispatcher。Dispatcher工具由以下部分组成：
+AEMas a Cloud ServiceSDK包括推荐的Dispatcher工具版本，该版本便于在本地配置、验证和模拟Dispatcher。 Dispatcher工具由以下部分组成：
 
 + Apache HTTP Web服务器和Dispatcher配置文件的基线集，位于 `.../dispatcher-sdk-x.x.x/src`
 + 配置验证器CLI工具，位于 `.../dispatcher-sdk-x.x.x/bin/validate`
@@ -234,9 +235,9 @@ Dispatcher工具日志在下列情况下发出到标准 `docker_run` 运行。
 用于调试Dispatcher的有用参数包括：
 
 + `DISP_LOG_LEVEL=Debug` 将Dispatcher模块日志记录设置为调试级别
-   + 默认值为: `Warn`
+   + 默认值为： `Warn`
 + `REWRITE_LOG_LEVEL=Debug` 将Apache HTTP Web服务器重写模块日志记录设置为调试级别
-   + 默认值为: `Warn`
+   + 默认值为： `Warn`
 + `DISP_RUN_MODE` 设置Dispatcher环境的“运行模式”，加载相应的运行模式Dispatcher配置文件。
    + 默认为 `dev`
 + 有效值： `dev`， `stage`，或 `prod`

@@ -2,20 +2,18 @@
 title: 构建和部署
 description: AdobeCloud Manager有助于代码构建和部署到AEMas a Cloud Service。 在构建过程的各个步骤中可能会发生故障，需要采取措施来解决这些问题。 本指南将介绍如何了解部署中的常见故障以及如何以最佳方式解决这些故障。
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5434
 thumbnail: kt-5424.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 694
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2523'
+source-wordcount: '2476'
 ht-degree: 0%
 
 ---
@@ -146,7 +144,7 @@ AEMas a Cloud Service会在每个AEM发行版本中自动包含最新核心组�
   ```
 
 + __原因：__  应用程序的OSGi捆绑包(在 `core` 项目)从核心组件核心依赖项导入Java类，其版本级别与部署到AEMas a Cloud Service的版本级别不同。
-+ __解决方法:__
++ __分辨率：__
    + 使用Git，还原到核心组件版本递增之前存在的工作提交。 将此承诺推送到Cloud Manager Git分支，并从此分支执行环境更新。 这会将AEMas a Cloud Service升级到最新的AEM版本，其中包括较新的核心组件版本。 在将AEMas a Cloud Service更新到最新的AEM版本（具有最新的核心组件版本）后，重新部署最初失败的代码。
    + 要在本地重现此问题，请确保AEM SDK版本与AEMas a Cloud Service环境使用的AEM发行版本相同。
 
@@ -173,7 +171,7 @@ AEMas a Cloud Service会在每个AEM发行版本中自动包含最新核心组�
 
 + __原因：__ Cloud Manager管道包含的AEM版本比部署到目标环境的版本旧。 当重复使用管道并指向运行更高版本AEM的新环境时，可能会发生这种情况。 可以通过检查环境的AEM版本是否大于管道的AEM版本来进行识别。
   ![Cloud Manager管道包含旧的AEM版本](./assets/build-and-deployment/deploy-to__pipeline-holds-old-aem-version.png)
-+ __解决方法:__
++ __分辨率：__
    + 如果目标环境具有可用更新，请从环境的操作中选择更新，然后重新运行内部版本。
    + 如果目标环境没有可用的更新，则意味着它运行的是最新版本的AEM。 要解决此问题，请删除管道并重新创建它。
 
@@ -220,7 +218,7 @@ AEMas a Cloud Service会在每个AEM发行版本中自动包含最新核心组�
    2020-01-01T01:01:02+0000 Begin deployment in aem-program-x-env-y-dev [CorrelationId: 1234]
    ```
 
-   ... 和 ...
+   ...和……
 
    ```
    2020-01-01T02:04:10+0000 Failed deployment in aem-program-x-env-y-dev

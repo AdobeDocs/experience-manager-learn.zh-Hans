@@ -1,14 +1,8 @@
 ---
 title: 在AEM Forms中创建数据源配置
-seo-title: Creating DataSource Configuration in AEM Forms
 description: 这是创建您的第一个交互式通信文档的多步教程的第2部分。 在本部分中，我们将创建一个REST支持的数据源。  以下视频介绍了创建数据源的步骤。
-seo-description: This is part 2 of multistep tutorial for creating your first interactive communications document. In this part, we will create a REST backed data source.  The following video walks thru the steps to create the data source.
-uuid: b9d5c220-3e86-4e7d-8ea0-a7f604dde925
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 targetaudience: target-audience ongoing
 thumbnail: 27765.jpg
@@ -17,9 +11,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 1f4d88ad-ace1-4f78-be40-da80b3b4d40c
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 181
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '108'
+source-wordcount: '109'
 ht-degree: 1%
 
 ---

@@ -9,10 +9,11 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 439
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 1%
+source-wordcount: '1132'
+ht-degree: 0%
 
 ---
 
@@ -62,11 +63,11 @@ ht-degree: 1%
 AdobeManaged Services服务器映像通常具有小型操作系统根驱动器。  我们将数据放入一个单独的卷中，该卷通常装载在“/mnt”中。然后，我们将使用该卷而不是下列默认目录的默认值
 
 `DocumentRoot`
-- 默认:`/var/www/html`
+- 默认：`/var/www/html`
 - AMS：`/mnt/var/www/html`
 
 `Log Directory`
-- 默认: `/var/log/httpd`
+- 默认： `/var/log/httpd`
 - AMS： `/mnt/var/log/httpd`
 
 请记住，旧目录和新目录将映射回原始装载点，以消除混淆。
@@ -80,9 +81,9 @@ AMS将添加到Apache Web Server的基本安装中。
 ### 文档根
 
 AMS默认文档根：
-- 创作:
+- 作者：
    - `/mnt/var/www/author/`
-- 发布:
+- 发布：
    - `/mnt/var/www/html/`
 - 全面覆盖和健康检查维护
    - `/mnt/var/www/default/`

@@ -2,20 +2,18 @@
 title: 使用日志调试AEM SDK
 description: 日志是调试AEM应用程序的首选工具，但需要取决于已部署的AEM应用程序中是否有足够的日志记录。
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5252
 topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 91aa4a10-47fe-4313-acd2-ca753e5484d9
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 455
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 2%
+source-wordcount: '382'
+ht-degree: 0%
 
 ---
 

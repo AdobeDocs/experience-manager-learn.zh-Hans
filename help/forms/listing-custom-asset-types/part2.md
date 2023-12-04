@@ -1,12 +1,8 @@
 ---
 title: 在AEM Forms中列出自定义资源类型
 description: 在AEM Forms中列出自定义资源类型的第2部分
-uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
 feature: Adaptive Forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
 topic: Development
@@ -14,9 +10,10 @@ role: Developer
 level: Experienced
 exl-id: f221d8ee-0452-4690-a936-74bab506d7ca
 last-substantial-update: 2019-07-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 184
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -29,8 +26,8 @@ ht-degree: 0%
 
 1. 在/apps下创建一个sling：文件夹。 将其命名为“ myportalcomponent ”
 1. 添加“fpContentType”属性。 将其值设置为&quot;**/libs/fd/ fp/formTemplate”。**
-1. 添加“title”属性并将其值设置为“custom template”。 这是您将在搜索和列表器组件的下拉列表中看到的名称
-1. 在此文件夹下创建“template.html”。 此文件将包含用于样式化和显示各种资源类型的代码。
+1. 添加“title”属性并将其值设置为“custom template”。 这是您将在搜索和列表程序组件的下拉列表中看到的名称
+1. 在此文件夹下创建一个“template.html”。 此文件将包含用于样式设置和显示各种资源类型的代码。
 
 ![appsfolder](assets/appsfolder_.png)
 
@@ -74,30 +71,30 @@ ht-degree: 0%
 >
 >第11行 — 请将图像src更改为指向您在DAM中选择的图像。
 >
->要在此模板中列出自适应Forms，请创建一个新的div并将其数据类型属性设置为“guide”。 您可以复制并粘贴其数据类型=&quot;printForm的div，并将新复制的div的数据类型设置为&quot;guide&quot;
+>要在此模板中列出自适应Forms，请创建一个新的div并将其数据类型属性设置为“guide”。 您可以复制并粘贴其data-type=&quot;printForm的div，并将新复制的div的数据类型设置为&quot;guide&quot;
 
 ## 配置搜索和列表程序组件 {#configure-search-and-lister-component}
 
-定义自定义模板后，现在必须将此自定义模板与“Search and Lister”组件关联。 指向您的浏览器 [到此url ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
+定义自定义模板后，现在必须将此自定义模板与“Search and Lister”组件关联。 指向您的浏览器 [到此url](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
 
-切换到设计模式并将段落系统配置为在允许的组件组中包含搜索和列表程序组件。 Search and Lister组件是Document Services组的一部分。
+切换到设计模式并将段落系统配置为在允许的组件组中包含搜索和列表程序组件。 搜索和列表程序组件是Document Services组的一部分。
 
 切换到编辑模式并将Search and Lister组件添加到ParSys。
 
-打开“搜索和列表程序”组件的配置属性。 确保选中“Asset Folders”选项卡。 在搜索和列表程序组件中选择要从中列出资产的文件夹。 为撰写本文而选择
+打开“搜索和列表程序”组件的配置属性。 确保选中“Asset Folders”选项卡。 在搜索和列表程序组件中，选择要从中列出资产的文件夹。 为撰写本文而选择
 
 * /content/dam/VideosAndWordDocuments
 * /content/dam/formsanddocuments/assettypes
 
 ![assetfolder](assets/selectingassetfolders.png)
 
-按Tab键转到“显示”选项卡。 在此处，您将选择要在“搜索和列表程序”组件中显示资产的模板。
+按Tab键转到“显示”选项卡。 在此处，您可以选择要在搜索和列表程序组件中显示资产的模板。
 
 从下拉菜单中选择“自定义模板”，如下所示。
 
 ![searchandlister](assets/searchandlistercomponent.gif)
 
-配置要在门户中列出的资源类型。 要将资源的类型选项卡配置到“资源列表”并配置资源的类型，请执行以下操作： 在此示例中，我们配置了以下类型的资源
+配置要在门户中列出的资源的类型。 要将资源的选项卡类型配置到“资源列表”，请配置资源的类型。 在此示例中，我们配置了以下类型的资产
 
 1. MP4文件
 1. Word文档
@@ -108,11 +105,11 @@ ht-degree: 0%
 
 ![资产类型](assets/assettypes.png)
 
-现在，您已配置搜索和列表程序门户组件，接下来该查看该列表程序的运行情况。 指向您的浏览器 [到此url ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). 结果应类似于下图所示。
+现在，您已配置搜索和列表程序门户组件，接下来该查看该列表程序的操作了。 指向您的浏览器 [到此url](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). 结果应该与下图类似。
 
 >[!NOTE]
 >
 >如果您的门户在发布服务器上列出了自定义资源类型，请确保向节点授予“fd-service”用户的“读取”权限 **/apps/fd/fp/extensions/querybuilder**
 
 ![资产类型](assets/assettypeslistings.png)
-[请使用包管理器下载并安装此包。](assets/customassettypekt1.zip) 其中包含示例mp4和word文档以及用作资产类型的xdp文件，以使用搜索和列表程序组件列出
+[请使用包管理器下载并安装此包。](assets/customassettypekt1.zip) 这包含示例mp4和word文档以及用作资产类型的xdp文件，以使用搜索和列表程序组件列出

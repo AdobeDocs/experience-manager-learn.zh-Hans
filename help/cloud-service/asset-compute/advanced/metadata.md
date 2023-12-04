@@ -2,21 +2,19 @@
 title: 开发Asset compute元数据工作程序
 description: 了解如何创建Asset compute元数据工作程序，该工作程序可派生图像资源中最常用的颜色，并将这些颜色的名称写回到AEM中的资源元数据。
 feature: Asset Compute Microservices
-topics: metadata, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6448
 thumbnail: 327313.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 6ece6e82-efe9-41eb-adf8-78d9deed131e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 526
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1433'
-ht-degree: 1%
+source-wordcount: '1405'
+ht-degree: 0%
 
 ---
 
@@ -272,10 +270,10 @@ $ aio app deploy
       + 这是工作人员的URL，获取时间是 [部署](#deploy) 或使用命令 `aio app get-url`. 根据AEMas a Cloud Service环境，确保URL指向正确的工作区。
    + __服务参数__
       + 点按 __添加参数__
-         + 键: `colorFamily`
-         + 价值: `pantone`
+         + 键： `colorFamily`
+         + 值： `pantone`
             + 支持的值： `basic`， `hex`， `html`， `ntc`， `pantone`， `roygbiv`
-   + __Mime 类型__
+   + __Mime类型__
       + __包括：__ `image/jpeg`， `image/png`， `image/gif`， `image/svg`
          + 这些是第三方npm模块支持的唯一用于派生颜色的MIME类型。
       + __排除：__ `Leave blank`
@@ -291,12 +289,12 @@ $ aio app deploy
 1. 在AEM Author服务中，导航到 __工具>资产>元数据架构__
 1. 导航到 __默认__ 并选择并编辑 __图像__ 和添加只读表单字段以公开生成的颜色元数据
 1. 添加 __单行文本__
-   + __字段标签__: `Colors Family`
-   + __映射到属性__: `./jcr:content/metadata/wknd:colorsFamily`
+   + __字段标签__： `Colors Family`
+   + __映射到属性__： `./jcr:content/metadata/wknd:colorsFamily`
    + __规则>字段>禁用编辑__：已选中
 1. 添加 __多值文本__
-   + __字段标签__: `Colors`
-   + __映射到属性__: `./jcr:content/metadata/wknd:colors`
+   + __字段标签__： `Colors`
+   + __映射到属性__： `./jcr:content/metadata/wknd:colors`
 1. 点按 __保存__ 在右上方
 
 ## 正在处理资产

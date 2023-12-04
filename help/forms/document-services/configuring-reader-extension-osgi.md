@@ -2,7 +2,6 @@
 title: 在AEM Forms OSGi中配置Reader扩展
 description: 将Reader扩展凭据添加到AEM Forms OSGi中的信任存储区
 feature: Reader Extensions
-audience: developer
 type: Tutorial
 version: 6.4,6.5
 topic: Administration
@@ -10,7 +9,8 @@ role: Admin
 level: Beginner
 exl-id: 1f16acfd-e8fd-4b0d-85c4-ed860def6d02
 last-substantial-update: 2020-08-01T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 328
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -21,16 +21,16 @@ ht-degree: 0%
 
 DocAssurance服务可以对PDF文档应用使用权限。 要对PDF文档应用使用权限，请配置证书。
 
-## 为fd-service用户创建Keystore
+## 为fd-service用户创建密钥库
 
-Reader扩展凭据与fd-service用户关联。 要将凭据添加到fd-service用户，请执行以下步骤。 如果已为fd-service用户创建密钥库，请跳过此部分
+Reader扩展凭据与fd-service用户相关联。 要向fd-service用户添加凭据，请执行以下步骤。 如果已为fd-service用户创建密钥库，请跳过此部分
 
 * 以管理员身份登录AEM创作实例
 * 转到Tools-Security-Users
-* 向下滚动用户列表，直到您找到fd-service用户帐户
+* 向下滚动用户列表，直到找到全功能用户帐户
 * 单击fd-service用户
 * 单击keystore选项卡
-* 单击“创建密钥库”
+* 单击Create KeyStore
 * 设置KeyStore访问密码并保存您的设置以创建KeyStore密码
 
 ### 向fd-service用户密钥库添加凭据
@@ -44,4 +44,4 @@ Reader扩展凭据与fd-service用户关联。 要将凭据添加到fd-service�
 
 **keytool -v -list -storetype pkcs12 -keystore &lt;name of=&quot;&quot; your=&quot;&quot; pfx=&quot;&quot; file=&quot;&quot;>**
 
-例如，keytool -v -list -storetype pkcs12 -keystore 1005566.pfx其中1005566.pfx是我的pfx文件的名称
+例如，keytool -v -list -storetype pkcs12 -keystore 1005566.pfx其中1005566.pfx是my pfx文件的名称

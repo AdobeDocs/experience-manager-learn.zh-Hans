@@ -9,9 +9,10 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 327
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
@@ -69,13 +70,13 @@ method/url/query/protocol/path/selectors/extension/suffix instead.
 Fri Jul 20 17:25:48 2018 D pid 25939 (tid 139937517123328) Filter rejects: GET /libs/granite/core/content/login.html HTTP/1.1
 ```
 
-或:
+或：
 
 ```
 Fri Jul 20 22:16:55 2018 I pid 128803 "GET /system/console/" ! - 8ms publishfarm/-
 ```
 
-<div style="color: #000;border-left: 6px solid red;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid red;background-color:#ddffff;"><b>注意：</b>
 
 了解Dispatcher的规则已设置为过滤掉该请求。 在这种情况下，尝试访问的页面会被有意拒绝，我们对此不必执行任何操作。
 </div>

@@ -8,9 +8,10 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 exl-id: f6536af2-e4b8-46ca-9b44-a0eb8f4fdca9
-source-git-commit: 47d36e472719049de1346c5f0bba010c9af4e039
+duration: 63
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---
@@ -23,8 +24,8 @@ ht-degree: 0%
 
 * DataFile1、DataFile2和DataFile3 — 要与模板合并以生成最终PDF文件的示例xml数据文件
 * custom_fonts.xdp - XDP模板。
-* service_token.json — 您必须使用特定于您帐户的凭据替换此文件的内容
-* options.json — 使用此文件中指定的选项来设置API生成的PDF文件的属性
+* service_token.json — 必须使用特定于您帐户的凭据替换此文件的内容
+* options.json — 在此文件中指定的选项用于设置API生成的PDF文件的属性
 
 ![resources-file](./assets/resource-files.png)
 

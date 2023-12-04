@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 91b4a134-44a7-474e-b769-fe45562105b2
 last-substantial-update: 2020-01-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 180
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -66,9 +67,9 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
  }
 ```
 
-要将图像添加到移动表单并在PDF中显示该图像，我们使用了以下内容
+要将图像添加到移动设备表单并在PDF中显示该图像，我们使用了以下内容
 
-XDP模板 — 在xdp模板中，我们添加了图像字段和名为btnAddImage的按钮。 以下代码处理自定义配置文件中btnAddImage的单击事件。 如您所见，我们将触发file1点击事件。 在xdp中无需编码即可完成此用例
+XDP模板 — 在xdp模板中，我们添加了一个名为btnAddImage的图像字段和按钮。 以下代码处理自定义配置文件中btnAddImage的单击事件。 如您所见，我们将触发file1点击事件。 xdp中无需编码即可完成此用例
 
 ```javascript
 $(".btnAddImage").click(function(){
@@ -78,9 +79,9 @@ $("#file1").click();
 });
 ```
 
-[自定义配置文件](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). 通过使用自定义配置文件，可以更轻松地处理移动表单的HTMLDOM对象。 隐藏的文件元素将添加到HTML.jsp中。 当用户点击“添加照片”时，我们将触发文件元素的点击事件。 这允许用户浏览并选择要附加的照片。 然后我们使用javascript FileReader对象获取图像的base64编码字符串。 base64图像字符串以格式存储在文本字段中。 在提交表单时，我们提取此值，并将其插入XML的img元素中。 然后，使用此XML与xdp合并以生成最终pdf。
+[自定义配置文件](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). 使用自定义配置文件，可以更轻松地处理移动设备表单的HTMLDOM对象。 隐藏的文件元素将添加到HTML.jsp中。 当用户点击“添加照片”时，我们将触发文件元素的点击事件。 这允许用户浏览并选择要附加的照片。 然后使用javascript FileReader对象获取图像的base64编码字符串。 base64图像字符串存储在表单的文本字段中。 在提交表单时，我们将提取此值并将其插入XML的img元素中。 然后，使用此XML与xdp合并以生成最终pdf。
 
-用于本文的自定义配置文件已作为本文资产的一部分提供给您。
+用于本文的自定义配置文件已作为本文资源的一部分提供给您。
 
 ```javascript
 function readURL(input) {
@@ -100,7 +101,7 @@ function readURL(input) {
         }
 ```
 
-当我们触发文件元素的单击事件时，会执行上述代码。 第五行，将上传文件的内容提取为base64字符串，并存储在文本字段中。 然后将表单提交到我们的servlet时，将提取此值。
+当我们触发文件元素的单击事件时，将执行上述代码。 在第5行，我们将上传文件的内容提取为base64字符串并存储在文本字段中。 然后，在表单提交到我们的servlet时，将提取此值。
 
 然后，我们在AEM中配置移动表单的以下属性（高级）
 
@@ -115,7 +116,7 @@ function readURL(input) {
 
 * [下载并安装与本文关联的包。](assets/pdf-from-mobile-form-submission.zip)
 
-* 通过查看的属性页，确保正确设置了提交URL和HTML渲染配置文件  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
+* 通过查看的属性页面，确保正确设置了提交URL和HTML渲染配置文件  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
 
 * [以html格式预览XDP](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 

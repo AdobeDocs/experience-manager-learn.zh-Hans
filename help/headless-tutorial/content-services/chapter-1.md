@@ -1,18 +1,17 @@
 ---
 title: 第1章 — 教程设置和下载 — 内容服务
-seo-title: Getting Started with AEM Content Services - Chapter 1 -  Tutorial Set up
 description: AEM Headless教程的第1章为教程的AEM实例设置基线。
-seo-description: Chapter 1 of the AEM Headless tutorial the baseline setup for the AEM instance for the tutorial.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: f24a75f6-9062-498c-b782-7d9011aa0bcf
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 118
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 1%
+source-wordcount: '366'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +19,7 @@ ht-degree: 1%
 
 始终建议使用最新版本的AEM和AEM WCM核心组件。
 
-* AEM 6.5 或更高版本
+* AEM 6.5或更高版本
 * AEM WCM核心组件2.4.0或更高版本
    * 包含在 [以下的WKND Mobile AEM应用程序内容包](#wknd-mobile-application-packages)
 

@@ -1,18 +1,17 @@
 ---
 title: 第3章 — 创作事件内容片段 — 内容服务
-seo-title: Getting Started with AEM Content Services - Chapter 3 - Authoring Event Content Fragments
 description: AEM Headless教程的第3章涵盖了根据在第2章中创建的内容片段模型创建和创作事件内容片段。
-seo-description: Chapter 3 of the AEM Headless tutorial covers creating and authoring Event Content Fragments from the Content Fragment Model created in Chapter 2.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 46ef11a2-81bd-4ff7-b9ef-9f8cba52c6a8
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 205
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 2%
+source-wordcount: '423'
+ht-degree: 0%
 
 ---
 
@@ -35,14 +34,14 @@ AEM Headless教程的第3章介绍了如何从在中创建的内容片段模型�
 1. 范围 **[!UICONTROL 资产] > [!UICONTROL 文件] > [!DNL WKND Mobile] > [!DNL English] >[!DNL Events]** 创建类型为的新内容片段 **[!DNL Event]** 标题为 **[!DNL Punkrock Fest]**.
 1. 创作新创建的 [!DNL Event] 内容片段。
 
-   * [!DNL Event Title] : **[!DNL Punkrock Fest]**
+   * [!DNL Event Title] ： **[!DNL Punkrock Fest]**
    * [!DNL Event Description] ： **&lt;enter a=&quot;&quot; few=&quot;&quot; lines=&quot;&quot; of=&quot;&quot; description...=&quot;&quot;>**
    * [!DNL Event Date] ： **&lt;select a=&quot;&quot; date=&quot;&quot; in=&quot;&quot; the=&quot;&quot; future=&quot;&quot;>**
    * [!DNL Event Type] ： **音乐**
-   * [!DNL Ticket Price] : **10**
+   * [!DNL Ticket Price] ： **10**
    * [!DNL Event Image] ： **/content/dam/wknd-mobile/images/tom-rogerson-574325-unsplash.jpg**
    * [!DNL Venue Name] ： **爬行动物之家**
-   * [!DNL Venue City] : **New York**
+   * [!DNL Venue City] ： **纽约**
 
    点按 **[!UICONTROL 保存]** 以保存更改。
 

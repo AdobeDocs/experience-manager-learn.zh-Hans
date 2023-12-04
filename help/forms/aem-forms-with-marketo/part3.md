@@ -9,9 +9,10 @@ level: Experienced
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 108
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
@@ -31,25 +32,25 @@ AEM Forms数据集成允许您配置并连接到不同的数据源。 支持开�
 
 “marketo.json”是swagger文件，作为本教程资产的一部分提供给您。
 资产主机特定于您的Marketo实例。
-身份验证类型是自定义的，身份验证实施必须匹配“AemForms与Marketo”。 （除非您在代码中更改了此内容）。
+身份验证类型是自定义的，身份验证实施必须匹配“AemForms与Marketo”。 （除非您在代码中更改了此设置）。
 
 ## 创建表单数据模型
 
-之后，配置数据源的下一步是创建一个表单数据模型，该模型基于上一步中配置的数据源。 要创建表单数据模型，请执行以下步骤：
+之后，配置数据源的下一步是创建基于上一步中配置的数据源的表单数据模型。 要创建表单数据模型，请执行以下步骤：
 
 将浏览器指向 [数据集成页面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) 这会列出在您的AEM实例上创建的所有数据集成。
 
-1. 单击“创建” |表单数据模型
-1. 提供有意义的标题，如FormsAndMarketo，然后单击“下一步”
+1. 单击创建 |表单数据模型
+1. 提供有意义的标题，例如FormsAndMarketo ，然后单击“下一步”
 1. 选择在之前步骤中配置的数据源，然后单击创建和编辑，以在编辑模式下打开表单数据模型
 1. 展开“FormsAndMarketo”节点。 展开服务节点
 1. 选择第一个“获取”操作
 1. 单击添加选定项
 1. 单击“添加关联的模型对象”对话框中的“全选”，然后单击“添加”
 1. 单击保存按钮以保存表单数据模型
-1. Tab键转到“服务”选项卡
+1. “服务”选项卡的选项卡
 1. 选择列出的唯一服务，然后单击测试服务
-1. 提供有效的leadId并单击Test。 如果一切顺利，您应该重新获取潜在客户详细信息，如下面的屏幕快照所示
+1. 提供有效的leadId并单击Test。 如果一切进展顺利，您应该重新获取潜在客户详细信息，如下面的屏幕快照所示
    ![testresults](assets/testresults.jfif)
 
 ## 后续步骤

@@ -1,6 +1,5 @@
 ---
 title: 用样式系统进行开发
-seo-title: Developing with the Style System
 description: 了解如何使用Experience Manager的样式系统实施单个样式并重用核心组件。 本教程介绍如何开发样式系统，以便通过模板编辑器的品牌特定CSS和高级策略配置来扩展核心组件。
 version: 6.5, Cloud Service
 feature: Core Components, Style System
@@ -13,10 +12,11 @@ thumbnail: 30386.jpg
 doc-type: Tutorial
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 494
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 2%
+source-wordcount: '1555'
+ht-degree: 0%
 
 ---
 

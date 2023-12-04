@@ -8,10 +8,11 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 49613808-6369-4e43-bc26-fd3041265339
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 312
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 5%
+source-wordcount: '75'
+ht-degree: 2%
 
 ---
 
@@ -24,4 +25,4 @@ ht-degree: 5%
 ## 其他资源 {#additional-resources}
 
 * [语言复制向导文档](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-wizard.html)
-* [MSM 最佳实践](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-best-practices.html)
+* [msm最佳实践](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-best-practices.html)

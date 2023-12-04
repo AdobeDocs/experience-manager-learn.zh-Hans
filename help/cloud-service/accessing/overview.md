@@ -1,5 +1,5 @@
 ---
-title: 配置 AEM as a Cloud Service 的访问权限
+title: 配置对 AEM as a Cloud Service 的访问权限
 description: AEMas a Cloud Service是利用AEM应用程序的云原生方式，因此，会利用Adobe IMS (Identity Management System)帮助管理员（和常规用户）登录AEM Author服务。 了解Adobe IMS用户、用户组和产品配置文件如何与AEM组和权限结合使用，以提供对AEM Author的特定访问。
 version: Cloud Service
 topic: Administration, Security
@@ -10,14 +10,15 @@ jira: KT-5882
 thumbnail: KT-5882.jpg
 last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 148
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 28%
+source-wordcount: '598'
+ht-degree: 26%
 
 ---
 
-# 配置 AEM as a Cloud Service 的访问权限 {#configuring-access-to-aem-as-a-cloud-service}
+# 配置对 AEM as a Cloud Service 的访问权限 {#configuring-access-to-aem-as-a-cloud-service}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_overview"
@@ -72,6 +73,6 @@ Adobe Experience Manager 基于 Adobe IMS 用户、用户组和产品配置文�
 
 以下文档封面 [Adobe Admin Console](https://adminconsole.adobe.com) — 特定的详细信息和关注事项，这可能会帮助更好地了解Adobe Admin Console并使用它来管理用户和跨Experience Cloud产品的访问。
 
-+ [Adobe Admin Console 标识概述](https://helpx.adobe.com/cn/enterprise/using/identity.html)
++ [Adobe Admin Console Identity概述](https://helpx.adobe.com/cn/enterprise/using/identity.html)
 + [Adobe Admin Console管理员角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)
 + [Adobe Admin Console开发人员角色](https://helpx.adobe.com/enterprise/using/manage-developers.html)

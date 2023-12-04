@@ -1,6 +1,6 @@
 ---
 title: 将Microsoft Dynamics与AEM Forms结合使用
-description: 此视频介绍一个工作流，该工作流显示AEM Forms如何将Microsoft Dynamics用作后端数据源，以提供交互式个性化通信。
+description: 此视频介绍一个工作流，该工作流展示了AEM Forms如何将Microsoft Dynamics用作后端数据源来提供交互式个性化通信。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -8,9 +8,10 @@ role: Developer
 level: Intermediate
 exl-id: 3e51767b-3571-4af7-8f01-5b6c5c74734c
 last-substantial-update: 2021-03-20T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 240
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
@@ -25,7 +26,7 @@ AEM Forms数据集成允许您配置并连接到不同的数据源。 支持开�
 1. 基于SOAP的Web服务
 1. OData服务
 
-此视频介绍一个工作流，该工作流显示AEM Forms如何将Microsoft Dynamics用作后端数据源，以提供交互式个性化通信。
+此视频介绍一个工作流，该工作流展示了AEM Forms如何将Microsoft Dynamics用作后端数据源来提供交互式个性化通信。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20971?quality=12&learn=on)
 

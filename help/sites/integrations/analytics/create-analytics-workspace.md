@@ -12,9 +12,10 @@ doc-type: Tutorial
 exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 badgeIntegration: label="集成" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 596
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2162'
+source-wordcount: '2072'
 ht-degree: 0%
 
 ---
@@ -105,9 +106,9 @@ eVar最适合用于衡量原因和结果，例如：
 1. 从 **报表包管理器** 窗口中，选择 **报表包Id** 并单击 **编辑设置**.
 1. 单击 **转化** > **成功事件**
 1. 使用 **新增** 选项，创建一个自定义成功事件以跟踪CTA按钮单击，然后 **保存** 您所做的更改。
-   * `Event` : `event8`
-   * `Name`:`CTA Click`
-   * `Type`:`Counter`
+   * `Event` ： `event8`
+   * `Name`：`CTA Click`
+   * `Type`：`Counter`
 
    ![eVar](assets/create-analytics-workspace/add-success-event.png)
 
@@ -153,19 +154,19 @@ Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分�
 
 1. 让我们按照页面的模板类型来划分页面。 从组件中选择页面模板度量，并将“页面模板”度量拖放到页面名称维上。 您现在可以查看按模板类型划分的页面名称。
 
-   * **之前**
-     ![eVar5](assets/create-analytics-workspace/evar5.png)
+   * **早于**
+     ![EVAR5](assets/create-analytics-workspace/evar5.png)
 
    * **之后**
      ![eVar5指标](assets/create-analytics-workspace/evar5-metrics.png)
 
 1. 要了解用户如何与WKND网站页面上的CTA按钮进行交互，需要通过添加按钮ID (eVar8)指标进一步细分。
 
-   ![eVar8](assets/create-analytics-workspace/evar8.png)
+   ![EVAR8](assets/create-analytics-workspace/evar8.png)
 
 1. 在下方，您可以看到WKND网站的可视化呈现形式，它按页面模板划分，并进一步按用户与WKND网站点击操作(CTA)按钮的交互进行划分。
 
-   ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
+   ![EVAR8](assets/create-analytics-workspace/evar8-metric.png)
 
 1. 您可以使用“Adobe Analytics分类”将按钮ID值替换为更加用户友好的名称。 您可以阅读有关如何为特定量度创建分类的更多信息 [此处](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html). 在这种情况下，我们有一个分类量度 `Button Section (Button ID)` 设置 `eVar8` 将按钮id映射到用户友好名称。
 
@@ -243,7 +244,7 @@ Analytics分类是在生成报表时对Analytics变量数据进行分类，然�
 
 1. 在组件查找器中，搜索 **WKND CTA按钮** 并拖放 **WKND CTA按钮（按钮Id）** 维度到按钮ID量度中并将其替换。
 
-   * **之前**
+   * **早于**
      ![工作区按钮（在之前）](assets/create-analytics-workspace/wknd-button-before.png)
    * **之后**
      ![工作区按钮晚于](assets/create-analytics-workspace/wknd-button-after.png)

@@ -7,18 +7,19 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
-source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
+duration: 628
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1307'
 ht-degree: 0%
 
 ---
 
 # 探索AEM GraphQL API
 
-AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 在基本教程中 [多步骤GraphQL教程](../multi-step/explore-graphql-api.md)中，您使用了GraphiQL Explorer来测试和优化GraphQL查询。
+AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 在基本教程中 [多步骤GraphQL教程](../multi-step/explore-graphql-api.md)中，您已使用GraphiQL Explorer来测试和优化GraphQL查询。
 
-在本章中，您使用GraphiQL Explorer定义更高级的查询，以收集您在中创建的内容片段的数据。 [上一章](../advanced-graphql/author-content-fragments.md).
+在本章中，您使用GraphiQL Explorer定义更高级的查询，以收集您在中创建的内容片段的数据 [上一章](../advanced-graphql/author-content-fragments.md).
 
 ## 前提条件 {#prerequisites}
 
@@ -26,20 +27,20 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 
 ## 目标 {#objectives}
 
-在本章中，您将了解如何：
+在本章中，您将学习如何：
 
 * 使用查询变量筛选包含引用的内容片段列表
 * 筛选片段引用中的内容
 * 从多行文本字段查询内联内容和片段引用
-* 使用指令进行查询
+* 使用指令查询
 * 查询JSON对象内容类型
 
-## 使用GraphiQL Explorer
+## 使用GraphiQL资源管理器
 
 
-此 [GraphiQL资源管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 开发人员可以使用工具针对当前AEM环境中的内容创建和测试查询。 GraphiQL工具还使用户能够 **persist或保存** 由生产设置中的客户端应用程序使用的查询。
+此 [GraphiQL Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 开发人员可以使用工具针对当前AEM环境中的内容创建和测试查询。 GraphiQL工具还使用户能够 **保留或保存** 在生产设置中由客户端应用程序使用的查询。
 
-接下来，使用内置的GraphiQL资源管理器探索AEM GraphQL API的强大功能。
+接下来，使用内置的GraphiQL Explorer探索AEM GraphQL API的强大功能。
 
 1. 从AEM开始屏幕，导航到 **工具** > **常规** > **GraphQL查询编辑器**.
 
@@ -47,18 +48,18 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 
 >[!IMPORTANT]
 >
->在中，某些版本的AEM (6.X.X) GraphiQL Explorer （又称GraphiQL IDE）工具需要手动安装，请遵循 [从此处获得说明](../how-to/install-graphiql-aem-6-5.md).
+>在中，某些版本的AEM (6.X.X) GraphiQL Explorer （又称GraphiQL IDE）工具需要手动安装，请遵循 [说明（从此处）](../how-to/install-graphiql-aem-6-5.md).
 
-1. 在右上角，确保Endpoint设置为 **WKND共享端点**. 更改 _端点_ 此处的下拉列表值显示现有的 _持久查询_ 左上角。
+1. 在右上角，确保将“端点”设置为 **WKND共享端点**. 更改 _端点_ 此处的下拉列表值显示现有的 _持久查询_ 左上角。
 
    ![设置GraphQL端点](assets/explore-graphql-api/set-wknd-shared-endpoint.png)
 
-这会将所有查询的范围限定为在中创建的模型 **WKND已共享** 项目。
+这会将所有查询的范围限定于在 **WKND已共享** 项目。
 
 
 ## 使用查询变量筛选内容片段列表
 
-在上一个 [多步骤GraphQL教程](../multi-step/explore-graphql-api.md)，您已定义并使用基本的持久查询来获取内容片段数据。 在这里，您可以展开此知识，并通过将变量传递到持久查询来筛选内容片段数据。
+在上一个 [多步骤GraphQL教程](../multi-step/explore-graphql-api.md)，您已定义并使用基本的持久查询来获取内容片段数据。 在这里，您可以展开此知识，并通过将变量传递给持久查询来筛选内容片段数据。
 
 在开发客户端应用程序时，通常需要根据动态参数筛选内容片段。 AEM GraphQL API允许您在查询中将这些参数作为变量传递，以避免在运行时在客户端构建字符串。 有关GraphQL变量的更多信息，请参阅 [GraphQL文档](https://graphql.org/learn/queries/#variables).
 
@@ -95,7 +96,7 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 
    此 `listPersonBySkill` 上述查询接受一个变量(`skillFilter`)为必填项 `String`. 此查询对所有人员内容片段执行搜索，并根据 `skills` 字段和传入的字符串 `skillFilter`.
 
-   此 `listPersonBySkill` 包括 `contactInfo` 属性，是对在上一章中定义的联系信息模型的片段引用。 “联系信息”模型包含 `phone` 和 `email` 字段。 查询中必须至少存在这些字段之一，才能正确执行。
+   此 `listPersonBySkill` 包括 `contactInfo` 属性，是对前几章中定义的联系信息模型的片段引用。 “联系信息”模型包含 `phone` 和 `email` 字段。 查询中必须至少存在其中一个字段，才能正确执行。
 
    ```graphql
    contactInfo {
@@ -104,7 +105,7 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
          }
    ```
 
-1. 接下来，让我们定义 `skillFilter` 让所有精通滑雪的讲师参加。 将以下JSON字符串粘贴到GraphiQL IDE的“查询变量”面板中：
+1. 接下来，让我们定义 `skillFilter` 让所有熟练滑雪的讲师参加。 将以下JSON字符串粘贴到GraphiQL IDE的“查询变量”面板中：
 
    ```json
    {
@@ -144,17 +145,17 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
    }
    ```
 
-按 **播放** 按钮来执行查询。 您应会看到上一章内容片段的结果：
+按 **播放** 按钮来执行查询。 您应该会看到上一章内容片段的结果：
 
 ![按技能列出的人员结果](assets/explore-graphql-api/person-by-skill.png)
 
 ## 筛选片段引用中的内容
 
-AEM GraphQL API允许您查询嵌套的内容片段。 在上一章中，您向冒险内容片段添加了三个新片段引用： `location`， `instructorTeam`、和 `administrator`. 现在，让我们筛选具有特定名称的任何管理员的所有冒险。
+AEM GraphQL API允许您查询嵌套的内容片段。 在上一章中，您为冒险内容片段添加了三个新片段引用： `location`， `instructorTeam`、和 `administrator`. 现在，让我们为具有特定名称的任何管理员筛选所有冒险。
 
 >[!CAUTION]
 >
->只有允许一个模型作为参考，此查询才能正确执行。
+>仅允许一个模型作为此查询的引用，才能正确执行。
 
 1. 在GraphiQL IDE中，将以下查询粘贴到左侧面板中：
 
@@ -189,7 +190,7 @@ AEM GraphQL API允许您查询嵌套的内容片段。 在上一章中，您向�
    }
    ```
 
-   此 `getAdventureAdministratorDetailsByAdministratorName` 查询筛选所有冒险的任何 `administrator` 之 `fullName` “Jacob Wester”，返回来自两个嵌套内容片段的信息：冒险和讲师。
+   此 `getAdventureAdministratorDetailsByAdministratorName` 查询过滤所有冒险的任何 `administrator` 之 `fullName` “Jacob Wester”，返回来自两个嵌套内容片段的信息：冒险和讲师。
 
 1. 执行查询。 结果应类似于以下内容：
 
@@ -275,13 +276,13 @@ AEM GraphQL API允许您在多行文本字段中查询内容和片段引用。 �
    }
    ```
 
-   此 `getTeamByAdventurePath` 查询按路径筛选所有冒险并返回以下项的数据： `instructorTeam` 特定冒险的片段引用。
+   此 `getTeamByAdventurePath` 查询按路径筛选所有冒险并返回以下内容的数据： `instructorTeam` 特定冒险的片段引用。
 
-   `_references` 是一个系统生成的字段，用于显示引用，包括插入到多行文本字段中的引用。
+   `_references` 是系统生成的字段，用于显示引用，包括插入到多行文本字段中的引用。
 
-   此 `getTeamByAdventurePath` query可检索多个引用。 首先，它使用内置 `ImageRef` 要检索的对象 `_path` 和 `__typename` 作为内容引用插入到多行文本字段中的图像数量。 接下来，它使用 `LocationModel` 以检索插入到同一字段中的位置内容片段的数据。
+   此 `getTeamByAdventurePath` 查询检索多个引用。 首先，它使用内置 `ImageRef` 要检索的对象 `_path` 和 `__typename` 作为内容引用插入到多行文本字段中的图像的数量。 接下来，它使用 `LocationModel` 以检索插入到同一字段中的位置内容片段的数据。
 
-   该查询还包括 `_metadata` 字段。 这允许您检索团队内容片段的名称，并在稍后在WKND应用程序中显示。
+   该查询还包括 `_metadata` 字段。 这允许您检索团队内容片段的名称，并稍后在WKND应用程序中显示它。
 
 1. 接下来，将以下JSON字符串粘贴到“查询变量”面板中，以获取Yosemite背包冒险：
 
@@ -346,11 +347,11 @@ AEM GraphQL API允许您在多行文本字段中查询内容和片段引用。 �
    此 `_references` 字段显示徽标图像以及插入到中的Yosemite Valley Lodge内容片段 **描述** 字段。
 
 
-## 使用指令进行查询
+## 使用指令查询
 
-有时，在开发客户端应用程序时，您需要有条件地更改查询的结构。 在这种情况下，AEM GraphQL API允许您使用GraphQL指令，以便根据提供的条件更改查询的行为。 有关GraphQL指令的详细信息，请参见 [GraphQL文档](https://graphql.org/learn/queries/#directives).
+有时，在开发客户端应用程序时，您需要有条件地更改查询的结构。 在这种情况下，AEM GraphQL API允许您使用GraphQL指令，以便根据提供的条件更改查询的行为。 有关GraphQL指令的更多信息，请参阅 [GraphQL文档](https://graphql.org/learn/queries/#directives).
 
-在 [上一节](#query-rte-reference)，您已了解如何在多行文本字段中查询内联引用。 内容检索自 `description` 归档位置 `plaintext` 格式。 接下来，我们展开该查询并使用指令有条件地检索 `description` 在 `json` 格式化。
+在 [上一节](#query-rte-reference)您已了解如何在多行文本字段中查询内联引用。 内容检索自 `description` 归档于 `plaintext` 格式。 接下来，我们展开该查询并使用指令有条件地检索 `description` 在 `json` 格式化。
 
 1. 在GraphiQL IDE中，将以下查询粘贴到左侧面板中：
 
@@ -397,7 +398,7 @@ AEM GraphQL API允许您在多行文本字段中查询内容和片段引用。 �
    }
    ```
 
-   上述查询接受另一个变量(`includeJson`)为必填项 `Boolean`，也称为查询指令。 指令可用于有条件地包含来自以下各项的数据： `description` 中的字段 `json` 基于传入的布尔值的格式 `includeJson`.
+   上述查询接受另一个变量(`includeJson`)为必填项 `Boolean`，也称为查询的指令。 指令可用于有条件地包含来自以下各项的数据： `description` 中的字段 `json` 基于传入的布尔值的格式 `includeJson`.
 
 1. 接下来，将以下JSON字符串粘贴到“查询变量”面板中：
 
@@ -408,9 +409,9 @@ AEM GraphQL API允许您在多行文本字段中查询内容和片段引用。 �
    }
    ```
 
-1. 执行查询。 您应会获得与上一节中相同的结果 [如何查询多行文本字段中的内联引用](#query-rte-reference).
+1. 执行查询。 您应会获得与上一部分相同的结果 [如何在多行文本字段中查询内联引用](#query-rte-reference).
 
-1. 更新 `includeJson` 指令 `true` 并再次执行查询。 结果应类似于以下内容：
+1. 更新 `includeJson` 指示给 `true` 并再次执行查询。 结果应类似于以下内容：
 
    ```json
    {
@@ -602,9 +603,9 @@ AEM GraphQL API允许您在多行文本字段中查询内容和片段引用。 �
 
 ## 一次查询所有内容
 
-到目前为止，已执行了多个查询来说明AEM GraphQL API的功能。
+到目前为止，已执行多个查询来说明AEM GraphQL API的功能。
 
-同一数据只能通过单个查询来检索，此查询稍后在客户端应用程序中使用来检索其他信息，例如位置、团队名称、冒险的团队成员：
+同一数据只能通过单个查询进行检索，此查询稍后在客户端应用程序中用于检索其他信息，例如位置、团队名称、冒险的团队成员：
 
 ```graphql
 query getAdventureDetailsBySlug($slug: String!) {
@@ -725,4 +726,4 @@ query getAdventureDetailsBySlug($slug: String!) {
 
 ## 后续步骤
 
-在 [下一章节](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)，您将了解如何持久GraphQL查询，以及为什么在应用程序中使用持久查询是最佳实践。
+在 [下一章](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)，您将了解如何持久GraphQL查询，以及为什么在应用程序中使用持久查询是最佳实践。

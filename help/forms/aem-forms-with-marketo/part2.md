@@ -9,16 +9,17 @@ level: Experienced
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 205
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 2%
+source-wordcount: '356'
+ht-degree: 1%
 
 ---
 
 # Marketo身份验证服务
 
-Marketo的REST API使用2-legged OAuth 2.0进行身份验证。我们需要创建自定义身份验证以针对Marketo进行身份验证。 此自定义身份验证通常写入OSGI捆绑包中。 以下代码显示了在本教程中使用的自定义身份验证器。
+Marketo的REST API使用双腿OAuth 2.0进行身份验证。我们需要创建自定义身份验证以针对Marketo进行身份验证。 此自定义身份验证通常写入OSGI捆绑包中。 以下代码显示了在本教程中使用的自定义身份验证器。
 
 ## 自定义身份验证服务
 
@@ -54,13 +55,13 @@ MarketoService marketoService;
 }
 ```
 
-MarketoAuthenticationService实施IAuthentication接口。 此界面是AEM Forms客户端SDK的一部分。 服务获取访问令牌并将令牌插入到AuthenticationDetails的HttpHeader中。 填充AuthenticationDetails对象的HttpHeaders后，AuthenticationDetails对象将返回到表单数据模型的Dermis层。
+MarketoAuthenticationService实施IAuthentication接口。 此界面是AEM Forms客户端SDK的一部分。 服务获取访问令牌并将该令牌插入到AuthenticationDetails的HttpHeader中。 填充AuthenticationDetails对象的HttpHeaders后，AuthenticationDetails对象将返回到表单数据模型的真皮层。
 
 请注意由getAuthenticationType方法返回的字符串。 在配置数据源时，将使用此字符串。
 
 ### 获取访问令牌
 
-用一个返回access_token的方法定义了一个简单接口。 实现此接口的类的代码在页面的下面列出。
+用一个返回access_token的方法定义了一个简单接口。 用于实现此接口的类的代码在该页的下方列出。
 
 ```java
 package com.marketoandforms.core;
@@ -69,7 +70,7 @@ public interface MarketoService {
 }
 ```
 
-以下代码属于服务，该服务返回用于进行REST API调用的access_token。 此服务中的代码访问进行GET调用所需的配置参数。 如您所见，我们在GETURL中传递client_id、client_secret以生成access_token。 然后，将此access_token返回到调用应用程序。
+以下代码属于服务，该服务返回用于进行REST API调用的access_token。 此服务中的代码访问进行GET调用所需的配置参数。 如您所见，我们在GETURL中传递client_id、client_secret以生成access_token。 然后将此access_token返回到调用应用程序。
 
 ```java
 package com.marketoandforms.core.impl;

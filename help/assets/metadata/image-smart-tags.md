@@ -11,10 +11,11 @@ thumbnail: 17019.jpg
 last-substantial-update: 2022-06-09T00:00:00Z
 doc-type: Feature Video
 exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 594
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 3%
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +39,7 @@ AEM Assets的图像智能标签可自动将派生的元数据标签添加到图�
 
 本视频详细介绍了配置用于智能标记图像的Adobe I/O智能内容服务所需的以下任务。
 
-* 在AEM中创建智能内容服务配置以生成公共密钥。 为 OAuth 集成获取公共证书。
+* 在AEM中创建智能内容服务配置以生成公共密钥。 为OAuth集成获取公共证书。
 * 在Adobe I/O中创建集成并上传生成的公共密钥。
 * 使用Adobe I/O中的API密钥和其他凭据配置AEM实例。
 * （可选）在资产上传时启用自动标记。

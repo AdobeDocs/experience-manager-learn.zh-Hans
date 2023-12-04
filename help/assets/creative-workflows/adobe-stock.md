@@ -9,10 +9,11 @@ level: Beginner
 last-substantial-update: 2022-06-26T00:00:00Z
 doc-type: Feature Video
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1137
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 3%
+source-wordcount: '861'
+ht-degree: 1%
 
 ---
 
@@ -91,7 +92,7 @@ ht-degree: 3%
 6. 使用集成详细信息完成Adobe IMS技术帐户配置
 7. 确保您可以使用Adobe IMS技术帐户接收访问令牌。
 
-![Adobe IMS 技术帐户](assets/screen_shot_2018-10-22at12219pm.png)
+![Adobe IMS技术帐户](assets/screen_shot_2018-10-22at12219pm.png)
 
 #### 设置Adobe StockCloud Service {#set-up-adobe-stock-cloud-services}
 

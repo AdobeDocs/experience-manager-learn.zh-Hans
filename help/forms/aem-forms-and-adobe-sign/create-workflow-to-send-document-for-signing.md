@@ -10,10 +10,11 @@ level: Intermediate
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 20093733-2d19-4405-b453-1a8c2722adeb
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 403
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 3%
+source-wordcount: '101'
+ht-degree: 2%
 
 ---
 

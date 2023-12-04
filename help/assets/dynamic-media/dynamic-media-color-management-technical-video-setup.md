@@ -8,10 +8,11 @@ role: Developer
 level: Intermediate
 doc-type: Feature Video
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 343
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 17%
+source-wordcount: '337'
+ht-degree: 11%
 
 ---
 
@@ -104,12 +105,12 @@ ht-degree: 17%
 | JapanColorUncoated | CMYK | Japan Color 2001无涂层 |
 | JapanColorWebCoated | CMYK | Japan Color 2003 Web Coated |
 | Japanawebcoated | CMYK | 日本Web Coated (Ad) |
-| NewsprintSNAP2007 | CMYK | 美国新闻纸(SNAP 2007) |
+| 新闻纸快照2007 | CMYK | 美国新闻纸(SNAP 2007) |
 | NTSC | RGB | NTSC （1953年） |
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhotoRGB |
-| PS4Default | CMYK | Photoshop 4默认CMYK |
-| PS5Default | CMYK | Photoshop 5默认CMYK |
+| PS4默认 | CMYK | Photoshop 4默认CMYK |
+| PS5默认 | CMYK | Photoshop 5默认CMYK |
 | SheetfedCoated | CMYK | U.S. Sheetfed Coated v2 |
 | SheetfedUncoated | CMYK | U.S. Sheetfed Uncoated v2 |
 | SMPTE | RGB | SMPTE-C |

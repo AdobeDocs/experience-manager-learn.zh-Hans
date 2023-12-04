@@ -10,9 +10,10 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 570
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -197,7 +198,7 @@ ht-degree: 0%
    451 B              build/static/css/main.e57bbe8a.chunk.css
    ```
 
-1. 导航到 `ui.apps` 文件夹。下 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` 您应该会看到编译的SPA文件是从`ui.frontend/build` 文件夹。
+1. 导航至 `ui.apps` 文件夹。 下 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` 您应该会看到编译的SPA文件是从`ui.frontend/build` 文件夹。
 
    ![在ui.apps中生成的客户端库](./assets/integrate-spa/compiled-spa-uiapps.png)
 

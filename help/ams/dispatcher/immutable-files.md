@@ -9,10 +9,11 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 376
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 1%
+source-wordcount: '825'
+ht-degree: 0%
 
 ---
 
@@ -222,7 +223,7 @@ $ cp /etc/httpd/conf.d/available_vhosts/aem_publish.vhost /etc/httpd/conf.d/avai
 
 我们复制了现有的aem_publish.vhost文件，因为它已具备了我们需要的内容，没有必要从头开始。  现在，编辑新的weretail.vhost文件，并进行所需的更改。
 
-之前:
+之前：
 
 ```
 VirtualHost *:80
@@ -240,7 +241,7 @@ VirtualHost *:80
 /VirtualHost
 ```
 
-之后:
+之后：
 
 ```
 VirtualHost *:80
@@ -278,7 +279,7 @@ $ cp /etc/httpd/conf.dispatcher.d/available_farms/999_ams_publish_farm.any /etc/
 
 让我们来看看对此场文件需要进行的更改
 
-之前:
+之前：
 
 ```
 /publishfarm {  
@@ -289,7 +290,7 @@ $ cp /etc/httpd/conf.dispatcher.d/available_farms/999_ams_publish_farm.any /etc/
 }
 ```
 
-之后:
+之后：
 
 ```
 /weretailpublishfarm {  
@@ -308,7 +309,7 @@ $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_w
 
 现在，我们只需重新加载Web服务器服务并使用新域即可！
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 请注意，我们仅更改了需要更改的片段，并利用了基线配置文件附带的现有包含和代码。  我们只需要标出需要改变的元素。  简化操作并让我们能够维护更少的代码
 </div>

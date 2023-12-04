@@ -1,6 +1,6 @@
 ---
 title: 如何更新PDFG中的CORBA超时以缓解事务回滚问题？
-description: 在AEM FormsPDF生成器中配置CORBA超时以解决与事务回滚相关的问题
+description: 在AEM Forms PDF Generator中配置CORBA超时以解决与事务回滚相关的问题
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -9,7 +9,8 @@ feature: PDF Generator
 topic: Administration
 index: y
 exl-id: 397f5580-d982-46f3-b63a-7fc6def07ec5
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 140
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%

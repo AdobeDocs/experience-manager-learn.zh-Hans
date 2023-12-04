@@ -8,10 +8,11 @@ role: Leader, Architect, Developer, Admin, User
 level: Beginner
 doc-type: Article
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 820
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2602'
-ht-degree: 4%
+source-wordcount: '2586'
+ht-degree: 1%
 
 ---
 
@@ -146,7 +147,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">在线修订版清理</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">在线修订版清理</a>：</strong>
                 执行存储库维护，无需服务器停机。</td>
             <td> </td>
             <td> </td>
@@ -307,7 +308,7 @@ AEM提高了与其他Adobe服务集成的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank">密钥存储管理</a></strong>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank">密钥存储管理</a></strong>
             <br> 全局信任存储区、证书和密钥都在存储库中管理。</td>
         <td></td>
         <td>✔</td>
@@ -329,7 +330,7 @@ AEM提高了与其他Adobe服务集成的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong>CORS</strong> <strong>支持</strong></a>
+        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong>CORS</strong> <strong>支持</strong></a>
             <br> 跨源资源共享支持提高应用程序灵活性。</td>
         <td></td>
         <td></td>
@@ -512,7 +513,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/msm.html" target="_blank">多站点管理器(MSM)</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm.html" target="_blank">多站点管理器(MSM)</a>：</strong>
             管理共享相同内容的多个网站（即多语言、多个品牌）。</td>
             <td>✔</td>
             <td>✔</td>
@@ -523,7 +524,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/translation.html" target="_blank">内容翻译</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html" target="_blank">内容翻译</a>：</strong>
             即插即用框架与业界领先的第三方翻译服务集成。</td>
             <td></td>
             <td></td>

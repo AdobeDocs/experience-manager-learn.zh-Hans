@@ -9,10 +9,11 @@ version: Cloud Service
 topic: Integrations
 jira: KT-13717
 exl-id: 7469aa7f-1794-40dd-990c-af5d45e85223
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 105
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
@@ -31,7 +32,7 @@ ht-degree: 9%
 
 | **属性名称** | **属性类型** | **属性值** |
 |-------------------------|-------------------|----------------------------------------|
-| componentGroup | 字符串 | 隐藏 |
+| 组件组 | 字符串 | 隐藏 |
 | jcr：description | 字符串 | 自适应表单模板页面类型 |
 | jcr:title | 字符串 | 自适应表单模板页面 |
 | sling:resourceSuperType | 字符串 | `fd/af/components/page2/aftemplatedpage` |

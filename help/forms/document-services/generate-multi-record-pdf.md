@@ -1,6 +1,6 @@
 ---
 title: 从一个数据文件生成多个PDF
-description: OutputService提供了许多使用表单设计创建文档的方法，以及要与表单设计合并的数据。 了解如何从包含多个单独记录的一个大型xml生成多个PDF。
+description: OutputService提供了多种方法来使用表单设计创建文档，并提供要与表单设计合并的数据。 了解如何从包含多个单独记录的一个大型xml生成多个PDF。
 feature: Output Service
 version: 6.4,6.5
 topic: Development
@@ -8,16 +8,17 @@ role: Developer
 level: Experienced
 exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
 last-substantial-update: 2020-01-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 199
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 # 从一个xml数据文件生成一组PDF文档
 
-OutputService提供了许多使用表单设计创建文档的方法，以及要与表单设计合并的数据。 以下文章说明了使用包含多个单独记录的一个大型xml生成多个pdf的用例。
+OutputService提供了多种方法来使用表单设计创建文档，并提供要与表单设计合并的数据。 以下文章将介绍使用案例，通过包含多个单独记录的一个大型xml生成多个pdf。
 以下是包含多个记录的xml文件的屏幕截图。
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
@@ -25,7 +26,7 @@ OutputService提供了许多使用表单设计创建文档的方法，以及要�
 数据xml有2条记录。 每个记录由form1元素表示。 此xml传递到OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) 我们获得pdf文档的列表（每条记录一个） generatePDFOutputBatch方法的签名采用以下参数
 
 * 模板 — 包含模板的映射，用键进行标识
-* 数据 — 包含xml数据文档的映射，按键进行标识
+* 数据 — 包含xml数据文档的映射，通过键进行标识
 * pdfOutputOptions — 用于配置pdf生成的选项
 * batchOptions — 用于配置批次的选项
 
@@ -33,11 +34,11 @@ OutputService提供了许多使用表单设计创建文档的方法，以及要�
 
 ## 用例详细信息{#use-case-details}
 
-在此使用案例中，我们将提供一个简单的Web界面来上传模板和数据(xml)文件。 文件上传完成并向AEM servlet发送POST请求后。 此servlet提取文档并调用OutputService的generatePDFOutputBatch方法。 生成的pdf将压缩为zip文件，以供最终用户从Web浏览器下载。
+在本使用案例中，我们将提供一个简单的Web界面来上传模板和数据(xml)文件。 文件上传完成并向AEM servlet发送POST请求后。 此servlet提取文档并调用OutputService的generatePDFOutputBatch方法。 生成的pdf将压缩为zip文件，供最终用户从Web浏览器下载。
 
 ## Servlet代码{#servlet-code}
 
-以下是servlet中的代码段。 代码从请求中提取模板(xdp)和数据文件(xml)。 模板文件将保存到文件系统。 创建两个映射：templateMap和dataFileMap，分别包含模板和xml（数据）文件。 然后调用DocumentServices服务的generateMultipleRecords方法。
+以下是servlet中的代码片段。 代码从请求中提取模板(xdp)和数据文件(xml)。 模板文件将保存到文件系统。 创建了两个映射 — templateMap和dataFileMap，它们分别包含模板和xml（数据）文件。 然后调用DocumentServices服务的generateMultipleRecords方法。
 
 ```java
 for (final java.util.Map.Entry < String, org.apache.sling.api.request.RequestParameter[] > pairs: params
@@ -130,7 +131,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 * [部署DevelopingWithServiceUser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
 * [部署自定义AEMFormsDocumentServices捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).使用OutputService API生成PDF的自定义包
 * [将浏览器指向包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* [导入并安装资源包](assets/generate-multiple-pdf-from-xml.zip). 此包包含html页面，通过该页面可删除模板和数据文件。
+* [导入并安装包](assets/generate-multiple-pdf-from-xml.zip). 此包包含html页面，通过该页面可删除模板和数据文件。
 * [将浏览器指向MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html？)
 * 将模板和xml数据文件拖放到一起
 * 下载创建的zip文件。 此zip文件包含输出服务生成的pdf文件。

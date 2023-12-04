@@ -11,10 +11,11 @@ thumbnail: 30359.jpg
 doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 752
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2799'
-ht-degree: 2%
+source-wordcount: '2546'
+ht-degree: 0%
 
 ---
 
@@ -287,7 +288,7 @@ AEM项目原型会自动设置此集成。 接下来，探索它的工作方式�
 
 1. 单击 **页面信息** 图标，然后在菜单中，选择 **查看已发布的项目** 以在AEM编辑器外部打开文章页面。
 
-   ![以发布的形式查看](assets/client-side-libraries/view-as-published-article-page.png)
+   ![查看已发布的项目](assets/client-side-libraries/view-as-published-article-page.png)
 
 1. 查看页面源 [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled) 并且您应该能够在以下位置看到以下clientlib引用： `<head>`：
 

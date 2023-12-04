@@ -8,10 +8,11 @@ role: Developer
 level: Intermediate, Experienced
 doc-type: Article
 exl-id: c51da742-5ce7-499a-83da-227a25fb78c9
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 447
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1536'
-ht-degree: 3%
+source-wordcount: '1522'
+ht-degree: 0%
 
 ---
 
@@ -124,7 +125,7 @@ AEM样式系统可以使用作者友好标签公开这些着色显示样式 **�
 
 * **布局样式**
    * 样式名称： **促销**
-   * CSS 类: `cmp-teaser--promo`
+   * CSS类： `cmp-teaser--promo`
 * **显示样式**
    * 无
 * **有效的CSS类**： `.cmp-teaser--promo`
@@ -135,10 +136,10 @@ AEM样式系统可以使用作者友好标签公开这些着色显示样式 **�
 
 * **布局样式**
    * 样式名称： **促销**
-   * CSS 类: `cmp-teaser--promo`
+   * CSS类： `cmp-teaser--promo`
 * **显示样式**
    * 样式名称： **绿色**
-   * CSS 类: `cmp-teaser--primary-color`
+   * CSS类： `cmp-teaser--primary-color`
 * **有效的CSS类**： `cmp-teaser--promo.cmp-teaser--primary-color`
 
 #### 促销次要
@@ -147,10 +148,10 @@ AEM样式系统可以使用作者友好标签公开这些着色显示样式 **�
 
 * **布局样式**
    * 样式名称： **促销**
-   * CSS 类: `cmp-teaser--promo`
+   * CSS类： `cmp-teaser--promo`
 * **显示样式**
    * 样式名称： **黄色**
-   * CSS 类: `cmp-teaser--secondary-color`
+   * CSS类： `cmp-teaser--secondary-color`
 * **有效的CSS类**： `cmp-teaser--promo.cmp-teaser--secondary-color`
 
 ### 促销右对齐样式 {#promo-r-align}
@@ -175,7 +176,7 @@ AEM样式系统可以使用作者友好标签公开这些着色显示样式 **�
 
 * **布局样式**
    * 样式名称： **促销（右对齐）**
-   * CSS 类: `cmp-teaser--promo cmp-teaser--alternate`
+   * CSS类： `cmp-teaser--promo cmp-teaser--alternate`
 * **显示样式**
    * 无
 * **有效的CSS类**： `.cmp-teaser--promo.cmp-teaser--alternate`
@@ -186,10 +187,10 @@ AEM样式系统可以使用作者友好标签公开这些着色显示样式 **�
 
 * **布局样式**
    * 样式名称： **促销（右对齐）**
-   * CSS 类: `cmp-teaser--promo cmp-teaser--alternate`
+   * CSS类： `cmp-teaser--promo cmp-teaser--alternate`
 * **显示样式**
    * 样式名称： **绿色**
-   * CSS 类: `cmp-teaser--primary-color`
+   * CSS类： `cmp-teaser--primary-color`
 * **有效的CSS类**： `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--primary-color`
 
 #### 促销右对齐次要
@@ -198,10 +199,10 @@ AEM样式系统可以使用作者友好标签公开这些着色显示样式 **�
 
 * **布局样式**
    * 样式名称： **促销（右对齐）**
-   * CSS 类: `cmp-teaser--promo cmp-teaser--alternate`
+   * CSS类： `cmp-teaser--promo cmp-teaser--alternate`
 * **显示样式**
    * 样式名称： **黄色**
-   * CSS 类: `cmp-teaser--secondary-color`
+   * CSS类： `cmp-teaser--secondary-color`
 * **有效的CSS类**： `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--secondary-color`
 
 ### 英雄风格 {#hero-style}
@@ -240,7 +241,7 @@ AEM样式系统可以使用作者友好标签公开这些着色显示样式 **�
 
 * **布局样式**
    * 样式名称： **英雄**
-   * CSS 类: `cmp-teaser--hero`
+   * CSS类： `cmp-teaser--hero`
 * **显示样式**
    * 无
 * **有效的CSS类**： `.cmp-teaser--hero`
@@ -251,10 +252,10 @@ AEM样式系统可以使用作者友好标签公开这些着色显示样式 **�
 
 * **布局样式**
    * 样式名称： **促销**
-   * CSS 类: `cmp-teaser--hero`
+   * CSS类： `cmp-teaser--hero`
 * **显示样式**
    * 样式名称： **绿色**
-   * CSS 类: `cmp-teaser--primary-color`
+   * CSS类： `cmp-teaser--primary-color`
 * **有效的CSS类**： `cmp-teaser--hero.cmp-teaser--primary-color`
 
 #### 主页次要
@@ -263,10 +264,10 @@ AEM样式系统可以使用作者友好标签公开这些着色显示样式 **�
 
 * **布局样式**
    * 样式名称： **促销**
-   * CSS 类: `cmp-teaser--hero`
+   * CSS类： `cmp-teaser--hero`
 * **显示样式**
    * 样式名称： **黄色**
-   * CSS 类: `cmp-teaser--secondary-color`
+   * CSS类： `cmp-teaser--secondary-color`
 * **有效的CSS类**： `cmp-teaser--hero.cmp-teaser--secondary-color`
 
 ## 其他资源 {#additional-resources}

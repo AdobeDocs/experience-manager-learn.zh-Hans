@@ -8,9 +8,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1753
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '4571'
+source-wordcount: '4460'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 * [已完成的教程包](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整代码存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教程假定您具备以下基本知识 [AEM开发实践](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/the-basics.html) 而且很熟悉 [AEM Maven项目设置](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/ht-projects-maven.html). 提到的所有代码都将用作参考，并且只应部署到 [本地开发AEM实例](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted).
+本教程假定您具备以下基本知识 [AEM开发实践](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/the-basics.html) 而且很熟悉 [AEM Maven项目设置](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ht-projects-maven.html). 提到的所有代码都将用作参考，并且只应部署到 [本地开发AEM实例](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted).
 
 ## 项目模板的结构
 
@@ -258,7 +259,7 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
 1. 单击“创建”以根据自定义模板完成项目创建。 您会注意到“项目功能板”上的“任务拼贴”以及在小工具下配置的其他拼贴会自动显示。
 
-   ![“任务”拼贴](./assets/develop-aem-projects/tasks-tile.png)
+   ![任务拼贴](./assets/develop-aem-projects/tasks-tile.png)
 
 
 ## 为什么选择工作流？

@@ -1,8 +1,6 @@
 ---
 title: 使用Adobe Target进行个性化
-seo-title: Personalization using Adobe Target
 description: 一个端到端教程，其中演示了如何使用Adobe Target创建和提供个性化体验。
-seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target.
 feature: Experience Fragments
 topic: Personalization
 role: Developer
@@ -11,10 +9,11 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 165
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 2%
+source-wordcount: '580'
+ht-degree: 1%
 
 ---
 
@@ -69,9 +68,9 @@ WKND站点重新设计了其主页，并希望将其当前主页访客重定向�
    6. 请注意在可视化体验编辑器中WKND站点主页处于打开状态。
       ![VEC](assets/personalization-use-case-2/vec.png)
    7. 将鼠标悬停在 **体验B** 并选择查看其他选项。
-      ![体验 B](assets/personalization-use-case-2/redirect-url.png)
+      ![体验B](assets/personalization-use-case-2/redirect-url.png)
    8. 选择 **重定向到URL** 选项并输入新WKND主页的URL。 (http://localhost:4503/content/wknd/en1.html)
-      ![体验 B](assets/personalization-use-case-2/redirect-url-2.png)
+      ![体验B](assets/personalization-use-case-2/redirect-url-2.png)
    9. **保存** 所做的更改，然后继续执行活动创建的后续步骤。
    10. 选择 **流量分配方法** 手动分配，并将100%的流量分配给 **体验B**.
       ![体验B流量](assets/personalization-use-case-2/traffic.png)

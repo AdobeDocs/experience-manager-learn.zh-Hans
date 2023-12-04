@@ -1,6 +1,6 @@
 ---
-title: 在Unix设置中对OpenOffice特定问题进行故障排除的步骤
-description: 在UNIX设置中解决PDF生成器问题的OpenOffice问题。
+title: 对Unix设置中的OpenOffice特定问题进行故障排除的步骤
+description: 在UNIX设置中对PDF Generator问题的OpenOffice问题进行故障诊断。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -9,14 +9,15 @@ feature: PDF Generator
 topic: Development
 index: y
 exl-id: bc86dda1-18a4-474b-a8ec-d4e7f15ddd10
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 98
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
 
 ---
 
-# 在Unix设置上对OpenOffice特定故障进行故障排除的步骤
+# 在Unix设置中对OpenOffice特定故障进行故障排除的步骤
 
 *本视频介绍对AEM Forms PDFG的Unix设置中的OpenOffice特定故障进行故障排除的过程。*
 

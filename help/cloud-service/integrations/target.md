@@ -13,10 +13,11 @@ thumbnail: KT-12433.jpeg
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+duration: 1721
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1679'
-ht-degree: 1%
+source-wordcount: '1618'
+ht-degree: 0%
 
 ---
 
@@ -174,7 +175,7 @@ An [Adobe Experience Platform数据流](https://experienceleague.adobe.com/docs/
 1. 选择 __数据收集>数据流__ 并选择 __新建数据流__
 1. 在“新建数据流”向导中，输入：
    + 名称：`AEM Target integration`
-   + 描述: `Datastream used by the Adobe Web SDK to serve personalized Content Fragments Offers.`
+   + 描述： `Datastream used by the Adobe Web SDK to serve personalized Content Fragments Offers.`
    + 事件架构： `Leave blank`
 1. 选择 __保存__
 1. 选择 __添加服务__

@@ -1,9 +1,7 @@
 ---
 title: AEM 项目原型
-description: AEM 项目原型创建最小的基于最佳实践的 Adobe Experience Manager 项目作为您自己的 AEM 项目的起点。
+description: AEM项目原型创建了一个基于最佳实践的、最基础的Adobe Experience Manager项目，可用作您自己的AEM项目的起点。
 feature: AEM Project Archetype
-audience: developer
-activity: understand
 version: 6.4, 6.5, Cloud Service
 jira: KT-4675
 thumbnail: 32550.jpg
@@ -12,10 +10,11 @@ role: Developer
 level: Beginner
 doc-type: Technical Video
 exl-id: 9f46ce7e-9c6d-429d-9d8a-c93c274f70d7
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 717
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '75'
-ht-degree: 50%
+source-wordcount: '65'
+ht-degree: 10%
 
 ---
 

@@ -2,21 +2,19 @@
 title: 日志
 description: 日志是调试AEMas a Cloud Service中的AEM应用程序的首选工具，但是需要取决于已部署的AEM应用程序中是否有足够的日志记录。
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5432
 thumbnail: kt-5432.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 321
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 2%
+source-wordcount: '948'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +27,7 @@ ht-degree: 2%
 每个log语句中均提供面板ID，并允许过滤或整理log语句。 面板ID的格式为：
 
 + `cm-p<PROGRAM ID>-e<ENVIRONMENT ID>-aem-<author|publish>-<POD NAME>`
-+ 示例: `cm-p12345-e56789-aem-author-abcdefabde-98765`
++ 示例： `cm-p12345-e56789-aem-author-abcdefabde-98765`
 
 ## 自定义日志文件
 
@@ -52,9 +50,9 @@ AEM as aCloud Service不支持自定义日志文件，但它支持自定义日�
 AEM创作和发布服务都提供AEM运行时服务器日志：
 
 + `aemerror` 是Java错误日志(位于 `/crx-quickstart/logs/error.log` (在AEM SDK本地快速入门中)。 以下是 [建议的日志级别](#log-levels) 对于每种环境类型的自定义记录器：
-   + 开发: `DEBUG`
-   + 暂存: `WARN`
-   + 生产: `ERROR`
+   + 开发： `DEBUG`
+   + 暂存： `WARN`
+   + 生产： `ERROR`
 + `aemaccess` 列出对AEM服务的HTTP请求及其详细信息
 + `aemrequest` 列出向AEM服务发出的HTTP请求及其对应的HTTP响应
 
@@ -64,13 +62,13 @@ AEM创作和发布服务都提供AEM运行时服务器日志：
 
 + `httpdaccess` 列出对AEM服务的Apache Web Server/Dispatcher发出的HTTP请求。
 + `httperror`  列出来自Apache Web Server的日志消息，并帮助调试支持的Apache模块，例如 `mod_rewrite`.
-   + 开发: `DEBUG`
-   + 暂存: `WARN`
-   + 生产: `ERROR`
+   + 开发： `DEBUG`
+   + 暂存： `WARN`
+   + 生产： `ERROR`
 + `aemdispatcher` 列出来自Dispatcher模块的日志消息，包括从缓存消息中进行筛选和服务。
-   + 开发: `DEBUG`
-   + 暂存: `WARN`
-   + 生产: `ERROR`
+   + 开发： `DEBUG`
+   + 暂存： `WARN`
+   + 生产： `ERROR`
 
 ## Cloud Manager{#cloud-manager}
 
@@ -172,9 +170,9 @@ __Pod cm-p12345-e56789-aem-author-abcdefg-2222__
 Adobe关于每个AEMas a Cloud Service环境的日志级别的一般指导包括：
 
 + 本地开发(AEM SDK)： `DEBUG`
-+ 开发: `DEBUG`
-+ 暂存: `WARN`
-+ 生产: `ERROR`
++ 开发： `DEBUG`
++ 暂存： `WARN`
++ 生产： `ERROR`
 
 为每种环境类型设置最合适的日志级别是使用AEMas a Cloud Service，日志级别在代码中维护
 

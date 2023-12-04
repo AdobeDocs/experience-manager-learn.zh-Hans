@@ -9,10 +9,11 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 167
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 2%
+source-wordcount: '584'
+ht-degree: 1%
 
 ---
 
@@ -58,7 +59,7 @@ WKND站点主页以卡片布局的形式显示本地活动或城市周围的最�
    6. 请注意在可视化体验编辑器中WKND站点主页处于打开状态。
       ![VEC](assets/personalization-use-case-2/vec.png)
    7. **体验A** 提供默认的WKND主页，让我们编辑的内容布局 **体验B**.
-      ![体验 B](assets/personalization-use-case-3/use-case3-experience-b.png)
+      ![体验B](assets/personalization-use-case-3/use-case3-experience-b.png)
    8. 单击其中一个卡片布局容器(*最佳烘烤师*)并选择 **重新排列** 选项。
       ![容器选择](assets/personalization-use-case-3/container-selection.png)
    9. 单击要重新排列的容器，并将其拖放到所需位置。 让我们重新排列 *最佳烘烤师* 容器从第一行第一列到第一行第三列。 现在， *最佳烘烤师* 容器位于 *摄影展览* 容器。

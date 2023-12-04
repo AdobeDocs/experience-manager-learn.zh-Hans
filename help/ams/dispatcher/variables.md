@@ -9,9 +9,10 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 299b32c3-7922-4eee-aa3a-56039a654f70
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 364
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1090'
 ht-degree: 1%
 
 ---
@@ -103,7 +104,7 @@ Define PUBLISH_FORCE_SSL 0
 
 下面是一些语法示例，说明变量如何启用白名单文件的包含和白名单文件示例
 
-`sample.vhost`:
+`sample.vhost`：
 
 ```
 <VirtualHost *:80> 
@@ -115,7 +116,7 @@ Define PUBLISH_FORCE_SSL 0
 </VirtualHost>
 ```
 
-`sample_whitelist.rules`:
+`sample_whitelist.rules`：
 
 ```
 <RequireAny> 
@@ -146,7 +147,7 @@ RUNMODE='sites'
 
 不能更改这些内容，但可以在配置文件中利用这些内容
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 这是因为该文件仅在服务启动时包括在内。  需要重新启动服务才能获取更改。  这意味着仅重新加载是不够的，而是需要重新启动
 </div>
@@ -157,21 +158,21 @@ RUNMODE='sites'
 
 这些文件可以包含所需的任何自定义变量，以下示例文件中提供了一些语法示例
 
-`/etc/httpd/conf.d/variables/weretail_domains_dev.vars`:
+`/etc/httpd/conf.d/variables/weretail_domains_dev.vars`：
 
 ```
 Define WERETAIL_DOMAIN dev.weretail.com 
 Define WERETAIL_ALT_DOMAIN dev.weretail.net
 ```
 
-`/etc/httpd/conf.d/variables/weretail_domains_stage.vars`:
+`/etc/httpd/conf.d/variables/weretail_domains_stage.vars`：
 
 ```
 Define WERETAIL_DOMAIN stage.weretail.com
 Define WERETAIL_ALT_DOMAIN stage.weretail.net
 ```
 
-`/etc/httpd/conf.d/variables/weretail_domains_prod.vars`:
+`/etc/httpd/conf.d/variables/weretail_domains_prod.vars`：
 
 ```
 Define WERETAIL_DOMAIN www.weretail.com 
@@ -269,7 +270,7 @@ $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY
 
 示例配置
 
-`/etc/httpd/conf.d/enabled_vhosts/aem_publish.vhost`:
+`/etc/httpd/conf.d/enabled_vhosts/aem_publish.vhost`：
 
 ```
 <VirtualHost *:80> 

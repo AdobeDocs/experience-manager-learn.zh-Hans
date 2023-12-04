@@ -1,23 +1,18 @@
 ---
 title: 为Web渠道创建交互式通信
-seo-title: Create Interactive Communication for Web Channel
 description: 这是创建您的第一个交互式通信文档的多步教程的第6部分。 在本部分中，我们将为Web渠道创建交互式通信。
-seo-description: This is part 6 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create Interactive Communication for Web Channel.
-uuid: a1b29c5b-a323-4bda-aa99-5fb98614b690
 discoiquuid: b44ff855-9ead-471e-8f0f-b562b88a5337
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: a0a0c8dc-5302-446c-9fec-e23fe1320e34
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+duration: 53
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '179'
 ht-degree: 1%
 
 ---
@@ -26,9 +21,9 @@ ht-degree: 1%
 
 在本部分中，我们将为Web渠道创建交互式通信。
 
-1. 登录到AEM创作实例，然后导航到Adobe Experience Manager > Forms > Forms &amp; Documents。
+1. 登录AEM创作实例，然后导航至Adobe Experience Manager > Forms > Forms和文档。
 1. 打开401KStatment文件夹。
-1. 点按创建并选择交互式通信。 此时会显示“创建交互式通信”页。
+1. 点按创建，然后选择交互式通信。 此时会显示“创建交互式通信”页。
 1. 输入以下信息
 
    1. 标题：401KStatement
@@ -39,13 +34,13 @@ ht-degree: 1%
 1. 点按“下一步”
 1. 指定以下内容
 
-   1. 取消选中“Print channel（打印渠道）”复选框。 我们不是在为打印渠道创建文档。
+   1. 取消选中“Print channel（打印渠道）”复选框。 我们不会为打印渠道创建文档。
    1. Web：选择此选项可为Web渠道生成文档
    1. 交互式通信：模板： **global>RetirationAccountStatemen** t（这是在上一步中创建的模板）
    1. 主题：**参考主题 — >画布2.0**
 
 1. 点按创建
-1. 您可以单击完成或编辑来关闭对话框。
+1. 您可以单击“完成”或“编辑”关闭对话框。
 
 ## 后续步骤
 

@@ -11,9 +11,10 @@ last-substantial-update: 2023-07-14T00:00:00Z
 jira: KT-13651
 thumbnail: KT-13651.jpeg
 exl-id: 747322ed-f01a-48ba-a4a0-483b81f1e904
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+duration: 178
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -99,7 +100,7 @@ await fetch('/path/to/aem/endpoint', {
 });
 ```
 
-## Dispatcher 配置
+## Dispatcher配置
 
 在AEM Publish服务上使用CSRF令牌时，必须更新Dispatcher配置，以允许向CSRF令牌端点发送GET请求。 以下配置允许向AEM Publish服务上的CSRF令牌端点发出GET请求。 如果未添加此配置，则CSRF令牌端点返回“404未找到”响应。
 

@@ -9,7 +9,8 @@ feature: Workbench
 topic: Administration
 index: y
 exl-id: 6cb41242-18d3-420a-9e33-87091a648703
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 76
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '30'
 ht-degree: 0%
@@ -18,6 +19,6 @@ ht-degree: 0%
 
 # 如何调整Workbench性能参数
 
-*本视频介绍调整Workbench性能参数的过程。*
+*此视频介绍调整Workbench性能参数的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335511?quality=12&learn=on)

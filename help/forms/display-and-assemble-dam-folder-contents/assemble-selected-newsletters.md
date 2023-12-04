@@ -1,6 +1,6 @@
 ---
-title: 将选定的新闻稿合并为一个文件
-description: 使用汇编程序服务合并选定的新闻稿
+title: 将所选新闻稿合并为一个文件
+description: 使用汇编程序服务合并所选新闻稿
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -8,21 +8,22 @@ role: User
 level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
 exl-id: 3a64315f-f699-4538-b999-626e7a998c05
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 125
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '161'
 ht-degree: 1%
 
 ---
 
-# 将选定的新闻稿合并为一个PDF
+# 将所选新闻稿合并为一个PDF
 
-用户的选择存储在隐藏字段中。 此隐藏字段的值将传递到servlet，它将使用将所选内容组合为一个pdf [Forms汇编程序服务](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
+用户的选择存储在隐藏字段中。 此隐藏字段的值将传递到servlet，它将使用将所选内容组合为一个pdf [Forms Assembler服务](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
 
 
 ## 用于组合pdf文件的Servlet
 
-以下代码会汇编选定的新闻稿。 该代码根据用户的选择创建文档映射。 通过此映射创建DDX，并将此DDX与文档映射一起传递到Assembler服务的调用方法，以获得组合文档。 组装后的pdf存储在存储库中，其路径返回到调用应用程序。
+以下代码将组合选定的新闻稿。 该代码根据用户的选择创建文档映射。 通过此映射创建DDX，并将此DDX与文档映射一起传递给Assembler服务的调用方法，以得到组合文档。 组合后的pdf存储在存储库中，其路径返回到调用应用程序。
 
 ```java
 protected void doPost(SlingHttpServletRequest request,SlingHttpServletResponse response)
@@ -80,7 +81,7 @@ protected void doPost(SlingHttpServletRequest request,SlingHttpServletResponse r
 
 ## 实用程序函数
 
-组装新闻稿时使用了以下实用程序函数。 这些实用程序函数从文档映射创建DDX，并将org.w3c.dom.Document转换为AEMFD文档对象。
+在组装新闻稿时使用了以下实用程序函数。 这些实用程序函数从文档映射创建DDX，并将org.w3c.dom.Document转换为AEMFD文档对象。
 
 
 ```java

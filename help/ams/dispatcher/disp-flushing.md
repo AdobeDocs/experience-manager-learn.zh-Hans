@@ -9,9 +9,10 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 461873a1-1edf-43a3-b4a3-14134f855d86
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 751
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2223'
+source-wordcount: '2227'
 ht-degree: 0%
 
 ---
@@ -132,7 +133,7 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 将此文件级别设置过低会导致刷新请求清除的内容超出预期。  这进而会导致更频繁的缓存流失，使缓存中提供的请求减少，并导致性能问题。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 设置 `statfilelevel` 在合理的水平上。  查看您的文件夹结构，确保设置为允许简洁的刷新而不必遍历太多目录。   在系统性能测试期间对其进行测试并确保它符合您的需求。
 
@@ -275,7 +276,7 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
    - `/var/www/html/content/damn/brand1/en/us/.stat`
 
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
 
 请记住，发生时间戳握手时，它会查找最近的 `.stat` 文件。
 

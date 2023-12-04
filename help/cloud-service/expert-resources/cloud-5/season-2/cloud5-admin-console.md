@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 -Admin Console
-description: Adobe Admin Console及其如何融入AEM
+description: Adobe Admin Console以及它如何适应AEM
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -8,16 +8,17 @@ thumbnail: 342866.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: eec1764e-1234-4b4c-993f-6584717e3c9e
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+duration: 330
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 6%
+source-wordcount: '64'
+ht-degree: 1%
 
 ---
 
 # Cloud 5 -Admin Console
 
-想知道为什么每个项目在Admin Console内的AEM上下文中都有什么作用？ 该团队试图解释关于配置和访问的一些人们应该知道的常见问题。
+曾经好奇为什么每个项目在Admin Console内的AEM上下文中都有作用？ 该团队试图解释关于配置和访问的一些人们应该知道的常见问题。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342866?quality=12&learn=on)
 

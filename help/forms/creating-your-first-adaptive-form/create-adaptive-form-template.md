@@ -1,16 +1,17 @@
 ---
 title: 创建自适应表单模板
-description: 模板定义自适应表单的结构和初始内容。
+description: 模板定义了自适应表单的结构和初始内容。
 feature: Adaptive Forms
 thumbnail: 37324.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 404c345b-efc3-44b9-bc38-6d911627ff5a
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+duration: 278
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 8%
+source-wordcount: '125'
+ht-degree: 5%
 
 ---
 

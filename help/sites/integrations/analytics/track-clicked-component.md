@@ -11,10 +11,11 @@ thumbnail: KT-6296.jpg
 badgeIntegration: label="集成" type="positive"
 doc-type: Tutorial
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 567
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1886'
-ht-degree: 2%
+source-wordcount: '1795'
+ht-degree: 1%
 
 ---
 
@@ -275,7 +276,7 @@ Adobe客户端数据层是 **事件** 驱动数据层。 单击任意核心组�
 
    上述配置组合了数据元素中的动态变量 **组件标题** 和静态字符串 **已单击CTA**.
 
-1. 保存更改。此 **已单击CTA** 规则现在应具有以下配置：
+1. 保存更改。 此 **已单击CTA** 规则现在应具有以下配置：
 
    ![最终标记规则配置](assets/track-clicked-component/final-page-loaded-config.png)
 

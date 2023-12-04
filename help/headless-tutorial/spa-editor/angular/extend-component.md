@@ -2,10 +2,7 @@
 title: 扩展组件 | AEM SPA编辑器和Angular快速入门
 description: 了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件。 了解如何向现有组件添加属性和内容是扩展AEM SPA Editor实施功能的强大技术。 了解如何使用委派模式来扩展Sling资源合并器的Sling模型和功能。
 feature: SPA Editor, Core Components
-topics: development
 version: Cloud Service
-activity: develop
-audience: developer
 jira: KT-5871
 thumbnail: 5871-spa-angular.jpg
 topic: SPA
@@ -13,10 +10,11 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 621
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 2%
+source-wordcount: '1713'
+ht-degree: 0%
 
 ---
 
@@ -261,7 +259,7 @@ ht-degree: 2%
 
    这些方法通过JSON模型API公开，并传递给Angular组件。
 
-3. 打开 `CardImpl.java`。这是的实施 `Card.java` 界面。 为加速教程，已部分修剪此实施。  请注意， `@Model` 和 `@Exporter` 注释，以确保能够通过Sling模型导出器将Sling模型序列化为JSON。
+3. 打开 `CardImpl.java`. 这是的实施 `Card.java` 界面。 为加速教程，已部分修剪此实施。  请注意， `@Model` 和 `@Exporter` 注释，以确保能够通过Sling模型导出器将Sling模型序列化为JSON。
 
    `CardImpl.java` 也使用 [Sling模型的委托模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 避免重写图像核心组件中的逻辑。
 

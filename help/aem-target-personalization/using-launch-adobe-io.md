@@ -9,10 +9,11 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: b1d7ce04-0127-4539-a5e1-802d7b9427dd
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 748
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 5%
+source-wordcount: '1021'
+ht-degree: 4%
 
 ---
 
@@ -26,7 +27,7 @@ ht-degree: 5%
    * 通过以下解决方案进行Experience Cloud配置
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
-      * [Adobe Developer Console](https://developer.adobe.com/console/)
+      * [Adobe Developer控制台](https://developer.adobe.com/console/)
 
      >[!NOTE]
      >您应具有在Launch中开发、批准、发布、管理扩展和管理环境的权限。 如果由于用户界面选项不可用而无法完成其中的任何步骤，请联系Experience Cloud管理员以请求获取访问权限。 有关Launch权限的更多信息， [请参阅文档](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).

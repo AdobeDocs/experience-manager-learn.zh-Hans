@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 kt: kt-8049
 exl-id: 1131dca8-882d-4904-8691-95468fb708b7
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 122
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '147'
 ht-degree: 1%
 
 ---
@@ -18,13 +19,13 @@ ht-degree: 1%
 # 自定义流程步骤
 
 
-实施了自定义流程步骤来创建包含表单附件的zip文件。 如果您不熟悉如何创建OSGi捆绑包，请 [按照以下说明操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+实施了自定义流程步骤来创建包含表单附件的压缩文件。 如果您不熟悉如何创建OSGi捆绑包，请 [按照以下说明操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
 自定义流程步骤中的代码执行以下操作
 
-* 查询有效负荷文件夹下的所有自适应表单附件。 文件夹名称作为流程参数传递给流程步骤。
+* 查询有效负荷文件夹下的所有自适应表单附件。 文件夹名称将作为进程参数传递给进程步骤。
 
-* 创建一个包含表单附件的zip文件，并将其存储在有效负荷文件夹中。
+* 创建包含表单附件的zip文件，并将其存储在有效负荷文件夹中。
 * 设置工作流变量的值(no_of_attachments)
 
 
@@ -159,7 +160,7 @@ public class ZipFormAttachments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> 请确保您有一个名为的变量  *no_of_attachments* 工作流中类型为Double时，此代码才能工作。
+> 请确保您有一个名为的变量  *no_of_attachments* 类型为双精度类型以使此代码正常工作。
 
 ## 后续步骤
 

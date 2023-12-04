@@ -2,19 +2,17 @@
 title: 在服务器上部署示例资源
 description: 测试交互式通信的另存为草稿功能
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.5
 topic: Development
 role: Developer
 level: Intermediate
 jira: KT-10208
 exl-id: 9053ee29-436a-439a-b592-c3fef9852ea4
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 46
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '153'
 ht-degree: 2%
 
 ---

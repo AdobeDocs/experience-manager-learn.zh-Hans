@@ -11,9 +11,10 @@ thumbnail: KT-11604.png
 doc-type: article
 last-substantial-update: 2022-12-09T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+duration: 1550
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -22,23 +23,23 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
-此示例AEM内容片段控制台扩展是一个 [操作栏](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) 批量将内容片段属性更新为通用值的扩展。
+此示例AEM内容片段控制台扩展是 [操作栏](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) 用于将内容片段属性批量更新为通用值的扩展。
 
 示例扩展的功能流程如下所示：
 
 ![Adobe I/O Runtime操作流程](./assets/bulk-property-update/flow.png){align="center"}
 
-1. 选择内容片段，然后单击 [操作栏](#extension-registration) 打开 [模态](#modal).
+1. 选择内容片段，然后单击中扩展的按钮 [操作栏](#extension-registration) 打开 [模态](#modal).
 2. 此 [模态](#modal) 显示使用构建的自定义输入表单 [React频谱](https://react-spectrum.adobe.com/react-spectrum/).
-3. 提交表单会将选定的内容片段列表和AEM主机发送到 [自定义Adobe I/O Runtime操作](#adobe-io-runtime-action).
+3. 提交表单会将选定内容片段的列表和AEM主机发送到 [自定义Adobe I/O Runtime操作](#adobe-io-runtime-action).
 4. 此 [Adobe I/O Runtime操作](#adobe-io-runtime-action) 验证输入并向AEM发出HTTPPUT请求以更新选定的内容片段。
 5. 用于更新指定属性的每个内容片段的一系列HTTPPUT。
 6. AEMas a Cloud Service会保留对内容片段的属性更新，并返回对Adobe I/O Runtime操作的成功或失败响应。
-7. 该模式已收到来自Adobe I/O Runtime操作的响应，并显示成功的批量更新列表。
+7. 该模式窗口收到了Adobe I/O Runtime操作的响应，并显示成功批量更新的列表。
 
 ## 扩展点
 
-此示例扩展到扩展点 `actionBar` 以向内容片段控制台添加自定义按钮。
+此示例将扩展到扩展点 `actionBar` 向内容片段控制台添加自定义按钮。
 
 | AEM UI已扩展 | 扩展点 |
 | ------------------------ | --------------------- | 
@@ -47,21 +48,21 @@ ht-degree: 0%
 
 ## 扩展示例
 
-该示例使用现有的Adobe Developer控制台项目，并在通过初始化App Builder应用程序时使用以下选项 `aio app init`.
+该示例使用现有的Adobe Developer Console项目，并在通过初始化App Builder应用程序时使用以下选项 `aio app init`.
 
-+ 您要搜索哪些模板？： `All Extension Points`
++ 您要搜索哪些模板？ `All Extension Points`
 + 选择要安装的模板：` @adobe/aem-cf-admin-ui-ext-tpl`
 + 您希望如何命名扩展？： `Bulk property update`
 + 请提供扩展的简短描述： `An example action bar extension that bulk updates a single property one or more content fragments.`
 + 您希望从哪个版本开始？： `0.0.1`
-+ 您接下来想做什么？
++ 您接下来想要做什么？
    + `Add a custom button to Action Bar`
       + 请提供按钮的标签名称： `Bulk property update`
-      + 是否需要显示按钮的模式？ `y`
+      + 是否需要显示按钮的模式窗口？ `y`
    + `Add server-side handler`
       + Adobe I/O Runtime允许您根据需要调用无服务器代码。 您希望如何命名此操作？： `generic`
 
-将更新生成的App Builder扩展应用程序，如下所述。
+生成的App Builder扩展应用程序已更新，如下所述。
 
 ### 应用程序路由{#app-routes}
 
@@ -69,7 +70,7 @@ ht-degree: 0%
 
 路由有两种逻辑集：
 
-1. 第一个路由将请求映射到 `index.html`，它会调用负责的React组件 [分机注册](#extension-registration).
+1. 第一个路由将请求映射到 `index.html`，它会调用负责的React组件 [扩展注册](#extension-registration).
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
@@ -77,7 +78,7 @@ ht-degree: 0%
 
 1. 第二组路由将URL映射到渲染扩展模式内容的React组件。 此 `:selection` param表示分隔列表内容片段路径。
 
-   如果扩展具有多个用于调用离散操作的按钮，则每个 [分机注册](#extension-registration) 映射到此处定义的路由。
+   如果扩展具有多个用于调用离散操作的按钮，则 [扩展注册](#extension-registration) 映射到此处定义的路由。
 
    ```javascript
    <Route
@@ -88,7 +89,7 @@ ht-degree: 0%
 
 ### 延期注册
 
-`ExtensionRegistration.js`，映射到 `index.html` route是AEM扩展的入口点，并定义：
+`ExtensionRegistration.js`，映射到 `index.html` route，是AEM扩展的入口点，并定义：
 
 1. 扩展按钮的位置将显示在AEM创作体验中(`actionBar` 或 `headerMenu`)
 1. 中扩展按钮的定义 `getButton()` 函数
@@ -142,18 +143,18 @@ function ExtensionRegistration() {
 
 ### 模态
 
-扩展的每个路由，如 [`App.js`](#app-routes)，映射到在扩展模式中呈现的React组件。
+扩展的每个路由，如中所定义 [`App.js`](#app-routes)，映射到在扩展的模式中呈现的React组件。
 
 在此示例应用程序中，有一个模式React组件(`BulkPropertyUpdateModal.js`)具有三种状态：
 
 1. 正在加载，指示用户必须等待
-1. 允许用户指定要更新的属性名称和值的批量属性更新表单
+1. 批量属性更新表单，允许用户指定要更新的属性名称和值
 1. 批量属性更新操作的响应，其中列出了已更新的内容片段和无法更新的内容片段
 
-重要的是，与扩展中的AEM的任何交互都应委派给 [AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，这是一个单独的无服务器进程，运行于 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
+很重要的一点是，与扩展中的AEM的任何交互都应委派给 [AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，这是一个单独的无服务器进程，运行于 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 使用Adobe I/O Runtime操作与AEM通信是为了避免跨源资源共享(CORS)连接问题。
 
-提交批量属性更新表单后，自定义 `onSubmitHandler()` 调用Adobe I/O Runtime操作，传递当前AEM主机（域）和用户的AEM访问令牌，这反过来调用 [AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 以更新内容片段。
+提交批量属性更新表单后，自定义表单 `onSubmitHandler()` 调用Adobe I/O Runtime操作，传递当前AEM主机（域）和用户的AEM访问令牌，这反过来调用 [AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 以更新内容片段。
 
 当收到来自Adobe I/O Runtime操作的响应时，模式会更新以显示批量属性更新操作的结果。
 
@@ -414,7 +415,7 @@ export default function BulkPropertyUpdateModal() {
 
 ### Adobe I/O Runtime操作
 
-AEM扩展App Builder应用程序可以定义或使用0个或多个Adobe I/O Runtime操作。
+AEM扩展应用程序生成器应用程序可以定义或使用0个或多个Adobe I/O Runtime操作。
 Adobe运行时操作应负责需要与AEM或其他AdobeWeb服务交互的工作。
 
 在此示例应用程序中，Adobe I/O Runtime操作 — 使用默认名称 `generic`  — 负责：

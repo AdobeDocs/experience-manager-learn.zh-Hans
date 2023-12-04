@@ -11,10 +11,11 @@ level: Experienced
 exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
 last-substantial-update: 2022-09-10T00:00:00Z
 thumbnail: KT-406.jpg
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 48
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 14%
+source-wordcount: '119'
+ht-degree: 7%
 
 ---
 
@@ -87,8 +88,8 @@ AEM支持的身份验证（有时是授权）机制的综合视图。
             </tr>
             <tr>
                 <td><a href="https://sling.apache.org/documentation/the-sling-engine/authentication/authentication-authenticationhandler/openid-authenticationhandler.html" target="_blank">OpenID</a></td>
-                <td>⁕</td>
-                <td>⁕</td>
+                <td>⁕AEM</td>
+                <td>⁕AEM</td>
                 <td>*</td>
             </tr>
     </tbody>

@@ -11,10 +11,11 @@ thumbnail: 5332-collect-data-analytics.jpg
 badgeIntegration: label="集成" type="positive"
 doc-type: Tutorial
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 694
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2468'
-ht-degree: 3%
+source-wordcount: '2307'
+ht-degree: 1%
 
 ---
 
@@ -336,7 +337,7 @@ Adobe客户端数据层是 **事件驱动** 数据层。 加载AEM Page数据层
 
    ![“发送信标Adobe Analytics”操作](assets/track-clicked-component/send-page-view-beacon-config.png)
 
-1. 保存更改。此 **页面已加载** 规则现在应具有以下配置：
+1. 保存更改。 此 **页面已加载** 规则现在应具有以下配置：
 
    ![最终标记规则配置](assets/collect-data-analytics/final-page-loaded-config.png)
 

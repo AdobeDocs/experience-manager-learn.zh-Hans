@@ -2,31 +2,29 @@
 title: 使用AEM表单创建您的第一个OSGi捆绑包
 description: 使用maven和eclipse构建您的第一个OSGi捆绑包
 feature: Adaptive Forms
-topics: development
-audience: developer
 doc-type: article
-activity: setup
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 240
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 1%
+source-wordcount: '816'
+ht-degree: 0%
 
 ---
 
 
 # 创建您的第一个OSGi捆绑包
 
-OSGi捆绑包是一个Java™存档文件，它包含Java代码、资源以及说明捆绑包及其依赖关系的清单。 捆绑包是应用程序的部署单元。 本文适用于希望使用AEM Forms 6.4或6.5创建OSGi服务或servlet的开发人员。要构建您的第一个OSGi捆绑包，请执行以下步骤：
+OSGi捆绑包是一个Java™存档文件，其中包含Java代码、资源以及描述捆绑包及其依赖关系的清单。 捆绑是应用程序的部署单元。 本文适用于希望使用AEM Forms 6.4或6.5创建OSGi服务或servlet的开发人员。要构建您的第一个OSGi捆绑包，请执行以下步骤：
 
 
 ## 安装JDK
 
-安装支持的JDK版本。 我使用的是JDK1.8。确保已添加 **JAVA_HOME** 环境变量中，并指向JDK安装的根文件夹。
+安装支持的JDK版本。 我使用的是JDK1.8。确保您已添加 **JAVA_HOME** 环境变量中的且指向JDK安装的根文件夹。
 将%JAVA_HOME%/bin添加到路径中
 
 ![数据源](assets/java-home.JPG)
@@ -47,16 +45,16 @@ Maven是一种构建自动化工具，主要用于Java项目。 请按照以下�
 * 创建名为的文件夹 `maven` 在C驱动器中
 * 下载 [二进制zip存档](http://maven.apache.org/download.cgi)
 * 将zip存档的内容提取到 `c:\maven`
-* 创建一个名为的环境变量 `M2_HOME` 具有值 `C:\maven\apache-maven-3.6.0`. 以我为例， **mvn** 版本为3.6.0。在撰写本文时，最新的maven版本是3.6.3
+* 创建一个名为的环境变量 `M2_HOME` 值为 `C:\maven\apache-maven-3.6.0`. 以我为例， **mvn** 版本为3.6.0。在撰写本文时，最新的maven版本是3.6.3
 * 添加 `%M2_HOME%\bin` 到您的路径
 * 保存更改
-* 打开新的命令提示符并键入 `mvn -version`. 您应会看到 **mvn** 版本列表，如下面的屏幕快照所示
+* 打开新的命令提示符并键入 `mvn -version`. 您应会看到 **mvn** 如下面的屏幕快照所示列出的版本
 
 ![数据源](assets/mvn-version.JPG)
 
 ## Settings.xml
 
-Maven `settings.xml` file定义以各种方式配置Maven执行的值。 最常见的是，它用于定义本地存储库位置、备用远程存储库服务器和专用存储库的身份验证信息。
+Maven `settings.xml` 文件定义以各种方式配置Maven执行的值。 最常见的是，它用于定义本地存储库位置、备用远程存储库服务器和专用存储库的身份验证信息。
 
 导航到 `C:\Users\<username>\.m2 folder`
 提取内容 [settings.zip](assets/settings.zip) 文件并将其放入 `.m2` 文件夹。
@@ -67,25 +65,25 @@ Maven `settings.xml` file定义以各种方式配置Maven执行的值。 最常�
 
 ## 创建您的第一个项目
 
-Archetype是一个Maven项目模板工具包。 原型被定义为原始阵列或模型，其他所有同类事物都来自此阵列或模型。 此名称适合我们尝试提供的系统，该系统提供生成Maven项目的一致方法。 Archetype可帮助作者为用户创建Maven项目模板，并为用户提供生成这些项目模板的参数化版本的方法。
+Archetype是一个Maven项目模板工具包。 原型被定义为原始阵列或模型，所有同类的其他事物都通过它来制造。 此名称适合我们尝试提供的系统，该系统提供生成Maven项目的一致方法。 Archetype可帮助作者为用户创建Maven项目模板，并为用户提供生成这些项目模板的参数化版本的方法。
 要创建您的第一个maven项目，请执行以下步骤：
 
 * 创建一个名为的新文件夹 `aemformsbundles` 在C驱动器中
-* 打开命令提示符并导航到 `c:\aemformsbundles`
+* 打开命令提示符并导航至 `c:\aemformsbundles`
 * 在命令提示符下运行以下命令
 * `mvn archetype:generate  -DarchetypeGroupId=com.adobe.granite.archetypes  -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=19`
 
-Maven项目会以交互方式生成，并且会要求您提供多个属性的值，例如
+Maven项目以交互方式生成，并且会要求您提供多个属性的值，例如
 
 | 属性名称 | 重要性 | 价值 |
 |------------------------|---------------------------------------|---------------------|
 | groupId | groupId在所有项目中唯一标识您的项目 | com.learningaemforms.adobe |
 | appsFolderName | 保存项目结构的文件夹的名称 | 学习表单 |
-| artifactId | artifactId是没有版本的jar的名称。 如果您创建了该名称，则可以选择任意名称并使用小写字母，且不能使用奇怪的符号。 | 学习表单 |
-| version | 如果散布，则可以选择具有数字和点(1.0、1.1、1.0.1、...)的任何典型版本。 | 1.0 |
+| artifactId | artifactId是没有版本的jar的名称。 如果您创建了它，则可以选择任意名称并带有小写字母，且不含奇怪符号。 | 学习表单 |
+| 版本 | 如果您分发它，则可以选择具有数字和点(1.0、1.1、1.0.1、...)的任何典型版本。 | 1.0 |
 
 通过按Enter键接受其他属性的默认值。
-如果一切顺利，您应该会在命令窗口中看到一条构建成功消息
+如果一切进展顺利，您应在命令窗口中看到一条构建成功消息
 
 ## 从maven项目创建eclipse项目
 
@@ -102,18 +100,18 @@ Launch **Eclipse**
 
 单击“下一步”
 
-选择 `c:\aemformsbundles\learningaemform`s ，方法是单击 **浏览** 按钮
+选择 `c:\aemformsbundles\learningaemform`单击 **浏览** 按钮
 
 ![数据源](assets/select-mvn-project.JPG)
 
 >[!NOTE]
->您可以根据需要选择导入相应的模块。 仅当您要在项目中创建Java代码时，才选择并导入核心模块。
+>您可以根据需要选择导入相应的模块。 仅当要在项目中创建Java代码时，才选择并导入核心模块。
 
 单击 **完成** 启动导入流程
 
 项目已导入到Eclipse中，并且您会看到许多 `learningaemforms.xxxx` 文件夹
 
-展开 `src/main/java` 在 `learningaemforms.core` 文件夹。 这是您编写大部分代码时使用的文件夹。
+展开 `src/main/java` 在 `learningaemforms.core` 文件夹。 这是在其中编写大部分代码的文件夹。
 
 ![数据源](assets/learning-core.JPG)
 
@@ -132,6 +130,6 @@ Launch **Eclipse**
 要构建项目，请执行以下步骤：
 
 * 打开 **命令提示符窗口**
-* 导航至 `c:\aemformsbundles\learningaemforms\core`
+* 导航到 `c:\aemformsbundles\learningaemforms\core`
 * 执行命令 `mvn clean install`
-如果一切顺利，您应会在以下位置看到该捆绑包 `C:\AEMFormsBundles\learningaemforms\core\target`. 此捆绑包现在可以使用Felix Web控制台部署到AEM中。
+如果一切进展顺利，您应在以下位置看到捆绑包 `C:\AEMFormsBundles\learningaemforms\core\target`. 此捆绑包现在可以使用Felix Web控制台部署到AEM中。

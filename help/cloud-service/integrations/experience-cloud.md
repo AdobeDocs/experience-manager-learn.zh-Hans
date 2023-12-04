@@ -13,10 +13,11 @@ mini-toc-levels: 1
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 211
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '928'
-ht-degree: 18%
+source-wordcount: '684'
+ht-degree: 11%
 
 ---
 
@@ -81,7 +82,7 @@ Adobe Analytics与AEMas a Cloud Service集成，让您能够在客户历程的�
 
 ### AEM Sites
 
-+ [与 Adobe Campaign Classic 集成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-campaign-classic.html#configure-user)
++ [与Adobe Campaign Classic集成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-campaign-classic.html#configure-user)
 + [创建Adobe Experience Manager新闻稿](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/creating-newsletter.html)
 + [AEM电子邮件核心组件文档](https://github.com/adobe/aem-core-email-components#aem-email-core-components)
 
@@ -142,7 +143,7 @@ Adobe Sensei提供了AI和机器学习技术，通过智能标记、智能裁切
 
 ### AEM Forms
 
-+ [自动化表单转换服务](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
++ [automated forms conversion服务](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
 
 
 ## Adobe Target

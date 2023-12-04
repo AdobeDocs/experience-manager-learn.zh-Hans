@@ -1,5 +1,5 @@
 ---
-title: 将DAM文件夹项目添加到选择组组件
+title: 正在将DAM文件夹项目添加到选项组组件
 description: 将项目动态添加到选择组组件
 feature: Adaptive Forms
 version: 6.5
@@ -8,22 +8,23 @@ role: User
 level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
 exl-id: 29f56d13-c2e2-4bc2-bfdc-664c848dd851
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 122
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 1%
+source-wordcount: '230'
+ht-degree: 0%
 
 ---
 
 # 将项目动态添加到选择组组件
 
-AEM Forms 6.5引入了将项目动态添加到自适应Forms选择组组件（如复选框、单选按钮和图像列表）的功能。 在本文中，我们将查看使用DAM文件夹内容填充选择组组件的用例。 在屏幕快照中，这3个文件位于名为新闻稿的文件夹中。每次向文件夹中添加新新闻稿时，都会更新选择组组件以自动列出其内容。 用户可以选择一个或多个要下载的新闻稿。
+AEM Forms 6.5引入了将项目动态添加到自适应Forms选择组组件（如复选框、单选按钮和图像列表）的功能。 在本文中，我们将讨论使用DAM文件夹内容填充选择组组件的用例。 在屏幕快照中，这3个文件位于名为新闻稿的文件夹中。每次向文件夹中添加新新闻稿时，都会更新选择组组件以自动列出其内容。 用户可以选择一个或多个要下载的新闻稿。
 
 ![规则编辑器](assets/newsletters-download.png)
 
 ## 创建servlet以返回DAM文件夹内容
 
-编写了以下代码以以JSON格式返回DAM文件夹内容。
+编写了以下代码以返回JSON格式的DAM文件夹内容。
 
 ```java
 package com.newsletters.core.servlets;
@@ -110,10 +111,10 @@ function getDAMFolderAssets(damFolder) {
 
 ## 创建自适应表单
 
-创建自适应表单并将表单与客户端库关联 **listfolderassets**. 将复选框组件添加到表单。 使用规则编辑器填充复选框的选项，如屏幕快照中所示
+创建自适应表单并将表单与客户端库关联 **listfolderassets**. 将复选框组件添加到表单。 使用规则编辑器填充屏幕快照中显示的复选框选项
 ![set-options](assets/set-options-newsletter.png)
 
-我们正在调用javascript函数，其名称为 **getDAMFolderAssets** 并将要列出的DAM文件夹资产的路径传递到表单中。
+我们正在调用javascript函数，其名称为 **getDAMFolderAssets** 并将DAM文件夹资产的路径传递到表单中。
 
 ## 后续步骤
 

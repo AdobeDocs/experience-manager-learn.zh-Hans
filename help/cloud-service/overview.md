@@ -5,10 +5,11 @@ sub-product: Experience Manager as a Cloud Service
 jira: KT-3289
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 498
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 14%
+source-wordcount: '256'
+ht-degree: 4%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 14%
 
 {{edge-delivery-services}}
 
-Adobe Experience Manager (AEM) 现已作为云服务提供。AEMas a Cloud Service推出了新一代Experience Manager产品线，以过去的投资和创新为基础，保留和扩展了所有用例和功能。
+Adobe Experience Manager (AEM)现已as a Cloud Service提供。 AEMas a Cloud Service推出了新一代Experience Manager产品线，以过去的投资和创新为基础，保留和扩展了所有用例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
@@ -55,7 +56,7 @@ Adobe Experience Manager (AEM) 现已作为云服务提供。AEMas a Cloud Servi
 <table>
    <td>
       <a href="./accessing/overview.md">
-      <img alt="配置 AEM as a Cloud Service 的访问权限" src="./assets/overview/staff-pick__accessing.png"/>
+      <img alt="配置对 AEM as a Cloud Service 的访问权限" src="./assets/overview/staff-pick__accessing.png"/>
       </a>
       <div>
          <a href="./accessing/overview.md">

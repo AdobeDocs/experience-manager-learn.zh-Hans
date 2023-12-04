@@ -7,9 +7,10 @@ role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: a1d83c77-a9e4-4ed1-9b00-65fb002164c0
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 686
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2653'
+source-wordcount: '2623'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ Dynamic Media Classic提供了一些可在UI中方便地使用的图像编辑工
 Dynamic Media Classic您可以从资源的详细信息页面或单击 **编辑** 按钮。 您可以通过两种方式使用此工具进行裁剪：
 
 - 默认裁剪模式，在此模式下可拖动裁剪窗口的手柄，或在“大小”框中键入值。 了解如何 [手动裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop).
-- 修剪. 使用此选项可通过计算与图像不匹配的像素数来去除图像周围多余的空格。 了解如何 [通过修剪裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
+- 修剪。 使用此选项可通过计算与图像不匹配的像素数来去除图像周围多余的空格。 了解如何 [通过修剪裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
 
 ### _手动裁切_
 

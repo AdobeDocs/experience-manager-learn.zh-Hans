@@ -1,14 +1,8 @@
 ---
 title: 将文本和图像内容添加到打印渠道文档
-seo-title: Adding text and image content to print channel document
 description: 这是创建您的第一个交互式通信文档的多步教程的第7部分。 在本部分中，我们将向版面(xdp)中定义的目标区域添加图像和文本内容。
-seo-description: This is part 7 of a multi-step tutorial for creating your first interactive communications document. In this part, we will add images and text content to the target areas defined in the layout(xdp).
-uuid: f20d6974-6faf-4b90-a7ff-8aa8a620fcaa
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 discoiquuid: a79bf219-2423-4819-89fc-dcfe976e08b7
 jira: KT-5992
@@ -17,9 +11,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 49080c16-617f-4840-8bb4-7b080fa291c4
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 172
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '160'
 ht-degree: 1%
 
 ---

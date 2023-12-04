@@ -11,10 +11,11 @@ thumbnail: KT-7497.jpg
 doc-type: Tutorial
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
 recommendations: noDisplay, noCatalog
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 350
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1330'
-ht-degree: 3%
+source-wordcount: '1285'
+ht-degree: 1%
 
 ---
 
@@ -136,7 +137,7 @@ AEM环境在 **作者服务** 和 **发布服务**. 在本章中，我们对以�
 
 1. 获取Publish服务URL的简单方法是复制作者URL并替换 `author` 单词替换为 `publish`. 例如：
 
-   * **作者 URL** - `https://author-pYYYY-eXXXX.adobeaemcloud.com/`
+   * **作者URL** - `https://author-pYYYY-eXXXX.adobeaemcloud.com/`
    * **发布URL** - `https://publish-pYYYY-eXXXX.adobeaemcloud.com/`
 
 1. 添加 `/content/wknd.html` 到发布URL，以便最终URL如下所示： `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd.html`.

@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 exl-id: b43568e7-99f0-425d-9601-c671ecdaff69
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 203
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
@@ -25,5 +26,5 @@ ht-degree: 0%
 
 * 加快交互式通信文档/Forms的发展。
 * 交互式通信文档/Forms的开发可以与数据源开发并行完成。
-* 开发数据源后，您可以使用可视编辑器进行绑定。
-* 自动绑定功能映射相似元素。
+* 开发数据源后，即可使用可视编辑器进行绑定。
+* 自动绑定功能映射类似的元素。

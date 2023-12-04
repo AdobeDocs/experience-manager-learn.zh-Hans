@@ -1,21 +1,17 @@
 ---
-title: 具有JSON架构和数据的AEM Forms[Part2]
-seo-title: AEM Forms with JSON Schema and Data[Part2]
-description: 多部分教程将指导您完成使用JSON模式创建自适应表单和查询提交的数据所涉及的步骤。
-seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
+title: 带有JSON架构和数据的AEM Forms[第2部分]
+description: 多部分教程将指导您完成使用JSON架构创建自适应表单和查询提交的数据所涉及的步骤。
 feature: Adaptive Forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 29195c70-af12-4a22-8484-3c87a1e07378
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+duration: 164
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
@@ -25,13 +21,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->建议使用MySQL 8作为数据库，因为它支持JSON数据类型。 您还需要为MySQL数据库安装适当的驱动程序。 我已使用此位置https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12中提供的驱动程序
+>建议使用MySQL 8作为数据库，因为它支持JSON数据类型。 您还需要为MySQL数据库安装适当的驱动程序。 我已使用此位置https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12提供的驱动程序
 
-为了将提交的数据存储在数据库中，我们编写一个servlet来提取绑定数据和表单名称并存储。 下面给出了处理表单提交并将afBoundData存储在数据库中的完整代码。
+为了将提交的数据存储到数据库中，我们编写一个servlet来提取绑定数据和表单名称并存储。 下面给出了处理表单提交并将afBoundData存储在数据库中的完整代码。
 
 我们创建了自定义提交来处理表单提交。 在此自定义提交的post.request.jsp中，我们将POST转发到我们的servlet。
 
-要了解有关自定义提交请求的详细信息，请阅读此 [文章](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
+要了解有关自定义提交请求的更多信息，请阅读此 [文章](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
 
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest，&quot;/bin/storeafsubmission&quot;，null，null)；
 
@@ -141,16 +137,16 @@ public class HandleAdaptiveFormSubmission extends SlingAllMethodsServlet {
 }
 ```
 
-![连接池](assets/connectionpooled.gif)
+![connectionpool](assets/connectionpooled.gif)
 
 要使此功能在您的系统中正常工作，请执行以下步骤
 
 * [下载并解压缩zip文件](assets/aemformswithjson.zip)
 * 创建具有JSON架构的自适应表单。 您可以使用作为本文资产的一部分提供的JSON架构。 确保表单的提交操作已正确配置。 提交操作需要配置到“CustomSubmitHelpx”。
 * 通过使用MySQL Workbench工具导入schema.sql文件，在MySQL实例中创建架构。 schema.sql文件也作为本教程资源的一部分提供给您。
-* 从Felix Web控制台配置Apache Sling Connection Pooled DataSource
+* 从Felix Web控制台配置Apache Sling连接池化数据源
 * 确保将数据源命名为“aemformswithjson”。 这是提供给您的示例OSGi捆绑包使用的名称
 * 有关属性，请参阅上图。 这是假设您将使用MySQL作为数据库。
-* 部署作为本文资源的一部分提供的OSGi捆绑包。
+* 部署作为本文资产的一部分提供的OSGi捆绑包。
 * 预览表单并提交。
 * JSON数据存储在导入“schema.sql”文件时创建的数据库中。

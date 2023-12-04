@@ -8,16 +8,17 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 exl-id: 165e2884-4399-4970-81ff-1f2f8b041a10
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+duration: 42
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '134'
 ht-degree: 14%
 
 ---
 
 # 简介
 
-批量请求是指一次生成数万、数百或数千个类似文档的位置。 示例：财务公司可以生成信用卡对帐单以发送给其所有客户。
+批量请求是指一次生成数十、数百或数千个类似文档的位置。 示例：财务公司可以生成信用卡对帐单以发送给其所有客户。
 批处理API（异步API）适用于计划的高吞吐量多文档生成用例。 这些 API 会批量生成文档。例如，每月生成的电话帐单、信用卡对帐单和收益对帐单。
 
 要使用AEM Forms CS批处理操作API，需要以下配置
@@ -27,4 +28,4 @@ ht-degree: 14%
 1. 创建批处理数据存储配置
 1. 执行批处理API
 
-建议您熟悉 [API文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=en) 然后再继续使用本教程。
+建议您熟悉 [API文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=en) 然后再继续使用此教程。

@@ -11,9 +11,10 @@ last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 2b726473-5a32-4046-bce8-6da3c57a1b60
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+duration: 321
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -67,7 +68,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
    1. 将复制的令牌粘贴为的值 `REACT_APP_TOKEN` 在 `.env` 文件。
    1. 现在，让我们通过执行来构建应用程序 `npm ci` 在命令行上。
    1. 现在启动React应用程序并执行 `npm run start` 在命令行上。
-   1. 位于 [./src/utils](https://github.com/lamontacrook/headless-first/tree/main/src/utils) 名为的文件 `context.js`  包含用于在 `.env` 文件放入应用程序的上下文中。
+   1. 在 [./src/utils](https://github.com/lamontacrook/headless-first/tree/main/src/utils) 名为的文件 `context.js`  包含用于在 `.env` 文件放入应用程序的上下文中。
 
 ## 运行React应用程序
 

@@ -10,18 +10,19 @@ jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: ab9ee81a-176e-4807-ba39-1ea5bebddeb2
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 528
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 1%
+source-wordcount: '453'
+ht-degree: 0%
 
 ---
 
 # 如何建立快速开发环境
 
-了解 **如何设置** AEMas a Cloud Service中的快速开发环境(RDE)。
+学习 **如何设置** AEMas a Cloud Service中的快速开发环境(RDE)。
 
-此视频显示：
+本视频说明：
 
 - 使用Cloud Manager将RDE添加到程序
 - 使用Adobe IMS的RDE登录流程，它如何与任何其他AEMas a Cloud Service环境相似
@@ -32,7 +33,7 @@ ht-degree: 1%
 
 ## 先决条件
 
-以下内容应安装在本地：
+下列内容应本地安装：
 
 - [Node.js](https://nodejs.org/en/) （LTS — 长期支持）
 - [npm 8+](https://docs.npmjs.com/)
@@ -59,7 +60,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
 $ aio plugins:install @adobe/aio-cli-plugin-aem-rde
 ```
 
-Cloud Manager插件，允许开发人员从命令行与Cloud Manager交互。
+cloud Manager插件，允许开发人员从命令行与Cloud Manager交互。
 
 AEM RDE插件允许开发人员从本地计算机部署代码和内容。
 
@@ -71,11 +72,11 @@ AEM RDE插件允许开发人员从本地计算机部署代码和内容。
 
 1. 组织ID：复制值 **配置文件图片>帐户信息（内部）>模式窗口>当前组织ID**
 
-   ![组织 ID](./assets/Org-ID.png)
+   ![组织ID](./assets/Org-ID.png)
 
-1. 项目ID：复制值 **项目概述>环境> {ProgramName} — 代码>浏览器URI >编号介于 `program/` 和`/environment`**
+1. 项目ID：复制值 **项目概述>环境> {ProgramName}-rde >浏览器URI >之间的数字 `program/` 和`/environment`**
 
-1. 环境ID：复制值 **程序概述>环境> {ProgramName} — 代码>浏览器URI >之后的数字`environment/`**
+1. 环境ID：复制值 **项目概述>环境> {ProgramName}-rde >浏览器URI >之后的数字`environment/`**
 
    ![项目和环境ID](./assets/Program-Environment-Id.png)
 
@@ -109,11 +110,11 @@ $ aio where
 $ aio aem:rde:status
 ```
 
-RDE状态信息的显示方式类似于环境状态、列表 _您的AEM项目_ 创作和发布服务的包和配置。
+RDE状态信息的显示方式与以下内容类似： _您的AEM项目_ 创作和发布服务的包和配置。
 
 ## 后续步骤
 
-了解 [使用方法](./how-to-use.md) 一个RDE，用于从您喜爱的集成开发环境(IDE)中部署代码和内容，以加快开发周期。
+学习 [使用方法](./how-to-use.md) 一个RDE，用于从您喜爱的集成开发环境(IDE)中部署代码和内容以加快开发周期。
 
 
 ## 其他资源

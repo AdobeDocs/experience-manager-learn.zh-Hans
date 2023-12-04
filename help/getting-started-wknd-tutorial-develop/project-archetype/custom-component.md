@@ -11,9 +11,10 @@ mini-toc-levels: 1
 thumbnail: 30181.jpg
 doc-type: Tutorial
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1427
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '4057'
+source-wordcount: '3869'
 ht-degree: 0%
 
 ---
@@ -457,7 +458,7 @@ Byline Sling模型依赖于AEM提供的多个Java™ API。 这些API通过以�
 
    ![署名实施文件](assets/custom-component/byline-impl-file.png)
 
-1. 打开 `BylineImpl.java`。指定它实施 `Byline` 界面。 使用IDE的自动完成功能或手动更新文件以包含实施 `Byline` 界面：
+1. 打开 `BylineImpl.java`. 指定它实施 `Byline` 界面。 使用IDE的自动完成功能或手动更新文件以包含实施 `Byline` 界面：
 
    ```java
    package com.adobe.aem.guides.wknd.core.models.impl;

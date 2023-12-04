@@ -9,26 +9,27 @@ level: Experienced
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 217
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '330'
 ht-degree: 1%
 
 ---
 
 # 使用ACS配置文件预填自适应表单 {#prefilling-adaptive-form-using-acs-profile}
 
-在本部分中，我们使用从ACS获取的用户档案信息预填自适应表单。 AEM Forms具有这项预填充自适应表单的强大功能。
+在本部分中，我们使用从ACS获取的用户档案信息预填自适应表单。 AEM Forms具有这项预填自适应表单的强大功能。
 
 要了解有关预填自适应表单的更多信息，请阅读此 [教程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
 
-要通过从ACS获取数据预填充自适应表单，我们假设ACS中存在与登录AEM用户具有相同电子邮件的用户档案。 例如，如果登录AEM的人员的电子邮件ID为csimms@adobe.com，我们预计会在ACS中找到其电子邮件为csimms@adobe.com的配置文件。
+要通过从ACS获取数据预填充自适应表单，我们假设ACS中存在与登录AEM用户具有相同电子邮件的用户档案。 例如，如果登录AEM的人员的电子邮件ID为csimms@adobe.com，我们希望在ACS中找到其电子邮件为csimms@adobe.com的配置文件。
 
 使用REST API从ACS获取配置文件信息时，需要执行以下步骤
 
 * 生成 JWT
 * 用JWT交换访问令牌
-* 对ACS进行REST调用，并通过电子邮件获取配置文件
+* 对ACS进行REST调用并通过电子邮件获取配置文件
 * 使用配置文件信息构建XML文档
 * 返回AEM Forms使用的XML文档的InputStream
 
@@ -36,9 +37,9 @@ ht-degree: 1%
 
 将预填充服务与自适应表单关联
 
-以下是从ACS获取和返回用户档案信息的代码。
+以下是从ACS获取和返回配置文件信息的代码。
 
-在第68行，我们获取AEM用户的电子邮件ID。 通过对Adobe Campaign Standard进行REST调用来获取配置文件详细信息。 从获取的配置文件详细信息中，以AEM Forms所理解的方式构建XML文档。 返回此文档的输入流供AEM Forms使用。
+在第68行，我们获取AEM用户的电子邮件ID。 通过对Adobe Campaign Standard进行REST调用来获取用户档案详细信息。 根据所获取的配置文件详细信息，XML文档的构建方式可为AEM Forms所理解。 返回此文档的输入流供AEM Forms使用。
 
 ```java
 package aemforms.campaign.core;
@@ -232,9 +233,9 @@ return "Pre Fill Forms Using Campaign Profile";
 
 要在您的系统上使其正常工作，请按照以下说明操作：
 
-* [确保已执行此处描述的步骤](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [确保已按照此处所述的步骤进行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [使用包管理器将自适应表单示例导入AEM](assets/pre-fill-af-from-campaign.zip)
-* 确保您使用电子邮件ID由Adobe Campaign中的配置文件共享的用户登录AEM。 例如，如果AEM用户的电子邮件ID为johndoe@adobe.com ，则您需要在ACS中拥有其电子邮件为johndoe@adobe.com的配置文件。
+* 确保您使用其电子邮件ID由Adobe Campaign中的配置文件共享的用户登录AEM。 例如，如果AEM用户的电子邮件ID是johndoe@adobe.com ，则您需要在ACS中拥有其电子邮件是johndoe@adobe.com的配置文件。
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).
 
 ## 后续步骤
