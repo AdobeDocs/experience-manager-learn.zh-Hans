@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 54827c36a33437a8bf090eb10cde8ed656446d0b
+source-git-commit: bd33d076cf9caa7c900ef4fe8b1a17e27a791cae
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 23%
+source-wordcount: '491'
+ht-degree: 18%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 23%
 
 + [概述](overview.md)
 + 文档创作 {#document-authoring}
+   + [概述](document-authoring/overview.md)
    + [设置](document-authoring/set-up.md)
    + [预览和发布](document-authoring/preview-and-publish.md)
    + [文档结构](document-authoring/document-structure.md)
@@ -66,6 +67,7 @@ ht-degree: 23%
    + [构建块](experience-fragments/building-blocks.md)
    + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
+   + [概述](./edge-delivery-services/overview.md)
    + 开发{#developing}
       + [前提条件](edge-delivery-services/developing/prerequisites.md)
       + [AEM样板](edge-delivery-services/developing/aem-boilerplate.md)
@@ -81,7 +83,7 @@ ht-degree: 23%
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 项目原型](developing/aem-project-archetype.md)
    + [AEM Sites快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
-   + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans){target=_blank}
+   + [AEM Headless快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans){target=_blank}
    + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
    + [响应式断点](developing/responsive-breakpoints.md)
