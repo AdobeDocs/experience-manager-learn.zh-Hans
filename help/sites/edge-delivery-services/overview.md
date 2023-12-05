@@ -7,8 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 doc-type: Catalog
+duration: 30
 last-substantial-update: 2023-05-12T00:00:00Z
-source-git-commit: bd33d076cf9caa7c900ef4fe8b1a17e27a791cae
+source-git-commit: 414cf2034c2f66f40c6da09693128dba73cb4865
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 9%
