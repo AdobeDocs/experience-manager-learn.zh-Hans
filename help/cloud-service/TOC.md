@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
+source-git-commit: 43c021b051806380b3211f2d7357555622217b91
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 21%
+source-wordcount: '1072'
+ht-degree: 16%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 21%
 + [概述](./overview.md)
 + AEM试用 {#aem-trials}
    + [图像](./aem-trials/images.md)
-+ AEM as a Cloud Service 简介{#introduction}
++ AEMas a Cloud Service简介{#introduction}
    + [什么是AEMas a Cloud Service？](./introduction/what-is-aem-as-a-cloud-service.md)
    + [架构](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
@@ -27,7 +27,7 @@ ht-degree: 21%
       + [Experience Manager — 治理和人员配置模型和原型](./introduction/experience-manager-governance-and-staffing-models.md)
       + [如何使用Adobe Experience Manager提高内容速度](./introduction/drive-content-velocity-for-sites.md)
       + [使用AEM样式系统加快内容速度](./introduction/accelerate-content-velocity-aem.md)
-+ Experience Cloud 集成{#integrations}
++ Experience Cloud集成{#integrations}
    + [集成](./integrations/experience-cloud.md)
    + [Adobe Target](./integrations/target.md)
 + 底层技术 {#underlying-technology}
@@ -91,7 +91,7 @@ ht-degree: 21%
       + [内容发布](./developing/basics/content-publishing.md)
       + [OSGi 配置](./developing/basics/osgi-configurations.md)
       + [Dispatcher配置迁移](./developing/basics/dispatcher-configuration.md)
-   + AEM 项目{#aem-projects}
+   + AEM项目{#aem-projects}
       + [AEM Maven项目](./developing/projects/maven-project-structure.md)
       + [清理AEM Maven项目](./developing/projects/remove-samples.md)
    + OSGi服务{#osgi-services}
@@ -134,6 +134,9 @@ ht-degree: 21%
    + [AEM Publish服务](./caching/publish.md)
    + [AEM Author服务](./caching/author.md)
    + [CDN缓存命中率分析](./caching/cdn-cache-hit-ratio-analysis.md)
+   + 操作方法{#how-to}
+      + [启用缓存](./caching/how-to/enable-caching.md)
+      + [禁用缓存](./caching/how-to/disable-caching.md)
 + 访问AEM{#accessing}
    + [概述](./accessing/overview.md)
    + [Adobe IMS 用户](./accessing/adobe-ims-users.md)
@@ -190,7 +193,7 @@ ht-degree: 21%
       + [内容传输工具](./migration/cloud-acceleration-manager/content-transfer-tool.md)
       + [代码重构工具](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
       + [代码存储库现代化器](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
-      + [Dispatcher Converter](./migration/cloud-acceleration-manager/dispatcher-converter.md)
+      + [Dispatcher转换器](./migration/cloud-acceleration-manager/dispatcher-converter.md)
       + [索引转换器](./migration/cloud-acceleration-manager/index-converter.md)
       + [资源工作流迁移工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [浏览Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
