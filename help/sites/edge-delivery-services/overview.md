@@ -6,12 +6,13 @@ feature: Edge Delivery Services
 topic: Development
 role: Developer
 level: Beginner
+jira: KT-14643
 doc-type: Catalog
 duration: 30
 last-substantial-update: 2023-05-12T00:00:00Z
-source-git-commit: 414cf2034c2f66f40c6da09693128dba73cb4865
+source-git-commit: d80a4187ab9d1e8fc69569af4a0454cdb9b4e009
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '284'
 ht-degree: 9%
 
 ---
@@ -56,39 +57,7 @@ ht-degree: 9%
           </div>
         </div>
       </div>
-    </div>
-    <!-- Install Node -->
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Install Node" tabindex="1">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <a href="./developing/prerequisites.md" title="安装节点"
-              tabindex="-1">
-              <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425710/?format=jpeg"
-                alt="安装节点">
-            </a>
-          </figure>
-        </div>
-        <div class="card-content is-padded-small">
-          <div class="content">
-            <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">4 分钟</p>
-            <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/prerequisites.md" title="安装节点">安装节点</a>
-            </p>
-            <p class="is-size-6">有关如何安装Node JS的简短概述。</p>
-            <a href="./developing/prerequisites.md" class="spectrum-Button
-              spectrum-Button--outline spectrum-Button--primary
-              spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>    
+    </div> 
     <!-- Setting up your Repository-->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
       aria-label="Set up Code Repository with Boilerplate Template" tabindex="2">
