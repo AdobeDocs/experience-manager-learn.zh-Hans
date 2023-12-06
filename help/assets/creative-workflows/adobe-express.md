@@ -1,26 +1,28 @@
 ---
-title: Adobe Express集成
-description: 了解如何使用AEM Assets和Adobe Express优化内容供应链，提高所有团队成员的工作效率和访问能力。
+title: AEM Assets和Adobe Express
+description: 了解如何使用Adobe Express在AEM Assets中轻松创建和编辑内容。
 version: Cloud Service
 feature: Integrations
-topic: Integrations, Content Management
-role: User
-level: Intermediate
-last-substantial-update: 2023-10-26T00:00:00Z
-jira: KT-14192
-thumbnail: 3425193.jpeg
+topic: Integrations, Content Management, Content Supply Chain
+role: Admin, User
+level: Beginner
 doc-type: Feature Video
-exl-id: 4da1b1ff-5472-4282-a998-ae344e7b8309
-duration: 610
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 500
+last-substantial-update: 2023-12-06T00:00:00Z
+jira: KT-14645
+thumbnail: 3425972.jpeg
+source-git-commit: e5c50ffb379f497ed72efd63528af4f874b18ade
 workflow-type: tm+mt
-source-wordcount: '49'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
-# Adobe Express集成
 
-了解如何使用AEM Assets和优化内容供应链 [Adobe Express](https://www.adobe.com/express/)，提高所有团队成员的工作效率和无障碍性。
+# AEM Assets和Adobe Express
 
->[!VIDEO](https://video.tv.adobe.com/v/3425193/?learn=on)
+了解如何使用Adobe Express在Adobe Experience Manager Assets中轻松创建和编辑内容。 此视频将指导您完成增强内容工作流程，演示对现有资产的编辑和新资产的创建，所有这些都经过了简化，以提高效率和用户友好性。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
+
+了解如何设置 [适用于Adobe Express的AEM Assets加载项](./adobe-express-aem-assets-add-on.md) 以从Adobe Express无缝访问AEM Assets。
