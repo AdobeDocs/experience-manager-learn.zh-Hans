@@ -11,9 +11,9 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 162e10e5-fcb0-4f16-b6d1-b951826209d9
 duration: 140
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 6995b0221e381979aca0aeb540fe04d71b16eaae
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ AdobeAsset compute项目无法与AEM SDK提供的本地AEM运行时集成，并�
 1. 从命令行安装所需的npm模块和Adobe I/OCLI插件：
 
    ```
-   $ npm i -g @adobe/aio-cli@7.1.0 @openwhisk/wskdebug ngrok --unsafe-perm=true \
+   $ npm i -g @adobe/aio-cli @openwhisk/wskdebug ngrok --unsafe-perm=true \
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
@@ -76,11 +76,8 @@ asset compute工作人员是 [Node.js](https://nodejs.org/)基于，因此需要
 [安装Adobe I/OCLI](../../local-development-environment/development-tools.md#aio-cli)，或 __aio__ 是一个命令行(CLI) npm模块，便于使用Adobe I/O技术并与之交互，用于生成和本地开发自定义Asset compute工作程序。
 
 ```
-$ npm install -g @adobe/aio-cli@7.1.0
+$ npm install -g @adobe/aio-cli
 ```
-
-_需要Adobe I/OCLI版本7.1.0。 目前不支持更高版本的Adobe I/OCLI。_
-
 
 ## 安装Adobe I/OCLIAsset compute插件{#aio-asset-compute}
 
