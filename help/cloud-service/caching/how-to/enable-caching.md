@@ -47,7 +47,7 @@ ht-degree: 0%
 
 此选项是启用缓存的推荐方法，但它仅适用于AEM Publish。 要更新缓存标头，请使用 `mod_headers` 模块和 `<LocationMatch>` 指令来访问Apache HTTP Server的vhost文件。 一般语法如下：
 
-    “&#39;conf
+    ```
     &lt;locationmatch url=&quot;&quot; url_regex=&quot;&quot;>
     #删除此名称的响应标头（如果存在）。 如果有多个具有相同名称的标头，则将删除所有标头。
     标头未设置Cache-Control
@@ -87,7 +87,7 @@ ht-degree: 0%
 1. 在AEM项目中，从找到所需的视频文件 `dispatcher/src/conf.d/available_vhosts` 目录。
 1. 更新vhost(例如 `wknd.vhost`)文件，如下所示：
 
-       “&#39;conf
+       ```
        &lt;locationmatch content=&quot;&quot;>*\.(html)$&quot;>
        #删除响应标头（如果存在）
        标头未设置Cache-Control
