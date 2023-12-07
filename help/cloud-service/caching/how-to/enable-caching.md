@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-17T00:00:00Z
 jira: KT-14224
 thumbnail: KT-14224.jpeg
-source-git-commit: 43c021b051806380b3211f2d7357555622217b91
+exl-id: 544c3230-6eb6-4f06-a63c-f56d65c0ff4b
+source-git-commit: 783f84c821ee9f94c2867c143973bf8596ca6437
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
-
 
 # 如何启用CDN缓存
 
@@ -47,23 +47,23 @@ ht-degree: 0%
 
 此选项是启用缓存的推荐方法，但它仅适用于AEM Publish。 要更新缓存标头，请使用 `mod_headers` 模块和 `<LocationMatch>` 指令来访问Apache HTTP Server的vhost文件。 一般语法如下：
 
-    ```
-    &lt;locationmatch url=&quot;&quot; url_regex=&quot;&quot;>
-    #删除此名称的响应标头（如果存在）。 如果有多个具有相同名称的标头，则将删除所有标头。
-    标头未设置Cache-Control
-    标头Unset Surrogate-Control
-    标头未设置过期
+```
+<LocationMatch "$URL$ || $URL_REGEX$">
+    # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
+    Header unset Cache-Control
+    Header unset Surrogate-Control
+    Header unset Expires
+
+    # Instructs the web browser and CDN to cache the response for 'max-age' value (XXX) seconds. The 'stale-while-revalidate' and 'stale-if-error' attributes controls the stale state treatment at CDN layer.
+    Header set Cache-Control "max-age=XXX,stale-while-revalidate=XXX,stale-if-error=XXX"
     
-    #指示Web浏览器和CDN缓存“max-age”值(XXX)秒的响应。 “stale-while-revalidate”和“stale-if-error”属性控制CDN层的过时状态处理。
-    标头集Cache-Control &quot;max-age=XXX，stale-while-revalidate=XXX，stale-if-error=XXX&quot;
+    # Instructs the CDN to cache the response for 'max-age' value (XXX) seconds. The 'stale-while-revalidate' and 'stale-if-error' attributes controls the stale state treatment at CDN layer.
+    Header set Surrogate-Control "max-age=XXX,stale-while-revalidate=XXX,stale-if-error=XXX"
     
-    #指示CDN缓存“max-age”值(XXX)秒的响应。 “stale-while-revalidate”和“stale-if-error”属性控制CDN层的过时状态处理。
-    标头set Surrogate-Control &quot;max-age=XXX，stale-while-revalidate=XXX，stale-if-error=XXX&quot;
-    
-    #指示Web浏览器和CDN将响应缓存到指定的日期和时间。
-    标头集过期时间：“Sun， 2023 Dec 31 23:59:59 GMT”
-    &lt;/locationmatch>
-    ```
+    # Instructs the web browser and CDN to cache the response until the specified date and time.
+    Header set Expires "Sun, 31 Dec 2023 23:59:59 GMT"
+</LocationMatch>
+```
 
 以下总结了每个报表的用途 **标题** 和适用 **属性** 标头的。
 
@@ -87,15 +87,16 @@ ht-degree: 0%
 1. 在AEM项目中，从找到所需的视频文件 `dispatcher/src/conf.d/available_vhosts` 目录。
 1. 更新vhost(例如 `wknd.vhost`)文件，如下所示：
 
-       ```
-       &lt;locationmatch content=&quot;&quot;>*\.(html)$&quot;>
-       #删除响应标头（如果存在）
-       标头未设置Cache-Control
-       
-       #指示Web浏览器和CDN缓存响应max-age value (600)秒。
-       标头集Cache-Control &quot;max-age=600&quot;
-       &lt;/locationmatch>
-       ```
+   ```
+   <LocationMatch "^/content/.*\.(html)$">
+       # Removes the response header if present
+       Header unset Cache-Control
+   
+       # Instructs the web browser and CDN to cache the response for max-age value (600) seconds.
+       Header set Cache-Control "max-age=600"
+   </LocationMatch>
+   ```
+
    中的vhost文件 `dispatcher/src/conf.d/enabled_vhosts` 目录为 **符号链接** 到中的文件 `dispatcher/src/conf.d/available_vhosts` 目录，因此请确保创建符号链接（如果没有）。
 1. 使用将vhost更改部署到所需的AEMas a Cloud Service环境 [Cloud Manager - Web层配置管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines) 或 [RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration).
 
@@ -109,13 +110,13 @@ ht-degree: 0%
 
 要更新缓存标头，请使用 `HttpServletResponse` 自定义Java™代码中的对象（Sling servlet、Sling servlet过滤器）。 一般语法如下：
 
-    ```java
-    //指示Web浏览器和CDN缓存“max-age”值(XXX)秒的响应。 “stale-while-revalidate”和“stale-if-error”属性控制CDN层的过时状态处理。
-    response.setHeader(&quot;Cache-Control&quot;， &quot;max-age=XXX，stale-while-revalidate=XXX，stale-if-error=XXX&quot;)；
-    
-    //指示CDN缓存“max-age”值(XXX)秒的响应。 “stale-while-revalidate”和“stale-if-error”属性控制CDN层的过时状态处理。
-    response.setHeader(&quot;Surrogate-Control&quot;， &quot;max-age=XXX，stale-while-revalidate=XXX，stale-if-error=XXX&quot;)；
-    
-    //指示Web浏览器和CDN在指定的日期和时间之前缓存响应。
-    response.setHeader(&quot;Expires&quot;， &quot;Sun， 2023年12月31日23:59:59 GMT”)；
-    ```
+```java
+// Instructs the web browser and CDN to cache the response for 'max-age' value (XXX) seconds. The 'stale-while-revalidate' and 'stale-if-error' attributes controls the stale state treatment at CDN layer.
+response.setHeader("Cache-Control", "max-age=XXX,stale-while-revalidate=XXX,stale-if-error=XXX");
+
+// Instructs the CDN to cache the response for 'max-age' value (XXX) seconds. The 'stale-while-revalidate' and 'stale-if-error' attributes controls the stale state treatment at CDN layer.
+response.setHeader("Surrogate-Control", "max-age=XXX,stale-while-revalidate=XXX,stale-if-error=XXX");
+
+// Instructs the web browser and CDN to cache the response until the specified date and time.
+response.setHeader("Expires", "Sun, 31 Dec 2023 23:59:59 GMT");
+```

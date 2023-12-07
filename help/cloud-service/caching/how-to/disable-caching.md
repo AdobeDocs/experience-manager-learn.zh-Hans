@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-30T00:00:00Z
 jira: KT-14224
 thumbnail: KT-14224.jpeg
-source-git-commit: 43c021b051806380b3211f2d7357555622217b91
+exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
+source-git-commit: 783f84c821ee9f94c2867c143973bf8596ca6437
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
-
 
 # 如何禁用CDN缓存
 
@@ -48,16 +48,16 @@ ht-degree: 0%
 
 此选项是禁用缓存的推荐方法，但它仅适用于AEM Publish。 要更新缓存标头，请使用 `mod_headers` 模块和 `<LocationMatch>` 指令来访问Apache HTTP Server的vhost文件。 一般语法如下：
 
-    ```
-    &lt;locationmatch url=&quot;&quot; url_regex=&quot;&quot;>
-    #删除此名称的响应标头（如果存在）。 如果有多个具有相同名称的标头，则将删除所有标头。
-    标头未设置Cache-Control
-    标头未设置过期
-    
-    #指示CDN不要缓存响应。
-    标头集Cache-Control &quot;private&quot;
-    &lt;/locationmatch>
-    ```
+```
+<LocationMatch "$URL$ || $URL_REGEX$">
+    # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
+    Header unset Cache-Control
+    Header unset Expires
+
+    # Instructs the CDN to not cache the response.
+    Header set Cache-Control "private"
+</LocationMatch>
+```
 
 #### 示例
 
@@ -68,16 +68,17 @@ ht-degree: 0%
 1. 在AEM项目中，从找到所需的视频文件 `dispatcher/src/conf.d/available_vhosts` 目录。
 1. 更新vhost(例如 `wknd.vhost`)文件，如下所示：
 
-       ```
-       &lt;locationmatch etc.clientlibs=&quot;&quot;>*\.(css)$&quot;>
-       #删除此名称的响应标头（如果存在）。 如果有多个具有相同名称的标头，则将删除所有标头。
-       标头未设置Cache-Control
-       标头未设置过期
-       
-       #指示CDN不要缓存响应。
-       标头集Cache-Control &quot;private&quot;
-       &lt;/locationmatch>
-       ```
+   ```
+   <LocationMatch "^/etc.clientlibs/.*\.(css)$">
+       # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
+       Header unset Cache-Control
+       Header unset Expires
+   
+       # Instructs the CDN to not cache the response.
+       Header set Cache-Control "private"
+   </LocationMatch>
+   ```
+
    中的vhost文件 `dispatcher/src/conf.d/enabled_vhosts` 目录为 **符号链接** 到中的文件 `dispatcher/src/conf.d/available_vhosts` 目录，因此请确保创建符号链接（如果没有）。
 1. 使用将vhost更改部署到所需的AEMas a Cloud Service环境 [Cloud Manager - Web层配置管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines) 或 [RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration).
 
@@ -85,6 +86,6 @@ ht-degree: 0%
 
 此选项对AEM Publish和Author均可用。 要更新缓存标头，请使用 `SlingHttpServletResponse` 自定义Java™代码中的对象（Sling servlet、Sling servlet过滤器）。 一般语法如下：
 
-    ```java
-    response.setHeader(&quot;Cache-Control&quot;， &quot;private&quot;)；
-    ```
+```java
+response.setHeader("Cache-Control", "private");
+```
