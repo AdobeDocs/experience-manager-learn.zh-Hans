@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation 教程
 user-guide-description: Adobe Experience Manager Foundation 的视频和教程集合。
 sub-product: Experience Manager
 index: y
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 338bb13f1739d822e6a4b7232ae1a2da6b24732a
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 16%
+source-wordcount: '224'
+ht-degree: 14%
 
 ---
 
@@ -28,7 +28,8 @@ ht-degree: 16%
    + [了解AMS上的IMS身份验证](authentication/adobe-ims-authentication-technical-video-understand.md)
 + AdobeCloud Manager{#cloud-manager}
    + [了解AdobeCloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
-   + [在AdobeCloud Manager中使用CI/CD管线](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
+   + [CI/CD 管道](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
+   + [自定义权限](./cloud-manager/cloud-permissions.md)
 + 开发 {#development}
    + [开发Sling模型导出程序](./development/develop-sling-model-exporter.md)
    + [设置本地AEM开发环境](./development/set-up-a-local-aem-development-environment.md)
@@ -40,7 +41,7 @@ ht-degree: 16%
    + [使用项目母版](./projects/use-project-masters.md)
 + 安全性 {#security}
    + [为跨源资源共享(CORS)而开发](./security/develop-for-cross-origin-resource-sharing.md)
-   + [了解跨源资源共享 (CORS)](./security/understand-cross-origin-resource-sharing.md)
+   + [了解跨源资源共享(CORS)](./security/understand-cross-origin-resource-sharing.md)
    + [使用SSL向导](./security/use-the-ssl-wizard.md)
    + [ModSecurity CRS DoS攻击防护](./security/modsecurity-crs-dos-attack-protection.md)
    + [通过专用证书连接到API的HTTPS连接](./security/call-internal-apis-having-private-certificate.md)
