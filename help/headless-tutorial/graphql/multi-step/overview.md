@@ -12,10 +12,10 @@ level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 duration: 81
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 90c3ef479b289c9b319735fd28a1e39875c421a9
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 2%
+source-wordcount: '266'
+ht-degree: 3%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 ### AEM环境
 
-要完成本教程，建议使用AEM管理员访问AEMas a Cloud Service环境。 如果您无权访问AEMas a Cloud Service环境，则可以使用 [本地AEMas a Cloud Service快速入门SDK](/help/cloud-service/local-development-environment/aem-runtime.md). 但是，请务必注意，某些产品UI屏幕（例如内容片段导航）有所不同。
+要完成本教程，建议您拥有AEMas a Cloud Service环境的AEM管理员访问权限。 如果您无权访问AEMas a Cloud Service环境，请 [注册AEM Headless试用版](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en) 探索AEM Headless功能。
 
 ## 让我们开始吧！
 
