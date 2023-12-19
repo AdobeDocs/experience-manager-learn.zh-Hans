@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 43c021b051806380b3211f2d7357555622217b91
+source-git-commit: d9612adbc2ff3e601c2efe5a779c03ad24769276
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1084'
 ht-degree: 16%
 
 ---
@@ -180,7 +180,7 @@ ht-degree: 16%
       + 内容迁移 {#content-migration}
          + [批量导入服务](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [内容传输工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
-         + [常见问题](./migration/moving-to-aem-as-a-cloud-service/content-migration/faq.md)
+         + [常见问题解答](./migration/moving-to-aem-as-a-cloud-service/content-migration/faq.md)
       + [疑难解答](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Formsas a Cloud Service {#aem-forms}
          + [简介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
@@ -264,6 +264,10 @@ ht-degree: 16%
       + [创建OSGi配置](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
       + [创建索引标记](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
       + [创建自定义提交](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
+   + 预填充基于核心组件的表单{#prefill-core-component-based-form}
+      + [简介](./forms/prefill-core-component-form/introduction.md)
+      + [写入预填充服务](./forms/prefill-core-component-form/pre-fill-service.md)
+      + [测试解决方案](./forms/prefill-core-component-form/test-solution.md)
    + Azure门户存储{#forms-cs-azure-portal}
       + [简介](./forms/forms-cs-azure-portal/introduction.md)
       + [创建表单数据模型](./forms/forms-cs-azure-portal/create-fdm.md)
