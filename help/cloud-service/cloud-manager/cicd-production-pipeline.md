@@ -14,7 +14,7 @@ duration: 423
 source-git-commit: 8a042c561c1a7e48152c2b067d92d709ab5fd53e
 workflow-type: tm+mt
 source-wordcount: '147'
-ht-degree: 51%
+ht-degree: 53%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 51%
 >id="aemcloud_devops_prodpipeline"
 >title="CI/CD 生产管道"
 >abstract="CI/CD 生产管道配置定义将启动管道的触发器、控制产品部署的参数以及性能测试参数。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="部署代码"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="部署到生产阶段"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=zh-Hans" text="部署您的代码"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=zh-Hans" text="部署到生产阶段"
 
 ## 配置
 
