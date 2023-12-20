@@ -11,10 +11,10 @@ thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
 duration: 765
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 4%
+source-wordcount: '1621'
+ht-degree: 3%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_dispatcher"
 >title="本地 Dispatcher 工具"
->abstract="Dispatcher 是整个 Experience Manager 架构的组成部分，应该是本地开发设置的一部分。AEM as a Cloud Service SDK 包括推荐的 Dispatcher 工具版本，该版本有助于在本地配置、验证和模拟 Dispatcher。"
+>abstract="Dispatcher 是整个 Experience Manager 架构的组成部分，应该是本地开发设置的一部分。AEMas a Cloud ServiceSDK包括推荐的Dispatcher工具版本，该版本有助于配置验证并在本地模拟Dispatcher。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="云中的 Dispatcher"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下载 AEM as a Cloud Service SDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html" text="下载 AEM as a Cloud Service SDK"
 
 Adobe Experience Manager (AEM)的Dispatcher是一个Apache HTTP Web服务器模块，在CDN和AEM发布层之间提供一个安全和性能层。 Dispatcher是整个Experience Manager架构的一个组成部分，应当是本地开发设置的一部分。
 
-AEMas a Cloud ServiceSDK包括推荐的Dispatcher工具版本，该版本便于在本地配置、验证和模拟Dispatcher。 Dispatcher工具由以下部分组成：
+AEMas a Cloud ServiceSDK包括推荐的Dispatcher工具版本，该版本有助于配置验证并在本地模拟Dispatcher。 Dispatcher工具由以下部分组成：
 
 + Apache HTTP Web服务器和Dispatcher配置文件的基线集，位于 `.../dispatcher-sdk-x.x.x/src`
 + 配置验证器CLI工具，位于 `.../dispatcher-sdk-x.x.x/bin/validate`
@@ -87,7 +87,7 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 
 解压缩 `aem-sdk-dispatcher-tools-x.x.x-windows.zip` 到 `C:\Users\<My User>\aem-sdk\dispatcher` （根据需要创建缺少的文件夹）。
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh
@@ -105,11 +105,11 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 ## 了解Dispatcher配置文件
 
 >[!TIP]
-> Experience Manager从创建的项目 [AEM项目Maven原型](https://github.com/adobe/aem-project-archetype) 已预填充这组Dispatcher配置文件，因此无需从Dispatcher工具src文件夹进行复制。
+Experience Manager从创建的项目 [AEM项目Maven原型](https://github.com/adobe/aem-project-archetype) 已预填充这组Dispatcher配置文件，因此无需从Dispatcher工具src文件夹进行复制。
 
 Dispatcher工具提供了一组Apache HTTP Web服务器和Dispatcher配置文件，这些文件定义所有环境（包括本地开发）的行为。
 
-这些文件旨在复制到Experience Manager的Maven项目中 `dispatcher/src` 文件夹(如果Experience ManagerMaven项目中尚不存在这些文件夹)。
+这些文件旨在复制到Experience Manager的Maven项目中 `dispatcher/src` 文件夹(如果Experience ManagerMaven项目中不存在这些文件夹)。
 
 在解压缩的Dispatcher工具中，提供了配置文件的完整说明，如下所示 `dispatcher-sdk-x.x.x/docs/Config.html`.
 
@@ -132,7 +132,7 @@ $ ./bin/validate.sh ./src
 $ bin\validate src
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ ./bin/validate.sh ./src
@@ -161,7 +161,7 @@ $ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-po
 $ bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
@@ -191,7 +191,7 @@ $ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
 $ bin\docker_run src host.docker.internal:4503 8080
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
@@ -217,7 +217,7 @@ $ ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.in
 $ bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
@@ -258,7 +258,7 @@ $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run_hot_reload.sh ~/
 $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
@@ -331,7 +331,7 @@ Apache和Dispatcher配置的基线集将定期得到增强，并随AEMas a Cloud
 
 + 验证更新的不可变文件，如 `dispatcher_vhost.conf`， `default.vhost`、和 `default.farm` 如果需要，在自定义文件中进行相关更改，这些更改源自这些文件。
 
-+ 重新验证配置，它应通过
++ 重新验证配置，它应该会通过
 
 ```shell
 $ ./bin/validate.sh ${YOUR-AEM-PROJECT}/dispatcher/src
@@ -353,7 +353,7 @@ Phase 3 finished
 
 此 `host.docker.internal` 是提供给Docker包含的主机名，可解析为主机。 根据docs.docker.com ([macOS](https://docs.docker.com/desktop/networking/)， [Windows](https://docs.docker.com/desktop/networking/))：
 
-> 从Docker 18.03开始，建议连接到特殊的DNS名称host.docker.internal，它解析为主机使用的内部IP地址
+>从Docker 18.03开始，建议连接到特殊的DNS名称host.docker.internal，它解析为主机使用的内部IP地址
 
 时间 `bin/docker_run src host.docker.internal:4503 8080` 消息中的结果 __等待host.docker.internal可用__，则：
 
@@ -372,7 +372,7 @@ Phase 3 finished
 + 在命令提示符下，执行 `ipconfig`，并记录主机的 __IPv4地址__ 主机的URL。
 + 然后，执行 `docker_run` 使用此IP地址： `$ bin\docker_run src <HOST IP>:4503 8080`
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 + 从终端，执行 `ifconfig` 并记录主机 __inet__ IP地址，通常为 __en0__ 设备。
 + 然后执行 `docker_run` 使用主机IP地址： `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`

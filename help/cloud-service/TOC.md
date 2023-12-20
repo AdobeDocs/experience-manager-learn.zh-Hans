@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d9612adbc2ff3e601c2efe5a779c03ad24769276
+source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1096'
 ht-degree: 16%
 
 ---
@@ -164,6 +164,11 @@ ht-degree: 16%
       + [如何设置](./security/traffic-filter-rules/how-to-setup.md)
       + [示例和结果分析](./security/traffic-filter-rules/examples-and-analysis.md)
       + [最佳实践](./security/traffic-filter-rules/best-practices.md)
++ AEM事件{#aem-eventing}
+   + [概述](./eventing/overview.md)
+   + 示例{#examples}
+      + [Webhook — 接收AEM活动](./eventing/examples/webhook.md)
+      + [日记 — 加载AEM事件](./eventing/examples/journaling.md)
 + 迁移 {#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
    + [批量导入资源](./migration/bulk-import.md)
