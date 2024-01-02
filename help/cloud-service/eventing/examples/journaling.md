@@ -9,11 +9,11 @@ level: Beginner
 doc-type: Tutorial
 duration: 0
 last-substantial-update: 2023-12-07T00:00:00Z
-jira: KT-14649
-thumbnail: KT-14649.jpeg
-source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
+jira: KT-14734
+thumbnail: KT-14734.jpeg
+source-git-commit: 839d552199fe7d10a0cde4011bdfe8cf42cc8ec9
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -81,4 +81,6 @@ ht-degree: 0%
 
 ## 其他资源
 
-- [Glitch webhook源代码](https://glitch.com/edit/#!/indigo-speckle-antler)
+- [Glitch webhook源代码](https://glitch.com/edit/#!/indigo-speckle-antler) 可供参考。 它是一个简单的React应用程序，使用 [AdobeReact频谱](https://react-spectrum.adobe.com/react-spectrum/index.html) 用于呈现UI的组件。
+
+- [Adobe I/O事件日记API](https://developer.adobe.com/events/docs/guides/api/journaling_api/) 提供有关API的详细信息，例如第一批、下一批和上一批事件、分页等。
