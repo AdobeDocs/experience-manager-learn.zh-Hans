@@ -14,7 +14,7 @@ duration: 563
 source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
 workflow-type: tm+mt
 source-wordcount: '1696'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
 >title="本地 AEM 运行时"
->abstract="Adobe Experience Manager (AEM) 可以使用 AEM as a Cloud Service SDK 的快速入门 Jar 在本地运行。这允许开发人员在将自定义代码、配置和内容提交到源代码管理之前，先对它们进行部署和测试，然后将其部署到AEMas a Cloud Service环境。"
+>abstract="Adobe Experience Manager (AEM) 可以使用 AEM as a Cloud Service SDK 的快速入门 Jar 在本地运行。这样开发人员即可先部署到和测试自定义代码、配置和内容，然后再将它提交到源代码管理以及将它部署到 AEM as a Cloud Service 环境。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下载 AEM as a Cloud Service SDK"
 
-Adobe Experience Manager (AEM) 可以使用 AEM as a Cloud Service SDK 的快速入门 Jar 在本地运行。这允许开发人员在将自定义代码、配置和内容提交到源代码管理之前，先对它们进行部署和测试，然后将其部署到AEMas a Cloud Service环境。
+Adobe Experience Manager (AEM) 可以使用 AEM as a Cloud Service SDK 的快速入门 Jar 在本地运行。这样开发人员即可先部署到和测试自定义代码、配置和内容，然后再将它提交到源代码管理以及将它部署到 AEM as a Cloud Service 环境。
 
 请注意 `~` 用作用户目录的简写。 在Windows中，这等同于 `%HOMEPATH%`.
 
