@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation 教程
 user-guide-description: Adobe Experience Manager Foundation 的视频和教程集合。
 sub-product: Experience Manager
 index: y
-source-git-commit: 338bb13f1739d822e6a4b7232ae1a2da6b24732a
+source-git-commit: 5fe651bc0dc73397ae9602a28d63b7dc084fcc70
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '229'
 ht-degree: 14%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 14%
    + [设置Sling动态包含](./development/set-up-sling-dynamic-include.md)
    + [了解Java API最佳实践](./development/understand-java-api-best-practices.md)
    + [了解Sling模型导出程序](./development/understand-sling-model-exporter.md)
+   + [了解Oak索引最佳实践](./development/understand-indexing-best-practices.md)
 + 项目 {#projects}
    + [开发AEM项目](./projects/develop-aem-projects.md)
    + [使用项目母版](./projects/use-project-masters.md)
