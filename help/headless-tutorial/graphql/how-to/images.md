@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 449
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 520bb18e464eb48cc2ba0cdfb7f5a7d2af202abf
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 5%
@@ -133,6 +133,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 在React中，从AEM Publish显示Web优化图像如下所示：
 
 ```jsx
+// The AEM host is usually read from a environment variable of the SPA.
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
 ...
 let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
@@ -147,6 +148,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 上例显示了使用单大小图像，但在Web体验中，通常需要响应式图像集。 响应式图像可以使用实现 [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 或 [图片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 以下代码片段显示了如何使用 `_dynamicUrl` 作为基础，并附加不同的宽度参数，以向不同的响应视图供电。 不仅可以 `width` 查询参数可以使用，但客户端可以添加其他查询参数，以根据其需求进一步优化图像资产。
 
 ```javascript
+// The AEM host is usually read from a environment variable of the SPA.
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
 ...
 // Read the data from GraphQL response
