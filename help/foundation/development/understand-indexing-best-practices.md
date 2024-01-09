@@ -12,9 +12,9 @@ duration: 0
 last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
-source-git-commit: 5fe651bc0dc73397ae9602a28d63b7dc084fcc70
+source-git-commit: 7f69fc888a7b603ffefc70d89ea470146971067e
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,9 @@ ht-degree: 0%
 
 ### 自定义OOTB索引
 
-- 在自定义OOTB索引时，使用 **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** 命名约定。 例如， `cqPageLucene-custom-1` 或 `damAssetLucene-8-custom-1`. 这有助于在更新OOTB索引时合并自定义索引定义。 请参阅 [对开箱即用索引的更改](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#changes-to-out-of-the-box-indexes) 以了解更多详细信息。
+- 在 **AEMCS**，在自定义OOTB索引时使用 **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** 命名约定。 例如， `cqPageLucene-custom-1` 或 `damAssetLucene-8-custom-1`. 这有助于在更新OOTB索引时合并自定义索引定义。 请参阅 [对开箱即用索引的更改](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#changes-to-out-of-the-box-indexes) 以了解更多详细信息。
+
+- 在 **AEM 6.X**，上述命名 _不起作用_，但只需使用 `indexRules` 节点。
 
 - 始终使用CRX DE包管理器(/crx/packmgr/)从AEM实例复制最新的OOTB索引定义，对其进行重命名并在XML文件中添加自定义项。
 
@@ -57,11 +59,13 @@ ht-degree: 0%
 
 ### 完全自定义索引
 
-- 创建完全自定义索引时，使用 **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** 命名约定。 例如，`wknd.adventures-1-custom-1`。这有助于避免命名冲突。 此处， `wknd` 是前缀和 `adventures` 是自定义索引名称。
+创建完全自定义索引必须是您的最后一个选项，并且前提是上述选项不起作用。
+
+- 创建完全自定义索引时，使用 **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** 命名约定。 例如，`wknd.adventures-1-custom-1`。这有助于避免命名冲突。 此处， `wknd` 是前缀和 `adventures` 是自定义索引名称。 此约定适用于AEM 6.X和AEMCS，并有助于为将来迁移到AEMCS做好准备。
 
 - AEMCS仅支持Lucene索引，因此为了准备将来迁移到AEMCS，请始终使用Lucene索引。 请参阅 [Lucene索引与属性索引](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?#lucene-or-property-indexes) 以了解更多详细信息。
 
-- 请勿在上创建自定义索引 `dam:Asset` 节点类型但自定义OOTB `damAssetLucene` 索引。 这是导致性能和功能问题的常见根本原因。
+- 避免在与OOTB索引相同的节点类型上创建自定义索引。 请改为使用以下内容自定义OOTB索引： `indexRules` 节点。 例如，请勿在 `dam:Asset` 节点类型但自定义OOTB `damAssetLucene` 索引。 _它一直是性能和功能问题的常见根本原因_.
 
 - 此外，请避免添加多个节点类型，例如 `cq:Page` 和 `cq:Tag` 在索引规则下(`indexRules`)节点。 相反，请为每个节点类型创建单独的索引。
 
@@ -70,7 +74,7 @@ ht-degree: 0%
 - 索引定义准则为：
    - 节点类型(`jcr:primaryType`)应为 `oak:QueryIndexDefinition`
    - 索引类型(`type`)应为 `lucene`
-   - 异步属性(`async`)应为 `async, rt`
+   - 异步属性(`async`)应为 `async,nrt`
    - 使用 `includedPaths` 并避免 `excludedPaths` 属性。 始终设置 `queryPaths` 值与的值相同 `includedPaths` 值。
    - 要强制实施路径限制，请使用 `evaluatePathRestrictions` 属性并将其设置为 `true`.
    - 使用 `tags` 属性以标记索引，在查询时指定此标记值以使用索引。 一般查询语法为 `<query> option(index tag <tagName>)`.
@@ -80,7 +84,7 @@ ht-degree: 0%
       - jcr:primaryType = "oak:QueryIndexDefinition"
       - type = "lucene"
       - compatVersion = 2
-      - async = ["async", "rt"]
+      - async = ["async", "nrt"]
       - includedPaths = ["/content/wknd"]
       - queryPaths = ["/content/wknd"]
       - evaluatePathRestrictions = true
@@ -90,7 +94,7 @@ ht-degree: 0%
 
 ### 示例
 
-让我们查看几个示例以了解最佳实践。
+要了解最佳实践，请查看几个示例。
 
 #### 标记属性的使用不当
 
