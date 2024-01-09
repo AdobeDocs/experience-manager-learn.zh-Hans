@@ -11,7 +11,7 @@ duration: 91
 last-substantial-update: 2024-01-08T00:00:00Z
 jira: KT-14752
 thumbnail: 3426796.jpeg
-source-git-commit: 20d0154755ea7d5d4cd73a7d5f3fecaf19f53a71
+source-git-commit: fc893796c27bb513409c2677d60289beddec69f2
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%
