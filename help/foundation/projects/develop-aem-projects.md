@@ -1,6 +1,6 @@
 ---
 title: 在AEM中开发项目
-description: 一个开发教程，其中演示了如何为AEM项目开发。  在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建新的项目，以管理内容创作工作流和任务。
+description: 一个开发教程，其中演示了如何为AEM项目开发。 在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建新的项目，以管理内容创作工作流和任务。
 version: 6.4, 6.5
 feature: Projects, Workflow
 doc-type: Tutorial
@@ -9,16 +9,16 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1753
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: b9b8dd9d815d7a0ef800635a74b030c50821b9df
 workflow-type: tm+mt
-source-wordcount: '4460'
+source-wordcount: '4441'
 ht-degree: 0%
 
 ---
 
 # 在AEM中开发项目
 
-这是一个开发教程，它演示了如何为进行开发 [!DNL AEM Projects].  在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建新的项目，以管理内容创作工作流和任务。
+这是一个开发教程，它演示了如何为进行开发 [!DNL AEM Projects]. 在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建项目，以管理内容创作工作流和任务。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 ## 简介 {#introduction}
 
-[[!DNL AEM Projects]](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html) 是AEM的一项功能，旨在简化对作为AEM Sites或Assets实施的一部分与内容创建相关的所有工作流和任务的管理和分组。
+[[!DNL AEM Projects]](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) 是AEM的一项功能，旨在简化对作为AEM Sites或Assets实施的一部分与内容创建相关的所有工作流和任务的管理和分组。
 
-AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTemplates). 创建新项目时，作者可以从这些可用的模板中进行选择。 具有独特业务需求的大型AEM实施将要创建定制的项目模板，以便满足其需求。 通过创建自定义项目模板，开发人员可以配置项目仪表板、挂接到自定义工作流，并为项目创建其他业务角色。 我们将查看项目模板的结构并创建一个示例模板。
+AEM项目附带几个 [OOTB项目模板](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html). 创建项目时，作者可以从这些可用的模板中进行选择。 具有独特业务需求的大型AEM实施将要创建定制的项目模板，以便满足其需求。 通过创建自定义项目模板，开发人员可以配置项目仪表板、挂接到自定义工作流，并为项目创建其他业务角色。 我们将查看项目模板的结构并创建一个示例模板。
 
 ![自定义项目信息卡](./assets/develop-aem-projects/custom-project-card.png)
 
@@ -39,13 +39,13 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 * [已完成的教程包](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整代码存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教程假定您具备以下基本知识 [AEM开发实践](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/the-basics.html) 而且很熟悉 [AEM Maven项目设置](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ht-projects-maven.html). 提到的所有代码都将用作参考，并且只应部署到 [本地开发AEM实例](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted).
+本教程假定您具备以下基本知识 [AEM开发实践](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/the-basics.html) 而且很熟悉 [AEM Maven项目设置](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html). 提到的所有代码都将用作参考，并且只应部署到 [本地开发AEM实例](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html).
 
 ## 项目模板的结构
 
 项目模板应该置于源代码管理下，并且应该位于/apps下的应用程序文件夹下。 理想情况下，它们应放置在子文件夹中，并且其命名约定为 **&#42;/projects/templates/**&lt;my-template>. 通过遵循此命名约定，任何新的自定义模板都将在创建项目时自动可供作者使用。 可用项目模板的配置设置为： **/content/projects/jcr：content** 节点依据 **cq：allowedTemplates** 属性。 默认情况下，这是一个正则表达式： **/(apps|libs)/.&#42;/projects/templates/.&#42;**
 
-项目模板的根节点将具有 **jcr：primaryType** 之 **cq：Template**. 在的根节点下有3个节点： **小工具**， **角色**、和 **工作流**. 这些节点全部 **nt：unstructured**. 根节点下方也可以是一个thumbnail.png文件，在“创建项目”向导中选择模板时显示该文件。
+项目模板的根节点将具有 **jcr：primaryType** 之 **cq：Template**. 在的根节点下有三个节点： **小工具**， **角色**、和 **工作流**. 这些节点全部 **nt：unstructured**. 根节点下方也可以是一个thumbnail.png文件，在“创建项目”向导中选择模板时显示该文件。
 
 完整的节点结构：
 
@@ -69,15 +69,15 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
 ### 小工具 {#gadgets}
 
-此节点上没有其他属性，但小工具的子节点控制创建新项目时用于填充项目仪表板中的项目拼贴。 [项目拼贴](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTiles) （也称为小工具或pod）是在项目工作区中填充的简单信息卡。 您可以在**/libs/cq/gui/components/projects/admin/pod下找到ootb图块的完整列表。 **在创建项目后，项目所有者始终可以添加/删除图块。
+此节点上没有其他属性，但小工具的子节点控制创建新项目时用于填充项目仪表板中的项目拼贴。 [项目拼贴](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) （也称为小工具或pod）是在项目工作区中填充的简单信息卡。 您可以在**/libs/cq/gui/components/projects/admin/pod下找到ootb图块的完整列表。 **在创建项目后，项目所有者始终可以添加/删除图块。
 
 ### 角色 {#roles}
 
-有3个 [默认角色](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#UserRolesinaProject) 对于每个项目： **观察者**， **编辑者**、和 **所有者**. 通过在角色节点下添加子节点，您可以为模板添加其他特定于业务的项目角色。 然后，您可以将这些角色关联到与项目关联的特定工作流。
+有三个 [默认角色](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) 对于每个项目： **观察者**， **编辑者**、和 **所有者**. 通过在角色节点下添加子节点，可以为模板添加其他特定于业务的项目角色。 然后，您可以将这些角色关联到与项目关联的特定工作流。
 
 ### 工作流 {#workflows}
 
-创建自定义项目模板的一个最诱人的原因是，它使您能够配置可用于项目的工作流。 这些工作流可以是OOTB工作流或自定义工作流。 在 **工作流** 节点需要 **模型** 节点(也 `nt:unstructured`)和下的子节点指定可用的工作流模型。 属性**modelId**指向/etc/workflow下的工作流模型和属性 **向导** 指向启动工作流时使用的对话框。 “项目”的一大优势是能够添加自定义对话框（向导），以在工作流开始时捕获特定于业务的元数据，从而推动工作流中的进一步操作。
+创建自定义项目模板的一个最诱人的原因是，它使您能够配置可用于项目的工作流。 这些工作流可以是OOTB工作流或自定义工作流。 在 **工作流** 节点需要 **模型** 节点(也 `nt:unstructured`)和下的子节点指定可用的工作流模型。 属性**modelId**指向/etc/workflow下的工作流模型和属性 **向导** 指向启动工作流时使用的对话框。 Projects的一个显着优势是能够添加自定义对话框（向导），以在工作流开始时捕获特定于业务的元数据，从而推动工作流中的进一步操作。
 
 ```shell
 <projects-template-root> (cq:Template)
@@ -90,9 +90,9 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
 ## 创建项目模板 {#creating-project-template}
 
-由于我们主要复制/配置节点，因此我们将使用CRXDE Lite。 在本地AEM实例中打开 [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
+由于我们主要复制/配置节点，因此我们将使用CRXDE Lite。 在本地AEM实例中，打开 [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
 
-1. 首先，在下方创建新文件夹 `/apps/&lt;your-app-folder&gt;` 已命名 `projects`. 在该文件夹下创建另一个名为 `templates`.
+1. 首先，在下方创建一个文件夹 `/apps/&lt;your-app-folder&gt;` 已命名 `projects`. 在该文件夹下创建另一个名为 `templates`.
 
    ```shell
    /apps/aem-guides/projects-tasks/
@@ -100,7 +100,7 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
                                 + templates (nt:folder)
    ```
 
-1. 为了更便于操作，我们将从现有的“简单项目”模板启动自定义模板。
+1. 为了简化操作，我们将从现有的“简单项目”模板开始自定义模板。
 
    1. 复制并粘贴节点 **/libs/cq/core/content/projects/templates/default** 在 *模板* 在第1步中创建的文件夹。
 
@@ -148,11 +148,11 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
 1. 我们将向项目模板添加自定义审批者角色。
 
-   1. 在项目模板(authoring-project)节点下添加新的 **nt：unstructured** 节点已标记 **角色**.
+   1. 在项目模板(authoring-project)节点下添加新的 **nt：unstructured** 标记节点 **角色**.
    1. 添加其他 **nt：unstructured** 将批准者标记为“角色”节点的子节点的节点。
    1. 添加字符串属性 **jcr：title** = &quot;**审批者**“， **roleclass** =&quot;**所有者**“， **roleid**=&quot;**审批者**“。
       1. 审批者节点的名称以及jcr：title和roleid可以是任何字符串值（只要roleid是唯一的）。
-      1. **roleclass** 根据管理应用于该角色的权限 [3个OOTB角色](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User%20Roles%20in%20a%20Project)： **所有者**， **编辑者**、和 **观察者**.
+      1. **roleclass** 根据管理应用于该角色的权限 [三个OOTB角色](https://docs.adobe.com/content/docs/en/aem/6-3/author/projects.html)： **所有者**， **编辑者**、和 **观察者**.
       1. 一般来说，如果自定义角色更多的是管理角色，则角色可以是 **业主；** 如果这是一个更具体的创作角色，如摄影师或设计师，则 **编辑者** 罗勒克劳斯就足够了。 两者之间的巨大差异 **所有者** 和 **编辑者** 项目所有者可以更新项目属性并将新用户添加到项目。
 
    ```shell
@@ -165,7 +165,7 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
                 - roleid = "approver"
    ```
 
-1. 通过复制简单项目模板，您将配置4个OOTB工作流。 工作流/模型下的每个节点都指向该工作流的特定工作流和开始对话框向导。 在本教程的后面部分，我们将为此项目创建一个自定义工作流。 现在，请删除工作流/模型下的节点：
+1. 通过复制简单项目模板，您将配置四个OOTB工作流。 工作流/模型下的每个节点都指向该工作流的特定工作流和开始对话框向导。 在本教程的后面部分，我们将为此项目创建一个自定义工作流。 现在，请删除工作流/模型下的节点：
 
    ```shell
    ../projects/templates/authoring-project
@@ -177,8 +177,8 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
    ```
 
 1. 为了便于内容作者识别项目模板，您可以添加自定义缩略图。 建议的大小为319x319像素。
-   1. 在CRXDE Lite中，创建新文件作为小工具、角色和工作流节点的同级，名为 **thumbnail.png**.
-   1. 保存，然后导航到 `jcr:content` 节点，然后双击 `jcr:data` 属性（避免单击“视图”）。
+   1. 在CRXDE Lite中，将文件创建为名为的小工具、角色和工作流节点的同级 **thumbnail.png**.
+   1. 保存，然后导航到 `jcr:content` 节点，并双击 `jcr:data` 属性（避免单击“视图”）。
       1. 这应该会提示您进行编辑 `jcr:data` 文件对话框，您可以上传自定义缩略图。
 
    ```shell
@@ -247,7 +247,7 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
 ## 测试自定义项目模板
 
-现在，我们可以通过创建新项目来测试项目模板。
+现在，我们可以通过创建项目来测试项目模板。
 
 1. 您应该看到自定义模板作为创建项目的选项之一。
 
@@ -284,35 +284,35 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
 ![工作流流程图](./assets/develop-aem-projects/workflow-process-diagram.png)
 
-上图概述了我们的示例审批工作流的高级要求。
+上图概述了我们的示例审批工作流的概要要求。
 
 第一步是创建一个Task以完成内容的编辑。 我们将允许工作流发起者选择此第一项任务的被分配人。
 
 完成第一个任务后，被分派人将有三个选项来路由工作流：
 
-**普通** — 普通路由会创建一项任务，该任务将分配给项目的审批者组进行审阅和批准。 任务的优先级为正常，截止日期为创建任务后的5天。
+**普通** — 普通路由会创建一项任务，该任务将分配给项目的审批者组进行审阅和批准。 任务的优先级为正常，截止日期为创建任务后的五天。
 
-**Rush**  — 快速传送还会创建分配给项目审批者组的任务。 任务的优先级为“高”，截止日期仅为1天。
+**Rush**  — 快速传送还会创建分配给项目审批者组的任务。 任务的优先级为“高”，截止日期只有一天。
 
 **旁路**  — 在此示例工作流中，初始参与者可以选择绕过批准组。 （是的，这可能会破坏“审批”工作流的用途，但它允许我们说明额外的路由选择功能）
 
-审批者组可以审批内容，也可以将内容发送回初始任务接受者以供重新工作。 在被发回重工的情况下，将创建一个新任务并相应地标记为“发回重工”。
+审批者组可以审批内容，也可以将内容发回初始被分配人重新工作。 如果被发回重工，则会创建一个新任务并相应地标记为“发回重工”。
 
 工作流的最后一个步骤使用ootb激活页面/资产流程步骤并复制有效负载。
 
 ## 创建工作流模型
 
-1. 从AEM的“开始”菜单，导航到“工具” — >“工作流” — >“模型”。 单击右上角的“创建”以创建新的工作流模型。
+1. 从AEM“开始”菜单中，导航到“工具” — >“工作流” — >“模型”。 单击右上角的“创建”以创建工作流模型。
 
    为新模型指定标题“内容审批工作流”和URL名称“content-approval-workflow”。
 
    ![工作流创建对话框](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   有关详情，请参阅 [创建此处阅读的工作流](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-models.html).
+   [有关创建工作流的详细信息，请阅读此处](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
 
-1. 作为最佳实践，自定义工作流应分组到/etc/workflow/models下方的各自文件夹中。 在CRXDE Lite中新建 **&#39;nt：folder&#39;** 在/etc/workflow/models下名为 **&quot;aem-guides&quot;**. 添加子文件夹可确保自定义工作流在升级或Service Pack安装期间不会意外覆盖。
+1. 作为最佳实践，自定义工作流应分组到/etc/workflow/models下方的各自文件夹中。 在CRXDE Lite中，创建 **&#39;nt：folder&#39;** 在/etc/workflow/models下名为 **&quot;aem-guides&quot;**. 添加子文件夹可确保自定义工作流在升级或Service Pack安装期间不会意外覆盖。
 
-   &#42;请注意，切勿将文件夹或自定义工作流放置在ootb子文件夹（如/etc/workflow/models/dam或/etc/workflow/models/projects）下，因为整个子文件夹也可能会被升级或Service Pack覆盖，这一点非常重要。
+   &#42;请注意，切勿将文件夹或自定义工作流放置在ootb子文件夹（如/etc/workflow/models/dam或/etc/workflow/models/projects）下，因为升级或Service Pack也可能会覆盖整个子文件夹。
 
    ![工作流模型在6.3中的位置](./assets/develop-aem-projects/custom-workflow-subfolder.png)
 
@@ -320,7 +320,7 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
    >[!NOTE]
    >
-   >如果使用AEM 6.4+，则Workflow的位置已更改。 请参阅 [此处以了解更多详细信息。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
+   >如果使用AEM 6.4+，则Workflow的位置已更改。 请参阅 [此处以了解更多详细信息。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
 
    如果使用AEM 6.4+，将在下创建工作流模型 `/conf/global/settings/workflow/models`. 对/conf目录重复上述步骤，并添加名为的子文件夹 `aem-guides` 并移动 `content-approval-workflow` 在它下面。
 
@@ -347,7 +347,7 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
 1. “创建项目任务”工作流进程旨在创建作为工作流步骤的任务。 只有在完成任务后，工作流才会前进。 “创建项目任务”步骤的一个强大方面是，它可以读取工作流元数据值，并使用这些值动态创建任务。
 
-   首先删除默认创建的参与者步骤。 从组件菜单中的Sidekick中，展开 **&quot;项目&quot;** 添加子标题并拖放 **创建项目任务** 放到模型上。
+   首先删除默认创建的参与者步骤。 从组件菜单中的Sidekick中，展开 **&quot;项目&quot;** 副标题并拖放 **创建项目任务** 放到模型上。
 
    双击“创建项目任务”步骤以打开工作流对话框。 配置以下属性：
 
@@ -372,7 +372,7 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
        Due In - Days = "2"
    ```
 
-   “路由”选项卡是一个可选的对话框，可为完成任务的用户指定可用的操作。 这些操作只是字符串值，且会保存到工作流的元数据中。 可以通过脚本读取这些值，和/或稍后在工作流中执行流程步骤以动态“路由”工作流。 基于 [工作流目标](#goals-tutorial) 我们将向此选项卡添加三个操作：
+   “路由”选项卡是一个可选的对话框，可为完成任务的用户指定可用的操作。 这些操作只是字符串值，且会保存到工作流的元数据中。 可以通过脚本读取这些值，和/或稍后在工作流中执行流程步骤以动态“路由”工作流。 根据我们将要执行的工作流目标，向此选项卡中添加三个操作：
 
    ```shell
    Routing Tab
@@ -393,7 +393,7 @@ AEM项目附带几个 [OOTB项目模板](https://helpx.adobe.com/experience-mana
 
 1. 在上一步中，我们引用了一个预创建任务脚本。 我们现在将创建该脚本，其中我们将根据工作流元数据值&#39;&#39;的值设置任务的被分派人&#x200B;**被分派人**“。 此 **“代理人”** 值在工作流启动时设置。 我们还将读取工作流元数据，以通过读取&#39;&#39;动态选择任务的优先级&#x200B;**taskPriority”** 工作流元数据的值以及**“taskDueDate”**值，以在第一个任务到期时动态设置。
 
-   出于组织目的，我们在应用程序文件夹下创建了一个文件夹，用于保存所有与项目相关的脚本： **/apps/aem-guides/projects-tasks/projects/scripts**. 在此文件夹下创建新文件，名为 **&quot;start-task-config.ecma&quot;**. &#42;注意：请确保start-task-config.ecma文件的路径与步骤4中“Advanced Settings（高级设置）”选项卡中设置的路径相匹配。
+   出于组织目的，我们在应用程序文件夹下创建了一个文件夹，用于保存所有与项目相关的脚本： **/apps/aem-guides/projects-tasks/projects/scripts**. 在此文件夹下创建名为的文件 **&quot;start-task-config.ecma&quot;**. &#42;注意：请确保start-task-config.ecma文件的路径与步骤4中“Advanced Settings（高级设置）”选项卡中设置的路径相匹配。
 
    添加以下内容作为文件的内容：
 
@@ -738,7 +738,7 @@ task.setCurrentAssignee(projectApproverGrp);
    >如果使用AEM 6.4，则Workflow的位置已更改。 指向 `modelId` 属性到下的运行时工作流模型的位置 `/var/workflow/models/aem-guides/content-approval-workflow`
    >
    >
-   >请参阅 [此处了解有关更改工作流位置的更多详细信息。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
+   >请参阅 [此处了解有关更改工作流位置的更多详细信息。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
 
    ```xml
    <contentapproval
@@ -754,4 +754,4 @@ task.setCurrentAssignee(projectApproverGrp);
 
 * [下载完成的教程包](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整代码存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [AEM项目文档](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html)
+* [AEM项目文档](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html)
