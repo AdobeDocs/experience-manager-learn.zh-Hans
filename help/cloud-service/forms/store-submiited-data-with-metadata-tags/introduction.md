@@ -9,21 +9,22 @@ version: Cloud Service
 topic: Integrations
 jira: KT-14501
 duration: 40
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+exl-id: a8531e82-18cd-4b32-8148-d6fc5f6e51c6
+source-git-commit: 016b06d3bd5b62945c168588839454544b2f7d41
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '130'
 ht-degree: 3%
 
 ---
 
 # 简介
 
-在本教程中，我们将实施一个简单的用例，即使用blob索引标记在Azure存储中存储表单提交。 Blob索引标记通过使用键值索引标记属性提供数据管理和发现功能。 您可以在存储帐户中的单个容器或所有容器中对对象进行分类和查找。
+在本教程中，您将了解如何实施一个简单的用例，即通过blob索引标记在Azure存储中存储表单提交。 Blob索引标记通过使用键值索引标记属性提供数据管理和发现功能。 您可以在存储帐户中的单个容器或所有容器中对对象进行分类和查找。
 ![blob-index-tags](assets/blob-with-index-tags.png)
 
 ## 先决条件
 
-* AEM Forms CS使用体验。
+* 体验AEM Forms CS。
 * 具有使用Cloud Manager部署代码的体验。
 * 访问AEM Forms CS的云就绪实例。
 
