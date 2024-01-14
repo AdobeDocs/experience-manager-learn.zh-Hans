@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: eb64367ffa110d1d28fe91a372c724a476e36f5e
+source-git-commit: bd66ad8698e2017cb53b91cae8f1cea92903f05b
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '411'
 ht-degree: 17%
 
 ---
@@ -56,6 +56,7 @@ ht-degree: 17%
    + [注释PDF输出](./advanced/customizing-annotations-pdf-output.md)
    + [资产分析](./advanced/asset-insights-launch-tutorial.md)
    + [Assets报表](./advanced/asset-reports.md)
+   + [已阻止的标记](./advanced/blocked-tags.md)
    + [提取存档](./advanced/extract-archive.md)
    + [权限(CUG)](./advanced/closed-user-groups.md)
    + [水印](./advanced/watermarks.md)
