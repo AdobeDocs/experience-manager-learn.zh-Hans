@@ -10,7 +10,7 @@ level: Beginner
 doc-type: Article
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
 duration: 242
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 7e1f538b111815a7934b798e0dac3587d8962c31
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Adobe Experience Manager的内容片段和体验片段表面上看起来可能�
 <li>由一个或多个定义内容和表示形式的AEM组件组成的可重复使用、复合组件，可形成 <strong>体验</strong> 这本身就说得通</li>
 </ul>
 </td>
-</tr><tr><td><strong>核心租户</strong></td>
+</tr><tr><td><strong>核心原则</strong></td>
 <td><ul>
 <li>以内容为中心</li>
 <li>由定义 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-models.html?lang=en" target="_blank">结构化、基于表单、数据模型。</a></li>
