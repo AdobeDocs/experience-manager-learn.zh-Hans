@@ -4,17 +4,17 @@ description: AEMas a Cloud Service中的批量导入工具允许管理员以安�
 version: Cloud Service
 doc-type: technical-video
 feature: Migration
-jira: KT-6729
+jira: KT-6729, KT-14796
 thumbnail: 329680.jpg
 topic: Migration
 role: Architect, Developer
 level: Beginner
-last-substantial-update: 2022-10-05T00:00:00Z
+last-substantial-update: 2024-01-16T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-duration: 38
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 474
+source-git-commit: 613d280f3aa64d04dd5ef3d636a63d31a4c7bfbd
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,21 @@ ht-degree: 0%
 
 AEMas a Cloud Service中的批量导入工具允许管理员以安全高效的方式从云存储批量导入资源。
 
+>[!BEGINTABS]
+
+>[!TAB 资产视图]
+
+了解如何使用将大量文件导入AEM Assets [资产视图](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [批量导入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html)，并将Dropbox作为示例云存储提供商，以实现清晰且易于遵循的集成流程。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
+
+>[!TAB 管理员视图]
+
+>[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
+
 >[!TIP]
 >
 > 此视频中的输入源仅显示Azure Blob Storage和Amazon S3；但是，可用源会随着时间的推移而继续增长。 有关支持的输入源的完整列表，请参阅产品中的可用选项，或者 [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
-
->[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
 
 ## 计划批量导入
 
@@ -37,3 +47,5 @@ AEMas a Cloud Service中的批量导入工具允许管理员以安全高效的�
 + 每小时、每天或每周定期执行
 
 ![批量导入计划](./assets/bulk-import/schedule.png)
+
+>[!ENDTABS]
