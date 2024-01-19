@@ -9,16 +9,16 @@ level: Beginner
 exl-id: 36c38cb6-6f6a-4328-abf5-7a30059b66ce
 last-substantial-update: 2019-03-20T00:00:00Z
 duration: 96
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 4b88045a626b5e7bd1386e62ee54ac6fe2ce9282
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
 
 # 在AEM Forms中使用Transaction Reporting{#using-transaction-reporting-in-aem-forms}
 
-AEM Forms 6.4.1引入了事务报表功能，用于捕获表单提交次数、使用文档服务呈现文档以及呈现交互式通信（Web和打印渠道）。此功能主要适用于希望根据提交的表单和/或提交的文档数量来许可软件的客户。 此功能当前仅在AEM Forms OSGI栈栈上可用。
+AEM Forms 6.4.1引入了事务报表功能，用于捕获表单提交次数、使用文档服务呈现文档以及呈现交互式通信（Web和打印渠道）。此功能当前仅在AEM Forms OSGI栈栈上可用。
 
 ## 启用交易报告 {#enabling-transaction-reporting}
 
@@ -35,7 +35,7 @@ AEM Forms 6.4.1引入了事务报表功能，用于捕获表单提交次数、�
 
 要查看事务报告，请以管理员身份登录AEM Forms。 只有fd-Administrator组的成员才能查看事务报告。
 
-选择工具 |Forms |查看交易报告
+选择工具 | Forms | 查看交易报告
 
 或者通过单击查看事务报告 [此处](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
 
