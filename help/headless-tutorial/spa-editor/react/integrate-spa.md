@@ -1,5 +1,5 @@
 ---
-title: 集成SPA | AEM SPA Editor和React快速入门
+title: 集成SPA | AEM SPA编辑器和React快速入门
 description: 了解如何将在React中编写的单页应用程序(SPA)的源代码与Adobe Experience Manager (AEM)项目集成。 了解如何使用现代前端工具（如webpack开发服务器）快速开发SPA以支持AEM JSON模型API。
 feature: SPA Editor
 version: Cloud Service
@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-duration: 570
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 507
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1689'
 ht-degree: 0%

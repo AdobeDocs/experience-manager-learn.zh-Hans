@@ -7,8 +7,8 @@ role: Developer
 level: Experienced
 exl-id: 3919efee-6998-48e8-85d7-91b6943d23f9
 last-substantial-update: 2020-01-09T00:00:00Z
-duration: 140
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 118
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
 * 将浏览器指向 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 * 导入并安装setValueWorkflow.zip。 这里有示例工作流模型。
 * 将浏览器指向 [Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 单击创建 |文件上传
+* 单击创建 | 文件上传
 * 上传TimeOfRequestForm.zip
 * 打开 [TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
 * 填写3个必填字段并提交

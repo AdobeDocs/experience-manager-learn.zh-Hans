@@ -10,8 +10,8 @@ topic: Development
 feature: Developer Tools
 jira: KT-8852
 exl-id: 983e0394-7142-481f-bd5e-6c9acefbfdd0
-duration: 78
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 60
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -53,7 +53,7 @@ post.request.jsp中的以下代码只是将POST转发到挂载在/bin/formstutor
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
-在IntelliJ的AEM项目中，右键单击 `apps/bankingapplication` 文件夹并选择“新建” |在“新建包”对话框中，在apps.bankingapplication之后打包并键入SubmitToAEMServlet。 右键单击SubmitToAEMServlet节点并选择repo |获取用于将AEM项目与AEM服务器存储库同步的命令。
+在IntelliJ的AEM项目中，右键单击 `apps/bankingapplication` 文件夹并选择“新建” | 在“新建包”对话框中，将apps.banking应用程序打包并键入SubmitToAEMServlet。 右键单击SubmitToAEMServlet节点并选择repo | 获取用于将AEM项目与AEM服务器存储库同步的命令。
 
 
 ## 配置自适应表单

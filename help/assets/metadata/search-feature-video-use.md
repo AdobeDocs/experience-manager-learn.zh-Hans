@@ -3,8 +3,8 @@ title: 在AEM Assets中使用搜索
 description: 在这些视频中，我们介绍了AEM中引入的一些资产搜索增强功能。 作者可以通过更新各自的元数据属性来提升关键词搜索结果中的某些资产。 我们还查看了Assets OmniSearch谓词的一些高级配置。
 version: 6.4, 6.5
 doc-type: Feature Video
-duration: 388
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 375
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%

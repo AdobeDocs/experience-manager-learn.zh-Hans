@@ -8,8 +8,8 @@ role: Developer
 level: Beginner
 jira: KT-14196
 exl-id: b286c3e9-70df-46e8-b0bc-21599ab1ec06
-duration: 61
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 46
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 1%
@@ -27,7 +27,7 @@ ht-degree: 1%
 ## XFA不基于架构
 
 * 在AEM Forms Designer中打开XDP。
-* 单击“文件” |表单属性 |预览。
+* 单击“文件” | 表单属性 | 预览。
 * 单击生成预览数据。
 * 单击“生成”。
 * 提供有意义的文件名，例如 `form-data.xml`

@@ -9,8 +9,8 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
-duration: 439
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 373
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 0%
@@ -275,7 +275,7 @@ Enterprise Linux具有Apache Webserver包(httpd)的打补丁周期。
 
 相反，它会创建 `.rpmnew` 文件（在原始文件旁边）。  这意味着您将丢失一些您可能想要的更改，并在配置文件夹中创建更多垃圾。
 
-即更新安装期间的RPM将检查 `httpd.conf` 如果它位于 `unaltered` 声明它将 *replace* 文件将得到重要更新。  如果 `httpd.conf` 是 `altered` 那么它 *不会替换* 文件，而是将创建一个名为的引用文件 `httpd.conf.rpmnew` 并且许多所需的修补程序将位于该文件中，不适用于服务启动。
+即，在更新安装过程中，RPM将查看 `httpd.conf` 如果它位于 `unaltered` 声明它将 *replace* 文件将得到重要更新。  如果 `httpd.conf` 是 `altered` 那么它 *不会替换* 文件，而是将创建一个名为的引用文件 `httpd.conf.rpmnew` 并且许多所需的修补程序将位于该文件中，不适用于服务启动。
 
 Enterprise Linux已正确设置，可更好地处理此用例。  它们为您提供了可以扩展或覆盖它们为您设置的默认值的区域。  在httpd的基本安装中，您将找到文件 `/etc/httpd/conf/httpd.conf`，并且其中具有以下语法：
 

@@ -1,5 +1,5 @@
 ---
-title: 创建自定义天气组件 | AEM SPA Editor和React快速入门
+title: 创建自定义天气组件 | AEM SPA编辑器和React快速入门
 description: 了解如何创建要与AEM SPA编辑器一起使用的自定义天气组件。 了解如何开发创作对话框和Sling模型，以扩展JSON模型来填充自定义组件。 使用Open Weather API和React Open Weather组件。
 feature: SPA Editor
 version: Cloud Service
@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-duration: 472
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 417
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 0%

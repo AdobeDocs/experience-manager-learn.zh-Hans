@@ -8,8 +8,8 @@ role: Developer
 level: Intermediate
 exl-id: f2c324a3-cbfa-4942-b3bd-dc47d8a3f7b5
 last-substantial-update: 2021-11-27T00:00:00Z
-duration: 184
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 155
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -142,7 +142,7 @@ public class PrefillAdaptiveForm implements DataXMLProvider {
 * 确保已登录 [用户配置文件](http://localhost:4502/security/users.html) 信息已填写。 该示例查找登录用户的FirstName、LastName和Email属性。
 * [将zip文件的内容下载并解压缩到您的计算机上](assets/prefillservice.zip)
 * 使用以下方式部署prefill.core-1.0.0-SNAPSHOT捆绑包 [AEM Web控制台](http://localhost:4502/system/console/bundles)
-* 使用“创建”导入自适应表单 |文件上传来源 [FormsAndDocuments节](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 使用“创建”导入自适应表单 | 文件上传来源 [FormsAndDocuments节](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 确保 [表单](http://localhost:4502/editor.html/content/forms/af/prefill.html) 正在使用 **“自定义AEM Forms预填充服务”** 作为预填充服务。 这可以从的配置属性中验证 **表单容器** 部分。
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefill/jcr:content?wcmmode=disabled). 您应该会看到表单已填入正确的值。
 

@@ -1,5 +1,5 @@
 ---
-title: 扩展核心组件 | AEM SPA Editor和React快速入门
+title: 扩展核心组件 | AEM SPA编辑器和React快速入门
 description: 了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件的JSON模型。 了解如何向现有组件添加属性和内容是扩展AEM SPA Editor实施功能的强大技术。 了解如何使用委派模式来扩展Sling模型和Sling资源合并器的功能。
 feature: SPA Editor, Core Components
 version: Cloud Service
@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
-duration: 466
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 409
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 0%

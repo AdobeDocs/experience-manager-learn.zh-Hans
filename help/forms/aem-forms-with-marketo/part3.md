@@ -9,8 +9,8 @@ level: Experienced
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-duration: 108
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 86
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 1%
@@ -40,7 +40,7 @@ AEM Forms数据集成允许您配置并连接到不同的数据源。 支持开�
 
 将浏览器指向 [数据集成页面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) 这会列出在您的AEM实例上创建的所有数据集成。
 
-1. 单击创建 |表单数据模型
+1. 单击创建 | 表单数据模型
 1. 提供有意义的标题，例如FormsAndMarketo ，然后单击“下一步”
 1. 选择在之前步骤中配置的数据源，然后单击创建和编辑，以在编辑模式下打开表单数据模型
 1. 展开“FormsAndMarketo”节点。 展开服务节点

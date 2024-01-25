@@ -3,8 +3,8 @@ title: 使用AEM样式系统加快内容速度
 description: 了解如何使用AEM Style Systems让组织中的设计人员、内容作者和开发人员按照客户期望的速度和规模创建和交付体验。
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-duration: 230
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 191
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 0%
@@ -62,7 +62,7 @@ AEM Style Systems有四个主要优点：
    * 这应该是最常用的演绎版
 * 尽量只显示具有效果的样式选项
    * 如果暴露无效组合，请确保它们不会产生负面影响
-   * 例如：一种布局样式，指示图像位置并伴有控制图像位置的无效显示样式
+   * 例如，指示图像位置并且伴有控制图像位置的无效显示样式的布局样式
 * 在组合显示样式上选择布局样式
    * 减少必须检查质量的排列数量
    * 确保遵守品牌标准

@@ -9,8 +9,8 @@ level: Experienced
 jira: KT-9411
 exl-id: 327ffe26-e88e-49f0-9f5a-63e2a92e1c8a
 last-substantial-update: 2021-07-07T00:00:00Z
-duration: 239
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 202
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -86,7 +86,7 @@ $(document).ready(function() {
 ## 为XDP生成示例数据
 
 * 在AEM Forms Designer中打开XDP。
-* 单击“文件” |表单属性 |预览
+* 单击“文件” | 表单属性 | 预览
 * 单击生成预览数据
 * 单击“生成”
 * 提供有意义的文件名，如“form-data.xml”

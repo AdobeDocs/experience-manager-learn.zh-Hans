@@ -8,8 +8,8 @@ role: User
 level: Beginner
 exl-id: 8fbea634-7949-417f-a4d6-9e551fff63f3
 last-substantial-update: 2021-09-10T00:00:00Z
-duration: 374
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 350
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -79,7 +79,7 @@ else
 
 * [下载资源](assets/usingthecodeeditor.zip)
 * [打开Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 单击“创建” |文件上传”并上传您在上一步中下载的文件
+* 单击“创建” | 文件上传”并上传您在上一步中下载的文件
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/simpleform/jcr:content?wcmmode=disabled)
 * 输入申请人姓名并选择已婚的婚姻状况
 * 输入配偶姓名
@@ -92,7 +92,7 @@ else
 * 安装Tomcat（如果尚未安装）。 [此处提供了安装tomcat的说明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
 * [将此zip文件中包含的SampleRest.war文件部署到Tomcat中](assets/sample-rest.zip)
 * [打开Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 单击“创建” |文件上传”并上传您在上一步中下载的文件
+* 单击“创建” | 文件上传”并上传您在上一步中下载的文件
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)
 * 在字段中输入贷款金额并制表符。 这将触发显示贷款期间字段的规则。
 * 选择适当的贷款期间（从其余调用填充贷款期间的项目）

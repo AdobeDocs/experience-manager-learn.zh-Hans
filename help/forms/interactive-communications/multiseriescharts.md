@@ -9,8 +9,8 @@ role: Developer
 level: Beginner
 exl-id: f4af7cb9-cc3b-4bec-9428-ab4f1a3cf41a
 last-substantial-update: 2019-07-07T00:00:00Z
-duration: 454
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 437
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
@@ -41,6 +41,6 @@ AEM Forms 6.5引入了创建和配置多系列图表的功能。 多系列图表
 * [将SeriesChartSampleData.json下载到硬盘。](assets/serieschartsampledata.json) 这是用于填充图表的示例数据。
 * [导航到Forms和文档。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 轻轻选择“MutualFundGrowthFactSheet”交互式通信模板。
-* 单击预览 |打印渠道 |上传示例数据。
+* 单击预览 | 打印渠道 | 上载示例数据。
 * 浏览到作为本文的一部分提供的示例数据文件。
 * 使用上一步中下载的示例数据预览“MutualFundGrowthFactSheet”交互式通信的打印渠道。

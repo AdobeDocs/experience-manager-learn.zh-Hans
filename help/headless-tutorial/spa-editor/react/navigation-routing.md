@@ -1,5 +1,5 @@
 ---
-title: 添加导航和路由 | AEM SPA Editor和React快速入门
+title: 添加导航和路由 | AEM SPA编辑器和React快速入门
 description: 了解如何使用SPA编辑器SDK将映射到AEM页面，从而支持SPA中的多个视图。 动态导航是使用React Router和React Core Components实现的。
 feature: SPA Editor
 version: Cloud Service
@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
-duration: 467
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 423
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 0%

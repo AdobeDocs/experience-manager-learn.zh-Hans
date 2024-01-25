@@ -7,8 +7,8 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 998d3678-7aef-4872-bd62-0e6ea3ff7999
-duration: 818
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 732
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 1%
@@ -163,7 +163,7 @@ AEM允许您直接从内容片段编辑器创建片段引用。 让我们创建�
 | 个人资料图片 | /content/dam/wknd-shared/en/contributors/stacey-roswells.jpg |
 | 传记 | 史黛西·罗斯威尔是一位高超的攀岩家和高山冒险家。 斯泰西出生于马里兰州巴尔的摩，是六个孩子中的老幺。 斯泰西的父亲是美国海军中校，母亲是一位现代舞蹈教练。 斯泰西的家人经常因父亲的职务任务而搬家，并在父亲驻泰国时拍摄了第一张照片。 这也是史黛西学会攀岩的地方。 |
 | 讲师经验级别 | 高级 |
-| 技能 | 攀岩 |滑雪 |背包 |
+| 技能 | 攀岩 | 滑雪 | 背包 |
 
 **Kumar Selvaraj**
 
@@ -175,7 +175,7 @@ AEM允许您直接从内容片段编辑器创建片段引用。 让我们创建�
 | 个人资料图片 | /content/dam/wknd-shared/en/contributors/kumar-selvaraj.jpg |
 | 传记 | Kumar Selvaraj是一名经验丰富的AMGA认证专业讲师，其主要目标是帮助学生提高攀爬和徒步旅行技能。 |
 | 讲师经验级别 | 高级 |
-| 技能 | 攀岩 |背包 |
+| 技能 | 攀岩 | 背包 |
 
 **阿依奥·奥贡塞因德**
 
@@ -187,7 +187,7 @@ AEM允许您直接从内容片段编辑器创建片段引用。 让我们创建�
 | 个人资料图片 | /content/dam/wknd-shared/en/contributors/ayo-ogunseinde-237739.jpg |
 | 传记 | Ayo Ogunseinde是一名职业登山师和背包教练，居住在中加利福利亚州弗雷斯诺市。 Ayo的目标是引导徒步旅行者进行他们最壮观的国家公园冒险。 |
 | 讲师经验级别 | 高级 |
-| 技能 | 攀岩 |骑自行车 |背包 |
+| 技能 | 攀岩 | 循环 | 背包 |
 
 离开 **其他信息** 字段为空。
 

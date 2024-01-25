@@ -8,8 +8,8 @@ role: Developer
 level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
 last-substantial-update: 2019-03-20T00:00:00Z
-duration: 274
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 237
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -166,7 +166,7 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 
 * [转到Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* 单击“创建” |文件上传并上传tag-and-store-in-dam-adaptive-form.zip
+* 单击“创建” | 文件上传并上传tag-and-store-in-dam-adaptive-form.zip
 
 * [导入文章资源](assets/tag-and-store-in-dam-assets.zip) 使用AEM包管理器
 * 打开 [预览模式下的示例表单](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **填写所有字段** 并提交表格。

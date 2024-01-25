@@ -3,8 +3,8 @@ title: 在AEM Sites中开发资源状态
 description: Adobe Experience Manager的资源状态API是一个可插件的框架，用于在AEM的各种编辑器Web UI中公开状态消息传递。
 doc-type: Tutorial
 version: 6.4, 6.5
-duration: 133
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 108
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 2%

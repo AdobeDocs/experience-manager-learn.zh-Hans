@@ -3,8 +3,8 @@ title: 如何使用Adobe Experience Manager提高内容速度
 description: 了解内容周转率及其在企业组织中的价值。 深入探讨有效实施的四项原则以及实施过程中需要注意的隐患。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-duration: 728
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 635
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '2742'
 ht-degree: 0%

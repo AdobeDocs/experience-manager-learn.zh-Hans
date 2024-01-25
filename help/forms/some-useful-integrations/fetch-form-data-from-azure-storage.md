@@ -8,8 +8,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-10-23T00:00:00Z
 jira: KT-14238
-duration: 108
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 88
+exl-id: 77f93aad-0cab-4e52-b0fd-ae5af23a13d0
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%
@@ -89,4 +90,3 @@ if(guid!=null&&!guid.isEmpty())
 * 验证数据是否存储在您选择的Azure存储容器中。 复制Blob ID。
 
 * [预览BankAccount表单](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) 并将Blob ID指定为URL中的guid参数，以便使用Azure存储中的数据预填充表单
-
