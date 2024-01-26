@@ -8,12 +8,12 @@ role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
 jira: KT-11603
-last-substantial-update: 2023-06-02T00:00:00Z
+last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 214
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,8 @@ ht-degree: 0%
 # 部署扩展
 
 要在AEMas a Cloud Service环境中使用，必须部署和批准扩展App Builder应用程序。
+
+![Adobe交换](./assets/deploy/adobe-exchange.png){align="center"}
 
 在部署扩展App Builder应用程序时，需要注意以下几个注意事项：
 
@@ -77,9 +79,9 @@ Adobe Developer Console工作区与AEMas a Cloud Service的环境类型没有任
 ![扩展审批](./assets/deploy/adobe-exchange.png){align="center"}
 
 1. 登录 [Adobe交换](https://exchange.adobe.com/)
-1. 导航到 __管理__ > __等待审阅的应用程序__
-1. __审核__ 扩展App Builder应用程序
-1. 是否可接受扩展更改 __Accept__ 评论。 这会立即在Adobe组织内的所有AEMas a Cloud Service创作服务上注入扩展。
+2. 导航到 __管理__ > __Experience Cloud应用程序__
+3. __审核__ 扩展App Builder应用程序
+4. 是否可接受扩展更改 __Accept__ 评论。 这会立即在Adobe组织内的所有AEMas a Cloud Service创作服务上注入扩展。
 
 扩展请求获得批准后，该扩展将立即在AEMas a Cloud Service创作服务中处于活动状态。
 
@@ -92,7 +94,7 @@ Adobe Developer Console工作区与AEMas a Cloud Service的环境类型没有任
 要部署扩展的新版本，必须先撤销（或删除）该扩展。 当扩展被撤销时，它在AEM控制台中不可用。
 
 1. 登录 [Adobe交换](https://exchange.adobe.com/)
-1. 导航到 __管理__ > __App Builder应用程序__
+1. 导航到 __管理__ > __Experience Cloud应用程序__
 1. __撤销__ 要更新的扩展
 
 ### 部署扩展
@@ -128,10 +130,10 @@ Adobe Developer Console工作区与AEMas a Cloud Service的环境类型没有任
 
 #### 批准部署请求
 
-![扩展审批](./assets/deploy/adobe-exchange.png){align="center"}
+![扩展审批](./assets/deploy/review.png){align="center"}
 
 1. 登录 [Adobe交换](https://exchange.adobe.com/)
-1. 导航到 __管理__ > __等待审阅的应用程序__
+1. 导航到 __管理__ > __Experience Cloud应用程序__
 1. __审核__ 扩展App Builder应用程序
 1. 是否可接受扩展更改 __Accept__ 评论。 这会立即在Adobe组织内的所有AEMas a Cloud Service创作服务上注入扩展。
 
@@ -144,5 +146,5 @@ Adobe Developer Console工作区与AEMas a Cloud Service的环境类型没有任
 要删除扩展，请从Adobe交换中撤消（或删除）该扩展。 撤销扩展后，该扩展将从所有AEMas a Cloud Service创作服务中移除。
 
 1. 登录 [Adobe交换](https://exchange.adobe.com/)
-1. 导航到 __管理__ > __App Builder应用程序__
+1. 导航到 __管理__ > __Experience Cloud应用程序__
 1. __撤销__ 要移除的扩展
