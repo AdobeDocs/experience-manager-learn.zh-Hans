@@ -11,7 +11,7 @@ jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
 duration: 637
-source-git-commit: 2a22a1bbe8474b8b7ca95f2b364fd7540b26b894
+source-git-commit: f48fb02887d909a102718dc5a0c4d1ecd2b1ef34
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 0%
@@ -39,9 +39,9 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
 例如，要预览内容片段控制台的扩展，请执行以下操作：
 
 1. 登录到所需的AEMas a Cloud Service环境。
-2. 选择 __内容片段__ 图标。
-3. 等待在浏览器中加载AEM内容片段控制台。
-4. 从浏览器的地址栏复制AEM内容片段控制台的URL，它应类似于：
+1. 选择 __内容片段__ 图标。
+1. 等待在浏览器中加载AEM内容片段控制台。
+1. 从浏览器的地址栏复制AEM内容片段控制台的URL，它应类似于：
 
    ```
    https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
@@ -80,11 +80,11 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
    https://experience.adobe.com/?devMode=true&ext=https://localhost:9080&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
-2. 将预览URL复制并粘贴到浏览器中。
+1. 将预览URL复制并粘贴到浏览器中。
 
    + 你一开始可能得做，然后定期， [接受HTTPS证书](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users) 对于本地应用程序的主机(`https://localhost:9080`)。
 
-3. AEM UI将加载并插入扩展程序的本地版本以进行验证。
+1. AEM UI将加载并插入扩展程序的本地版本以进行验证。
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
 下面的小书签可预览 [本地开发构建](#verify-local-development-builds) 的扩展 `https://localhost:9080`. 预览 [暂存版本](#verify-stage-builds)，创建小书签，使用 `previewApp` 变量设置为已部署的App Builder应用程序的URL。
 
 1. 在浏览器中创建书签。
-2. 编辑书签。
-3. 为书签提供一个有意义的名称，例如 `AEM UI Extension Preview (localhost:9080)`.
-4. 将书签的URL设置为以下代码：
+1. 编辑书签。
+1. 为书签提供一个有意义的名称，例如 `AEM UI Extension Preview (localhost:9080)`.
+1. 将书签的URL设置为以下代码：
 
    ```javascript
    javascript: (() => {
@@ -161,7 +161,7 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
    })();
    ```
 
-5. 导航到要加载预览扩展的可扩展AEM UI，然后单击小书签。
+1. 导航到要加载预览扩展的可扩展AEM UI，然后单击小书签。
 
 >[!TIP]
 >
