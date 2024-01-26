@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
+source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '2001'
 ht-degree: 2%
 
 ---
@@ -131,6 +131,11 @@ ht-degree: 2%
    + [2 - Zip表单附件](zipping-form-attachments/custom-process-step.md)
    + [3 — 电子邮件表单附件](zipping-form-attachments/populating-list-of-documents.md)
    + [4 — 测试解决方案](zipping-form-attachments/test.md)
++ 使用数据和附件预填表单{#prefill-form-with-data-attachments}
+   + [1 — 简介](prefill-form-with-data-attachments/introduction.md)
+   + [2 — 创建自定义提交](prefill-form-with-data-attachments/create-custom-submit.md)
+   + [3 — 创建OSGi配置](prefill-form-with-data-attachments/create-osgi-configuration.md)
+   + [4 — 创建预填充服务](prefill-form-with-data-attachments/create-prefill-service.md)
 + 存储和检索自适应表单{#store-and-retrieve-af-with-2fa}
    + [1 — 简介](store-and-retrieve-af-with-2fa/introduction.md)
    + [2 — 配置数据源](store-and-retrieve-af-with-2fa/configure-data-source.md)
@@ -151,7 +156,7 @@ ht-degree: 2%
    + [5 — 测试解决方案](import-data-from-pdf-form/test-the-solution.md)
 + 以CSV格式导出提交的数据{#export-submitted-data-csv-format}
    + [导出提交的数据](export-submitted-data-csv-format/export-submitted-data-csv.md)
-+ HTML5 表单{#html5-forms}
++ HTML5 FORMS{#html5-forms}
    + [创建HTML5表单](html5-forms/create-html5-form.md)
    + [处理HTML5表单提交](html5-forms/handle-html5-form-submission.md)
 + AEM Forms和Acrobat Sign{#forms-and-sign}
@@ -163,7 +168,7 @@ ht-degree: 2%
    + [创建和配置自适应表单](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [为单个签名者配置自适应表单](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [为两个签名者配置自适应表单](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
-   + [配置自动化表单转换服务](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
+   + [配置Automated forms conversion服务](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [将PDF表单转换为自适应表单](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [配置已转换的自适应表单](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [在Acrobat Sign中使用XDP模板](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
