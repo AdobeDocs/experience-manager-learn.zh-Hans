@@ -11,10 +11,10 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 377
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 2aec84f0fbd34678a4e25200ae0cdc6396beca95
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 5%
+source-wordcount: '843'
+ht-degree: 4%
 
 ---
 
@@ -27,14 +27,14 @@ AEM Headless内容建模中使用的内容片段，通常引用要在Headless体
 此 `ImageRef` 对于内容引用，类型有四个URL选项：
 
 + `_path` 是AEM中的引用路径，不包含AEM源（主机名）
-+ `_dynamicUrl` 是首选的Web优化图像资产的完整URL。
++ `_dynamicUrl` 是用于图像资产的Web优化投放的URL。
    + 此 `_dynamicUrl` 不包括AEM源，因此域(AEM Author或AEM Publish服务)必须由客户端应用程序提供。
 + `_authorUrl` 是AEM创作实例上图像资源的完整URL
    + [AEM创作](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 可用于提供headless应用程序的预览体验。
 + `_publishUrl` 是AEM Publish上图像资源的完整URL
    + [AEM发布](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 通常是Headless应用程序的生产部署从中显示图像的地方。
 
-此 `_dynamicUrl` 是用于图像资产的首选URL，应当取代的 `_path`， `_authorUrl`、和 `_publishUrl` 尽可能。
+此 `_dynamicUrl` 是用于图像资产投放的推荐URL，应当取代使用 `_path`， `_authorUrl`、和 `_publishUrl` 尽可能。
 
 |                                | AEM as a Cloud Service | AEMAS A CLOUD SERVICERDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
@@ -96,17 +96,17 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 
 此 `_assetTransform` 定义 `_dynamicUrl` 构建用于优化提供的图像演绎版。 Web优化图像URL也可通过更改URL的查询参数在客户端进行调整。
 
-| GraphQL参数 | URL parameter | 描述 | 必填 | GraphQL变量值 | URL参数值 | 示例URL参数 |
-|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | 不适用 | 图像资源的格式。 | ✔ | `GIF`， `PNG`， `PNG8`， `JPG`， `PJPG`， `BJPG`，  `WEBP`， `WEBPLL`， `WEBPLY` | 不适用 | 不适用 |
-| `seoName` | 不适用 | URL中文件段的名称。 如果未提供，则使用图像资产名称。 | ✘ | 字母数字， `-`，或 `_` | 不适用 | 不适用 |
-| `crop` | `crop` | 裁切框架从图像中删除，必须在图像大小范围内 | ✘ | 正整数，定义原始图像尺寸范围内的裁切区域 | 以逗号分隔的数字坐标字符串 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
-| `size` | `size` | 输出图像的大小（高度和宽度），以像素为单位。 | ✘ | 正整数 | 按顺序以逗号分隔的正整数 `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
-| `rotation` | `rotate` | 图像的旋转（以度为单位）。 | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `?rotate=90` |
-| `flip` | `flip` | 翻转图像。 | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `?flip=h` |
-| `quality` | `quality` | 图像质量占原始质量的百分比。 | ✘ | 1-100 | 1-100 | `?quality=80` |
-| `width` | `width` | 输出图像的宽度（像素）。 时间 `size` 提供 `width` 将被忽略。 | ✘ | 正整数 | 正整数 | `?width=1600` |
-| `preferWebP` | `preferwebp` | 如果 `true` 并且，如果浏览器支持WebP，则AEM将为其提供服务，而不考虑 `format`. | ✘ | `true`、`false` | `true`、`false` | `?preferwebp=true` |
+| GraphQL参数 | 描述 | 必填 | GraphQL变量值 |
+|:---------|:----------|:-------------------------------|:--:|:--------------------------|
+| `format` | 图像资源的格式。 | ✔ | `GIF`， `PNG`， `PNG8`， `JPG`， `PJPG`， `BJPG`， `WEBP`， `WEBPLL`， `WEBPLY` |
+| `seoName` | URL中文件段的名称。 如果未提供，则使用图像资产名称。 | ✘ | 字母数字， `-`，或 `_` |
+| `crop` | 裁切框架从图像中删除，必须在图像大小范围内 | ✘ | 正整数，定义原始图像尺寸范围内的裁切区域 |
+| `size` | 输出图像的大小（高度和宽度），以像素为单位。 | ✘ | 正整数 |
+| `rotation` | 图像的旋转（以度为单位）。 | ✘ | `R90`、`R180`、`R270` |
+| `flip` | 翻转图像。 | ✘ | `HORIZONTAL`、`VERTICAL`、`HORIZONTAL_AND_VERTICAL` |
+| `quality` | 图像质量占原始质量的百分比。 | ✘ | 1-100 |
+| `width` | 输出图像的宽度（像素）。 时间 `size` 提供 `width` 将被忽略。 | ✘ | 正整数 |
+| `preferWebP` | 如果 `true` 并且，如果浏览器支持WebP，则AEM将为其提供服务，而不考虑 `format`. | ✘ | `true`、`false` |
 
 ## GraphQL响应
 
@@ -128,7 +128,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 }
 ```
 
-要加载应用程序中引用图像的Web优化图像，请使用 `_dynamicUrl` 的 `primaryImage` 作为图像的源URL。
+要在应用程序中加载引用图像的Web优化图像，请使用 `_dynamicUrl` 的 `primaryImage` 作为图像的源URL。
 
 在React中，从AEM Publish显示Web优化图像如下所示：
 
@@ -145,7 +145,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 
 ## 响应式URL
 
-上例显示了使用单大小图像，但在Web体验中，通常需要响应式图像集。 响应式图像可以使用实现 [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 或 [图片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 以下代码片段显示了如何使用 `_dynamicUrl` 作为基础，并附加不同的宽度参数，以向不同的响应视图供电。 不仅可以 `width` 查询参数可以使用，但客户端可以添加其他查询参数，以根据其需求进一步优化图像资产。
+上例显示了使用单大小图像，但在Web体验中，通常需要响应式图像集。 响应式图像可以使用实现 [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 或 [图片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 以下代码片段显示了如何使用 `_dynamicUrl` 作为基地。 `width` 是一个URL参数，随后可附加到该参数 `_dynamicUrl` 用于为不同的响应视图供电。
 
 ```javascript
 // The AEM host is usually read from a environment variable of the SPA.
