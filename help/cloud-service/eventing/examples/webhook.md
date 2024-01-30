@@ -8,10 +8,10 @@ role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
 duration: 156
-last-substantial-update: 2023-12-07T00:00:00Z
+last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 # Webhook和AEM活动
 
 了解如何在webhook上接收AEM事件并查看事件详细信息，例如有效负载、标头和元数据。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
 
 在此示例中，利用Adobe提供的 _托管webhook_ 允许您接收AEM事件，而无需设置自己的webhook。 此Adobe提供的webhook托管在 [故障](https://glitch.com/)，该平台以提供基于Web的环境而闻名，有助于构建和部署Web应用程序。 但是，如果愿意，也可以使用您自己的webhook选项。
 

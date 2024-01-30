@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: aa6cd605c617de45003a96b1c14e37f055a8c566
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 16%
+source-wordcount: '1119'
+ht-degree: 17%
 
 ---
 
@@ -149,8 +149,8 @@ ht-degree: 16%
    + [SAML 2.0](./authentication/saml-2-0.md)
 + 高级联网{#networking}
    + [概述](./networking/advanced-networking.md)
-   + [灵活端口出口](./networking/flexible-port-egress.md)
-   + [专用出口IP地址](./networking/dedicated-egress-ip-address.md)
+   + [灵活的端口出口](./networking/flexible-port-egress.md)
+   + [专用出口 IP 地址](./networking/dedicated-egress-ip-address.md)
    + [虚拟专用网络](./networking/vpn.md)
    + 代码示例{#examples}
       + [非标准端口上的HTTP/HTTPS，实现灵活端口出口](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
@@ -169,6 +169,8 @@ ht-degree: 16%
    + 示例{#examples}
       + [Webhook — 接收AEM活动](./eventing/examples/webhook.md)
       + [日记 — 加载AEM事件](./eventing/examples/journaling.md)
+      + [Adobe I/O Runtime操作 — 接收AEM事件](./eventing/examples/runtime-action.md)
+      + [Adobe I/O Runtime操作 — 处理AEM事件](./eventing/examples/event-processing-using-runtime-action.md)
 + 迁移 {#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
    + [批量导入资源](./migration/bulk-import.md)

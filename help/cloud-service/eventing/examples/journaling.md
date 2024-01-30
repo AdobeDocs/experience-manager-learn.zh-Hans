@@ -8,10 +8,10 @@ role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
 duration: 163
-last-substantial-update: 2023-12-07T00:00:00Z
+last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 # 日志记录和AEM事件
 
 了解如何从日志中检索初始AEM事件集并浏览有关每个事件的详细信息。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427052?quality=12&learn=on)
 
 日记帐是一种使用AEM事件的拉取方法，日记帐是事件的有序列表。 使用Adobe I/O事件日记API，您可以从日记中获取AEM事件并在应用程序中处理它们。 此方法允许您根据指定的节奏管理事件并高效地批量处理它们。 请参阅 [日志](https://developer.adobe.com/events/docs/guides/journaling_intro/) 以获得深入的见解，包括保留期、分页等基本注意事项。
 
