@@ -8,9 +8,9 @@ level: Beginner
 version: 6.5
 topic: Integrations
 jira: KT-14794
-source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '104'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 要在AEM Forms中实施上述用例，您需要满足以下条件
 
-* AEM Forms 6.5.19实例
+* AEM Forms 6.5.19或更高版本实例
 * [Azure门户帐户](https://portal.azure.com/)
 
 

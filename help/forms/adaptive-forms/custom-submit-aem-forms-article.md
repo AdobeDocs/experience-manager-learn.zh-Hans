@@ -9,9 +9,9 @@ level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
 duration: 59
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,11 @@ ht-degree: 1%
 # 在AEM Forms中编写自定义提交 {#writing-a-custom-submit-in-aem-forms}
 
 为自适应表单创建自定义提交操作的快速轻松方法
+
+>[!NOTE]
+>本文中的代码不适用于基于核心组件的自适应表单。
+>[此处提供了基于核心组件的自适应表单的等效文章](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=en)
+
 
 本文将引导您完成创建自定义提交操作以处理自适应Forms提交所需的步骤。
 

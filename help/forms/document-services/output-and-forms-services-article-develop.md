@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
-source-git-commit: 959683f23b7b04e315a5a68c13045e1f7973cf94
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '559'
 ht-degree: 0%
 
 ---
@@ -61,12 +61,18 @@ Line2从请求中提取saveLocation
 1. /content/AemFormsSamples/outputservice
 1. /content/AemFormsSamples/renderxdp
 1. 搜索“Sling引用过滤器”
-1. 选中“允许为空”复选框。 （此设置仅用于测试目的）有多种方法来测试示例代码。 最快、最轻松的是使用Postman应用程序。 Postman允许您向服务器发出POST请求。 在您的系统上安装Postman应用程序。
-启动应用程序并输入以下URL以测试导出数据API
+1. 选中“允许为空”复选框。 （此设置仅用于测试目的）
 
-确保从下拉列表中选择“POST” http://localhost:4502/content/AemFormsSamples/exportdata.html确保将“授权”指定为“基本身份验证”。 指定AEM Server用户名和密码。导航到“正文”选项卡，然后指定请求参数，如下图所示
-![导出](assets/postexport.png)
-然后单击Send按钮
+## 测试样本
+
+可通过多种方法来测试示例代码。 最快、最轻松的是使用Postman应用程序。 Postman允许您向服务器发出POST请求。
+
+* 在您的系统上安装Postman应用程序。
+* 启动应用程序并输入相应的URL
+* 确保您从下拉列表中选择“POST”
+* 确保将“Authorization”指定为“Basic Auth”。 指定AEM Server用户名和密码
+* 在body选项卡中指定请求参数
+* 单击发送按钮
 
 此软件包包含4个示例。 以下段落说明了何时使用输出服务或Forms服务、服务的URL以及每个服务期望的输入参数
 

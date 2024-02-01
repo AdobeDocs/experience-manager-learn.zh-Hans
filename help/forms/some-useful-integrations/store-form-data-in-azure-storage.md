@@ -10,9 +10,9 @@ last-substantial-update: 2023-08-14T00:00:00Z
 jira: KT-13781
 exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
 duration: 159
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ ht-degree: 0%
 
 本文说明如何进行REST调用以将提交的AEM Forms数据存储在Azure Storage中。
 为了能够在Azure Storage中存储提交的表单数据，必须执行以下步骤。
+
+>[!NOTE]
+>本文中的代码不适用于基于核心组件的自适应表单。 [此处提供了基于核心组件的自适应表单的等效文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+
 
 ## 创建Azure存储帐户
 
@@ -45,6 +49,7 @@ ht-degree: 0%
 ## 提供Blob SAS令牌和存储URI
 
 为了使代码更通用，可以使用OSGi配置来配置这两个属性，如下所示。 此 _**服饰**_ 是存储帐户的名称， _**formsubmissions**_ 是将存储数据的容器。
+请确保存储URI末尾具有/，并且SAS令牌的开头为？
 ![osgi配置](./assets/azure-portal-osgi-configuration.png)
 
 
@@ -98,7 +103,8 @@ https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken�
 
 * [导入自适应表单示例](./assets/bank-account-sample-form.zip)
 
-* 使用OSGi配置控制台在Azure门户配置中指定适当的值
+* [使用OSGi配置控制台在Azure门户配置中指定适当的值](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
+
 * [预览和提交BankAccount表单](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
 * 验证数据是否存储在您选择的Azure存储容器中。 复制Blob ID。
