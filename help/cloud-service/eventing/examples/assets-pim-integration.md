@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: 5d8ee3b9ab6fb974f7faebb1d0ce42d699e2063c
+source-git-commit: f150a2517c4cafe55917e1aa50dca297c9bb3bc5
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
@@ -102,7 +102,7 @@ ht-degree: 0%
 
 要执行元数据检索和更新，请首先更新自动创建的 _通用_ 中的操作代码 `src/dx-excshell-1/actions/generic` 文件夹。
 
-有关完整代码，请参阅附加的WKND-Assets-PIM-Integration.zip文件，以下部分突出显示关键文件。
+请参阅附件中的 [WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip) 文件以了解完整代码，以下部分突出显示关键文件。
 
 - 此 `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` 文件模拟PIM API调用以检索其他元数据，如SKU和供应商名称。
 
