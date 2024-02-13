@@ -12,8 +12,8 @@ thumbnail: 30177.jpg
 doc-type: Tutorial
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-duration: 618
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 1778
+source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 在本章中，让我们通过一个简单的示例来探索Adobe Experience Manager (AEM) Sites组件的基础技术 `HelloWorld` 示例。 对现有组件进行了细微的修改，涉及的主题包括创作、HTL、Sling模型、客户端库。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 查看所需的工具和设置说明 [本地开发环境](./overview.md#local-dev-environment).
 

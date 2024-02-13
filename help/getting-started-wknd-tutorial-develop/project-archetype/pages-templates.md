@@ -11,8 +11,8 @@ thumbnail: 30214.jpg
 doc-type: Tutorial
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
 recommendations: noDisplay, noCatalog
-duration: 1073
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 2217
+source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
 workflow-type: tm+mt
 source-wordcount: '2855'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 在本章中，让我们探讨基础页面组件与可编辑模板之间的关系。 了解如何根据中的某些模型构建无样式的文章模板 [Adobe XD](https://helpx.adobe.com/support/xd.html). 在构建模板的过程中，将涵盖可编辑模板的核心组件和高级策略配置。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment).
 
