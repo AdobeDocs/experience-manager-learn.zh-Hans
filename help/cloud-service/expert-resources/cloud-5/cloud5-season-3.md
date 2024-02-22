@@ -4,9 +4,9 @@ description: 第三季让您通过与曾参与复杂项目工作的专家进行�
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: da8d584e04b5ef375ef5731ea1d5f9e2c0438b2a
+source-git-commit: f2dceed935f563e83092f8e14133746f4126a212
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -42,8 +42,20 @@ ht-degree: 0%
                 探索如何以最佳方式将第三方搜索集成到Edge Delivery Services中。
             </p>
         </td>   
-         <td>           
-         </td>
+        <td>
+            <a href="./season-3/cloud5-rum.md">
+                <img alt="Real User Monitoring (RUM)" src="https://video.tv.adobe.com/v/3427495?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-rum.md">
+                <strong>Real User Monitoring (RUM)</strong></a>        
+                <br/><em>与AEM Engineering的James Talbot和Varun Mitra</em>
+            </div>
+            <p>
+                <br/>
+                Explore Real User Monitoring (RUM)适用于Edge Delivery Services。
+            </p>
+        </td>   
          <td>           
          </td> 
   </tr>  
