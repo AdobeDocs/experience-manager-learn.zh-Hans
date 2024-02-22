@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
 duration: 267
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 0deeaac90e9d181a60b407e17087650e0be1ff28
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -99,11 +99,27 @@ Dispatcher在其场文件中有一个配置部分：
 }
 ```
 
-此配置会告知Dispatcher每300秒从其AEM实例中获取此URL，以获取我们希望允许通过的项目列表。
+此 `/delay` 以秒为单位的参数不按固定间隔运行，而是按条件检查。 Dispatcher评估 `/file` （存储已识别的虚名URL的列表）时。 此 `/file` 如果当前时刻与 `/file`的上次修改小于 `/delay` 持续时间。 刷新 `/file` 在以下两种情况下发生：
+
+1. 传入请求针对的URL未缓存或未列在 `/file`.
+1. 至少 `/delay` 自以下时间以来经过了秒数： `/file` 上次更新时间。
+
+此机制旨在防御拒绝服务(DoS)攻击，否则此类攻击会利用虚名URL功能用请求淹没Dispatcher。
+
+更简单地说， `/file` 仅当请求到达的URL中尚不存在时，才会更新包含虚名URL `/file` 如果 `/file`的上次修改早于 `/delay` 句点。
+
+要明确触发 `/file`，则在确保所需的URL之后，您可以请求不存在的URL `/delay` 自上次更新以来已经过去了时间。 用于此目的的示例URL包括：
+
+- `https://dispatcher-host-name.com/this-vanity-url-does-not-exist`
+- `https://dispatcher-host-name.com/please-hand-me-that-planet-maestro`
+- `https://dispatcher-host-name.com/random-vanity-url`
+
+此方法强制Dispatcher更新 `/file`，提供了指定的 `/delay` 自上次修改后间隔已过。
 
 它将响应的缓存存储在 `/file` 参数，因此在此示例中 `/tmp/vanity_urls`
 
 因此，如果您通过URI访问AEM实例，则可以看到它获取的内容：
+
 ![从/libs/granite/dispatcher/content/vanityUrls.html呈现的内容屏幕截图](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")
 
 它实际上是一个非常简单的列表
