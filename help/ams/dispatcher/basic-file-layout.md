@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
 duration: 354
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -59,20 +59,23 @@ ht-degree: 0%
 - 允许修补完全受操作系统支持的周期，不会出现任何冲突或手动调整
 - 避免错误标记的文件上下文的SELinux违规
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-AdobeManaged Services服务器映像通常具有小型操作系统根驱动器。  我们将数据放入一个单独的卷中，该卷通常装载在“/mnt”中。然后，我们将使用该卷而不是下列默认目录的默认值
+>[!BEGINSHADEBOX &quot;Note&quot;]
+
+AdobeManaged Services服务器映像通常具有小型操作系统根驱动器。  我们将数据放入一个单独的卷中，该卷通常装载在 `/mnt`
+然后，我们将使用该卷而不是下列默认目录的默认值
 
 `DocumentRoot`
 - 默认：`/var/www/html`
 - AMS：`/mnt/var/www/html`
 
 `Log Directory`
-- 默认： `/var/log/httpd`
-- AMS： `/mnt/var/log/httpd`
+- 默认： `/var/log/httpd`
+- AMS： `/mnt/var/log/httpd`
 
 请记住，旧目录和新目录将映射回原始装载点，以消除混淆。
 使用单独卷并不重要，但值得注意
-</div>
+
+>[!ENDSHADEBOX]
 
 ## AMS插件
 
@@ -292,9 +295,9 @@ IncludeOptional conf.d/.conf
 LoadModule dispatcher_module modules/mod_dispatcher.so
 ```
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-我们没有修改Apache提供的任何现有文件。  相反，只是将我们的添加到他们打算使用的目录中。
-</div><br/>
+>[!NOTE]
+>
+>我们没有修改Apache提供的任何现有文件。 相反，我们只是将我们的添加到他们将要使用的目录中。
 
 现在，我们在文件中使用了模块 <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> 它会初始化模块并加载特定于初始模块的配置文件
 

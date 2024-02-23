@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 252
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -59,10 +59,9 @@ method/url/query/protocol/path/selectors/extension/suffix instead.
 
 ## 过滤器拒绝
 
-
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-如果日志级别设置得过低，即使发生拒绝时，也不会始终显示这些条目。 将其设置为“信息”或“调试”，以确保您能够查看过滤器是否拒绝请求。
-</div>
+>[!NOTE]
+>
+>如果日志级别设置得过低，即使发生拒绝时，也不会始终显示这些条目。 将其设置为“信息”或“调试”，以确保您能够查看过滤器是否拒绝请求。
 
 示例日志条目：
 
@@ -76,10 +75,9 @@ Fri Jul 20 17:25:48 2018 D pid 25939 (tid 139937517123328) Filter rejects: GET /
 Fri Jul 20 22:16:55 2018 I pid 128803 "GET /system/console/" ! - 8ms publishfarm/-
 ```
 
-<div style="color: #000;border-left: 6px solid red;background-color:#ddffff;"><b>注意：</b>
-
-了解Dispatcher的规则已设置为过滤掉该请求。 在这种情况下，尝试访问的页面会被有意拒绝，我们对此不必执行任何操作。
-</div>
+>[!CAUTION]
+>
+>了解Dispatcher的规则已设置为过滤掉该请求。 在这种情况下，尝试访问的页面会被有意拒绝，我们对此不必执行任何操作。
 
 如果您的日志类似于以下条目：
 
@@ -136,9 +134,9 @@ Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit rat
 
 使这一数字尽可能高。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-即使您在场文件中将缓存设置为缓存所有内容，您也可能过于频繁或过于激进地刷新，这可能导致发生缓存命中率的百分比降低
-</div>
+>[!NOTE]
+>
+>即使您在场文件中将缓存设置为缓存所有内容，您也可能过于频繁或过于激进地刷新，这可能导致发生缓存命中率的百分比降低
 
 ## 缺少目录
 

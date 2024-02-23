@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
 duration: 266
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -309,9 +309,8 @@ $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_w
 
 现在，我们只需重新加载Web服务器服务并使用新域即可！
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-
-请注意，我们仅更改了需要更改的片段，并利用了基线配置文件附带的现有包含和代码。  我们只需要标出需要改变的元素。  简化操作并让我们能够维护更少的代码
-</div>
+>[!NOTE]
+>
+>请注意，我们仅更改了需要更改的片段，并利用了基线配置文件附带的现有包含和代码。  我们只需要标出需要改变的元素。  简化操作并让我们能够维护更少的代码
 
 [下一步 — > Dispatcher运行状况检查](./health-check.md)

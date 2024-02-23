@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 duration: 478
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
 | 文件 | 文件目标 | 描述 |
 | ---- | ---------------- | ----------- |
 | 文件名`.conf` | `/etc/httpd/conf.d/` | 默认的Enterprise Linux安装使用此文件扩展名和包含文件夹作为覆盖在httpd.conf中声明的设置的位置，并允许您在Apache中的全局级别添加其他功能。 |
-| 文件名`.vhost` | 已暂存： `/etc/httpd/conf.d/available_vhosts/`<br>活动： `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b> .vhost文件不会复制到enabled_vhosts文件夹中，而是使用符号链接指向available_vhosts/\*.vhost文件的相对路径</div></u><br><br> | \*.vhost （虚拟主机）文件是 `<VirtualHosts>`  条目以匹配主机名，并允许Apache使用不同的规则处理每个域流量。 从 `.vhost` 文件，其他文件，如 `rewrites`， `whitelisting`， `etc` 将被包括。 |
+| 文件名`.vhost` | 已暂存： `/etc/httpd/conf.d/available_vhosts/`<br>活动： `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><b>注意：</b> .vhost文件不会复制到enabled_vhosts文件夹中，而是使用符号链接指向available_vhosts/\*.vhost文件的相对路径</u><br><br> | \*.vhost （虚拟主机）文件是 `<VirtualHosts>`  条目以匹配主机名，并允许Apache使用不同的规则处理每个域流量。 从 `.vhost` 文件，其他文件，如 `rewrites`， `whitelisting`， `etc` 将被包括。 |
 | 文件名`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules` 文件存储 `mod_rewrite` 要由包含和使用的显式规则 `vhost` 文件 |
 | 文件名`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules` 文件包含在 `*.vhost` 文件。 它包含IP正则表达式或允许拒绝规则，以允许将IP列入白名单。 如果您尝试根据IP地址限制查看虚拟主机，您将生成这些文件之一，并将其从您的网站中包含 `*.vhost` 文件 |
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 | 文件 | 文件目标 | 描述 |
 | --- | --- | --- |
 | 文件名`.any` | `/etc/httpd/conf.dispatcher.d/` | AEM Dispatcher Apache模块从获取其设置 `*.any` 文件。 默认父包含文件为 `conf.dispatcher.d/dispatcher.any` |
-| 文件名`_farm.any` | 已暂存： `/etc/httpd/conf.dispatcher.d/available_farms/`<br>活动： `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b> 这些场文件将不会复制到 `enabled_farms` 文件夹但使用 `symlinks` 到相对路径 `available_farms/*_farm.any` 文件 </div> <br/>`*_farm.any` 文件包含在 `conf.dispatcher.d/dispatcher.any` 文件。 这些父场文件可用于控制每个渲染或网站类型的模块行为。 文件创建于 `available_farms` 目录并已启用 `symlink` 到 `enabled_farms` 目录。  <br/>它会根据中的名称自动包含这些字段。 `dispatcher.any` 文件。<br/><b>基线</b> 场文件开头为 `000_` 以确保它们最先被加载。<br><b>自定义</b> 场文件应随后加载，方法是在开始其编号方案时 `100_` 以确保正确的包含行为。 |
+| 文件名`_farm.any` | 已暂存： `/etc/httpd/conf.dispatcher.d/available_farms/`<br>活动： `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>注意：</b> 这些场文件将不会复制到 `enabled_farms` 文件夹但使用 `symlinks` 到相对路径 `available_farms/*_farm.any` 文件 <br/>`*_farm.any` 文件包含在 `conf.dispatcher.d/dispatcher.any` 文件。 这些父场文件可用于控制每个渲染或网站类型的模块行为。 文件创建于 `available_farms` 目录并已启用 `symlink` 到 `enabled_farms` 目录。  <br/>它会根据中的名称自动包含这些字段。 `dispatcher.any` 文件。<br/><b>基线</b> 场文件开头为 `000_` 以确保它们最先被加载。<br><b>自定义</b> 场文件应随后加载，方法是在开始其编号方案时 `100_` 以确保正确的包含行为。 |
 | 文件名`_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any` 文件包含在 `conf.dispatcher.d/enabled_farms/*_farm.any` 文件。 每个场都有一组规则，这些规则会更改应该过滤掉的流量，而不是发送给渲染程序。 |
 | 文件名`_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any` 文件包含在 `conf.dispatcher.d/enabled_farms/*_farm.any` 文件。 这些文件是主机名或URI路径的列表，将通过blob匹配来匹配，以确定使用哪个渲染器为该请求提供服务 |
 | 文件名`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any` 文件包含在 `conf.dispatcher.d/enabled_farms/*_farm.any` 文件。 这些文件指定缓存哪些项目以及不缓存哪些项目 |

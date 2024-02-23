@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 299b32c3-7922-4eee-aa3a-56039a654f70
 duration: 307
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1089'
 ht-degree: 1%
 
 ---
@@ -147,10 +147,9 @@ RUNMODE='sites'
 
 不能更改这些内容，但可以在配置文件中利用这些内容
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-
-这是因为该文件仅在服务启动时包括在内。  需要重新启动服务才能获取更改。  这意味着仅重新加载是不够的，而是需要重新启动
-</div>
+>[!NOTE]
+>
+>这是因为该文件仅在服务启动时包括在内。  需要重新启动服务才能获取更改。  这意味着仅重新加载是不够的，而是需要重新启动
 
 ### 变量文件(`.vars`)
 

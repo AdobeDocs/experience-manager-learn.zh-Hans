@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 461873a1-1edf-43a3-b4a3-14134f855d86
 duration: 653
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '2227'
+source-wordcount: '2225'
 ht-degree: 0%
 
 ---
@@ -133,16 +133,17 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 将此文件级别设置过低会导致刷新请求清除的内容超出预期。  这进而会导致更频繁的缓存流失，使缓存中提供的请求减少，并导致性能问题。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
+>[!BEGINSHADEBOX &quot;Note&quot;]
 
-设置 `statfilelevel` 在合理的水平上。  查看您的文件夹结构，确保设置为允许简洁的刷新而不必遍历太多目录。   在系统性能测试期间对其进行测试并确保它符合您的需求。
+设置 `statfilelevel` 在合理的水平上。 查看您的文件夹结构，确保设置为允许简洁的刷新而不必遍历太多目录。 在系统性能测试期间对其进行测试并确保它符合您的需求。
 
-一个支持语言的站点就是一个很好的示例。  典型的内容树具有以下目录
+一个支持语言的站点就是一个很好的示例。 典型的内容树具有以下目录
 
 `/content/brand1/en/us/`
 
-在此示例中，使用stat文件级别设置4。  这将确保您何时刷新位于下的内容 <b>`us`</b> 不会导致语言文件夹也刷新的文件夹。
-</div>
+在此示例中，使用stat文件级别设置4。 这将确保您何时刷新位于下的内容 **`us`** 不会导致语言文件夹也刷新的文件夹。
+
+>[!ENDSHADEBOX]
 
 ### STAT文件时间戳握手
 
@@ -227,11 +228,11 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 您可以指定希望Dispatcher填充并管理的目录作为缓存目录。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-此目录应该与Web服务器配置使用的域的Apache文档根目录设置匹配。
-
-出于多种原因，不适合将每个场的嵌套docroot文件夹放置在Apache文档根目录的子文件夹下中。
-</div>
+>[!NOTE]
+>
+>此目录应该与Web服务器配置使用的域的Apache文档根目录设置匹配。
+>
+>出于多种原因，不适合将每个场的嵌套docroot文件夹放置在Apache文档根目录的子文件夹下中。
 
 ### stat文件级别
 
@@ -275,13 +276,11 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
    - `/var/www/html/content/damn/brand1/en/.stat`
    - `/var/www/html/content/damn/brand1/en/us/.stat`
 
-
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-
-请记住，发生时间戳握手时，它会查找最近的 `.stat` 文件。
-
-拥有 `.stat` 文件级别0和stat文件位置 `/var/www/html/.stat` 表示存在于其下的内容 `/var/www/html/content/dam/brand1/en/us/` 将查找最近的 `.stat` 并遍历5个文件夹以查找唯一的 `.stat` 位于级别0且将日期与该级别进行比较的文件。  这意味着如此高级别的刷新将最终使所有缓存项目失效。
-</div>
+>[!NOTE]
+>
+>请记住，发生时间戳握手时，它会查找最近的 `.stat` 文件。
+>
+>拥有 `.stat` 文件级别0和stat文件位置 `/var/www/html/.stat` 表示存在于其下的内容 `/var/www/html/content/dam/brand1/en/us/` 将查找最近的 `.stat` 并遍历5个文件夹以查找唯一的 `.stat` 位于级别0且将日期与该级别进行比较的文件。 这意味着如此高级别的刷新将最终使所有缓存项目失效。
 
 ### 允许失效
 
