@@ -4,9 +4,9 @@ description: 第三季让您通过与曾参与复杂项目工作的专家进行�
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: 8a88caeb8d894eb281321fc0b28fd41621c5c8db
+source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,19 @@ ht-degree: 0%
                 Explore Real User Monitoring (RUM)适用于Edge Delivery Services。
             </p>
         </td>   
-         <td>           
-         </td> 
+ <td>
+            <a href="./season-3/cloud5-edge-workers.md">
+                <img alt="边缘工作者" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-edge-workers.md">
+                <strong>边缘工作者</strong></a>        
+                <br/><em>与AEM Engineering的James Talbot和Amol Anand</em>
+            </div>
+            <p>
+                <br/>
+                探索具有Edge Delivery Services的边缘工作人员的重要性。
+            </p>
+        </td>   
   </tr>  
 </table>
