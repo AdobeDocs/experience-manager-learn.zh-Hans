@@ -12,10 +12,10 @@ thumbnail: KT-11603.png
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 9164423b-a609-4bc5-9777-112d229ae748
 duration: 388
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: bb902089a709ab00853f4856d9bf42c18a5097e7
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 0%
+source-wordcount: '773'
+ht-degree: 1%
 
 ---
 
@@ -329,6 +329,27 @@ AEM内容片段编辑器是用于编辑内容片段的可扩展UI。 [创建AEM�
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-badges.md" title="富文本编辑器徽章">富文本编辑器徽章</a></p>
           <p class="is-size-6">在内容片段编辑器中向富文本编辑器添加徽章。</p>
           <a href="./examples/editor-rte-badges.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Custom fields">
+    <div class="card" style="height: 100%">
+      <div class="card-image">
+        <figure class="image is-16by9">
+          <a href="./examples/editor-custom-field.md" title="自定义字段" tabindex="-1">
+            <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3427585?format=jpeg" alt="自定义字段">
+          </a>
+        </figure>
+      </div>
+      <div class="card-content is-padded-small">
+        <div class="content">
+          <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-custom-field.md" title="自定义字段">自定义字段</a></p>
+          <p class="is-size-6">创建自定义内容片段字段。</p>
+          <a href="./examples/editor-custom-field.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
             <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
           </a>
         </div>
