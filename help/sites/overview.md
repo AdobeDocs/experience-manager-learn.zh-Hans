@@ -6,10 +6,10 @@ sub-product: Experience Manager Sites
 topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 16%
+source-wordcount: '175'
+ht-degree: 9%
 
 ---
 
@@ -18,21 +18,6 @@ ht-degree: 16%
 {{edge-delivery-services}}
 
 Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本用户指南包含有关AEM Sites的众多特性和功能的视频和教程。
-
-<div id="whats-new-section">
-
-## 新增功能
-
-* **[AEM和Edge Delivery Services概述（视频）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=zh-Hans)**
-  *在此信息性概述视频中探索全面的Adobe Experience Manager (AEM)，包括AEM Sites、AEM Assets、AEM Headless、AEM Forms和Edge Delivery Services。*
-
-* **[什么是AEM和Edge Delivery Services？ (视频)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html)**
-  *了解Adobe Experience Manager (AEM)和Edge Delivery Services提供的价值。*
-
-* **[带有Edge Delivery Services的AEM架构概述（视频）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=zh-Hans)**
-  *全面了解AEMas a Cloud Service的架构！*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -49,7 +34,7 @@ Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本�
 <tr>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans">
-      <img alt="《AEM Sites 快速入门》 - WKND 教程" src="./assets/aem-wknd-tutorial.png" />
+      <img alt="AEM Sites - WKND 教程快速入门" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans">
@@ -66,7 +51,7 @@ Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本�
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans">
-    <strong>AEM Headless 快速入门</strong>
+    <strong>AEM Headless快速入门</strong>
     </a>
     </div>
     <p>

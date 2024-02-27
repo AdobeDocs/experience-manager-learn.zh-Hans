@@ -6,9 +6,9 @@ role: Developer
 sub-product: Experience Manager Forms
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 duration: 88
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -16,21 +16,6 @@ ht-degree: 0%
 # AEM Forms教程和视频 {#overview}
 
 Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用于创建、管理、发布和更新复杂的数字表单，同时与后端流程、业务规则和数据集成。 本用户指南包含了有关AEM Forms的众多特性和功能的视频和教程
-
-<div id="whats-new-section">
-
-## 新增功能
-
-* **[处理调用表单数据模型服务步骤中的错误消息](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
-  *工作流模型中的变量是一种根据其数据类型存储值的方法*
-
-* **[交互式通信文档中的多系列图表（视频）](./interactive-communications/multiseriescharts.md)**
-  *在同一张图表中绘制多个系列。 多系列图表通常与折线图、条形图、柱形图类型结合使用。*
-
-* **[创建可重用工作流模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
-  *创建未绑定到特定表单的工作流模型*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -88,8 +73,6 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
 </table>
 
 </div>
-
-
 
 
 ## 其他资源
