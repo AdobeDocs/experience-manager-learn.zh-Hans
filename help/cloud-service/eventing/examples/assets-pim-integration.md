@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: 6ef17e61190f58942dcf9345b2ea660d972a8f7e
+source-git-commit: 6c01dc8a0e8fd3cc69b21c78da8678e872dcef0c
 workflow-type: tm+mt
 source-wordcount: '1116'
 ht-degree: 0%
@@ -26,6 +26,8 @@ ht-degree: 0%
 >本教程使用实验性AEMas a Cloud ServiceAPI。 要访问这些API，您必须接受预发行软件协议，并由Adobe工程团队为您的环境手动启用这些API。 请求访问，请联系Adobe支持部门。
 
 了解如何将AEM Assets与第三方系统(如产品信息管理(PIM)或产品线管理(PLM)系统)集成以更新资源元数据 **使用本机AEM IO事件**. 在收到AEM Assets事件后，可以根据业务需求在AEM、PIM或两个系统中更新资源元数据。 但是，此示例演示了如何在AEM中更新资源元数据。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427592?quality=12&learn=on)
 
 运行资源元数据更新 **AEM外部的代码**， [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)，则使用无服务器平台。
 
