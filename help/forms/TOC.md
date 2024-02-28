@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
+source-git-commit: acfd982ce471c8510cb59ed4d353f1d47dcfb5dc
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '2009'
 ht-degree: 2%
 
 ---
@@ -276,6 +276,7 @@ ht-degree: 2%
    + [用于生成带片段的PDF的ECMA脚本](document-services/using-fragments-in-output-service-watched-folder.md)
    + [从一个数据文件生成多个PDF](document-services/generate-multi-record-pdf.md)
    + [在移动设备表单提交时生成PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [在基于核心组件的表单提交中生成PDF](document-services/generate-pdf-from-core-component-form-submission.md)
    + [从移动设备表单生成交互式PDF](document-services/render-interactive-form-using-api.md)
    + [从自适应表单生成交互式DoR](document-services/generate-interactive-dor.md)
    + [配置Reader扩展凭据](document-services/configuring-reader-extension-osgi.md)
