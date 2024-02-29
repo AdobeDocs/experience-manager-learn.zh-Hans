@@ -9,7 +9,7 @@ level: Intermediate
 doc-type: Article
 exl-id: c9ee29d4-a8a5-4e61-bc99-498674887da5
 duration: 524
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 3b6de935b5f1fb5ee2d0e50372188f1eba7baeaa
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 0%
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 为了确保对此核心包所做的更改不会中断系统的功能，我们建议由高级开发人员或开发人员团队进行监督。 一种选择是让一个团队管理此包的所有更改；另一种选择是让团队提交由这些资源审查和合并的拉取请求。 重要的是，治理模型要由团队设计和同意，并且开发人员应遵循该模型。
 
-## 管理部署范围  {#managing-deployment-scope}
+## 管理部署范围 {#managing-deployment-scope}
 
 由于不同的团队将其代码部署到同一存储库，因此它们不会覆盖彼此的更改非常重要。 AEM提供了一种在部署内容包（即过滤器）时控制此操作的机制。 xml文件。 过滤器之间不应重叠，这一点很重要。  xml文件，否则，一个团队的部署可能会擦除另一个团队以前的部署。 要说明这一点，请参阅以下精心编制的过滤器文件与有问题的过滤器文件的示例：
 
