@@ -1,6 +1,6 @@
 ---
-title: 在App Builder操作中生成访问标记
-description: 了解如何使用JWT凭据生成访问令牌，以便在App Builder操作中使用。
+title: 在应用程序生成器操作中生成JWT访问令牌
+description: 了解如何使用JWT凭据生成访问令牌以用于App Builder操作。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,18 +10,18 @@ jira: KT-11743
 last-substantial-update: 2023-01-17T00:00:00Z
 exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
 duration: 161
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: c77dd9c2872e7e43863d83837cedbff50a7d3c1a
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 0%
+source-wordcount: '456'
+ht-degree: 1%
 
 ---
 
-# 在App Builder操作中生成访问标记
+# 在应用程序生成器操作中生成JWT访问令牌
 
 App Builder操作可能需要与与Adobe Developer Console项目关联的AdobeAPI进行交互，并且还将部署App Builder应用程序。
 
-为此，可能需要执行App Builder操作以生成与所需Adobe Developer控制台项目关联的访问令牌。
+为此，可能需要执行App Builder操作来生成与所需Adobe Developer控制台项目关联的JWT访问令牌。
 
 >[!IMPORTANT]
 >
