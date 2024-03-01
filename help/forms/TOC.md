@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: acfd982ce471c8510cb59ed4d353f1d47dcfb5dc
+source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '2032'
 ht-degree: 2%
 
 ---
@@ -285,6 +285,14 @@ ht-degree: 2%
    + [证明文档](document-services/certifying-documents-aem-forms-tutorial.md)
    + [组合表单附件](document-services/assemble-form-attachments.md)
    + [有用的实用工具服务](document-services/useful-utility-services.md)
++ Forms Designer{#forms-designer}
+   + [创建您的第一个表单](forms-designer/create-simple-form.md)
+   + [编写表单脚本](forms-designer/first-script-designer.md)
+   + [XML数据绑定](forms-designer/xml-data-binding.md)
+   + [数据库绑定](forms-designer/binding-to-mysql-db.md)
+   + [使用涂写签名](forms-designer/scribble-signature-form.md)
+   + [使用数字签名](forms-designer/adding-dig-signature-field.md)
+   + [Reader扩展表单](forms-designer/reader-extending-j2ee.md)
 + 打印渠道的交互式通信
 {#ic-print-channel-tutorial}
    + [1 — 简介](ic-print-channel-tutorial/introduction.md)
