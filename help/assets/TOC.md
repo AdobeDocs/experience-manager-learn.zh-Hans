@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: bd66ad8698e2017cb53b91cae8f1cea92903f05b
+source-git-commit: 7680564ef0058a362ebf47622e50f96eec2866d7
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '412'
 ht-degree: 17%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 17%
    + [关联和取消关联](./authoring/relate-unrelate.md)
 
 + 协作{#collaboration}
+   + [观看](./collaboration/watch.md)
    + [时间轴和收件箱](./collaboration/timeline-and-inbox.md)
    + [注释和批注](./collaboration/comments-and-annotations.md)
    + [签入和签出](./collaboration/check-in-and-check-out.md)
@@ -56,7 +57,7 @@ ht-degree: 17%
    + [注释PDF输出](./advanced/customizing-annotations-pdf-output.md)
    + [资产分析](./advanced/asset-insights-launch-tutorial.md)
    + [Assets报表](./advanced/asset-reports.md)
-   + [已阻止的标记](./advanced/blocked-tags.md)
+   + [已阻止标记](./advanced/blocked-tags.md)
    + [提取存档](./advanced/extract-archive.md)
    + [权限(CUG)](./advanced/closed-user-groups.md)
    + [水印](./advanced/watermarks.md)
@@ -73,7 +74,7 @@ ht-degree: 17%
 
 + 共享和分发{#sharing}
    + [下载资产](./sharing/download.md)
-   + [发布资产](./sharing/publish.md)
+   + [发布资源](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
