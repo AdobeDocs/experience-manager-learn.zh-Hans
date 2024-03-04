@@ -13,7 +13,7 @@ last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
 duration: 190
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 0a9a9c6deeab70f12906874b571dc3cf4e6a3305
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 应在本地安装以下工具：
 
@@ -65,8 +65,8 @@ Android应用程序旨在连接到 __AEM发布__ 但是，如果在Android应用
 
    ```plain
    contentApi.endpoint=https://author-p123-e456.adobeaemcloud.com
-   contentApi.user=admin
-   contentApi.password=admin
+   contentApi.user=my-special-android-app-user
+   contentApi.password=password123
    ```
 
 1. 下载 [Android虚拟设备](https://developer.android.com/studio/run/managing-avds) （最低API 28）。
