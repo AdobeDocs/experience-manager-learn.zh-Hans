@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: c77dd9c2872e7e43863d83837cedbff50a7d3c1a
+source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1148'
 ht-degree: 17%
 
 ---
@@ -388,3 +388,4 @@ ht-degree: 17%
          + [第三方搜索](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [Real User Monitoring (RUM)](./expert-resources/cloud-5/season-3/cloud5-rum.md)
          + [边缘工作者](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
+         + [在Edge Delivery Services中发布、取消发布事件](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
