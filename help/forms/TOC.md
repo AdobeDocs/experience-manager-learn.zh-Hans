@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
+source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
 workflow-type: tm+mt
-source-wordcount: '2032'
+source-wordcount: '2034'
 ht-degree: 2%
 
 ---
@@ -220,12 +220,13 @@ ht-degree: 2%
    + [处理PDF提交](offline-mobile-form-submission/part-two.md)
    + [用于审查PDF的工作流](offline-mobile-form-submission/part-three.md)
    + [在您的系统上部署](offline-mobile-form-submission/part-four.md)
-+ 查询提交的数据{#querying-submitted-data}
-   + [简介](querying-submitted-data/introduction.md)
-   + [基于JSON架构创建表单](querying-submitted-data/part1.md)
-   + [存储提交的数据](querying-submitted-data/part2.md)
-   + [存储JSON架构](querying-submitted-data/part3.md)
-   + [查询提交的数据](querying-submitted-data/part4.md)
++ 查询表单提交{#query-form-submissions}
+   + [简介](query-form-submissions/introduction.md)
+   + [创建可搜索字段](query-form-submissions/part1.md)
+   + [创建自定义提交](query-form-submissions/part2.md)
+   + [构建查询界面](query-form-submissions/part3.md)
+   + [写入预填充服务](query-form-submissions/part4.md)
+   + [部署示例](query-form-submissions/part5.md)
 + 在Forms Portal中列出自定义资源类型{#listing-custom-asset-types}
    + [Part1 — 注册自定义资源类型](listing-custom-asset-types/part1.md)
    + [第2部分 — 创建自定义模板](listing-custom-asset-types/part2.md)
@@ -286,7 +287,9 @@ ht-degree: 2%
    + [组合表单附件](document-services/assemble-form-attachments.md)
    + [有用的实用工具服务](document-services/useful-utility-services.md)
 + Forms Designer{#forms-designer}
+   + [设计视图](forms-designer/design-view.md)
    + [创建您的第一个表单](forms-designer/create-simple-form.md)
+   + [创建表单模板](forms-designer/creating-form-template.md)
    + [编写表单脚本](forms-designer/first-script-designer.md)
    + [XML数据绑定](forms-designer/xml-data-binding.md)
    + [数据库绑定](forms-designer/binding-to-mysql-db.md)
