@@ -7,9 +7,9 @@ version: 6.5
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 156
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Acroform是使用Acrobat创建的表单。 您可以使用Acrobat从头开始创
 
 >[!NOTE]
 >
->如果要发送可填写的acroform以供使用Acrobat Sign进行签名，请相应地命名字段。 例如，您可以命名字段 **Sig_es_:signer1:签名**. 这是Acrobat Sign了解的语法。
+>如果要发送可填写的acroform以供使用Acrobat Sign进行签名，请相应地命名字段。 例如，您可以命名字段 **`Sig_es_:signer1:signature`**. 这是Acrobat Sign了解的语法。
 
 >[!NOTE]
 >

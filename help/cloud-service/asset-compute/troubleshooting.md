@@ -11,9 +11,9 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
 duration: 335
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ### asset compute项目中缺少Console.json文件{#missing-console-json}
 
-+ __错误：__ 错误：验证(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js)时缺少必需的文件:XX:YY)在async setupAssetCompute (.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __错误：__ 错误：验证时缺少必需的文件(`.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY`)在异步setupAssetCompute (`.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY`)
 + __原因：__ 此 `console.json` asset compute项目的根目录中缺少文件
 + __分辨率：__ 下载新的 `console.json` 形成您的Adobe I/O项目
    1. 在console.adobe.io中，打开将Asset compute项目配置为使用的Adobe I/O项目

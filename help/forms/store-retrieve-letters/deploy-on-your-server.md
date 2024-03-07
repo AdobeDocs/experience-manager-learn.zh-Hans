@@ -10,9 +10,9 @@ level: Intermediate
 jira: KT-10208
 exl-id: 9053ee29-436a-439a-b592-c3fef9852ea4
 duration: 42
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '143'
 ht-degree: 2%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 2%
 
 | 属性名称 | 属性值 |
 |---|---|
-| 数据源名称 | SaveAndContinue |
-| JDBC驱动程序类 | com.mysql.cj.jdbc.Driver |
-| JDBC连接URL | jdbc:mysql://localhost：3306/aemformstutorial？autoReconnect=true&amp;useSSL=false&amp;characterEncoding=utf8&amp;useUnicode=true |
+| 数据源名称 | `SaveAndContinue` |
+| JDBC驱动程序类 | `com.mysql.cj.jdbc.Driver` |
+| JDBC连接URL | `jdbc:mysql://localhost:3306/aemformstutorial?autoReconnect=true&useSSL=false&characterEncoding=utf8&useUnicode=true` |
 
 * [部署icdrafts包](assets/icdrafts.icdrafts.core-1.0-SNAPSHOT.jar)
 * 确保您 _使用CCRDocumentInstanceService启用保存_ 在OSGi配置中，如下所示

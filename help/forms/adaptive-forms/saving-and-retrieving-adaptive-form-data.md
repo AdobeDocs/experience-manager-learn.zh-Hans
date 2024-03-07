@@ -8,9 +8,9 @@ type: Tutorial
 version: 6.4,6.5
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 691
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -32,11 +32,11 @@ ht-degree: 0%
 
 Apache Sling连接池化数据源配置为指向将用于存储自适应表单数据的数据库。 以下屏幕截图显示了我的实例的配置。 可以复制和粘贴以下属性
 
-* 数据源名称：aemformstutorial — 这是我的代码中使用的名称。
+* `Datasource Name:aemformstutorial`  — 这是我的代码中使用的名称。
 
-* JDBC驱动程序类：com.mysql.jdbc.Driver
+* `JDBC Driver Class:com.mysql.jdbc.Driver`
 
-* JDBC连接URL:jdbc:mysql://localhost:3306/aemformstutorial
+* `JDBC Connection URL:jdbc:mysql://localhost:3306/aemformstutorial`
 
 ![connectionpool](assets/storingdata.PNG)
 
