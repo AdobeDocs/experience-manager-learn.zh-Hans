@@ -8,9 +8,10 @@ role: Admin, Developer
 level: Intermediate
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
+exl-id: 0f41b049-bbbb-47c8-a3f8-25b5c68bdd39
+source-git-commit: cc32f64dfa6494a62dcb7f7cbfc8461faf6cddb1
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '32'
 ht-degree: 0%
 
 ---
@@ -20,4 +21,3 @@ ht-degree: 0%
 探索如何以最佳方式将第三方搜索集成到Edge Delivery Services中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427040?quality=12&learn=on)
-
