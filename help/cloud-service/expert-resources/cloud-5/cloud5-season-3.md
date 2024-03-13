@@ -4,13 +4,13 @@ description: 第三季让您通过与曾参与复杂项目工作的专家进行�
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
+exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
+source-git-commit: 958dc50dfef808470139a2cab214c6cfeb98ff55
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
-
 
 # Cloud 5第3季
 
@@ -84,6 +84,20 @@ ht-degree: 0%
             <p>
                 <br/>
                 探索在Edge Delivery Services中发布和取消发布时触发的事件以及用于使用这些事件的用例和示例。
+            </p>
+        </td>  
+        <td>
+            <a href="./season-3/cloud5-query-indexes.md">
+                <img alt="查询索引和Excel公式" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-query-indexes.md">
+                <strong>查询索引和Excel公式</strong></a>        
+                <br/><em>与AEM Engineering的James Talbot和Varun Mitra</em>
+            </div>
+            <p>
+                <br/>
+                探索查询索引以及如何编写Excel公式以处理和排序数据集。
             </p>
         </td>   
     </tr>  
