@@ -6,25 +6,27 @@ feature: Edge Delivery Services
 topic: Development
 role: Developer
 level: Beginner
-jira: KT-14643
+jira: KT-14643, KT-15202
 doc-type: Catalog
-duration: 30
-last-substantial-update: 2023-05-12T00:00:00Z
+duration: 660
+last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
-source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
+source-git-commit: 9f8b20842cf69439f2d46deecf61154b20881ee0
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 13%
+source-wordcount: '331'
+ht-degree: 18%
 
 ---
 
 # Edge Delivery Services视频
 
-了解如何使用Edge Delivery快速创建网站
+了解如何使用Edge Delivery Services快速创建网站。
 
-查看 [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html) 有关Edge Delivery及其功能的完整详细信息。
+>[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
 
-## Edge Delivery Services快速入门
+查看 [文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) 有关Edge Delivery Services及其功能的完整详细信息。
+
+## Edge Delivery Services 快速入门
 
 <div class="columns is-multiline">
     <!-- Prerequisites -->
@@ -33,11 +35,11 @@ ht-degree: 13%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/prerequisites.md" title="前提条件"
+            <a href="./developing/prerequisites.md" title="先决条件"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425709/?format=jpeg"
-                alt="前提条件">
+                alt="先决条件">
             </a>
           </figure>
         </div>
@@ -46,7 +48,7 @@ ht-degree: 13%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">5 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/prerequisites.md" title="前提条件">开发人员先决条件</a>
+              <a href="./developing/prerequisites.md" title="先决条件">开发人员先决条件</a>
             </p>
             <p class="is-size-6">开始使用Edge Delivery Services开发所需的内容。</p>
             <a href="./developing/prerequisites.md" class="spectrum-Button
@@ -75,7 +77,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分钟</p>
+              class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/aem-boilerplate.md" title="使用样板模板">AEM样板</a>
             </p>
@@ -106,7 +108,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分钟</p>
+              class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/content-repository.md" title="链接Google Drive">链接Google Drive</a>
             </p>
@@ -137,7 +139,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分钟</p>
+              class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/content-repository.md" title="链接Sharepoint">链接SharePoint</a>
             </p>
@@ -168,7 +170,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分钟</p>
+              class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/preview-and-publish.md" title="预览和发布内容">预览和发布内容</a>
             </p>
@@ -200,7 +202,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分钟</p>
+              class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/sidekick.md" title="使用 Sidekick">使用AEM Sidekick</a>
             </p>
@@ -232,7 +234,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分钟</p>
+              class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/document-structure.md" title="文档结构">文档结构</a>
             </p>
