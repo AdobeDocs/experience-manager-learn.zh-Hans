@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
+source-git-commit: 29f1cc8d891c57e9878c650fd8e02a32bfa73051
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 18%
+source-wordcount: '500'
+ht-degree: 19%
 
 ---
 
@@ -56,6 +56,8 @@ ht-degree: 18%
    + [启动项](page-authoring/launches.md)
    + 向同行学习 {#expert-advice}
       + [站点层次结构提示](page-authoring/expert-advice/site-hierarchy.md)
++ 创作AI {#generative-ai}
+   + [生成变体](./generative-ai/generate-variations.md)
 + 内容片段 {#content-fragments}
    + [内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [创作内容片段](content-fragments/content-fragments-feature-video-use.md)
@@ -69,7 +71,7 @@ ht-degree: 18%
 + Edge Delivery Services{#edge-delivery-services}
    + [概述](./edge-delivery-services/overview.md)
    + 开发{#developing}
-      + [前提条件](edge-delivery-services/developing/prerequisites.md)
+      + [先决条件](edge-delivery-services/developing/prerequisites.md)
       + [AEM样板](edge-delivery-services/developing/aem-boilerplate.md)
       + [内容存储库](edge-delivery-services/developing/content-repository.md)
       + [预览和发布](edge-delivery-services/developing/preview-and-publish.md)
@@ -106,7 +108,7 @@ ht-degree: 18%
    + [Web优化图像交付](components/web-optimized-image-delivery.md)
    + [组件控制台](components/components-console-feature-video-use.md)
 + SEO {#seo}
-   + [站点地图](./seo/sitemaps.md)
+   + [Sitemap](./seo/sitemaps.md)
 + 单页应用程序 {#spa-editor}
    + [使用SPA编辑器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
