@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 29f1cc8d891c57e9878c650fd8e02a32bfa73051
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '498'
 ht-degree: 19%
 
 ---
@@ -137,12 +137,12 @@ ht-degree: 19%
       + [生成FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [使用Platform Web SDK的分析](integrations/platform/analytics-using-web-sdk.md)
-   + Experience Platform数据收集标记(Launch) {#experience-platform-data-collection-tags}
+   + Adobe Experience Platform中的标记 {#experience-platform-data-collection-tags}
       + [概述](integrations/experience-platform/data-collection/tags/overview.md)
       + [创建标记属性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [使用IMS连接AEM和标记属性](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
-      + [创建AEM LaunchCloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
-      + [调试标记(Launch)实施](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
+      + [创建AEM标记Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [调试标记实施](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe 客户端数据层{#adobe-client-data-layer}
       + [使用Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自定义Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-customize.md)
@@ -152,7 +152,7 @@ ht-degree: 19%
       + [使用Analysis Workspace分析数据](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
       + [概述](integrations/adobe-target/overview.md)
-      + [将Target扩展添加到Launch属性](integrations/adobe-target/add-target-launch-extension.md)
+      + [将Target扩展添加到“标记”属性](integrations/adobe-target/add-target-launch-extension.md)
       + [加载和触发Target调用](integrations/adobe-target/load-and-fire-target.md)
       + [创建Adobe TargetCloud Service帐户](integrations/adobe-target/setup-aem-target-cloud-service.md)
       + [将体验片段导出到Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)

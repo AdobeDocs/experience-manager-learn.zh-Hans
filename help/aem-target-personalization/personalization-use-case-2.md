@@ -10,9 +10,9 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
 duration: 159
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -38,11 +38,11 @@ WKND站点重新设计了其主页，并希望将其当前主页访客重定向�
 
 ![AEM Target场景1](assets/personalization-use-case-2/aem-target-use-case-2.png)
 
-### 前提条件
+### 先决条件
 
 * **AEM**
    * [AEM创作和发布实例](./implementation.md#getting-aem) 分别在localhost 4502和4503上运行。
-   * [使用Adobe Experience Platform Launch将AEM与Adobe Target集成](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [使用标记与Adobe Target集成的AEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud配置了以下解决方案

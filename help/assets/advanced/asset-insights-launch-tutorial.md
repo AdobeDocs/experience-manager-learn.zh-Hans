@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Assets和Launch设置Adobe分析
-description: 在这个由五部分组成的视频系列中，我们将介绍通过Launch by Adobe部署的用于Experience Manager的资源分析的设置和配置。
+title: 使用AEM Assets和标记设置资源分析
+description: 在这个由五部分组成的视频系列中，我们将介绍通过标记部署的用于Experience Manager的资源分析的设置和配置。
 feature: Asset Insights
 version: 6.4, 6.5
 topic: Integrations
@@ -12,16 +12,16 @@ badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-titl
 doc-type: Tutorial
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
 duration: 2051
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
 
-# 使用AEM Assets和Adobe Experience Platform Launch设置资源分析
+# 使用AEM Assets和标记设置资源分析
 
-在这个由五部分组成的视频系列中，我们将介绍通过Adobe启动项部署的用于Experience Manager的资源分析的设置和配置。
+在这个由五部分组成的视频系列中，我们将介绍通过标记部署的用于Experience Manager的资源分析的设置和配置。
 
 ## 第1部分：资产分析概述 {#overview}
 
@@ -81,9 +81,9 @@ ht-degree: 0%
 * 共享密钥(可从以下获取： *Adobe Analytics >管理员>公司设置> Web服务*)。
 * 报表包（确保选择用于资产报表的正确报表包）
 
-## 第4部分：使用Adobe Experience Platform Launch添加Adobe Analytics扩展 {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
+## 第4部分：使用标记添加Adobe Analytics扩展 {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
 
-添加Adobe Analytics扩展、创建页面加载规则并将AEM与Launch与Adobe IMS技术帐户集成。
+添加Adobe Analytics扩展、创建页面加载规则并将AEM与标记与Adobe IMS技术帐户集成。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
@@ -175,13 +175,13 @@ document.querySelectorAll('[data-aem-asset-id]').forEach(function(element) {
 ### 控制台调试语句 {#console-debug-statements}
 
 ```javascript
-//Launch Build Info
+// Tags build info
 _satellite.buildInfo
 
 //Enables debug messages
 _satellite.setDebug(true);
 
-//Asset Insight JS Object
+//Asset Insight JavaScript Object
 assetAnalytics
 
 //List of trackable images
@@ -190,10 +190,8 @@ document.querySelectorAll(".cmp-image__image");
 
 视频中引用了两个Google Chrome浏览器扩展作为调试Analytics的方法。 其他浏览器也提供了类似的扩展。
 
-* [Launch交换机Chrome扩展](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en)
-* [Adobe Experience Cloud调试器](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-也可以使用以下Chrome扩展将DTM切换到调试模式： [Launch和DTM交换机](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en). 这样将更容易查看是否存在与DTM部署相关的任何错误。 此外，您可以通过任何浏览器手动将DTM切换到调试模式 *开发人员工具 — > JS控制台* 添加以下代码片段：
 
 ## 第5部分：测试分析跟踪和同步洞察数据{#analytics-tracking-asset-insights}
 

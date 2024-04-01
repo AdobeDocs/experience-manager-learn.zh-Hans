@@ -14,9 +14,9 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2330
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1529'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419872?quality=12&learn=on)
 
-## 前提条件
+## 先决条件
 
 使用Platform Web SDK集成Adobe Analytics时，需要满足以下条件。
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 + 访问 **架构** 在“数据管理”下
 + 访问 **数据集** 在“数据管理”下
 + 访问 **数据流** 在数据收集下
-+ 访问 **标记** （以前称为Launch）位于“数据收集”下
++ 访问 **标记**  在数据收集下
 
 如果您没有必要权限，您的系统管理员使用 [Adobe Admin Console](https://adminconsole.adobe.com/) 可以授予必要的权限。
 

@@ -14,9 +14,9 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1360
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1232'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 完成此设置后，您便奠定了坚实的基础。 此外，您还可以使用如下应用程序来推进Experience Platform实施 [Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hans)， [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)、和 [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html). 高级实施通过标准化Web和客户数据来帮助提高客户参与度。
 
-## 前提条件
+## 先决条件
 
 集成Experience PlatformWeb SDK时，需要满足以下条件。
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 + 访问 **架构** 在“数据管理”下
 + 访问 **数据集** 在“数据管理”下
 + 访问 **数据流** 在数据收集下
-+ 访问 **标记** （以前称为Launch）位于“数据收集”下
++ 访问 **标记** 在数据收集下
 
 如果您没有必要权限，您的系统管理员使用 [Adobe Admin Console](https://adminconsole.adobe.com/) 可以授予必要的权限。
 
@@ -75,7 +75,7 @@ ht-degree: 1%
 
 ## 创建标记属性 — Experience Platform
 
-了解如何在Experience Platform中创建标记（以前称为Launch）资产以将Web SDK JavaScript库添加到WKND网站。 新定义的标记属性具有以下资源：
+了解如何在Experience Platform中创建标记属性以将Web SDK JavaScript库添加到WKND网站。 新定义的标记属性具有以下资源：
 
 + 标记扩展： [核心](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) 和 [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
 + 数据元素：使用WKND站点的Adobe客户端数据层提取page-name、site-section和host-name的自定义代码类型的数据元素。 此外，XDM对象类型数据元素也符合之前新创建的WKND XDM模式内部版本 [创建XDM架构](#create-xdm-schema---experience-platform) 步骤。
@@ -139,26 +139,26 @@ ht-degree: 1%
   var pageShownEventHandler = function(evt) {
   // defensive coding to avoid a null pointer exception
   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-      //trigger Launch Rule and pass event
+      // trigger tags Rule and pass event
       console.debug("cmp:show event: " + evt.eventInfo.path);
       var event = {
-          //include the path of the component that triggered the event
+          // include the path of the component that triggered the event
           path: evt.eventInfo.path,
-          //get the state of the component that triggered the event
+          // get the state of the component that triggered the event
           component: window.adobeDataLayer.getState(evt.eventInfo.path)
       };
   
-      //Trigger the Launch Rule, passing in the new 'event' object
-      // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
+      // Trigger the tags Rule, passing in the new 'event' object
+      // the 'event' obj can now be referenced by the reserved name 'event' by other tags data elements
       // i.e 'event.component['someKey']'
       trigger(event);
       }
   }
   
-  //set the namespace to avoid a potential race condition
+  // set the namespace to avoid a potential race condition
   window.adobeDataLayer = window.adobeDataLayer || [];
   
-  //push the event listener for cmp:show into the data layer
+  // push the event listener for cmp:show into the data layer
   window.adobeDataLayer.push(function (dl) {
       //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
       dl.addEventListener("cmp:show", pageShownEventHandler);
@@ -174,9 +174,9 @@ ht-degree: 1%
 
 ## 将标记属性连接到AEM
 
-了解如何通过Adobe IMS和AdobeAEM中的Launch配置，将最近创建的标记属性链接到AEM。 建立AEMas a Cloud Service环境后，会自动生成多个Adobe IMS技术帐户配置，包括AdobeLaunch。 但是，对于AEM 6.5版本，您必须手动配置一个。
+了解如何通过AEM中的Adobe IMS和Adobe Experience Platform配置中的标记，将最近创建的标记属性链接到AEM。 建立AEMas a Cloud Service环境后，会自动生成多个Adobe IMS技术帐户配置，包括标记。 但是，对于AEM 6.5版本，您必须手动配置一个。
 
-在链接tag属性后，WKND网站可以使用AdobeLaunch云服务配置将标记属性的JavaScript库加载到网页上。
+在链接标记属性后，WKND网站可以使用Adobe Experience Platform云服务配置中的标记将标记属性的JavaScript库加载到网页上。
 
 ### 验证WKND上是否加载了标记属性
 

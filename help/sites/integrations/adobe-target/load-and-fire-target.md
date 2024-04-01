@@ -1,6 +1,6 @@
 ---
 title: 加载和触发Target调用
-description: 了解如何使用Launch规则加载参数并将参数传递到页面请求，以及从网站页面触发Target调用。 使用Adobe客户端数据层可检索页面信息并将其作为参数传递，这样您便可以收集和存储有关访客在网页上的体验数据，然后轻松访问这些数据。
+description: 了解如何使用标记规则从网站页面加载、将参数传递到页面请求以及触发Target调用。
 feature: Core Components, Adobe Client Data Layer
 version: Cloud Service
 jira: KT-6133
@@ -13,28 +13,28 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 duration: 610
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '550'
 ht-degree: 1%
 
 ---
 
 # 加载和触发Target调用 {#load-fire-target}
 
-了解如何使用Launch规则加载参数并将参数传递到页面请求，以及从网站页面触发Target调用。 网页信息是使用Adobe客户端数据层检索并作为参数传递的，通过该数据层，您可以收集和存储有关访客在网页上的体验数据，然后轻松访问这些数据。
+了解如何使用标记规则从网站页面加载、将参数传递到页面请求以及触发Target调用。 网页信息是使用Adobe客户端数据层检索并作为参数传递的，通过该数据层，您可以收集和存储有关访客在网页上的体验数据，然后轻松访问这些数据。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
 ## 页面加载规则
 
-Adobe客户端数据层是事件驱动的数据层。 加载AEM Page数据层时，它会触发一个事件 `cmp:show` . 在视频中， `Launch Library Loaded` 使用自定义事件调用规则。 在下面，您可以找到视频中用于自定义事件和数据元素的代码片段。
+Adobe客户端数据层是事件驱动的数据层。 加载AEM Page数据层时，它会触发一个事件 `cmp:show` . 在视频中， `tags Library Loaded` 使用自定义事件调用规则。 在下面，您可以找到视频中用于自定义事件和数据元素的代码片段。
 
 ### 自定义页面显示事件{#page-event}
 
 ![页面显示的事件配置和自定义代码](assets/load-and-fire-target-call.png)
 
-在Launch资产中，添加新的 **事件** 到 **规则**
+在tags属性中，添加 **事件** 到 **规则**
 
 + __扩展名：__ 核心
 + __事件类型：__ 自定义代码
@@ -53,7 +53,7 @@ var pageShownEventHandler = function(coreComponentEvent) {
         // Debug the AEM Component path the show event is associated with
         console.debug("cmp:show event: " + coreComponentEvent.eventInfo.path);
 
-        // Create the Launch Event object
+        // Create the tags Event object
         var launchEvent = {
             // Include the ID of the AEM Component that triggered the event
             id: coreComponentEvent.eventInfo.path,
@@ -61,14 +61,14 @@ var pageShownEventHandler = function(coreComponentEvent) {
             component: window.adobeDataLayer.getState(coreComponentEvent.eventInfo.path)
         };
 
-        //Trigger the Launch Rule, passing in the new `event` object
-        // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
+        // Trigger the tags Rule, passing in the new `event` object
+        // the `event` obj can now be referenced by the reserved name `event` by other tags data elements
         // i.e `event.component['someKey']`
         trigger(launchEvent);
    }
 }
 
-// With the AEM Core Component event handler, that proxies the event and relevant information to Adobe Launch, defined above...
+// With the AEM Core Component event handler, that proxies the event and relevant information to Data Collection, defined above...
 
 // Initialize the adobeDataLayer global object in a safe way
 window.adobeDataLayer = window.adobeDataLayer || [];
@@ -80,20 +80,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-自定义函数定义 `pageShownEventHandler`，并侦听AEM核心组件发出的事件，派生核心组件的相关信息，将其打包到事件对象中，然后在其有效负荷处使用派生的事件信息触发Launch事件。
+自定义函数定义 `pageShownEventHandler`，并侦听AEM核心组件发出的事件，派生核心组件的相关信息，将其打包到事件对象中，并在其有效负载上使用派生的事件信息触发标记事件。
 
-Launch规则是使用Launch的 `trigger(...)` 函数 __仅限__ 可从规则事件的Custom Code代码段定义中获取。
+标记规则是使用标记的 `trigger(...)` 函数 __仅限__ 可从规则事件的Custom Code代码段定义中获取。
 
-此 `trigger(...)` 函数会将事件对象作为参数，该参数反过来在Launch数据元素中通过名为的Launch中的另一个保留名称显示 `event`. Launch中的数据元素现在可以引用来自以下位置的此事件对象的数据： `event` 使用语法（如）的对象 `event.component['someKey']`.
+此 `trigger(...)` 函数将事件对象作为参数，该参数依次在标记数据元素中通过名为的标记中的另一个保留名称显示 `event`. 标记中的数据元素现在可以引用来自以下位置的此事件对象的数据： `event` 使用语法（如）的对象 `event.component['someKey']`.
 
-如果 `trigger(...)` 在事件的Custom Code事件类型的上下文（例如，在操作中）之外使用，即JavaScript错误 `trigger is undefined` 在与Launch属性集成的网站上引发。
+如果 `trigger(...)` 在事件的Custom Code事件类型的上下文（例如，在操作中）之外使用，即JavaScript错误 `trigger is undefined` 在与tags属性集成的网站上抛出。
 
 
 ### 数据元素
 
 ![数据元素](assets/data-elements.png)
 
-AdobeLaunch数据元素映射来自事件对象的数据 [在自定义页面显示事件中触发](#page-event) 到Adobe Target中可用的变量（通过核心扩展的Custom Code数据元素类型）。
+标记数据元素映射来自事件对象的数据 [在自定义页面显示事件中触发](#page-event) 到Adobe Target中可用的变量（通过核心扩展的Custom Code数据元素类型）。
 
 #### 页面ID数据元素
 

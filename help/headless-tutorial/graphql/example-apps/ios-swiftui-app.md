@@ -13,7 +13,7 @@ last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
 duration: 308
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 查看 [GitHub上的源代码](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 应在本地安装以下工具：
 
@@ -52,7 +52,7 @@ iOS应用程序旨在连接到 __AEM发布__ 但是，如果在AEM应用程序�
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Launch [Xcode](https://developer.apple.com/xcode/) 并打开文件夹 `ios-app`
+1. 打开 [Xcode](https://developer.apple.com/xcode/) 并打开文件夹 `ios-app`
 1. 修改文件 `Config.xcconfig` 文件和更新 `AEM_SCHEME` 和 `AEM_HOST` 以匹配您的Target AEM发布服务。
 
    ```plain

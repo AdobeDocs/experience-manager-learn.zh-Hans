@@ -10,9 +10,9 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 9b191211-2030-4b62-acad-c7eb45b807ca
 duration: 357
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '360'
 ht-degree: 1%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 使用Adobe Target的AEM旧版Cloud Service是 **仅限** 用于建立直接AEM Author到Adobe Target的后端连接，以便于将内容从AEM发布到Target。 AdobeLaunch用于在由AEM提供的面向公众的网站上公开Adobe Target。
+> 使用Adobe Target的AEM旧版Cloud Service是 **仅限** 用于建立直接AEM Author到Adobe Target的后端连接，以便于将内容从AEM发布到Target。 Adobe Experience Platform中的标记用于在AEM提供的面向公众的网站体验中公开Adobe Target。
 
 为了使用AEM体验片段选件增强您的个性化活动，让我们继续下一章，并使用旧版云服务将AEM与Adobe Target集成。 要将体验片段作为HTML/JSON选件从AEM推送到Target，并使Target选件与AEM保持同步，需要此集成。 实施时需要此集成 [概述部分中讨论的场景1](./overview.md#personalization-using-aem-experience-fragment).
 
-## 前提条件
+## 先决条件
 
 * **AEM**
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
      >[!NOTE]
      >
-     > 客户需要从以下位置配置Experience Platform Launch和Adobe I/O： [Adobe支持](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 或与系统管理员联系
+     > 客户需要从以下位置设置数据收集和Adobe I/O： [Adobe支持](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 或与系统管理员联系
 
 ### 将AEM与Adobe Target集成
 

@@ -9,7 +9,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 9ee826cf-389f-4570-bfe1-0d43d3fed3e1
 duration: 588
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Adobe Experience Manager可重新生成AEM和Target之间的个性化工作流�
 
 >[!NOTE]
 >
->建议使用 `at.js` 客户端库，最佳实践是使用Launch by Adobe、AdobeDTM或任何第三方标签管理解决方案等标签管理解决方案来将target库添加到您的网站页面
+>建议使用 `at.js` 客户端库和最佳实践是使用标记管理解决方案(如Adobe Experience Platform中的标记)或任何第三方标记管理解决方案将target库添加到网站页面
 
 
 * Adobe Experience Manager简单易用且强大的内容创建机制以及Adobe Target的人工智能(AI)和机器学习可帮助内容创作者在集中位置为所有渠道创建和管理内容。 由于能够将体验片段作为HTML选件导出到Adobe Target中，因此营销人员现在拥有更大的灵活性，可以使用这些选件创建更加个性化的体验，并且现在可以测试和扩展他们创建的每个体验。

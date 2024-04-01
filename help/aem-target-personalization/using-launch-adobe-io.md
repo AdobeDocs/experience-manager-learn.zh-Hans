@@ -1,6 +1,6 @@
 ---
-title: 使用Experience Platform Launch和Adobe Developer将Adobe Experience Manager与Adobe Target集成
-description: 有关如何使用Experience Platform Launch和Adobe Developer将Adobe Experience Manager与Adobe Target集成的分步演练
+title: 使用标记和Adobe Developer将Adobe Experience Manager与Adobe Target集成
+description: 有关如何使用标记和Adobe Developer将Adobe Experience Manager与Adobe Target集成的分步演练
 feature: Experience Fragments
 topic: Personalization
 role: Developer
@@ -10,31 +10,30 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: b1d7ce04-0127-4539-a5e1-802d7b9427dd
 duration: 747
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '1021'
-ht-degree: 4%
+source-wordcount: '985'
+ht-degree: 2%
 
 ---
 
-# 通过Adobe Developer控制台使用Adobe Experience Platform Launch
+# 通过Adobe Developer控制台使用标记
 
-## 前提条件
+## 先决条件
 
 * [AEM创作和发布实例](./implementation.md#set-up-aem) 分别运行在本地主机端口4502和4503上
 * **Experience Cloud**
    * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * 通过以下解决方案进行Experience Cloud配置
-      * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
+      * [数据收集](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe Developer控制台](https://developer.adobe.com/console/)
 
      >[!NOTE]
-     >您应具有在Launch中开发、批准、发布、管理扩展和管理环境的权限。 如果由于用户界面选项不可用而无法完成其中的任何步骤，请联系Experience Cloud管理员以请求获取访问权限。 有关Launch权限的更多信息， [请参阅文档](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
+     >您应具有在数据收集中开发、批准、发布、管理扩展和管理环境的权限。 如果由于用户界面选项不可用而无法完成其中的任何步骤，请联系Experience Cloud管理员以请求获取访问权限。 有关标记权限的详细信息， [请参阅文档](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
 
-* **浏览器插件**
-   * Adobe Experience Cloud Debugger ([铬黄](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob))
-   * Launch和DTM交换机([铬黄](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk))
+* **Chrome浏览器扩展**
+   * Adobe Experience Cloud Debugger(https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 ## 涉及的用户
 
@@ -46,12 +45,12 @@ ht-degree: 4%
 
 ## 简介
 
-AEM 提供与 Experience Platform Launch 的现成集成。此集成允许AEM管理员通过易于使用的界面轻松配置Experience Platform Launch，从而在配置这两种工具时减少工作量和错误数。 而且仅仅通过将Adobe Target扩展添加到Experience Platform Launch中，就可以帮助我们在AEM网页上使用Adobe Target的所有功能。
+AEM提供了与标记的现成集成。 此集成允许AEM管理员通过易于使用的界面轻松配置标记，从而在配置这两种工具时减少工作量和错误数。 而且只需将Adobe Target扩展添加到标记，即可帮助我们在AEM网页上使用Adobe Target的所有功能。
 
 在此部分中，我们将介绍以下集成步骤：
 
-* 启动
-   * 创建 Launch 属性
+* 标记
+   * 创建标记属性
    * 添加Target扩展
    * 创建数据元素
    * 创建页面规则
@@ -61,34 +60,34 @@ AEM 提供与 Experience Platform Launch 的现成集成。此集成允许AEM管
    * 创建Cloud Service
    * 创建
 
-### 启动
+### 标记
 
-#### 创建 Launch 属性
+#### 创建标记属性
 
 资产是一个容器，在将标记部署到网站时可在其中填充扩展、规则、数据元素和库。
 
 1. 导航到您的组织 [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`https://<yourcompany>.experiencecloud.adobe.com`)
-2. 使用您的Adobe ID登录，并确保您处于正确的组织中。
-3. 在解决方案切换器中，单击 **Launch** 然后选择 **转到Launch** 按钮。
+1. 使用您的Adobe ID登录，并确保您处于正确的组织中。
+1. 在解决方案切换器中，单击 **Experience Platform**，然后 **数据收集** 部分，然后选择 **标记**.
 
-   ![Experience Cloud — 启动](assets/using-launch-adobe-io/exc-cloud-launch.png)
+![Experience Cloud — 标记](assets/using-launch-adobe-io/exc-cloud-launch.png)
 
-4. 确保您处于正确的组织中，然后继续创建Launch资产。
-   ![Experience Cloud — 启动](assets/using-launch-adobe-io/launch-create-property.png)
+1. 确保您处于正确的组织中，然后继续创建标记属性。
+   ![Experience Cloud — 标记](assets/using-launch-adobe-io/launch-create-property.png)
 
    *有关创建属性的更多信息，请参阅 [创建资产](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property) 在产品文档中。*
-5. 单击 **新建属性** 按钮
-6. 提供资产的名称(例如， *AEM Target指南*)
-7. 对于域，输入 *localhost.com* 因为这是运行WKND演示网站的域。 虽然&#39;*域*”字段为必填字段，则Launch属性将在实施该属性的任何域中正常工作。 此字段的主要用途是在规则生成器中预填充菜单选项。
-8. 单击 **保存** 按钮。
+1. 单击 **新建属性** 按钮
+1. 提供资产的名称(例如， *AEM Target指南*)
+1. 对于域，输入 *localhost.com* 因为这是运行WKND演示网站的域。 虽然&#39;*域*”字段为必填字段，则tags属性将适用于已实施该属性的任何域。 此字段的主要用途是在规则生成器中预填充菜单选项。
+1. 单击 **保存** 按钮。
 
-   ![Launch — 新属性](assets/using-launch-adobe-io/exc-launch-property.png)
+   ![标记 — 新属性](assets/using-launch-adobe-io/exc-launch-property.png)
 
-9. 打开之前创建的资产，然后单击Extensions选项卡。
+1. 打开之前创建的资产，然后单击Extensions选项卡。
 
 #### 添加Target扩展
 
-Adobe Target扩展支持使用适用于新版Web的Target JavaScript SDK进行客户端实施。 `at.js`. 仍在使用Target旧版库的客户， `mbox.js`， [应升级到at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html) 以使用Launch。
+Adobe Target扩展支持使用适用于新版Web的Target JavaScript SDK进行客户端实施。 `at.js`. 仍在使用Target旧版库的客户， `mbox.js`， [应升级到at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html) 以使用标记。
 
 Target扩展包含两个主要部分：
 
@@ -99,17 +98,17 @@ Target扩展包含两个主要部分：
    * Add Params to Global Mbox
    * Fire Global Mbox
 
-1. 下 **扩展**&#x200B;中，您可以看到已为Launch资产安装的扩展列表。 ([Experience Platform Launch核心扩展](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) 默认安装)
+1. 下 **扩展**&#x200B;中，您可以看到已为标记资产安装的扩展列表。 ([AdobeLaunch核心扩展](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) 默认安装)
 2. 单击 **扩展目录** 选项，然后在筛选器中搜索Target。
 3. 选择Adobe Target at.js的最新版本，然后单击 **安装** 选项。
-   ![Launch — 新建属性](assets/using-launch-adobe-io/launch-target-extension.png)
+   ![标记 — 新属性](assets/using-launch-adobe-io/launch-target-extension.png)
 
 4. 单击 **配置** 按钮上，您会注意到已导入Target帐户凭据的配置窗口，以及此扩展的at.js版本。
    ![Target — 扩展配置](assets/using-launch-adobe-io/launch-target-extension-2.png)
 
-   通过异步Launch嵌入代码部署Target时，您应在页面上的Launch嵌入代码之前对预隐藏代码片段进行硬编码，以便管理内容闪烁。 我们稍后将详细了解预隐藏的狙击手。 您可以下载预隐藏代码片段 [此处](assets/using-launch-adobe-io/prehiding.js)
+   通过异步标记嵌入代码部署Target时，您应在标记嵌入代码之前对页面上的预隐藏代码片段进行硬编码，以便管理内容闪烁。 我们稍后将详细了解预隐藏的狙击手。 您可以下载预隐藏代码片段 [此处](assets/using-launch-adobe-io/prehiding.js)
 
-5. 单击 **保存** 要完成将Target扩展添加到Launch资产，您现在应该能够在 **已安装** 扩展名列表。
+5. 单击 **保存** 要完成将Target扩展添加到Tags资产，您现在应该能够在 **已安装** 扩展名列表。
 
 6. 重复上述步骤以搜索“Experience CloudID服务”扩展并安装它。
    ![扩展 — Experience CloudID服务](assets/using-launch-adobe-io/launch-extension-experience-cloud.png)
@@ -141,13 +140,12 @@ Target扩展包含两个主要部分：
 > 授予Adobe Developer集成使用适当的工作区来选择工作区的权限 [角色，允许中央团队仅在少数几个工作区中进行基于API的更改](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html).
 
 1. 使用来自Adobe Developer的凭据在AEM中创建IMS集成。 （01时12分至03时55分）
-2. 在Experience Platform Launch中，创建一个资产。 (涵盖 [以上](#create-launch-property))
-3. 使用步骤1中的IMS集成，创建Experience Platform Launch集成以导入Launch资产。
-4. 在AEM中，使用浏览器配置将Experience Platform Launch集成映射到站点。 （05时28分至06时14分）
+2. 在数据收集中，创建一个资产。 (涵盖 [以上](#create-launch-property))
+3. 使用步骤1中的IMS集成，创建标记集成以导入标记属性。
+4. 在AEM中，使用浏览器配置将标记集成映射到站点。 （05时28分至06时14分）
 5. 手动验证集成。 （06时15分至06时33分）
-6. 正在使用Launch/DTM浏览器插件。 （06时34分至06时50分）
-7. 正在使用Adobe Experience Cloud Debugger浏览器插件。 （06时51分至07时22分）
+6. 正在使用Adobe Experience Cloud Debugger浏览器插件。 （06时51分至07时22分）
 
-此时，您已成功地集成 [使用Adobe Experience Platform Launch的AEM与Adobe Target](./using-aem-cloud-services.md#integrating-aem-target-options) 如选项1中所详述。
+此时，您已成功地集成 [带有使用标记的Adobe Target的AEM](./using-aem-cloud-services.md#integrating-aem-target-options) 如选项1中所详述。
 
 为了使用AEM体验片段选件来支持您开展个性化活动，让我们继续下一章，并使用旧版云服务将AEM与Adobe Target集成。

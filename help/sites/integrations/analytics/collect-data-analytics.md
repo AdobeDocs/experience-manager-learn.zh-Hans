@@ -12,19 +12,14 @@ badgeIntegration: label="集成" type="positive"
 doc-type: Tutorial
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
 duration: 668
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '2307'
+source-wordcount: '2262'
 ht-degree: 1%
 
 ---
 
 # 集成AEM Sites和Adobe Analytics
-
->[!NOTE]
->
->Adobe Experience Platform Launch已更名为Adobe Experience Platform中的一套数据收集技术。 因此，产品文档中的术语有一些改动。 请参阅以下内容 [文档](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) 以获取术语更改的综合参考。
-
 
 了解如何使用AEM Sites的内置功能，将Adobe Analytics和Adobe Analytics标记扩展集成 [使用AEM核心组件Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) 收集有关Adobe Experience Manager Sites中某个页面的数据。 [Experience Platform中的标记](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) 和 [Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) 用于创建规则以将页面数据发送到Adobe Analytics。
 
@@ -40,7 +35,7 @@ ht-degree: 1%
 1. 将页面数据层属性映射到标记属性中的数据元素
 1. 使用页面查看信标收集页面数据并将这些数据发送到Adobe Analytics中
 
-## 前提条件
+## 先决条件
 
 需要以下各项：
 

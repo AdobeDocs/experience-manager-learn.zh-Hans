@@ -10,9 +10,9 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 54a30cd9-d94a-4de5-82a1-69ab2263980d
 duration: 173
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '596'
 ht-degree: 1%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 1%
 在此部分中，我们将讨论如何为各种场景使用Adobe Target设置Adobe Experience Manager Sites。 根据您的方案和组织要求。
 
 * **添加Adobe Target JavaScript库（所有方案均需要）**
-对于在AEM上托管的站点，您可以使用将Target库添加到您的站点， [Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html). Launch提供了一种简单的方式来部署和管理所有加强相关客户体验所需的标记。
+对于在AEM上托管的站点，您可以使用将Target库添加到您的站点， [Adobe Experience Platform中的标记](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html). 标记提供了一种简单的方式来部署和管理所有加强相关客户体验所需的标记。
 * **添加Adobe TargetCloud Service（体验片段方案所必需）**
 对于希望使用体验片段选件在Adobe Target中创建活动的AEM客户，您需要使用旧版Cloud Service将Adobe Target与AEM集成。 要将体验片段作为HTML/JSON选件从AEM推送到Target，并保持这些选件与AEM同步，需要此集成。 *实施场景1需要此集成。*
 
-## 前提条件
+## 先决条件
 
 * **Adobe Experience Manager (AEM){#aem}**
    * AEM 6.5 (*建议使用最新的Service Pack*)
@@ -39,7 +39,7 @@ ht-degree: 1%
 * **Experience Cloud**
    * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud配置了以下解决方案
-      * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
+      * [数据收集](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe I/O控制台](https://console.adobe.io)
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 客户需要从以下位置配置Experience Platform Launch和Adobe I/O： [Adobe支持](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 或与系统管理员联系
+> 客户需要从以下位置设置数据收集和Adobe I/O： [Adobe支持](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 或与系统管理员联系
 
 ### 设置AEM{#set-up-aem}
 
@@ -82,4 +82,4 @@ AEM创作和发布实例是完成本教程所必需的。 我们已在运行创�
 10. 在AEM Author上安装包后，在AEM包管理器中选择每个已上传的包，然后选择 **更多>复制** 以确保将包部署到AEM Publish。
 11. 此时，您已成功安装WKND引用站点以及本教程所需的所有其他包。
 
-[下一章](./using-launch-adobe-io.md)：在下一章中，您将将Launch与AEM集成。
+[下一章](./using-launch-adobe-io.md)：在下一章中，您将标记与AEM集成。

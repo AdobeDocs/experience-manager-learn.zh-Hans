@@ -5,7 +5,7 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: b879d8e3493599aeecad27f27b0b907c883a0635
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 18%
@@ -61,7 +61,7 @@ Adobe Experience Manager (AEM) Assets是AEM Platform上的一款数字资产管�
    </a>
    <div>
       <a href="./advanced/asset-insights-launch-tutorial.md">
-      <strong>在Launch中使用AEM资产分析</strong>
+      <strong>将AEM资产分析用于标记</strong>
       </a>
    </div>
    <p>

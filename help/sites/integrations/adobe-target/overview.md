@@ -13,7 +13,7 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
 duration: 278
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Adobe Experience Manager (AEM)和Adobe Target是具有互补功能的强大解�
 * __场景1：__ 使用AEM体验片段选件进行个性化
 
    1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
-   1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
+   1. [触发来自标记的Adobe Target调用](./load-and-fire-target.md)
    1. [将AEM创作服务与Adobe Target集成](./setup-aem-target-cloud-service.md)
    1. [将AEM Experience Fragments导出到Adobe Target](./export-experience-fragment-target.md)
    1. [使用体验片段选件个性化部分网页](./create-target-activity.md)
@@ -43,11 +43,11 @@ Adobe Experience Manager (AEM)和Adobe Target是具有互补功能的强大解�
 * __场景2：__ 使用可视化体验编辑器(VEC)进行个性化
 
    1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
-   1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
+   1. [触发来自标记的Adobe Target调用](./load-and-fire-target.md)
    1. [使用可视化体验编辑器个性化部分网页](./personalization-using-vec.md)
 
 * __场景3：__ 完整网页体验的个性化
 
    1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
-   1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
+   1. [触发来自标记的Adobe Target调用](./load-and-fire-target.md)
    1. [使整个网页体验个性化](./personalization-web-page.md)

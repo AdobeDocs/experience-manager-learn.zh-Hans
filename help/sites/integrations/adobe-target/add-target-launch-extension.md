@@ -1,6 +1,6 @@
 ---
-title: 将Target扩展添加到Launch资产
-description: 了解如何将Adobe Target扩展添加到Adobe Experience Platform Launch资产。
+title: 将Target扩展添加到标记属性
+description: 了解如何将Adobe Target扩展添加到tags属性。
 version: Cloud Service
 jira: KT-6131
 thumbnail: 41247.jpg
@@ -13,18 +13,18 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
 duration: 297
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '97'
 ht-degree: 3%
 
 ---
 
-# 将Target扩展添加到Launch资产 {#adobe-target-extension}
+# 将Target扩展添加到Tags属性 {#adobe-target-extension}
 
-要观看本视频，您必须已拥有 [与AEM集成的Experience Platform Launch](../experience-platform/data-collection/tags/overview.md).
+要观看本视频，您必须已拥有 [Adobe Experience Platform中的集成标记与AEM](../experience-platform/data-collection/tags/overview.md).
 
-了解如何使用Experience Platform Launch在您的AEM网站上启用Adobe Target。
+了解如何使用标记为AEM网站启用Adobe Target。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
 

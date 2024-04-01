@@ -13,7 +13,7 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
 duration: 268
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 1%
@@ -26,12 +26,12 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/41246?quality=12&learn=on)
 
-## 前提条件
+## 先决条件
 
 要使用“体验片段选件”创建Adobe Target活动，必须完成以下设置：
 
 1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
-1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
+1. [触发来自标记的Adobe Target调用](./load-and-fire-target.md)
 1. [将AEM创作服务与Adobe Target集成](./setup-aem-target-cloud-service.md)
 1. [将AEM Experience Fragments导出到Adobe Target](./export-experience-fragment-target.md)
 

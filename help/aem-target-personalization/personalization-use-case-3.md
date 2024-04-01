@@ -10,9 +10,9 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
 duration: 165
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
@@ -36,11 +36,11 @@ WKND站点主页以卡片布局的形式显示本地活动或城市周围的最�
 
 ![AEM Target场景1](assets/personalization-use-case-3/aem-target-use-case-3.png)
 
-### 前提条件
+### 先决条件
 
 * **AEM**
    * [AEM发布实例](./implementation.md#getting-aem) 在4503上运行
-   * [使用Adobe Experience Platform Launch将AEM与Adobe Target集成](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [使用标记与Adobe Target集成的AEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * 访问您的组织Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud配置有 [Adobe Target](https://experiencecloud.adobe.com)

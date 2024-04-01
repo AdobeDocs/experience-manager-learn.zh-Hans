@@ -13,7 +13,7 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
 duration: 141
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -24,12 +24,12 @@ ht-degree: 0%
 
 了解如何使用可视化体验编辑器(VEC)创建A/B测试Target活动。
 
-## 前提条件
+## 先决条件
 
 要在AEM网站上使用VEC，必须完成以下设置：
 
 1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
-1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
+1. [触发来自标记的Adobe Target调用](./load-and-fire-target.md)
 
 ## 方案概述
 

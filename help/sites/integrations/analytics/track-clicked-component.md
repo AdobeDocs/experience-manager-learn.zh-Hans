@@ -12,18 +12,14 @@ badgeIntegration: label="集成" type="positive"
 doc-type: Tutorial
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
 duration: 527
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1750'
 ht-degree: 1%
 
 ---
 
 # 使用Adobe Analytics跟踪已单击的组件
-
->[!NOTE]
->
->Adobe Experience Platform Launch已更名为Adobe Experience Platform中的一套数据收集技术。 因此，产品文档中的术语有一些改动。 请参阅以下内容 [文档](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) 以获取术语更改的综合参考。
 
 使用事件驱动 [使用AEM核心组件Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) 跟踪Adobe Experience Manager网站上特定组件的单击次数。 了解如何使用tag属性中的规则来侦听单击事件，按组件进行筛选，以及使用跟踪链接信标将数据发送到Adobe Analytics。
 
@@ -39,7 +35,7 @@ WKND营销团队有兴趣了解 `Call to Action (CTA)` 按钮在主页上表现�
 1. 按组件资源类型筛选不同的事件。
 1. 设置组件ID并使用跟踪链接信标将事件发送到Adobe Analytics。
 
-## 前提条件
+## 先决条件
 
 本教程是 [使用Adobe Analytics收集页面数据](./collect-data-analytics.md) 并假设您拥有：
 

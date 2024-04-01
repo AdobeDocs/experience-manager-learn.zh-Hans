@@ -12,7 +12,7 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
 duration: 124
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 0%
@@ -23,12 +23,12 @@ ht-degree: 0%
 
 了解如何使用Adobe Target创建活动，将AEM上托管的网页重定向到新页面。
 
-## 前提条件
+## 先决条件
 
 要个性化AEM网站的完整页面，必须完成以下设置：
 
 1. [将Adobe Target添加到您的AEM网站](./add-target-launch-extension.md)
-1. [从Launch触发Adobe Target调用](./load-and-fire-target.md)
+1. [触发来自标记的Adobe Target调用](./load-and-fire-target.md)
 
 ## 方案概述
 
