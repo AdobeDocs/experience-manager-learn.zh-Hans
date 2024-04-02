@@ -12,10 +12,10 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: 1a1accbe-7706-4f9b-bf63-755090d03c4c
 duration: 325
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: baf81bb43a659e49728a05f83e7be394f7fbfb35
 workflow-type: tm+mt
 source-wordcount: '1134'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -37,7 +37,7 @@ AEMas a Cloud Service的CDN缓存由HTTP响应缓存标头控制，旨在缓存�
 
 AEMas a Cloud ServiceCDN仅缓存HTTP响应，并且必须满足以下所有条件：
 
-+ HTTP请求状态为 `2xx` 或 `3xx`
++ HTTP响应状态为 `2xx` 或 `3xx`
 + HTTP请求方法为 `GET` 或 `HEAD`
 + 至少存在以下HTTP响应标头之一： `Cache-Control`， `Surrogate-Control`，或  `Expires`
 + HTTP响应可以是任何内容类型，包括HTML、JSON、CSS、JS和二进制文件。
@@ -133,7 +133,7 @@ AEM Dispatcher使用以下方法缓存HTTP响应：
 |:------------ |:---------- |
 | [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#html-text) | 直到失效 |
 | [资产（图像、视频、文档等）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#images) | 无 |
-| [持久查询(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?publish-instances) | 1分钟 |
+| [持久查询(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?publish-instances) | 1 分钟 |
 | [客户端库(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
 | [其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 直到失效 |
 
