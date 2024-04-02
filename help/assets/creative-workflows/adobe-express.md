@@ -12,9 +12,9 @@ last-substantial-update: 2023-12-06T00:00:00Z
 jira: KT-14645
 thumbnail: 3425972.jpeg
 exl-id: d73c4bdc-c1ff-498c-9584-93e6e39f5e39
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: e84f8375c94a2834ac3c61d3860ec92510950934
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '88'
 ht-degree: 0%
 
 ---
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
 
-了解如何设置 [适用于Adobe Express的AEM Assets加载项](./adobe-express-aem-assets-add-on.md) 以从Adobe Express无缝访问AEM Assets。
+了解如何设置 [AEM Assets与Adobe Express的本机集成](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express) 以从Adobe Express无缝访问AEM Assets。
