@@ -8,10 +8,10 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 jira: KT-2963
 index: y
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: c498783aceaf3bb389baaeaeefbe9d8d0125a82e
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 19%
+source-wordcount: '341'
+ht-degree: 13%
 
 ---
 
@@ -20,10 +20,10 @@ ht-degree: 19%
 
 + [AEM Headless概述](./overview.md)
 + GraphQL {#graphql}
-   + [AEM Headless开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans){target=_blank}
+   + [AEM Headless开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
    + [概述](./graphql/overview.md)
    + 快速设置 {#quick-setup}
-      + [云服务](./graphql/quick-setup/cloud-service.md)
+      + [Cloud Service](./graphql/quick-setup/cloud-service.md)
       + [AEM SDK](./graphql/quick-setup/local-sdk.md)
    + 视频系列{#video-series}
       + [1 — 建模基础知识](./graphql/video-series/modeling-basics.md)
@@ -67,6 +67,7 @@ ht-degree: 19%
    + [本地化内容](./graphql/how-to/localized-content.md)
    + [大型结果集](./graphql/how-to/large-result-sets.md)
    + [预览](./graphql/how-to/preview.md)
+   + [受保护的内容](./graphql/how-to/protected-content.md)
    + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + [在AEM 6.5上安装GraphiQL](./graphql/how-to/install-graphiql-aem-6-5.md)
    + 示例 {#example-apps}
@@ -106,7 +107,7 @@ ht-degree: 19%
    + [概述](./authentication/overview.md)
    + [1 — 本地开发访问令牌](./authentication/local-development-access-token.md)
    + [2 — 服务凭据](./authentication/service-credentials.md)
-+ Content Services {#content-services}
++ 内容服务 {#content-services}
    + [概述](./content-services/overview.md)
    + [1 — 教程设置](./content-services/chapter-1.md)
    + [2 — 定义事件内容片段模型](./content-services/chapter-2.md)
