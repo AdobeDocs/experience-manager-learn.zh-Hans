@@ -10,7 +10,7 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
 duration: 84
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f818f2ad01d9ecadcf5593aa038c7db15b4d496
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 以下屏幕截图介绍了规则编辑器设置
 
-![规则编辑器](assets/ruleeditor.jfif)
+![规则编辑器](assets/ruleeditor.png)
 
 ## 调试
 

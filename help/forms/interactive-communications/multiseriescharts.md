@@ -10,7 +10,7 @@ level: Beginner
 exl-id: f4af7cb9-cc3b-4bec-9428-ab4f1a3cf41a
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 446
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f818f2ad01d9ecadcf5593aa038c7db15b4d496
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 AEM Forms 6.5引入了创建和配置多系列图表的功能。 多系列图表通常与折线图、条形图、柱状图类型结合使用。 以下图表是多系列图表的良好示例。 图表显示了3个不同共同基金在一段时间内的增长率（10,000美元）。 为了能够在AEM Forms中创建和使用这些类型的图表，您需要创建相应的表单数据模型。
 
-![多系列图表](assets/seriescharts.jfif)
+![多系列图表](assets/series_charts.png)
 
 要在AEM Forms中创建多系列图表，您需要创建相应的表单数据模型，其中含有必要的实体以及实体之间的关联。 以下屏幕截图突出显示实体以及3个实体之间的关联。 在最顶层，我们有一个称为“组织”的实体，它与Fund实体存在一对多的关联。 基金实体则与业绩实体有一对多关系。
 
-![表单数据模型](assets/formdatamodel.jfif)
+![表单数据模型](assets/form_data_model.png)
 
 ## 为多系列图表创建表单数据模型
 

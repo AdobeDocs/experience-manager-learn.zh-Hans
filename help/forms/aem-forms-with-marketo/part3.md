@@ -10,7 +10,7 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
 duration: 97
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f818f2ad01d9ecadcf5593aa038c7db15b4d496
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 1%
@@ -28,7 +28,7 @@ AEM Forms数据集成允许您配置并连接到不同的数据源。 支持开�
 1. OData服务
 
 为了将AEM Forms与Marketo集成，我们使用的是RESTful Web服务。 集成的第一步是配置 [数据源。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) 请使用本教程中提供的swagger文件。 以下屏幕截图显示了配置数据源时需要指定的重要属性。
-![数据源](assets/datasource.jfif)
+![数据源](assets/datasource.png)
 
 “marketo.json”是swagger文件，作为本教程资产的一部分提供给您。
 资产主机特定于您的Marketo实例。
@@ -51,7 +51,7 @@ AEM Forms数据集成允许您配置并连接到不同的数据源。 支持开�
 1. “服务”选项卡的选项卡
 1. 选择列出的唯一服务，然后单击测试服务
 1. 提供有效的leadId并单击Test。 如果一切进展顺利，您应该重新获取潜在客户详细信息，如下面的屏幕快照所示
-   ![testresults](assets/testresults.jfif)
+   ![testresults](assets/testresults.png)
 
 ## 后续步骤
 
