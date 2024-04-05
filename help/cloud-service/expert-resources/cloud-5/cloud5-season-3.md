@@ -5,9 +5,9 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
-source-git-commit: 2be59ef6c6e42854a614722ced9b40988d9d4881
+source-git-commit: 3f30c5bc85b09e2f3bc17fa591a85cd92c811126
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,20 @@ ht-degree: 0%
                 <br/>
                 探索查询索引以及如何编写Excel公式以在Edge Delivery Services中处理和排序数据集。
             </p>
-        </td>   
+        </td>  
+        <td>
+            <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
+                <img alt="自带Cloudflare CDN" src="https://video.tv.adobe.com/v/3428100?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
+                <strong>自带Cloudflare CDN</strong></a>        
+                <br/><em>与AEM Engineering的James Talbot和Kunwar Saluja</em>
+            </div>
+            <p>
+                <br/>
+                了解如何在Edge Delivery Services中配置您自己的Cloudflare CDN。
+            </p>
+        </td>           
     </tr>  
 </table>
