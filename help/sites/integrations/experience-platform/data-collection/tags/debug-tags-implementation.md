@@ -13,9 +13,9 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
 duration: 279
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '266'
 ht-degree: 1%
 
 ---
@@ -44,11 +44,11 @@ ht-degree: 1%
 
 ## 通过Adobe Experience Platform Debugger调试
 
-Adobe提供Adobe Experience Platform Debugger [Chrome扩展](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 和 [Firefox附加组件](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) 调试、了解和深入了解该集成。
+Adobe提供Adobe Experience Platform Debugger [Chrome扩展](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 调试、了解和深入了解该集成。
 
 1. 打开Adobe Experience Platform Debugger扩展，然后在发布实例上打开站点页面
 
-1. 在 **Adobe Experience Platform Debugger>摘要> Adobe Experience Platform标签** 部分中，验证您的标记属性详细信息，如名称、版本、内部版本日期、环境和扩展。
+2. 在 **Adobe Experience Platform Debugger>摘要> Adobe Experience Platform标签** 部分中，验证您的标记属性详细信息，如名称、版本、内部版本日期、环境和扩展。
 
    ![Adobe Experience Platform Debugger和标记属性详细信息](assets/tag-property-details.png)
 

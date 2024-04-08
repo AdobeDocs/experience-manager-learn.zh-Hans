@@ -1,5 +1,5 @@
 ---
-title: 灵活端口出口
+title: 灵活的端口出口
 description: 了解如何设置和使用灵活的端口出口，以支持从AEMas a Cloud Service到外部服务的外部连接。
 version: Cloud Service
 feature: Security
@@ -10,14 +10,14 @@ jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 duration: 906
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '1060'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# 灵活端口出口
+# 灵活的端口出口
 
 了解如何设置和使用灵活的端口出口，以支持从AEMas a Cloud Service到外部服务的外部连接。
 
@@ -31,12 +31,12 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保专
 >
 > 阅读AEMas a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress) 以了解有关灵活端口出口的更多详细信息。
 
-## 前提条件
+## 先决条件
 
 设置灵活端口出口时，需要满足以下条件：
 
 + 启用了Adobe Developer API并启用了Cloud Manager的Cloud Console项目 [Cloud Manager业务负责人权限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ 访问 [Cloud Manager API的身份验证凭据](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
++ 访问 [Cloud Manager API的身份验证凭据](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
    + 组织ID （又称IMS组织ID）
    + 客户端ID（又称API密钥）
    + 访问令牌（又称持有者令牌）

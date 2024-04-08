@@ -1,5 +1,5 @@
 ---
-title: 站点地图
+title: Sitemap
 description: 了解如何通过为AEM Sites创建站点地图来帮助提升SEO。
 version: Cloud Service
 feature: Core Components
@@ -12,14 +12,14 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 957
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 3%
+source-wordcount: '234'
+ht-degree: 4%
 
 ---
 
-# 站点地图
+# Sitemap
 
 了解如何通过为AEM Sites创建站点地图来帮助提升SEO。
 
@@ -50,7 +50,7 @@ AEM Sitemap支持使用创建绝对URL [Sling映射](https://sling.apache.org/do
 
 ### Sitemap计划程序OSGi配置
 
-定义 [OSGi工厂配置](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 对于频率(使用 [cron表达式](http://www.cronmaker.com/))在AEM中重新/生成并缓存站点地图。
+定义 [OSGi工厂配置](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 对于频率(使用 [cron表达式](https://cron.help/))在AEM中重新/生成并缓存站点地图。
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -93,4 +93,4 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 + [Apache Sling Sitemap文档](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org Sitemap文档](https://www.sitemaps.org/protocol.html)
 + [Sitemap.org站点地图索引文件文档](https://www.sitemaps.org/protocol.html#index)
-+ [Cronmaker](http://www.cronmaker.com/)
++ [Cron助手](https://cron.help/)

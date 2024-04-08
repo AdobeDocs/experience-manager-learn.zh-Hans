@@ -1,5 +1,5 @@
 ---
-title: 专用出口IP地址
+title: 专用出口 IP 地址
 description: 了解如何设置和使用专用出口IP地址，该地址允许来自AEM的出站连接源自专用IP。
 version: Cloud Service
 feature: Security
@@ -10,14 +10,14 @@ jira: KT-9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 duration: 926
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '1142'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# 专用出口IP地址
+# 专用出口 IP 地址
 
 了解如何设置和使用专用出口IP地址，该地址允许来自AEM的出站连接源自专用IP。
 
@@ -31,12 +31,12 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保专
 >
 > 阅读AEMas a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedicated-egress-IP-address) 有关专用出口IP地址的更多详细信息。
 
-## 前提条件
+## 先决条件
 
 设置专用出口IP地址时，需要满足以下条件：
 
 + 包含的Cloud Manager API [Cloud Manager业务负责人权限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ 访问 [Cloud Manager API身份验证凭据](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
++ 访问 [Cloud Manager API身份验证凭据](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
    + 组织ID （又称IMS组织ID）
    + 客户端ID（又称API密钥）
    + 访问令牌（又称持有者令牌）

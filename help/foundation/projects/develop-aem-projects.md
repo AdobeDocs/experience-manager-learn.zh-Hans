@@ -9,7 +9,7 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1603
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '4441'
 ht-degree: 0%
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 ## 简介 {#introduction}
 
-[[!DNL AEM Projects]](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) 是AEM的一项功能，旨在简化对作为AEM Sites或Assets实施的一部分与内容创建相关的所有工作流和任务的管理和分组。
+[[!DNL AEM Projects]](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) 是AEM的一项功能，旨在简化对作为AEM Sites或Assets实施的一部分与内容创建相关的所有工作流和任务的管理和分组。
 
-AEM项目附带几个 [OOTB项目模板](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html). 创建项目时，作者可以从这些可用的模板中进行选择。 具有独特业务需求的大型AEM实施将要创建定制的项目模板，以便满足其需求。 通过创建自定义项目模板，开发人员可以配置项目仪表板、挂接到自定义工作流，并为项目创建其他业务角色。 我们将查看项目模板的结构并创建一个示例模板。
+AEM项目附带几个 [OOTB项目模板](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects). 创建项目时，作者可以从这些可用的模板中进行选择。 具有独特业务需求的大型AEM实施将要创建定制的项目模板，以便满足其需求。 通过创建自定义项目模板，开发人员可以配置项目仪表板、挂接到自定义工作流，并为项目创建其他业务角色。 我们将查看项目模板的结构并创建一个示例模板。
 
 ![自定义项目信息卡](./assets/develop-aem-projects/custom-project-card.png)
 
@@ -39,7 +39,7 @@ AEM项目附带几个 [OOTB项目模板](https://docs.adobe.com/content/help/en/
 * [已完成的教程包](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整代码存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教程假定您具备以下基本知识 [AEM开发实践](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/the-basics.html) 而且很熟悉 [AEM Maven项目设置](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html). 提到的所有代码都将用作参考，并且只应部署到 [本地开发AEM实例](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html).
+本教程假定您具备以下基本知识 [AEM开发实践](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) 而且很熟悉 [AEM Maven项目设置](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html). 提到的所有代码都将用作参考，并且只应部署到 [本地开发AEM实例](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy).
 
 ## 项目模板的结构
 
@@ -69,11 +69,11 @@ AEM项目附带几个 [OOTB项目模板](https://docs.adobe.com/content/help/en/
 
 ### 小工具 {#gadgets}
 
-此节点上没有其他属性，但小工具的子节点控制创建新项目时用于填充项目仪表板中的项目拼贴。 [项目拼贴](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) （也称为小工具或pod）是在项目工作区中填充的简单信息卡。 您可以在**/libs/cq/gui/components/projects/admin/pod下找到ootb图块的完整列表。 **在创建项目后，项目所有者始终可以添加/删除图块。
+此节点上没有其他属性，但小工具的子节点控制创建新项目时用于填充项目仪表板中的项目拼贴。 [项目拼贴](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) （也称为小工具或pod）是在项目工作区中填充的简单信息卡。 您可以在**/libs/cq/gui/components/projects/admin/pod下找到ootb图块的完整列表。 **在创建项目后，项目所有者始终可以添加/删除图块。
 
 ### 角色 {#roles}
 
-有三个 [默认角色](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) 对于每个项目： **观察者**， **编辑者**、和 **所有者**. 通过在角色节点下添加子节点，可以为模板添加其他特定于业务的项目角色。 然后，您可以将这些角色关联到与项目关联的特定工作流。
+有三个 [默认角色](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) 对于每个项目： **观察者**， **编辑者**、和 **所有者**. 通过在角色节点下添加子节点，可以为模板添加其他特定于业务的项目角色。 然后，您可以将这些角色关联到与项目关联的特定工作流。
 
 ### 工作流 {#workflows}
 
@@ -152,7 +152,7 @@ AEM项目附带几个 [OOTB项目模板](https://docs.adobe.com/content/help/en/
    1. 添加其他 **nt：unstructured** 将批准者标记为“角色”节点的子节点的节点。
    1. 添加字符串属性 **jcr：title** = &quot;**审批者**“， **roleclass** =&quot;**所有者**“， **roleid**=&quot;**审批者**“。
       1. 审批者节点的名称以及jcr：title和roleid可以是任何字符串值（只要roleid是唯一的）。
-      1. **roleclass** 根据管理应用于该角色的权限 [三个OOTB角色](https://docs.adobe.com/content/docs/en/aem/6-3/author/projects.html)： **所有者**， **编辑者**、和 **观察者**.
+      1. **roleclass** 根据管理应用于该角色的权限 [三个OOTB角色](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)： **所有者**， **编辑者**、和 **观察者**.
       1. 一般来说，如果自定义角色更多的是管理角色，则角色可以是 **业主；** 如果这是一个更具体的创作角色，如摄影师或设计师，则 **编辑者** 罗勒克劳斯就足够了。 两者之间的巨大差异 **所有者** 和 **编辑者** 项目所有者可以更新项目属性并将新用户添加到项目。
 
    ```shell
@@ -308,7 +308,7 @@ AEM项目附带几个 [OOTB项目模板](https://docs.adobe.com/content/help/en/
 
    ![工作流创建对话框](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   [有关创建工作流的详细信息，请阅读此处](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
+   [有关创建工作流的详细信息，请阅读此处](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-models).
 
 1. 作为最佳实践，自定义工作流应分组到/etc/workflow/models下方的各自文件夹中。 在CRXDE Lite中，创建 **&#39;nt：folder&#39;** 在/etc/workflow/models下名为 **&quot;aem-guides&quot;**. 添加子文件夹可确保自定义工作流在升级或Service Pack安装期间不会意外覆盖。
 
@@ -320,7 +320,7 @@ AEM项目附带几个 [OOTB项目模板](https://docs.adobe.com/content/help/en/
 
    >[!NOTE]
    >
-   >如果使用AEM 6.4+，则Workflow的位置已更改。 请参阅 [此处以了解更多详细信息。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
+   >如果使用AEM 6.4+，则Workflow的位置已更改。 请参阅 [此处以了解更多详细信息。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
    如果使用AEM 6.4+，将在下创建工作流模型 `/conf/global/settings/workflow/models`. 对/conf目录重复上述步骤，并添加名为的子文件夹 `aem-guides` 并移动 `content-approval-workflow` 在它下面。
 
@@ -738,7 +738,7 @@ task.setCurrentAssignee(projectApproverGrp);
    >如果使用AEM 6.4，则Workflow的位置已更改。 指向 `modelId` 属性到下的运行时工作流模型的位置 `/var/workflow/models/aem-guides/content-approval-workflow`
    >
    >
-   >请参阅 [此处了解有关更改工作流位置的更多详细信息。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
+   >请参阅 [此处了解有关更改工作流位置的更多详细信息。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
    ```xml
    <contentapproval
@@ -754,4 +754,4 @@ task.setCurrentAssignee(projectApproverGrp);
 
 * [下载完成的教程包](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整代码存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [AEM项目文档](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html)
+* [AEM项目文档](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)

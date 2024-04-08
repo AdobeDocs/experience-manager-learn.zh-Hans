@@ -10,7 +10,7 @@ jira: KT-9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 duration: 948
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 2%
@@ -35,12 +35,12 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚
 >
 > 阅读AEMas a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) 有关虚拟专用网络的更多详细信息。
 
-## 前提条件
+## 先决条件
 
 设置虚拟专用网络时需要以下内容：
 
 + Adobe帐户 [Cloud Manager业务负责人权限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ 访问 [Cloud Manager API的身份验证凭据](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
++ 访问 [Cloud Manager API的身份验证凭据](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
    + 组织ID （又称IMS组织ID）
    + 客户端ID（又称API密钥）
    + 访问令牌（又称持有者令牌）

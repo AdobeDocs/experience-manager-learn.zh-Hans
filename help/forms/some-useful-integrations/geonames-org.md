@@ -10,7 +10,7 @@ level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
 duration: 218
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
 
-在本教程中，我使用 [Geonames REST API](http://api.geonames.org/) 以展示此功能。
+在本教程中，我使用 [Geonames REST API](https://www.geonames.org/export/web-services.html) 以展示此功能。
 有许多组织提供此类服务，只要他们有详细记录的REST API，您就可以使用数据集成功能轻松与AEM Forms集成
 
 执行以下步骤以在AEM Forms中实施级联下拉列表
@@ -88,7 +88,7 @@ AEM Forms数据集成提供了直观的用户界面以供创建和使用 [表单
 
 您可以下载以下资源以抢先创建层叠下拉列表示例完整的swagger文件可以从以下位置下载 [此处](assets/geonames-swagger-files.zip)
 swagger文件介绍了以下REST API
-* [获取所有国家/地区](http://api.geonames.org/countryInfoJSON?username=yourusername)
-* [获取Geoname对象的子项](http://api.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+* [获取所有国家/地区](https://secure.geonames.org/countryInfoJSON?username=yourusername)
+* [获取Geoname对象的子项](https://secure.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
 
 已完成 [可从此处下载表单数据模型](assets/geonames-api-form-data-model.zip)
