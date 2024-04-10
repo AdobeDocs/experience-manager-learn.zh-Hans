@@ -12,13 +12,13 @@ duration: 389
 last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
+source-git-commit: 78e8a8472d2dd8128c6ce2f1120cb9a41527f31b
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
-
 
 # 在AEM中索引最佳实践
 
@@ -41,21 +41,21 @@ ht-degree: 0%
 
 - 了解搜索要求，并检查OOTB索引是否支持搜索要求。 使用 **查询性能工具**，位于 [本地SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) 和AEM CS通过开发人员控制台或 `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`.
 
-- 定义最佳查询，使用 [优化查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices.html?#optimizing-queries) 流程图和 [JCR查询备忘单](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) 以供参考。
+- 定义最佳查询，使用 [优化查询](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) 流程图和 [JCR查询备忘单](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) 以供参考。
 
-- 如果OOTB索引不支持搜索要求，您有两个选择。 但是，请查看 [创建高效索引的提示](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?#should-i-create-an-index)
+- 如果OOTB索引不支持搜索要求，您有两个选择。 但是，请查看 [创建高效索引的提示](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - 自定义OOTB索引：首选选项，因为它易于维护和升级。
    - 完全自定义索引：仅当上述选项无效时。
 
 ### 自定义OOTB索引
 
-- 在 **AEMCS**，在自定义OOTB索引时使用 **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** 命名约定。 例如， `cqPageLucene-custom-1` 或 `damAssetLucene-8-custom-1`. 这有助于在更新OOTB索引时合并自定义索引定义。 请参阅 [对开箱即用索引的更改](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#changes-to-out-of-the-box-indexes) 以了解更多详细信息。
+- 在 **AEMCS**，在自定义OOTB索引时使用 **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** 命名约定。 例如， `cqPageLucene-custom-1` 或 `damAssetLucene-8-custom-1`. 这有助于在更新OOTB索引时合并自定义索引定义。 请参阅 [对开箱即用索引的更改](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
 
-- 在 **AEM 6.X**，上述命名 _不起作用_，但只需使用 `indexRules` 节点。
+- 在 **AEM 6.X**，上述命名 _不起作用_，只需在中使用必要的属性更新OOTB索引即可 `indexRules` 节点。
 
 - 始终使用CRX DE包管理器(/crx/packmgr/)从AEM实例复制最新的OOTB索引定义，对其进行重命名并在XML文件中添加自定义项。
 
-- 将索引定义存储到AEM项目，位于 `ui.apps/src/main/content/jcr_root/_oak_index` 并使用Cloud Manager CI/CD管道部署它。 请参阅 [部署自定义索引定义](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#deploying-custom-index-definitions) 以了解更多详细信息。
+- 将索引定义存储到AEM项目，位于 `ui.apps/src/main/content/jcr_root/_oak_index` 并使用Cloud Manager CI/CD管道部署它。 请参阅 [部署自定义索引定义](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
 
 ### 完全自定义索引
 
@@ -63,13 +63,13 @@ ht-degree: 0%
 
 - 创建完全自定义索引时，使用 **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** 命名约定。 例如，`wknd.adventures-1-custom-1`。这有助于避免命名冲突。 此处， `wknd` 是前缀和 `adventures` 是自定义索引名称。 此约定适用于AEM 6.X和AEMCS，并有助于为将来迁移到AEMCS做好准备。
 
-- AEMCS仅支持Lucene索引，因此为了准备将来迁移到AEMCS，请始终使用Lucene索引。 请参阅 [Lucene索引与属性索引](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?#lucene-or-property-indexes) 以了解更多详细信息。
+- AEMCS仅支持Lucene索引，因此为了准备将来迁移到AEMCS，请始终使用Lucene索引。 请参阅 [Lucene索引与属性索引](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing) 以了解更多详细信息。
 
-- 避免在与OOTB索引相同的节点类型上创建自定义索引。 请改为使用以下内容自定义OOTB索引： `indexRules` 节点。 例如，请勿在 `dam:Asset` 节点类型但自定义OOTB `damAssetLucene` 索引。 _它一直是性能和功能问题的常见根本原因_.
+- 避免在与OOTB索引相同的节点类型上创建自定义索引。 请改为在中使用必要的属性自定义OOTB索引 `indexRules` 节点。 例如，请勿在 `dam:Asset` 节点类型但自定义OOTB `damAssetLucene` 索引。 _它一直是性能和功能问题的常见根本原因_.
 
 - 此外，请避免添加多个节点类型，例如 `cq:Page` 和 `cq:Tag` 在索引规则下(`indexRules`)节点。 相反，请为每个节点类型创建单独的索引。
 
-- 如上节所述，将索引定义存储在AEM项目的 `ui.apps/src/main/content/jcr_root/_oak_index` 并使用Cloud Manager CI/CD管道部署它。 请参阅 [部署自定义索引定义](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#deploying-custom-index-definitions) 以了解更多详细信息。
+- 如上节所述，将索引定义存储在AEM项目的 `ui.apps/src/main/content/jcr_root/_oak_index` 并使用Cloud Manager CI/CD管道部署它。 请参阅 [部署自定义索引定义](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
 
 - 索引定义准则为：
    - 节点类型(`jcr:primaryType`)应为 `oak:QueryIndexDefinition`
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 如果对资产执行Omnisearch，它将返回错误结果，因为自定义索引的估计成本较低。
 
-请勿在上创建自定义索引 `dam:Asset` 节点类型但自定义OOTB `damAssetLucene` 索引中其他属性 `indexRules` 节点。
+请勿在上创建自定义索引 `dam:Asset` 节点类型但自定义OOTB `damAssetLucene` 索引中带有必需属性 `indexRules` 节点。
 
 #### 索引规则下的多个节点类型
 
@@ -130,7 +130,7 @@ ht-degree: 0%
 
 不建议在单个索引中添加多个节点类型，但是，如果节点类型密切相关(例如， `cq:Page` 和 `cq:PageContent`.
 
-一个有效的解决方案是自定义OOTB `cqPageLucene` 和 `damAssetLucene` 索引，在现有 `indexRules` 节点。
+一个有效的解决方案是自定义OOTB `cqPageLucene` 和 `damAssetLucene` 索引，在现有属性下添加必要的属性 `indexRules` 节点。
 
 #### 缺席 `queryPaths` 属性
 
@@ -166,6 +166,78 @@ ht-degree: 0%
 
 为创建自定义索引是有效的用例 [高级搜索](https://jackrabbit.apache.org/oak/docs/query/lucene.html#advanced-search-features) 功能。 但是，索引名称应跟在 **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** 命名约定。
 
+## 通过禁用Apache Tika进行索引优化
+
+AEM使用 [Apache Tika](https://tika.apache.org/) 对象 _从文件提取元数据和文本内容_ PDF、Word、Excel等类型。 提取的内容存储在存储库中，并按Oak Lucene索引编制索引。
+
+有时，用户不需要在文件/资源的内容中搜索的能力，在这种情况下，您可以通过禁用Apache Tika来提高索引性能。 其优点是：
+
+- 更快的索引
+- 索引大小缩减
+- 更少的硬件使用
+
+>[!CAUTION]
+>
+>在禁用Apache Tika之前，请确保搜索要求不要求在资产内容中搜索的功能。
+
+
+### 按MIME类型禁用
+
+要按mime类型禁用Apache Tika，请执行以下步骤：
+
+- 添加 `tika` 节点 `nt:unstructured` 在自定义或OOBT索引定义下键入。 在以下示例中，对OOTB禁用了PDFmime类型 `damAssetLucene` 索引。
+
+```xml
+/oak:index/damAssetLucene
+    - jcr:primaryType = "oak:QueryIndexDefinition"
+    - type = "lucene"
+    ...
+    <tika jcr:primaryType="nt:unstructured">
+        <config.xml/>
+    </tika>
+```
+
+- 添加 `config.xml` 下的以下详细信息 `tika` 节点。
+
+```xml
+<properties>
+  <parsers>
+    <parser class="org.apache.tika.parser.EmptyParser">
+      <mime>application/pdf</mime>
+      <!-- Add more mime types to disable -->
+  </parsers>
+</properties>
+```
+
+- 要刷新存储的索引，请设置 `refresh` 属性至 `true` 在索引定义节点下，请参见 [索引定义属性](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition:~:text=Defaults%20to%2010000-,refresh,-Optional%20boolean%20property) 以了解更多详细信息。
+
+下图显示了OOTB `damAssetLucene` 索引和 `tika` 节点和 `config.xml` 文件禁用PDF和其他mime类型。
+
+![包含tika节点的OOTB damAssetLucene索引](./assets/understand-indexing-best-practices/ootb-index-with-tika-node.png)
+
+### 完全禁用
+
+要完全禁用Apache Tika，请执行以下步骤：
+
+- 添加 `includePropertyTypes` 属性at `/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>` 并将值设置为 `String`. 例如，在下图中， `includePropertyTypes` 为添加了属性 `dam:Asset` OOB的节点类型 `damAssetLucene` 索引。
+
+![IncludePropertyTypes属性](./assets/understand-indexing-best-practices/includePropertyTypes-prop.png)
+
+- 添加 `data` 下的属性。 `properties` 节点，确保它是属性定义上方的第一个节点。 例如，请参阅以下图像：
+
+```xml
+/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>/properties/data
+    - jcr:primaryType = "nt:unstructured"
+    - type = "String"
+    - name = "jcr:data"
+    - nodeScopeIndex = false
+    - propertyIndex = false
+    - analyze = false
+```
+
+![数据属性](./assets/understand-indexing-best-practices/data-prop.png)
+
+- 通过设置 `reindex` 属性至 `true` 在索引定义节点下。
 
 ## 实用工具
 
@@ -201,6 +273,7 @@ OOTB _查询性能工具_ 可用位置 [本地SDK](http://localhost:4502/libs/gr
 
 有关更多信息，请参阅以下文档：
 
-- [Oak查询和索引](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing.html)
-- [查询和索引最佳实践](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices.html)
-- [有关查询和索引的最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html)
+- [Oak查询和索引](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
+- [查询和索引最佳实践](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
+- [有关查询和索引的最佳实践](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
+
