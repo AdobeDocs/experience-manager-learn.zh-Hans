@@ -9,16 +9,16 @@ level: Beginner
 exl-id: 36c38cb6-6f6a-4328-abf5-7a30059b66ce
 last-substantial-update: 2019-03-20T00:00:00Z
 duration: 81
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 0f853040911ad92aea0ebac57011e659d7f0b7c0
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '343'
 ht-degree: 0%
 
 ---
 
 # 在AEM Forms中使用Transaction Reporting{#using-transaction-reporting-in-aem-forms}
 
-AEM Forms 6.4.1引入了事务报表功能，用于捕获表单提交次数、使用文档服务呈现文档以及呈现交互式通信（Web和打印渠道）。此功能当前仅在AEM Forms OSGI栈栈上可用。
+AEM Forms 6.4.1引入了事务报表功能，用于捕获表单提交次数、使用文档服务呈现文档以及呈现交互式通信（Web和打印渠道）。此功能已在适用于AEM Forms OSGi栈栈的AEM Forms 6.4.1和适用于AEM Forms JEE栈栈的6.5.20中引入。
 
 ## 启用交易报告 {#enabling-transaction-reporting}
 
