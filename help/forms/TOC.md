@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
+source-git-commit: 73c15a195c438dd7a07142bba719c6f820bf298a
 workflow-type: tm+mt
-source-wordcount: '2034'
+source-wordcount: '2044'
 ht-degree: 2%
 
 ---
@@ -105,6 +105,8 @@ ht-degree: 2%
    + [预填充HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [使用Salesforce建立表单数据模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [将项目动态添加到选择组件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
++ 核心 — 基于组件的表单{#core-component-based-forms}
+   + [使用GuideBridge API访问表单数据](core-components/submit-data-using-guidebridge-api.md)
 + 选择并汇编DAM文件夹内容{#select-dam-folder-content}
    + [1 — 简介](display-and-assemble-dam-folder-contents/introduction.md)
    + [2 — 填充选择组](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
