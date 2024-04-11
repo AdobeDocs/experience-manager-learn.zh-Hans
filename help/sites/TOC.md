@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+source-git-commit: be3f8fe8ae5c76e17325fd87d0924cc27f8c3e60
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '501'
 ht-degree: 19%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 19%
       + [图像替换文本](./document-authoring/how-to/image-alt-text.md)
       + [阻止搜索引擎索引](./document-authoring/how-to/no-index.md)
       + [响应式导航](document-authoring/how-to/responsive-navigation.md)
+      + [GenAI提示模板](./document-authoring/how-to/prompt-templates-for-content-variations.md)
 + 页面创作 {#page-authoring}
    + [创作](page-authoring/aem-sites-authoring-overview.md)
    + [导航](page-authoring/basic-handling-sites-feature-video-use.md)
@@ -56,7 +57,7 @@ ht-degree: 19%
    + [启动项](page-authoring/launches.md)
    + 向同行学习 {#expert-advice}
       + [站点层次结构提示](page-authoring/expert-advice/site-hierarchy.md)
-+ 创作AI {#generative-ai}
++ 生成式 AI {#generative-ai}
    + [生成变体](./generative-ai/generate-variations.md)
 + 内容片段 {#content-fragments}
    + [内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
