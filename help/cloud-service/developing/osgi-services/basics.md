@@ -10,9 +10,9 @@ thumbnail: 335476.jpeg
 last-substantial-update: 2022-09-16T00:00:00Z
 exl-id: a3a9bf59-e9a2-4322-ac93-9c12c70b9a75
 duration: 492
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: a18bf2c8b57eaaac3686a26fa1fb39e6fc075af5
 workflow-type: tm+mt
-source-wordcount: '57'
+source-wordcount: '122'
 ht-degree: 1%
 
 ---
@@ -94,3 +94,5 @@ package com.adobe.aem.wknd.examples.core.adventures;
 
 import org.osgi.annotation.versioning.Version;
 ```
+
+添加 `package-info.java` 是必需的，以确保AEM中的其他OSGi捆绑包能够解析OSGi服务接口（或任何Java类）。 如果 `package-info.java` 缺失，Java包及其Java接口或类不会导出。 尝试从此Java包导入这些Java接口或类的其他OSGi捆绑包将出错并显示消息 __无法解析__ 在AEM OSGi包控制台中。
