@@ -5,9 +5,9 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
-source-git-commit: c0e995566aad4fceb8bf8ef12ff989f03a626d0f
+source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
@@ -115,5 +115,21 @@ ht-degree: 0%
             </p>
         </td>           
     </tr>  
+    <tr>
+        <td>
+            <a href="./season-3/cloud5-integrate-assets.md">
+                <img alt="将AEM Assets与Edge Delivery Services文档创作集成" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-integrate-assets.md">
+                <strong>将AEM Assets与文档创作集成</strong></a>        
+                <br/><em>与AEM Engineering的James Talbot和Darin Kuntze</em>
+            </div>
+            <p>
+                <br/>
+                探索如何将AEM Assets与文档创作集成。
+            </p>
+        </td>        
+    </tr>      
 </table>
 
