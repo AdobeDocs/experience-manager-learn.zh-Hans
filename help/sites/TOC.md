@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: be3f8fe8ae5c76e17325fd87d0924cc27f8c3e60
+source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '517'
 ht-degree: 19%
 
 ---
@@ -36,7 +36,11 @@ ht-degree: 19%
       + [图像替换文本](./document-authoring/how-to/image-alt-text.md)
       + [阻止搜索引擎索引](./document-authoring/how-to/no-index.md)
       + [响应式导航](document-authoring/how-to/responsive-navigation.md)
+      + [生成变体](./document-authoring/how-to/generate-variations.md)
+      + [配置用于生成变体的Sidekick](./document-authoring/how-to/generate-variations-sidekick-config.md)
       + [GenAI提示模板](./document-authoring/how-to/prompt-templates-for-content-variations.md)
+      + [GenAI自定义提示模板](./document-authoring/how-to/custom-prompt-templates.md)
+      + [GenAI保存自定义提示模板](./document-authoring/how-to/save-custom-prompt-template.md)
 + 页面创作 {#page-authoring}
    + [创作](page-authoring/aem-sites-authoring-overview.md)
    + [导航](page-authoring/basic-handling-sites-feature-video-use.md)

@@ -11,10 +11,10 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: be3f8fe8ae5c76e17325fd87d0924cc27f8c3e60
+source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 11%
+source-wordcount: '591'
+ht-degree: 10%
 
 ---
 
@@ -541,6 +541,70 @@ ht-degree: 11%
         </div>
       </div>
     </div>
+    <!-- Intro Generate Variation -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/generate-variations.md" title="生成变体"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
+                alt="生成变体">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分钟</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/generate-variations.md" title="生成变体">生成变体</a>
+            </p>
+            <p class="is-size-6">生成Edge Delivery Services中的变体简介，并了解它如何对营销人员有用。</p>
+            <a href="./how-to/generate-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">观看视频</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!--  Configure Sidekick for Generative Variations  -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Configure Sidekick for Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/generate-variations-sidekick-config.md" title="配置用于生成变体的Sidekick"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
+                alt="配置用于生成变体的Sidekick">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">1 分钟</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/generate-variations-sidekick-config.md" title="配置用于生成变体的Sidekick">配置用于生成变体的Sidekick</a>
+            </p>
+            <p class="is-size-6">了解如何在Edge Delivery Services文档创作中配置Sidekick以生成变体。</p>
+            <a href="./how-to/generate-variations-sidekick-config.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">观看视频</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>          
     <!-- GenAI Prompt Templates -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
       aria-label="Use GenAI Prompt Templates" tabindex="7">
@@ -564,6 +628,70 @@ ht-degree: 11%
             </p>
             <p class="is-size-6">探索如何使用创作AI提示模板生成内容变体。</p>
             <a href="./how-to/prompt-templates-for-content-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">观看视频</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <!-- Custom Prompt Templates -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="GenAI Custom Prompt Templates" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/custom-prompt-templates.md" title="GenAI自定义提示模板"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
+                alt="GenAI自定义提示模板">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分钟</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/custom-prompt-templates.md" title="GenAI自定义提示模板">GenAI自定义提示模板</a>
+            </p>
+            <p class="is-size-6">探索如何构建用于生成内容变体的创作AI自定义提示模板。</p>
+            <a href="./how-to/custom-prompt-templates.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">观看视频</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <!-- Saving Custom Prompt Templates -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="GenAI Save Prompt Templates" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/save-custom-prompt-template.md" title="GenAI保存提示模板"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
+                alt="GenAI保存提示模板">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分钟</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/save-custom-prompt-template.md" title="GenAI保存提示模板">GenAI保存提示模板</a>
+            </p>
+            <p class="is-size-6">探索如何保存用于生成内容变体的创作AI自定义提示模板。</p>
+            <a href="./how-to/save-custom-prompt-template.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
