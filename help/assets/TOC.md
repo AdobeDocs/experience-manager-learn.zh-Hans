@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: e84f8375c94a2834ac3c61d3860ec92510950934
+source-git-commit: 7d84d7ec2b2af34ad8522abaae9757c331613cd5
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 17%
+source-wordcount: '409'
+ht-degree: 18%
 
 ---
 
@@ -74,6 +74,7 @@ ht-degree: 17%
 
 + 共享和分发{#sharing}
    + [下载资产](./sharing/download.md)
+   + [导出资源](./sharing/export.md)
    + [发布资源](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}
@@ -118,7 +119,7 @@ ht-degree: 17%
    + [Dynamic Media Classic桌面应用程序](dynamic-media/dynamic-media-classic-desktop-application.md)
    + 图像 {#images}
       + [Dynamic Media快照](dynamic-media/dynamic-media-snapshot.md)
-      + [智能裁剪](dynamic-media/smart-crop-feature-video-use.md)
+      + [智能裁切](dynamic-media/smart-crop-feature-video-use.md)
       + [图像锐化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + 视频 {#video}
