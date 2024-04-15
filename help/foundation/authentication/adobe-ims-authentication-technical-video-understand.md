@@ -12,9 +12,9 @@ exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
 duration: 431
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: c692ad17a27f244764e3f7c63fc49f54ae4e97e6
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -40,11 +40,7 @@ Adobe Experience Manager引入了AEM实例的Admin Console支持，并为Managed
 
 应避免在Admin Console和Adobe Experience Manager中在用户级别应用权限和访问权限。
 
-在中，应通过“产品上下文”级别的“Admin Console组”向用户授予访问权限。 用户组通常最好通过组织内的逻辑角色来表示，以提高组在Adobe Experience Cloud产品中的可重用性。
-
->[!NOTE]
->
-> 如果使用AEMas a Cloud Service，请将Admin Console用户直接分配给产品配置文件。 AEMas a Cloud Service不支持Admin Console用户通过Admin Console用户组对产品配置文件拥有过渡权限。
+在Admin Console中，应通过“产品上下文”级别的“用户组”向用户授予访问权限。 用户组通常最好通过组织内的逻辑角色来表示，以提高组在Adobe Experience Cloud产品中的可重用性。
 
 ### 在Adobe Experience Manager中应用权限
 
