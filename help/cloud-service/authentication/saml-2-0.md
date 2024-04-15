@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2430
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 1f9736acbbccd09cb1b32c247860827b13e85129
 workflow-type: tm+mt
-source-wordcount: '3137'
+source-wordcount: '3060'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ AEM Publish SAML集成的典型流程如下所示：
 
 此视频介绍如何设置SAML 2.0与AEMas a Cloud Service发布服务的集成，以及使用Okta作为IDP。
 
-## 前提条件
+## 先决条件
 
 设置SAML 2.0身份验证时需要满足以下条件：
 
@@ -441,15 +441,6 @@ POST在SAML身份验证过程中，IDP向AEM Publish的 `.../saml_login` 终点�
 ```
 
 如果已配置Apache Webserver上的URL重写(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，确保向 `.../saml_login` 不会意外损坏终结点。
-
-## 启用数据同步并封装令牌
-
-一旦SAML身份验证流程在AEM Publish中创建用户，AEM用户节点就可以跨AEM Publish服务层进行身份验证。
-这需要 [数据同步](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization) 和 [封装令牌](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#sticky-sessions-and-encapsulated-tokens) 将由AEM Publish服务上的Adobe支持启用。
-
-向Adobe客户支持发送请求(通过 [AdminConsole](https://adminconsole.adobe.com) >支持)请求：
-
-> 在程序X和环境Y的AEM Publish服务上启用了数据同步和封装令牌。
 
 ## 部署SAML配置
 
