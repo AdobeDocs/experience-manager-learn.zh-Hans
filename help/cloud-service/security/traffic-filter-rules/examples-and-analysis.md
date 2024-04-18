@@ -12,9 +12,9 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 626
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 7f0f4d1b739cb63b96afc08eb31ab72a507c4722
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -218,6 +218,8 @@ data:
 此外， **按客户端IP、国家/地区和用户代理列出的100大攻击** 面板会显示其他详细信息，可用于进一步优化规则配置。
 
 ![ELK工具功能板DoS前100项请求](./assets/elk-tool-dashboard-dos-top-100.png)
+
+有关如何防止DoS和DDoS攻击的更多信息，请参阅 [使用流量过滤规则阻止DoS和DDoS攻击](../dos/blocking-dos-attack-using-traffic-filter-rules.md) 教程。
 
 ### WAF规则
 

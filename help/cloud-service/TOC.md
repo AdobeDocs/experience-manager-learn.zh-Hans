@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
+source-git-commit: 7f0f4d1b739cb63b96afc08eb31ab72a507c4722
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1179'
 ht-degree: 17%
 
 ---
@@ -161,6 +161,7 @@ ht-degree: 17%
       + [SQL连接使用Java SQL API](./networking/examples/sql-java-apis.md)
       + [电子邮件服务](./networking/examples/email-service.md)
 + 安全性 {#security}
+   + [使用流量过滤规则阻止DoS/DDoS攻击](./security/dos/blocking-dos-attack-using-traffic-filter-rules.md)
    + 包含WAF规则的流量过滤器规则{#traffic-filter-and-waf-rules}
       + [概述](./security/traffic-filter-rules/overview.md)
       + [如何设置](./security/traffic-filter-rules/how-to-setup.md)
