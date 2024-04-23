@@ -5,9 +5,9 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
-source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
+source-git-commit: 5f2415b45a99a92c6e2b72dfc80d47f6f899c7ad
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '393'
 ht-degree: 0%
 
 ---
@@ -130,5 +130,19 @@ ht-degree: 0%
                 探索如何将AEM Assets与文档创作集成。
             </p>
         </td>        
+        <td>
+            <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
+                <img alt="AEM Sites中的创新型人工智能" src="https://video.tv.adobe.com/v/3428436?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
+                <strong>AEM Sites中的创新型人工智能</strong></a>        
+                <br/><em>与AEM产品营销部James Talbot和Karthik Muralidharan合作</em>
+            </div>
+            <p>
+                <br/>                
+                探索AEM Sites文档创作中可用的创作AI新功能。
+            </p>
+        </td>                
     </tr>      
 </table>
