@@ -9,10 +9,11 @@ level: Intermediate
 jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
+last-substantial-update: 2024-04-26T00:00:00Z
 duration: 906
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+source-git-commit: 4e3f77a9e687042901cd3b175d68a20df63a9b65
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1280'
 ht-degree: 2%
 
 ---
@@ -25,15 +26,16 @@ ht-degree: 2%
 
 灵活的端口出口允许将自定义、特定的端口转发规则附加到AEMas a Cloud Service，从而允许建立从AEM到外部服务的连接。
 
-Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保专用出口IP地址最多 [适当类型的网络基础架构](./advanced-networking.md)  的AEMas a Cloud Service。
+Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保灵活端口出口最大 [适当类型的网络基础架构](./advanced-networking.md) 的AEMas a Cloud Service。
 
 >[!MORELIKETHIS]
 >
-> 阅读AEMas a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress) 以了解有关灵活端口出口的更多详细信息。
+> 阅读AEMas a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) 以了解有关灵活端口出口的更多详细信息。
+
 
 ## 先决条件
 
-设置灵活端口出口时，需要满足以下条件：
+使用Cloud Manager API设置或配置灵活端口出口时，需要满足以下条件：
 
 + 启用了Adobe Developer API并启用了Cloud Manager的Cloud Console项目 [Cloud Manager业务负责人权限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + 访问 [Cloud Manager API的身份验证凭据](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
@@ -49,13 +51,45 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保专
 
 本教程使用 `curl` 以进行Cloud Manager API配置。 提供的 `curl` 命令采用Linux/macOS语法。 如果使用Windows命令提示符，请将 `\` 换行符 `^`.
 
+
 ## 为每个程序启用灵活端口出口
 
 首先在AEMas a Cloud Service上启用灵活端口出口。
 
-1. 首先，使用Cloud Manager API确定在中设置了高级联网的区域 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 此 `region name` 进行后续Cloud Manager API调用时需要使用。 通常，会使用生产环境所在的区域。
+>[!BEGINTABS]
 
-   在以下位置查找您的AEMas a Cloud Service环境所在的地区： [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [环境详细信息](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中显示的区域名称可以是 [映射到区域代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 在Cloud Manager API中使用。
+>[!TAB Cloud Manager]
+
+可以使用Cloud Manager启用灵活端口出口。 以下步骤概述了如何使用Cloud Manager在AEMas a Cloud Service上启用灵活端口出口。
+
+1. 登录到 [Adobe Experience Manager Cloud Manager](https://experience.adobe.com/cloud-manager/) 作为Cloud Manager业务负责人。
+1. 导航到所需的项目。
+1. 在左侧菜单中，导航到 __服务>网络基础架构__.
+1. 选择 __添加网络基础架构__ 按钮。
+
+   ![添加网络基础架构](./assets/cloud-manager__add-network-infrastructure.png)
+
+1. 在 __添加网络基础架构__ 对话框，选择 __灵活端口出口__ 选项，然后选择 __区域__ 创建专用出口IP地址。
+
+   ![添加灵活端口出口](./assets/flexible-port-egress/select-type.png)
+
+1. 选择 __保存__ 以确认添加灵活端口出口。
+
+   ![确认灵活端口出口创建](./assets/flexible-port-egress/confirmation.png)
+
+1. 等待网络基础架构创建并标记为 __就绪__. 此过程最多可能需要1小时。
+
+   ![灵活端口出口创建状态](./assets/flexible-port-egress/ready.png)
+
+通过创建的灵活端口出口，您现在可以使用Cloud Manager API配置端口转发规则，如下所述。
+
+>[!TAB Cloud Manager API]
+
+可以使用Cloud Manager API启用灵活端口出口。 以下步骤概述了如何使用Cloud Manager API在AEMas a Cloud Service上启用灵活端口出口。
+
+1. 首先，确定使用Cloud Manager API在中设置高级联网的区域 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 此 `region name` 进行后续Cloud Manager API调用时需要使用。 通常，会使用生产环境所在的区域。
+
+   在以下位置查找您的AEMas a Cloud Service环境所在的地区： [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [环境详细信息](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Cloud Manager中显示的区域名称可以是 [映射到区域代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 在Cloud Manager API中使用。
 
    __listRegions HTTP请求__
 
@@ -67,7 +101,7 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保专
        -H 'Content-Type: application/json' 
    ```
 
-1. 使用Cloud Manager API为Cloud Manager程序启用灵活端口出口 [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 使用适当的 `region` 从Cloud Manager API获得的代码 `listRegions` 操作。
+2. 使用Cloud Manager API为Cloud Manager程序启用灵活端口出口 [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 使用适当的 `region` 从Cloud Manager API获得的代码 `listRegions` 操作。
 
    __createNetworkInfrastructure HTTP请求__
 
@@ -82,7 +116,7 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保专
 
    等待15分钟，让Cloud Manager项目配置网络基础架构。
 
-1. 检查环境是否已完成 __灵活端口出口__ 使用Cloud Manager API进行配置 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 从上一步中的createNetworkInfrastructure HTTP请求返回。
+3. 检查环境是否已完成 __灵活端口出口__ 使用Cloud Manager API进行配置 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 返回自 `createNetworkInfrastructure` HTTP请求。
 
    __getNetworkInfrastructure HTTP请求__
 
@@ -95,6 +129,10 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保专
    ```
 
    验证HTTP响应中是否包含 __状态__ 之 __就绪__. 如果尚未准备就绪，请每隔几分钟重新检查一次状态。
+
+通过创建的灵活端口出口，您现在可以使用Cloud Manager API配置端口转发规则，如下所述。
+
+>[!ENDTABS]
 
 ## 为每个环境配置灵活的端口出口代理
 
@@ -154,7 +192,7 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保专
 
 1. 可以使用Cloud Manager API更新灵活的端口出口配置 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 记住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 因此，所有规则都必须随此操作的每次调用一起提供。
 
-1. 现在，您可以在自定义AEM代码和配置中使用灵活端口出口配置。
+1. 现在，您可以在自定义AEM代码和配置中使用灵活的端口出口配置。
 
 
 ## 通过灵活的端口出口连接到外部服务
@@ -185,7 +223,7 @@ AEM提供两组映射到AEM HTTP/HTTPS代理的特殊Java™系统变量。
 
 >[!TIP]
 >
-> 请参阅AEMas a Cloud Service的灵活端口出口文档，了解 [整套路由规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress-traffic-routing).
+> 请参阅AEMas a Cloud Service的灵活端口出口文档，了解 [整套路由规则](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 #### 代码示例
 

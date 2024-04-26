@@ -9,11 +9,12 @@ level: Intermediate
 jira: KT-9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
+last-substantial-update: 2024-04-26T00:00:00Z
 duration: 948
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+source-git-commit: 4e3f77a9e687042901cd3b175d68a20df63a9b65
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 2%
+source-wordcount: '1472'
+ht-degree: 1%
 
 ---
 
@@ -23,21 +24,21 @@ ht-degree: 2%
 
 ## 什么是虚拟专用网络？
 
-虚拟专用网络(VPN)允许AEMas a Cloud Service客户连接 **AEM环境** Cloud Manager项目到现有， [支持](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) VPN。 这可以在AEMas a Cloud Service与客户网络中的服务之间实现安全且受控制的连接。
+虚拟专用网络(VPN)允许AEMas a Cloud Service客户连接 **AEM环境** Cloud Manager项目到现有， [支持](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) VPN。 VPN允许在AEMas a Cloud Service与客户网络内的服务之间安全且受控的连接。
 
-Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚拟专用网络最大 [适当类型的网络基础架构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#general-vpn-considerations) 的AEMas a Cloud Service。
+Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚拟专用网络最大 [适当类型的网络基础架构](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) 的AEMas a Cloud Service。
 
 >[!NOTE]
 >
->请注意，不支持将构建环境从Cloud Manager连接到VPN。 如果必须从专用存储库访问二进制工件，则必须使用公共Internet上可用的URL设置一个安全且受密码保护的存储库 [如此处所述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
+>请注意，不支持将构建环境从Cloud Manager连接到VPN。 如果必须从专用存储库访问二进制工件，则必须使用公共Internet上可用的URL设置一个安全且受密码保护的存储库 [如此处所述](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project).
 
 >[!MORELIKETHIS]
 >
-> 阅读AEMas a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) 有关虚拟专用网络的更多详细信息。
+> 阅读AEMas a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) 有关虚拟专用网络的更多详细信息。
 
 ## 先决条件
 
-设置虚拟专用网络时需要以下内容：
+使用Cloud Manager API设置虚拟专用网络时，需要满足以下条件：
 
 + Adobe帐户 [Cloud Manager业务负责人权限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + 访问 [Cloud Manager API的身份验证凭据](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
@@ -58,9 +59,53 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚
 
 首先在AEMas a Cloud Service上启用“虚拟专用网络”。
 
+
+>[!BEGINTABS]
+
+>[!TAB Cloud Manager]
+
+可以使用Cloud Manager启用灵活端口出口。 以下步骤概述了如何使用Cloud Manager在AEMas a Cloud Service上启用灵活端口出口。
+
+1. 登录到 [Adobe Experience Manager Cloud Manager](https://experience.adobe.com/cloud-manager/) 作为Cloud Manager业务负责人。
+1. 导航到所需的项目。
+1. 在左侧菜单中，导航到 __服务>网络基础架构__.
+1. 选择 __添加网络基础架构__ 按钮。
+
+   ![添加网络基础架构](./assets/cloud-manager__add-network-infrastructure.png)
+
+1. 在 __添加网络基础架构__ 对话框，选择 __虚拟专用网络__ 选项。 填写字段并选择 __继续__. 请与贵组织的网络管理员合作以获取正确的值。
+
+   ![添加VPN](./assets/vpn/select-type.png)
+
+1. 创建至少一个VPN连接。 为连接提供一个有意义的名称，然后选择 __添加连接__ 按钮。
+
+   ![添加VPN连接](./assets/vpn/add-connection.png)
+
+1. 配置VPN连接。 请与贵组织的网络管理员合作以获取正确的值。 选择 __保存__ 以确认添加连接。
+
+   ![配置VPN连接](./assets/vpn/configure-connection.png)
+
+1. 如果需要多个VPN连接，请根据需要使用更多连接。 添加所有VPN连接后，选择 __继续__.
+
+   ![配置VPN连接](./assets/vpn/connections.png)
+
+1. 选择 __保存__ 确认添加VPN和所有已配置的连接。
+
+   ![确认VPN创建](./assets/vpn/confirmation.png)
+
+1. 等待网络基础架构创建并标记为 __就绪__. 此过程最多可能需要1小时。
+
+   ![VPN创建状态](./assets/vpn/creating.png)
+
+创建VPN后，您现在可以使用Cloud Manager API对其进行配置，如下所述。
+
+>[!TAB Cloud Manager API]
+
+可使用Cloud Manager API启用虚拟专用网络。 以下步骤概述了如何使用Cloud Manager API在AEMas a Cloud Service上启用VPN。
+
 1. 首先，使用Cloud Manager API确定需要高级联网的区域 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 此 `region name` 进行后续Cloud Manager API调用时需要使用。 通常，会使用生产环境所在的区域。
 
-   在以下位置查找您的AEMas a Cloud Service环境所在的地区： [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [环境详细信息](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中显示的区域名称可以是 [映射到区域代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 在Cloud Manager API中使用。
+   在以下位置查找您的AEMas a Cloud Service环境所在的地区： [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [环境详细信息](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Cloud Manager中显示的区域名称可以是 [映射到区域代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 在Cloud Manager API中使用。
 
    __listRegions HTTP请求__
 
@@ -138,7 +183,7 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚
 
    等待45-60分钟，让Cloud Manager项目配置网络基础架构。
 
-1. 检查环境是否已完成 __虚拟专用网络__ 使用Cloud Manager API进行配置 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 从上一步中的createNetworkInfrastructure HTTP请求返回。
+1. 检查环境是否已完成 __虚拟专用网络__ 使用Cloud Manager API进行配置 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 返回自 `createNetworkInfrastructure` HTTP请求。
 
    __getNetworkInfrastructure HTTP请求__
 
@@ -151,6 +196,11 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚
    ```
 
    验证HTTP响应中是否包含 __状态__ 之 __就绪__. 如果尚未准备就绪，请每隔几分钟重新检查一次状态。
+
+
+创建VPN后，您现在可以使用Cloud Manager API对其进行配置，如下所述。
+
+>[!ENDTABS]
 
 ## 为每个环境配置虚拟专用网络代理
 
@@ -192,7 +242,7 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚
    }
    ```
 
-   `nonProxyHosts` 声明了一组主机，应通过默认共享IP地址范围而不是专用出口IP为其路由端口80或443。 `nonProxyHosts` 通过Adobe可进一步自动优化通过共享IP传出的流量，因此可能会很有用。
+   `nonProxyHosts` 声明了一组主机，应通过默认共享IP地址范围而不是专用出口IP为其路由端口80或443。 `nonProxyHosts` 可能很有用，因为Adobe会自动优化通过共享IP传出的流量。
 
    对于每个 `portForwards` 映射，高级联网定义以下转发规则：
 
@@ -203,7 +253,7 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚
    如果您的AEM部署 __仅限__ 需要外部服务的HTTP/HTTPS连接，请保留 `portForwards` 数组为空，因为只有非HTTP/HTTPS请求才需要这些规则。
 
 
-1. 对于每个环境，使用Cloud Manager API的 [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
+2. 对于每个环境，使用Cloud Manager API的，验证VPN路由规则的有效性 [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
 
    __getEnvironmentAdvancedNetworkingConfiguration HTTP请求__
 
@@ -215,9 +265,9 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚
        -H 'Content-Type: application/json'
    ```
 
-1. 可使用Cloud Manager API的 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 记住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 因此，所有规则都必须随此操作的每次调用一起提供。
+3. 可使用Cloud Manager API的 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 记住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 因此，所有规则都必须随此操作的每次调用一起提供。
 
-1. 现在，您可以在自定义AEM代码和配置中使用虚拟专用网络出口配置。
+4. 现在，您可以在自定义AEM代码和配置中使用虚拟专用网络出口配置。
 
 ## 通过虚拟专用网络连接到外部服务
 
@@ -228,7 +278,7 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚
 1. 对外部服务的非HTTP/HTTPS调用
    + 包括任何非HTTP调用，例如与Mail服务器、SQL数据库或在其他非HTTP/HTTPS协议上运行的服务的连接。
 
-默认情况下，允许来自标准端口(80/443)上AEM的HTTP/HTTPS请求，但如果未按照以下所述进行适当配置，则这些请求不会使用VPN连接。
+默认情况下，允许标准端口(80/443)上来自AEM的HTTP/HTTPS请求，但如果配置不正确，请勿使用VPN连接，如下所述。
 
 ### HTTP/HTTPS
 
@@ -236,7 +286,7 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚
 
 >[!TIP]
 >
-> 请参阅AEMas a Cloud Service的虚拟专用网络文档，了解 [整套路由规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn-traffic-routing).
+> 请参阅AEMas a Cloud Service的虚拟专用网络文档，了解 [整套路由规则](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 #### 代码示例
 
@@ -304,15 +354,15 @@ Cloud Manager项目只能具有 __单身__ 网络基础架构类型。 确保虚
 
 <table><tr>
    <td>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="应用IP允许列表" src="./assets/code_examples__vpn-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">应用IP允许列表</a></strong></div>
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list"><img alt="应用IP允许列表" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list">应用IP允许列表</a></strong></div>
       <p>
             列入允许列表配置IP，以便只有VPN通信可以访问AEM。
       </p>
     </td>
    <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="AEM发布的基于路径的VPN访问限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">AEM发布的基于路径的VPN访问限制</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking"><img alt="AEM发布的基于路径的VPN访问限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking">AEM发布的基于路径的VPN访问限制</a></strong></div>
       <p>
             要求AEM Publish上的特定路径具有VPN访问权限。
       </p>
