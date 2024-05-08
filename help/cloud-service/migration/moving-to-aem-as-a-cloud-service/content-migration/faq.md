@@ -11,9 +11,9 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 569
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85d516d57d818d23372ab7482d25e33242ef0426
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
@@ -77,22 +77,6 @@ CTT提取过程所用的资源量取决于节点数、Blob数及其聚合大小�
 
 如果使用克隆环境进行迁移，则不会影响实时生产服务器资源的利用率，但在实时生产和克隆之间同步内容方面有其自身的缺点
 
-### 问：在我的源创作系统中，我们为用户配置了SSO，以便他们在创作实例中进行身份验证。 在这种情况下，我是否需要使用CTT的用户映射功能？
-
-简短的答案是“**是**“。
-
-CTT提取和摄取 **不含** 用户映射仅将内容、关联的原则（用户、组）从源AEM迁移到AEMaaCS。 但是，Adobe IMS中存在这些用户（身份）并（设置了）对AEMaaCS实例的访问权限时，需要这些用户（身份）才能成功进行身份验证。 工作 [用户映射工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html) 是将本地AEM用户映射到IMS用户，以便身份验证和授权一起工作。
-
-在这种情况下，SAML身份提供程序将针对Adobe IMS配置为使用联合/Enterprise ID，而不是使用身份验证处理程序直接配置给AEM。
-
-### 问：在我的源创作系统中，我们配置了基本身份验证，以便用户通过本地AEM用户向创作实例进行身份验证。 在这种情况下，我是否需要使用CTT的用户映射功能？
-
-简短的答案是“**是**“。
-
-不带用户映射的CTT提取和摄取确实将内容、相关原则（用户、组）从源AEM迁移到AEMaaCS。 但是，Adobe IMS中存在这些用户（身份）并（设置了）对AEMaaCS实例的访问权限时，需要这些用户（身份）才能成功进行身份验证。 工作 [用户映射工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html) 是将本地AEM用户映射到IMS用户，以便身份验证和授权一起工作。
-
-在这种情况下，用户使用个人Adobe ID，IMS管理员使用Adobe ID提供对AEMaaCS的访问权限。
-
 ### 问：在CTT的上下文中，“划出”和“覆盖”这两个术语表示什么？
 
 在上下文中 [萃取阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase)，选项是覆盖暂存容器中以前提取周期的数据，或者将差异（添加/更新/删除）添加到其中。 暂存容器不执行任何操作，但与迁移集关联的Blob存储容器除外。 每个迁移集都有各自的暂存容器。
@@ -107,10 +91,11 @@ CTT提取和摄取 **不含** 用户映射仅将内容、关联的原则（用�
    + 验证是否可以接受在一个迁移集中迁移所有资产，然后分阶段引入正在使用这些资产的站点
 + 在当前状态下，作者摄取过程使作者实例不可用于内容创作，即使发布层仍可以提供内容
    + 这意味着在摄取到创作中之前，内容创作活动将被冻结
++ 不再迁移用户，但迁移了组
 
 在规划迁移之前，请查看增补提取和摄取流程（如文档中所述）。
 
-### 问：即使AEMaaCS创作或发布实例中发生了引入，我的网站是否仍可供最终用户使用？
+### 问：即使AEMaaCS创作或发布实例正在进行引入，我的网站是否仍可供最终用户使用？
 
 是。内容迁移活动不会中断最终用户流量。 但是，作者摄取会冻结内容创作，直到它完成。
 
@@ -160,7 +145,6 @@ CTT流程需要连接到以下资源：
 
 + 目标AEMas a Cloud Service环境： `author-p<program_id>-e<env_id>.adobeaemcloud.com`
 + Azure Blob存储服务： `casstorageprod.blob.core.windows.net`
-+ 用户映射IO端点： `usermanagement.adobe.io`
 
 请参阅文档以了解有关 [源连接](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#source-environment-connectivity).
 
@@ -198,7 +182,7 @@ CTT流程需要连接到以下资源：
 + 继续在On-Premise/AMS Prod作者中工作
 + 从现在开始，使用以下工具运行所有其他迁移周期证明 `wipe=true`
    + 请注意，此操作会迁移完整的节点存储，但只迁移修改的Blob而不是整个Blob。 上一组Blob位于目标AEMaaCS实例的Azure Blob存储中。
-   + 使用此迁移验证来衡量迁移持续时间、用户映射、测试和所有其他功能的验证
+   + 使用此迁移证明来衡量迁移持续时间、测试和验证所有其他功能
 + 最后，在上线一周之前，执行wipe=true迁移
    + 在AEMaaCS上连接Dynamic Media
    + 从AEM本地源断开DM配置
