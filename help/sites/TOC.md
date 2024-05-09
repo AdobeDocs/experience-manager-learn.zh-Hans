@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
+source-git-commit: 43a8b1eb7e714b27972c0ea2b1327ab8db044d25
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 19%
+source-wordcount: '549'
+ht-degree: 18%
 
 ---
 
@@ -41,6 +41,14 @@ ht-degree: 19%
       + [GenAI提示模板](./document-authoring/how-to/prompt-templates-for-content-variations.md)
       + [GenAI自定义提示模板](./document-authoring/how-to/custom-prompt-templates.md)
       + [GenAI保存自定义提示模板](./document-authoring/how-to/save-custom-prompt-template.md)
+      + [用于生成变体的目标受众](./document-authoring/how-to/using-target-audiences-in-generate-variations.md)
+      + [用于生成变体的受众CSV文件](./document-authoring/how-to/using-audiences-csv-file-in-generate-variations.md)
+      + [用于生成变量的Adobe Firefly](./document-authoring/how-to/using-adobe-firefly-for-images-in-generate-variations.md)
+      + [生成变量操作](./document-authoring/how-to/generate-variations-actions.md)
+      + [使用元数据自定义提示](./document-authoring/how-to/customizing-prompts-using-metadata.md)
+      + [GenAI信任和隐私](./document-authoring/how-to/generate-variations-trust-privacy.md)
+      + [实验框架](./document-authoring/how-to/experimentation-framework.md)
+      + [设置试验框架](./document-authoring/how-to/setup-experimentation-framework.md)
 + 页面创作 {#page-authoring}
    + [创作](page-authoring/aem-sites-authoring-overview.md)
    + [导航](page-authoring/basic-handling-sites-feature-video-use.md)
