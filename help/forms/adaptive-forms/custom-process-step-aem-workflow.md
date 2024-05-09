@@ -9,16 +9,16 @@ level: Experienced
 exl-id: 879518db-3f05-4447-86e8-5802537584e5
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 226
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 7ebc33932153cf024e68fc5932b7972d9da262a7
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
 
 # 自定义流程步骤
 
-本教程面向需要实施自定义流程步骤的AEM Forms客户。 流程步骤可以执行ECMA脚本或调用自定义java代码来执行操作。 本教程将说明实施由流程步骤执行的WorkflowProcess所需的步骤。
+本教程面向需要实施自定义流程步骤的AEM Forms客户。 流程步骤可以执行ECMA脚本或调用自定义Java™代码来执行操作。 本教程将说明实施由流程步骤执行的WorkflowProcess所需的步骤。
 
 实施自定义流程步骤的主要原因是为了扩展AEM Workflow。 例如，如果在工作流模型中使用AEM Forms组件，则可能需要执行以下操作
 
@@ -29,22 +29,28 @@ ht-degree: 0%
 
 ## 创建Maven项目
 
-第一步是使用相应的AdobeMaven原型创建一个Maven项目。 此页面中列出了详细步骤 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). 将您的maven项目导入到eclipse中后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
+第一步是使用相应的AdobeMaven原型创建一个Maven项目。 此页面中列出了详细步骤 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). 将Maven项目导入Eclipse后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
 
 
 ### 创建实现WorkflowProcess的类
 
-在eclipse IDE中打开maven项目。 展开 **projectname** > **核心** 文件夹。 展开src/main/java文件夹。 您应该看到以“core”结尾的包。 创建在此包中实现WorkflowProcess的Java类。 您需要覆盖execute方法。 execute方法的签名如下public void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)throws WorkflowException执行方法提供对以下3个变量的访问
+在Eclipse IDE中打开Maven项目。 展开 **projectname** > **核心** 文件夹。 展开 `src/main/java` 文件夹。 您应该会看到以结尾的包 `core`. 创建在此包中实现WorkflowProcess的Java™类。 您需要覆盖execute方法。 execute方法的签名如下：
+
+```java
+public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments) throws WorkflowException 
+```
+
+execute方法允许访问以下3个变量：
 
 **工作项**：workItem变量将授予对与工作流相关的数据的访问权限。 提供了公共API文档 [此处。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**Workflowsession**：此workflowSession变量使您能够控制工作流。 提供了公共API文档 [此处](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**Workflowsession**：此workflowSession变量使您能够控制工作流。 提供了公共API文档 [此处](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html).
 
 **元数据映射**：与工作流关联的所有元数据。 传递给流程步骤的任何流程参数都可以使用MetaDataMap对象使用。[API文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
 在本教程中，我们将把添加到自适应表单的附件作为AEM Workflow的一部分写入文件系统。
 
-为了完成此用例，编写了以下java类
+为了完成此用例，编写了以下Java™类
 
 让我们看一下此代码
 
@@ -127,7 +133,7 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
             }
 ```
 
-第1行 — 定义组件的属性。 将OSGi组件与流程步骤关联时，您会看到process.label属性，如下面的某个屏幕截图所示。
+第1行 — 定义组件的属性。 此 `process.label` 属性是将OSGi组件与流程步骤关联时将看到的内容，如下面的某个屏幕截图所示。
 
 行13-15 — 使用“，”分隔符拆分传递到此OSGi组件的进程参数。 随后，将从字符串数组中提取attachmentPath和saveToLocation的值。
 
@@ -139,12 +145,12 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 ![流程步骤](assets/implement-process-step.gif)
 
-QueryBuilder服务用于查询attachmentsPath文件夹下nt：file类型的节点。 其余代码遍历搜索结果以创建Document对象并将其保存到文件系统
+QueryBuilder服务用于查询类型的节点 `nt:file` 在attachmentsPath文件夹下。 其余代码遍历搜索结果以创建Document对象并将其保存到文件系统。
 
 
 >[!NOTE]
 >
->由于我们使用的是AEM Forms专属的Document对象，因此需要在maven项目中包含该aemfd-client-sdk依赖项。 组ID为com.adobe.aemfd ，工件ID为aemfd-client-sdk。
+>由于我们使用的是AEM Forms专属的Document对象，因此需要在maven项目中包含该aemfd-client-sdk依赖项。 组ID为 `com.adobe.aemfd` 工件id为 `aemfd-client-sdk`.
 
 #### 生成和部署
 
