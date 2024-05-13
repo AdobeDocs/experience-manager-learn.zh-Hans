@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 131008cfeb41789582bf821b724f996b7fb6fabb
+source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 18%
+source-wordcount: '532'
+ht-degree: 19%
 
 ---
 
@@ -36,19 +36,20 @@ ht-degree: 18%
       + [图像替换文本](./document-authoring/how-to/image-alt-text.md)
       + [阻止搜索引擎索引](./document-authoring/how-to/no-index.md)
       + [响应式导航](document-authoring/how-to/responsive-navigation.md)
-      + [生成变体](./document-authoring/how-to/generate-variations.md)
-      + [配置用于生成变体的Sidekick](./document-authoring/how-to/generate-variations-sidekick-config.md)
-      + [GenAI提示模板](./document-authoring/how-to/prompt-templates-for-content-variations.md)
-      + [GenAI自定义提示模板](./document-authoring/how-to/custom-prompt-templates.md)
-      + [GenAI保存自定义提示模板](./document-authoring/how-to/save-custom-prompt-template.md)
-      + [用于生成变体的目标受众](./document-authoring/how-to/using-target-audiences-in-generate-variations.md)
-      + [用于生成变体的受众CSV文件](./document-authoring/how-to/using-audiences-csv-file-in-generate-variations.md)
-      + [用于生成变量的Adobe Firefly](./document-authoring/how-to/using-adobe-firefly-for-images-in-generate-variations.md)
-      + [生成变量操作](./document-authoring/how-to/generate-variations-actions.md)
-      + [使用元数据自定义提示](./document-authoring/how-to/customizing-prompts-using-metadata.md)
-      + [GenAI信任和隐私](./document-authoring/how-to/generate-variations-trust-privacy.md)
+      + 生成变体{#generate-variations}
+         + [概述](./document-authoring/how-to/generate-variations/overview.md)
+         + [配置Sidekick](./document-authoring/how-to/generate-variations/configure-sidekick.md)
+         + [提示模板](./document-authoring/how-to/generate-variations/prompt-templates.md)
+         + [自定义提示模板](./document-authoring/how-to/generate-variations/custom-prompt-templates.md)
+         + [保存自定义提示模板](./document-authoring/how-to/generate-variations/save-custom-prompt-template.md)
+         + [Adobe Target受众](./document-authoring/how-to/generate-variations/using-target-audiences.md)
+         + [CSV文件受众](./document-authoring/how-to/generate-variations/using-csv-file-audiences.md)
+         + [Adobe Firefly](./document-authoring/how-to/generate-variations/using-adobe-firefly-for-images.md)
+         + [操作](./document-authoring/how-to/generate-variations/actions.md)
+         + [信任和隐私](./document-authoring/how-to/generate-variations/trust-privacy.md)
       + [试验框架](./document-authoring/how-to/experimentation-framework.md)
       + [设置试验框架](./document-authoring/how-to/setup-experimentation-framework.md)
+      + [试验元数据](./document-authoring/how-to/experimentation-add-metadata.md)
 + 页面创作 {#page-authoring}
    + [创作](page-authoring/aem-sites-authoring-overview.md)
    + [导航](page-authoring/basic-handling-sites-feature-video-use.md)

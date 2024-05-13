@@ -11,10 +11,10 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: 43a8b1eb7e714b27972c0ea2b1327ab8db044d25
+source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 8%
+source-wordcount: '900'
+ht-degree: 9%
 
 ---
 
@@ -547,7 +547,7 @@ ht-degree: 8%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations.md" title="生成变体"
+            <a href="./how-to/generate-variations/overview.md" title="生成变体"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
@@ -560,10 +560,10 @@ ht-degree: 8%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations.md" title="生成变体">生成变体</a>
+              <a href="./how-to/generate-variations/overview.md" title="生成变体">生成变体</a>
             </p>
             <p class="is-size-6">生成Edge Delivery Services中的变体简介，并了解它如何对营销人员有用。</p>
-            <a href="./how-to/generate-variations.md" class="spectrum-Button
+            <a href="./how-to/generate-variations/overview.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -575,15 +575,15 @@ ht-degree: 8%
     </div>  
     <!--  Configure Sidekick for Generative Variations  -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Configure Sidekick for Generate Variations" tabindex="7">
+      aria-label="Generate Variations - Configure Sidekick" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations-sidekick-config.md" title="配置用于生成变体的Sidekick"
+            <a href="./how-to/generate-variations/configure-sidekick.md" title="生成变体 — 配置Sidekick"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
-                alt="配置用于生成变体的Sidekick">
+                alt="生成变体 — 配置Sidekick">
             </a>
           </figure>
         </div>
@@ -592,10 +592,10 @@ ht-degree: 8%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations-sidekick-config.md" title="配置用于生成变体的Sidekick">配置用于生成变体的Sidekick</a>
+              <a href="./how-to/generate-variations/configure-sidekick.md" title="生成变体 — 配置Sidekick">生成变体 — 配置Sidekick</a>
             </p>
             <p class="is-size-6">了解如何在Edge Delivery Services文档创作中配置Sidekick以生成变体。</p>
-            <a href="./how-to/generate-variations-sidekick-config.md" class="spectrum-Button
+            <a href="./how-to/generate-variations/configure-sidekick.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -607,15 +607,15 @@ ht-degree: 8%
     </div>          
     <!-- GenAI Prompt Templates -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Use GenAI Prompt Templates" tabindex="7">
+      aria-label="Generate Variations - Prompt templates" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/prompt-templates-for-content-variations.md" title="使用GenAI提示模板"
+            <a href="./how-to/generate-variations/prompt-templates.md" title="生成变体 — 提示模板"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
-                alt="使用GenAI提示模板">
+                alt="生成变体 — 提示模板">
             </a>
           </figure>
         </div>
@@ -624,10 +624,10 @@ ht-degree: 8%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/prompt-templates-for-content-variations.md" title="使用GenAI提示模板">GenAI提示模板</a>
+              <a href="./how-to/generate-variations/prompt-templates.md" title="生成变体 — 提示模板">生成变体 — 提示模板</a>
             </p>
-            <p class="is-size-6">探索如何使用创作AI提示模板生成内容变体。</p>
-            <a href="./how-to/prompt-templates-for-content-variations.md" class="spectrum-Button
+            <p class="is-size-6">了解如何使用提示模板来生成变体。</p>
+            <a href="./how-to/generate-variations/prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -639,15 +639,15 @@ ht-degree: 8%
     </div>    
     <!-- Custom Prompt Templates -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="GenAI Custom Prompt Templates" tabindex="7">
+      aria-label="Generate Variations - Custom prompt templates" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/custom-prompt-templates.md" title="GenAI自定义提示模板"
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 — 自定义提示模板"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
-                alt="GenAI自定义提示模板">
+                alt="生成变体 — 自定义提示模板">
             </a>
           </figure>
         </div>
@@ -656,10 +656,10 @@ ht-degree: 8%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/custom-prompt-templates.md" title="GenAI自定义提示模板">GenAI自定义提示模板</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 — 自定义提示模板">生成变体 — 自定义提示模板</a>
             </p>
-            <p class="is-size-6">探索如何构建用于生成内容变体的创作AI自定义提示模板。</p>
-            <a href="./how-to/custom-prompt-templates.md" class="spectrum-Button
+            <p class="is-size-6">了解如何为生成变体构建自定义提示模板。</p>
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -671,15 +671,15 @@ ht-degree: 8%
     </div>    
     <!-- Saving Custom Prompt Templates -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="GenAI Save Prompt Templates" tabindex="7">
+      aria-label="Generate Variations - Save custom prompt templates" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/save-custom-prompt-template.md" title="GenAI保存提示模板"
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 — 保存自定义提示模板"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
-                alt="GenAI保存提示模板">
+                alt="生成变体 — 保存自定义提示模板">
             </a>
           </figure>
         </div>
@@ -688,10 +688,10 @@ ht-degree: 8%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/save-custom-prompt-template.md" title="GenAI保存提示模板">GenAI保存提示模板</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 — 保存自定义提示模板">生成变体 — 保存自定义提示模板</a>
             </p>
-            <p class="is-size-6">探索如何保存用于生成内容变体的创作AI自定义提示模板。</p>
-            <a href="./how-to/save-custom-prompt-template.md" class="spectrum-Button
+            <p class="is-size-6">了解如何保存生成变体的自定义提示模板。</p>
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -703,15 +703,15 @@ ht-degree: 8%
     </div>
     <!-- Using Adobe Target Audiences for Generate Variations -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Using Adobe Target audiences for Generate Variations" tabindex="7">
+      aria-label="Generate Variations - Using Adobe Target audiences" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/using-target-audiences-in-generate-variations.md" title="使用Adobe Target受众生成变体"
+            <a href="./how-to/generate-variations/using-target-audiences.md" title="生成变体 — 使用Adobe Target受众"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428792/?format=jpeg"
-                alt="使用Adobe Target受众生成变体">
+                alt="生成变体 — 使用Adobe Target受众">
             </a>
           </figure>
         </div>
@@ -720,10 +720,10 @@ ht-degree: 8%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/using-target-audiences-in-generate-variations.md" title="使用Adobe Target受众生成变体">使用Adobe Target受众生成变体</a>
+              <a href="./how-to/generate-variations/using-target-audiences.md" title="生成变体 — 使用Adobe Target受众">生成变体 — 使用Adobe Target受众</a>
             </p>
             <p class="is-size-6">探索如何使用Adobe Target受众，以便为您的内容变体定位正确的受众。</p>
-            <a href="./how-to/using-target-audiences-in-generate-variations.md" class="spectrum-Button
+            <a href="./how-to/generate-variations/using-target-audiences.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -735,15 +735,15 @@ ht-degree: 8%
     </div>
     <!-- Using audience CSV files for Generate Variations -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Using audience CSV files for Generate Variations" tabindex="7">
+      aria-label="Generate Variations - Using CSV file audiences" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" title="使用受众CSV文件生成变体"
+            <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="生成变体 — 使用CSV文件受众"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428793/?format=jpeg"
-                alt="使用受众CSV文件生成变体">
+                alt="生成变体 — 使用CSV文件受众">
             </a>
           </figure>
         </div>
@@ -752,10 +752,10 @@ ht-degree: 8%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" title="使用受众CSV文件生成变体">使用受众CSV文件生成变体</a>
+              <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="生成变体 — 使用CSV文件受众">生成变体 — 使用CSV文件受众</a>
             </p>
             <p class="is-size-6">探索如何使用受众CSV文件，以便针对您的内容变体定位正确的受众。</p>
-            <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" class="spectrum-Button
+            <a href="./how-to/generate-variations/using-csv-file-audiences.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -767,15 +767,15 @@ ht-degree: 8%
     </div>   
     <!-- Use Adobe Firefly to create images -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Use Adobe Firefly to create images for Generate Variations" tabindex="7">
+      aria-label="Generate Variations - Use Adobe Firefly" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" title="使用Adobe Firefly创建用于生成变体的图像"
+            <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="生成变体 — 使用Adobe Firefly"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428794/?format=jpeg"
-                alt="使用Adobe Firefly创建用于生成变体的图像">
+                alt="生成变体 — 使用Adobe Firefly">
             </a>
           </figure>
         </div>
@@ -784,10 +784,10 @@ ht-degree: 8%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" title="使用Adobe Firefly创建用于生成变体的图像">使用Adobe Firefly创建用于生成变体的图像</a>
+              <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="生成变体 — 使用Adobe Firefly">生成变体 — 使用Adobe Firefly</a>
             </p>
-            <p class="is-size-6">了解如何使用Adobe Firefly为内容变体创建图像。</p>
-            <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" class="spectrum-Button
+            <p class="is-size-6">了解如何使用Adobe Firefly创建内容变体中使用的图像。</p>
+            <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -799,15 +799,15 @@ ht-degree: 8%
     </div>  
     <!-- Generate Variations Actions -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Generative Variation actions" tabindex="7">
+      aria-label="Generate Variations - Actions on a generated variation" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations-actions.md" title="生成变量操作"
+            <a href="./how-to/generate-variations/actions.md" title="生成变体 — 对生成的变体执行的操作"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428795/?format=jpeg"
-                alt="生成变量操作">
+                alt="生成变体 — 对生成的变体执行的操作">
             </a>
           </figure>
         </div>
@@ -816,10 +816,10 @@ ht-degree: 8%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations-actions.md" title="生成变量操作">生成变量操作</a>
+              <a href="./how-to/generate-variations/actions.md" title="生成变体 — 对生成的变体执行的操作">生成变体 — 对生成的变体执行的操作</a>
             </p>
-            <p class="is-size-6">探索可用于所生成变体的操作</p>
-            <a href="./how-to/generate-variations-actions.md" class="spectrum-Button
+            <p class="is-size-6">探索可用于所生成内容变体的操作。</p>
+            <a href="./how-to/generate-variations/actions.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -829,49 +829,17 @@ ht-degree: 8%
         </div>
       </div>
     </div>    
-    <!-- Customizing prompts using metadata -->
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Customizing prompts using metadata" tabindex="7">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <a href="./how-to/customizing-prompts-using-metadata.md" title="使用元数据自定义提示"
-              tabindex="-1">
-              <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428796/?format=jpeg"
-                alt="使用元数据自定义提示">
-            </a>
-          </figure>
-        </div>
-        <div class="card-content is-padded-small">
-          <div class="content">
-            <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">2 分钟</p>
-            <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/customizing-prompts-using-metadata.md" title="使用元数据自定义提示">使用元数据自定义提示</a>
-            </p>
-            <p class="is-size-6">探索在自定义提示中使用元数据的情况</p>
-            <a href="./how-to/customizing-prompts-using-metadata.md" class="spectrum-Button
-              spectrum-Button--outline spectrum-Button--primary
-              spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>  
     <!-- Trust and privacy in Generative AI -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Trust and privacy in Generative AI" tabindex="7">
+      aria-label="Generate Variations - Trust and Privacy" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations-trust-privacy.md" title="创成式人工智能中的信任与隐私"
+            <a href="./how-to/generate-variations/trust-privacy.md" title="生成变体 — 信任和隐私"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429060/?format=jpeg"
-                alt="创成式人工智能中的信任与隐私">
+                alt="生成变体 — 信任和隐私">
             </a>
           </figure>
         </div>
@@ -880,10 +848,10 @@ ht-degree: 8%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations-trust-privacy.md" title="创成式人工智能中的信任与隐私">创成式人工智能中的信任与隐私</a>
+              <a href="./how-to/generate-variations/trust-privacy.md" title="生成变体 — 信任和隐私">生成变体 — 信任和隐私</a>
             </p>
-            <p class="is-size-6">Adobe在创造性人工智能的使用中如何处理信任和隐私</p>
-            <a href="./how-to/generate-variations-trust-privacy.md" class="spectrum-Button
+            <p class="is-size-6">探索Adobe如何处理生成变体的信任和隐私。</p>
+            <a href="./how-to/generate-variations/trust-privacy.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -946,7 +914,7 @@ ht-degree: 8%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/setup-experimentation-framework.md" title="设置试验框架">设置试验框架</a>
             </p>
-            <p class="is-size-6">探索如何在Edge Delivery Services中设置实验框架。</p>
+            <p class="is-size-6">探索如何在Edge Delivery Services文档创作中设置实验框架。</p>
             <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -956,6 +924,38 @@ ht-degree: 8%
           </div>
         </div>
       </div>
-    </div>                            
+    </div>
+    <!-- Adding metadata for experimentation -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Adding metadata for experimentation" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/experimentation-add-metadata.md" title="添加用于试验的元数据"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428796/?format=jpeg"
+                alt="添加用于试验的元数据">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分钟</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/experimentation-add-metadata.md" title="添加用于试验的元数据">添加用于试验的元数据</a>
+            </p>
+            <p class="is-size-6">探索添加用于试验的元数据</p>
+            <a href="./how-to/experimentation-add-metadata.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">观看视频</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>                                
   </div>
 
