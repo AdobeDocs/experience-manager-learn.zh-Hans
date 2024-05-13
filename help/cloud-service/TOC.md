@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 5f2415b45a99a92c6e2b72dfc80d47f6f899c7ad
+source-git-commit: 14767141348d3d56c154704cc21d39722bb67aec
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1196'
 ht-degree: 16%
 
 ---
@@ -112,6 +112,11 @@ ht-degree: 16%
       + [如何设置](./developing/rde/how-to-setup.md)
       + [使用方法](./developing/rde/how-to-use.md)
       + [开发生命周期](./developing/rde/development-life-cycle.md)
+   + 通用编辑器{#universal-editor}
+      + React应用程序编辑{#react-app-editing}
+         + [概述](./developing/universal-editor/react-app/overview.md)
+         + [本地开发设置](./developing/universal-editor/react-app/local-development-setup.md)
+         + [检测React应用程序](./developing/universal-editor/react-app/instrument-to-edit-content.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html){target=_blank}
 + 调试AEM{#debugging}
    + 调试AEM SDK{#debugging-aem-sdk}
