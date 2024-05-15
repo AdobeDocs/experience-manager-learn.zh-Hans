@@ -12,9 +12,9 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1458'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,9 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 在本教程中， [AEM WKND项目](https://github.com/adobe/aem-guides-wknd) 部署到AEMas a Cloud Service环境，并通过触发小规模性能测试 [Apache JMeter](https://jmeter.apache.org/).
 
 本教程旨在引导您完成以下过程：
+
 1. 通过Cloud Manager下载CDN日志
-1. 分析这些CDN日志，可通过两种方法执行这些操作：本地安装的仪表板或远程访问的Jupityer Notebook(适用于许可Adobe Experience Platform的用户)
+1. 通过分析这些CDN日志，可通过两种方法执行该操作：本地安装的仪表板或远程访问的Splunk或Jupityer Notebook(适用于许可Adobe Experience Platform的用户)
 1. 优化CDN缓存配置
 
 ## 下载CDN日志
@@ -60,24 +61,27 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 
 ## 分析下载的CDN日志
 
-要获得诸如缓存命中率以及MISS和PASS缓存类型的顶级URL等见解，请分析下载的CDN日志文件。 这些见解有助于优化 [CDN缓存配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html) 并提升站点性能。
+要获得诸如缓存命中率以及MISS和PASS缓存类型的顶级URL等见解，请分析下载的CDN日志文件。 这些见解有助于优化 [CDN缓存配置](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching) 并提升站点性能。
 
-为了分析CDN日志，本文提出两个选项： **Elasticsearch、Logstash和Kibana (ELK)** [仪表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) 和 [Jupyter Notebook](https://jupyter.org/). ELK仪表板工具可以本地安装在笔记本电脑上，而Jupityr笔记本工具可以远程访问 [作为Adobe Experience Platform的一部分](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en) 对于已获得Adobe Experience Platform许可的用户，无需安装其他软件。
+要分析CDN日志，本教程提供了三个选项：
 
+1. **Elasticsearch、Logstash和Kibana (ELK)**：和 [埃尔克仪表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) 可以在本地安装。
+1. **Splunk**：和 [Splunk仪表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) 需要访问Splunk和 [AEMCS日志转发已启用](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) 摄取CDN日志。
+1. [Jupyter Notebook](https://jupyter.org/)：可作为的一部分远程访问 [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) 适用于已获得Adobe Experience Platform许可的客户，无需安装其他软件。
 
 ### 选项1：使用ELK仪表板工具
 
 此 [麋鹿栈栈](https://www.elastic.co/elastic-stack) 是一套工具，可提供用于搜索、分析和可视化数据的可扩展解决方案。 它由Elasticsearch、Logstash和Kibana组成。
 
-要确定关键详细信息，请使用 [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) 仪表板工具项目。 此项目提供了ELK栈栈的Docker容器和预配置的Kibana仪表板来分析CDN日志。
+要确定关键详细信息，请使用 [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) 项目。 此项目提供了ELK栈栈的Docker容器和预配置的Kibana仪表板来分析CDN日志。
 
-1. 请按照中的步骤进行操作 [如何设置ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool#how-to-set-up-the-elk-docker-container) 并确保导入 **CDN缓存命中率** Kibana仪表板。
+1. 请按照中的步骤进行操作 [如何设置ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container) 并确保导入 **CDN缓存命中率** Kibana仪表板。
 
 1. 要识别CDN缓存命中率和顶级URL，请执行以下步骤：
 
-   1. 在特定环境的文件夹内复制下载的CDN日志文件。
+   1. 将下载的CDN日志文件复制到特定于环境的日志文件夹中，例如， `ELK/logs/stage`.
 
-   1. 打开 **CDN缓存命中率** 通过单击左上角的导航菜单> Analytics >功能板> CDN缓存命中率，构建功能板。
+   1. 打开 **CDN缓存命中率** 单击左上角以仪表板 _导航菜单> Analytics >功能板> CDN缓存命中率_.
 
       ![CDN缓存命中率 — Kibana功能板](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -126,11 +130,22 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 
 同样，根据分析要求向功能板添加更多过滤器。
 
-### 选项2：使用Jupyter Notebook
+### 选项2：使用Splunk操控板工具
 
-对于那些不想在本地安装软件的用户（即上一部分的ELK功能板工具），还有一个选项，但需要拥有Adobe Experience Platform的许可证。
+此 [Splunk](https://www.splunk.com/) 是一个常用的日志分析工具，可帮助汇总、分析日志和创建可视化图表以进行监控和故障排除。
 
-此 [Jupyter Notebook](https://jupyter.org/) 是一个开源Web应用程序，通过它，可创建包含代码、文本和可视化图表的文档。 它用于数据转换、可视化和统计建模。 可以远程访问 [作为Adobe Experience Platform的一部分](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en).
+要确定关键详细信息，请使用 [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) 项目。 此项目提供了一个Splunk功能板来分析CDN日志。
+
+1. 请按照中的步骤进行操作 [适用于AEMCS CDN日志分析的Splunk功能板](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) 并确保导入 **CDN缓存命中率** Splunk仪表板。
+1. 如果需要，请更新 _索引、源类型及其他_ Splunk仪表板中的筛选值。
+
+   ![Splunk功能板](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
+
+### 选项3：使用Jupyter Notebook
+
+对于那些不愿意在本地安装软件的用户（即上一节中的ELK功能板工具），还有一个选项，但需要拥有Adobe Experience Platform的许可证。
+
+此 [Jupyter Notebook](https://jupyter.org/) 是一个开源Web应用程序，通过它，可创建包含代码、文本和可视化图表的文档。 它用于数据转换、可视化和统计建模。 可以远程访问 [作为Adobe Experience Platform的一部分](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data).
 
 #### 下载交互式Python笔记本文件
 
@@ -181,6 +196,6 @@ CDN日志以JSON格式提供，其中包含各种字段，包括 `url`， `cache
 
 在分析CDN日志后，您可以优化CDN缓存配置以提高站点性能。 AEM最佳实践是使缓存命中率达到90%或更高。
 
-有关更多信息，请参阅 [优化CDN缓存配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#caching).
+有关更多信息，请参阅 [优化CDN缓存配置](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching).
 
 AEM WKND项目具有参考CDN配置，有关更多信息，请参阅 [CDN配置](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L137-L190) 从 `wknd.vhost` 文件。

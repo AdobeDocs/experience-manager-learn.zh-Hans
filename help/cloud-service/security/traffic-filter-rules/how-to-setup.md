@@ -12,9 +12,9 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: b67bf642-3341-48d0-8ea9-5f262febf414
 duration: 292
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '575'
 ht-degree: 3%
 
 ---
@@ -99,7 +99,7 @@ data:
 
 - [Curl](https://curl.se/) 基本测试，例如调用URL和检查响应代码。
 
-- [韦盖塔](https://github.com/tsenart/vegeta) 执行拒绝服务(DOS)。 请按照 [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
+- [韦盖塔](https://github.com/tsenart/vegeta) 执行拒绝服务(DOS)。 按照 [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
 
 - [Nikto](https://github.com/sullo/nikto/wiki) 以发现潜在的问题和安全漏洞，如XSS、SQL注入等。 请按照 [Nikto GitHub](https://github.com/sullo/nikto).
 
@@ -119,9 +119,11 @@ data:
 
 ### 使用仪表板工具分析结果
 
-创建、部署和测试规则后，您可以使用分析结果 **Elasticsearch、Logstash和Kibana (ELK)** 仪表板工具。 它可以解析AEMCS CDN日志，允许您以各种图表和图形的形式可视化结果。
+创建、部署和测试规则后，您可以使用分析结果 **CDN** 日志和 **AEMCS-CDN-Log-Analysis-Tooling**. 该工具提供了一组仪表板，用于可视化Splunk和ELK(Elasticsearch、Logstash和Kibana)栈栈的结果。
 
-功能板工具可以直接从 [AEMCS-CDN-Log-Analysis-ELK-Tool GitHub存储库](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) 并按照步骤安装和加载 **流量过滤器规则（包括WAF）** 仪表板。
+工具可以从以下位置克隆： [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) github存储库。 然后，按照说明安装和加载 **CDN流量仪表板** 和 **WAF仪表板** 功能板作为首选可观察性工具。
+
+在本教程中，让我们使用ELK栈栈。 请遵循 [用于AEMCS CDN日志分析的ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) 设置ELK栈栈的说明。
 
 - 加载示例仪表板后，您的Elastic仪表板工具页面应如下所示：
 

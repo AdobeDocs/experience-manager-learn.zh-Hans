@@ -12,9 +12,9 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
 duration: 170
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ ht-degree: 0%
 - 声明和验证规则时，始终以开头 `action` type `log` 以确保规则不会阻止合法流量。
 - 对于某些规则，从 `log` 到 `block` 应完全基于对足够网站流量的分析。
 - 以增量方式引入规则，并考虑让测试团队（QA、性能、渗透测试）参与该过程。
-- 使用定期分析规则的影响 [仪表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool). 根据您站点的流量，可以每天、每周或每月执行分析。
+- 使用定期分析规则的影响 [仪表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling). 根据您站点的流量，可以每天、每周或每月执行分析。
 - 要阻止分析后可能察觉到的恶意流量，请添加任何其他规则。 例如，某些IP一直在攻击您的站点。
 - 规则的创建、部署和分析应该是一个持续的迭代过程。 这不是一次性活动。
 
 ## 流量过滤器规则的最佳实践
 
-为您的AEM项目启用下面的流量过滤器规则。 但是， `rateLimit` 和 `clientCountry` 属性必须与您的安全团队协作确定。
+为您的AEM项目启用下面的流量过滤器规则。 但是，所需的值 `rateLimit` 和 `clientCountry` 属性必须与您的安全团队协作确定。
 
 ```yaml
 kind: CDN
@@ -91,9 +91,9 @@ data:
 
 ## WAF规则的最佳实践
 
-一旦为程序授予了WAF许可并启用了，便会在图表和请求日志中显示与WAF标志匹配的流量，即使您未在规则中声明这些流量也是如此。 因此，您始终能够了解潜在的新恶意流量，并且可以根据需要创建规则。 查看未反映在声明的规则中的WAF标记，并考虑声明它们。
+一旦为程序授予了WAF许可并启用了，便会在图表和请求日志中显示与WAF标志匹配的流量，即使您未在规则中声明这些流量也是如此。 因此，您始终了解潜在的新恶意流量，并且可以根据需要创建规则。 查看未反映在声明的规则中的WAF标记，并考虑声明它们。
 
-请考虑下面适用于您的AEM项目的WAF规则。 但是， `action` 和 `wafFlags` 资产必须与您的安全团队合作确定。
+请考虑下面适用于您的AEM项目的WAF规则。 但是，所需的值 `action` 和 `wafFlags` 资产必须与您的安全团队合作确定。
 
 ```yaml
 kind: CDN
