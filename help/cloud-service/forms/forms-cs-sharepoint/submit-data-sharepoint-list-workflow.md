@@ -8,7 +8,9 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 jira: KT-15126
-source-git-commit: 3dc1aea74e2a7cf30da9f6fb96ecc5c7edcf6e34
+exl-id: b369ed05-ba25-4b0e-aa3b-e7fc1621067d
+duration: 52
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 1%
@@ -65,4 +67,3 @@ ht-degree: 1%
 ## 测试表单
 
 预览在上一步中创建的表单。 填写表单并提交。 表单中的数据应插入SharePoint列表中。
-

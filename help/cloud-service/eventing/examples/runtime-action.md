@@ -7,17 +7,17 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 0
+duration: 457
 last-substantial-update: 2024-01-29T00:00:00Z
 jira: KT-14878
 thumbnail: KT-14878.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
+exl-id: b1c127a8-24e7-4521-b535-60589a1391bf
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 0%
 
 ---
-
 
 # Adobe I/O Runtime操作和AEM事件
 
@@ -37,7 +37,7 @@ https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 - 在Adobe Developer控制台中配置项目
 - 触发AEM事件并验证操作的执行
 
-## 前提条件
+## 先决条件
 
 要完成本教程，您需要：
 
@@ -176,4 +176,3 @@ https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 ## 后续步骤
 
 在下一个示例中，我们将增强此操作以处理AEM事件，回调AEM创作服务以获取内容详细信息，将详细信息存储在Adobe I/O Runtime存储中，并通过单页应用程序(SPA)显示它们。
-

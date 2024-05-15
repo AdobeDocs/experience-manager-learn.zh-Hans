@@ -8,7 +8,9 @@ role: Developer
 level: Experienced
 jira: KT-15025
 last-substantial-update: 2024-02-26T00:00:00Z
-source-git-commit: acfd982ce471c8510cb59ed4d353f1d47dcfb5dc
+exl-id: cae160f2-21a5-409c-942d-53061451b249
+duration: 97
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -124,4 +126,3 @@ public class ConvertJSONToXML implements WorkflowProcess {
 1. 填写一些表单字段。
 1. 提交表单以启动AEM工作流。
 1. 在工作流的有效负荷文件夹中找到渲染的PDF。
-

@@ -1,5 +1,5 @@
 ---
-title: 使用流量过滤器规则（包括WAF规则）保护网站
+title: 使用流量过滤规则（包括 WAF 规则）保护网站
 description: 了解流量过滤器规则，包括其Web应用程序防火墙(WAF)规则的子类别。 如何创建、部署和测试规则。 此外，分析结果可保护您的AEM站点。
 version: Cloud Service
 feature: Security
@@ -11,15 +11,15 @@ last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
-duration: 177
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 165
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 6%
+ht-degree: 13%
 
 ---
 
-# 使用流量过滤器规则（包括WAF规则）保护网站
+# 使用流量过滤规则（包括 WAF 规则）保护网站
 
 了解 **流量过滤器规则**，包括其子类别 **Web应用程序防火墙(WAF)规则** 在AEMas a Cloud Service(AEMCS)中。 阅读有关如何创建、部署和测试规则的信息。 此外，分析结果可保护您的AEM站点。
 

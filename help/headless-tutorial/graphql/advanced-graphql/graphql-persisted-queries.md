@@ -7,8 +7,8 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 6a8e90ae-0765-4066-9df4-a3e4d2cda285
-duration: 221
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 183
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 在上一章中，您已探索了一些高级GraphQL查询以收集WKND应用程序的数据。 在本章中，您将查询保留到AEM，并了解如何在保留的查询上使用缓存控制。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 本文档是多部分教程的一部分。 请确保 [上一章](explore-graphql-api.md) 已完成，然后再继续本章。
 

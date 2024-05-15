@@ -7,8 +7,8 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: d0576962-a86a-4742-8635-02be1ec3243f
-duration: 290
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 241
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 本章将指导您完成以下步骤：使用现有页面中的HTTPGET请求，将持久查询与WKND客户端应用程序（也称为WKND应用程序）集成 **React组件**. 它还提供了运用AEM Headless学习经验的一个可选挑战，编码专业知识以增强WKND客户端应用程序。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 本文档是多部分教程的一部分。 在继续本章之前，请确保已完成前几章。 WKND客户端应用程序连接到AEM发布服务，因此您必须 **已将以下内容发布到AEM发布服务**.
 

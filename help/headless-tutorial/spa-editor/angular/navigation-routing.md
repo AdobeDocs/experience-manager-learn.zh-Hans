@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
-duration: 816
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 669
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2531'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ![已实施导航](assets/navigation-routing/final-navigation-implemented.gif)
 
-## 前提条件
+## 先决条件
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment).
 
@@ -699,7 +699,7 @@ ht-degree: 0%
 
    >[!CAUTION]
    >
-   > angular项目启用了一些非常严格的筛选规则。 如果Maven构建失败，请检查错误并查找 **在列出的文件中发现链接错误。**. 修复过滤器发现的任何问题并重新运行Maven命令。
+   > angular项目启用了一些非常严格的筛选规则。 如果Maven构建失败，请检查错误并查找 **在列出的文件中发现链接错误。**。修复过滤器发现的任何问题并重新运行Maven命令。
 
 2. 导航到AEM中的SPA主页： [http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html) 并打开浏览器的开发人员工具。 以下屏幕截图是从Google Chrome浏览器中捕获的。
 

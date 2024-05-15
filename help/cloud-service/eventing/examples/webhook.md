@@ -7,17 +7,17 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 156
+duration: 358
 last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
+exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
-
 
 # Webhook和AEM活动
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 在此示例中，利用Adobe提供的 _托管webhook_ 允许您接收AEM事件，而无需设置自己的webhook。 此Adobe提供的webhook托管在 [故障](https://glitch.com/)，该平台以提供基于Web的环境而闻名，有助于构建和部署Web应用程序。 但是，如果愿意，也可以使用您自己的webhook选项。
 
-## 前提条件
+## 先决条件
 
 要完成本教程，您需要：
 

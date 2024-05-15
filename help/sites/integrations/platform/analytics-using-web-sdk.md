@@ -13,8 +13,8 @@ thumbnail: KT-13328.jpeg
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
-duration: 2330
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+duration: 2252
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 ## 更新数据流 — 添加Analytics服务
 
-数据流指示Platform Edge Network将收集的数据发送到何处。 在 [上一教程](./web-sdk.md)，则数据流会配置为将数据发送到Experience Platform。 更新此数据流以将数据发送到中配置的Analytics报表包 [以上](#setup-analytics---report-suite-analysis-workspace) 步骤。
+数据流指示PlatformEdge Network将收集的数据发送到何处。 在 [上一教程](./web-sdk.md)，则数据流会配置为将数据发送到Experience Platform。 更新此数据流以将数据发送到中配置的Analytics报表包 [以上](#setup-analytics---report-suite-analysis-workspace) 步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419876?quality=12&learn=on)
 

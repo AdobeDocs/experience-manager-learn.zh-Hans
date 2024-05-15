@@ -8,8 +8,8 @@ role: Developer
 level: Experienced
 exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
 last-substantial-update: 2020-02-14T00:00:00Z
-duration: 228
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 175
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 在AEM Forms 6.3和6.4中使用Salesforce配置DataSource{#configuring-datasource-with-salesforce-in-aem-forms-and}
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 在本文中，我们将介绍使用Salesforce创建数据源的过程
 

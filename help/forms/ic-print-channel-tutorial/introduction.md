@@ -9,8 +9,8 @@ role: Developer
 level: Beginner
 exl-id: 1949aeff-ae56-4abd-8e63-23c2fb4859f2
 last-substantial-update: 2019-08-07T00:00:00Z
-duration: 38
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 31
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 4%
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 交互式通信是AEM Forms 6.4的新功能。本文档将指导您完成为打印渠道创建交互式通信所需的步骤。
 
-## 前提条件 {#prerequistes}
+## 先决条件 {#prerequistes}
 
 [使用包管理器下载与本教程相关的资源并将其导入AEM。](assets/gettingstartedassets.zip)此zip文件包含图像、文档片段、观察文件夹配置和布局文件(xdp)作为资产包的一部分
 

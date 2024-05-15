@@ -10,8 +10,8 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-duration: 422
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 332
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%
@@ -24,7 +24,7 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
 在本章中，我们来探索一些常见的GraphQL查询，以使用名为的IDE收集内容 [GraphiQL](https://github.com/graphql/graphiql). GraphiQL IDE允许您快速测试和优化返回的查询和数据。 它还提供对文档的轻松访问，使其能够轻松地学习和了解有哪些方法可用。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 这是一个多部分教程，假定其中包含了 [创作内容片段](./author-content-fragments.md) 已完成。
 

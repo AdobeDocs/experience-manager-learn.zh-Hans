@@ -10,8 +10,8 @@ jira: KT-4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-duration: 730
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 624
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 4%
@@ -44,7 +44,7 @@ AEMas a Cloud ServiceSDK包括推荐的Dispatcher工具版本，该版本有助�
 >
 > 本页中的视频是在macOS上录制的。 Windows用户可以随后进行操作，但使用随每个视频提供的等效的Dispatcher工具Windows命令。
 
-## 前提条件
+## 先决条件
 
 1. Windows用户必须使用Windows 10专业版（或支持Docker的版本）
 1. 安装 [Experience Manager发布快速入门Jar](./aem-runtime.md) 在本地开发计算机上。
@@ -105,7 +105,7 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 ## 了解Dispatcher配置文件
 
 >[!TIP]
-Experience Manager从创建的项目 [AEM项目Maven原型](https://github.com/adobe/aem-project-archetype) 已预填充这组Dispatcher配置文件，因此无需从Dispatcher工具src文件夹进行复制。
+> Experience Manager从创建的项目 [AEM项目Maven原型](https://github.com/adobe/aem-project-archetype) 已预填充这组Dispatcher配置文件，因此无需从Dispatcher工具src文件夹进行复制。
 
 Dispatcher工具提供了一组Apache HTTP Web服务器和Dispatcher配置文件，这些文件定义所有环境（包括本地开发）的行为。
 
@@ -353,7 +353,7 @@ Phase 3 finished
 
 此 `host.docker.internal` 是提供给Docker包含的主机名，可解析为主机。 根据docs.docker.com ([macOS](https://docs.docker.com/desktop/networking/)， [Windows](https://docs.docker.com/desktop/networking/))：
 
->从Docker 18.03开始，建议连接到特殊的DNS名称host.docker.internal，它解析为主机使用的内部IP地址
+> 从Docker 18.03开始，建议连接到特殊的DNS名称host.docker.internal，它解析为主机使用的内部IP地址
 
 时间 `bin/docker_run src host.docker.internal:4503 8080` 消息中的结果 __等待host.docker.internal可用__，则：
 

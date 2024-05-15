@@ -7,8 +7,8 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
-duration: 893
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 757
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1991'
 ht-degree: 1%
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 本章还介绍如何增强内容引用（如图像）的验证规则。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 这是一个高级教程。 在继续本章之前，请确保您已完成 [快速设置](../quick-setup/cloud-service.md). 请确保您也阅读了前面的文章 [概述](../overview.md) 章节以了解有关高级教程设置的更多信息。
 

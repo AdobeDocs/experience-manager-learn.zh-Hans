@@ -7,8 +7,8 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 998d3678-7aef-4872-bd62-0e6ea3ff7999
-duration: 825
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 609
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 在 [上一章](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)，您已创建五个内容片段模型：人员、团队、位置、地址和联系信息。 本章将指导您完成基于这些模型创建内容片段的步骤。 它还探讨了如何创建文件夹策略以限制可在文件夹中使用的内容片段模型。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 本文档是多部分教程的一部分。 请确保 [上一章](create-content-fragment-models.md) 已完成，然后再继续本章。
 

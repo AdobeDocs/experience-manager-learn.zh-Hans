@@ -7,17 +7,17 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 0
+duration: 761
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: 6c01dc8a0e8fd3cc69b21c78da8678e872dcef0c
+exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1116'
 ht-degree: 0%
 
 ---
-
 
 # 用于PIM集成的AEM Assets事件
 
@@ -298,4 +298,3 @@ $ aio app deploy
 - API身份验证使用OAuth服务器到服务器（也称为客户端凭据流），请参阅 [OAuth服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/).
 - 与Adobe I/O Runtime操作不同，其他Webhook或Amazon EventBridge可用于接收AEM Assets事件并处理元数据更新。
 - 通过AEM Eventing开展的资产事件使企业能够自动化和简化关键流程，从而提高内容生态系统之间的效率和一致性。
-

@@ -10,8 +10,8 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-duration: 242
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 173
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '853'
 ht-degree: 3%
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 在本章中，您将根据以下内容创建和编辑新的内容片段 [新定义的内容片段模型](./content-fragment-models.md). 您还将了解如何创建内容片段的变体。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 这是一个多部分教程，假定其中包含了 [定义内容片段模型](./content-fragment-models.md) 已完成。
 

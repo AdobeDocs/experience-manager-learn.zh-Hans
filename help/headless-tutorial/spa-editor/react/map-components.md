@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
-duration: 619
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 477
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2123'
 ht-degree: 0%
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ![章节示例最终创作](./assets/map-components/final-page.png)
 
-## 前提条件
+## 先决条件
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment). 本章是 [集成SPA](integrate-spa.md) 但是，章节是启用SPA的AEM项目，您只需关注该章节。
 

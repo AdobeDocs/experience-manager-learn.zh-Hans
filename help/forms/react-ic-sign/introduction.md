@@ -9,8 +9,8 @@ level: Beginner
 jira: KT-13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 64172af3-2905-4bc8-8311-68c2a70fb39e
-duration: 39
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 31
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 1%
@@ -29,7 +29,7 @@ ht-degree: 1%
 * 使用生成的文档创建Acrobat Sign构件URL。
 * 为用户签名文档提供呼叫应用程序的构件URL。
 
-## 前提条件
+## 先决条件
 
 用例需要以下各项才能正常工作：
 

@@ -7,8 +7,8 @@ role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: 15121896-9196-4ce0-aff2-9178563326b4
-duration: 311
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 253
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Dynamic Media Classic中的所有URL和交易都由资产ID驱动，资产ID是�
 | ------- | ----------------------- | ------------------------------------------- | ------------------------------- |
 | AA123 | 替代视图 | AA123_1.tif AA123_2.tif AA123_3.tif | AA123_1 AA123_2 AA123_3 |
 |         | 彩色视图 | AA123_BLU.tif AA123_RED.tif AA123_BROWN.tif | AA123_BLU AA123_RED AA123_BROWN |
-|         | 色板 | AA123_BLU_SW.tif | AA123_BLU_SW |
+|         | 样本 | AA123_BLU_SW.tif | AA123_BLU_SW |
 |         | 图像集或样本集 |                                             | AA123或AA123_SET | — |
 
 在处理集集合（如图像集和样本集）时，集本身也必须具有唯一的名称。 因此，在这种情况下，可以为该集指定基础SKU作为其名称，或指定扩展名为“_SET”的SKU。

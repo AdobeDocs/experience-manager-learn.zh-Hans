@@ -11,8 +11,8 @@ thumbnail: KT-6265.jpg
 last-substantial-update: 2022-09-20T00:00:00Z
 doc-type: Tutorial
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
-duration: 547
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 452
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 0%
@@ -35,7 +35,7 @@ ht-degree: 0%
 1. 使用核心组件数据层实用程序来减少工作量
 1. 使用核心组件数据属性挂接到现有数据层事件
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 A **本地开发环境** 是完成本教程所必需的。 使用在macOS上运行的AEMas a Cloud ServiceSDK捕获屏幕截图和视频。 除非另有说明，否则命令和代码与本地操作系统无关。
 
@@ -424,7 +424,7 @@ AdobeClient Data Layer是事件驱动的，触发操作的最常见事件之一�
 
    >[!NOTE]
    >
-   > 如果为在整个实施中重复使用的对象构建高级数据层，则建议将数据层元素提取到它们自己的数据层特定Java™对象中。 例如，Commerce核心组件为添加了界面 `ProductData` 和 `CategoryData` 因为这些组件可以在Commerce实施中的许多组件上使用。 审核 [aem-cif-core-components存储库中的代码](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) 以了解更多详细信息。
+   > 如果为在整个实施中重复使用的对象构建高级数据层，则建议将数据层元素提取到它们自己的数据层特定Java™对象中。 例如，Commerce核心组件为添加了界面 `ProductData` 和 `CategoryData` 因为它们可用于Commerce实施中的许多组件。 审核 [aem-cif-core-components存储库中的代码](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) 以了解更多详细信息。
 
 ## 恭喜！ {#congratulations}
 

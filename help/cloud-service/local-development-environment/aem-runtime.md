@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-duration: 529
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 411
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 7%
@@ -214,7 +214,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 >[!NOTE]
 >
-复制代理只能在本地Quickstart JAR中使用，并且只能提供内容分发的模拟。
+> 复制代理只能在本地Quickstart JAR中使用，并且只能提供内容分发的模拟。
 
 1. 登录到 **作者** 服务并导航到 [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
 1. 单击 **默认代理（发布）** 以打开默认复制代理。
@@ -279,7 +279,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 >[!WARNING]
 >
-将快速入门Jar更新为新版本需要替换整个本地开发环境，从而导致本地AEM存储库中所有代码、配置和内容丢失。 确保任何不应销毁的代码、配置或内容都会安全提交到Git，或从本地AEM实例导出为AEM包。
+> 将快速入门Jar更新为新版本需要替换整个本地开发环境，从而导致本地AEM存储库中所有代码、配置和内容丢失。 确保任何不应销毁的代码、配置或内容都会安全提交到Git，或从本地AEM实例导出为AEM包。
 
 ### 如何避免在升级AEM SDK时丢失内容
 

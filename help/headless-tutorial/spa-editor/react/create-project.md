@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
-duration: 300
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 250
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 1%
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 **什么是Maven原型？** - A [Maven原型](https://maven.apache.org/archetype/index.html) 是用于生成新项目的模板或模式。 AEM项目原型允许我们使用自定义命名空间生成新项目，并包含一个遵循最佳实践的项目结构，从而大大加快了项目的速度。
 
-## 前提条件
+## 先决条件
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment). 确保已在中启动新的Adobe Experience Manager实例 **作者** 模式，正在本地运行。
 

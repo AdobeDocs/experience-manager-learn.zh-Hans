@@ -6,8 +6,8 @@ doc-type: Tutorial
 version: 6.5
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-duration: 59
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 45
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >如果您使用的是AEM Forms 6.5，请使用Automated forms conversion功能。
 
-## 前提条件
+## 先决条件
 
 * 已安装并配置AEM Forms 6.3或6.4
 * 对Adobe Acrobat的访问权限

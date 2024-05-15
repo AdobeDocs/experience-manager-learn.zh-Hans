@@ -9,8 +9,8 @@ level: Beginner
 jira: KT-9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-duration: 850
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 781
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 AEM Headless快速设置允许您使用AEM Headless的实际操作，它使用WKND Site示例项目中的内容以及一个通过AEM Headless GraphQL API使用内容的示例React应用程序(SPA)。
 
-## 前提条件
+## 先决条件
 
 进行此快速设置需要以下各项：
 

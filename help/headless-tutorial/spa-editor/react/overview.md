@@ -11,8 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
 last-substantial-update: 2022-08-25T00:00:00Z
-duration: 92
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 71
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 20%
@@ -39,7 +39,7 @@ ht-degree: 20%
 
 此 [最新的代码库](https://github.com/adobe/aem-guides-wknd-spa/releases) 作为可下载的AEM包提供。
 
-## 前提条件
+## 先决条件
 
 在开始本教程之前，您需要满足以下条件：
 

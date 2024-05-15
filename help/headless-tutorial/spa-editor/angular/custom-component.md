@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
-duration: 393
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 308
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 0%
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ![以全部大写形式显示的消息](assets/custom-component/message-displayed.png)
 
-## 前提条件
+## 先决条件
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment).
 
@@ -235,7 +235,7 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
 
    >[!NOTE]
    >
-   您可以查看 [已在此处完成CustomComponentImpl.java](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java).
+   > 您可以查看 [已在此处完成CustomComponentImpl.java](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java).
 
 ## 更新Angular组件
 

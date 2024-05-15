@@ -7,8 +7,8 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
-duration: 461
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 438
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1307'
 ht-degree: 0%
@@ -21,7 +21,7 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 
 在本章中，您使用GraphiQL Explorer定义更高级的查询，以收集您在中创建的内容片段的数据 [上一章](../advanced-graphql/author-content-fragments.md).
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 本文档是多部分教程的一部分。 在继续本章之前，请确保已完成前几章。
 

@@ -8,11 +8,11 @@ thumbnail: 343620.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 895766fe-aedd-4ae5-b3ba-2ebe769f2db3
-duration: 314
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 310
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '59'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -24,5 +24,5 @@ ht-degree: 0%
 
 ## 本视频中涵盖的内容
 
-+ Cloud Manager概述
++ Cloud Manager 概述
 + 界面熟悉

@@ -9,8 +9,8 @@ level: Beginner
 last-substantial-update: 2022-06-26T00:00:00Z
 doc-type: Feature Video
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
-duration: 1130
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 1079
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 1%
@@ -109,7 +109,7 @@ ht-degree: 1%
 ### 其他资源
 
 * [企业库存计划](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
-* [AEM 6.4 Service Pack 2发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+* [AEM 6.4 Service Pack 2发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hans)
 * [集成AEM和Adobe Stock](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html)
 * [Adobe I/O控制台集成API](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
 * [Adobe Stock API文档](https://www.adobe.io/apis/creativecloud/stock/docs.html)

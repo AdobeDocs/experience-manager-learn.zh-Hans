@@ -10,8 +10,8 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
-duration: 305
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 228
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1110'
 ht-degree: 1%
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 此外，还欢迎您按照基本步骤创建自己的模型，并调整相应的步骤，如GraphQL查询和React应用程序代码，或只是按照这些章节中概述的步骤进行操作。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 这是一个多部分教程，并假定在 [AEM创作环境可用](./overview.md#prerequisites).
 

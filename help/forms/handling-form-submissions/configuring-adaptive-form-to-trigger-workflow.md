@@ -11,8 +11,8 @@ role: Developer
 level: Beginner
 exl-id: 9f1dbd02-774a-4b84-90fa-02d4e468cbac
 last-substantial-update: 2020-07-07T00:00:00Z
-duration: 583
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 573
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 配置自适应表单以触发AEM Workflow
 
-## 前提条件
+## 先决条件
 
 此工作流中使用的示例表单基于自定义自适应表单模板，需要将其导入AEM服务器。 在导入模板后，需要导入提供的示例表单。
 

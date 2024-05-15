@@ -11,8 +11,8 @@ mini-toc-levels: 1
 thumbnail: 30181.jpg
 doc-type: Tutorial
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-duration: 1209
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 1039
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '3869'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 本教程介绍如何端到端地创建自定义 `Byline` 显示通过对话框创作的内容的AEM组件，并探索开发Sling模型以封装业务逻辑以填充组件的HTL。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment).
 

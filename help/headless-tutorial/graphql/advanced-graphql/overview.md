@@ -7,8 +7,8 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-duration: 504
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 441
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 此端到端教程将继续 [基本教程](../multi-step/overview.md) 该文档介绍了Adobe Experience Manager (AEM) Headless和GraphQL的基础知识。 该高级教程说明了使用内容片段模型、内容片段和AEM GraphQL持久查询的深入方面，包括在客户端应用程序中使用GraphQL持久查询。
 
-## 前提条件
+## 先决条件
 
 完成 [AEMas a Cloud Service的快速设置](../quick-setup/cloud-service.md) 配置AEMas a Cloud Service环境。
 

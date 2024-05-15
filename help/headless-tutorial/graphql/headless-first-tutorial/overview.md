@@ -11,11 +11,11 @@ last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: b0ac4b50-5fe5-41a1-9530-8e593d7000c9
-duration: 112
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 89
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '421'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -37,7 +37,7 @@ React是用于构建用户界面的常用JavaScript库，以其简单性、可�
 
 在本教程结束时，您将充分了解如何利用React、AEM Headless API和GraphQL构建强大而引人入胜的Web体验。 那么，让我们深入了解并开始构建您的下一个Web应用程序！
 
-## 前提条件
+## 先决条件
 
 ### 技能
 

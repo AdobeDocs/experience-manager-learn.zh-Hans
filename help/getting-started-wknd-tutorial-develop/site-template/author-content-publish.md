@@ -11,8 +11,8 @@ thumbnail: KT-7497.jpg
 doc-type: Tutorial
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
 recommendations: noDisplay, noCatalog
-duration: 355
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 263
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 了解用户将如何更新网站内容非常重要。 在本章中，我们将采用 **内容作者** 并对上一章生成的站点进行编辑更新。 在本章末尾，我们将发布更改以了解如何更新实时网站。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 这是一个多部分教程，假定其中包含了 [创建站点](./create-site.md) 章节已完成。
 

@@ -13,8 +13,8 @@ thumbnail: KT-12433.jpeg
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
-duration: 1620
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 1549
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1618'
 ht-degree: 0%
@@ -200,7 +200,7 @@ An [Adobe Experience Platform数据流](https://experienceleague.adobe.com/docs/
 
 Android™和iOS移动体验可以使用以下类似模式进行个性化 [Adobe的移动SDK](https://developer.adobe.com/client-sdks/documentation/).
 
-### 前提条件
+### 先决条件
 
 + Node.js 14
 + Git

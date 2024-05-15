@@ -11,8 +11,8 @@ last-substantial-update: 2023-11-17T00:00:00Z
 jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 544c3230-6eb6-4f06-a63c-f56d65c0ff4b
-duration: 200
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 174
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -72,7 +72,7 @@ ht-degree: 0%
 |---------------------|:-----------:|:---------:|:-----------:|
 | Cache-Control | ✔ | ✔ | 此标头可控制Web浏览器和CDN缓存的生命周期。 |
 | Surrogate-Control | ✘ | ✔ | 此标头控制CDN缓存的生命周期。 |
-| 截止日期 | ✔ | ✔ | 此标头可控制Web浏览器和CDN缓存的生命周期。 |
+| 过期 | ✔ | ✔ | 此标头可控制Web浏览器和CDN缓存的生命周期。 |
 
 
 - **max-age**：此属性控制响应内容的TTL或“生存时间”（以秒为单位）。

@@ -7,17 +7,17 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 0
+duration: 558
 last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
+exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
 
 ---
-
 
 # 使用Adobe I/O Runtime操作处理AEM事件
 
@@ -263,8 +263,3 @@ if (params.challenge) {
 - 可以使用Adobe I/O Runtime操作完成事件处理。
 - 运行时操作可以与系统(如内部应用程序、第三方解决方案和Adobe解决方案)通信。
 - 运行时操作是围绕内容更改设计的业务流程的入口点。
-
-
-
-
-

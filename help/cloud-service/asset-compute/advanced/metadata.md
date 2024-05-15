@@ -10,8 +10,8 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 6ece6e82-efe9-41eb-adf8-78d9deed131e
-duration: 500
-source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
+duration: 432
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1405'
 ht-degree: 0%
@@ -22,10 +22,10 @@ ht-degree: 0%
 
 自定义Asset compute工作进程可以生成发送回AEM并作为元数据存储在资源上的XMP (XML)数据。
 
-常见用例包括：
+常见的用例包括：
 
 + 与第三方系统(如PIM （产品信息管理系统）)的集成，在这些第三方系统中，必须检索其他元数据并将其存储在资产上
-+ 与Adobe服务（例如Content and Commerce AI）集成，通过其他机器学习属性来增强资产元数据
++ 与Adobe服务(如内容和Commerce AI)集成，使用其他机器学习属性来增强资源元数据
 + 从资源的二进制文件中获取有关该资源的元数据，并将其作为资源元数据存储在AEMas a Cloud Service中
 
 ## 您将要做什么

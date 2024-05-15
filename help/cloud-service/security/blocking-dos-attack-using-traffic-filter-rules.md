@@ -1,5 +1,5 @@
 ---
-title: 使用流量过滤规则阻止DoS和DDoS攻击
+title: 使用流量过滤规则阻止 DoS 和 DDoS 攻击
 description: 了解如何在AEMas a Cloud Service提供的CDN上使用流量过滤器规则阻止DoS和DDoS攻击。
 version: Cloud Service
 feature: Security, Operations
@@ -7,19 +7,19 @@ topic: Security, Administration, Performance
 role: Admin, Architect
 level: Intermediate
 doc-type: Tutorial
-duration: 0
+duration: 436
 last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 2ab958f672b0d5b029bcdf7937b2f72d43ba651f
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1918'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 使用流量过滤规则阻止DoS和DDoS攻击
+# 使用流量过滤规则阻止 DoS 和 DDoS 攻击
 
 了解如何使用阻止拒绝服务(DoS)和分布式拒绝服务(DDoS)攻击 **速率限制流量过滤器** AEMas a Cloud Service(AEMCS)托管的CDN中的规则和其他策略。 这些攻击会导致CDN和潜在的AEM Publish服务（也称为来源）出现流量尖峰，并可能影响站点响应性和可用性。
 
@@ -125,7 +125,7 @@ ELK和Splunk功能板中提供了以下可视化图表：
 
 | 变体 | 价值 |
 | :--------- | :------- |
-| Origin | 获取下的每个IP/POP的最大源请求数的最大值 **普通** 流量条件（即，不是DDoS时的速率）并将其增加倍数 |
+| 来源 | 获取下的每个IP/POP的最大源请求数的最大值 **普通** 流量条件（即，不是DDoS时的速率）并将其增加倍数 |
 | Edge | 获取下的每个IP/POP的最大边缘请求数最大值 **普通** 流量条件（即，不是DDoS时的速率）并将其增加倍数 |
 
 要使用的倍数取决于您对因自然流量、营销活动和其他活动而出现正常流量尖峰的期望。 5到10的倍数可能是合理的。
@@ -135,7 +135,7 @@ ELK和Splunk功能板中提供了以下可视化图表：
 | 变体 | 价值 |
 |------------------------------ |:-----------:|
 | Edge | 500 |
-| Origin | 100 |
+| 来源 | 100 |
 
 ## 配置规则 {#configure-rules}
 

@@ -13,8 +13,8 @@ thumbnail: KT-13156.jpeg
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
-duration: 1360
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+duration: 1303
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1229'
 ht-degree: 1%
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 ## 创建数据流 — Experience Platform
 
-数据流指示Platform Edge Network将收集的数据发送到何处。 例如，可以将其发送到Experience Platform或Analytics，或者Adobe Target。
+数据流指示PlatformEdge Network将收集的数据发送到何处。 例如，可以将其发送到Experience Platform或Analytics，或者Adobe Target。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418895?quality=12&learn=on)
@@ -79,7 +79,7 @@ ht-degree: 1%
 
 + 标记扩展： [核心](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) 和 [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
 + 数据元素：使用WKND站点的Adobe客户端数据层提取page-name、site-section和host-name的自定义代码类型的数据元素。 此外，XDM对象类型数据元素也符合之前新创建的WKND XDM模式内部版本 [创建XDM架构](#create-xdm-schema---experience-platform) 步骤。
-+ 规则：每当使用触发的Adobe客户端数据层访问WKND网页时，将数据发送到Platform Edge Network `cmp:show` 事件。
++ 规则：每当使用触发的Adobe客户端数据层访问WKND网页时，将数据发送到PlatformEdge Network `cmp:show` 事件。
 
 使用构建和发布标记库时 **发布流**，您可以使用 **添加所有已更改资源** 按钮。 选择所有资源，如数据元素、规则和标记扩展，而不是标识和选取单个资源。 此外，在开发阶段，您可以将库仅发布到 _开发_ 环境，然后验证并将其提升到 _Stage_ 或 _生产_ 环境。
 

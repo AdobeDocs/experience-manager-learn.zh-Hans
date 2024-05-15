@@ -12,8 +12,8 @@ thumbnail: 30386.jpg
 doc-type: Tutorial
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
-duration: 462
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 358
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 了解如何使用Experience Manager的样式系统实施单个样式并重用核心组件。 本教程介绍如何开发样式系统，以便通过模板编辑器的品牌特定CSS和高级策略配置来扩展核心组件。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment).
 

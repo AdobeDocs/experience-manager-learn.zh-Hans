@@ -10,11 +10,11 @@ recommendations: noDisplay, noCatalog
 jira: KT-11603
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: 3062900a-0461-4c6f-81e6-c76a7f613804
-duration: 220
-source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
+duration: 240
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '474'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -306,7 +306,7 @@ async function main (params) {
 
 以下AEM HTTP API通常用于通过扩展与AEM交互：
 
-+ [AEM GRAPHQL API](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
++ [AEM GRAPHQL API](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 + [AEM ASSETS HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
    + [AEM Assets HTTP API 中的内容片段支持](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html)
 + [AEM QueryBuilder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html)

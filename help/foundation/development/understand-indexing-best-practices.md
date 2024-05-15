@@ -8,12 +8,12 @@ doc-type: Article
 topic: Development
 role: Developer, Architect
 level: Beginner
-duration: 389
+duration: 373
 last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: 78e8a8472d2dd8128c6ce2f1120cb9a41527f31b
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 0%
@@ -43,19 +43,19 @@ ht-degree: 0%
 
 - 定义最佳查询，使用 [优化查询](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) 流程图和 [JCR查询备忘单](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) 以供参考。
 
-- 如果OOTB索引不支持搜索要求，您有两个选择。 但是，请查看 [创建高效索引的提示](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
+- 如果OOTB索引不支持搜索要求，您有两个选择。 但是，请查看 [创建高效索引的提示](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - 自定义OOTB索引：首选选项，因为它易于维护和升级。
    - 完全自定义索引：仅当上述选项无效时。
 
 ### 自定义OOTB索引
 
-- 在 **AEMCS**，在自定义OOTB索引时使用 **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** 命名约定。 例如， `cqPageLucene-custom-1` 或 `damAssetLucene-8-custom-1`. 这有助于在更新OOTB索引时合并自定义索引定义。 请参阅 [对开箱即用索引的更改](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
+- 在 **AEMCS**，在自定义OOTB索引时使用 **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** 命名约定。 例如， `cqPageLucene-custom-1` 或 `damAssetLucene-8-custom-1`. 这有助于在更新OOTB索引时合并自定义索引定义。 请参阅 [对开箱即用索引的更改](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
 
 - 在 **AEM 6.X**，上述命名 _不起作用_，只需在中使用必要的属性更新OOTB索引即可 `indexRules` 节点。
 
 - 始终使用CRX DE包管理器(/crx/packmgr/)从AEM实例复制最新的OOTB索引定义，对其进行重命名并在XML文件中添加自定义项。
 
-- 将索引定义存储到AEM项目，位于 `ui.apps/src/main/content/jcr_root/_oak_index` 并使用Cloud Manager CI/CD管道部署它。 请参阅 [部署自定义索引定义](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
+- 将索引定义存储到AEM项目，位于 `ui.apps/src/main/content/jcr_root/_oak_index` 并使用Cloud Manager CI/CD管道部署它。 请参阅 [部署自定义索引定义](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
 
 ### 完全自定义索引
 
@@ -63,13 +63,13 @@ ht-degree: 0%
 
 - 创建完全自定义索引时，使用 **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** 命名约定。 例如，`wknd.adventures-1-custom-1`。这有助于避免命名冲突。 此处， `wknd` 是前缀和 `adventures` 是自定义索引名称。 此约定适用于AEM 6.X和AEMCS，并有助于为将来迁移到AEMCS做好准备。
 
-- AEMCS仅支持Lucene索引，因此为了准备将来迁移到AEMCS，请始终使用Lucene索引。 请参阅 [Lucene索引与属性索引](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing) 以了解更多详细信息。
+- AEMCS仅支持Lucene索引，因此为了准备将来迁移到AEMCS，请始终使用Lucene索引。 请参阅 [Lucene索引与属性索引](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing) 以了解更多详细信息。
 
 - 避免在与OOTB索引相同的节点类型上创建自定义索引。 请改为在中使用必要的属性自定义OOTB索引 `indexRules` 节点。 例如，请勿在 `dam:Asset` 节点类型但自定义OOTB `damAssetLucene` 索引。 _它一直是性能和功能问题的常见根本原因_.
 
 - 此外，请避免添加多个节点类型，例如 `cq:Page` 和 `cq:Tag` 在索引规则下(`indexRules`)节点。 相反，请为每个节点类型创建单独的索引。
 
-- 如上节所述，将索引定义存储在AEM项目的 `ui.apps/src/main/content/jcr_root/_oak_index` 并使用Cloud Manager CI/CD管道部署它。 请参阅 [部署自定义索引定义](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
+- 如上节所述，将索引定义存储在AEM项目的 `ui.apps/src/main/content/jcr_root/_oak_index` 并使用Cloud Manager CI/CD管道部署它。 请参阅 [部署自定义索引定义](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
 
 - 索引定义准则为：
    - 节点类型(`jcr:primaryType`)应为 `oak:QueryIndexDefinition`
@@ -273,7 +273,7 @@ OOTB _查询性能工具_ 可用位置 [本地SDK](http://localhost:4502/libs/gr
 
 有关更多信息，请参阅以下文档：
 
-- [Oak查询和索引](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
+- [Oak查询和索引](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
 - [查询和索引最佳实践](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
-- [有关查询和索引的最佳实践](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
+- [有关查询和索引的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
 

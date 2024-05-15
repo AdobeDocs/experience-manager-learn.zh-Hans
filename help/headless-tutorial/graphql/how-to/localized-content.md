@@ -9,8 +9,8 @@ level: Intermediate
 jira: KT-10254
 thumbnail: KT-10254.jpeg
 exl-id: 5e3d115b-f3a1-4edc-86ab-3e0713a36d54
-duration: 149
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 130
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # AEM Headless的本地化内容
 
-AEM提供 [翻译集成框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) 对于Headless内容，允许轻松翻译内容片段和支持资产，以便跨区域设置使用。 该框架与用于翻译其他AEM内容(如页面、体验片段、资源和Forms)的框架相同。 一次 [headless内容已翻译](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=zh-Hans)和发布后，它便可用于headless应用程序使用。
+AEM提供 [翻译集成框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) 对于Headless内容，允许轻松翻译内容片段和支持资产，以便跨区域设置使用。 该框架与用于翻译其他AEM内容(如页面、体验片段、资源和Forms)的框架相同。 一次 [headless内容已翻译](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html)和发布后，它便可用于headless应用程序使用。
 
 ## 资产文件夹结构{#assets-folder-structure}
 

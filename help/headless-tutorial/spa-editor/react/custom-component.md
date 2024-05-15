@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-duration: 364
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 323
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ![配置开放天气组件](assets/custom-component/enter-dialog.png)
 
-## 前提条件
+## 先决条件
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment). 本章是 [导航和路由](navigation-routing.md) 但是，本章是部署到本地SPA实例中的启用AEM的AEM项目，您需要这样做。
 

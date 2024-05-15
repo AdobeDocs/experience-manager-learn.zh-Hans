@@ -11,8 +11,8 @@ thumbnail: KT-7498.jpg
 doc-type: Tutorial
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
-duration: 1593
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 1561
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 在本章中，我们将探讨页面模板与页面之间的关系。 我们将基于来自的一些模型构建一个无样式的杂志文章模板 [AdobeXD](https://www.adobe.com/products/xd.html). 在构建模板的过程中，将涵盖核心组件和高级策略配置。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 这是一个多部分教程，假定其中包含了 [创作内容和发布更改](./author-content-publish.md) 章节已完成。
 

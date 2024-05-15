@@ -10,8 +10,8 @@ mini-toc-levels: 1
 jira: KT-7131
 thumbnail: KT-7131.jpg
 exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
-duration: 620
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 486
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2137'
 ht-degree: 5%
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 在本教程中，您将设置一个本地环境来模拟将内容从Author实例分发到Publish实例。 您还将生成一个React应用程序的生产版本，该应用程序配置为使用GraphQL API从AEM Publish环境使用内容。 您将逐渐学会如何有效地使用环境变量以及如何更新AEM CORS配置。
 
-## 前提条件
+## 先决条件
 
 本教程是多部分教程的一部分。 假定前几部分中概述的步骤已经完成。
 

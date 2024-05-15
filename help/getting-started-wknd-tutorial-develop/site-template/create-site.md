@@ -11,8 +11,8 @@ thumbnail: KT-7496.jpg
 doc-type: Tutorial
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
 recommendations: noDisplay, noCatalog
-duration: 265
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 198
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 作为快速站点创建的一部分，请使用Adobe Experience Manager AEM中的“站点创建向导”来生成新网站。 由Adobe提供的标准站点模板用作新站点的起点。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 本章中的步骤将在Adobe Experience Manager as a Cloud Service环境中进行。 确保您对AEM环境具有管理访问权限。 建议使用 [沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) 和 [开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) 完成本教程时。
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 如果使用共享AEM环境，请将唯一标识符附加到 **站点名称**. 例如 `wknd-site-johndoe`. 这将确保多个用户可以完成相同的教程，而不会产生任何冲突。
+   > 如果使用共享AEM环境，请将唯一标识符附加到 **站点名称**. 例如 `wknd-site-johndoe`。这将确保多个用户可以完成相同的教程，而不会产生任何冲突。
 
 1. 单击 **创建** 以生成站点。 单击 **完成** 在 **成功** AEM对话框。
 

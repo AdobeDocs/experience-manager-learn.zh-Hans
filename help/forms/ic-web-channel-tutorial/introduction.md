@@ -9,8 +9,8 @@ role: Developer
 level: Beginner
 exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
 last-substantial-update: 2019-07-07T00:00:00Z
-duration: 35
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 28
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 4%
@@ -21,9 +21,9 @@ ht-degree: 4%
 
 交互式通信是AEM Forms 6.4的新功能。本文档将指导您完成为打印渠道创建交互式通信所需的步骤。
 
-## 前提条件 {#prerequistes}
+## 先决条件 {#prerequistes}
 
-[使用包管理器下载与本教程相关的资源并将其导入AEM。](assets/gettingstartedassets.zip). 此zip文件包含本教程中使用的图像和文档片段
+[使用包管理器下载与本教程相关的资源并将其导入AEM。](assets/gettingstartedassets.zip)。此zip文件包含本教程中使用的图像和文档片段
 
 [下载并解压缩此文件。](assets/warfileandswaggerfile.zip) 此文件包含需要部署到Tomcat上的SampleRest.war文件和需要用于配置数据源的swagger文件。
 

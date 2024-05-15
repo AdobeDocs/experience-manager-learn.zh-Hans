@@ -11,8 +11,8 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-duration: 67
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 54
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 3%
@@ -36,7 +36,7 @@ ht-degree: 3%
 * 要将GraphQL查询存储或保留到AEM，请执行以下操作
 * 使用示例React应用程序中的持久GraphQL查询
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 按照本教程进行操作，需要执行以下操作：
 

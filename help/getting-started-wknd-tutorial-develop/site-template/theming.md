@@ -11,8 +11,8 @@ thumbnail: KT-7498.jpg
 doc-type: Tutorial
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
 recommendations: noDisplay, noCatalog
-duration: 1298
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 1275
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 1%
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 最终，我们的网站将更新为包含符合WKND品牌的样式。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 这是一个多部分教程，假定其中包含了 [页面模板](./page-templates.md) 章节已完成。
 

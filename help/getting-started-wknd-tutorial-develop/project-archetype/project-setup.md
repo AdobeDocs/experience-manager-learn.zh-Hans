@@ -12,8 +12,8 @@ thumbnail: 30152.jpg
 doc-type: Tutorial
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
-duration: 578
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 502
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1684'
 ht-degree: 1%
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 本教程介绍如何创建Maven Multi Module项目来管理Adobe Experience Manager站点的代码和配置。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 查看所需的工具和设置说明 [本地开发环境](./overview.md#local-dev-environment). 确保您有新的Adobe Experience Manager实例可在本地使用，并且未安装其他示例/演示包（所需的Service Pack除外）。
 

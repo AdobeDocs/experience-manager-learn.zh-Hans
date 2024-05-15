@@ -13,8 +13,8 @@ mini-toc-levels: 1
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-duration: 218
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+duration: 135
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 11%
@@ -88,7 +88,7 @@ Adobe Analytics与AEMas a Cloud Service集成，让您能够在客户历程的�
 
 ## Adobe Commerce
 
-Adobe Commerce与AEMas a Cloud Service集成，使品牌可以更快地扩展和创新，以彰显商业体验并加快在线支出。 AEM with Commerce将Experience Manager中的沉浸式、全渠道和个性化体验与任意数量的商业解决方案整合在一起，为购物历程的所有部分提供差异化体验，减少实现价值的时间并促进更高转化。
+Adobe Commerce与AEMas a Cloud Service集成，使品牌可以更快地扩展和创新，以彰显商业体验并加快在线支出。 AEM与Commerce将Experience Manager中的沉浸式、全渠道和个性化体验与任意数量的商业解决方案相结合，在购物历程的各个部分提供差异化体验，从而缩短实现价值的时间并促进更高转化。
 
 ### AEM Sites
 
@@ -119,11 +119,11 @@ Adobe Journey Optimizer可帮助您通过单个应用程序与数百万客户计
 
 ## Adobe Learning Manager
 
-Adobe学习管理器(以前称为Adobe Captivate Prime)为客户和员工提供个性化的学习。
+Adobe Learning Manager(以前称为Adobe Captivate Prime)为客户和员工提供个性化的学习。
 
 ### AEM Sites
 
-+ [将AEM Sites与AdobeLearning Manager集成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-learning-manager.html)
++ [将AEM Sites与Adobe Learning Manager集成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-learning-manager.html)
 
 ## Adobe Sensei
 

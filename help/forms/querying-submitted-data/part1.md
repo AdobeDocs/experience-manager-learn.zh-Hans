@@ -8,8 +8,8 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: c588bdca-b8a8-4de2-97e0-ba08b195699f
-duration: 62
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 50
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%
@@ -35,4 +35,4 @@ AEM Forms 6.3版本中引入了创建基于JSON架构的自适应Forms的功能�
 ![数据存储](assets/datastored.gif)
 
 
-[可用于创建自适应Forms的JSON架构示例。](assets/samplejsonschemas.zip). 下载并解压缩zip文件以获取JSON架构
+[可用于创建自适应Forms的JSON架构示例。](assets/samplejsonschemas.zip)。下载并解压缩zip文件以获取JSON架构

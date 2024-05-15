@@ -10,8 +10,8 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-duration: 436
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 410
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 使用简单的React应用程序进行查询和显示 **团队** 和 **人员** AEM GraphQL API公开的内容。 React的使用在很大程度上并不重要，消费的外部应用程序可以在任何平台的任何框架中编写。
 
-## 前提条件
+## 先决条件
 
 假定已完成本多部分教程前面部分中概述的步骤，或者 [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) 安装在您的AEMas a Cloud Service创作和发布服务上。
 

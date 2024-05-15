@@ -12,8 +12,8 @@ thumbnail: 30207.jpg
 doc-type: Tutorial
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
 recommendations: noDisplay, noCatalog
-duration: 870
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 706
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2923'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 本教程介绍单元测试的实施，该测试将验证在中创建的署名组件的Sling模型的行为。 [自定义组件](./custom-component.md) 教程。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment).
 

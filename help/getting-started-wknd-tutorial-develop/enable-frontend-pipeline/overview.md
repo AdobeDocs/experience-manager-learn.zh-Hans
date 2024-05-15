@@ -14,8 +14,8 @@ thumbnail: 53409343.jpg
 last-substantial-update: 2022-09-23T00:00:00Z
 doc-type: Tutorial
 exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
-duration: 227
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 206
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
 >
 >这仅适用于AEMas a Cloud Service，不适用于基于AMS的AdobeCloud Manager部署。
 
-## 前提条件
+## 先决条件
 
 本教程中的部署步骤将在AdobeCloud Manager中进行，请确保您拥有 __部署管理员__ 角色，请参阅云管理 [角色定义](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions).
 

@@ -12,8 +12,8 @@ doc-type: Tutorial
 exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 badgeIntegration: label="集成" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
-duration: 601
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 443
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2072'
 ht-degree: 0%
@@ -49,7 +49,7 @@ WKND营销团队有兴趣了解 `Call to Action (CTA)` 按钮在主页上表现�
 1. 创建 [Analysis Workspace项目](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) 借助允许您快速构建、分析和共享洞察的工具来分析数据。
 1. 与其他团队成员共享Analysis Workspace项目。
 
-## 前提条件
+## 先决条件
 
 本教程是 [使用Adobe Analytics跟踪已单击的组件](./track-clicked-component.md) 并假设您拥有：
 

@@ -7,17 +7,17 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 163
+duration: 280
 last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
+exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 0%
 
 ---
-
 
 # 日志记录和AEM事件
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 在此示例中，利用Adobe提供的 _托管Web应用程序_ 允许您从日志中获取第一批AEM事件，而无需设置应用程序。 此Adobe提供的Web应用程序托管在 [故障](https://glitch.com/)，该平台以提供基于Web的环境而闻名，有助于构建和部署Web应用程序。 但是，如果愿意，也可以选择使用您自己的应用程序。
 
-## 前提条件
+## 先决条件
 
 要完成本教程，您需要：
 

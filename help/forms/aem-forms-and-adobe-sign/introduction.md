@@ -10,8 +10,8 @@ exl-id: 0be61f04-c3ed-4ecb-bab7-73fd308c14e0
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
-duration: 38
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 31
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 12%
@@ -28,7 +28,7 @@ AEM Forms与Acrobat Sign之间的集成允许执行以下操作：
 * 根据您的PDF模板创建自适应Forms。 将数据与PDF模板合并，并对签名提供相同的内容
 * 使用签名文档工作流组件发送文档以供签名
 
-## 前提条件
+## 先决条件
 
 要将Acrobat Sign与AEM Forms集成，您需要以下项：
 

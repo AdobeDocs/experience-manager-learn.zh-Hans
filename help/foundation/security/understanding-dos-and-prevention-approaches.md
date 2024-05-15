@@ -7,11 +7,11 @@ topic: Security, Development
 role: Admin, Architect, Developer
 level: Beginner
 doc-type: Article
-duration: 0
+duration: 75
 last-substantial-update: 2024-03-30T00:00:00Z
 jira: KT-15219
 exl-id: 1d7dd829-e235-4884-a13f-b6ea8f6b4b0b
-source-git-commit: f84a6cc54838e5bf87cfa173ef17df4ec745ebcb
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 1%
@@ -49,7 +49,7 @@ ht-degree: 1%
         <tr>
             <td>修改安全性</td>
             <td>ModSecurity（又称“mod_security”Apache模块）是一种开源、跨平台的解决方案，可抵御针对Web应用程序的一系列攻击。<br/> 在AEMas a Cloud Service中，这仅适用于AEM Publish服务，因为AEM Author服务之前没有Apache Web Server和AEM Dispatcher。</td>
-            <td colspan="3"><a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection" target="_blank">启用Modsecurity </a></td>
+            <td colspan="3"><a href="https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection" target="_blank">启用Modsecurity </a></td>
         </tr>
         <tr>
             <td>流量过滤器规则</td>

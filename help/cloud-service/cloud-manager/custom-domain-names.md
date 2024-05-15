@@ -7,17 +7,17 @@ topic: Administration, Architecture
 role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
-duration: null
+duration: 1042
 last-substantial-update: 2024-03-12T00:00:00Z
 jira: KT-15121
 thumbnail: KT-15121.jpeg
-source-git-commit: 8230991cebf1a9e994f0dfe96c5590d0c19ef887
+exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 0%
 
 ---
-
 
 # 添加自定义域名
 
@@ -92,7 +92,7 @@ AdobeCloud Manager接受最终实体证书和证书链 _在单独的表单字段
 
 要验证域名，请执行以下步骤：
 
-- 按照以下步骤在Cloud Manager中添加域名 [添加自定义域名](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name) 文档。
+- 按照以下步骤在Cloud Manager中添加域名 [添加自定义域名](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name) 文档。
 - 添加特定于AEM [TXT记录](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record) 在您的DNS托管服务中。
 - 通过使用查询DNS服务器来验证上述步骤 `dig` 命令。
 
@@ -156,5 +156,3 @@ _aemverification.wknd.enablementadobe.com. 3600    IN TXT "adobe-aem-verificatio
 您还可以观看端到端视频，其中演示了向AEMas a Cloud Service托管的站点添加自定义域名的概述、先决条件和上述步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427817?quality=12&learn=on)
-
-

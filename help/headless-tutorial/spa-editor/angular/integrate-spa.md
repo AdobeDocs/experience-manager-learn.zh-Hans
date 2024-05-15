@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
-duration: 649
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 536
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 0%
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 *扩展SPA以添加静态 `Header` 组件*
 
-## 前提条件
+## 先决条件
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment).
 

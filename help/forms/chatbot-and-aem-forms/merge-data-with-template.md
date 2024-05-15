@@ -7,7 +7,9 @@ jira: KT-15344
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: eb4463ae0270725c5b0bd96e9799bada25b06303
+exl-id: 6a865402-db3d-4e0e-81a0-a15dace6b7ab
+duration: 15
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
@@ -22,4 +24,3 @@ ht-degree: 0%
 
 此 [generatePDF](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-) OutputService的方法用于生成PDF。
 随后使用Adobe Sign REST API发送生成的PDF以进行签名。
-

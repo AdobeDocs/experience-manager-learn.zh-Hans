@@ -9,8 +9,8 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 47446e2a-73d1-44ba-b233-fa1b7f16bc76
-duration: 1203
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 1088
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1663'
 ht-degree: 0%
@@ -38,7 +38,7 @@ WKND站点计划宣布 **SkateFest挑战** 通过他们的网站在全美范围�
 * **内容制作器/内容编辑器** (Adobe Experience Manager)
 * **营销人员** (Adobe Target/优化团队)
 
-### 前提条件
+### 先决条件
 
 * **AEM**
    * [AEM创作和发布实例](./implementation.md#getting-aem) 分别在localhost 4502和4503上运行。

@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
-duration: 437
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 337
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ![已添加导航](assets/navigation-routing/navigation-added.png)
 
-## 前提条件
+## 先决条件
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment). 本章是 [映射组件](map-components.md) 但是，本章是部署到本地SPA实例中的启用AEM的AEM项目，您需要这样做。
 

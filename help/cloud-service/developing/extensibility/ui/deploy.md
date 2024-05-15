@@ -10,8 +10,8 @@ recommendations: noDisplay, noCatalog
 jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
-duration: 214
-source-git-commit: 678bda0ea6f6c727170c596e9d3d5f0687ec830f
+duration: 166
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Adobe Developer Console工作区与AEMas a Cloud Service的环境类型没有任
 
 ![扩展审批](./assets/deploy/adobe-exchange.png){align="center"}
 
-1. 登录 [Adobe交换](https://exchange.adobe.com/)
+1. 登录 [Adobe Exchange](https://exchange.adobe.com/)
 1. 导航到 __管理__ > __等待审阅的应用程序__
 1. __审核__ 扩展App Builder应用程序
 1. 是否可接受扩展更改 __Accept__ 评论。 这会立即在Adobe组织内的所有AEMas a Cloud Service创作服务上注入扩展。
@@ -91,7 +91,7 @@ Adobe Developer Console工作区与AEMas a Cloud Service的环境类型没有任
 
 要部署扩展的新版本，必须先撤销（或删除）该扩展。 当扩展被撤销时，它在AEM控制台中不可用。
 
-1. 登录 [Adobe交换](https://exchange.adobe.com/)
+1. 登录 [Adobe Exchange](https://exchange.adobe.com/)
 1. 导航到 __管理__ > __App Builder应用程序__
 1. __撤销__ 要更新的扩展
 
@@ -130,7 +130,7 @@ Adobe Developer Console工作区与AEMas a Cloud Service的环境类型没有任
 
 ![扩展审批](./assets/deploy/adobe-exchange.png){align="center"}
 
-1. 登录 [Adobe交换](https://exchange.adobe.com/)
+1. 登录 [Adobe Exchange](https://exchange.adobe.com/)
 1. 导航到 __管理__ > __等待审阅的应用程序__
 1. __审核__ 扩展App Builder应用程序
 1. 是否可接受扩展更改 __Accept__ 评论。 这会立即在Adobe组织内的所有AEMas a Cloud Service创作服务上注入扩展。
@@ -141,8 +141,8 @@ Adobe Developer Console工作区与AEMas a Cloud Service的环境类型没有任
 
 ![删除扩展](./assets/deploy/revoke.png)
 
-要删除扩展，请从Adobe交换中撤消（或删除）该扩展。 撤销扩展后，该扩展将从所有AEMas a Cloud Service创作服务中移除。
+要删除扩展，请从Adobe Exchange中撤消（或删除）该扩展。 撤销扩展后，该扩展将从所有AEMas a Cloud Service创作服务中移除。
 
-1. 登录 [Adobe交换](https://exchange.adobe.com/)
+1. 登录 [Adobe Exchange](https://exchange.adobe.com/)
 1. 导航到 __管理__ > __App Builder应用程序__
 1. __撤销__ 要移除的扩展

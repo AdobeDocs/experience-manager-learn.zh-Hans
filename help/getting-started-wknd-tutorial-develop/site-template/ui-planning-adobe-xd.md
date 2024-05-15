@@ -11,8 +11,8 @@ thumbnail: 338680.jpg
 doc-type: Tutorial
 exl-id: 3155e0fa-56b7-4a52-8eef-fee488e95f68
 recommendations: noDisplay, noCatalog
-duration: 667
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 646
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 大多数情况下，规划新网站的工作都从模拟和静态设计开始。 [Adobe XD](https://www.adobe.com/products/xd.html) 是一款用于构建用户体验的同类最佳设计工具。 Adobe建议通过使用Adobe XD或其他工具的UI模型来规划Sites实施。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 这是一个多部分教程，并假定已完成上一章中概述的步骤。 本章只是监视和学习部分，无需执行任何操作即可继续后续章节。
 

@@ -10,8 +10,8 @@ role: User
 level: Intermediate
 exl-id: be519d58-1caa-42ea-97a9-7cd38ce8faca
 last-substantial-update: 2021-01-07T00:00:00Z
-duration: 184
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 177
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 2%
@@ -31,7 +31,7 @@ ht-degree: 2%
 以下视频概述了课程
 >[!VIDEO](https://video.tv.adobe.com/v/36387?quality=12&learn=on)
 
-## 前提条件
+## 先决条件
 
 * AEM Forms的工作实例
 * 熟悉MySQL数据库和MySQL工作台

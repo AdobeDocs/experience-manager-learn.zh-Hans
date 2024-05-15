@@ -11,8 +11,8 @@ thumbnail: 30359.jpg
 doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
-duration: 732
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 557
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2546'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 了解如何使用客户端库或clientlibs为Adobe Experience Manager (AEM) Sites实施部署和管理CSS和JavaScript。 本教程还介绍了 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模块，解耦 [webpack](https://webpack.js.org/) 项目，可以集成到端到端构建过程中。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment).
 

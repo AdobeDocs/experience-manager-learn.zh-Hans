@@ -11,8 +11,8 @@ last-substantial-update: 2023-08-28T00:00:00Z
 jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: b8e09820-f1f2-4897-b454-16c0df5a0459
-duration: 77
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 56
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 3%
@@ -43,7 +43,7 @@ AEM Author的CDN确实缓存了多种可能有用的资源，包括 [持久查�
 
 | 内容类型 | 默认CDN缓存期限 |
 |:------------ |:---------- |
-| [持久查询(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances) | 1分钟 |
+| [持久查询(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances) | 1 分钟 |
 | [客户端库(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
 | [其他所有条件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 未缓存 |
 
