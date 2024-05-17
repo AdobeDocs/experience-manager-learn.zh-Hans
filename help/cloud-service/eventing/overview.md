@@ -12,9 +12,9 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c0aa4049e846a0f24f8a5f5b014dbaf5bfc8eb2d
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->AEMas a Cloud Service事件仅适用于预发行模式下的注册用户。 要在AEMas a Cloud Service环境中启用AEM事件，请联系 [AEM事件团队](mailto:grp-aem-events@adobe.com).
+>AEMas a Cloud Service事件仅适用于预发行模式下的注册用户。 要在AEMas a Cloud Service环境中启用AEM事件，请联系 <a href="mailto:grp-aem-events@adobe.com">AEM事件团队</a>.
 
 ## 内容
 
@@ -75,7 +75,7 @@ AEM事件虽然强大，但存在一些需要考虑的限制：
 
 ## 如何启用
 
-AEM事件是根据AEMas a Cloud Service环境启用的，并且仅适用于预发行模式下的环境。 联系人 [AEM事件团队](mailto:grp-aem-events@adobe.com) 以使用AEM事件启用AEM环境。
+AEM事件是根据AEMas a Cloud Service环境启用的，并且仅适用于预发行模式下的环境。 联系 <a href="mailto:grp-aem-events@adobe.com">AEM事件团队</a> 以使用AEM事件启用AEM环境。
 
 如果已启用，请参阅 [在AEM Cloud Service环境中启用AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) 以了解后续步骤。
 
