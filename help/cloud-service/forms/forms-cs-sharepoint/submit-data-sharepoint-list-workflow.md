@@ -10,9 +10,9 @@ topic: Integrations
 jira: KT-15126
 exl-id: b369ed05-ba25-4b0e-aa3b-e7fc1621067d
 duration: 52
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: e8e51fadaa824d615524a8c4c41aefb656d0391d
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '290'
 ht-degree: 1%
 
 ---
@@ -39,8 +39,9 @@ ht-degree: 1%
 * 配置调用FDM步骤，以使用在上一步中创建的表单数据模型。
 * ![关联 — fdm](assets/fdm-insert-1.png)
 
-* ![映射输入参数](assets/fdm-insert-2.png)
-* 请注意使用了JSON点表示法。 提交的数据采用以下格式，我们正在从提交的数据中提取ContactUS对象。
+## 基于核心组件的自适应表单
+
+提交的数据采用以下格式。 我们需要在调用表单数据模型服务工作流步骤中使用点表示法提取ContactUS对象，如屏幕快照中所示
 
 ```json
 {
@@ -54,6 +55,41 @@ ht-degree: 1%
 ```
 
 
+* ![映射输入参数](assets/fdm-insert-2.png)
+
+
+## 基于基础组件的自适应表单
+
+提交的数据采用以下格式。 在调用表单数据模型服务工作流步骤中使用点表示法提取ContactUS JSON对象
+
+```json
+{
+    "afData": {
+        "afUnboundData": {
+            "data": {}
+        },
+        "afBoundData": {
+            "data": {
+                "ContactUS": {
+                    "Title": "Lord",
+                    "HighNetWorth": "true",
+                    "SubmitterName": "John Doe",
+                    "Products": "Forms"
+                }
+            }
+        },
+        "afSubmissionInfo": {
+            "lastFocusItem": "guide[0].guide1[0].guideRootPanel[0].afJsonSchemaRoot[0]",
+            "stateOverrides": {},
+            "signers": {},
+            "afPath": "/content/dam/formsanddocuments/foundationform",
+            "afSubmissionTime": "20240517100126"
+        }
+    }
+}
+```
+
+![基于基础的表单](assets/foundation-based-form.png)
 
 ## 配置自适应表单以触发AEM Workflow
 
