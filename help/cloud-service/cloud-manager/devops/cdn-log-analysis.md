@@ -11,13 +11,13 @@ duration: 219
 last-substantial-update: 2024-05-17T00:00:00Z
 jira: KT-15505
 thumbnail: KT-15505.jpeg
-source-git-commit: d2c39b57982478badcd12682f082517ee9531d3e
+exl-id: 830c2486-099b-454f-bc07-6bf36e81ac8d
+source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
-
 
 # CDN日志分析工具
 
@@ -67,6 +67,4 @@ ht-degree: 0%
 
 此 [麋鹿栈栈](https://www.elastic.co/elastic-stack)由Elasticsearch、Logstash和Kibana组成的，是另一种强大的日志分析选项。 对于无权访问Splunk设置或日志转发功能的组织，此插件非常有用。 在本地设置ELK栈栈非常简单，工具提供了Docker组合文件以快速入门。 然后，您可以导入预建功能板并摄取使用AdobeCloud Manager下载的CDN日志。
 
-您可以开始使用 [用于AEMCS CDN日志分析的ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis)
-
-
+您可以开始使用 [用于AEMCS CDN日志分析的ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis) 指南。
