@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
 duration: 295
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 1d9aeb4e5bd41096a28e3375d124bd6b6b8784aa
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -40,13 +40,21 @@ AEMas a Cloud Service为每个环境提供了一个开发人员控制台，该�
 
 要访问和使用Developer Console，必须通过以下方式向开发人员的Adobe ID授予以下权限 [AdobeAdmin Console](https://adminconsole.adobe.com).
 
-1. 确保影响Cloud Manger和AEMas a Cloud Service产品的Adobe组织在Adobe组织切换器中处于活动状态。
-1. 开发人员必须是 [Cloud Manager产品的 __开发人员 — Cloud Service__ 产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer).
-   + 如果此成员身份不存在，则开发人员将无法登录到开发人员控制台。
+1. 确保在Adobe组织切换器中查看与要在开发人员控制台中检查的Adobe相关的环境组织。
+1. 为了能够登录到Developer Console，开发人员必须是以下任意角色的成员：
+   + [Cloud Manager产品的 __开发人员 — Cloud Service__ 产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer)：在这种情况下，开发人员将看到在选定的开发人员控制台URL下可用的环境的完整列表；如果已在Cloud Manager中选择了开发环境或RDE，则可能会显示同一程序中的其他开发环境或RDE。
+   + [__AEM管理员__ 上的产品配置文件 __AEM创作__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)：在这种情况下，上一个项目符号中描述的环境列表将仅限于分配了此角色的相关产品配置文件。
 1. 开发人员必须是 [__AEM用户__ 或 __AEM管理员__ AEM创作和/或发布的产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles).
    + 如果此成员资格不存在， [状态](#status) 转储将超时，并出现401未授权错误。
 
 ### 开发人员控制台访问疑难解答
+
+#### 登录时，我没有看到所查找的环境已列出
+
+确保以下各项：
+
++ 通过通过Cloud Manager单击所选环境的三个圆点，然后选择开发人员控制台，您已选择正确的开发人员控制台URL。
++ 您或者拥有 [Cloud Manager产品的 __开发人员 — Cloud Service__ 产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer) 查看环境的完整列表，或者您属于 [__AEM管理员__ 上的产品配置文件 __AEM创作__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles) 对于您未找到的环境。
 
 #### 401转储状态时发生未授权错误
 
