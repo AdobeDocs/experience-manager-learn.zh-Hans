@@ -11,7 +11,7 @@ last-substantial-update: 2021-01-11T00:00:00Z
 doc-type: Tutorial
 exl-id: 066693b7-2b87-45e8-93ec-8bd09a7c263e
 duration: 777
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: dc40b8e022477d2b1d8f0ffe3b5e8bcf13be30b3
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 6%
@@ -102,7 +102,7 @@ Adobe客户端数据层引入了一种标准方法，用于收集和存储有关
 
    ```js
    function teaserShownHandler(event) {
-       var dataObject = getDataObjectHelper(event, {"@type": "wknd/components/teaser"});
+       var dataObject = getDataObjectHelper(event, {"@type": "wknd/components/carousel/item"});
        if(dataObject != null) {
            console.log("Teaser Shown: " + dataObject['dc:title']);
            console.log(dataObject);
@@ -110,7 +110,7 @@ Adobe客户端数据层引入了一种标准方法，用于收集和存储有关
    }
    ```
 
-   此 `teaserShownHandler` 函数调用 `getDataObjectHelper` 函数并传递一个过滤器 `wknd/components/teaser` 作为 `@type` 过滤掉由其他组件触发的事件。
+   此 `teaserShownHandler` 函数调用 `getDataObjectHelper` 函数并传递一个过滤器 `wknd/components/carousel/item` 作为 `@type` 过滤掉由其他组件触发的事件。
 
 1. 接下来，将事件侦听器推送到数据层，以监听 `cmp:show` 事件。
 
