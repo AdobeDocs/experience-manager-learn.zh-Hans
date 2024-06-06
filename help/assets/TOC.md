@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 0435cfe082043da1c92a25b0429c508121c0d95c
+source-git-commit: 6736eb9f124d43b6337b74fd9463bd56cee4e15a
 workflow-type: tm+mt
-source-wordcount: '423'
-ht-degree: 17%
+source-wordcount: '419'
+ht-degree: 16%
 
 ---
 
@@ -90,7 +90,6 @@ ht-degree: 17%
       + [在本地AEM上设置资源共享公域](./sharing/asset-share-commons-technical-video-setup.md)
       + [主题资产共享公域](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons资产套件](./sharing/asset-share/asset-share-commons-asset-kits.md)
-   + [连接的资源](./sharing/connected-assets.md)
 
 + 创意工作流{#creative-workflows}
    + [Adobe Express集成](./creative-workflows/adobe-express.md)
@@ -130,7 +129,6 @@ ht-degree: 17%
       + [自定义视频缩略图](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH自适应流](dynamic-media/dynamic-media-dash.md)
       + [Dynamic Media智能裁剪视频](dynamic-media/dynamic-media-smart-crop-video.md)
-      + [交互式视频](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
       + [视频播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + 查看器 {#viewers}
       + [查看器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
