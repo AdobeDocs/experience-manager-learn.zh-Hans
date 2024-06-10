@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 duration: 557
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 58ef1c482f127981083c07e5de5a1aba2f7c3aec
 workflow-type: tm+mt
-source-wordcount: '2546'
+source-wordcount: '2554'
 ht-degree: 0%
 
 ---
@@ -184,6 +184,16 @@ AEM项目原型会自动设置此集成。 接下来，探索它的工作方式�
    >[!NOTE]
    >
    >`npm install` 只需运行一次，例如在新的克隆或生成项目后。
+
+1. 打开 `ui.frontend/package.json` 和 **脚本** **开始** 命令添加 `--env writeToDisk=true`.
+
+   ```json
+   {
+     "scripts": { 
+       "start": "webpack-dev-server --open --config ./webpack.dev.js --env writeToDisk=true",
+     }
+   }
+   ```
 
 1. 在中启动webpack开发服务器 **观看** 模式，运行以下命令：
 
