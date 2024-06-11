@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 6736eb9f124d43b6337b74fd9463bd56cee4e15a
+source-git-commit: 394499d2c070920c404a09be32d036fe96f28aa7
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 16%
+source-wordcount: '415'
+ht-degree: 17%
 
 ---
 
@@ -81,7 +81,6 @@ ht-degree: 16%
 
    + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
-      + [配置AEM Brand Portal](brand-portal/configure.md)
       + [配置资产源](brand-portal/configure-asset-sourcing.md)
       + [启用演绎版下载](brand-portal/enable-renditions-download.md)
 
