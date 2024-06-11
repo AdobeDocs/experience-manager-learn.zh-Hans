@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: e20d9f80cc7e1c6f5f6c81233d9a5178551e2fa2
+source-git-commit: 82ef2988d55012ae730e9bbc7adeea547863ba51
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2080'
 ht-degree: 2%
 
 ---
@@ -304,6 +304,10 @@ ht-degree: 2%
    + [使用涂写签名](forms-designer/scribble-signature-form.md)
    + [使用数字签名](forms-designer/adding-dig-signature-field.md)
    + [Reader扩展表单](forms-designer/reader-extending-j2ee.md)
++ AEM Forms Workbench{#forms-workbench}
+   + [Workbench简介](aem-forms-workbench/workbench-introduction.md)
+   + [正在创建表单进程](aem-forms-workbench/workbench-creating-a-process.md)
+   + [调试进程](aem-forms-workbench/workbench-recording-and-testing-process.md)
 + 打印渠道的交互式通信
 {#ic-print-channel-tutorial}
    + [1 — 简介](ic-print-channel-tutorial/introduction.md)
