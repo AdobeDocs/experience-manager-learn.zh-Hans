@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: c67fad3da9b9eaa740c4351448108af3b1542912
+source-git-commit: 272ed4e4782b03f284886a3046440960df538286
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,20 @@ ht-degree: 0%
             <p>
                 <br/>
                 Explore Real User Monitoring (RUM)适用于Edge Delivery Services。
+            </p>
+        </td>   
+        <td>
+            <a href="./season-3/cloud5-rum-explorer.md">
+                <img alt="Real User Monitoring (RUM)资源管理器" src="https://video.tv.adobe.com/v/3429772?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-rum-explorer.md">
+                <strong>Real User Monitoring (RUM)资源管理器</strong></a>        
+                <br/><em>与AEM工程部James Talbot和Damian Langsweirdt一起</em>
+            </div>
+            <p>
+                <br/>
+                了解Real User Monitoring (RUM)资源管理器以及如何访问它。
             </p>
         </td>   
         <td>
