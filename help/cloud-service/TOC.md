@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 4b9f784de5fff7d9ba8cf7ddbe1802c271534010
+source-git-commit: c67fad3da9b9eaa740c4351448108af3b1542912
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1215'
 ht-degree: 16%
 
 ---
@@ -406,3 +406,4 @@ ht-degree: 16%
          + [自带Cloudflare CDN](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
          + [集成AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
          + [适用于AEM Sites的创作AI](./expert-resources/cloud-5/season-3/cloud5-generative-ai-for-aem-sites.md)
+         + [浏览通用编辑器](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
