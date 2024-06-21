@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 272ed4e4782b03f284886a3046440960df538286
+source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1234'
 ht-degree: 16%
 
 ---
@@ -249,6 +249,11 @@ ht-degree: 16%
       + [1 — 简介](./forms/custom-submit-headless-forms/introduction.md)
       + [2 — 创建自定义提交服务](./forms/custom-submit-headless-forms/custom-submit-service.md)
       + [3 — 显示响应](./forms/custom-submit-headless-forms/handle-response-react-app.md)
+   + 创建地址块组件{#create-address-block}
+      + [1 — 简介](./forms/create-address-block-component/introduction.md)
+      + [2 — 设置](./forms/create-address-block-component/set-up.md)
+      + [3 — 创建组件](./forms/create-address-block-component/creating-address-component.md)
+      + [4 — 部署组件](./forms/create-address-block-component/deploy-your-project.md)
    + AEM Forms和Analytics{#forms-and-analytics}
       + [简介](./forms/form-data-analytics/introduction.md)
       + [创建数据元素](./forms/form-data-analytics/data-elements.md)
