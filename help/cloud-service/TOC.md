@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
+source-git-commit: cbba149b23b4d8ecad35f263dc282a3da481fc9f
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1229'
 ht-degree: 16%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 16%
 + [概述](./overview.md)
 + AEM试用 {#aem-trials}
    + [图像](./aem-trials/images.md)
-+ AEMas a Cloud Service简介{#introduction}
-   + [什么是AEMas a Cloud Service？](./introduction/what-is-aem-as-a-cloud-service.md)
++ AEM as a Cloud Service简介{#introduction}
+   + [什么是AEM as a Cloud Service？](./introduction/what-is-aem-as-a-cloud-service.md)
    + [架构](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
    + 战略与思想领导力{#strategy}
@@ -35,7 +35,7 @@ ht-degree: 16%
    + [osgi](./underlying-technology/introduction-osgi.md)
    + [Java内容存储库](./underlying-technology/introduction-jcr.md)
    + [Sling](./underlying-technology/introduction-sling.md)
-   + [创作和发布服务](./underlying-technology/introduction-author-publish.md)
+   + [Author和Publish服务](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
    + [AEM AssetsSidekick插件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
@@ -68,7 +68,7 @@ ht-degree: 16%
          + [Github webhook验证](./developing/extensibility/app-builder/github-webhook-verification.md)
       + UI可扩展性{#ui}
          + [概述](./developing/extensibility/ui/overview.md)
-         + [Adobe Developer控制台项目](./developing/extensibility/ui/adobe-developer-console-project.md)
+         + [Adobe Developer Console项目](./developing/extensibility/ui/adobe-developer-console-project.md)
          + [初始化应用程序](./developing/extensibility/ui/app-initialization.md)
          + [注册扩展](./developing/extensibility/ui/extension-registration.md)
          + [模态](./developing/extensibility/ui/modal.md)
@@ -129,7 +129,7 @@ ht-degree: 16%
       + [OSGi web控制台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher 工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + 调试AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}
+   + 调试AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [概述](./debugging/cloud-service/overview.md)
       + [日志](./debugging/cloud-service/logs.md)
       + [生成和部署](./debugging/cloud-service/build-and-deployment.md)
@@ -219,7 +219,7 @@ ht-degree: 16%
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + [内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
-   + 针对Formsas a Cloud Service进行开发{#developing-for-cloud-service}
+   + 针对Forms进行开发as a Cloud Service{#developing-for-cloud-service}
       + [1 — 快速入门](./forms/developing-for-cloud-service/getting-started.md)
       + [2 — 安装IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [3 — 设置Git](./forms/developing-for-cloud-service/setup-git.md)
@@ -326,7 +326,7 @@ ht-degree: 16%
       + [从提交的数据中提取表单附件](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
    + 与Microsoft Dynamics集成{#formscs-dynamics-crm}
       + [创建Dynamics应用程序](./forms/formscs-dynamics-crm/create-dynamics-account.md)
-      + [配置数据源](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
+      + [配置数据Source](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
       + [创建表单数据模型](./forms/formscs-dynamics-crm/create-form-data-model.md)
       + [创建自适应表单](./forms/formscs-dynamics-crm/create-adaptive-form.md)
    + 与Salesforce集成{#integrate-with-salesforce}
@@ -374,7 +374,7 @@ ht-degree: 16%
    + AEM Champions {#aem-champions}
       + [Cloud Manager入门行动手册](./expert-resources/aem-champions/onboarding-playbook.md)
       + [Cloud Manager环境类型](./expert-resources/aem-champions/environment-types.md)
-      + [Cloud Manager UI](./expert-resources/aem-champions/cloud-manager-ui.md)
+      + [CLOUD MANAGER UI](./expert-resources/aem-champions/cloud-manager-ui.md)
    + [AEM Experts系列](./expert-resources/expert-series/aem-experts-series.md)
    + Cloud 5{#cloud-5}
       + [简介](./expert-resources/cloud-5/cloud5-introduction.md)
@@ -385,12 +385,12 @@ ht-degree: 16%
       + [AEM CDN第2部分](./expert-resources/cloud-5/cloud5-aem-cdn-part2.md)
       + [AEM日志文件](./expert-resources/cloud-5/cloud5-aem-log-files.md)
       + [登录令牌](./expert-resources/cloud-5/cloud5-getting-login-token-integrations.md)
-      + [云调度程序](./expert-resources/cloud-5/cloud5-aem-dispatcher-cloud.md)
+      + [Cloud Dispatcher](./expert-resources/cloud-5/cloud5-aem-dispatcher-cloud.md)
       + [迁移1](./expert-resources/cloud-5/cloud5-aem-content-migration-part-1.md)
       + [迁移2](./expert-resources/cloud-5/cloud5-aem-content-migration-part-2.md)
       + [Dispatcher验证器](./expert-resources/cloud-5/cloud5-aem-dispatcher-validator.md)
       + [搜索和编制索引](./expert-resources/cloud-5/cloud5-aem-search-and-indexing.md)
-      + [Adobe应用程序生成器](./expert-resources/cloud-5/cloud5-adobe-app-builder.md)
+      + [AdobeApp Builder](./expert-resources/cloud-5/cloud5-adobe-app-builder.md)
       + 第2季{#season-2}
          + [片段](./expert-resources/cloud-5/season-2/cloud5-experience-v-content-fragments.md)
          + [Repo Modernizer](./expert-resources/cloud-5/season-2/cloud5-repo-modernizer.md)
@@ -405,9 +405,8 @@ ht-degree: 16%
       + 第3季{#season-3}
          + [第三方搜索](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [Real User Monitoring (RUM)](./expert-resources/cloud-5/season-3/cloud5-rum.md)
-         + [Real User Monitoring (RUM)资源管理器](./expert-resources/cloud-5/season-3/cloud5-rum-explorer.md)
-         + [边缘工作者](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
-         + [在Edge Delivery Services中发布、取消发布事件](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
+         + [Edge员工](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
+         + [Publish，在Edge Delivery Services中取消发布事件](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [查询索引和Excel公式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
          + [自带Cloudflare CDN](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
          + [集成AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
