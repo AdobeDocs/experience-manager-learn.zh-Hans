@@ -12,10 +12,10 @@ last-substantial-update: 2022-06-13T00:00:00Z
 doc-type: Feature Video
 exl-id: 0681e2c4-8661-436c-9170-9aa841a6fa27
 duration: 419
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 726715890d997ba3bb85f4833e220ac2222b3a42
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 2%
+source-wordcount: '378'
+ht-degree: 1%
 
 ---
 
@@ -26,6 +26,22 @@ ht-degree: 2%
 ## 元数据导出 {#metadata-export}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22132?quality=12&learn=on)
+
+>[!TIP]
+>
+> 在Excel中打开元数据导出CSV文件时，使用 [Excel导入程序](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) 而不是双击文件以避免UTF-8编码的CSV文件出现问题。
+>
+> 要在Excel中打开元数据导出CSV文件，请执行以下步骤：
+> 
+> 1. 打开Microsoft Excel
+> 1. 选择 __文件>新建__ 创建空电子表格
+> 1. 打开空电子表格，选择 __文件>导入__
+> 1. 选择 __文本__ 文件并单击 __导入__
+> 1. 从文件系统中选择导出的CSV文件，然后单击 __获取数据__
+> 1. 在导入向导的第1步中，选择 __已分隔__ 并设置 __文件来源__ 到 __Unicode (UTF-8)__，然后单击 __下一个__
+> 1. 在步骤2中，设置 __分隔符__ 到 __逗号__，然后单击 __下一个__
+> 1. 在步骤3中，将 __列数据格式__ 原样，然后单击 __完成__
+> 1. 选择 __导入__ 将数据添加到电子表格
 
 ## 元数据导入 {#metadata-import}
 
