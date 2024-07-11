@@ -8,10 +8,10 @@ version: Cloud Service
 feature-set: Experience Manager Assets
 feature: Assets Essentials
 team: TM
-source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
+source-git-commit: a5eb7cb6ba9b806a57a27ad1a0e01609af713656
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 27%
+source-wordcount: '68'
+ht-degree: 20%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 27%
 
 + [快速入门](./getting-started.md)
 
-+ 基本信息{#basics}
++ 基础知识{#basics}
    + [管理](basics/managing.md)
    + [使用](basics/using.md)
    + [创建内容](basics/creating.md)
@@ -34,6 +34,7 @@ ht-degree: 27%
    + [我的工作区](configuring/my-workspace.md)
    + [元数据表单](configuring/metadata-forms.md)
    + [权限管理](configuring/permissions-management.md)
+   + [分类管理](configuring/taxonomy-management.md)
 
 + [Creative Cloud集成](integrations/creative-cloud.md)
 
