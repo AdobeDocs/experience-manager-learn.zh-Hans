@@ -22,7 +22,7 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/18897?quality=12&learn=on)
 
-本视频探讨了社交媒体共享组件（的一部分）的以下功能 [AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html))使用 [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) 示例网站。
+本视频使用[We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail)示例网站探讨了社交媒体共享组件([AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)的一部分)的以下协作室。
 
 * 0:00 — 添加和配置社交媒体共享组件
 * 1:00 — 共享到Facebook
@@ -31,13 +31,13 @@ ht-degree: 2%
 
 ## 外部化器设置 {#externalizer-setup}
 
-![Day CQ链接外部化器](assets/externalizer.png)
+![天CQ链接外部化器](assets/externalizer.png)
 
 [http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl)
 
-[AEM外部化器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) 应同时在AEM Author和AEM Publish中进行设置，以将发布运行模式映射到用于访问AEM Publish的可公开访问的域。
+[应在AEM Author和AEM Publish上设置AEM的外部化器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html)，以将发布运行模式映射到用于访问AEM Publish的公开可访问域。
 
-在此视频中，我们使用 `/etc/hosts` 欺骗 *www.example.com* 解析为本地主机，并使用 [基本AEM Dispatcher配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) 以允许www.example.com作为AEM Publish的前端。
+在此视频中，我们使用`/etc/hosts`欺骗&#x200B;*www.example.com*&#x200B;以解析为本地主机，并使用[基本AEM Dispatcher配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)允许www.example.com在AEM Publish前面。
 
 ## 支持材料 {#supporting-materials}
 

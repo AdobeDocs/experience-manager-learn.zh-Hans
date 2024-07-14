@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 简介
 
-交互式通信允许准备临时通信的代理保存部分完成的通信并检索该通信以继续工作。 AEM Forms为您提供 [服务提供商接口](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html). 客户应实施此界面以获取保存和恢复功能。
+交互式通信允许准备临时通信的代理保存部分完成的通信并检索该通信以继续工作。 AEM Forms为您提供[服务提供程序接口](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html)。 客户应实施此界面以获取保存和恢复功能。
 
 本文使用MySQL数据库存储信件实例的元数据。 信件数据存储在文件系统中。
 

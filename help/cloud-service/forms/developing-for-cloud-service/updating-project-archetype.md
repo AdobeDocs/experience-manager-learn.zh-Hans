@@ -28,23 +28,23 @@ ht-degree: 0%
 
 * 打开命令提示符并导航到c：\cloudmanager
 * 使用最新原型创建maven项目。
-* 复制并粘贴的内容 [文本文件](assets/creating-maven-project.txt) 命令提示符窗口中。 您可能需要更改DarchetypeVersion=33，具体取决于 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 原型33包括新的AEM Forms主题。
-由于我们在cloudmanager文件夹中创建的新maven项目已经具有aem-banking-application项目，因此您应该更改 **DartifactId** 从aem-banking-application到其他应用程序。 本文使用了aem-banking-application1。
+* 在命令提示符窗口中复制并粘贴[文本文件](assets/creating-maven-project.txt)的内容。 您可能需要根据[最新版本](https://github.com/adobe/aem-project-archetype/releases)更改DarchetypeVersion=33。 原型33包括新的AEM Forms主题。
+由于我们正在cloudmanager文件夹中创建新的maven项目，该文件夹已具有aem-banking-application项目，因此您应将**DartifactId**&#x200B;从aem-banking-application更改为其他内容。 本文使用了aem-banking-application1。
 
 >[!NOTE]
 >
->如果按原样部署此新项目，则云服务实例将没有HandleFormSubmission和SubmitToAEMServlet。 这是因为每次使用Cloud Manager部署项目时， `/apps` 文件夹将被删除和覆盖。
+>如果按原样部署此新项目，则云服务实例将没有HandleFormSubmission和SubmitToAEMServlet。 这是因为每次使用Cloud Manager部署项目时，`/apps`文件夹下的任何内容都将被删除和覆盖。
 
 ## 复制您的Java代码
 
 成功创建项目后，您可以开始将代码/配置等从旧项目复制到此新项目
 
-* 从以下位置复制HandleFormSubmission servlet ```C:\CloudManager\aem-banking-application\core\src\main\java\com\aem\bankingapplication\core\servlets```
+* 从```C:\CloudManager\aem-banking-application\core\src\main\java\com\aem\bankingapplication\core\servlets```复制HandleFormSubmission servlet
 到
   ```C:\CloudManager\aem-banking-application1\core\src\main\java\com\aem\bankingapplication\core\servlets```
 
 * 复制自定义提交来源
-  ```C:\CloudManager\aem-banking-application\ui.apps\src\main\content\jcr_root\apps\bankingapplication\SubmitToAEMServlet``` 从aem-banking-application到aem-banking-application1项目
+  从aem-banking-application到aem-banking-application1项目的```C:\CloudManager\aem-banking-application\ui.apps\src\main\content\jcr_root\apps\bankingapplication\SubmitToAEMServlet```
 
 * 将新项目导入IntelliJ
 

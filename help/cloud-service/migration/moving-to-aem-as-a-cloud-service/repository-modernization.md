@@ -27,11 +27,11 @@ ht-degree: 0%
 
 ![存储库现代化器](./assets/repository-modernizer.png)
 
-作为重构代码库的一部分，请使用 [存储库现代化器工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html) 将6.x代码库重构为更现代的结构。
+作为重构代码库的一部分，请使用[Repository Modernizer工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html)将6.x代码库重构为更现代的结构。
 
 ## 关键活动
 
-* 使用 [Adobe I/O存储库现代化器](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationrepository-modernizer) 工具，用于重构项目以匹配AEMas a Cloud Service项目的预期结构。
+* 使用[Adobe I/O存储库现代化器](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationrepository-modernizer)工具重构项目以匹配AEM as a Cloud Service项目的预期结构。
 * 手动调整和修复更新后的代码库中的任何生成错误。
-* 设置 [本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans) 并部署更新的代码库。 迭代，直到项目处于稳定状态。
-* 将更新的代码库部署到AEMas a Cloud Service开发环境，并继续验证。
+* 设置[本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)并部署更新的代码库。 迭代，直到项目处于稳定状态。
+* 将更新的代码库部署到AEM as a Cloud Service开发环境，并继续验证。

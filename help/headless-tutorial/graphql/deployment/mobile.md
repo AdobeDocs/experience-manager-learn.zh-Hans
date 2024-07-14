@@ -29,13 +29,13 @@ AEM Headless移动部署是iOS、Android™等的原生移动应用程序。 这
 
 | 移动设备应用程序连接到 | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
-| [Dispatcher过滤器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
+| [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨源资源共享(CORS) | ✘ | ✘ | ✘ |
 | [AEM主机](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
 ## 示例移动应用程序
 
-Adobe提供了iOS和Android™移动设备应用程序的示例。
+Adobe提供了iOS和Android™移动应用程序的示例。
 
 <div class="columns is-multiline">
     <!-- iOS app -->

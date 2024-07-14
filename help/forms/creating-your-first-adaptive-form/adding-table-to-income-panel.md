@@ -21,7 +21,7 @@ ht-degree: 1%
 
 我们将向收入面板添加一个表格。 配置表行并使用规则编辑器计算总计。
 
-**添加和配置表组件**
+**添加并配置表组件**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22198?quality=12&learn=on)
 
@@ -48,4 +48,4 @@ ht-degree: 1%
 
 ## 后续步骤
 
-[配置“资源”面板](./configuring-assets-panel.md)
+[配置Assets面板](./configuring-assets-panel.md)

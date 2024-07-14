@@ -20,6 +20,6 @@ ht-degree: 2%
 
 # 简介
 
-了解如何将AEM Formsas a Cloud Service提交数据存储到Azure Storage帐户。
+了解如何将AEM Formsas a Cloud Service提交数据存储到Azure存储帐户。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336028?quality=12&learn=on)

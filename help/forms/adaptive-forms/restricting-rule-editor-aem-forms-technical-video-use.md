@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/19470?quality=12&learn=on)
 
-*本视频介绍将自适应表单规则编辑器限制在AEM中的特定组的过程。*
+*此视频介绍将自适应表单规则编辑器限制为AEM中的特定组的过程。*
 
 >[!NOTE]
 >

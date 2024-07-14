@@ -50,7 +50,7 @@ ht-degree: 0%
 ## 测试Web渠道文档的电子邮件投放 {#test-email-delivery-of-web-channel-document}
 
 * [使用包管理器安装示例资源](assets/webchanneldelivery.zip)
-* [登录crx](http://localhost:4502/crx/de/index.jsp#)
+* [登录到crx](http://localhost:4502/crx/de/index.jsp#)
 
 * 导航到/home/users
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->请查看 **/apps/AEMForms/fetchad/GET.jsp** crx中的文件。 请确保字符串变量webChannelDocument指向有效的通信文档路径。
+>请查看crx中的&#x200B;**/apps/AEMForms/fetchad/GET.jsp**&#x200B;文件。 请确保字符串变量webChannelDocument指向有效的通信文档路径。
 
 ## 后续步骤
 

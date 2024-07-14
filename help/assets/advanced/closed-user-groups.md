@@ -39,12 +39,12 @@ ht-degree: 0%
 
 |                   | ACL | CUG |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 预期用途 | 为上的内容配置和应用权限 **当前** AEM实例。 | 为AEM上的内容配置CUG策略 **作者** 实例。 对AEM上的内容应用CUG策略 **发布** 实例。 |
-| 权限级别 | 为用户/组定义所有级别的授予/拒绝权限：读取、修改、创建、删除、读取ACL、编辑ACL、复制。 | 授予对一组用户/组的读取权限。 拒绝对的读取权限 *所有其他* 用户/组。 |
-| 出版物 | ACL是 *非* 已发布内容。 | CUG策略 *是* 已发布内容。 |
+| 预期用途 | 为&#x200B;**当前** AEM实例上的内容配置和应用权限。 | 为AEM **创作**&#x200B;实例上的内容配置CUG策略。 对AEM **发布**&#x200B;实例上的内容应用CUG策略。 |
+| 权限级别 | 为用户/组定义所有级别的授予/拒绝权限：读取、修改、创建、删除、读取ACL、编辑ACL、复制。 | 授予对一组用户/组的读取权限。 拒绝对&#x200B;*所有其他*&#x200B;用户/组的读取访问权限。 |
+| 出版物 | ACL *不是*&#x200B;随内容一起发布。 | CUG策略&#x200B;*是*，已发布内容。 |
 
 ## 支持链接 {#supporting-links}
 
-* [管理资产和封闭用户组](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en#closed-user-group)
+* [管理Assets和已关闭的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en#closed-user-group)
 * [创建已关闭的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html)
-* [Oak封闭用户组文档](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html)
+* [Oak已关闭的用户组文档](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html)

@@ -1,5 +1,5 @@
 ---
-title: 存储和检索MySQL数据库中的表单数据 — 配置数据源
+title: 存储和检索MySQL数据库中的表单数据 — 配置数据Source
 description: 多部分教程将指导您完成存储和检索表单数据所涉及的步骤
 version: 6.4,6.5
 feature: Adaptive Forms
@@ -15,10 +15,10 @@ ht-degree: 1%
 
 ---
 
-# 配置数据源
+# 配置数据Source
 
-AEM可通过多种方式实现与外部数据库的集成。 数据库集成最常见和标准实践之一是通过使用Apache Sling连接池化数据源配置属性。 [configMgr](http://localhost:4502/system/console/configMgr).
-第一步是下载并部署相应的 [MySql驱动程序](https://mvnrepository.com/artifact/mysql/mysql-connector-java) 在AEM中。
+AEM可通过多种方式实现与外部数据库的集成。 数据库集成最常见和标准的做法之一是通过[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling连接池化DataSource配置属性。
+第一步是在AEM中下载并部署相应的[MySql驱动程序](https://mvnrepository.com/artifact/mysql/mysql-connector-java)。
 创建Apache Sling连接池化数据源，并提供以下屏幕快照中指定的属性。 数据库架构作为本教程资源的一部分提供给您。
 
 ![数据源](assets/save-continue.PNG)
@@ -27,10 +27,10 @@ AEM可通过多种方式实现与外部数据库的集成。 数据库集成最�
 
 ![数据库](assets/data-base-tables.PNG)
 
-用于创建架构的sql文件可以是 [从此处下载](assets/form-data-db.sql). 您需要使用MySql Workbench导入此文件以创建架构和表。
+可从此处](assets/form-data-db.sql)下载用于创建架构的SQL文件[。 您需要使用MySql Workbench导入此文件以创建架构和表。
 
 >[!NOTE]
->请确保为数据源命名 **SaveAndContinue**. 示例代码使用名称连接到数据库。
+>请确保将数据源命名为&#x200B;**SaveAndContinue**。 示例代码使用名称连接到数据库。
 
 | 属性名称 | 价值 |
 | ------------------------|---------------------------------------|

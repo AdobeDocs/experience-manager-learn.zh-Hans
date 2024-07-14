@@ -43,25 +43,25 @@ React是用于构建用户界面的常用JavaScript库，以其简单性、可�
 
 + 熟练掌握React
 + 熟练掌握GraphQL
-+ AEMas a Cloud Service基础知识
++ AEM as a Cloud Service基础知识
 
 ### AEM as a Cloud Service
 
-本教程需要拥有AEMas a Cloud Service环境的管理员访问权限。
+本教程需要拥有AEM as a Cloud Service环境的管理员访问权限。
 
 ### 软件
 
 + [Node.js v16+](https://nodejs.org/en/)
-   + 通过运行检查节点版本 `node -v` 从命令行
+   + 通过从命令行运行`node -v`检查节点版本
 + [npm 6+](https://www.npmjs.com/)
-   + 通过运行检查npm版本 `npm -v` 从命令行
+   + 通过从命令行运行`npm -v`检查您的npm版本
 + [Git](https://git-scm.com/)
-   + 通过运行检查您的Git版本 `git -v` 从命令行
+   + 通过从命令行运行`git -v`检查您的Git版本
 
-使用 [节点版本管理器(nvm)](https://github.com/nvm-sh/nvm) 寻址在同一台计算机上拥有多个版本的node.js。
+使用[节点版本管理器(nvm)](https://github.com/nvm-sh/nvm)解决同一计算机上有多个node.js版本的问题。
 
 确保您具有在计算机上全局安装软件的权限。
 
 ## 下一步
 
-现在您的环境已设置完毕，下面我们来看看下一步： [在AEMas a Cloud Service设置和创作内容](./1-content-modeling.md)
+现在您的环境已设置，让我们进入下一步：[在AEM as a Cloud Service中设置并创作内容](./1-content-modeling.md)

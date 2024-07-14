@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # 解析ChatBot数据
 
-A [ChatBot webhook](https://www.chatbot.com/help/webhooks/what-are-webhooks/) 用于将ChatBot数据发送到AEM servlet。
+已使用[ChatBot webhook](https://www.chatbot.com/help/webhooks/what-are-webhooks/)将ChatBot数据发送到AEM servlet。
 在ChatBot中捕获的数据采用JSON格式，用户在属性对象中输入了数据，如下所示
 ![聊天机器人数据](assets/chat-bot-data.png)
 

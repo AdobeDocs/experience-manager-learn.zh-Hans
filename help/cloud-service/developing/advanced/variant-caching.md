@@ -1,5 +1,5 @@
 ---
-title: 使用AEMas a Cloud Service缓存页面变体
+title: 使用AEM as a Cloud Service缓存页面变体
 description: 了解如何设置和使用AEM as a Cloud Service来支持缓存页面变体。
 role: Architect, Developer
 topic: Development
@@ -19,21 +19,21 @@ ht-degree: 1%
 
 ## 示例用例
 
-+ 任何根据用户的地理位置和包含动态内容的页面缓存提供不同服务选项集和相应定价选项的服务提供商都应在CDN和Dispatcher中进行管理。
++ 任何根据用户的地理位置和包含动态内容的页面缓存提供一组不同的服务选项和相应定价选项的服务提供商都应在CDN和Dispatcher中进行管理。
 
 + 零售客户在全国各地都有商店，每个商店根据其所在位置提供不同的选件，并且应在CDN和Dispatcher中管理包含动态内容的页面缓存。
 
 ## 解决方案概述
 
-+ 确定变体键及其可能具有的值的数量。 在我们的示例中，我们因美国州而异，因此最大数量为50。 这个值足够小，不会导致CDN的变量限制出现问题。 [查看变体限制部分](#variant-limitations).
++ 确定变体键及其可能具有的值的数量。 在我们的示例中，我们因美国州而异，因此最大数量为50。 这个值足够小，不会导致CDN的变量限制出现问题。 [查看变体限制部分](#variant-limitations)。
 
-+ AEM代码必须设置Cookie __&quot;x-aem-variant&quot;__ 与访客的首选州相同(例如 `Set-Cookie: x-aem-variant=NY`)。
++ AEM代码必须将Cookie __&quot;x-aem-variant&quot;__&#x200B;设置为访客的首选状态(例如 `Set-Cookie: x-aem-variant=NY`)。
 
-+ 访客的后续请求会发送该Cookie(例如， `"Cookie: x-aem-variant=NY"`)，并且Cookie将在CDN级别转换为预定义的标头(即 `x-aem-variant:NY`)，将传递到Dispatcher。
++ 访客的后续请求会发送该Cookie(例如， `"Cookie: x-aem-variant=NY"`)，并且Cookie将在CDN级别转换为预定义的标头（即`x-aem-variant:NY`），该标头将传递给Dispatcher。
 
 + Apache重写规则修改请求路径，以在页面URL中包含标头值作为Apache Sling选择器(例如 `/page.variant=NY.html`)。 这允许AEM Publish根据选择器提供不同的内容，并且调度程序为每个变体缓存一个页面。
 
-+ AEM Dispatcher发送的响应必须包含HTTP响应标头 `Vary: x-aem-variant`. 这会指示CDN存储不同标头值的不同缓存副本。
++ AEM Dispatcher发送的响应必须包含HTTP响应标头`Vary: x-aem-variant`。 这会指示CDN存储不同标头值的不同缓存副本。
 
 >[!TIP]
 >
@@ -49,13 +49,13 @@ ht-degree: 1%
 
 ## 用途
 
-1. 为了演示该功能，我们将使用 [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)以的实施为例。
+1. 为了演示该功能，我们将使用[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)的实施作为示例。
 
-1. 实施 [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) 在AEM中设置 `x-aem-variant` HTTP响应上的Cookie，具有变量值。
+1. 在AEM中实施[SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html)以使用变量值在HTTP响应上设置`x-aem-variant` Cookie。
 
-1. AEM CDN自动转换 `x-aem-variant` 将Cookie导入同名的HTTP标头。
+1. AEM CDN会自动将`x-aem-variant` Cookie转换为同名的HTTP标头。
 
-1. 将Apache Web Server mod_rewrite规则添加到您的 `dispatcher` 项目，修改请求路径以包含变体选择器。
+1. 将Apache Web Server mod_rewrite规则添加到您的`dispatcher`项目，该规则可修改请求路径以包含变体选择器。
 
 1. 使用Cloud Manager部署过滤器并重写规则。
 
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 ## 代码示例
 
-+ 要设置的SlingServletFilter示例 `x-aem-variant` 在AEM中具有值的Cookie。
++ 在AEM中设置带值的`x-aem-variant` Cookie的SlingServletFilter示例。
 
   ```
   package com.adobe.aem.guides.wknd.core.servlets.filters;
@@ -120,7 +120,7 @@ ht-degree: 1%
   }
   ```
 
-+ 中的重写规则示例 __dispatcher/src/conf.d/rewrite.rules__ 在Git中作为源代码管理的文件，并使用Cloud Manager部署。
++ __dispatcher/src/conf.d/rewrite.rules__&#x200B;文件中的示例重写规则，该文件在Git中作为源代码管理，并使用Cloud Manager部署。
 
   ```
   ...
@@ -134,7 +134,7 @@ ht-degree: 1%
 
 ## 变量限制
 
-+ AEM CDN最多可管理200个变量。 这意味着 `x-aem-variant` 标头最多可以具有200个唯一值。 欲了解更多信息，请查看 [CDN配置限制](https://docs.fastly.com/en/guides/resource-limits).
++ AEM CDN可管理多达200个变量。 这意味着`x-aem-variant`标头最多可以有200个唯一值。 有关详细信息，请查看[CDN配置限制](https://docs.fastly.com/en/guides/resource-limits)。
 
 + 必须注意的是，您选择的变体键决不会超过此数字。  例如，用户ID不是合适的键，因为对于大多数网站，它很容易超过200个值，而如果某个国家/地区只有不到200个州，则该国家/地区的状态会更适合。
 

@@ -23,13 +23,13 @@ ht-degree: 4%
 
 ## 先决条件 {#prerequistes}
 
-[使用包管理器下载与本教程相关的资源并将其导入AEM。](assets/gettingstartedassets.zip)此zip文件包含图像、文档片段、观察文件夹配置和布局文件(xdp)作为资产包的一部分
+[使用包管理器下载与本教程相关的资源并将其导入AEM。](assets/gettingstartedassets.zip)此zip文件包含图像、文档片段、观察文件夹配置和布局文件(xdp)作为资源包的一部分
 
-[下载并解压缩此文件。](assets/warfileandswaggerfile.zip) 此文件包含需要部署到Tomcat上的SampleRest.war文件和需要用于配置数据源的swagger文件。
+[下载并解压缩此文件。](assets/warfileandswaggerfile.zip)此文件包含需要部署到Tomcat上的SampleRest.war文件和需要用于配置数据源的swagger文件。
 
 完成本教程后，您将学习到以下内容：
 
-* 创建数据源
+* 创建数据Source
 * 创建表单数据模型
 * 创建文档片段
 * 配置表和图表

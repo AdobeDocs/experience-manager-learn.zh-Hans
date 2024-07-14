@@ -32,7 +32,7 @@ AEM提供了许多OSGi控制台，每个控制台都提供了有关AEM各个方�
 捆绑包控制台位于：
 
 + “工具” > “操作” > “Web控制台” > “OSGi” > “包”
-+ 或直接访问： [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
++ 或直接访问：[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
 单击每个捆绑包，可提供有助于调试应用程序的详细信息。
 
@@ -49,7 +49,7 @@ AEM提供了许多OSGi控制台，每个控制台都提供了有关AEM各个方�
 “组件”控制台位于：
 
 + “工具” > “操作” > “Web控制台” > “OSGi” > “组件”
-+ 或直接访问： [http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
++ 或直接访问：[http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
 
 有助于调试活动的关键方面：
 
@@ -66,7 +66,7 @@ AEM提供了许多OSGi控制台，每个控制台都提供了有关AEM各个方�
 Sling模型控制台位于：
 
 + 工具>操作> Web控制台>状态> Sling模型
-+ 或直接访问： [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
++ 或直接访问：[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
 
 有助于调试活动的关键方面：
 

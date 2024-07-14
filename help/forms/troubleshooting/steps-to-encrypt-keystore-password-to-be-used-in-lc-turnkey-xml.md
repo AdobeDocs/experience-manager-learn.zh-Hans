@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 加密要在lc_turnkey.xml中使用的密钥库密码的步骤
 
-*本视频介绍对lc_turnkey.xml中使用的密钥库密码进行加密的步骤。*
+*此视频介绍加密要在lc_turnkey.xml中使用的密钥库密码的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335538?quality=12&learn=on)

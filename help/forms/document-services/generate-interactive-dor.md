@@ -78,11 +78,12 @@ $(document).ready(function() {
 
 ### 从xml数据生成XSD
 
-您可以使用任何免费在线工具来 [生成XSD](https://www.freeformatter.com/xsd-generator.html) 来自上一步中生成的xml数据。
+您可以使用任何免费在线工具从上一步中生成的xml数据中[生成XSD](https://www.freeformatter.com/xsd-generator.html)。
 
 ### 创建自适应表单
 
-根据上一步的XSD创建自适应表单。 关联表单以使用客户端库“irs”。 此客户端库具有向servlet进行POST调用的代码，该调用会将PDF返回到调用应用程序。以下代码将在 _下载PDF_ 已单击
+根据上一步的XSD创建自适应表单。 关联表单以使用客户端库“irs”。 此客户端库具有向servlet进行POST调用的代码，该servlet会将PDF返回到调用应用程序
+单击_下载PDF_&#x200B;时触发以下代码
 
 ```javascript
 $(document).ready(function() {
@@ -117,7 +118,7 @@ $(document).ready(function() {
 
 ## 创建自定义servlet
 
-创建自定义servlet以将数据与XDP模板合并并返回pdf。 下面列出了完成此任务的代码。 自定义servlet是 [AEMFormsDocumentServices.core-1.0-SNAPSHOT捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar))。
+创建自定义servlet以将数据与XDP模板合并并返回pdf。 下面列出了完成此任务的代码。 自定义servlet是[AEMFormsDocumentServices.core-1.0-SNAPSHOT包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)的一部分。
 
 ```java
 public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
@@ -217,14 +218,15 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 要在本地服务器上对此进行测试，请执行以下步骤：
 
 1. [下载并安装DevelopingWithServiceUser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. 在Apache Sling服务用户映射器服务DevelopingWithServiceUser.core：getformsresourceresolver=fd-service中添加以下条目
-1. [下载并安装自定义DocumentServices捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). 这有了servlet将数据与XDP模板合并，并流式传输PDF
+1. 在Apache Sling服务用户映射器服务中添加以下条目
+DevelopingWithServiceUser.core：getformsresourceresolver=fd-service
+1. [下载并安装自定义DocumentServices包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。 这有了servlet将数据与XDP模板合并，并流式传输PDF
 1. [导入客户端库](assets/generate-interactive-dor-client-lib.zip)
-1. [导入文章资产（自适应表单、XDP模板和XSD）](assets/generate-interactive-dor-sample-assets.zip)
+1. [导入Assets文章（自适应表单、XDP模板和XSD）](assets/generate-interactive-dor-sample-assets.zip)
 1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. 填写一些表单字段。
 1. 单击下载PDF以获取PDF。 您可能需要等待几秒钟，才能下载PDF。
 
 >[!NOTE]
 >
->您可以尝试相同的用例，使用 [不基于xsd的自适应表单](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). 确保将相应的参数传递到irs clientlib中的streampdf.js中的post端点。
+>您可以对[不基于xsd的自适应表单](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled)尝试相同的用例。 确保将相应的参数传递到irs clientlib中的streampdf.js中的post端点。

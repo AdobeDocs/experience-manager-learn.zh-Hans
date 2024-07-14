@@ -23,11 +23,11 @@ ht-degree: 0%
 
 ![内容片段控制台自定义网格列](./assets/custom-grid-columns/hero.png){align="center"}
 
-可以使用将自定义网格列添加到内容片段控制台  `contentFragmentGrid` 扩展点。 此示例说明如何添加自定义列，该列以人类可读的格式显示基于上次修改日期的内容片段时限。
+可以使用`contentFragmentGrid`扩展点将自定义网格列添加到内容片段控制台。 此示例说明如何添加自定义列，该列以人类可读的格式显示基于上次修改日期的内容片段时限。
 
 ## 扩展点
 
-此示例将扩展到扩展点 `contentFragmentGrid` 以向内容片段控制台添加自定义列。
+此示例扩展到扩展点`contentFragmentGrid`以向内容片段控制台添加自定义列。
 
 | AEM UI已扩展 | 扩展点 |
 | ------------------------ | --------------------- | 
@@ -35,18 +35,18 @@ ht-degree: 0%
 
 ## 扩展示例
 
-以下示例创建一个自定义列， `Age` 以人类可读的格式显示内容片段的年龄。 期限是从内容片段的上次修改日期开始计算的。
+以下示例创建一个自定义列`Age`，该列以人类可读的格式显示内容片段的年龄。 期限是从内容片段的上次修改日期开始计算的。
 
 该代码显示了如何在扩展的注册文件中获取内容片段的元数据，以及如何导出内容片段的JSON内容。
 
-此示例使用 [吕克松](https://moment.github.io/luxon/) 用于计算内容片段存在时间的库，通过以下方式安装 `npm i luxon`.
+此示例使用[Luxon](https://moment.github.io/luxon/)库计算通过`npm i luxon`安装的内容片段的存留期。
 
 ### 延期注册
 
-`ExtensionRegistration.js`，映射到index.html路由，是AEM扩展的入口点，并定义：
+`ExtensionRegistration.js`映射到index.html路由，是AEM扩展的入口点，并定义：
 
-+ 扩展的位置注入自身(`contentFragmentGrid`AEM )创作体验
-+ 自定义列的定义，在 `getColumns()` 函数
++ 扩展的位置将在AEM创作体验中注入自身(`contentFragmentGrid`)
++ `getColumns()`函数中自定义列的定义
 + 每个自定义列的值（按行）
 
 ```javascript
@@ -149,7 +149,7 @@ export default ExtensionRegistration;
 
 #### 内容片段数据
 
-此 `render(..)` 中的方法 `getColumns()` 传递了一个片段数组。 数组中的每个对象表示网格中的一行，并包含以下有关内容片段的元数据。 此元数据可用于网格中的常用自定义列。
+向`getColumns()`中的`render(..)`方法传递了一个片段数组。 数组中的每个对象表示网格中的一行，并包含以下有关内容片段的元数据。 此元数据可用于网格中的常用自定义列。
 
 
 ```javascript
@@ -161,7 +161,7 @@ render: async function (fragments) {
 }
 ```
 
-示例内容片段JSON，可用作 `fragments` 中的参数 `render(..)` 方法。
+示例内容片段JSON，可用作`render(..)`方法中`fragments`参数的元素。
 
 ```json
 {
@@ -208,9 +208,9 @@ render: async function (fragments) {
 
 >[!IMPORTANT]
 >
-> 确保将AEM创作实例配置为允许 [跨源请求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) 运行AppBuilder应用程序的源位置。 允许的源包括 `https://localhost:9080`、AppBuilder暂存源和AppBuilder生产源。
+> 确保将AEM创作实例配置为允许来自运行AppBuilder应用程序的源的[跨源请求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html)。 允许的源包括`https://localhost:9080`、AppBuilder暂存源和AppBuilder生产源。
 >
-> 或者，扩展也可以调用自定义 [AppBuilder操作](../../runtime-action.md) 代表扩展向AEM Author发出请求。
+> 或者，扩展也可以调用自定义[AppBuilder操作](../../runtime-action.md)，以代表扩展向AEM Author发出请求。
 
 
 ```javascript
@@ -227,9 +227,9 @@ const response = await fetch(`${context.aemHost}${fragment.id.slice('/content/da
 
 #### 列定义
 
-渲染方法的结果是一个JavaScript对象，其键是内容片段的路径(或 `fragment.id`)并且该值为要在列中显示的值。
+渲染方法的结果是一个JavaScript对象，其键是内容片段的路径（或`fragment.id`），值为要在列中显示的值。
 
-例如，此扩展的结果用于 `age` 列为：
+例如，此扩展针对`age`列的结果为：
 
 ```json
 {

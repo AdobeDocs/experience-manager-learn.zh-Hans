@@ -27,7 +27,7 @@ ht-degree: 0%
 * 管理员打开表单。 管理员应该不能编辑提交者填写的任何信息。
 * 审批者部分应对审批者可见(在本例中为AEM管理员用户)。
 
-为了满足上述要求，我们使用隐藏字段，称为 **初始步骤** ，其默认值设置为“是”。提交表单时，工作流中的第一个步骤将initialstep的值设置为“否”。 该表单具有根据初始步骤值隐藏和显示相应部分的业务规则。
+为了满足上述要求，我们在表单中使用名为&#x200B;**initialstep**&#x200B;的隐藏字段，其默认值设置为“是”。提交表单时，工作流中的第一步将initialstep的值设置为“否”。 该表单具有根据初始步骤值隐藏和显示相应部分的业务规则。
 
 **配置表单以触发AEM Workflow**
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 **表单的审批者视图**
 
-![审批视图](assets/approversview.gif)
+![approverview](assets/approversview.gif)
 
 在审批者视图中，审批者无法编辑提交的数据。 此外，还新增了一个仅供审批者使用的部分。
 
@@ -51,8 +51,8 @@ ht-degree: 0%
 * [下载并部署DevelopingWidthServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [下载和部署SetValue自定义OSGI捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
 * [将与本文相关的资源导入AEM](assets/helpxworkflow.zip)
-* 打开 [休假请求表单](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* 打开[休息时间请求表单](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填写详细信息并提交
-* 打开 [收件箱](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). 您应该会看到已分配的新任务。 打开窗体。 提交者的数据应为只读，并且应会显示一个新的审批者部分。
-* 浏览 [工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
+* 打开[收件箱](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html)。 您应该会看到已分配的新任务。 打开窗体。 提交者的数据应为只读，并且应会显示一个新的审批者部分。
+* 浏览[工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
 * 浏览流程步骤。 这是将initialstep的值设置为“否”的步骤。

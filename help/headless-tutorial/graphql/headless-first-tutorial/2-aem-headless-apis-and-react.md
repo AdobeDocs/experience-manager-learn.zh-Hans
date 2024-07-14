@@ -1,6 +1,6 @@
 ---
 title: AEM Headless API和React - AEM Headless第一个教程
-description: 了解如何涵盖从AEM GraphQL API检索内容片段数据并在React应用程序中显示该数据。
+description: 了解如何涵盖从AEM的GraphQL API检索内容片段数据并在React应用程序中显示该数据。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 # AEM Headless API和React
 
-欢迎阅读本教程一章，其中我们将探索配置React应用程序以使用AEM Headless SDK与Adobe Experience Manager (AEM) Headless API连接。 我们将介绍如何从AEM GraphQL API检索内容片段数据并将其显示在React应用程序中。
+欢迎阅读本教程一章，其中我们将探索配置React应用程序以使用AEM Headless SDK与Adobe Experience Manager (AEM) Headless API连接。 我们将介绍如何从AEM的GraphQL API检索内容片段数据并将其显示在React应用程序中。
 
 AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将引导您配置React应用程序，以使用AEM Headless SDK连接到AEM Headless API。 此设置可在您的React应用程序与AEM之间建立可重复使用的通信渠道。
 
-接下来，我们将使用AEM Headless SDK从AEM GraphQL API检索内容片段数据。 AEM中的内容片段提供结构化内容管理。 利用AEM Headless SDK，您可以使用GraphQL轻松查询和提取内容片段数据。
+接下来，我们将使用AEM Headless SDK从AEM的GraphQL API检索内容片段数据。 AEM中的内容片段提供结构化内容管理。 利用AEM Headless SDK，您可以使用GraphQL轻松查询和提取内容片段数据。
 
 一旦我们有内容片段数据，我们就会将它集成到您的React应用程序中。 您将学习如何以吸引人的方式格式化并显示数据。 我们将介绍在React组件中处理和呈现内容片段数据的最佳实践，确保与应用程序的UI无缝集成。
 
@@ -34,13 +34,13 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
 
 ## 克隆React应用程序
 
-1. 从克隆应用程序 [Github](https://github.com/lamontacrook/headless-first/tree/main) 在命令行上执行以下命令。
+1. 通过在命令行上执行以下命令，从[Github](https://github.com/lamontacrook/headless-first/tree/main)克隆应用程序。
 
    ```
    $ git clone git@github.com:lamontacrook/headless-first.git
    ```
 
-1. 将更改为 `headless-first` 目录，并安装依赖项。
+1. 转到`headless-first`目录并安装依赖项。
 
    ```
    $ cd headless-first
@@ -49,7 +49,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
 
 ## 配置React应用程序
 
-1. 创建名为的文件 `.env` 在项目的根目录下。 在 `.env` 设置以下值：
+1. 在项目的根目录下创建名为`.env`的文件。 在`.env`中设置以下值：
 
    ```
    REACT_APP_AEM=<URL of the AEM instance>
@@ -58,37 +58,37 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
    REACT_APP_TOKEN=<developer token>
    ```
 
-1. 您可以在Cloud Manager中检索开发人员令牌。 登录 [AdobeCloud Manager](https://experience.adobe.com/). 单击 __Experience Manager> Cloud Manager__. 选择相应的程序，然后单击“Environment（环境）”旁边的省略号。
+1. 您可以在Cloud Manager中检索开发人员令牌。 登录到[AdobeCloud Manager](https://experience.adobe.com/)。 单击&#x200B;__Experience Manager> Cloud Manager__。 选择相应的程序，然后单击“Environment（环境）”旁边的省略号。
 
-   ![AEM开发人员控制台](./assets/2/developer-console.png)
+   ![AEM Developer Console](./assets/2/developer-console.png)
 
-   1. 单击 __集成__ 选项卡
-   1. 单击 __“本地令牌”选项卡和获取本地开发令牌__ 按钮
+   1. 单击&#x200B;__集成__&#x200B;选项卡
+   1. 单击“__本地令牌”选项卡和“获取本地开发令牌__”按钮
    1. 将访问令牌从打开报价之后复制到关闭报价之前。
-   1. 将复制的令牌粘贴为的值 `REACT_APP_TOKEN` 在 `.env` 文件。
-   1. 现在，让我们通过执行来构建应用程序 `npm ci` 在命令行上。
-   1. 现在启动React应用程序并执行 `npm run start` 在命令行上。
-   1. 在 [./src/utils](https://github.com/lamontacrook/headless-first/tree/main/src/utils) 名为的文件 `context.js`  包含用于在 `.env` 文件放入应用程序的上下文中。
+   1. 将复制的令牌粘贴为`.env`文件中`REACT_APP_TOKEN`的值。
+   1. 现在，让我们通过在命令行上执行`npm ci`来构建应用程序。
+   1. 现在启动React应用程序，并在命令行上执行`npm run start`。
+   1. 在[中。/src/utils](https://github.com/lamontacrook/headless-first/tree/main/src/utils)名为`context.js`的文件包含用于将`.env`文件中的值设置为应用程序上下文的代码。
 
 ## 运行React应用程序
 
-1. 通过执行启动React应用程序 `npm run start` 在命令行上。
+1. 通过在命令行上执行`npm run start`来启动React应用程序。
 
    ```
    $ npm run start
    ```
 
-   React应用程序将启动并打开一个浏览器窗口，以 `http://localhost:3000`. 对React应用程序所做的更改将自动在浏览器中重新加载。
+   React应用程序将启动并打开`http://localhost:3000`的浏览器窗口。 对React应用程序所做的更改将自动在浏览器中重新加载。
 
 ## 连接到AEM Headless API
 
-1. 要将React应用程序连接到AEMas a Cloud Service，让我们添加一些内容到 `App.js`. 在 `React` 导入，添加 `useContext`.
+1. 要将React应用程序连接到AEM as a Cloud Service，让我们向`App.js`添加一些内容。 在`React`导入中，添加`useContext`。
 
    ```javascript
    import React, {useContext} from 'react';
    ```
 
-   导入 `AppContext` 从 `context.js` 文件。
+   从`context.js`文件导入`AppContext`。
 
    ```javascript
    import { AppContext } from './utils/context';
@@ -100,7 +100,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
    const context = useContext(AppContext);
    ```
 
-   最后，将返回代码封装在 `<AppContext.Provider> ... </AppContext.Provider>`.
+   最后，将返回代码包装在`<AppContext.Provider> ... </AppContext.Provider>`中。
 
    ```javascript
    ...
@@ -111,7 +111,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
    </div>);
    ```
 
-   作为参考， `App.js` 现在应该象这样。
+   作为参考，`App.js`现在应如下所示。
 
    ```javascript
    import React, {useContext} from 'react';
@@ -138,27 +138,27 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
    export default App;
    ```
 
-1. 导入 `AEMHeadless` SDK。 此SDK是应用程序用于与AEM Headless API交互的帮助程序库。
+1. 导入`AEMHeadless`开发工具包。 此SDK是应用程序用于与AEM的Headless API进行交互的帮助程序库。
 
-   将此import语句添加到 `home.js`.
+   将此import语句添加到`home.js`。
 
    ```javascript
    import AEMHeadless from '@adobe/aem-headless-client-js';
    ```
 
-   添加以下内容 `{ useContext, useEffect, useState }` 到` React` import语句
+   将以下`{ useContext, useEffect, useState }`添加到` React` import语句中。
 
    ```javascript
    import React, { useContext, useEffect, useState } from 'react';
    ```
 
-   导入 `AppContext`.
+   导入`AppContext`。
 
    ```javascript
    import { AppContext } from '../../utils/context';
    ```
 
-   内部 `Home` 组件，获取 `context` 变量来自 `AppContext`.
+   在`Home`组件内，从`AppContext`获取`context`变量。
 
    ```javascript
    const Home = () => {
@@ -167,7 +167,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
    }
    ```
 
-1. 在中初始化AEM Headless SDK  `useEffect()`，因为AEM Headless SDK在  `context` 变量更改。
+1. 初始化`useEffect()`中的AEM Headless SDK，因为`context`变量更改时AEM Headless SDK必须更改。
 
    ```javascript
    useEffect(() => {
@@ -181,7 +181,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
 
    >[!NOTE]
    >
-   > 有一个 `context.js` 文件位于 `/utils` 正在读取 `.env` 文件。 作为参考， `context.url` 是AEMas a Cloud Service环境的URL。 此 `context.endpoint` 是上一课程中创建的端点的完整路径。 最后， `context.token` 是开发人员令牌。
+   > `/utils`下有一个正在从`.env`文件中读取元素的`context.js`文件。 作为参考，`context.url`是AEM as a Cloud Service环境的URL。 `context.endpoint`是上一课程中创建的端点的完整路径。 最后，`context.token`是开发人员令牌。
 
 
 1. 创建可公开来自AEM Headless SDK的内容的React状态。
@@ -193,7 +193,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
    }
    ```
 
-1. 将应用程序连接到AEM。 使用在上一课程中创建的持久查询。 让我们将以下代码添加到 `useEffect` 初始化AEM Headless SDK后。 制作 `useEffect` 取决于  `context` 变量，如下所示。
+1. 将应用程序连接到AEM。 使用在上一课程中创建的持久查询。 初始化AEM Headless SDK后，让我们在`useEffect`中添加以下代码。 使`useEffect`依赖于`context`变量，如下所示。
 
 
    ```javascript
@@ -226,7 +226,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
 
 ## 呈现内容片段内容
 
-1. 在应用程序中显示内容片段。 返回 `<div>` 包含Teaser的标题。
+1. 在应用程序中显示内容片段。 返回带有Teaser标题的`<div>`。
 
    ```javascript
    return (
@@ -238,7 +238,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
 
    您应会看到Teaser的标题字段显示在屏幕上。
 
-1. 最后一步是将Teaser添加到页面。 包中包含React Teaser组件。 首先，让我们包含导入。 在顶部 `home.js` 文件，添加以下行：
+1. 最后一步是将Teaser添加到页面。 包中包含React Teaser组件。 首先，让我们包含导入。 在`home.js`文件的顶部，添加以下行：
 
    `import Teaser from '../../components/teaser/teaser';`
 

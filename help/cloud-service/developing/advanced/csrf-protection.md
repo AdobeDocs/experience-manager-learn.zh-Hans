@@ -23,9 +23,9 @@ ht-degree: 0%
 
 了解如何为经过身份验证的用户生成AEM CSRF令牌并将其添加到允许的POST、PUT和删除请求中AEM。
 
-AEM需要发送有效的CSRF令牌 __已验证__ __POST__、__PUT或 __DELETE__ 向AEM创作和发布服务发出HTTP请求。
+AEM需要向AEM Author和Publish服务发送有效的CSRF令牌，以便&#x200B;__已通过身份验证__ __POST__、__PUT或&#x200B;__DELETE__ HTTP请求。
 
-不需要使用CSRF令牌 __GET__ 请求，或 __匿名__ 请求。
+__GET__&#x200B;请求或&#x200B;__匿名__&#x200B;请求不需要CSRF令牌。
 
 如果CSRF令牌未随POST、PUT或DELETE请求一起发送，则AEM会返回403禁止响应，并且AEM会记录以下错误：
 
@@ -34,20 +34,20 @@ AEM需要发送有效的CSRF令牌 __已验证__ __POST__、__PUT或 __DELETE__ 
 [INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] doFilter: the provided CSRF token is invalid
 ```
 
-请参阅 [有关AEM CSRF保护的更多详细信息的文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html).
+有关AEM CSRF保护](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html)的更多详细信息，请参阅[文档。
 
 
 ## CSRF客户端库
 
-AEM提供了一个客户端库，该库可用于生成和添加CSRF令牌XHR并通过修补核心原型功能而形成POST请求。 功能由 `granite.csrf.standalone` 客户端库类别。
+AEM提供了一个客户端库，该库可用于生成和添加CSRF令牌XHR并通过修补核心原型功能而形成POST请求。 此功能由`granite.csrf.standalone`客户端库类别提供。
 
-要使用此方法，请添加 `granite.csrf.standalone` 作为与页面上加载的客户端库之间的依赖关系。 例如，如果您使用 `wknd.site` 客户端库类别，添加 `granite.csrf.standalone` 作为与页面上加载的客户端库之间的依赖关系。
+若要使用此方法，请将`granite.csrf.standalone`作为依赖项添加到页面上加载的客户端库。 例如，如果您使用`wknd.site`客户端库类别，请将`granite.csrf.standalone`作为依赖项添加到页面上加载的客户端库。
 
 ## 具有CSRF保护的自定义表单提交
 
-如果使用 [`granite.csrf.standalone` 客户端库](#csrf-client-library) 不适用于您的用例，您可以手动将CSRF令牌添加到表单提交。 以下示例说明如何向表单提交添加CSRF令牌。
+如果使用[`granite.csrf.standalone`客户端库](#csrf-client-library)不适用于您的用例，您可以手动将CSRF令牌添加到表单提交中。 以下示例说明如何向表单提交添加CSRF令牌。
 
-此代码片段演示了在表单提交时，如何从AEM获取CSRF令牌，并将其添加到名为的表单输入中 `:cq_csrf_token`. 由于CSRF令牌的生命周期短，因此最好在提交表单之前立即检索和设置CSRF令牌，以确保其有效性。
+此代码片段演示了如何在表单提交时从AEM获取CSRF令牌，并将其添加到名为`:cq_csrf_token`的表单输入中。 由于CSRF令牌的生命周期短，因此最好在提交表单之前立即检索和设置CSRF令牌，以确保其有效性。
 
 ```javascript
 // Attach submit handler event to form onSubmit
@@ -74,9 +74,9 @@ document.querySelector('form').addEventListener('submit', async (event) => {
 
 ## 使用CSRF保护获取
 
-如果使用 [`granite.csrf.standalone` 客户端库](#csrf-client-library) 不适用于您的用例，您可以手动将CSRF令牌添加到XHR或获取请求。 以下示例说明如何将CSRF令牌添加到使用fetch生成的XHR中。
+如果使用[`granite.csrf.standalone`客户端库](#csrf-client-library)不适用于您的用例，则可以手动将CSRF令牌添加到XHR或获取请求。 以下示例说明如何将CSRF令牌添加到使用fetch生成的XHR中。
 
-此代码片段演示了如何从AEM获取CSRF令牌，并将其添加到获取请求的 `CSRF-Token` HTTP请求标头。 由于CSRF令牌的生命周期较短，因此最好在发出获取请求之前立即检索和设置CSRF令牌，以确保其有效性。
+此代码片段演示了如何从AEM获取CSRF令牌，并将其添加到获取请求的`CSRF-Token` HTTP请求标头。 由于CSRF令牌的生命周期较短，因此最好在发出获取请求之前立即检索和设置CSRF令牌，以确保其有效性。
 
 ```javascript
 /**
@@ -102,7 +102,7 @@ await fetch('/path/to/aem/endpoint', {
 
 ## Dispatcher配置
 
-在AEM Publish服务上使用CSRF令牌时，必须更新Dispatcher配置，以允许向CSRF令牌端点发送GET请求。 以下配置允许向AEM Publish服务上的CSRF令牌端点发出GET请求。 如果未添加此配置，则CSRF令牌端点返回“404未找到”响应。
+在AEM Publish服务上使用CSRF令牌时，必须更新Dispatcher配置以允许向CSRF令牌端点发送GET请求。 以下配置允许向AEM Publish服务上的CSRF令牌端点发出GET请求。 如果未添加此配置，则CSRF令牌端点返回“404未找到”响应。
 
 * `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 

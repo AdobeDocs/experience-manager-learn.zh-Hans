@@ -8,8 +8,8 @@ index: y
 team: TM
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 75%
+source-wordcount: '39'
+ht-degree: 69%
 
 ---
 

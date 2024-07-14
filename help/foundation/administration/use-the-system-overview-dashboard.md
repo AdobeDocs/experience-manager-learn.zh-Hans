@@ -18,16 +18,16 @@ ht-degree: 0%
 
 # 使用系统概述功能板
 
-Adobe Experience Manager (AEM) [!UICONTROL 系统概述] 从单个仪表板全面了解AEM实例的配置、硬件和运行状况。
+Adobe Experience Manager (AEM) [!UICONTROL 系统概述]通过单个仪表板提供AEM实例的配置、硬件和运行状况的高级视图。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
 1. 系统概述可从以下位置访问： **AEM开始** > **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 系统概述]**
 
-   直接位于 **`<server-host>/libs/granite/operations/content/systemoverview.html`**
+   直接在&#x200B;**`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
-1. 来自 [!UICONTROL 系统概述] 可以通过单击 [!UICONTROL 下载] 按钮。 该信息还通过以下方式公开 [!DNL REST] 端点：
-1. 以下是从导出的JSON的输出示例 [!UICONTROL 系统概述]：
+1. 单击[!UICONTROL 下载]按钮可以导出[!UICONTROL 系统概述]中的信息。 该信息也通过以下[!DNL REST]端点公开：
+1. 以下是从[!UICONTROL 系统概述]导出的JSON输出示例：
 
    ```json
    {

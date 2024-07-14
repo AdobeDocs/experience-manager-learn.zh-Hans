@@ -24,11 +24,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM **必须** 在上传INDDInDesign时，连接到正在运行的模板服务器。 对INDD文件的部分初始处理需要InDesign服务器。
+>上传INDDInDesign时，AEM **必须**&#x200B;连接到正在运行的模板服务器。 对INDD文件的部分初始处理需要InDesign服务器。
 
 ## 下载InDesign Server试用版 {#download-indesign-server-trial}
 
-下载 [InDesign Server试用下载网站](https://www.adobeprerelease.com/)
+下载[InDesign Server试用下载网站](https://www.adobeprerelease.com/)
 
 ## 起始InDesign Server {#starting-indesign-server}
 

@@ -1,6 +1,6 @@
 ---
 title: AEM服务凭据
-description: 从AEM开发人员控制台下载服务凭据。
+description: 从AEM的Developer Console下载服务凭据。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 服务凭据
 
-与AEMas a Cloud Service的集成必须能够安全地向AEM进行身份验证。 AEM开发人员控制台生成服务凭据，外部应用程序、系统和服务使用这些凭据以编程方式通过HTTP与AEM Author或Publish服务交互。
+与AEM as a Cloud Service的集成必须能够安全地向AEM进行身份验证。 AEM的Developer Console会生成服务凭据，外部应用程序、系统和服务使用这些凭据以编程方式通过HTTP与AEM创作或Publish服务进行交互。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 

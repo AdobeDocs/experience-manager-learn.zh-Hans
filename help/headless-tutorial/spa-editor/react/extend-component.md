@@ -25,27 +25,27 @@ ht-degree: 0%
 ## 目标
 
 1. 使用其他属性和内容扩展现有核心组件。
-2. 通过使用了解组件继承的基本知识 `sling:resourceSuperType`.
-3. 了解如何利用 [委派模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 以便Sling模型重复使用现有逻辑和功能。
+2. 了解使用`sling:resourceSuperType`的组件继承的基本内容。
+3. 了解如何利用Sling模型的[委派模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)来重复使用现有逻辑和功能。
 
 ## 您将构建的内容
 
-本章说明了向标准添加额外属性所需的其他代码 `Image` 满足新需求的组件 `Banner` 组件。 此 `Banner` 组件包含与标准组件相同的所有属性 `Image` 组件中包含一个附加属性，供用户填充 **横幅文本**.
+本章说明了将额外属性添加到标准`Image`组件以满足新`Banner`组件的要求所需的额外代码。 `Banner`组件包含与标准`Image`组件相同的所有属性，但包含一个附加属性，供用户填充&#x200B;**横幅文本**。
 
 ![最终创作的横幅组件](assets/extend-component/final-author-banner-component.png)
 
 ## 先决条件
 
-查看所需的工具和设置说明 [本地开发环境](overview.md#local-dev-environment). 在本教程的此刻，我们假定用户已对AEM SPA Editor功能有一定的了解。
+查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。 在本教程的此刻，我们假定用户已对AEM SPA Editor功能有一定的了解。
 
 ## Sling资源超级类型的继承 {#sling-resource-super-type}
 
-要扩展现有组件，请设置一个名为的属性 `sling:resourceSuperType` （在组件的定义中）。  `sling:resourceSuperType`是 [属性](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties) 可以在指向其他组件的AEM组件的定义上设置的属性。 这会显式设置组件，以继承标识为 `sling:resourceSuperType`.
+要扩展现有组件，请在组件的定义上设置名为`sling:resourceSuperType`的属性。  `sling:resourceSuperType`是一个[属性](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties)，它可以在指向其他组件的AEM组件的定义上设置。 这会显式设置该组件以继承标识为`sling:resourceSuperType`的组件的所有功能。
 
-如果我们要扩展 `Image` 组件位于 `wknd-spa-react/components/image` 我们需要更新 `ui.apps` 模块。
+如果要在`wknd-spa-react/components/image`处扩展`Image`组件，我们需要更新`ui.apps`模块中的代码。
 
-1. 在下创建新文件夹 `ui.apps` 模块 `banner` 在 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/banner`.
-1. 下 `banner` 创建组件定义(`.content.xml`)如下所示：
+1. 在`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/banner`的`banner`的`ui.apps`模块下创建新文件夹。
+1. 在`banner`下创建组件定义(`.content.xml`)，如下所示：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -56,14 +56,14 @@ ht-degree: 0%
        componentGroup="WKND SPA React - Content"/>
    ```
 
-   这设置 `wknd-spa-react/components/banner` 以继承的所有功能 `wknd-spa-react/components/image`.
+   这将设置`wknd-spa-react/components/banner`以继承`wknd-spa-react/components/image`的所有功能。
 
 ## cq：editConfig {#cq-edit-config}
 
-此 `_cq_editConfig.xml` 文件指示AEM创作UI中的拖放行为。 扩展图像组件时，资源类型必须与组件本身匹配，这一点很重要。
+`_cq_editConfig.xml`文件指示AEM创作UI中的拖放行为。 扩展图像组件时，资源类型必须与组件本身匹配，这一点很重要。
 
-1. 在 `ui.apps` 模块在下创建另一个文件 `banner` 已命名 `_cq_editConfig.xml`.
-1. 填充 `_cq_editConfig.xml` 与以下XML一起使用：
+1. 在`ui.apps`模块中，在`banner`下创建名为`_cq_editConfig.xml`的其他文件。
+1. 使用以下XML填充`_cq_editConfig.xml`：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -159,7 +159,7 @@ ht-degree: 0%
    </jcr:root>
    ```
 
-1. 文件的独特之处在于 `<parameters>` 将resourceType设置为的节点 `wknd-spa-react/components/banner`.
+1. 文件的唯一特性是将resourceType设置为`wknd-spa-react/components/banner`的`<parameters>`节点。
 
    ```xml
    <parameters
@@ -170,14 +170,14 @@ ht-degree: 0%
        imageRotate=""/>
    ```
 
-   大多数组件不需要 `_cq_editConfig`. 图像组件和子项则属于例外。
+   大多数组件不需要`_cq_editConfig`。 图像组件和子项则属于例外。
 
 ## 扩展对话框 {#extend-dialog}
 
-我们的 `Banner` 组件要求在对话框中有一个额外的文本字段来捕获 `bannerText`. 由于我们使用的是Sling继承，因此我们可以使用 [Sling资源合并器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) 覆盖或扩展对话框的各个部分。 在此示例中，向对话框添加了一个新选项卡，用于从作者捕获其他数据以填充卡组件。
+我们的`Banner`组件要求在对话框中有一个额外的文本字段来捕获`bannerText`。 由于我们使用的是Sling继承，因此我们可以使用[Sling资源合并器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html)的功能来覆盖或扩展对话框的各个部分。 在此示例中，向对话框添加了一个新选项卡，用于从作者捕获其他数据以填充卡组件。
 
-1. 在 `ui.apps` 模块，在 `banner` 文件夹，创建名为的文件夹 `_cq_dialog`.
-1. 下 `_cq_dialog` 创建对话框定义文件 `.content.xml`. 使用以下内容填充：
+1. 在`ui.apps`模块的`banner`文件夹下创建名为`_cq_dialog`的文件夹。
+1. 在`_cq_dialog`下创建对话框定义文件`.content.xml`。 使用以下内容填充：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -231,22 +231,22 @@ ht-degree: 0%
    </jcr:root>
    ```
 
-   上述XML定义将创建一个名为的新选项卡 **文本** 订购它 *早于* 现有 **资产** 选项卡。 它将包含单个字段 **横幅文本**.
+   上述XML定义将创建一个名为&#x200B;**Text**&#x200B;的新选项卡，并在&#x200B;*现有&#x200B;**资产**选项卡之前*&#x200B;对其进行排序。 它将包含单个字段&#x200B;**横幅文本**。
 
 1. 该对话框将如下所示：
 
    ![横幅最终对话框](assets/extend-component/banner-dialog.png)
 
-   请注意，我们不必定义选项卡 **资产** 或 **元数据**. 这些资产是通过 `sling:resourceSuperType` 属性。
+   请注意，我们不必为&#x200B;**资源**&#x200B;或&#x200B;**元数据**&#x200B;定义选项卡。 这些是通过`sling:resourceSuperType`属性继承的。
 
-   在预览对话框之前，我们需要实施SPA组件和 `MapTo` 函数。
+   在可以预览该对话框之前，我们需要实施SPA组件和`MapTo`函数。
 
 ## 实施SPA组件 {#implement-spa-component}
 
-要将横幅组件与SPA编辑器结合使用，必须创建新的SPA组件并将其映射到 `wknd-spa-react/components/banner`. 此操作可在中完成 `ui.frontend` 模块。
+要将横幅组件与SPA编辑器结合使用，必须创建将映射到`wknd-spa-react/components/banner`的新SPA组件。 此操作在`ui.frontend`模块中完成。
 
-1. 在 `ui.frontend` 模块为创建新文件夹 `Banner` 在 `ui.frontend/src/components/Banner`.
-1. 创建新文件，名为 `Banner.js` 在 `Banner` 文件夹。 使用以下内容填充：
+1. 在`ui.frontend`模块中，在`ui.frontend/src/components/Banner`为`Banner`创建新文件夹。
+1. 在`Banner`文件夹下创建名为`Banner.js`的新文件。 使用以下内容填充：
 
    ```js
    import React, {Component} from 'react';
@@ -296,9 +296,9 @@ ht-degree: 0%
    MapTo('wknd-spa-react/components/banner')(Banner, BannerEditConfig);
    ```
 
-   此SPA组件映射到AEM组件 `wknd-spa-react/components/banner` 之前创建。
+   此SPA组件映射到之前创建的AEM组件`wknd-spa-react/components/banner`。
 
-1. 更新 `import-components.js` 在 `ui.frontend/src/components/import-components.js` 以包含新的 `Banner` SPA组件：
+1. 在`ui.frontend/src/components/import-components.js`更新`import-components.js`以包含新的`Banner` SPA组件：
 
    ```diff
      import './ExperienceFragment/ExperienceFragment';
@@ -313,24 +313,24 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. 更新SPA模板的策略以添加 `Banner` 组件作为 **允许的组件**.
+1. 更新SPA模板的策略以将`Banner`组件添加为&#x200B;**允许的组件**。
 
-1. 导航到SPA页面并添加 `Banner` 组件到某个SPA页面：
+1. 导航到SPA页面，并将`Banner`组件添加到其中一个SPA页面：
 
    ![添加横幅组件](assets/extend-component/add-banner-component.png)
 
    >[!NOTE]
    >
-   > 该对话框将允许您保存以下项的值 **横幅文本** 但是，此值未反映在SPA组件中。 要启用，我们需要扩展组件的Sling模型。
+   > 该对话框将允许您保存&#x200B;**横幅文本**&#x200B;的值，但此值未反映在SPA组件中。 要启用，我们需要扩展组件的Sling模型。
 
 ## 添加Java接口 {#java-interface}
 
-要最终将组件对话框中的值公开给React组件，我们需要更新填充的JSON的Sling模型 `Banner` 组件。 此操作可在中完成 `core` 包含我们SPA项目的所有Java代码的模块。
+要最终将组件对话框中的值公开给React组件，我们需要更新为`Banner`组件填充JSON的Sling模型。 此操作在包含我们SPA项目的所有Java代码的`core`模块中完成。
 
-首先，我们将为创建一个新的Java接口 `Banner` 扩展了 `Image` Java接口。
+首先，我们将为`Banner`创建一个扩展`Image` Java接口的新Java接口。
 
-1. 在 `core` 模块创建一个名为的新文件 `BannerModel.java` 在 `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.
-1. 填充 `BannerModel.java` ，如下所示：
+1. 在`core`模块的`core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`处创建一个名为`BannerModel.java`的新文件。
+1. 使用以下内容填充`BannerModel.java`：
 
    ```java
    package com.adobe.aem.guides.wkndspa.react.core.models;
@@ -346,15 +346,15 @@ ht-degree: 0%
    }
    ```
 
-   这将从核心组件继承所有方法 `Image` 界面和添加一种新方法 `getBannerText()`.
+   这将从核心组件`Image`接口继承所有方法，并添加新方法`getBannerText()`。
 
 ## 实施Sling模型 {#sling-model}
 
-接下来，为实施Sling模型 `BannerModel` 界面。
+接下来，为`BannerModel`接口实施Sling模型。
 
-1. 在 `core` 模块创建一个名为的新文件 `BannerModelImpl.java` 在 `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models/impl`.
+1. 在`core`模块的`core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models/impl`处创建一个名为`BannerModelImpl.java`的新文件。
 
-1. 填充 `BannerModelImpl.java` ，如下所示：
+1. 使用以下内容填充`BannerModelImpl.java`：
 
    ```java
    package com.adobe.aem.guides.wkndspa.react.core.models.impl;
@@ -429,9 +429,9 @@ ht-degree: 0%
    }
    ```
 
-   请注意， `@Model` 和 `@Exporter` 注释，以确保能够通过Sling模型导出器将Sling模型序列化为JSON。
+   请注意使用的是`@Model`和`@Exporter`注释，以确保可以通过Sling模型导出器将Sling模型序列化为JSON。
 
-   `BannerModelImpl.java` 使用 [Sling模型的委托模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 以避免重写图像核心组件中的所有逻辑。
+   `BannerModelImpl.java`对Sling模型使用[委派模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)以避免重写图像核心组件中的所有逻辑。
 
 1. 复查以下行：
 
@@ -441,7 +441,7 @@ ht-degree: 0%
    private Image image;
    ```
 
-   上述批注将实例化一个名为的图像对象 `image` 基于 `sling:resourceSuperType` 的继承 `Banner` 组件。
+   上述批注将根据`Banner`组件的`sling:resourceSuperType`继承实例化名为`image`的图像对象。
 
    ```java
    @Override
@@ -450,9 +450,9 @@ ht-degree: 0%
    }
    ```
 
-   然后，可以简单地使用 `image` 用于实施由定义的方法的对象 `Image` 界面，无需自己编写逻辑。 此技术用于 `getSrc()`， `getAlt()` 和 `getTitle()`.
+   然后，可以简单地使用`image`对象实现`Image`接口定义的方法，而不必自己编写逻辑。 此技术用于`getSrc()`、`getAlt()`和`getTitle()`。
 
-1. 打开终端窗口，将更新仅部署到 `core` 模块使用Maven `autoInstallBundle` 配置文件来自 `core` 目录。
+1. 打开终端窗口，然后使用`core`目录中的Maven `autoInstallBundle`配置文件仅部署`core`模块的更新。
 
    ```shell
    $ cd core/
@@ -461,8 +461,8 @@ ht-degree: 0%
 
 ## 融于一起 {#put-together}
 
-1. 返回到AEM并打开具有以下功能的SPA页面 `Banner` 组件。
-1. 更新 `Banner` 要包含的组件 **横幅文本**：
+1. 返回到AEM并打开具有`Banner`组件的SPA页面。
+1. 更新`Banner`组件以包含&#x200B;**横幅文本**：
 
    ![横幅文本](assets/extend-component/banner-text-dialog.png)
 
@@ -472,11 +472,11 @@ ht-degree: 0%
 
    保存对话框更新。
 
-1. 此时，您应该会看到以下内容的渲染值： **横幅文本**：
+1. 您现在应该会看到&#x200B;**横幅文本**&#x200B;的呈现值：
 
-![显示的横幅文本](assets/extend-component/banner-text-displayed.png)
+显示![横幅文本](assets/extend-component/banner-text-displayed.png)
 
-1. 在以下位置查看JSON模型响应： [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) 并搜索 `wknd-spa-react/components/card`：
+1. 在[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)查看JSON模型响应并搜索`wknd-spa-react/components/card`：
 
    ```json
    "banner": {
@@ -487,7 +487,7 @@ ht-degree: 0%
     },
    ```
 
-   请注意，在中实施Sling模型后，JSON模型会更新为其他键/值对 `BannerModelImpl.java`.
+   请注意，在`BannerModelImpl.java`中实施Sling模型后，使用其他键/值对更新了JSON模型。
 
 ## 恭喜！ {#congratulations}
 

@@ -1,6 +1,6 @@
 ---
 title: 资产共享共用中的主题简介
-description: 有关功能和技术方面了解资产共享公域的材料
+description: 适用于功能和技术了解Assets Share Commons的材料
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution
@@ -76,9 +76,9 @@ ht-degree: 1%
 @msgWarningBackgroundColor: @yellow;
 ```
 
-下载 [自定义客户端库主题](assets/asc-theme-demo.zip)
+下载[自定义客户端库主题](assets/asc-theme-demo.zip)
 
 ## 其他资源{#additional-resources}
 
-* [Asset Share Commons版本下载](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
-* [ACS AEM Commons 3.11.0+发行版下载](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
+* [资产共享共享共享版本下载](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
+* [ACS AEM Commons 3.11.0+版本下载](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)

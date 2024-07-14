@@ -20,9 +20,9 @@ ht-degree: 0%
 
 您可以使用现有数据预填自适应表单的字段。 当用户打开表单时，这些字段的值会预先填充。 预填充自适应表单字段的方法有多种。 在本文中，我们将介绍如何使用AEM Forms预填充服务预填充自适应表单。
 
-要了解有关预填充自适应表单的各种方法的更多信息， [请按照此文档操作](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+要了解有关预填充自适应表单的各种方法的更多信息，[请遵循此文档](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
 
-要使用预填充服务预填充自适应表单，必须创建一个实现 `com.adobe.forms.common.service.DataXMLProvider` 界面。 方法 `getDataXMLForDataRef` 将具有生成和返回自适应表单用于预填充字段的数据的逻辑。 在此方法中，您可以从任何源获取数据并返回数据文档的输入流。 以下示例代码获取登录用户的用户配置文件信息，并构造一个XML文档，该文档的输入流返回给自适应表单使用。
+要使用预填充服务预填充自适应表单，您必须创建一个实现`com.adobe.forms.common.service.DataXMLProvider`接口的类。 方法`getDataXMLForDataRef`将具有生成和返回自适应表单用于预填充字段的数据的逻辑。 在此方法中，您可以从任何源获取数据并返回数据文档的输入流。 以下示例代码获取登录用户的用户配置文件信息，并构造一个XML文档，该文档的输入流返回给自适应表单使用。
 
 在下面的代码片段中，我们有一个实现DataXMLProvider接口的类。 我们获得对登录用户的访问权限，然后获取登录用户的配置文件信息。 然后，我们创建具有名为“data”的根节点元素的XML文档，并将相应的元素附加到此数据节点。 一旦构造了XML文档，就返回XML文档的输入流。
 
@@ -139,12 +139,12 @@ public class PrefillAdaptiveForm implements DataXMLProvider {
 
 要在您的服务器上测试此功能，请执行以下操作
 
-* 确保已登录 [用户配置文件](http://localhost:4502/security/users.html) 信息已填写。 该示例查找登录用户的FirstName、LastName和Email属性。
+* 确保已填写登录[用户的配置文件](http://localhost:4502/security/users.html)信息。 该示例查找登录用户的FirstName、LastName和Email属性。
 * [将zip文件的内容下载并解压缩到您的计算机上](assets/prefillservice.zip)
-* 使用以下方式部署prefill.core-1.0.0-SNAPSHOT捆绑包 [AEM Web控制台](http://localhost:4502/system/console/bundles)
-* 使用“创建”导入自适应表单 | 文件上传来源 [FormsAndDocuments节](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 确保 [表单](http://localhost:4502/editor.html/content/forms/af/prefill.html) 正在使用 **“自定义AEM Forms预填充服务”** 作为预填充服务。 这可以从的配置属性中验证 **表单容器** 部分。
-* [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefill/jcr:content?wcmmode=disabled). 您应该会看到表单已填入正确的值。
+* 使用[AEM Web控制台](http://localhost:4502/system/console/bundles)部署prefill.core-1.0.0-SNAPSHOT捆绑包
+* 使用“创建”导入自适应表单 | 从[FormsAndDocuments节](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)上载文件
+* 确保[表单](http://localhost:4502/editor.html/content/forms/af/prefill.html)使用&#x200B;**“自定义AEM Forms预填充服务”**&#x200B;作为预填充服务。 这可以从&#x200B;**表单容器**&#x200B;部分的配置属性中验证。
+* [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefill/jcr:content?wcmmode=disabled)。 您应该会看到表单已填入正确的值。
 
 >[!NOTE]
 >

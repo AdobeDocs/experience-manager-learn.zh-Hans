@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 所需配置 {#configurations-needed}
 
-您必须配置Day CQ Mail服务。 可通过将您的浏览器指向 [Felix配置管理器](http://localhost:4502/system/console/configMgr)
+您必须配置Day CQ Mail服务。 可通过将浏览器指向[Felix配置管理器](http://localhost:4502/system/console/configMgr)来配置此项
 
 此屏幕截图显示了adobe邮件服务器的配置属性。
 
@@ -39,9 +39,9 @@ ht-degree: 0%
 
 要在您的服务器上尝试此操作，请按照以下说明操作：
 
-* [导入资源](assets/timeoffrequest.zip) 使用包管理器在AEM中与此文章关联。
+* [使用包管理器在AEM中导入与此文章关联的资源](assets/timeoffrequest.zip)。
 
-* 打开 [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
+* 打开[TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 
 * 填写详细信息。确保在电子邮件字段中提供有效的电子邮件地址。
 

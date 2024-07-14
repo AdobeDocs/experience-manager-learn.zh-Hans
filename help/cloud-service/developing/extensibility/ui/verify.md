@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 验证扩展
 
-AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Service环境进行验证。
+AEM UI扩展可以针对扩展所属的Adobe组织中的任何AEM as a Cloud Service环境进行验证。
 
 测试扩展是通过巧尽心思构建的URL完成的，该URL会指示AEM仅为该请求加载扩展。
 
@@ -34,12 +34,12 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
 
 ![AEM内容片段控制台URL](./assets/verify/content-fragment-console-url.png){align="center"}
 
-要创建将非生产扩展挂载到AEM中的URL，必须获取该扩展所插入的AEM UI的URL。 导航到AEMas a Cloud Service环境以验证扩展，然后打开要预览扩展的UI。
+要创建将非生产扩展挂载到AEM中的URL，必须获取该扩展所插入的AEM UI的URL。 导航到AEM as a Cloud Service环境以在上验证扩展，然后打开要预览扩展的UI。
 
 例如，要预览内容片段控制台的扩展，请执行以下操作：
 
-1. 登录到所需的AEMas a Cloud Service环境。
-1. 选择 __内容片段__ 图标。
+1. 登录到所需的AEM as a Cloud Service环境。
+1. 选择&#x200B;__内容片段__&#x200B;图标。
 1. 等待在浏览器中加载AEM内容片段控制台。
 1. 从浏览器的地址栏复制AEM内容片段控制台的URL，它应类似于：
 
@@ -52,7 +52,7 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
 ## 验证本地开发构建
 
 1. 打开指向扩展项目根目录的命令行。
-1. 将AEM UI扩展作为本地App Builder应用程序运行
+1. 作为本地App Builder应用程序运行AEM UI扩展
 
    ```shell
    $ aio app run
@@ -65,14 +65,14 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
      -> https://experience.adobe.com/?devMode=true#/custom-apps/?localDevUrl=https://localhost:9080
    ```
 
-请注意本地应用程序URL，如上所示 `-> https://localhost:9080`
+记下本地应用程序URL，上面显示为`-> https://localhost:9080`
 
-1. 最初（以及当您看到连接错误时）打开 `https://localhost:9080` （或者您的本地应用程序URL是什么），然后手动接受 [HTTPS证书](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users).
-1. 将以下两个查询参数添加到 [AEM UI的URL](#aem-ui-url)
+1. 最初（每次出现连接错误时），在Web浏览器中打开`https://localhost:9080`（或者任何本地应用程序URL），然后手动接受[HTTPS证书](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users)。
+1. 将以下两个查询参数添加到[AEM UI的URL](#aem-ui-url)
    + `&devMode=true`
-   + `&ext=<LOCAL APPLICATION URL>`，通常 `&ext=https://localhost:9080`.
+   + `&ext=<LOCAL APPLICATION URL>`，通常为`&ext=https://localhost:9080`。
 
-   添加以上两个查询参数(`devMode` 和 `ext`)作为 __第一__ url中的查询参数。 AEM可扩展UI的使用哈希路由(`#/@wknd/aem/...`)，因此在 `#` 不起作用。
+   将以上两个查询参数（`devMode`和`ext`）添加为URL中的&#x200B;__first__&#x200B;查询参数。 AEM的可扩展UI使用哈希路由(`#/@wknd/aem/...`)，因此在`#`不起作用后错误地修复了参数。
 
    预览URL应如下所示：
 
@@ -82,7 +82,7 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
 
 1. 将预览URL复制并粘贴到浏览器中。
 
-   + 你一开始可能得做，然后定期， [接受HTTPS证书](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users) 对于本地应用程序的主机(`https://localhost:9080`)。
+   + 您可能必须先为本地应用程序的主机(`https://localhost:9080`)[接受HTTPS证书](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users)，然后再定期接受。
 
 1. AEM UI将加载并插入扩展程序的本地版本以进行验证。
 
@@ -93,15 +93,15 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
 ## 验证阶段生成
 
 1. 打开指向扩展项目根目录的命令行。
-1. 确保暂存工作区处于活动状态（或用于验证的任何工作区）。
+1. 确保暂存工作区处于活动状态(或者使用任何Workspace进行验证)。
 
    ```shell
    $ aio app use -w Stage
    ```
 
-   将任何更改合并 `.env` 和 `.aio`.
+   将任何更改合并到`.env`和`.aio`。
 
-1. 部署更新的扩展App Builder应用程序。 如果未登录，则运行 `aio login` 首先。
+1. 部署更新后的App Builder扩展应用程序。 如果未登录，请先运行`aio login`。
 
    ```shell
    $ aio app deploy
@@ -117,11 +117,11 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
    Successful deployment 🏄
    ```
 
-1. 将以下两个查询参数添加到 [AEM UI的URL](#aem-ui-url)
+1. 将以下两个查询参数添加到[AEM UI的URL](#aem-ui-url)
    + `&devMode=true`
    + `&ext=<DEPLOYED APPLICATION URL>`
 
-   添加以上两个查询参数(`devMode` 和 `ext`)作为 __第一__ URL中的查询参数，因为可扩展的AEM UI使用哈希路由(`#/@wknd/aem/...`)，因此在 `#` 不起作用。
+   将以上两个查询参数（`devMode`和`ext`）添加为URL中的&#x200B;__first__&#x200B;查询参数，因为可扩展的AEM UI使用哈希路由(`#/@wknd/aem/...`)，因此，在`#`不起作用后错误地发布修复了参数。
 
    预览URL应如下所示：
 
@@ -134,18 +134,18 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
 
 请记住，在使用此方法时，仅当使用手工暂存URL访问时，暂存扩展才会插入到AEM内容片段控制台中。
 
-1. 可以通过运行来更新已部署的扩展 `aio app deploy` 同样，这些更改会在使用预览URL时自动反映出来。
-1. 要删除扩展以进行验证，请运行 `aio app undeploy`.
+1. 可以通过再次运行`aio app deploy`来更新已部署的扩展，并且这些更改会在使用预览URL时自动反映。
+1. 若要移除扩展以进行验证，请运行`aio app undeploy`。
 
 ## 预览小书签
 
 为便于创建上述预览和预览URL，可创建加载扩展的JavaScript小书签。
 
-下面的小书签可预览 [本地开发构建](#verify-local-development-builds) 的扩展 `https://localhost:9080`. 预览 [暂存版本](#verify-stage-builds)，创建小书签，使用 `previewApp` 变量设置为已部署的App Builder应用程序的URL。
+下面的小书签预览了`https://localhost:9080`上扩展的[本地开发内部版本](#verify-local-development-builds)。 要预览[暂存内部版本](#verify-stage-builds)，请在将`previewApp`变量设置为已部署的App Builder应用程序的URL的情况下创建一个小书签。
 
 1. 在浏览器中创建书签。
 1. 编辑书签。
-1. 为书签提供一个有意义的名称，例如 `AEM UI Extension Preview (localhost:9080)`.
+1. 为书签提供一个有意义的名称，例如`AEM UI Extension Preview (localhost:9080)`。
 1. 将书签的URL设置为以下代码：
 
    ```javascript
@@ -165,4 +165,4 @@ AEM UI扩展可以根据扩展所属的Adobe组织中的任何AEMas a Cloud Serv
 
 >[!TIP]
 >
-> 如果App Builder扩展未加载，则在使用时， `&ext=https://localhost:9080`，直接在浏览器选项卡中打开该主机和端口，并接受自签名证书。 然后重试小书签。
+> 如果App Builder扩展未加载，则在使用时`&ext=https://localhost:9080`，请直接在浏览器选项卡中打开该主机和端口，并接受自签名证书。 然后重试小书签。

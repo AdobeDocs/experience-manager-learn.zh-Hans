@@ -17,13 +17,13 @@ ht-degree: 1%
 
 # 持久 GraphQL 查询
 
-持久查询是存储在Adobe Experience Manager (AEM)服务器上的查询。 客户端可以发送一个具有查询名称的HTTPGET请求来执行它。 这种方法的好处是可缓存性。 虽然客户端GraphQL查询也可以使用HTTPPOST请求执行（无法缓存），但持久查询可以由HTTP缓存或CDN缓存，从而提高性能。 持久查询允许您简化请求并提高安全性，因为您的查询已封装在服务器上，并且AEM管理员可以完全控制它们。 它是 **最佳实践和强烈建议** 在使用AEM GraphQL API时使用持久查询。
+持久查询是存储在Adobe Experience Manager (AEM)服务器上的查询。 客户端可以发送一个具有查询名称的HTTPGET请求来执行它。 这种方法的好处是可缓存性。 虽然客户端GraphQL查询也可以使用HTTPPOST请求执行（无法缓存），但持久查询可以由HTTP缓存或CDN缓存，从而提高性能。 持久查询允许您简化请求并提高安全性，因为您的查询已封装在服务器上，并且AEM管理员可以完全控制它们。 使用AEM GraphQL API时，是&#x200B;**最佳实践并强烈建议**&#x200B;使用持久查询。
 
 在上一章中，您已探索了一些高级GraphQL查询以收集WKND应用程序的数据。 在本章中，您将查询保留到AEM，并了解如何在保留的查询上使用缓存控制。
 
 ## 先决条件 {#prerequisites}
 
-本文档是多部分教程的一部分。 请确保 [上一章](explore-graphql-api.md) 已完成，然后再继续本章。
+本文档是多部分教程的一部分。 在继续本章之前，请确保已完成[上一章](explore-graphql-api.md)。
 
 ## 目标 {#objectives}
 
@@ -32,13 +32,13 @@ ht-degree: 1%
 * 使用参数保留GraphQL查询
 * 将cache-control参数用于持久查询
 
-## 审核 _GraphQL持久查询_ 配置设置
+## 查看&#x200B;_GraphQL持久查询_&#x200B;配置设置
 
-让我们回顾一下 _GraphQL持久查询_ 已在AEM实例中为WKND站点项目启用。
+我们来看看是否已在AEM实例中为WKND站点项目启用&#x200B;_GraphQL持久查询_。
 
-1. 导航到 **工具** > **常规** > **配置浏览器**.
+1. 导航到&#x200B;**工具** > **常规** > **配置浏览器**。
 
-1. 选择 **WKND已共享**，然后选择 **属性** 以打开配置属性。 在配置属性页面上，您应该看到 **GraphQL持久查询** 权限已启用。
+1. 选择&#x200B;**WKND共享**，然后在顶部导航栏中选择&#x200B;**属性**&#x200B;以打开配置属性。 在“配置属性”页面上，您应该看到&#x200B;**GraphQL持久查询**&#x200B;权限已启用。
 
    ![配置属性](assets/graphql-persisted-queries/configuration-properties.png)
 
@@ -157,9 +157,9 @@ ht-degree: 1%
 
    在保存查询之前，请验证查询是否有效。
 
-1. 接下来，点按另存为，并输入 `adventure-details-by-slug` 作为查询名称。
+1. 接下来，点按另存为，并输入`adventure-details-by-slug`作为查询名称。
 
-   ![持久GraphQL查询](assets/graphql-persisted-queries/persist-graphql-query.png)
+   ![保留GraphQL查询](assets/graphql-persisted-queries/persist-graphql-query.png)
 
 ## 通过编码特殊字符执行带变量的持久查询
 
@@ -171,7 +171,7 @@ ht-degree: 1%
 GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
 ```
 
-执行持久查询 _带变量_，则上述语法将更改为：
+若要使用变量&#x200B;_执行持久查询_，上述语法将更改为：
 
 ```
 GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>;variable1=value1;variable2=value2
@@ -179,15 +179,15 @@ GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
 
 必须转换分号(；)、等号(=)、斜杠(/)和空格等特殊字符才能使用相应的UTF-8编码。
 
-通过运行 `getAllAdventureDetailsBySlug` 从命令行终端进行查询，我们回顾这些概念的实际操作情况。
+通过从命令行终端运行`getAllAdventureDetailsBySlug`查询，我们回顾这些概念的实际操作情况。
 
-1. 打开GraphiQL Explorer并单击 **椭圆** (...)永久查询旁边 `getAllAdventureDetailsBySlug`，然后单击 **复制URL**. 将复制的URL粘贴到文本板中，如下所示：
+1. 打开GraphiQL Explorer并单击永久查询`getAllAdventureDetailsBySlug`旁边的&#x200B;**省略号** (...)，然后单击&#x200B;**复制URL**。 将复制的URL粘贴到文本板中，如下所示：
 
    ```code
        http://<AEM_HOST>/graphql/execute.json/wknd-shared/getAllAdventureDetailsBySlug;slug=
    ```
 
-1. 添加 `yosemite-backpacking` 作为变量值
+1. 将`yosemite-backpacking`添加为变量值
 
    ```code
        http://<AEM_HOST>/graphql/execute.json/wknd-shared/getAllAdventureDetailsBySlug;slug=yosemite-backpacking
@@ -199,7 +199,7 @@ GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
        http://<AEM_HOST>/graphql/execute.json/wknd-shared/getAllAdventureDetailsBySlug%3Bslug%3Dyosemite-backpacking
    ```
 
-1. 打开命令行终端并使用 [Curl](https://curl.se/) 运行查询
+1. 打开命令行终端并使用[Curl](https://curl.se/)运行查询
 
    ```shell
    $ curl -X GET http://<AEM_HOST>/graphql/execute.json/wknd-shared/getAllAdventureDetailsBySlug%3Bslug%3Dyosemite-backpacking
@@ -207,9 +207,9 @@ GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
 
 >[!TIP]
 >
->    如果对AEM创作环境运行上述查询，则必须发送凭据。 请参阅 [本地开发访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) 演示和 [调用AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api) 以了解文档详细信息。
+>    如果对AEM创作环境运行上述查询，则必须发送凭据。 请参阅[本地开发访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html)进行演示，并参阅[调用AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api)以了解文档详细信息。
 
-此外，查看 [如何执行持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query)， [使用查询变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables)、和 [为应用程序使用的查询URL编码](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url) 以了解客户端应用程序的持久查询执行。
+此外，请查看[如何执行持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query)、[使用查询变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables)和[对查询URL进行编码以供应用程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url)使用，以了解客户端应用程序如何执行持久查询。
 
 ## 更新持久查询中的缓存控制参数 {#cache-control-all-adventures}
 
@@ -219,19 +219,19 @@ AEM GraphQL API允许您更新查询的默认缓存控制参数，以提高性�
 
 * 7200秒是Dispatcher和CDN的默认(s-maxage=7200) TTL；也称为共享缓存
 
-使用 `adventures-all` 查询以更新cache-control参数。 查询响应很大，控制其大小很有用 `age` 在缓存中。 此持久查询稍后用于更新 [客户端应用程序](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md).
+使用`adventures-all`查询更新缓存控制参数。 查询响应很大，在缓存中控制其`age`很有用。 此持久查询稍后用于更新[客户端应用程序](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)。
 
-1. 打开GraphiQL Explorer并单击 **椭圆** (...)，然后单击 **标题** 以打开 **缓存配置** 模式。
+1. 打开GraphiQL Explorer并单击永久查询旁边的&#x200B;**省略号** (...)，然后单击&#x200B;**标头**&#x200B;以打开&#x200B;**缓存配置**&#x200B;模式。
 
-   ![保留GraphQL标题选项](assets/graphql-persisted-queries/persist-graphql-header-option.png)
+   ![保留GraphQL标头选项](assets/graphql-persisted-queries/persist-graphql-header-option.png)
 
 
-1. 在 **缓存配置** 模式，更新 `max-age` 标题值至 `600 `秒（10分钟），然后单击 **保存**
+1. 在&#x200B;**缓存配置**&#x200B;模式中，将`max-age`标头值更新为`600 `秒（10分钟），然后单击&#x200B;**保存**
 
    ![保留GraphQL缓存配置](assets/graphql-persisted-queries/persist-graphql-cache-config.png)
 
 
-审核 [正在缓存您的持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#caching-persisted-queries) 以获取有关默认cache-control参数的详细信息。
+有关默认缓存控制参数的详细信息，请查看[缓存您的持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#caching-persisted-queries)。
 
 
 ## 恭喜！
@@ -240,4 +240,4 @@ AEM GraphQL API允许您更新查询的默认缓存控制参数，以提高性�
 
 ## 后续步骤
 
-在 [下一章](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)，则将在WKND应用程序中实施对持久查询的请求。
+在[下一章](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)中，您将在WKND应用程序中实施对持久查询的请求。

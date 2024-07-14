@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 捕获移动表单的调试日志的步骤
 
-*本视频介绍捕获移动表单的调试日志的步骤。*
+*此视频介绍捕获移动表单的调试日志的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335516?quality=12&learn=on)

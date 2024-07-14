@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何捕获HAR （HTTP存档）日志
 
-*本视频介绍捕获HAR （HTTP存档）日志的步骤。*
+*此视频介绍捕获HAR （HTTP存档）日志的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335488?quality=12&learn=on)

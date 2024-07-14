@@ -40,7 +40,7 @@ ht-degree: 1%
 }
 ```
 
-元素 _**合同副本**_ 表示文件附件组件，用于捕获随表单一起提交的附件。
+元素&#x200B;_**contractcopy**_表示文件附件组件，用于捕获随表单提交的附件。
 为了能够使用数据及其附件预填充自适应表单，提交的附件将保存在Azure门户中，提交数据中的合同副本对象的数据元素将使用已保存附件的URL进行更新。
 自定义提交服务在Azure门户中提取并存储附件。  更新的已提交数据将如下所示
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 ```
 
 
-[此处提供了基于核心组件的自适应表单的自定义提交处理程序示例](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). 编写以下自定义提交以处理表单提交
+[此处](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56)提供了基于核心组件的自适应表单的示例自定义提交处理程序。 编写以下自定义提交以处理表单提交
 
 ```java
 package com.azuredemo.core;

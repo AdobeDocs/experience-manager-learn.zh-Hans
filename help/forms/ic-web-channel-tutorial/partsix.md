@@ -36,7 +36,7 @@ ht-degree: 1%
 
    1. 取消选中“Print channel（打印渠道）”复选框。 我们不会为打印渠道创建文档。
    1. Web：选择此选项可为Web渠道生成文档
-   1. 交互式通信：模板： **global>RetirationAccountStatemen** t（这是在上一步中创建的模板）
+   1. 交互式通信：模板： **global>RetilationAccountStatemen** t（这是在上一步中创建的模板）
    1. 主题：**参考主题 — >画布2.0**
 
 1. 点按创建

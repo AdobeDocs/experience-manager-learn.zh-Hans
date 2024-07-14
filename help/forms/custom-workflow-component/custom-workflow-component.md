@@ -22,17 +22,17 @@ ht-degree: 0%
 
 
 [下载自定义工作流组件](assets/saveFiles.zip)
-导入工作流组件 [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入工作流组件[
 
 自定义工作流组件位于/apps/AEMFormsDemoListings/workflowcomponent/SaveFiles中
 
 选择SaveFiles节点并检查其属性
 
-**组件组**  — 此属性的值确定工作流组件的类别。
+**componentGroup** — 此属性的值确定工作流组件的类别。
 
-**jcr：Title**  — 这是工作流组件的标题。
+**jcr：Title** — 这是工作流组件的标题。
 
-**sling：resourceSuperType** 此属性的值将决定此组件的继承。 在这种情况下，我们继承了流程组件
+**sling：resourceSuperType**&#x200B;此属性的值将决定此组件的继承。 在这种情况下，我们继承了流程组件
 
 
 ![component-properties](assets/component-properties1.png)
@@ -46,19 +46,20 @@ ht-degree: 0%
 
 进程的进程参数位于processargs节点下
 
-![process-args](assets/process-arguments.png)
+![进程参数](assets/process-arguments.png)
 
 作者指定参数，如下面的屏幕快照中所示
-![workflow-component](assets/custom-workflow-component.png)
+![工作流组件](assets/custom-workflow-component.png)
 
-这些值将存储为元数据节点的属性。 例如，值 **c：\formsattachments** 将存储在元数据节点的属性saveToLocation中
-![save-location](assets/save-to-location.png)
+这些值将存储为元数据节点的属性。 例如，值&#x200B;**c：\formsattachments**将存储在元数据节点的属性saveToLocation中
+![保存位置](assets/save-to-location.png)
 
 ## cq：editConfig
 
-cq：EditConfig只是具有主类型cq：EditConfig和组件根目录下名称cq：editConfig的节点。组件的编辑行为通过在组件节点下添加类型为cq：EditConfig的cq：editConfig节点（类型为cq：Component）来配置
+cq：EditConfig只是组件根目录下具有主类型cq：EditConfig和名称cq：editConfig的节点
+组件的编辑行为通过在组件节点下添加cq：EditConfig类型（cq：Component类型）的cq：editConfig节点来配置
 
-![edit-config](assets/cq-edit-config.png)
+![编辑配置](assets/cq-edit-config.png)
 
 cq：formParameters （节点类型nt：unstructured）：定义添加到对话框表单的其他参数。
 

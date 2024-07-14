@@ -1,5 +1,5 @@
 ---
-user-guide-title: 《AEM Sites 快速入门》 - WKND 教程
+user-guide-title: AEM Sites - WKND 教程快速入门
 user-guide-description: 面向不熟悉 AEM 的开发人员的多节教程。为一个虚构的生活方式品牌 WKND 实施 AEM 网站。启用前端管道以加快从开发到部署的周期。
 breadcrumb-title: AEM Sites WKND 教程
 solution: Experience Manager, Experience Manager Sites
@@ -10,16 +10,16 @@ audience: developer
 index: y
 source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 46%
+source-wordcount: '124'
+ht-degree: 40%
 
 ---
 
 
-# 《AEM Sites 快速入门》 - WKND 教程 {#getting-started-wknd-tutorial-develop}
+# AEM Sites - WKND 教程快速入门 {#getting-started-wknd-tutorial-develop}
 
 + [WKND教程概述](overview.md)
-+ 项目原型 {#project-archetype}
++ 项目原型{#project-archetype}
    + [概述](./project-archetype/overview.md)
    + [1 — 项目设置](./project-archetype/project-setup.md)
    + [2 — 组件基础知识](./project-archetype/component-basics.md)
@@ -28,7 +28,7 @@ ht-degree: 46%
    + [5 — 样式系统](./project-archetype/style-system.md)
    + [6 — 自定义组件](./project-archetype/custom-component.md)
    + [7 — 单元测试](./project-archetype/unit-testing.md)
-+ 快速站点创建 {#site-template}
++ 快速站点创建{#site-template}
    + [概述](./site-template/overview.md)
    + [1 — 创建站点](./site-template/create-site.md)
    + [2 — 创作和发布简介](./site-template/author-content-publish.md)

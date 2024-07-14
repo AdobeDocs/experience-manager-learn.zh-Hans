@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # 在App Builder操作中生成服务器到服务器访问令牌
 
-App Builder操作可能需要与支持的AdobeAPI进行交互 **OAuth服务器到服务器凭据** 和与Adobe Developer Console项目关联，因此部署了App Builder应用程序。
+App Builder操作可能需要与支持&#x200B;**OAuth服务器到服务器凭据**&#x200B;且与App Builder应用程序部署的Adobe Developer Console项目关联的AdobeAPI进行交互。
 
-本指南介绍如何使用生成访问令牌 _OAuth服务器到服务器凭据_ 以便在App Builder操作中使用。
+本指南介绍如何使用&#x200B;_OAuth服务器到服务器凭据_&#x200B;生成访问令牌，以便在App Builder操作中使用。
 
 >[!IMPORTANT]
 >
@@ -29,19 +29,19 @@ App Builder操作可能需要与支持的AdobeAPI进行交互 **OAuth服务器�
 
 ## Adobe Developer Console项目配置
 
-将所需的AdobeAPI添加到Adobe Developer Console项目时，请在 _配置API_ 步骤，选择 **OAuth服务器到服务器** 身份验证类型。
+将所需的AdobeAPI添加到Adobe Developer Console项目时，在&#x200B;_配置API_&#x200B;步骤中，选择&#x200B;**OAuth服务器到服务器**&#x200B;身份验证类型。
 
-![Adobe Developer控制台 — OAuth服务器到服务器](./assets/s2s-auth/oauth-server-to-server.png)
+![Adobe Developer Console - OAuth服务器到服务器](./assets/s2s-auth/oauth-server-to-server.png)
 
 要分配上述自动创建的集成服务帐户，请选择所需的产品配置文件。 因此，通过产品用户档案，服务帐户权限被控制。
 
-![Adobe Developer控制台 — 产品配置文件](./assets/s2s-auth/select-product-profile.png)
+![Adobe Developer Console — 产品配置文件](./assets/s2s-auth/select-product-profile.png)
 
 ## .env文件
 
-在App Builder项目的 `.env` 文件，附加Adobe Developer控制台项目的OAuth服务器到服务器凭据的自定义密钥。 OAuth服务器到服务器凭据值可以从Adobe Developer控制台项目的 __凭据__ > __OAuth服务器到服务器__ 对于给定工作区。
+在App Builder项目的`.env`文件中，附加Adobe Developer Console项目的OAuth服务器到服务器凭据的自定义密钥。 可以从给定工作区的Adobe Developer Console项目的&#x200B;__凭据__ > __OAuth服务器到服务器__&#x200B;获取OAuth服务器到服务器凭据值。
 
-![Adobe Developer控制台OAuth服务器到服务器凭据](./assets/s2s-auth/oauth-server-to-server-credentials.png)
+![Adobe Developer Console OAuth服务器到服务器凭据](./assets/s2s-auth/oauth-server-to-server-credentials.png)
 
 ```
 ...
@@ -50,11 +50,11 @@ OAUTHS2S_CLIENT_SECRET=p8e-EIRF6kY6EHLBSdw2b-pLUWKodDqJqSz3
 OAUTHS2S_CECREDENTIALS_METASCOPES=AdobeID,openid,ab.manage,additional_info.projectedProductContext,read_organizations,read_profile,account_cluster.read
 ```
 
-以下项的值 `OAUTHS2S_CLIENT_ID`， `OAUTHS2S_CLIENT_SECRET`， `OAUTHS2S_CECREDENTIALS_METASCOPES` 可以直接从Adobe Developer控制台项目的“OAuth服务器到服务器凭据”屏幕复制。
+可以从Adobe Developer Console项目的OAuth服务器到服务器凭据屏幕直接复制`OAUTHS2S_CLIENT_ID`、`OAUTHS2S_CLIENT_SECRET`、`OAUTHS2S_CECREDENTIALS_METASCOPES`的值。
 
 ## 输入映射
 
-将OAuth服务器到服务器凭据值设置为 `.env` 文件，必须将它们映射到AppBuilder操作输入，以便可在操作本身中读取它们。 为此，请在每个变量中添加相应的条目 `ext.config.yaml` 操作 `inputs` 采用以下格式： `PARAMS_INPUT_NAME: $ENV_KEY`.
+在`.env`文件中设置OAuth服务器到服务器凭据值后，必须将它们映射到AppBuilder操作输入，以便在操作本身中读取它们。 为此，请在`ext.config.yaml`操作`inputs`中为每个变量添加条目，格式为： `PARAMS_INPUT_NAME: $ENV_KEY`。
 
 例如：
 
@@ -83,13 +83,13 @@ runtimeManifest:
             final: true
 ```
 
-下定义的键 `inputs` 可在 `params` 提供给App Builder操作的对象。
+在`inputs`下定义的键在提供给App Builder操作的`params`对象上可用。
 
 ## 用于访问令牌的OAuth服务器到服务器凭据
 
-在App Builder操作中，OAuth服务器到服务器凭据在以下位置提供： `params` 对象。 使用这些凭据，可以使用生成访问令牌 [OAuth 2.0库](https://oauth.net/code/). 或者，您可以使用 [节点提取库](https://www.npmjs.com/package/node-fetch) 向Adobe IMS令牌端点发出POST请求以获取访问令牌。
+在App Builder操作中，`params`对象中提供了OAuth服务器到服务器凭据。 使用这些凭据可以使用[OAuth 2.0库](https://oauth.net/code/)生成访问令牌。 或者，您可以使用[Node获取库](https://www.npmjs.com/package/node-fetch)向Adobe IMS令牌端点发出POST请求以获取访问令牌。
 
-以下示例演示如何使用 `node-fetch` 库，向Adobe IMS令牌端点发出POST请求以获取访问令牌。
+以下示例演示了如何使用`node-fetch`库向Adobe IMS令牌端点发出POST请求以获取访问令牌。
 
 ```javascript
 const fetch = require("node-fetch");

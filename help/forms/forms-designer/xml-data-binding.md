@@ -1,6 +1,6 @@
 ---
 title: 在基于XDP的表单中创建XML数据绑定
-description: 描述将AEM表单绑定到XML数据源的简短视频
+description: 描述将AEM表单绑定到XML数据Source的简短视频
 version: 6.5
 feature: Forms Designer,Designer
 topic: Development
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # 在AEM Forms Designer中创建XML数据绑定
 
-描述将AEM表单绑定到XML数据源的简短视频
+描述将AEM表单绑定到XML数据Source的简短视频
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427625/?learn=on)

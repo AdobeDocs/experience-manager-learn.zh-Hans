@@ -36,13 +36,13 @@ ht-degree: 1%
 >* Microsoft Visual C++ 2012可再分发
 >* Microsoft Visual C++ 2013可再分发（截止到6.5版）
 
-虽然我们建议遵循 [官方文档](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) 安装AEM Forms。 可以执行以下步骤，在Windows环境中安装和配置AEM Forms：
+尽管我们建议遵循有关安装AEM Forms的[官方文档](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)。 可以执行以下步骤，在Windows环境中安装和配置AEM Forms：
 
 * 确保安装了适当的JDK
    * 您需要AEM 6.2：OracleSE 8 JDK 1.8.x（64位）
    * 您需要AEM 6.3和AEM 6.4：OracleSE 8 JDK 1.8.x（64位）
    * AEM 6.5需要JDK 8或JDK 11
-   * [JDK的官方要求](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=zh-Hans) 此处列出
+   * 此处列出了[官方JDK要求](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=zh-Hans)
 * 确保将JAVA_HOME设置为指向您已安装的JDK。
    * 要在Windows中创建JAVA_HOME变量，请执行以下步骤：
       * 右键单击“我的电脑”并选择“属性”
@@ -57,7 +57,7 @@ ht-degree: 1%
       * 此处，AEM_6.5_Quickstart.jar是我的AEM快速入门jar的名称。
    * 您可以将jar重命名为任何名称，但请确保该名称反映在批处理文件中。 将批处理文件保存在AEMForms文件夹中。
 
-* 打开新的命令提示符，然后导航到 _c：\aemforms_.
+* 打开新的命令提示符，并导航到&#x200B;_c：\aemforms_。
 
 * 从命令提示符执行StartAemForms.bat文件。
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 * 文档服务需要这两个属性才能正常工作
 * 保存sling.properties文件
 * [下载相应的表单附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)
-* 使用以下方式安装表单加载项包 [包管理器](http://localhost:4502/crx/packmgr/index.jsp).
+* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)安装表单加载项包。
 * 安装添加软件包后，需要执行以下步骤
 
    * **确保所有捆绑包都处于活动状态。 （AEMFD签名包除外）。**
@@ -80,10 +80,10 @@ ht-degree: 1%
 
 ## sun.util.calendar允许列表包
 
-1. 在中打开Felix web控制台 [浏览器窗口](http://localhost:4502/system/console/configMgr)
+1. 在[浏览器窗口](http://localhost:4502/system/console/configMgr)中打开Felix Web控制台
 1. 搜索并打开反序列化防火墙配置： `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
-1. 添加 `sun.util.calendar` 作为新条目，位于 `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
+1. 将`sun.util.calendar`添加为`com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`下的新条目
 1. 保存更改。
 
 恭喜!!! 您现在已在系统上安装和配置AEM Forms。
-根据您的需求，您可以配置  [Reader扩展](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) 或 [PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) 在您的服务器上
+根据您的需要，您可以在服务器上配置[Reader扩展](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)或[PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html)

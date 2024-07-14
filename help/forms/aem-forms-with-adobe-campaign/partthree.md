@@ -21,7 +21,7 @@ ht-degree: 1%
 
 在本部分中，我们使用从ACS获取的用户档案信息预填自适应表单。 AEM Forms具有这项预填自适应表单的强大功能。
 
-要了解有关预填自适应表单的更多信息，请阅读此 [教程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
+若要了解有关预填自适应表单的更多信息，请阅读此[教程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
 
 要通过从ACS获取数据预填充自适应表单，我们假设ACS中存在与登录AEM用户具有相同电子邮件的用户档案。 例如，如果登录AEM的人员的电子邮件ID为csimms@adobe.com，我们希望在ACS中找到其电子邮件为csimms@adobe.com的配置文件。
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 * 使用配置文件信息构建XML文档
 * 返回AEM Forms使用的XML文档的InputStream
 
-![预填充服务](assets/prefillserviceaf.gif)
+![prefillservice](assets/prefillserviceaf.gif)
 
 将预填充服务与自适应表单关联
 
@@ -233,10 +233,10 @@ return "Pre Fill Forms Using Campaign Profile";
 
 要在您的系统上使其正常工作，请按照以下说明操作：
 
-* [确保已按照此处所述的步骤进行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [请确保您已按照此处所述的步骤进行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [使用包管理器将自适应表单示例导入AEM](assets/pre-fill-af-from-campaign.zip)
 * 确保您使用其电子邮件ID由Adobe Campaign中的配置文件共享的用户登录AEM。 例如，如果AEM用户的电子邮件ID是johndoe@adobe.com ，则您需要在ACS中拥有其电子邮件是johndoe@adobe.com的配置文件。
-* [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).
+* [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled)。
 
 ## 后续步骤
 

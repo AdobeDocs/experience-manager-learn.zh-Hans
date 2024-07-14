@@ -1,6 +1,6 @@
 ---
-title: AEMas a Cloud Service内容迁移常见问题解答
-description: 获取有关将内容迁移到AEMas a Cloud Service的常见问题解答。
+title: AEM as a Cloud Service内容迁移常见问题解答
+description: 获取有关将内容迁移到AEM as a Cloud Service的常见问题解答。
 version: Cloud Service
 doc-type: article
 topic: Migration
@@ -18,17 +18,17 @@ ht-degree: 0%
 
 ---
 
-# AEMas a Cloud Service内容迁移常见问题解答
+# AEM as a Cloud Service内容迁移常见问题解答
 
-获取有关将内容迁移到AEMas a Cloud Service的常见问题解答。
+获取有关将内容迁移到AEM as a Cloud Service的常见问题解答。
 
 ## 术语
 
-+ **Aemaacs**： [AEMas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/introduction.html?lang=zh-Hans)
++ **AEMaaCS**： [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/introduction.html?lang=zh-Hans)
 + **BPA**： [最佳实践分析器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=zh-Hans)
 + **CTT**： [内容传输工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
-+ **凸轮**： [Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)
-+ **IMS**： [Identity Management System](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html)
++ **摄像头**： [Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)
++ **IMS**： [Identity Management系统](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html)
 + **DM**： [Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dm-journey/dm-journey-part1.html)
 
 请在创建与CTT相关的Adobe支持票证时，使用以下模板提供更多详细信息。
@@ -43,17 +43,17 @@ ht-degree: 0%
 
 + 使用内容传输工具(AEM 6.3+ → AEMaaCS)
 + 通过包管理器(AEM → AEMaaCS)
-+ 开箱即用的资产(S3/Azure→AEMaaCS)批量导入服务
++ 开箱即用的Assets批量导入服务(S3/Azure→AEMaaCS)
 
 ### 问：可以使用CTT传输的内容数量是否有限制？
 
 不适用。 CTT作为一种工具可以从AEM源中提取并摄取到AEMaaCS中。 但是，在迁移之前应考虑对AEMaaCS平台的特定限制。
 
-有关更多信息，请参阅 [云迁移先决条件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html).
+有关详细信息，请参阅[云迁移先决条件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html)。
 
 ### 问：我已收到来自源系统的最新BPA报告，应该对其执行哪些操作？
 
-将报表导出为CSV，然后将其上传到Cloud Acceleration Manager， [与您的IMS组织关联](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html). 然后按照以下方式完成审阅过程 [在准备阶段中概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
+将报表导出为CSV，然后将其上传到Cloud Acceleration Manager（与您的IMS组织](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)关联的[）。 然后按照准备阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html)中所述的[进行审核过程。
 
 请检查工具提供的代码和内容复杂性评估，并记下导致代码重构积压或云迁移评估的相关操作项。
 
@@ -79,9 +79,9 @@ CTT提取过程所用的资源量取决于节点数、Blob数及其聚合大小�
 
 ### 问：在CTT的上下文中，“划出”和“覆盖”这两个术语表示什么？
 
-在上下文中 [萃取阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase)，选项是覆盖暂存容器中以前提取周期的数据，或者将差异（添加/更新/删除）添加到其中。 暂存容器不执行任何操作，但与迁移集关联的Blob存储容器除外。 每个迁移集都有各自的暂存容器。
+在[提取阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase)的上下文中，选项为覆盖暂存容器中先前提取周期的数据，或向其中添加差异（添加/更新/删除）。 暂存容器不执行任何操作，但与迁移集关联的Blob存储容器除外。 每个迁移集都有各自的暂存容器。
 
-在上下文中 [摄取阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html)，选项为+以替换AEMaaCS的整个内容存储库，或从暂存迁移容器同步差异（添加/更新/删除）内容。
+在[摄取阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html)的上下文中，选项为+以替换AEMaaCS的整个内容存储库或从暂存迁移容器同步差异（添加/更新/删除）内容。
 
 ### 问：源系统中有多个网站、关联的资产、用户和组。 是否可以分阶段将它们迁移到AEMaaCS？
 
@@ -103,21 +103,21 @@ CTT提取过程所用的资源量取决于节点数、Blob数及其聚合大小�
 
 是。缺少原始演绎版意味着资产二进制文件无法正确上传。 考虑到数据损坏，请进行检查，使用包管理器进行备份（如果需要），并在运行提取之前从源AEM中删除这些数据。 错误数据将对资产处理步骤产生负面结果。
 
-### 问：BPA报告包含与缺失相关的项目 `jcr:content` 文件夹节点。 我该拿他们怎么办？
+### 问：BPA报告包含与文件夹缺少`jcr:content`节点相关的项。 我该拿他们怎么办？
 
-时间 `jcr:content` 在文件夹级别缺少用于传播设置的任何操作，例如处理配置文件等。 来自父母的将在此级别中断。 请检查缺失的原因 `jcr:content`. 虽然这些文件夹可以迁移，但请注意，此类文件夹会降低用户体验并会在以后导致不必要的故障排除周期。
+在文件夹级别缺少`jcr:content`时，执行任何传播设置的操作，如处理配置文件等。 来自父母的将在此级别中断。 请检查缺少`jcr:content`的原因。 虽然这些文件夹可以迁移，但请注意，此类文件夹会降低用户体验并会在以后导致不必要的故障排除周期。
 
 ### 问：我已创建迁移集。 能否检查其大小？
 
-是的，有一个 [检查大小](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#migration-set-size) 是CTT一部分的特征。
+是，有一个[检查大小](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#migration-set-size)功能是CTT的一部分。
 
 ### 问：我正在执行迁移（提取、摄取）。 是否可以验证我提取的所有内容是否都已摄取到Target中？
 
-是的，有一个 [验证](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html) 是CTT一部分的特征。
+是，有一个[验证](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html)功能是CTT的一部分。
 
 ### 问：我的客户要求在AEMaaCS环境（例如从AEMaaCS Dev到AEMaaCS Stage或到AEMaaCS Prod）之间移动内容。 我能否对这些用例使用内容传输工具？
 
-很遗憾，不能。 CTT的使用案例是将内容从本地/AMS托管的AEM 6.3+源迁移到AEMaaCS云环境。 [请阅读CTT文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html).
+很遗憾，不能。 CTT的使用案例是将内容从本地/AMS托管的AEM 6.3+源迁移到AEMaaCS云环境。 [请阅读CTT文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)。
 
 ### 问：在提取期间会出现哪些问题？
 
@@ -125,7 +125,7 @@ CTT提取过程所用的资源量取决于节点数、Blob数及其聚合大小�
 
 公共文档根据学习内容不断进行改进，但以下是一些高级别的问题类别和可能的基本原因。
 
-![AEMas a Cloud Service内容迁移提取问题](../../assets/faq/extraction-issues.jpg) { align=&quot;center&quot; }
+![AEM as a Cloud Service内容迁移提取问题](../../assets/faq/extraction-issues.jpg) { align=&quot;center&quot; }
 
 ### 问：在摄取期间会遇到哪些问题？
 
@@ -133,20 +133,20 @@ CTT提取过程所用的资源量取决于节点数、Blob数及其聚合大小�
 
 以下是可能的问题类别（请勿将此视为排他列表）
 
-![AEMas a Cloud Service内容迁移引入问题](../../assets/faq/ingestion-issues.jpg) { align=&quot;center&quot; }
+![AEM as a Cloud Service内容迁移引入问题](../../assets/faq/ingestion-issues.jpg) { align=&quot;center&quot; }
 
 
 
 ### 问：我的源服务器是否需要具有出站Internet连接才能使CTT正常工作？
 
-简短的答案是“**是**“。
+简短的答案为“**是**”。
 
 CTT流程需要连接到以下资源：
 
-+ 目标AEMas a Cloud Service环境： `author-p<program_id>-e<env_id>.adobeaemcloud.com`
++ 目标AEM as a Cloud Service环境： `author-p<program_id>-e<env_id>.adobeaemcloud.com`
 + Azure Blob存储服务： `casstorageprod.blob.core.windows.net`
 
-请参阅文档以了解有关 [源连接](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#source-environment-connectivity).
+有关[源连接](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#source-environment-connectivity)的详细信息，请参阅文档。
 
 ## 有关资产处理Dynamic Media的问题
 
@@ -166,7 +166,7 @@ CTT流程需要连接到以下资源：
 + 如果方法是从源克隆实例进行迁移，则可以安全地禁用将用于CTT的克隆上的DM集成。 此步骤纯粹是为了避免向DM进行任何写入或避免DM流量加载。
 + 请注意，CTT会将节点，迁移集的元数据从源AEM迁移到AEMaaCS。 它不会直接对DM执行任何操作。
 
-### 问：当源AEM上存在DM集成时，有哪些不同的迁移方法？
+### 问：Source AEM上存在DM集成时，有哪些不同的迁移方法？
 
 请先阅读上述问题和答案
 
@@ -177,10 +177,10 @@ CTT流程需要连接到以下资源：
 如果源环境中的资产/节点数较低（约100K），并且假设这些资产或节点可以在24 + 72小时的时间内（包括提取和摄取）进行迁移，则更好的方法为
 
 + 直接从生产环境执行迁移
-+ 使用以下方式运行初始提取并摄取到AEMaaCS中 `wipe=true`
++ 使用`wipe=true`运行初始提取并摄取到AEMaaCS中
    + 此步骤会迁移所有节点和二进制文件
 + 继续在On-Premise/AMS Prod作者中工作
-+ 从现在开始，使用以下工具运行所有其他迁移周期证明 `wipe=true`
++ 从现在开始，使用`wipe=true`运行所有其他迁移周期证明
    + 请注意，此操作会迁移完整的节点存储，但只迁移修改的Blob而不是整个Blob。 上一组Blob位于目标AEMaaCS实例的Azure Blob存储中。
    + 使用此迁移证明来衡量迁移持续时间、测试和验证所有其他功能
 + 最后，在上线一周之前，执行wipe=true迁移
@@ -211,4 +211,4 @@ CTT流程需要连接到以下资源：
 
 + [CTT专家系列视频](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
 
-+ [其他AEMaaCS主题的专家系列视频](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-experts-series.html)
++ 其他AEMaaCS主题的[专家系列视频](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-experts-series.html)

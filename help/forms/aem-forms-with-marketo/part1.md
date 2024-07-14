@@ -49,7 +49,7 @@ Marketo与AEM Forms集成的第一步是获取使用API进行REST调用所需的
 1. identity_endpoint
 1. 身份验证URL
 
-[请按照Marketo官方文档获取上述资产。](https://developers.marketo.com/rest-api/) 或者，您也可以联系Marketo实例的管理员。
+[请按照Marketo官方文档获取上述资产。](https://developers.marketo.com/rest-api/)或者，您也可以联系Marketo实例的管理员。
 
 **开始之前**
 

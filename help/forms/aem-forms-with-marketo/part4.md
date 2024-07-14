@@ -33,11 +33,11 @@ ht-degree: 0%
 
 以下屏幕截图介绍了规则编辑器设置
 
-![规则编辑器](assets/ruleeditor.png)
+![ruleeditor](assets/ruleeditor.png)
 
 ## 调试
 
-如果您使用的是本文提供的捆绑包，则可能需要启用 [调试日志](http://localhost:4502/system/console/slinglog) 对于以下类：
+如果使用本文提供的包，则可能需要为以下类启用[调试日志](http://localhost:4502/system/console/slinglog)：
 
 + `com.marketoandforms.core.impl.MarketoServiceImpl`
 + `com.marketoandforms.core.MarketoConfigurationService`

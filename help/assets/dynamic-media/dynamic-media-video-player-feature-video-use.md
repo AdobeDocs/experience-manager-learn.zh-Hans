@@ -66,7 +66,7 @@ HLS浏览器支持如下，对于不支持的浏览器，我们回退到渐进�
   </tr>
   <tr> 
    <td> <p>桌面</p> </td>
-   <td> <p>铬黄</p> </td>
+   <td> <p>Chrome</p> </td>
    <td> <p>HLS视频流</p> </td>
   </tr>
   <tr> 
@@ -76,12 +76,12 @@ HLS浏览器支持如下，对于不支持的浏览器，我们回退到渐进�
   </tr>
   <tr> 
    <td> <p>移动设备</p> </td>
-   <td> <p>Chrome（Android 6或更低版本）</p> </td>
+   <td> <p>Chrome(Android 6或更早版本)</p> </td>
    <td> <p>渐进式下载</p> </td>
   </tr>
   <tr> 
    <td> <p>移动设备</p> </td>
-   <td> <p>Chrome（Android 7或更高版本）</p> </td>
+   <td> <p>Chrome (Android 7或更高版本)</p> </td>
    <td> <p>HLS视频流</p> </td>
   </tr>
   <tr> 

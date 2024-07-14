@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 准备工作和Best Practice Analyzer
 
-了解Best Practice Analyzer如何帮助您准备好从本地AEM移动或AdobeManaged Services以Experience Manageras a Cloud Service。
+了解Best Practice Analyzer如何帮助您准备好从本地AEM或AdobeManaged Services移至Experience Manageras a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336690?quality=12&learn=on)

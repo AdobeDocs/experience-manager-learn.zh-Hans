@@ -1,6 +1,6 @@
 ---
-title: 将组件添加到“资源”部分
-description: 为“资源”面板配置折叠布局。该折叠布局为添加可重复部分提供了更好的最终用户体验。
+title: 将组件添加到Assets部分
+description: 为Assets面板配置折叠布局。该折叠布局为添加可重复部分提供了更好的最终用户体验。
 feature: Adaptive Forms
 version: 6.4,6.5
 jira: KT-4212
@@ -17,11 +17,11 @@ ht-degree: 3%
 
 ---
 
-# 将组件添加到“资源”面板 {#adding-components-to-assets-section}
+# 将组件添加到Assets面板 {#adding-components-to-assets-section}
 
-为“资源”面板配置折叠布局。该折叠布局为添加可重复部分提供了更好的最终用户体验。
+为Assets面板配置折叠布局。该折叠布局为添加可重复部分提供了更好的最终用户体验。
 
-**“配置资源”面板**
+**配置Assets面板**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22200?quality=12&learn=on)
 

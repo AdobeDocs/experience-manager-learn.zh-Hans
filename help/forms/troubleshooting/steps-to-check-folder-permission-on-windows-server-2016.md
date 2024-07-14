@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 在Windows Server 2016中检查AEM Forms PDFG的文件夹权限的步骤
 
-*本视频介绍在Windows Server 2016中检查文件夹权限的其他步骤。*
+*此视频介绍在Windows Server 2016中检查“文件夹权限”的其他步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335519?quality=12&learn=on)

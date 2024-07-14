@@ -21,16 +21,16 @@ ht-degree: 1%
 
 表单数据模型可以基于RDBMS、RESTfull、SOAP或OData源。 本课程的重点是使用RDBMS数据源支持的表单数据模型预归档自适应表单。 在本教程中，使用了MYSQL数据库。 我们创建了以下两个表来演示用例
 
-* **纽惠尔** 表 — 此表存储新信息
+* **newhire**&#x200B;表 — 此表存储newhire信息
 
-  ![纽惠尔](assets/newhire-table.png)
+  ![newhire](assets/newhire-table.png)
 
 
-* **受益人** 表 — 此存储新受益人
+* **受益人**&#x200B;表 — 此存储新受益人
 
   ![受益人](assets/beneficiaries-table.png)
 
-您可以导入 [sql文件](assets/db-schema.sql) 使用MySQL Workbench创建包含一些示例数据的表。
+您可以使用MySQL Workbench将[sql文件](assets/db-schema.sql)导入到包含一些示例数据的表。
 
 ## 后续步骤
 

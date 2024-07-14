@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 从帮助菜单中收集Workbench日志
 
-*本视频介绍从帮助菜单收集Workbench日志的过程。*
+*本视频介绍从“帮助”菜单收集Workbench日志的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335501?quality=12&learn=on)

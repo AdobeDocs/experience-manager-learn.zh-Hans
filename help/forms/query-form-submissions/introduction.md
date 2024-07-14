@@ -33,9 +33,9 @@ ht-degree: 1%
 
 
 
-如果您是开发人员并想要了解此用例实施的代码和其他详细信息，请导入此 [VSCode或IntelliJ中的AEM项目](assets/azuredemoproject.zip)
+如果您是开发人员并且想要了解此用例实施的代码和其他详细信息，请在VSCode或IntelliJ.](assets/azuredemoproject.zip)中导入此[AEM项目
 
-如果您只想让此示例在本地系统上工作，请按照所述的步骤操作 [本教程的第5部分](./part5.md)
+如果您只想让此示例在本地系统上工作，请按照本教程中提到的[part5](./part5.md)步骤操作
 
 创建解决方案时涉及到以下步骤
 

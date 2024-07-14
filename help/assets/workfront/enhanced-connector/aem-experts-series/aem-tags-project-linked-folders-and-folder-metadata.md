@@ -29,8 +29,8 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/340333?quality=12&learn=on)
 
-_a第三部分 [关于Workfront for Experience Manager增强型连接器的四部分专家系列](./overview.md)_
+_Workfront for Experience Manager增强型连接器上的[四部分Expert系列中的第三部分](./overview.md)_
 
 ## 更正
 
-+ __在4:34和6:20__ AEM标记语法不正确。 视频显示 `we-retail:apparel/footwear`. 正确的语法为 `["we-retail:apparel/footwear"]` 或更一般地 `["namespace:tag/childtag"]`.
++ __@ 4:34和6:20__ AEM标记语法不正确。 视频显示`we-retail:apparel/footwear`。 正确的语法是`["we-retail:apparel/footwear"]`，或者更一般地是`["namespace:tag/childtag"]`。

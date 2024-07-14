@@ -19,7 +19,7 @@ ht-degree: 1%
 # 自定义流程步骤
 
 
-实施了自定义流程步骤来创建包含表单附件的压缩文件。 如果您不熟悉如何创建OSGi捆绑包，请 [按照以下说明操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+实施了自定义流程步骤来创建包含表单附件的压缩文件。 如果您不熟悉如何创建OSGi捆绑包，请[按照以下说明进行操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
 自定义流程步骤中的代码执行以下操作
 
@@ -160,7 +160,7 @@ public class ZipFormAttachments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> 请确保您有一个名为的变量  *no_of_attachments* 类型为双精度类型以使此代码正常工作。
+> 请确保您的工作流中有一个名为&#x200B;*no_of_attachments*&#x200B;且类型为Double的变量以使此代码正常工作。
 
 ## 后续步骤
 

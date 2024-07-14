@@ -26,18 +26,18 @@ ht-degree: 1%
 
 ## 创建或重用IMS配置
 
-需要使用Adobe Developer Console项目的IMS配置才能将AEM与新创建的标记属性集成。 此配置允许AEM使用标记API与标记应用程序进行通信，并且IMS处理此集成的安全方面。
+需要使用Adobe Developer Console项目的IMS配置将AEM与新创建的标记属性集成。 此配置允许AEM使用标记API与标记应用程序进行通信，并且IMS处理此集成的安全方面。
 
-每当配置AEM as aCloud Service环境时，都会自动创建一些IMS配置，例如Asset compute、Adobe Analytics和标记。 已自动创建 **Adobe Experience Platform中的标记** 如果您使用的是AEM 6.X环境，则可以使用IMS配置或创建新的IMS配置。
+每当配置AEM as aCloud Service环境时，都会自动创建一些IMS配置，例如Asset compute、Adobe Analytics和标记。 如果您使用AEM 6.X环境，则可以使用Adobe Experience Platform **IMS配置中自动创建的**&#x200B;标记或应创建新的IMS配置。
 
-已自动创建审核 **Adobe Experience Platform中的标记** 使用以下步骤配置IMS。
+使用以下步骤查看在Adobe Experience Platform **IMS配置中自动创建的**&#x200B;标记。
 
-1. 在AEM创作中，打开 **工具** 菜单
+1. 在AEM Author中，打开&#x200B;**工具**&#x200B;菜单
 1. 在安全性部分，选择Adobe IMS配置。
-1. 选择 **Adobe启动** 信息卡并单击 **属性**，查看详细信息 **证书** 和 **帐户** 选项卡。 然后单击 **取消** 以在不修改任何自动创建的详细信息的情况下返回。
-1. 选择 **Adobe启动** 信息卡，这次单击 **检查运行状况**，您应该会看到 **成功** 如下所示的消息。
+1. 选择&#x200B;**Adobe启动项**&#x200B;卡并单击&#x200B;**属性**，从&#x200B;**证书**&#x200B;和&#x200B;**帐户**&#x200B;选项卡中查看详细信息。 然后单击&#x200B;**取消**&#x200B;返回而不修改任何自动创建的详细信息。
+1. 选择&#x200B;**Adobe启动项**&#x200B;信息卡，这次单击&#x200B;**检查运行状况**，您应该会看到如下所示的&#x200B;**成功**&#x200B;消息。
 
-   ![标记健康的IMS配置](assets/adobe-launch-healthy-ims-config.png)
+   ![标记正常IMS配置](assets/adobe-launch-healthy-ims-config.png)
 
 ## 后续步骤
 

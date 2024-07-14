@@ -32,7 +32,7 @@ ht-degree: 0%
 布局不会阻止您更改它们的行为和覆盖您需要的任何更改。  您将用自己的文件覆盖原始文件，而不是更改这些文件。
 
 这还可以确保当AMS使用最新的修复和安全增强为Dispatcher修补补丁时，不会更改您的文件。  然后，您可以继续从这些改进中受益，并仅采用所需的更改。
-![显示保龄球在球道上滚动。  球上有一个箭头，上面写着这个字。  保龄球阻挡器抬起，上面写着不可变文件。](assets/immutable-files/bowling-file-immutability.png "bowling-file-immutability")
+![显示保龄球在保龄球道上滚动。  球上有一个箭头，上面写着这个字。  保龄球阻挡器抬起，上面写着不可变文件。](assets/immutable-files/bowling-file-immutability.png "bowling-file-immutability")
 如上图所示，不可变文件不会阻止您进行游戏。  它们只会防止您拖累工作表现，并使您不脱离正轨。  此方法允许我们使用以下几个非常关键的功能：
 
 - 自定义项在其各自的安全空间中进行处理
@@ -41,7 +41,7 @@ ht-degree: 0%
 - 测试基本安装与自定义配置可以同时完成，以帮助确定问题是由自定义还是其他原因引起。哪些文件？
 
 
-以下是与调度程序一起部署的典型文件列表：
+以下是使用Dispatcher部署的典型文件列表：
 
 ```
 /etc/httpd/
@@ -186,7 +186,7 @@ $ lsattr -Rl /etc/httpd 2>/dev/null | grep Immutable
 
 ### 变量
 
-变量允许您在不更改配置文件本身的情况下进行功能更改。  可以通过调整变量的值来调整某些配置元素。  例如，我们可以从文件中突出显示 `/etc/httpd/conf.d/dispatcher_vhost.conf` 如下所示：
+变量允许您在不更改配置文件本身的情况下进行功能更改。  可以通过调整变量的值来调整某些配置元素。  此处显示文件`/etc/httpd/conf.d/dispatcher_vhost.conf`中可以突出显示的示例：
 
 ```
 Include /etc/httpd/conf.d/variables/ams_default.vars
@@ -199,7 +199,7 @@ IfModule disp_apache2.c
 /IfModule
 ```
 
-了解DispatcherLogLevel指令如何将 `DISP_LOG_LEVEL` 而不是你看到的正常值。  在该部分代码的上方，您还将看到变量文件的include语句。  变量文件 `/etc/httpd/conf.d/variables/ams_default.vars` 是我们接下来要找的地方。  以下是该variables文件的内容：
+了解DispatcherLogLevel指令的变量是`DISP_LOG_LEVEL`，而不是您会看到的正常值。  在该部分代码的上方，您还将看到变量文件的include语句。  变量文件`/etc/httpd/conf.d/variables/ams_default.vars`是我们接下来要检查的对象。  以下是该variables文件的内容：
 
 ```
 Define DISP_LOG_LEVEL info
@@ -211,7 +211,7 @@ Define PUBLISH_FORCE_SSL 0
 Define LIVECYCLE_FORCE_SSL 1
 ```
 
-您在上文中看到的 `DISP_LOG_LEVEL` 变量为 `info`.  我们可以将其调整为trace或debug，或者调整您选择的数值/级别。  现在，控制日志级别的所有位置都将自动进行调整。
+您在上文中看到`DISP_LOG_LEVEL`变量的当前值为`info`。  我们可以将其调整为trace或debug，或者调整您选择的数值/级别。  现在，控制日志级别的所有位置都将自动进行调整。
 
 ### 叠加方法
 
@@ -259,13 +259,13 @@ VirtualHost *:80
 /VirtualHost
 ```
 
-现在，我们更新了 `ServerName` 和 `ServerAlias` 以匹配新域名并更新其他痕迹导航标头。  现在启用新文件，以便Apache知道要使用新文件：
+现在，我们更新了`ServerName`和`ServerAlias`以匹配新的域名，并更新了其他痕迹导航标头。  现在启用新文件，以便Apache知道要使用新文件：
 
 ```
 $ cd /etc/httpd/conf.d/enabled_vhosts/; ln -s ../available_vhosts/weretail_publish.vhost .
 ```
 
-现在，Apache Webserver知道该域会产生流量，但我们仍需要将新域名告知调度程序模块。  我们首先要创建一个新的 `*_vhost.any` 文件 `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` 在该文件中，我们将输入希望遵循的域名：
+现在，Apache Webserver知道域会产生流量，但我们仍需要通知Dispatcher模块它有一个新域名需要遵守。  我们将首先创建一个新的`*_vhost.any`文件`/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any`，并在文件中输入要遵循的域名：
 
 ```
 "we-retail.adobe.com"
@@ -301,7 +301,7 @@ $ cp /etc/httpd/conf.dispatcher.d/available_farms/999_ams_publish_farm.any /etc/
 }
 ```
 
-现在，我们更新了场名称，以及它在 `/virtualhosts` 场配置的部分。  我们需要启用此新场文件，以便它可以在运行配置中使用：
+现在，我们更新了场名称，以及它在场配置的`/virtualhosts`部分中使用的包含内容。  我们需要启用此新场文件，以便它可以在运行配置中使用：
 
 ```
 $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_weretail_publish_farm.any .

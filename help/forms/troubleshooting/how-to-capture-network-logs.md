@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何捕获网络日志/要使用的工具
 
-*本视频介绍捕获网络日志/要使用的工具的步骤。*
+*此视频介绍捕获网络日志/要使用的工具的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335491?quality=12&learn=on)

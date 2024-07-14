@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
-AEM UI扩展应使用 [AdobeReact频谱](https://react-spectrum.adobe.com/react-spectrum/index.html) 框架，因为它与AEM的其余部分保持一致的外观和风格，并且还有一个广泛的预建功能库，从而减少了开发时间。
+应该使用[AdobeReact Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架来开发AEM UI扩展，因为这样可以保持与AEM其他部分一致的外观，并且还有大量预建功能，从而缩短开发时间。
 
 ## 扩展点
 
@@ -32,17 +32,17 @@ AEM UI扩展应使用 [AdobeReact频谱](https://react-spectrum.adobe.com/react-
 
 | AEM UI已扩展 | 扩展点 |
 | ------------------------ | --------------------- | 
-| [内容片段编辑器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [自定义表单元素渲染](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/) |
+| [内容片段编辑器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [自定义表单元素呈现](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/) |
 
 ## 扩展示例
 
 此示例演示了通过将标准字段替换为预定义SKU的自定义下拉列表，将内容片段编辑器中的字段值限制为预定的集。 作者可以从此特定的SKU列表中选择。 虽然SKU通常来自产品信息管理(PIM)系统，但此示例可通过静态列出SKU来简化。
 
-此示例的源代码为 [可供下载](./assets/editor-custom-field/content-fragment-editor-custom-field-src.zip).
+此示例的源代码为[可供下载](./assets/editor-custom-field/content-fragment-editor-custom-field-src.zip)。
 
 ### 内容片段模型定义
 
-此示例绑定到任何名称为的内容片段字段 `sku` (通过 [正则表达式匹配](#extension-registration) 之 `^sku$`)，并将其替换为自定义字段。 此示例使用已更新的WKND冒险内容片段模型，其定义如下：
+此示例绑定到名称为`sku`的任何内容片段字段（通过`^sku$`的[正则表达式匹配](#extension-registration)），并将其替换为自定义字段。 此示例使用已更新的WKND冒险内容片段模型，其定义如下：
 
 ![内容片段模型定义](./assets/editor-custom-field/content-fragment-editor.png)
 
@@ -51,7 +51,7 @@ AEM UI扩展应使用 [AdobeReact频谱](https://react-spectrum.adobe.com/react-
 
 ### 应用程序路由
 
-在主React组件中 `App.js`，包括 `/sku-field` 呈现的路由 `SkuField` React组件。
+在主React组件`App.js`中，包含用于呈现`SkuField` React组件的`/sku-field`路由。
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 
@@ -85,14 +85,14 @@ function App() {
 ...
 ```
 
-此自定义路由 `/sku-field` 映射到 `SkuField` 组件在下文中使用 [延期注册](#extension-registration).
+此映射到`SkuField`组件的`/sku-field`自定义路由在[扩展注册](#extension-registration)下使用。
 
 ### 延期注册
 
-`ExtensionRegistration.js`，映射到index.html路由，是AEM扩展的入口点，并定义：
+`ExtensionRegistration.js`映射到index.html路由，是AEM扩展的入口点，并定义：
 
-+ 中的构件定义 `getDefinitions()` 函数为 `fieldNameExp` 和 `url` 属性。 可用属性的完整列表可在 [自定义表单元素渲染API参考](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/#api-reference).
-+ 此 `url` 属性值，相对URL路径(`/index.html#/skuField`)以加载字段UI。
++ `getDefinitions()`中的构件定义具有`fieldNameExp`和`url`属性。 [自定义表单元素渲染API引用](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/#api-reference)中提供了可用属性的完整列表。
++ `url`属性值，用于加载字段UI的相对URL路径(`/index.html#/skuField`)。
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -132,13 +132,13 @@ export default ExtensionRegistration;
 
 ### 自定义字段
 
-此 `SkuField` React组件使用自定义UI更新内容片段编辑器，并使用内容选取器表单的React SpectrumAdobe。 重点包括：
+`SkuField` React组件使用自定义UI更新内容片段编辑器，并为其选取器表单使用AdobeReact Spectrum。 重点包括：
 
-+ 利用 `useEffect` 用于初始化和连接到AEM内容片段编辑器，在安装完成之前显示加载状态。
-+ 在iFrame中呈现时，它会通过 `onOpenChange` 函数以适应AdobeReact光谱选取器的下拉列表。
-+ 使用将字段选择传回主机 `connection.host.field.onChange(value)` 在 `onSelectionChange` 函数中，确保根据内容片段模型的指南验证和自动保存选定的值。
++ 利用`useEffect`进行初始化并连接到AEM内容片段编辑器，在安装完成之前显示加载状态。
++ 在iFrame中渲染时，它会通过`onOpenChange`函数动态调整iFrame的高度，以适应AdobeReact频谱选取器的下拉列表。
++ 使用`onSelectionChange`函数中的`connection.host.field.onChange(value)`将字段选择传回主机，确保根据内容片段模型的指南验证和自动保存所选值。
 
-自定义字段在注入到内容片段编辑器中的iFrame中渲染。 自定义字段代码与内容片段编辑器之间的通信仅通过 `connection` 对象，由 `attach` 函数来自 `@adobe/uix-guest` 包。
+自定义字段在注入到内容片段编辑器中的iFrame中渲染。 自定义字段代码和内容片段编辑器之间的通信仅通过`connection`对象进行，该对象由`@adobe/uix-guest`包中的`attach`函数建立。
 
 `src/aem-cf-editor-1/web-src/src/components/SkuField.js`
 

@@ -25,9 +25,9 @@ ht-degree: 0%
 
 ## 创建提交处理程序
 
-可以创建简单的servlet来处理HTML5表单提交。 然后，可以使用以下代码提取提交的数据。 此 [servlet](assets/html5-submit-handler.zip) 在本教程中提供给您使用。 请安装 [servlet](assets/html5-submit-handler.zip) 使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+可以创建简单的servlet来处理HTML5表单提交。 然后，可以使用以下代码提取提交的数据。 此[servlet](assets/html5-submit-handler.zip)已作为本教程的一部分提供给您。 请使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)安装[servlet](assets/html5-submit-handler.zip)
 
-第9行的代码可用于调用J2EE进程。 请确保您已配置 [AdobeLiveCycle客户端SDK配置](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) 如果您打算使用代码来调用J2EE进程。
+第9行的代码可用于调用J2EE进程。 如果要使用代码调用J2EE进程，请确保已配置[AdobeLiveCycle客户端SDK配置](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html)。
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();
@@ -61,14 +61,14 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 ![submit-url](assets/submit-url.PNG)
 
-* 点按xdp并单击 _属性_->_高级_
+* 点按xdp并单击&#x200B;_属性_->_高级_
 * 复制http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html并将其粘贴到提交URL文本字段中
-* 单击 _SaveAndClose_ 按钮。
+* 单击&#x200B;_保存并关闭_&#x200B;按钮。
 
 ### 在排除路径中添加条目
 
-* 导航到 [configMgr](http://localhost:4502/system/console/configMgr).
-* 搜索 _AdobeGranite CSRF筛选器_
+* 导航到[configMgr](http://localhost:4502/system/console/configMgr)。
+* 搜索&#x200B;_AdobeGranite CSRF筛选器_
 * 在“排除的路径”部分中添加以下条目
 * _/content/AemFormsSamples/handlehml5formsubmission_
 * 保存更改
@@ -76,10 +76,10 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 ### 测试表单
 
 * 点按xdp模板。
-* 单击 _预览_->预览为HTML
+* 单击&#x200B;_预览_->预览为HTML
 * 在表单中输入一些数据，然后单击提交
 * 您应该会看到提交的数据已写入服务器的stdout.log文件
 
 ### 附加阅读
 
-此 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) 此外，还建议在从HTML5表单提交生成PDF时这样做。
+也建议使用此[article](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html)来从HTML5表单提交生成PDF。

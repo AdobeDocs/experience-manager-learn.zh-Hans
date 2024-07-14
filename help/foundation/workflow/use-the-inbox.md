@@ -1,6 +1,6 @@
 ---
 title: 如何使用AEM中的收件箱
-description: AEM收件箱有助于加强协作以及任务和工作流程的可见性。
+description: AEM收件箱有助于更好地协作和查看任务和工作流。
 version: 6.4, 6.5, Cloud Service
 topic: Collaboration
 feature: Workflow

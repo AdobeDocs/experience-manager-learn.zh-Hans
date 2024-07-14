@@ -23,48 +23,48 @@ ht-degree: 20%
 
 {{edge-delivery-services}}
 
-欢迎使用专为新加入的开发人员设计的多部分教程 **SPA编辑器** Adobe Experience Manager (AEM)中的功能。 本教程介绍了为虚构的生活方式品牌WKND实施React应用程序的过程。 React应用程序是使用AEM SPA Editor开发和设计的，该编辑器将React组件映射到AEM组件。 部署到AEM的已完成SPA可以使用传统的AEM内联编辑工具动态创作。
+欢迎使用专为Adobe Experience Manager (AEM)中&#x200B;**SPA编辑器**&#x200B;功能的新手开发人员设计的多部分教程。 本教程介绍了为虚构的生活方式品牌WKND实施React应用程序的过程。 React应用程序是使用AEM SPA Editor开发和设计的，该编辑器将React组件映射到AEM组件。 部署到AEM的已完成SPA可以使用传统的AEM内联编辑工具动态创作。
 
-![已实施的最终SPA](assets/wknd-spa-implementation.png)
+![已实现最终SPA](assets/wknd-spa-implementation.png)
 
-*WKND SPA实施*
+*WKND SPA实现*
 
 ## 关于
 
-本教程专门设计用于 **AEMas a Cloud Service** 并且向后兼容 **AEM 6.5.4+** 和 **AEM 6.4.8+**.
+此教程设计为使用&#x200B;**AEM as a Cloud Service**，并且向后兼容&#x200B;**AEM 6.5.4+**&#x200B;和&#x200B;**AEM 6.4.8+**。
 
 ## 最新代码
 
-所有教程代码均可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-spa).
+可在[GitHub](https://github.com/adobe/aem-guides-wknd-spa)上找到所有教程代码。
 
-此 [最新的代码库](https://github.com/adobe/aem-guides-wknd-spa/releases) 作为可下载的AEM包提供。
+[最新的代码库](https://github.com/adobe/aem-guides-wknd-spa/releases)可用作可下载的AEM包。
 
 ## 先决条件
 
 在开始本教程之前，您需要满足以下条件：
 
 * HTML、CSS和JavaScript的基础知识
-* 对的基本了解 [React](https://reactjs.org/tutorial/tutorial.html)
+* 对[React](https://reactjs.org/tutorial/tutorial.html)的基本了解
 
-*虽然没有必要，但基本了解以下内容会很有帮助 [开发传统AEM Sites组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans).*
+*虽然不是必需的，但对[开发传统AEM Sites组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)有基本的了解是有益的。*
 
 ## 本地开发环境 {#local-dev-environment}
 
-需要本地开发环境来完成本教程。 使用在Mac OS环境中运行的AEMas a Cloud ServiceSDK捕获屏幕截图和视频，环境为 [Visual Studio代码](https://code.visualstudio.com/) 作为IDE。 除非另有说明，否则命令和代码应独立于本地操作系统。
+需要本地开发环境来完成本教程。 使用在Mac OS环境中运行的AEM as a Cloud Service SDK捕获屏幕截图和视频，并将[Visual Studio Code](https://code.visualstudio.com/)用作IDE。 除非另有说明，否则命令和代码应独立于本地操作系统。
 
 ### 所需的软件
 
-* [AEMAS A CLOUD SERVICESDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html)， [AEM 6.5.4+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en#aem-65) 或 [AEM 6.4.8+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en#aem-64)
+* [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html)、[AEM 6.5.4+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en#aem-65)或[AEM 6.4.8+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en#aem-64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) （3.3.9或更高版本）
-* [Node.js](https://nodejs.org/en/) 和 [npm](https://www.npmjs.com/)
+* [Node.js](https://nodejs.org/en/)和[npm](https://www.npmjs.com/)
 
 >[!NOTE]
 >
-> **还不熟悉AEMas a Cloud Service？** 查看 [以下指南介绍了如何使用AEMas a Cloud ServiceSDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).
+> **是AEM as a Cloud Service的新用户？**&#x200B;请查看以下[指南，了解如何使用AEM as a Cloud Service SDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)。
 >
-> **还不熟悉AEM 6.5？** 查看 [以下指南介绍了如何设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans).
+> **还不熟悉AEM 6.5？**&#x200B;请查看以下[指南以设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans)。
 
 ## 后续步骤 {#next-steps}
 
-你在等什么?!导航到 [创建项目](create-project.md) 章中，并了解如何使用SPA项目原型生成启用AEM编辑器的项目。
+你在等什么?!导航到[创建项目](create-project.md)一章，开始学习如何使用SPA项目原型生成启用AEM编辑器的项目。

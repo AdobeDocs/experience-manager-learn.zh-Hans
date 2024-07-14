@@ -1,6 +1,6 @@
 ---
 title: 在AEM Assets中使用批量导入
-description: AEMas a Cloud Service中的批量导入工具允许管理员以安全高效的方式从云存储(Azure Blob Storage或Amazon S3)批量导入资源。
+description: AEM as a Cloud Service中的批量导入工具允许管理员以安全高效的方式从云存储(Azure Blob Storage或Amazon S3)批量导入资源。
 version: Cloud Service
 doc-type: technical-video
 feature: Migration
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 # 使用批量导入
 
-AEMas a Cloud Service中的批量导入工具允许管理员以安全高效的方式从云存储批量导入资源。
+AEM as a Cloud Service中的批量导入工具允许管理员以安全高效的方式从云存储批量导入资源。
 
 >[!BEGINTABS]
 
->[!TAB 资产视图]
+>[!TAB Assets视图]
 
-了解如何使用将大量文件导入AEM Assets [资产视图](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [批量导入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html)，并将Dropbox作为示例云存储提供商，以实现清晰且易于遵循的集成流程。
+了解如何使用[Asset视图](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [批量导入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html)将大量文件导入AEM Assets，以Dropbox作为示例云存储提供商，以实现清晰且易于遵循的集成过程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
 
@@ -37,7 +37,7 @@ AEMas a Cloud Service中的批量导入工具允许管理员以安全高效的�
 
 >[!TIP]
 >
-> 此视频中的输入源仅显示Azure Blob Storage和Amazon S3；但是，可用源会随着时间的推移而继续增长。 有关支持的输入源的完整列表，请参阅产品中的可用选项，或者 [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
+> 此视频中的输入源仅显示Azure Blob Storage和Amazon S3；但是，可用源会随着时间的推移而继续增长。 有关支持的输入源的完整列表，请参阅产品或[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload)中的可用选项。
 
 ## 计划批量导入
 

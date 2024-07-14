@@ -37,9 +37,9 @@ AEM Forms 6.4.1引入了事务报表功能，用于捕获表单提交次数、�
 
 选择工具 | Forms | 查看交易报告
 
-或者通过单击查看事务报告 [此处](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
+或单击[此处](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)查看交易报告
 
-![TransctionReporting](assets/transactionreporting.gif)
+![事务报告](assets/transactionreporting.gif)
 
 在上面的屏幕快照中，已处理文档是使用文档服务生成的文档数。 呈现的文档是呈现的交互式通信文档（Web和打印）的数量。 Forms提交的自适应表单提交次数。
 
@@ -49,4 +49,4 @@ AEM Forms 6.4.1引入了事务报表功能，用于捕获表单提交次数、�
 
 如果您在创作实例上查看事务报告，请确保在所有发布实例上配置了反向复制。
 
-要了解有关交易报告的更多信息，请执行以下操作 [请单击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+若要了解有关交易报告的更多信息[，请单击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)

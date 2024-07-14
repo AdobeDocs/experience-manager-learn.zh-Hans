@@ -1,5 +1,5 @@
 ---
-title: 创建和配置Odata源
+title: 创建和配置Odata Source
 description: 创建并配置云服务配置以与Microsoft Dynamics连接。
 type: Documentation
 role: Developer

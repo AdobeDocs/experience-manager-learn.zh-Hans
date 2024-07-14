@@ -30,7 +30,7 @@ ht-degree: 2%
 
 ## 资源
 
-本教程中使用的模板和页面组件可以 [从此处下载](assets/sign-multiple-forms-template.zip)
+可以从此处](assets/sign-multiple-forms-template.zip)下载本教程中使用的模板和页面组件[
 
 ## 后续步骤
 

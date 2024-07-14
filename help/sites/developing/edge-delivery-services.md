@@ -17,4 +17,4 @@ ht-degree: 0%
 
 # Edge Delivery Services开发
 
-在Adobe Experience Manager (AEM)中为Edge Delivery Services开发网站与传统AEM网站开发不同。 欲知针对Edge Delivery Services量身定制的具体准则和最佳实践，请查阅 [Edge Delivery Services开发文档](../edge-delivery-services/developing/prerequisites.md). 此资源提供基本信息和步骤，以确保您的开发过程符合Edge Delivery Services的要求。
+在Adobe Experience Manager (AEM)中为Edge Delivery Services开发网站与传统AEM网站开发不同。 有关针对Edge Delivery Services定制的特定准则和最佳实践，请参阅[Edge Delivery Services开发文档](../edge-delivery-services/developing/prerequisites.md)。 此资源提供基本信息和步骤，以确保您的开发过程符合Edge Delivery Services的要求。

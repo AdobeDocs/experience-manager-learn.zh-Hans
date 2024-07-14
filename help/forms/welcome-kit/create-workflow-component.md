@@ -20,11 +20,11 @@ ht-degree: 0%
 
 工作流组件捕获与页面相关的信息，该页面列出诸如页面模板、组件资源类型和用于存储所生成页面的基本文件夹等资产。
 
-![workflow-component](assets/workflow-component.png)
+![工作流组件](assets/workflow-component.png)
 
 ## 工作流流程实施
 
-以下Java代码与工作流组件关联。 代码将创建欢迎套件页面，并从工作流变量（submitterName和documentsSelected）中提取值。 然后，将这些值设置为页面中使用的组件的属性。 该代码还会设置工作流进程变量的值 **welcomekiturl**.
+以下Java代码与工作流组件关联。 代码将创建欢迎套件页面，并从工作流变量（submitterName和documentsSelected）中提取值。 然后，将这些值设置为页面中使用的组件的属性。 该代码还会设置工作流进程变量&#x200B;**welcomekiturl**&#x200B;的值。
 
 ```java
 package com.welcomekit.core.workflowprocess;

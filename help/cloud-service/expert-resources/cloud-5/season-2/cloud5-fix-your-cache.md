@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # Cloud 5 — 修复您的……缓存
 
-在分为两部分的第二季系列中，我们将探索一些可加快您在AEMas a Cloud Service上缓存速度的内容。
+在分为两部分的第二季系列中，我们将探索一些可加快您在AEM as a Cloud Service上缓存速度的内容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343475?quality=12&learn=on)
 

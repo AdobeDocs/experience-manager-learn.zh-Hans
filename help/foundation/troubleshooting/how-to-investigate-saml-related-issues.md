@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 如何调查SAML相关问题
 
-*本视频介绍调查AEM中SAML相关问题的步骤。*
+*此视频介绍调查AEM中SAML相关问题的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335466?quality=12&learn=on)

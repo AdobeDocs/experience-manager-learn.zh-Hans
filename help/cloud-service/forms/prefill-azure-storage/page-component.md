@@ -28,7 +28,7 @@ ht-degree: 8%
 
 1. 右键单击页面文件夹并创建一个名为storedfetch的节点，类型为cq：Component
 1. 保存更改
-1. 将以下属性添加到 `storeandfetch` 节点并保存
+1. 将以下属性添加到`storeandfetch`节点并保存
 
 | **属性名称** | **属性类型** | **属性值** |
 |-------------------------|-------------------|----------------------------------------|
@@ -37,9 +37,9 @@ ht-degree: 8%
 | jcr:title | 字符串 | 自适应表单模板页面 |
 | sling:resourceSuperType | 字符串 | `fd/af/components/page2/aftemplatedpage` |
 
-复制 `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp` 然后粘贴到 `storeandfetch` 节点。 重命名 `aftemplatedpage.jsp` 到 `storeandfetch.jsp`.
+复制`/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`并将其粘贴到`storeandfetch`节点下。 将`aftemplatedpage.jsp`重命名为`storeandfetch.jsp`。
 
-打开 `storeandfetch.jsp` 并添加以下行：
+打开`storeandfetch.jsp`并添加以下行：
 
 ```jsp
 <cq:include script="azureportal.jsp"/>
@@ -58,7 +58,8 @@ ht-degree: 8%
 <cq:include script="azureportal.jsp"/>
 ```
 
-在storeandfetch节点下创建名为azureportal.jsp的文件，将以下代码复制到azureportal.jsp中并保存更改
+在storeandfetch节点下创建名为azureportal.jsp的文件
+将以下代码复制到azureportal.jsp中并保存更改
 
 ```jsp
 <%@page session="false" %>
@@ -78,7 +79,7 @@ ht-degree: 8%
 %>
 ```
 
-在此代码中，我们获取请求参数的值 **guid** 并将其存储在名为BlobId的变量中。 然后，使用paramMap属性将此BlobId传递到sling请求中。 为使此代码正常工作，假定您有一个基于Azure Storage支持的表单数据模型的表单，并且该表单数据模型的读取服务绑定到名为BlobId的请求属性，如下面的屏幕快照所示。
+在此代码中，我们获取请求参数&#x200B;**guid**&#x200B;的值，并将其存储在名为BlobId的变量中。 然后，使用paramMap属性将此BlobId传递到sling请求中。 为使此代码正常工作，假定您有一个基于Azure Storage支持的表单数据模型的表单，并且该表单数据模型的读取服务绑定到名为BlobId的请求属性，如下面的屏幕快照所示。
 
 ![fdm-request-attribute](./assets/fdm-request-attribute.png)
 

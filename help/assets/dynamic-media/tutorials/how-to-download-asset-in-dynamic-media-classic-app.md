@@ -1,5 +1,5 @@
 ---
-title: 在AEM Dynamic Media Classic应用程序中下载资源
+title: 在AEM Dynamic Media Classic应用程序中下载Assets
 description: 在Dynamic Media Classic应用程序中下载资源的步骤
 version: Cloud Service
 role: Developer
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Dynamic Media Classic应用程序中下载资源
+# 在AEM Dynamic Media Classic应用程序中下载Assets
 
 本视频介绍在Dynamic Media Classic应用程序中下载资源的步骤。
 

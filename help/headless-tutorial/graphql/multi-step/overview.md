@@ -23,9 +23,9 @@ ht-degree: 3%
 
 {{aem-headless-trials-promo}}
 
-一个端到端教程，它演示了如何在Headless CMS场景中使用AEM GraphQL API构建和公开内容并由外部应用程序使用。
+一个端到端教程，它演示了如何在Headless CMS场景中使用AEM的GraphQL API构建和公开内容并由外部应用程序使用。
 
-本教程探讨了如何使用AEM GraphQL API和Headless功能增强在外部应用程序中浮现的体验。
+本教程探讨了如何使用AEM的GraphQL API和Headless功能增强在外部应用程序中浮现的体验。
 
 本教程涵盖以下主题：
 
@@ -44,18 +44,18 @@ ht-degree: 3%
 * 必须本地安装以下工具：
    * [Node.js v18](https://nodejs.org/)
    * [Git](https://git-scm.com/)
-   * IDE(例如， [Microsoft® Visual Studio代码](https://code.visualstudio.com/))
+   * IDE(例如，[Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 
 ### AEM环境
 
-要完成本教程，建议您拥有AEMas a Cloud Service环境的AEM管理员访问权限。 如果您无权访问AEMas a Cloud Service环境，请 [注册AEM Headless试用版](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en) 探索AEM Headless功能。
+要完成本教程，建议您拥有AEM as a Cloud Service环境的AEM管理员访问权限。 如果您无权访问AEM as a Cloud Service环境，请[注册AEM Headless试用版](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en)以探索AEM的Headless功能。
 
 ## 让我们开始吧！
 
-开始教程 [定义内容片段模型](content-fragment-models.md).
+开始本教程： [定义内容片段模型](content-fragment-models.md)。
 
 ## GitHub项目
 
-源代码和内容包位于 [AEM指南 — WKND GraphQL GitHub项目](https://github.com/adobe/aem-guides-wknd-graphql).
+源代码和内容包在[AEM Guides - WKND GraphQL GitHub项目](https://github.com/adobe/aem-guides-wknd-graphql)上可用。
 
-如果您发现教程或代码有问题，请保留 [GitHub问题](https://github.com/adobe/aem-guides-wknd-graphql/issues).
+如果您发现教程或代码有问题，请保留[GitHub问题](https://github.com/adobe/aem-guides-wknd-graphql/issues)。

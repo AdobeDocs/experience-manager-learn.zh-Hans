@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 — 第1季
-description: 了解Adobe Experience Manager (AEM)，其as a Cloud Service于Adobe自己的专业工程师来构建它，以及了解提供它的专业服务。
+description: 从构建Adobe Experience Manager (AEM)的Adobe自己的专家工程师和提供该软件的专家服务那里了解as a Cloud Service 。
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 ## 简介
 
-欢迎使用AEM Engineering的Cloud 5系列。 任何产品实施阶段的主要问题之一就是要有足够的代码示例和/或这些示例、工具或API的实时演示。 本系列的目标是在5分钟或更短的时间内提供关于AEMas a Cloud Service的有用信息。
+欢迎使用AEM Engineering的Cloud 5系列。 任何产品实施阶段的主要问题之一就是要有足够的代码示例和/或这些示例、工具或API的实时演示。 本系列的目标是在5分钟或更短时间内提供有关AEM as a Cloud Service的有用信息。
 
-访问 [建议框](https://forms.office.com/r/74P5Xz4UH0) 用于提交主题建议。
+访问[建议框](https://forms.office.com/r/74P5Xz4UH0)以提交主题想法。
 
 ## 第1季
 
@@ -33,11 +33,11 @@ ht-degree: 0%
       </a>
       <div>
          <a href="./cloud5-aem-cdn-part1.md"><strong>AEM CDN深入分析（第1部分）</strong></a>         
-         <br/><em>高级云架构师Darin Kuntze和James Talbot</em>
+         <br/><em>与高级云架构师Darin Kuntze &amp; James Talbot一起</em>
       </div>
       <p>
         <br/>
-         第1部分介绍AEMas a Cloud Service的CDN以及如何在实施中使用。
+         第1部分介绍AEM as a Cloud Service的CDN以及如何在实施中使用。
       </p>
      </td>   
      <td>
@@ -46,11 +46,11 @@ ht-degree: 0%
       </a>
       <div>
          <a href="./cloud5-aem-cdn-part2.md"><strong>AEM CDN深入分析（第2部分）</strong></a>
-         <br/><em>高级云架构师Darin Kuntze和James Talbot</em>
+         <br/><em>与高级云架构师Darin Kuntze &amp; James Talbot一起</em>
       </div>
       <p>
         <br/>
-         第2部分是我们对AEMas a Cloud ServiceCDN的延续。 我们回答了一些关于您使用新CDN可以获得哪些功能的更常见问题和误解。
+         第2部分是我们对AEM as a Cloud Service CDN的延续。 我们回答了一些关于您使用新CDN可以获得哪些功能的更常见问题和误解。
       </p>
    </td>
      <td>
@@ -59,11 +59,11 @@ ht-degree: 0%
         </a>
       <div>
          <a href="./cloud5-aem-log-files.md"><strong>日志文件和日志记录</strong></a>
-         <br/><em>高级云架构师Darin Kuntze和James Talbot</em>
+         <br/><em>与高级云架构师Darin Kuntze &amp; James Talbot一起</em>
       </div>
       <p>
         <br/>
-         本节快速介绍如何在AEMas a Cloud Service中访问日志，包括如何通过用户界面以及从API访问它们。
+         本节快速介绍如何访问AEM as a Cloud Service中的日志，包括如何通过用户界面以及从API访问它们。
       </p>
    </td> 
   </tr>
@@ -74,7 +74,7 @@ ht-degree: 0%
         </a>
       <div>
         <a href="./cloud5-getting-login-token-integrations.md"><strong>与访问令牌集成</strong></a>        
-         <br/><em>高级云架构师Darin Kuntze和James Talbot</em>
+         <br/><em>与高级云架构师Darin Kuntze &amp; James Talbot一起</em>
       </div>
       <p>
         <br/>
@@ -86,12 +86,12 @@ ht-degree: 0%
       <img alt="云中的 Dispatcher" src="./imgs/005-thumb.png"/>
        </a>  
       <div>
-        <a href="./cloud5-aem-dispatcher-cloud.md"><strong>云中的调度程序</strong></a>
-         <br/><em>高级云架构师Darin Kuntze和James Talbot</em>
+        云中的<a href="./cloud5-aem-dispatcher-cloud.md"><strong>Dispatcher</strong></a>
+         <br/><em>与高级云架构师Darin Kuntze &amp; James Talbot一起</em>
       </div>
       <p>
         <br/>
-        Darin和James讨论了AEM云中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 
+        Darin和James讨论了AEM Cloud中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 
       </p>
    </td>
      <td>
@@ -100,7 +100,7 @@ ht-degree: 0%
         </a>
       <div>
          <a href="./cloud5-aem-content-migration-part-1.md"><strong>迁移（第1部分）</strong></a>
-         <br/><em>Darin Kuntze和James Talbot，高级云架构师和Applesmith博士</em>
+         <br/><em>与Darin Kuntze和James Talbot，高级云架构师和Applesmith博士</em>
       </div>
       <p>
         <br/>
@@ -115,7 +115,7 @@ ht-degree: 0%
         </a>
       <div>
         <a href="./cloud5-aem-content-migration-part-2.md"><strong>迁移（第2部分）</strong></a>     
-         <br/><em>高级云架构师Darin Kuntze和James Talbot</em>
+         <br/><em>与高级云架构师Darin Kuntze &amp; James Talbot一起</em>
       </div>
       <p>
         <br/>
@@ -128,7 +128,7 @@ ht-degree: 0%
         </a>
       <div>
          <a href="./cloud5-aem-dispatcher-validator.md"><strong>Dispatcher验证器</strong></a>
-         <br/><em>高级云架构师Darin Kuntze和James Talbot</em>
+         <br/><em>与高级云架构师Darin Kuntze &amp; James Talbot一起</em>
       </div>
       <p>
         <br/>
@@ -141,7 +141,7 @@ ht-degree: 0%
         </a>
       <div>
          <a href="./cloud5-aem-search-and-indexing.md"><strong>索引和搜索提示</strong></a>
-         <br/><em>高级云架构师Darin Kuntze和James Talbot</em>
+         <br/><em>与高级云架构师Darin Kuntze &amp; James Talbot一起</em>
       </div>
       <p>
         <br/>
@@ -152,11 +152,11 @@ ht-degree: 0%
     <tr>
         <td>
             <a href="./cloud5-adobe-app-builder.md">
-                <img alt="Adobe应用程序生成器" src="./imgs/010-thumb.png"/>
+                <img alt="AdobeApp Builder" src="./imgs/010-thumb.png"/>
             </a>
             <div>
-                <a href="./cloud5-adobe-app-builder.md"><strong>Adobe应用程序生成器</strong></a><br/>        
-                <em>高级云架构师兼Amol Anand的Darin Kuntze和James Talbot</em>
+                <a href="./cloud5-adobe-app-builder.md"><strong>AdobeApp Builder</strong></a><br/>        
+                <em>与Darin Kuntze和James Talbot，高级云架构师和Amol Anand</em>
             </div>
             <p><br/>
                 来看看您可以使用AdobeApp Builder做的一些有趣的事情，并了解关于云中自定义项未来的一些新信息。

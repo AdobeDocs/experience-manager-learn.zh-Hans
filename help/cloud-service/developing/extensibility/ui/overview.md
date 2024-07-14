@@ -19,17 +19,17 @@ ht-degree: 0%
 
 # AEM UI可扩展性
 
-Adobe Experience Manager (AEM)提供了强大的用户界面(UI)来创建数字体验。 为了自定义和扩展UI，Adobe引入了App Builder。 此工具使开发人员能够使用JavaScript和React增强用户体验，而无需复杂的编码。
+Adobe Experience Manager (AEM)提供了强大的用户界面(UI)来创建数字体验。 为了自定义和扩展UI，Adobe引入了App Builder。 该工具使开发人员无需使用JavaScript和React进行复杂编码即可增强用户体验。
 
-App Builder提供了一个实施层，用于创建绑定到AEM中明确定义扩展点的扩展。 App Builder与AEM无缝集成，允许实时预览和测试。 将更改部署到AEM既快速又简化。 通过使用App Builder，开发人员可以节省时间和精力，实现快速原型制作以及与利益相关者的协作。
+App Builder提供了一个实施层，用于创建绑定到AEM中明确定义扩展点的扩展。 App Builder与AEM无缝集成，允许实时预览和测试。 将更改部署到AEM既快速又简化。 通过使用App Builder，开发人员可以节省时间和精力，实现快速原型制作并与利益相关者协作。
 
 ## 开发AEM用户界面扩展
 
-AEM各种UI具有不同的扩展点，但基本概念是相同的。
+AEM的各种UI具有不同的扩展点，但基本概念是相同的。
 
 以下链接的视频和演练展示了如何使用内容片段控制台扩展来说明各种活动。 但是，请务必注意，所涵盖的概念可应用于所有AEM UI扩展。
 
-1. [创建Adobe Developer控制台项目](./adobe-developer-console-project.md)
+1. [创建Adobe Developer Console项目](./adobe-developer-console-project.md)
 1. [初始化扩展](./app-initialization.md)
 1. [注册扩展](./extension-registration.md)
 1. 实施扩展点
@@ -45,4 +45,4 @@ AEM各种UI具有不同的扩展点，但基本概念是相同的。
 
 ## Adobe Developer文档
 
-Adobe Developer包含有关AEM UI可扩展性的开发人员详细信息。 请查阅 [Adobe Developer内容，了解更多技术详细信息](https://developer.adobe.com/uix/docs/).
+Adobe Developer包含有关AEM UI可扩展性的开发人员详细信息。 请查看[Adobe Developer内容以获取更多技术详细信息](https://developer.adobe.com/uix/docs/)。

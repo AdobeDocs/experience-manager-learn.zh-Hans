@@ -20,7 +20,7 @@ ht-degree: 0%
 
 在提交表单时向您发送感谢邮件，这是一种周到的方法，用于确认和感谢用户填写和提交表单。 这可以确认他们的提交内容已收到并受到赞赏。 可以使用自适应表单指南容器的提交选项卡配置感谢消息
 
-![感谢信息](assets/thank-you-message.png)
+![感谢邮件](assets/thank-you-message.png)
 
 可以在AdaptiveForm超级组件的onSuccess事件处理程序中访问配置的感谢消息。
 下面列出了用于关联onSuccess事件的代码和onSuccess事件处理程序的代码
@@ -106,4 +106,4 @@ export default function Contact(){
 }
 ```
 
-上述代码使用本机html组件，这些组件映射到自适应表单中使用的组件。 例如，我们将文本输入自适应表单组件映射到TextField组件。 文章中使用的本机组件 [可以从此处下载](./assets/native-components.zip)
+上述代码使用本机html组件，这些组件映射到自适应表单中使用的组件。 例如，我们将文本输入自适应表单组件映射到TextField组件。 可以从此处](./assets/native-components.zip)下载文章[中使用的本机组件

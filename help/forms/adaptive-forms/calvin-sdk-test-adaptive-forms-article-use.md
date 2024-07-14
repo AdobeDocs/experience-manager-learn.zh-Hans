@@ -21,7 +21,7 @@ ht-degree: 0%
 
 使用Calvin SDK自动测试自适应Forms
 
-Calvin SDK是一个实用程序API，供Adaptive Forms开发人员测试Adaptive Forms。 Calvin SDK构建于 [Hobbes.js测试框架](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html). Calvin SDK从AEM Forms 6.3开始提供。
+Calvin SDK是一个实用程序API，供Adaptive Forms开发人员测试Adaptive Forms。 Calvin SDK基于[Hobbes.js测试框架](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)构建。 Calvin SDK从AEM Forms 6.3开始提供。
 
 在本教程中，您将创建以下内容：
 
@@ -31,7 +31,7 @@ Calvin SDK是一个实用程序API，供Adaptive Forms开发人员测试Adaptive
 
 ## 快速入门 {#getting-started}
 
-[使用包管理器下载并安装资源](assets/testingadaptiveformsusingcalvinsdk1.zip)该包中包含示例脚本和多个自适应Forms。这些自适应Forms是使用AEM Forms 6.3版本构建的。 如果您要在AEM Forms 6.4或更高版本上测试新表单，则建议创建特定于您的AEM Forms版本的新表单。 示例脚本演示了可用于测试自适应Forms的各种Calvin SDK API。 测试AEM自适应Forms的常规步骤包括：
+[使用包管理器下载并安装Assets](assets/testingadaptiveformsusingcalvinsdk1.zip)该包中包含示例脚本和多个自适应Forms。这些自适应Forms是使用AEM Forms 6.3版本生成的。 如果您要在AEM Forms 6.4或更高版本上测试新表单，则建议创建特定于您的AEM Forms版本的新表单。 示例脚本演示了可用于测试自适应Forms的各种Calvin SDK API。 测试AEM自适应Forms的常规步骤包括：
 
 * 导航到需要测试的表单
 * 设置字段的值
@@ -39,7 +39,7 @@ Calvin SDK是一个实用程序API，供Adaptive Forms开发人员测试Adaptive
 * 检查错误消息
 
 该包中的示例脚本演示了上述所有操作。
-让我们来探索的代码 `mortgageForm.js`
+让我们探索`mortgageForm.js`的代码
 
 ```javascript
 var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
@@ -50,9 +50,9 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 
 上述代码将创建一个新的测试包。
 
-* 在这种情况下，TestSuite的名称为&#39; `Mortgage Form Test` ’。
+* 在此例中，TestSuite的名称为“`Mortgage Form Test`”。
 * 提供的是AEM中指向包含测试包的js文件的绝对路径。
-* 寄存器参数设置为&#39; `true` &#39;，使测试套件在测试UI中可用。
+* 当设置为“`true`”时，register参数使测试套件在测试UI中可用。
 
 ```javascript
 .addTestCase(new hobs.TestCase("Calculate amount to borrow")
@@ -69,12 +69,12 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 
 可以将测试用例添加到要针对自适应表单执行的测试包。
 
-* 要将测试用例添加到测试包，请使用 `addTestCase` TestSuite对象的方法。
-* 此 `addTestCase` 方法将TestCase对象作为参数。
-* 要创建TestCase，请使用 `hobs.TestCase(..)` 方法。
+* 要将测试用例添加到测试包，请使用TestSuite对象的`addTestCase`方法。
+* `addTestCase`方法将TestCase对象作为参数。
+* 若要创建TestCase，请使用`hobs.TestCase(..)`方法。
 * 注意：第一个参数是将显示在UI中的测试用例的名称。
 * 创建测试用例后，您可以向测试用例添加操作。
-* 操作包括 `navigateTo`， `asserts.isTrue` 可以作为操作添加到测试用例中。
+* 包括`navigateTo`、`asserts.isTrue`在内的操作可以作为操作添加到测试用例中。
 
 ## 运行自动化测试 {#running-the-automated-tests}
 

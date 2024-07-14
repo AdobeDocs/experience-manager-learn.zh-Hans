@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 在群集中设置gemfire定位器并执行相关配置的步骤
 
-*本视频介绍在群集中设置gemfire定位器并执行相关配置的步骤。*
+*此视频介绍在群集中设置gemfire定位器和执行相关配置的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335544?quality=12&learn=on)

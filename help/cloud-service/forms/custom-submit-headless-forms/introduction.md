@@ -27,7 +27,7 @@ ht-degree: 2%
 要成功实施此功能，建议熟悉以下内容
 
 * Git使用体验
-* AEM Cloud Manager体验
+* AEM Cloud Manager使用体验
 * Maven（本文通过3.8.6版本进行了测试）
 * 本地AEM Forms Cloud就绪创作实例
 * 访问AEM Forms作为Cloud Service环境

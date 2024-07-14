@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 测试Asset compute工作程序
 
-asset compute项目定义了一种模式，用于轻松创建和执行 [asset compute工作人员的测试](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
+asset compute项目定义了一种模式，用于轻松创建和执行Asset compute工作程序[测试](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html)。
 
 ## 工人考试剖析
 
@@ -45,7 +45,7 @@ asset compute项目中的测试结构如下所示：
 每个测试转换可以包含以下文件：
 
 + `file.<extension>`
-   + 要测试的源文件(扩展名可以是除 `.link`)
+   + 要测试的Source文件（扩展名可以是`.link`以外的任何内容）
    + 必填
 + `rendition.<extension>`
    + 预期呈现版本
@@ -55,20 +55,20 @@ asset compute项目中的测试结构如下所示：
    + 可选
 + `validate`
    + 将预期和实际演绎版文件路径作为参数获取，如果结果正常，则必须返回退出代码0；如果验证或比较失败，则必须返回非零退出代码。
-   + 可选，默认为 `diff` 命令
+   + 可选，默认为`diff`命令
    + 使用封装了Docker run命令的外壳脚本，以使用不同的验证工具
 + `mock-<host-name>.json`
-   + 针对以下内容的JSON格式化HTTP响应 [嘲弄外部服务调用](https://www.mock-server.com/mock_server/creating_expectations.html).
+   + [模拟外部服务调用](https://www.mock-server.com/mock_server/creating_expectations.html)的JSON格式化HTTP响应。
    + 可选，仅当辅助代码发出自己的HTTP请求时使用
 
 ## 编写测试用例
 
-此测试用例声明参数化输入(`params.json`)作为输入文件(`file.jpg`)生成预期的PNG演绎版(`rendition.png`)。
+此测试用例声明输入文件(`file.jpg`)的参数化输入(`params.json`)生成预期的PNG格式副本(`rendition.png`)。
 
-1. 首先删除自动生成的 `simple-worker` 测试案例位于 `/test/asset-compute/simple-worker` 由于这是无效的，因为我们的工作人员不再只是将源复制到演绎版。
-1. 在新建测试用例文件夹 `/test/asset-compute/worker/success-parameterized` 测试生成PNG演绎版的工作程序的成功执行。
-1. 在 `success-parameterized` 文件夹，添加测试 [输入文件](./assets/test/success-parameterized/file.jpg) 用于此测试用例并命名它 `file.jpg`.
-1. 在 `success-parameterized` 文件夹，添加名为的新文件 `params.json` 用于定义工作程序的输入参数：
+1. 首先，删除位于`/test/asset-compute/simple-worker`的自动生成的`simple-worker`测试用例，因为此用例无效，因为我们的辅助进程不再只是将源复制到演绎版。
+1. 在`/test/asset-compute/worker/success-parameterized`处新建测试用例文件夹，以测试生成PNG演绎版的工作程序的成功执行。
+1. 在`success-parameterized`文件夹中，为此测试用例添加测试[输入文件](./assets/test/success-parameterized/file.jpg)并将其命名为`file.jpg`。
+1. 在`success-parameterized`文件夹中，添加名为`params.json`的新文件以定义辅助进程的输入参数：
 
    ```json
    { 
@@ -78,22 +78,22 @@ asset compute项目中的测试结构如下所示：
    }
    ```
 
-   这些是传递到 [开发工具的Asset compute配置文件定义](../develop/development-tool.md)，减去 `worker` 键。
+   这些是传递到[开发工具的Asset compute配置文件定义](../develop/development-tool.md)中的相同键/值，小于`worker`键。
 
-1. 添加预期的 [节目文件](./assets/test/success-parameterized/rendition.png) 到此测试用例并将其命名为 `rendition.png`. 此文件表示给定输入的工作程序的预期输出 `file.jpg`.
-1. 从命令行中，通过执行 `aio app test`
-   + 确保 [Docker桌面](../set-up/development-environment.md#docker) 已安装并启动支持Docker的映像
+1. 将预期的[演绎版文件](./assets/test/success-parameterized/rendition.png)添加到此测试用例中，并将其命名为`rendition.png`。 此文件表示给定输入`file.jpg`的辅助进程的预期输出。
+1. 从命令行中，通过执行`aio app test`来运行项目根目录测试
+   + 确保已安装并启动[Docker Desktop](../set-up/development-environment.md#docker)和支持的Docker映像
    + 终止任何正在运行的开发工具实例
 
-![测试 — 成功 ](./assets/test/success-parameterized/result.png)
+![测试 — 成功](./assets/test/success-parameterized/result.png)
 
 ## 编写错误检查测试用例
 
-此测试用例测试旨在确保Worker在以下情况下抛出适当的错误： `contrast` 参数设置为无效值。
+此测试用例测试以确保Worker在`contrast`参数设置为无效值时引发相应的错误。
 
-1. 在新建测试用例文件夹 `/test/asset-compute/worker/error-contrast` 由于无效而测试工作进程执行的错误 `contrast` 参数值。
-1. 在 `error-contrast` 文件夹，添加测试 [输入文件](./assets/test/error-contrast/file.jpg) 用于此测试用例并命名它 `file.jpg`. 此文件的内容对此测试并不重要，它只需存在以通过“损坏源”检查，以达到 `rendition.instructions` 有效性检查，此测试用例是否有效。
-1. 在 `error-contrast` 文件夹，添加名为的新文件 `params.json` 定义工作程序的输入参数及其内容：
+1. 在`/test/asset-compute/worker/error-contrast`处新建测试用例文件夹，以测试由于`contrast`参数值无效而导致工作进程执行的错误。
+1. 在`error-contrast`文件夹中，为此测试用例添加测试[输入文件](./assets/test/error-contrast/file.jpg)并将其命名为`file.jpg`。 此文件的内容对此测试并不重要，它只是需要存在才能通过“源损坏”检查，为了达到此测试用例验证的`rendition.instructions`有效性检查。
+1. 在`error-contrast`文件夹中，添加名为`params.json`的新文件以定义辅助进程的输入参数及其内容：
 
    ```json
    {
@@ -102,12 +102,12 @@ asset compute项目中的测试结构如下所示：
    }
    ```
 
-   + 设置 `contrast` 参数到 `10`，一个无效值，因为对比度必须介于–1和1之间，才能引发 `RenditionInstructionsError`.
-   + 通过设置 `errorReason` 键入与预期错误相关的“原因”的键。 此无效的对比度参数会引发 [自定义错误](../develop/worker.md#errors)， `RenditionInstructionsError`，因此请设置 `errorReason` 此错误的原因，或`rendition_instructions_error` 以证明它已被抛弃。
+   + 将`contrast`参数设置为`10`（无效值，因为对比度必须介于–1和1之间）以引发`RenditionInstructionsError`。
+   + 通过将`errorReason`键设置为与预期错误关联的“原因”，声明在测试中抛出相应的错误。 此无效的对比度参数引发[自定义错误](../develop/worker.md#errors) `RenditionInstructionsError`，因此将`errorReason`设置为此错误的原因，或将`rendition_instructions_error`设置为声明引发该错误。
 
-1. 由于在错误执行期间不应生成演绎版，因此 `rendition.<extension>` 文件是必需的。
-1. 通过执行命令，从项目的根目录运行测试包 `aio app test`
-   + 确保 [Docker桌面](../set-up/development-environment.md#docker) 已安装并启动支持Docker的映像
+1. 由于在错误执行期间不应生成任何演绎版，因此不需要`rendition.<extension>`文件。
+1. 通过执行命令`aio app test`，从项目的根目录运行测试包
+   + 确保已安装并启动[Docker Desktop](../set-up/development-environment.md#docker)和支持的Docker映像
    + 终止任何正在运行的开发工具实例
 
 ![测试 — 错误对比度](./assets/test/error-contrast/result.png)

@@ -28,13 +28,13 @@ ht-degree: 0%
 
 ## 创建Azure存储帐户
 
-[登录您的Azure门户帐户并创建存储帐户](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal#create-a-storage-account-1). 为存储帐户提供一个有意义的名称，单击“查看” ，然后单击“创建”。 这将创建具有所有默认值的存储帐户。 出于本文的目的，我们命名了我们的存储帐户 `aemformstutorial`.
+[登录到您的Azure门户帐户并创建存储帐户](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal#create-a-storage-account-1)。 为存储帐户提供一个有意义的名称，单击“查看” ，然后单击“创建”。 这将创建具有所有默认值的存储帐户。 为撰写本文的目的，我们命名了存储帐户`aemformstutorial`。
 
 
 ## 创建容器
 
 接下来，我们需要创建一个容器，用于存储来自表单提交的数据。
-在存储帐户页面中，单击左侧的容器菜单项，然后创建一个名为的容器 `formssubmissions`. 确保将公共访问级别设置为私有
+在存储帐户页面中，单击左侧的“容器”菜单项，然后创建一个名为`formssubmissions`的容器。 确保将公共访问级别设置为私有
 ![容器](./assets/new-container.png)
 
 ## 在容器上创建SAS
@@ -48,16 +48,17 @@ ht-degree: 0%
 
 ## 提供Blob SAS令牌和存储URI
 
-为了使代码更通用，可以使用OSGi配置来配置这两个属性，如下所示。 此 _**服饰**_ 是存储帐户的名称， _**formsubmissions**_ 是将存储数据的容器。
+为了使代码更通用，可以使用OSGi配置来配置这两个属性，如下所示。 _**aemformstutorial**_&#x200B;是存储帐户的名称，_**formsubmissions**_是将存储数据的容器。
 请确保存储URI末尾具有/，并且SAS令牌的开头为？
-![osgi配置](./assets/azure-portal-osgi-configuration.png)
+![osgi-configuration](./assets/azure-portal-osgi-configuration.png)
 
 
 ## 创建PUT请求
 
 下一步是创建PUT请求，以将提交的表单数据存储在Azure Storage中。 每个表单提交都需要使用唯一的BLOB ID进行标识。 唯一BLOB ID通常在代码中创建并插入PUT请求的URL中。
-以下是PUT请求的部分URL。 此 `aemformstutorial` 是存储帐户的名称，formsubmissions是将使用唯一BLOB ID存储数据的容器。 URL的其余部分将保持不变。
-https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken以下是使用PUT请求将提交的表单数据存储在Azure Storage中的函数。 请注意是否在URL中使用了容器名称和uuid。 您可以使用下面列出的示例代码创建OSGi服务或Sling Servlet，并将表单提交存储在Azure存储中。
+以下是PUT请求的部分URL。 `aemformstutorial`是存储帐户的名称，formsubmissions是将使用唯一BLOB ID存储数据的容器。 URL的其余部分将保持不变。
+https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken
+以下是使用PUT请求将提交的表单数据存储在Azure Storage中的函数。 请注意是否在URL中使用了容器名称和uuid。 您可以使用下面列出的示例代码创建OSGi服务或Sling Servlet，并将表单提交存储在Azure存储中。
 
 ```java
  public String saveFormDatainAzure(String formData) {
@@ -103,10 +104,10 @@ https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken�
 
 * [导入自适应表单示例](./assets/bank-account-sample-form.zip)
 
-* [使用OSGi配置控制台在Azure门户配置中指定适当的值](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
+* [使用OSGi配置控制台在Azure Portal配置中指定适当的值](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
 
-* [预览和提交BankAccount表单](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
+* [预览并提交银行帐户表单](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
 * 验证数据是否存储在您选择的Azure存储容器中。 复制Blob ID。
-* [预览BankAccount表单](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) 并将Blob ID指定为URL中的guid参数，以便使用Azure存储中的数据预填充表单
+* [预览BankAccount表单](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6)，并将Blob ID指定为URL中的guid参数，该表单将使用Azure存储中的数据预填充
 

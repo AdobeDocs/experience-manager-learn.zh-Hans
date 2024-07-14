@@ -1,6 +1,6 @@
 ---
-title: 创作层和发布层简介
-description: 简单介绍作为Adobe Experience Manager架构一部分的创作层和发布层。
+title: 创作层和Publish层简介
+description: 简单介绍作为Adobe Experience Manager架构一部分的作者层和Publish层。
 doc-type: technical video
 version: Cloud Service
 jira: KT-4639
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 创作层和发布层简介 {#introduction-author-publish}
+# 创作层和Publish层简介 {#introduction-author-publish}
 
-简单介绍作为Adobe Experience Manager架构一部分的创作层和发布层。
+简单介绍作为Adobe Experience Manager架构一部分的作者层和Publish层。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32033?quality=12&learn=on)

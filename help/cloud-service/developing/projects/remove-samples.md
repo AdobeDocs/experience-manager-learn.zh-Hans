@@ -46,13 +46,13 @@ rm -rf ui.frontend/src/main/webpack/components/_helloworld.css
 
 ## 编辑
 
-删除 `<div class="helloworld" ...></div>` 从：
+从：`<div class="helloworld" ...></div>`删除
 
 ```
 ui.frontend/src/main/webpack/static/index.html
 ```
 
-删除 `<helloworld>` 组件实例定义来源：
+从以下位置删除`<helloworld>`组件实例定义：
 
 ```
 ui.content/src/main/content/jcr_root/content/wknd-examples/us/en/.content.xml

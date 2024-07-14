@@ -1,6 +1,6 @@
 ---
-title: 已禁用设计器预览PDF — 如何启用预览PDF
-description: 在Designer中配置PDF预览的步骤
+title: 已禁用Designer预览PDF — 如何启用预览PDF
+description: 在Designer中配置“PDF预览”的步骤
 type: Troubleshooting
 role: Developer
 level: Intermediate

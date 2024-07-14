@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 为Websphere应用程序服务器中的任何类启用调试日志记录的步骤
 
-*本视频介绍为Websphere应用程序服务器中的任何类启用调试日志记录的步骤。*
+*此视频介绍在Websphere应用程序服务器中启用任何类的调试日志记录的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335523?quality=12&learn=on)

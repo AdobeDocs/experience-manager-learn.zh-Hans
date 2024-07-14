@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ![图像](assets/valuable-reports/reports-1.jpg)
 
-_“ Bandwidth &amp; Storage ”报告显示该帐户已超出30 GB的存储限制。_
+_带宽和存储报告显示该帐户已超过其30 GB存储限制。_
 
 ## 图像错误报表
 
@@ -41,7 +41,7 @@ _图像错误报告。_
 
 要进一步了解Dynamic Media Classic，请查看以下资源：
 
-- [Experience League上的Dynamic Media Classic — 实现价值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Experience League上的Dynamic Media Classic — 执行更多操作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- Experience League上的[Dynamic Media Classic — 获取值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- Experience League上的[Dynamic Media Classic — 执行更多操作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media新闻稿存档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [Dynamic Media Classic文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)

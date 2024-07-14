@@ -1,6 +1,6 @@
 ---
 title: 响应式导航
-description: 了解如何在边缘交付文档创作中执行响应式导航。
+description: 了解如何在Edge Delivery文档创作中执行响应式导航。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management

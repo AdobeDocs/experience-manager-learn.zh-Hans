@@ -22,11 +22,11 @@ ht-degree: 0%
 您可以使用Sightly模板来格式化要显示在收件箱列中的数据。 在本例中，我们将根据收入列的值显示coral-ui图标。 以下屏幕截图显示了收入列中的图标的使用
 ![收入图标](assets/income-column.PNG)
 
-[美观的模板](assets/sightly-template.zip) 用于显示自定义coral ui图标的视图作为本文的一部分提供。
+[用于显示自定义Coral ui图标的Sightly模板](assets/sightly-template.zip)作为本文的一部分提供。
 
 ## Sightly模板
 
-以下是sightly模板。 模板中的代码根据收入显示图标。 这些图标作为 [coral ui图标库](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) 和AEM一起来的。
+以下是sightly模板。 模板中的代码根据收入显示图标。 这些图标作为AEM附带的[coral ui图标库](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)的一部分提供。
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -80,17 +80,17 @@ return val;
 
 >[!NOTE]
 >
->本文假定您已安装 [示例工作流](assets/review-workflow.zip) 和 [示例表单](assets/snap-form.zip) 从 [上一篇文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) 本系列中。
+>本文假定您已安装此系列中[上一篇文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html)中的[示例工作流](assets/review-workflow.zip)和[示例表单](assets/snap-form.zip)。
 
-* [以管理员用户身份登录crx](http://localhost:4502/crx/de/index.jsp)
+* [以管理员用户身份登录到crx](http://localhost:4502/crx/de/index.jsp)
 * [导入sightly模板](assets/sightly-template.zip)
 * [登录到AEM Web控制台](http://localhost:4502/system/console/bundles)
 * [部署和启动收件箱自定义捆绑包](assets/income-column-customization.jar)
-* [打开收件箱](http://localhost:4502/aem/inbox)
+* [打开您的收件箱](http://localhost:4502/aem/inbox)
 * 通过单击“创建”按钮旁边的“列表视图”来打开Admin Control
 * 将收入列添加到收件箱并保存更改
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* 选择 _婚姻状况_ 并提交表单
+* 选择&#x200B;_婚姻状况_&#x200B;并提交表单
 * [查看收件箱](http://localhost:4502/aem/inbox)
 
 提交表单将触发工作流，并且任务会分配给“管理员”用户。 您应会在收入列下看到相应的图标

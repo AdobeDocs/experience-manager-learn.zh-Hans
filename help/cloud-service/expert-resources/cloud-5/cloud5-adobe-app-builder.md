@@ -1,5 +1,5 @@
 ---
-title: Cloud 5Adobe应用程序生成器
+title: Cloud 5AdobeApp Builder
 description: 本集介绍使用AdobeApp Builder的外部集成模式
 version: Cloud Service
 role: Admin, Developer
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 ---
 
-# Cloud 5Adobe应用程序生成器
+# Cloud 5AdobeApp Builder
 
-Amol Anand会加入我们，为我们提供与AdobeApp Builder的集成以及何时何地使用集成的下限。
+阿莫尔·阿南德加入我们，为我们提供了与AdobeApp Builder的集成以及何时何地使用它的最低限度。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342375?quality=12&learn=on)
 
 ## 本视频中涵盖的内容
 
-+ 概述 [App Builder](https://developer.adobe.com/app-builder/docs/overview/)
++ [App Builder](https://developer.adobe.com/app-builder/docs/overview/)概述
 + [Tutorials和代码实验室](https://developer.adobe.com/app-builder/docs/resources/)
-+ [日志记录和监控](https://adobedocs.github.io/adobeio-runtime/guides/logging_monitoring.html#retrieving-activations-for-blocking-successful-calls)
-+ 设置 [系统限制](https://adobedocs.github.io/adobeio-runtime/guides/system_settings.html)
-+ [本地开发](https://developer.adobe.com/app-builder/docs/resources/debugging/) 提示
++ [日志记录和监视](https://adobedocs.github.io/adobeio-runtime/guides/logging_monitoring.html#retrieving-activations-for-blocking-successful-calls)
++ 正在设置[系统限制](https://adobedocs.github.io/adobeio-runtime/guides/system_settings.html)
++ [本地开发](https://developer.adobe.com/app-builder/docs/resources/debugging/)提示

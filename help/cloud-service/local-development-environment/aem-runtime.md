@@ -1,6 +1,6 @@
 ---
-title: 为AEMas a Cloud Service开发设置本地AEM SDK
-description: 使用AEMas a Cloud ServiceSDK的快速入门Jar设置本地AEM SDK运行时。
+title: 设置用于AEM as a Cloud Service开发的本地AEM SDK
+description: 使用AEM as a Cloud Service SDK的快速入门Jar设置本地AEM SDK运行时。
 feature: Developer Tools
 version: Cloud Service
 kt: 4678, 4677
@@ -29,7 +29,7 @@ ht-degree: 7%
 
 Adobe Experience Manager (AEM) 可以使用 AEM as a Cloud Service SDK 的快速入门 Jar 在本地运行。这样开发人员即可先部署到和测试自定义代码、配置和内容，然后再将它提交到源代码管理以及将它部署到 AEM as a Cloud Service 环境。
 
-请注意 `~` 用作用户目录的简写。 在Windows中，这等同于 `%HOMEPATH%`.
+请注意，`~`用作用户目录的简写。 在Windows中，这相当于`%HOMEPATH%`。
 
 ## 安装Java™
 
@@ -62,33 +62,33 @@ $ java --version
 
 ![Java](./assets/aem-runtime/java.png)
 
-## 下载AEMas a Cloud ServiceSDK
+## 下载AEM as a Cloud Service SDK
 
-AEMas a Cloud ServiceSDK(或AEM SDK)包含用于在本地运行AEM创作和发布以进行开发的快速入门Jar，以及兼容版本的Dispatcher工具。
+AEM as a Cloud Service SDK(或AEM SDK)包含用于在本地运行AEM Author和Publish以进行开发的快速入门Jar，以及Dispatcher Tools的兼容版本。
 
-1. 登录 [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) 使用您的Adobe ID
-   + 请注意，您的Adobe组织 __必须__ 配置AEMas a Cloud Service以下载AEMas a Cloud ServiceSDK。
-1. 导航至 __AEMas a Cloud Service__ 选项卡
-1. 排序方式 __发布日期__ 在 __降序__ 订购
-1. 单击最新的 __AEM SDK__ 结果行
-1. 查看并接受EULA ，然后点击 __下载__ 按钮
+1. 使用您的Adobe ID登录到[https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads)
+   + 请注意，必须为您的Adobe组织&#x200B;__配置__&#x200B;以便AEM as a Cloud Service下载AEM as a Cloud Service SDK。
+1. 导航到&#x200B;__AEM as a Cloud Service__&#x200B;选项卡
+1. 按&#x200B;__发布日期__&#x200B;排序，顺序为&#x200B;__降序__
+1. 单击最新的&#x200B;__AEM SDK__&#x200B;结果行
+1. 查看并接受EULA，然后点按&#x200B;__下载__&#x200B;按钮
 
 ## 从AEM SDK zip文件中提取快速入门Jar
 
-1. 解压缩下载的 `aem-sdk-XXX.zip` 文件
+1. 解压缩下载的`aem-sdk-XXX.zip`文件
 
 ## 设置本地AEM创作服务{#set-up-local-aem-author-service}
 
 本地AEM创作服务为开发人员提供了一个本地体验，数字营销人员/内容作者可以共享该体验来创建和管理内容。  AEM Author Service设计作为创作和预览环境，允许可以针对它执行大多数功能开发验证，使其成为本地开发过程的重要元素。
 
-1. 创建文件夹 `~/aem-sdk/author`
-1. 复制 __快速入门JAR__ 文件到  `~/aem-sdk/author` 并将其重命名为 `aem-author-p4502.jar`
+1. 创建文件夹`~/aem-sdk/author`
+1. 将&#x200B;__快速入门JAR__&#x200B;文件复制到`~/aem-sdk/author`并将其重命名为`aem-author-p4502.jar`
 1. 通过从命令行执行以下命令来启动本地AEM Author Service：
    + `java -jar aem-author-p4502.jar`
-      + 提供管理员密码作为 `admin`. 可接受任何管理员密码，但建议对本地开发使用默认密码以减少重新配置的需要。
+      + 提供管理员密码作为`admin`。 可接受任何管理员密码，但建议对本地开发使用默认密码以减少重新配置的需要。
 
-   您 *无法* 启动AEM作为Cloud Service快速入门Jar [通过双击](#troubleshooting-double-click).
-1. 访问本地AEM创作服务，网址为 [http://localhost:4502](http://localhost:4502) 在Web浏览器中
+   您&#x200B;*无法*&#x200B;通过双击](#troubleshooting-double-click)启动AEM作为Cloud Service快速入门Jar [。
+1. 在Web浏览器中访问本地AEM Author服务： [http://localhost:4502](http://localhost:4502)
 
 >[!BEGINTABS]
 
@@ -124,16 +124,16 @@ $ java -jar aem-author-p4502.jar
 
 ## 设置本地AEM Publish服务
 
-本地AEM Publish Service为开发人员提供了AEM的本地体验最终用户，例如浏览基于AEM的网站。 本地AEM发布服务非常重要，因为它与AEM SDK的集成 [Dispatcher工具](./dispatcher-tools.md) 并允许开发人员对面向最终用户的体验进行抽烟测试和微调。
+本地AEM Publish服务为开发人员提供AEM的本地体验最终用户，例如浏览基于AEM的网站。 本地AEM Publish服务非常重要，因为它与AEM SDK的[Dispatcher工具](./dispatcher-tools.md)集成，允许开发人员对面向最终用户的最终体验进行冒烟测试和微调。
 
-1. 创建文件夹 `~/aem-sdk/publish`
-1. 复制 __快速入门JAR__ 文件到  `~/aem-sdk/publish` 并将其重命名为 `aem-publish-p4503.jar`
-1. 通过从命令行执行以下操作来启动本地AEM Publish Service：
+1. 创建文件夹`~/aem-sdk/publish`
+1. 将&#x200B;__快速入门JAR__&#x200B;文件复制到`~/aem-sdk/publish`并将其重命名为`aem-publish-p4503.jar`
+1. 从命令行执行以下命令，启动本地AEM Publish服务：
    + `java -jar aem-publish-p4503.jar`
-      + 提供管理员密码作为 `admin`. 可接受任何管理员密码，但建议对本地开发使用默认密码以减少重新配置的需要。
+      + 提供管理员密码作为`admin`。 可接受任何管理员密码，但建议对本地开发使用默认密码以减少重新配置的需要。
 
-   您 *无法* 启动AEM作为Cloud Service快速入门Jar [通过双击](#troubleshooting-double-click).
-1. 访问本地AEM发布服务，网址为 [http://localhost:4503](http://localhost:4503) 在Web浏览器中
+   您&#x200B;*无法*&#x200B;通过双击](#troubleshooting-double-click)启动AEM作为Cloud Service快速入门Jar [。
+1. 在Web浏览器中访问本地AEM Publish服务，网址为[http://localhost:4503](http://localhost:4503)
 
 >[!BEGINTABS]
 
@@ -169,7 +169,7 @@ $ java -jar aem-publish-p4503.jar
 
 ## 在预发行模式中设置本地AEM服务
 
-可以在中启动本地AEM运行时 [预发行模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html) 允许开发人员针对AEMas a Cloud Service的下一个版本的功能进行构建。 通过传递 `-r prerelease` 本地AEM运行时的第一个启动时的参数。 这可以同时用于本地AEM Author和AEM Publish服务。
+本地AEM运行时可在[预发行模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html)中启动，允许开发人员针对AEM as a Cloud Service的下一发行版功能进行构建。 通过在本地AEM运行时的第一个启动上传递`-r prerelease`参数，启用了预发行版。 这既可以与本地AEM Author一起使用，也可以与AEM Publish服务一起使用。
 
 
 >[!BEGINTABS]
@@ -208,25 +208,25 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 ## 模拟内容分发 {#content-distribution}
 
-在真实的Cloud Service环境中，使用将内容从Author服务分发到Publish服务 [Sling内容分发](https://sling.apache.org/documentation/bundles/content-distribution.html) 和Adobe管道。 此 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution) 是一个仅在云环境中可用的独立微服务。
+在真实的Cloud Service环境中，使用[Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe管道，将内容从Author Service分发到Publish Service。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution)是仅在云环境中可用的独立微服务。
 
-在开发期间，可能需要使用本地Author和Publish服务模拟内容的分发。 这可以通过启用旧版复制代理来实现。
+在开发期间，可能需要使用本地Author和Publish服务模拟内容分发。 这可以通过启用旧版复制代理来实现。
 
 >[!NOTE]
 >
 > 复制代理只能在本地Quickstart JAR中使用，并且只能提供内容分发的模拟。
 
-1. 登录到 **作者** 服务并导航到 [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
-1. 单击 **默认代理（发布）** 以打开默认复制代理。
-1. 单击 **编辑** 以打开代理的配置。
-1. 在 **设置** 选项卡，更新以下字段：
+1. 登录到&#x200B;**作者**&#x200B;服务并导航到[http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html)。
+1. 单击&#x200B;**默认代理（发布）**&#x200B;以打开默认复制代理。
+1. 单击&#x200B;**编辑**&#x200B;以打开代理的配置。
+1. 在&#x200B;**设置**&#x200B;选项卡下，更新以下字段：
 
-   + **已启用**  — 检查true
-   + **代理用户ID**  — 将此字段留空
+   + **已启用** — 检查true
+   + **代理用户ID** — 将此字段留空
 
    ![复制代理配置 — 设置](assets/aem-runtime/settings-config.png)
 
-1. 在 **传输** 选项卡，更新以下字段：
+1. 在&#x200B;**传输**&#x200B;选项卡下，更新以下字段：
 
    + **URI** - `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
    + **用户** - `admin`
@@ -234,48 +234,48 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
    ![复制代理配置 — 传输](assets/aem-runtime/transport-config.png)
 
-1. 单击 **确定** 保存配置并启用 **默认** 复制代理。
+1. 单击&#x200B;**确定**&#x200B;保存配置并启用&#x200B;**默认**&#x200B;复制代理。
 1. 您现在可以更改Author服务上的内容并将其发布到Publish服务。
 
-![发布页面](assets/aem-runtime/publish-page-changes.png)
+![Publish页面](assets/aem-runtime/publish-page-changes.png)
 
 ## 快速入门Jar启动模式
 
-快速入门Jar的命名， `aem-<tier>_<environment>-p<port number>.jar` 指定启动方式。 AEM在特定层、创作层或发布层启动后，无法更改为备用层。 要执行此操作， `crx-Quickstart` 必须删除首次运行时生成的文件夹，并且必须再次运行快速入门Jar。 可以更改环境和端口，但是它们需要停止/启动本地AEM实例。
+快速入门Jar `aem-<tier>_<environment>-p<port number>.jar`的命名指定了它的启动方式。 AEM在特定层、创作层或发布层启动后，无法更改为备用层。 为此，必须删除首次运行时生成的`crx-Quickstart`文件夹，并且必须重新运行快速入门Jar。 可以更改环境和端口，但是它们需要停止/启动本地AEM实例。
 
-不断变化的环境， `dev`， `stage` 和 `prod`，对于开发人员而言，能够确保AEM正确定义并解析特定于环境的配置。 建议主要针对默认情况执行本地开发 `dev` 环境运行模式。
+更改环境`dev`、`stage`和`prod`对开发人员很有用，可确保环境特定的配置由AEM正确定义和解析。 建议主要针对默认的`dev`环境运行模式执行本地开发。
 
 可用的排列如下：
 
 | 快速入门Jar文件名 | 模式描述 |
 |------------------------------|-----------------------------------------------------------------------------|
 | `aem-author-p4502.jar` | 作为作者，在端口4502上处于开发运行模式 |
-| `aem-author_dev-p4502.jar` | 作为作者，在端口4502上处于开发运行模式(与 `aem-author-p4502.jar`) |
+| `aem-author_dev-p4502.jar` | 作为作者，在端口4502上处于开发运行模式（与`aem-author-p4502.jar`相同） |
 | `aem-author_stage-p4502.jar` | 作为作者，在端口4502上处于暂存运行模式 |
 | `aem-author_prod-p4502.jar` | 作为作者，在端口4502上处于生产运行模式 |
-| `aem-publish-p4503.jar` | 在端口4503上以开发运行模式作为发布 |
-| `aem-publish_dev-p4503.jar` | 在端口4503上作为开发运行模式下的发布(与 `aem-publish-p4503.jar`) |
-| `aem-publish_stage-p4503.jar` | 在端口4503上以暂存运行模式作为发布 |
-| `aem-publish_prod-p4503.jar` | 在端口4503上以生产运行模式作为发布 |
+| `aem-publish-p4503.jar` | 在端口4503上作为Publish处于开发运行模式 |
+| `aem-publish_dev-p4503.jar` | 作为Publish在端口4503上处于开发运行模式（与`aem-publish-p4503.jar`相同） |
+| `aem-publish_stage-p4503.jar` | 作为端口4503上暂存运行模式下的Publish |
+| `aem-publish_prod-p4503.jar` | 作为端口4503上处于生产运行模式的Publish |
 
 请注意，端口号可以是本地开发计算机上的任何可用端口，但按照惯例可以：
 
-+ 端口 __4502__ 用于 __本地AEM Author服务__
-+ 端口 __4503__ 用于 __本地AEM Publish服务__
++ 端口&#x200B;__4502__&#x200B;用于&#x200B;__本地AEM创作服务__
++ 端口&#x200B;__4503__&#x200B;用于&#x200B;__本地AEM Publish服务__
 
 更改这些配置文件可能需要调整AEM SDK配置
 
 ## 停止本地AEM运行时
 
-要停止本地AEM运行时(AEM Author或Publish服务)，请打开用于启动AEM运行时的命令行窗口，然后点击 `Ctrl-C`. 等待AEM关闭。 当关闭过程完成时，命令行提示符可用。
+要停止本地AEM运行时(AEM Author或Publish服务)，请打开用于启动AEM运行时的命令行窗口，然后点按`Ctrl-C`。 等待AEM关闭。 当关闭过程完成时，命令行提示符可用。
 
 ## 可选的本地AEM运行时设置任务
 
-+ __OSGi配置环境变量和机密变量__ 是 [专门为AEM本地运行时设置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development)，而不是使用aio CLI管理它们。
++ __OSGi配置环境变量和机密变量__&#x200B;是[专门为AEM本地运行时](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development)设置的，而不是使用aio CLI管理它们。
 
 ## 何时更新快速入门Jar
 
-在每月的最后一个星期四或之后不久，至少每月更新AEM SDK，这是AEMas a Cloud Service“功能发布”的发布节奏。
+在每月的最后一个星期四或之后不久，至少每月更新AEM SDK，这是AEM as a Cloud Service“功能发布”的发布节奏。
 
 >[!WARNING]
 >
@@ -286,7 +286,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 升级AEM SDK会有效地创建一个全新的AEM运行时，其中包括一个新的存储库，这意味着对先前AEM SDK的存储库所做的任何更改都将丢失。 以下是帮助在AEM SDK升级之间保留内容的可行策略，可以单独或一致使用：
 
 1. 创建一个专门用于包含“示例”内容的内容包，以帮助进行开发，并在Git中对其进行维护。 任何应通过AEM SDK升级保留的内容将保留在此包中，并在升级AEM SDK后重新部署。
-1. 使用 [oak-upgrade](https://jackrabbit.apache.org/oak/docs/migration.html) 使用 `includepaths` 指令，将内容从之前的AEM SDK存储库复制到新的AEM SDK存储库。
+1. 结合使用[oak-upgrade](https://jackrabbit.apache.org/oak/docs/migration.html)和`includepaths`指令，将内容从以前的AEM SDK存储库复制到新的AEM SDK存储库。
 1. 使用以前的AEM SDK上的AEM包管理器和内容包备份任何内容，并在新的AEM SDK上重新安装它们。
 
 请记住，在AEM SDK升级之间使用上述方法维护代码，表明开发存在反模式。 非一次性代码应源自开发IDE，并通过部署流入AEM SDK。
@@ -297,11 +297,11 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 双击快速入门Jar启动时，显示错误模式，阻止AEM本地启动。
 
-![故障排除 — 双击“快速入门Jar”文件](./assets/aem-runtime/troubleshooting__double-click.png)
+![疑难解答 — 双击快速入门Jar文件](./assets/aem-runtime/troubleshooting__double-click.png)
 
-这是因为AEMas a Cloud Service快速入门Jar不支持双击快速入门Jar以本地启动AEM。 相反，必须从该命令行运行Jar文件。
+这是因为AEM as a Cloud Service快速入门Jar不支持双击快速入门Jar以本地启动AEM。 相反，必须从该命令行运行Jar文件。
 
-要启动AEM Author服务， `cd` 进入包含Quickstart Jar的目录并执行命令：
+要启动AEM Author服务，`cd`进入包含Quickstart Jar的目录并执行命令：
 
 >[!BEGINTABS]
 
@@ -325,7 +325,7 @@ $ java -jar aem-author-p4502.jar
 
 >[!ENDTABS]
 
-或者，要启动AEM Publish服务， `cd` 进入包含Quickstart Jar的目录并执行命令：
+或者，要启动AEM Publish服务，请在包含Quickstart Jar的目录中`cd`并执行命令：
 
 >[!BEGINTABS]
 
@@ -364,7 +364,7 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-这是因为AEMas a Cloud Service需要Java™ SDK 11，而您运行的是其他版本，很可能是Java™ 8。 要解决此问题，请下载并安装 [oracleJava™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p=list&amp;p.offset=limit&amp;p.offset=0&amp;p.limit=14444).
+这是因为AEM as a Cloud Service需要Java™ SDK 11，而您运行的是其他版本，很可能是Java™ 8。 要解决此问题，请下载并安装[OracleJava™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p=list&amp;p.offset=limit&amp;p.offset=0&amp;p.limit=14444)。
 
 安装OracleJava™ 11 SDK后，通过从命令行运行命令来验证它是活动版本：
 

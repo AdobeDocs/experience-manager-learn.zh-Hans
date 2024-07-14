@@ -20,7 +20,7 @@ ht-degree: 1%
 # AEM Forms与Acrobat Sign Web窗体
 
 
-本教程将指导您完成使用从提交的数据生成交互式通信文档的用例。 [React](https://react.dev/) 应用程序和演示生成的文档，以供使用Acrobat Sign Webform进行签名。
+本教程将指导您完成以下用例：使用从[React](https://react.dev/)应用程序提交的数据生成交互式通信文档，并使用Acrobat Sign Web窗体展示生成的签名文档。
 
 以下是用例的流程
 
@@ -34,8 +34,8 @@ ht-degree: 1%
 用例需要以下各项才能正常工作：
 
 * 带有Forms附加组件包的AEM服务器
-* An [Acrobat Sign应用程序的集成密钥](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
+* Acrobat Sign应用程序的[集成密钥](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
 
 ## 后续步骤
 
-写入 [用于生成交互式通信文档的自定义OSGi服务](./create-ic-document.md) 使用文档记录的API
+编写[自定义OSGi服务以使用文档化的API生成交互式通信文档](./create-ic-document.md)

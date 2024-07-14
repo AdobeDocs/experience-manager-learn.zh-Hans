@@ -23,7 +23,7 @@ ht-degree: 0%
 
 本文介绍了使用表单数据模型预填充服务使用从SharePoint列表中获取的数据预填充/预填充自适应表单所需的步骤。
 
-本文假定您拥有 [已成功配置自适应表单以将数据提交到SharePoint列表。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
+本文假设您已[成功配置自适应表单以将数据提交到SharePoint列表。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
 
 以下是SharePoint列表中的数据
 ![sharepoint-list](assets/list-data.png)
@@ -33,13 +33,13 @@ ht-degree: 0%
 ## 配置get服务
 
 * 使用guid属性为表单数据模型的顶级对象创建get服务
-  ![get-service](assets/mapping-request-attribute.png)
+  ![获取服务](assets/mapping-request-attribute.png)
 
-在此屏幕快照中，guid列通过名为的请求属性进行绑定 `submissionid`.
+在此屏幕快照中，GUID列通过名为`submissionid`的请求属性进行绑定。
 
 完全配置的get服务如下所示
 
-![get-service](assets/fdm-request-attribute.png)
+![获取服务](assets/fdm-request-attribute.png)
 
 ## 配置自适应表单以使用表单数据模型预填充服务
 
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 ## 测试表单
 
-通过包含预览表单 `submissionid` 在URL中，如下所示
+通过在URL中包含`submissionid`预览表单，如下所示
 
 ```html
 http://localhost:4502/content/dam/formsanddocuments/contactusform/jcr:content?wcmmode=disabled&submissionid=57e12249-751a-4a38-a81f-0a4422b24412

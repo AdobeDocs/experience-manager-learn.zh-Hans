@@ -24,7 +24,7 @@ AEM 6.4中的Dynamic Media Viewer增强功能包括添加了全景图像查看�
 
 >[!NOTE]
 >
->视频假定您的AEM实例在Dynamic Media S7模式下运行。 [有关使用Dynamic Media设置AEM的说明，请参阅此处。](https://helpx.adobe.com/cn/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>视频假定您的AEM实例在Dynamic Media S7模式下运行。 [此处提供了使用Dynamic Media设置AEM的说明。](https://helpx.adobe.com/cn/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## 全景和全景VR查看器
 

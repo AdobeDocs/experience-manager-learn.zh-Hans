@@ -1,6 +1,6 @@
 ---
 title: 探索GraphQL API - AEM Headless快速入门 — GraphQL
-description: Adobe Experience Manager (AEM)和GraphQL入门。 使用内置的GrapiQL IDE浏览AEM GraphQL API。 了解AEM如何根据内容片段模型自动生成GraphQL架构。 尝试使用GraphQL语法构建基本查询。
+description: Adobe Experience Manager (AEM)和GraphQL入门。 使用内置的GrapiQL IDE来浏览AEM的GraphQL API。 了解AEM如何根据内容片段模型自动生成GraphQL架构。 尝试使用GraphQL语法构建基本查询。
 version: Cloud Service
 mini-toc-levels: 1
 jira: KT-6714
@@ -22,11 +22,11 @@ ht-degree: 1%
 
 AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的数据公开给下游应用程序。 内容片段模型定义内容片段使用的数据架构。 每当创建或更新内容片段模型时，都会翻译架构并将其添加到组成GraphQL API的“图形”。
 
-在本章中，我们来探索一些常见的GraphQL查询，以使用名为的IDE收集内容 [GraphiQL](https://github.com/graphql/graphiql). GraphiQL IDE允许您快速测试和优化返回的查询和数据。 它还提供对文档的轻松访问，使其能够轻松地学习和了解有哪些方法可用。
+在本章中，让我们探索一些常见的GraphQL查询，以使用名为[GraphiQL](https://github.com/graphql/graphiql)的IDE收集内容。 GraphiQL IDE允许您快速测试和优化返回的查询和数据。 它还提供对文档的轻松访问，使其能够轻松地学习和了解有哪些方法可用。
 
 ## 先决条件 {#prerequisites}
 
-这是一个多部分教程，假定其中包含了 [创作内容片段](./author-content-fragments.md) 已完成。
+这是一个多部分教程，并假定已完成[创作内容片段](./author-content-fragments.md)中概述的步骤。
 
 ## 目标 {#objectives}
 
@@ -40,20 +40,20 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
 必须配置GraphQL端点才能为内容片段启用GraphQL API查询。
 
-1. 从AEM开始屏幕，导航到 **工具** > **常规** > **GraphQL**.
+1. 从AEM开始屏幕中，导航到&#x200B;**工具** > **常规** > **GraphQL**。
 
    ![导航到GraphQL端点](assets/explore-graphql-api/navigate-to-graphql-endpoint.png)
 
-1. 点按 **创建** 在生成的对话框中，输入以下值：
+1. 点按右上角的&#x200B;**创建**，在生成的对话框中，输入以下值：
 
-   * 名称*： **我的项目端点**.
+   * 名称*：**我的项目终结点**。
    * 使用由以下对象提供的GraphQL架构…… *： **我的项目**
 
-   ![创建GraphQL端点](assets/explore-graphql-api/create-graphql-endpoint.png)
+   ![创建GraphQL终结点](assets/explore-graphql-api/create-graphql-endpoint.png)
 
-   点按 **创建** 以保存端点。
+   点按&#x200B;**创建**&#x200B;以保存终结点。
 
-   基于项目配置创建的GraphQL端点仅启用对属于该项目的模型的查询。 在这种情况下，仅针对 **人员** 和 **团队** 可以使用模型。
+   基于项目配置创建的GraphQL端点仅启用对属于该项目的模型的查询。 在这种情况下，只能使用对&#x200B;**人员**&#x200B;和&#x200B;**团队**&#x200B;模型的查询。
 
    >[!NOTE]
    >
@@ -65,23 +65,23 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
 ## 使用 GraphiQL IDE
 
-此 [GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 开发人员可以使用工具针对当前AEM环境中的内容创建和测试查询。 GraphiQL工具还使用户能够 **保留或保存** 在生产设置中由客户端应用程序使用的查询。
+[GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html)工具使开发人员能够针对当前AEM环境中的内容创建和测试查询。 GraphiQL工具还使用户能够&#x200B;**保留或保存**&#x200B;查询，以供生产设置中的客户端应用程序使用。
 
-接下来，使用内置的GraphiQL IDE探索AEM GraphQL API的强大功能。
+接下来，使用内置的GraphiQL IDE来探索AEM的GraphQL API的强大功能。
 
-1. 从AEM开始屏幕，导航到 **工具** > **常规** > **GraphQL查询编辑器**.
+1. 从AEM开始屏幕中，导航到&#x200B;**工具** > **常规** > **GraphQL查询编辑器**。
 
    ![导航到GraphiQL IDE](assets/explore-graphql-api/navigate-graphql-query-editor.png)
 
    >[!NOTE]
    >
-   > 在中，可能未内置旧版AEM GraphiQL IDE。 它可以按照以下步骤手动安装 [说明](#install-graphiql).
+   > 在中，可能未内置旧版AEM GraphiQL IDE。 可以按照这些[说明](#install-graphiql)手动安装。
 
-1. 在右上角，确保将“端点”设置为 **我的项目端点**.
+1. 在右上角，确保终结点设置为&#x200B;**我的项目终结点**。
 
-   ![设置GraphQL端点](assets/explore-graphql-api/set-my-project-endpoint.png)
+   ![设置GraphQL终结点](assets/explore-graphql-api/set-my-project-endpoint.png)
 
-这会将所有查询的范围限定于在 **我的项目** 项目。
+这会将所有查询的范围设定为在&#x200B;**我的项目**&#x200B;项目中所创建的模型。
 
 ### 查询内容片段列表 {#query-list-cf}
 
@@ -100,25 +100,25 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
    } 
    ```
 
-1. 按 **播放** 按钮来执行查询。 您应该会看到上一章内容片段的结果：
+1. 按顶部菜单中的&#x200B;**播放**&#x200B;按钮执行查询。 您应该会看到上一章内容片段的结果：
 
    ![人员列表结果](assets/explore-graphql-api/all-teams-list.png)
 
-1. 将光标放置在 `title` 文本并输入 **CTRL+空格键** 以触发代码提示。 添加 `shortname` 和 `description` 到查询。
+1. 将光标置于`title`文本下方并输入&#x200B;**CTRL+空格键**&#x200B;以触发代码提示。 将`shortname`和`description`添加到查询。
 
-   ![使用代码隐藏更新查询](assets/explore-graphql-api/update-query-codehinting.png)
+   ![使用隐藏的代码更新查询](assets/explore-graphql-api/update-query-codehinting.png)
 
-1. 通过按 **播放** 按钮时，您应该看到结果包含 `shortname` 和 `description`.
+1. 按&#x200B;**播放**&#x200B;按钮再次执行查询，您应该会看到结果包含`shortname`和`description`的其他属性。
 
    ![短名称和描述结果](assets/explore-graphql-api/updated-query-shortname-description.png)
 
-   此 `shortname` 是一个简单的属性，并且 `description` 是一个多行文本字段，GraphQL API允许我们为结果选择各种格式，如 `html`， `markdown`， `json`，或 `plaintext`.
+   `shortname`是一个简单的属性，`description`是一个多行文本字段，GraphQL API允许我们为结果（如`html`、`markdown`、`json`或`plaintext`）选择各种格式。
 
 ### 查询嵌套片段
 
-接下来，尝试查询以检索嵌套片段，请记住 **团队** 模型引用 **人员** 模型。
+接下来，尝试查询正在检索嵌套片段，请记住&#x200B;**团队**&#x200B;模型引用了&#x200B;**人员**&#x200B;模型。
 
-1. 更新查询以包含 `teamMembers` 属性。 请记住，这是 **片段引用** 人员模型的字段。 可返回人员模型的属性：
+1. 更新查询以包含`teamMembers`属性。 记住，这是人员模型的&#x200B;**片段引用**&#x200B;字段。 可返回人员模型的属性：
 
    ```graphql
    query allTeams {
@@ -175,7 +175,7 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
    }
    ```
 
-   能够针对嵌套片段进行查询是AEM GraphQL API的强大功能。 在这个简单的示例中，嵌套只有两层深。 然而，有可能进一步巢状化碎片。 例如，如果有 **地址** 与关联的模型 **人员** 可以在单个查询中返回来自所有三个模型的数据。
+   能够针对嵌套片段进行查询是AEM GraphQL API的强大功能。 在这个简单的示例中，嵌套只有两层深。 然而，有可能进一步巢状化碎片。 例如，如果有一个&#x200B;**Address**&#x200B;模型与&#x200B;**人员**&#x200B;关联，则可以在单个查询中返回来自所有三个模型的数据。
 
 ### 筛选内容片段列表 {#filter-list-cf}
 
@@ -204,19 +204,19 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
    }  
    ```
 
-   上述查询对系统中的所有人员片段执行搜索。 在查询开头添加的过滤器会对 `name` 字段和变量字符串 `$name`.
+   上述查询对系统中的所有人员片段执行搜索。 添加到查询开头的筛选器对`name`字段和变量字符串`$name`执行比较。
 
-1. 在 **查询变量** 面板输入以下内容：
+1. 在&#x200B;**查询变量**&#x200B;面板中输入以下内容：
 
    ```json
    {"name": "John Doe"}
    ```
 
-1. 执行查询，应仅 **人员** 返回内容片段的值为 `John Doe`.
+1. 执行查询，应仅返回&#x200B;**人**&#x200B;内容片段，其值为`John Doe`。
 
    ![使用查询变量进行筛选](assets/explore-graphql-api/using-query-variables-filter.png)
 
-   还有许多其他选项可用于筛选和创建复杂查询，请参阅 [了解如何将GraphQL与AEM结合使用 — 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+   有许多其他选项可用于筛选和创建复杂查询，请参阅[学习将GraphQL与AEM结合使用 — 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html)。
 
 1. 增强上述查询以获取配置文件图片
 
@@ -251,7 +251,7 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
    } 
    ```
 
-   此 `profilePicture` 是一个内容引用，由于它应该是图像，因此是内置的 `ImageRef` 对象已使用。 这样，我们即可请求有关所引用图像的附加数据，例如 `width` 和 `height`.
+   `profilePicture`是内容引用，它应为图像，因此使用内置`ImageRef`对象。 这允许我们请求有关所引用图像的附加数据，如`width`和`height`。
 
 ### 查询单个内容片段 {#query-single-cf}
 
@@ -270,7 +270,7 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
    }
    ```
 
-1. 输入以下内容 **查询变量**：
+1. 为&#x200B;**查询变量**&#x200B;输入以下内容：
 
    ```json
    {"path": "/content/dam/my-project/en/alison-smith"}
@@ -280,7 +280,7 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
 ## 持久查询 {#persist-queries}
 
-一旦开发人员对查询和从查询返回的结果数据感到满意，下一步就是将查询存储或保留到AEM。 此 [持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html) 是将GraphQL API公开给客户端应用程序的首选机制。 持久查询后，可以使用GET请求来请求它，并将其缓存在Dispatcher和CDN层。 持久查询的性能要好得多。 除了性能优势之外，持久查询还可以确保不会意外向客户端应用程序显示额外数据。 更多有关 [可以在此处找到持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html).
+一旦开发人员对查询和从查询返回的结果数据感到满意，下一步就是将查询存储或保留到AEM。 [持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)是向客户端应用程序公开GraphQL API的首选机制。 持久查询后，可以使用GET请求来请求它，并缓存到Dispatcher和CDN层。 持久查询的性能要好得多。 除了性能优势之外，持久查询还可以确保不会意外向客户端应用程序显示额外数据。 有关[持久查询的更多详细信息见此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)。
 
 接下来，保留两个简单查询，它们将在下一章中使用。
 
@@ -307,12 +307,12 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
    验证查询是否有效。
 
-1. 下一次点按 **另存为** 并输入 `all-teams` 作为 **查询名称**.
+1. 接下来，点按&#x200B;**另存为**，并输入`all-teams`作为&#x200B;**查询名称**。
 
-   查询应显示在下 **持久查询** 在左边栏中。
+   查询应显示在左边栏中的&#x200B;**持久查询**&#x200B;下。
 
    ![所有团队持久查询](assets/explore-graphql-api/all-teams-persisted-query.png)
-1. 接下来，点按省略号 **...** 在持久查询旁边，然后点击 **复制URL** 以将路径复制到剪贴板。
+1. 接下来，点按永久查询旁边的省略号&#x200B;**...**，然后点按&#x200B;**复制URL**&#x200B;以将路径复制到剪贴板。
 
    ![复制持久查询URL](assets/explore-graphql-api/copy-persistent-query-url.png)
 
@@ -329,10 +329,10 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
    | 名称 | 描述 |
    | ---------|---------- |
    | `/graphql/execute.json` | 持久查询端点 |
-   | `/my-project` | 的项目配置 `/conf/my-project` |
+   | `/my-project` | `/conf/my-project`的项目配置 |
    | `/all-teams` | 持久查询的名称 |
 
-1. 返回到GraphiQL IDE并使用加号按钮 **+** 保留NEW查询
+1. 返回GraphiQL IDE并使用加号按钮&#x200B;**+**&#x200B;保留NEW查询
 
    ```graphql
    query personByName($name: String!) {
@@ -366,37 +366,37 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
    }
    ```
 
-1. 将查询另存为： `person-by-name`.
+1. 将查询另存为： `person-by-name`。
 1. 您应该保存两个持久查询：
 
    ![最终持久查询](assets/explore-graphql-api/final-persisted-queries.png)
 
 
-## 发布GraphQL端点和持久查询
+## Publish GraphQL端点和持久查询
 
-经审查和验证后，发布 `GraphQL Endpoint` 和 `Persisted Queries`
+审核和验证后，发布`GraphQL Endpoint`和`Persisted Queries`
 
-1. 从AEM开始屏幕，导航到 **工具** > **常规** > **GraphQL**.
+1. 从AEM开始屏幕中，导航到&#x200B;**工具** > **常规** > **GraphQL**。
 
-1. 点按旁边的复选框 **我的项目端点** 并点击 **Publish**
+1. 点按&#x200B;**我的项目端点**&#x200B;旁边的复选框，然后点按&#x200B;**Publish**
 
-   ![发布GraphQL端点](assets/explore-graphql-api/publish-graphql-endpoint.png)
+   ![Publish GraphQL端点](assets/explore-graphql-api/publish-graphql-endpoint.png)
 
-1. 从AEM开始屏幕，导航到 **工具** > **常规** > **GraphQL查询编辑器**
+1. 从AEM开始屏幕中，导航到&#x200B;**工具** > **常规** > **GraphQL查询编辑器**
 
-1. 点按 **所有团队** 从“持久查询”面板中查询并点按 **Publish**
+1. 点按“持久查询”面板中的&#x200B;**所有团队**&#x200B;查询，然后点按&#x200B;**Publish**
 
-   ![发布持久查询](assets/explore-graphql-api/publish-persisted-query.png)
+   ![Publish持久查询](assets/explore-graphql-api/publish-persisted-query.png)
 
-1. 重复上述步骤以用于 `person-by-name` 查询
+1. 对`person-by-name`查询重复上述步骤
 
 ## 解决方案文件 {#solution-files}
 
-下载在前三章中创建的内容、模型和持久查询： [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)
+下载在最后三章中创建的内容、模型和持久查询： [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)
 
 ## 其他资源
 
-要了解有关GraphQL查询的更多信息，请访问 [了解如何将GraphQL与AEM结合使用 — 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+要了解有关GraphQL查询的更多信息，请访问[学习将GraphQL与AEM结合使用 — 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html)。
 
 ## 恭喜！ {#congratulations}
 
@@ -404,9 +404,9 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
 ## 后续步骤 {#next-steps}
 
-在下一章中， [构建React应用程序](./graphql-and-react-app.md)中，您将了解外部应用程序如何查询AEM GraphQL端点并使用这两个持久查询。 此外，还向您介绍了在GraphQL查询执行期间进行的一些基本错误处理。
+在下一章[构建React应用程序](./graphql-and-react-app.md)中，您将探索外部应用程序如何查询AEM的GraphQL端点并使用这两个持久查询。 此外，还向您介绍了在GraphQL查询执行期间进行的一些基本错误处理。
 
 ## 安装GraphiQL工具（可选） {#install-graphiql}
 
-在中，某些版本的AEM (6.X.X) GraphiQL IDE工具需要手动安装，请使用 [此处说明](../how-to/install-graphiql-aem-6-5.md).
+在中，某些版本的AEM (6.X.X)需要手动安装GraphiQL IDE工具，请使用此处](../how-to/install-graphiql-aem-6-5.md)中的[说明。
 

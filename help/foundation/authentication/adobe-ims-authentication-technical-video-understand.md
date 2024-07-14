@@ -26,13 +26,13 @@ Adobe Experience Manager引入了AEM实例的Admin Console支持，并为Managed
 >[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
 
 * Adobe Experience Manager IMS身份验证支持仅针对“内部”用户（作者、查看者、管理员、开发人员等），不适用于网站访客等外部最终用户。
-* [Admin Console](https://adminconsole.adobe.com/) 将AEM Managed Services客户表示为IMS组织，将AEM实例表示为产品上下文。 Admin Console系统和产品管理员可以定义和管理。
+* [Admin Console](https://adminconsole.adobe.com/)将AEM Managed Services客户表示为IMS组织，将AEM实例表示为产品上下文。 Admin Console系统和产品管理员可以定义和管理。
 * AEM Managed Services将您的拓扑与Admin Console同步，在产品上下文和AEM实例之间创建1对1映射。
 * Admin Console中的产品配置文件确定用户可以访问哪些AEM实例。
 * 身份验证支持包括用于SSO的符合SAML2标准的客户IDP。
 * 仅支持Enterprise ID或Federated ID（适用于客户SSO）(不支持个人AdobeID)。
 
-*&#42;AEM 6.4 SP3及更高版本支持AdobeManaged Services客户使用此功能。*
+*&#42;AdobeManaged Services客户的AEM 6.4 SP3及更高版本支持此功能。*
 
 ## 最佳实践 {#best-practices}
 
@@ -44,4 +44,4 @@ Adobe Experience Manager引入了AEM实例的Admin Console支持，并为Managed
 
 ### 在Adobe Experience Manager中应用权限
 
-在Adobe Experience Manager中，应将从Adobe IMS同步的用户组添加到 [AEM提供的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)，这些组件预配置了相应的权限，以便在AEM中执行一组特定的任务。 从Adobe IMS同步的用户不应直接添加到 [AEM提供的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
+在Adobe Experience Manager中，与Adobe IMS同步的用户组应定期添加到[AEM提供的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)，这些用户组已预配置相应权限，以执行AEM中的特定任务集。 从Adobe IMS同步的用户不应直接添加到[AEM提供的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)。

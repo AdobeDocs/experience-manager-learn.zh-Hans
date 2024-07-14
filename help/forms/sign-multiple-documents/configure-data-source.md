@@ -1,5 +1,5 @@
 ---
-title: 配置AEM数据源
+title: 配置AEM Data Source
 description: 配置MySQL支持的数据源以存储和检索表单数据
 feature: Adaptive Forms
 topic: Development
@@ -19,8 +19,8 @@ ht-degree: 3%
 
 # 配置数据源
 
-AEM可通过多种方式实现与外部数据库的集成。 集成数据库的最常见方法之一是通过使用Apache Sling连接池化数据源配置属性 [configMgr](http://localhost:4502/system/console/configMgr).
-第一步是下载并部署相应的 [MySql驱动程序](https://mvnrepository.com/artifact/mysql/mysql-connector-java) 在AEM中。
+AEM可通过多种方式实现与外部数据库的集成。 集成数据库的最常见方法之一是通过[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling连接池化DataSource配置属性。
+第一步是在AEM中下载并部署相应的[MySql驱动程序](https://mvnrepository.com/artifact/mysql/mysql-connector-java)。
 创建Apache Sling连接池化数据源，并提供以下屏幕快照中指定的属性。 数据库架构作为本教程资源的一部分提供给您。
 
 ![数据源](assets/data-source.PNG)
@@ -31,7 +31,7 @@ AEM可通过多种方式实现与外部数据库的集成。 集成数据库的�
 
 
 >[!NOTE]
->请确保为数据源命名 **服饰**. 示例代码使用名称连接到数据库。
+>请确保将数据源命名为&#x200B;**aemformstutorial**。 示例代码使用名称连接到数据库。
 
 | 属性名称 | 价值 |
 | ------------------------|--------------------------------------- |
@@ -41,7 +41,7 @@ AEM可通过多种方式实现与外部数据库的集成。 集成数据库的�
 
 ## 资源
 
-用于创建架构的SQL文件可以是 [从此处下载](assets/sign-multiple-forms.sql). 您需要使用MySql Workbench导入此文件以创建架构和表。
+可从此处](assets/sign-multiple-forms.sql)下载用于创建架构的SQL文件[。 您需要使用MySql Workbench导入此文件以创建架构和表。
 
 ## 后续步骤
 

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # AEM架构栈栈简介 {#introduction-architecture}
 
-介绍 [!DNL OSGi]， [!DNL JCR]， [!DNL Oak]、和 [!DNL Sling] 作为Adobe Experience Manager技术体系的一部分。
+作为Adobe Experience Manager技术栈栈的一部分，介绍[!DNL OSGi]、[!DNL JCR]、[!DNL Oak]和[!DNL Sling]的技术。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32034?quality=12&learn=on)

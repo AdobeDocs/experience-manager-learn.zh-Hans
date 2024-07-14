@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何更新FormsIVS和OutputIVS中的自定义XDP和数据文件
 
-*本视频介绍在FormsIVS和OutputIVS中更新自定义XDP和数据文件以进行测试的步骤。*
+*本视频介绍更新FormsIVS和OutputIVS中的自定义XDP和数据文件以进行测试的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335513?quality=12&learn=on)

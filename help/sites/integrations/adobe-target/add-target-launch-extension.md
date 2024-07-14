@@ -22,7 +22,7 @@ ht-degree: 3%
 
 # 将Target扩展添加到Tags属性 {#adobe-target-extension}
 
-要观看本视频，您必须已拥有 [Adobe Experience Platform中的集成标记与AEM](../experience-platform/data-collection/tags/overview.md).
+若要观看本视频，您必须已将Adobe Experience Platform中的[标记与AEM](../experience-platform/data-collection/tags/overview.md)集成。
 
 了解如何使用标记为AEM网站启用Adobe Target。
 

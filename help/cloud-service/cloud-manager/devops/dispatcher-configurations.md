@@ -1,6 +1,6 @@
 ---
 title: 在AEM Cloud Manager中管理调度程序
-description: 在AEM Cloud Manager中管理Dispatcher配置。
+description: 在AEM Cloud Manager中管理调度程序配置。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 在AEM Cloud Manager中管理Dispatcher配置
 
-使用最佳实践和示例探索Dispatcher如何与AEM即Cloud Service和Cloud Manager配合使用。
+使用最佳实践和示例探索Dispatcher如何与AEM as Cloud Service和Cloud Manager配合使用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330538?quality=12&learn=on)

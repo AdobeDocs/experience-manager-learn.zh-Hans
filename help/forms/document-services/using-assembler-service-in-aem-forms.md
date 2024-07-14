@@ -103,21 +103,21 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 使此功能在您的AEM服务器上正常工作
 
-* 下载 [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) 到您的本地系统。
-* 使用上载并安装包 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* 下载[自定义文档服务捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* 下载 [使用服务用户捆绑包进行开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* 使用部署和启动包 [felix web控制台](http://localhost:4502/system/console/bundles)
-* 将浏览器指向 [AssemblePdf.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
+* 将[AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip)下载到您的本地系统。
+* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)上载并安装包
+* 下载[自定义文档服务包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* 下载[使用服务用户捆绑包进行开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* 使用[felix Web控制台](http://localhost:4502/system/console/bundles)部署和启动包
+* 将浏览器指向[AssemblePdf.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
 * 拖放PDF文件的几个文件
 
 >[!NOTE]
 >
 >确保您的AEM Forms安装已完成。 您的所有包都必须处于活动状态。
 >
->确保已添加 — 引导代理RSA和BouncyCastle库，如本中所述 [安装AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>确保您已添加 — 引导代理RSA和BouncyCastle库，如此[安装AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)中所述
 >
->**此演示的注意事项**
+>此演示的&#x200B;**注意事项**
 >
 > * 该代码无法处理基于XFA的PDF文档
 >

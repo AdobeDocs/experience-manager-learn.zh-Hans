@@ -25,10 +25,10 @@ ht-degree: 0%
 
 要完成此用例，我们需要执行以下操作。
 
-* 将Reader扩展证书添加到“fd-service”用户。 列出了添加Reader扩展凭据的步骤 [此处](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)
+* 将Reader扩展证书添加到“fd-service”用户。 [此处](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)列出了添加Reader扩展凭据的步骤
 
 
-* 您也可以参考以下视频： [配置Reader扩展凭据](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
+* 您还可以观看有关[配置Reader扩展凭据](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)的视频
 
 
 * 创建可呈现和应用使用权限的自定义OSGi服务。 下面列出了完成此任务的代码
@@ -204,5 +204,5 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 1. [使用包管理器下载与本文相关的资源并将其导入AEM](assets/renderandextendxdp.zip)
    * 此软件包包含示例门户和xdp文件
 1. 将Reader扩展证书添加到“fd-service”用户
-1. 将浏览器指向 [门户网页](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
+1. 将浏览器指向[门户网页](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
 1. 单击pdf图标可将xdp渲染为应用了使用权限的pdf文件。

@@ -26,6 +26,6 @@ ht-degree: 0%
 ## 本视频中涵盖的内容
 
 + Dispatcher和SDK概述
-+ [Dispatcher工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html)
++ [Dispatcher Tools](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html)
 + 错误疑难解答
 + 使用Dispatcher日志和运行模式进行调试

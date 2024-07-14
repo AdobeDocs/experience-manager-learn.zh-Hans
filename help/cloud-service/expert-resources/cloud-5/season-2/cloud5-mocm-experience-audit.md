@@ -18,7 +18,7 @@ ht-degree: 5%
 
 # Cloud 5 - Cloud Manager的秘密 — 体验审核
 
-在三部分系列的第一部分，我们探讨了Cloud Manager的基础知识并深入了解体验审核功能。
+在三部分系列中的第一部分，我们探讨了Cloud Manager的基础知识并深入了解体验审核功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343620?quality=12&learn=on)
 

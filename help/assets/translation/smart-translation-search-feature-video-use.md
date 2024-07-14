@@ -1,6 +1,6 @@
 ---
 title: 将智能翻译搜索与AEM Assets结合使用
-description: Smart Translation Search支持跨AEM内容（资产和页面）自动进行跨语言搜索和发现，支持50多种语言，并降低了对手动内容翻译的需求。
+description: Smart Translation Search支持跨AEM内容(Assets和Pages)自动进行跨语言搜索和发现，支持50多种语言，并降低了对手动内容翻译的需求。
 version: 6.4, 6.5
 feature: Search
 topic: Content Management
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 将智能翻译搜索与AEM Assets结合使用{#using-smart-translation-search-with-aem-assets}
 
-Smart Translation Search支持跨AEM内容（资产和页面）自动进行跨语言搜索和发现，支持50多种语言，并降低了对手动内容翻译的需求。
+Smart Translation Search支持跨AEM内容(Assets和Pages)自动进行跨语言搜索和发现，支持50多种语言，并降低了对手动内容翻译的需求。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21297?quality=12&learn=on)
 
@@ -28,7 +28,7 @@ AEM Smart Translation Search允许用户在AEM中使用非英语术语搜索内�
 
 智能翻译搜索是AEM智能标记（应用于英语资产）的完美补充。
 
-本视频假定 [AEM智能翻译搜索](smart-translation-search-technical-video-setup.md) 已设置。
+本视频假定已设置[AEM Smart Translation Search](smart-translation-search-technical-video-setup.md)。
 
 ## 智能翻译搜索的工作原理 {#how-smart-translation-search-works}
 

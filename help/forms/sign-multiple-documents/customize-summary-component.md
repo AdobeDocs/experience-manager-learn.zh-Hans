@@ -34,7 +34,7 @@ ht-degree: 1%
 我们已添加按钮以导航到下一个要签名的表单
 ![template-code](assets/template-code.PNG)
 
-summary.jsp具有以下代码。 它引用了类别ID标识的客户端库 **getnextform**
+summary.jsp具有以下代码。 它引用了类别ID **getnextform**&#x200B;标识的客户端库
 
 ```java
 <%--
@@ -47,7 +47,7 @@ summary.jsp具有以下代码。 它引用了类别ID标识的客户端库 **get
 
 ## 资源
 
-自定义摘要组件可以是 [从此处下载](assets/custom-summary-step.zip)
+自定义摘要组件可以[从此处](assets/custom-summary-step.zip)下载
 
 ## 后续步骤
 

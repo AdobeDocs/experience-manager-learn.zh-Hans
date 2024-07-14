@@ -21,7 +21,7 @@ ht-degree: 0%
 
 一个常见用例是显示包含表单填写器输入的数据的pdf文档。
 
-为了完成此用例，我们利用了 [Adobe PDF嵌入API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
+为完成此用例，我们使用了[Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)。
 
 已执行以下步骤以完成集成
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 客户端库
 
-以下代码是在 `viewPDF` 已单击复选框按钮。 我们将自适应表单数据、模板名称传递到端点以生成PDF。 随后，生成的pdf会使用嵌入的pdf JavaScript库显示到表单填充器中。
+在单击`viewPDF`复选框按钮时执行以下代码。 我们将自适应表单数据、模板名称传递到端点以生成PDF。 随后生成的pdf将使用embed pdf JavaScript库显示到表单填充器中。
 
 ```javascript
 $(document).ready(function() {
@@ -93,31 +93,32 @@ $(document).ready(function() {
 
 ## 从xml数据生成XSD
 
-您可以使用任何免费在线工具来 [生成XSD](https://www.freeformatter.com/xsd-generator.html) 来自上一步中生成的xml数据。
+您可以使用任何免费在线工具从上一步中生成的xml数据中[生成XSD](https://www.freeformatter.com/xsd-generator.html)。
 
 ## 上传模板
 
-确保将xdp模板上传到 [AEM Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) 使用“创建”按钮
+确保使用“创建”按钮将xdp模板上传到[AEM Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
 
 ## 创建自适应表单
 
 根据上一步的XSD创建自适应表单。
-向自适应添加新的选项卡。 将复选框组件和embed-pdf组件添加到此选项卡请确保将复选框命名为viewPDF。
+向自适应添加新的选项卡。 将复选框组件和embed-pdf组件添加到此选项卡
+确保将复选框命名为viewPDF。
 配置embed-pdf组件，如下面的屏幕快照所示
 ![embed-pdf](assets/embed-pdf-configuration.png)
 
-**嵌入PDFAPI密钥**  — 这是可用于嵌入PDF的键。 此密钥仅适用于localhost。 您可以创建 [您自己的密钥](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) 并将其与其他域相关联。
+**嵌入PDFAPI密钥** — 这是可用于嵌入pdf的密钥。 此密钥仅适用于localhost。 您可以创建[您自己的密钥](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)并将其与其他域关联。
 
-**端点返回pdf**  — 这是自定义servlet，它将数据与xdp模板合并并返回pdf。
+**返回pdf**&#x200B;的端点 — 这是自定义servlet，它将将数据与xdp模板合并并返回pdf。
 
-**模板名称**  — 这是到xdp的路径。 通常，它存储在formsanddocuments文件夹下。
+**模板名称** — 这是xdp的路径。 通常，它存储在formsanddocuments文件夹下。
 
-**PDF文件名**  — 这是将显示在嵌入pdf组件中的字符串。
+**PDF的文件名** — 这是将显示在嵌入pdf组件中的字符串。
 
 ## 创建自定义servlet
 
-创建了一个自定义servlet以将数据与XDP模板合并并返回pdf。 下面列出了完成此任务的代码。 自定义servlet是 [嵌入的pdf包](assets/embedpdf.core-1.0-SNAPSHOT.jar)
+创建了一个自定义servlet以将数据与XDP模板合并并返回pdf。 下面列出了完成此任务的代码。 自定义servlet是[嵌入的pdf包](assets/embedpdf.core-1.0-SNAPSHOT.jar)的一部分
 
 ```java
 import java.io.ByteArrayInputStream;
@@ -227,9 +228,9 @@ public class StreamPDFToEmbed extends SlingAllMethodsServlet {
 
 要在本地服务器上对此进行测试，请执行以下步骤：
 
-1. [下载并安装嵌入的PDF包](assets/embedpdf.core-1.0-SNAPSHOT.jar).
+1. [下载并安装嵌入的pdf包](assets/embedpdf.core-1.0-SNAPSHOT.jar)。
 这有了Servlet将数据与XDP模板合并，并使PDF流回。
-1. 使用将path /bin/getPDFToEmbed添加到AdobeGranite CSRF过滤器的已排除路径部分 [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). 在生产环境中，建议使用 [CSRF保护框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
+1. 使用[AEM ConfigMgr](http://localhost:4502/system/console/configMgr)将/bin/getPDFToEmbed路径添加到AdobeGranite CSRF过滤器的排除路径部分中。 在生产环境中，建议使用[CSRF保护框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
 1. [导入客户端库和自定义组件](assets/embed-pdf.zip)
 1. [导入自适应表单和模板](assets/embed-pdf-form-and-xdp.zip)
 1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)

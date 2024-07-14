@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/39705?quality=12&learn=on)
 
-可通过以下链接下载与此视频相关的资产
+可通过以下链接下载与此视频相关的Assets
 
 * [NDA模板](assets/nda-agreement-xdp-template.zip)
 * [自适应表单](assets/nda-agreement-af-with-xdp-template.zip)

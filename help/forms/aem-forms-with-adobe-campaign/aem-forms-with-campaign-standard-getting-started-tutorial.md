@@ -36,11 +36,11 @@ ACS公开了一组丰富的API，使ACS可以与我们选择的技术接口。 �
 要开始配置，请按照以下说明操作
 
 * [下载并解压缩与本教程相关的资源。](assets/aem-forms-and-acs-bundles.zip)
-* 使用部署包 [Felix Web控制台](http://localhost:4502/system/console/bundles)
+* 使用[Felix Web控制台](http://localhost:4502/system/console/bundles)部署包
 * 在Felix OSGI配置中为Adobe Campaign提供相应的设置。
-* [创建本文中所述的服务用户](/help/forms/adaptive-forms/service-user-tutorial-develop.md). 确保部署与文章关联的OSGi捆绑包。
+* [创建本文中提到的服务用户](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。 确保部署与文章关联的OSGi捆绑包。
 * 将ACS私钥存储在etc/key/campaign/private.key中。 您必须在etc/key下创建名为campaign的文件夹。
-* [向服务用户“data”提供对campaign文件夹的读取权限。](http://localhost:4502/useradmin)
+* [向服务用户“data”提供对Campaign文件夹的读取权限。](http://localhost:4502/useradmin)
 
 ## 后续步骤
 

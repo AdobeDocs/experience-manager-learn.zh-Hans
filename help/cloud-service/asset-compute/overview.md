@@ -1,6 +1,6 @@
 ---
-title: AEMas a Cloud Service的Asset compute微服务可扩展性
-description: 本教程介绍如何创建简单的Asset compute工作程序，该工作程序通过将原始资源裁切到圆圈来创建资源演绎版，并应用可配置的对比度和亮度。 虽然工作进程本身是基础性的，但本教程将使用该工作进程来探索创建、开发和部署自定义Asset compute工作进程以用于AEMas a Cloud Service。
+title: AEM as a Cloud Service的Asset compute微服务可扩展性
+description: 本教程介绍如何创建简单的Asset compute工作程序，该工作程序通过将原始资源裁切到圆圈来创建资源演绎版，并应用可配置的对比度和亮度。 虽然工作进程本身是基础性的，但本教程将使用该工作进程来探索创建、开发和部署自定义Asset compute工作进程以用于AEM as a Cloud Service。
 feature: Asset Compute Microservices
 version: Cloud Service
 doc-type: Tutorial
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 AEM as a Cloud Service的Asset compute微服务支持开发和部署自定义工作程序，用于读取和操作存储在AEM中的资产的二进制数据，最常用的操作是创建自定义资产演绎版。
 
-在AEM 6.x中，自定义AEM Workflow进程用于读取、转换和写回资源演绎版，而在AEMas a Cloud Service的Asset compute工作程序中，则可满足此需求。
+在AEM 6.x中，自定义AEM Workflow进程用于读取、转换和写回资源演绎版，而在AEM as a Cloud Service中，Asset compute工作进程可满足此需求。
 
 ## 您将要做什么
 
 >[!VIDEO](https://video.tv.adobe.com/v/40965?quality=12&learn=on)
 
-本教程介绍如何创建简单的Asset compute工作程序，该工作程序通过将原始资源裁切到圆圈来创建资源演绎版，并应用可配置的对比度和亮度。 虽然工作进程本身是基础性的，但本教程将使用该工作进程来探索创建、开发和部署自定义Asset compute工作进程以用于AEMas a Cloud Service。
+本教程介绍如何创建简单的Asset compute工作程序，该工作程序通过将原始资源裁切到圆圈来创建资源演绎版，并应用可配置的对比度和亮度。 虽然工作进程本身是基础性的，但本教程将使用该工作进程来探索创建、开发和部署自定义Asset compute工作进程以用于AEM as a Cloud Service。
 
 ### 目标 {#objective}
 
@@ -37,7 +37,7 @@ AEM as a Cloud Service的Asset compute微服务支持开发和部署自定义工
 1. 创建和配置Asset compute项目
 1. 开发可生成自定义呈现版本的Asset compute工作程序
 1. 编写测试并了解如何调试自定义Asset compute工作程序
-1. 部署Asset compute工作程序，并通过处理配置文件将其与AEMas a Cloud Service创作服务相集成
+1. 部署Asset compute工作程序，并通过处理配置文件将其与AEM as a Cloud Service创作服务相集成
 
 ## 设置
 
@@ -45,7 +45,7 @@ AEM as a Cloud Service的Asset compute微服务支持开发和部署自定义工
 
 ### 帐户和服务配置{#accounts-and-services}
 
-要完成教程、AEMas a Cloud Service开发环境或沙盒程序、访问App Builder和Microsoft Azure Blob Storage，以下帐户和服务需要配置和访问权限。
+要完成教程、 AEM as a Cloud Service开发环境或沙盒程序，以及对App Builder和Microsoft Azure Blob Storage的访问权限，以下帐户和服务需要配置和访问权限。
 
 + [提供帐户和服务](./set-up/accounts-and-services.md)
 
@@ -57,9 +57,9 @@ asset compute项目的本地开发需要特定的开发人员工具集，该工�
 
 ### App Builder
 
-asset compute项目是特别定义的App Builder项目，因此，需要访问Adobe Developer控制台中的App Builder才能设置和部署这些项目。
+asset compute项目是特别定义的App Builder项目，因此，需要访问Adobe Developer Console中的App Builder才能设置和部署这些项目。
 
-+ [设置应用程序生成器](./set-up/app-builder.md)
++ [设置App Builder](./set-up/app-builder.md)
 
 ## 开发
 
@@ -67,13 +67,13 @@ asset compute项目是特别定义的App Builder项目，因此，需要访问Ad
 
 ### 创建新的Asset compute项目
 
-包含一个或多个Asset compute工作进程的Asset compute项目是使用交互式Adobe I/OCLI生成的。 asset compute项目是专门的结构化的App Builder项目，依次是Node.js项目。
+包含一个或多个Asset compute工作进程的Asset compute项目是使用交互式Adobe I/OCLI生成的。 asset compute项目是专门的结构化App Builder项目，依次是Node.js项目。
 
 + [创建新的Asset compute项目](./develop/project.md)
 
 ### 配置环境变量
 
-环境变量在中维护 `.env` 文件，用于提供本地开发所需的Adobe I/O凭据和云存储凭据。
+环境变量在`.env`文件中进行维护以用于本地开发，并用于提供本地开发所需的Adobe I/O凭据和云存储凭据。
 
 + [配置环境变量](./develop/environment-variables.md)
 
@@ -107,23 +107,23 @@ asset compute提供了一个测试框架，用于为工作人员创建测试套�
 
 ### 调试工作程序
 
-asset compute工作人员提供来自传统调试程序的各种级别调试 `console.log(..)` 输出，与集成 __VS代码__ 和  __wskdebug__，允许开发人员在工作程序代码实时执行时逐步执行该代码。
+asset compute工作进程提供从传统`console.log(..)`输出到与&#x200B;__VS代码__&#x200B;和&#x200B;__wskdebug__&#x200B;集成的各种级别的调试，允许开发人员在工作进程代码实时执行时逐步执行该代码。
 
 + [调试工作程序](./test-debug/debug.md)
 
 ## 部署
 
-了解如何将自定义Asset compute工作程序与AEMas a Cloud Service集成，方法是首先将其部署到Adobe I/O Runtime，然后通过AEM Assets的处理配置文件从AEMas a Cloud Service创作实例进行调用。
+了解如何将自定义Asset compute工作程序与AEM as a Cloud Service集成，方法是首先将其部署到Adobe I/O Runtime，然后通过AEM as a Cloud Service的处理配置文件从AEM Assets Author调用。
 
 ### 部署到Adobe I/O Runtime
 
-asset compute工作程序必须部署到Adobe I/O Runtime才能与AEMas a Cloud Service一起使用。
+asset compute工作人员必须部署到Adobe I/O Runtime才能与AEM as a Cloud Service一起使用。
 
 + [使用处理配置文件](./deploy/runtime.md)
 
 ### 通过AEM处理用户档案集成工作人员
 
-部署到Adobe I/O Runtime后，便可以在AEMas a Cloud Service中通过注册Asset compute工作程序 [资产处理配置文件](../../assets/configuring/processing-profiles.md). 处理用户档案依次应用于应用于其中资产的资产文件夹。
+部署到Adobe I/O Runtime后，可以通过[Assets处理配置文件](../../assets/configuring/processing-profiles.md)在AEM as a Cloud Service中注册Asset compute工作程序。 处理用户档案依次应用于应用于其中资产的资产文件夹。
 
 + [与AEM处理用户档案集成](./deploy/processing-profiles.md)
 
@@ -131,7 +131,7 @@ asset compute工作程序必须部署到Adobe I/O Runtime才能与AEMas a Cloud 
 
 这些简短的教程基于前几章中的基础学习来处理更高级的用例。
 
-+ [开发Asset compute元数据工作程序](./advanced/metadata.md) 可以将元数据写回
++ [开发一个Asset compute元数据工作程序](./advanced/metadata.md)，该工作程序可以将元数据写回
 
 ## 基于Github的代码
 
@@ -139,7 +139,7 @@ asset compute工作程序必须部署到Adobe I/O Runtime才能与AEMas a Cloud 
 
 + [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @主分支
 
-源代码不包含所需的 `.env` 或 `config.json` 文件。 您必须使用进行添加和配置 [帐户和服务](#accounts-and-services) 信息。
+源代码不包含所需的`.env`或`config.json`文件。 必须使用您的[帐户和服务](#accounts-and-services)信息添加和配置这些帐户。
 
 ## 其他资源
 
@@ -147,15 +147,15 @@ asset compute工作程序必须部署到Adobe I/O Runtime才能与AEMas a Cloud 
 
 ### 文档
 
-+ [asset compute服务文档](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
-+ [asset compute开发工具自述文件](https://github.com/adobe/asset-compute-devtool)
-+ [asset compute示例工作程序](https://github.com/adobe/asset-compute-example-workers)
++ [Asset compute服务文档](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
++ [Asset compute开发工具自述文件](https://github.com/adobe/asset-compute-devtool)
++ [Asset compute示例辅助进程](https://github.com/adobe/asset-compute-example-workers)
 
 ### API和SDK
 
-+ [ASSET COMPUTESDK](https://github.com/adobe/asset-compute-sdk)
-   + [asset compute公域](https://github.com/adobe/asset-compute-commons)
-   + [asset computeXMP](https://github.com/adobe/asset-compute-xmp#readme)
++ [Asset computeSDK](https://github.com/adobe/asset-compute-sdk)
+   + [Asset compute共享资源](https://github.com/adobe/asset-compute-commons)
+   + [Asset computeXMP](https://github.com/adobe/asset-compute-xmp#readme)
 + [Adobe云Blobstore包装库](https://github.com/adobe/node-cloud-blobstore-wrapper)
 + [Adobe节点提取重试库](https://github.com/adobe/node-fetch-retry)
-+ [asset compute示例工作程序](https://github.com/adobe/asset-compute-example-workers)
++ [Asset compute示例辅助进程](https://github.com/adobe/asset-compute-example-workers)

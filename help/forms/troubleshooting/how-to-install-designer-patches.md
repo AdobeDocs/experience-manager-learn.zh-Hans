@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何安装Designer修补程序
 
-*本视频介绍安装Designer修补程序的过程。*
+*此视频介绍安装Designer修补程序的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335504?quality=12&learn=on)

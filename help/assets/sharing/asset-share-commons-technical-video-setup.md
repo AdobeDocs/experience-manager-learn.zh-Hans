@@ -1,6 +1,6 @@
 ---
 title: 在本地AEM上设置资源共享公域
-description: 有关功能和技术方面了解资产共享公域的材料
+description: 适用于功能和技术了解Assets Share Commons的材料
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution

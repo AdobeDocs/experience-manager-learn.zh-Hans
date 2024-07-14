@@ -26,7 +26,7 @@ ht-degree: 0%
 + 参数
 + 输出。
 
-此的详细信息 [此处提供了表单参数。](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
+此[表单参数的详细信息可在此处获得。](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
 
 下面列出的示例代码为所有Office 365文档类型生成JSON片段。
 

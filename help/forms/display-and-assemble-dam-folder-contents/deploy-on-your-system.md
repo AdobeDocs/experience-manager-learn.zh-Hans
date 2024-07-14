@@ -20,15 +20,15 @@ ht-degree: 0%
 
 请按照下面列出的步骤，使此用例在您的本地AEM实例上运行。
 
-* [部署DevelopingWithServiceUser捆绑包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) 包含在zip文件中。
+* [部署包含在zip文件中的DevelopingWithServiceUser包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)。
 
-* 在Apache Sling服务用户映射器服务中添加以下条目 **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service** 使用 [configMgr](http://localhost:4502/system/console/configMgr).
+* 使用[configMgr](http://localhost:4502/system/console/configMgr)在Apache Sling服务用户映射器服务&#x200B;**DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**&#x200B;中添加以下条目。
 
-* [部署新闻稿捆绑包](assets/Newsletters.core-1.0.0-SNAPSHOT.jar). 此包中包含用于列出文件夹内容并汇编选定新闻稿的代码。
+* [部署新闻稿包](assets/Newsletters.core-1.0.0-SNAPSHOT.jar)。 此包中包含用于列出文件夹内容并汇编选定新闻稿的代码。
 
-* [使用包管理器导入包](assets/newsletter.zip). 该软件包包含用于测试解决方案的客户端库和示例pdf文件。
+* [使用包管理器导入包](assets/newsletter.zip)。 该软件包包含用于测试解决方案的客户端库和示例pdf文件。
 
-* [导入自适应表单示例](assets/sample-adaptive-form.zip). 此表单将列出可选择的新闻稿。
+* [导入自适应表单示例](assets/sample-adaptive-form.zip)。 此表单将列出可选择的新闻稿。
 
-* [预览表单](http://localhost:4502/content/dam/formsanddocuments/downloadarchivednewsletters/jcr:content?wcmmode=disabled).
+* [预览表单](http://localhost:4502/content/dam/formsanddocuments/downloadarchivednewsletters/jcr:content?wcmmode=disabled)。
 选择要下载的新闻稿。所选的新闻稿将合并为一个PDF文件并返回给您。

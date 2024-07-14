@@ -37,8 +37,8 @@ ht-degree: 1%
 >
 >在网站上为每个唯一图像大小创建一个图像预设。 例如，如果产品详细信息页面需要350 X 350图像，浏览/搜索页面需要120 X 120图像，交叉销售/精选项目需要90 X 90图像，那么无论您有500个图像还是500,000个图像，都需要三个图像预设。
 
-- 了解有关 [图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
-- 了解如何 [创建图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
+- 了解有关[图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html)的更多信息。
+- 了解如何[创建图像预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)。
 
 ## 图像预设和锐化
 
@@ -60,10 +60,10 @@ ht-degree: 1%
 
 Dynamic Media Classic允许三种类型的锐化：简单锐化、重新取样模式和钝化蒙版。
 
-了解有关 [Dynamic Media Classic锐化选项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
+了解有关[Dynamic Media Classic锐化选项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)的更多信息。
 
 ## 其他资源
 
-[图像预设指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf). 用于优化图像质量和加载速度的设置。
+[图像预设指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)。 用于优化图像质量和加载速度的设置。
 
-[图像是所有内容第2部分：从不只有模糊 — 质量与速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). 讨论使用图像预设交付高质量、快速加载图像的博客文章。
+[图像是所有内容第2部分：它从来都不是那么模糊 — 质量与速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。 讨论使用图像预设交付高质量、快速加载图像的博客文章。

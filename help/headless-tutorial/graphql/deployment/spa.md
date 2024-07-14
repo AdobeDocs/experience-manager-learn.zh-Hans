@@ -20,21 +20,21 @@ ht-degree: 1%
 
 # AEM Headless SPA部署
 
-AEM Headless单页应用程序(SPA)部署涉及使用框架（如React或Vue）构建的基于JavaScript的应用程序，这些框架以Headless方式使用AEM中的内容并与之交互。
+AEM Headless单页应用程序(SPA)部署涉及基于JavaScript的应用程序，这些应用程序使用诸如React或Vue之类的框架构建，这些框架以Headless方式使用AEM中的内容并与之交互。
 
 部署可与AEM以Headless方式交互的SPA时，需要托管SPA并使其可通过Web浏览器访问。
 
 ## 托管SPA
 
-SPA由一系列本机Web资源组成： **HTML、CSS和JavaScript**. 这些资源是在以下期间生成的 _生成_ 流程(例如， `npm run build`)，并部署到主机以供最终用户使用。
+SPA由本机Web资源的集合组成：**HTML、CSS和JavaScript**。 这些资源在&#x200B;_生成_&#x200B;过程中生成（例如，`npm run build`），并部署到主机以供最终用户使用。
 
-有各式各样的 **托管** 选项取决于贵组织的要求：
+根据您组织的要求，有各种&#x200B;**托管**&#x200B;选项：
 
-1. **云提供商** 例如 **Azure** 或 **AWS**.
+1. **云提供商**，如&#x200B;**Azure**&#x200B;或&#x200B;**AWS**。
 
-2. **内部部署** 在公司中托管 **数据中心**
+2. 在公司&#x200B;**数据中心内托管**&#x200B;内部部署&#x200B;****
 
-3. **前端托管平台** 例如 **AWS放大**， **Azure App Service**， **Netlify**， **赫罗库**， **韦尔塞尔**，等等。
+3. **前端托管平台**，如&#x200B;**AWS Amplify**、**Azure App Service**、**Netlify**、**Heroku**、**Vercel**&#x200B;等。
 
 ## 部署配置
 
@@ -45,9 +45,9 @@ SPA由一系列本机Web资源组成： **HTML、CSS和JavaScript**. 这些资�
 当SPA和AEM均由来自同一域的最终用户访问时，它们会共享域。 例如：
 
 + 通过以下方式访问AEM： `https://wknd.site/`
-+ 通过以下方式访问SPA `https://wknd.site/spa`
++ 通过`https://wknd.site/spa`访问SPA
 
-由于AEM和SPA都可从同一域访问，因此Web浏览器允许SPA对AEM Headless端点执行XHR而不需要CORS，并允许共享HTTP Cookie(例如AEM) `login-token` Cookie)。
+由于AEM和SPA都可从同一域访问，因此Web浏览器允许SPA无需CORS即可对AEM Headless端点执行XHR操作，并且允许共享HTTP Cookie(例如AEM `login-token` Cookie)。
 
 SPA和AEM流量在共享域中的路由方式取决于您：具有多个源的CDN、具有反向代理的HTTP服务器、直接在AEM中托管SPA等等。
 
@@ -55,7 +55,7 @@ SPA和AEM流量在共享域中的路由方式取决于您：具有多个源的CD
 
 | SPA连接到 | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
-| [Dispatcher过滤器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
+| [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨源资源共享(CORS) | ✘ | ✘ | ✘ |
 | AEM主机 | ✘ | ✘ | ✘ |
 
@@ -64,29 +64,29 @@ SPA和AEM流量在共享域中的路由方式取决于您：具有多个源的CD
 当来自不同域的最终用户访问SPA和AEM时，这两个域各不相同。 例如：
 
 + 通过以下方式访问AEM： `https://wknd.site/`
-+ 通过以下方式访问SPA `https://wknd-app.site/`
++ 通过`https://wknd-app.site/`访问SPA
 
-由于AEM和SPA可从不同的域访问，因此Web浏览器会强制实施安全策略，例如 [跨源资源共享(CORS)](./configurations/cors.md)，并阻止共享HTTP Cookie(如AEM) `login-token` Cookie)。
+由于AEM和SPA是从不同的域访问的，因此Web浏览器会强制实施安全策略(如[跨源资源共享(CORS)](./configurations/cors.md))，并阻止共享HTTP Cookie(如AEM的`login-token` Cookie)。
 
 以下是SPA生产部署所需的部署配置(当托管在不同于AEM的域上时)。
 
 | SPA连接到 | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
-| [Dispatcher过滤器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
+| [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [跨源资源共享(CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
 | [AEM主机](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
 #### 不同域上的SPA部署示例
 
-在此示例中，SPA部署到Netlify域(`https://main--sparkly-marzipan-b20bf8.netlify.app/`)，而SPA会使用AEM发布域中的AEM GraphQL API(`https://publish-p65804-e666805.adobeaemcloud.com`)。 以下屏幕截图突出显示CORS要求。
+在此示例中，SPA部署到Netlify域(`https://main--sparkly-marzipan-b20bf8.netlify.app/`)，并且SPA使用来自AEM Publish域(`https://publish-p65804-e666805.adobeaemcloud.com`)的AEM GraphQL API。 以下屏幕截图突出显示CORS要求。
 
-1. SPA来自Netlify域，但会向其他域上的AEM GraphQL API发起XHR调用。 此跨站点请求需要 [CORS](./configurations/cors.md) AEM ，以允许来自Netlify域的请求访问其内容。
+1. SPA来自Netlify域，但会向其他域上的AEM GraphQL API发起XHR调用。 此跨站点请求需要在AEM上设置[CORS](./configurations/cors.md)，以允许来自Netlify域的请求访问其内容。
 
-   ![从SPA和AEM主机提供的SPA请求 ](assets/spa/cors-requirement.png)
+   从SPA &amp; AEM主机提供的![SPA请求](assets/spa/cors-requirement.png)
 
-2. 检查对AEM GraphQL API的XHR请求， `Access-Control-Allow-Origin` 存在，向Web浏览器表示AEM允许来自此Netlify域的请求访问其内容。
+2. 在检查对AEM GraphQL API的XHR请求时，`Access-Control-Allow-Origin`存在，这向Web浏览器表示，AEM允许来自此Netlify域的请求访问其内容。
 
-   如果AEM [CORS](./configurations/cors.md) 缺少或不包含Netlify域，则Web浏览器会导致XHR请求失败，并报告CORS错误。
+   如果AEM [CORS](./configurations/cors.md)缺失或不包含Netlify域，则Web浏览器会导致XHR请求失败，并报告CORS错误。
 
    ![CORS响应标头AEM GraphQL API](assets/spa/cors-response-headers.png)
 

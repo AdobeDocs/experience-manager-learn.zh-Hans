@@ -25,13 +25,13 @@ ht-degree: 0%
 出于本文的目的，我们将创建一个自定义模板，以便在同一页面上显示自定义资源类型和OOTB资源类型。 要创建自定义模板，请按照以下说明操作
 
 1. 在/apps下创建一个sling：文件夹。 将其命名为“ myportalcomponent ”
-1. 添加“fpContentType”属性。 将其值设置为&quot;**/libs/fd/ fp/formTemplate”。**
+1. 添加“fpContentType”属性。 将其值设置为“**/libs/fd/ fp/formTemplate”。**
 1. 添加“title”属性并将其值设置为“custom template”。 这是您将在搜索和列表程序组件的下拉列表中看到的名称
 1. 在此文件夹下创建一个“template.html”。 此文件将包含用于样式设置和显示各种资源类型的代码。
 
 ![appsfolder](assets/appsfolder_.png)
 
-以下代码列出了使用搜索和列表程序组件的各种类型的资源。 我们为每种类型的资产创建单独的html元素，如data-type = &quot;videos&quot;标记所示。 对于“视频”的资源类型，我们使用 &lt;video> 用于内联播放视频的元素。 对于“worddocuments”的资源类型，我们使用不同的html标记。
+以下代码列出了使用搜索和列表程序组件的各种类型的资源。 我们为每种类型的资产创建单独的html元素，如data-type = &quot;videos&quot;标记所示。 对于“视频”的资源类型，我们使用&lt;video>元素来内联播放视频。 对于“worddocuments”的资源类型，我们使用不同的html标记。
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 ## 配置搜索和列表程序组件 {#configure-search-and-lister-component}
 
-定义自定义模板后，现在必须将此自定义模板与“Search and Lister”组件关联。 指向您的浏览器 [到此url](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
+定义自定义模板后，现在必须将此自定义模板与“Search and Lister”组件关联。 将浏览器[指向此URL](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html)。
 
 切换到设计模式并将段落系统配置为在允许的组件组中包含搜索和列表程序组件。 搜索和列表程序组件是Document Services组的一部分。
 
@@ -103,13 +103,13 @@ ht-degree: 0%
 
 以下屏幕抓图显示了为列出而配置的资源类型
 
-![资产类型](assets/assettypes.png)
+![assettypes](assets/assettypes.png)
 
-现在，您已配置搜索和列表程序门户组件，接下来该查看该列表程序的操作了。 指向您的浏览器 [到此url](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). 结果应该与下图类似。
+现在，您已配置搜索和列表程序门户组件，接下来该查看该列表程序的操作了。 将浏览器[指向此URL](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled)。 结果应该与下图类似。
 
 >[!NOTE]
 >
->如果您的门户在发布服务器上列出了自定义资源类型，请确保向节点授予“fd-service”用户的“读取”权限 **/apps/fd/fp/extensions/querybuilder**
+>如果您的门户在发布服务器上列出了自定义资产类型，请确保向节点&#x200B;**/apps/fd/fp/extensions/querybuilder**&#x200B;授予“fd-service”用户的“读取”权限
 
-![资产类型](assets/assettypeslistings.png)
-[请使用包管理器下载并安装此包。](assets/customassettypekt1.zip) 这包含示例mp4和word文档以及用作资产类型的xdp文件，以使用搜索和列表程序组件列出
+![assettypes](assets/assettypeslistings.png)
+[请使用包管理器下载并安装此包。](assets/customassettypekt1.zip)这包含示例mp4和word文档以及用作使用搜索和列表程序组件列出的资产类型的xdp文件

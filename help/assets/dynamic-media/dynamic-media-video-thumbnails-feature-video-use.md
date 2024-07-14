@@ -28,4 +28,4 @@ AEM Assets自定义视频缩略图使作者能够从一组生成的缩略图中�
 
 >[!NOTE]
 >
->您应该运行 [Dynamic Media中的AEM实例](https://experienceleague.adobe.com/docs/) 模式
+>您应在Dynamic Media](https://experienceleague.adobe.com/docs/)模式下运行[AEM实例

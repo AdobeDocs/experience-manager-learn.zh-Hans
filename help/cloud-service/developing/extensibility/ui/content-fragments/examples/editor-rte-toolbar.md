@@ -25,15 +25,15 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
-可以将自定义按钮添加到 **RTE工具栏** 在内容片段编辑器中使用 `rte` 扩展点。 此示例说明如何添加名为的自定义按钮 _添加提示_ 到RTE工具栏并在RTE中修改内容。
+可以使用`rte`扩展点将自定义按钮添加到内容片段编辑器中的&#x200B;**RTE工具栏**。 此示例说明如何向RTE工具栏添加名为&#x200B;_添加提示_&#x200B;的自定义按钮并修改RTE中的内容。
 
-使用 `rte` 扩展点的 `getCustomButtons()` 方法可以将一个或多个自定义按钮添加到 **RTE工具栏**. 也可以添加或删除标准RTE按钮，如 _复制、粘贴、粗体和斜体_ 使用 `getCoreButtons()` 和 `removeButtons)` 方法。
+使用`rte`扩展点的`getCustomButtons()`方法，可以将一个或多个自定义按钮添加到&#x200B;**RTE工具栏**。 还可以分别使用`getCoreButtons()`和`removeButtons)`方法添加或删除标准RTE按钮，如&#x200B;_复制、粘贴、粗体和斜体_。
 
-此示例说明如何使用自定义插入高亮显示的注释或提示 _添加提示_ 工具栏按钮。 高亮显示的注释或提示内容具有通过HTML元素和关联的CSS类应用的特殊格式。 使用插入占位符内容和HTML代码 `onClick()` 的回调方法 `getCustomButtons()`.
+此示例说明如何使用自定义&#x200B;_添加提示_&#x200B;工具栏按钮插入高亮显示的注释或提示。 高亮显示的注释或提示内容具有通过HTML元素和关联的CSS类应用的特殊格式。 使用`getCustomButtons()`的`onClick()`回调方法插入占位符内容和HTML代码。
 
 ## 扩展点
 
-此示例将扩展到扩展点 `rte` 在内容片段编辑器的RTE工具栏中添加自定义按钮。
+此示例扩展到扩展点`rte`以在内容片段编辑器中将自定义按钮添加到RTE工具栏。
 
 | AEM UI已扩展 | 扩展点 |
 | ------------------------ | --------------------- | 
@@ -41,20 +41,20 @@ ht-degree: 0%
 
 ## 扩展示例
 
-以下示例创建 _添加提示_ RTE工具栏中的自定义按钮。 单击操作将占位符文本插入到RTE中的当前插入符号位置。
+以下示例在RTE工具栏中创建一个&#x200B;_添加提示_&#x200B;自定义按钮。 单击操作将占位符文本插入到RTE中的当前插入符号位置。
 
 该代码显示了如何添加带有图标的自定义按钮并注册点击处理程序函数。
 
 ### 延期注册
 
-`ExtensionRegistration.js`，映射到index.html路由，是AEM扩展的入口点，并定义：
+`ExtensionRegistration.js`映射到index.html路由，是AEM扩展的入口点，并定义：
 
-+ RTE工具栏按钮在中定义 `getCustomButtons()` 函数为 `id, tooltip and icon` 属性。
-+ 按钮的点击处理程序，位于 `onClick()` 函数。
-+ 点击处理程序函数将接收 `state` 对象作为参数，以获取HTML或文本格式的RTE内容。 但在本例中，并未使用它。
-+ click handler函数返回指令数组。 此数组的对象具有 `type` 和 `value` 属性。 要插入内容，请 `value` attributesHTML代码段， `type` 属性使用 `insertContent`. 如果存在替换内容的用例，则用例 `replaceContent` 指令类型。
++ RTE工具栏按钮在`getCustomButtons()`函数中的定义具有`id, tooltip and icon`属性。
++ `onClick()`函数中按钮的点击处理程序。
++ 点击处理程序函数接收`state`对象作为参数，以获取HTML或文本格式的RTE内容。 但在本例中，并未使用它。
++ click handler函数返回指令数组。 此数组有一个具有`type`和`value`属性的对象。 要插入内容，`value`属性HTML代码段，`type`属性使用`insertContent`。 如果有用例替换内容，则用例`replaceContent`指令类型。
 
-此 `insertContent` 值是一个HTML字符串， `<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>`. CSS类 `cmp-contentfragment__element-tip` 用于显示值的构件中未定义，而是在显示此内容片段字段的Web体验上实施的。
+`insertContent`值是HTML字符串`<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>`。 用于显示值的CSS类`cmp-contentfragment__element-tip`未在构件中定义，而是在显示此内容片段字段的Web体验上实施的。
 
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`

@@ -15,7 +15,7 @@ exl-id: 0f3e50f0-88d8-46be-be8b-0f547c3633a6
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '87'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 0%
    $ sudo npm install -g @adobe/aem-cli
    ```
 
-1. 将目录更改为项目目录，该项目目录是从中创建的Git存储库 [AEM样板](https://github.com/adobe/aem-boilerplate) 模板。
+1. 将目录更改为项目目录，该项目目录是从[AEM样板](https://github.com/adobe/aem-boilerplate)模板生成的Git存储库。
 
    ```
    $ git clone git@github.com:my-org/my-project.git

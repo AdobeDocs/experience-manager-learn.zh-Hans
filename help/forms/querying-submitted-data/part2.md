@@ -27,7 +27,7 @@ ht-degree: 0%
 
 我们创建了自定义提交来处理表单提交。 在此自定义提交的post.request.jsp中，我们将POST转发到我们的servlet。
 
-要了解有关自定义提交请求的更多信息，请阅读此 [文章](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
+若要了解有关自定义提交请求的详细信息，请阅读此[文章](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
 
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest，&quot;/bin/storeafsubmission&quot;，null，null)；
 
@@ -137,7 +137,7 @@ public class HandleAdaptiveFormSubmission extends SlingAllMethodsServlet {
 }
 ```
 
-![connectionpool](assets/connectionpooled.gif)
+![连接池](assets/connectionpooled.gif)
 
 要使此功能在您的系统中正常工作，请执行以下步骤
 

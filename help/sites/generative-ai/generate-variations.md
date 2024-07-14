@@ -25,4 +25,4 @@ ht-degree: 5%
 
 ## 在AEM创作中使用生成变体
 
-+ __文档创作：__ 了解如何利用生成变体来创建动态和个性化的文档，将基于文档的网站提升为更引人入胜且引人入胜的体验。 [查看文档](https://www.aem.live/docs/sidekick-generate-variations)
++ __文档创作：__&#x200B;了解如何利用生成变体来创建动态和个性化的文档，将基于文档的网站提升为更引人注目、更引人入胜的体验。 [查看文档](https://www.aem.live/docs/sidekick-generate-variations)

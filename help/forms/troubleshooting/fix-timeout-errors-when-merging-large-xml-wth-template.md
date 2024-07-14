@@ -30,16 +30,20 @@ POST /services/OutputService/GeneratePdfOutput HTTP/1.1] com.adobe.fd.output.int
 ## 更改aries超时
 
 * 停止AEM服务器
-* 创建名为的文件夹 **安装** 在AEM安装的crx-quickstart文件夹下
-* 创建名为的文件 **org.apache.aries.transaction.config** 的安装文件夹下包含以下content aries.transaction.timeout=&quot;1200&quot;。 您可以根据需要更改超时值。 超时值以秒为单位
+* 在AEM安装的crx-quickstart文件夹下创建名为&#x200B;**install**&#x200B;的文件夹
+* 创建名为&#x200B;**org.apache.aries.transaction.config**的文件，该文件包含以下内容
+aries.transaction.timeout=&quot;1200&quot;
+在“安装文件夹”下。 您可以根据需要更改超时值。 超时值以秒为单位
 
 >[!NOTE]
-> 创建org.apache.aries.transaction配置后，您可以从以下位置编辑事务超时值： [configMgr](http://localhost:4502/system/console/configMgr) 而不是编辑文件
+> 创建org.apache.aries.transaction配置后，您可以从[configMgr](http://localhost:4502/system/console/configMgr)中编辑事务超时值，而不是编辑文件
 
 
 ## 更改Jacorb ORB提供程序设置
 
 * [打开OSGi ConfigMgr](http://localhost:4502/system/console/configMgr)
-* 搜索 **Jacorb ORB提供程序**
-* 添加以下条目jacorb.connection.client.pending_reply_timeout=600000以上设置将挂起回复超时（也称为CORBA客户端超时）设置为600秒。
+* 搜索&#x200B;**Jacorb ORB提供程序**
+* 添加以下条目
+jacorb.connection.client.pending_reply_timeout=600000
+上述设置将挂起回复超时（也称为CORBA客户端超时）设置为600秒。
 * 保存更改

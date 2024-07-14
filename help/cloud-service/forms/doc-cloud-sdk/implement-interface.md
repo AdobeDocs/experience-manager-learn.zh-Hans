@@ -22,7 +22,7 @@ ht-degree: 0%
 
 以下是实现接口的类的完整代码。
 
-此类使用2种实用程序方法 `getAccessToken`， `getJWTToken` 静态方法 `getContentAnalyserRequest` 之 `GetContentAnalyser` 类。
+此类使用`GetContentAnalyser`类的2个实用工具方法`getAccessToken`、`getJWTToken`和静态方法`getContentAnalyserRequest`。
 
 
 ```java

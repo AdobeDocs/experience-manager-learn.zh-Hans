@@ -24,7 +24,7 @@ AEM 6.3在此版本中引入了几项新增功能和增强功能，以简化自�
 
 **自适应表单编辑器的某些主要改进包括：**
 
-* [改进的最终用户体验](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
+* [已改进最终用户体验](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
 
 * 自动填写表单字段
 * 文本框组件的富文本
@@ -34,6 +34,6 @@ AEM 6.3在此版本中引入了几项新增功能和增强功能，以简化自�
 * [组件中的默认验证](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
 * [键盘快捷键可加快内容创作体验](https://helpx.adobe.com/aem-forms/6-3/keyboard-shortcuts.html#AdaptiveFormEditor)
 * [支持用于创建自适应表单的JSON架构](https://helpx.adobe.com/aem-forms/6-3/adaptive-form-json-schema-form-model.html)
-* [自适应表单中的验证码](https://helpx.adobe.com/aem-forms/6-3/captcha-adaptive-forms.html)
-* [增强的Acrobat Sign集成](https://helpx.adobe.com/aem-forms/6-3/working-with-adobe-sign.html)
+* 自适应表单中的[验证码](https://helpx.adobe.com/aem-forms/6-3/captcha-adaptive-forms.html)
+* [增强型Acrobat Sign集成](https://helpx.adobe.com/aem-forms/6-3/working-with-adobe-sign.html)
 * [异步提交表单](https://helpx.adobe.com/aem-forms/6-3/asynchronous-submissions-adaptive-forms.html)

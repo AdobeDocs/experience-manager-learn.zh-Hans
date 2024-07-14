@@ -21,7 +21,7 @@ ht-degree: 0%
 
 AEM Forms CS提供开箱即用的提交操作以将表单数据存储在Azure中，但它无法在blob上创建blob索引标记。 为满足用例，创建了自定义提交服务，将提交的数据存储在Azure中，并使用表单中标记为可搜索的字段创建blob索引数据标记。
 
-[此处提供了基于核心组件的自适应表单的自定义提交处理程序示例](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). 编写以下自定义提交以处理表单提交
+[此处](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56)提供了基于核心组件的自适应表单的示例自定义提交处理程序。 编写以下自定义提交以处理表单提交
 
 ```java
 package com.aemforms.saveandfecthfromazure.prefill;

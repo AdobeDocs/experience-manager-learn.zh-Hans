@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何设置Oak登录令牌会话过期
 
-*本视频介绍设置Oak登录令牌会话到期的步骤。*
+*此视频介绍设置Oak登录令牌会话到期的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335468?quality=12&learn=on)

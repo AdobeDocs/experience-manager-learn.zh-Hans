@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # 嵌入Headless自适应表单
 
-此 [教程将介绍各种Headless API](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) 允许您列出、显示和提交表单。
+本[教程将介绍各种Headless API](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction)，它们允许您列出、显示和提交表单。
 
 本文将介绍各种Headless API，它们允许您以Headless方式列出、显示和提交自适应表单。
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 以下屏幕截图显示了嵌入到SPA中的联系我们表单
 
-![contact-us-form](./assets/contact-us-form.png)
+![与我们联系表单](./assets/contact-us-form.png)
 
 ## 先决条件
 

@@ -32,7 +32,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本教程中的下拉列表和卡片布局是使用 [材料UI库](https://mui.com/). 您需要下载相应的材料UI包，以使代码在您的系统中正常工作。
+>本教程中的下拉列表和卡片布局是使用[材料UI库](https://mui.com/)创建的。 您需要下载相应的材料UI包，以使代码在您的系统中正常工作。
 
 ## 设置代理
 
@@ -56,7 +56,7 @@ module.exports = function(app) {
 };
 ```
 
-您还需要安装和添加 **http-proxy-middleware** 模块到您的项目。
+您还需要安装&#x200B;**http-proxy-middleware**&#x200B;模块并将其添加到您的项目中。
 
 ## 后续步骤
 

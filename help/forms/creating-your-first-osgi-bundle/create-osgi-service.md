@@ -24,7 +24,7 @@ OSGi服务由其服务接口语义定义，并作为服务对象实现。 服务
 
 ## 定义接口
 
-一个简单接口，通过一种方法将数据与 <span class="x x-first x-last">XDP</span> 模板。
+一个简单接口，具有一个将数据与<span class="x x-first x-last">XDP</span>模板合并的方法。
 
 ```java
 package com.mysite.samples;
@@ -40,7 +40,7 @@ public interface MyfirstInterface
 
 ## 实施接口
 
-创建一个名为的新包 `com.mysite.samples.impl` 保存接口的实现。
+创建一个名为`com.mysite.samples.impl`的新包来保存接口的实现。
 
 ```java
 package com.mysite.samples.impl;
@@ -78,19 +78,19 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 }
 ```
 
-注释 `@Component(...)` 第10行将此Java类标记为OSGi组件，并将其注册为OSGi服务。
+第10行的注释`@Component(...)`将此Java类标记为OSGi组件，并将其注册为OSGi服务。
 
-此 `@Reference` 注释是OSGi声明性服务的一部分，用于注入 [输出服务](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 到变量中 `outputService`.
+`@Reference`注释是OSGi声明性服务的一部分，用于将[Outputservice](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)的引用插入到变量`outputService`中。
 
 
 ## 生成并部署捆绑包
 
-* 打开 **命令提示符窗口**
-* 导航到 `c:\aemformsbundles\mysite\core`
-* 执行命令 `mvn clean install -PautoInstallBundle`
+* 打开&#x200B;**命令提示符窗口**
+* 导航到`c:\aemformsbundles\mysite\core`
+* 执行命令`mvn clean install -PautoInstallBundle`
 * 上述命令将自动构建捆绑包，并将其部署到在localhost：4502上运行的AEM实例
 
-该捆绑包还将在以下位置提供 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用将捆绑包部署到AEM中。 [Felix Web控制台。](http://localhost:4502/system/console/bundles)
+该包还将在以下位置`C:\AEMFormsBundles\mysite\core\target`提供。 也可以使用[Felix Web控制台](http://localhost:4502/system/console/bundles)将包部署到AEM中。
 
 ## 使用服务
 
@@ -101,13 +101,13 @@ MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.mysite.samp
 com.adobe.aemfd.docmanager.Document generatedDocument = myFirstAEMFormsService.mergeDataWithXDPTemplate(xdp_or_pdf_template,xmlDocument);
 ```
 
-包含JSP页的示例包可以是 [从此处下载](assets/learning_aem_forms.zip)
+可以从此处](assets/learning_aem_forms.zip)下载包含JSP页的示例包[
 
 [完整的捆绑包可供下载](assets/mysite.core-1.0.0-SNAPSHOT.jar)
 
 ## 测试包
 
-使用将包导入并安装到AEM中 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)将包导入并安装到AEM中
 
 使用Postman进行POST调用并提供输入参数，如下面的屏幕快照中所示
 ![邮递员](assets/test-service-postman.JPG)

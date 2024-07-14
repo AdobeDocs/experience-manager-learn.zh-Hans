@@ -24,7 +24,9 @@ ht-degree: 2%
 
 * 无法使用默认JCR存储库ACL来控制路径绑定的servlet的访问
 * 路径绑定的servlet只能注册到路径，而不能注册到资源类型（即没有后缀处理）
-* 如果路径绑定的servlet不是活动的（例如，如果捆绑丢失或未启动），POST可能会导致意外结果。 通常创建节点 `/bin/xyz` 对于仅查看存储库的开发人员，由于存在这些缺点，强烈建议将servlet绑定到资源类型而不是路径
+* 如果路径绑定的servlet不是活动的（例如，如果捆绑丢失或未启动），POST可能会导致意外结果。 通常在`/bin/xyz`处创建一个节点，该节点随后叠加了servlet路径绑定
+对于仅查看存储库的开发人员而言，该映射不透明
+鉴于这些缺点，强烈建议将servlet绑定到资源类型而不是路径
 
 ## 创建Servlet
 
@@ -82,10 +84,10 @@ public class GetFieldChoices extends SlingAllMethodsServlet implements Serializa
 ## 在CRX中创建资源
 
 * 登录到本地AEM SDK。
-* 创建名为的资源 `fetchchoices` （您可以根据需要命名此节点） `cq:Page` 在内容节点下。
+* 在内容节点下创建名为`fetchchoices`的资源（您可以根据需要命名该节点），类型为`cq:Page`。
 * 保存更改
-* 创建名为的节点 `jcr:content` 类型 `cq:PageContent` 并保存更改
-* 将以下属性添加到 `jcr:content` 节点
+* 创建名为`jcr:content`且类型为`cq:PageContent`的节点并保存更改
+* 将以下属性添加到`jcr:content`节点
 
 | 属性名称 | 属性值 |
 |--------------------|--------------------|
@@ -93,21 +95,21 @@ public class GetFieldChoices extends SlingAllMethodsServlet implements Serializa
 | sling:resourceType | `azure/fetchchoices` |
 
 
-此 `sling:resourceType` 值必须与servlet中指定的resourceTypes=&quot;azure/fetchchchoices匹配。
+`sling:resourceType`值必须与servlet中指定的resourceTypes=&quot;azure/fetchchchoices匹配。
 
-您现在可以通过请求资源来调用servlet `sling:resourceType` = `azure/fetchchoices` 在其完整路径上，在Sling Servlet中注册了任何选择器或扩展。
+您现在可以通过在资源的完整路径上请求`sling:resourceType` = `azure/fetchchoices`来调用您的servlet，并在Sling servlet中注册任何选择器或扩展。
 
 ```html
 http://localhost:4502/content/fetchchoices/jcr:content.json?formPath=/content/forms/af/forrahul/jcr:content/guideContainer
 ```
 
-路径 `/content/fetchchoices/jcr:content` 是资源和扩展的路径 `.json` 是servlet中指定的内容
+路径`/content/fetchchoices/jcr:content`是资源的路径，扩展`.json`是Servlet中指定的路径
 
 ## 同步您的AEM项目
 
 1. 在您喜爱的编辑器中打开AEM项目。 我用IntelliJ做这个。
-1. 创建名为的文件夹 `fetchchoices` 下 `\aem-banking-application\ui.content\src\main\content\jcr_root\content`
-1. 右键单击 `fetchchoices` 文件夹并选择 `repo | Get Command` （此菜单项在本教程的上一章中进行设置）。
+1. 在`\aem-banking-application\ui.content\src\main\content\jcr_root\content`下创建名为`fetchchoices`的文件夹
+1. 右键单击`fetchchoices`文件夹并选择`repo | Get Command`（此菜单项在本教程的上一章中设置）。
 
 这应该会将此节点从AEM同步到您的本地AEM项目。
 
@@ -119,7 +121,7 @@ http://localhost:4502/content/fetchchoices/jcr:content.json?formPath=/content/fo
 <filter root="/content/fetchchoices" mode="merge"/>
 ```
 
-您现在可以使用Cloud Manager将更改推送到AEMas a Cloud Service环境。
+您现在可以使用Cloud Manager将更改推送到AEM as a Cloud Service环境。
 
 ## 后续步骤
 

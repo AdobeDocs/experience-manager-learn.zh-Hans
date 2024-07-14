@@ -1,6 +1,6 @@
 ---
 title: 高级联网
-description: 了解AEMas a Cloud Service的高级联网选项。
+description: 了解AEM as a Cloud Service的高级联网选项。
 version: Cloud Service
 feature: Security
 topic: Development, Integrations, Security
@@ -20,24 +20,24 @@ ht-degree: 2%
 
 # 高级联网
 
-AEMas a Cloud Service提供高级联网功能，允许精确管理与AEMas a Cloud Service程序的连接。
+AEM as a Cloud Service提供高级联网功能，允许精确管理与AEM as a Cloud Service程序的连接。
 
 |                                                   | [生产程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
 |---------------------------------------------------|:-----------------------:|:---------------------:|
 | 支持高级联网 | ✔ | ✘ |
 
 
-AEM高级联网包含三个选项，用于管理与外部服务的连接。 Cloud Manager程序及其AEMas a Cloud Service环境一次只能使用一种类型的高级联网配置，因此请确保选择最合适的类型。
+AEM高级联网功能由三个选项组成，用于管理与外部服务的连接。 Cloud Manager程序及其AEM as a Cloud Service环境一次只能使用一种类型的高级联网配置，因此请确保选择最合适的类型。
 
-|                                   | 标准端口上的HTTP/HTTPS | 非标准端口上的HTTP/HTTPS | 非HTTP/HTTPS连接 | 专用出口IP | “无代理主机”列表 | 连接到受VPN保护的服务 | 按IP限制AEM发布流量 |
+|                                   | 标准端口上的HTTP/HTTPS | 非标准端口上的HTTP/HTTPS | 非HTTP/HTTPS连接 | 专用出口IP | “无代理主机”列表 | 连接到受VPN保护的服务 | 按IP限制AEM Publish流量 |
 |-----------------------------------|:----------------------------:|:--------------------------------:|:--------------------------:|:-------------------:|:-------------------------------------:|:-------------------------------------:|:----:|
-| __无高级联网__ | ✔ | ✘ | ✘ | ✘ | ✘ | ✘ | ✘ |
+| __没有高级联网__ | ✔ | ✘ | ✘ | ✘ | ✘ | ✘ | ✘ |
 | [__灵活端口出口__](./flexible-port-egress.md) | ✔ | ✔ | ✔ | ✘ | ✘ | ✘ | ✘ |
 | [__专用出口IP地址__](./dedicated-egress-ip-address.md) | ✔ | ✔ | ✔ | ✔ | ✔ | ✘ | ✘ |
 | [__虚拟专用网络__](./vpn.md) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 
-有关选择适当的高级网络类型时涉及的注意事项的更多详细信息，请参阅 [高级联网文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html).
+有关选择适当的高级联网类型时涉及的注意事项的更多详细信息，请参阅[高级联网文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html)。
 
 ## 高级联网教程
 
@@ -49,21 +49,21 @@ AEM高级联网包含三个选项，用于管理与外部服务的连接。 Clou
       <a  href="./flexible-port-egress.md"><img alt="灵活的端口出口" src="./assets/flexible-port-egress.png"/></a>
       <div><strong><a href="./flexible-port-egress.md">灵活端口出口</a></strong></div>
       <p>
-          允许非标准端口上的出站AEMas a Cloud Service流量。
+          允许非标准端口上的出站AEM as a Cloud Service流量。
       </p>
     </td>   
    <td>
       <a  href="./dedicated-egress-ip-address.md"><img alt="文件专用出口IP地址" src="./assets/dedicated-egress-ip-address.png"/></a>
       <div><strong><a href="./dedicated-egress-ip-address.md">专用出口IP地址</a></strong></div>
       <p>
-        从专用IP发起出站AEMas a Cloud Service流量。
+        从专用IP发起出站AEM as a Cloud Service流量。
       </p>
     </td>   
    <td>
       <a  href="./vpn.md"><img alt="虚拟专用网络 (VPN)" src="./assets/vpn.png"/></a>
       <div><strong><a href="./vpn.md">虚拟专用网络(VPN)</a></strong></div>
       <p>
-        保护客户或供应商基础设施与AEMas a Cloud Service之间的流量。
+        保护客户或供应商基础设施与AEM as a Cloud Service之间的流量。
       </p>
     </td>   
   </tr>
@@ -73,7 +73,7 @@ AEM高级联网包含三个选项，用于管理与外部服务的连接。 Clou
 
 本收藏集提供了针对特定用例利用高级联网功能所需的配置和代码示例。
 
-确保相应 [高级联网配置](#advanced-networking) 已在完成这些教程之前设置。
+在执行这些教程之前，请确保已设置适当的[高级联网配置](#advanced-networking)。
 
 <table><tr>
    <td>
@@ -87,34 +87,34 @@ AEM高级联网包含三个选项，用于管理与外部服务的连接。 Clou
         <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
         <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
         <p>
-            Java™代码示例使用HTTP/HTTPS协议使从AEM的HTTP/HTTPS连接as a Cloud Service到外部服务。
+            Java™代码示例使用HTTP/HTTPS协议从AEM as a Cloud Service建立与外部服务的HTTP/HTTPS连接。
         </p>
     </td>
     <td>
       <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC DataSourcePool的SQL连接" src="./assets//code-examples__sql-osgi.png"/></a>
-      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC DataSourcePool的SQL连接</a></strong></div>
+      <div>使用JDBC DataSourcePool的<strong><a href="./examples/sql-datasourcepool.md">SQL连接</a></strong></div>
       <p>
-            Java™代码示例通过配置AEM JDBC数据源池连接到外部SQL数据库。
+            通过配置AEM的JDBC数据源池连接到外部SQL数据库的Java™代码示例。
       </p>
     </td>   
     </tr><tr>
     <td>
       <a  href="./examples/sql-java-apis.md"><img alt="使用Java API的SQL连接" src="./assets/code-examples__sql-java-api.png"/></a>
-      <div><strong><a href="./examples/sql-java-apis.md">使用Java™ API的SQL连接</a></strong></div>
+      <div>使用Java™ API的<strong><a href="./examples/sql-java-apis.md">SQL连接</a></strong></div>
       <p>
             Java™代码示例使用Java™的SQL API连接到外部SQL数据库。
       </p>
     </td>   
     <td>
       <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="应用IP允许列表" src="./assets/code_examples__vpn-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">应用IP允许列表</a></strong></div>
+      <div>列入允许列表 <strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">应用IP</a></strong></div>
       <p>
             列入允许列表配置IP，以便只有VPN通信可以访问AEM。
       </p>
     </td>
    <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="AEM发布的基于路径的VPN访问限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">AEM发布的基于路径的VPN访问限制</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="AEM Publish的基于路径的VPN访问限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">对AEM Publish基于路径的VPN访问限制</a></strong></div>
       <p>
             要求AEM Publish上的特定路径具有VPN访问权限。
       </p>

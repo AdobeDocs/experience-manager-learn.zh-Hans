@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 调整XMLFormService的bmc池大小的步骤（第1步，共2步）
 
-*本视频介绍调整XMLFormService（第1个，共2个）的bmc池大小的步骤。*
+*此视频介绍调整XMLFormService（第1个，共2个）的bmc池大小的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335552?quality=12&learn=on)

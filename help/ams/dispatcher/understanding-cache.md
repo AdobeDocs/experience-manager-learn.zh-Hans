@@ -22,7 +22,7 @@ ht-degree: 0%
 
 [&lt; — 上一页：配置文件说明](./explanation-config-files.md)
 
-本文档将解释Dispatcher缓存的发生方式以及如何对其进行配置
+本文档将说明Dispatcher缓存的发生方式以及如何对其进行配置
 
 ## 缓存目录
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 - 发布者
    - `/mnt/var/www/html`
 
-当每个请求遍历Dispatcher时，请求遵循配置的规则以保留本地缓存的版本来响应符合条件的项目
+当每个请求遍历Dispatcher时，这些请求遵循配置的规则以保留本地缓存的版本，从而响应符合条件的项目
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 ## 配置文件
 
-Dispatcher控制在 `/cache {` 任何场文件的部分。 
+Dispatcher控制任何场文件的`/cache {`部分中符合缓存条件的内容。 
 在AMS基线配置场中，您会发现包含的，如下所示：
 
 
@@ -55,7 +55,7 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 ```
 
 
-在创建缓存或不缓存内容的规则时，请参阅文档 [此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+在创建缓存或不缓存内容的规则时，请参阅文档[此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
 
 
 ## 缓存作者
@@ -65,7 +65,7 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 
 让我们讨论一下在将创作场配置为正确缓存时采取的策略。
 
-这是基本作者 `/cache {` 部分内容：
+以下是作者场文件的基本作者`/cache {`部分：
 
 
 ```
@@ -92,13 +92,13 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 }
 ```
 
-这里要注意的重要事项是 `/docroot` 设置为创作实例的缓存目录。
+此处需要注意的重要事项是，`/docroot`设置为作者的缓存目录。
 
 >[!NOTE]
 >
->确保 `DocumentRoot` 在作者的 `.vhost` 文件与场匹配 `/docroot` 参数
+>确保作者的`.vhost`文件中的您的`DocumentRoot`与场`/docroot`参数匹配
 
-缓存规则include语句包含文件 `/etc/httpd/conf.dispatcher.d/cache/ams_author_cache.any` ，其中包含下列规则：
+缓存规则include语句包含文件`/etc/httpd/conf.dispatcher.d/cache/ams_author_cache.any`，该文件包含以下规则：
 
 ```
 /0000 { 
@@ -132,15 +132,15 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 ```
 
 在创作场景中，内容会随时随意更改。 您只想缓存不经常更改的项目。
-我们有规则要缓存 `/libs` 因为它们是基准AEM安装的一部分，在安装Service Pack、累积修补程序包、升级或修补程序之前可能会发生更改。 因此，缓存这些元素非常合理，并且真正为使用站点的最终用户的创作体验带来了巨大好处。
+我们有要缓存`/libs`的规则，因为它们是基准AEM安装的一部分，在安装Service Pack、累积修补程序包、升级或修补程序之前可能会发生更改。 因此，缓存这些元素非常合理，并且真正为使用站点的最终用户的创作体验带来了巨大好处。
 
 >[!NOTE]
 >
->请记住，这些规则也会缓存 <b>`/apps`</b> 这是自定义应用程序代码所在的位置。 如果您在此实例上开发代码，则在保存文件时会发现非常混乱，并且不会看到是否在UI中反映，因为它提供缓存的副本。 这样做的意图是，如果您将代码部署到AEM中，那么这种部署也是不频繁的，并且部署步骤的一部分应当是清除创作缓存。 同样，其优势也是巨大的，可缓存的代码可为最终用户更快地运行。
+>请记住，这些规则还会缓存<b>`/apps`</b>自定义应用程序代码所在的位置。 如果您在此实例上开发代码，则在保存文件时会发现非常混乱，并且不会看到是否在UI中反映，因为它提供缓存的副本。 这样做的意图是，如果您将代码部署到AEM中，那么这种部署也是不频繁的，并且部署步骤的一部分应当是清除创作缓存。 同样，其优势也是巨大的，可缓存的代码可为最终用户更快地运行。
 
 ## ServeOnStale（又称陈旧/SOS服务）
 
-这是Dispatcher的一项功能带来的好处之一。 如果发布者负载不足或变得无响应，它通常会引发502或503 http响应代码。 如果发生这种情况并启用了此功能，将指示Dispatcher尽最大努力仍在缓存中提供任何内容，即使它不是新副本也是如此。 如果您已获得某些内容，则最好提供该内容，而不是只显示一条不提供任何功能的错误消息。
+这是Dispatcher的一项功能所创造的宝石之一。 如果发布者负载不足或变得无响应，它通常会引发502或503 http响应代码。 如果发生这种情况并启用了此功能，则会指示Dispatcher尽最大努力仍提供缓存中任何内容即使它不是新副本也是如此。 如果您已获得某些内容，则最好提供该内容，而不是只显示一条不提供任何功能的错误消息。
 
 >[!NOTE]
 >
@@ -157,11 +157,11 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 
 >[!NOTE]
 >
->Dispatcher模块的正常行为之一是，如果请求在URI中有查询参数（通常如下所示） `/content/page.html?myquery=value`)它将跳过文件缓存，直接转到AEM实例。 它将此请求视为动态页面，不应缓存。 这可能会对缓存效率产生不良影响。
+>Dispatcher模块的正常行为之一是，如果请求在URI中具有查询参数（通常显示为`/content/page.html?myquery=value`），它将跳过文件缓存并直接转到AEM实例。 它将此请求视为动态页面，不应缓存。 这可能会对缓存效率产生不良影响。
 
-查看此 [文章](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner) 显示重要的查询参数如何影响网站性能。
+请参阅此[文章](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)，其中显示重要的查询参数如何影响网站性能。
 
-默认情况下，您要设置 `ignoreUrlParams` 要允许的规则 `*`.  这意味着所有查询参数都将被忽略，并且允许缓存所有页面，无论使用什么参数。
+默认情况下，您希望将`ignoreUrlParams`规则设置为允许`*`。  这意味着所有查询参数都将被忽略，并且允许缓存所有页面，无论使用什么参数。
 
 以下是一个示例，其中某人建立了一个社交媒体深层链接引用机制，该机制使用URI中的参数引用知道此人来自何处。
 
@@ -171,7 +171,7 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 - https://www.we-retail.com/home.html?reference=facebook
 
 该页面是100%可缓存的，但由于参数存在而不进行缓存。 
-配置您的 `ignoreUrlParams` 因为允许列表将帮助修复此问题：
+将您的`ignoreUrlParams`配置为允许列表将有助于解决此问题：
 
 ```
 /cache { 
@@ -180,7 +180,7 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
     }
 ```
 
-现在，当Dispatcher看到请求时，它将忽略该请求具有 `query` 参数 `?` 引用并且仍缓存页面
+现在，当Dispatcher看到该请求时，它将忽略该请求具有`?`引用的`query`参数并且仍缓存页面这一事实
 
 <b>动态示例：</b>
 
@@ -229,10 +229,10 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 </html>
 ```
 
-如果您访问了 `/search.html?q=fruit` 首先，它会缓存html，并包含显示结果的结果。
+如果您先访问了`/search.html?q=fruit`，那么它将缓存html并显示结果。
 
-然后访问 `/search.html?q=vegetables` 第二，它将显示果实结果。
-这是因为的查询参数 `q` 在缓存方面将被忽略。  要避免出现此问题，您需要记录根据查询参数呈现不同HTML并拒绝缓存这些参数的页面。
+然后您访问`/search.html?q=vegetables`秒，但将显示水果结果。
+这是因为在缓存方面忽略了`q`的查询参数。  要避免出现此问题，您需要记录根据查询参数呈现不同HTML并拒绝缓存这些参数的页面。
 
 示例：
 
@@ -252,7 +252,7 @@ Dispatcher控制在 `/cache {` 任何场文件的部分。 
 
 ## 缓存响应标头
 
-很明显，Dispatcher将缓存 `.html` pages和clientlibs(即 `.js`， `.css`)，但是您是否知道它也可以将特定的响应标头与内容一起缓存到具有相同名称，但 `.h` 文件扩展名。 这样不仅可以对内容进行下一个响应，还可以对缓存中应随其一起使用的响应标头进行响应。
+很明显，Dispatcher缓存`.html`页面和clientlibs（即`.js`、`.css`），但是您知道它还可以将特定响应标头与内容一起缓存到文件中，该文件的名称相同，但文件扩展名为`.h`。 这样不仅可以对内容进行下一个响应，还可以对缓存中应随其一起使用的响应标头进行响应。
 
 AEM可以处理的不只是UTF-8编码
 
@@ -260,7 +260,7 @@ AEM可以处理的不只是UTF-8编码
 
 默认情况下，缓存后的这些值会被清除，Apache httpd Web服务器会使用其正常的文件处理方法自行处理资产，一般情况下，这些方法仅限于根据文件扩展名进行mime类型推测。
 
-如果您拥有Dispatcher缓存资产和所需的标头，则可以公开适当的体验，并确保将所有详细信息提供给客户端浏览器。
+如果您拥有Dispatcher缓存资产和所需的标头，则可以向客户端浏览器展示适当的体验并确保所有详细信息都显示。
 
 以下是场示例，其中指定了要缓存的标头：
 
@@ -290,11 +290,11 @@ AEM可以处理的不只是UTF-8编码
 
 ### 其工作原理示例：
 
-如果您有5个失效请求 `/content/exampleco/en/` 都发生在3秒内。
+如果您有5个使`/content/exampleco/en/`失效的请求，则所有请求都会在3秒内发生。
 
-关闭此功能后，您将使缓存目录失效 `/content/exampleco/en/` 5次
+如果关闭此功能，您将使缓存目录`/content/exampleco/en/`失效5次
 
-如果开启此功能且将其设置为5秒，则会使缓存目录失效 `/content/exampleco/en/` <b>一次</b>
+此功能打开且设置为5秒时，它将使缓存目录`/content/exampleco/en/` <b>失效</b>一次
 
 以下是为5秒宽限期配置的此功能的语法示例：
 
@@ -305,7 +305,7 @@ AEM可以处理的不只是UTF-8编码
 
 ## 基于TTL的失效
 
-Dispatcher模块的新增功能是 `Time To Live (TTL)` 基于缓存项目的失效选项。 当某个项目被缓存时，它会查找是否存在缓存控制标头，并在缓存目录中生成一个具有相同名称和 `.ttl` 扩展。
+Dispatcher模块的较新功能是基于`Time To Live (TTL)`的缓存项目失效选项。 当项目被缓存时，它会查找是否存在缓存控制标头，并在缓存目录中生成一个具有相同名称且扩展名为`.ttl`的文件。
 
 以下是场配置文件中配置的功能示例：
 
@@ -316,7 +316,7 @@ Dispatcher模块的新增功能是 `Time To Live (TTL)` 基于缓存项目的失
 
 >[!NOTE]
 >
->请记住，仍需要将AEM配置为发送TTL标头，以便Dispatcher遵守这些标头。 切换此功能只会让Dispatcher知道何时删除AEM向其发送缓存控制标头的文件。 如果AEM未开始发送TTL标头，则Dispatcher不会在此处执行任何特殊操作。
+>请记住，仍需要将AEM配置为发送TTL标头，以便Dispatcher执行这些标头。 切换此功能只会让Dispatcher知道何时删除AEM向其发送缓存控制标头的文件。 如果AEM未开始发送TTL标头，则Dispatcher不会在此处执行任何特殊的操作。
 
 ## 缓存筛选规则
 
@@ -336,6 +336,6 @@ Dispatcher模块的新增功能是 `Time To Live (TTL)` 基于缓存项目的失
 
 我们希望使已发布的网站尽可能贪婪，并缓存所有内容。
 
-如果存在在缓存时破坏体验的元素，则可以添加规则以删除缓存该项目的选项。 如上面的示例所示，不应缓存并排除csrf令牌。 有关编写这些规则的更多详细信息，请参阅 [此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+如果存在在缓存时破坏体验的元素，则可以添加规则以删除缓存该项目的选项。 如上面的示例所示，不应缓存并排除csrf令牌。 有关编写这些规则的更多详细信息可在[此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)找到
 
 [下一步 — >使用和了解变量](./variables.md)

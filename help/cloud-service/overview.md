@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Manager as a Cloud Service视频和教程
-description: Adobe Experience Manager (AEM)as a Cloud Service教程集合
+description: Adobe Experience Manager (AEM)as a Cloud Service的教程集合
 sub-product: Experience Manager as a Cloud Service
 jira: KT-3289
 last-substantial-update: 2023-09-26T00:00:00Z
@@ -13,11 +13,11 @@ ht-degree: 5%
 
 ---
 
-# AEMas a Cloud Service视频和教程 {#overview}
+# AEM as a Cloud Service视频和教程 {#overview}
 
 {{edge-delivery-services}}
 
-Adobe Experience Manager (AEM)现已as a Cloud Service提供。 AEMas a Cloud Service推出了新一代Experience Manager产品线，以过去的投资和创新为基础，保留和扩展了所有用例和功能。
+Adobe Experience Manager (AEM)现已as a Cloud Service推出。 AEM as a Cloud Service引入新一代Experience Manager产品线，以过去的投资和创新为基础，保留和扩展所有用例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
@@ -39,7 +39,7 @@ Adobe Experience Manager (AEM)现已as a Cloud Service提供。 AEMas a Cloud Se
       </a>
       <div>
          <a href="./accessing/overview.md">
-         <strong>配置对AEM的访问权限教程</strong>
+         <strong>配置对AEM教程的访问权限</strong>
          </a>
       </div>
       <p>
@@ -56,7 +56,7 @@ Adobe Experience Manager (AEM)现已as a Cloud Service提供。 AEMas a Cloud Se
          </a>
       </div>
       <p>
-         <em>让您的本地开发计算机为AEMas a Cloud Service开发做好准备！</em>
+         <em>准备好本地开发计算机以进行AEM as a Cloud Service开发！</em>
       <p>
    </td>   
    <td>
@@ -69,7 +69,7 @@ Adobe Experience Manager (AEM)现已as a Cloud Service提供。 AEMas a Cloud Se
          </a>
       </div>
       <p>
-         <em>浏览用于在AEMas a Cloud ServiceSDK的本地快速启动上调试应用程序的工具。</em>
+         <em>浏览用于在AEM as a Cloud Service SDK的本地快速入门上调试应用程序的工具。</em>
       <p>
    </td>
 </table>

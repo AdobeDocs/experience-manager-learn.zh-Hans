@@ -1,5 +1,5 @@
 ---
-title: Assets Essentials中的协作
+title: Assets Essentials中的Collaboration
 description: 了解如何使用评论、批注和任务在资产管理内部协作。
 version: Cloud Service
 feature: Assets Essentials
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# Assets Essentials中的协作
+# Assets Essentials中的Collaboration
 
 了解如何使用评论、批注和任务协作进行资产管理。
 

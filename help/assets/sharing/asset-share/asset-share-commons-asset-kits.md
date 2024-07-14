@@ -21,8 +21,8 @@ ht-degree: 0%
 
 # Asset Share Commons资产套件
 
-了解如何使用资产共享公共 [资产套件](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) 用于生成可共享的预置网页，这些网页会列出AEM Assets文件夹或收藏集中的资源。
+了解如何使用Asset Share Common的[资源工具包](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/)生成定制、可共享的网页，这些网页列出AEM Assets文件夹或收藏集中的资源。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415467?quality=12&learn=on)
 
-_[资产套件](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) 仅在Asset Share Commons 2.5.4+上可用_
+_[资产套件](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/)仅在Asset Share Commons 2.5.4+_&#x200B;上可用

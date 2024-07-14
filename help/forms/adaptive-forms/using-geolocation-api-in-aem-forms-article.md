@@ -22,7 +22,7 @@ ht-degree: 0%
 
 在自适应Forms中使用地理位置API时，需要执行以下步骤。
 
-1. [获取API密钥](https://developers.google.com/maps/documentation/javascript/get-api-key) 从Google使用Google地图平台。 您可以获得有效期为1年的试用密钥。
+1. 从Google [获取API密钥](https://developers.google.com/maps/documentation/javascript/get-api-key)以使用Google映射平台。 您可以获得有效期为1年的试用密钥。
 
 1. 创建自适应表单片段时添加了用于保存当前地址的字段
 
@@ -75,7 +75,7 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 }
 ```
 
-![使用地理位置api填充的字段](assets/capture-4.gif)
+![使用地理位置API填充的字段](assets/capture-4.gif)
 
 在第1行，我们使用HTML地理位置API来获取当前位置。 获得当前位置后，我们将当前位置传递给showPosition函数。
 
@@ -94,13 +94,13 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 要将此功能添加到您的服务器上，请执行以下步骤
 
 * 安装并启动AEM Forms服务器。
-> 此功能已在AEM Forms 6.3及更高版本上测试
-* [获取Google API密钥](https://developers.google.com/maps/documentation/javascript/get-api-key).
+>此功能已在AEM Forms 6.3及更高版本上测试
+* [获取Google API密钥](https://developers.google.com/maps/documentation/javascript/get-api-key)。
 * [将与本文相关的资源导入AEM。](assets/geolocationapi.zip)
 * [在编辑模式下打开自适应表单片段。](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
 * 打开图像选择组件的规则编辑器。
-* 替换 &lt;your_api_key> Google API密钥。
+* 将&lt;your_api_key>替换为Google API密钥。
 * 保存更改。
-* [预览表单](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled).
+* [预览表单](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled)。
 * 单击“地理位置”图标。
 * 应使用当前位置填充您的表单。

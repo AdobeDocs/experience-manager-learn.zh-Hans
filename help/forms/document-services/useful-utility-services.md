@@ -35,11 +35,11 @@ public abstract String saveDocumentInCrx(String jcrPath,String fileExtension, Do
 }
 ```
 
-示例包可以是 [从此处下载](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)
+可从此处](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)下载示例包[
 
 ## 使用实用程序服务的示例代码
 
-以下是JSP页面中用于从字符串创建org.w3c.dom.Document并转换文档的代码，然后将其存储在CRX存储库中，如以下代码片段所示。
+以下代码是在JSP页面中用于从字符串创建org.w3c.dom.Document并转换该文档并将其存储在CRX存储库中的代码，如以下代码片段所示。
 
 ```java
  aemformsutilityfunctions.core.AemFormsUtilities aemFormsUtilities = sling.getService(aemformsutilityfunctions.core.AemFormsUtilities.class);
@@ -50,7 +50,7 @@ aemFormsUtilities.saveDocumentInCrx("/content/xmlfiles",".xml",xmlStringDoc);
 ## 先决条件
 
 
-您需要部署 [DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar) 然后启动捆绑包。
+您需要部署[DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar)并启动该捆绑包。
 
 
-如果您打算使用这些实用工具服务将文档保存到CRX存储库中，请按照 [使用服务用户文章进行开发](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms). 确保您提供 [所需权限](http://localhost:4502/useradmin) 到相应的CRX文件夹上的fd-service用户。
+如果要使用这些实用工具服务将文档保存到CRX存储库中，请按照[使用服务用户开发](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms)中的说明进行操作。 请确保在适当的CRX文件夹上向fd服务用户提供所需的[权限](http://localhost:4502/useradmin)。

@@ -21,13 +21,13 @@ ht-degree: 0%
 # 切换密码字段可见性
 
 一个常见用例是允许表单填充器切换到显示在密码字段中输入的文本。
-为完成此用例，我使用了 [Font Awesome Library](https://fontawesome.com/). 所需的CSS和eye.svg包含在为此演示创建的客户端库中。
+为完成此用例，我使用了[Font Awesome Library](https://fontawesome.com/)中的眼睛图标。 所需的CSS和eye.svg包含在为此演示创建的客户端库中。
 
 
 
 ## 示例代码
 
-自适应表单中有一个名为PasswordBox类型的字段 **ssnField**.
+自适应表单具有名为&#x200B;**ssnField**&#x200B;的PasswordBox类型字段。
 
 加载表单时执行以下代码
 
@@ -51,7 +51,7 @@ $(document).ready(function() {
 });
 ```
 
-以下CSS用于定位 **眼睛** “密码”字段中的图标
+以下CSS用于在密码字段中定位&#x200B;**eye**&#x200B;图标
 
 ```javascript
 .svg-inline--fa {
@@ -68,8 +68,8 @@ $(document).ready(function() {
 
 ## 部署切换密码示例
 
-* 下载 [客户端库](assets/simple-ui-tips.zip)
-* 下载 [示例表单](assets/simple-ui-tricks-form.zip)
-* 使用导入客户端库 [包管理器用户界面](http://localhost:4502/crx/packmgr/index.jsp)
-* 使用导入示例表单 [Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 下载[客户端库](assets/simple-ui-tips.zip)
+* 下载[示例表单](assets/simple-ui-tricks-form.zip)
+* 使用[包管理器UI](http://localhost:4502/crx/packmgr/index.jsp)导入客户端库
+* 使用[Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)导入示例表单
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)

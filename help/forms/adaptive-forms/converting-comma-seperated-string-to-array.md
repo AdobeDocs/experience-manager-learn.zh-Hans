@@ -27,7 +27,7 @@ ht-degree: 0%
 
 提交的数据采用以下格式。 businessUnits元素的值是以逗号分隔的字符串，需要转换为字符串数组。
 
-![submitted-data](assets/submitted-data-string.png)
+![提交的数据](assets/submitted-data-string.png)
 
 与表单数据模型关联的rest端点的输入数据需要字符串数组，如此屏幕快照中所示。 流程步骤中的自定义代码会将提交的数据转换为正确的格式。
 
@@ -142,4 +142,4 @@ public class CreateStringArray implements WorkflowProcess {
 }
 ```
 
-示例包可以是 [从此处下载](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)
+可从此处](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)下载示例包[

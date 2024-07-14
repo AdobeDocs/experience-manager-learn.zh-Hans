@@ -28,13 +28,13 @@ Acroform是使用Acrobat创建的表单。 您可以使用Acrobat从头开始创
 
 >[!NOTE]
 >
->如果要发送可填写的acroform以供使用Acrobat Sign进行签名，请相应地命名字段。 例如，您可以命名字段 **`Sig_es_:signer1:signature`**. 这是Acrobat Sign了解的语法。
+>如果要发送可填写的acroform以供使用Acrobat Sign进行签名，请相应地命名字段。 例如，您可以命名字段&#x200B;**`Sig_es_:signer1:signature`**。 这是Acrobat Sign了解的语法。
 
 >[!NOTE]
 >
 >如果要发送基于XFA的文档，则需要拼合该文档，并且Acrobat Sign签名标记需要作为静态文本显示在文档中。
 
-[Acrobat Sign文本标记文档](https://helpx.adobe.com/sign/using/text-tag.html)
+[Acrobat Sign文本标签文档](https://helpx.adobe.com/sign/using/text-tag.html)
 
 >[!NOTE]
 >

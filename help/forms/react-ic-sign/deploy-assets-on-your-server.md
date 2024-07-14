@@ -59,6 +59,6 @@ npm start
 
 要启用从REACT应用程序对AEM端点的POST调用，您需要在AdobeGranite跨源资源共享策略配置的允许源字段中指定相应的条目。
 
-![cors设置](assets/cors-settings.png)
+![cors-setting](assets/cors-settings.png)
 
-请参阅 [使用AEM了解CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html) 有关CORS配置选项的更多详细信息。
+有关CORS配置选项的更多详细信息，请参阅[了解AEM的CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)。

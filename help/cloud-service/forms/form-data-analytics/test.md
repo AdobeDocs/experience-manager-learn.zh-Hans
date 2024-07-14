@@ -28,13 +28,13 @@ ht-degree: 1%
 
 在Adobe Analytics中捕获的表单数据以圆环格式显示
 
-**各国提交的材料**
+**按状态提交**
 
 ![applicantsbystate](assets/donut.png)
 
 字段验证错误
 
-![field-validation-error](assets/donut-field-validation.png)
+![字段验证错误](assets/donut-field-validation.png)
 
 ## 调试
 
@@ -51,11 +51,11 @@ _satellite.setDebug(true)
 
 与表单交互，同时保持控制台窗口打开。 您应该看到类似这样的内容
 
-![console-debug](assets/debug.png)
+![控制台调试](assets/debug.png)
 
 ## 使用Adobe Experience Platform Debugger
 
-添加 [AEP调试器扩展](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) ，则需要登录)以获取更多调试信息
+将[AEP调试器扩展](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html)添加到浏览器（需要您登录）以获取更多调试信息
 
 ![platform-debugger](assets/platform-debugger.png)
 

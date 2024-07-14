@@ -23,7 +23,8 @@ OutputService提供了多种方法来使用表单设计创建文档，并提供�
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-数据xml有2条记录。 每个记录由form1元素表示。 此xml传递到OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) 我们获得pdf文档的列表（每条记录一个） generatePDFOutputBatch方法的签名采用以下参数
+数据xml有2条记录。 每个记录由form1元素表示。 此xml传递到OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html)，我们将获得PDF文档的列表（每个记录一个）
+generatePDFOutputBatch方法的签名采用以下参数
 
 * 模板 — 包含模板的映射，用键进行标识
 * 数据 — 包含xml数据文档的映射，通过键进行标识
@@ -126,12 +127,12 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 要在您的服务器上测试此功能，请按照以下说明操作：
 
-* [将zip文件内容下载并解压缩到您的文件系统](assets/mult-records-template-and-xml-file.zip).此zip文件包含模板和xml数据文件。
+* [将zip文件内容下载并解压缩到文件系统](assets/mult-records-template-and-xml-file.zip)。此zip文件包含模板和xml数据文件。
 * [将浏览器指向Felix Web控制台](http://localhost:4502/system/console/bundles)
-* [部署DevelopingWithServiceUser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
-* [部署自定义AEMFormsDocumentServices捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).使用OutputService API生成PDF的自定义包
+* [部署DevelopingWithServiceUser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
+* [部署自定义AEMFormsDocumentServices包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。使用OutputService API生成PDF的自定义包
 * [将浏览器指向包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* [导入并安装包](assets/generate-multiple-pdf-from-xml.zip). 此包包含html页面，通过该页面可删除模板和数据文件。
+* [导入并安装包](assets/generate-multiple-pdf-from-xml.zip)。 此包包含html页面，通过该页面可删除模板和数据文件。
 * [将浏览器指向MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html？)
 * 将模板和xml数据文件拖放到一起
 * 下载创建的zip文件。 此zip文件包含输出服务生成的pdf文件。

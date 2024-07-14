@@ -29,12 +29,12 @@ ht-degree: 0%
 * [Adobe XD UI套件](https://github.com/adobe/aem-site-template-basic/blob/main/files/wireframe.xd)
 * [AEM站点模板](https://github.com/adobe/aem-site-template-basic)
 
-## AEMas a Cloud Service环境 {#environment}
+## AEM as a Cloud Service环境 {#environment}
 
-本教程中的步骤将在Adobe Experience Manager as a Cloud Service环境中执行。 确保您对AEM环境具有管理访问权限。 建议使用 [沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) 和 [开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) 完成本教程时。
+本教程中的步骤将在Adobe Experience Manager as a Cloud Service环境中执行。 确保您对AEM环境具有管理访问权限。 完成本教程时，建议使用[沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)和[开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)。
 
 ## 后续步骤 {#next-steps}
 
 分步教程介绍如何使用快速站点创建功能为虚构的生活方式品牌WKND实施AEM站点。
 
-你在等什么?!导航到 [创建站点](create-site.md) ，并了解如何使用站点模板生成新的Adobe Experience Manager项目。
+你在等什么?!导航到[创建站点](create-site.md)章以启动本教程，并了解如何使用站点模板生成新的Adobe Experience Manager项目。

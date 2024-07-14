@@ -28,9 +28,9 @@ ht-degree: 1%
 
 ## 通过Satellite对象进行客户端调试
 
-客户端调试有助于验证标记属性规则的加载或执行顺序。 每当将Tag属性添加到网站时， `_satellite` JavaScript对象存在于浏览器中，便于客户端事件和数据跟踪。
+客户端调试有助于验证标记属性规则的加载或执行顺序。 每当向网站添加Tag属性时，浏览器中都会显示`_satellite` JavaScript对象，以促进客户端事件和数据跟踪。
 
-要启用客户端调试，请调用 `setDebug(true)` 上的方法 `_satellite` 对象。
+要启用客户端调试，请在`_satellite`对象中调用`setDebug(true)`方法。
 
 1. 打开浏览器控制台，然后运行以下命令。
 
@@ -38,17 +38,17 @@ ht-degree: 1%
        _satellite.setDebug(true);
    ```
 
-1. 重新加载AEM站点页面，并验证控制台日志显示 _已触发规则_ 如下所示的消息。
+1. 重新加载AEM站点页面，并验证控制台日志是否显示如下所示的&#x200B;_触发的规则_&#x200B;消息。
 
-   ![创作和发布页面上的标记属性](assets/satellite-object-debugging.png)
+   创作和Publish页面上的![标记属性](assets/satellite-object-debugging.png)
 
 ## 通过Adobe Experience Platform Debugger调试
 
-Adobe提供Adobe Experience Platform Debugger [Chrome扩展](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 调试、了解和深入了解该集成。
+Adobe提供Adobe Experience Platform Debugger[Chrome扩展](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)来调试、了解该集成并获取其见解。
 
-1. 打开Adobe Experience Platform Debugger扩展，然后在发布实例上打开站点页面
+1. 打开Adobe Experience Platform Debugger扩展，然后在Publish实例上打开站点页面
 
-2. 在 **Adobe Experience Platform Debugger>摘要> Adobe Experience Platform标签** 部分中，验证您的标记属性详细信息，如名称、版本、内部版本日期、环境和扩展。
+2. 在&#x200B;**Adobe Experience Platform Debugger>摘要> Adobe Experience Platform Tags**&#x200B;部分中，验证Tag属性的详细信息，如名称、版本、内部版本日期、环境和扩展。
 
    ![Adobe Experience Platform Debugger和标记属性详细信息](assets/tag-property-details.png)
 
@@ -56,4 +56,4 @@ Adobe提供Adobe Experience Platform Debugger [Chrome扩展](https://chrome.goog
 
 + [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
 
-+ [卫星对象引用](https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html)
++ [Satellite对象引用](https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html)

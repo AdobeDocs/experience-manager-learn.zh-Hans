@@ -24,7 +24,7 @@ ht-degree: 0%
 
 * FormsService — 这是一项功能非常广泛的服务，允许您从模板文件中导出/导入数据，并通过将xml数据合并到xdpPDF中来生成交互式pdf
 
-官方 [此处列出了适用于AEM Forms API的javadoc](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+此处列出了适用于AEM Forms API的官方[javadoc](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 以下代码段使用FormsService的renderPDFForm操作渲染交互式pdf。 schengen.xdp是用于合并xml数据的模板。
 
@@ -55,17 +55,17 @@ Line2-4：创建PDFFormRenderOptions并设置其属性
 1. [使用Felix Web控制台下载并安装DocumentServices示例包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [使用AEM包管理器下载并安装包](assets/downloadinteractivepdffrommobileform.zip)
 
-1. [登录configMgr](http://localhost:4502/system/console/configMgr)
+1. [登录到configMgr](http://localhost:4502/system/console/configMgr)
 1. 搜索AdobeGranite CSRF筛选器
 1. 在排除的部分中添加以下路径并保存
 1. /bin/generateinteractivepdf
-1. 搜索 _Apache Sling服务用户映射器服务_ ，然后单击以打开属性
-   1. 单击 *+* 图标（加号）以添加以下服务映射
+1. 搜索&#x200B;_Apache Sling服务用户映射器服务_，然后单击以打开属性
+   1. 单击&#x200B;*+*&#x200B;图标（加号）以添加以下服务映射
       * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
    1. 单击“保存”
 1. [打开移动设备表单](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
-1. 填写几个字段，然后单击 ***下载并填写....*** 按钮
+1. 填写几个字段，然后单击&#x200B;***下载并填写....***&#x200B;按钮
 1. 应将交互式pdf下载到您的本地系统
 
 
-示例包包含与移动设备表单关联的自定义配置文件。 请探索 [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) 文件。 此jsp从移动表单中提取数据，并向其上安装的servlet发出POST请求 ***/bin/generateinteractivepdf*** 路径。 此servlet将交互式pdf返回到调用应用程序。 customtoolbar.jsp中的代码然后将文件下载到本地系统
+示例包包含与移动设备表单关联的自定义配置文件。 请浏览[customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp)文件。 此jsp从移动设备表单中提取数据，并向挂载在&#x200B;***/bin/generateinteractivepdf***&#x200B;路径上的servlet发出POST请求。 此servlet将交互式pdf返回到调用应用程序。 customtoolbar.jsp中的代码然后将文件下载到本地系统

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # PDFA转换和验证问题疑难解答步骤
 
-*本视频介绍为Forms Assembler服务中的PDF/A转换和验证问题排除故障而捕获所需信息的步骤。*
+*本视频介绍捕获在Forms Assembler服务中解决PDF/A转换和验证问题所需的信息的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335518?quality=12&learn=on)

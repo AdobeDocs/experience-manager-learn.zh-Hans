@@ -25,7 +25,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/27765?quality=12&learn=on)
 
-请将提供给您的swagger文件用作与本教程相关的资源的一部分。 这些资源位于 [介绍](introduction.md) 本教程的。
+请将提供给您的swagger文件用作与本教程相关的资源的一部分。 本教程的[简介](introduction.md)中提供了这些资源。
 
 ## 后续步骤
 

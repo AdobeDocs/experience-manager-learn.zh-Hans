@@ -1,6 +1,6 @@
 ---
 title: AEM内容片段扩展
-description: 了解如何构建和部署AEMas a Cloud Service内容片段扩展
+description: 了解如何构建和部署AEM as a Cloud Service内容片段扩展
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -29,7 +29,7 @@ AEM (Adobe Experience Manager)中的内容片段控制台是一个用户界面�
 
 ![内容片段控制台](./assets/overview/cfc.png)
 
-[AEM内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) 是用于列出和管理内容片段的可扩展UI。 [创建AEM内容片段控制台扩展](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) 使用 `@adobe/aem-cf-admin-ui-ext-tpl` 应用程序生成器模板。
+[AEM内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html)是用于列出和管理内容片段的可扩展UI。 [AEM内容片段控制台扩展是使用`@adobe/aem-cf-admin-ui-ext-tpl` App Builder模板创建的](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation)。
 
 以下内容片段控制台扩展点可用：
 
@@ -102,7 +102,7 @@ AEM (Adobe Experience Manager)中的内容片段编辑器是一个用户界面�
 
 ![内容片段编辑器](./assets/overview/cfe.png)
 
-AEM内容片段编辑器是用于编辑内容片段的可扩展UI。 [创建AEM内容片段编辑器扩展](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/) 使用 `@adobe/aem-cf-editor-ui-ext-tpl` 应用程序生成器模板。
+AEM内容片段编辑器是用于编辑内容片段的可扩展UI。 [AEM内容片段编辑器扩展是使用`@adobe/aem-cf-editor-ui-ext-tpl` App Builder模板创建的](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/)。
 
 以下内容片段编辑器扩展点可用：
 

@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何从命令行运行进程清除工具
 
-*本视频介绍从命令行运行流程清除工具的步骤。*
+*此视频介绍从命令行运行进程清除工具的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335508?quality=12&learn=on)

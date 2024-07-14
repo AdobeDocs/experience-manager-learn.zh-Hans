@@ -23,80 +23,80 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->本教程使用实验性AEMas a Cloud ServiceAPI。 要访问这些API，您必须接受预发行软件协议，并由Adobe工程团队为您的环境手动启用这些API。 请求访问，请联系Adobe支持部门。
+>本教程使用实验性AEM as a Cloud Service API。 要访问这些API，您必须接受预发行软件协议，并由Adobe工程团队为您的环境手动启用这些API。 请求访问，请联系Adobe支持部门。
 
-了解如何将AEM Assets与第三方系统(如产品信息管理(PIM)或产品线管理(PLM)系统)集成以更新资源元数据 **使用本机AEM IO事件**. 在收到AEM Assets事件后，可以根据业务需求在AEM、PIM或两个系统中更新资源元数据。 但是，此示例演示了如何在AEM中更新资源元数据。
+了解如何将AEM Assets与第三方系统(如产品信息管理(PIM)或产品线管理(PLM)系统)集成，以使用本机AEM IO事件&#x200B;**更新资源元数据**。 在收到AEM Assets事件后，可以根据业务需求在AEM、PIM或两个系统中更新资源元数据。 但是，此示例演示了如何在AEM中更新资源元数据。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427592?quality=12&learn=on)
 
-运行资源元数据更新 **AEM外部的代码**， [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)，则使用无服务器平台。
+要在AEM **、[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)之外运行资源元数据更新**&#x200B;代码，使用的是无服务器平台。
 
 事件处理流程如下所示：
 
-![用于PIM集成的AEM Assets事件](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
+用于PIM集成的![AEM Assets事件](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
 
-1. AEM Author服务触发 _资产处理已完成_ 资产上传完成且所有资产处理活动都完成时的事件。 等待处理完成可确保已完成任何开箱即用的处理，例如元数据提取。
-1. 该事件将发送到 [Adobe I/O事件](https://developer.adobe.com/events/) 服务。
-1. Adobe I/O事件服务将事件传递给 [Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) 以进行处理。
+1. 当资产上传完成并且所有资产处理活动都完成时，AEM创作服务会触发&#x200B;_资产处理已完成_&#x200B;事件。 等待处理完成可确保已完成任何开箱即用的处理，例如元数据提取。
+1. 该事件已发送到[Adobe I/O事件](https://developer.adobe.com/events/)服务。
+1. Adobe I/O事件服务将事件传递到[Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)进行处理。
 1. Adobe I/O Runtime操作调用PIM系统的API以检索其他元数据，如SKU、供应商信息或其他详细信息。
-1. 然后，在AEM Assets中使用更新从PIM检索到的其他元数据 [资产创作API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/).
+1. 然后，在AEM Assets中使用[Assets创作API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)更新从PIM检索到的其他元数据。
 
 ## 先决条件
 
 要完成本教程，您需要：
 
-- AEMas a Cloud Service环境与 [已启用AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment). 此外，示例 [WKND站点](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) 必须将项目部署到其中。
+- 启用了[AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)的AEM as a Cloud Service环境。 此外，示例[WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)项目必须部署到该项目。
 
-- 访问 [Adobe Developer控制台](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
+- 访问[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。
 
-- [ADOBE DEVELOPER CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 已安装在本地计算机上。
+- 本地计算机上已安装[Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)。
 
 ## 开发步骤
 
 高级开发步骤包括：
 
-1. [在Adobe Developer控制台(ADC)中创建项目](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
+1. [在Adobe Developer Console (ADC)中创建项目](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
 1. [初始化项目以进行本地开发](./runtime-action.md#initialize-project-for-local-development)
 1. 在ADC中配置项目
 1. 配置AEM Author服务以启用ADC项目通信
 1. 开发可协调元数据检索和更新的运行时操作
 1. 将资源上传到AEM Author服务，并验证元数据是否已更新
 
-有关步骤1-2的详细信息，请参阅 [Adobe I/O Runtime操作和AEM事件](./runtime-action.md#) 例如，对于步骤3-6，请参阅以下部分。
+有关步骤1-2的详细信息，请参阅[Adobe I/O Runtime操作和AEM事件](./runtime-action.md#)示例，有关步骤3-6，请参阅以下部分。
 
-### 在Adobe Developer控制台(ADC)中配置项目
+### 在Adobe Developer Console (ADC)中配置项目
 
 要接收AEM Assets事件并执行上一步中创建的Adobe I/O Runtime操作，请在ADC中配置项目。
 
-- 在ADC中，导航到 [项目](https://developer.adobe.com/console/projects). 选择 `Stage` 工作区，这是部署运行时操作的地方。
+- 在ADC中，导航到[项目](https://developer.adobe.com/console/projects)。 选择`Stage`工作区，这是部署运行时操作的地方。
 
-- 单击 **添加服务** 按钮并选择 **事件** 选项。 在 **添加事件** 对话框，选择 **Experience Cloud** > **AEM Assets**，然后单击 **下一个**. 按照其他配置步骤，选择AEMCS实例 _资产处理已完成_ event、OAuth服务器到服务器身份验证类型和其他详细信息。
+- 单击&#x200B;**添加服务**&#x200B;按钮并选择&#x200B;**事件**&#x200B;选项。 在&#x200B;**添加事件**&#x200B;对话框中，选择&#x200B;**Experience Cloud** > **AEM Assets**，然后单击&#x200B;**下一步**。 按照其他配置步骤，选择AEMCS实例、_已完成资产处理_&#x200B;事件、OAuth服务器到服务器身份验证类型以及其他详细信息。
 
-  ![AEM Assets事件 — 添加事件](../assets/examples/assets-pim-integration/add-aem-assets-event.png)
+  ![AEM Assets活动 — 添加活动](../assets/examples/assets-pim-integration/add-aem-assets-event.png)
 
-- 最后，在 **如何接收事件** 步骤，展开 **运行时操作** 选项，然后选择 _通用_ 在上一步中创建的操作。 单击 **保存配置的事件**.
+- 最后，在&#x200B;**如何接收事件**&#x200B;步骤中，展开&#x200B;**运行时操作**&#x200B;选项并选择在上一步中创建的&#x200B;_通用_&#x200B;操作。 单击&#x200B;**保存配置的事件**。
 
   ![AEM Assets事件 — 接收事件](../assets/examples/assets-pim-integration/receive-aem-assets-event.png)
 
-- 同样，单击 **添加服务** 按钮并选择 **API** 选项。 在 **添加API** 模式，选择 **Experience Cloud** > **AEMAS A CLOUD SERVICEAPI** 并单击 **下一个**.
+- 同样，单击&#x200B;**添加服务**&#x200B;按钮并选择&#x200B;**API**&#x200B;选项。 在&#x200B;**添加API**&#x200B;模式中，选择&#x200B;**Experience Cloud** > **AEM as a Cloud Service API**，然后单击&#x200B;**下一步**。
 
-  ![添加AEMas a Cloud ServiceAPI — 配置项目](../assets/examples/assets-pim-integration/add-aem-api.png)
+  ![添加AEM as a Cloud Service API — 配置项目](../assets/examples/assets-pim-integration/add-aem-api.png)
 
-- 然后选择 **OAuth服务器到服务器** （对于身份验证类型），然后单击 **下一个**.
+- 然后，为身份验证类型选择&#x200B;**OAuth服务器到服务器**，然后单击&#x200B;**下一步**。
 
-- 然后选择 **AEM管理员 — XXX** 产品配置文件并单击 **保存配置的API**. 要更新相关资源，所选产品配置文件必须与从中生成事件的AEM Assets环境关联，并且必须有足够权限在那里更新资源。
+- 然后选择&#x200B;**AEM Administrators-XXX**&#x200B;产品配置文件，然后单击&#x200B;**保存配置的API**。 要更新相关资源，所选产品配置文件必须与从中生成事件的AEM Assets环境关联，并且必须有足够权限在那里更新资源。
 
-  ![添加AEMas a Cloud ServiceAPI — 配置项目](../assets/examples/assets-pim-integration/add-aem-api-product-profile-select.png)
+  ![添加AEM as a Cloud Service API — 配置项目](../assets/examples/assets-pim-integration/add-aem-api-product-profile-select.png)
 
 ### 配置AEM Author服务以启用ADC项目通信
 
-要从上述ADC项目更新AEM中的资产元数据，请使用ADC项目的客户端ID配置AEM Author服务。 此 _客户端ID_ 使用添加为环境变量 [AdobeCloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html#add-variables) UI。
+要从上述ADC项目更新AEM中的资产元数据，请使用ADC项目的客户端ID配置AEM Author服务。 _客户端ID_&#x200B;已使用[AdobeCloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html#add-variables) UI添加为环境变量。
 
-- 登录 [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)，选择 **项目** > **环境** > **省略号** > **查看详细信息** > **配置** 选项卡。
+- 登录到[AdobeCloud Manager](https://my.cloudmanager.adobe.com/)，选择&#x200B;**程序** > **环境** > **省略号** > **查看详细信息** > **配置**&#x200B;选项卡。
 
   ![AdobeCloud Manager — 环境配置](../assets/examples/assets-pim-integration/cloud-manager-environment-configuration.png)
 
-- 则 **添加配置** 按钮，并输入变量详细信息为
+- 然后&#x200B;**添加配置**&#x200B;按钮并输入变量详细信息
 
   | 名称 | 值 | AEM服务 | 类型 |
   | ----------- | ----------- | ----------- | ----------- |
@@ -104,15 +104,15 @@ ht-degree: 0%
 
   ![AdobeCloud Manager — 环境配置](../assets/examples/assets-pim-integration/add-environment-variable.png)
 
-- 单击 **添加** 和 **保存** 配置。
+- 单击&#x200B;**添加**&#x200B;和&#x200B;**保存**&#x200B;配置。
 
 ### 开发运行时操作
 
-要执行元数据检索和更新，请首先更新自动创建的 _通用_ 中的操作代码 `src/dx-excshell-1/actions/generic` 文件夹。
+要执行元数据检索和更新，请先更新`src/dx-excshell-1/actions/generic`文件夹中自动创建的&#x200B;_通用_&#x200B;操作代码。
 
-请参阅附件中的 [WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip) 文件以了解完整代码，以下部分突出显示关键文件。
+有关完整代码，请参阅附加的[WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip)文件，以下部分突出显示关键文件。
 
-- 此 `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` 文件模拟PIM API调用以检索其他元数据，如SKU和供应商名称。 此文件用于演示目的。 在端到端流程正常工作后，请将此函数替换为对实际PIM系统的调用，以检索资产的元数据。
+- `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js`文件模拟PIM API调用以检索其他元数据，如SKU和供应商名称。 此文件用于演示目的。 在端到端流程正常工作后，请将此函数替换为对实际PIM系统的调用，以检索资产的元数据。
 
   ```javascript
   /**
@@ -139,7 +139,7 @@ ht-degree: 0%
   };
   ```
 
-- 此 `src/dx-excshell-1/actions/generic/aemCommunicator.js` 文件使用更新AEM中的资源元数据 [资产创作API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/).
+- `src/dx-excshell-1/actions/generic/aemCommunicator.js`文件使用[Assets创作API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)更新AEM中的资源元数据。
 
   ```javascript
   const fetch = require('node-fetch');
@@ -211,11 +211,11 @@ ht-degree: 0%
   module.exports = { updateAEMAssetMetadata };
   ```
 
-  此 `.env` 文件存储ADC项目的OAuth服务器到服务器凭据详细信息，并使用作为参数传递给操作 `ext.config.yaml` 文件。 请参阅 [App Builder配置文件](https://developer.adobe.com/app-builder/docs/guides/configuration/) 用于管理密钥和操作参数。
+  `.env`文件存储ADC项目的OAuth服务器到服务器凭据详细信息，并使用`ext.config.yaml`文件将这些凭据作为参数传递给操作。 有关管理密钥和操作参数，请参阅[App Builder配置文件](https://developer.adobe.com/app-builder/docs/guides/configuration/)。
 
-- 此 `src/dx-excshell-1/actions/model` 文件夹包含 `aemAssetEvent.js` 和 `errors.js` 文件，操作将使用这些文件分别解析收到的事件和处理错误。
+- `src/dx-excshell-1/actions/model`文件夹包含`aemAssetEvent.js`和`errors.js`个文件，操作使用这些文件分别分析收到的事件和处理错误。
 
-- 此 `src/dx-excshell-1/actions/generic/index.js` file使用前面提到的模块来编排元数据的检索和更新。
+- `src/dx-excshell-1/actions/generic/index.js`文件使用前面提到的模块来编排元数据检索和更新。
 
   ```javascript
   ...
@@ -283,7 +283,7 @@ $ aio app deploy
 
 要验证AEM Assets与PIM集成，请执行以下步骤：
 
-- 要查看模拟PIM提供的元数据（如SKU和供应商名称），请在AEM Assets中创建元数据架构，请参阅 [元数据架构](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/metadata-schemas.html) 显示SKU和供应商名称元数据属性。
+- 要查看模拟PIM提供的元数据（如SKU和供应商名称），请在AEM Assets中创建元数据架构，请参阅显示SKU和供应商名称元数据属性的[元数据架构](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/metadata-schemas.html)。
 
 - 在AEM创作服务中上传资源并验证元数据更新。
 
@@ -294,7 +294,7 @@ $ aio app deploy
 企业通常需要在AEM和其他系统（如PIM）之间同步资源元数据。 使用AEM事件可以实现此类要求。
 
 - 资源元数据检索代码在AEM外部执行，避免了AEM Author服务上的负载，因此事件驱动的架构可以独立扩展。
-- 新引入的资产创作API用于更新AEM中的资产元数据。
-- API身份验证使用OAuth服务器到服务器（也称为客户端凭据流），请参阅 [OAuth服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/).
+- 新引入的Assets创作API用于更新AEM中的资源元数据。
+- API身份验证使用OAuth服务器到服务器（也称为客户端凭据流），请参阅[OAuth服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)。
 - 与Adobe I/O Runtime操作不同，其他Webhook或Amazon EventBridge可用于接收AEM Assets事件并处理元数据更新。
 - 通过AEM Eventing开展的资产事件使企业能够自动化和简化关键流程，从而提高内容生态系统之间的效率和一致性。

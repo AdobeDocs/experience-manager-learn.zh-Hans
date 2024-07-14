@@ -25,8 +25,8 @@ AEM Assets Dynamic Media通过Interactive Media查看器将资产热点与体验
 
 >[!NOTE]
 >
->将AEM体验片段与AEM Assets Dynamic Media热点结合使用需要 [将在Dynamic Media中运行的AEM](https://experienceleague.adobe.com/docs/) 模式。
+>将AEM体验片段与AEM Assets Dynamic Media热点一起使用要求在Dynamic Media](https://experienceleague.adobe.com/docs/)模式下运行[AEM。
 
 下面显示了一个以AEM包形式提供的视频中显示的弹出窗口体验片段变体。
 
-下载 [体验片段Dynamic Media资产](assets/experience-fragmentsdynamic-mediaassets-100.zip)
+下载[体验片段Dynamic Media Assets](assets/experience-fragmentsdynamic-mediaassets-100.zip)

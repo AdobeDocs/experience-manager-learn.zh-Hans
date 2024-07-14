@@ -55,7 +55,7 @@ Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本�
     </a>
     </div>
     <p>
-    <em>面向希望使用AEM作为Headless CMS的开发人员的快速入门指南。</em>
+    <em>适用于希望将AEM用作Headless CMS的开发人员的快速入门指南。</em>
     </p>
   </td>
   <td>
@@ -64,11 +64,11 @@ Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本�
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-        <strong>AEM SPA编辑器快速入门</strong>
+        <strong>AEM SPA编辑器入门</strong>
       </a>
     </div>
     <p>
-    <em>面向开发人员的快速入门指南，用于将单页应用程序(SPA)与AEM集成。</em>
+    <em>开发人员将单页应用程序(SPA)与AEM集成的快速入门指南。</em>
     <p>
   </td>
 </tr>
@@ -82,7 +82,7 @@ Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本�
 * [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
 * [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEMas a Cloud Service教程](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service教程](/help/cloud-service/overview.md)
 * [AEM Assets教程](/help/assets/overview.md)
 * [AEM Forms教程](/help/forms/overview.md)
 * [AEM Foundation教程](/help/foundation/overview.md)

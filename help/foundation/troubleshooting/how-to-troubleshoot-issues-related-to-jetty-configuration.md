@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 如何解决AEM中与Jetty配置相关的问题
 
-*本视频介绍与AEM中的Jetty配置相关的问题故障排除步骤。*
+*本视频介绍与AEM中的Jetty配置有关的问题故障排除步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335470?quality=12&learn=on)

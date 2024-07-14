@@ -26,11 +26,11 @@ ht-degree: 0%
 
 在AEM中配置watched文件夹时，您会关联ECMA脚本或Java代码，在将文件拖放到watched文件夹中时执行这些脚本或Java代码。 在本文中，我们将重点介绍ECMA脚本，该脚本将生成打印渠道文档并将其保存到文件系统。
 
-观察文件夹配置和ECMA脚本是您在 [本教程的开头](introduction.md)
+观察文件夹配置和ECMA脚本是您在本教程[开头导入的资产的一部分](introduction.md)
 
 放入watched文件夹中的输入文件具有以下结构。 ECMA脚本读取这些帐户编号并为每个帐户生成打印渠道文档。
 
-有关用于生成文档的ECMA脚本的更多详细信息， [请参阅本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+有关用于生成文档的ECMA脚本的详细信息，[请参阅本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 ```xml
 <accountnumbers>

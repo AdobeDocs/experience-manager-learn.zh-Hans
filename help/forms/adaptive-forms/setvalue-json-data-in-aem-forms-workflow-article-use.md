@@ -20,7 +20,7 @@ ht-degree: 0%
 
 由于自适应表单在AEM Workflow中被路由到不同的用户，因此需要根据查看表单的人来隐藏或禁用某些字段或面板。 为了满足这些用例，我们通常设置隐藏字段的值。 可以基于此隐藏字段的值创作业务规则以隐藏/禁用相应的面板或字段。
 
-![在json数据中设置元素的值](assets/capture-3.gif)
+![在JSON数据中设置元素的值](assets/capture-3.gif)
 
 在AEM Forms OSGi中 — 我们必须创建一个自定义OSGi捆绑包以设置JSON数据元素的值。 该捆绑包作为本教程的一部分提供。
 
@@ -42,27 +42,27 @@ afData.afUnboundData.data.initialStep,N
 
 * [下载并部署DevelopingWidthServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 这是自定义OSGI捆绑包，允许您在提交的json数据中设置元素的值。
+* [下载并部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 这是自定义OSGI捆绑包，允许您在提交的json数据中设置元素的值。
 
 * [下载并解压缩zip文件的内容](assets/set-value-jsondata.zip)
-   * 将浏览器指向 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+   * 将浏览器指向[包管理器](http://localhost:4502/crx/packmgr/index.jsp)
       * 导入并安装SetValueOfElementInJSONDataWorkflow.zip。此包中包含与表单关联的示例工作流模型和表单数据模型。
 
-* 将浏览器指向 [Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 将浏览器指向[Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 单击创建 | 文件上传
 * 上传TimeOffRequestForm.zip文件
-  **此表单是使用AEM Forms 6.4构建的。请确保您使用的是AEM Forms 6.4或更高版本**
-* 打开 [表单](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
+  **此表单是使用AEM Forms 6.4生成的。请确保您使用的是AEM Forms 6.4或更高版本**
+* 打开[表单](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
 * 填写开始日期和结束日期并提交表单。
-* 转到 [&quot;收件箱&quot;](http://localhost:4502/aem/inbox)
+* 转到[“收件箱”](http://localhost:4502/aem/inbox)
 * 打开与任务关联的表单。
 * 请注意，第一个面板中的字段已禁用。
 * 请注意，用于批准或拒绝请求的面板现在可见。
 
 >[!NOTE]
 >
->由于我们使用用户配置文件预填充自适应表单，因此请确保管理员 [用户配置文件信息](http://localhost:4502/security/users.html). 至少要确保您已设置FirstName、LastName和Email字段值。
->您可以通过启用com.aemforms.setvalue.core.SetValueInJson的记录器来启用调试日志记录 [从此处](http://localhost:4502/system/console/slinglog)
+>由于我们使用用户配置文件预填充自适应表单，因此请确保管理员[用户配置文件信息](http://localhost:4502/security/users.html)。 至少要确保您已设置FirstName、LastName和Email字段值。
+>您可以从此处](http://localhost:4502/system/console/slinglog)启用com.aemforms.setvalue.core.SetValueInJson [的记录器以启用调试日志记录
 
 >[!NOTE]
 >

@@ -52,7 +52,7 @@ AEM支持的身份验证（有时是授权）机制的综合视图。
             <td>✔</td>
         </tr>
         <tr>
-            <td>基于令牌(带 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装令牌</a>)</td>
+            <td>基于令牌（带<a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装令牌</a>）</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -95,4 +95,4 @@ AEM支持的身份验证（有时是授权）机制的综合视图。
     </tbody>
 </table>
 
-⁕AEM *通过社区项目提供，但Adobe不直接支持。*
+*⁕通过社区项目提供，但不受Adobe直接支持。*

@@ -20,9 +20,9 @@ ht-degree: 13%
 
 + [AEM Headless概述](./overview.md)
 + GraphQL {#graphql}
-   + [AEM Headless开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
+   + [AEM Headless开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans){target=_blank}
    + [概述](./graphql/overview.md)
-   + 快速设置 {#quick-setup}
+   + 快速设置{#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
       + [AEM SDK](./graphql/quick-setup/local-sdk.md)
    + 视频系列{#video-series}
@@ -31,7 +31,7 @@ ht-degree: 13%
       + [3 — 创建GraphQL查询](./graphql/video-series/creating-graphql-queries.md)
       + [4 — 内容片段变量](./graphql/video-series/content-fragment-variations.md)
       + [5 - GraphQL端点](./graphql/video-series/graphql-endpoints.md)
-      + [6 — 创作和发布架构](./graphql/video-series/author-publish-architecture.md)
+      + [6 — 作者和Publish架构](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL持久查询](./graphql/video-series/graphql-persisted-queries.md)
    + 基本教程{#multi-step}
       + [概述](./graphql/multi-step/overview.md)
@@ -53,15 +53,15 @@ ht-degree: 13%
       + [3 — 复杂组件](./graphql/headless-first-tutorial/3-complex-components.md)
 + 部署{#deployments}
    + [概述](./graphql/deployment/overview.md)
-   + [单页应用程序](./graphql/deployment/spa.md)
+   + [单页应用](./graphql/deployment/spa.md)
    + [Web组件](./graphql/deployment/web-component.md)
    + [移动设备](./graphql/deployment/mobile.md)
    + [服务器到服务器](./graphql/deployment/server-to-server.md)
    + 配置{#configurations}
       + [AEM主机](./graphql/deployment/configurations/aem-hosts.md)
       + [CORS](./graphql/deployment/configurations/cors.md)
-      + [Dispatcher过滤器](./graphql/deployment/configurations/dispatcher-filters.md)
-+ 操作方法 {#how-to}
+      + [Dispatcher筛选器](./graphql/deployment/configurations/dispatcher-filters.md)
++ 如何{#how-to}
    + [富文本](./graphql/how-to/rich-text.md)
    + [图像](./graphql/how-to/images.md)
    + [本地化内容](./graphql/how-to/localized-content.md)
@@ -70,7 +70,7 @@ ht-degree: 13%
    + [受保护的内容](./graphql/how-to/protected-content.md)
    + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + [在AEM 6.5上安装GraphiQL](./graphql/how-to/install-graphiql-aem-6-5.md)
-   + 示例 {#example-apps}
+   + 示例{#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [Next.js](./graphql/example-apps/next-js.md)
       + [Web组件](./graphql/example-apps/web-component.md)
@@ -101,13 +101,13 @@ ht-degree: 13%
       + [3 — 固定组件](./spa-editor/remote-spa/spa-fixed-component.md)
       + [4 — 容器组件](./spa-editor/remote-spa/spa-container-component.md)
       + [5 — 动态路由](./spa-editor/remote-spa/spa-dynamic-routes.md)
-   + 操作方法{#how-to}
+   + 如何{#how-to}
       + [AEM React可编辑组件v2](./spa-editor/how-to/react-core-components-v2.md)
-+ 基于令牌的身份验证 {#authentication}
++ 基于令牌的身份验证{#authentication}
    + [概述](./authentication/overview.md)
    + [1 — 本地开发访问令牌](./authentication/local-development-access-token.md)
    + [2 — 服务凭据](./authentication/service-credentials.md)
-+ 内容服务 {#content-services}
++ 内容服务{#content-services}
    + [概述](./content-services/overview.md)
    + [1 — 教程设置](./content-services/chapter-1.md)
    + [2 — 定义事件内容片段模型](./content-services/chapter-2.md)
@@ -116,7 +116,7 @@ ht-degree: 13%
    + [5 — 创作Content Services页面](./content-services/chapter-5.md)
    + [6 — 在AEM Publish上公开内容以进行交付](./content-services/chapter-6.md)
    + [7 — 从移动设备应用程序使用AEM Content Services](./content-services/chapter-7.md)
-+ 代码示例 {#code-samples}
++ 代码示例{#code-samples}
    + [筛选React应用程序](./graphql/code-samples/filtering-react-app.md)
    + [过滤前置应用程序](./graphql/code-samples/filtering-preact-app.md)
    + [筛选Angular应用程序](./graphql/code-samples/filtering-angular-app.md)

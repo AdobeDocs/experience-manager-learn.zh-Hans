@@ -19,14 +19,14 @@ ht-degree: 17%
 
 + [概述](overview.md)
 
-+ 配置{#configuring}
++ 正在配置{#configuring}
    + [基线文件夹](configuring/baseline-folders.md)
    + [基线权限](configuring/baseline-permissions.md)
    + [标记](configuring/tagging.md)
    + [元数据架构](configuring/metadata-schemas.md)
    + [元数据配置文件](configuring/metadata-profiles.md)
    + [元数据文件夹架构](configuring/metadata-folder-schemas.md)
-   + [资产管理员搜索边栏](configuring/assets-admin-search-rail.md)
+   + [Assets管理员搜索边栏](configuring/assets-admin-search-rail.md)
    + [处理配置文件](configuring/processing-profiles.md)
    + [自动启动工作流](configuring/auto-start-workflows.md)
 
@@ -38,7 +38,7 @@ ht-degree: 17%
    + [演绎版](./authoring/renditions.md)
    + [关联和取消关联](./authoring/relate-unrelate.md)
 
-+ 协作{#collaboration}
++ Collaboration{#collaboration}
    + [观看](./collaboration/watch.md)
    + [时间轴和收件箱](./collaboration/timeline-and-inbox.md)
    + [注释和批注](./collaboration/comments-and-annotations.md)
@@ -55,7 +55,7 @@ ht-degree: 17%
    + [查找类似图像](./search-and-discovery/find-similar-images.md)
 
 + 高级功能{#advanced}
-   + [3D资产](./advanced/3d-assets.md)
+   + [3D Assets](./advanced/3d-assets.md)
    + [注释PDF输出](./advanced/customizing-annotations-pdf-output.md)
    + [Assets报表](./advanced/asset-reports.md)
    + [已阻止标记](./advanced/blocked-tags.md)
@@ -75,7 +75,7 @@ ht-degree: 17%
    + [Sidekick插件](./edge-delivery-services/sidekick-plugin.md)
 
 + 共享和分发{#sharing}
-   + [下载资产](./sharing/download.md)
+   + [下载Assets](./sharing/download.md)
    + [导出资源](./sharing/export.md)
    + [发布资源](./sharing/publish.md)
 
@@ -97,7 +97,7 @@ ht-degree: 17%
    + [Adobe资源链接](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
-+ Adobe资源链接{#adobe-asset-link}
++ AdobeAsset Link{#adobe-asset-link}
    + [设置](./adobe-asset-link/setup.md)
    + [访问Adobe资源链接](./adobe-asset-link/launch-adobe-asset-link.md)
    + [面板概述](./adobe-asset-link/panel-overview.md)
@@ -118,41 +118,41 @@ ht-degree: 17%
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media概述](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic桌面应用程序](dynamic-media/dynamic-media-classic-desktop-application.md)
-   + 图像 {#images}
+   + 图像{#images}
       + [Dynamic Media快照](dynamic-media/dynamic-media-snapshot.md)
       + [智能裁切](dynamic-media/smart-crop-feature-video-use.md)
       + [图像锐化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + 视频 {#video}
+   + 视频{#video}
       + [360视频](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [自定义视频缩略图](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH自适应流](dynamic-media/dynamic-media-dash.md)
       + [Dynamic Media智能裁剪视频](dynamic-media/dynamic-media-smart-crop-video.md)
       + [视频播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
-   + 查看器 {#viewers}
+   + 查看器{#viewers}
       + [查看器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [全景和垂直图像查看器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
       + [查看器和Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + 三维 {#3d}
+   + 3D {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + 与AEM Sites一起使用 {#dm-with-aem-sites}
+   + 与AEM Sites {#dm-with-aem-sites}一起使用
       + [体验片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media核心组件](dynamic-media/dynamic-media-core-components.md)
 
-   + Tutorials {#tutorials}
+   + Tutorials{#tutorials}
       + [创建传送集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [创建图像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [创建图像预设](dynamic-media/tutorials/creating-image-presets.md)
       + [创建智能裁剪图像配置文件](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
       + [创建视频配置文件](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
-      + [正在处理资产](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [正在处理Assets](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
       + [配置安全预览服务器](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
       + [生成URL和嵌入代码](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
       + [触发导出作业](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
       + [使CDN缓存失效](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
       + [使用Dynamic Media核心组件](dynamic-media/tutorials/using-dm-components-on-site-page.md)
       + [删除Dynamic Media配置](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
-      + [在Dynamic Media Classic应用程序中下载资源](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
+      + [在Dynamic Media Classic应用程序中下载Assets](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [DYNAMIC MEDIA CLASSIC IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
 + Workfront集成{#workfront}
@@ -167,7 +167,7 @@ ht-degree: 17%
          + [高级设置和工作流](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 
 + 翻译 {#translation}
-   + [源文件翻译](translation/source-file-translation-feature-video-use.md)
+   + [Source文件翻译](translation/source-file-translation-feature-video-use.md)
    + [智能翻译搜索](translation/smart-translation-search-feature-video-use.md)
    + [设置智能翻译搜索](translation/smart-translation-search-technical-video-setup.md)
 

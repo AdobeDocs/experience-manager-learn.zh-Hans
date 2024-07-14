@@ -1,5 +1,5 @@
 ---
-title: 集成 [!DNL ServiceNow]
+title: 与 [!DNL ServiceNow]集成
 description: 使用表单数据模型创建和显示所有事件。
 feature: Adaptive Forms
 version: 6.4,6.5
@@ -17,32 +17,32 @@ ht-degree: 0%
 
 ---
 
-# 将AEM Forms与集成 [!DNL ServiceNow]
+# 将AEM Forms与[!DNL ServiceNow]集成
 
-在中创建和显示事件 [!DNL ServiceNow] 使用AEM Forms中的表单数据模型。
+在[!DNL ServiceNow]中使用AEM Forms中的表单数据模型创建和显示事件。
 
 ## 先决条件
 
-* [!DNL ServiceNow] 帐户。
-* 熟悉 [创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
-* 熟悉 [表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)
+* [!DNL ServiceNow]帐户。
+* 熟悉[创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
+* 熟悉[表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)
 
-## 示例资源
+## Assets示例
 
 本文提供的示例资源包括
 
 * 云服务配置
-* Swagger文件用于创建事件并获取所有事件
+* 使用Swagger文件创建事件并获取所有   事件
 * 基于swagger文件的表单数据模型
-* 要创建并列出的自适应表单 [!DNL ServiceNow] 事件
+* 用于创建和列出[!DNL ServiceNow]事件的自适应表单
 
 ## 在服务器上部署资源
 
-* 下载 [示例资源](assets/service-now.zip)
-* 使用将资源导入AEM [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* 用于此集成的swagger文件位于 ```/conf/9957/settings/cloudconfigs/fdm``` crx存储库中的文件夹
-* 编辑 [CreateIncident云服务配置](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)以匹配您的ServiceNow实例。
-* 编辑 [GetAllIncidents云服务配置](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) 以匹配您的ServiceNow实例。 您需要更改主机、用户名和密码，以匹配您的ServiceNow实例凭据。
+* 下载[示例资源](assets/service-now.zip)
+* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)将资源导入AEM
+* 用于此集成的swagger文件位于crx存储库的```/conf/9957/settings/cloudconfigs/fdm```文件夹下
+* 编辑[CreateIncident云服务配置](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)以匹配您的ServiceNow实例。
+* 编辑[GetAllIncidents云服务配置](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents)以匹配您的ServiceNow实例。 您需要更改主机、用户名和密码，以匹配您的ServiceNow实例凭据。
 
 ## 访问ServiceNow实例凭据
 

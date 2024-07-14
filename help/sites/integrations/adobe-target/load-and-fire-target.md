@@ -28,19 +28,19 @@ ht-degree: 1%
 
 ## 页面加载规则
 
-Adobe客户端数据层是事件驱动的数据层。 加载AEM Page数据层时，它会触发一个事件 `cmp:show` . 在视频中， `tags Library Loaded` 使用自定义事件调用规则。 在下面，您可以找到视频中用于自定义事件和数据元素的代码片段。
+Adobe客户端数据层是事件驱动的数据层。 加载AEM Page数据层时，它会触发事件`cmp:show` 。 在视频中，使用自定义事件调用`tags Library Loaded`规则。 在下面，您可以找到视频中用于自定义事件和数据元素的代码片段。
 
 ### 自定义页面显示事件{#page-event}
 
 ![页面显示的事件配置和自定义代码](assets/load-and-fire-target-call.png)
 
-在tags属性中，添加 **事件** 到 **规则**
+在Tags属性中，向&#x200B;**规则**&#x200B;添加新的&#x200B;**事件**
 
-+ __扩展名：__ 核心
-+ __事件类型：__ 自定义代码
-+ __名称：__ 页面显示事件处理程序（或描述性内容）
++ __扩展：__&#x200B;核心
++ __事件类型：__&#x200B;自定义代码
++ __名称：__&#x200B;页面显示事件处理程序（或描述性内容）
 
-点按 __打开编辑器__ 按钮进行标记，并粘贴以下代码片段。 此代码 __必须__ 已添加至 __事件配置__ 和后续的 __操作__.
+点按&#x200B;__打开编辑器__&#x200B;按钮并粘贴以下代码片段。 此代码&#x200B;__必须__&#x200B;添加到&#x200B;__事件配置__&#x200B;和后续的&#x200B;__操作__。
 
 ```javascript
 // Define the event handler function
@@ -80,20 +80,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-自定义函数定义 `pageShownEventHandler`，并侦听AEM核心组件发出的事件，派生核心组件的相关信息，将其打包到事件对象中，并在其有效负载上使用派生的事件信息触发标记事件。
+自定义函数定义`pageShownEventHandler`，并侦听AEM核心组件发出的事件，派生核心组件的相关信息，将其打包到事件对象中，然后在其有效负荷处使用派生的事件信息触发标记事件。
 
-标记规则是使用标记的 `trigger(...)` 函数 __仅限__ 可从规则事件的Custom Code代码段定义中获取。
+标记规则是使用标记的`trigger(...)`函数触发的，该函数仅在规则事件的自定义代码段定义中提供&#x200B;__only__。
 
-此 `trigger(...)` 函数将事件对象作为参数，该参数依次在标记数据元素中通过名为的标记中的另一个保留名称显示 `event`. 标记中的数据元素现在可以引用来自以下位置的此事件对象的数据： `event` 使用语法（如）的对象 `event.component['someKey']`.
+`trigger(...)`函数将事件对象作为参数，该参数依次显示在标记数据元素中，由名为`event`的标记中的另一个保留名称显示。 标记中的数据元素现在可以使用语法（如`event.component['someKey']`）引用`event`对象中此事件对象的数据。
 
-如果 `trigger(...)` 在事件的Custom Code事件类型的上下文（例如，在操作中）之外使用，即JavaScript错误 `trigger is undefined` 在与tags属性集成的网站上抛出。
+如果在事件的Custom Code事件类型的上下文之外使用`trigger(...)`（例如，在操作中），则在与tags属性集成的网站上抛出JavaScript错误`trigger is undefined`。
 
 
 ### 数据元素
 
 ![数据元素](assets/data-elements.png)
 
-标记数据元素映射来自事件对象的数据 [在自定义页面显示事件中触发](#page-event) 到Adobe Target中可用的变量（通过核心扩展的Custom Code数据元素类型）。
+标记数据元素通过核心扩展的Custom Code数据元素类型，将在自定义页面显示事件](#page-event)中触发的事件对象[中的数据映射到Adobe Target中可用的变量。
 
 #### 页面ID数据元素
 
@@ -146,7 +146,7 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 #### 解决方案
 
 客户有时会将基于云的实例与Target结合使用来进行测试或简单的概念验证。 这些域以及许多其他域均包含在公共后缀列表中。
-如果您使用这些域，则现代浏览器不会保存Cookie，除非您自定义 `cookieDomain` 使用设置 `targetGlobalSettings()`.
+除非使用`targetGlobalSettings()`自定义`cookieDomain`设置，否则在使用这些域时，新式浏览器不会保存Cookie。
 
 ```
 window.targetGlobalSettings = {  
@@ -160,7 +160,7 @@ window.targetGlobalSettings = {
 
 ## 支持链接
 
-+ [Adobe客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe的客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
 + [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

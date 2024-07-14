@@ -22,7 +22,7 @@ ht-degree: 11%
 
 AEM内容片段是基于文本的编辑内容，其中可能包含一些关联但被视为纯内容的结构化数据元素，而无设计或布局信息。 内容片段通常作为与渠道无关的内容创建，这些内容旨在跨渠道使用和重复使用，这反过来又会将内容包装在特定上下文的体验中。
 
-本视频系列涵盖AEM中内容片段的创作生命周期。 详细信息 [可在此处找到交付内容片段](content-fragments-delivery-feature-video-use.md).
+本视频系列涵盖AEM中内容片段的创作生命周期。 有关[交付内容片段的详细信息见此处](content-fragments-delivery-feature-video-use.md)。
 
 1. 启用和定义内容片段模型
 2. 创作内容片段
@@ -38,7 +38,7 @@ AEM内容片段是基于文本的编辑内容，其中可能包含一些关联�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
-AEM内容片段模型（内容片段的数据架构）必须通过AEM启用 [[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)，允许基于每个配置定义内容片段模型。
+AEM内容片段模型（内容片段的数据架构）必须通过AEM [[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)启用，该浏览器允许基于每个配置定义内容片段模型。
 
 ## 创建内容片段 {#creating-content-fragments}
 
@@ -48,7 +48,7 @@ AEM配置将应用于AEM Assets文件夹层次结构，以允许将其内容片�
 
 内容片段可以有多个变体，每个变体为内容提供不同的用例（思考，不一定是渠道）。
 
-*导入运动员传记示例：*\
+*导入的运动员传记示例：*\
 **[sandra-sprient-bio.txt](assets/sandra-sprient-bio.txt)**
 
 ## 下载内容片段 {#downloading-content-fragments}
@@ -66,16 +66,16 @@ AEM内容片段可以从AEM创作实例中下载为包含变量、元素和元�
 
 >[!NOTE]
 >
-> 中引入了内容片段的注释和版本比较 [AEM 6.4 Service Pack 2](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html) 和 [AEM 6.3 Service Pack 3](https://helpx.adobe.com/cn/experience-manager/6-3/release-notes/sp3-release-notes.html).
+> [AEM 6.4 Service Pack 2](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html)和[AEM 6.3 Service Pack 3](https://helpx.adobe.com/cn/experience-manager/6-3/release-notes/sp3-release-notes.html)中引入了内容片段的注释和版本比较。
 
 ## 后续步骤
 
-了解 [交付内容片段](content-fragments-delivery-feature-video-use.md).
+了解[交付内容片段](content-fragments-delivery-feature-video-use.md)。
 
 ## 其他资源 {#additional-resources}
 
 * [交付内容片段](content-fragments-delivery-feature-video-use.md)
-* [AEM WCM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [AEM WCM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [AEM WCM核心内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)
 
 要从视频系列中下载以下包并将其安装在最终状态的AEM 6.4+实例上：

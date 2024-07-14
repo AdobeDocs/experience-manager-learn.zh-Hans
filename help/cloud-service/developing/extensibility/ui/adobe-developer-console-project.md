@@ -1,6 +1,6 @@
 ---
-title: 为AEM UI可扩展性创建一个Adobe Developer控制台项目
-description: 了解如何创建一个Adobe Developer Console项目，该项目定义了其对其他Adobe服务的访问权限并管理其部署。
+title: 为AEM UI可扩展性创建一个Adobe Developer Console项目
+description: 了解如何创建一个Adobe Developer Console项目以定义其对其他Adobe服务的访问权限并管理其部署。
 version: Cloud Service
 feature: Developer Tools
 topic: Development
@@ -28,6 +28,6 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> 上面的视频展示了如何使用内容片段控制台扩展来说明如何创建Adobe Developer控制台项目。 但是，请务必注意，所涵盖的概念可应用于所有AEM UI扩展。
+> 上面的视频展示了如何使用内容片段控制台扩展来说明Adobe Developer Console项目的创建过程。 但是，请务必注意，所涵盖的概念可应用于所有AEM UI扩展。
 
-请参阅Adobe Developer文档以了解 [创建Adobe Developer控制台项目的详细演练](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console).
+有关创建Adobe Developer项目的详细演练[，请参阅Adobe Developer Console文档](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console)。

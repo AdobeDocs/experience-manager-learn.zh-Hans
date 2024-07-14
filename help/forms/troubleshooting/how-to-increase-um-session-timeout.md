@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 如何增加UM会话超时
 
-*此视频介绍增加UM会话超时的过程。*
+*此视频将逐步增加UM会话超时。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335503?quality=12&learn=on)

@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ## 服务器端代码
 
-编写了以下服务器端Java代码以处理表单数据。 下面是在AEM中运行的Java servlet，通过上述JavaScript中的XHR调用调用它。
+编写了以下服务器端Java代码以处理表单数据。 以下是在AEM中运行的Java servlet，通过上述JavaScript中的XHR调用调用了该服务。
 
 ```java
 package com.azuredemo.core.servlets;

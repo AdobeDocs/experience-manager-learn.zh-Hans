@@ -29,15 +29,15 @@ AEM Headless服务器到服务器部署涉及服务器端应用程序或进程�
 
 | 服务器到服务器应用程序连接到 | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------------------:|:----------:|:-----------:|:-----------:|
-| [Dispatcher过滤器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
+| [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨源资源共享(CORS) | ✘ | ✘ | ✘ |
 | [AEM主机](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
 ## 授权要求
 
-对AEM GraphQL API的授权请求通常发生在服务器到服务器应用程序的上下文中，因为其他应用程序类型，例如 [单页应用程序](./spa.md)， [移动设备](./mobile.md)，或 [Web组件](./web-component.md)通常使用授权，因为很难保护凭据。
+向AEM GraphQL API发出的授权请求通常发生在服务器到服务器应用程序的上下文中，因为其他应用程序类型（如[单页应用程序](./spa.md)、[移动设备](./mobile.md)或[Web组件](./web-component.md)）通常使用授权，因为保护凭据很困难。
 
-当授权请求访问AEMas a Cloud Service时，使用 [基于服务凭据的令牌身份验证](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html). 要了解有关向AEMas a Cloud Service验证请求的更多信息，请参阅 [基于令牌的身份验证教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). 本教程探讨了使用进行基于令牌的身份验证 [AEM ASSETS HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html) 但这些概念和方法同样适用于与AEM Headless GraphQL API交互的应用程序。
+向AEM as a Cloud Service授权请求时，使用[基于服务凭据的令牌身份验证](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html)。 要了解有关向AEM as a Cloud Service验证请求的更多信息，请查看[基于令牌的身份验证教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)。 本教程探讨了使用[AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)的基于令牌的身份验证，但相同的概念和方法适用于与AEM Headless GraphQL API交互的应用程序。
 
 ## 示例服务器到服务器应用程序
 

@@ -27,7 +27,7 @@ AEM成熟度评估主要针对内部部署和托管服务实施。 由于每个�
 有关管理、开发或创作的最佳实践，请参阅以下资源：
 
 * [管理最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/administering/bestpractices/administer-best-practices.html?lang=en)
-* [制定最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=en)
+* [开发最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=en)
 * [创作最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/best-practices.html?lang=en)
 
 上述每个最佳实践领域还都包括在创作、开发和部署AEM方面的更多最佳实践。

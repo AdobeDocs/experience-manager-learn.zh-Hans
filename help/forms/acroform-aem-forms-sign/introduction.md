@@ -31,14 +31,14 @@ ht-degree: 0%
 
 ### 要使此功能在您的系统上正常工作，需要满足以下条件
 
-* 使用下载并部署包 [Felix Web控制台](http://localhost:4502/system/console/bundles)
+* 使用[Felix Web控制台](http://localhost:4502/system/console/bundles)下载并部署包
 * [DocumentservicesBundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 * [DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [AcroFormsToAEMFormsBundle](https://forms.enablementadobe.com/content/DemoServerBundles/AcroFormToAEMForm.core-1.0-SNAPSHOT.jar)
-* [下载此包并将其导入AEM](assets/acro-form-aem-form.zip). 此包中包含可从acroform创建XSD的示例工作流和html页面
-* 打开 [configMgr](http://localhost:4502/system/console/configMgr)
+* [下载此包并将其导入AEM](assets/acro-form-aem-form.zip)。 此包中包含可从acroform创建XSD的示例工作流和html页面
+* 打开[configMgr](http://localhost:4502/system/console/configMgr)
    * 搜索“Apache Sling Service用户映射器服务”，然后单击以打开属性
-   * 单击 `+` 图标（加号）以添加以下服务映射
+   * 单击`+`图标（加号）以添加以下服务映射
       * `DevelopingWithServiceUser.core:getresourceresolver=data`
       * `DevelopingWithServiceUser.core:getformsresourceresolver=fd-service`
    * 单击“保存”

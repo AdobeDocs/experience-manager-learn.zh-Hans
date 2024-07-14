@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 进行Ajax调用
 
-当用户上传了pdf文件时，我们需要对servlet进行POST调用，并将上传的PDF文档传递到POST请求中。 POST请求会返回crx存储库中导出数据的路径
+当用户上传了pdf文件时，我们需要对servlet进行POST调用，并将上传的PDF文档传递到POST请求中。 Post请求会返回crx存储库中导出数据的路径
 
 ```javascript
 $("#fileElem").on('change', function (e) {
@@ -58,8 +58,8 @@ function handleFiles(formData) {
 }
 ```
 
-挂载的servlet **_/bin/ExtractDataFromPDF_** 从PDF文件中提取数据，并返回存储提取数据的crx节点的路径。
-此 [GuideBridge设置数据](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor) 然后，使用方法设置自适应表单的数据。
+装载在&#x200B;**_/bin/ExtractDataFromPDF_**上的servlet从PDF文件中提取数据，并返回存储提取数据的crx节点的路径。
+然后使用[GuideBridge setData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor)方法设置自适应表单的数据。
 
 ## 后续步骤
 

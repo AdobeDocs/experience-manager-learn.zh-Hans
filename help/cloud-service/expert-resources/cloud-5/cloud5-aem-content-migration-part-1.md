@@ -19,7 +19,7 @@ ht-degree: 4%
 
 # 迁移到云 — 第1部分
 
-Darin和James讨论了AEM云中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 他们还谈到了向云的迁移。
+Darin和James讨论了AEM Cloud中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 他们还谈到了向云的迁移。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342133?quality=12&learn=on)
 

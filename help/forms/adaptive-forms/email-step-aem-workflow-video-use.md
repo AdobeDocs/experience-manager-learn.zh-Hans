@@ -28,7 +28,7 @@ AEM Forms 6.4中引入了“发送电子邮件”步骤。通过此步骤，我�
 1. 在提交表单时，会触发AEM Workflow
 1. AEM Workflow利用发送电子邮件组件，发送包含DoR作为附件的电子邮件
 
-在使用“发送电子邮件”步骤之前，请确保从以下位置配置Day CQ Mail Service： [configMgr](http://localhost:4502/system/console/configMgr). 提供特定于您的环境的值
+在使用发送电子邮件步骤之前，请确保从[configMgr](http://localhost:4502/system/console/configMgr)配置Day CQ邮件服务。 提供特定于您的环境的值
 
 ![配置Day CQ邮件服务](assets/mailservice.png)
 
@@ -42,13 +42,13 @@ AEM Forms 6.4中引入了“发送电子邮件”步骤。通过此步骤，我�
 
 1. [部署Developingwithserviceuser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [下载并安装setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)此捆绑包中包含用于在工作流的流程步骤中创建元数据属性的代码。
+1. [下载并安装setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)此捆绑包包含用于创建元数据属性的代码，作为工作流的进程步骤的一部分。
 1. [配置Day CQ邮件服务](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html)
-1. [使用包管理器将与此文章关联的资产导入并安装到CRX中](assets/emaildoraemformskt.zip)
-1. 启动 [自适应表单](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled). 填写必填字段并提交。
+1. [使用包管理器将与此文章关联的资源导入并安装到CRX中](assets/emaildoraemformskt.zip)
+1. 启动[自适应表单](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)。 填写必填字段并提交。
 1. 您应会收到包含DocumentOfRecord作为附件的电子邮件
 
-浏览 [工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/emaildor.html)
+浏览[工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/emaildor.html)
 
 了解工作流的流程步骤。 与流程步骤关联的自定义代码将创建元数据属性名称，并根据提交的数据设置其值。随后，发送电子邮件组件会使用这些值。
 
@@ -57,4 +57,4 @@ AEM Forms 6.4中引入了“发送电子邮件”步骤。通过此步骤，我�
 >在AEM Forms 6.5及更高版本中，您不需要此自定义代码来创建元数据属性。 请使用AEM Workflow中的变量功能
 
 确保按照以下屏幕快照配置发送电子邮件组件的附件选项卡
-![“发送电子邮件附件”选项卡](assets/sendemailcomponentconfigure.jpg)“DOR.pdf”值必须与在自适应表单的提交选项中指定的记录文档路径中指定的值匹配。
+![发送电子邮件附件选项卡](assets/sendemailcomponentconfigure.jpg)“DOR.pdf”值必须与在自适应表单的提交选项中指定的记录文档路径中指定的值匹配。

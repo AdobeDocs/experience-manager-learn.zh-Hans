@@ -27,8 +27,8 @@ ht-degree: 0%
 
 ## 使用Watched文件夹批量生成
 
-* 导入 [交互式通信模板](assets/Beneficiaries-confirmation.zip) 到您的AEM Forms服务器。
-* 导入 [观察文件夹配置](assets/batch-generation-api.zip). 这将创建一个名为 `batchAPI` 在你的C盘里。
+* 将[交互式通信模板](assets/Beneficiaries-confirmation.zip)导入AEM Forms服务器。
+* 导入[观察文件夹配置](assets/batch-generation-api.zip)。 这将在C驱动器中创建名为`batchAPI`的文件夹。
 
 **如果您在非Windows操作系统上运行AEM Forms，请按照下面提到的3个步骤操作：**
 
@@ -38,14 +38,14 @@ ht-degree: 0%
 
 ![path](assets/watched-folder-batch-api-basic.PNG)
 
-* 下载并解压缩的内容 [zip文件](assets/jsonfile.zip). zip文件包含名为的文件夹 `jsonfile` 其中包含 `beneficiaries.json` 文件。 此文件包含要生成3个文档的数据。
+* 下载并解压缩[zip文件](assets/jsonfile.zip)的内容。 zip文件包含名为`jsonfile`的文件夹，其中包含`beneficiaries.json`文件。 此文件包含要生成3个文档的数据。
 
-* 放下 `jsonfile` 将文件夹移入观察文件夹的输入文件夹中。
+* 将`jsonfile`文件夹拖放到观察文件夹的输入文件夹中。
 * 提取文件夹以进行处理后，检查观察文件夹的结果文件夹。 您应该会看到生成的3个PDF文件
 
 ## 使用REST请求批量生成
 
-您可以调用 [批处理API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) 通过REST请求。 您可以为其他应用程序公开REST端点，以调用API来生成文档。
+您可以通过REST请求调用[批处理API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)。 您可以为其他应用程序公开REST端点，以调用API来生成文档。
 提供的示例资产显示用于生成交互式通信文档的REST端点。 此servlet接受以下参数：
 
 * fileName — 数据文件在文件系统中的位置。
@@ -59,8 +59,8 @@ ht-degree: 0%
 
 ## 在服务器上部署示例资源
 
-* 导入 [ICT模板](assets/ICTemplate.zip) 使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* 导入 [自定义提交处理程序](assets/BatchAPICustomSubmit.zip) 使用 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* 导入 [自适应表单](assets/BatchGenerationAPIAF.zip) 使用 [Forms和Document界面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 部署和启动 [自定义OSGI捆绑包](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) 使用 [Felix Web控制台](http://localhost:4502/system/console/bundles)
-* [通过提交表单触发批量生成](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)
+* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入[ICTemplate](assets/ICTemplate.zip)
+* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入[自定义提交处理程序](assets/BatchAPICustomSubmit.zip)
+* 使用[Forms和文档界面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)导入[自适应表单](assets/BatchGenerationAPIAF.zip)
+* 使用[Felix Web控制台](http://localhost:4502/system/console/bundles)部署和启动[自定义OSGI包](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar)
+* [通过提交表单](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)触发批量生成

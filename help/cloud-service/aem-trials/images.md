@@ -15,9 +15,9 @@ ht-degree: 0%
 
 # AEM试用图像索引
 
-必须将图像文件放入 `assets` 位于此文件旁边的文件夹。
+必须将图像文件放置在此文件旁边的`assets`文件夹中。
 
 应使用语法将每个要发布的图像文件从此文件链接：
 
 ![试用就绪的电子邮件图像个人帐户](./assets/select-personal-account.png)
-![Slack电子邮件图像](./assets/Slack-email-image.png)
+![Slack的电子邮件图像](./assets/Slack-email-image.png)

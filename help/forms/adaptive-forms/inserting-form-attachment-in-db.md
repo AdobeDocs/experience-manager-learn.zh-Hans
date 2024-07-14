@@ -26,8 +26,8 @@ ht-degree: 1%
 
 ## 创建数据库表以保存表单数据和附件
 
-已创建名为newhire的表，以保存表单数据。 请注意类型的列名图片 **LONGBLOB** 用于存储表单附件
-![表模式](assets/insert-picture-table.png)
+已创建名为newhire的表，以保存表单数据。 请注意&#x200B;**LONGBLOB**类型的列名图片以存储表单附件
+![table-schema](assets/insert-picture-table.png)
 
 ## 创建表单数据模型
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 ## 创建工作流
 
-将自适应表单配置为提交到AEM工作流，您可以选择将表单附件保存在工作流变量中，或将附件保存在有效负荷下的指定文件夹中。 对于此用例，我们需要将附件保存在“文档”的ArrayList类型的工作流变量中。 从此ArrayList中，我们需要提取第一项并初始化文档变量。 工作流变量名为 **listOfDocuments** 和 **employeePhoto** 创建。
+将自适应表单配置为提交到AEM工作流，您可以选择将表单附件保存在工作流变量中，或将附件保存在有效负荷下的指定文件夹中。 对于此用例，我们需要将附件保存在“文档”的ArrayList类型的工作流变量中。 从此ArrayList中，我们需要提取第一项并初始化文档变量。 已创建名为&#x200B;**listOfDocuments**&#x200B;和&#x200B;**employeePhoto**的工作流变量。
 提交自适应表单以触发工作流时，工作流中的一个步骤将使用ECMA脚本初始化employeePhoto变量。 以下是ECMA脚本代码
 
 ```javascript
@@ -55,8 +55,8 @@ log.info("Employee Photo updated");
 ```
 
 工作流中的下一步是使用调用表单数据模型服务组件将数据和表单附件插入表中。
-![插入图片](assets/fdm-insert-pic.png)
-[可以从此处下载包含示例ecma脚本的完整工作流](assets/add-new-employee.zip).
+![insert-pic](assets/fdm-insert-pic.png)
+[可以从此处](assets/add-new-employee.zip)下载包含示例ecma脚本的完整工作流。
 
 >[!NOTE]
 > 您必须创建新的基于JDBC的表单数据模型，并在工作流中使用该表单数据模型

@@ -1,5 +1,5 @@
 ---
-title: AEM Assets微服务和迁移到AEMas a Cloud Service
+title: AEM Assets微服务和迁移到AEM as a Cloud Service
 description: 了解AEM Assets as a Cloud Service的asset compute微服务如何让您自动高效地为资源生成任何演绎版，从而取代传统AEM Workflow的这一角色。
 version: Cloud Service
 feature: Asset Compute Microservices
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ---
 
-# AEM Assets微服务 — 移至AEMas a Cloud Service
+# AEM Assets微服务 — 移至AEM as a Cloud Service
 
 了解AEM Assets as a Cloud Service的asset compute微服务如何让您自动高效地为资源生成任何演绎版，从而取代传统AEM Workflow的这一角色。
 
@@ -27,14 +27,14 @@ ht-degree: 1%
 
 ![资产工作流迁移工具](./assets/asset-workflow-migration.png)
 
-作为重构代码库的一部分，请使用 [资产工作流迁移工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html) 迁移现有工作流以使用AEMas a Cloud Service中的Asset compute微服务。
+作为重构代码库的一部分，请使用[资源工作流迁移工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html)迁移现有工作流以使用AEM as a Cloud Service中的Asset compute微服务。
 
 ## 关键活动
 
-+ 使用 [Adobe I/O工作流迁移程序](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator) 工具，用于迁移资源处理工作流以使用Asset compute微服务。
-+ 设置 [本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans) 并部署更新的工作流。 对于复杂的工作流，可能需要手动进行调整。
++ 使用[Adobe I/O工作流迁移器](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator)工具迁移资源处理工作流以使用Asset compute微服务。
++ 设置[本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)并部署更新的工作流。 对于复杂的工作流，可能需要手动进行调整。
 + 继续使用AEM SDK在本地开发环境中进行迭代，直到更新的工作流与功能对等相匹配。
-+ 将更新的代码库部署到AEMas a Cloud Service开发环境，并继续验证。
++ 将更新的代码库部署到AEM as a Cloud Service开发环境，并继续验证。
 
 ## 实践练习
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 在尝试动手练习之前，请确保您已观看并了解上述视频以及以下材料：
 
-+ [以不同的方式思考AEMas a Cloud Service](./introduction.md)
++ [以不同的方式思考AEM as a Cloud Service](./introduction.md)
 + [入门培训](./onboarding.md)
 
 此外，请确保您已完成之前的实践练习：

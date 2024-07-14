@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 以下视频是在AEM 6.3上录制的。AEM 6.4+引入了用于存储翻译规则XML文件的新存储库结构。 在AEM 6.4+中使用翻译配置UI时，规则将保存到位置 `/conf/global/settings/translation/rules/translation_rules.xml`. 请参阅 [标识要翻译的内容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html) 以了解更多详细信息。
+> 以下视频是在AEM 6.3上录制的。AEM 6.4+引入了用于存储翻译规则XML文件的新存储库结构。 在AEM 6.4+中使用翻译配置UI时，规则将保存到位置`/conf/global/settings/translation/rules/translation_rules.xml`。 有关更多详细信息，请参阅[标识要翻译的内容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
 
@@ -36,11 +36,11 @@ ht-degree: 0%
 
 访问翻译配置UI：
 
-* **[!UICONTROL AEM的“开始”菜单] > [!UICONTROL 工具] > [!UICONTROL 常规] > [[!UICONTROL 翻译配置]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
+* **[!UICONTROL AEM开始菜单] > [!UICONTROL 工具] > [!UICONTROL 常规] > [[!UICONTROL 翻译配置]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
 ## AEM 6.3之前的版本 {#prior-to-aem}
 
-在以前的AEM版本中，通过编辑位于翻译工作流下的XML文件来手动更新翻译规则： `/etc/workflow/models/translation/translation_rules.xml`.
+在以前的AEM版本中，通过编辑位于翻译工作流`/etc/workflow/models/translation/translation_rules.xml`下的XML文件手动更新了翻译规则。
 
 ## 其他资源 {#additional-resources}
 

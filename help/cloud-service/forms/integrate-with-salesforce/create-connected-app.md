@@ -26,4 +26,4 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/331757?quality=12&learn=on)
 
 >[!NOTE]
->请确保您在中创建了帐户 [Salesforce开发人员版](https://developer.salesforce.com/signup) 因为REST API在开发人员版本中默认处于启用状态。
+>请确保在[Salesforce Developer Edition](https://developer.salesforce.com/signup)中创建帐户，因为在开发人员版本中默认启用REST API。

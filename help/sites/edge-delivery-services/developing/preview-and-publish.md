@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # 预览和发布内容
 
-使用Edge Delivery Services预览和发布内容 [AEM Sidekick](./sidekick.md).
+使用[AEM Sidekick](./sidekick.md)预览和发布Edge Delivery Services的内容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425714/?learn=on)

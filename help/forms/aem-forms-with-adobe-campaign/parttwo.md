@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 创建AEM服务 {#create-aem-service}
 
-创建AEM服务以创建Adobe Campaign配置文件。 此AEM服务将从OSGI配置中获取Adobe Campaign凭据。 在获取营销活动凭据后，生成访问令牌，并使用访问令牌进行HTTP Post调用以在Adobe Campaign中创建配置文件。 以下是创建用户档案的代码。
+创建AEM服务以创建Adobe Campaign配置文件。 此AEM服务将从OSGI配置中获取Adobe Campaign凭据。 在获取营销活动凭据后，生成访问令牌，并使用访问令牌HTTP Post调用在Adobe Campaign中创建配置文件。 以下是创建用户档案的代码。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -246,7 +246,7 @@ return null;
 
 创建自定义提交处理程序以处理自适应表单提交。 在此自定义提交处理程序中，我们将调用CampaignService的createProfile方法。 createProfile方法接受表示需要创建的配置文件的JSONObject。
 
-要详细了解AEM Forms中的自定义提交处理程序，请按照以下步骤操作 [链接](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
+要了解有关AEM Forms中的自定义提交处理程序的更多信息，请访问此[链接](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
 
 以下是自定义提交中的代码
 
@@ -266,9 +266,9 @@ String pkey = addNewProfile.createProfile(profile);
 定义服务和自定义提交操作后，我们便可以测试解决方案了。 要测试解决方案，请执行以下步骤
 
 
-* [确保已按照此处所述的步骤进行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [使用包管理器导入自适应表单和自定义提交处理程序](assets/create-acs-profile-on-af-submission.zip).此包中包含配置为提交到自定义提交操作的自适应表单。
-* 预览 [表单](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
+* [请确保您已按照此处所述的步骤进行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [使用包管理器导入自适应表单和自定义提交处理程序](assets/create-acs-profile-on-af-submission.zip)。此包包含配置为提交到自定义提交操作的自适应表单。
+* 预览[表单](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * 填写所有字段并提交
 * 将在ACS实例中创建新配置文件
 

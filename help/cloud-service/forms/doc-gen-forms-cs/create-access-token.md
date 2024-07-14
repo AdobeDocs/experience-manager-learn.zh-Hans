@@ -21,7 +21,7 @@ ht-degree: 0%
 # 用JWT交换访问令牌
 
 
-在上一步创建的JWT与Adobe IMS API交换访问令牌，然后该令牌可用于访问AEMas a Cloud Service。 要请求访问令牌，请将包含JWT、client_id、client_secret的POST请求发送到IMS身份验证服务。
+在上一步创建的JWT与Adobe IMS API交换访问令牌，然后该令牌可用于访问AEM as a Cloud Service。 要请求访问令牌，请将包含JWT、client_id、client_secret的POST请求发送到IMS身份验证服务。
 
 以下代码用于为访问令牌生成Exchange JWT
 

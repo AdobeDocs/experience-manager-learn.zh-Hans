@@ -23,7 +23,7 @@ ht-degree: 0%
 
 了解如何将Assets Essentials与Adobe Creative Cloud Libraries集成，从而允许：
 
-+ 通过Creative Cloud库无缝访问Assets Essentials中的文件
-+ Creative Cloud库中要共享给Assets Essentials的文件
++ 通过Creative Cloud Libraries无缝访问Assets Essentials中的文件
++ Creative Cloud Libraries中要共享给Assets Essentials的文件
 
 >[!VIDEO](https://video.tv.adobe.com/v/336069?quality=12&learn=on)

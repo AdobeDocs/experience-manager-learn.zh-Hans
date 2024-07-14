@@ -24,7 +24,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->[启用Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) 在AEM中使用此功能。
+>在AEM中[启用Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)以使用此功能。
 
 此功能作为Feature Pack在AEM 6.1和6.2版本中提供。
 
@@ -90,7 +90,7 @@ ht-degree: 11%
 
 | 名称 | 色彩空间 | 描述 |
 | ------------------- | ---------- | ------------------------------------- |
-| adobergb | RGB | Adobe RGB（1998年） |
+| adobergb | RGB | Adobe RGB (1998) |
 | AppleRGB | RGB | AppleRGB |
 | CIERGB | RGB | CIERGB |
 | CoatedFogra27 | CMYK | 涂层的FOGRA27 (ISO 12647-2:2004) |

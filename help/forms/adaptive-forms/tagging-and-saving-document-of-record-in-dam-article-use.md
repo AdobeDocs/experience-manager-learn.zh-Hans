@@ -160,7 +160,7 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 要使此示例在您的系统上正常工作，请按照以下步骤操作：
 * [部署Developingwithserviceuser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 这是自定义OSGI捆绑包，用于从提交的表单数据设置标记。
+* [下载并部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 这是自定义OSGI捆绑包，用于从提交的表单数据设置标记。
 
 * [下载自适应表单示例](assets/tag-and-store-in-dam-adaptive-form.zip)
 
@@ -168,12 +168,12 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 
 * 单击“创建” | 文件上传并上传tag-and-store-in-dam-adaptive-form.zip
 
-* [导入文章资源](assets/tag-and-store-in-dam-assets.zip) 使用AEM包管理器
-* 打开 [预览模式下的示例表单](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **填写所有字段** 并提交表格。
-* [导航到DAM中的峰值文件夹](http://localhost:4502/assets.html/content/dam/Peak). 您应该会在Peak文件夹中看到DoR。 检查文档的属性。 应该对其进行适当的标记。
+* [使用AEM包管理器导入文章资源](assets/tag-and-store-in-dam-assets.zip)
+* 在预览模式](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled)中打开[示例表单。 **填写所有字段**&#x200B;并提交表单。
+* [导航到DAM中的峰值文件夹](http://localhost:4502/assets.html/content/dam/Peak)。 您应该会在Peak文件夹中看到DoR。 检查文档的属性。 应该对其进行适当的标记。
 恭喜!! 您已在系统上成功安装示例
 
-* 让我们来探索 [工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) 在提交表单时触发。
+* 让我们浏览在提交表单时触发的[工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html)。
 * 工作流中的第一个步骤通过连接申请人姓名和居住地县创建唯一的文件名。
 * 工作流的第二步是传递标记层次结构和需要标记的表单字段元素。 处理步骤从提交的数据中提取值，并构建需要标记文档的标记标题。
 * 如果要将DoR存储在DAM的其他文件夹中，请使用以下屏幕快照中指定的配置属性指定文件夹位置。

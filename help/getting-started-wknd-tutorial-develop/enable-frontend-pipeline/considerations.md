@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # 开发注意事项
 
-在启用前端管道以仅在AEMas a Cloud Service环境中部署前端资源后，会对本地AEM开发产生一些影响，因此您必须调整Git分支模型。
+在启用前端管道以仅在AEM as a Cloud Service环境中部署前端资源后，会对本地AEM开发产生一些影响，因此您必须调整Git分支模型。
 
 ## 目标
 
@@ -37,9 +37,9 @@ ht-degree: 0%
 
 ## 经调整发展方法（续）
 
-* 对于使用AEM SDK的本地开发，后端开发团队仍然需要通过生成clientlib `ui.frontend` 模块，但在将Cloud Manager部署到AEMas a Cloud Service环境期间必须跳过。 这就带来了如何隔离中概述的项目配置更改的难题 [更新项目](update-project.md) 章节。
+* 对于使用AEM SDK的本地开发，后端开发团队仍需要通过`ui.frontend`模块生成clientlib，但在将Cloud Manager部署到AEM as a Cloud Service环境时，您必须跳过它。 这给如何隔离[更新项目](update-project.md)章节中概述的项目配置更改带来了挑战。
 
-A __解决方案__ 可以是调整您的Git分支模型，并确保AEM项目配置更改绝不会流回 __本地开发__ AEM后端开发人员使用的分支。
+__解决方案__&#x200B;可以调整您的Git分支模型，并确保AEM项目配置更改不会流回AEM后端开发人员使用的&#x200B;__本地开发__&#x200B;分支。
 
 
-* 作为对AEM项目持续增强功能的一部分，如果您引入新组件或更新了在两个组件中都发生更改的现有组件 `ui.app` 和 `ui.frontend` 模块中，您必须同时运行全栈管道和前端管道。
+* 作为对您的AEM项目持续增强的一部分，如果您引入新组件或更新在`ui.app`和`ui.frontend`模块都有更改的现有组件，则必须运行全栈管道和前端管道。

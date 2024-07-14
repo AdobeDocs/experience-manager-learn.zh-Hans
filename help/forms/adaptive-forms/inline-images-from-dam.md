@@ -83,8 +83,8 @@ async function createFile(imageName){
 
 ### 在您的服务器上部署
 
-* 下载并安装 [客户端库和示例图像](assets/InlineDAMImage.zip) 使用AEM包管理器的AEM实例上。
-* 下载并安装 [示例表单](assets/FieldInspectionForm.zip) 使用AEM包管理器的AEM实例。
-* 将浏览器指向 [文件检查表单](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
+* 使用AEM包管理器在AEM实例上下载并安装[客户端库和示例映像](assets/InlineDAMImage.zip)。
+* 使用AEM包管理器在AEM实例上下载并安装[示例表单](assets/FieldInspectionForm.zip)。
+* 将浏览器指向[文件检查表单](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
 * 选取夹具之一
 * 您应会看到表单中显示的图像

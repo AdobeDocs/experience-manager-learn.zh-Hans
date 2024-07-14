@@ -23,12 +23,12 @@ ht-degree: 29%
 嵌入的自适应表单功能齐全，用户无需离开页面即可填写并提交表单。它帮助用户留在网页上其他元素的上下文中，并同时与该表单交互。
 
 以下视频介绍在网页中嵌入自适应表单或HTML5表单所需的步骤。
-请参阅 [文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html) 以了解最佳先决条件、最佳实践等。
+请参阅[文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html)以了解最佳先决条件、最佳实践等。
 >[!VIDEO](https://video.tv.adobe.com/v/335893?quality=12&learn=on)
 
-您可以下载视频中使用的示例文件 [从此处](assets/embedding-af-web-page.zip)
+您可以从此处](assets/embedding-af-web-page.zip)下载视频[中使用的示例文件
 
-以下是用来获取自适应表单并将表单嵌入到由类名称标识的容器的代码 **右**
+以下代码用于获取自适应表单并将表单嵌入到由类名称&#x200B;**right**&#x200B;标识的容器中
 
 ```javascript
 $(document).ready(function(){

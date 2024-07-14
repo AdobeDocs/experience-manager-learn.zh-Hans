@@ -43,7 +43,7 @@ ht-degree: 3%
 
 索引允许查询尽可能快地运行，从而腾出资源用于其他操作。 确保索引处于顶部形状！ AEM会取消遍历的查询，而不是使用索引来防止一个错误的查询影响整体AEM性能。
 
-#### [Tar压缩/修订版清理](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=en)
+#### [Tar压缩/修订清理](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=en)
 
 存储库的每次更新都会创建一个新的内容修订版本。 因此，存储库的大小会随着每次更新而增长。 为避免存储库增长失控，需要清理旧修订以释放磁盘资源。
 
@@ -73,7 +73,7 @@ ht-degree: 3%
 
 ## 开发人员
 
-尝试不使用自定义组件 — 使用 [核心组件](https://www.aemcomponents.dev/). 您的目标应该是80-90%的时间使用核心组件，并且只谨慎使用自定义组件。 这通常需要一种新的查看页面上组件的方式 — 您必须意识到前端开发人员可以使用CSS轻松重新设置组件的样式。 同时请记住，这些核心组件可以相互嵌入，以实现非常复杂的结果。 发挥创意！
+尝试不使用自定义组件 — 使用[核心组件](https://www.aemcomponents.dev/)。 您的目标应该是80-90%的时间使用核心组件，并且只谨慎使用自定义组件。 这通常需要一种新的查看页面上组件的方式 — 您必须意识到前端开发人员可以使用CSS轻松重新设置组件的样式。 同时请记住，这些核心组件可以相互嵌入，以实现非常复杂的结果。 发挥创意！
 
 ### [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en)
 
@@ -95,8 +95,8 @@ ht-degree: 3%
 
 ## 常规
 
-通过持续学习及时了解更改AEM — 不要沉迷于过去。 使用 [Experience League](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=en) 和 [Adobe数字学习服务(ADLS)](https://learning.adobe.com/) 磨练你的技能。
+通过持续学习及时了解更改AEM — 不要沉迷于过去。 使用[Experience League](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=en)和[Adobe数字学习服务(ADLS)](https://learning.adobe.com/)磨练您的技能。
 
 ## 结论
 
-AEM可以是一个很大的系统，它需要很多类型的人才能让它“唱起来”。 从管理员到开发人员（前端和核心Java开发人员）再到作者 — 每个人都有自己的东西！ 如果您不想处理日常管理，可以随时使用AMS和AEMas a Cloud Service。
+AEM可以是一个很大的系统，它需要很多类型的人才能让它“唱起来”。 从管理员到开发人员（前端和核心Java开发人员）再到作者 — 每个人都有自己的东西！ 如果您不想处理日常管理，可以随时使用AMS和AEM as a Cloud Service。

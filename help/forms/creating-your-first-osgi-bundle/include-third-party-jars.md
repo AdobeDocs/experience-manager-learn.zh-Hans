@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 在您的AEM项目中包含第三方包
 
-在本篇文章中，我们将介绍在您的AEM项目中包含第三方OSGi捆绑包所涉及的步骤。出于本文的目的，我们将包含 [jsch-0.1.55.jar](https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar) 在我们的AEM项目中。  如果OSGi在maven存储库中可用，请在项目的POM.xml文件中包含捆绑包的依赖项。
+在本文中，我们将介绍在您的AEM项目中包含第三方OSGi包所涉及的步骤。出于本文的目的，我们将在AEM项目中包含该[jsch-0.1.55.jar](https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar)。  如果OSGi在maven存储库中可用，请在项目的POM.xml文件中包含捆绑包的依赖项。
 
 >[!NOTE]
 > 假定第三方jar是OSGi捆绑包
@@ -34,7 +34,7 @@ ht-degree: 0%
 </dependency>
 ```
 
-如果您的OSGi包位于文件系统中，请创建一个名为的文件夹 **localjar** 在项目的基目录(C:\aemformsbundles\AEMFormsProcessStep\localjar)下，依赖关系如下所示
+如果OSGi包位于您的文件系统上，请在项目的基目录(C:\aemformsbundles\AEMFormsProcessStep\localjar)下创建一个名为&#x200B;**localjar**&#x200B;的文件夹，则依赖关系将如下所示
 
 ```java
 <dependency>
@@ -48,12 +48,13 @@ ht-degree: 0%
 
 ## 创建文件夹结构
 
-我们正在将此捆绑包添加到我们的AEM项目 **AEMFormsProcessStep** ，其居住在 **c：\aemformsbundles** 文件夹
+我们正在将此捆绑包添加到位于&#x200B;**c：\aemformsbundles**&#x200B;文件夹中的AEM项目&#x200B;**AEMFormsProcessStep**
 
-* 打开 **filter.xml** 从项目的C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault文件夹中，记下过滤器元素的根属性。
+* 从项目的C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault文件夹中打开&#x200B;**filter.xml**
+记下过滤器元素的根属性。
 
 * 创建以下文件夹结构C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\jcr_root\apps\AEMFormsProcessStep-vendor-packages\application\install
-* 此 **apps/AEMFormsProcessStep-vendor-packages** 是filter.xml中的根属性值
+* **apps/AEMFormsProcessStep-vendor-packages**&#x200B;是filter.xml中的根属性值
 * 更新项目POM.xml的依赖关系部分
 * 打开命令提示符。 在本例中，请导航到项目的文件夹(c：\aemformsbundles\AEMFormsProcessStep)。 执行以下命令
 
@@ -61,5 +62,5 @@ ht-degree: 0%
 mvn clean install -PautoInstallSinglePackage
 ```
 
-如果一切进展顺利，则会将软件包与第三方捆绑包一起安装到您的AEM实例中。 可以使用检查包 [felix web控制台](http://localhost:4502/system/console/bundles). 第三方捆绑包位于 `crx` 存储库，如下所示
+如果一切进展顺利，则会将软件包与第三方捆绑包一起安装到您的AEM实例中。 您可以使用[felix Web控制台](http://localhost:4502/system/console/bundles)检查捆绑包。 第三方包在`crx`存储库的/apps文件夹中可用，如下所示
 ![第三方](assets/custom-bundle1.png)

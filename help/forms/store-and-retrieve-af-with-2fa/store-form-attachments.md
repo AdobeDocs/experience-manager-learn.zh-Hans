@@ -1,6 +1,6 @@
 ---
 title: 存储表单附件
-description: 提取表单附件并存储在CRX存储库的新位置。
+description: 提取表单附件并存储在CRX存储库中的新位置。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -32,7 +32,7 @@ ht-degree: 1%
 }
 ```
 
-以下代码可从请求中提取附件并将其存储在下 **/content/afattachments** 文件夹
+以下代码从请求中提取附件，并将其存储在&#x200B;**/content/afattachments**&#x200B;文件夹下
 
 ```java
 public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest request) {

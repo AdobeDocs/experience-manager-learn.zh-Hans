@@ -28,18 +28,18 @@ ht-degree: 0%
 * **[!UICONTROL 组件标题]**
 * **[!UICONTROL 组件说明]**
 * **[!UICONTROL 组件图标]**
-   * 组件标题的前两个字母 *（默认）*
-   * 自定义PNG图像 *（由开发人员配置）*
-   * 自定义SVG图像 *（由开发人员配置）*
-   * CoralUI图标 *（由开发人员配置）*
+   * 组件标题&#x200B;*（默认值）*&#x200B;的前两个字母
+   * 自定义PNG图像&#x200B;*（由开发人员配置）*
+   * 自定义SVG映像&#x200B;*（由开发人员配置）*
+   * CoralUI图标&#x200B;*（由开发人员配置）*
 
 ## 组件图标配置选项 {#component-icon-configuration-options}
 
 ### 缩写 {#abbreviations}
 
-默认情况下，组件标题的前2个字符(**[cq：Component]@jcr：title**)作为缩写。 例如，如果 **[cq：Component]@jcr：title=文章列表** 缩写将显示为“**Ar**“。
+默认情况下，组件标题(**[cq：Component]@jcr：title**)的前2个字符用作缩写。 例如，如果&#x200B;**[cq：Component]@jcr：title=Article List**，则缩写将显示为“**Ar**”。
 
-缩写可通过以下方式自定义： **[cq：Component]@abbreviation** 属性。 虽然此值可以接受2个以上的字符，但建议将缩写限制为2个字符，以避免任何视觉干扰。
+可通过&#x200B;**[cq：Component]@abbreviation**&#x200B;属性自定义缩写。 虽然此值可以接受2个以上的字符，但建议将缩写限制为2个字符，以避免任何视觉干扰。
 
 ```plain
 /apps/.../components/content/my-component
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ### CoralUI图标 {#coralui-icons}
 
-AEM提供的CoralUI图标可用于组件图标。 要配置CoralUI图标，请设置 **[cq：Component]@cq：icon** 属性到所需的CoralUI图标的HTML图标属性值(枚举于 [CoralUI文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html).
+AEM提供的CoralUI图标可用于组件图标。 要配置CoralUI图标，请将&#x200B;**[cq：Component]@cq：icon**&#x200B;属性设置为所需的CoralUI图标的HTML图标属性值（在[CoralUI文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)中枚举）。
 
 ```plain
 /apps/.../components/content/my-component
@@ -59,11 +59,11 @@ AEM提供的CoralUI图标可用于组件图标。 要配置CoralUI图标，请�
 
 ### PNG图像 {#png-images}
 
-PNG图像可用于组件图标。 要将PNG图像配置为组件图标，请将所需图像添加为 **nt：file** 已命名 **cq：icon.png** 在 **[cq：Component]**.
+PNG图像可用于组件图标。 要将PNG图像配置为组件图标，请在&#x200B;**[cq：Component]**&#x200B;下将所需的图像添加为名为&#x200B;**cq：icon.png**&#x200B;的&#x200B;**nt：file**。
 
-PNG应具有透明背景，或将背景颜色设置为 **#707070**.
+PNG应具有透明背景，或背景颜色设置为&#x200B;**#707070**。
 
-PNG图像将缩放到 **20px x 20px**. 但是，为了适应视网膜显示 **40像素** 按 **40像素** 也许更可取。
+PNG图像已缩放到&#x200B;**20px x x 20px**。 但是，如果要适应视网膜显示&#x200B;**40px** x **40px**，可能更可取。
 
 ```plain
 /apps/.../components/content/my-component
@@ -74,9 +74,9 @@ PNG图像将缩放到 **20px x 20px**. 但是，为了适应视网膜显示 **40
 
 ### SVG图像 {#svg-images}
 
-SVG图像（基于矢量）可用于组件图标。 要将SVG图像配置为组件图标，请将所需SVG添加为 **nt：file** 已命名 **cq：icon.svg** 在 **[cq：Component]**.
+SVG图像（基于矢量）可用于组件图标。 要将SVG图像配置为组件图标，请在&#x200B;**[cq：Component]**&#x200B;下将所需的SVG添加为名为&#x200B;**cq：icon.svg**&#x200B;的&#x200B;**nt：file**。
 
-SVG图像的背景颜色应设置为 **#707070** 大小为 **20px x 20px。**
+SVG图像的背景颜色应设置为&#x200B;**#707070**，大小为&#x200B;**20px x 20px.**
 
 ```plain
 /apps/.../components/content/my-component

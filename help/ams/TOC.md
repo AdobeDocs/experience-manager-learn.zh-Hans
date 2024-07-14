@@ -8,7 +8,7 @@ team: TM
 source-git-commit: 9f242d753748354faabf613112246cebe9ed5daa
 workflow-type: tm+mt
 source-wordcount: '59'
-ht-degree: 5%
+ht-degree: 3%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 5%
 
 + Dispatcher{#dispatcher}
    + [Dispatcher手册 — 概述](./dispatcher/overview.md)
-   + [什么是“调度程序”](./dispatcher/what-is-the-dispatcher.md)
+   + [什么是“Dispatcher”](./dispatcher/what-is-the-dispatcher.md)
    + [基本文件布局](./dispatcher/basic-file-layout.md)
    + [配置文件说明](./dispatcher/explanation-config-files.md)
    + [了解缓存](./dispatcher/understanding-cache.md)
    + [使用和了解变量](./dispatcher/variables.md)
    + [Dispatcher刷新](./dispatcher/disp-flushing.md)
    + [虚 URL](./dispatcher/disp-vanity-url.md)
-   + [常见日志记录](./dispatcher/common-logs.md)
+   + [通用日志记录](./dispatcher/common-logs.md)
    + [只读文件](./dispatcher/immutable-files.md)
    + [Dispatcher运行状况检查](./dispatcher/health-check.md)
    + [GIT符号链接](./dispatcher/git-symlinks.md)

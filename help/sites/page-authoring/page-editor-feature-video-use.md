@@ -29,10 +29,10 @@ AEM站点的页面编辑器是一个用于创建和编辑Web内容的强大工�
 >[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
 
 
-请参阅 [有关“页面编辑器”功能的完整概述的AEM文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html).
+有关页面编辑器功能的完整概述，请参阅[AEM文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)。
 
 ## 其他资源 {#additional-resources}
 
 * [AEM页面编辑器文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)
-* [编辑页面内容文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
+* [正在编辑页面内容文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
 * [Sites创作用户指南](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)

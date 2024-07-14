@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何增加“aries.transaction.timeout”以解决与转换大文件相关的问题
 
-*本视频介绍增加“aries.transaction.timeout”以解决与大文件转换相关的问题的过程。*
+*此视频介绍增加“aries.transaction.timeout”以解决与转换大型文件相关的问题。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335502?quality=12&learn=on)

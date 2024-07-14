@@ -20,8 +20,8 @@ ht-degree: 1%
 # 扩展选择组组件
 
 扩展了checkboxgroup、下拉列表和Radiobutton核心组件，以包含“其他属性”选项卡。 其他属性选项卡中有一个复选框指示该字段是否用作blob索引选项卡
-![其他属性](assets/drop-down-additonal-properties.png). 选中此复选框后，将创建一个名为Searchable的属性，并在jcr存储库中将其值设置为true ，如下面的屏幕快照所示
-![可搜索](assets/searchable-true.png).
+![其他属性](assets/drop-down-additonal-properties.png)。 选中此复选框后，将创建一个名为Searchable的属性，并在jcr存储库中将其值设置为true ，如下面的屏幕快照所示
+![可搜索](assets/searchable-true.png)。
 
 以下.content.xml是在_cq_dialog文件夹下创建的。
 

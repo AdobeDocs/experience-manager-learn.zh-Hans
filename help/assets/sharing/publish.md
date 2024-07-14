@@ -1,5 +1,5 @@
 ---
-title: 如何使用AEM发布资源
+title: 如何使用AEMPublish Assets
 description: 了解如何将资源及其演绎版从AEM Author发布到AEM Publish。
 feature: Asset Management
 version: Cloud Service
@@ -25,4 +25,4 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/330932?quality=12&learn=on)
 
-_在发布资产之前，请确保您的AEM Assets部署已获得许可的AEM Publish服务。_
+_在发布资产之前，请确保AEM Assets部署已获得AEM Publish服务的许可。_

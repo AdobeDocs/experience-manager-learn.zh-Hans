@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何生成自签名证书
 
-*本视频介绍生成自签名证书的步骤。*
+*此视频介绍生成自签名证书的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335539?quality=12&learn=on)

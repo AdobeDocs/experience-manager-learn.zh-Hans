@@ -20,10 +20,11 @@ ht-degree: 0%
 
 # 在您的项目中包含云服务配置
 
-创建名为“FormTutorial”的配置容器以保存云服务配置通过在“FormTutorial”容器中提供Azure存储帐户详细信息和Azure访问密钥，为Azure存储创建一个名为“FormsCSAndAzureBlob”的云服务配置。
+创建一个名为“FormTutorial”的配置容器来保存您的云服务配置
+通过提供Azure存储帐户详细信息和Azure访问密钥，在“FormTutorial”容器中为Azure存储创建一个名为“FormsCSAndAzureBlob”的云服务配置。
 
 在IntelliJ中打开您的AEM项目。 确保添加文件夹FormTutorial，如ui.content项目中所示
-![cloud-services-configuration](assets/cloud-services-configuration.png)
+![云服务配置](assets/cloud-services-configuration.png)
 
 确保在ui.content项目的filter.xml中添加以下条目
 
@@ -47,7 +48,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->现在，当您使用Cloud Manager构建和部署项目时，必须在云服务配置中重新输入Azure访问密钥。 为避免重新输入访问键，建议使用环境变量创建上下文感知配置，如中所述 [下一篇文章](./context-aware-fdm.md)
+>现在，当您使用Cloud Manager构建和部署项目时，必须在云服务配置中重新输入Azure访问密钥。 为避免重新输入访问键，建议使用[下一篇文章](./context-aware-fdm.md)中所述的环境变量创建上下文感知配置
 
 ## 后续步骤
 

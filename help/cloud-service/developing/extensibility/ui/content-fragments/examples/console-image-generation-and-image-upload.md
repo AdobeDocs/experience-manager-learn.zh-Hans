@@ -25,32 +25,32 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413093?quality=12&learn=on)
 
-此示例AEM内容片段控制台扩展是 [操作栏](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) 使用以下方式从自然语言输入生成数字图像的扩展 [OpenAI API](https://openai.com/api/) 或 [DALL·E 2](https://openai.com/dall-e-2/). 生成的图像已上传到AEM DAM，并且所选内容片段的图像属性已更新，以引用从DAM新生成的已上传图像。
+此示例AEM内容片段控制台扩展是一个[操作栏](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/)扩展，它使用[OpenAI API](https://openai.com/api/)或[DALL·E 2](https://openai.com/dall-e-2/)从自然语言输入生成数字图像。 生成的图像已上传到AEM DAM，并且所选内容片段的图像属性已更新，以引用从DAM新生成的已上传图像。
 
 在本例中，您将学习：
 
-1. 图像生成，使用 [OpenAI API](https://beta.openai.com/docs/guides/images/image-generation-beta) 或 [DALL·E 2](https://openai.com/dall-e-2/)
+1. 使用[OpenAI API](https://beta.openai.com/docs/guides/images/image-generation-beta)或[DALL·E 2](https://openai.com/dall-e-2/)生成图像
 2. 正在将图像上传到AEM
 3. 内容片段属性更新
 
 示例扩展的功能流程如下所示：
 
-![用于生成数字图像的Adobe I/O Runtime操作流程](./assets/digital-image-generation/flow.png){align="center"}
+用于生成数字图像的![Adobe I/O Runtime操作流程](./assets/digital-image-generation/flow.png){align="center"}
 
-1. 选择内容片段并单击扩展的 `Generate Image` 中的按钮 [操作栏](#extension-registration) 打开 [模态](#modal).
-1. 此 [模态](#modal) 显示使用构建的自定义输入表单 [React频谱](https://react-spectrum.adobe.com/react-spectrum/).
-1. 提交表单会发送提供的用户 `Image Description` 文本、选定的内容片段和AEM主机 [自定义Adobe I/O Runtime操作](#adobe-io-runtime-action).
-1. 此 [Adobe I/O Runtime操作](#adobe-io-runtime-action) 验证输入。
-1. 接下来，它调用OpenAI的 [图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) API及其使用 `Image Description` 文本，用于指定应该生成的图像。
-1. 此 [图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) 端点创建大小的原始图像 _1024x1024_ 像素作为响应，使用提示请求参数值并返回生成的图像URL。
-1. 此 [Adobe I/O Runtime操作](#adobe-io-runtime-action) 将生成的图像下载到App Builder运行时。
-1. 接下来，它按照预定义的路径，启动从App Builder运行时到AEM DAM的图像上传。
-1. AEMas a Cloud Service将图像保存到DAM并返回对Adobe I/O Runtime操作的成功或失败响应。 成功的上传响应可使用从Adobe I/O Runtime操作向AEM发出的另一个HTTP请求来更新所选内容片段的图像属性值。
+1. 选择内容片段，然后单击[操作栏](#extension-registration)中扩展的`Generate Image`按钮以打开[模式](#modal)。
+1. [模式](#modal)显示使用[React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)生成的自定义输入表单。
+1. 提交表单会将用户提供的`Image Description`文本、选定的内容片段和AEM主机发送到[自定义Adobe I/O Runtime操作](#adobe-io-runtime-action)。
+1. [Adobe I/O Runtime操作](#adobe-io-runtime-action)验证输入。
+1. 接下来，它调用OpenAI的[图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) API，并使用`Image Description`文本来指定应该生成的图像。
+1. [图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta)终结点使用提示请求参数值创建大小为&#x200B;_1024x1024_&#x200B;像素的原始图像，并将生成的图像URL作为响应返回。
+1. [Adobe I/O Runtime操作](#adobe-io-runtime-action)将生成的图像下载到App Builder运行时。
+1. 接下来，它会根据预定义的路径，启动从App Builder运行时到AEM DAM的图像上传。
+1. AEM as a Cloud Service将图像保存到DAM并返回对Adobe I/O Runtime操作的成功或失败响应。 成功的上传响应可使用从Adobe I/O Runtime操作向AEM发出的另一个HTTP请求来更新所选内容片段的图像属性值。
 1. 该模式窗口会收到来自Adobe I/O Runtime操作的响应，并提供新生成的已上传图像的AEM资源详细信息链接。
 
 ## 扩展点
 
-此示例将扩展到扩展点 `actionBar` 向内容片段控制台添加自定义按钮。
+此示例扩展到扩展点`actionBar`以将自定义按钮添加到内容片段控制台。
 
 | AEM UI已扩展 | 扩展点 |
 | ------------------------ | --------------------- | 
@@ -58,26 +58,26 @@ ht-degree: 0%
 
 ## 扩展示例
 
-该示例在通过初始化App Builder应用程序时使用现有Adobe Developer Console项目和以下选项 `aio app init`.
+该示例在通过`aio app init`初始化Adobe Developer Console应用程序时使用现有的App Builder项目以及以下选项。
 
-+ 您要搜索哪些模板？ `All Extension Points`
-+ 选择要安装的模板：` @adobe/aem-cf-admin-ui-ext-tpl`
++ 您要搜索哪些模板？： `All Extension Points`
++ 选择要安装的模板： ` @adobe/aem-cf-admin-ui-ext-tpl`
 + 您希望如何命名扩展？： `Image generation`
-+ 提供扩展的简短描述： `An example action bar extension that generates an image using OpenAI and uploads it to AEM DAM.`
-+ 您希望从哪个版本开始？： `0.0.1`
++ 提供扩展的简短说明： `An example action bar extension that generates an image using OpenAI and uploads it to AEM DAM.`
++ 您希望以哪个版本开始？： `0.0.1`
 + 您接下来想要做什么？
    + `Add a custom button to Action Bar`
       + 提供按钮的标签名称： `Generate Image`
-      + 是否必须显示按钮的模式窗口？ `y`
+      + 是否必须显示按钮的模式窗口？`y`
    + `Add server-side handler`
       + Adobe I/O Runtime允许您根据需要调用无服务器代码。 您希望如何命名此操作？： `generate-image`
 
-生成的App Builder扩展应用程序已更新，如下所述。
+生成的App Builder扩展应用程序将按如下所述进行更新。
 
 ### 初始设置
 
-1. 免费注册 [OpenAI API](https://openai.com/api/) 帐户并创建 [API密钥](https://beta.openai.com/account/api-keys)
-1. 将此密钥添加到您项目的 `.env` 文件
+1. 注册免费的[OpenAI API](https://openai.com/api/)帐户并创建[API密钥](https://beta.openai.com/account/api-keys)
+1. 将此密钥添加到您的App Builder项目的`.env`文件
 
    ```
        # Specify your secrets here
@@ -91,7 +91,7 @@ ht-degree: 0%
        ...
    ```
 
-1. 通过 `OPENAI_API_KEY` 作为Adobe I/O Runtime操作的参数，更新 `src/aem-cf-console-admin-1/ext.config.yaml`
+1. 将`OPENAI_API_KEY`作为参数传递给Adobe I/O Runtime操作，更新`src/aem-cf-console-admin-1/ext.config.yaml`
 
    ```yaml
        ...
@@ -112,30 +112,30 @@ ht-degree: 0%
    ```
 
 1. 安装以下Node.js库
-   1. [OpenAI Node.js库](https://github.com/openai/openai-node#installation)  — 轻松调用OpenAI API
-   1. [AEM上传](https://github.com/adobe/aem-upload#install)  — 将图像上传到AEM-CS实例。
+   1. [OpenAI Node.js库](https://github.com/openai/openai-node#installation) — 轻松调用OpenAI API
+   1. [AEM上传](https://github.com/adobe/aem-upload#install) — 将图像上传到AEM-CS实例。
 
 
 >[!TIP]
 >
->在以下部分中，您将了解关键React和Adobe I/O Runtime操作JavaScript文件。 供您参考的密钥文件 `web-src` 和  `actions` 提供了AppBuilder项目的文件夹，请参阅 [adobe-appbuilder-cfc-ext-image-generation-code.zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
+>在以下部分中，您将了解关键的React和Adobe I/O Runtime操作JavaScript文件。 为便于您参考，已提供AppBuilder项目`web-src`和`actions`文件夹中的密钥文件，请参阅[adobe-appbuilder-cfc-ext-image-generation-code.zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip)。
 
 
 ### 应用程序路由{#app-routes}
 
-此 `src/aem-cf-console-admin-1/web-src/src/components/App.js` 包含 [React路由器](https://reactrouter.com/en/main).
+`src/aem-cf-console-admin-1/web-src/src/components/App.js`包含[React路由器](https://reactrouter.com/en/main)。
 
 路由有两种逻辑集：
 
-1. 第一个路由将请求映射到 `index.html`，它会调用负责的React组件 [扩展注册](#extension-registration).
+1. 第一个路由将请求映射到`index.html`，这将调用负责[扩展注册](#extension-registration)的React组件。
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
    ```
 
-1. 第二组路由将URL映射到渲染扩展模式内容的React组件。 此 `:selection` param表示分隔列表内容片段路径。
+1. 第二组路由将URL映射到渲染扩展模式内容的React组件。 `:selection`参数表示分隔列表内容片段路径。
 
-   如果扩展具有多个用于调用离散操作的按钮，则 [扩展注册](#extension-registration) 映射到此处定义的路由。
+   如果扩展具有多个用于调用离散操作的按钮，则每个[扩展注册](#extension-registration)都将映射到此处定义的路由。
 
    ```javascript
    <Route
@@ -146,11 +146,11 @@ ht-degree: 0%
 
 ### 延期注册
 
-`ExtensionRegistration.js`，映射到 `index.html` route，是AEM扩展的入口点，并定义：
+映射到`index.html`路由的`ExtensionRegistration.js`是AEM扩展的入口点并定义：
 
-1. 扩展按钮的位置将显示在AEM创作体验中(`actionBar` 或 `headerMenu`)
-1. 中扩展按钮的定义 `getButtons()` 函数
-1. 按钮的点击处理程序，位于 `onClick()` 函数
+1. 扩展按钮的位置显示在AEM创作体验中（`actionBar`或`headerMenu`）
+1. `getButtons()`函数中扩展按钮的定义
+1. `onClick()`函数中按钮的点击处理程序
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -211,19 +211,19 @@ export default ExtensionRegistration;
 
 ### 模态
 
-扩展的每个路由，如中所定义 [`App.js`](#app-routes)，映射到在扩展的模式中呈现的React组件。
+[`App.js`](#app-routes)中定义的扩展的每个路由都映射到一个在扩展模式中呈现的React组件。
 
-在此示例应用程序中，有一个模式React组件(`GenerateImageModal.js`)具有四种状态：
+在此示例应用程序中，有一个模态React组件(`GenerateImageModal.js`)具有四种状态：
 
 1. 正在加载，指示用户必须等待
 1. 警告消息，建议用户一次只选择一个内容片段
 1. 允许用户以自然语言提供图像描述的“生成图像”表单。
 1. 图像生成操作的响应，提供新生成的已上传图像的AEM资产详细信息链接。
 
-很重要的一点是，与扩展中的AEM的任何交互都应委派给 [AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，这是一个单独的无服务器进程，运行于 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
+重要的是，与扩展中的AEM的任何交互都应该委派给[AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，该操作是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中运行的单独的无服务器进程。
 使用Adobe I/O Runtime操作与AEM进行通信，是为了避免跨源资源共享(CORS)连接问题。
 
-当 _生成图像_ 表单已提交，自定义 `onSubmitHandler()` 调用Adobe I/O Runtime操作，传递图像描述、当前AEM主机（域）和用户的AEM访问令牌。 该操作随后调用OpenAI的 [图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) 用于使用提交的图像描述生成图像的API。 下次使用 [AEM上传](https://github.com/adobe/aem-upload) 节点模块的 `DirectBinaryUpload` 类它将生成的图像上传到AEM，最后使用 [AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 以更新内容片段。
+提交&#x200B;_生成图像_&#x200B;表单后，自定义`onSubmitHandler()`将调用Adobe I/O Runtime操作，传递图像描述、当前AEM主机（域）和用户的AEM访问令牌。 然后，该操作调用OpenAI的[图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) API以使用提交的图像描述生成图像。 接下来，使用[AEM上传](https://github.com/adobe/aem-upload)节点模块的`DirectBinaryUpload`类，它将生成的图像上传到AEM，最后使用[AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)更新内容片段。
 
 当接收来自Adobe I/O Runtime操作的响应时，模式被更新以显示图像生成操作的结果。
 
@@ -482,25 +482,25 @@ export default function GenerateImageModal() {
 
 >[!NOTE]
 >
->在 `buildAssetDetailsURL()` 函数， `aemAssetdetailsURL` 变量值假定 [Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview) 已启用。 如果已禁用Unified Shell，则必须删除 `/ui#/aem` 变量值中的值。
+>在`buildAssetDetailsURL()`函数中，`aemAssetdetailsURL`变量值假定已启用[Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview)。 如果您已禁用Unified Shell，则必须从变量值中删除`/ui#/aem`。
 
 
 ### Adobe I/O Runtime操作
 
-AEM扩展应用程序生成器应用程序可以定义或使用0个或多个Adobe I/O Runtime操作。
+AEM扩展App Builder应用程序可以定义或使用0个或多个Adobe I/O Runtime操作。
 Adobe运行时操作负责需要与AEM、Adobe或第三方Web服务交互的工作。
 
-在此示例应用程序中， `generate-image` Adobe I/O Runtime操作负责：
+在此示例应用程序中，`generate-image` Adobe I/O Runtime操作负责：
 
-1. 使用生成图像 [OpenAI API图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) 服务
-1. 使用以下方式将生成的图像上传到AEM-CS实例 [AEM上传](https://github.com/adobe/aem-upload) 库
+1. 使用[OpenAI API图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta)服务生成图像
+1. 使用[AEM上传](https://github.com/adobe/aem-upload)库将生成的图像上传到AEM-CS实例
 1. 向AEM内容片段API发出HTTP请求以更新内容片段的图像属性。
-1. 返回成功和失败的关键信息以供模式显示(`GenerateImageModal.js`)
+1. 返回成功和失败的关键信息以供模式(`GenerateImageModal.js`)显示
 
 
-#### 入口点(`index.js`)
+#### 进入点(`index.js`)
 
-此 `index.js` 通过使用相应的JavaScript模块(即 `generate-image-using-openai, upload-generated-image-to-aem, update-content-fragement`. 下面将介绍这些模块和相关代码 [子区域](#image-generation-module---generate-image-using-openaijs).
+`index.js`使用相应的JavaScript模块（即`generate-image-using-openai, upload-generated-image-to-aem, update-content-fragement`）协调了1到3项以上的任务。 下面的[子部分](#image-generation-module---generate-image-using-openaijs)中介绍了这些模块和相关代码。
 
 + `src/aem-cf-console-admin-1/actions/generate-image/index.js`
 
@@ -595,7 +595,7 @@ exports.main = main;
 
 #### 图像生成
 
-此模块负责调用OpenAI的 [图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) 端点使用 [openai](https://github.com/openai/openai-node) 库。 要获取在中定义的OpenAI API密钥，请执行以下操作 `.env` 文件，它使用 `params.OPENAI_API_KEY`.
+此模块负责使用[openai](https://github.com/openai/openai-node)库调用OpenAI的[图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta)端点。 要获取在`.env`文件中定义的OpenAI API密钥，它使用`params.OPENAI_API_KEY`。
 
 + `src/aem-cf-console-admin-1/actions/generate-image/generate-image-using-openai.js`
 
@@ -653,9 +653,9 @@ module.exports = {
 
 #### 上传至AEM
 
-此模块负责使用将OpenAI生成的图像上传到AEM [AEM上传](https://github.com/adobe/aem-upload) 库。 首先使用Node.js将生成的图像下载到App Builder运行时 [文件系统](https://nodejs.org/api/fs.html) 库中，一旦上传到AEM完成，就会将其删除。
+此模块负责使用[AEM Upload](https://github.com/adobe/aem-upload)库将OpenAI生成的图像上传到AEM。 首先使用Node.js [File System](https://nodejs.org/api/fs.html)库将生成的图像下载到App Builder运行时，一旦上传到AEM完成，就会将其删除。
 
-在以下代码中 `uploadGeneratedImageToAEM` 函数可协调将生成的图像下载到运行时，将其上传到AEM并从运行时删除。 图像将上传到 `/content/dam/wknd-shared/en/generated` 路径，确保DAM中存在所有文件夹，以及使用该文件夹的先决条件 [AEM上传](https://github.com/adobe/aem-upload) 库。
+在下面的代码中，`uploadGeneratedImageToAEM`函数将生成的图像下载到运行时，将其上传到AEM并从运行时删除。 图像已上载到`/content/dam/wknd-shared/en/generated`路径，请确保DAM中存在所有文件夹，这是使用[AEM上传](https://github.com/adobe/aem-upload)库的先决条件。
 
 + `src/aem-cf-console-admin-1/actions/generate-image/upload-generated-image-to-aem.js`
 

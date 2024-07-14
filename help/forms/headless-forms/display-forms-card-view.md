@@ -21,13 +21,13 @@ ht-degree: 0%
 卡片视图格式是以卡片形式显示信息或数据的设计模式。 每个信息卡表示一段单独的内容或数据条目，通常由一个直观上不同的容器组成，其中排列了特定元素。
 React中的可单击卡片是类似于卡片或图块的交互式组件，用户可以单击或点按。 当用户单击或点按可单击的卡片时，会触发指定的操作或行为，例如导航到其他页面、打开模式或更新UI。
 
-在本文中，我们将使用 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) 以提取表单并以卡片格式显示表单，然后在单击事件时打开自适应表单。
+在本文中，我们将使用[listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)获取表单，并以卡片格式显示表单，然后在点击事件中打开自适应表单。
 
 ![卡片视图](./assets/card-view-forms.png)
 
 ## 信息卡模板
 
-以下代码用于设计卡片模板。 卡片模板显示自适应表单的标题和描述以及Adobe徽标。 [材料UI组件](https://mui.com/) 已用于创建此布局。
+以下代码用于设计卡片模板。 卡片模板显示自适应表单的标题和描述以及Adobe徽标。 [材料UI组件](https://mui.com/)已用于创建此布局。
 
 
 

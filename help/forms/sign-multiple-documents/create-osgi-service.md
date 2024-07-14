@@ -165,7 +165,7 @@ public void updateSignatureStatus(String formData, String guid) {
 
 ## 获取下一个要签名的表单
 
-下面的代码用于获取下一个表单，用于对状态为0的给定customerID进行签名。 如果sql查询未返回任何行，则返回字符串 **“全部完成”** 这表示没有更多表单需要签名给定的客户id。
+下面的代码用于获取下一个表单，用于对状态为0的给定customerID进行签名。 如果sql查询未返回任何行，我们将返回字符串&#x200B;**&quot;AllDone&quot;**，这表示对于给定的客户ID没有更多要签名的表单。
 
 ```java
 @Override
@@ -205,7 +205,7 @@ public String getNextFormToSign(int customerID) {
 
 ## 资源
 
-包含上述服务的OSGi捆绑包可以 [从此处下载](assets/sign-multiple-forms.jar)
+包含上述服务的OSGi捆绑包可以从此处[下载](assets/sign-multiple-forms.jar)
 
 ## 后续步骤
 

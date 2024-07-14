@@ -24,7 +24,7 @@ ht-degree: 0%
 
 下面我们看一看以下代码片段。 此代码是GET.jsp的一部分，当用户单击电子邮件中的链接以查看Web渠道文档时，将触发该代码。 我们使用jackrabbit UserManager获取登录用户。 获得登录用户后，我们会获得与用户配置文件关联的accountNumber属性的值。
 
-然后，我们将accountNumber值与映射中名为accountnumber的键关联。 键 **accountnumber** 在表单数据模式中定义为请求属性。 此属性的值作为输入参数传递给表单数据模式读取服务方法。
+然后，我们将accountNumber值与映射中名为accountnumber的键关联。 键&#x200B;**accountnumber**&#x200B;在表单数据模式中定义为请求属性。 此属性的值作为输入参数传递给表单数据模式读取服务方法。
 
 第7行：我们将根据交互式通信文档URL标识的资源类型，将收到的请求发送给另一个servlet。 此第二个servlet返回的响应包含在第一个servlet的响应中。
 
@@ -38,7 +38,7 @@ CustomParameterRequest wrapperRequest = new CustomParameterRequest(slingRequest,
 wrapperRequest.getRequestDispatcher("/content/forms/af/401kstatement/irastatement/channels/web.html").include(wrapperRequest, response);
 ```
 
-![Include方法](assets/includemethod.jpg)
+![包括方法方法](assets/includemethod.jpg)
 
 7行代码的可视表示形式
 
@@ -46,4 +46,4 @@ wrapperRequest.getRequestDispatcher("/content/forms/af/401kstatement/irastatemen
 
 为表单数据模式的读取服务定义的请求属性
 
-[示例AEM包](assets/webchanneldelivery.zip).
+[示例AEM包](assets/webchanneldelivery.zip)。

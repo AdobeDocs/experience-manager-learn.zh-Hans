@@ -1,6 +1,6 @@
 ---
-title: 浏览Cloud Acceleration Manager
-description: 探索适用于Experience Manageras a Cloud Service的Cloud Acceleration Manager导航体验。
+title: 在Cloud Acceleration Manager中导航
+description: 探索Cloud Acceleration Manager的Experience Manageras a Cloud Service导航体验。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 浏览Cloud Acceleration Manager
+# 在Cloud Acceleration Manager中导航
 
-探索适用于Experience Manageras a Cloud Service的Cloud Acceleration Manager导航体验。
+探索Cloud Acceleration Manager的Experience Manageras a Cloud Service导航体验。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336698?quality=12&learn=on)

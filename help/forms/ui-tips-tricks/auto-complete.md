@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 为地址提供建议
 
-![country-suggestions](assets/auto-complete2.png)
+![国家/地区建议](assets/auto-complete2.png)
 
 
 
@@ -66,7 +66,7 @@ $(".streetAddress input").autocomplete({
 
 ## 使用表情符号的建议
 
-![country-suggestions](assets/auto-complete3.png)
+![国家/地区建议](assets/auto-complete3.png)
 
 以下代码用于显示建议列表中的表情符号
 
@@ -79,8 +79,8 @@ minLength: 1, source: values, delay: 0
 );
 ```
 
-此 [可以下载示例表单](assets/auto-complete-form.zip) 从这里。 请确保使用代码的代码编辑器提供您自己的用户名/API密钥，以成功进行REST调用。
+可从此处下载[示例表单](assets/auto-complete-form.zip)。 请确保使用代码的代码编辑器提供您自己的用户名/API密钥，以成功进行REST调用。
 
 >[!NOTE]
 >
-> 要使自动完成正常工作，请确保您的表单使用以下客户端库 **cq.jquery.ui**. 此客户端库随AEM提供。
+> 要使自动完成正常工作，请确保您的表单使用以下客户端库&#x200B;**cq.jquery.ui**。 此客户端库随AEM提供。

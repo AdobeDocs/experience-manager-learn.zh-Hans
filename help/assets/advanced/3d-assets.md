@@ -1,5 +1,5 @@
 ---
-title: 3D资产
+title: 3D Assets
 description: 了解AEM Assetsas a Cloud Service中的3D资源支持。
 version: Cloud Service
 feature: 3D Assets

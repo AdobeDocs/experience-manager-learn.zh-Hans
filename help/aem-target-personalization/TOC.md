@@ -17,10 +17,10 @@ ht-degree: 35%
 # AEM和Target快速入门 {#aem-target-tutorial}
 
 + [概述](./overview.md)
-+ [使用AEM Experience Fragments进行个性化](./personalization-use-case-1.md)
-+ [使用可视化体验编辑器进行个性化](./personalization-use-case-3.md)
-+ [完整网页体验的个性化](./personalization-use-case-2.md)
-+ 实现 {#aem-target-implementation}
++ [使用AEM Experience Fragments的Personalization](./personalization-use-case-1.md)
++ [使用可视化体验编辑器的Personalization](./personalization-use-case-3.md)
++ [完整网页体验的Personalization](./personalization-use-case-2.md)
++ 实现{#aem-target-implementation}
    + [简介](./implementation.md)
    + [使用标记和Adobe I/O的AEM和Adobe Target](./using-launch-adobe-io.md)
    + [使用旧版Cloud Service的AEM和Adobe Target](./using-aem-cloud-services.md)

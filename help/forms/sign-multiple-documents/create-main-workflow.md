@@ -19,15 +19,15 @@ ht-degree: 1%
 
 # 创建主工作流
 
-主工作流在用户提交初始表单时触发(**再融资表单**)。 以下是工作流的流程
+当用户提交初始表单(**RefinanceForm**)时会触发主工作流。 以下是工作流的流程
 
 ![主工作流](assets/main-workflow.PNG)
 
-**存储Forms以供签署** 是一个自定义流程步骤。
+**将Forms存储到签名**&#x200B;是一个自定义流程步骤。
 
-实施自定义流程步骤的动机是扩展AEM Workflow。 以下代码实施自定义流程步骤。 该代码提取要签名的表单名称，并将提交的表单数据传递到 `insertData` SignMultipleForms服务中的方法。 此 `insertData` 方法然后插入由数据源标识的数据库中的行 **服饰**.
+实施自定义流程步骤的动机是扩展AEM Workflow。 以下代码实施自定义流程步骤。 该代码提取要签名的表单的名称，并将提交的表单数据传递到SignMultipleForms服务中的`insertData`方法。 然后，`insertData`方法在数据源&#x200B;**aemformstutorial**&#x200B;标识的数据库中插入行。
 
-此自定义流程步骤中的代码引用 `SignMultipleForms` 服务。
+此自定义流程步骤中的代码引用`SignMultipleForms`服务。
 
 
 
@@ -118,7 +118,7 @@ public class StoreFormsToSignWorkflowStep implements WorkflowProcess {
 
 ## 资源
 
-本文中使用的签署多个Forms工作流可以是 [从此处下载](assets/sign-multiple-forms-workflows.zip)
+可以从此处[下载本文中使用的签署多个Forms工作流](assets/sign-multiple-forms-workflows.zip)
 
 >[!NOTE]
 > 请确保配置Day CQ邮件服务以发送电子邮件通知。 上述包中还提供了电子邮件模板。

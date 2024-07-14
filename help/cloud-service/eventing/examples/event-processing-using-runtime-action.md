@@ -21,39 +21,39 @@ ht-degree: 0%
 
 # 使用Adobe I/O Runtime操作处理AEM事件
 
-了解如何使用处理接收的AEM事件 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) 操作。 此示例增强了前面的示例 [Adobe I/O Runtime操作和AEM事件](runtime-action.md)，请确保您已完成该操作，然后再继续该操作。
+了解如何使用[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)操作处理接收的AEM事件。 此示例增强了前面的示例[Adobe I/O Runtime Action和AEM Events](runtime-action.md)，请确保您已完成它，然后再继续此示例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427054?quality=12&learn=on)
 
-在此示例中，事件处理将原始事件数据和接收的事件作为活动消息存储在Adobe I/O Runtime存储中。 但是，如果事件属于 _已修改内容片段_ 类型，然后它还会调用AEM创作服务来查找修改详细信息。 最后，它在单页应用程序(SPA)中显示事件详细信息。
+在此示例中，事件处理将原始事件数据和接收的事件作为活动消息存储在Adobe I/O Runtime存储中。 但是，如果事件是&#x200B;_修改的内容片段_&#x200B;类型，则它还会调用AEM创作服务来查找修改详细信息。 最后，它在单页应用程序(SPA)中显示事件详细信息。
 
 ## 先决条件
 
 要完成本教程，您需要：
 
-- AEMas a Cloud Service环境与 [已启用AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment). 此外，示例 [WKND站点](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) 必须将项目部署到其中。
+- 启用了[AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)的AEM as a Cloud Service环境。 此外，示例[WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)项目必须部署到该项目。
 
-- 访问 [Adobe Developer控制台](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
+- 访问[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。
 
-- [ADOBE DEVELOPER CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 已安装在本地计算机上。
+- 本地计算机上已安装[Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)。
 
-- 前面示例中的本地初始化项目 [Adobe I/O Runtime操作和AEM事件](./runtime-action.md#initialize-project-for-local-development).
+- 从前面示例[Adobe I/O Runtime操作和AEM事件](./runtime-action.md#initialize-project-for-local-development)本地初始化的项目。
 
 >[!IMPORTANT]
 >
->AEMas a Cloud Service事件仅适用于预发行模式下的注册用户。 要在AEMas a Cloud Service环境中启用AEM事件，请联系 [AEM事件团队](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Service事件仅适用于处于预发行模式的注册用户。 要在您的AEM as a Cloud Service环境中启用AEM事件，请联系[AEM事件团队](mailto:grp-aem-events@adobe.com)。
 
 ## AEM Events processor操作
 
-在此示例中，事件处理器 [操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) 执行以下任务：
+在此示例中，事件处理器[操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)执行以下任务：
 
 - 将收到的事件解析为活动消息。
-- 如果收到的事件为 _已修改内容片段_ 类型，回调AEM创作服务以查找修改详细信息。
+- 如果收到的事件是&#x200B;_修改的内容片段_&#x200B;类型，请回调AEM创作服务以查找修改详细信息。
 - 在Adobe I/O Runtime存储中保留原始事件数据、活动消息和修改详细信息（如果有）。
 
-要执行上述任务，我们先向项目添加一个操作，开发JavaScript模块以执行上述任务，最后更新操作代码以使用开发的模块。
+要执行上述任务，我们先从向项目添加操作开始，开发JavaScript模块以执行上述任务，最后更新操作代码以使用开发的模块。
 
-请参阅附件中的 [WKND-AEM-Eventing-Runtime-Action.zip](../assets/examples/event-processing-using-runtime-action/WKND-AEM-Eventing-Runtime-Action.zip) 文件以了解完整代码，以下部分突出显示关键文件。
+有关完整代码，请参阅附加的[WKND-AEM-Eventing-Runtime-Action.zip](../assets/examples/event-processing-using-runtime-action/WKND-AEM-Eventing-Runtime-Action.zip)文件，以下部分突出显示关键文件。
 
 ### 添加操作
 
@@ -63,15 +63,15 @@ ht-degree: 0%
   aio app add action
   ```
 
-- 选择 `@adobe/generator-add-action-generic` 作为操作模板，将操作命名为 `aem-event-processor`.
+- 选择`@adobe/generator-add-action-generic`作为操作模板，将操作命名为`aem-event-processor`。
 
   ![添加操作](../assets/examples/event-processing-using-runtime-action/add-action-template.png)
 
 ### 开发JavaScript模块
 
-要执行上述任务，我们开发以下JavaScript模块。
+为了执行上述任务，让我们开发以下JavaScript模块。
 
-- 此 `src/dx-excshell-1/actions/aem-event-processor/eventValidator.js` 模块确定接收的事件是否属于 _已修改内容片段_ 类型。
+- `src/dx-excshell-1/actions/aem-event-processor/eventValidator.js`模块确定收到的事件是否为&#x200B;_修改的内容片段_&#x200B;类型。
 
   ```javascript
   async function needsAEMCallback(aemEvent) {
@@ -98,7 +98,7 @@ ht-degree: 0%
   module.exports = needsAEMCallback;
   ```
 
-- 此 `src/dx-excshell-1/actions/aem-event-processor/loadEventDetailsFromAEM.js` 模块调用AEM创作服务以查找修改详细信息。
+- `src/dx-excshell-1/actions/aem-event-processor/loadEventDetailsFromAEM.js`模块调用AEM作者服务以查找修改详细信息。
 
   ```javascript
   ...
@@ -166,9 +166,9 @@ ht-degree: 0%
   ...
   ```
 
-  请参阅 [AEM服务凭据教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en) 以进一步了解它。 此外， [App Builder配置文件](https://developer.adobe.com/app-builder/docs/guides/configuration/) 用于管理密钥和操作参数。
+  请参阅[AEM服务凭据教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)以了解详细信息。 此外，用于管理密钥和操作参数的[App Builder配置文件](https://developer.adobe.com/app-builder/docs/guides/configuration/)。
 
-- 此 `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js` 模块将原始事件数据、活动消息和修改详细信息（如果有）存储在Adobe I/O Runtime存储中。
+- `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js`模块将原始事件数据、活动消息和修改详细信息（如果有）存储在Adobe I/O Runtime存储中。
 
   ```javascript
   ...
@@ -193,7 +193,7 @@ ht-degree: 0%
 
 ### 更新操作代码
 
-最后，更新上的操作代码 `src/dx-excshell-1/actions/aem-event-processor/index.js` 使用已开发的模块。
+最后，更新`src/dx-excshell-1/actions/aem-event-processor/index.js`处的操作代码以使用开发的模块。
 
 ```javascript
 ...
@@ -251,10 +251,10 @@ if (params.challenge) {
 
 ## 其他资源
 
-- 此 `src/dx-excshell-1/actions/model` 文件夹包含 `aemEvent.js` 和 `errors.js` 文件，操作将使用这些文件分别解析收到的事件和处理错误。
-- 此 `src/dx-excshell-1/actions/load-processed-aem-events` 文件夹包含操作代码，SPA使用此操作从Adobe I/O Runtime存储中加载已处理的AEM事件。
-- 此 `src/dx-excshell-1/web-src` 文件夹中包含SPA代码，该代码显示已处理的AEM事件。
-- 此 `src/dx-excshell-1/ext.config.yaml` 文件包含操作配置和参数。
+- `src/dx-excshell-1/actions/model`文件夹包含`aemEvent.js`和`errors.js`个文件，操作使用这些文件分别分析收到的事件和处理错误。
+- `src/dx-excshell-1/actions/load-processed-aem-events`文件夹包含操作代码，SPA使用此操作从Adobe I/O Runtime存储中加载已处理的AEM事件。
+- `src/dx-excshell-1/web-src`文件夹包含SPA代码，该代码显示已处理的AEM事件。
+- `src/dx-excshell-1/ext.config.yaml`文件包含操作配置和参数。
 
 ## 概念和关键要点
 

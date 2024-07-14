@@ -25,7 +25,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 在Dynamic Media Scene7模式下运行Adobe Experience Manager以实现此功能。 您还需要 [将标记与AEM实例集成](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
+> 在Dynamic Media Scene7模式下运行Adobe Experience Manager以实现此功能。 您还需要[将标记与您的AEM实例](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)集成。
 
 通过引入Dynamic Media Viewer扩展，Adobe Experience Manager现在为通过Dynamic Media查看器(5.13)交付的资源提供高级分析支持，从而当在Sites页面上使用Dynamic Media Viewer时，提供对事件跟踪的更细粒度控制。
 

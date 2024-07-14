@@ -1,6 +1,6 @@
 ---
-title: Assets Essentials我的工作区
-description: 了解如何使用“我的工作区”中用户可配置的构件来更有效地工作。
+title: Assets Essentials我的Workspace
+description: 了解如何使用My Workspace用户可配置的构件提高工作效率。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -19,8 +19,8 @@ ht-degree: 0%
 
 ---
 
-# Assets Essentials中的我的工作区
+# Assets Essentials中的我的Workspace
 
-了解如何使用“我的工作区”中用户可配置的构件来更有效地工作。
+了解如何使用My Workspace用户可配置的构件提高工作效率。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413809?quality=12&learn=on)

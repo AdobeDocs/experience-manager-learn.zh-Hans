@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 解决DDX相关问题的步骤
 
-*本视频介绍了在Forms Assembler服务中捕获解决DDX相关问题所需的信息的步骤。*
+*本视频介绍捕获在Forms汇编程序服务中解决DDX相关问题所需的信息的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335517?quality=12&learn=on)

@@ -23,42 +23,42 @@ ht-degree: 0%
 
 Sling模型导出器在Sling模型v1.3.0中引入。这项新功能允许向Sling模型添加新注释，这些注释定义如何将模型导出为不同的Java对象，或者更常见的是，导出为不同的格式，如JSON。
 
-Apache Sling提供了Jackson JSON导出器，以涵盖将Sling模型导出为JSON对象以供程序化Web使用者（如其他Web服务和JavaScript应用程序）使用的最常见案例。
+Apache Sling提供了Jackson JSON导出器，以涵盖将Sling模型导出为JSON对象以供程序化Web使用者(如其他Web服务和JavaScript应用程序)使用的最常见案例。
 
 ## 为Sling模型导出器配置AEM
 
 >[!VIDEO](https://video.tv.adobe.com/v/16862?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 是 [!DNL Apache Sling] 而不是直接绑定到AEM产品发行周期。 [!DNL Sling Model Exporter] 与AEM 6.3及更高版本兼容。
+[!DNL Sling Model Exporter]是[!DNL Apache Sling]项目的一个功能，未直接绑定到AEM产品发行周期。 [!DNL Sling Model Exporter]与AEM 6.3及更高版本兼容。
 
-## 的用例 [!DNL Sling Model Exporter]
+## [!DNL Sling Model Exporter]的用例
 
 >[!VIDEO](https://video.tv.adobe.com/v/16863?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 非常适合利用已包含业务逻辑的Sling模型，这些业务逻辑通过HTL（或以前的JSP）支持HTML呈现，并展示与JSON相同的业务表示以供程序化Web服务或JavaScript应用程序使用。
+[!DNL Sling Model Exporter]非常适合利用已包含业务逻辑的Sling模型，这些业务逻辑通过HTL（或以前的JSP）支持HTML呈现，并展示与JSON相同的业务呈现以供程序化Web服务或JavaScript应用程序使用。
 
 ## 创建Sling模型导出程序
 
 >[!VIDEO](https://video.tv.adobe.com/v/16864?quality=12&learn=on)
 
-正在启用 [!DNL Exporter] 支持 [!DNL Sling Model] 与添加 `@Exporter` Java类的注释。
+在[!DNL Sling Model]上启用[!DNL Exporter]支持与将`@Exporter`注释添加到Java类一样简单。
 
 ## 应用Sling模型导出器选项
 
 >[!VIDEO](https://video.tv.adobe.com/v/16865?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 支持将每个模型的导出器选项传递给导出器实施，以驱动 [!DNL Sling Model] 最终导出。 这些选项通常“全局”应用于 [!DNL Sling Model] 导出，而不是按数据点导出，后者可通过下面所述的内联注释完成。
+[!DNL Sling Model Exporter]支持将每个模型的导出程序选项传递给导出程序实现，以驱动[!DNL Sling Model]最终导出的方式。 这些选项通常将“全局”应用于[!DNL Sling Model]的导出方式，而不是应用于每个数据点，后者可通过如下所述的内联注释完成。
 
-[!DNL Jackson Exporter] 选项包括：
+[!DNL Jackson Exporter]选项包括：
 
 * [映射器功能选项](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
 * [序列化功能选项](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
 
-## 正在应用 [!DNL Jackson] 注释
+## 应用[!DNL Jackson]注释
 
 >[!VIDEO](https://video.tv.adobe.com/v/16866?quality=12&learn=on)
 
-导出程序实施还支持可在页面上内联应用的注释。 [!DNL Sling Model] 类，可以提供更细的控制数据导出方式。
+导出器实施还支持可内联应用于[!DNL Sling Model]类的注释，这些注释可提供更细的控制数据导出方式。
 
 * [[!DNL Jackson Exporter] 注释](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)
 

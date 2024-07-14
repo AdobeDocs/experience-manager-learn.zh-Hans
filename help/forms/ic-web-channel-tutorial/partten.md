@@ -37,7 +37,7 @@ ht-degree: 0%
 
 * 选择“铅笔”图标以编辑默认文本。
 
-* 将默认文本替换为&quot;**你的退休收入前景”**
+* 将默认文本替换为“**您的退休收入展望”**
 
 **配置RightPanel目标区域**
 
@@ -49,13 +49,13 @@ ht-degree: 0%
 
 * 选择“铅笔”图标以编辑默认文本。
 
-* 将默认文本替换为&quot;**估计每月退休收入”**
+* 将默认文本替换为“**预计每月退休收入”**
 
 ## 添加退休收入Outlook文档片段 {#add-retirement-income-outlook-document-fragment}
 
-* 单击资产图标并应用过滤器以显示“文档片段”类型的资产。 将RetirationIncomeOutlook文档片段拖放到左侧面板目标区域。
+* 单击Assets图标并应用过滤器以显示“文档片段”类型的资源。 将RetirationIncomeOutlook文档片段拖放到左侧面板目标区域。
 
-* 您可以引用 [至此页面](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) 在将文档片段添加到内容区域时。
+* 在将文档片段添加到内容区域时，您可以参考[此页面](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html)。
 
 ## 添加预计每月收入图表 {#adding-estimated-monthly-income-chart}
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 **AEM Forms 6.5 — 配置预计月收入柱状图**
 
-![forms65](assets/estimatedmonthlyincomechart65.PNG)
+![表单65](assets/estimatedmonthlyincomechart65.PNG)
 
 ## 后续步骤
 

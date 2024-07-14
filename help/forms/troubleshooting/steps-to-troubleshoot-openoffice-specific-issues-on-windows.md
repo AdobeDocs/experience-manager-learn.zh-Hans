@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 在AEM Forms PDFG转换的Windows设置上对OpenOffice特定故障进行故障排除的步骤
 
-*本视频介绍对Windows安装程序中的OpenOffice特定故障进行故障排除的过程。*
+*此视频介绍对Windows安装程序中的OpenOffice特定故障进行故障排除的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335481?quality=12&learn=on)

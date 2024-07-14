@@ -33,15 +33,15 @@ Adobe Experience Manager为AEM Sites、Assets和Forms的用户提供了一组常
 <tr>
   <td>
     <a href="./cloud-manager/understand-cloud-manager-for-aem.md">
-    <img alt="了解Cloud Manager for AEM" src="./cloud-manager/assets/understand-cloud-manager-for-aem/thumbnail.png" />
+    <img alt="了解适用于AEM的Cloud Manager" src="./cloud-manager/assets/understand-cloud-manager-for-aem/thumbnail.png" />
     </a>
     <div>
      <a href="./cloud-manager/understand-cloud-manager-for-aem.md">
-    <strong>了解Cloud Manager for AEM</strong>
+    <strong>了解适用于AEM的Cloud Manager</strong>
     </a>
     </div>
     <p>
-    <em>Cloud Manager for AEM提供了一个简单但强大的解决方案，允许轻松管理、检查和自助服务AEM环境。</em>
+    <em>Cloud Manager for AEM提供了一个简单而强大的解决方案，允许轻松管理、检查和自助服务AEM环境。</em>
     <p>
   </td>
    <td>
@@ -54,7 +54,7 @@ Adobe Experience Manager为AEM Sites、Assets和Forms的用户提供了一组常
     </a>
     </div>
     <p>
-    <em>了解如何设置Sling动态包含(SDI)并允许动态AEM组件始终提供最新内容。</em>
+    <em>了解如何设置Sling Dynamic Include (SDI)并允许动态AEM组件始终提供新内容。</em>
     <p>
   </td>
   <td>
@@ -67,7 +67,7 @@ Adobe Experience Manager为AEM Sites、Assets和Forms的用户提供了一组常
     </a>
     </div>
     <p>
-    <em>在考虑升级到最新版本的AEM时，需要了解的主要功能的高级细分。</em>
+    <em>考虑升级到最新版本的AEM时，需要了解的关键功能的高级细目。</em>
     </p>
   </td>
 </tr>
@@ -77,7 +77,7 @@ Adobe Experience Manager为AEM Sites、Assets和Forms的用户提供了一组常
 
 ## 其他资源
 
-* [AEMas a Cloud Service教程](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service教程](/help/cloud-service/overview.md)
 * [AEM Sites视频和教程](/help/sites/overview.md)
 * [AEM Assets 视频和教程](/help/assets/overview.md)
 * [AEM Forms视频和教程](/help/forms/overview.md)

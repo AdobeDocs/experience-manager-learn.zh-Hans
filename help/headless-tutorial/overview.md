@@ -1,5 +1,5 @@
 ---
-title: AEM 中的 Headless 教程
+title: AEM中的HeadlessTutorials
 description: Adobe Experience Manager的Headless CMS教程集合。 按API、框架和示例应用程序浏览教程。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
@@ -10,12 +10,12 @@ recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 9%
+source-wordcount: '352'
+ht-degree: 1%
 
 ---
 
-# AEM 中的 Headless 教程{#aem-headless-tutorials}
+# AEM中的HeadlessTutorials{#aem-headless-tutorials}
 
 {{aem-headless-trials-promo}}
 
@@ -23,7 +23,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
 
 >[!TIP]
 >
->本教程集专为喜欢 **通过实践学习**. 如果您希望从头开始学习概念，请查看 [AEM Headless开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). 这组教程和历程是互补的。
+>此教程集合专为那些喜欢&#x200B;**通过实践学习**&#x200B;的人而设计。 如果您希望从头开始学习概念，请查看[AEM Headless开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html)。 这组教程和历程是互补的。
 
 ## 按API显示的Tutorials
 
@@ -31,7 +31,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
 <tr>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
-      <img alt="GraphQL API" src="./assets/graphql-icon.png" />
+      <img alt="GRAPHQL API" src="./assets/graphql-icon.png" />
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
@@ -39,7 +39,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
     </a>
     </div>
     <p>
-    <em>了解应用程序如何使用AEM GraphQL API查询内容。</em>
+    <em>了解应用程序如何使用AEM的GraphQL API查询内容。</em>
     <p>
   </td>
   <td>
@@ -61,7 +61,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
-        <strong>Content Services</strong>
+        <strong>内容服务</strong>
       </a>
     </div>
     <p>
@@ -87,7 +87,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
     </a>
     </div>
     <p>
-    <em>由AEM GraphQL API提供支持的iOS应用程序。</em>
+    <em>由AEM的iOS API提供支持的GraphQL应用程序。</em>
     <p>
   </td>
   <td>
@@ -113,7 +113,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
       </a>
     </div>
     <p>
-    <em>由AEM GraphQL API提供支持的React应用程序。</em>
+    <em>由AEM的GraphQL API提供支持的React应用程序。</em>
     <p>
   </td>
 </tr>
@@ -172,11 +172,11 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
-    <strong>Android — 内容服务</strong>
+    <strong>Android - Content Services</strong>
     </a>
     </div>
     <p>
-    <em>使用Content Services和REST可支持移动设备Android™应用程序。</em>
+    <em>使用Content Services和REST为Android™移动应用程序提供支持。</em>
     </p>
   </td>
   <td>
@@ -189,7 +189,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
       </a>
     </div>
     <p>
-    <em>使用开发人员和服务令牌构建Node.js应用程序以进行身份验证。</em>
+    <em>使用开发人员和服务令牌生成Node.js应用程序以进行身份验证。</em>
     <p>
   </td>
   <td></td>

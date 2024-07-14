@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 建议框
 
-访问 [建议框](https://forms.office.com/r/74P5Xz4UH0) 用于提交主题建议。
+访问[建议框](https://forms.office.com/r/74P5Xz4UH0)以提交主题想法。
 
 ## 第3季
 
@@ -36,7 +36,7 @@ ht-degree: 0%
             <div>
                 <a href="./season-3/cloud5-3rd-party-search.md">
                 <strong>第三方搜索</strong></a>        
-                <br/><em>与AEM Engineering的James Talbot和Varun Mitra</em>
+                <br/><em>与AEM Engineering的James Talbot &amp; Varun Mitra</em>
             </div>
             <p>
                 <br/>
@@ -49,8 +49,8 @@ ht-degree: 0%
             </a>
             <div>
                 <a href="./season-3/cloud5-rum.md">
-                <strong>Real User Monitoring (RUM)</strong></a>        
-                <br/><em>与AEM工程部James Talbot和Damian Langsweirdt一起</em>
+                <strong>真实用户监控(RUM)</strong></a>        
+                <br/><em>与AEM Engineering的James Talbot &amp; Damian Langsweirdt</em>
             </div>
             <p>
                 <br/>
@@ -79,8 +79,8 @@ ht-degree: 0%
             </a>
             <div>
                 <a href="./season-3/cloud5-edge-workers.md">
-                <strong>Edge员工</strong></a>        
-                <br/><em>与AEM Engineering的James Talbot和Amol Anand</em>
+                <strong>Edge工作人员</strong></a>        
+                与AEM Engineering的James Talbot &amp; Amol Anand一起<br/><em></em>
             </div>
             <p>
                 <br/>
@@ -96,7 +96,7 @@ ht-degree: 0%
             <div>
                 <a href="./season-3/cloud5-publish-events.md">
                 <strong>Publish，在Edge Delivery Services中取消发布事件</strong></a>        
-                <br/><em>与AEM Engineering的James Talbot和Amol Anand</em>
+                与AEM Engineering的James Talbot &amp; Amol Anand一起<br/><em></em>
             </div>
             <p>
                 <br/>
@@ -109,8 +109,8 @@ ht-degree: 0%
             </a>
             <div>
                 <a href="./season-3/cloud5-query-indexes.md">
-                <strong>查询索引和Excel公式 </strong></a>        
-                <br/><em>与AEM Engineering的James Talbot和Varun Mitra</em>
+                <strong>查询索引和Excel公式</strong></a>        
+                <br/><em>与AEM Engineering的James Talbot &amp; Varun Mitra</em>
             </div>
             <p>
                 <br/>
@@ -124,7 +124,7 @@ ht-degree: 0%
             <div>
                 <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
                 <strong>自带Cloudflare CDN</strong></a>        
-                <br/><em>与AEM Engineering的James Talbot和Kunwar Saluja</em>
+                <br/><em>与AEM Engineering James Talbot &amp; Kunwar Saluja一起</em>
             </div>
             <p>
                 <br/>
@@ -140,7 +140,7 @@ ht-degree: 0%
             <div>
                 <a href="./season-3/cloud5-integrate-assets.md">
                 <strong>将AEM Assets与文档创作集成</strong></a>        
-                <br/><em>与AEM Engineering的James Talbot和Darin Kuntze</em>
+                与AEM Engineering James Talbot &amp; Darin Kuntze一起<br/><em></em>
             </div>
             <p>
                 <br/>
@@ -153,8 +153,8 @@ ht-degree: 0%
             </a>
             <div>
                 <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
-                <strong>AEM Sites中的创新型人工智能</strong></a>        
-                <br/><em>与AEM产品营销部James Talbot和Karthik Muralidharan合作</em>
+                <strong>AEM Sites中的创作AI</strong></a>        
+                <br/><em>AEM产品营销部的James Talbot &amp; Karthik Muralidharan</em>
             </div>
             <p>
                 <br/>                
@@ -168,7 +168,7 @@ ht-degree: 0%
             <div>
                 <a href="./season-3/cloud5-exploring-universal-editor.md">
                 <strong>浏览通用编辑器</strong></a>        
-                <br/><em>与AEM Engineering的James Talbot和Dirk Rudolph一起</em>
+                <br/><em>与AEM Engineering的James Talbot &amp; Dirk Rudolph</em>
             </div>
             <p>
                 <br/>                

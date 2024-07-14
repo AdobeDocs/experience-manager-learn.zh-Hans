@@ -23,13 +23,13 @@ AEM Forms 6.5引入了将项目动态添加到自适应Forms选择组组件（�
 
 您可以使用可视编辑器和代码编辑器添加项目，具体取决于您的用例。
 
-**使用可视编辑器：** 您可以根据函数调用或服务调用的结果填充选择组的项目。 例如，您可以通过使用REST API调用的响应来设置选择组的项目。
+**使用可视编辑器：**&#x200B;您可以从函数调用或服务调用的结果填充选择组的项。 例如，您可以通过使用REST API调用的响应来设置选择组的项目。
 
 在下面的屏幕截图中，我们将为名为getLoanPeriods的服务调用结果设置Loan Period(years)选项。
 
 ![规则编辑器](assets/ruleeditor.png)
 
-**使用代码编辑器**：当您要根据表单中输入的值动态设置选择组中的项目时。 例如，以下代码片段将复选框的项目设置为在自适应表单的申请人名称和配偶字段中输入的值。
+**使用代码编辑器**：要根据表单中输入的值动态设置选择组中的项时。 例如，以下代码片段将复选框的项目设置为在自适应表单的申请人名称和配偶字段中输入的值。
 
 在代码片段中，我们将设置作为复选框组件的WorkingMembers的项目。 项的数组通过提取自适应表单的applicantName和配偶文本字段的值进行动态构建
 
@@ -65,17 +65,17 @@ else
 </afUnboundData>
 ```
 
-**使用规则编辑器添加项目**
+**使用规则编辑器添加项**
 
 >[!VIDEO](https://video.tv.adobe.com/v/26847?quality=12&learn=on)
 
-**使用代码编辑器添加项目**
+**使用代码编辑器添加项**
 
 >[!VIDEO](https://video.tv.adobe.com/v/26848?quality=12&learn=on)
 
 要在系统上尝试此操作，请执行以下操作：
 
-**使用代码编辑器添加项目**
+**使用代码编辑器添加项**
 
 * [下载资源](assets/usingthecodeeditor.zip)
 * [打开Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
@@ -86,7 +86,7 @@ else
 * 单击“下一步”
 * 如果婚姻状况已婚，您应该看到填写申请人姓名和配偶姓名的复选框
 
-**使用可视编辑器添加项目**
+**使用可视编辑器添加项**
 
 * [下载资源](assets/usingthevisualeditor.zip)
 * 安装Tomcat（如果尚未安装）。 [此处提供了安装tomcat的说明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)

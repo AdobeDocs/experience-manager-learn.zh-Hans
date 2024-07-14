@@ -20,7 +20,7 @@ ht-degree: 2%
 
 # 跨源资源共享(CORS)
 
-Adobe Experience Manager as a Cloud Service的跨源资源共享(CORS)有助于非AEM Web资产对AEM GraphQL API和其他AEM Headless资源进行基于浏览器的客户端调用。
+Adobe Experience Manager as a Cloud Service的跨源资源共享(CORS)有助于非AEM Web资产对AEM的GraphQL API和其他AEM Headless资源进行基于浏览器的客户端调用。
 
 >[!TIP]
 >
@@ -47,21 +47,21 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 | 需要CORS OSGi配置 | ✔ | ✘ | ✘ |
 
 
-以下示例为AEM Author (`../config.author/..`)，因此它仅在AEM Author服务上处于活动状态。
+以下示例为AEM Author (`../config.author/..`)定义了OSGi配置，因此该配置仅在AEM Author服务上处于活动状态。
 
 关键配置属性包括：
 
-+ `alloworigin` 和/或 `alloworiginregexp` 指定连接到AEM Web运行的客户端的源位置。
-+ `allowedpaths` 指定允许来自指定源的URL路径模式。
-   + 要支持AEM GraphQL持久查询，请添加以下模式： `/graphql/execute.json.*`
++ `alloworigin`和/或`alloworiginregexp`指定了连接到AEM Web的客户端所运行的源。
++ `allowedpaths`指定允许来自指定源的URL路径模式。
+   + 要支持AEM GraphQL持久查询，请添加以下模式：`/graphql/execute.json.*`
    + 要支持体验片段，请添加以下模式： `/content/experience-fragments/.*`
-+ `supportedmethods` 指定CORS请求允许的HTTP方法。 要支持AEM GraphQL持久查询（和体验片段），请添加 `GET` .
-+ `supportedheaders` 包含 `"Authorization"` 因为应该授权向AEM作者发出请求。
-+ `supportscredentials` 设置为 `true` 由于请求给AEM Author，因此应获得授权。
++ `supportedmethods`为CORS请求指定允许的HTTP方法。 要支持AEM GraphQL持久查询（和体验片段），请添加`GET` 。
++ `supportedheaders`包含`"Authorization"`，因为应授权对AEM作者的请求。
++ `supportscredentials`设置为`true`，因为应授权对AEM作者的请求。
 
 [了解有关CORS OSGi配置的更多信息。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
 
-以下示例支持在AEM Author上使用AEM GraphQL持久查询。 要使用客户端定义的GraphQL查询，请在中添加一个GraphQL端点URL `allowedpaths` 和 `POST` 到 `supportedmethods`.
+以下示例支持在AEM Author上使用AEM GraphQL持久查询。 若要使用客户端定义的GraphQL查询，请在`allowedpaths`和`POST`中将GraphQL终结点URL添加到`supportedmethods`。
 
 + `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~graphql.cfg.json`
 
@@ -98,29 +98,29 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 
 #### 示例OSGi配置
 
-+ [在WKND项目中可以找到OSGi配置的示例。](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json)
++ [在WKND项目中可以找到OSGi配置示例。](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json)
 
 ## AEM 发布
 
-在AEM Publish （和Preview）服务上启用CORS与AEM Author服务不同。 AEM Publish服务要求将AEM Dispatcher配置添加到AEM Publish的Dispatcher配置。 AEM Publish不使用 [OSGi配置](#osgi-configuration).
+在AEM Publish（和预览）服务上启用CORS与AEM Author服务不同。 AEM Publish服务要求将AEM Dispatcher配置添加到AEM Publish的Dispatcher配置。 AEM Publish不使用[OSGi配置](#osgi-configuration)。
 
-在AEM发布上配置CORS时，请确保：
+在AEM Publish上配置CORS时，请确保：
 
-+ 此 `Origin` AEM无法通过删除 `Origin` 标头（如果之前已添加）来自AEM Dispatcher项目的 `clientheaders.any` 文件。 任何 `Access-Control-` 标头应从 `clientheaders.any` 文件和Dispatcher管理它们，而不是AEM Publish服务。
-+ 如果您拥有任何 [CORS OSGi配置](#osgi-configuration) 已在AEM Publish服务上启用，您必须删除它们并将其配置迁移到 [Dispatcher vhost配置](#set-cors-headers-in-vhost) 如下所述。
++ 无法通过从AEM Publish项目的`clientheaders.any`文件中删除`Origin`标头（如果之前已添加）将`Origin` HTTP请求标头发送到AEM Dispatcher服务。 应从`clientheaders.any`文件中删除任何`Access-Control-`标头，由Dispatcher管理这些标头，而不是AEM Publish服务。
++ 如果您在AEM Publish服务上启用了任何[CORS OSGi配置](#osgi-configuration)，则必须将其删除并将其配置迁移到下面列出的[Dispatcher vhost配置](#set-cors-headers-in-vhost)。
 
 ### Dispatcher配置
 
-必须将AEM Publish (and Preview)服务的Dispatcher配置为支持CORS。
+必须将AEM Publish（和预览）服务的Dispatcher配置为支持CORS。
 
 | 客户端连接到 | AEM Author | AEM 发布 | AEM预览 |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
-| 需要调度程序CORS配置 | ✘ | ✔ | ✔ |
+| 需要Dispatcher CORS配置 | ✘ | ✔ | ✔ |
 
 #### 在vhost中设置CORS标头
 
-1. 在Dispatcher配置项目中打开AEM Publish服务的vhost配置文件，通常位于 `dispatcher/src/conf.d/available_vhosts/<example>.vhost`
-2. 复制 `<IfDefine ENABLE_CORS>...</IfDefine>` 阻止以下内容，将其添加到已启用的vhost配置文件中。
+1. 在Dispatcher配置项目中打开AEM Publish服务的vhost配置文件，通常位于`dispatcher/src/conf.d/available_vhosts/<example>.vhost`
+2. 将以下`<IfDefine ENABLE_CORS>...</IfDefine>`块的内容复制到已启用的vhost配置文件中。
 
    ```{ highlight="17"}
    <VirtualHost *:80>
@@ -178,7 +178,7 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
    </VirtualHost>
    ```
 
-3. 通过更新以下行中的正则表达式，匹配访问您的AEM Publish服务的所需源。 如果需要多个原点，请复制此行并更新每个原点/原点阵列。
+3. 通过更新以下行中的正则表达式，匹配用于访问AEM Publish服务的所需源。 如果需要多个原点，请复制此行并更新每个原点/原点阵列。
 
    ```
    SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*.your-domain.tld(:\d+)?$)#" CORSTrusted=true
@@ -186,8 +186,8 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 
    + 例如，要启用从源访问CORS，请执行以下操作：
 
-      + 上的任何子域 `https://example.com`
-      + 上的任意端口 `http://localhost`
+      + `https://example.com`上的任何子域
+      + `http://localhost`上的任意端口
 
      将该行替换为以下两行：
 
@@ -196,6 +196,6 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
      SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http://localhost(:\d+)?$)#" CORSTrusted=true
      ```
 
-#### 示例Dispatcher配置
+#### Dispatcher配置示例
 
-+ [在WKND项目中可以找到Dispatcher配置的示例。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost)
++ [在WKND项目中可以找到Dispatcher配置示例。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost)

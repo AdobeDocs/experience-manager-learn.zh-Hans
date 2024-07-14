@@ -39,9 +39,9 @@ AEM Content Services允许使用与在AEM Sites中创作网页相同的内容抽
 
 ## GitHub项目
 
-源代码和内容包位于 [AEM指南 — WKND Mobile GitHub项目](https://github.com/adobe/aem-guides-wknd-mobile).
+源代码和内容包在[AEM Guides - WKND Mobile GitHub项目](https://github.com/adobe/aem-guides-wknd-mobile)上可用。
 
-如果您发现教程或代码有问题，请留言 [GitHub问题](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+如果您发现教程或代码有问题，请保留[GitHub问题](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
 
 ## AEM GraphQL与AEM内容服务
 

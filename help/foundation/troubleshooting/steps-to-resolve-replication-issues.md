@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 解决AEM中复制问题的步骤
 
-*本视频介绍了在AEM中解决复制问题的步骤。*
+*此视频介绍解决AEM中复制问题的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335471?quality=12&learn=on)

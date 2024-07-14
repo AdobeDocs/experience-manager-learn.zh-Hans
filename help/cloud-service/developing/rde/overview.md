@@ -20,7 +20,7 @@ ht-degree: 9%
 
 # 快速开发环境
 
-了解AEMas a Cloud Service中的快速开发环境(RDE)。
+了解AEM as a Cloud Service中的快速开发环境(RDE)。
 
 此视频概要：
 
@@ -31,7 +31,7 @@ ht-degree: 9%
 
 ## 后续步骤
 
-学习 [如何设置](./how-to-setup.md) AEMas a Cloud Service中的RDE。
+了解[如何在AEM as a Cloud Service中设置](./how-to-setup.md) RDE。
 
 ## 其他资源
 

@@ -131,7 +131,7 @@ MarketoConfigurationService config;
 
 下面的屏幕快照显示了需要设置的配置属性。 可在上面列出的代码中读取这些配置属性以获取access_token
 
-![config](assets/configuration-settings.png)
+![配置](assets/configuration-settings.png)
 
 ### 配置
 
@@ -202,7 +202,7 @@ public class MarketoConfigurationService {
 ```
 
 1. 将捆绑包生成并部署到AEM服务器上。
-1. [将浏览器指向configMgr](http://localhost:4502/system/console/configMgr) 和搜索“Marketo凭据服务配置”
+1. [将浏览器指向configMgr](http://localhost:4502/system/console/configMgr)并搜索“Marketo凭据服务配置”
 1. 指定特定于您的Marketo实例的适当属性
 
 ## 后续步骤

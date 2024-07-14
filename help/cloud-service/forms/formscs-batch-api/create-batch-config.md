@@ -22,7 +22,7 @@ ht-degree: 0%
 要使用批处理API，请创建批处理配置并根据该配置执行运行。 以下视频演示了如何使用API创建批量配置
 
 >[!NOTE]
->请确保AEM用户属于 ```forms-users``` 组进行API调用。
+>请确保AEM用户属于```forms-users```组以进行API调用。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/340241?quality=12&learn=on)

@@ -40,18 +40,18 @@ ht-degree: 3%
 
 ![Target API UI错误](assets/error-target-offer.png)
 
-...以及中的以下日志消息 `aemerror` 日志：
+...和`aemerror`日志中的以下日志消息：
 
 ![Target API控制台错误](assets/target-console-error.png)
 
 #### 解决方法
 
-1. 登录 [Admin Console](https://adminconsole.adobe.com/) 已使用Adobe Target产品配置文件的管理权限，但AEM集成
-2. 选择 __产品> Adobe Target >产品配置文件__
-3. 下 __集成__ 选项卡，为您的AEMas a Cloud Service环境选择集成(与Adobe Developer项目同名)
-4. 分配 __编辑者__ 或 __审批者__ 角色
+1. 登录至[Admin Console](https://adminconsole.adobe.com/)，该帐户具有Adobe Target产品配置文件的管理权限，但使用的是AEM集成
+2. 选择&#x200B;__产品> Adobe Target >产品配置文件__
+3. 在&#x200B;__集成__&#x200B;选项卡下，为您的AEM as a Cloud Service环境选择集成(与Adobe Developer项目同名)
+4. 分配&#x200B;__编辑者__&#x200B;或&#x200B;__审批者__&#x200B;角色
 
-   ![Target API错误](assets/target-permissions.png)
+   ![目标API错误](assets/target-permissions.png)
 
 将正确的权限添加到Adobe Target集成应可解决此错误。
 

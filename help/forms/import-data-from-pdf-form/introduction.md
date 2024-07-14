@@ -20,7 +20,7 @@ ht-degree: 4%
 
 一个常见用例是能够填充部分完成的PDF表单中的自适应表单。
 
-为了演示此用例，我们将使用 [IRS表单F23](./assets/f23.pdf)
+为了演示此用例，我们将使用[IRS表单F23](./assets/f23.pdf)
 
 ## 先决条件
 
@@ -28,7 +28,7 @@ ht-degree: 4%
 
 * 已安装Forms附加组件包的AEM工作实例。
 
-* [根据本文档设置的开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+* [根据此文档设置的开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 
 * AEM Forms Designer
 

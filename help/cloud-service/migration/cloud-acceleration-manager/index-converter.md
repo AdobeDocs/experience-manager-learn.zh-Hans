@@ -1,6 +1,6 @@
 ---
 title: 索引转换器
-description: 了解索引转换器如何自动将现有AEM索引定义转换为可与AEMas a Cloud Service兼容的定义。
+description: 了解索引转换器如何自动将现有AEM索引定义转换为可与AEM as a Cloud Service兼容的定义。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -19,6 +19,6 @@ ht-degree: 9%
 
 # 索引转换器
 
-了解索引转换器如何自动将现有AEM索引定义转换为可与AEMas a Cloud Service兼容的定义。
+了解索引转换器如何自动将现有AEM索引定义转换为可与AEM as a Cloud Service兼容的定义。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336696?quality=12&learn=on)

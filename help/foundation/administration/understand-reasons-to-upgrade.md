@@ -28,55 +28,55 @@ ht-degree: 1%
 
 Adobe Experience Manager 6.5继续通过以下方式增强系统的稳定性、性能和可支持性：
 
-+ **Java 11** 支持（同时保持Java 8支持）。
++ 支持&#x200B;**Java 11**（同时保持Java 8支持）。
 
 ### 网站创建和管理
 
 AEM Sites引入了一系列旨在加速网站创建和构建的功能：
 
-+ **SPA编辑器** 这种支持使得可在AEM中完全创作SPA（单页应用程序），从而支持丰富、对营销人员友好的创作体验。
-+_ **JavaScript SDK的**&#x200B;是一个SPA项目启动套件和支持的构建工具，它允许前端开发人员独立于AEM开发与SPA编辑器兼容的单页应用程序。
-+ **核心组件** 添加大量新组件， **组件库** 以及现有核心组件的各种增强功能。
-+ 其他 **翻译** 增强了AEM Sites的简化翻译。
++ 支持&#x200B;**SPA Editor**，可以完全在SPA中创作AEM（单页应用程序），从而提供丰富的、对营销人员友好的创作体验。
++_**JavaScript SDK**&#x200B;是一个SPA项目启动套件和支持的生成工具，它允许前端开发人员独立于AEM开发与SPA编辑器兼容的单页应用程序。
++ **核心组件**&#x200B;添加了大量新组件、**组件库**&#x200B;以及对现有核心组件的各种增强。
++ 进一步的&#x200B;**翻译**&#x200B;增强功能可简化AEM Sites的翻译。
 
 ### 流畅的体验
 
 AEM通过新的和改进的工具继续拥抱流畅的体验，这些工具便于在AEM之外使用内容。
 
-+ **内容片段** 支持版本比较/差异和注释。
-+ **AEM Assets HTTP API** 支持公开 **内容片段** 直接在DAM中作为 **JSON**.
-  **体验片段** 支持 **全文搜索** 和 **AEM Dispatcher缓存失效** 以供参考 **页面**.
++ **内容片段**&#x200B;支持版本比较/差异和注释。
++ **AEM的Assets HTTP API**&#x200B;支持直接在DAM中公开&#x200B;**内容片段**&#x200B;作为&#x200B;**JSON**。
+  **体验片段**&#x200B;支持引用&#x200B;**页面**&#x200B;的&#x200B;**全文搜索**&#x200B;和&#x200B;**AEM Dispatcher缓存失效**。
 
 ### 资产管理
 
 AEM Assets继续以其丰富的资产管理功能集为基础，改进对DAM的使用、管理和了解。 AEM 6.5继续改进Adobe Creative Cloud与创意工作流程之间的集成。
 
-+ **Adobe资源链接** 将创意人员从Adobe Creative Cloud工具直接连接到AEM Assets。
-+ **Adobe Stock** 集成允许直接从AEM Assets Experience访问Adobe Stock图像，从而创造无缝的内容发现体验。
-+ **AEM桌面应用程序** 版本2.0，并在改进性能和稳定性的同时对其自身进行了重新设想。
-+ **连接的资产** 支持独立的AEM Sites实例，以便无缝访问和使用其他AEM Assets实例中的资源。
-+ 更新了中的视频支持 **Dynamic Media**，包括 **360视频** 和 **自定义视频缩略图**.
++ **AdobeAsset Link**&#x200B;将创意内容从Adobe Creative Cloud工具直接连接到AEM Assets。
++ **Adobe Stock**&#x200B;集成允许直接从AEM Assets Experience访问Adobe Stock图像，从而创建无缝的内容发现体验。
++ **AEM Desktop App**&#x200B;发布版本2.0，并在提高性能和稳定性的同时重新规划自身。
++ **Connected Assets**&#x200B;支持离散AEM Sites实例，以便无缝访问和使用其他AEM Assets实例的资源。
++ 更新了&#x200B;**Dynamic Media**&#x200B;中的视频支持，包括&#x200B;**360视频**&#x200B;和&#x200B;**自定义视频缩略图**。
 
 ### 内容智能
 
 AEM继续构建与智能技术的集成，利用机器学习和人工智能改善所有体验。
 
-+ **Adobe资源链接** 添加 **视觉相似性搜索**，从而可以轻松地在中发现和使用类似的图像 **Adobe Creative Cloud工具**.
++ **AdobeAsset Link**&#x200B;添加了&#x200B;**视觉相似性搜索**，以便在&#x200B;**Adobe Creative Cloud工具**&#x200B;中轻松发现和使用类似的图像。
 
 ### 集成
 
 AEM提高了与其他Adobe服务集成的能力：
 
-+ **体验片段** 深化与的集成 **Adobe Target** 通过支持 **导出为JSON** 到Adobe Target并能够 **删除基于体验片段的选件** 从 **Adobe Target**.
++ **体验片段**&#x200B;通过支持&#x200B;**作为JSON导出**&#x200B;到Adobe Target并可从&#x200B;**Adobe Target**&#x200B;中&#x200B;**删除基于体验片段的选件**，深化了它们与&#x200B;**Adobe Target**&#x200B;的集成。
 
-### AMS Cloud Manager
+### AMS CLOUD MANAGER
 
-[Cloud Manager](https://adobe.ly/2HODmsv)是Managed Services (AMS)客户专有Adobe的一项功能，可提供以下功能：
+[Cloud Manager](https://adobe.ly/2HODmsv)是AdobeManaged Services (AMS)客户的专属产品，可提供以下功能：
 
-+ Cloud Manager支持将AEM部署支持从AEM Sites扩展到 **AEM Assets**，包括 **资产处理的自动性能测试**.
-+ **自动缩放** 达到预定义阈值的AEM发布层，确保获得最佳最终用户体验。
-+ **非生产管道** 允许开发团队利用Cloud Manager不断检查代码质量并部署到较低环境（开发和QA）。
-+ **CI/CD管道API** 允许客户以编程方式与Cloud Manager交互，深化与内部部署开发基础架构的集成可能性。
++ Cloud Manager支持将AEM部署支持从AEM Sites扩展到&#x200B;**AEM Assets**，包括&#x200B;**对资源处理的自动性能测试**。
++ 以预定义的阈值自动缩放AEM Publish层的&#x200B;**个**，确保获得最佳的最终用户体验。
++ **非生产管道**&#x200B;允许开发团队利用Cloud Manager不断检查代码质量并部署到较低环境（开发和QA）。
++ **CI/CD管道API**&#x200B;允许客户以编程方式与Cloud Manager交互，深化与内部部署开发基础架构的集成可能性。
 
 ## 基础功能
 
@@ -84,9 +84,9 @@ AEM提高了与其他Adobe服务集成的能力：
 
 + [AEM Foundation发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html)
 
-***✔<sup>+</sup> 此版本中的功能得到了显着增强。***
+***✔<sup>+</sup>对此版本中的功能进行了显着增强。***
 
-***✔<sup>SP</sup> 表示该功能可通过Service Pack或Feature Pack使用。***
+***✔<sup>SP</sup>表示该功能可通过Service Pack或Feature Pack使用。***
 
 <table>
     <thead>
@@ -104,7 +104,7 @@ AEM提高了与其他Adobe服务集成的能力：
     <tbody>
         <tr>
             <td>
-                <strong>Java 11支持：</strong> AEM支持Java 11（以及Java 8）。
+                <strong>Java 11支持：</strong> AEM支持Java 11 （以及Java 8）。
             </td>
             <td> </td>
             <td> </td>
@@ -116,7 +116,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td>
-                <strong><a href="https://jackrabbit.apache.org/oak/docs/index.html" target="_blank">Oak内容存储库</a>：</strong> 比前身Jackrabbit 2提供更出色的性能和可扩展性。</td>
+                <strong><a href="https://jackrabbit.apache.org/oak/docs/index.html" target="_blank">Oak Content Repository</a>：</strong>比前置任务Jackrabbit 2提供更好的性能和可扩展性。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -126,7 +126,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/indexing-via-the-oak-run-jar.html">oak-run.jar索引支持</a>：</strong> 改进了Oak索引的重新索引、统计信息收集和一致性检查。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/indexing-via-the-oak-run-jar.html">oak-run.jar索引支持</a>：</strong>改进了Oak索引的重新/索引、统计信息收集和一致性检查。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -147,7 +147,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">在线修订版清理</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">联机修订清理</a>：</strong>
                 执行存储库维护，无需服务器停机。</td>
             <td> </td>
             <td> </td>
@@ -159,8 +159,8 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/storage-elements-in-aem-6.html" target="_blank">TarMK或MongoMK存储库存储</a>：</strong>
-                <br> 使用TarMK（新一代版本的TarPM）的简单、高性能文件存储选项
-                <br> 或者使用MongoDB支持的带有MongoMK的存储库水平扩展。</td>
+                <br>使用TarMK（下一代版本的TarPM）的简单、高性能文件存储的选项
+                <br>或使用MongoDB支持的带有MongoMK的存储库水平缩放。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -214,7 +214,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/operations-dashboard.html" target="_blank">操作功能板</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/operations-dashboard.html" target="_blank">操作仪表板</a>：</strong>
  从AEM内执行维护、监控服务器运行状况并分析性能。</td>
             <td></td>
             <td>✔</td>
@@ -260,7 +260,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://adobe.ly/2HODmsv" target="_blank">Cloud Manager</a>： </strong>
-                除了AdobeManaged Services (AMS)客户之外，Cloud Manager还通过最先进的CI/CD管道加快了开发和部署。</td>
+                除了AdobeManaged Services (AMS)客户之外，Cloud Manager还通过最先进的CI/CD管道加快了开发和部署速度。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -276,11 +276,11 @@ AEM提高了与其他Adobe服务集成的能力：
 
 以下是AEM提供的主要安全功能列表。 其中一些功能已在早期版本中引入，并在每个版本中添加了增量增强功能。
 
-+ [安全性发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html#Security)
++ [安全发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html#Security)
 
 ***✔表示此版本中的功能得到了显着增强。***
 
-***✔<sup>+</sup> 表示该功能可通过Service Pack或Feature Pack使用。***
+***✔<sup>+</sup>表示该功能可通过Service Pack或Feature Pack使用。***
 
 <table>
     <thead>
@@ -298,7 +298,7 @@ AEM提高了与其他Adobe服务集成的能力：
     <tbody>
         <tr>
         <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-service-users.html" target="_blank">服务用户</a></strong>
-            <br> 将权限划分为多个区段，以避免不必要地使用管理员权限。</td>
+            <br>将权限划分区段，以避免不必要地使用管理员权限。</td>
         <td></td>
         <td>✔</td>
         <td>✔</td>
@@ -309,7 +309,7 @@ AEM提高了与其他Adobe服务集成的能力：
     </tr>
     <tr>
         <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank">密钥存储管理</a></strong>
-            <br> 全局信任存储区、证书和密钥都在存储库中管理。</td>
+            <br>全局信任存储区、证书和密钥都在存储库中管理。</td>
         <td></td>
         <td>✔</td>
         <td>✔</td>
@@ -319,8 +319,8 @@ AEM提高了与其他Adobe服务集成的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong>CSRF</strong> <strong>保护</strong></a>
-            <br> 开箱即用的跨站点请求伪造保护。</td>
+        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong>CSRF</strong> <strong>保护</strong></a>
+            <br>开箱即用的跨站点请求伪造保护。</td>
         <td></td>
         <td></td>
         <td>✔</td>
@@ -330,8 +330,8 @@ AEM提高了与其他Adobe服务集成的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong>CORS</strong> <strong>支持</strong></a>
-            <br> 跨源资源共享支持提高应用程序灵活性。</td>
+        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong>CORS</strong> <strong>支持</strong></a>
+            <br>跨源资源共享支持提高了应用程序灵活性。</td>
         <td></td>
         <td></td>
         <td></td>
@@ -341,8 +341,8 @@ AEM提高了与其他Adobe服务集成的能力：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">改进了SAML身份验证支持</a><br>
- </strong>改进了SAML重定向，优化了组信息和解决了密钥加密问题。
+        <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">改进的SAML身份验证支持</a><br>
+ </strong>已改进SAML重定向，已优化组信息和密钥加密问题已解决。
             <br>
         </td>
         <td></td>
@@ -377,7 +377,7 @@ AEM提高了与其他Adobe服务集成的能力：
     </tr>
     <tr>
         <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/user-group-ac-admin.html" target="_blank">CUG增强功能</a><br>
- </strong>封闭用户组实施已重新编写，以解决性能和可扩展性问题。</td>
+ </strong>已重新写入封闭用户组实施，以解决性能和可扩展性问题。</td>
         <td></td>
         <td></td>
         <td></td>
@@ -388,7 +388,7 @@ AEM提高了与其他Adobe服务集成的能力：
     </tr>
     <tr>
         <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/platform-repository/using/ssl-wizard-technical-video-use.html" target="_blank">SSL向导</a></strong>
-            <br> 用于简化SSL设置和管理的UI。</td>
+            <br> UI可简化SSL的设置和管理。</td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -399,7 +399,7 @@ AEM提高了与其他Adobe服务集成的能力：
     </tr>
     <tr>
         <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/encapsulated-token.html" target="_blank">封装令牌支持</a></strong>
-            <br> 不再需要“粘性”会话来支持跨发布实例的水平身份验证。</td>
+            <br>不再需要“粘性”会话来支持跨发布实例的水平身份验证。</td>
         <td> </td>
         <td> </td>
         <td>✔</td>
@@ -410,7 +410,7 @@ AEM提高了与其他Adobe服务集成的能力：
     </tr>
     <tr>
         <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Adobe IMS身份验证支持</a><br>
- </strong>专门AdobeManaged Services (AMS)，可通过Adobe IMS (Identity Management System)集中管理对AEM创作实例的访问。</td>
+ </strong>专为AdobeManaged Services (AMS)提供，可通过Adobe IMS (Identity Management System)集中管理对AEM创作实例的访问。</td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -428,9 +428,9 @@ AEM提高了与其他Adobe服务集成的能力：
 
 + [AEM Sites发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/sites.html)
 
-***✔<sup>+</sup> 此版本中的功能得到了显着增强。***
+***✔<sup>+</sup>对此版本中的功能进行了显着增强。***
 
-***✔<sup>SP</sup> 表示该功能可通过Service Pack或Feature Pack使用。***
+***✔<sup>SP</sup>表示该功能可通过Service Pack或Feature Pack使用。***
 
 <table>
     <thead>
@@ -546,7 +546,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/launches.html" target="_blank">启动次数</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/launches.html" target="_blank">启动项</a>：</strong>
             在不中断日常创作的情况下为未来版本开发内容。</td>
             <td>✔</td>
             <td>✔</td>
@@ -623,7 +623,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/using/aem_launch_adobeio_integration.html" target="_blank">Adobe Experience Platform集成中的标记</a>：</strong>
+            <td>Adobe Experience Platform集成中的<strong><a href="https://helpx.adobe.com/cn/experience-manager/using/aem_launch_adobeio_integration.html" target="_blank">标记</a>：</strong>
             与Adobe的下一代标签管理云服务集成。</td>
             <td> </td>
             <td> </td>
@@ -634,7 +634,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>屏幕：</strong>
+            <td><strong>Screens：</strong>
             管理数字标牌和网亭的体验。</td>
             <td> </td>
             <td> </td>
@@ -657,7 +657,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/overview.html" target="_blank">Communities</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/overview.html" target="_blank">社区</a>：</strong>
             论坛、主题评论、活动日历和许多其他功能允许与网站访客进行深入互动。</td>
             <td>✔</td>
             <td>✔</td>
@@ -678,12 +678,12 @@ AEM提高了与其他Adobe服务集成的能力：
 
 ***✔表示此版本中的功能得到了显着增强。***
 
-***✔<sup>+</sup> 表示该功能可通过Service Pack或Feature Pack使用。***
+***✔<sup>+</sup>表示该功能可通过Service Pack或Feature Pack使用。***
 
 <table>
     <thead>
         <tr>
-            <td>资源功能</td>
+            <td>Assets功能</td>
             <td>5.6.x</td>
             <td>6.0</td>
             <td>6.1</td>
@@ -717,7 +717,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank">任务</a> 和工作流管理：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank">任务</a>和工作流管理：</strong>
             利用AEM Projects审阅和批准数字资产的预建工作流和任务。</td>
             <td> </td>
             <td>✔</td>
@@ -739,7 +739,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/mac-api-assets.html" target="_blank">资源HTTP API</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/mac-api-assets.html" target="_blank">Assets HTTP API</a>：</strong>
             通过HTTP和JSON以编程方式与资产交互。</td>
             <td> </td>
             <td> </td>
@@ -772,7 +772,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/use-assets-across-connected-assets-instances.html" target="_blank">连接的资产</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/use-assets-across-connected-assets-instances.html" target="_blank">连接的Assets</a>：</strong>
             AEM Sites实例可以无缝地访问和使用其他AEM Assets实例中的资源。</td>
             <td> </td>
             <td> </td>
@@ -794,7 +794,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/multilingual-assets.html" target="_blank">多语言资产</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/multilingual-assets.html" target="_blank">多语言Assets</a>：</strong>
             使用语言根自动翻译支持资源元数据。</td>
             <td> </td>
             <td> </td>
@@ -850,8 +850,8 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe Imaging Library</a>：</strong>
-                <br> Photoshop和AcrobatPDF库用于高质量文件操作。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe图像库</a>：</strong>
+                <br>用于高质量文件操作的Photoshop和AcrobatPDF库。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -887,9 +887,9 @@ AEM提高了与其他Adobe服务集成的能力：
 
 ### AEM Assets Dynamic Media
 
-***✔<sup>+</sup> 此版本中的功能得到了显着增强。***
+***✔<sup>+</sup>对此版本中的功能进行了显着增强。***
 
-***✔<sup>SP</sup> 表示该功能可通过Service Pack或Feature Pack使用。***
+***✔<sup>SP</sup>表示该功能可通过Service Pack或Feature Pack使用。***
 
 
 <table>
@@ -907,7 +907,7 @@ AEM提高了与其他Adobe服务集成的能力：
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets.html" target="_blank">成像</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets.html" target="_blank">映像</a>：</strong>
             动态交付不同大小和格式的图像，包括智能裁切。</td>
             <td> </td>
             <td></td>
@@ -941,7 +941,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>集(<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/image-sets.html" target="_blank">图像</a>， <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/spin-sets.html" target="_blank">旋转</a>， <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/mixed-media-sets.html" target="_blank">混合媒体</a>)：</strong>
+            <td><strong>集（<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/image-sets.html" target="_blank">图像</a>，<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/spin-sets.html" target="_blank">旋转</a>，<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/mixed-media-sets.html" target="_blank">混合媒体</a>）：</strong>
             允许用户缩放、平移、旋转和模拟360度的观看体验。</td>
             <td> </td>
             <td>✔</td>
@@ -991,9 +991,9 @@ AEM提高了与其他Adobe服务集成的能力：
 
 以下是AEM提供的关键AEM Forms附加功能列表。 其中一些功能已在早期版本中引入，并在每个版本中添加了增量增强功能。
 
-***✔<sup>+</sup> 此版本中的功能得到了显着增强。***
+***✔<sup>+</sup>对此版本中的功能进行了显着增强。***
 
-***✔<sup>SP</sup> 表示该功能可通过Service Pack或Feature Pack使用。***
+***✔<sup>SP</sup>表示该功能可通过Service Pack或Feature Pack使用。***
 
 <table>
     <thead>
@@ -1089,7 +1089,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#FormscentricAEMWorkflowsforAEMFormsonOSGi" target="_blank">用于Forms处理的工作流（在OSGi上）</a>：</strong>
+            <td>用于Forms处理的<strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#FormscentricAEMWorkflowsforAEMFormsonOSGi" target="_blank">工作流（在OSGi上）</a>：</strong>
             简化了表单批准流程的部署。</td>
             <td> </td>
             <td> </td>
@@ -1100,7 +1100,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/user-guide.html?topic=/experience-manager/6-5/forms/morehelp/integrations.ug.js" target="_blank">与Marketing Cloud集成</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/user-guide.html?topic=/experience-manager/6-5/forms/morehelp/integrations.ug.js" target="_blank">与Marketing Cloud</a>的集成：</strong>
             与Adobe Analytics和Adobe Target集成，以增强和衡量客户体验。</td>
             <td> </td>
             <td> </td>
@@ -1124,7 +1124,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/aem-forms-app.html" target="_blank">AEM Forms应用程序</a>：</strong>
-            在iOS、Android或Windows上的应用程序中允许进行在线/离线表单处理。</td>
+            允许在iOS、Android或Windows上的应用程序中在线/离线处理表单。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -1145,7 +1145,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong>Forms处理工作流(J2EE)：</strong>
+            <td>用于Forms处理的<strong>工作流(J2EE)：</strong>
             使用直观的IDE构建复杂的表单/以文档为中心的工作流。</td>
             <td></td>
             <td>✔</td>
@@ -1168,7 +1168,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#Simplifiedauthoringexperience" target="_blank">测试框架</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#Simplifiedauthoringexperience" target="_blank">正在测试框架</a>：</strong>
             使用Calvin框架和Chrome插件支持和调试自适应表单。</td>
             <td> </td>
             <td> </td>

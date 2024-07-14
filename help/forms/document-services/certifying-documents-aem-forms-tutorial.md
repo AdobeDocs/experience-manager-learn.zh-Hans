@@ -22,7 +22,7 @@ ht-degree: 0%
 
 要认证文档，您可以在桌面上使用Acrobat DC，或将AEM Forms Document Services作为服务器上自动化流程的一部分。
 
-本文为您提供了使用AEM Forms Document Services验证pdf文档的示例OSGI捆绑包。示例中使用的代码为 [此处提供](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+本文为您提供了使用AEM Forms Document Services验证pdf文档的示例OSGI捆绑包。示例中使用的代码为[此处提供](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 要使用AEM Forms认证文档，需要执行以下步骤
 
@@ -30,19 +30,19 @@ ht-degree: 0%
 
 请按照下面提到的步骤将证书添加到AEM中的Keystore
 
-* [初始化全局信任存储区](http://localhost:4502/libs/granite/security/content/truststore.html)
-* [搜索fd-service](http://localhost:4502/security/users.html) 用户
-* **您必须滚动结果页面才能加载所有用户以找到fd-service用户**
+* [初始化全局信任存储](http://localhost:4502/libs/granite/security/content/truststore.html)
+* [搜索fd-service](http://localhost:4502/security/users.html)用户
+* **您必须滚动结果页面才能加载所有用户，才能找到fd服务用户**
 * 双击fd-service用户以打开用户设置窗口
 * 单击“从Keystore文件添加私钥”。指定特定于证书的别名和密码
-  ![add-certificate](assets/adding-certificate-keystore.PNG)
+  ![添加证书](assets/adding-certificate-keystore.PNG)
 * 保存更改
 
 ## 创建OSGI服务
 
 您可以编写自己的OSGi捆绑包，并使用AEM Forms客户端SDK实施服务来认证PDF文档。 以下链接对于编写您自己的OSGi捆绑包将会很有用
 
-* [创建您的第一个OSGi捆绑包](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)
+* [正在创建您的第一个OSGi捆绑包](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)
 * [使用文档服务API](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 或者，您也可以使用作为本教程资源一部分的示例捆绑包。
@@ -53,15 +53,15 @@ ht-degree: 0%
 
 ## 在本地系统上测试示例
 
-* 下载并安装 [自定义文档服务捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* 下载并安装 [使用服务用户捆绑包进行开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* 下载并安装[自定义文档服务包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* 下载并安装[使用服务用户捆绑包进行开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [确保您已在Apache Sling服务用户映射器服务中添加以下条目](http://localhost:4502/system/console/configMgr)
-  **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service** 如下面的屏幕快照所示
+  **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**，如下面的屏幕快照所示
   ![用户映射器](assets/user-mapper-service.PNG)
 * [导入自适应表单示例](assets/certify-pdf-af.zip)
 * [导入并安装自定义提交](assets/custom-submit-certify.zip)
 * [打开自适应表单](http://localhost:4502/content/dam/formsanddocuments/certifypdf/jcr:content?wcmmode=disabled)
 * 上传需要认证的PDF文档
-  **可选**  — 指定要用于证明文档的签名字段
+  **可选** — 指定要在验证文档时使用的签名字段
 * 单击提交。
 * 应该把认证的PDF还给你

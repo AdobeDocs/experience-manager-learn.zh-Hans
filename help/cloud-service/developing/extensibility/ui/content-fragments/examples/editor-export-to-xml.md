@@ -23,13 +23,13 @@ ht-degree: 1%
 
 ![内容片段编辑器标题菜单扩展示例](./assets/export-to-xml/hero.png){align="center"}
 
-可以使用将自定义按钮添加到内容片段编辑器标题菜单 `headerMenu` 扩展点。 此示例说明如何向标题菜单添加按钮，以及如何处理单击事件以将活动内容片段导出为XML或CSV。
+可以使用`headerMenu`扩展点将自定义按钮添加到内容片段编辑器标题菜单。 此示例说明如何向标题菜单添加按钮，以及如何处理单击事件以将活动内容片段导出为XML或CSV。
 
 标题按钮可以作为一个按钮存在，也可以作为具有子项目的按钮存在。 此示例说明如何使用子项实施按钮，但包含用于实施单个按钮的注释掉的代码。
 
 ## 扩展点
 
-此示例将扩展到扩展点 `headerBar` 向内容片段编辑器添加自定义按钮。
+此示例扩展到扩展点`headerBar`以将自定义按钮添加到内容片段编辑器。
 
 | AEM UI已扩展 | 扩展点 |
 | ------------------------ | --------------------- | 
@@ -43,9 +43,9 @@ ht-degree: 1%
 
 ### 延期注册
 
-`ExtensionRegistration.js`，映射到index.html路由，是AEM扩展的入口点，并定义：
+`ExtensionRegistration.js`映射到index.html路由，是AEM扩展的入口点，并定义：
 
-+ 此时将显示扩展按钮的位置(`headerMenu`AEM )创作体验
++ 扩展按钮的位置(`headerMenu`)显示在AEM创作体验中
 + getButton()函数中扩展按钮的定义
 + 按钮的点击处理程序(在onClick()函数中)或子项列表及其点击处理程序。
 
@@ -148,13 +148,13 @@ export default ExtensionRegistration;
 
 #### 内容片段数据
 
-可以使用检索活动的内容片段 `getContentFragment()` 上的方法 `guestConnection.host.contentFragment` 对象。
+可以使用`guestConnection.host.contentFragment`对象上的`getContentFragment()`方法检索活动内容片段。
 
 ```javascript
 const contentFragment = await guestConnection.host.contentFragment.getContentFragment();
 ```
 
-此 `contentFragment` 对象包含有关内容片段的所有信息，包括路径、模型、元数据、主内容和任何变体。
+`contentFragment`对象包含有关内容片段的所有信息，包括路径、模型、元数据、主内容和任何变体。
 
 ```json
 {

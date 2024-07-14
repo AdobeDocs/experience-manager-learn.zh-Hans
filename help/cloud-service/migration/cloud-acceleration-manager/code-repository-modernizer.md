@@ -1,6 +1,6 @@
 ---
 title: 代码存储库现代化器
-description: 了解核心存储库现代化器如何自动将现有AEM Maven项目更新为可与AEMas a Cloud Service兼容的项目。
+description: 了解核心存储库现代化器如何自动将现有AEM Maven项目更新为可与AEM as a Cloud Service兼容的项目。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 代码存储库现代化器
 
-了解核心存储库现代化器如何自动将现有AEM Maven项目更新为可与AEMas a Cloud Service兼容的项目。
+了解核心存储库现代化器如何自动将现有AEM Maven项目更新为可与AEM as a Cloud Service兼容的项目。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336694?quality=12&learn=on)

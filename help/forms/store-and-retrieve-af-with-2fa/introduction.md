@@ -27,7 +27,7 @@ ht-degree: 2%
 
 * 对servlet进行POST调用。 此servlet将数据存储在数据库中，并将表单附件存储在CRX存储库中。 数据库中存储的数据与GUID相关联。
 
-* 如果要使用存储的数据填充自适应表单，请检索与GUID关联的数据，然后使用 **request.setAttribute** 方法。
+* 如果要使用存储的数据填充自适应表单，请检索与GUID关联的数据，并使用&#x200B;**request.setAttribute**&#x200B;方法填充自适应表单。
 
 ## 用例演示
 
@@ -45,4 +45,4 @@ ht-degree: 2%
 
 ## 后续步骤
 
-[配置数据源](./configure-data-source.md)
+[配置数据Source](./configure-data-source.md)

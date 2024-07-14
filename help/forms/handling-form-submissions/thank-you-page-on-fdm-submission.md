@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ![感谢页面](./assets/thank-you-page-fdm-submit.png)
 
-表单数据模型的POST将始终在响应中返回JSON对象。 此JSON作为名为的查询参数显示在感谢页面URL中 _fdmSubmitResult_. 您可以解析此查询参数，并在感谢页面中显示JSON元素。
+表单数据模型的POST将始终在响应中返回JSON对象。 此JSON在感谢页面URL中作为名为&#x200B;_fdmSubmitResult_的查询参数提供。 您可以解析此查询参数，并在感谢页面中显示JSON元素。
 以下示例代码解析JSON响应以提取数字字段的值。 然后，系统会构建适当的xml，并在slingRequest中传递它以填充表单。 此代码通常编写在与自适应表单模板关联的页面组件的jsp中。
 
 ```java
@@ -46,6 +46,8 @@ if(request.getParameter("fdmSubmitResult")!=null)
 
 创建自适应表单并将其配置为使用表单数据模型提交操作提交表单。
 [部署示例自适应表单模板](assets/thank-you-page-template.zip)
-基于此模板创建感谢表单将此感谢页面与主表单关联在中修改jsp代码 [createXml.jsp](http://localhost:4502/apps/thank-you-page-template/component/page/thankyoupage/createxml.jsp) 构建预填充自适应表单所需的xml。
+基于此模板创建感谢表单
+将此感谢页面与主表单关联
+修改[createXml.jsp](http://localhost:4502/apps/thank-you-page-template/component/page/thankyoupage/createxml.jsp)中的jsp代码以生成预填充自适应表单所需的xml。
 预览并提交您的自适应表单。
 此时将显示感谢页面，并预填充在XML中指定的数据

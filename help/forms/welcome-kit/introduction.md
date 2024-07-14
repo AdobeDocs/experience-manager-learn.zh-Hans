@@ -24,6 +24,7 @@ ht-degree: 0%
 
 您将需要以下各项：
 
-已安装核心组件且已安装表单附加组件包的AEM工作实例
+已安装表单附加组件包的AEM工作实例
+已安装核心组件
 
-[根据本文档设置的开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[根据此文档设置的开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)

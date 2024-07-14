@@ -28,15 +28,15 @@ ht-degree: 0%
 
 ![Pdfa](assets/pdfa-file-in-acrobat.png)
 
-示例文件可以是 [从此处下载](assets/pdf-file-types.zip)
+可从此处](assets/pdf-file-types.zip)下载样本文件[
 
 ## XML Forms架构PDF(XFAPDF)
 
-Adobe使用术语XFAPDF表单来引用您使用AEM Forms Designer创建的交互式和动态Forms。 使用Designer创建的Forms和文件基于Adobe的XML Forms架构(XFA)。 在许多方面，XFAPDF文件格式与HTML文件相比更接近PDF文件。 例如，以下代码显示了简单文本对象在XFAPDF文件中的外观。
+Adobe使用术语XFAPDF表单来引用您使用AEM Forms Designer创建的交互式动态Forms。 Forms和使用Designer创建的文件基于Adobe的XML Forms架构(XFA)。 在许多方面，XFAPDF文件格式与HTML文件相比更接近PDF文件。 例如，以下代码显示了简单文本对象在XFAPDF文件中的外观。
 
 ![文本字段](assets/text-field.JPG)
 
-XFA Forms基于XML。 这种结构良好且灵活的格式使AEM Forms Server能够将您的Designer文件转换为不同的格式，包括传统的PDF、PDF/A和HTML。 通过选择布局编辑器的“XML源”选项卡，可以在Designer中查看Forms的完整XML结构。 您可以在AEM Forms Designer中创建静态和动态XFA Forms。
+XFA Forms基于XML。 这种结构良好且灵活的格式使AEM Forms服务器能够将您的Designer文件转换为不同的格式，包括传统的PDF、PDF/A和HTML。 您可以通过选择布局编辑器的XML Source选项卡，在Designer中查看Forms的完整XML结构。 您可以在AEM Forms Designer中创建静态和动态XFA Forms。
 
 ## 静态PDF
 
@@ -50,7 +50,7 @@ XFA Forms基于XML。 这种结构良好且灵活的格式使AEM Forms Server能
 
 >[!NOTE]
 >
-> 您可以将XDP另存为“静态PDF表单”，从而使用AEM Forms Designer创建AdobePDF
+> 您可以将XDP另存为“静态PDF”表单，从而使用AEM Forms Designer创建Adobe静态PDF
 
 
 
@@ -61,7 +61,7 @@ XFA Forms基于XML。 这种结构良好且灵活的格式使AEM Forms Server能
 * 动态表单支持可更改表单布局和分页的客户端脚本。 例如，如果您将Purchase Order.xdp另存为动态表单，它将进行扩展和分页以适应无限数量的数据
 * 动态表单在运行时支持表单的所有属性，而静态表单仅支持一个子集
 
-* [请参阅本文档以了解静态与动态PDF表单之间的差异](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
+* [请参阅本文档以了解静态和动态PDF表单之间的差异](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
 
 >[!NOTE]
 >
@@ -86,7 +86,8 @@ PDF格式中普遍使用且最流行的是传统的PDF文件。 创建传统PDF�
 
 ### Acroforms
 
-Acroform是Adobe较早的交互式表单技术；它们可追溯到Acrobat版本3。 Adobe提供 [Acrobat Forms API参考](assets/FormsAPIReference.pdf)日期为2003年5月，提供了此技术的技术细节。 Acroform是以下项目的组合：
+Acroform是Adobe较早的交互式表单技术；它们可追溯到Acrobat版本3。 Adobe提供了2003年5月发布的[Acrobat Forms API引用](assets/FormsAPIReference.pdf)，以提供此技术的技术详细信息。 Acroform是
+以下项目：
 
 * 定义表单的静态布局和图形的传统PDF。
 * 使用Adobe Acrobat程序的表单工具固定到顶部的交互式表单字段。 这些表单工具只是AEM Forms Designer中可用功能的一小部分。
@@ -99,7 +100,7 @@ PDF/A (归档的PDF)建立在传统PDF的文档存储优势之上，有许多具
 
 * 所有内容都必须包含在文件中，并且不能依赖于外部源，如超链接、字体或软件程序。
 * 所有字体都必须嵌入，并且它们必须是拥有电子文档无限使用许可证的字体。
-* 不允许使用JavaScript
+* 不允许JavaScript
 * 不允许透明
 * 不允许加密
 * 不允许音频和视频内容

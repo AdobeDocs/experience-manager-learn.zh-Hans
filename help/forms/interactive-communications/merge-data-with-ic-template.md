@@ -162,7 +162,7 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
 
 要在您的服务器上对此进行测试，请执行以下步骤：
 
-* [配置Day CQ邮件服务。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) 发送带有作为附件生成的文档的电子邮件时需要此信息。
+* [配置Day CQ邮件服务。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html)发送带有作为附件生成的文档的电子邮件时需要此项。
 * [部署Developing with Service用户包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * 确保已在Apache Sling服务用户映射器服务配置中添加了以下条目
 * **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**
@@ -171,13 +171,13 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
    1. beneficiaryconfirmationic.zip
    2. changeofbeneficiaryform.zip
    3. generatebeneficiaryworkflow.zip
-* [使用AEM Felix Web控制台部署以下内容](http://localhost:4502/system/console/bundles)
+* [使用AEM Felix Web控制台](http://localhost:4502/system/console/bundles)部署以下项
 
    * GenerateIC.GenerateIC.core-1.0-SNAPSHOT.jar。 此捆绑包中包含本文中提到的代码。
 
-* [打开ChangeOfRegionalForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
+* [打开ChangeOfReviewalForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
 * 确保将自适应表单配置为提交到AEM Workflow，如下所示
   ![图像](assets/generateic.PNG)
 * [配置工作流模型。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)确保根据您的环境配置流程步骤和发送电子邮件组件
-* [预览ChangeOfReviewantForm。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 填写一些详细信息并提交
+* [预览ChangeOfWeiefineerForm。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)填写一些详细信息并提交
 * 应调用工作流，并将IC打印渠道文档作为附件发送给在发送电子邮件组件中指定的收件人

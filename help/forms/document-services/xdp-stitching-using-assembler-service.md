@@ -19,9 +19,9 @@ ht-degree: 0%
 # 使用汇编程序服务的XDP拼接
 
 本文提供了用于展示使用汇编程序服务拼接xdp文档这一能力的宝贵资源。
-编写了以下jsp代码以插入一个名为的子表单 **地址** 从名为address.xdp的xdp文档插入到一个名为 **地址** 在master.xdp文档中。 生成的xdp保存在AEM安装的根文件夹中。
+编写了以下jsp代码，以将xdp文档（名为address.xdp）中名为**address**&#x200B;的子表单插入到master.xdp文档中名为&#x200B;**address**&#x200B;的插入点中。 生成的xdp保存在AEM安装的根文件夹中。
 
-汇编程序服务依赖于有效的DDX文档来描述PDF文档的操作。 您可参阅 [此处为DDX参考文档](assets/ddxRef.pdf).第40页包含有关xdp拼接的信息。
+汇编程序服务依赖于有效的DDX文档来描述PDF文档的操作。 您可以在此参阅[DDX参考文档](assets/ddxRef.pdf)。第40页包含有关xdp拼接的信息。
 
 ```java
     javax.servlet.http.Part ddxFile = request.getPart("xdpstitching.ddx");
@@ -53,7 +53,7 @@ ht-degree: 0%
     finalXDP.copyToFile(new java.io.File("stitched.xdp"));
 ```
 
-下面列出了用于将片段插入另一个xdp的DDX文件。 DDX插入子表单  **地址** 从address.xdp到插入点时调用 **地址** 在master.xdp中。 命名的结果文档 **stitched.xdp** 保存到文件系统。
+下面列出了用于将片段插入另一个xdp的DDX文件。 DDX将address.xdp中的子表单&#x200B;**地址**&#x200B;插入到master.xdp中名为&#x200B;**地址**&#x200B;的插入点中。 名为&#x200B;**stitched.xdp**&#x200B;的结果文档已保存到文件系统。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -68,19 +68,21 @@ ht-degree: 0%
 
 使此功能在您的AEM服务器上正常工作
 
-* 下载 [XDP拼接包](assets/xdp-stitching.zip) 到您的本地系统。
-* 使用上载并安装包 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* [提取此zip文件的内容](assets/xdp-and-ddx.zip) 获取示例xdp和DDX文件
+* 将[XDP拼接包](assets/xdp-stitching.zip)下载到您的本地系统。
+* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)上载并安装包
+* [提取此zip文件的内容](assets/xdp-and-ddx.zip)以获取示例xdp和DDX文件
 
-**安装包后，必须在AdobeGranite CSRF过滤器中允许列表以下URL。**
+**安装包后，您必须在AdobeGranite CSRF筛选器中允许列表以下URL。**
 
 1. 请按照以下所述步骤列入允许列表上述路径。
-1. [登录configMgr](http://localhost:4502/system/console/configMgr)
+1. [登录到configMgr](http://localhost:4502/system/console/configMgr)
 1. 搜索AdobeGranite CSRF筛选器
-1. 在排除的部分中添加以下路径并保存 `/content/AemFormsSamples/assemblerservice`
+1. 在排除的部分中添加以下路径并保存`/content/AemFormsSamples/assemblerservice`
 1. 搜索“Sling引用过滤器”
-1. 选中“允许为空”复选框。 （此设置仅用于测试目的）有多种方法来测试示例代码。 最快、最轻松的是使用Postman应用程序。 Postman允许您向服务器发出POST请求。 在您的系统上安装Postman应用程序。
-启动应用程序并输入以下URL以测试导出数据API http://localhost:4502/content/AemFormsSamples/assemblerservice.html
+1. 选中“允许为空”复选框。 （此设置仅用于测试目的）
+可通过多种方法来测试示例代码。 最快、最轻松的是使用Postman应用程序。 Postman允许您向服务器发出POST请求。 在您的系统上安装Postman应用程序。
+启动应用程序并输入以下URL以测试导出数据API
+http://localhost:4502/content/AemFormsSamples/assemblerservice.html
 
 提供屏幕快照中指定的以下输入参数。 您可以使用之前下载的示例文档，
 ![xdp-stitch-postman](assets/xdp-stitching-postman.png)

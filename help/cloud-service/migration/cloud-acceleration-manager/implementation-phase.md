@@ -1,6 +1,6 @@
 ---
 title: Cloud Acceleration Manager的实施阶段
-description: 查看并了解主要实施阶段或如何使用Cloud Acceleration Manager移至AEMas a Cloud Service。
+description: 查看并了解主要的实施阶段或如何使用Cloud Acceleration Manager迁移到AEM as a Cloud Service。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Cloud Acceleration Manager的实施阶段
 
-查看并了解主要实施阶段或如何使用Cloud Acceleration Manager移至AEMas a Cloud Service。
+查看并了解主要的实施阶段或如何使用Cloud Acceleration Manager迁移到AEM as a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336691?quality=12&learn=on)

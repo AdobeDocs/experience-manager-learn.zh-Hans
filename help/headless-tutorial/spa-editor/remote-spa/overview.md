@@ -24,7 +24,7 @@ ht-degree: 1%
 
 对于希望使用AEM SPA编辑器将现有基于React（或Next.js）的SPA内容扩充为可编辑AEM内容的开发人员，欢迎使用多部分教程。
 
-本教程基于 [WKND GraphQL应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)，这是一个React应用程序，它通过AEM GraphQL API使用AEM内容片段内容，但不提供任何SPA内容的上下文创作。
+本教程以[WKND GraphQL应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)为基础，该应用程序是一个React应用程序，它通过AEM的GraphQL API使用AEM内容片段内容，但不提供任何对SPA内容的上下文创作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
@@ -34,14 +34,14 @@ ht-degree: 1%
 
 本教程中的大多数活动都重点介绍JavaScript开发，但其中涵盖了围绕AEM的关键方面。 这些方面包括定义在AEM中创作和存储内容的位置，并将SPA路由映射到AEM Pages。
 
-本教程专门设计用于 **AEMas a Cloud Service** 并且由两个项目组成：
+本教程设计用于&#x200B;**AEM as a Cloud Service**，由两个项目组成：
 
-1. 此 __AEM项目__ 包含必须部署到AEM的配置和内容。
-1. __WKND应用程序__ 项目是要与SPA SPA编辑器集成的AEM
+1. __AEM项目__&#x200B;包含必须部署到AEM的配置和内容。
+1. __WKND应用程序__&#x200B;项目是要与AEM的SPA编辑器集成的SPA
 
 ## 最新代码
 
-+ 本教程代码的起始点可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa-tutorial) 在 `remote-spa-tutorial` 文件夹。
++ 本教程代码的起点可在`remote-spa-tutorial`文件夹中的[GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa-tutorial)上找到。
 
 ## 先决条件
 
@@ -57,15 +57,15 @@ ht-degree: 1%
 
 本教程假定：
 
-+ [Microsoft® Visual Studio代码](https://visualstudio.microsoft.com/) 作为IDE
-+ 的工作目录 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial`
-+ 在上将AEM SDK作为创作服务运行 `http://localhost:4502`
-+ 使用本地运行AEM SDK `admin` 具有密码的帐户 `admin`
-+ 运行SPA `http://localhost:3000`
++ [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/)作为IDE
++ `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial`的工作目录
++ 在`http://localhost:4502`上将AEM SDK作为创作服务运行
++ 使用密码为`admin`的本地`admin`帐户运行AEM SDK
++ 在`http://localhost:3000`上运行SPA
 
 >[!NOTE]
 >
-> **在设置本地开发环境时需要帮助？** 查看 [以下指南介绍了如何使用AEMas a Cloud ServiceSDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans).
+> **需要有关设置本地开发环境的帮助吗？**&#x200B;请查看以下[指南，了解如何使用AEM as a Cloud Service SDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)。
 
 ## 1.为SPA编辑器配置AEM
 

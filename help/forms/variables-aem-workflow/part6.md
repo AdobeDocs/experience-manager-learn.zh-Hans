@@ -179,5 +179,5 @@ public class LogWorkflowVariables implements WorkflowProcess {
 
 ## 部署示例捆绑包
 
-[部署变量记录器捆绑包](assets/VariableLogger.core-1.0.0-SNAPSHOT.jar) 使用Felix Web控制台。
+[使用Felix Web控制台部署变量记录器包](assets/VariableLogger.core-1.0.0-SNAPSHOT.jar)。
 将此捆绑包与AEM工作流中的流程步骤关联，以记录String and Document变量的值。

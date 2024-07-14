@@ -1,5 +1,5 @@
 ---
-title: 什么是“调度程序”
+title: 什么是“Dispatcher”
 description: 了解Dispatcher到底是什么。
 version: 6.5
 topic: Administration
@@ -17,11 +17,11 @@ ht-degree: 2%
 
 ---
 
-# 什么是“调度程序”
+# 什么是“Dispatcher”
 
 [目录](./overview.md)
 
-从对AEM Dispatcher的要求的基本描述开始。
+首先简要说明AEM Dispatcher的具体含义。
 
 ## Apache Web Server
 
@@ -29,8 +29,8 @@ ht-degree: 2%
 
 Apache服务器功能的基本说明：
 
-- 遵循简单规则从其静态文档目录通过HTTP协议提供文件(`DocumentRoot`)
-- 存储在默认位置的文件(`/var/www/html`)在请求中匹配，并在请求客户端的浏览器中呈现
+- 遵循简单规则从其静态文档目录(`DocumentRoot`)通过HTTP(s)协议提供文件
+- 存储在默认位置(`/var/www/html`)中的文件在请求时匹配，并在请求客户端的浏览器中呈现
 
 
 
@@ -39,10 +39,10 @@ Apache服务器功能的基本说明：
 
 然后，向Apache Web Server添加一个称为Dispatcher模块的插件
 
-对AEM DispatcherAdobe模块所做功能的基本说明：
+有关AdobeAEM Dispatcher模块功用的基本说明：
 
 - 增强默认文件处理程序
-- 过滤出错误请求/保护AEM软肚子/端点
+- 过滤出错误请求/保护AEM的软肚子/端点
 - 存在多个呈现器时的负载平衡
 - 允许使用活动缓存目录/支持刷新停滞文件
 - 它是所有AMS安装的前门，它将网站和资产提供给客户端的浏览器
@@ -51,7 +51,7 @@ Apache服务器功能的基本说明：
 
 ## Web流量工作流程
 
-了解哪些部分安装在一起以构建基本Dispatcher服务器，这使我们使您能够了解Adobe管理器服务配置的基本Web流量工作流。
+了解哪些部分一起安装在一起以构建基本的Dispatcher服务器，可使您了解Adobe管理器服务配置的基本Web流量工作流。
 这应该有助于您了解它在向AEM内容的访客提供内容的系统链中发挥什么作用。
 
 <b>提供已缓存的内容</b>
@@ -65,7 +65,7 @@ End User's Browser request
                     → End User
 ```
 
-<b>从AEM提供新鲜内容</b>
+<b>从AEM提供新内容</b>
 
 ```
 End User's Browser request 

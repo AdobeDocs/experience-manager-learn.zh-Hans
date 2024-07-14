@@ -22,15 +22,15 @@ ht-degree: 0%
 
 # 在AEM中索引最佳实践
 
-了解如何在Adobe Experience Manager (AEM)中索引最佳实践。 Apache [Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/query.html) 为AEM中的内容搜索提供支持，以下是要点：
+了解如何在Adobe Experience Manager (AEM)中索引最佳实践。 Apache [Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/query.html)为AEM中的内容搜索提供支持，以下是关键点：
 
-- AEM现成提供各种索引来支持搜索和查询功能，例如 `damAssetLucene`， `cqPageLucene` 等等。
-- 所有索引定义都存储在下的存储库中 `/oak:index` 节点。
-- AEMas a Cloud Service仅支持Oak Lucene索引。
+- AEM开箱即用地提供各种索引来支持搜索和查询功能，例如`damAssetLucene`、`cqPageLucene`等。
+- 所有索引定义都存储在`/oak:index`节点下的存储库中。
+- AEM as a Cloud Service仅支持Oak Lucene索引。
 - 索引配置应在AEM项目代码库中管理，并使用Cloud Manager CI/CD管道进行部署。
-- 如果给定查询有多个索引可用，则 **使用估计成本最低的索引**.
-- 如果给定的查询没有可用的索引，则会遍历内容树以查找匹配的内容。 但是，默认限制来自 `org.apache.jackrabbit.oak.query.QueryEngineSettingsService` 是只遍历10,0000个节点。
-- 查询的结果为 **最后已筛选** 以确保当前用户具有读取权限。 这意味着查询结果可能小于索引节点数。
+- 如果给定查询有多个索引可用，则使用估计开销最低的&#x200B;**索引**。
+- 如果给定的查询没有可用的索引，则会遍历内容树以查找匹配的内容。 但是，通过`org.apache.jackrabbit.oak.query.QueryEngineSettingsService`的默认限制是仅遍历10,0000个节点。
+- 查询结果最后&#x200B;**被**&#x200B;过滤，以确保当前用户具有读取权限。 这意味着查询结果可能小于索引节点数。
 - 在索引定义更改后重新索引存储库需要时间，这取决于存储库的大小。
 
 要拥有高效、正确的搜索功能且不会影响AEM实例的性能，请务必了解索引最佳实践。
@@ -39,45 +39,45 @@ ht-degree: 0%
 
 有时，必须创建自定义索引来支持您的搜索要求。 但是，在创建自定义索引之前，请遵循以下准则：
 
-- 了解搜索要求，并检查OOTB索引是否支持搜索要求。 使用 **查询性能工具**，位于 [本地SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) 和AEM CS通过开发人员控制台或 `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`.
+- 了解搜索要求，并检查OOTB索引是否支持搜索要求。 通过Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`使用&#x200B;**查询性能工具**，该工具位于[本地SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS。
 
-- 定义最佳查询，使用 [优化查询](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) 流程图和 [JCR查询备忘单](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) 以供参考。
+- 定义最佳查询，使用[优化查询](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)流程图和[JCR查询备忘表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en)以供参考。
 
-- 如果OOTB索引不支持搜索要求，您有两个选择。 但是，请查看 [创建高效索引的提示](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
+- 如果OOTB索引不支持搜索要求，您有两个选择。 但是，查看有关创建有效索引的[提示](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - 自定义OOTB索引：首选选项，因为它易于维护和升级。
    - 完全自定义索引：仅当上述选项无效时。
 
 ### 自定义OOTB索引
 
-- 在 **AEMCS**，在自定义OOTB索引时使用 **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** 命名约定。 例如， `cqPageLucene-custom-1` 或 `damAssetLucene-8-custom-1`. 这有助于在更新OOTB索引时合并自定义索引定义。 请参阅 [对开箱即用索引的更改](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
+- 在&#x200B;**AEMCS**&#x200B;中，当自定义OOTB索引时，使用&#x200B;**\&lt;OOTBIndexName>-\&lt;productVersion>-custom-\&lt;customVersion>**&#x200B;命名约定。 例如，`cqPageLucene-custom-1`或`damAssetLucene-8-custom-1`。 这有助于在更新OOTB索引时合并自定义索引定义。 有关更多详细信息，请参阅[对现成索引的更改](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/indexing)。
 
-- 在 **AEM 6.X**，上述命名 _不起作用_，只需在中使用必要的属性更新OOTB索引即可 `indexRules` 节点。
+- 在&#x200B;**AEM 6.X**&#x200B;中，上述命名&#x200B;_不起作用_，只是在`indexRules`节点中使用必要的属性更新OOTB索引即可。
 
 - 始终使用CRX DE包管理器(/crx/packmgr/)从AEM实例复制最新的OOTB索引定义，对其进行重命名并在XML文件中添加自定义项。
 
-- 将索引定义存储到AEM项目，位于 `ui.apps/src/main/content/jcr_root/_oak_index` 并使用Cloud Manager CI/CD管道部署它。 请参阅 [部署自定义索引定义](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
+- 将索引定义存储在`ui.apps/src/main/content/jcr_root/_oak_index`的AEM项目中，并使用Cloud Manager CI/CD管道进行部署。 有关详细信息，请参阅[部署自定义索引定义](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/indexing)。
 
 ### 完全自定义索引
 
 创建完全自定义索引必须是您的最后一个选项，并且前提是上述选项不起作用。
 
-- 创建完全自定义索引时，使用 **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** 命名约定。 例如，`wknd.adventures-1-custom-1`。这有助于避免命名冲突。 此处， `wknd` 是前缀和 `adventures` 是自定义索引名称。 此约定适用于AEM 6.X和AEMCS，并有助于为将来迁移到AEMCS做好准备。
+- 创建完全自定义索引时，请使用&#x200B;**\&lt;前缀>。\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>**&#x200B;命名约定。 例如，`wknd.adventures-1-custom-1`。这有助于避免命名冲突。 其中，`wknd`是前缀，`adventures`是自定义索引名称。 此约定适用于AEM 6.X和AEMCS，并有助于为将来迁移到AEMCS做好准备。
 
-- AEMCS仅支持Lucene索引，因此为了准备将来迁移到AEMCS，请始终使用Lucene索引。 请参阅 [Lucene索引与属性索引](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing) 以了解更多详细信息。
+- AEMCS仅支持Lucene索引，因此为了准备将来迁移到AEMCS，请始终使用Lucene索引。 有关详细信息，请参阅[Lucene索引与属性索引](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)。
 
-- 避免在与OOTB索引相同的节点类型上创建自定义索引。 请改为在中使用必要的属性自定义OOTB索引 `indexRules` 节点。 例如，请勿在 `dam:Asset` 节点类型但自定义OOTB `damAssetLucene` 索引。 _它一直是性能和功能问题的常见根本原因_.
+- 避免在与OOTB索引相同的节点类型上创建自定义索引。 请改为使用`indexRules`节点中的必要属性自定义OOTB索引。 例如，不要在`dam:Asset`节点类型上创建自定义索引，而是自定义OOTB `damAssetLucene`索引。 _这是导致性能和功能问题的常见根本原因_。
 
-- 此外，请避免添加多个节点类型，例如 `cq:Page` 和 `cq:Tag` 在索引规则下(`indexRules`)节点。 相反，请为每个节点类型创建单独的索引。
+- 另外，避免在索引规则(`indexRules`)节点下添加多个节点类型，例如`cq:Page`和`cq:Tag`。 相反，请为每个节点类型创建单独的索引。
 
-- 如上节所述，将索引定义存储在AEM项目的 `ui.apps/src/main/content/jcr_root/_oak_index` 并使用Cloud Manager CI/CD管道部署它。 请参阅 [部署自定义索引定义](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/indexing) 以了解更多详细信息。
+- 如上节所述，将索引定义存储在`ui.apps/src/main/content/jcr_root/_oak_index`处的AEM项目中，并使用Cloud Manager CI/CD管道部署该项目。 有关详细信息，请参阅[部署自定义索引定义](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/indexing)。
 
 - 索引定义准则为：
-   - 节点类型(`jcr:primaryType`)应为 `oak:QueryIndexDefinition`
-   - 索引类型(`type`)应为 `lucene`
-   - 异步属性(`async`)应为 `async,nrt`
-   - 使用 `includedPaths` 并避免 `excludedPaths` 属性。 始终设置 `queryPaths` 值与的值相同 `includedPaths` 值。
-   - 要强制实施路径限制，请使用 `evaluatePathRestrictions` 属性并将其设置为 `true`.
-   - 使用 `tags` 属性以标记索引，在查询时指定此标记值以使用索引。 一般查询语法为 `<query> option(index tag <tagName>)`.
+   - 节点类型(`jcr:primaryType`)应为`oak:QueryIndexDefinition`
+   - 索引类型(`type`)应为`lucene`
+   - 异步属性(`async`)应为`async,nrt`
+   - 使用`includedPaths`并避免`excludedPaths`属性。 始终将`queryPaths`值设置为与`includedPaths`值相同的值。
+   - 要强制实施路径限制，请使用`evaluatePathRestrictions`属性并将其设置为`true`。
+   - 使用`tags`属性标记索引，并在查询时指定此标记值以使用索引。 常规查询语法为`<query> option(index tag <tagName>)`。
 
   ```xml
   /oak:index/wknd.adventures-1-custom-1
@@ -98,53 +98,53 @@ ht-degree: 0%
 
 #### 标记属性的使用不当
 
-下图显示了自定义和OOTB索引定义，突出显示 `tags` 属性，两个索引使用相同的 `visualSimilaritySearch` 值。
+下图显示了自定义和OOTB索引定义，突出显示`tags`属性，两个索引使用相同的`visualSimilaritySearch`值。
 
-![标记属性的使用不当](./assets/understand-indexing-best-practices/incorrect-tags-property.png)
-
-##### 分析
-
-这是不当使用 `tags` 属性。 Oak查询引擎在OOTB索引上选取自定义索引，因为这样估计的成本最低。
-
-正确的方法是自定义OOTB索引并在 `indexRules` 节点。 请参阅 [自定义OOTB索引](#customize-the-ootb-index) 以了解更多详细信息。
-
-#### 索引位置 `dam:Asset` 节点类型
-
-下图显示了 `dam:Asset` 具有的节点类型 `includedPaths` 属性设置为特定路径。
-
-![dam：Asset节点类型上的索引](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
+![标记属性使用不当](./assets/understand-indexing-best-practices/incorrect-tags-property.png)
 
 ##### 分析
 
-如果对资产执行Omnisearch，它将返回错误结果，因为自定义索引的估计成本较低。
+这是对自定义索引的`tags`属性的不正确使用。 Oak查询引擎在OOTB索引上选取自定义索引，这样估计的成本最低。
 
-请勿在上创建自定义索引 `dam:Asset` 节点类型但自定义OOTB `damAssetLucene` 索引中带有必需属性 `indexRules` 节点。
+正确的方法是自定义OOTB索引并在`indexRules`节点中添加必要的属性。 有关详细信息，请参阅[自定义OOTB索引](#customize-the-ootb-index)。
+
+#### `dam:Asset`节点类型上的索引
+
+下图显示了`dam:Asset`节点类型的自定义索引，其中`includedPaths`属性设置为特定路径。
+
+![dam：Asset nodetype上的索引](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
+
+##### 分析
+
+如果在Assets上执行Omnisearch，它返回错误的结果，这是因为自定义索引的估计成本较低。
+
+不要在`dam:Asset`节点类型上创建自定义索引，而是使用`indexRules`节点中的必要属性自定义OOTB `damAssetLucene`索引。
 
 #### 索引规则下的多个节点类型
 
-下图显示具有多个节点类型的自定义索引 `indexRules` 节点。
+下图显示了`indexRules`节点下具有多个节点类型的自定义索引。
 
-![索引规则下的多个节点类型](./assets/understand-indexing-best-practices/multiple-nodetypes-in-index.png)
-
-##### 分析
-
-不建议在单个索引中添加多个节点类型，但是，如果节点类型密切相关(例如， `cq:Page` 和 `cq:PageContent`.
-
-一个有效的解决方案是自定义OOTB `cqPageLucene` 和 `damAssetLucene` 索引，在现有属性下添加必要的属性 `indexRules` 节点。
-
-#### 缺席 `queryPaths` 属性
-
-下图显示了自定义索引（也不遵循命名约定），但 `queryPaths` 属性。
-
-![缺少queryPaths属性](./assets/understand-indexing-best-practices/absense-of-queryPaths-prop.png)
+在索引规则下![多个节点类型](./assets/understand-indexing-best-practices/multiple-nodetypes-in-index.png)
 
 ##### 分析
 
-始终设置 `queryPaths` 值与的值相同 `includedPaths` 值。 此外，要强制实施路径限制，请设置 `evaluatePathRestrictions` 属性至 `true`.
+不建议在单个索引中添加多个节点类型，但是，如果节点类型紧密相关（例如`cq:Page`和`cq:PageContent`），则可以在同一索引中索引节点类型。
+
+有效的解决方案是自定义OOTB `cqPageLucene`和`damAssetLucene`索引，在现有`indexRules`节点下添加必要的属性。
+
+#### 缺少`queryPaths`属性
+
+下图显示没有`queryPaths`属性的自定义索引（也不遵循命名约定）。
+
+![查询路径属性缺失](./assets/understand-indexing-best-practices/absense-of-queryPaths-prop.png)
+
+##### 分析
+
+始终将`queryPaths`值设置为与`includedPaths`值相同的值。 此外，要强制实施路径限制，请将`evaluatePathRestrictions`属性设置为`true`。
 
 #### 使用索引标记进行查询
 
-下图显示了自定义索引 `tags` 属性，以及如何在查询时使用它。
+下图显示了具有`tags`属性的自定义索引以及查询时如何使用该索引。
 
 ![使用索引标记进行查询](./assets/understand-indexing-best-practices/tags-prop-usage.png)
 
@@ -154,21 +154,21 @@ ht-degree: 0%
 
 ##### 分析
 
-演示如何设置无冲突且正确无误 `tags` 索引上的属性值，并在查询时使用它。 一般查询语法为 `<query> option(index tag <tagName>)`. 另请参阅 [查询选项索引标记](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#query-option-index-tag)
+演示如何在索引上设置无冲突并更正`tags`属性值，并在查询时使用它。 常规查询语法为`<query> option(index tag <tagName>)`。 另请参阅[查询选项索引标记](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#query-option-index-tag)
 
 #### 自定义索引
 
-下图显示了自定义索引 `suggestion` 节点来实现高级搜索功能。
+下图显示了用于实现高级搜索功能的自定义索引（包含`suggestion`节点）。
 
 ![自定义索引](./assets/understand-indexing-best-practices/custom-index-with-suggestion-node.png)
 
 ##### 分析
 
-为创建自定义索引是有效的用例 [高级搜索](https://jackrabbit.apache.org/oak/docs/query/lucene.html#advanced-search-features) 功能。 但是，索引名称应跟在 **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** 命名约定。
+为[高级搜索](https://jackrabbit.apache.org/oak/docs/query/lucene.html#advanced-search-features)功能创建自定义索引是有效的用例。 但是，索引名称应跟在&#x200B;**\&lt;prefix>之后。\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>**&#x200B;命名约定。
 
 ## 通过禁用Apache Tika进行索引优化
 
-AEM使用 [Apache Tika](https://tika.apache.org/) 对象 _从文件提取元数据和文本内容_ PDF、Word、Excel等类型。 提取的内容存储在存储库中，并按Oak Lucene索引编制索引。
+AEM使用[Apache Tika](https://tika.apache.org/)从文件&#x200B;_类型(如PDF、Word、Excel等)提取元数据和文本内容_。 提取的内容存储在存储库中，并按Oak Lucene索引编制索引。
 
 有时，用户不需要在文件/资源的内容中搜索的能力，在这种情况下，您可以通过禁用Apache Tika来提高索引性能。 其优点是：
 
@@ -185,7 +185,7 @@ AEM使用 [Apache Tika](https://tika.apache.org/) 对象 _从文件提取元数�
 
 要按mime类型禁用Apache Tika，请执行以下步骤：
 
-- 添加 `tika` 节点 `nt:unstructured` 在自定义或OOBT索引定义下键入。 在以下示例中，对OOTB禁用了PDFmime类型 `damAssetLucene` 索引。
+- 在自定义或OOBT索引定义下添加`nt:unstructured`类型的`tika`节点。 在下面的示例中，对OOTB `damAssetLucene`索引禁用了PDFMIME类型。
 
 ```xml
 /oak:index/damAssetLucene
@@ -197,7 +197,7 @@ AEM使用 [Apache Tika](https://tika.apache.org/) 对象 _从文件提取元数�
     </tika>
 ```
 
-- 添加 `config.xml` 下的以下详细信息 `tika` 节点。
+- 在`tika`节点下添加包含以下详细信息的`config.xml`。
 
 ```xml
 <properties>
@@ -209,21 +209,21 @@ AEM使用 [Apache Tika](https://tika.apache.org/) 对象 _从文件提取元数�
 </properties>
 ```
 
-- 要刷新存储的索引，请设置 `refresh` 属性至 `true` 在索引定义节点下，请参见 [索引定义属性](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition:~:text=Defaults%20to%2010000-,refresh,-Optional%20boolean%20property) 以了解更多详细信息。
+- 要刷新存储的索引，请在索引定义节点下将`refresh`属性设置为`true`，有关详细信息，请参阅[索引定义属性](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition:~:text=Defaults%20to%2010000-,refresh,-Optional%20boolean%20property)。
 
-下图显示了OOTB `damAssetLucene` 索引和 `tika` 节点和 `config.xml` 文件禁用PDF和其他mime类型。
+下图显示了包含`tika`节点和`config.xml`文件的OOTB `damAssetLucene`索引，该文件禁用了PDF和其他mime类型。
 
-![包含tika节点的OOTB damAssetLucene索引](./assets/understand-indexing-best-practices/ootb-index-with-tika-node.png)
+具有tika节点的![OOTB damAssetLucene索引](./assets/understand-indexing-best-practices/ootb-index-with-tika-node.png)
 
 ### 完全禁用
 
 要完全禁用Apache Tika，请执行以下步骤：
 
-- 添加 `includePropertyTypes` 属性at `/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>` 并将值设置为 `String`. 例如，在下图中， `includePropertyTypes` 为添加了属性 `dam:Asset` OOB的节点类型 `damAssetLucene` 索引。
+- 在`/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>`处添加`includePropertyTypes`属性并将值设置为`String`。 例如，在下图中，为OOBT `damAssetLucene`索引的`dam:Asset`节点类型添加了`includePropertyTypes`属性。
 
 ![IncludePropertyTypes属性](./assets/understand-indexing-best-practices/includePropertyTypes-prop.png)
 
-- 添加 `data` 下的属性。 `properties` 节点，确保它是属性定义上方的第一个节点。 例如，请参阅以下图像：
+- 在`properties`节点下添加具有以下属性的`data`，确保它是属性定义上方的第一个节点。 例如，请参阅以下图像：
 
 ```xml
 /oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>/properties/data
@@ -237,7 +237,7 @@ AEM使用 [Apache Tika](https://tika.apache.org/) 对象 _从文件提取元数�
 
 ![数据属性](./assets/understand-indexing-best-practices/data-prop.png)
 
-- 通过设置 `reindex` 属性至 `true` 在索引定义节点下。
+- 通过在索引定义节点下将`reindex`属性设置为`true`来重新索引更新的索引定义。
 
 ## 实用工具
 
@@ -245,29 +245,29 @@ AEM使用 [Apache Tika](https://tika.apache.org/) 对象 _从文件提取元数�
 
 ### 索引创建工具
 
-此 [Oak索引定义生成器](https://oakutils.appspot.com/generate/index) 工具有帮助 **生成索引定义** 基于输入查询。 这是创建自定义索引的良好起点。
+[Oak索引定义生成器](https://oakutils.appspot.com/generate/index)工具可帮助&#x200B;**基于输入查询生成索引定义**。 这是创建自定义索引的良好起点。
 
 ### 分析索引工具
 
-此 [索引定义分析器](https://oakutils.appspot.com/analyze/index) 工具有帮助 **分析索引定义** 并提供了改进索引定义的建议。
+[索引定义分析器](https://oakutils.appspot.com/analyze/index)工具可帮助&#x200B;**分析索引定义**&#x200B;并提供改进索引定义的建议。
 
 ### 查询性能工具
 
-OOTB _查询性能工具_ 可用位置 [本地SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) 和AEM CS通过开发人员控制台或 `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` 帮助 **分析查询性能** 和 [JCR查询备忘单](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) 以定义最佳查询。
+通过Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`在[本地SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS中提供的OOTB _查询性能工具_&#x200B;可帮助&#x200B;**分析查询性能**&#x200B;和[JCR查询备忘表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en)以定义最佳查询。
 
 ### 疑难解答工具和提示
 
 以下大多数适用于AEM 6.X和本地故障排除。
 
-- 索引管理器位于 `http://host:port/libs/granite/operations/content/diagnosistools/indexManager.html` 用于获取索引信息，如类型、上次更新时间和大小。
+- `http://host:port/libs/granite/operations/content/diagnosistools/indexManager.html`上可用于获取索引信息（如类型、上次更新时间和大小）的索引管理器。
 
-- 详细记录Oak查询和与索引相关的Java™包，如 `org.apache.jackrabbit.oak.plugins.index`， `org.apache.jackrabbit.oak.query`、和 `com.day.cq.search` via `http://host:port/system/console/slinglog` 以进行疑难解答。
+- 通过`http://host:port/system/console/slinglog`详细记录Oak查询和索引相关的Java™包（如`org.apache.jackrabbit.oak.plugins.index`、`org.apache.jackrabbit.oak.query`和`com.day.cq.search`）以进行疑难解答。
 
-- 的JMX MBean _IndexStat_ 类型位于 `http://host:port/system/console/jmx` 用于获取与异步索引相关的索引信息，如状态、进度或统计信息。 它还提供 _FailingIndexStats_，如果此处没有结果，则表示没有索引损坏。 AsyncIndexerService将任何更新失败30分钟（可配置）的索引标记为已损坏，并停止对其进行索引。 如果查询没有提供预期的结果，开发人员在继续重新索引之前查看此内容会很有帮助，因为重新索引在计算上成本较高且耗时。
+- _IndexStats_&#x200B;类型的JMX MBean可在`http://host:port/system/console/jmx`处使用，以获取与异步索引相关的索引信息，如状态、进度或统计信息。 它还提供了&#x200B;_FailingIndexStats_，如果此处没有结果，则表示没有索引损坏。 AsyncIndexerService将任何更新失败30分钟（可配置）的索引标记为已损坏，并停止对其进行索引。 如果查询没有提供预期的结果，开发人员在继续重新索引之前查看此内容会很有帮助，因为重新索引在计算上成本较高且耗时。
 
-- 的JMX MBean _LuceneIndex_ 类型位于 `http://host:port/system/console/jmx` 用于Lucene索引统计数据，如大小、每个索引定义的文档数。
+- _LuceneIndex_&#x200B;类型的JMX MBean在`http://host:port/system/console/jmx`可用于Lucene索引统计数据，如大小、每个索引定义的文档数。
 
-- 的JMX MBean _QueryStat_ 类型位于 `http://host:port/system/console/jmx` 用于Oak查询统计数据，包括慢速查询和常用查询，详细信息如查询、执行时间。
+- 在`http://host:port/system/console/jmx`上为Oak查询统计信息提供了&#x200B;_QueryStat_&#x200B;类型的JMX MBean，该查询统计信息包括包含查询、执行时间等详细信息的慢速查询和常用查询。
 
 ## 其他资源
 
@@ -275,5 +275,5 @@ OOTB _查询性能工具_ 可用位置 [本地SDK](http://localhost:4502/libs/gr
 
 - [Oak查询和索引](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
 - [查询和索引最佳实践](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
-- [有关查询和索引的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
+- [查询和索引的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
 

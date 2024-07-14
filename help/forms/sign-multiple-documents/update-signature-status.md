@@ -71,7 +71,7 @@ public class UpdateSignatureStatusWorkflowStep implements WorkflowProcess {
 
 ## 资源
 
-更新签名状态工作流可以是 [从此处下载](assets/update-signature-status-workflow.zip)
+可从此处](assets/update-signature-status-workflow.zip)下载更新签名状态工作流[
 
 ## 后续步骤
 

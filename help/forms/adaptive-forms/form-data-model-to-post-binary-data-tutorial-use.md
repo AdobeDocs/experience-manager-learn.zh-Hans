@@ -1,5 +1,5 @@
 ---
-title: 使用表单数据模型发布二进制数据
+title: 使用表单数据模型到Post二进制数据
 description: 使用表单数据模型将二进制数据发布到AEM DAM
 feature: Workflow
 version: 6.4,6.5
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ---
 
-# 使用表单数据模型发布二进制数据{#using-form-data-model-to-post-binary-data}
+# 使用表单数据模型到Post二进制数据{#using-form-data-model-to-post-binary-data}
 
 从AEM Forms 6.4开始，我们现在能够在AEM Workflow中作为步骤调用表单数据模型服务。 本文将介绍使用表单数据模型服务发布记录文档的示例用例。
 
@@ -42,24 +42,24 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->故障排除提示 — 如果由于某种原因未在DAM中创建DOR.pdf，请通过单击重置数据源身份验证设置 [此处](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam). 这些是AEM身份验证设置，默认情况下为admin/admin。
+>疑难解答提示 — 如果由于某种原因未在DAM中创建DOR.pdf，请单击[此处](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam)重置数据源身份验证设置。 这些是AEM身份验证设置，默认情况下为admin/admin。
 
 要在您的服务器上测试此功能，请按照以下所述步骤操作：
 
 1.[部署Developingwithserviceuser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [下载并部署setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar).此自定义OSGI捆绑包用于创建元数据属性，并从提交的表单数据设置其值。
+1. [下载并部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。此自定义OSGI包用于创建元数据属性，并从提交的表单数据设置其值。
 
-1. [导入资源](assets/postdortodam.zip) 使用包管理器将与此文章关联到AEM中。您将获得以下内容
+1. [使用包管理器将与此文章关联的资源](assets/postdortodam.zip)导入AEM。您将获得以下内容
 
    1. 工作流模型
    1. 配置为提交到AEM Workflow的自适应表单
    1. 配置为使用PostToDam.JSON文件的数据源
-   1. 使用数据源的表单数据模型
+   1. 使用数据Source的表单数据模型
 
-1. 指向您的 [浏览器以打开自适应表单](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+1. 指向[浏览器以打开自适应表单](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 1. 填写表单并提交。
-1. 如果创建并存储了记录文档，请选中Assets应用程序。
+1. 如果创建并存储记录文档，请选中Assets应用程序。
 
 
-[Swagger文件](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) 用于创建数据源可供您参考
+用于创建数据源的[Swagger文件](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile)可供您参考

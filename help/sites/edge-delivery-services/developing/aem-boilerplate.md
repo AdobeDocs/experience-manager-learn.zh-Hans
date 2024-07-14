@@ -21,6 +21,6 @@ ht-degree: 2%
 
 # AEM样板
 
-使用设置代码Git存储库 [AEM样板模板](https://github.com/adobe/aem-boilerplate) 用于Edge Delivery Services。
+使用用于Edge Delivery Services的[AEM样板模板](https://github.com/adobe/aem-boilerplate)设置代码Git存储库。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425713/?learn=on)

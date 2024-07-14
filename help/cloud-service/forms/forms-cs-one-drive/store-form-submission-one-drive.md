@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms Formsas a Cloud Service与Microsoft OneDrive
+# AEM Forms Formsas a Cloud Service版与Microsoft OneDrive
 
 将自适应表单数据存储在Microsoft OneDrive中。
 

@@ -20,7 +20,7 @@ ht-degree: 49%
 + [资产工作流和预览](./main-workflow.md)
 + [确定文件夹结构和文件命名约定](./folder-structure-filenaming.md)
 + [图像预设](./image-presets.md)
-+ [图像、样本、旋转和混合媒体集](./media-sets.md)
++ [图像、色板、旋转和混合媒体集](./media-sets.md)
 + [裁切、调整的图像和缩放目标](./crop-adjusted-zoom-targets.md)
 + [基本模板简介](./basic-templates.md)
 + [视频概述](./video-overview.md)

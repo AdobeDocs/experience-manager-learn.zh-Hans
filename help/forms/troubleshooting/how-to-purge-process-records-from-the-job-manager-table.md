@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何从作业管理器中清除流程记录
 
-*本视频介绍从作业管理器中清除进程记录的步骤。*
+*此视频介绍从作业管理器中清除进程记录的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335577?quality=12&learn=on)

@@ -26,4 +26,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->以上视频假定您的AEM服务在Dynamic Media S7模式下运行。 [有关使用Dynamic Media设置AEM的说明，请参阅此处。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)
+>以上视频假定您的AEM服务在Dynamic Media S7模式下运行。 [此处提供了使用Dynamic Media设置AEM的说明。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)

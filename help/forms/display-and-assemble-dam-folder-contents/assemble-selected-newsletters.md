@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 将所选新闻稿合并为一个PDF
 
-用户的选择存储在隐藏字段中。 此隐藏字段的值将传递到servlet，它将使用将所选内容组合为一个pdf [Forms Assembler服务](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
+用户的选择存储在隐藏字段中。 此隐藏字段的值将传递到servlet，它将使用[Forms汇编程序服务](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html)将所选内容合并为一个PDF。
 
 
 ## 用于组合pdf文件的Servlet

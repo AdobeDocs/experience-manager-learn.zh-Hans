@@ -1,6 +1,6 @@
 ---
-title: 使用AEM现代化工具迁移到AEMas a Cloud Service
-description: 了解如何使用AEM现代化工具将现有AEM项目和内容升级为可与AEMas a Cloud Service兼容的项目和内容。
+title: 使用AEM现代化工具迁移到AEM as a Cloud Service
+description: 了解如何使用AEM现代化工具将现有AEM项目和内容升级为可与AEM as a Cloud Service兼容的项目和内容。
 version: Cloud Service
 topic: Migration, Upgrade
 feature: Migration
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # AEM 现代化工具
 
-了解如何使用AEM现代化工具将现有AEM Sites内容升级为与AEMas a Cloud Service兼容并符合最佳实践。
+了解如何使用AEM现代化工具将现有AEM Sites内容升级为与AEM as a Cloud Service兼容并与最佳实践保持一致。
 
 ## 多功能一体转换器
 
@@ -47,17 +47,17 @@ AEM现代化工具会自动转换由旧版静态模板、基础组件和Parsys�
 ## 关键活动
 
 + 克隆AEM 6.x生产环境以运行AEM现代化工具
-+ 下载并安装 [最新的AEM现代化工具](https://github.com/adobe/aem-modernize-tools/releases/latest) 在AEM 6.x生产克隆上，通过包管理器
++ 通过包管理器在AEM 6.x生产克隆上下载并安装[最新的AEM现代化工具](https://github.com/adobe/aem-modernize-tools/releases/latest)
 
-+ [页面结构转换器](https://opensource.adobe.com/aem-modernize-tools/pages/structure/about.html) 使用布局容器将静态模板中的现有页面内容更新为映射的可编辑模板
++ [页面结构转换器](https://opensource.adobe.com/aem-modernize-tools/pages/structure/about.html)使用布局容器将现有页面内容从静态模板更新为映射的可编辑模板
    + 使用OSGi配置定义转化规则
    + 针对现有页面运行页面结构转换器
 
-+ [组件转换器](https://opensource.adobe.com/aem-modernize-tools/pages/component/about.html) 使用布局容器将静态模板中的现有页面内容更新为映射的可编辑模板
++ [组件转换器](https://opensource.adobe.com/aem-modernize-tools/pages/component/about.html)使用布局容器将现有页面内容从静态模板更新为映射的可编辑模板
    + 通过JCR节点定义/XML定义转换规则
    + 针对现有页面运行组件转换器工具
 
-+ [策略导入程序](https://opensource.adobe.com/aem-modernize-tools/pages/policy/about.html) 从设计配置创建策略
++ [策略导入程序](https://opensource.adobe.com/aem-modernize-tools/pages/policy/about.html)从设计配置创建策略
    + 使用JCR节点定义/XML定义转换规则
    + 针对现有设计定义运行策略导入程序
    + 将导入的策略应用到AEM组件和容器
@@ -68,7 +68,7 @@ AEM现代化工具会自动转换由旧版静态模板、基础组件和Parsys�
 
 在尝试动手练习之前，请确保您已观看并了解上述视频以及以下材料：
 
-+ [以不同的方式思考AEMas a Cloud Service](./introduction.md)
++ [以不同的方式思考AEM as a Cloud Service](./introduction.md)
 + [存储库现代化](./repository-modernization.md)
 + [可变和不可变内容](../../developing/basics/mutable-immutable.md)
 + [AEM项目结构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)
@@ -88,7 +88,7 @@ AEM现代化工具会自动转换由旧版静态模板、基础组件和Parsys�
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">AEM现代化实践</div>
             <p style="margin:1rem 0">
-                探索使用AEM现代化工具更新旧版WKND站点以符合AEMas a Cloud Service最佳实践。
+                探索使用AEM现代化工具更新旧版WKND网站以符合AEM as a Cloud Service最佳实践。
             </p>
             <a  rel="noreferrer"
                 target="_blank"
@@ -103,7 +103,7 @@ AEM现代化工具会自动转换由旧版静态模板、基础组件和Parsys�
 
 + [下载AEM现代化工具](https://github.com/adobe/aem-modernize-tools/releases/latest)
 + [AEM现代化工具文档](https://opensource.adobe.com/aem-modernize-tools/)
-+ [AEM Gems - AEM现代化套件简介](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
++ [AEM Gems — 介绍AEM现代化套件](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
 
 1. 在本地AEM SDK上部署新现代化的wknd旧版网站。 AEM ASK可从此处下载：
-   + [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).
+   + [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html)。

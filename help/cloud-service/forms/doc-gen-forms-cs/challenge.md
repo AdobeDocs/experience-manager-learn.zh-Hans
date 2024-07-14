@@ -20,4 +20,4 @@ ht-degree: 0%
 
 修改此代码，以将模板的URL作为POST请求参数之一传递。
 
-中的代码 `DocumentGeneration.java` 必须修改才能传递模板的URL。
+必须修改`DocumentGeneration.java`中的代码才能传递模板的URL。

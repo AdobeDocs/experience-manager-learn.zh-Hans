@@ -27,7 +27,7 @@ ht-degree: 0%
 ChangeBeneficiary.pdf,c:\confirmation
 ```
 
-第一个参数是要保存到文件系统中的文档的名称。 第二个参数是要保存文档的文件夹位置。 例如，在上述使用案例中，文档被写入 `c:\confirmation\ChangeBeneficiary.pdf`
+第一个参数是要保存到文件系统中的文档的名称。 第二个参数是要保存文档的文件夹位置。 例如，在上述使用案例中，文档被写入`c:\confirmation\ChangeBeneficiary.pdf`
 
 以下屏幕抓图显示了您需要传递给自定义流程步骤的参数
 ![write-payload-file-system](assets/write-payload-file-system.png)

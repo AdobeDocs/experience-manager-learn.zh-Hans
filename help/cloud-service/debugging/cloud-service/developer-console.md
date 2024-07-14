@@ -1,6 +1,6 @@
 ---
 title: 开发人员控制台
-description: AEMas a Cloud Service为每个环境提供了一个开发人员控制台，该控制台显示运行的AEM服务的各种详细信息，这些详细信息对调试很有帮助。
+description: AEM as a Cloud Service为每个环境提供了一个Developer Console，该环境会公开运行中有助于调试的AEM服务的各种详细信息。
 feature: Developer Tools
 version: Cloud Service
 doc-type: Tutorial
@@ -18,67 +18,67 @@ ht-degree: 0%
 
 ---
 
-# 使用开发人员控制台调试AEMas a Cloud Service
+# 使用Developer Console调试AEM as a Cloud Service
 
-AEMas a Cloud Service为每个环境提供了一个开发人员控制台，该控制台显示运行的AEM服务的各种详细信息，这些详细信息对调试很有帮助。
+AEM as a Cloud Service为每个环境提供了一个Developer Console，该环境会公开运行中有助于调试的AEM服务的各种详细信息。
 
-每个AEMas a Cloud Service环境都有自己的开发人员控制台。
+每个AEM as a Cloud Service环境都有自己的Developer Console。
 
-## 导航到开发人员控制台
+## 导航到Developer Console
 
-通过Cloud Manager，每个AEMas a Cloud Service环境可访问开发人员控制台。
+通过Cloud Manager，每个AEM as a Cloud Service环境可访问Developer Console。
 
-![导航到开发人员控制台](./assets/developer-console/navigate.png)
+![导航到Developer Console](./assets/developer-console/navigate.png)
 
-1. 导航到 __[Cloud Manager](https://my.cloudmanager.adobe.com/)__
-2. 打开 __项目__ 该API包含用于打开开发人员控制台的AEMas a Cloud Service环境。
-3. 找到 __环境__，然后选择 `...`.
-4. 选择 __开发人员控制台__ 下拉列表中。
+1. 导航到&#x200B;__[Cloud Manager](https://my.cloudmanager.adobe.com/)__
+2. 打开包含AEM as a Cloud Service环境的&#x200B;__项目__&#x200B;以打开Developer Console。
+3. 找到&#x200B;__环境__，然后选择`...`。
+4. 从下拉列表中选择&#x200B;__Developer Console__。
 
 
-## 开发人员控制台访问
+## Developer Console访问权限
 
-要访问和使用Developer Console，必须通过以下方式向开发人员的Adobe ID授予以下权限 [AdobeAdmin Console](https://adminconsole.adobe.com).
+要访问和使用Developer Console，必须通过[Adobe的Admin Console](https://adminconsole.adobe.com)向开发人员的Adobe ID授予以下权限。
 
-1. 确保在Adobe组织切换器中查看与要在开发人员控制台中检查的Adobe相关的环境组织。
+1. 确保Adobe组织切换器中的中的能够看到与要在Developer Console中检查的Adobe相关的环境组织。
 1. 为了能够登录到Developer Console，开发人员必须是以下任意角色的成员：
-   + [Cloud Manager产品的 __开发人员 — Cloud Service__ 产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer)：在这种情况下，开发人员将看到在选定的开发人员控制台URL下可用的环境的完整列表；如果已在Cloud Manager中选择了开发环境或RDE，则可能会显示同一程序中的其他开发环境或RDE。
-   + [__AEM管理员__ 上的产品配置文件 __AEM创作__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)：在这种情况下，上一个项目符号中描述的环境列表将仅限于分配了此角色的相关产品配置文件。
-1. 开发人员必须是 [__AEM用户__ 或 __AEM管理员__ AEM创作和/或发布的产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles).
-   + 如果此成员资格不存在， [状态](#status) 转储将超时，并出现401未授权错误。
+   + [Cloud Manager产品的&#x200B;__开发人员 — Cloud Service__&#x200B;产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer)：在这种情况下，开发人员将看到选定Developer Console URL下可用环境的完整列表；如果已在Cloud Manager中选择开发环境或RDE，则可能会显示同一程序中的其他开发环境或RDE。
+   + __AEM Author__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)上的&#x200B;[__AEM管理员__&#x200B;产品配置文件：在这种情况下，上一个项目符号中描述的环境列表将限制为分配此角色的相关产品配置文件。
+1. 开发人员必须是AEM Author和/或Publish](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)上的&#x200B;[__AEM Users__&#x200B;或&#x200B;__AEM Administrators__&#x200B;产品配置文件的成员。
+   + 如果此成员资格不存在，则[状态](#status)转储将超时，并出现401未授权错误。
 
-### 开发人员控制台访问疑难解答
+### Developer Console访问疑难解答
 
 #### 登录时，我没有看到所查找的环境已列出
 
 确保以下各项：
 
-+ 通过通过Cloud Manager单击所选环境的三个圆点，然后选择开发人员控制台，您已选择正确的开发人员控制台URL。
-+ 您或者拥有 [Cloud Manager产品的 __开发人员 — Cloud Service__ 产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer) 查看环境的完整列表，或者您属于 [__AEM管理员__ 上的产品配置文件 __AEM创作__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles) 对于您未找到的环境。
++ 通过通过Cloud Manager单击选定环境的三个圆点，然后选择Developer Console，您已选择正确的Developer Console URL。
++ 您或者拥有[Cloud Manager产品的&#x200B;__开发人员 — Cloud Service__&#x200B;产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer)以查看环境的完整列表，或者您属于&#x200B;__AEM作者__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)上的&#x200B;[__AEM管理员__&#x200B;产品配置文件的一部分，该配置文件针对您未找到的环境。
 
 #### 401转储状态时发生未授权错误
 
-![开发人员控制台 — 401未授权](./assets/developer-console/troubleshooting__401-unauthorized.png)
+![Developer Console - 401未授权](./assets/developer-console/troubleshooting__401-unauthorized.png)
 
-如果转储任何状态时报告了“401未授权错误”，则表示您的用户尚不存在，且具有AEMas a Cloud Service中的必要权限，或者登录令牌使用的无效或已过期。
+如果转储任何状态时报告了“401未授权错误”，则表示您的用户尚不存在，且在AEM as a Cloud Service中具有必要权限，或者使用的登录令牌无效或已过期。
 
 要解决401未授权问题，请执行以下操作：
 
-1. 确保您的用户是开发人员控制台关联的AEMas a Cloud Service产品实例所对应的AEM产品配置文件(AEM管理员或用户)的成员。
-   + 请记住，Developer Console可访问2个Adobe IMS产品实例；AEMas a Cloud Service的创作和发布产品实例，因此请确保根据服务层需要通过Developer Console进行访问来使用正确的产品配置文件。
-1. 登录到AEMas a Cloud Service（创作或发布），并确保您的用户和组已正确同步到AEM中。
-   + 开发人员控制台要求在相应的AEM服务层中创建您的用户记录，以便它对该服务层进行身份验证。
-1. 清除您的浏览器Cookie以及应用程序状态（本地存储）并重新登录到开发人员控制台，确保开发人员控制台使用的访问令牌正确且未过期。
+1. 确保您的用户是Developer Console关联的AEM as a Cloud Service产品实例相应的Adobe IMS产品配置文件(AEM管理员或AEM用户)的成员。
+   + 请记住，Developer Console可访问2个Adobe IMS产品实例；AEM as a Cloud Service Author和Publish产品实例，因此请确保根据需要通过Developer Console访问的服务层使用正确的产品配置文件。
+1. 登录到AEM as a Cloud Service(创作或Publish)，并确保您的用户和组已正确同步到AEM中。
+   + Developer Console要求在相应的AEM服务层中创建您的用户记录，以便对该服务层进行身份验证。
+1. 清除您的浏览器Cookie以及应用程序状态（本地存储）并重新登录到Developer Console，以确保Developer Console使用的访问令牌正确且未过期。
 
 ## Pod
 
-AEMas a Cloud Service的Author和Publish服务分别由多个实例组成，以便处理流量可变性和滚动更新，而无需停机。 这些实例称为Pod。 开发人员控制台中的Pod选择定义将通过其他控件公开的数据范围。
+AEM as a Cloud Service Author和Publish服务分别由多个实例组成，以便在不停机的情况下处理流量可变性和滚动更新。 这些实例称为Pod。 Developer Console中的Pod选择定义将通过其他控件公开的数据范围。
 
-![开发人员控制台 — Pod](./assets/developer-console/pod.png)
+![Developer Console - Pod](./assets/developer-console/pod.png)
 
-+ Pod是属于AEM服务（创作或发布）的离散实例
-+ Pod是瞬态的，这意味着AEMas a Cloud Service会根据需要创建和销毁它们
-+ 只有属于关联AEMas a Cloud Service环境的Pod才会列在该环境的开发人员控制台的Pod切换器中。
++ Pod是属于AEM服务(Author或Publish)的离散实例
++ Pod是瞬态的，这意味着AEM as a Cloud Service会根据需要创建和销毁它们
++ 只有属于关联AEM as a Cloud Service环境的Pod才会列在该环境的Developer Console的Pod切换器中。
 + 在Pod切换器的底部，方便选项允许按服务类型选择Pod：
    + 所有作者
    + 所有发布者
@@ -86,13 +86,13 @@ AEMas a Cloud Service的Author和Publish服务分别由多个实例组成，以�
 
 ## 状态
 
-状态提供用于以文本或JSON输出形式输出特定AEM运行时状态的选项。 开发人员控制台提供与AEM SDK的本地快速入门的OSGi Web控制台类似的信息，两者之间具有显着差异：开发人员控制台为只读。
+状态提供用于以文本或JSON输出形式输出特定AEM运行时状态的选项。 Developer Console提供了与AEM SDK的本地快速入门的OSGi Web控制台类似的信息，两者的显着区别在于Developer Console是只读的。
 
-![开发人员控制台 — 状态](./assets/developer-console/status.png)
+![Developer Console — 状态](./assets/developer-console/status.png)
 
 ### 包
 
-包列出了AEM中的所有OSGi包。 此功能类似于 [AEM SDK的本地快速入门的OSGi包](http://localhost:4502/system/console/bundles) 在 `/system/console/bundles`.
+包列出了AEM中的所有OSGi包。 此功能与[AEM SDK在`/system/console/bundles`的本地Quickstart的OSGi包](http://localhost:4502/system/console/bundles)类似。
 
 捆绑包可帮助进行以下调试：
 
@@ -102,37 +102,37 @@ AEMas a Cloud Service的Author和Publish服务分别由多个实例组成，以�
 
 ### 组件
 
-组件列出了AEM中的所有OSGi组件。 此功能类似于 [AEM SDK的本地快速入门的OSGi组件](http://localhost:4502/system/console/components) 在 `/system/console/components`.
+组件列出了AEM中的所有OSGi组件。 此功能与[AEM SDK在`/system/console/components`的本地快速入门的OSGi组件](http://localhost:4502/system/console/components)类似。
 
 组件通过以下方式帮助进行调试：
 
-+ 列出部署到AEMas a Cloud Service的所有OSGi组件
++ 列出部署到AEM as a Cloud Service的所有OSGi组件
 + 提供每个OSGi组件的状态；包括它们是活动的还是不满足的
 + 向不满足的服务引用提供详细信息可能会导致OSGi组件变为活动状态
 + 列出绑定到OSGi组件的OSGi属性及其值。
-   + 这将显示通过注入的实际值 [OSGi环境配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values).
+   + 这将显示通过[OSGi环境配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)插入的实际值。
 
 ### 配置
 
-配置列出了所有OSGi组件的配置（OSGi属性和值）。 此功能类似于 [AEM SDK的本地快速入门的OSGi Configuration Manager](http://localhost:4502/system/console/configMgr) 在 `/system/console/configMgr`.
+配置列出了所有OSGi组件的配置（OSGi属性和值）。 此功能与[AEM SDK在`/system/console/configMgr`的本地快速入门的OSGi Configuration Manager](http://localhost:4502/system/console/configMgr)类似。
 
 配置可通过以下方式帮助进行调试：
 
 + 按OSGi组件列出OSGi属性及其值
-   + 这不会显示通过插入的实际值 [OSGi环境配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values). 请参阅 [组件](#components) 以上，表示注入值。
+   + 这不会显示通过[OSGi环境配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)插入的实际值。 有关插入的值，请参阅上面的[组件](#components)。
 + 查找和识别配置错误的属性
 
 ### Oak索引
 
-Oak索引提供下定义的节点的转储 `/oak:index`. 请记住，这不会显示合并的索引，在修改AEM索引时会发生这种情况。
+Oak索引提供`/oak:index`下定义的节点的转储。 请记住，这不会显示合并的索引，在修改AEM索引时会发生这种情况。
 
 Oak索引通过以下方式帮助进行调试：
 
-+ 列出所有Oak索引定义，以提供有关如何在AEM中执行搜索查询的见解。 请记住，此处不反映修改为AEM索引的情况。 此视图仅对仅由AEM提供或仅由自定义代码提供的索引有帮助。
++ 列出所有Oak索引定义，深入分析如何在AEM中执行搜索查询。 请记住，此处不反映修改为AEM索引的情况。 此视图仅对仅由AEM提供或仅由自定义代码提供的索引有帮助。
 
 ### OSGi服务
 
-组件列出了所有OSGi服务。 此功能类似于 [AEM SDK的本地快速入门的OSGi服务](http://localhost:4502/system/console/services) 在 `/system/console/services`.
+组件列出了所有OSGi服务。 此功能与[AEM SDK在`/system/console/services`的本地快速入门的OSGi服务](http://localhost:4502/system/console/services)类似。
 
 OSGi Services帮助通过以下方式调试：
 
@@ -140,7 +140,7 @@ OSGi Services帮助通过以下方式调试：
 
 ### Sling 作业
 
-Sling作业列出了所有Sling作业队列。 此功能类似于 [AEM SDK的本地快速入门作业](http://localhost:4502/system/console/slingevent) 在 `/system/console/slingevent`.
+Sling作业列出了所有Sling作业队列。 此功能类似于[AEM SDK在`/system/console/slingevent`的本地快速入门作业](http://localhost:4502/system/console/slingevent)。
 
 Sling作业通过以下方式帮助进行调试：
 
@@ -149,22 +149,22 @@ Sling作业通过以下方式帮助进行调试：
 
 ## Java包
 
-Java包允许检查Java包和版本是否可以在AEMas a Cloud Service中使用。 此功能与 [AEM SDK的本地快速入门依赖项查找器](http://localhost:4502/system/console/depfinder) 在 `/system/console/depfinder`.
+Java包允许检查Java包和版本是否可以在AEM as a Cloud Service中使用。 此功能与[AEM SDK位于`/system/console/depfinder`的本地快速入门依赖项查找器](http://localhost:4502/system/console/depfinder)相同。
 
-![开发人员控制台 — Java包](./assets/developer-console/java-packages.png)
+![Developer Console - Java包](./assets/developer-console/java-packages.png)
 
 Java包用于对由于未解析的导入或脚本（HTL、JSP等）中的类未解析而导致捆绑包无法启动进行故障排除。 如果Java包报告没有捆绑包导出Java包（或版本与OSGi捆绑包导入的版本不匹配）：
 
 + 确保项目的AEM API maven依赖项的版本与环境的AEM发行版本匹配（如果可能，将所有内容更新到最新版本）。
 + 如果在Maven项目中使用额外的Maven依赖项
    + 确定是否可改用AEM SDK API依赖项提供的替代API。
-   + 如果需要额外的依赖项，请确保它作为OSGi捆绑包（而不是纯Jar）提供，并且嵌入到项目的代码包中，(`ui.apps`)，与中嵌入核心OSGi包的方式类似 `ui.apps` 包。
+   + 如果需要额外的依赖关系，请确保它作为OSGi捆绑包（而不是纯Jar）提供，并且嵌入到项目的代码包(`ui.apps`)中，类似于核心OSGi捆绑包嵌入到`ui.apps`包中的方式。
 
 ## Servlet
 
-Servlet用于提供有关AEM如何将URL解析为最终处理请求的Java servlet或脚本(HTL、JSP)的分析。 此功能与 [AEM SDK的本地快速入门的Sling Servlet解析程序](http://localhost:4502/system/console/servletresolver) 在 `/system/console/servletresolver`.
+Servlet用于提供有关AEM如何将URL解析为最终处理请求的Java servlet或脚本(HTL、JSP)的分析。 此功能与[AEM SDK位于`/system/console/servletresolver`的本地快速入门的Sling Servlet解析程序](http://localhost:4502/system/console/servletresolver)相同。
 
-![开发人员控制台 — Servlet](./assets/developer-console/servlets.png)
+![Developer Console - Servlet](./assets/developer-console/servlets.png)
 
 Servlet有助于调试确定：
 
@@ -173,11 +173,11 @@ Servlet有助于调试确定：
 
 ## 查询
 
-查询有助于深入分析在AEM上执行搜索查询的内容和方式。 此功能与  [AEM SDK的本地快速入门版的“工具”>“查询性能”](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) 控制台。
+查询有助于深入分析在AEM上执行搜索查询的内容和方式。 此功能与[AEM SDK的本地快速入门的“工具”>“查询性能”](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)控制台相同。
 
 查询仅在选择了特定面板时有效，因为它会打开该面板的查询性能Web控制台，要求开发人员有权登录AEM服务。
 
-![开发人员控制台 — 查询 — 说明查询](./assets/developer-console/queries__explain-query.png)
+![Developer Console — 查询 — 说明查询](./assets/developer-console/queries__explain-query.png)
 
 查询可通过以下方式帮助进行调试：
 

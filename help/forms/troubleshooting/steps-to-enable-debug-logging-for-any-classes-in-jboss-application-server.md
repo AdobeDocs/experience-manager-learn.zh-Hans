@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 在JBoss应用程序服务器中为任何类启用调试日志记录的步骤
 
-*本视频介绍为JBoss应用程序服务器中的任何类启用调试日志记录的步骤。*
+*此视频介绍在JBoss应用程序服务器中启用任何类的调试日志记录的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335522?quality=12&learn=on)

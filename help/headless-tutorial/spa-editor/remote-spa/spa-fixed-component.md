@@ -25,28 +25,28 @@ ht-degree: 1%
 
 ![固定组件](./assets/spa-fixed-component/intro.png)
 
-在本章中，我们将替换“主页”视图的标题“当前冒险”，它是中的硬编码文本 `Home.js` 具有固定但可编辑的标题组件。 固定组件保证标题的放置，但也允许创作标题的文本，并在开发周期之外进行更改。
+在本章中，我们将主页视图的标题“Current Adventures”替换为`Home.js`中的硬编码文本，该标题包含固定但可编辑的标题组件。 固定组件保证标题的放置，但也允许创作标题的文本，并在开发周期之外进行更改。
 
 ## 更新WKND应用程序
 
-添加 __固定__ “主页”视图的组件：
+要将&#x200B;__Fixed__&#x200B;组件添加到“主页”视图：
 
 + 创建自定义可编辑的标题组件并将它注册到项目标题的资源类型中
 + 将可编辑的标题组件放在“SPA主页”视图中
 
 ### 创建可编辑的React标题组件
 
-在SPA Home视图中，替换硬编码文本 `<h2>Current Adventures</h2>` 带有自定义可编辑的标题组件。 在使用标题组件之前，我们必须：
+在SPA主页视图中，将硬编码文本`<h2>Current Adventures</h2>`替换为自定义可编辑的标题组件。 在使用标题组件之前，我们必须：
 
 1. 创建自定义标题React组件
-1. 使用来自的方法修饰自定义标题组件 `@adobe/aem-react-editable-components` 使其可编辑。
-1. 将可编辑的标题组件注册到 `MapTo` 所以可以用在 [稍后显示容器组件](./spa-container-component.md).
+1. 使用`@adobe/aem-react-editable-components`中的方法修饰自定义标题组件使其可编辑。
+1. 向`MapTo`注册可编辑的标题组件，以便稍后在[容器组件](./spa-container-component.md)中使用它。
 
 要执行此操作：
 
-1. 打开远程SPA项目，位于 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app` 在IDE中
-1. 在上创建React组件 `react-app/src/components/editable/core/Title.js`
-1. 将以下代码添加到 `Title.js`.
+1. 在IDE中的`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app`处打开远程SPA项目
+1. 在`react-app/src/components/editable/core/Title.js`处创建React组件
+1. 将以下代码添加到`Title.js`。
 
    ```javascript
    import React from 'react'
@@ -95,8 +95,8 @@ ht-degree: 1%
 
    阅读有关实施详细信息的代码注释。
 
-1. 在上创建React组件 `react-app/src/components/editable/EditableTitle.js`
-1. 将以下代码添加到 `EditableTitle.js`.
+1. 在`react-app/src/components/editable/EditableTitle.js`处创建React组件
+1. 将以下代码添加到`EditableTitle.js`。
 
    ```javascript
    // Import the withMappable API provided bu the AEM SPA Editor JS SDK
@@ -132,14 +132,14 @@ ht-degree: 1%
    export default EditableTitle;
    ```
 
-   此 `EditableTitle` React组件包装了 `Title` React组件，封装并修饰该组件，使其可在AEM SPA编辑器中编辑。
+   此`EditableTitle` React组件打包了`Title` React组件，并将其包装和修饰为可在AEM SPA编辑器中编辑。
 
 ### 使用React EditableTitle组件
 
 现在，EditableTitle React组件已在中注册并可以在React应用程序中使用，请替换“主页”视图上的硬编码标题文本。
 
-1. 编辑 `react-app/src/components/Home.js`
-1. 在 `Home()` 在底部，导入 `EditableTitle` 并将硬编码的标题替换为新的 `AEMTitle` 组件：
+1. 编辑`react-app/src/components/Home.js`
+1. 在底部的`Home()`中，导入`EditableTitle`并将硬编码的标题替换为新的`AEMTitle`组件：
 
    ```javascript
    ...
@@ -159,18 +159,18 @@ ht-degree: 1%
    }
    ```
 
-此 `Home.js` 文件应如下所示：
+`Home.js`文件应如下所示：
 
 ![Home.js](./assets/spa-fixed-component/home-js-update.png)
 
 ## 在AEM中创作标题组件
 
 1. 登录AEM Author
-1. 导航到 __Sites > WKND应用程序__
-1. 点按 __主页__ 并选择 __编辑__ 从顶部操作栏
-1. 选择 __编辑__ 从页面编辑器右上角的编辑模式选择器中
+1. 导航到&#x200B;__站点> WKND应用程序__
+1. 点按&#x200B;__主页__&#x200B;并从顶部操作栏中选择&#x200B;__编辑__
+1. 从页面编辑器右上角的编辑模式选择器中选择&#x200B;__编辑__
 1. 将鼠标悬停在WKND徽标下方和冒险列表上方的默认标题文本上，直到显示蓝色编辑大纲
-1. 点按以显示组件的操作栏，然后点按 __扳手__  编辑
+1. 点按以显示组件的操作栏，然后点按&#x200B;__扳手__&#x200B;以进行编辑
 
    ![标题组件操作栏](./assets/spa-fixed-component/title-action-bar.png)
 
@@ -180,11 +180,11 @@ ht-degree: 1%
 
      ![标题组件对话框](./assets/spa-fixed-component/title-dialog.png)
 
-1. 点按 __完成__ 以保存
+1. 点按&#x200B;__完成__&#x200B;以保存
 1. 在AEM SPA编辑器中预览更改
-1. 刷新本地运行的WKND应用程序 [http://localhost:3000](http://localhost:3000) 并会立即反映创作的标题更改。
+1. 刷新[http://localhost:3000](http://localhost:3000)上本地运行的WKND应用程序，并立即反映所编写的标题更改。
 
-   ![SPA中的标题组件](./assets/spa-fixed-component/title-final.png)
+   SPA中的![标题组件](./assets/spa-fixed-component/title-final.png)
 
 ## 恭喜！
 
@@ -196,4 +196,4 @@ ht-degree: 1%
 
 ## 后续步骤
 
-接下来的步骤是 [添加AEM ResponsiveGrid容器组件](./spa-container-component.md) 添加到SPA，以便作者向SPA添加和可编辑的组件！
+接下来的步骤是[将AEM ResponsiveGrid容器组件](./spa-container-component.md)添加到SPA，以便作者向SPA添加可编辑的组件！

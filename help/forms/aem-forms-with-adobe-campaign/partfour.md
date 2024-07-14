@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## 创建自定义身份验证 {#create-custom-authentication}
 
-使用swagger文件创建数据源时，AEM Forms支持以下类型的身份验证
+在使用swagger文件创建数据Source时，AEM Forms支持以下类型的身份验证
 
 * 无
 * OAuth 2.0
@@ -31,7 +31,7 @@ ht-degree: 3%
 * API 键
 * 自定义身份验证
 
-![campaignfdm](assets/campaignfdm.gif)
+![campaiingfdm](assets/campaignfdm.gif)
 
 我们必须使用自定义身份验证才能对Adobe Campaign Standard进行REST调用。
 
@@ -102,20 +102,21 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 }
 ```
 
-## 创建数据源 {#create-data-source}
+## 创建数据Source {#create-data-source}
 
 第一步是创建swagger文件。 swagger文件定义将用于在Adobe Campaign Standard中创建配置文件的REST API。 swagger文件定义REST API的输入参数和输出参数。
 
-使用swagger文件创建数据源。 在创建数据源时，可以指定身份验证类型。 在这种情况下，我们将使用自定义身份验证来对Adobe Campaign进行身份验证。上面列出的代码用于对Adobe Campaign进行身份验证。
+使用swagger文件创建数据源。 在创建数据Source时，您可以指定身份验证类型。 在这种情况下，我们将使用自定义身份验证来对Adobe Campaign进行身份验证。上面列出的代码用于对Adobe Campaign进行身份验证。
 
-示例swagger文件将作为与本文相关的资产的一部分提供给您。**确保更改swagger文件中的host和basePath以匹配您的ACS实例**
+示例swagger文件将作为与本文相关的资产的一部分提供给您。**确保更改swagger文件中的主机和basePath以匹配您的ACS实例**
 
 ## 测试解决方案 {#test-the-solution}
 
 要测试解决方案，请执行以下步骤：
-* [确保已按照此处所述的步骤进行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [请确保您已按照此处所述的步骤进行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [下载并解压缩此文件以获取swagger文件](assets/create-acs-profile-swagger-file.zip)
-* 使用swagger文件创建表单数据模型创建数据源，并将其基于上一步中创建的数据源
+* 使用swagger文件创建数据Source
+创建表单数据模型，并将其基于上一步中创建的数据Source
 * 根据上一步中创建的表单数据模型创建自适应表单。
 * 将下列元素从数据源选项卡拖放到自适应表单上
 

@@ -23,22 +23,22 @@ ht-degree: 0%
 
 ## 部署示例OSGi捆绑包
 
-[部署OSGi捆绑包](assets/AdobeSignHelperMethods.core-1.0.0-SNAPSHOT.jar) 通过AEM OSGi Web控制台。 通过AEM OSGi Web控制台的Configuration Manager，使用如下所示的OSGi配置指定API集成密钥和API用户。
+[通过AEM OSGi Web控制台](assets/AdobeSignHelperMethods.core-1.0.0-SNAPSHOT.jar)部署OSGi捆绑包。 通过AEM OSGi Web控制台的Configuration Manager，使用如下所示的OSGi配置指定API集成密钥和API用户。
 
- 请注意 `AdobeSignHelperMethods` OSGi捆绑包无法识别为Adobe Experience Manager (AEM)产品代码，因此Adobe支持部门不支持它。
+请注意，`AdobeSignHelperMethods` OSGi捆绑包无法识别为Adobe Experience Manager (AEM)产品代码，因此Adobe支持部门不支持它。
 ![签名配置](assets/sign-configuration.png)
 
 
 ## API文档
 
-以下内容可通过 `AcrobatSignHelperMethods` OSGi包中提供的OSGi服务。
+以下内容可通过在OSGi捆绑包中提供的`AcrobatSignHelperMethods` OSGi服务获得。
 
 ### getTransientDocumentID
 
 `String getTransientDocumentID(Document documentForSigning) throws IOException`
 
 
-用于创建协议或Web窗体的文档。 该文档首先由发件人上传到Acrobat Sign。 这称为 _瞬态_ 因为它只能在上传后的7天内使用。 此方法接受 `com.adobe.aemfd.docmanager.Document` 并返回临时文档ID。
+用于创建协议或Web窗体的文档。 该文档首先由发件人上传到Acrobat Sign。 这称为&#x200B;_临时_，因为它在上传后7天内才可用。 此方法接受`com.adobe.aemfd.docmanager.Document`并返回临时文档ID。
 
 ### getAgreementID
 
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 ## 使用API
 
-此 `AcrobatSignHelperMethods` 是OSGi服务，因此必须在Java代码中使用@Reference注释对其进行注释。
+`AcrobatSignHelperMethods`是OSGi服务，因此必须在Java代码中使用@Reference注释对其进行注释。
 
 ```java
 ...

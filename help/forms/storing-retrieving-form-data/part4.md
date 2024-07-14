@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 创建客户端库
 
-AEM客户端库管理您的所有客户端JavaScript代码。 对于本文，我创建了一个简单的JavaScript，用于使用引导桥API获取自适应表单数据。 在获取自适应表单数据后，将对servlet进行POST调用以在数据库中插入或更新自适应表单数据。 函数getALLUrlParams返回URL中的参数。 如果URL中存在guid参数，则我们需要执行更新操作（如果不是插入操作）。其余功能将在与.savebutton类的单击事件关联的代码中进行处理。
+AEM客户端库管理您的所有客户端JavaScript代码。 对于本文，我创建了一个简单的JavaScript，用于使用Guide Bridge API获取自适应表单数据。 在获取自适应表单数据后，将对servlet进行POST调用以在数据库中插入或更新自适应表单数据。 函数getALLUrlParams返回URL中的参数。 如果URL中存在guid参数，则我们需要执行更新操作（如果不是插入操作）。其余功能将在与.savebutton类的单击事件关联的代码中进行处理。
 
 >[!NOTE]
 >

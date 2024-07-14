@@ -23,13 +23,13 @@ ht-degree: 1%
 
 ## 生成JSON Web令牌 {#generate-json-web-token}
 
-使用Adobe Campaign API的第一步是生成JWT。 有关如何为ACS生成JWT的代码示例很多。 您可以关注此 [java代码示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) 以生成JWT。
+使用Adobe Campaign API的第一步是生成JWT。 有关如何为ACS生成JWT的代码示例很多。 您可以按照此[Java代码示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)生成JWT。
 
 要将ACS API与AEM Forms结合使用，我们需要在OSGi捆绑包中创建JWT。 以下代码片段用于在此示例OSGI包中生成JWT。 从OSGI配置属性中获取有关ACS实例的详细信息，如上所示设置。
 
 ![配置](assets/campaignconfiguration.gif)
 
-**答：** 此处显示的值为虚值
+**A.**&#x200B;此处显示的值是虚值
 
 以下代码从OSGI配置中获取有关Adobe Campaign服务器的详细信息。 我们创建了80到104行的私钥。
 

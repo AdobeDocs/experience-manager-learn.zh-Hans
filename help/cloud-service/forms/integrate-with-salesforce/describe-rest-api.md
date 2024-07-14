@@ -21,8 +21,8 @@ ht-degree: 0%
 
 # 创建Swagger文件
 
-使用描述Salesforce REST API [OPEN API 2.0规范](https://swagger.io/docs/specification/2-0/basic-structure/)
+使用[OPEN API 2.0规范](https://swagger.io/docs/specification/2-0/basic-structure/)描述Salesforce REST API
 
 >[!VIDEO](https://video.tv.adobe.com/v/331754?quality=12&learn=on)
 
-可以下载的swagger文件是 [此处提供](assets/sfdc-rest-swagger.zip)
+可以下载的swagger文件是[可从此处](assets/sfdc-rest-swagger.zip)获得

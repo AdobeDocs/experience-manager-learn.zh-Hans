@@ -23,9 +23,9 @@ AEM支持将注释的输出自定义为PDF。
 
 ## 注释sling：OsgiConfig定义PDF
 
-要自定义PDF注释，请创建 **sling：OsgiConfig** 节点(位于AEM项目的
+要自定义PDF批注，请在下的AEM项目中创建一个&#x200B;**sling：OsgiConfig**&#x200B;节点
 
-`/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` 并根据需要调整值：
+`/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml`并根据需要调整值：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

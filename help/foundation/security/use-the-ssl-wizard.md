@@ -32,55 +32,55 @@ ht-degree: 0%
 
 ## 使用SSL配置向导
 
-导航到 __AEM作者>工具>安全> SSL配置__，然后打开 __SSL配置向导__.
+导航到&#x200B;__AEM Author > Tools > Security > SSL Configuration__，然后打开&#x200B;__SSL Configuration Wizard__。
 
 ![SSL配置向导](assets/use-the-ssl-wizard/ssl-config-wizard.png)
 
 ### 创建商店凭据
 
-创建 _密钥存储_ 与关联 `ssl-service` 系统用户和全局用户 _信任存储区_，使用 __存储凭据__ 向导步骤。
+要创建与`ssl-service`系统用户和全局&#x200B;_信任存储_&#x200B;关联的&#x200B;_密钥存储_，请使用&#x200B;__存储凭据__&#x200B;向导步骤。
 
-1. 输入密码并确认密码 __密钥存储__ 与关联 `ssl-service` 系统用户。
-1. 输入全局的密码和确认密码 __信任存储区__. 请注意，它是系统范围的Trust Store，如果已创建，则忽略输入的密码。
+1. 输入与`ssl-service`系统用户关联的&#x200B;__密钥库__&#x200B;的密码并确认密码。
+1. 输入全局&#x200B;__信任存储区__&#x200B;的密码并确认密码。 请注意，它是系统范围的Trust Store，如果已创建，则忽略输入的密码。
 
-   ![SSL设置 — 存储凭据](assets/use-the-ssl-wizard/store-credentials.png)
+   ![SSL安装程序 — 存储凭据](assets/use-the-ssl-wizard/store-credentials.png)
 
 ### 上传私钥和证书
 
-上传 _私钥_ 和 _SSL证书_，使用 __密钥和证书__ 向导步骤。
+要上传&#x200B;_私钥_&#x200B;和&#x200B;_SSL证书_，请使用&#x200B;__密钥和证书__&#x200B;向导步骤。
 
-通常，您的IT部门会提供CA信任的证书和密钥，但自签名证书可用于 __开发__ 和 __测试__ 目的。
+通常情况下，您的IT部门会提供CA信任的证书和密钥，但自签名证书可用于&#x200B;__开发__&#x200B;和&#x200B;__测试__&#x200B;目的。
 
-要创建或下载自签名证书，请参阅 [自签名私钥和证书](#self-signed-private-key-and-certificate).
+若要创建或下载自签名证书，请参阅[自签名私钥和证书](#self-signed-private-key-and-certificate)。
 
-1. 上传 __私钥__ DER（唯一编码规则）格式。 与PEM不同，DER编码文件不包含纯文本语句，例如 `-----BEGIN CERTIFICATE-----`
-1. 上传关联的 __SSL证书__ 在 `.crt` 格式。
+1. 以DER（可分辨编码规则）格式上传&#x200B;__私钥__。 与PEM不同，DER编码文件不包含纯文本语句，如`-----BEGIN CERTIFICATE-----`
+1. 以`.crt`格式上载关联的&#x200B;__SSL证书__。
 
    ![SSL设置 — 私钥和证书](assets/use-the-ssl-wizard/privatekey-and-certificate.png)
 
 ### 更新SSL连接器详细信息
 
-要更新 _主机名_ 和 _端口_ 使用 __SSL连接器__ 向导步骤。
+要更新&#x200B;_主机名_&#x200B;和&#x200B;_端口_，请使用&#x200B;__SSL连接器__&#x200B;向导步骤。
 
-1. 更新或验证 __HTTPS主机名__ 值，它应匹配 `Common Name (CN)` 从证书中。
-1. 更新或验证 __HTTPS端口__ 值。
+1. 更新或验证&#x200B;__HTTPS主机名__&#x200B;值，该值应与证书中的`Common Name (CN)`匹配。
+1. 更新或验证&#x200B;__HTTPS端口__&#x200B;值。
 
-   ![SSL设置 — SSL连接器详细信息](assets/use-the-ssl-wizard/ssl-connector-details.png)
+   ![SSL安装程序 — SSL连接器详细信息](assets/use-the-ssl-wizard/ssl-connector-details.png)
 
 ### 验证SSL设置
 
-1. 要验证SSL，请单击 __转到HTTPS URL__ 按钮。
-1. 如果使用自签名证书，您会看到 `Your connection is not private` 错误。
+1. 要验证SSL，请单击&#x200B;__转到HTTPS URL__&#x200B;按钮。
+1. 如果使用自签名证书，您会看到`Your connection is not private`错误。
 
    ![SSL设置 — 通过HTTPS验证AEM](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
 
 ## 自签名私钥和证书
 
-以下zip文件包含 [!DNL DER] 和 [!DNL CRT] 在本地设置AEM SSL所需的文件，并且仅供本地开发使用。
+以下zip文件包含本地设置AEM SSL所需的[!DNL DER]和[!DNL CRT]文件，这些文件仅用于本地开发。
 
-此 [!DNL DER] 和 [!DNL CERT] 为方便起见，提供了文件，并使用下面的“生成私钥和自签名证书”部分中概述的步骤生成文件。
+为方便起见，提供了[!DNL DER]和[!DNL CERT]文件，这些文件是使用下面的“生成私钥和自签名证书”一节中所述的步骤生成的。
 
-如果需要，证书密码短语为 **管理员**.
+如果需要，证书密码短语为&#x200B;**admin**。
 
 此localhost — 私钥和自签名的certificate.zip（2028年7月到期）
 
@@ -88,7 +88,7 @@ ht-degree: 0%
 
 ### 私钥和自签名证书生成
 
-上视频描述了AEM创作实例上使用自签名证书的SSL的设置和配置。 以下命令使用 [[!DNL OpenSSL]](https://www.openssl.org/) 可以生成要在向导的步骤2中使用的私钥和证书。
+上视频描述了AEM创作实例上使用自签名证书的SSL的设置和配置。 使用[[!DNL OpenSSL]](https://www.openssl.org/)的以下命令可以生成私钥和证书以在向导的步骤2中使用。
 
 ```shell
 ### Create Private Key

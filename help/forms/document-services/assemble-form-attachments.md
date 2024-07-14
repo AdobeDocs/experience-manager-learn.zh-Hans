@@ -26,10 +26,10 @@ ht-degree: 0%
 
 ## 创建实施WorkflowProcess接口的OSGi组件
 
-创建实施 [com.adobe.granite.workflow.exec.WorkflowProcess接口](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html). 此组件中的代码可以与AEM工作流中的流程步骤组件相关联。 在此组件中实现了接口com.adobe.granite.workflow.exec.WorkflowProcess的执行方法。
+创建实现[com.adobe.granite.workflow.exec.WorkflowProcess接口](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)的OSGi组件。 此组件中的代码可以与AEM工作流中的流程步骤组件相关联。 在此组件中实现了接口com.adobe.granite.workflow.exec.WorkflowProcess的执行方法。
 
 在提交自适应表单以触发AEM工作流时，提交的数据存储在有效负荷文件夹下的指定文件中。 例如，这是提交的数据文件。 我们需要组合idcard和bankstatements标签下指定的附件。
-![submitted-data](assets/submitted-data.JPG).
+![提交的数据](assets/submitted-data.JPG)。
 
 ### 获取标记名称
 
@@ -45,7 +45,7 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### 从附件名称创建DDX
 
-然后，我们需要创建 [文档描述XML (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf) 汇编程序服务用于汇编文档的文档。 下面是从进程参数创建的DDX。 利用NoForms元素，可在组装基于XFA的文档之前将其扁平化。 请注意，PDF源元素的顺序与进程参数中指定的顺序一致。
+然后，我们需要创建[文档描述XML (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)文档，该文档由汇编程序服务用于汇编文档。 下面是从进程参数创建的DDX。 利用NoForms元素，可在组装基于XFA的文档之前将其扁平化。 请注意，PDF源元素的顺序与进程参数中指定的顺序一致。
 
 ![ddx-xml](assets/ddx.PNG)
 
@@ -130,19 +130,19 @@ session.save();
 
 以下是组装并存储表单附件后的有效负荷文件夹结构。
 
-![有效载荷结构](assets/payload-structure.JPG)
+![有效负荷结构](assets/payload-structure.JPG)
 
 ### 使此功能在您的AEM服务器上正常工作
 
-* 下载 [组合表单附件表单](assets/assemble-form-attachments-af.zip) 到您的本地系统。
-* 从导入表单[Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) 页面。
-* 下载 [工作流](assets/assemble-form-attachments.zip) 并使用包管理器导入AEM。
-* 下载 [自定义捆绑包](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
-* 使用部署和启动捆绑包 [Web控制台](http://localhost:4502/system/console/bundles)
-* 将浏览器指向 [AssembleAttachments表单](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
+* 将[组合表单附件表单](assets/assemble-form-attachments-af.zip)下载到您的本地系统。
+* 从[Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)页面导入表单。
+* 下载[工作流](assets/assemble-form-attachments.zip)并使用包管理器导入到AEM中。
+* 下载[自定义捆绑包](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
+* 使用[Web控制台](http://localhost:4502/system/console/bundles)部署和启动捆绑包
+* 将浏览器指向[组合附件表单](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
 * 在ID文档中添加一个附件，并将几个pdf文档添加到银行对帐单部分
 * 提交表单以触发工作流
-* 检查工作流的 [crx中的有效负荷文件夹](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) 用于组合的pdf
+* 检查crx](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload)中工作流的[有效负荷文件夹中的已组合pdf
 
 >[!NOTE]
 > 如果已为自定义捆绑包启用了记录器，则DDX和组合的文件将写入AEM安装的文件夹。

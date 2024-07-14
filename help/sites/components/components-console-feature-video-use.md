@@ -25,11 +25,11 @@ ht-degree: 1%
 组件控制台提供了以下功能：
 
 * 概述：当前AEM实例上所有可用的已安装组件列表
-* [!UICONTROL 属性]：显示元数据，如组件的标题、组和描述
+* [!UICONTROL 属性]：显示组件的标题、组和描述等元数据
 * [!UICONTROL 策略]：显示给定组件和相关模板的任何现有策略
 * [!UICONTROL 实时使用情况]：显示包含该组件的页面的列表
 
-组件控制台位于 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 组件]**.
+组件控制台位于&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 组件]**下。
 组件控制台URL(本地AEM作者)： [http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
 
 ## 其他资源 {#additional-resources}

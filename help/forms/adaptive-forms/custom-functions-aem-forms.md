@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 自定义函数
 
-AEM Forms 6.5引入了用于定义JavaScript函数的功能，这些函数可用于通过规则编辑器定义复杂的业务规则。
+AEM Forms 6.5引入了用于定义JavaScript函数的功能，这些函数可用于使用规则编辑器定义复杂的业务规则。
 AEM Forms提供了许多现成的此类自定义函数，但您需要定义自己的自定义函数并在多个表单中使用它们。
 
 要定义您的第一个自定义函数，请执行以下步骤：
@@ -30,9 +30,9 @@ AEM Forms提供了许多现成的此类自定义函数，但您需要定义自�
 * 选择新创建的clientlibs文件夹并添加allowProxy和类别属性，如屏幕快照中所示，并保存更改。
 
 ![client-lib](assets/custom-functions.png)
-* 创建名为的文件夹 **js** 在 **clientlibs** 文件夹
-* 创建名为的文件 **函数.js** 在 **js** 文件夹
-* 创建名为的文件 **js.txt** 在 **clientlibs** 文件夹。 保存更改。
+* 在&#x200B;**clientlibs**&#x200B;文件夹下创建名为&#x200B;**js**&#x200B;的文件夹
+* 在&#x200B;**js**&#x200B;文件夹下创建名为&#x200B;**functions.js**&#x200B;的文件
+* 在&#x200B;**clientlibs**&#x200B;文件夹下创建名为&#x200B;**js.txt**&#x200B;的文件。 保存更改。
 * 您的文件夹结构应类似于下面的屏幕快照。
 
 ![规则编辑器](assets/folder-structure.png)
@@ -72,10 +72,10 @@ function convertUTC(strUTCString)
 }
 ```
 
-请 [请参阅jsdoc](https://jsdoc.app/index.html)有关对javascript函数添加注释的更多详细信息。
+有关对javascript函数添加注释的更多详细信息，请[参阅jsdoc](https://jsdoc.app/index.html)。
 上述代码具有两个功能：
-**getCountyNamesList**  — 返回字符串数组
-**convertUTC**  — 将UTC时间戳转换为本地时区
+**getCountyNamesList** — 返回字符串数组
+**convertUTC** — 将UTC时间戳转换为本地时区
 
 打开js.txt并粘贴以下代码并保存更改。
 
@@ -85,9 +85,9 @@ functions.js
 ```
 
 #base=js行指定JavaScript文件所在的目录。
-以下行指示JavaScript文件相对于基本位置的位置。
+以下行指示JavaScript文件相对于基础位置的位置。
 
-如果您在创建自定义函数时遇到问题，请随时 [下载并安装此包](assets/custom-functions.zip) 在您的AEM实例中。
+如果您在创建自定义函数时遇到问题，请随时[下载此包](assets/custom-functions.zip)并将其安装在AEM实例中。
 
 ## 使用自定义函数
 

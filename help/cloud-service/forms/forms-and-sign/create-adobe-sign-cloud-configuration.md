@@ -33,7 +33,7 @@ AEM中的云服务配置允许您创建AEM与其他云应用程序之间的集�
 
 如果您在配置Abobe Sign云配置时遇到错误，可以采取以下步骤进行故障诊断
 * 确保Acrobat Sign API应用程序中指定的重定向URL的格式如下
-&lt;your instance=&quot;&quot; name=&quot;&quot;>/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/&lt;container>.
+&lt;您的实例名称>/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/&lt;容器>。
 例如 — https://author-p24107-e32034.adobeaemcloud.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/FormsCS。 FormsCS是要包含云配置的容器的名称
 * 确保oAuth URL正确
 * 检查您的客户端ID和客户端密码

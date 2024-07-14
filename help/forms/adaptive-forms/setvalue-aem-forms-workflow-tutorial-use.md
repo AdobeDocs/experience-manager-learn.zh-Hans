@@ -19,7 +19,7 @@ ht-degree: 0%
 
 在AEM Forms OSGI工作流中的自适应Forms提交数据设置XML元素的值。
 
-![设置值](assets/setvalue.png)
+![SetValue](assets/setvalue.png)
 
 用于具有设置值组件的LiveCycle，该组件允许您设置XML元素的值。
 
@@ -40,18 +40,18 @@ ht-degree: 0%
 
 * [部署Developingwithserviceuser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [部署示例捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 这是自定义OSGI捆绑包，允许您在提交的xml数据中设置元素的值
+* [部署示例包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 这是自定义OSGI捆绑包，允许您在提交的xml数据中设置元素的值
 
 * [下载并解压缩zip文件的内容](assets/setvalueassets.zip)
-* 将浏览器指向 [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 将浏览器指向[包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 * 导入并安装setValueWorkflow.zip。 这里有示例工作流模型。
-* 将浏览器指向 [Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 将浏览器指向[Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 单击创建 | 文件上传
 * 上传TimeOfRequestForm.zip
-* 打开 [TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
+* 打开[TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
 * 填写3个必填字段并提交
 * 以“管理员”身份登录到AEM（如果尚未登录）
-* 转到 [&quot;AEM收件箱&quot;](http://localhost:4502/aem/inbox)
+* 转到[“AEM收件箱”](http://localhost:4502/aem/inbox)
 * 打开“审阅休息时间请求”表单
 * 请注意，第一个面板中的字段已禁用。 这是因为该表单正由审阅人打开。 此外，请注意批准或拒绝请求的面板现在可见
 

@@ -12,8 +12,8 @@ role: User
 team: TM
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 22%
+source-wordcount: '54'
+ht-degree: 9%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 22%
 + 搜索和发现{#search}
    + [快速筛选](search/fast-filtering.md)
    + [引用](search/references.md)
-+ 编辑器{#editor}
++ 编辑者{#editor}
    + [语言副本](editor/language-copies.md)
    + [新建编辑器切换](editor/new-editor-toggle.md)
    + [非资产内容引用](editor/non-asset-content-references.md)

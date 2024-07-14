@@ -41,7 +41,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em>自适应表单是动态且响应灵敏的新一代表单。 您可以使用自适应表单提供个性化体验</em>
+    <em>自适应表单是动态且响应式的新一代表单。 您可以使用自适应表单提供个性化体验</em>
     <p>
   </td>
    <td>
@@ -54,7 +54,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em>交互式通信可以集中管理安全、个性化的交互式信函的创建、编排和交付，例如业务信函、文档、声明、福利通知、市场营销邮件、账单和欢迎资料包。 </em>
+    <em>交互式通信可以集中管理安全、个性化的交互式信函的创建、编排和交付，例如商务信函、文档、对帐单、福利通知、市场营销邮件、账单和欢迎资料包。</em>
     <p>
   </td>
   <td>
@@ -67,7 +67,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em>在AEM Workflow中作为步骤调用表单数据模型的服务</em>
+    <em>作为AEM Workflow中的步骤调用表单数据模型的服务</em>
     <p>
   </td>
 </tr>
@@ -82,7 +82,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
 * [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
 * [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEMas a Cloud Service教程](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service教程](/help/cloud-service/overview.md)
 * [AEM Assets教程](/help/assets/overview.md)
 * [AEM Forms教程](/help/forms/overview.md)
 * [AEM Foundation教程](/help/foundation/overview.md)

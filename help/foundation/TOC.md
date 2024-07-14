@@ -15,13 +15,13 @@ ht-degree: 14%
 # AEM Foundation 视频和教程 {#foundation}
 
 + [概述](./overview.md)
-+ 管理 {#administration}
++ 管理{#administration}
    + [了解升级AEM的原因](./administration/understand-reasons-to-upgrade.md)
    + [使用oak-run.jar管理索引](./administration/use-oak-run-jar-to-manage-indexes.md)
    + [使用在线修订版清理](./administration/use-online-revision-clean-up.md)
    + [使用系统概述功能板](./administration/use-the-system-overview-dashboard.md)
    + [URL重定向](./administration/url-redirection.md)
-+ 身份验证 {#authentication}
++ 身份验证{#authentication}
    + [OKTA和AEM](authentication/okta-saml-integration.md)
    + [OAuth范围](authentication/oauth-code-sample-develop.md)
    + [了解身份验证](authentication/authentication-support-article-understand.md)

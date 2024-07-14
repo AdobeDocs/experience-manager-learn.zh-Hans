@@ -83,9 +83,9 @@ public class ListFolderContent extends SlingSafeMethodsServlet {
 }
 ```
 
-## 使用JavaScript函数创建客户端库
+## 使用JavaScript功能创建客户端库
 
-从JavaScript函数调用servlet。 此函数返回一个数组对象，该对象将用于填充选项组组件
+从JavaScript函数调用此servlet。 此函数返回一个数组对象，该对象将用于填充选项组组件
 
 ```javascript
 /**
@@ -111,11 +111,11 @@ function getDAMFolderAssets(damFolder) {
 
 ## 创建自适应表单
 
-创建自适应表单并将表单与客户端库关联 **listfolderassets**. 将复选框组件添加到表单。 使用规则编辑器填充屏幕快照中显示的复选框选项
-![set-options](assets/set-options-newsletter.png)
+创建自适应表单并将表单与客户端库&#x200B;**listfolderassets**关联。 将复选框组件添加到表单。 使用规则编辑器填充屏幕快照中显示的复选框选项
+![设置选项](assets/set-options-newsletter.png)
 
-我们正在调用javascript函数，其名称为 **getDAMFolderAssets** 并将DAM文件夹资产的路径传递到表单中。
+我们正在调用名为&#x200B;**getDAMFolderAssets**&#x200B;的javascript函数，并在表单中传递要列出的DAM文件夹资源的路径。
 
 ## 后续步骤
 
-[汇编选定的资源](./assemble-selected-newsletters.md)
+[汇编选定的Assets](./assemble-selected-newsletters.md)

@@ -21,7 +21,7 @@ ht-degree: 0%
 
 在本部分中，我们将使用自定义函数和代码编辑器来创作业务规则。
 
-您已安装 [具有自定义函数的ClientLib](assets/client-libs-and-logo.zip) 在本教程的前面部分。
+您已在本教程前面安装了带有自定义函数](assets/client-libs-and-logo.zip)的[ClientLib。
 
 通常，客户端库包含CSS和Javascript文件。 此客户端库包含javascript文件，该文件公开了用于填充下拉列表值的函数。
 

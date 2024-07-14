@@ -17,7 +17,7 @@ ht-degree: 16%
 # Adobe Experience Manager as a Cloud Service 教程 {#cloud-service}
 
 + [概述](./overview.md)
-+ AEM试用 {#aem-trials}
++ AEM试用{#aem-trials}
    + [图像](./aem-trials/images.md)
 + AEM as a Cloud Service简介{#introduction}
    + [什么是AEM as a Cloud Service？](./introduction/what-is-aem-as-a-cloud-service.md)
@@ -30,7 +30,7 @@ ht-degree: 16%
 + Experience Cloud集成{#integrations}
    + [集成](./integrations/experience-cloud.md)
    + [Adobe Target](./integrations/target.md)
-+ 底层技术 {#underlying-technology}
++ 基础技术{#underlying-technology}
    + [AEM架构](./underlying-technology/introduction-architecture.md)
    + [osgi](./underlying-technology/introduction-osgi.md)
    + [Java内容存储库](./underlying-technology/introduction-jcr.md)
@@ -55,12 +55,12 @@ ht-degree: 16%
       + [分析测试结果](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcher 配置](./cloud-manager/devops/dispatcher-configurations.md)
       + [CDN日志分析](./cloud-manager/devops/cdn-log-analysis.md)
-+ 本地开发环境设置 {#local-development-environment-set-up}
++ 本地开发环境设置{#local-development-environment-set-up}
    + [概述](./local-development-environment/overview.md)
    + [开发工具](./local-development-environment/development-tools.md)
    + [本地AEM SDK](./local-development-environment/aem-runtime.md)
    + [本地 Dispatcher 工具](./local-development-environment/dispatcher-tools.md)
-+ 开发{#developing}
++ 正在开发{#developing}
    + 可扩展性{#extensibility}
       + App Builder{#app-builder}
          + [生成JWT访问令牌](./developing/extensibility/app-builder/jwt-auth.md)
@@ -86,7 +86,7 @@ ht-degree: 16%
                + [RTE小组件](./developing/extensibility/ui/content-fragments/examples/editor-rte-widget.md)
                + [RTE标记](./developing/extensibility/ui/content-fragments/examples/editor-rte-badges.md)
                + [自定义字段](./developing/extensibility/ui/content-fragments/examples/editor-custom-field.md)
-   + 开发基础{#basics}
+   + 开发基础知识{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本地开发环境](./developing/basics/local-development-environment.md)
       + [AEM 项目原型](./developing/basics/aem-project-archetype.md)
@@ -105,7 +105,7 @@ ht-degree: 16%
       + [OSGi配置基础](./developing/osgi-services/configurations.md)
       + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
    + 高级{#advanced}
-      + [缓存页面变量](./developing/advanced/variant-caching.md)
+      + [正在缓存页面变体](./developing/advanced/variant-caching.md)
       + [CSRF保护](./developing/advanced/csrf-protection.md)
       + [自定义命名空间](./developing/advanced/custom-namespaces.md)
       + [服务用户](./developing/advanced/service-users.md)
@@ -129,7 +129,7 @@ ht-degree: 16%
       + [OSGi web控制台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher 工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + 调试AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
+   + 正在调试AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [概述](./debugging/cloud-service/overview.md)
       + [日志](./debugging/cloud-service/logs.md)
       + [生成和部署](./debugging/cloud-service/build-and-deployment.md)
@@ -137,17 +137,17 @@ ht-degree: 16%
       + [存储库浏览器](./debugging/cloud-service/repository-browser.md)
       + 风险{#risks}
          + [遍历警告](./debugging/cloud-service/risks/traversals.md)
-+ 内容交付{#content-delivery}
++ 内容投放{#content-delivery}
    + [URL重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
-+ 缓存{#caching}
++ 正在缓存{#caching}
    + [概述](./caching/overview.md)
    + [AEM Publish服务](./caching/publish.md)
    + [AEM Author服务](./caching/author.md)
    + [CDN缓存命中率分析](./caching/cdn-cache-hit-ratio-analysis.md)
-   + 操作方法{#how-to}
+   + 如何{#how-to}
       + [启用缓存](./caching/how-to/enable-caching.md)
       + [禁用缓存](./caching/how-to/disable-caching.md)
-+ 访问AEM{#accessing}
++ 正在访问AEM{#accessing}
    + [概述](./accessing/overview.md)
    + [Adobe IMS 用户](./accessing/adobe-ims-users.md)
    + [Adobe IMS 用户组](./accessing/adobe-ims-user-groups.md)
@@ -183,7 +183,7 @@ ht-degree: 16%
       + [Adobe I/O Runtime操作 — 接收AEM事件](./eventing/examples/runtime-action.md)
       + [Adobe I/O Runtime操作 — 处理AEM事件](./eventing/examples/event-processing-using-runtime-action.md)
       + [AEM Assets事件 — PIM集成](./eventing/examples/assets-pim-integration.md)
-+ 迁移 {#migration}
++ 迁移{#migration}
    + [内容传输工具](./migration/content-transfer-tool.md)
    + [批量导入资源](./migration/bulk-import.md)
    + 移动到 AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
@@ -196,12 +196,12 @@ ht-degree: 16%
       + [asset compute微服务](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
       + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
       + [搜索和编制索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
-      + 内容迁移 {#content-migration}
+      + 内容迁移{#content-migration}
          + [批量导入服务](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [内容传输工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
          + [常见问题解答](./migration/moving-to-aem-as-a-cloud-service/content-migration/faq.md)
       + [疑难解答](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
-      + AEM Formsas a Cloud Service {#aem-forms}
+      + AEM Formsas a Cloud Service{#aem-forms}
          + [简介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [数字注册](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
          + [通信](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
@@ -219,7 +219,7 @@ ht-degree: 16%
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + [内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
-   + 针对Forms进行开发as a Cloud Service{#developing-for-cloud-service}
+   + 正在为Formsas a Cloud Service{#developing-for-cloud-service}开发
       + [1 — 快速入门](./forms/developing-for-cloud-service/getting-started.md)
       + [2 — 安装IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [3 — 设置Git](./forms/developing-for-cloud-service/setup-git.md)
@@ -245,7 +245,7 @@ ht-degree: 16%
       + [“配置资源”面板](./forms/create-first-af/configure-assets-panel.md)
       + [配置开始面板](./forms/create-first-af/configure-start-panel.md)
       + [添加并配置工具栏](./forms/create-first-af/add-configure-toolbar.md)
-   + 带Headless表单的自定义提交服务{#custom-submit-headless-forms}
+   + 使用Headless表单{#custom-submit-headless-forms}的自定义提交服务
       + [1 — 简介](./forms/custom-submit-headless-forms/introduction.md)
       + [2 — 创建自定义提交服务](./forms/custom-submit-headless-forms/custom-submit-service.md)
       + [3 — 显示响应](./forms/custom-submit-headless-forms/handle-response-react-app.md)
@@ -259,7 +259,7 @@ ht-degree: 16%
       + [创建数据元素](./forms/form-data-analytics/data-elements.md)
       + [创建规则](./forms/form-data-analytics/rules.md)
       + [测试解决方案](./forms/form-data-analytics/test.md)
-   + AEM Forms CS中的Document Generation{#doc-gen-formscs}
+   + AEM Forms CS{#doc-gen-formscs}中的文档生成
       + [简介](./forms/doc-gen-forms-cs/introduction.md)
       + [创建服务凭据](./forms/doc-gen-forms-cs/service-credentials.md)
       + [创建JWT令牌](./forms/doc-gen-forms-cs/create-jwt.md)
@@ -269,13 +269,13 @@ ht-degree: 16%
       + [挑战](./forms/doc-gen-forms-cs/challenge.md)
    + 使用DocAssurance API{#doc-assurance-api}
 +[示例代码段](./forms/doc-assurance-api/using-doc-assurance-api.md)
-   + 使用批处理API生成文档{#formscs-batch-api}
+   + 使用批处理API{#formscs-batch-api}生成文档
       + [简介](./forms/formscs-batch-api/introduction.md)
       + [配置Azure存储](./forms/formscs-batch-api/configure-azure-storage.md)
       + [创建USC批次配置](./forms/formscs-batch-api/configure-usc-batch.md)
       + [创建批次配置](./forms/formscs-batch-api/create-batch-config.md)
       + [执行批处理](./forms/formscs-batch-api/execute-batch-generate-documents.md)
-   + Forms CS中的PDF操作{#forms-cs-assembler}
+   + Forms CS{#forms-cs-assembler}中的PDF操作
       + [简介](./forms/forms-cs-assembler/introduction.md)
       + [创建服务凭据](./forms/forms-cs-assembler/service-credentials.md)
       + [创建JWT令牌](./forms/forms-cs-assembler/create-jwt.md)
@@ -284,7 +284,7 @@ ht-degree: 16%
       + [PDF/A实用程序](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [测试解决方案](./forms/forms-cs-assembler/test.md)
       + [挑战](./forms/forms-cs-assembler/challenge.md)
-   + 使用Blob索引标记存储表单提交{#store-submiited-data-with-metadata-tags}
+   + 使用Blob索引标记{#store-submiited-data-with-metadata-tags}存储表单提交
       + [简介](./forms/store-submiited-data-with-metadata-tags/introduction.md)
       + [扩展选择组组件](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)
       + [创建OSGi配置](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
@@ -309,7 +309,7 @@ ht-degree: 16%
       + [6 — 创建自适应表单](./forms/prefill-azure-storage/create-af.md)
       + [7 — 部署示例资源](./forms/prefill-azure-storage/deploy-sample-assets.md)
 
-   + 创建审阅工作流{#create-aem-workflow}
+   + 创建审核工作流{#create-aem-workflow}
       + [将工作流存储外部化](./forms/create-aem-workflow/externalize-workflow.md)
       + [创建工作流模型](./forms/create-aem-workflow/create-workflow.md)
       + [触发工作流](./forms/create-aem-workflow/configure-af.md)
@@ -319,17 +319,17 @@ ht-degree: 16%
       + [Acrobat Sign云配置](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [创建自适应表单](./forms/forms-and-sign/create-adaptive-form.md)
       + [用于填写和签名的配置](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-   + 与Microsoft Power Automate集成{#forms-cs-and-power-automate}
+   + 与Microsoft Power Automate{#forms-cs-and-power-automate}集成
       + [配置集成](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
       + [解析提交的表单数据](./forms/forms-cs-and-power-automate/send-email-notification.md)
       + [将DoR作为电子邮件附件发送](./forms/forms-cs-and-power-automate/send-dor-email-attachment.md)
       + [从提交的数据中提取表单附件](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
-   + 与Microsoft Dynamics集成{#formscs-dynamics-crm}
+   + 与Microsoft Dynamics{#formscs-dynamics-crm}集成
       + [创建Dynamics应用程序](./forms/formscs-dynamics-crm/create-dynamics-account.md)
       + [配置数据Source](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
       + [创建表单数据模型](./forms/formscs-dynamics-crm/create-form-data-model.md)
       + [创建自适应表单](./forms/formscs-dynamics-crm/create-adaptive-form.md)
-   + 与Salesforce集成{#integrate-with-salesforce}
+   + 与Salesforce{#integrate-with-salesforce}集成
       + [简介](./forms/integrate-with-salesforce/introduction.md)
       + [创建连接的应用程序](./forms/integrate-with-salesforce/create-connected-app.md)
       + [创建swagger文件](./forms/integrate-with-salesforce/describe-rest-api.md)
@@ -337,12 +337,12 @@ ht-degree: 16%
       + [创建表单数据模型](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [测试表单提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [测试点击事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
-   + 将表单提交存储在一个驱动器和SharePoint中{#one-drive}
+   + 将表单提交存储在一个驱动器和sharepoint{#one-drive}中
       + [将表单数据存储在一个驱动器中](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [将表单数据存储在SharePoint中](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
       + [使用SharePoint列表中的数据预填充表单](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
       + [使用工作流将数据插入SharePoint列表](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
-+ asset compute可扩展性{#asset-compute}
++ asset compute的可扩展性{#asset-compute}
    + [概述](./asset-compute/overview.md)
    + 设置{#set-up}
       + [帐户和服务配置](./asset-compute/set-up/accounts-and-services.md)
@@ -370,13 +370,13 @@ ht-degree: 16%
    + [SPA编辑器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html){target=_blank}
    + [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html){target=_blank}
-+ 专家资源 {#expert-resources}
++ 专家资源{#expert-resources}
    + AEM Champions {#aem-champions}
       + [Cloud Manager入门行动手册](./expert-resources/aem-champions/onboarding-playbook.md)
       + [Cloud Manager环境类型](./expert-resources/aem-champions/environment-types.md)
       + [CLOUD MANAGER UI](./expert-resources/aem-champions/cloud-manager-ui.md)
    + [AEM Experts系列](./expert-resources/expert-series/aem-experts-series.md)
-   + Cloud 5{#cloud-5}
+   + 云5{#cloud-5}
       + [简介](./expert-resources/cloud-5/cloud5-introduction.md)
       + [第1季](./expert-resources/cloud-5/cloud5-season-1.md)
       + [第2季](./expert-resources/cloud-5/cloud5-season-2.md)
@@ -391,7 +391,7 @@ ht-degree: 16%
       + [Dispatcher验证器](./expert-resources/cloud-5/cloud5-aem-dispatcher-validator.md)
       + [搜索和编制索引](./expert-resources/cloud-5/cloud5-aem-search-and-indexing.md)
       + [AdobeApp Builder](./expert-resources/cloud-5/cloud5-adobe-app-builder.md)
-      + 第2季{#season-2}
+      + 第2{#season-2}季
          + [片段](./expert-resources/cloud-5/season-2/cloud5-experience-v-content-fragments.md)
          + [Repo Modernizer](./expert-resources/cloud-5/season-2/cloud5-repo-modernizer.md)
          + [Admin Console](./expert-resources/cloud-5/season-2/cloud5-admin-console.md)
@@ -402,7 +402,7 @@ ht-degree: 16%
          + [Cloud Manager — 体验审核](./expert-resources/cloud-5/season-2/cloud5-mocm-experience-audit.md)
          + [Cloud Manager — 单元测试](./expert-resources/cloud-5/season-2/cloud5-mocm-unit-tests.md)
          + [Cloud Manager — 功能测试](./expert-resources/cloud-5/season-2/cloud5-mocm-functional-tests.md)
-      + 第3季{#season-3}
+      + 第3{#season-3}季
          + [第三方搜索](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [Real User Monitoring (RUM)](./expert-resources/cloud-5/season-3/cloud5-rum.md)
          + [Edge员工](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)

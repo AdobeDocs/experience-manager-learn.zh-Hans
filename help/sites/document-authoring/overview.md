@@ -22,7 +22,7 @@ ht-degree: 9%
 
 了解如何配置文档创作，以允许AEM作者使用Microsoft Word或Google文档编辑和发布文档。
 
-查看 [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html) 有关设置文档创作的完整详细信息。
+有关设置文档创作的完整详细信息，请查看[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html)。
 
 ## 文档创作快速入门
 
@@ -140,7 +140,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="default-content-and-sections.md" title="默认内容和区域">新建编辑器切换</a>
+              <a href="default-content-and-sections.md" title="默认内容和区域">新编辑器切换</a>
             </p>
             <p class="is-size-6">探索默认内容和部分的文档创作概念。</p>
             <a href="default-content-and-sections.md" class="spectrum-Button
@@ -235,7 +235,8 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="bulk-metadata.md" title="批量元数据">语言副本</a>
+              <a href="bulk-metadata.md" title="批量元数据">语言
+                副本</a>
             </p>
             <p class="is-size-6">探索如何在文档创作中处理批量元数据。</p>
             <a href="bulk-metadata.md" class="spectrum-Button
@@ -400,7 +401,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/document-permissions.md" title="文档权限">文档权限 </a>
+              <a href="./how-to/document-permissions.md" title="文档权限">文档权限</a>
             </p>
             <p class="is-size-6">探索文档创作如何处理文档权限。</p>
             <a href="./how-to/document-permissions.md" class="spectrum-Button
@@ -624,7 +625,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/migration-using-importer.md" title="使用导入程序进行站点迁移">使用导入程序进行站点迁移</a>
+              使用导入程序<a href="./how-to/migration-using-importer.md" title="使用导入程序进行站点迁移">站点迁移</a>
             </p>
             <p class="is-size-6">了解如何使用AEM导入器工具将站点迁移到Edge Delivery Services。</p>
             <a href="./how-to/migration-using-importer.md" class="spectrum-Button
@@ -688,7 +689,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">3 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/bulk-importing-using-importer.md" title="使用导入器批量导入">使用导入器批量导入</a>
+              <a href="./how-to/bulk-importing-using-importer.md" title="使用导入器批量导入">使用导入程序批量导入</a>
             </p>
             <p class="is-size-6">了解如何在站点迁移期间使用AEM导入器工具批量导入网页。</p>
             <a href="./how-to/bulk-importing-using-importer.md" class="spectrum-Button
@@ -1077,7 +1078,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/setup-experimentation-framework.md" title="设置试验框架">设置试验框架</a>
+              <a href="./how-to/setup-experimentation-framework.md" title="设置试验框架">正在设置试验框架</a>
             </p>
             <p class="is-size-6">探索如何在Edge Delivery Services文档创作中设置实验框架。</p>
             <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
@@ -1109,7 +1110,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-add-metadata.md" title="添加用于试验的元数据">添加用于试验的元数据</a>
+              <a href="./how-to/experimentation-add-metadata.md" title="添加用于试验的元数据">添加试验元数据</a>
             </p>
             <p class="is-size-6">探索添加用于试验的元数据</p>
             <a href="./how-to/experimentation-add-metadata.md" class="spectrum-Button

@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Document Services
 topic: Development
 jira: KT-15508
-source-git-commit: 97fbe450823c6122a25dc46c851296094894683e
+exl-id: 40617082-4d23-4c91-a016-2d947187052b
+source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -17,17 +18,17 @@ ht-degree: 0%
 
 # 使用DocAssurance API
 
-此 [DocAssurance服务](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance) 提供使用PDF文档执行各种数字签名或加密操作的能力，例如签名、认证、添加签名字段、加密、解密等。
-本文为您提供了Java代码片段，以便您开始使用API。此代码片段使用访问令牌。 [本文介绍了生成访问令牌所需的步骤](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)
+[DocAssurance服务](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance)提供使用PDF文档执行各种数字签名或加密操作的能力，例如签名、认证、添加签名字段、加密、解密等。
+本文为您提供了Java代码片段，以便您开始使用API。此代码片段使用访问令牌。 [本文介绍生成访问令牌所需的步骤](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)
 
 
-<span class="preview">此功能在早期采用者计划下提供。 您可以从官方电子邮件ID写信到aem-forms-ea@adobe.com以加入率先采用者计划，并请求访问此功能</span>
+<span class="preview">此功能在早期采用者计划下可用。 您可以从官方电子邮件ID写入aem-forms-ea@adobe.com以加入早期采用者计划并请求对此功能的访问权限</span>
 
 
 ## 先决条件
 
 * AEM FormsCloud Service体验
-* 使用体验 [Apache HTTP组件](https://hc.apache.org/httpcomponents-client-4.5.x/)
+* 使用[Apache HTTP组件](https://hc.apache.org/httpcomponents-client-4.5.x/)的体验
 * 对AEM FormsCloud Service环境的访问权限
 
 ## Inspect文档
@@ -157,4 +158,4 @@ if (response.getStatusLine().getStatusCode() == 200) {
 
 ### Postman收藏集
 
-API的Postman集合可以是 [从此处下载以进行测试](assets/DocAssuranceAPI.postman_collection.json). 您可以使用基本身份验证或持有者令牌类型的身份验证来调用API。
+可以从此处[下载API的Postman集合以进行测试](assets/DocAssuranceAPI.postman_collection.json)。 您可以使用基本身份验证或持有者令牌类型的身份验证来调用API。

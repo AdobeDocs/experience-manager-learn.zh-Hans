@@ -33,15 +33,15 @@ ht-degree: 2%
 
 集成Experience Platform数据收集标记时，需要满足以下条件。
 
-+ AEM管理员对AEMas a Cloud Service环境的访问权限
-+ 引用站点，如 [WKND](https://github.com/adobe/aem-guides-wknd) 部署在它上。
++ AEM管理员对AEM as a Cloud Service环境的访问权限
++ 类似[WKND](https://github.com/adobe/aem-guides-wknd)的引用站点已部署到该站点上。
 + 访问Adobe Experience Platform数据收集解决方案
-+ 系统管理员访问 [Adobe Developer控制台](https://developer.adobe.com/developer-console/)
++ 系统管理员对[Adobe Developer Console](https://developer.adobe.com/developer-console/)的访问权限
 
 
 ## 高级步骤
 
-+ 在Adobe Experience Platform数据收集中，创建Tag属性并对其进行编辑 _添加规则_. 则 _添加库_，选择新添加的规则，批准并发布它。
++ 在Adobe Experience Platform数据收集中，创建一个Tag属性并编辑它以&#x200B;_添加规则_。 然后&#x200B;_添加库_，选择新添加的规则，批准并发布它。
 + 使用现有（或新的）IMS配置连接AEM和标记
 + 在AEM中，创建标记云服务配置，然后将其应用于现有站点，最后验证标记属性及其库是否已加载到已发布站点或创作站点。
 

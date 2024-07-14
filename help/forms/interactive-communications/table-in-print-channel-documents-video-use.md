@@ -44,7 +44,7 @@ ht-degree: 0%
    * 交互式通信文档
    * sampleretirementaccountdata.json
 
-* 在中打开交互式通信文档 [编辑模式](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html).
+* 以[编辑模式](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)打开交互式通信文档。
 
 * 将TableDemo布局片段添加到贡献部分。
 * 将表单元格绑定到视频中显示的相应表单数据模型元素

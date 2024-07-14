@@ -21,11 +21,11 @@ ht-degree: 0%
 
 # 页面模板 {#page-templates}
 
-在本章中，我们将探讨页面模板与页面之间的关系。 我们将基于来自的一些模型构建一个无样式的杂志文章模板 [AdobeXD](https://www.adobe.com/products/xd.html). 在构建模板的过程中，将涵盖核心组件和高级策略配置。
+在本章中，我们将探讨页面模板与页面之间的关系。 我们将根据[AdobeXD](https://www.adobe.com/products/xd.html)的一些模型构建一个无样式的杂志文章模板。 在构建模板的过程中，将涵盖核心组件和高级策略配置。
 
 ## 先决条件 {#prerequisites}
 
-这是一个多部分教程，假定其中包含了 [创作内容和发布更改](./author-content-publish.md) 章节已完成。
+这是一个多部分教程，并假定已完成[创作内容和发布更改](./author-content-publish.md)章节中概述的步骤。
 
 ## 目标
 
@@ -41,11 +41,11 @@ ht-degree: 0%
 
 创建页面时，必须选择一个模板，该模板用作创建新页面的基础。 模板定义生成页面的结构、初始内容和允许的组件。
 
-有3个主要区域 [页面模板](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=zh-Hans)：
+[页面模板](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=zh-Hans)有3个主要区域：
 
-1. **结构**  — 定义属于模板一部分的组件。 内容作者无法编辑这些内容。
-1. **初始内容**  — 定义模板开始的组件，内容作者可以编辑和/或删除这些组件
-1. **策略**  — 定义有关组件的行为方式以及作者可用的选项的配置。
+1. **结构** — 定义模板中的组件。 内容作者无法编辑这些内容。
+1. **初始内容** — 定义模板开始的组件，这些组件可由内容作者编辑和/或删除
+1. **策略** — 定义有关组件的行为方式以及作者可用的选项的配置。
 
 接下来，在AEM中创建一个与模型结构匹配的新模板。 这将发生在AEM的本地实例中。 按照以下视频中的步骤进行操作：
 
@@ -58,11 +58,11 @@ ht-degree: 0%
 
 ### 解决方案包
 
-已完成 [杂志模板的解决方案](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.1.zip) 可以通过包管理器下载和安装。
+可以通过包管理器下载并安装已完成的杂志模板](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.1.zip)的[解决方案。
 
 ## 使用体验片段更新页眉和页脚 {#experience-fragments}
 
-创建全局内容（如页眉或页脚）时的常见做法是使用 [体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html). 体验片段，允许用户组合多个组件以创建单个可引用的组件。 体验片段具有支持多站点管理和 [本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure).
+创建全局内容（如页眉或页脚）时的常见做法是使用[体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 体验片段，允许用户组合多个组件以创建单个可引用的组件。 体验片段具有支持多站点管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)的优势。
 
 站点模板生成了页眉和页脚。 接下来，更新体验片段以匹配模型。 按照以下视频中的步骤进行操作：
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 下面是视频的高级步骤：
 
-1. 下载示例内容包 **[WKND-Starter-Assets-Skate-Article-1.2.zip](assets/page-templates/WKND-Starter-Assets-Skate-Article-1.2.zip)**.
+1. 下载示例内容包&#x200B;**[WKND-Starter-Assets-Skate-Article-1.2.zip](assets/page-templates/WKND-Starter-Assets-Skate-Article-1.2.zip)**。
 1. 使用包管理器上载并安装内容包。
 1. 更新页眉和页脚体验片段以使用WKND徽标
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
 
-使用 [提供的文本](./assets/page-templates/la-skateparks-copy.txt) 以填充文章正文。
+使用[提供的文本](./assets/page-templates/la-skateparks-copy.txt)填充文章正文。
 
 ## 恭喜！ {#congratulations}
 
@@ -88,8 +88,8 @@ ht-degree: 0%
 
 ### 后续步骤 {#next-steps}
 
-此时，杂志文章页面和站点与WKND的品牌样式不匹配。 请遵循 [主题](theming.md) 本教程将介绍更新用于将全局样式应用于站点的CSS和Javascript前端代码的最佳实践。
+此时，杂志文章页面和站点与WKND的品牌样式不匹配。 按照[主题](theming.md)教程了解更新用于将全局样式应用于站点的CSS和Javascript前端代码的最佳实践。
 
 ### 解决方案包
 
-本章的解决方案包可供下载： [WKND-Magazine-Template-SOLUTION-1.0.zip](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.0.zip).
+本章的解决方案包可供下载： [WKND-Magazine-Template-SOLUTION-1.0.zip](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.0.zip)。

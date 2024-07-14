@@ -26,17 +26,17 @@ AEM Forms提供了大量现成的提交选项，可满足大多数用例的要�
 
 ## 创建AEM项目
 
-如果您已经有一个现有的AEM FormsCloud Service项目，您可以 [跳转至编写自定义提交服务](#Write-the-custom-submit-service)
+如果您已经有一个现有的AEM FormsCloud Service项目，您可以[跳到编写自定义提交服务](#Write-the-custom-submit-service)
 
 * 在c驱动器上创建一个名为cloudmanager的文件夹。
 * 导航到此新创建的文件夹
-* 复制并粘贴以下项的内容： [此文本文件](./assets/creating-maven-project.txt) 命令提示符窗口中。您可能需要根据以下条件更改DarchetypeVersion=41： [最新版本](https://github.com/adobe/aem-project-archetype/releases). 在撰写本文时，最新版本是41。
+* 在命令提示符窗口中复制并粘贴[此文本文件](./assets/creating-maven-project.txt)的内容。根据[最新版本](https://github.com/adobe/aem-project-archetype/releases)，您可能必须更改DarchetypeVersion=41。 在撰写本文时，最新版本是41。
 * 按Enter键执行命令。如果一切运行正常，您应会看到生成成功消息。
 
 ## 编写自定义提交服务{#Write-the-custom-submit-service}
 
-启动IntelliJ并打开AEM项目。 创建一个名为的新Java类 **HandleRegistrationFormSubmit** 如下面的屏幕快照所示
-![custom-submit-service](./assets/custom-submit-service.png)
+启动IntelliJ并打开AEM项目。 创建一个名为&#x200B;**HandleRegistrationFormSubmission**的新Java类，如下面的屏幕快照所示
+![自定义提交服务](./assets/custom-submit-service.png)
 
 为实施服务编写了以下代码
 
@@ -88,9 +88,9 @@ public class HandleRegistrationFormSubmission implements FormSubmitActionService
 
 ## 在应用程序下创建crx节点
 
-展开ui.apps节点，创建一个名为的新包 **HandleRegistrationFormSubmit** 在应用程序节点下，如下面的屏幕快照中所示
-![crx-node](./assets/crx-node.png)
-在 **HandleRegistrationFormSubmit**. 将以下代码复制并粘贴到.content.xml中
+展开ui.apps节点，在应用程序节点下创建一个名为&#x200B;**HandleRegistrationFormSubmission**的新包，如下面的屏幕快照所示
+![crx节点](./assets/crx-node.png)
+在**HandleRegistrationFormSubmission**&#x200B;下创建名为.content.xml的文件。 将以下代码复制并粘贴到.content.xml中
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -102,7 +102,7 @@ public class HandleRegistrationFormSubmission implements FormSubmitActionService
     submitService="Core Custom AF Submit"/>
 ```
 
-的值 **submittservice** 元素必须匹配  **serviceName = &quot;核心自定义AF提交&quot;** 在FormSubmitActionService实施中。
+**submitService**&#x200B;元素的值必须与FormSubmitActionService实现中的&#x200B;**serviceName = &quot;Core Custom AF Submit&quot;**&#x200B;匹配。
 
 ## 将代码部署到本地AEM Forms实例
 
@@ -118,7 +118,7 @@ mvn clean install -PautoInstallSinglePackage
 ## 将代码推送到Cloud Manager并部署代码
 
 在本地实例上验证代码后，将代码推送到您的云实例。
-将更改推送到本地Git存储库，然后推送到Cloud Manager存储库。 您可参阅  [Git设置](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html)， [将AEM项目推送到cloud manager存储库](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html) 和 [部署到开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html) 文章。
+将更改推送到本地Git存储库，然后推送到Cloud Manager存储库。 您可以参考[Git设置](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html)、[将AEM项目推送到Cloud Manager存储库](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html)和[部署到开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html)文章。
 
 成功执行管道后，您应该能够将表单的提交操作关联到自定义提交处理程序，如下面的屏幕快照所示
 ![提交操作](./assets/configure-submit-action.png)

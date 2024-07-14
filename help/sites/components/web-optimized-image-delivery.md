@@ -1,6 +1,6 @@
 ---
 title: Web优化图像交付
-description: 了解如何使用AEM核心组件在AEMas a Cloud Service站点上启用Web优化图像交付。
+description: 了解如何使用AEM核心组件在AEM as a Cloud Service网站上启用Web优化图像交付。
 version: Cloud Service
 feature: Core Components, Configuring, Editable Templates
 topic: Performance, Administration
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Web优化图像交付
 
-了解如何使用AEM核心组件在AEMas a Cloud Service站点上启用Web优化图像交付。
+了解如何使用AEM核心组件在AEM as a Cloud Service网站上启用Web优化图像交付。
 
 >[!VIDEO](https://video.tv.adobe.com/v/346064?quality=12&learn=on)

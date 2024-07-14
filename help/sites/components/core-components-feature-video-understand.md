@@ -34,4 +34,4 @@ AEM核心组件是与Adobe Experience Manager一起使用的一组标准组件�
 
 * [GitHub项目](https://github.com/adobe/aem-core-wcm-components)
 * [核心组件示例](https://www.aemcomponents.dev/)
-* [核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)

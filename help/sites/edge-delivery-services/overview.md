@@ -24,7 +24,7 @@ ht-degree: 18%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
 
-查看 [文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) 有关Edge Delivery Services及其功能的完整详细信息。
+有关Edge Delivery Services及其功能的完整详细信息，请查看[文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview)。
 
 ## Edge Delivery Services 快速入门
 
@@ -70,7 +70,8 @@ ht-degree: 18%
             <a href="./developing/aem-boilerplate.md" title="使用样板模板"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="设置样板">
+                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="设置
+                样板">
             </a>
           </figure>
         </div>
@@ -110,7 +111,7 @@ ht-degree: 18%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/content-repository.md" title="链接Google Drive">链接Google Drive</a>
+              <a href="./developing/content-repository.md" title="链接Google Drive">链接Google驱动器</a>
             </p>
             <p class="is-size-6">使用Google Drive作为所有内容的存储库。</p>
             <a href="./developing/content-repository.md" class="spectrum-Button
@@ -160,10 +161,10 @@ ht-degree: 18%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/preview-and-publish.md" title="预览和发布内容"
+            <a href="./developing/preview-and-publish.md" title="预览和Publish内容"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="预览和发布内容">
+                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="预览和Publish内容">
             </a>
           </figure>
         </div>
@@ -172,7 +173,7 @@ ht-degree: 18%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/preview-and-publish.md" title="预览和发布内容">预览和发布内容</a>
+              <a href="./developing/preview-and-publish.md" title="预览和Publish内容">预览和发布内容</a>
             </p>
             <p class="is-size-6">使用AEM Sidekick预览和发布内容。</p>
             <a href="./developing/preview-and-publish.md" class="spectrum-Button
@@ -401,7 +402,7 @@ ht-degree: 18%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/delete-page.md" title="删除页面">删除页面</a>
+              <a href="./how-to/delete-page.md" title="删除页面">正在删除页面</a>
             </p>
             <p class="is-size-6">了解如何删除页面。</p>
             <a href="./how-to/delete-page.md" class="spectrum-Button

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Cloud 5 — 存储库现代化器
 
-这些人员将介绍存储库现代化器如何帮助您过渡到AEMas a Cloud Service，并提供有关其工作方式及其原因的有用概述。
+这些人员将介绍存储库现代化器如何帮助您过渡到AEM as a Cloud Service，并提供有关其工作方式及其原因的有用概述。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342865?quality=12&learn=on)
 

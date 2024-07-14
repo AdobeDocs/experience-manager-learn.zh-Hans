@@ -33,7 +33,7 @@ AEM收件箱可整合来自各种AEM组件(包括Forms工作流程)的通知和�
 ## 列自定义
 
 [打开AEM收件箱](http://localhost:4502/aem/inbox)
-通过单击 _列表视图_ 图标，然后选择 _管理员控制_ 如下面的屏幕快照所示
+单击_列表视图_&#x200B;图标，然后选择&#x200B;_管理员控件_&#x200B;以打开“管理员控件”，如下面的屏幕快照所示
 
 ![admin-control](assets/open-customization.png)
 
@@ -52,7 +52,7 @@ AEM收件箱可整合来自各种AEM组件(包括Forms工作流程)的通知和�
 * 自定义帮助链接
 * 隐藏导航选项
 
-![收件箱品牌化](assets/branding-customization.PNG)
+![收件箱品牌](assets/branding-customization.PNG)
 
 ## 后续步骤
 

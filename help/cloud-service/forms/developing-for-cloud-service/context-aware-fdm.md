@@ -32,9 +32,10 @@ ht-degree: 7%
 
 
 以下屏幕截图显示了定义的azure_key和azure_connection_string环境变量
-![environment_variable](assets/environment-variables.png)
+![environment_variables](assets/environment-variables.png)
 
-然后，可以在要在相应环境中使用的配置文件中指定这些环境变量。例如，如果您希望您的所有创作实例都使用这些环境变量，您将在config.author文件夹中定义配置文件，如下所示
+然后，可以在配置文件中指定这些环境变量以在相应的环境中使用
+例如，如果您希望所有创作实例都使用这些环境变量，则将在config.author文件夹中定义配置文件，如下所示
 
 ## 创建配置文件
 
@@ -46,7 +47,7 @@ org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integr
 
 ![config.author](assets/config-author.png)
 
-将以下文本复制到上一步中创建的文件中。 此文件中的代码正在使用环境变量覆盖accountName和accountKey属性的值 **azure_connection_string** 和 **azure_key**.
+将以下文本复制到上一步中创建的文件中。 此文件中的代码正在使用环境变量&#x200B;**azure_connection_string**&#x200B;和&#x200B;**azure_key**&#x200B;覆盖accountName和accountKey属性的值。
 
 ```json
 {
@@ -66,7 +67,7 @@ org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integr
 >[!NOTE]
 > 请确保要覆盖的属性是云配置的有效属性。 导航到云配置以查找要覆盖的属性，如下所示。
 
-![cloud-config-property](assets/cloud-config-properties.png)
+![云配置属性](assets/cloud-config-properties.png)
 
 对于使用基本身份验证的基于REST的云配置，您通常希望为serviceEndPoint、userName和密码属性创建环境变量。
 

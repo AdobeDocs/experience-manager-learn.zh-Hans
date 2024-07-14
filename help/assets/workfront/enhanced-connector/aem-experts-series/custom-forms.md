@@ -28,4 +28,4 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/340332?quality=12&learn=on)
 
-_a的第二部分 [关于Workfront for Experience Manager增强型连接器的四部分专家系列](./overview.md)_
+_Workfront for Experience Manager增强型连接器的[四部分Expert系列的第二部分](./overview.md)_

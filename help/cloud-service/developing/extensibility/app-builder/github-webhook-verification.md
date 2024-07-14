@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 jira: KT-15714
 last-substantial-update: 2023-06-06T00:00:00Z
-source-git-commit: 4b9f784de5fff7d9ba8cf7ddbe1802c271534010
+exl-id: 5492dc7b-f034-4a7f-924d-79e083349e26
+source-git-commit: 8f64864658e521446a91bb4c6475361d22385dc1
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
 
 ---
-
 
 # Github.com webhook验证
 
@@ -22,9 +22,9 @@ Webhook允许您构建或设置可订阅GitHub.com上特定事件的集成。 �
 
 ## 在AppBuilder中设置Github密钥
 
-1. **将密码添加到 `.env` 文件：**
+1. **向`.env`文件添加密钥：**
 
-   在App Builder项目的 `.env` 文件，为GitHub.com webhook密钥添加自定义密钥：
+   在App Builder项目的`.env`文件中，为GitHub.com webhook密钥添加自定义密钥：
 
    ```env
    # Specify your secrets here
@@ -33,15 +33,15 @@ Webhook允许您构建或设置可订阅GitHub.com上特定事件的集成。 �
    GITHUB_SECRET=my-github-webhook-secret-1234!
    ```
 
-2. **更新 `ext.config.yaml` 文件：**
+2. **更新`ext.config.yaml`文件：**
 
-   此 `ext.config.yaml` 必须更新文件以验证GitHub.com webhook请求。
+   必须更新`ext.config.yaml`文件以验证GitHub.com webhook请求。
 
-   - 设置AppBuilder操作 `web` 配置到 `raw` 从GitHub.com接收原始请求正文。
-   - 下 `inputs` 在AppBuilder操作配置中，添加 `GITHUB_SECRET` 键，将其映射到 `.env` 包含密码的字段。 此键的值为 `.env` 以为前缀的字段名称 `$`.
-   - 设置 `require-adobe-auth` AppBuilder操作配置中的注释用于 `false` 允许在不需要Adobe身份验证的情况下调用操作。
+   - 将AppBuilder操作`web`配置设置为`raw`以从GitHub.com接收原始请求正文。
+   - 在AppBuilder操作配置中的`inputs`下，添加`GITHUB_SECRET`密钥，并将其映射到包含该密钥的`.env`字段。 此键的值是以`$`为前缀的`.env`字段名称。
+   - 将AppBuilder操作配置中的`require-adobe-auth`注释设置为`false`以允许在不需要Adobe身份验证的情况下调用操作。
 
-   结果 `ext.config.yaml` 文件应如下所示：
+   生成的`ext.config.yaml`文件应如下所示：
 
    ```yaml
    operations:
@@ -69,7 +69,7 @@ Webhook允许您构建或设置可订阅GitHub.com上特定事件的集成。 �
 
 ## 将验证代码添加到AppBuilder操作
 
-接下来，添加下面提供的JavaScript代码(复制自 [GitHub.com文档](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries#javascript-example))，以执行您的AppBuilder操作。 确保导出 `verifySignature` 函数。
+接下来，将下面提供的JavaScript代码（复制自[GitHub.com的文档](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries#javascript-example)）添加到您的AppBuilder操作中。 确保导出`verifySignature`函数。
 
 ```javascript
 // src/dx-excshell-1/actions/generic/github-webhook-verification.js
@@ -124,9 +124,9 @@ module.exports = { verifySignature };
 
 ## 在AppBuilder操作中实施验证
 
-接下来，通过将请求标头中的签名与生成的签名进行比较，验证请求是否来自GitHub `verifySignature` 函数。
+接下来，通过将请求标头中的签名与`verifySignature`函数生成的签名进行比较，验证请求是否来自GitHub。
 
-在AppBuilder操作的 `index.js`，将以下代码添加到 `main` 函数：
+在AppBuilder操作的`index.js`中，将以下代码添加到`main`函数中：
 
 
 ```javascript
@@ -208,10 +208,10 @@ async function main(params) {
 
 ## 在GitHub中配置webhook
 
-返回GitHub.com，在创建webhook时向GitHub.com提供相同的机密值。 使用在中指定的机密值 `.env` 文件 `GITHUB_SECRET` 键。
+返回GitHub.com，在创建webhook时向GitHub.com提供相同的机密值。 使用在`.env`文件的`GITHUB_SECRET`密钥中指定的机密值。
 
-在GitHub.com中，转到存储库设置，并编辑webhook。 在webhook设置中，提供密码值 `Secret` 字段。 单击 __更新webhook__ 以保存更改。
+在GitHub.com中，转到存储库设置，并编辑webhook。 在webhook设置中，在`Secret`字段中提供机密值。 单击底部的&#x200B;__更新webhook__&#x200B;以保存更改。
 
 ![Github Webhook密码](./assets/github-webhook-verification/github-webhook-settings.png)
 
-通过执行以下步骤，您可以确保您的App Builder操作可以安全地验证传入webhook请求是否确实来自您的GitHub.com webhook。
+按照以下步骤操作，您将确保App Builder操作可以安全地验证传入webhook请求确实来自您的GitHub.com webhook。

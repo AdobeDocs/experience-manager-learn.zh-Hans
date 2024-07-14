@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 在AEM Forms JEE中重置管理员的默认密码的步骤
 
-*本视频介绍在AEM Forms JEE中重置管理员的默认密码的步骤。*
+*本视频介绍在AEM Forms JEE中为管理员重置默认密码的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335541?quality=12&learn=on)

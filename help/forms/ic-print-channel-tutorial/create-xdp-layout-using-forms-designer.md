@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 使用Forms Designer创建布局 {#create-layout-using-forms-designer}
 
-在本部分中，我们查看使用AEM Forms Designer创建的布局文件。
+在本部分中，我们将查看使用AEM Forms Designer创建的布局文件。
 
 每个打印渠道文档都基于使用AEM Forms Designer工具创建的模板。 通常，您可以在模板中创建用于存放文档片段、图像或布局片段的区域或目标区域。 理想情况下，布局中不会定义任何内容。 此操作会将布局与内容分离，这是推荐的做法。
 

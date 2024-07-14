@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## 配置工作流
 
-1. [在编辑模式下打开工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/MergeAcroformData.html).
+1. [在编辑模式下打开工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/MergeAcroformData.html)。
 2. 打开MergeAcroformData步骤的配置属性。
 3. 单击“流程”选项卡。
 4. 确保您传递的参数是服务器上的有效文件夹。
@@ -33,7 +33,7 @@ ht-degree: 1%
 1. 使用上一步中创建的架构创建自适应表单。
 2. 将几个架构元素拖放到自适应表单上。
 3. 配置自适应表单的提交操作以提交到AEM Workflow (MergeAcroformData)。
-4. **确保将数据文件路径指定为“Data.xml”。 这一点非常重要，因为示例代码将在工作流有效载荷中查找名为Data.xml的文件。**
+4. **请确保将数据文件路径指定为“Data.xml”。 这一点非常重要，因为示例代码将在工作流有效负载中查找名为Data.xml的文件。**
 5. 预览自适应表单、填写表单并提交。
 6. 您应会在配置工作流下看到与合并的数据一起保存到PDF步骤4中指定的文件夹中的数据
 

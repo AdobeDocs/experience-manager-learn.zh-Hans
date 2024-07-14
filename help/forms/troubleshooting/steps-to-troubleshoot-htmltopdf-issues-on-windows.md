@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 在Windows设置中对HtmltoPDF特定问题进行故障排除的步骤
 
-*本视频介绍对Windows设置中的HtmltoPDF特定问题进行故障排除的过程。*
+*此视频介绍对Windows安装程序中的HtmltoPDF特定问题进行故障排除的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335545?quality=12&learn=on)

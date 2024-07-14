@@ -30,11 +30,11 @@ ht-degree: 1%
 
 * 已安装表单附加组件包的AEM工作实例
 
-* **假定您正在localhost：4502上运行AEM Forms版本6.4或更高版本。**
+* **假定您运行的是localhost：4502.**&#x200B;上的AEM Forms 6.4或更高版本
 
-* [下载client-libs-and-logo](assets/client-libs-and-logo.zip) 和 [getting-started-fragment](assets/getting-started-fragment.zip) 到您的硬盘上。
+* [将client-libs-and-logo](assets/client-libs-and-logo.zip)和[getting-started-fragment](assets/getting-started-fragment.zip)下载到您的硬盘。
 
-* 使用以下方式将zip文件导入AEM [包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)将zip文件导入AEM
 
 ## 后续步骤
 

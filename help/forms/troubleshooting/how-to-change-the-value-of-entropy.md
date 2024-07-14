@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何更改熵值
 
-*本视频介绍更改熵值的步骤。*
+*此视频介绍更改熵值的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335494?quality=12&learn=on)

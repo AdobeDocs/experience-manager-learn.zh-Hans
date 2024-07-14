@@ -1,5 +1,5 @@
 ---
-title: 在Forms Designer中将表单字段绑定到Mysql支持的数据源
+title: 将表单字段绑定到Forms Designer中的Mysql支持的数据源
 description: 介绍将AEM表单绑定到MySql数据库的简短视频
 version: 6.5
 feature: Forms Designer,Designer

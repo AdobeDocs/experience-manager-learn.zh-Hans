@@ -24,7 +24,7 @@ ht-degree: 1%
 * 创建预填充服务
 * 生成交互式通信文档
 
-服务名称 `ccm-print-test` 用于访问此服务。 定义此预填充服务后，您可以在servlet或工作流流程步骤实施中访问此服务以生成打印渠道文档。
+服务名称`ccm-print-test`用于访问此服务。 定义此预填充服务后，您可以在servlet或工作流流程步骤实施中访问此服务以生成打印渠道文档。
 
 ```java
 package com.acrobatsign.core;
@@ -318,4 +318,4 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
 
 ## 后续步骤
 
-写入 [用于公开Acrobat Sign API的OSGi服务包装器](./wrapper-sign-api.md)
+编写[OSGi服务包装器以公开Acrobat Sign API](./wrapper-sign-api.md)

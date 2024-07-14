@@ -20,7 +20,7 @@ ht-degree: 0%
 
 本文将指导您完成从数据库中保存和检索自适应表单数据所涉及的步骤。 MySQL数据库用于存储自适应表单数据。 从较高层面来看，以下是实施用例的步骤：
 
-* [配置数据源](#Configure-Data-Source)
+* [配置数据Source](#Configure-Data-Source)
 * [创建Servlet以将数据写入数据库](#create-servlet)
 * [创建OSGI服务以提取存储的数据](#create-osgi-service)
 * [创建客户端库](#create-client-library)
@@ -28,17 +28,17 @@ ht-degree: 0%
 * [功能演示](#capability-demo)
 * [在您的服务器上部署](#deploy-on-your-server)
 
-## 配置数据源 {#Configure-Data-Source}
+## 配置数据Source {#Configure-Data-Source}
 
 Apache Sling连接池化数据源配置为指向将用于存储自适应表单数据的数据库。 以下屏幕截图显示了我的实例的配置。 可以复制和粘贴以下属性
 
-* `Datasource Name:aemformstutorial`  — 这是我的代码中使用的名称。
+* `Datasource Name:aemformstutorial` — 这是我的代码中使用的名称。
 
 * `JDBC Driver Class:com.mysql.jdbc.Driver`
 
 * `JDBC Connection URL:jdbc:mysql://localhost:3306/aemformstutorial`
 
-![connectionpool](assets/storingdata.PNG)
+![连接池](assets/storingdata.PNG)
 
 ### 创建Servlet {#create-servlet}
 

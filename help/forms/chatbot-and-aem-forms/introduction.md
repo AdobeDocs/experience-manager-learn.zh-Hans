@@ -20,9 +20,9 @@ ht-degree: 2%
 
 欢迎访问我们关于使用ChatBot使用Adobe Experience Manager Forms (AEM Forms)填写PDF表单并将其发送以使用Adobe Sign进行数字签名的教程。
 
-创建ChatBot时使用的是 [聊天机器人](https://www.chatbot.com/).
+已使用[聊天机器人](https://www.chatbot.com/)创建ChatBot。
 
-在本教程中，我们将将ChatBot中捕获的数据与 [W-9表单](assets/fw9.xdp)
+在本教程中，我们将将ChatBot中捕获的数据与[W-9表单](assets/fw9.xdp)合并
 
 以下视频演示了该用例。
 
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 * 体验AEM Forms。
 * 很好地了解AEM Forms OutputService。
-* 体验AEM Forms Designer。
+* AEM Forms Designer使用体验。
 
 ## 后续步骤
 

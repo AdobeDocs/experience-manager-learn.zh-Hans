@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 检查和安装所需的32位Microsoft Visual C++可再发行组件的步骤
 
-*本视频介绍检查和安装所需的32位Microsoft Visual C++可再发行组件的过程。*
+*此视频介绍检查和安装所需的32位Microsoft Visual C++可再发行组件的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335520?quality=12&learn=on)

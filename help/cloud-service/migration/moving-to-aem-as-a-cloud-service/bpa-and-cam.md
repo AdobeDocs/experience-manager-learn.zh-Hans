@@ -1,6 +1,6 @@
 ---
 title: 设置BPA和CAM项目
-description: 了解Best Practices Analyzer和Cloud Acceleration Manager如何提供有关迁移到AEMas a Cloud Service的自定义指南。
+description: 了解Best Practices Analyzer和Cloud Acceleration Manager如何提供有关迁移到AEM as a Cloud Service的自定义指南。
 version: Cloud Service
 feature: Developer Tools
 topic: Migration, Upgrade
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # Best Practices Analyzer和Cloud Acceleration Manager
 
-了解Best Practices Analyzer (BPA)和Cloud Acceleration Manager (CAM)如何提供有关迁移到AEMas a Cloud Service的自定义指南。 
+了解Best Practices Analyzer (BPA)和Cloud Acceleration Manager (CAM)如何提供有关迁移到AEM as a Cloud Service的自定义指南。 
 
 >[!VIDEO](https://video.tv.adobe.com/v/336957?quality=12&learn=on)
 
@@ -27,14 +27,14 @@ ht-degree: 2%
 
 ![BPA和CAM高级图](assets/bpa-cam-diagram.png)
 
-BPA软件包应安装在AEM 6.x生产环境的克隆上。 BPA将生成一份报告，之后可将其上载到CAM中，该报告将指导您完成迁移到AEMas a Cloud Service所需的关键操作。
+BPA软件包应安装在AEM 6.x生产环境的克隆上。 BPA将生成一份可以上传到CAM的报告，该报告将指导您完成迁移到AEM as a Cloud Service所需的关键操作。
 
 ## 关键活动
 
 + 克隆生产6.x环境。 在迁移内容和重构代码时，克隆生产环境对于测试各种工具和更改很有用。
-+ 从下载最新的BPA工具 [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) 并在您的AEM 6.x克隆环境中安装。
-+ 使用BPA工具生成可上传到Cloud Acceleration Manager (CAM)的报告。 通过访问CAM [https://experience.adobe.com/](https://experience.adobe.com/) > **Experience Manager** > **Cloud Acceleration Manager**.
-+ 使用CAM提供有关当前代码库和环境需要哪些更新才能移至AEMas a Cloud Service的指导。
++ 从[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)下载最新的BPA工具，并安装在您的AEM 6.x克隆环境中。
++ 使用BPA工具生成可上传到Cloud Acceleration Manager (CAM)的报告。 可通过[https://experience.adobe.com/](https://experience.adobe.com/) > **Experience Manager** > **Cloud Acceleration Manager**&#x200B;访问CAM。
++ 使用CAM提供有关当前代码库和环境需要哪些更新才能迁移到AEM as a Cloud Service的指导。
 
 ## 实践练习
 
@@ -42,11 +42,11 @@ BPA软件包应安装在AEM 6.x生产环境的克隆上。 BPA将生成一份报
 
 在尝试动手练习之前，请确保您已观看并了解上述视频以及以下材料：
 
-+ [以不同的方式思考AEMas a Cloud Service](./introduction.md)
-+ [什么是AEMas a Cloud Service？](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=en)
++ [以不同的方式思考AEM as a Cloud Service](./introduction.md)
++ [什么是AEM as a Cloud Service？](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=en)
 + [AEM as a Cloud Service 的架构](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=en)
-+ [可变和不可变内容](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=en)
-+ [针对AEMas a Cloud Service和AEM 6.x进行开发的差异](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#developing)
++ [可变和不可变的内容](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=en)
++ [AEM as a Cloud Service和AEM 6.x在开发方面的差异](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#developing)
 
 <table style="border-width:0">
     <tr>
@@ -64,7 +64,7 @@ BPA软件包应安装在AEM 6.x生产环境的克隆上。 BPA将生成一份报
             <a  rel="noreferrer"
                 target="_blank"
                 href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session1-differently#bootcamp---session-1-introduction-and-thinking-differently" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">尝试使用最佳实践分析器</span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">尝试使用Best Practices Analyzer</span>
             </a>
         </td>
     </tr>

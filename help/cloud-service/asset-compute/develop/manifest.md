@@ -20,17 +20,17 @@ ht-degree: 0%
 
 # 配置manifest.yml
 
-此 `manifest.yml`位于部署项目的根目录中的，描述了此项目中要Asset compute的所有工作程序。
+位于Asset compute项目根目录中的`manifest.yml`描述了此项目中要部署的所有工作程序。
 
 ![manifest.yml](./assets/manifest/manifest.png)
 
 ## 默认工作人员定义
 
-工作人员在下被定义为Adobe I/O Runtime操作条目 `actions`，由一组配置组成。
+辅助进程被定义为`actions`下的Adobe I/O Runtime操作条目，由一组配置组成。
 
-访问其他Adobe I/O集成的工作者必须设置 `annotations -> require-adobe-auth` 属性至 `true` 如下所示 [公开工作人员的Adobe I/O凭据](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) 通过 `params.auth` 对象。 当工作进程调用Adobe I/OAPI(例如Adobe Photoshop、Lightroom或Sensei API)时，通常需要此项，并且每个工作进程可以切换。
+访问其他Adobe I/O集成的工作程序必须将`annotations -> require-adobe-auth`属性设置为`true`，因为此[通过`params.auth`对象公开工作程序的Adobe I/O凭据](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 当工作进程调用Adobe I/OAPI(例如Adobe Photoshop、Lightroom或Sensei API)时，通常需要此项，并且每个工作进程可以切换。
 
-1. 打开并查看自动生成的工作人员 `manifest.yml`. 包含多个Asset compute工作程序的项目，必须在下为每个工作人员定义一个条目 `actions` 数组。
+1. 打开并查看自动生成的辅助进程`manifest.yml`。 包含多个Asset compute工作程序的项目，必须为`actions`数组下的每个工作程序定义一个条目。
 
 ```yml
 packages:
@@ -49,11 +49,11 @@ packages:
 
 ## 定义限制
 
-每个工作人员可以配置 [限制](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) 以了解其在Adobe I/O Runtime中的执行上下文。 应根据工作人员将计算的资产数量、比率、类型以及所执行的工作类型，调整这些值，以便为工作人员提供最佳规模。
+每个辅助进程都可以在Adobe I/O Runtime中为其执行上下文配置[限制](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)。 应根据工作人员将计算的资产数量、比率、类型以及所执行的工作类型，调整这些值，以便为工作人员提供最佳规模。
 
-审核 [Adobe大小调整指南](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers) 设置限制之前。 asset compute工作程序在处理资源时可能会耗尽内存，从而导致Adobe I/O Runtime执行被终止，因此请确保该工作程序具有适当的大小以处理所有候选资源。
+在设置限制之前查看[Adobe大小调整指南](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 asset compute工作程序在处理资源时可能会耗尽内存，从而导致Adobe I/O Runtime执行被终止，因此请确保该工作程序具有适当的大小以处理所有候选资源。
 
-1. 添加 `inputs` 部分 — 新 `wknd-asset-compute` 操作条目。 这允许调整Asset compute工作程序的总体性能和资源分配。
+1. 向新的`wknd-asset-compute`操作条目添加`inputs`部分。 这允许调整Asset compute工作程序的总体性能和资源分配。
 
 ```yml
 packages:
@@ -75,7 +75,7 @@ packages:
 
 ## 完成的manifest.yml
 
-最终的 `manifest.yml` 类似于：
+最终`manifest.yml`如下所示：
 
 ```yml
 packages:
@@ -96,14 +96,14 @@ packages:
 
 ## Github上的manifest.yml
 
-最终的 `.manifest.yml` 可在Github上获取，网址为：
+Github上的最终`.manifest.yml`位于：
 
 + [aem-guides-wknd-asset-compute/manifest.yml](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/manifest.yml)
 
 
 ## 正在验证manifest.yml
 
-生成的Asset compute后 `manifest.yml` ，运行本地开发工具，并确保使用更新后的成功启动 `manifest.yml` 设置。
+更新生成的Asset compute`manifest.yml`后，运行本地开发工具并确保使用更新的`manifest.yml`设置成功启动。
 
 要为Asset compute项目启动Asset compute开发工具，请执行以下操作：
 
@@ -113,12 +113,12 @@ packages:
    $ aio app run
    ```
 
-1. 本地Asset compute开发工具将在您的默认Web浏览器中打开，网址为 __http://localhost:9000__.
+1. 本地Asset compute开发工具将在默认Web浏览器中打开，网址为&#x200B;__http://localhost:9000__。
 
-   ![aio应用程序运行](assets/environment-variables/aio-app-run.png)
+   ![aio应用运行](assets/environment-variables/aio-app-run.png)
 
 1. 在开发工具初始化时，请观察命令行输出和Web浏览器中的错误消息。
-1. 要停止“Asset compute开发工具”，请点按 `Ctrl-C` 在窗口中执行 `aio app run` 以终止进程。
+1. 要停止Asset compute开发工具，请点按执行`aio app run`的窗口中的`Ctrl-C`以终止进程。
 
 ## 疑难解答
 

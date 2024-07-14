@@ -8,8 +8,8 @@ doc-type: Catalog
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 14%
+source-wordcount: '112'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +30,7 @@ Experience Manager Assets Essentials提供了简化的用户界面，以实现�
    </a>
    <div>
       <a href="./basics/managing.md">
-      <strong>Assets Essentials快速入门</strong>
+      <strong>Assets Essentials入门</strong>
       </a>
    </div>
    <p>
@@ -47,7 +47,7 @@ Experience Manager Assets Essentials提供了简化的用户界面，以实现�
       </a>
    </div>
    <p>
-      <em>请查看Assets Essentials产品文档！</em>
+      <em>查看Assets Essentials产品文档！</em>
    <p>
 </td>
 <td>

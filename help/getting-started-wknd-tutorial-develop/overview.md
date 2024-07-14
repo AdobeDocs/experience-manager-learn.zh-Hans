@@ -36,17 +36,17 @@ ht-degree: 5%
 
 启动AEM Sites项目有两种基本方法。
 
-**AEM项目原型**  — 传统的AEM开发方法，通过使用Maven模板生成最小的AEM项目。 这是推荐用于预期大量自定义的AEM 6.5/6.4项目和AEMas a Cloud Service项目的方法。 本教程提供了对AEM开发的更深入探讨。
+**AEM项目原型** — 通过使用Maven模板生成最小的AEM项目来进行AEM开发的传统方法。 这是推荐用于预期大量自定义的AEM 6.5/6.4项目和AEM as a Cloud Service项目的方法。 本教程提供了对AEM开发的更深入探讨。
 
 [开始有关AEM项目原型的教程](./project-archetype/overview.md)
 
-**AEM站点模板**  — 也称为快速站点创建，这是一种使用预定义站点模板生成AEM站点的低代码方法。 使用开箱即用的组件和模板快速启动和运行站点。 使用主题化工作流，仅通过CSS和JavaScript应用品牌特定的样式和自定义项。 为新项目和开发人员推荐。 仅适用于AEMas a Cloud Service。
+**AEM站点模板** — 也称为快速站点创建，这是一种使用预定义站点模板生成AEM站点的低代码方法。 使用开箱即用的组件和模板快速启动和运行站点。 使用主题化工作流，仅通过CSS和JavaScript应用品牌特定的样式和自定义设置。 为新项目和开发人员推荐。 仅适用于AEM as a Cloud Service。
 
 [使用站点模板启动教程](./site-template/create-site.md)
 
 ## Adobe XD UI套件
 
-为了使本教程更接近于真实场景，Adobe的才华横溢的UX设计人员使用为站点创建模型 [Adobe XD](https://www.adobe.com/products/xd.html). 在本教程中，会将各种设计片段实施到完全可创作的AEM站点中。 特别感谢 **洛伦佐·布西** 和 **基利安·阿门多拉** 他为WKND网站设计了漂亮的设计。
+为了使本教程更接近真实场景Adobe的天才UX设计人员使用[Adobe XD](https://www.adobe.com/products/xd.html)为站点创建模型。 在本教程中，会将各种设计片段实施到完全可创作的AEM站点中。 特别感谢&#x200B;**Lorenzo Buosi**&#x200B;和&#x200B;**Kilian Amendola**，他们为WKND网站创造了美观的设计。
 
 下载XD UI包：
 
@@ -57,16 +57,16 @@ ht-degree: 5%
 
 WKND站点的完成版本也可用作参考： [https://wknd.site/](https://wknd.site/)
 
-本教程涵盖AEM开发人员所需的主要开发技能，但 *非* 端到端地构建整个站点。 已完成的引用站点是另一个探索和查看更多AEM开箱即用功能的有用资源。
+本教程涵盖AEM开发人员所需的主要开发技能，但&#x200B;*不会*&#x200B;端到端地构建整个站点。 已完成的引用站点是另一个探索和查看更多AEM开箱即用功能的有用资源。
 
-要在跳至本教程之前测试最新的代码，请下载并安装 **[GitHub的最新版本](https://github.com/adobe/aem-guides-wknd/releases/latest)**.
+若要在进入教程之前测试最新代码，请从GitHub下载并安装&#x200B;**[最新版本](https://github.com/adobe/aem-guides-wknd/releases/latest)**。
 
 ### 由Adobe Stock提供支持
 
-WKND参考网站中的许多图像来自 [Adobe Stock](https://stock.adobe.com/) 和为演示资产中定义的第三方材料，其他条款位于 [https://www.adobe.com/legal/terms.html](https://www.adobe.com/cn/legal/terms.html). 如果您要将Adobe Stock图像用于查看此演示网站以外的其他目的，例如将其显示在网站上或营销材料中，则可以在Adobe Stock上购买许可证。
+WKND参考网站中的许多图像来自[Adobe Stock](https://stock.adobe.com/)，并且是演示资产附加条款[https://www.adobe.com/legal/terms.html](https://www.adobe.com/cn/legal/terms.html)中定义的第三方材料。 如果您要将Adobe Stock图像用于查看此演示网站以外的其他目的，例如将其显示在网站上或营销材料中，则可以在Adobe Stock上购买许可证。
 
 借助Adobe Stock，您可以访问超过1.4亿张高质量、免版税的图像，包括照片、图形、视频和模板，从而快速启动您的创意项目。
 
 ## 后续步骤 {#next-steps}
 
-你在等什么?!了解如何 [使用AEM项目原型生成新的Adobe Experience Manager项目](./project-archetype/overview.md) 或 [使用站点模板创建站点](./site-template/create-site.md).
+你在等什么?!了解如何[使用AEM项目原型](./project-archetype/overview.md)生成新的Adobe Experience Manager项目，或[使用站点模板](./site-template/create-site.md)创建站点。

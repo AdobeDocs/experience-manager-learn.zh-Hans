@@ -27,7 +27,7 @@ https://forms.enablementadobe.com/content/forms/af/testingxml.html?FirstName=Joh
 
 要完成此用例，需创建新的自适应表单模板并将其与页面组件关联。 在此页面组件中，我们使用jsp获取查询参数并创建可用于填充自适应表单的xml结构。
 
-有关创建新的自适应表单模板和页面组件的详细信息包括 [此视频中对此进行了说明。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
+有关创建新的自适应表单模板和页面组件的详细信息[在此视频中进行了说明。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
 
 以下是在jsp页面中使用的代码
 

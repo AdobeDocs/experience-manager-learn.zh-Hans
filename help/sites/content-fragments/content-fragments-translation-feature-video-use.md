@@ -28,15 +28,15 @@ ht-degree: 2%
 
 内容片段是AEM提取并发送到外部翻译服务的已识别内容类型。 支持开箱即用的多个用例：
 
-1. 内容片段可以是 [直接在Assets控制台中选择以进行语言复制和翻译](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
+1. 可以直接在Assets控制台中为语言副本和翻译](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html)选择内容片段[。
 2. 为语言复制选择站点页面时，在站点页面上引用的内容片段将复制到相应的语言文件夹并提取以供翻译。
 3. 嵌入在内容片段中的内联媒体资产有资格进行提取和翻译。
 4. 与内容片段关联的资产收藏集符合提取和翻译的条件。
 
 ## 翻译规则编辑器 {#translation-rules-editor}
 
-可以使用更新Experience Manager翻译行为 **翻译规则编辑器**. 要更新翻译，请导航到 **工具** > **常规** > **翻译配置** 在 [http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html).
+可以使用&#x200B;**翻译Experience Manager编辑器**&#x200B;更新规则翻译行为。 要更新翻译，请在[http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)上导航到&#x200B;**工具** > **常规** > **翻译配置**。
 
-的开箱即用配置引用上的内容片段 `fragmentPath` 资源类型为 `core/wcm/components/contentfragment/v1/contentfragment`. 继承自 `v1/contentfragment` 默认配置可识别。
+开箱即用的配置引用资源类型为`core/wcm/components/contentfragment/v1/contentfragment`的`fragmentPath`处的内容片段。 默认配置可识别从`v1/contentfragment`继承的所有组件。
 
 ![翻译规则编辑器](assets/translation-configuration.png)

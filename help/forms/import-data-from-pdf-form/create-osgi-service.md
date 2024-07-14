@@ -63,7 +63,7 @@ public String getFormData(Document pdfForm) {
 }
 ```
 
-下面是用来提取 _**topmostSubForm**_ 具有适当的命名空间
+下面是编写的实用程序函数，用于提取&#x200B;_**topmostSubForm**_&#x200B;和相应的命名空间
 
 ```java
 private static org.w3c.dom.Node getChildByTagName(org.w3c.dom.Node parent, String tagName) {

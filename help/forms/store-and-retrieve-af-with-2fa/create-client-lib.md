@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 创建客户端库
 
-创建 [客户端库](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) 其中包括用于调用方法的代码 `doAjaxSubmitWithFileAttachment` 的 `guideBridge` CSS类标识的按钮的点击事件上的API **保存按钮**.  我们传递自适应表单数据， `fileMap`，和 `mobileNumber` 到侦听的端点 `**/bin/storeafdatawithattachments`
+创建[客户端库](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)，该库将包含用于在CSS类&#x200B;**保存按钮**&#x200B;标识的按钮的单击事件上调用`guideBridge` API的方法`doAjaxSubmitWithFileAttachment`的代码。  我们将自适应表单数据`fileMap`和`mobileNumber`传递到在`**/bin/storeafdatawithattachments`上侦听的终结点
 
 保存表单数据后，会生成一个唯一的应用程序ID并在对话框中向用户显示。 在禁用对话框时，用户将被带入表单，表单允许他们使用唯一的应用程序ID检索保存的自适应表单。
 
@@ -68,9 +68,9 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> 我们已经使用了 [bootbox JavaScript库](https://bootboxjs.com/examples.html) 显示对话框
+> 我们已使用[bootbox JavaScript库](https://bootboxjs.com/examples.html)来显示对话框
 
-此示例中使用的客户端库可以是 [已从此处下载。](assets/store-af-with-attachments-client-lib.zip)
+此示例中使用的客户端库可以从此处[下载。](assets/store-af-with-attachments-client-lib.zip)
 
 ## 后续步骤
 

@@ -1,5 +1,5 @@
 ---
-title: 如何解决Designer中C++库的依赖项问题
+title: 如何解决Designer中C++库的依赖性问题
 description: 为Designer安装所需的C++库
 type: Troubleshooting
 role: Developer
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# 如何解决Designer中C++库的依赖项问题
+# 如何解决Designer中C++库的依赖性问题
 
 *本视频介绍在Designer中对C++库进行依赖性问题故障排除的步骤。*
 

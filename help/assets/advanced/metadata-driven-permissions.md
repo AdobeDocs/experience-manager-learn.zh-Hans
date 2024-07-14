@@ -30,14 +30,14 @@ ht-degree: 0%
 
 ## 先决条件
 
-要设置元数据驱动权限，需要访问更新到最新版本的AEMas a Cloud Service环境。
+要设置元数据驱动权限，需要访问更新到最新版本的AEM as a Cloud Service环境。
 
 ## OSGi配置 {#configure-permissionable-properties}
 
-要实施元数据驱动权限，开发人员必须将OSGi配置部署到AEMas a Cloud Service，该配置使特定资源元数据属性能够增强元数据驱动权限。
+要实施元数据驱动权限，开发人员必须将OSGi配置部署到AEM as a Cloud Service，该配置使特定资源元数据属性能够支持元数据驱动权限。
 
-1. 确定将用于访问控制的资源元数据属性。 属性名称是资产的 `jcr:content/metadata` 资源。 在我们的案例中，它将是一个名为 `status`.
-1. 创建OSGi配置 `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` 在您的AEM Maven项目中。
+1. 确定将用于访问控制的资源元数据属性。 属性名称是资产`jcr:content/metadata`资源上的JCR属性名称。 在我们的示例中，它将是一个名为`status`的属性。
+1. 在AEM Maven项目中创建一个OSGi配置`com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json`。
 1. 将以下JSON粘贴到创建的文件中：
 
    ```json
@@ -54,33 +54,33 @@ ht-degree: 0%
 
 ## 重置基本资源权限
 
-在添加基于限制的访问控制条目之前，应添加新的顶级条目，以首先拒绝对需要评估资产（例如“参与者”或类似者）权限的所有组的读取访问：
+在添加基于限制的访问控制条目之前，应添加新的顶级条目，以首先拒绝对Assets进行权限评估的所有组（例如“参与者”或类似者）的读取访问：
 
-1. 导航至 __工具→安全→权限__ screen
-1. 选择 __参与者__ 组（或所有用户组所属的其他自定义组）
-1. 单击 __添加ACE__ 在屏幕右上角
-1. 选择 `/content/dam` 对象 __路径__
-1. 输入 `jcr:read` 对象 __权限__
-1. 选择 `Deny` 对象 __权限类型__
-1. 在限制下，选择 `rep:ntNames` 并输入 `dam:Asset` 作为 __限制值__
-1. 单击 __保存__
+1. 导航到&#x200B;__工具→安全→权限__&#x200B;屏幕
+1. 选择&#x200B;__参与者__&#x200B;组（或所有用户组所属的其他自定义组）
+1. 单击屏幕右上角的&#x200B;__添加ACE__
+1. 为&#x200B;__路径__&#x200B;选择`/content/dam`
+1. 输入`jcr:read`作为&#x200B;__权限__
+1. 为&#x200B;__权限类型__&#x200B;选择`Deny`
+1. 在“限制”下，选择`rep:ntNames`并输入`dam:Asset`作为&#x200B;__限制值__
+1. 单击&#x200B;__保存__
 
 ![拒绝访问](./assets/metadata-driven-permissions/deny-access.png)
 
 ## 按元数据授予对资源的访问权限
 
-现在可以添加访问控制条目，以根据 [已配置资源元数据属性值](#configure-permissionable-properties).
+现在可以添加访问控制条目，以根据[配置的资源元数据属性值](#configure-permissionable-properties)向用户组授予读取权限。
 
-1. 导航至 __工具→安全→权限__ screen
+1. 导航到&#x200B;__工具→安全→权限__&#x200B;屏幕
 1. 选择应具有资产访问权限的用户组
-1. 单击 __添加ACE__ 在屏幕右上角
-1. 选择 `/content/dam` （或子文件夹） __路径__
-1. 输入 `jcr:read` 对象 __权限__
-1. 选择 `Allow` 对象 __权限类型__
-1. 下 __限制__，选择其中一项 [在OSGi配置中配置的资源元数据属性名称](#configure-permissionable-properties)
-1. 在中输入所需的元数据属性值 __限制值__ 字段
-1. 单击 __+__ 图标，以将限制添加到访问控制条目
-1. 单击 __保存__
+1. 单击屏幕右上角的&#x200B;__添加ACE__
+1. 为&#x200B;__路径__&#x200B;选择`/content/dam`（或子文件夹）
+1. 输入`jcr:read`作为&#x200B;__权限__
+1. 为&#x200B;__权限类型__&#x200B;选择`Allow`
+1. 在&#x200B;__限制__&#x200B;下，选择OSGi配置中[配置的资源元数据属性名称之一](#configure-permissionable-properties)
+1. 在&#x200B;__限制值__&#x200B;字段中输入所需的元数据属性值
+1. 单击&#x200B;__+__&#x200B;图标以将限制添加到访问控制条目
+1. 单击&#x200B;__保存__
 
 ![允许访问](./assets/metadata-driven-permissions/allow-access.png)
 
@@ -106,10 +106,10 @@ ht-degree: 0%
 >
 > 请务必注意：
 > 
-> - 使用根据限制评估元数据属性 __字符串相等__ (`=`)(不支持其他数据类型或运算符，因为大于(`>`)或日期属性)
-> - 要允许限制属性有多个值，可以通过从“选择类型”下拉列表中选择相同的属性并输入新的限制值(例如， `status=approved`， `status=wip`)，然后单击“+”将限制添加到条目
+> - 元数据属性是使用&#x200B;__字符串相等__ (`=`)根据限制进行评估的(对于大于(`>`)或日期属性，尚不支持其他数据类型或运算符)
+> - 要允许限制属性有多个值，可以通过从“选择类型”下拉列表中选择相同的属性并输入新的限制值（例如`status=approved`、`status=wip`）并单击“+”将限制添加到访问控制条目
 > ![允许多个值](./assets/metadata-driven-permissions/allow-multiple-values.png)
-> - __AND限制__ 通过带有不同属性名称(例如， `status=approved`， `brand=Adobe`)将被评估为AND条件，即选定的用户组将被授予对以下资产的读取访问权限： `status=approved AND brand=Adobe`
+> - __AND限制__&#x200B;受支持，对于具有不同属性名称（例如`status=approved`、`brand=Adobe`）的单个访问控制条目，将通过多个限制将其评估为AND条件，即，将授予所选用户组对`status=approved AND brand=Adobe`资产的读取访问权限
 > ![允许多项限制](./assets/metadata-driven-permissions/allow-multiple-restrictions.png)
-> - __OR限制__ 通过添加具有元数据属性限制的新访问控制条目来支持，将为条目建立OR条件，例如，具有限制的单个条目 `status=approved` 和单个条目 `brand=Adobe` 将被评估为 `status=approved OR brand=Adobe`
+> - 通过添加具有元数据属性限制的新访问控制条目来支持&#x200B;__OR限制__，这将为条目建立OR条件，例如，具有限制`status=approved`的单个条目和具有`brand=Adobe`的单个条目将被评估为`status=approved OR brand=Adobe`
 > ![允许多项限制](./assets/metadata-driven-permissions/allow-multiple-aces.png)

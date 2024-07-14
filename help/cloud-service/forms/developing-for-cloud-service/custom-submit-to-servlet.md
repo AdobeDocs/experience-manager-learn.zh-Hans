@@ -45,7 +45,7 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 
 ## 创建自定义提交处理程序
 
-在中创建自定义提交操作 `apps/bankingapplication` 文件夹创建方式 [AEM Forms的早期版本](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en). 在本教程中，我将在下创建名为SubmitToAEMServlet的文件夹 `apps/bankingapplication` CRX存储库中的节点。
+在`apps/bankingapplication`文件夹中创建自定义提交操作的方式与在[早期版本的AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en)中创建的方式相同。 在本教程中，我在CRX存储库的`apps/bankingapplication`节点下创建了一个名为SubmitToAEMServlet的文件夹。
 
 post.request.jsp中的以下代码只是将POST转发到挂载在/bin/formstutorial上的servlet。 这与上一步中创建的servlet相同
 
@@ -53,12 +53,12 @@ post.request.jsp中的以下代码只是将POST转发到挂载在/bin/formstutor
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
-在IntelliJ的AEM项目中，右键单击 `apps/bankingapplication` 文件夹并选择“新建” | 在“新建包”对话框中，将apps.banking应用程序打包并键入SubmitToAEMServlet。 右键单击SubmitToAEMServlet节点并选择repo | 获取用于将AEM项目与AEM服务器存储库同步的命令。
+在IntelliJ的AEM项目中，右键单击`apps/bankingapplication`文件夹并选择“新建” | 在“新建包”对话框中，将apps.banking应用程序打包并键入SubmitToAEMServlet。 右键单击SubmitToAEMServlet节点并选择repo | 获取用于将AEM项目与AEM服务器存储库同步的命令。
 
 
 ## 配置自适应表单
 
-您现在可以将任何自适应表单配置为提交到此自定义提交处理程序，称为 **提交到AEM Servlet**
+您现在可以将任何自适应表单配置为提交到此自定义提交处理程序，称为&#x200B;**提交到AEM Servlet**
 
 ## 后续步骤
 

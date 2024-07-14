@@ -18,13 +18,13 @@ ht-degree: 1%
 
 # 从下拉列表中选择要填充的表单
 
-下拉列表提供了一种简洁而有序的方式，向用户显示选项列表。 下拉列表中的项目将填充以下项的结果 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)
+下拉列表提供了一种简洁而有序的方式，向用户显示选项列表。 下拉列表中的项将使用[listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)的结果填充
 
 ![卡片视图](./assets/forms-drop-down.png)
 
 ## 下拉列表
 
-以下代码用于使用listforms API调用的结果填充下拉列表。 根据用户选择，显示自适应表单以供用户填写和提交。 [材料UI组件](https://mui.com/) 已用于创建此界面
+以下代码用于使用listforms API调用的结果填充下拉列表。 根据用户选择，显示自适应表单以供用户填写和提交。 [材料UI组件](https://mui.com/)已用于创建此界面
 
 ```javascript
 import * as React from 'react';
@@ -126,10 +126,10 @@ const getAFForms =async()=>
 
 创建此用户界面时使用了以下两个API调用
 
-* [列表表单](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). 在呈现组件时，仅会发出一次获取表单的调用。 API调用的结果存储在afForms变量中。
+* [列表表单](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)。 在呈现组件时，仅会发出一次获取表单的调用。 API调用的结果存储在afForms变量中。
 在上面的代码中，我们使用map函数对afForms进行迭代，对于afForms数组中的每个项，将创建一个MenuItem组件并将其添加到Select组件中。
 
-* 获取表单 — 对 [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition)，其中id是用户在下拉列表中选择的自适应表单的id。 此GET调用的结果存储在selectedForm中。
+* 获取表单 — 对[getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition)进行get调用，其中id是下拉列表中的用户所选自适应表单的id。 此GET调用的结果存储在selectedForm中。
 
 ```
 const resp = await fetch(`/adobe/forms/af/${formID}`);

@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 AEM内容迁移第2部分
-description: 在内容迁移的第二个视频中，James和Darin讨论了如何使用内容传输工具(CTT)协助迁移到AEMas a Cloud Service。
+description: 在内容迁移的第二个视频中，James和Darin讨论了如何使用内容传输工具(CTT)协助迁移到AEM as a Cloud Service。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # 迁移到云 — 第2部分
 
-在内容迁移的第二个视频中，James和Darin讨论了如何使用内容传输工具(CTT)协助迁移到AEMas a Cloud Service。
+在内容迁移的第二个视频中，James和Darin讨论了如何使用内容传输工具(CTT)协助迁移到AEM as a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342268?quality=12&learn=on)
 

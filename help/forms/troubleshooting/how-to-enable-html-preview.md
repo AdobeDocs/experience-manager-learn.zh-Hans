@@ -1,6 +1,6 @@
 ---
 title: Designer预览HTML预览 — 如何启用预览HTML
-description: 在Designer中配置HTML预览的步骤
+description: 在Designer中配置“HTML预览”的步骤
 type: Troubleshooting
 role: Developer
 level: Intermediate

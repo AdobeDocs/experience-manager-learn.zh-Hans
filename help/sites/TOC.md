@@ -17,7 +17,7 @@ ht-degree: 19%
 # AEM Sites 视频和教程 {#sites}
 
 + [概述](overview.md)
-+ 文档创作 {#document-authoring}
++ 文档创作{#document-authoring}
    + [概述](document-authoring/overview.md)
    + [设置](document-authoring/set-up.md)
    + [预览和发布](document-authoring/preview-and-publish.md)
@@ -28,7 +28,7 @@ ht-degree: 19%
    + [批量元数据](document-authoring/bulk-metadata.md)
    + [页面元数据](document-authoring/page-metadata.md)
    + [作者身份验证](document-authoring/author-authentication.md)
-   + 操作方法{#how-to}
+   + 如何{#how-to}
       + [文档审核](./document-authoring/how-to/document-audit.md)
       + [文档权限](./document-authoring/how-to/document-permissions.md)
       + [文档版本](./document-authoring/how-to/document-versions.md)
@@ -73,7 +73,7 @@ ht-degree: 19%
    + [样式系统](page-authoring/style-system-feature-video-use.md)
    + [时间扭曲](page-authoring/timewarp-feature-video-use.md)
    + [启动项](page-authoring/launches.md)
-   + 向同行学习 {#expert-advice}
+   + 向同行学习{#expert-advice}
       + [站点层次结构提示](page-authoring/expert-advice/site-hierarchy.md)
 + 生成式 AI {#generative-ai}
    + [生成变体](./generative-ai/generate-variations.md)
@@ -89,7 +89,7 @@ ht-degree: 19%
    + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [概述](./edge-delivery-services/overview.md)
-   + 开发{#developing}
+   + 正在开发{#developing}
       + [先决条件](edge-delivery-services/developing/prerequisites.md)
       + [AEM样板](edge-delivery-services/developing/aem-boilerplate.md)
       + [内容存储库](edge-delivery-services/developing/content-repository.md)
@@ -105,7 +105,7 @@ ht-degree: 19%
 + 开发 {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 项目原型](developing/aem-project-archetype.md)
-   + [AEM Sites快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
+   + [AEM Sites入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
    + [AEM Headless快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans){target=_blank}
    + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
@@ -128,10 +128,10 @@ ht-degree: 19%
    + [组件控制台](components/components-console-feature-video-use.md)
 + SEO {#seo}
    + [Sitemap](./seo/sitemaps.md)
-+ 单页应用程序 {#spa-editor}
++ 单页应用程序{#spa-editor}
    + [使用SPA编辑器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
-+ 多站点管理 {#multi-site-management}
++ 多站点管理{#multi-site-management}
    + [语言副本简介](./multi-site-management/language-copy-overview.md)
    + [Live Copy和Blueprint](./multi-site-management/live-copy-and-blueprint.md)
    + [创建Live Copy](./multi-site-management/create-live-copy.md)
@@ -152,11 +152,11 @@ ht-degree: 19%
    + [设置翻译规则](translation/translation-rules-editor-technical-video-setup.md)
    + [翻译增强功能](translation/translation-enhancements-feature-video-use.md)
 + 集成 {#integrations}
-   + Experience Platform {#experience-platform}
+   + Experience Platform{#experience-platform}
       + [生成FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [使用Platform Web SDK的分析](integrations/platform/analytics-using-web-sdk.md)
-   + Adobe Experience Platform中的标记 {#experience-platform-data-collection-tags}
+   + Adobe Experience Platform {#experience-platform-data-collection-tags}中的标记
       + [概述](integrations/experience-platform/data-collection/tags/overview.md)
       + [创建标记属性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [使用IMS连接AEM和标记属性](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
@@ -165,7 +165,7 @@ ht-degree: 19%
    + Adobe 客户端数据层{#adobe-client-data-layer}
       + [使用Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自定义Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-customize.md)
-   + 分析 {#analytics}
+   + 分析{#analytics}
       + [使用Adobe Analytics收集页面数据](integrations/analytics/collect-data-analytics.md)
       + [使用Adobe Analytics跟踪已单击的组件](integrations/analytics/track-clicked-component.md)
       + [使用Analysis Workspace分析数据](integrations/analytics/create-analytics-workspace.md)
@@ -176,9 +176,9 @@ ht-degree: 19%
       + [创建Adobe TargetCloud Service帐户](integrations/adobe-target/setup-aem-target-cloud-service.md)
       + [将体验片段导出到Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
       + [使用体验片段选件创建Target活动](integrations/adobe-target/create-target-activity.md)
-      + [使用可视化体验编辑器进行个性化](integrations/adobe-target/personalization-using-vec.md)
-      + [完整网页体验的个性化](integrations/adobe-target/personalization-web-page.md)
-+ 向同行学习 {#expert-resources}
+      + [使用可视化体验编辑器的Personalization](integrations/adobe-target/personalization-using-vec.md)
+      + [具有完整网页体验的Personalization](integrations/adobe-target/personalization-web-page.md)
++ 向同行学习{#expert-resources}
    + [概述](expert-resources/learn-from-your-peers-overview.md)
    + [AEM Sites成熟度评估](expert-resources/maturity-assessment.md)
    + [站点维护](expert-resources/site-maintenance.md)

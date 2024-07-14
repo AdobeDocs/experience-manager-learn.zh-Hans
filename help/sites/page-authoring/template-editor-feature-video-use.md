@@ -29,14 +29,14 @@ ht-degree: 1%
 
 **一致的创作体验** - AEM Sites创作中的增强功能会转移到模板编辑中，包括内联布局模式和“内容树”面板。
 
-**高级策略配置**  — 下面重点介绍了可编辑模板提供的一些高级策略配置：
+**高级策略配置** — 以下突出显示可编辑模板提供的一些高级策略配置：
 
-* **布局容器**  — 能够配置允许的组件、管理资产的拖放映射和响应式网格列。
-* **文本组件**  — 能够使用新UI配置富文本编辑器插件并在各个模板中重复使用RTE策略。
-* **图像组件**  — 能够打开/关闭裁切、使用新UI上传桌面文件等功能并在各个模板中重复使用图像策略。
+* **布局容器** — 能够配置允许的组件、管理Assets的拖放映射和响应式网格列。
+* **文本组件** — 能够使用新UI配置富文本编辑器插件并在模板中重复使用RTE策略。
+* **图像组件** — 能够打开/关闭裁切、使用新UI上载桌面文件等功能并在模板间重复使用图像策略。
 
-可编辑模板位于 **工具** `>` **常规** `>` **模板**.\
-可编辑模板URL(本地AEM实例)： [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
+可在&#x200B;**工具** `>` **常规** `>` **模板**&#x200B;下找到可编辑的模板。\
+可编辑的模板URL(本地AEM实例)： [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 ## 其他资源 {#additional-resources}
 

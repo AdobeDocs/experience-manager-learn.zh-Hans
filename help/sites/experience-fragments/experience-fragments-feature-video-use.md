@@ -28,11 +28,11 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
 
-体验片段是一组经过组合的组件，组合后将创建一个体验。 例如， *标题*， *图像*， *描述*、和 *行动号召按钮* 可组合在一起以形成Teaser体验。
+体验片段是一组经过组合的组件，组合后将创建一个体验。 例如，*Title*、*Image*、*Description*&#x200B;和&#x200B;*行动号召按钮*&#x200B;可以组合在一起以形成Teaser体验。
 
 借助体验片段，营销人员可以：
 
 * 跨渠道（自有渠道和第三方接触点）重用体验
 * 为特定用例创建体验的变体
 * 使变体与使用Live Copy保持同步
-* 开箱即用地将Social Post体验发布到Facebook和Pinterest
+* 将社交Post体验开箱即用到Facebook和Pinterest

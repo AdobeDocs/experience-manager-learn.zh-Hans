@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 保存和检索草稿信件
 
-以下代码用于保存书信实例。 信件实例的元数据存储在 _草稿_ 表格。 生成并返回唯一字符串(draftID)。 然后，使用此唯一字符串检索已保存书信实例。
+以下代码用于保存书信实例。 书信实例的元数据存储在&#x200B;_icdrafts_&#x200B;表中。 生成并返回唯一字符串(draftID)。 然后，使用此唯一字符串检索已保存书信实例。
 
 ```java
 public String save(CCRDocumentInstance letterToSave) throws CCRDocumentException {
@@ -168,4 +168,4 @@ AEM Forms不提供任何开箱即用的用户界面来列出已保存的书信�
 
 ### Eclipse项目
 
-示例实施的eclipse项目可以是 [从此处下载](assets/icdrafts-eclipse-project.zip)
+可以从此处](assets/icdrafts-eclipse-project.zip)下载具有示例实施的eclipse项目[

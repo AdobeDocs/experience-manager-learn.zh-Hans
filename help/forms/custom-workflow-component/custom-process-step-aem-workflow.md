@@ -24,12 +24,13 @@ ht-degree: 0%
 
 ## 创建Maven项目
 
-第一步是使用相应的AdobeMaven原型创建一个Maven项目。 此页面中列出了详细步骤 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). 将您的maven项目导入到eclipse中后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
+第一步是使用相应的AdobeMaven原型创建一个Maven项目。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中列出了详细步骤。 将您的maven项目导入到eclipse中后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
 
 
 ### 创建实现WorkflowProcess的类
 
-在eclipse IDE中打开maven项目。 展开 **projectname** > **核心** 文件夹。 展开src/main/java文件夹。 您应该看到以“core”结尾的包。 创建在此包中实现WorkflowProcess的Java类。 您需要覆盖execute方法。 execute方法的签名如下public void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)引发WorkflowException
+在eclipse IDE中打开maven项目。 展开&#x200B;**projectname** > **core**文件夹。 展开src/main/java文件夹。 您应该看到以“core”结尾的包。 创建在此包中实现WorkflowProcess的Java类。 您需要覆盖execute方法。 execute方法的签名如下
+公共void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)引发WorkflowException
 
 在本教程中，我们将把添加到自适应表单的附件作为AEM Workflow的一部分写入文件系统。
 
@@ -123,7 +124,7 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 这两个值将作为进程参数使用工作流组件的对话框传递
 
-![流程步骤](assets/custom-workflow-component.png)
+![ProcessStep](assets/custom-workflow-component.png)
 
 QueryBuilder服务用于查询attachmentsPath文件夹下nt：file类型的节点。 其余代码遍历搜索结果以创建Document对象并将其保存到文件系统
 
@@ -142,10 +143,10 @@ QueryBuilder服务用于查询attachmentsPath文件夹下nt：file类型的节�
 
 #### 生成和部署
 
-[按照此处所述构建捆绑包](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[按照此处所述生成包](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 [确保包已部署且处于活动状态](http://localhost:4502/system/console/bundles)
 
 ## 后续步骤
 
-创建您的 [自定义工作流组件](./custom-workflow-component.md)
+创建您的[自定义工作流组件](./custom-workflow-component.md)
 

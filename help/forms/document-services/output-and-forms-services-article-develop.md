@@ -22,8 +22,8 @@ ht-degree: 0%
 
 在本文中，我们将看一看以下内容
 
-* [输出服务](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)  — 通常，此服务用于将xml数据与xdp模板或pdf合并，以生成拼合的pdf。
-* [表单服务](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html)  — 这是一项非常通用的服务，允许您将xdp渲染为pdf，并从文档文件将数据导出/导入PDF文件。
+* [输出服务](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) — 通常，此服务用于将xml数据与xdp模板或pdf合并，以生成拼合的pdf。
+* [FormsService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) — 这是一项功能非常广泛的服务，允许您将xdp渲染为pdf，并且将数据从PDF文件中导出/导入。
 
 
 以下代码片段从PDF文件中导出数据
@@ -52,10 +52,10 @@ Line2从请求中提取saveLocation
 
 
 
-**安装包后，必须在AdobeGranite CSRF过滤器中允许列表以下URL。**
+**安装包后，您必须在AdobeGranite CSRF筛选器中允许列表以下URL。**
 
 1. 请按照以下所述步骤列入允许列表上述路径。
-1. [登录configMgr](http://localhost:4502/system/console/configMgr)
+1. [登录到configMgr](http://localhost:4502/system/console/configMgr)
 1. 搜索AdobeGranite CSRF筛选器
 1. 在排除的部分中添加以下3个路径并保存
 1. /content/AemFormsSamples/mergedata
@@ -97,7 +97,7 @@ Line2从请求中提取saveLocation
 
 * **请求参数：**
 
-   * **pdf** ：要与数据合并的pdf文件
+   * **pdf文件** ：要与它合并数据的pdf文件
    * **xmlfile**：与pdf文件合并的xml数据文件
    * **saveLocation**：将渲染文档保存在文件系统中的位置。 例如 `c:\\outputsample.pdf`。
 
@@ -107,8 +107,8 @@ Line2从请求中提取saveLocation
 * **POSTURL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **请求参数：**
 
-   * **pdf** ：要从中导出数据的pdf文件
-   * **saveLocation**：将导出数据保存在文件系统中的位置。 例如c：\\documents\\exported_data.xml
+   * **pdf文件** ：要从中导出数据的pdf文件
+   * **saveLocation**：在文件系统中保存导出数据的位置。 例如c：\\documents\\exported_data.xml
 
 #### 渲染XDP
 

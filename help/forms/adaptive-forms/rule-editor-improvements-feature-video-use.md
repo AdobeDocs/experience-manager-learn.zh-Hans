@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/19653?quality=12&learn=on)
 
-**对规则编辑器的一些改进包括：**
+**对规则编辑器的某些改进包括：**
 
 * 多值表单组件会自动显示组件选项
 * 在可视编辑器中指定WSDL Web服务的功能

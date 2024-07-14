@@ -24,7 +24,7 @@ ht-degree: 8%
 
 >[!VIDEO](https://video.tv.adobe.com/v/39294?quality=12&learn=on)
 
-可通过以下链接下载与此视频相关的资产
+可通过以下链接下载与此视频相关的Assets
 
 * [自适应表单模板](assets/tenancy-agreement-template.zip)
 * [租赁协议表单](assets/rental-agreement-form.zip)

@@ -42,6 +42,6 @@ Reader扩展凭据与fd-service用户相关联。 要向fd-service用户添加�
 
 列出pfx文件详细信息的命令是。 以下命令假定您与pfx文件位于同一目录中。
 
-**keytool -v -list -storetype pkcs12 -keystore &lt;name of=&quot;&quot; your=&quot;&quot; pfx=&quot;&quot; file=&quot;&quot;>**
+**keytool -v -list -storetype pkcs12 -keystore &lt;您的.pfx文件的名称>**
 
 例如，keytool -v -list -storetype pkcs12 -keystore 1005566.pfx其中1005566.pfx是my pfx文件的名称

@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ## 先决条件 {#prerequisites}
 
-这是一个多部分教程，假定其中包含了 [页面模板](./page-templates.md) 章节已完成。
+这是一个多部分教程，并假定已完成[页面模板](./page-templates.md)章节中概述的步骤。
 
 ## 目标
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 
 ### 解决方案文件
 
-下载完成的样式 [WKND示例主题](assets/theming/WKND-THEME-src-1.1.zip)
+下载[WKND示例主题](assets/theming/WKND-THEME-src-1.1.zip)的已完成样式
 
 ## 使用前端管道部署主题 {#deploy-theme}
 
@@ -60,7 +60,7 @@ ht-degree: 1%
 
 视频的高级步骤：
 
-1. 创建新的Git [Cloud Manager中的存储库](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)
+1. 在Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)中创建新的Git [存储库
 1. 将主题源项目添加到Cloud Manager Git存储库：
 
    ```shell
@@ -71,7 +71,7 @@ ht-degree: 1%
    $ git remote add origin <CLOUD_MANAGER_GIT_REPOSITORY_URL>
    ```
 
-1. 配置 [前端管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html) 在Cloud Manager中部署前端代码。
+1. 在Cloud Manager中配置[前端管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)以部署前端代码。
 1. 运行前端管道将更新部署到目标AEM环境。
 
 ### 示例存储库
@@ -79,7 +79,7 @@ ht-degree: 1%
 提供了几个可用作参考的GitHub存储库示例：
 
 * [aem-site-template-standard](https://github.com/adobe/aem-site-template-standard)
-* [aem-site-template-basic-theme-e2e](https://github.com/adobe/aem-site-template-basic-theme-e2e)  — 用作“实际”项目的示例。
+* [aem-site-template-basic-theme-e2e](https://github.com/adobe/aem-site-template-basic-theme-e2e) — 用作“实际”项目的示例。
 
 ## 恭喜！ {#congratulations}
 
@@ -87,4 +87,4 @@ ht-degree: 1%
 
 ### 后续步骤 {#next-steps}
 
-更深入地了解AEM开发，并通过使用创建站点来了解更多底层技术 [AEM项目原型](../project-archetype/overview.md).
+通过使用[AEM项目原型](../project-archetype/overview.md)创建站点，更深入地了解AEM开发并了解更多基础技术。

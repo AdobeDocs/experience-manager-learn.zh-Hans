@@ -32,4 +32,4 @@ ht-degree: 0%
 + 技术帐户验证
 + 简单使用生成的令牌
 
-有关此主题的更详细介绍，您可以参考以下方面的教程： [基于令牌的身份验证](/help/headless-tutorial/authentication/overview.md).
+有关此主题的更详细介绍，您可以参考有关[基于令牌的身份验证](/help/headless-tutorial/authentication/overview.md)的教程。

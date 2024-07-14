@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何调整Workbench性能参数
 
-*此视频介绍调整Workbench性能参数的过程。*
+*本视频介绍调整Workbench性能参数的过程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335511?quality=12&learn=on)

@@ -1,5 +1,5 @@
 ---
-title: Cloud 5 — 边缘员工
+title: Cloud 5 - Edge员工
 description: 探索AEM Sites和Edge Delivery Services中的边缘工作人员的重要性，以及如何将他们与后端系统集成。
 feature: Edge Delivery Services
 topic: Development
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# Cloud 5 — 边缘员工
+# Cloud 5 - Edge员工
 
 探索AEM Sites和Edge Delivery Services中的边缘工作人员的重要性，以及如何将他们与后端系统集成。
 

@@ -1,6 +1,6 @@
 ---
 title: 专用出口IP地址和VPN的HTTP/HTTPS连接
-description: 了解如何使AEM中的HTTP/HTTPS请求as a Cloud Service于为专用出口IP地址和VPN运行的外部Web服务
+description: 了解如何从AEM as a Cloud Service向为专用出口IP地址和VPN运行的外部Web服务发出HTTP/HTTPS请求
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # 专用出口IP地址和VPN的HTTP/HTTPS连接
 
-HTTP/HTTPS连接会自动用专用出口IP地址或VPN从AEMas a Cloud Service代理，并且它们不需要任何特殊的 `portForwards` 规则。
+HTTP/HTTPS连接会自动使用专用出口IP地址或VPN代理出AEM as a Cloud Service，并且它们不需要任何特殊的`portForwards`规则。
 
 ## 高级联网支持
 
 以下高级联网选项支持以下代码示例。
 
-确保 [专用出口IP地址或VPN](../advanced-networking.md#advanced-networking) 在执行本教程之前，已设置高级联网配置。
+在执行本教程之前，请确保已设置[专用出口IP地址或VPN](../advanced-networking.md#advanced-networking)高级联网配置。
 
 | 无高级联网 | [灵活端口出口](../flexible-port-egress.md) | [专用出口IP地址](../dedicated-egress-ip-address.md) | [虚拟专用网络](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -33,14 +33,14 @@ HTTP/HTTPS连接会自动用专用出口IP地址或VPN从AEMas a Cloud Service�
 
 >[!CAUTION]
 >
-> 此代码示例仅用于 [专用出口IP地址](../dedicated-egress-ip-address.md) 和 [VPN](../vpn.md). 有一个相似但不同的代码示例可用于 [非标准端口上的HTTP/HTTPS连接，用于灵活端口出口](./http-on-non-standard-ports-flexible-port-egress.md).
+> 此代码示例仅适用于[专用出口IP地址](../dedicated-egress-ip-address.md)和[VPN](../vpn.md)。 对于灵活端口出口](./http-on-non-standard-ports-flexible-port-egress.md)的非标准端口上的[HTTP/HTTPS连接，提供了类似但不同的代码示例。
 
 ## 代码示例
 
-此Java™代码示例是一个可在AEMas a Cloud Service中运行的OSGi服务，该服务与8080上的外部Web服务器建立HTTP连接。 HTTPS（或HTTP）连接会自动通过AEMas a Cloud Service进行代理，而无需特殊开发。
+此Java™代码示例是一个可在AEM as a Cloud Service中运行的OSGi服务，该服务与8080上的外部Web服务器建立HTTP连接。 HTTPS（或HTTP）连接会自动通过AEM as a Cloud Service中的代理进行代理，而无需特殊开发。
 
 >[!NOTE]
-> 建议使用 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) 用于从AEM进行HTTP/HTTPS调用。
+> 建议使用[Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html)从AEM进行HTTP/HTTPS调用。
 
 + `core/src/com/adobe/aem/wknd/examples/connections/impl/HttpExternalServiceImpl.java`
 

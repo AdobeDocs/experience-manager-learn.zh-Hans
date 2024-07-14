@@ -22,54 +22,54 @@ ht-degree: 0%
 
 # 查看全栈AEM项目的“ui.frontend”模块 {#aem-full-stack-ui-frontent}
 
-在本章中，我们回顾了全栈AEM项目的前端工件的开发、部署和交付，重点是的“ui.frontend”模块 __WKND站点项目__.
+在本章中，我们通过重点介绍&#x200B;__WKND Sites项目__&#x200B;的“ui.frontend”模块，回顾了全栈AEM项目的前端工件的开发、部署和交付。
 
 
 ## 目标 {#objective}
 
 * 了解AEM全栈项目中前端工件的生成和部署流程
-* 查看AEM全栈项目的 `ui.frontend` 模块的 [webpack](https://webpack.js.org/) 配置
+* 查看AEM全栈项目的`ui.frontend`模块的[webpack](https://webpack.js.org/)配置
 * AEM客户端库（也称为clientlibs）生成过程
 
 ## AEM全栈和快速站点创建项目的前端部署流程
 
 >[!IMPORTANT]
 >
->本视频说明并演示了这两种应用程序的前端流程 **全栈和快速站点创建** 项目概述前端资源构建、部署和交付模型中的细微差异。
+>此视频介绍并演示了&#x200B;**全栈和快速站点创建**&#x200B;项目的前端流程，以概述前端资源构建、部署和投放模型中的细微差异。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409344?quality=12&learn=on)
 
 ## 先决条件 {#prerequisites}
 
 
-* 克隆 [AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd)
-* 构建克隆的AEM WKND Sites项目并将其部署到AEMas a Cloud Service。
+* 克隆[AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd)
+* 构建克隆的AEM WKND Sites项目并将其部署到AEM as a Cloud Service。
 
-请参阅AEM WKND站点项目 [README.md](https://github.com/adobe/aem-guides-wknd/blob/main/README.md) 以了解更多详细信息。
+有关详细信息，请参阅AEM WKND站点项目[README.md](https://github.com/adobe/aem-guides-wknd/blob/main/README.md)。
 
 ## AEM全栈项目前端构件流 {#flow-of-frontend-artifacts}
 
-以下是 __开发、部署和交付__ 全栈AEM项目中的前端工件流。
+下面是全栈AEM项目中前端工件的&#x200B;__开发、部署和交付__&#x200B;流的高级表示形式。
 
-![开发、部署和交付前端工件](assets/Dev-Deploy-Delivery-AEM-Project.png)
+![前端项目的开发、部署和交付](assets/Dev-Deploy-Delivery-AEM-Project.png)
 
 
-在开发阶段，通过更新中的CSS、JS文件来执行前端更改，如样式更改和重新品牌化 `ui.frontend/src/main/webpack` 文件夹。 然后，在构建期间， [webpack](https://webpack.js.org/) module-bundler和maven插件将这些文件转换为下面优化的AEM clientlibs `ui.apps` 模块。
+在开发阶段，通过更新`ui.frontend/src/main/webpack`文件夹中的CSS、JS文件来执行前端更改，如样式更改和重新品牌化。 然后，在生成期间，[webpack](https://webpack.js.org/)模块捆绑器和maven插件将这些文件转换为`ui.apps`模块下的优化AEM clientlibs。
 
-运行时，将前端更改部署到AEMas a Cloud Service环境 [__全栈__ Cloud Manager中的管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html).
+在AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)中运行&#x200B;[__全栈栈__&#x200B;管道时，将前端更改部署到Cloud Manager环境。
 
-前端资源通过以开头的URI路径交付给Web浏览器 `/etc.clientlibs/`和通常都会缓存在AEM Dispatcher和CDN上。
+前端资源通过以`/etc.clientlibs/`开头的URI路径传送到Web浏览器，通常缓存在AEM Dispatcher和CDN上。
 
 
 >[!NOTE]
 >
-> 同样地，在 __AEM快速站点创建历程__， [前端更改](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html) AEM as a Cloud Service通过运行 __前端__ 管道，请参见 [设置您的管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html)
+> 同样，在&#x200B;__AEM快速站点创建历程__&#x200B;中，通过运行&#x200B;__前端__&#x200B;管道，将[前端更改](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html)部署到AEM as a Cloud Service环境。请参阅[设置管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html)
 
 ### 查看WKND站点项目中的Webpack配置 {#development-frontend-webpack-clientlib}
 
-* 有三个 __webpack__ 用于捆绑WKND站点前端资源的配置文件。
+* 有三个&#x200B;__webpack__&#x200B;配置文件用于捆绑WKND Sites前端资源。
 
-   1. `webpack.common`  — 这包含 __公共__ 用于指示WKND资源捆绑和优化的配置。 此 __输出__ 属性指明在何处发出它创建的统一文件(也称为JavaScript捆绑包，但不要与AEM OSGi捆绑包混淆)。 默认名称设置为 `clientlib-site/js/[name].bundle.js`.
+   1. `webpack.common` — 这包含用于指示WKND资源捆绑和优化的&#x200B;__common__&#x200B;配置。 __output__&#x200B;属性说明在何处发出它创建的统一文件(也称为JavaScript包，但不要将其与AEM OSGi包混淆)。 默认名称设置为`clientlib-site/js/[name].bundle.js`。
 
   ```javascript
       ...
@@ -80,7 +80,7 @@ ht-degree: 0%
       ...    
   ```
 
-   1. `webpack.dev.js` 包含 __开发__ webpack-dev-serve的配置并指向要使用的HTML模板。 它还包含在上运行的AEM实例的代理配置 `localhost:4502`.
+   1. `webpack.dev.js`包含webpack-dev-serve的&#x200B;__开发__&#x200B;配置并指向要使用的HTML模板。 它还包含在`localhost:4502`上运行的AEM实例的代理配置。
 
   ```javascript
       ...
@@ -92,7 +92,7 @@ ht-degree: 0%
       ...    
   ```
 
-   1. `webpack.prod.js` 包含 __生产__ 并使用插件将开发文件转换为优化的包。
+   1. `webpack.prod.js`包含&#x200B;__生产__&#x200B;配置，并使用插件将开发文件转换为优化包。
 
   ```javascript
       ...
@@ -108,7 +108,7 @@ ht-degree: 0%
   ```
 
 
-* 捆绑的资源将移至 `ui.apps` 模块使用 [aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator) 插件，使用在中管理的配置 `clientlib.config.js` 文件。
+* 使用`clientlib.config.js`文件中管理的配置，使用[aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator)插件将捆绑资源移动到`ui.apps`模块。
 
 ```javascript
     ...
@@ -128,18 +128,18 @@ ht-degree: 0%
     ...
 ```
 
-* 此 __frontend-maven-plugin__ 从 `ui.frontend/pom.xml` 在AEM项目构建期间编排webpack捆绑包和clientlib生成。
+* 来自`ui.frontend/pom.xml`的&#x200B;__frontend-maven-plugin__&#x200B;在AEM项目构建期间编排webpack捆绑包和clientlib生成。
 
 `$ mvn clean install -PautoInstallSinglePackage`
 
-### 部署到AEMas a Cloud Service {#deployment-frontend-aemaacs}
+### 部署到AEM as a Cloud Service {#deployment-frontend-aemaacs}
 
-此 [__全栈__ 管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#full-stack-pipeline) 将这些更改部署到AEMas a Cloud Service环境。
+[__全栈栈__&#x200B;管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#full-stack-pipeline)将这些更改部署到AEM as a Cloud Service环境。
 
 
-### 从AEMas a Cloud Service投放 {#delivery-frontend-aemaacs}
+### 来自AEM as a Cloud Service的投放 {#delivery-frontend-aemaacs}
 
-通过全栈管道部署的前端资源将作为从AEM站点交付到Web浏览器 `/etc.clientlibs` 文件。 您可以通过访问 [公开托管的WKND站点](https://wknd.site/content/wknd/us/en.html) 和查看网页源。
+通过全栈管道部署的前端资源将作为`/etc.clientlibs`文件从AEM Site传送到Web浏览器。 您可以通过访问[公开托管的WKND网站](https://wknd.site/content/wknd/us/en.html)并查看网页源来验证此信息。
 
 ```html
     ....
@@ -157,4 +157,4 @@ ht-degree: 0%
 
 ## 后续步骤 {#next-steps}
 
-在下一章中， [更新项目以使用前端管道](update-project.md)中，您将更新AEM WKND Sites项目以便为前端管道合同启用它。
+在下一章[更新项目以使用前端管道](update-project.md)中，您将更新AEM WKND Sites项目以便为前端管道合同启用它。

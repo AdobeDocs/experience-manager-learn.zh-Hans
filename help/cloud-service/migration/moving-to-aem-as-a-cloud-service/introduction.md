@@ -1,6 +1,6 @@
 ---
-title: AEMas a Cloud Service简介
-description: 了解如何以不同的方式思考AEM的as a Cloud Service实施。
+title: AEM as a Cloud Service简介
+description: 了解如何以不同的方式思考AEM as a Cloud Service实施。
 version: Cloud Service
 topic: Migration, Upgrade
 feature: Migration
@@ -19,6 +19,6 @@ ht-degree: 17%
 
 # AEM as a Cloud Service 简介
 
-了解如何以不同的方式思考AEM的as a Cloud Service实施。
+了解如何以不同的方式思考AEM as a Cloud Service实施。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336956?quality=12&learn=on)

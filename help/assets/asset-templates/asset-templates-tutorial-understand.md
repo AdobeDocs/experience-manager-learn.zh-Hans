@@ -24,22 +24,22 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/19293?quality=12&learn=on)
 
-1. 下载并打开 [**InDesign文件模板**](assets/asset-templates-tutorial-video--supporting-files.zip)
-2. **打开“标记”面板，** 查看标记命名约定，并注意InDesign文件中的可创作元素已标记。 请记住，在AEM中只能编辑已标记的元素。
+1. 下载并打开&#x200B;[**InDesign文件模板**](assets/asset-templates-tutorial-video--supporting-files.zip)
+2. **打开“标记”面板，**&#x200B;查看“标记”命名约定，并注意InDesign文件中的可创作元素已标记。 请记住，在AEM中只能编辑已标记的元素。
 
-   * **“窗口”>“实用程序”>“标记”**
+   * **窗口>实用工具>标记**
 
-3. 在页面上，添加新文本元素，提供文本“Header”并应用 **标题** 段落样式。
+3. 在页面上，添加新文本元素，提供文本“标题”并应用&#x200B;**标题**&#x200B;段落样式。
 
-   * **“窗口”>“样式”>“段落样式”**
+   * **窗口>样式>段落样式**
 
-   然后，创建并应用名为的新标记 **Page2Heading。**
+   然后，创建并应用名为&#x200B;**Page2Heading.**&#x200B;的新标记
 
-4. 添加FPO徽标图像([在zip文件中提供](assets/asset-templates-tutorial-video--supporting-files.zip))到主页上的Logo元素。
+4. 将FPO徽标图像（[在zip](assets/asset-templates-tutorial-video--supporting-files.zip)中提供）添加到母版页上的徽标元素中。
 
-   * **右键单击**&#x200B;并选择&#x200B;**“拟合”>“框架拟合选项……”>“内容拟合”>“按比例填充框架”**
+   * **右键单击**&#x200B;并选择&#x200B;**拟合>框架拟合选项…… >内容拟合>按比例填充框架**
 
-   [了解有关框架拟合选项的更多信息](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)，并且这适合您的用例。
+   [了解有关“框架拟合”选项的更多信息](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)，它适用于您的用例。
 
 5. 通过原位粘贴从页面和页面中的母版模板向下复制标题（徽标和公司名称）。
 
@@ -57,24 +57,24 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/19294?quality=12&learn=on)
 
-1. **启动InDesign Server** 8080端口。
-2. 确保 **AEM创作实例配置为与您的InDesign Server交互**（反之亦然）。
+1. 在端口8080上&#x200B;**启动InDesign Server**。
+2. 确保将&#x200B;**AEM创作实例配置为与您的InDesign Server**&#x200B;交互（反之亦然）。
 
-   * [IDS工作程序Cloud Service配置](http://localhost:4502/etc/cloudservices/proxy/ids.html)
+   * [IDS辅助进程Cloud Service配置](http://localhost:4502/etc/cloudservices/proxy/ids.html)
    * [云代理Cloud Service配置](http://localhost:4502/etc/cloudservices/proxy.html)
    * [AEM外部化器OSGi配置](http://localhost:4502/system/console/configMgr)
 
-3. **已将InDesign文件上传到AEM Assets** 并允许AEM Workflow和InDesign Server完全处理资源。
-4. **创建新模板** 下 **Assets >模板** ，然后在步骤#4中选择上传到AEM的InDesign文件。
-5. **编辑资产模板** 在步骤#5中创建，并创作可编辑的字段。
-6. 单击 **完成** 以生成资产模板的最终高保真演绎版。
+3. **已将InDesign文件上传到AEM Assets**，并允许AEM Workflow和InDesign Server完全处理资源。
+4. **在** Assets > Templates **下创建新模板**，然后在步骤#4中选择上载到AEM的InDesign文件。
+5. **编辑在步骤#5中创建的资产模板**，并创作可编辑的字段。
+6. 单击&#x200B;**完成**&#x200B;以生成资产模板的最终高保真演绎版。
 7. 单击资产模板卡以打开，并查看资产演绎版以下载高保真演绎版。
 
 ## 其他资源 {#additional-resources}
 
 InDesign模板文件和支持的图像
 
-下载 [InDesign模板文件和支持的图像](assets/asset-templates-tutorial-video--supporting-files-1.zip)
+下载[InDesign模板文件和支持的图像](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
-* [InDesignCC试用版下载](https://creative.adobe.com/products/download/indesign)
-* InDesign Server试用版可从以下位置下载： [Adobe预发行网站](https://www.adobeprerelease.com/) 或 [CC Enterprise客户可以联系其客户经理以请求InDesign Server试用许可证](https://www.adobe.com/products/indesignserver/faq.html)
+* [InDesign的CC试用版下载](https://creative.adobe.com/products/download/indesign)
+* 可以从[Adobe预发行网站](https://www.adobeprerelease.com/)下载InDesign Server试用版，或者[CC Enterprise客户可以联系其客户主管以请求InDesign Server试用许可证](https://www.adobe.com/products/indesignserver/faq.html)

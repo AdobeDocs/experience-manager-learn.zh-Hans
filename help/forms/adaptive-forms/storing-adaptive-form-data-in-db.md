@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## JDBC连接池
 
-* 转到 [ConfigMgr](http://localhost:4502/system/console/configMgr)
+* 转到[ConfigMgr](http://localhost:4502/system/console/configMgr)
 
    * 搜索“JDBC连接池”。 创建新的Day Commons JDBC连接池。 指定特定于数据库的设置。
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## 指定数据库详细信息
 
-* 搜索&quot;**指定数据库详细信息**&quot;
+* 搜索“**指定数据库详细信息**”
 * 指定特定于数据库的属性。
    * DataSourceName：您之前配置的数据源的名称。
    * TableName — 要存储AF数据的表的名称
@@ -213,9 +213,9 @@ public class InsertAfData implements WorkflowProcess {
 * 使用configMgr指定数据库详细信息
 * [下载Zip文件并将其内容解压到硬盘上](assets/article-assets.zip)
 
-   * 使用部署jar文件 [AEM Web控制台](http://localhost:4502/system/console/bundles). 此jar文件包含用于将表单数据存储到数据库中的代码。
+   * 使用[AEM Web控制台](http://localhost:4502/system/console/bundles)部署jar文件。 此jar文件包含用于将表单数据存储到数据库中的代码。
 
-   * 将两个zip文件导入 [使用包管理器的AEM](http://localhost:4502/crx/packmgr/index.jsp). 这样您就可以 [示例工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) 和 [自适应表单示例](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 这会在提交表单时触发工作流。 请注意工作流步骤中的进程参数。 这些参数指示将包含自适应表单数据的数据文件的表单名称和名称。 数据文件存储在crx存储库的有效负荷文件夹下。 注意 [自适应表单](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 配置为在提交时触发AEM工作流以及数据文件配置(data.xml)
+   * 使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)将两个zip文件导入[AEM。 这将为您获取[示例工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html)和[示例自适应表单](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html)，它们将在表单提交时触发工作流。 请注意工作流步骤中的进程参数。 这些参数指示将包含自适应表单数据的数据文件的表单名称和名称。 数据文件存储在crx存储库的有效负荷文件夹下。 请注意[自适应表单](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html)如何配置为在提交时触发AEM工作流以及数据文件配置(data.xml)
 
    * 预览并填写表单并提交。 您应该会看到数据库中创建了一个新行
 

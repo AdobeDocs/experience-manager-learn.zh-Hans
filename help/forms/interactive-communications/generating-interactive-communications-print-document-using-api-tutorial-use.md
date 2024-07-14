@@ -27,7 +27,7 @@ ht-degree: 0%
 
 放入watched文件夹中的文件具有以下结构。 该代码将为XML文档中列出的所有帐号生成语句。
 
-&lt;accountnumbers>
+&lt;帐户号码>
 
 &lt;accountnumber>509840&lt;/accountnumber>
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 表单数据模型的REST端点需要将ID作为输入参数。 此id映射到名为accountnumber的请求属性，如下面的屏幕快照所示。
 
-![请求属性](assets/requestattributeprintchannel.gif)
+![requestattribute](assets/requestattributeprintchannel.gif)
 
 ```java
 var interactiveCommunicationsDocument = "/content/forms/af/retirementstatementprint/channels/print/";
@@ -107,11 +107,11 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-**要在本地系统上对此进行测试，请按照以下说明操作：**
+**若要在本地系统上测试此设置，请按照以下说明操作：**
 
-* 按照本说明设置Tomcat [文章。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成样本数据的war文件。
-* 设置服务（即系统用户），如中所述 [文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
-确保此系统用户具有下列节点的读取权限。 授予权限登录至 [用户管理员](https://localhost:4502/useradmin) 和搜索系统用户“data”，并通过tab键转到“权限”选项卡，为以下节点授予读取权限
+* 按照此[文章中的说明设置Tomcat。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成示例数据的war文件。
+* 按照此[文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md)中的说明设置服务aka系统用户。
+确保此系统用户具有下列节点的读取权限。 要为[user admin](https://localhost:4502/useradmin)提供权限登录，并搜索系统用户“data”，并通过Tab键转到“权限”选项卡，为以下节点提供读取权限
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af

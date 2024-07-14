@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# 创建数据源
+# 创建数据Source
 
 使用上一步创建的swagger文件创建REST支持的数据源
 

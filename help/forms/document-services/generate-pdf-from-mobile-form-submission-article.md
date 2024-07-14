@@ -79,7 +79,7 @@ $("#file1").click();
 });
 ```
 
-[自定义配置文件](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). 使用自定义配置文件，可以更轻松地处理移动设备表单的HTMLDOM对象。 隐藏的文件元素将添加到HTML.jsp中。 当用户点击“添加照片”时，我们将触发文件元素的点击事件。 这允许用户浏览并选择要附加的照片。 然后使用javascript FileReader对象获取图像的base64编码字符串。 base64图像字符串存储在表单的文本字段中。 在提交表单时，我们将提取此值并将其插入XML的img元素中。 然后，使用此XML与xdp合并以生成最终pdf。
+[自定义配置文件](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。 使用自定义配置文件，可以更轻松地处理移动设备表单的HTMLDOM对象。 隐藏的文件元素将添加到HTML.jsp中。 当用户点击“添加照片”时，我们将触发文件元素的点击事件。 这允许用户浏览并选择要附加的照片。 然后使用javascript FileReader对象获取图像的base64编码字符串。 base64图像字符串存储在表单的文本字段中。 在提交表单时，我们将提取此值并将其插入XML的img元素中。 然后，使用此XML与xdp合并以生成最终pdf。
 
 用于本文的自定义配置文件已作为本文资源的一部分提供给您。
 
@@ -116,8 +116,8 @@ function readURL(input) {
 
 * [下载并安装与本文关联的包。](assets/pdf-from-mobile-form-submission.zip)
 
-* 通过查看的属性页面，确保正确设置了提交URL和HTML渲染配置文件  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
+* 通过查看[xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)的HTML页，确保已正确设置提交URL和属性渲染配置文件
 
-* [以html格式预览XDP](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
+* [以html预览XDP](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 
 * 将图像添加到表单并提交。 您应该重新获取PDF，并在其中插入图像。

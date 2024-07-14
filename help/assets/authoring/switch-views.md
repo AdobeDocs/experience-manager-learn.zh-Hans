@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # 切换视图
 
-了解如何高效地在 [资产视图和管理视图](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/overview.html#persona-based-experiences) 在AEM Assetsas a Cloud Service中，确保无缝的资源管理。
+了解如何在AEM Assetsas a Cloud Service中的[Assets视图和管理员视图](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/overview.html#persona-based-experiences)之间有效切换，以确保无缝的资源管理。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426806/?learn=on)

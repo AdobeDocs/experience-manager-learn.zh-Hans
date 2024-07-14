@@ -24,7 +24,7 @@ AdobeCloud Manager提供了一个简单但灵活的自助CI/CD管道，允许AEM
 
 ## 简介
 
-Cloud Manager和Cloud Manager程序的简单介绍。
+有关Cloud Manager和Cloud Manager程序的简短介绍。
 
 >[!NOTE]
 >
@@ -34,21 +34,21 @@ Cloud Manager和Cloud Manager程序的简单介绍。
 
 ## 设置CI/CD管道
 
-本视频探讨了在Cloud Manager中为项目设置管道。
+本视频探讨了如何在Cloud Manager中为项目设置管道。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23083?quality=12&learn=on)
 
 ## 管道执行失败
 
-本视频探讨了如何使用代码执行CI/CD管道，该代码未通过Cloud Manager所要求的质量检查，使用的是 **[!DNL yellow]** 存储库分支。
+本视频探讨了如何使用&#x200B;**[!DNL yellow]**&#x200B;存储库分支代码执行CI/CD管道，该代码未通过Cloud Manager所需的质量检查。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23084?quality=12&learn=on)
 
 ## 管道执行成功
 
-本视频探讨了如何使用代码成功执行CI/CD管道，这些代码通过Cloud Manager所需的质量检查，使用 **[!DNL master]** 存储库分支。
+本视频探讨了如何使用&#x200B;**[!DNL master]**&#x200B;存储库分支，通过通过Cloud Manager所需质量检查的代码成功执行CI/CD管道。
 
-本视频还介绍了 [!UICONTROL 活动] cloud Manager中的控制台，允许重新进入活动执行，或查看已完成的或失败的执行。
+此视频还介绍了Cloud Manager中的[!UICONTROL 活动]控制台，该控制台允许重新进入活动的执行，或查看已完成的或失败的执行。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23085?quality=12&learn=on)
 
@@ -56,5 +56,5 @@ Cloud Manager和Cloud Manager程序的简单介绍。
 
 * [Cloud Manager用户指南](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 * [下载代码扫描 [!DNL SonarQube] 规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)
-   * *链接部分底部的XLSX*
+   * *XLSX在链接节的底部可用*
 * [[!DNL SonarQube] Java™规则索引](https://rules.sonarsource.com/java/)

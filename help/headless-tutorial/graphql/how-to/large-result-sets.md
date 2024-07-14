@@ -23,7 +23,7 @@ ht-degree: 1%
 
 AEM Headless GraphQL查询可能会返回大量结果。 本文介绍了如何在AEM Headless中使用大型结果以确保应用程序的最佳性能。
 
-AEM Headless支持 [offset/limit](#list-query) 和 [基于光标的分页](#paginated-query) 查询到较大结果集的较小子集。 可以提出多个请求来收集所需数量的结果。
+AEM Headless支持对较大结果集的较小子集进行[偏移/限制](#list-query)和[基于游标的分页](#paginated-query)查询。 可以提出多个请求来收集所需数量的结果。
 
 下面的示例使用结果的小子集（每个请求四个记录）来演示这些技术。 在实际的应用程序中，您将为每个请求使用更多的记录以提高性能。 很好的基线是每个请求50条记录。
 
@@ -37,7 +37,7 @@ AEM Headless支持 [offset/limit](#list-query) 和 [基于光标的分页](#pagi
 
 ### 偏移/限制
 
-列出查询，使用 `limit` 和 `offset` 提供直接的方法，指定起始点(`offset`)和要检索的记录数(`limit`)。 这种方法允许从完整结果集中的任何位置选择结果的子集，例如跳转到结果的特定页面。 虽然它易于实施，但在处理大量结果时可能会变得缓慢而低效，因为检索许多记录需要扫描所有以前的记录。 当偏移值较高时，此方法还可能导致性能问题，因为它可能需要检索和丢弃许多结果。
+使用`limit`和`offset`的列表查询提供了一种直接的方法，它指定了起点(`offset`)和要检索的记录数(`limit`)。 这种方法允许从完整结果集中的任何位置选择结果的子集，例如跳转到结果的特定页面。 虽然它易于实施，但在处理大量结果时可能会变得缓慢而低效，因为检索许多记录需要扫描所有以前的记录。 当偏移值较高时，此方法还可能导致性能问题，因为它可能需要检索和丢弃许多结果。
 
 #### GraphQL查询
 
@@ -65,7 +65,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 
 #### GraphQL响应
 
-生成的JSON响应包含第2、第3、第4和第5最昂贵的冒险。 结果中的前两次冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定具有相同价格的冒险，然后按标题以升序排序。)
+生成的JSON响应包含第2、第3、第4和第5最昂贵的冒险。 结果中的前两个冒险具有相同的价格（`4500`，因此[列表查询](#list-queries)指定具有相同价格的冒险随后按标题升序排序。）
 
 ```json
 {
@@ -100,7 +100,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 
 ### 分页查询
 
-基于游标的分页（在分页查询中可用）涉及使用游标（对特定记录的引用）检索下一组结果。 这种方法效率更高，因为它无需扫描所有先前的记录来检索所需的数据子集。 分页查询非常适合迭代从头到中间的某个点或到结尾的大型结果集。 列出查询，使用 `limit` 和 `offset` 提供直接的方法，指定起始点(`offset`)和要检索的记录数(`limit`)。 这种方法允许从完整结果集中的任何位置选择结果的子集，例如跳转到结果的特定页面。 虽然它易于实施，但在处理大量结果时可能会变得缓慢而低效，因为检索许多记录需要扫描所有以前的记录。 当偏移值较高时，此方法还可能导致性能问题，因为它可能需要检索和丢弃许多结果。
+基于游标的分页（在分页查询中可用）涉及使用游标（对特定记录的引用）检索下一组结果。 这种方法效率更高，因为它无需扫描所有先前的记录来检索所需的数据子集。 分页查询非常适合迭代从头到中间的某个点或到结尾的大型结果集。 使用`limit`和`offset`的列表查询提供了一种直接的方法，它指定了起点(`offset`)和要检索的记录数(`limit`)。 这种方法允许从完整结果集中的任何位置选择结果的子集，例如跳转到结果的特定页面。 虽然它易于实施，但在处理大量结果时可能会变得缓慢而低效，因为检索许多记录需要扫描所有以前的记录。 当偏移值较高时，此方法还可能导致性能问题，因为它可能需要检索和丢弃许多结果。
 
 #### GraphQL查询
 
@@ -134,7 +134,7 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 #### GraphQL响应
 
-生成的JSON响应包含第2、第3、第4和第5最昂贵的冒险。 结果中的前两次冒险具有相同的价格(`4500` 所以 [列表查询](#list-queries) 指定具有相同价格的冒险，然后按标题以升序排序。)
+生成的JSON响应包含第2、第3、第4和第5最昂贵的冒险。 结果中的前两个冒险具有相同的价格（`4500`，因此[列表查询](#list-queries)指定具有相同价格的冒险随后按标题升序排序。）
 
 ```json
 {
@@ -177,7 +177,7 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 #### 下一组分页结果
 
-可以使用获取下一组结果 `after` 参数和 `endCursor` 值。 如果没有更多要获取的结果， `hasNextPage` 是 `false`.
+可以使用`after`参数和上一个查询中的`endCursor`值获取下一组结果。 如果没有其他要获取的结果，`hasNextPage`为`false`。
 
 ##### 查询变量
 
@@ -190,7 +190,7 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 ## React示例
 
-以下是演示如何使用的React示例 [偏移和限制](#offset-and-limit) 和 [基于光标的分页](#cursor-based-pagination) 方法。 通常，每个请求的结果数会更多，但就这些示例而言，限制设置为5。
+以下是React示例，这些示例演示了如何使用[offset和limit](#offset-and-limit)以及[基于游标的分页](#cursor-based-pagination)方法。 通常，每个请求的结果数会更多，但就这些示例而言，限制设置为5。
 
 ### 偏移和限制示例
 
@@ -200,7 +200,7 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 #### useEffect挂钩
 
-此 `useEffect` 挂接调用持久查询(`adventures-by-offset-and-limit`)以检索Adventures列表。 查询使用 `offset` 和 `limit` 用于指定起点和要检索的结果数的参数。 此 `useEffect` 在以下情况下调用挂接： `page` 值更改。
+`useEffect`挂接可调用持久查询(`adventures-by-offset-and-limit`)，该查询将检索Adventures列表。 查询使用`offset`和`limit`参数指定起点和要检索的结果数。 `page`值更改时调用`useEffect`挂接。
 
 
 ```javascript
@@ -243,7 +243,7 @@ export function useOffsetLimitAdventures(page, limit) {
 
 #### 组件
 
-组件使用 `useOffsetLimitAdventures` 挂接以检索冒险列表。 此 `page` 值会递增或递减以获取下一组或上一组结果。 此 `hasMore` value用于确定是否应启用“下一页”按钮。
+组件使用`useOffsetLimitAdventures`挂接检索冒险列表。 `page`值会递增或递减，以获取下一组或上一组结果。 `hasMore`值用于确定是否应启用下一页按钮。
 
 ```javascript
 import { useState } from "react";
@@ -305,14 +305,14 @@ export default function OffsetLimitAdventures() {
 
 ![分页示例](./assets/large-results/paginated-example.png)
 
-_每个红色框表示一个离散的分页HTTP GraphQL查询。_
+_每个红色框表示离散分页的HTTP GraphQL查询。_
 
 使用基于光标的分页，通过增量收集结果并将其连接到现有结果，可以轻松检索和显示大型结果集。
 
 
 #### UseEffect挂钩
 
-此 `useEffect` 挂接调用持久查询(`adventures-by-paginated`)以检索Adventures列表。 查询使用 `first` 和 `after` 指定要检索的结果数和游标起始位置的参数。 `fetchData` 不断循环，收集下一组分页结果，直到没有更多可提取的结果为止。
+`useEffect`挂接可调用持久查询(`adventures-by-paginated`)，该查询将检索Adventures列表。 查询使用`first`和`after`参数指定要检索的结果数和游标开始来源。 `fetchData`不断循环，收集下一组分页结果，直到没有更多可获取的结果为止。
 
 ```javascript
 import { useState, useEffect } from "react";
@@ -367,7 +367,7 @@ export function usePaginatedAdventures() {
 
 #### 组件
 
-组件使用 `usePaginatedAdventures` 挂接以检索冒险列表。 此 `queryCount` value用于显示为检索Adventures列表而发出的HTTP请求数。
+组件使用`usePaginatedAdventures`挂接检索冒险列表。 `queryCount`值用于显示为检索冒险列表而发出的HTTP请求数。
 
 ```javascript
 import { useState } from "react";

@@ -28,7 +28,7 @@ AEM 6.3 Forms引入了允许用户使用基于hobbes.js框架构建的Calvin SDK
 
 >[!NOTE]
 >
->**有用链接**
+>**有用的链接**
 >
 >* [Calvin SDK命名空间](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
 >* [Hobbes.js文档](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)

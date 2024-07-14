@@ -28,7 +28,7 @@ ht-degree: 2%
 
 要充分利用本教程，建议您满足以下先决条件：
 
-* 在AEM Formsas a Cloud Service方面的一些经验
+* 在AEM Forms方面的一些经验as a Cloud Service
 * 访问Experience Platform标签
 * 对Adobe Analytics的访问权限
 

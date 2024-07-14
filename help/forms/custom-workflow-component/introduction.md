@@ -26,8 +26,8 @@ ht-degree: 4%
 
 * 已安装表单附加组件包的AEM工作实例
 
-* [根据本文档设置的开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+* [根据此文档设置的开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 
 ## 后续步骤
 
-写入 [通过实施WorkflowProcess接口自定义java代码](./custom-process-step-aem-workflow.md)
+通过实施WorkflowProcess接口](./custom-process-step-aem-workflow.md)编写您的[自定义Java代码

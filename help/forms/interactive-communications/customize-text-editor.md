@@ -40,10 +40,10 @@ ht-degree: 1%
 
 要通过编辑tbxeditor-config.xml文件来自定义字体，请执行以下操作：
 
-1. 转到 `https://'[server]:[port]'/[ContextPath]/crx/de` 并以管理员身份登录。
+1. 转到`https://'[server]:[port]'/[ContextPath]/crx/de`并以管理员身份登录。
 1. 在apps文件夹中，创建一个名为config的文件夹，其路径/结构与config文件夹（位于libs/fd/cm/config）类似，具体步骤如下：
 
-   1. 右键单击以下路径的items文件夹并选择 **覆盖节点**：
+   1. 右键单击以下路径的items文件夹，然后选择&#x200B;**覆盖节点**：
 
       `/libs/fd/cm/config`
 
@@ -55,22 +55,22 @@ ht-degree: 1%
 
       **位置：** /apps/
 
-      **匹配节点类型：** 已选择
+      **匹配节点类型：已选择**
 
       ![覆盖节点](assets/overlay1.png)
 
-   1. 单击 **确定**. 文件夹结构将在apps文件夹中创建。
+   1. 单击&#x200B;**确定**。 文件夹结构将在apps文件夹中创建。
 
    1. 单击&#x200B;**全部保存**。
 
 1. 使用下列步骤，在新创建的配置文件夹中创建tbxeditor-config.xml文件的副本：
 
-   1. 右键单击libs/fd/cm/config上的tbxeditor-config.xml文件，然后选择 **复制**.
-   1. 右键单击以下文件夹并选择 **粘贴：**
+   1. 右键单击libs/fd/cm/config上的tbxeditor-config.xml文件，然后选择&#x200B;**复制**。
+   1. 右键单击以下文件夹并选择&#x200B;**粘贴：**
 
       `apps/fd/cm/config`
 
-   1. 默认情况下，粘贴文件的名称为 `copy of tbxeditor-config.xml.` 将文件重命名为 `tbxeditor-config.xml` 并单击 **全部保存**.
+   1. 粘贴文件的默认名称为`copy of tbxeditor-config.xml.`。请将文件重命名为`tbxeditor-config.xml`，然后单击&#x200B;**全部保存**。
 
 1. 打开apps/fd/cm/config上的tbxeditor-config.xml文件，然后进行所需的更改。
 
@@ -168,7 +168,7 @@ ht-degree: 1%
       * 字体系列和大小、高度、字母间距和日期格式的默认值
       * 项目符号缩进
 
-      例如，要添加名为Sazanami Mincho Medium的日语字体，需要在XML文件中输入以下条目： `<font>Sazanami Mincho Medium</font>`. 您还需要将此字体安装在用于访问和使用字体自定义的客户端计算机上。 有关更多信息，请参阅 [将自定义字体添加到客户端计算机](#addcustomfonts).
+      例如，要添加名为Sazanami Mincho Medium的日语字体，需要在XML文件中输入以下条目： `<font>Sazanami Mincho Medium</font>`。 您还需要将此字体安装在用于访问和使用字体自定义的客户端计算机上。 有关详细信息，请参阅[将自定义字体添加到客户端计算机](#addcustomfonts)。
 
       您还可以更改文本各方面的默认值，通过删除条目从文本编辑器中删除字体。
 
@@ -187,7 +187,7 @@ ht-degree: 1%
 
 在CRX的tbxeditor-config.xml文件中更改了字体，并在用于访问AEM Forms的客户端计算机上安装了所需的字体后，这些更改将显示在文本编辑器中。
 
-例如， Sazanami Mincho Medium字体已添加到 [通过在CRX中编辑tbxeditor-config.xml文件来自定义字体](#customizefonts) 过程显示在文本编辑器UI中，如下所示：
+例如，在[通过编辑CRX](#customizefonts)中的tbxeditor-config.xml文件自定义字体过程中添加的Sazanami Mincho Medium字体显示在文本编辑器UI中，如下所示：
 
 ![sazanamiminchointext](assets/sazanamiminchointext.png)
 

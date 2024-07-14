@@ -21,19 +21,19 @@ ht-degree: 0%
 
 # 导出资源
 
-了解如何使用可自定义的Node.js脚本将资产导出到本地计算机。 此导出脚本提供了一个示例，说明如何使用以编程方式从AEM下载资源 [AEM ASSETS HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)，尤其应侧重于原始演绎版以确保最高质量。 它设计为可在本地驱动器上复制AEM Assets的文件夹结构，从而轻松备份或迁移资产。
+了解如何使用可自定义的Node.js脚本将资产导出到本地计算机。 此导出脚本提供了一个示例，说明如何使用[AEM Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)以编程方式从AEM下载资源，尤其侧重于原始演绎版以确保最高质量。 它设计为可在本地驱动器上复制AEM Assets的文件夹结构，从而轻松备份或迁移资产。
 
 该脚本仅下载资源的原始演绎版，不带关联的元数据，除非该元数据已作为XMP嵌入到资源中。 这意味着下载中不包含存储在AEM中但未集成到资源文件中的任何描述性信息、分类或标记。 也可以通过修改脚本以包含其他演绎版来下载它们。 确保您有足够的空间来存储导出的资源。
 
-脚本通常针对AEM Author运行，但也可以针对AEM Publish运行，只要可通过Dispatcher访问AEM Assets HTTP API端点和资源演绎版。
+脚本通常针对AEM Author运行，但也可以针对AEM Publish运行，前提是可以通过Dispatcher访问AEM Assets HTTP API端点和资源演绎版。
 
 在运行脚本之前，您必须使用AEM实例URL、用户凭据（访问令牌）以及要导出的文件夹的路径对其进行配置。
 
 ## 导出脚本
 
-该脚本编写为JavaScript模块，是Node.js项目的一部分，因为它依赖于以下项 `node-fetch`. 您可以 [以zip文件格式下载项目](./assets/export/export-aem-assets-script.zip)，或将下面的脚本复制到类型的空Node.js项目中 `module`，并运行 `npm install node-fetch` 以安装依赖关系。
+编写为JavaScript模块的脚本是Node.js项目的一部分，因为它依赖于`node-fetch`。 您可以[将该项目下载为zip文件](./assets/export/export-aem-assets-script.zip)，或者将下面的脚本复制到类型为`module`的空Node.js项目中，然后运行`npm install node-fetch`以安装依赖项。
 
-此脚本将浏览AEM Assets文件夹树，并将资源和文件夹下载到计算机上的本地文件夹。 它使用 [AEM ASSETS HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) 以获取文件夹和资产数据，并下载资产的原始演绎版。
+此脚本将浏览AEM Assets文件夹树，并将资源和文件夹下载到计算机上的本地文件夹。 它使用[AEM Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)获取文件夹和资源数据，并下载资源的原始演绎版。
 
 ```javascript
 // export-assets.js
@@ -243,7 +243,7 @@ console.timeEnd('Download AEM assets');
 
 下载脚本后，更新脚本底部的配置变量。
 
-此 `AEM_ACCESS_TOKEN` 可以通过中的步骤获得 [向AEMas a Cloud Service进行基于令牌的身份验证](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview) 教程。 通常，只要导出过程不超过24小时，并且生成令牌的用户拥有对要导出的资产的读取权限，24小时开发人员令牌便足以满足需求。
+可以使用对AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview)进行基于[令牌的身份验证教程中的步骤来获取`AEM_ACCESS_TOKEN`。 通常，只要导出过程不超过24小时，并且生成令牌的用户拥有对要导出的资产的读取权限，24小时开发人员令牌便足以满足需求。
 
 ```javascript
 ...
@@ -270,7 +270,7 @@ const MAX_CONCURRENT_DOWNLOADS = 10;
 
 使用Node.js运行脚本，将资产导出到本地计算机。
 
-根据资源的数量及其大小，脚本可能需要一些时间才能完成。 脚本执行时， [记录进度](#output) 到控制台。
+根据资源的数量及其大小，脚本可能需要一些时间才能完成。 脚本执行时，它[将进度](#output)记录到控制台。
 
 ```shell
 $ node export-assets.js
@@ -294,6 +294,6 @@ Downloaded asset: exported-assets/wknd-shared/en/magazine/western-australia/adob
 Download AEM assets: 24.770s
 ```
 
-导出的资源可在配置中指定的本地文件夹中找到 `LOCAL_DOWNLOAD_FOLDER`. 文件夹结构反映了AEM Assets文件夹结构，并将资源下载到相应的子文件夹。 这些文件可以上传到 [支持的云存储提供商](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view)，用于 [批量导入](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import) 到其他AEM实例中，或用于备份。
+在配置`LOCAL_DOWNLOAD_FOLDER`中指定的本地文件夹中可以找到导出的资源。 文件夹结构反映了AEM Assets文件夹结构，并将资源下载到相应的子文件夹。 这些文件可以上载到[支持的云存储提供商](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view)，以便将[批量导入](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import)到其他AEM实例，或用于备份。
 
-![导出的资源](./assets/export/exported-assets.png)
+![已导出资源](./assets/export/exported-assets.png)

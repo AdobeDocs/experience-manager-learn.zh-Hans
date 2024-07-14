@@ -1,6 +1,6 @@
 ---
-title: 将Cloud Manager与AEMas a Cloud Service配合使用
-description: 了解Cloud Manager for AEMas a Cloud Service，以及它与Cloud Manager for AEM onAdobe管理服务(AMS)的区别。
+title: 将Cloud Manager与AEM as a Cloud Service一起使用
+description: 了解Cloud Manager for AEM as a Cloud Service，以及它与Cloud Manager for AEM on Adobe Manage Services (AMS)的区别。
 version: Cloud Service
 feature: Cloud Manager
 topic: Migration, Upgrade
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # Cloud Manager
 
-了解Cloud Manager for AEMas a Cloud Service，以及它与Cloud Manager for AEM onAdobe管理服务(AMS)的区别。
+了解Cloud Manager for AEM as a Cloud Service，以及它与Cloud Manager for AEM on Adobe Manage Services (AMS)的区别。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336961?quality=12&learn=on)
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 在尝试动手练习之前，请确保您已观看并了解上述视频以及以下材料：
 
-+ [以不同的方式思考AEMas a Cloud Service](./introduction.md)
++ [以不同的方式思考AEM as a Cloud Service](./introduction.md)
 + [入门培训](./onboarding.md)
 
 此外，请确保您已完成之前的实践练习：
@@ -46,7 +46,7 @@ ht-degree: 2%
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
-            <div style="font-size:1.25rem;font-weight:400;">使用Cloud Manager实践</div>
+            <div style="font-size:1.25rem;font-weight:400;">Cloud Manager动手操作</div>
             <p style="margin:1rem 0">
                 探索使用AIO CLI Cloud Manager插件触发Cloud Manager管道。
             </p>

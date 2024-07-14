@@ -1,6 +1,6 @@
 ---
 title: 使用和了解AEM Dispatcher配置中的变量
-description: 了解如何在Apache和Dispatcher模块配置文件中使用变量以将它们提升到新的级别。
+description: 了解如何在Apache和Dispatcher模块配置文件中使用变量以将其提升到新的级别。
 version: 6.5
 topic: Administration, Development
 feature: Dispatcher
@@ -33,8 +33,8 @@ Apache支持变量，并且从4.1.9版本的Dispather模块开始，它同样支
 
 - 确保特定于环境的任何内容不在配置中，而是被提取的，以确保来自开发环境的配置文件在产品中使用相同的功能输出。
 - 切换功能并更改AMS提供且不允许您更改的不可变文件的日志级别。
-- 根据以下变量更改要使用的包含 `RUNMODE` 和 `ENV_TYPE`
-- 匹配 `DocumentRoot`的和 `VirtualHost` Apache配置和模块配置之间的DNS名称。
+- 根据变量（如`RUNMODE`和`ENV_TYPE`）更改要使用的include
+- 在Apache配置和模块配置之间匹配`DocumentRoot`和`VirtualHost`的DNS名称。
 
 ## 使用基线变量
 
@@ -42,9 +42,9 @@ Apache支持变量，并且从4.1.9版本的Dispather模块开始，它同样支
 
 ### 基线变量
 
-在文件中声明AMS默认变量 `/etc/httpd/conf.d/variables/ootb.vars`.  此文件不可编辑，但存在，以确保变量没有null值。  先包括后包括，而不包括 `/etc/httpd/conf.d/variables/ams_default.vars`.  您可以编辑该文件以更改这些变量的值，甚至可以在您自己的文件中包含相同的变量名称和值！
+AMS默认变量在文件`/etc/httpd/conf.d/variables/ootb.vars`中声明。  此文件不可编辑，但存在，以确保变量没有null值。  先包括后包括`/etc/httpd/conf.d/variables/ams_default.vars`。  您可以编辑该文件以更改这些变量的值，甚至可以在您自己的文件中包含相同的变量名称和值！
 
-以下是文件内容的示例 `/etc/httpd/conf.d/variables/ams_default.vars`：
+以下是文件`/etc/httpd/conf.d/variables/ams_default.vars`内容的示例：
 
 ```
 Define DISP_LOG_LEVEL info
@@ -56,7 +56,7 @@ Define PUBLISH_FORCE_SSL 0
 
 ### 示例1 — 强制SSL
 
-上面显示的变量 `AUHOR_FORCE_SSL`，或 `PUBLISH_FORCE_SSL` 可设置为1以启用重写规则，这些规则强制最终用户在发出http请求时重定向到https
+上述`AUHOR_FORCE_SSL`或`PUBLISH_FORCE_SSL`显示的变量可设置为1以启用重写规则，这些规则强制最终用户在进入http请求时被重定向到https
 
 以下是允许此切换工作的配置文件语法：
 
@@ -75,7 +75,7 @@ Define PUBLISH_FORCE_SSL 0
 
 ### 示例2 — 日志记录级别
 
-变量 `DISP_LOG_LEVEL` 可用于设置您希望在运行配置中实际使用的日志级别使用的日志。
+变量`DISP_LOG_LEVEL`可用于设置您希望在运行配置中实际使用的日志级别使用的变量。
 
 以下是ams基线配置文件中存在的语法示例：
 
@@ -86,7 +86,7 @@ Define PUBLISH_FORCE_SSL 0
 </IfModule>
 ```
 
-如果您需要提高Dispatcher日志记录级别，只需更新 `ams_default.vars` 变量 `DISP_LOG_LEVEL` 达到您所需的级别。
+如果需要提高Dispatcher日志记录级别，只需将`ams_default.vars`变量`DISP_LOG_LEVEL`更新到所需的级别。
 
 示例值可以是整数或单词：
 
@@ -100,7 +100,7 @@ Define PUBLISH_FORCE_SSL 0
 
 ### 示例3 — 白名单
 
-变量 `AUTHOR_WHITELIST_ENABLED` 和 `PUBLISH_WHITELIST_ENABLED` 可以设置为1以参与重写规则，这些规则包括根据IP地址允许或禁止最终用户流量的规则。  在上切换此功能时，需要结合创建白名单规则文件并将其包含。
+变量`AUTHOR_WHITELIST_ENABLED`和`PUBLISH_WHITELIST_ENABLED`可以设置为1以参与重写规则，这些规则包括根据IP地址允许或禁止最终用户流量的规则。  在上切换此功能时，需要结合创建白名单规则文件并将其包含。
 
 下面是一些语法示例，说明变量如何启用白名单文件的包含和白名单文件示例
 
@@ -124,13 +124,13 @@ Define PUBLISH_FORCE_SSL 0
 </RequireAny>
 ```
 
-如您所见 `sample_whitelist.rules` 强制执行IP限制，但切换变量可允许包含在 `sample.vhost`
+如您所见，`sample_whitelist.rules`强制执行IP限制，但切换变量可将其包含在`sample.vhost`中
 
 ## 变量的放置位置
 
 ### Web服务器启动参数
 
-AMS会将服务器/拓扑特定的变量放在Apache进程的启动参数中的文件中 `/etc/sysconfig/httpd`
+AMS会将服务器/拓扑特定变量放在`/etc/sysconfig/httpd`文件中Apache进程的启动参数中
 
 此文件具有预定义的变量，如下所示：
 
@@ -153,7 +153,7 @@ RUNMODE='sites'
 
 ### 变量文件(`.vars`)
 
-您的代码提供的自定义变量应位于 `.vars` 目录中的文件 `/etc/httpd/conf.d/variables/`
+代码提供的自定义变量应位于目录`/etc/httpd/conf.d/variables/`内的`.vars`文件中
 
 这些文件可以包含所需的任何自定义变量，以下示例文件中提供了一些语法示例
 
@@ -178,42 +178,42 @@ Define WERETAIL_DOMAIN www.weretail.com
 Define WERETAIL_ALT_DOMAIN www..weretail.net
 ```
 
-创建自己的变量时，文件会根据其内容对其进行命名，并遵循手册中提供的命名标准 [此处](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention).  在上例中，您可以看到变量文件承载不同的DNS条目，作为要在配置文件中使用的变量。
+创建您自己的变量时，文件会根据它们的内容命名它们，并遵循手册[此处](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention)中提供的命名标准。  在上例中，您可以看到变量文件承载不同的DNS条目，作为要在配置文件中使用的变量。
 
 ## 使用变量
 
 现在，您已在变量文件中定义了变量，接下来您将希望了解如何在其他配置文件中正确使用它们。
 
-我们将使用示例 `.vars` 以上文件以说明一个适当的用例。
+我们将使用上面的示例`.vars`文件来说明一个适当的用例。
 
-我们希望在全局范围内包含所有基于环境的变量，我们将创建该文件 `/etc/httpd/conf.d/000_load_env_vars.conf`
+我们要全局包括所有基于环境的变量，我们将创建文件`/etc/httpd/conf.d/000_load_env_vars.conf`
 
 ```
 IncludeOptional /etc/httpd/conf.d/variables/*_${ENV_TYPE}.vars
 IncludeOptional /etc/httpd/conf.d/variables/*_${RUNMODE}.vars
 ```
 
-我们知道，当httpd服务启动时，它会拉取AMS在中设置的变量 `/etc/sysconfig/httpd` 并且具有变量集 `ENV_TYPE` 和 `RUNMODE`
+我们知道，当httpd服务启动时，它会拉取AMS在`/etc/sysconfig/httpd`中设置的变量，并具有变量集`ENV_TYPE`和`RUNMODE`
 
-当此全局 `.conf` 文件被拉入，它将提前被拉入，因为文件的包含顺序为 `conf.d` 文件名中的字母数字加载顺序表示为000，可确保它在目录中的其他文件之前加载。
+当此全局`.conf`文件被拉入时，将提前拉入，因为`conf.d`中文件的包含顺序是字母数字加载顺序，文件名中的平均值000将确保它先于目录中的其他文件加载。
 
-include语句还在文件名中使用变量。  这可以根据中的值更改它将实际加载的文件 `ENV_TYPE` 和 `RUNMODE` 变量。
+include语句还在文件名中使用变量。  此操作可以根据`ENV_TYPE`和`RUNMODE`变量中的值更改它将实际加载的文件。
 
-如果 `ENV_TYPE` 值为 `dev` 则要使用的文件为：
+如果`ENV_TYPE`值为`dev`，则要使用的文件为：
 
 `/etc/httpd/conf.d/variables/weretail_domains_dev.vars`
 
-如果 `ENV_TYPE` 值为 `stage` 则要使用的文件为：
+如果`ENV_TYPE`值为`stage`，则要使用的文件为：
 
 `/etc/httpd/conf.d/variables/weretail_domains_stage.vars`
 
-如果 `RUNMODE` 值为 `preview` 则要使用的文件为：
+如果`RUNMODE`值为`preview`，则要使用的文件为：
 
 `/etc/httpd/conf.d/variables/weretail_domains_preview.vars`
 
 当该文件被包含时，它将允许我们使用存储在中的变量名称。
 
-在我们的 `/etc/httpd/conf.d/available_vhosts/weretail.vhost` 文件我们可以置换仅适用于dev的常规语法：
+在`/etc/httpd/conf.d/available_vhosts/weretail.vhost`文件中，我们可以置换仅适用于dev的常规语法：
 
 ```
 <VirtualHost *:80> 
@@ -229,7 +229,7 @@ include语句还在文件名中使用变量。  这可以根据中的值更改�
  ServerAlias ${WERETAIL_ALT_DOMAIN}
 ```
 
-在我们的 `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` 文件我们可以置换仅适用于dev的常规语法：
+在`/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any`文件中，我们可以置换仅适用于dev的常规语法：
 
 ```
 "dev.weretail.com" 
@@ -259,7 +259,7 @@ source /etc/sysconfig/httpd;/sbin/httpd -S | grep Define | grep "="
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_CONFIG | grep -v "#"
 ```
 
-变量在编译后的Dispatcher配置中的查看方式：
+变量在编译后的Dispatcher配置中的外观：
 
 ```
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY

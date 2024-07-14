@@ -1,6 +1,6 @@
 ---
-title: AEMas a Cloud Service缓存
-description: AEMas a Cloud Service缓存的一般概述。
+title: AEM as a Cloud Service缓存
+description: AEM as a Cloud Service缓存的一般概述。
 version: Cloud Service
 feature: Dispatcher, Developer Tools
 topic: Performance
@@ -19,17 +19,17 @@ ht-degree: 0%
 
 ---
 
-# AEMas a Cloud Service缓存
+# AEM as a Cloud Service缓存
 
-在AEMas a Cloud Service中，了解缓存至关重要。 缓存涉及存储和重用之前获取的数据，以提高系统效率并减少加载时间。 此机制可显着加快内容交付、提升网站性能并优化用户体验。
+在AEM as a Cloud Service中，了解缓存至关重要。 缓存涉及存储和重用之前获取的数据，以提高系统效率并减少加载时间。 此机制可显着加快内容交付、提升网站性能并优化用户体验。
 
-AEMas a Cloud Service具有多个缓存层，并且Author和Publish服务中的策略有所不同。
+AEM as a Cloud Service具有多个缓存层，并且Author服务和Publish服务中的策略有所不同。
 
-![AEMas a Cloud Service缓存概述](./assets/overview/all.png){align="center"}
+![AEM as a Cloud Service缓存概述](./assets/overview/all.png){align="center"}
 
 ## AEM缓存
 
-AEMas a Cloud Service具有强大、可配置的多层缓存策略，包括CDN、AEM Dispatcher和可选的客户管理的CDN。 可以微调跨层的缓存以优化性能，从而确保AEM仅提供最佳体验。 AEM对Author和Publish服务的缓存存在不同疑虑。 探索以下每项服务的缓存策略。
+AEM as a Cloud Service具有强大、可配置的多层缓存策略，包括CDN、AEM Dispatcher和可选的客户管理的CDN。 可以微调跨层的缓存以优化性能，从而确保AEM仅提供最佳体验。 AEM对Author和Publish服务的缓存存在不同疑虑。 探索以下每项服务的缓存策略。
 
 
 <div class="columns is-multiline" style="margin-top: 2rem">

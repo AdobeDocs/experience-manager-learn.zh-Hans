@@ -24,12 +24,12 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/25173?quality=12&learn=on)
 
-上视频显示了为自定义页面属性 [WKND引用站点](https://github.com/adobe/aem-guides-wknd).
+以上视频显示为[WKND引用站点](https://github.com/adobe/aem-guides-wknd)自定义页面属性。
 
 ## 示例WKND页面属性包
 
-您可以使用提供的 [示例WKND页面属性包](./assets/WKND-PageProperties-Example-Dialog-1.0.zip) 包含 **WKND** 和 **基本** 上视频中显示的选项卡自定义项。 此 **社交媒体** 选项卡自定义未提供为 [WKND页面组件](https://github.com/adobe/aem-guides-wknd/blob/main/ui.apps/src/main/content/jcr_root/apps/wknd/components/page/.content.xml#L5) 现在使用V3版本的WCM核心组件，而在V3版本中， [社交共享已弃用](https://github.com/adobe/aem-core-wcm-components/pull/1930).
+您可以使用提供的[示例WKND页面属性包](./assets/WKND-PageProperties-Example-Dialog-1.0.zip)，其中包含&#x200B;**WKND**&#x200B;和&#x200B;**Basic**&#x200B;选项卡自定义项，如上述视频所示。 未提供&#x200B;**SocialMedia**&#x200B;选项卡自定义，因为[WKND页面组件](https://github.com/adobe/aem-guides-wknd/blob/main/ui.apps/src/main/content/jcr_root/apps/wknd/components/page/.content.xml#L5)现在使用V3版本的WCM核心组件，在V3版本中，[社交共享已弃用](https://github.com/adobe/aem-core-wcm-components/pull/1930)。
 
-但是，出于学习目的，您可以使用将WKND页面组件指向WCM核心组件的V2版本 `sling:resourceSuperType` 属性值并叠加 [社交媒体](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95) 选项卡。 有关更多信息，请参阅 [配置页面属性](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
+但是，出于学习目的，您可以使用`sling:resourceSuperType`属性值将WKND页面组件指向WCM核心组件的V2版本，并叠加[社交媒体](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95)选项卡。 有关详细信息，请参阅[配置页面属性](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
 
 应在本地AEM SDK或AEM 6.X.X实例上安装此示例包以进行学习。

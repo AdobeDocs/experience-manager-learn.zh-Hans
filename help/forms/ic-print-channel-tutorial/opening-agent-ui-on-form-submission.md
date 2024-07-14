@@ -57,12 +57,12 @@ wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").incl
 要在您的服务器上测试此功能，请执行以下操作
 
 * [使用包管理器导入并安装与本文相关的资源。](assets/launch-agent-ui.zip)
-* [登录configMgr](http://localhost:4502/system/console/configMgr)
-* 搜索 _AdobeGranite CSRF筛选器_
-* 添加 _/content/getprintchannel_ 在排除的路径中
+* [登录到configMgr](http://localhost:4502/system/console/configMgr)
+* 搜索&#x200B;_AdobeGranite CSRF筛选器_
+* 在排除的路径中添加&#x200B;_/content/getprintchannel_
 * 保存更改。
-* [打开POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp). 确保传递给FormFieldRequestParameter的字符串是有效的documentId。（第19行）。
-* [打开网页](http://localhost:4502/content/OpenPrintChannel.html) 然后输入帐户编号并提交表单。
+* [打开POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。 确保传递给FormFieldRequestParameter的字符串是有效的documentId。（第19行）。
+* [打开网页](http://localhost:4502/content/OpenPrintChannel.html)，输入accountnumber并提交表单。
 * 代理UI界面应会打开，并预先填充特定于在表单中输入的帐号的数据。
 
 >[!NOTE]

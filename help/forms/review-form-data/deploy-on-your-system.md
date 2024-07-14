@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # 在系统上部署资产
 
-部署 [摘要组件](assets/summarize-component.zip).
+部署[summarize-component](assets/summarize-component.zip)。
 
-[部署示例自适应表单](assets/sample-adaptive-form.zip).
+[部署示例自适应表单](assets/sample-adaptive-form.zip)。
 
 [预览示例表单](http://localhost:4502/content/dam/formsanddocuments/testsummary/jcr:content?wcmmode=disabled)
 
-填写表单字段，然后单击 **下一个** 按钮以查看表单数据。 您还可以通过单击铅笔图标来编辑表单数据。
+填写表单字段并单击&#x200B;**下一步**&#x200B;按钮导航到摘要屏幕以查看表单数据。 您还可以通过单击铅笔图标来编辑表单数据。

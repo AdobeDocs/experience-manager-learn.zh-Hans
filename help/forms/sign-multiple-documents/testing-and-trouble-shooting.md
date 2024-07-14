@@ -22,13 +22,13 @@ ht-degree: 0%
 
 ## 预览再融资表单
 
-用例在客户服务代理填写并提交时触发 [再融资表单](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled).
+当客户服务代理填写并提交[再融资表单](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)时，将触发用例。
 
 签署多个Forms工作流将在提交此表单时触发，客户将收到一封电子邮件通知，其中包含开始表单填写和签署流程的链接。
 
 ## 在程序包中填写表单
 
-向客户演示如何填写并签署包中的第一个表单。 成功签署表单后，客户可以导航到资源包中的下一个表单。 填写并签署所有表单后，向客户显示“**全部完成**”表单。
+向客户演示如何填写并签署包中的第一个表单。 成功签署表单后，客户可以导航到资源包中的下一个表单。 填写所有表单并签名后，向客户显示“**AllDone**”表单。
 
 ## 疑难解答
 
@@ -50,4 +50,4 @@ ht-degree: 0%
 
 ### 未看到AllDone表单
 
-当没有更多表单可登录包时，会向用户显示AllDone表单。如果您未看到AllDone表单，请检查GetNextFormToSign.js文件的第33行中使用的URL，该文件是 **getnextform** 客户端库。
+当没有更多表单可登录包时，会向用户显示AllDone表单。如果您未看到AllDone表单，请检查GetNextFormToSign.js文件（属于&#x200B;**getnextform**&#x200B;客户端库的一部分）第33行中使用的URL。

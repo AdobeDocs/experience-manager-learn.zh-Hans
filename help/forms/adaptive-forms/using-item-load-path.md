@@ -28,8 +28,8 @@ ht-degree: 0%
 * 保存
 * 单击新创建的资源节点，并设置其属性，如下所示
 * 您将需要创建一个名为assettypes的String类型的属性（您可以根据需要进行命名）。请确保该属性为多值。 提供所需的值并保存。
-  ![项目加载路径](assets/item-load-path-crx.png)
+  ![项加载路径](assets/item-load-path-crx.png)
 
-要在下拉列表中加载这些值，请在项加载路径属性中提供以下路径  **/content/assets/assettypes**
+要在下拉列表中加载这些值，请在项加载路径属性&#x200B;**/content/assets/assettypes**&#x200B;中提供以下路径
 
-示例包可以是 [从此处下载](assets/item-load-path-package.zip)
+可从此处](assets/item-load-path-package.zip)下载示例包[

@@ -24,4 +24,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->可以使用任何RDBMS数据源，只要将所需的数据库驱动程序作为OSGi捆绑包部署到AEM即可。 中介绍了如何在AEM中设置RDBMS数据源 [设置数据与AEM Forms的集成](/help/forms/adaptive-forms/data-integration-technical-video-setup.md).
+>可以使用任何RDBMS数据源，只要将所需的数据库驱动程序作为OSGi捆绑包部署到AEM即可。 在AEM中设置RDBMS数据源的过程包含在[与AEM Forms的设置数据集成](/help/forms/adaptive-forms/data-integration-technical-video-setup.md)中。

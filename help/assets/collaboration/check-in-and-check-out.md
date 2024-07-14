@@ -1,6 +1,6 @@
 ---
 title: 签入和签出
-description: 了解如何使用AEM签入和签出功能来促进资源上的多用户协作。
+description: 了解如何使用AEM的签入和签出功能来促进多用户协作处理资源。
 feature: Asset Management
 version: Cloud Service
 jira: KT-4542
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # 签入和签出
 
-了解如何使用AEM签入和签出功能来促进资源上的多用户协作。
+了解如何使用AEM的签入和签出功能来促进多用户协作处理资源。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32048?quality=12&learn=on)

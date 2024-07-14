@@ -1,6 +1,6 @@
 ---
-title: 修改数据源配置设置。
-description: 在数据源配置设置中修改主机名和其他设置。
+title: 修改数据Source配置设置。
+description: 在Data Source配置设置中修改主机名和其他设置。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ---
 
-# 能够修改数据源配置设置{#ability-to-modify-data-source-configuration-settings}
+# 能够修改数据Source配置设置{#ability-to-modify-data-source-configuration-settings}
 
 在AEM Forms 6.4版本发布之前，配置数据源后，您无法更改RESTful服务的方案、主机和基本路径。 如果您希望针对不同的环境测试数据源，这会产生问题。
 
@@ -24,8 +24,8 @@ ht-degree: 0%
 
 以下屏幕截图显示了AEM Forms 6.4和Forms 6.5中的数据源配置设置
 
-**AEM 6.4中的数据源配置**
+AEM 6.4 **中的**&#x200B;数据Source配置
 
 ![64数据源配置](assets/64release.gif)
-**AEM 6.5及更高版本中的可编辑数据源配置**
+**AEM 6.5及更高版本中的可编辑数据Source配置**
 ![65数据源配置](assets/modifiable_data_source.png)

@@ -1,5 +1,5 @@
 ---
-title: 使用可视化体验编辑器进行个性化
+title: 使用可视化体验编辑器的Personalization
 description: 了解如何使用可视化体验编辑器创建Adobe Target活动。
 version: Cloud Service
 jira: KT-6352
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ---
 
-# 使用可视化体验编辑器进行个性化 {#personalization-vec}
+# 使用可视化体验编辑器的Personalization {#personalization-vec}
 
 了解如何使用可视化体验编辑器(VEC)创建A/B测试Target活动。
 
@@ -37,19 +37,19 @@ WKND站点主页以信息卡的形式显示本地活动或可在城市周围执�
 
 ## 使用可视化体验编辑器(VEC)创建A/B测试的步骤
 
-1. 登录 [Adobe Experience Cloud](https://experience.adobe.com/)，点按 __Target__，导航到 __活动__ 选项卡
+1. 登录到[Adobe Experience Cloud](https://experience.adobe.com/)，点按&#x200B;__Target__，导航到&#x200B;__活动__&#x200B;选项卡
 
-   + 如果您没有看到 __Target__ 在Experience Cloud仪表板上，确保在右上角的Adobe切换器中选择了正确的组织组织，并且已授予该用户在中访问Target的权限。 [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + 如果您在Experience Cloud功能板上未看到&#x200B;__Target__，请确保在右上角的Adobe切换器中选择了正确的组织组织，并且已在[Adobe Admin Console](https://adminconsole.adobe.com/)中授予该用户访问Target的权限。
 
-1. 单击 **创建活动** 按钮，然后选择 **A/B测试** 活动
+1. 单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**A/B测试**&#x200B;活动
 
    ![A/B活动](assets/ab-target-activity.png)
 
-1. 选择 **可视化体验编辑器** 选项，提供活动URL，然后单击 **下一个**
+1. 选择&#x200B;**可视化体验编辑器**&#x200B;选项，提供活动URL，然后单击&#x200B;**下一步**
 
    ![活动URL](assets/ab-test-url.png)
 
-1. 创建活动后，可视化体验编辑器在左侧显示两个选项卡： *体验A* 和 *体验B*. 从列表中选择体验。 您可以使用向列表中添加新体验 **添加体验** 按钮。
+1. 创建活动后，可视化体验编辑器在左侧显示两个选项卡：*体验A*&#x200B;和&#x200B;*体验B*。 从列表中选择体验。 您可以使用&#x200B;**添加体验**&#x200B;按钮向列表中添加新体验。
 
    ![体验A](assets/experience.png)
 
@@ -57,16 +57,16 @@ WKND站点主页以信息卡的形式显示本地活动或可在城市周围执�
 
    ![元素](assets/select-element.png)
 
-1. 更改文本 *西澳大利亚露营* 到 *澳大利亚历险记*. “修改”下将显示已添加到体验的更改的列表。 您可以单击并编辑修改后的项目以查看其CSS选择器以及添加到该项目的新内容。
+1. 将文本从&#x200B;*Camping in West Australia*&#x200B;更改为&#x200B;*Adventures of Australia*。 “修改”下将显示已添加到体验的更改的列表。 您可以单击并编辑修改后的项目以查看其CSS选择器以及添加到该项目的新内容。
 
    ![冒险](assets/adventures.png)
 
-1. 重命名 *体验A* 到 *冒险*
-1. 同样，更新上的文本 *体验B* 从 *西澳大利亚露营* 到 *探索澳大利亚荒野*.
+1. 将&#x200B;*体验A*&#x200B;重命名为&#x200B;*冒险*
+1. 同样，将&#x200B;*体验B*&#x200B;上的文本从&#x200B;*Camping in West Australia*&#x200B;更新为&#x200B;*探索澳大利亚荒野*。
 
    ![浏览](assets/explore.png)
 
-1. 单击 **下一个** 以转到定位，让我们将两个体验之间的手动流量分配保持为50-50。
+1. 单击&#x200B;**下一步**&#x200B;以转到定位，让我们将两个体验之间的手动流量分配保持为50-50。
 
    ![定位](assets/targeting.png)
 

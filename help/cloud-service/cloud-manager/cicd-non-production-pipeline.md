@@ -26,6 +26,6 @@ ht-degree: 89%
 >abstract="CI/CD 非生产管道分为两个类别：代码质量管道和部署管道。代码质量管道从 Git 分支获取所有代码以生成并对照 Cloud Manager 的代码质量扫描接受评估。部署管道支持将代码从 Git 存储库自动部署到任意非生产环境，这意味着任何已配置的 AEM 环境不是暂存环境或生产环境。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=zh-Hans#non-production-%26-code-quality-only-pipelines" text="仅非生产和代码质量管道"
 
-[CI/CD非生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=zh-Hans#non-production-%26-code-quality-only-pipelines) 分为两个类别：代码质量管道和部署管道。 代码质量管道从 Git 分支获取所有代码以生成并对照 Cloud Manager 的代码质量扫描接受评估。部署管道支持将代码从 Git 存储库自动部署到任意非生产环境，这意味着任何已配置的 AEM 环境不是暂存环境或生产环境。
+[CI/CD非生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=zh-Hans#non-production-%26-code-quality-only-pipelines)分为两个类别：代码质量管道和部署管道。 代码质量管道从 Git 分支获取所有代码以生成并对照 Cloud Manager 的代码质量扫描接受评估。部署管道支持将代码从 Git 存储库自动部署到任意非生产环境，这意味着任何已配置的 AEM 环境不是暂存环境或生产环境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316?quality=12&learn=on)

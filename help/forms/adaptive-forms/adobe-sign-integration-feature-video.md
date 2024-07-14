@@ -28,10 +28,10 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/18696?quality=12&learn=on)
 
-*本视频介绍设置Acrobat Sign云服务和将多个签名字段添加到AEM自适应表单的过程。*
+*此视频介绍设置Acrobat Sign云服务并将多个签名字段添加到AEM自适应表单的过程。*
 
 >[!NOTE]
 >
 >此功能仅在AEM 6.3之后可用。
 
-请访问 [AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#formsandsign) 页面，获取指向此功能实时演示的链接。
+请访问[AEM Forms示例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#formsandsign)页面，获取指向此功能实时演示的链接。

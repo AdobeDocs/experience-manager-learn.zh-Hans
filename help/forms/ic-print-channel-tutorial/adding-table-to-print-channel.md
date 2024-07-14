@@ -22,7 +22,7 @@ ht-degree: 1%
 # 向贡献部分添加表
 
 在本部分中，我们将向贡献部分添加一个表。
-请参阅 [在打印渠道中使用表](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) 有关在打印渠道文档中使用表格的更多详细信息。
+有关在打印渠道文档中使用表的详细信息，请参阅[在打印渠道中使用表](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md)。
 
 登录到AEM Forms，然后导航至Adobe Experience Manager > Forms > Forms和文档。
 

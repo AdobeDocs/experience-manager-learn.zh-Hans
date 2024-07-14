@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Cloud 5 - Cloud Manager的秘密 — 功能测试
 
-默认情况下，AEMas a Cloud Service会完成许多功能测试，您的应用程序将构建在顶部。 但是，这些测试可能未涵盖您可能需要的全部必需测试。 自定义功能测试可以派上用场。
+默认情况下，AEM as a Cloud Service会完成多项功能测试，您的应用程序将构建在顶部。 但是，这些测试可能未涵盖您可能需要的全部必需测试。 自定义功能测试可以派上用场。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343624?quality=12&learn=on)
 

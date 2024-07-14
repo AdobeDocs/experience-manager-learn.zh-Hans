@@ -29,19 +29,19 @@ ht-degree: 1%
 
 >[!TIP]
 >
-> 在Excel中打开元数据导出CSV文件时，使用 [Excel导入程序](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) 而不是双击文件以避免UTF-8编码的CSV文件出现问题。
+> 在Excel中打开元数据导出CSV文件时，请使用[Excel导入程序](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6)，而不是双击该文件，以避免UTF-8编码的CSV文件出现问题。
 >
 > 要在Excel中打开元数据导出CSV文件，请执行以下步骤：
 > 
 > 1. 打开Microsoft Excel
-> 1. 选择 __文件>新建__ 创建空电子表格
-> 1. 打开空电子表格，选择 __文件>导入__
-> 1. 选择 __文本__ 文件并单击 __导入__
-> 1. 从文件系统中选择导出的CSV文件，然后单击 __获取数据__
-> 1. 在导入向导的第1步中，选择 __已分隔__ 并设置 __文件来源__ 到 __Unicode (UTF-8)__，然后单击 __下一个__
-> 1. 在步骤2中，设置 __分隔符__ 到 __逗号__，然后单击 __下一个__
-> 1. 在步骤3中，将 __列数据格式__ 原样，然后单击 __完成__
-> 1. 选择 __导入__ 将数据添加到电子表格
+> 1. 选择&#x200B;__文件>新建__&#x200B;以创建空电子表格
+> 1. 打开空电子表格，选择&#x200B;__文件>导入__
+> 1. 选择&#x200B;__文本__&#x200B;文件并单击&#x200B;__导入__
+> 1. 从文件系统中选择导出的CSV文件，然后单击&#x200B;__获取数据__
+> 1. 在导入向导的第1步中，选择&#x200B;__分隔__&#x200B;并将&#x200B;__文件源__&#x200B;设置为&#x200B;__Unicode (UTF-8)__，然后单击&#x200B;__下一步__
+> 1. 在步骤2中，将&#x200B;__分隔符__&#x200B;设置为&#x200B;__逗号__，然后单击&#x200B;__下一步__
+> 1. 在步骤3中，将&#x200B;__列数据格式__&#x200B;保持原样，然后单击&#x200B;__完成__
+> 1. 选择&#x200B;__导入__&#x200B;将数据添加到电子表格
 
 ## 元数据导入 {#metadata-import}
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 ### 第一行
 
 * CSV文件的第一行定义元数据架构。
-* 第一列默认为 `assetPath`，保存资产的绝对JCR路径。
+* 第一列默认为`assetPath`，它保存资产的绝对JCR路径。
 
 * 第一行中的后续列指向资源的其他元数据属性。
    * 例如： `dc:title, dc:description, jcr:title`
@@ -68,13 +68,13 @@ ht-degree: 1%
    * 例如：`dc:title {{String}}`
 
 * 属性名称区分大小写
-   * 正确： `dc:title {{String}}`
+   * 正确：`dc:title {{String}}`
    * 不正确： `Dc:Title {{String}}`
 
 * 属性类型区分大小写
-* 全部有效 [JCR属性类型](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html) 受支持
+* 支持所有有效的[JCR属性类型](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
 
-* 多值属性格式 —  `<metadata property name> {{<property type : MULTI }}`
+* 多值属性格式 — `<metadata property name> {{<property type : MULTI }}`
 
 ### 第二行到N行
 

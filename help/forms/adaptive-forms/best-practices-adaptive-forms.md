@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 最佳实践
 
-Adobe Experience Manager (AEM) forms可以帮助您将复杂的交易转换为简单、愉快的数字体验。 以下文档介绍了在开发自适应Forms时需要遵循的一些其他最佳实践。 本文档旨在与 [本文档](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)
+Adobe Experience Manager (AEM) forms可以帮助您将复杂的交易转换为简单、愉快的数字体验。 以下文档介绍了在开发自适应Forms时需要遵循的一些其他最佳实践。 此文档应与[此文档](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)一起使用
 
 ## 命名约定
 
@@ -32,10 +32,10 @@ Adobe Experience Manager (AEM) forms可以帮助您将复杂的交易转换为�
    * 名称可以包含字母、数字、下划线和美元符号。
    * 名称必须以字母开头
    * 名称区分大小写
-   * 不能将保留字（如JavaScript关键字）用作名称。 请注意其他特定于AF的保留词，例如“panel”、“name”。
+   * 不能将保留字(如JavaScript关键字)用作名称。 请注意其他特定于AF的保留字，例如   作为“panel”、“name”。
    * 请勿在您的名称中包含破折号“ — ”
-* **开发Forms**
-   * 开发大型表单时应考虑表单片段。 启用表单片段的延迟加载以加快加载时间
+* **正在开发Forms**
+   * 开发大型表单时应考虑表单片段。 启用表单片段的延迟加载以加快加载   时间
    * **数据模型**
       * 建议将自适应表单与适当的数据模型关联
 

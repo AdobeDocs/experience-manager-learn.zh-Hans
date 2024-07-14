@@ -20,23 +20,23 @@ ht-degree: 4%
 
 # 用 AEM Headless 优化的图像 {#images-with-aem-headless}
 
-图像是的关键方面 [开发丰富、引人注目的AEM Headless体验](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans). AEM Headless支持管理图像资源及其优化交付。
+图像是[开发丰富、引人注目的AEM Headless体验的关键方面](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans)。 AEM Headless支持管理图像资源及其优化交付。
 
-AEM Headless内容建模中使用的内容片段，通常引用要在Headless体验中显示的图像资源。 可以写入AEM GraphQL查询以根据从何处引用图像的位置向图像提供URL。
+AEM Headless内容建模中使用的内容片段，通常引用要在Headless体验中显示的图像资源。 可以写入AEM GraphQL查询，以根据引用图像的位置向图像提供URL。
 
-此 `ImageRef` 对于内容引用，类型有四个URL选项：
+`ImageRef`类型有四个URL选项用于内容引用：
 
-+ `_path` 是AEM中的引用路径，不包含AEM源（主机名）
-+ `_dynamicUrl` 是用于图像资产的Web优化投放的URL。
-   + 此 `_dynamicUrl` 不包括AEM源，因此域(AEM Author或AEM Publish服务)必须由客户端应用程序提供。
-+ `_authorUrl` 是AEM创作实例上图像资源的完整URL
-   + [AEM创作](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 可用于提供headless应用程序的预览体验。
-+ `_publishUrl` 是AEM Publish上图像资源的完整URL
-   + [AEM发布](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 通常是Headless应用程序的生产部署从中显示图像的地方。
++ `_path`是AEM中的引用路径，不包含AEM源（主机名）
++ `_dynamicUrl`是用于图像资产的Web优化投放的URL。
+   + `_dynamicUrl`不包含AEM源，因此域(AEM Author或AEM Publish服务)必须由客户端应用程序提供。
++ `_authorUrl`是AEM创作实例上图像资源的完整URL
+   + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html)可用于提供Headless应用程序的预览体验。
++ `_publishUrl`是AEM Publish上图像资源的完整URL
+   + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html)通常是Headless应用程序的生产部署显示图像的位置。
 
-此 `_dynamicUrl` 是用于图像资产投放的推荐URL，应当取代使用 `_path`， `_authorUrl`、和 `_publishUrl` 尽可能。
+`_dynamicUrl`是建议用于图像资产投放的URL，应尽可能替换`_path`、`_authorUrl`和`_publishUrl`的使用。
 
-|                                | AEM as a Cloud Service | AEMAS A CLOUD SERVICERDE | AEM SDK | AEM 6.5 |
+|                                | AEM as a Cloud Service | AEM AS A CLOUD SERVICE RDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
 | 支持Web优化图像？ | ✔ | ✔ | ✘ | ✘ |
 
@@ -48,15 +48,15 @@ AEM Headless内容建模中使用的内容片段，通常引用要在Headless体
 
 ## 内容片段模型
 
-确保包含图像引用的内容片段字段为 __内容引用__ 数据类型。
+确保包含图像引用的内容片段字段为&#x200B;__内容引用__&#x200B;数据类型。
 
-字段类型可在 [内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)，通过选择字段，并检查 __属性__ 在右边按Tab键。
+通过选择字段并检查右侧的&#x200B;__属性__&#x200B;选项卡，可在[内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)中审阅字段类型。
 
-![包含对图像的内容引用的内容片段模型](./assets/images/content-fragment-model.jpeg)
+![内容引用了图像的内容片段模型](./assets/images/content-fragment-model.jpeg)
 
 ## GraphQL持久查询
 
-在GraphQL查询中，将字段返回为 `ImageRef` 类型，并请求 `_dynamicUrl` 字段。 例如，在 [WKND站点项目](https://github.com/adobe/aem-guides-wknd) 并将其中的图像资产引用包含图像URL `primaryImage` 字段，可使用新的持久查询完成 `wknd-shared/adventure-image-by-path` 定义为：
+在GraphQL查询中，将字段作为`ImageRef`类型返回，并请求`_dynamicUrl`字段。 例如，在[WKND站点项目](https://github.com/adobe/aem-guides-wknd)中查询冒险并在其`primaryImage`字段中包含图像资产引用的图像URL，可以使用新持久查询`wknd-shared/adventure-image-by-path`完成，该查询定义为：
 
 ```graphql {highlight="11"}
 query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int, $imageQuality: Int) {
@@ -92,21 +92,21 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 }
 ```
 
-此 `$path` 中使用的变量 `_path` 过滤器需要内容片段的完整路径(例如 `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`)。
+`_path`筛选器中使用的`$path`变量需要内容片段的完整路径（例如`/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`）。
 
-此 `_assetTransform` 定义 `_dynamicUrl` 构建用于优化提供的图像演绎版。 Web优化图像URL也可通过更改URL的查询参数在客户端进行调整。
+`_assetTransform`定义如何构造`_dynamicUrl`以优化提供的图像演绎版。 Web优化图像URL也可通过更改URL的查询参数在客户端进行调整。
 
 | GraphQL参数 | 描述 | 必填 | GraphQL变量值 |
 |-------------------|------------------------------------------------------------------------------------------------------|----------|-------------------------------------------------------------|
-| `format` | 图像资源的格式。 | ✔ | `GIF`， `PNG`， `PNG8`， `JPG`， `PJPG`， `BJPG`， `WEBP`， `WEBPLL`， `WEBPLY` |
-| `seoName` | URL中文件段的名称。 如果未提供，则使用图像资产名称。 | ✘ | 字母数字， `-`，或 `_` |
+| `format` | 图像资源的格式。 | ✔ | `GIF`，`PNG`，`PNG8`，`JPG`，`PJPG`，`BJPG`，`WEBP`，`WEBPLL`，`WEBPLY` |
+| `seoName` | URL中文件段的名称。 如果未提供，则使用图像资产名称。 | ✘ | 字母数字、`-`或`_` |
 | `crop` | 裁切框架从图像中删除，必须在图像大小范围内 | ✘ | 正整数，定义原始图像尺寸范围内的裁切区域 |
 | `size` | 输出图像的大小（高度和宽度），以像素为单位。 | ✘ | 正整数 |
 | `rotation` | 图像的旋转（以度为单位）。 | ✘ | `R90`、`R180`、`R270` |
 | `flip` | 翻转图像。 | ✘ | `HORIZONTAL`、`VERTICAL`、`HORIZONTAL_AND_VERTICAL` |
 | `quality` | 图像质量占原始质量的百分比。 | ✘ | 1-100 |
-| `width` | 输出图像的宽度（像素）。 时间 `size` 提供 `width` 将被忽略。 | ✘ | 正整数 |
-| `preferWebP` | 如果 `true` 并且，如果浏览器支持WebP，则AEM将为其提供服务，而不考虑 `format`. | ✘ | `true`、`false` |
+| `width` | 输出图像的宽度（像素）。 提供`size`时`width`被忽略。 | ✘ | 正整数 |
+| `preferWebP` | 如果`true`和AEM在浏览器支持WebP的情况下提供它，而不考虑`format`。 | ✘ | `true`、`false` |
 
 
 ## GraphQL响应
@@ -129,9 +129,9 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 }
 ```
 
-要在应用程序中加载引用图像的Web优化图像，请使用 `_dynamicUrl` 的 `primaryImage` 作为图像的源URL。
+要在应用程序中加载所引用图像的Web优化图像，请使用`primaryImage`的`_dynamicUrl`作为图像的源URL。
 
-在React中，从AEM Publish显示Web优化图像如下所示：
+在React中，显示AEM Publish中的Web优化图像如下所示：
 
 ```jsx
 // The AEM host is usually read from a environment variable of the SPA.
@@ -142,11 +142,11 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 <img src={dynamicUrl} alt={data.adventureByPath.item.title}/>
 ```
 
-请记住， `_dynamicUrl` 不包括AEM域，因此您必须提供所需的源来解析图像URL。
+请记住，`_dynamicUrl`不包括AEM域，因此您必须提供所需的源位置以便解析图像URL。
 
 ## 响应式URL
 
-上例显示了使用单大小图像，但在Web体验中，通常需要响应式图像集。 响应式图像可以使用实现 [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 或 [图片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 以下代码片段显示了如何使用 `_dynamicUrl` 作为基地。 `width` 是一个URL参数，随后可附加到该参数 `_dynamicUrl` 用于为不同的响应视图供电。
+上例显示了使用单大小图像，但在Web体验中，通常需要响应式图像集。 可以使用[img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)或[图片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)实现响应式图像。 以下代码段显示了如何使用`_dynamicUrl`作为基础。 `width`是一个URL参数，您可以将其附加到`_dynamicUrl`以向不同的响应视图供电。
 
 ```javascript
 // The AEM host is usually read from a environment variable of the SPA.
@@ -177,28 +177,28 @@ document.body.innerHTML=`<picture>
 
 ## React示例
 
-让我们创建一个简单的React应用程序，它按以下方式显示Web优化图像 [响应式图像模式](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/). 响应式图像有两种主要模式：
+让我们创建一个简单的React应用程序，该应用程序按照[响应图像模式](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/)显示Web优化图像。 响应式图像有两种主要模式：
 
-+ [带有srcset的Img元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 提高性能
-+ [图片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 用于设计控制
++ 使用srcset](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)的[Img元素可提高性能
++ 设计控件的[图片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture)
 
 ### 带有srcset的Img元素
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
-[带有srcset的Img元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 与 `sizes` 属性，以便为不同的屏幕大小提供不同的图像资源。 为不同屏幕大小提供不同的图像资源时，图像源非常有用。
+带有srcset](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)的[Img元素与`sizes`属性一起使用，为不同的屏幕大小提供不同的图像资源。 为不同屏幕大小提供不同的图像资源时，图像源非常有用。
 
 ### 图片元素
 
-[图片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 与多个一起使用 `source` 元素，以便为不同的屏幕大小提供不同的图像资源。 当为不同屏幕大小提供不同的图像呈现时，图片元素很有用。
+[图片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture)与多个`source`元素一起使用，以便为不同的屏幕大小提供不同的图像资源。 当为不同屏幕大小提供不同的图像呈现时，图片元素很有用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418555/?quality=12&learn=on)
 
 ### 示例代码
 
-这个简单的React应用程序使用 [AEM Headless SDK](./aem-headless-sdk.md) 查询AEM Headless API以获取冒险内容，并使用以下方法显示Web优化图像 [带有srcset的img元素](#img-element-with-srcset) 和 [图片元素](#picture-element). 此 `srcset` 和 `sources` 使用自定义 `setParams` 用于将Web优化投放查询参数附加到 `_dynamicUrl` 因此，请根据Web客户端的需求更改交付的图像演绎版。
+这个简单的React应用程序使用[AEM Headless SDK](./aem-headless-sdk.md)查询AEM Headless API以获取冒险内容，并使用带有srcset](#img-element-with-srcset)和[picture element](#picture-element)的[img元素显示Web优化图像。 `srcset`和`sources`使用自定义`setParams`函数将Web优化投放查询参数附加到图像的`_dynamicUrl`，因此请更改根据Web客户端需求投放的图像演绎版。
 
-在自定义React挂接中执行针对AEM的查询 [useAdventureByPath，使用AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries).
+在使用了AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries)的自定义React挂接[useAdventureByPath中执行针对AEM的查询。
 
 ```javascript
 // src/App.js

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 创建和配置Dynamics帐户
 
-[登录](https://dynamics.microsoft.com/en-us/) 到您的Microsoft Dynamics帐户。 您可以创建 [免费试用帐户](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) 如果您没有Dynamics帐户。
+[登录](https://dynamics.microsoft.com/en-us/)到您的Microsoft Dynamics帐户。 如果您没有Dynamics帐户，则可以创建[免费试用帐户](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/)。
 
 >[!NOTE]
 >替换以下URI中的服务器和端口号以获取重试URI。 在使用Azure Active Directory配置应用程序时，您将需要此重试URI。

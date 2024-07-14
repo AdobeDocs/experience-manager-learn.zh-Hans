@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 启用详细ORB跟踪的步骤
 
-*本视频介绍启用详细ORB跟踪的步骤。*
+*此视频介绍启用详细ORB跟踪的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335526?quality=12&learn=on)

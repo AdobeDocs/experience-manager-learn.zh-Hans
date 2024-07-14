@@ -28,10 +28,10 @@ ht-degree: 2%
 
 ## ApplicantStateOfResidence
 
-此 **ApplicantStateOfResidence** 数据元素通过选择进行配置 **核心** “扩展”下拉列表中的和 **自定义代码** 类型的数据元素类型，如下面的屏幕快照所示
-![申请人 — 国家 — 居所](assets/applicantstateofresidence.png)
+通过在扩展下拉列表中选择&#x200B;**Core**&#x200B;并为数据元素类型选择&#x200B;**自定义代码**，配置了&#x200B;**ApplicantStateOfResidence**数据元素，如下面的屏幕快照所示
+![申请人 — 国家 — 居住地](assets/applicantstateofresidence.png)
 
-以下自定义代码用于从捕获值 **_state_** 自适应表单字段。
+以下自定义代码用于捕获&#x200B;**_状态_**&#x200B;自适应表单字段中的值。
 
 ```javascript
 // use the GuideBridge API to access adaptive form elements
@@ -43,11 +43,11 @@ return ApplicantsStateOfResidence;
 
 ## validationError
 
-此 **ValidationError** 数据元素通过选择进行配置 **核心** “扩展”下拉列表中的和 **自定义代码** 类型的数据元素类型，如下面的屏幕快照所示
+通过在扩展下拉列表中选择&#x200B;**Core**&#x200B;并为数据元素类型选择&#x200B;**自定义代码**，配置了&#x200B;**ValidationError**&#x200B;数据元素，如下面的屏幕快照所示
 
-![validation-error](assets/validation-error.png)
+![验证错误](assets/validation-error.png)
 
-编写了以下自定义代码以设置 `validationError` 数据元素值。
+编写了以下自定义代码以设置`validationError`数据元素值。
 
 ```javascript
 var validationError = "";

@@ -21,7 +21,7 @@ ht-degree: 2%
 + [概述](overview.md)
 + [要遵循的最佳实践](adaptive-forms/best-practices-adaptive-forms.md)
 + [使用AEM作者设置OKTA身份验证](adaptive-forms/single-sign-on-with-okta.md)
-+ 创建您的第一个自适应表单 {#creating-your-first-adaptive-form}
++ 创建您的第一个自适应表单{#creating-your-first-adaptive-form}
    + [1 — 简介和设置](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [2 — 创建自适应表单模板](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [3 — 创建表单片段](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -31,7 +31,7 @@ ht-degree: 2%
    + [7 — 在收入面板中添加表格](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [8 — “配置资源”面板](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [9 — 使用自定义函数和代码编辑器](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ 处理表单提交 {#handling-af-form-submissions}
++ 处理表单提交{#handling-af-form-submissions}
    + [创建审阅工作流](handling-form-submissions/creating-a-review-workflow.md)
    + [配置自适应表单以触发工作流](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [显示感谢页面](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -49,7 +49,7 @@ ht-degree: 2%
    + [使用SendGrid发送电子邮件](some-useful-integrations/send-grid.md)
    + [将表单数据存储在Azure存储中](some-useful-integrations/store-form-data-in-azure-storage.md)
    + [用Azure Blob填充表单](some-useful-integrations/fetch-form-data-from-azure-storage.md)
-+ 创建OSGi捆绑包 {#creating-your-first-osgi-bundle}
++ 正在创建OSGi包{#creating-your-first-osgi-bundle}
    + [1 — 设置环境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 — 创建OSGi服务](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [3 — 创建Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
@@ -89,24 +89,24 @@ ht-degree: 2%
    + [捕获工作流注释](adaptive-forms/capturing-workflow-comments-aem-workflow-article.md)
    + [将提交的表单数据存储到数据库中](adaptive-forms/storing-adaptive-form-data-in-db.md)
    + [在数据库中插入表单附件](adaptive-forms/inserting-form-attachment-in-db.md)
-   + [修改数据源配置](adaptive-forms/modify-data-source-configuration-settings-article.md)
+   + [修改数据Source配置](adaptive-forms/modify-data-source-configuration-settings-article.md)
    + [覆盖表单数据模型属性](adaptive-forms/override-fdm-values.md)
    + [AEM 6.4工作流中的表单数据模型服务](adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md)
    + [处理表单数据模型服务步骤中的错误消息](adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)
    + [AEM 6.5.1工作流中的表单数据模型服务](adaptive-forms/form-data-model-service-as-step-in-aem65-workflow-video-use.md)
-   + [不含数据源的表单数据模型](adaptive-forms/form-data-model-without-data-source-feature-video-use.md)
+   + [不含数据的表单数据模型Source](adaptive-forms/form-data-model-without-data-source-feature-video-use.md)
    + [计算表单数据模型元素](adaptive-forms/computed-form-data-model-elements-aem-forms-feature-video.md)
-   + [在AEM Forms中设置JDBC数据源](adaptive-forms/data-integration-technical-video-setup.md)
+   + [在AEM Forms中设置JDBC数据Source](adaptive-forms/data-integration-technical-video-setup.md)
    + [基于JDBC的表单数据模型](adaptive-forms/jdbc-data-model-technical-video-use.md)
    + [在表单数据模型中创建2个实体之间的关联](adaptive-forms/association-data-model-technical-video-use.md)
    + [在规则编辑器中使用表单数据模型的调用服务](adaptive-forms/service-data-model-technical-video-use.md)
-   + [使用表单数据模型将二进制数据发布到AEM DAM](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
+   + [使用表单数据模型将Post二进制数据发送到AEM DAM](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
    + [创建可重复使用的工作流模型](adaptive-forms/re-usable-aem-forms-workflow-models-article.md)
    + [自定义流程步骤AEM Workflow](adaptive-forms/custom-process-step-aem-workflow.md)
    + [预填充HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [使用Salesforce建立表单数据模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [将项目动态添加到选择组件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ 使用ChatBot填写PDF表单{#chatbot-and-aem-forms}
++ 使用ChatBot{#chatbot-and-aem-forms}填写PDF表单
    + [1 — 简介](chatbot-and-aem-forms/introduction.md)
    + [2 — 解析ChatBot数据](chatbot-and-aem-forms/parse-chat-bot-data.md)
    + [3 — 创建PDF](chatbot-and-aem-forms/merge-data-with-template.md)
@@ -138,14 +138,14 @@ ht-degree: 2%
    + [2 - Zip表单附件](zipping-form-attachments/custom-process-step.md)
    + [3 — 电子邮件表单附件](zipping-form-attachments/populating-list-of-documents.md)
    + [4 — 测试解决方案](zipping-form-attachments/test.md)
-+ 使用数据和附件预填表单{#prefill-form-with-data-attachments}
++ 正在预填带有数据和附件的表单{#prefill-form-with-data-attachments}
    + [1 — 简介](prefill-form-with-data-attachments/introduction.md)
    + [2 — 创建自定义提交](prefill-form-with-data-attachments/create-custom-submit.md)
    + [3 — 创建OSGi配置](prefill-form-with-data-attachments/create-osgi-configuration.md)
    + [4 — 创建预填充服务](prefill-form-with-data-attachments/create-prefill-service.md)
 + 存储和检索自适应表单{#store-and-retrieve-af-with-2fa}
    + [1 — 简介](store-and-retrieve-af-with-2fa/introduction.md)
-   + [2 — 配置数据源](store-and-retrieve-af-with-2fa/configure-data-source.md)
+   + [2 — 配置数据Source](store-and-retrieve-af-with-2fa/configure-data-source.md)
    + [3 — 存储表单附件](store-and-retrieve-af-with-2fa/store-form-attachments.md)
    + [4 — 存储表单数据](store-and-retrieve-af-with-2fa/store-form-data.md)
    + [5 — 创建Servlet](store-and-retrieve-af-with-2fa/create-servlet.md)
@@ -155,7 +155,7 @@ ht-degree: 2%
    + [9 — 创建主表单](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
    + [10 — 创建MyAccount表单](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
    + [11 — 部署示例](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
-+ 从PDF文件导入数据{#import-data-from-pdf-form}
++ 从PDF文件{#import-data-from-pdf-form}导入数据
    + [1 — 简介](import-data-from-pdf-form/introduction.md)
    + [2 — 创建自适应表单](import-data-from-pdf-form/create-adaptive-form.md)
    + [3 — 创建OSGi服务](import-data-from-pdf-form/create-osgi-service.md)
@@ -163,7 +163,7 @@ ht-degree: 2%
    + [5 — 测试解决方案](import-data-from-pdf-form/test-the-solution.md)
 + 以CSV格式导出提交的数据{#export-submitted-data-csv-format}
    + [导出提交的数据](export-submitted-data-csv-format/export-submitted-data-csv.md)
-+ HTML5 FORMS{#html5-forms}
++ HTML5 Forms{#html5-forms}
    + [创建HTML5表单](html5-forms/create-html5-form.md)
    + [处理HTML5表单提交](html5-forms/handle-html5-form-submission.md)
 + AEM Forms和Acrobat Sign{#forms-and-sign}
@@ -201,7 +201,7 @@ ht-degree: 2%
    + [1 — 简介](custom-workflow-component/introduction.md)
    + [2写Java代码](custom-workflow-component/custom-process-step-aem-workflow.md)
    + [3 — 创建工作流组件](custom-workflow-component/custom-workflow-component.md)
-+ AEM Workflow中的变量{#variables-aem-workflow}
++ AEM Workflow{#variables-aem-workflow}中的变量
    + [简介 — 工作流中的变量](variables-aem-workflow/introduction.md)
    + [XML变量](variables-aem-workflow/part1.md)
    + [JSON变量](variables-aem-workflow/part2.md)
@@ -210,19 +210,19 @@ ht-degree: 2%
    + [表单数据模型变量](variables-aem-workflow/form-data-model.md)
    + [AEM Workflow中的规则编辑器](variables-aem-workflow/part5.md)
    + [记录工作流变量](variables-aem-workflow/part6.md)
-+ 查看表单数据{#review-form-data}
++ 审核表单数据{#review-form-data}
    + [1 — 简介](review-form-data/introduction.md)
    + [2 — 创建组件](review-form-data/create-component.md)
    + [3 — 部署资产](review-form-data/deploy-on-your-system.md)
-+ 在MySQL数据库中存储和检索表单数据{#storing-and-retrieving-form-data}
++ 在MySQL数据库{#storing-and-retrieving-form-data}中存储和检索表单数据
    + [简介](storing-retrieving-form-data/introduction.md)
-   + [配置数据源](storing-retrieving-form-data/part1.md)
+   + [配置数据Source](storing-retrieving-form-data/part1.md)
    + [用于存储数据的服务](storing-retrieving-form-data/part3.md)
    + [创建Servlet](storing-retrieving-form-data/part2.md)
    + [客户端库](storing-retrieving-form-data/part4.md)
    + [自适应表单模板](storing-retrieving-form-data/part5.md)
    + [部署示例资源](storing-retrieving-form-data/part6.md)
-+ 从移动设备表单提交触发AEM工作流{#offline-mobile-form-submission}
++ 正在从移动设备表单提交触发AEM工作流{#offline-mobile-form-submission}
    + [简介](offline-mobile-form-submission/introduction.md)
    + [自定义配置文件](offline-mobile-form-submission/part-one.md)
    + [处理PDF提交](offline-mobile-form-submission/part-two.md)
@@ -235,13 +235,13 @@ ht-degree: 2%
    + [构建查询界面](query-form-submissions/part3.md)
    + [写入预填充服务](query-form-submissions/part4.md)
    + [部署示例](query-form-submissions/part5.md)
-+ 在Forms Portal中列出自定义资源类型{#listing-custom-asset-types}
++ 在Forms Portal{#listing-custom-asset-types}中列出自定义资源类型
    + [Part1 — 注册自定义资源类型](listing-custom-asset-types/part1.md)
    + [第2部分 — 创建自定义模板](listing-custom-asset-types/part2.md)
 + AEM Forms与Marketo{#aem-forms-with-marketo}
    + [第1部分 — 简介](aem-forms-with-marketo/part1.md)
    + [第2部分 — 自定义身份验证](aem-forms-with-marketo/part2.md)
-   + [第3部分 — 数据源](aem-forms-with-marketo/part3.md)
+   + [第3部分 — 数据Source](aem-forms-with-marketo/part3.md)
    + [第4部分 — 将功能集于一体](aem-forms-with-marketo/part4.md)
 
 + AEM Forms与Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
@@ -251,7 +251,7 @@ ht-degree: 2%
    + [4 — 使用ACS配置文件信息预填表单](aem-forms-with-adobe-campaign/partthree.md)
    + [5 — 使用表单数据模型创建ACS配置文件](aem-forms-with-adobe-campaign/partfour.md)
 
-+ 欢迎套件 {#welcome-kit}
++ 欢迎套件{#welcome-kit}
    + [简介](welcome-kit/introduction.md)
    + [创建欢迎套件组件](welcome-kit/create-welcomekit-component.md)
    + [创建工作流组件](welcome-kit/create-workflow-component.md)
@@ -265,7 +265,7 @@ ht-degree: 2%
    + [6 — 显示选定的表单](headless-forms/open-form-card-view.md)
    + [7 — 处理表单提交](headless-forms/display-thank-you-message.md)
 
-+ Forms和Acrobat Sign的React应用程序 {#react-ic-sign}
++ Forms和Acrobat Sign的React应用程序{#react-ic-sign}
    + [1 — 简介](react-ic-sign/introduction.md)
    + [2 — 生成文档](react-ic-sign/create-ic-document.md)
    + [3 - Acrobat Sign API包装器](react-ic-sign/wrapper-sign-api.md)
@@ -312,7 +312,7 @@ ht-degree: 2%
 {#ic-print-channel-tutorial}
    + [1 — 简介](ic-print-channel-tutorial/introduction.md)
    + [2 — 设置Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
-   + [3 — 创建数据源](ic-print-channel-tutorial/create-data-source.md)
+   + [3 — 创建数据Source](ic-print-channel-tutorial/create-data-source.md)
    + [4 — 创建表单数据模型](ic-print-channel-tutorial/create-form-data-model.md)
    + [5 — 使用Forms Designer创建XDP布局](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
    + [6 — 创建文档片段](ic-print-channel-tutorial/create-document-fragment.md)
@@ -322,11 +322,11 @@ ht-degree: 2%
    + [10 — 向打印渠道添加表格](ic-print-channel-tutorial/adding-table-to-print-channel.md)
    + [11 — 使用Watched文件夹生成文档](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
    + [12 — 在提交表单时打开代理UI](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
-+ 保存和检索草稿信件 {#store-retrieve-letters}
++ 保存并检索草稿书信{#store-retrieve-letters}
    + [简介](store-retrieve-letters/introduction.md)
    + [实施](store-retrieve-letters/save-draft-letters.md)
    + [部署示例](store-retrieve-letters/deploy-on-your-server.md)
-+ 交互式通信 {#interactive-communications}
++ 交互式通信{#interactive-communications}
    + [使用批处理API](interactive-communications/batch-generation-interactive-communications.md)
    + [多系列图表](interactive-communications/multiseriescharts.md)
    + [根据提交的数据生成打印渠道文档](interactive-communications/merge-data-with-ic-template.md)
@@ -336,10 +336,10 @@ ht-degree: 2%
    + [使用Watch文件夹为Print Channel生成交互式通信文档](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
    + [自定义文本编辑器](interactive-communications/customize-text-editor.md)
 
-+ Web渠道的交互式通信 {#ic-web-channel-tutorial}
++ Web渠道{#ic-web-channel-tutorial}的交互式通信
    + [1 — 简介](ic-web-channel-tutorial/introduction.md)
    + [2 — 设置Tomcat](ic-web-channel-tutorial/partone.md)
-   + [3 — 创建数据源](ic-web-channel-tutorial/parttwo.md)
+   + [3 — 创建数据Source](ic-web-channel-tutorial/parttwo.md)
    + [4 — 创建表单数据模型](ic-web-channel-tutorial/partthree.md)
    + [5 — 创建Web渠道文档模板](ic-web-channel-tutorial/partfour.md)
    + [6 — 创建文档片段](ic-web-channel-tutorial/partfive.md)
@@ -383,7 +383,7 @@ ht-degree: 2%
    + [PDFG：对Windows上的多用户PDFG转换进行故障排除的步骤](troubleshooting/steps-to-troubleshoot-multi-user-pdfg-conversion-on-windows.md)
    + [PDFG：对Unix上的OpenOffice特定问题进行故障排除的步骤](troubleshooting/steps-to-troubleshoot-openoffice-specific-issues-on-unix.md)
    + [PDFG：解决Windows上OpenOffice特定问题的步骤](troubleshooting/steps-to-troubleshoot-openoffice-specific-issues-on-windows.md)
-   + [Document Security：如何应用使用Acrobat中的Document Security模块创建的策略](troubleshooting/how-to-apply-policy-created-using-document-security-module-in-acrobat.md)
+   + [Document Security：如何应用在Acrobat中使用Document Security模块创建的策略](troubleshooting/how-to-apply-policy-created-using-document-security-module-in-acrobat.md)
    + [用户管理：如何在AEM Forms JEE中添加用户或组](troubleshooting/how-to-add-users-or-groups-in-aem-forms-jee.md)
    + [用户管理：如何增加UM会话超时](troubleshooting/how-to-increase-um-session-timeout.md)
    + [Workbench：使用https连接工作台](troubleshooting/connecting-workbench-using-https.md)
@@ -391,7 +391,7 @@ ht-degree: 2%
    + [Workbench：如何为Workbench启用调试输出](troubleshooting/how-to-enable-debug-output-for-workbench.md)
    + [Workbench：如何调整Workbench内存参数](troubleshooting/how-to-tweak-workbench-memory-parameters.md)
    + [Workbench：如何调整Workbench性能参数](troubleshooting/how-to-tweak-workbench-performance-parameters.md)
-   + [Designer：Designer对C++可再分发的依赖关系](troubleshooting/dependency-of-vc-on-designer.md)
+   + [Designer：Designer依赖于C++可再分发](troubleshooting/dependency-of-vc-on-designer.md)
    + [Designer：如何启用HTML预览](troubleshooting/how-to-enable-html-preview.md)
    + [Designer：如何启用PDF预览](troubleshooting/how-to-enable-pdf-preview.md)
    + [Designer：如何安装Designer修补程序](troubleshooting/how-to-install-designer-patches.md)

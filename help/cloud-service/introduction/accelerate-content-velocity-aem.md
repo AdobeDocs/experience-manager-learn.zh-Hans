@@ -53,7 +53,7 @@ AEM Style Systems有四个主要优点：
 
 >[!NOTE]
 >
->如需这些功能的演示，我们建议您观看我们的 [客户成功网络研讨会](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) 威尔·布里斯班和约瑟夫·范布斯柯克。
+>要演示这些功能，我们建议您与Will Brisbane和Joseph Van Buskirk一起观看我们的[客户成功网络研讨会](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/)。
 
 ## 最佳实践
 
@@ -91,6 +91,6 @@ AEM Style Systems有四个主要优点：
 
 最后，样式系统的使用更多的是艺术而非科学。 正如我们前面讨论的那样，虽然有许多最佳实践，但您可以灵活地自定义组织的设置。
 
-欲知更多信息，请查看我们的 [客户成功网络研讨会](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) 威尔·布里斯班和约瑟夫·范布斯柯克。
+有关详细信息，请查看我们与Will Brisbane和Joseph Van Buskirk举行的[客户成功网络研讨会](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/)。
 
-要了解有关战略和思想领导力的更多信息，请参阅 [客户成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html) 集线器。
+在[客户成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html)中心了解有关战略和思想领导力的更多信息。

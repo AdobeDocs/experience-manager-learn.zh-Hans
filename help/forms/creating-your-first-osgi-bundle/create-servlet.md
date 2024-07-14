@@ -75,22 +75,22 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 
 要构建项目，请执行以下步骤：
 
-* 打开 **命令提示符窗口**
-* 导航到 `c:\aemformsbundles\mysite\core`
-* 执行命令 `mvn clean install -PautoInstallBundle`
+* 打开&#x200B;**命令提示符窗口**
+* 导航到`c:\aemformsbundles\mysite\core`
+* 执行命令`mvn clean install -PautoInstallBundle`
 * 上述命令会自动构建捆绑包，并将其部署到在localhost：4502上运行的AEM实例
 
-该捆绑包还可在以下位置使用 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用将捆绑包部署到AEM中。 [Felix Web控制台。](http://localhost:4502/system/console/bundles)
+该包在以下位置`C:\AEMFormsBundles\mysite\core\target`也可用。 也可以使用[Felix Web控制台](http://localhost:4502/system/console/bundles)将包部署到AEM中。
 
 
 ## 测试Servlet解析程序
 
-将浏览器指向 [servlet解析程序URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). 这会告诉您为给定路径调用的servlet，如下面的屏幕快照所示
+将浏览器指向[servlet解析程序URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST)。 这会告诉您为给定路径调用的servlet，如下面的屏幕快照所示
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
 ## 使用Postman测试servlet
 
-![使用Postman测试servlet](assets/test-servlet-postman.JPG)
+![使用Postman测试Servlet](assets/test-servlet-postman.JPG)
 
 ## 后续步骤
 

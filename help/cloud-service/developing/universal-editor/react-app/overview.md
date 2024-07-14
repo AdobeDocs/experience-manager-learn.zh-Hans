@@ -33,7 +33,7 @@ ht-degree: 0%
 - 设置本地开发环境
    - **AEM SDK**：它使用GraphQL API为React应用程序提供内容片段中存储的内容。
    - **React应用程序**：显示AEM内容的简单用户界面。
-   - **通用编辑器服务**： a _Universal Editor服务的本地副本_ 该扩展可绑定通用编辑器和AEM SDK。
+   - **通用编辑器服务**：绑定通用编辑器和AEM SDK的通用编辑器服务&#x200B;_的_&#x200B;本地副本。
 - 如何使用通用编辑器检测React应用程序以编辑内容
 - 如何使用通用编辑器编辑React应用程序内容
 
@@ -50,14 +50,14 @@ ht-degree: 0%
 
 ## 示例React应用程序
 
-本教程使用 [**WKND团队**](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#react-app---basic-tutorial---teampersons) 作为示例React应用程序。 此 **WKND团队** React应用程序显示团队成员及其详细信息的列表。
+本教程使用&#x200B;[**WKND Teams**](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#react-app---basic-tutorial---teampersons)作为示例React应用程序。 **WKND Teams** React应用程序显示团队成员及其详细信息列表。
 
-标题、描述和团队成员等团队详细信息存储为 _团队_ AEM中的内容片段。 同样，人员详细信息（如姓名、简历和个人资料图片）将存储为 _人员_ AEM中的内容片段。
+标题、描述和团队成员等团队详细信息在AEM中存储为&#x200B;_团队_&#x200B;内容片段。 同样，人员详细信息（如姓名、个人简历和个人资料图片）在AEM中存储为&#x200B;_人员_&#x200B;内容片段。
 
-React应用程序的内容由AEM使用GraphQL API提供，用户界面使用两个React组件构建： `Teams` 和 `Person`.
+React应用程序的内容由AEM使用GraphQL API提供，用户界面使用两个React组件构建： `Teams`和`Person`。
 
-相应的教程可用于了解如何构建 **WKND团队** React应用程序。 您可以找到教程 [此处](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview).
+提供了相应的教程，以了解如何构建&#x200B;**WKND Teams** React应用程序。 您可以在[此处](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview)找到该教程。
 
 ## 后续步骤
 
-了解如何 [设置本地开发环境](./local-development-setup.md).
+了解如何[设置本地开发环境](./local-development-setup.md)。

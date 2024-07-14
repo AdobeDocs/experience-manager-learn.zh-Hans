@@ -30,11 +30,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->**要在发布实例上配置reCaptcha，请执行以下步骤**
+>**要在发布实例上配置reCaptcha，请按照以下步骤操作**
 >
 >在创作实例上配置reCaptach
 >
->打开Felix [Web控制台](http://localhost:4502/system/console/bundles) 在创作实例上
+>在创作实例上打开Felix [Web控制台](http://localhost:4502/system/console/bundles)
 >
 >搜索com.adobe.granite.crypto.file包
 >
@@ -45,7 +45,7 @@ ht-degree: 0%
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * 复制HMAC和主文件
 >
-打开 [felix web控制台](http://localhost:4502/system/console/bundles) 发布实例上的。 搜索com.adobe.granite.crypto.file包。 请注意捆绑包ID
+在发布实例上打开[felix Web控制台](http://localhost:4502/system/console/bundles)。 搜索com.adobe.granite.crypto.file包。 请注意捆绑包ID
 >
 导航到发布实例的文件系统中的捆绑包ID
 >

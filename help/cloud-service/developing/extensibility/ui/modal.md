@@ -24,7 +24,7 @@ ht-degree: 0%
 
 AEM UI扩展模式提供了一种将自定义UI附加到AEM UI扩展的方法。
 
-模块是React应用程序，基于 [React频谱](https://react-spectrum.adobe.com/react-spectrum/)，和可以创建扩展所需的任何自定义UI，包括但不限于：
+模块是基于[React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)的React应用程序，可以创建扩展所需的任何自定义UI，包括但不限于：
 
 + 确认对话框
 + [输入表单](https://react-spectrum.adobe.com/react-spectrum/#forms)
@@ -35,9 +35,9 @@ AEM UI扩展模式提供了一种将自定义UI附加到AEM UI扩展的方法。
 
 ## 模式路由
 
-模式体验由下定义的扩展App Builder React应用程序定义 `web-src` 文件夹。 与任何React应用程序一样，可以使用来编排完整体验 [React路由](https://reactrouter.com/en/main/components/routes) 该渲染 [React组件](https://reactjs.org/docs/components-and-props.html).
+模式体验由`web-src`文件夹下定义的App Builder React扩展定义。 与任何React应用程序一样，使用呈现[React组件](https://reactjs.org/docs/components-and-props.html)的[React路由](https://reactrouter.com/en/main/components/routes)来编排完整体验。
 
-至少需要一条路由才能生成初始模态视图。 此初始路由将在 [扩展注册](#extension-registration)的 `onClick(..)` 函数，如下所示。
+至少需要一条路由才能生成初始模态视图。 此初始路由在[扩展注册](#extension-registration)的`onClick(..)`函数中调用，如下所示。
 
 
 + `./src/aem-ui-extension/web-src/src/components/App.js`
@@ -81,12 +81,12 @@ function App(props) {
 
 ## 延期注册
 
-要打开模式窗口，请调用 `guestConnection.host.modal.showUrl(..)` 由扩展的 `onClick(..)` 函数。 `showUrl(..)` 传递了包含键/值的JavaScript对象：
+要打开模式窗口，请从扩展的`onClick(..)`函数调用`guestConnection.host.modal.showUrl(..)`。 `showUrl(..)`被传递给JavaScript对象，该对象具有键/值：
 
-+ `title` 提供向用户显示的模式窗口标题的名称
-+ `url` 是调用 [React路由](#modal-routes) 负责模态的初始视图。
++ `title`提供向用户显示的模式模式的标题名称
++ `url`是调用负责模态初始视图的[React路由](#modal-routes)的URL。
 
-当务之急是 `url` 传递给 `guestConnection.host.modal.showUrl(..)` 解析以在扩展中路由，否则模式中不会显示任何内容。
+传递给`guestConnection.host.modal.showUrl(..)`的`url`必须解析为在扩展中路由，否则模式窗口中不会显示任何内容。
 
 + `./src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
@@ -109,7 +109,7 @@ function ExtensionRegistration() {
 
 ## 模式组件
 
-每条路的延伸， [那不是 `index` 路由](./extension-registration.md#app-routes)，映射到可以在扩展的模式中呈现的React组件。
+扩展的每个路由（[不是`index`路由](./extension-registration.md#app-routes)）都映射到可在扩展模式中呈现的React组件。
 
 一个模式可以包含任意数量的React路由，从简单的一路由模式到复杂的多路由模式。
 
@@ -187,7 +187,7 @@ export default function MyModal() {
 
 ![AEM UI扩展模式关闭按钮](./assets/modal/close.png){align="center"}
 
-模范必须提供自己的严密控制。 这可以通过调用 `guestConnection.host.modal.close()`.
+模范必须提供自己的严密控制。 这是通过调用`guestConnection.host.modal.close()`完成的。
 
 ```javascript
 <ButtonGroup align="end">

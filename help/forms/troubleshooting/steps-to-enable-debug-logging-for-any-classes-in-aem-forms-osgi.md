@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 在AEM Forms OSGi中为任何类启用调试日志记录的步骤
 
-*本视频介绍在AEM Forms OSGi中为任何类启用调试日志记录的步骤。*
+*本视频介绍在AEM Forms OSGi中启用任何类的调试日志记录的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335521?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: AEMas a Cloud Service架构
-description: AEM探索与Edge Delivery Servicesas a Cloud Service的底层架构和重要部分。
+title: AEM as a Cloud Service的架构
+description: 使用Edge Delivery Services探索AEM as a Cloud Service的底层架构和重要部分。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -18,10 +18,10 @@ ht-degree: 0%
 
 ---
 
-# AEMas a Cloud Service架构
+# AEM as a Cloud Service的架构
 
 {{edge-delivery-services}}
 
-AEM探索与Edge Delivery Servicesas a Cloud Service的底层架构和重要部分。
+使用Edge Delivery Services探索AEM as a Cloud Service的底层架构和重要部分。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330542?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 AEM CDN第1部分
-description: 这是深入探讨AEMas a Cloud Service的CDN的第一部分。
+description: 这是深入探讨AEM as a Cloud Service的CDN的第一部分。
 version: Cloud Service
 feature: Developer Tools
 role: Admin, Developer
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Cloud 5 AEM CDN第1部分
 
-本课程深入介绍作为AEMas a Cloud Service的一部分提供的CDN，包括其功能以及是否自带CDN。 这是第1部分，共2部分。
+本课程深入介绍作为AEM as a Cloud Service的一部分提供的CDN，包括其功能以及是否自带CDN。 这是第1部分，共2部分。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340760?quality=12&learn=on)
 

@@ -32,7 +32,7 @@ ht-degree: 1%
 
 ![blob-index-tags](assets/blob-index-tags.png)
 
-自定义提交代码位于 **_StoreFormDataWithBlobIndexTagsInAzure_** 并且用于存储和检索Azure数据的代码在组件中 **_SaveAndFetchFromAzure_**
+自定义提交代码位于&#x200B;**_StoreFormDataWithBlobIndexTagsInAzure_**&#x200B;中，用于从Azure存储和检索数据的代码位于组件&#x200B;**_SaveAndFetchFromAzure_**&#x200B;中
 
 ## 后续步骤
 

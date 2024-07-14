@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 如何调查AEM中与索引相关的问题
 
-*本视频介绍调查AEM中与索引相关的问题的步骤。*
+*本视频介绍调查AEM中与索引相关问题的步骤。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335465?quality=12&learn=on)

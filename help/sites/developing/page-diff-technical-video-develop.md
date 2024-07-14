@@ -26,9 +26,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->此视频将自定义CSS添加到we.Retail客户端库，您应该在该库中对自定义程序的AEM Sites项目进行这些更改；在下面的示例代码中： `my-project`.
+>此视频将自定义CSS添加到we.Retail客户端库，应在其中对自定义程序的AEM Sites项目进行这些更改；在以下示例代码中： `my-project`。
 
-AEM页面差异通过直接加载获取OOTB CSS `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`.
+AEM页面差异通过`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`的直接加载获取OOTB CSS。
 
 由于此直接加载CSS而不使用客户端库类别，因此我们必须为自定义样式找到另一个注入点，并且此自定义注入点是项目的创作clientlib。
 
@@ -36,7 +36,7 @@ AEM页面差异通过直接加载获取OOTB CSS `/libs/cq/gui/components/common/
 
 ### 准备创作clientlib {#prepare-the-authoring-clientlib}
 
-确保存在 `authoring` 您的项目的clientlib，位于 `/apps/my-project/clientlib/authoring.`
+确保您的项目在`/apps/my-project/clientlib/authoring.`处存在`authoring` clientlib
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -47,7 +47,7 @@ AEM页面差异通过直接加载获取OOTB CSS `/libs/cq/gui/components/common/
 
 ### 提供自定义CSS {#provide-the-custom-css}
 
-添加到项目的 `authoring` clientlib a `css.txt` 指向将提供覆盖样式的较少文件。 [更少](https://lesscss.org/) 因其许多方便的功能（包括本示例中使用的类包装）而首选使用。
+将指向将提供覆盖样式的较少文件的项目的`authoring` clientlib a `css.txt`添加到。 [Less](https://lesscss.org/)由于其许多方便的功能（包括本示例中使用的类包装）而首选使用。
 
 ```shell
 base=./css
@@ -55,7 +55,7 @@ base=./css
 htmldiff.less
 ```
 
-创建 `less` 包含样式覆盖的文件 `/apps/my-project/clientlibs/authoring/css/htmldiff.less`，并根据需要提供覆盖样式。
+创建包含位于`/apps/my-project/clientlibs/authoring/css/htmldiff.less`的样式覆盖的`less`文件，并根据需要提供覆盖样式。
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -103,9 +103,9 @@ body {
 
 ### 通过页面组件包含创作clientlib CSS {#include-the-authoring-clientlib-css-via-the-page-component}
 
-在项目的基页中包含创作clientlibs类别 `/apps/my-project/components/structure/page/customheaderlibs.html` 直接位于 `</head>` 标记以确保样式已加载。
+在项目基页的`/apps/my-project/components/structure/page/customheaderlibs.html`中直接在`</head>`标记之前包含创作clientlibs类别，以确保加载样式。
 
-这些样式应限制为 [!UICONTROL 编辑] 和 [!UICONTROL 预览] wcm模式。
+这些样式应限制为[!UICONTROL 编辑]和[!UICONTROL 预览] WCM模式。
 
 ```xml
 <head>
@@ -123,4 +123,4 @@ body {
 
 * [下载we.Retail示例网站](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
 * [使用AEM客户端库](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/clientlibs.html)
-* [更少的CSS文档](https://lesscss.org/)
+* [更少CSS文档](https://lesscss.org/)

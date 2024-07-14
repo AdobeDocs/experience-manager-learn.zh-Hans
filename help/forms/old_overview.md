@@ -19,12 +19,12 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
 ## 新增功能
 
 * **[处理调用表单数据模型服务步骤中的错误消息](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
-  *工作流模型中的变量是一种根据其数据类型存储值的方法*
+  *工作流模型中的变量是一种根据其数据类型存储值的方式*
 
 * **[交互式通信文档中的多系列图表（视频）](./interactive-communications/multiseriescharts.md)**
-  *在同一张图表中绘制多个系列。 多系列图表通常与折线图、条形图、柱形图类型结合使用。*
+  *在同一图表中绘制多个系列。 多系列图表通常与折线图、条形图、柱状图类型关联使用。*
 
-* **[创建可重用工作流模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
+* **[正在创建可重复使用的工作流模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
   *创建未绑定到特定表单的工作流模型*
 
 ## 员工精选
@@ -41,7 +41,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em>自适应表单是动态且响应灵敏的新一代表单。 您可以使用自适应表单提供个性化体验</em>
+    <em>自适应表单是动态且响应式的新一代表单。 您可以使用自适应表单提供个性化体验</em>
     <p>
   </td>
    <td>
@@ -54,7 +54,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em>交互式通信可以集中管理安全、个性化的交互式信函的创建、编排和交付，例如业务信函、文档、声明、福利通知、市场营销邮件、账单和欢迎资料包。 </em>
+    <em>交互式通信可以集中管理安全、个性化的交互式信函的创建、编排和交付，例如商务信函、文档、对帐单、福利通知、市场营销邮件、账单和欢迎资料包。</em>
     <p>
   </td>
   <td>
@@ -67,7 +67,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em>在AEM Workflow中作为步骤调用表单数据模型的服务</em>
+    <em>作为AEM Workflow中的步骤调用表单数据模型的服务</em>
     <p>
   </td>
 </tr>
@@ -92,7 +92,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em> 区分人工和自动访问表单</em>
+    <em>区分人工访问表单和自动访问表单</em>
     <p>
   </td>
   <td>
@@ -101,7 +101,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     <div>
     <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
-    <strong>查看表单数据</strong>
+    <strong>审阅表单数据</strong>
     </a>
     </div>
     <p>
@@ -118,7 +118,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
       </a>
     </div>
     <p>
-    <em>显示添加到表单的图像。</em>
+    <em>显示添加到表单中的图像。</em>
     <p>
   </td>
 </tr>
@@ -151,7 +151,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em>动态创建NDA并使用Acrobat Sign发送以供签名</em>
+    <em>使用Acrobat Sign动态创建NDA并发送签名请求</em>
     </p>
   </td>
   <td>

@@ -21,7 +21,8 @@ ht-degree: 1%
 
 在上一步中，我们将AEM项目与在AEM实例中创建的自适应Forms和主题同步。
 现在，我们需要将这些更改添加到本地Git存储库，然后将本地Git存储库推送到Cloud Manager Git存储库。
-打开命令提示符并导航至c：\cloudmanager\aem-banking-app执行以下命令
+打开命令提示符并导航至c：\cloudmanager\aem-banking-app
+执行以下命令
 
 ```
 git add .

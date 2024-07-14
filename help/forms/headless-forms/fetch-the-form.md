@@ -18,11 +18,11 @@ ht-degree: 1%
 
 # 获取表单的JSON
 
-登录AEM Forms创作实例并使用 **带核心组件的空白** 模板。 将表单发布到发布实例。
+登录到AEM Forms创作实例，并使用&#x200B;**Blank with Core Components**&#x200B;模板创建新的自适应组件。 将您的表单Publish到发布实例。
 
 要嵌入表单，我们首先通过针对发布服务器进行get调用来获取自适应表单的json。
 
-以下代码片段提取名为的自适应表单的json **contactact**
+以下代码片段提取名为&#x200B;**contactus**&#x200B;的自适应表单的json
 
 ```javascript
 const getForm = async () => {
@@ -78,7 +78,7 @@ export default function Contact(){
 }
 ```
 
-上述代码使用本机html组件，这些组件映射到自适应表单中使用的组件。 例如，我们将文本输入自适应表单组件映射到TextField组件。 文章中使用的本机组件 [可以从此处下载](./assets/native-components.zip)
+上述代码使用本机html组件，这些组件映射到自适应表单中使用的组件。 例如，我们将文本输入自适应表单组件映射到TextField组件。 可以从此处](./assets/native-components.zip)下载文章[中使用的本机组件
 
 ## 后续步骤
 
