@@ -11,10 +11,10 @@ doc-type: Catalog
 duration: 660
 last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
-source-git-commit: df15dc0426918a0e2263efe6fb0de953f49385df
+source-git-commit: 2aa189c46af16813d2709aa2ec02b509c4bb544e
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 18%
+source-wordcount: '415'
+ht-degree: 14%
 
 ---
 
@@ -25,6 +25,76 @@ ht-degree: 18%
 >[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
 
 有关Edge Delivery Services及其功能的完整详细信息，请查看[文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview)。
+
+
+## Edge Delivery Services开发人员教程
+
+
+<div class="columns is-multiline">
+    <!-- Document-based authoring -->
+    <div class="column is-half-tablet is-half-desktop is-one-half-widescreen"
+      aria-label="Document-based authoring and Edge Delivery Services tutorial" tabindex="0">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="基于文档的创作网站教程"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="./assets/overview/document-based-authoring-tutorial.png"
+                alt="基于文档的创作网站教程">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="基于文档的创作网站教程">基于文档的创作网站教程</a>
+            </p>
+            <p class="is-size-6">了解如何创建使用基于文档的创作功能创作的Edge Delivery Services网站。</p>
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">启动教程</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Universal Editor -->
+    <div class="column is-half-tablet is-half-desktop is-one-half-widescreen"
+      aria-label="Universal Editor and Edge Delivery Services tutorial" tabindex="1">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" title="Universal Editor网站教程"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="./assets/overview/universal-editor-tutorial.png"
+                alt="Universal Editor网站教程">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" title="Universal Editor网站教程">Universal Editor网站教程</a>
+            </p>
+            <p class="is-size-6">了解如何创建使用通用编辑器创作的Edge Delivery Services网站。</p>
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">启动教程</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+
+
 
 ## Edge Delivery Services 快速入门
 
