@@ -10,20 +10,24 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
 
-# 使用表单数据模型创建自适应表单
+# 测试集成
 
-下一步是创建自适应表单，并将其基于上一步中创建的表单数据模型。
-用户输入潜在客户ID，并在退出Marketo服务以按ID获取潜在客户时，将会调用。 然后，服务操作的结果将映射到自适应Forms的相应字段。
+我们将通过创建一个简单的表单提取来测试集成，并在Market中显示一个Lead对象。
+>[!NOTE]
+>
+>此功能在基于基础组件的表单上进行了测试。
+
+## 创建自适应表单
 
 1. 创建自适应表单，并将其基于“空白表单模板”，将其与上一步骤中创建的表单数据模型相关联。
-1. 在编辑模式下打开表单
+1. 在编辑模式下打开表单。
 1. 将TextField组件和面板组件拖放到自适应表单上。 将TextField组件的标题设置为“Enter Lead Id”，并将其名称设置为“LeadId”
 1. 将2个TextField组件拖放到面板组件上
 1. 将2个文本字段组件的“名称”和“标题”设置为“名字”和“姓氏”
@@ -35,12 +39,6 @@ ht-degree: 0%
 
 ![ruleeditor](assets/ruleeditor.png)
 
-## 调试
-
-如果使用本文提供的包，则可能需要为以下类启用[调试日志](http://localhost:4502/system/console/slinglog)：
-
-+ `com.marketoandforms.core.impl.MarketoServiceImpl`
-+ `com.marketoandforms.core.MarketoConfigurationService`
 
 ## 恭喜
 

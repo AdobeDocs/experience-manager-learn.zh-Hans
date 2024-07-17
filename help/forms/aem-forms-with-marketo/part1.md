@@ -11,9 +11,9 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 77
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
@@ -53,12 +53,14 @@ Marketo与AEM Forms集成的第一步是获取使用API进行REST调用所需的
 
 **开始之前**
 
-[下载并解压缩与本文相关的资源。](assets/aemformsandmarketo.zip) zip文件包含以下内容：
+* [下载并解压缩与本教程相关的资源](assets/marketo-integration-assets.zip)
+
+zip文件包含以下内容：
 
 1. BlankTemplatePackage.zip — 这是自适应表单模板。 使用包管理器导入此项。
 1. marketo.json — 这是用于配置数据源的swagger文件。
-1. MarketoAndForms.MarketoAndForms.core-1.0-SNAPSHOT.jar — 这是执行自定义身份验证的捆绑包。 如果您无法完成本教程或您的捆绑包无法按预期工作，请随时使用此选项。
+1. 确保将marketo.json中的主机属性更改为指向您的marketo实例
 
 ## 后续步骤
 
-[创建自定义身份验证](./part2.md)
+[创建数据Source](./part2.md)
