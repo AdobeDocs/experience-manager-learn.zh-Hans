@@ -12,15 +12,15 @@ last-substantial-update: 2022-10-11T00:00:00Z
 doc-type: Feature Video
 exl-id: d4d80678-e2e2-4e17-8ce5-6db8651ae59e
 duration: 428
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
 workflow-type: tm+mt
-source-wordcount: '49'
+source-wordcount: '45'
 ht-degree: 0%
 
 ---
 
-# Assets Essentials中的权限管理
+# 权限管理
 
-了解AEM Assets Essentials权限管理如何让组织控制对资源的访问、保护其品牌并确保法规遵从性。
+了解AEM Assets权限管理如何让组织控制对资源的访问、保护其品牌并确保法规遵从性。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342113?quality=12&learn=on)

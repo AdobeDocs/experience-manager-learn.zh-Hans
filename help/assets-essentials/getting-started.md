@@ -12,15 +12,15 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Feature Video
 exl-id: a0accb94-ceef-4ecf-b1f6-f47751114242
 duration: 251
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
 workflow-type: tm+mt
-source-wordcount: '40'
-ht-degree: 0%
+source-wordcount: '37'
+ht-degree: 5%
 
 ---
 
-# Assets Essentials快速入门
+# 快速入门
 
-了解如何访问Assets Essentials并探索其用户界面的主要功能。
+了解如何访问AEM Assets并探索其用户界面的主要功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336005?quality=12&learn=on)

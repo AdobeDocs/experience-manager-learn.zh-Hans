@@ -11,7 +11,7 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 399
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: e29eaefb20d466126d0d31ad8eb598b63a0cebcd
 workflow-type: tm+mt
 source-wordcount: '1884'
 ht-degree: 0%
@@ -91,7 +91,7 @@ CTT提取过程所用的资源量取决于节点数、Blob数及其聚合大小�
    + 验证是否可以接受在一个迁移集中迁移所有资产，然后分阶段引入正在使用这些资产的站点
 + 在当前状态下，作者摄取过程使作者实例不可用于内容创作，即使发布层仍可以提供内容
    + 这意味着在摄取到创作中之前，内容创作活动将被冻结
-+ 不再迁移用户，但迁移了组
++ 尽管组已迁移，但用户已不再迁移。
 
 在规划迁移之前，请查看增补提取和摄取流程（如文档中所述）。
 

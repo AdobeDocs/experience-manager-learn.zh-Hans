@@ -10,33 +10,16 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
 duration: 78
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 1%
+source-wordcount: '217'
+ht-degree: 3%
 
 ---
 
-# 配置数据Source
+# 创建表单数据模型
 
-AEM Forms数据集成允许您配置并连接到不同的数据源。 支持开箱即用的以下类型。 但是，只需少量自定义，您也可以与其他数据源集成。
-
-1. 关系数据库 — MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS
-1. AEM用户配置文件
-1. RESTful Web服务
-1. 基于SOAP的Web服务
-1. OData服务
-
-为了将AEM Forms与Marketo集成，我们使用的是RESTful Web服务。 集成的第一步是配置[数据源。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices)请使用作为本教程的一部分提供的swagger文件。 以下屏幕截图显示了配置数据源时需要指定的重要属性。
-![数据源](assets/datasource.png)
-
-“marketo.json”是swagger文件，作为本教程资产的一部分提供给您。
-资产主机特定于您的Marketo实例。
-身份验证类型是自定义的，身份验证实施必须匹配“AemForms与Marketo”。 （除非您在代码中更改了此设置）。
-
-## 创建表单数据模型
-
-之后，配置数据源的下一步是创建基于上一步中配置的数据源的表单数据模型。 要创建表单数据模型，请执行以下步骤：
+配置数据源后，下一步是基于上一步中配置的数据源创建表单数据模型。 要创建表单数据模型，请执行以下步骤：
 
 将浏览器指向[数据集成页面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm)这将列出在您的AEM实例上创建的所有数据集成。
 

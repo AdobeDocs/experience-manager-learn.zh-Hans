@@ -10,10 +10,10 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
 duration: 137
-source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
+source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 1%
+source-wordcount: '211'
+ht-degree: 3%
 
 ---
 
@@ -50,4 +50,4 @@ Marketo的REST API使用双腿OAuth 2.0进行身份验证。我们可以使用�
 
 ## 后续步骤
 
-[创建基于RESTful服务的数据源](./part3.md)
+[创建表单数据模型](./part3.md)

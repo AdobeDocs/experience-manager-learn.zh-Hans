@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 82ef2988d55012ae730e9bbc7adeea547863ba51
+source-git-commit: d440662bcfbc8fdea8c1b0e8af7f653b1f8667f9
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2086'
 ht-degree: 2%
 
 ---
@@ -100,7 +100,7 @@ ht-degree: 2%
    + [基于JDBC的表单数据模型](adaptive-forms/jdbc-data-model-technical-video-use.md)
    + [在表单数据模型中创建2个实体之间的关联](adaptive-forms/association-data-model-technical-video-use.md)
    + [在规则编辑器中使用表单数据模型的调用服务](adaptive-forms/service-data-model-technical-video-use.md)
-   + [使用表单数据模型将Post二进制数据发送到AEM DAM](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
+   + [使用表单数据模型将二进制数据发布到AEM DAM](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
    + [创建可重复使用的工作流模型](adaptive-forms/re-usable-aem-forms-workflow-models-article.md)
    + [自定义流程步骤AEM Workflow](adaptive-forms/custom-process-step-aem-workflow.md)
    + [预填充HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
@@ -240,8 +240,8 @@ ht-degree: 2%
    + [第2部分 — 创建自定义模板](listing-custom-asset-types/part2.md)
 + AEM Forms与Marketo{#aem-forms-with-marketo}
    + [第1部分 — 简介](aem-forms-with-marketo/part1.md)
-   + [第2部分 — 自定义身份验证](aem-forms-with-marketo/part2.md)
-   + [第3部分 — 数据Source](aem-forms-with-marketo/part3.md)
+   + [第2部分 — 数据Source](aem-forms-with-marketo/part2.md)
+   + [第3部分 — 表单数据模型](aem-forms-with-marketo/part3.md)
    + [第4部分 — 将功能集于一体](aem-forms-with-marketo/part4.md)
 
 + AEM Forms与Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
@@ -280,6 +280,7 @@ ht-degree: 2%
    + [使用AEM Forms中的Watched文件夹](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms中使用条形码服务](document-services/barcode-service-adaptive-forms-article.md)
    + [在AEM Forms中使用PDFG服务](document-services/using-pdfg-in-aem-forms.md)
+   + [使用权限密码加密PDF](document-services/encrypt-pdf-permissions-password.md)
    + [在AEM Forms中使用输出和Forms服务](document-services/output-and-forms-services-article-develop.md)
    + [在输出服务中使用xdp片段](document-services/using-fragments-in-output-service.md)
    + [用于生成带片段的PDF的ECMA脚本](document-services/using-fragments-in-output-service-watched-folder.md)
