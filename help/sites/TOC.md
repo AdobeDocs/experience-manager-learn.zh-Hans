@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
+source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 19%
+source-wordcount: '554'
+ht-degree: 18%
 
 ---
 
@@ -112,6 +112,7 @@ ht-degree: 19%
    + [响应式断点](developing/responsive-breakpoints.md)
    + [用样式系统进行开发](developing/style-system-technical-video-understand.md)
    + [样式系统最佳实践](developing/style-organization-style-system-understand-article.md)
+   + [使用AEM样式系统加快内容速度](developing/accelerate-content-velocity-aem-style-system.md)
    + [针对页面差异进行开发](developing/page-diff-technical-video-develop.md)
    + [实施简单搜索](developing/search-tutorial-develop.md)
    + [社交媒体共享](developing/social-media-sharing-technical-video-use.md)

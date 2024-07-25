@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: fe763bad61fba4230612d8ad46a6159e675e1529
+source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1222'
 ht-degree: 16%
 
 ---
@@ -26,7 +26,6 @@ ht-degree: 16%
    + 战略与思想领导力{#strategy}
       + [Experience Manager — 治理和人员配置模型和原型](./introduction/experience-manager-governance-and-staffing-models.md)
       + [如何使用Adobe Experience Manager提高内容速度](./introduction/drive-content-velocity-for-sites.md)
-      + [使用AEM样式系统加快内容速度](./introduction/accelerate-content-velocity-aem.md)
 + Experience Cloud集成{#integrations}
    + [集成](./integrations/experience-cloud.md)
    + [Adobe Target](./integrations/target.md)
@@ -170,7 +169,7 @@ ht-degree: 16%
       + [电子邮件服务](./networking/examples/email-service.md)
 + 安全性 {#security}
    + [使用流量过滤规则阻止DoS/DDoS攻击](./security/blocking-dos-attack-using-traffic-filter-rules.md)
-   + 包含WAF规则的流量过滤器规则{#traffic-filter-and-waf-rules}
+   + 流量筛选器规则，包括WAF规则{#traffic-filter-and-waf-rules}
       + [概述](./security/traffic-filter-rules/overview.md)
       + [如何设置](./security/traffic-filter-rules/how-to-setup.md)
       + [示例和结果分析](./security/traffic-filter-rules/examples-and-analysis.md)
