@@ -12,9 +12,9 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
+source-git-commit: 1b493d85303e539e07ba8b080ed55ef2af18bfcb
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1947'
 ht-degree: 1%
 
 ---
@@ -42,10 +42,6 @@ ht-degree: 1%
 - 通过“警报操作”在速率限制流量过滤器规则上配置&#x200B;**警报**，以便在触发规则时发送操作中心通知。
 - 声明&#x200B;**请求转换**&#x200B;以忽略查询参数，以增加缓存覆盖率。
 
->[!NOTE]
->
->[流量过滤器规则警报](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)功能尚未发布。 若要通过早期采用者计划获得访问权限，请发送电子邮件至&#x200B;**<aemcs-waf-adopter@adobe.com>**。
-
 ### 速率限制流量规则变化 {#rate-limit-variations}
 
 速率限制流量规则有两种变体：
@@ -72,7 +68,6 @@ ht-degree: 1%
 理想情况下，您最好在投入生产之前配置规则。 在实践中，许多组织只会在收到流量尖峰警报（表示可能发生攻击）后反应性地声明规则。
 
 当超过给定PoP的来自单个IP地址的流量默认阈值时，Adobe在源位置发送流量尖峰警报作为[操作中心通知](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/actions-center)。 如果收到此类警报，建议配置速率限制流量过滤器规则。 此默认警报不同于客户在定义流量过滤器规则时必须明确启用的警报，您将在以后的部分中了解这些警报。
-
 
 ## 分析流量模式 {#analyze-traffic}
 

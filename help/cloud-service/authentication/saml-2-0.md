@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 11c9173cbb2da75bfccba278e33fc4ca567bbda1
+source-git-commit: 49f8df6e658b35aa3ba6e4f70cd39ff225c46120
 workflow-type: tm+mt
-source-wordcount: '3357'
+source-wordcount: '3919'
 ht-degree: 1%
 
 ---
@@ -441,6 +441,107 @@ AEM Publish支持单个反向链接过滤器配置，因此请将SAML配置要�
 ```
 
 如果已配置Apache Webserver上的URL重写(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，请确保不会意外损坏对`.../saml_login`端点的请求。
+
+### 如何为新环境中的SAML用户启用动态组成员资格
+
+为了显着提升新AEM as a Cloud Service环境中的群组评估性能，建议在新环境中激活动态群组成员资格功能。
+这也是激活数据同步时的必要步骤。 更多详细信息[此处](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier) 。
+为此，请将以下属性添加到OSGI配置文件中：
+
+`/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
+
+使用此配置，用户和组将创建为[Oak外部用户](https://jackrabbit.apache.org/oak/docs/security/authentication/identitymanagement.html)。 在AEM中，外部用户和组具有由`[user name];[idp]`或`[group name];[idp]`组成的默认`rep:principalName`。
+请注意，访问控制列表(ACL)与用户或组的PrincipalName相关联。
+在现有部署中部署此配置时，如果先前的`identitySyncType`未指定或设置为`default`，则将创建新用户和组，并且必须将ACL应用于这些新用户和组。 请注意，外部组不能包含本地用户。 [Repoinit](https://sling.apache.org/documentation/bundles/repository-initialization.html)可用于为SAML外部组创建ACL，即使仅在用户执行登录时创建它们。
+为避免对ACL进行此重构，已实施标准[迁移功能](#automatic-migration-to-dynamic-group-membership-for-existing-environments)。
+
+### 成员资格如何存储在具有动态组成员资格的本地和外部组中
+
+在本地组上，组成员存储在oak属性中： `rep:members`。 属性包含组中每个成员的uid列表。 其他详细信息可在[此处](https://jackrabbit.apache.org/oak/docs/security/user/membership.html#member-representation-in-the-repository)找到。
+示例：
+
+```
+{
+  "jcr:primaryType": "rep:Group",
+  "rep:principalName": "operators",
+  "rep:managedByIdp": "SAML",
+  "rep:members": [
+    "635afa1c-beeb-3262-83c4-38ea31e5549e",
+    "5e496093-feb6-37e9-a2a1-7c87b1cec4b0",
+    ...
+  ],
+   ...
+}
+```
+
+具有动态组成员资格的外部组不会在组条目中存储任何成员。
+组成员资格而是存储在用户条目中。 其他文档可在[此处](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)找到。 例如，这是组的OAK节点：
+
+```
+{
+  "jcr:primaryType": "rep:Group",
+  "jcr:mixinTypes": [
+    "rep:AccessControllable"
+  ],
+  "jcr:createdBy": "",
+  "jcr:created": "Tue Jul 16 2024 08:58:47 GMT+0000",
+  "rep:principalName": "GROUP_1;aem-saml-idp-1",
+  "rep:lastSynced": "Tue Jul 16 2024 08:58:47 GMT+0000",
+  "jcr:uuid": "d9c6af8a-35c0-3064-899a-59af55455cd0",
+  "rep:externalId": "GROUP_1;aem-saml-idp-1",
+  "rep:authorizableId": "GROUP_1;aem-saml-idp-1"
+}
+```
+
+这是该组的用户成员的节点：
+
+```
+{
+  "jcr:primaryType": "rep:User",
+  "jcr:mixinTypes": [
+    "rep:AccessControllable"
+  ],
+  "surname": "Test",
+  "rep:principalName": "testUser",
+  "rep:externalId": "test;aem-saml-idp-1",
+  "rep:authorizableId": "test",
+  "rep:externalPrincipalNames": [
+    "projects-users;aem-saml-idp-1",
+    "GROUP_2;aem-saml-idp-1",
+    "GROUP_1;aem-saml-idp-1",
+    "operators;aem-saml-idp-1"
+  ],
+  ...
+}
+```
+
+### 自动迁移到现有环境的动态组成员资格
+
+启用此迁移后，将在用户身份验证期间执行，包括以下步骤：
+1. 本地用户将迁移到外部用户，同时保留原始用户名。 这意味着已迁移的本地用户（现在充当外部用户）将保留其原始用户名，而不是遵循上一节中提到的命名语法。 将添加一个名为的附加属性： `rep:externalId`，其值为`[user name];[idp]`。 未修改用户`PrincipalName`。
+2. 对于在SAML断言中收到的每个外部组，将创建一个外部组。 如果存在相应的本地组，则外部组将作为成员添加到本地组。
+3. 用户被添加为外部组的成员。
+4. 然后，该本地用户将从其所属的所有Saml本地组中删除。 Saml本地组由OAK属性标识： `rep:managedByIdp`。 当属性`syncType`未指定或设置为`default`时，此属性由Saml身份验证处理程序设置。
+
+例如，如果在迁移`user1`之前是本地用户并且是本地组`group1`的成员，则迁移后将发生以下更改：
+`user1`成为外部用户。 属性`rep:externalId`已添加到其配置文件。
+`user1`成为外部组的成员： `group1;idp`
+`user1`不再是本地组的直接成员： `group1`
+`group1;idp`是本地组的成员： `group1`。
+然后`user1`通过继承成为本地组`group1`的成员
+
+外部组的组成员资格存储在属性`rep:authorizableId`的用户配置文件中
+
+### 如何配置自动迁移到动态组成员资格
+
+1. 在SAML OSGI配置文件`com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json`中启用属性`"identitySyncType": "idp_dynamic_simplified_id"`：
+2. 使用属性配置PID： `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~...`的新OSGI服务：
+
+```
+{
+  "idpIdentifier": "<vaule of identitySyncType of saml configuration to be migrated>"
+}
+```
 
 ## 部署SAML配置
 

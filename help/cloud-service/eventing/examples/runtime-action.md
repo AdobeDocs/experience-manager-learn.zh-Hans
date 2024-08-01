@@ -12,9 +12,9 @@ last-substantial-update: 2024-01-29T00:00:00Z
 jira: KT-14878
 thumbnail: KT-14878.jpeg
 exl-id: b1c127a8-24e7-4521-b535-60589a1391bf
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -46,10 +46,6 @@ https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 - 访问[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。
 
 - 本地计算机上已安装[Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)。
-
->[!IMPORTANT]
->
->AEM as a Cloud Service事件仅适用于处于预发行模式的注册用户。 要在您的AEM as a Cloud Service环境中启用AEM事件，请联系[AEM事件团队](mailto:grp-aem-events@adobe.com)。
 
 ## 在Adobe Developer Console中创建项目
 

@@ -12,9 +12,9 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -38,10 +38,6 @@ ht-degree: 0%
 - 启用了[AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)的AEM as a Cloud Service环境。
 
 - 为AEM事件配置的[Adobe Developer Console项目](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console)。
-
->[!IMPORTANT]
->
->AEM as a Cloud Service事件仅适用于处于预发行模式的注册用户。 要在您的AEM as a Cloud Service环境中启用AEM事件，请联系[AEM事件团队](mailto:grp-aem-events@adobe.com)。
 
 ## 访问Web应用程序
 

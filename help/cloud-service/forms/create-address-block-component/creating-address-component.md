@@ -9,10 +9,10 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
-source-git-commit: a12b1778413079646814cb25567abfc26a429340
+source-git-commit: b1de5c163607163bc702ea7b8ea4916c414f2a3a
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 1%
+source-wordcount: '297'
+ht-degree: 2%
 
 ---
 
@@ -68,6 +68,16 @@ ht-degree: 1%
 
 选择``state``节点并设置其属性，如下所示。 注意fieldType的状态类型 — 它设置为下拉列表
 ![状态](assets/state.png)
+
+## 设置状态字段的默认值
+
+选择``state``节点并添加以下属性。
+
+| 名称 | 类型 | 价值 |
+|----------|----------|---------------------|
+| 枚举 | 字符串[] | 纽约 |
+| enumName | 字符串[] | 加利福尼亚，纽约 |
+
 
 最终的地址块组件将如下所示
 
