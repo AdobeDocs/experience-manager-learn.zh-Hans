@@ -9,10 +9,10 @@ version: Cloud Service
 topic: Integrations
 exl-id: 7b2b1e1c-820f-4387-a78b-5d889c31eec0
 duration: 25
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 364d055b7b2e4f273f906c66328fc14f95321611
 workflow-type: tm+mt
 source-wordcount: '150'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -26,9 +26,10 @@ ht-degree: 4%
 | sling:resourceType | 字符串 | azureportalpagecomponent/component/page/storeandfetch |
 
 导航到/conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/structure/jcr：content节点，添加以下属性并保存更改。
-| **属性名称**  | **属性类型** | **属性值**                                    |
----------------------------------------文-------------------------------------------------------
-| sling：resourceType | 字符串            | azureportalpagecomponent/component/page/storeandfetch |
+
+| **属性名称** | **属性类型** | **属性值** |
+|--------------------|-------------------|-------------------------------------------------------|
+| sling:resourceType | 字符串 | azureportalpagecomponent/component/page/storeandfetch |
 
 
 ## 后续步骤
