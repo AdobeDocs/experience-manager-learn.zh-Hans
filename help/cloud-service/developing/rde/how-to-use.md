@@ -11,9 +11,9 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 60139d8531d65225fa1aa957f6897a6688033040
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
@@ -49,17 +49,19 @@ $ mvn clean package
 
 ## 使用AEM-RDE插件部署AEM工件
 
-使用`aem:rde:install`命令，让我们部署各种AEM工件。
+首先，确保已安装[最新的`aio` CLI模块](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli)。
+
+然后，使用`aio aem:rde:install`命令部署各种AEM工件。 现在你必须
 
 ### 部署`all`和`dispatcher`包
 
 一个常见的起点是首先通过运行以下命令来部署`all`和`dispatcher`包。
 
 ```shell
-# Install the 'all' package
+# Install the 'all' content package (zip file)
 $ aio aem:rde:install all/target/aem-guides-wknd.all-2.1.3-SNAPSHOT.zip
 
-# Install the 'dispatcher' zip
+# Install the 'dispatcher' deployment artifact (zip file)
 $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
 ```
 
@@ -94,12 +96,13 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. 通过执行maven构建或同步单个文件来验证本地AEM-SDK上的更改。
+1. 通过执行Maven构建或同步单个文件，验证本地AEM SDK上的更改。
 
-1. 通过`ui.apps`包或通过部署单个对话框和HTL文件来部署对RDE的更改。
+1. 通过`ui.apps`包或通过部署单个对话框和HTL文件来部署对RDE的更改：
 
    ```shell
    # Using 'ui.apps' package
+   
    $ cd ui.apps
    $ mvn clean package
    $ aio aem:rde:install target/aem-guides-wknd.ui.apps-2.1.3-SNAPSHOT.zip
