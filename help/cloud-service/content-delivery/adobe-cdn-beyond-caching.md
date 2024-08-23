@@ -1,6 +1,6 @@
 ---
 title: AdobeCDN — 缓存之外的高级功能
-description: 了解AdobeCDN超出缓存的高级功能，例如在CDN、CDN错误页面等处配置流量。
+description: 了解Adobe CDN除缓存之外的高级功能，例如在CDN上配置流量、设置令牌和凭据、CDN错误页等。
 version: Cloud Service
 feature: Website Performance, CDN Cache
 topic: Architecture, Performance, Content Management
@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: cc7fa9bbaa775b0216c839be079504c2b5467878
+source-git-commit: 10f9ca66a1669e1207237128469852ec7514d110
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # AdobeCDN — 缓存之外的高级功能
 
-了解AdobeCDN超出缓存的高级功能，例如在CDN、CDN错误页面等处配置流量。
+了解Adobe内容分发网络(CDN)除缓存之外的高级功能，例如在CDN上配置流量、设置令牌和凭据、CDN错误页面等。
 
 除了缓存内容之外，AdobeCDN还提供多种高级功能，有助于优化网站性能。 这些功能包括：
 
@@ -50,8 +50,7 @@ ht-degree: 0%
 
 - **清除API令牌**：允许您创建自己的清除密钥，以便从缓存中清除单个资源、组资源或所有资源。
 - **基本身份验证**：一种轻量级身份验证机制，当您想要限制访问您的网站或网站的一部分时。 在上线之前，通常需要作为各种审核流程的一部分。
-- **HTTP标头验证**：在客户管理的CDN将流量路由到AdobeCDN时使用。 AdobeCDN根据`X-AEM-Edge-Key`标头值验证传入的请求。
-允许您为`X-AEM-Edge-Key`标头创建自己的值。
+- **HTTP标头验证**：在客户管理的CDN将流量路由到AdobeCDN时使用。 AdobeCDN根据`X-AEM-Edge-Key`标头值验证传入的请求。 允许您为`X-AEM-Edge-Key`标头创建自己的值。
 
 ## CDN错误页面
 
@@ -87,7 +86,7 @@ data:
           location: /us/en/top3.html
 ```
 
-## 其他资源
+## 相关Tutorials
 
 [使用流量过滤器规则保护网站](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
@@ -100,7 +99,3 @@ data:
 [正在配置CDN凭据和身份验证](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 
 [配置CDN错误页](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
-
-
-
-
