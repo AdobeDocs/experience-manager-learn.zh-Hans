@@ -4,7 +4,7 @@ description: POC页面
 version: 6.4, 6.5, Cloud Service
 role: User
 level: Beginner
-source-git-commit: 1e1a33986e202ce2af9cf2d03eca7895514465df
+source-git-commit: 67a39372b8c92c04556a0e41e3ab9ef7d05eac53
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
@@ -92,6 +92,6 @@ FPO
 
 >[!TAB 测试]
 
-通过参加此[小测验](https://ezpwo74vees.typeform.com/to/vsPYgbwa)来测试您的知识。
+通过参加此[小考](https://ezpwo74vees.typeform.com/to/vsPYgbwa){target="_blank"}来测试您的知识。
 
 >[!ENDTABS]
