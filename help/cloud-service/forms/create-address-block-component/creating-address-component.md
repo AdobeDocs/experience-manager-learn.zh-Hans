@@ -9,7 +9,7 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
-source-git-commit: b1de5c163607163bc702ea7b8ea4916c414f2a3a
+source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-> ``bankingapplication``是在创建Maven项目时提供的appId。 您的环境中此appId可能不同。 您可以制作任何组件的副本，而我刚好制作了一个按钮组件的副本
+> ``bankingapplication``是在创建Maven项目时提供的appId。 此appId在您的环境中可能不同。 您可以制作任何组件的副本，而我刚好制作了一个按钮组件的副本
 
 
 ![地址块](assets/address-properties.png)

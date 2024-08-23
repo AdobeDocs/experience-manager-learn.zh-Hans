@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: f344f6c2fdf763a55c18a0db9625ccbe408919e2
+source-git-commit: 3eb4ed310e08f9dd8a527fdb7c42062b285db84e
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '417'
 ht-degree: 17%
 
 ---
@@ -62,6 +62,7 @@ ht-degree: 17%
    + [提取存档](./advanced/extract-archive.md)
    + [权限(CUG)](./advanced/closed-user-groups.md)
    + [元数据驱动的权限](./advanced/metadata-driven-permissions.md)
+   + [视频隐藏式字幕](./advanced/video-closed-captions.md)
    + [水印](./advanced/watermarks.md)
 
 + 高级元数据管理{#metadata}
@@ -73,6 +74,9 @@ ht-degree: 17%
 
 + Edge Delivery Services{#edge-delivery-services}
    + [Sidekick插件](./edge-delivery-services/sidekick-plugin.md)
+
++ Content Hub{#content-hub}
+   + [上传Assets和批准流程](./content-hub/uploading-assets-and-approval-process.md)
 
 + 共享和分发{#sharing}
    + [下载Assets](./sharing/download.md)
