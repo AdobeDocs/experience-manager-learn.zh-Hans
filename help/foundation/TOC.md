@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation 教程
 user-guide-description: Adobe Experience Manager Foundation 的视频和教程集合。
 sub-product: Experience Manager
 index: y
-source-git-commit: a504ace72b1b90c6e7c711a939595b95f24733e6
+source-git-commit: 1e1a33986e202ce2af9cf2d03eca7895514465df
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 14%
+source-wordcount: '241'
+ht-degree: 13%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 14%
 # AEM Foundation 视频和教程 {#foundation}
 
 + [概述](./overview.md)
++ [POC](./poc.md)
 + 管理{#administration}
    + [了解升级AEM的原因](./administration/understand-reasons-to-upgrade.md)
    + [使用oak-run.jar管理索引](./administration/use-oak-run-jar-to-manage-indexes.md)
@@ -26,6 +27,7 @@ ht-degree: 14%
    + [OAuth范围](authentication/oauth-code-sample-develop.md)
    + [了解身份验证](authentication/authentication-support-article-understand.md)
    + [了解AMS上的IMS身份验证](authentication/adobe-ims-authentication-technical-video-understand.md)
+   + [JWT — 到OAuth凭据迁移](authentication/jwt-to-oauth-migration.md)
 + AdobeCloud Manager{#cloud-manager}
    + [了解AdobeCloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
    + [CI/CD 管道](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
@@ -48,6 +50,7 @@ ht-degree: 14%
    + [ModSecurity CRS DoS攻击防护](./security/modsecurity-crs-dos-attack-protection.md)
    + [通过专用证书连接到API的HTTPS连接](./security/call-internal-apis-having-private-certificate.md)
    + [来自AEM的双向TLS (mTLS)身份验证](./security/mutual-tls-authentication.md)
+   + [JWT-To-OAuth凭据迁移](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
 + 工作流 {#workflow}
    + [使用工作流编辑器](./workflow/use-the-workflow-editor.md)
    + [使用工作流](./workflow/use-workflow.md)
