@@ -9,9 +9,9 @@ level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 129
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
@@ -196,10 +196,18 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 
 要在本地服务器上对此进行测试，请执行以下步骤：
 1. [下载并安装DevelopingWithServiceUser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [下载并安装ares.ares.core-ares包](assets/ares.ares.core-ares.jar)。 它有自定义服务和servlet以应用使用权限并流式传输PDF
+
+1. 使用configMgr控制台将以下条目添加到Apache Sling用户映射器服务，如下所示
+
+```
+       DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+```
+
+![用户映射器](assets/user-mapper-service.PNG)
+1. [下载并安装ares.ares.core-ares包](assets/ares.ares.core-ares.jar)。 它有自定义服务和servlet以应用使用权限并流式传输PDF。
 1. [导入客户端库和自定义提交](assets/applyaresdemo.zip)
 1. [导入自适应表单](assets/applyaresform.zip)
-1. 将Reader扩展证书添加到“fd-service”用户。 确保别名为“ares”。
+1. 将Reader扩展证书添加到“fd-service”用户。 确保别名为“**ares**”。
 1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
 1. 选择适当的权限并上传PDF文件
 1. 单击提交以获取Reader扩展PDF
