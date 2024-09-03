@@ -14,20 +14,20 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1303
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: b57fb7ce9483dbfe206de7b89e6cf8dba72429a7
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1248'
 ht-degree: 1%
 
 ---
 
 # 集成AEM Sites和Experience PlatformWeb SDK
 
-了解如何将AEM as a Cloud Service与Experience Platform[Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)集成。 此基础步骤对于集成Adobe Experience Cloud产品(例如Adobe Analytics、Target)或最近的创新产品(例如Real-time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至关重要。
+了解如何将AEM as a Cloud Service与Experience Platform[Web SDK](https://experienceleague.adobe.com/docs/experience-platform/web-sdk/home.html)集成。 此基础步骤对于集成Adobe Experience Cloud产品(例如Adobe Analytics、Target)或最近的创新产品(例如Real-time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至关重要。
 
-您还将了解如何在[Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html)中收集和发送[WKND — 示例Adobe Experience Manager项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)页面查看数据。
+您还将了解如何在[Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home)中收集和发送[WKND — 示例Adobe Experience Manager项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)页面查看数据。
 
-完成此设置后，您便奠定了坚实的基础。 此外，您已准备好使用诸如[Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hans)、[Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)和[Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html)之类的应用程序来推进Experience Platform实施。 高级实施通过标准化Web和客户数据来帮助提高客户参与度。
+完成此设置后，您便奠定了坚实的基础。 此外，您已准备好使用诸如[Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#)、[Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/en/docs/customer-journey-analytics)和[Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/en/docs/journey-optimizer)之类的应用程序来推进Experience Platform实施。 高级实施通过标准化Web和客户数据来帮助提高客户参与度。
 
 ## 先决条件
 
@@ -55,14 +55,14 @@ ht-degree: 1%
 
 体验数据模型(XDM)架构可帮助您标准化客户体验数据。 要收集&#x200B;**WKND pageview**&#x200B;数据，请创建XDM架构并使用Adobe提供的字段组`AEP Web SDK ExperienceEvent`进行Web数据收集。
 
-有通用和特定行业，例如零售、金融服务、医疗保健等，以及参考数据模型套件。有关详细信息，请参阅[行业数据模型概述](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html)。
+有通用和特定行业，例如零售、金融服务、医疗保健等，以及参考数据模型套件。有关详细信息，请参阅[行业数据模型概述](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/industries/overview)。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418894?quality=12&learn=on)
 
-从[XDM系统概述](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)了解XDM架构和相关概念，如字段组、类型、类和数据类型。
+从[XDM系统概述](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home)了解XDM架构和相关概念，如字段组、类型、类和数据类型。
 
-[XDM系统概述](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)是了解XDM架构和相关概念（如字段组、类型、类和数据类型）的绝佳资源。 它全面了解了XDM数据模型以及如何创建和管理XDM架构以标准化整个企业中的数据。 探索它以更深入地了解XDM架构以及它如何使您的数据收集和管理流程受益。
+[XDM系统概述](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home)是了解XDM架构和相关概念（如字段组、类型、类和数据类型）的绝佳资源。 它全面了解了XDM数据模型以及如何创建和管理XDM架构以标准化整个企业中的数据。 探索它以更深入地了解XDM架构以及它如何使您的数据收集和管理流程受益。
 
 ## 创建数据流 — Experience Platform
 
@@ -71,14 +71,14 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418895?quality=12&learn=on)
 
-请访问[数据流概述](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html)页面，了解数据流的概念以及数据管理和配置等相关主题。
+请访问[数据流概述](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html)页面，了解数据流的概念以及数据管理和配置等相关主题。
 
 ## 创建标记属性 — Experience Platform
 
 了解如何在Experience Platform中创建标记属性以将Web SDK JavaScript库添加到WKND网站。 新定义的标记属性具有以下资源：
 
 + 标记扩展： [Core](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension)和[Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
-+ 数据元素：使用WKND站点的Adobe客户端数据层提取page-name、site-section和host-name的自定义代码类型的数据元素。 另外，XDM对象类型数据元素符合之前[创建XDM架构](#create-xdm-schema---experience-platform)步骤中新建的WKND XDM架构内部版本。
++ 数据元素：使用WKND站点的Adobe客户端数据层提取page-name、site-section和host-name的自定义代码类型的数据元素。 另外，XDM对象类型数据元素符合前面的[创建XDM架构](#create-xdm-schema---experience-platform)步骤中新建的WKND XDM架构内部版本。
 + 规则：每当使用Adobe客户端数据层触发`cmp:show`事件访问WKND网页时，将数据发送到PlatformEdge Network。
 
 使用&#x200B;**发布流**&#x200B;生成和发布标记库时，您可以使用&#x200B;**添加所有更改的资源**&#x200B;按钮。 选择所有资源，如数据元素、规则和标记扩展，而不是标识和选取单个资源。 此外，在开发阶段，您可以仅将库发布到&#x200B;_开发_&#x200B;环境，然后验证并将其提升到&#x200B;_暂存_&#x200B;或&#x200B;_生产_&#x200B;环境。
@@ -168,13 +168,17 @@ ht-degree: 1%
 +++
 
 
-[标记概述](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)提供了有关数据元素、规则和扩展等重要概念的深入知识。
+[标记概述](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/tags/home)提供了有关数据元素、规则和扩展等重要概念的深入知识。
 
-有关将AEM核心组件与Adobe客户端数据层集成的其他信息，请参阅[将Adobe客户端数据层与AEM核心组件结合使用指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)。
+有关将AEM核心组件与Adobe客户端数据层集成的其他信息，请参阅[将Adobe客户端数据层与AEM核心组件结合使用指南](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)。
 
 ## 将标记属性连接到AEM
 
-了解如何通过AEM中的Adobe IMS和Adobe Experience Platform配置中的标记，将最近创建的标记属性链接到AEM。 建立AEM as a Cloud Service环境后，会自动生成多个Adobe IMS技术帐户配置，包括标记。 但是，对于AEM 6.5版本，您必须手动配置一个。
+了解如何通过AEM中的Adobe IMS和Adobe Experience Platform配置中的标记，将最近创建的标记属性链接到AEM。 建立AEM as a Cloud Service环境后，会自动生成多个Adobe IMS技术帐户配置，包括标记。 有关分步说明，请参阅[使用IMS连接AEM Sites与标记属性](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/connect-aem-tag-property-using-ims)。
+
+但是，对于AEM 6.5版本，您必须手动配置一个。
+
+
 
 关联Tag属性后，WKND站点便能够使用Adobe Experience Platform云服务配置中的标记将标记属性的JavaScript库加载到网页上。
 
@@ -195,7 +199,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418898?quality=12&learn=on)
 
-[数据集概述](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html)提供了有关概念、配置和其他摄取功能的更多信息。
+[数据集概述](https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview)提供了有关概念、配置和其他摄取功能的更多信息。
 
 
 ## Experience Platform中的WKND pageview数据
@@ -218,8 +222,8 @@ ht-degree: 1%
 
 ## 其他资源
 
-+ [将Adobe客户端数据层用于核心组件](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
-+ [集成Experience Platform数据收集标记和AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
-+ [Adobe Experience Platform Web SDK和Edge Network概述](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
-+ [数据收集教程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
-+ [Adobe Experience Platform Debugger概述](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [将Adobe客户端数据层用于核心组件](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)
++ [集成Experience Platform数据收集标记和AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview)
++ [Adobe Experience Platform Web SDK和Edge Network概述](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/web-sdk/overview)
++ [数据收集教程](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/overview)
++ [Adobe Experience Platform Debugger概述](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview)
