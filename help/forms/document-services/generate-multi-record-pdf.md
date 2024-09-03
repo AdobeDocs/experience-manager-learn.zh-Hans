@@ -9,9 +9,9 @@ level: Experienced
 exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
 last-substantial-update: 2020-01-07T00:00:00Z
 duration: 138
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -127,9 +127,18 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 要在您的服务器上测试此功能，请按照以下说明操作：
 
-* [将zip文件内容下载并解压缩到文件系统](assets/mult-records-template-and-xml-file.zip)。此zip文件包含模板和xml数据文件。
+* [下载示例资源](assets/mult-records-template-and-xml-file.zip)。此zip文件包含模板和xml数据文件。
+* [导入]
 * [将浏览器指向Felix Web控制台](http://localhost:4502/system/console/bundles)
 * [部署DevelopingWithServiceUser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
+* 使用configMgr在Apache Sling服务用户映射器服务中添加以下条目。
+
+```java
+DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+```
+
+![user-mapper-service](assets/user-mapper-service-fd-service.png)
+
 * [部署自定义AEMFormsDocumentServices包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。使用OutputService API生成PDF的自定义包
 * [将浏览器指向包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 * [导入并安装包](assets/generate-multiple-pdf-from-xml.zip)。 此包包含html页面，通过该页面可删除模板和数据文件。

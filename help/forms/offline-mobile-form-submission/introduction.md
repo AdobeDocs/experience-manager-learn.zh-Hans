@@ -1,5 +1,5 @@
 ---
-title: 在HTM5表单提交时触发AEM工作流程
+title: 在HTML5表单提交简介时触发AEM工作流
 description: 在离线模式下继续填写移动表单并提交移动表单以触发AEM工作流
 feature: Mobile Forms
 doc-type: article
@@ -9,10 +9,12 @@ role: Developer
 level: Experienced
 exl-id: 88295af5-3022-4462-9194-46d8c979bc8b
 last-substantial-update: 2021-04-07T00:00:00Z
+jira: kt-16133
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 342
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -26,8 +28,12 @@ ht-degree: 0%
 * 处理从Acrobat/Reader提交的PDF
 * 触发Adobe Experience Manager (AEM)工作流以查看提交的PDF
 
-本教程将介绍完成上述用例所需的步骤。 [此处提供了与此教程相关的示例代码和资源。](part-four.md)
+本教程将介绍完成上述用例所需的步骤。 [此处提供了与此教程相关的示例代码和资源。](./deploy-assets.md)
 
 以下视频概述了用例
 
 >[!VIDEO](https://video.tv.adobe.com/v/29677?quality=12&learn=on)
+
+## 后续步骤
+
+[创建自定义配置文件](./custom-profile.md)

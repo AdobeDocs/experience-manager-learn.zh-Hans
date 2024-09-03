@@ -7,13 +7,13 @@ feature: Sling Model
 role: Developer
 jira: KT-15923
 level: Intermediate, Experienced
-source-git-commit: f45d04b489771b9d3613cb4ce5e7b94d531ac783
+exl-id: 5d852617-720a-4a00-aecd-26d0ab77d9b3
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
-
 
 # 从HTL参数化Sling模型
 
@@ -127,4 +127,3 @@ public interface ParameterizedModel {
 ```
 
 这显示了如何基于通过HTL提供的输入参数来影响AEM中的参数化Sling模型。
-
