@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: 7ef37a71f1daefee484478c3194907d5ce918af4
+source-git-commit: 177cddea03595b686ec75f129c8be7bb14e4c631
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '482'
 ht-degree: 0%
 
 ---
@@ -175,6 +175,8 @@ ht-degree: 0%
                  了解通用编辑器和带有Edge Delivery Services的AEM。
             </p>
         </td>
+    </tr>  
+    <tr>
         <td>
             <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
                 <img alt="使用Edge Delivery Services将站点导入到AEM Sites" 
@@ -190,5 +192,20 @@ ht-degree: 0%
                  了解如何使用Edge Delivery Services将站点导入到AEM Sites。
             </p>
         </td>
-    </tr>      
+        <td>
+            <a href="./season-3/cloud5-using-admin-api.md">
+                <img alt="将管理员API与Edge Delivery Services结合使用" 
+                     src="https://video.tv.adobe.com/v/3433158?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-using-admin-api.md">
+                <strong>使用管理员API</strong></a>        
+                <br/><em>与James Talbot &amp; Varun Mitra，云架构师</em>
+            </div>
+            <p>
+                <br/>                
+                 了解如何在Edge Delivery Services中使用管理员API来管理内容和代码的生命周期。
+            </p>
+        </td>    
+    </tr>    
 </table>
