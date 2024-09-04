@@ -10,7 +10,7 @@ role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 duration: 240
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 6922d885c25d0864560ab3b8e38907060ff3cc70
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 1%
@@ -187,7 +187,7 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略都表示为
 
 ### 允许CORS请求标头
 
-要允许所需的[HTTP请求标头传递到AEM进行处理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，必须在Disaptcher的`/clientheaders`配置中允许使用这些标头。
+若要允许所需的[HTTP请求标头传递到AEM进行处理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，必须在Dispatcher的`/clientheaders`配置中允许使用这些标头。
 
 ```
 /clientheaders {
