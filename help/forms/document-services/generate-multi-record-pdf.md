@@ -9,9 +9,11 @@ level: Experienced
 exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
 last-substantial-update: 2020-01-07T00:00:00Z
 duration: 138
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+jira: KT-16142
+badgeVersions: label="AEM Forms 6.5" before-title="false"
+source-git-commit: 8cadbe92a7a2f47c33b0ca0fcf7313dc418ae7a4
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -128,7 +130,6 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 要在您的服务器上测试此功能，请按照以下说明操作：
 
 * [下载示例资源](assets/mult-records-template-and-xml-file.zip)。此zip文件包含模板和xml数据文件。
-* [导入]
 * [将浏览器指向Felix Web控制台](http://localhost:4502/system/console/bundles)
 * [部署DevelopingWithServiceUser包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
 * 使用configMgr在Apache Sling服务用户映射器服务中添加以下条目。
@@ -136,6 +137,8 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 ```java
 DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 ```
+
+
 
 ![user-mapper-service](assets/user-mapper-service-fd-service.png)
 
