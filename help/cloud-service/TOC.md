@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 177cddea03595b686ec75f129c8be7bb14e4c631
+source-git-commit: af962fa9ede0781929e4e7cbbd6b5f00a9dfb0d9
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1295'
 ht-degree: 16%
 
 ---
@@ -384,7 +384,7 @@ ht-degree: 16%
    + [疑难解答](./asset-compute/troubleshooting.md)
 
 + 多步Tutorials{#multi-step-tutorials}
-   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
+   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-hans){target=_blank}
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html){target=_blank}
    + [SPA编辑器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html){target=_blank}
@@ -433,3 +433,4 @@ ht-degree: 16%
          + [浏览通用编辑器](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
          + [导入站点](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)
          + [使用管理员API](./expert-resources/cloud-5/season-3/cloud5-using-admin-api.md)
+         + [Lighthouse得分优化](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization.md)
