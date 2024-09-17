@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: af962fa9ede0781929e4e7cbbd6b5f00a9dfb0d9
+source-git-commit: 285c652460ff00301d183defc56c07b3f74d8e5c
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1300'
 ht-degree: 16%
 
 ---
@@ -433,4 +433,6 @@ ht-degree: 16%
          + [浏览通用编辑器](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
          + [导入站点](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)
          + [使用管理员API](./expert-resources/cloud-5/season-3/cloud5-using-admin-api.md)
-         + [Lighthouse得分优化](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization.md)
+         + [Lighthouse得分优化 — 第1部分](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part1.md)
+         + [Lighthouse得分优化 — 第2部分](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part2.md)
+
