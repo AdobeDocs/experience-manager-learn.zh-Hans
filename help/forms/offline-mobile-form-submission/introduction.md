@@ -1,5 +1,5 @@
 ---
-title: 在HTML5表单提交简介时触发AEM工作流
+title: 在PDF表单提交时触发AEM工作流
 description: 在离线模式下继续填写移动表单并提交移动表单以触发AEM工作流
 feature: Mobile Forms
 doc-type: article
@@ -12,14 +12,14 @@ last-substantial-update: 2021-04-07T00:00:00Z
 jira: kt-16133
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 342
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '214'
 ht-degree: 0%
 
 ---
 
-# 下载部分完成的移动表单并提交到AEM工作流
+# 下载部分完成的移动表单并提交以触发AEM工作流
 
 一个常见用例是能够将XDP呈现为数据捕获活动的HTML。 当表单很简单并且可以在线填写和提交时，这项功能会很有效。 但是，如果表单复杂，用户可能无法在线完成表单，我们需要提供相应的功能，让表单填写者能够使用Acrobat/Reader以离线方式下载要填写的表单的交互式版本。 填写表单后，用户可以在线提交表单。
 要完成此用例，我们需要执行以下步骤：

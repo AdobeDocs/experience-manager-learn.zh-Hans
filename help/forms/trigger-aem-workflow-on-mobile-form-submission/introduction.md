@@ -1,0 +1,35 @@
+---
+title: 在HTML5表单提交简介时触发AEM工作流
+description: 在移动表单提交时触发AEM工作流
+feature: Mobile Forms
+doc-type: article
+version: 6.4,6.5
+topic: Development
+role: Developer
+level: Experienced
+last-substantial-update: 2024-09-17T00:00:00Z
+jira: kt-16215
+badgeVersions: label="AEM Forms 6.5" before-title="false"
+source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 1%
+
+---
+
+# 在移动设备表单提交时触发AEM工作流
+
+一个常见用例是能够将XDP呈现为数据捕获活动的HTML。提交此表单时，可能需要触发AEM工作流。 在AEM Workflow中，我们可以将数据与xdp模板合并，并显示生成的PDF以供审阅和审批。表单将在发布实例上呈现，工作流将在AEM处理实例上触发。
+用例涉及以下步骤
+
+* 用户填写并提交一个HTML5表单(XDP的HTML5呈现版本)。
+* 提交由发布实例中的servlet处理。
+* 此servlet将数据存储在AEM处理实例的存储库中的预定义文件夹中。
+* 工作流启动器配置为每次在特定文件夹下添加新文件时触发AEM工作流。
+
+本教程将介绍完成上述用例所需的步骤。 [此处提供了与此教程相关的示例代码和资源。](./deploy-assets.md)
+
+
+## 后续步骤
+
+[处理表单提交](./handle-form-submission.md)

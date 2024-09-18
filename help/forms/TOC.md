@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
 workflow-type: tm+mt
-source-wordcount: '2089'
-ht-degree: 2%
+source-wordcount: '2101'
+ht-degree: 1%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 2%
    + [2 — 创建OSGi服务](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [3 — 创建Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
    + [4 — 包括第三方包](creating-your-first-osgi-bundle/include-third-party-jars.md)
-+ 自适应表单 {#adaptive-forms}
++ Adaptive Form {#adaptive-forms}
    + [在Windows上安装AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [在Linux上安装32位软件包](adaptive-forms/installing-aem-form-on-linux.md)
    + [自适应Forms中的预填充服务](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
@@ -222,13 +222,19 @@ ht-degree: 2%
    + [客户端库](storing-retrieving-form-data/part4.md)
    + [自适应表单模板](storing-retrieving-form-data/part5.md)
    + [部署示例资源](storing-retrieving-form-data/part6.md)
-+ 正在从移动设备表单提交触发AEM工作流{#offline-mobile-form-submission}
-   + [简介](offline-mobile-form-submission/introduction.md)
-   + [自定义配置文件](offline-mobile-form-submission/custom-profile.md)
-   + [处理表单提交](offline-mobile-form-submission/handle-form-submission.md)
-   + [存储提交的数据](offline-mobile-form-submission/author-servlet.md)
-   + [用于审查PDF的工作流](offline-mobile-form-submission/review-workflow.md)
-   + [在您的系统上部署](offline-mobile-form-submission/deploy-assets.md)
++ 在PDF表单提交时触发AEM工作流{#offline-mobile-form-submission}
+   + [部分 — 1](offline-mobile-form-submission/introduction.md)
+   + [第2部分](offline-mobile-form-submission/custom-profile.md)
+   + [部分 — 3](offline-mobile-form-submission/handle-form-submission.md)
+   + [部分 — 4](offline-mobile-form-submission/author-servlet.md)
+   + [部分 — 5](offline-mobile-form-submission/review-workflow.md)
+   + [部分 — 6](offline-mobile-form-submission/deploy-assets.md)
++ 在移动表单提交时触发AEM工作流{#trigger-aem-workflow-on-mobile-form-submission}
+   + [部分 — 1](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
+   + [第2部分](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
+   + [部分 — 3](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
+   + [部分 — 4](trigger-aem-workflow-on-mobile-form-submission/review-workflow.md)
+   + [部分 — 5](trigger-aem-workflow-on-mobile-form-submission/deploy-assets.md)
 + 查询表单提交{#query-form-submissions}
    + [简介](query-form-submissions/introduction.md)
    + [创建可搜索字段](query-form-submissions/part1.md)
