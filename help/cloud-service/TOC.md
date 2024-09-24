@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 285c652460ff00301d183defc56c07b3f74d8e5c
+source-git-commit: acecb13a5b7f3c75bc6cd8eb36d398f8cebfe0a6
 workflow-type: tm+mt
-source-wordcount: '1300'
+source-wordcount: '1303'
 ht-degree: 16%
 
 ---
@@ -144,6 +144,7 @@ ht-degree: 16%
    + [使用客户CDN的自定义域名](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
    + [正在缓存](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
    + [AdobeCDN — 超出缓存范围](./content-delivery/adobe-cdn-beyond-caching.md)
+   + [自定义错误页面](./content-delivery/custom-error-pages.md)
    + [URL重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + 正在缓存{#caching}
    + [概述](./caching/overview.md)
