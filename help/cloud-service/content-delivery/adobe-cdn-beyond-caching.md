@@ -11,13 +11,13 @@ duration: 0
 last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: 65e77a329226ca7c7ccb1e583d2a045074feeb3d
+exl-id: 8948a900-01e9-49ed-9ce5-3a057f5077e4
+source-git-commit: 8795024a7b5e6d10cb2ff2f770dd3d080af85e68
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
 
 ---
-
 
 # AdobeCDN — 缓存之外的高级功能
 
@@ -95,8 +95,9 @@ data:
 
 [如何清除CDN缓存](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
 
+[配置CDN错误页](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
+
 [在CDN上配置流量](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
 
 [正在配置CDN凭据和身份验证](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 
-[配置CDN错误页](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
