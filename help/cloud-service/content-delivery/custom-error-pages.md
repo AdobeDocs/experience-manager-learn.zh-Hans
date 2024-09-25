@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-09-24T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: d11b07441d8c46ce9a352e4c623ddc1781b9b9be
+source-git-commit: 01e6ef917d855e653eccfe35a2d7548f12628604
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1566'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 在本教程中，您将学习：
 
 - 默认错误页面
-- 错误页面提供自
+- 提供错误页面的位置
    - AEM服务类型 — 作者、发布、预览
    - Adobe管理的CDN
 - 用于自定义错误页面的选项
@@ -50,8 +50,14 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
 
 | 错误页面提供自 | 详细信息 |
 |---------------------|:-----------------------:|
-| AEM服务类型 — 作者、发布、预览 | 当页面请求由AEM服务类型提供时，错误页面由AEM服务类型提供。 |
-| Adobe管理的CDN | 当Adobe管理的CDN _无法访问AEM服务类型_ （源服务器）时，将从Adobe管理的CDN提供错误页。 **这是一个不太可能发生的事件，但值得一提。** |
+| AEM服务类型 — 作者、发布、预览 | 当页面请求由AEM服务类型提供并且出现上述任何错误情况时，错误页面将从AEM服务类型提供。 |
+| Adobe管理的CDN | 当Adobe管理的CDN _无法访问AEM服务类型_ （源服务器）时，将从Adobe管理的CDN提供错误页。 **这是一个不太可能发生但值得规划的事件。** |
+
+
+例如，从AEM服务类型和Adobe管理的CDN提供的默认错误页如下所示：
+
+![默认AEM错误页](./assets/aem-default-error-pages.png)
+
 
 但是，您可以&#x200B;_自定义AEM服务类型和Adobe管理的_ CDN错误页以匹配您的品牌并提供更好的用户体验。
 
@@ -89,7 +95,11 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
 
 - 验证WKND网站页面是否正确呈现。
 
-## 用于自定义错误页面的ErrorDocument Apache指令{#errordocument-directive}
+## 用于自定义AEM提供的错误页面的ErrorDocument Apache指令{#errordocument}
+
+要自定义AEM提供的错误页面，请使用`ErrorDocument` Apache指令。
+
+在AEM as a Cloud Service中，`ErrorDocument` Apache指令选项仅适用于发布和预览服务类型。 它不适用于创作服务类型，因为Apache + Dispatcher不是部署架构的一部分。
 
 让我们看看[AEM WKND](https://github.com/adobe/aem-guides-wknd)项目如何使用`ErrorDocument` Apache指令显示自定义错误页。
 
@@ -123,28 +133,61 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
 
 - 通过在您的环境中输入错误的页面名称或路径(例如[https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html](https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html))来查看WKND网站的自定义错误页面。
 
-## ACS AEM Commons-Error页面处理程序可自定义错误页面{#acs-aem-commons-error-page-handler}
+## ACS AEM Commons-Error页面处理程序，用于自定义AEM提供的错误页面{#acs-aem-commons}
 
-要使用ACS AEM Commons错误页面处理程序自定义错误页面，请查看[如何使用](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html#how-to-use)部分。
+要自定义&#x200B;_所有AEM服务类型_&#x200B;中的AEM提供的错误页，您可以使用[ACS AEM Commons Error Page Handler](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html)选项。
 
-## 用于自定义错误页面的CDN错误页面{#cdn-error-pages}
+。有关详细的分步说明，请参阅[如何使用](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html#how-to-use)部分。
+
+## 用于自定义CDN提供的错误页面的CDN错误页面{#cdn-error-pages}
+
+要自定义Adobe管理的CDN提供的错误页面，请使用CDN错误页面选项。
 
 让我们实施CDN错误页以在Adobe管理的CDN无法访问AEM服务类型（源服务器）时自定义错误页。
 
 >[!IMPORTANT]
 >
-> 请注意，Adobe管理的CDN无法访问AEM服务类型（源服务器）不太可能，但值得规划。
+> _Adobe管理的CDN无法访问AEM服务类型_ （源服务器）是&#x200B;**不可能的事件**，但值得规划。
+
+实施CDN错误页面的高级步骤包括：
+
+- 将自定义错误页面内容开发为单页应用程序(SPA)。
+- 将CDN错误页面所需的静态文件托管在可公开访问的位置。
+- 配置CDN规则(errorPages)并引用上述静态文件。
+- 使用Cloud Manager管道将配置的CDN规则部署到AEM as a Cloud Service环境。
+- 测试CDN错误页面。
 
 
 ### CDN错误页面概述
 
-CDN错误页由Adobe管理的CDN作为单页应用程序(SPA)实现。
+CDN错误页由Adobe管理的CDN作为单页应用程序(SPA)实现。 由Adobe管理的CDN投放的SPAHTML文档包含最低限度的HTML片段。 自定义错误页面内容是使用JavaScript文件动态生成的。 必须开发JavaScript文件，并将其托管在客户可公开访问的位置。
 
-必须使用JavaScript文件动态生成WKND特定的品牌内容。 JavaScript文件必须托管在可公开访问的位置。 因此，必须在可公开访问的位置开发和托管以下静态文件：
+Adobe管理的CDN提供的HTML片段具有以下结构：
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    ...
+
+    <title>{title}</title>
+    <link rel="icon" href="{icoUrl}">
+    <link rel="stylesheet" href="{cssUrl}">
+  </head>
+  <body>
+    <script src="{jsUrl}"></script>
+  </body>
+</html>
+```
+
+HTML片段包含以下占位符：
 
 1. **jsUrl**： JavaScript文件的绝对URL，用于通过动态创建HTML元素呈现错误页面内容。
 1. **cssUrl**： CSS文件的绝对URL，用于设置错误页面内容的样式。
 1. **icoUrl**： favicon的绝对URL。
+
+
 
 ### 开发自定义错误页面
 
@@ -339,9 +382,11 @@ CDN错误页由Adobe管理的CDN作为单页应用程序(SPA)实现。
 
 ## 摘要
 
-在本教程中，您已了解如何为AEM as a Cloud Service托管的网站实施自定义错误页面。
+在本教程中，您已了解从中提供错误页面的默认错误页面，以及自定义错误页面的选项。 您已了解如何使用`ErrorDocument` Apache指令、`ACS AEM Commons Error Page Handler`和`CDN Error Pages`选项实施自定义错误页面。
 
-您还可以学习在Adobe管理的CDN无法访问AEM服务类型（源服务器）时自定义CDN错误页选项的详细步骤。
+## 其他资源
 
+- [配置CDN错误页](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
 
+- [Cloud Manager — 配置管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)
 
