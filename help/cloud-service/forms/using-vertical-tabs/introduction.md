@@ -1,6 +1,6 @@
 ---
 title: 在AEM FormsCloud Service中使用垂直选项卡
-description: 使用垂直制表符创建自适应表单
+description: 使用垂直选项卡创建自适应表单。
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -12,14 +12,14 @@ thumbnail: 331891.jpg
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 jira: KT-16023
 exl-id: 84c03212-47dc-4398-a197-e69e3f3bf77e
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: b4f7d9762c009e16dc65f7134356edcf7ad7a45d
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# 简介
+# 垂直选项卡简介
 
 垂直选项卡用于以紧凑且易于导航的格式组织和显示内容。 纵向提供以下优势
 1. 空间效率 — 垂直标签利用垂直空间，当要捕获的信息量很大时，垂直标签可以更高效地捕获信息。
