@@ -11,9 +11,9 @@ last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: d731a7131b997fa272013e8d62aa2251e25c08e4
 workflow-type: tm+mt
-source-wordcount: '2413'
+source-wordcount: '2423'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 当我们提及本地AEM实例时，我们谈论的是在开发人员个人计算机上运行的Adobe Experience Manager的副本。 ***所有*** AEM开发应从针对本地AEM实例编写并运行代码开始。
 
-如果您是初次使用AEM，则可以安装两种基本运行模式：***作者***&#x200B;和&#x200B;***Publish***。 ***作者*** [运行模式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en)是数字营销人员用于创建和管理内容的环境。 在大多数开发过程中，您要将代码部署到Author实例。 这允许您创建页面并添加和配置组件。 AEM Sites是WYSIWYG创作CMS，因此大多数CSS和JavaScript都可以针对创作实例进行测试。
+如果您是初次使用AEM，则可以安装两种基本运行模式：***作者***&#x200B;和&#x200B;***Publish***。 ***作者*** [运行模式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en)是数字营销人员用于创建和管理内容的环境。 在大多数开发过程中，您要将代码部署到Author实例。 这允许您创建页面并添加和配置组件。 AEM Sites是WYSIWYG创作CMS，因此，大多数CSS和JavaScript都可以针对创作实例进行测试。
 
 对于本地&#x200B;***Publish***&#x200B;实例，它也是&#x200B;*关键*&#x200B;测试代码。 ***Publish***&#x200B;实例是访问您网站的访客与之交互的AEM环境。 虽然&#x200B;***Publish***&#x200B;实例与&#x200B;***Author***&#x200B;实例的技术栈栈相同，但配置和权限有一些主要区别。 代码必须先在本地&#x200B;***Publish***&#x200B;实例中进行测试，然后才能提升到更高级别的环境。
 
@@ -181,6 +181,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 * **[存储库](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** — 用于JCR内容的类似FTP的工具
 * **[aemfed](https://aemfed.io/)** — 加快您的AEM前端工作流程
 * **[AEM Sync](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Visual Studio Code的社区支持&#42;扩展
+* **[WKND项目](https://github.com/adobe/aem-guides-wknd)** — 此视频中显示的AEM项目示例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 
