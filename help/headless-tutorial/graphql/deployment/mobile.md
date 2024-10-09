@@ -10,7 +10,7 @@ jira: KT-10796
 thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
 duration: 31
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 23ea95cfdf7e4c9fde4b53e9f68079b4d267ca20
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 2%
@@ -27,7 +27,7 @@ AEM Headless移动部署是iOS、Android™等的原生移动应用程序。 这
 
 必须为移动应用程序部署就地以下部署配置。
 
-| 移动设备应用程序连接到 | AEM Author | AEM 发布 | AEM预览 |
+| 移动设备应用程序连接到→ | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨源资源共享(CORS) | ✘ | ✘ | ✘ |
