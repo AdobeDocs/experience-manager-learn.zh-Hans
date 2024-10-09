@@ -11,7 +11,7 @@ thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: f1b13bba9e83ac1d25f2af23ff2673554726eb19
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 1%
@@ -53,7 +53,7 @@ SPA和AEM流量在共享域中的路由方式取决于您：具有多个源的CD
 
 以下是SPA生产部署所需的部署配置，在与AEM相同的域中托管。
 
-| SPA连接到 | AEM Author | AEM 发布 | AEM预览 |
+| SPA连接到→ | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨源资源共享(CORS) | ✘ | ✘ | ✘ |
@@ -70,7 +70,7 @@ SPA和AEM流量在共享域中的路由方式取决于您：具有多个源的CD
 
 以下是SPA生产部署所需的部署配置(当托管在不同于AEM的域上时)。
 
-| SPA连接到 | AEM Author | AEM 发布 | AEM预览 |
+| SPA连接到→ | AEM Author | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [跨源资源共享(CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
