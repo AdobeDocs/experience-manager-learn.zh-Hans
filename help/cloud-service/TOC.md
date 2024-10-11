@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 8d9e6bc44164ff3acfa2c7eadffc60bbc5e8306e
+source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1307'
 ht-degree: 16%
 
 ---
@@ -269,6 +269,11 @@ ht-degree: 16%
       + [创建数据元素](./forms/form-data-analytics/data-elements.md)
       + [创建规则](./forms/form-data-analytics/rules.md)
       + [测试解决方案](./forms/form-data-analytics/test.md)
+   + 正在创建按钮变体{#style-system}
+      + [简介](./forms/style-system/introduction.md)
+      + [定义策略](./forms/style-system/style-policy.md)
+      + [定义变体](./forms/style-system/create-variations.md)
+      + [测试变体](./forms/style-system/build.md)
    + 使用垂直制表符{#using-vertical-tabs}
       + [1.导言](./forms/using-vertical-tabs/introduction.md)
       + [2.创建表单](./forms/using-vertical-tabs/create-af.md)
