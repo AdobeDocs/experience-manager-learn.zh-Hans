@@ -12,9 +12,9 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: 8d9e6bc44164ff3acfa2c7eadffc60bbc5e8306e
+source-git-commit: ede52c6c9feb0b35bc3729e28591cb4e7c7600f7
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -67,13 +67,12 @@ AEM Eventing在系统架构和运营效率方面提供了众多优势。 使用A
 AEM事件虽然强大，但存在一些需要考虑的限制：
 
 - **可用性限制为AEM as a Cloud Service**：当前，AEM Eventing仅可用于AEM as a Cloud Service。
-- **有限事件支持**：截至目前，仅支持AEM内容片段事件。 但是，预计今后会增加更多的活动，扩大活动范围。
+
+- **可用的事件类型**：在[此处](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#available-event-types)查看当前可用的事件类型列表。
 
 ## 如何启用
 
-AEM事件是按AEM as a Cloud Service环境启用的，并且仅适用于预发行模式下的环境。 联系<a href="mailto:grp-aem-events@adobe.com">AEM-Eventing团队</a>以通过AEM Eventing启用您的AEM环境。
-
-如果已启用，请参阅[在AEM Cloud Service环境中启用AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)以了解后续步骤。
+有关后续步骤，请参阅[在AEM Cloud Service环境中启用AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)。
 
 ## 如何订阅
 
