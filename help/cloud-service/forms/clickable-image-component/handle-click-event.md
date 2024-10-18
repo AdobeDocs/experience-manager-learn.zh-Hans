@@ -1,6 +1,6 @@
 ---
 title: 创建可单击的图像组件
-description: 在AEM FormsCloud Service中创建可单击的图像组件
+description: 在AEM Formsas a Cloud Service中创建可单击的图像组件
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,9 +10,9 @@ topic: Development
 jira: KT-15968
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 exl-id: 54344a6d-51d3-4a63-b1f1-283bddbc0f8f
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
-source-wordcount: '83'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---

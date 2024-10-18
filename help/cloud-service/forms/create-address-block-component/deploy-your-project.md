@@ -1,6 +1,6 @@
 ---
 title: 创建地址组件
-description: 在AEM FormsCloud Service中创建新的地址核心组件
+description: 在AEM Forms中创建新的地址核心组件as a Cloud Service
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,16 +9,16 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: be25be52-2914-4820-9356-678a326f8edc
-source-git-commit: a12b1778413079646814cb25567abfc26a429340
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
 
 # 部署项目
 
-在开始将项目部署到AEM FormsCloud Service之前，建议将该项目部署到AEM Forms的本地云就绪实例。
+在开始将项目部署到AEM Formsas a Cloud Service之前，建议将该项目部署到AEM Forms的本地云就绪实例。
 
 ## 将更改与AEM项目同步
 
