@@ -10,10 +10,10 @@ topic: Development
 jira: KT-15752
 exl-id: 21b6640e-5cfa-4902-9660-a2b1c91b285d
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 48%
+source-wordcount: '170'
+ht-degree: 47%
 
 ---
 
