@@ -7,14 +7,14 @@ feature: Operations, Dispatcher
 role: Developer, Architect
 level: Intermediate
 jira: KT-11466
-last-substantial-update: 2022-10-14T00:00:00Z
+last-substantial-update: 2024-10-22T00:00:00Z
 index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 3cc9b4fa0a30d36638a8c28a73663ffa455ba4a3
+source-git-commit: 9e093e87c8c369ddd750be4a7dc30e2bf86495d5
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ AEM URL重定向解决方案如下所示：
 | [在Edge，通过AEM-managed CDN](#at-edge-via-aem-managed-cdn) | ✔ | ✘ | ✔ | Edge/CDN（内置） |
 | [在Edge，通过自带CDN (BYOCDN)](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge/CDN (BYOCDN) |
 | [Apache `mod_rewrite`规则作为Dispatcher配置](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
-| [ACS Commons — 重定向映射管理器](#redirect-map-manager) | ✘ | ✔ | ✘ | Dispatcher |
+| [ACS Commons — 重定向映射管理器](#redirect-map-manager) | ✘ | ✔ | ✔ | Dispatcher |
 | [ACS Commons — 重定向管理器](#redirect-manager) | ✘ | ✔ | ✔ | AEM |
 | [`Redirect`页面属性](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
 
@@ -76,7 +76,7 @@ AEM URL重定向解决方案如下所示：
 
 #### 重定向映射管理器
 
-[重定向映射管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)可帮助AEM 6.x管理员轻松维护和发布[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)文件，而无需直接访问Apache Web服务器或要求重新启动Apache Web服务器。 此功能允许用户从AEM中的控制台创建、更新和删除重定向规则，而无需开发团队或AEM部署的帮助。 重定向映射管理器&#x200B;**与AEM as a Cloud Service不兼容**。
+[重定向映射管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)可帮助AEM管理员轻松维护和发布[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)文件，而无需直接访问Apache Web服务器或要求重新启动Apache Web服务器。 此功能允许用户从AEM中的控制台创建、更新和删除重定向规则，而无需开发团队或AEM部署的帮助。 重定向管理器与&#x200B;**AEM as a Cloud Service**&#x200B;和&#x200B;**AEM 6.x**&#x200B;兼容。
 
 #### 重定向管理器
 
