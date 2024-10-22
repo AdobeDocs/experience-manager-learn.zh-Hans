@@ -10,9 +10,9 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
+source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,11 @@ ht-degree: 0%
 # 测试更改
 
 基于&#x200B;**&quot;Blank with Core Components&quot;**模板创建自适应表单。 将3个按钮拖放到表单上，并将其标记为“公司”、“营销”和“默认”。
-通过选择所示的画笔为公司和营销按钮分配相应的样式变体
+通过选择如下所示的绘画画笔，为公司和营销按钮分配相应的样式变体。
 
 ![样式](assets/marketing-variation.png)
+
+第三个按钮将应用默认样式。
 
 ## 构建主题项目
 
