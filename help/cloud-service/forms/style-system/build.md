@@ -10,9 +10,9 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
+source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 构建主题项目
 
-下一步是构建主题项目。 导航到主题项目的根文件夹，然后运行命令&#x200B;_**npm run build**_，如下面的屏幕快照所示
+下一步是构建主题项目。 导航到主题项目的根文件夹，然后运行命令&#x200B;_**npm run build**_，如下面的屏幕快照所示。
 
 ![生成主题](assets/build-theme.png)
 
@@ -46,4 +46,8 @@ ht-degree: 0%
 * 这些按钮应会更新为如下所示的相应样式。
 
 ![最终按钮](assets/final-state-buttons.png)
+
+## 推送更改
+
+如果您对更改感到满意，可以使用[前端管道](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline)将更改推送到您的云实例
 
