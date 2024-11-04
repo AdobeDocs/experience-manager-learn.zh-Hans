@@ -13,7 +13,7 @@ exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 badgeIntegration: label="集成" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
 duration: 443
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 606607b85fae012e76d57b0b35820247a6862e32
 workflow-type: tm+mt
 source-wordcount: '2072'
 ht-degree: 0%
@@ -45,7 +45,7 @@ WKND营销团队有兴趣了解哪些`Call to Action (CTA)`按钮在主页上的
 ### 目标 {#objective}
 
 1. 创建报表包或使用现有报表包。
-1. 在报表包中配置[转化变量(eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)和[成功事件（事件）](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html)。
+1. 在报表包中配置[转化变量(eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)和[成功事件（事件）](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)。
 1. 创建一个[Analysis Workspace项目](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)以通过允许您快速构建、分析和共享见解的工具来分析数据。
 1. 与其他团队成员共享Analysis Workspace项目。
 
@@ -148,7 +148,7 @@ Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分�
 
    ![页Dimension](assets/create-analytics-workspace/evar9-dimension.png)
 
-1. 将&#x200B;**CTA点击** (event8)量度拖放到发生次数量度上并将其替换。 您现在可以查看一个可视化图表，该可视化图表显示页面名称(eVar9)和页面上CTA点击事件的相应计数。
+1. 将&#x200B;**CTA点击** (event8)指标拖放到发生次数量度上并将其替换。 您现在可以查看一个可视化图表，该可视化图表显示页面名称(eVar9)和页面上相应CTA点击事件计数。
 
    ![页面量度 — CTA点击](assets/create-analytics-workspace/evar8-cta-click.png)
 
@@ -164,7 +164,7 @@ Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分�
 
    ![eVar8](assets/create-analytics-workspace/evar8.png)
 
-1. 在下方，您可以看到WKND网站的可视化呈现形式，它按页面模板划分，并进一步按用户与WKND网站点击操作(CTA)按钮的交互进行划分。
+1. 在下方，您可以看到WKND网站的可视化表示形式，它按页面模板划分，并进一步按用户与WKND网站点击操作(CTA)按钮的交互进行划分。
 
    ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
 
@@ -240,9 +240,9 @@ Analytics分类是在生成报表时对Analytics变量数据进行分类，然�
 
    ![Workspace按钮ID](assets/create-analytics-workspace/workspace-report-button-id.png)
 
-1. 接下来，将工作区中用于显示行动号召(CTA)按钮ID的&#x200B;**按钮ID**&#x200B;量度替换为在上一步中创建的分类名称。
+1. 接下来，将工作区中用于显示行动号召(CTA)按钮ID的&#x200B;**按钮ID**&#x200B;指标替换为上一步中创建的分类名称。
 
-1. 在组件查找器中，搜索&#x200B;**WKND CTA按钮**&#x200B;并将&#x200B;**WKND CTA按钮（按钮ID）**&#x200B;维度拖放到按钮ID量度上并替换它。
+1. 在组件查找器中，搜索&#x200B;**WKND CTA按钮**，并将&#x200B;**WKND CTA按钮（按钮ID）**&#x200B;维度拖放到“按钮ID”量度上并将其替换。
 
    * **早于**
      ![Workspace按钮（早于](assets/create-analytics-workspace/wknd-button-before.png)）
