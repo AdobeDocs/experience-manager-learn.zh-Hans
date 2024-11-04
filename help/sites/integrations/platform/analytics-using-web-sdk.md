@@ -14,7 +14,7 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 774267b4f4c65c79f185fa3b33383ce9ddd136cb
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -27,9 +27,9 @@ ht-degree: 0%
 
 ## 概述
 
-了解用户行为是每个营销团队的重要目标。 通过了解用户如何与其内容交互，团队可以做出明智决策、优化策略并取得更好的结果。 WKND营销团队是一个虚构的实体，其目标是在其网站上实施Adobe Analytics以实现此目标。 主要目标是收集关于两个关键量度的数据：页面查看次数和主页行动号召(CTA)点击次数。
+了解用户行为是每个营销团队的重要目标。 通过了解用户如何与其内容交互，团队可以做出明智决策、优化策略并取得更好的结果。 WKND营销团队是一个虚构的实体，其目标是在其网站上实施Adobe Analytics以实现此目标。 主要目标是收集关于两个关键指标的数据：页面查看次数和主页行动号召(CTA)点击次数。
 
-通过跟踪页面查看，团队能够分析哪些页面最受用户关注。 此外，跟踪主页CTA点击量，可针对团队行动号召元素的有效性提供宝贵的见解。 此数据可能会揭示哪些CTA正在与用户引起共鸣，哪些需要调整，并可能发现提升用户参与度和促进转化的新机会。
+通过跟踪页面查看，团队能够分析哪些页面最受用户关注。 此外，跟踪CTA主页点击量，可针对团队行动号召元素的有效性提供宝贵的见解。 此数据可能会揭示哪些CTA正在与用户引起共鸣，哪些需要调整，并可能发现提升用户参与度和促进转化的新机会。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419872?quality=12&learn=on)
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 + [报告包](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html)
 + [转化变量](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)
-+ [成功事件](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html)
++ [成功事件](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
 + [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)
 
 ## 更新数据流 — 添加Analytics服务
@@ -239,9 +239,9 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419884?quality=12&learn=on)
 
-## 数据集验证 — WKND页面视图、CTA数据
+## 数据集验证 — WKND页面查看、CTA数据
 
-数据集是用于数据集合的存储和管理结构，如跟踪架构的数据库表。 在[上一教程](./web-sdk.md)中创建的数据集已重用，以验证pageview和CTA点击数据是否已摄取到Experience Platform数据集中。 在数据集UI中，各种详细信息（如总记录数、大小和摄取的批次）都会与直观的条形图一起显示。
+数据集是用于数据集合的存储和管理结构，如跟踪架构的数据库表。 在[上一教程](./web-sdk.md)中创建的数据集会被重复使用，以验证是否已将pageview和CTA点击数据摄取到Experience Platform数据集中。 在数据集UI中，各种详细信息（如总记录数、大小和摄取的批次）都会与直观的条形图一起显示。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419885?quality=12&learn=on)
 
@@ -249,7 +249,7 @@ ht-degree: 0%
 
 Analysis Workspace是Adobe Analytics中的一个功能强大的工具，允许以灵活且交互的方式探索和可视化数据。 它提供了一个拖放界面，用于创建自定义报表、执行高级分段和应用各种数据可视化图表。
 
-让我们重新打开在[设置Analysis Workspace](#setup-analytics---report-suite-analysis-workspace)步骤中创建的Analytics项目。 在&#x200B;**热门页面**&#x200B;部分中，检查各种量度，例如访问次数、独特访客、登入次数、跳出率等。 要评估WKND页面和主页CTA的性能，请拖放特定于WKND的维度（WKND页面名称、WKND CTA名称）和量度（WKND CTA点击事件）。 这些见解对于营销人员了解哪些CTA更有效，并根据其业务目标制定数据驱动型决策非常有价值。
+让我们重新打开在[设置Analysis Workspace](#setup-analytics---report-suite-analysis-workspace)步骤中创建的Analytics项目。 在&#x200B;**热门页面**&#x200B;部分中，检查各种量度，例如访问次数、独特访客、登入次数、跳出率等。 要评估WKND页面和主页CTA的性能，请拖放特定于WKND的维度(WKND页面名称、WKND CTA名称)和量度(WKND CTA点击事件)。 这些见解对于营销人员了解哪些CTA更有效，并根据其业务目标制定数据驱动型决策非常有价值。
 
 要可视化用户历程，请使用流量可视化图表，从&#x200B;**WKND页面名称**&#x200B;开始，并扩展到各种路径。
 
