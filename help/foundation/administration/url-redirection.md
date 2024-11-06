@@ -12,9 +12,9 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 9e093e87c8c369ddd750be4a7dc30e2bf86495d5
+source-git-commit: d5dff9378f31acb0fbce0bb86e2d0022ee725f83
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ AEM URL重定向解决方案如下所示：
 
 #### 重定向映射管理器
 
-[重定向映射管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)可帮助AEM管理员轻松维护和发布[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)文件，而无需直接访问Apache Web服务器或要求重新启动Apache Web服务器。 此功能允许用户从AEM中的控制台创建、更新和删除重定向规则，而无需开发团队或AEM部署的帮助。 重定向管理器与&#x200B;**AEM as a Cloud Service**&#x200B;和&#x200B;**AEM 6.x**&#x200B;兼容。
+[重定向映射管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)可帮助AEM管理员轻松维护和发布[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)文件，而无需直接访问Apache Web服务器或要求重新启动Apache Web服务器。 此功能允许用户从AEM中的控制台创建、更新和删除重定向规则，而无需开发团队或AEM部署的帮助。 重定向管理器同时具有&#x200B;**AEM as a Cloud Service**（请参阅[无管道URL重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)策略）和&#x200B;**AEM 6.x**&#x200B;兼容。
 
 #### 重定向管理器
 
