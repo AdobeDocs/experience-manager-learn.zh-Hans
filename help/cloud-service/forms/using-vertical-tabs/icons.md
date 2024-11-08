@@ -1,5 +1,5 @@
 ---
-title: 在AEM Forms中使用垂直制表符as a Cloud Service
+title: 添加自定义图标
 description: 将自定义图标添加到垂直选项卡
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -11,9 +11,10 @@ feature: Adaptive Forms
 thumbnail: 331891.jpg
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 jira: KT-16418
-source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
+exl-id: 20e44be0-5490-4414-9183-bb2d2a80bdf0
+source-git-commit: faa859897b6b9fbb0acff02000611de216ddda3e
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 * 增强的可用性：图标可以快速传达每个选项卡的用途，使用户更容易一眼就找到他们要找的内容。 图标等视觉提示可帮助用户更直观地导航。
 
-* 可视层次结构和聚焦：图标可在选项卡之间创建更加明显的分离，从而改善可视层次结构。 这有助于突出重要选项卡，并更有效地指导用户的注意。
+* 可视层次结构和聚焦：图标可在选项卡之间创建更加明显的分离，从而改善可视层次结构。 这有助于突出重要选项卡，并有效指导用户的注意。
 阅读本文后，您应该能够放置如下所示的图标
 
 ![图标](assets/icons.png)
@@ -42,9 +43,9 @@ ht-degree: 0%
 
 ## 创建图标映射以存储图标
 
-创建到_variable.scss文件的图标映射。 SCSS映射$icon-map是键值对的集合，其中每个键代表一个图标名称（如home、family等），每个值都是与该图标关联的图像文件的路径。
+在_variable.scss文件中创建图标映射。 SCSS映射$icon-map是键值对的集合，其中每个键代表一个图标名称（如home、family等），每个值都是与该图标关联的图像文件的路径。
 
-![variable-scss](assets/variable.scss)
+![variable-scss](assets/variable_scss.png)
 
 ```css
 $icon-map: (
@@ -81,8 +82,7 @@ $icon-map: (
 
 添加到垂直选项卡的add-icon-to-vertical-tab mixin可在垂直选项卡上的文本旁添加自定义图标。 它允许您轻松地在选项卡上添加图像作为图标，将其放置在文本旁边，并设置其样式以确保一致性和对齐方式。
 
-Mixin的细分
-以下是mixin的每个部分的功能：
+Mixin的细分，以下是mixin的每个部分所执行的操作：
 
 参数：
 
