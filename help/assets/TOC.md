@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 511823c39f0141155bc1efd7fc599b4b9b05ce69
+source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '434'
+ht-degree: 16%
 
 ---
 
@@ -18,6 +18,10 @@ ht-degree: 0%
 # AEM Assets 视频和教程 {#assets}
 
 + [概述](overview.md)
+
++ 视频播放列表{#video-playlists}
+   + [管理员视图](playlists/admin-view.md)
+   + [资源视图](playlists/assets-view.md)
 
 + 正在配置{#configuring}
    + [基线文件夹](configuring/baseline-folders.md)
@@ -55,10 +59,10 @@ ht-degree: 0%
    + [查找类似图像](./search-and-discovery/find-similar-images.md)
 
 + 高级功能{#advanced}
-   + [3D Assets](./advanced/3d-assets.md)
+   + [3D资源](./advanced/3d-assets.md)
    + [注释PDF输出](./advanced/customizing-annotations-pdf-output.md)
    + [Assets报表](./advanced/asset-reports.md)
-   + [已阻止标记](./advanced/blocked-tags.md)
+   + [已阻止的标记](./advanced/blocked-tags.md)
    + [提取存档](./advanced/extract-archive.md)
    + [权限(CUG)](./advanced/closed-user-groups.md)
    + [元数据驱动的权限](./advanced/metadata-driven-permissions.md)
@@ -66,10 +70,10 @@ ht-degree: 0%
    + [水印](./advanced/watermarks.md)
 
 + 高级元数据管理{#metadata}
-   + [级联元数据](metadata/cascade-metadata-feature-video-use.md)
+   + [层叠元数据](metadata/cascade-metadata-feature-video-use.md)
    + [图像的智能标记](metadata/image-smart-tags.md)
    + [图像的自定义智能标记](metadata/custom-smart-tags.md)
-   + [视频智能标记](metadata/video-smart-tags.md)
+   + [视频的智能标签](metadata/video-smart-tags.md)
    + [导入和导出元数据](metadata/metadata-import-export.md)
 
 + Edge Delivery Services{#edge-delivery-services}
@@ -79,15 +83,15 @@ ht-degree: 0%
    + [概述](./content-hub/overview.md)
    + [设置](./content-hub/set-up.md)
    + [添加资源](./content-hub/add-assets.md)
-   + [下载Assets](./content-hub/download-assets.md)
+   + [下载资源](./content-hub/download-assets.md)
    + [使用Adobe Express的图像变体](./content-hub/image-variants.md)
    + [收藏集](./content-hub/collections.md)
    + [共享](./content-hub/share.md)
 
 + 共享和分发{#sharing}
-   + [下载Assets](./sharing/download.md)
+   + [下载资源](./sharing/download.md)
    + [导出资源](./sharing/export.md)
-   + [发布资源](./sharing/publish.md)
+   + [Publish资源](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
@@ -98,7 +102,7 @@ ht-degree: 0%
       + [资产共享公用](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [在本地AEM上设置资源共享公域](./sharing/asset-share-commons-technical-video-setup.md)
       + [主题资产共享公域](./sharing/asset-share-commons-feature-video-theming.md)
-      + [Asset Share Commons资产套件](./sharing/asset-share/asset-share-commons-asset-kits.md)
+      + [Asset Share Commons资产工具包](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
 + 创意工作流{#creative-workflows}
    + [Adobe Express集成](./creative-workflows/adobe-express.md)
@@ -115,7 +119,7 @@ ht-degree: 0%
    + [下载和上传](./adobe-asset-link/download-and-upload.md)
    + [签入和签出](./adobe-asset-link/check-in-check-out.md)
    + [版本控制和注释](./adobe-asset-link/file-versioning-and-comments.md)
-   + [置入副本](./adobe-asset-link/place-copy.md)
+   + [放置副本](./adobe-asset-link/place-copy.md)
    + [置入链接的对象](./adobe-asset-link/place-linked.md)
    + [仅用于放置(FPO)](./adobe-asset-link/for-placement-only.md)
    + [资产搜索](./adobe-asset-link/asset-search.md)
@@ -150,12 +154,12 @@ ht-degree: 0%
       + [Dynamic Media核心组件](dynamic-media/dynamic-media-core-components.md)
 
    + Tutorials{#tutorials}
-      + [创建传送集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
+      + [创建轮播集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [创建图像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [创建图像预设](dynamic-media/tutorials/creating-image-presets.md)
       + [创建智能裁剪图像配置文件](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
       + [创建视频配置文件](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
-      + [正在处理Assets](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [正在处理资产](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
       + [配置安全预览服务器](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
       + [生成URL和嵌入代码](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
       + [触发导出作业](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
