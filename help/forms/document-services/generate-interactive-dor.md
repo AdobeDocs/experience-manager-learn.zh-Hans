@@ -10,9 +10,9 @@ jira: KT-9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 177
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 2625a9127c36ee191eb67128546864c9f6901663
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ $(document).ready(function() {
 
 ### 创建自适应表单
 
-根据上一步的XSD创建自适应表单。 关联表单以使用客户端库“irs”。 此客户端库具有向servlet进行POST调用的代码，该servlet会将PDF返回到调用应用程序
+根据上一步中的XSD创建自适应表单。 关联表单以使用客户端库“irs”。 此客户端库具有向servlet进行POST调用的代码，该servlet会将PDF返回到调用应用程序。
 单击_下载PDF_&#x200B;时触发以下代码
 
 ```javascript
@@ -211,7 +211,7 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 }
 ```
 
-在示例代码中，我们从请求对象中提取xdp名称和其他参数。 如果表单不是基于XSD的，则创建要与xdp合并的xml文档。如果表单是基于XSD的，我们只需从自适应表单提交数据中提取相应的节点，以生成xml文档并与xdp模板合并。
+在此示例代码中，xdp名称和其他参数是从请求对象中提取的。 如果表单不基于XSD，则会创建新的XML文档以与xdp合并。 但是，如果表单是基于XSD的，则直接从自适应表单提交的数据中提取相关节点，并生成XML文档以相应地与xdp模板合并。
 
 ## 在服务器上部署示例
 
@@ -226,6 +226,11 @@ DevelopingWithServiceUser.core：getformsresourceresolver=fd-service
 1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. 填写一些表单字段。
 1. 单击下载PDF以获取PDF。 您可能需要等待几秒钟，才能下载PDF。
+
+>[!NOTE]
+>
+>当您使用浏览器的pdf查看器打开下载的PDF时，您不会看到pdf中的数据。 使用Adobe Acrobat或Adobe Reader打开下载的PDF。
+
 
 >[!NOTE]
 >
