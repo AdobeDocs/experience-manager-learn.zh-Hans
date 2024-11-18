@@ -11,9 +11,9 @@ thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 870
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1275'
 ht-degree: 2%
 
 ---
@@ -45,9 +45,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 + Cloud Manager项目ID
 + Cloud Manager环境ID
 
-有关更多详细信息，请观看以下演练，了解如何设置、配置和获取Cloud Manger API凭据，以及如何使用它们进行Cloud Manager API调用。
-
->[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
+有关更多详细信息，[请查看如何设置、配置和获取Cloud Manger API凭据](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用这些凭据进行Cloud Manager API调用。
 
 本教程使用`curl`来进行Cloud Manager API配置。 提供的`curl`命令采用Linux/macOS语法。 如果使用Windows命令提示符，请将`\`换行符替换为`^`。
 
