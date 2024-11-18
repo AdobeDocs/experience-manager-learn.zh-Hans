@@ -1,5 +1,5 @@
 ---
-title: AEM Assets Assets查看播放列表
+title: AEM Assets Assets查看视频播放列表
 description: 了解如何在Assets视图中使用AEM Assetsas a Cloud Service播放此视频播放列表集合以提高您的产品专业知识。
 version: Cloud Service
 topic: Content Management
@@ -9,9 +9,9 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: 95ff2a6d99039d541092fcc45e9fc45f1a8a2b6a
+source-git-commit: bee9c6dfa7a2e3c55f6ec938cffff4622d800004
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '403'
 ht-degree: 1%
 
 ---
