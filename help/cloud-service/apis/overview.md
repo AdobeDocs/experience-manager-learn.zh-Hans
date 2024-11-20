@@ -11,13 +11,13 @@ jira: KT-16515
 thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
-source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
+exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
+source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
 workflow-type: tm+mt
 source-wordcount: '880'
 ht-degree: 1%
 
 ---
-
 
 # AEM API概述{#aem-apis-overview}
 
@@ -71,7 +71,7 @@ AEM提供了旧版和现代API，以便与其创作和发布服务类型交互�
 
 **Forms**
 
-- [Forms Acrobat服务](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/)：用于处理表单和文档的API。
+- [Forms通信API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/)：用于处理表单和文档的API。
 
 在未来的版本中，将添加更多基于OpenAPI的AEM API以支持其他用例。
 
@@ -89,7 +89,7 @@ AEM提供了旧版和现代API，以便与其创作和发布服务类型交互�
 
 在访问AdobeAPI之前，必须了解以下关键概念：
 
-- **[Adobe Developer Console](https://developer.adobe.com/)**：用于访问AdobeAPI、SDK、实时事件、无服务器函数等的开发人员中心。 请注意，这与用于调试AEM应用程序的&#x200B;_AEM_ Developer Console不同。
+- **[Adobe Developer Console](https://developer.adobe.com/)**：用于访问AdobeAPI、SDK、实时事件、无服务器函数等的开发人员中心。 请注意，它不同于用于调试AEM应用程序的&#x200B;_AEM_ Developer Console。
 
 - **[Adobe Developer Console项目](https://developer.adobe.com/developer-console/docs/guides/projects/)**：管理API集成、事件和运行时函数的中心位置。 在这里，您可以配置API、设置身份验证并生成所需的凭据。
 

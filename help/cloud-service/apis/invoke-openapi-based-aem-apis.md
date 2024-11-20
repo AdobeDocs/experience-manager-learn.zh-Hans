@@ -1,6 +1,6 @@
 ---
 title: 如何调用基于OpenAPI的AEM API
-description: 了解如何从应用程序调用基于OpenAPI的AEM API。
+description: 了解如何在AEM as a Cloud Service上从自定义应用程序配置和调用基于OpenAPI的AEM API。
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -11,17 +11,17 @@ jira: KT-16516
 thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
-source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
+exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
+source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1761'
 ht-degree: 0%
 
 ---
 
-
 # 如何调用基于OpenAPI的AEM API{#invoke-openapi-based-aem-apis}
 
-了解如何在AEM as a Cloud Service上从自定义应用程序调用基于OpenAPI的AEM API。
+了解如何在AEM as a Cloud Service上从自定义应用程序配置和调用基于OpenAPI的AEM API。
 
 >[!AVAILABILITY]
 >
@@ -501,4 +501,3 @@ GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
 
 在本教程中，您已了解如何从自定义应用程序调用基于OpenAPI的AEM API。 您已启用AEM API访问，并创建和配置了Adobe Developer Console (ADC)项目。
 在ADC项目中，您添加了AEM API，配置了其身份验证类型，并关联了产品配置文件。 您还配置了AEM实例以启用ADC项目通信，并开发了一个调用Assets创作API的示例NodeJS应用程序。
-
