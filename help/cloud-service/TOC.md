@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
+source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1335'
 ht-degree: 15%
 
 ---
@@ -141,6 +141,9 @@ ht-degree: 15%
       + [存储库浏览器](./debugging/cloud-service/repository-browser.md)
       + 风险{#risks}
          + [遍历警告](./debugging/cloud-service/risks/traversals.md)
++ AEM API{#aem-apis}
+   + [概述](./apis/overview.md)
+   + [调用基于OpenAPI的AEM API](./apis/invoke-openapi-based-aem-apis.md)
 + 内容投放{#content-delivery}
    + [自定义域名](./content-delivery/custom-domain-names.md)
    + [具有Adobe托管的CDN的自定义域名](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
