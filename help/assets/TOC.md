@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
+source-git-commit: abc6b4df7026f702b3cdaac34fd8ac790670aaa0
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '435'
 ht-degree: 16%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 16%
 + [概述](overview.md)
 
 + 视频播放列表{#video-playlists}
-   + [管理员视图](playlists/admin-view.md)
    + [资源视图](playlists/assets-view.md)
+   + [管理员视图](playlists/admin-view.md)
 
 + 正在配置{#configuring}
    + [基线文件夹](configuring/baseline-folders.md)
@@ -82,6 +82,7 @@ ht-degree: 16%
 + Content Hub{#content-hub}
    + [概述](./content-hub/overview.md)
    + [设置](./content-hub/set-up.md)
+   + [配置](./content-hub/configure.md)
    + [添加资源](./content-hub/add-assets.md)
    + [下载资源](./content-hub/download-assets.md)
    + [使用Adobe Express的图像变体](./content-hub/image-variants.md)
