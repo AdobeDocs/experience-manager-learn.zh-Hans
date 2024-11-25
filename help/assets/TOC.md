@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: abc6b4df7026f702b3cdaac34fd8ac790670aaa0
+source-git-commit: 30745ba12e9b1bd9e1f3f137c68456efb67cf39a
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '445'
 ht-degree: 16%
 
 ---
@@ -76,9 +76,6 @@ ht-degree: 16%
    + [视频的智能标签](metadata/video-smart-tags.md)
    + [导入和导出元数据](metadata/metadata-import-export.md)
 
-+ Edge Delivery Services{#edge-delivery-services}
-   + [Sidekick插件](./edge-delivery-services/sidekick-plugin.md)
-
 + Content Hub{#content-hub}
    + [概述](./content-hub/overview.md)
    + [设置](./content-hub/set-up.md)
@@ -88,6 +85,12 @@ ht-degree: 16%
    + [使用Adobe Express的图像变体](./content-hub/image-variants.md)
    + [收藏集](./content-hub/collections.md)
    + [共享](./content-hub/share.md)
+
++ Edge Delivery Services{#edge-delivery-services}
+   + [Sidekick插件](./edge-delivery-services/sidekick-plugin.md)
+
++ Adobe GenStudio{#adobe-genstudio}
+   + [AEM Assets和GenStudio for Performance Marketing](https://experienceleague.adobe.com/en/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
 
 + 共享和分发{#sharing}
    + [下载资源](./sharing/download.md)
