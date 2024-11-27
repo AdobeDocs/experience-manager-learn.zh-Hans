@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e4a9ed215603e1a1726a5a031c1c18f93d438355
+source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
 workflow-type: tm+mt
-source-wordcount: '1331'
-ht-degree: 15%
+source-wordcount: '1346'
+ht-degree: 16%
 
 ---
 
@@ -275,6 +275,12 @@ ht-degree: 15%
       + [创建数据元素](./forms/form-data-analytics/data-elements.md)
       + [创建规则](./forms/form-data-analytics/rules.md)
       + [测试解决方案](./forms/form-data-analytics/test.md)
+   + 正在创建国家/地区下拉组件{#countries-drop-down}
+      + [简介](./forms/countries-drop-down/introduction.md)
+      + [创建组件](./forms/countries-drop-down/component.md)
+      + [创建对话框](./forms/countries-drop-down/dialog.md)
+      + [创建Sling模型](./forms/countries-drop-down/slingmodel.md)
+      + [构建和测试](./forms/countries-drop-down/build.md)
    + 正在创建按钮变体{#style-system}
       + [简介](./forms/style-system/introduction.md)
       + [定义策略](./forms/style-system/style-policy.md)
