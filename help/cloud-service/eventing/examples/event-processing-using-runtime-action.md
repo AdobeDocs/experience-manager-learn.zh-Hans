@@ -12,7 +12,7 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
+source-git-commit: 315bc1029b133f2ae857196f65e39229caaecaa1
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -259,3 +259,4 @@ if (params.challenge) {
 - 可以使用Adobe I/O Runtime操作完成事件处理。
 - 运行时操作可以与系统(如内部应用程序、第三方解决方案和Adobe解决方案)通信。
 - 运行时操作是围绕内容更改设计的业务流程的入口点。
+
