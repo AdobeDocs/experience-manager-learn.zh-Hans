@@ -9,9 +9,9 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: fd372c7ee387504e4316a6ca657a77fe0a0c511e
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,12 @@ ht-degree: 0%
 # 将Dynamic Media与AEM Assets一起使用 {#understanding-aem-dynamic-media}
 
 此多部分视频系列概述了如何使用Adobe Experience Manager Dynamic Media作为内容服务服务来管理和访问媒体内容。 Dynamic Media可让您管理和发布动态数字体验 — Experience Manager Assets独有的功能。 我们的框架和组件套件允许营销人员在所有设备上自定义和提供交互式多媒体体验。
+
+## Dynamic Media实时演示
+
+[![AEM Assets Dynamic Media实时演示](./assets/overview/live-demo.png)](https://landing.adobe.com/zh-Hans/na/dynamic-media/ctir-2755/live-demos.html)
+
+探索将Dynamic Media与我们的&#x200B;[**实时Adobe**](https://landing.adobe.com/zh-Hans/na/dynamic-media/ctir-2755/live-demos.html)一起演示，让前沿解决方案变得生动有趣。 了解&#x200B;[**Dynamic Assets**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/dynamic-assets.html)如何简化工作流和提升内容管理，并发现能够在每个渠道中吸引受众的&#x200B;[**交互式体验**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/interactive-experiences.html)。 [了解Dynamic Media如何转变您的内容策略](https://landing.adobe.com/zh-Hans/na/dynamic-media/ctir-2755/live-demos.html)！
 
 ## Dynamic Media概述
 
