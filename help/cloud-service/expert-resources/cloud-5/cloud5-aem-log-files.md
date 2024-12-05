@@ -9,10 +9,10 @@ hidefromtoc: true
 thumbnail: 341156.jpeg
 exl-id: 1d000b09-52e7-4828-a0b3-32a47131e66c
 duration: 314
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 3%
+source-wordcount: '112'
+ht-degree: 4%
 
 ---
 
@@ -30,3 +30,7 @@ ht-degree: 3%
    + [Adobe I/O的可扩展CLI](https://github.com/adobe/aio-cli)
    + [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
 + 跟踪日志文件
+
+## 其他资源
+
+在[Cloud 5第1](cloud5-season-1.md)季页面上观看相关视频。

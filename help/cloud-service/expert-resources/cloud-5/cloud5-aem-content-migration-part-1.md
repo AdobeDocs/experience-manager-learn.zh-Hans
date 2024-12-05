@@ -10,10 +10,10 @@ recommendations: noDisplay, noCatalog
 thumbnail: 342133.jpeg
 exl-id: 817ea20d-d902-4497-83d3-5800ed6aaa8f
 duration: 315
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 4%
+source-wordcount: '100'
+ht-degree: 6%
 
 ---
 
@@ -31,3 +31,7 @@ Darin和James讨论了AEM Cloud中的Dispatcher，包括一些最佳实践以及
 + [重发](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
 + [AEM 现代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 + [Cloud Service迁移工具](https://github.com/adobe/aem-cloud-service-source-migration)
+
+## 其他资源
+
+在[Cloud 5第1](cloud5-season-1.md)季页面上观看相关视频。

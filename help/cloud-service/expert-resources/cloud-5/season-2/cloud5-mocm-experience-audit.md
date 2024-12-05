@@ -9,10 +9,10 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 895766fe-aedd-4ae5-b3ba-2ebe769f2db3
 duration: 310
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '59'
-ht-degree: 5%
+source-wordcount: '71'
+ht-degree: 7%
 
 ---
 
@@ -26,3 +26,7 @@ ht-degree: 5%
 
 + Cloud Manager 概述
 + 界面熟悉
+
+## 其他资源
+
+在[Cloud 5第2](../cloud5-season-2.md)季页面上观看相关视频。

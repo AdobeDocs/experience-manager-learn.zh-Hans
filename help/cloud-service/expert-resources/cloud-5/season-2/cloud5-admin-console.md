@@ -9,10 +9,10 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: eec1764e-1234-4b4c-993f-6584717e3c9e
 duration: 317
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 1%
+source-wordcount: '76'
+ht-degree: 3%
 
 ---
 
@@ -26,3 +26,7 @@ ht-degree: 1%
 
 + [了解Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
 + [Admin Console概述](https://helpx.adobe.com/cn/enterprise/using/admin-console.html)
+
+## 其他资源
+
+在[Cloud 5第2](../cloud5-season-2.md)季页面上观看相关视频。

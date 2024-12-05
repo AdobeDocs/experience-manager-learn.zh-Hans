@@ -13,10 +13,10 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 jira: KT-15844
 exl-id: 82b607e9-8f2e-4e81-b3ee-a50a660be9a0
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 0%
+source-wordcount: '80'
+ht-degree: 2%
 
 ---
 
@@ -25,3 +25,7 @@ ht-degree: 0%
 此视频讨论了使用和自定义导入器工具的最佳实践，以便轻松地将现有站点通过Edge Delivery Services导入AEM Sites。 云架构师Varun Mitra的帮助。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3431603/?learn=on)
+
+## 其他资源
+
+在[Cloud 5第3](../cloud5-season-3.md)季页面上观看相关视频。
