@@ -8,16 +8,16 @@ role: Developer
 level: Beginner, Intermediate
 doc-type: Tutorial
 duration: 0
-last-substantial-update: 2024-09-24T00:00:00Z
+last-substantial-update: 2024-12-04T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: 01e6ef917d855e653eccfe35a2d7548f12628604
+exl-id: c3bfbe59-f540-43f9-81f2-6d7731750fc6
+source-git-commit: 97680d95d4cd3cb34956717a88c15a956286c416
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1657'
 ht-degree: 0%
 
 ---
-
 
 # 自定义错误页面
 
@@ -50,14 +50,18 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
 
 | 错误页面提供自 | 详细信息 |
 |---------------------|:-----------------------:|
-| AEM服务类型 — 作者、发布、预览 | 当页面请求由AEM服务类型提供并且出现上述任何错误情况时，错误页面将从AEM服务类型提供。 |
+| AEM服务类型 — 作者、发布、预览 | 当页面请求由AEM服务类型提供并且出现上述任何错误情况时，错误页面将从AEM服务类型提供。 默认情况下，除非设置了`x-aem-error-pass: true`标头，否则5XX错误页将被Adobe管理的CDN错误页覆盖。 |
 | Adobe管理的CDN | 当Adobe管理的CDN _无法访问AEM服务类型_ （源服务器）时，将从Adobe管理的CDN提供错误页。 **这是一个不太可能发生但值得规划的事件。** |
+
+>[!NOTE]
+>
+>在AEMCloud Service中，当从后端收到5XX错误时，CDN会提供一个通用错误页面。 要允许后端的实际响应通过，您需要将以下标头添加到响应： `x-aem-error-pass: true`。
+>这仅适用于来自AEM或Apache/Dispatcher层的响应。 来自中间基础结构层的其他意外错误仍然显示一般错误页面。
 
 
 例如，从AEM服务类型和Adobe管理的CDN提供的默认错误页如下所示：
 
 ![默认AEM错误页](./assets/aem-default-error-pages.png)
-
 
 但是，您可以&#x200B;_自定义AEM服务类型和Adobe管理的_ CDN错误页以匹配您的品牌并提供更好的用户体验。
 
@@ -110,22 +114,33 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
    - [DispatcherPassError](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L133)值设置为1，因此Dispatcher允许Apache处理所有错误。
 
   ```
+  # In `wknd.vhost` file:
+  
   ...
-  # ErrorDocument directive in wknd.vhost file
+  
+  ## ErrorDocument directive
   ErrorDocument 404 ${404_PAGE}
   ErrorDocument 500 ${500_PAGE}
   ErrorDocument 502 ${500_PAGE}
   ErrorDocument 503 ${500_PAGE}
   ErrorDocument 504 ${500_PAGE}
   
+  ## Add Header for 5XX error page response
+  <IfModule mod_headers.c>
+    ### By default, CDN overrides 5XX error pages. To allow the actual response of the backend to pass through, add the header x-aem-error-pass: true
+    Header set x-aem-error-pass "true" "expr=%{REQUEST_STATUS} >= 500 && %{REQUEST_STATUS} < 600"
+  </IfModule>
+  
   ...
-  # DispatcherPassError value in wknd.vhost file
+  ## DispatcherPassError directive
   <IfModule disp_apache2.c>
       ...
       DispatcherPassError        1
   </IfModule>
   
-  # Custom error pages path in custom.vars file
+  # In `custom.vars` file
+  ...
+  ## Define the error page paths
   Define 404_PAGE /content/wknd/us/en/errors/404.html
   Define 500_PAGE /content/wknd/us/en/errors/500.html
   ...
@@ -370,7 +385,7 @@ HTML片段包含以下占位符：
 
 要测试CDN错误页面，请执行以下步骤：
 
-- 打开浏览器并导航到Publish环境URL，将`cdnstatus?code=404`附加到URL，例如[https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404)，或使用[自定义域URL](https://wknd.enablementadobe.com/cdnstatus?code=404)进行访问
+- 在浏览器中，导航到AEM as a Cloud Service的Publish URL，将`cdnstatus?code=404`附加到URL，例如[https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404)，或使用[自定义域URL](https://wknd.enablementadobe.com/cdnstatus?code=404)进行访问
 
   ![WKND - CDN错误页](./assets/wknd-cdn-error-page.png)
 
@@ -389,4 +404,3 @@ HTML片段包含以下占位符：
 - [配置CDN错误页](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
 
 - [Cloud Manager — 配置管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)
-
