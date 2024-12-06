@@ -9,9 +9,9 @@ last-substantial-update: 2024-11-20T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: b98f5321a4545d8b9d89d8d599723acc296cf0d4
+source-git-commit: cce071c22a14669344318ad00d57a4fccc956a33
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '405'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 <!-- CARDS
 
 * https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access
-* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials
+* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials {title=Get started with Assets view}
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -70,7 +70,7 @@ ht-degree: 1%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" title="开始使用AEM Assets Essentials">开始使用AEM Assets Essentials</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" title="开始使用Assets视图">开始使用Assets视图</a>
                     </p>
                     <p class="is-size-6">了解AEM Assets Essentials如何简化您部门的资源管理。</p>
                 </div>
@@ -162,6 +162,8 @@ ht-degree: 1%
 <!-- CARDS
 
 * https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials
+  { title = Manage Creative Workflows Using Workfront and AEM Assets }
+  { description = Learn how Adobe Workfront and AEM Assets help your organization manage the creative workflow. }
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -179,9 +181,9 @@ ht-degree: 1%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="使用Workfront和Assets Essentials管理创意工作流">使用Workfront和Assets Essentials管理创意工作流</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="使用Workfront和Assets Essentials管理创意工作流">使用Workfront和AEM Assets管理创意工作流</a>
                     </p>
-                    <p class="is-size-6">了解Adobe Workfront和Experience Manager Assets Essentials如何帮助您的组织管理创意工作流。</p>
+                    <p class="is-size-6">了解Adobe Workfront和AEM Assets如何帮助您的组织管理创意工作流程。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">观看</span>
