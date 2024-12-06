@@ -13,10 +13,10 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 54a7f93637545a4467c4c587bbc3d1d0de5c64a1
 workflow-type: tm+mt
 source-wordcount: '1693'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 - 了解搜索要求，并检查OOTB索引是否支持搜索要求。 通过Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`使用&#x200B;**查询性能工具**，该工具位于[本地SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS。
 
-- 定义最佳查询，使用[优化查询](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)流程图和[JCR查询备忘表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en)以供参考。
+- 定义最佳查询，使用[优化查询](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)流程图和[JCR查询备忘表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf)以供参考。
 
 - 如果OOTB索引不支持搜索要求，您有两个选择。 但是，查看有关创建有效索引的[提示](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - 自定义OOTB索引：首选选项，因为它易于维护和升级。

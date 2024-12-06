@@ -9,7 +9,7 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1417
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 54a7f93637545a4467c4c587bbc3d1d0de5c64a1
 workflow-type: tm+mt
 source-wordcount: '4441'
 ht-degree: 0%
@@ -39,7 +39,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
 * [已完成的教程包](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * GitHub上的[完整代码存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教程假定您具有[AEM开发实践](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/developing/introduction/the-basics)的一些基本知识以及对[AEM Maven项目设置](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=en)的一些了解。 所有提及的代码都旨在用作引用，并且只应部署到[本地开发AEM实例](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)。
+本教程假定您具有[AEM开发实践](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/developing/introduction/the-basics)的一些基本知识以及对[AEM Maven项目设置](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html)的一些了解。 所有提及的代码都旨在用作引用，并且只应部署到[本地开发AEM实例](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)。
 
 ## 项目模板的结构
 
