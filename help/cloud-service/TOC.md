@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
+source-git-commit: 891fd1cfdcb82a6d4f1bb031cfa11893a69d0546
 workflow-type: tm+mt
-source-wordcount: '1346'
+source-wordcount: '1356'
 ht-degree: 16%
 
 ---
@@ -416,9 +416,10 @@ ht-degree: 16%
    + [AEM Experts系列](./expert-resources/expert-series/aem-experts-series.md)
    + 云5{#cloud-5}
       + [简介](./expert-resources/cloud-5/cloud5-introduction.md)
+      + [第4季](./expert-resources/cloud-5/cloud5-season-4.md)
       + [第1季](./expert-resources/cloud-5/cloud5-season-1.md)
-      + [第2季](./expert-resources/cloud-5/cloud5-season-2.md)
       + [第3季](./expert-resources/cloud-5/cloud5-season-3.md)
+      + [第2季](./expert-resources/cloud-5/cloud5-season-2.md)
       + [AEM CDN第1部分](./expert-resources/cloud-5/cloud5-aem-cdn-part1.md)
       + [AEM CDN第2部分](./expert-resources/cloud-5/cloud5-aem-cdn-part2.md)
       + [AEM日志文件](./expert-resources/cloud-5/cloud5-aem-log-files.md)
@@ -453,4 +454,7 @@ ht-degree: 16%
          + [Lighthouse得分优化 — 第1部分](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part1.md)
          + [Lighthouse得分优化 — 第2部分](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part2.md)
          + [Lighthouse得分优化 — 第3部分](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part3.md)
-
+      + 第4{#season-4}季
+         + [最佳实践](./expert-resources/cloud-5/season-4/cloud5-edge-delivery-services-best-practices.md)
+         + [搜索优化](./expert-resources/cloud-5/season-4/cloud5-search-optimization.md)
+         + [Google地图](./expert-resources/cloud-5/season-4/cloud5-google-maps.md)
