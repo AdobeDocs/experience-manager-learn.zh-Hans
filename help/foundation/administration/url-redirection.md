@@ -12,9 +12,9 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 50ddda35adbb3af0b66a6e24a135fd5b94a3fb3a
+source-git-commit: 907a313a9ed7e92358f0aa2503f8333fb26ba35d
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ AEM URL重定向解决方案如下所示：
 | [在Edge，通过自带CDN (BYOCDN)](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge/CDN (BYOCDN) |
 | [Apache `mod_rewrite`规则作为Dispatcher配置](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
 | [ACS Commons — 重定向映射管理器](#redirect-map-manager) | ✘ | ✔ | ✔ | Dispatcher |
-| [ACS Commons — 重定向管理器](#redirect-manager) | ✘ | ✔ | ✔ | AEM |
+| [ACS Commons — 重定向管理器](#redirect-manager) | ✘ | ✔ | ✔ | AEM / DISPATCHER |
 | [`Redirect`页面属性](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
 
 
@@ -81,6 +81,8 @@ AEM URL重定向解决方案如下所示：
 #### 重定向管理器
 
 [重定向管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html)允许AEM中的用户轻松地维护和发布来自AEM的重定向。 该实现基于Java™ servlet过滤器，因此典型的JVM资源消耗。 此功能还可消除对AEM开发团队和AEM部署的依赖性。 重定向管理器与&#x200B;**AEM as a Cloud Service**&#x200B;和&#x200B;**AEM 6.x**&#x200B;兼容。 默认情况下，初始重定向请求必须命中AEM Publish服务来生成301/302（大多数） CDN的缓存301/302，这样后续请求才能在Edge/CDN上重定向。
+
+[重定向管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html)还支持&#x200B;**AEM as a Cloud Service**&#x200B;的[无管道URL重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)策略（通过[将重定向编译为[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)的文本文件](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html)），因此它允许更新Apache Web Server中使用的重定向，而无需直接访问它或重新启动它。 在此方案中，初始重定向请求点击Apache Web Server，而不是AEM Publish服务。
 
 ### `Redirect`页面属性
 
