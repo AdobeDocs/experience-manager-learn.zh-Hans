@@ -1,6 +1,6 @@
 ---
 title: 如何调用基于OpenAPI的AEM API
-description: 了解如何在AEM as a Cloud Service上从自定义应用程序配置和调用基于OpenAPI的AEM API。
+description: 了解如何使用OAuth服务器到服务器身份验证从自定义应用程序在AEM as a Cloud Service上配置和调用基于OpenAPI的AEM API。
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -12,16 +12,18 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
 
-# 如何调用基于OpenAPI的AEM API{#invoke-openapi-based-aem-apis}
+# 调用基于OpenAPI的AEM API以进行服务器到服务器身份验证{#invoke-openapi-based-aem-apis}
 
-了解如何在AEM as a Cloud Service上从自定义应用程序配置和调用基于OpenAPI的AEM API。
+了解如何使用&#x200B;_OAuth服务器到服务器_&#x200B;身份验证，从自定义应用程序在AEM as a Cloud Service上配置和调用基于OpenAPI的AEM API。
+
+OAuth服务器到服务器身份验证非常适用于需要API访问而不进行用户交互的后端服务。 它使用OAuth 2.0 _client_credentials_&#x200B;授权类型来验证客户端应用程序。
 
 >[!AVAILABILITY]
 >
@@ -30,7 +32,7 @@ ht-degree: 0%
 在本教程中，您将学习如何：
 
 - 为您的AEM as a Cloud Service环境启用基于OpenAPI的AEM API访问。
-- 创建和配置Adobe Developer Console (ADC)项目，以使用OAuth服务器到服务器身份验证访问AEM API。
+- 创建并配置Adobe Developer Console (ADC)项目以使用&#x200B;_OAuth服务器到服务器身份验证_&#x200B;访问AEM API。
 - 开发一个示例NodeJS应用程序，该应用程序调用Assets创作API以检索特定资源的元数据。
 
 开始之前，请确保已查看[访问AdobeAPI和相关概念](overview.md#accessing-adobe-apis-and-related-concepts)部分。

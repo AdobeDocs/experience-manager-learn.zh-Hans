@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '1024'
 ht-degree: 1%
 
 ---
@@ -85,6 +85,16 @@ AEM提供了旧版和现代API，以便与其创作和发布服务类型交互�
 
 - **OAuth单页应用程序凭据**：专为浏览器中运行的SPA而设计，该浏览器需要代表没有后端服务器的用户访问API。 它使用&#x200B;_authorization_code_&#x200B;授权类型，并依赖使用PKCE（代码交换的验证密钥）的客户端安全机制来保护授权代码流。 有关详细信息，请参阅[OAuth单页应用程序凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential)。
 
+### OAuth服务器到服务器和OAuth Web应用程序/单页应用程序凭据之间的区别{#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials}
+
+| | OAuth服务器到服务器 | OAuth用户身份验证(Web-App) |
+| --- | --- | --- |
+| 身份验证目的 | 专为机器到机器的交互而设计。 | 专为用户驱动的交互而设计。 |
+| 令牌行为 | 发出表示客户端应用程序本身的访问令牌。 | 代表经过身份验证的用户颁发访问令牌。 |
+| 用例 | 无需用户交互即需要API访问的后端服务。 | 具有代表用户访问API的前端和后端组件的Web应用程序。 |
+| 安全性注意事项 | 在后端系统中安全地存储敏感凭据(`client_id`， `client_secret`)。 | 用户的身份验证并被授予他们自己的临时访问令牌。 在后端系统中安全地存储敏感凭据(`client_id`， `client_secret`)。 |
+| 授权类型 | _client_credentials_ | _authorization_code_ |
+
 ## 访问AdobeAPI和相关概念{#accessing-adobe-apis-and-related-concepts}
 
 在访问AdobeAPI之前，必须了解以下关键概念：
@@ -102,4 +112,7 @@ AEM提供了旧版和现代API，以便与其创作和发布服务类型交互�
 了解不同的AEM API类型，包括
 基于OpenAPI的AEM API以及访问AdobeAPI的关键概念，您现在可以开始构建与AEM交互的自定义应用程序。
 
-让我们开始了解[如何调用基于OpenAPI的AEM API](invoke-openapi-based-aem-apis.md)教程。
+让我们开始使用：
+
+- [为服务器到服务器身份验证调用基于OpenAPI的AEM API](invoke-openapi-based-aem-apis.md)教程，该教程演示了如何使用OAuth服务器到服务器凭据访问基于OpenAPI的AEM API __。
+- [通过来自Web应用的用户身份验证调用基于OpenAPI的AEM API](invoke-openapi-based-aem-apis-from-web-app.md)教程，该教程演示了如何使用OAuth Web应用凭据&#x200B;_从_ Web应用访问基于OpenAPI的AEM API。
