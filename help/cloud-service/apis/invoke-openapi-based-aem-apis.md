@@ -1,5 +1,5 @@
 ---
-title: 如何调用基于OpenAPI的AEM API
+title: 调用基于OpenAPI的AEM API以进行服务器到服务器身份验证
 description: 了解如何使用OAuth服务器到服务器身份验证从自定义应用程序在AEM as a Cloud Service上配置和调用基于OpenAPI的AEM API。
 version: Cloud Service
 feature: Developing
@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1803'
 ht-degree: 0%
 
 ---

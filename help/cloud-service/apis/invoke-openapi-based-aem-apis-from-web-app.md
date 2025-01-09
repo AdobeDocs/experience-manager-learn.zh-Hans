@@ -1,5 +1,5 @@
 ---
-title: 如何从Web应用程序调用基于OpenAPI的AEM API
+title: 通过Web应用程序中的用户身份验证调用基于OpenAPI的AEM API
 description: 了解如何使用OAuth Web应用程序身份验证，从自定义Web应用程序在AEM as a Cloud Service上调用基于OpenAPI的AEM API。
 version: Cloud Service
 feature: Developing
@@ -9,15 +9,15 @@ level: Intermediate
 doc-type: Tutorial
 jira: KT-16718
 thumbnail: KT-16718.jpeg
-last-substantial-update: 2024-12-17T00:00:00Z
+last-substantial-update: 2025-01-09T00:00:00Z
 duration: 0
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+exl-id: dc35256a-3873-413f-b282-90948efd5f31
+source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
 workflow-type: tm+mt
-source-wordcount: '2399'
+source-wordcount: '2433'
 ht-degree: 0%
 
 ---
-
 
 # 通过Web应用程序中的用户身份验证调用基于OpenAPI的AEM API{#invoke-openapi-based-aem-apis-from-web-app}
 
@@ -36,6 +36,8 @@ OAuth Web应用程序身份验证非常适用于具有前端和&#x200B;_后端_&
 WKND PIM应用程序是一个示例Web应用程序，旨在管理存储在AEM as a Cloud Service中的产品属性及其资源元数据。 此示例演示了Web应用程序如何与AdobeAPI无缝集成，以提供高效、以用户为中心的工作流。
 
 Adobe Developer Console (ADC)项目配置为使用OAuth Web应用程序身份验证访问Assets创作API。 它向WKND-PIM Web应用提供了必要的&#x200B;_client_id_&#x200B;和&#x200B;_client_secret_，以启动&#x200B;_authorization_code_&#x200B;授权流。
+
+>[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)
 
 下图说明了WKND-PIM Web应用程序&#x200B;_获取用户特定的访问令牌以与Assets创作API交互的功能流程_。
 
@@ -66,7 +68,7 @@ WKND-PIM Web应用程序是使用[Node.js](https://nodejs.org/en)和[Express](ht
 
 ## 如何使用本教程{#how-to-use-this-tutorial}
 
-您可以[查看Web应用程序密钥代码片段](#review-web-app-key-code-snippets)部分，以了解在WKND-PIM Web应用程序中使用的OAuth Web应用程序身份验证流程和API调用代码片段。 或者直接进入[设置并运行Web应用](#setup-run-web-app)部分以在本机计算机上设置和运行WKND-PIM Web应用。
+您可以[查看Web应用程序密钥代码片段](#review-web-app-key-code-snippets)部分，以了解在WKND-PIM Web应用程序中使用的OAuth Web应用程序身份验证流程和API调用代码片段。 或者直接进入[设置并运行Web应用](#setup-run-web-app)部分，在本地计算机上设置和运行WKND-PIM Web应用。
 
 ## 查看Web应用程序密钥代码段{#review-web-app-key-code-snippets}
 
@@ -404,6 +406,11 @@ function getTransformedMetadata(metadata) {
 
 要在访问令牌过期前对其进行刷新，您可以实施刷新令牌流程。 但是，为了简化教程，WKND-PIM Web应用程序不实施刷新令牌流。
 
+
+>[!TIP]
+>
+>您可以按照下一部分在本地计算机上尝试WKND-PIM Web应用程序，并获得OAuth Web应用程序身份验证流和API调用的实践体验。
+
 ## 设置和运行Web应用程序
 
 让我们在本地计算机上配置和运行WKND-PIM Web应用程序，以了解OAuth Web应用程序身份验证流程和API调用。
@@ -644,7 +651,7 @@ function getTransformedMetadata(metadata) {
 
 >[!IMPORTANT]
 >
->如果经过身份验证的用户缺少查看或更新资源元数据的必要权限，则基于OpenAPI的AEM API将返回403禁止错误。 这样可确保，即使用户通过了身份验证并拥有有效的IMS访问令牌，在没有所需权限的情况下，他们也无法访问AEM资源。
+>如果经过身份验证的用户缺少查看或更新资源元数据的必要权限，则基于OpenAPI的AEM API将返回403禁止错误。 它确保即使用户经过身份验证并拥有有效的IMS访问令牌，在没有所需权限的情况下他们也无法访问AEM资源。
 
 
 ### 查看应用程序代码
