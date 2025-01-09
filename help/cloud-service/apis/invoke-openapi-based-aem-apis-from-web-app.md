@@ -12,7 +12,7 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-01-09T00:00:00Z
 duration: 0
 exl-id: dc35256a-3873-413f-b282-90948efd5f31
-source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
+source-git-commit: 52749190860961ed2baf4c3c3cd7a6b55a87af58
 workflow-type: tm+mt
 source-wordcount: '2433'
 ht-degree: 0%
@@ -37,7 +37,8 @@ WKND PIM应用程序是一个示例Web应用程序，旨在管理存储在AEM as
 
 Adobe Developer Console (ADC)项目配置为使用OAuth Web应用程序身份验证访问Assets创作API。 它向WKND-PIM Web应用提供了必要的&#x200B;_client_id_&#x200B;和&#x200B;_client_secret_，以启动&#x200B;_authorization_code_&#x200B;授权流。
 
->[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)
+
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 下图说明了WKND-PIM Web应用程序&#x200B;_获取用户特定的访问令牌以与Assets创作API交互的功能流程_。
 
