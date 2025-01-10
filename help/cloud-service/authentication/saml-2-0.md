@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 87dd4873152d4690abb1efcfebd43d10033afa0a
+source-git-commit: a1f7395cc5f83174259d7a993fefc9964368b4bc
 workflow-type: tm+mt
-source-wordcount: '3919'
+source-wordcount: '4037'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 SAML 2.0与AEM Publish（或预览）集成，允许基于AEM的Web体验的最终用户向非AdobeIDP（身份提供程序）进行身份验证，并以已命名授权用户的身份访问AEM。
 
-|                       | AEM Author | AEM 发布 |
+|                       | AEM 作者 | AEM 发布 |
 |-----------------------|:----------:|:-----------:|
 | SAML 2.0支持 | ✘ | ✔ |
 
@@ -43,7 +43,7 @@ AEM Publish SAML集成的典型流程如下所示：
    + IDP会提示用户输入凭据。
    + 用户已经通过IDP的身份验证，无需提供进一步的凭据。
 1. IDP生成包含用户数据的SAML声明，并使用IDP的私有证书对其进行签名。
-1. IDP通过HTTPPOST，通过用户的Web浏览器，将SAML断言发送到AEM Publish。
+1. IDP通过HTTPPOST，通过用户的Web浏览器(SPECIFIC_PROTECTED_PATH/saml_login)将SAML断言发送到AEM Publish。
 1. AEM Publish接收SAML声明，并使用IDP公共证书验证SAML声明的完整性和真实性。
 1. AEM Publish根据SAML 2.0 OSGi配置和SAML断言的内容管理AEM用户记录。
    + 创建用户
@@ -440,6 +440,9 @@ AEM Publish支持单个反向链接过滤器配置，因此请将SAML配置要�
 /0190 { /type "allow" /method "POST" /url "*/saml_login" }
 ```
 
+>[!NOTE]
+>在AEM中为各种受保护路径和不同IDP端点部署多个SAML配置时，请确保IDP向ASIVENT_PROTECTED_PATH/saml_login端点发布内容，以在AEM端选择适当的SAML配置。 如果同一受保护路径存在重复的SAML配置，则将随机选择SAML配置。
+
 如果已配置Apache Webserver上的URL重写(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，请确保不会意外损坏对`.../saml_login`端点的请求。
 
 ### 如何为新环境中的SAML用户启用动态组成员资格
@@ -561,6 +564,12 @@ $ git push adobe saml-auth:develop
 ## 调用SAML身份验证
 
 可以通过创建巧尽心思构建的链接或按钮，从AEM Site网页调用SAML身份验证流程。 下面描述的参数可以根据需要进行编程设置，因此，例如，登录按钮可以根据按钮的上下文将`saml_request_path`（成功进行SAML身份验证时用户所在位置）设置为不同的AEM页面。
+
+## 使用SAML时的安全缓存
+
+在AEM发布实例上，通常都会缓存大多数页面。 但是，对于受SAML保护的路径，应使用auth_checker配置禁用缓存或启用安全缓存。 有关详细信息，请参阅[此处](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-dispatcher/using/configuring/permissions-cache)提供的详细信息
+
+请注意，如果您在缓存受保护的路径时没有启用auth_checker，则可能会遇到无法预测的行为。
 
 ### GET请求
 
