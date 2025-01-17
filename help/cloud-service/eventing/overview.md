@@ -12,9 +12,9 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: ede52c6c9feb0b35bc3729e28591cb4e7c7600f7
+source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -125,5 +125,14 @@ AEM事件虽然强大，但存在一些需要考虑的限制：
           了解如何使用Adobe I/O Runtime操作处理收到的AEM事件。 事件处理包括AEM回调、事件数据持久性并在SPA中显示它们。
         </p>
       </td>
-  </tr>    
+  </tr>
+  <tr>
+    <td>
+        <a  href="./examples/assets-pim-integration.md"><img alt="用于PIM集成的AEM Assets事件" src="./assets/examples/assets-pim-integration/PIM-integration-tile.png"/></a>
+        <div>用于PIM集成的<strong><a href="./examples/assets-pim-integration.md">AEM Assets事件</a></strong></div>
+        <p>
+          了解如何集成AEM Assets和产品信息管理(PIM)系统以进行元数据更新。
+        </p>
+      </td>
+  </tr> 
 </table>
