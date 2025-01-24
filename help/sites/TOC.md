@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
+source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '582'
 ht-degree: 18%
 
 ---
@@ -98,6 +98,16 @@ ht-degree: 18%
       + [文档结构](edge-delivery-services/developing/document-structure.md)
       + [本地开发](edge-delivery-services/developing/local-development.md)
       + [Git](edge-delivery-services/developing/git.md)
+      + 通用编辑器{#universal-editor}
+         + [概述](./edge-delivery-services/developing/universal-editor/0-overview.md)
+         + [新建代码项目](./edge-delivery-services/developing/universal-editor/1-new-code-project.md)
+         + [新建AEM站点](./edge-delivery-services/developing/universal-editor/2-new-aem-site.md)
+         + [本地开发环境](./edge-delivery-services/developing/universal-editor/3-local-development-environment.md)
+         + [网站品牌化](./edge-delivery-services/developing/universal-editor/4-website-branding.md)
+         + [新建块](./edge-delivery-services/developing/universal-editor/5-new-block.md)
+         + [创作块](./edge-delivery-services/developing/universal-editor/6-author-block.md)
+         + [仅使用CSS进行阻止](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
+         + [使用CSS和JS阻止](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
    + 操作方法{#how-to}
       + [RSS源](edge-delivery-services/how-to/rss.md)
       + [社交媒体共享](edge-delivery-services/how-to/social-media-sharing.md)
@@ -106,7 +116,7 @@ ht-degree: 18%
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 项目原型](developing/aem-project-archetype.md)
    + [AEM Sites入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
-   + [AEM Headless快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans){target=_blank}
+   + [AEM Headless快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-hans){target=_blank}
    + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
    + [响应式断点](developing/responsive-breakpoints.md)
@@ -156,7 +166,7 @@ ht-degree: 18%
    + Experience Platform{#experience-platform}
       + [生成FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
-      + [使用Platform Web SDK的分析](integrations/platform/analytics-using-web-sdk.md)
+      + [使用Platform Web SDK的Analytics](integrations/platform/analytics-using-web-sdk.md)
    + Adobe Experience Platform {#experience-platform-data-collection-tags}中的标记
       + [概述](integrations/experience-platform/data-collection/tags/overview.md)
       + [创建标记属性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
