@@ -11,15 +11,15 @@ jira: KT-15375
 doc-type: Feature Video
 duration: 583
 exl-id: 951bb255-e3e7-4bd5-9d48-7ff0469860af
-source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
+source-git-commit: 04037791eb5fe7a3b390b29d5c25f3260e5d41c9
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 0%
+source-wordcount: '61'
+ht-degree: 1%
 
 ---
 
 # Adobe Express与AEM Assets集成
 
-了解如何使用[Adobe Express&#39;](https://www.adobe.com/express/)与AEM Assets的集成来优化内容供应链并提高所有团队成员的工作效率和可访问性。
+了解如何使用与AEM Assets的[Adobe Express](https://www.adobe.com/cn/express/)集成来优化内容供应链并提高所有团队成员的工作效率和可访问性。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425193/?learn=on)
