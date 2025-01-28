@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
+source-git-commit: fcd2d7ae7a0bddb0d80aada2f206be7629b676e3
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1705'
 ht-degree: 0%
 
 ---
-
 
 # 创建新块
 
@@ -136,6 +136,12 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 - 使用[元素分组](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的[字段折叠将文本内容字段分组在一起。
 
 如果您不熟悉[字段折叠](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)、[元素分组](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)或[类型推断](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)，请在继续之前查看链接的文档，因为它们对于创建结构良好的块模型至关重要。
+
+在以下示例中：
+
+- [类型推断](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)用于从`image`字段自动创建`<img>`HTML元素。 字段折叠与`image`和`imageAlt`字段一起使用来创建`<img>`HTML元素。 `src`属性设置为`image`字段的值，而`alt`属性设置为`imageAlt`字段的值。
+- `textContent`是用于分类字段的组名称。 它应该是语义的，但可以是此块特有的任何内容。 这会通知通用编辑器在最终HTML输出中呈现同一`<div>`元素中带有此前缀的所有字段。
+- 字段折叠也应用于行动号召(CTA)的`textContent`组。 CTA是通过[类型推断](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)创建为`<a>`的。 `cta`字段用于设置`<a>`元素的`href`属性，`ctaText`字段为`<a ...>`标记内的链接提供文本内容。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面代码示例的文件名。"}
 
