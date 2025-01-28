@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 doc-type: Catalog
 jira: KT-15832
-duration: 89
+duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: aa8ea183639c4c63be74f7ef1ce099c89454c099
+source-git-commit: 9dd07383a3d46d1bbecd2dc8574e6d06a0535fee
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 了解如何在AEM as a Cloud Service中创建代码项目并配置新站点。 通过此设置，可以使用通用编辑器实现无缝开发，以便通过Edge Delivery Services创建内容和快速交付内容。
 
-<!-- XCARDS 
+<!-- CARDS 
 
 * ./1-new-code-project.md
 * ./2-new-aem-site.md
@@ -87,7 +87,7 @@ ht-degree: 0%
 ## 开发设置
 
 了解如何配置本地开发环境以实现快速网站开发。 这种设置允许使用通用编辑器无缝创建站点，并通过Edge Delivery Services高效交付内容，从而确保流畅且优化的开发工作流。
-<!-- XCARDS 
+<!-- CARDS 
 
 * ./3-local-development-environment.md
 * ./4-website-branding.md
@@ -163,7 +163,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./5-new-block.md" title="创建块" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/5-new-block/teaser-block.png" alt="创建块"
+                        <img class="is-bordered-r-small" src="./assets/5-new-block/card.png" alt="创建块"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -186,7 +186,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./6-author-block.md" title="创作块" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/6-author-block/open-new-site.png" alt="创作块"
+                        <img class="is-bordered-r-small" src="./assets/6-author-block/card.png" alt="创作块"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -209,7 +209,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./7a-block-css.md" title="使用CSS开发块" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/7a-block-css/inspect-block-dom.png" alt="使用CSS开发块"
+                        <img class="is-bordered-r-small" src="./assets/7a-block-css/card.png" alt="使用CSS开发块"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -232,7 +232,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./7b-block-js-css.md" title="使用CSS和JS开发块" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/7a-block-css/inspect-block-dom.png" alt="使用CSS和JS开发块"
+                        <img class="is-bordered-r-small" src="./assets/7b-block-js-css/card.png" alt="使用CSS和JS开发块"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
