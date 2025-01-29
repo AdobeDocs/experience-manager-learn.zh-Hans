@@ -13,9 +13,9 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
 duration: 266
-source-git-commit: c638c1e012952f2f43806a325d729cde088ab9f5
+source-git-commit: 241c56d34c851cf9bac553cb9fc545a835e495d2
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1054'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ ht-degree: 0%
 # 使用AEM Sites生成Experience PlatformFPID
 
 将通过AEM Publish交付的Adobe Experience Manager (AEM)站点与Adobe Experience Platform (AEP)集成需要AEM生成和维护唯一的第一方设备ID (FPID) Cookie，以便唯一跟踪用户活动。
+
+FPID Cookie应由服务器(AEM Publish)设置，而不是使用JavaScript创建客户端Cookie。 这是因为现代浏览器（如Safari和Firefox）可能会阻止由JavaScript生成的Cookie或使其快速过期。
 
 阅读支持文档，以便[了解第一部分设备ID和Experience CloudID如何协同工作的详细信息](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=en)。
 
@@ -69,7 +71,7 @@ AEM Publish服务通过尽可能多地在CDN和AEM Dispatcher缓存中缓存请�
 
 在正文中向客户端提供FPID很重要，因为FPID Cookie标记为`HttpOnly`，这意味着只有服务器才能读取其值，而客户端JavaScript则不能。 为了避免在每次加载页面时不必要地重新获取FPID，系统还设置了`FPID_CLIENT` Cookie，以指示已生成FPID并将值公开给客户端JavaScript以供使用。
 
-FPID值用于通过Platform Web SDK将调用参数化。
+FPID值可用于通过Platform Web SDK将调用参数化。
 
 以下是AEM servlet端点（通过`HTTP GET /bin/aep/fpid`提供）的示例代码，该端点生成或刷新FPID Cookie，并将FPID作为JSON返回。
 
@@ -170,7 +172,7 @@ public class FpidServlet extends SlingAllMethodsServlet {
 AEM FPID servlet (`/bin/aep/fpid`)的HTTPGET使用随机查询参数进行参数化，以确保浏览器和AEM Publish服务之间的任何基础结构都不会缓存请求的响应。
 同样，添加`Cache-Control: no-store`请求标头以支持避免缓存。
 
-调用AEM FPID servlet时，将从JSON响应中检索FPID，并由[Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en)用来将其发送到Experience PlatformAPI。
+调用AEM FPID servlet时，将从JSON响应中检索FPID，并由[平台Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en)用来将其发送到Experience PlatformAPI。
 
 有关在identityMap](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap)中使用FPID的[的更多信息，请参阅Experience Platform文档
 
