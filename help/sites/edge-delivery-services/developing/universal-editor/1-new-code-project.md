@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
+source-git-commit: 9b10d79190d805b86884f033e040891655c3c890
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '269'
 ht-degree: 1%
 
 ---
-
 
 # 创建Edge Delivery Services代码项目
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 3. **安装AEM代码同步GitHub应用程序**&#x200B;并授予对存储库的访问权限。 您可以在此处找到[应用](https://github.com/apps/aem-code-sync)。
 4. **将新项目的`fstab.yaml`**&#x200B;配置为指向正确的AEM Author服务。
 
-   * 要进行测试，您可以使用较低的AEM as a Cloud Service环境（Stage、Dev或RDE），但应将真正的网站实施配置为使用生产AEM Author服务。
+   * 要进行测试，您可以使用较低的AEM as a Cloud Service环境（暂存或开发），但应将真正的网站实施配置为使用生产AEM服务。
 
 5. **编辑新项目的`paths.json`**&#x200B;以将AEM Author服务路径映射到您网站的根目录。
 
