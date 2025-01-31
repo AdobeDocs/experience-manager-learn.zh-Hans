@@ -10,8 +10,8 @@ jira: KT-10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2024-03-22T00:00:00Z
-duration: 184
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+duration: 185
+source-git-commit: 1ad0c609ca0edb34e556c1453462c6d1041f5807
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 2%
@@ -34,7 +34,7 @@ Adobe Experience Manager as a Cloud Service的跨源资源共享(CORS)有助于�
 |----------------------------:|:---------------------:|:-------------:|:---------:|:----------------:|
 | 需要CORS配置 | ✔ | ✔ | ✘ | ✘ |
 
-## AEM Author
+## AEM 作者
 
 在AEM Author服务上启用CORS与AEM Publish和AEM Preview服务不同。 AEM Author服务要求将OSGi配置添加到AEM Author服务的运行模式文件夹，并且不使用Dispatcher配置。
 
@@ -42,7 +42,7 @@ Adobe Experience Manager as a Cloud Service的跨源资源共享(CORS)有助于�
 
 AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 
-| 客户端连接到 | AEM Author | AEM 发布 | AEM预览 |
+| 客户端连接到 | AEM 作者 | AEM 发布 | AEM预览 |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
 | 需要CORS OSGi配置 | ✔ | ✘ | ✘ |
 
@@ -113,7 +113,7 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 
 必须将AEM Publish（和预览）服务的Dispatcher配置为支持CORS。
 
-| 客户端连接到 | AEM Author | AEM 发布 | AEM预览 |
+| 客户端连接到 | AEM 作者 | AEM 发布 | AEM预览 |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
 | 需要Dispatcher CORS配置 | ✘ | ✔ | ✔ |
 
