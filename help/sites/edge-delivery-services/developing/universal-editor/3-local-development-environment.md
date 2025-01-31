@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: 6f0cbdd638ed909b5897521557b65dcf74ac1012
+source-git-commit: ecf37e1f964d0cda90eeca11b224ab950727d2ad
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 1%
@@ -187,8 +187,8 @@ $ npm run lint:fix
 
 | NPM脚本 | 命令 | 描述 |
 |------------------|------------------------------------------------|-------------------------------------------------------|
-| `lint:js:fix` | `npm run lint:js --fix` | 自动修复JavaScript链接问题。 |
-| `lint:css:fix` | `stylelint blocks/**/*.css styles/*.css --fix` | 自动修复CSS Linting问题。 |
+| `lint:js:fix` | `npm run lint:js -- --fix` | 自动修复JavaScript链接问题。 |
+| `lint:css:fix` | `stylelint blocks/**/*.css styles/*.css -- --fix` | 自动修复CSS Linting问题。 |
 | `lint:fix` | `npm run lint:js:fix && npm run lint:css:fix` | 运行JS和CSS修复脚本以进行快速清理。 |
 
 >[!TAB package.json示例]
@@ -200,8 +200,8 @@ $ npm run lint:fix
   ...
   "scripts": [
     ...,
-    "lint:js:fix": "npm run lint:js --fix",
-    "lint:css:fix": "npm run lint:css --fix",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:css:fix": "npm run lint:css -- --fix",
     "lint:fix": "npm run lint:js:fix && npm run lint:css:fix",
     ...
   ]
