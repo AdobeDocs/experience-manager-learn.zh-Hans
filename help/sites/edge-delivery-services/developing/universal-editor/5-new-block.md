@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: fcd2d7ae7a0bddb0d80aada2f206be7629b676e3
+source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1742'
 ht-degree: 0%
 
 ---
@@ -322,6 +322,8 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 | `definition.plugins.xwalk.page.resourceType` | 定义用于在通用编辑器中呈现组件的Sling资源类型。 始终使用`core/franklin/components/block/v#/block`资源类型。 |
 | `definition.plugins.xwalk.page.template.name` | 块的名称。 它应该使用小写和连字符来匹配块的文件夹名称。 此值还用于在通用编辑器中标记块的实例。 |
 | `definition.plugins.xwalk.page.template.model` | 将此定义链接到其`model`定义，该定义控制通用编辑器中为块显示的创作字段。 此处的值必须匹配`model.id`值。 |
+| `definition.plugins.xwalk.page.template.classes` | 可选属性，其值已添加到块HTML元素的`class`属性。 这允许同一块的变体。 通过将[类字段](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)添加到块的[模型](#block-model)，可以使`classes`值变为可编辑。 |
+
 
 以下是块定义的JSON示例：
 
