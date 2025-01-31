@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 500
 exl-id: d1ebcaf4-cea6-4820-8b05-3a0c71749d33
-source-git-commit: 567d2803c5cee274104b38f847820f7665320195
+source-git-commit: b40bf5afc28cb350c470336e38f8ca127fb05d79
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,15 @@ AEM站点是存储和创作网站内容的地方。 最终体验是AEM网站内�
 
 ![Edge Delivery Services和通用编辑器的新AEM站点](./assets/2-new-aem-site/new-site.png)
 
-请按照以下步骤创建新的AEM站点：
-
+按照文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site)中概述的[详细步骤创建新的AEM站点。  以下是这些步骤的汇总列表，包括本教程中使用的值。
 1. **在AEM创作中创建新站点**。 本教程使用以下站点命名：
    * 站点标题： `WKND (Universal Editor)`
    * 站点名称： `aem-wknd-eds-ue`
+
+      * 网站名称值必须与添加到`paths.json`](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping)的网站路径名称[匹配。
+
 2. 从包含AEM创作站点模板](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases)的[Edge Delivery Services中导入最新的模板&#x200B;**。**
 3. **命名站点**&#x200B;以匹配GitHub存储库名称，并将GitHub URL设置为存储库的URL。
-
-有关详细说明，请参阅快速入门指南中的[创建和编辑新的AEM站点部分](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site)。
 
 ## Publish要预览的新站点
 
