@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: ecf37e1f964d0cda90eeca11b224ab950727d2ad
+source-git-commit: 66bc4cb6f992c64b1a7e32310ce3e26515f3d380
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '973'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,11 @@ Edge Delivery Services网站项目的开发工具和流程旨在让Web开发人�
 
 ## 开发拓扑
 
-可通过Universal Editor编辑的Edge Delivery Services网站项目的开发拓扑包括以下方面：
+此视频概述了可使用通用编辑器编辑的Edge Delivery Services网站项目的开发拓扑。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
+
++++查看其他开发拓扑详细信息
 
 - **GitHub存储库**：
    - **目的**：托管网站的代码(CSS和JavaScript)。
@@ -54,6 +58,8 @@ Edge Delivery Services网站项目的开发工具和流程旨在让Web开发人�
       - **GitHub存储库**&#x200B;的本地克隆，用于基于分支的开发。
       - 作为开发服务器的&#x200B;**AEM CLI**&#x200B;将本地代码更改应用于&#x200B;**预览环境**&#x200B;以进行热重新加载体验。
    - **工作流**：开发人员在本地编写代码，将更改提交到工作分支，将分支推送到GitHub，在&#x200B;**通用编辑器**（使用指定的分支）中验证它，并在准备好进行生产部署时将其合并到&#x200B;**主分支**。
+
++++
 
 ## 先决条件
 
