@@ -12,9 +12,9 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -126,6 +126,11 @@ ht-degree: 0%
   ```
 
   将`<ADC Project's OAuth Server-to-Server credential ClientID>`替换为ADC项目的OAuth服务器到服务器凭据的实际ClientID。
+
+  >[!CAUTION]
+  >
+  > 出于演示目的，所有环境均使用相同的ClientID。 建议为每个环境（开发、暂存、生产）使用单独的ClientID，以便更好地进行安全和控制。
+
 
 - 将配置更改提交到Git存储库并将更改推送到远程存储库。
 

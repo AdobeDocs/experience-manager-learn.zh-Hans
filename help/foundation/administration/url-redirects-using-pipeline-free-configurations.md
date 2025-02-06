@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2025-02-05T00:00:00Z
 jira: KT-15739
 thumbnail: KT-15739.jpeg
-source-git-commit: f3e1bef93e53de19cf917a915c0fb836f7d3c194
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
@@ -236,10 +236,13 @@ RewriteRule ^(.*)$ ${skicampaign:%{$1}|/} [L,R=301]
 
 让我们使用浏览器或`curl`命令测试URL重定向。 访问`/ski/westcoast` URL并确认它重定向到`/us/en/adventures/tahoe-skiing.html`。
 
-
 ## 摘要
 
 在本教程中，您已了解如何使用AEM as a Cloud Service环境中的无管道配置管理URL重定向。
 
 营销团队可以将URL重定向作为文本文件中的键值对进行管理，并将其上传到DAM或使用ACS Commons — 重定向映射管理器或重定向管理器。 Dispatcher配置已更新，以作为RewriteMap加载URL重定向，并将其应用于传入请求。
 
+## 其他资源
+
+- [无管道URL重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
+- [URL重定向](url-redirection.md)

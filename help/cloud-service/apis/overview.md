@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 1%
@@ -75,7 +75,7 @@ AEM提供了旧版和现代API，以便与其创作和发布服务类型交互�
 
 在未来的版本中，将添加更多基于OpenAPI的AEM API以支持其他用例。
 
-## 身份验证支持{#authentication-support}
+### 身份验证支持{#authentication-support}
 
 基于OpenAPI的AEM API支持以下身份验证方法：
 
@@ -95,7 +95,7 @@ AEM提供了旧版和现代API，以便与其创作和发布服务类型交互�
 | 安全性注意事项 | 在后端系统中安全地存储敏感凭据(`client_id`， `client_secret`)。 | 用户的身份验证并被授予他们自己的临时访问令牌。 在后端系统中安全地存储敏感凭据(`client_id`， `client_secret`)。 |
 | 授权类型 | _client_credentials_ | _authorization_code_ |
 
-## 访问AdobeAPI和相关概念{#accessing-adobe-apis-and-related-concepts}
+### 访问AdobeAPI和相关概念{#accessing-adobe-apis-and-related-concepts}
 
 在访问AdobeAPI之前，必须了解以下关键概念：
 

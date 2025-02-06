@@ -12,9 +12,9 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 907a313a9ed7e92358f0aa2503f8333fb26ba35d
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
@@ -76,13 +76,14 @@ AEM URL重定向解决方案如下所示：
 
 #### 重定向映射管理器
 
-[重定向映射管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)可帮助AEM管理员轻松维护和发布[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)文件，而无需直接访问Apache Web服务器或要求重新启动Apache Web服务器。 此功能允许用户从AEM中的控制台创建、更新和删除重定向规则，而无需开发团队或AEM部署的帮助。 重定向映射管理器同时具有&#x200B;**AEM as a Cloud Service**（请参阅[无管道URL重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)策略）和&#x200B;**AEM 6.x**&#x200B;兼容。
+[重定向映射管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)可帮助AEM管理员轻松维护和发布[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)文件，而无需直接访问Apache Web服务器或要求重新启动Apache Web服务器。 此功能允许用户从AEM中的控制台创建、更新和删除重定向规则，而无需开发团队或AEM部署的帮助。 重定向映射管理器同时具有&#x200B;**AEM as a Cloud Service**（请参阅[无管道URL重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)策略和相关的[教程](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirects-using-pipeline-free-configurations#acs-commons---redirect-map-manager)）和&#x200B;**AEM 6.x**&#x200B;兼容。
 
 #### 重定向管理器
 
 [重定向管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html)允许AEM中的用户轻松地维护和发布来自AEM的重定向。 该实现基于Java™ servlet过滤器，因此典型的JVM资源消耗。 此功能还可消除对AEM开发团队和AEM部署的依赖性。 重定向管理器与&#x200B;**AEM as a Cloud Service**&#x200B;和&#x200B;**AEM 6.x**&#x200B;兼容。 默认情况下，初始重定向请求必须命中AEM Publish服务来生成301/302（大多数） CDN的缓存301/302，这样后续请求才能在Edge/CDN上重定向。
 
-[重定向管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html)还支持&#x200B;**AEM as a Cloud Service**&#x200B;的[无管道URL重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)策略（通过[将重定向编译为[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)的文本文件](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html)），因此它允许更新Apache Web Server中使用的重定向，而无需直接访问它或重新启动它。 在此方案中，初始重定向请求点击Apache Web Server，而不是AEM Publish服务。
+[重定向管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html)还支持&#x200B;**AEM as a Cloud Service**&#x200B;的[无管道URL重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)策略（通过[将重定向编译为[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)的文本文件](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html)），因此它允许更新Apache Web Server中使用的重定向，而无需直接访问它或重新启动它。 有关更多详细信息，请参阅[教程](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirects-using-pipeline-free-configurations#acs-commons---redirect-manager)。
+在此方案中，初始重定向请求点击Apache Web Server，而不是AEM Publish服务。
 
 ### `Redirect`页面属性
 
