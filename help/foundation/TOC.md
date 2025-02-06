@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation 教程
 user-guide-description: Adobe Experience Manager Foundation 的视频和教程集合。
 sub-product: Experience Manager
 index: y
-source-git-commit: f3e1bef93e53de19cf917a915c0fb836f7d3c194
+source-git-commit: 515c4020e1c358b5ee044a81affc8d7e1e4ff4eb
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '244'
 ht-degree: 14%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 14%
    + [使用在线修订版清理](./administration/use-online-revision-clean-up.md)
    + [使用系统概述功能板](./administration/use-the-system-overview-dashboard.md)
    + [URL重定向](./administration/url-redirection.md)
-   + [使用无管道配置进行URL重定向](./administration/url-redirects-using-pipeline-free-configurations.md)
 + 身份验证{#authentication}
    + [OKTA和AEM](authentication/okta-saml-integration.md)
    + [OAuth范围](authentication/oauth-code-sample-develop.md)
