@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: a5cd9906-7e7a-43dd-a6b2-e80f67d37992
-source-git-commit: ceb82c48af10191cece72fe5f53dd79287f805d0
+source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -292,6 +292,8 @@ Edge Delivery Services项目可优化Web字体的使用，以保持高性能并�
 Web字体由于其大小而经常影响性能，可能会增加累积布局偏移(CLS)分数并降低总体Lighthouse分数。 为确保在Web字体加载时即时显示文本，Edge Delivery Services项目使用浏览器本机回退字体。 这种方法有助于在应用所需字体时保持流畅的用户体验。
 
 要选择最佳回退字体，请使用Adobe的[Helix Font Fallback Chrome扩展](https://www.aem.live/developer/font-fallback)，该扩展可在加载自定义字体之前确定与浏览器使用的字体密切匹配的字体。 应将生成的回退字体声明添加到`styles/styles.css`文件中，以提高性能并确保用户获得无缝体验。
+
+![Helix字体回退Chrome扩展](./assets/4-website-branding/font-fallback-chrome-plugin.png){align=center}
 
 要使用[Helix Font Fallback Chrome扩展](https://www.aem.live/developer/font-fallback)，请确保该网页在Edge Delivery Services网站上使用的相同变体中应用了Web字体。 本教程演示了[wknd.site](http://wknd.site/us/en.html)上的扩展。 在开发网站时，请将扩展应用于正在处理的网站，而不是[wknd.site](http://wknd.site/us/en.html)。
 
