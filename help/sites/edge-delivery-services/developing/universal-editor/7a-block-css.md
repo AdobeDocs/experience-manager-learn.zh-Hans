@@ -1,6 +1,6 @@
 ---
 title: 使用CSS开发块
-description: 使用CSS为Edge Delivery Services开发块，使用通用编辑器可编辑。
+description: 使用Edge Delivery Services的CSS开发块，该块可使用通用编辑器进行编辑。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 14cda9d4-752b-4425-a469-8b6f283ce1db
-source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
@@ -23,11 +23,11 @@ Edge Delivery Services中的块使用CSS进行样式设置。 块的CSS文件存
 
 理想情况下，块应当只需要CSS来设置样式，而无需依靠JavaScript修改DOM或添加CSS类。 对JavaScript的需求取决于块的[内容建模](./5-new-block.md#block-model)及其复杂性。 如果需要，可以添加[块JavaScript](./7b-block-js-css.md)。
 
-使用仅限CSS的方法时，会定位块的（通常）裸语义HTML元素并设置其样式。
+使用仅限CSS的方法时，会定位块的（通常）裸语义HTML元素并进行样式设置。
 
-## 块HTML
+## 阻止HTML
 
-要了解如何设置块的样式，请首先查看Edge Delivery Services公开的DOM，因为它可用于设置样式。 通过检查AEM CLI的本地开发环境提供的块，可以找到DOM。 请避免使用通用编辑器的DOM，因为它略有不同。
+要了解如何设置块的样式，请首先查看Edge Delivery Services公开的DOM，因为该格式可用于设置样式。 通过检查AEM CLI的本地开发环境提供的块，可以找到DOM。 请避免使用通用编辑器的DOM，因为它略有不同。
 
 >[!BEGINTABS]
 
@@ -35,7 +35,7 @@ Edge Delivery Services中的块使用CSS进行样式设置。 块的CSS文件存
 
 以下是作为样式设置目标的Teaser块的DOM。
 
-请注意[作为Edge Delivery ServicesJavaScript推断的元素自动扩充](./4-website-branding.md#inferred-elements)的`<p class="button-container">...`。
+请注意[自动作为Edge Delivery Services JavaScript推断的元素扩充的`<p class="button-container">...`。](./4-website-branding.md#inferred-elements)
 
 ```html
 ...
@@ -75,7 +75,7 @@ Edge Delivery Services中的块使用CSS进行样式设置。 块的CSS文件存
 
 要查找要设置样式的DOM，请在本地开发环境中打开包含未设置样式的块的页面，选择块，然后检查DOM。
 
-![Inspect块DOM](./assets/7a-block-css/inspect-block-dom.png)
+![检查块DOM](./assets/7a-block-css/inspect-block-dom.png)
 
 >[!ENDTABS]
 
@@ -99,15 +99,16 @@ Edge Delivery Services中的块使用CSS进行样式设置。 块的CSS文件存
     left: 50%; 
     transform: translateX(-50%);
     height: 500px;
+    overflow: hidden; 
 
     /* The image is rendered to the first div in the block */
-    & picture {
+    picture {
         position: absolute;
         z-index: -1;
         inset: 0;
         box-sizing: border-box;
 
-        & img {
+        img {
             object-fit: cover;
             object-position: center;
             width: 100%;
@@ -143,53 +144,52 @@ Edge Delivery Services中的块使用CSS进行样式设置。 块的CSS文件存
         **/
 
         /* Regardless of the authored heading level, we only want one style the heading */
-        & h1,
-        & h2,
-        & h3,
-        & h4,
-        & h5,
-        & h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-size: var(--heading-font-size-xl);
             margin: 0;
         }
 
-        & h1::after,
-        & h2::after,
-        & h3::after,
-        & h4::after,
-        & h5::after,
-        & h6::after {
+        h1::after,
+        h2::after,
+        h3::after,
+        h4::after,
+        h5::after,
+        h6::after {
             border-bottom: 0;
         }
 
-        & p {
+        p {
             font-size: var(--body-font-size-s);
             margin-bottom: 1rem;
         }
 
         /* Add underlines to links in the text */
-        & a:hover {
+        a:hover {
             text-decoration: underline;
         }
 
         /* Add specific spacing to buttons. These button CSS classes are automatically added by Edge Delivery Services. */
-        & .button-container {
+        .button-container {
             margin: 0;
             padding: 0;
-        }
 
-        & .button {
-            background-color: var(--primary-color);
-            border-radius: 0;
-            color: var(--dark-color);
-            font-size: var(--body-font-size-xs);
-            font-weight: bold;
-            padding: 1em 2.5em;
-            margin: 0;
-            text-transform: uppercase;
+            .button {
+                background-color: var(--primary-color);
+                border-radius: 0;
+                color: var(--dark-color);
+                font-size: var(--body-font-size-xs);
+                font-weight: bold;
+                padding: 1em 2.5em;
+                margin: 0;
+                text-transform: uppercase;
+            }
         }
     }
-
 }
 
 /** Animations 
@@ -211,7 +211,7 @@ Edge Delivery Services中的块使用CSS进行样式设置。 块的CSS文件存
 
 ## 开发预览
 
-由于CSS是在代码项目中写入的，因此AEM CLI的热重新加载会进行更改，从而可以快速轻松地了解CSS如何影响块。
+由于CSS是在代码项目中写入的，因此AEM CLI的热重新加载会进行更改，以便快速轻松地了解CSS如何影响块。
 
 ![仅CSS预览](./assets/7a-block-css/local-development-preview.png)
 
@@ -227,7 +227,7 @@ $ npm run lint:css
 
 ## 在通用编辑器中预览
 
-要在AEM通用编辑器中查看更改，请添加、提交这些更改，并将其推送到通用编辑器使用的Git存储库分支。 此步骤有助于确保块实施不会中断创作体验。
+要在AEM的通用编辑器中查看更改，请添加、提交这些更改，并将其推送到通用编辑器使用的Git存储库分支。 此步骤有助于确保块实施不会中断创作体验。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue

@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ $ git checkout -b teaser origin/main
 块JSON定义了块的三个关键方面：
 
 - **定义**：在通用编辑器中将块注册为可编辑组件，并将其链接到块模型和过滤器（可选）。
-- **模型**：指定块的创作字段以及这些字段如何作为语义Edge Delivery ServicesHTML呈现。
+- **模型**：指定块的创作字段以及这些字段如何作为语义Edge Delivery Services HTML呈现。
 - **筛选器**：配置筛选规则，以限制可以通过通用编辑器将块添加到哪些容器。 大多数块不是容器，而是将其ID添加到其他容器块的过滤器中。
 
 在`/blocks/teaser/_teaser.json`处新建一个文件，其初始结构采用完全相同的顺序。 如果键顺序错误，则可能无法正确构建。
@@ -93,7 +93,7 @@ $ git checkout -b teaser origin/main
 
    ![通用编辑器字段](./assets/5-new-block/fields-in-universal-editor.png)
 
-2. 字段值如何渲染到Edge Delivery ServicesHTML中。
+2. 字段值如何渲染到Edge Delivery Services HTML中。
 
 为模型分配了一个与[块的定义](#block-definition)相对应的`id`，并包含一个`fields`数组以指定可编辑的字段。
 
@@ -130,7 +130,7 @@ Teaser块的设计分为两个逻辑组件（图像和文本内容），确保�
 
 **此选项卡说明了为Teaser块建模的正确方法。**
 
-Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery ServicesHTML显示为所需Web体验所需的代码，块模型应反映此结构。
+Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Services HTML显示为所需Web体验所需的代码，块模型应反映此结构。
 
 - 使用[字段折叠](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)将&#x200B;**图像**&#x200B;和&#x200B;**图像替换文本**&#x200B;组合在一起。
 - 使用[元素分组](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的[字段折叠将文本内容字段分组在一起。
@@ -139,8 +139,8 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 
 在以下示例中：
 
-- [类型推断](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)用于从`image`字段自动创建`<img>`HTML元素。 字段折叠与`image`和`imageAlt`字段一起使用来创建`<img>`HTML元素。 `src`属性设置为`image`字段的值，而`alt`属性设置为`imageAlt`字段的值。
-- `textContent`是用于分类字段的组名称。 它应该是语义的，但可以是此块特有的任何内容。 这会通知通用编辑器在最终HTML输出中呈现同一`<div>`元素中带有此前缀的所有字段。
+- [类型推断](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)用于从`image`字段自动创建`<img>`个HTML元素。 字段折叠与`image`和`imageAlt`字段一起使用来创建`<img>`个HTML元素。 `src`属性设置为`image`字段的值，而`alt`属性设置为`imageAlt`字段的值。
+- `textContent`是用于分类字段的组名称。 它应该是语义的，但可以是此块特有的任何内容。 这会通知通用编辑器在最终HTML输出中，渲染同一`<div>`元素内具有此前缀的所有字段。
 - 字段折叠也应用于行动号召(CTA)的`textContent`组。 CTA是通过[类型推断](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)创建为`<a>`的。 `cta`字段用于设置`<a>`元素的`href`属性，`ctaText`字段为`<a ...>`标记内的链接提供文本内容。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面代码示例的文件名。"}
@@ -194,7 +194,7 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 
 此模型在Universal Editor中为块定义创作输入。
 
-此块的生成Edge Delivery ServicesHTML将图像放在第一个div中，将元素组`textContent`字段放在第二个div中。
+为此块生成的Edge Delivery Services HTML将图像放入第一个div，将元素组`textContent`字段放入第二个div。
 
 ```html
 <div>
@@ -276,7 +276,7 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 }
 ```
 
-块的Edge Delivery ServicesHTML在单独的`div`中呈现每个字段的值，这使得内容理解、样式应用和HTML结构调整变得复杂，难以实现所需的设计。
+块的Edge Delivery Services HTML在单独的`div`中呈现每个字段的值，这会使内容理解、样式应用和HTML结构调整变得复杂，难以实现所需的设计。
 
 ```html
 <div>
@@ -322,7 +322,7 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 | `definition.plugins.xwalk.page.resourceType` | 定义用于在通用编辑器中呈现组件的Sling资源类型。 始终使用`core/franklin/components/block/v#/block`资源类型。 |
 | `definition.plugins.xwalk.page.template.name` | 块的名称。 它应该使用小写和连字符来匹配块的文件夹名称。 此值还用于在通用编辑器中标记块的实例。 |
 | `definition.plugins.xwalk.page.template.model` | 将此定义链接到其`model`定义，该定义控制通用编辑器中为块显示的创作字段。 此处的值必须匹配`model.id`值。 |
-| `definition.plugins.xwalk.page.template.classes` | 可选属性，其值已添加到块HTML元素的`class`属性。 这允许同一块的变体。 通过将[类字段](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)添加到块的[模型](#block-model)，可以使`classes`值变为可编辑。 |
+| `definition.plugins.xwalk.page.template.classes` | 可选属性，其值将添加到块HTML元素的`class`属性。 这允许同一块的变体。 通过将[类字段](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)添加到块的[模型](#block-model)，可以使`classes`值变为可编辑。 |
 
 
 以下是块定义的JSON示例：
@@ -420,15 +420,11 @@ $ npm run lint:js
 
 ## 构建项目JSON
 
-配置块JSON文件(`blocks/teaser/_teaser.json`、`models/_section.json`)后，必须将其编译到项目的`component-models.json`、`component-definitions.json`和`component-filters.json`文件中。 编译通过运行项目的[生成JSON](./3-local-development-environment.md#build-json-fragments) npm脚本来完成。
+配置块JSON文件（例如，`blocks/teaser/_teaser.json`、`models/_section.json`）后，将自动编译到项目的`component-models.json`、`component-definitions.json`和`component-filters.json`文件中。 此编译由[AEM样板XWalk项目模板](https://github.com/adobe-rnd/aem-boilerplate-xwalk)中包含的[Husky](https://typicode.github.io/husky/)预提交挂接自动处理。
 
-```bash
-# ~/Code/aem-wknd-eds-ue
+也可以使用项目的[生成JSON](./3-local-development-environment.md#build-json-fragments) NPM脚本手动或以编程方式触发生成。
 
-$ npm run build:json
-```
-
-## 部署块定义
+## 部署块JSON
 
 要使块在通用编辑器中可用，必须将项目提交并推送到GitHub存储库的分支，在本例中为`teaser`分支。
 
@@ -439,6 +435,7 @@ $ npm run build:json
 
 $ git add .
 $ git commit -m "Add teaser block JSON files so it is available in Universal Editor"
+# JSON files are compiled automatically and added to the commit via a husky precommit hook
 $ git push origin teaser
 ```
 

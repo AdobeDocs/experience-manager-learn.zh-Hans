@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 41c4cfcf-0813-46b7-bca0-7c13de31a20e
-source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -31,15 +31,15 @@ ht-degree: 0%
 
 这种方法在以下情况下特别有用：
 
-- **外部CSS管理：**&#x200B;当块的CSS在Edge Delivery Services外部进行管理并且与其HTML结构不匹配时。
+- **外部CSS管理：**&#x200B;当块的CSS在Edge Delivery Services外部被管理并且与其HTML结构不匹配时。
 - **其他属性：**&#x200B;当需要其他属性（如用于辅助功能的[ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)或[微数据](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Microdata)）时。
 - **JavaScript增强功能：**&#x200B;当需要交互功能（如事件侦听器）时。
 
 此方法依赖于浏览器本机的JavaScript DOM操作，但在修改DOM时尤其需要谨慎移动元素。 此类更改可能会破坏通用编辑器的创作体验。 理想情况下，应该仔细设计块的[内容模型](./5-new-block.md#block-model)，以最大限度地减少大量DOM更改的需要。
 
-## 块HTML
+## 阻止HTML
 
-要进入块开发，首先要查看Edge Delivery Services公开的DOM。 该结构通过JavaScript进行了增强并使用CSS进行了样式设置。
+要接近块开发，请先查看Edge Delivery Services公开的DOM。 该结构通过JavaScript进行了增强并使用CSS进行了样式设置。
 
 >[!BEGINTABS]
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 要查找要修饰的DOM，请在本地开发环境中打开包含未修饰块的页面，选择块，然后检查DOM。
 
-![Inspect块DOM](./assets/7a-block-css/inspect-block-dom.png)
+![检查块DOM](./assets/7a-block-css/inspect-block-dom.png)
 
 >[!ENDTABS]
 
@@ -100,7 +100,7 @@ JavaScript文件应导出默认函数：
 export default function decorate(block) { ... }
 ```
 
-默认函数采用Edge Delivery ServicesHTML中表示块的DOM元素/树，并包含在呈现块时执行的自定义JavaScript。
+默认函数采用表示Edge Delivery Services HTML中块的DOM元素/树，并包含在呈现块时执行的自定义JavaScript。
 
 此示例JavaScript执行三个主要操作：
 
@@ -195,27 +195,32 @@ export default function decorate(block) {
     left: 50%; 
     transform: translateX(-50%);
     height: 500px;
+    overflow: hidden; 
 
     /* The teaser image */
-    & .image-wrapper {
+    .image-wrapper {
         position: absolute;
         z-index: -1;
         inset: 0;
         box-sizing: border-box;
         overflow: hidden; 
 
-        & .image {
+        .image {
             object-fit: cover;
             object-position: center;
             width: 100%;
             height: 100%;
             transform: scale(1); 
             transition: transform 0.6s ease-in-out;
+
+            .zoom {
+                transform: scale(1.1);
+            }            
         }
     }
 
     /* The teaser text content */
-    & .content {
+    .content {
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -225,55 +230,51 @@ export default function decorate(block) {
         width: 80vw;
         max-width: 1200px;
   
-        & .title {
+        .title {
             font-size: var(--heading-font-size-xl);
             margin: 0;
         }
 
-        & .title::after {
+        .title::after {
             border-bottom: 0;
         }
 
-        & p {
+        p {
             font-size: var(--body-font-size-s);
             margin-bottom: 1rem;
             animation: teaser-fade-in .6s;
-        }
-
-        & p.terms-and-conditions {
-            font-size: var(--body-font-size-xs);
-            color: var(--secondary-color);
-            padding: .5rem 1rem;
-            font-style: italic;
-            border: solid var(--light-color);
-            border-width: 0 0 0 10px;
+        
+            &.terms-and-conditions {
+                font-size: var(--body-font-size-xs);
+                color: var(--secondary-color);
+                padding: .5rem 1rem;
+                font-style: italic;
+                border: solid var(--light-color);
+                border-width: 0 0 0 10px;
+            }
         }
 
         /* Add underlines to links in the text */
-        & a:hover {
+        a:hover {
             text-decoration: underline;
         }
 
         /* Add specific spacing to buttons. These button CSS classes are automatically added by Edge Delivery Services. */
-        & .button-container {
+        .button-container {
             margin: 0;
             padding: 0;
+        
+            .button {   
+                background-color: var(--primary-color);
+                border-radius: 0;
+                color: var(--dark-color);
+                font-size: var(--body-font-size-xs);
+                font-weight: bold;
+                padding: 1em 2.5em;
+                margin: 0;
+                text-transform: uppercase;
+            }
         }
-
-        & .button {   
-            background-color: var(--primary-color);
-            border-radius: 0;
-            color: var(--dark-color);
-            font-size: var(--body-font-size-xs);
-            font-weight: bold;
-            padding: 1em 2.5em;
-            margin: 0;
-            text-transform: uppercase;
-        }
-    }
-
-    & .zoom {
-        transform: scale(1.1);
     }
 }
 
@@ -327,7 +328,7 @@ $ npm run lint
 
 ## 在通用编辑器中预览
 
-要在AEM通用编辑器中查看更改，请添加、提交这些更改，并将其推送到通用编辑器使用的Git存储库分支。 这样做可确保块实施不会中断创作体验。
+要在AEM的通用编辑器中查看更改，请添加、提交这些更改，并将其推送到通用编辑器使用的Git存储库分支。 这样做可确保块实施不会中断创作体验。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue

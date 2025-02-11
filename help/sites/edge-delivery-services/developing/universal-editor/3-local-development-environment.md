@@ -10,18 +10,18 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: 66bc4cb6f992c64b1a7e32310ce3e26515f3d380
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
 
 # 设置本地开发环境
 
-本地开发环境对于快速开发由Edge Delivery Services交付的网站至关重要。 该环境使用本地开发的代码，同时从Edge Delivery Services获取内容，允许开发人员即时查看代码更改。 这样的设置支持快速、迭代的开发和测试。
+本地开发环境对于快速开发Edge Delivery Services交付的网站至关重要。 该环境使用本地开发的代码，同时从Edge Delivery Services获取内容，允许开发人员即时查看代码更改。 这样的设置支持快速、迭代的开发和测试。
 
-Edge Delivery Services网站项目的开发工具和流程旨在让Web开发人员熟悉，并提供快速高效的开发体验。
+Edge Delivery Services网站项目的开发工具和流程可供Web开发人员熟悉，并提供快速高效的开发体验。
 
 ## 开发拓扑
 
@@ -38,7 +38,7 @@ Edge Delivery Services网站项目的开发工具和流程旨在让Web开发人�
 
 - **AEM创作服务**：
    - **目的**：用作编辑和管理网站内容的规范内容存储库。
-   - **功能**：内容由&#x200B;**通用编辑器**&#x200B;读取和写入。 已编辑的内容已发布到&#x200B;**生产**&#x200B;或&#x200B;**预览**&#x200B;环境中的&#x200B;**Edge Delivery Services**。
+   - **功能**：内容由&#x200B;**通用编辑器**&#x200B;读取和写入。 在&#x200B;**生产**&#x200B;或&#x200B;**预览**&#x200B;环境中已将编辑的内容发布到&#x200B;**Edge Delivery Services**。
 
 - **通用编辑器**：
    - **目的**：提供用于编辑网站内容的WYSIWYG界面。
@@ -47,10 +47,10 @@ Edge Delivery Services网站项目的开发工具和流程旨在让Web开发人�
 - **Edge Delivery Services**：
    - **生产环境**：
       - **目的**：向最终用户提供实时网站内容和代码。
-      - **功能**：使用&#x200B;**GitHub存储库**&#x200B;的&#x200B;**主分支**&#x200B;的代码，为从&#x200B;**AEM Author服务**&#x200B;发布的内容提供服务。
+      - **功能**：使用&#x200B;**GitHub存储库**&#x200B;的&#x200B;**主分支**&#x200B;的代码，为从&#x200B;**AEM创作服务**&#x200B;发布的内容提供服务。
    - **预览环境**：
       - **目的**：提供暂存环境，以便在部署之前测试和预览内容和代码。
-      - **功能**：使用&#x200B;**GitHub存储库**&#x200B;的任何分支的代码提供从&#x200B;**AEM Author服务**&#x200B;发布的内容，从而在不影响实时网站的情况下进行全面测试。
+      - **功能**：使用&#x200B;**GitHub存储库**&#x200B;的任何分支的代码提供从&#x200B;**AEM Author服务**&#x200B;发布的内容，从而在不影响实时网站的情况下进行彻底测试。
 
 - **本地开发人员环境**：
    - **目的**：允许开发人员在本地编写和测试代码(CSS和JavaScript)。
@@ -71,7 +71,7 @@ Edge Delivery Services网站项目的开发工具和流程旨在让Web开发人�
 
 ## 克隆GitHub存储库
 
-将在新代码项目第](./1-new-code-project.md)章(包含AEMEdge Delivery Services代码项目)中创建的[GitHub存储库克隆到您的本地开发环境。
+将在新代码项目第](./1-new-code-project.md)章(包含AEM Edge Delivery Services代码项目)中创建的[GitHub存储库克隆到您的本地开发环境。
 
 ![GitHub存储库克隆](./assets/3-local-development-environment/github-clone.png)
 
@@ -84,7 +84,7 @@ $ git clone git@github.com:<YOUR_ORG>/aem-wknd-eds-ue.git
 
 ## 安装项目依赖项
 
-导航到项目文件夹并使用`npm install`安装所需的依赖项。 虽然Edge Delivery Services项目不使用传统的Node.js构建系统（如Webpack或Vite），但它们仍需要多个依赖关系才能进行本地开发。
+导航到项目文件夹并使用`npm install`安装所需的依赖项。 尽管Edge Delivery Services项目不使用传统的Node.js构建系统（如Webpack或Vite），但它们仍需要多个依赖关系才能进行本地开发。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -131,14 +131,17 @@ AEM CLI在浏览器中打开网站： `http://localhost:3000/`。 项目中的�
 
 ## 构建JSON片段
 
-使用[AEM Boilerplate XWalk模板](https://github.com/adobe-rnd/aem-boilerplate-xwalk)创建的Edge Delivery Services项目依赖在通用编辑器中启用块创作的JSON配置。
+使用[AEM Boilerplate XWalk模板](https://github.com/adobe-rnd/aem-boilerplate-xwalk)创建的Edge Delivery Services项目依赖于可在通用编辑器中启用块创作的JSON配置。
 
 - **JSON片段**：与其关联的块一起存储，并定义块模型、定义和过滤器。
    - **模型片段**：存储在`/blocks/example/_example.json`。
    - **定义片段**：存储在`/blocks/example/_example.json`中。
    - **筛选片段**：存储在`/blocks/example/_example.json`。
 
-NPM脚本可编译这些JSON片段，并将其放置在项目根目录的适当位置。 要构建JSON文件，请使用提供的NPM脚本。 例如，要编译所有片段，请运行：
+
+[AEM样板XWalk项目模板](https://github.com/adobe-rnd/aem-boilerplate-xwalk)包含一个[Husky](https://typicode.github.io/husky/)预提交挂接，该挂接可检测对JSON片段的更改，并在`git commit`时将更改编译到相应的`component-*.json`文件中。
+
+虽然可以通过`npm run`手动运行以下NPM脚本来构建JSON文件，但这通常不是必需的，因为Husky预提交挂接会自动处理它。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -159,7 +162,7 @@ npm run build:json
 
 ## 林亭
 
-Litting确保代码质量和一致性，在将更改合并到`main`分支之前必须具备此条件，以便Edge Delivery Services项目能够做到这一点。
+Edge Delivery Services Linting可确保代码质量和一致性，在将更改合并到`main`分支之前必须具备此条件。
 
 NPM脚本可以通过`npm run`运行，例如：
 
@@ -185,7 +188,7 @@ $ npm run lint
 $ npm run lint:fix
 ```
 
-这些脚本未使用AEM Boilerplate XWalk模板进行预配置，但可以添加到`package.json`文件中：
+这些脚本未预配置AEM样板XWalk模板，但可添加到`package.json`文件：
 
 >[!BEGINTABS]
 

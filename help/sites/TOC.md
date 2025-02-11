@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '585'
 ht-degree: 18%
 
 ---
@@ -101,13 +101,15 @@ ht-degree: 18%
       + 通用编辑器{#universal-editor}
          + [概述](./edge-delivery-services/developing/universal-editor/0-overview.md)
          + [新建代码项目](./edge-delivery-services/developing/universal-editor/1-new-code-project.md)
-         + [新建AEM站点](./edge-delivery-services/developing/universal-editor/2-new-aem-site.md)
+         + [新的AEM站点](./edge-delivery-services/developing/universal-editor/2-new-aem-site.md)
          + [本地开发环境](./edge-delivery-services/developing/universal-editor/3-local-development-environment.md)
          + [网站品牌化](./edge-delivery-services/developing/universal-editor/4-website-branding.md)
          + [新建块](./edge-delivery-services/developing/universal-editor/5-new-block.md)
          + [创作块](./edge-delivery-services/developing/universal-editor/6-author-block.md)
          + [仅使用CSS进行阻止](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
          + [使用CSS和JS阻止](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
+         + 操作方法{#how-to}
+            + [块选项](./edge-delivery-services/developing/universal-editor/how-to/block-options.md)
    + 操作方法{#how-to}
       + [RSS源](edge-delivery-services/how-to/rss.md)
       + [社交媒体共享](edge-delivery-services/how-to/social-media-sharing.md)
@@ -163,7 +165,7 @@ ht-degree: 18%
    + [设置翻译规则](translation/translation-rules-editor-technical-video-setup.md)
    + [翻译增强功能](translation/translation-enhancements-feature-video-use.md)
 + 集成 {#integrations}
-   + Experience Platform{#experience-platform}
+   + Experience Platform {#experience-platform}
       + [生成FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [使用Platform Web SDK的Analytics](integrations/platform/analytics-using-web-sdk.md)
@@ -171,7 +173,7 @@ ht-degree: 18%
       + [概述](integrations/experience-platform/data-collection/tags/overview.md)
       + [创建标记属性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [使用IMS连接AEM和标记属性](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
-      + [创建AEM标记Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [创建AEM Tags Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [调试标记实施](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe 客户端数据层{#adobe-client-data-layer}
       + [使用Adobe客户端数据层](integrations/adobe-client-data-layer/data-layer-overview.md)
@@ -184,7 +186,7 @@ ht-degree: 18%
       + [概述](integrations/adobe-target/overview.md)
       + [将Target扩展添加到“标记”属性](integrations/adobe-target/add-target-launch-extension.md)
       + [加载和触发Target调用](integrations/adobe-target/load-and-fire-target.md)
-      + [创建Adobe TargetCloud Service帐户](integrations/adobe-target/setup-aem-target-cloud-service.md)
+      + [创建Adobe Target Cloud Service帐户](integrations/adobe-target/setup-aem-target-cloud-service.md)
       + [将体验片段导出到Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
       + [使用体验片段选件创建Target活动](integrations/adobe-target/create-target-activity.md)
       + [使用可视化体验编辑器的Personalization](integrations/adobe-target/personalization-using-vec.md)
@@ -193,5 +195,5 @@ ht-degree: 18%
    + [概述](expert-resources/learn-from-your-peers-overview.md)
    + [AEM Sites成熟度评估](expert-resources/maturity-assessment.md)
    + [站点维护](expert-resources/site-maintenance.md)
-   + [AEM Champion提示和技巧：第1场](expert-resources/champion-tips-1.md)
+   + [AEM Champion提示和技巧：第1场会议](expert-resources/champion-tips-1.md)
    + [AEM Champion提示和技巧：第2场讲座](expert-resources/champion-tips-2.md)
