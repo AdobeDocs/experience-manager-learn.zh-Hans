@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation 教程
 user-guide-description: Adobe Experience Manager Foundation 的视频和教程集合。
 sub-product: Experience Manager
 index: y
-source-git-commit: 515c4020e1c358b5ee044a81affc8d7e1e4ff4eb
+source-git-commit: bc2f4655631f28323a39ed5b4c7878613296a0ba
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '248'
 ht-degree: 14%
 
 ---
@@ -21,14 +21,15 @@ ht-degree: 14%
    + [使用在线修订版清理](./administration/use-online-revision-clean-up.md)
    + [使用系统概述功能板](./administration/use-the-system-overview-dashboard.md)
    + [URL重定向](./administration/url-redirection.md)
+   + [实施无管道URL重定向](./administration/implementing-pipeline-free-url-redirects.md)
 + 身份验证{#authentication}
    + [OKTA和AEM](authentication/okta-saml-integration.md)
    + [OAuth范围](authentication/oauth-code-sample-develop.md)
    + [了解身份验证](authentication/authentication-support-article-understand.md)
    + [了解AMS上的IMS身份验证](authentication/adobe-ims-authentication-technical-video-understand.md)
    + [JWT — 到OAuth凭据迁移](authentication/jwt-to-oauth-migration.md)
-+ AdobeCloud Manager{#cloud-manager}
-   + [了解AdobeCloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
++ Adobe Cloud Manager{#cloud-manager}
+   + [了解Adobe Cloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
    + [CI/CD 管道](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
    + [自定义权限](./cloud-manager/cloud-permissions.md)
 + 开发 {#development}
@@ -57,7 +58,7 @@ ht-degree: 14%
    + [使用收件箱](./workflow/use-the-inbox.md)
 + 疑难解答 {#troubleshooting}
    + [如何启用资源下载报表](./troubleshooting/how-to-enable-asset-download-report.md)
-   + [如何在AEM6.4中强制重新编译](./troubleshooting/how-to-force-recompilation.md)
+   + [如何在AEM 6.4中强制重新编译](./troubleshooting/how-to-force-recompilation.md)
    + [如何调查AEM中与索引相关的问题](./troubleshooting/how-to-investigate-indexing-related-issues.md)
    + [如何调查AEM中的SAML相关问题](./troubleshooting/how-to-investigate-saml-related-issues.md)
    + [如何调查AEM中与搜索相关的问题](./troubleshooting/how-to-investigate-search-related-issues.md)
