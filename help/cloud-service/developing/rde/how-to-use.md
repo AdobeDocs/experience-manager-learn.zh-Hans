@@ -11,7 +11,7 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: d199ff3b9f4d995614c193f52dc90270f2283adf
+source-git-commit: 98d67d5b624b386c6a579cd03117372bc9058acb
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 了解&#x200B;**如何在AEM as a Cloud Service中使用**&#x200B;快速开发环境(RDE)。 从您喜爱的集成开发环境(IDE)将代码和内容部署到RDE，以加快近乎最终代码的开发周期。
 
-使用[AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)，您可以通过从您喜爱的IDE运行AEM-RDE的`install`命令来了解如何将各种AEM工件部署到RDE。
+使用[AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)，您可以通过从收藏的IDE中运行AEM-RDE的`install`命令来了解如何将各种AEM工件部署到RDE。
 
 - AEM代码和内容包(all， ui.apps)部署
 - OSGi捆绑包和配置文件部署
@@ -204,7 +204,7 @@ $ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
 
 ### 部署配置(YAML)文件
 
-可以使用`install`命令将CDN、维护任务、日志转发和AEM API身份验证配置文件部署到RDE。 这些配置在AEM项目的`config`文件夹中作为YAML文件进行管理，有关更多详细信息，请参阅[支持的配置](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations)。
+可以使用`install`命令将CDN、维护任务、日志转发和AEM API身份验证配置文件部署到RDE。 这些配置作为YAML文件在AEM项目的`config`文件夹中进行管理，有关更多详细信息，请参阅[支持的配置](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations)。
 
 要了解如何部署配置文件，让我们增强`cdn`配置文件并将其部署到RDE。
 
@@ -238,7 +238,7 @@ $ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
 1. 通过运行以下命令将更改部署到RDE
 
    ```shell
-   $ aio aem:rde:install -t env-config ./config/cdn.yaml
+   $ aio aem:rde:install -t env-config ./config
    ```
 
 1. 验证RDE上的更改
@@ -275,6 +275,6 @@ aem rde status   Get a list of the bundles and configs deployed to the current r
 
 [RDE命令文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
 
-用于与AEM快速开发环境交互的[Adobe I/O Runtime CLI插件](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
+用于与Adobe I/O Runtime快速开发环境交互的[AEM CLI插件](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [AEM项目设置](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
