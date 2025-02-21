@@ -1,6 +1,6 @@
 ---
 title: 调用基于OpenAPI的AEM API以进行服务器到服务器身份验证
-description: 了解如何使用OAuth服务器到服务器身份验证从自定义应用程序在AEM as a Cloud Service上配置和调用基于OpenAPI的AEM API。
+description: 了解如何使用OAuth服务器到服务器身份验证，从自定义应用程序在AEM as a Cloud Service上配置和调用基于OpenAPI的AEM API。
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+source-git-commit: b3d053a09dfc8989441a21bf0d8c4771d816106f
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1855'
 ht-degree: 0%
 
 ---
@@ -32,12 +32,12 @@ OAuth服务器到服务器身份验证非常适用于需要API访问而不进行
 在本教程中，您将学习如何：
 
 - 为您的AEM as a Cloud Service环境启用基于OpenAPI的AEM API访问。
-- 创建并配置Adobe Developer Console (ADC)项目以使用&#x200B;_OAuth服务器到服务器身份验证_&#x200B;访问AEM API。
+- 创建并配置Adobe Developer Console (ADC)项目，以使用&#x200B;_OAuth服务器到服务器身份验证_&#x200B;访问AEM API。
 - 开发一个示例NodeJS应用程序，该应用程序调用Assets创作API以检索特定资源的元数据。
 
-开始之前，请确保已查看[访问AdobeAPI和相关概念](overview.md#accessing-adobe-apis-and-related-concepts)部分。
+开始之前，请确保已查看[访问Adobe API和相关概念](overview.md#accessing-adobe-apis-and-related-concepts)部分。
 
-## 先决条件
+## 前提条件
 
 要完成本教程，您需要：
 
@@ -77,7 +77,7 @@ AEM as a Cloud Service环境的现代化是一个两步过程，
 
 ### 更新AEM实例
 
-要更新AEM实例，请在Adobe[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_环境_&#x200B;部分中，选择环境名称旁边的&#x200B;_省略号_&#x200B;图标，然后选择&#x200B;**更新**&#x200B;选项。
+要更新AEM实例，请在Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_环境_&#x200B;部分中，选择环境名称旁边的&#x200B;_省略号_&#x200B;图标，然后选择&#x200B;**更新**&#x200B;选项。
 
 ![更新AEM实例](assets/update-aem-instance.png)
 
@@ -85,11 +85,11 @@ AEM as a Cloud Service环境的现代化是一个两步过程，
 
 ![选择最新的AEM发行版本](assets/select-latest-aem-release.png)
 
-在我的示例中，Fullstack管道的名称为&#x200B;_Dev ：： Fullstack-Deploy_，而AEM环境名称为&#x200B;_wknd-program-dev_，具体情况可能会有所不同。
+在我的示例中，Fullstack Pipeline的名称为&#x200B;_Dev ：： Fullstack-Deploy_，而AEM环境的名称为&#x200B;_wknd-program-dev_，具体情况可能会有所不同。
 
 ### 添加新产品配置文件
 
-要向AEM实例添加新产品配置文件，请在Adobe[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_环境_&#x200B;部分中，选择环境名称旁边的&#x200B;_省略号_&#x200B;图标，然后选择&#x200B;**添加产品配置文件**&#x200B;选项。
+要将新产品配置文件添加到AEM实例，请在Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_环境_&#x200B;部分中，选择环境名称旁边的&#x200B;_省略号_&#x200B;图标，然后选择&#x200B;**添加产品配置文件**&#x200B;选项。
 
 ![添加新的产品配置文件](assets/add-new-product-profiles.png)
 
@@ -105,7 +105,7 @@ _Admin Console_&#x200B;窗口显示新添加的产品配置文件。
 
 新产品配置文件支持在Adobe Developer Console (ADC)中访问基于OpenAPI的AEM API。
 
-新添加的产品配置文件与&#x200B;_服务_&#x200B;相关联，这些服务代表具有预定义访问控制列表(ACL)的AEM用户组。 _服务_&#x200B;用于控制对AEM API的访问级别。
+新添加的产品配置文件与&#x200B;_服务_&#x200B;关联，这些服务代表具有预定义访问控制列表(ACL)的AEM用户组。 _服务_&#x200B;用于控制对AEM API的访问级别。
 
 您还可以选择或取消选择与产品配置文件关联的&#x200B;_服务_，以减少或增加访问级别。
 
@@ -117,7 +117,7 @@ _Admin Console_&#x200B;窗口显示新添加的产品配置文件。
 
 ![将AEM Assets API Users服务与产品配置文件关联](assets/associate-aem-assets-api-users-service-with-product-profile.png)
 
-需要注意的是，在现代化之前，在AEM Author实例中，有两个产品配置文件可用：**AEM Administrators-XXX**&#x200B;和&#x200B;**AEM Users-XXX**。 也可以将这些现有的产品配置文件与新的服务相关联。
+需要注意的是，在现代化之前，在AEM创作实例中，有两个产品配置文件可用：**AEM Administrators-XXX**&#x200B;和&#x200B;**AEM Users-XXX**。 也可以将这些现有的产品配置文件与新的服务相关联。
 
 ## 创建Adobe Developer Console (ADC)项目
 
@@ -163,12 +163,16 @@ _Admin Console_&#x200B;窗口显示新添加的产品配置文件。
 
    ![选择产品配置文件](assets/select-product-profile.png)
 
+   >[!CAUTION]
+   >
+   >    请注意，服务帐户（又称技术帐户）用户将获得“完全”访问权限，因为它与&#x200B;**AEM管理员 — XX - XX**&#x200B;产品配置文件相关联。
+
+
 1. 审查AEM API和身份验证配置。
 
    ![AEM API配置](assets/aem-api-configuration.png)
 
    ![身份验证配置](assets/authentication-configuration.png)
-
 
 ## 配置AEM实例以启用ADC项目通信
 
@@ -229,7 +233,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
 
 - 或者，您可以通过检查浏览器元素检查器中的资产来获取`assetId`。 查找`data-id="urn:aaid:aem:..."`属性。
 
-  ![Inspect资源](assets/inspect-asset.png)
+  ![检查资产](assets/inspect-asset.png)
 
 ### 使用浏览器调用API
 
@@ -243,12 +247,12 @@ GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
    ![API文档](assets/api-documentation.png)
 
 1. 输入以下值：
-   1. `bucket`值是不带Adobe域名(.adobeaemcloud.com)的AEM实例名称，例如`author-p63947-e1420428`。
+   1. `bucket`值是不带AEM域名(.adobeaemcloud.com)的Adobe实例名称，例如`author-p63947-e1420428`。
 
    1. 从ADC项目的OAuth服务器到服务器凭据中获取与&#x200B;**安全性**&#x200B;部分相关的`Bearer Token`和`X-Api-Key`值。 单击&#x200B;**生成访问令牌**&#x200B;以获取`Bearer Token`值并使用`ClientID`值作为`X-Api-Key`。
       ![生成访问令牌](assets/generate-access-token.png)
 
-   1. **Parameters**&#x200B;部分相关的`assetId`值是AEM中资源的唯一标识符。 `X-Adobe-Accept-Experimental`设置为1。
+   1. **参数**&#x200B;部分相关的`assetId`值是AEM中资源的唯一标识符。 `X-Adobe-Accept-Experimental`设置为1。
 
       ![调用API — 输入值](assets/invoke-api-input-values.png)
 
@@ -258,7 +262,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
 
    ![调用API — 响应](assets/invoke-api-response.png)
 
-以上步骤确认了AEM as a Cloud Service环境的现代化，从而启用AEM API访问。 它还确认已成功配置ADC项目，以及与AEM创作实例的OAuth服务器到服务器凭据ClientID通信。
+上述步骤确认了AEM as a Cloud Service环境的现代化，从而可启用AEM API访问。 它还确认已成功配置ADC项目，以及与AEM创作实例的OAuth服务器到服务器凭据ClientID通信。
 
 ### 示例NodeJS应用程序
 
