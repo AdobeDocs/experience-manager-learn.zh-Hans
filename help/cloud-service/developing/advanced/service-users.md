@@ -1,6 +1,6 @@
 ---
 title: 服务用户
-description: 了解如何在AEM代码中创建和使用服务用户，以提供对AEM存储库的受控编程访问。
+description: 了解如何在您的AEM代码中创建和使用服务用户，以提供对AEM存储库的受控编程访问。
 version: Cloud Service
 topic: Development
 feature: OSGI, Security
@@ -11,16 +11,16 @@ thumbnail: 337530.jpeg
 last-substantial-update: 2022-10-10T00:00:00Z
 exl-id: 66f627e4-863d-45d7-bc68-7ec108a1c271
 duration: 1053
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 7d114e59c0fb975994540e0af2e3d31a09c5a38f
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 11%
+source-wordcount: '96'
+ht-degree: 7%
 
 ---
 
 # 服务用户
 
-了解如何在AEM代码中创建和使用服务用户，以提供对AEM存储库的受控编程访问。
+了解如何在您的AEM代码中创建和使用服务用户，以提供对AEM存储库的受控编程访问。
 
 >[!VIDEO](https://video.tv.adobe.com/v/337530?quality=12&learn=on)
 
@@ -121,6 +121,8 @@ public class ContentStatisticsImpl implements ContentStatistics {
 ```
 
 ### org.apache.sling.jcr.repoinit.RepositoryInitializer-wknd-examples-statistics.config
+
+`.config`扩展名不支持所有Sling存储库初始值设定项指令，如`ACLOptions`。 要使用高级指令，请使用`.cfg.json`格式，其中Sling存储库初始值设定项指令的每一行都是单独的字符串文字。
 
 `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.author/org.apache.sling.jcr.repoinit.RepositoryInitializer-wknd-examples-statistics.config`
 
