@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-17296
 duration: 700
 exl-id: f41dff22-bd47-4ea0-98cc-f5ca30b22c4b
-source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '1961'
 ht-degree: 0%
 
 ---
@@ -404,7 +404,7 @@ $ git push origin teaser
 
 ### 发布以预览
 
-将Teaser块添加到页面后，[使用&#x200B;**管理发布**&#x200B;和AEM作者的网站管理员将页面发布到预览](../6-author-block.md)。
+将Teaser块添加到页面后，[使用&#x200B;**发布**&#x200B;按钮并将页面发布到预览](../6-author-block.md)，然后在通用编辑器中选择发布到&#x200B;**预览**。
 
 ## 阻止HTML
 

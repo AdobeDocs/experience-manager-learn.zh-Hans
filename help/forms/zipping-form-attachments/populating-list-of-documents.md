@@ -1,6 +1,6 @@
 ---
 title: 填充列表变量的自定义流程步骤
-description: 用于填充文档和字符串类型的列表变量的自定义流程步骤
+description: 了解如何在Adobe Experience Manager中创建自定义流程步骤以填充“文档”和“字符串”类型的列表变量。
 feature: Workflow
 topic: Development
 version: 6.5
@@ -9,28 +9,29 @@ level: Beginner
 kt: kt-8063
 exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '170'
 ht-degree: 1%
 
 ---
 
+
 # 自定义流程步骤
 
+本指南将指导您完成创建自定义流程步骤，以便在Adobe Experience Manager中用附件和附件名称填充“数组列表”类型的列表变量。 这些变量对于“发送电子邮件”工作流组件至关重要。
 
-实施了一个自定义流程步骤，以使用附件和附件名称填充“数组列表”类型的工作流变量。 然后，在发送电子邮件工作流组件中使用此变量。 如果您不熟悉如何创建OSGi捆绑包，请[按照以下说明进行操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+如果您不熟悉如何创建OSGi捆绑包，请按照以下[说明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)操作。
 
-自定义流程步骤中的代码执行以下操作
+自定义流程步骤中的代码执行以下操作：
 
-* 查询有效负荷文件夹下的所有自适应表单附件。 文件夹名称将作为进程参数传递给进程步骤。
-
-* 填充`listOfDocuments`工作流变量
-* 填充`attachmentNames`工作流变量
-* 设置工作流变量的值(`no_of_attachments`)
+1. 查询有效负荷文件夹下的所有自适应表单附件。 文件夹名称将作为进程参数传递给步骤。
+2. 填充`listOfDocuments`工作流变量。
+3. 填充`attachmentNames`工作流变量。
+4. 设置工作流变量`no_of_attachments`的值。
 
 ```java
- package com.aemforms.formattachments.core;
+package com.aemforms.formattachments.core;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -57,9 +58,8 @@ import com.day.cq.search.result.SearchResult;
 
 @Component(property = {
         Constants.SERVICE_DESCRIPTION + "=PopulateListOfDocuments",
-        "process.label" + "=PopulateListOfDocuments"
+        "process.label=PopulateListOfDocuments"
 })
-
 public class PopulateListOfDocuments implements WorkflowProcess {
 
         private static final Logger log = LoggerFactory.getLogger(PopulateListOfDocuments.class);
@@ -70,7 +70,7 @@ public class PopulateListOfDocuments implements WorkflowProcess {
         public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments) throws WorkflowException
         {
                 String payloadPath = workItem.getWorkflowData().getPayload().toString();
-                log.debug("The payload path  is" + payloadPath);
+                log.debug("The payload path is" + payloadPath);
                 MetaDataMap metaDataMap = workItem.getWorkflow().getWorkflowData().getMetaDataMap();
                 Session session = workflowSession.adaptTo(Session.class);
                 Map < String, String > map = new HashMap < String, String > ();
@@ -112,10 +112,11 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> 请确保在工作流中定义了以下变量以使代码正常工作
-> *listOfDocuments* — 文档的ArrayList类型的变量
-> *attachmentNames* — 字符串的ArrayList类型的变量
-> *no_of_attachments* — 双精度类型变量
+> 确保在工作流中定义了以下变量以使代码正常工作：
+> 
+> - `listOfDocuments`：文档的ArrayList类型的变量
+> - `attachmentNames`：类型为ArrayList的变量
+> - `no_of_attachments`： Double类型的变量
 
 ## 后续步骤
 

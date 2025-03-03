@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '588'
 ht-degree: 18%
 
 ---
@@ -90,7 +90,7 @@ ht-degree: 18%
 + Edge Delivery Services{#edge-delivery-services}
    + [概述](./edge-delivery-services/overview.md)
    + 正在开发{#developing}
-      + [先决条件](edge-delivery-services/developing/prerequisites.md)
+      + [前提条件](edge-delivery-services/developing/prerequisites.md)
       + [AEM样板](edge-delivery-services/developing/aem-boilerplate.md)
       + [内容存储库](edge-delivery-services/developing/content-repository.md)
       + [预览和发布](edge-delivery-services/developing/preview-and-publish.md)
@@ -110,6 +110,7 @@ ht-degree: 18%
          + [使用CSS和JS阻止](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
          + 操作方法{#how-to}
             + [块选项](./edge-delivery-services/developing/universal-editor/how-to/block-options.md)
+            + [页眉和页脚](./edge-delivery-services/developing/universal-editor/how-to/header-and-footer.md)
    + 操作方法{#how-to}
       + [RSS源](edge-delivery-services/how-to/rss.md)
       + [社交媒体共享](edge-delivery-services/how-to/social-media-sharing.md)
@@ -118,7 +119,7 @@ ht-degree: 18%
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 项目原型](developing/aem-project-archetype.md)
    + [AEM Sites入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
-   + [AEM Headless快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-hans){target=_blank}
+   + [AEM Headless快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-Headless/overview.html?lang=zh-hans){target=_blank}
    + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
    + [响应式断点](developing/responsive-breakpoints.md)
