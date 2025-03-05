@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
+source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1377'
 ht-degree: 15%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 15%
    + [架构](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
    + 战略与思想领导力{#strategy}
-      + [Experience Manager — 治理和人员配置模型和原型](./introduction/experience-manager-governance-and-staffing-models.md)
+      + [Experience Manager — 管理和人员配备模型和原型](./introduction/experience-manager-governance-and-staffing-models.md)
       + [如何使用Adobe Experience Manager提高内容速度](./introduction/drive-content-velocity-for-sites.md)
 + Experience Cloud集成{#integrations}
    + [集成](./integrations/experience-cloud.md)
@@ -36,12 +36,12 @@ ht-degree: 15%
    + [osgi](./underlying-technology/introduction-osgi.md)
    + [Java内容存储库](./underlying-technology/introduction-jcr.md)
    + [Sling](./underlying-technology/introduction-sling.md)
-   + [Author和Publish服务](./underlying-technology/introduction-author-publish.md)
+   + [创作和发布服务](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
-   + [AEM AssetsSidekick插件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
+   + [AEM Assets Sidekick插件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
-   + [项目](./cloud-manager/programs.md)
+   + [程序](./cloud-manager/programs.md)
    + [环境](./cloud-manager/environments.md)
    + [使用GitHub存储库](./cloud-manager/byogithub.md)
    + [CI/CD 生产管道](./cloud-manager/cicd-production-pipeline.md)
@@ -125,7 +125,7 @@ ht-degree: 15%
          + [本地开发设置](./developing/universal-editor/react-app/local-development-setup.md)
          + [检测React应用程序](./developing/universal-editor/react-app/instrument-to-edit-content.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html){target=_blank}
-+ 调试AEM{#debugging}
++ 正在调试AEM{#debugging}
    + 调试AEM SDK{#debugging-aem-sdk}
       + [概述](./debugging/aem-sdk-local-quickstart/overview.md)
       + [日志](./debugging/aem-sdk-local-quickstart/logs.md)
@@ -143,20 +143,26 @@ ht-degree: 15%
          + [遍历警告](./debugging/cloud-service/risks/traversals.md)
 + AEM API{#aem-apis}
    + [概述](./apis/overview.md)
-   + [基于OpenAPI的AEM API（服务器到服务器）](./apis/invoke-openapi-based-aem-apis.md)
-   + [基于OpenAPI的AEM API（用户验证）](./apis/invoke-openapi-based-aem-apis-from-web-app.md)
+   + OpenAPIs{#openapis}
+      + [概述](./apis/openapis/overview.md)
+      + [如何设置](./apis/openapis/setup.md)
+      + [服务器到服务器身份验证](./apis/openapis/use-cases/invoke-api-using-oauth-s2s.md)
+      + [用户身份验证（Web应用程序）](./apis/openapis/use-cases/invoke-api-using-oauth-web-app.md)
+      + 如何{#how-to}
+         + [凭据和产品配置文件管理](./apis/openapis/how-to/credentials-and-product-profile-management.md)
+         + [权限管理](./apis/openapis/how-to/services-user-group-permission-management.md)
 + 内容投放{#content-delivery}
    + [自定义域名](./content-delivery/custom-domain-names.md)
-   + [具有Adobe托管的CDN的自定义域名](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
+   + [使用Adobe托管的CDN的自定义域名](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
    + [使用客户CDN的自定义域名](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
    + [正在缓存](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
-   + [AdobeCDN — 超出缓存范围](./content-delivery/adobe-cdn-beyond-caching.md)
+   + [Adobe CDN — 超出缓存范围](./content-delivery/adobe-cdn-beyond-caching.md)
    + [自定义错误页面](./content-delivery/custom-error-pages.md)
    + [URL重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + 正在缓存{#caching}
    + [概述](./caching/overview.md)
-   + [AEM Publish服务](./caching/publish.md)
-   + [AEM Author服务](./caching/author.md)
+   + [AEM发布服务](./caching/publish.md)
+   + [AEM创作服务](./caching/author.md)
    + [CDN缓存命中率分析](./caching/cdn-cache-hit-ratio-analysis.md)
    + 如何{#how-to}
       + [启用缓存](./caching/how-to/enable-caching.md)
@@ -208,7 +214,7 @@ ht-degree: 15%
       + [BPA和CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [AEM现代化工具](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
       + [存储库现代化](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
-      + [asset compute微服务](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
+      + [Asset Compute微服务](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
       + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
       + [搜索和编制索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + 内容迁移{#content-migration}
@@ -216,7 +222,7 @@ ht-degree: 15%
          + [内容传输工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
          + [常见问题解答](./migration/moving-to-aem-as-a-cloud-service/content-migration/faq.md)
       + [疑难解答](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
-      + AEM Formsas a Cloud Service{#aem-forms}
+      + AEM Forms as a Cloud Service {#aem-forms}
          + [简介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [数字注册](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
          + [通信](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
@@ -233,7 +239,7 @@ ht-degree: 15%
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + [内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
-   + 正在为Formsas a Cloud Service{#developing-for-cloud-service}开发
+   + 正在为Forms as a Cloud Service{#developing-for-cloud-service}开发
       + [1 — 快速入门](./forms/developing-for-cloud-service/getting-started.md)
       + [2 — 安装IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [3 — 设置Git](./forms/developing-for-cloud-service/setup-git.md)
@@ -242,7 +248,7 @@ ht-degree: 15%
       + [6 — 自定义提交处理程序](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
       + [7 — 使用资源类型注册servlet](./forms/developing-for-cloud-service/registering-servlet-using-resourcetype.md)
       + [8 — 启用Forms Portal组件](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [9 — 包括Cloud Service和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [9 — 包括云服务和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [10 — 上下文感知云配置](./forms/developing-for-cloud-service/context-aware-fdm.md)
       + [11 — 推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [12 — 部署到开发环境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
@@ -316,7 +322,7 @@ ht-degree: 15%
       + [创建服务凭据](./forms/forms-cs-assembler/service-credentials.md)
       + [创建JWT令牌](./forms/forms-cs-assembler/create-jwt.md)
       + [创建访问令牌](./forms/forms-cs-assembler/create-access-token.md)
-      + [组合PDF文件](./forms/forms-cs-assembler/assemble-pdf-files.md)
+      + [汇编PDF文件](./forms/forms-cs-assembler/assemble-pdf-files.md)
       + [PDF/A实用程序](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [测试解决方案](./forms/forms-cs-assembler/test.md)
       + [挑战](./forms/forms-cs-assembler/challenge.md)
@@ -382,14 +388,14 @@ ht-degree: 15%
       + [将表单数据存储在SharePoint中](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
       + [使用SharePoint列表中的数据预填充表单](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
       + [使用工作流将数据插入SharePoint列表](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
-+ asset compute的可扩展性{#asset-compute}
++ Asset Compute可扩展性{#asset-compute}
    + [概述](./asset-compute/overview.md)
    + 设置{#set-up}
       + [帐户和服务配置](./asset-compute/set-up/accounts-and-services.md)
       + [本地开发环境](./asset-compute/set-up/development-environment.md)
       + [App Builder](./asset-compute/set-up/app-builder.md)
    + 开发{#develop}
-      + [创建Asset compute项目](./asset-compute/develop/project.md)
+      + [创建Asset Compute项目](./asset-compute/develop/project.md)
       + [配置环境变量](./asset-compute/develop/environment-variables.md)
       + [配置manifest.yml](./asset-compute/develop/manifest.md)
       + [开发工作人员](./asset-compute/develop/worker.md)
@@ -404,9 +410,9 @@ ht-degree: 15%
       + [元数据工作程序](./asset-compute/advanced/metadata.md)
    + [疑难解答](./asset-compute/troubleshooting.md)
 
-+ 多步Tutorials{#multi-step-tutorials}
++ 多步教程{#multi-step-tutorials}
    + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
-   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html){target=_blank}
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-Headless/graphql/overview.html){target=_blank}
    + [SPA编辑器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html){target=_blank}
    + [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html){target=_blank}
@@ -430,7 +436,7 @@ ht-degree: 15%
       + [迁移1](./expert-resources/cloud-5/cloud5-aem-content-migration-part-1.md)
       + [Dispatcher验证器](./expert-resources/cloud-5/cloud5-aem-dispatcher-validator.md)
       + [搜索和编制索引](./expert-resources/cloud-5/cloud5-aem-search-and-indexing.md)
-      + [AdobeApp Builder](./expert-resources/cloud-5/cloud5-adobe-app-builder.md)
+      + [Adobe App Builder](./expert-resources/cloud-5/cloud5-adobe-app-builder.md)
       + 第2{#season-2}季
          + [片段](./expert-resources/cloud-5/season-2/cloud5-experience-v-content-fragments.md)
          + [Repo Modernizer](./expert-resources/cloud-5/season-2/cloud5-repo-modernizer.md)
@@ -445,7 +451,7 @@ ht-degree: 15%
       + 第3{#season-3}季
          + [第三方搜索](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [Edge员工](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
-         + [Publish，在Edge Delivery Services中取消发布事件](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
+         + [在Edge Delivery Services中发布、取消发布事件](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [查询索引和Excel公式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
          + [自带Cloudflare CDN](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
          + [集成AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
