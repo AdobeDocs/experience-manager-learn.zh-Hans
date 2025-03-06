@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1387'
 ht-degree: 15%
 
 ---
@@ -309,8 +309,12 @@ ht-degree: 15%
       + [将数据与模板合并](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [测试解决方案](./forms/doc-gen-forms-cs/test.md)
       + [挑战](./forms/doc-gen-forms-cs/challenge.md)
-   + 使用DocAssurance API{#doc-assurance-api}
-      + [示例代码段](./forms/doc-assurance-api/using-doc-assurance-api.md)
+   + 使用Forms Document Services API{#forms-document-services-api}
+      + [简介](./forms/forms-document-services/introduction.md)
+      + [配置OpenAPI](./forms/forms-document-services/using-open-api.md)
+      + [生成访问令牌](./forms/forms-document-services/generate-access-token.md)
+      + [应用使用权限](./forms/forms-document-services/make-api-calls.md)
+      + [示例代码](./forms/forms-document-services/sample-project.md)
    + 使用批处理API{#formscs-batch-api}生成文档
       + [简介](./forms/formscs-batch-api/introduction.md)
       + [配置Azure存储](./forms/formscs-batch-api/configure-azure-storage.md)
