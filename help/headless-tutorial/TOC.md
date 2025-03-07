@@ -1,6 +1,6 @@
 ---
 user-guide-title: AEM Headless 快速入门
-user-guide-description: 一个端到端教程，它演示了如何使用 AEM Headless 构建和展示内容。
+user-guide-description: 一个端到端教程，它演示了如何使用 AEM Headless 生成和展示内容。
 breadcrumb-title: AEM Headless 教程
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 solution: Experience Manager, Experience Manager Sites
@@ -31,7 +31,7 @@ ht-degree: 13%
       + [3 — 创建GraphQL查询](./graphql/video-series/creating-graphql-queries.md)
       + [4 — 内容片段变量](./graphql/video-series/content-fragment-variations.md)
       + [5 - GraphQL端点](./graphql/video-series/graphql-endpoints.md)
-      + [6 — 作者和Publish架构](./graphql/video-series/author-publish-architecture.md)
+      + [6 — 创作和发布架构](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL持久查询](./graphql/video-series/graphql-persisted-queries.md)
    + 基本教程{#multi-step}
       + [概述](./graphql/multi-step/overview.md)
@@ -86,7 +86,7 @@ ht-degree: 13%
       + [4 — 导航和路由](./spa-editor/react/navigation-routing.md)
       + [5 — 自定义组件](./spa-editor/react/custom-component.md)
       + [6 — 扩展组件](./spa-editor/react/extend-component.md)
-   + angular{#angular}
+   + Angular{#angular}
       + [概述](./spa-editor/angular/overview.md)
       + [1 - SPA编辑器项目](./spa-editor/angular/create-project.md)
       + [2 — 集成SPA](./spa-editor/angular/integrate-spa.md)
@@ -115,7 +115,7 @@ ht-degree: 13%
    + [4 — 定义Content Services模板](./content-services/chapter-4.md)
    + [5 — 创作Content Services页面](./content-services/chapter-5.md)
    + [6 — 在AEM Publish上公开内容以进行交付](./content-services/chapter-6.md)
-   + [7 — 从移动设备应用程序使用AEM Content Services](./content-services/chapter-7.md)
+   + [7 — 从移动应用程序使用AEM Content Services](./content-services/chapter-7.md)
 + 代码示例{#code-samples}
    + [筛选React应用程序](./graphql/code-samples/filtering-react-app.md)
    + [过滤前置应用程序](./graphql/code-samples/filtering-preact-app.md)
