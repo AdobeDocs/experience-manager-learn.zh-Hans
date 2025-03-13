@@ -12,7 +12,7 @@ last-substantial-update: 2024-06-21T00:00:00Z
 jira: KT-15945
 thumbnail: KT-15945.jpeg
 exl-id: fa9ee14f-130e-491b-91b6-594ba47a7278
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: 98f1996dbeb6a683f98ae654e8fa13f6c7a2f9b2
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 具有客户CDN的![自定义域名](./assets/add-custom-domain-name-with-customer-CDN.png){width="800" zoomable="yes"}
 
-## 先决条件
+## 前提条件
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432562?quality=12&learn=on)
 
@@ -40,7 +40,7 @@ ht-degree: 0%
    - 证书颁发机构(CA) — 为您的站点域（如[DigitCert](https://www.digicert.com/)）请求已签名的证书
    - 客户CDN — 设置客户CDN并添加SSL证书和域详细信息，如AWS CloudFront、Azure CDN或Akamai。
    - 域名系统(DNS)托管服务 — 为您的自定义域添加DNS记录，如Azure DNS或AWS Route 53。
-- 访问[AdobeCloud Manager](https://my.cloudmanager.adobe.com/)以将HTTP标头验证CDN规则部署到AEM as a Cloud Service环境。
+- 访问[Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)以将HTTP标头验证CDN规则部署到AEM as a Cloud Service环境。
 - 示例[AEM WKND](https://github.com/adobe/aem-guides-wknd)站点已部署到[生产程序](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs)类型的AEM as a Cloud Service环境。
 
 如果您无权访问第三方服务，请&#x200B;_与您的安全或托管团队协作以完成步骤_。
@@ -76,7 +76,7 @@ $ openssl crl2pkcs7 -nocrl -certfile <YOUR-SIGNED-CERT>.crt | openssl pkcs7 -pri
 
 签名证书可以包含证书链，证书链包括根证书和中间证书以及终端实体证书。
 
-AdobeCloud Manager在单独的表单字段&#x200B;_中接受终端实体证书和证书链_，因此您必须从已签名的证书中提取终端实体证书和证书链。
+Adobe Cloud Manager在单独的表单字段&#x200B;_中接受最终实体证书和证书链_，因此您必须从已签名的证书中提取最终实体证书和证书链。
 
 在本教程中，以`*.enablementadobe.com`域颁发的[DigitCert](https://www.digicert.com/)签名证书为例。 通过在文本编辑器中打开签名证书并复制`-----BEGIN CERTIFICATE-----`和`-----END CERTIFICATE-----`标记之间的内容来提取最终实体和证书链。
 
@@ -90,7 +90,7 @@ AdobeCloud Manager在单独的表单字段&#x200B;_中接受终端实体证书�
 - 将自定义域名添加到CDN。
 - 配置CDN以缓存内容，如图像、CSS和JavaScript文件。
 - 将`X-Forwarded-Host` HTTP标头添加到CDN设置，以便您的CDN在发送给AEMCD源的所有请求中均包含此标头。
-- 确保将`Host`标头值设置为包含项目和环境ID且以`adobeaemcloud.com`结尾的默认AEM as a Cloud Service域。 从客户CDN传递到AdobeCDN的HTTP主机标头值必须是默认的AEM as a Cloud Service域，任何其他值都会导致错误状态。
+- 确保将`Host`标头值设置为包含项目和环境ID且以`adobeaemcloud.com`结尾的默认AEM as a Cloud Service域。 从客户CDN传递到Adobe CDN的HTTP主机标头值必须是默认的AEM as a Cloud Service域，任何其他值都会导致错误状态。
 
 ## 配置DNS记录
 
@@ -113,7 +113,7 @@ AdobeCloud Manager在单独的表单字段&#x200B;_中接受终端实体证书�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432565?quality=12&learn=on)
 
-如果没有HTTP标头验证CDN规则，`Host`标头值将设置为包含项目和环境ID且以`adobeaemcloud.com`结尾的默认AEM as a Cloud Service域。 仅当部署了HTTP标头验证CDN规则时，AdobeCDN才会将`Host`标头值转换为从客户CDN接收的`X-Forwarded-Host`的值。 否则，`Host`标头值将按原样传递到AEM as a Cloud Service环境，并且不使用`X-Forwarded-Host`标头。
+如果没有HTTP标头验证CDN规则，`Host`标头值将设置为包含项目和环境ID且以`adobeaemcloud.com`结尾的默认AEM as a Cloud Service域。 仅当部署了HTTP标头验证CDN规则时，Adobe CDN才会将`Host`标头值转换为从客户CDN接收的`X-Forwarded-Host`的值。 否则，`Host`标头值将按原样传递到AEM as a Cloud Service环境，并且不使用`X-Forwarded-Host`标头。
 
 ### 用于打印主机标头值的示例servlet代码
 
@@ -201,16 +201,16 @@ public class VerifyHeadersServlet extends SlingSafeMethodsServlet {
   kind: "CDN"
   version: "1"
   metadata:
-  envTypes: ["prod"]
+    envTypes: ["prod"]
   data:
-  authentication:
+    authentication:
       authenticators:
-      - name: edge-auth
+        - name: edge-auth
           type: edge
           edgeKey1: ${{CDN_EDGEKEY_080124}}
           edgeKey2: ${{CDN_EDGEKEY_110124}}
       rules:
-      - name: edge-auth-rule
+        - name: edge-auth-rule
           when: { reqProperty: tier, equals: "publish" }
           action:
           type: authenticate
@@ -224,7 +224,7 @@ public class VerifyHeadersServlet extends SlingSafeMethodsServlet {
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432567?quality=12&learn=on)
 
-更新客户CDN以在`X-AEM-Edge-Key` HTTP标头中传递密钥。 AdobeCDN使用该密钥来验证来自客户CDN的请求，并将`Host`标头值转换为从客户CDN接收的`X-Forwarded-Host`的值。
+更新客户CDN以在`X-AEM-Edge-Key` HTTP标头中传递密钥。 Adobe CDN使用该密钥来验证请求是否来自客户CDN，并将`Host`标头值转换为从客户CDN接收的`X-Forwarded-Host`的值。
 
 ## 端到端视频
 
