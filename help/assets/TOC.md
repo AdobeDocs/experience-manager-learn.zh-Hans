@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: efaf77a9f8e68f679be3469c39697b57366684b3
+source-git-commit: 77beb9f543bc6dc8c1ab4993c969375ce3e238e8
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '450'
 ht-degree: 16%
 
 ---
@@ -60,9 +60,9 @@ ht-degree: 16%
 
 + 高级功能{#advanced}
    + [3D资源](./advanced/3d-assets.md)
-   + [注释PDF输出](./advanced/customizing-annotations-pdf-output.md)
+   + [批注PDF输出](./advanced/customizing-annotations-pdf-output.md)
    + [Assets报表](./advanced/asset-reports.md)
-   + [content credentials](./advanced/content-credentials.md)
+   + [内容凭据](./advanced/content-credentials.md)
    + [已阻止的标记](./advanced/blocked-tags.md)
    + [提取存档](./advanced/extract-archive.md)
    + [权限(CUG)](./advanced/closed-user-groups.md)
@@ -82,7 +82,7 @@ ht-degree: 16%
    + [设置](./content-hub/set-up.md)
    + [配置](./content-hub/configure.md)
    + [添加资源](./content-hub/add-assets.md)
-   + [下载资源](./content-hub/download-assets.md)
+   + [下载资产](./content-hub/download-assets.md)
    + [使用Adobe Express的图像变体](./content-hub/image-variants.md)
    + [收藏集](./content-hub/collections.md)
    + [共享](./content-hub/share.md)
@@ -94,9 +94,9 @@ ht-degree: 16%
    + [AEM Assets和GenStudio for Performance Marketing](https://experienceleague.adobe.com/en/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
 
 + 共享和分发{#sharing}
-   + [下载资源](./sharing/download.md)
+   + [下载资产](./sharing/download.md)
    + [导出资源](./sharing/export.md)
-   + [Publish资源](./sharing/publish.md)
+   + [发布资源](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
@@ -109,16 +109,16 @@ ht-degree: 16%
       + [主题资产共享公域](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons资产工具包](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
-+ 创意工作流{#creative-workflows}
++ Creative工作流{#creative-workflows}
    + [Adobe Express集成](./creative-workflows/adobe-express.md)
    + [Adobe Express和AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM桌面应用程序](./creative-workflows/aem-desktop-app.md)
-   + [Adobe资源链接](./creative-workflows/adobe-asset-link.md)
+   + [Adobe资产链接](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
-+ AdobeAsset Link{#adobe-asset-link}
++ Adobe Asset Link{#adobe-asset-link}
    + [设置](./adobe-asset-link/setup.md)
-   + [访问Adobe资源链接](./adobe-asset-link/launch-adobe-asset-link.md)
+   + [访问Adobe Asset Link](./adobe-asset-link/launch-adobe-asset-link.md)
    + [面板概述](./adobe-asset-link/panel-overview.md)
    + [文件和收藏集](./adobe-asset-link/files-and-collections.md)
    + [下载和上传](./adobe-asset-link/download-and-upload.md)
@@ -131,13 +131,14 @@ ht-degree: 16%
 
 + 内容自动化{#content-automation}
    + [概述](./content-automation/overview.md)
-   + [创意运营](./content-automation/creative-operations.md)
+   + [Creative操作](./content-automation/creative-operations.md)
    + [Photoshop操作](./content-automation/photoshop-actions.md)
 
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media概述](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic桌面应用程序](dynamic-media/dynamic-media-classic-desktop-application.md)
    + 图像{#images}
+      + [Dynamic Media模板](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media快照](dynamic-media/dynamic-media-snapshot.md)
       + [智能裁切](dynamic-media/smart-crop-feature-video-use.md)
       + [图像锐化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
@@ -158,7 +159,7 @@ ht-degree: 16%
       + [体验片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media核心组件](dynamic-media/dynamic-media-core-components.md)
 
-   + Tutorials{#tutorials}
+   + 教程{#tutorials}
       + [创建轮播集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [创建图像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [创建图像预设](dynamic-media/tutorials/creating-image-presets.md)
@@ -181,7 +182,7 @@ ht-degree: 16%
       + AEM Experts系列{#aem-experts-series}
          + [概述](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [设置](./workfront/enhanced-connector/aem-experts-series/setup.md)
-         + [Workfront表单和AEM元数据](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
+         + [Workfront forms和AEM元数据](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
          + [标记、项目链接文件夹和文件夹元数据](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)
          + [高级设置和工作流](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 

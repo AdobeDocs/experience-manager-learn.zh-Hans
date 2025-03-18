@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 500
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: ca356d38-262d-4c30-83a0-01c8a1381ee6
+source-git-commit: 77beb9f543bc6dc8c1ab4993c969375ce3e238e8
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
-
 
 # 创作块
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 1. 验证了块定义和模型的正确性。
 1. 它允许开发人员查看块的语义HTML，这是开发的基础。
-1. 它允许将内容和语义HTML部署到预览环境，支持更快的块开发。
+1. 它支持将内容和语义HTML部署到预览环境，从而支持更快的块开发。
 
 ## 使用`teaser`分支中的代码打开通用编辑器
 
@@ -54,10 +54,10 @@ ht-degree: 0%
 
    ![通用编辑器 — 作者块](./assets/6-author-block/author-block.png)
 
-8. 完成创作后，切换到上一个浏览器选项卡(AEM Sites管理员)，选择Teaser页面，单击&#x200B;**管理发布**，选择&#x200B;**预览**，然后将更改发布到预览环境。 然后将更改发布到网站的`aem.page`域。
-   ![AEM Sites - Publish或预览](./assets/6-author-block/publish-to-preview.png)
+8. 完成创作后，选择通用编辑器右上角的&#x200B;**发布**&#x200B;按钮，选择发布到&#x200B;**预览**，然后将更改发布到预览环境。 然后将更改发布到网站的`aem.page`域。
+   ![AEM Sites — 发布或预览](./assets/6-author-block/publish-to-preview.png)
 
-9. 等待发布更改以预览，然后通过[http://localhost:3000/branches/teaser](http://localhost:3000/branches/teaser)上的[AEM CLI](./3-local-development-environment.md#install-the-aem-cli)打开网页。
+9. 等待发布更改以进行预览，然后通过[http://localhost:3000/branches/teaser](http://localhost:3000/branches/teaser)上的[AEM CLI](./3-local-development-environment.md#install-the-aem-cli)打开网页。
 
    ![本地站点 — 刷新](./assets/6-author-block/preview.png)
 
