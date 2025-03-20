@@ -1,5 +1,5 @@
 ---
-title: 包含WAF规则的流量过滤器规则的示例和结果分析
+title: 流量过滤器规则(包括WAF规则)的示例和结果分析
 description: 了解各种流量过滤器规则，包括WAF规则示例。 此外，如何使用AEM as a Cloud Service (AEMCS) CDN日志分析结果。
 version: Cloud Service
 feature: Security
@@ -12,28 +12,28 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 532
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 67091c068634e6c309afaf78942849db626128f6
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
 
 ---
 
-# 包含WAF规则的流量过滤器规则的示例和结果分析
+# 流量过滤器规则(包括WAF规则)的示例和结果分析
 
 了解如何使用Adobe Experience Manager as a Cloud Service (AEMCS) CDN日志和仪表板工具声明各种类型的流量过滤器规则并分析结果。
 
-在此部分中，您将探索流量过滤器规则的实际示例，包括WAF规则。 您将学习如何使用[AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)，根据URI（或路径）、IP地址、请求数和不同的攻击类型来记录、允许和阻止请求。
+在此部分中，您将探索流量过滤器规则(包括WAF规则)的实际示例。 您将了解如何使用[AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)，根据URI（或路径）、IP地址、请求数和各种攻击类型来记录、允许和阻止请求。
 
-此外，您将了解如何使用功能板工具来摄取AEMCS CDN日志，以通过Adobe提供的示例功能板可视化基本指标。
+此外，您将了解如何使用功能板工具来摄取AEMCS CDN日志，并通过Adobe提供的示例功能板可视化基本指标。
 
-为了与您的特定要求保持一致，您可以增强和创建自定义功能板，从而获取更深入的见解并优化AEM站点的规则配置。
+为了与您的特定要求保持一致，您可以增强和创建自定义功能板，从而更深入地了解并优化AEM网站的规则配置。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425404?quality=12&learn=on)
 
 ## 示例
 
-让我们探索各种流量过滤器规则的示例，包括WAF规则。 请确保您已按照前[介绍如何设置](./how-to-setup.md)章中的说明完成所需的设置过程，并且您已克隆[AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)。
+让我们探索各种流量过滤器规则示例，包括WAF规则。 请确保您已按照前[介绍如何设置](./how-to-setup.md)章中的说明完成所需的设置过程，并且您已克隆[AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)。
 
 ### 记录请求
 
@@ -67,11 +67,11 @@ data:
 
 - 提交更改并将其推送到Cloud Manager Git存储库。
 
-- 使用之前创建的Cloud Manager `Dev-Config`配置管道[将更改部署到AEM开发环境](how-to-setup.md#deploy-rules-through-cloud-manager)。
+- 使用之前创建的AEM `Dev-Config`配置管道[将更改部署到Cloud Manager开发环境](how-to-setup.md#deploy-rules-through-cloud-manager)。
 
   ![Cloud Manager配置管道](./assets/cloud-manager-config-pipeline.png)
 
-- 通过在Publish服务（例如，`https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`）上登录并注销程序的WKND网站来测试规则。 您可以使用`asmith/asmith`作为用户名和密码。
+- 通过在Publish服务（例如，`https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`）上登录并注销程序的WKND站点来测试规则。 您可以使用`asmith/asmith`作为用户名和密码。
 
   ![WKND登录](./assets/wknd-login.png)
 
@@ -79,7 +79,7 @@ data:
 
 让我们通过从Cloud Manager下载AEMCS CDN日志并使用您在前一章中设置的[仪表板工具](how-to-setup.md#analyze-results-using-elk-dashboard-tool)来分析`publish-auth-requests`规则的结果。
 
-- 从[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;**环境**&#x200B;卡中，下载AEMCS **Publish**&#x200B;服务的CDN日志。
+- 从[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;**环境**&#x200B;卡中，下载AEMCS **发布**&#x200B;服务的CDN日志。
 
   ![Cloud Manager CDN日志下载](./assets/cloud-manager-cdn-log-downloads.png)
 
@@ -200,7 +200,7 @@ data:
 - 若要模拟DoS攻击，请使用以下[Vegeta](https://github.com/tsenart/vegeta)命令。
 
   ```shell
-  $ echo "GET https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html" | vegeta attack -rate=120 -duration=5s | vegeta report
+  $ echo "GET https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html" | vegeta attack -rate=120 -duration=60s | vegeta report
   ```
 
   此命令在5秒内发出120个请求并输出报告。 如您所见，成功率为32.5%；其余部分接收到406 HTTP响应代码，表明流量被阻止。
@@ -231,7 +231,7 @@ data:
 
 #### 不带WAFFlags
 
-让我们先看看在声明WAF规则之前的体验。 在您的程序上启用WAF-DDoS后，您的CDN会默认记录任何匹配的恶意流量，因此您拥有适当的信息来制定适当的规则。
+我们首先来看一下在声明WAF Rules之前的体验。 在您的项目上启用WAF-DDoS后，您的CDN会默认记录任何匹配的恶意流量，因此您拥有适当的信息以制定适当的规则。
 
 让我们从在不添加WAF规则（或使用`wafFlags`属性）的情况下攻击WKND站点开始并分析结果。
 
@@ -321,9 +321,9 @@ data:
 
 此时，您应该会看到&#x200B;**已阻止的请求**&#x200B;下的条目，以及客户端IP (cli_ip)、主机、URL、操作(waf_action)和规则名称(waf_match)列中的相应值。
 
-![ELK工具仪表板WAF阻止的请求](./assets/elk-tool-dashboard-waf-blocked.png)
+![ELK工具仪表板WAF已阻止请求](./assets/elk-tool-dashboard-waf-blocked.png)
 
-此外，**WAF标记分布**&#x200B;和&#x200B;**热门攻击**&#x200B;面板会显示其他详细信息。
+此外，**WAF标记分发**&#x200B;和&#x200B;**热门攻击**&#x200B;面板会显示其他详细信息。
 
 ![ELK工具仪表板WAF标记攻击请求](./assets/elk-tool-dashboard-waf-blocked-top-attacks-1.png)
 
@@ -335,9 +335,9 @@ data:
 
 
 - 已分析、已标记和已阻止的请求
-- WAF标记随时间变化的分布
+- WAF标记一段时间的分布情况
 - 随时间触发的流量过滤器规则
-- 按WAF标志ID排在前面的攻击
+- 按WAF标记ID划分的热门攻击
 - 顶级触发的流量过滤器
 - 按客户端IP、国家/地区和用户代理划分的前100名攻击者
 

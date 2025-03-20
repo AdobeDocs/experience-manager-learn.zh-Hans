@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
+source-git-commit: 67091c068634e6c309afaf78942849db626128f6
 workflow-type: tm+mt
 source-wordcount: '1924'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 - **缓存：**&#x200B;使用良好的缓存策略，DDoS攻击的影响会更加有限，因为CDN会阻止大多数请求访问源并导致性能下降。
 - **自动缩放：** AEM创作和发布服务可自动缩放以处理流量尖峰，但它们仍可能会受到流量突然大量增加的影响。
-- **阻止：**&#x200B;如果AdobeCDN从特定IP地址到每个CDN PoP(Point of Presence)的流量超过Adobe定义的速率，则CDN将阻止到源的流量。
+- **阻止：**&#x200B;如果到达源位置的流量超过特定IP地址的Adobe定义速率，则Adobe CDN将根据CDN PoP(Point of Presence)阻止该流量。
 - **警报：**&#x200B;当流量超过特定速率时，操作中心会在源位置发送流量尖峰警报通知。 当流向任何给定CDN Po的流量超过每个IP地址的&#x200B;_Adobe定义的_&#x200B;请求速率时，将触发此警报。 有关更多详细信息，请参阅[流量过滤器规则警报](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)。
 
 这些内置的保护应被视为组织将DDoS攻击的性能影响降至最低的能力的基准。 由于每个网站都有不同的性能特征，并且在达到Adobe定义的速率限制之前可能会看到性能下降，因此建议通过&#x200B;_客户配置_&#x200B;来扩展默认保护。
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 以下步骤反映了客户保护其网站的可能过程。
 
-1. 识别是否需要速率限制流量过滤器规则。 这可能是由于收到Adobe的开箱即用流量尖峰原始警报，也可能是主动决定采取预防措施以降低DDo成功的风险。
+1. 识别是否需要速率限制流量过滤器规则。 这可能是由于收到Adobe的开箱即用流量尖峰来自源警报，也可能是主动决定采取预防措施以降低DDo成功的风险。
 1. 使用功能板（如果您的网站已上线）分析流量模式，以确定速率限制流量过滤器规则的最佳阈值。 如果您的网站尚未上线，请根据流量预期选择值。
 1. 使用上一步的值，配置速率限制流量过滤器规则。 确保启用相应的警报，以便在达到阈值时通知您。
 1. 每当发生流量尖峰时，接收流量过滤器规则警报，这为您提供了关于您的组织是否可能被恶意行为者定位的宝贵见解。
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 ## 认识到需要配置规则 {#recognize-the-need}
 
-如前所述，默认情况下，Adobe会阻止CDN上超过特定速率的流量，但是，某些网站可能会遇到低于该阈值的性能下降问题。 因此，应配置速率限制流量过滤器规则。
+如前所述，默认情况下，Adobe会阻止CDN上超过特定速率的流量，但是，某些网站可能会遇到性能低于该阈值的情况。 因此，应配置速率限制流量过滤器规则。
 
 理想情况下，您最好在投入生产之前配置规则。 在实践中，许多组织只会在收到流量尖峰警报（表示可能发生攻击）后反应性地声明规则。
 
@@ -86,7 +86,7 @@ Adobe提供的&#x200B;**Elasticsearch、Logstash和Kibana (ELK)**&#x200B;仪表�
 - 克隆[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub存储库。
 - 按照[如何设置ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container)步骤设置工具。
 - 在设置过程中，导入`traffic-filter-rules-analysis-dashboard.ndjson`文件以可视化数据。 _CDN流量_&#x200B;仪表板包括可视化图表，这些可视化图表显示CDN Edge和源中每个IP/POP的最大请求数。
-- 从[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_环境_&#x200B;卡中，下载AEMCS Publish服务的CDN日志。
+- 从[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_环境_&#x200B;卡中，下载AEMCS发布服务的CDN日志。
 
   ![Cloud Manager CDN日志下载](./assets/cloud-manager-cdn-log-downloads.png)
 
@@ -247,7 +247,7 @@ data:
 使用以下[Vegeta](https://github.com/tsenart/vegeta)命令，您可以向您的网站发出许多请求：
 
 ```shell
-$ echo "GET https://<YOUR-WEBSITE-DOMAIN>" | vegeta attack -rate=120 -duration=5s | vegeta report
+$ echo "GET https://<YOUR-WEBSITE-DOMAIN>" | vegeta attack -rate=120 -duration=60s | vegeta report
 ```
 
 上述命令在5秒内发出120个请求并输出报告。 假设网站访问速率不受限制，这可能会导致流量激增。

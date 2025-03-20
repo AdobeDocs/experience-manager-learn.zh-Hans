@@ -12,7 +12,7 @@ last-substantial-update: 2024-06-21T00:00:00Z
 jira: KT-15945
 thumbnail: KT-15945.jpeg
 exl-id: fa9ee14f-130e-491b-91b6-594ba47a7278
-source-git-commit: 98f1996dbeb6a683f98ae654e8fa13f6c7a2f9b2
+source-git-commit: 67091c068634e6c309afaf78942849db626128f6
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 具有客户CDN的![自定义域名](./assets/add-custom-domain-name-with-customer-CDN.png){width="800" zoomable="yes"}
 
-## 前提条件
+## 先决条件
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432562?quality=12&learn=on)
 
@@ -213,8 +213,8 @@ public class VerifyHeadersServlet extends SlingSafeMethodsServlet {
         - name: edge-auth-rule
           when: { reqProperty: tier, equals: "publish" }
           action:
-          type: authenticate
-          authenticator: edge-auth
+            type: authenticate
+            authenticator: edge-auth
   ```
 
 - 使用Cloud Manager UI创建机密类型环境变量(CDN_EDGEKEY_080124、CDN_EDGEKEY_110124)。
