@@ -1,7 +1,7 @@
 ---
 title: Cloud 5 - Cloud Manager的秘密 — 单元测试
 description: 使用AEM和Cloud Manager进行单元测试
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 role: Admin, Developer
 level: Intermediate
 thumbnail: 343623.jpeg
@@ -9,7 +9,7 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 09a4b4fd-b4b5-413b-bd27-d0c1c41b1c8d
 duration: 315
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 6%

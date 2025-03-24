@@ -2,7 +2,7 @@
 title: 在App Builder操作中生成JWT访问令牌
 description: 了解如何使用JWT凭据生成访问令牌以用于App Builder操作。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Intermediate
@@ -10,7 +10,7 @@ jira: KT-11743
 last-substantial-update: 2023-01-17T00:00:00Z
 exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
 duration: 151
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 在App Builder操作中生成JWT访问令牌
 
-App Builder操作可能需要与与App Builder应用程序也部署的Adobe Developer Console项目关联的AdobeAPI进行交互。
+App Builder操作可能需要与与Adobe项目关联的Adobe Developer Console API交互，App Builder应用程序也将需要部署。
 
 这可能要求App Builder操作生成与所需Adobe Developer Console项目关联的自己的JWT访问令牌。
 
@@ -50,7 +50,7 @@ JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 
 ### Metascopes
 
-确定App Builder操作与之交互的AdobeAPI及其元数据。 在`JWT_METASCOPES`键中列出带有逗号分隔符的metascope。 [Adobe的JWT Metascope文档](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/)中列出了有效的Metascope。
+确定App Builder操作与之交互的Adobe API及其元数据。 在`JWT_METASCOPES`键中列出带有逗号分隔符的metascope。 [Adobe的JWT Metascope文档](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/)中列出了有效的Metascope。
 
 
 例如，可以将以下值添加到`.env`中的`JWT_METASCOPES`键中：
@@ -136,7 +136,7 @@ runtimeManifest:
 
 ## 用于访问令牌的JWT凭据
 
-在App Builder操作中，JWT凭据在`params`对象中可用，可由[`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth)用于生成访问令牌，该令牌反过来可以访问其他AdobeAPI和服务。
+在App Builder操作中，JWT凭据在`params`对象中可用，可由[`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth)用于生成访问令牌，该令牌进而可以访问其他Adobe API和服务。
 
 ```javascript
 const fetch = require("node-fetch");

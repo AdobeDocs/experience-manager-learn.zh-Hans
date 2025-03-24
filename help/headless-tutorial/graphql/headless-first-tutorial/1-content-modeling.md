@@ -1,7 +1,7 @@
 ---
 title: 内容建模 — AEM Headless第一个教程
 description: 了解如何在AEM中利用内容片段、创建片段模型和使用GraphQL端点。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 6e5e3cb4-9a47-42af-86af-da33fd80cb47
 duration: 175
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 9%
@@ -21,11 +21,11 @@ ht-degree: 9%
 
 # 内容建模
 
-欢迎阅读有关Adobe Experience Manager (AEM)中的内容片段和GraphQL端点的教程一章。 我们将介绍如何利用内容片段、创建片段模型以及在AEM中使用GraphQL端点。
+欢迎阅读有关Adobe Experience Manager (AEM)中的内容片段和GraphQL端点的教程一章。 我们将介绍如何在AEM中使用内容片段、创建片段模型和使用GraphQL端点。
 
 内容片段提供了一种用于跨渠道管理内容的结构化方法，提供了灵活性和可重用性。 在AEM中启用内容片段允许创建模块化内容，从而增强一致性和适应性。
 
-首先，我们将引导您在AEM中启用内容片段，其中包括实现无缝集成所需的配置和设置。
+首先，我们将指导您如何在AEM中启用内容片段，其中涵盖无缝集成所需的配置和设置。
 
 接下来，我们将介绍如何创建片段模型，其中定义了结构和属性。 了解如何根据您的内容要求设计模型并有效地管理它们。
 
@@ -33,7 +33,7 @@ ht-degree: 9%
 
 此外，我们将探讨定义AEM GraphQL端点。 GraphQL会高效地从AEM中检索数据，我们将设置和配置端点以公开所需数据。 持久查询将优化性能和缓存。
 
-在本教程中，我们将提供说明、代码示例和实用提示。 到最后，您将具备启用内容片段、创建片段模型、生成片段以及定义AEM GraphQL端点和持久查询的技能。 让我们开始吧！
+在本教程中，我们将提供说明、代码示例和实用提示。 到最后，您将具备启用内容片段、创建片段模型、生成片段，以及定义AEM GraphQL端点和持久查询的技能。 让我们开始吧！
 
 ## 上下文感知配置
 
@@ -111,7 +111,7 @@ ht-degree: 9%
 
 1. 单击&#x200B;__创建__，为新端点提供一个名称并选择新创建的配置。
 
-   ![AEM Headless GraphQL终结点](./assets/1/endpoint.png)
+   ![AEM Headless GraphQL端点](./assets/1/endpoint.png)
 
 ## GraphQL 持久查询
 
@@ -193,6 +193,6 @@ ht-degree: 9%
 
 ## 后续步骤
 
-恭喜！您已成功将AEM as a Cloud Service配置为允许创建内容片段和GraphQL端点。 您还创建了一个内容片段模型和内容片段，并定义了GraphQL端点和持久查询。 现在，您已准备好进入下一教程章节，您将在该章节中了解如何创建使用您在本章中创建的内容片段和GraphQL端点的AEM Headless React应用程序。
+恭喜！您已成功将AEM as a Cloud Service配置为允许创建内容片段和GraphQL端点。 您还创建了一个内容片段模型和内容片段，并定义了GraphQL端点和持久查询。 您现在可以转到下一教程章了，您将了解如何创建使用您在本章中创建的内容片段和GraphQL端点的AEM Headless React应用程序。
 
 [下一章：AEM Headless API和React](./2-aem-headless-apis-and-react.md)

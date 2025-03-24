@@ -2,14 +2,14 @@
 title: 将AEM Forms用于聊天机器人
 description: 解析ChatBot数据
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-15344
 topic: Development
 role: User
 level: Intermediate
 exl-id: 3c304b0a-33f8-49ed-a576-883df4759076
 duration: 22
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # 解析ChatBot数据
 
-已使用[ChatBot webhook](https://www.chatbot.com/help/webhooks/what-are-webhooks/)将ChatBot数据发送到AEM servlet。
+已使用[ChatBot webhook](https://www.chatbot.com/help/webhooks/what-are-webhooks/)将ChatBot数据发送到AEM Servlet。
 在ChatBot中捕获的数据采用JSON格式，用户在属性对象中输入了数据，如下所示
 ![聊天机器人数据](assets/chat-bot-data.png)
 

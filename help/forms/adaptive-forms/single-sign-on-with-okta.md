@@ -2,21 +2,21 @@
 title: 使用AEM配置OKTA
 description: 了解使用okta使用单点登录的各种配置设置
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 role: Admin
 level: Experienced
 exl-id: 85c9b51e-92bb-4376-8684-57c9c3204b2f
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 153
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 0%
 
 ---
 
-# 使用OKTA验证AEM作者
+# 使用OKTA验证AEM作者身份
 
 第一步是在OKTA门户上配置您的应用程序。 您的应用程序获得OKTA管理员批准后，您将有权访问IdP证书和单点登录URL。 以下是注册新应用程序时通常使用的设置。
 
@@ -31,9 +31,9 @@ ht-degree: 0%
 ![okta-application](assets/okta-app-settings-blurred.PNG)
 
 
-## 将OKTA (IdP)证书添加到AEM Trust Store
+## 将OKTA (IdP)证书添加到AEM信任存储区
 
-由于SAML声明是加密的，我们需要将IdP (OKTA)证书添加到AEM信任存储区，以允许OKTA和AEM之间的安全通信。
+由于SAML声明已加密，我们需要将IdP (OKTA)证书添加到AEM信任存储区，以允许OKTA和AEM之间的安全通信。
 [初始化信任存储](http://localhost:4502/libs/granite/security/content/truststore.html)（如果尚未初始化）。
 记住信任存储区密码。 我们稍后需要在此过程中使用此密码。
 
@@ -53,14 +53,14 @@ ht-degree: 0%
 ### 配置SAML身份验证处理程序
 
 导航到[configMgr](http://localhost:4502/system/console/configMgr)。
-搜索并打开“AdobeGranite SAML 2.0身份验证处理程序”。
+搜索并打开“Adobe Granite SAML 2.0身份验证处理程序”。
 提供以下指定属性
 以下是需要指定的关键属性：
 
 * **path** — 这是触发身份验证处理程序的路径
 * **IdP Url**：这是您的IdP URL，由OKTA提供
-* **IDP证书别名**：这是将IdP证书添加到AEM信任存储区时获得的别名
-* **服务提供者实体ID**：这是您的AEM服务器的名称
+* **IDP证书别名**：这是您将IdP证书添加到AEM信任存储区时获得的别名
+* **服务提供商实体ID**：这是您的AEM服务器的名称
 * **密钥库的密码**：这是您使用的信任库密码
 * **默认重定向**：这是成功身份验证时要重定向到的URL
 * **UserID属性**：uid
@@ -87,11 +87,11 @@ Sling引用过滤器引用属性屏幕截图
 
 #### 为OKTA集成配置DEBUG日志记录
 
-在AEM上设置OKTA集成时，查看AEM SAML身份验证处理程序的DEBUG日志会很有用。 要将日志级别设置为DEBUG，请通过AEM OSGi Web控制台创建新的Sling记录器配置。
+在AEM上设置OKTA集成时，查看AEM的SAML身份验证处理程序的DEBUG日志会很有用。 要将日志级别设置为DEBUG，请通过AEM OSGi Web控制台创建新的Sling记录器配置。
 
 请记得在“暂存和生产”中移除或禁用此日志记录器以减少日志噪音。
 
-在AEM上设置OKTA集成时，查看AEM SAML身份验证处理程序的DEBUG日志会很有用。 要将日志级别设置为DEBUG，请通过AEM OSGi Web控制台创建新的Sling记录器配置。
+在AEM上设置OKTA集成时，查看AEM的SAML身份验证处理程序的DEBUG日志会很有用。 要将日志级别设置为DEBUG，请通过AEM OSGi Web控制台创建新的Sling记录器配置。
 **请记得在暂存和生产环境中移除或禁用此日志记录器以减少日志噪音。**
 * 导航到[configMgr](http://localhost:4502/system/console/configMgr)
 

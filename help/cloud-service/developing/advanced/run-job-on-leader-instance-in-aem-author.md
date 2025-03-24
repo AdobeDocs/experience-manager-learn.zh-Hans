@@ -1,7 +1,7 @@
 ---
 title: 如何在AEM as a Cloud Service中的领导者实例上运行作业
 description: 了解如何在AEM as a Cloud Service中的领导者实例上运行作业。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: OSGI, Cloud Manager
 role: Architect, Developer
@@ -11,13 +11,13 @@ duration: 0
 last-substantial-update: 2024-10-23T00:00:00Z
 jira: KT-16399
 thumbnail: KT-16399.jpeg
-source-git-commit: 7dca86137d476418c39af62c3c7fa612635c0583
+exl-id: b8b88fc1-1de1-4b5e-8c65-d94fcfffc5a5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
 
 ---
-
 
 # 如何在AEM as a Cloud Service中的领导者实例上运行作业
 
@@ -128,9 +128,9 @@ public class SimpleJobConsumerImpl implements JobConsumer {
 
 ### 默认作业处理
 
-当您将上述代码部署到AEM as a Cloud Service环境并在AEM Author服务(作为具有多个AEM Author JVM的集群运行)上运行它时，作业将在每个AEM Author实例(pod)上运行一次，这意味着创建的作业数量将与pod的数量匹配。 Pod的数量将始终大于1（对于非RDE环境），但会因AEM as a Cloud Service的内部资源管理而波动。
+当您将上述代码部署到AEM as a Cloud Service环境并在AEM Author服务(作为具有多个AEM Author JVM的集群运行)上运行它时，作业将在每个AEM Author实例(pod)上运行一次，这意味着创建的作业数量与pod的数量相匹配。 Pod的数量将始终大于1（对于非RDE环境），但会因AEM as a Cloud Service的内部资源管理而波动。
 
-作业在每个AEM Author实例(pod)上运行，因为`wknd/simple/job/topic`与AEM主队列相关联，该队列将作业分发到所有可用实例。
+作业在每个AEM Author实例(pod)上运行，因为`wknd/simple/job/topic`与AEM的主队列相关联，该主队列将作业分发到所有可用实例。
 
 如果作业负责更改状态（如创建或更新资源或外部服务），则这通常会出现问题。
 
@@ -155,7 +155,7 @@ public class SimpleJobConsumerImpl implements JobConsumer {
 
 ## 如何在领导实例上运行作业
 
-要在AEM Author服务上仅运行作业&#x200B;_一次_，请创建类型为&#x200B;**Ordered**&#x200B;的新Sling作业队列，并将您的作业主题(`wknd/simple/job/topic`)与此队列关联。 使用此配置时，将仅允许前导AEM Author实例(pod)处理作业。
+要在AEM Author服务上仅运行作业&#x200B;_一次_，请创建类型为&#x200B;**Ordered**&#x200B;的新Sling作业队列，并将您的作业主题(`wknd/simple/job/topic`)与此队列关联。 使用此配置时，将仅允许前导AEM创作实例(pod)处理作业。
 
 在您的AEM项目的`ui.config`模块中，创建一个OSGi配置文件(`org.apache.sling.event.jobs.QueueConfiguration~wknd.cfg.json`)并将其存储在`ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author`文件夹中。
 
@@ -177,7 +177,7 @@ public class SimpleJobConsumerImpl implements JobConsumer {
 - 队列类型设置为`ORDERED`。
 - 最大并行作业数设置为`1`。
 
-部署上述配置后，作业将由Leader实例专门处理，确保它在整个AEM Author服务中仅运行一次。
+在部署上述配置后，作业将仅由领导实例处理，确保它在整个AEM Author服务中仅运行一次。
 
 ```
 <DD.MM.YYYY HH:mm:ss.SSS> [cm-pxxxx-exxxx-aem-author-7475cf85df-qdbq5] *INFO* [FelixLogListener] Events.Service.org.apache.sling.event Service [QueueMBean for queue WKND Queue - ORDERED,7755, [org.apache.sling.event.jobs.jmx.StatisticsMBean]] ServiceEvent REGISTERED

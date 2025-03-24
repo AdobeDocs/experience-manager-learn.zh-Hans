@@ -2,14 +2,14 @@
 title: 使用AEM Sites设置Personalization的ContextHub
 description: ContextHub是一个用于存储、操作和呈现上下文数据的框架。 通过ContextHub Javascript API，您可以访问存储，以根据需要创建、更新和删除数据。 因此，ContextHub表示页面上的数据层。 本页介绍如何将Context Hub添加到AEM站点页面。
 feature: Context Hub
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Personalization
 role: Developer
 level: Intermediate
 doc-type: Technical Video
 exl-id: 89308dd3-a7e5-4fec-bffb-5f0974125c0a
 duration: 357
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ContextHub是一个用于存储、操作和呈现上下文数据的框架。 通
 
 >[!NOTE]
 >
->我们在此视频中使用WKND引用站点，它不是AEM版本的一部分。 您可以在此处下载[最新版本](https://github.com/adobe/aem-guides-wknd/releases)。
+>我们对此视频使用WKND引用站点，它不是AEM版本的一部分。 您可以在此处下载[最新版本](https://github.com/adobe/aem-guides-wknd/releases)。
 
 将ContextHub添加到您的页面以启用ContextHub功能并链接到ContextHub JavaScript库。 ContextHub JavaScript API提供了对ContextHub管理的上下文数据的访问权限。
 

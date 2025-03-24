@@ -1,16 +1,16 @@
 ---
 title: 使用Repo工具设置IntelliJ
-description: 准备IntelliJ以与AEM云就绪实例同步
+description: 准备IntelliJ以与AEM Cloud Ready实例同步
 solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 jira: KT-8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
 duration: 92
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
@@ -90,7 +90,7 @@ c：\aemformscs\aem-sdk\author
 * 创建以下文件夹结构。C:\aemformscs\aem-sdk\author\crx-quickstart\install
 * 将aem-forms-addon-xxxxxx.far复制到安装文件夹中
 * 打开命令提示符并导航到c：\aemformscs\aem-sdk\author
-输入以下命令： java -jar aem-author-p4502.jar -gui。 这将在AEM实例中部署表单加载项包。
+输入以下命令： java -jar aem-author-p4502.jar -gui。 这将在您的AEM实例中部署表单加载项包。
 
 ## 后续步骤
 

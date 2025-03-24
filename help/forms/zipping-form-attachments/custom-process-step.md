@@ -2,14 +2,14 @@
 title: 压缩文件附件的自定义流程步骤
 description: 自定义流程步骤，用于将自适应表单附件添加到zip文件并将zip文件存储在工作流变量中
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 kt: kt-8049
 exl-id: 1131dca8-882d-4904-8691-95468fb708b7
 duration: 75
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 1%

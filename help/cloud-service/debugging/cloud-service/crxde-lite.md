@@ -1,8 +1,8 @@
 ---
 title: CRXDE Lite
-description: CRXDE Lite是用于调试AEM as a Cloud Service开发人员环境的经典但功能强大的工具。 CRXDE Lite提供了一套功能，可帮助进行调试，从而检查所有资源和属性、处理JCR的可变部分以及调查权限。
+description: CRXDE Lite是一款经典、但功能强大的工具，可用于调试AEM as a Cloud Service开发人员环境。 CRXDE Lite提供了一套功能，可帮助进行调试，从而无需检查所有资源和属性、处理JCR的可变部分以及调查权限。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 kt: KT-5481
 thumbnail: kt-5481.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: f3f2c89f-6ec1-49d3-91c7-10a42b897780
 duration: 125
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 0%
@@ -20,18 +20,18 @@ ht-degree: 0%
 
 # 使用CRXDE Lite调试AEM as a Cloud Service
 
-CRXDE Lite为&#x200B;__仅__&#x200B;在AEM as a Cloud Service开发环境(以及本地AEM SDK)中可用。
+CRXDE Lite仅&#x200B;__在AEM as a Cloud Service开发环境(以及本地AEM SDK)中可用__。
 
-## 访问AEM Author上的CRXDE Lite
+## 在AEM Author上访问CRXDE Lite
 
-CRXDE Lite __仅限__&#x200B;可在AEM as a Cloud Service开发环境中访问，并且&#x200B;__不__&#x200B;在暂存或生产环境中可用。
+CRXDE Lite在AEM as a Cloud Service开发环境中仅&#x200B;__可__&#x200B;访问，在暂存或生产环境中&#x200B;__不__&#x200B;可用。
 
-要在AEM Author中访问CRXDE Lite，请执行以下操作：
+要在AEM Author上访问CRXDE Lite，请执行以下操作：
 
 1. 登录到AEM as a Cloud Service AEM Author服务。
-1. 导航到工具>常规>CRXDE Lite
+1. 导航到工具>常规> CRXDE Lite
 
-这将使用用于登录AEM Author的凭据和权限打开CRXDE Lite。
+这将使用用于登录CRXDE Lite Author的凭据和权限打开AEM。
 
 ## 调试内容
 
@@ -54,9 +54,9 @@ CRXDE Lite提供对JCR的直接访问。 通过CRXDE Lite显示的内容受授�
 
 CRXDE Lite提供了一种在特定节点上测试和评估特定用户或组（亦即主体）的访问控制的方法。
 
-要访问CRXDE Lite中的“Test Access Control（测试访问控制）”控制台，请导航至：
+要访问CRXDE Lite中的“测试访问控制”控制台，请导航至：
 
-+ CRXDE Lite>工具>测试访问控制……
++ CRXDE Lite >工具>测试访问控制……
 
 ![CRXDE Lite — 测试访问控制](./assets/crxde-lite/permissions__test-access-control.png)
 
@@ -74,10 +74,10 @@ CRXDE Lite提供了一种在特定节点上测试和评估特定用户或组（�
 
 ### 不支持的调试活动
 
-以下是CRXDE Lite活动，该活动无法&#x200B;__在Debugger中执行__。
+以下是在CRXDE Lite中&#x200B;__不能__&#x200B;执行的调试活动。
 
 ### 调试OSGi配置
 
-无法通过CRXDE Lite查看部署的OSGi配置。 OSGi配置在AEM项目的`ui.apps`代码包的`/apps/example/config.xxx`处进行维护，但是在部署到AEM as a Cloud Service环境时，OSGi配置资源不会保留到JCR，因此不会通过CRXDE Lite显示。
+无法通过CRXDE Lite查看部署的OSGi配置。 OSGi配置在AEM项目的`ui.apps`代码包的`/apps/example/config.xxx`中维护，但是在部署到AEM as a Cloud Service环境时，OSGi配置资源不会保留到JCR，因此不会通过CRXDE Lite显示。
 
 请改用[Developer Console >配置](./developer-console.md#configurations)查看已部署的OSGi配置。

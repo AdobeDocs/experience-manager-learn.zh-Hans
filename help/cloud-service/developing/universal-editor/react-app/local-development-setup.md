@@ -1,7 +1,7 @@
 ---
 title: 本地开发设置
 description: 了解如何为通用编辑器设置本地开发环境，以便编辑示例React应用程序的内容。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 47bef697-5253-493a-b9f9-b26c27d2db56
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -27,15 +27,15 @@ ht-degree: 0%
 
 按照本教程进行操作，需要执行以下操作：
 
-- 基本HTML和JavaScript技能。
+- HTML和JavaScript的基本技能。
 - 必须本地安装以下工具：
    - [Node.js](https://nodejs.org/en/download/)
    - [Git](https://git-scm.com/downloads)
    - IDE或代码编辑器，如[Visual Studio Code](https://code.visualstudio.com/)
 - 下载并安装以下各项：
-   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk)：它包含快速入门Jar，用于在本地运行AEM Author和Publish以进行开发。
+   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk)：它包含快速入门Jar，用于在本地运行AEM创作和发布以进行开发。
    - [Universal Editor服务](https://experienceleague.adobe.com/en/docs/experience-cloud/software-distribution/home)： Universal Editor服务的本地副本，具有功能子集，可以从软件分发门户下载。
-   - [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy#local-ssl-proxy)：使用自签名证书进行本地开发的简单本地SSL HTTP代理。 AEM通用编辑器要求使用React应用程序的HTTPS URL在编辑器中加载它。
+   - [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy#local-ssl-proxy)：使用自签名证书进行本地开发的简单本地SSL HTTP代理。 AEM通用编辑器需要React应用程序的HTTPS URL才能在编辑器中加载它。
 
 ## 本地设置
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 要提供WKND Teams React应用程序的内容，请在本地AEM SDK中安装以下包。
 
 - [WKND团队 — 内容包](./assets/basic-tutorial-solution.content.zip)：包含内容片段模型、内容片段和持久的GraphQL查询。
-- [WKND团队 — 配置包](./assets/basic-tutorial-solution.ui.config.zip)：包含跨源资源共享(CORS)和令牌身份验证处理程序配置。 CORS有助于非AEM Web属性对AEM的GraphQL API进行基于浏览器的客户端调用，并且令牌身份验证处理程序用于向AEM验证每个请求。
+- [WKND团队 — 配置包](./assets/basic-tutorial-solution.ui.config.zip)：包含跨源资源共享(CORS)和令牌身份验证处理程序配置。 CORS有助于非AEM Web资产对AEM的GraphQL API进行基于浏览器的客户端调用，并且令牌身份验证处理程序用于向AEM验证每个请求。
 
   ![WKND团队 — 包](./assets/wknd-teams-packages.png)
 
@@ -74,7 +74,7 @@ ht-degree: 0%
    $ npm start
    ```
 
-1. 在[http://localhost:3000](http://localhost:3000)的浏览器中打开WKND Teams React应用程序。 它显示团队成员及其详细信息的列表。 React应用程序的内容由本地AEM SDK使用GraphQL API (`/graphql/execute.json/my-project/all-teams`)提供，您可以使用浏览器的网络选项卡进行验证。
+1. 在[http://localhost:3000](http://localhost:3000)的浏览器中打开WKND Teams React应用程序。 它显示团队成员及其详细信息的列表。 React应用程序的内容由本地AEM SDK使用GraphQL API (`/graphql/execute.json/my-project/all-teams`)提供，您可以使用浏览器的“网络”选项卡验证该API。
 
    ![WKND团队 — React应用程序](./assets/wknd-teams-react-app.png)
 

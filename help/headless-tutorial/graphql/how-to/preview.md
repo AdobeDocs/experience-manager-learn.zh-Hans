@@ -1,7 +1,7 @@
 ---
 title: 内容片段预览
 description: 了解如何使用内容片段预览功能预览所有作者，以快速了解内容更改对您的AEM Headless体验有何影响。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments
 topic: Headless, Content Management, Development
 role: Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-10841
 thumbnail: 3416906.jpeg
 exl-id: 247d40a3-ff67-4c1f-86bf-3794d7ce3e32
 duration: 463
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -21,14 +21,14 @@ ht-degree: 0%
 
 # 内容片段预览
 
-AEM Headless应用程序支持集成的创作预览。 预览体验将AEM作者的内容片段编辑器与您的自定义应用程序链接（可通过HTTP寻址），允许深层链接进入应用程序，以呈现正在预览的内容片段。
+AEM Headless应用程序支持集成的创作预览。 预览体验将AEM作者的内容片段编辑器与您的自定义应用程序链接到一起（可通过HTTP寻址），从而允许深层链接进入应用程序，以呈现正在预览的内容片段。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
 
 要使用内容片段预览，必须满足多个条件：
 
 1. 必须将应用程序部署到作者可访问的URL中
-1. 必须配置应用程序以连接到AEM创作服务(而不是AEM Publish服务)
+1. 必须配置应用程序以连接到AEM创作服务(而不是AEM发布服务)
 1. 应用程序必须设计有URL或路由，它们可以使用[内容片段路径或ID](#url-expressions)选择要显示的内容片段，以便在应用程序体验中预览。
 
 ## 预览URL
@@ -37,11 +37,11 @@ AEM Headless应用程序支持集成的创作预览。 预览体验将AEM作者�
 
 ![内容片段模型预览URL](./assets/preview/cf-model-preview-url.png)
 
-1. 以管理员身份登录AEM Author服务
+1. 以管理员身份登录AEM创作服务
 1. 导航到&#x200B;__工具>常规>内容片段模型__
 1. 选择&#x200B;__内容片段模型__&#x200B;并从顶部操作栏中选择&#x200B;__属性__。
 1. 使用[URL表达式](#url-expressions)输入内容片段模型的预览URL
-   + 预览URL必须指向连接到AEM Author服务的应用程序的部署。
+   + 预览URL必须指向连接到AEM Author服务的应用程序部署。
 
 ### URL表达式
 
@@ -70,7 +70,7 @@ AEM Headless应用程序支持集成的创作预览。 预览体验将AEM作者�
 
 ## React示例
 
-让我们来探索WKND应用程序，它是一个简单的React应用程序，使用AEM Headless GraphQL API显示AEM的冒险。
+让我们来探索WKND应用程序，它是一个简单的React应用程序，使用AEM Headless GraphQL API显示AEM中的冒险。
 
 示例代码在[Github.com](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/preview-tutorial)上可用。
 

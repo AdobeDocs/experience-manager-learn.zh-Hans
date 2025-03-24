@@ -1,7 +1,7 @@
 ---
 title: 为AEM as a Cloud Service开发设置Dispatcher工具
-description: AEM SDK的Dispatcher Tools通过简化本地安装、运行和排除Adobe Experience Manager (AEM)项目的故障来促进Dispatcher项目的本地开发。
-version: Cloud Service
+description: AEM SDK的Dispatcher Tools通过简化本地安装、运行和故障诊断Adobe Experience Manager (AEM)项目的过程，为Dispatcher的本地开发提供了便利。
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Dispatcher, Developer Tools
 role: Developer
@@ -11,9 +11,9 @@ thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
 duration: 624
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1620'
 ht-degree: 4%
 
 ---
@@ -24,12 +24,12 @@ ht-degree: 4%
 >id="aemcloud_localdev_dispatcher"
 >title="本地 Dispatcher 工具"
 >abstract="Dispatcher 是整个 Experience Manager 架构的组成部分，应该是本地开发设置的一部分。AEM as a Cloud Service SDK 包括推荐的 Dispatcher 工具版本，该版本有助于在本地配置、验证和模拟 Dispatcher。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="云中的 Dispatcher"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="Cloud 中的 Dispatcher"
 >additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html" text="下载 AEM as a Cloud Service SDK"
 
-Adobe Experience Manager (AEM)的Dispatcher是一个Apache HTTP Web服务器模块，在CDN和AEM Publish层之间提供一个安全和性能层。 Dispatcher是整个Experience Manager架构的组成部分，应当是本地开发设置的一部分。
+Adobe Experience Manager (AEM)的Dispatcher是一个Apache HTTP Web服务器模块，在CDN和AEM发布层之间提供了一个安全和性能层。 Dispatcher是Experience Manager整体架构的组成部分，应当是本地开发设置的一部分。
 
-AEM as a Cloud Service SDK包含推荐的Dispatcher工具版本，该版本有助于在本地配置验证和模拟Dispatcher。 Dispatcher Tools由以下部分组成：
+AEM as a Cloud Service SDK包括推荐的Dispatcher工具版本，该版本有助于在本地配置验证和模拟Dispatcher。 Dispatcher Tools由以下部分组成：
 
 + 位于`.../dispatcher-sdk-x.x.x/src`的Apache HTTP Web Server和Dispatcher配置文件的基线集
 + 配置验证器CLI工具，位于`.../dispatcher-sdk-x.x.x/bin/validate`
@@ -47,7 +47,7 @@ AEM as a Cloud Service SDK包含推荐的Dispatcher工具版本，该版本有�
 ## 先决条件
 
 1. Windows用户必须使用Windows 10专业版（或支持Docker的版本）
-1. 在本地开发计算机上安装[Experience ManagerPublish快速入门Jar](./aem-runtime.md)。
+1. 在本地开发计算机上安装[Experience Manager发布快速入门Jar](./aem-runtime.md)。
 
 + 或者，在本地AEM Publish服务上安装最新的[AEM引用网站](https://github.com/adobe/aem-guides-wknd/releases)。 本教程将使用此网站来可视化正在运行的Dispatcher。
 
@@ -55,12 +55,12 @@ AEM as a Cloud Service SDK包含推荐的Dispatcher工具版本，该版本有�
 
 ## 下载Dispatcher工具(作为AEM SDK的一部分)
 
-AEM as a Cloud Service SDK(或AEM SDK)包含用于运行Apache HTTP Web Server的Dispatcher工具(在本地使用Dispatcher模块进行开发)以及兼容的快速入门Jar。
+AEM as a Cloud Service SDK(或AEM SDK)包含用于在本机运行带有Dispatcher模块的Apache HTTP Web服务器以进行开发的Dispatcher工具，以及兼容的快速入门Jar。
 
 如果已将AEM as a Cloud Service SDK下载到[设置本地AEM运行时](./aem-runtime.md)，则无需重新下载。
 
 1. 使用您的Adobe ID登录到[experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)
-   + 必须为您的Adobe组织&#x200B;__配置__ AEM as a Cloud Service才能下载AEM as a Cloud Service SDK
+   + 必须针对您的Adobe组织&#x200B;__进行__&#x200B;配置以便AEM as a Cloud Service下载AEM as a Cloud Service SDK
 1. 单击要下载的最新&#x200B;__AEM SDK__&#x200B;结果行
 
 ## 从AEM SDK zip文件中提取Dispatcher工具
@@ -69,7 +69,7 @@ AEM as a Cloud Service SDK(或AEM SDK)包含用于运行Apache HTTP Web Server�
 >
 > Windows用户在包含本地Dispatcher工具的文件夹的路径中不能有任何空格或特殊字符。 如果路径中存在空格，`docker_run.cmd`将失败。
 
-Dispatcher Tools的版本与AEM SDK的版本不同。 确保通过与Dispatcher版本匹配的AEM SDK版本提供了AEM as a Cloud Service工具的版本。
+Dispatcher Tools的版本与AEM SDK的版本不同。 确保通过与Dispatcher版本匹配的AEM SDK版本提供了AEM as a Cloud Service Tools的版本。
 
 1. 解压缩下载的`aem-sdk-xxx.zip`文件
 1. 将Dispatcher工具解压缩到`~/aem-sdk/dispatcher`中
@@ -105,11 +105,11 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 ## 了解Dispatcher配置文件
 
 >[!TIP]
-> 从[AEM项目Maven原型](https://github.com/adobe/aem-project-archetype)创建的Experience Manager项目已预填充这组Dispatcher配置文件，因此无需从Dispatcher Tools src文件夹进行复制。
+> 从[Experience Manager项目Maven Archetype](https://github.com/adobe/aem-project-archetype)创建的AEM项目已预填充这组Dispatcher配置文件，因此无需从Dispatcher Tools src文件夹进行复制。
 
 Dispatcher Tools提供了一组Apache HTTP Web Server和Dispatcher配置文件，这些文件定义所有环境（包括本地开发）的行为。
 
-这些文件拟复制到Experience ManagerMaven项目的`dispatcher/src`文件夹中(如果Experience ManagerMaven项目中不存在这些文件)。
+这些文件拟复制到Experience Manager Maven项目的`dispatcher/src`文件夹中(如果Experience Manager Maven项目中不存在这些文件)。
 
 在解压缩的Dispatcher Tools中，配置文件的完整说明以`dispatcher-sdk-x.x.x/docs/Config.html`形式提供。
 
@@ -199,7 +199,7 @@ $ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
 
 >[!ENDTABS]
 
-AEM as a Cloud Service SDK的Publish服务（在端口4503上本地运行）可通过Dispatcher在`http://localhost:8080`处获取。
+AEM as a Cloud Service SDK的发布服务在端口4503上本地运行，可以通过Dispatcher在`http://localhost:8080`处获取。
 
 要针对Experience Manager项目的Dispatcher配置运行Dispatcher工具，请指向项目的`dispatcher/src`文件夹。
 
@@ -275,9 +275,9 @@ $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run_hot_reload.sh ~/
 
 ## 何时更新Dispatcher工具{#dispatcher-tools-version}
 
-Dispatcher Tools版本的增量频率低于Experience Manager，因此Dispatcher Tools在本地开发环境中所需的更新较少。
+Dispatcher工具版本的增量频率低于Experience Manager，因此Dispatcher工具在本地开发环境中所需的更新较少。
 
-推荐的Dispatcher Tools版本是与Experience Manageras a Cloud Service版本匹配的AEM as a Cloud Service SDK捆绑在一起的版本。 可以通过[Cloud Manager](https://my.cloudmanager.adobe.com/)找到AEM as a Cloud Service的版本。
+推荐的Dispatcher Tools版本是与Experience Manager as a Cloud Service版本匹配的AEM as a Cloud Service SDK捆绑在一起的版本。 可以通过[Cloud Manager](https://my.cloudmanager.adobe.com/)找到AEM as a Cloud Service的版本。
 
 + __Cloud Manager >环境__，按&#x200B;__AEM版本__&#x200B;标签指定的环境
 
@@ -393,7 +393,7 @@ Waiting until host.docker.internal is available
 ## 其他资源
 
 + [下载AEM SDK](https://experience.adobe.com/#/downloads)
-+ [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
++ [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [下载Docker](https://www.docker.com/)
 + [下载AEM参考网站(WKND)](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience ManagerDispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience Manager Dispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)

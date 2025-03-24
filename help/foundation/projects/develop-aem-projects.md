@@ -1,7 +1,7 @@
 ---
 title: 在AEM中开发项目
-description: 一个开发教程，其中演示了如何为AEM项目开发。 在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建新的项目，以管理内容创作工作流和任务。
-version: 6.4, 6.5
+description: 一个开发教程，其中演示了如何为AEM项目开发。 在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建新项目，以管理内容创作工作流和任务。
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Projects, Workflow
 doc-type: Tutorial
 topic: Development
@@ -9,7 +9,7 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1417
-source-git-commit: 54a7f93637545a4467c4c587bbc3d1d0de5c64a1
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '4441'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 在AEM中开发项目
 
-这是一个开发教程，说明如何为[!DNL AEM Projects]开发。 在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建项目，以管理内容创作工作流和任务。
+这是一个开发教程，说明如何为[!DNL AEM Projects]开发。 在本教程中，我们将创建一个自定义项目模板，该模板可用于在AEM中创建用于管理内容创作工作流和任务的项目。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
@@ -39,7 +39,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
 * [已完成的教程包](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * GitHub上的[完整代码存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教程假定您具有[AEM开发实践](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/developing/introduction/the-basics)的一些基本知识以及对[AEM Maven项目设置](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html)的一些了解。 所有提及的代码都旨在用作引用，并且只应部署到[本地开发AEM实例](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)。
+本教程假定您了解[AEM开发实践](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/developing/introduction/the-basics)的一些基本知识以及对[AEM Maven项目设置](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html)的一些了解。 所有提及的代码均旨在用作参考，并且只应部署到[本地开发AEM实例](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)。
 
 ## 项目模板的结构
 
@@ -63,7 +63,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
 
 项目模板的根节点为&#x200B;**cq：Template**&#x200B;类型。 在此节点上，您可以配置在“创建项目向导”中显示的属性&#x200B;**jcr：title**&#x200B;和&#x200B;**jcr：description**。 还有一个名为&#x200B;**wizard**&#x200B;的属性，它指向将填充项目属性的表单。 默认值： **/libs/cq/core/content/projects/wizard/steps/defaultproject.html**&#x200B;在大多数情况下应该可以正常使用，因为它允许用户填充基本的项目属性并添加组成员。
 
-*&#42;请注意，“创建项目向导”不使用SlingPOSTServlet。 而是将值发布到自定义servlet：**com.adobe.cq.projects.impl.servlet.ProjectServlet**。 添加自定义字段时应考虑这一点。*
+*&#42;请注意，“创建项目向导”不使用Sling POST servlet。 而是将值发布到自定义servlet：**com.adobe.cq.projects.impl.servlet.ProjectServlet**。 添加自定义字段时应考虑这一点。*
 
 可以为翻译项目模板找到自定义向导示例： **/libs/cq/core/content/projects/wizard/translationproject/defaultproject**。
 
@@ -90,7 +90,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
 
 ## 创建项目模板 {#creating-project-template}
 
-由于我们主要复制/配置节点，因此我们将使用CRXDE Lite。 在本地AEM实例中，打开[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)。
+由于我们主要复制/配置节点，因此将使用CRXDE Lite。 在本地AEM实例中，打开[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)。
 
 1. 首先，在`/apps/&lt;your-app-folder&gt;`下创建一个名为`projects`的文件夹。 在该名为`templates`的文件夹下创建另一个文件夹。
 
@@ -264,7 +264,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
 
 ## 为什么选择工作流？
 
-传统上，以审批流程为中心的AEM工作流使用参与者工作流步骤。 AEM收件箱中包含有关任务和工作流的详细信息，并增强了与AEM项目的集成。 这些功能使得使用项目创建任务流程步骤成为一个更具吸引力的选项。
+传统上，以审批流程为中心的AEM工作流已使用参与者工作流步骤。 AEM的收件箱中包含有关任务和工作流的详细信息，并增强了与AEM项目的集成。 这些功能使得使用项目创建任务流程步骤成为一个更具吸引力的选项。
 
 ### 为何要执行任务？
 
@@ -302,7 +302,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
 
 ## 创建工作流模型
 
-1. 从AEM“开始”菜单中，导航到“工具” — >“工作流” — >“模型”。 单击右上角的“创建”以创建工作流模型。
+1. 从AEM的“开始”菜单中，导航到工具 — >工作流 — >模型。 单击右上角的“创建”以创建工作流模型。
 
    为新模型指定标题“内容审批工作流”和URL名称“content-approval-workflow”。
 
@@ -320,16 +320,16 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
 
    >[!NOTE]
    >
-   >如果使用AEM 6.4+，则Workflow的位置已更改。 查看[此处，了解更多详细信息。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
+   >如果使用AEM 6.4+，则工作流的位置已更改。 查看[此处，了解更多详细信息。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
    如果使用AEM 6.4+，将在`/conf/global/settings/workflow/models`下创建工作流模型。 对/conf目录重复上述步骤，添加名为`aem-guides`的子文件夹，并将`content-approval-workflow`移到其下方。
 
    ![现代工作流定义位置](./assets/develop-aem-projects/modern-workflow-definition-location.png)
 工作流模型在6.4+中的位置
 
-1. AEM 6.3中引入了向给定工作流添加工作流暂存的功能。 这些暂存将显示在“工作流信息”选项卡的“收件箱”中，供用户使用。 它将向用户显示工作流中的当前阶段以及工作流之前和之后的阶段。
+1. AEM 6.3中引入了将工作流暂存添加到给定工作流的功能。 这些暂存将显示在“工作流信息”选项卡的“收件箱”中，供用户使用。 它将向用户显示工作流中的当前阶段以及工作流之前和之后的阶段。
 
-   要配置阶段，请从Sidekick中打开“页面属性”对话框。 第四个选项卡标记为“暂存”。 添加以下值以配置此工作流的三个阶段：
+   要配置阶段，请从Sidekick中打开页面属性对话框。 第四个选项卡标记为“暂存”。 添加以下值以配置此工作流的三个阶段：
 
    1. 编辑内容
    1. 审批
@@ -347,7 +347,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
 
 1. “创建项目任务”工作流进程旨在创建作为工作流步骤的任务。 只有在完成任务后，工作流才会前进。 “创建项目任务”步骤的一个强大方面是，它可以读取工作流元数据值，并使用这些值动态创建任务。
 
-   首先删除默认创建的参与者步骤。 从“组件”菜单中的Sidekick中展开&#x200B;**“项目”**&#x200B;子标题，并将&#x200B;**“创建项目任务”**&#x200B;拖放到模型上。
+   首先删除默认创建的参与者步骤。 从Sidekick的“组件”菜单中，展开&#x200B;**“项目”**&#x200B;子标题，并将&#x200B;**“创建项目任务”**&#x200B;拖放到模型上。
 
    双击“创建项目任务”步骤以打开工作流对话框。 配置以下属性：
 
@@ -416,7 +416,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
    task.setProperty("taskPriority", taskPriority);
    ```
 
-1. 导航回内容审批工作流。 将&#x200B;**OR拆分**&#x200B;组件(可在“工作流”Sidekick下找到)拖放到&#x200B;**开始Task**&#x200B;步骤下。 在“常用”对话框中，选择“3个分支”的单选按钮。 OR拆分将读取工作流元数据值&#x200B;**&quot;lastTaskAction&quot;**&#x200B;以确定工作流的路由。 **&quot;lastTaskAction&quot;**&#x200B;属性设置为步骤4中配置的路由选项卡中的值之一。 对于每个“分支”选项卡，使用以下值填写&#x200B;**脚本**&#x200B;文本区域：
+1. 导航回内容审批工作流。 将&#x200B;**OR Split**&#x200B;组件(可在Sidekick中的“工作流”类别下找到)拖放到&#x200B;**开始任务**&#x200B;步骤下。 在“常用”对话框中，选择“3个分支”的单选按钮。 OR拆分将读取工作流元数据值&#x200B;**&quot;lastTaskAction&quot;**&#x200B;以确定工作流的路由。 **&quot;lastTaskAction&quot;**&#x200B;属性设置为步骤4中配置的路由选项卡中的值之一。 对于每个“分支”选项卡，使用以下值填写&#x200B;**脚本**&#x200B;文本区域：
 
    ```
    function check() {
@@ -478,7 +478,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
        "Send Back for Revision"
    ```
 
-   由于这是常规审批路由，因此任务的优先级将设置为Medium。 此外，我们给批准者组五天时间来完成任务。 “任务”选项卡上的“被分派人”留空，因为我们将在“高级设置”选项卡中动态分配此项。 完成此任务时，我们为批准者组提供两种可能的途径：如果批准内容且内容可以发布，则传递&#x200B;**“批准”和Publish“**”；如果存在原始编辑器需要更正的问题，则传递&#x200B;**“返回以进行修订”**。 批准者可以添加注释，如果工作流返回给他/她，原始编辑者将看到这些注释。
+   由于这是常规审批路由，因此任务的优先级将设置为Medium。 此外，我们给批准者组五天时间来完成任务。 “任务”选项卡上的“被分派人”留空，因为我们将在“高级设置”选项卡中动态分配此项。 完成此任务时，我们为批准者组提供两种可能的途径：如果批准内容并且可以发布，则为批准者组提供&#x200B;**“批准并发布”**；如果存在原始编辑器需要更正的问题，则为批准者组提供&#x200B;**“发送回以进行修订”**。 批准者可以添加注释，如果工作流返回给他/她，原始编辑者将看到这些注释。
 
 在本教程的前面，我们创建了一个项目模板，其中包含批准者角色。 每次从此模板创建新项目时，都会为批准者角色创建项目特定的组。 就像参与者步骤一样，任务只能分配给用户或组。 我们希望将此任务分配给与批准者组对应的项目组。 从项目内启动的所有工作流都将具有元数据，这些元数据会将项目角色映射到项目特定的组。
 
@@ -539,7 +539,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. 由于“审批者”组可以选择将工作流发送回原始编辑器以进行进一步修订，因此我们将依赖&#x200B;**转至**&#x200B;步骤来读取上次执行的操作并将工作流路由到开头，或者让它继续。
 
-   将“跳转步骤”组件(可在“工作流”下的Sidekick中找到)拖放到重新联接处的OR拆分下。 双击并在对话框中配置以下属性：
+   将“跳转步骤”组件(可在Sidekick中的“工作流”下找到)拖放到重新联接处的OR拆分下。 双击并在对话框中配置以下属性：
 
    ```
    Common Tab
@@ -572,7 +572,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. 为了发布有效负载，我们将使用ootb **激活页面/资产**&#x200B;流程步骤。 此流程步骤几乎不需要进行配置，并且会将工作流的负载添加到复制队列以进行激活。 我们将在“转至”步骤下添加步骤，以这种方式，只有在审批者组已审批要发布的内容或原始编辑者选择“略过审批”路由时，才能访问此步骤。
 
-   将&#x200B;**激活页面/资产**&#x200B;流程步骤(可在WCM工作流下的Sidekick中找到)拖放到模型中的跳转步骤下。
+   将&#x200B;**激活页面/资产**&#x200B;流程步骤(可在Sidekick中的WCM工作流下找到)拖放到模型中的跳转步骤下。
 
    ![工作流模型完成](assets/develop-aem-projects/workflow-model-final.png)
 
@@ -735,7 +735,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
    >[!NOTE]
    >
-   >如果使用AEM 6.4，则Workflow的位置已更改。 将`modelId`属性指向`/var/workflow/models/aem-guides/content-approval-workflow`下的运行时工作流模型的位置
+   >如果使用AEM 6.4，则工作流的位置已更改。 将`modelId`属性指向`/var/workflow/models/aem-guides/content-approval-workflow`下的运行时工作流模型的位置
    >
    >
    >有关工作流位置更改的更多详细信息，请参阅[此处。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)

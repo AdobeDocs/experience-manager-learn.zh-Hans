@@ -2,7 +2,7 @@
 title: 使用快速开发环境的开发生命周期
 description: 了解使用快速开发环境时新开发生命周期的外观和RDE的主要优势。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,10 +11,10 @@ thumbnail: KT-11863.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 062672f6-d03c-44da-9ac5-3d1ecff1a628
 duration: 153
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '116'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -43,6 +43,6 @@ RDE的主要优势是保持发展的势头。
 
 [多个开发人员协作方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#multiple-developers-collaborating-on-the-same-rde)
 
-[本地开发环境设置](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)
+[本地开发环境设置](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-hans)
 
-[使用AdobeCloud Manager - CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)
+[使用Adobe Cloud Manager - CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)

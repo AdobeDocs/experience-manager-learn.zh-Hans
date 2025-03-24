@@ -1,7 +1,7 @@
 ---
 title: 使用在线修订版清理
 description: 联机修订清理的简介。 在线修订清理可减轻频繁进行离线修订清理的需要。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: JCR
 doc-type: Technical Video
 topic: Administration
@@ -9,7 +9,7 @@ role: Admin
 level: Intermediate
 exl-id: 62a36ab1-3245-43ac-b943-e28ff95661bf
 duration: 108
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%

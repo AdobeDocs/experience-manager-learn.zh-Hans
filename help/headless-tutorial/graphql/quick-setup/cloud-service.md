@@ -1,7 +1,7 @@
 ---
-title: AEM as a Cloud Service的AEM Headless快速设置
-description: AEM Headless快速设置允许您使用AEM Headless的实际操作，它使用WKND Site示例项目中的内容，以及一个通过AEM Headless GraphQL API使用内容的React应用程序。
-version: Cloud Service
+title: AEM Headless的AEM as a Cloud Service快速设置
+description: AEM Headless快速设置允许您使用AEM Headless进行操作，它使用WKND Site示例项目中的内容以及一个通过AEM Headless GraphQL API使用内容的React应用程序。
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
@@ -10,16 +10,16 @@ jira: KT-9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
 duration: 781
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 0%
 
 ---
 
-# AEM as a Cloud Service的AEM Headless快速设置
+# AEM Headless的AEM as a Cloud Service快速设置
 
-AEM Headless快速设置允许您使用AEM Headless的实际操作，它使用WKND Site示例项目中的内容以及一个通过AEM Headless GraphQL API使用内容的示例React应用程序(SPA)。
+AEM Headless快速设置使用WKND Site示例项目中的内容以及一个通过AEM Headless GraphQL API使用内容的示例React应用程序(SPA)，帮助您实际操作AEM Headless。
 
 ## 先决条件
 
@@ -47,7 +47,7 @@ _步骤的截屏_
    1. 在顶部导航中选择&#x200B;__存储库__
    1. 在顶部操作栏中选择&#x200B;__添加存储库__
    1. 命名新的Git存储库： `aem-headless-quick-setup-wknd`
-      + 每个Adobe组织的Git存储库名称必须是唯一的，
+      + 每个Adobe组织的Git存储库名称必须唯一，
    1. 选择&#x200B;__保存__，并等待Git存储库初始化
 
 ## 2.将示例WKND站点项目推送到Cloud Manager Git存储库
@@ -139,12 +139,12 @@ _步骤的截屏_
    ...
    ```
 
-   要查找AEM as a Cloud Service Publish服务的主机URI，请执行以下操作：
+   要查找AEM as a Cloud Service发布服务的主机URI，请执行以下操作：
 
    1. 在Cloud Manager的顶部导航中选择&#x200B;__环境__
    1. 选择&#x200B;__开发__&#x200B;环境
-   1. 找到&#x200B;__Publish服务(AEM和Dispatcher)__&#x200B;链接&#x200B;__环境区段__&#x200B;表
-   1. 复制链接的地址，并将其用作AEM as a Cloud Service Publish服务的URI
+   1. 找到&#x200B;__发布服务(AEM和Dispatcher)__&#x200B;链接&#x200B;__环境区段__&#x200B;表
+   1. 复制链接的地址，并将其用作AEM as a Cloud Service发布服务的URI
 
 1. 在IDE中，将更改保存到`.env.development`
 1. 从命令行中，运行React应用程序
@@ -175,7 +175,7 @@ _步骤的截屏_
    + 价格： `3500`
    + 主图像： `/content/dam/wknd-shared/en/activities/cycling/mountain-biking.jpg`
 1. 在顶部操作栏中选择&#x200B;__保存__
-1. 从顶部操作栏的&#x200B;__中选择__&#x200B;快速Publish __...__
+1. 从顶部操作栏的&#x200B;__中选择__&#x200B;快速发布&#x200B;__...__
 1. 刷新在[http://localhost:3000](http://localhost:3000)上运行的React应用程序。
 1. 在React应用程序中，选择现在更新的循环冒险，并验证对内容片段所做的内容更改。
 

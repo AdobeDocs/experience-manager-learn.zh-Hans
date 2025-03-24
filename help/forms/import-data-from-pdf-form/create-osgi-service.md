@@ -2,14 +2,14 @@
 title: 创建OSGi服务以从PDF表单导出数据
 description: 使用FormsService API从PDF表单导出数据
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 jira: KT-14196
 exl-id: c3032669-154c-4565-af6e-32d94e975e37
 duration: 52
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 导出数据
 
-从PDF文件填充自适应表单的第一步是导出给定PDF文件的数据并将其存储在AEM存储库中。
+从PDF文件填充自适应表单的第一步是导出给定PDF文件中的数据，并将其存储在AEM存储库中。
 
 编写了以下代码以从上传的pdf中提取数据，并对数据进行处理以获得可用于填充自适应表单的正确格式
 

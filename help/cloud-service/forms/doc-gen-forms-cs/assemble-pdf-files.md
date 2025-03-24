@@ -1,26 +1,26 @@
 ---
-title: 组合PDF文件
+title: 汇编PDF文件
 description: 使用invokeDDX操作处理pdf文件。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-9958
 thumbnail: 332439.jpg
 duration: 50
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
-# 使用调用DDX端点处理PDF文件
+# 使用调用DDX端点操作PDF文件
 
 
-下一步是使用必要的参数向端点进行HTTPPOST调用。 模板和数据文件作为资源文件提供。 生成的pdf的属性通过请求中的选项参数指定。embedFonts属性用于在生成的pdf中嵌入自定义字体。 请按照[此文档](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html)中的说明将自定义字体部署到Forms云实例。 这些属性在options.json资源文件中指定。 由于端点具有基于令牌的身份验证，因此我们在请求标头中传递访问令牌。
+下一步是使用必要的参数对端点进行HTTP POST调用。 模板和数据文件作为资源文件提供。 生成的pdf的属性通过请求中的选项参数指定。embedFonts属性用于在生成的pdf中嵌入自定义字体。 请按照[此文档](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html)中的说明将自定义字体部署到Forms云实例。 这些属性在options.json资源文件中指定。 由于端点具有基于令牌的身份验证，因此我们在请求标头中传递访问令牌。
 
 以下代码用于通过将数据与模板合并来生成pdf
 

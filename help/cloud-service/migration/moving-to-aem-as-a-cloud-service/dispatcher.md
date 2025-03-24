@@ -1,7 +1,7 @@
 ---
 title: 在迁移到AEM as a Cloud Service时配置Dispatcher
 description: 了解对AEM Dispatcher for AEM as a Cloud Service的重要更改、Dispatcher转换工具以及如何使用Dispatcher Tools SDK。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Dispatcher
 topic: Migration, Upgrade
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8633
 thumbnail: 336962.jpeg
 exl-id: 81397b21-b4f3-4024-a6da-a9b681453eff
 duration: 1618
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 4%
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 # Dispatcher
 
-了解适用于AEM as a Cloud Service的AEM Dispatcher，并重点关注适用于AEM 6的Dispatcher的重要更改、Dispatcher转换工具以及如何使用Dispatcher Tools SDK。
+了解适用于AEM as a Cloud Service的AEM Dispatcher，并重点关注适用于AEM 6的Dispatcher的重要更改、Dispatcher转换工具以及如何使用Dispatcher工具SDK。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336962?quality=12&learn=on)
 
@@ -28,13 +28,13 @@ ht-degree: 4%
 
 ![Dispatcher Converter](./assets/dispatcher-converter-diagram.png)
 
-作为重构代码库的一部分，请使用[AEM Dispatcher Converter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/dispatcher-transformation-utility-tools.html)将现有的内部部署或AdobeManaged Services Dispatcher配置重构为与AEM as a Cloud Service兼容的Dispatcher配置。
+作为重构代码库的一部分，请使用[AEM Dispatcher Converter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/dispatcher-transformation-utility-tools.html)将现有的内部部署或Adobe Managed Services Dispatcher配置重构为与AEM as a Cloud Service兼容的Dispatcher配置。
 
 ## 关键活动
 
-+ 使用[Adobe I/ODispatcher Converter工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#aio-aem-migrationdispatcher-converter)迁移现有的Dispatcher配置。
-+ 最佳做法是引用[AEM项目原型](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud)中的Dispatcher模块。
-+ [设置本地Dispatcher Tools](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html)以验证Dispatcher，然后在Cloud Service环境中进行测试。
++ 使用[Adobe I/O Dispatcher Converter工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#aio-aem-migrationdispatcher-converter)迁移现有的Dispatcher配置。
++ 最佳做法是引用[Dispatcher项目原型](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud)中的AEM模块。
++ [设置本地Dispatcher工具](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html)以验证Dispatcher，然后在Cloud Service环境中进行测试。
 
 ## 实践练习
 
@@ -61,7 +61,7 @@ ht-degree: 4%
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">Dispatcher Tools的动手实践</div>
             <p style="margin:1rem 0">
-                探索使用AEM SDK的Dispatcher工具来验证Dispatcher配置，以及使用Docker在本地运行AEM Dispatcher。
+                探索使用AEM SDK的Dispatcher工具验证Dispatcher配置，以及使用Docker在本地运行AEM Dispatcher。
             </p>
             <a  rel="noreferrer"
                 target="_blank"

@@ -4,12 +4,13 @@ description: 用于生成访问令牌以调用Forms文档服务API的示例代�
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
+exl-id: 100cab4b-16bd-4358-b0f0-61dbfd64d412
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%

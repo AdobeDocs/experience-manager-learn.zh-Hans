@@ -1,7 +1,7 @@
 ---
 title: AEM Champion提示和技巧 — Cloud Manager UI
-description: 查看这些来自AEM Champion和专家Rakesh Pasupuleti的有关如何使用Cloud Manager UI的提示。
-version: Cloud Service
+description: 查看这些来自AEM冠军和专家Rakesh Pasupuleti的有关如何使用Cloud Manager UI的提示。
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager
 topic: Administration
 role: Admin, Architect
@@ -11,7 +11,7 @@ last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13230
 exl-id: a89860ed-9ea4-494c-bce9-91ec550361fe
 duration: 303
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 2%

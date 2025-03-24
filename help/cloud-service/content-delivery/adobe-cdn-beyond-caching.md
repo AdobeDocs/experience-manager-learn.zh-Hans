@@ -1,7 +1,7 @@
 ---
-title: AdobeCDN — 缓存之外的高级功能
-description: 了解Adobe CDN除缓存之外的高级功能，例如在CDN上配置流量、设置令牌和凭据、CDN错误页等。
-version: Cloud Service
+title: Adobe CDN — 缓存之外的高级功能
+description: 了解Adobe CDN除缓存之外的高级功能，例如在CDN上配置流量、设置令牌和凭据、CDN错误页面等。
+version: Experience Manager as a Cloud Service
 feature: Website Performance, CDN Cache
 topic: Architecture, Performance, Content Management
 role: Developer, Architect, User, Leader
@@ -12,18 +12,18 @@ last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
 exl-id: 8948a900-01e9-49ed-9ce5-3a057f5077e4
-source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
 
 ---
 
-# AdobeCDN — 缓存之外的高级功能
+# Adobe CDN — 缓存之外的高级功能
 
-了解Adobe内容分发网络(CDN)除缓存之外的高级功能，例如在CDN上配置流量、设置令牌和凭据、CDN错误页面等。
+了解Adobe Content Delivery Network (CDN)除缓存之外的高级功能，例如在CDN上配置流量、设置令牌和凭据、CDN错误页面等。
 
-除了缓存内容之外，AdobeCDN还提供多种高级功能，有助于优化网站性能。 这些功能包括：
+除了缓存内容之外，Adobe CDN还提供多种高级功能，有助于优化网站性能。 这些功能包括：
 
 - 在CDN上配置流量
 - 配置CDN凭据和身份验证
@@ -37,12 +37,12 @@ ht-degree: 0%
 
 让我们了解与&#x200B;_在CDN上配置流量_&#x200B;相关的关键功能：
 
-- **DoS攻击防护：** AdobeCDN在网络层吸收DoS攻击，阻止它们访问您的源服务器。
+- **DoS攻击防护：** Adobe CDN在网络层吸收DoS攻击，阻止它们访问您的源服务器。
 - **速率限制：**&#x200B;为了保护您的源服务器免受过多请求的影响，您可以在CDN上配置速率限制。
 - **Web应用程序防火墙(WAF)：** WAF保护您的网站免受常见Web应用程序漏洞的攻击，如SQL注入、跨站点脚本编写等。 使用此功能需要增强安全许可证或WAF-DOS保护许可证。
 - **请求转换：**&#x200B;修改传入请求，例如设置或取消设置标头、修改查询参数、Cookie等。
 - **响应转换：**&#x200B;修改传出响应，如设置或取消设置标头。
-- **源选择：**&#x200B;根据请求URL将流量路由到其他源服务器(Adobe和非Adobe)。
+- **源选择：**&#x200B;根据请求URL将流量路由到不同的源服务器(Adobe和非Adobe)。
 - **URL重定向：**&#x200B;将请求(HTTP 301/302)重定向到不同的绝对或相对URL。
 
 ## 配置CDN凭据和身份验证
@@ -51,13 +51,13 @@ ht-degree: 0%
 
 - **清除API令牌**：允许您创建自己的清除密钥，以便从缓存中清除单个资源、组资源或所有资源。
 - **基本身份验证**：一种轻量级身份验证机制，当您想要限制访问您的网站或网站的一部分时。 在上线之前，通常需要作为各种审核流程的一部分。
-- **HTTP标头验证**：在客户管理的CDN将流量路由到AdobeCDN时使用。 AdobeCDN根据`X-AEM-Edge-Key`标头值验证传入的请求。 允许您为`X-AEM-Edge-Key`标头创建自己的值。
+- **HTTP标头验证**：在客户管理的CDN将流量路由到Adobe CDN时使用。 Adobe CDN根据`X-AEM-Edge-Key`标头值验证传入请求。 允许您为`X-AEM-Edge-Key`标头创建自己的值。
 
 ## CDN错误页面
 
 让我们了解与&#x200B;_CDN错误页面_&#x200B;相关的关键功能：
 
-- **品牌错误页**：当AdobeCDN无法访问您的源服务器时，在&#x200B;_不可能的情况_&#x200B;中向您的用户显示品牌错误页。
+- **品牌错误页面**：当Adobe CDN无法访问您的源服务器时，在&#x200B;_不可能的情况_&#x200B;中向用户显示品牌错误页面。
 
 ## 实施方式
 
@@ -87,7 +87,7 @@ data:
           location: /us/en/top3.html
 ```
 
-## 相关Tutorials
+## 相关教程
 
 [使用流量过滤器规则保护网站](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 

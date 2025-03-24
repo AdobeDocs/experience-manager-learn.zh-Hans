@@ -1,7 +1,7 @@
 ---
 title: 自定义域名选项
 description: 了解如何管理和实施AEM as a Cloud Service托管网站的自定义域名。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Custom Domain Names
 topic: Architecture, Migration
 role: Admin, Architect, Developer
@@ -12,9 +12,9 @@ last-substantial-update: 2024-08-09T00:00:00Z
 jira: KT-15946
 thumbnail: KT-15946.jpeg
 exl-id: e11ff38c-e823-4631-a5b0-976c2d11353e
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '599'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 ### Adobe管理的CDN与客户管理的CDN
 
-为了减少延迟并提高网站性能，AEM as a Cloud Service集成了Adobe管理的内容交付网络(CDN)。 已为所有环境自动启用Adobe管理的CDN。 有关详细信息，请参阅[AEM as a Cloud Service缓存](../caching/overview.md)。
+为了减少延迟并改进网站性能，AEM as a Cloud Service已与Adobe管理的内容交付网络(CDN)集成。 已为所有环境自动启用Adobe-managed CDN 。 有关详细信息，请参阅[AEM as a Cloud Service缓存](../caching/overview.md)。
 
 但是，客户也可以使用他们自己的CDN，称为&#x200B;**客户管理的CDN**。 它不是必需的，但很少有客户出于公司政策或其他原因使用它。 在这种情况下，客户负责管理CDN配置和设置。
 
@@ -75,12 +75,12 @@ ht-degree: 1%
 
 | 自定义的域名 | 将SSL证书添加到 | 将域名添加到 | 在配置DNS记录 | 是否需要HTTP标头验证CDN规则？ |
 |---------------------|:-----------------------:|-----------------------:|-----------------------:|-----------------------:|
-| Adobe管理的CDN | AdobeCloud Manager | AdobeCloud Manager | DNS托管服务 | ✘ |
+| Adobe托管的CDN | Adobe Cloud Manager | Adobe Cloud Manager | DNS托管服务 | ✘ |
 | 客户管理的CDN | CDN供应商 | CDN供应商 | DNS托管服务 | ✔ |
 
 ### 分步教程
 
 现在您已经了解了域名管理流程，可以通过执行以下教程来为AEM as a Cloud Service网站实施自定义域名：
 
-**[具有Adobe管理的CDN的自定义域名](./custom-domain-name-with-adobe-managed-cdn.md)**：在本教程中，您将了解如何使用Adobe管理的CDN **向**AEM as a Cloud Service网站添加自定义域名。
+**[使用Adobe管理的CDN的自定义域名](./custom-domain-name-with-adobe-managed-cdn.md)**：在本教程中，您将了解如何使用Adobe管理的CDN **向**AEM as a Cloud Service网站添加自定义域名。
 **[具有客户管理的CDN的自定义域名](./custom-domain-names-with-customer-managed-cdn.md)**：在本教程中，您将了解如何使用客户管理的CDN **向** AEM as a Cloud Service网站添加自定义域名。

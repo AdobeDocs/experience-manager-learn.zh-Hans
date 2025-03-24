@@ -2,7 +2,7 @@
 title: 将徽章添加到富文本编辑器(RTE)
 description: 了解如何在AEM内容片段编辑器中向富文本编辑器(RTE)添加徽章
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 83acbddb-9168-4d8b-84b5-97577d8a1ead
 duration: 538
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 0%
@@ -37,7 +37,7 @@ RTE徽章最常见的使用案例是与[RTE小组件](https://developer.adobe.co
 
 此外，**电话号码**&#x200B;的样式不同（蓝色），这是徽章功能的额外用例。
 
-为了简单起见，此示例使用[AdobeReact Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架开发小部件或对话框UI以及硬编码的WKND客户服务电话号码。 为了控制内容的非编辑性和不同的样式方面，在徽章定义的`prefix`和`suffix`属性中使用`#`字符。
+为了简单起见，此示例使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架开发构件或对话框UI以及硬编码的WKND客户服务电话号码。 为了控制内容的非编辑性和不同的样式方面，在徽章定义的`prefix`和`suffix`属性中使用`#`字符。
 
 ## 扩展点
 
@@ -137,14 +137,14 @@ export default ExtensionRegistration;
 
 ### 创建`LargeBookingsCustomerService` React组件{#create-widget-react-component}
 
-使用[AdobeReact Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架创建构件或对话框UI。
+该构件或对话框UI是使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架创建的。
 
 添加客户服务详细信息时，React组件代码在电话号码变量周围使用`#`已注册的徽章字符将其转换为徽章，如`#${phoneNumber}#`，从而使它不可编辑。
 
 以下是`LargeBookingsCustomerService`代码的关键亮点：
 
 + UI是使用React Spectrum组件呈现的，如[ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html)、[ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html)、[Button](https://react-spectrum.adobe.com/react-spectrum/Button.html)
-+ `largeGroupCustomerServiceList`数组具有代表性名称和电话号码的硬编码映射。 在现实场景中，此数据可以从AdobeAppBuilder操作或外部系统、自主开发或基于云提供商的API网关中检索。
++ `largeGroupCustomerServiceList`数组具有代表性名称和电话号码的硬编码映射。 在现实场景中，此数据可以从Adobe AppBuilder操作或外部系统、自主开发或基于云提供商的API网关中检索。
 + 使用`useEffect` [React挂接](https://react.dev/reference/react/useEffect)初始化`guestConnection`，并将其作为组件状态进行管理。 用于与AEM主机通信。
 + `handleCustomerServiceChange`函数获取代表性姓名和电话号码，并更新组件状态变量。
 + 使用`guestConnection`对象的`addCustomerServiceDetails`函数提供了要执行的RTE指令。 在本例中，`insertContent`说明和HTML代码段。

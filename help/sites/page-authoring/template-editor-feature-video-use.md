@@ -1,8 +1,8 @@
 ---
-title: 在AEM Sites中使用可编辑的页面模板
+title: 在 AEM Sites 中使用可编辑页面模板
 description: 通过可编辑的模板，专业作者可以使用AEM Sites创建和更新页面模板以及管理高级策略配置。
 feature: Editable Templates
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-193
 topic: Content Management
 role: User
@@ -10,10 +10,10 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 2213d1f2-37ed-4897-a68d-04ef423395a3
 duration: 369
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '189'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 {{edge-delivery-services-and-page-editor}}
 
-通过可编辑的模板，专业作者可以使用Adobe Experience Manager (AEM) Sites创建和更新页面模板以及管理高级策略配置。
+通过可编辑的模板，专业作者可以使用Adobe Experience Manager (AEM)站点创建和更新页面模板以及管理高级策略配置。
 
 >[!VIDEO](https://video.tv.adobe.com/v/326784?quality=12&learn=on)
 
@@ -36,7 +36,7 @@ ht-degree: 1%
 * **图像组件** — 能够打开/关闭裁切、使用新UI上载桌面文件等功能并在模板间重复使用图像策略。
 
 可在&#x200B;**工具** `>` **常规** `>` **模板**&#x200B;下找到可编辑的模板。\
-可编辑的模板URL(本地AEM实例)： [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
+可编辑模板URL(本地AEM实例)： [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 ## 其他资源 {#additional-resources}
 

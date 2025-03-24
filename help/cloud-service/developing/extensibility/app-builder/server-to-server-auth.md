@@ -2,7 +2,7 @@
 title: 在App Builder操作中生成服务器到服务器访问令牌
 description: 了解如何使用OAuth服务器到服务器凭据生成访问令牌以用于App Builder操作。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Intermediate
@@ -10,7 +10,7 @@ jira: KT-14724
 last-substantial-update: 2024-02-29T00:00:00Z
 duration: 122
 exl-id: 919cb9de-68f8-4380-940a-17274183298f
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -19,17 +19,17 @@ ht-degree: 0%
 
 # 在App Builder操作中生成服务器到服务器访问令牌
 
-App Builder操作可能需要与支持&#x200B;**OAuth服务器到服务器凭据**&#x200B;且与App Builder应用程序部署的Adobe Developer Console项目关联的AdobeAPI进行交互。
+App Builder操作可能需要与支持&#x200B;**OAuth服务器到服务器凭据**&#x200B;且与App Builder应用程序部署的Adobe Developer Console项目关联的Adobe API进行交互。
 
 本指南介绍如何使用&#x200B;_OAuth服务器到服务器凭据_&#x200B;生成访问令牌，以便在App Builder操作中使用。
 
 >[!IMPORTANT]
 >
-> 服务帐户(JWT)凭据已弃用，推荐使用OAuth服务器到服务器凭据。 但是，仍然有一些AdobeAPI仅支持服务帐户(JWT)凭据，迁移到OAuth服务器到服务器的过程正在进行中。 查看AdobeAPI文档，了解支持哪些凭据。
+> 服务帐户(JWT)凭据已弃用，推荐使用OAuth服务器到服务器凭据。 但是，仍然有一些Adobe API仅支持服务帐户(JWT)凭据，迁移到OAuth服务器到服务器的过程正在进行中。 查看Adobe API文档，了解支持哪些凭据。
 
 ## Adobe Developer Console项目配置
 
-将所需的AdobeAPI添加到Adobe Developer Console项目时，在&#x200B;_配置API_&#x200B;步骤中，选择&#x200B;**OAuth服务器到服务器**&#x200B;身份验证类型。
+将所需的Adobe API添加到Adobe Developer Console项目时，在&#x200B;_配置API_&#x200B;步骤中，选择&#x200B;**OAuth服务器到服务器**&#x200B;身份验证类型。
 
 ![Adobe Developer Console - OAuth服务器到服务器](./assets/s2s-auth/oauth-server-to-server.png)
 
@@ -87,7 +87,7 @@ runtimeManifest:
 
 ## 用于访问令牌的OAuth服务器到服务器凭据
 
-在App Builder操作中，`params`对象中提供了OAuth服务器到服务器凭据。 使用这些凭据可以使用[OAuth 2.0库](https://oauth.net/code/)生成访问令牌。 或者，您可以使用[Node获取库](https://www.npmjs.com/package/node-fetch)向Adobe IMS令牌端点发出POST请求以获取访问令牌。
+在App Builder操作中，`params`对象中提供了OAuth服务器到服务器凭据。 使用这些凭据可以使用[OAuth 2.0库](https://oauth.net/code/)生成访问令牌。 或者，您可以使用[节点获取库](https://www.npmjs.com/package/node-fetch)向Adobe IMS令牌端点发出POST请求以获取访问令牌。
 
 以下示例演示了如何使用`node-fetch`库向Adobe IMS令牌端点发出POST请求以获取访问令牌。
 

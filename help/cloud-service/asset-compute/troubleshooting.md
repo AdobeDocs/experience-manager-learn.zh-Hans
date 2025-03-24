@@ -1,8 +1,8 @@
 ---
-title: AEM Assets的Asset compute可扩展性故障诊断
-description: 以下是为AEM Assets开发和部署自定义Asset compute工作程序时可能遇到的常见问题和错误以及解决方案的索引。
+title: AEM Assets的Asset Compute可扩展性疑难解答
+description: 以下是为AEM Assets开发和部署自定义Asset Compute工作程序时可能遇到的常见问题和错误以及解决方案的索引。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5802
 thumbnail: KT-5802.jpg
@@ -11,16 +11,16 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
 duration: 260
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 0%
 
 ---
 
-# asset compute可扩展性故障诊断
+# Asset Compute可扩展性故障诊断
 
-以下是为AEM Assets开发和部署自定义Asset compute工作程序时可能遇到的常见问题和错误以及解决方案的索引。
+以下是为AEM Assets开发和部署自定义Asset Compute工作程序时可能遇到的常见问题和错误以及解决方案的索引。
 
 ## 开发{#develop}
 
@@ -35,14 +35,14 @@ ht-degree: 0%
 
 ## 开发工具{#development-tool}
 
-### asset compute项目中缺少Console.json文件{#missing-console-json}
+### Asset Compute项目中缺少Console.json文件{#missing-console-json}
 
 + __错误：__&#x200B;错误：在async setupAssetCompute (`.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY`)验证(`.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY`)时缺少必需的文件
-+ __原因：__ Asset compute项目的根目录中缺少`console.json`文件
++ __原因：__ Asset Compute项目的根目录中缺少`console.json`文件
 + __分辨率：__&#x200B;从您的Adobe I/O项目下载新的`console.json`
-   1. 在console.adobe.io中，打开将Asset compute项目配置为使用的Adobe I/O项目
+   1. 在console.adobe.io中，打开Asset Compute项目配置为使用的Adobe I/O项目
    1. 点按右上方的&#x200B;__下载__&#x200B;按钮
-   1. 使用文件名`console.json`将下载的文件保存到Asset compute项目的根目录下
+   1. 使用文件名`console.json`将下载的文件保存到Asset Compute项目的根目录中
 
 ### manifest.yml中的YAML缩进不正确{#incorrect-yaml-indentation}
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 ### memorySize限制设置过低{#memorysize-limit-is-set-too-low}
 
-+ __错误：__&#x200B;本地开发服务器OpenWhiskError：PUThttps://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true返回HTTP 400（错误请求） —>“请求内容格式错误：要求失败：内存比允许的阈值134217728 B低64 MB”
++ __错误：__&#x200B;本地开发服务器OpenWhiskError： PUT https://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true返回HTTP 400（错误请求） —>“请求内容格式错误：请求失败：内存比134217728 B的允许阈值低64 MB”
 + __原因：__ `manifest.yml`中辅助进程的`memorySize`限制设置为低于错误消息所报告的最小允许阈值（字节）。
 + __分辨率：__&#x200B;查看`manifest.yml`中的`memorySize`限制并确保它们都大于允许的最小阈值。
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 ### Source文件下拉列表不正确{#source-files-dropdown-incorrect}
 
-asset compute开发工具可能会进入提取陈旧数据的状态，在&#x200B;__Source文件__&#x200B;显示不正确项目的下拉列表中最为明显。
+Asset Compute开发工具可能会进入提取陈旧数据的状态，在&#x200B;__Source文件__&#x200B;显示不正确项目的下拉列表中最为明显。
 
 + __错误：__ Source文件下拉列表显示不正确的项目。
 + __原因：__&#x200B;过时的缓存浏览器状态导致
@@ -72,9 +72,9 @@ asset compute开发工具可能会进入提取陈旧数据的状态，在&#x200B
 
 ### devToolToken查询参数缺失或无效{#missing-or-invalid-devtooltoken-query-parameter}
 
-+ __错误：__ Asset compute开发工具中的“未授权”通知
++ __错误：__ Asset Compute开发工具中的“未授权”通知
 + __原因：__ `devToolToken`缺失或无效
-+ __解决方法：__&#x200B;关闭Asset compute开发工具浏览器窗口，终止通过`aio app run`命令启动的任何正在运行的开发工具进程，然后重新启动开发工具（使用`aio app run`）。
++ __解决方法：__&#x200B;关闭Asset Compute开发工具浏览器窗口，终止通过`aio app run`命令启动的任何正在运行的开发工具进程，然后重新启动开发工具（使用`aio app run`）。
 
 ### 无法删除源文件{#unable-to-remove-source-files}
 
@@ -98,7 +98,7 @@ asset compute开发工具可能会进入提取陈旧数据的状态，在&#x200B
 
 + __错误：__&#x200B;失败：演绎版“rendition.xxx”与预期不同。
 + __原因：__&#x200B;辅助进程输出的格式副本与测试用例中提供的`rendition.<extension>`不同。
-   + 如果预期的`rendition.<extension>`文件不是以与测试用例中本地生成的演绎版完全相同的方式创建的，则测试可能会失败，因为比特数可能有一些差异。 例如，如果Asset compute工作进程使用API更改对比度，并通过调整Adobe Photoshop CC中的对比度创建预期结果，则文件可能显示相同，但位中的细微变化可能不同。
+   + 如果预期的`rendition.<extension>`文件不是以与测试用例中本地生成的演绎版完全相同的方式创建的，则测试可能会失败，因为比特数可能有一些差异。 例如，如果Asset Compute Worker使用API更改对比度，并通过调整Adobe Photoshop CC中的对比度创建预期结果，则文件可能显示相同，但位中的细微变化可能不同。
 + __分辨率：__&#x200B;通过导航到`/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`查看测试中的演绎版输出，并将其与测试用例中的预期演绎版文件进行比较。 要创建完全预期的资产，请执行以下操作：
    + 使用开发工具生成演绎版，验证其是否正确，并将其用作预期的演绎版文件
    + 或者，在`/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`处验证测试生成的文件，验证它是否正确，并将其用作预期的演绎版文件
@@ -113,7 +113,7 @@ asset compute开发工具可能会进入提取陈旧数据的状态，在&#x200B
 
 ### 断点未暂停{#breakpoints-no-pausing}
 
-+ __错误__：从可调试的开发工具运行Asset compute工作进程时，VS代码不会在断点处暂停。
++ __错误__：从可调试的开发工具运行Asset Compute工作进程时，VS代码不会在断点处暂停。
 
 #### 未附加VS代码调试器{#vs-code-debugger-not-attached}
 
@@ -123,11 +123,11 @@ asset compute开发工具可能会进入提取陈旧数据的状态，在&#x200B
 #### 辅助进程执行开始后附加的VS代码调试器{#vs-code-debugger-attached-after-worker-execution-began}
 
 + __原因：__ VS代码调试器在点按“开发工具”中的&#x200B;__运行__&#x200B;之前未附加。
-+ __解决方法：__&#x200B;通过查看VS代码的Debug Console（“视图”>“调试控制台”），确保已附加Asset compute程序，然后从开发工具中重新运行调试程序。
++ __解决方案：__&#x200B;通过查看VS代码的调试控制台（“视图”>“调试控制台”），确保已附加调试器，然后从开发工具中重新运行Asset Compute工作程序。
 
 ### Worker在调试时超时{#worker-times-out-while-debugging}
 
-+ __错误__：调试控制台报告“操作将在 — XXX毫秒内超时”或[Asset compute开发工具的](./develop/development-tool.md)演绎版预览无限期旋转，或
++ __错误__：调试控制台报告“操作将在 — XXX毫秒内超时”或[Asset Compute开发工具的](./develop/development-tool.md)演绎版预览无限期旋转或
 + __原因__：调试期间超出了[manifest.yml](./develop/manifest.md)中定义的辅助进程超时。
 + __解决办法__：在[manifest.yml](./develop/manifest.md)中临时增加辅助进程的超时或加快调试活动。
 

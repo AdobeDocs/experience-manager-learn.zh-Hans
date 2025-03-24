@@ -1,7 +1,7 @@
 ---
 title: 适用于AEM增强型连接器的Workfront的AEM Tags、项目链接文件夹和文件夹元数据
-description: 了解如何通过AEM数据推动在资源上使用Workfront Tags、使用项目链接文件夹以及将Workfront数据引入AEM资源文件夹元数据架构。
-version: Cloud Service
+description: 了解如何通过AEM数据推动Workfront Tags在资源上的使用、使用项目链接文件夹以及将Workfront数据引入AEM资源文件夹元数据架构。
+version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, Architect, Developer
@@ -11,10 +11,10 @@ thumbnail: 340333.jpeg
 hidefromtoc: false
 last-substantial-update: 2022-09-02T00:00:00Z
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
+badgeVersions: label="AEM Assets as a Cloud Service， AEM Assets 6.5" before-title="false"
 exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
 duration: 2633
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
@@ -25,11 +25,11 @@ ht-degree: 0%
 
 ![AEM Experts系列](./assets/banner.png)
 
-了解如何通过AEM数据推动Workfront Tags在资源上使用、设置和使用项目链接文件夹以及Workfront数据到AEM资源文件夹元数据架构。
+了解如何通过AEM数据推动Workfront Tags在资源上的使用、设置和使用项目链接文件夹以及Workfront数据到AEM资源文件夹元数据架构。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340333?quality=12&learn=on)
 
-_Workfront for Experience Manager增强型连接器上的[四部分Expert系列中的第三部分](./overview.md)_
+_关于Workfront for Experience Manager增强型连接器的[四部分专家系列第三部分](./overview.md)_
 
 ## 更正
 

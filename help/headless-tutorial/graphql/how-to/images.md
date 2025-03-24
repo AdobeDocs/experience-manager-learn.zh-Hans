@@ -1,7 +1,7 @@
 ---
 title: 将优化的图像与AEM Headless结合使用
 description: 了解如何使用AEM Headless请求优化的图像URL。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
 role: Developer
@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 300
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 4%
@@ -20,9 +20,9 @@ ht-degree: 4%
 
 # 用 AEM Headless 优化的图像 {#images-with-aem-headless}
 
-图像是[开发丰富、引人注目的AEM Headless体验的关键方面](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans)。 AEM Headless支持管理图像资源及其优化交付。
+图像是[开发丰富、引人注目的AEM Headless体验的关键方面](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-Headless/graphql/multi-step/overview.html?lang=zh-Hans)。 AEM Headless支持管理图像资源及其优化交付。
 
-AEM Headless内容建模中使用的内容片段，通常引用要在Headless体验中显示的图像资源。 可以写入AEM GraphQL查询，以根据引用图像的位置向图像提供URL。
+AEM Headless内容建模中使用的内容片段，通常引用要在Headless体验中显示的图像资源。 可以写入AEM的GraphQL查询，以根据引用图像的位置向图像提供URL。
 
 `ImageRef`类型有四个URL选项用于内容引用：
 
@@ -31,8 +31,8 @@ AEM Headless内容建模中使用的内容片段，通常引用要在Headless体
    + `_dynamicUrl`不包含AEM源，因此域(AEM Author或AEM Publish服务)必须由客户端应用程序提供。
 + `_authorUrl`是AEM创作实例上图像资源的完整URL
    + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html)可用于提供Headless应用程序的预览体验。
-+ `_publishUrl`是AEM Publish上图像资源的完整URL
-   + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html)通常是Headless应用程序的生产部署显示图像的位置。
++ `_publishUrl`是AEM发布中图像资源的完整URL
+   + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html)通常是Headless应用程序的生产部署显示图像的地方。
 
 `_dynamicUrl`是建议用于图像资产投放的URL，应尽可能替换`_path`、`_authorUrl`和`_publishUrl`的使用。
 
@@ -106,7 +106,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 | `flip` | 翻转图像。 | ✘ | `HORIZONTAL`、`VERTICAL`、`HORIZONTAL_AND_VERTICAL` |
 | `quality` | 图像质量占原始质量的百分比。 | ✘ | 1-100 |
 | `width` | 输出图像的宽度（像素）。 提供`size`时`width`被忽略。 | ✘ | 正整数 |
-| `preferWebP` | 如果`true`和AEM在浏览器支持WebP的情况下提供它，而不考虑`format`。 | ✘ | `true`、`false` |
+| `preferWebP` | 如果`true`和AEM在浏览器支持的情况下提供WebP，而不考虑`format`。 | ✘ | `true`、`false` |
 
 
 ## GraphQL响应
@@ -131,7 +131,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 
 要在应用程序中加载所引用图像的Web优化图像，请使用`primaryImage`的`_dynamicUrl`作为图像的源URL。
 
-在React中，显示AEM Publish中的Web优化图像如下所示：
+在React中，从AEM Publish显示Web优化图像如下所示：
 
 ```jsx
 // The AEM host is usually read from a environment variable of the SPA.
@@ -142,7 +142,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 <img src={dynamicUrl} alt={data.adventureByPath.item.title}/>
 ```
 
-请记住，`_dynamicUrl`不包括AEM域，因此您必须提供所需的源位置以便解析图像URL。
+请记住，`_dynamicUrl`不包含AEM域，因此您必须提供所需的源位置以便解析图像URL。
 
 ## 响应式URL
 
@@ -198,7 +198,7 @@ document.body.innerHTML=`<picture>
 
 这个简单的React应用程序使用[AEM Headless SDK](./aem-headless-sdk.md)查询AEM Headless API以获取冒险内容，并使用带有srcset](#img-element-with-srcset)和[picture element](#picture-element)的[img元素显示Web优化图像。 `srcset`和`sources`使用自定义`setParams`函数将Web优化投放查询参数附加到图像的`_dynamicUrl`，因此请更改根据Web客户端需求投放的图像演绎版。
 
-在使用了AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries)的自定义React挂接[useAdventureByPath中执行针对AEM的查询。
+在使用AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries)的自定义React挂钩[useAdventureByPath中执行对AEM的查询。
 
 ```javascript
 // src/App.js

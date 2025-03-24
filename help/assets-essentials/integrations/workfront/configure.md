@@ -1,7 +1,7 @@
 ---
-title: 配置Adobe Workfront与Assets Essentials集成
-description: 了解如何配置Workfront与Assets Essentials集成。
-version: Cloud Service
+title: 配置Adobe Workfront和Assets Essentials集成
+description: 了解如何配置Workfront和Assets Essentials集成。
+version: Experience Manager as a Cloud Service
 feature: Assets Essentials
 topic: Content Management, Integrations
 role: User
@@ -14,7 +14,7 @@ badgeVersions: label="AEM Assets Essentials" before-title="false"
 doc-type: Feature Video
 exl-id: c3961fdf-b8aa-410d-9561-520a248ea5b0
 duration: 322
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 11%
@@ -23,7 +23,7 @@ ht-degree: 11%
 
 # 配置集成
 
-了解如何配置Adobe Workfront与Assets Essentials集成。
+了解如何配置Adobe Workfront和Assets Essentials集成。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/336254?quality=12&learn=on)

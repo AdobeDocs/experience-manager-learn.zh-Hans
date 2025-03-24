@@ -1,7 +1,7 @@
 ---
 title: 用于PIM集成的AEM Assets事件
 description: 了解如何集成AEM Assets和产品信息管理(PIM)系统以进行资源元数据更新。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1517'
 ht-degree: 0%
@@ -25,11 +25,11 @@ ht-degree: 0%
 >
 >本教程使用基于OpenAPI的AEM API。 如果您有兴趣访问它们，我们建议您通过电子邮件发送[aem-apis@adobe.com](mailto:aem-apis@adobe.com)，并提供用例说明。
 
-了解如何使用基于OpenAPI的Assets创作API接收AEM事件并对其执行操作以更新AEM中的内容状态。
+了解如何使用基于OpenAPI的AEM创作API接收Assets事件并对其执行操作以更新AEM中的内容状态。
 
 如何处理收到的事件取决于业务要求。 例如，事件数据可用于更新第三方系统或AEM，或同时更新两者。
 
-此示例演示了如何将第三方系统(如产品信息管理(PIM)系统)与AEM as a Cloud Service Assets集成。 在收到AEM Assets事件时，对其进行处理以从PIM系统检索其他元数据并更新AEM中的资源元数据。 更新的资产元数据可以包含附加信息，如SKU、供应商名称或其他产品详细信息。
+此示例演示了如何将第三方系统(如产品信息管理(PIM)系统)与AEM as a Cloud Service Assets集成。 在收到AEM Assets事件时，将对其进行处理以从PIM系统检索其他元数据并更新AEM中的资源元数据。 更新的资产元数据可以包含附加信息，如SKU、供应商名称或其他产品详细信息。
 
 为了接收和处理AEM Assets事件[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)，使用了无服务器平台。 但是，也可以使用第三方系统中的Webhook或Amazon EventBridge等其他事件处理系统。
 
@@ -37,9 +37,9 @@ ht-degree: 0%
 
 用于PIM集成的![AEM Assets事件](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
 
-1. 当完成资源上传并完成所有资源处理活动时，AEM创作服务会触发&#x200B;_资源处理已完成_&#x200B;事件。 等待资产处理完成可确保已完成任何现成的处理，例如元数据提取。
-1. 该事件已发送到[Adobe I/O事件](https://developer.adobe.com/events/)服务。
-1. Adobe I/O事件服务将事件传递到[Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)进行处理。
+1. 当完成资源上传并完成所有资源处理活动时，AEM创作服务会触发一个&#x200B;_资源处理已完成_&#x200B;事件。 等待资产处理完成可确保已完成任何现成的处理，例如元数据提取。
+1. 该事件已发送到[Adobe I/O Events](https://developer.adobe.com/events/)服务。
+1. Adobe I/O Events服务将事件传递到[Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)进行处理。
 1. Adobe I/O Runtime操作调用PIM系统的API以检索其他元数据，如SKU、供应商信息或其他详细信息。
 1. 然后，在AEM Assets中使用基于OpenAPI的[Assets创作API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)更新从PIM检索到的其他元数据。
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 要完成本教程，您需要：
 
-- 启用了[AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)的AEM as a Cloud Service环境。 此外，示例[WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)项目必须部署到该项目。
+- 已启用[AEM事件的AEM as a Cloud Service环境](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)。 此外，示例[WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)项目必须部署到该项目。
 
 - 访问[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 1. [在Adobe Developer Console (ADC)中创建项目](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
 1. [初始化项目以进行本地开发](./runtime-action.md#initialize-project-for-local-development)
 1. 在ADC中配置项目
-1. 配置AEM Author服务以启用ADC项目通信
+1. 配置AEM创作服务以启用ADC项目通信
 1. 开发运行时操作以进行编排
    1. 从PIM系统检索元数据
    1. 使用Assets创作API在AEM Assets中更新元数据
@@ -312,8 +312,8 @@ ht-degree: 0%
 
    | 标签 | 占位符 | 元数据属性 |
    | --- | --- | --- |
-   | SKU | 通过AEM Eventing集成自动填充 | `wknd-skuid` |
-   | 供应商名称 | 通过AEM Eventing集成自动填充 | `wknd-suppliername` |
+   | SKU | 通过AEM事件集成自动填充 | `wknd-skuid` |
+   | 供应商名称 | 通过AEM事件集成自动填充 | `wknd-suppliername` |
 
 1. 单击&#x200B;**保存**&#x200B;和&#x200B;**关闭**&#x200B;以保存元数据表单。
 
@@ -333,8 +333,8 @@ ht-degree: 0%
 
 企业通常需要在AEM和其他系统（如PIM）之间同步资源元数据。 使用AEM事件可以实现此类要求。
 
-- 资产元数据检索代码在AEM外部执行，避免了AEM Author服务上的负载，因此这是一种独立扩展的事件驱动架构。
+- 资源元数据检索代码在AEM外部执行，避免了AEM Author服务上的负载，因此这是一种独立扩展的事件驱动架构。
 - 新引入的Assets创作API用于更新AEM中的资源元数据。
 - API身份验证使用OAuth服务器到服务器（也称为客户端凭据流），请参阅[OAuth服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)。
 - 与Adobe I/O Runtime操作不同，其他Webhook或Amazon EventBridge可用于接收AEM Assets事件并处理元数据更新。
-- 通过AEM Eventing开展的资产事件使企业能够自动化和简化关键流程，从而提高内容生态系统的效率和一致性。
+- 通过AEM Eventing开展的资产事件使企业能够自动化和简化关键流程，从而提高整个内容生态系统的效率和一致性。

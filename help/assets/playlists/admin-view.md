@@ -1,7 +1,7 @@
 ---
 title: AEM Assets管理员查看视频播放列表
-description: 了解如何通过此视频播放列表集合来利用AEM Assetsas a Cloud Service管理员功能，以增强您的产品技能。
-version: Cloud Service
+description: 了解如何通过此视频播放列表集合来利用AEM Assets as a Cloud Service管理员功能，以增强您的产品技能。
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: User
 level: Beginner
@@ -9,7 +9,7 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 924b3bab-e0ed-4b07-bded-344aab61eac5
-source-git-commit: 33e0ded0cdcb5d8ed146fdc59c6f37495cd251eb
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ![AEM Assets管理员视图](./assets/admin-view.png){align="center"}
 
-探索这些播放列表以掌握AEM Assetsas a Cloud Service管理视图，包括配置、优化、使用以及与创意工作流的无缝集成。 获取成功使用AEM Assets as a Cloud Service所需的洞察信息。
+探索这些播放列表以掌握AEM Assets as a Cloud Service管理视图，其中涵盖配置、优化、使用以及与创意工作流的无缝集成。 获取成功使用AEM Assets as a Cloud Service所需的洞察信息。
 
 ## 配置管理员视图
 
-开始使用基本设置和配置，以使AEM Assetsas a Cloud Service为您的团队和项目无缝工作。
+开始使用基本设置和配置，以使AEM Assets as a Cloud Service为您的团队和项目无缝工作。
 
 <!-- CARDS
 
@@ -208,7 +208,7 @@ ht-degree: 0%
 
 ## 将创意工作流程与AEM Assets连接
 
-通过将AEM Assetsas a Cloud Service与您的创意工具集成，解锁流畅的协作，确保工作流程一致且高效。
+通过将AEM Assets as a Cloud Service与您的创意工具集成，可解锁流畅的协作，确保工作流程具有一致性和效率。
 
 <!-- CARDS
 
@@ -245,8 +245,8 @@ ht-degree: 0%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" title="将创意操作与AEM Assets Content Automation结合使用" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1d229d6d304f8ef16f59a8e759bd1b55a9b3b4d1d.jpeg?width=400&format=pjpg&optimize=medium" alt="将创意操作与AEM Assets Content Automation结合使用"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" title="将Creative操作与AEM Assets Content Automation结合使用" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1d229d6d304f8ef16f59a8e759bd1b55a9b3b4d1d.jpeg?width=400&format=pjpg&optimize=medium" alt="将Creative操作与AEM Assets Content Automation结合使用"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -254,9 +254,9 @@ ht-degree: 0%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" target="_blank" rel="referrer" title="将创意操作与AEM Assets Content Automation结合使用">在AEM Assets Content Automation中使用创意操作</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" target="_blank" rel="referrer" title="将Creative操作与AEM Assets Content Automation结合使用">将Creative操作与AEM Assets内容自动化结合使用</a>
                     </p>
-                    <p class="is-size-6">了解如何使用Content Automation加载项对Adobe Experience Manager Assets执行Creative Cloud操作。</p>
+                    <p class="is-size-6">了解如何使用Content Automation加载项在Adobe Experience Manager Assets上执行Creative Cloud操作。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">观看</span>

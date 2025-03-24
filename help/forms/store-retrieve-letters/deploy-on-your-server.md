@@ -3,14 +3,14 @@ title: 在服务器上部署示例资源
 description: 测试交互式通信的另存为草稿功能
 feature: Interactive Communication
 doc-type: article
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 jira: KT-10208
 exl-id: 9053ee29-436a-439a-b592-c3fef9852ea4
 duration: 28
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 2%
@@ -41,6 +41,6 @@ ht-degree: 2%
 * [查看已保存的草稿](http://localhost:4502/content/dam/formsanddocuments/saveddrafts/jcr:content?wcmmode=disabled)
 
 >[!NOTE]
->xml文件存储在AEM Server安装的根文件夹中。 Eclipse项目是提供给您根据您的要求自定义解决方案的。
+>xml文件存储在AEM服务器安装的根文件夹中。 Eclipse项目是提供给您根据您的要求自定义解决方案的。
 
 可以从此处](assets/icdrafts-eclipse-project.zip)下载具有示例实施的eclipse项目[

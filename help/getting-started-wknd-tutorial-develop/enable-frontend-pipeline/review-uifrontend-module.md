@@ -1,7 +1,7 @@
 ---
 title: 查看全栈项目的ui.frontend模块
 description: 查看基于maven的全栈AEM Sites项目的前端开发、部署和交付生命周期。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
 duration: 364
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 * 了解AEM全栈项目中前端工件的生成和部署流程
 * 查看AEM全栈项目的`ui.frontend`模块的[webpack](https://webpack.js.org/)配置
-* AEM客户端库（也称为clientlibs）生成过程
+* AEM client library（也称为clientlibs）生成流程
 
 ## AEM全栈和快速站点创建项目的前端部署流程
 
@@ -54,11 +54,11 @@ ht-degree: 0%
 ![前端项目的开发、部署和交付](assets/Dev-Deploy-Delivery-AEM-Project.png)
 
 
-在开发阶段，通过更新`ui.frontend/src/main/webpack`文件夹中的CSS、JS文件来执行前端更改，如样式更改和重新品牌化。 然后，在生成期间，[webpack](https://webpack.js.org/)模块捆绑器和maven插件将这些文件转换为`ui.apps`模块下的优化AEM clientlibs。
+在开发阶段，通过更新`ui.frontend/src/main/webpack`文件夹中的CSS、JS文件来执行前端更改，如样式更改和重新品牌化。 然后，在构建期间，[webpack](https://webpack.js.org/)模块捆绑器和maven插件将这些文件转换为`ui.apps`模块下的优化AEM clientlibs。
 
 在AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)中运行&#x200B;[__全栈栈__&#x200B;管道时，将前端更改部署到Cloud Manager环境。
 
-前端资源通过以`/etc.clientlibs/`开头的URI路径传送到Web浏览器，通常缓存在AEM Dispatcher和CDN上。
+前端资源通过以`/etc.clientlibs/`开头的URI路径交付给Web浏览器，通常缓存在AEM Dispatcher和CDN上。
 
 
 >[!NOTE]
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 * 有三个&#x200B;__webpack__&#x200B;配置文件用于捆绑WKND Sites前端资源。
 
-   1. `webpack.common` — 这包含用于指示WKND资源捆绑和优化的&#x200B;__common__&#x200B;配置。 __output__&#x200B;属性说明在何处发出它创建的统一文件(也称为JavaScript包，但不要将其与AEM OSGi包混淆)。 默认名称设置为`clientlib-site/js/[name].bundle.js`。
+   1. `webpack.common` — 这包含用于指示WKND资源捆绑和优化的&#x200B;__common__&#x200B;配置。 __output__&#x200B;属性说明在何处发出它创建的统一文件(也称为JavaScript包，但不要与AEM OSGi包混淆)。 默认名称设置为`clientlib-site/js/[name].bundle.js`。
 
   ```javascript
       ...
@@ -139,7 +139,7 @@ ht-degree: 0%
 
 ### 来自AEM as a Cloud Service的投放 {#delivery-frontend-aemaacs}
 
-通过全栈管道部署的前端资源将作为`/etc.clientlibs`文件从AEM Site传送到Web浏览器。 您可以通过访问[公开托管的WKND网站](https://wknd.site/content/wknd/us/en.html)并查看网页源来验证此信息。
+通过全栈管道部署的前端资源将作为`/etc.clientlibs`文件从AEM站点传送到Web浏览器。 您可以通过访问[公开托管的WKND网站](https://wknd.site/content/wknd/us/en.html)并查看网页源来验证此信息。
 
 ```html
     ....

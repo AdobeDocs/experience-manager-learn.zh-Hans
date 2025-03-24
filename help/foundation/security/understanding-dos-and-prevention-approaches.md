@@ -1,7 +1,7 @@
 ---
 title: 了解DoS/DDoS预防
 description: 了解如何防止和缓解针对AEM的DoS和DDoS攻击。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Development
 role: Admin, Architect, Developer
@@ -11,7 +11,7 @@ duration: 75
 last-substantial-update: 2024-03-30T00:00:00Z
 jira: KT-15219
 exl-id: 1d7dd829-e235-4884-a13f-b6ea8f6b4b0b
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 1%
@@ -43,12 +43,12 @@ ht-degree: 1%
             <td>旨在保护Web应用程序免受各种攻击的安全解决方案。</td>
             <td>
             <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis#waf-rules" target="_blank">WAF-DDoS保护许可证</a></td>
-            <td>通过AMS合同<a href="https://docs.aws.amazon.com/waf/" target="_blank">AWS</a>或<a href="https://azure.microsoft.com/en-us/products/web-application-firewall" target="_blank">Azure</a> WAF。</td>
-            <td>您的首选WAF</td>
+            <td>通过AMS合同的<a href="https://docs.aws.amazon.com/waf/" target="_blank">AWS</a>或<a href="https://azure.microsoft.com/en-us/products/web-application-firewall" target="_blank">Azure</a> WAF。</td>
+            <td>您首选的WAF</td>
         </tr>
         <tr>
             <td>修改安全性</td>
-            <td>ModSecurity（又称“mod_security”Apache模块）是一种开源、跨平台的解决方案，可抵御针对Web应用程序的一系列攻击。<br/>在AEM as a Cloud Service中，这仅适用于AEM Publish服务，因为在AEM Author服务之前没有AEM Web Server和Apache Dispatcher。</td>
+            <td>ModSecurity（又称“mod_security”Apache模块）是一种开源、跨平台的解决方案，可抵御针对Web应用程序的一系列攻击。<br/>在AEM as a Cloud Service中，这仅适用于AEM Publish服务，因为AEM Author服务前没有Apache Web Server和AEM Dispatcher。</td>
             <td colspan="3"><a href="https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection" target="_blank">启用Modsecurity </a></td>
         </tr>
         <tr>
@@ -61,7 +61,7 @@ ht-degree: 1%
     </tbody>
 </table>
 
-## Post事件分析和持续改进
+## 事后分析和持续改进
 
 虽然在识别和防御DoS/DDoS攻击方面没有一个万能的标准流程，但这取决于贵组织的安全流程。 **事后分析和持续改进**&#x200B;是此过程中的关键步骤。 以下是需要考虑的一些最佳实践：
 

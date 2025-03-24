@@ -1,20 +1,20 @@
 ---
-title: 将Adobe Experience Manager Forms作为Cloud Service与Acrobat Sign集成
+title: 将Adobe Experience Manager Forms as Cloud Service与Acrobat Sign集成
 description: 关于将Forms CS与Acrobat Sign集成的课程的简介视频
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-7578
 thumbnail: 332706.jpg
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: bc66c8fb-d1ce-47dc-af6d-dda0c37347e4
 duration: 97
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 3%

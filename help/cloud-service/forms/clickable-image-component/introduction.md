@@ -1,16 +1,16 @@
 ---
 title: 创建可单击的图像组件
-description: 在AEM Formsas a Cloud Service中创建可单击的图像组件。
+description: 在AEM Forms as a Cloud Service中创建可单击的图像组件。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15968
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: c451472f-d282-4662-9852-8a3e73c5c853
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 可单击图像简介
 
-在Forms中使用可单击的图像，可以打造一种更加引人入胜、直观且美观的用户体验。 在本文中，我们将SVG用于可点击图像，因为它提供了许多优势，尤其是在设计灵活性、性能和用户体验方面。
+在Forms中使用可单击的图像，可以打造一种更加引人入胜、直观且美观的用户体验。 在本文中，我们将SVG用于可点击图像，因为它提供了几个优势，尤其是在设计灵活性、性能和用户体验方面。
 可以使用Adobe Illustrator或任何免费在线工具创建SVG。 我已使用来自](https://simplemaps.com/resources/svg-us)简单映射的[USA映射来演示用例。
 
 ## 使用可单击的“美国地图”的用例

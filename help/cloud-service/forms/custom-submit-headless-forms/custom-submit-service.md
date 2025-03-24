@@ -5,13 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-13520
 exl-id: c23275d7-daf7-4a42-83b6-4d04b297c470
 duration: 115
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%
@@ -26,7 +26,7 @@ AEM Forms提供了大量现成的提交选项，可满足大多数用例的要�
 
 ## 创建AEM项目
 
-如果您已有AEM Formsas a Cloud Service项目，则可以[跳至编写自定义提交服务](#Write-the-custom-submit-service)
+如果您已经拥有AEM Forms as a Cloud Service项目，则可以[跳到编写自定义提交服务](#Write-the-custom-submit-service)
 
 * 在c驱动器上创建一个名为cloudmanager的文件夹。
 * 导航到此新创建的文件夹

@@ -1,7 +1,7 @@
 ---
 title: 本地开发访问令牌
-description: AEM本地开发访问令牌用于加快与AEM as a Cloud Service的集成开发，以便通过HTTP以编程方式与AEM创作或Publish服务交互。
-version: Cloud Service
+description: AEM本地开发访问令牌用于加快与AEM as a Cloud Service的集成开发，以便通过HTTP以编程方式与AEM创作或发布服务交互。
+version: Experience Manager as a Cloud Service
 feature: APIs
 jira: KT-6785
 thumbnail: 330477.jpg
@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
 duration: 572
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 本地开发访问令牌
 
-在构建集成时，如果开发人员需要以编程方式访问AEM as a Cloud Service，则需要一种简单、快速的方式获取AEM的临时访问令牌，以便利本地开发活动。 为了满足此需求，AEM Developer Console允许开发人员自行生成可用于以编程方式访问AEM的临时访问令牌。
+在构建需要以编程方式访问AEM as a Cloud Service的集成时，开发人员需要一种简单、快速的方式来获取AEM的临时访问令牌，以便利本地开发活动。 为了满足此需求，AEM的Developer Console允许开发人员自行生成可用于以编程方式访问AEM的临时访问令牌。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330477?quality=12&learn=on)
 
@@ -29,13 +29,13 @@ ht-degree: 0%
 
 ![正在获取本地开发访问令牌](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-本地开发访问令牌允许作为生成令牌的用户访问AEM创作和Publish服务及其权限。 尽管这是一个开发令牌，但请不要共享此令牌，或将其存储在源代码管理中。
+本地开发访问令牌允许作为生成令牌的用户访问AEM创作和发布服务，以及这些服务的权限。 尽管这是一个开发令牌，但请不要共享此令牌，或将其存储在源代码管理中。
 
 1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，确保作为开发人员的您是以下成员：
    + __Cloud Manager — 开发人员__ IMS产品配置文件(授予对AEM Developer Console的访问权限)
    + 访问令牌与之集成的AEM环境服务的&#x200B;__AEM管理员__&#x200B;或&#x200B;__AEM用户__ IMS产品配置文件
    + 沙盒AEM as a Cloud Service环境仅需要&#x200B;__AEM Administrators__&#x200B;或&#x200B;__AEM Users__&#x200B;产品配置文件的成员资格
-1. 登录到[AdobeCloud Manager](https://my.cloudmanager.adobe.com)
+1. 登录到[Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
 1. 打开包含AEM as a Cloud Service环境的项目以与集成
 1. 点按&#x200B;__环境__&#x200B;分区中环境旁边的&#x200B;__省略号__，然后选择&#x200B;__Developer Console__
 1. 点按&#x200B;__集成__&#x200B;选项卡
@@ -61,11 +61,11 @@ ht-degree: 0%
 
 我们将创建一个简单的外部JavaScript应用程序，以说明如何使用本地开发人员访问令牌通过HTTPS以编程方式访问AEM as a Cloud Service。 这说明了在AEM之外运行的&#x200B;_任何_&#x200B;应用程序或系统（无论框架或语言如何）如何使用访问令牌以编程方式向AEM as a Cloud Service进行身份验证和访问。 在[下一部分](./service-credentials.md)中，我们将更新此应用程序代码以支持生成令牌以供生产使用的方法。
 
-此示例应用程序从命令行运行，并使用AEM Assets HTTP API通过以下流程更新AEM资源元数据：
+此示例应用程序从命令行运行，并使用AEM HTTP API通过以下流程更新AEM Assets资源元数据：
 
 1. 从命令行(`getCommandLineParams()`)读取参数
 1. 获取用于向AEM as a Cloud Service进行身份验证的访问令牌(`getAccessToken(...)`)
-1. 列出在命令行参数(`listAssetsByFolder(...)`)中指定的AEM asset文件夹中的所有资源
+1. 列出在命令行参数(`listAssetsByFolder(...)`)中指定的AEM资源文件夹中的所有资源
 1. 使用命令行参数(`updateMetadata(...)`)中指定的值更新列出的资源元数据
 
 使用访问令牌以编程方式向AEM进行身份验证的关键元素是，按照以下格式向向AEM发出的所有HTTP请求添加授权HTTP请求标头：

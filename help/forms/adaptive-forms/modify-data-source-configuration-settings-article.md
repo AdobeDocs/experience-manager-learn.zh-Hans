@@ -2,14 +2,14 @@
 title: 修改数据Source配置设置。
 description: 在Data Source配置设置中修改主机名和其他设置。
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 6c63787c-e511-4764-9a03-2c85c394bcc0
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 28
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%

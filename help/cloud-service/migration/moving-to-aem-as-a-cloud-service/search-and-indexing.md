@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service中的搜索和索引编制
 description: 了解AEM as a Cloud Service的搜索索引、如何转换AEM 6索引定义以及如何部署索引。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Search
 topic: Migration, Upgrade
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8634
 thumbnail: 336963.jpeg
 exl-id: f752df86-27d4-4dbf-a3cb-ee97b7d9a17e
 duration: 1231
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%
@@ -33,8 +33,8 @@ ht-degree: 0%
 
 ## 关键活动
 
-+ 使用[Adobe I/O工作流迁移器](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter)工具迁移资源处理工作流以使用Asset compute微服务。
-+ 设置[本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)并部署自定义索引。 确保更新的索引是最新的。
++ 使用[Adobe I/O Workflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter)工具迁移资源处理工作流以使用Asset Compute微服务。
++ 设置[本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-hans)并部署自定义索引。 确保更新的索引是最新的。
 + 将更新的代码库部署到AEM as a Cloud Service开发环境，并继续验证。
 + 如果修改开箱即用的索引&#x200B;**ALWAYS**，请从运行于最新版本的AEM as a Cloud Service环境中复制最新的索引定义。 修改复制的索引定义以满足您的需要。
 

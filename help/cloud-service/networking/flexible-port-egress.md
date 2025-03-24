@@ -1,7 +1,7 @@
 ---
 title: 灵活的端口出口
 description: 了解如何设置和使用灵活的端口出口，以支持从AEM as a Cloud Service到外部服务的外部连接。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 870
-source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 2%
@@ -195,19 +195,19 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 ## 通过灵活的端口出口连接到外部服务
 
-启用灵活端口出口代理后，AEM代码和配置可以使用它们调用外部服务。 AEM对两种外部调用的处理方式有所不同：
+启用灵活端口出口代理后，AEM代码和配置可以使用它们调用外部服务。 AEM对两种外部调用处理方式不同：
 
 1. 对非标准端口上的外部服务的HTTP/HTTPS调用
    + 包括对在标准80或443端口以外的端口上运行的服务发出的HTTP/HTTPS调用。
 1. 对外部服务的非HTTP/HTTPS调用
    + 包括任何非HTTP调用，例如与Mail服务器、SQL数据库或在其他非HTTP/HTTPS协议上运行的服务的连接。
 
-默认情况下，允许来自标准端口(80/443)上AEM的HTTP/HTTPS请求，而无需额外的配置或注意事项。
+默认情况下，允许标准端口(80/443)上来自AEM的HTTP/HTTPS请求，而无需额外的配置或注意事项。
 
 
 ### 非标准端口上的HTTP/HTTPS
 
-在从AEM创建到非标准端口（非80/443）的HTTP/HTTPS连接时，必须通过通过占位符提供的特殊主机和端口建立连接。
+从AEM创建到非标准端口（非80/443）的HTTP/HTTPS连接时，必须通过通过占位符提供的特殊主机和端口建立连接。
 
 AEM提供两组特殊的Java™系统变量，这些变量映射到AEM的HTTP/HTTPS代理。
 
@@ -248,7 +248,7 @@ AEM提供两组特殊的Java™系统变量，这些变量映射到AEM的HTTP/HT
 | `AEM_PROXY_HOST` | 非HTTP/HTTPS连接的代理主机 | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
 
 
-然后，通过`AEM_PROXY_HOST`和映射端口(`portForwards.portOrig`)调用与外部服务的连接，AEM随后将其路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
+然后，通过`AEM_PROXY_HOST`和映射的端口(`portForwards.portOrig`)调用与外部服务的连接，AEM随后将其路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
 
 | 代理主机 | 代理端口 |  | 外部主机 | 外部端口 |
 |---------------------------------|----------|----------------|------------------|----------|

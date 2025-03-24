@@ -3,11 +3,11 @@ title: 包含AEM Forms的Acroforms
 description: 将Acroforms与AEM Forms集成的教程的第3部分。 在系统上测试工作流和自适应表单。
 feature: adaptive-forms
 doc-type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 45
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 1%
@@ -32,10 +32,10 @@ ht-degree: 1%
 
 1. 使用上一步中创建的架构创建自适应表单。
 2. 将几个架构元素拖放到自适应表单上。
-3. 配置自适应表单的提交操作以提交到AEM Workflow (MergeAcroformData)。
+3. 配置自适应表单的提交操作以提交到AEM工作流(MergeAcroformData)。
 4. **请确保将数据文件路径指定为“Data.xml”。 这一点非常重要，因为示例代码将在工作流有效负载中查找名为Data.xml的文件。**
 5. 预览自适应表单、填写表单并提交。
-6. 您应会在配置工作流下看到与合并的数据一起保存到PDF步骤4中指定的文件夹中的数据
+6. 您应该会在配置工作流下看到PDF，其中合并的数据将保存到步骤4中指定的文件夹
 
 >[!NOTE]
 >

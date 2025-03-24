@@ -1,7 +1,7 @@
 ---
 title: AEM Headless移动部署
 description: 了解移动AEM Headless部署的部署注意事项。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -10,7 +10,7 @@ jira: KT-10796
 thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
 duration: 31
-source-git-commit: 23ea95cfdf7e4c9fde4b53e9f68079b4d267ca20
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 2%
@@ -19,15 +19,15 @@ ht-degree: 2%
 
 # AEM Headless移动部署
 
-AEM Headless移动部署是iOS、Android™等的原生移动应用程序。 这些组件以Headless方式消费和交互AEM中的内容。
+AEM Headless移动部署是iOS、Android™等的原生移动应用程序。 该应用程序以Headless方式使用AEM中的内容并与之交互。
 
-移动部署需要最少的配置，因为到AEM Headless API的HTTP连接不是在浏览器的上下文中启动的。
+移动部署需要最少的配置，因为与AEM Headless API的HTTP连接不是在浏览器的上下文中启动的。
 
 ## 部署配置
 
 必须为移动应用程序部署就地以下部署配置。
 
-| 移动设备应用程序连接到→ | AEM Author | AEM 发布 | AEM预览 |
+| 移动设备应用程序连接到→ | AEM 作者 | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨源资源共享(CORS) | ✘ | ✘ | ✘ |
@@ -72,7 +72,7 @@ Adobe提供了iOS和Android™移动应用程序的示例。
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/android-app.md" title="Android™应用程序">Android™应用程序</a></p>
-                   <p class="is-size-6">使用AEM Headless GraphQL API内容的示例Java™ Android™应用程序。</p>
+                   <p class="is-size-6">使用AEM Headless GraphQL API中的内容的示例Java™ Android™应用程序。</p>
                    <a href="../example-apps/android-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                    </a>

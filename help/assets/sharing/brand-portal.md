@@ -2,7 +2,7 @@
 title: 使用Brand Portal
 description: AEM创作与AEM Assets Brand Portal集成的视频演练。
 feature: Brand Portal
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
@@ -10,9 +10,9 @@ last-substantial-update: 2022-06-15T00:00:00Z
 doc-type: Feature Video
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
 duration: 2460
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,17 @@ Adobe Experience Manager (AEM) Assets Brand Portal集成的视频指南。
 
 ## Brand Portal 2019年9月版功能和增强功能
 
-Brand Portal在2019年9月推出的最显着功能是引入资源采购，这可提升内容速度，并允许Experience Manager作者与第三方创意人员和投稿人之间轻松快速地交换资源。
+Brand Portal在2019年9月推出的最显着功能是引入资产源，这可提升内容速度，并允许Experience Manager作者与第三方创意人员和投稿人之间轻松快速地交换资产。
 
 ### Brand Portal资源源{#asset-sourcing}
 
-Brand Portal的资源源用于从第三方机构和团队收集资源，并将其无缝同步回Experience Manager创作以供审阅和使用。
+Brand Portal的资源源用于从第三方机构和团队收集资源，并将其无缝同步回Experience Manager Author以供审阅和使用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29365?quality=12&learn=on)
 
-需要&#x200B;*Experience Manager创作6.5 SP2 (6.5.2)或更高版本才能使用资源源*
+需要&#x200B;*Experience Manager Author 6.5 SP2 (6.5.2)或更高版本才能使用资源源*
 
-有关如何在Experience Manager作者上配置和设置资源来源的说明，请查看[启用Experience Manager创作](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=zh-Hans)。
+有关如何在Experience Manager Author上配置和设置资源来源的说明，请查看[启用Experience Manager Author for Asset Sourcing](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=zh-Hans)。
 
 ## Brand Portal 2019年2月版功能和增强功能{#brand-portal-features-and-enhancements-644}
 
@@ -84,9 +84,9 @@ Brand Portal允许在搜索查询中使用星号(*)以及搜索短语中的单�
 
 ### Dynamic Media视频呈现版本支持
 
-AEM创作实例处于Dynamic Media混合模式的用户除了可以预览和下载原始视频文件之外，还可以预览和下载Dynamic Media演绎版。
+AEM创作实例处于Dynamic Media混合模式的用户可以预览和下载Dynamic Media演绎版，以及原始视频文件。
 
-要允许预览和下载特定租户帐户上的Dynamic Media演绎版，管理员需要在“管理工具”面板的“视频配置”中指定Dynamic Media配置(视频服务URL （DM网关URL）和注册ID以获取动态视频)。
+要允许预览和下载特定租户帐户上的Dynamic Media演绎版，管理员需要从管理工具面板的视频配置中指定Dynamic Media配置(视频服务URL （DM网关URL）和注册ID以提取动态视频)。
 
 可以在以下位置预览Dynamic Media视频：
 
@@ -112,7 +112,7 @@ Dynamic Media视频编码可从以下位置下载：
 请注意，只能自定义Brand Portal URL的前缀，而不能自定义整个URL。
 例如，具有现有域`wknd.brand-portal.adobe.com`的组织可以按请求创建`wkndinc.brand-portal.adobe.com`。
 
-但是，AEM创作实例只能使用租户ID URL [配置](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)，而不能使用租户别名（替代）URL。
+但是，AEM创作实例可以[配置](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)，但只能使用租户ID URL，而不能使用租户别名（替代）URL。
 
 **用例** ：组织可以通过自定义门户URL来满足其品牌需求，而不是将其固定在Adobe提供的URL上。
 
@@ -157,9 +157,9 @@ Brand Portal用户可以利用基于Aspera的快速下载，获得高达25倍的
 * *卡片视图和列表视图上的文件夹层次结构路径* — 使用户能够知道存储在Brand Portal实例中的文件夹的位置。 帮助用户区分不同文件夹层次结构中同名的文件夹。
 * *概述选项* — 通过选择资源/文件夹，然后从工具栏中选择概述选项，提供有关资源/文件夹的非管理员用户元数据。 当前，显示标题、创建日期和路径
 
-### Adobe I/O承载用于配置oAuth集成的UI
+### Adobe I/O托管UI以配置oAuth集成
 
-Brand Portal使用Adobe I/O[https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)界面创建JWT应用程序，该应用程序允许配置oAuth集成以允许AEM Assets与Brand Portal集成。 以前，用于配置OAuth集成的用户界面托管在`https://marketing.adobe.com/developer/`中。 要了解有关将AEM Assets与Brand Portal集成以将资产和收藏集发布到Brand Portal的更多信息，请参阅[配置AEM Assets与Brand Portal的集成](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)。
+Brand Portal使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)界面创建JWT应用程序，该应用程序允许配置oAuth集成以允许AEM Assets与Brand Portal集成。 以前，用于配置OAuth集成的用户界面托管在`https://marketing.adobe.com/developer/`中。 要了解有关将AEM Assets与Brand Portal集成以将资产和收藏集发布到Brand Portal的更多信息，请参阅[配置AEM Assets与Brand Portal的集成](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)。
 
 ## Brand Portal 2018年2月功能和增强功能{#brand-portal-features-and-enhancements-632}
 
@@ -208,7 +208,7 @@ Brand Portal使用Adobe I/O[https://legacy-oauth.cloud.adobe.io/](https://legacy
 * [Brand Portal的新增功能](https://helpx.adobe.com/cn/experience-manager/brand-portal/using/whats-new.html)
 * [AEM创作复制代理](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [加速下载指南](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
-* [AEM Assets Brand PortalAdobe文档](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
-* [AEM Assets Dynamic MediaAdobe文档](https://experienceleague.adobe.com/docs/)
+* [AEM Assets Brand Portal Adobe文档](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
+* [AEM Assets Dynamic Media Adobe文档](https://experienceleague.adobe.com/docs/)
 * [下载Aspera Connect](https://downloads.asperasoft.com/connect2/)
 * [Aspera连接测试服务器](https://test-connect.asperasoft.com/)

@@ -1,17 +1,17 @@
 ---
-title: 集成AEM Formsas a Cloud Service和Marketo
+title: 集成AEM Forms as a Cloud Service和Marketo
 description: 了解如何使用AEM Forms表单数据模型集成AEM Forms和Marketo。
 feature: Form Data Model,Integration
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations, Development
 role: Developer
 level: Experienced
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
 exl-id: c3145149-bfa4-4dcb-acde-c359e9348f99
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Marketo会公开一个REST API，该API允许远程执行系统的多项功能�
 
 ## 先决条件
 
-1. 访问AEM Formsas a Cloud Service实例
+1. 访问AEM Forms as a Cloud Service实例
 1. 熟悉表单数据模型
 1. Swagger文件的基本知识
 1. 创建自适应Forms

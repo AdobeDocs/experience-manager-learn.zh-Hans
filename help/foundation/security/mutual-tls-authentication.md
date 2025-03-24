@@ -2,7 +2,7 @@
 title: 来自AEM的双向传输层安全性(mTLS)身份验证
 description: 了解如何从AEM对需要相互传输层安全性(mTLS)身份验证的Web API进行HTTPS调用。
 feature: Security
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
 role: Admin, Architect, Developer
 level: Experienced
@@ -12,7 +12,7 @@ doc-type: Article
 last-substantial-update: 2023-10-10T00:00:00Z
 exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
 duration: 495
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 0%
@@ -71,7 +71,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
   openssl verify -CAfile internal-ca-cert.pem client-cert.pem
   ```
 
-- 将AEM私钥转换为DER格式，AEM KeyStore需要DER格式的私钥。
+- 将AEM私钥转换为DER格式，AEM的KeyStore需要采用DER格式的私钥。
 
   ```shell
   openssl pkcs8 -topk8 -inform PEM -outform DER -in client-key.pem -out client-key.der -nocrypt
@@ -90,11 +90,11 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
 ### 证书导入
 
-要导入AEM证书，请执行以下步骤：
+要导入AEM的证书，请执行以下步骤：
 
 1. 以&#x200B;**管理员**&#x200B;身份登录到&#x200B;**AEM作者**。
 
-1. 导航到&#x200B;**AEM Author > Tools > Security > Users > Create or Select an existing user**。
+1. 导航到&#x200B;**AEM作者>工具>安全>用户>创建或选择现有用户**。
 
    ![创建或选择现有用户](assets/mutual-tls-authentication/create-or-select-user.png)
 
@@ -110,7 +110,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
    1. 输入别名
 
-   1. 以DER格式导入上面生成的AEM私钥。
+   1. 以DER格式导入以上生成的AEM私钥。
 
    1. 导入上面生成的证书链文件。
 
@@ -128,7 +128,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
 ### 使用HttpClient的典型mTLS API调用代码
 
-更新Java™代码，如下所示。 要使用`@Reference`注释来获取AEM `KeyStoreService`服务，调用代码必须是OSGi组件/服务或Sling模型（并在其中使用`@OsgiService`）。
+更新Java™代码，如下所示。 要使用`@Reference`注释来获取AEM的`KeyStoreService`服务，调用代码必须是OSGi组件/服务或Sling模型（并在其中使用`@OsgiService`）。
 
 
 ```java
@@ -214,7 +214,7 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 
 - 将OOTB `com.adobe.granite.keystore.KeyStoreService` OSGi服务注入您的OSGi组件。
 - 使用`KeyStoreService`和`ResourceResolver`获取用户的AEM KeyStore，`getAEMKeyStore(...)`方法可做到这一点。
-- 如果API提供程序使用自签名CA证书，获取全局AEM TrustStore，则`getAEMTrustStore(...)`方法会执行该操作。
+- 如果API提供程序使用自签名CA证书，则获取全局AEM TrustStore，`getAEMTrustStore(...)`方法会执行此操作。
 - 创建`SSLContextBuilder`的对象，请参阅Java™ [API详细信息](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html)。
 - 使用`loadKeyMaterial(final KeyStore keystore,final char[] keyPassword)`方法将用户的AEM KeyStore加载到`SSLContextBuilder`中。
 - 密钥库密码是在创建密钥库时设置的密码，应存储在OSGi配置中，请参阅[密码配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)。
@@ -223,7 +223,7 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 
 使用私有证书有效调用mTLS API的传统方法涉及修改JVM密钥库。 这是通过使用Java™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549)命令导入私有证书来实现的。
 
-但是，此方法不符合安全最佳实践，AEM通过使用&#x200B;**用户特定的KeyStore以及全局TrustStore**&#x200B;和[KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html)提供了优异的选项。
+但是，此方法不符合安全最佳实践，AEM通过使用&#x200B;**用户特定的KeyStore和全局TrustStore**&#x200B;和[KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html)提供了卓越的选项。
 
 ## 解决方案包
 

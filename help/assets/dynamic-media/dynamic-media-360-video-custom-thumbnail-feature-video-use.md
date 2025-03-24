@@ -1,15 +1,15 @@
 ---
 title: 在AEM Assets中使用Dynamic Media 360视频和自定义视频缩略图
-description: AEM 6.5中的Dynamic Media Viewer增强功能包括额外支持360个视频渲染、360个媒体查看器（video360Social和video360VR），以及选择自定义视频缩略图的功能。
+description: AEM 6.5中的Dynamic Media Viewer增强功能包括额外支持360个视频渲染、360个媒体查看器（video360Social和video360VR）以及选择自定义视频缩略图。
 feature: Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 4ee0b68f-3897-4104-8615-9de8dbb8f327
 duration: 656
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 # 在AEM Assets中使用Dynamic Media 360视频和自定义视频缩略图
 
-AEM 6.5中的Dynamic Media Viewer增强功能包括额外支持360个视频渲染、360个媒体查看器（video360Social和video360VR），以及选择自定义视频缩略图的功能。
+AEM 6.5中的Dynamic Media Viewer增强功能包括额外支持360个视频渲染、360个媒体查看器（video360Social和video360VR）以及选择自定义视频缩略图。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26391?quality=12&learn=on)
 
@@ -36,7 +36,7 @@ AEM 6.5中的Dynamic Media Viewer增强功能包括额外支持360个视频渲�
 
 ## Dynamic Media 360视频
 
-Dynamic Media视频现在支持为您的视频选择自定义缩略图。 用户可以从AEM Assets中选择现有资源，也可以选择视频帧作为缩略图。
+Dynamic Media视频现在支持为您的视频选择自定义缩略图的功能。 用户可以从AEM Assets中选择现有资源，也可以选择视频帧作为缩略图。
 
 ## Dynamic 360媒体查看器
 

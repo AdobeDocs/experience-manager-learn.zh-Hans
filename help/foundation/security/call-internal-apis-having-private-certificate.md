@@ -2,7 +2,7 @@
 title: 调用具有私有证书的内部API
 description: 了解如何调用具有私有证书或自签名证书的内部API。
 feature: Security
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
 role: Admin, Architect, Developer
 level: Experienced
@@ -12,7 +12,7 @@ doc-type: Article
 last-substantial-update: 2023-08-25T00:00:00Z
 exl-id: c88aa724-9680-450a-9fe8-96e14c0c6643
 duration: 332
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -62,7 +62,7 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 
 ## HttpClient和加载AEM TrustStore资料
 
-要调用具有&#x200B;_私有或自签名证书_&#x200B;的API终结点，[HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)的`SSLContextBuilder`必须使用AEM的TrustStore加载，并且用于促进连接。
+要调用具有&#x200B;_私有或自签名证书_&#x200B;的API终结点，[HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)的`SSLContextBuilder`必须使用AEM的TrustStore加载，并用于促进连接。
 
 请按照以下步骤操作：
 
@@ -73,7 +73,7 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 
 1. 要导入专用证书，请单击&#x200B;**选择证书文件**&#x200B;按钮，然后选择所需的扩展名为`.cer`的证书文件。 通过单击&#x200B;**提交**&#x200B;按钮导入它。
 
-1. 更新Java™代码，如下所示。 请注意，要使用`@Reference`获取AEM `KeyStoreService`，调用代码必须是OSGi组件/服务或Sling模型（并在其中使用`@OsgiService`）。
+1. 更新Java™代码，如下所示。 请注意，要使用`@Reference`获取AEM的`KeyStoreService`，调用代码必须是OSGi组件/服务或Sling模型（并在其中使用`@OsgiService`）。
 
    ```java
    ...
@@ -142,7 +142,7 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 
 >[!CAUTION]
 >
->使用上述方法执行时，具有有效CA颁发证书的API调用失败。 在遵循此方法时，只允许使用AEM受信任证书的API调用成功。
+>使用上述方法执行时，具有有效CA颁发证书的API调用失败。 在遵循此方法时，只允许使用AEM信任证书的API调用成功。
 >
 >使用[标准方法](#prototypical-api-invocation-code-using-httpclient)执行有效CA颁发的证书的API调用，这意味着应仅使用上述方法执行与私有证书关联的API。
 

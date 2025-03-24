@@ -1,7 +1,7 @@
 ---
-title: 如何设置包括WAF规则在内的流量过滤器规则
-description: 了解如何设置以创建、部署、测试和分析流量过滤器规则（包括WAF规则）的结果。
-version: Cloud Service
+title: 如何设置流量过滤器规则，包括WAF规则
+description: 了解如何设置以创建、部署、测试和分析流量过滤器规则(包括WAF规则)的结果。
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
 role: Admin, Architect
@@ -12,14 +12,14 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: b67bf642-3341-48d0-8ea9-5f262febf414
 duration: 292
-source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 3%
 
 ---
 
-# 如何设置包括WAF规则在内的流量过滤器规则
+# 如何设置流量过滤器规则，包括WAF规则
 
 了解&#x200B;**如何设置**&#x200B;流量过滤器规则，包括WAF规则。 阅读有关创建、部署、测试和分析结果的信息。
 
@@ -29,8 +29,8 @@ ht-degree: 3%
 
 设置过程涉及以下内容：
 
-- _使用适当的AEM项目结构和配置文件创建规则_。
-- 使用AdobeCloud Manager的配置管道&#x200B;_部署规则_。
+- _创建具有适当AEM项目结构和配置文件的规则_。
+- 使用Adobe Cloud Manager的配置管道&#x200B;_部署规则_。
 - _使用各种工具测试规则_&#x200B;以生成流量。
 - _使用AEMCS CDN日志和仪表板工具分析结果_。
 
@@ -121,7 +121,7 @@ data:
 
 创建、部署和测试规则后，您可以使用&#x200B;**CDN**&#x200B;日志和&#x200B;**AEMCS-CDN-Log-Analysis-Tooling**&#x200B;来分析结果。 该工具提供了一组仪表板，用于可视化Splunk和ELK(Elasticsearch、Logstash和Kibana)栈栈的结果。
 
-工具可以从[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub存储库中克隆。 然后，按照说明安装和加载&#x200B;**CDN流量仪表板**&#x200B;和&#x200B;**WAF仪表板**&#x200B;以用于您首选的可观察性工具。
+工具可以从[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub存储库中克隆。 然后，按照相关说明安装和加载&#x200B;**CDN流量仪表板**&#x200B;和&#x200B;**WAF仪表板**&#x200B;以用于您首选的可观察性工具。
 
 在本教程中，让我们使用ELK栈栈。 按照用于AEMCS CDN日志分析的[ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md)说明设置ELK栈栈。
 
@@ -136,4 +136,4 @@ data:
 
 ## 下一步
 
-了解如何使用AEM WKND Sites项目在[示例和结果分析](./examples-and-analysis.md)章节中声明包含WAF规则的流量过滤器规则。
+了解如何使用WAF WKND Sites项目在[示例和结果分析](./examples-and-analysis.md)章节中声明流量过滤器规则，包括AEM规则。

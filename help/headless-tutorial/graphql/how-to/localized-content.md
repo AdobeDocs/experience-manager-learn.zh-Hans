@@ -1,7 +1,7 @@
 ---
-title: 在AEM Headless中使用本地化内容
-description: 了解如何使用GraphQL查询AEM的本地化内容。
-version: Cloud Service
+title: 在AEM Headless中使用本地化的内容
+description: 了解如何使用GraphQL查询AEM中的本地化内容。
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-10254
 thumbnail: KT-10254.jpeg
 exl-id: 5e3d115b-f3a1-4edc-86ab-3e0713a36d54
 duration: 130
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # AEM Headless的本地化内容
 
-AEM为Headless内容提供了[翻译集成框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html)，允许轻松翻译内容片段和支持资源以供跨区域设置使用。 该框架与用于翻译其他AEM内容(如页面、体验片段、Assets和Forms)的框架相同。 在翻译[Headless内容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=zh-Hans)并发布后，便可以供Headless应用程序使用。
+AEM为Headless内容提供了[翻译集成框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html)，允许轻松翻译内容片段和支持资源以供跨区域设置使用。 该框架与用于翻译其他AEM内容(如页面、体验片段、Assets和Forms)的框架相同。 在翻译[Headless内容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/Headless/journeys/translation/overview.html?lang=zh-hans)并发布后，便可以供Headless应用程序使用。
 
 ## Assets文件夹结构{#assets-folder-structure}
 
@@ -52,7 +52,7 @@ query($locale: String!) {
 }
 ```
 
-`_locale`筛选器中使用的`$locale`变量需要[AEM基于资产文件夹的本地化约定](#assets-folder-structure)中指定的区域设置代码（例如`en`、`en_us`或`de`）。
+`_locale`筛选器中使用的`$locale`变量需要[AEM基于资源文件夹的本地化约定](#assets-folder-structure)中指定的区域设置代码（例如`en`、`en_us`或`de`）。
 
 ## React示例
 
@@ -109,7 +109,7 @@ export default function LocaleSwitcher() {
 
 ### 使用`_locale`筛选器查询内容{#adventures}
 
-Adventures组件按区域设置查询AEM的所有冒险并列出其标题。 这是通过使用`_locale`过滤器将React上下文中存储的区域设置值传递给查询来实现的。
+冒险组件按区域设置查询AEM的所有冒险并列出其标题。 这是通过使用`_locale`过滤器将React上下文中存储的区域设置值传递给查询来实现的。
 
 此方法可以扩展到应用程序中的其他查询，确保所有查询仅包含由用户的区域设置选择指定的内容。
 

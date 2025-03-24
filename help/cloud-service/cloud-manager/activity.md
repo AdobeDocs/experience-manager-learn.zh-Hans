@@ -1,8 +1,8 @@
 ---
-title: 使用AdobeCloud Manager — 活动
+title: 使用Adobe Cloud Manager — 活动
 description: Cloud Manager提供了项目活动的综合视图，其中列出了所有用于生产环境和非生产环境的CI/CD管道执行。 这允许用户查看当前正在进行的任何管道并审查以前的部署。
 doc-type: feature video
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6874
 thumbnail: 26319.jpg
 topic: Architecture
@@ -11,14 +11,14 @@ role: Architect, Developer, Admin
 level: Beginner
 exl-id: 82a9d00f-abe6-4600-92b1-41b5f0b5e352
 duration: 50
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-# 使用AdobeCloud Manager — 活动
+# 使用Adobe Cloud Manager — 活动
 
 Cloud Manager提供了项目活动的综合视图，其中列出了所有用于生产环境和非生产环境的CI/CD管道执行。 这允许用户查看当前正在进行的任何管道并审查以前的部署。
 

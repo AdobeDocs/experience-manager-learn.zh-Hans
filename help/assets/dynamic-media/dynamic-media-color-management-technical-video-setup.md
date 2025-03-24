@@ -1,15 +1,15 @@
 ---
 title: 了解使用AEM Dynamic Media进行颜色管理
-description: 在本视频中，我们将介绍Dynamic Media色彩管理，以及如何使用它在for AEM Assets中提供色彩校正预览功能。
+description: 在本视频中，我们将介绍Dynamic Media色彩管理，以及如何使用它在AEM Assets中提供色彩校正预览功能。
 feature: Image Profiles, Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
 doc-type: Feature Video
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
 duration: 274
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 11%
@@ -18,7 +18,7 @@ ht-degree: 11%
 
 # 了解使用AEM Dynamic Media进行颜色管理{#understanding-color-management-with-aem-dynamic-media}
 
-在本视频中，我们将介绍Dynamic Media色彩管理，以及如何使用它在for AEM Assets中提供色彩校正预览功能。
+在本视频中，我们将介绍Dynamic Media色彩管理，以及如何使用它在AEM Assets中提供色彩校正预览功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
 
@@ -30,7 +30,7 @@ ht-degree: 11%
 
 ## 颜色管理配置节点的XML模板 {#xml-template-for-the-color-management-configuration-node}
 
-下面是“颜色管理”配置节点的XML模板。 可以将此XML模板复制到AEM开发项目中，并使用与项目相应的配置对其进行配置。
+下面是“颜色管理”配置节点的XML模板。 可以将此XML模板复制到AEM开发项目中，并使用与项目相应的配置进行配置。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -91,12 +91,12 @@ ht-degree: 11%
 | 名称 | 色彩空间 | 描述 |
 | ------------------- | ---------- | ------------------------------------- |
 | adobergb | RGB | Adobe RGB (1998) |
-| AppleRGB | RGB | AppleRGB |
-| CIERGB | RGB | CIERGB |
+| AppleRGB | RGB | Apple RGB |
+| CIERGB | RGB | CIE RGB |
 | CoatedFogra27 | CMYK | 涂层的FOGRA27 (ISO 12647-2:2004) |
 | CoatedFogra39 | CMYK | 涂层纸FOGRA39 (ISO 12647-2:2004) |
 | CoatedGraCol | CMYK | 涂层纸GRACoL 2006 (ISO 12647-2:2004) |
-| ColorMatchRGB | RGB | ColorMatchRGB |
+| ColorMatchRGB | RGB | ColorMatch RGB |
 | 欧洲ISOCoated | CMYK | 欧洲ISO铜版FOGRA27 |
 | EuroscaleCoated | CMYK | Euroscale Coated v2 |
 | EuroscaleUncoated | CMYK | Euroscale Uncoated v2 |
@@ -108,13 +108,13 @@ ht-degree: 11%
 | 新闻纸快照2007 | CMYK | 美国新闻纸(SNAP 2007) |
 | NTSC | RGB | NTSC （1953年） |
 | PAL | RGB | PAL/SECAM |
-| ProPhoto | RGB | ProPhotoRGB |
+| ProPhoto | RGB | ProPhoto RGB |
 | PS4默认 | CMYK | Photoshop 4默认CMYK |
 | PS5默认 | CMYK | Photoshop 5默认CMYK |
 | SheetfedCoated | CMYK | U.S. Sheetfed Coated v2 |
 | SheetfedUncoated | CMYK | U.S. Sheetfed Uncoated v2 |
 | SMPTE | RGB | SMPTE-C |
-| sRGB | sRGBRGB | IEC61966-2.1 |
+| sRGB | RGB sRGB | IEC61966-2.1 |
 | UncoatedFogra29 | CMYK | 无涂层的FOGRA29 (ISO 12647-2:2004) |
 | WebCoat | CMYK | U.S. Web Coated (SWOP) v2 |
 | WebCoatedFogra28 | CMYK | 网页涂层的FOGRA28 (ISO 12647-2:2004) |

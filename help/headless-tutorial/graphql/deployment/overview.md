@@ -1,7 +1,7 @@
 ---
 title: AEM Headless部署
 description: 了解AEM Headless应用程序的各种部署注意事项。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -11,7 +11,7 @@ thumbnail: kt-10794.jpg
 last-substantial-update: 2022-08-26T00:00:00Z
 exl-id: 6de58ca0-9444-4272-9487-15a9e3c89231
 duration: 59
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
@@ -30,13 +30,13 @@ AEM Headless客户端部署采用多种形式；AEM托管的SPA、外部SPA、�
 
 + __AEM Author__&#x200B;是团队创建、协作和发布内容片段（及其他资源）的服务。
 + __AEM Publish__&#x200B;是已发布的服务，将复制内容片段（和其他资源）以供一般使用。
-+ __AEM Preview__&#x200B;是一项模拟AEM Publish行为的服务，但已向其发布内容以供预览或审阅。 AEM预览适用于内部受众，而非用于内容的常规交付。 根据所需的工作流，AEM预览的使用是可选的。
++ __AEM Preview__&#x200B;是一项模拟AEM Publish行为的服务，但它具有发布到它的内容以供预览或审阅。 AEM预览适用于内部受众，不适用于内容的常规交付。 根据所需的工作流程，AEM预览的使用是可选的。
 
 ![AEM服务架构](./assets/overview/aem-service-architecture.png)
 
 典型AEM as a Cloud Service headless部署架构_
 
-以生产容量运行的AEM Headless客户端通常与AEM Publish交互，后者包含已批准的已发布内容。 与AEM Author交互的客户需要特别小心，因为AEM Author在默认情况下是安全的，所有请求都需要获得授权，并且可能还包含正在进行的工作或未批准的内容。
+以生产容量运行的AEM Headless客户端通常与AEM Publish（其中包含已批准的已发布内容）交互。 与AEM Author交互的客户需要特别小心，因为AEM Author在默认情况下是安全的，所有请求都需要获得授权，并且可能还包含正在进行的工作或未批准的内容。
 
 ## Headless客户端部署
 
@@ -95,7 +95,7 @@ AEM Headless客户端部署采用多种形式；AEM托管的SPA、外部SPA、�
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="./mobile.md" title="移动应用程序">移动应用程序</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="./mobile.md" title="移动应用程序">移动设备应用程序</a></p>
                <p class="is-size-6">了解移动应用程序的部署注意事项。</p>
                <a href="./mobile.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学习</span>

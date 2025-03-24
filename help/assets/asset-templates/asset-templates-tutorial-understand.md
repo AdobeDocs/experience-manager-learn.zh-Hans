@@ -1,7 +1,7 @@
 ---
 title: 了解AEM Assets中的InDesign文件和资源模板
-description: 本视频教程将介绍如何定义AEM Assets资源InDesign功能中使用的模板文件以及随附的所有注意事项。
-version: 6.4, 6.5
+description: 本视频教程介绍如何定义InDesign文件以及随附的所有注意事项，以便在AEM Assets的资源模板功能中使用。
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 feature: Templates
 role: User
@@ -9,7 +9,7 @@ level: Intermediate
 doc-type: Tutorial
 exl-id: c418e94a-b18e-429a-b41c-2bf32e158598
 duration: 909
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -18,14 +18,14 @@ ht-degree: 0%
 
 # 了解AEM Assets中的InDesign文件和资源模板 {#understanding-indesign-files-and-asset-templates-in-aem-assets}
 
-本视频教程将介绍如何定义AEM Assets资源InDesign功能中使用的模板文件以及随附的所有注意事项。
+本视频教程介绍如何定义InDesign文件以及随附的所有注意事项，以便在AEM Assets的资源模板功能中使用。
 
-## 构造InDesign模板文件 {#constructing-the-indesign-template-file}
+## 构建InDesign模板文件 {#constructing-the-indesign-template-file}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19293?quality=12&learn=on)
 
 1. 下载并打开&#x200B;[**InDesign文件模板**](assets/asset-templates-tutorial-video--supporting-files.zip)
-2. **打开“标记”面板，**&#x200B;查看“标记”命名约定，并注意InDesign文件中的可创作元素已标记。 请记住，在AEM中只能编辑已标记的元素。
+2. **打开“标记”面板，**&#x200B;查看标记命名约定，并注意InDesign文件中的可创作元素已标记。 请记住，在AEM中，只能编辑已标记的元素。
 
    * **窗口>实用工具>标记**
 
@@ -60,12 +60,12 @@ ht-degree: 0%
 1. 在端口8080上&#x200B;**启动InDesign Server**。
 2. 确保将&#x200B;**AEM创作实例配置为与您的InDesign Server**&#x200B;交互（反之亦然）。
 
-   * [IDS辅助进程Cloud Service配置](http://localhost:4502/etc/cloudservices/proxy/ids.html)
+   * [IDS Worker Cloud Service配置](http://localhost:4502/etc/cloudservices/proxy/ids.html)
    * [云代理Cloud Service配置](http://localhost:4502/etc/cloudservices/proxy.html)
    * [AEM外部化器OSGi配置](http://localhost:4502/system/console/configMgr)
 
 3. **已将InDesign文件上传到AEM Assets**，并允许AEM Workflow和InDesign Server完全处理资源。
-4. **在** Assets > Templates **下创建新模板**，然后在步骤#4中选择上载到AEM的InDesign文件。
+4. **在** Assets > Templates **下创建新模板**，然后在步骤#4中选择上传到AEM的InDesign文件。
 5. **编辑在步骤#5中创建的资产模板**，并创作可编辑的字段。
 6. 单击&#x200B;**完成**&#x200B;以生成资产模板的最终高保真演绎版。
 7. 单击资产模板卡以打开，并查看资产演绎版以下载高保真演绎版。
@@ -76,5 +76,5 @@ InDesign模板文件和支持的图像
 
 下载[InDesign模板文件和支持的图像](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
-* [InDesign的CC试用版下载](https://creative.adobe.com/products/download/indesign)
-* 可以从[Adobe预发行网站](https://www.adobeprerelease.com/)下载InDesign Server试用版，或者[CC Enterprise客户可以联系其客户主管以请求InDesign Server试用许可证](https://www.adobe.com/products/indesignserver/faq.html)
+* [InDesign CC试用版下载](https://creative.adobe.com/products/download/indesign)
+* 可以从[Adobe预发行站点](https://www.adobeprerelease.com/)下载InDesign Server试用版，或者[CC Enterprise客户可以联系其客户经理以请求InDesign Server试用许可证](https://www.adobe.com/products/indesignserver/faq.html)

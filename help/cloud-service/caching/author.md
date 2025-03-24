@@ -1,7 +1,7 @@
 ---
 title: AEM Author服务缓存
 description: AEM as a Cloud Service Author服务缓存的一般概述。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Performance
 role: Architect, Developer
@@ -12,26 +12,26 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: b8e09820-f1f2-4897-b454-16c0df5a0459
 duration: 56
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 3%
 
 ---
 
-# AEM Author
+# AEM 作者
 
-由于AEM Author提供的内容具有高动态性和权限敏感特性，因此其缓存有限。 通常，不建议为AEM Author自定义缓存，而是依赖Adobe提供的缓存配置来确保性能体验。
+由于AEM Author提供的内容高度动态且对权限敏感，因此其缓存有限。 通常，建议不要自定义AEM Author的缓存，而是依赖Adobe提供的缓存配置来确保性能体验。
 
 ![AEM创作缓存概述图](./assets/author/author-all.png){align="center"}
 
-虽然不建议在AEM Author上自定义缓存，但了解AEM Author具有Adobe管理的CDN，但不具有AEM Dispatcher会很有帮助。 请记住，所有AEM Dispatcher配置在AEM Author上都将被忽略，因为它没有AEM Dispatcher。
+我们建议不要在AEM Author上自定义缓存，但是了解AEM Author具有Adobe管理的CDN，但不具有AEM Dispatcher会很有帮助。 请记住，所有AEM Dispatcher配置在AEM Author上都将被忽略，因为它没有AEM Dispatcher。
 
 ## CDN
 
-AEM Author服务使用CDN，但其目的是增强产品资源的交付，因此不应对其进行广泛配置，而应使其按原样工作。
+AEM创作服务使用CDN，但其目的是增强产品资源的交付，因此不应对其进行广泛配置，而应使其按原样工作。
 
-![AEM Publish缓存概述图](./assets/author/author-cdn.png){align="center"}
+![AEM发布缓存概述图](./assets/author/author-cdn.png){align="center"}
 
 AEM Author CDN位于最终用户（通常是营销人员或内容作者）和AEM Author之间。 它会缓存不可变文件(例如支持AEM创作体验的静态资源)，而不是创作内容。
 

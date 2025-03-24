@@ -1,8 +1,8 @@
 ---
-title: 验证AEM用户界面扩展
+title: 验证AEM UI扩展
 description: 了解在部署到生产环境之前，如何预览、测试和验证AEM UI扩展。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
 duration: 600
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 验证扩展
 
-AEM UI扩展可以针对扩展所属的Adobe组织中的任何AEM as a Cloud Service环境进行验证。
+AEM UI扩展可以根据Adobe组织内该扩展所属的任何AEM as a Cloud Service环境进行验证。
 
 测试扩展是通过巧尽心思构建的URL完成的，该URL会指示AEM仅为该请求加载扩展。
 
@@ -88,7 +88,7 @@ AEM UI扩展可以针对扩展所属的Adobe组织中的任何AEM as a Cloud Ser
 
 >[!IMPORTANT]
 >
->请记住，在使用此方法时，正在开发的扩展仅影响您的体验，而AEM UI的所有其他用户体验的UI没有插入的扩展。
+>请记住，在使用此方法时，正在开发的扩展仅影响您的体验，而AEM UI的所有其他用户体验的UI不含插入的扩展。
 
 ## 验证阶段生成
 
@@ -161,7 +161,7 @@ AEM UI扩展可以针对扩展所属的Adobe组织中的任何AEM as a Cloud Ser
    })();
    ```
 
-1. 导航到要加载预览扩展的可扩展AEM UI，然后单击小书签。
+1. 导航到可扩展的AEM UI以加载预览扩展，然后单击小书签。
 
 >[!TIP]
 >

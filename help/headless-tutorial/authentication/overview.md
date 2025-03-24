@@ -1,7 +1,7 @@
 ---
 title: 从外部应用程序向AEM as a Cloud Service进行身份验证
 description: 探索外部应用程序可怎样使用本地开发访问令牌和服务凭据以编程方式通过HTTP验证并与AEM as a Cloud Service交互。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: APIs
 jira: KT-6785
 thumbnail: 330460.jpg
@@ -11,7 +11,7 @@ level: Intermediate, Experienced
 doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
 duration: 253
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 向AEM as a Cloud Service进行基于令牌的身份验证
 
-AEM公开了各种可以以无头方式与交互的HTTP端点，从GraphQL、AEM Content Services到Assets HTTP API。 通常，这些Headless使用者可能需要向AEM进行身份验证，才能访问受保护的内容或操作。 为此，AEM支持对来自外部应用程序、服务或系统的HTTP请求进行基于令牌的身份验证。
+AEM公开了各种可以以无头方式交互的HTTP端点，从GraphQL、AEM Content Services到Assets HTTP API。 通常，这些Headless使用者可能需要向AEM进行身份验证，才能访问受保护的内容或操作。 为此，AEM支持对来自外部应用程序、服务或系统的HTTP请求进行基于令牌的身份验证。
 
 在本教程中，您将很好地探索外部应用程序可怎样使用访问令牌以编程方式通过HTTP向AEM as a Cloud Service进行身份验证和与之交互。
 
@@ -31,9 +31,9 @@ AEM公开了各种可以以无头方式与交互的HTTP端点，从GraphQL、AEM
 在执行本教程之前，请确保已满足以下条件：
 
 1. 访问AEM as a Cloud Service环境（最好是开发环境或沙盒程序）
-1. AEM as a Cloud Service环境的Author services AEM Administrator产品配置文件中的成员资格
+1. AEM as a Cloud Service环境创作服务AEM管理员产品配置文件的成员资格
 1. 成为您的Adobe IMS组织管理员的成员或访问权限（他们将必须执行[服务凭据](./service-credentials.md)的一次性初始化）
-1. 最新[WKND站点](https://github.com/adobe/aem-guides-wknd)已部署到您的Cloud Service环境
+1. 最新的[WKND站点](https://github.com/adobe/aem-guides-wknd)已部署到您的Cloud Service环境
 
 ## 外部应用程序概述
 
@@ -59,7 +59,7 @@ Node.js应用程序的执行流程如下所示：
 
 ## 本地开发访问令牌
 
-本地开发访问令牌是为特定的AEM as a Cloud Service环境生成的，用于提供对创作和Publish服务的访问权限。  这些访问令牌是临时的，仅在开发通过HTTP与AEM交互的外部应用程序或系统期间使用。 开发人员无需获取和管理真正的服务凭据，而是可以快速轻松地自行生成临时访问令牌，以便开发集成。
+本地开发访问令牌是为特定的AEM as a Cloud Service环境生成的，用于提供对创作和发布服务的访问权限。  这些访问令牌是临时的，仅在开发通过HTTP与AEM交互的外部应用程序或系统期间使用。 开发人员无需获取和管理真正的服务凭据，而是可以快速轻松地自行生成临时访问令牌，以便开发集成。
 
 + [如何使用本地开发访问令牌](./local-development-access-token.md)
 

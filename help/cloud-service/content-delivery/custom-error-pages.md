@@ -1,7 +1,7 @@
 ---
 title: 自定义错误页面
 description: 了解如何为AEM as a Cloud Service托管的网站实施自定义错误页面。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Brand Experiences, Configuring, Developing
 topic: Content Management, Development
 role: Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-12-04T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
 exl-id: c3bfbe59-f540-43f9-81f2-6d7731750fc6
-source-git-commit: 97680d95d4cd3cb34956717a88c15a956286c416
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1657'
 ht-degree: 0%
@@ -27,8 +27,8 @@ ht-degree: 0%
 
 - 默认错误页面
 - 提供错误页面的位置
-   - AEM服务类型 — 作者、发布、预览
-   - Adobe管理的CDN
+   - AEM服务类型 — 创作、发布、预览
+   - Adobe托管的CDN
 - 用于自定义错误页面的选项
    - ErrorDocument Apache指令
    - ACS AEM Commons — 错误页面处理程序
@@ -46,24 +46,24 @@ ht-degree: 0%
 
 AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 它是一个通用页面，与您的品牌不匹配。
 
-默认错误页&#x200B;_从_ AEM服务类型&#x200B;_（创作、发布、预览）或_ Adobe管理的CDN _提供_。 有关更多详细信息，请参阅下表。
+从&#x200B;_AEM服务类型_（创作、发布、预览）或&#x200B;_Adobe管理的CDN_&#x200B;为默认错误页面&#x200B;_提供服务_。 有关更多详细信息，请参阅下表。
 
 | 错误页面提供自 | 详细信息 |
 |---------------------|:-----------------------:|
-| AEM服务类型 — 作者、发布、预览 | 当页面请求由AEM服务类型提供并且出现上述任何错误情况时，错误页面将从AEM服务类型提供。 默认情况下，除非设置了`x-aem-error-pass: true`标头，否则5XX错误页将被Adobe管理的CDN错误页覆盖。 |
-| Adobe管理的CDN | 当Adobe管理的CDN _无法访问AEM服务类型_ （源服务器）时，将从Adobe管理的CDN提供错误页。 **这是一个不太可能发生但值得规划的事件。** |
+| AEM服务类型 — 创作、发布、预览 | 当页面请求由AEM服务类型提供并且出现上述任何错误情况时，错误页面将从AEM服务类型提供。 默认情况下，除非设置了`x-aem-error-pass: true`标头，否则5XX错误页将被Adobe管理的CDN错误页覆盖。 |
+| Adobe托管的CDN | 当Adobe管理的CDN _无法访问AEM服务类型_ （源服务器）时，将从Adobe管理的CDN提供错误页面。 **这是一个不太可能发生但值得规划的事件。** |
 
 >[!NOTE]
 >
->在AEMCloud Service中，当从后端收到5XX错误时，CDN会提供一个通用错误页面。 要允许后端的实际响应通过，您需要将以下标头添加到响应： `x-aem-error-pass: true`。
+>在AEM as Cloud Service中，当从后端收到5XX错误时，CDN会提供一个通用错误页面。 要允许后端的实际响应通过，您需要将以下标头添加到响应： `x-aem-error-pass: true`。
 >这仅适用于来自AEM或Apache/Dispatcher层的响应。 来自中间基础结构层的其他意外错误仍然显示一般错误页面。
 
 
-例如，从AEM服务类型和Adobe管理的CDN提供的默认错误页如下所示：
+例如，从AEM服务类型和Adobe管理的CDN提供的默认错误页面如下所示：
 
 ![默认AEM错误页](./assets/aem-default-error-pages.png)
 
-但是，您可以&#x200B;_自定义AEM服务类型和Adobe管理的_ CDN错误页以匹配您的品牌并提供更好的用户体验。
+但是，您可以&#x200B;_自定义AEM服务类型和Adobe管理的_ CDN错误页，以匹配您的品牌并提供更好的用户体验。
 
 ## 用于自定义错误页面的选项
 
@@ -72,8 +72,8 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
 | 适用于 | 选项名称 | 描述 |
 |---------------------|:-----------------------:|:-----------------------:|
 | AEM服务类型 — 发布和预览 | ErrorDocument指令 | 在Apache配置文件中使用[ErrorDocument](https://httpd.apache.org/docs/2.4/custom-error.html)指令指定自定义错误页面的路径。 仅适用于AEM服务类型 — 发布和预览。 |
-| AEM服务类型 — 创作、发布、预览 | ACS AEM Commons错误页面处理程序 | 使用[ACS AEM Commons错误页处理程序](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html)自定义所有AEM服务类型的错误。 |
-| Adobe管理的CDN | CDN错误页面 | 当Adobe管理的CDN无法访问AEM服务类型（源服务器）时，使用CDN错误页来自定义错误页。 |
+| AEM服务类型 — 创作、发布、预览 | ACS AEM Commons错误页面处理程序 | 使用[ACS AEM Commons错误页面处理程序](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html)自定义所有AEM服务类型的错误。 |
+| Adobe托管的CDN | CDN错误页面 | 当Adobe管理的CDN无法访问AEM服务类型（源服务器）时，可使用CDN错误页来自定义错误页。 |
 
 
 ## 先决条件
@@ -86,7 +86,7 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
 
 ## 设置
 
-- 通过执行以下步骤，克隆AEM WKND项目并将其部署到本地AEM开发环境：
+- 通过以下步骤，克隆AEM WKND项目并将其部署到本地AEM开发环境：
 
   ```
   # For local AEM development environment
@@ -150,7 +150,7 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
 
 ## ACS AEM Commons-Error页面处理程序，用于自定义AEM提供的错误页面{#acs-aem-commons}
 
-要自定义&#x200B;_所有AEM服务类型_&#x200B;中的AEM提供的错误页，您可以使用[ACS AEM Commons Error Page Handler](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html)选项。
+要自定义&#x200B;_所有AEM服务类型_&#x200B;中的AEM提供的错误页面，您可以使用[ACS AEM Commons Error Page Handler](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html)选项。
 
 。有关详细的分步说明，请参阅[如何使用](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html#how-to-use)部分。
 
@@ -158,11 +158,11 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
 
 要自定义Adobe管理的CDN提供的错误页面，请使用CDN错误页面选项。
 
-让我们实施CDN错误页以在Adobe管理的CDN无法访问AEM服务类型（源服务器）时自定义错误页。
+让我们实施CDN错误页面，以在Adobe管理的CDN无法访问AEM服务类型（源服务器）时自定义错误页面。
 
 >[!IMPORTANT]
 >
-> _Adobe管理的CDN无法访问AEM服务类型_ （源服务器）是&#x200B;**不可能的事件**，但值得规划。
+> _Adobe-managed CDN无法访问AEM服务类型_（源服务器）是&#x200B;**不可能的事件**，但值得规划。
 
 实施CDN错误页面的高级步骤包括：
 
@@ -175,9 +175,9 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
 
 ### CDN错误页面概述
 
-CDN错误页由Adobe管理的CDN作为单页应用程序(SPA)实现。 由Adobe管理的CDN投放的SPAHTML文档包含最低限度的HTML片段。 自定义错误页面内容是使用JavaScript文件动态生成的。 必须开发JavaScript文件，并将其托管在客户可公开访问的位置。
+CDN错误页面由Adobe管理的CDN作为单页应用程序(SPA)实施。 由Adobe管理的CDN交付的SPA HTML文档包含最低限度的HTML代码片段。 自定义错误页面内容是使用JavaScript文件动态生成的。 必须开发JavaScript文件，并将其托管在客户可公开访问的位置。
 
-Adobe管理的CDN提供的HTML片段具有以下结构：
+由Adobe管理的CDN投放的HTML代码片段具有以下结构：
 
 ```html
 <!DOCTYPE html>
@@ -196,7 +196,7 @@ Adobe管理的CDN提供的HTML片段具有以下结构：
 </html>
 ```
 
-HTML片段包含以下占位符：
+HTML代码片段包含以下占位符：
 
 1. **jsUrl**： JavaScript文件的绝对URL，用于通过动态创建HTML元素呈现错误页面内容。
 1. **cssUrl**： CSS文件的绝对URL，用于设置错误页面内容的样式。
@@ -385,13 +385,13 @@ HTML片段包含以下占位符：
 
 要测试CDN错误页面，请执行以下步骤：
 
-- 在浏览器中，导航到AEM as a Cloud Service的Publish URL，将`cdnstatus?code=404`附加到URL，例如[https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404)，或使用[自定义域URL](https://wknd.enablementadobe.com/cdnstatus?code=404)进行访问
+- 在浏览器中，导航到AEM as a Cloud Service的发布URL，将`cdnstatus?code=404`附加到URL，例如[https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404)，或使用[自定义域URL](https://wknd.enablementadobe.com/cdnstatus?code=404)进行访问
 
   ![WKND - CDN错误页](./assets/wknd-cdn-error-page.png)
 
 - 支持的代码为：403、404、406、500和503。
 
-- 验证浏览器网络选项卡以查看从Azure Blob存储加载的静态文件。 由Adobe管理的CDN交付的HTML文档包含裸的最低内容，并且JavaScript文件动态创建标记的错误页面内容。
+- 验证浏览器网络选项卡以查看从Azure Blob存储加载的静态文件。 由Adobe管理的CDN交付的HTML文档包含最低限度的裸内容，而JavaScript文件会动态创建标记错误页面内容。
 
   ![CDN错误页网络选项卡](./assets/wknd-cdn-error-page-network-tab.png)
 

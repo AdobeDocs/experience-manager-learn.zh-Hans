@@ -1,7 +1,7 @@
 ---
 title: 在AEM中索引最佳实践
 description: 了解如何在AEM中索引最佳实践。
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 sub-product: Experience Manager, Experience Manager Sites
 feature: Search
 doc-type: Article
@@ -13,7 +13,7 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: 54a7f93637545a4467c4c587bbc3d1d0de5c64a1
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 1%
@@ -27,7 +27,7 @@ ht-degree: 1%
 - AEM开箱即用地提供各种索引来支持搜索和查询功能，例如`damAssetLucene`、`cqPageLucene`等。
 - 所有索引定义都存储在`/oak:index`节点下的存储库中。
 - AEM as a Cloud Service仅支持Oak Lucene索引。
-- 索引配置应在AEM项目代码库中管理，并使用Cloud Manager CI/CD管道进行部署。
+- 索引配置应在AEM项目代码库中进行管理，并使用Cloud Manager CI/CD管道进行部署。
 - 如果给定查询有多个索引可用，则使用估计开销最低的&#x200B;**索引**。
 - 如果给定的查询没有可用的索引，则会遍历内容树以查找匹配的内容。 但是，通过`org.apache.jackrabbit.oak.query.QueryEngineSettingsService`的默认限制是仅遍历10,0000个节点。
 - 查询结果最后&#x200B;**被**&#x200B;过滤，以确保当前用户具有读取权限。 这意味着查询结果可能小于索引节点数。
@@ -69,7 +69,7 @@ ht-degree: 1%
 
 - 另外，避免在索引规则(`indexRules`)节点下添加多个节点类型，例如`cq:Page`和`cq:Tag`。 相反，请为每个节点类型创建单独的索引。
 
-- 如上节所述，将索引定义存储在`ui.apps/src/main/content/jcr_root/_oak_index`处的AEM项目中，并使用Cloud Manager CI/CD管道部署该项目。 有关详细信息，请参阅[部署自定义索引定义](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/indexing)。
+- 如上节所述，将索引定义存储在`ui.apps/src/main/content/jcr_root/_oak_index`的AEM项目中，并使用Cloud Manager CI/CD管道进行部署。 有关详细信息，请参阅[部署自定义索引定义](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/indexing)。
 
 - 索引定义准则为：
    - 节点类型(`jcr:primaryType`)应为`oak:QueryIndexDefinition`
@@ -185,7 +185,7 @@ AEM使用[Apache Tika](https://tika.apache.org/)从文件&#x200B;_类型(如PDF�
 
 要按mime类型禁用Apache Tika，请执行以下步骤：
 
-- 在自定义或OOBT索引定义下添加`nt:unstructured`类型的`tika`节点。 在下面的示例中，对OOTB `damAssetLucene`索引禁用了PDFMIME类型。
+- 在自定义或OOBT索引定义下添加`nt:unstructured`类型的`tika`节点。 在以下示例中，对OOTB `damAssetLucene`索引禁用了PDF MIME类型。
 
 ```xml
 /oak:index/damAssetLucene
@@ -253,7 +253,7 @@ AEM使用[Apache Tika](https://tika.apache.org/)从文件&#x200B;_类型(如PDF�
 
 ### 查询性能工具
 
-通过Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`在[本地SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS中提供的OOTB _查询性能工具_&#x200B;可帮助&#x200B;**分析查询性能**&#x200B;和[JCR查询备忘表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en)以定义最佳查询。
+通过Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`在[本地SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS上提供的OOTB _查询性能工具_&#x200B;可帮助&#x200B;**分析查询性能**&#x200B;和[JCR查询备忘表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en)以定义最佳查询。
 
 ### 疑难解答工具和提示
 

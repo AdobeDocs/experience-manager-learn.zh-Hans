@@ -1,7 +1,7 @@
 ---
 title: 简单搜索实施指南
-description: 简单搜索实现来自2017 Summit实验室AEM Search Demystified的材料。 本页包含本实验中的资料。 有关引导式实验教程，请查看本页“演示文稿”部分中的“实验”工作簿。
-version: 6.4, 6.5
+description: 简单搜索实施来自2017 Summit实验室AEM Search Demystified的材料。 本页包含本实验中的资料。 有关引导式实验教程，请查看本页“演示文稿”部分中的“实验”工作簿。
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Search
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ exl-id: aa268c5f-d29e-4868-a58b-444379cb83be
 last-substantial-update: 2022-08-10T00:00:00Z
 thumbnail: 32090.jpg
 duration: 138
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 1%
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 ### 章 {#chapters}
 
-*以下章节链接假定在`http://localhost:4502`*&#x200B;处的AEM作者上安装了[初始包](#initialpackages)
+*以下章节链接假定在`http://localhost:4502`*&#x200B;处的AEM创作实例上安装了[初始包](#initialpackages)
 
 * [第1章](http://localhost:4502/editor.html/content/summit/l4080/chapter-1.html)
 * [第2章](http://localhost:4502/editor.html/content/summit/l4080/chapter-2.html)
@@ -107,11 +107,11 @@ ht-degree: 1%
    * 查询必须指定与索引的查询路径范围相等的路径限制，或为其子级。
    * 范围更广的索引（例如`/oak:index/cqPageLucene`）也将索引数据，从而导致重复引入和磁盘使用成本。
    * 可能需要重复的配置管理(例如 在多个租户索引中添加相同的indexRules（如果它们必须满足相同的查询集）
-   * 此方法最好在AEM Publish层上用于自定义站点搜索，就像在AEM Author上一样，通常在内容树的高处为不同的租户（例如，通过OmniSearch）执行查询 — 不同的索引定义可能会导致仅基于路径限制的不同行为。
+   * 这种方法最好在AEM发布层用于自定义站点搜索，就像在AEM Author上一样，通常在内容树的高层为不同的租户（例如，通过OmniSearch）执行查询 — 不同的索引定义可能会导致仅基于路径限制的不同行为。
 
 3. **所有可用分析器的列表在何处？**
 
-   Oak公开了一组可在AEM中使用的lucene提供的分析器配置元素。
+   Oak公开了一组用于AEM的lucene提供的分析器配置元素。
 
    * [Apache Oak Analyzer文档](https://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
       * [令牌生成器](https://cwiki.apache.org/confluence/display/solr/Tokenizers)
@@ -120,7 +120,7 @@ ht-degree: 1%
 
 4. **如何在同一查询中搜索页面和Assets？**
 
-   AEM 6.3的新增功能是在同一提供的查询中查询多个节点类型。 以下QueryBuilder查询。 请注意，每个“子查询”都可以解析为自己的索引，因此在此示例中，`cq:Page`子查询解析为`/oak:index/cqPageLucene`，`dam:Asset`子查询解析为`/oak:index/damAssetLucene`。
+   AEM 6.3的新增功能是在同一提供的查询中查询多种节点类型。 以下QueryBuilder查询。 请注意，每个“子查询”都可以解析为自己的索引，因此在此示例中，`cq:Page`子查询解析为`/oak:index/cqPageLucene`，`dam:Asset`子查询解析为`/oak:index/damAssetLucene`。
 
    ```plain
    group.p.or=true

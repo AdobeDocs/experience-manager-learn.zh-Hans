@@ -4,13 +4,13 @@ description: 将JSON Web令牌(JWT)与Adobe IMS API交换为AEM访问令牌。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-9980
 exl-id: 0e4fd0a0-eaa8-490d-b036-713b25974d60
 duration: 33
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%

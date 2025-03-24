@@ -2,14 +2,14 @@
 title: Dispatcher了解缓存
 description: 了解Dispatcher模块如何操作其缓存。
 topic: Administration, Performance
-version: 6.5
+version: Experience Manager 6.5
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
 duration: 407
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1708'
 ht-degree: 0%
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->我们刻意将已发布的工作负载与创作工作负载分开，因为当Apache在DocumentRoot中查找文件时，它不知道文件来自哪个AEM实例。 因此，即使您在作者场中禁用了缓存，如果作者的DocumentRoot与publisher相同，则它将在存在时从缓存中提供文件。 这意味着您将从已发布的缓存为提供创作文件，并为您的访客创造非常糟糕的混合匹配体验。
+>我们刻意将已发布的工作负载与创作工作负载分开，因为当Apache在DocumentRoot中查找文件时，它不知道该文件来自哪个AEM实例。 因此，即使您在作者场中禁用了缓存，如果作者的DocumentRoot与publisher相同，则它将在存在时从缓存中提供文件。 这意味着您将从已发布的缓存为提供创作文件，并为您的访客创造非常糟糕的混合匹配体验。
 >
 >为不同的已发布内容保留单独的DocumentRoot目录也是个非常糟糕的主意。 您必须创建多个重新缓存的项目，这些项目在clientlibs等站点之间没有区别，还必须为您设置的每个DocumentRoot设置复制刷新代理。 增加每次页面激活时头顶的刷新量。 依赖文件的命名空间及其完全缓存的路径，并避免为已发布的站点使用多个DocumentRoot。
 
@@ -132,7 +132,7 @@ Dispatcher控制任何场文件的`/cache {`部分中符合缓存条件的内容
 ```
 
 在创作场景中，内容会随时随意更改。 您只想缓存不经常更改的项目。
-我们有要缓存`/libs`的规则，因为它们是基准AEM安装的一部分，在安装Service Pack、累积修补程序包、升级或修补程序之前可能会发生更改。 因此，缓存这些元素非常合理，并且真正为使用站点的最终用户的创作体验带来了巨大好处。
+我们有缓存`/libs`的规则，因为它们是基准AEM安装的一部分，在安装Service Pack、累积修补程序包、升级或修补程序之前可能会发生更改。 因此，缓存这些元素非常合理，并且真正为使用站点的最终用户的创作体验带来了巨大好处。
 
 >[!NOTE]
 >
@@ -278,7 +278,7 @@ AEM可以处理的不只是UTF-8编码
 ```
 
 
-在示例中，他们已将AEM配置为提供标头，CDN将查找以了解何时将其缓存失效。 这意味着现在AEM可以正确规定哪些文件将根据标头失效。
+在示例中，他们已将AEM配置为提供标头，CDN将查找以了解何时将其缓存失效。 这意味着，AEM现在可以基于标头正确规定哪些文件无效。
 
 >[!NOTE]
 >
@@ -316,7 +316,7 @@ Dispatcher模块的较新功能是基于`Time To Live (TTL)`的缓存项目失�
 
 >[!NOTE]
 >
->请记住，仍需要将AEM配置为发送TTL标头，以便Dispatcher执行这些标头。 切换此功能只会让Dispatcher知道何时删除AEM向其发送缓存控制标头的文件。 如果AEM未开始发送TTL标头，则Dispatcher不会在此处执行任何特殊的操作。
+>请记住，仍需要将AEM配置为发送TTL标头以便Dispatcher遵循这些标头。 切换此功能只会让Dispatcher知道何时删除AEM发送缓存控制标头的文件。 如果AEM未开始发送TTL标头，则Dispatcher不会在此处执行任何特殊的操作。
 
 ## 缓存筛选规则
 

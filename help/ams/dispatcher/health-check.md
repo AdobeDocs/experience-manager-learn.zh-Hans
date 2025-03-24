@@ -1,7 +1,7 @@
 ---
 title: AMS Dispatcher运行状况检查
 description: AMS提供了一个运行状况检查cgi-bin脚本，云负载均衡器将运行该脚本以查看AEM是否运行状况良好并应为公共流量提供服务。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 69b4e469-52cc-441b-b6e5-2fe7ef18da90
 duration: 247
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 [&lt; — 上一页：只读文件](./immutable-files.md)
 
 安装AMS基准调度程序后，它会随附一些免费赠品。  其中一项功能是一组运行状况检查脚本。
-这些脚本允许前端AEM栈栈的负载平衡器知道哪些腿正常，并使它们继续工作。
+通过这些脚本，前端AEM栈栈的负载平衡器可了解哪些分支运行正常，并保持它们处于服务状态。
 
 ![显示通信流的动画GIF](assets/load-balancer-healthcheck/health-check.gif "运行状况检查步骤")
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 ## AMS运行状况检查
 
-为避免将流量发送到在不健康的AEM实例前面的健康调度程序，AMS创建了几个额外参数来评估腿部的健康状况，而不仅仅是Dispatcher。
+为避免将流量发送到正面临着不健康的AEM实例的健康调度程序，AMS创建了几个额外参数来评估腿部的健康状况，而不仅仅是Dispatcher。
 
 ![图像显示运行状况检查的不同部分](assets/load-balancer-healthcheck/health-check-pieces.png "运行状况检查部分")
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ### AEM包
 
-要指示AEM是否正常运行，您需要它执行一些基本页面编译并为页面提供服务。  AdobeManaged Services创建了一个包含“测试”页面的基本包。  页面会测试存储库是否已启动，以及资源和页面模板是否可以呈现。
+要指示AEM是否正常运行，您需要它执行一些基本的页面编译并为页面提供服务。  Adobe Managed Services创建了一个包含测试页面的基本包。  页面会测试存储库是否已启动，以及资源和页面模板是否可以呈现。
 
 ![图像显示CRX包管理器](assets/load-balancer-healthcheck/health-check-package.png "healt-check-package")中的AMS包
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 > `Note:`我们确保该页面不可缓存。  如果每次返回缓存的页面时，它都不会检查实际状态！
 
-这是轻量级端点，我们可以测试以查看AEM是否已启动并运行。
+这是轻量级端点，我们可以对其进行测试以了解AEM是否已启动并运行。
 
 ### 负载平衡器配置
 
@@ -185,13 +185,13 @@ X-Vhost: unhealthy-author
 
 #### /bin/checkauthor
 
-使用此脚本时，将检查并记录它当前的任何实例，但仅在`author` AEM实例不正常时返回错误
+使用此脚本时，将检查并记录它当前的任何实例，但仅在`author`个AEM实例不正常时返回错误
 
 > `Note:`请记住，如果发布AEM实例不正常，Dispatcher将保留服务以允许流量流向创作AEM实例
 
 #### /bin/checkpublish （默认）
 
-使用此脚本时，将检查并记录它当前的任何实例，但仅在`publish` AEM实例不正常时返回错误
+使用此脚本时，将检查并记录它当前的任何实例，但仅在`publish`个AEM实例不正常时返回错误
 
 > `Note:`请记住，如果创作AEM实例不正常，Dispatcher将保留服务以允许流量流向发布AEM实例
 
@@ -203,13 +203,13 @@ X-Vhost: unhealthy-author
 
 #### /bin/checkboth
 
-使用此脚本时，将检查并记录它当前的任何实例，但仅在`author`和`publisher` AEM实例不正常时返回错误
+使用此脚本时，将检查并记录它当前的任何实例，但仅当`author`和`publisher` AEM实例不正常时返回错误
 
 > `Note:`请记住，如果发布AEM实例或创作AEM实例不正常，Dispatcher将不会退出服务。  这意味着，如果其中一个不健康，它将继续接收流量，并在请求资源的人身上出现错误。
 
 #### /bin/healthy
 
-使用此脚本时，将检查并记录它当前所在的任何实例，但无论AEM是否返回错误，该脚本都将正常返回。
+使用此脚本时，会检查并记录它当前所在的任何实例，但无论AEM是否返回错误，该脚本都将正常返回。
 
 > `Note:`此脚本用于运行状况检查无法按预期运行并允许覆盖以将AEM实例保留在负载平衡器中的情况。
 

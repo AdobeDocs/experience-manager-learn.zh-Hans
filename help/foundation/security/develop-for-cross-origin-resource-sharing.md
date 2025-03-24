@@ -1,7 +1,7 @@
 ---
 title: 使用AEM开发跨源资源共享(CORS)
-description: 利用CORS通过客户端JavaScript从外部Web应用程序访问AEM内容的简短示例。
-version: 6.4, 6.5
+description: 有关利用CORS通过客户端AEM从外部Web应用程序访问JavaScript内容的简短示例。
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Security, Development
 role: Developer
 level: Beginner
@@ -9,7 +9,7 @@ feature: Security
 doc-type: Technical Video
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
 duration: 333
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 * 访问AEM Publish内容的来源只有一个
 * AEM创作需要CORS访问权限
 
-如果需要对AEM Publish的多源访问，请参阅[此文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
+如果需要对AEM发布的多源访问权限，请参阅[此文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
@@ -31,13 +31,13 @@ ht-degree: 0%
 
 * **www.example.com**&#x200B;通过`/etc/hosts`映射到本地主机
 * **aem-publish.local**&#x200B;通过`/etc/hosts`映射到本地主机
-* SimpleHTTPServer （[[!DNL Python]的SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)的包装器）正在通过端口8000为HTML页提供服务。
+* SimpleHTTPServer （[[!DNL Python]的SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)的包装器）正在通过端口8000为HTML页面提供服务。
    * _在Mac App Store中不再可用。 使用类似的，如[吉维斯](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)._
 * [!DNL AEM Dispatcher]正在[!DNL Apache HTTP Web Server] 2.4上运行，并且正在反向代理请求`aem-publish.local`到`localhost:4503`。
 
-有关详细信息，请查阅[了解AEM](./understand-cross-origin-resource-sharing.md)中的跨源资源共享(CORS)。
+有关更多详细信息，请查阅[了解AEM](./understand-cross-origin-resource-sharing.md)中的跨源资源共享(CORS)。
 
-## www.example.comHTML和JavaScript
+## www.example.com HTML和JavaScript
 
 此网页的逻辑是
 
@@ -116,7 +116,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### 缓存CORS响应标头
 
-要允许在缓存的内容上缓存并提供CORS标头，请将以下[/cache /headers配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#caching-http-response-headers)添加到AEM Publish `dispatcher.any`文件中。
+要允许在缓存的内容上缓存并提供CORS标头，请将以下[/cache /headers配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-hans#caching-http-response-headers)添加到AEM发布`dispatcher.any`文件。
 
 ```
 /publishfarm {
@@ -147,7 +147,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 ## 支持材料 {#supporting-materials}
 
 * macOS的[吉夫](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)
-* [Python SimpleHTTPServer](https://docs.python.o:qrg/2/library/simplehttpserver.html)(与Windows/macOS/Linux兼容)
+* [Python SimpleHTTPServer](https://docs.python.o:qrg/2/library/simplehttpserver.html)&#x200B;(与Windows/macOS/Linux兼容)
 
 * [了解AEM中的跨源资源共享(CORS)](./understand-cross-origin-resource-sharing.md)
 * [跨源资源共享(W3C)](https://www.w3.org/TR/cors/)

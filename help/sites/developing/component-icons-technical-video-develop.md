@@ -1,7 +1,7 @@
 ---
 title: 在Adobe Experience Manager Sites中自定义组件图标
 description: 组件图标允许作者使用图标或有意义的缩写快速识别组件。 作者现在可以找到比以往更快地构建其Web体验所需的组件。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Core Components
 topic: Development
 role: User
@@ -9,7 +9,7 @@ level: Intermediate
 doc-type: Technical Video
 exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
 duration: 379
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 * **[!UICONTROL 组件图标]**
    * 组件标题&#x200B;*（默认值）*&#x200B;的前两个字母
    * 自定义PNG图像&#x200B;*（由开发人员配置）*
-   * 自定义SVG映像&#x200B;*（由开发人员配置）*
+   * 自定义SVG图像&#x200B;*（由开发人员配置）*
    * CoralUI图标&#x200B;*（由开发人员配置）*
 
 ## 组件图标配置选项 {#component-icon-configuration-options}
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ### CoralUI图标 {#coralui-icons}
 
-AEM提供的CoralUI图标可用于组件图标。 要配置CoralUI图标，请将&#x200B;**[cq：Component]@cq：icon**&#x200B;属性设置为所需的CoralUI图标的HTML图标属性值（在[CoralUI文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)中枚举）。
+由AEM提供的CoralUI图标可用于组件图标。 要配置CoralUI图标，请将&#x200B;**[cq：Component]@cq：icon**&#x200B;属性设置为所需的CoralUI图标的HTML图标属性值（在[CoralUI文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)中枚举）。
 
 ```plain
 /apps/.../components/content/my-component

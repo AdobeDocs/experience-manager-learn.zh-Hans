@@ -2,7 +2,7 @@
 title: 创建项目 | AEM SPA编辑器和React快速入门
 description: 了解如何生成Adobe Experience Manager (AEM) Maven项目，作为与AEM SPA编辑器集成的React应用程序的起点。
 feature: SPA Editor, AEM Project Archetype
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-413
 thumbnail: 413-spa-react.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
 duration: 250
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 1%
@@ -24,14 +24,14 @@ ht-degree: 1%
 
 ## 目标
 
-1. 使用SPA项目原型生成启用AEM编辑器的项目。
+1. 使用AEM项目原型生成启用SPA Editor的项目。
 2. 将起始项目部署到AEM的本地实例。
 
 ## 您将构建的内容 {#what-build}
 
 在本章中，基于[AEM项目原型](https://github.com/adobe/aem-project-archetype)生成了一个新的AEM项目。 AEM项目通过非常简单的React SPA起点引导。
 
-**什么是Maven项目？** - [Apache Maven](https://maven.apache.org/)是用于构建项目的软件管理工具。 *所有Adobe Experience Manager*&#x200B;实施都使用Maven项目在AEM的基础上生成、管理和部署自定义代码。
+**什么是Maven项目？** - [Apache Maven](https://maven.apache.org/)是用于构建项目的软件管理工具。 *所有Adobe Experience Manager*&#x200B;实施都使用Maven项目在AEM之上生成、管理和部署自定义代码。
 
 **什么是Maven原型？** - [Maven原型](https://maven.apache.org/archetype/index.html)是用于生成新项目的模板或模式。 AEM项目原型允许我们使用自定义命名空间生成新项目，并包含一个遵循最佳实践的项目结构，从而大大加快了项目的速度。
 
@@ -93,9 +93,9 @@ ht-degree: 1%
 
 ## 部署和生成项目
 
-接下来，使用Maven编译、生成项目代码并将其部署到AEM的本地实例。
+接下来，使用Maven编译、构建项目代码并将其部署到AEM的本地实例。
 
-1. 确保AEM的实例正在端口&#x200B;**4502**&#x200B;上本地运行。
+1. 确保AEM的实例在端口&#x200B;**4502**&#x200B;上本地运行。
 1. 从命令行导航到`aem-guides-wknd-spa.react`项目目录。
 
    ```shell
@@ -132,7 +132,7 @@ ht-degree: 1%
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven配置文件`autoInstallSinglePackage`编译项目的各个模块并将单个包部署到AEM实例。 默认情况下，此包将部署到在端口&#x200B;**4502**&#x200B;上本地运行的、凭据为`admin:admin`的AEM实例。
+   Maven配置文件`autoInstallSinglePackage`编译项目的各个模块，并将单个包部署到AEM实例。 默认情况下，此包将部署到在端口&#x200B;**4502**&#x200B;上本地运行的、凭据为`admin:admin`的AEM实例。
 
 1. 导航到本地AEM实例上的&#x200B;**包管理器**： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)。
 
@@ -164,7 +164,7 @@ ht-degree: 1%
 
    请注意，创作体验类似于传统AEM Sites页面的创作体验。 当前可用的组件数量有限。 在本教程中会添加更多内容。
 
-## Inspect单页应用程序
+## 检查单页应用程序
 
 接下来，验证这是使用浏览器的开发人员工具的单页应用程序。
 
@@ -186,7 +186,7 @@ ht-degree: 1%
    ...
    ```
 
-   `clientlib-react.min.js`是加载到页面上并负责呈现内容的React SPA。
+   `clientlib-react.min.js`是加载到页面并负责呈现内容的React SPA。
 
    但是，*内容来自何处？*
 
@@ -195,11 +195,11 @@ ht-degree: 1%
 
    ![XHR请求](./assets/create-project/xhr-requests.png)
 
-   应向[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)发出请求。 该文档包含所有将驱动SPA的内容，并使用JSON格式化。
+   应向[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)发出请求。 其中包含将驱动SPA的所有内容（以JSON格式）。
 
 5. 在新选项卡中打开[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)
 
-   请求`en.model.json`表示将驱动应用程序的内容模型。 Inspect JSON输出，您应该能够找到表示&#x200B;**[!UICONTROL Text]**&#x200B;组件的代码片段。
+   请求`en.model.json`表示将驱动应用程序的内容模型。 检查JSON输出，您应该能够找到表示&#x200B;**[!UICONTROL Text]**&#x200B;组件的代码片段。
 
    ```json
    ...
@@ -218,7 +218,7 @@ ht-degree: 1%
    ...
    ```
 
-   在下一章中，我们将检查此JSON内容如何从AEM组件映射到SPA组件，从而形成AEM SPA编辑器体验的基础。
+   在下一章中，我们将检查此JSON内容如何从AEM组件映射到SPA组件，以便构成AEM SPA编辑器体验的基础。
 
    >[!NOTE]
    >

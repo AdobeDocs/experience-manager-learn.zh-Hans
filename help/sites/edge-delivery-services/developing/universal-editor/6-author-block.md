@@ -1,7 +1,7 @@
 ---
 title: 创作块
 description: 使用通用编辑器创作Edge Delivery Services块。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 500
 exl-id: ca356d38-262d-4c30-83a0-01c8a1381ee6
-source-git-commit: 77beb9f543bc6dc8c1ab4993c969375ce3e238e8
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%

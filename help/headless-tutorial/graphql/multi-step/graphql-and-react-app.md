@@ -1,7 +1,7 @@
 ---
 title: 使用GraphQL API构建查询AEM的React应用程序 — AEM Headless快速入门 — GraphQL
-description: Adobe Experience Manager (AEM)和GraphQL入门。 构建从AEM GraphQL API获取内容/数据的React应用程序，并了解如何使用AEM Headless JS SDK。
-version: Cloud Service
+description: Adobe Experience Manager (AEM)和GraphQL快速入门。 构建从AEM GraphQL API获取内容/数据的React应用程序，并了解如何使用AEM Headless JS SDK。
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6716
 thumbnail: KT-6716.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 duration: 410
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 构建使用AEM GraphQL API的React应用程序
+# 构建使用AEM的GraphQL API的React应用程序
 
 在本章中，您将了解AEM的GraphQL API如何改善外部应用程序中的体验。
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 先决条件
 
-假定已完成此多部分教程前面部分中概述的步骤，或者[basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)已安装在您的AEM as a Cloud Service创作和Publish服务中。
+假定已完成此多部分教程前面部分中概述的步骤，或者[basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)已安装到您的AEM as a Cloud Service创作和发布服务中。
 
 本章中的&#x200B;_IDE屏幕截图来自[Visual Studio Code](https://code.visualstudio.com/)_
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 - 下载并启动示例React应用程序
 - 使用[AEM Headless JS SDK](https://github.com/adobe/aem-headless-client-js)查询AEM的GraphQL端点
-- 查询AEM以获取团队及其引用的成员的列表
+- 在AEM中查询团队及其引用的成员列表
 - 查询AEM以了解团队成员的详细信息
 
 ## 获取示例React应用程序
@@ -69,9 +69,9 @@ Github.com上的<https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basi
 
    在VSCode中![React应用程序](./assets/graphql-and-external-app/react-app-in-vscode.png)
 
-1. 更新`.env.development`以连接到AEM as a Cloud Service Publish服务。
+1. 更新`.env.development`以连接到AEM as a Cloud Service发布服务。
 
-   - 将`REACT_APP_HOST_URI`的值设置为您的AEM as a Cloud ServicePublish URL(例如 `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`)和`REACT_APP_AUTH_METHOD`的值更改为`none`
+   - 将`REACT_APP_HOST_URI`的值设置为您的AEM as a Cloud Service发布URL(例如 `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`)和`REACT_APP_AUTH_METHOD`的值更改为`none`
 
    >[!NOTE]
    >
@@ -148,7 +148,7 @@ export default aemHeadlessClient;
 
 要实施通用`fetchPersistedQuery(..)`函数以运行AEM GraphQL持久查询，请打开`usePersistedQueries.js`文件。 `fetchPersistedQuery(..)`函数使用`aemHeadlessClient`对象的`runPersistedQuery()`函数来异步运行基于承诺的查询。
 
-稍后，自定义React `useEffect`挂接调用此函数以从AEM检索特定数据。
+稍后，自定义React `useEffect`挂接调用此函数以从AEM中检索特定数据。
 
 1. 在`src/api/usePersistedQueries.js` **中，使用下面的代码更新** `fetchPersistedQuery(..)`的第35行。
 
@@ -190,10 +190,10 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 接下来，构建在React应用程序的主视图上显示团队及其成员的功能。 此功能需要：
 
-- `src/api/usePersistedQueries.js`中的新[自定义React useEffect挂钩](https://react.dev/reference/react/useEffect#useeffect)调用`my-project/all-teams`持久查询，返回AEM中的团队内容片段列表。
+- `src/api/usePersistedQueries.js`中的新[自定义React useEffect挂钩](https://react.dev/reference/react/useEffect#useeffect)调用`my-project/all-teams`持久查询，返回AEM中的Team内容片段列表。
 - 位于`src/components/Teams.js`的React组件调用新的自定义React `useEffect`挂接，并呈现Teams数据。
 
-完成后，应用程序的主视图将使用来自AEM的团队数据填充。
+完成后，应用程序的主视图会填充AEM中的团队数据。
 
 ![团队视图](./assets/graphql-and-external-app/react-app__teams-view.png)
 
@@ -489,7 +489,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ## 尝试该应用程序
 
-查看应用程序[http://localhost:3000/](http://localhost:3000/)并单击&#x200B;_成员_&#x200B;链接。 此外，您还可以通过在AEM中添加Alpha片段来向团队内容添加更多团队和/或成员。
+查看应用程序[http://localhost:3000/](http://localhost:3000/)并单击&#x200B;_成员_&#x200B;链接。 此外，您还可以通过在AEM中添加内容片段来向团队Alpha添加更多团队和/或成员。
 
 >[!IMPORTANT]
 >

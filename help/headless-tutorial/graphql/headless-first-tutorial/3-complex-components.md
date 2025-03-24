@@ -1,7 +1,7 @@
 ---
 title: 构建复杂的图像列表组件 — AEM Headless第一个教程
 description: 了解如何使用内容片段、内容引用和图像。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: ad06b0f3-afa7-4661-aa66-0674d2e6bb43
 duration: 732
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
@@ -422,4 +422,4 @@ export default Home;
 
 ## 恭喜！
 
-您已成功创建了AEM Headless体验，该体验由AEM Headless API完全提供技术支持，并且可以使用通用编辑器进行编辑。
+您已成功创建了AEM Headless体验，该体验完全由AEM Headless API提供支持，并且可以使用通用编辑器进行编辑。

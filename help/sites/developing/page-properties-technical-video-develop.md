@@ -5,13 +5,13 @@ topic: Development
 feature: Core Components
 role: Developer
 level: Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-243
 thumbnail: 25173.jpg
 doc-type: Technical Video
 exl-id: 500f4e07-2686-42a2-8e44-d96dde02a112
 duration: 488
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 1%
@@ -32,4 +32,4 @@ ht-degree: 1%
 
 但是，出于学习目的，您可以使用`sling:resourceSuperType`属性值将WKND页面组件指向WCM核心组件的V2版本，并叠加[社交媒体](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95)选项卡。 有关详细信息，请参阅[配置页面属性](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
 
-应在本地AEM SDK或AEM 6.X.X实例上安装此示例包以进行学习。
+此示例包应安装在本地AEM SDK或AEM 6.X.X实例上以供学习。

@@ -2,7 +2,7 @@
 title: 内容片段控制台中的自定义网格列
 description: 了解如何将自定义网格列添加到内容片段控制台。
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
 exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
 duration: 198
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -204,7 +204,7 @@ render: async function (fragments) {
 }
 ```
 
-如果需要其他数据来填充自定义列，可以向AEM Author发出HTTP请求以检索数据。
+如果填充自定义列需要其他数据，则可以向AEM Author发出HTTP请求以检索数据。
 
 >[!IMPORTANT]
 >

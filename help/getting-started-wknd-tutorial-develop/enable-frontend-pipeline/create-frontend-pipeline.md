@@ -1,7 +1,7 @@
 ---
 title: 使用前端管道部署
 description: 了解如何创建并运行构建前端资源并部署到AEM as a Cloud Service中的内置CDN的前端管道。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
 duration: 225
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # 使用前端管道部署
 
-在本章中，我们将在AdobeCloud Manager中创建并运行前端管道。 它仅从`ui.frontend`模块构建文件，并将它们部署到AEM as a Cloud Service中的内置CDN。 因此将离开基于`/etc.clientlibs`的前端资源投放。
+在本章中，我们将在Adobe Cloud Manager中创建并运行前端管道。 它仅从`ui.frontend`模块构建文件，并将它们部署到AEM as a Cloud Service中的内置CDN。 因此将离开基于`/etc.clientlibs`的前端资源投放。
 
 
 ## 目标 {#objectives}
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ## 验证样式更改和新投放模式
 
-* 打开WKND站点的任何页面，您会看到文本颜色为&#x200B;__Adobe红色__，并且前端资源(CSS、JS)文件是从CDN交付的。 资源请求主机名以`https://static-pXX-eYY.p123-e456.adobeaemcloud.com/$HASH_VALUE$/theme/site.css`开头，同样以`HtmlPageItemsConfig`文件中引用的site.js或任何其他静态资源开头。
+* 打开WKND站点的任何页面，您会看到文本颜色&#x200B;__Adobe Red__，并且前端资源(CSS、JS)文件是从CDN交付的。 资源请求主机名以`https://static-pXX-eYY.p123-e456.adobeaemcloud.com/$HASH_VALUE$/theme/site.css`开头，同样以`HtmlPageItemsConfig`文件中引用的site.js或任何其他静态资源开头。
 
 
 ![新样式的WKND站点](assets/newly-styled-wknd-site.png)

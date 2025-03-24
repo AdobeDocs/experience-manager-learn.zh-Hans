@@ -1,8 +1,8 @@
 ---
-title: asset compute开发工具
-description: asset compute开发工具是一个本地Web工具，它允许开发人员在AEM SDK上下文之外针对Adobe I/O Runtime中的Asset compute资源在本地配置和执行资产计算机工作程序。
+title: Asset Compute Development Tool
+description: Asset Compute开发工具是一个本地Web工具，它允许开发人员在AEM SDK上下文之外针对Adobe I/O Runtime中的Asset Compute资源在本地配置和执行资产计算机工作程序。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6283
 thumbnail: 40241.jpg
@@ -11,20 +11,20 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: cbe08570-e353-4daf-94d1-a91a8d63406d
 duration: 171
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
 
 ---
 
-# asset compute开发工具
+# Asset Compute Development Tool
 
-asset compute开发工具是一个本地Web工具，它允许开发人员在AEM SDK上下文之外针对Adobe I/O Runtime中的Asset compute资源在本地配置和执行资产计算机工作程序。
+Asset Compute开发工具是一个本地Web工具，它允许开发人员在AEM SDK上下文之外针对Adobe I/O Runtime中的Asset Compute资源在本地配置和执行资产计算机工作程序。
 
-## 运行Asset compute开发工具
+## 运行Asset Compute开发工具
 
-asset compute开发工具可以通过终端命令从Asset compute项目的根目录运行：
+Asset Compute开发工具可以通过终端命令从Asset Compute项目的根目录运行：
 
 ```
 $ aio app run
@@ -32,32 +32,32 @@ $ aio app run
 
 这将在&#x200B;__http://localhost:9000__&#x200B;处启动开发工具，并在浏览器窗口中自动打开该工具。 为了运行开发工具，[必须通过查询参数](#troubleshooting__devtooltoken)提供自动生成的有效devToolToken。
 
-## 了解Asset compute开发工具界面{#interface}
+## 了解Asset Compute开发工具界面{#interface}
 
-![Asset compute开发工具](./assets/development-tool/asset-compute-dev-tool.png)
+![Asset Compute开发工具](./assets/development-tool/asset-compute-dev-tool.png)
 
 1. __Source文件：__&#x200B;源文件选择用于：
-   + 已选择充当传递给Asset compute辅助进程的`source`二进制文件的资源二进制文件
+   + 已选择充当传递给Asset Compute辅助进程的`source`二进制文件的资源二进制文件
    + 上载源文件
-1. __Asset compute配置文件定义：__&#x200B;定义要运行的Asset compute工作进程，包括参数：包括工作进程的URL端点、生成的演绎版名称和任何参数
-1. __运行：__“运行”按钮执行Asset compute配置配置文件编辑器中定义的Asset compute配置文件
+1. __Asset Compute配置文件定义：__&#x200B;定义要运行的Asset Compute工作程序，包括参数：包括工作程序的URL端点、生成的演绎版名称和任何参数
+1. __运行：__“运行”按钮执行Asset Compute配置配置文件编辑器中定义的Asset Compute配置文件
 1. __中止：__&#x200B;中止按钮取消通过点击“运行”按钮启动的执行
-1. __请求/响应：__&#x200B;提供对Adobe I/O Runtime中运行的Asset compute工作进程的HTTP请求和响应。 这有助于调试
-1. __Asset compute日志：__&#x200B;描述Activation Worker执行的日志以及任何错误。 此信息也在`aio app run`标准输出中可用
-1. __演绎版：__&#x200B;显示执行Asset compute辅助进程生成的所有演绎版
-1. __devToolToken查询参数：__ Asset compute开发工具令牌需要存在有效的`devToolToken`查询参数。 每次生成新的开发工具时，将自动生成此令牌
+1. __请求/响应：__&#x200B;提供对Adobe I/O Runtime中运行的Asset Compute工作进程的HTTP请求和响应。 这有助于调试
+1. __激活日志：__&#x200B;描述Asset Compute工作进程执行的日志以及任何错误。 此信息也在`aio app run`标准输出中可用
+1. __呈现版本：__&#x200B;显示执行Asset Compute辅助进程生成的所有呈现版本
+1. __devToolToken查询参数：__ Asset Compute开发工具令牌要求存在有效的`devToolToken`查询参数。 每次生成新的开发工具时，将自动生成此令牌
 
 ### 运行自定义工作程序
 
 >[!VIDEO](https://video.tv.adobe.com/v/40241?quality=12&learn=on)
 
-_在开发工具中运行Asset compute工作的点进（无音频）_
+_在开发工具中运行Asset Compute工作的点进（无音频）_
 
-1. 确保使用`aio app run`命令从项目根目录启动Asset compute开发工具。
-1. 在Asset compute开发工具中，上传或选择[示例图像文件](../assets/samples/sample-file.jpg)
+1. 确保使用`aio app run`命令从项目根目录启动Asset Compute开发工具。
+1. 在Asset Compute开发工具中，上传或选择[示例图像文件](../assets/samples/sample-file.jpg)
    + 确保在&#x200B;__Source文件__&#x200B;下拉菜单中选择该文件
-1. 查看&#x200B;__Asset compute配置文件定义__&#x200B;文本区域
-   + `worker`键定义了已部署Asset compute工作进程的URL
+1. 查看&#x200B;__Asset Compute配置文件定义__&#x200B;文本区域
+   + `worker`键定义了已部署Asset Compute辅助进程的URL
    + `name`键定义了要生成的演绎版的名称
    + 其他键/值可在此JSON对象中提供，并可在`rendition.instructions`对象下的工作程序中提供
       + 可以选择添加`size`、`contrast`和`brightness`的值：

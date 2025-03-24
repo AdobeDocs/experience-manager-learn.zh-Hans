@@ -1,8 +1,8 @@
 ---
-title: 配置Asset compute项目的manifest.yml
-description: asset compute项目的manifest.yml描述了此项目中要部署的所有工作程序。
+title: 配置Asset Compute项目的manifest.yml
+description: Asset Compute项目的manifest.yml描述了此项目中要部署的所有工作程序。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6281
 thumbnail: KT-6281.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 766bfaff-ade0-41c8-a395-e79dfb4b3d76
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 配置manifest.yml
 
-位于Asset compute项目根目录中的`manifest.yml`描述了此项目中要部署的所有工作程序。
+位于Asset Compute项目根目录中的`manifest.yml`描述了此项目中要部署的所有工作程序。
 
 ![manifest.yml](./assets/manifest/manifest.png)
 
@@ -28,9 +28,9 @@ ht-degree: 0%
 
 辅助进程被定义为`actions`下的Adobe I/O Runtime操作条目，由一组配置组成。
 
-访问其他Adobe I/O集成的工作程序必须将`annotations -> require-adobe-auth`属性设置为`true`，因为此[通过`params.auth`对象公开工作程序的Adobe I/O凭据](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 当工作进程调用Adobe I/OAPI(例如Adobe Photoshop、Lightroom或Sensei API)时，通常需要此项，并且每个工作进程可以切换。
+访问其他Adobe I/O集成的工作程序必须将`annotations -> require-adobe-auth`属性设置为`true`，因为此[通过`params.auth`对象公开此工作程序的Adobe I/O凭据](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 当工作人员调用Adobe I/O API(例如Adobe Photoshop、Lightroom或Sensei API)时，通常需要此项，并且每个工作人员可以切换此项。
 
-1. 打开并查看自动生成的辅助进程`manifest.yml`。 包含多个Asset compute工作程序的项目，必须为`actions`数组下的每个工作程序定义一个条目。
+1. 打开并查看自动生成的辅助进程`manifest.yml`。 包含多个Asset Compute工作程序的项目，必须为`actions`数组下的每个工作程序定义一个条目。
 
 ```yml
 packages:
@@ -51,9 +51,9 @@ packages:
 
 每个辅助进程都可以在Adobe I/O Runtime中为其执行上下文配置[限制](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)。 应根据工作人员将计算的资产数量、比率、类型以及所执行的工作类型，调整这些值，以便为工作人员提供最佳规模。
 
-在设置限制之前查看[Adobe大小调整指南](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 asset compute工作程序在处理资源时可能会耗尽内存，从而导致Adobe I/O Runtime执行被终止，因此请确保该工作程序具有适当的大小以处理所有候选资源。
+在设置限制之前查看[Adobe大小调整指南](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 Asset Compute工作进程在处理资产时可能会耗尽内存，从而导致Adobe I/O Runtime执行被终止，因此请确保该工作进程的大小适合处理所有候选资产。
 
-1. 向新的`wknd-asset-compute`操作条目添加`inputs`部分。 这允许调整Asset compute工作程序的总体性能和资源分配。
+1. 向新的`wknd-asset-compute`操作条目添加`inputs`部分。 这允许调整Asset Compute工作程序的整体性能和资源分配。
 
 ```yml
 packages:
@@ -103,22 +103,22 @@ Github上的最终`.manifest.yml`位于：
 
 ## 正在验证manifest.yml
 
-更新生成的Asset compute`manifest.yml`后，运行本地开发工具并确保使用更新的`manifest.yml`设置成功启动。
+更新生成的Asset Compute `manifest.yml`后，运行本地开发工具并确保使用更新的`manifest.yml`设置成功启动。
 
-要为Asset compute项目启动Asset compute开发工具，请执行以下操作：
+要启动适用于Asset Compute项目的Asset Compute开发工具，请执行以下操作：
 
-1. 在Asset compute项目根中打开命令行（在VS代码中，这可以直接在IDE中通过“终端”>“新建终端”打开），然后执行命令：
+1. 在Asset Compute项目根目录中打开命令行（在VS Code中，这可以直接在IDE中通过“终端”>“新建终端”打开），然后执行命令：
 
    ```
    $ aio app run
    ```
 
-1. 本地Asset compute开发工具将在默认Web浏览器中打开，网址为&#x200B;__http://localhost:9000__。
+1. 本地Asset Compute开发工具将在默认Web浏览器中打开，网址为&#x200B;__http://localhost:9000__。
 
    ![aio应用运行](assets/environment-variables/aio-app-run.png)
 
 1. 在开发工具初始化时，请观察命令行输出和Web浏览器中的错误消息。
-1. 要停止Asset compute开发工具，请点按执行`aio app run`的窗口中的`Ctrl-C`以终止进程。
+1. 要停止Asset Compute开发工具，请点按执行`aio app run`的窗口中的`Ctrl-C`以终止进程。
 
 ## 疑难解答
 

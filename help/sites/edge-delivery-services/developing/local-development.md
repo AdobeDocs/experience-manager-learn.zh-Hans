@@ -1,7 +1,7 @@
 ---
 title: 为Edge Delivery Services设置本地开发环境
 description: 如何为Edge Delivery Services设置本地开发环境。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-14483
 thumbnail: 3425717.jpeg
 duration: 169
 exl-id: 0f3e50f0-88d8-46be-be8b-0f547c3633a6
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 设置本地开发环境
 
-如何为Edge Delivery Services设置本地开发环境。
+如何为Edge Delivery Services设置本地开发环境以进行开发。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425717/?learn=on)
 

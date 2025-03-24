@@ -2,7 +2,7 @@
 title: 快速开发环境
 description: 了解AEM快速开发环境、它们是什么以及它们如何帮助加快开发到部署周期。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,10 +11,10 @@ thumbnail: KT-11860.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 8fc6d0ef-8753-480b-a504-e7943de8883c
 duration: 99
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '87'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 

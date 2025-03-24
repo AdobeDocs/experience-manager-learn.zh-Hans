@@ -1,14 +1,14 @@
 ---
 title: AEM工作流中的变量[第4部分]
 description: 在AEM工作流中使用XML、JSON、ArrayList、Document类型的变量
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: 269e43f7-24cf-4786-9439-f51bfe91d39c
 duration: 102
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%

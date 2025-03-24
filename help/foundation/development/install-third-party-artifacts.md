@@ -1,7 +1,7 @@
 ---
 title: 安装第三方工件 — 在公共Maven存储库中不可用
 description: 了解如何在构建和部署AEM项目时安装公共Maven存储库中*不可用的第三方工件。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: OSGI
 topic: Development
 role: Architect, Developer
@@ -11,13 +11,13 @@ duration: 0
 last-substantial-update: 2024-09-13T00:00:00Z
 jira: KT-16207
 thumbnail: KT-16207.jpeg
-source-git-commit: 33415305f6aa183373eaef4bb4978a59325c8a32
+exl-id: 0cec14b3-4be5-4666-a36c-968ea2fc634f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 0%
 
 ---
-
 
 # 安装第三方工件 — 在公共Maven存储库中不可用
 
@@ -31,11 +31,11 @@ ht-degree: 0%
 
 ## 标准方案
 
-AEM通常，您会安装&#x200B;*在公共Maven存储库中作为依赖项`pom.xml`文件提供的第三方包*。
+通常，您会安装&#x200B;*在公共Maven存储库中作为依赖项提供的*&#x200B;的第三方捆绑包，该捆绑包在AEM项目的`pom.xml`文件中可用。
 
 例如：
 
-- [AEM WCM核心组件](https://github.com/adobe/aem-core-wcm-components) **包**&#x200B;已添加为[WKND项目的](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L747-L753) `pom.xml`文件中的依赖项。 此处`provided`范围用作AEM运行时提供的AEM WCM核心组件包。 如果AEM运行时未提供该捆绑包，则您将使用`compile`作用域，并且它是默认作用域。
+- [AEM WCM核心组件](https://github.com/adobe/aem-core-wcm-components) **包**&#x200B;已添加为[WKND项目的](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L747-L753) `pom.xml`文件中的依赖项。 此处`provided`范围用作AEM运行时提供的AEM WCM核心组件包。 如果AEM运行时未提供该捆绑包，您将使用`compile`作用域，并且它是默认作用域。
 
 - [WKND共享](https://github.com/adobe/aem-guides-wknd-shared) **包**&#x200B;已添加为[WKND项目的](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L767-L773) `pom.xml`文件中的依赖项。
 
@@ -43,7 +43,7 @@ AEM通常，您会安装&#x200B;*在公共Maven存储库中作为依赖项`pom.x
 
 ## 罕见场景
 
-有时，在生成和部署AEM项目时，您可能需要安装第三方捆绑包、jar或包&#x200B;**，这些捆绑包或在[Maven中央存储库](https://mvnrepository.com/)或[Adobe公共存储库](https://repo.adobe.com/index.html)中不可用**。
+有时，在生成和部署AEM项目时，您可能需要安装第三方捆绑包、jar或包&#x200B;**，在[Maven中央存储库](https://mvnrepository.com/)或[Adobe公共存储库](https://repo.adobe.com/index.html)中，这些捆绑包或jar或包**&#x200B;不可用。
 
 原因可能是：
 
@@ -186,7 +186,7 @@ AEM WKND项目的[tutorial/install-3rd-party-bundle](https://github.com/adobe/ae
 
 ### 重要学习{#key-learnings-bundle}
 
-可通过以下步骤在AEM项目中安装公共Maven存储库中不可用的OSGi包：
+可通过执行以下步骤，在AEM项目中安装公共Maven存储库中不可用的OSGi包：
 
 - 将OSGi包复制到`all`模块的`jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install`目录。 要打包捆绑包并将其部署到AEM实例，必须执行此步骤。
 
@@ -353,7 +353,7 @@ AEM WKND项目的[tutorial/install-3rd-party-jar](https://github.com/adobe/aem-g
 
 它只是为了演示安装公共Maven存储库中没有的AEM包的步骤。
 
-ACS AEM Commons包在公共Maven存储库中可用。 请参阅[将ACS AEM Commons添加到您的AEM Maven项目](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html)，以将其添加到AEM项目。
+ACS AEM Commons包在公共Maven存储库中提供。 请参阅[将ACS AEM Commons添加到您的AEM Maven项目](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html)，以将其添加到AEM项目。
 
 ### 将包添加到`all`模块
 
@@ -369,7 +369,7 @@ ACS AEM Commons包在公共Maven存储库中可用。 请参阅[将ACS AEM Commo
   $mvn clean install
   ```
 
-- 本地生成的包位于@ `all/target`，有两个.zip文件，一个以`-cloud`结尾，适用于AEM as a Cloud Service，另一个适用于AEM 6.X。
+- 本地构建的包位于@ `all/target`，有两个.zip文件，一个以`-cloud`结尾的用于AEM as a Cloud Service，另一个用于AEM 6.X。
 
 - 在AEM WKND项目的`all`模块中，创建`all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install`目录结构。 `/all/src/main/content`目录存在，您只需要创建`jcr_root/apps/wknd-vendor-packages/container/install`目录。
 
@@ -385,7 +385,7 @@ ACS AEM Commons包在公共Maven存储库中可用。 请参阅[将ACS AEM Commo
 
    - CRX包管理器@ `http://localhost:4502/crx/packmgr/index.jsp`
 
-     ![ACS AEM Commons快照版本包](./assets/install-third-party-articafcts/acs-aem-commons-snapshot-package.png)
+     ![ACS AEM Commons SNAPSHOT版本包](./assets/install-third-party-articafcts/acs-aem-commons-snapshot-package.png)
 
    - OSGi控制台@ `http://localhost:4502/system/console/bundles`
 

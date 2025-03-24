@@ -2,7 +2,7 @@
 title: 部署AEM UI扩展
 description: 了解如何部署AEM UI扩展。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 166
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 0%
@@ -28,9 +28,9 @@ ht-degree: 0%
    + __生产__&#x200B;工作区包含所有AEM as a Cloud Service中可用的扩展部署。
    + __阶段__工作区充当开发人员工作区。 部署到暂存工作区的扩展在AEM as a Cloud Service中不可用。
 Adobe Developer Console工作区与AEM as a Cloud Service环境类型没有任何直接关联。
-+ 部署到生产工作区的扩展将显示在该扩展所在的Adobe组织的所有AEM as a Cloud Service环境中。
++ 部署到生产工作区的扩展将显示在Adobe组织中该扩展存在的所有AEM as a Cloud Service环境中。
 通过添加检查AEM as a Cloud Service主机名](https://developer.adobe.com/uix/docs/guides/publication/#enabling-extension-only-on-specific-aem-environments)的[条件逻辑，不能将扩展限制为它所注册的环境。
-+ AEM as a Cloud Service上可以使用多个扩展。 Adobe建议使用App Builder的每个扩展应用程序来解决单个业务目标。 也就是说，一个扩展App Builder应用程序可以实施多个扩展点，以支持共同的业务目标。
++ AEM as a Cloud Service上可以使用多个扩展。 Adobe建议使用每个App Builder应用程序扩展来解决单个业务目标。 也就是说，一个扩展App Builder应用程序可以实施多个扩展点，以支持共同的业务目标。
 
 ## 初始部署
 
@@ -89,7 +89,7 @@ Adobe Developer Console工作区与AEM as a Cloud Service环境类型没有任�
 
 ### 撤销扩展
 
-要部署扩展的新版本，必须先撤销（或删除）该扩展。 当扩展被撤销时，它在AEM控制台中不可用。
+要部署扩展的新版本，必须先撤销（或删除）该扩展。 当扩展被吊销时，它在AEM控制台中不可用。
 
 1. 登录到[Adobe Exchange](https://exchange.adobe.com/)
 1. 导航到&#x200B;__管理__ > __App Builder应用程序__
@@ -141,7 +141,7 @@ Adobe Developer Console工作区与AEM as a Cloud Service环境类型没有任�
 
 ![删除扩展](./assets/deploy/revoke.png)
 
-要删除扩展，请从Adobe Exchange中撤消（或删除）该扩展。 扩展被撤销后，将从所有AEM as a Cloud Service Author服务中删除该扩展。
+要删除某个扩展，请从Adobe Exchange中撤消（或删除）该扩展。 扩展被撤销后，将从所有AEM as a Cloud Service Author服务中删除该扩展。
 
 1. 登录到[Adobe Exchange](https://exchange.adobe.com/)
 1. 导航到&#x200B;__管理__ > __App Builder应用程序__

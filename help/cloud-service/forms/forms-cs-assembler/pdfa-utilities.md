@@ -4,13 +4,13 @@ description: 使用HTTP端点在Forms CA中创建和验证PDF/A文件
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-10105
 exl-id: a4955104-8a87-4add-85c7-c3e3395f5f1a
 duration: 65
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # 创建和验证PDF/A文档
 
-PDF/A是可移植文档格式(PDF)的ISO标准化版本，专门用于电子文档的归档和长期保存。 PDF/A与PDF的不同之处在于，它禁止不适合长期归档的功能，例如字体链接（与字体嵌入相反）和加密。
+PDF/A是可移植文档格式(PDF)的ISO标准化版本，专门用于电子文档的归档和长期保存。 PDF/A与PDF的不同之处在于，禁止使用不适用于长期归档的功能，例如字体链接（与字体嵌入相反）和加密。
 
 ## 转换为 PDF/A
 
@@ -93,9 +93,9 @@ public class PDFAUtilities {
 }
 ```
 
-## 验证PDF
+## 验证PDF/A
 
-以下代码用于验证给定PDF是否符合PDF/A要求。
+以下代码用于验证给定的PDF for PDF/A合规性。
 
 ```java
 public void validatePDFA(String postURL) {

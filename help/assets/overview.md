@@ -1,14 +1,14 @@
 ---
 title: AEM Assets 视频和教程
-description: 观看我们的视频以获取AEM Asset支持和帮助。
+description: 观看我们的视频，以获取AEM Asset支持和帮助。
 sub-product: Experience Manager Assets
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: d0e1513b4e6ea536b40f3dbb69a0f512f7521164
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '177'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -61,7 +61,7 @@ Adobe Experience Manager (AEM) Assets是AEM Platform上的一款数字资产管�
    </a>
    <div>
       <a href="../assets-essentials/overview.md">
-      <strong>Assets Essentials入门</strong>
+      <strong>开始使用Assets Essentials</strong>
       </a>
    </div>
    <p>

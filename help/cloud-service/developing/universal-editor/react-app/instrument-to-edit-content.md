@@ -1,7 +1,7 @@
 ---
 title: 使用通用编辑器检测React应用程序以编辑内容
 description: 了解如何使用通用编辑器检测React应用程序以编辑内容。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 2a25cd44-cbd1-465e-ae3f-d3876e915114
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 0%
@@ -129,7 +129,7 @@ export default App;
 
 ## 添加元数据 — 本地通用编辑器服务配置
 
-与Adobe托管的通用编辑器服务不同，使用通用编辑器服务的本地副本进行本地开发。 本地服务绑定通用编辑器和AEM SDK，因此让我们将本地通用编辑器服务元数据添加到WKND Teams React应用程序。
+Universal Editor服务的本地副本用于本地开发，而不使用Adobe托管的通用编辑器服务。 本地服务绑定通用编辑器和AEM SDK，因此让我们将本地通用编辑器服务元数据添加到WKND Teams React应用程序。
 
 这些配置设置还作为`<meta>`标记存储在HTML文件中。 本地Universal Editor服务元数据的语法如下：
 
@@ -178,7 +178,7 @@ export default App;
 
 ## 检测React组件
 
-要编辑WKND Teams React应用程序的内容（如&#x200B;_团队标题和团队描述_），您需要检测React组件。 检测是指将相关数据属性(`data-aue-*`)添加到要使用通用编辑器使其可编辑的HTML元素中。 有关数据属性的详细信息，请参阅[属性和类型](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)。
+要编辑WKND Teams React应用程序的内容（如&#x200B;_团队标题和团队描述_），您需要检测React组件。 检测是指将相关数据属性(`data-aue-*`)添加到您希望使用通用编辑器进行编辑的HTML元素。 有关数据属性的详细信息，请参阅[属性和类型](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)。
 
 ### 定义可编辑元素
 
@@ -220,7 +220,7 @@ export default App;
 
 ### 定义AEM资源详细信息
 
-要将编辑的内容保存回AEM并加载属性边栏中的内容，您需要向通用编辑器提供AEM资源详细信息。
+要将编辑后的内容保存回AEM并加载属性边栏中的内容，您需要向通用编辑器提供AEM资源详细信息。
 
 在本例中，AEM资源是团队内容片段路径，因此让我们将资源详细信息添加到顶级`<div>`元素的`Teams` React组件。
 
@@ -252,11 +252,11 @@ export default App;
 
    `data-aue-resource`属性的值是团队内容片段的AEM资源路径。 `urn:aemconnection:`前缀使用连接元数据中定义的内容源的短名称。
 
-1. 在加载WKND团队React应用程序的浏览器中刷新通用编辑器页面。 现在，您可以看到顶级“团队”元素是可编辑的，但属性边栏仍未加载内容。 在浏览器的网络选项卡中，您会看到加载内容的`details`请求出现401未授权错误。 它尝试使用IMS令牌进行身份验证，但本地AEM SDK不支持IMS身份验证。
+1. 在加载WKND团队React应用程序的浏览器中刷新通用编辑器页面。 现在，您可以看到顶级“团队”元素是可编辑的，但属性边栏仍未加载内容。 在浏览器的网络选项卡中，您会看到加载内容的`details`请求出现401未授权错误。 它正在尝试使用IMS令牌进行身份验证，但本地AEM SDK不支持IMS身份验证。
 
    ![通用编辑器 — WKND团队可编辑](./assets/universal-editor-wknd-teams-team-editable.png)
 
-1. 要修复401未授权错误，您需要使用通用编辑器中的&#x200B;**身份验证标头**&#x200B;选项向通用编辑器提供本地AEM SDK身份验证详细信息。 作为其本地AEM SDK，请将`admin:admin`凭据的值设置为`Basic YWRtaW46YWRtaW4=`。
+1. 要修复401未授权错误，您需要使用通用编辑器中的&#x200B;**身份验证标头**&#x200B;选项向通用编辑器提供本地AEM SDK身份验证详细信息。 作为本地AEM SDK，请将`admin:admin`凭据的值设置为`Basic YWRtaW46YWRtaW4=`。
 
    ![通用编辑器 — 添加身份验证标头](./assets/universal-editor-wknd-teams-team-editable-auth.png)
 
@@ -266,9 +266,9 @@ export default App;
 
 #### 在幕后工作
 
-属性边栏使用本地Universal Editor服务从AEM资源加载内容。 使用浏览器的“网络”选项卡，您可以看到向本地Universal Editor服务(`https://localhost:8001/details`)发出的加载内容的POST请求。
+属性边栏使用本地Universal Editor服务从AEM资源加载内容。 使用浏览器的网络选项卡，您可以看到本地通用编辑器服务(`https://localhost:8001/details`)的加载内容的POST请求。
 
-使用内联编辑或属性边栏编辑内容时，更改会使用本地Universal Editor服务保存回AEM资源。 使用浏览器的“网络”选项卡，您可以看到本地通用编辑器服务（`https://localhost:8001/update`或`https://localhost:8001/patch`）保存内容的POST请求。
+使用内联编辑或属性边栏编辑内容时，更改会使用本地Universal Editor服务保存回AEM资源。 使用浏览器的网络选项卡，您可以看到本地通用编辑器服务（`https://localhost:8001/update`或`https://localhost:8001/patch`）保存内容的POST请求。
 
 ![通用编辑器 — WKND团队可编辑](./assets/universal-editor-under-the-hood-request.png)
 
@@ -311,7 +311,7 @@ export default App;
    export default Teams;
    ```
 
-   `data-aue-type`属性的值为`component`，因为团队成员在AEM中存储为`Person`内容片段，这有助于指示内容的可移动/可删除部分。
+   `data-aue-type`属性的值为`component`，因为团队成员在AEM中存储为`Person`内容片段，这有助于指示内容的移动/可删除部分。
 
 1. 在加载WKND团队React应用程序的浏览器中刷新通用编辑器页面。 您现在可以看到可以使用属性边栏编辑团队成员。
 
@@ -413,7 +413,7 @@ export default App;
 
 #### 在幕后工作
 
-内容添加和删除操作由本地Universal Editor服务完成。 向本地Universal Editor服务发送了对`/add`或`/remove`的带详细负载的POST请求，以将内容添加到AEM或从中删除。
+内容添加和删除操作由本地Universal Editor服务完成。 对具有详细有效负载的`/add`或`/remove`的POST请求被发送到本地Universal Editor服务，以将内容添加或删除到AEM。
 
 ## 解决方案文件
 

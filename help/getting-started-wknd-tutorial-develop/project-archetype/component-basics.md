@@ -1,7 +1,7 @@
 ---
 title: AEM Sites快速入门 — 组件基础知识
 description: 通过一个简单的“HelloWorld”示例了解Adobe Experience Manager (AEM) Sites组件的基础技术。 本文探讨了HTL、Sling模型、客户端库和作者对话框等主题。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, Developer Tools
 topic: Content Management, Development
 role: Developer
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
 duration: 1715
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 0%
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 ## 组件创作 {#component-authoring}
 
-组件可以被视为网页的小型模块化构建基块。 要重用组件，必须对组件进行配置。 这是通过创作对话框实现的。 接下来，我们创建一个简单的组件，并检查对话框中的值如何在AEM中保留。
+组件可以被视为网页的小型模块化构建基块。 要重用组件，必须对组件进行配置。 这是通过创作对话框实现的。 接下来，我们创建一个简单的组件，并检查该对话框中的值如何在AEM中保留。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330986?quality=12&learn=on)
 
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 ## HTL(HTML模板语言)和对话框 {#htl-dialogs}
 
-HTML模板语言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)**&#x200B;是AEM组件用于呈现内容的轻量级服务器端模板语言。
+HTML模板语言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)**&#x200B;是AEM组件用于呈现内容的轻型服务器端模板语言。
 
 **对话框**&#x200B;定义可以为组件生成的可用配置。
 
@@ -295,7 +295,7 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
 
 1. 打开终端窗口并导航到`ui.frontend`目录
 
-1. 位于`ui.frontend`目录中运行`npm install npm-run-all --save-dev`命令以安装[npm-run-all](https://www.npmjs.com/package/npm-run-all)节点模块。 此步骤在Archetype 39生成的AEM项目&#x200B;**上是**&#x200B;必需的，在即将发行的Archetype版本中，此步骤不是必需的。
+1. 位于`ui.frontend`目录中运行`npm install npm-run-all --save-dev`命令以安装[npm-run-all](https://www.npmjs.com/package/npm-run-all)节点模块。 此步骤是&#x200B;**在Archetype 39生成的AEM项目**&#x200B;中必需的，在即将发行的Archetype版本中，此步骤不是必需的。
 
 1. 接下来，运行`npm run watch`命令：
 

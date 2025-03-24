@@ -1,7 +1,7 @@
 ---
 title: Next.js - AEM Headless示例
-description: 示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此Next.js应用程序演示了如何通过AEM的GraphQL API，使用持久化查询来查询内容。
-version: Cloud Service
+description: 示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的好方法。 此Next.js应用程序演示了如何使用AEM的GraphQL API通过持久查询来查询内容。
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -10,10 +10,10 @@ level: Beginner
 jira: KT-10721
 thumbnail: KT-10721.jpg
 last-substantial-update: 2023-05-10T00:00:00Z
-badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
 duration: 210
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Next.js应用程序
 
-示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此Next.js应用程序演示了如何通过AEM的GraphQL API，使用持久化查询来查询内容。 适用于JavaScript的AEM Headless客户端用于执行为应用程序提供支持的GraphQL持久查询。
+示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的好方法。 此Next.js应用程序演示了如何使用AEM的GraphQL API通过持久查询来查询内容。 适用于JavaScript的AEM Headless客户端用于执行为应用程序提供支持的GraphQL持久查询。
 
 使用AEM Headless的![Next.js应用程序](./assets/next-js/next-js.png)
 
@@ -43,7 +43,7 @@ Next.js应用程序可与以下AEM部署选项配合使用。 所有部署都需
 
 ### AEM创作要求
 
-Next.js旨在连接到&#x200B;__AEM Publish__&#x200B;服务，并访问不受保护的内容。 Next.js可以配置为通过下述的`.env`属性连接到AEM创作。 由AEM Author提供的图像需要进行身份验证，因此访问Next.js应用程序的用户还必须登录到AEM Author。
+Next.js旨在连接到&#x200B;__AEM Publish__&#x200B;服务，并访问不受保护的内容。 Next.js可以配置为通过下述的`.env`属性连接到AEM创作。 由AEM Author提供的图像需要进行身份验证，因此，访问Next.js应用程序的用户还必须登录到AEM Author。
 
 ## 使用方法
 
@@ -109,9 +109,9 @@ Next.js旨在连接到&#x200B;__AEM Publish__&#x200B;服务，并访问不受保
 
 ### 持久查询
 
-遵循AEM Headless最佳实践，Next.js应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
+按照AEM Headless最佳实践，Next.js应用程序使用AEM GraphQL持久查询来查询冒险数据。 应用程序使用两个持久查询：
 
-+ `wknd/adventures-all`持久查询，该查询返回AEM中的所有冒险，其中具有一组删节的属性。 此持久查询驱动初始视图的冒险列表。
++ `wknd/adventures-all`持久查询，该查询返回AEM中的所有冒险，并包含属性删节集。 此持久查询驱动初始视图的冒险列表。
 
 ```
 # Retrieves a list of all Adventures
@@ -224,7 +224,7 @@ query ($slug: String!, $imageFormat:AssetTransformFormat=JPG, $imageSeoName: Str
 
 ### 执行GraphQL持久查询
 
-AEM的持久查询通过HTTPGET执行，因此，JavaScript的[AEM Headless客户端](https://github.com/adobe/aem-headless-client-js)用于[对AEM执行持久的GraphQL查询](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany)并将冒险内容加载到应用程序中。
+AEM的持久查询通过HTTP GET执行，因此，适用于JavaScript](https://github.com/adobe/aem-headless-client-js)的[AEM Headless客户端用于[对AEM执行持久的GraphQL查询](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany)，并将冒险内容加载到应用程序中。
 
 每个持久查询在`src/lib//aem-headless-client.js`中具有对应的函数，该函数调用AEM GraphQL终结点，并返回冒险数据。
 
@@ -279,4 +279,4 @@ Next.js应用程序使用两个页面展示冒险数据。
 
 Next.js应用程序，尤其是在服务器端渲染(SSR)和服务器端生成(SSG)的上下文中，不需要高级安全配置，例如跨源资源共享(CORS)。
 
-但是，如果Next.js确实从客户端上下文中向AEM发出HTTP请求，则可能需要AEM中的安全配置。 有关更多详细信息，请查看[AEM Headless单页应用程序部署教程](../deployment/spa.md)。
+但是，如果Next.js确实从客户端上下文向AEM发出HTTP请求，则可能需要AEM中的安全配置。 有关更多详细信息，请查看[AEM Headless单页应用程序部署教程](../deployment/spa.md)。

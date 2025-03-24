@@ -1,14 +1,14 @@
 ---
 title: 从HTL参数化Sling模型
-description: 了解如何将参数从HTL传递到AEM中的Sling模型。
-version: Cloud Service
+description: 了解如何在AEM中将参数从HTL传递到Sling模型。
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Sling Model
 role: Developer
 jira: KT-15923
 level: Intermediate, Experienced
 exl-id: 5d852617-720a-4a00-aecd-26d0ab77d9b3
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
@@ -126,4 +126,4 @@ public interface ParameterizedModel {
 </p>
 ```
 
-这显示了如何基于通过HTL提供的输入参数来影响AEM中的参数化Sling模型。
+这显示了如何根据通过HTL提供的输入参数来影响AEM中的参数化Sling模型。

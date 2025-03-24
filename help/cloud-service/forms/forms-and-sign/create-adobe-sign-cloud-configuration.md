@@ -5,16 +5,16 @@ solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-7428
 thumbnail: 332437.jpg
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: a55773a5-0486-413f-ada6-bb589315f0b1
 duration: 222
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 # 创建Acrobat Sign云配置
 
-AEM中的云服务配置允许您创建AEM与其他云应用程序之间的集成。
+AEM中的Cloud Services配置允许您在AEM和其他云应用程序之间创建集成。
 
 以下视频将指导您完成创建AEM与Acrobat Sign集成的云服务配置所需的步骤
 

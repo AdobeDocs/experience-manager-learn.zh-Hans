@@ -2,7 +2,7 @@
 title: 内容片段控制台 — 自定义字段
 description: 了解如何在AEM内容片段编辑器中创建自定义字段。
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 role: Developer
 level: Intermediate
 doc-type: Tutorial
@@ -11,7 +11,7 @@ last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
 exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
-应该使用[AdobeReact Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架来开发AEM UI扩展，因为这样可以保持与AEM其他部分一致的外观，并且还有大量预建功能，从而缩短开发时间。
+AEM UI扩展应使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架进行开发，因为这与AEM的其他部分保持一致的外观，并且还有大量预建功能，从而缩短了开发时间。
 
 ## 扩展点
 
@@ -132,10 +132,10 @@ export default ExtensionRegistration;
 
 ### 自定义字段
 
-`SkuField` React组件使用自定义UI更新内容片段编辑器，并为其选取器表单使用AdobeReact Spectrum。 重点包括：
+`SkuField` React组件使用自定义UI更新内容片段编辑器，并使用其选取器表单的Adobe React Spectrum。 重点包括：
 
-+ 利用`useEffect`进行初始化并连接到AEM内容片段编辑器，在安装完成之前显示加载状态。
-+ 在iFrame中渲染时，它会通过`onOpenChange`函数动态调整iFrame的高度，以适应AdobeReact频谱选取器的下拉列表。
++ 利用`useEffect`进行初始化并连接到AEM的内容片段编辑器，在安装完成之前显示加载状态。
++ 在iFrame中渲染时，它会通过`onOpenChange`函数动态调整iFrame的高度，以适应Adobe React光谱选取器的下拉列表。
 + 使用`onSelectionChange`函数中的`connection.host.field.onChange(value)`将字段选择传回主机，确保根据内容片段模型的指南验证和自动保存所选值。
 
 自定义字段在注入到内容片段编辑器中的iFrame中渲染。 自定义字段代码和内容片段编辑器之间的通信仅通过`connection`对象进行，该对象由`@adobe/uix-guest`包中的`attach`函数建立。

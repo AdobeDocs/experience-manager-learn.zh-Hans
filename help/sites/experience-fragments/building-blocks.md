@@ -2,7 +2,7 @@
 title: 如何使用体验片段构建基块
 description: 构建基块是体验片段的一项子功能，可重用体验片段的各个变体中的已创作组件。
 sub-product: Experience Manager Sites
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Experience Fragments
 topic: Content Management
 level: Beginner, Intermediate
@@ -12,7 +12,7 @@ jira: KT-660
 thumbnail: 331786.jpg
 exl-id: cc758602-3c20-4eca-9b87-f04b6dc96bfe
 duration: 179
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%

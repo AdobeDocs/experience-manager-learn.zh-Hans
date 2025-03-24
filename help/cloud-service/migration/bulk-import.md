@@ -1,7 +1,7 @@
 ---
 title: 在AEM Assets中使用批量导入
 description: AEM as a Cloud Service中的批量导入工具允许管理员以安全高效的方式从云存储(Azure Blob Storage或Amazon S3)批量导入资源。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: technical-video
 feature: Migration
 jira: KT-6729, KT-14796
@@ -12,10 +12,10 @@ level: Beginner
 last-substantial-update: 2024-01-16T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
 duration: 712
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '175'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -25,9 +25,9 @@ AEM as a Cloud Service中的批量导入工具允许管理员以安全高效的�
 
 >[!BEGINTABS]
 
->[!TAB Assets视图]
+>[!TAB 资产视图]
 
-了解如何使用[Asset视图](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [批量导入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html)将大量文件导入AEM Assets，以Dropbox作为示例云存储提供商，以实现清晰且易于遵循的集成过程。
+了解如何使用[Asset视图](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [批量导入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html)将大量文件导入AEM Assets，以Dropbox作为示例云存储提供商，以实现清晰易用的集成过程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
 

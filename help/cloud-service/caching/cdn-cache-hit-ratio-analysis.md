@@ -1,7 +1,7 @@
 ---
 title: CDN缓存命中率分析
 description: 了解如何分析AEM as a Cloud Service提供的CDN日志。 获取缓存命中率以及MISS和PASS缓存类型的顶级URL等见解，以进行优化。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -30,11 +30,11 @@ CDN日志以JSON格式提供，其中包含各种字段，包括`url`、`cache`�
 
 | 缓存的状态</br>可能值 | 描述 |
 |------------------------------------|:-----------------------------------------------------:|
-| 点击 | 请求的数据在CDN缓存中找到&#x200B;_，不需要向AEM服务器发出fetch_&#x200B;请求。 |
-| 小姐 | 在CDN缓存中找不到请求的数据&#x200B;_，必须从AEM服务器请求_。 |
-| 通过 | 所请求的数据是&#x200B;_显式设置为不缓存_，并且始终从AEM服务器中检索。 |
+| 点击 | 请求的数据在CDN缓存中为&#x200B;_，不需要向AEM服务器发出fetch_&#x200B;请求。 |
+| 小姐 | 在CDN缓存中未找到请求的数据&#x200B;_，必须从AEM服务器请求_。 |
+| 通过 | 所请求的数据是&#x200B;_明确设置为不缓存_，并且始终从AEM服务器中检索。 |
 
-在本教程中，[AEM WKND项目](https://github.com/adobe/aem-guides-wknd)部署到AEM as a Cloud Service环境，并使用[Apache JMeter](https://jmeter.apache.org/)触发小规模性能测试。
+在本教程中，将[AEM WKND项目](https://github.com/adobe/aem-guides-wknd)部署到AEM as a Cloud Service环境，并使用[Apache JMeter](https://jmeter.apache.org/)触发小型性能测试。
 
 本教程旨在引导您完成以下过程：
 
@@ -52,7 +52,7 @@ CDN日志以JSON格式提供，其中包含各种字段，包括`url`、`cache`�
 
    ![下载日志 — Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
-1. 在&#x200B;**下载日志**&#x200B;对话框中，从下拉菜单中选择&#x200B;**Publish**&#x200B;服务，然后单击&#x200B;**CDN**&#x200B;行旁边的下载图标。
+1. 在&#x200B;**下载日志**&#x200B;对话框中，从下拉菜单中选择&#x200B;**发布**&#x200B;服务，然后单击&#x200B;**CDN**&#x200B;行旁边的下载图标。
 
    ![CDN日志 — Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
@@ -158,7 +158,7 @@ CDN日志以JSON格式提供，其中包含各种字段，包括`url`、`cache`�
 - **安装其他库**：安装`termcolor`和`tabulate` Python库。
 - **加载CDN日志**：使用`log_file`变量值加载CDN日志文件；请确保更新其值。 它还会将此CDN日志转换为[Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html)。
 - **执行分析**：第一个代码块是&#x200B;_显示总计、HTML、JS/CSS和图像请求的分析结果_；它提供缓存命中率百分比、条形图和饼图。
-第二个代码块是_HTML、JS/CSS和图像的前5个未命中和传递请求URL_；它以表格格式显示URL及其计数。
+第二个代码块是_HTML、JS/CSS和Image_&#x200B;的前5个未命中和传递请求URL；它以表格格式显示URL及其计数。
 
 #### 运行Jupyter Notebook
 
@@ -190,7 +190,7 @@ CDN日志以JSON格式提供，其中包含各种字段，包括`url`、`cache`�
 
    ![笔记本日志文件值更新](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="500" zoomable="yes"}
 
-1. 运行HTML、JS/CSS和图像&#x200B;**代码单元格的**&#x200B;前5个未命中和传递请求URL后，输出显示前5个未命中和传递请求URL。
+1. 运行HTML、JS/CSS和Image **代码单元格的**&#x200B;前5个未命中和传递请求URL后，输出显示前5个未命中和传递请求URL。
 
    ![笔记本日志文件值更新](assets/cdn-logs-analysis/output-top-urls.png){width="500" zoomable="yes"}
 
@@ -198,7 +198,7 @@ CDN日志以JSON格式提供，其中包含各种字段，包括`url`、`cache`�
 
 ## 优化CDN缓存配置
 
-在分析CDN日志后，您可以优化CDN缓存配置以提高站点性能。 AEM最佳实践是使缓存命中率达到90%或更高。
+在分析CDN日志后，您可以优化CDN缓存配置以提高站点性能。 AEM的最佳做法是使缓存命中率达到90%或更高。
 
 有关详细信息，请参阅[优化CDN缓存配置](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching)。
 

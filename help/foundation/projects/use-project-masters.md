@@ -1,7 +1,7 @@
 ---
 title: 如何在AEM中使用项目母版
-description: 项目母版通过AEM项目极大地简化了用户和团队管理。
-version: 6.4, 6.5, Cloud Service
+description: 通过AEM项目，项目母版可大大简化用户和团队管理。
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Content Management, Collaboration
 feature: Projects
 level: Intermediate
@@ -11,7 +11,7 @@ thumbnail: 17740.jpg
 doc-type: Feature Video
 exl-id: 78ff62ad-1017-4a02-80e9-81228f9e01eb
 duration: 260
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 * 从中心位置管理团队成员资格，项目自动继承对团队的任何更新
 * 避免创建可能导致性能问题的重复ACL
 
-可以在[!UICONTROL AEM项目]下的[!UICONTROL Masters]文件夹下创建[!DNL Master Projects]。 创建母版项目后，在创建新项目时，它会在向导中显示为可用模板旁边的选项。
+可以在[!UICONTROL AEM项目]的[!UICONTROL Masters]文件夹下创建[!DNL Master Projects]。 创建母版项目后，在创建新项目时，它会在向导中显示为可用模板旁边的选项。
 
 [!DNL Project Masters] URL(本地AEM创作实例)： [http://localhost:4502/projects.html/content/projects/masters](http://localhost:4502/projects.html/content/projects/masters)
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 删除母版项目导致派生的项目不可用。
 
-在删除母版项目之前，请确保已完成所有派生项目并将其从AEM中删除。 确保在删除派生的项目之前保存任何所需的项目数据。 一旦从AEM中删除所有派生项目，就可以安全地删除母版项目。
+在删除母版项目之前，请确保已完成所有派生项目并将其从AEM中删除。 确保在删除派生的项目之前保存任何所需的项目数据。 从AEM中删除所有派生项目后，即可安全地删除母版项目。
 
 ## 将[!DNL Project Masters]标记为不活动
 

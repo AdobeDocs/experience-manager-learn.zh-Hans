@@ -1,7 +1,7 @@
 ---
 title: 文档创作视频
 description: 了解如何在AEM中设置和配置文档创作。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User
@@ -11,7 +11,7 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 9%
@@ -20,7 +20,7 @@ ht-degree: 9%
 
 # 文档创作视频
 
-了解如何配置文档创作，以允许AEM作者使用Microsoft Word或Google文档编辑和发布文档。
+了解如何配置文档创作，以允许AEM作者使用Microsoft Word或Google Docs编辑和发布文档。
 
 有关设置文档创作的完整详细信息，请查看[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html)。
 
@@ -80,7 +80,7 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="preview-and-publish.md" title="预览和发布内容">编辑器概述</a>
             </p>
-            <p class="is-size-6">使用AEM Sidekick预览和发布内容的简要概述。</p>
+            <p class="is-size-6">有关使用AEM Sidekick预览和发布内容的简要概述。</p>
             <a href="preview-and-publish.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -728,7 +728,7 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/generate-variations/overview.md" title="生成变体">生成变体</a>
             </p>
-            <p class="is-size-6">生成Edge Delivery Services中的变体简介，并了解它如何对营销人员有用。</p>
+            <p class="is-size-6">介绍如何在Edge Delivery Services中生成变体，并了解它对营销人员有何用处。</p>
             <a href="./how-to/generate-variations/overview.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -1080,7 +1080,7 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/setup-experimentation-framework.md" title="设置试验框架">正在设置试验框架</a>
             </p>
-            <p class="is-size-6">探索如何在Edge Delivery Services文档创作中设置实验框架。</p>
+            <p class="is-size-6">探索如何在Edge Delivery Services文档创作中设置试验框架。</p>
             <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">

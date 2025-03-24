@@ -1,7 +1,7 @@
 ---
 title: 管理AEM GraphQL的AEM主机
 description: 了解如何在AEM Headless应用程序中配置AEM主机。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -10,7 +10,7 @@ jira: KT-10831
 thumbnail: KT-10831.jpg
 exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
 duration: 496
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1614'
 ht-degree: 0%
@@ -19,12 +19,12 @@ ht-degree: 0%
 
 # 管理AEM主机
 
-部署AEM Headless应用程序时，需要注意AEM URL的构建方式，以确保使用正确的AEM主机/域。 要了解的主要URL/请求类型为：
+部署AEM Headless应用程序时，需要注意如何构建AEM URL，以确保使用正确的AEM主机/域。 要了解的主要URL/请求类型为：
 
 + 对&#x200B;__[AEM GraphQL API](#aem-graphql-api-requests)__&#x200B;的HTTP请求
-+ __[图像URL](#aem-image-urls)__，指向内容片段中引用并由AEM交付的图像资产
++ __[图像URL](#aem-image-urls)__，指向内容片段中引用并由AEM交付的图像资源
 
-通常，AEM Headless应用程序会与单个AEM服务交互，以用于GraphQL API和图像请求。 AEM服务根据AEM Headless应用程序部署发生更改：
+通常，AEM Headless应用程序会与单个AEM服务交互，以用于GraphQL API和图像请求。 AEM服务因AEM Headless应用程序部署而异：
 
 | AEM Headless部署类型 | AEM环境 | AEM服务 |
 |-------------------------------|:---------------------:|:----------------:|
@@ -42,21 +42,21 @@ ht-degree: 0%
 
 ## AEM GraphQL API请求
 
-必须将从Headless应用程序到AEM的GraphQL API的HTTPGET请求配置为与正确的AEM服务交互，如上面](#managing-aem-hosts)的[表中所述。
+必须配置从Headless应用程序到AEM的GraphQL API的HTTP GET请求，以便与正确的AEM服务交互，如上面[表](#managing-aem-hosts)中所述。
 
-使用[AEM Headless SDK](../../how-to/aem-headless-sdk.md)(可用于基于浏览器的JavaScript、基于服务器的JavaScript和Java™)时，AEM主机可以通过AEM服务初始化要连接的AEM Headless客户端对象。
+使用[AEM Headless SDK](../../how-to/aem-headless-sdk.md)(可用于基于浏览器的JavaScript、基于服务器的JavaScript和Java™)时，AEM主机可以通过AEM服务初始化AEM Headless客户端对象以与之连接。
 
 在开发自定义AEM Headless客户端时，请确保AEM服务的主机可以根据构建参数进行参数化。
 
 ### 示例
 
-以下示例用于说明AEM GraphQL API请求如何能够让针对各种Headless应用程序框架配置AEM主机值。
+以下示例介绍了如何使AEM GraphQL API请求能够针对各种Headless应用程序框架配置AEM主机值。
 
 +++ React示例
 
-此示例大致基于[AEM Headless React应用程序](../../example-apps/react-app.md)，说明了如何将AEM GraphQL API请求配置为根据环境变量连接到不同的AEM Services。
+此示例大致基于[AEM Headless React应用程序](../../example-apps/react-app.md)，说明了如何将AEM GraphQL API请求配置为根据环境变量连接到不同的AEM服务。
 
-React应用程序应使用[AEM Headless Client for JavaScript](../../how-to/aem-headless-sdk.md)与AEM的GraphQL API交互。 由AEM Headless Client for JavaScript提供的AEM Headless客户端必须使用它连接到的AEM Service主机进行初始化。
+React应用程序应使用适用于JavaScript的[AEM Headless客户端](../../how-to/aem-headless-sdk.md)与AEM的GraphQL API交互。 由AEM Headless Client for JavaScript提供的AEM Headless客户端必须使用它连接到的AEM服务主机进行初始化。
 
 #### React环境文件
 
@@ -88,7 +88,7 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 
 #### AEM headless客户端
 
-JavaScript](../../how-to/aem-headless-sdk.md)的[AEM Headless客户端包含一个AEM Headless客户端，该客户端向AEM的GraphQL API发出HTTP请求。 必须使用活动`.env`文件中的值将AEM Headless客户端与其交互的AEM主机初始化。
+适用于JavaScript](../../how-to/aem-headless-sdk.md)的[AEM Headless客户端包含一个AEM Headless客户端，该客户端向AEM的GraphQL API发出HTTP请求。 必须使用活动`.env`文件中的值将AEM Headless客户端与其交互的AEM主机初始化。
 
 + `src/api/headlessClient.js`
 
@@ -110,7 +110,7 @@ export const aemHeadlessClient = new AEMHeadless({
 });
 ```
 
-#### React useEffect(..) 挂钩
+#### React useEffect(..)挂接
 
 自定义React useEffect挂接调用AEM Headless客户端，通过AEM主机初始化，以代表呈现视图的React组件。
 
@@ -195,7 +195,7 @@ let aemHost: String = try Configuration.value(for: "AEM_HOST")      // publish-p
 let aemHeadlessClient = Aem(scheme: aemScheme, host: aemHost);
 ```
 
-自定义AEM Headless客户端(`api/Aem.swift`)包含方法`makeRequest(..)`，该方法使用配置的AEM `scheme`和`host`为AEM GraphQL API请求添加前缀。
+自定义AEM Headless客户端(`api/Aem.swift`)包含一个方法`makeRequest(..)`，该方法使用配置的AEM `scheme`和`host`为AEM GraphQL API请求添加前缀。
 
 + `api/Aem.swift`
 
@@ -217,15 +217,15 @@ private func makeRequest(persistedQueryName: String, params: [String: String] = 
 }
 ```
 
-[可以创建新的生成配置文件](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)以连接到其他AEM服务。 `AEM_SCHEME`和`AEM_HOST`的生成特定值是基于XCode中的选定生成而使用的，从而导致自定义AEM Headless客户端与正确的AEM服务连接。
+[可以创建新的生成配置文件](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)以连接到其他AEM服务。 `AEM_SCHEME`和`AEM_HOST`的生成特定值是基于XCode中的所选生成而使用的，从而导致自定义AEM Headless客户端与正确的AEM服务连接。
 
 +++
 
 +++ Android™示例
 
-此示例基于[示例AEM Headless Android™应用程序](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)，说明了如何将AEM GraphQL API请求配置为根据特定于内部版本（或风格）的配置变量连接到不同的AEM Services。
+此示例基于[示例AEM Headless Android™应用程序](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)，说明了如何将AEM GraphQL API请求配置为根据特定于内部版本（或风格）的配置变量连接到其他AEM服务。
 
-Android™应用程序(使用Java™编写时)应使用[AEM Headless Client for Java™](https://github.com/adobe/aem-headless-client-java)与AEM的GraphQL API交互。 由AEM Headless Client for Java™提供的AEM Headless客户端必须使用它连接到的AEM Service主机进行初始化。
+Android™应用程序(使用Java™编写时)应使用[适用于Java™的AEM Headless客户端](https://github.com/adobe/aem-headless-client-java)与AEM的GraphQL API交互。 由适用于Java™的AEM Headless客户端提供的AEM Headless客户端必须使用它连接到的AEM服务主机进行初始化。
 
 #### 生成配置文件
 
@@ -234,7 +234,7 @@ Android™应用程序定义“productFlavors”，用于为不同用途生成�
 
 在应用程序的`build.gradle`文件中，创建了名为`env`的新`flavorDimension`。
 
-在`env`维度中，定义了两个`productFlavors`： `dev`和`prod`。 每个`productFlavor`都使用`buildConfigField`来设置用于定义要连接的AEM服务的生成特定变量。
+在`env`维度中，定义了两个`productFlavors`： `dev`和`prod`。 每个`productFlavor`都使用`buildConfigField`设置用于定义要连接的AEM服务的生成特定变量。
 
 + `app/build.gradle`
 
@@ -288,9 +288,9 @@ public class AdventuresLoader extends AsyncTaskLoader<AdventureList> {
 
 ## AEM图像URL
 
-必须将从Headless应用程序向AEM发出的图像请求配置为与正确的AEM服务交互，如上表](#managing-aem-hosts)中的[所述。
+必须配置从Headless应用程序到AEM的图像请求，以便与正确的AEM服务交互，如上表](#managing-aem-hosts)中的[所述。
 
-Adobe建议使用AEM GraphQL API中通过`_dynamicUrl`字段提供的[优化图像](../../how-to/images.md)。 `_dynamicUrl`字段返回的无主机URL，该URL可以带有用于查询AEM GraphQL API的AEM服务主机的前缀。 对于GraphQL响应中的`_dynamicUrl`字段，如下所示：
+Adobe建议使用通过AEM GraphQL API中的`_dynamicUrl`字段提供的[优化图像](../../how-to/images.md)。 `_dynamicUrl`字段返回一个无主机URL，该URL可以带有用于查询AEM GraphQL API的AEM服务主机的前缀。 对于GraphQL响应中的`_dynamicUrl`字段，如下所示：
 
 ```json
 {
@@ -345,7 +345,7 @@ query ($path: String!) {
 
 +++ React示例
 
-此示例基于[示例AEM Headless React应用程序](../../example-apps/react-app.md)，说明了如何根据环境变量将图像URL配置为连接到正确的AEM Services。
+此示例基于[示例AEM Headless React应用程序](../../example-apps/react-app.md)，说明了如何配置图像URL以根据环境变量连接到正确的AEM服务。
 
 此示例显示如何使用可配置的`REACT_APP_AEM_HOST` React环境变量为图像引用`_dynamicUrl`字段添加前缀。
 
@@ -381,7 +381,7 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 
 React组件导入`REACT_APP_AEM_HOST`环境变量并为图像`_dynamicUrl`值添加前缀，以提供完全可解析的图像URL。
 
-此`REACT_APP_AEM_HOST`环境变量用于初始化`useAdventureByPath(..)`自定义useEffect挂接使用的AEM Headless客户端，该挂接用于从AEM获取GraphQL数据。 使用相同的变量将GraphQL API请求构造为图像URL，请确保React应用程序在两个用例中与相同的AEM服务交互。
+同一`REACT_APP_AEM_HOST`环境变量用于初始化`useAdventureByPath(..)`自定义useEffect挂接使用的AEM Headless客户端，该挂接用于从AEM获取GraphQL数据。 使用相同的变量构造GraphQL API请求作为图像URL，请确保React应用程序在这两种用例中与相同的AEM服务交互。
 
 + &#39;src/components/AdventureDetail.js&#39;
 
@@ -403,7 +403,7 @@ return (
 
 +++ iOS™示例
 
-此示例基于[示例AEM Headless iOS™应用程序](../../example-apps/ios-swiftui-app.md)，说明了如何将AEM图像URL配置为根据[特定于内部版本的配置变量](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)连接到不同的AEM主机。
+此示例基于[示例AEM Headless iOS™应用程序](../../example-apps/ios-swiftui-app.md)，说明了如何将AEM图像URL配置为根据[特定于内部版本的配置变量](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)连接到其他AEM主机。
 
 #### 生成配置
 
@@ -422,7 +422,7 @@ AEM_HOST = publish-p123-e789.adobeaemcloud.com
 
 #### 图像URL生成器
 
-在`Aem.swift`的自定义AEM Headless客户端实现中，自定义函数`imageUrl(..)`采用GraphQL响应的`_dynamicUrl`字段中提供的图像路径，并在其前面加上AEM的主机。 每当渲染图像时，都会在iOS视图中调用此函数。
+在`Aem.swift`的自定义AEM Headless客户端实现中，自定义函数`imageUrl(..)`采用GraphQL响应的`_dynamicUrl`字段中提供的图像路径，并将其加在AEM的主机之前。 每当渲染图像时，都会在iOS视图中调用此函数。
 
 + `WKNDAdventures/AEM/Aem.swift`
 
@@ -470,13 +470,13 @@ struct AdventureListItemView: View {
 ...
 ```
 
-[可以创建新的生成配置文件](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)以连接到其他AEM服务。 `AEM_SCHEME`和`AEM_HOST`的生成特定值是基于XCode中的选定生成而使用的，从而导致自定义AEM Headless客户端与正确的AEM服务交互。
+[可以创建新的生成配置文件](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)以连接到其他AEM服务。 `AEM_SCHEME`和`AEM_HOST`的生成特定值基于XCode中的所选生成，从而导致自定义AEM Headless客户端与正确的AEM服务交互。
 
 +++
 
 +++ Android™示例
 
-此示例基于[示例AEM Headless Android™应用程序](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)，说明了如何将AEM图像URL配置为根据特定于内部版本（或风格）的配置变量连接到不同的AEM Services。
+此示例基于[示例AEM Headless Android™应用程序](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)，说明了如何将AEM图像URL配置为根据特定于内部版本（或风格）的配置变量连接到其他AEM服务。
 
 #### 生成配置文件
 
@@ -485,7 +485,7 @@ Android™应用程序定义“productFlavors”，用于为不同用途生成�
 
 在应用程序的`build.gradle`文件中，创建了名为`env`的新`flavorDimension`。
 
-在`env`维度中，定义了两个`productFlavors`： `dev`和`prod`。 每个`productFlavor`都使用`buildConfigField`来设置用于定义要连接的AEM服务的生成特定变量。
+在`env`维度中，定义了两个`productFlavors`： `dev`和`prod`。 每个`productFlavor`都使用`buildConfigField`设置用于定义要连接的AEM服务的生成特定变量。
 
 + `app/build.gradle`
 
@@ -512,7 +512,7 @@ android {
 
 #### 加载AEM图像
 
-Android™使用`ImageGetter`从AEM获取并本地缓存图像数据。 在`prepareDrawableFor(..)`中，使用在活动生成配置中定义的AEM服务主机，为创建AEM的可解析URL的图像路径添加前缀。
+Android™使用`ImageGetter`从AEM获取并本地缓存图像数据。 在`prepareDrawableFor(..)`中，使用在活动生成配置中定义的AEM服务主机，为创建指向AEM的可解析URL的图像路径添加前缀。
 
 + `app/src/main/java/com/adobe/wknd/androidapp/loader/RemoteImagesCache.java`
 

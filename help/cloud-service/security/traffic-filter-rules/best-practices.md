@@ -1,7 +1,7 @@
 ---
-title: 流量过滤器规则（包括WAF规则）的最佳实践
-description: 了解流量过滤器规则（包括WAF规则）的建议最佳实践。
-version: Cloud Service
+title: 流量过滤器规则(包括WAF规则)的最佳实践
+description: 了解流量过滤器规则(包括WAF规则)的建议最佳实践。
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
 role: Admin, Architect
@@ -12,16 +12,16 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
 duration: 170
-source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
-# 流量过滤器规则（包括WAF规则）的最佳实践
+# 流量过滤器规则(包括WAF规则)的最佳实践
 
-了解流量过滤器规则（包括WAF规则）的建议最佳实践。 请务必注意，本文中描述的最佳实践并非详尽无遗，也不会替代您自己的安全策略和程序。
+了解流量过滤器规则(包括WAF规则)的建议最佳实践。 请务必注意，本文中描述的最佳实践并非详尽无遗，也不会替代您自己的安全策略和程序。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425408?quality=12&learn=on)
 
@@ -91,7 +91,7 @@ data:
 
 ## WAF规则的最佳实践
 
-一旦为程序授予了WAF许可并启用了，便会在图表和请求日志中显示与WAF标志匹配的流量，即使您未在规则中声明这些流量也是如此。 因此，您始终了解潜在的新恶意流量，并且可以根据需要创建规则。 查看未反映在声明的规则中的WAF标记，并考虑声明它们。
+在您的项目中获得许可并启用WAF后，即使您未在规则中声明流量，与WAF标志匹配的流量也会显示在图表和请求日志中。 因此，您始终了解潜在的新恶意流量，并且可以根据需要创建规则。 查看未反映在声明的规则中的WAF标记，并考虑声明它们。
 
 请考虑下面适用于您的AEM项目的WAF规则。 但是，`action`和`wafFlags`属性的所需值必须与您的安全团队协作确定。
 

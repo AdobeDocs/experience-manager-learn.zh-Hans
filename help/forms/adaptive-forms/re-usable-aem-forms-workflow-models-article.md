@@ -2,14 +2,14 @@
 title: 可重复使用的AEM Forms工作流模型
 description: 了解如何独立于自适应Forms创建工作流模型。
 feature: Workflow
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 3354a58b-d58e-4ddb-8f90-648554a64db8
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 58
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%

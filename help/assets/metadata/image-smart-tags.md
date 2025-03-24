@@ -5,14 +5,14 @@ topic: Content Management
 feature: Smart Tags
 role: User
 level: Intermediate
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-645
 thumbnail: 17019.jpg
 last-substantial-update: 2022-06-09T00:00:00Z
 doc-type: Feature Video
 exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
 duration: 574
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
@@ -40,7 +40,7 @@ AEM Assets的图像智能标签可自动将派生的元数据标签添加到图�
 本视频详细介绍了配置用于智能标记图像的Adobe I/O智能内容服务所需的以下任务。
 
 * 在AEM中创建智能内容服务配置以生成公共密钥。 为OAuth集成获取公共证书。
-* 在Adobe I/O中创建集成并上传生成的公共密钥。
+* 在Adobe I/O中创建集成，并上传生成的公共密钥。
 * 使用Adobe I/O中的API密钥和其他凭据配置AEM实例。
 * （可选）在资产上传时启用自动标记。
 

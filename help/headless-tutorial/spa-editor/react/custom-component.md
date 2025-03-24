@@ -1,8 +1,8 @@
 ---
 title: 创建自定义天气组件 | AEM SPA编辑器和React快速入门
-description: 了解如何创建要与AEM SPA编辑器一起使用的自定义天气组件。 了解如何开发创作对话框和Sling模型，以扩展JSON模型来填充自定义组件。 使用Open Weather API和React Open Weather组件。
+description: 了解如何创建要与AEM SPA Editor一起使用的自定义天气组件。 了解如何开发创作对话框和Sling模型，以扩展JSON模型来填充自定义组件。 使用Open Weather API和React Open Weather组件。
 feature: SPA Editor
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5878
 thumbnail: 5878-spa-react.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
 duration: 323
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 创建自定义天气组件 {#custom-component}
 
-了解如何创建要与AEM SPA编辑器一起使用的自定义天气组件。 了解如何开发创作对话框和Sling模型，以扩展JSON模型来填充自定义组件。 使用了[Open Weather API](https://openweathermap.org)和[React Open Weather组件](https://www.npmjs.com/package/react-open-weather)。
+了解如何创建要与AEM SPA Editor一起使用的自定义天气组件。 了解如何开发创作对话框和Sling模型，以扩展JSON模型来填充自定义组件。 使用了[Open Weather API](https://openweathermap.org)和[React Open Weather组件](https://www.npmjs.com/package/react-open-weather)。
 
 ## 目标
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 您将构建的内容
 
-构建简单的天气组件。 此组件可以由内容作者添加到SPA。 利用AEM对话框，作者可以设置天气的显示位置。  此组件的实施说明了创建与AEM SPA Editor Framework兼容的全新AEM组件所需的步骤。
+构建简单的天气组件。 此组件能够由内容作者添加到SPA中。 利用AEM对话框，作者可以设置天气的显示位置。  此组件的实施说明了创建与AEM SPA Editor Framework兼容的全新AEM组件所需的步骤。
 
 ![配置开放天气组件](assets/custom-component/enter-dialog.png)
 
@@ -48,7 +48,7 @@ AEM组件被定义为节点和属性。 在项目中，这些节点和属性在`
 
 >[!NOTE]
 >
-> 有关AEM组件[基础知识的快速刷新可能很有帮助](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html)。
+> 有关AEM组件[基础知识的快速刷新可能有所帮助](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html)。
 
 1. 在您选择的IDE中，打开`ui.apps`文件夹。
 2. 导航到`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components`并创建一个名为`open-weather`的新文件夹。
@@ -150,7 +150,7 @@ AEM组件被定义为节点和属性。 在项目中，这些节点和属性在`
 
 Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于将数据从JCR映射到Java变量。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=en#sling-models)通常用于为AEM组件封装复杂的服务器端业务逻辑。
 
-在SPA编辑器的上下文中，Sling模型使用[Sling模型导出器](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hans)通过功能通过JSON模型公开组件的内容。
+在SPA编辑器的上下文中，Sling模型使用[Sling模型导出器](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-hans)通过功能通过JSON模型公开组件的内容。
 
 1. 在您选择的IDE中，打开`aem-guides-wknd-spa.react/core`上的`core`模块。
 1. 在`core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`的`OpenWeatherModel.java`处创建名为的文件。
@@ -345,7 +345,7 @@ Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于
 
    您应该看到以上两行，其中表示`OpenWeatherModelImpl`与`wknd-spa-react/components/open-weather`组件相关联，并已通过Sling模型导出程序注册。
 
-1. 导航到[http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html)处的SPA页面模板。
+1. 导航到[http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html)上的SPA页面模板。
 1. 更新布局容器的策略以将新`Open Weather`添加为允许的组件：
 
    ![更新布局容器策略](assets/custom-component/custom-component-allowed.png)
@@ -388,8 +388,8 @@ Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您已了解如何创建要与AEM编辑器一起使用的自定义SPA组件。 您还了解了对话框、JCR属性和Sling模型如何交互以输出JSON模型。
+恭喜，您已了解如何创建要与SPA编辑器一起使用的自定义AEM组件。 您还了解了对话框、JCR属性和Sling模型如何交互以输出JSON模型。
 
 ### 后续步骤 {#next-steps}
 
-[扩展核心组件](extend-component.md) — 了解如何扩展要与AEM SPA编辑器一起使用的现有AEM核心组件。 了解如何向现有组件添加属性和内容是扩展AEM SPA Editor实施功能的强大技术。
+[扩展核心组件](extend-component.md) — 了解如何扩展要与AEM SPA编辑器一起使用的现有AEM核心组件。 了解如何将属性和内容添加到现有组件是一种强大的技术，可扩展AEM SPA Editor实施的功能。

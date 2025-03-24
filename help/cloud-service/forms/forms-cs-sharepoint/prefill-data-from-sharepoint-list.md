@@ -5,13 +5,13 @@ feature: Adaptive Forms
 type: Documentation
 role: Developer
 level: Beginner
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 jira: KT-14795
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 duration: 46
 exl-id: 9abe9f9d-8fb3-4e01-a830-1dad1c27274d
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 使用共享点列表数据预填充自适应表单
 
-在AEM Form的早期版本(6.5)中，必须写入自定义代码以使用请求属性预填充表单数据模型支持的自适应表单。 在AEM Forms as a Cloud Service中，不再需要编写自定义代码。
+在以前版本的AEM Form(6.5)中，必须写入自定义代码以使用请求属性预填充表单数据模型支持的自适应表单。 在AEM Forms as a Cloud Service中，不再需要编写自定义代码。
 
 本文介绍了使用表单数据模型预填充服务使用从SharePoint列表中获取的数据预填充/预填充自适应表单所需的步骤。
 

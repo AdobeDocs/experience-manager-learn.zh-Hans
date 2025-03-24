@@ -1,7 +1,7 @@
 ---
 title: 高级联网
 description: 了解AEM as a Cloud Service的高级联网选项。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Integrations, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-9354.png
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
 duration: 85
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 2%
@@ -27,9 +27,9 @@ AEM as a Cloud Service提供高级联网功能，允许精确管理与AEM as a C
 | 支持高级联网 | ✔ | ✘ |
 
 
-AEM高级联网功能由三个选项组成，用于管理与外部服务的连接。 Cloud Manager程序及其AEM as a Cloud Service环境一次只能使用一种类型的高级联网配置，因此请确保选择最合适的类型。
+AEM的高级联网包括三个选项，用于管理与外部服务的连接。 Cloud Manager程序及其AEM as a Cloud Service环境一次只能使用一种类型的高级联网配置，因此请确保选择最合适的类型。
 
-|                                   | 标准端口上的HTTP/HTTPS | 非标准端口上的HTTP/HTTPS | 非HTTP/HTTPS连接 | 专用出口IP | “无代理主机”列表 | 连接到受VPN保护的服务 | 按IP限制AEM Publish流量 |
+|                                   | 标准端口上的HTTP/HTTPS | 非标准端口上的HTTP/HTTPS | 非HTTP/HTTPS连接 | 专用出口IP | “无代理主机”列表 | 连接到受VPN保护的服务 | 按IP限制AEM发布流量 |
 |-----------------------------------|:----------------------------:|:--------------------------------:|:--------------------------:|:-------------------:|:-------------------------------------:|:-------------------------------------:|:----:|
 | __没有高级联网__ | ✔ | ✘ | ✘ | ✘ | ✘ | ✘ | ✘ |
 | [__灵活端口出口__](./flexible-port-egress.md) | ✔ | ✔ | ✔ | ✘ | ✘ | ✘ | ✘ |
@@ -109,14 +109,14 @@ AEM高级联网功能由三个选项组成，用于管理与外部服务的连�
       <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="应用IP允许列表" src="./assets/code_examples__vpn-allow-list.png"/></a>
       <div>列入允许列表 <strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">应用IP</a></strong></div>
       <p>
-            列入允许列表配置IP，以便只有VPN通信可以访问AEM。
+            配置IP允许列表，以便只有VPN通信可以访问AEM。
       </p>
     </td>
    <td>
       <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="AEM Publish的基于路径的VPN访问限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">对AEM Publish基于路径的VPN访问限制</a></strong></div>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">对AEM Publish的基于路径的VPN访问限制</a></strong></div>
       <p>
-            要求AEM Publish上的特定路径具有VPN访问权限。
+            在AEM Publish上要求访问特定路径的VPN。
       </p>
     </td>
 </tr>

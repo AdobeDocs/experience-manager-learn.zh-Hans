@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service内容迁移常见问题解答
 description: 获取有关将内容迁移到AEM as a Cloud Service的常见问题解答。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: article
 topic: Migration
 feature: Migration
@@ -11,7 +11,7 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 399
-source-git-commit: e29eaefb20d466126d0d31ad8eb598b63a0cebcd
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1884'
 ht-degree: 0%
@@ -24,8 +24,8 @@ ht-degree: 0%
 
 ## 术语
 
-+ **AEMaaCS**： [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/introduction.html?lang=zh-Hans)
-+ **BPA**： [最佳实践分析器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=zh-Hans)
++ **AEMaaCS**： [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/introduction.html#)
++ **BPA**： [最佳实践分析器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html#)
 + **CTT**： [内容传输工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
 + **摄像头**： [Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)
 + **IMS**： [Identity Management系统](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html)
@@ -37,17 +37,17 @@ ht-degree: 0%
 
 ## 一般内容迁移问题
 
-### 问：将内容作为Cloud Service迁移到AEM的方法有哪些？
+### 问：将内容迁移到AEM as Cloud Service有哪些不同方法？
 
 有三种不同的方法可用
 
 + 使用内容传输工具(AEM 6.3+ → AEMaaCS)
-+ 通过包管理器(AEM → AEMaaCS)
++ 通过包管理器(AEM→AEMaaCS)
 + 开箱即用的Assets批量导入服务(S3/Azure→AEMaaCS)
 
 ### 问：可以使用CTT传输的内容数量是否有限制？
 
-不适用。 CTT作为一种工具可以从AEM源中提取并摄取到AEMaaCS中。 但是，在迁移之前应考虑对AEMaaCS平台的特定限制。
+不行。CTT作为一种工具可以从AEM源中提取并摄取到AEMaaCS中。 但是，在迁移之前应考虑对AEMaaCS平台的特定限制。
 
 有关详细信息，请参阅[云迁移先决条件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html)。
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 由于迁移过程取决于Internet带宽、为CTT进程分配的栈、可用的可用内存以及磁盘IO（对每个源系统而言都是主观的），因此建议尽早执行Proof Migration并推断数据点得出估计值。
 
-### 问：如果我启动CTT提取流程，源AEM性能会受到什么影响？
+### 问：如果我启动CTT提取流程，那么我的源AEM性能会受到什么影响？
 
 CTT工具在其自己的Java™进程中运行，该进程最多需要4gb栈，该栈可通过OSGi配置进行配置。 此数字可能会发生变化，但您可以深究Java™进程并找出原因。
 
@@ -148,11 +148,11 @@ CTT流程需要连接到以下资源：
 
 有关[源连接](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#source-environment-connectivity)的详细信息，请参阅文档。
 
-## 有关资产处理Dynamic Media的问题
+## 资产处理Dynamic Media相关问题
 
 ### 问：资产在AEMaaCS中摄取后是否会自动重新处理？
 
-不适用。 要处理资产，必须启动重新处理的请求。
+不行。要处理资产，必须启动重新处理的请求。
 
 ### 问：资产在AEMaaCS中引入后是否会自动重新索引？
 
@@ -207,7 +207,7 @@ CTT流程需要连接到以下资源：
 
 ## 其他资源
 
-+ [迁移到云中Experience Manager的提示和技巧( Summit 2022)](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
++ [在云中迁移到Experience Manager的提示和技巧( Summit 2022)](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
 
 + [CTT专家系列视频](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
 

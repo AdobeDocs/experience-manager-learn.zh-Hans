@@ -1,7 +1,7 @@
 ---
 title: AEM Sites - WKND教程快速入门
-description: 了解如何为名为WKND的虚构生活方式品牌实施AEM站点。 获取有关基本Experience Manager主题的演练，如项目设置、maven原型、核心组件、可编辑模板、客户端库和组件开发。
-version: Cloud Service
+description: 了解如何为一个名为WKND的虚构生活方式品牌实施AEM网站。 获取有关Experience Manager基本主题的演练，如项目设置、maven原型、核心组件、可编辑模板、客户端库和组件开发。
+version: Experience Manager as a Cloud Service
 jira: KT-13565
 mini-toc-levels: 1
 index: y
@@ -13,7 +13,7 @@ level: Beginner
 doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 5%
@@ -24,11 +24,11 @@ ht-degree: 5%
 
 {{edge-delivery-services}}
 
-欢迎使用专为不熟悉Adobe Experience Manager (AEM)的开发人员设计的多部分教程。 本教程介绍了虚拟生活方式品牌WKND的AEM站点的实施。 此教程涵盖了项目设置、核心组件、可编辑模板、客户端库和使用 Adobe Experience Manager Sites 进行组件开发等基本主题。
+欢迎使用专为不熟悉Adobe Experience Manager (AEM)的开发人员设计的多部分教程。 本教程介绍了虚拟生活方式品牌WKND的AEM站点的实施。 此教程涵盖了项目设置、核心组件、可编辑模板、客户端库和使用 Adobe Experience Manager Site 进行组件开发等基本主题。
 
 ## 概述 {#wknd-tutorial-overview}
 
-此多部分教程旨在教导开发人员如何使用Adobe Experience Manager (AEM)中的最新标准和技术实施网站。 完成本教程后，开发人员应该了解平台的基本基础和AEM中的常见设计模式。
+此多部分教程旨在教导开发人员如何使用Adobe Experience Manager (AEM)中的最新标准和技术实施网站。 完成本教程后，开发人员应该了解该平台的基本基础和AEM中的常见设计模式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
@@ -36,9 +36,9 @@ ht-degree: 5%
 
 启动AEM Sites项目有两种基本方法。
 
-**AEM项目原型** — 通过使用Maven模板生成最小的AEM项目来进行AEM开发的传统方法。 这是推荐用于预期大量自定义的AEM 6.5/6.4项目和AEM as a Cloud Service项目的方法。 本教程提供了对AEM开发的更深入探讨。
+**AEM项目原型** — 通过使用Maven模板生成最小的AEM项目来开发AEM的传统方法。 这是推荐的方法用于预期大量自定义的AEM 6.5/6.4项目和AEM as a Cloud Service项目。 本教程提供了对AEM开发的更深入探讨。
 
-[开始有关AEM项目原型的教程](./project-archetype/overview.md)
+[开始使用AEM项目原型的教程](./project-archetype/overview.md)
 
 **AEM站点模板** — 也称为快速站点创建，这是一种使用预定义站点模板生成AEM站点的低代码方法。 使用开箱即用的组件和模板快速启动和运行站点。 使用主题化工作流，仅通过CSS和JavaScript应用品牌特定的样式和自定义设置。 为新项目和开发人员推荐。 仅适用于AEM as a Cloud Service。
 
@@ -46,7 +46,7 @@ ht-degree: 5%
 
 ## Adobe XD UI套件
 
-为了使本教程更接近真实场景Adobe的天才UX设计人员使用[Adobe XD](https://www.adobe.com/products/xd.html)为站点创建模型。 在本教程中，会将各种设计片段实施到完全可创作的AEM站点中。 特别感谢&#x200B;**Lorenzo Buosi**&#x200B;和&#x200B;**Kilian Amendola**，他们为WKND网站创造了美观的设计。
+为了使本教程更接近真实场景，Adobe才华横溢的UX设计人员使用[Adobe XD](https://www.adobe.com/products/xd.html)为站点创建了模型。 在本教程中，会将各种设计片段实施到可完全创作的AEM站点中。 特别感谢&#x200B;**Lorenzo Buosi**&#x200B;和&#x200B;**Kilian Amendola**，他们为WKND网站创造了美观的设计。
 
 下载XD UI包：
 
@@ -69,4 +69,4 @@ WKND参考网站中的许多图像来自[Adobe Stock](https://stock.adobe.com/)�
 
 ## 后续步骤 {#next-steps}
 
-你在等什么?!了解如何[使用AEM项目原型](./project-archetype/overview.md)生成新的Adobe Experience Manager项目，或[使用站点模板](./site-template/create-site.md)创建站点。
+你在等什么?!了解如何[使用Adobe Experience Manager项目原型](./project-archetype/overview.md)生成新的AEM项目，或[使用站点模板](./site-template/create-site.md)创建站点。

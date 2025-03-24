@@ -1,8 +1,8 @@
 ---
 title: 将Adobe Stock资源与AEM Assets结合使用
-description: 通过AEM，用户可直接从AEM搜索、预览、保存和许可Adobe Stock资源。 各组织现在可以将Adobe Stock企业计划与AEM Assets集成，以确保许可的资源现在可广泛用于其创意和营销项目，同时还可利用AEM的强大资源管理功能。
+description: AEM为用户提供了直接从AEM搜索、预览、保存和许可Adobe Stock资源的功能。 现在，组织可以将Adobe Stock企业计划与AEM Assets集成，以确保通过AEM的强大资源管理功能，许可资产现在可广泛用于其创意和营销项目。
 feature: Adobe Stock
-version: 6.5
+version: Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
@@ -10,7 +10,7 @@ last-substantial-update: 2022-06-26T00:00:00Z
 doc-type: Feature Video
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
 duration: 1079
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 将Adobe Stock与AEM Assets一起使用{#using-adobe-stock-assets-with-aem-assets}
 
-通过AEM 6.4.2，用户可直接从AEM搜索、预览、保存和许可Adobe Stock资源。 各组织现在可以将Adobe Stock企业计划与AEM Assets集成，以确保许可的资源现在可广泛用于其创意和营销项目，同时还可利用AEM的强大资源管理功能。
+AEM 6.4.2为用户提供了直接从AEM搜索、预览、保存和许可Adobe Stock资源的功能。 现在，组织可以将Adobe Stock企业计划与AEM Assets集成，以确保通过AEM的强大资源管理功能，许可资产现在可广泛用于其创意和营销项目。
 
 >[!VIDEO](https://video.tv.adobe.com/v/24678?quality=12&learn=on)
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 ### 搜索并保存
 
-* 在不离开AEM工作区的情况下执行Adobe Stock资源搜索。
+* 在不离开Adobe Stock工作区的情况下执行AEM资源搜索。
 * 保存Adobe Stock资源以供预览（不许可该资源）。
 * 能够许可并将Adobe Stock资源保存到AEM Assets
 * 能够在AEM Assets UI中从Adobe Stock搜索类似的资源
@@ -65,22 +65,22 @@ ht-degree: 1%
 
 ## 使用AEM Assets设置Adobe Stock{#set-up-adobe-stock-with-aem-assets}
 
-通过AEM 6.4.2，用户可直接从AEM搜索、预览、保存和许可Adobe Stock资源。 本视频涵盖有关如何使用Adobe控制台在AEM Assets中设置Adobe I/O股票的快速演练。
+AEM 6.4.2为用户提供了直接从AEM搜索、预览、保存和许可Adobe Stock资源的功能。 本视频涵盖有关如何使用Adobe Console在AEM Assets中设置Adobe I/O Stocks的快速演练。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25043?quality=12&learn=on)
 
 >[!NOTE]
 >
->对于Adobe Stock Cloud Service配置，您必须选择生产环境以及指向`/content/dam`的已许可资源路径。 现已在AEM中删除环境字段。
+>对于Adobe Stock Cloud Service配置，您必须选择生产环境以及指向`/content/dam`的已许可资源路径。 AEM中的环境字段现已删除。
 
 >[!NOTE]
 >
->该集成需要部署了至少[Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Aversion&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aaem%2F6-4&amp;3_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fmetadata%2Fdc%3Atitle&amp;orderby.sort=asc&amp;layout=list&amp;p.offset=0&amp;p.limit=24)的[企业Adobe Stock计划](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)和AEM 6.4。 有关AEM 6.4 Service Pack的详细信息，请参阅以下[发行说明](https://helpx.adobe.com/cn/experience-manager/6-4/release-notes/sp-release-notes.html)。 您还需要[Adobe I/O控制台](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)和Adobe Experience Manager的管理权限才能设置集成。
+>该集成需要部署了至少[Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Aversion&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aaem%2F6-4&amp;3_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fmetadata%2Fdc%3Atitle&amp;orderby.sort=asc&amp;layout=list&amp;p.offset=0&amp;p.limit=24)的[企业Adobe Stock计划](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)和AEM 6.4。 有关AEM 6.4 Service Pack的详细信息，请参阅以下[发行说明](https://helpx.adobe.com/cn/experience-manager/6-4/release-notes/sp-release-notes.html)。 您还需要[Adobe I/O Console](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)和Adobe Experience Manager的管理权限才能设置集成。
 
 ### 安装 {#installations}
 
 * 对于AEM 6.4，您需要安装[AEM Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Aversion&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aaem%2F6-4&amp;3_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fmetadata%2Fdc%3Atitle&amp;orderby.sort=asc&amp;layout=list&amp;p.offset=0&amp;p.limit=24)，然后重新安装cq-dam-stock-integration-content-1.0.4.zip文件。
-* 确保您对[Adobe I/O控制台](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)和Adobe Experience Manager具有管理员权限以设置集成。
+* 确保您拥有[Adobe I/O Console](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)和Adobe Experience Manager上的管理员权限以设置集成。
 
 #### 使用Adobe I/O控制台设置Adobe IMS配置 {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
 
@@ -94,9 +94,9 @@ ht-degree: 1%
 
 ![Adobe IMS技术帐户](assets/screen_shot_2018-10-22at12219pm.png)
 
-#### 设置Adobe StockCloud Service {#set-up-adobe-stock-cloud-services}
+#### 设置Adobe Stock云服务 {#set-up-adobe-stock-cloud-services}
 
-1. 在&#x200B;**Cloud Service>工具**&#x200B;下为Adobe Stock创建新的云服务配置。
+1. 在&#x200B;**Tools > CLoud Services.**&#x200B;下，为Adobe Stock创建新的云服务配置。
 2. 选择在上面部分中为您的&#x200B;*Adobe Stock Cloud*&#x200B;配置创建的&#x200B;*Adobe IMS配置*
 
 3. 确保选择&#x200B;**环境**&#x200B;作为PROD。
@@ -104,7 +104,7 @@ ht-degree: 1%
 5. 选择您的区域设置并完成设置。
 6. 您还可以将用户/组添加到Adobe Stock云服务，以启用特定用户或组的访问权限。
 
-![AdobeAssets Stock配置](assets/screen_shot_2018-10-22at12425pm.png)
+![Adobe Assets Stock配置](assets/screen_shot_2018-10-22at12425pm.png)
 
 ### 其他资源
 

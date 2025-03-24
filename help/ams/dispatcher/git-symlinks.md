@@ -1,7 +1,7 @@
 ---
 title: 将符号链接正确添加到GIT中
 description: 有关在使用Dispatcher配置时如何以及在何处添加符号链接的说明。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 6e751586-e92e-482d-83ce-6fcae4c1102c
 duration: 295
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## Dispatcher原型
 
-AEM开发人员通常从[AEM原型](https://github.com/adobe/aem-project-archetype)开始他们的项目
+AEM开发人员通常从[AEM原型](https://github.com/adobe/aem-project-archetype)启动项目
 
 以下是源代码区域示例，您可以从中看到使用的符号链接：
 
@@ -176,7 +176,7 @@ Source： [Git - git-config文档](https://git-scm.com/docs/git-config#Documenta
 
 Git在Windows上的行为可在此处详细解释：符号链接· git-for-windows/git Wiki · GitHub
 
-> `Info`：以上链接文档中所列的假设在Windows上可能的AEM Developer设置（尤其是NTFS）以及我们只有文件符号链接与目录符号链接的情况下似乎没问题
+> `Info`：以上链接文档中所列的假设似乎可以接受，因为AEM Developer可能在Windows上进行了设置，最明显的是NTFS，而且我们只有文件符号链接而不是目录符号链接
 
 好消息是，由于[Git for Windows version 2.10.2](https://github.com/git-for-windows/git/releases/tag/v2.10.2.windows.1)，安装程序有一个[显式选项来启用符号链接支持。](https://github.com/git-for-windows/git/issues/921)
 

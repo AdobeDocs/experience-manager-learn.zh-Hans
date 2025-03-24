@@ -2,14 +2,14 @@
 title: 了解AEM Sites的样式系统最佳实践
 description: 一篇详细文章，介绍使用Adobe Experience Manager Sites实施样式系统的最佳实践。
 feature: Style System
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate, Experienced
 doc-type: Article
 exl-id: c51da742-5ce7-499a-83da-227a25fb78c9
 duration: 328
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 >
 >请查看[上的内容了解如何为样式系统](style-system-technical-video-understand.md)编码，以确保了解AEM样式系统使用的类似BEM的约定。
 
-AEM Style System有两种主要风格或样式：
+AEM Style System实施了两种主要风格或样式：
 
 * **布局样式**
 * **显示样式**
@@ -41,17 +41,17 @@ AEM Style System有两种主要风格或样式：
 * 仅显示具有效果的样式组合
    * 如果暴露无效组合，请确保它们至少不会产生不良影响
 
-随着AEM作者可用的可能样式组合数量的增加，存在的必须进行QA并根据品牌标准进行验证的排列方式越多。 太多选项也可能使作者感到困惑，因为可能不清楚需要哪个选项或组合才能达到预期效果。
+随着AEM作者可用的可能样式组合数量的增加，必须进行QA并根据品牌标准进行验证的排列数量也会增加。 太多选项也可能使作者感到困惑，因为可能不清楚需要哪个选项或组合才能达到预期效果。
 
 ### 样式名称与CSS类的比较 {#style-names-vs-css-classes}
 
-样式名称，或呈现给AEM作者的选项，以及实现CSS类名称在AEM中是分离的。
+样式名称，或呈现给AEM作者的选项，以及实施CSS类名称在AEM中是分离的。
 
-这允许“样式”选项以清楚的词汇进行标记并供AEM作者理解，但允许CSS开发人员以未来校对的语义方式命名CSS类。 例如：
+这允许AEM作者清晰理解的词汇中标记样式选项，但允许CSS开发人员以未来校对的语义方式命名CSS类。 例如：
 
 组件必须可以选择使用品牌的&#x200B;**主要**&#x200B;和&#x200B;**次要**&#x200B;颜色进行着色，但是AEM作者知道这些颜色是&#x200B;**绿色**&#x200B;和&#x200B;**黄色**，而不是主要和次要的设计语言。
 
-AEM样式系统可以使用作者友好的标签&#x200B;**绿色**&#x200B;和&#x200B;**黄色**&#x200B;公开这些着色显示样式，同时允许CSS开发人员使用`.cmp-component--primary-color`和`.cmp-component--secondary-color`的语义命名来定义CSS中的实际样式实现。
+AEM样式系统可以使用作者友好的标签&#x200B;**绿色**&#x200B;和&#x200B;**黄色**&#x200B;来公开这些着色显示样式，同时允许CSS开发人员使用`.cmp-component--primary-color`和`.cmp-component--secondary-color`的语义命名来定义CSS中的实际样式实现。
 
 **绿色**&#x200B;的样式名称映射到`.cmp-component--primary-color`，黄色&#x200B;**映射到`.cmp-component--secondary-color`。**
 
@@ -93,7 +93,7 @@ AEM样式系统可以使用作者友好的标签&#x200B;**绿色**&#x200B;和&#x
 
 >[!NOTE]
 >
->请注意，默认布局样式没有“显示”样式名称，但是，作者可以在“AEM样式系统”选择工具中选择“显示”选项。
+>请注意，“默认布局”样式没有“显示”样式名称，但是，作者可以在“AEM样式系统”选择工具中选择显示选项。
 >
 >这违反了最佳做法：
 >
@@ -158,7 +158,7 @@ AEM样式系统可以使用作者友好的标签&#x200B;**绿色**&#x200B;和&#x
 
 **促销右对齐**&#x200B;布局样式是“促销”样式的变体，该样式可翻转图像和文本（图像在右侧，文本在左侧）的位置。
 
-右对齐方式的核心是显示样式，可以将它作为显示样式输入到“AEM样式系统”中，该显示样式与“促销”布局样式一起选择。 这违反了以下最佳实践：
+右对齐方式的核心是显示样式，可以将它作为显示样式输入到AEM样式系统中，该显示样式与“促销”布局样式一起选择。 这违反了以下最佳实践：
 
 **仅公开具有效果的样式组合**
 

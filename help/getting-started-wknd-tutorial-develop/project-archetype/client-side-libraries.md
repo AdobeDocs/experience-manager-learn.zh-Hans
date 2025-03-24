@@ -1,7 +1,7 @@
 ---
 title: 客户端库和前端工作流
 description: 了解如何使用客户端库为Adobe Experience Manager (AEM) Sites实施部署和管理CSS和JavaScript。 了解如何将ui.frontend模块（一个webpack项目）集成到端到端构建过程中。
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, AEM Project Archetype
 topic: Content Management, Development
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 duration: 557
-source-git-commit: 58ef1c482f127981083c07e5de5a1aba2f7c3aec
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2554'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。
 
-还建议查看[组件基础知识](component-basics.md#client-side-libraries)教程，以了解客户端库和AEM的基础知识。
+此外，还建议查看[组件基础知识](component-basics.md#client-side-libraries)教程，以了解客户端库和AEM的基础知识。
 
 ### 入门项目
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 ## 客户端库组织 {#organization}
 
-接下来，让我们浏览由[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)生成的clientlibs的组织。
+接下来，我们来探索由[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)生成的clientlibs的组织。
 
 ![高级客户端库组织](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 以下客户端库组织由AEM Project Archetype生成，但仅代表起点。 项目最终如何向Sites实施管理和提供CSS和JavaScript可能会因资源、技能集和要求而存在显着差异。
+> 以下客户端库组织由AEM项目原型生成，但只表示一个起点。 项目最终如何向Sites实施管理和提供CSS和JavaScript可能会因资源、技能集和要求而存在显着差异。
 
 1. 使用VSCode或其他IDE打开&#x200B;**ui.apps**&#x200B;模块。
 1. 展开路径`/apps/wknd/clientlibs`以查看原型生成的clientlibs。
@@ -129,11 +129,11 @@ ht-degree: 0%
 
    ![main.scss - entrypoint](assets/client-side-libraries/main-scss.png)
 
-   `main.scss`是`ui.frontend`模块中Sass文件的入口点。 它包括`_variables.scss`文件，该文件包含一系列要在项目中的不同Sass文件中使用的品牌变量。 `_base.scss`文件也包含在内，它为HTML元素定义了某些基本样式。 正则表达式包含`src/main/webpack/components`下各个组件样式的样式。 另一个正则表达式包含`src/main/webpack/site/styles`下的文件。
+   `main.scss`是`ui.frontend`模块中Sass文件的入口点。 它包括`_variables.scss`文件，该文件包含一系列要在项目中的不同Sass文件中使用的品牌变量。 `_base.scss`文件也包含在内，并为HTML元素定义了某些基本样式。 正则表达式包含`src/main/webpack/components`下各个组件样式的样式。 另一个正则表达式包含`src/main/webpack/site/styles`下的文件。
 
-1. Inspect文件`main.ts`。 它包含`main.scss`和一个正则表达式，用于收集项目中的任何`.js`或`.ts`文件。 此入口点被[Webpack配置文件](https://webpack.js.org/configuration/)用作整个`ui.frontend`模块的入口点。
+1. 检查文件`main.ts`。 它包含`main.scss`和一个正则表达式，用于收集项目中的任何`.js`或`.ts`文件。 此入口点被[Webpack配置文件](https://webpack.js.org/configuration/)用作整个`ui.frontend`模块的入口点。
 
-1. Inspect `src/main/webpack/site/styles`下的文件：
+1. 检查`src/main/webpack/site/styles`下的文件：
 
    ![样式文件](assets/client-side-libraries/style-files.png)
 
@@ -163,9 +163,9 @@ ht-degree: 0%
 
    ![更改的文件](assets/client-side-libraries/changed-files-uifrontend.png)
 
-   Inspect更改的文件，以查看WKND样式实施的详细信息。
+   检查更改的文件以查看WKND样式实施的详细信息。
 
-## Inspect与ui.frontend集成 {#ui-frontend-integration}
+## 检查ui.frontend集成 {#ui-frontend-integration}
 
 内置到&#x200B;**ui.frontend**&#x200B;模块[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)中的关键集成块从webpack/npm项目中获取编译的CSS和JS工件，并将其转换为AEM客户端库。
 
@@ -201,7 +201,7 @@ AEM项目原型会自动设置此集成。 接下来，探索它的工作方式�
    $ npm run watch
    ```
 
-1. 这将编译来自`ui.frontend`模块的源文件，并在[http://localhost:4502](http://localhost:4502)与AEM同步更改
+1. 这将编译来自`ui.frontend`模块的源文件，并在[http://localhost:4502](http://localhost:4502)处与AEM同步更改
 
    ```shell
    + jcr_root/apps/wknd/clientlibs/clientlib-site/js/site.js
@@ -222,21 +222,21 @@ AEM项目原型会自动设置此集成。 接下来，探索它的工作方式�
    >
    >还有一个可缩小JS和CSS的`npm run prod`配置文件。 这是通过Maven触发Webpack构建时的标准编译。 有关[ui.frontend模块的更多详细信息见此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)。
 
-1. 在`ui.frontend/dist/clientlib-site/site.css`下Inspect文件`site.css`。 这是基于Sass源文件的编译的CSS。
+1. 检查`ui.frontend/dist/clientlib-site/site.css`下的文件`site.css`。 这是基于Sass源文件的编译的CSS。
 
    ![分布式站点CSS](assets/client-side-libraries/ui-frontend-dist-site-css.png)
 
-1. Inspect文件`ui.frontend/clientlib.config.js`。 这是npm插件[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)的配置文件，该文件将`/dist`的内容转换为客户端库并将其移动到`ui.apps`模块。
+1. 检查文件`ui.frontend/clientlib.config.js`。 这是npm插件[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)的配置文件，该文件将`/dist`的内容转换为客户端库并将其移动到`ui.apps`模块。
 
-1. 在`ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css/site.css`的&#x200B;**ui.apps**&#x200B;模块中Inspect文件`site.css`。 这应该是&#x200B;**ui.frontend**&#x200B;模块中`site.css`文件的相同副本。 现在它位于&#x200B;**ui.apps**&#x200B;模块中，可以将其部署到AEM中。
+1. 在`ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css/site.css`的&#x200B;**ui.apps**&#x200B;模块中检查文件`site.css`。 这应该是&#x200B;**ui.frontend**&#x200B;模块中`site.css`文件的相同副本。 现在它位于&#x200B;**ui.apps**&#x200B;模块中，可以将其部署到AEM中。
 
    ![ui.apps clientlib-site](assets/client-side-libraries/ui-apps-clientlib-site-css.png)
 
    >[!NOTE]
    >
-   > 由于&#x200B;**clientlib-site**&#x200B;是在构建期间使用&#x200B;**npm**&#x200B;或&#x200B;**maven**&#x200B;编译的，因此可以安全地从&#x200B;**ui.apps**&#x200B;模块中的源代码管理中忽略它。 Inspect **ui.apps**&#x200B;下的`.gitignore`文件。
+   > 由于&#x200B;**clientlib-site**&#x200B;是在构建期间使用&#x200B;**npm**&#x200B;或&#x200B;**maven**&#x200B;编译的，因此可以安全地从&#x200B;**ui.apps**&#x200B;模块中的源代码管理中忽略它。 检查&#x200B;**ui.apps**&#x200B;下的`.gitignore`文件。
 
-1. 在AEM中打开LA Skatepark文章： [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)。
+1. 打开AEM中的LA Skatepark文章，网址为： [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)。
 
    ![已更新文章的基本样式](assets/client-side-libraries/updated-base-styles.png)
 
@@ -246,7 +246,7 @@ AEM项目原型会自动设置此集成。 接下来，探索它的工作方式�
 
    >[!NOTE]
    >
-   > 当从项目`mvn clean install -PautoInstallSinglePackage`的根触发Maven生成时，会自动执行以上执行的将ui.frontend代码构建和部署到AEM的步骤。
+   > 当从项目`mvn clean install -PautoInstallSinglePackage`的根触发Maven生成时，会自动执行上述为生成并将ui.frontend代码部署到AEM而执行的步骤。
 
 ## 更改样式
 
@@ -276,7 +276,7 @@ AEM项目原型会自动设置此集成。 接下来，探索它的工作方式�
 
 ## 页面和模板包含 {#page-inclusion}
 
-接下来，让我们查看如何在AEM页面中引用clientlibs。 Web开发的常见最佳实践是在关闭`</body>`HTML之前将CSS包含到标题`<head>`和JavaScript中。
+接下来，让我们查看如何在AEM页面中引用clientlibs。 Web开发的常见最佳实践是在关闭`</body>`标记之前将CSS包含到HTML标题`<head>`和JavaScript中。
 
 1. 浏览到[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)上的文章页面模板
 
@@ -332,7 +332,7 @@ AEM项目原型会自动设置此集成。 接下来，探索它的工作方式�
 
 ### 后续步骤 {#next-steps}
 
-了解如何使用Experience Manager的样式系统实施单个样式并重用核心组件。 [使用样式系统进行开发](style-system.md)涵盖了使用样式系统扩展核心组件以及模板编辑器的品牌特定CSS和高级策略配置。
+了解如何使用Experience Manager的样式系统实施各个样式并重用核心组件。 [使用样式系统进行开发](style-system.md)涵盖了使用样式系统扩展核心组件以及模板编辑器的品牌特定CSS和高级策略配置。
 
 在[GitHub](https://github.com/adobe/aem-guides-wknd)上查看完成的代码，或在Git分支`tutorial/client-side-libraries-solution`上本地查看和部署代码。
 
@@ -343,9 +343,9 @@ AEM项目原型会自动设置此集成。 接下来，探索它的工作方式�
 
 ### Webpack DevServer — 静态标记 {#webpack-dev-static}
 
-在前几个练习中，**ui.frontend**&#x200B;模块中的多个Sass文件已更新，通过构建过程，最终可以看到这些更改反映在AEM中。 接下来，让我们看一下使用[webpack-dev-server](https://webpack.js.org/configuration/dev-server/)快速开发针对&#x200B;**static** HTML的前端样式的技术。
+在前几个练习中，**ui.frontend**&#x200B;模块中的多个Sass文件已更新，通过构建过程，最终可看到这些更改反映在AEM中。 接下来，让我们看一下使用[webpack-dev-server](https://webpack.js.org/configuration/dev-server/)快速开发针对&#x200B;**static** HTML的前端样式的方法。
 
-如果大多数样式和前端代码由专用的前端开发人员执行，而这些开发人员可能无法轻松访问AEM环境，则这项技术将会非常实用。 这种技术还允许FED直接对HTML进行修改，然后可以将其移交给AEM开发人员作为组件实施。
+如果大多数样式和前端代码由专用的前端开发人员执行，而这些开发人员可能无法轻松访问AEM环境，则这项技术将会非常实用。 这项技术还允许FED直接对HTML进行修改，然后可以将其移交给AEM开发人员作为组件实施。
 
 1. 复制位于[http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled)的LA滑板公园文章页面的页面源。
 1. 重新打开IDE。 将来自AEM的复制标记粘贴到`src/main/webpack/static`下&#x200B;**ui.frontend**&#x200B;模块中的`index.html`。
@@ -405,7 +405,7 @@ AEM项目原型会自动设置此集成。 接下来，探索它的工作方式�
 
 ### 调试客户端库 {#debugging-clientlibs}
 
-使用&#x200B;**类别**&#x200B;和&#x200B;**嵌入**&#x200B;的不同方法以包含多个客户端库时，其疑难解答可能会比较麻烦。 AEM公开了多种工具来帮助解决此问题。 最重要的工具之一是&#x200B;**重建客户端库**，它强制AEM重新编译任何LESS文件并生成CSS。
+使用&#x200B;**类别**&#x200B;和&#x200B;**嵌入**&#x200B;的不同方法以包含多个客户端库时，其疑难解答可能会比较麻烦。 AEM公开了多种工具来帮助解决此问题。 最重要的工具之一是&#x200B;**Rebuild Client Libraries**，它强制AEM重新编译任何LESS文件并生成CSS。
 
 * [**转储库**](http://localhost:4502/libs/granite/ui/content/dumplibs.html) — 列出在AEM实例中注册的客户端库。`<host>/libs/granite/ui/content/dumplibs.html`
 

@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service中的身份验证
 description: 了解AEM as a Cloud Service中的身份验证。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Integrations, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
 duration: 28
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 3%
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 AEM as a Cloud Service支持多种身份验证选项，并且因服务类型而异。
 
-|                       | AEM Author | AEM 发布 |
+|                       | AEM 作者 | AEM 发布 |
 |-----------------------|:----------:|:-----------:|
 | [Adobe IMS](../accessing/overview.md) | ✔ | ✘ |
 | · [SAML 2.0（通过Adobe IMS）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✘ |
@@ -49,7 +49,7 @@ AEM as a Cloud Service支持多种身份验证选项，并且因服务类型而�
       <a  href="./saml-2-0.md"><img alt="SAML 2.0" src="./assets/card--saml-2-0.png"/></a>
       <div><strong><a href="./saml-2-0.md">SAML 2.0</a></strong></div>
       <p>
-        使用AEM Publish服务的SAML 2.0集成向IDP验证网站用户。
+        使用AEM发布服务的SAML 2.0集成，向IDP验证网站用户。
       </p>
     </td>   
    <td>

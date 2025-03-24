@@ -1,7 +1,7 @@
 ---
 title: 将Cloud Manager与AEM as a Cloud Service一起使用
-description: 了解Cloud Manager for AEM as a Cloud Service，以及它与Cloud Manager for AEM on Adobe Manage Services (AMS)的区别。
-version: Cloud Service
+description: 了解Cloud Manager for AEM as a Cloud Service，以及它与Adobe Manage Services (AMS)上适用于AEM的Cloud Manager的区别。
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager
 topic: Migration, Upgrade
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-8632
 thumbnail: 336961.jpeg
 exl-id: 9c641a90-be62-49c1-b8c0-d45d26055b94
 duration: 843
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # Cloud Manager
 
-了解Cloud Manager for AEM as a Cloud Service，以及它与Cloud Manager for AEM on Adobe Manage Services (AMS)的区别。
+了解Cloud Manager for AEM as a Cloud Service，以及它与Adobe Manage Services (AMS)上适用于AEM的Cloud Manager的区别。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336961?quality=12&learn=on)
 

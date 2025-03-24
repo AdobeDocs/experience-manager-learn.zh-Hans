@@ -1,14 +1,14 @@
 ---
 title: 客户端应用程序集成 — AEM Headless的高级概念 — GraphQL
 description: 实施持久查询并将其集成到WKND应用程序中。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: d0576962-a86a-4742-8635-02be1ec3243f
 duration: 241
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 在上一章中，您使用GraphiQL Explorer创建和更新了持久查询。
 
-本章将指导您完成以下步骤：使用现有&#x200B;**React组件**&#x200B;中的HTTPGET请求，将持久查询与WKND客户端应用程序（也称为WKND应用程序）集成。 它还提供了运用AEM Headless学习经验的一个可选挑战，编码专业知识以增强WKND客户端应用程序。
+本章将指导您完成在现有&#x200B;**React组件**&#x200B;中使用HTTP GET请求将持久查询与WKND客户端应用程序（又称WKND应用程序）集成的步骤。 它还提供了运用AEM Headless学习经验的可选挑战，编码专业知识以增强WKND客户端应用程序。
 
 ## 先决条件 {#prerequisites}
 
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 ## 目标 {#objectives}
 
-在本教程中，您将了解如何使用[AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js)将持久查询请求集成到示例WKND GraphQL React应用程序中。
+在本教程中，您将了解如何使用适用于JavaScript的[AEM Headless客户端](https://github.com/adobe/aem-headless-client-js)，将针对持久查询的请求集成到示例WKND GraphQL React应用程序中。
 
 ## 克隆并运行示例客户端应用程序 {#clone-client-app}
 
@@ -84,9 +84,9 @@ ht-degree: 1%
 
    >[!NOTE]
    > 
-   > 上述说明用于将React应用程序连接到&#x200B;**AEM Publish服务**，而要连接到&#x200B;**AEM Author服务**，请为您的目标AEM as a Cloud Service环境获取本地开发令牌。
+   > 以上说明是要将React应用程序连接到&#x200B;**AEM Publish服务**，而要连接到&#x200B;**AEM Author服务**，请为您的目标AEM as a Cloud Service环境获取本地开发令牌。
    >
-   > 还可以使用基本身份验证使用AEMaaCS SDK](/help/headless-tutorial/graphql/quick-setup/local-sdk.md)将应用程序连接到[本地作者实例。
+   > 还可以使用基本身份验证使用AEMaaCS SDK](/help/headless-tutorial/graphql/quick-setup/local-sdk.md)将应用程序连接到[本地创作实例。
 
 
 1. 打开终端并运行以下命令：
@@ -106,18 +106,18 @@ ht-degree: 1%
 
 1. 打开浏览器的开发人员工具并检查`XHR`请求
 
-   ![POSTGraphQL](assets/client-application-integration/graphql-persisted-query.png)
+   ![发布GraphQL](assets/client-application-integration/graphql-persisted-query.png)
 
    您应该会看到对GraphQL端点的`GET`请求，其中包含项目配置名称(`wknd-shared`)、持久查询名称(`adventure-by-slug`)、变量名称(`slug`)、值(`yosemite-backpacking`)和特殊字符编码。
 
 >[!IMPORTANT]
 >
->    如果您想了解为什么针对`http://localhost:3000`而不是针对AEM Publish Service域发出GraphQL API请求，请查看基础教程中的[主题](../multi-step/graphql-and-react-app.md#under-the-hood)。
+>    如果您想了解为什么针对`http://localhost:3000`而不是针对AEM Publish Service域发出GraphQL API请求，请参阅基础教程中的[主题](../multi-step/graphql-and-react-app.md#under-the-hood)。
 
 
 ## 查看代码
 
-在[基础教程 — 构建使用AEM的GraphQL API的React应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)步骤中，我们查看并增强了几个关键文件，以获得实践专业知识。 在增强WKND应用程序之前，请查看关键文件。
+在[基础教程 — 使用AEM的GraphQL API构建一个React应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)步骤中，我们审查并增强了几个关键文件，以获得实践专业知识。 在增强WKND应用程序之前，请查看关键文件。
 
 * [查看AEMHeadless对象](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)
 

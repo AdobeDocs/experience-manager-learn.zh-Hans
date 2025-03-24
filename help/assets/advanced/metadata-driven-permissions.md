@@ -1,7 +1,7 @@
 ---
 title: AEM Assets中的元数据驱动权限
 description: 元数据驱动权限是一项功能，用于根据资源元数据属性而不是文件夹结构限制访问。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Administration, Security
 feature: User and Groups
 role: Admin
@@ -11,7 +11,7 @@ doc-type: Tutorial
 last-substantial-update: 2024-05-03T00:00:00Z
 exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
 duration: 158
-source-git-commit: 6e08e6830c4e2ab27e813d262f4f51c6aae2909b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 0%
@@ -37,7 +37,7 @@ ht-degree: 0%
 要实施元数据驱动权限，开发人员必须将OSGi配置部署到AEM as a Cloud Service，该配置使特定资源内容或元数据属性能够增强元数据驱动权限。
 
 1. 确定将用于访问控制的资源内容或元数据属性。 属性名称是资产`jcr:content`或`jcr:content/metadata`资源上的JCR属性名称。 在我们的示例中，它将是一个名为`status`的属性。
-1. 在AEM Maven项目中创建一个OSGi配置`com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json`。
+1. 在您的AEM Maven项目中创建一个OSGi配置`com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json`。
 1. 将以下JSON粘贴到创建的文件中：
 
    ```json

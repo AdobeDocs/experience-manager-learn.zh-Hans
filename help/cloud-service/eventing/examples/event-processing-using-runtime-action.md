@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe I/O Runtime操作处理AEM事件
 description: 了解如何使用Adobe I/O Runtime操作处理收到的AEM事件。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 使用Adobe I/O Runtime操作处理AEM事件
 
-了解如何使用[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)操作处理接收的AEM事件。 此示例增强了前面的示例[Adobe I/O Runtime Action和AEM Events](runtime-action.md)，请确保您已完成它，然后再继续此示例。
+了解如何使用[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)操作处理接收的AEM事件。 此示例增强了前面的示例[Adobe I/O Runtime操作和AEM事件](runtime-action.md)，请确保您已完成该示例，然后再继续此示例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427054?quality=12&learn=on)
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 要完成本教程，您需要：
 
-- 启用了[AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)的AEM as a Cloud Service环境。 此外，示例[WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)项目必须部署到该项目。
+- 已启用[AEM事件的AEM as a Cloud Service环境](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)。 此外，示例[WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)项目必须部署到该项目。
 
 - 访问[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 - 从前面示例[Adobe I/O Runtime操作和AEM事件](./runtime-action.md#initialize-project-for-local-development)本地初始化的项目。
 
-## AEM Events processor操作
+## AEM Events处理器操作
 
 在此示例中，事件处理器[操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)执行以下任务：
 
@@ -94,7 +94,7 @@ ht-degree: 0%
   module.exports = needsAEMCallback;
   ```
 
-- `src/dx-excshell-1/actions/aem-event-processor/loadEventDetailsFromAEM.js`模块调用AEM作者服务以查找修改详细信息。
+- `src/dx-excshell-1/actions/aem-event-processor/loadEventDetailsFromAEM.js`模块调用AEM创作服务以查找修改详细信息。
 
   ```javascript
   ...
@@ -162,7 +162,7 @@ ht-degree: 0%
   ...
   ```
 
-  请参阅[AEM服务凭据教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)以了解详细信息。 此外，用于管理密钥和操作参数的[App Builder配置文件](https://developer.adobe.com/app-builder/docs/guides/configuration/)。
+  请参阅[AEM服务凭据教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)以了解更多相关信息。 此外，用于管理密钥和操作参数的[App Builder配置文件](https://developer.adobe.com/app-builder/docs/guides/configuration/)。
 
 - `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js`模块将原始事件数据、活动消息和修改详细信息（如果有）存储在Adobe I/O Runtime存储中。
 
@@ -257,5 +257,5 @@ if (params.challenge) {
 虽然事件处理要求因项目而异，但本示例的关键要求包括：
 
 - 可以使用Adobe I/O Runtime操作完成事件处理。
-- 运行时操作可以与系统(如内部应用程序、第三方解决方案和Adobe解决方案)通信。
+- 运行时操作可以与内部应用程序、第三方解决方案和Adobe解决方案等系统进行通信。
 - 运行时操作是围绕内容更改设计的业务流程的入口点。

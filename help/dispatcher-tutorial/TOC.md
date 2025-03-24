@@ -2,11 +2,11 @@
 user-guide-title: AEM Dispatcher 缓存教程
 user-guide-description: 一个教程，可帮助您更好地了解 Dispatcher 的工作方式以及您如何使用它。
 sub-product: Experience Manager
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-2233
 index: y
 team: TM
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 69%

@@ -1,8 +1,8 @@
 ---
 title: 在AEM Sites中使用样式系统
-description: Adobe Experience Manager的样式系统允许组件的可视化变体而无需后端开发，允许更好地重复使用AEM组件以及更通用、更有效的内容创作。 样式系统与AEM的核心组件、模板编辑器和响应式布局一起使用时，可提供强大的功能以快速构建丰富的体验。
+description: Adobe Experience Manager的样式系统允许在不进行后端开发的情况下实现组件的可视化变量，从而允许更好地重复使用AEM组件，并实现更通用、更高效的内容创作。 样式系统与AEM的核心组件、模板编辑器和响应式布局一起使用时，可提供强大的功能以快速构建丰富的体验。
 feature: Style System
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-974
 thumbnail: 21750.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
 duration: 220
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 {{edge-delivery-services-and-page-editor}}
 
-Adobe Experience Manager的样式系统允许组件的可视化变体而无需后端开发，允许更好地重复使用AEM组件以及更通用、更有效的内容创作。 样式系统与AEM核心组件、模板编辑器和响应式布局一起使用时，可提供强大的功能以快速构建丰富的体验。
+Adobe Experience Manager的样式系统允许在不进行后端开发的情况下实现组件的可视化变量，从而允许更好地重复使用AEM组件，并实现更通用、更高效的内容创作。 样式系统与AEM核心组件、模板编辑器和响应式布局一起使用时，可提供强大的功能以快速构建丰富的体验。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21750?quality=12&learn=on)
 

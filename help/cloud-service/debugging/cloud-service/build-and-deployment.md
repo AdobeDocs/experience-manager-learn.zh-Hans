@@ -1,8 +1,8 @@
 ---
 title: 构建和部署
-description: AdobeCloud Manager有助于代码构建和部署到AEM as a Cloud Service。 在构建过程的各个步骤中可能会发生故障，需要采取措施来解决这些问题。 本指南将介绍如何了解部署中的常见故障以及如何以最佳方式解决这些故障。
+description: Adobe Cloud Manager有助于代码构建和部署到AEM as a Cloud Service。 在构建过程的各个步骤中可能会发生故障，需要采取措施来解决这些问题。 本指南将介绍如何了解部署中的常见故障以及如何以最佳方式解决这些故障。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5434
 thumbnail: kt-5424.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
 duration: 534
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2476'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 调试AEM as a Cloud Service内部版本和部署
 
-AdobeCloud Manager有助于代码构建和部署到AEM as a Cloud Service。 在构建过程的各个步骤中可能会发生故障，需要采取措施来解决这些问题。 本指南将介绍如何了解部署中的常见故障以及如何以最佳方式解决这些故障。
+Adobe Cloud Manager有助于代码构建和部署到AEM as a Cloud Service。 在构建过程的各个步骤中可能会发生故障，需要采取措施来解决这些问题。 本指南将介绍如何了解部署中的常见故障以及如何以最佳方式解决这些故障。
 
 ![云管理生成管道](./assets/build-and-deployment/build-pipeline.png)
 
@@ -68,7 +68,7 @@ AdobeCloud Manager有助于代码构建和部署到AEM as a Cloud Service。 在
 
 ![代码扫描](./assets/build-and-deployment/code-scanning.png)
 
-代码扫描会结合使用Java和特定于AEM的最佳实践来执行静态代码分析。
+代码扫描会结合使用Java和AEM的特定最佳实践来执行静态代码分析。
 
 如果代码中存在严重安全漏洞，则代码扫描会导致生成失败。 可以覆盖较小的违规，但建议修复这些违规。 请注意，代码扫描不完善，可能会导致[误报](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives)。
 
@@ -106,14 +106,14 @@ set the 'mergeConfigurations' flag to 'true' if you want to merge multiple confi
 
 ### 格式错误的repoinit脚本
 
-Repoinit脚本定义基线内容、用户、ACL等。 在AEM as a Cloud Service中，repoinit脚本在构建图像期间应用，但在AEM SDK的本地快速启动中，当激活OSGi repoinit工厂配置时会应用这些脚本。 因此，Repoinit脚本可能会在AEM SDK的本地快速启动中悄然失败（进行日志记录），但会导致生成图像步骤失败，停止部署。
+Repoinit脚本定义基线内容、用户、ACL等。 在AEM as a Cloud Service中，repoinit脚本在构建图像期间应用，但在AEM SDK的本地快速启动中，当激活OSGi repoinit工厂配置时会应用这些脚本。 因此，Repoinit脚本可能会在AEM SDK的本地快速启动中悄然失败（通过日志记录），但会导致生成图像步骤失败，停止部署。
 
 + __原因：__ Repoinit脚本的格式不正确。 这样可能会使存储库处于不完整状态，因为在失败脚本未针对存储库执行之后，还会出现任何repoinit脚本。
-+ __解决方案：__&#x200B;在部署repoinit脚本OSGi配置时查看AEM SDK的本地快速启动，以确定错误是否及其内容。
++ __解决方案：__&#x200B;在部署repoinit脚本OSGi配置时查看AEM SDK的本地快速启动，以确定是否出现错误以及错误内容。
 
 ### 不满意的repoinit内容依赖性
 
-Repoinit脚本定义基线内容、用户、ACL等。 在AEM SDK的本地快速入门中，当激活repoinit OSGi工厂配置时，或者换句话说，在存储库处于活动状态并可能已直接或通过内容包发生内容更改后，会应用repoinit脚本。 在AEM as a Cloud Service中，在构建图像期间对可能包含repoinit脚本所依赖内容的存储库应用repoinit脚本。
+Repoinit脚本定义基线内容、用户、ACL等。 在AEM SDK的本地快速入门中，当激活repoinit OSGi工厂配置时，或者换句话说，在存储库处于活动状态并可能直接或通过内容包引起内容更改后，会应用repoinit脚本。 在AEM as a Cloud Service中，在构建图像期间对可能包含repoinit脚本所依赖内容的存储库应用repoinit脚本。
 
 + __原因：__ Repoinit脚本依赖于不存在的内容。
 + __分辨率：__&#x200B;确保repoinit脚本所依赖的内容存在。 通常，这表示未充分定义的repoinit脚本缺少用于定义这些缺失但必需的内容结构的指令。 可以通过删除AEM、解压缩Jar并将包含repoinit脚本的repoinit OSGi配置添加到安装文件夹并启动AEM在本地重现这种情况。 该错误将出现在AEM SDK本地快速入门的error.log中。
@@ -155,11 +155,11 @@ AEM as a Cloud Service会在每个AEM版本中自动包含最新的核心组件�
 
 + [Adobe Admin Console](https://adminconsole.adobe.com) >“支持”选项卡>创建案例
 
-  _如果您是多个Adobe组织的成员，请确保在创建案例之前在Adobe组织切换器中选择具有失败管道的Adobe组织。_
+  _如果您是多个Adobe组织的成员，请确保在创建案例之前，在Adobe组织切换器中选择了具有失败管道的Adobe组织。_
 
 ## 部署到
 
-“部署到”步骤负责获取在构建映像中生成的代码构件，启动新的使用它的AEM Author和Publish服务，并在成功后删除任何旧的AEM Author和Publish服务。 在此步骤中还安装和更新可变内容包和索引。
+“部署到”步骤负责获取在构建映像中生成的代码构件，启动新的使用它的AEM创作和发布服务，并在成功后删除任何旧的AEM创作和发布服务。 在此步骤中还安装和更新可变内容包和索引。
 
 在调试“部署到”步骤之前，请熟悉[AEM as a Cloud Service日志](./logs.md)。 `aemerror`日志包含有关pod启动和关闭的信息，这可能与“部署到问题”相关。 请注意，通过Cloud Manager“部署到”步骤中的“下载日志”按钮提供的日志不是`aemerror`日志，不包含与您的应用程序启动相关的详细信息。
 
@@ -173,7 +173,7 @@ AEM as a Cloud Service会在每个AEM版本中自动包含最新的核心组件�
   ![Cloud Manager管道包含旧的AEM版本](./assets/build-and-deployment/deploy-to__pipeline-holds-old-aem-version.png)
 + __分辨率：__
    + 如果目标环境具有可用更新，请从环境的操作中选择更新，然后重新运行内部版本。
-   + 如果目标环境没有可用的更新，则意味着它运行的是最新版本的AEM。 要解决此问题，请删除管道并重新创建它。
+   + 如果目标环境没有可用的更新，则意味着它在运行最新版本的AEM。 要解决此问题，请删除管道并重新创建它。
 
 
 ### Cloud Manager超时
@@ -181,16 +181,16 @@ AEM as a Cloud Service会在每个AEM版本中自动包含最新的核心组件�
 在新部署的AEM服务启动期间运行的代码，需要很长时间才能完成Cloud Manager。 在这些情况下，部署可能最终成功，甚至考虑Cloud Manager状态报告为失败。
 
 + __原因：__&#x200B;自定义代码可能执行操作，例如在OSGi捆绑包或组件生命周期的早期触发的大型查询或内容遍历，这会显着延迟AEM的启动时间。
-+ __解决方案：__&#x200B;检查在OSGi捆绑包的生命周期早期运行的代码实现，并查看Cloud Manager显示的失败时间（GMT为记录时间）前后的AEM Author和Publish服务的`aemerror`日志，并查找指示任何自定义日志运行进程的日志消息。
++ __解决方案：__&#x200B;审查在OSGi捆绑包的生命周期早期运行的代码的实施情况，并审查Cloud Manager显示的失败时间（GMT为记录时间）前后的AEM创作和发布服务的`aemerror`日志，并查找指示任何自定义日志运行进程的日志消息。
 
 ### 不兼容的代码或配置
 
 大多数代码和配置违规是在内部版本中的早期捕获的，但是，自定义代码或配置可能与AEM as a Cloud Service不兼容，并且在容器中执行之前无法检测到。
 
 + __原因：__&#x200B;自定义代码可能会调用很长的操作，例如在OSGi捆绑包或组件生命周期的早期触发的大型查询或内容遍历，这会显着延迟AEM的启动时间。
-+ __解决方案：__&#x200B;查看AEM Author和Publish服务在Cloud Manager所显示的失败时间（以GMT为单位记录时间）前后的`aemerror`日志。
++ __解决方案：__&#x200B;查看AEM创作和发布服务在Cloud Manager所显示失败的时间（以GMT为单位记录时间）前后的`aemerror`日志。
    1. 在日志中查看由自定义应用程序提供的Java类引发的任何错误。 如果发现任何问题，请解决，推送修复的代码，然后重新构建管道。
-   1. 在日志中查看要在自定义应用程序中扩展/交互的AEM方面报告的任何ERROR，并调查这些错误；这些ERROR可能不是直接归因于Java类。 如果发现任何问题，请解决，推送修复的代码，然后重新构建管道。
+   1. 在日志中查看由您在自定义应用程序中扩展/交互的AEM方面报告的任何错误，并调查这些错误；这些错误可能并非直接归因于Java类。 如果发现任何问题，请解决，推送修复的代码，然后重新构建管道。
 
 ### 在内容包中包含/var
 
@@ -198,7 +198,7 @@ AEM as a Cloud Service会在每个AEM版本中自动包含最新的核心组件�
 
 此问题很难识别，因为它不会导致初始部署失败，而只会导致后续部署失败。 明显的症状包括：
 
-+ 初始部署成功，但是AEM Publish服务上似乎不存在作为部署一部分的新增或更改的可变内容。
++ 初始部署成功，但作为部署一部分的新增或更改的可变内容在AEM Publish服务中似乎不存在。
 + 在AEM Author中激活/停用内容被阻止
 + 后续部署在“部署到”步骤中失败，且“部署到”步骤在大约60分钟后失败。
 
@@ -226,12 +226,12 @@ AEM as a Cloud Service会在每个AEM版本中自动包含最新的核心组件�
 
    请注意，此日志不会包含有关报告为成功的初始部署的这些指示符，而只会在后续失败的部署中包含。
 
-+ __原因：__&#x200B;用于将内容包部署到AEM Publish服务的AEM复制服务用户无法写入AEM Publish上的`/var`。 这会导致将内容包部署到AEM Publish服务失败。
++ __原因：__ AEM用于向AEM发布服务部署内容包的复制服务用户无法写入AEM发布上的`/var`。 这会导致将内容包部署到AEM Publish服务失败。
 + __解决方案：__&#x200B;以下解决此问题的方法按优先顺序列出：
    1. 如果不需要使用`/var`资源，请从作为应用程序的一部分部署的内容包中移除`/var`下的任何资源。
    2. 如果需要`/var`资源，请使用[repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)定义节点结构。 Repoinit脚本可以通过OSGi运行模式定位到AEM Author和/或AEM Publish。
-   3. 如果`/var`资源仅在AEM Author上需要，并且无法使用[repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)合理建模，请将它们移动到离散内容包，该内容包仅由[嵌入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)在AEM Author运行模式文件夹(`<target>/apps/example-packages/content/install.author</target>`)的`all`包中的AEM Author安装。
-   4. 按照此[AdobeKB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html)中的说明，为`sling-distribution-importer`服务用户提供适当的ACL。
+   3. 如果`/var`资源仅在AEM Author上需要，并且无法使用[repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)进行合理建模，请将它们移动到离散内容包，该内容包仅由[嵌入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)在AEM Author运行模式文件夹(`<target>/apps/example-packages/content/install.author</target>`)的`all`包中的AEM Author安装。
+   4. 按照此[Adobe KB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html)中的说明，为`sling-distribution-importer`服务用户提供适当的ACL。
 
 ### 创建Adobe支持案例
 
@@ -239,4 +239,4 @@ AEM as a Cloud Service会在每个AEM版本中自动包含最新的核心组件�
 
 + [Adobe Admin Console](https://adminconsole.adobe.com) >“支持”选项卡>创建案例
 
-  _如果您是多个Adobe组织的成员，请确保在创建案例之前在Adobe组织切换器中选择具有失败管道的Adobe组织。_
+  _如果您是多个Adobe组织的成员，请确保在创建案例之前，在Adobe组织切换器中选择了具有失败管道的Adobe组织。_

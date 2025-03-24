@@ -1,7 +1,7 @@
 ---
 title: 探索GraphQL API - AEM Headless快速入门 — GraphQL
-description: Adobe Experience Manager (AEM)和GraphQL入门。 使用内置的GrapiQL IDE来浏览AEM的GraphQL API。 了解AEM如何根据内容片段模型自动生成GraphQL架构。 尝试使用GraphQL语法构建基本查询。
-version: Cloud Service
+description: Adobe Experience Manager (AEM)和GraphQL快速入门。 使用内置的GrapiQL IDE浏览AEM的GraphQL API。 了解AEM如何根据内容片段模型自动生成GraphQL架构。 尝试使用GraphQL语法构建基本查询。
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6714
 thumbnail: KT-6714.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
 duration: 332
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%
@@ -57,7 +57,7 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
    >[!NOTE]
    >
-   > 还可以创建全局端点以启用跨多个配置的模型查询。 使用此选项时应当谨慎，因为它可能会使环境面临更多安全漏洞，并增加管理AEM的整体复杂性。
+   > 还可以创建全局端点以启用跨多个配置的模型查询。 使用此选项时应谨慎，因为它可能会使环境面临更多安全漏洞，并会增加管理AEM的整体复杂性。
 
 1. 此时，您应会看到环境中启用了一个GraphQL端点。
 
@@ -69,13 +69,13 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
 接下来，使用内置的GraphiQL IDE来探索AEM的GraphQL API的强大功能。
 
-1. 从AEM开始屏幕中，导航到&#x200B;**工具** > **常规** > **GraphQL查询编辑器**。
+1. 从AEM“开始”屏幕中，导航到&#x200B;**工具** > **常规** > **GraphQL查询编辑器**。
 
    ![导航到GraphiQL IDE](assets/explore-graphql-api/navigate-graphql-query-editor.png)
 
    >[!NOTE]
    >
-   > 在中，可能未内置旧版AEM GraphiQL IDE。 可以按照这些[说明](#install-graphiql)手动安装。
+   > 在中，旧版本的AEM可能未内置GraphiQL IDE。 可以按照这些[说明](#install-graphiql)手动安装。
 
 1. 在右上角，确保终结点设置为&#x200B;**我的项目终结点**。
 
@@ -280,7 +280,7 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
 ## 持久查询 {#persist-queries}
 
-一旦开发人员对查询和从查询返回的结果数据感到满意，下一步就是将查询存储或保留到AEM。 [持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)是向客户端应用程序公开GraphQL API的首选机制。 持久查询后，可以使用GET请求来请求它，并缓存到Dispatcher和CDN层。 持久查询的性能要好得多。 除了性能优势之外，持久查询还可以确保不会意外向客户端应用程序显示额外数据。 有关[持久查询的更多详细信息见此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)。
+一旦开发人员对从查询返回的查询和结果数据满意，下一步就是将查询存储或保留到AEM。 [持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)是向客户端应用程序公开GraphQL API的首选机制。 持久查询后，可以使用GET请求来请求它，并缓存到Dispatcher和CDN层。 持久查询的性能要好得多。 除了性能优势之外，持久查询还可以确保不会意外向客户端应用程序显示额外数据。 有关[持久查询的更多详细信息见此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)。
 
 接下来，保留两个简单查询，它们将在下一章中使用。
 
@@ -372,21 +372,21 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
    ![最终持久查询](assets/explore-graphql-api/final-persisted-queries.png)
 
 
-## Publish GraphQL端点和持久查询
+## 发布GraphQL端点和持久查询
 
 审核和验证后，发布`GraphQL Endpoint`和`Persisted Queries`
 
 1. 从AEM开始屏幕中，导航到&#x200B;**工具** > **常规** > **GraphQL**。
 
-1. 点按&#x200B;**我的项目端点**&#x200B;旁边的复选框，然后点按&#x200B;**Publish**
+1. 点按&#x200B;**我的项目端点**&#x200B;旁边的复选框，然后点按&#x200B;**发布**
 
-   ![Publish GraphQL端点](assets/explore-graphql-api/publish-graphql-endpoint.png)
+   ![发布GraphQL终结点](assets/explore-graphql-api/publish-graphql-endpoint.png)
 
 1. 从AEM开始屏幕中，导航到&#x200B;**工具** > **常规** > **GraphQL查询编辑器**
 
-1. 点按“持久查询”面板中的&#x200B;**所有团队**&#x200B;查询，然后点按&#x200B;**Publish**
+1. 点按“持久查询”面板中的&#x200B;**所有团队**&#x200B;查询，然后点按&#x200B;**发布**
 
-   ![Publish持久查询](assets/explore-graphql-api/publish-persisted-query.png)
+   ![发布持久查询](assets/explore-graphql-api/publish-persisted-query.png)
 
 1. 对`person-by-name`查询重复上述步骤
 

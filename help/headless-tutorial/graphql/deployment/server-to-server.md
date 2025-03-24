@@ -1,7 +1,7 @@
 ---
 title: AEM Headless服务器到服务器部署
 description: 了解服务器到服务器AEM Headless部署的部署注意事项。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -10,7 +10,7 @@ jira: KT-10798
 thumbnail: kt-10798.jpg
 exl-id: d4ae08d9-dc43-4414-ab75-26853186a301
 duration: 48
-source-git-commit: b607ea10e0eed73b70751b1dd76266a4812d5280
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 1%
@@ -19,15 +19,15 @@ ht-degree: 1%
 
 # AEM Headless服务器到服务器部署
 
-AEM Headless服务器到服务器部署涉及服务器端应用程序或进程，这些应用程序或进程以Headless方式使用AEM中的内容并与之交互。
+AEM Headless服务器到服务器部署涉及服务器端应用程序或流程，这些应用程序或流程以Headless方式使用AEM中的内容并与之交互。
 
-服务器到服务器部署需要最少的配置，因为到AEM Headless API的HTTP连接不在浏览器的上下文中启动。
+服务器到服务器部署需要最少的配置，因为到AEM Headless API的HTTP连接不是在浏览器的上下文中启动的。
 
 ## 部署配置
 
 必须为服务器到服务器应用程序部署就地以下部署配置。
 
-| 服务器到服务器应用程序连接到→ | AEM Author | AEM 发布 | AEM预览 |
+| 服务器到服务器应用程序连接到→ | AEM 作者 | AEM 发布 | AEM预览 |
 |---------------------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨源资源共享(CORS) | ✘ | ✘ | ✘ |

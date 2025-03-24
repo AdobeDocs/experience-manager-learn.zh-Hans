@@ -1,8 +1,8 @@
 ---
-title: 将Asset compute工作程序与AEM处理用户档案集成
-description: AEM as a Cloud Service通过AEM Assets处理配置文件与部署到Adobe I/O Runtime的Asset compute工作人员集成。 处理用户档案在创作服务中配置为使用自定义工作程序处理特定资产，并将工作程序生成的文件存储为资产演绎版。
+title: 将Asset Compute工作人员与AEM处理用户档案集成
+description: AEM as a Cloud Service通过Asset Compute处理配置文件与部署到Adobe I/O Runtime的AEM Assets工作人员集成。 处理用户档案在创作服务中配置为使用自定义工作程序处理特定资产，并将工作程序生成的文件存储为资产演绎版。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6287
 thumbnail: KT-6287.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
 duration: 126
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 与AEM处理用户档案集成
 
-要让Asset compute工作进程在AEM as a Cloud Service中生成自定义演绎版，必须通过处理用户档案在AEM as a Cloud Service创作服务中注册这些演绎版。 受该处理配置文件约束的所有资产将在上传或重新处理时调用工作进程，并生成自定义演绎版，然后通过资产的演绎版提供该演绎版。
+要让Asset Compute Worker在AEM as a Cloud Service中生成自定义演绎版，必须通过“处理配置文件”在AEM as a Cloud Service Author服务中注册它们。 受该处理配置文件约束的所有资产将在上传或重新处理时调用工作进程，并生成自定义演绎版，然后通过资产的演绎版提供该演绎版。
 
 ## 定义处理配置文件
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ![正在处理配置文件](./assets/processing-profiles/new-processing-profile.png)
 
-1. 以&#x200B;__AEM管理员__&#x200B;身份登录AEM as a Cloud Service创作服务。 由于这是一个教程，我们建议在沙盒中使用开发环境或环境。
+1. 以&#x200B;__AEM as a Cloud Service管理员__&#x200B;身份登录AEM创作服务。 由于这是一个教程，我们建议在沙盒中使用开发环境或环境。
 1. 导航到&#x200B;__工具> Assets >处理配置文件__
 1. 点按&#x200B;__创建__&#x200B;按钮
 1. 命名处理配置文件，`WKND Asset Renditions`
@@ -51,7 +51,7 @@ ht-degree: 0%
       + 点按&#x200B;__添加参数__
          + 键： `brightness`
          + 值： `0.10`
-      + 这些键/值对将传递到Asset compute工作进程，并可通过`rendition.instructions` JavaScript对象使用。
+      + 这些键/值对将传递到Asset Compute工作进程，并可通过`rendition.instructions` JavaScript对象使用。
    + __Mime类型__
       + __包括：__ `image/jpeg`，`image/png`，`image/gif`，`image/bmp`，`image/tiff`
          + 这些MIME类型是工作人员的npm模块中仅有的类型。 此列表限制由自定义工作进程处理的工作。
@@ -64,7 +64,7 @@ ht-degree: 0%
 1. 选择新创建的处理配置文件，`WKND Asset Renditions`
 1. 点按顶部操作栏中的&#x200B;__将配置文件应用到文件夹__
 1. 选择要将处理配置文件应用到的文件夹，如`WKND`，然后点按&#x200B;__应用__
-1. 通过&#x200B;__AEM > Assets > Files__&#x200B;导航到未应用处理配置文件的文件夹，然后点按`WKND`。
+1. 通过&#x200B;__AEM > Assets >文件__&#x200B;导航到未应用处理配置文件的文件夹，然后点按`WKND`。
 1. 在应用了处理配置文件的文件夹下的任意文件夹中上传一些新图像资产（[sample-1.jpg](../assets/samples/sample-1.jpg)、[sample-2.jpg](../assets/samples/sample-2.jpg)和[sample-3.jpg](../assets/samples/sample-3.jpg)），并等待处理上传的资产。
 1. 点按资产以打开其详细信息
    + 在AEM中，默认演绎版的生成和显示速度可能比自定义演绎版更快。
@@ -75,11 +75,11 @@ ht-degree: 0%
 
 ## 已完成！
 
-恭喜！您已完成有关如何扩展AEM as a Cloud ServiceAsset compute微服务的[教程](../overview.md)！ 您现在应该能够设置、开发、测试、调试和部署自定义Asset compute工作程序，以供AEM as a Cloud Service Author服务使用。
+恭喜！您已完成有关如何扩展AEM as a Cloud Service Asset Compute微服务的[教程](../overview.md)！ 您现在应该能够设置、开发、测试、调试和部署自定义Asset Compute工作程序，以供AEM as a Cloud Service Author服务使用。
 
 ### 在Github上查看完整项目源代码
 
-Github上提供了最终Asset compute项目，网址为：
+Github上提供了最终的Asset Compute项目，网址为：
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 

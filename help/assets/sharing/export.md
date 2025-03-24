@@ -2,7 +2,7 @@
 title: 导出资源
 description: 了解如何将资产批量导出并下载到本地计算机。
 feature: Asset Management
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: Developer
 level: Experienced
@@ -12,7 +12,7 @@ jira: KT-15313
 thumbnail: KT-15313.jpeg
 exl-id: d04c3316-6f8f-4fd1-9df1-3fe09d44f735
 duration: 256
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 # 导出资源
 
-了解如何使用可自定义的Node.js脚本将资产导出到本地计算机。 此导出脚本提供了一个示例，说明如何使用[AEM Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)以编程方式从AEM下载资源，尤其侧重于原始演绎版以确保最高质量。 它设计为可在本地驱动器上复制AEM Assets的文件夹结构，从而轻松备份或迁移资产。
+了解如何使用可自定义的Node.js脚本将资产导出到本地计算机。 此导出脚本提供了一个示例，说明如何使用[AEM HTTP API](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)从AEM Assets以编程方式下载资源，尤其侧重于原始演绎版以确保最高质量。 它设计为可在本地驱动器上复制AEM Assets的文件夹结构，从而轻松备份或迁移资产。
 
 该脚本仅下载资源的原始演绎版，不带关联的元数据，除非该元数据已作为XMP嵌入到资源中。 这意味着下载中不包含存储在AEM中但未集成到资源文件中的任何描述性信息、分类或标记。 也可以通过修改脚本以包含其他演绎版来下载它们。 确保您有足够的空间来存储导出的资源。
 
-脚本通常针对AEM Author运行，但也可以针对AEM Publish运行，前提是可以通过Dispatcher访问AEM Assets HTTP API端点和资源演绎版。
+脚本通常针对AEM Author运行，但也可以针对AEM Publish运行，只要可通过Dispatcher访问AEM Assets HTTP API端点和资源演绎版。
 
 在运行脚本之前，您必须使用AEM实例URL、用户凭据（访问令牌）以及要导出的文件夹的路径对其进行配置。
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 编写为JavaScript模块的脚本是Node.js项目的一部分，因为它依赖于`node-fetch`。 您可以[将该项目下载为zip文件](./assets/export/export-aem-assets-script.zip)，或者将下面的脚本复制到类型为`module`的空Node.js项目中，然后运行`npm install node-fetch`以安装依赖项。
 
-此脚本将浏览AEM Assets文件夹树，并将资源和文件夹下载到计算机上的本地文件夹。 它使用[AEM Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)获取文件夹和资源数据，并下载资源的原始演绎版。
+此脚本将浏览AEM Assets文件夹树，并将资源和文件夹下载到计算机上的本地文件夹。 它使用[AEM Assets HTTP API](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)获取文件夹和资源数据，并下载资源的原始演绎版。
 
 ```javascript
 // export-assets.js

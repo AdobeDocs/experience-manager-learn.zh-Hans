@@ -5,12 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
+exl-id: e1e5745e-96fb-46c6-aa7f-43cdf2dfddbc
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 1%
@@ -23,7 +24,7 @@ ht-degree: 1%
 
 创建此对话框的最简单方法如下：
 
-1. 在AEM项目的countries组件文件夹下，创建一个名为_cq_dialog的文件夹。
+1. 在AEM项目的“国家/地区”组件文件夹下，创建一个名为_cq_dialog的文件夹。
 2. 在_cq_dialog文件夹内，创建一个名为.content.xml的文件。
 3. 将下面提供的XML代码粘贴到此文件中。
 4. 保存更改并将项目与AEM同步。

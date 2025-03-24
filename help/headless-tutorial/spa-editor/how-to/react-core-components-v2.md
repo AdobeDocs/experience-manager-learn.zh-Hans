@@ -1,7 +1,7 @@
 ---
 title: 如何使用AEM React可编辑组件v2
 description: 了解如何使用AEM React可编辑组件v2来支持React应用程序。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: SPA Editor
 role: Developer
@@ -11,10 +11,10 @@ thumbnail: kt-10900.jpeg
 doc-type: Tutorial
 exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
 duration: 190
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '525'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -37,14 +37,14 @@ AEM提供了[AEM React可编辑组件v2](https://www.npmjs.com/package/@adobe/ae
 
 ## AEM页面
 
-AEM React可编辑组件可与SPA编辑器或Remote SPA React应用程序一起使用。 填充可编辑React组件的内容必须通过扩展[AEM页面组件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html)的SPA页面公开。 映射到可编辑React组件的AEM组件必须实施AEM的[组件导出程序框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)，如[AEM核心WCM组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+AEM React可编辑组件可与SPA编辑器或远程SPA React应用程序一起使用。 必须通过扩展[SPA页面组件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html)的AEM页面公开填充可编辑React组件的内容。 映射到可编辑React组件的AEM组件必须实施AEM的[组件导出程序框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)，如[AEM核心WCM组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)。
 
 
 ## 依赖项
 
 确保React应用程序在Node.js 14及更高版本上运行。
 
-React应用程序使用AEM React Editable Components v2的最小依赖项集是： `@adobe/aem-react-editable-components`、`@adobe/aem-spa-component-mapping`和`@adobe/aem-spa-page-model-manager`。
+使用AEM React Editable Components v2的React应用程序的最小依赖项集是： `@adobe/aem-react-editable-components`、`@adobe/aem-spa-component-mapping`和`@adobe/aem-spa-page-model-manager`。
 
 
 + `package.json`
@@ -66,12 +66,12 @@ React应用程序使用AEM React Editable Components v2的最小依赖项集是�
 >
 > [AEM React核心WCM组件库](https://github.com/adobe/aem-react-core-wcm-components-base)和[AEM React核心WCM组件SPA](https://github.com/adobe/aem-react-core-wcm-components-spa)与AEM React可编辑组件v2不兼容。
 
-## SPA编辑器
+## SPA 编辑器
 
-在基于AEM编辑器的React应用程序中使用SPA React可编辑组件时，将AEM `ModelManager` SDK用作SDK：
+在基于SPA Editor的React应用程序中使用AEM React可编辑组件时，AEM `ModelManager` SDK将用作SDK：
 
 1. 从AEM检索内容
-1. 使用AEM内容填充React可食用组件
+1. 用AEM内容填充React可食用组件
 
 使用初始化的ModelManager封装React应用程序，并渲染React应用程序。 React应用应包含一个从`@adobe/aem-react-editable-components`导出的`<Page>`组件的实例。 `<Page>`组件具有基于AEM提供的`.model.json`动态创建React组件的逻辑。
 
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ...
 ```
 
-AEM提供的上述JSON可用于动态实例化和填充可编辑的React组件。
+上述AEM提供的JSON可用于动态实例化和填充可编辑的React组件。
 
 ```javascript
 import React from "react";
@@ -178,8 +178,8 @@ export default MapTo("wknd-examples/components/example")(EditableExample);
 
 可编辑的组件可以重复使用并相互嵌入。 将一个可编辑组件嵌入另一个可编辑组件时，需要考虑两个关键因素：
 
-1. AEM中用于嵌入组件的JSON内容必须包含满足嵌入组件的内容。 这是通过为AEM组件创建收集必需数据的对话框来完成的。
-1. 必须嵌入React组件的“不可编辑”实例，而不是使用`<EditableComponent>`封装的“可编辑”实例。 原因是，如果嵌入的组件具有`<EditableComponent>`包装器，则SPA编辑器会尝试使用编辑chrome（蓝色悬停框）而不是外部嵌入组件来整理内部组件。
+1. AEM中用于嵌入组件的JSON内容必须包含满足嵌入组件的要求。 这是通过为AEM组件创建收集必需数据的对话框来完成的。
+1. 必须嵌入React组件的“不可编辑”实例，而不是使用`<EditableComponent>`封装的“可编辑”实例。 原因是，如果嵌入的组件具有`<EditableComponent>`包装器，则SPA编辑器会尝试使用编辑铬版（蓝色悬停框）而不是外部嵌入组件来整理内部组件。
 
 + `HTTP GET /content/.../home.model.json`
 
@@ -196,7 +196,7 @@ export default MapTo("wknd-examples/components/example")(EditableExample);
 ...
 ```
 
-AEM提供的上述JSON可用于动态实例化和填充嵌入其他React组件的可编辑React组件。
+上述AEM提供的JSON可用于动态实例化和填充嵌入其他React组件的可编辑React组件。
 
 
 ```javascript

@@ -1,7 +1,7 @@
 ---
 title: 使用可视化体验编辑器的Personalization
 description: 了解如何使用可视化体验编辑器创建Adobe Target活动。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6352
 thumbnail: 6352-personalization-using-vec.jpg
 topic: Integrations
@@ -9,11 +9,11 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
 duration: 101
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 0%
@@ -39,7 +39,7 @@ WKND站点主页以信息卡的形式显示本地活动或可在城市周围执�
 
 1. 登录到[Adobe Experience Cloud](https://experience.adobe.com/)，点按&#x200B;__Target__，导航到&#x200B;__活动__&#x200B;选项卡
 
-   + 如果您在Experience Cloud功能板上未看到&#x200B;__Target__，请确保在右上角的Adobe切换器中选择了正确的组织组织，并且已在[Adobe Admin Console](https://adminconsole.adobe.com/)中授予该用户访问Target的权限。
+   + 如果您在Experience Cloud功能板上未看到&#x200B;__Target__，请确保在右上角的组织切换器中选择了正确的Adobe组织，并且已在[Adobe Admin Console](https://adminconsole.adobe.com/)中授予该用户访问Target的权限。
 
 1. 单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**A/B测试**&#x200B;活动
 

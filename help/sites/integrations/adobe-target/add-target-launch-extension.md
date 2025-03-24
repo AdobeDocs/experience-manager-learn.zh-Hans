@@ -1,7 +1,7 @@
 ---
 title: 将Target扩展添加到标记属性
 description: 了解如何将Adobe Target扩展添加到tags属性。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6131
 thumbnail: 41247.jpg
 topic: Integrations
@@ -9,11 +9,11 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
 duration: 290
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 3%
@@ -22,9 +22,9 @@ ht-degree: 3%
 
 # 将Target扩展添加到Tags属性 {#adobe-target-extension}
 
-若要观看本视频，您必须已将Adobe Experience Platform中的[标记与AEM](../experience-platform/data-collection/tags/overview.md)集成。
+要观看本视频，您必须已将Adobe Experience Platform中的[标记与AEM](../experience-platform/data-collection/tags/overview.md)集成。
 
-了解如何使用标记为AEM网站启用Adobe Target。
+了解如何使用标记在AEM网站上启用Adobe Target。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
 

@@ -1,7 +1,7 @@
 ---
 title: 定义内容片段模型 — AEM Headless入门 — GraphQL
-description: Adobe Experience Manager (AEM)和GraphQL入门。 了解如何在AEM中使用内容片段模型来建模内容并构建架构。 查看现有模型并创建模型。 了解可用于定义架构的不同数据类型。
-version: Cloud Service
+description: Adobe Experience Manager (AEM)和GraphQL快速入门。 了解如何在AEM中使用“内容片段模型”对内容进行建模并构建架构。 查看现有模型并创建模型。 了解可用于定义架构的不同数据类型。
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6712
 thumbnail: 22452.jpg
@@ -11,10 +11,10 @@ role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
 duration: 228
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1110'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 项目配置包含与特定项目关联的所有内容片段模型，并提供组织模型的方法。 在创建内容片段模型&#x200B;**之前，必须**&#x200B;至少创建一个项目。
 
-1. 登录到AEM **作者**&#x200B;环境（例如`https://author-pYYYY-eXXXX.adobeaemcloud.com/`）
+1. 登录到AEM **创作**&#x200B;环境（例如`https://author-pYYYY-eXXXX.adobeaemcloud.com/`）
 1. 从AEM开始屏幕中，导航到&#x200B;**工具** > **常规** > **配置浏览器**。
 
    ![导航到配置浏览器](assets/content-fragment-models/navigate-config-browser.png)
@@ -112,7 +112,7 @@ ht-degree: 1%
 
    ![最终人员模型](assets/content-fragment-models/final-author-model.png)
 
-1. 单击&#x200B;**保存**&#x200B;以保存更改。
+1. 点击&#x200B;**保存**&#x200B;即可保存更改。
 
 ### 创建团队模型
 
@@ -157,29 +157,29 @@ ht-degree: 1%
 
    ![最终团队模型](assets/content-fragment-models/final-team-model.png)
 
-1. 单击&#x200B;**保存**&#x200B;以保存更改。
+1. 点击&#x200B;**保存**&#x200B;即可保存更改。
 
 1. 您现在应该可以从以下两个模型工作：
 
    ![两个模型](assets/content-fragment-models/two-new-models.png)
 
-## Publish项目配置和内容片段模型
+## 发布项目配置和内容片段模型
 
 审核和验证后，发布`Project Configuration`和`Content Fragment Model`
 
 1. 从AEM开始屏幕中，导航到&#x200B;**工具** > **常规** > **配置浏览器**。
 
-1. 点按&#x200B;**我的项目**&#x200B;旁边的复选框，然后点按&#x200B;**Publish**
+1. 点按&#x200B;**我的项目**&#x200B;旁边的复选框，然后点按&#x200B;**发布**
 
-   ![Publish项目配置](assets/content-fragment-models/publish-project-config.png)
+   ![发布项目配置](assets/content-fragment-models/publish-project-config.png)
 
 1. 从AEM开始屏幕中，导航到&#x200B;**工具** > **常规** > **内容片段模型**。
 
 1. 导航到&#x200B;**我的项目**&#x200B;文件夹。
 
-1. 点按&#x200B;**人员**&#x200B;和&#x200B;**团队**&#x200B;模型，然后点按&#x200B;**Publish**
+1. 点按&#x200B;**人员**&#x200B;和&#x200B;**团队**&#x200B;模型，然后点按&#x200B;**发布**
 
-   ![Publish内容片段模型](assets/content-fragment-models/publish-content-fragment-model.png)
+   ![发布内容片段模型](assets/content-fragment-models/publish-content-fragment-model.png)
 
 ## 恭喜！ {#congratulations}
 

@@ -5,12 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
+exl-id: 52205a93-d03c-430c-a707-b351ab333939
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 3%
@@ -19,7 +20,7 @@ ht-degree: 3%
 
 # 在组件的策略中定义样式
 
-* 登录本地云就绪的AEM实例并导航到工具 | 常规 | 模板 | 您的项目名称。
+* 登录到本地云就绪的AEM实例，然后导航到“工具” | 常规 | 模板 | 您的项目名称。
 
 * 在编辑模式下选择并打开&#x200B;**带核心组件的空白**&#x200B;模板。
 * 单击按钮组件的策略图标以打开策略编辑器。

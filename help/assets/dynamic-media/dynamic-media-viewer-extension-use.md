@@ -3,14 +3,14 @@ title: 将Dynamic Media查看器与Adobe Analytics和标记结合使用
 description: 适用于标记的Dynamic Media查看器扩展以及最新发布的Dynamic Media查看器5.13，允许Dynamic Media、Adobe Analytics和标记的客户在其标记配置中使用特定于Dynamic Media查看器的事件和数据。
 sub-product: Dynamic Media
 feature: Asset Insights
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 9d807f4c-999c-45e6-a9db-6c1776bddda1
 duration: 576
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 1%
@@ -27,13 +27,13 @@ ht-degree: 1%
 >
 > 在Dynamic Media Scene7模式下运行Adobe Experience Manager以实现此功能。 您还需要[将标记与您的AEM实例](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)集成。
 
-通过引入Dynamic Media Viewer扩展，Adobe Experience Manager现在为通过Dynamic Media查看器(5.13)交付的资源提供高级分析支持，从而当在Sites页面上使用Dynamic Media Viewer时，提供对事件跟踪的更细粒度控制。
+通过引入Dynamic Media查看器扩展，Adobe Experience Manager现在为通过Dynamic Media查看器(5.13)交付的资源提供高级分析支持，从而当在站点页面上使用Dynamic Media查看器时，提供对事件跟踪的更细粒度控制。
 
 如果您已经拥有AEM Assets和Sites，则可以将标记资产与AEM创作实例集成。 将Launch集成与您的网站关联后，您可以将Dynamic Media组件添加到页面，并启用查看器事件跟踪。
 
 对于仅AEM Assets客户或Dynamic Media Classic客户，用户可以获取查看器的嵌入代码并将其添加到页面。 然后，可以将标记脚本库手动添加到页面以进行查看器事件跟踪。
 
-下表列出了Dynamic Media Viewer事件及其支持的参数：
+下表列出了Dynamic Media查看器事件及其支持的参数：
 
 <table>
    <tbody>

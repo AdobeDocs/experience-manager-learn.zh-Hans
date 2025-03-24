@@ -1,7 +1,7 @@
 ---
 title: AEM SPA Editor 和 React 快速入门
 description: 创建您的首个 React 单页面应用程序 (SPA)，该应用程序可在带 WKND SPA 的 Adobe Experience Manager (AEM) 中编辑。了解如何结合使用 React JS 框架和 AEM 的 SPA 编辑器来创建 SPA。此多节教程演练了为虚构的生活方式品牌 WKND 实施 React 应用程序的过程。本教程涉及创建 SPA 的全过程以及与 AEM 的集成。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5912
 thumbnail: 5912-spa-react.jpg
 feature: SPA Editor
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
 last-substantial-update: 2022-08-25T00:00:00Z
 duration: 71
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 20%
@@ -23,11 +23,11 @@ ht-degree: 20%
 
 {{edge-delivery-services}}
 
-欢迎使用专为Adobe Experience Manager (AEM)中&#x200B;**SPA编辑器**&#x200B;功能的新手开发人员设计的多部分教程。 本教程介绍了为虚构的生活方式品牌WKND实施React应用程序的过程。 React应用程序是使用AEM SPA Editor开发和设计的，该编辑器将React组件映射到AEM组件。 部署到AEM的已完成SPA可以使用传统的AEM内联编辑工具动态创作。
+欢迎使用专为不熟悉Adobe Experience Manager (AEM)中的&#x200B;**SPA编辑器**&#x200B;功能的开发人员设计的多部分教程。 本教程介绍了为虚构的生活方式品牌WKND实施React应用程序的过程。 React应用程序是使用AEM的SPA Editor开发和设计的，该编辑器可将React组件映射到AEM组件。 部署到AEM的已完成SPA可以使用AEM的传统内联编辑工具动态创作。
 
-![已实现最终SPA](assets/wknd-spa-implementation.png)
+![已实施的最终SPA](assets/wknd-spa-implementation.png)
 
-*WKND SPA实现*
+*WKND SPA实施*
 
 ## 关于
 
@@ -37,7 +37,7 @@ ht-degree: 20%
 
 可在[GitHub](https://github.com/adobe/aem-guides-wknd-spa)上找到所有教程代码。
 
-[最新的代码库](https://github.com/adobe/aem-guides-wknd-spa/releases)可用作可下载的AEM包。
+[最新代码库](https://github.com/adobe/aem-guides-wknd-spa/releases)可用作可下载的AEM包。
 
 ## 先决条件
 
@@ -61,10 +61,10 @@ ht-degree: 20%
 
 >[!NOTE]
 >
-> **是AEM as a Cloud Service的新用户？**&#x200B;请查看以下[指南，了解如何使用AEM as a Cloud Service SDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)。
+> **是AEM as a Cloud Service的新用户？**&#x200B;请查看以下[指南，了解如何使用AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-hans)设置本地开发环境。
 >
-> **还不熟悉AEM 6.5？**&#x200B;请查看以下[指南以设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans)。
+> **是AEM 6.5的新手吗？**&#x200B;请查看以下[指南以设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-hans)。
 
 ## 后续步骤 {#next-steps}
 
-你在等什么?!导航到[创建项目](create-project.md)一章，开始学习如何使用SPA项目原型生成启用AEM编辑器的项目。
+你在等什么?!导航到[创建项目](create-project.md)一章，开始阅读本教程，并了解如何使用AEM项目原型生成启用SPA Editor的项目。

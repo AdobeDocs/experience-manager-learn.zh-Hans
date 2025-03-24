@@ -2,14 +2,14 @@
 title: 获取要嵌入的自适应表单的JSON
 description: 使用API获取自适应表单的json
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-13285
 topic: Development
 role: User
 level: Intermediate
 exl-id: ee534724-54ea-48e1-8c92-de1c56a928d4
 duration: 50
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 获取表单的JSON
 
-登录到AEM Forms创作实例，并使用&#x200B;**Blank with Core Components**&#x200B;模板创建新的自适应组件。 将您的表单Publish到发布实例。
+登录到AEM Forms创作实例，并使用&#x200B;**Blank with Core Components**&#x200B;模板创建新的自适应组件。 将表单发布到发布实例。
 
 要嵌入表单，我们首先通过针对发布服务器进行get调用来获取自适应表单的json。
 

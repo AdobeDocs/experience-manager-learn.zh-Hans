@@ -1,7 +1,7 @@
 ---
 title: 使用JDBC数据源池的SQL连接
 description: 了解如何使用AEM的JDBC DataSourcePool和出口端口从AEM as a Cloud Service连接到SQL数据库。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
 duration: 117
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
@@ -60,7 +60,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 
 ## 代码示例
 
-此Java™代码示例是一种OSGi服务，该服务通过AEM DataSourcePool OSGi服务连接到外部MySQL数据库。
+此Java™代码示例是一种OSGi服务，该服务通过AEM的DataSourcePool OSGi服务连接到外部MySQL数据库。
 DataSourcePool OSGi工厂配置依次指定了通过[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)操作中的`portForwards`规则映射到外部主机和端口`mysql.example.com:3306`的端口(`30001`)。
 
 ```json

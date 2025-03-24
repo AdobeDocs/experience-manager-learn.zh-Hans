@@ -2,14 +2,14 @@
 title: 在AEM中交付内容片段
 description: 内容片段与布局无关，可直接在包含核心组件的AEM Sites中使用，也可以以Headless方式交付到下游渠道。
 feature: Content Fragments
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
 duration: 878
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # 交付内容片段 {#delivering-content-fragments}
 
-Adobe Experience Manager (AEM)内容片段是基于文本的编辑内容，其中可能包含一些关联但被视为纯内容的结构化数据元素，没有设计或布局信息。 内容片段通常作为与渠道无关的内容创建，这些内容旨在跨渠道使用和重复使用，这反过来又会将内容包装在特定上下文的体验中。
+Adobe Experience Manager (AEM)内容片段是基于文本的编辑内容，其中可能包含一些关联但被视为纯内容的结构化数据元素，而无设计或布局信息。 内容片段通常作为与渠道无关的内容创建，这些内容旨在跨渠道使用和重复使用，这反过来又会将内容包装在特定上下文的体验中。
 
 内容片段与布局无关，可直接在包含核心组件的AEM Sites中使用，也可以以Headless方式交付到下游渠道。
 
@@ -66,15 +66,15 @@ AEM 6.5中首次引入了Assets HTTP API，用于增强对内容片段的支持�
 
 在Headless用例中，有两个选项可将内容片段公开为JSON以支持第三方渠道：
 
-1. 当主要用例是交付内容片段以供第三方渠道使用（只读）时，使用AEM Content Services和代理API页面(视频#2)。 Content Services框架在公开哪些数据方面提供了更多灵活性和选项。 开发人员还可以扩展内容服务框架以扩充和/或丰富数据。
+1. 当主要用例是交付内容片段以供第三方渠道使用（只读）时，使用AEM内容服务和代理API页面(视频#2)。 Content Services框架在公开哪些数据方面提供了更多灵活性和选项。 开发人员还可以扩展内容服务框架以扩充和/或丰富数据。
 
 2. 当第三方渠道需要修改和/或更新内容片段时，使用Assets HTTP API(视频#3)。 典型用例是在AEM创作环境中摄取第三方内容。
 
 ## 其他资源 {#additional-resources}
 
 * [创作内容片段](content-fragments-feature-video-use.md)
-* [AEM WCM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [AEM WCM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)
 * [AEM WCM核心内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)
 
-要从视频系列中下载以下包并将其安装在最终状态的AEM 6.4+实例上：\
+要从视频系列中下载并将以下包安装到最终状态的AEM 6.4+实例上：\
 **[aem_demo_fluid-experiencescontent-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**

@@ -2,7 +2,7 @@
 title: 使用查询参数填充自适应Forms。
 description: 使用查询参数中的数据填充自适应Forms。
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -10,7 +10,7 @@ jira: KT-11470
 last-substantial-update: 2020-11-12T00:00:00Z
 exl-id: 14ac6ff9-36b4-415e-a878-1b01ff9d3888
 duration: 49
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%

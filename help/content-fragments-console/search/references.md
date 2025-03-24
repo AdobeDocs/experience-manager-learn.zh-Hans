@@ -1,7 +1,7 @@
 ---
 title: 引用 — 内容片段
-description: 了解AEM内容片段控制台和编辑器如何让您轻松管理引用的内容。
-version: Cloud Service
+description: 了解AEM的内容片段控制台和编辑器如何让您轻松管理引用的内容。
+version: Experience Manager as a Cloud Service
 feature: Content Fragments
 topic: Content Management
 role: Data Architect, User
@@ -12,7 +12,7 @@ jira: KT-13556
 thumbnail: 3420950.jpeg
 exl-id: 5af2456b-5255-40b3-a6a5-b953c8d76fc9
 duration: 174
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 2%
@@ -21,6 +21,6 @@ ht-degree: 2%
 
 # 引用
 
-了解AEM内容片段控制台和编辑器如何让您轻松了解和管理引用的内容。
+了解AEM的内容片段控制台和编辑器如何让您轻松了解和管理引用的内容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420950/?learn=on)

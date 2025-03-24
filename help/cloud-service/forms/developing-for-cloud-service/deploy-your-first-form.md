@@ -1,16 +1,16 @@
 ---
 title: 将表单和主题同步到AEM项目
-description: 将AEM Forms资源同步到AEM项目中
+description: 将AEM Forms资源同步到AEM项目
 solution: Experience Manager
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Code Deployment
 jira: KT-8852
 exl-id: 81a53f52-2a6c-44ef-a13f-ac372b4a33b9
 duration: 310
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 1%

@@ -1,7 +1,7 @@
 ---
 title: 内容片段控制台概述
 description: 了解AEM as a Cloud Service内容片段创作控制台的基本特性和功能。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments
 topic: Content Management
 role: Data Architect, User
@@ -12,7 +12,7 @@ thumbnail: 3409492.jpeg
 doc-type: Feature Video
 exl-id: 06164830-ec82-440f-bb45-63862c222508
 duration: 339
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%

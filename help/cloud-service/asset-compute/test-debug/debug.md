@@ -1,8 +1,8 @@
 ---
-title: 调试Asset compute工作程序
-description: asset compute工作程序可以通过多种方式进行调试，从简单的调试日志语句，到作为远程调试器的附加VS Code，再到在Adobe I/O Runtime中为从AEM as a Cloud Service启动的激活提取日志。
+title: 调试Asset Compute工作程序
+description: Asset Compute工作程序可以通过多种方式进行调试，从简单的调试日志语句，到作为远程调试器的附加VS Code，再到为从AEM as a Cloud Service启动的Adobe I/O Runtime中的激活提取日志。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6285
 thumbnail: 40383.jpg
@@ -11,22 +11,22 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
 duration: 229
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '618'
 ht-degree: 0%
 
 ---
 
-# 调试Asset compute工作程序
+# 调试Asset Compute工作程序
 
-asset compute工作程序可以通过多种方式进行调试，从简单的调试日志语句，到作为远程调试器的附加VS Code，再到在Adobe I/O Runtime中为从AEM as a Cloud Service启动的激活提取日志。
+Asset Compute工作程序可以通过多种方式进行调试，从简单的调试日志语句，到作为远程调试器的附加VS Code，再到为从AEM as a Cloud Service启动的Adobe I/O Runtime中的激活提取日志。
 
 ## 日志记录
 
-调试Asset compute工作程序的最基本形式是在工作程序代码中使用传统的`console.log(..)`语句。 `console` JavaScript对象是一个隐式全局对象，因此无需导入或要求它，因为它始终存在于所有上下文中。
+Asset Compute工作程序调试的最基本形式是在工作程序代码中使用传统的`console.log(..)`语句。 `console` JavaScript对象是一个隐式全局对象，因此无需导入或要求它，因为它始终存在于所有上下文中。
 
-根据执行Asset compute工作进程的方式，可查看这些log语句：
+根据Asset Compute工作进程的执行方式，可查看这些log语句：
 
 + 从`aio app run`，日志打印到标准输出以及[开发工具的](../develop/development-tool.md)激活日志
   ![aio应用运行console.log(...)](./assets/debug/console-log__aio-app-run.png)
@@ -42,11 +42,11 @@ asset compute工作程序可以通过多种方式进行调试，从简单的调�
 >
 >使用Microsoft Visual Studio Code 1.48.0或更高版本，以便与wskdebug兼容
 
-[wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模块支持将调试器附加到Asset compute工作程序，包括在VS代码中设置断点以及逐步执行代码的功能。
+[wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模块支持将调试器附加到Asset Compute工作程序，包括在VS代码中设置断点以及逐步执行代码的功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40383?quality=12&learn=on)
 
-_使用wskdebug调试Asset compute工作程序的点进（无音频）_
+_使用wskdebug调试Asset Compute工作程序的点进（无音频）_
 
 1. 确保已安装[wskdebug](../set-up/development-environment.md#wskdebug)和[ngrok](../set-up/development-environment.md#ngork) npm模块
 1. 确保[Docker Desktop和支持的Docker映像](../set-up/development-environment.md#docker)已安装并正在运行
@@ -58,7 +58,7 @@ _使用wskdebug调试Asset compute工作程序的点进（无音频）_
    ```
 
 
-1. 使用命令`npx adobe-asset-compute devtool`启动Asset compute开发工具的新实例
+1. 使用命令`npx adobe-asset-compute devtool`启动Asset Compute开发工具的新实例
 1. 在VS Code中，点按左侧导航中的调试图标
    + 如果出现提示，请点按&#x200B;__创建launch.json文件> Node.js__&#x200B;以创建新的`launch.json`文件。
    + 否则，点按&#x200B;__Launch程序__&#x200B;下拉菜单右侧的&#x200B;__齿轮__&#x200B;图标以在编辑器中打开现有的`launch.json`。
@@ -86,14 +86,14 @@ _使用wskdebug调试Asset compute工作程序的点进（无音频）_
 
 1. 从下拉列表中选择新的&#x200B;__wskdebug__
 1. 点按&#x200B;__wskdebug__&#x200B;下拉列表左侧的绿色&#x200B;__运行__&#x200B;按钮
-1. 打开`/actions/worker/index.js`并点按行号左边以添加断点1。 导航到在步骤6中打开的Asset compute开发工具Web浏览器窗口
+1. 打开`/actions/worker/index.js`并点按行号左边以添加断点1。 导航到在步骤6中打开的Asset Compute开发工具Web浏览器窗口
 1. 点按&#x200B;__运行__&#x200B;按钮以执行辅助进程
 1. 导航回VS代码，导航到`/actions/worker/index.js`并逐步执行代码
 1. 要退出可调试的开发工具，请点按步骤6中运行`npx adobe-asset-compute devtool`命令的终端中的`Ctrl-C`
 
 ## 从Adobe I/O Runtime访问日志{#aio-app-logs}
 
-[AEM as a Cloud Service通过直接在Adobe I/O Runtime中调用用户档案](../deploy/processing-profiles.md)来利用Asset compute工作人员。 由于这些调用不涉及本地开发，因此无法使用本地工具(如Asset compute开发工具或wskdebug)调试其执行。 相反，Adobe I/OCLI可用于从Adobe I/O Runtime中特定工作区执行的worker中提取日志。
+[AEM as a Cloud Service通过处理用户档案](../deploy/processing-profiles.md)利用Asset Compute工作程序，方法是直接在Adobe I/O Runtime中调用这些工作程序。 由于这些调用不涉及本地开发，因此无法使用本地工具(如Asset Compute Development Tool或wskdebug)调试其执行。 相反，Adobe I/O CLI可用于从Adobe I/O Runtime中特定工作区执行的worker获取日志。
 
 1. 请确保根据需要调试的工作区，通过`AIO_runtime_namespace`和`AIO_runtime_auth`设置特定于工作区的环境变量](../deploy/runtime.md)。[
 1. 从命令行执行`aio app logs`

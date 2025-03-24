@@ -1,7 +1,7 @@
 ---
 title: Dispatcher配置文件说明
 description: 了解配置文件、命名惯例等。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 duration: 379
-source-git-commit: ef9c70e7895176e3cd535141a5de3c49886e666e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 0%
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 [&lt; — 上一页：基本文件布局](./basic-file-layout.md)
 
-本文档将细分并解释AdobeManaged Services中配置的标准内置Dispatcher服务器中部署的每个配置文件。 它们的使用、命名惯例等……
+本文档将细分并解释在Adobe Managed Services中配置的标准内置Dispatcher服务器中部署的每个配置文件。 它们的使用、命名惯例等……
 
-## 命名约定
+## 命名惯例
 
 使用`Include`或`IncludeOptional`语句定位文件时，Apache Web Server实际上不在乎文件的文件扩展名。  用能消除冲突和混淆的名称正确命名它们有助于<b>吨</b>。 使用的名称将描述应用文件的范围，使工作更轻松。 如果所有对象都名为`.conf`，这会让人感到非常困惑。 我们希望避免文件及扩展名的命名不当。  以下是典型AMS配置的Dispatcher中使用的各种自定义文件扩展名和命名约定的列表。
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 | 文件名`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any`文件包含在`conf.dispatcher.d/enabled_farms/*_farm.any`文件内。 这些文件指定缓存哪些项目以及不缓存哪些项目 |
 | 文件名`_invalidate_allowed.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_invalidate_allowed.any`文件包含在`conf.dispatcher.d/enabled_farms/*_farm.any`文件中。 它们指定允许哪些IP地址发送刷新和失效请求。 |
 | 文件名`_clientheaders.any` | `/etc/httpd/conf.dispatcher.d/clientheaders/` | `*_clientheaders.any`文件包含在`conf.dispatcher.d/enabled_farms/*_farm.any`文件中。 它们指定应将哪些客户端标头传递到每个渲染程序。 |
-| 文件名`_renders.any` | `/etc/httpd/conf.dispatcher.d/renders/` | `*_renders.any`文件包含在`conf.dispatcher.d/enabled_farms/*_farm.any`文件中。 它们为每个渲染器指定IP、端口和超时设置。 正确的渲染器可以是Livecycle服务器或Dispatcher可以从中获取/代理请求的任何AEM系统 |
+| 文件名`_renders.any` | `/etc/httpd/conf.dispatcher.d/renders/` | `*_renders.any`文件包含在`conf.dispatcher.d/enabled_farms/*_farm.any`文件中。 它们为每个渲染器指定IP、端口和超时设置。 正确的渲染器可以是livecycle服务器或Dispatcher可以从中获取/代理请求的任何AEM系统 |
 
 ## 已避免的问题
 

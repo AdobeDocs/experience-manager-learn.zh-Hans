@@ -1,16 +1,16 @@
 ---
-title: 使用调用DDX操作来组合PDF文件
-description: 发出POST请求，以使用必要的参数调用DDX端点
+title: 使用调用DDX操作组合PDF文件
+description: 发出POST请求以使用必要的参数调用DDX端点
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-9980
 exl-id: 693dac88-84f3-4051-8e46-3105093711a3
 duration: 56
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 # 进行POST调用
 
 
-下一步是使用必要的参数向端点进行HTTPPOST调用。 DDX和pdf文件作为资源文件提供。 端点具有基于令牌的身份验证，我们在请求标头中传递访问令牌。
+下一步是使用必要的参数对端点进行HTTP POST调用。 DDX和pdf文件作为资源文件提供。 端点具有基于令牌的身份验证，我们在请求标头中传递访问令牌。
 使用Assembler服务时，请使用一种名为Document Description XML (DDX)的基于XML的语言来描述所需的输出。 DDX是一种声明性标记语言，其元素代表文档的构建块。以下DDX用于合并PDF源元素中标识的两个pdf文档。
 
 ```xml

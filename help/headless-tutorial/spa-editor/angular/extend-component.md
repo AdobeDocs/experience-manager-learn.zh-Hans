@@ -1,8 +1,8 @@
 ---
-title: 扩展组件 | AEM SPA编辑器和Angular快速入门
-description: 了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件。 了解如何向现有组件添加属性和内容是扩展AEM SPA Editor实施功能的强大技术。 了解如何使用委派模式来扩展Sling资源合并器的Sling模型和功能。
+title: 扩展组件 | AEM SPA Editor和Angular快速入门
+description: 了解如何扩展要与AEM SPA Editor一起使用的现有核心组件。 了解如何将属性和内容添加到现有组件是一种强大的技术，可扩展AEM SPA Editor实施的功能。 了解如何使用委派模式来扩展Sling资源合并器的Sling模型和功能。
 feature: SPA Editor, Core Components
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5871
 thumbnail: 5871-spa-angular.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
 duration: 435
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1713'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 扩展核心组件 {#extend-component}
 
-了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件。 了解如何扩展现有组件是一种强大的技术，可用于自定义和扩展AEM SPA Editor实施的功能。
+了解如何扩展要与AEM SPA Editor一起使用的现有核心组件。 了解如何扩展现有组件是一种强大的技术，可用于自定义和扩展AEM SPA Editor实施的功能。
 
 ## 目标
 
@@ -30,13 +30,13 @@ ht-degree: 0%
 
 ## 您将构建的内容
 
-在本章中，创建了一个新的`Card`组件。 `Card`组件扩展了[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)，添加了其他内容字段（如“标题”和“行动号召”按钮），以对SPA中的其他内容执行Teaser角色。
+在本章中，创建了一个新的`Card`组件。 `Card`组件扩展了[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)，添加了其他内容字段（如“标题”和“行动号召”按钮）来为SPA中的其他内容执行Teaser角色。
 
 卡组件![的最终创作](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> 在现实实施中，简单地使用[Teaser组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html)可能比扩展[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)来创建`Card`组件更合适，具体取决于项目要求。 始终建议尽可能直接使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+> 在现实实施中，简单地使用[Teaser组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html)可能比扩展[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)来创建`Card`组件更合适，具体取决于项目要求。 始终建议尽可能直接使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)。
 
 ## 先决条件
 
@@ -64,15 +64,15 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. 为传统[WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0)安装完成的包。 由[WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/latest)提供的图像已在WKND SPA上重用。 可以使用[AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp)安装包。
+3. 为传统[WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0)安装完成的包。 由[WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/latest)提供的图像在WKND SPA上重用。 可以使用[AEM的包管理器](http://localhost:4502/crx/packmgr/index.jsp)安装该包。
 
    ![包管理器安装wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
 您始终可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution)上查看完成的代码，或通过切换到分支`Angular/extend-component-solution`在本地签出代码。
 
-## Inspect初始卡实施
+## 检查初始卡实施
 
-章节起始代码提供了初始卡组件。 Inspect是信息卡实施的起点。
+章节起始代码提供了初始卡组件。 检查卡实施的起点。
 
 1. 在您选择的IDE中，打开`ui.apps`模块。
 2. 导航到`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/card`并查看`.content.xml`文件。
@@ -90,7 +90,7 @@ ht-degree: 0%
 
    属性`sling:resourceSuperType`指向`wknd-spa-angular/components/image`，表示`Card`组件继承了WKND SPA图像组件的功能。
 
-3. Inspect文件`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image/.content.xml`：
+3. 检查文件`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image/.content.xml`：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -101,11 +101,11 @@ ht-degree: 0%
        componentGroup="WKND SPA Angular - Content"/>
    ```
 
-   请注意，`sling:resourceSuperType`指向`core/wcm/components/image/v2/image`。 这表示WKND SPA图像组件继承了核心组件图像的功能。
+   请注意，`sling:resourceSuperType`指向`core/wcm/components/image/v2/image`。 这表明WKND SPA图像组件继承了核心组件图像的功能。
 
    也称为[代理模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Sling资源继承是一种强大的设计模式，它允许子组件继承功能并在需要时扩展/覆盖行为。 Sling继承支持多个继承级别，因此最终，新`Card`组件会继承核心组件图像的功能。
 
-   许多开发团队都努力做到自我（不要重复自己）。 Sling继承使得在AEM中可以做到这一点。
+   许多开发团队都努力做到自我（不要重复自己）。 通过Sling继承，可在AEM中实现这一点。
 
 4. 在`card`文件夹下，打开文件`_cq_dialog/.content.xml`。
 
@@ -130,7 +130,7 @@ ht-degree: 0%
 
    ![Angular组件启动](assets/extend-component/angular-card-component-start.png)
 
-7. Inspect文件`card.component.ts`。
+7. 检查文件`card.component.ts`。
 
    已用标准`MapTo`函数对组件进行截断，以便映射到AEM `Card`组件。
 
@@ -152,7 +152,7 @@ ht-degree: 0%
 
 ## 更新模板策略
 
-对于此初始`Card`实现，检查AEM SPA编辑器中的功能。 要查看初始`Card`组件，需要更新模板策略。
+对于此初始`Card`实施，检查AEM SPA编辑器中的功能。 要查看初始`Card`组件，需要更新模板策略。
 
 1. 将起始代码部署到AEM的本地实例（如果尚未部署）：
 
@@ -161,7 +161,7 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-2. 导航到[http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html)处的SPA页面模板。
+2. 导航到[http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html)上的SPA页面模板。
 3. 更新布局容器的策略以将新的`Card`组件添加为允许的组件：
 
    ![更新布局容器策略](assets/extend-component/card-component-allowed.png)
@@ -198,9 +198,9 @@ ht-degree: 0%
 
 6. 更新&#x200B;**资产元数据**&#x200B;选项卡以添加&#x200B;**替换文本**&#x200B;和&#x200B;**字幕**&#x200B;的值。
 
-   更新对话框后，当前未显示其他更改。 要向Angular组件公开新字段，我们需要更新`Card`组件的Sling模型。
+   更新对话框后，当前未显示其他更改。 要将新字段公开给Angular组件，我们需要更新`Card`组件的Sling模型。
 
-7. 打开新选项卡并导航到[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card)。 Inspect`/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid`下的内容节点以查找`Card`组件内容。
+7. 打开新选项卡并导航到[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card)。 检查`/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid`下的内容节点以查找`Card`组件内容。
 
    ![CRXDE-Lite组件属性](assets/extend-component/crxde-lite-properties.png)
 
@@ -257,7 +257,7 @@ ht-degree: 0%
    }
    ```
 
-   这些方法通过JSON模型API公开，并传递给Angular组件。
+   这些方法通过JSON模型API公开，并传递到Angular组件。
 
 3. 打开`CardImpl.java`。 这是`Card.java`接口的实现。 为加速教程，已部分修剪此实施。  请注意使用的是`@Model`和`@Exporter`注释，以确保可以通过Sling模型导出器将Sling模型序列化为JSON。
 
@@ -380,7 +380,7 @@ ht-degree: 0%
 
 ## 更新Angular组件
 
-现在，JSON模型已使用`ctaLinkURL`、`ctaText`、`cardTitle`和`cardLastModified`的新属性填充，我们可以更新Angular组件以显示这些属性。
+现在，JSON模型已为`ctaLinkURL`、`ctaText`、`cardTitle`和`cardLastModified`填充新属性，我们可以更新Angular组件以显示这些属性。
 
 1. 返回到IDE并打开`ui.frontend`模块。 （可选）从新终端窗口启动webpack开发服务器以实时查看更改：
 
@@ -450,7 +450,7 @@ ht-degree: 0%
    >
    > 您可以在此处](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card)查看已完成的[Angular卡组件代码。
 
-5. 使用Maven从项目的根目录部署对AEM的完整更改：
+5. 使用Maven从项目的根目录中部署对AEM的完整更改：
 
    ```shell
    $ cd aem-guides-wknd-spa

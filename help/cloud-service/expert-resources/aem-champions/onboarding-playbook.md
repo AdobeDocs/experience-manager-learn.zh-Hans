@@ -1,7 +1,7 @@
 ---
 title: AEM Champion提示和技巧 — Cloud Manager入门行动手册
 description: 查看这些有关Cloud Manager入门的提示以及AEM冠军和专家Rakesh Pasupuleti的入门剧本。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager
 topic: Administration
 role: Admin, Architect
@@ -11,7 +11,7 @@ last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13228
 exl-id: d1745cea-906b-46fa-adcc-7da6e7ee95db
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 1%
@@ -32,4 +32,4 @@ ht-degree: 1%
 
 ## 其他资源 {#additional-resources}
 
-* [AEM as a Cloud Service载入历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html?lang=zh-Hans) — 新系统管理员的分步指南，用于最初配置Cloud资源并根据用户的工作职责为其分配角色，以便团队的每个成员都可以登录和访问其新的AEM as a Cloud Service资源
+* [AEM as a Cloud Service载入历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html?lang=zh-hans) — 新系统管理员的分步指南，用于最初配置Cloud资源并根据用户的工作职责为其分配角色，以便团队的每个成员都可以登录和访问其新的AEM as a Cloud Service资源

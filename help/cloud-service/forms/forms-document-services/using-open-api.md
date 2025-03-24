@@ -4,12 +4,13 @@ description: 为服务器到服务器身份验证配置基于OpenAPI的AEM Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
+exl-id: b9c0b04b-6131-4752-b2f0-58e1fb5f40aa
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 2%
@@ -18,7 +19,7 @@ ht-degree: 2%
 
 # 在AEM Forms as a Cloud Service上配置基于OpenAPI的AEM Forms通信API
 
-## 前提条件
+## 先决条件
 
 * AEM Forms as a Cloud Service的最新实例。
 * 所有必需的[产品配置文件均已添加到环境中。](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis)

@@ -2,7 +2,7 @@
 title: AEM Assets中的图像的自定义智能标记
 description: 了解如何训练AEM Assets的智能标记以将自定义术语应用于资源。
 feature: Smart Tags
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-795
 thumbnail: 22254.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: 06f2ae4d-c18e-45ed-96d7-ddc6f9c8d829
 duration: 751
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 1%
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 图像的自定义智能标记需要设置[图像的智能标记](./image-smart-tags.md#set-up)。
 
-了解如何使用智能内容服务和Adobe I/O，在AEM Assets中配置智能标记培训。图像的自定义智能标记
+了解如何使用智能内容服务和Adobe I/O在AEM Assets中配置智能标记培训。图像的自定义智能标记
 
 >[!VIDEO](https://video.tv.adobe.com/v/23405?quality=12&learn=on)
 

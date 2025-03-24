@@ -5,12 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
+exl-id: aef151bc-daf1-4abd-914a-6299f3fb58e4
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 1%
@@ -19,7 +20,7 @@ ht-degree: 1%
 
 # 根据下拉组件创建国家/地区下拉组件
 
-在Adobe Experience Manager (AEM)中创建新核心组件是一个令人兴奋的过程，它涉及多个步骤，包括定义组件结构、自定义对话框以及实施用于动态功能的Sling模型。
+在Adobe Experience Manager (AEM)中创建新核心组件是一个令人振奋的过程，它涉及多个步骤，包括定义组件结构、自定义对话框以及实施用于动态功能的Sling模型。
 
 在本教程结束时，您将掌握如何：
 
@@ -35,7 +36,7 @@ ht-degree: 1%
 
 在Adobe Experience Manager (AEM)中构建新的核心组件需要满足多个先决条件才能确保顺利的开发过程。 以下是开始使用前您需要具备的条件：
 
-* AEM开发环境：在本地运行的功能云就绪安装
+* AEM开发环境：可在本地运行的功能云就绪安装
 * 访问AEM开发工具，如Visual Studio Code或IntelliJ
 * 使用最新原型的MAven设置和AEM项目
 * 了解AEM概念的基础知识

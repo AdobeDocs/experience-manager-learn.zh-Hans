@@ -1,7 +1,7 @@
 ---
 title: 记录和测试表单过程
 description: 在Workbench中调试表单流程
-version: 6.5
+version: Experience Manager 6.5
 feature: Workbench
 topic: Development
 role: User
@@ -10,7 +10,7 @@ doc-type: Value Video
 last-substantial-update: 2024-06-11T00:00:00Z
 jira: KT-15638
 exl-id: d384627c-4b2f-4850-a599-e2b0e8f53320
-source-git-commit: 3001560b62cb4dbec92179a9db42abd84590c400
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '28'
 ht-degree: 0%

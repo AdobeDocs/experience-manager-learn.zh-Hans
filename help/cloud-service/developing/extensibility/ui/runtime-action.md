@@ -2,7 +2,7 @@
 title: AEM UI扩展Adobe I/O Runtime操作
 description: 了解如何创建AEM UI扩展模式。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: 3062900a-0461-4c6f-81e6-c76a7f613804
 duration: 240
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 AEM UI扩展可以选择包括任意数量的[Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/)。
 
-Adobe I/O Runtime操作是可由扩展调用的无服务器函数。 操作对于执行需要与AEM或其他AdobeWeb服务交互的工作很有用。 通常，操作对执行长时间运行（超过几秒钟）的任务，或向AEM或其他Web服务发出HTTP请求最有用。
+Adobe I/O Runtime操作是可由扩展调用的无服务器函数。 操作对于执行需要与AEM或其他Adobe Web服务交互的工作很有用。 通常，操作最适合执行长时间运行（超过几秒钟）的任务，或向AEM或其他Web服务发出HTTP请求。
 
 使用Adobe I/O Runtime操作执行工作的好处包括：
 
@@ -34,11 +34,11 @@ Adobe I/O Runtime操作是可由扩展调用的无服务器函数。 操作对�
 
 在AEM UI扩展的上下文中，操作通常用于直接与AEM as a Cloud Service通信：
 
-+ 从AEM收集有关所选内容或当前内容的相关数据
++ 从AEM中收集有关所选内容或当前内容的相关数据
 + 对内容执行自定义操作
 + 定制内容创建
 
-虽然AEM UI扩展出现在特定AEM UI中，但扩展及其支持操作可以调用任何可用的AEM HTTP API，包括自定义AEM API端点。
+虽然AEM UI扩展出现在特定的AEM UI中，但扩展及其支持操作可以调用任何可用的AEM HTTP API，包括自定义AEM API端点。
 
 ## 调用操作
 
@@ -110,7 +110,7 @@ export default ExtensionRegistration;
 
 ### 从模式
 
-Adobe I/O Runtime操作可以直接从模式中调用，以执行更多涉及的工作，特别是依赖与AEM as a Cloud Service通信、AdobeWeb服务甚至第三方服务的工作。
+Adobe I/O Runtime操作可以直接从模式中调用，以执行更多涉及的工作，特别是依赖与AEM as a Cloud Service、Adobe Web服务甚至第三方服务通信的工作。
 
 Adobe I/O Runtime操作是在无服务器Adobe I/O Runtime环境中运行的基于Node.js的JavaScript应用程序。 这些操作可由扩展SPA通过HTTP寻址。
 
@@ -313,7 +313,7 @@ async function main (params) {
 + [完成AEM as a Cloud Service API引用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
 
 
-## Adobenpm模块
+## Adobe npm模块
 
 以下是用于开发Adobe I/O Runtime操作的有用npm模块：
 
@@ -324,8 +324,8 @@ async function main (params) {
    + [Adobe Target库](https://github.com/adobe/aio-lib-target)
    + [Adobe Analytics库](https://github.com/adobe/aio-lib-analytics)
    + [Adobe Campaign Standard库](https://github.com/adobe/aio-lib-campaign-standard)
-   + [Adobe客户配置文件库](https://github.com/adobe/aio-lib-customer-profile)
+   + [Adobe客户个人资料库](https://github.com/adobe/aio-lib-customer-profile)
    + [Adobe Audience Manager客户数据库](https://github.com/adobe/aio-lib-audience-manager-cd)
-   + [Adobe I/O活动](https://github.com/adobe/aio-lib-events)
+   + [Adobe I/O Events](https://github.com/adobe/aio-lib-events)
 + [@adobe/aio-lib-core-networking](https://github.com/adobe/aio-lib-core-networking)
 + [@adobe/node-httptransfer](https://github.com/adobe/node-httptransfer)

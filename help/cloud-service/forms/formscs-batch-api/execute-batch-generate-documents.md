@@ -4,14 +4,14 @@ description: 通过执行批处理启动文档生成过程
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-9674
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 17f91f81-96d8-49d6-b1e3-53d8899695ae
 duration: 219
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 此API需要空json对象作为请求正文中的参数。
 此API在响应标头中返回由**位置**密钥标识的唯一URL。
-对此唯一URL的GET请求将告知您批次执行的状态
+对于此唯一URL的GET请求将告知您批量执行的状态
 
 以下视频演示了批量配置的触发
 

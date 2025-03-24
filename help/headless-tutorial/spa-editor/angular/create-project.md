@@ -1,8 +1,8 @@
 ---
-title: SPA编辑器项目 | AEM SPA编辑器和Angular快速入门
+title: SPA编辑器项目 | AEM SPA Editor和Angular快速入门
 description: 了解如何使用Adobe Experience Manager (AEM) Maven项目作为与AEM SPA编辑器集成的Angular应用程序的起点。
 feature: SPA Editor, AEM Project Archetype
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5309
 thumbnail: 5309-spa-angular.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
 duration: 252
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 1%
@@ -24,14 +24,14 @@ ht-degree: 1%
 
 ## 目标
 
-1. 了解基于Maven原型构建的新AEM SPA Editor项目的结构。
+1. 了解从Maven原型构建的新AEM SPA Editor项目的结构。
 2. 将起始项目部署到AEM的本地实例。
 
 ## 您将构建的内容
 
-在本章中，基于[AEM项目原型](https://github.com/adobe/aem-project-archetype)部署了新的AEM项目。 AEM项目通过非常简单的AngularSPA起点引导。 本章中使用的项目将作为WKND SPA实施的基础，并在以后的章节中构建该项目。
+在本章中，将基于[AEM项目原型](https://github.com/adobe/aem-project-archetype)部署新的AEM项目。 AEM项目通过非常简单的Angular SPA起点引导。 本章中使用的项目将作为WKND SPA实施的基础，并在以后的章节中构建该项目。
 
-![WKND SPAAngular入门项目](./assets/create-project/what-you-will-build.png)
+![WKND SPA Angular入门项目](./assets/create-project/what-you-will-build.png)
 
 *经典的Hello World消息。*
 
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 ## 获取项目
 
-有多个选项可为AEM创建Maven多模块项目。 本教程使用最新的[AEM项目原型](https://github.com/adobe/aem-project-archetype)作为教程代码的基础。 为了支持多个AEM版本，已对项目代码进行了修改。 请查阅[关于向后兼容性的说明](overview.md#compatibility)。
+有多个选项可为AEM创建Maven Multi-module项目。 本教程使用最新的[AEM项目原型](https://github.com/adobe/aem-project-archetype)作为教程代码的基础。 为了支持多个AEM版本，已对项目代码进行了修改。 请查阅[关于向后兼容性的说明](overview.md#compatibility)。
 
 >[!CAUTION]
 >
@@ -78,10 +78,10 @@ ht-degree: 1%
    | 属性 | 价值 |
    |-----------------|---------------------------------------|
    | aemVersion | 云 |
-   | appTitle | WKND SPAANGULAR |
+   | appTitle | WKND SPA ANGULAR |
    | appId | wknd-spa-angular |
    | groupId | com.adobe.aem.guides |
-   | frontendmodule | angular |
+   | frontendmodule | 角度 |
    | 包 | com.adobe.aem.guides.wknd.spa.angular |
    | includeExamples | n |
 
@@ -91,9 +91,9 @@ ht-degree: 1%
 
 ## 构建项目
 
-接下来，使用Maven编译、生成项目代码并将其部署到AEM的本地实例。
+接下来，使用Maven编译、构建项目代码并将其部署到AEM的本地实例。
 
-1. 确保AEM的实例正在端口&#x200B;**4502**&#x200B;上本地运行。
+1. 确保AEM的实例在端口&#x200B;**4502**&#x200B;上本地运行。
 2. 从命令行终端验证Maven是否已安装：
 
    ```shell
@@ -144,9 +144,9 @@ ht-degree: 1%
 
    ![WKND SPA包](./assets/create-project/package-manager.png)
 
-   项目所需的所有自定义代码都捆绑在这些包中，并安装在AEM运行时中。
+   项目所需的所有自定义代码将捆绑在这些包中，并安装在AEM运行时中。
 
-6. 您还应该看到`spa.project.core`和`core.wcm.components`的多个包。 这些是原型自动包含的依赖项。 有关[AEM核心组件的详细信息见此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+6. 您还应该看到`spa.project.core`和`core.wcm.components`的多个包。 这些是原型自动包含的依赖项。 有关[AEM核心组件的详细信息见此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)。
 
 ## 创作内容
 
@@ -168,7 +168,7 @@ ht-degree: 1%
 
    请注意，创作体验类似于传统AEM Sites页面的创作体验。 当前可用的组件数量有限。 在本教程中会添加更多内容。
 
-## Inspect单页应用程序
+## 检查单页应用程序
 
 接下来，验证这是使用浏览器的开发人员工具的单页应用程序。
 
@@ -191,7 +191,7 @@ ht-degree: 1%
    ...
    ```
 
-   `clientlib-angular.min.js`是加载到页面上的AngularSPA，负责呈现内容。
+   `clientlib-angular.min.js`是加载到页面并负责呈现内容的Angular SPA。
 
    *内容来自何处？*
 
@@ -200,11 +200,11 @@ ht-degree: 1%
 
    ![XHR请求](./assets/create-project/xhr-requests.png)
 
-   应向[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)发出请求。 该文档包含所有将驱动SPA的内容，并使用JSON格式化。
+   应向[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)发出请求。 其中包含将驱动SPA的所有内容（以JSON格式）。
 
 5. 在新选项卡中，打开[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
 
-   请求`en.model.json`表示将驱动应用程序的内容模型。 Inspect JSON输出，您应该能够找到表示&#x200B;**[!UICONTROL Text]**&#x200B;组件的代码片段。
+   请求`en.model.json`表示将驱动应用程序的内容模型。 检查JSON输出，您应该能够找到表示&#x200B;**[!UICONTROL Text]**&#x200B;组件的代码片段。
 
    ```json
    ...
@@ -222,7 +222,7 @@ ht-degree: 1%
    ...
    ```
 
-   在下一章中，我们将检查JSON内容如何从AEM组件映射到SPA组件，以形成AEM SPA编辑器体验的基础。
+   在下一章中，我们将检查JSON内容如何从AEM组件映射到SPA组件，以便构成AEM SPA编辑器体验的基础。
 
    >[!NOTE]
    >

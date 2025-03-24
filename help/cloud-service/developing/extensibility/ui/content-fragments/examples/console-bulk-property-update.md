@@ -2,7 +2,7 @@
 title: 批量属性更新示例AEM内容片段控制台扩展
 description: 批量更新内容片段属性的示例AEM内容片段控制台扩展。
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 duration: 1362
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
-此示例AEM内容片段控制台扩展是一个[操作栏](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/)扩展，它将内容片段属性批量更新为公共值。
+此示例AEM内容片段控制台扩展是一个[操作栏](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/)扩展，用于将内容片段属性批量更新为公共值。
 
 示例扩展的功能流程如下所示：
 
@@ -32,8 +32,8 @@ ht-degree: 0%
 1. 选择内容片段，然后单击[操作栏](#extension-registration)中扩展的按钮以打开[模式](#modal)。
 2. [模式](#modal)显示使用[React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)生成的自定义输入表单。
 3. 提交表单会将所选内容片段的列表和AEM主机发送到[自定义Adobe I/O Runtime操作](#adobe-io-runtime-action)。
-4. [Adobe I/O Runtime操作](#adobe-io-runtime-action)验证输入并向AEM发出HTTPPUT请求以更新选定的内容片段。
-5. 用于更新指定属性的每个内容片段的一系列HTTPPUT。
+4. [Adobe I/O Runtime操作](#adobe-io-runtime-action)验证输入并向AEM发出HTTP PUT请求以更新选定的内容片段。
+5. 每个内容片段使用一系列HTTP PUT来更新指定的属性。
 6. AEM as a Cloud Service将保留对内容片段的属性更新，并返回对Adobe I/O Runtime操作的成功或失败响应。
 7. 该模式窗口收到了Adobe I/O Runtime操作的响应，并显示成功批量更新的列表。
 
@@ -168,10 +168,10 @@ export default ExtensionRegistration;
 1. 批量属性更新表单，允许用户指定要更新的属性名称和值
 1. 批量属性更新操作的响应，其中列出了已更新的内容片段和无法更新的内容片段
 
-重要的是，与扩展中的AEM的任何交互都应该委派给[AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，该操作是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中运行的单独的无服务器进程。
+重要的是，与扩展中的AEM的任何交互都应委派给[AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，该操作是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中运行的单独无服务器进程。
 使用Adobe I/O Runtime操作与AEM通信是为了避免跨源资源共享(CORS)连接问题。
 
-提交批量属性更新表单时，自定义`onSubmitHandler()`将调用Adobe I/O Runtime操作，传递当前AEM主机（域）和用户的AEM访问令牌，从而调用[AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)来更新内容片段。
+提交批量属性更新表单后，自定义`onSubmitHandler()`将调用Adobe I/O Runtime操作，传递当前AEM主机（域）和用户的AEM访问令牌，从而调用[AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)来更新内容片段。
 
 当收到来自Adobe I/O Runtime操作的响应时，模式会更新以显示批量属性更新操作的结果。
 
@@ -434,7 +434,7 @@ export default function BulkPropertyUpdateModal() {
 ### Adobe I/O Runtime操作
 
 AEM扩展App Builder应用程序可以定义或使用0个或多个Adobe I/O Runtime操作。
-Adobe运行时操作应负责需要与AEM或其他AdobeWeb服务交互的工作。
+Adobe Runtime操作应负责需要与AEM或其他Adobe Web服务交互的工作。
 
 在此示例应用程序中，使用默认名称`generic`的Adobe I/O Runtime操作负责：
 

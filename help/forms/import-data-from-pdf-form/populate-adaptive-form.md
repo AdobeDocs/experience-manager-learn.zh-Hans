@@ -2,14 +2,14 @@
 title: 使用setData方法填充自适应表单
 description: 发送上传的pdf文件以进行数据提取，并使用提取的数据填充自适应表单
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 jira: KT-14196
 exl-id: f380d589-6520-4955-a6ac-2d0fcd5aaf3f
 duration: 32
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 进行Ajax调用
 
-当用户上传了pdf文件时，我们需要对servlet进行POST调用，并将上传的PDF文档传递到POST请求中。 Post请求会返回crx存储库中导出数据的路径
+当用户上传PDF文件时，我们需要对servlet进行POST调用，并在POST请求中传递上传的PDF文档。 POST请求会返回crx存储库中导出数据的路径
 
 ```javascript
 $("#fileElem").on('change', function (e) {

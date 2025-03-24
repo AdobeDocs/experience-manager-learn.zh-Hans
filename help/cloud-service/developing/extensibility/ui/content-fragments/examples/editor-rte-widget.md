@@ -2,7 +2,7 @@
 title: 将构件添加到富文本编辑器(RTE)
 description: 了解如何在AEM内容片段编辑器中向富文本编辑器(RTE)添加构件
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 167a4b11-1202-4c7a-b022-f3f996348a4e
 duration: 476
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -31,9 +31,9 @@ ht-degree: 0%
 
 使用`rte`扩展点将&#x200B;**构件**&#x200B;添加到内容片段编辑器中的&#x200B;**RTE**。 使用`rte`扩展点的`getWidgets()`方法添加了一个或多个小组件。 它们是通过按`{`特殊键打开上下文菜单选项来触发的，然后选择所需的构件以加载自定义对话框UI。
 
-此示例说明如何添加名为&#x200B;_折扣代码列表_&#x200B;的小组件以在RTE内容中查找、选择和添加特定于WKND冒险的折扣代码。 这些折扣代码可以在外部系统中进行管理，如Order Management System (OMS)、产品信息管理(PIM)、自主开发的应用程序或AdobeAppBuilder操作。
+此示例说明如何添加名为&#x200B;_折扣代码列表_&#x200B;的小组件以在RTE内容中查找、选择和添加特定于WKND冒险的折扣代码。 这些折扣代码可以在外部系统中管理，如Order Management System (OMS)、产品信息管理(PIM)、自主开发的应用程序或Adobe AppBuilder操作。
 
-为了简单起见，此示例使用[AdobeReact Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架开发小部件或对话框UI以及硬编码的WKND冒险名称、折扣代码数据。
+为了简单起见，此示例使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架开发构件或对话框UI以及硬编码的WKND冒险名称、折扣代码数据。
 
 ## 扩展点
 
@@ -116,13 +116,13 @@ export default ExtensionRegistration;
 
 ### 创建`DiscountCodes` React组件{#create-widget-react-component}
 
-使用[AdobeReact Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架创建构件或对话框UI。 `DiscountCodes`组件代码如下所示，以下是主要亮点：
+该构件或对话框UI是使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架创建的。 `DiscountCodes`组件代码如下所示，以下是主要亮点：
 
 + UI是使用React Spectrum组件呈现的，如[ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html)、[ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html)、[Button](https://react-spectrum.adobe.com/react-spectrum/Button.html)
-+ `adventureDiscountCodes`数组具有冒险名称和折扣代码的硬编码映射。 在真实场景中，此数据可以从AdobeAppBuilder操作或外部系统（如PIM、OMS或自主开发的或基于云提供商的API网关）中检索。
++ `adventureDiscountCodes`数组具有冒险名称和折扣代码的硬编码映射。 在现实场景中，此数据可以从Adobe AppBuilder操作或PIM、OMS等外部系统或自主开发的或基于云提供商的API网关中检索。
 + 使用`useEffect` [React挂接](https://react.dev/reference/react/useEffect)初始化`guestConnection`，并将其作为组件状态进行管理。 用于与AEM主机通信。
 + `handleDiscountCodeChange`函数获取所选冒险名称的折扣代码并更新状态变量。
-+ 使用`guestConnection`对象的`addDiscountCode`函数提供了要执行的RTE指令。 在本例中，将插入RTE中的实际折扣代码的`insertContent`指令和HTML代码段。
++ 使用`guestConnection`对象的`addDiscountCode`函数提供了要执行的RTE指令。 在本例中，`insertContent`指令和实际折扣代码的HTML代码段将插入到RTE中。
 
 `src/aem-cf-editor-1/web-src/src/components/DiscountCodes.js`
 

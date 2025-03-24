@@ -1,7 +1,7 @@
 ---
 title: 将组件控制台与AEM Sites结合使用
 description: 组件控制台为开发人员和管理员提供了一个中央位置，用于管理Sites实施中的所有各种组件。 以下视频详细介绍了组件控制台的功能。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Core Components
 topic: Content Management
 role: User
@@ -9,7 +9,7 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: 6f33f121-5564-4c46-ab56-7ea382a0ab5a
 duration: 224
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 1%
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 组件控制台提供了以下功能：
 
-* 概述：当前AEM实例上所有可用的已安装组件列表
+* 概述：当前的AEM实例上所有可用的已安装组件列表
 * [!UICONTROL 属性]：显示组件的标题、组和描述等元数据
 * [!UICONTROL 策略]：显示给定组件和相关模板的任何现有策略
 * [!UICONTROL 实时使用情况]：显示包含该组件的页面的列表

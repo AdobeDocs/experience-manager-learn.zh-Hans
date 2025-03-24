@@ -1,7 +1,7 @@
 ---
 title: Sitemap
 description: 了解如何通过为AEM Sites创建站点地图来帮助提升SEO。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Core Components
 topic: Content Management
 role: Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 937
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 4%
@@ -33,7 +33,7 @@ ht-degree: 4%
 
 ### 绝对站点地图URL{#absolute-sitemap-urls}
 
-通过使用[Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)，AEM Sitemap支持绝对URL。 这是通过在生成Sitemap(通常为AEM Publish服务)的AEM服务上创建映射节点来完成的。
+AEM的Sitemap通过使用[Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)支持绝对URL。 这是通过在生成Sitemap(通常为AEM Publish服务)的AEM服务上创建映射节点来完成的。
 
 在`/etc/map/https`下可以定义`https://wknd.com`的Sling映射节点定义示例，如下所示：
 
@@ -77,7 +77,7 @@ ht-degree: 4%
 
 ### Apache Webserver重写规则
 
-请确保`.xml`个Sitemap HTTP请求被路由到正确的基础AEM页面。 如果未使用URL缩短功能，或使用Sling映射实现URL缩短功能，则无需此配置。
+确保`.xml`个Sitemap HTTP请求被路由到正确的基础AEM页面。 如果未使用URL缩短功能，或使用Sling映射实现URL缩短功能，则无需此配置。
 
 `dispatcher/src/conf.d/rewrites/rewrite.rules`
 

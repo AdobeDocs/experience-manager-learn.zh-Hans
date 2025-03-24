@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe XD进行UI规划 | AEM快速站点创建
 description: 了解如何使用Adobe XD UI工具包设计和加速Adobe Experience Manager Sites实施。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 3155e0fa-56b7-4a52-8eef-fee488e95f68
 recommendations: noDisplay, noCatalog
 duration: 646
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 2%
@@ -46,7 +46,7 @@ ht-degree: 2%
 高级步骤：
 
 1. 下载[标准站点模板XD文件](https://github.com/adobe/aem-site-template-standard/raw/main/files/wireframe.xd)。
-1. Adobe XD中的Inspect UI套件。
+1. 检查Adobe XD中的UI套件。
 1. 模拟将设计交付给前端开发人员。
 
 ## WKND UI套件 {#wknd-ui-kit}
@@ -56,7 +56,7 @@ ht-degree: 2%
 高级步骤：
 
 1. 下载[WKND文章XD文件](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)。
-1. Inspect WKND文章模板的设计。
+1. 检查WKND文章模板的设计。
 
 ## 恭喜！ {#congratulations}
 

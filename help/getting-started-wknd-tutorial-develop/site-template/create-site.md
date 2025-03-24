@@ -1,7 +1,7 @@
 ---
 title: 创建站点 | AEM快速站点创建
-description: 了解如何使用站点创建向导生成新网站。 由Adobe提供的标准站点模板是新站点的起点。
-version: Cloud Service
+description: 了解如何使用站点创建向导生成新网站。 Adobe提供的标准站点模板是新站点的起点。
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
 recommendations: noDisplay, noCatalog
 duration: 198
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
@@ -37,14 +37,14 @@ ht-degree: 0%
 
 1. 了解如何使用站点创建向导生成新站点。
 1. 了解站点模板的作用。
-1. 浏览生成的AEM站点。
+1. 浏览生成的AEM网站。
 
 ## 登录Adobe Experience Manager Author {#author}
 
-第一步，登录到您的AEM as a Cloud Service环境。 AEM环境在&#x200B;**创作服务**&#x200B;和&#x200B;**Publish服务**&#x200B;之间拆分。
+第一步，登录到您的AEM as a Cloud Service环境。 AEM环境在&#x200B;**创作服务**&#x200B;和&#x200B;**发布服务**&#x200B;之间拆分。
 
 * **作者服务** — 在其中创建、管理和更新网站内容。 通常只有内部用户有权访问&#x200B;**作者服务**，并且处于登录屏幕后面。
-* **Publish服务** — 托管实时网站。 这是最终用户将看到的服务，通常公开可用。
+* **发布服务** — 托管实时网站。 这是最终用户将看到的服务，通常公开可用。
 
 大部分教程将使用&#x200B;**作者服务**&#x200B;进行。
 
@@ -68,9 +68,9 @@ ht-degree: 0%
    >
    >建议在此教程中使用&#x200B;**开发**&#x200B;环境。
 
-1. 已向AEM **创作服务**&#x200B;启动新选项卡。 单击&#x200B;**使用Adobe**&#x200B;登录，您应该使用相同的Experience Cloud凭据自动登录。
+1. 已向AEM **创作服务**&#x200B;启动新选项卡。 单击&#x200B;**使用Adobe登录**，您应该使用相同的Experience Cloud凭据自动登录。
 
-1. 在重定向并验证之后，您现在应该会看到AEM开始屏幕。
+1. 在经过重定向和身份验证后，您现在应该会看到AEM开始屏幕。
 
    ![AEM开始屏幕](assets/create-site/aem-start-screen.png)
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 ## 下载基本站点模板
 
-站点模板为新站点提供起点。 站点模板包括一些基本主题、页面模板、配置和示例内容。 确切地说，站点模板中包含的内容取决于开发人员。 Adobe提供了&#x200B;**Basic站点模板**&#x200B;以加速新实施。
+站点模板为新站点提供起点。 站点模板包括一些基本主题、页面模板、配置和示例内容。 确切地说，站点模板中包含的内容取决于开发人员。 Adobe提供了&#x200B;**基本站点模板**&#x200B;以加速新实施。
 
 1. 打开新的浏览器选项卡，并导航到GitHub上的基本站点模板项目： [https://github.com/adobe/aem-site-template-standard](https://github.com/adobe/aem-site-template-standard)。 该项目是开放源码的，并许可任何人使用。
 1. 单击&#x200B;**版本**&#x200B;并导航到[最新版本](https://github.com/adobe/aem-site-template-standard/releases/latest)。
@@ -104,7 +104,7 @@ ht-degree: 0%
 
    上传从上一个练习下载的&#x200B;**.zip**&#x200B;模板文件。
 
-1. 选择&#x200B;**基本AEM站点模板**&#x200B;并单击&#x200B;**下一步**。
+1. 选择&#x200B;**基本AEM站点模板**，然后单击&#x200B;**下一步**。
 
    ![选择站点模板](assets/create-site/select-site-template.png)
 
@@ -142,4 +142,4 @@ ht-degree: 0%
 
 ### 后续步骤 {#next-steps}
 
-使用Adobe Experience Manager AEM中的页面编辑器在[创作内容和发布](author-content-publish.md)章节中更新网站的内容。 了解如何配置原子组件以更新内容。 了解AEM Author环境和Publish环境之间的区别，并了解如何将更新发布到实时网站。
+在Adobe Experience Manager、AEM中使用页面编辑器更新[创作内容和发布](author-content-publish.md)章节中的网站内容。 了解如何配置原子组件以更新内容。 了解AEM创作环境和发布环境之间的区别，并了解如何将更新发布到活动站点。

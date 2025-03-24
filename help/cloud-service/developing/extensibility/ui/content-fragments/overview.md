@@ -2,7 +2,7 @@
 title: AEM内容片段扩展
 description: 了解如何构建和部署AEM as a Cloud Service内容片段扩展
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ thumbnail: KT-11603.png
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 9164423b-a609-4bc5-9777-112d229ae748
 duration: 126
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 1%
@@ -25,7 +25,7 @@ AEM内容片段UI是一个功能强大的可扩展UI，用于管理创建、管�
 
 ## 内容片段控制台扩展点
 
-AEM (Adobe Experience Manager)中的内容片段控制台是一个用户界面，提供了用于管理和组织内容片段的集中位置。 它提供了一整套工具和功能来创建、编辑、发布和跟踪内容片段，使用户能够有效地跨各种渠道和接触点管理结构化内容。
+AEM (Adobe Experience Manager)中的内容片段控制台是一个用户界面，它为管理和组织内容片段提供了一个集中的位置。 它提供了一整套工具和功能来创建、编辑、发布和跟踪内容片段，使用户能够有效地跨各种渠道和接触点管理结构化内容。
 
 ![内容片段控制台](./assets/overview/cfc.png)
 
@@ -192,7 +192,7 @@ AEM内容片段编辑器是用于编辑内容片段的可扩展UI。 [AEM内容�
 
 ## 扩展示例
 
-欢迎使用AEM UI可扩展性代码示例集合！ 此资源旨在为您提供有关扩展Adobe Experience Manager (AEM)用户界面的实用演示和见解。 无论您是希望增强AEM功能的开发人员，这些代码示例都可用作有价值的参考。
+欢迎使用AEM UI可扩展性代码示例集合！ 此资源旨在为您提供有关扩展Adobe Experience Manager (AEM)用户界面的实用演示和见解。 无论您是希望增强AEM功能的开发人员，这些代码示例均可作为有价值的参考。
 
 <div class="columns is-multiline">
   <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Bulk property update">
@@ -227,7 +227,7 @@ AEM内容片段编辑器是用于编辑内容片段的可扩展UI。 [AEM内容�
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-image-generation-and-image-upload.md" title="基于OpenAI的图像生成和上传到AEM扩展">OpenAPI图像生成</a></p>
-                    <p class="is-size-6">浏览一个示例操作栏扩展，该扩展使用OpenAI生成图像，将其上传到AEM并更新所选内容片段上的图像属性。</p>
+                    <p class="is-size-6">探索一个示例操作栏扩展，该扩展使用OpenAI生成图像，将其上传到AEM并更新所选内容片段上的图像属性。</p>
                     <a href="./examples/console-image-generation-and-image-upload.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                     </a>

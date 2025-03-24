@@ -1,7 +1,7 @@
 ---
-title: 创建AEM站点页面的页面版本
+title: 创建AEM网站页面的页面版本
 description: 以下视频重点介绍如何创建页面版本、预览、恢复页面版本以及将当前页面版本与保存的页面版本进行比较。
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-4630
 thumbnail: 32151.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: cc659581-031d-4f2a-90c1-cf721e481689
 duration: 288
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 5%

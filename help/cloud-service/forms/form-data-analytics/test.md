@@ -5,15 +5,15 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Integrations, Development
 jira: KT-12557
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
 duration: 38
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 1%
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 ## 调试
 
-确保自适应表单使用的配置容器与包含AdobeLaunch配置的容器相同。
+确保自适应表单使用的配置容器与包含Adobe Launch配置的容器相同。
 
 要确认表单向Adobe Analytics发送数据，请执行以下操作
 
@@ -55,10 +55,10 @@ _satellite.setDebug(true)
 
 ## 使用Adobe Experience Platform Debugger
 
-将[AEP调试器扩展](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html)添加到浏览器（需要您登录）以获取更多调试信息
+将[AEP Debugger扩展](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html)添加到浏览器（需要您登录）以获取更多调试信息
 
 ![platform-debugger](assets/platform-debugger.png)
 
 ## 恭喜
 
-您已成功将AEM Formsas a Cloud Service与Adobe Analytics集成以报告表单数据字段。
+您已成功将AEM Forms as a Cloud Service与Adobe Analytics集成以报告表单数据字段。

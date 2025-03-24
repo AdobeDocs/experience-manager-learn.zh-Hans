@@ -3,14 +3,14 @@ title: 在自适应表单中显示二维码
 description: 在自适应表单中显示二维码
 feature: Adaptive Forms
 type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 jira: KT-15603
 last-substantial-update: 2024-05-28T00:00:00Z
 exl-id: 0c6079f4-601e-4a82-976c-71dbb2faa671
-source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 示例组件使用[QRCode.js](https://davidshimjs.github.io/qrcodejs/)。
 
-QRCode.js是一个用于生成QRCode的javascript库，它支持带有HTML5画布的跨浏览器以及DOM中的表标签。
+QRCode.js是用于生成QRCode的Javascript库，它支持带有HTML5画布的跨浏览器以及DOM中的表标记。
 
 组件根据在组件的configuration属性中指定的值生成二维码。
 ![图像](assets/qr-code-url.png)

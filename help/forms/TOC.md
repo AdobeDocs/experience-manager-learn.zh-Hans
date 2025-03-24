@@ -6,9 +6,9 @@ user-guide-description: 面向初学者和经验丰富的 AEM Forms 开发人员
 solution: Experience Manager, Experience Manager Forms
 breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 index: y
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2101'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 + [概述](overview.md)
 + [要遵循的最佳实践](adaptive-forms/best-practices-adaptive-forms.md)
-+ [使用AEM作者设置OKTA身份验证](adaptive-forms/single-sign-on-with-okta.md)
++ [使用AEM Author设置OKTA身份验证](adaptive-forms/single-sign-on-with-okta.md)
 + 创建您的第一个自适应表单{#creating-your-first-adaptive-form}
    + [1 — 简介和设置](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [2 — 创建自适应表单模板](creating-your-first-adaptive-form/create-adaptive-form-template.md)
@@ -54,7 +54,7 @@ ht-degree: 1%
    + [2 — 创建OSGi服务](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [3 — 创建Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
    + [4 — 包括第三方包](creating-your-first-osgi-bundle/include-third-party-jars.md)
-+ Adaptive Form {#adaptive-forms}
++ 自适应表单{#adaptive-forms}
    + [在Windows上安装AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [在Linux上安装32位软件包](adaptive-forms/installing-aem-form-on-linux.md)
    + [自适应Forms中的预填充服务](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
@@ -102,7 +102,7 @@ ht-degree: 1%
    + [在规则编辑器中使用表单数据模型的调用服务](adaptive-forms/service-data-model-technical-video-use.md)
    + [使用表单数据模型将二进制数据发布到AEM DAM](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
    + [创建可重复使用的工作流模型](adaptive-forms/re-usable-aem-forms-workflow-models-article.md)
-   + [自定义流程步骤AEM Workflow](adaptive-forms/custom-process-step-aem-workflow.md)
+   + [自定义流程步骤AEM工作流](adaptive-forms/custom-process-step-aem-workflow.md)
    + [预填充HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [使用Salesforce建立表单数据模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [将项目动态添加到选择组件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
@@ -175,7 +175,7 @@ ht-degree: 1%
    + [创建和配置自适应表单](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [为单个签名者配置自适应表单](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [为两个签名者配置自适应表单](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
-   + [配置Automated forms conversion服务](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
+   + [配置自动化表单转换服务](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [将PDF表单转换为自适应表单](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [配置已转换的自适应表单](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [在Acrobat Sign中使用XDP模板](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
@@ -201,7 +201,7 @@ ht-degree: 1%
    + [1 — 简介](custom-workflow-component/introduction.md)
    + [2写Java代码](custom-workflow-component/custom-process-step-aem-workflow.md)
    + [3 — 创建工作流组件](custom-workflow-component/custom-workflow-component.md)
-+ AEM Workflow{#variables-aem-workflow}中的变量
++ AEM工作流程{#variables-aem-workflow}中的变量
    + [简介 — 工作流中的变量](variables-aem-workflow/introduction.md)
    + [XML变量](variables-aem-workflow/part1.md)
    + [JSON变量](variables-aem-workflow/part2.md)
@@ -279,9 +279,9 @@ ht-degree: 1%
    + [4 — 生成签名小组件](react-ic-sign/create-servlet-to-expose-endpoint.md)
    + [5 — 部署示例资源](react-ic-sign/deploy-assets-on-your-server.md)
 + 文档服务 {#document-services}
-   + [PDF forms类型](document-services/pdf-forms-and-documents.md)
+   + [PDF forms的类型](document-services/pdf-forms-and-documents.md)
    + [在自适应表单中嵌入PDF](document-services/embed-pdf-inline.md)
-   + [轮盘组件中的PDF](document-services/display-pdf-in-carousel.md)
+   + [PDF在轮盘组件中](document-services/display-pdf-in-carousel.md)
    + [在AEM Forms中使用Assembler服务](document-services/using-assembler-service-in-aem-forms.md)
    + [使用Assembler服务进行XDP拼接](document-services/xdp-stitching-using-assembler-service.md)
    + [使用AEM Forms中的Watched文件夹](document-services/watched-folders-document-services-article-use.md)
@@ -292,12 +292,12 @@ ht-degree: 1%
    + [在输出服务中使用xdp片段](document-services/using-fragments-in-output-service.md)
    + [用于生成带片段的PDF的ECMA脚本](document-services/using-fragments-in-output-service-watched-folder.md)
    + [从一个数据文件生成多个PDF](document-services/generate-multi-record-pdf.md)
-   + [在移动设备表单提交时生成PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [在提交移动设备表单时生成PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [在基于核心组件的表单提交中生成PDF](document-services/generate-pdf-from-core-component-form-submission.md)
    + [从移动设备表单生成交互式PDF](document-services/render-interactive-form-using-api.md)
    + [从自适应表单生成交互式DoR](document-services/generate-interactive-dor.md)
    + [配置Reader扩展凭据](document-services/configuring-reader-extension-osgi.md)
-   + [对XDP呈现版本应用PDF使用权限](document-services/rendering-and-reader-extending-xdp-templates-article.md)
+   + [在XDP呈现版本上对PDF应用使用权限](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [应用使用权限到上传的PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [证明文档](document-services/certifying-documents-aem-forms-tutorial.md)
    + [组合表单附件](document-services/assemble-form-attachments.md)

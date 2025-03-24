@@ -1,15 +1,15 @@
 ---
 title: 创建地址组件
-description: 在AEM Forms中创建新的地址核心组件as a Cloud Service
+description: 在AEM Forms as a Cloud Service中创建新的地址核心组件
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: be25be52-2914-4820-9356-678a326f8edc
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # 部署项目
 
-在开始将项目部署到AEM Formsas a Cloud Service之前，建议将该项目部署到AEM Forms的本地云就绪实例。
+在开始将项目部署到AEM Forms as a Cloud Service之前，建议将该项目部署到AEM Forms的本地云就绪实例。
 
-## 将更改与AEM项目同步
+## 将更改与您的AEM项目同步
 
 启动IntelliJ并导航到``ui.apps``文件夹下的adaptiveForm文件夹，如下所示
 ![intellij](assets/intellij.png)

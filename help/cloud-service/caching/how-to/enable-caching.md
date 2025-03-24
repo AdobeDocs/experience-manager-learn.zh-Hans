@@ -1,7 +1,7 @@
 ---
 title: 如何启用CDN缓存
 description: 了解如何在AEM as a Cloud Service的CDN中启用HTTP响应缓存。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 544c3230-6eb6-4f06-a63c-f56d65c0ff4b
 duration: 174
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -27,20 +27,20 @@ ht-degree: 0%
 
 ## 默认缓存行为
 
-当自定义配置不存在时，将使用默认值。 在下面的屏幕截图中，您可以看到在部署基于[AEM项目原型](https://github.com/adobe/aem-project-archetype)的`mynewsite`AEM项目时AEM Publish和作者的默认缓存行为。
+当自定义配置不存在时，将使用默认值。 在以下屏幕截图中，您可以看到在部署基于`mynewsite`的[AEM项目原型](https://github.com/adobe/aem-project-archetype)的AEM项目时，AEM Publish和Author的默认缓存行为。
 
 ![默认缓存行为](../assets/how-to/aem-publish-default-cache-headers.png){width="800" zoomable="yes"}
 
-有关详细信息，请参阅[AEM Publish — 默认缓存生命周期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html#cdn-cache-life)和[AEM Author — 默认缓存生命周期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?#default-cache-life)。
+查看[AEM Publish — 默认缓存生命周期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html#cdn-cache-life)和[AEM Author — 默认缓存生命周期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?#default-cache-life)以了解更多信息。
 
-总之，AEM as a Cloud Service在AEM Publish中缓存大多数内容类型(HTML、JSON、JS、CSS和Assets)，在AEM Author中缓存少数内容类型(JS、CSS)。
+总之，AEM as a Cloud Service在AEM Publish中缓存了大部分内容类型(HTML、JSON、JS、CSS和Assets)，在AEM Author中缓存了少数几种内容类型(JS、CSS)。
 
 ## 启用缓存
 
 要更改默认缓存行为，您可以通过两种方式更新缓存标头。
 
-1. **Dispatcher vhost配置：**&#x200B;仅适用于AEM Publish。
-1. **自定义Java™代码：**&#x200B;适用于AEM Publish和Author。
+1. **Dispatcher vhost配置：**&#x200B;仅可用于AEM发布。
+1. **自定义Java™代码：**&#x200B;可用于AEM发布和创作。
 
 让我们回顾一下这些选项。
 

@@ -1,7 +1,7 @@
 ---
 title: 使用OAuth Web应用程序身份验证调用基于OpenAPI的AEM API
 description: 了解如何使用基于用户的身份验证，从使用OAuth Web应用程序的自定义Web应用程序在AEM as a Cloud Service上调用基于OpenAPI的AEM API。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
@@ -11,7 +11,8 @@ jira: KT-16718
 thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
-source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2245'
 ht-degree: 0%
@@ -419,7 +420,7 @@ function getTransformedMetadata(metadata) {
 
 让我们在本地计算机上配置和运行WKND-PIM Web应用程序，以了解OAuth Web应用程序身份验证流程和API调用。
 
-### 前提条件
+### 先决条件
 
 要完成本教程，您需要：
 
@@ -655,4 +656,3 @@ function getTransformedMetadata(metadata) {
 - [授权请求](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#authorize-request)
 - [正在获取访问令牌](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#fetching-access-tokens)
 - [正在刷新访问令牌](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#refreshing-access-tokens)
-

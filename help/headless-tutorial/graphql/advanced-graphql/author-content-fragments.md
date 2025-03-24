@@ -1,14 +1,14 @@
 ---
 title: 创作内容片段 — AEM Headless的高级概念 — GraphQL
 description: 在Adobe Experience Manager (AEM) Headless的高级概念的这一章中，了解如何在内容片段中使用选项卡、日期和时间、JSON对象以及片段引用。 设置文件夹策略以限制可以包含的内容片段模型。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 998d3678-7aef-4872-bd62-0e6ea3ff7999
 duration: 609
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 1%
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 ## 安装示例内容 {#sample-content}
 
-安装一个AEM包，其中包含多个文件夹和用于加速教程的示例图像。
+安装一个AEM包，其中包含多个用于加速教程的文件夹和示例图像。
 
 1. 下载[Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip)
 1. 在AEM中，导航到&#x200B;**工具** > **部署** > **包**&#x200B;以访问&#x200B;**包管理器**。

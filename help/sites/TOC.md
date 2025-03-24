@@ -5,8 +5,8 @@ breadcrumb-title: AEM Sites 教程
 feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
-version: 6.4, 6.5, Cloud Service
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 18%
@@ -90,7 +90,7 @@ ht-degree: 18%
 + Edge Delivery Services{#edge-delivery-services}
    + [概述](./edge-delivery-services/overview.md)
    + 正在开发{#developing}
-      + [前提条件](edge-delivery-services/developing/prerequisites.md)
+      + [先决条件](edge-delivery-services/developing/prerequisites.md)
       + [AEM样板](edge-delivery-services/developing/aem-boilerplate.md)
       + [内容存储库](edge-delivery-services/developing/content-repository.md)
       + [预览和发布](edge-delivery-services/developing/preview-and-publish.md)

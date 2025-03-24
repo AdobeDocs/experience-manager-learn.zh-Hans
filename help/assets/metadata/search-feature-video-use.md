@@ -1,10 +1,10 @@
 ---
 title: 在AEM Assets中使用搜索
-description: 在这些视频中，我们介绍了AEM中引入的一些Assets搜索增强功能。 作者可以通过更新各自的元数据属性来提升关键词搜索结果中的某些资产。 我们还查看了Assets OmniSearch谓词的一些高级配置。
-version: 6.4, 6.5
+description: 在这些视频中，我们查看了AEM中引入的一些Assets搜索增强功能。 作者可以通过更新各自的元数据属性来提升关键词搜索结果中的某些资产。 我们还查看了Assets OmniSearch谓词的一些高级配置。
+version: Experience Manager 6.4, Experience Manager 6.5
 doc-type: Feature Video
 duration: 373
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 在AEM Assets中使用搜索{#using-search-in-aem-assets}
 
-在这些视频中，我们介绍了AEM中引入的一些Assets搜索增强功能。 作者可以通过更新各自的元数据属性来提升关键词搜索结果中的某些资产。 我们还查看了Assets OmniSearch谓词的一些高级配置。
+在这些视频中，我们查看了AEM中引入的一些Assets搜索增强功能。 作者可以通过更新各自的元数据属性来提升关键词搜索结果中的某些资产。 我们还查看了Assets OmniSearch谓词的一些高级配置。
 
 ## 使用资产元数据搜索提升 {#search-boost-asset}
 

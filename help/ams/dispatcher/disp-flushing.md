@@ -1,7 +1,7 @@
 ---
 title: AEM Dispatcher刷新
 description: 了解AEM如何使Dispatcher中的旧缓存文件失效。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 461873a1-1edf-43a3-b4a3-14134f855d86
 duration: 520
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 ### 创作复制代理
 
 以下是配置的标准复制代理屏幕截图示例
-AEM网页![标准复制代理屏幕截图/etc/replication.html](assets/disp-flushing/author-rep-agent-example.png "author-rep-agent-example")
+AEM网页/etc/replication.html](assets/disp-flushing/author-rep-agent-example.png "author-rep-agent-example")中的标准复制代理屏幕截图![
 
 创作实例上通常为其复制内容的每个发布者配置1或2个复制代理。
 
@@ -69,11 +69,11 @@ Dispatcher模块会查找特定的标头，以了解POST请求何时可以传递
 
 在`Transport`选项卡上，您可以看到`URI`设置为指向将接收刷新请求的Dispatcher的IP地址。  路径`/dispatcher/invalidate.cache`不是模块确定其是否为刷新的方式，它只是您可以在访问日志中看到的明显端点，用来确定它是刷新请求。  在`Extended`选项卡上，我们将检查所有内容以确定其是否为Dispatcher模块的刷新请求。
 
-![复制代理的扩展选项卡屏幕截图。  请注意与发送的POST请求一起发送以告知Dispatcher刷新](assets/disp-flushing/disp-flush-agent3.png "disp-flush-agent3")的标头
+![复制代理的扩展选项卡屏幕截图。  请注意与所发送的POST请求一起发送以告知Dispatcher进行刷新](assets/disp-flushing/disp-flush-agent3.png "disp-flush-agent3")的标头
 
 刷新请求的`HTTP Method`只是一个带有一些特殊请求标头的`GET`请求：
 - CQ-Action
-   - 此变量基于请求使用AEM变量，其值通常为&#x200B;*激活或删除*
+   - 此标头根据请求来使用AEM变量，其值通常为&#x200B;*激活或删除*
 - CQ-Handle
    - 此标头根据请求来使用AEM变量，其值通常是刷新项目的完整路径，例如`/content/dam/logo.jpg`
 - CQ-Path

@@ -2,7 +2,7 @@
 title: 在AEM Assets中自定义注释
 description: 输出到PDF时的AEM Assets格式和样式可由AEM开发人员配置。
 feature: Collaboration
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Collaboration
 role: Developer
 level: Intermediate
@@ -10,7 +10,7 @@ last-substantial-update: 2022-06-03T00:00:00Z
 doc-type: Feature Video
 exl-id: 972737dd-8ca6-47b4-a4ec-b73355c09cec
 duration: 13
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # 在AEM Assets中自定义注释{#using-annotations-in-aem-assets}
 
-AEM支持将注释的输出自定义为PDF。
+AEM支持将注释的输出自定义到PDF。
 
-## 注释sling：OsgiConfig定义PDF
+## PDF注释sling：OsgiConfig定义
 
 要自定义PDF批注，请在下的AEM项目中创建一个&#x200B;**sling：OsgiConfig**&#x200B;节点
 

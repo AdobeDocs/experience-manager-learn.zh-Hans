@@ -2,18 +2,18 @@
 title: 使用体验片段选件创建Target活动
 description: 了解如何使用AEM Experience Fragment选件创建和测试Adobe Target活动。
 feature: Experience Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6351
 thumbnail: 41246.jpg
 topic: Integrations
 role: User
 level: Intermediate
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
 duration: 260
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 1%

@@ -1,7 +1,7 @@
 ---
 title: 页面模板
 description: 了解如何创建和修改页面模板。 了解页面模板与页面之间的关系。 了解如何配置页面模板的策略，以便为内容提供精细的治理和品牌一致性。  基于Adobe XD的模型创建了一个结构良好的杂志文章模板。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Editable Templates, Page Editor
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
 duration: 1561
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 0%
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 创建页面时，必须选择一个模板，该模板用作创建新页面的基础。 模板定义生成页面的结构、初始内容和允许的组件。
 
-[页面模板](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=zh-Hans)有3个主要区域：
+[页面模板](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=zh-hans)有3个主要区域：
 
 1. **结构** — 定义模板中的组件。 内容作者无法编辑这些内容。
 1. **初始内容** — 定义模板开始的组件，这些组件可由内容作者编辑和/或删除

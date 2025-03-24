@@ -1,14 +1,14 @@
 ---
 title: 探索AEM GraphQL API - AEM Headless的高级概念 — GraphQL
 description: 使用GraphiQL IDE发送GraphQL查询。 了解使用筛选器、变量和指令的高级查询。 查询片段和内容引用，包括来自多行文本字段的引用。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
 duration: 438
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1307'
 ht-degree: 0%
@@ -42,7 +42,7 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 
 接下来，使用内置的GraphiQL Explorer探索AEM的GraphQL API的强大功能。
 
-1. 从AEM开始屏幕中，导航到&#x200B;**工具** > **常规** > **GraphQL查询编辑器**。
+1. 从AEM“开始”屏幕中，导航到&#x200B;**工具** > **常规** > **GraphQL查询编辑器**。
 
    ![导航到GraphiQL IDE](assets/explore-graphql-api/navigate-graphql-query-editor.png)
 

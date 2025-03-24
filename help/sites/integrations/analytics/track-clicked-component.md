@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe Analytics跟踪已单击的组件
 description: 使用事件驱动的Adobe客户端数据层跟踪Adobe Experience Manager站点上特定组件的单击次数。 了解如何使用标记规则来侦听这些事件，并使用跟踪链接信标将数据发送到Adobe Analytics报表包。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
@@ -12,7 +12,7 @@ badgeIntegration: label="集成" type="positive"
 doc-type: Tutorial
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
 duration: 394
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1750'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 使用Adobe Analytics跟踪已单击的组件
 
-使用带AEM核心组件的事件驱动的[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)跟踪Adobe Experience Manager站点上特定组件的单击情况。 了解如何使用tag属性中的规则来侦听单击事件，按组件进行筛选，以及使用跟踪链接信标将数据发送到Adobe Analytics。
+使用带Adobe核心组件的事件驱动型[AEM客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)跟踪Adobe Experience Manager站点上特定组件的单击情况。 了解如何使用tag属性中的规则来侦听单击事件，按组件进行筛选，以及使用跟踪链接信标将数据发送到Adobe Analytics。
 
 ## 您即将构建的内容 {#what-build}
 
@@ -41,9 +41,9 @@ WKND营销团队有兴趣了解哪些`Call to Action (CTA)`按钮在主页上的
 
 * 启用了[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)的&#x200B;**标记属性**
 * **Adobe Analytics**&#x200B;测试/开发报表包ID和跟踪服务器。 请参阅以下有关[创建报表包](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)的文档。
-* [Experience Platform调试器](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)浏览器扩展配置了在[WKND网站](https://wknd.site/us/en.html)或启用了Adobe数据层的AEM网站上加载的Tag属性。
+* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)浏览器扩展配置了在[WKND网站](https://wknd.site/us/en.html)或启用了Adobe数据层的AEM网站上加载的标记属性。
 
-## Inspect按钮和Teaser架构
+## 检查按钮和Teaser架构
 
 在标记属性中创建规则之前，请检查Button和Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)的[架构并在数据层实施中检查它们，这很有用。
 
@@ -54,7 +54,7 @@ WKND营销团队有兴趣了解哪些`Call to Action (CTA)`按钮在主页上的
    adobeDataLayer.getState();
    ```
 
-   上述代码返回Adobe客户端数据层的当前状态。
+   上述代码会返回Adobe Client Data Layer的当前状态。
 
    通过浏览器控制台![数据层状态](assets/track-clicked-component/adobe-data-layer-state-browser.png)
 
@@ -87,13 +87,13 @@ WKND营销团队有兴趣了解哪些`Call to Action (CTA)`按钮在主页上的
 
 Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论何时单击任何核心组件，都会通过数据层调度`cmp:click`事件。 要监听`cmp:click`事件，让我们创建一个规则。
 
-1. 导航到Experience Platform并进入与AEM站点集成的Tag属性。
+1. 导航到Experience Platform并进入与AEM站点集成的标记属性。
 1. 导航到标记属性UI中的&#x200B;**规则**&#x200B;部分，然后单击&#x200B;**添加规则**。
-1. 将规则&#x200B;**命名为CTA已单击**。
+1. 将CTA单击的规则&#x200B;**命名为**。
 1. 单击&#x200B;**事件** > **添加**&#x200B;以打开&#x200B;**事件配置**&#x200B;向导。
 1. 对于&#x200B;**事件类型**&#x200B;字段，请选择&#x200B;**自定义代码**。
 
-   ![将已单击的规则CTA命名并添加自定义代码事件](assets/track-clicked-component/custom-code-event.png)
+   ![命名CTA单击的规则并添加自定义代码事件](assets/track-clicked-component/custom-code-event.png)
 
 1. 在主面板中单击&#x200B;**打开编辑器**，然后输入以下代码片段：
 
@@ -147,7 +147,7 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
 
    `event`对象是从自定义事件中调用的`trigger()`方法传递的。 `component`对象是从数据层`getState()`方法派生的组件的当前状态，是触发点击的元素。
 
-1. 保存更改并在标记属性中运行[内部版本](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以将代码提升到AEM网站上使用的[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hans)。
+1. 保存更改并在标记属性中运行[内部版本](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以将代码提升到您的AEM网站上使用的[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html#)。
 
    >[!NOTE]
    >
@@ -159,7 +159,7 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
 
    要单击的![CTA按钮](assets/track-clicked-component/cta-button-to-click.png)
 
-1. 在开发人员控制台中观察是否已触发&#x200B;**CTA Clicked**&#x200B;规则：
+1. 在开发人员控制台中观察到&#x200B;**CTA Clicked**&#x200B;规则已触发：
 
    已单击![CTA按钮](assets/track-clicked-component/cta-button-clicked-log.png)
 
@@ -167,9 +167,9 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
 
 接下来，创建一个数据元素以捕获已单击的组件ID和标题。 回想一下，在上一个练习中，`event.path`的输出类似于`component.button-b6562c963d`，`event.component['dc:title']`的值类似于“查看行程”。
 
-### 组件Id
+### 组件 ID
 
-1. 导航到Experience Platform并进入与AEM站点集成的Tag属性。
+1. 导航到Experience Platform并进入与AEM站点集成的标记属性。
 1. 导航到&#x200B;**数据元素**&#x200B;部分，然后单击&#x200B;**添加新数据元素**。
 1. 对于&#x200B;**Name**&#x200B;字段，请输入&#x200B;**组件ID**。
 1. 对于&#x200B;**数据元素类型**&#x200B;字段，请选择&#x200B;**自定义代码**。
@@ -209,7 +209,7 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
 
 ## 向CTA点击规则添加条件
 
-接下来，更新&#x200B;**CTA Clicked**&#x200B;规则以确保该规则仅在为&#x200B;**Teaser**&#x200B;或&#x200B;**Button**&#x200B;触发`cmp:click`事件时触发。 由于Teaser的CTA在数据层中被视为单独的对象，因此检查父对象以验证它是否来自Teaser非常重要。
+接下来，更新&#x200B;**CTA Clicked**&#x200B;规则以确保该规则仅在&#x200B;**Teaser**&#x200B;或&#x200B;**Button**&#x200B;触发`cmp:click`事件时触发。 由于Teaser的CTA在数据层中被视为单独的对象，因此检查父对象以验证它是否来自Teaser非常重要。
 
 1. 在标记属性UI中，导航到之前创建的&#x200B;**CTA Clicked**&#x200B;规则。
 1. 在&#x200B;**条件**&#x200B;下，单击&#x200B;**添加**&#x200B;以打开&#x200B;**条件配置**&#x200B;向导。
@@ -254,7 +254,7 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
    * `prop8` - `%Component ID%`
    * `event8`
 
-   ![设置eVarProp和事件](assets/track-clicked-component/set-evar-prop-event.png)
+   ![设置eVar Prop和事件](assets/track-clicked-component/set-evar-prop-event.png)
 
    >[!NOTE]
    >
@@ -270,7 +270,7 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
 
    ![配置发送链接信标](assets/track-clicked-component/analytics-send-beacon-link-track.png)
 
-   上述配置合并了数据元素&#x200B;**组件标题**&#x200B;中的动态变量和Clicked **的静态字符串** CTA。
+   上述配置将来自数据元素&#x200B;**组件标题**&#x200B;的动态变量与静态字符串&#x200B;**CTA Clicked**&#x200B;的组合在一起。
 
 1. 保存更改。 **CTA Clicked**&#x200B;规则现在应具有以下配置：
 
@@ -278,27 +278,27 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
 
    * **1。**&#x200B;收听`cmp:click`事件。
    * **2。**&#x200B;检查该事件是否由&#x200B;**Button**&#x200B;或&#x200B;**Teaser**&#x200B;触发。
-   * **3。**&#x200B;将Analytics变量设置为将&#x200B;**组件ID**&#x200B;作为&#x200B;**eVar**、**prop**&#x200B;和&#x200B;**事件**&#x200B;进行跟踪。
+   * **3。**&#x200B;将Analytics变量设置为以&#x200B;**eVar**、**prop**&#x200B;和&#x200B;**event**&#x200B;的形式跟踪&#x200B;**组件ID**。
    * **4。**&#x200B;发送Analytics跟踪链接信标（并&#x200B;**不**&#x200B;将其视为页面查看）。
 
 1. 保存所有更改并构建标记库，提升到适当的环境。
 
 ## 验证跟踪链接信标和Analytics调用
 
-现在&#x200B;**CTA Clicked**&#x200B;规则发送了Analytics信标，您应该能够使用Analytics Debugger查看Experience Platform跟踪变量。
+现在&#x200B;**CTA Clicked**&#x200B;规则发送了Analytics信标，您应该能够使用Experience Platform Debugger查看Analytics跟踪变量。
 
 1. 在浏览器中打开[WKND网站](https://wknd.site/us/en.html)。
-1. 单击Debugger图标![Experience Platform Debugger图标](assets/track-clicked-component/experience-cloud-debugger.png)以打开Experience PlatformDebugger。
+1. 单击Debugger图标![Experience Platform Debugger图标](assets/track-clicked-component/experience-cloud-debugger.png)以打开Experience Platform Debugger。
 1. 如前面所述，确保Debugger将标记属性映射到&#x200B;*您的*&#x200B;开发环境，并检查&#x200B;**控制台日志记录**。
 1. 打开Analytics菜单，并确认已将报表包设置为&#x200B;*您的*&#x200B;报表包。
 
    ![Analytics选项卡调试器](assets/track-clicked-component/analytics-tab-debugger.png)
 
-1. 在浏览器中，单击&#x200B;**Teaser**&#x200B;或&#x200B;**按钮** CTA按钮之一导航到其他页面。
+1. 在浏览器中，单击&#x200B;**Teaser**&#x200B;或&#x200B;**按钮** CTA按钮之一以导航到其他页面。
 
    要单击的![CTA按钮](assets/track-clicked-component/cta-button-to-click.png)
 
-1. 返回Experience Platform调试器，向下滚动并展开&#x200B;**网络请求** > *您的报表包*。 您应该能够找到&#x200B;**eVar**、**prop**&#x200B;和&#x200B;**事件**&#x200B;集。
+1. 返回Experience Platform Debugger，向下滚动并展开&#x200B;**网络请求** > *您的报表包*。 您应该能够找到&#x200B;**eVar**、**prop**&#x200B;和&#x200B;**event**&#x200B;集。
 
    ![点击时跟踪的Analytics事件、evar和prop](assets/track-clicked-component/evar-prop-link-clicked-tracked-debugger.png)
 
@@ -312,8 +312,8 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
 
    >[!NOTE]
    >
-   > 如果未看到任何控制台日志，请确保在Experience Platform调试器的&#x200B;**Experience Platform标记**&#x200B;下选中&#x200B;**控制台日志记录**。
+   > 如果您没有看到任何控制台日志，请确保在Experience Platform Debugger的&#x200B;**Experience Platform标记**&#x200B;下选中&#x200B;**控制台日志记录**。
 
 ## 恭喜！
 
-您刚刚在Experience Platform中使用了事件驱动的Adobe客户端数据层和标记来跟踪AEM网站上特定组件的单击情况。
+您刚刚在Experience Platform中使用了事件驱动的Adobe Client Data Layer和Tag来跟踪AEM网站上特定组件的单击情况。

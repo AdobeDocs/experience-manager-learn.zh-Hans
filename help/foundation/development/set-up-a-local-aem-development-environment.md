@@ -1,7 +1,7 @@
 ---
 title: 设置本地AEM开发环境
 description: 了解如何为Experience Manager设置本地开发环境。 熟悉本地安装、Apache Maven、集成开发环境以及调试和疑难解答。 使用Eclipse IDE、CRXDE-Lite、Visual Studio Code和IntelliJ。
-version: 6.5
+version: Experience Manager 6.5
 feature: Developer Tools
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
-source-git-commit: d731a7131b997fa272013e8d62aa2251e25c08e4
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2423'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 设置本地AEM开发环境
 
-为Adobe Experience Manager AEM设置本地开发的指南。 涵盖本地安装、Apache Maven、集成开发环境和调试/故障排除等重要主题。 讨论了使用&#x200B;**Eclipse IDE、CRXDE Lite、Visual Studio代码和IntelliJ**&#x200B;进行开发。
+为Adobe Experience Manager、AEM设置本地开发的指南。 涵盖本地安装、Apache Maven、集成开发环境和调试/故障排除等重要主题。 讨论了使用&#x200B;**Eclipse IDE、CRXDE Lite、Visual Studio Code和IntelliJ**&#x200B;进行开发。
 
 ## 概述
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 当我们提及本地AEM实例时，我们谈论的是在开发人员个人计算机上运行的Adobe Experience Manager的副本。 ***所有*** AEM开发应从针对本地AEM实例编写并运行代码开始。
 
-如果您是初次使用AEM，则可以安装两种基本运行模式：***作者***&#x200B;和&#x200B;***Publish***。 ***作者*** [运行模式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en)是数字营销人员用于创建和管理内容的环境。 在大多数开发过程中，您要将代码部署到Author实例。 这允许您创建页面并添加和配置组件。 AEM Sites是WYSIWYG创作CMS，因此，大多数CSS和JavaScript都可以针对创作实例进行测试。
+如果您是AEM的新用户，则可以安装两种基本运行模式：***创作***&#x200B;和&#x200B;***发布***。 ***作者*** [运行模式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en)是数字营销人员用于创建和管理内容的环境。 在大多数开发过程中，您要将代码部署到Author实例。 这允许您创建页面并添加和配置组件。 AEM Sites是WYSIWYG创作CMS，因此，大多数CSS和JavaScript都可以针对创作实例进行测试。
 
 对于本地&#x200B;***Publish***&#x200B;实例，它也是&#x200B;*关键*&#x200B;测试代码。 ***Publish***&#x200B;实例是访问您网站的访客与之交互的AEM环境。 虽然&#x200B;***Publish***&#x200B;实例与&#x200B;***Author***&#x200B;实例的技术栈栈相同，但配置和权限有一些主要区别。 代码必须先在本地&#x200B;***Publish***&#x200B;实例中进行测试，然后才能提升到更高级别的环境。
 
@@ -69,11 +69,11 @@ ht-degree: 0%
 
 1. 双击&#x200B;***aem-author-p4502.jar***&#x200B;文件以安装&#x200B;**创作**&#x200B;实例。 这将启动创作实例，该实例在本地计算机上的端口&#x200B;**4502**&#x200B;上运行。
 
-双击&#x200B;***aem-publish-p4503.jar***&#x200B;文件以安装&#x200B;**Publish**&#x200B;实例。 这会启动在本地计算机上的端口&#x200B;**4503**&#x200B;上运行的Publish实例。
+双击&#x200B;***aem-publish-p4503.jar***&#x200B;文件以安装&#x200B;**发布**&#x200B;实例。 这将启动在本地计算机上的端口&#x200B;**4503**&#x200B;上运行的发布实例。
 
 >[!NOTE]
 >
->根据开发计算机的硬件，可能很难同时运行&#x200B;**创作实例和Publish**&#x200B;实例。 很少需要在本地设置上同时运行这两个程序。
+>根据开发计算机的硬件，可能很难同时运行&#x200B;**创作实例和发布**&#x200B;实例。 很少需要在本地设置上同时运行这两个程序。
 
 ### 使用命令行
 
@@ -93,7 +93,7 @@ $ java -Xmx2048M -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_s
 
 >[!CAUTION]
 >
->在启动新项目时，最佳实践是使用原型的最新版本。 请记住，原型有多个版本，并非所有版本都与早期版本的AEM兼容。
+>在启动新项目时，最佳实践是使用原型的最新版本。 请记住，原型有多个版本，并非所有版本都与AEM的早期版本兼容。
 
 ### 步骤
 
@@ -113,13 +113,13 @@ Default locale: en_US, platform encoding: UTF-8
 
 >[!NOTE]
 >
-> 在过去，需要添加`adobe-public` Maven配置文件来指向`nexus.adobe.com`以下载AEM工件。 现在，所有AEM工件均可通过Maven Central使用，并且不需要`adobe-public`配置文件。
+> 在过去，需要添加`adobe-public` Maven配置文件来指向`nexus.adobe.com`以下载AEM项目。 现在，所有AEM工件均可通过Maven Central使用，并且不需要`adobe-public`配置文件。
 
 ## 设置集成开发环境
 
-集成开发环境或IDE是一种结合文本编辑器、语法支持和构建工具的应用程序。 根据正在执行的开发类型，一个IDE可能比另一个IDE更可取。 不论IDE如何，都必须能够定期&#x200B;***将***&#x200B;代码推送到本地AEM实例以进行测试。 为了持续到源代码控制管理系统（如Git），偶尔将&#x200B;***配置从本地AEM实例***&#x200B;拉入AEM项目很重要。
+集成开发环境或IDE是一种结合文本编辑器、语法支持和构建工具的应用程序。 根据正在执行的开发类型，一个IDE可能比另一个IDE更可取。 不论IDE如何，能够定期&#x200B;***将***&#x200B;代码推送到本地AEM实例以进行测试都非常重要。 为了持续到源代码控制管理系统（如Git），偶尔将&#x200B;***配置***&#x200B;从本地AEM实例拉入AEM项目很重要。
 
-下面是一些与AEM开发一起使用的更流行的IDE，它们与相应的视频一起显示了与本地AEM实例的集成。
+下面是一些与AEM开发一起使用的更流行的IDE，它们具有相应的视频，其中显示了与本地AEM实例的集成。
 
 >[!NOTE]
 >
@@ -137,7 +137,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ### [!DNL Eclipse] IDE
 
-**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;是用于Java™开发的较常用的IDE之一，这在很大程度上是因为它是开源的，并且&#x200B;***可用***！ Adobe为[!DNL Eclipse]提供了一个插件&#x200B;**[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)**，以便能够更轻松地使用GUI进行开发，以将代码与本地AEM实例同步。 主要由于[!DNL AEM Developer Tools]支持GUI，因此建议新加入AEM的开发人员使用[!DNL Eclipse] IDE。
+**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;是用于Java™开发的较常用的IDE之一，这在很大程度上是因为它是开源的，并且&#x200B;***可用***！ Adobe为[!DNL Eclipse]提供了一个插件&#x200B;**[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)**，以便更轻松地使用GUI进行开发，从而将代码与本地AEM实例同步。 主要由于[!DNL AEM Developer Tools]支持GUI，因此建议将[!DNL Eclipse] IDE用于不熟悉AEM的开发人员。
 
 #### 安装和设置
 
@@ -154,7 +154,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ### IntelliJ IDEA
 
-**[IntelliJ IDEA](https://www.jetbrains.com/idea/)**&#x200B;是一个功能强大的IDE，可用于专业Java™开发。 [!DNL IntelliJ IDEA]有两种风格，***免费*** [!DNL Community]版本和商业（付费） [!DNL Ultimate]版本。 可用[!DNL Community]版本的[!DNL IntellIJ IDEA]足以进行更多AEM开发，但[!DNL Ultimate] [扩展了其功能集](https://www.jetbrains.com/idea/download)。
+**[IntelliJ IDEA](https://www.jetbrains.com/idea/)**&#x200B;是一个功能强大的IDE，可用于专业Java™开发。 [!DNL IntelliJ IDEA]有两种风格，***免费*** [!DNL Community]版本和商业（付费） [!DNL Ultimate]版本。 可用的[!DNL Community]版本的[!DNL IntellIJ IDEA]足以进行更多AEM开发，但[!DNL Ultimate] [扩展了其功能集](https://www.jetbrains.com/idea/download)。
 
 #### [!DNL Installation and Setup]
 
@@ -173,14 +173,14 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 **[Visual Studio Code](https://code.visualstudio.com/)**&#x200B;已快速成为&#x200B;***前端开发人员***&#x200B;最喜爱的工具，具有增强的JavaScript支持、[!DNL Intellisense]和浏览器调试支持。 **[!DNL Visual Studio Code]**&#x200B;是开源、免费的，具有许多功能强大的扩展。 可以将[!DNL Visual Studio Code]设置为在Adobe工具&#x200B;**[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)的帮助下与AEM集成。**&#x200B;还可以安装多个社区支持的扩展以与AEM集成。
 
-对于主要编写CSS/LESS和JavaScript代码以创建AEM客户端库的前端开发人员而言，[!DNL Visual Studio Code]是一个很好的选择。 此工具可能不是新AEM开发人员的最佳选择，因为节点定义（对话框、组件）需要在原始XML中进行编辑。 有几个Java™扩展可用于[!DNL Visual Studio Code]，但是，如果主要执行Java™开发，则可能首选开发[!DNL Eclipse IDE]或[!DNL IntelliJ]。
+对于主要编写CSS/LESS和JavaScript代码以创建AEM客户端库的前端开发人员而言，[!DNL Visual Studio Code]是一个很好的选择。 此工具可能不是新AEM开发人员的最佳选择，因为节点定义（对话框、组件）需要以原始XML进行编辑。 有几个Java™扩展可用于[!DNL Visual Studio Code]，但是，如果主要执行Java™开发，则可能首选开发[!DNL Eclipse IDE]或[!DNL IntelliJ]。
 
 #### 重要链接
 
 * [**下载**](https://code.visualstudio.com/Download) **Visual Studio代码**
 * **[存储库](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** — 用于JCR内容的类似FTP的工具
 * **[aemfed](https://aemfed.io/)** — 加快您的AEM前端工作流程
-* **[AEM Sync](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Visual Studio Code的社区支持&#42;扩展
+* **[AEM Sync](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** — 社区支持&#42; Visual Studio Code扩展
 * **[WKND项目](https://github.com/adobe/aem-guides-wknd)** — 此视频中显示的AEM项目示例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
@@ -202,14 +202,14 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ## 疑难解答
 
-***帮助！***&#x200B;我的代码不起作用！ 与所有开发一样，有时候（可能有多次）会出现代码无法按预期工作的情况。 AEM是一个功能强大的平台，但具有强大的功能……会带来极大的复杂性。 以下是排除故障和跟踪问题时的几个高级起点（远非可出错的详尽列表）：
+***帮助！***&#x200B;我的代码不起作用！ 与所有开发一样，有时候（可能有多次）会出现代码无法按预期工作的情况。 AEM是一个功能强大的平台，但凭借强大的功能……会变得非常复杂。 以下是排除故障和跟踪问题时的几个高级起点（远非可出错的详尽列表）：
 
 ### 验证代码部署
 
 遇到问题时，正确的第一步是验证代码是否已成功部署和安装到AEM。
 
 1. **检查[!UICONTROL 包管理器]**&#x200B;以确保已上载并安装代码包： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)。 检查时间戳以验证最近是否安装了软件包。
-1. 如果使用诸如[!DNL Repo]或[!DNL AEM Developer Tools]之类的工具执行增量文件更新，**请检查[!DNL CRXDE Lite]**&#x200B;文件是否已推送到本地AEM实例，以及文件内容是否已更新： [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
+1. 如果使用诸如[!DNL Repo]或[!DNL AEM Developer Tools]之类的工具执行增量文件更新，**请检查[!DNL CRXDE Lite]**&#x200B;该文件是否已推送到本地AEM实例，以及文件内容是否已更新： [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 1. **如果看到与OSGi捆绑包中的Java™代码相关的问题，请检查该捆绑包是否已上传**。 打开[!UICONTROL Adobe Experience Manager Web控制台]： [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)并搜索您的捆绑包。 请确保该捆绑包具有&#x200B;**[!UICONTROL 活动]**&#x200B;状态。 有关对&#x200B;**[!UICONTROL 已安装]**&#x200B;状态的捆绑包进行故障排除的详细信息，请参阅下文。
 
 #### 检查日志
@@ -236,7 +236,7 @@ public class MyClass {
 }
 ```
 
-默认情况下，**error.log**&#x200B;配置为记录&#x200B;*[!DNL INFO]*&#x200B;语句。 如果要更改日志级别，可以转到[!UICONTROL 日志支持]： [http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog)。 您还可能会发现&#x200B;**error.log**&#x200B;过于废话。 您可以使用[!UICONTROL 日志支持]为指定的Java™包配置日志语句。 这是项目的最佳实践，以便轻松地将自定义代码问题与OOTB AEM平台问题区分开。
+默认情况下，**error.log**&#x200B;配置为记录&#x200B;*[!DNL INFO]*&#x200B;语句。 如果要更改日志级别，可以转到[!UICONTROL 日志支持]： [http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog)。 您还可能会发现&#x200B;**error.log**&#x200B;过于废话。 您可以使用[!UICONTROL 日志支持]为指定的Java™包配置日志语句。 这是项目的最佳实践，用于轻松地将自定义代码问题与OOTB AEM平台问题区分开。
 
 ![在AEM中记录配置](./assets/set-up-a-local-aem-development-environment/logging.png)
 
@@ -252,7 +252,7 @@ AEM中的![包错误](assets/set-up-a-local-aem-development-environment/bundle-e
 
 ![核心组件](assets/set-up-a-local-aem-development-environment/core-components.png)
 
-继续上面的示例，我们可以看到AEM实例上安装的版本是&#x200B;**12.2**&#x200B;与包期望的&#x200B;**12.6**。 从该位置，您可以向后工作，查看AEM上的[!DNL Maven]依赖项是否与AEM项目中的[!DNL Maven]依赖项匹配。 在中，上述示例[!DNL Core Components] **v2.2.0**&#x200B;安装在AEM实例上，但生成代码包时依赖于&#x200B;**v2.2.2**，因此存在依赖性问题的原因。
+继续上面的示例，我们可以看到AEM实例上安装的版本是&#x200B;**12.2**&#x200B;与包期望的&#x200B;**12.6**。 从该位置，您可以向后工作，查看AEM上的[!DNL Maven]依赖项是否与AEM项目中的[!DNL Maven]依赖项匹配。 在中，上述示例[!DNL Core Components] **v2.2.0**&#x200B;安装在AEM实例上，但生成代码捆绑包时依赖于&#x200B;**v2.2.2**，因此存在依赖性问题的原因。
 
 #### 验证Sling模型注册 {#osgi-component-sling-models}
 

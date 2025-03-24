@@ -1,16 +1,16 @@
 ---
 title: 创建地址组件
-description: 在AEM Forms中创建新的地址核心组件as a Cloud Service
+description: 在AEM Forms as a Cloud Service中创建新的地址核心组件
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 21b6640e-5cfa-4902-9660-a2b1c91b285d
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 47%
@@ -27,9 +27,9 @@ ht-degree: 47%
 
 ## 先决条件
 
-* 访问AEM Formsas a Cloud Service实例
+* 访问AEM Forms as a Cloud Service实例
 * 在使用AEM Forms模块开发表单方面的一些经验
-* 在设置AEM/AEM Forms（Git、IntelliJ等）的开发环境方面的经验
+* 在为AEM/AEM Forms（Git、IntelliJ等）设置开发环境方面的经验
 
 ## 后续步骤
 

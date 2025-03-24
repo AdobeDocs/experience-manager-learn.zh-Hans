@@ -1,7 +1,7 @@
 ---
 title: 设置BPA和CAM项目
 description: 了解Best Practices Analyzer和Cloud Acceleration Manager如何提供有关迁移到AEM as a Cloud Service的自定义指南。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Migration, Upgrade
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8627
 thumbnail: 336957.jpeg
 exl-id: f8289dd4-b293-4b8f-b14d-daec091728c0
 duration: 680
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 2%
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 ![BPA和CAM高级图](assets/bpa-cam-diagram.png)
 
-BPA软件包应安装在AEM 6.x生产环境的克隆上。 BPA将生成一份可以上传到CAM的报告，该报告将指导您完成迁移到AEM as a Cloud Service所需的关键操作。
+BPA软件包应安装在克隆的AEM 6.x生产环境中。 BPA将生成一份可以上传到CAM的报告，该报告将指导您完成迁移到AEM as a Cloud Service所需的关键操作。
 
 ## 关键活动
 

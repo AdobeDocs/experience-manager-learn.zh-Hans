@@ -1,7 +1,7 @@
 ---
 title: 自定义组件
 description: 涵盖显示创作内容的自定义署名组件的端到端创建。 包括开发Sling模型来封装业务逻辑以填充署名组件和对应的HTL以呈现组件。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, APIs
 topic: Content Management, Development
 role: Developer
@@ -12,7 +12,7 @@ thumbnail: 30181.jpg
 doc-type: Tutorial
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
 duration: 1039
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '3869'
 ht-degree: 0%
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 首先，创建署名组件节点结构并定义对话框。 这在AEM中表示组件，并通过组件在JCR中的位置隐式定义组件的资源类型。
 
-该对话框将显示内容作者可以提供的界面。 对于此实现，AEM WCM核心组件的&#x200B;**Image**&#x200B;组件用于处理署名图像的创作和渲染，因此必须将其设置为此组件的`sling:resourceSuperType`。
+该对话框将显示内容作者可以提供的界面。 对于此实施，AEM WCM核心组件的&#x200B;**Image**&#x200B;组件用于处理署名图像的创作和渲染，因此必须将其设置为此组件的`sling:resourceSuperType`。
 
 ### 创建组件定义 {#create-component-definition}
 
@@ -288,7 +288,7 @@ ht-degree: 0%
 
 ## 将组件添加到页面 {#add-the-component-to-a-page}
 
-为了简单起见，并专注于AEM组件开发，让我们将处于当前状态的署名组件添加到“文章”页面，以验证`cq:Component`节点定义是否正确。 还要验证AEM是否识别新组件定义，以及组件的对话框是否可用于创作。
+为了简化操作并集中精力开发AEM组件，让我们将当前状态下的署名组件添加到文章页面，以验证`cq:Component`节点定义是否正确。 此外，还要验证AEM是否可识别新组件定义，以及组件的对话框是否可用于创作。
 
 ### 向AEM Assets添加图像
 
@@ -328,7 +328,7 @@ ht-degree: 0%
 
    AEM作者通过对话框配置和创作组件。 此时，在开发署名组件时，将包含用于收集数据的对话框，但尚未添加呈现创作内容的逻辑。 因此，只显示占位符。
 
-1. 保存该对话框后，导航到[CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/us/en/magazine/guide-la-skateparks/jcr%3Acontent/root/container/container/byline)，并查看组件内容如何存储在AEM页面下的署名组件内容节点上。
+1. 保存对话框后，导航到[CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/us/en/magazine/guide-la-skateparks/jcr%3Acontent/root/container/container/byline)，并查看组件内容如何存储在AEM页面下的署名组件内容节点上。
 
    在“洛杉矶滑板场”页面下找到“署名”组件内容节点，即`/content/wknd/us/en/magazine/guide-la-skateparks/jcr:content/root/container/container/byline`。
 
@@ -342,7 +342,7 @@ ht-degree: 0%
 
 接下来，让我们创建一个Sling模型以用作数据模型并存储Byline组件的业务逻辑。
 
-Sling模型是注释驱动的Java™ POJO(Plain Old Java™ Objects)，有助于将数据从JCR映射到Java™变量，并在AEM上下文中开发时提供效率。
+Sling模型是注释驱动的Java™ POJO(纯旧Java™对象)，有助于将数据从JCR映射到Java™变量，并在AEM上下文中开发时提供高效性。
 
 ### 查看Maven依赖项 {#maven-dependency}
 
@@ -372,7 +372,7 @@ Byline Sling模型依赖于AEM提供的多个Java™ API。 这些API通过`core
    ...
    ```
 
-   只有在调用`classic`配置文件（即`mvn clean install -PautoInstallSinglePackage -Pclassic`）时才包括`uber-jar`。 同样，这是此项目所特有的。 在从AEM项目原型生成的真实项目中，如果指定的AEM版本为6.5或6.4，则默认为`uber-jar`。
+   只有在调用`classic`配置文件（即`mvn clean install -PautoInstallSinglePackage -Pclassic`）时才包括`uber-jar`。 同样，这是此项目所特有的。 在从AEM项目原型生成的真实项目中，如果指定的AEM版本为6.5或6.4，则默认使用`uber-jar`。
 
    [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)包含AEM 6.x公开的所有公共Java™ API。版本在项目`aem-guides-wknd/pom.xml`根目录中的父反应器pom中维护。
 
@@ -386,7 +386,7 @@ Byline Sling模型依赖于AEM提供的多个Java™ API。 这些API通过`core
        </dependency>
    ```
 
-   这是由AEM核心组件公开的完整公共Java™ API。 AEM核心组件是在AEM之外维护的项目，因此具有单独的发布周期。 因此，需要单独包含该依赖项，并且&#x200B;**不是`uber-jar`或`aem-sdk-api`包含的**。
+   这是由AEM核心组件公开的完整公共Java™ API。 AEM核心组件是一个在AEM之外维护的项目，因此具有单独的发布周期。 因此，需要单独包含该依赖项，并且&#x200B;**不是`uber-jar`或`aem-sdk-api`包含的**。
 
    与uber-jar一样，此依赖项的版本在`aem-guides-wknd/pom.xml`的父Reactor pom文件中进行维护。
 
@@ -923,7 +923,7 @@ HTL从JSTL借用，并使用相同的Java™ getter方法名称缩短。
 
 ### 有条件地显示占位符 {#conditionally-displaying-the-placeholder}
 
-大多数AEM组件的HTL脚本都使用&#x200B;**占位符范式**&#x200B;为作者&#x200B;**提供可视提示，指示组件的创作不正确并且不会显示在AEM Publish**&#x200B;上。 推动此决策的惯例是在组件的支持Sling模型上实施方法，在本例中为： `Byline.isEmpty()`。
+AEM组件的大多数HTL脚本都使用&#x200B;**占位符范例**&#x200B;为作者&#x200B;**提供可视提示，指示组件的创作不正确并且不会显示在AEM Publish**&#x200B;上。 推动此决策的惯例是在组件的支持Sling模型上实施方法，在本例中为： `Byline.isEmpty()`。
 
 在Byline Sling模型上调用`isEmpty()`方法，并将结果（或通过`!`运算符是负值）保存到名为`hasContent`的HTL变量中：
 
@@ -1005,11 +1005,11 @@ HTL从JSTL借用，并使用相同的Java™ getter方法名称缩短。
 
    >[!CAUTION]
    >
-   > 您还可以使用Maven配置文件`autoInstallSinglePackage`从根生成整个项目，但可能会覆盖页面上的内容更改。 这是因为已为教程入门代码修改了`ui.content/src/main/content/META-INF/vault/filter.xml`，以便彻底覆盖现有AEM内容。 在现实世界中，这并不是问题。
+   > 您还可以使用Maven配置文件`autoInstallSinglePackage`从根生成整个项目，但可能会覆盖页面上的内容更改。 这是因为已为教程入门代码修改了`ui.content/src/main/content/META-INF/vault/filter.xml`，以便彻底覆盖现有的AEM内容。 在现实世界中，这并不是问题。
 
 ### 查看未设置样式的署名组件 {#reviewing-the-unstyled-byline-component}
 
-1. 部署更新后，导航到[LA滑板公园最终指南](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)页面，或导航到在章节前面添加署名组件的位置。
+1. 部署更新后，导航到[Ultimate指南以访问LA滑板场](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)页面，或者导航到在章节前面添加署名组件的位置。
 
 1. 现在出现&#x200B;**image**、**name**&#x200B;和&#x200B;**占用**，但未设置样式，但存在有效的署名组件。
 
@@ -1096,7 +1096,7 @@ HTL从JSTL借用，并使用相同的Java™ getter方法名称缩短。
 
 ### 后续步骤 {#next-steps}
 
-通过探索如何为Byline Java™代码编写JUnit测试，继续了解AEM组件开发，以确保所有内容均已正确开发，并且实现的业务逻辑正确且完整。
+通过探索如何为Byline Java™代码编写JUnit测试，继续了解AEM组件开发，以确保所有内容均已正确开发，并且实施的业务逻辑正确且完整。
 
 * [编写单元测试或AEM组件](unit-testing.md)
 

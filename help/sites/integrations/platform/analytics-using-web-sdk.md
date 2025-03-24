@@ -1,7 +1,7 @@
 ---
 title: 将AEM Sites和Adobe Analytics与Platform Web SDK集成
-description: 使用现代Platform Web SDK方法集成AEM Sites和Adobe Analytics。
-version: Cloud Service
+description: 使用现代Platform Web Adobe Analytics方法集成AEM Sites和SDK。
+version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
 role: Admin, Architect, Data Architect, Developer
@@ -11,10 +11,10 @@ last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
-source-git-commit: 774267b4f4c65c79f185fa3b33383ce9ddd136cb
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 # 将AEM Sites和Adobe Analytics与Platform Web SDK集成
 
-了解有关如何使用Platform Web SDK集成Adobe Experience Manager (AEM)和Adobe Analytics的&#x200B;**现代方法**。 此全面的教程将指导您完成无缝收集[WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)页面查看和CTA点击数据的过程。 通过在AdobeAnalysis Workspace中可视化收集的数据，探索各种量度和维度，获得有价值的见解。 此外，还可以探索Platform数据集以验证和分析数据。 加入我们的历程，利用AEM和Adobe Analytics的强大功能制定数据驱动型决策。
+了解有关如何使用Platform Web SDK集成Adobe Experience Manager (AEM)和Adobe Analytics的&#x200B;**现代方法**。 此全面的教程将指导您完成无缝收集[WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)页面查看和CTA点击数据的过程。 通过在Adobe Analysis Workspace中可视化收集的数据，探索各种量度和维度，获得有价值的见解。 此外，还可以探索Platform数据集以验证和分析数据。 加入我们的历程，利用AEM和Adobe Analytics的强大功能制定数据驱动型决策。
 
 ## 概述
 
@@ -38,9 +38,9 @@ ht-degree: 0%
 
 使用Platform Web SDK集成Adobe Analytics时，需要满足以下条件。
 
-您已完成&#x200B;**[集成Experience PlatformWeb SDK](./web-sdk.md)**&#x200B;教程中的设置步骤。
+您已完成&#x200B;**[集成Experience Platform Web SDK](./web-sdk.md)**&#x200B;教程中的设置步骤。
 
-在&#x200B;**AEM中，作为Cloud Service**：
+在&#x200B;**AEM as Cloud Service**&#x200B;中：
 
 + [AEM管理员对AEM as a Cloud Service环境的访问权限](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=zh-Hans)
 + 部署管理员对Cloud Manager的访问权限
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 如果您没有必要的权限，则使用[Adobe Admin Console](https://adminconsole.adobe.com/)的系统管理员可以授予必要的权限。
 
-在使用Platform Web SDK探讨AEM与Analytics的集成过程之前，我们&#x200B;_回顾一下[集成Experience PlatformWeb SDK](./web-sdk.md)教程中建立的基本组件和关键元素_。 为集成提供了坚实的基础。
+在使用Platform Web SDK探讨AEM与Analytics的集成过程之前，我们&#x200B;_回顾一下[集成Experience Platform Web SDK](./web-sdk.md)教程中建立的基本组件和关键元素_。 为集成提供了坚实的基础。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419873?quality=12&learn=on)
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 ## 更新数据流 — 添加Analytics服务
 
-数据流指示PlatformEdge Network将收集的数据发送到何处。 在[上一教程](./web-sdk.md)中，数据流被配置为将数据发送到Experience Platform。 更新此数据流以将数据发送到在上面[的](#setup-analytics---report-suite-analysis-workspace)步骤中配置的Analytics报表包。
+数据流指示Platform Edge Network将收集的数据发送到何处。 在[上一教程](./web-sdk.md)中，数据流被配置为将数据发送到Experience Platform。 更新此数据流以将数据发送到在上面[的](#setup-analytics---report-suite-analysis-workspace)步骤中配置的Analytics报表包。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419876?quality=12&learn=on)
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 + 将页面名称映射到`eVar5`
 + 正在触发&#x200B;**pageview** Analytics调用（或发送信标）
-+ 使用Adobe客户端数据层收集CTA数据
++ 使用CTA Client Data Layer收集Adobe数据
 + 将CTA ID和名称分别映射到`eVar6`和`eVar7`。 此外，CTA点击计数为`event7`
 + 正在触发&#x200B;**链接点击** Analytics调用（或发送信标）
 
@@ -127,7 +127,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->视频中显示的数据元素和规则事件代码可供您参考，**展开下面的折叠元素**。 但是，如果您未使用Adobe客户端数据层，则必须修改以下代码，但是定义数据元素并在规则定义中使用数据元素的概念仍然适用。
+>视频中显示的数据元素和规则事件代码可供您参考，**展开下面的折叠元素**。 但是，如果您没有使用Adobe客户端数据层，则必须修改以下代码，但是定义数据元素并在规则定义中使用数据元素的概念仍然适用。
 
 +++ 数据元素和规则事件代码
 
@@ -229,7 +229,7 @@ ht-degree: 0%
 
 + 要确保标记属性是最新版本，请检查构建日期。
 
-+ 要验证PageView和HomePage CTA的XDM事件数据，请单击，使用扩展中的Experience PlatformWeb SDK菜单选项。
++ 要验证PageView和HomePage CTA的XDM事件数据，请单击，使用扩展中的Experience Platform Web SDK菜单选项。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419883?quality=12&learn=on)
 
@@ -257,7 +257,7 @@ Analysis Workspace是Adobe Analytics中的一个功能强大的工具，允许�
 
 ## 摘要
 
-做得好！您已使用Platform Web SDK完成AEM和Adobe Analytics的设置，以便收集、分析页面查看和CTA点击数据。
+做得好！您已使用Platform Web SDK完成AEM和Adobe Analytics的设置，以收集、分析pageview和CTA点击数据。
 
 实施Adobe Analytics对于营销团队深入了解用户行为、做出明智决策、优化内容并做出数据驱动型决策至关重要。
 
@@ -273,8 +273,8 @@ Analysis Workspace是Adobe Analytics中的一个功能强大的工具，允许�
 
 ## 其他资源
 
-+ [集成Experience PlatformWeb SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
-+ [将Adobe客户端数据层用于核心组件](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
++ [集成Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
++ [将Adobe客户端数据层与核心组件结合使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
 + [集成Experience Platform数据收集标记和AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
 + [Adobe Experience Platform Web SDK和Edge Network概述](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [数据收集教程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)

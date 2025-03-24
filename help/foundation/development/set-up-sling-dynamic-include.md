@@ -1,7 +1,7 @@
 ---
-title: 为AEM设置Sling Dynamic Include
-description: 有关在Apache HTTP Web Server上安装和使用Apache Sling Dynamic Include以及运行AEM Dispatcher的视频演练。
-version: 6.4, 6.5
+title: 为AEM设置Sling动态包含
+description: 有关在Apache HTTP Web Server上运行的AEM Dispatcher中安装和使用Apache Sling Dynamic Include的视频演练。
+version: Experience Manager 6.4, Experience Manager 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
 doc-type: Technical Video
@@ -10,7 +10,7 @@ role: Developer
 level: Experienced
 exl-id: 6c504710-be8f-4b44-bd8a-aaf480ae6d8a
 duration: 863
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # 设置[!DNL Sling Dynamic Include]
 
-有关在[!DNL Apache HTTP Web Server]上运行[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)的情况下安装和使用[!DNL Apache Sling Dynamic Include]的视频演练。
+有关在[!DNL Apache HTTP Web Server]上运行[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)的情况下安装和使用[!DNL Apache Sling Dynamic Include]的视频演练。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 确保本地安装了最新版本的AEM Dispatcher。
+> 确保在本地安装了最新版本的AEM Dispatcher。
 
 1. 下载并安装[[!DNL Sling Dynamic Include] 捆绑包](https://sling.apache.org/downloads.cgi)。
 1. 通过&#x200B;**http://&lt;主机>：&lt;端口>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**&#x200B;上的[!DNL OSGi Configuration Factory]配置[!DNL Sling Dynamic Include]。

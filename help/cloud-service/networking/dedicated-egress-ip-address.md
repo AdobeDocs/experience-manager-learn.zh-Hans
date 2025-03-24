@@ -1,7 +1,7 @@
 ---
 title: 专用出口 IP 地址
 description: 了解如何设置和使用专用出口IP地址，该地址允许来自AEM的出站连接源自专用IP。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
-source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 1%
@@ -210,14 +210,14 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 ## 通过专用出口IP地址连接到外部服务
 
-在启用了专用出口IP地址的情况下，AEM代码和配置可以使用专用出口IP调用外部服务。 AEM对两种外部调用的处理方式有所不同：
+在启用了专用出口IP地址的情况下，AEM代码和配置可以使用专用出口IP调用外部服务。 AEM对两种外部调用处理方式不同：
 
 1. 对外部服务的HTTP/HTTPS调用
    + 包括对在标准80或443端口以外的端口上运行的服务发出的HTTP/HTTPS调用。
 1. 对外部服务的非HTTP/HTTPS调用
    + 包括任何非HTTP调用，例如与Mail服务器、SQL数据库或在其他非HTTP/HTTPS协议上运行的服务的连接。
 
-默认情况下，允许标准端口(80/443)上来自AEM的HTTP/HTTPS请求，但如果未按照以下所述进行适当配置，则这些请求不使用专用出口IP地址。
+默认情况下，允许标准端口(80/443)上来自AEM的HTTP/HTTPS请求，但如果未按照以下所述进行适当配置，则它们不使用专用出口IP地址。
 
 >[!TIP]
 >
@@ -226,7 +226,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 ### HTTP/HTTPS
 
-从AEM创建HTTP/HTTPS连接时，如果使用专用出口IP地址，则会使用专用出口IP地址自动代理出AEM。 无需其他代码或配置即可支持HTTP/HTTPS连接。
+从AEM创建HTTP/HTTPS连接时，如果使用专用出口IP地址，则会自动使用专用出口IP地址代理出AEM的HTTP/HTTPS连接。 无需其他代码或配置即可支持HTTP/HTTPS连接。
 
 #### 代码示例
 
@@ -253,7 +253,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 | `AEM_PROXY_HOST` | 非HTTP/HTTPS连接的代理主机 | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
-然后，通过`AEM_PROXY_HOST`和映射端口(`portForwards.portOrig`)调用与外部服务的连接，AEM随后将其路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
+然后，通过`AEM_PROXY_HOST`和映射的端口(`portForwards.portOrig`)调用与外部服务的连接，AEM随后将其路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
 
 | 代理主机 | 代理端口 |  | 外部主机 | 外部端口 |
 |---------------------------------|----------|----------------|------------------|----------|

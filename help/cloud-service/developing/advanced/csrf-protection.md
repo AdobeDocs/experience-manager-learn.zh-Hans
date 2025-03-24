@@ -1,7 +1,7 @@
 ---
 title: CSRF保护
-description: 了解如何为经过身份验证的用户生成AEM CSRF令牌并将其添加到允许的POST、PUT和删除请求中AEM。
-version: Cloud Service
+description: 了解如何为经过身份验证的用户生成并添加AEM CSRF令牌以允许AEM的POST、PUT和删除请求。
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-13651
 thumbnail: KT-13651.jpeg
 exl-id: 747322ed-f01a-48ba-a4a0-483b81f1e904
 duration: 125
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 # CSRF保护
 
-了解如何为经过身份验证的用户生成AEM CSRF令牌并将其添加到允许的POST、PUT和删除请求中AEM。
+了解如何为经过身份验证的用户生成并添加AEM CSRF令牌以允许AEM的POST、PUT和删除请求。
 
-AEM需要向AEM Author和Publish服务发送有效的CSRF令牌，以便&#x200B;__已通过身份验证__ __POST__、__PUT或&#x200B;__DELETE__ HTTP请求。
+AEM要求向AEM Author和Publish服务发送有效的CSRF令牌，用于&#x200B;__已通过身份验证__ __POST__、__PUT或&#x200B;__DELETE__ HTTP请求。
 
 __GET__&#x200B;请求或&#x200B;__匿名__&#x200B;请求不需要CSRF令牌。
 
@@ -34,12 +34,12 @@ __GET__&#x200B;请求或&#x200B;__匿名__&#x200B;请求不需要CSRF令牌。
 [INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] doFilter: the provided CSRF token is invalid
 ```
 
-有关AEM CSRF保护](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html)的更多详细信息，请参阅[文档。
+有关AEM的CSRF保护](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html)的更多详细信息，请参阅[文档。
 
 
 ## CSRF客户端库
 
-AEM提供了一个客户端库，该库可用于生成和添加CSRF令牌XHR并通过修补核心原型功能而形成POST请求。 此功能由`granite.csrf.standalone`客户端库类别提供。
+AEM提供了一个客户端库，该库可用于通过修补核心原型功能来生成和添加CSRF令牌XHR并形成POST请求。 此功能由`granite.csrf.standalone`客户端库类别提供。
 
 若要使用此方法，请将`granite.csrf.standalone`作为依赖项添加到页面上加载的客户端库。 例如，如果您使用`wknd.site`客户端库类别，请将`granite.csrf.standalone`作为依赖项添加到页面上加载的客户端库。
 
@@ -102,7 +102,7 @@ await fetch('/path/to/aem/endpoint', {
 
 ## Dispatcher配置
 
-在AEM Publish服务上使用CSRF令牌时，必须更新Dispatcher配置以允许向CSRF令牌端点发送GET请求。 以下配置允许向AEM Publish服务上的CSRF令牌端点发出GET请求。 如果未添加此配置，则CSRF令牌端点返回“404未找到”响应。
+在AEM Publish服务上使用CSRF令牌时，必须更新Dispatcher配置，以允许GET请求到CSRF令牌端点。 以下配置允许向AEM Publish服务上的CSRF令牌端点发送GET请求。 如果未添加此配置，则CSRF令牌端点返回“404未找到”响应。
 
 * `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 

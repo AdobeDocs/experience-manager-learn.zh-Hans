@@ -2,7 +2,7 @@
 title: AEM Sites中的基本处理
 description: 以下视频概述了使用AEM创作环境时的基本处理。 它使用站点控制台作为基础。
 feature: Page Editor, Editable Templates
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-4495
 thumbnail: 31784.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 896d378c-c20e-4343-b592-277f4c71065e
 duration: 269
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 9%
@@ -34,7 +34,7 @@ ht-degree: 9%
 
      | 控制台 | 用途 |
      |---|---|
-     | 资源 | 通过这些控制台，您可以导入和管理数字资产，如图像、视频、文档和音频文件。 随后，这些资产便可由同一AEM实例上运行的任何网站使用 | 社区 | 利用此控制台，可创建和管理社区站点以供参与和启用 | 商务 | 这允许您管理与您的Commerce网站相关的产品、产品目录和订单 |
+     | 资源 | 通过这些控制台，您可以导入和管理数字资产，如图像、视频、文档和音频文件。 随后，这些资源便可由同一AEM实例上运行的任何网站使用 | 社区 | 利用此控制台，可创建和管理社区站点以供参与和启用 | 商务 | 这允许您管理与您的Commerce网站相关的产品、产品目录和订单 |
      | 体验片段 | 体验片段是独立的体验，可以跨渠道重复使用，也可以具有变量，从而避免反复地复制和粘贴体验或体验的部分内容 |
      | Forms | 利用此控制台，您可以创建、管理和处理表单和文档 |
      | 个性化 | 此控制台为创作目标内容和呈现个性化体验提供了一个工具框架 |

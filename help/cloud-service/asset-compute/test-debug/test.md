@@ -1,8 +1,8 @@
 ---
-title: 测试Asset compute工作程序
-description: asset compute项目定义了一种模式，用于轻松创建并执行Asset compute工作程序的测试。
+title: 测试Asset Compute Worker
+description: Asset Compute项目定义了一种模式，用于轻松创建并执行Asset Compute Worker测试。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6284
 thumbnail: KT-6284.jpg
@@ -11,22 +11,22 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 04992caf-b715-4701-94a8-6257e9bd300c
 duration: 142
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 0%
 
 ---
 
-# 测试Asset compute工作程序
+# 测试Asset Compute Worker
 
-asset compute项目定义了一种模式，用于轻松创建和执行Asset compute工作程序[测试](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html)。
+Asset Compute项目定义了一种模式，用于轻松创建和执行Asset Compute工作程序[测试](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html)。
 
 ## 工人考试剖析
 
-asset compute工作人员的测试分为多个测试包，并且在每个测试包中，一个或多个测试用例声明要测试的条件。
+Asset Compute Worker的测试分为多个测试包，并且在每个测试包中，一个或多个测试用例声明要测试的条件。
 
-asset compute项目中的测试结构如下所示：
+Asset Compute项目中的测试结构如下所示：
 
 ```
 /actions/<worker-name>/index.js
@@ -78,7 +78,7 @@ asset compute项目中的测试结构如下所示：
    }
    ```
 
-   这些是传递到[开发工具的Asset compute配置文件定义](../develop/development-tool.md)中的相同键/值，小于`worker`键。
+   这些是传递到[开发工具的Asset Compute配置文件定义](../develop/development-tool.md)中的相同键/值，小于`worker`键。
 
 1. 将预期的[演绎版文件](./assets/test/success-parameterized/rendition.png)添加到此测试用例中，并将其命名为`rendition.png`。 此文件表示给定输入`file.jpg`的辅助进程的预期输出。
 1. 从命令行中，通过执行`aio app test`来运行项目根目录测试

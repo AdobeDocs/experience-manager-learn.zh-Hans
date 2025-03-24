@@ -3,14 +3,14 @@ title: 在Windows上安装AEM Forms的简化步骤
 description: 在Windows上安装AEM Forms的快速轻松步骤
 feature: Adaptive Forms
 type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 113
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果要使用AEM Forms，则切勿双击AEM快速入门jar。
+>如果您打算使用AEM Forms，请不要双击AEM快速入门jar 。
 >
 >此外，请确保AEM Forms安装文件夹路径中没有空格。
 >
@@ -39,8 +39,8 @@ ht-degree: 1%
 尽管我们建议遵循有关安装AEM Forms的[官方文档](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)。 可以执行以下步骤，在Windows环境中安装和配置AEM Forms：
 
 * 确保安装了适当的JDK
-   * 您需要AEM 6.2：OracleSE 8 JDK 1.8.x（64位）
-   * 您需要AEM 6.3和AEM 6.4：OracleSE 8 JDK 1.8.x（64位）
+   * AEM 6.2您需要的：Oracle SE 8 JDK 1.8.x（64位）
+   * AEM 6.3和AEM 6.4您需要：Oracle SE 8 JDK 1.8.x（64位）
    * AEM 6.5需要JDK 8或JDK 11
    * 此处列出了[官方JDK要求](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=zh-Hans)
 * 确保将JAVA_HOME设置为指向您已安装的JDK。
@@ -54,7 +54,7 @@ ht-degree: 1%
 * 将license.properties文件复制到此AEMForms文件夹中
 * 创建一个名为“StartAemForms.bat”的批处理文件，该文件包含以下内容：
    * `java -d64 -Xmx2048M -jar AEM_6.5_Quickstart.jar -gui`
-      * 此处，AEM_6.5_Quickstart.jar是我的AEM快速入门jar的名称。
+      * 此处，AEM_6.5_Quickstart.jar是我的AEM quickstart jar的名称。
    * 您可以将jar重命名为任何名称，但请确保该名称反映在批处理文件中。 将批处理文件保存在AEMForms文件夹中。
 
 * 打开新的命令提示符，并导航到&#x200B;_c：\aemforms_。
@@ -86,4 +86,4 @@ ht-degree: 1%
 1. 保存更改。
 
 恭喜!!! 您现在已在系统上安装和配置AEM Forms。
-根据您的需要，您可以在服务器上配置[Reader扩展](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)或[PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html)
+根据您的需求，您可以在服务器上配置[Reader扩展](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)或[PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html)

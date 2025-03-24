@@ -1,7 +1,7 @@
 ---
 title: 创作内容片段 — AEM Headless入门 — GraphQL
-description: Adobe Experience Manager (AEM)和GraphQL入门。 根据内容片段模型创建和编辑新的内容片段。 了解如何创建内容片段的变体。
-version: Cloud Service
+description: Adobe Experience Manager (AEM)和GraphQL快速入门。 根据内容片段模型创建和编辑新的内容片段。 了解如何创建内容片段的变体。
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6713
 thumbnail: 22451.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
 duration: 173
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '853'
 ht-degree: 3%
@@ -50,7 +50,7 @@ ht-degree: 3%
 
    ![打开文件夹属性](assets/author-content-fragments/open-folder-properties.png)
 
-1. 点按&#x200B;**Cloud Service**&#x200B;选项卡。 在云配置选项卡下，使用路径查找器选择&#x200B;**我的项目**&#x200B;配置。 该值应为`/conf/my-project`。
+1. 点按&#x200B;**云服务**&#x200B;选项卡。 在云配置选项卡下，使用路径查找器选择&#x200B;**我的项目**&#x200B;配置。 该值应为`/conf/my-project`。
 
    ![设置云配置](assets/author-content-fragments/set-cloud-config-my-project.png)
 
@@ -78,7 +78,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
->对于本地AEM SDK用户：利用AEM Assets UI创建和创作内容片段，而不是下面概述的内容片段UI。 有关详细说明，请参阅[AEM文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)。
+>对于本地AEM SDK用户：利用AEM Assets UI创建和创作内容片段，而不是下面介绍的内容片段UI。 有关详细说明，请参阅[AEM文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)。
 
 接下来几个内容片段是基于&#x200B;**团队**&#x200B;和&#x200B;**人员**&#x200B;模型创建的。
 
@@ -109,7 +109,7 @@ ht-degree: 3%
 
    * 位置： `/content/dam/my-project/en`
    * 内容片段模型： **团队**
-   * 标题： **团队Alpha**
+   * 标题： **Alpha团队**
    * 名称：`team-alpha`
 
    点按&#x200B;**创建**&#x200B;以创建团队片段。
@@ -146,13 +146,13 @@ ht-degree: 3%
    >
    >您还可以使用&#x200B;**新建内容片段**&#x200B;按钮创建内嵌内容片段。
 
-1. 点按&#x200B;**保存并关闭**&#x200B;以保存对团队Alpha片段的更改。
+1. 点按&#x200B;**保存并关闭**&#x200B;以保存对Alpha团队片段的更改。
 
-## Publish内容片段
+## 发布内容片段
 
 >[!TIP]
 >
->对于本地AEM SDK用户：利用AEM Assets UI发布内容片段，而不是下面列出的内容片段UI。 有关详细说明，请参阅[AEM文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment)。
+>对于本地AEM SDK用户：利用AEM Assets UI发布内容片段，而不是下面介绍的内容片段UI。 有关详细说明，请参阅[AEM文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment)。
 
 审核和验证后，发布创作的`Content Fragments`
 
@@ -160,8 +160,8 @@ ht-degree: 3%
 
 1. 在左边栏中，展开&#x200B;**我的项目**&#x200B;并点按&#x200B;**英语**。
 
-1. 点按内容片段旁边的复选框，然后点按&#x200B;**Publish**。
-   ![Publish内容片段](assets/author-content-fragments/publish-content-fragment.png)
+1. 点按内容片段旁边的复选框，然后点按&#x200B;**发布**。
+   ![发布内容片段](assets/author-content-fragments/publish-content-fragment.png)
 
 ## 恭喜！ {#congratulations}
 

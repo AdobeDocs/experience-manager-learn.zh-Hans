@@ -1,7 +1,7 @@
 ---
 title: 了解升级的原因
 description: 面向考虑升级到最新版本Adobe Experience Manager 6的客户的重要功能高级细目。
-version: 6.5
+version: Experience Manager 6.5
 topic: Upgrade
 feature: Release Information
 role: Leader, Architect, Developer, Admin, User
@@ -9,7 +9,7 @@ level: Beginner
 doc-type: Article
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
 duration: 538
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2588'
 ht-degree: 1%
@@ -34,8 +34,8 @@ Adobe Experience Manager 6.5继续通过以下方式增强系统的稳定性、�
 
 AEM Sites引入了一系列旨在加速网站创建和构建的功能：
 
-+ 支持&#x200B;**SPA Editor**，可以完全在SPA中创作AEM（单页应用程序），从而提供丰富的、对营销人员友好的创作体验。
-+_**JavaScript SDK**&#x200B;是一个SPA项目启动套件和支持的生成工具，它允许前端开发人员独立于AEM开发与SPA编辑器兼容的单页应用程序。
++ 支持&#x200B;**SPA Editor**，允许在AEM中完全创作SPA（单页应用程序），从而支持丰富的、对营销人员友好的创作体验。
++_**JavaScript SDK**&#x200B;是一个SPA项目启动套件和支持的生成工具，它允许前端开发人员独立于AEM开发与SPA Editor兼容的单页应用程序。
 + **核心组件**&#x200B;添加了大量新组件、**组件库**&#x200B;以及对现有核心组件的各种增强。
 + 进一步的&#x200B;**翻译**&#x200B;增强功能可简化AEM Sites的翻译。
 
@@ -49,11 +49,11 @@ AEM通过新的和改进的工具继续拥抱流畅的体验，这些工具便�
 
 ### 资产管理
 
-AEM Assets继续以其丰富的资产管理功能集为基础，改进对DAM的使用、管理和了解。 AEM 6.5继续改进Adobe Creative Cloud与创意工作流程之间的集成。
+AEM Assets继续以其丰富的资产管理功能集为基础，改进对DAM的使用、管理和了解。 AEM 6.5继续改进了Adobe Creative Cloud与创意工作流程之间的集成。
 
-+ **AdobeAsset Link**&#x200B;将创意内容从Adobe Creative Cloud工具直接连接到AEM Assets。
++ **Adobe Asset Link**&#x200B;将创意内容从Adobe Creative Cloud工具直接连接到AEM Assets。
 + **Adobe Stock**&#x200B;集成允许直接从AEM Assets Experience访问Adobe Stock图像，从而创建无缝的内容发现体验。
-+ **AEM Desktop App**&#x200B;发布版本2.0，并在提高性能和稳定性的同时重新规划自身。
++ **AEM桌面应用程序**&#x200B;发布版本2.0，在改进性能和稳定性的同时重新规划自身。
 + **Connected Assets**&#x200B;支持离散AEM Sites实例，以便无缝访问和使用其他AEM Assets实例的资源。
 + 更新了&#x200B;**Dynamic Media**&#x200B;中的视频支持，包括&#x200B;**360视频**&#x200B;和&#x200B;**自定义视频缩略图**。
 
@@ -61,7 +61,7 @@ AEM Assets继续以其丰富的资产管理功能集为基础，改进对DAM的�
 
 AEM继续构建与智能技术的集成，利用机器学习和人工智能改善所有体验。
 
-+ **AdobeAsset Link**&#x200B;添加了&#x200B;**视觉相似性搜索**，以便在&#x200B;**Adobe Creative Cloud工具**&#x200B;中轻松发现和使用类似的图像。
++ **Adobe Asset Link**&#x200B;添加了&#x200B;**视觉相似性搜索**，以便在&#x200B;**Adobe Creative Cloud工具**&#x200B;中轻松发现和使用类似的图像。
 
 ### 集成
 
@@ -71,16 +71,16 @@ AEM提高了与其他Adobe服务集成的能力：
 
 ### AMS CLOUD MANAGER
 
-[Cloud Manager](https://adobe.ly/2HODmsv)是AdobeManaged Services (AMS)客户的专属产品，可提供以下功能：
+Adobe Managed Services (AMS)客户独有的[Cloud Manager](https://adobe.ly/2HODmsv)提供以下功能：
 
-+ Cloud Manager支持将AEM部署支持从AEM Sites扩展到&#x200B;**AEM Assets**，包括&#x200B;**对资源处理的自动性能测试**。
++ Cloud Manager支持将AEM部署支持从AEM Sites扩展到&#x200B;**AEM Assets**，包括&#x200B;**对资产处理进行自动性能测试**。
 + 以预定义的阈值自动缩放AEM Publish层的&#x200B;**个**，确保获得最佳的最终用户体验。
 + **非生产管道**&#x200B;允许开发团队利用Cloud Manager不断检查代码质量并部署到较低环境（开发和QA）。
 + **CI/CD管道API**&#x200B;允许客户以编程方式与Cloud Manager交互，深化与内部部署开发基础架构的集成可能性。
 
 ## 基础功能
 
-以下是AEM提供的关键基础功能列表。 其中一些功能已在早期版本中引入，并在每个版本中添加了增量增强功能。
+以下是AEM提供的主要基础功能列表。 其中一些功能已在早期版本中引入，并在每个版本中添加了增量增强功能。
 
 + [AEM Foundation发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html)
 
@@ -171,7 +171,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/aem-with-mongodb.html" target="_blank">MongoMK性能和稳定性</a>：</strong>
-            自MongoMK引入AEM 6.0以来，它一直得到增强。</td>
+            自从MongoMK在AEM 6.0中推出以来，它一直得到增强。</td>
             <td> </td>
             <td> </td>
             <td>✔</td>
@@ -215,7 +215,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/operations-dashboard.html" target="_blank">操作仪表板</a>：</strong>
- 从AEM内执行维护、监控服务器运行状况并分析性能。</td>
+ 在AEM中执行维护、监控服务器运行状况并分析性能。</td>
             <td></td>
             <td>✔</td>
             <td>✔</td>
@@ -260,7 +260,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://adobe.ly/2HODmsv" target="_blank">Cloud Manager</a>： </strong>
-                除了AdobeManaged Services (AMS)客户之外，Cloud Manager还通过最先进的CI/CD管道加快了开发和部署速度。</td>
+                Adobe Managed Services (AMS)客户独有，Cloud Manager通过最先进的CI/CD管道加快了开发和部署。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -410,7 +410,7 @@ AEM提高了与其他Adobe服务集成的能力：
     </tr>
     <tr>
         <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Adobe IMS身份验证支持</a><br>
- </strong>专为AdobeManaged Services (AMS)提供，可通过Adobe IMS (Identity Management System)集中管理对AEM创作实例的访问。</td>
+ </strong>专属于Adobe Managed Services (AMS)，可通过Adobe IMS (Identity Management System)集中管理对AEM创作实例的访问。</td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -435,7 +435,7 @@ AEM提高了与其他Adobe服务集成的能力：
 <table>
     <thead>
         <tr>
-            <td><strong>站点功能</strong></td>
+            <td><strong>Sites 功能</strong></td>
             <td>5.6.x</td>
             <td>6.0</td>
             <td>6.1</td>
@@ -492,7 +492,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/spa-overview.html" target="_blank">SPA编辑器</a>：</strong>
-            使用基于React构建的单页应用程序(SPA)框架，创建可创作、可触发的Web体验。</td>
+            使用基于React构建的单页应用程序(SPA)框架创建可创作、可触发的Web体验。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -503,7 +503,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong>样式系统：</strong>
-            通过使用上下文内样式系统定义其可视化外观，提高AEM组件的重用率。</td>
+            通过使用上下文内样式系统定义其视觉外观，提高AEM组件的重用率。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -580,7 +580,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong>内容服务：</strong>
-            将内容从AEM导出为JSON，以便跨设备和应用程序使用。</td>
+            从AEM中将内容导出为JSON，以便跨设备和应用程序使用。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -718,7 +718,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank">任务</a>和工作流管理：</strong>
-            利用AEM Projects审阅和批准数字资产的预建工作流和任务。</td>
+            利用AEM项目审阅和批准数字资产的预建工作流和任务。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -839,7 +839,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/cn/experience-manager/desktop-app/aem-desktop-app.html" target="_blank">AEM桌面应用程序</a>：</strong>
-            将资源同步到本地桌面以使用Creative Suite产品进行编辑。
+            将资产同步到本地桌面，以便与Creative Suite产品一起编辑。
             </td>
             <td> </td>
             <td> </td>
@@ -851,7 +851,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe图像库</a>：</strong>
-                <br>用于高质量文件操作的Photoshop和AcrobatPDF库。</td>
+                <br>用于高质量文件操作的Photoshop和Acrobat PDF库。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -861,8 +861,8 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://www.adobe.com/cn/creativecloud/business/enterprise/adobe-asset-link.html" target="_blank">Adobe资源链接</a>：</strong>
-            直接从Adobe创建云应用程序中访问AEM Assets。</td>
+            <td><strong><a href="https://www.adobe.com/cn/creativecloud/business/enterprise/adobe-asset-link.html" target="_blank">Adobe Asset Link</a>：</strong>
+            直接从Adobe Create Cloud应用程序中访问AEM Assets。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -964,7 +964,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/delivering-dynamic-media-assets.html" target="_blank">投放</a>：</strong>
-            通过HTTP/2协议链接或嵌入Dynamic Media内容和交付的灵活选项。</td>
+            通过HTTP/2协议链接或嵌入Dynamic Media内容和投放的灵活选项。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -1100,7 +1100,7 @@ AEM提高了与其他Adobe服务集成的能力：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/user-guide.html?topic=/experience-manager/6-5/forms/morehelp/integrations.ug.js" target="_blank">与Marketing Cloud</a>的集成：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/user-guide.html?topic=/experience-manager/6-5/forms/morehelp/integrations.ug.js" target="_blank">与Marketing Cloud的集成</a>：</strong>
             与Adobe Analytics和Adobe Target集成，以增强和衡量客户体验。</td>
             <td> </td>
             <td> </td>
@@ -1157,7 +1157,7 @@ AEM提高了与其他Adobe服务集成的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#EnhancedDocumentSecurity" target="_blank">AEM Forms Document Security</a>：</strong>
-            对PDF和Office文档的安全访问和授权。
+            安全地访问和授权PDF和Office文档。
             </td>
             <td> </td>
             <td>✔</td>

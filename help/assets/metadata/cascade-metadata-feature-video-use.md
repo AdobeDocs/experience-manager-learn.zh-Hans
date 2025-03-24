@@ -1,7 +1,7 @@
 ---
 title: 在AEM Assets中使用层叠元数据
 description: 高级元数据管理允许用户创建层叠字段规则，以在AEM Assets中形成元数据之间的上下文关系。 以下视频演示了字段要求、可见性和上下文选择的新动态规则。 此视频还详细介绍管理员将这些规则应用于自定义元数据架构所需的步骤。
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Content Management
 feature: Metadata
 role: User
@@ -12,7 +12,7 @@ last-substantial-update: 2022-06-08T00:00:00Z
 doc-type: Feature Video
 exl-id: 73e793e0-a20e-4954-ba1a-471b2cd85120
 duration: 345
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%

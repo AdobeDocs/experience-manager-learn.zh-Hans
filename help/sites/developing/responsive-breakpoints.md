@@ -1,7 +1,7 @@
 ---
 title: 响应式断点
 description: 了解如何为AEM响应式页面编辑器配置新的响应式断点。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Page Editor
 topic: Mobile, Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-11664
 thumbnail: kt-11664.jpeg
 exl-id: 8b48c28f-ba7f-4255-be96-a7ce18ca208b
 duration: 52
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 创建CSS断点
 
-首先，在AEM响应式网格CSS中创建响应式AEM站点所遵循的媒体断点。
+首先，在AEM响应式网格CSS中创建响应AEM站点所遵循的媒体断点。
 
 在`/ui.apps/src/main/content/jcr_root/apps/[app name]/clientlibs/clientlib-grid/less/grid.less`文件中，创建要与移动设备模拟器一起使用的断点。 记下每个断点的`max-width`，因为这会将CSS断点映射到AEM响应式页面编辑器断点。
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 在`/ui.apps/src/main/content/jcr_root/apps/<app name>/emulators`下创建模拟器节点
 
-例如，`/ui.apps/src/main/content/jcr_root/apps/wknd-examples/emulators/phone-landscape`。将引用模拟器节点从CRXDE Lite中的`/libs/wcm/mobile/components/emulators`复制到并更新该副本以加快节点定义。
+例如，`/ui.apps/src/main/content/jcr_root/apps/wknd-examples/emulators/phone-landscape`。将引用模拟器节点从CRXDE Lite中的`/libs/wcm/mobile/components/emulators`复制到并更新副本以加快节点定义。
 
 ![创建新模拟器](./assets/responsive-breakpoints/create-new-emulators.jpg)
 

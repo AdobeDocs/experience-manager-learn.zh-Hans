@@ -1,8 +1,8 @@
 ---
 title: 将自定义按钮添加到富文本编辑器(RTE)工具栏
-description: 了解如何在AEM内容片段编辑器中向富文本编辑器(RTE)工具栏添加自定义按钮
+description: 了解如何在AEM内容片段编辑器的富文本编辑器(RTE)工具栏中添加自定义按钮
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 6fd93d3b-6d56-43c5-86e6-2e2685deecc9
 duration: 345
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 使用`rte`扩展点的`getCustomButtons()`方法，可以将一个或多个自定义按钮添加到&#x200B;**RTE工具栏**。 还可以分别使用`getCoreButtons()`和`removeButtons)`方法添加或删除标准RTE按钮，如&#x200B;_复制、粘贴、粗体和斜体_。
 
-此示例说明如何使用自定义&#x200B;_添加提示_&#x200B;工具栏按钮插入高亮显示的注释或提示。 高亮显示的注释或提示内容具有通过HTML元素和关联的CSS类应用的特殊格式。 使用`getCustomButtons()`的`onClick()`回调方法插入占位符内容和HTML代码。
+此示例说明如何使用自定义&#x200B;_添加提示_&#x200B;工具栏按钮插入高亮显示的注释或提示。 高亮显示的注释或提示内容具有通过HTML元素和关联的CSS类应用的特殊格式。 占位符内容和HTML代码是使用`getCustomButtons()`的`onClick()`回调方法插入的。
 
 ## 扩展点
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 + RTE工具栏按钮在`getCustomButtons()`函数中的定义具有`id, tooltip and icon`属性。
 + `onClick()`函数中按钮的点击处理程序。
 + 点击处理程序函数接收`state`对象作为参数，以获取HTML或文本格式的RTE内容。 但在本例中，并未使用它。
-+ click handler函数返回指令数组。 此数组有一个具有`type`和`value`属性的对象。 要插入内容，`value`属性HTML代码段，`type`属性使用`insertContent`。 如果有用例替换内容，则用例`replaceContent`指令类型。
++ click handler函数返回指令数组。 此数组有一个具有`type`和`value`属性的对象。 为了插入内容，`value`属性HTML代码段，`type`属性使用`insertContent`。 如果有用例替换内容，则用例`replaceContent`指令类型。
 
 `insertContent`值是HTML字符串`<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>`。 用于显示值的CSS类`cmp-contentfragment__element-tip`未在构件中定义，而是在显示此内容片段字段的Web体验上实施的。
 

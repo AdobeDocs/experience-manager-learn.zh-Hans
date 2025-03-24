@@ -1,8 +1,8 @@
 ---
 title: 使用OSGi Web控制台调试AEM SDK
-description: AEM SDK的本地快速入门具有OSGi Web控制台，该控制台为本地AEM运行时提供各种信息和说明，对于了解AEM如何识别和运行您的应用程序非常有用。
+description: AEM SDK的本地快速入门具有OSGi Web控制台，该控制台为本地AEM运行时提供各种信息和说明，这对于了解AEM如何识别和运行您的应用程序非常有用。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 kt: 5265, 5366, 5267
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 0929bc1a-376c-4e16-a540-a276fd5af164
 duration: 486
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 使用OSGi Web控制台调试AEM SDK
 
-AEM SDK的本地快速入门具有OSGi Web控制台，该控制台为本地AEM运行时提供各种信息和说明，对于了解AEM如何识别和运行您的应用程序非常有用。
+AEM SDK的本地快速入门具有OSGi Web控制台，该控制台为本地AEM运行时提供各种信息和说明，这对于了解AEM如何识别和运行您的应用程序非常有用。
 
 AEM提供了许多OSGi控制台，每个控制台都提供了有关AEM各个方面的关键见解，但是，以下内容通常在调试应用程序时最有用。
 
@@ -27,7 +27,7 @@ AEM提供了许多OSGi控制台，每个控制台都提供了有关AEM各个方�
 
 >[!VIDEO](https://video.tv.adobe.com/v/34335?quality=12&learn=on)
 
-捆绑包控制台是OSGi捆绑包的目录，其详细信息部署到AEM，并且具有启动和停止这些捆绑包的临时功能。
+捆绑包控制台是OSGi捆绑包的目录，其详细信息部署到AEM，并且具有启动和停止捆绑包的临时功能。
 
 捆绑包控制台位于：
 
@@ -44,7 +44,7 @@ AEM提供了许多OSGi控制台，每个控制台都提供了有关AEM各个方�
 
 >[!VIDEO](https://video.tv.adobe.com/v/34336?quality=12&learn=on)
 
-组件控制台是部署到AEM的所有OSGi组件的目录，提供了有关这些组件的所有信息，从其定义的OSGi组件生命周期到他们可以引用的OSGi服务
+组件控制台是一个目录，其中包含部署到AEM的所有OSGi组件，并提供有关这些组件的所有信息，从其定义的OSGi组件生命周期到他们可以引用的OSGi服务
 
 “组件”控制台位于：
 

@@ -5,13 +5,13 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Developer Tools
 jira: KT-8852
 exl-id: 983e0394-7142-481f-bd5e-6c9acefbfdd0
 duration: 52
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -47,7 +47,7 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 
 在`apps/bankingapplication`文件夹中创建自定义提交操作的方式与在[早期版本的AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en)中创建的方式相同。 在本教程中，我在CRX存储库的`apps/bankingapplication`节点下创建了一个名为SubmitToAEMServlet的文件夹。
 
-post.request.jsp中的以下代码只是将POST转发到挂载在/bin/formstutorial上的servlet。 这与上一步中创建的servlet相同
+post.POST.jsp中的以下代码只是将请求转发到挂载在/bin/formstutorial上的servlet。 这与上一步中创建的servlet相同
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
@@ -58,7 +58,7 @@ com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/f
 
 ## 配置自适应表单
 
-您现在可以将任何自适应表单配置为提交到此自定义提交处理程序，称为&#x200B;**提交到AEM Servlet**
+您现在可以将任何自适应表单配置为提交到此自定义提交处理程序，此处理程序称为&#x200B;**提交到AEM Servlet**
 
 ## 后续步骤
 

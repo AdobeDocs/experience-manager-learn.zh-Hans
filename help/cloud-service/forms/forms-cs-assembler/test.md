@@ -4,12 +4,12 @@ description: 运行ExecuteAssemblerService.java以测试解决方案
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 exl-id: 5139aa84-58d5-40e3-936a-0505bd407ee8
 duration: 55
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -27,12 +27,12 @@ ht-degree: 0%
 
 ![资源文件](./assets/resources.png)
 
-## 测试组合PDF文件
+## 测试汇编PDF文件
 
 * 将服务凭据复制并粘贴到项目的service_token.json资源文件中。
 * 打开AssemblePDFFiles.java文件，并指定要保存生成的PDF文件的文件夹
 * 打开ExecuteAssemblerService.java。 将变量&#x200B;_AEM_FORMS_CS_&#x200B;的值设置为指向您的实例。
-* 取消注释相应的行以测试装配两个或多个PDF文件
+* 取消注释相应的行以测试汇编两个或多个PDF文件
 * 以Java应用程序形式运行ExecuteAssemblerService.java
 
 ### 测试PDFA实用程序

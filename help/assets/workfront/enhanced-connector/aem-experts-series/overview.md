@@ -1,7 +1,7 @@
 ---
 title: 使用增强型连接器集成Workfront和AEM Assets
 description: 了解Adobe Workfront和Experience Manager Assets增强型连接器集成的基础知识。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, User
@@ -10,10 +10,10 @@ jira: KT-9754
 thumbnail: kt-9754.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
+badgeVersions: label="AEM Assets as a Cloud Service， AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
 duration: 49
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -26,12 +26,12 @@ ht-degree: 0%
 
 观看这个由四部分组成的视频系列，其中Adobe的Workfront和Experience Manager Assets专家将演示和讨论使用增强型连接器集成Workfront和AEM Assets的详细信息。
 
-这一四部分专家系列将跟随Adobe专家团队(从产品经理到顾问和Adobe合作伙伴)讨论：
+这个由四部分组成的专家系列与Adobe专家团队(从产品经理到顾问和Adobe合作伙伴)一起讨论：
 
 1. [在Workfront和AEM中执行初始设置配置](./setup.md)
 2. [配置Workfront自定义表单与AEM之间的元数据同步](./custom-forms.md)
-3. [使用AEM Tags、项目链接文件夹、AdobeAsset Link和文件夹元数据架构最大化价值](./aem-tags-project-linked-folders-and-folder-metadata.md)
-4. [使用高级AEM工作流简化AEM和Workfront以及其他高级设置中的业务流程](./advanced-settings-and-workflows.md)
+3. [使用AEM Tags、项目链接文件夹、Adobe Asset Link和文件夹元数据架构最大化价值](./aem-tags-project-linked-folders-and-folder-metadata.md)
+4. [使用高级AEM工作流简化AEM和Workfront以及其他高级设置的业务流程](./advanced-settings-and-workflows.md)
 
 <table>
   <td>
@@ -45,7 +45,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-         了解如何设置并执行Workfront for Experience Manager增强连接器的初始配置。
+         了解如何设置和执行Workfront for Experience Manager增强连接器的初始配置。
       </p>
    </td>
    <!-- Workfront custom forms and metadata mapping -->

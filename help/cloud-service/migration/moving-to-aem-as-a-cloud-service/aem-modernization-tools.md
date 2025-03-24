@@ -1,7 +1,7 @@
 ---
 title: 使用AEM现代化工具迁移到AEM as a Cloud Service
 description: 了解如何使用AEM现代化工具将现有AEM项目和内容升级为可与AEM as a Cloud Service兼容的项目和内容。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Migration, Upgrade
 feature: Migration
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
 duration: 2502
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # AEM 现代化工具
 
-了解如何使用AEM现代化工具将现有AEM Sites内容升级为与AEM as a Cloud Service兼容并与最佳实践保持一致。
+了解如何使用AEM现代化工具将现有AEM Sites内容升级为与AEM as a Cloud Service兼容并符合最佳实践。
 
 ## 多功能一体转换器
 

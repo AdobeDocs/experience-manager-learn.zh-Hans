@@ -1,7 +1,7 @@
 ---
 title: 虚拟专用网络 (VPN)
 description: 了解如何将AEM as a Cloud Service与您的VPN连接起来，以便在AEM和内部服务之间创建安全的通信渠道。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 1%
@@ -248,7 +248,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
    |---------------------------------|----------|----------------|------------------|----------|
    | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-   如果您的AEM部署&#x200B;__仅__&#x200B;需要与外部服务的HTTP/HTTPS连接，请将`portForwards`数组留空，因为只有非HTTP/HTTPS请求才需要这些规则。
+   如果您的AEM部署&#x200B;__仅__&#x200B;需要与外部服务的HTTP/HTTPS连接，请将`portForwards`数组留空，因为这些规则仅对于非HTTP/HTTPS请求是必需的。
 
 
 2. 对于每个环境，使用Cloud Manager API的[getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)操作验证VPN路由规则是否有效。
@@ -269,7 +269,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 ## 通过虚拟专用网络连接到外部服务
 
-启用虚拟专用网络后，AEM代码和配置可以使用它们通过VPN调用外部服务。 AEM对两种外部调用的处理方式有所不同：
+启用虚拟专用网络后，AEM代码和配置可以使用它们通过VPN调用外部服务。 AEM对两种外部调用处理方式不同：
 
 1. 对外部服务的HTTP/HTTPS调用
    + 包括对在标准80或443端口以外的端口上运行的服务发出的HTTP/HTTPS调用。
@@ -280,7 +280,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 ### HTTP/HTTPS
 
-从AEM创建HTTP/HTTPS连接时，如果使用VPN，则会自动从AEM中代理HTTP/HTTPS连接。 无需其他代码或配置即可支持HTTP/HTTPS连接。
+从AEM创建HTTP/HTTPS连接时，使用VPN时，HTTP/HTTPS连接会自动通过AEM进行代理。 无需其他代码或配置即可支持HTTP/HTTPS连接。
 
 >[!TIP]
 >
@@ -311,7 +311,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 | `AEM_PROXY_HOST` | 非HTTP/HTTPS连接的代理主机 | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
-然后，通过`AEM_PROXY_HOST`和映射端口(`portForwards.portOrig`)调用与外部服务的连接，AEM随后将其路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
+然后，通过`AEM_PROXY_HOST`和映射的端口(`portForwards.portOrig`)调用与外部服务的连接，AEM随后将其路由到映射的外部主机名(`portForwards.name`)和端口(`portForwards.portDest`)。
 
 | 代理主机 | 代理端口 |  | 外部主机 | 外部端口 |
 |---------------------------------|----------|----------------|------------------|----------|
@@ -355,14 +355,14 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
       <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list"><img alt="应用IP允许列表" src="./assets/code_examples__vpn-allow-list.png"/></a>
       <div>列入允许列表 <strong><a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list">应用IP</a></strong></div>
       <p>
-            列入允许列表配置IP，以便只有VPN通信可以访问AEM。
+            配置IP允许列表，以便只有VPN通信可以访问AEM。
       </p>
     </td>
    <td>
       <a  href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking"><img alt="AEM Publish的基于路径的VPN访问限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking">对AEM Publish基于路径的VPN访问限制</a></strong></div>
+      <div><strong><a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking">对AEM Publish的基于路径的VPN访问限制</a></strong></div>
       <p>
-            要求AEM Publish上的特定路径具有VPN访问权限。
+            在AEM Publish上要求访问特定路径的VPN。
       </p>
     </td>
    <td></td>

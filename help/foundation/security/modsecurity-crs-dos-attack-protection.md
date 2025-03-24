@@ -2,7 +2,7 @@
 title: 使用ModSecurity保护AEM站点免受DoS攻击
 description: 了解如何使用OWASP ModSecurity核心规则集(CRS)启用ModSecurity以保护您的站点免受拒绝服务(DoS)攻击。
 feature: Security
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
 role: Admin, Architect
 level: Experienced
@@ -12,9 +12,9 @@ doc-type: Article
 last-substantial-update: 2023-08-18T00:00:00Z
 exl-id: 9f689bd9-c846-4c3f-ae88-20454112cf9a
 duration: 783
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ModSecurity是一种开源、跨平台的解决方案，可针对针对Web应用程序的一系列攻击提供保护。 它还支持HTTP流量监控、日志记录和实时分析。
 
-OWSAP®还提供[OWASP® ModSecurity核心规则集(CRS)](https://github.com/coreruleset/coreruleset)。 CRS是一组用于ModSecurity的通用&#x200B;**攻击检测**&#x200B;规则。 因此，CRS旨在保护Web应用程序免受各种攻击，包括OWASP Top Ten攻击，同时尽量减少虚假警报。
+OWSAP®还提供[OWASP® ModSecurity核心规则集(CRS)](https://github.com/coreruleset/coreruleset)。 CRS是一组用于ModSecurity的通用&#x200B;**攻击检测**&#x200B;规则。 因此，CRS旨在保护Web应用程序免受各种攻击(包括OWASP十大攻击)，同时尽量减少虚假警报。
 
 本教程演示如何启用和配置&#x200B;**DOS-PROTECTION** CRS规则以保护您的站点免受可能的DoS攻击。
 
@@ -55,7 +55,7 @@ OWSAP®还提供[OWASP® ModSecurity核心规则集(CRS)](https://github.com/cor
    $ tar -xvzf coreruleset-3.3.5.tar.gz
    ```
 
-1. 在您的AEM项目代码的`dispatcher/src/conf.d/`内创建`modsec/crs`文件夹。 例如，在[AEM WKND站点项目](https://github.com/adobe/aem-guides-wknd)的本地副本中。
+1. 在您的AEM项目代码的`dispatcher/src/conf.d/`中创建`modsec/crs`文件夹。 例如，在[AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd)的本地副本中。
 
    AEM项目代码中的![CRS文件夹 — ModSecurity](assets/modsecurity-crs/crs-folder-in-aem-dispatcher-module.png){width="200" zoomable="yes"}
 
@@ -111,8 +111,8 @@ OWSAP®还提供[OWASP® ModSecurity核心规则集(CRS)](https://github.com/cor
 要初始化CRS，请删除常见的误报并为站点添加本地例外，请执行以下步骤：
 
 1. 要初始化CRS，请从&#x200B;**REQUEST-901-INITIALIZATION**&#x200B;文件中删除`.disabled`。 换句话说，将`REQUEST-901-INITIALIZATION.conf.disabled`文件重命名为`REQUEST-901-INITIALIZATION.conf`。
-1. 要删除常见误报(如本地IP (127.0.0.1) ping)，请从&#x200B;**REQUEST-905-COMMON-EXCEPTIONS**&#x200B;文件中删除`.disabled`。
-1. 若要添加本地异常(如AEM平台或网站特定的路径)，请将`REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example`重命名为`REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf`
+1. 若要删除常见的误报，如本地IP (127.0.0.1) ping，请从&#x200B;**REQUEST-905-COMMON-EXCEPTIONS**&#x200B;文件中删除`.disabled`。
+1. 要添加本地异常(如AEM平台或网站特定的路径)，请将`REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example`重命名为`REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf`
    1. 将特定于AEM平台的路径异常添加到新重命名的文件。
 
    ```
@@ -152,7 +152,7 @@ OWSAP®还提供[OWASP® ModSecurity核心规则集(CRS)](https://github.com/cor
 
 >[!TIP]
 >
->在AEM 6.5上配置时，请确保将以上路径替换为验证AEM运行状况的相应AMS或内部部署路径（也称为心率路径）。
+>在AEM 6.5上配置时，请确保将上述路径替换为验证AEM运行状况的相应AMS或内部部署路径（也称为心率路径）。
 
 ## 添加ModSecurity Apache配置
 
@@ -208,7 +208,7 @@ OWSAP®还提供[OWASP® ModSecurity核心规则集(CRS)](https://github.com/cor
    SecDataDir /tmp
    ```
 
-1. 从AEM项目的Dispatcher模块`dispatcher/src/conf.d/available_vhosts`中选择所需的`.vhost`，例如`wknd.vhost`，在`<VirtualHost>`块外添加以下条目。
+1. 从您的AEM项目的Dispatcher模块`dispatcher/src/conf.d/available_vhosts`中选择所需的`.vhost`，例如`wknd.vhost`，在`<VirtualHost>`块外添加以下条目。
 
    ```
    # Enable the ModSecurity and OWASP CRS
@@ -224,11 +224,11 @@ OWSAP®还提供[OWASP® ModSecurity核心规则集(CRS)](https://github.com/cor
    </VirtualHost>
    ```
 
-上述&#x200B;_ModSecurity CRS_&#x200B;和&#x200B;_DOS-PROTECTION_&#x200B;配置在AEM WKND Sites项目的[tutorial/enable-modsecurity-crs-dos-protection](https://github.com/adobe/aem-guides-wknd/tree/tutorial/enable-modsecurity-crs-dos-protection)分支上可供您审阅。
+上述&#x200B;_ModSecurity CRS_&#x200B;和&#x200B;_DOS-PROTECTION_&#x200B;配置均可在AEM WKND Sites项目的[tutorial/enable-modsecurity-crs-dos-protection](https://github.com/adobe/aem-guides-wknd/tree/tutorial/enable-modsecurity-crs-dos-protection)分支中获取，以供您审阅。
 
 ### 验证Dispatcher配置
 
-在使用AEM as a Cloud Service时，在部署&#x200B;_Dispatcher配置_&#x200B;更改之前，建议使用[AEM SDK的Dispatcher Tools](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html)的`validate`脚本在本地验证这些更改。
+在使用AEM as a Cloud Service时，在部署&#x200B;_Dispatcher配置_&#x200B;更改之前，建议使用[AEM SDK的Dispatcher工具](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html)的`validate`脚本在本地验证这些更改。
 
 ```
 # Go inside Dispatcher SDK 'bin' directory
@@ -280,7 +280,7 @@ $ ./validate.sh <YOUR-AEM-PROJECT-CODE-DIR>/dispatcher/src
 
 ModSecurity记录器配置会记录DoS攻击事件的详细信息。 要查看详细信息，请执行以下步骤：
 
-1. 下载并打开&#x200B;**Publish Dispatcher**&#x200B;的`httpderror`日志文件。
+1. 下载并打开&#x200B;**发布Dispatcher**&#x200B;的`httpderror`日志文件。
 1. 在日志文件中搜索单词`burst`，以查看&#x200B;**错误**&#x200B;行
 
    ```

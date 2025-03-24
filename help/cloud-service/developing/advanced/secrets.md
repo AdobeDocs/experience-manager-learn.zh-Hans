@@ -1,14 +1,14 @@
 ---
 title: 在AEM as a Cloud Service中管理密钥
 description: 了解在AEM as a Cloud Service中管理机密的最佳实践，使用AEM提供的工具和技术来保护您的敏感信息，确保您的应用程序保持安全和机密。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development, Security
 feature: OSGI, Cloud Manager
 role: Developer
 jira: KT-15880
 level: Intermediate, Experienced
 exl-id: 856b7da4-9ee4-44db-b245-4fdd220e8a4e
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 在本教程中，您将学习在AEM中管理密钥的最佳实践。 我们将介绍AEM为保护您的敏感信息而提供的工具和技术，以确保您的应用程序保持安全和机密。
 
-本教程假定您具有AEM Java开发、OSGi服务、Sling模型和AdobeCloud Manager的工作知识。
+本教程假定您具有AEM Java开发、OSGi服务、Sling模型和Adobe Cloud Manager的工作知识。
 
 ## 密码管理器OSGi服务
 
@@ -82,7 +82,7 @@ public interface SecretsManager {
 
 要公开OSGi服务中的密码值，请使用[OSGi密码配置值](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#secret-configuration-values)将它们映射到OSGi配置。 将OSGi属性名称定义为从`SecretsManager.getSecret()`方法检索机密值的密钥。
 
-在AEM Maven项目的OSGi配置文件`/apps/example/osgiconfig/config/com.example.core.util.impl.SecretsManagerImpl.cfg.json`中定义密钥。 每个属性都表示在AEM中公开的一个密钥，其值通过Cloud Manager设置。 密钥是OSGi属性名称，用于从`SecretsManager`服务检索机密值。
+在AEM Maven项目的OSGi配置文件`/apps/example/osgiconfig/config/com.example.core.util.impl.SecretsManagerImpl.cfg.json`中定义密钥。 每个资产都表示一个在AEM中公开的密钥，其值通过Cloud Manager进行设置。 密钥是OSGi属性名称，用于从`SecretsManager`服务检索机密值。
 
 ```json
 {
@@ -155,16 +155,16 @@ public class ExampleSecretConsumerImpl implements ExampleSecretConsumer {
 
 ![Cloud Manager密码配置](./assets/secrets/cloudmanager-configuration.png)
 
-1. 登录到[AdobeCloud Manager](https://my.cloudmanager.adobe.com)。
-1. 选择要为其设置密码的AEM程序和环境。
+1. 登录到[Adobe Cloud Manager](https://my.cloudmanager.adobe.com)。
+1. 选择要为其设置密码的AEM项目和环境。
 1. 在“环境详细信息”视图中，选择&#x200B;**配置**&#x200B;选项卡。
 1. 选择&#x200B;**添加**。
 1. 在环境配置对话框中：
    - 输入OSGi配置中引用的机密变量名称（例如`api_key`）。
    - 输入密码值。
-   - 选择密码应用到哪个AEM服务。
+   - 选择密码适用的AEM服务。
    - 选择&#x200B;**密钥**&#x200B;作为类型。
 1. 选择&#x200B;**添加**&#x200B;以保留密码。
-1. 根据需要添加任意数量的密钥。 完成后，选择&#x200B;**保存**&#x200B;以将更改立即应用到AEM环境。
+1. 根据需要添加任意数量的密钥。 完成后，选择&#x200B;**保存**&#x200B;以立即将更改应用到AEM环境。
 
-将Cloud Manager配置用于密码可提供以下好处：将不同的值应用于不同的环境或服务，以及无需重新部署AEM应用程序即可旋转密码。
+将密码的Cloud Manager配置用于不同环境或服务以及旋转密码而不重新部署AEM应用程序的好处。

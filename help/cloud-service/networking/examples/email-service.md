@@ -1,7 +1,7 @@
 ---
 title: 电子邮件服务
 description: 了解如何配置AEM as a Cloud Service以使用出口端口连接电子邮件服务。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
 duration: 76
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 电子邮件服务
 
-通过将AEM `DefaultMailService`配置为使用高级联网出口端口，从AEM as a Cloud Service发送电子邮件。
+通过将AEM as a Cloud Service的`DefaultMailService`配置为使用高级联网出口端口，从AEM发送电子邮件。
 
 由于（大部分）邮件服务不会通过HTTP/HTTPS运行，因此必须代理从AEM as a Cloud Service到邮件服务的连接。
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 由于密码不能存储在代码中，因此最好使用[机密OSGi配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)、使用AIO CLI或Cloud Manager API设置来提供电子邮件服务的用户名和密码。
 
-通常，[灵活端口出口](../flexible-port-egress.md)用于满足与电子邮件服务的集成，除非需要`allowlist`AdobeIP，在这种情况下，可以使用[专用出口IP地址](../dedicated-egress-ip-address.md)。
+通常，[灵活端口出口](../flexible-port-egress.md)用于满足与电子邮件服务的集成，除非需要`allowlist` Adobe IP，在这种情况下，可以使用[专用出口IP地址](../dedicated-egress-ip-address.md)。
 
 此外，请查看有关[发送电子邮件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email)的AEM文档。
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## OSGi配置
 
-此OSGi配置示例将AEM Mail OSGi服务配置为通过[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)操作的以下Cloud Manager `portForwards`规则使用外部邮件服务。
+此OSGi配置示例将AEM的Mail OSGi服务配置为通过[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)操作的以下Cloud Manager `portForwards`规则使用外部邮件服务。
 
 ```json
 ...
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/config/com.day.cq.mailer.DefaultMailService.cfg.json`
 
-根据您的电子邮件提供商的要求配置AEM [DefaulMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email)（例如`smtp.ssl`等）。
+根据电子邮件提供商的要求（例如`smtp.ssl`等）配置AEM的[DefaulMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email)。
 
 ```json
 {

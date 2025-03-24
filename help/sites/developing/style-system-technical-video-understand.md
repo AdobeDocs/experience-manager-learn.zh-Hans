@@ -1,15 +1,15 @@
 ---
 title: 了解如何为AEM样式系统编码
-description: 在本视频中，我们将介绍CSS（或LESS）和JavaScript的剖析，这些样式用于通过样式系统为Adobe体验管理器的核心标题组件设置样式，以及这些样式如何应用于HTML和DOM。
+description: 在本视频中，我们将介绍CSS（或LESS）和JavaScript的结构描述(用于通过样式系统为Adobe Experience Manager的核心标题组件设置样式)，以及这些样式如何应用于HTML和DOM。
 feature: Style System
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Intermediate, Experienced
 doc-type: Technical Video
 exl-id: 8fbc3819-3214-4c58-8629-a27eb6f0c545
 duration: 1005
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1065'
 ht-degree: 0%
@@ -63,7 +63,7 @@ ht-degree: 0%
 }
 ```
 
-通过将Experience Manager到以下CSS，以本机方式编译上述[!DNL LESS]。
+上述[!DNL LESS]由Experience Manager本机编译到以下CSS。
 
 ```css
 /* CSS */
@@ -175,7 +175,7 @@ jQuery(function ($) {
 
 * 公开更多数据并隐藏这些数据比公开太少需要未来后端开发才能公开的数据要好。
 
-   * 实施可创作内容切换可有助于保持此HTML简洁，从而使作者能够选择将哪些内容元素写入HTML。 在将图像写入可能无法用于所有样式的HTML时，可能特别重要。
+   * 实施可创作内容切换有助于保持此HTML的精简性，这样作者就可以选择将哪些内容元素写入HTML。 在将图像写入可能无法用于所有样式的HTML时，可能特别重要。
    * 此规则的例外情况是默认情况下会公开昂贵的资源（例如图像），因为在此例中，CSS隐藏的事件图像会被不必要地获取。
 
       * 现代图像组件通常使用JavaScript选择和加载最适合用例（视区）的图像。
@@ -190,7 +190,7 @@ jQuery(function ($) {
 >
 >[BEM](https://en.bem.info/)的所有其他租户都应与。
 
-* 使用预处理器，如[LESS](https://lesscss.org/)(AEM本机支持)或[SCSS](https://sass-lang.com/)（需要自定义生成系统），以便允许清除CSS定义和重复使用。
+* 使用预处理器，如[LESS](https://lesscss.org/)&#x200B;(受AEM本机支持)或[SCSS](https://sass-lang.com/)（需要自定义生成系统），以便允许清除CSS定义和重复使用。
 
 * 保持选择器权重/特异性一致；这有助于避免和解决难以识别的CSS级联冲突。
 * 将每种样式组织为一个独立文件。
@@ -239,12 +239,12 @@ CSS选择器结构示例应如下所示：
 * Style-JavaScript应谨慎使用，并且属于少数用例。
 * Style-JavaScript主要用于处理组件的DOM，以支持CSS的样式设置。
 * 如果组件在页面上出现多次，请重新评估Javascript的使用，并了解计算/和重新绘制成本。
-* 如果Javascript异步(通过AJAX)引入新数据/内容，并且组件可能会在页面上出现多次，请重新评估其使用情况。
-* 处理Publish和创作体验。
+* 如果Javascript异步(通过AJAX)引入新数据/内容，并且组件可能在页面上出现多次，则重新评估其使用。
+* 处理发布和创作体验。
 * 尽可能重复使用style-Javascript。
    * 例如，如果组件的多种样式要求将其图像移动到背景图像，则可以将样式JavaScript实施一次并附加到多个`BLOCK--MODIFIERs`。
 * 如果可能，请将style-JavaScript与功能性JavaScript分开。
-* 评估JavaScript的成本与直接通过HTL在HTML中显示这些DOM更改的成本。
+* 评估JavaScript的成本与直接通过HTL在HTML中体现这些DOM更改的成本。
    * 当使用style-JavaScript的组件需要服务器端修改时，请评估此时是否可以引入JavaScript操作，以及这对组件的性能和可支持性有何影响/影响。
 
 #### 性能注意事项 {#performance-considerations}

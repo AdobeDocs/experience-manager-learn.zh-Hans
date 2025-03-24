@@ -1,7 +1,7 @@
 ---
 title: Android应用程序 — AEM Headless示例
-description: 示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此Android应用程序演示了如何使用AEM的GraphQL API查询内容。
-version: Cloud Service
+description: 示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的好方法。 此Android应用程序演示了如何使用AEM的GraphQL API查询内容。
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 2
 jira: KT-10588
 thumbnail: KT-10588.jpg
@@ -10,19 +10,19 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
-badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
 duration: 160
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '614'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Android应用程序
 
-示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 此Android应用程序演示了如何使用AEM的GraphQL API查询内容。 适用于Java的[AEM Headless Client](https://github.com/adobe/aem-headless-client-java)用于执行GraphQL查询并将数据映射到Java对象以向应用程序提供支持。
+示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的好方法。 此Android应用程序演示了如何使用AEM的GraphQL API查询内容。 适用于Java的[AEM Headless Client](https://github.com/adobe/aem-headless-client-java)用于执行GraphQL查询并将数据映射到Java对象以便为应用程序提供支持。
 
 使用AEM Headless的![Android Java应用程序](./assets/android-java-app/android-app.png)
 
@@ -42,7 +42,7 @@ Android应用程序可与以下AEM部署选项配合使用。 所有部署都需
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 
-Android应用程序设计用于连接到&#x200B;__AEM Publish__&#x200B;环境，但是，如果在Android应用程序的配置中提供身份验证，则它可以从AEM Author获取内容。
+Android应用程序设计用于连接到&#x200B;__AEM Publish__&#x200B;环境，但是，如果在AEM应用程序的配置中提供身份验证，则它可以从Android Author获取内容。
 
 ## 使用方法
 
@@ -61,7 +61,7 @@ Android应用程序设计用于连接到&#x200B;__AEM Publish__&#x200B;环境，
 
    __基本身份验证__
 
-   `contentApi.user`和`contentApi.password`对有权访问WKND GraphQL内容的本地AEM用户进行身份验证。
+   `contentApi.user`和`contentApi.password`验证本地AEM用户是否有权访问WKND GraphQL内容。
 
    ```plain
    contentApi.endpoint=https://author-p123-e456.adobeaemcloud.com
@@ -96,7 +96,7 @@ builder.tokenAuth(token)
 
 遵循AEM Headless最佳实践，iOS应用程序使用AEM GraphQL持久查询来查询冒险数据。 该应用程序使用两个持久查询：
 
-+ `wknd/adventures-all`持久查询，该查询返回AEM中的所有冒险，其中具有一组删节的属性。 此持久查询驱动初始视图的冒险列表。
++ `wknd/adventures-all`持久查询，该查询返回AEM中的所有冒险，并包含属性删节集。 此持久查询驱动初始视图的冒险列表。
 
 ```
 # Retrieves a list of all adventures
@@ -175,9 +175,9 @@ query($slug: String!) {
 
 ### 执行GraphQL持久查询
 
-AEM的持久查询通过HTTPGET执行，因此，适用于Java的[AEM Headless客户端](https://github.com/adobe/aem-headless-client-java)用于对AEM执行持久的GraphQL查询，并将冒险内容加载到应用程序中。
+AEM的持久查询通过HTTP GET执行，因此，适用于Java的[AEM Headless客户端](https://github.com/adobe/aem-headless-client-java)用于执行针对AEM的持久GraphQL查询，并将冒险内容加载到应用程序中。
 
-每个持久查询都有相应的“加载器”类，该类异步调用AEM HTTPGET终结点，并使用自定义的[数据模型](#data-models)返回冒险数据。
+每个持久查询都有一个相应的“加载器”类，该类异步调用AEM HTTP GET终结点，并使用自定义的[数据模型](#data-models)返回冒险数据。
 
 + `loader/AdventuresLoader.java`
 
@@ -229,5 +229,5 @@ Android应用程序使用两个视图在移动体验中展示冒险数据。
 
 ## 其他资源
 
-+ [AEM Headless快速入门 — GraphQL教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans)
++ [AEM Headless快速入门 — GraphQL教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-Headless/graphql/multi-step/overview.html?lang=zh-Hans)
 + 适用于Java的[AEM Headless客户端](https://github.com/adobe/aem-headless-client-java)

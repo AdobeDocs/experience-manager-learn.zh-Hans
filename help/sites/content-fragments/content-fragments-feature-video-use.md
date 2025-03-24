@@ -2,14 +2,14 @@
 title: 在AEM中创作内容片段
 description: 内容片段是AEM中的内容抽象，它允许独立于支持的渠道创作和管理基于文本的内容。
 feature: Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
 duration: 665
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 11%
@@ -20,7 +20,7 @@ ht-degree: 11%
 
 内容片段是AEM中的内容抽象，它允许独立于支持的渠道创作和管理基于文本的内容。
 
-AEM内容片段是基于文本的编辑内容，其中可能包含一些关联但被视为纯内容的结构化数据元素，而无设计或布局信息。 内容片段通常作为与渠道无关的内容创建，这些内容旨在跨渠道使用和重复使用，这反过来又会将内容包装在特定上下文的体验中。
+AEM内容片段是基于文本的编辑内容，其中可能包含一些与关联但被视为不含设计或布局信息的纯内容的结构化数据元素。 内容片段通常作为与渠道无关的内容创建，这些内容旨在跨渠道使用和重复使用，这反过来又会将内容包装在特定上下文的体验中。
 
 本视频系列涵盖AEM中内容片段的创作生命周期。 有关[交付内容片段的详细信息见此处](content-fragments-delivery-feature-video-use.md)。
 
@@ -38,7 +38,7 @@ AEM内容片段是基于文本的编辑内容，其中可能包含一些关联�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
-AEM内容片段模型（内容片段的数据架构）必须通过AEM [[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)启用，该浏览器允许基于每个配置定义内容片段模型。
+AEM内容片段模型（内容片段的数据架构）必须通过AEM的[[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)启用，该浏览器允许基于每个配置定义内容片段模型。
 
 ## 创建内容片段 {#creating-content-fragments}
 
@@ -75,9 +75,9 @@ AEM内容片段可以从AEM创作实例中下载为包含变量、元素和元�
 ## 其他资源 {#additional-resources}
 
 * [交付内容片段](content-fragments-delivery-feature-video-use.md)
-* [AEM WCM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [AEM WCM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)
 * [AEM WCM核心内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)
 
-要从视频系列中下载以下包并将其安装在最终状态的AEM 6.4+实例上：
+要从视频系列中下载并将以下包安装到最终状态的AEM 6.4+实例上：
 
 **[aem_demo_fluid-experiencescontent-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**

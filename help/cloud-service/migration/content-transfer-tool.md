@@ -1,7 +1,7 @@
 ---
 title: 使用内容传输工具
 description: 推荐使用内容传输工具将内容从AEM的内部部署或AMS托管版本迁移到AEM as a Cloud Service环境。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: technical-video
 feature: Migration
 jira: KT-5352
@@ -11,7 +11,7 @@ role: Architect, Developer
 level: Beginner
 exl-id: 0cefc336-2a46-4a11-a734-ba1cb63c5cbe
 duration: 1062
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 2%

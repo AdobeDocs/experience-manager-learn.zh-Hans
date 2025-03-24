@@ -1,7 +1,7 @@
 ---
 title: AEM Dispatcher常用日志
 description: 查看Dispatcher中的常见日志条目，了解它们的含义以及如何解决它们。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Performance
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 229
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 0%
@@ -111,7 +111,7 @@ Fri Jul 20 22:31:15 2018 W pid 3648 Unable to connect to any backend in farm aut
 
 当您在场的渲染部分配置了错误的IP地址时，会发生这种情况。 该实例或AEM实例停止响应或侦听，Dispatcher无法访问。
 
-检查防火墙规则，确保AEM实例正在运行且运行正常。
+检查防火墙规则，确保AEM实例运行正常。
 
 网关超时示例日志条目：
 
@@ -201,6 +201,6 @@ Wed Nov 13 17:17:26 2019 W pid 19173:tid 140542738364160 No farm matches host 'w
 Tue Nov 26 16:41:34 2019 I pid 9208 (tid 140112092391168) "GET /content/we-retail/us/en.html" - + 24034ms publishfarm/0
 ```
 
-通过GEThttp方法为内容`/content/we-retail/us/en.html`获取页面，用时24034毫秒。 我们需要注意其最后部分`publishfarm/0`。 您将看到它定位并与`publishfarm`匹配。 从渲染0中提取请求。 这意味着必须从AEM请求此页面，然后缓存该页面。 现在，让我们再次请求此页面，并查看日志的情况。
+通过GET http方法为内容`/content/we-retail/us/en.html`获取页面，用时24034毫秒。 我们需要注意其最后部分`publishfarm/0`。 您将看到它定位并与`publishfarm`匹配。 从渲染0中提取请求。 这意味着必须从AEM请求此页面，然后缓存该页面。 现在，让我们再次请求此页面，并查看日志的情况。
 
 [下一个 — >只读文件](./immutable-files.md)

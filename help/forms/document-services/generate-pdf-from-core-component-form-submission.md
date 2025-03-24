@@ -1,7 +1,7 @@
 ---
 title: 使用基于核心组件的自适应表单中的数据生成PDF
 description: 将基于核心组件的表单提交中的数据与工作流中的XDP模板合并
-version: 6.5
+version: Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-15025
 last-substantial-update: 2024-02-26T00:00:00Z
 exl-id: cae160f2-21a5-409c-942d-53061451b249
 duration: 97
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 以下是大写“核心组件”的修订文本：
 
-典型场景涉及根据通过基于核心组件的自适应表单提交的数据生成PDF。 此数据始终采用JSON格式。 要使用渲染PDFAPI生成PDF，需要将JSON数据转换为XML格式。 `org.json.XML`的`toString`方法用于此转换。 有关更多详细信息，请参阅`org.json.XML.toString`方法](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-)的[文档。
+典型场景涉及根据通过基于核心组件的自适应表单提交的数据生成PDF。 此数据始终采用JSON格式。 要使用渲染PDF API生成PDF，必须将JSON数据转换为XML格式。 `org.json.XML`的`toString`方法用于此转换。 有关更多详细信息，请参阅`org.json.XML.toString`方法](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-)的[文档。
 
 ## 基于JSON架构的自适应表单
 
@@ -110,7 +110,7 @@ public class ConvertJSONToXML implements WorkflowProcess {
 要处理表单提交，请创建包含两个步骤的工作流：
 
 1. 初始步骤使用自定义过程将提交的JSON数据转换为XML。
-1. 后续步骤通过将XML数据与XDPPDF结合来生成模板。
+1. 后续步骤通过将XML数据与XDP模板结合来生成PDF。
 
 ![json-to-xml](assets/json-to-xml-process-step.png)
 
@@ -124,5 +124,5 @@ public class ConvertJSONToXML implements WorkflowProcess {
 1. [导入示例自适应表单和XDP模板](assets/adaptive_form_and_xdp_template.zip)。
 1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/f23/jcr:content?wcmmode=disabled)。
 1. 填写一些表单字段。
-1. 提交表单以启动AEM工作流。
+1. 提交表单以启动AEM工作流程。
 1. 在工作流的有效负荷文件夹中找到渲染的PDF。

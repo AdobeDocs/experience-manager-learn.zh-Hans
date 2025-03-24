@@ -1,7 +1,7 @@
 ---
 title: AEM API概述
 description: 了解Adobe Experience Manager (AEM)中不同类型的API，并了解为您的集成选择哪个API。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
@@ -12,7 +12,7 @@ thumbnail: KT-17425.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 2%
@@ -58,7 +58,7 @@ AEM提供以下API以便与其创作和发布服务类型进行交互。
 
 让我们比较JSON Web令牌(JWT)和OAuth 2.0，AEM API中使用的两种常见身份验证机制：
 
-| 专题 | JSON Web令牌(JWT) | OAuth 2.0 |
+| 功能 | JSON Web令牌(JWT) | OAuth 2.0 |
 | --- | --- | --- |
 | 使用位置 | RESTful API | 基于OpenAPI的AEM API（在RESTful或其他API中不支持） |
 | 用途 | 服务身份验证 | 用户或服务身份验证 |

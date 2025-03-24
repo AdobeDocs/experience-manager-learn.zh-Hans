@@ -2,14 +2,14 @@
 title: 在AEM Sites中针对页面差异进行开发
 description: 本视频说明如何为AEM Sites的“页面差异”功能提供自定义样式。
 feature: Authoring
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 doc-type: Technical Video
 exl-id: 7d600b16-bbb3-4f21-ae33-4df59b1bb39d
 duration: 281
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 1%
@@ -28,7 +28,7 @@ ht-degree: 1%
 >
 >此视频将自定义CSS添加到we.Retail客户端库，应在其中对自定义程序的AEM Sites项目进行这些更改；在以下示例代码中： `my-project`。
 
-AEM页面差异通过`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`的直接加载获取OOTB CSS。
+AEM的页面差异通过直接加载`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`获取OOTB CSS。
 
 由于此直接加载CSS而不使用客户端库类别，因此我们必须为自定义样式找到另一个注入点，并且此自定义注入点是项目的创作clientlib。
 
@@ -115,7 +115,7 @@ body {
 </head>
 ```
 
-应用了上述样式的diff&#39;d页面的最终结果将类似于这样(添加了HTML并更改了组件)。
+应用了上述样式的diff&#39;d页面的最终结果如下所示(添加了HTML并更改了组件)。
 
 ![页面差异](assets/page-diff.png)
 

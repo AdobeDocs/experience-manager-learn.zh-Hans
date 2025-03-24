@@ -1,7 +1,7 @@
 ---
 title: 使用OAuth服务器到服务器身份验证调用基于OpenAPI的AEM API
 description: 了解如何使用OAuth服务器到服务器身份验证从自定义应用程序在AEM as a Cloud Service上调用基于OpenAPI的AEM API。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
@@ -11,10 +11,11 @@ jira: KT-16516
 thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
-source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1692'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -41,7 +42,7 @@ OAuth服务器到服务器身份验证非常适用于需要API访问而不进行
 - [访问Adobe API和相关概念](../overview.md#accessing-adobe-apis-and-related-concepts)部分。
 - [设置基于OpenAPI的AEM API](../setup.md)文章。
 
-## 前提条件
+## 先决条件
 
 要完成本教程，您需要：
 

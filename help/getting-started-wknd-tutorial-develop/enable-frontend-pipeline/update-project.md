@@ -1,7 +1,7 @@
 ---
 title: 更新全栈AEM项目以使用前端管道
 description: 了解如何更新全栈AEM项目以便为前端管道启用它，以便它仅构建和部署前端工件。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
 duration: 307
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
@@ -158,7 +158,7 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >    在&#x200B;__AEM WKND Sites项目__&#x200B;中查看完整的[HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml)。
+   >    在&#x200B;__AEM WKND站点项目__&#x200B;中查看完整的[HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml)。
 
 
    * 其次`com.adobe.aem.wcm.site.manager.config.SiteConfig`的`themePackageName`值与`package.json`和`name`属性值相同，`siteTemplatePath`指向`/libs/wcm/core/site-templates/aem-site-template-stub-2.0.0`存根路径值。
@@ -178,14 +178,14 @@ ht-degree: 0%
    >
    >    查看&#x200B;__AEM WKND站点项目__&#x200B;中的完整[SiteConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.aem.wcm.site.manager.config.SiteConfig/.content.xml)。
 
-1. 主题或样式更改为通过测试运行的前端管道进行部署，我们正在通过更新`ui.frontend/src/main/webpack/base/sass/_variables.scss`将`text-color`更改为Adobe红色（或者您也可以自行选择）。
+1. 主题或样式更改为通过测试运行的前端管道进行部署，我们正在通过更新`ui.frontend/src/main/webpack/base/sass/_variables.scss`将`text-color`更改为Adobe红（或者您也可以自行选择）。
 
    ```css
        $black:     #a40606;
        ...
    ```
 
-最后，将这些更改推送到程序的AdobeGit存储库。
+最后，将这些更改推送到您项目的Adobe Git存储库。
 
 
 >[!AVAILABILITY]

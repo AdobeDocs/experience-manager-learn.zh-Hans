@@ -2,7 +2,7 @@
 title: 通过自定义内容片段控制台扩展生成OpenAI图像
 description: 了解如何使用OpenAI或DALL·E 2从自然语言描述生成数字图像，并使用自定义内容片段控制台扩展将生成的图像上传到AEM。
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
 duration: 1438
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 0%
@@ -44,9 +44,9 @@ ht-degree: 0%
 1. 接下来，它调用OpenAI的[图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) API，并使用`Image Description`文本来指定应该生成的图像。
 1. [图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta)终结点使用提示请求参数值创建大小为&#x200B;_1024x1024_&#x200B;像素的原始图像，并将生成的图像URL作为响应返回。
 1. [Adobe I/O Runtime操作](#adobe-io-runtime-action)将生成的图像下载到App Builder运行时。
-1. 接下来，它会根据预定义的路径，启动从App Builder运行时到AEM DAM的图像上传。
+1. 接下来，它按照预定义的路径，启动从App Builder运行时到AEM DAM的图像上传。
 1. AEM as a Cloud Service将图像保存到DAM并返回对Adobe I/O Runtime操作的成功或失败响应。 成功的上传响应可使用从Adobe I/O Runtime操作向AEM发出的另一个HTTP请求来更新所选内容片段的图像属性值。
-1. 该模式窗口会收到来自Adobe I/O Runtime操作的响应，并提供新生成的已上传图像的AEM资源详细信息链接。
+1. 该模式会收到来自Adobe I/O Runtime操作的响应，并提供新生成的已上传图像的AEM资源详细信息链接。
 
 ## 扩展点
 
@@ -218,9 +218,9 @@ export default ExtensionRegistration;
 1. 正在加载，指示用户必须等待
 1. 警告消息，建议用户一次只选择一个内容片段
 1. 允许用户以自然语言提供图像描述的“生成图像”表单。
-1. 图像生成操作的响应，提供新生成的已上传图像的AEM资产详细信息链接。
+1. 图像生成操作的响应，提供新生成的已上传图像的AEM资源详细信息链接。
 
-重要的是，与扩展中的AEM的任何交互都应该委派给[AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，该操作是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中运行的单独的无服务器进程。
+重要的是，与扩展中的AEM的任何交互都应委派给[AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，该操作是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中运行的单独无服务器进程。
 使用Adobe I/O Runtime操作与AEM进行通信，是为了避免跨源资源共享(CORS)连接问题。
 
 提交&#x200B;_生成图像_&#x200B;表单后，自定义`onSubmitHandler()`将调用Adobe I/O Runtime操作，传递图像描述、当前AEM主机（域）和用户的AEM访问令牌。 然后，该操作调用OpenAI的[图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) API以使用提交的图像描述生成图像。 接下来，使用[AEM上传](https://github.com/adobe/aem-upload)节点模块的`DirectBinaryUpload`类，它将生成的图像上传到AEM，最后使用[AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)更新内容片段。
@@ -488,7 +488,7 @@ export default function GenerateImageModal() {
 ### Adobe I/O Runtime操作
 
 AEM扩展App Builder应用程序可以定义或使用0个或多个Adobe I/O Runtime操作。
-Adobe运行时操作负责需要与AEM、Adobe或第三方Web服务交互的工作。
+Adobe Runtime操作负责的工作需要与AEM、Adobe或第三方Web服务进行交互。
 
 在此示例应用程序中，`generate-image` Adobe I/O Runtime操作负责：
 
@@ -653,9 +653,9 @@ module.exports = {
 
 #### 上传至AEM
 
-此模块负责使用[AEM Upload](https://github.com/adobe/aem-upload)库将OpenAI生成的图像上传到AEM。 首先使用Node.js [File System](https://nodejs.org/api/fs.html)库将生成的图像下载到App Builder运行时，一旦上传到AEM完成，就会将其删除。
+此模块负责使用[AEM上传](https://github.com/adobe/aem-upload)库将OpenAI生成的图像上传到AEM。 首先使用Node.js [File System](https://nodejs.org/api/fs.html)库将生成的图像下载到App Builder运行时，一旦上传到AEM完成，就会将其删除。
 
-在下面的代码中，`uploadGeneratedImageToAEM`函数将生成的图像下载到运行时，将其上传到AEM并从运行时删除。 图像已上载到`/content/dam/wknd-shared/en/generated`路径，请确保DAM中存在所有文件夹，这是使用[AEM上传](https://github.com/adobe/aem-upload)库的先决条件。
+在下面的代码中，`uploadGeneratedImageToAEM`函数协调将生成的图像下载到运行时，将其上传到AEM并从运行时将其删除。 图像已上传到`/content/dam/wknd-shared/en/generated`路径，确保DAM中存在所有文件夹，以及使用[AEM上传](https://github.com/adobe/aem-upload)库的先决条件。
 
 + `src/aem-cf-console-admin-1/actions/generate-image/upload-generated-image-to-aem.js`
 

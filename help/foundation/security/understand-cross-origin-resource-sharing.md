@@ -1,7 +1,7 @@
 ---
 title: 了解与AEM的跨源资源共享(CORS)
 description: Adobe Experience Manager的跨源资源共享(CORS)使非AEM Web资产能够对AEM进行客户端调用（无论是经过身份验证还是未经身份验证），以获取内容或直接与AEM交互。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: Security, APIs
 doc-type: Article
@@ -10,7 +10,7 @@ role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 duration: 240
-source-git-commit: 6922d885c25d0864560ab3b8e38907060ff3cc70
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 1%
@@ -19,22 +19,22 @@ ht-degree: 1%
 
 # 了解跨源资源共享([!DNL CORS])
 
-Adobe Experience Manager的跨源资源共享([!DNL CORS])使非AEM Web资产能够对AEM进行客户端调用（无论经过身份验证还是未经身份验证），以获取内容或直接与AEM交互。
+Adobe Experience Manager的跨源资源共享([!DNL CORS])使非AEM Web资产能够对AEM进行客户端调用（无论是经过身份验证还是未经身份验证），以获取内容或直接与AEM交互。
 
 本文档中概述的OSGI配置足以满足以下要求：
 
-1. AEM Publish上的单源资源共享
+1. AEM Publish上的单一来源资源共享
 2. 对AEM Author的CORS访问权限
 
-如果AEM Publish上需要多源CORS访问，请参阅[本文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
+如果AEM发布需要多源CORS访问权限，请参阅[本文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
 
-## AdobeGranite跨源资源共享策略OSGi配置
+## Adobe Granite跨源资源共享策略OSGi配置
 
 CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略都表示为工厂的一个实例。
 
 * `http://<host>:<port>/system/console/configMgr > Adobe Granite Cross Origin Resource Sharing Policy`
 
-![AdobeGranite跨源资源共享策略OSGi配置](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
+![Adobe Granite跨源资源共享策略OSGi配置](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
 
 [!DNL Adobe Granite Cross-Origin Resource Sharing Policy] (`com.adobe.granite.cors.impl.CORSPolicyImpl`)
 
@@ -131,7 +131,7 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略都表示为
 }
 ```
 
-站点2比较复杂，需要进行授权和异动(POST、PUT、DELETE)请求：
+站点2更加复杂，需要授权和异类(POST、PUT、DELETE)请求：
 
 ```json
 {
@@ -183,11 +183,11 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略都表示为
 |-----------|-------------|-----------------------|-------------|
 | 否 | AEM 发布 | 已验证 | AEM Author上的Dispatcher缓存仅限于静态的非创作资源。 这使得在AEM Author上缓存大多数资源（包括HTTP响应标头）变得困难和不实际。 |
 | 否 | AEM 发布 | 已验证 | 避免在经过身份验证的请求上缓存CORS标头。 这符合不缓存经过身份验证的请求的常见指南，因为很难确定请求用户的身份验证/授权状态将如何影响投放的资源。 |
-| 是 | AEM 发布 | 匿名 | 可以在Dispatcher中缓存的匿名请求也可以缓存其响应标头，以确保将来的CORS请求可以访问缓存的内容。 在AEM Publish **上进行的任何CORS配置更改都必须**&#x200B;后使受影响的缓存资源失效。 最佳实践要求在代码或配置部署中清除Dispatcher缓存，因为很难确定哪些缓存内容可能会受到影响。 |
+| 是 | AEM 发布 | 匿名 | 可以在Dispatcher中缓存的匿名请求也可以缓存其响应标头，以确保将来的CORS请求可以访问缓存的内容。 在AEM发布&#x200B;**上进行的任何CORS配置更改都必须**&#x200B;后使受影响的缓存资源失效。 最佳实践要求在代码或配置部署中清除Dispatcher缓存，因为很难确定哪些缓存内容可能会受到影响。 |
 
 ### 允许CORS请求标头
 
-若要允许所需的[HTTP请求标头传递到AEM进行处理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，必须在Dispatcher的`/clientheaders`配置中允许使用这些标头。
+要允许所需的[HTTP请求标头传递到AEM进行处理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，必须在Dispatcher的`/clientheaders`配置中允许使用这些标头。
 
 ```
 /clientheaders {
@@ -200,7 +200,7 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略都表示为
 
 ### 缓存CORS响应标头
 
-要允许在缓存的内容上缓存并提供CORS标头，请将以下[/cache /headers配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#caching-http-response-headers)添加到AEM Publish `dispatcher.any`文件中。
+要允许在缓存的内容上缓存并提供CORS标头，请将以下[/cache /headers配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-hans#caching-http-response-headers)添加到AEM发布`dispatcher.any`文件。
 
 ```
 /publishfarm {

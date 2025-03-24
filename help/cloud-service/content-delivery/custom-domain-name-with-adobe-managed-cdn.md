@@ -1,7 +1,7 @@
 ---
-title: 具有Adobe托管的CDN的自定义域名
+title: 使用Adobe托管的CDN的自定义域名
 description: 了解如何在使用Adobe托管的CDN的AEM as a Cloud Service网站中实施自定义域名。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
 role: Admin, Architect, Developer
@@ -12,16 +12,16 @@ last-substantial-update: 2024-08-12T00:00:00Z
 jira: KT-15121
 thumbnail: KT-15121.jpeg
 exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
-source-git-commit: f92e66d6edc929bff1e8cae6adb7f408352aeb77
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
-# 具有AdobeCDN的自定义域名
+# 使用Adobe CDN的自定义域名
 
-了解如何为使用Adobe内容分发网络(CDN)的AEM as a Cloud Service网站实施自定义域名。
+了解如何为使用Adobe Content Delivery Network (CDN)的AEM as a Cloud Service网站实施自定义域名。
 
 在本教程中，通过添加具有传输层安全性(TLS)的HTTPS可寻址自定义域名`wknd.enablementadobe.com`，增强了示例[AEM WKND](https://github.com/adobe/aem-guides-wknd)站点的品牌化。
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 高级步骤包括：
 
-具有AdobeCDN](./assets/add-custom-domain-name-with-Adobe-CDN.png){width="800" zoomable="yes"}的![自定义域名
+具有Adobe CDN的![自定义域名](./assets/add-custom-domain-name-with-Adobe-CDN.png){width="800" zoomable="yes"}
 
 ## 先决条件
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 - 访问第三方服务：
    - 证书颁发机构(CA) — 为您的站点域（如[DigitCert](https://www.digicert.com/)）请求已签名的证书
    - 域名系统(DNS)托管服务 — 为您的自定义域添加DNS记录，如Azure DNS或AWS Route 53。
-- 以&#x200B;**业务负责人**&#x200B;或&#x200B;**Adobe管理员**&#x200B;角色访问[部署的Cloud Manager](https://my.cloudmanager.adobe.com/)。
+- 以&#x200B;**业务负责人**&#x200B;或&#x200B;**部署管理器**&#x200B;角色访问[Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)。
 - 示例[AEM WKND](https://github.com/adobe/aem-guides-wknd)站点已部署到[生产程序](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs)类型的AEM as a Cloud Service环境。
 
 如果您无权访问第三方服务，请&#x200B;_与您的安全或托管团队协作以完成步骤_。
@@ -75,7 +75,7 @@ $ openssl crl2pkcs7 -nocrl -certfile <YOUR-SIGNED-CERT>.crt | openssl pkcs7 -pri
 
 签名证书可以包含证书链，证书链包括根证书和中间证书以及终端实体证书。
 
-AdobeCloud Manager在单独的表单字段&#x200B;_中接受最终实体证书和证书链_，因此您必须从已签名的证书中提取最终实体证书和证书链。
+Adobe Cloud Manager在单独的表单字段&#x200B;_中接受最终实体证书和证书链_，因此您必须从已签名的证书中提取最终实体证书和证书链。
 
 在本教程中，以`*.enablementadobe.com`域颁发的[DigitCert](https://www.digicert.com/)签名证书为例。 通过在文本编辑器中打开签名证书并复制`-----BEGIN CERTIFICATE-----`和`-----END CERTIFICATE-----`标记之间的内容来提取最终实体和证书链。
 

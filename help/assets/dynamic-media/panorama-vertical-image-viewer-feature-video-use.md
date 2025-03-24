@@ -2,14 +2,14 @@
 title: 将全景和垂直图像查看器与AEM Assets Dynamic Media结合使用
 description: AEM 6.4中的Dynamic Media Viewer增强功能包括添加了全景图像查看器、全景虚拟现实图像查看器和垂直图像查看器。 全景查看器提供了一种简单的方法，无需任何自定义开发即可为房间、财产、位置或景观提供引人入胜的沉浸式体验。
 feature: Video Profiles, Video Profiles, 360 VR Video
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
 duration: 535
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%
@@ -24,7 +24,7 @@ AEM 6.4中的Dynamic Media Viewer增强功能包括添加了全景图像查看�
 
 >[!NOTE]
 >
->视频假定您的AEM实例在Dynamic Media S7模式下运行。 [此处提供了使用Dynamic Media设置AEM的说明。](https://helpx.adobe.com/cn/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>视频假定您的AEM实例在Dynamic Media S7模式下运行。 [此处提供了有关使用Dynamic Media设置AEM的说明。](https://helpx.adobe.com/cn/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## 全景和全景VR查看器
 

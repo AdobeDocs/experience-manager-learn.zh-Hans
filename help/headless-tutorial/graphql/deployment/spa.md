@@ -1,7 +1,7 @@
 ---
-title: 部署SPA for AEM GraphQL
+title: 为AEM GraphQL部署SPA
 description: 了解单页应用程序(SPA) AEM Headless部署的部署注意事项。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -11,7 +11,7 @@ thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
-source-git-commit: f1b13bba9e83ac1d25f2af23ff2673554726eb19
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 1%
@@ -20,9 +20,9 @@ ht-degree: 1%
 
 # AEM Headless SPA部署
 
-AEM Headless单页应用程序(SPA)部署涉及基于JavaScript的应用程序，这些应用程序使用诸如React或Vue之类的框架构建，这些框架以Headless方式使用AEM中的内容并与之交互。
+AEM Headless单页应用程序(SPA)部署涉及基于JavaScript的应用程序，这些应用程序使用诸如React或Vue之类的框架构建，这些框架能够以无头方式使用AEM中的内容并与之交互。
 
-部署可与AEM以Headless方式交互的SPA时，需要托管SPA并使其可通过Web浏览器访问。
+部署可与AEM以Headless方式交互的SPA包括托管SPA并使其可通过Web浏览器访问。
 
 ## 托管SPA
 
@@ -38,22 +38,22 @@ SPA由本机Web资源的集合组成：**HTML、CSS和JavaScript**。 这些资�
 
 ## 部署配置
 
-在托管与AEM Headless交互的SPA时，主要考虑是通过AEM域（或主机）访问SPA，还是将其放在其他域中。  原因是SPA是在Web浏览器中运行的Web应用程序，因此受Web浏览器安全策略的约束。
+在托管与AEM Headless交互的SPA时，主要考虑是通过AEM的域（或主机）访问SPA，还是将其放在其他域中。  原因是SPA是在Web浏览器中运行的Web应用程序，因此受Web浏览器安全策略的约束。
 
 ### 共享域
 
-当SPA和AEM均由来自同一域的最终用户访问时，它们会共享域。 例如：
+当最终用户从同一域访问两个SPA域时，SPA和AEM将共享这两个域。 例如：
 
-+ 通过以下方式访问AEM： `https://wknd.site/`
++ 通过以下方式访问AEM：`https://wknd.site/`
 + 通过`https://wknd.site/spa`访问SPA
 
-由于AEM和SPA都可从同一域访问，因此Web浏览器允许SPA无需CORS即可对AEM Headless端点执行XHR操作，并且允许共享HTTP Cookie(例如AEM `login-token` Cookie)。
+由于AEM和SPA都可从同一域访问，因此Web浏览器允许SPA无需CORS即可对AEM Headless端点执行XHR操作，并且允许共享HTTP Cookie(例如AEM的`login-token` Cookie)。
 
-SPA和AEM流量在共享域中的路由方式取决于您：具有多个源的CDN、具有反向代理的HTTP服务器、直接在AEM中托管SPA等等。
+如何在共享域上路由SPA和AEM流量，这取决于您：具有多个源的CDN、具有反向代理的HTTP服务器、直接在AEM中托管SPA等等。
 
-以下是SPA生产部署所需的部署配置，在与AEM相同的域中托管。
+以下是SPA生产部署所需的部署配置，在与AEM相同的域上托管时。
 
-| SPA连接到→ | AEM Author | AEM 发布 | AEM预览 |
+| SPA连接到→ | AEM 作者 | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨源资源共享(CORS) | ✘ | ✘ | ✘ |
@@ -61,16 +61,16 @@ SPA和AEM流量在共享域中的路由方式取决于您：具有多个源的CD
 
 ### 不同域
 
-当来自不同域的最终用户访问SPA和AEM时，这两个域各不相同。 例如：
+当来自不同域的最终用户访问SPA和AEM时，这两个域会有所不同。 例如：
 
-+ 通过以下方式访问AEM： `https://wknd.site/`
++ 通过以下方式访问AEM：`https://wknd.site/`
 + 通过`https://wknd-app.site/`访问SPA
 
 由于AEM和SPA是从不同的域访问的，因此Web浏览器会强制实施安全策略(如[跨源资源共享(CORS)](./configurations/cors.md))，并阻止共享HTTP Cookie(如AEM的`login-token` Cookie)。
 
 以下是SPA生产部署所需的部署配置(当托管在不同于AEM的域上时)。
 
-| SPA连接到→ | AEM Author | AEM 发布 | AEM预览 |
+| SPA连接到→ | AEM 作者 | AEM 发布 | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [跨源资源共享(CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
@@ -78,11 +78,11 @@ SPA和AEM流量在共享域中的路由方式取决于您：具有多个源的CD
 
 #### 不同域上的SPA部署示例
 
-在此示例中，SPA部署到Netlify域(`https://main--sparkly-marzipan-b20bf8.netlify.app/`)，并且SPA使用来自AEM Publish域(`https://publish-p65804-e666805.adobeaemcloud.com`)的AEM GraphQL API。 以下屏幕截图突出显示CORS要求。
+在此示例中，SPA部署到Netlify域(`https://main--sparkly-marzipan-b20bf8.netlify.app/`)，并且SPA使用来自AEM发布域(`https://publish-p65804-e666805.adobeaemcloud.com`)的AEM GraphQL API。 以下屏幕截图突出显示CORS要求。
 
-1. SPA来自Netlify域，但会向其他域上的AEM GraphQL API发起XHR调用。 此跨站点请求需要在AEM上设置[CORS](./configurations/cors.md)，以允许来自Netlify域的请求访问其内容。
+1. SPA由Netlify域提供，但会向其他域上的AEM GraphQL API发起XHR调用。 此跨站点请求需要在AEM上设置[CORS](./configurations/cors.md)，以允许来自Netlify域的请求访问其内容。
 
-   从SPA &amp; AEM主机提供的![SPA请求](assets/spa/cors-requirement.png)
+   从SPA和AEM主机提供的![SPA请求](assets/spa/cors-requirement.png)
 
 2. 在检查对AEM GraphQL API的XHR请求时，`Access-Control-Allow-Origin`存在，这向Web浏览器表示，AEM允许来自此Netlify域的请求访问其内容。
 
@@ -108,7 +108,7 @@ Adobe提供了一个在React中编码的示例单页应用程序。
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/react-app.md" title="React应用程序">React应用程序</a></p>
-               <p class="is-size-6">以React编写的示例单页应用程序，它使用AEM Headless GraphQL API中的内容。</p>
+               <p class="is-size-6">以React编写的示例单页应用程序，使用AEM Headless GraphQL API中的内容。</p>
                <a href="../example-apps/react-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                </a>
@@ -129,7 +129,7 @@ Adobe提供了一个在React中编码的示例单页应用程序。
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/next-js.md" title="Next.js应用程序">Next.js应用程序</a></p>
-               <p class="is-size-6">以Next.js编写的示例单页应用程序，它使用AEM Headless GraphQL API中的内容。</p>
+               <p class="is-size-6">以Next.js编写的示例单页应用程序，使用AEM Headless GraphQL API中的内容。</p>
                <a href="../example-apps/next-js.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                </a>

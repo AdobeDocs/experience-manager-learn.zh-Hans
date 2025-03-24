@@ -1,7 +1,7 @@
 ---
 title: 单元测试
 description: 实施单元测试，以验证在自定义组件教程中创建的Byline组件的Sling模型的行为。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: APIs, AEM Project Archetype
 topic: Content Management, Development
 role: Developer
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
 recommendations: noDisplay, noCatalog
 duration: 706
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2923'
 ht-degree: 0%
@@ -69,17 +69,17 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
 ## 背景 {#unit-testing-background}
 
-在本教程中，我们将了解如何为署名组件的[Sling模型](https://sling.apache.org/documentation/bundles/models.html)(在[创建自定义AEM组件](custom-component.md)中创建)编写[单元测试](https://en.wikipedia.org/wiki/Unit_testing)。 单元测试是用Java™编写的构建时测试，用于验证Java™代码的预期行为。 每个单元测试通常很小，可根据预期结果验证方法（或工作单元）的输出。
+在本教程中，我们将了解如何为署名组件的[Sling模型](https://sling.apache.org/documentation/bundles/models.html)&#x200B;(在[创建自定义AEM组件](custom-component.md)中创建)编写[单元测试](https://en.wikipedia.org/wiki/Unit_testing)。 单元测试是用Java™编写的构建时测试，用于验证Java™代码的预期行为。 每个单元测试通常很小，可根据预期结果验证方法（或工作单元）的输出。
 
-我们采用AEM最佳实践，并采用：
+我们使用AEM最佳实践，并采用：
 
 * [JUnit 5](https://junit.org/junit5/)
 * [Mockito测试框架](https://site.mockito.org/)
 * [wcm.io测试框架](https://wcm.io/testing/) （基于[Apache Sling Mocks](https://sling.apache.org/documentation/development/sling-mock.html)构建）
 
-## 单元测试和AdobeCloud Manager {#unit-testing-and-adobe-cloud-manager}
+## 单元测试和Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[AdobeCloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)将单元测试执行和[代码覆盖率报告](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)集成到其CI/CD管道中，以帮助鼓励和促进单元测试AEM代码的最佳实践。
+[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)在其CI/CD管道中集成了单元测试执行和[代码覆盖率报告](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)，以帮助鼓励和推广单元测试AEM代码的最佳实践。
 
 虽然单元测试代码是任何代码库的一个良好实践，但在使用Cloud Manager时，通过为Cloud Manager提供单元测试来利用其代码质量测试和报告工具非常重要。
 
@@ -92,7 +92,7 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 1. Apache Sling Mocks
 1. AEM Mocks Test Framework （由io.wcm提供）
 
-使用[AEM Maven原型](project-setup.md)在安装过程中，会自动将&#x200B;**JUnit5**、**Mockito和&#x200B;**AEM Mocks**&#x200B;测试依赖项添加到项目中。
+使用[AEM Maven原型](project-setup.md)在安装期间，会自动将&#x200B;**JUnit5**、**Mockito和&#x200B;**AEM Mocks**&#x200B;测试依赖项添加到项目中。
 
 1. 要查看这些依赖项，请打开位于&#x200B;**aem-guides-wknd/pom.xml**&#x200B;的父Reactor POM，导航到`<dependencies>..</dependencies>`并查看`<!-- Testing -->`下io.wcm的JUnit、Mockito、Apache Sling Mocks和AEM Mock Tests的依赖项。
 1. 确保`io.wcm.testing.aem-mock.junit5`设置为&#x200B;**4.1.0**：
@@ -211,9 +211,9 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 * [TDD或测试驱动开发](https://en.wikipedia.org/wiki/Test-driven_development)，它涉及在开发实现之前增量写入单元测试；请编写测试，然后编写实现以使测试通过。
 * 以实施为先的开发，包括先开发工作代码，然后编写测试来验证该代码。
 
-在本教程中，将使用后一种方法（因为我们在上一章中创建了有效的&#x200B;**BylineImpl.java**）。 因此，我们必须回顾和了解其公共方法的行为，同时也要了解其实施细节。 这听起来可能恰恰相反，因为一个良好的测试应该只关注输入和输出，然而在AEM中工作时，为了构建工作测试，需要理解各种实施注意事项。
+在本教程中，将使用后一种方法（因为我们在上一章中创建了有效的&#x200B;**BylineImpl.java**）。 因此，我们必须回顾和了解其公共方法的行为，同时也要了解其实施细节。 这听起来可能恰恰相反，因为良好的测试应该只关注输入和输出，然而在AEM中工作时，需要理解各种实施考虑因素，才能构建工作测试。
 
-在AEM的上下文中，TDD需要一定程度的专业知识，并且最适合于精通AEM代码的AEM开发和单元测试的AEM开发人员。
+在AEM的上下文中，TDD需要一定程度的专业知识，并且最能被精通AEM开发和AEM代码单元测试的AEM开发人员采用。
 
 ## 设置AEM测试上下文  {#setting-up-aem-test-context}
 
@@ -235,7 +235,7 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
        private final AemContext ctx = new AemContext();
    ```
 
-   此变量`ctx`公开提供一些AEM和Sling抽象的模拟AEM上下文：
+   此变量`ctx`公开了一个模拟AEM上下文，该上下文提供了一些AEM和Sling抽象：
 
    * BylineImpl Sling模型已注册到此上下文中
    * 在此上下文中创建模拟JCR内容结构
@@ -256,7 +256,7 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
    }
    ```
 
-   * **`addModelsForClasses`**&#x200B;将要测试的Sling模型注册到模拟AEM Context中，以便可在`@Test`方法中实例化。
+   * **`addModelsForClasses`**&#x200B;将要测试的Sling模型注册到模拟AEM上下文中，以便在`@Test`方法中实例化。
    * **`load().json`**&#x200B;将资源结构加载到模拟上下文中，允许代码与这些资源交互，就像它们由真实存储库提供一样。 文件&#x200B;**`BylineImplTest.json`**&#x200B;中的资源定义已加载到&#x200B;**/content**&#x200B;下的模拟JCR上下文中。
    * **`BylineImplTest.json`**&#x200B;尚不存在，因此让我们创建它并定义测试所需的JCR资源结构。
 

@@ -1,8 +1,8 @@
 ---
 title: 扩展核心组件 | AEM SPA编辑器和React快速入门
-description: 了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件的JSON模型。 了解如何向现有组件添加属性和内容是扩展AEM SPA Editor实施功能的强大技术。 了解如何使用委派模式来扩展Sling模型和Sling资源合并器的功能。
+description: 了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件的JSON模型。 了解如何将属性和内容添加到现有组件是一种强大的技术，可扩展AEM SPA Editor实施的功能。 了解如何使用委派模式来扩展Sling模型和Sling资源合并器的功能。
 feature: SPA Editor, Core Components
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5879
 thumbnail: 5879-spa-react.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
 duration: 316
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 扩展核心组件 {#extend-component}
 
-了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件。 了解如何扩展现有组件是一种强大的技术，可用于自定义和扩展AEM SPA Editor实施的功能。
+了解如何扩展要与AEM SPA Editor一起使用的现有核心组件。 了解如何扩展现有组件是一种强大的技术，可用于自定义和扩展AEM SPA Editor实施的功能。
 
 ## 目标
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## Sling资源超级类型的继承 {#sling-resource-super-type}
 
-要扩展现有组件，请在组件的定义上设置名为`sling:resourceSuperType`的属性。  `sling:resourceSuperType`是一个[属性](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties)，它可以在指向其他组件的AEM组件的定义上设置。 这会显式设置该组件以继承标识为`sling:resourceSuperType`的组件的所有功能。
+要扩展现有组件，请在组件的定义上设置名为`sling:resourceSuperType`的属性。  `sling:resourceSuperType`是一个[属性](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties)，它可以在指向其他组件的AEM组件定义上设置。 这会显式设置该组件以继承标识为`sling:resourceSuperType`的组件的所有功能。
 
 如果要在`wknd-spa-react/components/image`处扩展`Image`组件，我们需要更新`ui.apps`模块中的代码。
 
@@ -315,7 +315,7 @@ ht-degree: 0%
 
 1. 更新SPA模板的策略以将`Banner`组件添加为&#x200B;**允许的组件**。
 
-1. 导航到SPA页面，并将`Banner`组件添加到其中一个SPA页面：
+1. 导航到SPA页面并将`Banner`组件添加到其中一个SPA页面：
 
    ![添加横幅组件](assets/extend-component/add-banner-component.png)
 

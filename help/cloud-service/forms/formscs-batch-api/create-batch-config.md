@@ -4,14 +4,14 @@ description: 配置批量数据配置
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-9673
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: db25e5a2-e1a8-40ad-af97-35604d515450
 duration: 233
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 要使用批处理API，请创建批处理配置并根据该配置执行运行。 以下视频演示了如何使用API创建批量配置
 
 >[!NOTE]
->请确保AEM用户属于```forms-users```组以进行API调用。
+>请确保AEM用户属于```forms-users```组，以便进行API调用。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/340241?quality=12&learn=on)

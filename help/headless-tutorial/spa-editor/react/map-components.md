@@ -1,8 +1,8 @@
 ---
 title: 将SPA组件映射到AEM组件 | AEM SPA编辑器和React快速入门
-description: 了解如何使用AEM SPA编辑器JS SDK将React组件映射到Adobe Experience Manager (AEM)组件。 组件映射使用户能够对AEM SPA编辑器中的SPA组件进行动态更新，这与传统AEM创作类似。 您还将了解如何使用现成的AEM React核心组件。
+description: 了解如何使用AEM SPA编辑器JS SDK将React组件映射到Adobe Experience Manager (AEM)组件。 组件映射使用户能够在AEM SPA编辑器中对SPA组件进行动态更新，类似于传统的AEM创作。 您还将了解如何使用开箱即用的AEM React核心组件。
 feature: SPA Editor
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-4854
 thumbnail: 4854-spa-react.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
 duration: 477
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2123'
 ht-degree: 0%
@@ -20,43 +20,43 @@ ht-degree: 0%
 
 # 将SPA组件映射到AEM组件 {#map-components}
 
-了解如何使用AEM SPA编辑器JS SDK将React组件映射到Adobe Experience Manager (AEM)组件。 组件映射使用户能够对AEM SPA编辑器中的SPA组件进行动态更新，这与传统AEM创作类似。
+了解如何使用AEM SPA编辑器JS SDK将React组件映射到Adobe Experience Manager (AEM)组件。 组件映射使用户能够在AEM SPA编辑器中对SPA组件进行动态更新，类似于传统的AEM创作。
 
 本章更深入地介绍了AEM JSON模型API，以及如何将由AEM组件公开的JSON内容作为prop自动插入到React组件中。
 
 ## 目标
 
 1. 了解如何将AEM组件映射到SPA组件。
-1. Inspect React组件如何使用从AEM传递的动态属性。
+1. 检查React组件如何使用从AEM传递的动态属性。
 1. 了解如何使用现成的[React AEM核心组件](https://github.com/adobe/aem-react-core-wcm-components-examples)。
 
 ## 您将构建的内容
 
-本章检查提供的`Text` SPA组件如何映射到AEM `Text`组件。 React核心组件(如`Image` SPA组件)在SPA中使用并在AEM中创作。 **布局容器**&#x200B;和&#x200B;**模板编辑器**&#x200B;策略的现成功能也用于创建外观变化稍大的视图。
+本章检查提供的`Text` SPA组件如何映射到AEM `Text`组件。 在SPA中使用并在AEM中创作的React核心组件（如`Image` SPA组件）。 **布局容器**&#x200B;和&#x200B;**模板编辑器**&#x200B;策略的现成功能也用于创建外观变化稍大的视图。
 
 ![章节示例最终创作](./assets/map-components/final-page.png)
 
 ## 先决条件
 
-查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。 本章是[集成SPA](integrate-spa.md)章节的延续，但您需要遵循的是一个启用SPA的AEM项目。
+查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。 本章是[集成SPA](integrate-spa.md)章节的延续，但您需要遵循的是一个支持SPA的AEM项目。
 
 ## 映射方法
 
-基本概念是将SPA组件映射到AEM组件。 AEM组件运行服务器端，将内容导出为JSON模型API的一部分。 JSON内容由SPA使用，在浏览器中运行客户端。 在SPA组件和AEM组件之间创建1:1映射。
+基本概念是将SPA组件映射到AEM组件。 AEM组件运行服务器端，将内容导出为JSON模型API的一部分。 SPA使用在浏览器中运行客户端的JSON内容。 创建了SPA组件与AEM组件之间的1:1映射。
 
 ![将AEM组件映射到React组件的高级概述](./assets/map-components/high-level-approach.png)
 
 *将AEM组件映射到React组件的高级概述*
 
-## Inspect文本组件
+## 检查文本组件
 
 [AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了一个映射到AEM [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，该组件渲染来自AEM的&#x200B;*content*。
 
 我们来看看组件的工作方式。
 
-### Inspect的JSON模型
+### 检查JSON模型
 
-1. 在跳转到SPA代码之前，请务必了解AEM提供的JSON模型。 导航到[核心组件库](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/text.html)并查看文本组件的页面。 核心组件库提供了所有AEM核心组件的示例。
+1. 在介绍SPA代码之前，请务必了解AEM提供的JSON模型。 导航到[核心组件库](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/text.html)并查看文本组件的页面。 核心组件库提供了所有AEM核心组件的示例。
 1. 为以下示例之一选择&#x200B;**JSON**&#x200B;选项卡：
 
    ![文本JSON模型](./assets/map-components/text-json.png)
@@ -79,7 +79,7 @@ ht-degree: 0%
       }
    ```
 
-### Inspect文本SPA组件
+### 检查文本SPA组件
 
 1. 在您选择的IDE中，打开SPA的AEM项目。 展开`ui.frontend`模块并在`ui.frontend/src/components/Text/Text.js`下打开文件`Text.js`。
 
@@ -130,16 +130,16 @@ ht-degree: 0%
    export default MapTo('wknd-spa-react/components/text')(LazyTextComponent, TextEditConfig);
    ```
 
-   `MapTo`由AEM SPA编辑器JS SDK (`@adobe/aem-react-editable-components`)提供。 路径`wknd-spa-react/components/text`表示AEM组件的`sling:resourceType`。 此路径与之前观察到的JSON模型公开的`:type`匹配。 `MapTo`负责解析JSON模型响应并将正确的值作为`props`传递给SPA组件。
+   `MapTo`由AEM SPA编辑器JS SDK (`@adobe/aem-react-editable-components`)提供。 路径`wknd-spa-react/components/text`表示AEM组件的`sling:resourceType`。 此路径与之前观察到的JSON模型公开的`:type`匹配。 `MapTo`负责解析JSON模型响应并将正确的值作为`props`传递到SPA组件。
 
    您可以在`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/text`找到AEM `Text`组件定义。
 
 ## 使用React核心组件
 
-[AEM WCM组件 — React Core实施](https://github.com/adobe/aem-react-core-wcm-components-base)和[AEM WCM组件 — Spa编辑器 — React Core实施](https://github.com/adobe/aem-react-core-wcm-components-spa)。 这是一组可重复使用的UI组件，这些组件映射到开箱即用的AEM组件。 大多数项目可以重复使用这些组件作为自己的实施的起点。
+[AEM WCM组件 — React核心实施](https://github.com/adobe/aem-react-core-wcm-components-base)和[AEM WCM组件 — Spa编辑器 — React核心实施](https://github.com/adobe/aem-react-core-wcm-components-spa)。 这些是一组可重复使用的UI组件，映射到开箱即用的AEM组件。 大多数项目可以重复使用这些组件作为自己的实施的起点。
 
 1. 在项目代码中，打开位于`ui.frontend/src/components`的文件`import-components.js`。
-此文件会导入映射到SPA组件的所有AEM组件。 考虑到SPA编辑器实施的动态性质，我们必须显式引用任何与SPA可创作组件绑定的AEM组件。 这允许AEM作者选择在应用程序中随处使用组件。
+此文件会导入映射到AEM组件的所有SPA组件。 考虑到SPA Editor实施的动态性质，我们必须显式引用与AEM可创作组件关联的任何SPA组件。 这允许AEM作者选择在应用程序中随处使用组件。
 1. 以下import语句包含在项目中编写的SPA组件：
 
    ```js
@@ -157,7 +157,7 @@ ht-degree: 0%
 
 1. 从AEM开始屏幕导航到&#x200B;**工具** > **模板** > **[WKND SPA React](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-react)**。
 
-1. 选择并打开&#x200B;**SPA Page**&#x200B;模板以进行编辑。
+1. 选择并打开&#x200B;**SPA页面**&#x200B;模板以进行编辑。
 
 1. 选择&#x200B;**布局容器**&#x200B;并单击它的&#x200B;**策略**&#x200B;图标以编辑策略：
 
@@ -205,11 +205,11 @@ ht-degree: 0%
 
 1. 使用&#x200B;**Title**&#x200B;和&#x200B;**Teaser**&#x200B;组件进行试验。
 
-1. 通过[AEM Assets](http://localhost:4502/assets.html/content/dam)添加您自己的映像，或者为标准[WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/latest)安装完成的代码库。 [WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/latest)包含可在WKND SPA上重复使用的许多图像。 可以使用[AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp)安装包。
+1. 通过[AEM Assets](http://localhost:4502/assets.html/content/dam)添加您自己的映像，或者为标准[WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/latest)安装完成的代码库。 [WKND引用站点](https://github.com/adobe/aem-guides-wknd/releases/latest)包含可在WKND SPA上重复使用的许多图像。 可以使用[AEM的包管理器](http://localhost:4502/crx/packmgr/index.jsp)安装该包。
 
    ![包管理器安装wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
-## Inspect布局容器
+## 检查布局容器
 
 AEM SPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 名称指示的&#x200B;**布局容器**&#x200B;是&#x200B;**容器**&#x200B;组件。 容器组件是接受JSON结构的组件，该结构表示&#x200B;*其他*&#x200B;组件并动态实例化它们。
 
@@ -219,9 +219,9 @@ AEM SPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 �
 
    ![JSON模型API — 响应式网格](./assets/map-components/responsive-grid-modeljson.png)
 
-   **布局容器**&#x200B;组件具有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，并且被SPA编辑器使用`:type`属性识别，就像`Text`和`Image`组件一样。
+   **布局容器**&#x200B;组件具有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，SPA编辑器使用`:type`属性识别它，就像`Text`和`Image`组件一样。
 
-   SPA编辑器中提供了使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新调整组件大小的相同功能。
+   在SPA编辑器中，可以使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新调整组件大小的相同功能。
 
 2. 返回到[http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。 添加其他&#x200B;**图像**&#x200B;组件，然后尝试使用&#x200B;**布局**&#x200B;选项重新调整其大小：
 
@@ -243,15 +243,15 @@ AEM SPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 �
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您已了解如何将SPA组件映射到AEM组件，并且使用了React核心组件。 您还有机会探索&#x200B;**布局容器**&#x200B;的响应式功能。
+恭喜，您已了解如何将SPA组件映射到AEM组件，并且您使用了React核心组件。 您还有机会探索&#x200B;**布局容器**&#x200B;的响应式功能。
 
 ### 后续步骤 {#next-steps}
 
-[导航和路由](navigation-routing.md) — 了解如何使用SPA编辑器SDK映射到AEM页面，从而支持SPA中的多个视图。 动态导航是使用React Router和React Core Components实现的。
+[导航和路由](navigation-routing.md) — 了解如何使用SPA Editor SDK映射到AEM Pages，从而支持SPA中的多个视图。 动态导航是使用React Router和React Core Components实现的。
 
 ## （额外练习）将配置保留到源代码管理 {#bonus-configs}
 
-在许多情况下，尤其是在AEM项目开始时，将配置（如模板和相关内容策略）保留到源代码控制中非常有用。 这可确保所有开发人员都针对同一组内容和配置工作，并可确保环境之间具有额外的一致性。 一旦项目达到一定的成熟度，管理模板的操作就可以交给一组特殊的超级用户。
+在许多情况下，尤其是在AEM项目开始时，将配置（如模板和相关内容策略）保留到源代码控制中很有价值。 这可确保所有开发人员都针对同一组内容和配置工作，并可确保环境之间具有额外的一致性。 一旦项目达到一定的成熟度，管理模板的操作就可以交给一组特殊的超级用户。
 
 接下来的几个步骤将使用Visual Studio Code IDE和[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)执行，但可以使用任何工具和您已配置为从AEM的本地实例&#x200B;**提取**&#x200B;或&#x200B;**导入**&#x200B;内容的任何IDE执行。
 
@@ -267,7 +267,7 @@ AEM SPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 �
 
 4. 重复导入内容的步骤，但选择位于`/conf/wknd-spa-react/settings/wcm/templates/policies`的&#x200B;**策略**&#x200B;文件夹。
 
-5. Inspect位于`ui.content/src/main/content/META-INF/vault/filter.xml`的`filter.xml`文件。
+5. 检查位于`ui.content/src/main/content/META-INF/vault/filter.xml`的`filter.xml`文件。
 
    ```xml
    <!--ui.content filter.xml-->
@@ -286,9 +286,9 @@ AEM SPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 �
 
 ## （额外练习）创建自定义图像组件 {#bonus-image}
 
-SPA图像组件已由React Core组件提供。 但是，如果您需要额外的练习，请创建自己的映射到AEM [图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)的React实现。 `Image`组件是&#x200B;**content**&#x200B;组件的另一个示例。
+React核心组件已提供了SPA图像组件。 但是，如果您需要额外的练习，请创建自己的映射到AEM [图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)的React实施。 `Image`组件是&#x200B;**content**&#x200B;组件的另一个示例。
 
-### Inspect和JSON
+### 检查JSON
 
 在跳转到SPA代码之前，请检查AEM提供的JSON模型。
 
@@ -365,7 +365,7 @@ SPA图像组件已由React Core组件提供。 但是，如果您需要额外的
    MapTo('wknd-spa-react/components/image')(Image, ImageEditConfig);
    ```
 
-   请注意，字符串`wknd-spa-react/components/image`对应于`ui.apps`中AEM组件的位置： `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/image`。
+   请注意，字符串`wknd-spa-react/components/image`对应于AEM组件在`ui.apps`中的位置： `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/image`。
 
 1. 在同一目录中创建一个名为`Image.css`的新文件并添加以下内容：
 
@@ -411,7 +411,7 @@ SPA图像组件已由React Core组件提供。 但是，如果您需要额外的
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. 在AEM中Inspect SPA。 页面上的任何图像组件都应继续工作。 在渲染的输出中Inspect，您应该会看到自定义图像组件（而不是React核心组件）的标记。
+1. 在AEM中检查SPA。 页面上的任何图像组件都应继续工作。 检查渲染的输出，您应该会看到自定义图像组件的标记，而不是React核心组件。
 
    *自定义图像组件标记*
 

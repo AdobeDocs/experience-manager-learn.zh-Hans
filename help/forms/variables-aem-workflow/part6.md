@@ -1,7 +1,7 @@
 ---
-title: 在AEM Workflow中记录变量[第6部分]
+title: 在AEM工作流中记录变量[第6部分]
 description: 记录AEM工作流变量的值
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 feature: Adaptive Forms, Workflow
 role: Developer
@@ -9,14 +9,14 @@ level: Beginner
 jira: KT-13783
 exl-id: 6afb3a52-9879-4393-8efd-ec3e5c303063
 duration: 84
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 0%
 
 ---
 
-# 在AEM Workflow中记录变量值
+# 在AEM工作流中记录变量值
 
 记录变量的值是软件开发中的一种常见做法。 它有助于开发人员跟踪和了解AEM工作流的执行情况、诊断问题并监控AEM工作流中的数据流。
 
@@ -175,7 +175,7 @@ public class LogWorkflowVariables implements WorkflowProcess {
 
 >[!NOTE]
 >
->这些文档将保存在AEM Server安装的根文件夹中。
+>这些文档将保存在AEM服务器安装的根文件夹中。
 
 ## 部署示例捆绑包
 

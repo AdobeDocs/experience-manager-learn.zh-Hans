@@ -2,18 +2,18 @@
 title: 加载和触发Target调用
 description: 了解如何使用标记规则从网站页面加载、将参数传递到页面请求以及触发Target调用。
 feature: Core Components, Adobe Client Data Layer
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6133
 thumbnail: 41243.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 duration: 588
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 1%
@@ -22,13 +22,13 @@ ht-degree: 1%
 
 # 加载和触发Target调用 {#load-fire-target}
 
-了解如何使用标记规则从网站页面加载、将参数传递到页面请求以及触发Target调用。 网页信息是使用Adobe客户端数据层检索并作为参数传递的，通过该数据层，您可以收集和存储有关访客在网页上的体验数据，然后轻松访问这些数据。
+了解如何使用标记规则从网站页面加载、将参数传递到页面请求以及触发Target调用。 使用Adobe客户端数据层可检索网页信息并将其作为参数进行传递，这样您便可以收集和存储有关访客在网页上的体验数据，然后轻松访问这些数据。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
 ## 页面加载规则
 
-Adobe客户端数据层是事件驱动的数据层。 加载AEM Page数据层时，它会触发事件`cmp:show` 。 在视频中，使用自定义事件调用`tags Library Loaded`规则。 在下面，您可以找到视频中用于自定义事件和数据元素的代码片段。
+Adobe Client Data Layer是事件驱动的数据层。 加载AEM页面数据层时，将触发事件`cmp:show` 。 在视频中，使用自定义事件调用`tags Library Loaded`规则。 在下面，您可以找到视频中用于自定义事件和数据元素的代码片段。
 
 ### 自定义页面显示事件{#page-event}
 
@@ -80,7 +80,7 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-自定义函数定义`pageShownEventHandler`，并侦听AEM核心组件发出的事件，派生核心组件的相关信息，将其打包到事件对象中，然后在其有效负荷处使用派生的事件信息触发标记事件。
+自定义函数定义`pageShownEventHandler`，并侦听AEM核心组件发出的事件，派生核心组件的相关信息，将其打包到事件对象中，并在其有效负荷处使用派生的事件信息触发标记事件。
 
 标记规则是使用标记的`trigger(...)`函数触发的，该函数仅在规则事件的自定义代码段定义中提供&#x200B;__only__。
 
@@ -160,7 +160,7 @@ window.targetGlobalSettings = {
 
 ## 支持链接
 
-+ [Adobe的客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
 + [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

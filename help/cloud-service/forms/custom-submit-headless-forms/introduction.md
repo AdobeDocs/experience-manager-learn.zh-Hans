@@ -5,14 +5,14 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-13520
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 78fe677c-d5ab-40f6-a381-800f24e227ae
 duration: 27
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 2%
@@ -31,7 +31,7 @@ ht-degree: 2%
 * AEM Cloud Manager使用体验
 * Maven（本文通过3.8.6版本进行了测试）
 * 本地AEM Forms Cloud就绪创作实例
-* 访问AEM Forms作为Cloud Service环境
+* 访问AEM Forms as Cloud Service环境
 * IntelliJ或任何其他IDE
 
 

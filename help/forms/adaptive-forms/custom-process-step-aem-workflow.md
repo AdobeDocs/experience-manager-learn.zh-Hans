@@ -2,14 +2,14 @@
 title: 实施自定义流程步骤
 description: 使用自定义流程步骤将自适应表单附件写入文件系统
 feature: Workflow
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 879518db-3f05-4447-86e8-5802537584e5
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 203
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 创建Maven项目
 
-第一步是使用相应的AdobeMaven原型创建一个Maven项目。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中列出了详细步骤。 将Maven项目导入Eclipse后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
+第一步是使用适当的Adobe Maven原型创建一个Maven项目。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中列出了详细步骤。 将Maven项目导入Eclipse后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
 
 
 ### 创建实现WorkflowProcess的类
@@ -137,7 +137,7 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 行13-15 — 使用“，”分隔符拆分传递到此OSGi组件的进程参数。 随后，将从字符串数组中提取attachmentPath和saveToLocation的值。
 
-* attachmentPath — 这是您在自适应表单中指定用于调用AEM Workflow的自适应表单提交操作时的位置。 这是您希望附件保存在AEM中的文件夹的名称，相对于工作流的负荷。
+* attachmentPath — 这是您在自适应表单中指定给的相同位置，当时您配置了自适应表单的提交操作以调用AEM Workflow。 这是您希望附件保存在AEM中的文件夹的名称，相对于工作流的负荷。
 
 * saveToLocation — 这是您希望将附件保存在AEM服务器文件系统中的位置。
 

@@ -1,7 +1,7 @@
 ---
 title: 使用Analysis Workspace分析数据
 description: 了解如何将从Adobe Experience Manager网站捕获的数据映射到Adobe Analytics报表包中的量度和维度。 了解如何使用Adobe Analytics的Analysis Workspace功能构建详细的报表仪表板。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: User
@@ -13,7 +13,7 @@ exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 badgeIntegration: label="集成" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
 duration: 443
-source-git-commit: 606607b85fae012e76d57b0b35820247a6862e32
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2072'
 ht-degree: 0%
@@ -55,11 +55,11 @@ WKND营销团队有兴趣了解哪些`Call to Action (CTA)`按钮在主页上的
 
 * 启用了[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)的&#x200B;**标记属性**
 * **Adobe Analytics**&#x200B;测试/开发报表包ID和跟踪服务器。 请参阅以下有关[创建报表包](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)的文档。
-* [Experience Platform调试器](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)浏览器扩展配置为在[WKND网站](https://wknd.site/us/en.html)或启用了Adobe数据层的AEM网站上加载了标记属性。
+* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)浏览器扩展配置为在[WKND网站](https://wknd.site/us/en.html)或启用了Adobe数据层的AEM网站上加载标记属性。
 
 ## 转化变量(eVar)和成功事件（事件）
 
-Custom Insight转化变量(或eVar)会放置在网站选定网页的Adobe代码中。 其主要目的是在自定义营销报表中细分转化成功量度。 eVar可以基于访问，其功能与Cookie类似。 传递给eVar变量的值会跟随用户一段预定的时间。
+Custom Insight转化变量(或eVar)会放置在网站选定网页的Adobe代码中。 其主要目的是在自定义营销报表中细分转化成功量度。 eVar可以是基于访问的，其功能与Cookie类似。 传递到eVar变量的值会跟随用户预定的一段时间。
 
 当eVar设置为访客的值时，Adobe会自动记住该值，直到它过期为止。 eVar值有效期间，访客遇到的任何成功事件将计入该eVar值。
 
@@ -148,7 +148,7 @@ Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分�
 
    ![页Dimension](assets/create-analytics-workspace/evar9-dimension.png)
 
-1. 将&#x200B;**CTA点击** (event8)指标拖放到发生次数量度上并将其替换。 您现在可以查看一个可视化图表，该可视化图表显示页面名称(eVar9)和页面上相应CTA点击事件计数。
+1. 将&#x200B;**CTA点击** (event8)指标拖放到发生次数量度上并将其替换。 您现在可以查看一个可视化图表，该可视化图表显示页面名称(eVar9)以及页面上CTA点击事件的相应计数。
 
    ![页面量度 — CTA点击](assets/create-analytics-workspace/evar8-cta-click.png)
 
@@ -158,9 +158,9 @@ Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分�
      ![eVar5](assets/create-analytics-workspace/evar5.png)
 
    * **After**
-     ![eVar5个指标](assets/create-analytics-workspace/evar5-metrics.png)
+     ![eVar5指标](assets/create-analytics-workspace/evar5-metrics.png)
 
-1. 要了解用户如何与WKND网站页面上的CTA按钮进行交互，需要通过添加按钮ID (eVar8)指标进一步细分。
+1. 要了解用户如何与WKND网站页面上的CTA按钮进行交互，需要通过添加按钮ID (eVar8)量度进一步细分。
 
    ![eVar8](assets/create-analytics-workspace/evar8.png)
 
@@ -185,7 +185,7 @@ Analytics分类是在生成报表时对Analytics变量数据进行分类，然�
 
    ![转化分类](assets/create-analytics-workspace/conversion-classification.png)
 
-1. 从&#x200B;**选择分类类型**&#x200B;下拉列表中，选择变量(eVar8 — 按钮ID)以添加分类。
+1. 从&#x200B;**选择分类类型**&#x200B;下拉列表中，选择变量(eVar8-Button ID)以添加分类。
 1. 单击“分类”部分下列出的分类变量旁边的右箭头可添加新分类。
 
    ![转化分类类型](assets/create-analytics-workspace/select-classification-variable.png)
@@ -198,7 +198,7 @@ Analytics分类是在生成报表时对Analytics变量数据进行分类，然�
 
 ### 分类导入器
 
-使用导入器将分类上传到Adobe Analytics。 您也可以在导入之前导出要更新的数据。 使用导入工具导入的数据必须使用特定格式。 通过Adobe，您可以选择下载数据模板，并在以制表符分隔的数据文件中提供所有正确的标头详细信息。 您可以将新数据添加到此模板，然后使用FTP在浏览器中导入数据文件。
+使用导入器将分类上传到Adobe Analytics。 您也可以在导入之前导出要更新的数据。 使用导入工具导入的数据必须使用特定格式。 Adobe为您提供了选项，用于下载数据模板，该数据模板采用制表符分隔的数据文件中所有正确的标题详细信息。 您可以将新数据添加到此模板，然后使用FTP在浏览器中导入数据文件。
 
 #### 分类模板
 
@@ -217,7 +217,7 @@ Analytics分类是在生成报表时对Analytics变量数据进行分类，然�
 
 1. 单击&#x200B;**下载**&#x200B;并将模板文件保存到您的本地系统。 模板文件是大多数电子表格应用程序支持的以制表符分隔的数据文件（文件扩展名为.tab）。
 1. 使用您选择的编辑器打开以制表符分隔的数据文件。
-1. 在部分中，将按钮ID (eVar9)和相应的按钮名称添加到以制表符分隔的文件中，供步骤9中的每个eVar9值使用。
+1. 在部分中，将按钮ID (eVar9)和相应的按钮名称添加到以制表符分隔的文件中，以便用于执行步骤9中的每个eVar9值。
 
    ![键值](assets/create-analytics-workspace/key-value.png)
 

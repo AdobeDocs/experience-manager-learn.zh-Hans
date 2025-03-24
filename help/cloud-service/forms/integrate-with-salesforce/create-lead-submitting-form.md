@@ -5,14 +5,14 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms, Integrations
 topic: Development
 jira: KT-7151
 thumbnail: 331758.jpg
-exl-id: fa00822f-075a-47df-941f-c7370bd1d4f4
+exl-id: bfda4959-3d22-492e-a4e9-54d2b56f9b54
 duration: 288
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '57'
 ht-degree: 0%

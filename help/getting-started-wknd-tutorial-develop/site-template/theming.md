@@ -1,7 +1,7 @@
 ---
 title: 主题化工作流 | AEM快速站点创建
-description: 了解如何更新Adobe Experience Manager站点的主题源以应用品牌特定的样式。 了解如何使用代理服务器查看CSS和Javascript更新的实时预览。 本教程还将介绍如何使用AdobeCloud Manager的前端管道将主题更新部署到AEM站点。
-version: Cloud Service
+description: 了解如何更新Adobe Experience Manager站点的主题源以应用品牌特定的样式。 了解如何使用代理服务器查看CSS和Javascript更新的实时预览。 本教程还将介绍如何使用AEM Cloud Manager的前端管道将主题更新部署到Adobe站点。
+version: Experience Manager as a Cloud Service
 feature: Core Components
 topic: Content Management, Development
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
 recommendations: noDisplay, noCatalog
 duration: 1275
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 主题化工作流 {#theming}
 
-在本章中，我们更新了Adobe Experience Manager Site的主题源以应用品牌特定的样式。 我们了解如何使用代理服务器在针对实时站点进行编码时查看CSS和Javascript更新的预览。 本教程还将介绍如何使用AdobeCloud Manager的前端管道将主题更新部署到AEM站点。
+在本章中，我们更新了Adobe Experience Manager Site的主题源以应用品牌特定的样式。 我们了解如何使用代理服务器在针对实时站点进行编码时查看CSS和Javascript更新的预览。 本教程还将介绍如何使用AEM Cloud Manager的前端管道将主题更新部署到Adobe站点。
 
 最终，我们的网站将更新为包含符合WKND品牌的样式。
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 1. 了解如何下载和修改站点的主题源。
 1. 了解针对实时网站的代码如何实现实时预览。
-1. 了解使用AdobeCloud Manager的前端管道将编译的CSS和JavaScript更新作为主题的一部分交付的端到端工作流。
+1. 了解使用Adobe Cloud Manager的前端管道将编译的CSS和JavaScript更新作为主题的一部分交付的端到端工作流。
 
 ## 更新主题 {#theme-update}
 
@@ -87,4 +87,4 @@ ht-degree: 1%
 
 ### 后续步骤 {#next-steps}
 
-通过使用[AEM项目原型](../project-archetype/overview.md)创建站点，更深入地了解AEM开发并了解更多基础技术。
+通过使用[AEM项目原型](../project-archetype/overview.md)创建站点，更深入地了解AEM开发并了解更多底层技术。

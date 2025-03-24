@@ -1,7 +1,7 @@
 ---
 title: AEM Headless第一个教程
-description: 了解如何成为AEM Headless第一个应用程序。
-version: Cloud Service
+description: 了解如何成为AEM Headless的首个应用程序。
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: b0ac4b50-5fe5-41a1-9530-8e593d7000c9
 duration: 89
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 2%
@@ -23,11 +23,11 @@ ht-degree: 2%
 
 {{aem-headless-trials-promo}}
 
-欢迎阅读关于使用AEM Headless API和GraphQL完全提供支持的React构建Web体验的教程。 在本教程中，我们将指导您通过将React、Adobe Experience Manager (AEM) Headless API和GraphQL的强大功能结合使用，来创建动态的交互式Web应用程序。
+欢迎阅读关于使用React构建一个Web体验的教程，该教程完全由AEM Headless API和GraphQL提供支持。 在本教程中，我们将指导您通过将React、Adobe Experience Manager (AEM) Headless API和GraphQL的强大功能结合使用，来创建动态的交互式Web应用程序。
 
 React是用于构建用户界面的常用JavaScript库，以其简单性、可重用性和基于组件的架构而闻名。 AEM提供了强大的内容管理功能并公开了Headless API，允许开发人员通过各种渠道和应用程序访问存储在AEM中的内容和数据。
 
-利用AEM Headless API，您可以从AEM实例中检索内容、资源和数据，并使用它们来增强React应用程序。 GraphQL是一种灵活的API查询语言，可提供一种高效且精确的方法来从AEM实例请求特定数据，从而实现React和AEM之间的无缝集成。
+利用AEM Headless API，您可以从AEM实例中检索内容、资源和数据，并使用它们来增强React应用程序。 GraphQL是一种灵活的API查询语言，可提供一种高效且精确的方法来从AEM实例请求特定数据，从而实现React与AEM之间的无缝集成。
 
 ![AEM Headless第一个教程](./assets/overview/overview.png)
 

@@ -1,7 +1,7 @@
 ---
-title: AEM Publish服务缓存
+title: AEM发布服务缓存
 description: AEM as a Cloud Service Publish服务缓存的一般概述。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Dispatcher, Developer Tools
 topic: Performance
 role: Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: 1a1accbe-7706-4f9b-bf63-755090d03c4c
 duration: 240
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1134'
 ht-degree: 2%
@@ -23,13 +23,13 @@ ht-degree: 2%
 
 AEM Publish服务有两个主要缓存层，即AEM as a Cloud Service CDN和AEM Dispatcher。 或者，可以将客户管理的CDN放在AEM as a Cloud Service CDN之前。 AEM as a Cloud Service CDN提供边缘内容交付，确保为全球范围内的用户提供低延迟的体验。 AEM Dispatcher直接在AEM Publish之前提供缓存，并用于减轻AEM Publish本身不必要的负载。
 
-![AEM Publish缓存概述图](./assets/publish/publish-all.png){align="center"}
+![AEM发布缓存概述图](./assets/publish/publish-all.png){align="center"}
 
 ## CDN
 
 AEM as a Cloud Service的CDN缓存由HTTP响应缓存标头控制，旨在缓存内容以优化新鲜度和性能之间的平衡。 CDN位于最终用户和AEM Dispatcher之间，用于缓存尽可能接近最终用户的内容，确保性能体验。
 
-![AEM Publish CDN](./assets/publish/publish-cdn.png){align="center"}
+![AEM发布CDN](./assets/publish/publish-cdn.png){align="center"}
 
 配置CDN如何缓存内容时，仅限设置有关HTTP响应的缓存标头。 这些缓存标头通常在使用`mod_headers`的AEM Dispatcher vhost配置中进行设置，但也可以在AEM Publish本身中运行的自定义Java™代码中进行设置。
 
@@ -55,12 +55,12 @@ AEM as a Cloud Service CDN缓存以下内容：
 
 ### 缓存期限{#cdn-cache-life}
 
-AEM Publish CDN基于TTL （生存时间），这意味着缓存生命周期由`Cache-Control`、`Surrogate-Control`或`Expires` HTTP响应标头决定。 如果项目未设置HTTP响应缓存标头，并且符合[合格标准](#when-are-http-requestsresponses-cached)，则Adobe将默认缓存生命周期设置为10分钟（600秒）。
+AEM Publish CDN基于TTL（生存时间），这意味着缓存生命周期由`Cache-Control`、`Surrogate-Control`或`Expires` HTTP响应标头决定。 如果项目未设置HTTP响应缓存标头，并且符合[资格标准](#when-are-http-requestsresponses-cached)，则Adobe将默认缓存生命周期设置为10分钟（600秒）。
 
 以下是缓存标头对CDN缓存生命周期的影响：
 
 + [`Cache-Control`](https://developer.fastly.com/reference/http/http-headers/Cache-Control/) HTTP响应标头指示Web浏览器和CDN将响应缓存多长时间。 该值以秒为单位。 例如，`Cache-Control: max-age=3600`告诉Web浏览器将响应缓存一小时。 如果还存在`Surrogate-Control` HTTP响应标头，此值将被CDN忽略。
-+ [`Surrogate-Control`](https://developer.fastly.com/reference/http/http-headers/Surrogate-Control/) HTTP响应标头会指示AEM CDN将响应缓存多长时间。 该值以秒为单位。 例如，`Surrogate-Control: max-age=3600`告知CDN将响应缓存一小时。
++ [`Surrogate-Control`](https://developer.fastly.com/reference/http/http-headers/Surrogate-Control/) HTTP响应标头将指示AEM CDN将响应缓存多长时间。 该值以秒为单位。 例如，`Surrogate-Control: max-age=3600`告知CDN将响应缓存一小时。
 + [`Expires`](https://developer.fastly.com/reference/http/http-headers/Expires/) HTTP响应标头将指示AEM CDN（和Web浏览器）缓存的响应有效的时长。 该值是一个日期。 例如，`Expires: Sat, 16 Sept 2023 09:00:00 EST`告知Web浏览器在指定的日期和时间之前缓存响应。
 
 当浏览器和CDN的缓存生命周期相同时，可使用`Cache-Control`来控制缓存生命周期。 当Web浏览器应缓存与CDN不同的响应持续时间时，请使用`Surrogate-Control`。
@@ -83,7 +83,7 @@ AEM Publish CDN基于TTL （生存时间），这意味着缓存生命周期由`
 
 ## AEM Dispatcher
 
-![AEM Publish AEM Dispatcher](./assets/publish/publish-dispatcher.png){align="center"}
+![AEM发布AEM Dispatcher](./assets/publish/publish-dispatcher.png){align="center"}
 
 ### 何时缓存HTTP请求/响应？
 
@@ -95,11 +95,11 @@ AEM Publish CDN基于TTL （生存时间），这意味着缓存生命周期由`
 + HTTP响应不适用于二进制文件。
 + HTTP请求URL路径以扩展名结尾，例如： `.html`、`.json`、`.css`、`.js`等。
 + HTTP请求不包含授权，并且未由AEM进行身份验证。
-   + 但是，身份验证请求[的缓存可以全局启用](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used)，也可以选择性地通过[权限敏感型缓存](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-Hans)启用。
+   + 但是，身份验证请求[的缓存可以全局启用](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used)，也可以选择性地通过[权限敏感型缓存](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-hans)启用。
 + http请求不包含查询参数。
    + 但是，通过配置[忽略的查询参数](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters)，可以从缓存中缓存/提供具有忽略的查询参数的HTTP请求。
 + HTTP请求的路径[与允许Dispatcher规则匹配，与拒绝规则](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)不匹配。
-+ HTTP响应不包含AEM Publish设置的以下任何HTTP响应标头：
++ HTTP响应不具有AEM Publish设置的以下任何HTTP响应标头：
 
    + `no-cache`
    + `no-store`
@@ -148,4 +148,4 @@ AEM Dispatcher的缓存可以通过[Dispatcher配置](https://experienceleague.a
 + 启用或禁用TTL缓存
 + ...等等
 
-使用`mod_headers`设置缓存标头`vhost`配置不会影响Dispatcher缓存（基于TTL），因为在AEM Dispatcher处理响应后，这些将添加到HTTP响应中。 要通过HTTP响应标头影响Dispatcher缓存，需要在AEM Publish中运行用于设置相应HTTP响应标头的自定义Java™代码。
+使用`mod_headers`设置缓存标头`vhost`配置不会影响Dispatcher缓存（基于TTL），因为在AEM Dispatcher处理响应后，这些将添加到HTTP响应中。 要通过HTTP响应标头影响Dispatcher缓存，需要在AEM Publish中运行可设置相应HTTP响应标头的自定义Java™代码。

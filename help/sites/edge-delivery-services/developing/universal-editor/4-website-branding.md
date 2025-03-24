@@ -1,7 +1,7 @@
 ---
 title: 添加网站品牌
 description: 为Edge Delivery Services站点定义全局CSS、CSS变量和Web字体。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: a5cd9906-7e7a-43dd-a6b2-e80f67d37992
-source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 0%
@@ -123,11 +123,11 @@ h2::after {
 
 ### 推断的元素
 
-在Edge Delivery Services中，项目的`scripts.js`和`aem.js`代码会根据HTML中特定纯HTML元素的上下文自动增强这些元素。
+在Edge Delivery Services中，项目的`scripts.js`和`aem.js`代码会根据其在HTML中的上下文自动增强特定的纯HTML元素。
 
 例如，根据此上下文，在锚点(`<a>`)元素自己的行上创作（而不是与周围的文本内联）被推断为按钮。 这些锚点将自动用包含CSS类`button-container`的容器`div`包装，并且锚点元素已添加`button` CSS类。
 
-例如，当链接是在其自身的行上创作时，Edge Delivery ServicesJavaScript会将其DOM更新为以下内容：
+例如，当链接是在其自身的行上创作时，Edge Delivery Services JavaScript会将其DOM更新为以下内容：
 
 ```html
 <p class="button-container">
@@ -291,11 +291,11 @@ Edge Delivery Services项目可优化Web字体的使用，以保持高性能并�
 
 Web字体由于其大小而经常影响性能，可能会增加累积布局偏移(CLS)分数并降低总体Lighthouse分数。 为确保在Web字体加载时即时显示文本，Edge Delivery Services项目使用浏览器本机回退字体。 这种方法有助于在应用所需字体时保持流畅的用户体验。
 
-要选择最佳回退字体，请使用Adobe的[Helix Font Fallback Chrome扩展](https://www.aem.live/developer/font-fallback)，该扩展可在加载自定义字体之前确定与浏览器使用的字体密切匹配的字体。 应将生成的回退字体声明添加到`styles/styles.css`文件中，以提高性能并确保用户获得无缝体验。
+要选择最佳回退字体，请使用Adobe的[Helix Font Fallback Chrome扩展](https://www.aem.live/developer/font-fallback)，该扩展可确定在加载自定义字体之前要供浏览器使用的紧密匹配字体。 应将生成的回退字体声明添加到`styles/styles.css`文件中，以提高性能并确保用户获得无缝体验。
 
 ![Helix字体回退Chrome扩展](./assets/4-website-branding/font-fallback-chrome-plugin.png){align=center}
 
-要使用[Helix Font Fallback Chrome扩展](https://www.aem.live/developer/font-fallback)，请确保该网页在Edge Delivery Services网站上使用的相同变体中应用了Web字体。 本教程演示了[wknd.site](http://wknd.site/us/en.html)上的扩展。 在开发网站时，请将扩展应用于正在处理的网站，而不是[wknd.site](http://wknd.site/us/en.html)。
+若要使用[Helix Font Fallback Chrome扩展](https://www.aem.live/developer/font-fallback)，请确保该网页在Edge Delivery Services网站上使用的相同变体中应用了Web字体。 本教程演示了[wknd.site](http://wknd.site/us/en.html)上的扩展。 在开发网站时，请将扩展应用于正在处理的网站，而不是[wknd.site](http://wknd.site/us/en.html)。
 
 ```css
 /* styles/styles.css */
@@ -385,7 +385,7 @@ $ git push origin wknd-styles
    ```
 
    * `Fix #1`引用了之前创建的GitHub问题。
-   * 测试URL告知AEM代码同步使用哪些分支进行验证和比较。 “之后”URL使用工作分支`wknd-styles`来检查代码更改对网站性能有何影响。
+   * 测试URL可告知AEM代码同步使用哪些分支进行验证和比较。 “之后”URL使用工作分支`wknd-styles`来检查代码更改对网站性能有何影响。
 
 6. 单击&#x200B;**创建拉取请求**。
 7. 等待[AEM代码同步GitHub应用](./1-new-code-project.md)到&#x200B;**完成质量检查**。 如果失败，请解决错误并重新运行检查。

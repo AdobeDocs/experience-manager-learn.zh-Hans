@@ -1,7 +1,7 @@
 ---
 title: 将AEM Sites与Adobe Analytics与Adobe Analytics标记扩展集成
 description: 将AEM Sites与Adobe Analytics集成，使用事件驱动的Adobe客户端数据层收集有关使用Adobe Experience Manager构建的网站上的用户活动数据。 了解如何使用标记规则来侦听这些事件，并将数据发送到Adobe Analytics报表包。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
@@ -12,7 +12,7 @@ badgeIntegration: label="集成" type="positive"
 doc-type: Tutorial
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
 duration: 490
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2262'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 集成AEM Sites和Adobe Analytics
 
-了解如何使用[Adobe客户端数据层与AEM Sites核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)的内置功能将AEM和Adobe Analytics与Adobe Analytics标记扩展集成，以收集有关Adobe Experience Manager Sites中某个页面的数据。 Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)中的[标记和[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)用于创建规则以将页面数据发送到Adobe Analytics。
+了解如何使用[AEM Sites客户端数据层与Adobe Analytics核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)的内置功能将AEM和Adobe与Adobe Analytics标记扩展集成，以收集有关Adobe Experience Manager Sites中某个页面的数据。 Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)中的[标记和[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)用于创建规则以将页面数据发送到Adobe Analytics。
 
 ## 您即将构建的内容 {#what-build}
 
@@ -46,26 +46,26 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 需要有关集成标记属性和AEM站点的帮助？ [观看此视频系列](../experience-platform/data-collection/tags/overview.md)。
+> 需要有关集成标记属性和AEM网站的帮助？ [观看此视频系列](../experience-platform/data-collection/tags/overview.md)。
 
 ## 切换WKND站点的标记环境
 
-[WKND](https://wknd.site/us/en.html)是面向公众的站点，它基于[开放源代码项目](https://github.com/adobe/aem-guides-wknd)以及[用于AEM实现的教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)而构建。
+[WKND](https://wknd.site/us/en.html)是面向公众的站点，它基于[开放源代码项目](https://github.com/adobe/aem-guides-wknd)以及[AEM实施教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)而构建，该项目设计作为参考。
 
-您可以使用Experience Platform调试器&#x200B;**将实时[WKND站点](https://wknd.site/us/en.html)切换到&#x200B;*您的*标记属性，而不是设置AEM环境并安装WKND代码库。**&#x200B;但是，如果您自己的AEM站点已经启用了[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)，则可以使用它。
+您可以使用Experience Platform Debugger将实时[WKND站点](https://wknd.site/us/en.html)切换到&#x200B;*您的*&#x200B;标记属性，而不是设置AEM环境并安装WKND代码库。**切换** 但是，如果您自己的AEM站点已经启用了[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)，则可以使用它。
 
 1. 登录到Experience Platform并[创建标记属性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)（如果尚未创建）。
-1. 确保已创建初始标记JavaScript [库](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)并将其提升到标记[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hans)。
+1. 确保已创建初始标记JavaScript [库](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)并将其提升到标记[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html#)。
 1. 从库已发布到的标记环境中复制JavaScript嵌入代码。
 
    ![复制标记属性嵌入代码](assets/collect-data-analytics/launch-environment-copy.png)
 
 1. 在浏览器中，打开新选项卡并导航到[WKND站点](https://wknd.site/us/en.html)
-1. 打开Experience PlatformDebugger浏览器扩展
+1. 打开Experience Platform Debugger浏览器扩展
 
-   ![Experience Platform调试器](assets/collect-data-analytics/experience-platform-debugger-extension.png)
+   ![Experience Platform Debugger](assets/collect-data-analytics/experience-platform-debugger-extension.png)
 
-1. 导航到&#x200B;**Experience Platform标记** > **配置**，并在&#x200B;**嵌入的嵌入代码**&#x200B;下使用从步骤3复制的&#x200B;*您的*&#x200B;嵌入代码替换现有嵌入代码。
+1. 导航到&#x200B;**Experience Platform Tags** > **配置**，并在&#x200B;**嵌入的嵌入代码**&#x200B;下使用从步骤3复制的&#x200B;*您的*&#x200B;嵌入代码替换现有嵌入代码。
 
    ![替换嵌入代码](assets/collect-data-analytics/platform-debugger-replace-embed.png)
 
@@ -73,9 +73,9 @@ ht-degree: 1%
 
    ![控制台日志记录](assets/collect-data-analytics/console-logging-lock-debugger.png)
 
-## 验证WKND站点上的Adobe客户端数据层
+## 验证WKND网站上的Adobe客户端数据层
 
-[WKND参考项目](https://github.com/adobe/aem-guides-wknd)是使用AEM核心组件生成的，默认情况下已启用[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 接下来，验证是否已启用Adobe客户端数据层。
+[WKND参考项目](https://github.com/adobe/aem-guides-wknd)是使用AEM核心组件生成的，默认情况下已启用[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 接下来，验证是否已启用Adobe Client Data Layer。
 
 1. 导航到[WKND站点](https://wknd.site/us/en.html)。
 1. 打开浏览器的开发人员工具并导航到&#x200B;**控制台**。 运行以下命令：
@@ -84,9 +84,9 @@ ht-degree: 1%
    adobeDataLayer.getState();
    ```
 
-   上述代码返回Adobe客户端数据层的当前状态。
+   上述代码会返回Adobe Client Data Layer的当前状态。
 
-   ![Adobe的数据层状态](assets/collect-data-analytics/adobe-data-layer-state.png)
+   ![Adobe数据层状态](assets/collect-data-analytics/adobe-data-layer-state.png)
 
 1. 展开响应并检查`page`条目。 您应该会看到类似以下的数据架构：
 
@@ -112,9 +112,9 @@ ht-degree: 1%
 
 ## 创建Page Loaded规则
 
-Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载AEM Page数据层时，它将触发`cmp:show`事件。 创建一个规则，该规则在从页面数据层触发`cmp:show`事件时触发。
+Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载AEM Page Data Layer时，它将触发`cmp:show`事件。 创建一个规则，该规则在从页面数据层触发`cmp:show`事件时触发。
 
-1. 导航到Experience Platform并进入与AEM站点集成的Tag属性。
+1. 导航到Experience Platform并进入与AEM站点集成的标记属性。
 1. 导航到标记属性UI中的&#x200B;**规则**&#x200B;部分，然后单击&#x200B;**创建新规则**。
 
    ![创建规则](assets/collect-data-analytics/analytics-create-rule.png)
@@ -177,7 +177,7 @@ Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载
 
    `event`对象是从自定义事件中调用的`trigger()`方法传递的。 此处，`component`是从自定义事件中的数据层`getState`派生的当前页面。
 
-1. 保存更改并在标记属性中运行[内部版本](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以将代码提升到AEM网站上使用的[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hans)。
+1. 保存更改并在标记属性中运行[内部版本](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以将代码提升到您的AEM网站上使用的[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html#)。
 
    >[!NOTE]
    >
@@ -189,13 +189,13 @@ Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载
 
 ## 创建数据元素
 
-接下来，创建多个数据元素以从Adobe客户端数据层捕获不同的值。 如上一个练习所示，可以直接通过自定义代码访问数据层的属性。 使用数据元素的优势在于它们可以在标记规则中重用。
+接下来，创建多个数据元素以从Adobe Client Data Layer捕获不同的值。 如上一个练习所示，可以直接通过自定义代码访问数据层的属性。 使用数据元素的优势在于它们可以在标记规则中重用。
 
 数据元素映射到`@type`、`dc:title`和`xdm:template`属性。
 
 ### 组件资源类型
 
-1. 导航到Experience Platform并进入与AEM站点集成的Tag属性。
+1. 导航到Experience Platform并进入与AEM站点集成的标记属性。
 1. 导航到&#x200B;**数据元素**&#x200B;部分，然后单击&#x200B;**创建新数据元素**。
 1. 对于&#x200B;**Name**&#x200B;字段，请输入&#x200B;**组件资源类型**。
 1. 对于&#x200B;**数据元素类型**&#x200B;字段，请选择&#x200B;**自定义代码**。
@@ -254,7 +254,7 @@ Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载
 
 接下来，将Analytics扩展添加到您的标记属性，以将数据发送到报表包中。
 
-1. 导航到Experience Platform并进入与AEM站点集成的Tag属性。
+1. 导航到Experience Platform并进入与AEM站点集成的标记属性。
 1. 转到&#x200B;**扩展** > **目录**
 1. 找到&#x200B;**Adobe Analytics**&#x200B;扩展并单击&#x200B;**安装**
 
@@ -280,7 +280,7 @@ Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载
 
    ![输入跟踪服务器](assets/collect-data-analytics/analytics-config-trackingServer.png)
 
-1. 单击&#x200B;**保存**&#x200B;以保存更改。
+1. 点击&#x200B;**保存**&#x200B;即可保存更改。
 
 ## 向Page Loaded规则添加条件
 
@@ -345,10 +345,10 @@ Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载
 
 ## 验证页面查看信标和Analytics调用
 
-现在&#x200B;**Page Loaded**&#x200B;规则发送了Analytics信标，您应该能够使用Experience Platform调试器查看Analytics跟踪变量。
+现在&#x200B;**Page Loaded**&#x200B;规则发送了Analytics信标，您应该能够使用Experience Platform Debugger查看Analytics跟踪变量。
 
 1. 在浏览器中打开[WKND网站](https://wknd.site/us/en.html)。
-1. 单击Debugger图标![Experience Platform Debugger图标](assets/collect-data-analytics/experience-cloud-debugger.png)以打开Experience PlatformDebugger。
+1. 单击Debugger图标![Experience Platform Debugger图标](assets/collect-data-analytics/experience-cloud-debugger.png)以打开Experience Platform Debugger。
 1. 如前面所述，确保Debugger将标记属性映射到&#x200B;*您的*&#x200B;开发环境，并检查&#x200B;**控制台日志记录**。
 1. 打开Analytics菜单，并确认已将报表包设置为&#x200B;*您的*&#x200B;报表包。 此外，还应填充页面名称：
 
@@ -370,14 +370,14 @@ Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载
 
    >[!NOTE]
    >
-   > 如果未看到任何控制台日志，请确保在Experience Platform调试器的&#x200B;**Experience Platform标记**&#x200B;下选中&#x200B;**控制台日志记录**。
+   > 如果您没有看到任何控制台日志，请确保在Experience Platform Debugger的&#x200B;**Experience Platform标记**&#x200B;下选中&#x200B;**控制台日志记录**。
 
 1. 导航到类似[Western Australia](https://wknd.site/us/en/magazine/western-australia.html)的文章页面。 观察页面名称和模板类型的变化。
 
 ## 恭喜！
 
-您刚刚在Experience Platform中使用事件驱动的Adobe客户端数据层和标记从AEM Site中收集数据页面数据并将这些数据发送到Adobe Analytics。
+您刚刚在Experience Platform中使用事件驱动的Adobe客户端数据层和Tags从AEM Site中收集数据页面数据并将这些数据发送到Adobe Analytics。
 
 ### 后续步骤
 
-请查看以下教程，了解如何使用事件驱动的Adobe客户端数据层来[跟踪Adobe Experience Manager站点](track-clicked-component.md)上特定组件的单击情况。
+请查看以下教程，了解如何使用事件驱动的Adobe客户端数据层来[跟踪Adobe Experience Manager站点上特定组件的单击情况](track-clicked-component.md)。

@@ -1,7 +1,7 @@
 ---
 title: 通过AEM文档创作添加图像替换文本
 description: 探索如何在文档创作中将替换文本用于图像。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User, Developer
@@ -12,7 +12,7 @@ jira: KT-14488
 thumbnail: 3425721.jpeg
 duration: 101
 exl-id: 9577aa66-25a7-4092-984d-52eb2662c4ff
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%

@@ -1,7 +1,7 @@
 ---
 title: AEM Assets中的封闭用户组
 description: 封闭用户组(CUG)是一项功能，它仅限一组精选的用户访问已发布的网站上的内容。 此视频展示封闭用户组如何与Adobe Experience Manager Assets配合使用以限制对资源的特定文件夹的访问。
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Administration, Security
 feature: User and Groups
 role: Admin
@@ -12,7 +12,7 @@ last-substantial-update: 2022-06-06T00:00:00Z
 doc-type: Feature Video
 exl-id: a2bf8a82-15ee-478c-b7c3-de8a991dfeb8
 duration: 321
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 包含AEM Assets的封闭用户组(CUG)
 
-* 旨在限制对AEM Publish实例上资源的访问。
+* 旨在限制对AEM发布实例上资源的访问。
 * 授予对一组用户/组的读取权限。
 * CUG只能在文件夹级别进行配置。 无法在单个资产上设置CUG。
 * 任何子文件夹和应用的资产都会自动继承CUG策略。

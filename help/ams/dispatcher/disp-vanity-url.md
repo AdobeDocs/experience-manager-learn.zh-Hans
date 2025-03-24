@@ -1,7 +1,7 @@
 ---
 title: AEM Dispatcher虚URL功能
 description: 了解AEM如何处理虚URL，以及使用重写规则映射更靠近投放边缘的内容的其他技术。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Performance
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
 duration: 244
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 0%
@@ -164,7 +164,7 @@ RewriteRule ^/aboutus /content/we-retail/us/en/about-us.html [PT,L,NC]
 
 ## 何种方法和何处
 
-使用AEM控制虚条目具有以下优点
+使用AEM控制虚条目具有以下好处
 
 - 作者可以动态创建它们
 - 它们与内容共存，并可与内容一起打包

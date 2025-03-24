@@ -1,7 +1,7 @@
 ---
 title: AMS Dispatcher基本文件布局
 description: 了解基本Apache和Dispatcher文件布局。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Development
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
 duration: 308
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1130'
 ht-degree: 0%
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 >[!BEGINSHADEBOX “注释”]
 
-AdobeManaged Services服务器映像通常具有小型操作系统根驱动器。  我们将数据放入一个单独的卷中，该卷通常装载在`/mnt`中
+Adobe Managed Services服务器映像通常具有小型操作系统根驱动器。  我们将数据放入一个单独的卷中，该卷通常装载在`/mnt`中
 然后，我们将使用该卷而不是下列默认目录的默认值
 
 `DocumentRoot`
@@ -86,7 +86,7 @@ AMS将添加到Apache Web Server的基本安装中。
 AMS默认文档根：
 - 作者：
    - `/mnt/var/www/author/`
-- Publish：
+- 发布：
    - `/mnt/var/www/html/`
 - 全面覆盖和健康检查维护
    - `/mnt/var/www/default/`

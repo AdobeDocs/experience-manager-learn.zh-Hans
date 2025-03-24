@@ -1,7 +1,7 @@
 ---
 title: 使用流量过滤规则阻止 DoS 和 DDoS 攻击
 description: 了解如何在AEM as a Cloud Service提供的CDN中使用流量过滤器规则阻止DoS和DDoS攻击。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security, Operations
 topic: Security, Administration, Performance
 role: Admin, Architect
@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 67091c068634e6c309afaf78942849db626128f6
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1924'
 ht-degree: 1%

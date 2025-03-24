@@ -1,8 +1,8 @@
 ---
-title: 为Asset compute可扩展性设置App Builder
-description: asset compute项目是特别定义的App Builder项目，因此，需要访问Adobe Developer Console中的App Builder才能设置和部署这些项目。
+title: 为Asset Compute可扩展性设置App Builder
+description: Asset Compute项目是特别定义的App Builder项目，因此，需要访问Adobe Developer Console中的App Builder才能设置和部署这些项目。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6268
 thumbnail: 40183.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 2b1d8786-592e-41f2-80cc-bc0b1c7e1b49
 duration: 197
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 设置App Builder
 
-asset compute项目是特别定义的App Builder项目，因此，需要访问Adobe Developer Console中的App Builder才能设置和部署这些项目。
+Asset Compute项目是特别定义的App Builder项目，因此，需要访问Adobe Developer Console中的App Builder才能设置和部署这些项目。
 
 ## 在Adobe Developer Console中创建和设置App Builder{#set-up}
 
@@ -43,7 +43,7 @@ _设置App Builder的点进（无音频）_
 1. 在App Builder项目中，从工作区选择器中选择`Development`
 1. 点按&#x200B;__+添加服务> API__&#x200B;以打开&#x200B;__添加API__&#x200B;向导，使用此方法添加以下API：
 
-   + __Experience Cloud>Asset compute__
+   + __Experience Cloud > Asset Compute__
       + 选择&#x200B;__生成密钥对__&#x200B;并点按&#x200B;__生成密钥对__&#x200B;按钮，然后将下载的`config.zip`保存到安全位置以供[以后使用](#private-key)
       + 点按&#x200B;__下一步__
       + 选择产品配置文件&#x200B;__集成 — Cloud Service__，然后点按&#x200B;__保存配置的API__
@@ -52,19 +52,19 @@ _设置App Builder的点进（无音频）_
 
 ## 访问private.key{#private-key}
 
-在设置[Asset computeAPI集成](#set-up)时，生成了一个新的密钥对，并自动下载了`config.zip`文件。 此`config.zip`包含生成的公共证书和匹配的`private.key`文件。
+在设置[Asset Compute API集成](#set-up)时，生成了一个新的密钥对，并自动下载了`config.zip`文件。 此`config.zip`包含生成的公共证书和匹配的`private.key`文件。
 
 1. 将`config.zip`解压缩到文件系统中的安全位置，因为`private.key`稍后将被[使用](../develop/environment-variables.md)
    + 绝不应该出于安全原因将密钥和私钥添加到Git中。
 
 ## 查看服务帐户(JWT)凭据
 
-本地[Asset compute开发工具](../develop/development-tool.md)使用此Adobe I/O项目的凭据与Adobe I/O Runtime交互，需要将其纳入Asset compute项目。 熟悉“服务帐户” (JWT)凭证。
+此Adobe I/O项目的凭据由本地[Asset Compute开发工具](../develop/development-tool.md)用于与Adobe I/O Runtime交互，需要将其纳入Asset Compute项目。 熟悉“服务帐户” (JWT)凭证。
 
 ![Adobe Developer服务帐户凭据](./assets/app-builder/service-account.png)
 
-1. 在Adobe I/O项目App Builder项目中，确保选择`Development`工作区
+1. 从Adobe I/O项目App Builder项目中，确保选择`Development`工作区
 1. 点按&#x200B;__凭据__&#x200B;下的&#x200B;__服务帐户(JWT)__
-1. 查看显示的Adobe I/O身份证明
-   + 将&#x200B;__Asset computeAPI__&#x200B;添加到此项目时，底部列出的&#x200B;__公钥__&#x200B;在`config.zip`中具有&#x200B;__private.key__&#x200B;对应。
-      + 如果私钥丢失或泄漏，可以删除匹配的公钥，并使用此界面在中生成或上传到Adobe I/O的新密钥对。
+1. 查看显示的Adobe I/O凭据
+   + 在底部列出的&#x200B;__公钥__&#x200B;具有在将&#x200B;__Asset Compute API__&#x200B;添加到此项目时下载的`config.zip`中的&#x200B;__private.key__&#x200B;对应项。
+      + 如果私钥丢失或受损，可以删除匹配的公钥，并使用此界面在Adobe I/O中生成或上传新的密钥对。

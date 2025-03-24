@@ -1,7 +1,7 @@
 ---
 title: AEM Headless API和React - AEM Headless第一个教程
 description: 了解如何涵盖从AEM的GraphQL API检索内容片段数据并在React应用程序中显示该数据。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 2b726473-5a32-4046-bce8-6da3c57a1b60
 duration: 225
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 0%
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 # AEM Headless API和React
 
-欢迎阅读本教程一章，其中我们将探索配置React应用程序以使用AEM Headless SDK与Adobe Experience Manager (AEM) Headless API连接。 我们将介绍如何从AEM的GraphQL API检索内容片段数据并将其显示在React应用程序中。
+欢迎阅读本教程一章，我们将在此章节中探索配置React应用程序，以使用AEM Headless SDK与Adobe Experience Manager (AEM) Headless API连接。 我们将介绍如何从AEM的GraphQL API检索内容片段数据并将其显示在React应用程序中。
 
 AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将引导您配置React应用程序，以使用AEM Headless SDK连接到AEM Headless API。 此设置可在您的React应用程序与AEM之间建立可重复使用的通信渠道。
 
-接下来，我们将使用AEM Headless SDK从AEM的GraphQL API检索内容片段数据。 AEM中的内容片段提供结构化内容管理。 利用AEM Headless SDK，您可以使用GraphQL轻松查询和提取内容片段数据。
+接下来，我们将使用AEM Headless SDK从AEM的GraphQL API中检索内容片段数据。 AEM中的内容片段提供结构化内容管理。 利用AEM Headless SDK，您可以使用GraphQL轻松查询和获取内容片段数据。
 
 一旦我们有内容片段数据，我们就会将它集成到您的React应用程序中。 您将学习如何以吸引人的方式格式化并显示数据。 我们将介绍在React组件中处理和呈现内容片段数据的最佳实践，确保与应用程序的UI无缝集成。
 
@@ -58,7 +58,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
    REACT_APP_TOKEN=<developer token>
    ```
 
-1. 您可以在Cloud Manager中检索开发人员令牌。 登录到[AdobeCloud Manager](https://experience.adobe.com/)。 单击&#x200B;__Experience Manager> Cloud Manager__。 选择相应的程序，然后单击“Environment（环境）”旁边的省略号。
+1. 您可以在Cloud Manager中检索开发人员令牌。 登录到[Adobe Cloud Manager](https://experience.adobe.com/)。 单击&#x200B;__Experience Manager > Cloud Manager__。 选择相应的程序，然后单击“Environment（环境）”旁边的省略号。
 
    ![AEM Developer Console](./assets/2/developer-console.png)
 
@@ -138,7 +138,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
    export default App;
    ```
 
-1. 导入`AEMHeadless`开发工具包。 此SDK是应用程序用于与AEM的Headless API进行交互的帮助程序库。
+1. 导入`AEMHeadless`SDK。 此SDK是应用程序用于与AEM的Headless API交互的帮助程序库。
 
    将此import语句添加到`home.js`。
 
@@ -167,7 +167,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
    }
    ```
 
-1. 初始化`useEffect()`中的AEM Headless SDK，因为`context`变量更改时AEM Headless SDK必须更改。
+1. 在`useEffect()`内初始化AEM Headless SDK，因为`context`变量更改时AEM Headless SDK必须更改。
 
    ```javascript
    useEffect(() => {
@@ -217,7 +217,7 @@ AEM Headless API允许从任何客户端应用程序访问AEM内容。 我们将
 
    ![Chrome开发工具](./assets/2/dev-tools.png)
 
-   AEM Headless SDK对GraphQL请求进行编码，并添加提供的参数。 您可以在浏览器中打开请求。
+   AEM Headless SDK对GraphQL的请求进行编码，并添加提供的参数。 您可以在浏览器中打开请求。
 
    >[!NOTE]
    >

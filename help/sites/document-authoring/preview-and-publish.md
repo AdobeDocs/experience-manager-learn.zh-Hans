@@ -1,7 +1,7 @@
 ---
 title: 预览和发布内容
 description: 如何使用文档创作创建和发布内容。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User
@@ -12,7 +12,7 @@ jira: KT-14466
 thumbnail: 3425700.jpeg
 duration: 137
 exl-id: f416c435-d42f-4d88-b28f-ebabff295a72
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 0%

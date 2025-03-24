@@ -1,14 +1,14 @@
 ---
 title: 持久GraphQL查询 — AEM Headless的高级概念 — GraphQL
 description: 在Adobe Experience Manager (AEM) Headless的高级概念的这一章中，了解如何使用参数创建和更新持久GraphQL查询。 了解如何在持久查询中传递缓存控制参数。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 6a8e90ae-0765-4066-9df4-a3e4d2cda285
 duration: 183
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 1%
@@ -17,9 +17,9 @@ ht-degree: 1%
 
 # 持久 GraphQL 查询
 
-持久查询是存储在Adobe Experience Manager (AEM)服务器上的查询。 客户端可以发送一个具有查询名称的HTTPGET请求来执行它。 这种方法的好处是可缓存性。 虽然客户端GraphQL查询也可以使用HTTPPOST请求执行（无法缓存），但持久查询可以由HTTP缓存或CDN缓存，从而提高性能。 持久查询允许您简化请求并提高安全性，因为您的查询已封装在服务器上，并且AEM管理员可以完全控制它们。 使用AEM GraphQL API时，是&#x200B;**最佳实践并强烈建议**&#x200B;使用持久查询。
+持久查询是存储在Adobe Experience Manager (AEM)服务器上的查询。 客户端可以使用查询名称发送HTTP GET请求以执行它。 这种方法的好处是可缓存性。 虽然客户端GraphQL查询也可以使用HTTP POST请求执行（无法缓存），但持久查询可以由HTTP缓存或CDN缓存，从而提高性能。 持久查询允许您简化请求并提高安全性，因为您的查询已封装在服务器上，并且AEM管理员可以完全控制它们。 使用AEM GraphQL API时，是&#x200B;**最佳实践并强烈建议**&#x200B;使用持久查询。
 
-在上一章中，您已探索了一些高级GraphQL查询以收集WKND应用程序的数据。 在本章中，您将查询保留到AEM，并了解如何在保留的查询上使用缓存控制。
+在上一章中，您已探索了一些高级GraphQL查询以收集WKND应用程序的数据。 在本章中，您将查询保留到AEM，并了解如何对保留的查询使用缓存控制。
 
 ## 先决条件 {#prerequisites}
 
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 ## 查看&#x200B;_GraphQL持久查询_&#x200B;配置设置
 
-我们来看看是否已在AEM实例中为WKND站点项目启用&#x200B;_GraphQL持久查询_。
+让我们查看一下您的AEM实例是否为WKND站点项目启用了&#x200B;_GraphQL持久查询_。
 
 1. 导航到&#x200B;**工具** > **常规** > **配置浏览器**。
 

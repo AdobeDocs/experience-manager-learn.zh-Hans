@@ -1,9 +1,9 @@
 ---
 title: 了解核心组件
-description: AEM核心组件是与Adobe Experience Manager一起使用的一组标准组件。 核心组件通过Adobe的最佳实践和标准而构建，为任何Sites实施提供了一套基准功能。
+description: AEM核心组件是与Adobe Experience Manager一起使用的一组标准组件。 核心组件使用Adobe的最佳实践和标准构建，为任何Sites实施提供了一套基准功能。
 feature: Core Components
 doc-type: Feature Video
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-4676
 thumbnail: 18926.jpg
 topic: Development
@@ -11,7 +11,7 @@ role: User
 level: Beginner
 exl-id: 097216b7-b345-4fcb-bab3-e660d74252a6
 duration: 656
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 42%
@@ -26,7 +26,7 @@ ht-degree: 42%
 >abstract="在此选项卡中，您可以查看帮助构建与 AEM as a Cloud Service 兼容的现代网站的内容。执行此操作的关键是使用核心组件"
 >additional-url="https://video.tv.adobe.com/v/18926" text="核心组件概述"
 
-AEM核心组件是与Adobe Experience Manager一起使用的一组标准组件。 核心组件通过Adobe的最佳实践和标准而构建，为任何Sites实施提供了一套基准功能。
+AEM核心组件是与Adobe Experience Manager一起使用的一组标准组件。 核心组件使用Adobe的最佳实践和标准构建，为任何Sites实施提供了一套基准功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18926?quality=12&learn=on)
 
@@ -34,4 +34,4 @@ AEM核心组件是与Adobe Experience Manager一起使用的一组标准组件�
 
 * [GitHub项目](https://github.com/adobe/aem-core-wcm-components)
 * [核心组件示例](https://www.aemcomponents.dev/)
-* [核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)

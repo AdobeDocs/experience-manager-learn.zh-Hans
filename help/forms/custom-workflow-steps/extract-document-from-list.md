@@ -2,7 +2,7 @@
 title: 从AEM工作流的文档列表中提取文档
 description: 用于从文档列表中提取特定文档的自定义工作流组件
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,7 +10,7 @@ kt: kt-13918
 last-substantial-update: 2023-09-12T00:00:00Z
 exl-id: b0baac71-3074-49d5-9686-c9955b096abb
 duration: 56
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 从文档列表中提取文档
 
-一种常见的使用案例是使用AEM工作流中的调用表单数据模型步骤将表单数据和表单附件提交到外部系统。 例如，在ServiceNow中创建案例时，您需要提交案例详细信息以及支持文档。 添加到自适应表单的附件存储在文档数组列表类型的变量中，要从此数组列表中提取特定文档，您必须编写自定义代码。
+一个常见用例是使用AEM工作流中的调用表单数据模型步骤将表单数据和表单附件提交到外部系统。 例如，在ServiceNow中创建案例时，您需要提交案例详细信息以及支持文档。 添加到自适应表单的附件存储在文档数组列表类型的变量中，要从此数组列表中提取特定文档，您必须编写自定义代码。
 
 本文将引导您完成使用自定义工作流组件提取文档并将其存储在文档变量中的步骤。
 

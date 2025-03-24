@@ -1,7 +1,7 @@
 ---
-title: 日志记录和AEM事件
-description: 了解如何从日志中检索初始AEM事件集并浏览有关每个事件的详细信息。
-version: Cloud Service
+title: 日志记录和AEM活动
+description: 了解如何从日志中检索初始的AEM事件集并浏览有关每个事件的详细信息。
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,20 +12,20 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
 
 ---
 
-# 日志记录和AEM事件
+# 日志记录和AEM活动
 
-了解如何从日志中检索初始AEM事件集并浏览有关每个事件的详细信息。
+了解如何从日志中检索初始的AEM事件集并浏览有关每个事件的详细信息。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427052?quality=12&learn=on)
 
-日记帐是一种使用AEM事件的拉取方法，日记帐是事件的有序列表。 使用Adobe I/O事件日记API，您可以从日记中获取AEM事件并在应用程序中处理它们。 此方法允许您根据指定的节奏管理事件并高效地批量处理它们。 请参阅[日记](https://developer.adobe.com/events/docs/guides/journaling_intro/)以获得深入的见解，包括保留期、分页等基本注意事项。
+日志是一种使用AEM事件的拉取方法，而日志是一个有序的事件列表。 使用Adobe I/O Events日记API，您可以从日记中获取AEM事件，并在应用程序中处理它们。 此方法允许您根据指定的节奏管理事件并高效地批量处理它们。 请参阅[日记](https://developer.adobe.com/events/docs/guides/journaling_intro/)以获得深入的见解，包括保留期、分页等基本注意事项。
 
 在Adobe Developer Console项目中，会自动为日志启用每个事件注册，从而实现无缝集成。
 
@@ -35,9 +35,9 @@ ht-degree: 0%
 
 要完成本教程，您需要：
 
-- 启用了[AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)的AEM as a Cloud Service环境。
+- 已启用[AEM事件的AEM as a Cloud Service环境](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)。
 
-- 为AEM事件配置的[Adobe Developer Console项目](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console)。
+- 已为Adobe Developer Console事件配置[AEM项目](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console)。
 
 ## 访问Web应用程序
 
@@ -69,20 +69,20 @@ ht-degree: 0%
 
 ## 加载AEM事件日志
 
-为简单起见，此托管的Web应用程序仅从日志中获取第一批AEM事件。 这些是日志中最旧可用的事件。 有关详细信息，请参阅[第一批事件](https://developer.adobe.com/events/docs/guides/api/journaling_api/#fetching-your-first-batch-of-events-from-the-journal)。
+为简单起见，此托管Web应用程序仅从日志中获取第一批AEM事件。 这些是日志中最旧可用的事件。 有关详细信息，请参阅[第一批事件](https://developer.adobe.com/events/docs/guides/api/journaling_api/#fetching-your-first-batch-of-events-from-the-journal)。
 
 - 在[问题 — 托管的Web应用程序](https://indigo-speckle-antler.glitch.me/)中，输入您之前从Adobe Developer Console项目复制的&#x200B;**IMS组织ID**、**客户端ID**&#x200B;和&#x200B;**访问令牌**，然后单击&#x200B;**提交**。
 
-- 成功后，表组件会显示AEM Events Journal数据。
+- 成功后，表组件会显示AEM事件日志数据。
 
   ![AEM事件日志数据](../assets/examples/journaling/load-journal.png)
 
-- 要查看完整的事件有效负载，请双击该行。 您可以看到，AEM事件详细信息中提供了在webhook中处理该事件所需的所有信息。 例如，事件类型(`type`)、事件源(`source`)、事件ID (`event_id`)、事件时间(`time`)和事件数据(`data`)。
+- 要查看完整的事件有效负载，请双击该行。 您可以看到，AEM事件详细信息具有在webhook中处理该事件所需的所有信息。 例如，事件类型(`type`)、事件源(`source`)、事件ID (`event_id`)、事件时间(`time`)和事件数据(`data`)。
 
   ![完成AEM事件有效负载](../assets/examples/journaling/complete-journal-data.png)
 
 ## 其他资源
 
-- [Glitch webhook源代码](https://glitch.com/edit/#!/indigo-speckle-antler)可供参考。 它是使用[AdobeReact Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)组件呈现UI的简单React应用程序。
+- [Glitch webhook源代码](https://glitch.com/edit/#!/indigo-speckle-antler)可供参考。 它是使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)组件呈现UI的简单React应用程序。
 
-- [Adobe I/O事件日记API](https://developer.adobe.com/events/docs/guides/api/journaling_api/)提供有关API的详细信息，如第一批、下一批和上一批事件、分页等。
+- [Adobe I/O Events日记API](https://developer.adobe.com/events/docs/guides/api/journaling_api/)提供有关API的详细信息，例如第一批、下一批和上一批事件、分页等。

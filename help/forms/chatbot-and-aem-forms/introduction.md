@@ -2,14 +2,14 @@
 title: 将AEM Forms用于聊天机器人
 description: 使用聊天机器人填写PDF表单
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-15344
 topic: Development
 role: User
 level: Intermediate
 exl-id: 8c51a374-7444-4a6a-99ed-dce671dc57cb
 duration: 161
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # 使用ChatBot填写PDF表单
 
-欢迎访问我们关于使用ChatBot使用Adobe Experience Manager Forms (AEM Forms)填写PDF表单并将其发送以使用Adobe Sign进行数字签名的教程。
+欢迎访问我们关于使用ChatBot使用Adobe Experience Manager Forms (AEM Forms)填写PDF表单并使用Adobe Sign发送以进行数字签名的教程。
 
 已使用[聊天机器人](https://www.chatbot.com/)创建ChatBot。
 

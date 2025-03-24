@@ -1,7 +1,7 @@
 ---
 title: 流量过滤器规则(包括WAF规则)的示例和结果分析
 description: 了解各种流量过滤器规则，包括WAF规则示例。 此外，如何使用AEM as a Cloud Service (AEMCS) CDN日志分析结果。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
 role: Admin, Architect
@@ -12,7 +12,7 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 532
-source-git-commit: 67091c068634e6c309afaf78942849db626128f6
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%

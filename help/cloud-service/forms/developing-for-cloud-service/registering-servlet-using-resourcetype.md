@@ -5,13 +5,13 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Developer Tools
 jira: KT-14581
 duration: 90
 exl-id: 2a33a9a9-1eef-425d-aec5-465030ee9b74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 * 无法使用默认JCR存储库ACL来控制路径绑定的servlet的访问
 * 路径绑定的servlet只能注册到路径，而不能注册到资源类型（即没有后缀处理）
-* 如果路径绑定的servlet不是活动的（例如，如果捆绑丢失或未启动），POST可能会导致意外结果。 通常在`/bin/xyz`处创建一个节点，该节点随后叠加了servlet路径绑定
+* 如果路径绑定的servlet不是活动的（例如，如果捆绑丢失或未启动），则POST可能会导致意外结果。 通常在`/bin/xyz`处创建一个节点，该节点随后叠加了servlet路径绑定
 对于仅查看存储库的开发人员而言，该映射不透明
 鉴于这些缺点，强烈建议将servlet绑定到资源类型而不是路径
 
@@ -83,7 +83,7 @@ public class GetFieldChoices extends SlingAllMethodsServlet implements Serializa
 
 ## 在CRX中创建资源
 
-* 登录到本地AEM SDK。
+* 登录到您当地的AEM SDK。
 * 在内容节点下创建名为`fetchchoices`的资源（您可以根据需要命名该节点），类型为`cq:Page`。
 * 保存更改
 * 创建名为`jcr:content`且类型为`cq:PageContent`的节点并保存更改
@@ -111,7 +111,7 @@ http://localhost:4502/content/fetchchoices/jcr:content.json?formPath=/content/fo
 1. 在`\aem-banking-application\ui.content\src\main\content\jcr_root\content`下创建名为`fetchchoices`的文件夹
 1. 右键单击`fetchchoices`文件夹并选择`repo | Get Command`（此菜单项在本教程的上一章中设置）。
 
-这应该会将此节点从AEM同步到您的本地AEM项目。
+这会将此节点从AEM同步到您的本地AEM项目。
 
 您的AEM项目结构应如下所示
 ![resource-resolver](assets/mapping-servlet-resource.png)

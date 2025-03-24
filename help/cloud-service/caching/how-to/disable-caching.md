@@ -1,7 +1,7 @@
 ---
 title: 如何禁用CDN缓存
 description: 了解如何在AEM as a Cloud Service的CDN中禁用HTTP响应的缓存。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 100
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 默认缓存行为
 
-在部署基于[AEM项目原型](./enable-caching.md#default-caching-behavior)的AEM项目时，查看AEM Publish和作者的默认缓存行为。
+在部署了基于[AEM项目原型](./enable-caching.md#default-caching-behavior)的AEM项目时，查看AEM Publish和Author的默认缓存行为。
 
 ## 禁用缓存
 
@@ -40,8 +40,8 @@ ht-degree: 0%
 
 要禁用缓存，您可以通过两种方式更新缓存标头。
 
-1. **Dispatcher vhost配置：**&#x200B;仅适用于AEM Publish。
-1. **自定义Java™代码：**&#x200B;适用于AEM Publish和Author。
+1. **Dispatcher vhost配置：**&#x200B;仅可用于AEM发布。
+1. **自定义Java™代码：**&#x200B;可用于AEM发布和创作。
 
 让我们回顾一下这些选项。
 

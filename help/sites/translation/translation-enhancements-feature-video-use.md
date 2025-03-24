@@ -1,7 +1,7 @@
 ---
 title: AEM中的翻译增强
-description: AEM强大的翻译框架允许受支持的翻译供应商无缝地翻译AEM内容。 了解最新的增强功能。
-version: 6.4, 6.5
+description: AEM强大的翻译框架允许受支持的翻译供应商无缝翻译AEM内容。 了解最新的增强功能。
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Localization
 feature: Multi Site Manager, Language Copy
 role: User
@@ -9,7 +9,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 21633308-ffe4-4023-affe-59269504da69
 duration: 677
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 多站点管理器的翻译增强功能 {#translation-enhancements}
 
-AEM强大的翻译框架允许受支持的翻译供应商无缝地翻译AEM内容。
+AEM强大的翻译框架允许受支持的翻译供应商无缝翻译AEM内容。
 
 ## AEM 6.5中的翻译增强
 
@@ -32,7 +32,7 @@ AEM 6.5翻译增强功能包括：
 
 **以JSON格式导出翻译对象**： AEM 6.4及更早版本支持翻译对象的XML和XLIFF格式。 您现在可以使用系统控制台[!UICONTROL 配置管理器]将导出格式配置为JSON格式。 查找[!UICONTROL 翻译平台配置]，然后您可以选择导出格式为JSON。
 
-**更新翻译记忆库(TMS)中的已翻译AEM内容**：无权访问AEM的本地作者可以直接在TM（TMS中的翻译记忆库）中对已摄取回AEM的已翻译内容进行更新，并通过将翻译作业从TMS重新发送到AEM来更新AEM中的翻译
+**在翻译记忆库(TMS)中更新已翻译的AEM内容**：无权访问AEM的本地作者可以直接在TM（TMS中的翻译记忆库）中对已摄取回AEM的已翻译内容进行更新，并通过将翻译作业从TMS重新发送到AEM来更新AEM中的翻译
 
 ## AEM 6.4中的翻译增强
 

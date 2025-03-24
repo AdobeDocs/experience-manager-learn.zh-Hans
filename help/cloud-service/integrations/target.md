@@ -1,7 +1,7 @@
 ---
 title: 集成AEM Headless和Target
-description: 了解如何使用Experience PlatformWeb SDK集成AEM Headless和Adobe Target以个性化Headless体验。
-version: Cloud Service
+description: 了解如何集成AEM Headless和Adobe Target，以使用Experience Platform Web SDK个性化Headless体验。
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, Integrations
 topic: Personalization, Headless
 role: Admin, Developer
@@ -11,10 +11,10 @@ last-substantial-update: 2023-05-09T00:00:00Z
 jira: KT-12433
 thumbnail: KT-12433.jpeg
 badgeIntegration: label="集成" type="positive"
-badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
 duration: 1549
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1618'
 ht-degree: 0%
@@ -23,50 +23,50 @@ ht-degree: 0%
 
 # 集成AEM Headless和Target
 
-了解如何将AEM内容片段导出到Adobe Target，从而将AEM Headless与Adobe Target集成，并使用Adobe Experience Platform Web SDK的alloy.js使用它们来个性化Headless体验。 [React WKND应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html)用于探索如何将使用内容片段选件的个性化Target活动添加到体验中，以促进WKND冒险。
+了解如何将AEM Headless与Adobe Target集成，方法是将AEM内容片段导出到Adobe Target，并使用它们通过Adobe Experience Platform Web SDK的alloy.js个性化Headless体验。 [React WKND应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=zh-Hans)用于探索如何将使用内容片段选件的个性化Target活动添加到体验中，以促进WKND冒险。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
 
 本教程介绍了设置AEM和Adobe Target所涉及的步骤：
 
-1. 在AEM Author中[为Adobe Target](#adobe-ims-configuration)创建Adobe IMS配置
-2. 在AEM创作中[创建Adobe TargetCloud Service](#adobe-target-cloud-service)
-3. [将Adobe TargetCloud Service应用于AEM Author中的AEM Assets文件夹](#configure-asset-folders)
-4. 在Adobe Admin Console中[权限Adobe TargetCloud Service](#permission)
+1. 在AEM Author中[为Adobe Target创建Adobe IMS配置](#adobe-ims-configuration)
+2. 在Adobe Target Author中[创建AEM Cloud Service](#adobe-target-cloud-service)
+3. 在Adobe Target Author中[将AEM Cloud Service应用到AEM Assets文件夹](#configure-asset-folders)
+4. 在Adobe Admin Console中[权限Adobe Target Cloud Service](#permission)
 5. [将内容片段](#export-content-fragments)从AEM Author导出到Target
 6. [在Adobe Target中使用内容片段选件](#activity)创建活动
-7. [在Experience Platform中创建Experience Platform数据流](#datastream-id)
-8. [使用AdobeWeb SDK将个性化集成到基于React的AEM Headless应用程序中](#code)。
+7. 在Experience Platform中[创建Experience Platform数据流](#datastream-id)
+8. [使用Adobe Web SDK将个性化集成到基于React的AEM Headless应用程序中](#code)。
 
 ## Adobe IMS配置{#adobe-ims-configuration}
 
-Adobe IMS配置，它有利于AEM和Adobe Target之间的身份验证。
+Adobe IMS配置有助于在AEM和Adobe Target之间进行身份验证。
 
 查看[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims.html)以了解有关如何创建Adobe IMS配置的分步说明。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416495/?quality=12&learn=on)
 
-## Adobe TargetCloud Service{#adobe-target-cloud-service}
+## Adobe Target Cloud Service{#adobe-target-cloud-service}
 
-在AEM中创建Adobe TargetCloud Service，以便于将内容片段导出到Adobe Target。
+在AEM中创建Adobe Target Cloud Service，以便于将内容片段导出到Adobe Target。
 
-查看[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)以了解有关如何创建Adobe TargetCloud Service的分步说明。
+查看[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)以了解有关如何创建Adobe Target Cloud Service的分步说明。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
 
 
 ## 配置资源文件夹{#configure-asset-folders}
 
-在上下文感知配置中配置的Adobe TargetCloud Service，必须应用于包含要导出到Adobe Target的AEM Assets文件夹层次结构。
+在上下文感知配置中配置的Adobe Target Cloud Service必须应用于包含要导出到Adobe Target的内容片段的AEM Assets文件夹层次结构。
 
 +++有关分步说明，请展开
 
-1. 以DAM管理员身份登录到&#x200B;__AEM作者服务__
+1. 以DAM管理员身份登录到&#x200B;__AEM创作服务__
 1. 导航到&#x200B;__Assets >文件__，找到已应用`/conf`的资源文件夹
 1. 选择资产文件夹，然后从顶部操作栏中选择&#x200B;__属性__
-1. 选择&#x200B;__Cloud Service__&#x200B;选项卡
-1. 确保将云配置设置为包含Adobe TargetCloud Service配置的上下文感知配置(`/conf`)。
-1. 从&#x200B;__Cloud Service配置__&#x200B;下拉列表中选择&#x200B;__Adobe Target__。
+1. 选择&#x200B;__云服务__&#x200B;选项卡
+1. 确保将云配置设置为包含Adobe Target云服务配置的上下文感知配置(`/conf`)。
+1. 从&#x200B;__Adobe Target配置__&#x200B;下拉列表中选择&#x200B;__Cloud Service__。
 1. 选择右上方的&#x200B;__保存并关闭__
 
 +++
@@ -81,7 +81,7 @@ Adobe Target集成(显示为developer.adobe.com项目)必须被授予Adobe Admin
 
 +++有关分步说明，请展开
 
-1. 以可在Adobe Admin Console中管理Adobe Target产品的用户的身份登录Experience Cloud
+1. 以可在Adobe Admin Console中管理Experience Cloud产品的用户身份登录Adobe Target
 1. 打开[Adobe Admin Console](https://adminconsole.adobe.com)
 1. 选择&#x200B;__产品__，然后打开&#x200B;__Adobe Target__
 1. 在&#x200B;__产品配置文件__&#x200B;选项卡上，选择&#x200B;__*默认工作区*__
@@ -164,9 +164,9 @@ Adobe Target集成(显示为developer.adobe.com项目)必须被授予Adobe Admin
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416507/?quality=12&learn=on)
 
-## 数据流IDExperience Platform{#datastream-id}
+## Experience Platform数据流Id{#datastream-id}
 
-AEM Headless应用程序需要[Adobe Experience Platform数据流](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html) ID才能使用[AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html)与Adobe Target交互。
+AEM Headless应用程序需要[Adobe Experience Platform数据流](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html) ID才能使用[Adobe Target Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html)与Adobe交互。
 
 +++有关分步说明，请展开
 
@@ -186,7 +186,7 @@ AEM Headless应用程序需要[Adobe Experience Platform数据流](https://exper
       + 可在Adobe Target中的&#x200B;__管理>主机__&#x200B;处设置Target环境。
    + 目标第三方ID命名空间： __留空__
 1. 选择&#x200B;__保存__
-1. 在右侧，复制&#x200B;__数据流ID__&#x200B;以用于[AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html)配置调用。
+1. 在右侧，复制&#x200B;__数据流ID__&#x200B;以用于[Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html)配置调用。
 
 +++
 
@@ -196,15 +196,15 @@ AEM Headless应用程序需要[Adobe Experience Platform数据流](https://exper
 
 ## 向AEM Headless应用程序添加个性化设置{#code}
 
-本教程探讨如何通过[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)使用Adobe Target中的内容片段选件对简单的React应用程序进行个性化。 此方法可用于个性化任何基于JavaScript的Web体验。
+本教程探讨如何通过[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)，使用Adobe Target中的内容片段选件对简单的React应用程序进行个性化。 此方法可用于个性化任何基于JavaScript的Web体验。
 
-Android™和iOS移动体验可以使用[Adobe的Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)按照类似的模式进行个性化。
+Android™和iOS移动体验可以使用[Adobe的移动SDK](https://developer.adobe.com/client-sdks/documentation/)按照类似的模式进行个性化。
 
 ### 先决条件
 
 + Node.js 14
 + Git
-+ [WKND共享了2.1.4+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest)安装在AEM as a Cloud Author和Publish服务上
++ [WKND共享了2.1.4+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest)安装在AEM as a Cloud创作和发布服务上
 
 ### 设置
 
@@ -224,7 +224,7 @@ Android™和iOS移动体验可以使用[Adobe的Mobile SDK](https://developer.a
    ...
    ```
 
-1. 运行应用程序，并确保它连接到配置的AEM服务。 在命令行中，执行：
+1. 运行应用程序，并确保该应用程序连接到配置的AEM服务。 在命令行中，执行：
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/personalization-tutorial
@@ -232,19 +232,19 @@ Android™和iOS移动体验可以使用[Adobe的Mobile SDK](https://developer.a
    $ npm run start
    ```
 
-1. 将[AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html#option-3%3A-using-the-npm-package)安装为NPM包。
+1. 将[Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html#option-3%3A-using-the-npm-package)安装为NPM包。
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/personalization-tutorial
    $ npm install @adobe/alloy
    ```
 
-   Web SDK可在代码中使用，以按活动位置获取内容片段选件JSON。
+   可以在代码中使用Web SDK来按活动位置获取内容片段选件JSON。
 
    配置Web SDK时，需要两个ID：
 
    + `edgeConfigId`，即[数据流ID](#datastream-id)
-   + `orgId`可在&#x200B;__Experience Cloud>配置文件>Adobe信息>当前组织ID__&#x200B;中找到的AEM as a Cloud Service/Target组织ID
+   + `orgId`可在&#x200B;__AEM as a Cloud Service >配置文件>帐户信息>当前组织ID__&#x200B;中找到的Experience Cloud/Target Adobe组织ID
 
    调用Web SDK时，必须将Adobe Target活动位置（在我们的示例中，`wknd-adventure-promo`）设置为`decisionScopes`数组中的值。
 

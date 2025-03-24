@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service 入门培训
 description: 了解AEM as a Cloud Service入门，从合同阶段开始一直到使用Cloud Manager设置环境。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Onboarding
 topic: Migration, Upgrade
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8631
 thumbnail: 336959.jpeg
 exl-id: 9d2004e5-e928-4190-8298-695635c8e92c
 duration: 504
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 7%
@@ -27,13 +27,13 @@ ht-degree: 7%
 
 ![载入高级图表](assets/onboarding-diagram.png)
 
-新用户引导的一个关键部分是创建AEM as a Cloud Service程序，并使用AdobeCloud Manager配置各种环境。 [Admin Console](https://adminconsole.adobe.com/)用于分配角色，并为您组织中的用户提供对AEM环境的访问权限。
+新用户引导的一个关键部分是创建AEM as a Cloud Service程序，并使用Adobe Cloud Manager配置各种环境。 [Admin Console](https://adminconsole.adobe.com/)用于为您组织中的用户分配角色并提供AEM环境的访问权限。
 
 ## 关键活动
 
 + 系统管理员使用[Admin Console](https://adminconsole.adobe.com/)将一个或多个用户分配给[Cloud Manager — 业务负责人](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html)产品配置文件。
 + 分配给业务负责人产品配置文件的用户使用[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hans)的自助服务功能来[创建程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html)和[添加环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
-+ 使用[Admin Console](https://adminconsole.adobe.com/)将开发人员和用户分配给其他[Cloud Manager角色](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html)，并授予各种AEM环境的权限。
++ 使用[Admin Console](https://adminconsole.adobe.com/)将开发人员和用户分配给不同的[Cloud Manager角色](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html)，并授予各种AEM环境的权限。
 
 ## 实践练习
 

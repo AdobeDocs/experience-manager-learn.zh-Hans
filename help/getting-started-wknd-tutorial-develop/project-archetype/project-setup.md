@@ -1,7 +1,7 @@
 ---
 title: AEM Sites — 项目设置入门
 description: 创建一个Maven Multi Module项目以管理Experience Manager站点的代码和配置。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: AEM Project Archetype
 topic: Content Management, Development
 role: Developer
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
 duration: 502
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1684'
 ht-degree: 1%
@@ -31,16 +31,16 @@ ht-degree: 1%
 ## 目标 {#objective}
 
 1. 了解如何使用Maven原型生成新的AEM项目。
-1. 了解AEM项目原型生成的不同模块以及它们如何协同工作。
-1. 了解AEM项目中如何包含AEM核心组件。
+1. 了解AEM项目原型生成的各个模块以及它们如何协同工作。
+1. 了解AEM核心组件如何包含在AEM项目中。
 
 ## 您即将构建的内容 {#what-build}
 
 >[!VIDEO](https://video.tv.adobe.com/v/30152?quality=12&learn=on)
 
-在本章中，您使用[AEM项目原型](https://github.com/adobe/aem-project-archetype)生成新的Adobe Experience Manager项目。 您的AEM项目包含用于Sites实施的完整代码、内容和配置。 本章中生成的项目将作为WKND站点实施的基础，并在以后的章节中构建该项目。
+在本章中，您使用[Adobe Experience Manager项目原型](https://github.com/adobe/aem-project-archetype)生成新的AEM项目。 您的AEM项目包含用于Sites实施的完整代码、内容和配置。 本章中生成的项目将作为WKND站点实施的基础，并在以后的章节中构建该项目。
 
-**什么是Maven项目？** - [Apache Maven](https://maven.apache.org/)是用于构建项目的软件管理工具。 *所有Adobe Experience Manager*&#x200B;实施都使用Maven项目在AEM的基础上生成、管理和部署自定义代码。
+**什么是Maven项目？** - [Apache Maven](https://maven.apache.org/)是用于构建项目的软件管理工具。 *所有Adobe Experience Manager*&#x200B;实施都使用Maven项目在AEM之上生成、管理和部署自定义代码。
 
 **什么是Maven原型？** - [Maven原型](https://maven.apache.org/archetype/index.html)是用于生成新项目的模板或模式。 AEM项目原型有助于生成具有自定义命名空间的新项目，并包括遵循最佳实践的项目结构，从而大大加快了项目开发。
 
@@ -156,7 +156,7 @@ ht-degree: 1%
    [INFO] ------------------------------------------------------------------------    
    ```
 
-   Maven配置文件`autoInstallSinglePackage`编译项目的各个模块并将单个包部署到AEM实例。 默认情况下，此包将部署到在端口&#x200B;**4502**&#x200B;上本地运行的、凭据为`admin:admin`的AEM实例。
+   Maven配置文件`autoInstallSinglePackage`编译项目的各个模块，并将单个包部署到AEM实例。 默认情况下，此包将部署到在端口&#x200B;**4502**&#x200B;上本地运行的、凭据为`admin:admin`的AEM实例。
 
 1. 导航到本地AEM实例上的包管理器： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)。 您应该看到`aem-guides-wknd.ui.apps`、`aem-guides-wknd.ui.config`、`aem-guides-wknd.ui.content`和`aem-guides-wknd.all`的包。
 
@@ -172,7 +172,7 @@ ht-degree: 1%
 
    *原型生成的示例内容*
 
-## Inspect项目 {#project-structure}
+## 检查项目 {#project-structure}
 
 生成的AEM项目由单独的Maven模块组成，每个模块具有不同的角色。 本教程和大多数开发都侧重于以下模块：
 
@@ -191,9 +191,9 @@ ht-degree: 1%
 
 [AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)是AEM的一组标准化Web内容管理(WCM)组件。 这些组件提供了一套基本功能，并针对各个项目进行了样式、自定义和扩展。
 
-AEM as a Cloud Service环境包含最新版本的[AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。 因此，为AEM as a Cloud Service生成的项目&#x200B;**不**&#x200B;包含AEM核心组件的嵌入。
+AEM as a Cloud Service环境包含最新版本的[AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)。 因此，为AEM as a Cloud Service生成的项目&#x200B;**不**&#x200B;包含AEM核心组件的嵌入。
 
-对于AEM 6.5/6.4生成的项目，原型会自动将[AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)嵌入到项目中。 AEM 6.5/6.4的最佳做法是嵌入AEM核心组件，以确保随项目一起部署最新版本。 有关项目如何[包含核心组件的更多信息，请在此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components)找到。
+对于AEM 6.5/6.4生成的项目，原型会自动在项目中嵌入[AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)。 AEM 6.5/6.4的最佳做法是嵌入AEM核心组件，以确保随项目一起部署最新版本。 有关项目如何[包含核心组件的更多信息，请在此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components)找到。
 
 ## Source控制管理 {#source-control}
 
@@ -203,7 +203,7 @@ AEM as a Cloud Service环境包含最新版本的[AEM核心组件](https://exper
 
 在下，`ui.apps`模块观察到已创建许多`.content.xml`文件。 这些XML文件映射JCR中安装的内容的节点类型和属性。 这些文件是关键文件，不能忽略&#x200B;**的**。
 
-AEM项目原型生成一个示例`.gitignore`文件，可用作可以安全忽略文件的起点。 文件生成于`<src>/aem-guides-wknd/.gitignore`。
+AEM项目原型生成一个示例`.gitignore`文件，可用作可以安全忽略这些文件的起点。 文件生成于`<src>/aem-guides-wknd/.gitignore`。
 
 ## 恭喜！ {#congratulations}
 
@@ -305,7 +305,7 @@ AEM项目原型生成一个示例`.gitignore`文件，可用作可以安全忽�
    [ERROR] Failed to execute goal com.day.jcr.vault:content-package-maven-plugin:1.0.2:install (install-package-publish) on project aem-guides-wknd.ui.apps: Connection refused (Connection refused) -> [Help 1]
    ```
 
-   配置文件`autoInstallPackagePublish`用于将包部署到在端口&#x200B;**4503**&#x200B;上运行的Publish环境。 如果找不到在http://localhost:4503上运行的AEM实例，则会出现上述错误。
+   配置文件`autoInstallPackagePublish`用于将包部署到在端口&#x200B;**4503**&#x200B;上运行的发布环境。 如果找不到在http://localhost:4503上运行的AEM实例，则会出现上述错误。
 
 1. 最后，运行以下命令在端口&#x200B;**4504**&#x200B;上部署`ui.apps`包：
 
@@ -325,15 +325,15 @@ AEM项目原型生成一个示例`.gitignore`文件，可用作可以安全忽�
    [INFO] --------------------------------------------------------------------
    ```
 
-   如果端口&#x200B;**4504**&#x200B;上没有可用的AEM实例，则同样会发生生成失败。 在`aem-guides-wknd/pom.xml`处的POM文件中定义了参数`aem.port`。
+   如果端口&#x200B;**4504**&#x200B;上没有可用的AEM实例，则再次出现生成失败。 在`aem-guides-wknd/pom.xml`处的POM文件中定义了参数`aem.port`。
 
-**[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)**&#x200B;模块的结构与&#x200B;**ui.apps**&#x200B;模块相同。 唯一的区别是&#x200B;**ui.content**&#x200B;模块包含称为&#x200B;**可变**&#x200B;的内容。 **可变**&#x200B;内容基本上是指存储在源代码管理&#x200B;**中，但可在AEM实例上直接修改**&#x200B;的非代码配置，如模板、策略或文件夹结构。 有关页面和模板的一章中将更详细地介绍此功能。
+**[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)**&#x200B;模块的结构与&#x200B;**ui.apps**&#x200B;模块相同。 唯一的区别是&#x200B;**ui.content**&#x200B;模块包含称为&#x200B;**可变**&#x200B;的内容。 **可变**&#x200B;内容基本上是指存储在源代码管理&#x200B;**中的非代码配置，如Templates、Policies或文件夹结构，但**&#x200B;可以直接在AEM实例上修改。 有关页面和模板的一章中将更详细地介绍此功能。
 
 用于构建&#x200B;**ui.apps**&#x200B;模块的相同Maven命令可用于构建&#x200B;**ui.content**&#x200B;模块。 欢迎在&#x200B;**ui.content**&#x200B;文件夹中重复上述步骤。
 
 ## 疑难解答
 
-如果使用AEM项目原型生成项目时出现问题，请查看[已知问题](https://github.com/adobe/aem-project-archetype#known-issues)的列表以及未结的[问题](https://github.com/adobe/aem-project-archetype/issues)的列表。
+如果使用AEM项目原型生成项目时出现问题，请查看[已知问题的列表](https://github.com/adobe/aem-project-archetype#known-issues)以及未结的[问题的列表](https://github.com/adobe/aem-project-archetype/issues)。
 
 ## 再次恭喜！ {#congratulations-bonus}
 

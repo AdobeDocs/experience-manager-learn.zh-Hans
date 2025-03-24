@@ -1,27 +1,27 @@
 ---
-title: 使用输出服务生成PDF单据
+title: 使用输出服务生成PDF文档
 description: 将数据与XDP模板合并以生成非交互式PDF
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-16384
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
-source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
+exl-id: 8a5a4d11-12a2-462d-8684-a0c6ec0cac0e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 8%
 
 ---
 
-
-# 使用输出服务生成PDF单据
+# 使用输出服务生成PDF文档
 
 [Output服务](https://javadoc.io/static/com.adobe.aem/aem-forms-sdk-api/2024.07.31.00-240800/com/adobe/fd/output/api/OutputService.html)是属于AEM Document Services的OSGi服务。 它支持各种AEM Forms Designer输出格式和设计功能。 输出服务转换XFA模板和XML数据以生成不同格式的打印文档。
 
-AEM Formsas a Cloud Service中的输出服务与AEM Forms 6.5中的输出服务非常相似，因此，如果您熟悉AEM Forms 6.5中的输出服务，则过渡到AEM Formsas a Cloud Service应该非常简单。
+AEM Forms as a Cloud Service中的输出服务与AEM Forms 6.5中的输出服务非常相似，因此，如果您熟悉AEM Forms 6.5中的输出服务，则过渡到AEM Forms as a Cloud Service应该非常简单。
 
 使用Output服务，您可以创建应用程序，以便：
 
@@ -30,7 +30,7 @@ AEM Formsas a Cloud Service中的输出服务与AEM Forms 6.5中的输出服务�
 + 从 XFA 表单 PDF 生成打印 PDF。
 + 通过将多组数据与提供的模板合并，批量生成PDF、PostScript、PCL和ZPL文档。
 
-此服务设计为在AEM Formsas a Cloud Service实例的上下文中使用。 以下代码片段使用`OutputService`在servlet中生成PDF文档。
+此服务旨在在AEM Forms as a Cloud Service实例的上下文中使用。 以下代码片段使用`OutputService`在servlet中生成PDF文档。
 
 ```java
 import com.adobe.fd.output.api.OutputService;

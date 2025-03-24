@@ -1,12 +1,12 @@
 ---
-user-guide-title: Adobe Experience Manager Managed ServicesTutorials
+user-guide-title: Adobe Experience Manager Managed Services教程
 user-guide-description: Adobe Experience Manager Managed Services的教程集合。
-breadcrumb-title: AEM Managed ServicesTutorials
+breadcrumb-title: AEM Managed Services教程
 sub-product: Experience Manager
-version: 6.5
+version: Experience Manager 6.5
 feature: Dispatcher
 team: TM
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 5%

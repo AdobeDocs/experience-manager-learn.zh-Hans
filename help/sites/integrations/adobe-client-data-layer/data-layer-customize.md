@@ -1,7 +1,7 @@
 ---
 title: 使用AEM组件自定义Adobe客户端数据层
-description: 了解如何使用自定义AEM组件中的内容自定义Adobe客户端数据层。 了解如何使用AEM核心组件提供的API来扩展和自定义数据层。
-version: Cloud Service
+description: 了解如何使用自定义Adobe组件中的内容自定义AEM客户端数据层。 了解如何使用AEM核心组件提供的API来扩展和自定义数据层。
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2022-09-20T00:00:00Z
 doc-type: Tutorial
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
 duration: 452
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 使用AEM组件自定义Adobe客户端数据层 {#customize-data-layer}
 
-了解如何使用自定义AEM组件中的内容自定义Adobe客户端数据层。 了解如何使用[AEM核心组件提供的API来扩展](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)和自定义数据层。
+了解如何使用自定义Adobe组件中的内容自定义AEM客户端数据层。 了解如何使用[AEM核心组件提供的API来扩展](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)和自定义数据层。
 
 ## 您即将构建的内容
 
@@ -39,9 +39,9 @@ ht-degree: 0%
 
 需要&#x200B;**本地开发环境**&#x200B;才能完成本教程。 使用在macOS上运行的AEM as a Cloud Service SDK捕获屏幕截图和视频。 除非另有说明，否则命令和代码与本地操作系统无关。
 
-**是AEM as a Cloud Service的新用户？**&#x200B;请查看以下[指南，了解如何使用AEM as a Cloud Service SDK设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)。
+**是AEM as a Cloud Service的新用户？**&#x200B;请查看以下[指南，了解如何使用AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-hans)设置本地开发环境。
 
-**还不熟悉AEM 6.5？**&#x200B;请查看以下[指南以设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hans)。
+**是AEM 6.5的新手吗？**&#x200B;请查看以下[指南以设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-hans)。
 
 ## 下载和部署WKND参考站点 {#set-up-wknd-site}
 
@@ -67,7 +67,7 @@ ht-degree: 0%
    >
    > `mvn clean install -PautoInstallSinglePackage -Pclassic`
 
-1. 打开新的浏览器窗口并登录到AEM。 打开&#x200B;**杂志**&#x200B;页面，如： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html)。
+1. 打开新的浏览器窗口并登录AEM。 打开&#x200B;**杂志**&#x200B;页面，如： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html)。
 
    页面](assets/adobe-client-data-layer/byline-component-onpage.png)上的![署名组件
 
@@ -78,9 +78,9 @@ ht-degree: 0%
    window.adobeDataLayer.getState();
    ```
 
-   要查看AEM站点上数据层的当前状态，请检查响应。 您应该会看到有关页面和各个组件的信息。
+   要在AEM站点上查看数据层的当前状态，请检查响应。 您应该会看到有关页面和各个组件的信息。
 
-   ![Adobe的数据层响应](assets/data-layer-state-response.png)
+   ![Adobe数据层响应](assets/data-layer-state-response.png)
 
    请注意，Data Layer中未列出Byline组件。
 
@@ -204,7 +204,7 @@ ht-degree: 0%
 
 1. 返回浏览器，然后使用署名组件重新打开页面： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html)。
 
-1. 打开开发人员工具，并检查页面的HTML源以查找署名组件：
+1. 打开开发人员工具，并检查页面的HTML源是否包含署名组件：
 
    ![署名数据层](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
@@ -235,7 +235,7 @@ ht-degree: 0%
 
 ## 添加点击事件 {#click-event}
 
-AdobeClient Data Layer是事件驱动的，触发操作的最常见事件之一是`cmp:click`事件。 AEM核心组件使使用数据元素`data-cmp-clickable`注册组件变得容易。
+Adobe Client Data Layer是事件驱动的，触发操作的最常见事件之一是`cmp:click`事件。 通过AEM核心组件，您可以在数据元素的帮助下轻松注册组件： `data-cmp-clickable`。
 
 可单击元素通常是CTA按钮或导航链接。 很遗憾，署名组件没有这些内容，但我们仍要注册它，因为这对于其他自定义组件可能很常见。
 
@@ -260,7 +260,7 @@ AdobeClient Data Layer是事件驱动的，触发操作的最常见事件之一�
 
 1. 返回浏览器，然后使用添加的Byline组件重新打开页面： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html)。
 
-   为了测试我们的事件，我们将使用开发人员控制台手动添加一些JavaScript。 请参阅[将Adobe客户端数据层与AEM核心组件结合使用](data-layer-overview.md)，获取有关如何执行此操作的视频。
+   为了测试我们的事件，我们将使用开发人员控制台手动添加一些JavaScript。 有关如何使用此操作的视频，请参阅[将Adobe客户端数据层与AEM核心组件结合使用](data-layer-overview.md)。
 
 1. 打开浏览器的开发人员工具，然后在&#x200B;**控制台**&#x200B;中输入以下方法：
 
@@ -428,10 +428,10 @@ AdobeClient Data Layer是事件驱动的，触发操作的最常见事件之一�
 
 ## 恭喜！ {#congratulations}
 
-您刚刚探索了几种使用AEM组件扩展和自定义Adobe客户端数据层的方法！
+您刚刚探索了几种通过AEM组件扩展和自定义Adobe客户端数据层的方法！
 
 ## 其他资源 {#additional-resources}
 
-* [Adobe的客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
+* [Adobe客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
 * [数据层与核心组件的集成](https://github.com/adobe/aem-core-wcm-components/blob/main/DATA_LAYER_INTEGRATION.md)
 * [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)

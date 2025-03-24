@@ -1,7 +1,7 @@
 ---
 title: 用样式系统进行开发
-description: 了解如何使用Experience Manager的样式系统实施单个样式并重用核心组件。 本教程介绍如何开发样式系统，以便通过模板编辑器的品牌特定CSS和高级策略配置来扩展核心组件。
-version: 6.5, Cloud Service
+description: 了解如何使用Experience Manager的样式系统实施各个样式并重用核心组件。 本教程介绍如何开发样式系统，以便通过模板编辑器的品牌特定CSS和高级策略配置来扩展核心组件。
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, Style System
 topic: Content Management, Development
 role: Developer
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
 duration: 358
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # 用样式系统进行开发 {#developing-with-the-style-system}
 
-了解如何使用Experience Manager的样式系统实施单个样式并重用核心组件。 本教程介绍如何开发样式系统，以便通过模板编辑器的品牌特定CSS和高级策略配置来扩展核心组件。
+了解如何使用Experience Manager的样式系统实施各个样式并重用核心组件。 本教程介绍如何开发样式系统，以便通过模板编辑器的品牌特定CSS和高级策略配置来扩展核心组件。
 
 ## 先决条件 {#prerequisites}
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ## 目标
 
-1. 了解如何使用样式系统将品牌特定的CSS应用于AEM核心组件。
+1. 了解如何使用样式系统将特定于品牌的CSS应用于AEM核心组件。
 1. 了解BEM表示法以及如何将其用于仔细定义样式。
 1. 使用可编辑模板应用高级策略配置。
 
@@ -81,7 +81,7 @@ ht-degree: 0%
 
 样式系统的基本思想是，作者可以选择组件的各种样式。 “样式”由插入到组件的外部div中的其他CSS类支持。 在客户端库中，会根据这些样式类添加CSS规则，以便组件更改外观。
 
-您可以在此找到[有关样式系统的详细文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html)。 还有一段很棒的[技术视频用于了解样式系统](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)。
+您可以在此找到[有关样式系统的详细文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html?lang=zh-Hans)。 还有一段很棒的[技术视频用于了解样式系统](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)。
 
 ## 下划线样式 — 标题 {#underline-style}
 
@@ -130,7 +130,7 @@ ht-degree: 0%
    >
    > 此时，由于尚未实现`underline`样式，因此不会发生任何可见更改。 在下一个练习中，将实施此样式。
 
-1. 单击&#x200B;**页面信息**&#x200B;图标> **以发布的形式查看**&#x200B;以在AEM编辑器外部检查页面。
+1. 单击&#x200B;**页面信息**&#x200B;图标> **以发布的形式查看**&#x200B;以在AEM编辑器之外检查页面。
 1. 使用浏览器开发人员工具验证Title组件周围的标记是否将CSS类`cmp-title--underline`应用于外部div。
 
    ![应用了下划线类的Div](assets/style-system/div-underline-class-applied.png)
@@ -146,7 +146,7 @@ ht-degree: 0%
 
 ### 实施下划线样式 — ui.frontend
 
-接下来，使用AEM项目的&#x200B;**ui.frontend**&#x200B;模块实施Underline样式。 使用与&#x200B;**ui.frontend**&#x200B;模块捆绑在一起的Webpack开发服务器，该服务器用于在&#x200B;*部署到AEM的本地实例之前*&#x200B;预览样式。
+接下来，使用AEM项目的&#x200B;**ui.frontend**&#x200B;模块实施Underline样式。 使用与&#x200B;**ui.frontend**&#x200B;模块捆绑在一起的Webpack开发服务器，该服务器用于在&#x200B;*部署到AEM的本地实例之前预览样式*。
 
 1. 从&#x200B;**ui.frontend**&#x200B;模块中启动`watch`进程：
 
@@ -185,9 +185,9 @@ ht-degree: 0%
    >
    >一般认为，最佳实践是始终将样式严格限定在目标组件中。 这可以确保额外的样式不会影响页面的其他区域。
    >
-   >所有核心组件都遵循&#x200B;**[BEM表示法](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**。 为组件创建默认样式时，最佳做法是定位外部CSS类。 另一个最佳实践是定位由核心组件BEM表示法指定的类名，而不是HTML元素。
+   >所有核心组件都遵循&#x200B;**[BEM表示法](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**。 为组件创建默认样式时，最佳做法是定位外部CSS类。 另一个最佳实践是定位由核心组件BEM表示法而不是HTML元素指定的类名。
 
-1. 返回到浏览器和AEM页面。 您应该会看到添加了下划线样式：
+1. 返回浏览器和AEM页面。 您应该会看到添加了下划线样式：
 
    ![在webpack开发服务器中可见的下划线样式](assets/style-system/underline-implemented-webpack.png)
 
@@ -334,17 +334,17 @@ main.container {
 }
 ```
 
-Style System可用于创建&#x200B;**固定宽度**&#x200B;样式作为HTML策略的一部分，而不是针对`main`容器元素。 样式系统可以为用户提供在&#x200B;**固定宽度**&#x200B;和&#x200B;**流动宽度**&#x200B;容器之间切换的选项。
+Style System可用于创建&#x200B;**固定宽度**&#x200B;样式作为Container策略的一部分，而不是针对`main` HTML元素。 样式系统可以为用户提供在&#x200B;**固定宽度**&#x200B;和&#x200B;**流动宽度**&#x200B;容器之间切换的选项。
 
 1. **附加挑战** — 使用从以前练习中吸取的经验教训并使用样式系统为容器组件实施&#x200B;**固定宽度**&#x200B;和&#x200B;**流动宽度**&#x200B;样式。
 
 ## 恭喜！ {#congratulations}
 
-恭喜，文章页面几乎已设置样式，并且您获得了使用AEM样式系统的实践经验。
+恭喜，文章页面几乎已设置样式，并且您获得了使用AEM Style System的实践经验。
 
 ### 后续步骤 {#next-steps}
 
-了解创建显示通过对话框创作内容的[自定义AEM组件](custom-component.md)的端到端步骤，并探索开发Sling模型以封装填充该组件HTL的业务逻辑。
+了解创建可显示通过对话框创作的内容的[自定义AEM组件](custom-component.md)的端到端步骤，并探索开发Sling模型以封装填充该组件HTL的业务逻辑。
 
 在[GitHub](https://github.com/adobe/aem-guides-wknd)上查看完成的代码，或在Git分支`tutorial/style-system-solution`上本地查看和部署代码。
 

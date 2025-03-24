@@ -2,7 +2,7 @@
 title: 使用日志调试AEM SDK
 description: 日志是调试AEM应用程序的首选工具，但需要取决于已部署的AEM应用程序中是否有足够的日志记录。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5252
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 91aa4a10-47fe-4313-acd2-ca753e5484d9
 duration: 411
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # 使用日志调试AEM SDK
 
-访问AEM SDK的日志(AEM SDK本地快速入门Jar或Dispatcher工具)可以提供有关调试AEM应用程序的重要见解。
+访问AEM SDK的日志， AEM SDK本地快速入门Jar或Dispatcher工具可以提供有关调试AEM应用程序的重要见解。
 
 ## AEM日志
 
 >[!VIDEO](https://video.tv.adobe.com/v/34334?quality=12&learn=on)
 
-日志是调试AEM应用程序的首选工具，但需要取决于已部署的AEM应用程序中是否有足够的日志记录。 Adobe建议尽量使本地开发和AEM as a Cloud Service开发日志记录配置相似，因为它在AEM SDK的本地快速启动和AEM as a Cloud Service开发环境中规范了日志可见性，从而减少了配置扭曲和重新部署。
+日志是调试AEM应用程序的首选工具，但需要取决于已部署的AEM应用程序中是否有足够的日志记录。 Adobe建议尽量保持本地开发和AEM as a Cloud Service开发日志记录配置相似，因为它规范了AEM SDK的本地快速启动和AEM as a Cloud Service开发环境的日志可见性，从而减少了配置扭曲和重新部署。
 
 [AEMAEM项目原型](https://github.com/adobe/aem-project-archetype)通过Sling Logger OSGi配置(位于
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 登录到`error.log`。
 
-如果默认日志记录不足以进行本地开发，则可以通过AEM SDK的本地快速启动的Log Support Web控制台(位于([/system/console/slinglog](http://localhost:4502/system/console/slinglog)))配置临时日志记录，但不建议将临时更改保留到Git中，除非同时在AEM as a Cloud Service开发环境中也需要这些相同的日志配置。 请记住，通过日志支持控制台进行的更改将直接保留到AEM SDK的本地快速入门存储库。
+如果默认日志记录不足以进行本地开发，则可以通过AEM SDK的本地快速入门的日志支持Web控制台([/system/console/slinglog](http://localhost:4502/system/console/slinglog))配置临时日志记录，但不建议将临时更改保留到Git中，除非也在AEM as a Cloud Service开发环境中需要这些相同的日志配置。 请记住，通过日志支持控制台进行的更改将直接保留到AEM SDK的本地快速入门存储库。
 
 可以在`error.log`文件中查看Java日志语句：
 

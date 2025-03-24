@@ -2,7 +2,7 @@
 title: 在Azure存储中存储表单提交
 description: 使用REST API在Azure存储中存储表单数据
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,7 +10,7 @@ last-substantial-update: 2023-08-14T00:00:00Z
 jira: KT-13781
 exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
 duration: 143
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 0%
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 ## 创建PUT请求
 
-下一步是创建PUT请求，以将提交的表单数据存储在Azure Storage中。 每个表单提交都需要使用唯一的BLOB ID进行标识。 唯一BLOB ID通常在代码中创建并插入PUT请求的URL中。
+下一步是创建PUT请求，以将提交的表单数据存储在Azure Storage中。 每个表单提交都需要使用唯一的BLOB ID进行标识。 唯一BLOB ID通常会在您的代码中创建并插入PUT请求的URL中。
 以下是PUT请求的部分URL。 `aemformstutorial`是存储帐户的名称，formsubmissions是将使用唯一BLOB ID存储数据的容器。 URL的其余部分将保持不变。
 https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken
 以下是使用PUT请求将提交的表单数据存储在Azure Storage中的函数。 请注意是否在URL中使用了容器名称和uuid。 您可以使用下面列出的示例代码创建OSGi服务或Sling Servlet，并将表单提交存储在Azure存储中。

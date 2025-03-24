@@ -1,7 +1,7 @@
 ---
 title: 使用oak-run.jar管理索引
-description: oak-run.jar的index命令整合了许多功能来管理AEM中的Oak索引，这些功能包括收集索引统计数据、运行索引一致性检查以及重新索引索引本身。
-version: 6.4, 6.5
+description: oak-run.jar的index命令整合了大量功能来管理AEM中的Oak索引，这些功能包括收集索引统计数据、运行索引一致性检查以及重新索引索引本身。
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Search
 doc-type: Technical Video
 topic: Performance
@@ -9,7 +9,7 @@ role: Developer
 level: Experienced
 exl-id: be49718e-f1f5-4ab2-9c9d-6430a52bb439
 duration: 726
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 使用oak-run.jar管理索引
 
-[!DNL oak-run.jar]的index命令整合了一些功能以管理AEM中的[!DNL Oak]200个索引，这些功能包括收集索引统计数据、运行索引一致性检查以及重新索引索引本身。
+[!DNL oak-run.jar]的index命令整合了一些功能以在AEM中管理[!DNL Oak]200个索引，这些功能包括收集索引统计数据、运行索引一致性检查以及重新索引本身。
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 * 使用[!DNL oak-run.jar]对[!DNL TarMK]进行联机索引比在`oak:queryIndexDefinition`节点上设置`reindex=true`更快。 尽管此性能提高，但使用[!DNL oak-run.jar]的联机索引仍需要维护窗口来执行索引。
 
-* 使用[!DNL oak-run.jar]的[!DNL TarMK]联机索引应该&#x200B;**不应**&#x200B;对AEM实例维护窗口之外的AEM实例执行。
+* 使用[!DNL oak-run.jar]对[!DNL TarMK]进行联机索引应&#x200B;**不应**&#x200B;对AEM实例维护时段以外的AEM实例执行。
 
 ## 使用oak-run.jar建立TarMK离线索引
 
@@ -66,11 +66,11 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/21480?quality=12&learn=on)
 
 * 使用[!DNL oak-run.jar]对[!DNL TarMK]进行带外索引可将索引对正在使用的AEM实例的影响降至最低。
-* 带外索引是为AEM安装推荐的索引方法，当重新/索引时间超过可用的维护窗口时。
+* 带外索引是推荐用于AEM安装的索引方法，当重新/索引时间超过可用的维护窗口时。
 
 ## 使用oak-run.jar的MongoMK在线索引
 
-* 建议在[!DNL MongoMK]和[!DNL RDBMK]上使用[!DNL oak-run.jar]的联机索引来重新为[!DNL MongoMK] （和[!DNL RDBMK]） AEM安装编制索引。 **不应对[!DNL MongoMK]或[!DNL RDBMK]使用任何其他方法。**
+* 建议在[!DNL MongoMK]和[!DNL RDBMK]上使用[!DNL oak-run.jar]对联机索引重新编制索引[!DNL MongoMK] （和[!DNL RDBMK]） AEM安装。 **不应对[!DNL MongoMK]或[!DNL RDBMK]使用任何其他方法。**
 * 此索引只需要针对群集中的单个AEM实例执行。
 * 对正在运行的AEM群集安全地执行[!DNL MongoMK]的联机索引，因为存储库遍历将只发生在单个[!DNL MongoDB]节点上，这将允许其他节点继续处理请求而不会对性能产生重大影响。
 
@@ -87,5 +87,5 @@ java -jar oak-run*.jar index
 ## 支持材料
 
 * [下载 [!DNL oak-run.jar]](https://repository.apache.org/#nexus-search;gav~org.apache.jackrabbit~oak-run~~~~kw,versionexpand)
-   * *确保下载的版本与如上所述安装在AEM上的Oak版本匹配*
+   * *确保下载的版本与如上所述在AEM上安装的Oak版本匹配*
 * [Apache Jackrabbit Oak oak-run.jar索引命令文档](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)

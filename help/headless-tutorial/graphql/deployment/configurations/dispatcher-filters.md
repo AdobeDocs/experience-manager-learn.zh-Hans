@@ -1,7 +1,7 @@
 ---
 title: 适用于AEM GraphQL的Dispatcher筛选器
 description: 了解如何配置AEM Publish Dispatcher筛选器以用于AEM GraphQL。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -10,7 +10,7 @@ jira: KT-10829
 thumbnail: kt-10829.jpg
 exl-id: b76b7c46-5cbd-4039-8fd6-9f0f10a4a84f
 duration: 48
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 2%
@@ -31,14 +31,14 @@ Adobe Experience Manager as a Cloud Service使用AEM Publish Dispatcher过滤器
 
 ## Dispatcher筛选器配置
 
-AEM Publish Dispatcher过滤器配置定义允许到达AEM的URL模式，必须包括AEM持久查询端点的URL前缀。
+AEM发布Dispatcher过滤器配置定义允许到达AEM的URL模式，必须包括AEM持久查询端点的URL前缀。
 
-| 客户端连接到 | AEM Author | AEM 发布 | AEM预览 |
+| 客户端连接到 | AEM 作者 | AEM 发布 | AEM预览 |
 |------------------------------------------:|:----------:|:-------------:|:-------------:|
 | 需要Dispatcher筛选器配置 | ✘ | ✔ | ✔ |
 
 添加URL模式为`/graphql/execute.json/*`的`allow`规则，并确保文件ID（例如`/0600`，在示例场文件中是唯一的）。
-这允许对持久查询终结点进行HTTPGET请求，例如`HTTP GET /graphql/execute.json/wknd-shared/adventures-all`通过到AEM Publish。
+这允许将HTTP GET请求发送到持久查询端点，如`HTTP GET /graphql/execute.json/wknd-shared/adventures-all`到AEM Publish。
 
 如果您在AEM Headless体验中使用体验片段，请对这些路径执行相同的操作。
 
