@@ -11,9 +11,9 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: e1bea4320ed7a8b6d45f674649ba9ba946054b17
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1556'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,12 @@ ht-degree: 1%
 # 虚拟专用网络 (VPN)
 
 了解如何将AEM as a Cloud Service与您的VPN连接起来，以便在AEM和内部服务之间创建安全的通信渠道。
+
+>[!IMPORTANT]
+>
+>您可以通过Cloud Manager UI或使用API调用配置VPN和端口转发。 本教程重点介绍API方法。
+>
+>如果您希望使用UI，请参阅[为AEM as a Cloud Service配置高级网络](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 ## 什么是虚拟专用网络？
 
@@ -51,7 +57,11 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 有关更多详细信息，[请查看如何设置、配置和获取Cloud Manger API凭据](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用这些凭据进行Cloud Manager API调用。
 
-本教程使用`curl`来进行Cloud Manager API配置。 提供的`curl`命令采用Linux/macOS语法。 如果使用Windows命令提示符，请将`\`换行符替换为`^`。
+>[!IMPORTANT]
+>
+>本教程使用`curl`来进行Cloud Manager API配置 — *（如果您更喜欢编程方法*）。 提供的`curl`命令采用Linux®或macOS语法。 如果使用Windows命令提示符，请将`\`换行符替换为`^`。
+>
+>或者，您可以通过Cloud Manager UI完成相同的任务。 *如果您更喜欢UI方法*，请参阅[为AEM as a Cloud Service配置高级网络](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 ## 为每个项目启用虚拟专用网络
 
@@ -240,7 +250,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
    }
    ```
 
-   `nonProxyHosts`声明了一组主机，端口80或443应通过默认共享IP地址范围而不是专用出口IP进行路由。 `nonProxyHosts`可能很有用，因为Adobe会自动优化通过共享IP传出的流量。
+   `nonProxyHosts`声明了一组主机，端口80或443应通过默认共享IP地址范围而不是专用出口IP进行路由。 `nonProxyHosts`对于通过Adobe自动优化的共享IP传出的流量可能很有用。
 
    对于每个`portForwards`映射，高级联网定义以下转发规则：
 
@@ -272,9 +282,9 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 启用虚拟专用网络后，AEM代码和配置可以使用它们通过VPN调用外部服务。 AEM对两种外部调用处理方式不同：
 
 1. 对外部服务的HTTP/HTTPS调用
-   + 包括对在标准80或443端口以外的端口上运行的服务发出的HTTP/HTTPS调用。
+   + 这些外部服务包括对在标准端口80或443以外的端口上运行的服务发出的HTTP/HTTPS调用。
 1. 对外部服务的非HTTP/HTTPS调用
-   + 包括任何非HTTP调用，例如与Mail服务器、SQL数据库或在其他非HTTP/HTTPS协议上运行的服务的连接。
+   + 这些外部服务包括任何非HTTP调用，例如与邮件服务器、SQL数据库或使用非HTTP/HTTPS协议的服务的连接。
 
 默认情况下，允许标准端口(80/443)上来自AEM的HTTP/HTTPS请求，但如果配置不正确，请勿使用VPN连接，如下所述。
 
