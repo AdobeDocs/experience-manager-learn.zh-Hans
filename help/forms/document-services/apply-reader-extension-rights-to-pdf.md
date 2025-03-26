@@ -1,7 +1,7 @@
 ---
 title: 对上传的PDF应用使用权限
 description: 对PDF应用使用权限
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Reader Extensions
 topic: Development
 role: Developer
@@ -9,7 +9,7 @@ level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 129
-source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 0%
@@ -71,9 +71,9 @@ public class ApplyUsageRights implements ReaderExtendPDF {
 }
 ```
 
-## 创建Servlet以流式传输读取器扩展PDF
+## 创建servlet以流式传输reader extended PDF
 
-下一步是使用POST方法创建一个servlet以将读取器扩展PDF返回给用户。 在这种情况下，要求用户将PDF保存到其文件系统。 这是因为PDF呈现为动态PDF，并且浏览器附带的PDF查看器无法处理动态PDF。
+下一步是使用POST方法创建一个servlet，以将reader extended PDF返回给用户。 在这种情况下，要求用户将PDF保存到其文件系统。 这是因为PDF呈现为动态PDF，而浏览器附带的pdf查看器无法处理动态pdf。
 
 以下是servlet的代码。 从自适应表单的customsubmit操作调用servlet。
 Servlet创建UsageRights对象，并根据用户在自适应表单中输入的值设置其属性。 然后，servlet调用为此目的创建的服务的applyUsageRights方法。
@@ -210,4 +210,4 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 1. 将Reader扩展证书添加到“fd-service”用户。 确保别名为“**ares**”。
 1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
 1. 选择适当的权限并上传PDF文件
-1. 单击提交以获取Reader扩展PDF
+1. 单击提交以获取Reader Extended PDF

@@ -1,15 +1,16 @@
 ---
-title: 在HTML5表单提交时触发AEM工作流 — 让用例发挥作用
+title: 在HTML5表单提交时触发AEM工作流程 — 让用例发挥作用
 description: 在本地系统上部署示例资源
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+exl-id: 9417235f-2e8d-45c7-86eb-104478a69a19
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 0%
@@ -35,7 +36,7 @@ ht-degree: 0%
 DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 ```
 
-* 通过使用[configMgr](http://localhost:4502/system/console/configMg)在AEM Server凭据配置中指定文件夹名称，可以将表单提交存储在其他文件夹中。 如果更改文件夹，请确保在该文件夹上创建启动器以触发工作流&#x200B;**ReviewSubmittedPDF**
+* 通过使用[configMgr](http://localhost:4502/system/console/configMg)在AEM服务器凭据配置中指定文件夹名称，可以将表单提交存储在其他文件夹中。 如果更改文件夹，请确保在该文件夹上创建启动器以触发工作流&#x200B;**ReviewSubmittedPDF**
 
 ![config-author](assets/author-config.png)
 * [使用包管理器](assets/xdp-form-and-workflow.zip)导入示例xdp和工作流包。
@@ -59,7 +60,7 @@ DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 * [编辑w9.xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/w9.xdp)的高级属性。 请确保正确设置了提交url和渲染配置文件，如下所示。
   ![xdp-advanced-properties](assets/mobile-form-properties.png)
 
-* Publish w9.xdp
+* 发布w9.xdp
 * 登录发布实例
 * [预览w9表单](http://localhost:4503/content/dam/formsanddocuments/w9.xdp/jcr:content)
 * 填写一些表单字段并提交表单
@@ -69,4 +70,4 @@ DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 
 >[!NOTE]
 >
->一些客户不是将PDF提交到发布实例上运行的servlet，而是在servlet容器（如Tomcat）中部署了servlet。 这完全取决于客户熟悉的拓扑。在本教程中，我们将使用在发布实例上部署的servlet来处理表单提交。
+>一些客户不是将PDF提交到在发布实例上运行的servlet，而是在servlet容器（如Tomcat）中部署了servlet。 这完全取决于客户熟悉的拓扑。在本教程中，我们将使用在发布实例上部署的servlet来处理表单提交。

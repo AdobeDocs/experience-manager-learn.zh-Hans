@@ -3,7 +3,7 @@ title: 创建MyAccountForm
 description: 创建myaccount表单以在成功验证应用程序ID和电话号码时检索部分完成的表单。
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6599
 thumbnail: 6599.jpg
 topic: Development
@@ -11,7 +11,7 @@ role: User
 level: Beginner
 exl-id: 1ecd8bc0-068f-4557-bce4-85347c295ce0
 duration: 53
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 当用户输入应用程序ID并单击&#x200B;**FetchApplication**&#x200B;按钮时，将使用表单数据模型的“获取”操作从数据库中获取与应用程序ID关联的手机号码。
 
-该表单利用表单数据模型的POST调用，利用OTP验证手机号码。 使用以下代码成功验证手机号码时，会触发表单提交操作。 我们正在触发名为&#x200B;**submitForm**&#x200B;的提交按钮的点击事件。
+此表单使用表单数据模型的POST调用通过OTP验证手机号码。 使用以下代码成功验证手机号码时，会触发表单提交操作。 我们正在触发名为&#x200B;**submitForm**&#x200B;的提交按钮的点击事件。
 
 >[!NOTE]
 > 您需要在MyAccountForm的相应字段中提供特定于您的[Nexmo](https://dashboard.nexmo.com/)帐户的API密钥和API密钥值

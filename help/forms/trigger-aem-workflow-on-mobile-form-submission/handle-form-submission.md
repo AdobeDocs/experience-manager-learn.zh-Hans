@@ -1,15 +1,16 @@
 ---
-title: 在HTML5表单提交时触发AEM工作流
+title: 在HTML5表单提交时触发AEM工作流程
 description: 处理HTML5表单提交
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+exl-id: 5fbc0cb9-5b55-4269-9172-039414db89cc
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 1%
@@ -18,12 +19,12 @@ ht-degree: 1%
 
 # 处理表单提交
 
-在本部分中，我们将创建一个在AEM Publish上运行的简单servlet来处理HTML5表单提交。 此servlet向在AEM创作实例中运行的servlet发出HTTPPOST请求，该servlet负责将提交的数据另存为AEM创作存储库中的`nt:file`节点。
+在本部分中，我们将创建一个在AEM Publish上运行的简单servlet来处理HTML5表单提交。 此servlet向在AEM创作实例中运行的servlet发出HTTP POST请求，该servlet负责将提交的数据另存为AEM创作存储库中的`nt:file`节点。
 
-以下是处理HTML5表单提交的servlet的代码。 在此servlet中，我们对AEM Author实例中&#x200B;**/bin/startworkflow**&#x200B;上装载的servlet进行POST调用。 此servlet将表单数据保存在AEM作者的存储库中。
+以下是处理HTML5表单提交的servlet的代码。 在此servlet中，我们对AEM创作实例中&#x200B;**/bin/startworkflow**&#x200B;上装载的servlet进行POST调用。 此servlet将表单数据保存到AEM创作存储库中。
 
 
-## AEM Publish servlet
+## AEM发布Servlet
 
 以下代码处理HTML5表单提交。 此代码在发布实例上运行。
 

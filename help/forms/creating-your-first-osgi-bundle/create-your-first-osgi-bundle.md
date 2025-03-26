@@ -1,7 +1,7 @@
 ---
 title: 使用AEM Forms创建您的第一个OSGi捆绑包
 description: 使用Maven和Eclipse构建您的第一个OSGi捆绑包
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Adaptive Forms
 topic: Development
 role: Developer
@@ -9,7 +9,7 @@ level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
 last-substantial-update: 2021-04-23T00:00:00Z
 duration: 145
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -101,9 +101,9 @@ mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archety
 
 ![数据源](assets/mysite-core-project.png)
 
-## 包含AEMFD客户端SDK
+## 包括AEMFD客户端SDK
 
-您需要在项目中包含AEMFD客户端SDK，以利用AEM Forms随附的各种服务。 请参阅[AEMFD客户端SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk)以在您的Maven项目中包含相应的客户端SDK。 您必须将AEM FD客户端SDK包含在核心项目`pom.xml`的依赖关系部分中，如下所示。
+您需要在项目中包含AEMFD客户端SDK，以利用AEM Forms随附的各种服务。 请参阅[AEMFD客户端SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk)，在您的Maven项目中包含相应的客户端SDK。 您必须将AEM FD客户端SDK包含在核心项目`pom.xml`的依赖关系部分中，如下所示。
 
 ```xml
 <dependency>

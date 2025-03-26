@@ -1,22 +1,22 @@
 ---
-title: 使用表单数据模型到Post二进制数据
+title: 使用表单数据模型发布二进制数据
 description: 使用表单数据模型将二进制数据发布到AEM DAM
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 9c62a7d6-8846-424c-97b8-2e6e3c1501ec
 last-substantial-update: 2021-01-09T00:00:00Z
 duration: 95
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%
 
 ---
 
-# 使用表单数据模型到Post二进制数据{#using-form-data-model-to-post-binary-data}
+# 使用表单数据模型发布二进制数据{#using-form-data-model-to-post-binary-data}
 
 从AEM Forms 6.4开始，我们现在能够在AEM Workflow中作为步骤调用表单数据模型服务。 本文将介绍使用表单数据模型服务发布记录文档的示例用例。
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 1. 用户填写并提交自适应表单。
 1. 自适应表单配置为生成记录文档。
-1. 提交此自适应表单时，会触发AEM Workflow，它将使用调用表单数据模型服务将记录文档POST到AEM DAM。
+1. 提交此自适应表单时，会触发AEM工作流，该工作流将使用调用表单数据模型服务将记录文档发布到AEM DAM。
 
 ![posttodam](assets/posttodamshot1.png)
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 1. [下载并部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。此自定义OSGI包用于创建元数据属性，并从提交的表单数据设置其值。
 
-1. [使用包管理器将与此文章关联的资源](assets/postdortodam.zip)导入AEM。您将获得以下内容
+1. [使用包管理器，将与此文章关联的资源](assets/postdortodam.zip)导入AEM。您将获得以下内容
 
    1. 工作流模型
    1. 配置为提交到AEM Workflow的自适应表单

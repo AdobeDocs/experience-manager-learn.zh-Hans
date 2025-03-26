@@ -2,7 +2,7 @@
 title: SMS双重身份验证
 description: 添加额外的安全层以帮助在用户希望执行某些活动时确认用户的身份
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6317
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ level: Experienced
 exl-id: c2c55406-6da6-42be-bcc0-f34426b3291a
 last-substantial-update: 2021-07-07T00:00:00Z
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
@@ -33,7 +33,7 @@ SMS双重身份验证（双重身份验证）是一种安全验证过程，它�
 
 OpenAPI规范（以前称为Swagger规范）是适用于REST API的API描述格式。 OpenAPI文件允许您描述整个API，包括：
 
-* 每个端点的可用端点(/users)和操作(GET/users，POST/users)
+* 每个端点(GET /users、POST /users)上的可用端点(/users)和操作
 * 操作参数每个操作的输入和输出
 身份验证方法
 * 联系信息、许可证、使用条款和其他信息。
@@ -59,7 +59,7 @@ AEM Forms数据集成提供了一个直观的用户界面，用于创建和使�
 
 ## 创建自适应表单
 
-将表单数据模型的POST调用与您的自适应表单相集成，以验证用户在表单中输入的手机号码。 您可以自由创建自己的自适应表单，并根据要求使用表单数据模型的POST调用发送和验证OTP代码。
+将表单数据模型的POST调用与您的自适应表单集成，以验证用户在表单中输入的手机号码。 您可以自由创建自己的自适应表单，并根据要求使用表单数据模型的POST调用发送和验证OTP代码。
 
 如果要将示例资源与API密钥一起使用，请执行以下步骤：
 

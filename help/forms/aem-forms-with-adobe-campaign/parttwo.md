@@ -2,7 +2,7 @@
 title: 创建关于自适应表单提交的Campaign用户档案
 description: 本文介绍了在Adobe Campaign Standard中创建用于提交自适应表单的用户档案所需的步骤。 此流程使用自定义提交机制来处理自适应表单提交。
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -10,7 +10,7 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: deef09d9-82ec-4e61-b7ee-e72d1cd4e9e0
 duration: 182
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 创建AEM服务 {#create-aem-service}
 
-创建AEM服务以创建Adobe Campaign配置文件。 此AEM服务将从OSGI配置中获取Adobe Campaign凭据。 在获取营销活动凭据后，生成访问令牌，并使用访问令牌HTTP Post调用在Adobe Campaign中创建配置文件。 以下是创建用户档案的代码。
+创建AEM服务以创建Adobe Campaign配置文件。 此AEM服务将从OSGI配置中获取Adobe Campaign凭据。 在获取营销活动凭据后，生成访问令牌，并使用访问令牌进行HTTP Post调用以在Adobe Campaign中创建配置文件。 以下是创建用户档案的代码。
 
 ```java
 package aemformwithcampaign.core.services.impl;

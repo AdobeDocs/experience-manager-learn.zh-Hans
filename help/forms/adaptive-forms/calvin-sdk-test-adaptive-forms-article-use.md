@@ -3,14 +3,14 @@ title: 将自动测试与AEM自适应Forms结合使用
 description: 使用Calvin SDK自动测试自适应Forms
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 5a1364f3-e81c-4c92-8972-4fdc24aecab1
 last-substantial-update: 2020-09-10T00:00:00Z
 duration: 101
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 使用Calvin SDK自动测试自适应Forms
 
-Calvin SDK是一个实用程序API，供Adaptive Forms开发人员测试Adaptive Forms。 Calvin SDK基于[Hobbes.js测试框架](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)构建。 Calvin SDK从AEM Forms 6.3开始提供。
+Calvin SDK是一个实用程序API，供Adaptive Forms开发人员测试Adaptive Forms。 Calvin SDK是基于[Hobbes.js测试框架](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)构建的。 Calvin SDK从AEM Forms 6.3开始提供。
 
 在本教程中，您将创建以下内容：
 

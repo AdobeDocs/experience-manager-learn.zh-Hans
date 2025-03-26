@@ -3,13 +3,13 @@ title: 带有JSON架构和数据的AEM Forms[第2部分]
 description: 多部分教程将指导您完成使用JSON架构创建自适应表单和查询提交的数据所涉及的步骤。
 feature: Adaptive Forms
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 29195c70-af12-4a22-8484-3c87a1e07378
 duration: 110
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 为了将提交的数据存储到数据库中，我们编写一个servlet来提取绑定数据和表单名称并存储。 下面给出了处理表单提交并将afBoundData存储在数据库中的完整代码。
 
-我们创建了自定义提交来处理表单提交。 在此自定义提交的post.request.jsp中，我们将POST转发到我们的servlet。
+我们创建了自定义提交来处理表单提交。 在此自定义提交的post.POST.jsp中，我们会将请求转发到我们的servlet。
 
 若要了解有关自定义提交请求的详细信息，请阅读此[文章](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
 

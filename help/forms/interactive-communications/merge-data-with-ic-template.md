@@ -3,14 +3,14 @@ title: 通过合并数据生成打印渠道文档
 description: 了解如何通过合并输入流中包含的数据生成打印渠道文档
 feature: Interactive Communication
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 151
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 0%
@@ -65,7 +65,7 @@ public PrefillData getPrefillData(DataOptions options) throws FormsException {
 
 ### 创建WorkflowProcess实施
 
-workflowProcess实现代码片段如下所示。当AEM Workflow中的流程步骤与此实现关联时，将执行此代码。 此实施需要3个进程参数，如下所述：
+workflowProcess实现代码片段如下所示。当AEM工作流中的流程步骤与此实现关联时，将执行此代码。 此实施需要3个进程参数，如下所述：
 
 * 配置自适应表单时指定的数据文件路径的名称
 * 打印渠道模板的名称

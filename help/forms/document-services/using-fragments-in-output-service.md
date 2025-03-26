@@ -2,14 +2,14 @@
 title: 在输出服务中使用片段
 description: 生成片段驻留在crx存储库中的pdf文档
 feature: Output Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-09T00:00:00Z
 exl-id: d7887e2e-c2d4-4f0c-b117-ba7c41ea539a
 duration: 106
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
@@ -70,20 +70,20 @@ out.println("Document genreated and saved to " + filePath);
 * [使用AEM包管理器下载并安装包](assets/using-fragments-assets.zip)
 * [可以从此处下载示例xdp和片段](assets/xdptemplates.zip)
 
-**安装包后，您必须在AdobeGranite CSRF筛选器中允许列表以下URL。**
+**安装包后，必须在Adobe Granite CSRF筛选器中允许列表以下URL。**
 
 1. 请按照以下所述步骤列入允许列表上述路径。
 1. [登录到configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜索AdobeGranite CSRF筛选器
+1. 搜索Adobe Granite CSRF筛选器
 1. 在排除的部分中添加以下路径并保存
 1. /content/AemFormsSamples/usingfragments
 
 可通过多种方法来测试示例代码。 最快、最轻松的是使用Postman应用程序。 Postman允许您向服务器发出POST请求。 在您的系统上安装Postman应用程序。
 启动应用程序并输入以下URL以测试导出数据API
 
-确保您从下拉列表中选择“POST”
+确保从下拉列表中选择“POST”
 http://localhost:4502/content/AemFormsSamples/usingfragments.html
-确保将“Authorization”指定为“Basic Auth”。 指定AEM Server用户名和密码
+确保将“Authorization”指定为“Basic Auth”。 指定AEM服务器用户名和密码
 导航到“正文”选项卡，并指定请求参数，如下图所示
 ![导出](assets/using-fragment-postman.png)
 然后单击Send按钮

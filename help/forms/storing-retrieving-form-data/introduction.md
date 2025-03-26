@@ -3,14 +3,14 @@ title: 存储和检索MySQL数据库中的表单数据简介
 description: 多部分教程将指导您完成存储和检索表单数据所涉及的步骤
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 95795102-4278-4556-8e0f-1b8a359ab093
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 236
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 存储和检索MySQL数据库中的自适应表单数据
 
-本教程将指导您完成从数据库保存和检索自适应表单数据所涉及的步骤。 本教程使用MySQL数据库来存储自适应表单数据。 只要在AEM中部署了数据库特定的驱动程序，就可以使用您选择的数据库来存储数据。 从较高层面来看，要实现此用例，需要执行以下步骤：
+本教程将指导您完成从数据库保存和检索自适应表单数据所涉及的步骤。 本教程使用MySQL数据库来存储自适应表单数据。 只要您在AEM中部署了特定于数据库的驱动程序，就可以使用您选择的数据库来存储数据。 从较高层面来看，要实现此用例，需要执行以下步骤：
 
 * 使用GuideBridge API获取对自适应表单数据的访问权限
 

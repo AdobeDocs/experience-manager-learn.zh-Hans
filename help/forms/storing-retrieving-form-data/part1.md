@@ -1,14 +1,14 @@
 ---
 title: 存储和检索MySQL数据库中的表单数据 — 配置数据Source
 description: 多部分教程将指导您完成存储和检索表单数据所涉及的步骤
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Experienced
 exl-id: dccca658-3373-4de2-8589-21ccba2b7ba6
 duration: 36
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 # 配置数据Source
 
-AEM可通过多种方式实现与外部数据库的集成。 数据库集成最常见和标准的做法之一是通过[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling连接池化DataSource配置属性。
+AEM可通过多种方式与外部数据库集成。 数据库集成最常见和标准的做法之一是通过[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling连接池化DataSource配置属性。
 第一步是在AEM中下载并部署相应的[MySql驱动程序](https://mvnrepository.com/artifact/mysql/mysql-connector-java)。
 创建Apache Sling连接池化数据源，并提供以下屏幕快照中指定的属性。 数据库架构作为本教程资源的一部分提供给您。
 

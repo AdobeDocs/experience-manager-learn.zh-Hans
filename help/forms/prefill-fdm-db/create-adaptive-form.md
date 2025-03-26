@@ -2,7 +2,7 @@
 title: 创建自适应表单
 description: 创建和配置自适应表单以使用表单数据模型的预填充服务
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-5813
 thumbnail: kt-5813.jpg
 topic: Development
@@ -10,10 +10,10 @@ role: User
 level: Beginner
 exl-id: c8d4eed8-9e2b-458c-90d8-832fc9e0ad3f
 duration: 124
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '598'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 下一步是以表格形式显示员工的受益人。 提供的示例表单有一个表，其中有4列和单行。 我们需要根据受益人数量来配置表格。
 
-* 在编辑模式下打开表单。
+* 在编辑模式下打开该表单。
 * 展开根面板 — >您的受益人 — >表
 * 选择Row1并单击扳手图标以打开其属性表。
 * 将Bind引用设置为&#x200B;**/newhire/GetEmployeeRelifinears**

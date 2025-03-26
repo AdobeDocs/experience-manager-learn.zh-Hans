@@ -2,14 +2,14 @@
 title: 在自适应Forms中使用地理位置API
 description: 使用地理位置API填充表单上的地址字段
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 50db6155-ee83-4ddb-9e3a-56e8709222db
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 88
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -77,7 +77,7 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 
 ![使用地理位置API填充的字段](assets/capture-4.gif)
 
-在第1行，我们使用HTML地理位置API来获取当前位置。 获得当前位置后，我们将当前位置传递给showPosition函数。
+在第1行中，我们使用HTML地理位置API来获取当前位置。 获得当前位置后，我们将当前位置传递给showPosition函数。
 
 在showPosition函数中，我们使用Google API获取给定纬度和经度的地址详细信息。
 

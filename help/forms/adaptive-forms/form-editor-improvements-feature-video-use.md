@@ -2,14 +2,14 @@
 title: AEM Forms中的表单编辑器改进
 description: AEM 6.3在此版本中引入了几项新增功能和增强功能，以简化自适应表单和文档的创作体验。 这些增强功能有助于缩短您的上市时间，并使业务用户能够处理表单和文档
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: User
 level: Beginner
 exl-id: a2d21f2e-3dbb-454f-8a02-101dc3af9b1e
 last-substantial-update: 2020-02-09T00:00:00Z
 duration: 522
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%

@@ -2,14 +2,14 @@
 title: 创建不含数据的表单数据模型Source
 description: 从AEM Forms 6.4开始，我们现在能够定义表单数据模型(FDM)，而无需将其与数据源关联。 以下视频介绍了在不使用任何数据源的情况下创建FDM的步骤。
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: b43568e7-99f0-425d-9601-c671ecdaff69
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 188
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%

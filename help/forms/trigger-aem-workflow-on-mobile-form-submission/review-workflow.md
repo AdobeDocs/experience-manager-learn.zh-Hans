@@ -1,15 +1,16 @@
 ---
-title: 在HTML5表单提交时触发AEM工作流 — 审查和批准PDF
+title: 在HTML5表单提交时触发AEM工作流程 — 审查和批准PDF
 description: 此工作流用于查看已提交的PDF
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+exl-id: ec60d017-8b29-4185-a097-d809e18df4a7
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 1%

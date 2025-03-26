@@ -3,14 +3,14 @@ title: 使用AEM Forms Print Channel文档中的表组件
 description: 以下视频介绍了在交互式通信中将表组件用于打印渠道文档所需的步骤。
 feature: Interactive Communication
 doc-type: technical video
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 54afd047-c6e6-4557-9336-39420f30df88
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 277
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%

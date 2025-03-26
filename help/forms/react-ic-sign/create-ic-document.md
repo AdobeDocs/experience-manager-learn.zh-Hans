@@ -2,7 +2,7 @@
 title: 使用API生成交互式通信文档
 description: 通过合并react应用程序中的数据生成交互式通信文档
 feature: Adaptive Forms,Acrobat Sign
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,7 +10,7 @@ jira: KT-13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: d6fb6c80-4bfe-4b9d-b267-7caee3944cc0
 duration: 159
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 1%

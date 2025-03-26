@@ -2,14 +2,14 @@
 title: 从HTM5表单提交生成PDF
 description: 通过移动设备表单提交生成PDF
 feature: Mobile Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 91b4a134-44a7-474e-b769-fe45562105b2
 last-substantial-update: 2020-01-07T00:00:00Z
 duration: 132
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -79,7 +79,7 @@ $("#file1").click();
 });
 ```
 
-[自定义配置文件](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。 使用自定义配置文件，可以更轻松地处理移动设备表单的HTMLDOM对象。 隐藏的文件元素将添加到HTML.jsp中。 当用户点击“添加照片”时，我们将触发文件元素的点击事件。 这允许用户浏览并选择要附加的照片。 然后使用javascript FileReader对象获取图像的base64编码字符串。 base64图像字符串存储在表单的文本字段中。 在提交表单时，我们将提取此值并将其插入XML的img元素中。 然后，使用此XML与xdp合并以生成最终pdf。
+[自定义配置文件](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。 通过使用自定义配置文件，可以更轻松地处理移动设备表单的HTML DOM对象。 隐藏的文件元素将添加到HTML.jsp中。 当用户点击“添加照片”时，我们将触发文件元素的点击事件。 这允许用户浏览并选择要附加的照片。 然后使用javascript FileReader对象获取图像的base64编码字符串。 base64图像字符串存储在表单的文本字段中。 在提交表单时，我们将提取此值并将其插入XML的img元素中。 然后，使用此XML与xdp合并以生成最终pdf。
 
 用于本文的自定义配置文件已作为本文资源的一部分提供给您。
 
@@ -116,8 +116,8 @@ function readURL(input) {
 
 * [下载并安装与本文关联的包。](assets/pdf-from-mobile-form-submission.zip)
 
-* 通过查看[xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)的HTML页，确保已正确设置提交URL和属性渲染配置文件
+* 通过查看[xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)的属性页面，确保正确设置了提交URL和HTML渲染配置文件
 
 * [以html预览XDP](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 
-* 将图像添加到表单并提交。 您应该重新获取PDF，并在其中插入图像。
+* 将图像添加到表单并提交。 您应该重新获取PDF，并在其中放入图像。

@@ -2,14 +2,14 @@
 title: 在AEM Forms中创建第一个servlet
 description: 构建您的第一个Sling Servlet以将数据与表单模板合并。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 72728ed7-80a2-48b5-ae7f-d744db8a524d
 last-substantial-update: 2021-04-23T00:00:00Z
 duration: 55
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -80,7 +80,7 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 * 执行命令`mvn clean install -PautoInstallBundle`
 * 上述命令会自动构建捆绑包，并将其部署到在localhost：4502上运行的AEM实例
 
-该包在以下位置`C:\AEMFormsBundles\mysite\core\target`也可用。 也可以使用[Felix Web控制台](http://localhost:4502/system/console/bundles)将包部署到AEM中。
+该包在以下位置`C:\AEMFormsBundles\mysite\core\target`也可用。 也可以使用[Felix Web控制台](http://localhost:4502/system/console/bundles)将该捆绑包部署到AEM中。
 
 
 ## 测试Servlet解析程序

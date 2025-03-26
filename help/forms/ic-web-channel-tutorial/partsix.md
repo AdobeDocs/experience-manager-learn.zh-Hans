@@ -4,13 +4,13 @@ description: 这是创建您的第一个交互式通信文档的多步教程的�
 discoiquuid: b44ff855-9ead-471e-8f0f-b562b88a5337
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: a0a0c8dc-5302-446c-9fec-e23fe1320e34
 duration: 33
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 在本部分中，我们将为Web渠道创建交互式通信。
 
-1. 登录AEM创作实例，然后导航至Adobe Experience Manager > Forms > Forms和文档。
+1. 登录到AEM创作实例，然后导航至Adobe Experience Manager > Forms > Forms和文档。
 1. 打开401KStatment文件夹。
 1. 点按创建，然后选择交互式通信。 此时会显示“创建交互式通信”页。
 1. 输入以下信息

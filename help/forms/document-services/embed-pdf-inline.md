@@ -1,7 +1,7 @@
 ---
 title: 显示内嵌记录文档
-description: 将自适应表单数据与XDP模板合并，并使用Document Cloud嵌入PDF API显示内联PDF。
-version: 6.4,6.5
+description: 将自适应表单数据与XDP模板合并，并使用Document Cloud嵌入PDF API显示PDF内联。
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-9411
 exl-id: 327ffe26-e88e-49f0-9f5a-63e2a92e1c8a
 last-substantial-update: 2021-07-07T00:00:00Z
 duration: 165
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 已执行以下步骤以完成集成
 
-## 创建自定义组件以内嵌显示PDF
+## 创建自定义组件以显示PDF内联
 
 创建了自定义组件(embed-pdf)以嵌入由POST调用返回的pdf。
 
@@ -108,13 +108,13 @@ $(document).ready(function() {
 配置embed-pdf组件，如下面的屏幕快照所示
 ![embed-pdf](assets/embed-pdf-configuration.png)
 
-**嵌入PDFAPI密钥** — 这是可用于嵌入pdf的密钥。 此密钥仅适用于localhost。 您可以创建[您自己的密钥](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)并将其与其他域关联。
+**嵌入PDF API密钥** — 这是可用于嵌入pdf的密钥。 此密钥仅适用于localhost。 您可以创建[您自己的密钥](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)并将其与其他域关联。
 
 **返回pdf**&#x200B;的端点 — 这是自定义servlet，它将将数据与xdp模板合并并返回pdf。
 
 **模板名称** — 这是xdp的路径。 通常，它存储在formsanddocuments文件夹下。
 
-**PDF的文件名** — 这是将显示在嵌入pdf组件中的字符串。
+**PDF文件名** — 这是将显示在嵌入pdf组件中的字符串。
 
 ## 创建自定义servlet
 
@@ -230,9 +230,9 @@ public class StreamPDFToEmbed extends SlingAllMethodsServlet {
 
 1. [下载并安装嵌入的pdf包](assets/embedpdf.core-1.0-SNAPSHOT.jar)。
 这有了Servlet将数据与XDP模板合并，并使PDF流回。
-1. 使用[AEM ConfigMgr](http://localhost:4502/system/console/configMgr)将/bin/getPDFToEmbed路径添加到AdobeGranite CSRF过滤器的排除路径部分中。 在生产环境中，建议使用[CSRF保护框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
+1. 使用[AEM ConfigMgr](http://localhost:4502/system/console/configMgr)在Adobe Granite CSRF筛选器的排除路径部分中添加路径/bin/getPDFToEmbed 。 在生产环境中，建议使用[CSRF保护框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
 1. [导入客户端库和自定义组件](assets/embed-pdf.zip)
 1. [导入自适应表单和模板](assets/embed-pdf-form-and-xdp.zip)
 1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)
 1. 填写一些表单字段
-1. 按Tab键转到“查看PDF”选项卡。 选中查看PDF复选框。 您应该会看到在填充了自适应表单数据的表单中显示的pdf
+1. 导航到“查看PDF”选项卡。 选中查看PDF复选框。 您应该会看到在填充了自适应表单数据的表单中显示的pdf

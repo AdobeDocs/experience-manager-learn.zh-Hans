@@ -2,14 +2,14 @@
 title: 带有自适应Forms的条形码服务
 description: 使用条形码服务对条形码进行解码，并根据提取的数据填充表单字段。
 feature: Barcoded Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
@@ -140,10 +140,10 @@ $(document).ready(function()
 
 要在您的系统上运行此命令，请执行以下步骤：
 
-1. [下载BarcodeService.zip](assets/barcodeservice.zip)并使用包管理器导入AEM
+1. [下载BarcodeService.zip](assets/barcodeservice.zip)并使用包管理器导入到AEM
 1. [下载并安装自定义DocumentServices包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [下载并安装DevelopingWithServiceUser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下载示例PDF表单](assets/barcode.pdf)
 1. 将浏览器指向[自适应表单示例](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
-1. 上传提供的示例PDF
+1. 上传提供的PDF示例
 1. 您应该会看到表单中填充了数据

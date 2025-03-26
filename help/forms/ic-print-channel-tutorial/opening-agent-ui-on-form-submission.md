@@ -1,9 +1,9 @@
 ---
-title: 在POST提交时打开代理UI
+title: 在提交帖子时打开代理UI
 description: 这是为打印渠道创建第一个交互式通信文档的多步教程的第11部分。 在本部分中，我们将启动代理ui界面，用于在表单提交时创建临时通信。
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6168
 thumbnail: 40122.jpg
 topic: Development
@@ -11,14 +11,14 @@ role: Developer
 level: Intermediate
 exl-id: 509b4d0d-9f3c-46cb-8ef7-07e831775086
 duration: 170
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
 
 ---
 
-# 在POST提交时打开代理UI
+# 在提交帖子时打开代理UI
 
 在本部分中，我们将启动代理ui界面，用于在表单提交时创建临时通信。
 
@@ -58,7 +58,7 @@ wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").incl
 
 * [使用包管理器导入并安装与本文相关的资源。](assets/launch-agent-ui.zip)
 * [登录到configMgr](http://localhost:4502/system/console/configMgr)
-* 搜索&#x200B;_AdobeGranite CSRF筛选器_
+* 搜索&#x200B;_Adobe Granite CSRF筛选器_
 * 在排除的路径中添加&#x200B;_/content/getprintchannel_
 * 保存更改。
 * [打开POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。 确保传递给FormFieldRequestParameter的字符串是有效的documentId。（第19行）。
@@ -67,4 +67,4 @@ wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").incl
 
 >[!NOTE]
 >
->确保您的表单数据模型的Get操作的输入参数已绑定到名为“accountnumber”的请求属性，以便此操作正常工作。 如果将bindingvalue的名称更改为任何其他名称，请确保此更改反映在POST.jsp的第25行上
+>确保您的表单数据模型的Get操作的输入参数已绑定到名为“accountnumber”的请求属性，以便此操作正常工作。 如果将bindingvalue的名称更改为任何其他名称，请确保该更改反映在POST.jsp的第25行上

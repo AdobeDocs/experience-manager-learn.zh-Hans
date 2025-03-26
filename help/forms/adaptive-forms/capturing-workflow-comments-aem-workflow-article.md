@@ -2,14 +2,14 @@
 title: 在自适应Forms Workflow中捕获工作流注释
 description: 在AEM Workflow中捕获工作流注释
 feature: Workflow
-version: 6.4
+version: Experience Manager 6.4
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 5c250bbb-bac6-427d-8aca-1fbb1229e02c
 last-substantial-update: 2020-10-10T00:00:00Z
 duration: 73
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 为了满足此要求，提供了一个示例OSGi捆绑包，该捆绑包可用于捕获注释并将这些注释存储为工作流元数据属性。
 
-以下屏幕截图显示了如何使用[AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)中的进程步骤来捕获注释并将其存储为元数据属性。 “捕获工作流注释”是需要在进程步骤中使用的Java类的名称。 您需要传递将包含注释的元数据属性名称。 在下面的屏幕快照中， managerComments是将存储注释的元数据属性。
+以下屏幕截图显示了如何使用[AEM工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)中的进程步骤来捕获注释并将其存储为元数据属性。 “捕获工作流注释”是需要在进程步骤中使用的Java类的名称。 您需要传递将包含注释的元数据属性名称。 在下面的屏幕快照中， managerComments是将存储注释的元数据属性。
 
 ![workflowcomments1](assets/workflowcomments1.gif)
 

@@ -2,7 +2,7 @@
 title: 组合表单附件
 description: 按指定顺序组合表单附件
 feature: Assembler
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6406
 thumbnail: kt-6406.jpg
 topic: Development
@@ -11,7 +11,7 @@ level: Experienced
 exl-id: a5df8780-b7ab-4b91-86f6-a24392752107
 last-substantial-update: 2021-07-07T00:00:00Z
 duration: 150
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 ## 创建实施WorkflowProcess接口的OSGi组件
 
-创建实现[com.adobe.granite.workflow.exec.WorkflowProcess接口](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)的OSGi组件。 此组件中的代码可以与AEM工作流中的流程步骤组件相关联。 在此组件中实现了接口com.adobe.granite.workflow.exec.WorkflowProcess的执行方法。
+创建实现[com.adobe.granite.workflow.exec.WorkflowProcess接口](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)的OSGi组件。 此组件中的代码可以与AEM工作流中的流程步骤组件关联。 在此组件中实现了接口com.adobe.granite.workflow.exec.WorkflowProcess的执行方法。
 
-在提交自适应表单以触发AEM工作流时，提交的数据存储在有效负荷文件夹下的指定文件中。 例如，这是提交的数据文件。 我们需要组合idcard和bankstatements标签下指定的附件。
+在提交自适应表单以触发AEM工作流时，提交的数据将存储在有效负荷文件夹下的指定文件中。 例如，这是提交的数据文件。 我们需要组合idcard和bankstatements标签下指定的附件。
 ![提交的数据](assets/submitted-data.JPG)。
 
 ### 获取标记名称
@@ -45,7 +45,7 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### 从附件名称创建DDX
 
-然后，我们需要创建[文档描述XML (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)文档，该文档由汇编程序服务用于汇编文档。 下面是从进程参数创建的DDX。 利用NoForms元素，可在组装基于XFA的文档之前将其扁平化。 请注意，PDF源元素的顺序与进程参数中指定的顺序一致。
+然后，我们需要创建[文档描述XML (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)文档，该文档由汇编程序服务用于汇编文档。 下面是从进程参数创建的DDX。 利用NoForms元素，可在组装基于XFA的文档之前将其扁平化。 请注意，PDF源元素的顺序在进程参数中指定的是正确的。
 
 ![ddx-xml](assets/ddx.PNG)
 

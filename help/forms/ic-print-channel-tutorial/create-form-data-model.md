@@ -3,7 +3,7 @@ title: 创建表单数据模型
 description: 这是创建您的第一个交互式通信文档的多步教程的第3部分。 在本部分中，我们将创建表单数据模型。 表单数据模型允许您配置和连接到不同的数据源。它提供了一个直观的用户界面，用于跨连接的数据源创建业务实体和服务的统一数据表示架构。以下视频介绍了创建表单数据模型的步骤。
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-5952
 thumbnail: 27763.jpg
 topic: Development
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 4e64aa99-0b1c-49e9-95a7-d254017b80f4
 duration: 248
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%

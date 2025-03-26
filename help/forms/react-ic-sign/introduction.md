@@ -2,7 +2,7 @@
 title: 使用AEM Forms和Acrobat Sign的React应用程序
 description: Acrobat Sign和AEM Forms可自动执行复杂的事务，并在无缝数字体验中包含法律电子签名。
 feature: Adaptive Forms,Acrobat Sign
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,7 +10,7 @@ jira: KT-13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 64172af3-2905-4bc8-8311-68c2a70fb39e
 duration: 31
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 1%

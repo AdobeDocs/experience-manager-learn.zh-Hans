@@ -1,15 +1,15 @@
 ---
 title: 了解使用AEM Forms进行自动Forms测试
-description: AEM 6.3 Forms引入了允许用户使用基于hobbes.js框架构建的Calvin SDK在AEM for Adaptive Forms中创建测试用例的功能
+description: AEM 6.3 Forms引入了一项功能，即允许用户使用基于hobbes.js框架构建的Calvin SDK在AEM中为自适应Forms创建测试用例
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 6122859a-35eb-49d9-a146-3b304fa40413
 last-substantial-update: 2020-09-10T00:00:00Z
 duration: 425
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 1%
@@ -24,7 +24,7 @@ AEM 6.3 Forms引入了允许用户使用基于hobbes.js框架构建的Calvin SDK
 
 >[!NOTE]
 >
->自AEM 6.3及更高版本中提供了Forms自动测试功能
+>自适应Forms自动测试功能从AEM 6.3开始提供
 
 >[!NOTE]
 >

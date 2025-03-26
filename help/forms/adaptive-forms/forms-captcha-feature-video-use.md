@@ -1,28 +1,28 @@
 ---
-title: 在AEM自适应Forms中使用CAPTCHA
+title: 在AEM自适应Forms中使用验证码
 description: 在AEM自适应Forms中添加和使用验证码。
 feature: Adaptive Forms,Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 7e5dcc6e-fe56-49af-97e3-7dfaa9c8738f
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 260
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
 
 ---
 
-# 在AEM自适应Forms中使用CAPTCHA{#using-captchas-with-aem-adaptive-forms}
+# 在AEM自适应Forms中使用验证码{#using-captchas-with-aem-adaptive-forms}
 
 在AEM自适应Forms中添加和使用验证码。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336?quality=12&learn=on)
 
-*本视频介绍如何使用内置的AEM CAPTCHA服务和Google的reCAPTCHA服务将验证码添加到AEM自适应表单的过程。*
+*本视频介绍如何使用内置的AEM CAPTCHA服务和AEM的reCAPTCHA服务将验证码添加到Google自适应表单的过程。*
 
 >[!NOTE]
 >

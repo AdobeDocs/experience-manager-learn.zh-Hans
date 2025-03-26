@@ -2,7 +2,7 @@
 title: 使用ACS配置文件预填自适应表单
 description: 使用ACS配置文件预填充自适应Forms
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -10,7 +10,7 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
 duration: 144
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 若要了解有关预填自适应表单的更多信息，请阅读此[教程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
 
-要通过从ACS获取数据预填充自适应表单，我们假设ACS中存在与登录AEM用户具有相同电子邮件的用户档案。 例如，如果登录AEM的人员的电子邮件ID为csimms@adobe.com，我们希望在ACS中找到其电子邮件为csimms@adobe.com的配置文件。
+要通过从ACS获取数据预填充自适应表单，我们假设ACS中存在与登录AEM用户具有相同电子邮件的配置文件。 例如，如果登录AEM的人员的电子邮件ID为csimms@adobe.com，我们希望在ACS中找到其电子邮件为csimms@adobe.com的配置文件。
 
 使用REST API从ACS获取配置文件信息时，需要执行以下步骤
 
@@ -235,7 +235,7 @@ return "Pre Fill Forms Using Campaign Profile";
 
 * [请确保您已按照此处所述的步骤进行操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [使用包管理器将自适应表单示例导入AEM](assets/pre-fill-af-from-campaign.zip)
-* 确保您使用其电子邮件ID由Adobe Campaign中的配置文件共享的用户登录AEM。 例如，如果AEM用户的电子邮件ID是johndoe@adobe.com ，则您需要在ACS中拥有其电子邮件是johndoe@adobe.com的配置文件。
+* 确保您使用其电子邮件ID由Adobe Campaign中的配置文件共享的用户登录到AEM。 例如，如果AEM用户的电子邮件ID是johndoe@adobe.com ，则您需要在ACS中拥有其电子邮件是johndoe@adobe.com的配置文件。
 * [预览表单](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled)。
 
 ## 后续步骤

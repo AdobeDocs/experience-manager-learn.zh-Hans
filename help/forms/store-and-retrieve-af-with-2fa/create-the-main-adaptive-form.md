@@ -3,7 +3,7 @@ title: 创建主自适应表单
 description: 创建自适应表单以捕获申请人信息和自适应表单以检索保存的自适应表单
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6552
 thumbnail: 6552.jpg
 topic: Development
@@ -11,7 +11,7 @@ role: User
 level: Beginner
 exl-id: 73de0ac4-ada6-4b8e-90a8-33b976032135
 duration: 41
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -27,11 +27,11 @@ ht-degree: 0%
 此表单与之前在课程中创建的&#x200B;**bootboxjs540、storeAFWithAttachments**&#x200B;客户端库相关联，并且与表单提交时触发的AEM工作流相关联。
 
 
-* 示例表单基于[自定义自适应表单模板](assets/custom-template-with-page-component.zip)，需要将其导入到AEM中才能正确呈现示例表单。
+* 示例表单基于[自定义自适应表单模板](assets/custom-template-with-page-component.zip)，该模板需要导入到AEM中，以便示例表单正确呈现。
 
-* 可以下载已完成的[StoreAfWithAttachments表单](assets/store-af-with-attachments-form.zip)并将其导入到您的AEM实例中。
+* 可以下载已完成的[StoreAfWithAttachments表单](assets/store-af-with-attachments-form.zip)并将其导入您的AEM实例。
 
-* 与此表单](assets/workflow-model-store-af-with-attachments.zip)关联的[AEM工作流需要导入到您的AEM实例中，该表单才能正常工作。
+* 需要将与此表单](assets/workflow-model-store-af-with-attachments.zip)关联的[AEM工作流导入您的AEM实例中，该表单才能正常工作。
 
 
 ## 后续步骤

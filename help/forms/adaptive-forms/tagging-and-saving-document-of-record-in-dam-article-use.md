@@ -2,14 +2,14 @@
 title: 在DAM中标记和存储AEM Forms DoR
 description: 本文将介绍在AEM DAM中存储和标记AEM Forms生成的DoR的用例。 文档的标记是根据提交的表单数据完成的。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
 last-substantial-update: 2019-03-20T00:00:00Z
 duration: 191
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 用例如下所示：
 
 * 用户填写自适应表单。 在自适应表单中，记录用户的婚姻状况（如单身）和就业状况（如已退休）。
-* 在提交表单时，会触发AEM Workflow。 此工作流使用婚姻状态（单身）和就业状态（已停用）标记文档，并将文档存储在DAM中。
+* 在提交表单时，会触发AEM工作流。 此工作流使用婚姻状态（单身）和就业状态（已停用）标记文档，并将文档存储在DAM中。
 * 文档存储在DAM中后，管理员应该能够按这些标记搜索文档。 例如，搜索“单个”或“已停用”将获取相应的DoR。
 
 为了满足此用例，编写了一个自定义流程步骤。 在此步骤中，我们从提交的数据中提取相应数据元素的值。 然后，我们使用此值构建标记拼贴。 例如，如果婚姻状况元素的值为“Single”，则标记标题将变为**Peak：EmploymentStatus/Single。 **使用TagManager API ，我们找到标记并将标记应用于DoR。

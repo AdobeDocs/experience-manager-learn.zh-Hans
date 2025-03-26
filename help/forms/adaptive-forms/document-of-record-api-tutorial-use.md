@@ -2,14 +2,14 @@
 title: 使用API通过AEM Forms生成记录文档
 description: 以编程方式生成记录文档(DOR)
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 9a3b2128-a383-46ea-bcdc-6015105c70cc
 last-substantial-update: 2023-01-26T00:00:00Z
 duration: 67
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -71,7 +71,7 @@ session.save();
 1. 搜索Apache Sling服务用户映射器服务
 1. 在“服务映射”部分确保以下条目&#x200B;_DevelopingWithServiceUser.core：getformsresourceresolver=fd-service_
 1. [打开表单](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
-1. 填写表单并单击“查看PDF”
+1. 填写表单，然后单击“查看PDF ”
 1. 您应该会在浏览器的新选项卡中看到DOR
 
 

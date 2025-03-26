@@ -3,7 +3,7 @@ title: 从MySQL数据库存储和检索带有附件的表单数据
 description: 多部分教程将指导您完成存储和检索带有附件的表单数据所涉及的步骤
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6593
 thumbnail: 327122.jpg
 topic: Development
@@ -12,7 +12,7 @@ level: Experienced
 exl-id: b278652f-6c09-4abc-b92e-20bfaf2e791a
 last-substantial-update: 2020-11-07T00:00:00Z
 duration: 148
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 # 使用2FA存储和检索自适应表单数据
 
-本教程将指导您完成使用2FA保存和检索带有附件的自适应表单数据所涉及的步骤。 本教程使用MySQL数据库来存储自适应表单数据。 只要在AEM中部署了数据库特定的驱动程序，就可以使用您选择的数据库来存储数据。 从较高层面来看，要实现此用例，需要执行以下步骤：
+本教程将指导您完成使用2FA保存和检索带有附件的自适应表单数据所涉及的步骤。 本教程使用MySQL数据库来存储自适应表单数据。 只要您在AEM中部署了特定于数据库的驱动程序，就可以使用您选择的数据库来存储数据。 从较高层面来看，要实现此用例，需要执行以下步骤：
 
 * 使用GuideBridge API获取对自适应表单数据的访问权限
 

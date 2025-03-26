@@ -1,7 +1,7 @@
 ---
-title: 使用权限将XDP呈现为PDF
+title: 将XDP渲染到具有使用权限的PDF
 description: 对PDF应用使用权限
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -9,18 +9,18 @@ level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 150
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
-# 使用权限将XDP呈现为PDF{#rendering-xdp-into-pdf-with-usage-rights}
+# 将XDP渲染到具有使用权限的PDF{#rendering-xdp-into-pdf-with-usage-rights}
 
 一个常见用例是将xdp渲染到PDF并将Reader扩展应用于渲染的PDF。
 
-例如，在AEM Forms的Forms Portal中，当用户单击XDP时，我们可以呈现XDP作为PDF，读者可以扩展PDF。
+例如，在AEM Forms的Forms Portal中，当用户单击XDP时，我们可以将XDP渲染为PDF，Reader可以扩展PDF。
 
 
 要完成此用例，我们需要执行以下操作。
@@ -124,13 +124,13 @@ public @interface DocSvcConfiguration {
 
 ## 创建Servlet以流式传输PDF {#create-servlet-to-stream-the-pdf}
 
-下一步是使用GET方法创建一个servlet以将读取器扩展PDF返回给用户。 在这种情况下，要求用户将PDF保存到其文件系统。 这是因为PDF呈现为动态PDF，并且浏览器附带的PDF查看器无法处理动态PDF。
+下一步是使用GET方法创建一个servlet，以将reader extended PDF返回给用户。 在这种情况下，要求用户将PDF保存到其文件系统。 这是因为PDF呈现为动态PDF，而浏览器附带的pdf查看器无法处理动态pdf。
 
 以下是servlet的代码。 我们将CRX存储库中XDP的路径传递到此servlet。
 
 然后调用com.aemformssamples.documentservices.core.DocumentServices的renderAndExtendXdp方法。
 
-然后，读取器扩展PDF被流式传输到调用应用程序
+随后，Reader Extended PDF将流式传输到调用应用程序
 
 ```java
 package com.aemformssamples.documentservices.core.servlets;

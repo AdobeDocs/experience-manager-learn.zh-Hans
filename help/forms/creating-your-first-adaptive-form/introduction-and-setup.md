@@ -2,14 +2,14 @@
 title: 自适应Forms快速入门
 description: 本教程将指导您完成创建多选项卡式自适应表单所涉及的步骤。 您将学习使用表、折叠布局和规则编辑器来创作业务规则。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 8c90fe1c-0c83-4287-9766-08d806b8815a
 last-substantial-update: 2020-02-10T00:00:00Z
 duration: 39
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 1%

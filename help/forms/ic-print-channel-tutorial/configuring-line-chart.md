@@ -3,7 +3,7 @@ title: 为第一个交互式通信文档配置折线图
 description: 这是为打印渠道创建第一个交互式通信文档的多步教程的第8部分。 在本部分中，我们将添加一个折线图以显示帐户余额。
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 9110e5c6-50ee-4c3e-a779-b680ff49ef23
 jira: KT-5993
 thumbnail: 22386.jpg
@@ -12,7 +12,7 @@ role: Developer
 level: Beginner
 exl-id: 86a955e2-2463-4973-8d3c-4c694db8c787
 duration: 140
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%

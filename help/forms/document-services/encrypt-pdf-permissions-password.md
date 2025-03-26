@@ -2,14 +2,14 @@
 title: 使用权限密码加密PDF
 description: 使用DocAssuranceService加密PDF
 feature: Document Services
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 jira: KT-15849
 last-substantial-update: 2024-07-19T00:00:00Z
 exl-id: 5df8581c-a44c-449c-bf3b-8cdf57635c4d
-source-git-commit: d01a56cd1fd3085b0230918b15b4635ba375e346
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # 使用权限密码加密PDF
 
-复制、编辑或打印PDF时需要权限密码（也称为所有者或主密码）。 了解如何使用[DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) API以编程方式将权限密码应用于PDF。
+复制、编辑或打印PDF文档需要权限密码，也称为所有者或主密码。 了解如何使用[DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) API以编程方式将权限密码应用于PDF。
 
-以下JSP代码使用权限密码对PDF进行加密：
+以下JSP代码使用权限密码加密PDF：
 
 ```java
 <%--
@@ -63,10 +63,10 @@ ht-degree: 0%
 
 [使用AEM包管理器下载并安装包](assets/encryptpdf.zip)
 
-**安装包后，将以下URL添加到AdobeGranite CSRF筛选器的OSGi配置允许列表：**
+**安装包后，将以下URL添加到Adobe Granite CSRF筛选器的OSGi配置允许列表：**
 
 1. [登录到configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜索AdobeGranite CSRF筛选器
+1. 搜索Adobe Granite CSRF筛选器
 1. 在排除的部分中添加以下路径并保存
 1. /content/AemFormsSamples/encrypt
 

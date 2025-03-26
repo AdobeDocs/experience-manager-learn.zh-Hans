@@ -1,8 +1,8 @@
 ---
 title: 创建要呈现给用户以供签名的Web窗体
-description: 创建AEM捆绑包以公开用例所需的Acrobat sign方法。
+description: 创建AEM捆绑包以公开用例所需的Acrobat签名方法。
 feature: Adaptive Forms,Acrobat Sign
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,7 +10,7 @@ jira: KT-13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 15364571-070c-4497-a256-f0483d6f9585
 duration: 118
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%

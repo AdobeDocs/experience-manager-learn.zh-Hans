@@ -1,22 +1,22 @@
 ---
-title: 在AEM Forms 6.3和6.4中使用Salesforce配置DataSource
+title: 在AEM Forms 6.3和6.4中使用Salesforce配置数据源
 description: 使用表单数据模型将AEM Forms与Salesforce集成
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
 last-substantial-update: 2020-02-14T00:00:00Z
 duration: 175
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
 
 ---
 
-# 在AEM Forms 6.3和6.4中使用Salesforce配置DataSource{#configuring-datasource-with-salesforce-in-aem-forms-and}
+# 在AEM Forms 6.3和6.4中使用Salesforce配置数据源{#configuring-datasource-with-salesforce-in-aem-forms-and}
 
 ## 先决条件 {#prerequisites}
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
    * 如果您使用**AEM Forms 6.4**，则回调URL为https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
-在此示例中，gbedekar -w7-1:6443是AEM运行所在的服务器名称和端口。
+在此示例中，gbedekar -w7-1:6443是AEM所运行服务器和端口的名称。
 
 创建连接的应用程序后，请记下&#x200B;**使用者密钥和密钥**。 在AEM Forms中创建数据源时，您需要这些组件。
 
@@ -73,9 +73,9 @@ ht-degree: 0%
 * 身份验证处理程序：授权载体
 * 单击“连接到OAUTH”。如果一切顺利，您应该不会看到任何错误
 
-在使用Salesforce创建表单数据模型后，您可以使用刚刚创建的Data Source创建表单数据集成。 有关创建表单数据集成的官方文档为[此处](https://helpx.adobe.com/aem-forms/6-3/data-integration.html)。
+使用Salesforce创建表单数据模型后，您可以使用刚刚创建的数据Source创建表单数据集成。 有关创建表单数据集成的官方文档为[此处](https://helpx.adobe.com/aem-forms/6-3/data-integration.html)。
 
-确保将表单数据模型配置为包括POST服务，以便在SFDC中创建Lead对象。
+确保将表单数据模型配置为包含POST服务，以便在SFDC中创建Lead对象。
 
 您还必须为Lead对象配置读写服务。 请参阅本页底部的屏幕截图。
 
@@ -106,9 +106,9 @@ ht-degree: 0%
    * 身份验证处理程序：授权载体
    * 单击“连接到OAuth”按钮。 如果您看到任何错误，请查看上述步骤以确保正确输入了所有信息。
 
-使用SalesForce创建数据Source后，您可以使用刚刚创建的数据Source创建表单数据集成。 其文档链接位于[此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
+使用Salesforce创建数据Source后，您可以使用刚刚创建的数据Source创建表单数据集成。 其文档链接位于[此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
 
-确保将表单数据模型配置为包括POST服务，以便在SFDC中创建Lead对象。
+确保将表单数据模型配置为包含POST服务，以便在SFDC中创建Lead对象。
 
 您还必须为Lead对象配置读写服务。 请参阅本页底部的屏幕截图。
 
@@ -116,7 +116,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->确保swagger文件中的url对应于您所在的地区。 例如，示例swagger文件中的url为“na46.salesforce.com”，因为该帐户是在北美创建的。 最简单的方法是登录到Salesforce帐户并检查URL 。
+>确保swagger文件中的url对应于您所在的地区。 例如，示例swagger文件中的url为“na46.salesforce.com”，因为该帐户是在北美创建的。 最简单的方法是登录到您的Salesforce帐户并检查URL 。
 
 ![sfdc1](assets/sfdc1.gif)
 

@@ -3,14 +3,14 @@ title: 正在将表添加到帐户余额面板
 description: 这是创建您的第一个交互式通信文档的多步教程的第9部分。在本部分中，我们将向“帐户余额”面板添加一个表。
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 28a9d88d-635b-47a2-8a78-54ddeabc4406
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 1e43c459-8824-40e8-8f05-24b8b0646346
 duration: 454
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 1%

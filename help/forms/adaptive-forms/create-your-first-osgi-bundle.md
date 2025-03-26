@@ -3,13 +3,13 @@ title: 使用AEM表单创建您的第一个OSGi捆绑包
 description: 使用maven和eclipse构建您的第一个OSGi捆绑包
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 177
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
@@ -118,7 +118,7 @@ Maven项目以交互方式生成，并且会要求您提供多个属性的值，
 
 ## 构建项目
 
-编写OSGi服务或servlet后，您需要构建项目以生成可使用Felix Web控制台部署的OSGi捆绑包。 请参阅[AEMFD客户端SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/)以在您的Maven项目中包含相应的客户端SDK。 您必须在核心项目的`pom.xml`的依赖项部分包含AEM FD客户端SDK，如下所示。
+编写OSGi服务或servlet后，您需要构建项目以生成可使用Felix Web控制台部署的OSGi捆绑包。 请参阅[AEMFD客户端SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/)，在您的Maven项目中包含相应的客户端SDK。 您必须在核心项目的`pom.xml`的依赖关系部分包含AEM FD客户端SDK，如下所示。
 
 ```xml
 <dependency>

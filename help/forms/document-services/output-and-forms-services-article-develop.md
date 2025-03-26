@@ -2,14 +2,14 @@
 title: 在AEM Forms中使用输出和Forms服务进行开发
 description: 了解如何在AEM Forms中使用Output和Forms Service API进行开发。
 feature: Output Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
 duration: 122
-source-git-commit: 12af84e3d9be24fabb01a64eced6279749668599
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 在本文中，我们将看一看以下内容
 
 * [输出服务](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) — 通常，此服务用于将xml数据与xdp模板或pdf合并，以生成拼合的pdf。
-* [FormsService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) — 这是一项功能非常广泛的服务，允许您将xdp渲染为pdf，并且将数据从PDF文件中导出/导入。
+* [FormsService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) — 这是一项功能非常广泛的服务，允许您将xdp渲染为pdf，并将数据从PDF文件中导出/导入。
 
 
 以下代码片段从PDF文件中导出数据
@@ -43,7 +43,7 @@ Line2从请求中提取saveLocation
 
 第5行获取FormsService
 
-第6行从PDF文件中导出xmlData
+第6行从PDF文件导出xmlData
 
 **在系统上测试示例包**
 
@@ -52,11 +52,11 @@ Line2从请求中提取saveLocation
 
 
 
-**安装包后，您必须在AdobeGranite CSRF筛选器中允许列表以下URL。**
+**安装包后，必须在Adobe Granite CSRF筛选器中允许列表以下URL。**
 
 1. 请按照以下所述步骤列入允许列表上述路径。
 1. [登录到configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜索AdobeGranite CSRF筛选器
+1. 搜索Adobe Granite CSRF筛选器
 1. 在排除的部分中添加以下3个路径并保存
 1. /content/AemFormsSamples/mergedata
 1. /content/AemFormsSamples/exportdata
@@ -71,8 +71,8 @@ Line2从请求中提取saveLocation
 
 * 在您的系统上安装Postman应用程序。
 * 启动应用程序并输入相应的URL
-* 确保您从下拉列表中选择“POST”
-* 确保将“Authorization”指定为“Basic Auth”。 指定AEM Server用户名和密码
+* 确保从下拉列表中选择“POST”
+* 确保将“Authorization”指定为“Basic Auth”。 指定AEM服务器用户名和密码
 * 在body选项卡中指定请求参数
 * 单击发送按钮
 
@@ -81,7 +81,7 @@ Line2从请求中提取saveLocation
 ## 使用OutputService将数据与xdp模板合并
 
 * 使用输出服务将数据与xdp或pdf文档合并以生成拼合的pdf
-* **POSTURL**： http://localhost:4502/content/AemFormsSamples/outputservice.html
+* **发布URL**： http://localhost:4502/content/AemFormsSamples/outputservice.html
 * **请求参数 —**
 
    * **xdp_or_pdf_file** ：要与数据合并的xdp或pdf文件
@@ -93,7 +93,7 @@ Line2从请求中提取saveLocation
 #### 导入数据
 
 * 使用FormsService importData将数据导入PDF文件
-* **POSTURL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
+* **发布URL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
 
 * **请求参数：**
 
@@ -104,7 +104,7 @@ Line2从请求中提取saveLocation
 #### 导出数据
 
 * 使用FormsService exportData API从PDF文件导出数据
-* **POSTURL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
+* **发布URL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **请求参数：**
 
    * **pdf文件** ：要从中导出数据的pdf文件
@@ -114,7 +114,7 @@ Line2从请求中提取saveLocation
 
 * 将XDP模板渲染为静态/动态pdf
 * 使用FormsService renderPDFForm API将xdp模板渲染为PDF
-* **POSTURL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
+* **发布URL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
 * 请求参数：
    * xdpName：要呈现为pdf的xdp文件的名称
 

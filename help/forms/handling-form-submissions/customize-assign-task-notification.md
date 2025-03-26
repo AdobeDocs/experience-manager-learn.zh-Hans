@@ -3,7 +3,7 @@ title: 自定义分配任务通知
 description: 在分配任务通知电子邮件中包含表单数据
 feature: Workflow
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6279
 thumbnail: KT-6279.jpg
 topic: Development
@@ -12,7 +12,7 @@ level: Experienced
 exl-id: 0cb74afd-87ff-4e79-a4f4-a4634ac48c51
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 144
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
@@ -131,7 +131,7 @@ return customMetadataMap;
 * [配置Day CQ邮件服务](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
 * 将有效的电子邮件ID与[管理员用户](http://localhost:4502/security/users.html)关联
 * 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)下载并安装[工作流和通知模板](assets/workflow-and-task-notification-template.zip)
-* 下载[自适应表单](assets/request-travel-authorization.zip)并从[表单和文档UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)导入到AEM中。
+* 下载[自适应表单](assets/request-travel-authorization.zip)并从[表单和文档ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)导入到AEM中。
 * 使用[Web控制台](http://localhost:4502/system/console/bundles)部署和启动[自定义捆绑包](assets/work-items-user-service-bundle.jar)
 * [预览并提交表单](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 

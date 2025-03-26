@@ -3,14 +3,14 @@ title: 在提交之前查看表单数据
 description: 有关创建用于在提交之前审核表单数据的摘要组件的教程。
 feature: Adaptive Forms
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2023-01-22T00:00:00Z
 exl-id: fa971850-0e89-4f74-a747-ec99051be2f1
 duration: 17
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 2%
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 要学习本教程，建议您安装以下软件：
 
-* AEM 6.5或更高版本，带有适当的Forms加载项包
+* AEM 6.5或更高版本，带有适当的表单加载项包
 
 此外，还建议您在AEM和AEM Forms方面有一定级别的开发人员经验。
 

@@ -2,14 +2,14 @@
 title: 创建自适应表单时要遵循的命名惯例和最佳实践
 description: 创建自适应表单时要遵循的命名惯例和最佳实践
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: fbfc74d7-ba7c-495a-9e3b-63166a3025ab
 last-substantial-update: 2020-09-10T00:00:00Z
 duration: 57
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 最佳实践
 
-Adobe Experience Manager (AEM) forms可以帮助您将复杂的交易转换为简单、愉快的数字体验。 以下文档介绍了在开发自适应Forms时需要遵循的一些其他最佳实践。 此文档应与[此文档](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)一起使用
+Adobe Experience Manager (AEM)表单可帮助您将复杂的交易转换为简单、愉快的数字体验。 以下文档介绍了在开发自适应Forms时需要遵循的一些其他最佳实践。 此文档应与[此文档](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)一起使用
 
 ## 命名约定
 

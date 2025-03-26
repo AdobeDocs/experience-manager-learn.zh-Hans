@@ -3,7 +3,7 @@ title: 简单带薪休息时间请求工作流
 description: 在AEM Workflow中隐藏和显示自适应表单面板
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 1c4822e6-76ce-446b-98cb-408900d68b24
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ level: Experienced
 exl-id: 9342bd2f-2ba9-42ee-9224-055649ac3c90
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 592
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -25,11 +25,11 @@ ht-degree: 0%
 * 用户A通过填写自适应表单请求休假。
 * 表单被路由到AEM管理员用户（在实际情况中，表单被路由到提交者的经理）
 * 管理员打开表单。 管理员应该不能编辑提交者填写的任何信息。
-* 审批者部分应对审批者可见(在本例中为AEM管理员用户)。
+* 审批者部分应对审批者可见(在本例中，审批者是AEM管理员用户)。
 
 为了满足上述要求，我们在表单中使用名为&#x200B;**initialstep**&#x200B;的隐藏字段，其默认值设置为“是”。提交表单时，工作流中的第一步将initialstep的值设置为“否”。 该表单具有根据初始步骤值隐藏和显示相应部分的业务规则。
 
-**配置表单以触发AEM Workflow**
+**配置表单以触发AEM工作流**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28406?quality=12&learn=on)
 

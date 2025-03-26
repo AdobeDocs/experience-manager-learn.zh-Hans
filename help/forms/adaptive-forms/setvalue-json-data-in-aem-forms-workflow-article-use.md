@@ -1,15 +1,15 @@
 ---
 title: 在AEM Forms Workflow中设置Json数据元素的值
-description: 由于自适应表单在AEM Workflow中被路由到不同的用户，因此需要根据查看表单的人来隐藏或禁用某些字段或面板。 为了满足这些用例，我们通常设置隐藏字段的值。 可以基于此隐藏字段的值创作业务规则以隐藏/禁用相应的面板或字段。
+description: 由于自适应表单在AEM Workflow中被路由到其他用户，因此需要根据审阅表单的人员隐藏或禁用某些字段或面板。 为了满足这些用例，我们通常设置隐藏字段的值。 可以基于此隐藏字段的值创作业务规则以隐藏/禁用相应的面板或字段。
 feature: Adaptive Forms
-version: 6.4
+version: Experience Manager 6.4
 topic: Development
 role: Developer
 level: Experienced
 exl-id: fbe6d341-7941-46f5-bcd8-58b99396d351
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 126
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # 在AEM Forms Workflow中设置JSON数据元素的值 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-由于自适应表单在AEM Workflow中被路由到不同的用户，因此需要根据查看表单的人来隐藏或禁用某些字段或面板。 为了满足这些用例，我们通常设置隐藏字段的值。 可以基于此隐藏字段的值创作业务规则以隐藏/禁用相应的面板或字段。
+由于自适应表单在AEM Workflow中被路由到其他用户，因此需要根据审阅表单的人员隐藏或禁用某些字段或面板。 为了满足这些用例，我们通常设置隐藏字段的值。 可以基于此隐藏字段的值创作业务规则以隐藏/禁用相应的面板或字段。
 
 ![在JSON数据中设置元素的值](assets/capture-3.gif)
 
 在AEM Forms OSGi中 — 我们必须创建一个自定义OSGi捆绑包以设置JSON数据元素的值。 该捆绑包作为本教程的一部分提供。
 
-我们使用AEM Workflow中的“流程步骤”。 我们将“在Json中设置元素的值”OSGi捆绑包与此流程步骤关联。
+我们使用AEM工作流中的“流程步骤”。 我们将“在Json中设置元素的值”OSGi捆绑包与此流程步骤关联。
 
 我们需要将两个参数传递给设置值捆绑包。 第一个参数是需要设置其值的元素的路径。 第二个参数是需要设置的值。
 

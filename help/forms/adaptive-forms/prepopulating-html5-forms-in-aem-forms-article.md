@@ -2,14 +2,14 @@
 title: 使用数据属性预填充HTML5 Forms。
 description: 通过从后端源获取数据来填充HTML5表单。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: ab0f5282-383b-4be6-9c57-cded6ab37528
 last-substantial-update: 2020-01-09T00:00:00Z
 duration: 94
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -19,9 +19,9 @@ ht-degree: 0%
 # 使用数据属性预填充HTML5 Forms {#prepopulate-html-forms-using-data-attribute}
 
 
-使用AEM Forms以HTML格式呈现的XDP模板称为HTML5或Mobile Forms。 一个常见用例是在呈现这些表单时预填充这些表单。
+使用AEM Forms以HTML格式渲染的XDP模板称为HTML5或Mobile Forms。 一个常见用例是在呈现这些表单时预填充这些表单。
 
-以HTML形式呈现数据时，有2种方法可将数据与xdp模板合并。
+以HTML呈现数据时，有2种方法可与xdp模板合并数据。
 
 **dataRef**：您可以在URL中使用dataRef参数。 此参数指定与模板合并的数据文件的绝对路径。 此参数可以是一个指向rest服务的URL，该服务以XML格式返回数据。
 
@@ -44,12 +44,12 @@ slingRequest.setAttribute(&quot;data&quot;， content)；
 您编写的JSP将有权通过request.getParameter(&quot;name&quot;)访问name参数。 然后，您可以将此参数的值传递给后端进程，以获取所需的数据。
 要使此功能在您的系统上正常工作，请按照以下所述步骤操作：
 
-* [使用包管理器下载资产并将其导入AEM](assets/prepopulatemobileform.zip)
+* [使用包管理器下载资源并将其导入AEM](assets/prepopulatemobileform.zip)
 该软件包将安装以下内容
 
    * 自定义配置文件
    * 示例XDP
-   * 将返回数据以填充表单的示例POST端点
+   * 返回数据以填充表单的示例POST端点
 
 >[!NOTE]
 >

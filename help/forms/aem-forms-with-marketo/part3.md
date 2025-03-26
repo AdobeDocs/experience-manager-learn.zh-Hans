@@ -2,7 +2,7 @@
 title: AEM Forms与Marketo（第3部分）
 description: 教程介绍如何使用AEM Forms表单数据模型将AEM Forms与Marketo集成。
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -10,7 +10,7 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
 duration: 78
-source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 3%
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 配置数据源后，下一步是基于上一步中配置的数据源创建表单数据模型。 要创建表单数据模型，请执行以下步骤：
 
-将浏览器指向[数据集成页面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm)这将列出在您的AEM实例上创建的所有数据集成。
+将浏览器指向[数据集成页面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm)该列表列出了在您的AEM实例上创建的所有数据集成。
 
 1. 单击创建 | 表单数据模型
 1. 提供有意义的标题，例如FormsAndMarketo ，然后单击“下一步”

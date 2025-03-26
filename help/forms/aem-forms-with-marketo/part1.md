@@ -2,7 +2,7 @@
 title: 集成AEM Forms和Marketo
 description: 了解如何使用AEM Forms表单数据模型集成AEM Forms和Marketo。
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 77
-source-git-commit: e02c3f66787c78152700b24236c29e9796f721de
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Marketo会公开一个REST API，该API允许远程执行系统的多项功能�
 
 >[!NOTE]
 >
->本教程专为AEM Forms 6.5量身定制。如果您希望将AEM Formsas a Cloud Service与Adobe Marketo Engage集成，请参阅[有关该集成的专用文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-adaptive-form-with-market-engage/integrate-form-to-marketo-engage)。
+>本教程专为AEM Forms 6.5量身定制。如果您希望将AEM Forms as a Cloud Service与Adobe Marketo Engage集成，请参阅[有关该集成的专用文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-adaptive-form-with-market-engage/integrate-form-to-marketo-engage)。
 
 本教程将指导您完成使用表单数据模型将AEM Forms与Marketo集成所涉及的步骤。 完成本教程后，您将获得一个OSGi捆绑包，该捆绑包将针对Marketo执行自定义身份验证。 您还将使用提供的swagger文件配置了数据源。
 
@@ -39,7 +39,7 @@ Marketo会公开一个REST API，该API允许远程执行系统的多项功能�
 
 ## 先决条件
 
-1. [已安装AEM服务器和AEM Forms附加组件包](/help/forms/adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
+1. [已安装带有AEM Forms附加组件包的AEM服务器](/help/forms/adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
 1. 本地AEM开发环境
 1. 熟悉表单数据模型
 1. Swagger文件的基本知识

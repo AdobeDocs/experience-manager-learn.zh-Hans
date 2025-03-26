@@ -1,7 +1,7 @@
 ---
 title: 使用自适应表单数据生成交互式DoR
 description: 将自适应表单数据与XDP模板合并以生成可下载的pdf
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 177
-source-git-commit: 2625a9127c36ee191eb67128546864c9f6901663
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ### 客户端库
 
-以下代码在触发“下载PDF”按钮时触发
+在触发“下载PDF”按钮时，会触发以下代码
 
 ```javascript
 $(document).ready(function() {
@@ -83,7 +83,7 @@ $(document).ready(function() {
 ### 创建自适应表单
 
 根据上一步中的XSD创建自适应表单。 关联表单以使用客户端库“irs”。 此客户端库具有向servlet进行POST调用的代码，该servlet会将PDF返回到调用应用程序。
-单击_下载PDF_&#x200B;时触发以下代码
+单击_下载PDF_&#x200B;时，会触发以下代码
 
 ```javascript
 $(document).ready(function() {

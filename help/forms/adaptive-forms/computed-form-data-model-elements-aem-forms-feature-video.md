@@ -2,14 +2,14 @@
 title: 在AEM Forms中创建计算表单数据模型元素
 description: 创建计算表单数据模型元素
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 1f6f1bb6-3437-4fae-b5a1-698ab357ff23
 last-substantial-update: 2020-09-10T00:00:00Z
 duration: 374
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%

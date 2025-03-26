@@ -3,7 +3,7 @@ title: 存储表单附件
 description: 提取表单附件并存储在CRX存储库中的新位置。
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6537
 thumbnail: 6537.jpg
 topic: Development
@@ -11,7 +11,7 @@ role: Developer
 level: Experienced
 exl-id: ec50b9b1-e28c-4d84-ae90-6a21c9700688
 duration: 65
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 向自适应表单添加附件时，附件存储在CRX存储库中的临时位置。 要使用例正常工作，我们需要将表单附件存储在CRX存储库中的新位置。
 
 创建OSGi服务以将表单附件存储在CRX存储库中的新位置。 在CRX中使用附件的新位置创建新文件映射，并返回到调用应用程序。
-以下是发送到servlet的FileMap。 关键是自适应表单字段，值是附件的临时位置。 在我们的servlet中，我们将提取附件，并将其存储在AEM存储库中的新位置，并使用新位置更新FileMap
+以下是发送到servlet的FileMap。 关键是自适应表单字段，值是附件的临时位置。 在我们的servlet中，我们将提取附件，并将其存储在AEM存储库中的新位置，并使用新位置更新文件映射
 
 ```java
 {

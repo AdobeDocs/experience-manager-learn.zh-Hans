@@ -2,7 +2,7 @@
 title: 在服务器上部署示例资源
 description: 在本地服务器上获取使用案例
 feature: Adaptive Forms,Acrobat Sign
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,7 +10,7 @@ jira: KT-13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: f12f83fa-673a-454c-aa52-6ea769a182b7
 duration: 36
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%
@@ -57,7 +57,7 @@ npm start
  
 ```
 
-要启用从REACT应用程序对AEM端点的POST调用，您需要在AdobeGranite跨源资源共享策略配置的允许源字段中指定相应的条目。
+要启用从REACT应用程序对AEM端点进行POST调用，您需要在Adobe Granite跨源资源共享策略配置的允许源字段中指定相应的条目。
 
 ![cors-setting](assets/cors-settings.png)
 

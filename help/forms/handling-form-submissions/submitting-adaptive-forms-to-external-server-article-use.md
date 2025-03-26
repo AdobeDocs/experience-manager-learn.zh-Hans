@@ -3,7 +3,7 @@ title: 将自适应表单提交到外部服务器
 description: 将自适应表单提交到外部服务器上运行的REST端点
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 9e936885-4e10-4c05-b572-b8da56fcac73
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ level: Beginner
 exl-id: 5363c3f7-9006-4430-b647-f3283a366a64
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 78
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 12%
@@ -28,7 +28,7 @@ ht-degree: 12%
 
 要将数据发布到外部服务器，请提供 URL。URL 的格式为 <http://host:port/path_to_rest_end_point>。确保已配置匿名处理POST请求的路径。
 
-出于本文的目的，我编写了一个简单的war文件，可部署到您的tomcat实例上。 假定您的tomcat在端口8080上运行，则POSTURL将为
+出于本文的目的，我编写了一个简单的war文件，可部署到您的tomcat实例上。 假定您的tomcat在端口8080上运行，则POST URL将为
 
 <http://localhost:8080/AemFormsEnablement/HandleFormSubmission>
 
@@ -56,7 +56,7 @@ String data = request.getParameter(paramName);System.out.println("The data  is "
 1. 安装Tomcat（如果尚未安装）。 [此处提供了安装tomcat的说明](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)
 1. 下载与此文章关联的[zip文件](assets/aemformsenablement.zip)。 解压缩文件以获取war文件。
 1. 在tomcat服务器中部署war文件。
-1. 创建一个带有文件附件组件的简单自适应表单，并配置其提交操作，如上面的屏幕快照所示。 POSTURL为<http://localhost:8080/AemFormsEnablement/HandleFormSubmission>。 如果您的AEM和tomcat未在localhost上运行，请相应地更改URL。
+1. 创建一个带有文件附件组件的简单自适应表单，并配置其提交操作，如上面的屏幕快照所示。 帖子URL为<http://localhost:8080/AemFormsEnablement/HandleFormSubmission>。 如果您的AEM和tomcat未在localhost上运行，请相应地更改URL。
 1. 要启用将多部分表单数据提交到tomcat的功能，请将以下属性添加到&lt;tomcatInstallDir>\conf\context.xml的上下文元素中，然后重新启动Tomcat服务器。
 1. **&lt;Context allowCasualMultipartParsing=&quot;true&quot;>**
 1. 预览自适应表单、添加附件并提交。 在tomcat控制台窗口中查看消息。

@@ -2,7 +2,7 @@
 title: 创建OSGi服务
 description: 创建OSGi服务以存储要签名的表单
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 thumbnail: 6886.jpg
 jira: KT-6886
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Experienced
 exl-id: 49e7bd65-33fb-44d4-aaa2-50832dffffb0
 duration: 150
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 1%
@@ -131,7 +131,7 @@ public String getFormData(String guid) {
 
 ## 更新签名状态
 
-成功完成签名仪式会触发与表单关联的AEM工作流。 工作流中的第一步是流程步骤，它会更新数据库中由guid和客户id标识的行的状态。 我们还将formdata中带符号的元素的值设置为Y，以指示表单已填写并已签名。 自适应表单中会填充此数据，并且会使用xml数据中带符号的数据元素的值来显示相应的消息。 从自定义流程步骤调用updateSignatureStatus代码。
+成功完成签字仪式会触发与表单关联的AEM工作流。 工作流中的第一步是流程步骤，它会更新数据库中由guid和客户id标识的行的状态。 我们还将formdata中带符号的元素的值设置为Y，以指示表单已填写并已签名。 自适应表单中会填充此数据，并且会使用xml数据中带符号的数据元素的值来显示相应的消息。 从自定义流程步骤调用updateSignatureStatus代码。
 
 
 ```java

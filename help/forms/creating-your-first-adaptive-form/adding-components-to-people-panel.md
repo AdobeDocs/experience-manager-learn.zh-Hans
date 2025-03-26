@@ -2,7 +2,7 @@
 title: 将组件添加到“人员”面板
 description: 通过添加配偶详细信息片段来配置“人员”面板。 如果申请人的婚姻状况已婚，则创建规则以显示配偶详细信息片段。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-4210
 thumbail: 28385.jpg
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 exl-id: 16170f0d-6933-47f2-aefa-951599d163c0
 duration: 623
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 2%

@@ -2,7 +2,7 @@
 title: 从一个数据文件生成多个PDF
 description: OutputService提供了多种方法来使用表单设计创建文档，并提供要与表单设计合并的数据。 了解如何从包含多个单独记录的一个大型xml生成多个PDF。
 feature: Output Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ last-substantial-update: 2020-01-07T00:00:00Z
 duration: 138
 jira: KT-16142
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: 8cadbe92a7a2f47c33b0ca0fcf7313dc418ae7a4
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -37,7 +37,7 @@ generatePDFOutputBatch方法的签名采用以下参数
 
 ## 用例详细信息{#use-case-details}
 
-在本使用案例中，我们将提供一个简单的Web界面来上传模板和数据(xml)文件。 文件上传完成并向AEM servlet发送POST请求后。 此servlet提取文档并调用OutputService的generatePDFOutputBatch方法。 生成的pdf将压缩为zip文件，供最终用户从Web浏览器下载。
+在本使用案例中，我们将提供一个简单的Web界面来上传模板和数据(xml)文件。 文件上传完成后，将POST请求发送到AEM Servlet。 此servlet提取文档并调用OutputService的generatePDFOutputBatch方法。 生成的pdf将压缩为zip文件，供最终用户从Web浏览器下载。
 
 ## Servlet代码{#servlet-code}
 

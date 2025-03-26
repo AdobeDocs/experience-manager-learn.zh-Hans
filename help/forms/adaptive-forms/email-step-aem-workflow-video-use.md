@@ -2,14 +2,14 @@
 title: 使用Forms Workflow的“发送电子邮件”步骤
 description: AEM Forms 6.4中引入了“发送电子邮件”步骤。通过此步骤，我们可以构建业务流程或工作流，从而允许您发送带有或不带有附件的电子邮件。 以下视频介绍了配置发送电子邮件组件的步骤
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 21e58bbc-c1d6-4d41-a4d4-f522a3a5d4a7
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 314
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -25,8 +25,8 @@ AEM Forms 6.4中引入了“发送电子邮件”步骤。通过此步骤，我�
 作为本文的一部分，我们将引导您完成以下用例：
 
 1. 用户填写休息时间申请表
-1. 在提交表单时，会触发AEM Workflow
-1. AEM Workflow利用发送电子邮件组件，发送包含DoR作为附件的电子邮件
+1. 在提交表单时，会触发AEM工作流程
+1. AEM工作流利用发送电子邮件组件，发送包含DoR作为附件的电子邮件
 
 在使用发送电子邮件步骤之前，请确保从[configMgr](http://localhost:4502/system/console/configMgr)配置Day CQ邮件服务。 提供特定于您的环境的值
 
@@ -54,7 +54,7 @@ AEM Forms 6.4中引入了“发送电子邮件”步骤。通过此步骤，我�
 
 >[!NOTE]
 >
->在AEM Forms 6.5及更高版本中，您不需要此自定义代码来创建元数据属性。 请使用AEM Workflow中的变量功能
+>在AEM Forms 6.5及更高版本中，您不需要此自定义代码来创建元数据属性。 请使用AEM工作流中的变量功能
 
 确保按照以下屏幕快照配置发送电子邮件组件的附件选项卡
 ![发送电子邮件附件选项卡](assets/sendemailcomponentconfigure.jpg)“DOR.pdf”值必须与在自适应表单的提交选项中指定的记录文档路径中指定的值匹配。

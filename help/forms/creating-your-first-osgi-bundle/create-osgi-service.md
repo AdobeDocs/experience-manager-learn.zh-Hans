@@ -2,14 +2,14 @@
 title: 使用AEM Forms创建您的第一个OSGi服务
 description: 使用AEM Forms构建您的第一个OSGi服务
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 2f15782e-b60d-40c6-b95b-6c7aa8290691
 last-substantial-update: 2021-04-23T00:00:00Z
 duration: 87
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
@@ -90,7 +90,7 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 * 执行命令`mvn clean install -PautoInstallBundle`
 * 上述命令将自动构建捆绑包，并将其部署到在localhost：4502上运行的AEM实例
 
-该包还将在以下位置`C:\AEMFormsBundles\mysite\core\target`提供。 也可以使用[Felix Web控制台](http://localhost:4502/system/console/bundles)将包部署到AEM中。
+该包还将在以下位置`C:\AEMFormsBundles\mysite\core\target`提供。 也可以使用[Felix Web控制台](http://localhost:4502/system/console/bundles)将该捆绑包部署到AEM中。
 
 ## 使用服务
 

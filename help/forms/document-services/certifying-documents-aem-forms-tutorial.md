@@ -2,14 +2,14 @@
 title: AEM Forms中的认证文档
 description: 使用Docassurance服务认证AEM Forms中的PDF文档
 feature: Document Security
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 1471929f-d269-4adc-88ad-2ad3682305e1
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 75
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # AEM Forms中的认证文档
 
-经认证的文档为PDF文档提供并表单接收者增加了其真实性和完整性的保证。
+经认证的文档为PDF文档和表单接收者增加了对其真实性和完整性的保证。
 
-要认证文档，您可以在桌面上使用Acrobat DC，或将AEM Forms Document Services作为服务器上自动化流程的一部分。
+要认证文档，您可以在桌面上使用Acrobat DC，或将AEM Forms Document Services用作服务器上自动化流程的一部分。
 
 本文为您提供了使用AEM Forms Document Services验证pdf文档的示例OSGI捆绑包。示例中使用的代码为[此处提供](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
@@ -64,4 +64,4 @@ ht-degree: 0%
 * 上传需要认证的PDF文档
   **可选** — 指定要在验证文档时使用的签名字段
 * 单击提交。
-* 应该把认证的PDF还给你
+* 认证的PDF应该还给您。

@@ -3,14 +3,14 @@ title: 在工作流中将表单数据模型服务用作步骤
 description: 从AEM Forms 6.4开始，我们现在能够将表单数据模型用作AEM Workflow的一部分。 以下视频介绍了在AEM Workflow中配置表单数据模型步骤所需的步骤。
 feature: Workflow
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 0c77a853-fa71-46ac-8626-99bc69d6222d
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 205
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 在工作流中将表单数据模型服务用作步骤 {#using-form-data-model-service-as-step-in-workflow}
 
-从AEM Forms 6.4开始，我们现在能够将表单数据模型用作AEM Workflow的一部分。 以下视频介绍了在AEM Workflow中配置表单数据模型步骤所需的步骤
+从AEM Forms 6.4开始，我们现在能够将表单数据模型用作AEM Workflow的一部分。 以下视频介绍了在AEM工作流中配置表单数据模型步骤所需的步骤
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 * 使用[此处](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)所述的SampleRest.war文件设置tomcat。在Tomcat中部署的war文件具有返回申请人的信用分数的代码。 信用得分是200到800之间的随机数
 
-* [使用包管理器将资源导入AEM](assets/invoke-fdm-as-service-step.zip)。包包含以下内容：
+* [使用包管理器将资源导入AEM](assets/invoke-fdm-as-service-step.zip)。该包包含以下内容：
 
    * 使用FDM步骤的工作流模型。
    * FDM步骤中使用的表单数据模型。

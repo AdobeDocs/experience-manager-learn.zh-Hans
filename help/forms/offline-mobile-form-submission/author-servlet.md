@@ -1,16 +1,16 @@
 ---
 title: 在HTML5表单提交时触发AEM工作流 — 处理表单提交
-description: 了解在提交HTML5表单时如何触发AEM工作流，并将提交的数据存储在存储库中。
+description: 了解在提交AEM5表单时如何触发HTML工作流程，并将提交的数据存储在存储库中。
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
 exl-id: eafeafe1-7a72-4023-b5bb-d83b056ba207
 duration: 116
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 1%
@@ -20,8 +20,8 @@ ht-degree: 1%
 
 # 存储提交的数据
 
-下一步是将提交的数据存储在AEM Author的存储库中。 装载在`/bin/startworkflow`上的servlet保存提交的数据。
-AEM工作流启动器配置为每次在&lt;node_to_store_submitted_data>节点下创建`nt:file`类型的新资源时都会触发。 此工作流将通过将提交的数据与xdpPDF合并来创建非交互式或静态模板。 然后将生成的PDF分配给用户进行审阅和批准。
+下一步是将提交的数据存储在AEM作者的存储库中。 装载在`/bin/startworkflow`上的servlet保存提交的数据。
+AEM工作流启动器配置为每次在&lt;node_to_store_submitted_data>节点下创建`nt:file`类型的新资源时都会触发。 此工作流将通过将提交的数据与xdp模板合并来创建非交互式或静态PDF。 然后将生成的PDF分配给用户进行审阅和批准。
 
 为了将提交的数据存储在&lt;node_to_store_submitted_data>节点下，我们使用了`GetResolver` OSGi服务，该服务允许我们使用在每个AEM Forms安装中都可用的`fd-service`系统用户来保存提交的数据。
 
