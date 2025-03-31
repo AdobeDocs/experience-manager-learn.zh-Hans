@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
 source-wordcount: '1253'
 ht-degree: 0%
@@ -123,7 +123,7 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 
    ![选择身份验证](./assets/s2s/select-authentication.png)
 
-   服务器到服务器身份验证非常适用于需要API访问而不需要用户交互的后端服务。 Web应用程序和单页应用程序身份验证选项适用于需要代表用户进行API访问的应用程序。 有关详细信息，请参阅[OAuth服务器到服务器与OAuth Web应用程序/单页应用程序凭据之间的区别](./overview.md#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials)。
+   服务器到服务器身份验证非常适用于需要API访问而不需要用户交互的后端服务。 Web应用程序和单页应用程序身份验证选项适用于需要代表用户进行API访问的应用程序。 有关详细信息，请参阅[OAuth服务器到服务器与Web应用程序与单页应用程序凭据之间的区别](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
 
 1. 如果需要，可以重命名API以便于识别。 出于演示目的，使用默认名称。
 

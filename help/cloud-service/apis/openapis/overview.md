@@ -12,10 +12,10 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 2%
+source-wordcount: '1015'
+ht-degree: 1%
 
 ---
 
@@ -59,15 +59,18 @@ ht-degree: 2%
 
 - **OAuth单页应用程序凭据**：专为浏览器中运行的SPA设计，该SPA需要代表没有后端服务器的用户访问API。 它使用&#x200B;_authorization_code_&#x200B;授权类型，并依赖使用PKCE（代码交换的验证密钥）的客户端安全机制来保护授权代码流。 有关详细信息，请参阅[OAuth单页应用程序凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential)。
 
-## OAuth服务器到服务器和OAuth Web应用程序/单页应用程序凭据之间的区别{#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials}
+## OAuth服务器到服务器与Web应用程序与单页应用程序凭据的区别{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 
-| | OAuth服务器到服务器 | OAuth用户身份验证(Web-App) |
-| --- | --- | --- |
-| 身份验证目的 | 专为机器到机器的交互而设计。 | 专为用户驱动的交互而设计。 |
-| 令牌行为 | 发出表示客户端应用程序本身的访问令牌。 | 代表经过身份验证的用户颁发访问令牌。 |
-| 用例 | 无需用户交互即需要API访问的后端服务。 | 具有代表用户访问API的前端和后端组件的Web应用程序。 |
-| 安全性注意事项 | 在后端系统中安全地存储敏感凭据(`client_id`， `client_secret`)。 | 用户的身份验证并被授予他们自己的临时访问令牌。 在后端系统中安全地存储敏感凭据(`client_id`， `client_secret`)。 |
-| 授权类型 | _client_credentials_ | _authorization_code_ |
+下表总结了基于OpenAPI的AEM API支持的三种OAuth身份验证方法之间的差异：
+
+|  | OAuth服务器到服务器 | OAuth Web应用程序 | OAuth单页面应用程序(SPA) |
+| --- | --- | --- | --- |
+| **身份验证目的** | 专为机器到机器的交互而设计。 | 专为具有&#x200B;_后端_&#x200B;的Web应用中的用户驱动交互而设计。 | 专为&#x200B;_客户端JavaScript应用程序_&#x200B;中的用户驱动交互而设计。 |
+| **令牌行为** | 发出表示客户端应用程序本身的访问令牌。 | 通过后端&#x200B;_为经过身份验证的用户_&#x200B;颁发访问令牌。 | 通过仅前端流程&#x200B;_代表经过身份验证的用户_&#x200B;发出访问令牌。 |
+| **用例** | 无需用户交互即需要API访问的后端服务。 | 具有代表用户访问API的前端和后端组件的Web应用程序。 | 纯前端(JavaScript)应用程序，代表没有后端的用户访问API。 |
+| **安全注意事项** | 在后端系统中安全地存储敏感凭据(`client_id`， `client_secret`)。 | 用户身份验证后，通过后端调用&#x200B;_授予他们自己的_&#x200B;临时访问令牌。 在后端系统中安全地存储敏感凭据(`client_id`， `client_secret`)，以交换访问令牌的授权代码。 | 用户身份验证后，通过前端调用&#x200B;_授予他们自己的_&#x200B;临时访问令牌。 不使用`client_secret`，因为存储在前端应用是不安全的。 依靠PKCE交换访问令牌的授权码。 |
+| **授予类型** | _client_credentials_ | _authorization_code_ | 具有&#x200B;**PKCE**&#x200B;的&#x200B;_authorization_code_ |
+| **Adobe Developer Console凭据类型** | OAuth服务器到服务器 | OAuth Web应用程序 | OAuth单页应用程序 |
 
 ## 访问Adobe API和相关概念{#accessing-adobe-apis-and-related-concepts}
 

@@ -11,13 +11,13 @@ jira: KT-17430
 thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
-source-wordcount: '2103'
+source-wordcount: '2104'
 ht-degree: 0%
 
 ---
-
 
 # 使用OAuth单页应用程序调用基于OpenAPI的AEM API
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 OAuth单页面应用程序身份验证非常适用于在浏览器中运行的基于JavaScript的应用程序。 无论客户是缺少后端服务器，还是需要获取访问令牌以代表用户与AEM API交互。
 
-PKCE流扩展了OAuth 2.0 _authorization_code_&#x200B;授权类型，通过阻止授权代码拦截增强了安全性。 有关详细信息，请参阅OAuth服务器到服务器与OAuth Web应用程序/单页应用程序凭据之间的[差异](../overview.md#difference-between-oauth-server-to-server-and-oauth-web-appsingle-page-app-credentials)。
+PKCE流扩展了OAuth 2.0 _authorization_code_&#x200B;授权类型，通过阻止授权代码拦截增强了安全性。 有关详细信息，请参阅[OAuth服务器到服务器与Web应用程序与单页应用程序凭据的区别](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)部分。
 
 >[!AVAILABILITY]
 >
