@@ -1,5 +1,5 @@
 ---
-title: AEM中的HeadlessTutorials
+title: AEM中的Headless教程
 description: Adobe Experience Manager的Headless CMS教程集合。 按API、框架和示例应用程序浏览教程。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
@@ -8,33 +8,31 @@ level: Beginner
 doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 1%
 
 ---
 
-# AEM中的HeadlessTutorials{#aem-headless-tutorials}
+# AEM中的Headless教程{#aem-headless-tutorials}
 
-{{aem-headless-trials-promo}}
-
-Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将其内容作为JSON交付。 使用动手实践教程以了解如何使用各种选项并选择适合您的选项。
+Adobe Experience Manager (AEM)提供了多个选项，用于定义Headless端点并将其内容作为JSON交付。 使用动手实践教程以了解如何使用各种选项并选择适合您的选项。
 
 >[!TIP]
 >
->此教程集合专为那些喜欢&#x200B;**通过实践学习**&#x200B;的人而设计。 如果您希望从头开始学习概念，请查看[AEM Headless开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html)。 这组教程和历程是互补的。
+>此教程集合专为那些喜欢&#x200B;**通过实践学习**&#x200B;的人而设计。 如果您偏好从头开始学习概念，请查看[AEM Headless开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html)。 这组教程和历程是互补的。
 
-## 按API显示的Tutorials
+## 按API显示的教程
 
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-Headless/graphql/overview.html">
       <img alt="GRAPHQL API" src="./assets/graphql-icon.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-Headless/graphql/overview.html">
     <strong>GraphQL API</strong>
     </a>
     </div>
@@ -73,7 +71,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
 
 ## 示例应用程序
 
-示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的绝佳方法。 请下载并安装这些完成的示例以立即开始。
+示例应用程序是探索Adobe Experience Manager (AEM)的Headless功能的好方法。 请下载并安装这些完成的示例以立即开始。
 
 <table>
 <tr>
@@ -87,7 +85,7 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
     </a>
     </div>
     <p>
-    <em>由AEM的iOS API提供支持的GraphQL应用程序。</em>
+    <em>由AEM GraphQL API提供支持的iOS应用程序。</em>
     <p>
   </td>
   <td>
@@ -119,18 +117,18 @@ Adobe Experience Manager (AEM)有多个选项可用于定义Headless端点并将
 </tr>
 </table>
 
-## 按框架Tutorials
+## 按框架显示的教程
 
 根据使用的技术浏览以下教程。 了解AEM如何超越单纯的Headless用例，提供用于上下文创作和体验管理的选项。
 
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-Headless/graphql/multi-step/overview.html?lang=zh-Hans">
       <img alt="React - Headless" src="./assets/react-headless.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-Headless/graphql/overview.html">
     <strong>React - Headless</strong>
     </a>
     </div>

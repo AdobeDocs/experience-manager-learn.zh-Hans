@@ -12,7 +12,7 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: b0ac4b50-5fe5-41a1-9530-8e593d7000c9
 duration: 89
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 2%
@@ -20,8 +20,6 @@ ht-degree: 2%
 ---
 
 # AEM Headless第一个教程
-
-{{aem-headless-trials-promo}}
 
 欢迎阅读关于使用React构建一个Web体验的教程，该教程完全由AEM Headless API和GraphQL提供支持。 在本教程中，我们将指导您通过将React、Adobe Experience Manager (AEM) Headless API和GraphQL的强大功能结合使用，来创建动态的交互式Web应用程序。
 

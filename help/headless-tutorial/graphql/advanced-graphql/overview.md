@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
 duration: 441
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -16,8 +16,6 @@ ht-degree: 0%
 ---
 
 # AEM Headless的高级概念
-
-{{aem-headless-trials-promo}}
 
 此端到端教程继续介绍[基础教程](../multi-step/overview.md)，其中涵盖了Adobe Experience Manager (AEM) Headless和GraphQL的基础知识。 该高级教程说明了使用内容片段模型、内容片段和AEM GraphQL持久查询的深入方面，包括在客户端应用程序中使用GraphQL持久查询。
 
