@@ -12,9 +12,9 @@ thumbnail: KT-17428.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 277b4789-b035-4904-b489-c827c970fb55
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: f125cffc72a6f0eb558492f8dde6f4f30bc074ec
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
@@ -93,24 +93,25 @@ _产品配置文件_&#x200B;为访问AEM资源的凭据提供&#x200B;_权限（�
 
 要为AEM API添加产品配置文件，请在ADC项目的&#x200B;**API**&#x200B;部分中单击&#x200B;**编辑产品配置文件**，在&#x200B;**配置API**&#x200B;对话框中选择所需的产品配置文件，并保存更改。
 
-    ！[编辑产品配置文件](../assets/how-to/edit-product-profiles.png)
+![编辑产品配置文件](../assets/how-to/edit-product-profiles.png)
 
 选择与所需服务关联的所需产品配置文件(例如&#x200B;**AEM Administrators - author - Program XXX - Environment XXX**)，然后保存更改。
 
-    ！[选择产品配置文件](../assets/how-to/select-product-profile.png)
+![选择产品配置文件](../assets/how-to/select-product-profile.png)
 
 请注意，**AEM Administrators - author - Program XXX - Environment XXX**&#x200B;产品配置文件与&#x200B;**AEM Administrators**&#x200B;服务和&#x200B;**AEM Assets API Users**&#x200B;服务相关联。 如果没有后者，产品配置文件将不会显示在可用产品配置文件列表中。
 
-    ！[产品配置文件服务](../assets/how-to/product-profile-services.png)
+![产品配置文件服务](../assets/how-to/product-profile-services.png)
 
 用于更新资源元数据的&#x200B;**PATCH**&#x200B;请求现在应可正常使用，而不会出现问题。
 
-    ！[PATCH请求](../assets/how-to/patch-request.png)
+![PATCH请求](../assets/how-to/patch-request.png)
 
 
 >[!TAB 删除产品配置文件]
 
-要删除AEM API的产品配置文件，请在ADC项目的&#x200B;**API**&#x200B;部分中单击&#x200B;**编辑产品配置文件**，在&#x200B;**配置API**对话框中取消选择所需的产品配置文件，并保存更改。
+要删除AEM API的产品配置文件，请在ADC项目的&#x200B;**API**&#x200B;部分中单击&#x200B;**编辑产品配置文件**，在&#x200B;**配置API**&#x200B;对话框中取消选择所需的产品配置文件，并保存更改。
+
 ![取消选择产品配置文件](../assets/how-to/deselect-product-profile.png)
 
 >[!ENDTABS]
