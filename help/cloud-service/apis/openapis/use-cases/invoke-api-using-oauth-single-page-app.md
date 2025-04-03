@@ -12,7 +12,7 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 22d3c0058c04a1d812a95a47472f96efaa597513
+source-git-commit: 7212bec910320847e9375dd1956a8cf76df1d579
 workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 0%
@@ -62,7 +62,9 @@ Adobe Developer Console (ADC)项目配置为启用OAuth单页应用程序身份�
 >
 >ADC项目未提供&#x200B;_client_secret_。 SPA而是生成&#x200B;_code_verifier_&#x200B;和&#x200B;_code_challenge_，以安全地交换&#x200B;_访问令牌_&#x200B;的授权代码。 它无需在客户端存储客户端密钥，增强了安全性。
 
+
 >[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
+
 
 
 下图说明了WKND SPA _获取特定于用户的访问令牌以调用基于OpenAPI的AEM API_&#x200B;的功能流：
