@@ -11,9 +11,9 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: e1bea4320ed7a8b6d45f674649ba9ba946054b17
+source-git-commit: 5f547d9a721c2072559e877d1c4a08fcd11327b7
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1531'
 ht-degree: 1%
 
 ---
@@ -368,12 +368,6 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
             配置IP允许列表，以便只有VPN通信可以访问AEM。
       </p>
     </td>
-   <td>
-      <a  href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking"><img alt="AEM Publish的基于路径的VPN访问限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking">对AEM Publish的基于路径的VPN访问限制</a></strong></div>
-      <p>
-            在AEM Publish上要求访问特定路径的VPN。
-      </p>
     </td>
    <td></td>
 </tr></table>
