@@ -12,9 +12,9 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 100
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: a98ca7ddc155190b63664239d604d11ad470fdf5
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,10 @@ ht-degree: 0%
 
 ## 默认缓存行为
 
-在部署了基于[AEM项目原型](./enable-caching.md#default-caching-behavior)的AEM项目时，查看AEM Publish和Author的默认缓存行为。
+AEM as a Cloud Service CDN中HTTP响应的缓存由来自源`Cache-Control`、`Surrogate-Control`或`Expires`的以下HTTP响应标头控制。  未缓存`Cache-Control`中包含`private`、`no-cache`或`no-store`的原始响应。
+
+在部署基于AEM项目原型的AEM项目时，查看AEM Publish和Author的[默认缓存行为](./enable-caching.md#default-caching-behavior)。
+
 
 ## 禁用缓存
 
@@ -53,10 +56,14 @@ ht-degree: 0%
 <LocationMatch "$URL$ || $URL_REGEX$">
     # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
     Header unset Cache-Control
+    Header unset Surroagate-Control
     Header unset Expires
 
-    # Instructs the CDN to not cache the response.
-    Header set Cache-Control "private"
+    # Instructs the Browser and the CDN to not cache the response.
+    Header always set Cache-Control "private"
+
+    # Instructs only the CDN to not cache the response.
+    Header always set Surrogate-Control "private"
 </LocationMatch>
 ```
 
@@ -75,8 +82,8 @@ ht-degree: 0%
        Header unset Cache-Control
        Header unset Expires
    
-       # Instructs the CDN to not cache the response.
-       Header set Cache-Control "private"
+       # Instructs the Browser and the CDN to not cache the response.
+       Header always set Cache-Control "private"
    </LocationMatch>
    ```
 
