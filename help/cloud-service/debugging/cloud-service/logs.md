@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
 duration: 229
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 0363505b426d6e4733c57409e17e9d69f7a567c7
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '962'
 ht-degree: 1%
 
 ---
@@ -167,14 +167,7 @@ __Pod cm-p12345-e56789-aem-author-abcdefg-2222__
 
 ## 建议的日志级别{#log-levels}
 
-Adobe关于每个AEM as a Cloud Service环境的日志级别的一般指导包括：
-
-+ 本地开发(AEM SDK)： `DEBUG`
-+ 开发： `DEBUG`
-+ 阶段： `WARN`
-+ 正式版：`ERROR`
-
-为每种环境类型设置最合适的日志级别是使用AEM as a Cloud Service，日志级别在代码中进行维护
+Adobe关于每个AEM as a Cloud Service环境的日志级别的一般指导方针是遵守AEM的默认日志设置（默认日志级别为`INFO`）。 Adobe还建议使用log语句检测自定义代码，以允许使用`INFO`的日志级别运行它。 日志级别在代码中进行维护
 
 + Java日志配置在OSGi配置中进行维护
 + Dispatcher项目中的Apache Web Server和Dispatcher日志级别
