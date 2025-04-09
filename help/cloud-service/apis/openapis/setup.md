@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
+source-git-commit: 7ec2db883ba485b4062db84630cf94c8ed0967ee
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 0%
@@ -27,6 +27,9 @@ ht-degree: 0%
 >
 >基于OpenAPI的AEM API作为早期访问计划的一部分提供。 如果您有兴趣访问它们，我们建议您通过电子邮件向[aem-apis@adobe.com](mailto:aem-apis@adobe.com)发送用例说明。
 
+>[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
+
+
 高级设置过程涉及以下步骤：
 
 1. AEM as a Cloud Service环境的现代化。
@@ -35,14 +38,14 @@ ht-degree: 0%
 1. 配置ADC项目
 1. 配置AEM实例以启用ADC项目通信。
 
-## AEM as a Cloud Service环境的现代化
+## AEM as a Cloud Service环境的现代化{#modernization-of-aem-as-a-cloud-service-environment}
 
 AEM as a Cloud Service环境的现代化是一项针对每个环境的一次性活动，其中涉及以下步骤：
 
 - 更新至AEM版本&#x200B;**2024.10.18459.20241031T210302Z**&#x200B;或更高版本。
 - 如果环境是在版本2024.10.18459.20241031T210302Z之前创建的，请向其中添加新的产品配置文件。
 
-### 更新AEM实例
+### 更新AEM实例{#update-aem-instance}
 
 要更新AEM实例，请在Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_环境_&#x200B;部分中，选择环境名称旁边的&#x200B;_省略号_&#x200B;图标，然后选择&#x200B;**更新**&#x200B;选项。
 
@@ -54,7 +57,7 @@ AEM as a Cloud Service环境的现代化是一项针对每个环境的一次性�
 
 在我的示例中，Fullstack管道名为&#x200B;**Dev ：： Fullstack-Deploy**，AEM环境名为&#x200B;**wknd-program-dev**。 你的名字可能不同。
 
-### 添加新产品配置文件
+### 添加新产品配置文件{#add-new-product-profiles}
 
 要将新产品配置文件添加到AEM实例，请在Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_环境_&#x200B;部分中，选择环境名称旁边的&#x200B;_省略号_&#x200B;图标，然后选择&#x200B;**添加产品配置文件**&#x200B;选项。
 
@@ -88,7 +91,7 @@ _Admin Console_&#x200B;窗口显示新添加的产品配置文件。
 >
 >要为AEM Assets API启用服务器到服务器身份验证，上述步骤至关重要。 如果没有此关联，AEM Assets API将无法与服务器到服务器身份验证方法一起使用。
 
-## 创建Adobe Developer Console (ADC)项目
+## 创建Adobe Developer Console (ADC)项目{#adc-project}
 
 ADC项目用于添加所需的API、设置其身份验证并将身份验证帐户与产品配置文件关联。
 
@@ -110,7 +113,7 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 
    ![编辑项目名称](./assets/setup/edit-project-name.png)
 
-## 配置ADC项目
+## 配置ADC项目{#configure-adc-project}
 
 创建ADC项目后，您必须添加所需的AEM API，设置其身份验证，并将身份验证帐户与产品配置文件关联。
 
@@ -144,7 +147,7 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 
 如果您选择&#x200B;**OAuth Web应用程序**&#x200B;或&#x200B;**OAuth单页应用程序**&#x200B;身份验证方法，则不会提示产品配置文件关联，但需要应用程序重定向URI。 应用程序重定向URI用于在通过授权码进行身份验证后将用户重定向到应用程序。 相关用例教程概述了此类特定于身份验证的配置。
 
-## 配置AEM实例以启用ADC项目通信
+## 配置AEM实例以启用ADC项目通信{#configure-aem-instance}
 
 要使ADC项目的ClientID能够与AEM实例通信，您需要配置AEM实例。
 
