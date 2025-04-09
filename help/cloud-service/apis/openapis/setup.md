@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
@@ -68,12 +68,11 @@ _Admin Console_&#x200B;窗口显示新添加的产品配置文件。
 
 以上步骤完成了AEM as a Cloud Service环境的现代化。
 
-## 启用AEM API访问
+## 启用AEM API访问{#enable-aem-apis-access}
 
 存在&#x200B;_新产品配置文件_&#x200B;可在Adobe Developer Console (ADC)中启用基于OpenAPI的AEM API访问。 回顾[Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts)是访问Adobe API、SDK、实时事件、无服务器函数等的开发人员中心。
 
-新添加的产品配置文件与&#x200B;_服务_&#x200B;关联，这些服务代表&#x200B;_具有预定义访问控制列表(ACL)_的AEM用户组。
-_服务_&#x200B;用于控制对AEM API的访问级别。
+新添加的产品配置文件与&#x200B;_服务_&#x200B;关联，这些服务代表&#x200B;_具有预定义访问控制列表(ACL)_&#x200B;的AEM用户组。 _服务_&#x200B;用于控制对AEM API的访问级别。
 
 您还可以选择或取消选择与产品配置文件关联的&#x200B;_服务_，以减少或增加访问级别。
 
@@ -81,9 +80,13 @@ _服务_&#x200B;用于控制对AEM API的访问级别。
 
 ![查看与产品配置文件关联的服务](./assets/setup/review-services-associated-with-product-profile.png)
 
-默认情况下，**AEM Assets API Users**&#x200B;服务不与任何产品配置文件关联。 让我们将其与新添加的&#x200B;**AEM Assets Collaborator Users - author - Program XXX - Environment XXX**&#x200B;产品配置文件关联。 在此关联之后，ADC项目的&#x200B;_资产创作API_&#x200B;可以设置所需的身份验证，并将身份验证帐户与产品配置文件关联。
+默认情况下，**AEM Assets API Users**&#x200B;服务不与任何产品配置文件关联。 让我们将其与新添加的&#x200B;**AEM Assets Collaborator Users - author - Program XXX - Environment XXX**&#x200B;产品配置文件关联。 在此关联后，ADC项目的&#x200B;_资产创作API_&#x200B;可以设置所需的服务器到服务器身份验证，并将ADC项目（在下一步中创建）中的身份验证帐户与产品配置文件关联。
 
 ![将AEM Assets API Users服务与产品配置文件关联](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
+
+>[!IMPORTANT]
+>
+>要为AEM Assets API启用服务器到服务器身份验证，上述步骤至关重要。 如果没有此关联，AEM Assets API将无法与服务器到服务器身份验证方法一起使用。
 
 ## 创建Adobe Developer Console (ADC)项目
 
