@@ -9,7 +9,7 @@ role: Developer
 level: Experienced
 exl-id: c588bdca-b8a8-4de2-97e0-ba08b195699f
 duration: 50
-source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+source-git-commit: ed8749f312dc5ad18e047163bcae28d6753b6f8c
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%
@@ -17,7 +17,6 @@ ht-degree: 0%
 ---
 
 # 创建基于JSON架构的自适应表单
-
 
 AEM Forms 6.3版本中引入了创建基于JSON架构的自适应Forms的功能。 有关使用JSON架构创建自适应Forms的详细信息，请参阅此[文章](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html)。
 
@@ -31,8 +30,6 @@ AEM Forms 6.3版本中引入了创建基于JSON架构的自适应Forms的功能�
 >
 >请确保已正确命名您的json架构文件。 例如，需要以以下格式&lt;name>schema.json命名它。 因此，您的架构文件可以是mortgage.schema.json或credit.schema.json。
 
-
 ![数据存储](assets/datastored.gif)
-
 
 [可用于创建自适应Forms的示例JSON架构。](assets/samplejsonschemas.zip)。下载并解压缩zip文件以获取JSON架构
