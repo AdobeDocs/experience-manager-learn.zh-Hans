@@ -11,9 +11,9 @@ thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 24d634fd1e62e873bc1dbb3ac0cd18f70129ee86
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1370'
 ht-degree: 1%
 
 ---
@@ -226,7 +226,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 ### HTTP/HTTPS
 
-从AEM创建HTTP/HTTPS连接时，如果使用专用出口IP地址，则会自动使用专用出口IP地址代理出AEM的HTTP/HTTPS连接。 无需其他代码或配置即可支持HTTP/HTTPS连接。
+从AEM创建HTTP/HTTPS连接时，如果使用专用出口IP地址，则会自动使用专用出口IP地址代理出AEM的HTTP/HTTPS连接。 除了设置专用出口IP地址高级联网外，无需其他代码或配置即可支持HTTP/HTTPS连接。
 
 #### 代码示例
 
