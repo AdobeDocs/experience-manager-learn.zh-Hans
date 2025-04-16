@@ -12,7 +12,7 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 62887c6251b09ac22664cfeb9c5513363efb555e
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%
@@ -50,7 +50,7 @@ AEM的URL重定向解决方案如下所示：
 
 此选项仅适用于AEM as a Cloud Service客户。
 
-[AEM-managed CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn)提供了Edge级别的重定向解决方案，从而减少了到原点的往返次数。 [客户端重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)功能允许您在AEM项目代码中配置重定向规则，并使用[配置管道](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)进行部署。 CDN配置文件(`cdn.yaml`)大小不应超过100KB。
+[AEM-managed CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn)提供了Edge级别的重定向解决方案，从而减少了到原点的往返次数。 [服务器端重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#server-side-redirectors)功能允许您在AEM项目代码中配置重定向规则，并使用[配置管道](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)进行部署。 CDN配置文件(`cdn.yaml`)大小不应超过100KB。
 
 在Edge或CDN级别管理重定向具有性能优势。
 
