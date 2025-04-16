@@ -8,9 +8,9 @@ level: Beginner
 doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
+source-git-commit: 46d65df60ce7a4cda7ff3aa3fb21c1ee60f59bc6
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '375'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ Adobe Experience Manager (AEM)提供了多个选项，用于定义Headless端点
 </tr>
 </table>
 
-## 按框架显示的教程
+## 教程
 
 根据使用的技术浏览以下教程。 了解AEM如何超越单纯的Headless用例，提供用于上下文创作和体验管理的选项。
 
@@ -137,6 +137,19 @@ Adobe Experience Manager (AEM)提供了多个选项，用于定义Headless端点
     <p>
   </td>
   <td>
+    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
+      <img alt="React — 通过通用编辑器编辑内容" src="./assets/react-universal-editor.png" />
+    </a>
+     <div>
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
+        <strong>React — 通过通用编辑器编辑内容</strong>
+      </a>
+    </div>
+    <p>
+    <em>使用通用编辑器编辑React应用程序的内容。</em>
+    <p>
+  </td>  
+  <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
     <img alt="React — 远程编辑器" src="./assets/react-remote.png" />
     </a>
@@ -149,6 +162,8 @@ Adobe Experience Manager (AEM)提供了多个选项，用于定义Headless端点
     <em>在上下文中创作远程托管的React应用程序的一部分。</em>
     </p>
   </td>
+</tr>
+<tr>  
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
       <img alt="React - SPA编辑器" src="./assets/react-spa-editor.png" />
@@ -162,8 +177,6 @@ Adobe Experience Manager (AEM)提供了多个选项，用于定义Headless端点
     <em>使用AEM SPA编辑器管理完整的React应用程序体验。</em>
     <p>
   </td>
-</tr>
-<tr>  
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
     <img alt="Android — 内容服务" src="./assets/android.png" />
@@ -190,6 +203,5 @@ Adobe Experience Manager (AEM)提供了多个选项，用于定义Headless端点
     <em>使用开发人员和服务令牌生成Node.js应用程序以进行身份验证。</em>
     <p>
   </td>
-  <td></td>
 </tr>
 </table>
