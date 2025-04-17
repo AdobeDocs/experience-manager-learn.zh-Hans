@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: ebc609ae621ea5d4d0eba0e28202448b6eaeb8cc
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 16%
+source-wordcount: '454'
+ht-degree: 21%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 16%
    + [资源视图](playlists/assets-view.md)
    + [管理员视图](playlists/admin-view.md)
 
-+ 正在配置{#configuring}
++ 配置{#configuring}
    + [基线文件夹](configuring/baseline-folders.md)
    + [基线权限](configuring/baseline-permissions.md)
    + [标记](configuring/tagging.md)
@@ -42,7 +42,7 @@ ht-degree: 16%
    + [演绎版](./authoring/renditions.md)
    + [关联和取消关联](./authoring/relate-unrelate.md)
 
-+ Collaboration{#collaboration}
++ 协作{#collaboration}
    + [观看](./collaboration/watch.md)
    + [时间轴和收件箱](./collaboration/timeline-and-inbox.md)
    + [注释和批注](./collaboration/comments-and-annotations.md)
@@ -86,6 +86,8 @@ ht-degree: 16%
    + [使用Adobe Express的图像变体](./content-hub/image-variants.md)
    + [收藏集](./content-hub/collections.md)
    + [共享](./content-hub/share.md)
+   + 用例{#use-cases}
+      + [管理资源](./content-hub/use-cases/manage-assets.md)
 
 + Edge Delivery Services{#edge-delivery-services}
    + [Sidekick插件](./edge-delivery-services/sidekick-plugin.md)
@@ -110,13 +112,13 @@ ht-degree: 16%
       + [Asset Share Commons资产工具包](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
 + Creative工作流{#creative-workflows}
-   + [Adobe Express集成](./creative-workflows/adobe-express.md)
+   + [Adobe Express 集成](./creative-workflows/adobe-express.md)
    + [Adobe Express和AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM桌面应用程序](./creative-workflows/aem-desktop-app.md)
    + [Adobe资产链接](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
-+ Adobe Asset Link{#adobe-asset-link}
++ Adobe资产链接{#adobe-asset-link}
    + [设置](./adobe-asset-link/setup.md)
    + [访问Adobe Asset Link](./adobe-asset-link/launch-adobe-asset-link.md)
    + [面板概述](./adobe-asset-link/panel-overview.md)
@@ -137,29 +139,29 @@ ht-degree: 16%
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media概述](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic桌面应用程序](dynamic-media/dynamic-media-classic-desktop-application.md)
-   + 图像{#images}
+   + 图像 {#images}
       + [Dynamic Media模板](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media快照](dynamic-media/dynamic-media-snapshot.md)
       + [智能裁切](dynamic-media/smart-crop-feature-video-use.md)
       + [图像锐化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + 视频{#video}
+   + 视频 {#video}
       + [360视频](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [自定义视频缩略图](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH自适应流](dynamic-media/dynamic-media-dash.md)
       + [Dynamic Media智能裁剪视频](dynamic-media/dynamic-media-smart-crop-video.md)
       + [视频播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
-   + 查看器{#viewers}
+   + 查看器 {#viewers}
       + [查看器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [全景和垂直图像查看器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
       + [查看器和Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
    + 3D {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + 与AEM Sites {#dm-with-aem-sites}一起使用
+   + 与AEM Sites一起使用 {#dm-with-aem-sites}
       + [体验片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media核心组件](dynamic-media/dynamic-media-core-components.md)
 
-   + 教程{#tutorials}
+   + 教程 {#tutorials}
       + [创建轮播集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [创建图像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [创建图像预设](dynamic-media/tutorials/creating-image-presets.md)
