@@ -14,7 +14,7 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
 duration: 1549
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: adc2f352544b4718522073642c6bf971b3600616
 workflow-type: tm+mt
 source-wordcount: '1618'
 ht-degree: 0%
@@ -42,9 +42,7 @@ ht-degree: 0%
 
 Adobe IMS配置有助于在AEM和Adobe Target之间进行身份验证。
 
-查看[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims.html)以了解有关如何创建Adobe IMS配置的分步说明。
-
->[!VIDEO](https://video.tv.adobe.com/v/3416495/?quality=12&learn=on)
+查看[文档](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/integrations/target#adobe-target-cloud-service)以了解有关如何创建Adobe IMS配置的分步说明。
 
 ## Adobe Target Cloud Service{#adobe-target-cloud-service}
 
