@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: 182d7b76411ab885ab93b7724b97bf75cc52323c
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1002'
 ht-degree: 1%
 
 ---
@@ -45,10 +45,6 @@ ht-degree: 1%
 
 在未来的版本中，将添加更多基于OpenAPI的AEM API，以支持其他用例。
 
->[!AVAILABILITY]
->
->基于OpenAPI的AEM API作为早期访问计划的一部分提供。 如果您有兴趣访问它们，我们建议您通过电子邮件向[aem-apis@adobe.com](mailto:aem-apis@adobe.com)发送用例说明。
-
 ## 身份验证支持{#authentication-support}
 
 基于OpenAPI的AEM API支持OAuth 2.0身份验证，包括以下授权类型：
@@ -71,6 +67,7 @@ ht-degree: 1%
 | **安全注意事项** | 在后端系统中安全地存储敏感凭据(`client_id`， `client_secret`)。 | 用户身份验证后，通过后端调用&#x200B;_授予他们自己的_&#x200B;临时访问令牌。 在后端系统中安全地存储敏感凭据(`client_id`， `client_secret`)，以交换访问令牌的授权代码。 | 用户身份验证后，通过前端调用&#x200B;_授予他们自己的_&#x200B;临时访问令牌。 不使用`client_secret`，因为存储在前端应用是不安全的。 依靠PKCE交换访问令牌的授权码。 |
 | **授予类型** | _client_credentials_ | _authorization_code_ | 具有&#x200B;**PKCE**&#x200B;的&#x200B;_authorization_code_ |
 | **Adobe Developer Console凭据类型** | OAuth服务器到服务器 | OAuth Web应用程序 | OAuth单页应用程序 |
+| **教程** | [使用服务器到服务器身份验证调用API](./use-cases/invoke-api-using-oauth-s2s.md) | [使用Web应用程序身份验证调用API](./use-cases/invoke-api-using-oauth-web-app.md) | [使用单页应用程序身份验证调用API](./use-cases/invoke-api-using-oauth-single-page-app.md) |
 
 ## 访问Adobe API和相关概念{#accessing-adobe-apis-and-related-concepts}
 
