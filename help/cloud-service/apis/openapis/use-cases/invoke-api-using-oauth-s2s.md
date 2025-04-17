@@ -12,22 +12,18 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '1719'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # 使用OAuth服务器到服务器身份验证调用基于OpenAPI的AEM API
 
-了解如何使用&#x200B;_OAuth服务器到服务器_&#x200B;身份验证从自定义应用程序在AEM作为云服务上调用基于OpenAPI的AEM API。
+了解如何使用&#x200B;_OAuth服务器到服务器_&#x200B;身份验证，从自定义应用程序在AEM as a Cloud Service上调用基于OpenAPI的AEM API。
 
-OAuth服务器到服务器身份验证非常适合需要API访问且无需用户交互的后端服务。 它使用OAuth 2.0 _client_credentials_&#x200B;授权类型来验证客户端应用程序。
-
->[!AVAILABILITY]
->
->基于OpenAPI的AEM API作为早期访问计划的一部分提供。 如果您有兴趣访问它们，我们建议您通过电子邮件向[aem-apis@adobe.com](mailto:aem-apis@adobe.com)发送用例说明。
+OAuth服务器到服务器身份验证非常适用于需要API访问而不进行用户交互的后端服务。 它使用OAuth 2.0 _client_credentials_&#x200B;授权类型来验证客户端应用程序。
 
 ## 您学到的内容{#what-you-learn}
 
@@ -131,9 +127,9 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 `assetId`是前缀为`urn:aaid:aem:`的资源的JCR UUID，例如`urn:aaid:aem:a200faf1-6d12-4abc-bc16-1b9a21f870da`。 有多种方法可获取`assetId`：
 
-- 追加AEM资源路径`.json`扩展以获取资源元数据。 例如，`https://author-p63947-e1420429.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/cycling-southern-utah/adobestock-221043703.jpg.json`并查找`jcr:uuid`属性。
+- 附加AEM资源路径`.json`扩展以获取资源元数据。 例如，`https://author-p63947-e1420429.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/cycling-southern-utah/adobestock-221043703.jpg.json`并查找`jcr:uuid`属性。
 
-- 或者，您可以通过检查浏览器的元素检查器中的资源来获取`assetId`。 查找`data-id="urn:aaid:aem:..."`属性。
+- 或者，您可以通过检查浏览器元素检查器中的资产来获取`assetId`。 查找`data-id="urn:aaid:aem:..."`属性。
 
   ![检查资产](../assets/s2s/inspect-asset.png)
 
@@ -180,7 +176,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 1. 下载示例[demo-nodejs-app-to-invoke-aem-openapi](../assets/s2s/demo-nodejs-app-to-invoke-aem-openapi.zip)应用程序zip文件并将其解压缩。
 
-1. 导航到解压缩的文件夹并安装依赖项。
+1. 导航到提取的文件夹并安装依赖项。
 
    ```bash
    $ npm install
@@ -412,11 +408,11 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 ## 在幕后工作
 
-成功调用API后，将在AEM作者服务中创建代表ADC项目的OAuth服务器到服务器凭据的用户，以及与“产品配置文件”和“服务”配置匹配的用户组。 _技术帐户用户_&#x200B;与产品配置文件和&#x200B;_服务_&#x200B;用户组相关联，该用户组具有&#x200B;_读取_&#x200B;资产元数据的必要权限。
+成功调用API后，将在AEM创作服务中创建表示ADC项目的OAuth服务器到服务器凭据的用户，以及匹配产品配置文件和服务配置的用户组。 _技术帐户用户_&#x200B;与产品配置文件和&#x200B;_服务_&#x200B;用户组相关联，该用户组具有&#x200B;_读取_&#x200B;资产元数据的必要权限。
 
 要验证技术帐户用户和用户组的创建情况，请执行以下步骤：
 
-- 在ADC项目中，导航到&#x200B;**OAuth服务器到服务器**&#x200B;凭据配置。 请注意&#x200B;**技术帐户电子邮件**&#x200B;值。
+- 在ADC项目中，导航到&#x200B;**OAuth服务器到服务器**&#x200B;凭据配置。 记下&#x200B;**技术帐户电子邮件**&#x200B;值。
 
   ![技术帐户电子邮件](../assets/s2s/technical-account-email.png)
 
@@ -440,11 +436,11 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 要&#x200B;_读取_&#x200B;资源元数据，为OAuth服务器到服务器凭据创建的技术帐户用户通过服务用户组(例如，AEM Assets Collaborator Users - Service)具有必要权限。
 
-但是，要&#x200B;_创建、更新、删除_ (CUD)资产元数据，技术帐户用户需要其他权限。 可以通过用非GET请求(例如，PATCH、DELETE)调用API来验证它，并观察403错误响应。
+但是，要&#x200B;_创建、更新、删除_ (CUD)资产元数据，技术帐户用户需要其他权限。 您可以通过调用具有非GET请求(例如，PATCH、DELETE)的API来验证它，并观察到403错误响应。
 
 让我们调用&#x200B;_PATCH_&#x200B;请求以更新资源元数据并观察403错误响应。
 
-- 在浏览器中打开[资源作者API文档](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)。
+- 在浏览器中打开[Assets创作API文档](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)。
 
 - 输入以下值：
 
@@ -456,7 +452,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
   | **正文** |  | `[{ "op": "add", "path": "foo","value": "bar"}]` |
   | **参数** | 资产ID | AEM中资源的唯一标识符，例如`urn:aaid:aem:a200faf1-6d12-4abc-bc16-1b9a21f870da` |
   | **参数** | X-Adobe-Accept-Experimental | * |
-  | **参数** | X-Adobe — 接受 — 实验性 | 1 |
+  | **参数** | X-Adobe-Accept-Experimental | 1 |
 
 - 单击&#x200B;**发送**&#x200B;以调用&#x200B;_PATCH_&#x200B;请求并观察403错误响应。
 

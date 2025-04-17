@@ -12,9 +12,9 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '2245'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,6 @@ ht-degree: 0%
 了解如何使用基于用户的身份验证，从使用OAuth Web应用程序的自定义Web应用程序在AEM as a Cloud Service上调用基于OpenAPI的AEM API。
 
 OAuth Web应用程序身份验证非常适用于具有前端和&#x200B;_后端_&#x200B;组件的Web应用程序，这些组件需要代表用户&#x200B;**访问AEM API**。 它使用OAuth 2.0 _authorization_code_&#x200B;授权类型代表用户获取访问令牌以访问AEM API。 有关详细信息，请参阅[OAuth服务器到服务器与Web应用程序与单页应用程序凭据的区别](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
-
->[!AVAILABILITY]
->
->基于OpenAPI的AEM API作为早期访问计划的一部分提供。 如果您有兴趣访问它们，我们建议您通过电子邮件向[aem-apis@adobe.com](mailto:aem-apis@adobe.com)发送用例说明。
 
 ## 您学到的内容{#what-you-learn}
 

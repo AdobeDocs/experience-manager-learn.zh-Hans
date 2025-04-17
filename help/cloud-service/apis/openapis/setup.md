@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 4cdab2b243af74a8075ae65e8f24e7f56ef2a23b
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -23,12 +23,7 @@ ht-degree: 0%
 
 了解如何设置AEM as a Cloud Service环境，以便能够访问基于OpenAPI的AEM API。
 
->[!AVAILABILITY]
->
->基于OpenAPI的AEM API作为早期访问计划的一部分提供。 如果您有兴趣访问它们，我们建议您通过电子邮件向[aem-apis@adobe.com](mailto:aem-apis@adobe.com)发送用例说明。
-
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
-
 
 高级设置过程涉及以下步骤：
 
@@ -151,14 +146,13 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 
 要使ADC项目的ClientID能够与AEM实例通信，您需要配置AEM实例。
 
-此操作通过在的`config.yaml`文件中定义API配置来完成
-AEM项目，并使用Cloud Manager中的配置管道进行部署。
+此操作可通过在YAML文件中定义API配置，并使用Cloud Manager中的配置管道来部署它。 YAML文件定义了可以与AEM实例通信的ADC项目中允许的ClientID。
 
-1. 在AEM项目中，从`config`文件夹中找到或创建`config.yaml`文件。
+1. 在AEM项目中，从`config`文件夹中找到或创建`api.yaml`文件。
 
-   ![查找配置YAML](./assets/setup/locate-config-yaml.png)
+   ![查找API YAML](./assets/setup/locate-api-yaml.png){width="500" zoomable="no"}
 
-1. 将以下配置添加到`config.yaml`文件。
+1. 将以下配置添加到`api.yaml`文件。
 
    ```yaml
    kind: "API"
@@ -179,9 +173,9 @@ AEM项目，并使用Cloud Manager中的配置管道进行部署。
 
 1. 提交配置更改并将更改推送到Cloud Manager管道所连接的远程Git存储库。
 
-1. 使用Cloud Manager中的配置管道来部署上述更改。 请注意，`config.yaml`文件也可以使用命令行工具安装在RDE中。
+1. 使用Cloud Manager中的配置管道来部署上述更改。 请注意，`api.yaml`文件也可以使用命令行工具安装在RDE中。
 
-   ![部署config.yaml](./assets/setup/config-pipeline.png)
+   ![部署YAML](./assets/setup/config-pipeline.png)
 
 ## 后续步骤
 

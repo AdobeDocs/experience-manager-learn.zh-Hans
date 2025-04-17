@@ -12,9 +12,9 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -106,13 +106,13 @@ ht-degree: 0%
 
 要启用ADC项目的OAuth服务器到服务器凭据ClientID以便与AEM实例通信，您需要配置AEM实例。
 
-此操作可通过在AEM项目的`config.yaml`文件中定义配置来完成。 然后，使用Cloud Manager中的配置管道部署`config.yaml`文件。
+此操作可通过在AEM项目的`api.yaml`文件中定义配置来完成。 然后，使用Cloud Manager中的配置管道部署`api.yaml`文件。
 
-- 在AEM项目中，从`config`文件夹中找到或创建`config.yaml`文件。
+- 在AEM项目中，从`config`文件夹中找到或创建`api.yaml`文件。
 
-  ![查找配置YAML](../assets/examples/assets-pim-integration/locate-config-yaml.png)
+  ![查找API YAML](../assets/examples/assets-pim-integration/locate-api-yaml.png)
 
-- 将以下配置添加到`config.yaml`文件。
+- 将以下配置添加到`api.yaml`文件。
 
   ```yaml
   kind: "API"
@@ -134,9 +134,9 @@ ht-degree: 0%
 
 - 将配置更改提交到Git存储库并将更改推送到远程存储库。
 
-- 使用Cloud Manager中的配置管道来部署上述更改。 请注意，`config.yaml`文件也可以使用命令行工具安装在RDE中。
+- 使用Cloud Manager中的配置管道来部署上述更改。 请注意，`api.yaml`文件也可以使用命令行工具安装在RDE中。
 
-  ![部署config.yaml](../assets/examples/assets-pim-integration/config-pipeline.png)
+  ![部署API YAML](../assets/examples/assets-pim-integration/config-pipeline.png)
 
 ### 开发运行时操作
 
