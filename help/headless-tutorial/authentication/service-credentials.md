@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '1963'
 ht-degree: 0%
@@ -149,7 +149,7 @@ function getCommandLineParams() {
 
 读取服务凭据后，将使用这些凭据生成JWT，然后与Adobe IMS API交换访问令牌。 然后，可以使用此访问令牌来访问AEM as a Cloud Service。
 
-此示例应用程序基于Node.js，因此最好使用[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模块来促进(1) JWT的生成和(20)与Adobe IMS的交换。 如果您的应用程序是使用其他语言开发的，请查阅[相应的代码示例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)，了解如何使用其他编程语言构造向Adobe IMS发送的HTTP请求。
+此示例应用程序基于Node.js，因此最好使用[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模块来促进(1) JWT的生成和(20)与Adobe IMS的交换。 如果您的应用程序是使用其他语言开发的，请查阅[相应的代码示例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples)，了解如何使用其他编程语言构造向Adobe IMS发送的HTTP请求。
 
 1. 更新`getAccessToken(..)`以检查JSON文件内容，并确定它表示本地开发访问令牌还是服务凭据。 通过检查`.accessToken`属性是否存在，可以轻松实现此目的，该属性仅存在于本地开发访问令牌JSON中。
 

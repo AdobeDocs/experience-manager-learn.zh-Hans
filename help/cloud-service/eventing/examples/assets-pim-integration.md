@@ -12,9 +12,9 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1518'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 - 已启用[AEM事件的AEM as a Cloud Service环境](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)。 此外，示例[WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)项目必须部署到该项目。
 
-- 访问[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。
+- 访问[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started)。
 
 - 本地计算机上已安装[Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)。
 
@@ -335,6 +335,6 @@ ht-degree: 0%
 
 - 资源元数据检索代码在AEM外部执行，避免了AEM Author服务上的负载，因此这是一种独立扩展的事件驱动架构。
 - 新引入的Assets创作API用于更新AEM中的资源元数据。
-- API身份验证使用OAuth服务器到服务器（也称为客户端凭据流），请参阅[OAuth服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)。
+- API身份验证使用OAuth服务器到服务器（也称为客户端凭据流），请参阅[OAuth服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)。
 - 与Adobe I/O Runtime操作不同，其他Webhook或Amazon EventBridge可用于接收AEM Assets事件并处理元数据更新。
 - 通过AEM Eventing开展的资产事件使企业能够自动化和简化关键流程，从而提高整个内容生态系统的效率和一致性。

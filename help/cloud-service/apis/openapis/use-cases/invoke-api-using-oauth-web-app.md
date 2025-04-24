@@ -12,9 +12,9 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2213'
 ht-degree: 0%
 
 ---
@@ -428,7 +428,7 @@ function getTransformedMetadata(metadata) {
 
 - 必须在其上部署示例[WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)项目。
 
-- 访问[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。
+- 访问[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started)。
 
 - 在本地计算机上安装[Node.js](https://nodejs.org/en/)以运行示例NodeJS应用程序。
 
@@ -648,7 +648,7 @@ function getTransformedMetadata(metadata) {
 
 ## 其他资源
 
-- [用户身份验证实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/)
-- [授权请求](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#authorize-request)
-- [正在获取访问令牌](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#fetching-access-tokens)
-- [正在刷新访问令牌](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#refreshing-access-tokens)
+- [用户身份验证实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation)
+- [授权请求](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims#authorize-request)
+- [正在获取访问令牌](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims#fetching-access-tokens)
+- [正在刷新访问令牌](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims#refreshing-access-tokens)

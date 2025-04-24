@@ -12,10 +12,10 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1687'
+ht-degree: 1%
 
 ---
 
@@ -50,7 +50,7 @@ OAuth服务器到服务器身份验证非常适用于需要API访问而不进行
 
 - 必须在其上部署示例[WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)项目。
 
-- 访问[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。
+- 访问[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started)。
 
 - 在本地计算机上安装[Node.js](https://nodejs.org/en/)以运行示例NodeJS应用程序。
 
@@ -117,7 +117,7 @@ OAuth服务器到服务器身份验证非常适用于需要API访问而不进行
 
 ### 审查API
 
-在开发应用程序之前，让我们从&#x200B;_Assets创作API_&#x200B;查看[交付指定资源的元数据](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/../assets/author/#operation/getAssetMetadata)端点。 API语法为：
+在开发应用程序之前，让我们从&#x200B;_Assets创作API_&#x200B;查看[交付指定资源的元数据](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata)端点。 API语法为：
 
 ```http
 GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
@@ -471,4 +471,4 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 ## 其他资源
 
-- [OAuth 服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+- [OAuth 服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)

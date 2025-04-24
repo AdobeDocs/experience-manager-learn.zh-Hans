@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 182d7b76411ab885ab93b7724b97bf75cc52323c
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 1%
@@ -51,9 +51,9 @@ ht-degree: 1%
 
 - **OAuth服务器到服务器凭据**：非常适用于需要无需用户交互即可访问API的后端服务。 它使用&#x200B;_client_credentials_&#x200B;授权类型，在服务器级别启用安全访问管理。 有关详细信息，请参阅[OAuth服务器到服务器凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/#oauth-server-to-server-credential)。
 
-- **OAuth Web应用程序凭据**：适用于具有代表用户访问AEM API的前端和&#x200B;_后端_&#x200B;组件的Web应用程序。 它使用&#x200B;_authorization_code_&#x200B;授权类型，后端服务器可在此类型中安全地管理密钥和令牌。 有关详细信息，请参阅[OAuth Web App凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-web-app-credential)。
+- **OAuth Web应用程序凭据**：适用于具有代表用户访问AEM API的前端和&#x200B;_后端_&#x200B;组件的Web应用程序。 它使用&#x200B;_authorization_code_&#x200B;授权类型，后端服务器可在此类型中安全地管理密钥和令牌。 有关详细信息，请参阅[OAuth Web App凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential)。
 
-- **OAuth单页应用程序凭据**：专为浏览器中运行的SPA设计，该SPA需要代表没有后端服务器的用户访问API。 它使用&#x200B;_authorization_code_&#x200B;授权类型，并依赖使用PKCE（代码交换的验证密钥）的客户端安全机制来保护授权代码流。 有关详细信息，请参阅[OAuth单页应用程序凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential)。
+- **OAuth单页应用程序凭据**：专为浏览器中运行的SPA设计，该SPA需要代表没有后端服务器的用户访问API。 它使用&#x200B;_authorization_code_&#x200B;授权类型，并依赖使用PKCE（代码交换的验证密钥）的客户端安全机制来保护授权代码流。 有关详细信息，请参阅[OAuth单页应用程序凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential)。
 
 ## OAuth服务器到服务器与Web应用程序与单页应用程序凭据的区别{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 
