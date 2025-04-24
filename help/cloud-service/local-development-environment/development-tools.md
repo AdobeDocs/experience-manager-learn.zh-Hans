@@ -11,9 +11,9 @@ level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 duration: 3508
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1302'
 ht-degree: 5%
 
 ---
@@ -250,7 +250,6 @@ Visual Studio代码是前端开发人员（主要创建前端代码）的理想�
 
 + [下载Visual Studio代码](https://code.visualstudio.com/Download)
 + [下载存储库工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)
-+ [下载aemfed VS代码扩展](https://aemfed.io/)
 + [下载AEM Sync VS代码扩展](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)
 
 ### Eclipse

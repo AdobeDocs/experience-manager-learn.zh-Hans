@@ -11,9 +11,9 @@ last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
 workflow-type: tm+mt
-source-wordcount: '2423'
+source-wordcount: '2408'
 ht-degree: 0%
 
 ---
@@ -179,7 +179,6 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 * [**下载**](https://code.visualstudio.com/Download) **Visual Studio代码**
 * **[存储库](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** — 用于JCR内容的类似FTP的工具
-* **[aemfed](https://aemfed.io/)** — 加快您的AEM前端工作流程
 * **[AEM Sync](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** — 社区支持&#42; Visual Studio Code扩展
 * **[WKND项目](https://github.com/adobe/aem-guides-wknd)** — 此视频中显示的AEM项目示例。
 
@@ -189,8 +188,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 * 00:53 — 使用Maven构建和部署源代码
 * 04:03 — 使用Repo命令行工具更改推送代码
 * 08:29 — 使用Repo命令行工具更改拉取代码
-* 10:40 — 使用嵌入工具更改推送代码
-* 14:24 — 故障排除，重建客户端库
+* 10:32 — 故障排除，重建客户端库
 
 ### [!DNL CRXDE Lite]
 

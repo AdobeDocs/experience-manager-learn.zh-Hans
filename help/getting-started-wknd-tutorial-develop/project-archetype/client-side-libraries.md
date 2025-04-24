@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 duration: 557
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2432'
 ht-degree: 0%
 
 ---
@@ -394,14 +394,6 @@ AEM项目原型会自动设置此集成。 接下来，探索它的工作方式�
    > 静态标记的图像src指向本地AEM实例上的活动图像组件。 如果图像的路径发生更改、AEM未启动或浏览器未登录到本地AEM实例，则图像会显示为已损坏。 如果移交给外部资源，也可以使用静态引用替换图像。
 
 1. 您可以通过键入`CTRL+C`从命令行&#x200B;**停止** webpack服务器。
-
-### 已弃用 {#develop-aemfed}
-
-**[aemfed](https://aemfed.io/)**&#x200B;是一个开源命令行工具，可用于加快前端开发。 它由[aemsync](https://www.npmjs.com/package/aemsync)、[Browsersync](https://browsersync.io/)和[Sling日志跟踪程序](https://sling.apache.org/documentation/bundles/log-tracers.html)提供支持。
-
-从较高层面来看，`aemfed`设计用于侦听&#x200B;**ui.apps**&#x200B;模块中的文件更改，并自动将它们直接同步到正在运行的AEM实例。 本地浏览器会根据更改自动刷新，从而加快前端开发。 它还能够与Sling日志跟踪器配合使用，以在终端中直接自动显示任何服务器端错误。
-
-如果您在&#x200B;**ui.apps**&#x200B;模块中执行了多项工作，修改了HTL脚本并创建了自定义组件，那么&#x200B;**aemfed**&#x200B;可以是一个功能强大的工具。 [可在此处找到完整文档](https://github.com/abmaonline/aemfed)。
 
 ### 调试客户端库 {#debugging-clientlibs}
 
