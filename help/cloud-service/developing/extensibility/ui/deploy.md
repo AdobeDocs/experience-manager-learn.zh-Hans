@@ -11,9 +11,9 @@ jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 166
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 1049f605eb1c3b68e70e34d4cdad31858b076858
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
@@ -94,6 +94,22 @@ Adobe Developer Console工作区与AEM as a Cloud Service环境类型没有任�
 1. 登录到[Adobe Exchange](https://exchange.adobe.com/)
 1. 导航到&#x200B;__管理__ > __App Builder应用程序__
 1. __撤销__&#x200B;要更新的扩展
+
+在撤销扩展后，它仍会在扩展管理器中以已撤销状态显示。 要完全删除它，您需要删除项目。
+
+要删除项目的按钮位于右上方：
+
+![“删除”按钮](./assets/deploy/extension-delete-button.png){align="center"}
+
+在扩展未撤销之前，无法删除项目：
+
+无法删除![项目](./assets/deploy/extension-can-not-delete-project.png){align="center"}
+
+在撤销扩展后，可以删除项目：
+
+无法删除![项目](./assets/deploy/extension-delete-procject.png){align="center"}
+
+删除项目后，该扩展在Extension Manager中不再可见。
 
 ### 部署扩展
 
