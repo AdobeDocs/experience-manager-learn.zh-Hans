@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms 教程
 sub-product: Experience Manager Forms
 version: Experience Manager 6.4, Experience Manager 6.5
 index: y
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: c4b5a015f1c0d5e3877886052476871548ec9b0e
 workflow-type: tm+mt
-source-wordcount: '2101'
-ht-degree: 1%
+source-wordcount: '2104'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 + [概述](overview.md)
 + [要遵循的最佳实践](adaptive-forms/best-practices-adaptive-forms.md)
 + [使用AEM Author设置OKTA身份验证](adaptive-forms/single-sign-on-with-okta.md)
-+ 创建您的第一个自适应表单{#creating-your-first-adaptive-form}
++ 创建您的第一个自适应表单 {#creating-your-first-adaptive-form}
    + [1 — 简介和设置](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [2 — 创建自适应表单模板](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [3 — 创建表单片段](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -31,7 +31,7 @@ ht-degree: 1%
    + [7 — 在收入面板中添加表格](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [8 — “配置资源”面板](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [9 — 使用自定义函数和代码编辑器](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ 处理表单提交{#handling-af-form-submissions}
++ 处理表单提交 {#handling-af-form-submissions}
    + [创建审阅工作流](handling-form-submissions/creating-a-review-workflow.md)
    + [配置自适应表单以触发工作流](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [显示感谢页面](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -49,12 +49,12 @@ ht-degree: 1%
    + [使用SendGrid发送电子邮件](some-useful-integrations/send-grid.md)
    + [将表单数据存储在Azure存储中](some-useful-integrations/store-form-data-in-azure-storage.md)
    + [用Azure Blob填充表单](some-useful-integrations/fetch-form-data-from-azure-storage.md)
-+ 正在创建OSGi包{#creating-your-first-osgi-bundle}
++ 创建OSGi捆绑包 {#creating-your-first-osgi-bundle}
    + [1 — 设置环境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 — 创建OSGi服务](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [3 — 创建Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
    + [4 — 包括第三方包](creating-your-first-osgi-bundle/include-third-party-jars.md)
-+ 自适应表单{#adaptive-forms}
++ 自适应表单 {#adaptive-forms}
    + [在Windows上安装AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [在Linux上安装32位软件包](adaptive-forms/installing-aem-form-on-linux.md)
    + [自适应Forms中的预填充服务](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
@@ -106,7 +106,7 @@ ht-degree: 1%
    + [预填充HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [使用Salesforce建立表单数据模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [将项目动态添加到选择组件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ 使用ChatBot{#chatbot-and-aem-forms}填写PDF表单
++ 使用ChatBot填写PDF表单{#chatbot-and-aem-forms}
    + [1 — 简介](chatbot-and-aem-forms/introduction.md)
    + [2 — 解析ChatBot数据](chatbot-and-aem-forms/parse-chat-bot-data.md)
    + [3 — 创建PDF](chatbot-and-aem-forms/merge-data-with-template.md)
@@ -138,7 +138,7 @@ ht-degree: 1%
    + [2 - Zip表单附件](zipping-form-attachments/custom-process-step.md)
    + [3 — 电子邮件表单附件](zipping-form-attachments/populating-list-of-documents.md)
    + [4 — 测试解决方案](zipping-form-attachments/test.md)
-+ 正在预填带有数据和附件的表单{#prefill-form-with-data-attachments}
++ 使用数据和附件预填表单{#prefill-form-with-data-attachments}
    + [1 — 简介](prefill-form-with-data-attachments/introduction.md)
    + [2 — 创建自定义提交](prefill-form-with-data-attachments/create-custom-submit.md)
    + [3 — 创建OSGi配置](prefill-form-with-data-attachments/create-osgi-configuration.md)
@@ -155,7 +155,7 @@ ht-degree: 1%
    + [9 — 创建主表单](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
    + [10 — 创建MyAccount表单](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
    + [11 — 部署示例](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
-+ 从PDF文件{#import-data-from-pdf-form}导入数据
++ 从PDF文件导入数据{#import-data-from-pdf-form}
    + [1 — 简介](import-data-from-pdf-form/introduction.md)
    + [2 — 创建自适应表单](import-data-from-pdf-form/create-adaptive-form.md)
    + [3 — 创建OSGi服务](import-data-from-pdf-form/create-osgi-service.md)
@@ -163,7 +163,7 @@ ht-degree: 1%
    + [5 — 测试解决方案](import-data-from-pdf-form/test-the-solution.md)
 + 以CSV格式导出提交的数据{#export-submitted-data-csv-format}
    + [导出提交的数据](export-submitted-data-csv-format/export-submitted-data-csv.md)
-+ HTML5 Forms{#html5-forms}
++ HTML5 表单{#html5-forms}
    + [创建HTML5表单](html5-forms/create-html5-form.md)
    + [处理HTML5表单提交](html5-forms/handle-html5-form-submission.md)
 + AEM Forms和Acrobat Sign{#forms-and-sign}
@@ -201,7 +201,7 @@ ht-degree: 1%
    + [1 — 简介](custom-workflow-component/introduction.md)
    + [2写Java代码](custom-workflow-component/custom-process-step-aem-workflow.md)
    + [3 — 创建工作流组件](custom-workflow-component/custom-workflow-component.md)
-+ AEM工作流程{#variables-aem-workflow}中的变量
++ AEM工作流中的变量{#variables-aem-workflow}
    + [简介 — 工作流中的变量](variables-aem-workflow/introduction.md)
    + [XML变量](variables-aem-workflow/part1.md)
    + [JSON变量](variables-aem-workflow/part2.md)
@@ -210,11 +210,11 @@ ht-degree: 1%
    + [表单数据模型变量](variables-aem-workflow/form-data-model.md)
    + [AEM Workflow中的规则编辑器](variables-aem-workflow/part5.md)
    + [记录工作流变量](variables-aem-workflow/part6.md)
-+ 审核表单数据{#review-form-data}
++ 查看表单数据{#review-form-data}
    + [1 — 简介](review-form-data/introduction.md)
    + [2 — 创建组件](review-form-data/create-component.md)
    + [3 — 部署资产](review-form-data/deploy-on-your-system.md)
-+ 在MySQL数据库{#storing-and-retrieving-form-data}中存储和检索表单数据
++ 在MySQL数据库中存储和检索表单数据{#storing-and-retrieving-form-data}
    + [简介](storing-retrieving-form-data/introduction.md)
    + [配置数据Source](storing-retrieving-form-data/part1.md)
    + [用于存储数据的服务](storing-retrieving-form-data/part3.md)
@@ -229,7 +229,7 @@ ht-degree: 1%
    + [部分 — 4](offline-mobile-form-submission/author-servlet.md)
    + [部分 — 5](offline-mobile-form-submission/review-workflow.md)
    + [部分 — 6](offline-mobile-form-submission/deploy-assets.md)
-+ 在移动表单提交时触发AEM工作流{#trigger-aem-workflow-on-mobile-form-submission}
++ 在移动表单提交时触发AEM工作流程{#trigger-aem-workflow-on-mobile-form-submission}
    + [部分 — 1](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
    + [第2部分](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
    + [部分 — 3](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
@@ -242,7 +242,7 @@ ht-degree: 1%
    + [构建查询界面](query-form-submissions/part3.md)
    + [写入预填充服务](query-form-submissions/part4.md)
    + [部署示例](query-form-submissions/part5.md)
-+ 在Forms Portal{#listing-custom-asset-types}中列出自定义资源类型
++ 在Forms Portal中列出自定义资源类型{#listing-custom-asset-types}
    + [Part1 — 注册自定义资源类型](listing-custom-asset-types/part1.md)
    + [第2部分 — 创建自定义模板](listing-custom-asset-types/part2.md)
 + AEM Forms与Marketo{#aem-forms-with-marketo}
@@ -258,7 +258,7 @@ ht-degree: 1%
    + [4 — 使用ACS配置文件信息预填表单](aem-forms-with-adobe-campaign/partthree.md)
    + [5 — 使用表单数据模型创建ACS配置文件](aem-forms-with-adobe-campaign/partfour.md)
 
-+ 欢迎套件{#welcome-kit}
++ 欢迎套件 {#welcome-kit}
    + [简介](welcome-kit/introduction.md)
    + [创建欢迎套件组件](welcome-kit/create-welcomekit-component.md)
    + [创建工作流组件](welcome-kit/create-workflow-component.md)
@@ -272,7 +272,7 @@ ht-degree: 1%
    + [6 — 显示选定的表单](headless-forms/open-form-card-view.md)
    + [7 — 处理表单提交](headless-forms/display-thank-you-message.md)
 
-+ Forms和Acrobat Sign的React应用程序{#react-ic-sign}
++ Forms和Acrobat Sign的React应用程序 {#react-ic-sign}
    + [1 — 简介](react-ic-sign/introduction.md)
    + [2 — 生成文档](react-ic-sign/create-ic-document.md)
    + [3 - Acrobat Sign API包装器](react-ic-sign/wrapper-sign-api.md)
@@ -316,7 +316,7 @@ ht-degree: 1%
    + [Workbench简介](aem-forms-workbench/workbench-introduction.md)
    + [正在创建表单进程](aem-forms-workbench/workbench-creating-a-process.md)
    + [调试进程](aem-forms-workbench/workbench-recording-and-testing-process.md)
-+ 打印渠道的交互式通信
++ 打印渠道的交互式通信 
 {#ic-print-channel-tutorial}
    + [1 — 简介](ic-print-channel-tutorial/introduction.md)
    + [2 — 设置Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
@@ -330,11 +330,11 @@ ht-degree: 1%
    + [10 — 向打印渠道添加表格](ic-print-channel-tutorial/adding-table-to-print-channel.md)
    + [11 — 使用Watched文件夹生成文档](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
    + [12 — 在提交表单时打开代理UI](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
-+ 保存并检索草稿书信{#store-retrieve-letters}
++ 保存和检索草稿信件 {#store-retrieve-letters}
    + [简介](store-retrieve-letters/introduction.md)
    + [实施](store-retrieve-letters/save-draft-letters.md)
    + [部署示例](store-retrieve-letters/deploy-on-your-server.md)
-+ 交互式通信{#interactive-communications}
++ 交互式通信 {#interactive-communications}
    + [使用批处理API](interactive-communications/batch-generation-interactive-communications.md)
    + [多系列图表](interactive-communications/multiseriescharts.md)
    + [根据提交的数据生成打印渠道文档](interactive-communications/merge-data-with-ic-template.md)
@@ -343,8 +343,9 @@ ht-degree: 1%
    + [使用AEM Forms Print Channel文档中的表组件](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [使用Watch文件夹为Print Channel生成交互式通信文档](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
    + [自定义文本编辑器](interactive-communications/customize-text-editor.md)
-
-+ Web渠道{#ic-web-channel-tutorial}的交互式通信
++ ExL新闻稿{#exl-newsletters}
+   + [归档](./newsletters/archives.md)
++ Web渠道的交互式通信 {#ic-web-channel-tutorial}
    + [1 — 简介](ic-web-channel-tutorial/introduction.md)
    + [2 — 设置Tomcat](ic-web-channel-tutorial/partone.md)
    + [3 — 创建数据Source](ic-web-channel-tutorial/parttwo.md)
