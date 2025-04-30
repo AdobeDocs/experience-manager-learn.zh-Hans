@@ -12,9 +12,9 @@ thumbnail: KT-17425.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 7cd9efb62d1afdcc089e1e6260d6cf2fc5495afe
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '999'
 ht-degree: 4%
 
 ---
@@ -33,7 +33,7 @@ AEM提供以下API以便与其创作和发布服务类型进行交互。
 
 | AEM API类型 | 描述 | 可用性 | 用例 | API示例 |
 | --- | --- | --- | --- | --- |
-| 基于OpenAPI的AEM API | 适用于Assets、Sites和Forms的机器可读的标准化API。 | **仅限AEM as a Cloud Service** | API优先开发，现代应用程序 | [Assets创作API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)、[文件夹API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)、[AEM Sites API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/)、[Forms Acrobat服务](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/)等 |
+| 基于OpenAPI的AEM API | 适用于Assets、Sites和Forms的机器可读的标准化API。 | **仅限AEM as a Cloud Service** | API优先开发，现代应用程序 | [Assets创作API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)、[文件夹API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)、[AEM Sites API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/)、[Forms文档服务API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/)等 |
 | RESTful API | 用于与AEM资源交互的传统REST端点。 | AEM 6.X、AEM as a Cloud Service | CRUD操作，现代应用程序 | [Assets HTTP API](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)、[工作流REST API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-program-interaction#using-the-workflow-rest-api)、[内容服务的JSON导出程序](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter)等 |
 | GRAPHQL API | 针对通过灵活查询高效地检索结构化内容进行了优化。 | AEM 6.X、AEM as a Cloud Service | Headless CMS、SPA、移动应用程序 | [GraphQL API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments) |
 | 传统（非RESTful） API | 旧版API，如JCR、Sling模型、查询生成器等。 | AEM 6.X、AEM as a Cloud Service | 旧版集成，向后兼容性 | [查询生成器API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api)及其他 |
