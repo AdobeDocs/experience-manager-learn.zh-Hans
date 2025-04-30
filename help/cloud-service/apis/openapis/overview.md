@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 58ae9e503bd278479d78d4df6ffe39356d5ec59b
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1100'
 ht-degree: 1%
 
 ---
@@ -54,6 +54,15 @@ ht-degree: 1%
 - **OAuth Web应用程序凭据**：适用于具有代表用户访问AEM API的前端和&#x200B;_后端_&#x200B;组件的Web应用程序。 它使用&#x200B;_authorization_code_&#x200B;授权类型，后端服务器可在此类型中安全地管理密钥和令牌。 有关详细信息，请参阅[OAuth Web App凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential)。
 
 - **OAuth单页应用程序凭据**：专为浏览器中运行的SPA设计，该SPA需要代表没有后端服务器的用户访问API。 它使用&#x200B;_authorization_code_&#x200B;授权类型，并依赖使用PKCE（代码交换的验证密钥）的客户端安全机制来保护授权代码流。 有关详细信息，请参阅[OAuth单页应用程序凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential)。
+
+## 要使用的身份验证方法{#auth-method-decision}
+
+在决定使用哪种身份验证方法时，请考虑以下事项：
+
+![要使用哪种身份验证方法？](./assets/overview/which-authentication-method-to-use.png)
+
+每当涉及AEM用户上下文时，用户身份验证（Web应用程序或单页应用程序）都应是默认选项。 这可确保存储库中的所有操作都正确归属于经过身份验证的用户，并且用户仅被限制在他们有权使用的权限范围内。
+使用服务器到服务器（或技术系统帐户）代表个人用户执行操作会绕过安全模型，并引入权限提升和不准确审核等风险。
 
 ## OAuth服务器到服务器与Web应用程序与单页应用程序凭据的区别{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 
