@@ -24,11 +24,11 @@ ht-degree: 42%
 >id="intro_core_components"
 >title="AEM as a Cloud Service 中的核心组件简介"
 >abstract="在此选项卡中，您可以查看帮助构建与 AEM as a Cloud Service 兼容的现代网站的内容。执行此操作的关键是使用核心组件"
->additional-url="https://video.tv.adobe.com/v/18926" text="核心组件概述"
+>additional-url="https://video.tv.adobe.com/v/36705?captions=chi_hans" text="核心组件概述"
 
 AEM核心组件是与Adobe Experience Manager一起使用的一组标准组件。 核心组件使用Adobe的最佳实践和标准构建，为任何Sites实施提供了一套基准功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/18926?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36705?quality=12&learn=on&captions=chi_hans)
 
 ## 其他资源 {#additional-resources}
 
