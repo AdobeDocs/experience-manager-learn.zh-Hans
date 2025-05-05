@@ -142,7 +142,7 @@ session.save();
 * 将浏览器指向[组合附件表单](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
 * 在ID文档中添加一个附件，并将几个pdf文档添加到银行对帐单部分
 * 提交表单以触发工作流
-* 检查crx](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload)中工作流的[有效负荷文件夹中的已组合pdf
+* 检查crx[&#128279;](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload)中工作流的有效负荷文件夹中的已组合pdf
 
 >[!NOTE]
 > 如果已为自定义捆绑包启用了记录器，则DDX和组合的文件将写入AEM安装的文件夹。

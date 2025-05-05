@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 创建数据库
 
-此示例使用MySQL数据库存储自适应表单数据。 您需要通过将架构文件](assets/data-base-schema.sql)导入MySQL Workbench来创建[数据库架构。
+此示例使用MySQL数据库存储自适应表单数据。 您需要通过将架构文件[&#128279;](assets/data-base-schema.sql)导入MySQL Workbench来创建数据库架构。
 
 ## 创建数据源
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 ## 导入自适应表单示例
 
-构成此示例的2个表单需要导入AEM。 可从此处](assets/sample-forms.zip)下载示例表单[
+构成此示例的2个表单需要导入AEM。 可从此处[&#128279;](assets/sample-forms.zip)下载示例表单
 
 在编辑模式下打开[MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html)。 在自适应表单的相应字段中指定Vonage API密钥和API密钥值。
 

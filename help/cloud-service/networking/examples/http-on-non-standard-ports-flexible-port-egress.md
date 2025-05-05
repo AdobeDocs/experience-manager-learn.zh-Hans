@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
-> 此代码示例仅适用于[灵活端口出口](../flexible-port-egress.md)。 对于专用出口IP地址和VPN](./http-dedicated-egress-ip-vpn.md)的非标准端口上的[HTTP/HTTPS连接，提供了类似但不同的代码示例。
+> 此代码示例仅适用于[灵活端口出口](../flexible-port-egress.md)。 对于专用出口IP地址和VPN[&#128279;](./http-dedicated-egress-ip-vpn.md)的非标准端口上的HTTP/HTTPS连接，提供了类似但不同的代码示例。
 
 ## 代码示例
 

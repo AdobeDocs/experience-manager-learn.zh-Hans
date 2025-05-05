@@ -350,7 +350,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 您可以在此处](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/extend-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CardImpl.java)查看[已完成的CardImpl.java。
+   > 您可以在此处[&#128279;](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/extend-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CardImpl.java)查看已完成的CardImpl.java。
 
 8. 打开终端窗口，然后使用`core`目录中的Maven `autoInstallBundle`配置文件仅部署`core`模块的更新。
 
@@ -448,7 +448,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 您可以在此处](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card)查看已完成的[Angular卡组件代码。
+   > 您可以在此处[&#128279;](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card)查看已完成的Angular卡组件代码。
 
 5. 使用Maven从项目的根目录中部署对AEM的完整更改：
 

@@ -31,7 +31,7 @@ POST /services/OutputService/GeneratePdfOutput HTTP/1.1] com.adobe.fd.output.int
 
 * 停止AEM服务器
 * 在AEM安装的crx-quickstart文件夹下创建名为&#x200B;**install**&#x200B;的文件夹
-* 创建名为&#x200B;**org.apache.aries.transaction.config**的文件，该文件包含以下内容
+* 创建名为&#x200B;**org.apache.aries.transaction.config**&#x200B;的文件，该文件包含以下内容
 aries.transaction.timeout=&quot;1200&quot;
 在“安装文件夹”下。 您可以根据需要更改超时值。 超时值以秒为单位
 

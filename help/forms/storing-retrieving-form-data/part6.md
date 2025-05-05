@@ -28,7 +28,7 @@ ht-degree: 1%
 
 * 使用[felix Web控制台](http://localhost:4502/system/console/bundles)下载并部署[MySql驱动程序Jar](assets/mysqldriver.jar)文件
 * 使用[felix Web控制台](http://localhost:4502/system/console/bundles)下载并部署[OSGi包](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar)
-* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)下载并安装包含客户端库、自适应表单模板和自定义页面组件](assets/store-and-fetch-af-with-data.zip)的[包
+* 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)下载并安装包含客户端库、自适应表单模板和自定义页面组件[&#128279;](assets/store-and-fetch-af-with-data.zip)的包
 * 使用[FormsAndDocuments接口](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)导入[自适应表单示例](assets/sample-adaptive-form.zip)
 
 * 使用MySql Workbench导入[form-data-db.sql](assets/form-data-db.sql)。 这将在数据库中创建必要的方案和表，以供本教程使用。

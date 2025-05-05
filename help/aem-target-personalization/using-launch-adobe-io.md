@@ -100,10 +100,10 @@ Target扩展包含两个主要部分：
 
 1. 在&#x200B;**扩展**&#x200B;下，您可以看到已为标记属性安装的扩展列表。 (默认情况下已安装[Adobe启动核心扩展](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension))
 2. 单击&#x200B;**扩展目录**&#x200B;选项，然后在筛选器中搜索Target。
-3. 选择最新版本的Adobe Target at.js并单击&#x200B;**安装**选项。
+3. 选择最新版本的Adobe Target at.js并单击&#x200B;**安装**&#x200B;选项。
    ![标记 — 新属性](assets/using-launch-adobe-io/launch-target-extension.png)
 
-4. 单击&#x200B;**配置**按钮，您会注意到已导入Target帐户凭据的配置窗口以及此扩展的at.js版本。
+4. 单击&#x200B;**配置**&#x200B;按钮，您会注意到已导入Target帐户凭据的配置窗口以及此扩展的at.js版本。
    ![目标 — 扩展配置](assets/using-launch-adobe-io/launch-target-extension-2.png)
 
    通过异步标记嵌入代码部署Target时，您应在标记嵌入代码之前对页面上的预隐藏代码片段进行硬编码，以便管理内容闪烁。 我们稍后将详细了解预隐藏的狙击手。 您可以在[此处](assets/using-launch-adobe-io/prehiding.js)下载预隐藏代码片段
@@ -128,7 +128,7 @@ Target扩展包含两个主要部分：
 3. 运行&#x200B;**Build for Staging选项**。
 4. 生成完成后，运行&#x200B;**Approve for Publishing**，这会将您的更改从暂存环境移至生产环境。
    ![暂存到生产](assets/using-launch-adobe-io/build-staging.png)
-5. 最后，运行&#x200B;**Build和Publish到生产环境**选项以将更改推送到生产环境。
+5. 最后，运行&#x200B;**Build和Publish到生产环境**&#x200B;选项以将更改推送到生产环境。
    ![将内部版本和Publish复制到生产环境](assets/using-launch-adobe-io/build-and-publish.png)
 
 ### Adobe Experience Manager
@@ -146,6 +146,6 @@ Target扩展包含两个主要部分：
 5. 手动验证集成。 （06时15分至06时33分）
 6. 正在使用Adobe Experience Cloud Debugger浏览器插件。 （06时51分至07时22分）
 
-此时，您已使用标记](./using-aem-cloud-services.md#integrating-aem-target-options)成功地将[AEM与Adobe Target集成，如选项1中所述。
+此时，您已使用标记[&#128279;](./using-aem-cloud-services.md#integrating-aem-target-options)成功地将AEM与Adobe Target集成，如选项1中所述。
 
 为了使用AEM体验片段选件来支持您开展个性化活动，让我们继续下一章，并使用旧版云服务将AEM与Adobe Target集成。

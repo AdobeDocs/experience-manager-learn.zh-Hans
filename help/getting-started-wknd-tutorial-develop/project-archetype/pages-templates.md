@@ -312,7 +312,7 @@ AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹�
 
    将HTL拆分为多个脚本的另一个原因是允许代理组件覆盖单个脚本以实施自定义业务逻辑。 创建HTL脚本`customfooterlibs.html`和`customheaderlibs.html`的明确目的是要通过实施项目来覆盖。
 
-   通过阅读本文](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)，您可以了解有关可编辑模板如何影响[内容页面渲染的更多信息。
+   通过阅读本文[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)，您可以了解有关可编辑模板如何影响内容页面渲染的更多信息。
 
 1. Inspect是另一个核心组件，如`/libs/core/wcm/components/breadcrumb/v2/breadcrumb`处的痕迹导航。 查看`breadcrumb.html`脚本以了解最终如何生成痕迹导航组件的标记。
 
@@ -321,7 +321,7 @@ AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹�
 通常，尤其是在开始AEM项目时，将配置（如模板和相关内容策略）保留到源代码控制中很有价值。 这可确保所有开发人员都针对同一组内容和配置工作，并可确保环境之间具有额外的一致性。 一旦项目达到一定的成熟度，管理模板的操作就可以交给一组特殊的超级用户。
 
 
-目前，模板被视为其他代码段，并将&#x200B;**文章页面模板**作为项目的一部分向下同步。
+目前，模板被视为其他代码段，并将&#x200B;**文章页面模板**&#x200B;作为项目的一部分向下同步。
 在此之前，代码会从AEM项目推送到AEM的本地实例。 **文章页面模板**&#x200B;是直接在AEM的本地实例上创建的，因此它需要&#x200B;**将该模板**&#x200B;导入AEM项目。 出于此特定目的，**ui.content**&#x200B;模块包含在AEM项目中。
 
 在VSCode IDE中使用[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync&amp;ssr=false#overview)插件完成后续几个步骤。 但是，它们可以使用您配置为&#x200B;**import**&#x200B;或从AEM的本地实例导入内容的任何IDE来执行。

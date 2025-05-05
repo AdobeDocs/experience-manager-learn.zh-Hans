@@ -25,7 +25,7 @@ ht-degree: 0%
 
 具有AEM Headless的![Web组件](./assets/web-component/web-component.png)
 
-在GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component)上查看[源代码
+在GitHub[&#128279;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component)上查看源代码
 
 ## 先决条件 {#prerequisites}
 

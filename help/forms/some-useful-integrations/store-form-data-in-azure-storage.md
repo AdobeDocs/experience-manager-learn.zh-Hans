@@ -48,7 +48,7 @@ ht-degree: 0%
 
 ## 提供Blob SAS令牌和存储URI
 
-为了使代码更通用，可以使用OSGi配置来配置这两个属性，如下所示。 _**aemformstutorial**_&#x200B;是存储帐户的名称，_**formsubmissions**_是将存储数据的容器。
+为了使代码更通用，可以使用OSGi配置来配置这两个属性，如下所示。 _&#x200B;**aemformstutorial**&#x200B;_&#x200B;是存储帐户的名称，_&#x200B;**formsubmissions**&#x200B;_是将存储数据的容器。
 请确保存储URI末尾具有/，并且SAS令牌的开头为？
 ![osgi-configuration](./assets/azure-portal-osgi-configuration.png)
 

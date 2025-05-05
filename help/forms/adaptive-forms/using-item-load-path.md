@@ -32,4 +32,4 @@ ht-degree: 0%
 
 要在下拉列表中加载这些值，请在项加载路径属性&#x200B;**/content/assets/assettypes**&#x200B;中提供以下路径
 
-可从此处](assets/item-load-path-package.zip)下载示例包[
+可从此处[&#128279;](assets/item-load-path-package.zip)下载示例包

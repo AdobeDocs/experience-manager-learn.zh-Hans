@@ -133,7 +133,7 @@ Teaser块的设计分为两个逻辑组件（图像和文本内容），确保�
 Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Services HTML显示为所需Web体验所需的代码，块模型应反映此结构。
 
 - 使用[字段折叠](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)将&#x200B;**图像**&#x200B;和&#x200B;**图像替换文本**&#x200B;组合在一起。
-- 使用[元素分组](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的[字段折叠将文本内容字段分组在一起。
+- 使用[元素分组](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的字段折叠将文本内容字段分组在一起。
 
 如果您不熟悉[字段折叠](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)、[元素分组](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)或[类型推断](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)，请在继续之前查看链接的文档，因为它们对于创建结构良好的块模型至关重要。
 
@@ -215,7 +215,7 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 </div>        
 ```
 
-如下一章](./7a-block-css.md)中的[所示，此HTML结构将块样式简化为内聚单元。
+如下一章[&#128279;](./7a-block-css.md)中的所示，此HTML结构将块样式简化为内聚单元。
 
 要了解不使用字段折叠和元素分组的后果，请参阅上面的&#x200B;**错误方式**&#x200B;选项卡。
 

@@ -69,7 +69,7 @@ ht-degree: 0%
 
 1. 打开新的浏览器窗口并登录AEM。 打开&#x200B;**杂志**&#x200B;页面，如： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html)。
 
-   页面](assets/adobe-client-data-layer/byline-component-onpage.png)上的![署名组件
+   页面![&#128279;](assets/adobe-client-data-layer/byline-component-onpage.png)上的署名组件
 
    您应该看到作为体验片段的一部分添加到页面的署名组件示例。 您可以在[http://localhost:4502/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/byline.html](http://localhost:4502/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/byline.html)查看体验片段
 1. 在&#x200B;**控制台**&#x200B;中打开开发人员工具并输入以下命令：
@@ -424,7 +424,7 @@ Adobe Client Data Layer是事件驱动的，触发操作的最常见事件之一
 
    >[!NOTE]
    >
-   > 如果为在整个实施中重复使用的对象构建高级数据层，则建议将数据层元素提取到它们自己的数据层特定Java™对象中。 例如，Commerce核心组件已为`ProductData`和`CategoryData`添加接口，因为这些接口可用于Commerce实施中的许多组件。 有关更多详细信息，请查看aem-cif-core-components存储库](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer)中的[代码。
+   > 如果为在整个实施中重复使用的对象构建高级数据层，则建议将数据层元素提取到它们自己的数据层特定Java™对象中。 例如，Commerce核心组件已为`ProductData`和`CategoryData`添加接口，因为这些接口可用于Commerce实施中的许多组件。 有关更多详细信息，请查看aem-cif-core-components存储库[&#128279;](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer)中的代码。
 
 ## 恭喜！ {#congratulations}
 

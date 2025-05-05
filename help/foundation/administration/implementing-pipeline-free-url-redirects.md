@@ -139,8 +139,7 @@ RewriteRule ^(.*)$ ${<MAPALIAS>:$1|/} [L,R=301]
 让我们查看上面提到的[的每个URL重定向管理选项的Dispatcher配置](#manage-redirects)。
 
 >[!BEGINTABS]
-
->DAM中的[!TAB 文本文件]
+>[!TAB DAM中的 文本文件]
 
 当URL重定向在文本文件中作为键值对进行管理，并上传到DAM时，配置如下。
 

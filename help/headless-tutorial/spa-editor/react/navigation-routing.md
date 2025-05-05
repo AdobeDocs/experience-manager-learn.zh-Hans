@@ -312,7 +312,7 @@ ht-degree: 0%
 
    ![标题链接](assets/navigation-routing/header-link.png)
 
-   请注意，未触发完整页面刷新&#x200B;****，并且SPA路由正在运行。
+   请注意，未触发完整页面刷新&#x200B;**&#x200B;**，并且SPA路由正在运行。
 
 1. （可选）使用标准`<a>`锚标记试验`Header.js`文件：
 

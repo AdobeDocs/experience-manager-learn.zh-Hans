@@ -60,7 +60,7 @@ ht-degree: 1%
 
 视频的高级步骤：
 
-1. 在Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)中创建新的Git [存储库
+1. 在Cloud Manager[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)中创建新的Git 存储库
 1. 将主题源项目添加到Cloud Manager Git存储库：
 
    ```shell

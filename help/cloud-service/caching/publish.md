@@ -67,7 +67,7 @@ AEM Publish CDN基于TTL（生存时间），这意味着缓存生命周期由`C
 
 #### 默认缓存期限
 
-如果HTTP响应符合上述限定符](#when-are-http-requestsresponses-cached)的AEM Dispatcher缓存[的条件，则除非存在自定义配置，否则以下是默认值。
+如果HTTP响应符合上述限定符[&#128279;](#when-are-http-requestsresponses-cached)的AEM Dispatcher缓存的条件，则除非存在自定义配置，否则以下是默认值。
 
 | 内容类型 | 默认CDN缓存期限 |
 |:------------ |:---------- |
@@ -123,11 +123,11 @@ AEM Dispatcher缓存以下内容：
 AEM Dispatcher使用以下方法缓存HTTP响应：
 
 + 直到通过发布或取消发布内容等机制触发失效。
-+ 在Dispatcher配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl)中明确配置[时的TTL （生存时间）。 通过查看`enableTTL`配置，查看[AEM项目原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L122-L127)中的默认配置。
++ 在Dispatcher配置[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl)中明确配置时的TTL （生存时间）。 通过查看`enableTTL`配置，查看[AEM项目原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L122-L127)中的默认配置。
 
 #### 默认缓存期限
 
-如果HTTP响应符合上述限定符](#when-are-http-requestsresponses-cached-1)的AEM Dispatcher缓存[的条件，则除非存在自定义配置，否则以下是默认值。
+如果HTTP响应符合上述限定符[&#128279;](#when-are-http-requestsresponses-cached-1)的AEM Dispatcher缓存的条件，则除非存在自定义配置，否则以下是默认值。
 
 | 内容类型 | 默认CDN缓存期限 |
 |:------------ |:---------- |

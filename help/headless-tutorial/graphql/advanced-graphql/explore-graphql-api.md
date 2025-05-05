@@ -48,7 +48,7 @@ AEM中的GraphQL API允许您向下游应用程序公开内容片段数据。 �
 
 >[!IMPORTANT]
 >
->在中，某些版本的AEM (6.X.X) GraphiQL Explorer （又称GraphiQL IDE）工具需要手动安装，请按照此处](../how-to/install-graphiql-aem-6-5.md)的[说明进行操作。
+>在中，某些版本的AEM (6.X.X) GraphiQL Explorer （又称GraphiQL IDE）工具需要手动安装，请按照此处[&#128279;](../how-to/install-graphiql-aem-6-5.md)的说明进行操作。
 
 1. 在右上角，确保终结点设置为&#x200B;**WKND共享终结点**。 更改此处的&#x200B;_终结点_&#x200B;下拉列表值会在左上角显示现有&#x200B;_持久查询_。
 

@@ -26,7 +26,7 @@ ht-degree: 29%
 请参阅[文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html)以了解最佳先决条件、最佳实践等。
 >[!VIDEO](https://video.tv.adobe.com/v/335893?quality=12&learn=on)
 
-您可以从此处](assets/embedding-af-web-page.zip)下载视频[中使用的示例文件
+您可以从此处[&#128279;](assets/embedding-af-web-page.zip)下载视频中使用的示例文件
 
 以下代码用于获取自适应表单并将表单嵌入到由类名称&#x200B;**right**&#x200B;标识的容器中
 

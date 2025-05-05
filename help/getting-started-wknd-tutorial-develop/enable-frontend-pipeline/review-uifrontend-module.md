@@ -56,7 +56,7 @@ ht-degree: 0%
 
 在开发阶段，通过更新`ui.frontend/src/main/webpack`文件夹中的CSS、JS文件来执行前端更改，如样式更改和重新品牌化。 然后，在构建期间，[webpack](https://webpack.js.org/)模块捆绑器和maven插件将这些文件转换为`ui.apps`模块下的优化AEM clientlibs。
 
-在AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)中运行&#x200B;[__全栈栈__&#x200B;管道时，将前端更改部署到Cloud Manager环境。
+在AEM as a Cloud Service[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)中运行&#x200B;__全栈栈__&#x200B;管道时，将前端更改部署到Cloud Manager环境。
 
 前端资源通过以`/etc.clientlibs/`开头的URI路径交付给Web浏览器，通常缓存在AEM Dispatcher和CDN上。
 

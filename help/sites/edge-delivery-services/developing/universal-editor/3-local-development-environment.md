@@ -71,7 +71,7 @@ Edge Delivery Services网站项目的开发工具和流程可供Web开发人员�
 
 ## 克隆GitHub存储库
 
-将在新代码项目第](./1-new-code-project.md)章(包含AEM Edge Delivery Services代码项目)中创建的[GitHub存储库克隆到您的本地开发环境。
+将在新代码项目第[&#128279;](./1-new-code-project.md)章(包含AEM Edge Delivery Services代码项目)中创建的GitHub存储库克隆到您的本地开发环境。
 
 ![GitHub存储库克隆](./assets/3-local-development-environment/github-clone.png)
 

@@ -109,7 +109,7 @@ ht-degree: 0%
 
    **下划线**： `cmp-title--underline`
 
-   标题](assets/style-system/title-style-policy.png)的![样式策略配置
+   标题![&#128279;](assets/style-system/title-style-policy.png)的样式策略配置
 
    单击&#x200B;**完成**&#x200B;以保存对标题策略所做的更改。
 

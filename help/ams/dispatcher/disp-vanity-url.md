@@ -120,7 +120,7 @@ Dispatcher的场文件中有一个配置部分：
 
 因此，如果您通过URI访问AEM实例，则可以看到它获取的内容：
 
-从/libs/granite/dispatcher/content/vanityUrls.html](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")呈现的内容的![屏幕截图
+从/libs/granite/dispatcher/content/vanityUrls.html![&#128279;](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")呈现的内容的屏幕截图
 
 它实际上是一个非常简单的列表
 

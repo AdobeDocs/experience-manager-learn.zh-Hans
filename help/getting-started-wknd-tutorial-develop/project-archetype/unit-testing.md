@@ -92,7 +92,7 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 1. Apache Sling Mocks
 1. AEM Mocks Test Framework （由io.wcm提供）
 
-使用[AEM Maven原型](project-setup.md)在安装期间，会自动将&#x200B;**JUnit5**、**Mockito和&#x200B;**AEM Mocks**&#x200B;测试依赖项添加到项目中。
+使用[AEM Maven原型](project-setup.md)在安装期间，会自动将&#x200B;**JUnit5**、**Mockito和&#x200B;**&#x200B;AEM Mocks**&#x200B;测试依赖项添加到项目中。
 
 1. 要查看这些依赖项，请打开位于&#x200B;**aem-guides-wknd/pom.xml**&#x200B;的父Reactor POM，导航到`<dependencies>..</dependencies>`并查看`<!-- Testing -->`下io.wcm的JUnit、Mockito、Apache Sling Mocks和AEM Mock Tests的依赖项。
 1. 确保`io.wcm.testing.aem-mock.junit5`设置为&#x200B;**4.1.0**：
@@ -197,7 +197,7 @@ _如果系统上同时安装了Java™ 8和Java™ 11，则VS代码测试运行�
 
 *`core/src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`*
 
-1. 通过右键单击`BylineImplTest.java`文件并点按&#x200B;**运行**来运行JUnit测试用例。
+1. 通过右键单击`BylineImplTest.java`文件并点按&#x200B;**运行**&#x200B;来运行JUnit测试用例。
 如预期的那样，所有测试都会失败，因为它们尚未实施。
 
    ![作为junit测试运行](assets/unit-testing/run-junit-tests.png)

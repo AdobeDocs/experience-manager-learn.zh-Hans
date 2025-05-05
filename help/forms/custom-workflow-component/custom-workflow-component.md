@@ -22,7 +22,7 @@ ht-degree: 0%
 
 
 [下载自定义工作流组件](assets/saveFiles.zip)
-使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入工作流组件[
+使用包管理器[&#128279;](http://localhost:4502/crx/packmgr/index.jsp)导入工作流组件
 
 自定义工作流组件位于/apps/AEMFormsDemoListings/workflowcomponent/SaveFiles中
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 作者指定参数，如下面的屏幕快照中所示
 ![工作流组件](assets/custom-workflow-component.png)
 
-这些值将存储为元数据节点的属性。 例如，值&#x200B;**c：\formsattachments**将存储在元数据节点的属性saveToLocation中
+这些值将存储为元数据节点的属性。 例如，值&#x200B;**c：\formsattachments**&#x200B;将存储在元数据节点的属性saveToLocation中
 ![保存位置](assets/save-to-location.png)
 
 ## cq：editConfig

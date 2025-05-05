@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ### 解决方案包
 
-可以通过包管理器下载并安装已完成的杂志模板](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.1.zip)的[解决方案。
+可以通过包管理器下载并安装已完成的杂志模板[&#128279;](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.1.zip)的解决方案。
 
 ## 使用体验片段更新页眉和页脚 {#experience-fragments}
 

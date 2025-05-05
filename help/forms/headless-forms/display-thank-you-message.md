@@ -106,4 +106,4 @@ export default function Contact(){
 }
 ```
 
-上述代码使用本机html组件，这些组件映射到自适应表单中使用的组件。 例如，我们将文本输入自适应表单组件映射到TextField组件。 可以从此处](./assets/native-components.zip)下载文章[中使用的本机组件
+上述代码使用本机html组件，这些组件映射到自适应表单中使用的组件。 例如，我们将文本输入自适应表单组件映射到TextField组件。 可以从此处[&#128279;](./assets/native-components.zip)下载文章中使用的本机组件

@@ -23,7 +23,7 @@ ht-degree: 0%
 
 与Adobe Experience Manager (AEM) as a Cloud Service的集成必须能够安全地对AEM服务进行身份验证。 AEM的Developer Console授予对服务凭据的访问权限，这些凭据用于促进外部应用程序、系统和服务通过HTTP以编程方式与AEM创作或发布服务交互。
 
-AEM使用通过Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)管理的[S2S OAuth与其他Adobe产品集成。 对于与服务帐户的自定义集成，在AEM Developer Console中使用和管理JWT凭据。
+AEM使用通过Adobe Developer Console[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)管理的S2S OAuth与其他Adobe产品集成。 对于与服务帐户的自定义集成，在AEM Developer Console中使用和管理JWT凭据。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 

@@ -33,7 +33,7 @@ HTTP/HTTPS连接会自动使用专用出口IP地址或VPN代理出AEM as a Cloud
 
 >[!CAUTION]
 >
-> 此代码示例仅适用于[专用出口IP地址](../dedicated-egress-ip-address.md)和[VPN](../vpn.md)。 对于灵活端口出口](./http-on-non-standard-ports-flexible-port-egress.md)的非标准端口上的[HTTP/HTTPS连接，提供了类似但不同的代码示例。
+> 此代码示例仅适用于[专用出口IP地址](../dedicated-egress-ip-address.md)和[VPN](../vpn.md)。 对于灵活端口出口[&#128279;](./http-on-non-standard-ports-flexible-port-egress.md)的非标准端口上的HTTP/HTTPS连接，提供了类似但不同的代码示例。
 
 ## 代码示例
 

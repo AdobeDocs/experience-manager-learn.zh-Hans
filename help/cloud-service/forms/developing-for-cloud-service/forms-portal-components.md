@@ -35,7 +35,7 @@ AEM Forms提供了以下开箱即用的门户组件：
 新创建的代理组件需要指向现成的表单组件，以便它们继承来自它们的所有内容。 这是通过更改代理组件的content.xml中的resourceSuperType来完成的。 在content.xml中，我们还指定标题和组件组。
 >[!NOTE]
 >
-> 您可以从此处](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)为[这些组件中的每一个构建资源超级类型
+> 您可以从此处[&#128279;](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)为这些组件中的每一个构建资源超级类型
 
 
 ### 草稿和提交

@@ -25,7 +25,7 @@ ht-degree: 0%
 
 使用AEM Headless的![服务器到服务器Node.js应用程序](./assets/server-to-server-app/server-to-server-app.png)
 
-在GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server)上查看[源代码
+在GitHub[&#128279;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server)上查看源代码
 
 ## 先决条件 {#prerequisites}
 
@@ -163,7 +163,7 @@ async function run() {
 
 ### 执行GraphQL持久查询
 
-AEM的持久查询通过HTTP GET执行，因此，适用于Node.js](https://github.com/adobe/aem-headless-client-nodejs)的[AEM Headless客户端用于[对AEM执行持久的GraphQL查询](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait)并检索冒险内容。
+AEM的持久查询通过HTTP GET执行，因此，适用于Node.js[&#128279;](https://github.com/adobe/aem-headless-client-nodejs)的AEM Headless客户端用于[对AEM执行持久的GraphQL查询](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait)并检索冒险内容。
 
 通过调用`aemHeadlessClient.runPersistedQuery(...)`并传递持久的GraphQL查询名称来调用持久查询。 GraphQL返回数据后，将其传递到简化的`doSomethingWithDataFromAEM(..)`函数，这将打印结果 — 但通常会将数据发送到另一个系统，或根据检索到的数据生成一些输出。
 

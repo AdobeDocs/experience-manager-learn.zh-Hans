@@ -50,7 +50,7 @@ AEM as a Cloud Service是利用AEM应用程序的云原生方式，因此，会�
 
 ## Adobe IMS 产品配置文件
 
-[在[Adobe的AdminConsole](https://adminconsole.adobe.com)中管理的Adobe IMS产品配置文件](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)是为[Adobe IMS用户](#adobe-ims-users)提供基本访问权限以登录AEM创作服务的访问权限的机制。
+[&#128279;](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)在[Adobe的AdminConsole](https://adminconsole.adobe.com)中管理的Adobe IMS产品配置文件是为[Adobe IMS用户](#adobe-ims-users)提供基本访问权限以登录AEM创作服务的访问权限的机制。
 
 + __AEM Users__&#x200B;产品配置文件为用户提供了对AEM的只读访问权限，这些用户可通过AEM Contributors组的成员资格进行访问。
 + __AEM管理员__&#x200B;产品配置文件为用户提供了对AEM的完全管理访问权限。

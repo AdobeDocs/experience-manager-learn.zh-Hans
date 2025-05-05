@@ -99,7 +99,7 @@ $ npm install @adobe/aem-react-editable-components
 
 ## 设置内部SPA代理
 
-创建可编辑的SPA时，最好在SPA](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)中设置[内部代理，将其配置为将相应的请求路由到AEM。 这是通过使用[http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) npm模块完成的，该模块已由基本WKND GraphQL应用程序安装。
+创建可编辑的SPA时，最好在SPA[&#128279;](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)中设置内部代理，将其配置为将相应的请求路由到AEM。 这是通过使用[http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) npm模块完成的，该模块已由基本WKND GraphQL应用程序安装。
 
 1. 在IDE中打开远程SPA项目
 1. 在`src/proxy/setupProxy.spa-editor.auth.basic.js`处打开文件
@@ -319,7 +319,7 @@ $ npm install @adobe/aem-react-editable-components
 
 1. 浏览[http://localhost:3000](http://localhost:3000)上的SPA。 一切应该看起来不错！
 
-在http://localhost:3000](./assets/spa-bootstrap/localhost-3000.png)上运行的![SPA
+在http://localhost:3000![&#128279;](./assets/spa-bootstrap/localhost-3000.png)上运行的SPA
 
 ## 在AEM SPA编辑器中打开SPA
 
@@ -334,7 +334,7 @@ $ npm install @adobe/aem-react-editable-components
 1. 使用右上角的模式切换器切换到&#x200B;__预览__
 1. 单击SPA周围
 
-   在http://localhost:3000](./assets/spa-bootstrap/spa-editor.png)上运行的![SPA
+   在http://localhost:3000![&#128279;](./assets/spa-bootstrap/spa-editor.png)上运行的SPA
 
 ## 恭喜！
 

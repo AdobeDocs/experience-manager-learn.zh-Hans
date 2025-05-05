@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 集成AEM Sites和Adobe Analytics
 
-了解如何使用[AEM Sites客户端数据层与Adobe Analytics核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)的内置功能将AEM和Adobe与Adobe Analytics标记扩展集成，以收集有关Adobe Experience Manager Sites中某个页面的数据。 Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)中的[标记和[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)用于创建规则以将页面数据发送到Adobe Analytics。
+了解如何使用[AEM Sites客户端数据层与Adobe Analytics核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)的内置功能将AEM和Adobe与Adobe Analytics标记扩展集成，以收集有关Adobe Experience Manager Sites中某个页面的数据。 Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)中的标记和[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)用于创建规则以将页面数据发送到Adobe Analytics。
 
 ## 您即将构建的内容 {#what-build}
 
@@ -156,7 +156,7 @@ Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载
    });
    ```
 
-   上述代码段通过[将函数](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)推入数据层来添加事件侦听器。 触发`cmp:show`事件时，将调用`pageShownEventHandler`函数。 在此函数中，添加了一些健全性检查，并为触发事件的组件使用数据层](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)的最新[状态构造了一个新`event`。
+   上述代码段通过[将函数](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)推入数据层来添加事件侦听器。 触发`cmp:show`事件时，将调用`pageShownEventHandler`函数。 在此函数中，添加了一些健全性检查，并为触发事件的组件使用数据层[&#128279;](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)的最新状态构造了一个新`event`。
 
    最后调用`trigger(event)`函数。 `trigger()`函数是标记属性中的保留名称，它会&#x200B;**触发规则**。 `event`对象作为参数传递，而该参数又由标记属性中的另一个保留名称公开。 标记属性中的数据元素现在可以使用代码段（如`event.component['someKey']`）引用各种属性。
 
@@ -214,7 +214,7 @@ Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载
 
    >[!NOTE]
    >
-   > 请注意，`event`对象已变得可用，并根据在标记属性中触发&#x200B;**规则**&#x200B;的事件设定了作用域。 在数据元素在规则中为&#x200B;*引用*&#x200B;之前，不会设置数据元素的值。 因此，可以安全地在诸如上一步骤&#x200B;*中创建的&#x200B;**Page Loaded**规则内使用此数据元素，但*&#x200B;在其他上下文中使用是不安全的。
+   > 请注意，`event`对象已变得可用，并根据在标记属性中触发&#x200B;**规则**&#x200B;的事件设定了作用域。 在数据元素在规则中为&#x200B;*引用*&#x200B;之前，不会设置数据元素的值。 因此，可以安全地在诸如上一步骤&#x200B;*中创建的&#x200B;**Page Loaded**&#x200B;规则内使用此数据元素，但*&#x200B;在其他上下文中使用是不安全的。
 
 ### 页面名称
 
@@ -248,7 +248,7 @@ Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载
 
 1. 规则中现在应包含三个数据元素：
 
-   规则](assets/collect-data-analytics/data-elements-page-rule.png)中的![数据元素
+   规则![&#128279;](assets/collect-data-analytics/data-elements-page-rule.png)中的数据元素
 
 ## 添加Analytics扩展
 
@@ -366,7 +366,7 @@ Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载
 
    ![条件不符合](assets/collect-data-analytics/condition-not-met.png)
 
-   这是因为轮播确实触发了`cmp:show`事件&#x200B;*，但由于我们对&#x200B;**组件资源类型**的检查，*，因此没有触发任何事件。
+   这是因为轮播确实触发了`cmp:show`事件&#x200B;*，但由于我们对&#x200B;**组件资源类型**&#x200B;的检查，*，因此没有触发任何事件。
 
    >[!NOTE]
    >

@@ -50,7 +50,7 @@ ht-degree: 0%
 
 有时，凭据（又称技术帐户用户）需要其他权限，如AEM资源的&#x200B;_创建、更新、删除_ (CUD)。 在这种情况下，您可以在AEM实例中更新&#x200B;_服务_&#x200B;用户组的权限。
 
-例如，当AEM Assets Author API调用收到非GET请求](../use-cases/invoke-api-using-oauth-s2s.md#403-error-for-non-get-requests)的[403错误时，您可以在AEM实例中更新&#x200B;_AEM Assets Collaborator Users - Service_&#x200B;用户组的权限。
+例如，当AEM Assets Author API调用收到非GET请求[&#128279;](../use-cases/invoke-api-using-oauth-s2s.md#403-error-for-non-get-requests)的403错误时，您可以在AEM实例中更新&#x200B;_AEM Assets Collaborator Users - Service_&#x200B;用户组的权限。
 
 使用权限用户界面或[Sling存储库初始化](https://sling.apache.org/documentation/bundles/repository-initialization.html)脚本，您可以在AEM实例中更新现成用户组的权限。
 

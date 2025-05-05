@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ### 创建实现WorkflowProcess的类
 
-在eclipse IDE中打开maven项目。 展开&#x200B;**projectname** > **core**文件夹。 展开src/main/java文件夹。 您应该看到以“core”结尾的包。 创建在此包中实现WorkflowProcess的Java类。 您需要覆盖execute方法。 execute方法的签名如下
+在eclipse IDE中打开maven项目。 展开&#x200B;**projectname** > **core**&#x200B;文件夹。 展开src/main/java文件夹。 您应该看到以“core”结尾的包。 创建在此包中实现WorkflowProcess的Java类。 您需要覆盖execute方法。 execute方法的签名如下
 公共void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)引发WorkflowException
 
 在本教程中，我们将把添加到自适应表单的附件作为AEM Workflow的一部分写入文件系统。

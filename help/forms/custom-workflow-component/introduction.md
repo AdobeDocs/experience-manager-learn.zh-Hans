@@ -30,4 +30,4 @@ ht-degree: 4%
 
 ## 后续步骤
 
-通过实施WorkflowProcess接口](./custom-process-step-aem-workflow.md)编写您的[自定义Java代码
+通过实施WorkflowProcess接口[&#128279;](./custom-process-step-aem-workflow.md)编写您的自定义Java代码

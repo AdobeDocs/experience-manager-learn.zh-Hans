@@ -155,9 +155,11 @@ Analysis Workspace是一款灵活的浏览器工具，可让您快速构建分�
 1. 让我们按照页面的模板类型来划分页面。 从组件中选择页面模板度量，并将“页面模板”度量拖放到页面名称维上。 您现在可以查看按模板类型划分的页面名称。
 
    * **早于**
+
      ![eVar5](assets/create-analytics-workspace/evar5.png)
 
    * **After**
+
      ![eVar5指标](assets/create-analytics-workspace/evar5-metrics.png)
 
 1. 要了解用户如何与WKND网站页面上的CTA按钮进行交互，需要通过添加按钮ID (eVar8)量度进一步细分。
@@ -207,7 +209,7 @@ Analytics分类是在生成报表时对Analytics变量数据进行分类，然�
 接下来，让我们下载按钮ID (eVar8)变量的分类模板
 
 1. 导航到&#x200B;**管理员** > **分类导入器**
-1. 让我们从&#x200B;**下载模板**选项卡下载转化变量的分类模板。
+1. 让我们从&#x200B;**下载模板**&#x200B;选项卡下载转化变量的分类模板。
    ![转化分类类型](assets/create-analytics-workspace/classification-importer.png)
 
 1. 在下载模板选项卡上，指定数据模板配置。
@@ -245,9 +247,11 @@ Analytics分类是在生成报表时对Analytics变量数据进行分类，然�
 1. 在组件查找器中，搜索&#x200B;**WKND CTA按钮**，并将&#x200B;**WKND CTA按钮（按钮ID）**&#x200B;维度拖放到“按钮ID”量度上并将其替换。
 
    * **早于**
+
      ![Workspace按钮（早于](assets/create-analytics-workspace/wknd-button-before.png)）
    * **After**
-     ](assets/create-analytics-workspace/wknd-button-after.png)之后的![Workspace按钮
+
+     ![&#128279;](assets/create-analytics-workspace/wknd-button-after.png)之后的Workspace按钮
 
 1. 您可以注意到，包含行动号召(CTA)按钮的按钮ID量度现已替换为分类模板中提供的相应名称。
 1. 让我们将Analytics Workspace表与WKND主页进行比较，了解CTA按钮点击计数及其分析。 根据工作区自由格式表数据，用户已单击&#x200B;**SKI NOW**&#x200B;按钮的22次以及WKND Home Page Camping in Western Australia **Read More**&#x200B;按钮的4次很清楚。

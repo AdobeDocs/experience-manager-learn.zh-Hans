@@ -249,11 +249,11 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 ### AMS场包含
 
-![<FILENAME>_farms.any将包含sub .any文件以完成场配置。  在此图片中，您可以看到场将包含每个顶级节文件缓存、clientheaders、筛选器、渲染器和vhosts .any文件](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Include")
+![&lt;FILENAME>_farms.any将包含sub .any文件以完成场配置。  在此图片中，您可以看到场将包含每个顶级节文件缓存、clientheaders、筛选器、渲染器和vhosts .any文件](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Include")
 
 当来自`/etc/httpd/conf.dispatcher.d/available_farms/`目录的任何FILENAME_farm.any文件被符号链接到`/etc/httpd/conf.dispatcher.d/enabled_farms/`目录时，它们将在运行配置中使用。
 
-场文件具有基于场](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms)的[顶级部分的子包含，如缓存、clientheaders、筛选器、渲染器和主机。
+场文件具有基于场[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms)的顶级部分的子包含，如缓存、clientheaders、筛选器、渲染器和主机。
 
 `FILENAME_farm.any`文件将根据需要在场文件中包含它们的位置，为每个文件包含include语句。  以下是`FILENAME_farm.any`文件的示例语法，作为良好引用：
 

@@ -131,7 +131,7 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   > 在上述glob `*.nocache.html*`规则中将尾部`*`保留为关闭状态可能会导致子资源请求](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16)出现[问题。
+   > 在上述glob `*.nocache.html*`规则中将尾部`*`保留为关闭状态可能会导致子资源请求[&#128279;](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16)出现问题。
 
    ```shell
    /cache {
@@ -148,7 +148,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您使用[!DNL Sling Dynamic Includes]为边缘端包含(ESI)提供服务，请确保在调度程序缓存](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)中缓存相关的[响应标头。 可能的标头包括：
+>如果您使用[!DNL Sling Dynamic Includes]为边缘端包含(ESI)提供服务，请确保在调度程序缓存[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)中缓存相关的响应标头。 可能的标头包括：
 >
 >* &quot;Cache-Control&quot;
 >* &quot;内容处置&quot;

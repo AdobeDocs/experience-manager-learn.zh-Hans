@@ -18,7 +18,7 @@ ht-degree: 8%
 
 # 将页面组件与模板关联
 
-下一步是将页面组件与新的自适应表单模板关联。 这可确保在每次基于新模板的自适应表单呈现时都执行页面组件中的代码。 出于本教程的目的，在&#x200B;**AzurePortalStorage**&#x200B;文件夹中创建了一个名为&#x200B;**StoreAndRestoreFromAzure**的新自适应表单模板。
+下一步是将页面组件与新的自适应表单模板关联。 这可确保在每次基于新模板的自适应表单呈现时都执行页面组件中的代码。 出于本教程的目的，在&#x200B;**AzurePortalStorage**&#x200B;文件夹中创建了一个名为&#x200B;**StoreAndRestoreFromAzure**&#x200B;的新自适应表单模板。
 导航到/conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/initial/jcr：content节点，添加以下属性并保存更改。
 
 | **属性名称** | **属性类型** | **属性值** |

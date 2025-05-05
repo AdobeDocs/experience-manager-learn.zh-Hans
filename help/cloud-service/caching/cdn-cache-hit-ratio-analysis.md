@@ -149,7 +149,7 @@ CDN日志以JSON格式提供，其中包含各种字段，包括`url`、`cache`�
 
 对于那些不愿意在本地安装软件的用户（即上一节中的ELK功能板工具），还有一个选项，但需要拥有Adobe Experience Platform的许可证。
 
-[Jupyter Notebook](https://jupyter.org/)是一个开源Web应用程序，它允许您创建包含代码、文本和可视化图表的文档。 它用于数据转换、可视化和统计建模。 它可以作为Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)的一部分被远程访问[。
+[Jupyter Notebook](https://jupyter.org/)是一个开源Web应用程序，它允许您创建包含代码、文本和可视化图表的文档。 它用于数据转换、可视化和统计建模。 它可以作为Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)的一部分被远程访问。
 
 #### 下载交互式Python笔记本文件
 

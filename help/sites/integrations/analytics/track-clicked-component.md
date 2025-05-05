@@ -45,7 +45,7 @@ WKND营销团队有兴趣了解哪些`Call to Action (CTA)`按钮在主页上的
 
 ## 检查按钮和Teaser架构
 
-在标记属性中创建规则之前，请检查Button和Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)的[架构并在数据层实施中检查它们，这很有用。
+在标记属性中创建规则之前，请检查Button和Teaser[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)的架构并在数据层实施中检查它们，这很有用。
 
 1. 导航到[WKND主页](https://wknd.site/us/en.html)
 1. 打开浏览器的开发人员工具并导航到&#x200B;**控制台**。 运行以下命令：
@@ -126,7 +126,7 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
    });
    ```
 
-   上述代码段通过[将函数](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)推入数据层来添加事件侦听器。 每当触发`cmp:click`事件时，都会调用`componentClickedHandler`函数。 在此函数中，添加了一些健全性检查，并为触发事件的组件使用数据层](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)的最新[状态构造了一个新的`event`对象。
+   上述代码段通过[将函数](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)推入数据层来添加事件侦听器。 每当触发`cmp:click`事件时，都会调用`componentClickedHandler`函数。 在此函数中，添加了一些健全性检查，并为触发事件的组件使用数据层[&#128279;](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)的最新状态构造了一个新的`event`对象。
 
    最后调用`trigger(event)`函数。 `trigger()`函数是标记属性中的保留名称，它会&#x200B;**触发规则**。 `event`对象作为参数传递，而该参数又由标记属性中的另一个保留名称公开。 标记属性中的数据元素现在可以使用代码段（如`event.component['someKey']`）引用各种属性。
 
@@ -189,7 +189,7 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
 
    >[!NOTE]
    >
-   > 请注意，`event`对象已变得可用，并根据在标记属性中触发&#x200B;**规则**&#x200B;的事件设定了作用域。 在数据元素在规则中为&#x200B;*引用*&#x200B;之前，不会设置数据元素的值。 因此，可以安全地在诸如上一步骤&#x200B;*中创建的&#x200B;**Page Loaded**规则内使用此数据元素，但*&#x200B;在其他上下文中使用是不安全的。
+   > 请注意，`event`对象已变得可用，并根据在标记属性中触发&#x200B;**规则**&#x200B;的事件设定了作用域。 在数据元素在规则中为&#x200B;*引用*&#x200B;之前，不会设置数据元素的值。 因此，可以安全地在诸如上一步骤&#x200B;*中创建的&#x200B;**Page Loaded**&#x200B;规则内使用此数据元素，但*&#x200B;在其他上下文中使用是不安全的。
 
 
 ### 组件标题
@@ -308,7 +308,7 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
 
 1. 在浏览器控制台中观察到，未满足规则“CTA已单击”的消息&#x200B;*“自定义代码”*。
 
-   出现上述消息是因为导航组件确实触发了`cmp:click`事件&#x200B;*但*，因为检查资源类型的规则](#add-a-condition-to-the-cta-clicked-rule)的[条件未执行任何操作。
+   出现上述消息是因为导航组件确实触发了`cmp:click`事件&#x200B;*但*，因为检查资源类型的规则[&#128279;](#add-a-condition-to-the-cta-clicked-rule)的条件未执行任何操作。
 
    >[!NOTE]
    >

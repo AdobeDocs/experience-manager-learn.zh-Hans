@@ -209,11 +209,11 @@ OSGi定义所有OSGi容器都必须实现并遵循的规范。 AEM的OSGi实施A
 
 ### [!DNL Sling] Servlet注册 {#sling-servlet-registration}
 
-* [!DNL Sling] servlet注册，与`@SlingServlet`相比，更喜欢带有@SlingServletResourceTypes](https://sling.apache.org/documentation/the-sling-engine/servlets.html)的[OSGi DS 1.2注释
+* [!DNL Sling] servlet注册，与`@SlingServlet`相比，更喜欢带有@SlingServletResourceTypes[&#128279;](https://sling.apache.org/documentation/the-sling-engine/servlets.html)的OSGi DS 1.2注释
 
 ### [!DNL Sling]筛选器注册 {#sling-filter-registration}
 
-* [!DNL Sling]筛选器注册，首选带有](https://sling.apache.org/documentation/the-sling-engine/filters.html)的[OSGi DS 1.2@SlingServletFilter注释而非`@SlingFilter`
+* [!DNL Sling]筛选器注册，首选带有[&#128279;](https://sling.apache.org/documentation/the-sling-engine/filters.html)的OSGi DS 1.2@SlingServletFilter注释而非`@SlingFilter`
 
 ## 有用的代码段
 

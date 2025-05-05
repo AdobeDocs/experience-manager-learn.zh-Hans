@@ -43,7 +43,7 @@ ht-degree: 0%
 ### 创作复制代理
 
 以下是配置的标准复制代理屏幕截图示例
-AEM网页/etc/replication.html](assets/disp-flushing/author-rep-agent-example.png "author-rep-agent-example")中的标准复制代理屏幕截图![
+AEM网页/etc/replication.html![&#128279;](assets/disp-flushing/author-rep-agent-example.png "author-rep-agent-example")中的标准复制代理屏幕截图
 
 创作实例上通常为其复制内容的每个发布者配置1或2个复制代理。
 
@@ -54,14 +54,14 @@ AEM网页/etc/replication.html](assets/disp-flushing/author-rep-agent-example.pn
 ### 发布者复制代理
 
 以下是配置的标准刷新复制代理屏幕截图示例
-AEM网页/etc/replication.html](assets/disp-flushing/publish-flush-rep-agent-example.png "publish-flush-rep-agent-example")中的标准刷新复制代理屏幕截图![
+AEM网页/etc/replication.html![&#128279;](assets/disp-flushing/publish-flush-rep-agent-example.png "publish-flush-rep-agent-example")中的标准刷新复制代理屏幕截图
 
 ### Dispatcher FLUSH复制接收虚拟主机
 
 Dispatcher模块会查找特定的标头，以了解POST请求何时可以传递给AEM渲染，或者是否将其序列化为刷新请求，以及是否需要由Dispatcher处理程序本身进行处理。
 
 以下是显示这些值的配置页面屏幕截图：
-序列化类型显示为Dispatcher Flush](assets/disp-flushing/disp-flush-agent1.png "disp-flush-agent1")的主配置屏幕设置选项卡的![图片
+序列化类型显示为Dispatcher Flush![&#128279;](assets/disp-flushing/disp-flush-agent1.png "disp-flush-agent1")的主配置屏幕设置选项卡的图片
 
 默认设置页面将`Serialization Type`显示为`Dispatcher Flush`并设置错误级别
 

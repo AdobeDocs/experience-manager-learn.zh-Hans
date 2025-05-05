@@ -93,8 +93,7 @@ export default async function decorate(block) {
 
 
 >[!BEGINTABS]
-
->要修饰的[!TAB DOM]
+>[!TAB 要修饰的 DOM]
 
 以下是标头页面在使用提供的`header.js`加载并插入到DOM中之后的HTML：
 

@@ -35,16 +35,16 @@ AEM中的Sling模型是一个基于Java的框架，用于简化组件后端逻�
 
 类中的&#x200B;**方法**
 
-* **getContinent()**返回continent字段值的简单方法。
+* **getContinent()**&#x200B;返回continent字段值的简单方法。
 记录返回的值以进行调试。
-* **init()**使用@PostConstruct注释的生命周期方法，在构造类并插入依赖项后执行。根据大陆值动态构造JSON文件的路径。
+* **init()**&#x200B;使用@PostConstruct注释的生命周期方法，在构造类并插入依赖项后执行。根据大陆值动态构造JSON文件的路径。
 使用resourceResolver从AEM DAM获取JSON文件。
 将文件适应资产、读取其内容并将其解析为JSONObject。
 记录在此过程中出现的任何错误或警告。
-* **getEnums()**从解析后的JSON数据中检索所有键（国家/地区代码）。
+* **getEnums()**&#x200B;从解析后的JSON数据中检索所有键（国家/地区代码）。
 按字母顺序对键进行排序，然后按数组形式返回它们。
 记录要返回的国家/地区代码数。
-* **getEnumNames()**从解析后的JSON数据中提取所有国家/地区名称。
+* **getEnumNames()**&#x200B;从解析后的JSON数据中提取所有国家/地区名称。
 按字母顺序对名称进行排序并将它们作为数组返回。
 记录国家/地区总数和每个检索到的国家/地区名称。
 * **isMultiSelect()**&#x200B;返回multiSelect字段的值以指示下拉列表是否允许多项选择。

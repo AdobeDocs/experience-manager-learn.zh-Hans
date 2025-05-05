@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Android之所以用于教程，是因为它可以在Windows、macOs和Linux上运行Android模拟器，而且它流行于Java，这是AEM开发人员非常了解的一种语言。
 
-*本教程的Android移动设备应用程序&#x200B;**不是**旨在指导如何构建Android移动设备应用程序或传达Android开发最佳实践，而是说明如何从移动设备应用程序使用AEM Content Services。*
+*本教程的Android移动设备应用程序&#x200B;**不是**&#x200B;旨在指导如何构建Android移动设备应用程序或传达Android开发最佳实践，而是说明如何从移动设备应用程序使用AEM Content Services。*
 
 ### AEM Content Services如何推动移动应用程序体验
 

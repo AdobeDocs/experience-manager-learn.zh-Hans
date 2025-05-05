@@ -25,7 +25,7 @@ ht-degree: 1%
 >
 > 带有Adobe Target的AEM旧版Cloud Service是&#x200B;**仅限**，用于建立直接的AEM Author到Adobe Target的后端连接，从而便于将内容从AEM发布到Target。 Adobe Experience Platform中的标记用于在AEM提供的面向公众的网站体验中公开Adobe Target。
 
-为了使用AEM体验片段选件增强您的个性化活动，让我们继续下一章，并使用旧版云服务将AEM与Adobe Target集成。 要将体验片段作为HTML/JSON选件从AEM推送到Target，并使Target选件与AEM保持同步，需要此集成。 实施概述部分](./overview.md#personalization-using-aem-experience-fragment)中讨论的[方案1需要此集成。
+为了使用AEM体验片段选件增强您的个性化活动，让我们继续下一章，并使用旧版云服务将AEM与Adobe Target集成。 要将体验片段作为HTML/JSON选件从AEM推送到Target，并使Target选件与AEM保持同步，需要此集成。 实施概述部分[&#128279;](./overview.md#personalization-using-aem-experience-fragment)中讨论的方案1需要此集成。
 
 ## 先决条件
 
@@ -52,4 +52,4 @@ ht-degree: 1%
 4. 创建用于在Adobe I/O控制台中访问Target API的技术帐户(02:08)
 5. 将Adobe TargetCloud Service添加到AEM体验片段(04:12)
 
-此时，您已使用旧版Cloud Service](./using-aem-cloud-services.md#integrating-aem-target-options)成功地将[AEM与Adobe Target集成，如选项2中所述。 现在，您应该能够在AEM中创建体验片段，并将该体验片段作为HTML选件或JSON选件发布到Adobe Target，然后可以使用它创建活动。
+此时，您已使用旧版Cloud Service[&#128279;](./using-aem-cloud-services.md#integrating-aem-target-options)成功地将AEM与Adobe Target集成，如选项2中所述。 现在，您应该能够在AEM中创建体验片段，并将该体验片段作为HTML选件或JSON选件发布到Adobe Target，然后可以使用它创建活动。

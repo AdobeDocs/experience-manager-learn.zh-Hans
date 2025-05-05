@@ -53,7 +53,7 @@ ht-degree: 0%
 
 ### 问：我已收到来自源系统的最新BPA报告，应该对其执行哪些操作？
 
-将报表导出为CSV，然后将其上传到Cloud Acceleration Manager（与您的IMS组织](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)关联的[）。 然后按照准备阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html)中所述的[进行审核过程。
+将报表导出为CSV，然后将其上传到Cloud Acceleration Manager（与您的IMS组织[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)关联的[）。 然后按照准备阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html)中所述的进行审核过程。
 
 请检查工具提供的代码和内容复杂性评估，并记下导致代码重构积压或云迁移评估的相关操作项。
 

@@ -43,4 +43,4 @@ ht-degree: 2%
 >[!NOTE]
 >xml文件存储在AEM服务器安装的根文件夹中。 Eclipse项目是提供给您根据您的要求自定义解决方案的。
 
-可以从此处](assets/icdrafts-eclipse-project.zip)下载具有示例实施的eclipse项目[
+可以从此处[&#128279;](assets/icdrafts-eclipse-project.zip)下载具有示例实施的eclipse项目

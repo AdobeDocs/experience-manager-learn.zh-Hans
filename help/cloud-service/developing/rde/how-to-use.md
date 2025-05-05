@@ -176,7 +176,7 @@ $ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
 
 ### 部署Apache或Dispatcher配置
 
-无法单独部署Apache或Dispatcher配置文件&#x200B;****，但需要以ZIP文件的形式部署整个Dispatcher文件夹结构。
+无法单独部署Apache或Dispatcher配置文件&#x200B;**&#x200B;**，但需要以ZIP文件的形式部署整个Dispatcher文件夹结构。
 
 1. 在`dispatcher`模块的配置文件中进行所需的更改，以便演示，请更新`dispatcher/src/conf.d/available_vhosts/wknd.vhost`以仅缓存`html`文件60秒。
 
@@ -268,7 +268,7 @@ aem rde status   Get a list of the bundles and configs deployed to the current r
 
 ## 后续步骤
 
-了解使用RDE](./development-life-cycle.md)快速交付功能的[开发/部署生命周期。
+了解使用RDE[&#128279;](./development-life-cycle.md)快速交付功能的开发/部署生命周期。
 
 
 ## 其他资源

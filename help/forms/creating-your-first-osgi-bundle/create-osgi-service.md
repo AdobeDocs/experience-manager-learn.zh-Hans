@@ -101,7 +101,7 @@ MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.mysite.samp
 com.adobe.aemfd.docmanager.Document generatedDocument = myFirstAEMFormsService.mergeDataWithXDPTemplate(xdp_or_pdf_template,xmlDocument);
 ```
 
-可以从此处](assets/learning_aem_forms.zip)下载包含JSP页的示例包[
+可以从此处[&#128279;](assets/learning_aem_forms.zip)下载包含JSP页的示例包
 
 [完整的捆绑包可供下载](assets/mysite.core-1.0.0-SNAPSHOT.jar)
 

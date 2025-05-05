@@ -62,7 +62,7 @@ afData.afUnboundData.data.initialStep,N
 >[!NOTE]
 >
 >由于我们使用用户配置文件预填充自适应表单，因此请确保管理员[用户配置文件信息](http://localhost:4502/security/users.html)。 至少要确保您已设置FirstName、LastName和Email字段值。
->您可以从此处](http://localhost:4502/system/console/slinglog)启用com.aemforms.setvalue.core.SetValueInJson [的记录器以启用调试日志记录
+>您可以从此处[&#128279;](http://localhost:4502/system/console/slinglog)启用com.aemforms.setvalue.core.SetValueInJson 的记录器以启用调试日志记录
 
 >[!NOTE]
 >

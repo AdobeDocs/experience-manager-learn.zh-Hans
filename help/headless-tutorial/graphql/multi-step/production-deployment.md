@@ -312,7 +312,7 @@ React应用程序可以通过使用webpack服务器启动，但这仅适用于�
 1. 启动创作实例（如果尚未启动），并在[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)处导航到包管理器
 1. 下载包[EnableReplicationAgent.zip](./assets/publish-deployment/EnableReplicationAgent.zip)并使用包管理器安装它。
 
-   此包将安装一种配置，该配置允许作者实例将内容发布到发布实例。 可以在此处](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en#content-distribution)找到[此配置的手动步骤。
+   此包将安装一种配置，该配置允许作者实例将内容发布到发布实例。 可以在此处[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en#content-distribution)找到此配置的手动步骤。
 
    >[!NOTE]
    >

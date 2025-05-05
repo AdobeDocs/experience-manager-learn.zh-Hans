@@ -37,7 +37,7 @@ ht-degree: 0%
 
    * 如果您使用的是&#x200B;**AEM Forms 6.3**，则回调URL为https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html。 在此URL中， createlead是我的表单数据模型的名称。
 
-   * 如果您使用**AEM Forms 6.4**，则回调URL为https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
+   * 如果您使用&#x200B;**AEM Forms 6.4**，则回调URL为https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
 在此示例中，gbedekar -w7-1:6443是AEM所运行服务器和端口的名称。
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 * OAuth Url为 — **https://login.salesforce.com/services/oauth2/authorize**
 * 刷新令牌Url - **https://na5.salesforce.com/services/oauth2/token**
 * **访问Toke Url - https://na5.salesforce.com/services/oauth2/token**
-* 授权范围： ** api   chatter_api完整id   openid   refresh_token visualforce web**
+* 授权范围： **&#x200B; api   chatter_api完整id   openid   refresh_token visualforce web**
 * 身份验证处理程序：授权载体
 * 单击“连接到OAUTH”。如果一切顺利，您应该不会看到任何错误
 
@@ -102,7 +102,7 @@ ht-degree: 0%
    * OAuth Url为 — **https://login.salesforce.com/services/oauth2/authorize**
    * 刷新令牌Url - **https://na5.salesforce.com/services/oauth2/token**
    * 访问令牌Ur **l - https://na5.salesforce.com/services/oauth2/token**
-   * 授权范围： ** api chatter_api完整id openid refresh_token visualforce web**
+   * 授权范围： **&#x200B; api chatter_api完整id openid refresh_token visualforce web**
    * 身份验证处理程序：授权载体
    * 单击“连接到OAuth”按钮。 如果您看到任何错误，请查看上述步骤以确保正确输入了所有信息。
 

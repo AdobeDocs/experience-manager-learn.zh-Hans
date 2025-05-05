@@ -76,7 +76,7 @@ Homebrew是适用于macOS、Windows和Linux的开源包管理器。 所有的支
 
 >[!TAB macOS]
 
-macOS](https://brew.sh/)上的[Homebrew需要[Xcode](https://apps.apple.com/us/app/xcode/id497799835)或[命令行工具](https://developer.apple.com/download/more/)，可通过命令安装：
+macOS[&#128279;](https://brew.sh/)上的Homebrew需要[Xcode](https://apps.apple.com/us/app/xcode/id497799835)或[命令行工具](https://developer.apple.com/download/more/)，可通过命令安装：
 
 ```shell
 $ xcode-select --install
@@ -196,7 +196,7 @@ Adobe I/O Cloud Manager插件允许aio CLI通过`aio cloudmanager`命令与Adobe
 
 #### 设置Adobe I/O CLI身份验证
 
-为了使Adobe I/O CLI与Cloud Manager进行通信，必须在Adobe I/O控制台](https://github.com/adobe/aio-cli-plugin-cloudmanager)中创建[Cloud Manager集成，并且必须获取凭据才能成功进行身份验证。
+为了使Adobe I/O CLI与Cloud Manager进行通信，必须在Adobe I/O控制台[&#128279;](https://github.com/adobe/aio-cli-plugin-cloudmanager)中创建Cloud Manager集成，并且必须获取凭据才能成功进行身份验证。
 
 1. 登录到[console.adobe.io](https://console.adobe.io)
 1. 确保包含要连接到的Cloud Manager产品的组织在Adobe组织切换器中处于活动状态

@@ -35,7 +35,7 @@ public abstract String saveDocumentInCrx(String jcrPath,String fileExtension, Do
 }
 ```
 
-可从此处](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)下载示例包[
+可从此处[&#128279;](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)下载示例包
 
 ## 使用实用程序服务的示例代码
 

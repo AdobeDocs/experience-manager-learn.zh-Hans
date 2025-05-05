@@ -179,14 +179,14 @@ document.body.innerHTML=`<picture>
 
 让我们创建一个简单的React应用程序，该应用程序按照[响应图像模式](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/)显示Web优化图像。 响应式图像有两种主要模式：
 
-+ 使用srcset](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)的[Img元素可提高性能
++ 使用srcset[&#128279;](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)的Img元素可提高性能
 + 设计控件的[图片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture)
 
 ### 带有srcset的Img元素
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
-带有srcset](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)的[Img元素与`sizes`属性一起使用，为不同的屏幕大小提供不同的图像资源。 为不同屏幕大小提供不同的图像资源时，图像源非常有用。
+带有srcset[&#128279;](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)的Img元素与`sizes`属性一起使用，为不同的屏幕大小提供不同的图像资源。 为不同屏幕大小提供不同的图像资源时，图像源非常有用。
 
 ### 图片元素
 
@@ -196,9 +196,9 @@ document.body.innerHTML=`<picture>
 
 ### 示例代码
 
-这个简单的React应用程序使用[AEM Headless SDK](./aem-headless-sdk.md)查询AEM Headless API以获取冒险内容，并使用带有srcset](#img-element-with-srcset)和[picture element](#picture-element)的[img元素显示Web优化图像。 `srcset`和`sources`使用自定义`setParams`函数将Web优化投放查询参数附加到图像的`_dynamicUrl`，因此请更改根据Web客户端需求投放的图像演绎版。
+这个简单的React应用程序使用[AEM Headless SDK](./aem-headless-sdk.md)查询AEM Headless API以获取冒险内容，并使用带有srcset[&#128279;](#img-element-with-srcset)和[picture element](#picture-element)的img元素显示Web优化图像。 `srcset`和`sources`使用自定义`setParams`函数将Web优化投放查询参数附加到图像的`_dynamicUrl`，因此请更改根据Web客户端需求投放的图像演绎版。
 
-在使用AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries)的自定义React挂钩[useAdventureByPath中执行对AEM的查询。
+在使用AEM Headless SDK[&#128279;](./aem-headless-sdk.md#graphql-persisted-queries)的自定义React挂钩useAdventureByPath中执行对AEM的查询。
 
 ```javascript
 // src/App.js

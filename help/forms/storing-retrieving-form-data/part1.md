@@ -27,7 +27,7 @@ AEM可通过多种方式与外部数据库集成。 数据库集成最常见和�
 
 ![数据库](assets/data-base-tables.PNG)
 
-可从此处](assets/form-data-db.sql)下载用于创建架构的SQL文件[。 您需要使用MySql Workbench导入此文件以创建架构和表。
+可从此处[&#128279;](assets/form-data-db.sql)下载用于创建架构的SQL文件。 您需要使用MySql Workbench导入此文件以创建架构和表。
 
 >[!NOTE]
 >请确保将数据源命名为&#x200B;**SaveAndContinue**。 示例代码使用名称连接到数据库。

@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 获取empID参数
 
-下一步是从url访问empID参数。 然后，empID请求参数的值被传递到表单数据模型的&#x200B;**_get_**服务操作。
+下一步是从url访问empID参数。 然后，empID请求参数的值被传递到表单数据模型的&#x200B;**_get_**&#x200B;服务操作。
 出于本课程的目的，我们创建并提供了以下内容
 
 * 名为&#x200B;**_FDMDemo_**&#x200B;的自适应表单模板
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 这样一来，我们的自定义jsp中的代码仅在基于此自定义模板的自适应表单呈现时执行
 
-* [使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入包](assets/template-page-component.zip)
+* [&#128279;](assets/template-page-component.zip)使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入包
 * [打开fdmrequest.jsp](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
 * 取消注释已注释的行。
 * 保存更改

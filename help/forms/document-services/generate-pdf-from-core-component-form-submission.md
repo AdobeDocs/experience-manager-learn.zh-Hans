@@ -21,7 +21,7 @@ ht-degree: 0%
 
 以下是大写“核心组件”的修订文本：
 
-典型场景涉及根据通过基于核心组件的自适应表单提交的数据生成PDF。 此数据始终采用JSON格式。 要使用渲染PDF API生成PDF，必须将JSON数据转换为XML格式。 `org.json.XML`的`toString`方法用于此转换。 有关更多详细信息，请参阅`org.json.XML.toString`方法](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-)的[文档。
+典型场景涉及根据通过基于核心组件的自适应表单提交的数据生成PDF。 此数据始终采用JSON格式。 要使用渲染PDF API生成PDF，必须将JSON数据转换为XML格式。 `org.json.XML`的`toString`方法用于此转换。 有关更多详细信息，请参阅`org.json.XML.toString`方法[&#128279;](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-)的文档。
 
 ## 基于JSON架构的自适应表单
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 ### 从XML数据生成JSON架构
 
-您可以使用任何免费的在线工具，使用上一步中生成的XML数据将XML转换为JSON](https://jsonformatter.org/xml-to-jsonschema)。[
+您可以使用任何免费的在线工具，使用上一步中生成的XML数据将XML转换为JSON[&#128279;](https://jsonformatter.org/xml-to-jsonschema)。
 
 ### 用于将JSON转换为XML的自定义工作流进程
 

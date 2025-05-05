@@ -43,17 +43,17 @@ ht-degree: 0%
 >导航到创作实例上文件系统上的捆绑包ID
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
-* 复制HMAC和主文件
+>* 复制HMAC和主文件
 >
-在发布实例上打开[felix Web控制台](http://localhost:4502/system/console/bundles)。 搜索com.adobe.granite.crypto.file包。 请注意捆绑包ID
+>在发布实例上打开[felix Web控制台](http://localhost:4502/system/console/bundles)。 搜索com.adobe.granite.crypto.file包。 请注意捆绑包ID
 >
-导航到发布实例的文件系统中的捆绑包ID
+>导航到发布实例的文件系统中的捆绑包ID
 >
-* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
-* 删除现有的HMAC和主文件。
-* 粘贴从创作实例复制的HMAC和主文件
+>* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
+>* 删除现有的HMAC和主文件。
+>* 粘贴从创作实例复制的HMAC和主文件
 >
-重新启动AEM发布服务器
+>重新启动AEM发布服务器
 
 ## 支持材料 {#supporting-materials}
 

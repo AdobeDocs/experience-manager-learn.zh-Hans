@@ -58,7 +58,7 @@ function handleFiles(formData) {
 }
 ```
 
-装载在&#x200B;**_/bin/ExtractDataFromPDF_**上的servlet从PDF文件中提取数据，并返回存储提取数据的crx节点的路径。
+装载在&#x200B;**_/bin/ExtractDataFromPDF_**&#x200B;上的servlet从PDF文件中提取数据，并返回存储提取数据的crx节点的路径。
 然后使用[GuideBridge setData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor)方法设置自适应表单的数据。
 
 ## 后续步骤

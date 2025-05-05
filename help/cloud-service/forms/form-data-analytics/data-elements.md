@@ -28,7 +28,7 @@ ht-degree: 2%
 
 ## ApplicantStateOfResidence
 
-通过在扩展下拉列表中选择&#x200B;**Core**&#x200B;并为数据元素类型选择&#x200B;**自定义代码**，配置了&#x200B;**ApplicantStateOfResidence**数据元素，如下面的屏幕快照所示
+通过在扩展下拉列表中选择&#x200B;**Core**&#x200B;并为数据元素类型选择&#x200B;**自定义代码**，配置了&#x200B;**ApplicantStateOfResidence**&#x200B;数据元素，如下面的屏幕快照所示
 ![申请人 — 国家 — 居住地](assets/applicantstateofresidence.png)
 
 以下自定义代码用于捕获&#x200B;**_状态_**&#x200B;自适应表单字段中的值。

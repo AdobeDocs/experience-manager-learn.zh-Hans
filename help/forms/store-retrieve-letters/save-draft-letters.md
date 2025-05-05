@@ -168,4 +168,4 @@ AEM Forms不提供任何开箱即用的用户界面来列出已保存的书信�
 
 ### Eclipse项目
 
-可以从此处](assets/icdrafts-eclipse-project.zip)下载具有示例实施的eclipse项目[
+可以从此处[&#128279;](assets/icdrafts-eclipse-project.zip)下载具有示例实施的eclipse项目

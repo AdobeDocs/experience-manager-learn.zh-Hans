@@ -58,7 +58,7 @@ AEM Headless教程的第3章介绍了如何根据在[第2](./chapter-2.md)章中
 1. 在AEM创作中打开&#x200B;**[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)**。
 1. 在CRXDE Lite的左侧层次结构菜单中，导航到[/content/dam/wknd-mobile/en/events/punkrock-fest/jcr：content](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content)，该节点表示JCR中的[!DNL Punkrock Fest] [!DNL Event]内容片段。
 1. 展开[数据](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master)节点。
-在**属性窗格**&#x200B;中查看它是否具有指向[!DNL Event]内容片段模型定义的属性`cq:model`。
+在&#x200B;**属性窗格**&#x200B;中查看它是否具有指向[!DNL Event]内容片段模型定义的属性`cq:model`。
    * **`cq:model`**=**`/conf/settings/wknd-mobile/dam/cfm/models/event`**
 1. 在`data`节点下，选择[主节点](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master)节点并查看属性。 此节点包含在创作[!DNL Event]内容片段模型期间收集的内容。 JCR属性名称对应于内容片段模型属性名称，而值对应于“[!DNL Punkrock Fest]”[!DNL Event]内容片段的创作值。
 

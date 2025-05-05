@@ -28,6 +28,7 @@ ht-degree: 0%
    * 找到文件`resources/credentials/server_credentials.json`
    * 打开它并&#x200B;**更新特定于您环境的凭据**。
    * 请确保它包括以下内容的有效值：
+
      `clientId`、`clientSecret`、`adobeIMSV3TokenEndpointURL`和
      `scopes`
 

@@ -74,7 +74,7 @@ ht-degree: 0%
 * 此索引只需要针对群集中的单个AEM实例执行。
 * 对正在运行的AEM群集安全地执行[!DNL MongoMK]的联机索引，因为存储库遍历将只发生在单个[!DNL MongoDB]节点上，这将允许其他节点继续处理请求而不会对性能产生重大影响。
 
-用于执行[!DNL MongoMK]的联机索引的[!DNL oak-run.jar]索引命令与 [!DNL oak-run.jar]](#tarmkonlineindexingwithoakrunjar)的 [!DNL TarMK] 联机索引的[相同，不同之处在于区段存储参数指向包含节点存储的[!DNL MongoDB]实例。
+用于执行[!DNL MongoMK]的联机索引的[!DNL oak-run.jar]索引命令与 [!DNL oak-run.jar][&#128279;](#tarmkonlineindexingwithoakrunjar)的 [!DNL TarMK] 联机索引的相同，不同之处在于区段存储参数指向包含节点存储的[!DNL MongoDB]实例。
 
 ```
 java -jar oak-run*.jar index

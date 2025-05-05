@@ -86,7 +86,7 @@ ht-degree: 1%
    > 
    > 以上说明是要将React应用程序连接到&#x200B;**AEM Publish服务**，而要连接到&#x200B;**AEM Author服务**，请为您的目标AEM as a Cloud Service环境获取本地开发令牌。
    >
-   > 还可以使用基本身份验证使用AEMaaCS SDK](/help/headless-tutorial/graphql/quick-setup/local-sdk.md)将应用程序连接到[本地创作实例。
+   > 还可以使用基本身份验证使用AEMaaCS SDK[&#128279;](/help/headless-tutorial/graphql/quick-setup/local-sdk.md)将应用程序连接到本地创作实例。
 
 
 1. 打开终端并运行以下命令：

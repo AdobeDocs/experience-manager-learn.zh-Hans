@@ -204,7 +204,7 @@ ht-degree: 0%
 
 在跳转到SPA代码之前，请检查AEM提供的JSON模型。
 
-1. 导航到核心组件库](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的[图像示例。
+1. 导航到核心组件库[&#128279;](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的图像示例。
 
    ![图像核心组件JSON](./assets/map-components/image-json.png)
 
@@ -243,7 +243,7 @@ ht-degree: 0%
 
    该项目在`/mock-content/adobestock-140634652.jpeg`处包含一个与&#x200B;**webpack开发服务器**&#x200B;一起使用的示例图像。
 
-   您可以在此处](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/map-components-solution/ui.frontend/src/mocks/json/en.model.json)查看完整的[en.model.json。
+   您可以在此处[&#128279;](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/map-components-solution/ui.frontend/src/mocks/json/en.model.json)查看完整的en.model.json。
 
 3. 添加组件要显示的照片库。
 

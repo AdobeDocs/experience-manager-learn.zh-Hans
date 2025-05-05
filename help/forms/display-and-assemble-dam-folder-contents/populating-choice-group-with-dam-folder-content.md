@@ -111,7 +111,7 @@ function getDAMFolderAssets(damFolder) {
 
 ## 创建自适应表单
 
-创建自适应表单并将表单与客户端库&#x200B;**listfolderassets**关联。 将复选框组件添加到表单。 使用规则编辑器填充屏幕快照中显示的复选框选项
+创建自适应表单并将表单与客户端库&#x200B;**listfolderassets**&#x200B;关联。 将复选框组件添加到表单。 使用规则编辑器填充屏幕快照中显示的复选框选项
 ![设置选项](assets/set-options-newsletter.png)
 
 我们正在调用名为&#x200B;**getDAMFolderAssets**&#x200B;的javascript函数，并在表单中传递要列出的DAM文件夹资源的路径。

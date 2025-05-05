@@ -27,7 +27,7 @@ ht-degree: 1%
 使用AEM Headless的![Android Java应用程序](./assets/android-java-app/android-app.png)
 
 
-在GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)上查看[源代码
+在GitHub[&#128279;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)上查看源代码
 
 ## 先决条件 {#prerequisites}
 

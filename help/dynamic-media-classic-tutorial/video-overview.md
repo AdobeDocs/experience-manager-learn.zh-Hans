@@ -73,7 +73,7 @@ Dynamic Media Classic可以识别多种可用的源格式并且可以与它们�
 
 最后一条关于Dynamic Media Classic视频的注释可能适用于某些客户：并非所有公司都为其帐户启用了自动转化、流或视频预设。 如果由于某种原因而无法访问流视频的URL，这可能是原因。 您可以上传和发布逐步下载的视频，并访问所有视频查看器。 但是，要利用完整的Dynamic Media Classic视频功能，请联系您的客户经理或销售经理来启用这些功能。
 
-在Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html)中了解有关[视频的更多信息。
+在Dynamic Media Classic[&#128279;](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html)中了解有关视频的更多信息。
 
 ## Video 101
 
@@ -220,6 +220,7 @@ Dynamic Media Classic不仅可以为您转换文件，还可以通过提供易�
 
    - 每个流视频帐户都有数十个现成的预设，如果您创建自己的自定义预设，则也会在此处看到这些预设。
    - 您可以使用下拉菜单按类型过滤。 预设分为“计算机”、“移动设备”和“平板电脑”。
+
      ![图像](assets/video-overview/video-overview-4.jpg)
 
 2. “活动”列允许您选择是要在上载时显示所有预设，还是只显示您选择的预设。 如果您在美国，则可能需要取消选中European PAL预设；如果您在英国/欧洲、中东和非洲地区，请取消选中NTSC预设。
@@ -315,7 +316,7 @@ Dynamic Media Classic工作流中的最后一个步骤是发布视频内容。 �
 
 - 了解有关[添加关键字](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html#add-or-edit-keywords)的详细信息。
 - 了解有关[视频SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html)的更多信息。
-- 了解视频SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings)的[设置。
+- 了解视频SEO[&#128279;](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings)的设置。
 
 #### 设置视频SEO
 

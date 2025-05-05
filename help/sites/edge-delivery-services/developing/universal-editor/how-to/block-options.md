@@ -411,8 +411,7 @@ $ git push origin teaser
 要开始块开发，请先查看Edge Delivery Services预览所公开的DOM结构。 DOM通过JavaScript进行了增强并使用CSS进行了样式设置，为构建和自定义块奠定了基础。
 
 >[!BEGINTABS]
-
->要修饰的[!TAB DOM]
+>[!TAB 要修饰的 DOM]
 
 以下是Teaser块的DOM，其中选定了&#x200B;**并排**&#x200B;块选项，即将使用JavaScript和CSS进行装饰的目标。
 

@@ -19,7 +19,7 @@ ht-degree: 0%
 # 使用汇编程序服务的XDP拼接
 
 本文提供了用于展示使用汇编程序服务拼接xdp文档这一能力的宝贵资源。
-编写了以下jsp代码，以将xdp文档（名为address.xdp）中名为**address**&#x200B;的子表单插入到master.xdp文档中名为&#x200B;**address**&#x200B;的插入点中。 生成的xdp已保存在AEM安装的根文件夹中。
+编写了以下jsp代码，以将xdp文档（名为address.xdp）中名为&#x200B;**address**&#x200B;的子表单插入到master.xdp文档中名为&#x200B;**address**&#x200B;的插入点中。 生成的xdp已保存在AEM安装的根文件夹中。
 
 汇编程序服务依赖于有效的DDX文档来描述PDF文档的操作。 您可以在此参阅[DDX参考文档](assets/ddxRef.pdf)。第40页包含有关xdp拼接的信息。
 

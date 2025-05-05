@@ -137,7 +137,7 @@ https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 
 - 在Adobe Developer Console中，导航到在上一步中创建的[项目](https://developer.adobe.com/console/projects)，然后单击以将其打开。 选择`Stage`工作区，这是部署操作的位置。
 
-- 单击“添加服务”****&#x200B;按钮并选择&#x200B;**API**&#x200B;选项。 在&#x200B;**添加API**&#x200B;模式中，选择&#x200B;**Adobe服务** > **I/O管理API**，然后单击&#x200B;**下一步**，执行其他配置步骤并单击&#x200B;**保存配置的API**。
+- 单击“添加服务”**&#x200B;**&#x200B;按钮并选择&#x200B;**API**&#x200B;选项。 在&#x200B;**添加API**&#x200B;模式中，选择&#x200B;**Adobe服务** > **I/O管理API**，然后单击&#x200B;**下一步**，执行其他配置步骤并单击&#x200B;**保存配置的API**。
 
   ![添加服务 — 配置项目](../assets/examples/runtime-action/add-io-management-api.png)
 

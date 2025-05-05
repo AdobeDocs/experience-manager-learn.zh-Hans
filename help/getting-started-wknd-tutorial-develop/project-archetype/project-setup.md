@@ -91,7 +91,7 @@ ht-degree: 1%
    >
    > 此外，始终通过引用[AEM项目原型>用法](https://github.com/adobe/aem-project-archetype#usage)来使用最新的`archetypeVersion`
 
-   可以在此处](https://github.com/adobe/aem-project-archetype#available-properties)找到用于配置项目[的可用属性的完整列表。
+   可以在此处[&#128279;](https://github.com/adobe/aem-project-archetype#available-properties)找到用于配置项目的可用属性的完整列表。
 
 1. 以下文件夹和文件结构由本地文件系统上的Maven原型生成：
 
@@ -251,7 +251,7 @@ AEM项目原型生成一个示例`.gitignore`文件，可用作可以安全忽�
 
 1. 您可以在[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/wknd-packages/application/install/aem-guides-wknd.core-1.0.0-SNAPSHOT.jar)中看到jar的“物理”位置：
 
-   Jar](assets/project-setup/jcr-bundle-location.png)的![CRXDE位置
+   Jar![&#128279;](assets/project-setup/jcr-bundle-location.png)的CRXDE位置
 
 ### Ui.apps和Ui.content模块 {#apps-content-module}
 

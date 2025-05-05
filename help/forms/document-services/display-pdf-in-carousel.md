@@ -52,9 +52,9 @@ ht-degree: 1%
 
 要在本地服务器上对此进行测试，请执行以下步骤：
 
-1. [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)将客户端库](assets/pdf-carousel-client-lib.zip)导入本地AEM实例[
-1. [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)将pdf轮盘组件](assets/pdf-carousel-component.zip)导入本地AEM实例[
-1. [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)将自适应表单](assets/adaptive-form-pdf-carousel.zip)导入本地AEM实例[
-1. [使用assets文件上传链接](http://localhost:4502/assets.html/content/dam)导入要显示的示例pdf](assets/pdf-carousel-sample-documents.zip)到您的本地AEM实例[中
+1. [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)将客户端库[&#128279;](assets/pdf-carousel-client-lib.zip)导入本地AEM实例
+1. [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)将pdf轮盘组件[&#128279;](assets/pdf-carousel-component.zip)导入本地AEM实例
+1. [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)将自适应表单[&#128279;](assets/adaptive-form-pdf-carousel.zip)导入本地AEM实例
+1. [使用assets文件上传链接](http://localhost:4502/assets.html/content/dam)导入要显示的示例pdf[&#128279;](assets/pdf-carousel-sample-documents.zip)到您的本地AEM实例中
 1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
 1. 选项卡到“要审阅的文档”选项卡。 您应该在轮盘组件中看到三个PDF文档。

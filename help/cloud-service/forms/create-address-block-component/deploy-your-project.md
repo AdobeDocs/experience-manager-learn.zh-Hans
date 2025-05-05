@@ -26,7 +26,7 @@ ht-degree: 0%
 ![intellij](assets/intellij.png)
 
 右键单击``adaptiveForm``节点并选择“新建” | 包
-请确保将名称**addressblock**&#x200B;添加到包中
+请确保将名称&#x200B;**addressblock**&#x200B;添加到包中
 
 右键单击新创建的包``addressblock``并选择``repo | Get Command``，如下所示
 ![repo-sync](assets/sync-repo.png)

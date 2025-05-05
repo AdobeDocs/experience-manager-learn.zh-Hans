@@ -28,7 +28,7 @@ ht-degree: 0%
 * 在提交表单时，会触发AEM工作流。 此工作流使用婚姻状态（单身）和就业状态（已停用）标记文档，并将文档存储在DAM中。
 * 文档存储在DAM中后，管理员应该能够按这些标记搜索文档。 例如，搜索“单个”或“已停用”将获取相应的DoR。
 
-为了满足此用例，编写了一个自定义流程步骤。 在此步骤中，我们从提交的数据中提取相应数据元素的值。 然后，我们使用此值构建标记拼贴。 例如，如果婚姻状况元素的值为“Single”，则标记标题将变为**Peak：EmploymentStatus/Single。 **使用TagManager API ，我们找到标记并将标记应用于DoR。
+为了满足此用例，编写了一个自定义流程步骤。 在此步骤中，我们从提交的数据中提取相应数据元素的值。 然后，我们使用此值构建标记拼贴。 例如，如果婚姻状况元素的值为“Single”，则标记标题将变为&#x200B;**Peak：EmploymentStatus/Single。 &#x200B;** 使用TagManager API ，我们找到标记并将标记应用于DoR。
 
 以下是在AEM DAM中标记和存储记录文档的完整代码。
 
@@ -169,7 +169,7 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 * 单击“创建” | 文件上传并上传tag-and-store-in-dam-adaptive-form.zip
 
 * [使用AEM包管理器导入文章资源](assets/tag-and-store-in-dam-assets.zip)
-* 在预览模式](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled)中打开[示例表单。 **填写所有字段**&#x200B;并提交表单。
+* 在预览模式[&#128279;](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled)中打开示例表单。 **填写所有字段**&#x200B;并提交表单。
 * [导航到DAM中的峰值文件夹](http://localhost:4502/assets.html/content/dam/Peak)。 您应该会在Peak文件夹中看到DoR。 检查文档的属性。 应该对其进行适当的标记。
 恭喜!! 您已在系统上成功安装示例
 

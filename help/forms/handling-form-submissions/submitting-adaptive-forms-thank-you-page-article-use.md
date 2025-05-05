@@ -36,7 +36,7 @@ ht-degree: 6%
 
 要在您的服务器上测试此功能，请按照以下说明操作：
 
-* 使用包管理器](assets/submittingtorestendpoint.zip)将与此文章关联的[资源文件导入AEM
+* 使用包管理器[&#128279;](assets/submittingtorestendpoint.zip)将与此文章关联的资源文件导入AEM
 * 将浏览器指向[休息时间申请表](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填写必填字段并提交表单
 * 您应该会获得一个感谢页面，并在该页面中填充了您的信息

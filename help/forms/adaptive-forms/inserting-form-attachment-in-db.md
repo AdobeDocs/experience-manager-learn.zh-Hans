@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 创建数据库表以保存表单数据和附件
 
-已创建名为newhire的表，以保存表单数据。 请注意&#x200B;**LONGBLOB**类型的列名图片以存储表单附件
+已创建名为newhire的表，以保存表单数据。 请注意&#x200B;**LONGBLOB**&#x200B;类型的列名图片以存储表单附件
 ![table-schema](assets/insert-picture-table.png)
 
 ## 创建表单数据模型
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 ## 创建工作流
 
-将自适应表单配置为提交到AEM工作流，您可以选择将表单附件保存在工作流变量中，或将附件保存在有效负荷下的指定文件夹中。 对于此用例，我们需要将附件保存在“文档”的ArrayList类型的工作流变量中。 从此ArrayList中，我们需要提取第一项并初始化文档变量。 已创建名为&#x200B;**listOfDocuments**&#x200B;和&#x200B;**employeePhoto**的工作流变量。
+将自适应表单配置为提交到AEM工作流，您可以选择将表单附件保存在工作流变量中，或将附件保存在有效负荷下的指定文件夹中。 对于此用例，我们需要将附件保存在“文档”的ArrayList类型的工作流变量中。 从此ArrayList中，我们需要提取第一项并初始化文档变量。 已创建名为&#x200B;**listOfDocuments**&#x200B;和&#x200B;**employeePhoto**&#x200B;的工作流变量。
 提交自适应表单以触发工作流时，工作流中的一个步骤将使用ECMA脚本初始化employeePhoto变量。 以下是ECMA脚本代码
 
 ```javascript

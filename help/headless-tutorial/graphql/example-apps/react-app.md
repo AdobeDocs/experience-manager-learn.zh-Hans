@@ -26,7 +26,7 @@ ht-degree: 0%
 
 使用AEM Headless的![React应用程序](./assets/react-app/react-app.png)
 
-在GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)上查看[源代码
+在GitHub[&#128279;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)上查看源代码
 
 提供了[完整的分步教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-Headless/graphql/multi-step/overview.html?lang=zh-Hans)，其中介绍了如何生成此React应用程序。
 
@@ -211,7 +211,7 @@ query ($slug: String!, $imageFormat:AssetTransformFormat=JPG, $imageSeoName: Str
 
 ### 执行GraphQL持久查询
 
-AEM的持久查询通过HTTP GET执行，因此，适用于JavaScript](https://github.com/adobe/aem-headless-client-js)的[AEM Headless客户端用于[对AEM执行持久的GraphQL查询](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany)，并将冒险内容加载到应用程序中。
+AEM的持久查询通过HTTP GET执行，因此，适用于JavaScript[&#128279;](https://github.com/adobe/aem-headless-client-js)的AEM Headless客户端用于[对AEM执行持久的GraphQL查询](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany)，并将冒险内容加载到应用程序中。
 
 每个持久查询在`src/api/usePersistedQueries.js`中具有相应的React [useEffect](https://reactjs.org/docs/hooks-effect.html)挂接，该挂接异步调用AEM HTTP GET持久查询终结点，并返回冒险数据。
 

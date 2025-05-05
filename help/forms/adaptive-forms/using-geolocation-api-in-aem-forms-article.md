@@ -95,12 +95,12 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 
 * 安装并启动AEM Forms服务器。
 >此功能已在AEM Forms 6.3及更高版本上测试
-* [获取Google API密钥](https://developers.google.com/maps/documentation/javascript/get-api-key)。
-* [将与本文相关的资源导入AEM。](assets/geolocationapi.zip)
-* [在编辑模式下打开自适应表单片段。](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
-* 打开图像选择组件的规则编辑器。
-* 将&lt;your_api_key>替换为Google API密钥。
-* 保存更改。
-* [预览表单](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled)。
-* 单击“地理位置”图标。
-* 应使用当前位置填充您的表单。
+>* [获取Google API密钥](https://developers.google.com/maps/documentation/javascript/get-api-key)。
+>* [将与本文相关的资源导入AEM。](assets/geolocationapi.zip)
+>* [在编辑模式下打开自适应表单片段。](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
+>* 打开图像选择组件的规则编辑器。
+>* 将&lt;your_api_key>替换为Google API密钥。
+>* 保存更改。
+>* [预览表单](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled)。
+>* 单击“地理位置”图标。
+>* 应使用当前位置填充您的表单。

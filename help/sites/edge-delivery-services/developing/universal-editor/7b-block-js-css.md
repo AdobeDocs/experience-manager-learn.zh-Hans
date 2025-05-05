@@ -42,8 +42,7 @@ ht-degree: 0%
 要接近块开发，请先查看Edge Delivery Services公开的DOM。 该结构通过JavaScript进行了增强并使用CSS进行了样式设置。
 
 >[!BEGINTABS]
-
->要修饰的[!TAB DOM]
+>[!TAB 要修饰的 DOM]
 
 以下是使用JavaScript和CSS装饰的Teaser块的DOM。
 

@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 添加Blob索引标记
 
-随着数据集的增大，在海量数据中查找特定对象可能会变得困难。 Blob索引标记通过使用键值索引标记属性提供数据管理和发现功能。 您可以在存储帐户中的单个容器或所有容器中对对象进行分类和查找。 例如，blob索引标记&#x200B;_**CustomerType=Platinum**_，其中Platinum是CustomerType字段的值。
+随着数据集的增大，在海量数据中查找特定对象可能会变得困难。 Blob索引标记通过使用键值索引标记属性提供数据管理和发现功能。 您可以在存储帐户中的单个容器或所有容器中对对象进行分类和查找。 例如，blob索引标记&#x200B;_&#x200B;**CustomerType=Platinum**&#x200B;_，其中Platinum是CustomerType字段的值。
 
 ![索引标签](assets/blob-with-index-tags1.png)
 以下代码从提交的数据中创建blob索引数据标记字符串及其相应的值

@@ -26,7 +26,7 @@ ht-degree: 0%
 
 使用AEM Headless的![iOS SwiftUI应用程序](./assets/ios-swiftui-app/ios-app.png)
 
-在GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)上查看[源代码
+在GitHub[&#128279;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)上查看源代码
 
 ## 先决条件 {#prerequisites}
 

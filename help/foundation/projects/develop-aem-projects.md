@@ -69,7 +69,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
 
 ### 小工具 {#gadgets}
 
-此节点上没有其他属性，但小工具的子节点控制创建新项目时用于填充项目仪表板中的项目拼贴。 [项目磁贴](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)（也称为小工具或pod）是填充项目工作区的简单卡片。 您可以在**/libs/cq/gui/components/projects/admin/pod下找到ootb图块的完整列表。 **在创建项目后，项目所有者始终可以添加/删除图块。
+此节点上没有其他属性，但小工具的子节点控制创建新项目时用于填充项目仪表板中的项目拼贴。 [项目磁贴](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)（也称为小工具或pod）是填充项目工作区的简单卡片。 您可以在&#x200B;**/libs/cq/gui/components/projects/admin/pod下找到ootb图块的完整列表。 &#x200B;** 在创建项目后，项目所有者始终可以添加/删除图块。
 
 ### 角色 {#roles}
 
@@ -77,7 +77,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
 
 ### 工作流 {#workflows}
 
-创建自定义项目模板的一个最诱人的原因是，它使您能够配置可用于项目的工作流。 这些工作流可以是OOTB工作流或自定义工作流。 在&#x200B;**工作流**&#x200B;节点下，需要一个&#x200B;**模型**&#x200B;节点（也是`nt:unstructured`）以及指定可用工作流模型的子节点。 属性**modelId**指向/etc/workflow下的工作流模型，属性&#x200B;**wizard**&#x200B;指向启动工作流时使用的对话框。 Projects的一个显着优势是能够添加自定义对话框（向导），以在工作流开始时捕获特定于业务的元数据，从而推动工作流中的进一步操作。
+创建自定义项目模板的一个最诱人的原因是，它使您能够配置可用于项目的工作流。 这些工作流可以是OOTB工作流或自定义工作流。 在&#x200B;**工作流**&#x200B;节点下，需要一个&#x200B;**模型**&#x200B;节点（也是`nt:unstructured`）以及指定可用工作流模型的子节点。 属性&#x200B;**modelId**&#x200B;指向/etc/workflow下的工作流模型，属性&#x200B;**wizard**&#x200B;指向启动工作流时使用的对话框。 Projects的一个显着优势是能够添加自定义对话框（向导），以在工作流开始时捕获特定于业务的元数据，从而推动工作流中的进一步操作。
 
 ```shell
 <projects-template-root> (cq:Template)
@@ -391,7 +391,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
       Pre-Create Task Script = "/apps/aem-guides/projects/scripts/start-task-config.ecma"
    ```
 
-1. 在上一步中，我们引用了一个预创建任务脚本。 我们现在将创建该脚本，其中将根据工作流元数据值&quot;**代理人**&quot;的值设置任务的代理人。 工作流启动时设置了&#x200B;**“代理人”**&#x200B;值。 我们还将读取工作流元数据，以通过读取工作流元数据的“**taskPriority”**&#x200B;值以及用于在第一个任务到期时动态设置的**“taskDueDate”**来动态选择任务的优先级。
+1. 在上一步中，我们引用了一个预创建任务脚本。 我们现在将创建该脚本，其中将根据工作流元数据值&quot;**代理人**&quot;的值设置任务的代理人。 工作流启动时设置了&#x200B;**“代理人”**&#x200B;值。 我们还将读取工作流元数据，以通过读取工作流元数据的“**taskPriority”**&#x200B;值以及用于在第一个任务到期时动态设置的&#x200B;**“taskDueDate”**&#x200B;来动态选择任务的优先级。
 
    出于组织目的，我们在应用程序文件夹下创建了一个文件夹，用于保存所有与项目相关的脚本： **/apps/aem-guides/projects-tasks/projects/scripts**。 在此文件夹下创建名为&#x200B;**&quot;start-task-config.ecma&quot;**&#x200B;的文件。 &#42;注意：请确保start-task-config.ecma文件的路径与步骤4中“高级设置”选项卡中设置的路径相匹配。
 
@@ -482,7 +482,7 @@ AEM项目附带多个[OOTB项目模板](https://experienceleague.adobe.com/en/do
 
 在本教程的前面，我们创建了一个项目模板，其中包含批准者角色。 每次从此模板创建新项目时，都会为批准者角色创建项目特定的组。 就像参与者步骤一样，任务只能分配给用户或组。 我们希望将此任务分配给与批准者组对应的项目组。 从项目内启动的所有工作流都将具有元数据，这些元数据会将项目角色映射到项目特定的组。
 
-在{高级设置}选项卡的&#x200B;**脚本{1**文本区域中复制+粘贴以下代码****&#x200B;此代码将读取工作流元数据并将任务分配给项目的审批者组。 如果找不到批准者组值，它将回退以将任务分配给管理员组。
+在{高级设置}选项卡的&#x200B;**脚本&lbrace;1**&#x200B;文本区域中复制+粘贴以下代码&#x200B;**&#x200B;**&#x200B;此代码将读取工作流元数据并将任务分配给项目的审批者组。 如果找不到批准者组值，它将回退以将任务分配给管理员组。
 
 ```
 var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -514,7 +514,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
    由于这是紧急批准路由，因此任务的优先级将设置为“高”。 此外，我们只给批准者组一天时间来完成任务。 “任务”选项卡上的“被分派人”留空，因为我们将在“高级设置”选项卡中动态分配此项。
 
-   我们可以重复使用与步骤7中相同的脚本片段来填充{**高级设置{选项卡**上的&#x200B;**脚本**&#x200B;文本区域。 复制并粘贴以下代码：
+   我们可以重复使用与步骤7中相同的脚本片段来填充&lbrace;**高级设置&lbrace;选项卡**&#x200B;上的&#x200B;**脚本**&#x200B;文本区域。 复制并粘贴以下代码：
 
    ```
    var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -522,7 +522,7 @@ task.setCurrentAssignee(projectApproverGrp);
    task.setCurrentAssignee(projectApproverGrp);
    ```
 
-1. 将a**无操作**组件拖放到最右侧分支（分支3）中。 无操作组件不执行任何操作，它将会立即进行高级操作，表示原始编辑者希望绕过批准步骤。 从技术上讲，我们可以离开此分支而不执行任何工作流步骤，但作为最佳实践，我们将添加“不操作”步骤。 这使其他开发人员清楚了解分支3的用途。
+1. 将a&#x200B;**无操作**&#x200B;组件拖放到最右侧分支（分支3）中。 无操作组件不执行任何操作，它将会立即进行高级操作，表示原始编辑者希望绕过批准步骤。 从技术上讲，我们可以离开此分支而不执行任何工作流步骤，但作为最佳实践，我们将添加“不操作”步骤。 这使其他开发人员清楚了解分支3的用途。
 
    双击工作流步骤并配置标题和描述：
 

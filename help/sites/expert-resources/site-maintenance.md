@@ -59,7 +59,7 @@ ht-degree: 3%
 
 最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此，您可以定期从存储库中清除已完成或正在运行的工作流实例。
 
-#### [审核日志维护](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html
+#### [审核日志维护] (https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html
 
 符合审核日志记录条件的AEM事件会生成大量存档数据。 由于复制、资产上传和其他系统活动，这些数据会随着时间的推移而快速增长。
 

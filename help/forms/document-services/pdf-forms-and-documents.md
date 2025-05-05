@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ![Pdfa](assets/pdfa-file-in-acrobat.png)
 
-可从此处](assets/pdf-file-types.zip)下载样本文件[
+可从此处[&#128279;](assets/pdf-file-types.zip)下载样本文件
 
 ## XML Forms架构PDF(XFA PDF)
 

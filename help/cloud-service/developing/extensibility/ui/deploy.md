@@ -29,7 +29,7 @@ ht-degree: 0%
    + __阶段__工作区充当开发人员工作区。 部署到暂存工作区的扩展在AEM as a Cloud Service中不可用。
 Adobe Developer Console工作区与AEM as a Cloud Service环境类型没有任何直接关联。
 + 部署到生产工作区的扩展将显示在Adobe组织中该扩展存在的所有AEM as a Cloud Service环境中。
-通过添加检查AEM as a Cloud Service主机名](https://developer.adobe.com/uix/docs/guides/publication/#enabling-extension-only-on-specific-aem-environments)的[条件逻辑，不能将扩展限制为它所注册的环境。
+通过添加检查AEM as a Cloud Service主机名[&#128279;](https://developer.adobe.com/uix/docs/guides/publication/#enabling-extension-only-on-specific-aem-environments)的条件逻辑，不能将扩展限制为它所注册的环境。
 + AEM as a Cloud Service上可以使用多个扩展。 Adobe建议使用每个App Builder应用程序扩展来解决单个业务目标。 也就是说，一个扩展App Builder应用程序可以实施多个扩展点，以支持共同的业务目标。
 
 ## 初始部署

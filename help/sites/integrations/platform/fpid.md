@@ -174,7 +174,7 @@ public class FpidServlet extends SlingAllMethodsServlet {
 
 调用AEM FPID Servlet时，将从JSON响应中检索FPID，并由[Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en)用来将其发送到Experience Platform API。
 
-有关在identityMap](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap)中使用FPID的[的更多信息，请参阅Experience Platform文档
+有关在identityMap[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap)中使用FPID的的更多信息，请参阅Experience Platform文档
 
 ```javascript
 ...

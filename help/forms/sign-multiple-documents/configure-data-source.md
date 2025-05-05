@@ -41,7 +41,7 @@ AEM可通过多种方式实现与外部数据库的集成。 集成数据库的�
 
 ## 资源
 
-可从此处](assets/sign-multiple-forms.sql)下载用于创建架构的SQL文件[。 您需要使用MySql Workbench导入此文件以创建架构和表。
+可从此处[&#128279;](assets/sign-multiple-forms.sql)下载用于创建架构的SQL文件。 您需要使用MySql Workbench导入此文件以创建架构和表。
 
 ## 后续步骤
 

@@ -90,7 +90,7 @@ AEM提供了一组已生产就绪的[核心组件](https://experienceleague.adob
 
 1. 请注意，页面上存在已修复的组件，如&#x200B;**标题**、**导航**、**搜索**。 这些区域配置为页面模板的一部分，无法在单个页面上修改。 下一章将对此进行详细探讨。
 
-您可以随意尝试一些其他组件。 可在此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)找到有关每个[核心组件的文档。 您可以在此处](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html)找到有关[页面创作的详细视频系列。
+您可以随意尝试一些其他组件。 可在此处[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)找到有关每个[核心组件的文档。 您可以在此处](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html)找到有关页面创作的详细视频系列。
 
 ## 发布更新 {#publish-updates}
 

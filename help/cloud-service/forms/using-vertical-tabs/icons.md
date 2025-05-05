@@ -134,7 +134,7 @@ Mixin的细分，以下是mixin的每个部分所执行的操作：
 使用前端管道部署更新的主题。
 为垂直选项卡组件创建样式变体，如下所示
 ![style-variation](assets/verticaltab-style-variation.png)
-我们创建了一个名为Marketing的样式变量，该变量与css类_**cmp-verticaltables—marketing**_关联。
+我们创建了一个名为Marketing的样式变量，该变量与css类_&#x200B;**cmp-verticaltables—marketing**&#x200B;_关联。
 创建具有垂直选项卡组件的自适应表单。 将垂直选项卡组件与营销样式变量关联。
 将几个选项卡添加到垂直选项卡并命名它们，以匹配图标映射中定义的图像，如home、family。
 ![主页图标](assets/tab-name.png)

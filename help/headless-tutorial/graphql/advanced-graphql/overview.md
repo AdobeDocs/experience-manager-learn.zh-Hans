@@ -27,7 +27,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->如果您无权访问AEM as a Cloud Service环境，则可以使用本地SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html)完成[AEM Headless快速设置。 但是，请务必注意，某些产品UI页面（例如内容片段导航）是不同的。
+>如果您无权访问AEM as a Cloud Service环境，则可以使用本地SDK[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html)完成AEM Headless快速设置。 但是，请务必注意，某些产品UI页面（例如内容片段导航）是不同的。
 
 
 

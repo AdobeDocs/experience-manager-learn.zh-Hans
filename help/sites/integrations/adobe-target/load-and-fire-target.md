@@ -93,7 +93,7 @@ window.adobeDataLayer.push(function (dataLayer) {
 
 ![数据元素](assets/data-elements.png)
 
-标记数据元素通过核心扩展的Custom Code数据元素类型，将在自定义页面显示事件](#page-event)中触发的事件对象[中的数据映射到Adobe Target中可用的变量。
+标记数据元素通过核心扩展的Custom Code数据元素类型，将在自定义页面显示事件[&#128279;](#page-event)中触发的事件对象中的数据映射到Adobe Target中可用的变量。
 
 #### 页面ID数据元素
 

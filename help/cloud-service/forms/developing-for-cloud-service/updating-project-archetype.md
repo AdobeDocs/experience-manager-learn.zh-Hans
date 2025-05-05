@@ -29,7 +29,7 @@ ht-degree: 0%
 * 打开命令提示符并导航到c：\cloudmanager
 * 使用最新原型创建maven项目。
 * 在命令提示符窗口中复制并粘贴[文本文件](assets/creating-maven-project.txt)的内容。 您可能需要根据[最新版本](https://github.com/adobe/aem-project-archetype/releases)更改DarchetypeVersion=33。 原型33包括新的AEM Forms主题。
-由于我们正在cloudmanager文件夹中创建新的maven项目，该文件夹已具有aem-banking-application项目，因此您应将**DartifactId**&#x200B;从aem-banking-application更改为其他内容。 本文使用了aem-banking-application1。
+由于我们正在cloudmanager文件夹中创建新的maven项目，该文件夹已具有aem-banking-application项目，因此您应将&#x200B;**DartifactId**&#x200B;从aem-banking-application更改为其他内容。 本文使用了aem-banking-application1。
 
 >[!NOTE]
 >

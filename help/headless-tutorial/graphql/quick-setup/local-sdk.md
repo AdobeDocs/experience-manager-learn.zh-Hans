@@ -62,7 +62,7 @@ AEM Headless快速设置使用WKND Site示例项目中的内容以及一个通�
 
 **WKND引用站点**&#x200B;中的示例内容用于加速教程。 WKND是一个虚构的生活风格品牌，通常与AEM培训一起使用。
 
-WKND站点包含公开[GraphQL端点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html)所需的配置。 在真实实施中，按照记录的步骤，将GraphQL端点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html)包含在您的客户项目中。 [[CORS](#cors-config)也已打包为WKND站点的一部分。 需要CORS配置才能授予对外部应用程序的访问权限，可在下面找到有关[CORS](#cors-config)的详细信息。
+WKND站点包含公开[GraphQL端点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html)所需的配置。 在真实实施中，按照记录的步骤，将GraphQL端点[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html)包含在您的客户项目中。 [CORS](#cors-config)也已打包为WKND站点的一部分。 需要CORS配置才能授予对外部应用程序的访问权限，可在下面找到有关[CORS](#cors-config)的详细信息。
 
 1. 下载适用于WKND站点的最新编译的AEM包： [aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest)。
 
@@ -98,7 +98,7 @@ WKND站点包含公开[GraphQL端点](https://experienceleague.adobe.com/docs/ex
 
 >[!NOTE]
 >
-> 如果使用Cloud Service环境，请参阅有关如何将代码库（如WKND引用站点）部署到Cloud Service环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version)的文档。[
+> 如果使用Cloud Service环境，请参阅有关如何将代码库（如WKND引用站点）部署到Cloud Service环境[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version)的文档。
 
 ## 3.下载并运行WKND React应用程序 {#sample-app}
 
@@ -176,7 +176,7 @@ WKND站点包含公开[GraphQL端点](https://experienceleague.adobe.com/docs/ex
 
    >[!NOTE]
    >
-   > GraphiQL工具和GraphQL API将在教程](../multi-step/explore-graphql-api.md)的后面部分进行更详细的[探讨。
+   > GraphiQL工具和GraphQL API将在教程[&#128279;](../multi-step/explore-graphql-api.md)的后面部分进行更详细的探讨。
 
 ## 恭喜！{#congratulations}
 

@@ -23,4 +23,4 @@ ht-degree: 0%
 * 使用OSGi Web控制台[自定义文档服务捆绑包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)下载并部署该捆绑包
 * 使用OSGi Web控制台[使用服务用户包进行开发](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)下载并部署该包
 * 使用OSGi Web控制台[从pdf文件导入数据](./assets/onlineToOffline.core-1.0.0-SNAPSHOT.jar)下载并部署捆绑包
-* 在&#x200B;_**Apache Sling服务用户映射器服务**_ OSGi配置控制台中添加条目&#x200B;_**DevelopingWithServiceUser.core：getresourceresolver=data**_
+* 在&#x200B;_&#x200B;**Apache Sling服务用户映射器服务**&#x200B;_ OSGi配置控制台中添加条目&#x200B;_&#x200B;**DevelopingWithServiceUser.core：getresourceresolver=data**&#x200B;_

@@ -209,7 +209,7 @@ function getColorName(colorsFamily, color) {
 
 ## 测试工作程序{#test}
 
-可以使用与二进制格式副本](../test-debug/test.md)相同的Asset Compute测试框架来测试元数据工作程序[。 唯一的区别是测试用例中的`rendition.xxx`文件必须是预期的XMP (XML)演绎版。
+可以使用与二进制格式副本[&#128279;](../test-debug/test.md)相同的Asset Compute测试框架来测试元数据工作程序。 唯一的区别是测试用例中的`rendition.xxx`文件必须是预期的XMP (XML)演绎版。
 
 1. 在Asset Compute项目中创建以下结构：
 

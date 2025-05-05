@@ -95,9 +95,10 @@ _使用wskdebug调试Asset Compute工作程序的点进（无音频）_
 
 [AEM as a Cloud Service通过处理用户档案](../deploy/processing-profiles.md)利用Asset Compute工作程序，方法是直接在Adobe I/O Runtime中调用这些工作程序。 由于这些调用不涉及本地开发，因此无法使用本地工具(如Asset Compute Development Tool或wskdebug)调试其执行。 相反，Adobe I/O CLI可用于从Adobe I/O Runtime中特定工作区执行的worker获取日志。
 
-1. 请确保根据需要调试的工作区，通过`AIO_runtime_namespace`和`AIO_runtime_auth`设置特定于工作区的环境变量](../deploy/runtime.md)。[
+1. 请确保根据需要调试的工作区，通过`AIO_runtime_namespace`和`AIO_runtime_auth`设置特定于工作区的环境变量[&#128279;](../deploy/runtime.md)。
 1. 从命令行执行`aio app logs`
    + 如果工作区发生大量流量，请通过`--limit`标记扩展激活日志的数量：
+
      `$ aio app logs --limit=25`
 1. 最近（截至提供的`--limit`）的激活日志作为命令输出返回，以供审查。
 

@@ -107,7 +107,7 @@ AEM Forms数据集成提供了一个直观的用户界面，用于创建和使�
 * [下载数据源](assets/drivers-license-source.zip)并使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入到AEM中
 * [下载表单数据模型](assets/drivers-license-fdm.zip)并使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入到AEM中
 * [下载客户端库](assets/drivers-license-client-lib.zip)
-* 可从此处](assets/adaptive-form-dl.zip)下载自适应表单示例[。 此示例表单使用了本文中提供的表单数据模型的服务调用。
+* 可从此处[&#128279;](assets/adaptive-form-dl.zip)下载自适应表单示例。 此示例表单使用了本文中提供的表单数据模型的服务调用。
 * 从[Forms和文档UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)将表单导入AEM
 * 以[编辑模式打开表单。](http://localhost:4502/editor.html/content/forms/af/driverslicenseandpassport.html)
 * 在apikey字段中指定API密钥作为默认值，并保存更改

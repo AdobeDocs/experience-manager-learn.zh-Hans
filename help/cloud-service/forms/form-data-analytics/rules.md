@@ -31,7 +31,7 @@ ht-degree: 1%
 
 每次在自适应表单字段中存在验证错误时，都会触发&#x200B;**字段验证错误**&#x200B;规则。 例如，在我们的表单中，如果电话号码或电子邮件不是预期格式，则会显示验证错误消息。
 
-字段验证错误规则是通过将事件设置为&#x200B;_**Adobe Experience Manager Forms-Error**_&#x200B;配置的，如屏幕快照中所示
+字段验证错误规则是通过将事件设置为&#x200B;_&#x200B;**Adobe Experience Manager Forms-Error**&#x200B;_&#x200B;配置的，如屏幕快照中所示
 
 
 
@@ -45,11 +45,11 @@ Adobe Analytics — 设置变量的配置如下
 
 每次成功提交自适应表单时都会触发表单提交规则。
 
-表单提交规则是使用&#x200B;_**Adobe Experience Manager Forms — 提交**_&#x200B;事件配置的
+表单提交规则是使用&#x200B;_&#x200B;**Adobe Experience Manager Forms — 提交**&#x200B;_&#x200B;事件配置的
 
 ![表单提交规则](assets/form-submit-rule.png)
 
-在表单提交规则中，数据元素&#x200B;_**ApplicationsStateOfResidence**_&#x200B;的值映射到prop5，数据元素FormTitle的值映射到prop8。
+在表单提交规则中，数据元素&#x200B;_&#x200B;**ApplicationsStateOfResidence**&#x200B;_&#x200B;的值映射到prop5，数据元素FormTitle的值映射到prop8。
 
 Adobe Analytics - Set变量的配置如下。
 ![form-submit-rule-set-variables](assets/form-submit-set-variable.png)

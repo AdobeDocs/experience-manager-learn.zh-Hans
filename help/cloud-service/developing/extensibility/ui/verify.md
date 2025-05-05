@@ -82,7 +82,7 @@ AEM UI扩展可以根据Adobe组织内该扩展所属的任何AEM as a Cloud Ser
 
 1. 将预览URL复制并粘贴到浏览器中。
 
-   + 您可能必须先为本地应用程序的主机(`https://localhost:9080`)[接受HTTPS证书](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users)，然后再定期接受。
+   + 您可能必须先为本地应用程序的主机(`https://localhost:9080`) [接受HTTPS证书](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users)，然后再定期接受。
 
 1. AEM UI将加载并插入扩展程序的本地版本以进行验证。
 

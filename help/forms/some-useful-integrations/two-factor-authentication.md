@@ -53,7 +53,7 @@ OpenAPI规范（以前称为Swagger规范）是适用于REST API的API描述格�
 ## 创建表单数据模型
 
 AEM Forms数据集成提供了一个直观的用户界面，用于创建和使用[表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 表单数据模型依赖数据源交换数据。
-可从此处](assets/sms-2fa-fdm.zip)下载已完成的表单数据模型[
+可从此处[&#128279;](assets/sms-2fa-fdm.zip)下载已完成的表单数据模型
 
 ![fdm](assets/2FA-fdm.PNG)
 
@@ -64,7 +64,7 @@ AEM Forms数据集成提供了一个直观的用户界面，用于创建和使�
 如果要将示例资源与API密钥一起使用，请执行以下步骤：
 
 * [下载表单数据模型](assets/sms-2fa-fdm.zip)并使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入到AEM中
-* 可从此处](assets/sms-2fa-verification-af.zip)下载自适应表单示例[。 此示例表单使用了本文中提供的表单数据模型的服务调用。
+* 可从此处[&#128279;](assets/sms-2fa-verification-af.zip)下载自适应表单示例。 此示例表单使用了本文中提供的表单数据模型的服务调用。
 * 从[Forms和文档UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)将表单导入AEM
 * 在编辑模式下打开表单。 打开以下字段的规则编辑器
 

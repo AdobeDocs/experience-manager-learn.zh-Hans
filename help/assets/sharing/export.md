@@ -243,7 +243,7 @@ console.timeEnd('Download AEM assets');
 
 下载脚本后，更新脚本底部的配置变量。
 
-可以使用对AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview)进行基于[令牌的身份验证教程中的步骤来获取`AEM_ACCESS_TOKEN`。 通常，只要导出过程不超过24小时，并且生成令牌的用户拥有对要导出的资产的读取权限，24小时开发人员令牌便足以满足需求。
+可以使用对AEM as a Cloud Service[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview)进行基于令牌的身份验证教程中的步骤来获取`AEM_ACCESS_TOKEN`。 通常，只要导出过程不超过24小时，并且生成令牌的用户拥有对要导出的资产的读取权限，24小时开发人员令牌便足以满足需求。
 
 ```javascript
 ...

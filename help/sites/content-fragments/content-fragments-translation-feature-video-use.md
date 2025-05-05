@@ -28,7 +28,7 @@ ht-degree: 2%
 
 内容片段是AEM提取并发送到外部翻译服务的可识别内容类型。 支持开箱即用的多个用例：
 
-1. 可以直接在Assets控制台中为语言副本和翻译](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html)选择内容片段[。
+1. 可以直接在Assets控制台中为语言副本和翻译[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html)选择内容片段。
 2. 为语言复制选择站点页面时，在站点页面上引用的内容片段将复制到相应的语言文件夹并提取以供翻译。
 3. 嵌入在内容片段中的内联媒体资产有资格进行提取和翻译。
 4. 与内容片段关联的资产收藏集符合提取和翻译的条件。

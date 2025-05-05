@@ -123,7 +123,7 @@ Adobe Experience Manager附带一些内置的验证方法。 这些验证方法�
 
 1. 要限制图像文件大小和尺寸，请查看内容引用字段的一些验证选项。
 
-   在&#x200B;**仅接受指定的文件大小**下，选择“小于或等于”，其他字段显示在下方。
+   在&#x200B;**仅接受指定的文件大小**&#x200B;下，选择“小于或等于”，其他字段显示在下方。
    ![仅接受指定的文件大小](assets/define-content-fragment-models/accept-specified-file-size.png)
 
 1. 对于&#x200B;**最大值**，输入“5”，对于&#x200B;**选择单位**，选择“兆字节(MB)”。 此验证仅允许选择指定大小的图像。
@@ -234,7 +234,7 @@ Adobe Experience Manager附带一些内置的验证方法。 这些验证方法�
 
 ## 后续步骤 {#next-steps}
 
-本系列的下一章将介绍如何根据您在本章中创建的模型创作内容片段[](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)。 了解如何使用本章介绍的数据类型以及创建文件夹策略来限制可以在资源文件夹中创建哪些内容片段模型。
+本系列的下一章将介绍如何根据您在本章中创建的模型创作内容片段[&#128279;](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)。 了解如何使用本章介绍的数据类型以及创建文件夹策略来限制可以在资源文件夹中创建哪些内容片段模型。
 
 虽然它是本教程的可选内容，但请确保在真实的生产环境中发布所有内容。 有关AEM中“创作”和“发布”环境的审查，请参阅
 [AEM无头和GraphQL视频系列](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md)。

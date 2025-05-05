@@ -174,9 +174,9 @@ __更改（或创建）AEM索引__，以使现有查询限制可解析为索引�
 
 ![说明查询](./assets/traversals/verify.gif)
 
-如果只对查询](#adjust-the-query)进行了[调整，则可以通过Developer Console的[Explain查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}直接在AEM as a Cloud Service上测试该查询。 解释查询是针对AEM Author服务运行的，但是，由于索引定义在Author和Publish服务中是相同的，因此验证AEM Author服务的查询便已足够。
+如果只对查询[&#128279;](#adjust-the-query)进行了调整，则可以通过Developer Console的[Explain查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}直接在AEM as a Cloud Service上测试该查询。 解释查询是针对AEM Author服务运行的，但是，由于索引定义在Author和Publish服务中是相同的，因此验证AEM Author服务的查询便已足够。
 
-如果对索引](#adjust-the-index)进行了[调整，则必须将该索引部署到AEM as a Cloud Service。 部署索引调整后，Developer Console的[Explain查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}可用于进一步执行和优化查询。
+如果对索引[&#128279;](#adjust-the-index)进行了调整，则必须将该索引部署到AEM as a Cloud Service。 部署索引调整后，Developer Console的[Explain查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}可用于进一步执行和优化查询。
 
 最终，所有更改（查询和代码）都会提交到Git并使用Cloud Manager部署到AEM as a Cloud Service。 部署后，重新测试与原始遍历警告关联的代码路径，并验证`aemerror`日志中是否不再显示遍历警告。
 

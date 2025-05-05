@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 测试更改
 
-基于&#x200B;**&quot;Blank with Core Components&quot;**模板创建自适应表单。 将3个按钮拖放到表单上，并将其标记为“公司”、“营销”和“默认”。
+基于&#x200B;**&quot;Blank with Core Components&quot;**&#x200B;模板创建自适应表单。 将3个按钮拖放到表单上，并将其标记为“公司”、“营销”和“默认”。
 通过选择如下所示的绘画画笔，为公司和营销按钮分配相应的样式变体。
 
 ![样式](assets/marketing-variation.png)
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 构建主题项目
 
-下一步是构建主题项目。 导航到主题项目的根文件夹，然后运行命令&#x200B;_**npm run build**_，如下面的屏幕快照所示。
+下一步是构建主题项目。 导航到主题项目的根文件夹，然后运行命令&#x200B;_&#x200B;**npm run build**&#x200B;_，如下面的屏幕快照所示。
 
 ![生成主题](assets/build-theme.png)
 

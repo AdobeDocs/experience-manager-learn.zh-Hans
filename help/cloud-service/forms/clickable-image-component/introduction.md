@@ -20,7 +20,7 @@ ht-degree: 0%
 # 可单击图像简介
 
 在Forms中使用可单击的图像，可以打造一种更加引人入胜、直观且美观的用户体验。 在本文中，我们将SVG用于可点击图像，因为它提供了几个优势，尤其是在设计灵活性、性能和用户体验方面。
-可以使用Adobe Illustrator或任何免费在线工具创建SVG。 我已使用来自](https://simplemaps.com/resources/svg-us)简单映射的[USA映射来演示用例。
+可以使用Adobe Illustrator或任何免费在线工具创建SVG。 我已使用来自[&#128279;](https://simplemaps.com/resources/svg-us)简单映射的USA映射来演示用例。
 
 ## 使用可单击的“美国地图”的用例
 
