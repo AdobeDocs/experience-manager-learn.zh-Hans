@@ -20,7 +20,7 @@ ht-degree: 2%
 
 探索设置和使用“社交媒体共享”组件。
 
->[!VIDEO](https://video.tv.adobe.com/v/18897?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328067?quality=12&learn=on&captions=chi_hans)
 
 本视频使用[We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail)示例网站探讨了社交媒体共享组件([AEM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)的一部分)的以下协作室。
 

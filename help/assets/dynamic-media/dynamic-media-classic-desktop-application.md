@@ -22,7 +22,7 @@ ht-degree: 1%
 
 Adobe引入了Dynamic Media Classic桌面应用程序，该应用程序提供了与浏览器类似的体验以及功能等效的界面，该界面不依赖于Adobe Flash Player。
 
->[!VIDEO](https://video.tv.adobe.com/v/36645?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327761?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

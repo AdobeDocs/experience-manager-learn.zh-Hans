@@ -21,7 +21,7 @@ ht-degree: 1%
 
 了解AEM Assets as a Cloud Service的资源计算微服务如何让您自动高效地为资源生成任何演绎版，从而取代传统AEM Workflow的这一角色。
 
->[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454295?quality=12&learn=on&captions=chi_hans)
 
 ## 工作流迁移工具
 

@@ -28,7 +28,7 @@ ht-degree: 75%
 
 在[Adobe的Admin Console](https://adminconsole.adobe.com)中，需要访问AEM创作服务的用户被管理为[Adobe IMS用户](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html)。 了解 Adobe IMS 用户的身份，以及如何在 Admin Console 中访问和管理他们。
 
->[!VIDEO](https://video.tv.adobe.com/v/39149?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327554?quality=12&learn=on&captions=chi_hans)
 
 ## 其他资源
 

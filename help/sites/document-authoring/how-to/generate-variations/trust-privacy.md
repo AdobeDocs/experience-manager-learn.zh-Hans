@@ -22,4 +22,4 @@ ht-degree: 0%
 
 探索Adobe如何在Edge Delivery Services文档创作中处理生成变体的信任和隐私。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429060/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440024/?learn=on&captions=chi_hans)

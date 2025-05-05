@@ -25,4 +25,4 @@ ht-degree: 0%
 
 有关如何为作者设置文档创作的指南。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425699/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438873/?learn=on&captions=chi_hans)

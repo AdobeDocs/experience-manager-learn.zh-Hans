@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍在用户管理中添加用户和组的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335485?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417654?quality=12&learn=on&captions=chi_hans)

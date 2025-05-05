@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍在Acrobat中使用Document Security模块创建的策略的应用过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335486?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417198?quality=12&learn=on&captions=chi_hans)

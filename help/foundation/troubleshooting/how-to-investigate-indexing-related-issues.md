@@ -22,4 +22,4 @@ ht-degree: 0%
 
 *本视频介绍调查AEM中与索引相关问题的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335465?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418304?quality=12&learn=on&captions=chi_hans)

@@ -20,7 +20,7 @@ ht-degree: 3%
 
 AEM 6.5中的Dynamic Media Viewer增强功能包括额外支持360个视频渲染、360个媒体查看器（video360Social和video360VR）以及选择自定义视频缩略图。
 
->[!VIDEO](https://video.tv.adobe.com/v/26391?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34615?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

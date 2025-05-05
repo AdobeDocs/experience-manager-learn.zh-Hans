@@ -23,15 +23,15 @@ ht-degree: 2%
 
 **在AEM Forms 6.3和6.4中配置人员面板**
 
->[!VIDEO](https://video.tv.adobe.com/v/22193?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326923?quality=12&learn=on&captions=chi_hans)
 
 **在AEM Forms 6.5及更高版本中配置人员面板**
 
->[!VIDEO](https://video.tv.adobe.com/v/28385?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326939?quality=12&learn=on&captions=chi_hans)
 
 **配偶详细信息规则**
 
->[!VIDEO](https://video.tv.adobe.com/v/22195?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326931?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

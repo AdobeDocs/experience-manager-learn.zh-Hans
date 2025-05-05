@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍对AEM Forms PDFG的Windows设置中的Acrobat特定问题进行故障排除的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335480?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417624?quality=12&learn=on&captions=chi_hans)

@@ -24,7 +24,7 @@ ht-degree: 0%
 
 创建一个Adobe Developer Console项目，以定义对其他Adobe服务的访问权限，并管理其部署。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412875?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3442024?quality=12&learn=on&captions=chi_hans)
 
 >[!IMPORTANT]
 >

@@ -31,7 +31,7 @@ ht-degree: 2%
 
 ## 用例演示
 
->[!VIDEO](https://video.tv.adobe.com/v/327122?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346927?quality=12&learn=on&captions=chi_hans)
 
 ## 先决条件
 

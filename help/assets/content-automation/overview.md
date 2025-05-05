@@ -21,4 +21,4 @@ ht-degree: 0%
 
 此概述将Photoshop和Lightroom功能与Adobe Experience Manager Assets Content Automation结合使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/333197?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416627?quality=12&learn=on&captions=chi_hans)

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 了解AEM Forms as a Cloud Service支持的用例和功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/336968?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443378?quality=12&learn=on&captions=chi_hans)

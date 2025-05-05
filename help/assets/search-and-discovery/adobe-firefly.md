@@ -22,7 +22,7 @@ ht-degree: 0%
 
 了解Adobe Experience Manager Assets如何与Adobe Firefly集成，将空搜索结果转变为高效的资产生成体验，使用户能够直接在其工作流中轻松查找和上传资产。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429070/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438267/?learn=on&captions=chi_hans)
 
 
 >[!TIP]

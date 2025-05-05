@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Assets管理员搜索边栏允许使用Omnisearch中的自定义条件搜索资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/35842?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40074?quality=12&learn=on&captions=chi_hans)

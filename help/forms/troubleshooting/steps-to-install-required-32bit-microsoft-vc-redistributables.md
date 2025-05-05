@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍检查和安装所需的32位Microsoft Visual C++可再发行组件的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335520?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417659?quality=12&learn=on&captions=chi_hans)

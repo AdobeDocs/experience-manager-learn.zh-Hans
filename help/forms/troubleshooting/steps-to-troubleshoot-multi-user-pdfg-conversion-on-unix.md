@@ -22,4 +22,4 @@ ht-degree: 0%
 
 *此视频介绍对Unix设置中的多用户PDFG转换问题进行故障排除的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335549?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417609?quality=12&learn=on&captions=chi_hans)

@@ -25,4 +25,4 @@ ht-degree: 1%
 
 了解如何使用[AEM Assets Sidekick插件](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin)将托管资源合并到通过Edge Delivery Services提供的高影响力体验中。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424615/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3435832/?learn=on&captions=chi_hans)

@@ -23,4 +23,4 @@ ht-degree: 2%
 
 集成Adobe Experience Manager Forms as a Cloud Service和Document Cloud API的用例简介。
 
->[!VIDEO](https://video.tv.adobe.com/v/333241?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413002?quality=12&learn=on&captions=chi_hans)

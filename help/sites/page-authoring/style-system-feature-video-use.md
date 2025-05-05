@@ -24,7 +24,7 @@ ht-degree: 1%
 
 Adobe Experience Manager的样式系统允许在不进行后端开发的情况下实现组件的可视化变量，从而允许更好地重复使用AEM组件，并实现更通用、更高效的内容创作。 样式系统与AEM核心组件、模板编辑器和响应式布局一起使用时，可提供强大的功能以快速构建丰富的体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/21750?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340441?quality=12&learn=on&captions=chi_hans)
 
 此视频演示了如何使用样式系统仅使用CSS为单个组件创建截然不同的视觉外观。
 

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍在Windows 2016中添加AEM Forms PDFG用户的其他步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335479?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417203?quality=12&learn=on&captions=chi_hans)

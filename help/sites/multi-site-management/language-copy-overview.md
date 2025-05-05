@@ -22,4 +22,4 @@ ht-degree: 0%
 
 获取有关如何使用AEM Sites中的语言副本来创建多语言站点的概述。
 
->[!VIDEO](https://video.tv.adobe.com/v/36487?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41616?quality=12&learn=on&captions=chi_hans)

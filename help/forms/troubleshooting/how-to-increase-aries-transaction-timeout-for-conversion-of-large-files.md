@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍增加“aries.transaction.timeout”以解决与转换大型文件相关的问题。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437831?quality=12&learn=on&captions=chi_hans)

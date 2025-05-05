@@ -85,4 +85,4 @@ functions.js
 ## 使用自定义函数
 
 以下视频将指导您完成在自适应表单的规则编辑器中使用自定义函数所涉及的步骤
->[!VIDEO](https://video.tv.adobe.com/v/340305?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445851?quality=12&learn=on&captions=chi_hans)

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 了解AEM的代码重构工具如何帮助自动将现有AEM项目转换为可与AEM as a Cloud Service兼容的项目。
 
->[!VIDEO](https://video.tv.adobe.com/v/336693?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444725?quality=12&learn=on&captions=chi_hans)

@@ -24,4 +24,4 @@ ht-degree: 0%
 
 了解如何使用Adobe Firefly创建内容变体中使用的图像，以便在Edge Delivery Services文档创作中定位正确的受众。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428794/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438366/?learn=on&captions=chi_hans)

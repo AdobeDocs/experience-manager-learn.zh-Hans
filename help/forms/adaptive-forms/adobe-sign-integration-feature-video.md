@@ -26,7 +26,7 @@ ht-degree: 0%
 
 将Acrobat Sign与AEM Forms一起使用
 
->[!VIDEO](https://video.tv.adobe.com/v/18696?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38340?quality=12&learn=on&captions=chi_hans)
 
 *此视频介绍设置Acrobat Sign云服务并将多个签名字段添加到AEM自适应表单的过程。*
 

@@ -20,7 +20,7 @@ ht-degree: 1%
 
 组件控制台为开发人员和管理员提供了一个中央位置，用于管理Sites实施中的所有各种组件。 以下视频详细介绍了组件控制台的功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/17417?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38283?quality=12&learn=on&captions=chi_hans)
 
 组件控制台提供了以下功能：
 

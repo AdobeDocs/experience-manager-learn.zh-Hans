@@ -23,7 +23,7 @@ ht-degree: 0%
 
 高级元数据管理允许用户创建层叠字段规则，以在AEM Assets中形成元数据之间的上下文关系。 以下视频演示了字段要求、可见性和上下文选择的新动态规则。 此视频还详细介绍管理员将这些规则应用于自定义元数据架构所需的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/20702?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/347040?quality=12&learn=on&captions=chi_hans)
 
 可以为给定元数据字段启用三个动态规则集：
 

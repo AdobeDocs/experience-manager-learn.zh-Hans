@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索试验框架，该框架允许营销人员测试哪些内容变体在Edge Delivery Services文档创作中最有效。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429061/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437867/?learn=on&captions=chi_hans)

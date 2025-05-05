@@ -21,4 +21,4 @@ ht-degree: 0%
 
 本视频介绍在提交作业操作参数期间在Dynamic Media中触发导出作业的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/335454?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417835?quality=12&learn=on&captions=chi_hans)

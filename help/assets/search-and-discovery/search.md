@@ -23,4 +23,4 @@ ht-degree: 9%
 
 了解如何使用AEM的Omnisearch快速发现资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/32054?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37021?quality=12&learn=on&captions=chi_hans)

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 通过从表单提交中提取字段值，使用Microsoft Power Automate将电子邮件通知发送给自适应表单提交者。
 
->[!VIDEO](https://video.tv.adobe.com/v/345957?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431477?quality=12&learn=on&captions=chi_hans)

@@ -27,7 +27,7 @@ ht-degree: 2%
 
 标记是Adobe Experience Platform的下一代标记管理技术。 标记提供了用于部署Adobe Analytics、Target、Audience Manager和更多解决方案的最简单方法。 获取标记概述以及与Adobe Experience Manager集成的建议。
 
->[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445210?quality=12&learn=on&captions=chi_hans)
 
 ## 先决条件
 

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解如何通过AEM文档创作来授予文档权限。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425724/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438111/?learn=on&captions=chi_hans)

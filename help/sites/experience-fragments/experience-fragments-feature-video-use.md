@@ -26,7 +26,7 @@ ht-degree: 2%
 
 体验片段使内容创作者可在渠道（包括Sites页面和第三方系统）间重用内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445617?quality=12&learn=on&captions=chi_hans)
 
 体验片段是一组经过组合的组件，组合后将创建一个体验。 例如，*Title*、*Image*、*Description*&#x200B;和&#x200B;*行动号召按钮*&#x200B;可以组合在一起以形成Teaser体验。
 

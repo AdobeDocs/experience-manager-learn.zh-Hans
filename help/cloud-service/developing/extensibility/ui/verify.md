@@ -24,7 +24,7 @@ AEM UI扩展可以根据Adobe组织内该扩展所属的任何AEM as a Cloud Ser
 
 测试扩展是通过巧尽心思构建的URL完成的，该URL会指示AEM仅为该请求加载扩展。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412877?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417478?quality=12&learn=on&captions=chi_hans)
 
 >[!IMPORTANT]
 >

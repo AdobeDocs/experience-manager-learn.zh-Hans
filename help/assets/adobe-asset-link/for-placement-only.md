@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何为AEM资源创建和使用“仅用于置入”(FPO)演绎版。
 
->[!VIDEO](https://video.tv.adobe.com/v/34259?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38600?quality=12&learn=on&captions=chi_hans)

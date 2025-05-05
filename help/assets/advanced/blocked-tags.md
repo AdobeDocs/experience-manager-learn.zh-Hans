@@ -23,4 +23,4 @@ ht-degree: 6%
 
 了解如何使用阻止的标签增强AEM as a Cloud Service中的资产管理，以防止应用文化敏感、不相关或有争议的智能标签。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426839/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448510/?learn=on&captions=chi_hans)

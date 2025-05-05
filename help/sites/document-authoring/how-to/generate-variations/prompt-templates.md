@@ -24,5 +24,5 @@ ht-degree: 0%
 
 了解如何在Edge Delivery Services文档创作中使用提示模板来生成变体。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428307/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441344/?learn=on&captions=chi_hans)
 

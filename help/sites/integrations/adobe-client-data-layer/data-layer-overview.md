@@ -22,7 +22,7 @@ ht-degree: 6%
 
 Adobe客户端数据层引入了一种标准方法，用于收集和存储有关访客在网页上的体验数据，然后使访问这些数据更容易。 Adobe Client Data Layer 与平台无关，而是与核心组件完全集成以用于 AEM。
 
->[!VIDEO](https://video.tv.adobe.com/v/41195?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330112?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

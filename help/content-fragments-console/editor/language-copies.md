@@ -20,4 +20,4 @@ ht-degree: 3%
 
 了解AEM的内容片段编辑器如何让您使用快速筛选功能轻松找到内容片段。 利用此功能，可以快速轻松地查找特定内容片段。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419311/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436966/?learn=on&captions=chi_hans)

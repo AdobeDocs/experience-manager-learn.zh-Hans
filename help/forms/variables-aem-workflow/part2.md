@@ -30,7 +30,7 @@ ht-degree: 0%
 
 您可以在工作流模型中使用类型为JSON的变量映射架构。 然后，您可以使用架构浏览器将架构元素映射到工作流模型中的字符串/数字变量
 
->[!VIDEO](https://video.tv.adobe.com/v/28097?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35363?quality=12&learn=on&captions=chi_hans)
 
 要使资源在系统中正常工作，请执行以下步骤：
 

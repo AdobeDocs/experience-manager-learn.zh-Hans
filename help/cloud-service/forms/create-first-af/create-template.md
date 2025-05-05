@@ -23,4 +23,4 @@ ht-degree: 0%
 
 自适应表单模板是专用的AEM页面模板，具有某些用于创建自适应表单的属性和内容结构。 模板具有预配置的布局、样式和基本初始内容结构。 每个自适应表单都基于模板。
 
->[!VIDEO](https://video.tv.adobe.com/v/332223?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424993?quality=12&learn=on&captions=chi_hans)

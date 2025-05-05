@@ -28,7 +28,7 @@ AEM Forms数据集成允许您配置并连接到不同的数据源。 支持开�
 
 此视频介绍一个工作流，该工作流展示了AEM Forms如何将Microsoft Dynamics作为后端数据源使用，以提供交互式个性化通信。
 
->[!VIDEO](https://video.tv.adobe.com/v/20971?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39253?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

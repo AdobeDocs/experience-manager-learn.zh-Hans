@@ -22,4 +22,4 @@ ht-degree: 6%
 
 了解如何在AEM Assets Assets视图中管理标记分类。
 
->[!VIDEO](https://video.tv.adobe.com/v/3431081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447376/?learn=on&captions=chi_hans)

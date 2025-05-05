@@ -24,7 +24,7 @@ ht-degree: 3%
 
 了解如何将AEM Experience Fragment导出为Adobe Target产品。
 
->[!VIDEO](https://video.tv.adobe.com/v/41245?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328974?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

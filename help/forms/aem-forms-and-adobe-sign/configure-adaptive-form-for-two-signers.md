@@ -22,7 +22,7 @@ ht-degree: 8%
 
 此视频介绍使用2个签名者配置自适应表单所需的各种步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/39294?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327745?quality=12&learn=on&captions=chi_hans)
 
 可通过以下链接下载与此视频相关的Assets
 

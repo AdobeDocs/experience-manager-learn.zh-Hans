@@ -26,7 +26,7 @@ ht-degree: 0%
 
 了解如何为AEM as a Cloud Service设置Adobe Asset Link、配置用户权利和AEM as a Cloud Service，以及如何安装和使用Adobe Asset Link。
 
->[!VIDEO](https://video.tv.adobe.com/v/338824?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343257?quality=12&learn=on&captions=chi_hans)
 
 以上视频中未显示，可以通过Adobe包管理器中的&#x200B;__托管包__&#x200B;选项添加Creative Cloud Asset Link：
 
@@ -37,11 +37,11 @@ ht-degree: 0%
 
 了解如何为在Adobe Managed Services或内部部署中运行的AEM 6设置Adobe Asset Link，配置用户权利和AEM as a Cloud Service，以及如何安装和使用Adobe Asset Link。
 
->[!VIDEO](https://video.tv.adobe.com/v/338823?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434119?quality=12&learn=on&captions=chi_hans)
 
 
 ## 域信任的Asset Link设置
 
 了解域信任是什么、将Adobe Asset Link与Experience Manager Assets结合使用意味着什么，以及如何设置域信任。
 
->[!VIDEO](https://video.tv.adobe.com/v/338825?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454158?quality=12&learn=on&captions=chi_hans)

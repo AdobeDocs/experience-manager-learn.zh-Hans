@@ -20,7 +20,7 @@ ht-degree: 0%
 
 AEM的日历视图跟踪日历视图中的项目和任务，以便更轻松地管理和计划项目。 通过日历视图，用户可全面查看当前正在进行、已计划、即将到期和已过期的项目和任务。
 
->[!VIDEO](https://video.tv.adobe.com/v/16804?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38018?quality=12&learn=on&captions=chi_hans)
 
 日历视图具有以下功能帮助更好地管理项目和任务：
 

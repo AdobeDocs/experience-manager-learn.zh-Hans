@@ -17,4 +17,4 @@ ht-degree: 0%
 
 # AEM Champion提示和技巧：第2场讲座
 
->[!VIDEO](https://video.tv.adobe.com/v/3409427?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439847?quality=12&learn=on&captions=chi_hans)

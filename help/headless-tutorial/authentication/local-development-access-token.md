@@ -23,7 +23,7 @@ ht-degree: 0%
 
 在构建需要以编程方式访问AEM as a Cloud Service的集成时，开发人员需要一种简单、快速的方式来获取AEM的临时访问令牌，以便利本地开发活动。 为了满足此需求，AEM的Developer Console允许开发人员自行生成可用于以编程方式访问AEM的临时访问令牌。
 
->[!VIDEO](https://video.tv.adobe.com/v/330477?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345199?quality=12&learn=on&captions=chi_hans)
 
 ## 生成本地开发访问令牌
 

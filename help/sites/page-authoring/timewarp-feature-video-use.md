@@ -24,7 +24,7 @@ ht-degree: 2%
 
 时间扭曲是Adobe Experience Manager Sites的一项功能，它提供一种快捷的方式，让创作者可回顾页面在过去特定时间的状态。
 
->[!VIDEO](https://video.tv.adobe.com/v/17453?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410303?quality=12&learn=on&captions=chi_hans)
 
 ## 更多资源 {#more-resources}
 

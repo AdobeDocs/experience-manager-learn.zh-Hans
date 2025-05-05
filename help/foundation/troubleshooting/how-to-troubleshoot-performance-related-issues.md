@@ -22,4 +22,4 @@ ht-degree: 0%
 
 *本视频介绍对AEM中与性能相关问题进行故障排除的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335472?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418310?quality=12&learn=on&captions=chi_hans)

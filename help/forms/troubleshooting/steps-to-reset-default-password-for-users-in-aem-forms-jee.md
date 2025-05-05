@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *本视频介绍在AEM Forms JEE中为管理员重置默认密码的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335541?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417715?quality=12&learn=on&captions=chi_hans)

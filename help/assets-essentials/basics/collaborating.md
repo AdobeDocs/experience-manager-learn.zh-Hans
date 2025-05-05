@@ -23,4 +23,4 @@ ht-degree: 3%
 
 了解如何使用评论、批注和任务协作进行资产管理。
 
->[!VIDEO](https://video.tv.adobe.com/v/335856?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418443?quality=12&learn=on&captions=chi_hans)

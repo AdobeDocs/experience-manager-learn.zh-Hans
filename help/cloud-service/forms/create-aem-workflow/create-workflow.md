@@ -24,4 +24,4 @@ ht-degree: 0%
 
 使用AEM Forms工作流组件创建工作流模型。 使用Or-Split组件根据状态变量的值分支工作流。
 
->[!VIDEO](https://video.tv.adobe.com/v/332434?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453201?quality=12&learn=on&captions=chi_hans)

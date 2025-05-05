@@ -25,7 +25,7 @@ Adobe Experience Manager (AEM) Assets允许您识别共享通用属性的资源�
 
 ## 多站点资源Source文件管理 {#multisite-asset-source-file-management}
 
->[!VIDEO](https://video.tv.adobe.com/v/18331?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38551?quality=12&learn=on&captions=chi_hans)
 
 相关的Assets可帮助用户管理具有共享特征、属性的更好交叉链接资源，并简化工作流：
 

@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索如何使用Adobe Target受众通过Edge Delivery Services文档创作中的相关内容定位正确的受众。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428792/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437765/?learn=on&captions=chi_hans)

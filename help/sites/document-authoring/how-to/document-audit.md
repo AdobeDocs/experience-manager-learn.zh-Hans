@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解如何审核使用AEM文档创作功能创作的文档。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425722/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437721/?learn=on&captions=chi_hans)

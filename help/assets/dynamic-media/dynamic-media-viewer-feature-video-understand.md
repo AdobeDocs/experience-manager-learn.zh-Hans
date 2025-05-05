@@ -21,7 +21,7 @@ ht-degree: 0%
 
 AEM Dynamic Media Viewer增强功能允许AEM作者定义和自定义向网站用户展示资源的方式。
 
->[!VIDEO](https://video.tv.adobe.com/v/17783?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40151?quality=12&learn=on&captions=chi_hans)
 
 一些主要增强功能包括：
 

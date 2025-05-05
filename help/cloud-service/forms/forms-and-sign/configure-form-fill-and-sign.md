@@ -25,4 +25,4 @@ ht-degree: 1%
 
 在本视频中，我们将配置表单，其中表单填写者和签名者是同一个人
 
->[!VIDEO](https://video.tv.adobe.com/v/332439?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411754?quality=12&learn=on&captions=chi_hans)

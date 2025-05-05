@@ -20,7 +20,7 @@ ht-degree: 1%
 
 AEM 6.3 Forms引入了允许用户使用基于hobbes.js框架构建的Calvin SDK在AEM for Adaptive Forms中创建测试用例的功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/19700?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40154?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

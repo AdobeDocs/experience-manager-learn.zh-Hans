@@ -22,4 +22,4 @@ ht-degree: 0%
 
 批量数据配置可帮助您为批处理API配置特定的Blob存储实例。 它可让您在客户拥有的Microsoft Azure Blob Storage中指定输入和输出位置。
 
->[!VIDEO](https://video.tv.adobe.com/v/340128?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343711?quality=12&learn=on&captions=chi_hans)

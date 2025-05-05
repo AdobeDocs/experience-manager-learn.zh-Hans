@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何使用Adobe Photoshop Express上传资源、创建版本甚至编辑资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/335746?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418448?quality=12&learn=on&captions=chi_hans)

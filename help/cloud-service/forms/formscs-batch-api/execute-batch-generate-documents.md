@@ -32,4 +32,4 @@ ht-degree: 0%
 
 以下视频演示了批量配置的触发
 
->[!VIDEO](https://video.tv.adobe.com/v/340242?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343704?quality=12&learn=on&captions=chi_hans)

@@ -23,4 +23,4 @@ ht-degree: 13%
 
 创建自适应表单并将其与创建的主题关联。
 
->[!VIDEO](https://video.tv.adobe.com/v/332237?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424908?quality=12&learn=on&captions=chi_hans)

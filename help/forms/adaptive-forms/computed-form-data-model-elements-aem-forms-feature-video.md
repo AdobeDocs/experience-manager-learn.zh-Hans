@@ -28,8 +28,8 @@ ht-degree: 0%
 
 ## 创建每月薪金计算元素
 
->[!VIDEO](https://video.tv.adobe.com/v/23855?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40175?quality=12&learn=on&captions=chi_hans)
 
 ### 正在创建StateandZip计算元素
 
->[!VIDEO](https://video.tv.adobe.com/v/23856?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40178?quality=12&learn=on&captions=chi_hans)

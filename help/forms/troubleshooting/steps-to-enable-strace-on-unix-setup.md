@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍在AEM Forms PDFG的Unix设置中启用字符串跟踪的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335525?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417634?quality=12&learn=on&captions=chi_hans)

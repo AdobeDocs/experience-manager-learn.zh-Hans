@@ -18,10 +18,10 @@ ht-degree: 0%
 
 ## 使用资产元数据搜索提升 {#search-boost-asset}
 
->[!VIDEO](https://video.tv.adobe.com/v/16766?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410334?quality=12&learn=on&captions=chi_hans)
 
 ## 多值和标记搜索谓词的高级配置 {#multi-value-tag-predicates}
 
 **多值搜索谓词**&#x200B;可用于搜索结果中的轻松文本匹配。 此外，还对“标记”谓词进行了一些增强，以便更高效地筛选资产搜索结果。
 
->[!VIDEO](https://video.tv.adobe.com/v/16457?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39504?quality=12&learn=on&captions=chi_hans)

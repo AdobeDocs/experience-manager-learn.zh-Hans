@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索如何在Edge Delivery Services文档创作中设置试验框架。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429062/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438938/?learn=on&captions=chi_hans)

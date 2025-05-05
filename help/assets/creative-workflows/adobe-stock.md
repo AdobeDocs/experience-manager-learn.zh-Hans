@@ -21,7 +21,7 @@ ht-degree: 1%
 
 AEM 6.4.2为用户提供了直接从AEM搜索、预览、保存和许可Adobe Stock资源的功能。 现在，组织可以将Adobe Stock企业计划与AEM Assets集成，以确保通过AEM的强大资源管理功能，许可资产现在可广泛用于其创意和营销项目。
 
->[!VIDEO](https://video.tv.adobe.com/v/24678?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40219?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ AEM 6.4.2为用户提供了直接从AEM搜索、预览、保存和许可Adobe St
 
 AEM 6.4.2为用户提供了直接从AEM搜索、预览、保存和许可Adobe Stock资源的功能。 本视频涵盖有关如何使用Adobe Console在AEM Assets中设置Adobe I/O Stocks的快速演练。
 
->[!VIDEO](https://video.tv.adobe.com/v/25043?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328767?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

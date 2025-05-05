@@ -49,7 +49,7 @@ ht-degree: 0%
 
 接下来，在AEM中创建一个与模型结构匹配的新模板。 这将发生在AEM的本地实例中。 按照以下视频中的步骤进行操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/332915?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412996?quality=12&learn=on&captions=chi_hans)
 
 您可以使用以下缩略图来标识您的模板（或上传您自己的模板！）
 
@@ -66,7 +66,7 @@ ht-degree: 0%
 
 站点模板生成了页眉和页脚。 接下来，更新体验片段以匹配模型。 按照以下视频中的步骤进行操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447809?quality=12&learn=on&captions=chi_hans)
 
 下面是视频的高级步骤：
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 接下来，使用“杂志文章页面”模板创建一个新页面。 创作页面的内容以匹配站点模型。 按照以下视频中的步骤进行操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343309?quality=12&learn=on&captions=chi_hans)
 
 使用[提供的文本](./assets/page-templates/la-skateparks-copy.txt)填充文章正文。
 

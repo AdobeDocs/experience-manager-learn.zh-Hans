@@ -24,7 +24,7 @@ ht-degree: 1%
 
 了解如何使用AEM Experience Fragment选件创建和测试Adobe Target活动。
 
->[!VIDEO](https://video.tv.adobe.com/v/41246?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328966?quality=12&learn=on&captions=chi_hans)
 
 ## 先决条件
 

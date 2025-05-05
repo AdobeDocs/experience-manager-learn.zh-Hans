@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索可用于生成的内容变体的操作，包括在Edge Delivery Services文档创作中保存、复制、评级等。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428795/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437303/?learn=on&captions=chi_hans)

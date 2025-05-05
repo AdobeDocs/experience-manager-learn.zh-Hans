@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何通过Launch帮助来更新、审阅和批准语言副本中的更改。
 
->[!VIDEO](https://video.tv.adobe.com/v/36683?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41632?quality=12&learn=on&captions=chi_hans)

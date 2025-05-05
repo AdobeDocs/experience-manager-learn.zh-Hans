@@ -25,7 +25,7 @@ AEM提供了许多OSGi控制台，每个控制台都提供了有关AEM各个方�
 
 ## 包
 
->[!VIDEO](https://video.tv.adobe.com/v/34335?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38142?quality=12&learn=on&captions=chi_hans)
 
 捆绑包控制台是OSGi捆绑包的目录，其详细信息部署到AEM，并且具有启动和停止捆绑包的临时功能。
 
@@ -42,7 +42,7 @@ AEM提供了许多OSGi控制台，每个控制台都提供了有关AEM各个方�
 
 ## 组件
 
->[!VIDEO](https://video.tv.adobe.com/v/34336?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38141?quality=12&learn=on&captions=chi_hans)
 
 组件控制台是一个目录，其中包含部署到AEM的所有OSGi组件，并提供有关这些组件的所有信息，从其定义的OSGi组件生命周期到他们可以引用的OSGi服务
 
@@ -61,7 +61,7 @@ AEM提供了许多OSGi控制台，每个控制台都提供了有关AEM各个方�
 
 ## Sling 模型
 
->[!VIDEO](https://video.tv.adobe.com/v/34337?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38140?quality=12&learn=on&captions=chi_hans)
 
 Sling模型控制台位于：
 

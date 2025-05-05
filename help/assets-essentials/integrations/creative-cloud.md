@@ -26,4 +26,4 @@ ht-degree: 0%
 + 通过Creative Cloud Libraries无缝访问AEM Assets中的文件
 + Creative Cloud Libraries中要共享到AEM Assets的文件
 
->[!VIDEO](https://video.tv.adobe.com/v/3432401?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444018?quality=12&learn=on&captions=chi_hans)

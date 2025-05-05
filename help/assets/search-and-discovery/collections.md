@@ -23,4 +23,4 @@ ht-degree: 9%
 
 了解收藏集如何提供和AEM Assets的替代视图。
 
->[!VIDEO](https://video.tv.adobe.com/v/32053?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36877?quality=12&learn=on&captions=chi_hans)

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍在Designer中启用预览PDF的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335500?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417683?quality=12&learn=on&captions=chi_hans)

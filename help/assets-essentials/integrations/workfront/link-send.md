@@ -25,4 +25,4 @@ ht-degree: 7%
 
 了解如何将Workfront文档发送到Assets Essentials，并将Assets Essentials资源链接到Workfront。
 
->[!VIDEO](https://video.tv.adobe.com/v/336255?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423888?quality=12&learn=on&captions=chi_hans)

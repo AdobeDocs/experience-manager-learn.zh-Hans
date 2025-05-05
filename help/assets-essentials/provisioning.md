@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何使用Cloud Manager部署Assets Essentials以及配置用户访问权限。
 
->[!VIDEO](https://video.tv.adobe.com/v/335952?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418812?quality=12&learn=on&captions=chi_hans)

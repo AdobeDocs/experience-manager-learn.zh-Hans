@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何将翻译作业添加到现有翻译项目。
 
->[!VIDEO](https://video.tv.adobe.com/v/36488?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41640?quality=12&learn=on&captions=chi_hans)

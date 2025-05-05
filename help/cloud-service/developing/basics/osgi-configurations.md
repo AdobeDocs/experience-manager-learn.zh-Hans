@@ -21,4 +21,4 @@ ht-degree: 0%
 
 了解如何在AEM as a Cloud Service中定义和部署OSGi配置。
 
->[!VIDEO](https://video.tv.adobe.com/v/330559?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345870?quality=12&learn=on&captions=chi_hans)

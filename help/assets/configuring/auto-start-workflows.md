@@ -23,7 +23,7 @@ ht-degree: 0%
 
 自动启动工作流通过在上传时自动调用自定义工作流，或者一旦资源处理完成后重新处理，来扩展AEM as a Cloud Service中的资源处理。
 
->[!VIDEO](https://video.tv.adobe.com/v/37323?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326764?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

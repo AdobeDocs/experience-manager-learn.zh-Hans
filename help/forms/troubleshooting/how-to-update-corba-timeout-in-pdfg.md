@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍在Forms PDFG中更新CORBA超时以缓解事务回滚问题的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335512?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417228?quality=12&learn=on&captions=chi_hans)

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 在power automate工作流中提取DoR并作为电子邮件附件发送。
 以下视频介绍从提交的数据中提取DoR所需的步骤
->[!VIDEO](https://video.tv.adobe.com/v/346731?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413032?quality=12&learn=on&captions=chi_hans)

@@ -31,11 +31,11 @@ ht-degree: 0%
 
 **配置表单以触发AEM工作流**
 
->[!VIDEO](https://video.tv.adobe.com/v/28406?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33084?quality=12&learn=on&captions=chi_hans)
 
 **工作流演练**
 
->[!VIDEO](https://video.tv.adobe.com/v/28407?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33089?quality=12&learn=on&captions=chi_hans)
 
 **提交者的休息时间申请表视图**
 

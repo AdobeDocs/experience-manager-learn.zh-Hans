@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍对Windows安装程序中的HtmltoPDF特定问题进行故障排除的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335545?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417243?quality=12&learn=on&captions=chi_hans)

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解如何在使用AEM文档创作创作的页面中将替换文本添加到图像。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425721/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438685/?learn=on&captions=chi_hans)

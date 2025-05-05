@@ -23,7 +23,7 @@ ht-degree: 0%
 
 
 
->[!VIDEO](https://video.tv.adobe.com/v/336969?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453289?quality=12&learn=on&captions=chi_hans)
 
 ## 使用批量导入服务
 

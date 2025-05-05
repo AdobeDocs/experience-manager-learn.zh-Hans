@@ -29,4 +29,4 @@ ht-degree: 1%
 + 文件夹元数据映射
 + 文件夹元数据继承
 
->[!VIDEO](https://video.tv.adobe.com/v/337586?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454769?quality=12&learn=on&captions=chi_hans)

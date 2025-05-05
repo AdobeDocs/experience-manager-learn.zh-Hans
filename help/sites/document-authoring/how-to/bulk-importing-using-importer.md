@@ -24,4 +24,4 @@ ht-degree: 0%
 
 了解如何在站点迁移期间使用AEM导入器工具批量导入网页。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429597/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445895/?learn=on&captions=chi_hans)

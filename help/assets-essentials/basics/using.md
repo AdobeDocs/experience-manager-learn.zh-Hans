@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何在AEM Assets中筛选、搜索和下载资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/335861?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418458?quality=12&learn=on&captions=chi_hans)

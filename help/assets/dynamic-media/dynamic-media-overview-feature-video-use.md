@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ## Dynamic Media概述
 
->[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34932?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ## 与AEM Sites一起使用
 
->[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34936?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ## 构建混合媒体收藏集
 
->[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34942?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 ## 图像预设
 
->[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34499?quality=12&learn=on&captions=chi_hans)
 
 此视频介绍如何创建图像预设，以及什么是图像预设，它是一系列图像服务器参数的简写形式，这些参数会在URL请求时对图像进行操作。 了解扩展和编辑图像预设的有用技术。
 
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 ## 高级URL修饰符
 
->[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34493?quality=12&learn=on&captions=chi_hans)
 
 此视频介绍如何超越调整图像大小功能，利用源文件本身的功能（背景透明度、内置剪切路径以及作为变量裁剪和文本）以及Dynamic Media的URL修饰符。
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 ## JPEG文件大小管理
 
->[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35194?quality=12&learn=on&captions=chi_hans)
 
 
 >[!NOTE]
@@ -107,7 +107,7 @@ ht-degree: 0%
 
 ## 隐藏字幕
 
->[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34311?quality=12&learn=on&captions=chi_hans)
 
 通过附加复制URL以指向其他隐藏式字幕文件文档（一个web.VTT侧边栏文件，其中包含任何视频的CC信息），轻松地将隐藏式字幕添加到Dynamic Media视频中。
 

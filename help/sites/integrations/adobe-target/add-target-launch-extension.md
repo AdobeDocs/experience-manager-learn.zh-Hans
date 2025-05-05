@@ -26,7 +26,7 @@ ht-degree: 3%
 
 了解如何使用标记在AEM网站上启用Adobe Target。
 
->[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329007?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

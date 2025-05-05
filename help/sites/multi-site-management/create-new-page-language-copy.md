@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何在现有语言副本中创建页面，然后将内容翻译为其他语言副本。
 
->[!VIDEO](https://video.tv.adobe.com/v/36682?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41550?quality=12&learn=on&captions=chi_hans)

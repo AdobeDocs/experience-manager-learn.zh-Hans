@@ -28,5 +28,5 @@ ht-degree: 8%
 + 了解如何在现实场景中使用变体
 + 查看GraphQL语法以请求特定变体
 
->[!VIDEO](https://video.tv.adobe.com/v/333295?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449330?quality=12&learn=on&captions=chi_hans)
 

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 探索Dynamic Media模板、可组合图像资产、其最佳实践以及如何满足个性化内容交付需求。 了解如何创建和管理模板，以及如何使用它们大规模提供个性化内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3451727/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3451737/?learn=on&enablevpops&captions=chi_hans)

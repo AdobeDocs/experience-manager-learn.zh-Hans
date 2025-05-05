@@ -21,4 +21,4 @@ ht-degree: 0%
 
 了解如何对AEM SDK、AEM as a Cloud Service以及构建和部署过程进行故障排除和调试。
 
->[!VIDEO](https://video.tv.adobe.com/v/336964?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454669?quality=12&learn=on&captions=chi_hans)

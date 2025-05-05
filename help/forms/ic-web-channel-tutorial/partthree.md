@@ -25,7 +25,7 @@ ht-degree: 0%
 
 **在AEM Forms 6.5及更高版本中创建表单数据模型**
 
->[!VIDEO](https://video.tv.adobe.com/v/27765?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34313?quality=12&learn=on&captions=chi_hans)
 
 表单数据模型依赖于正确配置的数据Source。 我们将使用上一步中配置的数据Source作为此表单数据模型的基础。
 

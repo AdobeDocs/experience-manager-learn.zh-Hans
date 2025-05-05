@@ -190,7 +190,7 @@ ht-degree: 1%
 + 平台Web SDK库版本，数据流ID
 + XDM对象作为Experience Platform Web SDK中的`events`属性的一部分
 
->[!VIDEO](https://video.tv.adobe.com/v/3418897?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454512?quality=12&learn=on&captions=chi_hans)
 
 ## 创建数据集 — Experience Platform
 

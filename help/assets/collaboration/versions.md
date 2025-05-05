@@ -23,4 +23,4 @@ ht-degree: 11%
 
 了解AEM如何创建和维护资源版本。
 
->[!VIDEO](https://video.tv.adobe.com/v/32052?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37145?quality=12&learn=on&captions=chi_hans)

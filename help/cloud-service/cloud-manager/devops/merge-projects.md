@@ -21,4 +21,4 @@ ht-degree: 0%
 
 探索可怎样将多个项目合并到单个项目中，以便使用Cloud Manager部署到AEM as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/330535?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345855?quality=12&learn=on&captions=chi_hans)

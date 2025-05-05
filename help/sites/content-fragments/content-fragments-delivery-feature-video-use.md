@@ -30,7 +30,7 @@ Adobe Experience Manager (AEM)内容片段是基于文本的编辑内容，其�
 
 ## 在网页中使用内容片段 {#using-content-fragments-in-web-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38063?quality=12&learn=on&captions=chi_hans)
 
 内容片段可以在AEM Sites页面上使用，或者以类似的方式在体验片段中使用AEM WCM核心组件的[内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)。
 
@@ -38,7 +38,7 @@ Adobe Experience Manager (AEM)内容片段是基于文本的编辑内容，其�
 
 ## 以JSON形式公开内容片段 {#exposing-content-fragments-as-json}
 
->[!VIDEO](https://video.tv.adobe.com/v/22448?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38064?quality=12&learn=on&captions=chi_hans)
 
 AEM Content Services有助于创建基于AEM页面的HTTP端点，以将内容呈现为规范化JSON格式。
 
@@ -49,7 +49,7 @@ AEM Content Services有助于创建基于AEM页面的HTTP端点，以将内容�
 
 ## 使用Assets HTTP API
 
->[!VIDEO](https://video.tv.adobe.com/v/26390?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40328?quality=12&learn=on&captions=chi_hans)
 
 AEM 6.5中首次引入了Assets HTTP API，用于增强对内容片段的支持。 这为开发人员提供了一种针对内容片段执行创建、读取、更新和删除(CRUD)操作的简单方法。
 

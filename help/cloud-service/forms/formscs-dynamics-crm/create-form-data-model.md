@@ -22,4 +22,4 @@ ht-degree: 0%
 
 以下视频将指导您完成创建和配置表单数据模型的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/340790?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444802?quality=12&learn=on&captions=chi_hans)

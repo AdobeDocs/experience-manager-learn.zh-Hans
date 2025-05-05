@@ -24,4 +24,4 @@ ht-degree: 0%
 
 配置自适应表单以触发审阅工作流
 
->[!VIDEO](https://video.tv.adobe.com/v/332435?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411584?quality=12&learn=on&captions=chi_hans)

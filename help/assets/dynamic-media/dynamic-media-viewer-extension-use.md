@@ -21,7 +21,7 @@ ht-degree: 1%
 
 对于具有Dynamic Media和Adobe Analytics的客户，您现在可以使用Dynamic Media Viewer扩展跟踪您的网站上Dynamic Media Viewer的使用情况。
 
->[!VIDEO](https://video.tv.adobe.com/v/29308?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32896?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

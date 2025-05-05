@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解AEM Assets [内容凭据](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/assets/assets-view/content-credentials)如何提供可验证的元数据，以确保数字资源的真实性和完整性，并在内容创建过程中增强信任和透明度。
 
->[!VIDEO](https://video.tv.adobe.com/v/3441700/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441721/?learn=on&enablevpops&captions=chi_hans)

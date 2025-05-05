@@ -40,7 +40,7 @@ ht-degree: 4%
 
 * 此视频介绍将本地AEM Forms实例连接到Adobe Cloud上的Automated forms conversion服务所需的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/39493?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327724?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

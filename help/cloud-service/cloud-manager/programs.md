@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Cloud Manager **项目**&#x200B;表示支持业务计划逻辑集的AEM环境集，通常与购买的Service level agreement (SLA)相对应。 例如，一个程序可能代表支持全球公共网站的AEM资源，而另一个程序代表内部中央DAM。
 
->[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34265?quality=12&learn=on&captions=chi_hans)

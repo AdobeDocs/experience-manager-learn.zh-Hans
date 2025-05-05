@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍设置Oak登录令牌会话到期的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335468?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418250?quality=12&learn=on&captions=chi_hans)

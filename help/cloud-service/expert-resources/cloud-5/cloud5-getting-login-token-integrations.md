@@ -20,7 +20,7 @@ ht-degree: 1%
 
 有关如何获取Cloud Service集成的登录令牌的深入指南以及一些相关用例。
 
->[!VIDEO](https://video.tv.adobe.com/v/341277?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448647?quality=12&learn=on&captions=chi_hans)
 
 ## 本视频中涵盖的内容
 

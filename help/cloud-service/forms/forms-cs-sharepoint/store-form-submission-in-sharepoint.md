@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何在Microsoft Sharepoint中配置和存储自适应表单数据。
 
->[!VIDEO](https://video.tv.adobe.com/v/3415793/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452535/?quality=12&learn=on&captions=chi_hans)

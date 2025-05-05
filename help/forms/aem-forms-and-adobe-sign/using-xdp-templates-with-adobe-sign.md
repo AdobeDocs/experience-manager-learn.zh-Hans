@@ -22,7 +22,7 @@ ht-degree: 1%
 
 通过AEM Forms和Sign集成来利用现有XDP模板。
 
->[!VIDEO](https://video.tv.adobe.com/v/39705?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327805?quality=12&learn=on&captions=chi_hans)
 
 可通过以下链接下载与此视频相关的Assets
 

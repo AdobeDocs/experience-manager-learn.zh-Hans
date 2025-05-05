@@ -24,4 +24,4 @@ ht-degree: 0%
 
 在处理大量记录时，使用查询和搜索优化功能将您的Lighthouse得分提高到100次购买。 使用各种技术优化查询索引、增强搜索功能并划分查询索引以获得最佳性能优化
 
->[!VIDEO](https://video.tv.adobe.com/v/3440976/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440988/?learn=on&enablevpops&captions=chi_hans)

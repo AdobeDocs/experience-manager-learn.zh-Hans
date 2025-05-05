@@ -24,4 +24,4 @@ ht-degree: 2%
 
 Adobe Experience Manager Forms as a Cloud Service与Salesforce之间的集成简介。
 
->[!VIDEO](https://video.tv.adobe.com/v/331891?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411572?quality=12&learn=on&captions=chi_hans)

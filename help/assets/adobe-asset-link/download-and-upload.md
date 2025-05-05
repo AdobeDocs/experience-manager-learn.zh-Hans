@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何使用Asset Link面板在AEM Assets中下载和上传资源文件。
 
->[!VIDEO](https://video.tv.adobe.com/v/33885?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38655?quality=12&learn=on&captions=chi_hans)

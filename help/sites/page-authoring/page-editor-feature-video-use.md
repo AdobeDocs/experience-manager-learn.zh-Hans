@@ -26,7 +26,7 @@ AEM站点的页面编辑器是一款用于创建和编辑Web内容的强大工�
 
 以下视频重点介绍页面编辑器的一些常用功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37195?quality=12&learn=on&captions=chi_hans)
 
 
 有关页面编辑器功能的完整概述，请参阅[AEM文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html?lang=zh-Hans)。

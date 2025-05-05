@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何使用Place Copy操作从AEM Assets中使用资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/34049?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38618?quality=12&learn=on&captions=chi_hans)

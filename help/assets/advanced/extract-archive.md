@@ -23,4 +23,4 @@ ht-degree: 5%
 
 了解如何使用我们的信息性视频掌握AEM Assets中的高效数字资产管理，其中演示了提取ZIP功能，以便轻松地将资产层次结构直接组织和上传到DAM。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426368/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447152/?learn=on&captions=chi_hans)

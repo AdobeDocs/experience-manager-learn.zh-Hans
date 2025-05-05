@@ -28,15 +28,15 @@ ht-degree: 0%
 
 ## 用于填充下拉列表的函数 {#function-to-populate-drop-down-list}
 
->[!VIDEO](https://video.tv.adobe.com/v/22282?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326879?quality=12&learn=on&captions=chi_hans)
 
 ### 设置面板的摘要标题 {#set-the-summary-title-of-panels}
 
->[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33081?quality=12&learn=on&captions=chi_hans)
 
 #### 验证面板 {#validate-panels-using-rule-editor}
 
->[!VIDEO](https://video.tv.adobe.com/v/28409?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33077?quality=12&learn=on&captions=chi_hans)
 
 以下是用于验证面板字段的代码
 

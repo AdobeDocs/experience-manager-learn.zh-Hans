@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Adobe Experience Manager支持的Dynamic Media 3D可让您轻松定制和大规模交付交互式3D体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/35156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39526?quality=12&learn=on&captions=chi_hans)

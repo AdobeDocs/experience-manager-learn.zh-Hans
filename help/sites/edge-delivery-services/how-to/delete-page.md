@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何在Edge Delivery Services中删除页面。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425973/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438100/?learn=on&captions=chi_hans)

@@ -22,7 +22,7 @@ ht-degree: 2%
 
 了解如何使用Adobe Experience Manager本地化并翻译内容片段。 还有资格提取和翻译与内容片段关联的混合媒体资产。
 
->[!VIDEO](https://video.tv.adobe.com/v/18131?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410322?quality=12&learn=on&captions=chi_hans)
 
 ## 内容片段翻译用例 {#content-fragment-translation-use-cases}
 

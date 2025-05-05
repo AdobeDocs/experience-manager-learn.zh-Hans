@@ -24,7 +24,7 @@ ht-degree: 3%
 
 以下视频介绍创建Acrobat Sign API应用程序所需的步骤
 
->[!VIDEO](https://video.tv.adobe.com/v/38178?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327837?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

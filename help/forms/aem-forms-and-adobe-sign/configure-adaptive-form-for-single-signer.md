@@ -23,7 +23,7 @@ ht-degree: 4%
 
 此视频介绍为单个签名者配置自适应表单所需的各种步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/39475?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327733?quality=12&learn=on&captions=chi_hans)
 
 可通过以下链接下载与此视频相关的Assets
 

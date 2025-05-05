@@ -23,4 +23,4 @@ ht-degree: 0%
 
 向收入面板添加表组件，以获取申请人的收入来源。
 
->[!VIDEO](https://video.tv.adobe.com/v/332233?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3425128?quality=12&learn=on&captions=chi_hans)

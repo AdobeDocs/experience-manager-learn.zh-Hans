@@ -23,7 +23,7 @@ ht-degree: 0%
 
 了解如何在AEM内容片段编辑器中向富文本编辑器(RTE)添加构件。
 
->[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447442?quality=12&learn=on&captions=chi_hans)
 
 要在富文本编辑器(RTE)中添加动态内容，可以使用&#x200B;**小组件**&#x200B;功能。 这些小组件有助于在RTE中集成简单或复杂的UI，并且可以使用您选择的JS框架创建UI。 可将其视为通过在RTE中按`{`特殊键打开的对话框。
 

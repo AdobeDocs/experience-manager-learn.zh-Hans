@@ -20,7 +20,7 @@ ht-degree: 11%
 
 在本视频中，我们将介绍Dynamic Media色彩管理，以及如何使用它在AEM Assets中提供色彩校正预览功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38017?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

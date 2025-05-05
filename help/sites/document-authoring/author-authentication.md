@@ -24,4 +24,4 @@ ht-degree: 0%
 
 了解如何在使用Edge Delivery Services进行文档创作时通过AEM Sidekick配置创作身份验证。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429594/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438188/?learn=on&captions=chi_hans)

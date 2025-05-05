@@ -161,7 +161,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 1. 下载并安装[!DNL IntelliJ IDEA]： [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download)
 1. 安装[!DNL Repo] （命令行工具）： [https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation)
 
->[!VIDEO](https://video.tv.adobe.com/v/26089?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39743?quality=12&learn=on&captions=chi_hans)
 
 * 00:00 — 导入Maven项目
 * 05:47 — 使用Maven构建和部署源代码

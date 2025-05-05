@@ -26,7 +26,7 @@ AEM Sites的“页面差异”功能节目以颜色编码快速查看页面中�
 
 ## 比较页面版本 {#comparing-page-versions}
 
->[!VIDEO](https://video.tv.adobe.com/v/32152?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36793?quality=12&learn=on&captions=chi_hans)
 
 **HTML更改**
 

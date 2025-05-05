@@ -21,7 +21,7 @@ ht-degree: 3%
 
 快速深入到搜索和索引的深水区。 这是一个富有挑战性的主题，我们希望帮助您更有效地完成这一主题。
 
->[!VIDEO](https://video.tv.adobe.com/v/342374?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448117?quality=12&learn=on&captions=chi_hans)
 
 ## 本视频中涵盖的内容
 

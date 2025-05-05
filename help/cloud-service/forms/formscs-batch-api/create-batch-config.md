@@ -26,7 +26,7 @@ ht-degree: 0%
 >请确保AEM用户属于```forms-users```组，以便进行API调用。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/340241?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343697?quality=12&learn=on&captions=chi_hans)
 
 ## 创建批次配置
 

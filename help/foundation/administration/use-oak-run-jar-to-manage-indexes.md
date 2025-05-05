@@ -35,21 +35,21 @@ ht-degree: 0%
 
 ## 索引统计信息
 
->[!VIDEO](https://video.tv.adobe.com/v/21477?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39299?quality=12&learn=on&captions=chi_hans)
 
 * `oak-run.jar`转储所有索引定义、重要索引统计和索引内容以进行离线分析。
 * 可以在正在使用的AEM实例上安全地执行索引统计信息收集。
 
 ## 索引一致性检查
 
->[!VIDEO](https://video.tv.adobe.com/v/21476?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36819?quality=12&learn=on&captions=chi_hans)
 
 * `oak-run.jar`快速确定lucene Oak索引是否损坏。
 * 对于一致性检查级别1和2，可以在正在使用的AEM实例上安全运行一致性检查。
 
 ## 使用[!DNL oak-run.jar]的TarMK联机索引 {#tarmkonlineindexingwithoakrunjar}
 
->[!VIDEO](https://video.tv.adobe.com/v/21479?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36822?quality=12&learn=on&captions=chi_hans)
 
 * 使用[!DNL oak-run.jar]对[!DNL TarMK]进行联机索引比在`oak:queryIndexDefinition`节点上设置`reindex=true`更快。 尽管此性能提高，但使用[!DNL oak-run.jar]的联机索引仍需要维护窗口来执行索引。
 
@@ -57,13 +57,13 @@ ht-degree: 0%
 
 ## 使用oak-run.jar建立TarMK离线索引
 
->[!VIDEO](https://video.tv.adobe.com/v/21478?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36820?quality=12&learn=on&captions=chi_hans)
 
 * 使用[!DNL oak-run.jar]对[!DNL TarMK]进行脱机索引是[!DNL TarMK]的最简单基于[!DNL oak-run.jar]的索引方法，因为它需要单个[!DNL oak-run.jar]命令，但需要关闭AEM实例。
 
 ## 使用oak-run.jar进行TarMK带外索引
 
->[!VIDEO](https://video.tv.adobe.com/v/21480?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340807?quality=12&learn=on&captions=chi_hans)
 
 * 使用[!DNL oak-run.jar]对[!DNL TarMK]进行带外索引可将索引对正在使用的AEM实例的影响降至最低。
 * 带外索引是推荐用于AEM安装的索引方法，当重新/索引时间超过可用的维护窗口时。

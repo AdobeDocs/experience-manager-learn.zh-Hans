@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 远程调试AEM SDK
 
->[!VIDEO](https://video.tv.adobe.com/v/34338?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38144?quality=12&learn=on&captions=chi_hans)
 
 AEM SDK的本地快速启动允许从IDE进行远程Java调试，从而允许您在AEM中逐步执行实时代码，以了解确切的执行流程。
 

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 介绍AEM Forms Workbench用户界面的简短视频
 
->[!VIDEO](https://video.tv.adobe.com/v/3429493/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439813/?learn=on&captions=chi_hans)

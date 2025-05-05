@@ -21,7 +21,7 @@ ht-degree: 7%
 
 了解如何上手使用AEM as a Cloud Service，从合同阶段开始一直到使用Cloud Manager设置环境。
 
->[!VIDEO](https://video.tv.adobe.com/v/336959?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431503?quality=12&learn=on&captions=chi_hans)
 
 ## Cloud Manager和Admin console
 

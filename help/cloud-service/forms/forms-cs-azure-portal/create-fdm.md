@@ -22,4 +22,4 @@ ht-degree: 0%
 
 创建Azure存储支持的表单数据模型
 
->[!VIDEO](https://video.tv.adobe.com/v/335385?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419018?quality=12&learn=on&captions=chi_hans)

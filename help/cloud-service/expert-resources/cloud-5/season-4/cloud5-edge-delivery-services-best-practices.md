@@ -24,4 +24,4 @@ ht-degree: 0%
 
 与经验丰富的架构师一起探索在Edge Delivery Services中进行开发的技术。 Kiran将带您了解他在项目上遇到的许多问题以及如何解决这些问题。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440978/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441010/?learn=on&enablevpops&captions=chi_hans)

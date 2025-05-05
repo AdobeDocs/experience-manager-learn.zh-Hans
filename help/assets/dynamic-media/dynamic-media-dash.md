@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解AEM Assets Dynamic Media的DASH自适应流协议如何确保投放的视频适应可用带宽并确保流畅的播放体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429072/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443627/?learn=on&captions=chi_hans)

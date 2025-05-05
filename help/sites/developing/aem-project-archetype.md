@@ -22,7 +22,7 @@ ht-degree: 10%
 
 AEM项目包含实施的所有代码和配置。 [!DNL AEM Project Archetype]创建了一个基于最佳实践的、最基础的Adobe Experience Manager项目，可用作您自己的AEM项目的起点。
 
->[!VIDEO](https://video.tv.adobe.com/v/32550?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36704?quality=12&learn=on&captions=chi_hans)
 
 ## 其他资源 {#additional-resources}
 

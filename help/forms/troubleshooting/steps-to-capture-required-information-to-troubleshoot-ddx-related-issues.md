@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍捕获在Forms汇编程序服务中解决DDX相关问题所需的信息的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335517?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439191?quality=12&learn=on&captions=chi_hans)

@@ -24,4 +24,4 @@ ht-degree: 7%
 
 了解Adobe Workfront和Experience Manager Assets Essentials如何帮助您维护Workfront文档和Assets Essentials资源的版本。
 
->[!VIDEO](https://video.tv.adobe.com/v/336314?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422615?quality=12&learn=on&captions=chi_hans)

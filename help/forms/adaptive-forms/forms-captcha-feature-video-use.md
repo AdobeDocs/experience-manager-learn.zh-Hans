@@ -20,7 +20,7 @@ ht-degree: 0%
 
 在AEM自适应Forms中添加和使用验证码。
 
->[!VIDEO](https://video.tv.adobe.com/v/18336?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39207?quality=12&learn=on&captions=chi_hans)
 
 *本视频介绍如何使用内置的AEM CAPTCHA服务和AEM的reCAPTCHA服务将验证码添加到Google自适应表单的过程。*
 

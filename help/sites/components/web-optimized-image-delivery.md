@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何使用AEM核心组件在AEM as a Cloud Service网站上启用Web优化图像交付。
 
->[!VIDEO](https://video.tv.adobe.com/v/346064?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450002?quality=12&learn=on&captions=chi_hans)

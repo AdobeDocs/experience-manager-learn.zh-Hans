@@ -24,7 +24,7 @@ ht-degree: 0%
 连接的应用程序是一个框架，它允许外部应用程序使用API和标准协议（例如SAML、OAuth和OpenID Connect）与Salesforce集成。 连接的应用程序使用这些协议来验证、授权并提供外部应用程序的单点登录(SSO)。
 <!--- 331757 was the old video -->
 
->[!VIDEO](https://video.tv.adobe.com/v/3447257?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447267?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >请确保在[Salesforce Developer Edition](https://developer.salesforce.com/signup)中创建帐户，因为在开发人员版本中默认启用REST API。

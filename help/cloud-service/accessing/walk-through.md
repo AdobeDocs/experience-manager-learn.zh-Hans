@@ -27,4 +27,4 @@ ht-degree: 42%
 
 在Adobe AdminConsole中配置Adobe IMS用户、用户组和产品配置文件的简略演练步骤，以及如何利用AEM Author中的这些Adobe IMS抽象概念来定义和管理特定的基于组的权限。
 
->[!VIDEO](https://video.tv.adobe.com/v/39155?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327369?quality=12&learn=on&captions=chi_hans)

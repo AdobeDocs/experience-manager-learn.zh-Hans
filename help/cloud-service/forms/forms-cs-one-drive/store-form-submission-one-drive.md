@@ -22,4 +22,4 @@ ht-degree: 0%
 
 将自适应表单数据存储在Microsoft OneDrive中。
 
->[!VIDEO](https://video.tv.adobe.com/v/3415792/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431096/?quality=12&learn=on&captions=chi_hans)

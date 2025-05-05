@@ -22,7 +22,7 @@ ht-degree: 3%
 
 **创建您的第一个自适应表单**
 
->[!VIDEO](https://video.tv.adobe.com/v/22173?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327845?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

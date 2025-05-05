@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何使用创建站点向导，从现有语言副本创建国家/地区站点。
 
->[!VIDEO](https://video.tv.adobe.com/v/36684?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41542?quality=12&learn=on&captions=chi_hans)

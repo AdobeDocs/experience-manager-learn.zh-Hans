@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何使用创建Live Copy向导，从Blueprint为您的站点创建Live Copy 。
 
->[!VIDEO](https://video.tv.adobe.com/v/36677?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41583?quality=12&learn=on&captions=chi_hans)

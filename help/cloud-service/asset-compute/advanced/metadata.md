@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 您将要做什么
 
->[!VIDEO](https://video.tv.adobe.com/v/327313?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437021?quality=12&learn=on&captions=chi_hans)
 
 在本教程中，我们将创建一个Asset Compute元数据工作器，该工作器派生图像资源中最常用的颜色，并将这些颜色的名称写回到AEM中的资源元数据。 虽然工作器本身是基本的，但本教程将使用该工作器来探索如何使用Asset Compute工作器将元数据写回AEM as a Cloud Service中的资源。
 

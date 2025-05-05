@@ -36,7 +36,7 @@ ht-degree: 1%
 
 ## 您即将构建的内容 {#what-build}
 
->[!VIDEO](https://video.tv.adobe.com/v/30152?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36054?quality=12&learn=on&captions=chi_hans)
 
 在本章中，您使用[Adobe Experience Manager项目原型](https://github.com/adobe/aem-project-archetype)生成新的AEM项目。 您的AEM项目包含用于Sites实施的完整代码、内容和配置。 本章中生成的项目将作为WKND站点实施的基础，并在以后的章节中构建该项目。
 

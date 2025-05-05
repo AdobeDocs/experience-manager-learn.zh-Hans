@@ -24,7 +24,7 @@ ht-degree: 29%
 
 以下视频介绍在网页中嵌入Adaptive或HTML5表单所需的步骤。
 请参阅[文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html?lang=zh-Hans)以了解最佳先决条件、最佳实践等。
->[!VIDEO](https://video.tv.adobe.com/v/335893?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418453?quality=12&learn=on&captions=chi_hans)
 
 您可以从此处[&#128279;](assets/embedding-af-web-page.zip)下载视频中使用的示例文件
 

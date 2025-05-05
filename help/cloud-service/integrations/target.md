@@ -25,7 +25,7 @@ ht-degree: 0%
 
 了解如何将AEM Headless与Adobe Target集成，方法是将AEM内容片段导出到Adobe Target，并使用它们通过Adobe Experience Platform Web SDK的alloy.js个性化Headless体验。 [React WKND应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=zh-Hans)用于探索如何将使用内容片段选件的个性化Target活动添加到体验中，以促进WKND冒险。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422154/?quality=12&learn=on&captions=chi_hans)
 
 本教程介绍了设置AEM和Adobe Target所涉及的步骤：
 
@@ -50,7 +50,7 @@ Adobe IMS配置有助于在AEM和Adobe Target之间进行身份验证。
 
 查看[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=zh-Hans)以了解有关如何创建Adobe Target Cloud Service的分步说明。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422653/?quality=12&learn=on&captions=chi_hans)
 
 
 ## 配置资源文件夹{#configure-asset-folders}
@@ -71,7 +71,7 @@ Adobe IMS配置有助于在AEM和Adobe Target之间进行身份验证。
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416504/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422661/?quality=12&learn=on&captions=chi_hans)
 
 ## 许可AEM Target集成{#permission}
 
@@ -90,7 +90,7 @@ Adobe Target集成(显示为developer.adobe.com项目)必须被授予Adobe Admin
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416505/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441983/?quality=12&learn=on&captions=chi_hans)
 
 ## 将内容片段导出到目标{#export-content-fragments}
 
@@ -121,7 +121,7 @@ Adobe Target集成(显示为developer.adobe.com项目)必须被授予Adobe Admin
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416506/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422677/?quality=12&learn=on&captions=chi_hans)
 
 ## 使用内容片段选件的Target活动{#activity}
 
@@ -160,7 +160,7 @@ Adobe Target集成(显示为developer.adobe.com项目)必须被授予Adobe Admin
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416507/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444791/?quality=12&learn=on&captions=chi_hans)
 
 ## Experience Platform数据流Id{#datastream-id}
 
@@ -190,7 +190,7 @@ AEM Headless应用程序需要[Adobe Experience Platform数据流](https://exper
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416500/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422181/?quality=12&learn=on&captions=chi_hans)
 
 ## 向AEM Headless应用程序添加个性化设置{#code}
 

@@ -35,7 +35,7 @@ ht-degree: 2%
 
 自定义命名空间在[Sling存储库初始化(repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html)脚本中进行管理，并作为OSGi配置部署到AEM as a Cloud Service — 并添加到您的[AEM项目的](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans) `ui.config`项目中。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416843?quality=12&learn=on&captions=chi_hans)
 
 ## 资源
 

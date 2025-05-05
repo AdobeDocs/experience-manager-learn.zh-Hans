@@ -23,7 +23,7 @@ ht-degree: 4%
 
 了解如何在Edge Delivery Services中配置您自己的Cloudflare CDN。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428100/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452546/?quality=12&learn=on&captions=chi_hans)
 
 ## 其他资源
 

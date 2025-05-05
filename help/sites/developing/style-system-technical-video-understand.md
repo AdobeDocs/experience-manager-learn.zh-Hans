@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 了解如何为样式系统编码 {#understanding-how-to-code-for-the-style-system}
 
->[!VIDEO](https://video.tv.adobe.com/v/21538?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40163?quality=12&learn=on&captions=chi_hans)
 
 提供的AEM包(**technical-review.sites.style-system-1.0.0.zip**)安装示例标题样式、We.Retail布局容器和标题组件的示例策略以及示例页面。
 

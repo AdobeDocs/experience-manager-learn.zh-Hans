@@ -21,7 +21,7 @@ ht-degree: 3%
 
 探索AEM Sites和Edge Delivery Services中的边缘工作人员的重要性，以及如何将他们与后端系统集成。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427589?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448151?learn=on&captions=chi_hans)
 
 ## 其他资源
 

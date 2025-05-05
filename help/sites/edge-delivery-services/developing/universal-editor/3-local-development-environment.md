@@ -27,7 +27,7 @@ Edge Delivery Services网站项目的开发工具和流程可供Web开发人员�
 
 此视频概述了可使用通用编辑器编辑的Edge Delivery Services网站项目的开发拓扑。
 
->[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3443988/?learn=on&enablevpops&captions=chi_hans)
 
 +++查看其他开发拓扑详细信息
 

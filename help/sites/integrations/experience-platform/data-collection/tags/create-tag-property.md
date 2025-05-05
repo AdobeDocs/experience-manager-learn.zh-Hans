@@ -24,7 +24,7 @@ ht-degree: 0%
 
 了解如何使用最低裸机配置创建标记属性以与Adobe Experience Manager集成。 向用户介绍了标记UI，让他们了解扩展、规则和发布工作流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/38553?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327442?quality=12&learn=on&captions=chi_hans)
 
 ## 标记属性创建
 

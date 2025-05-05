@@ -23,4 +23,4 @@ ht-degree: 0%
 
 有关在AEM Forms Designer中创建和测试脚本的简短视频
 
->[!VIDEO](https://video.tv.adobe.com/v/3427627/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443717/?learn=on&captions=chi_hans)

@@ -21,7 +21,7 @@ ht-degree: 0%
 
 有关在[!DNL Apache HTTP Web Server]上运行[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)的情况下安装和使用[!DNL Apache Sling Dynamic Include]的视频演练。
 
->[!VIDEO](https://video.tv.adobe.com/v/17040?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39180?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

@@ -22,4 +22,4 @@ ht-degree: 0%
 
 *本视频介绍在JMX控制台上调整参数的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335554?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438413?quality=12&learn=on&captions=chi_hans)

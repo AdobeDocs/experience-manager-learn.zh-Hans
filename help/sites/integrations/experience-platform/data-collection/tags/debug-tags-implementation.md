@@ -24,7 +24,7 @@ ht-degree: 1%
 
 介绍用于调试Tags实施的常用工具和技术。 了解如何使用浏览器中的开发人员控制台和Experience Platform调试器扩展功能，识别Tags实施的关键方面并执行相应的故障诊断。
 
->[!VIDEO](https://video.tv.adobe.com/v/38567?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327402?quality=12&learn=on&captions=chi_hans)
 
 ## 通过Satellite对象进行客户端调试
 

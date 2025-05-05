@@ -23,4 +23,4 @@ ht-degree: 2%
 
 使用适用于Edge Delivery Services的[AEM样板模板](https://github.com/adobe/aem-boilerplate)设置代码Git存储库。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425713/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434621/?learn=on&captions=chi_hans)

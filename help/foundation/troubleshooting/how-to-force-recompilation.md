@@ -22,4 +22,4 @@ ht-degree: 0%
 
 *本视频介绍强制重新编译所有Sling脚本jsps、Java和Sightly的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335464?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418256?quality=12&learn=on&captions=chi_hans)

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 此视频介绍在Dynamic Media中添加测试图像服务器（客户端IP过滤器）详细信息的过程，以便使用Dynamic Media Classic应用程序安全预览。
 
->[!VIDEO](https://video.tv.adobe.com/v/335462?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418274?quality=12&learn=on&captions=chi_hans)

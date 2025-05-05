@@ -39,8 +39,8 @@ ht-degree: 1%
 * 自适应表单示例放置在名为[应用程序Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)的文件夹中
 
 以下视频介绍如何配置自适应表单以触发AEM Workflow
->[!VIDEO](https://video.tv.adobe.com/v/40258?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329440?quality=12&learn=on&captions=chi_hans)
 
 以下视频说明了crx存储库中的工作流有效负载和其他详细信息
 
->[!VIDEO](https://video.tv.adobe.com/v/40259?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329448?quality=12&learn=on&captions=chi_hans)

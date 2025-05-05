@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍捕获抵押品以调试与Forms和输出服务转换相关的字体的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335487?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439914?quality=12&learn=on&captions=chi_hans)

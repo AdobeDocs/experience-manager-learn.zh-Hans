@@ -25,7 +25,7 @@ AEM Content Services允许使用与在AEM Sites中创作网页相同的内容抽
 
 一个端到端教程，它演示了如何在Headless CMS场景中使用AEM构建和公开内容并由本机移动设备应用程序使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/28315?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33073?quality=12&learn=on&captions=chi_hans)
 
 本教程将探讨如何使用AEM Content Services增强移动设备应用程序显示事件信息（音乐、性能、艺术等）的体验 由WKND团队策划。
 

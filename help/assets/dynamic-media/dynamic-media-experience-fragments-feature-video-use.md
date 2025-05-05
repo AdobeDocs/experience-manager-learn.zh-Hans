@@ -21,7 +21,7 @@ ht-degree: 0%
 
 AEM Assets Dynamic Media通过Interactive Media查看器将资产热点与体验片段集成。 营销人员可以使用文本、图像和链接创作体验片段，以填充自定义弹出窗口，并将弹出窗口关联到横幅、轮盘或视频上的热点。
 
->[!VIDEO](https://video.tv.adobe.com/v/22115?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40216?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

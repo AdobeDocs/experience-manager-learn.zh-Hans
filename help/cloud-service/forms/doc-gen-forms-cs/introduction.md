@@ -28,4 +28,4 @@ ht-degree: 1%
 1. 在AEM中配置技术帐户的访问权限
 1. 使用访问令牌进行HTTP调用
 
->[!VIDEO](https://video.tv.adobe.com/v/334859?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342216?quality=12&learn=on&captions=chi_hans)

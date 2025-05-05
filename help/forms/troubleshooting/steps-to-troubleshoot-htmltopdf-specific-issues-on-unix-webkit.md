@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍对Unix设置（WebKit转换）中的HtmltoPDF特定问题进行故障排除的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335548?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417639?quality=12&learn=on&captions=chi_hans)

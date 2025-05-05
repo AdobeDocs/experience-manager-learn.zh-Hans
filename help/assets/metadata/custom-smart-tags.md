@@ -23,7 +23,7 @@ ht-degree: 1%
 利用图像的自定义智能标记，可以使用特定于客户的术语来训练智能标记。
 随后，可以利用自定义智能标记（或增强型智能标记）来改善用户搜索体验，并帮助在适当的时间找到资产。
 
->[!VIDEO](https://video.tv.adobe.com/v/22254?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410908?quality=12&learn=on&captions=chi_hans)
 
 ## 为AEM 6.x的图像设置自定义智能标记{#set-up}
 
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 了解如何使用智能内容服务和Adobe I/O在AEM Assets中配置智能标记培训。图像的自定义智能标记
 
->[!VIDEO](https://video.tv.adobe.com/v/23405?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35513?quality=12&learn=on&captions=chi_hans)
 
 ## 其他资源
 

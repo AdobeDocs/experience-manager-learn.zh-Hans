@@ -26,7 +26,7 @@ ht-degree: 2%
 
 以下视频演示了该用例。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428432?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441802?learn=on&captions=chi_hans)
 
 ## 先决条件
 

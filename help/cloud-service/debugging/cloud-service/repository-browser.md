@@ -22,7 +22,7 @@ ht-degree: 0%
 
 存储库浏览器是一款功能强大的工具，可显示AEM的底层数据存储，从而轻松调试AEM as a Cloud Service环境。 存储库浏览器支持在生产、暂存和开发以及创作、发布和预览服务中只读查看AEM的资源和属性。
 
->[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447064?quality=12&learn=on&captions=chi_hans)
 
 存储库浏览器仅&#x200B;__在AEM as a Cloud Service环境中可用__(使用[CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite)调试本地AEM SDK)。
 

@@ -29,7 +29,7 @@ Brand Portal在2019年9月推出的最显着功能是引入资产源，这可提
 
 Brand Portal的资源源用于从第三方机构和团队收集资源，并将其无缝同步回Experience Manager Author以供审阅和使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/29365?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32892?quality=12&learn=on&captions=chi_hans)
 
 需要&#x200B;*Experience Manager Author 6.5 SP2 (6.5.2)或更高版本才能使用资源源*
 
@@ -37,7 +37,7 @@ Brand Portal的资源源用于从第三方机构和团队收集资源，并将�
 
 ## Brand Portal 2019年2月版功能和增强功能{#brand-portal-features-and-enhancements-644}
 
->[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40332?quality=12&learn=on&captions=chi_hans)
 
 Brand Portal 2019年2月版重点对文本搜索和主要客户请求进行了增强。
 
@@ -165,7 +165,7 @@ Brand Portal使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legac
 
 新增功能增强了旨在将Brand Portal与AEM保持一致的功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40332?quality=12&learn=on&captions=chi_hans)
 
 ### 导航改进
 

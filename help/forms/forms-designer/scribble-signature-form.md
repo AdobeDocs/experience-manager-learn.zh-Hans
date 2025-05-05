@@ -23,4 +23,4 @@ ht-degree: 0%
 
 描述向AEM Forms添加涂写签名的简短视频
 
->[!VIDEO](https://video.tv.adobe.com/v/3427626/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437330/?learn=on&captions=chi_hans)

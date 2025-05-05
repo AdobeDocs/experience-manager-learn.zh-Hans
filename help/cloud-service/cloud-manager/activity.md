@@ -24,4 +24,4 @@ Cloud Manager提供了项目活动的综合视图，其中列出了所有用于�
 
 Cloud Manager还在每个用户级别与[Adobe Experience Cloud通知](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/notifications.html?lang=zh-Hans)集成，从而提供感兴趣的事件和操作的全景视图。
 
->[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34277?quality=12&learn=on&captions=chi_hans)

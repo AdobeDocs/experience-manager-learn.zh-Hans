@@ -23,4 +23,4 @@ ht-degree: 10%
 
 根据上一步中配置的数据源创建表单数据模型
 
->[!VIDEO](https://video.tv.adobe.com/v/331756?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411542?quality=12&learn=on&captions=chi_hans)

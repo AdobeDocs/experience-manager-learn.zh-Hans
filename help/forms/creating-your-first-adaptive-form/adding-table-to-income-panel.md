@@ -23,7 +23,7 @@ ht-degree: 1%
 
 **添加并配置表组件**
 
->[!VIDEO](https://video.tv.adobe.com/v/22198?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326906?quality=12&learn=on&captions=chi_hans)
 
 
 
@@ -44,7 +44,7 @@ ht-degree: 1%
 ## 创建规则以计算总计 {#create-rule-to-calculate-grand-total}
 
 
->[!VIDEO](https://video.tv.adobe.com/v/22197?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326895?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

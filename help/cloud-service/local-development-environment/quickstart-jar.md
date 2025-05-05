@@ -18,6 +18,6 @@ ht-degree: 0%
 
 了解如何使用AEM快速入门Jar在几分钟内安装和运行Adobe Experience Manager的本地实例。 AEM快速入门Jar是可以在本地计算机上安装和运行的AEM运行时。
 
->[!VIDEO](https://video.tv.adobe.com/v/32551?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36706?quality=12&learn=on&captions=chi_hans)
 
 有关更详细的设置

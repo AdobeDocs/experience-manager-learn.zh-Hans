@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍在AEM Forms中启用性能日志记录以调试与Forms和输出服务相关的问题的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335499?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439725?quality=12&learn=on&captions=chi_hans)

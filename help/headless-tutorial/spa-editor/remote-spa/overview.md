@@ -26,7 +26,7 @@ ht-degree: 1%
 
 本教程以[WKND GraphQL应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans)为基础，该应用程序是一个React应用程序，它通过AEM的GraphQL API使用AEM内容片段内容，但不提供任何对SPA内容的上下文创作。
 
->[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444857?quality=12&learn=on&captions=chi_hans)
 
 ## 关于教程
 

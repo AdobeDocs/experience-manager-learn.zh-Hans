@@ -24,4 +24,4 @@ ht-degree: 0%
 
 了解如何在AEM Sites中创建和组织组织的网站页面。
 
->[!VIDEO](https://video.tv.adobe.com/v/31785?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410346?quality=12&learn=on&captions=chi_hans)

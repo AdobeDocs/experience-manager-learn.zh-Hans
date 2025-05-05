@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## 生成SSL证书
 
->[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441503?quality=12&learn=on&captions=chi_hans)
 
 您有两个选项：
 
@@ -222,7 +222,7 @@ public class VerifyHeadersServlet extends SlingSafeMethodsServlet {
 
 ## 在X-AEM-Edge-Key HTTP标头中传递密钥
 
->[!VIDEO](https://video.tv.adobe.com/v/3432567?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445055?quality=12&learn=on&captions=chi_hans)
 
 更新客户CDN以在`X-AEM-Edge-Key` HTTP标头中传递密钥。 Adobe CDN使用该密钥来验证请求是否来自客户CDN，并将`Host`标头值转换为从客户CDN接收的`X-Forwarded-Host`的值。
 

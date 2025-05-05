@@ -23,4 +23,4 @@ ht-degree: 12%
 
 了解AEM Assets导航的基础知识。
 
->[!VIDEO](https://video.tv.adobe.com/v/32046?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37097?quality=12&learn=on&captions=chi_hans)

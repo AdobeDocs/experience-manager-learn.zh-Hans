@@ -29,11 +29,11 @@ AEM as a Cloud Service中的批量导入工具允许管理员以安全高效的�
 
 了解如何使用[Asset视图](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html?lang=zh-Hans) [批量导入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html?lang=zh-Hans)将大量文件导入AEM Assets，以Dropbox作为示例云存储提供商，以实现清晰易用的集成过程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451969/?learn=on&captions=chi_hans)
 
 >[!TAB 管理员视图]
 
->[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341379?quality=12&learn=on&captions=chi_hans)
 
 >[!TIP]
 >

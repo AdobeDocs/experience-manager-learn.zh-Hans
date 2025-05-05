@@ -20,7 +20,7 @@ ht-degree: 0%
 
 简要介绍“在线修订清理”，该功能可减少频繁进行“离线修订清理”的需要。
 
->[!VIDEO](https://video.tv.adobe.com/v/17004?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30293?quality=12&learn=on&captions=chi_hans)
 
 ## 支持材料
 

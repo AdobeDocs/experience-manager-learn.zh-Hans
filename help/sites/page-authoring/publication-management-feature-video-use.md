@@ -25,7 +25,7 @@ ht-degree: 1%
 
 AEM Sites提供了多个用于发布和取消发布内容的选项。 本视频探讨了各种方法及其功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/32193?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36816?quality=12&learn=on&captions=chi_hans)
 
 AEM Sites提供了多种根据作者工作流程发布和取消发布内容的方法。
 

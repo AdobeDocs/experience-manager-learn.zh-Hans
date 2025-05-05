@@ -23,4 +23,4 @@ ht-degree: 0%
 
 处理配置文件定义了要为AEM as a Cloud Service中的资源创建的演绎版。
 
->[!VIDEO](https://video.tv.adobe.com/v/35597?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40082?quality=12&learn=on&captions=chi_hans)

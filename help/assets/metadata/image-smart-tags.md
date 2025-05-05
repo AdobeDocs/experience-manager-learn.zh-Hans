@@ -23,14 +23,14 @@ ht-degree: 0%
 
 AEM Assets的图像智能标签可自动将派生的元数据标签添加到图像资源，从而增强AEM Assets的搜索功能，进而通过更轻松、更快速地找到正确的图像来改善创作体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/17019?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444064?quality=12&learn=on&captions=chi_hans)
 
 ## 为AEM 6.x设置{#set-up}
 
 >[!NOTE]
 > 自动为AEM as a Cloud Service配置图像的智能标记。
 
->[!VIDEO](https://video.tv.adobe.com/v/17023?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444175?quality=12&learn=on&captions=chi_hans)
 
 在使用智能内容服务之前，请确保满足以下条件，以便在Adobe I/O上创建集成：
 

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Adobe Asset Link可在内容创建过程中加强创意专业人士与营销人员之间的协作。 无需离开您最熟悉的Creative Cloud桌面应用程序，即可访问存储在Adobe Experience Manager Assets (AEM Assets)中的内容。 了解如何从Creative Cloud桌面应用程序启动Adobe Asset Link面板。
 
->[!VIDEO](https://video.tv.adobe.com/v/33733?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38680?quality=12&learn=on&captions=chi_hans)

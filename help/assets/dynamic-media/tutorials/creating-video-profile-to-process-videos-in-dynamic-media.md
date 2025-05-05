@@ -21,4 +21,4 @@ ht-degree: 0%
 
 本视频介绍在Dynamic Media中创建视频配置文件以处理视频的过程。
 
->[!VIDEO](https://video.tv.adobe.com/v/335382?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417799?quality=12&learn=on&captions=chi_hans)

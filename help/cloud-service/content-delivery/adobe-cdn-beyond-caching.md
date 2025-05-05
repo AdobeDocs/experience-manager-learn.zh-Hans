@@ -31,7 +31,7 @@ ht-degree: 0%
 
 这些功能是&#x200B;**自助服务**&#x200B;功能。 已在AEM项目的`cdn.yaml`文件中配置并使用Cloud Manager配置管道部署。
 
->[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440285?quality=12&learn=on&captions=chi_hans)
 
 ## 在CDN上配置流量
 

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 组件图标允许作者使用图标或有意义的缩写快速识别组件。 作者现在可以找到比以往更快地构建其Web体验所需的组件。
 
->[!VIDEO](https://video.tv.adobe.com/v/16778?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38293?quality=12&learn=on&captions=chi_hans)
 
 组件浏览器现在以一致的灰色主题显示，其中显示：
 

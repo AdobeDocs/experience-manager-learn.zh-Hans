@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍在Brand Portal中启用下载演绎版的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335449?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417804?quality=12&learn=on&captions=chi_hans)

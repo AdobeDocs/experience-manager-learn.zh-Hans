@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 用例演示
 
->[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437319?quality=12&learn=on&captions=chi_hans)
 
 在本教程中，我已使用[Geonames REST API](https://www.geonames.org/export/web-services.html)来演示此功能。
 有许多组织提供此类服务，只要他们有详细记录的REST API，您就可以使用数据集成功能轻松与AEM Forms集成

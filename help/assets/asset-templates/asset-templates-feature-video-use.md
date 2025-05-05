@@ -30,10 +30,10 @@ AEM Assets Template允许营销人员创建、管理和交付数字资产和打�
 
 本视频介绍使用Adobe InDesign、Adobe InDesign Server和AEM Assets在AEM中生成打印就绪资源的概念和步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/25170?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35368?quality=12&learn=on&captions=chi_hans)
 
 ## 技术概述 {#technical-overview}
 
 此视频从技术层面更全面概述了AEM Assets声明模板功能，以及AEM如何通过InDesign简化AEM Assets和内容的构成，以创建丰富且引人注目的打印体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/17071?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38230?quality=12&learn=on&captions=chi_hans)

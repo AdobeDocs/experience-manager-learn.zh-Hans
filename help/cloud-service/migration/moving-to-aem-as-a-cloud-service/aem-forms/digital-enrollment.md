@@ -21,4 +21,4 @@ ht-degree: 0%
 
 了解AEM Forms as a Cloud Service如何支持数字注册用例。
 
->[!VIDEO](https://video.tv.adobe.com/v/336966?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3455144?quality=12&learn=on&captions=chi_hans)

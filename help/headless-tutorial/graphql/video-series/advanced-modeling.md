@@ -28,4 +28,4 @@ ht-degree: 0%
 + 了解如何在富文本字段中深层链接到其他内容片段
 + 创建从引用的内容片段中返回数据的GraphQL查询
 
->[!VIDEO](https://video.tv.adobe.com/v/332859?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412897?quality=12&learn=on&captions=chi_hans)

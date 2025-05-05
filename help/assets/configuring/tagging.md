@@ -23,4 +23,4 @@ ht-degree: 3%
 
 标记是用于跨Assets文件夹层次结构管理资源的不可或缺工具。 建立标记分类对于允许用户在AEM中发现和组织资源至关重要。
 
->[!VIDEO](https://video.tv.adobe.com/v/34073?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37314?quality=12&learn=on&captions=chi_hans)

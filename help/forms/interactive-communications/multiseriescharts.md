@@ -29,11 +29,11 @@ AEM Forms 6.5引入了创建和配置多系列图表的功能。 多系列图表
 
 ## 为多系列图表创建表单数据模型
 
->[!VIDEO](https://video.tv.adobe.com/v/26352?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33040?quality=12&learn=on&captions=chi_hans)
 
 ### 配置折线图
 
->[!VIDEO](https://video.tv.adobe.com/v/26353?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33043?quality=12&learn=on&captions=chi_hans)
 
 要在您的系统上对此进行测试，请执行以下步骤
 

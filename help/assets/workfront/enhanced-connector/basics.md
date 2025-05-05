@@ -31,4 +31,4 @@ ht-degree: 1%
 + 版本资产
 + 自动发布资产
 
->[!VIDEO](https://video.tv.adobe.com/v/337575?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454305?quality=12&learn=on&captions=chi_hans)

@@ -20,7 +20,7 @@ ht-degree: 4%
 
 本课程将深入介绍如何访问AEM as a Cloud Service中的日志，包括如何通过用户界面以及从API访问日志。
 
->[!VIDEO](https://video.tv.adobe.com/v/341156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448488?quality=12&learn=on&captions=chi_hans)
 
 ## 本视频中涵盖的内容
 

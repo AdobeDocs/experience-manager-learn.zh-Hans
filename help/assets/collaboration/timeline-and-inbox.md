@@ -24,4 +24,4 @@ ht-degree: 0%
 
 熟悉用于协作的AEM Assets中的关键Web控制台。
 
->[!VIDEO](https://video.tv.adobe.com/v/32051?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36813?quality=12&learn=on&captions=chi_hans)

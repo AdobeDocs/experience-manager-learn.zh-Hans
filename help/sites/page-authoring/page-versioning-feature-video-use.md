@@ -24,7 +24,7 @@ ht-degree: 5%
 
 页面版本控制通过创建页面版本帮助内容作者跟踪与页面关联的更改，并提供用于预览版本、恢复版本以及将版本与页面的当前版本进行比较的选项。
 
->[!VIDEO](https://video.tv.adobe.com/v/32151?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36839?quality=12&learn=on&captions=chi_hans)
 
 版本控制可在特定的时间点创建页面的快照。 使用版本控制，您可以执行下列操作：
 * 为页面创建新版本

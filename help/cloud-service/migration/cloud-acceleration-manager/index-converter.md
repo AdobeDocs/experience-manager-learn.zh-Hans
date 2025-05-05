@@ -21,4 +21,4 @@ ht-degree: 9%
 
 了解索引转换器如何自动将现有AEM索引定义转换为可与AEM as a Cloud Service兼容的定义。
 
->[!VIDEO](https://video.tv.adobe.com/v/336696?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443783?quality=12&learn=on&captions=chi_hans)

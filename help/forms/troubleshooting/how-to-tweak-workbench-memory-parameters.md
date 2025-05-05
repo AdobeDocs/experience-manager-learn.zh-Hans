@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍调整Workbench内存参数的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335509?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417238?quality=12&learn=on&captions=chi_hans)

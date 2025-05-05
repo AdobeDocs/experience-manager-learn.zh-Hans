@@ -24,5 +24,5 @@ ht-degree: 0%
 
 了解如何保存用于在Edge Delivery Services文档创作中生成变体的自定义提示模板。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428317/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437519/?learn=on&captions=chi_hans)
 

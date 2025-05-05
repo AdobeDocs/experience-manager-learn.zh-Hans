@@ -21,7 +21,7 @@ ht-degree: 0%
 
 了解存储库现代化、可变和不可变的内容、包结构和存储库现代化器CLI工具。
 
->[!VIDEO](https://video.tv.adobe.com/v/336958?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454802?quality=12&learn=on&captions=chi_hans)
 
 ## 存储库现代化器工具
 

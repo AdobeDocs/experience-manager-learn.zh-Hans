@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍对Windows安装程序中的多用户PDFG转换问题进行故障排除的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335550?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417223?quality=12&learn=on&captions=chi_hans)

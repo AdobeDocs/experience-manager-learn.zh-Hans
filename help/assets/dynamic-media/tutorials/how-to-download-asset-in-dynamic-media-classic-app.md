@@ -21,4 +21,4 @@ ht-degree: 0%
 
 本视频介绍在Dynamic Media Classic应用程序中下载资源的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/335458?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417830?quality=12&learn=on&captions=chi_hans)

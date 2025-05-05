@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍使用FormsIVS和OutputIVS示例从UI运行负载测试的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335507?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441499?quality=12&learn=on&captions=chi_hans)

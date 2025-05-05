@@ -25,4 +25,4 @@ ht-degree: 0%
 
 深入了解文档创作中默认内容和部分的概念，以及这些概念如何帮助您制作更好的站点。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425702/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437985/?learn=on&captions=chi_hans)

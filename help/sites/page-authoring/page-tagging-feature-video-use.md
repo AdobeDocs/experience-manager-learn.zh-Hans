@@ -24,4 +24,4 @@ ht-degree: 0%
 
 了解如何使用标记在Adobe Experience Manager中维护和组织网页。
 
->[!VIDEO](https://video.tv.adobe.com/v/32150?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36815?quality=12&learn=on&captions=chi_hans)

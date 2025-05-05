@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍捕获移动表单的调试日志的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335516?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438597?quality=12&learn=on&captions=chi_hans)

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 AEM 6.4目录增强功能提供了使用AEM Asset Templates和InDesign Server创建目录页面的功能。  用户可以使用InDesign模板创建目录页面，并将产品属性映射到可编辑字段，这些字段以后可用于为不同的产品创建类似的页面。
 
->[!VIDEO](https://video.tv.adobe.com/v/22540?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39304?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

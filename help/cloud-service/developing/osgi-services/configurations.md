@@ -20,7 +20,7 @@ ht-degree: 3%
 
 了解使用OSGi配置键/值对定义并将OSGi配置数据公开给OSGi服务的低级别方法。
 
->[!VIDEO](https://video.tv.adobe.com/v/335729?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417820?quality=12&learn=on&captions=chi_hans)
 
 ## 资源
 

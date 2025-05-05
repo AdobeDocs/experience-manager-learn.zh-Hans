@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何使用AEM Forms的预填充服务从Azure Blob Storage填充自适应表单。
 
->[!VIDEO](https://video.tv.adobe.com/v/335714?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418943?quality=12&learn=on&captions=chi_hans)

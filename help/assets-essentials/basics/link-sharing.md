@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解AEM Assets的共享链接如何让用户与内部和外部利益相关者共享资源，同时最大限度地降低共享错误资源或信息的风险。
 
->[!VIDEO](https://video.tv.adobe.com/v/341025?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345004?quality=12&learn=on&captions=chi_hans)

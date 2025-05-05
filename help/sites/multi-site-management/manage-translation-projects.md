@@ -22,4 +22,4 @@ ht-degree: 12%
 
 了解如何为语言副本创建、编辑和管理翻译项目。
 
->[!VIDEO](https://video.tv.adobe.com/v/36486?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41624?quality=12&learn=on&captions=chi_hans)

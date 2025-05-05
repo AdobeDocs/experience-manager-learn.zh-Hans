@@ -21,7 +21,7 @@ ht-degree: 2%
 
 了解Best Practices Analyzer (BPA)和Cloud Acceleration Manager (CAM)如何提供有关迁移到AEM as a Cloud Service的自定义指南。 
 
->[!VIDEO](https://video.tv.adobe.com/v/336957?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453362?quality=12&learn=on&captions=chi_hans)
 
 ## 使用BPA和CAM
 

@@ -24,4 +24,4 @@ ht-degree: 1%
 
 AEM Sites中的启动项提供了一种创建、创作和审查网站内容以供未来发布的方法。 在创建发布期间，生产网站可以继续像往常一样每天演进和变更。
 
->[!VIDEO](https://video.tv.adobe.com/v/331285?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346836?quality=12&learn=on&captions=chi_hans)

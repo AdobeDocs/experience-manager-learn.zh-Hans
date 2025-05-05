@@ -21,4 +21,4 @@ ht-degree: 0%
 
 使用最佳实践和示例探索Dispatcher如何与AEM as Cloud Service和Cloud Manager配合使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/330538?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345841?quality=12&learn=on&captions=chi_hans)

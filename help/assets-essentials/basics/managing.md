@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解创建文件夹结构的基础知识、基本操作（如移动、复制和重命名以及收藏集）。
 
->[!VIDEO](https://video.tv.adobe.com/v/335733?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413848?quality=12&learn=on&captions=chi_hans)

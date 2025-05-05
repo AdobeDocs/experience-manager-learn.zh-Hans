@@ -23,4 +23,4 @@ ht-degree: 0%
 
 使用带有折叠布局的可重复面板捕获申请者的资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/336473?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445188?quality=12&learn=on&captions=chi_hans)

@@ -22,7 +22,7 @@ ht-degree: 1%
 
 图像组件是Experience Manager核心组件的一部分，可对Dynamic Media提供内置支持。 使用图像组件，内容作者可以在AEM Sites页面上使用Dynamic Media的功能，如图像预设、智能裁切和图像修饰符。
 
->[!VIDEO](https://video.tv.adobe.com/v/329331?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341394?quality=12&learn=on&captions=chi_hans)
 
 ## 其他资源
 

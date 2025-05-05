@@ -22,4 +22,4 @@ ht-degree: 0%
 
 通过此分步教程了解如何在AEM as a Cloud Service中恢复内容。 了解何时以及如何高效地恢复先前内容，确保内容完整性。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416149/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441318/?learn=on&enablevpops&captions=chi_hans)

@@ -22,4 +22,4 @@ ht-degree: 0%
 
 以下视频将指导您完成创建云服务配置以与Microsoft Dynamics连接的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/340758?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448308?quality=12&learn=on&captions=chi_hans)

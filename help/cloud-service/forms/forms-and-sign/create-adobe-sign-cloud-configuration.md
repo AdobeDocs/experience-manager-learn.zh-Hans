@@ -27,7 +27,7 @@ AEM中的Cloud Services配置允许您在AEM和其他云应用程序之间创建
 
 以下视频将指导您完成创建AEM与Acrobat Sign集成的云服务配置所需的步骤
 
->[!VIDEO](https://video.tv.adobe.com/v/332437?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411766?quality=12&learn=on&captions=chi_hans)
 
 ## 疑难解答
 

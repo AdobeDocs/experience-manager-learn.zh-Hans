@@ -56,7 +56,7 @@ AEM Publish SAML集成的典型流程如下所示：
 
 ## 配置演练
 
->[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3455354?quality=12&learn=on&captions=chi_hans)
 
 此视频介绍如何设置与AEM as a Cloud Service Publish服务的SAML 2.0集成，以及使用Okta作为IDP。
 

@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何在AEM Assets Content Hub中创建和使用收藏集以简化资源访问，促进协作资源共享，确保跨不同项目高效且有序的团队合作。
 
->[!VIDEO](https://video.tv.adobe.com/v/3435687/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445310/?learn=on&captions=chi_hans)

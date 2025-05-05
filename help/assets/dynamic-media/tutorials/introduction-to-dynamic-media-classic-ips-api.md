@@ -21,4 +21,4 @@ ht-degree: 0%
 
 本视频介绍Dynamic Media经典IPS API。
 
->[!VIDEO](https://video.tv.adobe.com/v/335453?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417845?quality=12&learn=on&captions=chi_hans)

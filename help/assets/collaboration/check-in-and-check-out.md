@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何使用AEM的签入和签出功能来促进资源上的多用户协作。
 
->[!VIDEO](https://video.tv.adobe.com/v/32048?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36903?quality=12&learn=on&captions=chi_hans)

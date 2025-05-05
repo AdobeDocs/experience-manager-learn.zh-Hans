@@ -23,7 +23,7 @@ ht-degree: 0%
 
 AEM Headless应用程序支持集成的创作预览。 预览体验将AEM作者的内容片段编辑器与您的自定义应用程序链接到一起（可通过HTTP寻址），从而允许深层链接进入应用程序，以呈现正在预览的内容片段。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449598?quality=12&learn=on&captions=chi_hans)
 
 要使用内容片段预览，必须满足多个条件：
 

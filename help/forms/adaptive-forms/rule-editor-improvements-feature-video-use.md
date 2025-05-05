@@ -22,7 +22,7 @@ ht-degree: 0%
 
 规则编辑器允许用户向AEM自适应Forms添加逻辑。 AEM 6.3以多种方式改进了规则编辑器，让技术用户和非技术用户都能够更轻松、更快速地添加智能。
 
->[!VIDEO](https://video.tv.adobe.com/v/19653?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39212?quality=12&learn=on&captions=chi_hans)
 
 **对规则编辑器的某些改进包括：**
 

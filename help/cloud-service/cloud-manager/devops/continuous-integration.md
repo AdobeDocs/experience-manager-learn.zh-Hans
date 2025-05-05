@@ -27,4 +27,4 @@ ht-degree: 86%
 
 了解最佳实践以及使用 Adobe Cloud Manager 进行持续集成。
 
->[!VIDEO](https://video.tv.adobe.com/v/330536?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345848?quality=12&learn=on&captions=chi_hans)

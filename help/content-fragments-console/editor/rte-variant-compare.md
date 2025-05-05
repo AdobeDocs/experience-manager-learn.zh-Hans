@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解AEM如何让您轻松地比较和同步内容片段变体中的RTE字段。 通过比较和同步这些变体，您可以确保在使用该内容片段的所有渠道之间发送一致的消息。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419314/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437562/?learn=on&captions=chi_hans)

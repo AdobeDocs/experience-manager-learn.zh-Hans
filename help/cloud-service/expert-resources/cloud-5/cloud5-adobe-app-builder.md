@@ -21,7 +21,7 @@ ht-degree: 2%
 
 阿莫尔·阿南德加入我们，为我们提供了与Adobe App Builder的集成以及何时何地使用它的最低权限。
 
->[!VIDEO](https://video.tv.adobe.com/v/342375?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346479?quality=12&learn=on&captions=chi_hans)
 
 ## 本视频中涵盖的内容
 

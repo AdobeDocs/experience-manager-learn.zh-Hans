@@ -23,13 +23,13 @@ ht-degree: 0%
 
 第1部分 — 添加标题、图像、文本字段和日期字段
 
->[!VIDEO](https://video.tv.adobe.com/v/3427620/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439736/?learn=on&captions=chi_hans)
 
 第2部分 — 添加和创建自定义对象和表单片段
 
->[!VIDEO](https://video.tv.adobe.com/v/3427621/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439591/?learn=on&captions=chi_hans)
 
 访问帮助内容
 
->[!VIDEO](https://video.tv.adobe.com/v/3427622/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437245/?learn=on&captions=chi_hans)
 

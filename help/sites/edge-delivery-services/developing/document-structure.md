@@ -23,4 +23,4 @@ ht-degree: 0%
 
 探索如何使用章节、默认内容等功能组合Edge Delivery Services文档。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425716/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445199/?learn=on&captions=chi_hans)

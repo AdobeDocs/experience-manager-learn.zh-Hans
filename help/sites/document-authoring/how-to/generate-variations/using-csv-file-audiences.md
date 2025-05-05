@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索如何使用CSV文件受众，通过Edge Delivery Services文档创作中的相关内容定位正确的受众。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428793/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436897/?learn=on&captions=chi_hans)

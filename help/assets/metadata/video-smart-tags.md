@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Experience Manager Assets利用Adobe Sensei提供的技术，通过描述视频关键元素的关键字对视频资源进行智能标记，从而让AEM用户能够通过搜索关键字，轻松找到这些视频资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/327005?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340528?quality=12&learn=on&captions=chi_hans)

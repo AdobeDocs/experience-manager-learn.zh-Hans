@@ -23,7 +23,7 @@ ht-degree: 0%
 
 了解Adobe提供的&#x200B;_AEM Cloud Service CDN日志分析工具_，以及它如何帮助您深入了解您的CDN性能和AEM实施。
  
->[!VIDEO](https://video.tv.adobe.com/v/3429177?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446115?quality=12&learn=on&captions=chi_hans)
 
 ## 概述
 

@@ -23,7 +23,7 @@ ht-degree: 0%
 
 了解如何在webhook上接收AEM事件并查看事件详细信息，例如有效负载、标头和元数据。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449758?quality=12&learn=on&captions=chi_hans)
 
 在此示例中，利用Adobe提供的&#x200B;_托管的webhook_，您无需设置自己的webhook即可接收AEM事件。 此Adobe提供的webhook托管在[Glitch](https://glitch.com/)上，这是一个众所周知的平台，它提供了有助于构建和部署Web应用程序的基于Web的环境。 但是，如果愿意，也可以使用您自己的webhook选项。
 

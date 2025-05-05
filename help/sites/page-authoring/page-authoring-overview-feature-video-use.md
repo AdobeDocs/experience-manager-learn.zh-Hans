@@ -24,7 +24,7 @@ ht-degree: 18%
 
 了解如何使用站点编辑器的UI在Adobe Experience Manager Sites中创作页面。
 
->[!VIDEO](https://video.tv.adobe.com/v/31828?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36944?quality=12&learn=on&captions=chi_hans)
 
 在此视频中，介绍了以下功能或特性：
 

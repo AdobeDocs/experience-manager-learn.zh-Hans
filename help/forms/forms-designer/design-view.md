@@ -23,4 +23,4 @@ ht-degree: 0%
 
 有关AEM Forms Designer中的设计器视图的简短视频
 
->[!VIDEO](https://video.tv.adobe.com/v/3427615/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436827/?learn=on&captions=chi_hans)

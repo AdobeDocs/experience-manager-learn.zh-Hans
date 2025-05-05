@@ -25,4 +25,4 @@ ht-degree: 6%
 
 了解如何配置Workfront字段和Assets Essentials属性之间的元数据映射，以及配置Assets Essentials以显示映射的值。
 
->[!VIDEO](https://video.tv.adobe.com/v/336458?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422620?quality=12&learn=on&captions=chi_hans)

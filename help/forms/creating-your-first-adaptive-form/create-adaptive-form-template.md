@@ -21,7 +21,7 @@ ht-degree: 5%
 此处创建的模板是我们今后自适应表单的基础。
 以下视频介绍了创建自适应表单模板的基本过程
 
->[!VIDEO](https://video.tv.adobe.com/v/37324?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326693?quality=12&learn=on&captions=chi_hans)
 
 有关详细信息，请参阅[自适应表单模板文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html?lang=zh-Hans)
 

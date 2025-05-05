@@ -24,4 +24,4 @@ ht-degree: 0%
 
 介绍如何在Edge Delivery Services中生成变体，并了解它对营销人员有何用处。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428304/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438564/?learn=on&captions=chi_hans)

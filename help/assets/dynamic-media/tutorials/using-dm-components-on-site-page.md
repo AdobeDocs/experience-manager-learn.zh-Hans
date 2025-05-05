@@ -21,4 +21,4 @@ ht-degree: 0%
 
 本视频介绍在AEM Sites网页上使用启用Dynamic Media的核心组件的过程。
 
->[!VIDEO](https://video.tv.adobe.com/v/335461?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417720?quality=12&learn=on&captions=chi_hans)

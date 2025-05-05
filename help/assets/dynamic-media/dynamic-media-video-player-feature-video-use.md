@@ -21,7 +21,7 @@ ht-degree: 5%
 
 AEM Dynamic Media视频播放器过去依赖Flash运行时在桌面客户端和浏览器上支持自适应视频流播放，现在则对基于Flash的内容流变得更加积极。 随着HLS(Apple的HTTP实时流视频交付协议)的推出，现在无需依赖Flash即可对内容进行流式处理。
 
->[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38010?quality=12&learn=on&captions=chi_hans)
 
 ## 快速了解非Flash视频播放器 {#quick-look-into-non-flash-video-player}
 

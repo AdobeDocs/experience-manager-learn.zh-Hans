@@ -23,4 +23,4 @@ ht-degree: 2%
 
 了解AEM的内容片段控制台和编辑器如何让您轻松了解和管理引用的内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3420950/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423635/?learn=on&captions=chi_hans)

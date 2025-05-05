@@ -24,7 +24,7 @@ ht-degree: 1%
 >[!VIDEO](https://video.tv.adobe.com/v/22342?quality=12&learn=on)
 
 在AEM Forms 6.5中创建Web渠道文档模板
->[!VIDEO](https://video.tv.adobe.com/v/27807?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34386?quality=12&learn=on&captions=chi_hans)
 
 模板将具有目标区域/占位符，这些区域将包含各种文档片段。 例如，模板可以具有用于徽标的目标区域和用于文本内容的另一个目标区域。
 

@@ -20,7 +20,7 @@ ht-degree: 7%
 
 在三部分系列中的第一部分，我们探讨了Cloud Manager的基础知识并深入了解体验审核功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/343620?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449187?quality=12&learn=on&captions=chi_hans)
 
 ## 本视频中涵盖的内容
 

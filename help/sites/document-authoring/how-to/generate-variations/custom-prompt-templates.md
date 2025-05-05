@@ -24,6 +24,6 @@ ht-degree: 0%
 
 了解如何在Edge Delivery Services文档创作中构建用于生成变体的自定义提示模板。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428316/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438509/?learn=on&captions=chi_hans)
 
 

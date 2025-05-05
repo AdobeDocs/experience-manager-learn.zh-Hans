@@ -22,7 +22,7 @@ ht-degree: 1%
 
 为页面属性自定义元数据字段是任何Sites实施中的常见要求。 本视频详细介绍使用Sling资源合并器的功能实现这一目标的最有效方法。
 
->[!VIDEO](https://video.tv.adobe.com/v/25173?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410340?quality=12&learn=on&captions=chi_hans)
 
 以上视频显示为[WKND引用站点](https://github.com/adobe/aem-guides-wknd)自定义页面属性。
 

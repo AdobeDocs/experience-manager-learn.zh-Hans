@@ -24,7 +24,7 @@ ht-degree: 2%
 
 探索在Edge Delivery Services中发布和取消发布时触发的事件，以及使用这些事件的用例和示例。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427681?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446666?learn=on&captions=chi_hans)
 
 ## 其他资源
 

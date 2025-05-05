@@ -28,4 +28,4 @@ ht-degree: 68%
 
 将 Cloud Manager Git 存储库与外部 Git 存储库集成，并将项目部署到 AEM as a Cloud Service
 
->[!VIDEO](https://video.tv.adobe.com/v/330534?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345862?quality=12&learn=on&captions=chi_hans)

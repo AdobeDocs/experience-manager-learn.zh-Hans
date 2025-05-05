@@ -24,4 +24,4 @@ ht-degree: 0%
 
 了解如何使用Adobe Experience Manager中的页面模板创建网页。
 
->[!VIDEO](https://video.tv.adobe.com/v/31827?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37211?quality=12&learn=on&captions=chi_hans)

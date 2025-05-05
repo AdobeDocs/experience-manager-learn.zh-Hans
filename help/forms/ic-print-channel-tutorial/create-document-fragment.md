@@ -23,7 +23,7 @@ ht-degree: 0%
 
 在本部分中，我们将创建文档片段来保存收件人姓名和地址。
 
->[!VIDEO](https://video.tv.adobe.com/v/22350?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36370?quality=12&learn=on&captions=chi_hans)
 
 文档片段包含交互式通信文档的文本内容。 此文本内容可以是静态文本，也可以从基础数据模型元素值插入。 例如&#x200B;**亲爱的&#x200B;_{name}_**，其中Dear是静态文本，name是表单数据模型元素名称。 在运行时，这将解析为&#x200B;**Gloria Rios**&#x200B;或&#x200B;**John Jacobs**，具体取决于name元素的值。
 

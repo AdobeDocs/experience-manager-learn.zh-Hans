@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何将专用GitHub存储库连接到AEM Cloud Manager以简化代码质量管理和自动化工作流。 通过集成检查和无缝协作增强您的开发过程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429302/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452425/?learn=on&captions=chi_hans)

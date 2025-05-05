@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解内容作者如何在AEM Assets中使用Photoshop API及内容自动化加载项执行Creative Cloud操作。
 
->[!VIDEO](https://video.tv.adobe.com/v/336539?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423922?quality=12&learn=on&captions=chi_hans)

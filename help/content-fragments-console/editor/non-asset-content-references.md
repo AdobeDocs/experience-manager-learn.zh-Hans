@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解内容片段内容字段如何支持引用各种类型的AEM内容，如体验片段和页面。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419313/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436772/?learn=on&captions=chi_hans)

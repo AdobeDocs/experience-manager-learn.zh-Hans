@@ -23,7 +23,7 @@ ht-degree: 12%
 
 了解如何在AEM Assets中更改受监视的资产、文件夹或收藏集时接收通知。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427646/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439635/?learn=on&captions=chi_hans)
 
 >[!TIP]
 >

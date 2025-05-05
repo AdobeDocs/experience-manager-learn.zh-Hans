@@ -19,7 +19,7 @@ ht-degree: 5%
 
 Adobe Experience Manager (AEM)现已as a Cloud Service推出。 AEM as a Cloud Service引入新一代Experience Manager产品线，以过去的投资和创新为基础，保留和扩展所有用例和功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33290?quality=12&learn=on&captions=chi_hans)
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

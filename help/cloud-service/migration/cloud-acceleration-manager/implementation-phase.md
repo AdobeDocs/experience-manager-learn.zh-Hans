@@ -21,4 +21,4 @@ ht-degree: 0%
 
 查看并了解主要的实施阶段或如何使用Cloud Acceleration Manager迁移到AEM as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336691?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438289?quality=12&learn=on&captions=chi_hans)

@@ -37,7 +37,7 @@ Reader扩展凭据与fd-service用户相关联。 要向fd-service用户添加�
 
 请观看视频，向fd-service用户添加凭据
 
->[!VIDEO](https://video.tv.adobe.com/v/335849?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447297?quality=12&learn=on&captions=chi_hans)
 
 
 列出pfx文件详细信息的命令是。 以下命令假定您与pfx文件位于同一目录中。

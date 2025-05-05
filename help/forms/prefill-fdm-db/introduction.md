@@ -29,7 +29,7 @@ ht-degree: 2%
 * 使用表单数据模型的请求属性
 
 以下视频概述了课程
->[!VIDEO](https://video.tv.adobe.com/v/36387?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409942?quality=12&learn=on&captions=chi_hans)
 
 ## 先决条件
 

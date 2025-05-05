@@ -24,7 +24,7 @@ ht-degree: 13%
 
 以下视频概述了在AEM Sites的AEM创作环境中进行创作的基本概念。
 
->[!VIDEO](https://video.tv.adobe.com/v/33594?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36814?quality=12&learn=on&captions=chi_hans)
 
 ## 其他资源 {#additional-resources}
 

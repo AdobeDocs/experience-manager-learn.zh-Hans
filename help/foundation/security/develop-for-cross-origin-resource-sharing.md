@@ -25,7 +25,7 @@ ht-degree: 0%
 
 如果需要对AEM发布的多源访问权限，请参阅[此文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=zh-Hans#dispatcher-configuration)。
 
->[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33362?quality=12&learn=on&captions=chi_hans)
 
 在此视频中：
 

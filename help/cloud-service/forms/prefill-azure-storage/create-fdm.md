@@ -22,7 +22,7 @@ ht-degree: 2%
 下一步是使用表单数据模型创建AEM Forms CS与Azure Storage之间的集成。
 以下视频将指导您完成创建集成所需的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/335385?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419018?quality=12&learn=on&captions=chi_hans)
 
 在本教程中，使用名为CreditApplications的实体创建了一个名为SaveAndRetrieveFromAzurePortal的表单数据模型
 ![fdm-entity](./assets/fdm-entity.png)

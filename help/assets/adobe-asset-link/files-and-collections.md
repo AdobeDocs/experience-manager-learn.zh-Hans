@@ -22,5 +22,5 @@ ht-degree: 0%
 
 了解如何从Asset Link面板快速轻松地访问AEM Assets文件和收藏集。
 
->[!VIDEO](https://video.tv.adobe.com/v/33884?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38663?quality=12&learn=on&captions=chi_hans)
 

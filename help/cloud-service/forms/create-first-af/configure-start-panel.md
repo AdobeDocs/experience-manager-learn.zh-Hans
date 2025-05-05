@@ -23,4 +23,4 @@ ht-degree: 0%
 
 使用富文本编辑器在静态文本组件中设置文本样式。
 
->[!VIDEO](https://video.tv.adobe.com/v/332235?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440127?quality=12&learn=on&captions=chi_hans)

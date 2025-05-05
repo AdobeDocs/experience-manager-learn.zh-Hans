@@ -23,4 +23,4 @@ ht-degree: 0%
 
 简短视频，介绍如何使用AEM Forms Reader扩展，以便最终用户能够从AdobeAcrobat Reader填写并保存PDF forms
 
->[!VIDEO](https://video.tv.adobe.com/v/3427629/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439525/?learn=on&captions=chi_hans)

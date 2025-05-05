@@ -24,7 +24,7 @@ ht-degree: 0%
 
 初始化AEM UI扩展App Builder应用程序，该应用程序定义扩展出现的位置及其执行的工作。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412876?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447086?quality=12&learn=on&captions=chi_hans)
 
 >[!IMPORTANT]
 >

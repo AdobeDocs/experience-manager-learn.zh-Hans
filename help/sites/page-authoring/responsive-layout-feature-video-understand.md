@@ -24,7 +24,7 @@ ht-degree: 7%
 
 Adobe Experience Manager Sites允许作者根据设备宽度管理组件的宽度，以促进响应式网站设计。 利用布局模式和布局容器，用户无需离开AEM UI，即可为不同设备创建响应式内容并预览最终用户体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/32012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37173?quality=12&learn=on&captions=chi_hans)
 
 ## 其他资源 {#additional-resources}
 

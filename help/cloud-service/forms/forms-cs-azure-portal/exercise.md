@@ -21,5 +21,5 @@ ht-degree: 0%
 
 增强用例，如本视频中所示
 
->[!VIDEO](https://video.tv.adobe.com/v/335800?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436573?quality=12&learn=on&captions=chi_hans)
 

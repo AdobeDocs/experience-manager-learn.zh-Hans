@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解如何防止搜索引擎对使用AEM文档创作功能创作的网页编制索引。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425726/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438128/?learn=on&captions=chi_hans)

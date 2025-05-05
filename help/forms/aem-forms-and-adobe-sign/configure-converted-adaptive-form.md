@@ -24,7 +24,7 @@ ht-degree: 1%
 
 以下视频介绍为就地签名体验配置表单所需的步骤
 
->[!VIDEO](https://video.tv.adobe.com/v/39574?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327707?quality=12&learn=on&captions=chi_hans)
 
 ## 恭喜
 

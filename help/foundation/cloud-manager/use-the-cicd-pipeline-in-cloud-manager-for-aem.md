@@ -30,19 +30,19 @@ AdobeCloud Manager提供了一个简单但灵活的自助CI/CD管道，允许AEM
 >
 >通过这些视频，加快了构建、测试和部署时间，从而减少了视频时间。 根据项目大小、AEM实例数和UAT流程，完整的管道执行通常需要45分钟或更长时间（包括强制性的30分钟性能测试）。
 
->[!VIDEO](https://video.tv.adobe.com/v/23082?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39314?quality=12&learn=on&captions=chi_hans)
 
 ## 设置CI/CD管道
 
 本视频探讨了如何在Cloud Manager中为项目设置管道。
 
->[!VIDEO](https://video.tv.adobe.com/v/23083?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39351?quality=12&learn=on&captions=chi_hans)
 
 ## 管道执行失败
 
 本视频探讨了如何使用&#x200B;**[!DNL yellow]**&#x200B;存储库分支代码执行CI/CD管道，该代码未通过Cloud Manager所需的质量检查。
 
->[!VIDEO](https://video.tv.adobe.com/v/23084?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39356?quality=12&learn=on&captions=chi_hans)
 
 ## 管道执行成功
 
@@ -50,7 +50,7 @@ AdobeCloud Manager提供了一个简单但灵活的自助CI/CD管道，允许AEM
 
 此视频还介绍了Cloud Manager中的[!UICONTROL 活动]控制台，该控制台允许重新进入活动的执行，或查看已完成的或失败的执行。
 
->[!VIDEO](https://video.tv.adobe.com/v/23085?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39361?quality=12&learn=on&captions=chi_hans)
 
 ## 支持材料
 

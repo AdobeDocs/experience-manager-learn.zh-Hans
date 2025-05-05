@@ -27,4 +27,4 @@ ht-degree: 45%
 
 探索代码中的任何编译错误，以及此代码是否遵循AEM as a Cloud Service的最佳实践
 
->[!VIDEO](https://video.tv.adobe.com/v/330540?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345717?quality=12&learn=on&captions=chi_hans)

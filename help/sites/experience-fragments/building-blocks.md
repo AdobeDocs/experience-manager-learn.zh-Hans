@@ -25,7 +25,7 @@ ht-degree: 0%
 
 构建基块是体验片段的一项子功能。 通过构建基块，内容作者可在体验片段的不同变体之间重用组件。
 
->[!VIDEO](https://video.tv.adobe.com/v/331786?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410267?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

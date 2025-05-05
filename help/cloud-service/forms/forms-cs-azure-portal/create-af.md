@@ -22,4 +22,4 @@ ht-degree: 0%
 
 创建Azure Blob存储后端表单数据模型。
 
->[!VIDEO](https://video.tv.adobe.com/v/335423?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419008?quality=12&learn=on&captions=chi_hans)

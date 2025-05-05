@@ -23,7 +23,7 @@ ht-degree: 1%
 
 在本部分中，我们将创建一个REST支持的数据源。  以下视频介绍了创建数据源的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/27765?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34313?quality=12&learn=on&captions=chi_hans)
 
 请将提供给您的swagger文件用作与本教程相关的资源的一部分。 本教程的[简介](introduction.md)中提供了这些资源。
 

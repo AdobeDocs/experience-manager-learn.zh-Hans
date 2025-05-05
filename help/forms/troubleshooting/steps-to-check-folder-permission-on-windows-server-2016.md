@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍在Windows Server 2016中检查“文件夹权限”的其他步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335519?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417208?quality=12&learn=on&captions=chi_hans)

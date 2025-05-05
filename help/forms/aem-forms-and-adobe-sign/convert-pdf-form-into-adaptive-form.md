@@ -24,7 +24,7 @@ AEM FormsAutomated forms conversion服务由Adobe Sensei提供支持，可自动
 
 以下视频介绍使用Automated forms conversion服务将PDF表单转换为自适应表单所需的步骤
 
->[!VIDEO](https://video.tv.adobe.com/v/39495?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327716?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

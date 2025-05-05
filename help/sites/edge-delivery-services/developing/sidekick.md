@@ -23,4 +23,4 @@ ht-degree: 6%
 
 使用Edge Delivery Services中的AEM Sidekick上线内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425715/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441297/?learn=on&captions=chi_hans)

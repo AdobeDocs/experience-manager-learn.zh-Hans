@@ -20,7 +20,7 @@ ht-degree: 0%
 
 AEM 6.3在此版本中引入了几项新增功能和增强功能，以简化自适应表单和文档的创作体验。 这些增强功能有助于缩短您的上市时间，并使业务用户能够处理表单和文档
 
->[!VIDEO](https://video.tv.adobe.com/v/19500?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38451?quality=12&learn=on&captions=chi_hans)
 
 **自适应表单编辑器的某些主要改进包括：**
 

@@ -23,7 +23,7 @@ ht-degree: 3%
 
 探索如何将AEM Assets与文档创作集成，以便通过Edge Delivery Services提供卓越的体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428302/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448950/?quality=12&learn=on&captions=chi_hans)
 
 
 ## 其他资源

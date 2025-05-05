@@ -24,4 +24,4 @@ ht-degree: 0%
 
 了解如何在Edge Delivery Services中使用Dynamic Media来优化图像和视频交付。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429593/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438916/?learn=on&captions=chi_hans)

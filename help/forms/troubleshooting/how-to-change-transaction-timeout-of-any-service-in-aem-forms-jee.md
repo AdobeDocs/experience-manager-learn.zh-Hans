@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此视频介绍在AEM Forms JEE中更改服务的事务超时的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335495?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436805?quality=12&learn=on&captions=chi_hans)

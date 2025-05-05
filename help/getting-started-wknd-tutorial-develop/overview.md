@@ -30,7 +30,7 @@ ht-degree: 5%
 
 此多部分教程旨在教导开发人员如何使用Adobe Experience Manager (AEM)中的最新标准和技术实施网站。 完成本教程后，开发人员应该了解该平台的基本基础和AEM中的常见设计模式。
 
->[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36053?quality=12&learn=on&captions=chi_hans)
 
 ## 用于启动站点项目的选项
 

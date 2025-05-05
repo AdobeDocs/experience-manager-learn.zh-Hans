@@ -21,7 +21,7 @@ ht-degree: 4%
 
 探索如何以最佳方式将第三方搜索集成到Edge Delivery Services中。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427040?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452634?quality=12&learn=on&captions=chi_hans)
 
 ## 其他资源
 

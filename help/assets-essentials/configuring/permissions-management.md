@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解AEM Assets权限管理如何让组织控制对资源的访问、保护其品牌并确保法规遵从性。
 
->[!VIDEO](https://video.tv.adobe.com/v/342113?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345457?quality=12&learn=on&captions=chi_hans)

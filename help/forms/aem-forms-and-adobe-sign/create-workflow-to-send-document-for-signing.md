@@ -23,7 +23,7 @@ ht-degree: 2%
 使用签名文档组件创建AEM工作流。 利用自动生成的DoR发送签名（使用签名组件）。
 此视频介绍创建有效工作流以发送文档进行签名所需的各种步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/38182?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327821?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

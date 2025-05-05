@@ -23,7 +23,7 @@ ht-degree: 1%
 
 如何为Edge Delivery Services设置本地开发环境以进行开发。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425717/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434741/?learn=on&captions=chi_hans)
 
 
 ## 视频中概述的步骤

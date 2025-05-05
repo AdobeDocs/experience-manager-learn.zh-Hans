@@ -25,4 +25,4 @@ ht-degree: 0%
 虽然服务帐户(JWT)凭据已标记为已弃用，但在2025年1月27日之前它们将继续工作。 因此，您必须在2025年1月27日之前迁移应用程序或集成，才能使用新的OAuth服务器到服务器凭据。 有关详细信息，请参阅[迁移指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration)。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3432960/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449248/?learn=on&captions=chi_hans)

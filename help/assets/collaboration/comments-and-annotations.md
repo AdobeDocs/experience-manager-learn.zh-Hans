@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何在AEM中使用注释和批注来就资源进行通信和协作。
 
->[!VIDEO](https://video.tv.adobe.com/v/32049?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36920?quality=12&learn=on&captions=chi_hans)

@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此视频介绍从命令行运行进程清除工具的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335508?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438377?quality=12&learn=on&captions=chi_hans)

@@ -28,4 +28,4 @@ ht-degree: 0%
 + 了解用于构建内容片段模型的各种数据类型
 + 了解内容片段模型如何驱动GraphQL API
 
->[!VIDEO](https://video.tv.adobe.com/v/332858?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412903?quality=12&learn=on&captions=chi_hans)

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解如何在AEM文档创作中使用iFrame嵌入内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425719/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438399/?learn=on&captions=chi_hans)

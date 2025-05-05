@@ -21,4 +21,4 @@ ht-degree: 0%
 
 本视频介绍为资产生成公共URL或嵌入代码的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/335364?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417840?quality=12&learn=on&captions=chi_hans)

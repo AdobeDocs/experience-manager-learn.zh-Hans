@@ -23,7 +23,7 @@ ht-degree: 0%
 
 在power automate工作流中提取表单附件并通过电子邮件发送附件。
 以下视频介绍根据提交的数据形成附件所需的步骤。
->[!VIDEO](https://video.tv.adobe.com/v/3409017?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413026?quality=12&learn=on&captions=chi_hans)
 
 以下是您需要在“解析JSON架构”步骤中使用的附件对象架构
 

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索如何在文档创作中处理批量元数据，以及作者如何在没有技术专业知识的情况下更新批量元数据。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425705/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438432/?learn=on&captions=chi_hans)

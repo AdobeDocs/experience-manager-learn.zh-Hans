@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何使用AEM Forms的元数据服务在Azure Blob Storage中查询自适应表单数据。
 
->[!VIDEO](https://video.tv.adobe.com/v/335717?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419013?quality=12&learn=on&captions=chi_hans)

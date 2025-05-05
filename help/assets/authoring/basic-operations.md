@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解AEM Assets的基本操作，包括如何创建文件夹以及上传、复制、移动和删除资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/32044?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37154?quality=12&learn=on&captions=chi_hans)

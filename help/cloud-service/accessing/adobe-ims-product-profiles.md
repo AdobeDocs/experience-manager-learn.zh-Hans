@@ -27,7 +27,7 @@ ht-degree: 40%
 
 Adobe IMS产品配置文件授权用户登录AEM Author服务，并根据用户所属的产品配置文件提供访问权限基准。
 
->[!VIDEO](https://video.tv.adobe.com/v/39156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327572?quality=12&learn=on&captions=chi_hans)
 
 ## 其他资源
 

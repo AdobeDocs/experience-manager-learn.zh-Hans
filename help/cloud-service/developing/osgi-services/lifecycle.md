@@ -26,7 +26,7 @@ ht-degree: 6%
 
 ...生命周期事件。
 
->[!VIDEO](https://video.tv.adobe.com/v/335475?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417188?quality=12&learn=on&captions=chi_hans)
 
 ## 资源
 

@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何从AEM的项目控制台为您的语言副本创建、编辑和管理多语言翻译项目
 
->[!VIDEO](https://video.tv.adobe.com/v/36485?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326744?quality=12&learn=on&captions=chi_hans)

@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## AEM日志
 
->[!VIDEO](https://video.tv.adobe.com/v/34334?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38143?quality=12&learn=on&captions=chi_hans)
 
 日志是调试AEM应用程序的首选工具，但需要取决于已部署的AEM应用程序中是否有足够的日志记录。 Adobe建议尽量保持本地开发和AEM as a Cloud Service开发日志记录配置相似，因为它规范了AEM SDK的本地快速启动和AEM as a Cloud Service开发环境的日志可见性，从而减少了配置扭曲和重新部署。
 

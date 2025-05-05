@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Adobe Experience Manager引入了Admin Console对AEM实例的支持，并针对Managed Services上的Adobe Identity Management System (IMS)的身份验证引入了AEM支持。   此集成允许AEM Managed Services客户在单个统一的Web控制台中管理所有Experience Cloud用户。 可以将用户和组分配到与AEM实例关联的产品配置文件，从而授予对特定AEM实例的集中管理访问权限。
 
->[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327598?quality=12&learn=on&captions=chi_hans)
 
 * Adobe Experience Manager IMS身份验证支持仅针对“内部”用户（作者、查看者、管理员、开发人员等），不适用于网站访客等外部最终用户。
 * [Admin Console](https://adminconsole.adobe.com/)将AEM Managed Services客户表示为IMS组织，将AEM实例表示为产品上下文。 Admin Console系统和产品管理员可以定义和管理。

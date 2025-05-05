@@ -235,7 +235,7 @@ AEM开发主要包括了Java和前端(JavaScript、CSS等)开发以及XML管理�
 
 __[IntelliJ IDEA](https://www.jetbrains.com/idea/)__&#x200B;是用于Java开发的功能强大的IDE。 IntelliJ IDEA有两种风格：免费社区版和商业（付费）Ultimate版。 免费社区版本已足够AEM开发，但Ultimate [扩展了其功能集](https://www.jetbrains.com/idea/download)。
 
->[!VIDEO](https://video.tv.adobe.com/v/26089?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39743?quality=12&learn=on&captions=chi_hans)
 
 + [下载IntelliJ IDEA](https://www.jetbrains.com/idea/download)
 + [下载存储库工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation)

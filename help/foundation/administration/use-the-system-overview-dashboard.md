@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Adobe Experience Manager (AEM) [!UICONTROL 系统概述]提供了从单个仪表板全面了解AEM实例的配置、硬件和运行状况的视图。
 
->[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40160?quality=12&learn=on&captions=chi_hans)
 
 1. 系统概述可从以下位置访问： **AEM开始** > **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 系统概述]**
 

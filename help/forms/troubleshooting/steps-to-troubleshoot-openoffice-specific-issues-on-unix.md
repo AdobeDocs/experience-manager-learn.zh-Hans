@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍对AEM Forms PDFG的Unix设置中的OpenOffice特定故障进行故障排除的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335551?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417248?quality=12&learn=on&captions=chi_hans)

@@ -25,4 +25,4 @@ ht-degree: 4%
 
 深入了解重定向在文档创作中的工作方式，以及作者如何在没有技术专业知识的情况下轻松设置重定向。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425704/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438553/?learn=on&captions=chi_hans)

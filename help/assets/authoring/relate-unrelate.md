@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何在AEM中建立和管理资源之间的关系。
 
->[!VIDEO](https://video.tv.adobe.com/v/331107?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346822?quality=12&learn=on&captions=chi_hans)

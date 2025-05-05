@@ -46,7 +46,7 @@ ht-degree: 0%
 
 ## 生成SSL证书
 
->[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441503?quality=12&learn=on&captions=chi_hans)
 
 您有两个选项：
 

@@ -22,7 +22,7 @@ ht-degree: 3%
 
 以下视频重点介绍创建和配置自适应表单以自动生成DoR所需的步骤。 此视频还向您介绍配置自适应表单以触发AEM工作流所需的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/38348?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327813?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

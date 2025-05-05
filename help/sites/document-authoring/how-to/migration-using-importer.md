@@ -24,4 +24,4 @@ ht-degree: 0%
 
 了解如何使用并配置AEM导入器工具，将文档创作站点迁移到Edge Delivery Services。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429595/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443706/?learn=on&captions=chi_hans)

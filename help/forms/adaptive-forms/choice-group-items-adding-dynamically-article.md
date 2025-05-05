@@ -67,7 +67,7 @@ else
 
 **使用规则编辑器添加项**
 
->[!VIDEO](https://video.tv.adobe.com/v/26847?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36219?quality=12&learn=on&captions=chi_hans)
 
 **使用代码编辑器添加项**
 

@@ -24,7 +24,7 @@ ht-degree: 1%
 
 了解如何使用标记规则从网站页面加载、将参数传递到页面请求以及触发Target调用。 使用Adobe客户端数据层可检索网页信息并将其作为参数进行传递，这样您便可以收集和存储有关访客在网页上的体验数据，然后轻松访问这些数据。
 
->[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328999?quality=12&learn=on&captions=chi_hans)
 
 ## 页面加载规则
 

@@ -47,11 +47,11 @@ XML变量可用于预填充自适应表单，或在您的工作流中存储自�
 
 **使用架构映射XML变量。 对AEM Forms 6.5.1及以上版本使用此功能**
 
->[!VIDEO](https://video.tv.adobe.com/v/28098?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35365?quality=12&learn=on&captions=chi_hans)
 
 #### 在发送电子邮件中使用变量
 
->[!VIDEO](https://video.tv.adobe.com/v/26441?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35366?quality=12&learn=on&captions=chi_hans)
 
 要使资源在系统中正常工作，请执行以下步骤：
 

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解AEM Assets的查找类似图像如何让您轻松找到符合需求的最佳图像。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426796/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438487/?learn=on&captions=chi_hans)

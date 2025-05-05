@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 元数据导出 {#metadata-export}
 
->[!VIDEO](https://video.tv.adobe.com/v/22132?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39397?quality=12&learn=on&captions=chi_hans)
 
 >[!TIP]
 >
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 ## 元数据导入 {#metadata-import}
 
->[!VIDEO](https://video.tv.adobe.com/v/21374?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413182?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

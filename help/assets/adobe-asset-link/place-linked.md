@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何使用“放置链接”操作从AEM Assets中使用资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/34839?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38609?quality=12&learn=on&captions=chi_hans)

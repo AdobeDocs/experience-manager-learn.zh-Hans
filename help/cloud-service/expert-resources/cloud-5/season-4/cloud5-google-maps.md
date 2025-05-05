@@ -24,4 +24,4 @@ ht-degree: 0%
 
 来自趋势层的故事 — 探索如何将边缘交付服务与Google地图集成以及如何使用集成优化性能。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440977/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440999/?learn=on&enablevpops&captions=chi_hans)

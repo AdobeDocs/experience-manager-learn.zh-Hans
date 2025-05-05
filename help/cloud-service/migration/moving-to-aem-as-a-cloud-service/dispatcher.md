@@ -22,7 +22,7 @@ ht-degree: 4%
 
 了解适用于AEM as a Cloud Service的AEM Dispatcher，并重点关注适用于AEM 6的Dispatcher的重要更改、Dispatcher转换工具以及如何使用Dispatcher工具SDK。
 
->[!VIDEO](https://video.tv.adobe.com/v/336962?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3455411?quality=12&learn=on&captions=chi_hans)
 
 ## Dispatcher转换器
 

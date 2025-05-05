@@ -22,4 +22,4 @@ ht-degree: 0%
 
 以下视频将指导您完成创建和配置自适应表单以创建和显示潜在客户对象的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/340791?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449318?quality=12&learn=on&captions=chi_hans)

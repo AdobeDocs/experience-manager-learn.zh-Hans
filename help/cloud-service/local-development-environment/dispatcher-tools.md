@@ -289,7 +289,7 @@ Dispatcher工具版本的增量频率低于Experience Manager，因此Dispatcher
 
 Apache和Dispatcher配置的基线集已定期得到增强，并随AEM as a Cloud Service SDK版本一起发布。 最佳做法是将基线配置增强功能合并到您的AEM项目中，并避免[本地验证](#validate-configurations)和Cloud Manager管道故障。 使用`.../dispatcher-sdk-x.x.x/bin`文件夹中的`update_maven.sh`脚本更新它们。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416744?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33560?quality=12&learn=on&captions=chi_hans)
 
 *本视频使用macOS进行说明。 可使用等效的Windows/Linux命令获得类似的结果。*
 

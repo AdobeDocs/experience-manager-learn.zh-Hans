@@ -36,13 +36,13 @@ AEM内容片段是基于文本的编辑内容，其中可能包含一些与关�
 
 ## 定义内容片段模型 {#defining-content-fragment-models}
 
->[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38049?quality=12&learn=on&captions=chi_hans)
 
 AEM内容片段模型（内容片段的数据架构）必须通过AEM的[[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=zh-Hans)启用，该浏览器允许基于每个配置定义内容片段模型。
 
 ## 创建内容片段 {#creating-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22451?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38054?quality=12&learn=on&captions=chi_hans)
 
 AEM配置将应用于AEM Assets文件夹层次结构，以允许将其内容片段模型创建为内容片段。 内容片段支持丰富的基于表单的创作体验，允许将内容建模为元素集合。
 
@@ -53,7 +53,7 @@ AEM配置将应用于AEM Assets文件夹层次结构，以允许将其内容片�
 
 ## 下载内容片段 {#downloading-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22450?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38057?quality=12&learn=on&captions=chi_hans)
 
 AEM内容片段可以从AEM创作实例中下载为包含变量、元素和元数据的Zip文件。
 
@@ -62,7 +62,7 @@ AEM内容片段可以从AEM创作实例中下载为包含变量、元素和元�
 
 ## 内容片段编辑功能 {#editorial-capabilities}
 
->[!VIDEO](https://video.tv.adobe.com/v/25891?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39654?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

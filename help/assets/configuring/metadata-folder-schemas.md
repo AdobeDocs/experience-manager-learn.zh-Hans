@@ -23,4 +23,4 @@ ht-degree: 0%
 
 元数据文件夹架构允许用户管理和查看与资源文件夹本身关联的元数据，而不是直接管理和查看资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/34071?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37296?quality=12&learn=on&captions=chi_hans)

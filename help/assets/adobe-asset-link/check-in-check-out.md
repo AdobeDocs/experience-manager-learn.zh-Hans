@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Adobe Asset允许您直接从正在处理的创意应用程序中签出AEM Assets，并立即开始进行编辑。 在AEM Assets应用程序中编辑完资源后，您可以轻松地将资源签回到Creative Cloud，其中包含正确的版本控制和注释。
 
->[!VIDEO](https://video.tv.adobe.com/v/33886?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38643?quality=12&learn=on&captions=chi_hans)

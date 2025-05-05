@@ -27,4 +27,4 @@ ht-degree: 74%
 
 探索 Cloud Manager 中不同类型的管道以及如何配置它们以使项目取得成功。
 
->[!VIDEO](https://video.tv.adobe.com/v/330539?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345834?quality=12&learn=on&captions=chi_hans)

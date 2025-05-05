@@ -26,7 +26,7 @@ ht-degree: 0%
 
 以下视频展示了用例
 
->[!VIDEO](https://video.tv.adobe.com/v/40122?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328991?quality=12&learn=on&captions=chi_hans)
 
 ```java
 String accountNumber = request.getParameter("accountnumber"))

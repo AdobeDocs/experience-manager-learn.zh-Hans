@@ -23,4 +23,4 @@ ht-degree: 0%
 
 基于Sales Force表单数据模型创建自适应表单，并通过提交表单在Salesforce中测试销售线索的创建
 
->[!VIDEO](https://video.tv.adobe.com/v/331758?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411560?quality=12&learn=on&captions=chi_hans)

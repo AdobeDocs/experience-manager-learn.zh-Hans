@@ -21,4 +21,4 @@ ht-degree: 0%
 
 简短视频，介绍如何在Workbench中创建简单的表单流程
 
->[!VIDEO](https://video.tv.adobe.com/v/3429494/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440235/?learn=on&captions=chi_hans)

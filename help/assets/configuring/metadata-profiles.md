@@ -23,4 +23,4 @@ ht-degree: 6%
 
 元数据配置文件允许将默认元数据自动应用于资源文件夹中的资源，从而帮助减轻AEM用户管理元数据的负担，并提高元数据一致性。
 
->[!VIDEO](https://video.tv.adobe.com/v/33974?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37281?quality=12&learn=on&captions=chi_hans)

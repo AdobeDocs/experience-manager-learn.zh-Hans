@@ -22,4 +22,4 @@ ht-degree: 0%
 
 简单介绍作为Adobe Experience Manager架构一部分的创作层和发布层。
 
->[!VIDEO](https://video.tv.adobe.com/v/32033?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36699?quality=12&learn=on&captions=chi_hans)

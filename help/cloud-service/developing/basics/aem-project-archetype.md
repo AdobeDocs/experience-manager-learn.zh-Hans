@@ -21,4 +21,4 @@ ht-degree: 0%
 
 探索如何使用AEM Maven项目原型创建新的AEM应用程序项目，以符合最佳实践并加快AEM开发的开始。
 
->[!VIDEO](https://video.tv.adobe.com/v/330551?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345907?quality=12&learn=on&captions=chi_hans)

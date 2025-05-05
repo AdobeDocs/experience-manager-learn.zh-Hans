@@ -23,4 +23,4 @@ ht-degree: 8%
 
 了解如何在AEM Assets中访问元数据并与之交互。
 
->[!VIDEO](https://video.tv.adobe.com/v/32045?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37115?quality=12&learn=on&captions=chi_hans)

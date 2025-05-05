@@ -21,7 +21,7 @@ ht-degree: 1%
 
 了解如何使用AEM as a Cloud Service SDK下载和设置本地开发环境。
 
->[!VIDEO](https://video.tv.adobe.com/v/330558?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345878?quality=12&learn=on&captions=chi_hans)
 
 _不再需要此视频中显示的`license.properties`来运行AEM SDK。_
 

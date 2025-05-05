@@ -21,7 +21,7 @@ ht-degree: 3%
 片段是表单中可重用的一部分。 例如，片段可以包含地址块或法律文本。 使用片段可简化并加速大量表单的创建和维护。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/37325?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326681?quality=12&learn=on&captions=chi_hans)
 
 
 

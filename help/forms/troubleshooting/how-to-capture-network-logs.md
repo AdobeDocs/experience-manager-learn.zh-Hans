@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此视频介绍捕获网络日志/要使用的工具的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335491?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417825?quality=12&learn=on&captions=chi_hans)

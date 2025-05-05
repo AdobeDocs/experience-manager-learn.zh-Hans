@@ -23,7 +23,7 @@ ht-degree: 16%
 
 使用上一步中创建的swagger文件创建一个REST支持的数据源。
 
->[!VIDEO](https://video.tv.adobe.com/v/331755?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411548?quality=12&learn=on&captions=chi_hans)
 
 | 设置 | 价值 |
 |---------------------|-----------------------------------------------------------------|

@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索什么是AEM as a Cloud Service和Edge Delivery Services，以及它们提供的价值。
 
->[!VIDEO](https://video.tv.adobe.com/v/330546?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345979?quality=12&learn=on&captions=chi_hans)

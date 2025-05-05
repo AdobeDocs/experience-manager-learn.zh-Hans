@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍在Designer中对C++库进行依赖性问题故障排除的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335576?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417619?quality=12&learn=on&captions=chi_hans)

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 提供了许多现成的模板，您可以按原样使用或根据自己的喜好进行自定义。 还可在AEM Forms Designer中创建和管理模板。 您可以从空白页面、模板、电子表格、PDF或Microsoft Word文件开始。 本视频涵盖所有这些选项以及开箱即用的功能
 
->[!VIDEO](https://video.tv.adobe.com/v/3427678/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439158/?learn=on&captions=chi_hans)

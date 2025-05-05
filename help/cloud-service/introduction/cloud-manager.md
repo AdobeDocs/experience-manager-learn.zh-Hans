@@ -21,4 +21,4 @@ ht-degree: 0%
 
 探索Cloud Manager的用途及其如何与AEM as a Cloud Service配合使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/330545?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346165?quality=12&learn=on&captions=chi_hans)

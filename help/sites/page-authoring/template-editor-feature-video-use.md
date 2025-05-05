@@ -23,7 +23,7 @@ ht-degree: 5%
 
 通过可编辑的模板，专业作者可以使用Adobe Experience Manager (AEM)站点创建和更新页面模板以及管理高级策略配置。
 
->[!VIDEO](https://video.tv.adobe.com/v/326784?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449621?quality=12&learn=on&captions=chi_hans)
 
 可编辑的模板是构建新AEM Sites的建议。
 

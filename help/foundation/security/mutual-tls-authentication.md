@@ -23,7 +23,7 @@ ht-degree: 0%
 
 了解如何从AEM对需要相互传输层安全性(mTLS)身份验证的Web API进行HTTPS调用。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447869?quality=12&learn=on&captions=chi_hans)
 
 mTLS或双向TLS身份验证要求&#x200B;**客户端和服务器都相互进行身份验证**，从而增强了TLS协议的安全性。 此身份验证通过使用数字证书来完成。 它通常用于高度安全性和身份验证至关重要的场景。
 

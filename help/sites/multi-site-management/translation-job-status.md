@@ -22,4 +22,4 @@ ht-degree: 16%
 
 了解与翻译作业或作业中的项目关联的各种状态。
 
->[!VIDEO](https://video.tv.adobe.com/v/36685?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41558?quality=12&learn=on&captions=chi_hans)

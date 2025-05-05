@@ -22,7 +22,7 @@ ht-degree: 2%
 
 本课程深入介绍作为AEM as a Cloud Service的一部分提供的CDN，包括其功能以及是否自带CDN。 这是第1部分，共2部分。
 
->[!VIDEO](https://video.tv.adobe.com/v/340760?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447847?quality=12&learn=on&captions=chi_hans)
 
 ## 本系列第一部分所涵盖的内容
 

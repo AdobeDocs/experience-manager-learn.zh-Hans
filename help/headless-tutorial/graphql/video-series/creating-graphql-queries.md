@@ -28,5 +28,5 @@ ht-degree: 0%
 + 了解如何查询内容片段的列表和单个内容片段
 + 了解如何过滤和请求特定数据属性
 
->[!VIDEO](https://video.tv.adobe.com/v/332860?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412891?quality=12&learn=on&captions=chi_hans)
 

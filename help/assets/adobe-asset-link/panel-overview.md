@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Adobe Asset Link使创意用户能够使用InDesign、Photoshop和Illustrator中的应用程序内面板浏览、搜索、签出和签入AEM Assets中存储的资源。 介绍Adobe Asset Link面板的UI及其功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/33734?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38671?quality=12&learn=on&captions=chi_hans)

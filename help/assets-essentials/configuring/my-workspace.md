@@ -23,4 +23,4 @@ ht-degree: 7%
 
 了解如何使用My Workspace用户可配置的构件提高工作效率。
 
->[!VIDEO](https://video.tv.adobe.com/v/3413809?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418577?quality=12&learn=on&captions=chi_hans)

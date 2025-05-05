@@ -23,7 +23,7 @@ ht-degree: 0%
 
 AEM Assets提供了一个企业级报表框架，该框架可通过直观的用户体验为大型存储库进行扩展。
 
->[!VIDEO](https://video.tv.adobe.com/v/22140?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410279?quality=12&learn=on&captions=chi_hans)
 
 
 >[!IMPORTANT]

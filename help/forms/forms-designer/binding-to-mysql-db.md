@@ -23,4 +23,4 @@ ht-degree: 0%
 
 介绍将AEM表单绑定到MySql数据库的简短视频
 
->[!VIDEO](https://video.tv.adobe.com/v/3427624/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439569/?learn=on&captions=chi_hans)

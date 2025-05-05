@@ -24,7 +24,7 @@ AEM公开了各种可以以无头方式交互的HTTP端点，从GraphQL、AEM Co
 
 在本教程中，您将很好地探索外部应用程序可怎样使用访问令牌以编程方式通过HTTP向AEM as a Cloud Service进行身份验证和与之交互。
 
->[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410077?quality=12&learn=on&captions=chi_hans)
 
 ## 先决条件
 

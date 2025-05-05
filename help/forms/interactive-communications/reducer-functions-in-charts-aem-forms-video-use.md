@@ -59,4 +59,4 @@ Reducer函数用于聚合或分组图表中显示的值。
 
 以下视频介绍了使用还原器函数时涉及的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/21368?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38213?quality=12&learn=on&captions=chi_hans)

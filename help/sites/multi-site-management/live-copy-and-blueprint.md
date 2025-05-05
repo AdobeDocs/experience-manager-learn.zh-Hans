@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解AEM Sites中Live Copy及其Blueprint之间的关系。
 
->[!VIDEO](https://video.tv.adobe.com/v/36676?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41575?quality=12&learn=on&captions=chi_hans)

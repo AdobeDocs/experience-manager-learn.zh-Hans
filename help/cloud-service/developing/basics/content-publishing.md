@@ -21,4 +21,4 @@ ht-degree: 0%
 
 探索AEM as a Cloud Service中内容发布的工作方式，包括内容分发和Adobe管道的概念。
 
->[!VIDEO](https://video.tv.adobe.com/v/330554?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346186?quality=12&learn=on&captions=chi_hans)

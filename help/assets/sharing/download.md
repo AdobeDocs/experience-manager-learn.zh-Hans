@@ -23,4 +23,4 @@ ht-degree: 5%
 
 了解如何将资源及其演绎版下载到本地计算机以供使用和共享。
 
->[!VIDEO](https://video.tv.adobe.com/v/35090?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39509?quality=12&learn=on&captions=chi_hans)

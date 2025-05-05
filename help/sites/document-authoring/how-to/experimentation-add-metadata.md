@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索如何在Edge Delivery Services文档创作中添加用于试验的元数据。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428796/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440126/?learn=on&captions=chi_hans)

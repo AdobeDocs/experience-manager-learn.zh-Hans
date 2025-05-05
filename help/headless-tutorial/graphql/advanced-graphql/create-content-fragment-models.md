@@ -43,7 +43,7 @@ ht-degree: 1%
 
 以下视频简要介绍了内容片段模型以及在本教程中如何使用它们。
 
->[!VIDEO](https://video.tv.adobe.com/v/340037?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449529?quality=12&learn=on&captions=chi_hans)
 
 ## 创建内容片段模型 {#create-models}
 

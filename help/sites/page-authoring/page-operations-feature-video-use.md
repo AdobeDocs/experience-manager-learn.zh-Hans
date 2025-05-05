@@ -24,7 +24,7 @@ ht-degree: 14%
 
 了解如何对Adobe Experience Manager Sites页面执行基本页面管理操作。
 
->[!VIDEO](https://video.tv.adobe.com/v/32147?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37203?quality=12&learn=on&captions=chi_hans)
 
 
 ## 其他资源 {#additional-resources}

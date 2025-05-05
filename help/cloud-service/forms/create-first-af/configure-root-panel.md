@@ -23,4 +23,4 @@ ht-degree: 0%
 
 将子面板添加到根面板并配置子面板的布局。
 
->[!VIDEO](https://video.tv.adobe.com/v/332238?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447286?quality=12&learn=on&captions=chi_hans)

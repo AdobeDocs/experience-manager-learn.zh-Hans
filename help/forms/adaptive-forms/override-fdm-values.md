@@ -32,4 +32,4 @@ AEM Forms 6.5.13引入了覆盖表单数据模型属性的功能，以便轻松�
 
 >[!NOTE]
 >本视频中演示的功能需要AEM Forms 6.5.13
->[!VIDEO](https://video.tv.adobe.com/v/343762?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410227?quality=12&learn=on&captions=chi_hans)

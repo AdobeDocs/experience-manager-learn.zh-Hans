@@ -21,4 +21,4 @@ ht-degree: 0%
 # 管理页面上的Live Copy继承 {#manage-live-copy-page}
 
 了解如何在页面级别管理Live Copy及其Blueprint之间的继承。
->[!VIDEO](https://video.tv.adobe.com/v/36679?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41592?quality=12&learn=on&captions=chi_hans)

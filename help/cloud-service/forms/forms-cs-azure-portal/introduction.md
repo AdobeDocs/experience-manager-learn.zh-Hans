@@ -23,4 +23,4 @@ ht-degree: 2%
 
 了解如何将AEM Forms as a Cloud Service提交数据存储到Azure存储帐户。
 
->[!VIDEO](https://video.tv.adobe.com/v/336028?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418717?quality=12&learn=on&captions=chi_hans)

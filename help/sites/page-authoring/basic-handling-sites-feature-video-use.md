@@ -24,7 +24,7 @@ ht-degree: 9%
 
 以下视频概述了使用AEM创作环境时的基本处理。 它使用站点控制台作为基础。
 
->[!VIDEO](https://video.tv.adobe.com/v/31784?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37000?quality=12&learn=on&captions=chi_hans)
 
 在此视频中，介绍了以下功能或特性：
 

@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此视频介绍从作业管理器中清除进程记录的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335577?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437677?quality=12&learn=on&captions=chi_hans)

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 在AEM Assets中定义基线文件夹有助于为您的数字资产管理建立坚实的内容架构和基础。
 
->[!VIDEO](https://video.tv.adobe.com/v/33496?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37327?quality=12&learn=on&captions=chi_hans)

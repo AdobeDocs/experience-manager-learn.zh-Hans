@@ -22,7 +22,7 @@ ht-degree: 3%
 
 Dynamic Media Snapshot是一款可视化演示工具，旨在说明Dynamic Media在优化和动态图像投放方面的强大功能。 试验测试图像或Dynamic Media URL，以可视化方式观察各种Dynamic Media图像修饰符的输出，以及针对文件大小（使用WebP和AVIF交付）、网络和设备像素比(DPR)的智能成像优化。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419421/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445573/?learn=on&captions=chi_hans)
 
 <a href="https://snapshot.scene7.com/" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">启动Dynamic Media快照</span>

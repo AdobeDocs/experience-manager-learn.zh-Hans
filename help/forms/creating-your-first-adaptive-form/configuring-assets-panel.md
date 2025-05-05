@@ -23,10 +23,10 @@ ht-degree: 3%
 
 **配置Assets面板**
 
->[!VIDEO](https://video.tv.adobe.com/v/22200?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326887?quality=12&learn=on&captions=chi_hans)
 
 **设置摘要标题**
->[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33081?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

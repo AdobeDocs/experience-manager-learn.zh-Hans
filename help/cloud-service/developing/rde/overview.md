@@ -27,7 +27,7 @@ ht-degree: 11%
 - 什么是RDE？
 - 它们如何帮助加快从开发到部署的周期？
 
->[!VIDEO](https://video.tv.adobe.com/v/3414128?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453608?quality=12&learn=on&captions=chi_hans)
 
 ## 后续步骤
 

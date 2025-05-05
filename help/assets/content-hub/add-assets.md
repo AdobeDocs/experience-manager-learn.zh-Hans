@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何在Adobe Experience Manager Assets Content Hub中上传资源、应用标记以及了解审批工作流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3432980/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450292/?learn=on&captions=chi_hans)

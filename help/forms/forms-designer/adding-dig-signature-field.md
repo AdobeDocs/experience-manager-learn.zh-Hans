@@ -23,4 +23,4 @@ ht-degree: 0%
 
 有关向AEM Forms添加数字签名的简短视频
 
->[!VIDEO](https://video.tv.adobe.com/v/3427623/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439536/?learn=on&captions=chi_hans)

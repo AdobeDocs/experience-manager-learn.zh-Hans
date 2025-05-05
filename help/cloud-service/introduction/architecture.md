@@ -24,4 +24,4 @@ ht-degree: 0%
 
 使用Edge Delivery Services探索AEM as a Cloud Service的底层架构和重要部分。
 
->[!VIDEO](https://video.tv.adobe.com/v/330542?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346179?quality=12&learn=on&captions=chi_hans)

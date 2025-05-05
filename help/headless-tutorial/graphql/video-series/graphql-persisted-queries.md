@@ -28,4 +28,4 @@ ht-degree: 10%
 + 了解如何创建、更新和执行GraphQL查询
 + 了解持久查询相对于客户端查询的好处
 
->[!VIDEO](https://video.tv.adobe.com/v/333429?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447387?quality=12&learn=on&captions=chi_hans)

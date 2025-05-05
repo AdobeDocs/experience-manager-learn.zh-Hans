@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此视频介绍在JBoss应用程序服务器中启用任何类的调试日志记录的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335522?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417705?quality=12&learn=on&captions=chi_hans)

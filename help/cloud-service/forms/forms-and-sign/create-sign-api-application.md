@@ -25,4 +25,4 @@ ht-degree: 1%
 
 您必须在您的Acrobat Sign上创建一个API应用程序才能与您的Acrobat Sign平台集成。 API应用程序作为客户端应用程序的代表，与Acrobat Sign平台进行交互。 您可以在客户或合作伙伴域上创建API应用程序。
 
->[!VIDEO](https://video.tv.adobe.com/v/332436?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411760?quality=12&learn=on&captions=chi_hans)

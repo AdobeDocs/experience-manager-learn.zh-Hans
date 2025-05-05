@@ -22,4 +22,4 @@ ht-degree: 0%
 
 使用Adobe Experience Manager Sites开发组件的概述。 内容包括对话框、Sling模型、HTL脚本和客户端库的简介。
 
->[!VIDEO](https://video.tv.adobe.com/v/32547?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36442?quality=12&learn=on&captions=chi_hans)

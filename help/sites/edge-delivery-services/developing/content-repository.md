@@ -33,12 +33,12 @@ ht-degree: 0%
 
 将SharePoint设置为用于Edge Delivery Services的内容存储库。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425712/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446038/?learn=on&captions=chi_hans)
 
 >[!TAB Google驱动器]
 
 将Google Drive设置为用于Edge Delivery Services的内容存储库。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425711/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434730/?learn=on&captions=chi_hans)
 
 >[!ENDTABS]

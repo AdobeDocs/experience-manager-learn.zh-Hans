@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何使用Live Copy概述控制台查看或管理站点中的继承或执行转出操作。
 
->[!VIDEO](https://video.tv.adobe.com/v/36680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326736?quality=12&learn=on&captions=chi_hans)

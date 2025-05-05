@@ -341,7 +341,7 @@ AEM内容片段编辑器是用于编辑内容片段的可扩展UI。 [AEM内容�
       <div class="card-image">
         <figure class="image is-16by9">
           <a href="./examples/editor-custom-field.md" title="自定义字段" tabindex="-1">
-            <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3427585?format=jpeg" alt="自定义字段">
+            <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3437644?format=jpeg&captions=chi_hans" alt="自定义字段">
           </a>
         </figure>
       </div>

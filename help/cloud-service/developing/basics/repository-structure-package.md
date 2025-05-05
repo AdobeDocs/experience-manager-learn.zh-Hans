@@ -21,4 +21,4 @@ ht-degree: 2%
 
 探索AEM应用程序的[存储库结构包](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html?lang=zh-Hans)、其重要性以及如何对其进行最佳定义。
 
->[!VIDEO](https://video.tv.adobe.com/v/330550?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345914?quality=12&learn=on&captions=chi_hans)

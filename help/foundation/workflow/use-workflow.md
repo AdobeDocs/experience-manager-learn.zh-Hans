@@ -22,7 +22,7 @@ ht-degree: 0%
 
 AEM Workflow提供了一种在AEM中协作、管理和处理内容的方法。
 
->[!VIDEO](https://video.tv.adobe.com/v/27848?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410285?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

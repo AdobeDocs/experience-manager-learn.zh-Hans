@@ -23,4 +23,4 @@ ht-degree: 0%
 
 工作流在Experience Manager中实现了业务流程管理，并用于自动处理内容，以及促进需要人为决策的治理和流程。 工作流是通过工作流模型定义的，工作流模型由一系列步骤组成，在[!UICONTROL 工作流模型编辑器]中创建和管理。
 
->[!VIDEO](https://video.tv.adobe.com/v/22201?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/347046?quality=12&learn=on&captions=chi_hans)

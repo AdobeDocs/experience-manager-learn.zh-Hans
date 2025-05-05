@@ -23,4 +23,4 @@ ht-degree: 0%
 
 AEM as a Cloud Service的水印功能允许使用任何PNG图像为自定义图像演绎版添加水印。
 
->[!VIDEO](https://video.tv.adobe.com/v/41536?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329456?quality=12&learn=on&captions=chi_hans)

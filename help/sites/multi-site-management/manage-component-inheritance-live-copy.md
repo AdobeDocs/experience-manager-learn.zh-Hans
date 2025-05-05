@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何在组件级别管理Live Copy及其Blueprint之间的继承。
 
->[!VIDEO](https://video.tv.adobe.com/v/36678?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41600?quality=12&learn=on&captions=chi_hans)

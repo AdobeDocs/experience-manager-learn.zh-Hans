@@ -22,13 +22,13 @@ Live Copy概述和Blueprint Configuration Manager是AEM创作界面，用于在A
 
 ## Live Copy 概述 {#live-copy-overview}
 
->[!VIDEO](https://video.tv.adobe.com/v/17054?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38322?quality=12&learn=on&captions=chi_hans)
 
 *Live Copy概述是一个Touch UI界面，用于管理Live Copy及其各自的Blueprint。 AEM 6.3中引入的这项功能取代了经典UI Blueprint控制中心。*
 
 ## Blueprint配置管理器 — 触屏UI {#blueprint-config-mgr}
 
->[!VIDEO](https://video.tv.adobe.com/v/17056?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38012?quality=12&learn=on&captions=chi_hans)
 
 *AEM 6.3引入了Touch UI界面来管理用于多站点管理器的Blueprint配置。*
 

@@ -22,7 +22,7 @@ ht-degree: 2%
 将子面板添加到根面板。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/28536?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326915?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >将子面板添加到根面板时，请&#x200B;**确保您处于编辑模式。 编辑按钮位于浏览器的右上角。**

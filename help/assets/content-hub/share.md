@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何在AEM Assets Content Hub中与团队成员共享资源和收藏集，从而促进有效的团队合作和安全共享资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/3435685/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445365/?learn=on&captions=chi_hans)

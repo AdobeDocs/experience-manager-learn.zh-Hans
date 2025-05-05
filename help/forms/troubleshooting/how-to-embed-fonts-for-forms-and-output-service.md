@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *本视频介绍为Forms嵌入字体和输出服务转换的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335496?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436484?quality=12&learn=on&captions=chi_hans)

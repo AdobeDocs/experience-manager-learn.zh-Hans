@@ -22,4 +22,4 @@ ht-degree: 0%
 
 AEM的收件箱有助于更好地协作和查看任务和工作流。 收件箱的“日历”视图在基于时间的视图中跟踪项目和任务，更便于项目管理和计划。 通过日历视图，用户可全面查看当前正在进行、已计划、即将到期和已过期的项目和任务。
 
->[!VIDEO](https://video.tv.adobe.com/v/16827?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410095?quality=12&learn=on&captions=chi_hans)

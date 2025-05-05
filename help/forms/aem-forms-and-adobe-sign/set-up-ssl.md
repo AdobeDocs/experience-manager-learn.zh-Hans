@@ -24,7 +24,7 @@ ht-degree: 3%
 将AEM Forms与Acrobat Sign集成的先决条件之一是将AEM实例配置为使用SSL。 Adobe Experience Manager的SSL设置向导，以便更轻松地设置AEM实例以通过HTTPS运行。
 以下视频介绍使用向导配置SSL所需的步骤
 
->[!VIDEO](https://video.tv.adobe.com/v/17993?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328890?learn=on&captions=chi_hans)
 
 ## 后续步骤
 

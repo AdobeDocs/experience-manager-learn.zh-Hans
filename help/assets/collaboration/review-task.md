@@ -23,4 +23,4 @@ ht-degree: 12%
 
 探索AEM Assets的审核任务如何促进最常见的审核和批准工作流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/32050?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36763?quality=12&learn=on&captions=chi_hans)

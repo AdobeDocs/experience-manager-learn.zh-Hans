@@ -20,7 +20,7 @@ ht-degree: 3%
 
 了解如何在OSGi服务中创建并指定ObjectClassDefinitions作为OSGi配置表示形式。
 
->[!VIDEO](https://video.tv.adobe.com/v/335730?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417814?quality=12&learn=on&captions=chi_hans)
 
 ## 资源
 

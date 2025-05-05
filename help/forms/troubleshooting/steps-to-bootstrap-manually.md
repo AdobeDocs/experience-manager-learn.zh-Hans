@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此视频介绍在数据库初始化不正常时手动引导的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335515?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436279?quality=12&learn=on&captions=chi_hans)

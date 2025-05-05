@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解如何自定义Edge Delivery Services Sidekick。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425725/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438009/?learn=on&captions=chi_hans)

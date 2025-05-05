@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何使用“创建语言副本”向导为AEM站点创建语言副本。
 
->[!VIDEO](https://video.tv.adobe.com/v/36483?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41608?quality=12&learn=on&captions=chi_hans)

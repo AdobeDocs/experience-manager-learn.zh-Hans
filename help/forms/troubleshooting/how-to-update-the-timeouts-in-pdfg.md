@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此视频介绍在Forms PDFG服务中更新服务器转换和服务器全局超时的过程。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335514?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417604?quality=12&learn=on&captions=chi_hans)

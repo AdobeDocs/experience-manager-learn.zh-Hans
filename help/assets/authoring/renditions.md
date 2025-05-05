@@ -23,4 +23,4 @@ ht-degree: 7%
 
 了解AEM Assets中的演绎版以及如何预览它们。
 
->[!VIDEO](https://video.tv.adobe.com/v/32047?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36971?quality=12&learn=on&captions=chi_hans)

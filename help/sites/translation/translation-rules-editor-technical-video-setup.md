@@ -24,7 +24,7 @@ ht-degree: 0%
 >
 > 以下视频是在AEM 6.3上录制的。AEM 6.4+引入了新的存储库结构，用于存储翻译规则XML文件。 在AEM 6.4+中使用翻译配置UI时，规则将保存到位置`/conf/global/settings/translation/rules/translation_rules.xml`。 有关更多详细信息，请参阅[标识要翻译的内容](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/tc-rules.html)。
 
->[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38442?quality=12&learn=on&captions=chi_hans)
 
 翻译规则标识AEM中要提取以进行翻译的内容。 现成的翻译规则涵盖了常见的用例，例如图像组件的文本组件和替换文本。 根据项目翻译要求，可能需要其他规则。 一般而言，翻译规则允许用户指定：
 

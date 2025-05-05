@@ -22,7 +22,7 @@ ht-degree: 0%
 
 项目母版使用[!DNL AEM Projects]大大简化了用户和团队管理。
 
->[!VIDEO](https://video.tv.adobe.com/v/17740?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410328?quality=12&learn=on&captions=chi_hans)
 
 管理员现在可以创建&#x200B;**[!DNL Master Project]**，并将用户作为项目团队的一部分分配给角色/权限。 项目可以从母版项目创建，并自动继承团队成员资格。 这具备以下几个优势：
 

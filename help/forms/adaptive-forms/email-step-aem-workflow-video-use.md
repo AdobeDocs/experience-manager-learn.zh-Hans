@@ -20,7 +20,7 @@ ht-degree: 0%
 
 AEM Forms 6.4中引入了“发送电子邮件”步骤。通过此步骤，我们可以构建业务流程或工作流，从而允许您发送带有或不带有附件的电子邮件。 以下视频介绍了配置发送电子邮件组件的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/21499?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38535?quality=12&learn=on&captions=chi_hans)
 
 作为本文的一部分，我们将引导您完成以下用例：
 

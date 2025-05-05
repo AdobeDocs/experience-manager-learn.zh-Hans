@@ -20,7 +20,7 @@ ht-degree: 0%
 
 对AEM 6.3中自适应表单的主题编辑器的改进
 
->[!VIDEO](https://video.tv.adobe.com/v/19497?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39217?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

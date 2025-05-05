@@ -25,7 +25,7 @@ ht-degree: 0%
 
 此集成允许AEM创作服务直接与Adobe Target通信，并将体验片段作为选件从AEM推送到Target。  此集成&#x200B;*不*&#x200B;将Adobe Target JavaScript (AT.js)添加到AEM Sites网页，因为使用Target扩展[&#128279;](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)集成了AEM和标记。
 
->[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329016?quality=12&learn=on&captions=chi_hans)
 
 >[!CAUTION]
 >

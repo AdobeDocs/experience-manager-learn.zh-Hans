@@ -22,7 +22,7 @@ AEM强大的翻译框架允许受支持的翻译供应商无缝翻译AEM内容�
 
 ## AEM 6.5中的翻译增强
 
->[!VIDEO](https://video.tv.adobe.com/v/27405?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34323?quality=12&learn=on&captions=chi_hans)
 
 AEM 6.5翻译增强功能包括：
 
@@ -36,7 +36,7 @@ AEM 6.5翻译增强功能包括：
 
 ## AEM 6.4中的翻译增强
 
->[!VIDEO](https://video.tv.adobe.com/v/21309?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38298?quality=12&learn=on&captions=chi_hans)
 
 现在，作者可以直接从站点管理员或项目管理员快速轻松地创建多语言翻译项目，设置这些项目以自动提升启动项，甚至可以设置自动化计划。
 

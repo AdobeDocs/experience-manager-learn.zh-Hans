@@ -22,7 +22,7 @@ ht-degree: 0%
 
 了解如何在Adobe Experience Manager Assets中使用上下文搜索，通过自然语言查询高效地查找资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428667/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438965/?learn=on&captions=chi_hans)
 
 ## 切换上下文搜索
 

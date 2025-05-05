@@ -24,5 +24,5 @@ ht-degree: 0%
 
 了解如何在Edge Delivery Services文档创作中配置Sidekick以生成变体。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428306/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436999/?learn=on&captions=chi_hans)
 

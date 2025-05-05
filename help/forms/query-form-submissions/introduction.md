@@ -22,7 +22,7 @@ ht-degree: 1%
 
 以下视频介绍了用例
 
->[!VIDEO](https://video.tv.adobe.com/v/3427096?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443506?learn=on&captions=chi_hans)
 
 
 要学习本教程，建议您有权访问以下内容

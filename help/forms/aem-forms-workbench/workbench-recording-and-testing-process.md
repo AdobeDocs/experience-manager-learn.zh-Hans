@@ -21,4 +21,4 @@ ht-degree: 0%
 
 介绍如何在Workbench中调试表单流程的简短视频
 
->[!VIDEO](https://video.tv.adobe.com/v/3429495/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439825/?learn=on&captions=chi_hans)

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 对自适应表单提交调用Power Automate流程。 以下视频介绍了将Forms CS与Microsoft Power Automate配置和集成所需的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/345675?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412128?quality=12&learn=on&captions=chi_hans)

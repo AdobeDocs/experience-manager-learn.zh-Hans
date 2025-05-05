@@ -24,7 +24,7 @@ ht-degree: 1%
 + 如何将Java POJO转换为OSGi服务
 + 如何将OSGi服务绑定到Java接口
 
->[!VIDEO](https://video.tv.adobe.com/v/335476?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417183?quality=12&learn=on&captions=chi_hans)
 
 ## 资源
 

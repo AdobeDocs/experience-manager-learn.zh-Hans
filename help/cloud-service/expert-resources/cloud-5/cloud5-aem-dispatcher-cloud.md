@@ -22,7 +22,7 @@ ht-degree: 2%
 
 Darin和James讨论了AEM Cloud中的Dispatcher，包括一些最佳实践以及与AMS/内部部署的差异。 他们还谈到了向云的迁移。
 
->[!VIDEO](https://video.tv.adobe.com/v/342067?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448385?quality=12&learn=on&captions=chi_hans)
 
 ## 本视频中涵盖的内容
 

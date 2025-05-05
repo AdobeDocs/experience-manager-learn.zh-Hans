@@ -22,4 +22,4 @@ ht-degree: 0%
 
 基于Sales Force表单数据模型创建自适应表单，并在按钮的单击事件上测试在Salesforce中创建商机
 
->[!VIDEO](https://video.tv.adobe.com/v/331892?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411578?quality=12&learn=on&captions=chi_hans)

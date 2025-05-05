@@ -23,7 +23,7 @@ ht-degree: 4%
 
 使用AEM桌面应用程序可简化对桌面上AEM中管理的任何资产（任何应用程序和文件格式）的访问。
 
->[!VIDEO](https://video.tv.adobe.com/v/28868?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32780?quality=12&learn=on&captions=chi_hans)
 
 + 在AEM中通过专用桌面应用程序的Browse和Search发现资源
 + 优化的带宽管理允许上传和下载许多大型资产

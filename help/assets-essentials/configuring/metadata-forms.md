@@ -21,4 +21,4 @@ ht-degree: 10%
 
 了解如何快速轻松地配置元数据Forms以定制AEM Assets中可用的资源元数据。
 
->[!VIDEO](https://video.tv.adobe.com/v/3431686?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452057?quality=12&learn=on&captions=chi_hans)

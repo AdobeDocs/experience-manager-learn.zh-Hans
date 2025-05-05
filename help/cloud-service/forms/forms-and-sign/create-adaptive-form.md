@@ -24,4 +24,4 @@ ht-degree: 2%
 
 创建自适应表单以使用Acrobat Sign云配置
 
->[!VIDEO](https://video.tv.adobe.com/v/332438?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411748?quality=12&learn=on&captions=chi_hans)

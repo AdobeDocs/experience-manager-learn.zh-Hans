@@ -23,4 +23,4 @@ ht-degree: 0%
 
 AEM Forms CS具有将工作流数据（如变量、附件等）存储在外部存储帐户中的新功能。本视频说明如何将工作流数据存储在Azure存储中
 
->[!VIDEO](https://video.tv.adobe.com/v/339610?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342959?quality=12&learn=on&captions=chi_hans)

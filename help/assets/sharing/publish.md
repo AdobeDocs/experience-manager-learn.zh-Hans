@@ -23,6 +23,6 @@ ht-degree: 2%
 
 了解如何将资源及其演绎版从AEM Author发布到AEM Publish。
 
->[!VIDEO](https://video.tv.adobe.com/v/330932?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/344737?quality=12&learn=on&captions=chi_hans)
 
 _在发布资产之前，请确保AEM Assets部署拥有AEM Publish服务许可证。_

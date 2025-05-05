@@ -22,6 +22,6 @@ ht-degree: 0%
 
 与AEM as a Cloud Service的集成必须能够安全地向AEM进行身份验证。 AEM的Developer Console生成服务凭据，外部应用程序、系统和服务使用这些凭据以编程方式通过HTTP与AEM创作或发布服务交互。
 
->[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342217?quality=12&learn=on&captions=chi_hans)
 
 下载的服务凭据文件作为名为service_token.json的资源文件存储在提供的eclipse中。 service_token文件中的值用于生成JWT并将JWT交换为访问令牌。 实用程序类GetServiceCredentials用于从service_token.json资源文件中获取属性值。

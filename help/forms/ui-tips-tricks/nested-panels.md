@@ -36,7 +36,7 @@ ht-degree: 0%
 
 要更改此默认行为，我们需要执行以下操作
 
->[!VIDEO](https://video.tv.adobe.com/v/338369?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438641?quality=12&learn=on&captions=chi_hans)
 
 
 使用代码编辑器在&#x200B;**下一步**&#x200B;按钮的单击事件中添加以下代码
@@ -57,7 +57,7 @@ window.guideBridge.setFocus(null, 'prevItemDeep', true);
 
 使用样式编辑器可隐藏选项卡子面板的标题。
 
->[!VIDEO](https://video.tv.adobe.com/v/338370?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439140?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

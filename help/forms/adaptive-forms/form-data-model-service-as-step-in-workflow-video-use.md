@@ -22,7 +22,7 @@ ht-degree: 0%
 从AEM Forms 6.4开始，我们现在能够将表单数据模型用作AEM Workflow的一部分。 以下视频介绍了在AEM工作流中配置表单数据模型步骤所需的步骤
 
 
->[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330120?quality=12&learn=on&captions=chi_hans)
 
 要在您的服务器上测试此功能，请按照以下说明操作
 * [下载并部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 这是用于设置元数据属性的自定义OSGI捆绑包。

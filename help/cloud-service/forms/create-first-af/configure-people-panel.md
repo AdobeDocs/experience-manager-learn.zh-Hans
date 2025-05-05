@@ -23,4 +23,4 @@ ht-degree: 0%
 
 将配偶详细信息片段添加到人员面板。
 
->[!VIDEO](https://video.tv.adobe.com/v/332234?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3425110?quality=12&learn=on&captions=chi_hans)

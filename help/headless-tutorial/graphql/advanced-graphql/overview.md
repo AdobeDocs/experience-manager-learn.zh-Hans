@@ -45,7 +45,7 @@ ht-degree: 0%
 
 以下视频提供了本教程中涵盖的概念的高级概述。 本教程包括使用更高级的数据类型定义内容片段模型、嵌套内容片段以及在AEM中保留GraphQL查询。
 
->[!VIDEO](https://video.tv.adobe.com/v/340035?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446137?quality=12&learn=on&captions=chi_hans)
 
 >[!CAUTION]
 >

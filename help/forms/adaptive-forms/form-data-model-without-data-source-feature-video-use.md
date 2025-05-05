@@ -20,7 +20,7 @@ ht-degree: 0%
 
 从AEM Forms 6.4开始，我们现在能够定义表单数据模型(FDM)，而无需将其与数据源关联。 以下视频介绍了在不使用任何数据源的情况下创建FDM的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/21414?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39407?quality=12&learn=on&captions=chi_hans)
 
 这为您提供了以下优势：
 

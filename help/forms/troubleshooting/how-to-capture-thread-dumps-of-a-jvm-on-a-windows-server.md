@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此视频介绍在Windows服务器上捕获JVM栈转储的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335493?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418286?quality=12&learn=on&captions=chi_hans)

@@ -25,7 +25,7 @@ ht-degree: 49%
 
 ## WKND 开发人员教程 {#wknd-developer-tutorial}
 
->[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36053?quality=12&learn=on&captions=chi_hans)
 
 此教程设计为使用&#x200B;**AEM as a Cloud Service**，并且向后兼容&#x200B;**AEM 6.5+**&#x200B;和&#x200B;**AEM 6.4.2+**。
 
@@ -35,7 +35,7 @@ ht-degree: 49%
 
 完成WKND教程后，观看以下视频，了解如何将WKND项目部署到AEM as a Cloud Service的概述。
 
->[!VIDEO](https://video.tv.adobe.com/v/30191?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32908?quality=12&learn=on&captions=chi_hans)
 
 此视频演示了WKND站点项目可以怎样实现：
 

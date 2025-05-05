@@ -22,4 +22,4 @@ ht-degree: 0%
 
 使用Adobe Asset Link面板，您可以访问AEM Assets中资源的文件详细信息，例如缩略图、基本元数据和版本。 了解如何创建、预览和比较文件版本。
 
->[!VIDEO](https://video.tv.adobe.com/v/34048?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38631?quality=12&learn=on&captions=chi_hans)
