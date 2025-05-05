@@ -31,12 +31,12 @@ Dynamic Media Classic解决方案中的工作流包括三个主要步骤：
 
 这是工作流的开始。 在此步骤中，您将收集或创建适合您正在使用的工作流的源内容，并将其上传到Dynamic Media Classic。 系统支持图像、视频和字体的多种文件类型，也支持PDF、Adobe Illustrator和Adobe InDesign的文件类型。
 
-查看[支持的文件类型](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats)的完整列表。
+查看[支持的文件类型](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hans#supported-asset-file-formats)的完整列表。
 
 您可以通过多种不同的方式上传源内容：
 
-- 直接从您的桌面或本地网络。 [了解如何操作](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-sps-desktop-application)。
-- 从Dynamic Media Classic FTP服务器。 [了解如何操作](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp)。
+- 直接从您的桌面或本地网络。 [了解如何操作](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hans#upload-files-using-sps-desktop-application)。
+- 从Dynamic Media Classic FTP服务器。 [了解如何操作](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hans#upload-files-using-via-ftp)。
 
 默认模式为“从桌面”，在该模式下可以浏览本地网络上的文件并开始上载。
 
@@ -64,11 +64,11 @@ Dynamic Media Classic解决方案中的工作流包括三个主要步骤：
 - **在任意文件夹内，使用相同的基本资源名称（不论扩展名是什么）进行覆盖**。
 此选项是最具包容性的替换规则。 您可以将替换图像上载到与原始图像不同的文件夹，上载文件扩展名不同的文件，然后替换原始文件。 如果原始文件位于其他文件夹中，则替换图像将位于上载到的新文件夹中。
 
-了解有关[覆盖图像选项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option)的更多信息。
+了解有关[覆盖图像选项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=zh-Hans#using-the-overwrite-images-option)的更多信息。
 
 虽然不是必需的，但在使用上述两种方法之一进行上载时，您可以为该特定上载指定作业选项 — 例如，计划定期上载，在上载时设置裁剪选项以及许多其他选项。 这些工具对于某些工作流可能很有价值，因此，如果可供您使用，则值得考虑。
 
-了解有关[作业选项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options)的详细信息。
+了解有关[作业选项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hans#upload-options)的详细信息。
 
 上传是任何工作流中第一个必要的步骤，因为Dynamic Media Classic无法处理其系统中尚未包含的任何内容。 在上传过程中，系统会通过中央的Dynamic Media Classic数据库注册每个上传的资源，分配一个ID，然后将其复制到存储中。 此外，该系统将图像文件转换为允许动态调整大小和缩放的格式，并将视频文件转换为MP4 Web友好格式。
 
@@ -97,7 +97,7 @@ Dynamic Media Classic解决方案中的工作流包括三个主要步骤：
 
 **虽然没有图像大小下限，但我们建议不要上传巨型图像。**&#x200B;巨型图像可以视为4000像素以上。 上传这种大小的图像可能会显示潜在的缺陷，如图像中的灰尘或头发。 此类图像在Dynamic Media Classic服务器上占用了更多空间，这可能会使您超出合同规定的存储限制。
 
-了解有关[上传文件](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files)的详细信息。
+了解有关[上传文件](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hans#uploading-your-files)的详细信息。
 
 ## 步骤2：创作(和Publish)
 
@@ -145,8 +145,8 @@ Dynamic Media Classic工作流的最终产品是一个指向资产（无论是�
 >
 >要避免出现缓存延迟问题，请始终向前工作 — 晚上、一天、两周等。 及时建立以便QA/接受内部各方在发布给公众之前证明您的工作。 即使是在工作之前的某个晚上，您也能够在当晚做出更改并重新发布。 到早上，10小时已经过去，缓存会更新为正确的图像。
 
-- 了解有关[创建发布作业](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job)的详细信息。
-- 了解有关[发布](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html)的详细信息。
+- 了解有关[创建发布作业](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html?lang=zh-Hans#creating-a-publish-job)的详细信息。
+- 了解有关[发布](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html?lang=zh-Hans)的详细信息。
 
 ## 步骤3：投放
 
@@ -184,4 +184,4 @@ Dynamic Media Classic工作流的最终产品是一个指向资产（无论是�
 
 您还可以使用&#x200B;**缩放**&#x200B;选项在多种预建缩放预设之一中预览图像，这些预设基于不同的包含缩放查看器。
 
-了解有关[预览Assets](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/previewing-asset.html)的更多信息。
+了解有关[预览Assets](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/previewing-asset.html?lang=zh-Hans)的更多信息。

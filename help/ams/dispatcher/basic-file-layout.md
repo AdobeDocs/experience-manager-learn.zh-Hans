@@ -145,7 +145,7 @@ Apache Web Server极具可扩展性，当模块具有大量配置文件时，最
 
 #### 缓存目录
 
-此目录包含您创建的所有`_cache.any`、`_invalidate.any`文件，这些文件包含您希望模块如何处理来自AEM的缓存元素以及失效规则语法的规则。  有关该部分的更多详细信息，请单击[此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+此目录包含您创建的所有`_cache.any`、`_invalidate.any`文件，这些文件包含您希望模块如何处理来自AEM的缓存元素以及失效规则语法的规则。  有关该部分的更多详细信息，请单击[此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#configuring-the-dispatcher-cache-cache)
 
 - `/etc/httpd/conf.dispatcher.d/cache/`
 

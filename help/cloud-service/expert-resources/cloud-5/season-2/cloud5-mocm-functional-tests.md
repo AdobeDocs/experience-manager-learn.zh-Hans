@@ -24,7 +24,7 @@ ht-degree: 2%
 
 ## 本视频中涵盖的内容
 
-+ [功能测试](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/functional-testing.html)
++ [功能测试](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/functional-testing.html?lang=zh-Hans)
 + [AEM烟雾测试](https://github.com/adobe/aem-test-samples/)
 + [AEM测试客户端](https://github.com/adobe/aem-testing-clients/)
 

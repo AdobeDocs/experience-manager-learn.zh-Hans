@@ -18,7 +18,7 @@ ht-degree: 4%
 
 # 使用多站点管理器 {#using-multi-site-manager-with-aem-sites}
 
-Live Copy概述和Blueprint Configuration Manager是AEM创作界面，用于在Adobe Experience Manager Sites中使用[多站点管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html)。
+Live Copy概述和Blueprint Configuration Manager是AEM创作界面，用于在Adobe Experience Manager Sites中使用[多站点管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html?lang=zh-Hans)。
 
 ## Live Copy 概述 {#live-copy-overview}
 
@@ -34,6 +34,6 @@ Live Copy概述和Blueprint Configuration Manager是AEM创作界面，用于在A
 
 ## 其他资源 {#additional-resources}
 
-* [Live Copy概述控制台](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy-overview.html)
-* [创建和同步活动副本](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy.html)
-* [MSM最佳实践](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-best-practices.html)
+* [Live Copy概述控制台](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/msm-livecopy-overview.html)
+* [创建和同步活动副本](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/msm-livecopy.html)
+* [MSM最佳实践](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/msm-best-practices.html)

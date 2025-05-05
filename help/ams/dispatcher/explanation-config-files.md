@@ -253,7 +253,7 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 当来自`/etc/httpd/conf.dispatcher.d/available_farms/`目录的任何FILENAME_farm.any文件被符号链接到`/etc/httpd/conf.dispatcher.d/enabled_farms/`目录时，它们将在运行配置中使用。
 
-场文件具有基于场[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms)的顶级部分的子包含，如缓存、clientheaders、筛选器、渲染器和主机。
+场文件具有基于场[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#defining-farms-farms)的顶级部分的子包含，如缓存、clientheaders、筛选器、渲染器和主机。
 
 `FILENAME_farm.any`文件将根据需要在场文件中包含它们的位置，为每个文件包含include语句。  以下是`FILENAME_farm.any`文件的示例语法，作为良好引用：
 

@@ -24,7 +24,7 @@ ht-degree: 4%
 
 ## 本视频中涵盖的内容
 
-+ 日志文件[概述](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
++ 日志文件[概述](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html?lang=zh-Hans)
 + 通过用户界面访问日志文件
 + 使用Adobe CLI
    + [Adobe I/O可扩展CLI](https://github.com/adobe/aio-cli)

@@ -272,7 +272,7 @@ AEM样式系统可以使用作者友好的标签&#x200B;**绿色**&#x200B;和&#x
 
 ## 其他资源 {#additional-resources}
 
-* [样式系统文档](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)
+* [样式系统文档](https://helpx.adobe.com/cn/experience-manager/6-5/sites/authoring/using/style-system.html)
 * [正在创建AEM客户端库](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [BEM （块元素修饰符）文档网站](https://getbem.com/)
 * [更少的文档网站](https://lesscss.org/)

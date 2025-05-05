@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 本系列第一部分所涵盖的内容
 
-+ AEM CDN [概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)
++ AEM CDN [概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=zh-Hans)
 + Web应用程序防火墙(WAF)功能
 + IP限制
 + DDOS保护

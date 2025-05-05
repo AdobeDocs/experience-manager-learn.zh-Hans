@@ -23,7 +23,7 @@ ht-degree: 0%
 * 访问AEM Publish内容的来源只有一个
 * AEM创作需要CORS访问权限
 
-如果需要对AEM发布的多源访问权限，请参阅[此文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
+如果需要对AEM发布的多源访问权限，请参阅[此文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=zh-Hans#dispatcher-configuration)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
@@ -103,7 +103,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### 允许CORS请求标头
 
-要允许所需的[HTTP请求标头传递到AEM进行处理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，必须在Disaptcher的`/clientheaders`配置中允许使用这些标头。
+要允许所需的[HTTP请求标头传递到AEM进行处理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#specifying-the-http-headers-to-pass-through-clientheaders)，必须在Disaptcher的`/clientheaders`配置中允许使用这些标头。
 
 ```
 /clientheaders {

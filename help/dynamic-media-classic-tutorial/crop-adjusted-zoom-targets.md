@@ -21,9 +21,9 @@ Dynamic Media Classic主图像概念的主要优势之一是，您可以将图�
 
 在本教程的此部分结束时，您将知道如何：
 
-- 在Dynamic Media Classic中裁切图像，并另存为新的主文件或虚拟图像。 [了解详情](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html)。
-- 保存虚拟已调整图像并使用它们代替主资产。 [了解详情](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html)。
-- 在图像上创建缩放目标以显示其高亮显示。 [了解详情](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html)。
+- 在Dynamic Media Classic中裁切图像，并另存为新的主文件或虚拟图像。 [了解详情](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=zh-Hans)。
+- 保存虚拟已调整图像并使用它们代替主资产。 [了解详情](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html?lang=zh-Hans)。
+- 在图像上创建缩放目标以显示其高亮显示。 [了解详情](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html?lang=zh-Hans)。
 
 ## 裁切
 
@@ -42,8 +42,8 @@ Dynamic Media Classic提供了一些可在UI中方便地使用的图像编辑工
 
 您可以从资源的“详细信息”页面或单击&#x200B;**编辑**&#x200B;按钮访问Dynamic Media Classic中的裁切工具。 您可以通过两种方式使用此工具进行裁剪：
 
-- 默认裁剪模式，在此模式下可拖动裁剪窗口的手柄，或在“大小”框中键入值。 了解如何[手动裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop)。
-- 修剪。 使用此选项可通过计算与图像不匹配的像素数来去除图像周围多余的空格。 了解如何[通过裁剪](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image)裁切。
+- 默认裁剪模式，在此模式下可拖动裁剪窗口的手柄，或在“大小”框中键入值。 了解如何[手动裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=zh-Hans#select-an-area-to-crop)。
+- 修剪。 使用此选项可通过计算与图像不匹配的像素数来去除图像周围多余的空格。 了解如何[通过裁剪](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=zh-Hans#crop-to-remove-white-space-around-an-image)裁切。
 
 ### _手动裁切_
 
@@ -134,7 +134,7 @@ _已调整主图像的视图ASIAN_BR_MAIN_
 
 决定是否使用“缩放目标”的另一个因素是您选择的查看器。 并非所有查看器类型都可以显示缩放目标（例如，弹出查看器不支持它们）。
 
-了解如何[创建缩放目标](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets)。
+了解如何[创建缩放目标](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html?lang=zh-Hans#creating-and-editing-zoom-targets)。
 
 ![图像](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 

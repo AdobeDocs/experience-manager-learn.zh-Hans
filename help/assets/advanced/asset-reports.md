@@ -28,4 +28,4 @@ AEM Assets提供了一个企业级报表框架，该框架可通过直观的用�
 
 >[!IMPORTANT]
 >
->AEM 6.5提供配置[资源报表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html#prerequisite-for-reporting)的功能，允许管理员定义报表中跟踪和包含的内容。
+>AEM 6.5提供配置[资源报表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html?lang=zh-Hans#prerequisite-for-reporting)的功能，允许管理员定义报表中跟踪和包含的内容。

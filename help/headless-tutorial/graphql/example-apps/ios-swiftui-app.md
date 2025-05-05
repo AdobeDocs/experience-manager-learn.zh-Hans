@@ -39,7 +39,7 @@ ht-degree: 0%
 
 iOS应用程序可与以下AEM部署选项配合使用。 所有部署都需要安装[WKND站点v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest)。
 
-+ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=zh-Hans)
 + 使用[AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-hans)进行本地设置
 
 iOS应用程序设计用于连接到&#x200B;__AEM Publish__&#x200B;环境，但是，如果在AEM应用程序的配置中提供身份验证，则它可以从iOS Author获取内容。
@@ -76,7 +76,7 @@ iOS应用程序设计用于连接到&#x200B;__AEM Publish__&#x200B;环境，但�
 
    __令牌身份验证__
 
-   `AEM_TOKEN`是一个[访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)，它向有权访问WKND GraphQL内容的AEM用户进行身份验证。
+   `AEM_TOKEN`是一个[访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hans)，它向有权访问WKND GraphQL内容的AEM用户进行身份验证。
 
    ```plain
    AEM_AUTH_TYPE = token

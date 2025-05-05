@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ![存储库现代化器](./assets/repository-modernizer.png)
 
-作为重构代码库的一部分，请使用[Repository Modernizer工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html)将6.x代码库重构为更现代的结构。
+作为重构代码库的一部分，请使用[Repository Modernizer工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html?lang=zh-Hans)将6.x代码库重构为更现代的结构。
 
 ## 关键活动
 

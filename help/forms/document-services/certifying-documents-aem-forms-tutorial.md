@@ -22,7 +22,7 @@ ht-degree: 0%
 
 要认证文档，您可以在桌面上使用Acrobat DC，或将AEM Forms Document Services用作服务器上自动化流程的一部分。
 
-本文为您提供了使用AEM Forms Document Services验证pdf文档的示例OSGI捆绑包。示例中使用的代码为[此处提供](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+本文为您提供了使用AEM Forms Document Services验证pdf文档的示例OSGI捆绑包。示例中使用的代码为[此处提供](https://helpx.adobe.com/cn/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 要使用AEM Forms认证文档，需要执行以下步骤
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 您可以编写自己的OSGi捆绑包，并使用AEM Forms客户端SDK实施服务来认证PDF文档。 以下链接对于编写您自己的OSGi捆绑包将会很有用
 
 * [正在创建您的第一个OSGi捆绑包](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)
-* [使用文档服务API](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+* [使用文档服务API](https://helpx.adobe.com/cn/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 或者，您也可以使用作为本教程资源一部分的示例捆绑包。
 

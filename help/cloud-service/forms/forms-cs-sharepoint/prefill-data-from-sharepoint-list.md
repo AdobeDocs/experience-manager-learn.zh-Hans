@@ -24,7 +24,7 @@ ht-degree: 0%
 
 本文介绍了使用表单数据模型预填充服务使用从SharePoint列表中获取的数据预填充/预填充自适应表单所需的步骤。
 
-本文假设您已[成功配置自适应表单以将数据提交到SharePoint列表。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
+本文假设您已[成功配置自适应表单以将数据提交到SharePoint列表。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=zh-Hans#connect-af-sharepoint-list)
 
 以下是SharePoint列表中的数据
 ![sharepoint-list](assets/list-data.png)

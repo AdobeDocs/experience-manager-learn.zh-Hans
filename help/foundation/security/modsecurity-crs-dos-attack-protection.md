@@ -38,7 +38,7 @@ OWSAP®还提供[OWASP® ModSecurity核心规则集(CRS)](https://github.com/cor
 
 >[!TIP]
 >
->需要注意的是，AEM as a Cloud Service的[托管CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)满足了大多数客户的性能和安全要求。 但是， ModSecurity提供了额外的安全层，并允许使用特定于客户的规则和配置。
+>需要注意的是，AEM as a Cloud Service的[托管CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=zh-Hans)满足了大多数客户的性能和安全要求。 但是， ModSecurity提供了额外的安全层，并允许使用特定于客户的规则和配置。
 
 ## 将CRS添加到Dispatcher项目模块
 
@@ -228,7 +228,7 @@ OWSAP®还提供[OWASP® ModSecurity核心规则集(CRS)](https://github.com/cor
 
 ### 验证Dispatcher配置
 
-在使用AEM as a Cloud Service时，在部署&#x200B;_Dispatcher配置_&#x200B;更改之前，建议使用[AEM SDK的Dispatcher工具](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html)的`validate`脚本在本地验证这些更改。
+在使用AEM as a Cloud Service时，在部署&#x200B;_Dispatcher配置_&#x200B;更改之前，建议使用[AEM SDK的Dispatcher工具](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=zh-Hans)的`validate`脚本在本地验证这些更改。
 
 ```
 # Go inside Dispatcher SDK 'bin' directory
@@ -240,11 +240,11 @@ $ ./validate.sh <YOUR-AEM-PROJECT-CODE-DIR>/dispatcher/src
 
 ## 部署
 
-使用Cloud Manager [Web层](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?#web-tier-config)或[全栈栈](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?#full-stack-code)管道部署本地验证的Dispatcher配置。 您还可以使用[快速开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)来加快周转时间。
+使用Cloud Manager [Web层](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=zh-Hans&#web-tier-config)或[全栈栈](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=zh-Hans&#full-stack-code)管道部署本地验证的Dispatcher配置。 您还可以使用[快速开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=zh-Hans)来加快周转时间。
 
 ## 验证
 
-为了验证DoS保护，在此示例中，我们将在60秒的范围内发送超过50个请求（25个请求阈值乘以两次发生次数）。 但是，这些请求应通过AEM as a Cloud Service [内置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)或您网站前面的任何[其他CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?#point-to-point-CDN)。
+为了验证DoS保护，在此示例中，我们将在60秒的范围内发送超过50个请求（25个请求阈值乘以两次发生次数）。 但是，这些请求应通过AEM as a Cloud Service [内置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=zh-Hans)或您网站前面的任何[其他CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=zh-Hans&#point-to-point-CDN)。
 
 实现CDN传递的一种技术是在每个网站页面请求&#x200B;**上添加一个查询参数，该参数具有**&#x200B;个新的随机值。
 

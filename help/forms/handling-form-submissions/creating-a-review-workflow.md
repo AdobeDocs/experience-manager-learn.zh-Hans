@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 先决条件
 
-请确保您具有AEM Forms的工作实例。 请按照[安装指南](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)安装和配置AEM Forms
+请确保您具有AEM Forms的工作实例。 请按照[安装指南](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html?lang=zh-Hans)安装和配置AEM Forms
 
 以下视频介绍如何使用AEM Forms组件创建审阅和批准工作流
 >[!VIDEO](https://video.tv.adobe.com/v/40242?quality=12&learn=on)

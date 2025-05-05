@@ -27,8 +27,8 @@ ht-degree: 0%
 * 滚动到本页底部，下载swagger文件并将其保存到硬盘上。
 * 启用了SSL的AEM Forms
 
-   * [有关在AEM 6.3上启用SSL的官方文档](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
-   * [有关在AEM 6.4上启用SSL的官方文档](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
+   * [有关在AEM 6.3上启用SSL的官方文档](https://helpx.adobe.com/cn/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
+   * [有关在AEM 6.4上启用SSL的官方文档](https://helpx.adobe.com/cn/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
 * 您需要拥有Salesforce帐户
 * 您需要创建连接的应用程序。 [此处](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0)列出了用于创建应用程序的官方文档表单Salesforce。
@@ -73,7 +73,7 @@ ht-degree: 0%
 * 身份验证处理程序：授权载体
 * 单击“连接到OAUTH”。如果一切顺利，您应该不会看到任何错误
 
-使用Salesforce创建表单数据模型后，您可以使用刚刚创建的数据Source创建表单数据集成。 有关创建表单数据集成的官方文档为[此处](https://helpx.adobe.com/aem-forms/6-3/data-integration.html)。
+使用Salesforce创建表单数据模型后，您可以使用刚刚创建的数据Source创建表单数据集成。 有关创建表单数据集成的官方文档为[此处](https://helpx.adobe.com/cn/aem-forms/6-3/data-integration.html)。
 
 确保将表单数据模型配置为包含POST服务，以便在SFDC中创建Lead对象。
 
@@ -106,7 +106,7 @@ ht-degree: 0%
    * 身份验证处理程序：授权载体
    * 单击“连接到OAuth”按钮。 如果您看到任何错误，请查看上述步骤以确保正确输入了所有信息。
 
-使用Salesforce创建数据Source后，您可以使用刚刚创建的数据Source创建表单数据集成。 其文档链接位于[此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
+使用Salesforce创建数据Source后，您可以使用刚刚创建的数据Source创建表单数据集成。 其文档链接位于[此处](https://helpx.adobe.com/cn/experience-manager/6-4/forms/using/create-form-data-models.html)
 
 确保将表单数据模型配置为包含POST服务，以便在SFDC中创建Lead对象。
 

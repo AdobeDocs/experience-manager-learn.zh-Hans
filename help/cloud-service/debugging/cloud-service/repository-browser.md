@@ -30,7 +30,7 @@ ht-degree: 0%
 
 要在AEM as a Cloud Service上访问存储库浏览器，请执行以下操作：
 
-1. 确保您的用户具有[所需的访问权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#access-prerequisites)
+1. 确保您的用户具有[所需的访问权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html?lang=zh-Hans#access-prerequisites)
 1. 登录到[Cloud Manager](https://my.cloudmanager.adobe.com)
 1. 选择包含要调试的AEM as a Cloud Service环境的程序
 1. 打开与AEM as a Cloud Service环境对应的[Developer Console](./developer-console.md)进行调试
@@ -45,4 +45,4 @@ ht-degree: 0%
 
 ## 发布和预览访问权限
 
-默认情况下，对发布或预览的访问权限有限，从而减少了存储库浏览器中的可用资源。 [要查看发布（或预览）上的所有资源，请将用户添加到发布（或预览）管理员角色。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)
+默认情况下，对发布或预览的访问权限有限，从而减少了存储库浏览器中的可用资源。 [要查看发布（或预览）上的所有资源，请将用户添加到发布（或预览）管理员角色。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html?lang=zh-Hans#navigate-the-hierarchy)

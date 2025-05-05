@@ -23,7 +23,7 @@ ht-degree: 5%
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324?quality=12&learn=on)
 
-有关详细信息，请参阅[自适应表单模板文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
+有关详细信息，请参阅[自适应表单模板文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html?lang=zh-Hans)
 
 如果需要，您可以下载[自适应表单模板](assets/peak-application-template.zip)，并使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)导入到AEM中
 

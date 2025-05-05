@@ -83,7 +83,7 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans">
       <img alt= "AEM Forms中的Captch" src="./assets/captcha1.png" />
     </a>
     <div>
@@ -175,11 +175,11 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
 
 ## 其他资源
 
-* [Experience League — 浏览AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Sites创作文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-* [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [Experience League — 浏览AEM](https://experienceleague.adobe.com/zh-hans#recommended/solutions/experience-manager)
+* [AEM Sites创作文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=zh-Hans)
+* [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=zh-Hans)
+* [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html?lang=zh-Hans)
+* [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html?lang=zh-Hans)
 * [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
 * [AEM Assets 教程](/help/assets/overview.md)
 * [AEM Forms 教程](/help/forms/overview.md)

@@ -36,4 +36,4 @@ ht-degree: 4%
 
 ## 其他资源
 
-+ [下载最新的AEM桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)
++ [下载最新的AEM桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=zh-Hans)

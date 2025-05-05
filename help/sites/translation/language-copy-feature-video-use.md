@@ -24,5 +24,5 @@ ht-degree: 2%
 
 ## 其他资源 {#additional-resources}
 
-* [语言复制向导文档](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-wizard.html)
-* [MSM最佳实践](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-best-practices.html)
+* [语言复制向导文档](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/tc-wizard.html)
+* [MSM最佳实践](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/msm-best-practices.html)

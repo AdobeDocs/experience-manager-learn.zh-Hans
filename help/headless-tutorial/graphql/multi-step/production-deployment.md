@@ -61,7 +61,7 @@ AEM Headless 应用程序最常见的部署模式是将应用程序的生产版�
 
 当前，有一个SDK实例正在&#x200B;**创作**&#x200B;模式下运行。 也可以在&#x200B;**Publish**&#x200B;模式下启动SDK以模拟AEM Publish环境。
 
-有关设置本地开发环境[的更详细指南，请参阅此处](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=en#local-development-environment-set-up)。
+有关设置本地开发环境[的更详细指南，请参阅此处](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans#local-development-environment-set-up)。
 
 1. 在本地文件系统上，创建一个专用文件夹来安装发布实例，即名为`~/aem-sdk/publish`。
 1. 复制前几章中用于创作实例的快速入门jar文件，并将其粘贴到`publish`目录中。 或者，导航到[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)，下载最新的SDK并解压缩快速入门jar文件。
@@ -312,7 +312,7 @@ React应用程序可以通过使用webpack服务器启动，但这仅适用于�
 1. 启动创作实例（如果尚未启动），并在[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)处导航到包管理器
 1. 下载包[EnableReplicationAgent.zip](./assets/publish-deployment/EnableReplicationAgent.zip)并使用包管理器安装它。
 
-   此包将安装一种配置，该配置允许作者实例将内容发布到发布实例。 可以在此处[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en#content-distribution)找到此配置的手动步骤。
+   此包将安装一种配置，该配置允许作者实例将内容发布到发布实例。 可以在此处[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=zh-Hans#content-distribution)找到此配置的手动步骤。
 
    >[!NOTE]
    >
@@ -410,5 +410,5 @@ React应用程序可以通过使用webpack服务器启动，但这仅适用于�
 
 * 使用带有GraphQL的内容片段的[Headless内容投放](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html?lang=zh-Hans)
 * [用于内容片段的 AEM GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html?lang=zh-Hans)
-* [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en#authentication)
-* [将代码部署到AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=en#cloud-manager)
+* [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hans#authentication)
+* [将代码部署到AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=zh-Hans#cloud-manager)

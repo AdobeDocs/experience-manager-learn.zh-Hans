@@ -73,7 +73,7 @@ Dynamic Media Classic可以识别多种可用的源格式并且可以与它们�
 
 最后一条关于Dynamic Media Classic视频的注释可能适用于某些客户：并非所有公司都为其帐户启用了自动转化、流或视频预设。 如果由于某种原因而无法访问流视频的URL，这可能是原因。 您可以上传和发布逐步下载的视频，并访问所有视频查看器。 但是，要利用完整的Dynamic Media Classic视频功能，请联系您的客户经理或销售经理来启用这些功能。
 
-在Dynamic Media Classic[&#128279;](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html)中了解有关视频的更多信息。
+在Dynamic Media Classic[&#128279;](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html?lang=zh-Hans)中了解有关视频的更多信息。
 
 ## Video 101
 
@@ -135,8 +135,8 @@ Dynamic Media Classic可以识别多种可用的源格式并且可以与它们�
 
 ![图像](assets/video-overview/video-overview-2.png)
 
-1. 首先，将视频文件上传到Dynamic Media Classic。 为此，请打开Dynamic Media Classic扩展面板底部的&#x200B;**工具菜单**，然后选择&#x200B;**上传到Dynamic Media Classic >文件到文件夹名称**，或&#x200B;**上传到Dynamic Media Classic >文件夹到文件夹名称**。 “Folder name”是您当前使用该扩展浏览的任何文件夹。 视频文件可能会很大，因此我们建议使用FTP上传大文件。 在上传过程中，选择一个或多个用于编码视频的视频预设。 上传视频时，可以将视频转码为MP4视频。 有关使用和创建编码预设的更多信息，请参阅下面的视频预设主题。 了解[视频上传和编码](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html)。
-2. 选择或修改视频查看器预设并预览视频。 您可以选择预先构建的查看器预设，也可以自定义您自己的查看器预设。 如果您定位的是移动用户，则无需在此处执行任何操作，因为移动平台不需要查看器或预设。 了解有关[在视频查看器中预览视频](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html)和[添加或编辑视频查看器预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html#adding-or-editing-a-video-viewer-preset)的更多信息。
+1. 首先，将视频文件上传到Dynamic Media Classic。 为此，请打开Dynamic Media Classic扩展面板底部的&#x200B;**工具菜单**，然后选择&#x200B;**上传到Dynamic Media Classic >文件到文件夹名称**，或&#x200B;**上传到Dynamic Media Classic >文件夹到文件夹名称**。 “Folder name”是您当前使用该扩展浏览的任何文件夹。 视频文件可能会很大，因此我们建议使用FTP上传大文件。 在上传过程中，选择一个或多个用于编码视频的视频预设。 上传视频时，可以将视频转码为MP4视频。 有关使用和创建编码预设的更多信息，请参阅下面的视频预设主题。 了解[视频上传和编码](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html?lang=zh-Hans)。
+2. 选择或修改视频查看器预设并预览视频。 您可以选择预先构建的查看器预设，也可以自定义您自己的查看器预设。 如果您定位的是移动用户，则无需在此处执行任何操作，因为移动平台不需要查看器或预设。 了解有关[在视频查看器中预览视频](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html?lang=zh-Hans)和[添加或编辑视频查看器预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html?lang=zh-Hans#adding-or-editing-a-video-viewer-preset)的更多信息。
 3. 运行视频Publish、获取URL并集成。 视频工作流的此步骤与图像工作流的主要区别在于，您运行的是特殊的视频Publish，而不是（也许和）标准的图像服务发布。 桌面上的视频查看器集成与图像查看器集成的工作方式完全相同，但是对于移动设备来说，它甚至更简单 — 您只需要视频本身的URL即可。
 
 ### 关于转码
@@ -171,11 +171,11 @@ Dynamic Media Classic不仅可以为您转换文件，还可以通过提供易�
 
 上传视频时，您可以从一个或多个预设中进行选择，这些预设包含用于通过编码将主视频转换为Web友好格式的设置。 视频预设有两种风格，自适应视频预设和单个编码预设。
 
-查看[可用的视频预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)。
+查看[可用的视频预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=zh-Hans#video-presets-for-encoding-video-files)。
 
 默认情况下，会激活自适应视频预设，这意味着它们可用于编码。 如果要使用单个编码预设，管理员需要激活它才能使其显示在视频预设列表中。
 
-了解如何[激活或停用视频预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html#activating-or-deactivating-video-encoding-presets)。
+了解如何[激活或停用视频预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html?lang=zh-Hans#activating-or-deactivating-video-encoding-presets)。
 
 您可以从Dynamic Media Classic随附的众多预建预设中选择一个，也可以创建您自己的预设；但是，默认情况下不会选择上传预设。 换言之，**如果您在上传时未选择视频预设，则您的视频将不会被转换，并且有可能无法发布**。 不过，您可以自己离线转换视频，也可以上传并发布。 仅当您希望Dynamic Media Classic为您进行转换时，才需要视频预设。
 
@@ -238,19 +238,19 @@ Dynamic Media Classic不仅可以为您转换文件，还可以通过提供易�
 11. 单击&#x200B;**保存**&#x200B;以保存预设。 与所有其他预设不同，您现在不需要发布，因为预设仅用于上传文件。 稍后，您必须发布经过编码的视频，但预设仅供Dynamic Media Classic内部使用。
 12. 若要验证您的视频预设是否在上传列表中，请转到&#x200B;**上传**。 选择&#x200B;**作业选项**&#x200B;并展开&#x200B;**视频选项**。 您的预设会列在您选择的播放设备（“计算机”、“移动设备”或“平板电脑”）的类别中。
 
-了解有关[添加或编辑视频预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html#adding-or-editing-a-video-encoding-preset)的详细信息。
+了解有关[添加或编辑视频预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html?lang=zh-Hans#adding-or-editing-a-video-encoding-preset)的详细信息。
 
 ## 在视频中添加字幕
 
 有时候，向视频添加字幕会很有用，例如，当您需要以多种语言向查看者提供视频，但不希望以另一种语言对音频进行复调或再次以单独的语言录制视频时。 此外，为听力受损并使用隐藏式字幕的用户提供更好的辅助功能。 通过Dynamic Media Classic，可以轻松地将字幕添加到视频中。
 
-了解如何[向视频添加字幕](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-captions-video.html)。
+了解如何[向视频添加字幕](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-captions-video.html?lang=zh-Hans)。
 
 ## 向视频添加章节标记
 
 对于长格式视频，观看者可能会喜欢使用章节标记导航视频所提供的功能和便利。 Dynamic Media Classic提供向视频轻松添加章节标记的功能。
 
-了解如何[向视频添加章节标记](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-chapter-markers-video.html)。
+了解如何[向视频添加章节标记](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-chapter-markers-video.html?lang=zh-Hans)。
 
 ## 视频实施主题
 
@@ -260,20 +260,20 @@ Dynamic Media Classic工作流中的最后一个步骤是发布视频内容。 �
 
 ![图像](assets/video-overview/video-overview-6.jpg)
 
-了解如何[Publish您的视频](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#publishing-video)。
+了解如何[Publish您的视频](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html?lang=zh-Hans#publishing-video)。
 
 运行视频发布后，您就能够获得一个URL，以便在Web浏览器中访问您的视频和任何现成的Dynamic Media Classic Viewer预设。 但是，如果您自定义或创建自己的视频查看器预设，则需要运行单独的图像服务器发布。
 
-- 了解如何[将URL链接到移动网站或网站](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#linking-a-video-url-to-a-mobile-site-or-a-website)。
-- 了解如何[在网页上嵌入视频查看器](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#embedding-the-video-viewer-on-a-web-page)。
+- 了解如何[将URL链接到移动网站或网站](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html?lang=zh-Hans#linking-a-video-url-to-a-mobile-site-or-a-website)。
+- 了解如何[在网页上嵌入视频查看器](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html?lang=zh-Hans#embedding-the-video-viewer-on-a-web-page)。
 
 您也可以使用第三方或自定义视频播放器来部署视频。
 
-了解如何使用第三方视频播放器[部署视频](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#deploying-video-using-a-third-party-video-player)。
+了解如何使用第三方视频播放器[部署视频](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html?lang=zh-Hans#deploying-video-using-a-third-party-video-player)。
 
 此外，如果您还想使用视频缩略图（从视频中提取的图像），则需要运行图像服务器发布。 这是因为视频的缩略图图像位于图像服务器上，而视频本身位于视频服务器上。 视频缩略图可用于视频搜索结果、视频播放列表，并可用作在视频播放之前显示在视频查看器中的初始“海报帧”。
 
-了解有关[使用视频缩略图](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#working-with-video-thumbnails)的详细信息。
+了解有关[使用视频缩略图](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html?lang=zh-Hans#working-with-video-thumbnails)的详细信息。
 
 ### 选择和自定义查看器预设
 
@@ -308,15 +308,15 @@ Dynamic Media Classic工作流中的最后一个步骤是发布视频内容。 �
 
 通过使用此方法，您不必使用Dynamic Media Classic手动输入此数据。 不过，您也可以在Dynamic Media Classic中使用元数据预设，作为每次输入相同数据的快速方法。
 
-有关此主题的详细信息，请参阅[查看、添加和导出元数据](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html)。
+有关此主题的详细信息，请参阅[查看、添加和导出元数据](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html?lang=zh-Hans)。
 
 ![图像](assets/video-overview/video-overview-7.jpg)
 
 填充元数据后，您便能够在该视频资产的详细信息视图中看到该元数据。 关键字也可能存在，但这些关键字位于“关键字”选项卡下。
 
-- 了解有关[添加关键字](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html#add-or-edit-keywords)的详细信息。
-- 了解有关[视频SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html)的更多信息。
-- 了解视频SEO[&#128279;](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings)的设置。
+- 了解有关[添加关键字](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html?lang=zh-Hans#add-or-edit-keywords)的详细信息。
+- 了解有关[视频SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html?lang=zh-Hans)的更多信息。
+- 了解视频SEO[&#128279;](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html?lang=zh-Hans#choosing-video-seo-settings)的设置。
 
 #### 设置视频SEO
 

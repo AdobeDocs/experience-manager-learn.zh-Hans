@@ -69,7 +69,7 @@ ht-degree: 1%
    * **sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.&#42;** **sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.&#42;**
 * 文档服务需要这两个属性才能正常工作
 * 保存sling.properties文件
-* [下载相应的表单附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)
+* [下载相应的表单附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)
 * 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)安装表单加载项包。
 * 安装添加软件包后，需要执行以下步骤
 
@@ -86,4 +86,4 @@ ht-degree: 1%
 1. 保存更改。
 
 恭喜!!! 您现在已在系统上安装和配置AEM Forms。
-根据您的需求，您可以在服务器上配置[Reader扩展](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)或[PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html)
+根据您的需求，您可以在服务器上配置[Reader扩展](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=zh-Hans)或[PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=zh-Hans)

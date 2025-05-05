@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 自定义流程步骤
 
-实施了自定义流程步骤来创建包含表单附件的压缩文件。 如果您不熟悉如何创建OSGi捆绑包，请[按照以下说明进行操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)。
+实施了自定义流程步骤来创建包含表单附件的压缩文件。 如果您不熟悉如何创建OSGi捆绑包，请[按照以下说明进行操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=zh-Hans)。
 
 自定义流程步骤中的代码执行以下操作：
 

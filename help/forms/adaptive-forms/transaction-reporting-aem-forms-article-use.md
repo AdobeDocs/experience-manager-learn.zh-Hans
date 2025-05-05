@@ -49,4 +49,4 @@ AEM Forms 6.4.1引入了事务报表功能，用于捕获表单提交次数、�
 
 如果您在创作实例上查看事务报告，请确保在所有发布实例上配置了反向复制。
 
-若要了解有关交易报告的更多信息[，请单击此处](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+若要了解有关交易报告的更多信息[，请单击此处](https://helpx.adobe.com/cn/experience-manager/6-4/forms/using/transaction-reports-overview.html)

@@ -34,4 +34,4 @@ Adobe Experience Manager的样式系统允许在不进行后端开发的情况�
 
 想要了解如何使用样式系统进行开发？ 查看以下教程：
 
-* [使用样式系统进行开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)
+* [使用样式系统进行开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html?lang=zh-Hans)

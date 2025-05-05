@@ -25,7 +25,7 @@ ht-degree: 6%
 ## 本视频中涵盖的内容
 
 + 自动检查概述
-+ [自定义代码质量规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html)
++ [自定义代码质量规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html?lang=zh-Hans)
 
 ## 其他资源
 

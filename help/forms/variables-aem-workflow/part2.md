@@ -36,6 +36,6 @@ ht-degree: 0%
 
 * [使用包管理器下载资源并将其导入AEM](assets/jsonandstringvariable.zip)
 * [浏览工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html)以了解工作流中使用的变量
-* [配置电子邮件服务](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
+* [配置电子邮件服务](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
 * [打开自适应表单](http://localhost:4502/content/dam/formsanddocuments/afbasedonjson/jcr:content?wcmmode=disabled)
 * 填写详细信息并提交表单

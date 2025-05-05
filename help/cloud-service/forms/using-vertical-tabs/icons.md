@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## 先决条件
 
-要阅读本文，您需要熟悉Git、使用Cloud Manager创建和部署AEM项目、在AEM Cloud Manager中设置前端管道以及少量CSS。 如果您不熟悉上述主题，请按照[使用主题设置核心组件样式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components#rename-env-file-theme-folder)文章中的说明进行操作。
+要阅读本文，您需要熟悉Git、使用Cloud Manager创建和部署AEM项目、在AEM Cloud Manager中设置前端管道以及少量CSS。 如果您不熟悉上述主题，请按照[使用主题设置核心组件样式](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components#rename-env-file-theme-folder)文章中的说明进行操作。
 
 ## 在主题中添加图标
 

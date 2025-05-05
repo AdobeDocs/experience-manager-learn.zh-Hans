@@ -42,9 +42,9 @@ AEM as a Cloud Service为每个环境提供了一个Developer Console，该环�
 
 1. 确保在Adobe组织切换器中看到Adobe组织，该组织与您要在Developer Console中检查的环境相关。
 1. 为了能够登录到Developer Console，开发人员必须是以下任意角色的成员：
-   + [Cloud Manager产品的&#x200B;__开发人员 — Cloud Service__&#x200B;产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer)：在这种情况下，开发人员将看到选定Developer Console URL下可用环境的完整列表；如果已在Cloud Manager中选择开发环境或RDE，则可能会显示同一程序中的其他开发环境或RDE。
-   + [__AEM Author__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)上的AEM Administrators __产品配置文件：在这种情况下，上一个项目符号中描述的环境列表将限制为分配此角色的相关产品配置文件。__
-1. 开发人员必须是AEM Author和/或Publish[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)上的&#x200B;__AEM Users__&#x200B;或&#x200B;__AEM Administrators__&#x200B;产品配置文件的成员。
+   + [Cloud Manager产品的&#x200B;__开发人员 — Cloud Service__&#x200B;产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html?lang=zh-Hans#assign-developer)：在这种情况下，开发人员将看到选定Developer Console URL下可用环境的完整列表；如果已在Cloud Manager中选择开发环境或RDE，则可能会显示同一程序中的其他开发环境或RDE。
+   + [__AEM Author__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=zh-Hans#aem-product-profiles)上的AEM Administrators __产品配置文件：在这种情况下，上一个项目符号中描述的环境列表将限制为分配此角色的相关产品配置文件。__
+1. 开发人员必须是AEM Author和/或Publish[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=zh-Hans#aem-product-profiles)上的&#x200B;__AEM Users__&#x200B;或&#x200B;__AEM Administrators__&#x200B;产品配置文件的成员。
    + 如果此成员资格不存在，则[状态](#status)转储将超时，并出现401未授权错误。
 
 ### Developer Console访问疑难解答
@@ -54,7 +54,7 @@ AEM as a Cloud Service为每个环境提供了一个Developer Console，该环�
 确保以下各项：
 
 + 通过通过Cloud Manager单击选定环境的三个圆点，然后选择Developer Console，您已选择正确的Developer Console URL。
-+ 您或者拥有[Cloud Manager产品的&#x200B;__开发人员 — Cloud Service__&#x200B;产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer)以查看环境的完整列表，或者您是未找到环境的&#x200B;__AEM作者__[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)上的&#x200B;__AEM管理员__&#x200B;产品配置文件的一部分。
++ 您或者拥有[Cloud Manager产品的&#x200B;__开发人员 — Cloud Service__&#x200B;产品配置文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html?lang=zh-Hans#assign-developer)以查看环境的完整列表，或者您是未找到环境的&#x200B;__AEM作者__[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=zh-Hans#aem-product-profiles)上的&#x200B;__AEM管理员__&#x200B;产品配置文件的一部分。
 
 #### 401转储状态时发生未授权错误
 
@@ -110,7 +110,7 @@ AEM as a Cloud Service Author和Publish服务分别由多个实例组成，以�
 + 提供每个OSGi组件的状态；包括它们是活动的还是不满足的
 + 向不满足的服务引用提供详细信息可能会导致OSGi组件变为活动状态
 + 列出绑定到OSGi组件的OSGi属性及其值。
-   + 这将显示通过[OSGi环境配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)插入的实际值。
+   + 这将显示通过[OSGi环境配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hans#environment-specific-configuration-values)插入的实际值。
 
 ### 配置
 
@@ -119,7 +119,7 @@ AEM as a Cloud Service Author和Publish服务分别由多个实例组成，以�
 配置可通过以下方式帮助进行调试：
 
 + 按OSGi组件列出OSGi属性及其值
-   + 这不会显示通过[OSGi环境配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)插入的实际值。 有关插入的值，请参阅上面的[组件](#components)。
+   + 这不会显示通过[OSGi环境配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hans#environment-specific-configuration-values)插入的实际值。 有关插入的值，请参阅上面的[组件](#components)。
 + 查找和识别配置错误的属性
 
 ### Oak索引

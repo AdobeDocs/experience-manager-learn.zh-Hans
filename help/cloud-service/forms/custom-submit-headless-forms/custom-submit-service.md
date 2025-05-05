@@ -118,7 +118,7 @@ mvn clean install -PautoInstallSinglePackage
 ## 将代码推送到Cloud Manager并部署代码
 
 在本地实例上验证代码后，将代码推送到您的云实例。
-将更改推送到本地Git存储库，然后推送到Cloud Manager存储库。 您可以参考[Git设置](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html)、[将AEM项目推送到Cloud Manager存储库](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html)和[部署到开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html)文章。
+将更改推送到本地Git存储库，然后推送到Cloud Manager存储库。 您可以参考[Git设置](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html?lang=zh-Hans)、[将AEM项目推送到Cloud Manager存储库](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html?lang=zh-Hans)和[部署到开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html?lang=zh-Hans)文章。
 
 成功执行管道后，您应该能够将表单的提交操作关联到自定义提交处理程序，如下面的屏幕快照所示
 ![提交操作](./assets/configure-submit-action.png)

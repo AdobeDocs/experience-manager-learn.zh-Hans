@@ -45,7 +45,7 @@ ht-degree: 1%
 ## 部署以下OSGi包
 
 部署具有[代码以从数据库](assets/SaveAndResume.core-1.0.0-SNAPSHOT.jar)存储和提取数据的包
-下载并解压缩[developingwithserviceuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)。
+下载并解压缩[developingwithserviceuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=zh-Hans)。
 使用Felix Web控制台部署DevelopingWithServiceUser.jar文件。
 
 ## 部署客户端库

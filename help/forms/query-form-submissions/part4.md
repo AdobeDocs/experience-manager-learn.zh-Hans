@@ -24,7 +24,7 @@ ht-degree: 2%
 
 预填充服务用于从Azure门户获取与BlobId关联的数据。
 
-[此处提供了有关使用数据和附件预填表单的单独文章。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html)
+[此处提供了有关使用数据和附件预填表单的单独文章。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=zh-Hans)
 
 ## 后续步骤
 

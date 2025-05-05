@@ -42,7 +42,7 @@ Adobe Experience Manager (AEM)内容片段是基于文本的编辑内容，其�
 
 AEM Content Services有助于创建基于AEM页面的HTTP端点，以将内容呈现为规范化JSON格式。
 
-上述视频使用[内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)公开单个内容片段。 [内容片段列表组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html)是一个新组件，它允许作者定义一个查询，该查询将动态地使用内容片段的列表填充页面。 当需要公开多个内容片段时，首选内容片段列表组件。
+上述视频使用[内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)公开单个内容片段。 [内容片段列表组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html?lang=zh-Hans)是一个新组件，它允许作者定义一个查询，该查询将动态地使用内容片段的列表填充页面。 当需要公开多个内容片段时，首选内容片段列表组件。
 
 *示例Content Services端点JSON有效负载：*\
 **[运动员.json](assets/athletes.json)**

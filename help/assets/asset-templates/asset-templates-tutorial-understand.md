@@ -39,7 +39,7 @@ ht-degree: 0%
 
    * **右键单击**&#x200B;并选择&#x200B;**拟合>框架拟合选项…… >内容拟合>按比例填充框架**
 
-   [了解有关“框架拟合”选项的更多信息](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)，它适用于您的用例。
+   [了解有关“框架拟合”选项的更多信息](https://helpx.adobe.com/cn/indesign/using/frames-objects.html#fitting_objects_to_frames)，它适用于您的用例。
 
 5. 通过原位粘贴从页面和页面中的母版模板向下复制标题（徽标和公司名称）。
 

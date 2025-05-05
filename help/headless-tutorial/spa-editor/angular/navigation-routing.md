@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 您将构建的内容
 
-本章将导航菜单添加到现有`Header`组件。 导航菜单由AEM页面层次结构驱动，并使用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
+本章将导航菜单添加到现有`Header`组件。 导航菜单由AEM页面层次结构驱动，并使用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=zh-Hans)提供的JSON模型。
 
 已实施![导航](assets/navigation-routing/final-navigation-implemented.gif)
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 ## 检查HeaderComponent更新 {#inspect-header}
 
-在前几章中，已通过`app.component.html`将`HeaderComponent`组件添加为纯Angular组件。 在本章中，`HeaderComponent`组件已从应用程序中删除，并通过[模板编辑器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)添加。 这允许用户在AEM中配置`HeaderComponent`的导航菜单。
+在前几章中，已通过`app.component.html`将`HeaderComponent`组件添加为纯Angular组件。 在本章中，`HeaderComponent`组件已从应用程序中删除，并通过[模板编辑器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hans)添加。 这允许用户在AEM中配置`HeaderComponent`的导航菜单。
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ ht-degree: 0%
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`组件将通过`sling:resourceSuperType`属性继承[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)的所有功能。
+   AEM `Header`组件将通过`sling:resourceSuperType`属性继承[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=zh-Hans)的所有功能。
 
 ## 将HeaderComponent添加到SPA模板 {#add-header-template}
 

@@ -32,8 +32,8 @@ ht-degree: 0%
 继续使用AEM Forms中的SendGrid动态模板发送电子邮件之前，请确保已满足以下先决条件：
 
 1. **SendGrid帐户**：在[https://sendgrid.com](https://sendgrid.com)注册SendGrid帐户以访问其电子邮件投放服务。 您需要帐户凭据才能将SendGrid与AEM Forms集成。
-1. **熟悉创建数据源**：具有在AEM Forms中创建数据源的工作知识。 如果需要，请参阅有关[创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)的文档以了解详细说明。
-1. **熟悉表单数据模型**：了解AEM Forms中表单数据模型的概念。 如果需要，请查看有关[创建表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)的文档，以确保您具有必要的了解。
+1. **熟悉创建数据源**：具有在AEM Forms中创建数据源的工作知识。 如果需要，请参阅有关[创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=zh-Hans)的文档以了解详细说明。
+1. **熟悉表单数据模型**：了解AEM Forms中表单数据模型的概念。 如果需要，请查看有关[创建表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=zh-Hans)的文档，以确保您具有必要的了解。
 
 满足这些先决条件后，您将具备基本知识和资源，能够使用AEM Forms的SendGrid动态模板有效发送电子邮件。
 

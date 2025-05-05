@@ -30,9 +30,9 @@ AEM Headless内容建模中使用的内容片段，通常引用要在Headless体
 + `_dynamicUrl`是用于图像资产的Web优化投放的URL。
    + `_dynamicUrl`不包含AEM源，因此域(AEM Author或AEM Publish服务)必须由客户端应用程序提供。
 + `_authorUrl`是AEM创作实例上图像资源的完整URL
-   + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html)可用于提供Headless应用程序的预览体验。
+   + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=zh-Hans)可用于提供Headless应用程序的预览体验。
 + `_publishUrl`是AEM发布中图像资源的完整URL
-   + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html)通常是Headless应用程序的生产部署显示图像的地方。
+   + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=zh-Hans)通常是Headless应用程序的生产部署显示图像的地方。
 
 `_dynamicUrl`是建议用于图像资产投放的URL，应尽可能替换`_path`、`_authorUrl`和`_publishUrl`的使用。
 
@@ -50,7 +50,7 @@ AEM Headless内容建模中使用的内容片段，通常引用要在Headless体
 
 确保包含图像引用的内容片段字段为&#x200B;__内容引用__&#x200B;数据类型。
 
-通过选择字段并检查右侧的&#x200B;__属性__&#x200B;选项卡，可在[内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)中审阅字段类型。
+通过选择字段并检查右侧的&#x200B;__属性__&#x200B;选项卡，可在[内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html?lang=zh-Hans)中审阅字段类型。
 
 ![内容引用了图像的内容片段模型](./assets/images/content-fragment-model.jpeg)
 

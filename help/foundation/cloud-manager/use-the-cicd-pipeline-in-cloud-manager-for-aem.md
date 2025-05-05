@@ -54,7 +54,7 @@ AdobeCloud Manager提供了一个简单但灵活的自助CI/CD管道，允许AEM
 
 ## 支持材料
 
-* [Cloud Manager用户指南](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
-* [下载代码扫描 [!DNL SonarQube] 规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)
+* [Cloud Manager用户指南](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hans)
+* [下载代码扫描 [!DNL SonarQube] 规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html?lang=zh-Hans)
    * *XLSX在链接节的底部可用*
 * [[!DNL SonarQube] Java™规则索引](https://rules.sonarsource.com/java/)

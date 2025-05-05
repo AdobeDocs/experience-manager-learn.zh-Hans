@@ -51,7 +51,7 @@ ht-degree: 14%
    + [ModSecurity CRS DoS攻击防护](./security/modsecurity-crs-dos-attack-protection.md)
    + [通过专用证书连接到API的HTTPS连接](./security/call-internal-apis-having-private-certificate.md)
    + [来自AEM的双向TLS (mTLS)身份验证](./security/mutual-tls-authentication.md)
-   + [JWT-To-OAuth凭据迁移](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
+   + [JWT-To-OAuth凭据迁移](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
 + 工作流 {#workflow}
    + [使用工作流编辑器](./workflow/use-the-workflow-editor.md)
    + [使用工作流](./workflow/use-workflow.md)

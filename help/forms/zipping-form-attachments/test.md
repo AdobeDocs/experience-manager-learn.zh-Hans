@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 测试两种方法所需的步骤
 
-* 将[天CQ邮件服务](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=en#configuring-the-mail-service)配置为从AEM Forms服务器发送电子邮件
+* 将[天CQ邮件服务](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=zh-Hans#configuring-the-mail-service)配置为从AEM Forms服务器发送电子邮件
 * 使用[felix Web控制台](http://localhost:4502/system/console/bundles)部署[formattachments](assets/formattachments.formattachments.core-1.0-SNAPSHOT.jar)包
 
 ## 将zip文件作为电子邮件附件发送

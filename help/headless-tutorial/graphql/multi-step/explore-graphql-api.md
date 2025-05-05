@@ -65,7 +65,7 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
 ## 使用 GraphiQL IDE
 
-[GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html)工具使开发人员能够针对当前AEM环境中的内容创建和测试查询。 GraphiQL工具还使用户能够&#x200B;**保留或保存**&#x200B;查询，以供生产设置中的客户端应用程序使用。
+[GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=zh-Hans)工具使开发人员能够针对当前AEM环境中的内容创建和测试查询。 GraphiQL工具还使用户能够&#x200B;**保留或保存**&#x200B;查询，以供生产设置中的客户端应用程序使用。
 
 接下来，使用内置的GraphiQL IDE来探索AEM的GraphQL API的强大功能。
 
@@ -216,7 +216,7 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
    ![使用查询变量进行筛选](assets/explore-graphql-api/using-query-variables-filter.png)
 
-   有许多其他选项可用于筛选和创建复杂查询，请参阅[学习将GraphQL与AEM结合使用 — 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html)。
+   有许多其他选项可用于筛选和创建复杂查询，请参阅[学习将GraphQL与AEM结合使用 — 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html?lang=zh-Hans)。
 
 1. 增强上述查询以获取配置文件图片
 
@@ -280,7 +280,7 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
 ## 持久查询 {#persist-queries}
 
-一旦开发人员对从查询返回的查询和结果数据满意，下一步就是将查询存储或保留到AEM。 [持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)是向客户端应用程序公开GraphQL API的首选机制。 持久查询后，可以使用GET请求来请求它，并缓存到Dispatcher和CDN层。 持久查询的性能要好得多。 除了性能优势之外，持久查询还可以确保不会意外向客户端应用程序显示额外数据。 有关[持久查询的更多详细信息见此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)。
+一旦开发人员对从查询返回的查询和结果数据满意，下一步就是将查询存储或保留到AEM。 [持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hans)是向客户端应用程序公开GraphQL API的首选机制。 持久查询后，可以使用GET请求来请求它，并缓存到Dispatcher和CDN层。 持久查询的性能要好得多。 除了性能优势之外，持久查询还可以确保不会意外向客户端应用程序显示额外数据。 有关[持久查询的更多详细信息见此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hans)。
 
 接下来，保留两个简单查询，它们将在下一章中使用。
 
@@ -396,7 +396,7 @@ AEM的GraphQL API提供了一种强大的查询语言，用于将内容片段的
 
 ## 其他资源
 
-要了解有关GraphQL查询的更多信息，请访问[学习将GraphQL与AEM结合使用 — 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html)。
+要了解有关GraphQL查询的更多信息，请访问[学习将GraphQL与AEM结合使用 — 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html?lang=zh-Hans)。
 
 ## 恭喜！ {#congratulations}
 

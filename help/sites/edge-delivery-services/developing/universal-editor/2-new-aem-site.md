@@ -25,12 +25,12 @@ AEM站点是存储和创作网站内容的地方。 最终体验是AEM网站内�
 
 ![适用于Edge Delivery Services和通用编辑器的新AEM站点](./assets/2-new-aem-site/new-site.png)
 
-按照文档[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site)中概述的详细步骤创建新的AEM站点。  以下是这些步骤的汇总列表，包括本教程中使用的值。
+按照文档[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site)中概述的详细步骤创建新的AEM站点。  以下是这些步骤的汇总列表，包括本教程中使用的值。
 1. **在AEM创作中创建新站点**。 本教程使用以下站点命名：
    * 站点标题： `WKND (Universal Editor)`
    * 站点名称： `aem-wknd-eds-ue`
 
-      * 网站名称值必须与添加到`paths.json`[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping)的网站路径名称匹配。
+      * 网站名称值必须与添加到`paths.json`[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping)的网站路径名称匹配。
 
 2. 使用AEM创作站点模板[&#128279;](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases)从Edge Delivery Services中导入最新的模板&#x200B;**。**
 3. **命名站点**&#x200B;以匹配GitHub存储库名称，并将GitHub URL设置为存储库的URL。

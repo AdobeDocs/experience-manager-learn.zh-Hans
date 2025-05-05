@@ -40,4 +40,4 @@ WKND SPA实施仅支持AEM 6.4.8+、AEM 6.5.5+和AEM as a Cloud Service。
 
 有关使用SPA编辑器进行开发的详细教程，请参阅：
 
-* [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+* [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hans)

@@ -27,4 +27,4 @@ AEM项目包含实施的所有代码和配置。 [!DNL AEM Project Archetype]创
 ## 其他资源 {#additional-resources}
 
 * [GitHub项目](https://github.com/adobe/aem-project-archetype)
-* [AEM项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [AEM项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)

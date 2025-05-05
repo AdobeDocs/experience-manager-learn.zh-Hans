@@ -87,7 +87,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   > 注意`frontendModule=angular`属性。 这会告知AEM项目原型使用要与AEM SPA编辑器一起使用的启动程序[Angular代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)引导项目。
+   > 注意`frontendModule=angular`属性。 这会告知AEM项目原型使用要与AEM SPA编辑器一起使用的启动程序[Angular代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hans)引导项目。
 
 ## 构建项目
 

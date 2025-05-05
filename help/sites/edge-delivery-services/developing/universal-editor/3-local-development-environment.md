@@ -127,7 +127,7 @@ info: Enabled reverse proxy to https://main--aem-wknd-eds-ue--<YOUR_ORG>.aem.pag
 
 AEM CLI在浏览器中打开网站： `http://localhost:3000/`。 项目中的更改将自动在Web浏览器中热重新加载，而内容更改[需要发布到预览环境](./6-author-block.md)并刷新Web浏览器。
 
-如果网站打开时页面为404，则很可能是[新代码项目](./1-new-code-project.md)中更新的[fstab.yaml或paths.json](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project)配置不正确，或者更改尚未提交到`main`分支。
+如果网站打开时页面为404，则很可能是[新代码项目](./1-new-code-project.md)中更新的[fstab.yaml或paths.json](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project)配置不正确，或者更改尚未提交到`main`分支。
 
 ## 构建JSON片段
 

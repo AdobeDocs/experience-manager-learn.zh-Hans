@@ -34,7 +34,7 @@ ht-degree: 2%
 
 * 正在运行AEM Forms 6.5.16的实例
 
-* [在创作和发布实例上启用Headless表单](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=en)
+* [在创作和发布实例上启用Headless表单](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=zh-Hans)
 
 ## 后续步骤
 

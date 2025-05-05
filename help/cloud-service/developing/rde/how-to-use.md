@@ -49,7 +49,7 @@ $ mvn clean package
 
 ## 使用AEM-RDE插件部署AEM工件
 
-首先，确保已安装[最新的`aio` CLI模块](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli)。
+首先，确保已安装[最新的`aio` CLI模块](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli)。
 
 然后，使用`aio aem:rde:install`命令部署各种AEM工件。 现在你必须
 
@@ -204,7 +204,7 @@ $ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
 
 ### 部署配置(YAML)文件
 
-可以使用`install`命令将CDN、维护任务、日志转发和AEM API身份验证配置文件部署到RDE。 这些配置作为YAML文件在AEM项目的`config`文件夹中进行管理，有关更多详细信息，请参阅[支持的配置](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations)。
+可以使用`install`命令将CDN、维护任务、日志转发和AEM API身份验证配置文件部署到RDE。 这些配置作为YAML文件在AEM项目的`config`文件夹中进行管理，有关更多详细信息，请参阅[支持的配置](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations)。
 
 要了解如何部署配置文件，让我们增强`cdn`配置文件并将其部署到RDE。
 
@@ -273,8 +273,8 @@ aem rde status   Get a list of the bundles and configs deployed to the current r
 
 ## 其他资源
 
-[RDE命令文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
+[RDE命令文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
 
 用于与Adobe I/O Runtime快速开发环境交互的[AEM CLI插件](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[AEM项目设置](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
+[AEM项目设置](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)

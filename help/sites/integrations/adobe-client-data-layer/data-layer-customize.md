@@ -21,13 +21,13 @@ ht-degree: 0%
 
 # 使用AEM组件自定义Adobe客户端数据层 {#customize-data-layer}
 
-了解如何使用自定义Adobe组件中的内容自定义AEM客户端数据层。 了解如何使用[AEM核心组件提供的API来扩展](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)和自定义数据层。
+了解如何使用自定义Adobe组件中的内容自定义AEM客户端数据层。 了解如何使用[AEM核心组件提供的API来扩展](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html?lang=zh-Hans)和自定义数据层。
 
 ## 您即将构建的内容
 
 ![署名数据层](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
-在本教程中，让我们探索通过更新WKND [Byline组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html)来扩展Adobe客户端数据层的各种选项。 _Byline_&#x200B;组件是&#x200B;**自定义组件**，本教程中吸取的经验教训可以应用于其他自定义组件。
+在本教程中，让我们探索通过更新WKND [Byline组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html?lang=zh-Hans)来扩展Adobe客户端数据层的各种选项。 _Byline_&#x200B;组件是&#x200B;**自定义组件**，本教程中吸取的经验教训可以应用于其他自定义组件。
 
 ### 目标 {#objective}
 
@@ -173,7 +173,7 @@ ht-degree: 0%
 
 ## 更新署名HTL {#htl}
 
-接下来，更新`Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en)。 HTL(HTML模板语言)是用于呈现组件HTML的模板。
+接下来，更新`Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=zh-Hans)。 HTL(HTML模板语言)是用于呈现组件HTML的模板。
 
 每个AEM组件上的特殊数据属性`data-cmp-data-layer`用于公开其数据层。 AEM核心组件提供的JavaScript将查找此数据属性。 此数据属性的值使用署名Sling模型的`getData()`方法返回的JSON字符串进行填充，并插入到Adobe客户端数据层中。
 
@@ -434,4 +434,4 @@ Adobe Client Data Layer是事件驱动的，触发操作的最常见事件之一
 
 * [Adobe客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
 * [数据层与核心组件的集成](https://github.com/adobe/aem-core-wcm-components/blob/main/DATA_LAYER_INTEGRATION.md)
-* [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans)

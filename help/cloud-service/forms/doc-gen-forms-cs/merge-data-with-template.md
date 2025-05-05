@@ -21,7 +21,7 @@ ht-degree: 0%
 # 进行POST调用
 
 
-下一步是使用必要的参数对端点进行HTTP POST调用。 模板和数据文件作为资源文件提供。 生成的pdf的属性通过请求中的选项参数指定。embedFonts属性用于在生成的pdf中嵌入自定义字体。[请按照此文档将自定义字体部署到Forms云实例。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en)属性在options.json资源文件中指定。 由于端点具有基于令牌的身份验证，因此我们在请求标头中传递访问令牌。
+下一步是使用必要的参数对端点进行HTTP POST调用。 模板和数据文件作为资源文件提供。 生成的pdf的属性通过请求中的选项参数指定。embedFonts属性用于在生成的pdf中嵌入自定义字体。[请按照此文档将自定义字体部署到Forms云实例。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=zh-Hans)属性在options.json资源文件中指定。 由于端点具有基于令牌的身份验证，因此我们在请求标头中传递访问令牌。
 
 以下代码用于通过将数据与模板合并来生成pdf
 

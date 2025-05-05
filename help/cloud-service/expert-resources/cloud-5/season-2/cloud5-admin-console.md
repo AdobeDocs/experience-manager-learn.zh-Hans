@@ -24,7 +24,7 @@ ht-degree: 3%
 
 ## 本视频中涵盖的内容
 
-+ [了解Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
++ [了解Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html?lang=zh-Hans)
 + [Admin Console概述](https://helpx.adobe.com/cn/enterprise/using/admin-console.html)
 
 ## 其他资源

@@ -78,10 +78,10 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
 
 ## 其他资源
 
-* [AEM Sites创作文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-* [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [AEM Sites创作文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=zh-Hans)
+* [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=zh-Hans)
+* [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html?lang=zh-Hans)
+* [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html?lang=zh-Hans)
 * [AEM as a Cloud Service教程](/help/cloud-service/overview.md)
 * [AEM Assets教程](/help/assets/overview.md)
 * [AEM Forms教程](/help/forms/overview.md)

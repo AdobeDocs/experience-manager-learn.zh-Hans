@@ -70,11 +70,11 @@ Adobe Cloud Manager有助于代码构建和部署到AEM as a Cloud Service。 �
 
 代码扫描会结合使用Java和AEM的特定最佳实践来执行静态代码分析。
 
-如果代码中存在严重安全漏洞，则代码扫描会导致生成失败。 可以覆盖较小的违规，但建议修复这些违规。 请注意，代码扫描不完善，可能会导致[误报](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives)。
+如果代码中存在严重安全漏洞，则代码扫描会导致生成失败。 可以覆盖较小的违规，但建议修复这些违规。 请注意，代码扫描不完善，可能会导致[误报](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html?lang=zh-Hans#dealing-with-false-positives)。
 
 要解决代码扫描问题，请下载Cloud Manager通过&#x200B;**下载详细信息**&#x200B;按钮提供的CSV格式报表，并查看任何条目。
 
-有关更多详细信息，请参阅AEM特定规则，请参阅Cloud Manager文档的[自定义AEM特定代码扫描规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html)。
+有关更多详细信息，请参阅AEM特定规则，请参阅Cloud Manager文档的[自定义AEM特定代码扫描规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=zh-Hans)。
 
 ## 生成图像
 
@@ -102,7 +102,7 @@ set the 'mergeConfigurations' flag to 'true' if you want to merge multiple confi
 #### 原因2
 
 + __原因：__ AEM项目错误地包含两次相同的代码包，从而导致该包中包含的任何OSGi配置重复。
-+ __分辨率：__&#x200B;查看嵌入到all项目中的所有pom.xml包，并确保它们的`filevault-package-maven-plugin` [配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target)设置为`<cloudManagerTarget>none</cloudManagerTarget>`。
++ __分辨率：__&#x200B;查看嵌入到all项目中的所有pom.xml包，并确保它们的`filevault-package-maven-plugin` [配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=zh-Hans#cloud-manager-target)设置为`<cloudManagerTarget>none</cloudManagerTarget>`。
 
 ### 格式错误的repoinit脚本
 
@@ -230,8 +230,8 @@ AEM as a Cloud Service会在每个AEM版本中自动包含最新的核心组件�
 + __原因：__ AEM用于向AEM发布服务部署内容包的复制服务用户无法写入AEM发布上的`/var`。 这会导致将内容包部署到AEM Publish服务失败。
 + __解决方案：__&#x200B;以下解决此问题的方法按优先顺序列出：
    1. 如果不需要使用`/var`资源，请从作为应用程序的一部分部署的内容包中移除`/var`下的任何资源。
-   2. 如果需要`/var`资源，请使用[repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)定义节点结构。 Repoinit脚本可以通过OSGi运行模式定位到AEM Author和/或AEM Publish。
-   3. 如果`/var`资源仅在AEM Author上需要，并且无法使用[repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)进行合理建模，请将它们移动到离散内容包，该内容包仅由[嵌入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)在AEM Author运行模式文件夹(`<target>/apps/example-packages/content/install.author</target>`)的`all`包中的AEM Author安装。
+   2. 如果需要`/var`资源，请使用[repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=zh-Hans#repoinit)定义节点结构。 Repoinit脚本可以通过OSGi运行模式定位到AEM Author和/或AEM Publish。
+   3. 如果`/var`资源仅在AEM Author上需要，并且无法使用[repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=zh-Hans#repoinit)进行合理建模，请将它们移动到离散内容包，该内容包仅由[嵌入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=zh-Hans#embeddeds)在AEM Author运行模式文件夹(`<target>/apps/example-packages/content/install.author</target>`)的`all`包中的AEM Author安装。
    4. 按照此[Adobe KB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html)中的说明，为`sling-distribution-importer`服务用户提供适当的ACL。
 
 ### 创建Adobe支持案例

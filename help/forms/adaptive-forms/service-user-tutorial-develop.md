@@ -21,7 +21,7 @@ ht-degree: 0%
 
 在Adobe Experience Manager (AEM)的早期版本中，管理资源解析程序用于需要访问存储库的后端处理。 AEM 6.3中不建议使用管理资源解析程序。而是使用存储库中具有特定权限的系统用户。
 
-了解有关[在AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html)中创建和使用服务用户的详细信息。
+了解有关[在AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html?lang=zh-Hans)中创建和使用服务用户的详细信息。
 
 本文介绍了如何创建系统用户和配置用户映射器属性。
 

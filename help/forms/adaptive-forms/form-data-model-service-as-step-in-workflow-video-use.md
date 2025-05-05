@@ -28,7 +28,7 @@ ht-degree: 0%
 * [下载并部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 这是用于设置元数据属性的自定义OSGI捆绑包。
 >在AEM Forms 6.5及更高版本中，此功能现成可用，如[此处所述](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* 使用[此处](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)所述的SampleRest.war文件设置tomcat。在Tomcat中部署的war文件具有返回申请人的信用分数的代码。 信用得分是200到800之间的随机数
+* 使用[此处](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=zh-Hans)所述的SampleRest.war文件设置tomcat。在Tomcat中部署的war文件具有返回申请人的信用分数的代码。 信用得分是200到800之间的随机数
 
 * [使用包管理器将资源导入AEM](assets/invoke-fdm-as-service-step.zip)。该包包含以下内容：
 

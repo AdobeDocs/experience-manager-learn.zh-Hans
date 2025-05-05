@@ -35,12 +35,12 @@ ht-degree: 2%
 
 [http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl)
 
-[AEM的外部化器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html)应同时在AEM Author和AEM Publish上设置，以将发布运行模式映射到用于访问AEM Publish的公开可访问域。
+[AEM的外部化器](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/externalizer.html)应同时在AEM Author和AEM Publish上设置，以将发布运行模式映射到用于访问AEM Publish的公开可访问域。
 
-在此视频中，我们使用`/etc/hosts`伪造&#x200B;*www.example.com*&#x200B;以解析为本地主机，并使用[基本AEM Dispatcher配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)允许www.example.com在AEM Publish之前发布。
+在此视频中，我们使用`/etc/hosts`伪造&#x200B;*www.example.com*&#x200B;以解析为本地主机，并使用[基本AEM Dispatcher配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=zh-Hans)允许www.example.com在AEM Publish之前发布。
 
 ## 支持材料 {#supporting-materials}
 
 * [下载AEM核心组件](https://github.com/adobe/aem-core-wcm-components/releases)
 * [下载We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
-* [安装 Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)
+* [安装 Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=zh-Hans)

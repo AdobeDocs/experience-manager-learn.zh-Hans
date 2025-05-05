@@ -27,7 +27,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
-> 详细了解[Adobe XD Premium培训计划](https://helpx.adobe.com/support/xd.html)如何帮助您将Asset Link与Adobe Experience Manager工作流集成。
+> 详细了解[Adobe XD Premium培训计划](https://helpx.adobe.com/cn/support/xd.html)如何帮助您将Asset Link与Adobe Experience Manager工作流集成。
 
 ## Adobe Asset Link和AEM创意工作流程
 

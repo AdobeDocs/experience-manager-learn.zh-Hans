@@ -127,7 +127,7 @@ public class GeneratePDFFromMobileFormData extends SlingAllMethodsServlet implem
 
 ### 呈现交互式PDF
 
-以下代码使用[Forms服务API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html)来呈现使用移动设备表单数据的交互式PDF。
+以下代码使用[Forms服务API](https://helpx.adobe.com/cn/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html)来呈现使用移动设备表单数据的交互式PDF。
 
 ```java
 package com.aemforms.mobileforms.core.documentservices.impl;

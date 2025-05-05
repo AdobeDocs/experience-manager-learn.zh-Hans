@@ -230,7 +230,7 @@ public class StreamPDFToEmbed extends SlingAllMethodsServlet {
 
 1. [下载并安装嵌入的pdf包](assets/embedpdf.core-1.0-SNAPSHOT.jar)。
 这有了Servlet将数据与XDP模板合并，并使PDF流回。
-1. 使用[AEM ConfigMgr](http://localhost:4502/system/console/configMgr)在Adobe Granite CSRF筛选器的排除路径部分中添加路径/bin/getPDFToEmbed 。 在生产环境中，建议使用[CSRF保护框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
+1. 使用[AEM ConfigMgr](http://localhost:4502/system/console/configMgr)在Adobe Granite CSRF筛选器的排除路径部分中添加路径/bin/getPDFToEmbed 。 在生产环境中，建议使用[CSRF保护框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=zh-Hans)
 1. [导入客户端库和自定义组件](assets/embed-pdf.zip)
 1. [导入自适应表单和模板](assets/embed-pdf-form-and-xdp.zip)
 1. [预览自适应表单](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)

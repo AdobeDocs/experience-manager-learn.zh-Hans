@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 创建Maven项目
 
-第一步是使用适当的Adobe Maven原型创建一个Maven项目。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中列出了详细步骤。 将您的maven项目导入到eclipse中后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
+第一步是使用适当的Adobe Maven原型创建一个Maven项目。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=zh-Hans)中列出了详细步骤。 将您的maven项目导入到eclipse中后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
 
 
 ### 创建实现WorkflowProcess的类
@@ -143,7 +143,7 @@ QueryBuilder服务用于查询attachmentsPath文件夹下nt：file类型的节�
 
 #### 生成和部署
 
-[按照此处所述生成包](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[按照此处所述生成包](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=zh-Hans)
 [确保包已部署且处于活动状态](http://localhost:4502/system/console/bundles)
 
 ## 后续步骤

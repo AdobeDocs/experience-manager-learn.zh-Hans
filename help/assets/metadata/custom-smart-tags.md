@@ -38,4 +38,4 @@ ht-degree: 1%
 
 ## 其他资源
 
-* AEM 6.4需要[最新的Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)。
+* AEM 6.4需要[最新的Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans#aem-64)。

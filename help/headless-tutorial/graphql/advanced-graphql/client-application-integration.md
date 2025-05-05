@@ -117,11 +117,11 @@ ht-degree: 1%
 
 ## 查看代码
 
-在[基础教程 — 使用AEM的GraphQL API构建一个React应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)步骤中，我们审查并增强了几个关键文件，以获得实践专业知识。 在增强WKND应用程序之前，请查看关键文件。
+在[基础教程 — 使用AEM的GraphQL API构建一个React应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html?lang=zh-Hans#review-the-aemheadless-object)步骤中，我们审查并增强了几个关键文件，以获得实践专业知识。 在增强WKND应用程序之前，请查看关键文件。
 
-* [查看AEMHeadless对象](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)
+* [查看AEMHeadless对象](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html?lang=zh-Hans#review-the-aemheadless-object)
 
-* [实施以运行AEM GraphQL持久查询](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#implement-to-run-aem-graphql-persisted-queries)
+* [实施以运行AEM GraphQL持久查询](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html?lang=zh-Hans#implement-to-run-aem-graphql-persisted-queries)
 
 ### 查看`Adventures` React组件
 

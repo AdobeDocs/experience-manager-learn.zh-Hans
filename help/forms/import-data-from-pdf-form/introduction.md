@@ -28,7 +28,7 @@ ht-degree: 4%
 
 * 已安装Forms附加组件包的AEM工作实例。
 
-* [根据此文档设置的开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+* [根据此文档设置的开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=zh-Hans)
 
 * AEM Forms Designer
 

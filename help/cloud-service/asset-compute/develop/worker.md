@@ -43,7 +43,7 @@ Asset Compute工作进程在`renditionCallback(...)`函数中实施Asset Compute
 1. Asset Compute Worker将新演绎版的二进制数据保存到`rendition.path`。
 1. 写入到`rendition.path`的二进制数据将通过Asset Compute SDK传输到AEM创作服务，并公开为&#x200B;__(4a)__&#x200B;文本演绎版，__(4b)__&#x200B;保留到该资产的元数据节点。
 
-上图列出了Asset Compute开发人员面临的问题以及指向Asset Compute工作程序调用的逻辑流。 奇怪的是，Asset Compute执行的[内部详细信息](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html)可用，但只能依赖公共Asset Compute SDK API合同。
+上图列出了Asset Compute开发人员面临的问题以及指向Asset Compute工作程序调用的逻辑流。 奇怪的是，Asset Compute执行的[内部详细信息](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html?lang=zh-Hans)可用，但只能依赖公共Asset Compute SDK API合同。
 
 ## 工人的解剖学
 

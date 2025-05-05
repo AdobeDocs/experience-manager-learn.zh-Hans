@@ -55,7 +55,7 @@ ht-degree: 2%
 
 如果您已有AEM Forms项目，[请按照以下说明进行操作](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis)，以启用Adobe Developer Console项目的OAuth服务器到服务器凭据ClientID与AEM实例通信
 
-如果您没有AEM Forms项目，请按照本文档创建一个[AEM Forms项目。](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started)，然后启用Adobe Developer Console项目的OAuth服务器到服务器凭据ClientID以使用此文档与AEM实例[通信。](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis)
+如果您没有AEM Forms项目，请按照本文档创建一个[AEM Forms项目。](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started)，然后启用Adobe Developer Console项目的OAuth服务器到服务器凭据ClientID以使用此文档与AEM实例[通信。](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis)
 
 
 ## 后续步骤

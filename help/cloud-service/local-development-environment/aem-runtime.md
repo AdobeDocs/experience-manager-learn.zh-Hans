@@ -24,7 +24,7 @@ ht-degree: 7%
 >id="aemcloud_localdev_aemruntime"
 >title="本地 AEM 运行时"
 >abstract="Adobe Experience Manager (AEM) 可以使用 AEM as a Cloud Service SDK 的快速入门 Jar 在本地运行。这样开发人员即可先部署到和测试自定义代码、配置和内容，然后再将它提交到源代码管理以及将它部署到 AEM as a Cloud Service 环境。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=zh-Hans" text="AEM as a Cloud Service SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下载 AEM as a Cloud Service SDK"
 
 Adobe Experience Manager (AEM) 可以使用 AEM as a Cloud Service SDK 的快速入门 Jar 在本地运行。这样开发人员即可先部署到和测试自定义代码、配置和内容，然后再将它提交到源代码管理以及将它部署到 AEM as a Cloud Service 环境。
@@ -169,7 +169,7 @@ $ java -jar aem-publish-p4503.jar
 
 ## 在预发行模式中设置本地AEM服务
 
-本地AEM运行时可在[预发行模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html)下启动，允许开发人员针对AEM as a Cloud Service的下一发行版功能进行构建。 通过在本地AEM运行时的第一个启动中传递`-r prerelease`参数，启用了预发行版。 这可以同时用于本地AEM Author和AEM Publish服务。
+本地AEM运行时可在[预发行模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=zh-Hans)下启动，允许开发人员针对AEM as a Cloud Service的下一发行版功能进行构建。 通过在本地AEM运行时的第一个启动中传递`-r prerelease`参数，启用了预发行版。 这可以同时用于本地AEM Author和AEM Publish服务。
 
 
 >[!BEGINTABS]
@@ -208,7 +208,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 ## 模拟内容分发 {#content-distribution}
 
-在真实的Cloud Service环境中，使用[Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe Pipeline将内容从Author Service分发到Publish Service。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution)是仅在云环境中可用的独立微服务。
+在真实的Cloud Service环境中，使用[Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe Pipeline将内容从Author Service分发到Publish Service。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=zh-Hans#content-distribution)是仅在云环境中可用的独立微服务。
 
 在开发期间，可能需要使用本地Author和Publish服务模拟内容的分发。 这可以通过启用旧版复制代理来实现。
 
@@ -271,7 +271,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 ## 可选的本地AEM运行时设置任务
 
-+ __OSGi配置环境变量和机密变量__&#x200B;是[专门为AEM本地运行时](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development)设置的，而不是使用aio CLI管理它们。
++ __OSGi配置环境变量和机密变量__&#x200B;是[专门为AEM本地运行时](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hans#local-development)设置的，而不是使用aio CLI管理它们。
 
 ## 何时更新快速入门Jar
 

@@ -60,7 +60,7 @@ ht-degree: 1%
 
 视频的高级步骤：
 
-1. 在Cloud Manager[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)中创建新的Git 存储库
+1. 在Cloud Manager[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html?lang=zh-Hans)中创建新的Git 存储库
 1. 将主题源项目添加到Cloud Manager Git存储库：
 
    ```shell
@@ -71,7 +71,7 @@ ht-degree: 1%
    $ git remote add origin <CLOUD_MANAGER_GIT_REPOSITORY_URL>
    ```
 
-1. 在Cloud Manager中配置[前端管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)以部署前端代码。
+1. 在Cloud Manager中配置[前端管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=zh-Hans)以部署前端代码。
 1. 运行前端管道将更新部署到目标AEM环境。
 
 ### 示例存储库

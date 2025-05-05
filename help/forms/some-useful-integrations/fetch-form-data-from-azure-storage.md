@@ -22,7 +22,7 @@ ht-degree: 0%
 本文说明如何使用存储在Azure存储中的数据填充自适应表单。
 假设您已将自适应表单数据存储在Azure存储中，现在希望使用该数据预填充自适应表单。
 >[!NOTE]
->本文中的代码不适用于基于核心组件的自适应表单。[此处提供了基于核心组件的自适应表单的等效文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+>本文中的代码不适用于基于核心组件的自适应表单。[此处提供了基于核心组件的自适应表单的等效文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=zh-Hans)
 
 
 ## 创建GET请求
@@ -86,7 +86,7 @@ if(guid!=null&&!guid.isEmpty())
 
 * [导入自适应表单示例](./assets/bank-account-sample-form.zip)
 
-* [使用OSGi配置控制台在Azure门户配置中指定适当的值。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
+* [使用OSGi配置控制台在Azure门户配置中指定适当的值。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=zh-Hans#provide-the-blob-sas-token-and-storage-uri)
 
 * [预览并提交银行帐户表单](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 

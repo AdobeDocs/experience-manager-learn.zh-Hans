@@ -27,7 +27,7 @@ AEM的GraphQL API提供了一项强大的功能，可将RTF作为HTML、纯文�
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104?quality=12&learn=on)
 
-在内容片段编辑器中，多行文本字段的菜单栏为作者提供标准的RTF格式功能，如&#x200B;**bold**、*斜体*&#x200B;和下划线。 在全屏模式下打开多行字段可启用[其他格式工具，如段落文字、查找和替换、拼写检查等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)。
+在内容片段编辑器中，多行文本字段的菜单栏为作者提供标准的RTF格式功能，如&#x200B;**bold**、*斜体*&#x200B;和下划线。 在全屏模式下打开多行字段可启用[其他格式工具，如段落文字、查找和替换、拼写检查等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html?lang=zh-Hans)。
 
 >[!NOTE]
 >

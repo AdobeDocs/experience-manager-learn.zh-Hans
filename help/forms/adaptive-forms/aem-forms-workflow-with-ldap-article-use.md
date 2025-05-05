@@ -22,7 +22,7 @@ ht-degree: 0%
 
 在AEM工作流中使用自适应表单时，您需要动态地将任务分配给表单提交者的经理。 要完成此用例，我们必须使用Ldap配置AEM。
 
-[此处](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)详细说明了使用LDAP配置AEM所需的步骤。
+[此处](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/ldap-config.html)详细说明了使用LDAP配置AEM所需的步骤。
 
 出于本文的目的，我附加了使用Adobe Ldap配置AEM时使用的配置文件。 这些文件包含在包中，可使用包管理器导入这些文件。
 

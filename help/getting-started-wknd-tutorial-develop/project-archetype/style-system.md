@@ -69,7 +69,7 @@ ht-degree: 0%
 
 ## 您即将构建的内容 {#what-build}
 
-本章使用[样式系统功能](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)创建文章页面上使用的&#x200B;**Title**&#x200B;和&#x200B;**Text**&#x200B;组件的变体。
+本章使用[样式系统功能](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html?lang=zh-Hans)创建文章页面上使用的&#x200B;**Title**&#x200B;和&#x200B;**Text**&#x200B;组件的变体。
 
 ![标题可用的样式](assets/style-system/styles-added-title.png)
 
@@ -77,15 +77,15 @@ ht-degree: 0%
 
 ## 背景 {#background}
 
-[样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)允许开发人员和模板编辑器创建组件的多个可视化变体。 然后，作者可以在撰写页面时依次决定要使用哪种样式。 样式系统在本教程的其余部分中使用，以便在以低代码方法使用核心组件时实现多种独特样式。
+[样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=zh-Hans)允许开发人员和模板编辑器创建组件的多个可视化变体。 然后，作者可以在撰写页面时依次决定要使用哪种样式。 样式系统在本教程的其余部分中使用，以便在以低代码方法使用核心组件时实现多种独特样式。
 
 样式系统的基本思想是，作者可以选择组件的各种样式。 “样式”由插入到组件的外部div中的其他CSS类支持。 在客户端库中，会根据这些样式类添加CSS规则，以便组件更改外观。
 
-您可以在此找到[有关样式系统的详细文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html?lang=zh-Hans)。 还有一段很棒的[技术视频用于了解样式系统](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)。
+您可以在此找到[有关样式系统的详细文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html?lang=zh-Hans)。 还有一段很棒的[技术视频用于了解样式系统](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html?lang=zh-Hans)。
 
 ## 下划线样式 — 标题 {#underline-style}
 
-[标题组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/title.html)已作为&#x200B;**ui.apps**&#x200B;模块的一部分代理到`/apps/wknd/components/title`下的项目中。 标题元素(`H1`、`H2`、`H3`...)的默认样式已在&#x200B;**ui.frontend**&#x200B;模块中实现。
+[标题组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/title.html?lang=zh-Hans)已作为&#x200B;**ui.apps**&#x200B;模块的一部分代理到`/apps/wknd/components/title`下的项目中。 标题元素(`H1`、`H2`、`H3`...)的默认样式已在&#x200B;**ui.frontend**&#x200B;模块中实现。
 
 [WKND文章设计](assets/pages-templates/wknd-article-design.xd)包含带有下划线的标题组件的唯一样式。 可以使用“样式系统”让作者可以选择添加下划线样式，而不是创建两个组件或修改组件对话框。
 
@@ -195,7 +195,7 @@ ht-degree: 0%
 
 ## 引号块样式 — 文本 {#text-component}
 
-接下来，重复类似的步骤以对[文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html)应用唯一样式。 文本组件已作为&#x200B;**ui.apps**&#x200B;模块的一部分代理到`/apps/wknd/components/text`下的项目中。 段落元素的默认样式已在&#x200B;**ui.frontend**&#x200B;中实现。
+接下来，重复类似的步骤以对[文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=zh-Hans)应用唯一样式。 文本组件已作为&#x200B;**ui.apps**&#x200B;模块的一部分代理到`/apps/wknd/components/text`下的项目中。 段落元素的默认样式已在&#x200B;**ui.frontend**&#x200B;中实现。
 
 [WKND文章设计](assets/pages-templates/wknd-article-design.xd)包含带有引号块的文本组件的独特样式：
 

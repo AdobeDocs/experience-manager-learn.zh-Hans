@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ```
 Fri Jul 20 03:35:09 2018 W pid 8300 (tid 139937910880384) /etc/httpd/conf/publish-filters.any:5: Allowing requests with globs is considered unsafe.
-Please consult the documentation at 'https://www.adobe.com/go/docs_dispatcher_config_en' on how to use attributes 
+Please consult the documentation at 'https://www.adobe.com/go/docs_dispatcher_config_cn' on how to use attributes 
 method/url/query/protocol/path/selectors/extension/suffix instead.
 ```
 
@@ -130,7 +130,7 @@ Fri Jul 20 22:35:45 2018 I pid 3648 "GET /favicon.ico" 503 - 54234ms authorfarm/
 Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit ratio: 87.94 %
 ```
 
-这意味着将测量您从渲染级别和从缓存中提取情况。 您希望从缓存中达到80%以上，您应该按照[此处](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html)的帮助进行操作：
+这意味着将测量您从渲染级别和从缓存中提取情况。 您希望从缓存中达到80%以上，您应该按照[此处](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html?lang=zh-Hans)的帮助进行操作：
 
 使这一数字尽可能高。
 
@@ -169,7 +169,7 @@ Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42
 
 当您将您的Dispatcher配置为使用动态自动过滤器允许虚URL，但未通过在AEM渲染器上安装包来完成设置时，会发生此错误。
 
-要修复此问题，请在AEM实例上安装虚URL功能包，并允许匿名用户随时使用。 详细信息[此处](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
+要修复此问题，请在AEM实例上安装虚URL功能包，并允许匿名用户随时使用。 详细信息[此处](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html?lang=zh-Hans)
 
 设置的工作虚URL如下所示：
 

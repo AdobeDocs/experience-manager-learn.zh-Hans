@@ -34,7 +34,7 @@ Acroform是使用Acrobat创建的表单。 您可以使用Acrobat从头开始创
 >
 >如果要发送基于XFA的文档，则需要拼合该文档，并且Acrobat Sign签名标记需要作为静态文本显示在文档中。
 
-[Acrobat Sign文本标签文档](https://helpx.adobe.com/sign/using/text-tag.html)
+[Acrobat Sign文本标签文档](https://helpx.adobe.com/cn/sign/using/text-tag.html)
 
 >[!NOTE]
 >

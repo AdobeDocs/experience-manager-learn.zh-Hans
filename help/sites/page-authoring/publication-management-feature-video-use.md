@@ -39,4 +39,4 @@ AEM Sites提供了多种根据作者工作流程发布和取消发布内容的�
 
 ## 其他资源 {#additional-resources}
 
-* [发布页面文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html)
+* [发布页面文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html?lang=zh-Hans)

@@ -25,10 +25,10 @@ ht-degree: 0%
 
 要完成此用例，我们需要执行以下操作。
 
-* 将Reader扩展证书添加到“fd-service”用户。 [此处](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)列出了添加Reader扩展凭据的步骤
+* 将Reader扩展证书添加到“fd-service”用户。 [此处](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=zh-Hans)列出了添加Reader扩展凭据的步骤
 
 
-* 您还可以观看有关[配置Reader扩展凭据](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)的视频
+* 您还可以观看有关[配置Reader扩展凭据](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=zh-Hans)的视频
 
 
 * 创建可呈现和应用使用权限的自定义OSGi服务。 下面列出了完成此任务的代码

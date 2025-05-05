@@ -20,13 +20,13 @@ ht-degree: 2%
 
 如果已设置开发环境，则可以安全地跳过本教程的这一部分。
 
-[创建Maven项目](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started)
+[创建Maven项目](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started)
 
-[安装IntelliJ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up) — 您可以跳过添加本教程的字体模块。
+[安装IntelliJ](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up) — 您可以跳过添加本教程的字体模块。
 
-[初始化Git](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git)
+[初始化Git](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git)
 
-[将IntelliJ与AEM Forms的本地云就绪实例同步](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync)
+[将IntelliJ与AEM Forms的本地云就绪实例同步](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync)
 
 ## 后续步骤
 

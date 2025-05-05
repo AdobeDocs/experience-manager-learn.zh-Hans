@@ -90,7 +90,7 @@ ht-degree: 0%
 
 - 提交更改并将其推送到存储库。
 
-- 使用[Cloud Manager全栈管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)将更改部署到AEM实例。
+- 使用[Cloud Manager全栈管道](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)将更改部署到AEM实例。
 
 - 您还可以使用&#x200B;**权限**&#x200B;视图验证用户组的权限。 导航到AEM实例中的&#x200B;**工具** > **安全性** > **权限**。
 

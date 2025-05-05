@@ -24,7 +24,7 @@ ht-degree: 0%
 * [Adobe Sign包装包](assets/AcrobatSign.core-1.0.0-SNAPSHOT.jar)
 
 * [交互式通信模板示例](assets/waiver-interactive-communication.zip)
-* [部署DevelopingWithServiceUser捆绑包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
+* [部署DevelopingWithServiceUser捆绑包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=zh-Hans)
 * 使用OSGi configMgr在Apache Sling服务用户映射器服务中添加以下条目
   **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**
 
@@ -61,4 +61,4 @@ npm start
 
 ![cors-setting](assets/cors-settings.png)
 
-有关CORS配置选项的更多详细信息，请参阅[了解AEM的CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)。
+有关CORS配置选项的更多详细信息，请参阅[了解AEM的CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=zh-Hans)。

@@ -30,7 +30,7 @@ ht-degree: 2%
       * [Adobe Developer Console](https://developer.adobe.com/console/)
 
      >[!NOTE]
-     >您应具有在数据收集中开发、批准、Publish、管理扩展和管理环境的权限。 如果由于用户界面选项不可用而无法完成其中的任何步骤，请联系Experience Cloud管理员以请求获取访问权限。 有关标记权限的详细信息，[请参阅文档](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html)。
+     >您应具有在数据收集中开发、批准、Publish、管理扩展和管理环境的权限。 如果由于用户界面选项不可用而无法完成其中的任何步骤，请联系Experience Cloud管理员以请求获取访问权限。 有关标记权限的详细信息，[请参阅文档](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=zh-Hans)。
 
 * **Chrome浏览器扩展**
    * Adobe Experience Cloud Debugger(https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
@@ -75,7 +75,7 @@ AEM提供了与标记的现成集成。 此集成允许AEM管理员通过易于�
 1. 确保您处于正确的组织中，然后继续创建标记属性。
    ![Experience Cloud — 标记](assets/using-launch-adobe-io/launch-create-property.png)
 
-   *有关创建属性的详细信息，请参阅产品文档中的[创建属性](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property)。*
+   *有关创建属性的详细信息，请参阅产品文档中的[创建属性](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=zh-Hans#create-or-configure-a-property)。*
 1. 单击&#x200B;**新建属性**&#x200B;按钮
 1. 为您的属性提供一个名称(例如，*AEM Target教程*)
 1. 作为域，输入&#x200B;*localhost.com*，因为这是运行WKND演示网站的域。 尽管“*域*”字段是必填字段，但标记属性将在实施该属性的任何域中起作用。 此字段的主要用途是在规则生成器中预填充菜单选项。
@@ -87,7 +87,7 @@ AEM提供了与标记的现成集成。 此集成允许AEM管理员通过易于�
 
 #### 添加Target扩展
 
-Adobe Target扩展支持使用适用于新版Web `at.js`的Target JavaScript SDK进行客户端实施。 仍在使用Target旧库`mbox.js` [的客户应升级到at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html)以使用标记。
+Adobe Target扩展支持使用适用于新版Web `at.js`的Target JavaScript SDK进行客户端实施。 仍在使用Target旧库`mbox.js` [的客户应升级到at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html?lang=zh-Hans)以使用标记。
 
 Target扩展包含两个主要部分：
 
@@ -137,7 +137,7 @@ Target扩展包含两个主要部分：
 
 >[!NOTE]
 >
-> 授予Adobe Developer集成使用适当的[角色选择工作区的权限，以允许中心团队仅在少数几个工作区中进行基于API的更改](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html)。
+> 授予Adobe Developer集成使用适当的[角色选择工作区的权限，以允许中心团队仅在少数几个工作区中进行基于API的更改](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html?lang=zh-Hans)。
 
 1. 使用来自Adobe Developer的凭据在AEM中创建IMS集成。 （01时12分至03时55分）
 2. 在数据收集中，创建一个资产。 （涵盖[以上](#create-launch-property)）

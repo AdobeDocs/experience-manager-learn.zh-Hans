@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # AEM Headless的本地化内容
 
-AEM为Headless内容提供了[翻译集成框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html)，允许轻松翻译内容片段和支持资源以供跨区域设置使用。 该框架与用于翻译其他AEM内容(如页面、体验片段、Assets和Forms)的框架相同。 在翻译[Headless内容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/Headless/journeys/translation/overview.html?lang=zh-hans)并发布后，便可以供Headless应用程序使用。
+AEM为Headless内容提供了[翻译集成框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html?lang=zh-Hans)，允许轻松翻译内容片段和支持资源以供跨区域设置使用。 该框架与用于翻译其他AEM内容(如页面、体验片段、Assets和Forms)的框架相同。 在翻译[Headless内容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/Headless/journeys/translation/overview.html?lang=zh-hans)并发布后，便可以供Headless应用程序使用。
 
 ## Assets文件夹结构{#assets-folder-structure}
 
-确保AEM中的本地化内容片段遵循[建议的本地化结构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html#recommended-structure)。
+确保AEM中的本地化内容片段遵循[建议的本地化结构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html?lang=zh-Hans#recommended-structure)。
 
 ![本地化的AEM资源文件夹](./assets/localized-content/asset-folders.jpg)
 

@@ -33,7 +33,7 @@ slingRequest.setAttribute(&quot;data&quot;， content)；
 
 在本例中，我们使用内容设置数据属性。 内容表示要预填充表单的数据。 通常，您可以通过向内部服务进行REST调用来获取“内容”。
 
-要实现此用例，您需要创建自定义用户档案。 有关创建自定义配置文件的详细信息已明确记录在此处[AEM Forms文档中](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html)。
+要实现此用例，您需要创建自定义用户档案。 有关创建自定义配置文件的详细信息已明确记录在此处[AEM Forms文档中](https://helpx.adobe.com/cn/aem-forms/6/html5-forms/custom-profile.html)。
 
 创建自定义配置文件后，您将创建一个JSP文件，该文件将通过调用后端系统来提取数据。 获取数据后，您将使用slingRequest.setAttribute(&quot;data&quot;， content)；预填充表单
 

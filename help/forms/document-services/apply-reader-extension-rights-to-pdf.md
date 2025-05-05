@@ -21,7 +21,7 @@ ht-degree: 0%
 Reader扩展允许您处理PDF文档的使用权限。 使用权限与Acrobat中提供的功能有关，但不与Adobe Reader中的功能有关。 由Reader扩展控制的功能包括向文档添加注释、填写表单和保存文档的功能。 已添加使用权限的PDF文档称为启用权限的文档。 在Adobe Reader中打开启用了权限的PDF文档的用户可以执行为该文档启用的操作。
 
 要完成此用例，我们需要执行以下操作：
-* [将Reader扩展证书](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)添加到`fd-service`用户。
+* [将Reader扩展证书](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=zh-Hans)添加到`fd-service`用户。
 
 ## 创建自定义OSGi服务
 

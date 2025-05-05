@@ -470,4 +470,4 @@ footer {
 
 此模式为实施站点范围的导航组件提供了一种灵活的可维护方法。
 
-有关更多最佳实践和高级技术，请查看[通用编辑器文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。
+有关更多最佳实践和高级技术，请查看[通用编辑器文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。

@@ -23,7 +23,7 @@ ht-degree: 0%
 
 {{edge-delivery-services-and-page-editor}}
 
-在本章中，让我们探讨基础页面组件与可编辑模板之间的关系。 了解如何基于[Adobe XD](https://helpx.adobe.com/support/xd.html)中的某些模型构建无样式的文章模板。 在构建模板的过程中，将涵盖可编辑模板的核心组件和高级策略配置。
+在本章中，让我们探讨基础页面组件与可编辑模板之间的关系。 了解如何基于[Adobe XD](https://helpx.adobe.com/cn/support/xd.html)中的某些模型构建无样式的文章模板。 在构建模板的过程中，将涵盖可编辑模板的核心组件和高级策略配置。
 
 ## 先决条件 {#prerequisites}
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ## 使用Adobe XD进行UI规划 {#adobexd}
 
-通常，规划新网站时首先要考虑模拟和静态设计。 [Adobe XD](https://helpx.adobe.com/support/xd.html)是构建用户体验的设计工具。 接下来，我们将检查UI套件和模型，以帮助规划文章页面模板的结构。
+通常，规划新网站时首先要考虑模拟和静态设计。 [Adobe XD](https://helpx.adobe.com/cn/support/xd.html)是构建用户体验的设计工具。 接下来，我们将检查UI套件和模型，以帮助规划文章页面模板的结构。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
 
@@ -82,13 +82,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 此外，还提供[AEM核心组件UI套件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd)作为自定义项目的起点。
+> 此外，还提供[AEM核心组件UI套件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd?lang=zh-Hans)作为自定义项目的起点。
 
 ## 创建文章页面模板
 
 创建页面时，必须选择一个模板，该模板用作创建页面的基础。 模板定义生成页面的结构、初始内容和允许的组件。
 
-[可编辑模板](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)有三个主要区域：
+[可编辑模板](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=zh-Hans)有三个主要区域：
 
 1. **结构** — 定义模板中的组件。 内容作者无法编辑这些内容。
 1. **初始内容** — 定义模板开始的组件，内容作者可以编辑和/或删除这些组件
@@ -160,7 +160,7 @@ ht-degree: 0%
 
 ## 使用体验片段更新页眉和页脚 {#experience-fragments}
 
-创建全局内容（如页眉或页脚）时的常见做法是使用[体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 体验片段，允许用户组合多个组件以创建单个可引用的组件。 体验片段具有支持多站点管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=en)的优势。
+创建全局内容（如页眉或页脚）时的常见做法是使用[体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=zh-Hans)。 体验片段，允许用户组合多个组件以创建单个可引用的组件。 体验片段具有支持多站点管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=zh-Hans)的优势。
 
 AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹配模型。 按照以下视频中的步骤进行操作：
 
@@ -262,7 +262,7 @@ AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹�
 
    页面组件下只有两个HTL脚本： `customfooterlibs.html`和`customheaderlibs.html`。 *该组件如何呈现页面？*
 
-   `sling:resourceSuperType`属性指向`core/wcm/components/page/v2/page`。 此属性允许WKND的页面组件继承核心组件页面组件的&#x200B;**all**&#x200B;功能。 这是称为[代理组件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)的第一个示例。 可在[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)找到更多信息。
+   `sling:resourceSuperType`属性指向`core/wcm/components/page/v2/page`。 此属性允许WKND的页面组件继承核心组件页面组件的&#x200B;**all**&#x200B;功能。 这是称为[代理组件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=zh-Hans#ProxyComponentPattern)的第一个示例。 可在[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=zh-Hans)找到更多信息。
 
 1. Inspect WKND组件中的另一个组件，即`Breadcrumb`组件，来自： `/apps/wknd/components/breadcrumb`。 请注意，可以找到相同的`sling:resourceSuperType`属性，但这次它指向`core/wcm/components/breadcrumb/v2/breadcrumb`。 这是使用代理组件模式包含核心组件的另一个示例。 事实上，WKND代码库中的所有组件都是AEM核心组件的代理（自定义演示HelloWorld组件除外）。 最佳实践是在编写自定义代码之前&#x200B;*重复使用尽可能多的核心组件功能。*
 
@@ -312,7 +312,7 @@ AEM项目原型生成了页眉和页脚。 接下来，更新体验片段以匹�
 
    将HTL拆分为多个脚本的另一个原因是允许代理组件覆盖单个脚本以实施自定义业务逻辑。 创建HTL脚本`customfooterlibs.html`和`customheaderlibs.html`的明确目的是要通过实施项目来覆盖。
 
-   通过阅读本文[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)，您可以了解有关可编辑模板如何影响内容页面渲染的更多信息。
+   通过阅读本文[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=zh-Hans)，您可以了解有关可编辑模板如何影响内容页面渲染的更多信息。
 
 1. Inspect是另一个核心组件，如`/libs/core/wcm/components/breadcrumb/v2/breadcrumb`处的痕迹导航。 查看`breadcrumb.html`脚本以了解最终如何生成痕迹导航组件的标记。
 

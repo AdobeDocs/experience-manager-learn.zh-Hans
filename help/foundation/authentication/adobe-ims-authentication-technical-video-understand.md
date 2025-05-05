@@ -44,4 +44,4 @@ Adobe Experience Manager引入了Admin Console对AEM实例的支持，并针对M
 
 ### 在Adobe Experience Manager中应用权限
 
-在Adobe Experience Manager中，与Adobe IMS同步的用户组应定期添加到[AEM提供的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)，这些用户组已预配置相应权限，以执行AEM中的特定任务集。 从Adobe IMS同步的用户不应直接添加到[AEM提供的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)。
+在Adobe Experience Manager中，与Adobe IMS同步的用户组应定期添加到[AEM提供的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hans)，这些用户组已预配置相应权限，以执行AEM中的特定任务集。 从Adobe IMS同步的用户不应直接添加到[AEM提供的用户组](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hans)。

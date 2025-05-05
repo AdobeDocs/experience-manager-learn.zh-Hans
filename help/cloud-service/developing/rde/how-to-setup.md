@@ -169,7 +169,7 @@ RDE状态信息显示为：环境状态、_您的AEM项目_&#x200B;包以及创�
 
 ## 其他资源
 
-[在程序文档中启用RDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#enabling-rde-in-a-program)
+[在程序文档中启用RDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=zh-Hans#enabling-rde-in-a-program)
 
 [Adobe I/O Runtime可扩展CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)的设置，也称为`aio CLI`
 

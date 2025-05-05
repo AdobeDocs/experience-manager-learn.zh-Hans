@@ -43,7 +43,7 @@ AEM Forms 6.4中引入了“发送电子邮件”步骤。通过此步骤，我�
 1. [部署Developingwithserviceuser捆绑包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
 1. [下载并安装setvalue捆绑包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)此捆绑包包含用于创建元数据属性的代码，作为工作流的进程步骤的一部分。
-1. [配置Day CQ邮件服务](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html)
+1. [配置Day CQ邮件服务](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/notification.html)
 1. [使用包管理器将与此文章关联的资源导入并安装到CRX中](assets/emaildoraemformskt.zip)
 1. 启动[自适应表单](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)。 填写必填字段并提交。
 1. 您应会收到包含DocumentOfRecord作为附件的电子邮件

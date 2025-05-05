@@ -71,7 +71,7 @@ AEM现代化工具会自动转换由旧版静态模板、基础组件和Parsys�
 + [以不同的方式思考AEM as a Cloud Service](./introduction.md)
 + [存储库现代化](./repository-modernization.md)
 + [可变和不可变内容](../../developing/basics/mutable-immutable.md)
-+ [AEM项目结构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)
++ [AEM项目结构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=zh-Hans)
 
 此外，请确保您已完成之前的实践练习：
 
@@ -103,7 +103,7 @@ AEM现代化工具会自动转换由旧版静态模板、基础组件和Parsys�
 
 + [下载AEM现代化工具](https://github.com/adobe/aem-modernize-tools/releases/latest)
 + [AEM现代化工具文档](https://opensource.adobe.com/aem-modernize-tools/)
-+ [AEM Gems — 介绍AEM现代化套件](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
++ [AEM Gems — 介绍AEM现代化套件](https://helpx.adobe.com/cn/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
 
 1. 在本地AEM SDK上部署新现代化的wknd旧版网站。 AEM ASK可从此处下载：
    + [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html)。

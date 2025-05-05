@@ -104,4 +104,4 @@ Dynamic Media视频现在支持为您的视频选择自定义缩略图的功能�
 
 ## 其他资源{#additional-resources}
 
-[在Scene7模式下配置Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[在Scene7模式下配置Dynamic Media](https://helpx.adobe.com/cn/experience-manager/6-5/assets/using/config-dms7.html)

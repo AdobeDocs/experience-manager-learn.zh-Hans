@@ -29,7 +29,7 @@ ht-degree: 0%
 
 作为重构代码库的一部分，请使用[索引转换器工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter)将自定义Oak索引定义转换为与AEM as a Cloud Service兼容的索引定义。
 
-请查看[索引转换器文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html)，以了解完整的和当前的一组索引转换器功能。
+请查看[索引转换器文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html?lang=zh-Hans)，以了解完整的和当前的一组索引转换器功能。
 
 ## 关键活动
 

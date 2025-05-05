@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 创建Maven项目
 
-第一步是使用适当的Adobe Maven原型创建一个Maven项目。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中列出了详细步骤。 将Maven项目导入Eclipse后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
+第一步是使用适当的Adobe Maven原型创建一个Maven项目。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=zh-Hans)中列出了详细步骤。 将Maven项目导入Eclipse后，您就可以开始编写可在流程步骤中使用的第一个OSGi组件了。
 
 
 ### 创建实现WorkflowProcess的类
@@ -42,9 +42,9 @@ public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaData
 
 execute方法允许访问以下3个变量：
 
-**工作项**： workItem变量将授予与工作流相关的数据的访问权限。 [此处](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)提供了公共API文档。
+**工作项**： workItem变量将授予与工作流相关的数据的访问权限。 [此处](https://helpx.adobe.com/cn/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)提供了公共API文档。
 
-**WorkflowSession**：此workflowSession变量将让您能够控制工作流。 [此处](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)提供了公共API文档。
+**WorkflowSession**：此workflowSession变量将让您能够控制工作流。 [此处](https://helpx.adobe.com/cn/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)提供了公共API文档。
 
 **元数据映射**：与工作流关联的所有元数据。 传递给流程步骤的任何流程参数都可以使用MetaDataMap对象使用。[API文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
@@ -154,7 +154,7 @@ QueryBuilder服务用于查询attachmentsPath文件夹下类型为`nt:file`的�
 
 #### 生成和部署
 
-[按照此处所述生成包](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[按照此处所述生成包](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=zh-Hans)
 [确保包已部署且处于活动状态](http://localhost:4502/system/console/bundles)
 
 创建工作流模型。 在工作流模型中拖放流程步骤。 将流程步骤与“将自适应表单附件保存到文件系统”关联。

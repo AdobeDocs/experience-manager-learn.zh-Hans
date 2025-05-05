@@ -25,7 +25,7 @@ OutputService提供了多种方法来使用表单设计创建文档，并提供�
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-数据xml有2条记录。 每个记录由form1元素表示。 此xml传递到OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html)，我们将获得PDF文档的列表（每个记录一个）
+数据xml有2条记录。 每个记录由form1元素表示。 此xml传递到OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/cn/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html)，我们将获得PDF文档的列表（每个记录一个）
 generatePDFOutputBatch方法的签名采用以下参数
 
 * 模板 — 包含模板的映射，用键进行标识

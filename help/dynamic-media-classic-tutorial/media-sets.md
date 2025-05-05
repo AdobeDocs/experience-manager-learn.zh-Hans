@@ -48,8 +48,8 @@ _图像集示例_
 
 ![图像](assets/media-sets/image-set-url-1.png)
 
-- 通过[图像集快速入门](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/quick-start-image-sets.html)了解有关图像集的更多信息。
-- 了解如何[创建图像集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set)。
+- 通过[图像集快速入门](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/quick-start-image-sets.html?lang=zh-Hans)了解有关图像集的更多信息。
+- 了解如何[创建图像集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/creating-image-set.html?lang=zh-Hans#creating-an-image-set)。
 
 ### 样本集
 
@@ -67,8 +67,8 @@ _样本集示例_
 
 ![图像](assets/media-sets/image-set_url.png)
 
-- 通过[样本集快速入门](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html)了解有关样本集的更多信息。
-- 了解如何[创建样本集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set)。
+- 通过[样本集快速入门](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html?lang=zh-Hans)了解有关样本集的更多信息。
+- 了解如何[创建样本集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html?lang=zh-Hans#creating-a-swatch-set)。
 
 ### 旋转集
 
@@ -84,8 +84,8 @@ _旋转集示例_
 
 ![图像](assets/media-sets/spin-set.png)
 
-- 通过[旋转集快速入门](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html)了解有关旋转集的更多信息。
-- 了解如何[创建旋转集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set)。
+- 通过[旋转集快速入门](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html?lang=zh-Hans)了解有关旋转集的更多信息。
+- 了解如何[创建旋转集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html?lang=zh-Hans#creating-a-spin-set)。
 
 ## 混合媒体集
 
@@ -99,13 +99,13 @@ _混合媒体集示例_
 
 ![图像](assets/media-sets/image-set-url-1.png)
 
-- 通过[混合媒体集快速入门](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html)了解有关混合媒体集的更多信息。
+- 通过[混合媒体集快速入门](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html?lang=zh-Hans)了解有关混合媒体集的更多信息。
 
-- 了解如何[创建混合媒体集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set)。
+- 了解如何[创建混合媒体集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html?lang=zh-Hans#creating-a-mixed-media-set)。
 
 要在网站上显示缩放、设置或视频的图像，请在Dynamic Media Classic“查看器”中将其称为。 Dynamic Media Classic包括富媒体资产（如样本集、旋转集、视频和许多其他资产）的查看器。
 
-详细了解AEM Assets和Dynamic Media Classic的[查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html)。
+详细了解AEM Assets和Dynamic Media Classic的[查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html?lang=zh-Hans)。
 
 ## 批次集预设
 
@@ -124,7 +124,7 @@ _混合媒体集示例_
 
 创建预设后，公司管理员可以选择它们是处于活动状态还是不活动状态。 “活动”表示它们将出现在上载页面的&#x200B;**作业选项**&#x200B;下，而非活动预设将保持隐藏状态。
 
-了解如何[创建批次集预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset)。
+了解如何[创建批次集预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=zh-Hans#creating-a-batch-set-preset)。
 
 ### 在上传时使用批次集预设
 
@@ -135,4 +135,4 @@ _混合媒体集示例_
 3. 打开&#x200B;**批次集预设**&#x200B;选项，然后选中或取消选中预设以将其用于上传。
 4. 上传完成后，在文件夹中查找完成的集。
 
-了解有关[批次集预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets)的更多信息。
+了解有关[批次集预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=zh-Hans#batch-set-presets)的更多信息。

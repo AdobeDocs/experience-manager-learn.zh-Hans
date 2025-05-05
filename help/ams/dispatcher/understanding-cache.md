@@ -55,7 +55,7 @@ Dispatcher控制任何场文件的`/cache {`部分中符合缓存条件的内容
 ```
 
 
-在创建缓存或不缓存内容的规则时，请参阅文档[此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+在创建缓存或不缓存内容的规则时，请参阅文档[此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#configuring-the-dispatcher-cache-cache)
 
 
 ## 缓存作者
@@ -336,6 +336,6 @@ Dispatcher模块的较新功能是基于`Time To Live (TTL)`的缓存项目失�
 
 我们希望使已发布的网站尽可能贪婪，并缓存所有内容。
 
-如果存在在缓存时破坏体验的元素，则可以添加规则以删除缓存该项目的选项。 如上面的示例所示，不应缓存并排除csrf令牌。 有关编写这些规则的更多详细信息可在[此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)找到
+如果存在在缓存时破坏体验的元素，则可以添加规则以删除缓存该项目的选项。 如上面的示例所示，不应缓存并排除csrf令牌。 有关编写这些规则的更多详细信息可在[此处](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#configuring-the-dispatcher-cache-cache)找到
 
 [下一步 — >使用和了解变量](./variables.md)

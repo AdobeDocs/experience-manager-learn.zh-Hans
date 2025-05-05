@@ -55,7 +55,7 @@ _satellite.setDebug(true)
 
 ## 使用Adobe Experience Platform Debugger
 
-将[AEP Debugger扩展](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html)添加到浏览器（需要您登录）以获取更多调试信息
+将[AEP Debugger扩展](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=zh-Hans)添加到浏览器（需要您登录）以获取更多调试信息
 
 ![platform-debugger](assets/platform-debugger.png)
 

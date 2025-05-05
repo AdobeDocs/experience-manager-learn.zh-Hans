@@ -101,11 +101,11 @@ $ git checkout -b teaser origin/main
 
 | JSON属性 | 描述 |
 |---------------|-----------------------------------------------------------------------------------------------------------------------|
-| `component` | [字段类型](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#component-types)，如`text`、`reference`或`aem-content`。 |
+| `component` | [字段类型](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#component-types)，如`text`、`reference`或`aem-content`。 |
 | `name` | 字段的名称，映射到JCR属性，该值在该属性中存储在AEM中。 |
 | `label` | 在通用编辑器中向作者显示的标签。 |
 
-有关包括可选属性的完整列表，请查看[通用编辑器字段文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#fields)。
+有关包括可选属性的完整列表，请查看[通用编辑器字段文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#fields)。
 
 #### 块设计
 
@@ -132,16 +132,16 @@ Teaser块的设计分为两个逻辑组件（图像和文本内容），确保�
 
 Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Services HTML显示为所需Web体验所需的代码，块模型应反映此结构。
 
-- 使用[字段折叠](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)将&#x200B;**图像**&#x200B;和&#x200B;**图像替换文本**&#x200B;组合在一起。
-- 使用[元素分组](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的字段折叠将文本内容字段分组在一起。
+- 使用[字段折叠](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)将&#x200B;**图像**&#x200B;和&#x200B;**图像替换文本**&#x200B;组合在一起。
+- 使用[元素分组](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的字段折叠将文本内容字段分组在一起。
 
-如果您不熟悉[字段折叠](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)、[元素分组](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)或[类型推断](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)，请在继续之前查看链接的文档，因为它们对于创建结构良好的块模型至关重要。
+如果您不熟悉[字段折叠](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)、[元素分组](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)或[类型推断](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)，请在继续之前查看链接的文档，因为它们对于创建结构良好的块模型至关重要。
 
 在以下示例中：
 
-- [类型推断](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)用于从`image`字段自动创建`<img>`个HTML元素。 字段折叠与`image`和`imageAlt`字段一起使用来创建`<img>`个HTML元素。 `src`属性设置为`image`字段的值，而`alt`属性设置为`imageAlt`字段的值。
+- [类型推断](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)用于从`image`字段自动创建`<img>`个HTML元素。 字段折叠与`image`和`imageAlt`字段一起使用来创建`<img>`个HTML元素。 `src`属性设置为`image`字段的值，而`alt`属性设置为`imageAlt`字段的值。
 - `textContent`是用于分类字段的组名称。 它应该是语义的，但可以是此块特有的任何内容。 这会通知通用编辑器在最终HTML输出中，渲染同一`<div>`元素内具有此前缀的所有字段。
-- 字段折叠也应用于行动号召(CTA)的`textContent`组。 CTA是通过[类型推断](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)创建为`<a>`的。 `cta`字段用于设置`<a>`元素的`href`属性，`ctaText`字段为`<a ...>`标记内的链接提供文本内容。
+- 字段折叠也应用于行动号召(CTA)的`textContent`组。 CTA是通过[类型推断](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)创建为`<a>`的。 `cta`字段用于设置`<a>`元素的`href`属性，`ctaText`字段为`<a ...>`标记内的链接提供文本内容。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面代码示例的文件名。"}
 
@@ -223,7 +223,7 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 
 **此选项卡说明了Teaser块建模的次优方法，并且只与正确方法并置。**
 
-在不使用[字段折叠](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)和[元素分组](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)的情况下，将每个字段定义为块模型中的独立字段似乎很有吸引力。 但是，这种疏忽使得将块定位为具有凝聚力的单元变得复杂。
+在不使用[字段折叠](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)和[元素分组](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)的情况下，将每个字段定义为块模型中的独立字段似乎很有吸引力。 但是，这种疏忽使得将块定位为具有凝聚力的单元变得复杂。
 
 例如，可以定义Teaser模型&#x200B;**而不使用**&#x200B;字段折叠或元素分组，如下所示：
 
@@ -304,7 +304,7 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 </div>        
 ```
 
-每个字段都隔离在自己的`div`中，因此很难将图像和文本内容设为粘性单位。 通过努力和创造力实现所需设计是可能的，但使用[元素分组](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)对文本内容字段进行分组，使用[字段折叠](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)添加创作值，因为元素属性更简单、更容易，并且语义更正确。
+每个字段都隔离在自己的`div`中，因此很难将图像和文本内容设为粘性单位。 通过努力和创造力实现所需设计是可能的，但使用[元素分组](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)对文本内容字段进行分组，使用[字段折叠](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)添加创作值，因为元素属性更简单、更容易，并且语义更正确。
 
 请参阅上面的&#x200B;**写入方式**&#x200B;选项卡，了解如何更好地为Teaser块建模。
 
@@ -322,7 +322,7 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 | `definition.plugins.xwalk.page.resourceType` | 定义用于在通用编辑器中呈现组件的Sling资源类型。 始终使用`core/franklin/components/block/v#/block`资源类型。 |
 | `definition.plugins.xwalk.page.template.name` | 块的名称。 它应该使用小写和连字符来匹配块的文件夹名称。 此值还用于在通用编辑器中标记块的实例。 |
 | `definition.plugins.xwalk.page.template.model` | 将此定义链接到其`model`定义，该定义控制通用编辑器中为块显示的创作字段。 此处的值必须匹配`model.id`值。 |
-| `definition.plugins.xwalk.page.template.classes` | 可选属性，其值将添加到块HTML元素的`class`属性。 这允许同一块的变体。 通过将[类字段](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)添加到块的[模型](#block-model)，可以使`classes`值变为可编辑。 |
+| `definition.plugins.xwalk.page.template.classes` | 可选属性，其值将添加到块HTML元素的`class`属性。 这允许同一块的变体。 通过将[类字段](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)添加到块的[模型](#block-model)，可以使`classes`值变为可编辑。 |
 
 
 以下是块定义的JSON示例：
@@ -363,7 +363,7 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 
 ### 阻止筛选器
 
-块的`filters`数组为[容器块](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container)定义了哪些其他块可以添加到容器中。 筛选器定义可添加到容器的块ID (`model.id`)列表。
+块的`filters`数组为[容器块](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container)定义了哪些其他块可以添加到容器中。 筛选器定义可添加到容器的块ID (`model.id`)列表。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面代码示例的文件名。"}
 
@@ -375,7 +375,7 @@ Teaser包含两个逻辑区域：图像和文本。 要简化将Edge Delivery Se
 }
 ```
 
-Teaser组件不是[容器块](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container)，这意味着您无法向其添加其他块。 因此，其`filters`数组留空。 而是将Teaser的ID添加到分区块的过滤器列表，以便将Teaser添加到分区。
+Teaser组件不是[容器块](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container)，这意味着您无法向其添加其他块。 因此，其`filters`数组留空。 而是将Teaser的ID添加到分区块的过滤器列表，以便将Teaser添加到分区。
 
 ![阻止筛选器](./assets/5-new-block/filters.png)
 

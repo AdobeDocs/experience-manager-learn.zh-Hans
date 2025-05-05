@@ -28,7 +28,7 @@ ACS公开了一组丰富的API，使ACS可以与我们选择的技术接口。 �
 
 要将AEM Forms与ACS集成，您需要执行以下步骤：
 
-* [在ACS实例上设置API访问。](https://experienceleague.adobe.com/docs/campaign-standard/using/working-with-apis/get-started-apis.html?lang=en)
+* [在ACS实例上设置API访问。](https://experienceleague.adobe.com/docs/campaign-standard/using/working-with-apis/get-started-apis.html?lang=zh-Hans)
 * 创建JSON Web令牌。
 * 使用Adobe Identity Management服务交换JSON Web令牌以获取访问令牌。
 * 在授权HTTP标头中包含此访问令牌，并在每个对ACS实例的请求中包含X-API-Key。

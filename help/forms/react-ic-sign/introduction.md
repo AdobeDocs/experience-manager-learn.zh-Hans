@@ -34,7 +34,7 @@ ht-degree: 1%
 用例需要以下各项才能正常工作：
 
 * 带有Forms附加组件包的AEM服务器
-* Acrobat Sign应用程序的[集成密钥](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
+* Acrobat Sign应用程序的[集成密钥](https://helpx.adobe.com/cn/sign/kb/how-to-create-an-integration-key.html)
 
 ## 后续步骤
 

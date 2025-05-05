@@ -71,14 +71,14 @@ ht-degree: 3%
    * 标题*： **英语**
    * 名称： **en**
 
-   最佳做法是为多语言支持设置项目。 有关详细信息，请参阅[以下文档页面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html)。
+   最佳做法是为多语言支持设置项目。 有关详细信息，请参阅[以下文档页面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=zh-Hans)。
 
 
 ## 创建内容片段 {#create-content-fragment}
 
 >[!TIP]
 >
->对于本地AEM SDK用户：利用AEM Assets UI创建和创作内容片段，而不是下面介绍的内容片段UI。 有关详细说明，请参阅[AEM文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)。
+>对于本地AEM SDK用户：利用AEM Assets UI创建和创作内容片段，而不是下面介绍的内容片段UI。 有关详细说明，请参阅[AEM文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=zh-Hans)。
 
 接下来几个内容片段是基于&#x200B;**团队**&#x200B;和&#x200B;**人员**&#x200B;模型创建的。
 
@@ -152,7 +152,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
->对于本地AEM SDK用户：利用AEM Assets UI发布内容片段，而不是下面介绍的内容片段UI。 有关详细说明，请参阅[AEM文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment)。
+>对于本地AEM SDK用户：利用AEM Assets UI发布内容片段，而不是下面介绍的内容片段UI。 有关详细说明，请参阅[AEM文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=zh-Hans#publishing-and-referencing-a-fragment)。
 
 审核和验证后，发布创作的`Content Fragments`
 
@@ -173,5 +173,5 @@ ht-degree: 3%
 
 ## 相关文档
 
-* [管理内容片段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)
-* [变量 - 创作片段内容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)
+* [管理内容片段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=zh-Hans)
+* [变量 - 创作片段内容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html?lang=zh-Hans)

@@ -24,7 +24,7 @@ ht-degree: 0%
 
 * FormsService — 这是一项功能非常广泛的服务，允许您从PDF文件中导出/导入数据，并通过将xml数据合并到xdp模板中来生成交互式pdf
 
-此处列出了适用于AEM Forms API的官方[javadoc](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+此处列出了适用于AEM Forms API的官方[javadoc](https://helpx.adobe.com/cn/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 以下代码段使用FormsService的renderPDFForm操作渲染交互式pdf。 schengen.xdp是用于合并xml数据的模板。
 

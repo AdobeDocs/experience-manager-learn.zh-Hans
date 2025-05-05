@@ -20,7 +20,7 @@ ht-degree: 0%
 
 您可以使用现有数据预填自适应表单的字段。 当用户打开表单时，这些字段的值会预先填充。 预填充自适应表单字段的方法有多种。 在本文中，我们将介绍如何使用AEM Forms预填充服务预填充自适应表单。
 
-要了解有关预填充自适应表单的各种方法的更多信息，[请遵循此文档](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+要了解有关预填充自适应表单的各种方法的更多信息，[请遵循此文档](https://helpx.adobe.com/cn/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
 
 要使用预填充服务预填充自适应表单，您必须创建一个实现`com.adobe.forms.common.service.DataXMLProvider`接口的类。 方法`getDataXMLForDataRef`将具有生成和返回自适应表单用于预填充字段的数据的逻辑。 在此方法中，您可以从任何源获取数据并返回数据文档的输入流。 以下示例代码获取登录用户的用户配置文件信息，并构造一个XML文档，该文档的输入流返回给自适应表单使用。
 

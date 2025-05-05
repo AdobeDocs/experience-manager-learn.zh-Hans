@@ -27,7 +27,7 @@ ht-degree: 7%
 
 ## 创建环境变量
 
-可以通过 Cloud Manager 配置和管理标准环境变量。这些变量提供给运行时环境，可以在 OSGi 配置中使用。[根据所更改的内容，环境变量可以是特定于环境的值或环境密钥。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+可以通过 Cloud Manager 配置和管理标准环境变量。这些变量提供给运行时环境，可以在 OSGi 配置中使用。[根据所更改的内容，环境变量可以是特定于环境的值或环境密钥。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=zh-Hans)
 
 
 

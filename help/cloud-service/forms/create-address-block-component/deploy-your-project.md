@@ -44,4 +44,4 @@ ht-degree: 0%
 
 ## 将项目部署到云环境
 
-如果本地开发环境一切正常，则下一步是使用Cloud Manager部署到[云实例。](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git)
+如果本地开发环境一切正常，则下一步是使用Cloud Manager部署到[云实例。](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git)

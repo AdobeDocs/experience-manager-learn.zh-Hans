@@ -20,7 +20,7 @@ ht-degree: 0%
 
 请按照下面列出的步骤，使此用例在您的本地AEM实例上运行。
 
-* [部署包含在zip文件中的DevelopingWithServiceUser包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)。
+* [部署包含在zip文件中的DevelopingWithServiceUser包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=zh-Hans)。
 
 * 使用[configMgr](http://localhost:4502/system/console/configMgr)在Apache Sling服务用户映射器服务&#x200B;**DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**&#x200B;中添加以下条目。
 

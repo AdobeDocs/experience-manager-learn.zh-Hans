@@ -20,7 +20,7 @@ ht-degree: 0%
 
 以编程方式生成记录文档(DOR)
 
-本文说明如何使用`com.adobe.aemds.guide.addon.dor.DoRService API`以编程方式生成&#x200B;**记录文档**。 [记录文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)是在自适应表单中捕获的数据的PDF版本。
+本文说明如何使用`com.adobe.aemds.guide.addon.dor.DoRService API`以编程方式生成&#x200B;**记录文档**。 [记录文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=zh-Hans)是在自适应表单中捕获的数据的PDF版本。
 
 1. 以下是代码片段。 第一行获得DOR服务。
 1. 设置DoROptions。

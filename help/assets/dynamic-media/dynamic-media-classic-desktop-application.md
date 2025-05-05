@@ -37,6 +37,6 @@ Adobe Dynamic Media Classic桌面应用程序与以下操作系统兼容：
 
 ## 支持材料
 
-* [Adobe Dynamic Media Classic桌面应用程序文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
-* [Adobe Dynamic Media常见问题解答](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
-* [下载Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
+* [Adobe Dynamic Media Classic桌面应用程序文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=zh-Hans)
+* [Adobe Dynamic Media常见问题解答](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html?lang=zh-Hans)
+* [下载Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html?lang=zh-Hans)

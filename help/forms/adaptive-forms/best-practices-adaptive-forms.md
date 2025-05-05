@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 最佳实践
 
-Adobe Experience Manager (AEM)表单可帮助您将复杂的交易转换为简单、愉快的数字体验。 以下文档介绍了在开发自适应Forms时需要遵循的一些其他最佳实践。 此文档应与[此文档](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)一起使用
+Adobe Experience Manager (AEM)表单可帮助您将复杂的交易转换为简单、愉快的数字体验。 以下文档介绍了在开发自适应Forms时需要遵循的一些其他最佳实践。 此文档应与[此文档](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)一起使用
 
 ## 命名约定
 

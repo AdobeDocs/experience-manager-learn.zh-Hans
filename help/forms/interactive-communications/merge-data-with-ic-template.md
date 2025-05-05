@@ -162,7 +162,7 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
 
 要在您的服务器上对此进行测试，请执行以下步骤：
 
-* [配置Day CQ邮件服务。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html)发送带有作为附件生成的文档的电子邮件时需要此项。
+* [配置Day CQ邮件服务。](https://helpx.adobe.com/cn/experience-manager/6-5/communities/using/email.html)发送带有作为附件生成的文档的电子邮件时需要此项。
 * [部署Developing with Service用户包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * 确保已在Apache Sling服务用户映射器服务配置中添加了以下条目
 * **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**

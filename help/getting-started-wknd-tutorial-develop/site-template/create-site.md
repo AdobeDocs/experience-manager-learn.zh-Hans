@@ -25,13 +25,13 @@ ht-degree: 0%
 
 ## 先决条件 {#prerequisites}
 
-本章中的步骤将在Adobe Experience Manager as a Cloud Service环境中进行。 确保您对AEM环境具有管理访问权限。 完成本教程时，建议使用[沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)和[开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)。
+本章中的步骤将在Adobe Experience Manager as a Cloud Service环境中进行。 确保您对AEM环境具有管理访问权限。 完成本教程时，建议使用[沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html?lang=zh-Hans)和[开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hans)。
 
-[生产程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html)环境也可以用于本教程；但是，请确保本教程的活动不会影响正在目标环境中执行的工作，因为本教程会将内容和代码部署到目标AEM环境。
+[生产程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html?lang=zh-Hans)环境也可以用于本教程；但是，请确保本教程的活动不会影响正在目标环境中执行的工作，因为本教程会将内容和代码部署到目标AEM环境。
 
-[AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html)可用于本教程的部分内容。 无法在AEM SDK上执行本教程依赖云服务的各个方面，例如[使用Cloud Manager的前端管道](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html)部署主题。
+[AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=zh-Hans)可用于本教程的部分内容。 无法在AEM SDK上执行本教程依赖云服务的各个方面，例如[使用Cloud Manager的前端管道](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html?lang=zh-Hans)部署主题。
 
-有关更多详细信息，请查看[入门文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)。
+有关更多详细信息，请查看[入门文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=zh-Hans)。
 
 ## 目标 {#objective}
 
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 访问Experience Manager时遇到问题？ 查看[入门文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
+> 访问Experience Manager时遇到问题？ 查看[入门文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=zh-Hans)
 
 ## 下载基本站点模板
 

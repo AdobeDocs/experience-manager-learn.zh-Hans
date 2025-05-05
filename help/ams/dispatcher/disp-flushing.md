@@ -175,7 +175,7 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 ## 场文件设置
 
-以下是一组完整配置选项的文档： [https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)
+以下是一组完整配置选项的文档： [https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)
 
 我们将重点介绍其中一些与缓存刷新相关的设置
 

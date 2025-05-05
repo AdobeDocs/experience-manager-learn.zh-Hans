@@ -29,4 +29,4 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->视频中显示的Adobe TargetCloud Service配置存在一个已知问题。 在解决此问题之前，请执行视频中的相同步骤，但使用[旧版Adobe Target Cloud Service配置](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html)。
+>视频中显示的Adobe TargetCloud Service配置存在一个已知问题。 在解决此问题之前，请执行视频中的相同步骤，但使用[旧版Adobe Target Cloud Service配置](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html?lang=zh-Hans)。

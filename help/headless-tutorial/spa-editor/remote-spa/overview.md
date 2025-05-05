@@ -24,7 +24,7 @@ ht-degree: 1%
 
 对于希望使用AEM SPA编辑器将现有基于React（或Next.js）的SPA内容扩充为可编辑AEM内容的开发人员，欢迎使用多部分教程。
 
-本教程以[WKND GraphQL应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)为基础，该应用程序是一个React应用程序，它通过AEM的GraphQL API使用AEM内容片段内容，但不提供任何对SPA内容的上下文创作。
+本教程以[WKND GraphQL应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans)为基础，该应用程序是一个React应用程序，它通过AEM的GraphQL API使用AEM内容片段内容，但不提供任何对SPA内容的上下文创作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 本教程要求您满足以下条件：
 
-+ [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en)
++ [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=zh-Hans)
 + [Node.js v18](https://nodejs.org/en/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)

@@ -31,7 +31,7 @@ ht-degree: 0%
 ![表单&amp;文档](assets/fragment-folder-structure-ui.png)
 
 
-* 输出服务 — 通常，此服务用于将xml数据与xdp模板或pdf合并，以生成拼合的pdf。 有关详细信息，请参阅输出服务的[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)。 在此示例中，我们使用驻留在crx存储库中的片段。
+* 输出服务 — 通常，此服务用于将xml数据与xdp模板或pdf合并，以生成拼合的pdf。 有关详细信息，请参阅输出服务的[javadoc](https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)。 在此示例中，我们使用驻留在crx存储库中的片段。
 
 
 以下代码用于在PDF文件中包含片段

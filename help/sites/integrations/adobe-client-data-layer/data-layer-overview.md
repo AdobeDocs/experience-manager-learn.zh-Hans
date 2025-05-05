@@ -26,7 +26,7 @@ Adobe客户端数据层引入了一种标准方法，用于收集和存储有关
 
 >[!NOTE]
 >
-> 想要在AEM站点上启用Adobe客户端数据层？ [请在此处查看说明](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+> 想要在AEM站点上启用Adobe客户端数据层？ [请在此处查看说明](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans#installation-activation)。
 
 ## 探索Data Layer
 
@@ -179,4 +179,4 @@ Adobe客户端数据层引入了一种标准方法，用于收集和存储有关
 ## 其他资源 {#additional-resources}
 
 * [Adobe的客户端数据层文档](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [使用Adobe客户端数据层和核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans)

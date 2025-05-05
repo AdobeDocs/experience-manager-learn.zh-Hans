@@ -39,7 +39,7 @@ ContextHub是一个用于存储、操作和呈现上下文数据的框架。 通
 
 ## 站点配置和ContextHub区段 {#site-configuration-and-contexthub-segments}
 
-ContextHub包括管理区段并确定当前上下文解析哪些区段的分段引擎。 定义了多个区段。 您可以使用Javascript API [确定已解析的区段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)。 在[[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)下启用网站的ContextHub区段。
+ContextHub包括管理区段并确定当前上下文解析哪些区段的分段引擎。 定义了多个区段。 您可以使用Javascript API [确定已解析的区段](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)。 在[[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=zh-Hans)下启用网站的ContextHub区段。
 
 ## 创建区段 {#create-segments}
 
@@ -53,7 +53,7 @@ ContextHub包括管理区段并确定当前上下文解析哪些区段的分段�
 
 您可以阅读以下有关ContextHub和分段的更多信息：
 
-* [ContextHub](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub.html)
-* [将上下文中心添加到页面并访问存储](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html)
-* [了解分段](https://helpx.adobe.com/experience-manager/6-5/sites/classic-ui-authoring/using/classic-personalization-campaigns-segmentation.html)
-* [使用 ContextHub 配置分段](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/segmentation.html)
+* [ContextHub](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/contexthub.html)
+* [将上下文中心添加到页面并访问存储](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/ch-adding.html)
+* [了解分段](https://helpx.adobe.com/cn/experience-manager/6-5/sites/classic-ui-authoring/using/classic-personalization-campaigns-segmentation.html)
+* [使用 ContextHub 配置分段](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/segmentation.html)

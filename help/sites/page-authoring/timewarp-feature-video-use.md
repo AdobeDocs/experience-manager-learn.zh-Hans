@@ -28,4 +28,4 @@ ht-degree: 2%
 
 ## 更多资源 {#more-resources}
 
-* [处理页面版本 — 时间扭曲](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/page-versions.html)
+* [处理页面版本 — 时间扭曲](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/page-versions.html?lang=zh-Hans)

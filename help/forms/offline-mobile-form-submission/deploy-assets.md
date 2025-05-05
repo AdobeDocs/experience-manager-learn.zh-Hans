@@ -32,7 +32,7 @@ ht-degree: 0%
 
 * [导入自定义配置文件](assets/customprofile.zip)，该配置文件将HTML5表单中的数据与XDP合并并返回交互式pdf。
 
-* [部署使用服务进行开发的用户包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=en)
+* [部署使用服务进行开发的用户包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=zh-Hans)
 使用configMgr在Apache Sling服务用户映射器服务中添加以下条目
 
 ```
@@ -52,7 +52,7 @@ DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 * 为创作实例指定用户名/密码，并在AEM存储库&#x200B;**中指定**&#x200B;现有位置，以使用[configMgr](http://localhost:4503/system/console/configMgr)在AEM Server凭据中存储提交的数据。 您可以将AEM Workflow Server上端点的URL保持原样。 这是从指定节点中的提交提取并存储数据的端点。
   ![发布配置](assets/publish-config.png)
 
-* [部署使用服务进行开发的用户包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=en)
+* [部署使用服务进行开发的用户包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=zh-Hans)
 * [打开osgi配置](http://localhost:4503/system/console/configMgr)。
 * 搜索&#x200B;**Apache Sling引用过滤器**。 确保选中允许空复选框。
 * [导入自定义配置文件](assets/customprofile.zip)，该配置文件将HTML5表单中的数据与XDP合并并返回交互式pdf。

@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 以下视频是在AEM 6.3上录制的。AEM 6.4+引入了新的存储库结构，用于存储翻译规则XML文件。 在AEM 6.4+中使用翻译配置UI时，规则将保存到位置`/conf/global/settings/translation/rules/translation_rules.xml`。 有关更多详细信息，请参阅[标识要翻译的内容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html)。
+> 以下视频是在AEM 6.3上录制的。AEM 6.4+引入了新的存储库结构，用于存储翻译规则XML文件。 在AEM 6.4+中使用翻译配置UI时，规则将保存到位置`/conf/global/settings/translation/rules/translation_rules.xml`。 有关更多详细信息，请参阅[标识要翻译的内容](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/tc-rules.html)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ## 其他资源 {#additional-resources}
 
-* [标识要翻译的内容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html)
-* [翻译多语言站点的内容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html)
-* [https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html)
-* [翻译最佳实践](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-bp.html)
+* [标识要翻译的内容](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/tc-rules.html)
+* [翻译多语言站点的内容](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/translation.html)
+* [https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/tc-manage.html)
+* [翻译最佳实践](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/tc-bp.html)

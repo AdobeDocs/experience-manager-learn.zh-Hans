@@ -22,7 +22,7 @@ ht-degree: 1%
 在此部分中，我们将讨论如何为各种场景使用Adobe Target设置Adobe Experience Manager Sites。 根据您的方案和组织要求。
 
 * **添加Adobe Target JavaScript库（所有方案均需要）**
-对于在AEM上托管的网站，您可以使用Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)中的标记将Target库添加到您的网站。 标记提供了一种简单的方式来部署和管理所有加强相关客户体验所需的标记。
+对于在AEM上托管的网站，您可以使用Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=zh-Hans)中的标记将Target库添加到您的网站。 标记提供了一种简单的方式来部署和管理所有加强相关客户体验所需的标记。
 * **添加Adobe TargetCloud Service（体验片段方案所需）**
 对于希望使用体验片段选件在Adobe Target中创建活动的AEM客户，您需要使用旧版Cloud Service将Adobe Target与AEM集成。 要将体验片段作为HTML/JSON选件从AEM推送到Target，并保持这些选件与AEM同步，需要此集成。 *实施方案1.*&#x200B;需要此集成
 
@@ -58,7 +58,7 @@ AEM创作和发布实例是完成本教程所必需的。 作者实例在`http:/
 
 #### 设置AEM创作和Publish实例
 
-1. 获取[AEM Quickstart Jar的副本和许可证。](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingtheSoftware)
+1. 获取[AEM Quickstart Jar的副本和许可证。](https://helpx.adobe.com/cn/experience-manager/6-5/sites/deploying/using/deploy.html#GettingtheSoftware)
 2. 在计算机上创建文件夹结构，如下所示：
    ![文件夹结构](assets/implementation/aem-setup-1.png)
 3. 将快速入门Jar重命名为`aem-author-p4502.jar`，并将其放在`/author`目录下。 在`/author`目录下添加`license.properties`文件。

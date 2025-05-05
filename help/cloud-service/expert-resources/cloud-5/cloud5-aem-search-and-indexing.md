@@ -25,8 +25,8 @@ ht-degree: 3%
 
 ## 本视频中涵盖的内容
 
-+ 搜索和索引[概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html)
-+ AEM [索引转换器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html)
++ 搜索和索引[概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=zh-Hans)
++ AEM [索引转换器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html?lang=zh-Hans)
 + 专家系列[深入探讨](../../../cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
 
 

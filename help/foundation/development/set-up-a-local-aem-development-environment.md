@@ -35,7 +35,7 @@ ht-degree: 0%
 
 当我们提及本地AEM实例时，我们谈论的是在开发人员个人计算机上运行的Adobe Experience Manager的副本。 ***所有*** AEM开发应从针对本地AEM实例编写并运行代码开始。
 
-如果您是AEM的新用户，则可以安装两种基本运行模式：***创作***&#x200B;和&#x200B;***发布***。 ***作者*** [运行模式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en)是数字营销人员用于创建和管理内容的环境。 在大多数开发过程中，您要将代码部署到Author实例。 这允许您创建页面并添加和配置组件。 AEM Sites是WYSIWYG创作CMS，因此，大多数CSS和JavaScript都可以针对创作实例进行测试。
+如果您是AEM的新用户，则可以安装两种基本运行模式：***创作***&#x200B;和&#x200B;***发布***。 ***作者*** [运行模式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=zh-Hans)是数字营销人员用于创建和管理内容的环境。 在大多数开发过程中，您要将代码部署到Author实例。 这允许您创建页面并添加和配置组件。 AEM Sites是WYSIWYG创作CMS，因此，大多数CSS和JavaScript都可以针对创作实例进行测试。
 
 对于本地&#x200B;***Publish***&#x200B;实例，它也是&#x200B;*关键*&#x200B;测试代码。 ***Publish***&#x200B;实例是访问您网站的访客与之交互的AEM环境。 虽然&#x200B;***Publish***&#x200B;实例与&#x200B;***Author***&#x200B;实例的技术栈栈相同，但配置和权限有一些主要区别。 代码必须先在本地&#x200B;***Publish***&#x200B;实例中进行测试，然后才能提升到更高级别的环境。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 1. 确保已安装Java™。
    * 首选适用于AEM 6.5+的[Java™ JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
    * 适用于AEM 6.5之前的AEM版本的[Java™ JDK 8](https://www.oracle.com/java/technologies/downloads/)
-1. 获取[AEM QuickStart Jar和a [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)的副本。
+1. 获取[AEM QuickStart Jar和a [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=zh-Hans)的副本。
 1. 在计算机上创建文件夹结构，如下所示：
 
 ```plain
@@ -83,7 +83,7 @@ ht-degree: 0%
 $ java -Xmx2048M -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=30303 -jar aem-author-p4502.jar -gui -r"author,localdev"
 ```
 
-此处，`-X`是JVM选项，`-D`是其他框架属性，有关详细信息，请参阅[部署和维护AEM实例](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)和[快速入门文件中提供的其他选项](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html#further-options-available-from-the-quickstart-file)。
+此处，`-X`是JVM选项，`-D`是其他框架属性，有关详细信息，请参阅[部署和维护AEM实例](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=zh-Hans)和[快速入门文件中提供的其他选项](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html?lang=zh-Hans#further-options-available-from-the-quickstart-file)。
 
 ## 安装Apache Maven
 
@@ -137,12 +137,12 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ### [!DNL Eclipse] IDE
 
-**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;是用于Java™开发的较常用的IDE之一，这在很大程度上是因为它是开源的，并且&#x200B;***可用***！ Adobe为[!DNL Eclipse]提供了一个插件&#x200B;**[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)**，以便更轻松地使用GUI进行开发，从而将代码与本地AEM实例同步。 主要由于[!DNL AEM Developer Tools]支持GUI，因此建议将[!DNL Eclipse] IDE用于不熟悉AEM的开发人员。
+**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;是用于Java™开发的较常用的IDE之一，这在很大程度上是因为它是开源的，并且&#x200B;***可用***！ Adobe为[!DNL Eclipse]提供了一个插件&#x200B;**[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=zh-Hans)**，以便更轻松地使用GUI进行开发，从而将代码与本地AEM实例同步。 主要由于[!DNL AEM Developer Tools]支持GUI，因此建议将[!DNL Eclipse] IDE用于不熟悉AEM的开发人员。
 
 #### 安装和设置
 
 1. 下载并安装[!DNL Java™ EE Developers]的[!DNL Eclipse] IDE： [https://www.eclipse.org](https://www.eclipse.org/)
-1. 按照说明安装[!DNL AEM Developer Tools]插件： [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
+1. 按照说明安装[!DNL AEM Developer Tools]插件： [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=zh-Hans)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
@@ -192,7 +192,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ### [!DNL CRXDE Lite]
 
-[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/developing-with-crxde-lite.html)是AEM存储库的基于浏览器的视图。 [!DNL CRXDE Lite]嵌入到AEM中，允许开发人员执行标准开发任务，如编辑文件、定义组件、对话框和模板。 [!DNL CRXDE Lite]是&#x200B;***，不是***，旨在作为完整开发环境，但可用作调试工具。 在扩展或只是了解代码库之外的产品代码时，[!DNL CRXDE Lite]很有用。 [!DNL CRXDE Lite]提供了存储库的强大视图，以及有效测试和管理权限的方法。
+[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/developing-with-crxde-lite.html?lang=zh-Hans)是AEM存储库的基于浏览器的视图。 [!DNL CRXDE Lite]嵌入到AEM中，允许开发人员执行标准开发任务，如编辑文件、定义组件、对话框和模板。 [!DNL CRXDE Lite]是&#x200B;***，不是***，旨在作为完整开发环境，但可用作调试工具。 在扩展或只是了解代码库之外的产品代码时，[!DNL CRXDE Lite]很有用。 [!DNL CRXDE Lite]提供了存储库的强大视图，以及有效测试和管理权限的方法。
 
 [!DNL CRXDE Lite]应与其他IDE一起使用来测试和调试代码，但绝不能作为主要开发工具。 它对语法的支持有限，没有自动完成功能，而且与源代码管理系统的集成也有限。
 

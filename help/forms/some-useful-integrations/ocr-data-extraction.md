@@ -83,11 +83,11 @@ OpenAPI规范（以前称为Swagger规范）是适用于REST API的API描述格�
 
 ## 创建数据Source
 
-要将AEM/AEM Forms与第三方应用程序集成，我们需要在云服务配置中[创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)。 请使用[swagger文件](assets/drivers-license-swagger.zip)创建数据源。
+要将AEM/AEM Forms与第三方应用程序集成，我们需要在云服务配置中[创建数据源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=zh-Hans)。 请使用[swagger文件](assets/drivers-license-swagger.zip)创建数据源。
 
 ## 创建表单数据模型
 
-AEM Forms数据集成提供了一个直观的用户界面，用于创建和使用[表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 使表单数据模型基于上一步中创建的数据源。
+AEM Forms数据集成提供了一个直观的用户界面，用于创建和使用[表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=zh-Hans)。 使表单数据模型基于上一步中创建的数据源。
 
 ![fdm](assets/test-dl-fdm.PNG)
 

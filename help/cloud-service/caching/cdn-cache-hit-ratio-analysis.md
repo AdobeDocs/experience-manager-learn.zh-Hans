@@ -26,7 +26,7 @@ ht-degree: 0%
 了解如何分析AEM as a Cloud Service提供的&#x200B;**CDN日志**，并获得&#x200B;**缓存命中率**&#x200B;以及&#x200B;_MISS_&#x200B;和&#x200B;_PASS_&#x200B;缓存类型&#x200B;**的**&#x200B;顶级URL等见解，以进行优化。
 
 
-CDN日志以JSON格式提供，其中包含各种字段，包括`url`、`cache`。 有关详细信息，请参阅[CDN日志格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs)。 `cache`字段提供了有关缓存&#x200B;_的_&#x200B;状态的信息，其可能值为HIT、MISS或PASS。 让我们查看可能值的详细信息。
+CDN日志以JSON格式提供，其中包含各种字段，包括`url`、`cache`。 有关详细信息，请参阅[CDN日志格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=zh-Hans#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs)。 `cache`字段提供了有关缓存&#x200B;_的_&#x200B;状态的信息，其可能值为HIT、MISS或PASS。 让我们查看可能值的详细信息。
 
 | 缓存的状态</br>可能值 | 描述 |
 |------------------------------------|:-----------------------------------------------------:|
@@ -66,8 +66,8 @@ CDN日志以JSON格式提供，其中包含各种字段，包括`url`、`cache`�
 要分析CDN日志，本教程提供了三个选项：
 
 1. **Elasticsearch、Logstash和Kibana (ELK)**： [ELK仪表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md)可以本地安装。
-1. **Splunk**： [Splunk仪表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md)需要访问Splunk并启用[AEMCS日志转发](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)以摄取CDN日志。
-1. **Jupyter Notebook**：对于拥有Adobe Experience Platform许可证的客户，可以作为[Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)的一部分远程访问它，而无需安装其他软件。
+1. **Splunk**： [Splunk仪表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md)需要访问Splunk并启用[AEMCS日志转发](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)以摄取CDN日志。
+1. **Jupyter Notebook**：对于拥有Adobe Experience Platform许可证的客户，可以作为[Adobe Experience Platform](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)的一部分远程访问它，而无需安装其他软件。
 
 ### 选项1：使用ELK仪表板工具
 
@@ -149,7 +149,7 @@ CDN日志以JSON格式提供，其中包含各种字段，包括`url`、`cache`�
 
 对于那些不愿意在本地安装软件的用户（即上一节中的ELK功能板工具），还有一个选项，但需要拥有Adobe Experience Platform的许可证。
 
-[Jupyter Notebook](https://jupyter.org/)是一个开源Web应用程序，它允许您创建包含代码、文本和可视化图表的文档。 它用于数据转换、可视化和统计建模。 它可以作为Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)的一部分被远程访问。
+[Jupyter Notebook](https://jupyter.org/)是一个开源Web应用程序，它允许您创建包含代码、文本和可视化图表的文档。 它用于数据转换、可视化和统计建模。 它可以作为Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)的一部分被远程访问。
 
 #### 下载交互式Python笔记本文件
 

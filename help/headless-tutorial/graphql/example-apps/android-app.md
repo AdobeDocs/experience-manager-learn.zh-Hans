@@ -40,7 +40,7 @@ ht-degree: 1%
 
 Android应用程序可与以下AEM部署选项配合使用。 所有部署都需要安装[WKND站点v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest)。
 
-+ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=zh-Hans)
 
 Android应用程序设计用于连接到&#x200B;__AEM Publish__&#x200B;环境，但是，如果在AEM应用程序的配置中提供身份验证，则它可以从Android Author获取内容。
 
@@ -75,7 +75,7 @@ Android应用程序设计用于连接到&#x200B;__AEM Publish__&#x200B;环境，
 
 ### 连接到AEM环境
 
-如果需要连接到AEM创作环境[授权](https://github.com/adobe/aem-headless-client-java#using-authorization)。 [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java)提供使用[基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)的功能。 要在`AdventureLoader.java`和`AdventuresLoader.java`中使用基于令牌的身份验证更新客户端生成器，请执行以下操作：
+如果需要连接到AEM创作环境[授权](https://github.com/adobe/aem-headless-client-java#using-authorization)。 [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java)提供使用[基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hans)的功能。 要在`AdventureLoader.java`和`AdventuresLoader.java`中使用基于令牌的身份验证更新客户端生成器，请执行以下操作：
 
 ```java
 /* Comment out basicAuth

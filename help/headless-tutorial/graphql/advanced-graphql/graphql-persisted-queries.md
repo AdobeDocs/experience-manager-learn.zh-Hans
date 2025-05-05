@@ -207,9 +207,9 @@ GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
 
 >[!TIP]
 >
->    如果对AEM创作环境运行上述查询，则必须发送凭据。 请参阅[本地开发访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html)进行演示，并参阅[调用AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api)以了解文档详细信息。
+>    如果对AEM创作环境运行上述查询，则必须发送凭据。 请参阅[本地开发访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html?lang=zh-Hans)进行演示，并参阅[调用AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=zh-Hans#calling-the-aem-api)以了解文档详细信息。
 
-此外，请查看[如何执行持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query)、[使用查询变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables)和[对查询URL进行编码以供应用程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url)使用，以了解客户端应用程序如何执行持久查询。
+此外，请查看[如何执行持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hans#execute-persisted-query)、[使用查询变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hans#query-variables)和[对查询URL进行编码以供应用程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hans#encoding-query-url)使用，以了解客户端应用程序如何执行持久查询。
 
 ## 更新持久查询中的缓存控制参数 {#cache-control-all-adventures}
 
@@ -231,7 +231,7 @@ AEM GraphQL API允许您更新查询的默认缓存控制参数，以提高性�
    ![保留GraphQL缓存配置](assets/graphql-persisted-queries/persist-graphql-cache-config.png)
 
 
-有关默认缓存控制参数的详细信息，请查看[缓存您的持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#caching-persisted-queries)。
+有关默认缓存控制参数的详细信息，请查看[缓存您的持久查询](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hans#caching-persisted-queries)。
 
 
 ## 恭喜！

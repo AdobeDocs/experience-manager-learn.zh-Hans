@@ -61,7 +61,7 @@ XFA Forms基于XML。 这种结构良好且灵活的格式使AEM Forms服务器�
 * 动态表单支持可更改表单布局和分页的客户端脚本。 例如，如果您将Purchase Order.xdp另存为动态表单，它将进行扩展和分页以适应无限数量的数据
 * 动态表单在运行时支持表单的所有属性，而静态表单仅支持一个子集
 
-* [请参阅本文档以了解静态和动态PDF表单之间的差异](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
+* [请参阅本文档以了解静态和动态PDF表单之间的差异](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html?lang=zh-Hans#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
 
 >[!NOTE]
 >

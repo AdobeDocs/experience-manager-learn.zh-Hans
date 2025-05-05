@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 集成AEM Sites和Adobe Analytics
 
-了解如何使用[AEM Sites客户端数据层与Adobe Analytics核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)的内置功能将AEM和Adobe与Adobe Analytics标记扩展集成，以收集有关Adobe Experience Manager Sites中某个页面的数据。 Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)中的标记和[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)用于创建规则以将页面数据发送到Adobe Analytics。
+了解如何使用[AEM Sites客户端数据层与Adobe Analytics核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans)的内置功能将AEM和Adobe与Adobe Analytics标记扩展集成，以收集有关Adobe Experience Manager Sites中某个页面的数据。 Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=zh-Hans)中的标记和[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=zh-Hans)用于创建规则以将页面数据发送到Adobe Analytics。
 
 ## 您即将构建的内容 {#what-build}
 
@@ -40,9 +40,9 @@ ht-degree: 1%
 需要以下各项：
 
 * Experience Platform中的&#x200B;**标记属性**
-* **Adobe Analytics**&#x200B;测试/开发报表包ID和跟踪服务器。 请参阅以下有关[创建报表包](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)的文档。
-* [Experience Platform调试器](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)浏览器扩展。 从Chrome浏览器捕获了本教程中的屏幕截图。
-* （可选）启用了[Adobe客户端数据层的AEM站点](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 本教程使用面向公众的[WKND](https://wknd.site/us/en.html)网站，但欢迎您使用自己的网站。
+* **Adobe Analytics**&#x200B;测试/开发报表包ID和跟踪服务器。 请参阅以下有关[创建报表包](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=zh-Hans)的文档。
+* [Experience Platform调试器](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hans)浏览器扩展。 从Chrome浏览器捕获了本教程中的屏幕截图。
+* （可选）启用了[Adobe客户端数据层的AEM站点](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans#installation-activation)。 本教程使用面向公众的[WKND](https://wknd.site/us/en.html)网站，但欢迎您使用自己的网站。
 
 >[!NOTE]
 >
@@ -52,10 +52,10 @@ ht-degree: 1%
 
 [WKND](https://wknd.site/us/en.html)是面向公众的站点，它基于[开放源代码项目](https://github.com/adobe/aem-guides-wknd)以及[AEM实施教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)而构建，该项目设计作为参考。
 
-您可以使用Experience Platform Debugger将实时[WKND站点](https://wknd.site/us/en.html)切换到&#x200B;*您的*&#x200B;标记属性，而不是设置AEM环境并安装WKND代码库。**切换** 但是，如果您自己的AEM站点已经启用了[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)，则可以使用它。
+您可以使用Experience Platform Debugger将实时[WKND站点](https://wknd.site/us/en.html)切换到&#x200B;*您的*&#x200B;标记属性，而不是设置AEM环境并安装WKND代码库。**切换** 但是，如果您自己的AEM站点已经启用了[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans#installation-activation)，则可以使用它。
 
-1. 登录到Experience Platform并[创建标记属性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)（如果尚未创建）。
-1. 确保已创建初始标记JavaScript [库](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)并将其提升到标记[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html#)。
+1. 登录到Experience Platform并[创建标记属性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=zh-Hans)（如果尚未创建）。
+1. 确保已创建初始标记JavaScript [库](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=zh-Hans#create-a-library)并将其提升到标记[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hans#)。
 1. 从库已发布到的标记环境中复制JavaScript嵌入代码。
 
    ![复制标记属性嵌入代码](assets/collect-data-analytics/launch-environment-copy.png)
@@ -75,7 +75,7 @@ ht-degree: 1%
 
 ## 验证WKND网站上的Adobe客户端数据层
 
-[WKND参考项目](https://github.com/adobe/aem-guides-wknd)是使用AEM核心组件生成的，默认情况下已启用[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 接下来，验证是否已启用Adobe Client Data Layer。
+[WKND参考项目](https://github.com/adobe/aem-guides-wknd)是使用AEM核心组件生成的，默认情况下已启用[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans#installation-activation)。 接下来，验证是否已启用Adobe Client Data Layer。
 
 1. 导航到[WKND站点](https://wknd.site/us/en.html)。
 1. 打开浏览器的开发人员工具并导航到&#x200B;**控制台**。 运行以下命令：
@@ -104,11 +104,11 @@ ht-degree: 1%
 
    若要将页面数据发送到Adobe Analytics，请使用数据层的`dc:title`、`xdm:language`和`xdm:template`等标准属性。
 
-   有关详细信息，请查看核心组件数据架构中的[页面架构](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page)。
+   有关详细信息，请查看核心组件数据架构中的[页面架构](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans#page)。
 
    >[!NOTE]
    >
-   > 如果您没有看到`adobeDataLayer` JavaScript对象？ 确保您的网站上已启用[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+   > 如果您没有看到`adobeDataLayer` JavaScript对象？ 确保您的网站上已启用[Adobe客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans#installation-activation)。
 
 ## 创建Page Loaded规则
 
@@ -177,11 +177,11 @@ Adobe客户端数据层是&#x200B;**事件驱动的**&#x200B;数据层。 加载
 
    `event`对象是从自定义事件中调用的`trigger()`方法传递的。 此处，`component`是从自定义事件中的数据层`getState`派生的当前页面。
 
-1. 保存更改并在标记属性中运行[内部版本](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以将代码提升到您的AEM网站上使用的[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html#)。
+1. 保存更改并在标记属性中运行[内部版本](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html?lang=zh-Hans)，以将代码提升到您的AEM网站上使用的[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hans#)。
 
    >[!NOTE]
    >
-   > 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)将嵌入代码切换到&#x200B;**开发**&#x200B;环境可能很有用。
+   > 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hans)将嵌入代码切换到&#x200B;**开发**&#x200B;环境可能很有用。
 
 1. 导航到您的AEM站点，然后打开开发人员工具以查看控制台。 刷新页面，您应该会看到控制台消息已被记录：
 

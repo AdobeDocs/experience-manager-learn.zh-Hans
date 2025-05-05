@@ -41,7 +41,7 @@ ht-degree: 0%
 
 React应用程序可与以下AEM部署选项配合使用。 所有部署都需要安装[WKND站点v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest)。
 
-+ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=zh-Hans)
 + 使用[AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-hans)进行本地设置
    + 需要[JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=list&amp;p.offset=0&amp;p.limit=14&amp;p.limit=144)
 
@@ -314,4 +314,4 @@ React应用程序使用两个视图在Web体验中展示冒险数据。
 
 ### 跨源资源共享(CORS)
 
-此React应用程序依赖于在目标AEM环境中运行的基于AEM的CORS配置，并假定React应用程序在开发模式下在`http://localhost:3000`上运行。  查看[AEM Headless部署文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa.html)，了解有关如何设置和配置CORS的更多信息。
+此React应用程序依赖于在目标AEM环境中运行的基于AEM的CORS配置，并假定React应用程序在开发模式下在`http://localhost:3000`上运行。  查看[AEM Headless部署文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa.html?lang=zh-Hans)，了解有关如何设置和配置CORS的更多信息。

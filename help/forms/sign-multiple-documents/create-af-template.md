@@ -25,7 +25,7 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=12&learn=on)
 
-[您可以阅读本文以了解创建自适应表单模板和页面组件的过程](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en#storing-and-retrieving-form-data)
+[您可以阅读本文以了解创建自适应表单模板和页面组件的过程](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=zh-Hans#storing-and-retrieving-form-data)
 
 
 ## 资源

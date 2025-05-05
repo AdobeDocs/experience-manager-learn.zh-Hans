@@ -46,4 +46,4 @@ AEM Assets的图像智能标签可自动将派生的元数据标签添加到图�
 
 ## 其他资源
 
-* [AEM Assets智能标记文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/smart-tags.html)
+* [AEM Assets智能标记文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/smart-tags.html?lang=zh-Hans)

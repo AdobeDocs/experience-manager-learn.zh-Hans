@@ -85,20 +85,20 @@ AEM API具有包内首选项，按首选项顺序由以下Java™包标识：
 
 ### 查询API
 
-AEM支持多种查询语言。 三种主要语言为[JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html)、XPath和[AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)。
+AEM支持多种查询语言。 三种主要语言为[JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html)、XPath和[AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=zh-Hans)。
 
 最重要的考虑是在代码库中维护一致的查询语言，以降低复杂性和理解成本。
 
 所有查询语言都有效地具有相同的性能配置文件，因为[!DNL Apache Oak]将它们传输到JCR-SQL2以便最终查询执行，并且与JCR-SQL2的查询时间本身相比，转换到JCR-SQL2的时间可以忽略不计。
 
-首选的API是[AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)，它是最高级别的抽象，为构建、执行和检索查询结果提供了一个强大的API，并提供以下内容：
+首选的API是[AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=zh-Hans)，它是最高级别的抽象，为构建、执行和检索查询结果提供了一个强大的API，并提供以下内容：
 
 * 简单、参数化查询构造（以Map建模的查询参数）
-* 本机[Java™ API和HTTP API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
-* [AEM Query Debugger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)
-* [AEM谓词](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-predicate-reference.html)支持常见查询要求
+* 本机[Java™ API和HTTP API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)
+* [AEM Query Debugger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=zh-Hans)
+* [AEM谓词](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-predicate-reference.html?lang=zh-Hans)支持常见查询要求
 
-* 可扩展API，允许开发自定义[查询谓词](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
+* 可扩展API，允许开发自定义[查询谓词](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)
 * JCR-SQL2和XPath可以通过[[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)和[JCR API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)直接执行，分别返回结果[[!DNL Sling] 资源](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)或[JCR节点](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html)。
 
 >[!CAUTION]
@@ -132,7 +132,7 @@ AEM支持多种查询语言。 三种主要语言为[JCR-SQL2](https://docs.jbos
    * [计划程序](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
    * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 
-* [服务用户](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
+* [服务用户](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html?lang=zh-Hans)
 
 ## JCR API
 
@@ -154,7 +154,7 @@ JCR本身是基于层次结构/树的NoSQL数据存储，AEM将其用作内容�
 
 ### JCR API的常见用法
 
-* [访问控制管理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
+* [访问控制管理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html?lang=zh-Hans)
 * [可授权管理（用户/组）](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/user/package-summary.html)
 * JCR观察（侦听JCR事件）
 * 创建深层节点结构

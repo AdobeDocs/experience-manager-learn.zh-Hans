@@ -56,7 +56,7 @@ ht-degree: 0%
 
 React应用程序的内容由AEM使用GraphQL API提供，用户界面使用两个React组件`Teams`和`Person`构建。
 
-提供了相应的教程，以了解如何构建&#x200B;**WKND Teams** React应用程序。 您可以在[此处](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview)找到该教程。
+提供了相应的教程，以了解如何构建&#x200B;**WKND Teams** React应用程序。 您可以在[此处](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview)找到该教程。
 
 ## 后续步骤
 

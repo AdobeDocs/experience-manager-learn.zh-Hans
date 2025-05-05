@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 创建基于JSON架构的自适应表单
 
-AEM Forms 6.3版本中引入了创建基于JSON架构的自适应Forms的功能。 有关使用JSON架构创建自适应Forms的详细信息，请参阅此[文章](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html)。
+AEM Forms 6.3版本中引入了创建基于JSON架构的自适应Forms的功能。 有关使用JSON架构创建自适应Forms的详细信息，请参阅此[文章](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html?lang=zh-Hans)。
 
 创建基于JSON模式的自适应表单后，下一步是将提交的数据存储在数据库中。 为此，我们将使用由各种数据库供应商引入的新JSON数据类型。 为便于本文使用，我们将使用MySql 8数据库来存储提交的数据。
 

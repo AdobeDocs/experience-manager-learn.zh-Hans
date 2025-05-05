@@ -45,6 +45,6 @@ ht-degree: 21%
    + [发送文档并链接资产](./integrations/workfront/link-send.md)
    + [版本历史记录](./integrations/workfront/versions.md)
 
-+ [Adobe Journey Optimizer集成](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html){target=_blank}
++ [Adobe Journey Optimizer集成](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=zh-Hans){target=_blank}
 
-+ [文档](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html){target=_blank}
++ [文档](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=zh-Hans){target=_blank}

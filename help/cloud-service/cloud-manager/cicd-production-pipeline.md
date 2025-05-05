@@ -29,12 +29,12 @@ ht-degree: 53%
 
 ## 配置
 
-[CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html)配置定义将启动管道的触发器、控制生产部署的参数以及性能测试参数。
+[CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html?lang=zh-Hans)配置定义将启动管道的触发器、控制生产部署的参数以及性能测试参数。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### 管道执行
 
-[CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html)用于通过暂存生成代码并将其部署到生产环境，从而缩短实现值的时间。
+[CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=zh-Hans)用于通过暂存生成代码并将其部署到生产环境，从而缩短实现值的时间。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)

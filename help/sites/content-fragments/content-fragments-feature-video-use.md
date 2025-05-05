@@ -38,7 +38,7 @@ AEM内容片段是基于文本的编辑内容，其中可能包含一些与关�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
-AEM内容片段模型（内容片段的数据架构）必须通过AEM的[[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)启用，该浏览器允许基于每个配置定义内容片段模型。
+AEM内容片段模型（内容片段的数据架构）必须通过AEM的[[!UICONTROL 配置浏览器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=zh-Hans)启用，该浏览器允许基于每个配置定义内容片段模型。
 
 ## 创建内容片段 {#creating-content-fragments}
 

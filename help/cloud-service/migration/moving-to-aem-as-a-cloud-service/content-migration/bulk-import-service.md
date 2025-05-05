@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
-> 此视频中的输入源仅显示Azure Blob Storage和Amazon S3；但是，可用源会随着时间的推移而继续增长。 有关支持的输入源的完整列表，请参阅产品或[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload)中的可用选项。
+> 此视频中的输入源仅显示Azure Blob Storage和Amazon S3；但是，可用源会随着时间的推移而继续增长。 有关支持的输入源的完整列表，请参阅产品或[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=zh-Hans#bulk-upload)中的可用选项。
 
 ## 关键活动
 
@@ -43,6 +43,6 @@ ht-degree: 0%
 
 ## 其他资源
 
-+ [批量导入服务配置选项](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#configure-bulk-ingestor-tool)
-+ 有关资产引入的[Adobe Developers Live会话](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html)
++ [批量导入服务配置选项](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=zh-Hans#configure-bulk-ingestor-tool)
++ 有关资产引入的[Adobe Developers Live会话](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=zh-Hans)
 

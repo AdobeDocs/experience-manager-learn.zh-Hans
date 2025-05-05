@@ -21,7 +21,7 @@ ht-degree: 1%
 
 智能成像还能够与Adobe提供的同类最佳优质服务完全集成，从而进一步提升性能。 此服务在服务器、网络和对等点之间找到最佳的Internet路由，该路由具有比Internet上的默认路由最低的延迟和/或数据包丢失率。
 
-了解有关[智能成像](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html)的更多信息。
+了解有关[智能成像](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html?lang=zh-Hans)的更多信息。
 
 ## 智能成像优势
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 如前所述，智能成像利用Adobe Sensei AI功能并与现有的图像预设一起使用，自动将图像转换为最佳的新一代图像格式（如WebP），同时保持视觉保真度。
 
-了解有关[智能成像的工作方式](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)的详细信息，包括支持的图像格式（以及如果不使用这些格式将发生什么情况）及其对正在使用的现有图像预设的影响。
+了解有关[智能成像的工作方式](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html?lang=zh-Hans#how-does-smart-imaging-work)的详细信息，包括支持的图像格式（以及如果不使用这些格式将发生什么情况）及其对正在使用的现有图像预设的影响。
 
 ## 智能成像的影响
 
@@ -47,11 +47,11 @@ ht-degree: 1%
 
 智能成像包含在您现有的Dynamic Media Classic许可证中。 此功能不需要额外付费。 要利用此功能，您必须满足两个要求：具有Adobe捆绑的CDN和专用域。 然后，必须为帐户启用它，因为它未自动启用。
 
-要启用智能成像，您需要发送技术支持请求，请求者： |创建支持案例| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/cn/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 支持人员将与您合作，一起设置一个自定义域，您将与该域关联到“智能成像”。 您将更改一个与缓存（生存时间或TTL）相关的参数，支持将清除缓存。 如果您愿意，也可以在推送到生产环境之前执行可选的暂存步骤。 然后，当智能成像开启时，您将向客户提供较小大小的图像，但图像质量与他们所请求的相同。 这意味着客户体验到的页面加载速度更快 — 所有这些都是自动完成的，因为Adobe Sensei有助于选择最有效的大小。
+要启用智能成像，您需要发送技术支持请求，请求者： |创建支持案例| [https://helpx.adobe.com/cn/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/cn/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 支持人员将与您合作，一起设置一个自定义域，您将与该域关联到“智能成像”。 您将更改一个与缓存（生存时间或TTL）相关的参数，支持将清除缓存。 如果您愿意，也可以在推送到生产环境之前执行可选的暂存步骤。 然后，当智能成像开启时，您将向客户提供较小大小的图像，但图像质量与他们所请求的相同。 这意味着客户体验到的页面加载速度更快 — 所有这些都是自动完成的，因为Adobe Sensei有助于选择最有效的大小。
 
 启用智能成像后，您需要验证它是否按预期工作。
 
-您可能还有其他有关智能成像的问题。 我们整理了一个包含答案的常见问题解答(FAQ)列表。 阅读[常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html)。
+您可能还有其他有关智能成像的问题。 我们整理了一个包含答案的常见问题解答(FAQ)列表。 阅读[常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html?lang=zh-Hans)。
 
 ## 其他资源
 

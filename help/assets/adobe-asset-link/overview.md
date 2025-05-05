@@ -55,7 +55,7 @@ Adobe Asset Link在InDesign Asset Link和Adobe AEM之间提供直接链接支持
 
 >[!NOTE]
 >
->仅使用您的Adobe Creative Cloud Enterprise ID或Federated ID。 确保您[为Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)配置AEM。
+>仅使用您的Adobe Creative Cloud Enterprise ID或Federated ID。 确保您[为Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)配置AEM。
 
 您可以使用以下选项之一将资源放置到InDesign布局中：
 

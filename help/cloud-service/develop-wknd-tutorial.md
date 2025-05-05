@@ -43,4 +43,4 @@ ht-degree: 49%
 2. 已推送到在AEM as a Cloud Service项目中注册的上游AdobeCloud Manager Git存储库
 3. 通过Cloud Manager管道部署到AEM as a Cloud Service环境
 
-有关如何将AEM项目部署到AEM as a Cloud Service的完整概述，请观看有关如何[将Git与AdobeCloud Manager集成](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)的视频系列。
+有关如何将AEM项目部署到AEM as a Cloud Service的完整概述，请观看有关如何[将Git与AdobeCloud Manager集成](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)的视频系列。

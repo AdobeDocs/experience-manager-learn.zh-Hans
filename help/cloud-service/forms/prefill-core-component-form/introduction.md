@@ -30,7 +30,7 @@ ht-degree: 4%
 
 要在AEM Forms CS中实施上述用例，您需要满足以下条件
 
-* [AEM Forms CS云就绪实例](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync.html?lang=en#set-up-aem-author-instance)
+* [AEM Forms CS云就绪实例](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync.html?lang=zh-Hans#set-up-aem-author-instance)
 
 ### 后续步骤
 

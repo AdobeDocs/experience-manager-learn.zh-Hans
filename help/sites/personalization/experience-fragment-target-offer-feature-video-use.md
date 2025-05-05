@@ -35,5 +35,5 @@ Adobe Experience Manager可重新设想AEM和Target之间的个性化工作流�
 
 ## 其他资源 {#additional-resources}
 
-* [体验片段文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
+* [体验片段文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=zh-Hans)
 * [使用体验片段](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)

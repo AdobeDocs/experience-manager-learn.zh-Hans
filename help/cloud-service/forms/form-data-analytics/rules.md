@@ -22,7 +22,7 @@ ht-degree: 1%
 
 # 定义规则
 
-在Tags属性中，我们创建了2个新的[规则](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html)（**字段验证错误和FormSubmit**）。
+在Tags属性中，我们创建了2个新的[规则](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html?lang=zh-Hans)（**字段验证错误和FormSubmit**）。
 
 ![自适应表单](assets/rules.png)
 
@@ -54,7 +54,7 @@ Adobe Analytics — 设置变量的配置如下
 Adobe Analytics - Set变量的配置如下。
 ![form-submit-rule-set-variables](assets/form-submit-set-variable.png)
 
-当您准备好测试标记代码时，请[使用发布流发布对标记所做的更改](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html)。
+当您准备好测试标记代码时，请[使用发布流发布对标记所做的更改](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html?lang=zh-Hans)。
 
 ## 后续步骤
 

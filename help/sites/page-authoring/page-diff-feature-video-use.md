@@ -47,4 +47,4 @@ AEM Sites的“页面差异”功能节目以颜色编码快速查看页面中�
 
 ## 其他资源 {#additional-resources}
 
-* [页面差异文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html)
+* [页面差异文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html?lang=zh-Hans)

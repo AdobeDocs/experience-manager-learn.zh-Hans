@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # AEM项目结构
 
-探索为AEM as a Cloud Service构造[AEM Maven项目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#developing)的最佳实践。
+探索为AEM as a Cloud Service构造[AEM Maven项目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=zh-Hans#developing)的最佳实践。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330557?quality=12&learn=on)

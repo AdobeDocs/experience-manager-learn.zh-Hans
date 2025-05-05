@@ -65,7 +65,7 @@ ht-degree: 0%
 
 1. **更新CDN配置文件**：使用所需的配置更新AEM项目中的`cdn.yaml`文件。 这些配置作为规则添加，并且遵循规则语法。 规则三个主要组件： `name`、`when`和`action`。
 
-2. **部署CDN配置文件**：使用Cloud Manager配置管道部署更新的`cdn.yaml`文件。 有关详细信息，请参阅[通过Cloud Manager部署规则](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
+2. **部署CDN配置文件**：使用Cloud Manager配置管道部署更新的`cdn.yaml`文件。 有关详细信息，请参阅[通过Cloud Manager部署规则](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
 
 ### 示例
 
@@ -91,13 +91,13 @@ data:
 
 [使用流量过滤器规则保护网站](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
-[配置和部署HTTP标头验证CDN规则](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
+[配置和部署HTTP标头验证CDN规则](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
 
-[如何清除CDN缓存](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
+[如何清除CDN缓存](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
 
-[配置CDN错误页](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
+[配置CDN错误页](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
 
-[在CDN上配置流量](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
+[在CDN上配置流量](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
 
-[正在配置CDN凭据和身份验证](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
+[正在配置CDN凭据和身份验证](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 

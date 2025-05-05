@@ -162,7 +162,7 @@ ht-degree: 0%
   ...
   ```
 
-  请参阅[AEM服务凭据教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)以了解更多相关信息。 此外，用于管理密钥和操作参数的[App Builder配置文件](https://developer.adobe.com/app-builder/docs/guides/configuration/)。
+  请参阅[AEM服务凭据教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=zh-Hans)以了解更多相关信息。 此外，用于管理密钥和操作参数的[App Builder配置文件](https://developer.adobe.com/app-builder/docs/guides/configuration/)。
 
 - `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js`模块将原始事件数据、活动消息和修改详细信息（如果有）存储在Adobe I/O Runtime存储中。
 

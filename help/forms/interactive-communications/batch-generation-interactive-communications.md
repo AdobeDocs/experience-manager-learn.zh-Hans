@@ -21,7 +21,7 @@ ht-degree: 0%
 
 您可以使用批处理API从模板生成多个交互式通信。 模板是一种没有任何数据的交互式通信。 批处理API将数据与模板结合起来以生成交互式通信。 该API在交互式通信的大量生产中非常有用。 例如，电话帐单、多个客户的信用卡对帐单。
 
-[了解有关批次生成API的更多信息](https://experienceleague.adobe.com/docs/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html)
+[了解有关批次生成API的更多信息](https://experienceleague.adobe.com/docs/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html?lang=zh-Hans)
 
 本文提供了使用批处理API生成Interactive Communications文档的示例资源。
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 ## 使用REST请求批量生成
 
-您可以通过REST请求调用[批处理API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)。 您可以为其他应用程序公开REST端点，以调用API来生成文档。
+您可以通过REST请求调用[批处理API](https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/index.html)。 您可以为其他应用程序公开REST端点，以调用API来生成文档。
 提供的示例资产显示用于生成交互式通信文档的REST端点。 此servlet接受以下参数：
 
 * fileName — 数据文件在文件系统中的位置。

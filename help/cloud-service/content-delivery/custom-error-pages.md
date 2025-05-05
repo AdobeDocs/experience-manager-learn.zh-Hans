@@ -80,7 +80,7 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
 
 在本教程中，您将学习如何使用&#x200B;_ErrorDocument_&#x200B;指令、_ACS AEM Commons Error Page Handler_&#x200B;和&#x200B;_CDN Error Pages_&#x200B;选项自定义错误页面。 要学习本教程，您需要：
 
-- [本地AEM开发环境](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview)或AEM as a Cloud Service环境。 _CDN错误页面_&#x200B;选项适用于AEM as a Cloud Service环境。
+- [本地AEM开发环境](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview)或AEM as a Cloud Service环境。 _CDN错误页面_&#x200B;选项适用于AEM as a Cloud Service环境。
 
 - 用于自定义错误页面的[AEM WKND项目](https://github.com/adobe/aem-guides-wknd)。
 
@@ -95,7 +95,7 @@ AEM as a Cloud Service为上述方案提供了&#x200B;_默认错误页面_。 �
   $ mvn clean install -PautoInstallSinglePackage -PautoInstallSinglePackagePublish
   ```
 
-- 对于AEM as a Cloud Service环境，请通过运行[全栈管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)来部署AEM WKND项目，请参阅[非生产管道](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-non-production-pipeline)示例。
+- 对于AEM as a Cloud Service环境，请通过运行[全栈管道](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)来部署AEM WKND项目，请参阅[非生产管道](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-non-production-pipeline)示例。
 
 - 验证WKND网站页面是否正确呈现。
 
@@ -375,7 +375,7 @@ HTML代码片段包含以下占位符：
 
 1. 在Cloud Manager中，导航到&#x200B;**管道**&#x200B;部分。
 
-1. 创建新管道或选择仅部署&#x200B;**Config**&#x200B;文件的现有管道。 有关详细步骤，请参阅[创建配置管道](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
+1. 创建新管道或选择仅部署&#x200B;**Config**&#x200B;文件的现有管道。 有关详细步骤，请参阅[创建配置管道](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
 
 1. 单击&#x200B;**运行**&#x200B;按钮以部署CDN规则。
 
@@ -401,6 +401,6 @@ HTML代码片段包含以下占位符：
 
 ## 其他资源
 
-- [配置CDN错误页](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
+- [配置CDN错误页](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
 
-- [Cloud Manager — 配置管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)
+- [Cloud Manager — 配置管道](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)

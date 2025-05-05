@@ -163,7 +163,7 @@ data:
 
 让我们通过阻止来自IP地址的请求来&#x200B;**阻止DoS攻击**，这些请求每秒发出100个请求，导致其被阻止5分钟。
 
-- 在WKND项目的`/config/cdn.yaml`文件中添加以下[速率限制流量过滤器规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#ratelimit-structure)。
+- 在WKND项目的`/config/cdn.yaml`文件中添加以下[速率限制流量过滤器规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hans#ratelimit-structure)。
 
 ```yaml
 kind: CDN
@@ -227,7 +227,7 @@ data:
 
 接下来，让我们探讨一下已购买增强安全性或WAF-DDoS保护许可证的客户的体验，该许可证允许他们配置高级规则以保护网站免受更复杂的攻击。
 
-在继续之前，请按照流量过滤器规则文档[设置步骤](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en#setup)中的说明，为程序启用WAF-DDoS保护。
+在继续之前，请按照流量过滤器规则文档[设置步骤](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hans#setup)中的说明，为程序启用WAF-DDoS保护。
 
 #### 不带WAFFlags
 
@@ -264,7 +264,7 @@ data:
 
 现在，让我们添加包含`wafFlags`属性的WAF规则作为`action`属性的一部分，并&#x200B;**阻止模拟的攻击请求**。
 
-从语法的角度来看，WAF规则与前面看到的规则类似，但是，`action`属性引用了一个或多个`wafFlags`值。 要了解有关`wafFlags`的更多信息，请查看[WAF标记列表](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#waf-flags-list)部分。
+从语法的角度来看，WAF规则与前面看到的规则类似，但是，`action`属性引用了一个或多个`wafFlags`值。 要了解有关`wafFlags`的更多信息，请查看[WAF标记列表](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hans#waf-flags-list)部分。
 
 - 在WKND项目的`/config/cdn.yaml`文件中添加以下规则。 请注意，`block-waf-flags`规则如何包含模拟恶意流量攻击时在仪表板工具中出现的一些wafFlags。 事实上，随着时间的推移，分析日志以决定随着威胁演进要宣布什么新规则是很好的做法。
 
@@ -352,7 +352,7 @@ data:
 
 ## 其他资源
 
-[流量过滤器规则语法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#rules-syntax)
+[流量过滤器规则语法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hans#rules-syntax)
 
-[CDN日志格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#cdn-log-format)
+[CDN日志格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hans#cdn-log-format)
 

@@ -147,7 +147,7 @@ Asset Compute工作人员必须部署到Adobe I/O Runtime才能与AEM as a Cloud
 
 ### 文档
 
-+ [Asset Compute服务文档](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
++ [Asset Compute服务文档](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=zh-Hans)
 + [Asset Compute开发工具自述文件](https://github.com/adobe/asset-compute-devtool)
 + [Asset Compute示例工作程序](https://github.com/adobe/asset-compute-example-workers)
 

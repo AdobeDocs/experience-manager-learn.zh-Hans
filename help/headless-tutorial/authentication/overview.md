@@ -37,7 +37,7 @@ AEM公开了各种可以以无头方式交互的HTTP端点，从GraphQL、AEM Co
 
 ## 外部应用程序概述
 
-本教程使用从命令行运行的[simple Node.js应用程序](./assets/aem-guides_token-authentication-external-application.zip)，通过[Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html)更新AEM as a Cloud Service上的资源元数据。
+本教程使用从命令行运行的[simple Node.js应用程序](./assets/aem-guides_token-authentication-external-application.zip)，通过[Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=zh-Hans)更新AEM as a Cloud Service上的资源元数据。
 
 Node.js应用程序的执行流程如下所示：
 

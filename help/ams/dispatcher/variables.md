@@ -178,7 +178,7 @@ Define WERETAIL_DOMAIN www.weretail.com
 Define WERETAIL_ALT_DOMAIN www..weretail.net
 ```
 
-创建您自己的变量时，文件会根据它们的内容命名它们，并遵循手册[此处](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention)中提供的命名标准。  在上例中，您可以看到变量文件承载不同的DNS条目，作为要在配置文件中使用的变量。
+创建您自己的变量时，文件会根据它们的内容命名它们，并遵循手册[此处](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html?lang=zh-Hans#naming-convention)中提供的命名标准。  在上例中，您可以看到变量文件承载不同的DNS条目，作为要在配置文件中使用的变量。
 
 ## 使用变量
 

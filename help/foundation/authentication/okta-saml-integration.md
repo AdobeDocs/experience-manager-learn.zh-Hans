@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 使用OKTA验证AEM作者身份
 
-> 有关如何使用AEM as a Cloud Service设置OKTA的说明，请参阅[SAML 2.0身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html)。
+> 有关如何使用AEM as a Cloud Service设置OKTA的说明，请参阅[SAML 2.0身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html?lang=zh-Hans)。
 
 第一步是在OKTA门户上配置您的应用程序。 您的应用程序获得OKTA管理员批准后，您将有权访问IdP证书和单点登录URL。 以下是注册新应用程序时通常使用的设置。
 

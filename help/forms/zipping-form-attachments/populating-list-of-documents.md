@@ -21,7 +21,7 @@ ht-degree: 1%
 
 本指南将指导您完成创建自定义流程步骤，以便在Adobe Experience Manager中用附件和附件名称填充“数组列表”类型的列表变量。 这些变量对于“发送电子邮件”工作流组件至关重要。
 
-如果您不熟悉如何创建OSGi捆绑包，请按照以下[说明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)操作。
+如果您不熟悉如何创建OSGi捆绑包，请按照以下[说明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=zh-Hans)操作。
 
 自定义流程步骤中的代码执行以下操作：
 

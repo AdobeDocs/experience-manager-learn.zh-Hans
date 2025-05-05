@@ -29,4 +29,4 @@ ht-degree: 14%
 1. 创建批处理数据存储配置
 1. 执行批处理API
 
-建议您先熟悉[API文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=en)，然后再继续使用此教程。
+建议您先熟悉[API文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=zh-Hans)，然后再继续使用此教程。

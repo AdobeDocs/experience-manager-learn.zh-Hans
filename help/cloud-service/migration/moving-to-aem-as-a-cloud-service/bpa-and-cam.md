@@ -43,10 +43,10 @@ BPA软件包应安装在克隆的AEM 6.x生产环境中。 BPA将生成一份可
 在尝试动手练习之前，请确保您已观看并了解上述视频以及以下材料：
 
 + [以不同的方式思考AEM as a Cloud Service](./introduction.md)
-+ [什么是AEM as a Cloud Service？](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=en)
-+ [AEM as a Cloud Service 的架构](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=en)
-+ [可变和不可变的内容](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=en)
-+ [AEM as a Cloud Service和AEM 6.x在开发方面的差异](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#developing)
++ [什么是AEM as a Cloud Service？](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=zh-Hans)
++ [AEM as a Cloud Service 的架构](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=zh-Hans)
++ [可变和不可变的内容](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=zh-Hans)
++ [AEM as a Cloud Service和AEM 6.x在开发方面的差异](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=zh-Hans#developing)
 
 <table style="border-width:0">
     <tr>

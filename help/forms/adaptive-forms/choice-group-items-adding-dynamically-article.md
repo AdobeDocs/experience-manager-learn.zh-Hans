@@ -89,7 +89,7 @@ else
 **使用可视编辑器添加项**
 
 * [下载资源](assets/usingthevisualeditor.zip)
-* 安装Tomcat（如果尚未安装）。 [此处提供了安装tomcat的说明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* 安装Tomcat（如果尚未安装）。 [此处提供了安装tomcat的说明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=zh-Hans)
 * [将此zip文件中包含的SampleRest.war文件部署到Tomcat中](assets/sample-rest.zip)
 * [打开Forms和文档](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 单击“创建” | 文件上传”并上传您在上一步中下载的文件

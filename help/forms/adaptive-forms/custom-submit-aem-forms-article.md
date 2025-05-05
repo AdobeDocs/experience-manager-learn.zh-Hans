@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >本文中的代码不适用于基于核心组件的自适应表单。
->[此处提供了基于核心组件的自适应表单的等效文章](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=en)
+>[此处提供了基于核心组件的自适应表单的等效文章](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=zh-Hans)
 
 
 本文将引导您完成创建自定义提交操作以处理自适应Forms提交所需的步骤。

@@ -57,6 +57,6 @@ XML变量可用于预填充自适应表单，或在您的工作流中存储自�
 
 * [使用包管理器下载资源并将其导入AEM](assets/xmlandstringvariable.zip)
 * [浏览工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/vacationrequest.html)以了解工作流中使用的变量
-* [配置电子邮件服务](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
+* [配置电子邮件服务](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
 * [打开自适应表单](http://localhost:4502/content/dam/formsanddocuments/applicationfortimeoff/jcr:content?wcmmode=disabled)
 * 填写详细信息并提交表单。

@@ -26,4 +26,4 @@ ht-degree: 2%
 
 ## 其他资源 {#additional-resources}
 
-* [内容传输工具概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
+* [内容传输工具概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=zh-Hans)

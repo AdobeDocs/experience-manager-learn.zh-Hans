@@ -39,31 +39,31 @@ ht-degree: 3%
 
 ### 日常维护
 
-#### [索引维护](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=en)
+#### [索引维护](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=zh-Hans)
 
 索引允许查询尽可能快地运行，从而腾出资源用于其他操作。 确保索引处于顶部形状！ AEM会取消遍历的查询，而不是使用索引来防止一个错误的查询影响整体AEM性能。
 
-#### [Tar压缩/修订清理](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=en)
+#### [Tar压缩/修订清理](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=zh-Hans)
 
 存储库的每次更新都会创建一个新的内容修订版本。 因此，存储库的大小会随着每次更新而增长。 为避免存储库增长失控，需要清理旧修订以释放磁盘资源。
 
-#### [Lucene二进制文件清理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-dashboard.html#automated-maintenance-tasks)
+#### [Lucene二进制文件清理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-dashboard.html?lang=zh-Hans#automated-maintenance-tasks)
 
 清除Lucene二进制文件并减少正在运行的数据存储大小要求。
 
-#### [数据存储垃圾桶](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html)
+#### [数据存储垃圾桶](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html?lang=zh-Hans)
 
 删除AEM中的资产时，可能会从节点层次结构中删除对基础数据存储记录的引用，但数据存储记录本身会保留。 此未引用的数据存储记录会变为“垃圾”，无需保留。 如果存在大量未引用的资产，则将其删除非常有用，可以保留空间，优化备份和文件系统维护性能。
 
-#### [工作流清除](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/workflows-administering.html)
+#### [工作流清除](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/workflows-administering.html?lang=zh-Hans)
 
 最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此，您可以定期从存储库中清除已完成或正在运行的工作流实例。
 
-#### [审核日志维护] (https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html
+#### [审核日志维护] (https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html?lang=zh-Hans
 
 符合审核日志记录条件的AEM事件会生成大量存档数据。 由于复制、资产上传和其他系统活动，这些数据会随着时间的推移而快速增长。
 
-#### [安全性](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en)
+#### [安全性](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=zh-Hans)
 
 确保严格遵循安全清单最佳实践，以确保AEM的最安全实例。
 
@@ -75,19 +75,19 @@ ht-degree: 3%
 
 尝试不使用自定义组件 — 使用[核心组件](https://www.aemcomponents.dev/)。 您的目标应该是80-90%的时间使用核心组件，并且只谨慎使用自定义组件。 这通常需要一种新的查看页面上组件的方式 — 您必须意识到前端开发人员可以使用CSS轻松重新设置组件的样式。 同时请记住，这些核心组件可以相互嵌入，以实现非常复杂的结果。 发挥创意！
 
-### [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en)
+### [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=zh-Hans)
 
 样式系统允许核心组件，甚至自定义组件，其外观和感觉会根据作者的判断而发生变化，以创建全新的组件。 这些文体变化通常只涉及前端设计人员和知识丰富的作者（通常称为“超级作者”）
 
-### [启动项](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/launches/overview.html?lang=en)
+### [启动项](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/launches/overview.html?lang=zh-Hans)
 
 启动项允许完成新的促销活动、销售或网站转出的工作，而不影响当前部署的页面。 此外，它们可以计划为自动上线，而无需出席或监督，这样作者就可以今天完成下周（或下一季度）的工作，而不用在上线前一天就匆忙进行页面开发 — 这真是“时间”的天赋！)
 
-### [内容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
+### [内容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html?lang=zh-Hans)
 
 内容片段是可自定义的信息的“块”，可以轻松地在网站上重复使用。 如果您需要更改，只需更改原始块，并且更新会出现在任何使用它的位置 — 立即！
 
-### [体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en)
+### [体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=zh-Hans)
 
 虽然体验片段的声音与内容片段几乎相同，但体验片段是细小的可见页面片段。 它们还可以在您的站点中广泛重复使用，并在AEM的中央位置进行维护，以简化在几秒钟内对站点进行潜在全局更改的任务，而无需几天或几周的时间。
 
@@ -95,7 +95,7 @@ ht-degree: 3%
 
 ## 常规
 
-通过持续学习及时了解更改AEM — 不要沉迷于过去。 使用[Experience League](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=en)和[Adobe数字学习服务(ADLS)](https://learning.adobe.com/)磨练您的技能。
+通过持续学习及时了解更改AEM — 不要沉迷于过去。 使用[Experience League](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=zh-Hans)和[Adobe数字学习服务(ADLS)](https://learning.adobe.com/)磨练您的技能。
 
 ## 结论
 

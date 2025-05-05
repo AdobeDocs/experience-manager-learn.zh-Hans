@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ![资产工作流迁移工具](./assets/asset-workflow-migration.png)
 
-作为重构代码库的一部分，请使用[资产工作流迁移工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html)迁移现有工作流，以使用AEM as a Cloud Service中的Asset Compute微服务。
+作为重构代码库的一部分，请使用[资产工作流迁移工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html?lang=zh-Hans)迁移现有工作流，以使用AEM as a Cloud Service中的Asset Compute微服务。
 
 ## 关键活动
 

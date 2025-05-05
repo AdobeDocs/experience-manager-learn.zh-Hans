@@ -23,7 +23,7 @@ ht-degree: 1%
 
 了解如何在AEM as a Cloud Service (AEMCS)托管的CDN中使用&#x200B;**速率限制流量过滤器**&#x200B;规则和其他策略来阻止拒绝服务(DoS)和分布式拒绝服务(DDoS)攻击。 这些攻击会导致CDN和潜在的AEM Publish服务（也称为来源）出现流量尖峰，并可能影响站点响应性和可用性。
 
-本教程将指导您如何分析&#x200B;_流量模式并配置速率限制[流量过滤器规则](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)_&#x200B;以缓解这些攻击。 本教程还介绍如何[配置警报](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)，以便在可疑攻击时通知您。
+本教程将指导您如何分析&#x200B;_流量模式并配置速率限制[流量过滤器规则](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)_&#x200B;以缓解这些攻击。 本教程还介绍如何[配置警报](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)，以便在可疑攻击时通知您。
 
 ## 了解保护
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 - **缓存：**&#x200B;使用良好的缓存策略，DDoS攻击的影响会更加有限，因为CDN会阻止大多数请求访问源并导致性能下降。
 - **自动缩放：** AEM创作和发布服务可自动缩放以处理流量尖峰，但它们仍可能会受到流量突然大量增加的影响。
 - **阻止：**&#x200B;如果到达源位置的流量超过特定IP地址的Adobe定义速率，则Adobe CDN将根据CDN PoP(Point of Presence)阻止该流量。
-- **警报：**&#x200B;当流量超过特定速率时，操作中心会在源位置发送流量尖峰警报通知。 当流向任何给定CDN Po的流量超过每个IP地址的&#x200B;_Adobe定义的_&#x200B;请求速率时，将触发此警报。 有关更多详细信息，请参阅[流量过滤器规则警报](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)。
+- **警报：**&#x200B;当流量超过特定速率时，操作中心会在源位置发送流量尖峰警报通知。 当流向任何给定CDN Po的流量超过每个IP地址的&#x200B;_Adobe定义的_&#x200B;请求速率时，将触发此警报。 有关更多详细信息，请参阅[流量过滤器规则警报](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)。
 
 这些内置的保护应被视为组织将DDoS攻击的性能影响降至最低的能力的基准。 由于每个网站都有不同的性能特征，并且在达到Adobe定义的速率限制之前可能会看到性能下降，因此建议通过&#x200B;_客户配置_&#x200B;来扩展默认保护。
 
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 理想情况下，您最好在投入生产之前配置规则。 在实践中，许多组织只会在收到流量尖峰警报（表示可能发生攻击）后反应性地声明规则。
 
-当超过给定PoP的来自单个IP地址的流量默认阈值时，Adobe在源位置发送流量尖峰警报作为[操作中心通知](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/actions-center)。 如果收到此类警报，建议配置速率限制流量过滤器规则。 此默认警报不同于客户在定义流量过滤器规则时必须明确启用的警报，您将在以后的部分中了解这些警报。
+当超过给定PoP的来自单个IP地址的流量默认阈值时，Adobe在源位置发送流量尖峰警报作为[操作中心通知](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/actions-center)。 如果收到此类警报，建议配置速率限制流量过滤器规则。 此默认警报不同于客户在定义流量过滤器规则时必须明确启用的警报，您将在以后的部分中了解这些警报。
 
 ## 分析流量模式 {#analyze-traffic}
 
@@ -96,7 +96,7 @@ Adobe提供的&#x200B;**Elasticsearch、Logstash和Kibana (ELK)**&#x200B;仪表�
 
 ### Splunk — 配置功能板工具
 
-启用了[Splunk日志转发](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)的客户可以创建新的仪表板来分析流量模式。
+启用了[Splunk日志转发](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)的客户可以创建新的仪表板来分析流量模式。
 
 要在Splunk中创建仪表板，请执行[用于AEMCS CDN日志分析的Splunk仪表板](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis)步骤。
 
@@ -142,7 +142,7 @@ ELK和Splunk功能板中提供了以下可视化图表：
 
 在AEM项目的`/config/cdn.yaml`文件中，使用基于上述讨论的值配置&#x200B;**速率限制流量过滤器**&#x200B;规则。 如果需要，请咨询Web安全团队，确保速率限制值正确且不会阻止合法流量。
 
-有关更多详细信息，请参阅[在AEM项目中创建规则](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#create-rules-in-your-aem-project)。
+有关更多详细信息，请参阅[在AEM项目中创建规则](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#create-rules-in-your-aem-project)。
 
 ```yaml
 kind: CDN
@@ -195,12 +195,12 @@ data:
 按照以下步骤将更改部署到AEMCS环境：
 
 - 提交上述更改并将其推送到Cloud Manager Git存储库。
-- 使用Cloud Manager的配置管道将更改部署到AEMCS环境。 有关详细信息，请参阅[通过Cloud Manager部署规则](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
+- 使用Cloud Manager的配置管道将更改部署到AEMCS环境。 有关详细信息，请参阅[通过Cloud Manager部署规则](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
 - 要验证&#x200B;**速率限制流量过滤器规则**&#x200B;是否按预期工作，您可以按照[攻击模拟](#attack-simulation)部分中的说明来模拟攻击。 将请求数限制为高于规则中设置的速率限制值的值。
 
 ### 配置请求转换规则 {#configure-request-transform-rules}
 
-除了速率限制流量过滤规则之外，建议使用[请求转换](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations)来取消设置应用程序不需要的查询参数，以最大限度地减少通过缓存失效技术绕过缓存的方式。 例如，如果只想允许`search`和`campaignId`查询参数，则可以声明以下规则：
+除了速率限制流量过滤规则之外，建议使用[请求转换](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations)来取消设置应用程序不需要的查询参数，以最大限度地减少通过缓存失效技术绕过缓存的方式。 例如，如果只想允许`search`和`campaignId`查询参数，则可以声明以下规则：
 
 ```yaml
 kind: "CDN"
@@ -254,5 +254,5 @@ $ echo "GET https://<YOUR-WEBSITE-DOMAIN>" | vegeta attack -rate=120 -duration=6
 
 ### 源请求
 
-要绕过CDN缓存并向源(AEM Publish服务)发出请求，您可以向URL添加唯一的查询参数。 请参阅[使用JMeter脚本模拟DoS攻击](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection#simulate-dos-attack-using-jmeter-script)中的Apache JMeter脚本示例
+要绕过CDN缓存并向源(AEM Publish服务)发出请求，您可以向URL添加唯一的查询参数。 请参阅[使用JMeter脚本模拟DoS攻击](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection#simulate-dos-attack-using-jmeter-script)中的Apache JMeter脚本示例
 

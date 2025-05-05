@@ -42,7 +42,7 @@ ht-degree: 0%
 
 ## 创建新规则
 
-在&#x200B;**标记属性**&#x200B;视图中单击新创建的标记属性的名称以打开该属性。 此外，在&#x200B;_我最近使用的活动_&#x200B;标题下，您应该会看到核心扩展已添加到其中。 核心标记扩展是默认的扩展，它提供基础事件类型，如页面加载、浏览器、表单和其他事件类型。有关详细信息，请参阅[核心扩展概述](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html)。
+在&#x200B;**标记属性**&#x200B;视图中单击新创建的标记属性的名称以打开该属性。 此外，在&#x200B;_我最近使用的活动_&#x200B;标题下，您应该会看到核心扩展已添加到其中。 核心标记扩展是默认的扩展，它提供基础事件类型，如页面加载、浏览器、表单和其他事件类型。有关详细信息，请参阅[核心扩展概述](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=zh-Hans)。
 
 规则允许您指定当访客与您的AEM网站交互时应发生的情况。 为了简单起见，让我们将两条消息记录到浏览器控制台中，以演示数据收集标记集成如何在不更新AEM项目代码的情况下将JavaScript代码插入您的AEM网站。
 
@@ -93,4 +93,4 @@ Tag属性&#x200B;_Rules_&#x200B;是使用库激活的，请将库视为包含Jav
 
 ## 其他资源 {#additional-resources}
 
-* [创建标记属性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)
+* [创建标记属性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=zh-Hans)

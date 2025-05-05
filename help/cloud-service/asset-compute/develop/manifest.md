@@ -28,7 +28,7 @@ ht-degree: 0%
 
 辅助进程被定义为`actions`下的Adobe I/O Runtime操作条目，由一组配置组成。
 
-访问其他Adobe I/O集成的工作程序必须将`annotations -> require-adobe-auth`属性设置为`true`，因为此[通过`params.auth`对象公开此工作程序的Adobe I/O凭据](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 当工作人员调用Adobe I/O API(例如Adobe Photoshop、Lightroom或Sensei API)时，通常需要此项，并且每个工作人员可以切换此项。
+访问其他Adobe I/O集成的工作程序必须将`annotations -> require-adobe-auth`属性设置为`true`，因为此[通过`params.auth`对象公开此工作程序的Adobe I/O凭据](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=zh-Hans#access-adobe-apis)。 当工作人员调用Adobe I/O API(例如Adobe Photoshop、Lightroom或Sensei API)时，通常需要此项，并且每个工作人员可以切换此项。
 
 1. 打开并查看自动生成的辅助进程`manifest.yml`。 包含多个Asset Compute工作程序的项目，必须为`actions`数组下的每个工作程序定义一个条目。
 
@@ -51,7 +51,7 @@ packages:
 
 每个辅助进程都可以在Adobe I/O Runtime中为其执行上下文配置[限制](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)。 应根据工作人员将计算的资产数量、比率、类型以及所执行的工作类型，调整这些值，以便为工作人员提供最佳规模。
 
-在设置限制之前查看[Adobe大小调整指南](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 Asset Compute工作进程在处理资产时可能会耗尽内存，从而导致Adobe I/O Runtime执行被终止，因此请确保该工作进程的大小适合处理所有候选资产。
+在设置限制之前查看[Adobe大小调整指南](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=zh-Hans#sizing-workers)。 Asset Compute工作进程在处理资产时可能会耗尽内存，从而导致Adobe I/O Runtime执行被终止，因此请确保该工作进程的大小适合处理所有候选资产。
 
 1. 向新的`wknd-asset-compute`操作条目添加`inputs`部分。 这允许调整Asset Compute工作程序的整体性能和资源分配。
 

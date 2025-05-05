@@ -23,7 +23,7 @@ ht-degree: 1%
 
 本文介绍了在SharePoint工作流中使用调用FDM步骤将数据插入AEM列表所需的步骤。
 
-本文假设您已[成功配置自适应表单以将数据提交到SharePoint列表。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
+本文假设您已[成功配置自适应表单以将数据提交到SharePoint列表。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=zh-Hans#connect-af-sharepoint-list)
 
 
 ## 基于SharePoint列表数据源创建表单数据模型

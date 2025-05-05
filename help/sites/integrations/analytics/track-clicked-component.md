@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 使用Adobe Analytics跟踪已单击的组件
 
-使用带Adobe核心组件的事件驱动型[AEM客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)跟踪Adobe Experience Manager站点上特定组件的单击情况。 了解如何使用tag属性中的规则来侦听单击事件，按组件进行筛选，以及使用跟踪链接信标将数据发送到Adobe Analytics。
+使用带Adobe核心组件的事件驱动型[AEM客户端数据层](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans)跟踪Adobe Experience Manager站点上特定组件的单击情况。 了解如何使用tag属性中的规则来侦听单击事件，按组件进行筛选，以及使用跟踪链接信标将数据发送到Adobe Analytics。
 
 ## 您即将构建的内容 {#what-build}
 
@@ -39,13 +39,13 @@ WKND营销团队有兴趣了解哪些`Call to Action (CTA)`按钮在主页上的
 
 本教程是[使用Adobe Analytics收集页面数据](./collect-data-analytics.md)的延续，并假定您拥有：
 
-* 启用了[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)的&#x200B;**标记属性**
-* **Adobe Analytics**&#x200B;测试/开发报表包ID和跟踪服务器。 请参阅以下有关[创建报表包](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)的文档。
-* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)浏览器扩展配置了在[WKND网站](https://wknd.site/us/en.html)或启用了Adobe数据层的AEM网站上加载的标记属性。
+* 启用了[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=zh-Hans)的&#x200B;**标记属性**
+* **Adobe Analytics**&#x200B;测试/开发报表包ID和跟踪服务器。 请参阅以下有关[创建报表包](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=zh-Hans)的文档。
+* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hans)浏览器扩展配置了在[WKND网站](https://wknd.site/us/en.html)或启用了Adobe数据层的AEM网站上加载的标记属性。
 
 ## 检查按钮和Teaser架构
 
-在标记属性中创建规则之前，请检查Button和Teaser[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)的架构并在数据层实施中检查它们，这很有用。
+在标记属性中创建规则之前，请检查Button和Teaser[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans#item)的架构并在数据层实施中检查它们，这很有用。
 
 1. 导航到[WKND主页](https://wknd.site/us/en.html)
 1. 打开浏览器的开发人员工具并导航到&#x200B;**控制台**。 运行以下命令：
@@ -81,7 +81,7 @@ WKND营销团队有兴趣了解哪些`Call to Action (CTA)`按钮在主页上的
        xdm:linkURL: "/content/wknd/us/en/magazine/san-diego-surf.html"
    ```
 
-   上述数据详细信息基于[组件/容器项架构](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)。 新标记规则将使用此架构。
+   上述数据详细信息基于[组件/容器项架构](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hans#item)。 新标记规则将使用此架构。
 
 ## 创建CTA点击规则
 
@@ -147,11 +147,11 @@ Adobe客户端数据层是&#x200B;**事件**&#x200B;驱动的数据层。 无论
 
    `event`对象是从自定义事件中调用的`trigger()`方法传递的。 `component`对象是从数据层`getState()`方法派生的组件的当前状态，是触发点击的元素。
 
-1. 保存更改并在标记属性中运行[内部版本](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以将代码提升到您的AEM网站上使用的[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html#)。
+1. 保存更改并在标记属性中运行[内部版本](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html?lang=zh-Hans)，以将代码提升到您的AEM网站上使用的[环境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hans#)。
 
    >[!NOTE]
    >
-   > 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)将嵌入代码切换到&#x200B;**开发**&#x200B;环境可能很有用。
+   > 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hans)将嵌入代码切换到&#x200B;**开发**&#x200B;环境可能很有用。
 
 1. 导航到[WKND站点](https://wknd.site/us/en.html)并打开开发人员工具以查看控制台。 另外，选中&#x200B;**保留日志**&#x200B;复选框。
 

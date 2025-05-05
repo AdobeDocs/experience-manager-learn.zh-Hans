@@ -176,9 +176,9 @@ Adobe关于每个AEM as a Cloud Service环境的日志级别的一般指导方�
 
 ### 用于设置Java日志级别的特定于环境的变量
 
-除了为每个环境设置静态的已知Java日志级别外，另一种方法是使用AEM as Cloud Service的[环境特定变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)来参数化日志级别，从而允许通过带有Cloud Manager插件的[Adobe I/O CLI动态更改值](#aio-cli)。
+除了为每个环境设置静态的已知Java日志级别外，另一种方法是使用AEM as Cloud Service的[环境特定变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hans#environment-specific-configuration-values)来参数化日志级别，从而允许通过带有Cloud Manager插件的[Adobe I/O CLI动态更改值](#aio-cli)。
 
-这需要更新日志记录OSGi配置以使用特定于环境的变量占位符。 [&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values)应根据[Adobe建议](#log-levels)设置日志级别的默认值。 例如：
+这需要更新日志记录OSGi配置以使用特定于环境的变量占位符。 [&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hans#default-values)应根据[Adobe建议](#log-levels)设置日志级别的默认值。 例如：
 
 `/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config~example.cfg.json`
 
@@ -193,8 +193,8 @@ Adobe关于每个AEM as a Cloud Service环境的日志级别的一般指导方�
 
 这一方针的弊端必须被考虑在内：
 
-+ [允许的环境变量数量有限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#number-of-variables)，创建用于管理日志级别的变量将使用一个。
-+ 可通过[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)、[Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)和[Cloud Manager HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#cloud-manager-api-format-for-setting-properties)以编程方式管理环境变量。
++ [允许的环境变量数量有限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hans#number-of-variables)，创建用于管理日志级别的变量将使用一个。
++ 可通过[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=zh-Hans)、[Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)和[Cloud Manager HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hans#cloud-manager-api-format-for-setting-properties)以编程方式管理环境变量。
 + 对环境变量的更改必须由支持的工具手动重置。 如果忘记将高流量环境（例如生产）重置为较不详细的日志级别，可能会淹没日志并影响AEM的性能。
 
 _特定于环境的变量不适用于Apache Web Server或Dispatcher日志配置，因为这些配置未通过OSGi配置进行配置。_

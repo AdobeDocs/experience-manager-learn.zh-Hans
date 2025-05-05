@@ -1302,11 +1302,11 @@ Google等搜索引擎认为不同URL上的相同内容具有“欺骗性”。 �
 
 如果客户在此期间请求该内容，Dispatcher将请求和存储过时的内容。
 
-更可靠的设置是在收到Publish系统&#x200B;_的内容后_&#x200B;从AEM系统发送失效请求。 文章“[使发布实例中的Dispatcher缓存失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)”描述了详细信息。
+更可靠的设置是在收到Publish系统&#x200B;_的内容后_&#x200B;从AEM系统发送失效请求。 文章“[使发布实例中的Dispatcher缓存失效](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)”描述了详细信息。
 
 **引用**
 
-[helpx.adobe.com — 使发布实例中的Dispatcher缓存失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)
+[helpx.adobe.com — 使发布实例中的Dispatcher缓存失效](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)
 
 ### HTTP标头和标头缓存
 
@@ -1454,7 +1454,7 @@ _ACS Commons包_&#x200B;中的“[Etag支持](https://adobe-consulting-services.
 
 * [apache.org — 修改重写](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
 
-* [helpx.adobe.com — 资源映射](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
+* [helpx.adobe.com — 资源映射](https://helpx.adobe.com/cn/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
 
 ### 错误处理
 
@@ -1506,11 +1506,11 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 **选项2**。 “不缓存”通常不是个好主意。 如果这样做，请确保排除的流量和敏感资源数很小。 或者，确保在Publish系统中安装一些内存缓存，以便Publish系统能够处理由此产生的负载 — 有关本系列第三部分的更多信息。
 
-**选项3**。 “权限敏感型缓存”是一种有趣的方法。 Dispatcher正在缓存资源，但在交付该资源之前，会询问AEM系统是否可以这样做。 这会创建从Dispatcher到Publish的额外请求，但通常情况下，如果已缓存页面，Publish系统无需重新渲染页面。 但是，此方法需要一些自定义实施。 在文章[权限敏感型缓存](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)中查找详细信息。
+**选项3**。 “权限敏感型缓存”是一种有趣的方法。 Dispatcher正在缓存资源，但在交付该资源之前，会询问AEM系统是否可以这样做。 这会创建从Dispatcher到Publish的额外请求，但通常情况下，如果已缓存页面，Publish系统无需重新渲染页面。 但是，此方法需要一些自定义实施。 在文章[权限敏感型缓存](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/permissions-cache.html)中查找详细信息。
 
 **引用**
 
-* [helpx.adobe.com — 权限敏感型缓存](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)
+* [helpx.adobe.com — 权限敏感型缓存](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/permissions-cache.html)
 
 ### 设置宽限期
 
@@ -1635,7 +1635,7 @@ Dispatcher还在内部标记相应的URL，以便知道可以直接交付这些�
 
 **引用**
 
-[helpx.adobe.com — 使从AEM中缓存的页面失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
+[helpx.adobe.com — 使从AEM中缓存的页面失效](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/page-invalidate.html)
 
 ### 屏蔽Publish系统
 
@@ -1690,7 +1690,7 @@ Dispatcher通过屏蔽Publish系统使其免受仅用于维护的请求的攻击
 
 [apache.org- sethandler指令](https://httpd.apache.org/docs/2.4/mod/core.html#sethandler)
 
-[helpx.adobe.com — 配置对内容过滤器的访问](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter)
+[helpx.adobe.com — 配置对内容过滤器的访问](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter)
 
 ### 使用正则表达式和Glob进行筛选
 
@@ -1843,7 +1843,7 @@ _通配模式_，相比之下，使用双引号`"`，您只能使用简单占位
 
 **引用**
 
-[helpx.adobe.com — 为glob属性设计模式](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
+[helpx.adobe.com — 为glob属性设计模式](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
 
 ### 协议规范
 
@@ -1906,17 +1906,17 @@ CQ-Handle: <path-pattern>
 
 ## 其他资源
 
-有关Dispatcher缓存的良好概述和简介： [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)
+有关Dispatcher缓存的良好概述和简介： [https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher.html)
 
-Dispatcher文档及所有指令说明： [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)
+Dispatcher文档及所有指令说明： [https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)
 
-一些常见问题：[https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html)
+一些常见问题：[https://helpx.adobe.com/cn/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/cn/experience-manager/using/dispatcher-faq.html)
 
 关于Dispatcher优化的网络研讨会录像 — 强烈建议：[https://my.adobeconnect.com/p7th2gf8k43?proto=true](https://my.adobeconnect.com/p7th2gf8k43?proto=true)
 
 在2018年Potsdam举行的“内容失效的未充分了解的力量”会议、“adaptTo()”演示文稿[https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html](https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html)
 
-使从AEM中缓存的页面失效： [https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
+使从AEM中缓存的页面失效： [https://helpx.adobe.com/cn/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/page-invalidate.html)
 
 ## 下一步
 

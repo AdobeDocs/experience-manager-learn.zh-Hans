@@ -39,7 +39,7 @@ Adobe Experience Manager的内容片段和体验片段表面上看起来可能�
 </tr><tr><td><strong>核心原则</strong></td>
 <td><ul>
 <li>以内容为中心</li>
-<li>由<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-models.html?lang=en" target="_blank">结构化、基于表单的数据模型定义。</a></li>
+<li>由<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-models.html?lang=zh-Hans" target="_blank">结构化、基于表单的数据模型定义。</a></li>
 <li>设计和布局不可知。</li>
 <li>渠道拥有内容片段内容的演示（布局和设计）</li>
 </ul>
@@ -54,7 +54,7 @@ Adobe Experience Manager的内容片段和体验片段表面上看起来可能�
 </tr><tr><td><strong>技术详细信息</strong></td>
 <td><ul>
 <li>已作为<strong>dam：Asset</strong>实施</li>
-<li>由<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-models.html?lang=en" target="_blank">内容片段模型</a>定义</li>
+<li>由<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-models.html?lang=zh-Hans" target="_blank">内容片段模型</a>定义</li>
 </ul>
 </td>
 <td><ul>
@@ -72,25 +72,25 @@ Adobe Experience Manager的内容片段和体验片段表面上看起来可能�
 <td><ul>
 <li>变量特定于渠道或上下文</li>
 <li>变体通过AEM Live Copy保持同步</li>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html" target="_blank">构建基块</a>允许跨变体重复使用内容</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=zh-Hans" target="_blank">构建基块</a>允许跨变体重复使用内容</li>
 </ul>
 </td>
 </tr><tr><td><strong>功能</strong></td>
 <td><ul>
 <li>变体</li>
 <li>版本</li>
-<li>跨变体<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-variations.html?lang=en#synchronizing-with-master" target="_blank">同步</a>内容</li>
-<li>内容片段版本的<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-managing.html?lang=en#comparing-fragment-versions" target="_blank">可视化差异</a></li>
-<li>多行文本元素的<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-variations.html?lang=en#annotating-a-content-fragment" target="_blank">批注</a></li>
-<li>多行文本元素的智能<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-variations.html?lang=en#summarizing-text" target="_blank">摘要</a>。</li>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/creating-translation-projects-for-content-fragments.html?lang=en" target="_blank">翻译/本地化</a></li>
+<li>跨变体<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-variations.html?lang=zh-Hans#synchronizing-with-master" target="_blank">同步</a>内容</li>
+<li>内容片段版本的<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-managing.html?lang=zh-Hans#comparing-fragment-versions" target="_blank">可视化差异</a></li>
+<li>多行文本元素的<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-variations.html?lang=zh-Hans#annotating-a-content-fragment" target="_blank">批注</a></li>
+<li>多行文本元素的智能<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-variations.html?lang=zh-Hans#summarizing-text" target="_blank">摘要</a>。</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/creating-translation-projects-for-content-fragments.html?lang=zh-Hans" target="_blank">翻译/本地化</a></li>
 </ul>
 </td>
 <td><ul>
 <li>变体</li>
 <li>变体作为活动副本</li>
 <li>版本</li>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en#building-blocks" target="_blank">构建基块</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=zh-Hans#building-blocks" target="_blank">构建基块</a></li>
 <li>注释</li>
 <li>响应式布局和预览</li>
 <li>翻译/本地化</li>
@@ -102,15 +102,15 @@ Adobe Experience Manager的内容片段和体验片段表面上看起来可能�
 <td><ul>
 <li>通过<a href="https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans">AEM Headless GraphQL API</a>导出JSON</li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans" target="_blank">用于AEM Sites、AEM Screens或体验片段的AEM核心组件内容片段组件</a>。</li>
-<li>通过<a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en" target="_blank">AEM Content Services</a>为第三方使用导出JSON</li>
+<li>通过<a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=zh-Hans" target="_blank">AEM Content Services</a>为第三方使用导出JSON</li>
 <li>将JSON导出到Adobe Target以提供目标选件</li>
 <li>通过AEM的JSON HTTP Assets API使用第三方</li>
 </ul>
 </td>
 <td><ul>
 <li>用于AEM Sites、AEM Screens或其他体验片段的AEM Experience Fragment组件。</li>
-<li>导出为<a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en" target="_blank">普通HTML</a>以供第三方系统使用</li>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/experience-fragments-target.html?lang=en" target="_blank">HTML导出到Adobe Target</a>以提供目标选件</li>
+<li>导出为<a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=zh-Hans" target="_blank">普通HTML</a>以供第三方系统使用</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/experience-fragments-target.html?lang=zh-Hans" target="_blank">HTML导出到Adobe Target</a>以提供目标选件</li>
 <li>将JSON导出到Adobe Target以提供目标选件</li>
 </ul>
 </td>
@@ -131,12 +131,12 @@ Adobe Experience Manager的内容片段和体验片段表面上看起来可能�
 </td>
 </tr><tr><td><strong>文档</strong></td>
 <td><ul>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js" target="_blank">AEM内容片段用户指南</a></li>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=en" target="_blank">在AEM中使用内容片段</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=zh-Hans&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js" target="_blank">AEM内容片段用户指南</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=zh-Hans" target="_blank">在AEM中使用内容片段</a></li>
 </ul>
 </td>
 <td><ul>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en" target="_blank">有关Experience Fragments的Adobe文档</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=zh-Hans" target="_blank">有关Experience Fragments的Adobe文档</a></li>
 </ul>
 </td>
 </tr></tbody></table>
@@ -172,16 +172,16 @@ Adobe Experience Manager的内容片段和体验片段表面上看起来可能�
 
 ## 内容片段的支持资源
 
-+ [内容片段用户指南](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
++ [内容片段用户指南](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=zh-Hans&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
 + [Adobe Experience Manager as a Headless CMS简介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/Headless/introduction.html?lang=zh-hans)
-+ [在AEM中使用内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=en)
++ [在AEM中使用内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=zh-Hans)
 + [AEM WCM核心组件的内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)
-+ [使用内容片段和AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=en)
-+ [AEM Content Services快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
++ [使用内容片段和AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)
++ [AEM Content Services快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=zh-Hans)
 
 ## 体验片段的支持资源
 
-+ [有关体验片段的Adobe文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en)
-+ [了解AEM体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en)
-+ [使用AEM体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en)
++ [有关体验片段的Adobe文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=zh-Hans)
++ [了解AEM体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=zh-Hans)
++ [使用AEM体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=zh-Hans)
 + [在Adobe Target中使用AEM体验片段](https://medium.com/adobetech/experience-fragments-and-adobe-target-d8d74381b9b2)

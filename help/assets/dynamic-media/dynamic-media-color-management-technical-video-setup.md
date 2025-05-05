@@ -24,7 +24,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->在AEM中[启用Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)以使用此功能。
+>在AEM中[启用Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)以使用此功能。
 
 此功能作为Feature Pack在AEM 6.1和6.2版本中提供。
 
@@ -125,4 +125,4 @@ ht-degree: 11%
 
 ## 其他资源{#additional-resources}
 
-* [配置Dynamic Media色彩管理](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
+* [配置Dynamic Media色彩管理](https://helpx.adobe.com/cn/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)

@@ -54,6 +54,6 @@ Adobe提供Adobe Experience Platform Debugger[Chrome扩展](https://chrome.googl
 
 ## 其他资源 {#additional-resources}
 
-+ [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [Adobe Experience Platform Debugger简介](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hans)
 
-+ [Satellite对象引用](https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html)
++ [Satellite对象引用](https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html?lang=zh-Hans)

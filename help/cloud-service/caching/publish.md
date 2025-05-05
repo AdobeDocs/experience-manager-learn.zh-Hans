@@ -51,7 +51,7 @@ AEM as a Cloud Service CDN缓存以下内容：
 + HTTP响应正文
 + HTTP响应标头
 
-通常，对单个URL的HTTP请求/响应会缓存为单个对象。 但是，如果在HTTP响应上设置`Vary`标头，则CDN可以处理单个URL的多个对象的缓存。 避免在值没有严格控制的值集的标头上指定`Vary`，因为这可能会导致许多缓存未命中，从而降低缓存命中率。 为了支持在AEM Dispatcher中缓存各种请求，[请查看变量缓存文档](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/variant-caching.html)。
+通常，对单个URL的HTTP请求/响应会缓存为单个对象。 但是，如果在HTTP响应上设置`Vary`标头，则CDN可以处理单个URL的多个对象的缓存。 避免在值没有严格控制的值集的标头上指定`Vary`，因为这可能会导致许多缓存未命中，从而降低缓存命中率。 为了支持在AEM Dispatcher中缓存各种请求，[请查看变量缓存文档](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/variant-caching.html?lang=zh-Hans)。
 
 ### 缓存期限{#cdn-cache-life}
 
@@ -71,15 +71,15 @@ AEM Publish CDN基于TTL（生存时间），这意味着缓存生命周期由`C
 
 | 内容类型 | 默认CDN缓存期限 |
 |:------------ |:---------- |
-| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#html-text) | 5 分钟 |
-| [Assets（图像、视频、文档等）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#images) | 10 分钟 |
-| [持久查询(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?publish-instances) | 2 小时 |
-| [客户端库(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
-| [其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 未缓存 |
+| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#html-text) | 5 分钟 |
+| [Assets（图像、视频、文档等）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#images) | 10 分钟 |
+| [持久查询(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hans&publish-instances) | 2 小时 |
+| [客户端库(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#client-side-libraries) | 30 天 |
+| [其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#other-content) | 未缓存 |
 
 ### 如何自定义缓存规则
 
-[将CDN缓存内容的方式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#disp)限制为在HTTP响应中设置缓存标头。 这些缓存标头通常在使用`mod_headers`的AEM Dispatcher `vhost`配置中进行设置，但也可以在AEM Publish本身中运行的自定义Java™代码中进行设置。
+[将CDN缓存内容的方式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#disp)限制为在HTTP响应中设置缓存标头。 这些缓存标头通常在使用`mod_headers`的AEM Dispatcher `vhost`配置中进行设置，但也可以在AEM Publish本身中运行的自定义Java™代码中进行设置。
 
 ## AEM Dispatcher
 
@@ -95,10 +95,10 @@ AEM Publish CDN基于TTL（生存时间），这意味着缓存生命周期由`C
 + HTTP响应不适用于二进制文件。
 + HTTP请求URL路径以扩展名结尾，例如： `.html`、`.json`、`.css`、`.js`等。
 + HTTP请求不包含授权，并且未由AEM进行身份验证。
-   + 但是，身份验证请求[的缓存可以全局启用](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used)，也可以选择性地通过[权限敏感型缓存](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-hans)启用。
+   + 但是，身份验证请求[的缓存可以全局启用](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#caching-when-authentication-is-used)，也可以选择性地通过[权限敏感型缓存](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-hans)启用。
 + http请求不包含查询参数。
-   + 但是，通过配置[忽略的查询参数](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters)，可以从缓存中缓存/提供具有忽略的查询参数的HTTP请求。
-+ HTTP请求的路径[与允许Dispatcher规则匹配，与拒绝规则](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)不匹配。
+   + 但是，通过配置[忽略的查询参数](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#ignoring-url-parameters)，可以从缓存中缓存/提供具有忽略的查询参数的HTTP请求。
++ HTTP请求的路径[与允许Dispatcher规则匹配，与拒绝规则](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#specifying-the-documents-to-cache)不匹配。
 + HTTP响应不具有AEM Publish设置的以下任何HTTP响应标头：
 
    + `no-cache`
@@ -110,7 +110,7 @@ AEM Publish CDN基于TTL（生存时间），这意味着缓存生命周期由`C
 AEM Dispatcher缓存以下内容：
 
 + HTTP响应正文
-+ Dispatcher的[缓存标头配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-http-response-headers)中指定的HTTP响应标头。 查看[AEM项目原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L106-L113)附带的默认配置。
++ Dispatcher的[缓存标头配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#caching-http-response-headers)中指定的HTTP响应标头。 查看[AEM项目原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L106-L113)附带的默认配置。
    + `Cache-Control`
    + `Content-Disposition`
    + `Content-Type`
@@ -123,7 +123,7 @@ AEM Dispatcher缓存以下内容：
 AEM Dispatcher使用以下方法缓存HTTP响应：
 
 + 直到通过发布或取消发布内容等机制触发失效。
-+ 在Dispatcher配置[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl)中明确配置时的TTL （生存时间）。 通过查看`enableTTL`配置，查看[AEM项目原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L122-L127)中的默认配置。
++ 在Dispatcher配置[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#configuring-time-based-cache-invalidation-enablettl)中明确配置时的TTL （生存时间）。 通过查看`enableTTL`配置，查看[AEM项目原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L122-L127)中的默认配置。
 
 #### 默认缓存期限
 
@@ -131,15 +131,15 @@ AEM Dispatcher使用以下方法缓存HTTP响应：
 
 | 内容类型 | 默认CDN缓存期限 |
 |:------------ |:---------- |
-| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#html-text) | 直到失效 |
-| [Assets（图像、视频、文档等）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#images) | 无 |
-| [持久查询(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?publish-instances) | 1 分钟 |
-| [客户端库(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
-| [其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 直到失效 |
+| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#html-text) | 直到失效 |
+| [Assets（图像、视频、文档等）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#images) | 无 |
+| [持久查询(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hans&publish-instances) | 1 分钟 |
+| [客户端库(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#client-side-libraries) | 30 天 |
+| [其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#other-content) | 直到失效 |
 
 ### 如何自定义缓存规则
 
-AEM Dispatcher的缓存可以通过[Dispatcher配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)进行配置，包括：
+AEM Dispatcher的缓存可以通过[Dispatcher配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#configuring-the-dispatcher-cache-cache)进行配置，包括：
 
 + 缓存的内容
 + 发布/取消发布时缓存的哪些部分无效

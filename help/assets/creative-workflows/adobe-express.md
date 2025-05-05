@@ -24,4 +24,4 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
 
-此外，了解如何设置[AEM Assets与Adobe Express的本机集成](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express)，以便从Adobe Express无缝访问AEM Assets。
+此外，了解如何设置[AEM Assets与Adobe Express的本机集成](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express)，以便从Adobe Express无缝访问AEM Assets。

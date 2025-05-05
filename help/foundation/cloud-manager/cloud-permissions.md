@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Cloud Manager自定义权限
 
-了解如何使用AEM中的Cloud Manager [自定义权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html)从战略角度管理不同团队的访问权限，确保高效安全的项目管理和部署。
+了解如何使用AEM中的Cloud Manager [自定义权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html?lang=zh-Hans)从战略角度管理不同团队的访问权限，确保高效安全的项目管理和部署。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425892/?learn=on)

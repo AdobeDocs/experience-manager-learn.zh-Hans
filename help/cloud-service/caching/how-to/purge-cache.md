@@ -104,7 +104,7 @@ data:
 
 1. 在Cloud Manager中，导航到&#x200B;**管道**&#x200B;部分。
 
-1. 创建新管道或选择仅部署&#x200B;**Config**&#x200B;文件的现有管道。 有关详细步骤，请参阅[创建配置管道](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
+1. 创建新管道或选择仅部署&#x200B;**Config**&#x200B;文件的现有管道。 有关详细步骤，请参阅[创建配置管道](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
 
 1. 单击&#x200B;**运行**&#x200B;按钮以部署CDN规则。
 

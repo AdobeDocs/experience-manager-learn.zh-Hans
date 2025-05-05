@@ -33,5 +33,5 @@ Adobe Experience Manager 6.4重新构想了AEM和Target之间的个性化工作�
 
 ## 其他资源 {#additional-resources}
 
-* [体验片段文档](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html)
+* [体验片段文档](https://helpx.adobe.com/cn/experience-manager/6-5/sites/authoring/using/experience-fragments.html)
 * [使用体验片段](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)

@@ -55,7 +55,7 @@ ht-degree: 0%
 
 * 单击Assets图标并应用过滤器以显示“文档片段”类型的资源。 将RetirationIncomeOutlook文档片段拖放到左侧面板目标区域。
 
-* 在将文档片段添加到内容区域时，您可以参考[此页面](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html)。
+* 在将文档片段添加到内容区域时，您可以参考[此页面](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html?lang=zh-Hans)。
 
 ## 添加预计每月收入图表 {#adding-estimated-monthly-income-chart}
 

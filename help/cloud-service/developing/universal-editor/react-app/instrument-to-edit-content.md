@@ -178,7 +178,7 @@ export default App;
 
 ## 检测React组件
 
-要编辑WKND Teams React应用程序的内容（如&#x200B;_团队标题和团队描述_），您需要检测React组件。 检测是指将相关数据属性(`data-aue-*`)添加到您希望使用通用编辑器进行编辑的HTML元素。 有关数据属性的详细信息，请参阅[属性和类型](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)。
+要编辑WKND Teams React应用程序的内容（如&#x200B;_团队标题和团队描述_），您需要检测React组件。 检测是指将相关数据属性(`data-aue-*`)添加到您希望使用通用编辑器进行编辑的HTML元素。 有关数据属性的详细信息，请参阅[属性和类型](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)。
 
 ### 定义可编辑元素
 

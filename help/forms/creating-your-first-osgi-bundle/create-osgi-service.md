@@ -80,7 +80,7 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 
 第10行的注释`@Component(...)`将此Java类标记为OSGi组件，并将其注册为OSGi服务。
 
-`@Reference`注释是OSGi声明性服务的一部分，用于将[Outputservice](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)的引用插入到变量`outputService`中。
+`@Reference`注释是OSGi声明性服务的一部分，用于将[Outputservice](https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)的引用插入到变量`outputService`中。
 
 
 ## 生成并部署捆绑包

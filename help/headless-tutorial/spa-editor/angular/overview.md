@@ -34,8 +34,8 @@ ht-degree: 8%
 
 此教程设计为使用&#x200B;**AEM as a Cloud Service**，并且向后兼容&#x200B;**AEM 6.5.4+**&#x200B;和&#x200B;**AEM 6.4.8+**。 使用以下方式实施SPA：
 
-* [Maven AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
-* [AEM SPA编辑器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
+* [Maven AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)
+* [AEM SPA编辑器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html?lang=zh-Hans#content-editing-experience-with-spa)
 * [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)
 * [Angular](https://angular.io/)
 
@@ -53,7 +53,7 @@ ht-degree: 8%
 
 * HTML、CSS和JavaScript的基础知识
 * 对[Angular](https://angular.io/)有基本的了解
-* [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、[AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65)或[AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
+* [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=zh-Hans#download-the-aem-as-a-cloud-service-sdk)、[AEM 6.5.4+](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html#65)或[AEM 6.4.8+](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) （3.3.9或更高版本）
 * [Node.js](https://nodejs.org/en/)和[npm](https://www.npmjs.com/)
@@ -78,7 +78,7 @@ ht-degree: 8%
 
 本教程的项目代码是为AEM as a Cloud Service构建的。 为了使项目代码向后兼容&#x200B;**6.5.4+**&#x200B;和&#x200B;**6.4.8+**，已进行了若干修改。
 
-[UberJar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4**&#x200B;已作为依赖项包括在内：
+[UberJar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=zh-Hans#what-is-the-uberjar) **v6.4.4**&#x200B;已作为依赖项包括在内：
 
 ```xml
 <!-- Adobe AEM 6.x Dependencies -->

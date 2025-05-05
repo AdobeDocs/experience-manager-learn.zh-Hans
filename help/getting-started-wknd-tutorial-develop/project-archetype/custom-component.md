@@ -103,7 +103,7 @@ ht-degree: 0%
        sling:resourceSuperType="core/wcm/components/image/v2/image"/>
    ```
 
-   上述XML文件提供了组件的定义，包括标题、描述和组。 `sling:resourceSuperType`指向`core/wcm/components/image/v2/image`，即[核心图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)。
+   上述XML文件提供了组件的定义，包括标题、描述和组。 `sling:resourceSuperType`指向`core/wcm/components/image/v2/image`，即[核心图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=zh-Hans)。
 
 ### 创建HTL脚本 {#create-the-htl-script}
 
@@ -358,7 +358,7 @@ Byline Sling模型依赖于AEM提供的多个Java™ API。 这些API通过`core
    </dependency>
    ```
 
-   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en)包含AEM公开的所有公共Java™ API。 生成此项目时，默认使用`aem-sdk-api`。 版本保留在`aem-guides-wknd/pom.xml`处项目的根目录中的父反应器pom中。
+   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=zh-Hans)包含AEM公开的所有公共Java™ API。 生成此项目时，默认使用`aem-sdk-api`。 版本保留在`aem-guides-wknd/pom.xml`处项目的根目录中的父反应器pom中。
 
 1. 查找`uber-jar`的依赖项 — 仅&#x200B;**AEM 6.5/6.4**
 
@@ -374,7 +374,7 @@ Byline Sling模型依赖于AEM提供的多个Java™ API。 这些API通过`core
 
    只有在调用`classic`配置文件（即`mvn clean install -PautoInstallSinglePackage -Pclassic`）时才包括`uber-jar`。 同样，这是此项目所特有的。 在从AEM项目原型生成的真实项目中，如果指定的AEM版本为6.5或6.4，则默认使用`uber-jar`。
 
-   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)包含AEM 6.x公开的所有公共Java™ API。版本在项目`aem-guides-wknd/pom.xml`根目录中的父反应器pom中维护。
+   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=zh-Hans#experience-manager-api-dependencies)包含AEM 6.x公开的所有公共Java™ API。版本在项目`aem-guides-wknd/pom.xml`根目录中的父反应器pom中维护。
 
 1. 查找`core.wcm.components.core`的依赖项：
 

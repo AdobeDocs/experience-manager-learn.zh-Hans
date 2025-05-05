@@ -115,7 +115,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 >
 >确保您的AEM Forms安装已完成。 您的所有包都必须处于活动状态。
 >
->确保您已添加 — 引导代理RSA和BouncyCastle库，如此[安装AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)中所述
+>确保您已添加 — 引导代理RSA和BouncyCastle库，如此[安装AEM Forms](https://helpx.adobe.com/cn/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)中所述
 >
 >此演示的&#x200B;**注意事项**
 >

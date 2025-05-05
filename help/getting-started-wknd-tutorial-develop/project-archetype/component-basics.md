@@ -100,7 +100,7 @@ ht-degree: 0%
 
 ## HTL(HTML模板语言)和对话框 {#htl-dialogs}
 
-HTML模板语言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)**&#x200B;是AEM组件用于呈现内容的轻型服务器端模板语言。
+HTML模板语言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html?lang=zh-Hans)**&#x200B;是AEM组件用于呈现内容的轻型服务器端模板语言。
 
 **对话框**&#x200B;定义可以为组件生成的可用配置。
 
@@ -262,7 +262,7 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
 
    现在，通过使用`HelloWord`的`model`变量，`HelloWorld`模型实例在HTL中可用。 这些方法调用可以使用缩短的方法语法，例如： `${model.getTitle()}`可以缩短为`${model.title}`。
 
-   同样，所有HTL脚本都插入了[全局对象](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html)，可以使用与Sling模型对象相同的语法访问这些对象。
+   同样，所有HTL脚本都插入了[全局对象](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=zh-Hans)，可以使用与Sling模型对象相同的语法访问这些对象。
 
    ```html
    <div class="cmp-helloworld" data-cmp-is="helloworld" 
@@ -285,7 +285,7 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
 
 客户端库（简称`clientlibs`）提供了一种机制，用于组织和管理AEM Sites实施所需的CSS和JavaScript文件。 客户端库是在AEM的页面上包含CSS和JavaScript的标准方法。
 
-[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)模块是集成到生成过程中的分离的[webpack](https://webpack.js.org/)项目。 这允许使用常见的前端库，如Sass、LESS和TypeScript。 `ui.frontend`模块将在[客户端库一章](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md)中深入探讨。
+[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=zh-Hans)模块是集成到生成过程中的分离的[webpack](https://webpack.js.org/)项目。 这允许使用常见的前端库，如Sass、LESS和TypeScript。 `ui.frontend`模块将在[客户端库一章](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md)中深入探讨。
 
 接下来，更新`HelloWorld`组件的CSS样式。
 

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 测试Asset Compute Worker
 
-Asset Compute项目定义了一种模式，用于轻松创建和执行Asset Compute工作程序[测试](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html)。
+Asset Compute项目定义了一种模式，用于轻松创建和执行Asset Compute工作程序[测试](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html?lang=zh-Hans)。
 
 ## 工人考试剖析
 

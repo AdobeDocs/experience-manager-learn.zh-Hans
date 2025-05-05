@@ -64,7 +64,7 @@ ht-degree: 1%
    >
    > 如果定位AEM 6.5.5+使用`aemVersion="6.5.5"`替换`aemVersion="cloud"`。 如果目标为6.4.8+，则使用`aemVersion="6.4.8"`。
 
-   注意`frontendModule=react`属性。 这会告知AEM项目原型使用要与AEM SPA编辑器一起使用的启动程序[React代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)引导项目。 属性（如`appTitle`、`appId`、`artifactId`和`groupId`）用于标识项目和目的。
+   注意`frontendModule=react`属性。 这会告知AEM项目原型使用要与AEM SPA编辑器一起使用的启动程序[React代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=zh-Hans)引导项目。 属性（如`appTitle`、`appId`、`artifactId`和`groupId`）用于标识项目和目的。
 
    可以在此处[&#128279;](https://github.com/adobe/aem-project-archetype#available-properties)找到用于配置项目的可用属性的完整列表。
 
@@ -89,7 +89,7 @@ ht-degree: 1%
        |--- .gitignore
    ```
 
-   每个文件夹表示一个单独的Maven模块。 在本教程中，我们将主要使用`ui.frontend`模块，即React应用程序。 有关各个模块的更多详细信息，请参阅[AEM项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)。
+   每个文件夹表示一个单独的Maven模块。 在本教程中，我们将主要使用`ui.frontend`模块，即React应用程序。 有关各个模块的更多详细信息，请参阅[AEM项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)。
 
 ## 部署和生成项目
 

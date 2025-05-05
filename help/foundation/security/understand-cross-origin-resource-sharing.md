@@ -26,7 +26,7 @@ Adobe Experience Manager的跨源资源共享([!DNL CORS])使非AEM Web资产能
 1. AEM Publish上的单一来源资源共享
 2. 对AEM Author的CORS访问权限
 
-如果AEM发布需要多源CORS访问权限，请参阅[本文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
+如果AEM发布需要多源CORS访问权限，请参阅[本文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=zh-Hans#dispatcher-configuration)。
 
 ## Adobe Granite跨源资源共享策略OSGi配置
 
@@ -187,7 +187,7 @@ CORS配置在AEM中作为OSGi配置工厂进行管理，每个策略都表示为
 
 ### 允许CORS请求标头
 
-要允许所需的[HTTP请求标头传递到AEM进行处理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，必须在Dispatcher的`/clientheaders`配置中允许使用这些标头。
+要允许所需的[HTTP请求标头传递到AEM进行处理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#specifying-the-http-headers-to-pass-through-clientheaders)，必须在Dispatcher的`/clientheaders`配置中允许使用这些标头。
 
 ```
 /clientheaders {

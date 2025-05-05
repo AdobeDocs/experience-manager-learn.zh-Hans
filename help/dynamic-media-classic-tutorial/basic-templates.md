@@ -63,8 +63,8 @@ ht-degree: 0%
 
 模板项目可能相对简单或极其复杂，具体取决于应用程序的业务规则和需求。 基础模板是从图像服务器调用的，但由于Dynamic Media Classic环境的灵活性，您甚至可以将模板嵌套在其他模板中，从而允许您创建可以通过常用命名变量链接相当复杂的图像。
 
-- 了解有关[模板基础知识](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html)的更多信息。
-- 了解如何创建[基本模板](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template)。
+- 了解有关[模板基础知识](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html?lang=zh-Hans)的更多信息。
+- 了解如何创建[基本模板](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html?lang=zh-Hans#creating_a_template)。
 
 ## 创建基本模板
 
@@ -186,7 +186,7 @@ _包含和不包含投影的图层_
 
 阴影效果在水平或垂直方向上偏离图层，而“发光”效果在所有方向均均匀应用。 内部效果作用于图层的不透明部分的顶部，而外部效果仅影响透明区域。
 
-了解有关[添加图层效果](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers)的详细信息。
+了解有关[添加图层效果](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html?lang=zh-Hans#using-shadow-and-glow-effects-on-layers)的详细信息。
 
 ### 添加参数
 
@@ -223,7 +223,7 @@ _包含和不包含投影的图层_
 >
 >无法添加参数，因为看不到该属性？ 只需将图层的属性从默认属性更改为其他属性（通过移动、调整大小、隐藏等）。 此时，您应该会看到该资产已公开。
 
-了解有关[模板参数](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html)的详细信息。
+了解有关[模板参数](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html?lang=zh-Hans)的详细信息。
 
 ## 创建带文本图层的模板
 
@@ -312,7 +312,7 @@ _模板基础文本编辑器。_
 - 您可以看到RGB值：\red56\green53\blue4 — 这是文本颜色。
 - 虽然字体大小为20，但您看不到数字20。 但是，您确实看到一个命令\fs40 — 出于一些奇怪的原因，RTF将字体测量为半点。 因此\fs40是字体大小！
 
-您拥有足够的信息来创建参数，但“图像服务”文档中包含所有RTF命令的完整引用。 访问[图像服务文档](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c)。
+您拥有足够的信息来创建参数，但“图像服务”文档中包含所有RTF命令的完整引用。 访问[图像服务文档](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html?lang=zh-Hans#concept-0d3136db7f6f49668274541cd4b6364c)。
 
 #### 向文本图层添加参数
 
@@ -330,7 +330,7 @@ _模板基础文本编辑器。_
 >
 >若要向文本颜色添加参数，请分别添加红色、绿色和蓝色参数。 例如，如果RTF为`\red56\green53\blue46`，则可以为值56、53和46添加单独的红色、绿色和蓝色参数。 在URL中，您可以通过调用所有三个来更改颜色：`&$red=56&$green=53&$blue=46`。
 
-了解如何[创建动态文本参数](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters)。
+了解如何[创建动态文本参数](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html?lang=zh-Hans#creating-dynamic-text-parameters)。
 
 ## 发布和创建模板URL
 
@@ -344,7 +344,7 @@ _模板基础文本编辑器。_
 
 您需要运行发布才能看到将更改实时推送到图像服务器。 请牢记需要发布的内容：各种图像资产图层、动态文本的字体和模板本身。 与其他Dynamic Media Classic富媒体资产（如图像集和旋转集）类似，Basic Template是一种人工构建，它是数据库中的一个行项目，使用一系列图像服务命令引用图像和字体。 因此，当您发布模板时，您只需更新图像服务器上的数据即可。
 
-了解有关[发布模板](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/publishing-templates.html)的详细信息。
+了解有关[发布模板](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/publishing-templates.html?lang=zh-Hans)的详细信息。
 
 ### 模板URL
 

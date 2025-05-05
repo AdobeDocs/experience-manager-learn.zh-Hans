@@ -100,7 +100,7 @@ $ xcode-select --install
 
 ## 安装Git
 
-[Git](https://git-scm.com/)是[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html)使用的源代码控制管理系统，因此是开发所必需的。
+[Git](https://git-scm.com/)是[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html?lang=zh-Hans)使用的源代码控制管理系统，因此是开发所必需的。
 
 >[!BEGINTABS]
 
@@ -180,7 +180,7 @@ Apache Maven是一个开源Java命令行工具，用于构建从AEM项目Maven�
 
 + AEM as a Cloud Services中的尾日志
 + 从CLI管理Cloud Manager管道
-+ 部署到[AEM快速开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
++ 部署到[AEM快速开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=zh-Hans)
 
 ### 安装Adobe I/O CLI
 
@@ -217,7 +217,7 @@ Adobe I/O Cloud Manager插件允许aio CLI通过`aio cloudmanager`命令与Adobe
 
 ### 设置AEM快速开发环境插件{#rde}
 
-AEM快速开发环境插件允许aio CLI通过`aio aem:rde`命令与AEM as a Cloud Service [快速开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)进行交互。
+AEM快速开发环境插件允许aio CLI通过`aio aem:rde`命令与AEM as a Cloud Service [快速开发环境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=zh-Hans)进行交互。
 
 1. 执行`aio plugins:install @adobe/aio-cli-plugin-aem-rde`以安装[AEM快速开发环境插件](https://github.com/adobe/aio-cli-plugin-aem-rde)。
 
@@ -254,9 +254,9 @@ Visual Studio代码是前端开发人员（主要创建前端代码）的理想�
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__&#x200B;是用于Java开发的常用IDE，它支持Adobe提供的&#x200B;__[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)__&#x200B;插件，从而提供了一个用于创作和将JCR内容与本地AEM实例同步的IDE GUI。
+__[Eclipse IDE](https://www.eclipse.org/ide/)__&#x200B;是用于Java开发的常用IDE，它支持Adobe提供的&#x200B;__[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=zh-Hans)__&#x200B;插件，从而提供了一个用于创作和将JCR内容与本地AEM实例同步的IDE GUI。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [下载Eclipse](https://www.eclipse.org/ide/)
-+ [下载Eclipse开发工具](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
++ [下载Eclipse开发工具](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=zh-Hans)

@@ -22,14 +22,14 @@ ht-degree: 0%
 # 自定义分配任务通知
 
 “分配任务”组件用于将任务分配给工作流参与者。 将任务分配给用户或组时，会向定义的用户或组成员发送电子邮件通知。
-此电子邮件通知通常包含与任务相关的动态数据。 此动态数据是使用系统生成的[元数据属性](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)获取的。
+此电子邮件通知通常包含与任务相关的动态数据。 此动态数据是使用系统生成的[元数据属性](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html?lang=zh-Hans#using-system-generated-metadata-in-an-email-notification)获取的。
 要在电子邮件通知中包含来自已提交表单数据的值，我们需要创建自定义元数据属性，然后在电子邮件模板中使用这些自定义元数据属性
 
 
 
 ## 创建自定义元数据属性
 
-建议的方法是创建实现[WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)的getUserMetadata方法的OSGI组件
+建议的方法是创建实现[WorkitemUserMetadataService](https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)的getUserMetadata方法的OSGI组件
 
 以下代码创建4个元数据属性（_firstName_、_lastName_、_reason_&#x200B;和&#x200B;_amountRequested_），并从提交的数据中设置其值。 例如，元数据属性&#x200B;_firstName_&#x200B;的值设置为来自提交数据的名为firstName的元素的值。 以下代码假定自适应表单提交的数据为xml格式。 基于JSON架构或表单数据模型的自适应Forms会生成JSON格式的数据。
 
@@ -128,7 +128,7 @@ return customMetadataMap;
 
 ## 在您的服务器上尝试此操作
 
-* [配置Day CQ邮件服务](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
+* [配置Day CQ邮件服务](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=zh-Hans#configuring-the-mail-service)
 * 将有效的电子邮件ID与[管理员用户](http://localhost:4502/security/users.html)关联
 * 使用[包管理器](http://localhost:4502/crx/packmgr/index.jsp)下载并安装[工作流和通知模板](assets/workflow-and-task-notification-template.zip)
 * 下载[自适应表单](assets/request-travel-authorization.zip)并从[表单和文档ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)导入到AEM中。

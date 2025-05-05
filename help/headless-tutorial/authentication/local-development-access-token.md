@@ -116,7 +116,7 @@ ht-degree: 0%
    /**
    * Returns a list of Assets HTTP API asset URLs that reference the assets in the specified folder.
    * 
-   * https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=en#retrieve-a-folder-listing
+   * https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=zh-Hans#retrieve-a-folder-listing
    * 
    * @param {*} folder the Assets HTTP API folder path (less the /content/dam path prefix)
    */
@@ -145,7 +145,7 @@ ht-degree: 0%
    /**
    * Update the metadata of an asset in AEM
    * 
-   * https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=en#update-asset-metadata
+   * https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=zh-Hans#update-asset-metadata
    * 
    * @param {*} asset the Assets HTTP API asset URL to update
    * @param {*} metadata the metadata to update the asset with

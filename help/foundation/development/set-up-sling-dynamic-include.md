@@ -54,7 +54,7 @@ ht-degree: 0%
    -->
    ```
 
-1. （可选）重复上一步骤以允许通过[!DNL SDI]也提供[上可编辑模板](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html)的锁定（初始）内容上的组件。 额外配置的原因是从`/conf`而不是`/content`提供了可编辑模板的锁定内容。
+1. （可选）重复上一步骤以允许通过[!DNL SDI]也提供[上可编辑模板](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/page-templates-editable.html)的锁定（初始）内容上的组件。 额外配置的原因是从`/conf`而不是`/content`提供了可编辑模板的锁定内容。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -148,7 +148,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您使用[!DNL Sling Dynamic Includes]为边缘端包含(ESI)提供服务，请确保在调度程序缓存[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)中缓存相关的响应标头。 可能的标头包括：
+>如果您使用[!DNL Sling Dynamic Includes]为边缘端包含(ESI)提供服务，请确保在调度程序缓存[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#CachingHTTPResponseHeaders)中缓存相关的响应标头。 可能的标头包括：
 >
 >* &quot;Cache-Control&quot;
 >* &quot;内容处置&quot;

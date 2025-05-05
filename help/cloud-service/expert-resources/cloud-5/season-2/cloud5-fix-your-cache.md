@@ -24,7 +24,7 @@ ht-degree: 4%
 
 ## 本视频中涵盖的内容
 
-+ [缓存和内容交付](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html)
++ [缓存和内容交付](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans)
 + [Google灯塔](https://developers.google.com/web/tools/lighthouse)
 
 ## 其他资源

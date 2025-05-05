@@ -77,7 +77,7 @@ ht-degree: 1%
 * [Github存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/master/simple-search-guide)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 * [Sling模型导出程序](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
-* [QueryBuilder API](https://experienceleague.adobe.com/docs/)
+* [QueryBuilder API](https://experienceleague.adobe.com/docs/?lang=zh-Hans)
 * [AEM Chrome插件](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode) （[文档页面](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/)）
 
 ## 更正和跟进 {#corrections-and-follow-up}

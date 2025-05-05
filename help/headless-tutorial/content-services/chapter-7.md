@@ -202,7 +202,7 @@ public class Image {
 
 要了解有关AEM Content Services和AEM as a Headless CMS的更多信息，请访问Adobe的其他文档和支持材料：
 
-* [使用内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+* [使用内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=zh-Hans)
 * [AEM WCM核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [AEM WCM核心组件组件库](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCM核心组件GitHub项目](https://github.com/adobe/aem-core-wcm-components)

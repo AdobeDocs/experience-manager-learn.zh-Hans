@@ -24,8 +24,8 @@ ht-degree: 4%
 >id="aemcloud_localdev_dispatcher"
 >title="本地 Dispatcher 工具"
 >abstract="Dispatcher 是整个 Experience Manager 架构的组成部分，应该是本地开发设置的一部分。AEM as a Cloud Service SDK 包括推荐的 Dispatcher 工具版本，该版本有助于在本地配置、验证和模拟 Dispatcher。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="Cloud 中的 Dispatcher"
->additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html" text="下载 AEM as a Cloud Service SDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=zh-Hans" text="Cloud 中的 Dispatcher"
+>additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=zh-Hans" text="下载 AEM as a Cloud Service SDK"
 
 Adobe Experience Manager (AEM)的Dispatcher是一个Apache HTTP Web服务器模块，在CDN和AEM发布层之间提供了一个安全和性能层。 Dispatcher是Experience Manager整体架构的组成部分，应当是本地开发设置的一部分。
 
@@ -115,7 +115,7 @@ Dispatcher Tools提供了一组Apache HTTP Web Server和Dispatcher配置文件�
 
 ## 验证配置
 
-或者，可以使用`validate`脚本验证Dispatcher和Apache Web服务器配置（通过`httpd -t`）（不要与`validator`可执行文件混淆）。 `validate`脚本提供了一种运行`validator`的[三个阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=en)的简便方法。
+或者，可以使用`validate`脚本验证Dispatcher和Apache Web服务器配置（通过`httpd -t`）（不要与`validator`可执行文件混淆）。 `validate`脚本提供了一种运行`validator`的[三个阶段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=zh-Hans)的简便方法。
 
 
 >[!BEGINTABS]

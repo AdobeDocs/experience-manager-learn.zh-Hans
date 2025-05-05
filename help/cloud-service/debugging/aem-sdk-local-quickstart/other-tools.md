@@ -83,7 +83,7 @@ Explain查询位于：
 
 ![QueryBuilder调试器](./assets/other-tools/query-debugger.png)
 
-QueryBuilder调试器是基于Web的工具，可帮助您使用AEM的[QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)语法调试和了解搜索查询。
+QueryBuilder调试器是基于Web的工具，可帮助您使用AEM的[QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=zh-Hans)语法调试和了解搜索查询。
 
 QueryBuilder Debugger位于：
 

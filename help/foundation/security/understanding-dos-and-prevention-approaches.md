@@ -42,7 +42,7 @@ ht-degree: 1%
             <td>Web应用程序防火墙(WAF)</td>
             <td>旨在保护Web应用程序免受各种攻击的安全解决方案。</td>
             <td>
-            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis#waf-rules" target="_blank">WAF-DDoS保护许可证</a></td>
+            <a href="https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis#waf-rules" target="_blank">WAF-DDoS保护许可证</a></td>
             <td>通过AMS合同的<a href="https://docs.aws.amazon.com/waf/" target="_blank">AWS</a>或<a href="https://azure.microsoft.com/en-us/products/web-application-firewall" target="_blank">Azure</a> WAF。</td>
             <td>您首选的WAF</td>
         </tr>
@@ -54,7 +54,7 @@ ht-degree: 1%
         <tr>
             <td>流量过滤器规则</td>
             <td>流量过滤器规则可用于在CDN层阻止或允许请求。</td>
-            <td><a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis" target="_blank">流量过滤器规则示例</a></td>
+            <td><a href="https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis" target="_blank">流量过滤器规则示例</a></td>
             <td><a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-rate-based.html" target="_blank">AWS</a>或<a href="https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/rate-limiting-overview" target="_blank">Azure</a>规则限制功能。</td>
             <td>您的首选解决方案</td>
         </tr>

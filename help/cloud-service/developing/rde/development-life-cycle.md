@@ -41,8 +41,8 @@ RDE的主要优势是保持发展的势头。
 
 ## 其他资源
 
-[多个开发人员协作方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#multiple-developers-collaborating-on-the-same-rde)
+[多个开发人员协作方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=zh-Hans#multiple-developers-collaborating-on-the-same-rde)
 
 [本地开发环境设置](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-hans)
 
-[使用Adobe Cloud Manager - CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)
+[使用Adobe Cloud Manager - CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html?lang=zh-Hans)

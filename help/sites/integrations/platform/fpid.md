@@ -26,7 +26,7 @@ ht-degree: 0%
 
 FPID Cookie应由服务器(AEM Publish)设置，而不是使用JavaScript创建客户端Cookie。 这是因为现代浏览器（如Safari和Firefox）可能会阻止由JavaScript生成的Cookie或使其快速过期。
 
-阅读支持文档，以便[了解第一部分设备ID和Experience Cloud ID如何协同工作的详细信息](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=en)。
+阅读支持文档，以便[了解第一部分设备ID和Experience Cloud ID如何协同工作的详细信息](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=zh-Hans)。
 
 以下是使用AEM作为Web主机时FPID的工作方式概述。
 
@@ -163,8 +163,8 @@ public class FpidServlet extends SlingAllMethodsServlet {
 
 通常使用下列方法之一将此JavaScript脚本添加到页面中：
 
-+ Adobe Experience Platform中的[标记](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [AEM客户端库](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs.html?lang=en)
++ Adobe Experience Platform中的[标记](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=zh-Hans)
++ [AEM客户端库](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs.html?lang=zh-Hans)
 
 对自定义AEM FPID servlet的XHR调用速度很快（尽管是异步调用），因此用户可能会访问AEM提供的网页，并在请求完成之前导航离开。
 如果发生这种情况，在从AEM加载网页的下一页时，将重新尝试执行相同的过程。
@@ -172,9 +172,9 @@ public class FpidServlet extends SlingAllMethodsServlet {
 使用随机查询参数对AEM FPID servlet (`/bin/aep/fpid`)的HTTP GET进行参数化，以确保浏览器和AEM Publish服务之间的任何基础结构都不会缓存请求的响应。
 同样，添加`Cache-Control: no-store`请求标头以支持避免缓存。
 
-调用AEM FPID Servlet时，将从JSON响应中检索FPID，并由[Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en)用来将其发送到Experience Platform API。
+调用AEM FPID Servlet时，将从JSON响应中检索FPID，并由[Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=zh-Hans)用来将其发送到Experience Platform API。
 
-有关在identityMap[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap)中使用FPID的的更多信息，请参阅Experience Platform文档
+有关在identityMap[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html?lang=zh-Hans#identityMap)中使用FPID的的更多信息，请参阅Experience Platform文档
 
 ```javascript
 ...
@@ -239,6 +239,6 @@ public class FpidServlet extends SlingAllMethodsServlet {
 
 查看以下Experience Platform文档，了解第一方设备ID (FPID)以及如何使用Platform Web SDK管理身份数据。
 
-+ [生成第一方设备ID](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html)
-+ Platform Web SDK中的[第一方设备ID](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html)
-+ Platform Web SDK中的[身份数据](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html)
++ [生成第一方设备ID](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=zh-Hans)
++ Platform Web SDK中的[第一方设备ID](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html?lang=zh-Hans)
++ Platform Web SDK中的[身份数据](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=zh-Hans)

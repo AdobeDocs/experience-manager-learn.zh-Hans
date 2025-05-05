@@ -31,9 +31,9 @@ ht-degree: 7%
 
 ## 关键活动
 
-+ 系统管理员使用[Admin Console](https://adminconsole.adobe.com/)将一个或多个用户分配给[Cloud Manager — 业务负责人](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html)产品配置文件。
-+ 分配给业务负责人产品配置文件的用户使用[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hans)的自助服务功能来[创建程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html)和[添加环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
-+ 使用[Admin Console](https://adminconsole.adobe.com/)将开发人员和用户分配给不同的[Cloud Manager角色](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html)，并授予各种AEM环境的权限。
++ 系统管理员使用[Admin Console](https://adminconsole.adobe.com/)将一个或多个用户分配给[Cloud Manager — 业务负责人](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=zh-Hans)产品配置文件。
++ 分配给业务负责人产品配置文件的用户使用[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hans)的自助服务功能来[创建程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html?lang=zh-Hans)和[添加环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hans)
++ 使用[Admin Console](https://adminconsole.adobe.com/)将开发人员和用户分配给不同的[Cloud Manager角色](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=zh-Hans)，并授予各种AEM环境的权限。
 
 ## 实践练习
 

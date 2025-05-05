@@ -43,5 +43,5 @@ _图像错误报告。_
 
 - Experience League上的[Dynamic Media Classic — 获取值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
 - Experience League上的[Dynamic Media Classic — 执行更多操作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
-- [Dynamic Media新闻稿存档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
-- [Dynamic Media Classic文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)
+- [Dynamic Media新闻稿存档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html?lang=zh-Hans)
+- [Dynamic Media Classic文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=zh-Hans)

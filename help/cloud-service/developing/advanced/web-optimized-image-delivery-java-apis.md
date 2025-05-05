@@ -26,14 +26,14 @@ ht-degree: 0%
 AEM as a Cloud Service支持[Web优化图像投放](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=zh-Hans)，该投放可自动生成资产的优化图像Web演绎版。 Web优化图像投放可以使用三种主要方法：
 
 1. [使用AEM核心WCM组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)
-2. 创建[扩展AEM核心WCM组件图像组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html#tackling-the-image-problem)的自定义组件
+2. 创建[扩展AEM核心WCM组件图像组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html?lang=zh-Hans#tackling-the-image-problem)的自定义组件
 3. 创建自定义组件，该组件使用AssetDelivery Java™ API生成Web优化图像URL。
 
 本文探讨如何在自定义组件中使用Web优化图像Java™ API，以便允许基于代码的方式在AEM as a Cloud Service和AEM SDK上正常运行。
 
 ## Java™ API
 
-[AssetDelivery API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html)是一个OSGi服务，它为图像资产生成Web优化投放URL。 `AssetDelivery.getDeliveryURL(...)`允许的选项[记录在此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html#can-i-use-web-optimized-image-delivery-with-my-own-component%3F)。
+[AssetDelivery API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html)是一个OSGi服务，它为图像资产生成Web优化投放URL。 `AssetDelivery.getDeliveryURL(...)`允许的选项[记录在此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=zh-Hans#can-i-use-web-optimized-image-delivery-with-my-own-component%3F)。
 
 仅在AEM as a Cloud Service中运行时才满足`AssetDelivery` OSGi服务。 在AEM SDK上，对`AssetDelivery` OSGi服务的引用返回`null`。 在AEM as a Cloud Service上运行时，最好有条件地使用Web优化URL，并在AEM SDK上使用替代图像URL。 通常，资产的Web演绎版是一个足够的后备。
 
