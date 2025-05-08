@@ -1,15 +1,15 @@
 ---
-title: AEM Sites视频和教程
-description: Adobe Experience Manager (AEM) Sites是一个领先的体验管理平台。 本用户指南包含有关AEM Sites的众多特性和功能的视频和教程。
+title: AEM Sites 视频和教程
+description: 浏览有关Adobe Experience Manager Sites特性和功能的视频和教程。 AEM Sites是一个领先的体验管理平台。
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 5bd752ec257763e6d5da99c3da4b44fa9a43fd25
+source-git-commit: 85472bce41e7d2911bcb15d1ec70be2b094012fc
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 5%
+source-wordcount: '512'
+ht-degree: 6%
 
 ---
 
@@ -52,7 +52,7 @@ AEM Sites提供三种构建、创作和交付体验的方式。 无论您是构�
 
 <!-- CARDS
 
-* https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
   {title = Traditional Sites - WKND Tutorial}
   {description = Learn how to build a sample AEM Sites project using the WKND tutorial. This guide walks you through project setup, Core Components, Editable Templates, client-side libraries, and component development.}
   {image = ./assets/aem-wknd-spa-editor-tutorial.png}
@@ -62,7 +62,7 @@ AEM Sites提供三种构建、创作和交付体验的方式。 无论您是构�
   {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with EDS.}
   {image = ./assets/edge-delivery-services.png}
   {target = _blank}
-* https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-with-aem-headless/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview
   {title = Headless/API-First - Tutorials}
   {description = Learn how to build headless applications powered by AEM content. Tutorials cover frameworks like iOS, Android, and React—choose what fits your stack.}
   {image = ./assets/headless.png}
@@ -120,7 +120,7 @@ AEM Sites提供三种构建、创作和交付体验的方式。 无论您是构�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-with-aem-headless/overview" title="Headless/API — 优先 — 教程" target="_self" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview" title="Headless/API — 优先 — 教程" target="_self" rel="referrer">
                         <img class="is-bordered-r-small" src="./assets/headless.png" alt="Headless/API — 优先 — 教程"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -129,11 +129,11 @@ AEM Sites提供三种构建、创作和交付体验的方式。 无论您是构�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" title="Headless/API — 优先 — 教程">Headless/API优先 — 教程</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" title="Headless/API — 优先 — 教程">Headless/API优先 — 教程</a>
                     </p>
                     <p class="is-size-6">了解如何构建由AEM内容提供支持的Headless应用程序。 教程涵盖iOS、Android™和React等框架 — 选择适合您栈栈的内容。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                 </a>
             </div>
@@ -145,10 +145,10 @@ AEM Sites提供三种构建、创作和交付体验的方式。 无论您是构�
 
 ## 其他资源
 
-* [AEM Sites创作文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/sites/authoring/essentials/first-steps)
-* [AEM Sites开发文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/developing/introduction/getting-started)
-* [AEM Sites管理文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/sites/administering/home)
-* [AEM Sites部署文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/introduction/platform)
+* [AEM Sites创作文档](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/first-steps)
+* [AEM Sites开发文档](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/getting-started)
+* [AEM Sites管理文档](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/home)
+* [AEM Sites部署文档](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/introduction/platform)
 * [AEM as a Cloud Service教程](/help/cloud-service/overview.md)
 * [AEM Assets教程](/help/assets/overview.md)
 * [AEM Forms教程](/help/forms/overview.md)

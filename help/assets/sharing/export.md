@@ -6,15 +6,15 @@ version: Experience Manager as a Cloud Service
 topic: Content Management
 role: Developer
 level: Experienced
-last-substantial-update: 2024-04-08T00:00:00Z
+last-substantial-update: 2025-04-28T00:00:00Z
 doc-type: Tutorial
 jira: KT-15313
 thumbnail: KT-15313.jpeg
 exl-id: d04c3316-6f8f-4fd1-9df1-3fe09d44f735
 duration: 256
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 107a9a77a1bf2337f309d503a4a310d8d0781f0d
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 导出脚本
 
-编写为JavaScript模块的脚本是Node.js项目的一部分，因为它依赖于`node-fetch`。 您可以[将该项目下载为zip文件](./assets/export/export-aem-assets-script.zip)，或者将下面的脚本复制到类型为`module`的空Node.js项目中，然后运行`npm install node-fetch`以安装依赖项。
+编写为JavaScript模块的脚本是Node.js项目的一部分，因为它依赖于`node-fetch`和`p-limit`。 您可以将下面的脚本复制到类型为`module`的空Node.js项目中，然后运行`npm install node-fetch p-limit`以安装依赖项。
 
 此脚本将浏览AEM Assets文件夹树，并将资源和文件夹下载到计算机上的本地文件夹。 它使用[AEM Assets HTTP API](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)获取文件夹和资源数据，并下载资源的原始演绎版。
 
@@ -41,6 +41,7 @@ ht-degree: 0%
 import fetch from 'node-fetch';
 import { promises as fs } from 'fs';
 import path from 'path';
+import pLimit from 'p-limit';
 
 // Do not process the contents of these well-known AEM system folders
 const SKIP_FOLDERS = ['/content/dam/appdata', '/content/dam/projects', '/content/dam/_CSS', '/content/dam/_DMSAMPLE' ];
@@ -54,11 +55,10 @@ const SKIP_FOLDERS = ['/content/dam/appdata', '/content/dam/projects', '/content
  */
 function isValidFolder(entity, aemPath) {
     if (aemPath === '/content/dam') {
-        // Always allow processing /content/dam 
         return true;
     } else if (!entity.class.includes('assets/folder')) {
         return false;
-    } if (SKIP_FOLDERS.find((path) => path === aemPath)) {
+    } else if (SKIP_FOLDERS.find((path) => path === aemPath)) {
         return false;
     } else if (entity.properties.hidden) {
         return false;
@@ -78,7 +78,6 @@ function isDownloadable(entity) {
     } else if (entity.properties.contentFragment) {
         return false;
     }
-
     return true;
 }
 
@@ -86,7 +85,7 @@ function isDownloadable(entity) {
  * Helper function to get the link from the entity based on the relationship name.
  * @param {Object} entity the entity from the AEM Assets HTTP API
  * @param {String} rel the relationship name
- * @returns 
+ * @returns {String} link URL
  */
 function getLink(entity, rel) {
     return entity.links.find(link => link.rel.includes(rel));
@@ -95,7 +94,7 @@ function getLink(entity, rel) {
 /**
  * Helper function to fetch JSON data from the AEM Assets HTTP API.
  * @param {String} url the AEM Assets HTTP API URL to fetch data from
- * @returns the JSON response of the AEM Assets HTTP API
+ * @returns {Object} the JSON response
  */
 async function fetchJSON(url) {
     const response = await fetch(url, {
@@ -107,7 +106,7 @@ async function fetchJSON(url) {
     });
 
     if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
+        throw new Error(`Error fetching ${url}: ${response.status}`);
     }
 
     return response.json();
@@ -137,16 +136,15 @@ async function downloadFile(url, outputPath) {
 }
 
 /**
- * Main entry
- * @param {Object} options the options for downloading assets
- * @param {String} options.folderUrl the URL of the AEM folder to download
- * @param {String} options.localPath the local path to save the downloaded assets
- * @param {String} options.aemPath the AEM path of the folder to download
+ * Main entry point to download assets from AEM.
+ * 
+ * @param {Object} options 
+ * @param {String} options.apiUrl (optional) the direct AEM Assets HTTP API URL
+ * @param {String} options.localPath local filesystem path to save the assets
+ * @param {String} options.aemPath AEM folder path
  */
-async function downloadAssets({apiUrl, localPath = LOCAL_DOWNLOAD_FOLDER, aemPath = '/content/dam'}) {    
+async function downloadAssets({ apiUrl, localPath = LOCAL_DOWNLOAD_FOLDER, aemPath = '/content/dam' }) {
     if (!apiUrl) {
-        // Handle the initial call to the script, which should just provide the AEM path
-        // Construct the proper AEM Assets HTTP API URL as it uses a truncated AEM path
         const prefix = "/content/dam/";
         let apiPath = aemPath.startsWith(prefix) ? aemPath.substring(prefix.length) : aemPath;    
 
@@ -154,13 +152,13 @@ async function downloadAssets({apiUrl, localPath = LOCAL_DOWNLOAD_FOLDER, aemPat
             apiPath = '/' + apiPath;
         }
 
-        apiUrl = `${AEM_HOST}/api/assets.json${apiPath}`
+        apiUrl = `${AEM_HOST}/api/assets.json${apiPath}`;
     }
     
     const data = await fetchJSON(apiUrl);
     const entities = data.entities || [];
 
-    // Process folders first
+    // First, process folders
     for (const folder of entities.filter(entity => entity.class.includes('assets/folder'))) {
         const newLocalPath = path.join(localPath, folder.properties.name);
         const newAemPath = path.join(aemPath, folder.properties.name);
@@ -170,33 +168,26 @@ async function downloadAssets({apiUrl, localPath = LOCAL_DOWNLOAD_FOLDER, aemPat
         }
 
         await fs.mkdir(newLocalPath, { recursive: true });
-    
+
         await downloadAssets({
-            apiUrl: getLink(folder, 'self')?.href, 
-            localPath: newLocalPath, 
+            apiUrl: getLink(folder, 'self')?.href,
+            localPath: newLocalPath,
             aemPath: newAemPath
         });
     }
 
-    let downloads = [];
+    // Now, process assets with concurrency limit
+    const limit = pLimit(MAX_CONCURRENT_DOWNLOADS);
+    const downloads = [];
 
-    // Process assets
     for (const asset of entities.filter(entity => entity.class.includes('assets/asset'))) {
         const assetLocalPath = path.join(localPath, asset.properties.name);
         if (isDownloadable(asset)) {
-            downloads.push(downloadFile(getLink(asset, 'content')?.href, assetLocalPath));
-        }
-
-        // Process in batches of MAX_CONCURRENT_DOWNLOADS
-        if (downloads.length >= MAX_CONCURRENT_DOWNLOADS) {
-            await Promise.all(downloads);
-            downloads = [];
+            downloads.push(limit(() => downloadFile(getLink(asset, 'content')?.href, assetLocalPath)));
         }
     }
 
-    // Wait for the remaining downloads to finish
     await Promise.all(downloads);
-    downloads = [];
 
     // Handle pagination
     const nextUrl = getLink(data, 'next');
@@ -224,7 +215,7 @@ const AEM_ASSETS_FOLDER = '/content/dam/wknd-shared';
 // The local folder to save the downloaded assets.
 const LOCAL_DOWNLOAD_FOLDER = './exported-assets';
 
-// The number of maximum concurrent downloads to avoid overwhelming the client or server. 10 is typically a good value.
+// The number of maximum concurrent downloads to avoid overwhelming the client or server.
 const MAX_CONCURRENT_DOWNLOADS = 10;
 
 /***** SCRIPT ENTRY POINT *****/
@@ -232,7 +223,7 @@ const MAX_CONCURRENT_DOWNLOADS = 10;
 console.time('Download AEM assets');
 
 await downloadAssets({
-    aemPath: AEM_ASSETS_FOLDER, 
+    aemPath: AEM_ASSETS_FOLDER,
     localPath: LOCAL_DOWNLOAD_FOLDER
 }).catch(console.error);
 
@@ -243,7 +234,7 @@ console.timeEnd('Download AEM assets');
 
 下载脚本后，更新脚本底部的配置变量。
 
-可以使用对AEM as a Cloud Service[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview)进行基于令牌的身份验证教程中的步骤来获取`AEM_ACCESS_TOKEN`。 通常，只要导出过程不超过24小时，并且生成令牌的用户拥有对要导出的资产的读取权限，24小时开发人员令牌便足以满足需求。
+可以使用对AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview)进行基于[令牌的身份验证教程中的步骤来获取`AEM_ACCESS_TOKEN`。 通常，只要导出过程不超过24小时，并且生成令牌的用户拥有对要导出的资产的读取权限，24小时开发人员令牌便足以满足需求。
 
 ```javascript
 ...
@@ -294,6 +285,6 @@ Downloaded asset: exported-assets/wknd-shared/en/magazine/western-australia/adob
 Download AEM assets: 24.770s
 ```
 
-在配置`LOCAL_DOWNLOAD_FOLDER`中指定的本地文件夹中可以找到导出的资源。 文件夹结构反映了AEM Assets文件夹结构，并将资源下载到相应的子文件夹。 这些文件可以上载到[支持的云存储提供商](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view)，以便将[批量导入](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/migration/bulk-import)到其他AEM实例，或用于备份。
+在配置`LOCAL_DOWNLOAD_FOLDER`中指定的本地文件夹中可以找到导出的资源。 文件夹结构反映了AEM Assets文件夹结构，并将资源下载到相应的子文件夹。 这些文件可以上载到[支持的云存储提供商](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view)，以便将[批量导入](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import)到其他AEM实例，或用于备份。
 
 ![已导出资源](./assets/export/exported-assets.png)
