@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,8 @@ ht-degree: 0%
 # 设置基于OpenAPI的AEM API
 
 了解如何设置AEM as a Cloud Service环境，以便能够访问基于OpenAPI的AEM API。
+
+在此示例中，使用使用服务器到服务器身份验证方法的AEM Assets API来演示设置过程。 其他基于OpenAPI的AEM API也可以执行相同的步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
@@ -78,13 +80,25 @@ _Admin Console_&#x200B;窗口显示新添加的产品配置文件。
 
 ![查看与产品配置文件关联的服务](./assets/setup/review-services-associated-with-product-profile.png)
 
-默认情况下，**AEM Assets API Users**&#x200B;服务不与任何产品配置文件关联。 让我们将其与新添加的&#x200B;**AEM Assets Collaborator Users - author - Program XXX - Environment XXX**&#x200B;产品配置文件关联。 在此关联后，ADC项目的&#x200B;_资产创作API_&#x200B;可以设置所需的服务器到服务器身份验证，并将ADC项目（在下一步中创建）中的身份验证帐户与产品配置文件关联。
+### 启用AEM Assets API访问{#enable-aem-assets-apis-access}
+
+默认情况下，**AEM Assets API Users**&#x200B;服务不与任何产品配置文件关联。 让我们将其与新添加的&#x200B;**AEM Assets Collaborator Users - author - Program XXX - Environment XXX** Product Profile或任何其他要用于AEM Assets API访问的产品配置文件关联。
 
 ![将AEM Assets API Users服务与产品配置文件关联](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
+### 启用服务器到服务器身份验证
+
+要为所需的AEM API启用服务器到服务器身份验证，使用Adobe Developer Console (ADC)设置集成的用户必须以开发人员身份添加到与服务相关联的产品配置文件中。
+
+例如，要为AEM Assets API启用服务器到服务器身份验证，必须将用户作为开发人员添加到&#x200B;**AEM Assets Collaborator Users - author - Program XXX - Environment XXX**&#x200B;产品配置文件。
+
+![将开发人员关联到产品配置文件](./assets/setup/associate-developer-to-product-profile.png)
+
+在此关联后，ADC项目的&#x200B;_资产创作API_&#x200B;可以设置所需的服务器到服务器身份验证，并将ADC项目（在下一步中创建）中的身份验证帐户与产品配置文件关联。
+
 >[!IMPORTANT]
 >
->要为AEM Assets API启用服务器到服务器身份验证，上述步骤至关重要。 如果没有此关联，AEM Assets API将无法与服务器到服务器身份验证方法一起使用。
+>要为所需的AEM API启用服务器到服务器身份验证，上述步骤至关重要。 如果没有此关联，AEM API将无法与服务器到服务器身份验证方法一起使用。
 
 ## 创建Adobe Developer Console (ADC)项目{#adc-project}
 
@@ -125,6 +139,11 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
    ![选择身份验证](./assets/s2s/select-authentication.png)
 
    服务器到服务器身份验证非常适用于需要API访问而不需要用户交互的后端服务。 Web应用程序和单页应用程序身份验证选项适用于需要代表用户进行API访问的应用程序。 有关详细信息，请参阅[OAuth服务器到服务器与Web应用程序与单页应用程序凭据之间的区别](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
+
+   >[!TIP]
+   >
+   >如果您看不到服务器到服务器身份验证选项，则意味着设置集成的用户不会作为开发人员添加到与服务相关联的产品配置文件中。 有关详细信息，请参阅[启用服务器到服务器身份验证](#enable-server-to-server-authentication)。
+
 
 1. 如果需要，可以重命名API以便于识别。 出于演示目的，使用默认名称。
 

@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1727'
 ht-degree: 1%
 
 ---
@@ -89,6 +89,10 @@ OAuth服务器到服务器身份验证非常适用于需要API访问而不进行
 
    ![选择身份验证](../assets/s2s/select-authentication.png)
 
+   >[!TIP]
+   >
+   >如果您看不到服务器到服务器身份验证选项，则意味着设置集成的用户不会作为开发人员添加到与服务相关联的产品配置文件中。 有关详细信息，请参阅[启用服务器到服务器身份验证](../setup.md#enable-server-to-server-authentication)。
+
 1. 重命名凭据以便于识别（如果需要），然后单击&#x200B;**下一步**。 出于演示目的，使用默认名称。
 
    ![重命名凭据](../assets/s2s/rename-credential.png)
@@ -141,7 +145,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 1. 展开&#x200B;_元数据_&#x200B;部分，然后单击&#x200B;**交付指定资源的元数据**&#x200B;选项。
 
-1. 在右窗格中，单击&#x200B;**尝试它**&#x200B;按钮。
+1. 在右窗格中，单击&#x200B;**尝试它**按钮。
    ![API文档](../assets/s2s/api-documentation.png)
 
 1. 输入以下值：
