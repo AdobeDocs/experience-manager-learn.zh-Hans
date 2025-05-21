@@ -12,7 +12,7 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: ab499385a1df8c4b0ac58b6a382faa29b262e3ba
 workflow-type: tm+mt
 source-wordcount: '1518'
 ht-degree: 0%
@@ -57,8 +57,8 @@ ht-degree: 0%
 
 高级开发步骤包括：
 
-1. [AEM as a Cloud Service环境的现代化](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
-1. [启用AEM API访问](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
+1. [AEM as a Cloud Service环境的现代化](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
+1. [启用AEM API访问](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
 1. [在Adobe Developer Console (ADC)中创建项目](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
 1. [初始化项目以进行本地开发](./runtime-action.md#initialize-project-for-local-development)
 1. 在ADC中配置项目
@@ -221,7 +221,7 @@ ht-degree: 0%
         'Content-Type': 'application/json-patch+json',
         'If-Match': '*',
         'X-Adobe-Accept-Experimental': '1',
-        'X-Api-Key': 'aem-assets-management-api', // temporary value
+        'X-Api-Key': '12345676', // Use the `ClientID` value from the ADC Project's credentials section
         Authorization: `Bearer ${access_token}`,
       },
       body: JSON.stringify(transformedMetadata),
@@ -293,7 +293,7 @@ ht-degree: 0%
 
 默认情况下，WKND Sites项目没有用于显示PIM特定元数据（如SKU、供应商名称等）的资源元数据架构。 让我们在AEM实例中创建资源元数据架构并将其应用到资源文件夹。
 
-1. 登录到AEM as a Cloud Service资源实例，并出现在[资源视图](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/assets/authoring/switch-views)中。
+1. 登录到AEM as a Cloud Service资源实例，并出现在[资源视图](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)中。
 
    ![AEM Assets视图](../assets/examples/assets-pim-integration/aem-assets-view.png)
 
