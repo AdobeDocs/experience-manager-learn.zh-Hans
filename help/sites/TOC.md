@@ -78,7 +78,7 @@ ht-degree: 21%
 + 生成式 AI {#generative-ai}
    + [生成变体](./generative-ai/generate-variations.md)
 + 内容片段 {#content-fragments}
-   + [内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
+   + [内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=zh-Hans){target=_blank}
    + [创作内容片段](content-fragments/content-fragments-feature-video-use.md)
    + [交付内容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [翻译内容片段](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -86,7 +86,7 @@ ht-degree: 21%
 + 体验片段 {#experience-fragments}
    + [使用体验片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [构建块](experience-fragments/building-blocks.md)
-   + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
+   + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=zh-Hans){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [概述](./edge-delivery-services/overview.md)
    + 开发{#developing}
@@ -120,7 +120,7 @@ ht-degree: 21%
    + [AEM 项目原型](developing/aem-project-archetype.md)
    + [AEM Sites快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
    + [AEM Headless快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-Headless/overview.html?lang=zh-hans){target=_blank}
-   + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
+   + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hans){target=_blank}
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
    + [响应式断点](developing/responsive-breakpoints.md)
    + [用样式系统进行开发](developing/style-system-technical-video-understand.md)
@@ -131,7 +131,7 @@ ht-degree: 21%
    + [社交媒体共享](developing/social-media-sharing-technical-video-use.md)
    + [自定义组件图标](developing/component-icons-technical-video-develop.md)
 + 个性化 {#personalization}
-   + [与Adobe Target集成](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html){target=_blank}
+   + [与Adobe Target集成](https://helpx.adobe.com/cn/marketing-cloud/how-to/aem-target.html){target=_blank}
    + [设置体验片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [在Adobe Target中使用体验片段](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [设置ContextHub](personalization/context-hub-technical-video-setup.md)
@@ -144,7 +144,7 @@ ht-degree: 21%
    + [Sitemap](./seo/sitemaps.md)
 + 单页面应用程序 {#spa-editor}
    + [使用SPA编辑器](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
+   + [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hans){target=_blank}
 + 多站点管理 {#multi-site-management}
    + [语言副本简介](./multi-site-management/language-copy-overview.md)
    + [Live Copy和Blueprint](./multi-site-management/live-copy-and-blueprint.md)
