@@ -60,5 +60,5 @@ ht-degree: 6%
 
 ## Dynamic Media图像服务器API
 
-* [Dynamic Media图像服务和渲染API](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/c-http-protocol-reference)
+* [Dynamic Media图像服务和渲染API](https://experienceleague.adobe.com/zh-hans/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/c-http-protocol-reference)
 * [Dynamic Media快照预览](https://snapshot.scene7.com/)
