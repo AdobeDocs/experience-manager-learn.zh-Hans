@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
 duration: 307
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: b395b3b84e63fe6c24e597d1628f4aed5ba47469
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 全栈AEM项目中的配置更改概述
 
->[!VIDEO](https://video.tv.adobe.com/v/3453619?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## 先决条件 {#prerequisites}
 
@@ -94,7 +94,7 @@ ht-degree: 0%
            }),
        new CopyWebpackPlugin({
            patterns: [
-               { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './clientlib-site' }
+               { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './theme' }
            ]
        })
    ...
@@ -195,7 +195,7 @@ ht-degree: 0%
 
 ## 警告 — _启用前端管道_&#x200B;按钮
 
-[边栏选择器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=zh-Hans)的[站点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=zh-Hans)选项在选择您的站点根或站点页面时显示&#x200B;**启用前端管道**&#x200B;按钮。 单击&#x200B;**启用前端管道**&#x200B;按钮将覆盖上述&#x200B;**Sling配置**，请确保在通过Cloud Manager管道执行部署上述更改后，**您未单击**&#x200B;此按钮。
+[边栏选择器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)的[站点](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)选项在选择您的站点根或站点页面时显示&#x200B;**启用前端管道**&#x200B;按钮。 单击&#x200B;**启用前端管道**&#x200B;按钮将覆盖上述&#x200B;**Sling配置**，请确保在通过Cloud Manager管道执行部署上述更改后，**您未单击**&#x200B;此按钮。
 
 ![启用前端管道按钮](assets/enable-front-end-Pipeline-button.png)
 
