@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解体验生成如何使营销人员能够在保持控制的同时，根据各种角色、渠道和地理位置调整内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459245/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462415/?learn=on&enablevpops&captions=chi_hans)

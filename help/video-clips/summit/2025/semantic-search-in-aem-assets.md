@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索AEM Assets中的语义搜索如何帮助您更有效地查找与您的意图相匹配的内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459226/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461898/?learn=on&enablevpops&captions=chi_hans)
