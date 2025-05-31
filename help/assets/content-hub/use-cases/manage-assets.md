@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何使用AEM Assets Content Hub轻松管理和共享批准的品牌资产 — 使您的团队能够以比以往更快的速度执行营销活动。
 
->[!VIDEO](https://video.tv.adobe.com/v/3457638/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463071/?learn=on&enablevpops&captions=chi_hans)

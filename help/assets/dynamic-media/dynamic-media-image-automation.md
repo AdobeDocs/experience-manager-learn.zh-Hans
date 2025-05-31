@@ -21,7 +21,7 @@ ht-degree: 6%
 
 了解如何使用AEM中的Dynamic Media创建虚拟演绎版、管理透明度并自动处理图像以实现可扩展内容重用。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459589/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463055/?learn=on&enablevpops&captions=chi_hans)
 
 
 ## Dynamic Media资源示例

@@ -221,7 +221,7 @@ ht-degree: 10%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./use-cases/manage-assets.md" title="如何使用AEM Assets Content Hub管理资源" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3457638/?format=jpeg&nocache=1744751770120" alt="如何使用AEM Assets Content Hub管理资源"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3463071/?format=jpeg&nocache=1744751770120&captions=chi_hans" alt="如何使用AEM Assets Content Hub管理资源"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
