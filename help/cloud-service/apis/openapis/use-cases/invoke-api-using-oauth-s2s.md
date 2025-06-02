@@ -12,10 +12,10 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
+source-git-commit: 9a5d811cf92a09da27057f99e1b6b2ed8df2a414
 workflow-type: tm+mt
 source-wordcount: '1727'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 OAuth服务器到服务器身份验证非常适用于需要API访问而不进行用户交互的后端服务。 它使用OAuth 2.0 _client_credentials_&#x200B;授权类型来验证客户端应用程序。
 
-## 您学到的内容{#what-you-learn}
+## 你将学到的内容{#what-you-learn}
 
 在本教程中，您将学习如何：
 
@@ -139,18 +139,18 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 ### 使用浏览器调用API
 
-在开发应用程序之前，让我们使用[API文档](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)中的&#x200B;**尝试它**&#x200B;功能调用API。
+在开发应用程序之前，让我们使用[API文档](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)中的&#x200B;**尝试它**&#x200B;功能调用API。
 
-1. 在浏览器中打开[Assets创作API文档](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)。
+1. 在浏览器中打开[Assets创作API文档](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)。
 
 1. 展开&#x200B;_元数据_&#x200B;部分，然后单击&#x200B;**交付指定资源的元数据**&#x200B;选项。
 
-1. 在右窗格中，单击&#x200B;**尝试它**&#x200B;按钮。
+1. 在右窗格中，单击&#x200B;**尝试它**按钮。
    ![API文档](../assets/s2s/api-documentation.png)
 
 1. 输入以下值：
 
-   | 分区 | 参数 | 价值 |
+   | 分区 | 参数 | 值 |
    | --- | --- | --- |
    |  | 分段 | AEM实例名称不带Adobe域名(.adobeaemcloud.com)，例如`author-p63947-e1420428`。 |
    | **安全性** | 持有者令牌 | 使用ADC项目的OAuth服务器到服务器凭据中的访问令牌。 |
@@ -448,7 +448,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 - 输入以下值：
 
-  | 分区 | 参数 | 价值 |
+  | 分区 | 参数 | 值 |
   | --- | --- | --- |
   | **存储桶** |  | AEM实例名称不带Adobe域名(.adobeaemcloud.com)，例如`author-p63947-e1420428`。 |
   | **安全性** | 持有者令牌 | 使用ADC项目的OAuth服务器到服务器凭据中的访问令牌。 |
