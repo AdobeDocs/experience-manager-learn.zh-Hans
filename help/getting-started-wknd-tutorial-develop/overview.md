@@ -13,8 +13,8 @@ level: Beginner
 doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
+workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 # AEM Sites - WKND 教程快速入门 {#introduction}
 
-{{edge-delivery-services}}
+{{traditional-aem}}
 
 欢迎参加专为不熟悉 Adobe Experience Manager (AEM) 的开发人员设计的多段式教程。本教程介绍了虚拟生活方式品牌 WKND 的 AEM Site 的实施。此教程涵盖了项目设置、核心组件、可编辑模板、客户端库和使用 Adobe Experience Manager Site 进行组件开发等基本主题。
 

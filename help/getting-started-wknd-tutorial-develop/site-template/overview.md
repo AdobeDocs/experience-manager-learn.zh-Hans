@@ -11,7 +11,7 @@ thumbnail: 333477.jpg
 doc-type: Tutorial
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
 duration: 426
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -20,18 +20,18 @@ ht-degree: 0%
 
 # AEM Sites快速入门 — 快速网站创建 {#site-template}
 
-{{edge-delivery-services}}
+{{traditional-aem}}
 
 了解如何使用低代码方法通过快速网站创建和预定义网站模板在Adobe Experience Manager中创建您的第一个网站。 使用现成的组件和模板快速启动和运行站点。 使用Adobe XD驱动的主题工作流，仅通过CSS和JavaScript应用品牌特定的样式和自定义设置。 为新项目和开发人员推荐。
 
->[!VIDEO](https://video.tv.adobe.com/v/343263?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/333477?quality=12&learn=on)
 
 * [Adobe XD UI套件](https://github.com/adobe/aem-site-template-basic/blob/main/files/wireframe.xd)
 * [AEM站点模板](https://github.com/adobe/aem-site-template-basic)
 
 ## AEM as a Cloud Service环境 {#environment}
 
-本教程中的步骤将在Adobe Experience Manager as a Cloud Service环境中执行。 确保您对AEM环境具有管理访问权限。 完成本教程时，建议使用[沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html?lang=zh-Hans)和[开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hans)。
+本教程中的步骤将在Adobe Experience Manager as a Cloud Service环境中执行。 确保您对AEM环境具有管理访问权限。 完成本教程时，建议使用[沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)和[开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)。
 
 ## 后续步骤 {#next-steps}
 
