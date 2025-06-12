@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## AEM as a Cloud Service环境 {#environment}
 
-本教程中的步骤将在Adobe Experience Manager as a Cloud Service环境中执行。 确保您对AEM环境具有管理访问权限。 完成本教程时，建议使用[沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)和[开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)。
+本教程中的步骤将在Adobe Experience Manager as a Cloud Service环境中执行。 确保您对AEM环境具有管理访问权限。 完成本教程时，建议使用[沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html?lang=zh-Hans)和[开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hans)。
 
 ## 后续步骤 {#next-steps}
 
