@@ -1,6 +1,6 @@
 ---
-title: 使用CSS和JS开发块
-description: 使用CSS和JavaScript为Edge Delivery Services开发块，该块可使用通用编辑器进行编辑。
+title: 使用 CSS 和 JS 开发一个区块
+description: 使用 CSS 和 JavaScript 为 Edge Delivery Services 开发一个区块，该区块可通过通用编辑器进行编辑。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,40 +11,41 @@ jira: KT-15832
 duration: 900
 exl-id: 41c4cfcf-0813-46b7-bca0-7c13de31a20e
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '772'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 使用CSS和JavaScript开发块
+# 使用 CSS 和 JavaScript 开发一个区块
 
-在[上一章](./7b-block-js-css.md)中，涵盖了仅使用CSS来设置块的样式。 现在，焦点转移到了使用JavaScript和CSS开发块上。
+在[上一章](./7b-block-js-css.md)中，我们讨论了仅使用 CSS 对块进行样式设置。现在，我们将重点转向使用 JavaScript 和 CSS 共同开发一个区块。
 
-此示例说明如何通过三种方式增强块：
+这个例子展示了如何通过三种方式来增强区块：
 
-1. 添加自定义CSS类。
-1. 使用事件侦听器添加移动。
-1. 处理可以选择包含在Teaser文本中的条款和条件。
+1. 添加自定义 CSS 类。
+1. 使用事件监听器来添加移动效果。
+1. 处理 Teaser 文本中可选择包含的条款和条件。
 
 ## 常见用例
 
-这种方法在以下情况下特别有用：
+这种方法在以下场景中尤为有用：
 
-- **外部CSS管理：**&#x200B;当块的CSS在Edge Delivery Services外部被管理并且与其HTML结构不匹配时。
-- **其他属性：**&#x200B;当需要其他属性（如用于辅助功能的[ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)或[微数据](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Microdata)）时。
-- **JavaScript增强功能：**&#x200B;当需要交互功能（如事件侦听器）时。
+- **外部 CSS 管理：**&#x200B;当区块的 CSS 在 Edge Delivery Services 之外进行管理，且与其 HTML 结构不一致时。
+- **附加属性：**&#x200B;当需要额外的属性时，例如用于辅助功能的 [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) 或[微数据](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata)。
+- **JavaScript 增强功能：**&#x200B;当需要事件监听器等交互功能时。
 
-此方法依赖于浏览器本机的JavaScript DOM操作，但在修改DOM时尤其需要谨慎移动元素。 此类更改可能会破坏通用编辑器的创作体验。 理想情况下，应该仔细设计块的[内容模型](./5-new-block.md#block-model)，以最大限度地减少大量DOM更改的需要。
+这种方法依赖于浏览器原生 JavaScript DOM 操作，但在修改 DOM 时需要谨慎，尤其是在移动元素时更是如此。此类更改可能会破坏通用编辑器的创作体验。理想情况下，应精心设计区块的[内容模型](./5-new-block.md#block-model)，以尽量减少对大量更改 DOM 的需求。
 
-## 阻止HTML
+## 区块 HTML
 
-要接近块开发，请先查看Edge Delivery Services公开的DOM。 该结构通过JavaScript进行了增强并使用CSS进行了样式设置。
+要着手进行区块开发，首先需要查看 Edge Delivery Services 所展示的 DOM。该结构通过 JavaScript 进行增强，并使用 CSS 进行样式设置。
 
 >[!BEGINTABS]
->[!TAB 要修饰的 DOM]
 
-以下是使用JavaScript和CSS装饰的Teaser块的DOM。
+>[!TAB 要装饰的 DOM]
+
+以下是使用 JavaScript 和 CSS 进行装饰的目标 Teaser 区块的 DOM。
 
 ```html
 ...
@@ -80,34 +81,34 @@ ht-degree: 0%
 ...
 ```
 
->[!TAB 如何查找DOM]
+>[!TAB 如何找到 DOM]
 
-要查找要修饰的DOM，请在本地开发环境中打开包含未修饰块的页面，选择块，然后检查DOM。
+要找到需要装饰的 DOM，请在本地开发环境中打开包含未装饰的区块的页面，选中该区块，并检查其 DOM 结构。
 
-![检查块DOM](./assets/7a-block-css/inspect-block-dom.png)
+![检查区块 DOM](./assets/7a-block-css/inspect-block-dom.png)
 
 >[!ENDTABS]
 
 
-## 阻止JavaScript
+## 区块 JavaScript
 
-要向块添加JavaScript功能，请在块的目录中创建一个与块同名的JavaScript文件，例如`/blocks/teaser/teaser.js`。
+若要向某个区块添加 JavaScript 功能，请在该区块的目录中创建一个与该区块同名的 JavaScript 文件，例如，`/blocks/teaser/teaser.js`。
 
-JavaScript文件应导出默认函数：
+JavaScript 文件应导出一个默认函数：
 
 ```javascript
 export default function decorate(block) { ... }
 ```
 
-默认函数采用表示Edge Delivery Services HTML中块的DOM元素/树，并包含在呈现块时执行的自定义JavaScript。
+默认函数接收 Edge Delivery Services HTML 中代表区块的 DOM 元素/树，并包含在区块呈现时执行的自定义 JavaScript。
 
-此示例JavaScript执行三个主要操作：
+这个 JavaScript 示例执行了三个主要操作：
 
-1. 将事件侦听器添加到CTA按钮，并在鼠标悬停时缩放图像。
-1. 将语义CSS类添加到块的元素中，这在集成现有CSS设计系统时很有用。
-1. 向以`Terms and conditions:`开头的段落添加特殊的CSS类。
+1. 为 CTA 按钮添加一个事件监听器，当鼠标悬停时缩放图像。
+1. 为区块的元素添加语义化 CSS 类，这在集成现有 CSS 设计系统时非常有用。
+1. 为以 `Terms and conditions:` 开头的段落添加一个特殊的 CSS 类。
 
-[!BADGE /blocks/teaser/teaser.js]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/teaser/teaser.js]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```javascript
 /* /blocks/teaser/teaser.js */
@@ -170,17 +171,17 @@ export default function decorate(block) {
 }
 ```
 
-## 阻止CSS
+## 区块 CSS
 
-如果您在[上一章](./7a-block-css.md)中创建了`teaser.css`，请将其删除或重命名为`teaser.css.bak`，因为本章为Teaser块实施了不同的CSS。
+如果你在[上一章](./7a-block-css.md)中创建了 `teaser.css`，请删除它，或者将其重命名为 `teaser.css.bak`，因为本章为 Teaser 区块实施了不同的 CSS。
 
-在块的文件夹中创建`teaser.css`文件。 此文件包含用于设置块样式的CSS代码。 此CSS代码以块的元素以及JavaScript在`teaser.js`中添加的特定语义CSS类为目标。
+在区块的文件夹中创建一个 `teaser.css` 文件。该文件包含用于设置区块样式的 CSS 代码。该 CSS 代码针对的是区块的元素，以及由 `teaser.js` 中的 JavaScript 添加的特定语义 CSS 类。
 
-裸元素仍可以直接设置样式，或使用自定义应用的CSS类进行设置。 对于更复杂的块，应用语义CSS类有助于使CSS更易于理解和维护，尤其是在与较大的团队一起处理较长的时段时更是如此。
+裸元素仍然可以直接设置样式，或者使用自定义的 CSS 类进行样式设置。对于更复杂的区块，应用语义化 CSS 类有助于使 CSS 更易于理解和维护，尤其是在较长时期与大型团队合作时更是如此。
 
-[与](./7a-block-css.md#develop-a-block-with-css)之前一样，使用[CSS嵌套](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting)将CSS范围设置为`.block.teaser`以避免与其他块冲突。
+[和之前一样](./7a-block-css.md#develop-a-block-with-css)，使用 [CSS 嵌套](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting)将 CSS 限定在 `.block.teaser` 上，以避免与其他区块发生冲突。
 
-[!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```css
 /* /blocks/teaser/teaser.css */
@@ -295,9 +296,9 @@ export default function decorate(block) {
 
 ## 添加条款和条件
 
-上述实现添加了对以文本`Terms and conditions:`开头的特殊样式段落的支持。 要验证此功能，请在通用编辑器中更新Teaser块的文本内容以包含条款和条件。
+上述实施增加了对以 `Terms and conditions:` 文本开头的段落进行特殊样式设置的支持。为了验证此功能，请在通用编辑器中更新 Teaser 区块的文本内容，使其包含条款和条件。
 
-按照[创作块](./6-author-block.md)中的步骤操作，并编辑文本以包含&#x200B;**条款和条件**&#x200B;末尾段落：
+按照[创作区块](./6-author-block.md)中的步骤操作，并编辑文本以在最后添加一段&#x200B;**条款和条件**：
 
 ```
 WKND Adventures
@@ -307,17 +308,17 @@ Join us on one of our next adventures. Browse our list of curated experiences an
 Terms and conditions: By signing up, you agree to the rules for participation and booking.
 ```
 
-验证段落是否使用本地开发环境中的条款和条件样式呈现。 请记住，在将这些代码更改[推送到GitHub](#preview-in-universal-editor)上的分支（已配置为Universal Editor使用）之前，它们不会反映在Universal Editor中。
+确认该段落已在本地开发环境中按照条款和条件样式进行呈现。请记住，这些代码变更在[推送到通用编辑器使用的 GitHub 分支](#preview-in-universal-editor)后，才会反映在通用编辑器中。
 
 ## 开发预览
 
-添加CSS和JavaScript后，AEM CLI的本地开发环境会热重新加载更改，从而快速轻松地可视化代码如何影响块。 将鼠标悬停在CTA上并验证Teaser的图像是否放大了图像。
+在添加 CSS 和 JavaScript 的过程中，AEM CLI 的本地开发环境会实时热加载更改，方便快速直观地查看代码对区块的影响。将鼠标悬停在 CTA 上，确认 Teaser 图像是否有放大和缩小的效果。
 
-![使用CSS和JS的Teaser的本地开发预览](./assets/7b-block-js-css/local-development-preview.png)
+![使用 CSS 和 JS 进行 Teaser 的本地开发预览](./assets/7b-block-js-css/local-development-preview.png)
 
-## 嵌入代码
+## 对代码进行规范检查
 
-请确保[频繁lint](./3-local-development-environment.md#linting)您的代码更改以保持干净一致。 定期筛选有助于及早发现问题，从而缩短总体开发时间。 请记住，在解决所有链接问题之前，无法将开发工作合并到`main`分支！
+请确保[经常](./3-local-development-environment.md#linting)对代码更改进行规范检查，以保持代码的整洁和一致性。定期进行代码规范检查有助于及早发现问题，减少整体开发时间。请记住，只有在所有代码规范问题解决后，才能将开发工作合并到 `main` 分支！
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -327,7 +328,7 @@ $ npm run lint
 
 ## 在通用编辑器中预览
 
-要在AEM的通用编辑器中查看更改，请添加、提交这些更改，并将其推送到通用编辑器使用的Git存储库分支。 这样做可确保块实施不会中断创作体验。
+要在 AEM 的通用编辑器中查看更改，请将更改添加、提交并推送到通用编辑器使用的 Git 存储库分支。这样做可以确保区块的实施不会影响创作体验。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -337,6 +338,6 @@ $ git commit -m "CSS and JavaScript implementation for teaser block"
 $ git push origin teaser
 ```
 
-现在，添加`?ref=teaser`查询参数时，您可以在通用编辑器中预览更改。
+现在，在添加 `?ref=teaser` 查询参数时，即可在通用编辑器中预览这些更改。
 
-通用编辑器中的![Teaser](./assets/7b-block-js-css/universal-editor-preview.png)
+![通用编辑器中的 Teaser](./assets/7b-block-js-css/universal-editor-preview.png)

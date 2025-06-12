@@ -1,6 +1,6 @@
 ---
-title: 为Edge Delivery Services设置本地开发环境
-description: 如何为Edge Delivery Services设置本地开发环境。
+title: 为 Edge Delivery Services 设置本地开发环境
+description: 如何为 Edge Delivery Services 设置本地开发环境。
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,35 +13,35 @@ thumbnail: 3425717.jpeg
 duration: 169
 exl-id: 0f3e50f0-88d8-46be-be8b-0f547c3633a6
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '87'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # 设置本地开发环境
 
-如何为Edge Delivery Services设置本地开发环境以进行开发。
+如何为 Edge Delivery Services 设置本地开发环境。
 
->[!VIDEO](https://video.tv.adobe.com/v/3434741/?learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3425717/?learn=on)
 
 
 ## 视频中概述的步骤
 
-1. 安装AEM CLI
+1. 安装 AEM CLI
 
    ```
    $ sudo npm install -g @adobe/aem-cli
    ```
 
-1. 将目录更改为项目目录，该项目目录是从[AEM样板](https://github.com/adobe/aem-boilerplate)模板生成的Git存储库。
+1. 将目录更改为您的项目目录，该目录是由 [AEM 样板](https://github.com/adobe/aem-boilerplate)模板制作的 git 存储库。
 
    ```
    $ git clone git@github.com:my-org/my-project.git
    $ cd my-project
    ```
 
-1. 运行AEM CLI以启动本地AEM实例。
+1. 运行 AEM CLI 以启动本地 AEM 实例。
 
    ```
    $ pwd
@@ -60,4 +60,4 @@ ht-degree: 1%
    opening default browser: http://localhost:3000/
    ```
 
-1. 打开http://localhost:3000/您的Web浏览器，查看您的AEM网站。
+1. 打开 http://localhost:3000/ 您的 Web 浏览器，以查看您的 AEM 网站。

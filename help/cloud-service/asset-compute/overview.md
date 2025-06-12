@@ -1,6 +1,6 @@
 ---
-title: AEM as a Cloud Service的Asset Compute微服务可扩展性
-description: 本教程介绍如何创建简单的Asset Compute工作程序，该工作程序通过将原始资源裁切到圆圈来创建资源演绎版，并应用可配置的对比度和亮度。 虽然工作进程本身是基础性的，但本教程将使用该工作进程来探索创建、开发和部署自定义Asset Compute工作进程以用于AEM as a Cloud Service。
+title: AEM as a Cloud Service 的 Asset Compute 微服务可扩展性
+description: 本教程将逐步介绍如何创建一个简单的 Asset Compute 工作程序，该程序通过将原始资产裁剪成圆形，并应用可配置的对比度和亮度，来创建资产演绎版。虽然该工作程序本身较为基础，但本教程将使用它来探索如何创建、开发和部署自定义的 Asset Compute 工作程序，以便与 AEM as a Cloud Service 一起使用。
 feature: Asset Compute Microservices
 version: Experience Manager as a Cloud Service
 doc-type: Tutorial
@@ -13,149 +13,149 @@ last-substantial-update: 2022-08-15T00:00:00Z
 exl-id: 575b12f9-b57f-41f7-bd39-56d242de4747
 duration: 277
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '986'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Asset Compute微服务可扩展性
+# Asset Compute 微服务可扩展性
 
-AEM as Cloud Service的Asset Compute微服务支持开发和部署自定义工作程序，用于读取和操作存储在AEM中的资产的二进制数据，最常用的操作是创建自定义资产演绎版。
+AEM 云服务的 Asset Compute 微服务支持开发和部署自定义工作程序，用于读取和操作存储在 AEM 中的资产的二进制数据，最常用的操作是创建自定义资产演绎版。
 
-在AEM 6.x中，自定义AEM工作流进程用于读取、转换和写回资产演绎版，而在AEM as a Cloud Service Asset Compute中，工作进程可满足此需求。
+在 AEM 6.x 中，使用自定义 AEM 工作流流程来读取、转换和写回资产演绎版，而在 AEM as a Cloud Service 中，Asset Compute 工作程序可满足这一需求。
 
-## 您将要做什么
+## 您会做什么
 
->[!VIDEO](https://video.tv.adobe.com/v/3410019?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/40965?quality=12&learn=on)
 
-本教程介绍如何创建简单的Asset Compute工作程序，该工作程序通过将原始资源裁切到圆圈来创建资源演绎版，并应用可配置的对比度和亮度。 虽然工作进程本身是基础性的，但本教程将使用该工作进程来探索创建、开发和部署自定义Asset Compute工作进程以用于AEM as a Cloud Service。
+本教程将逐步介绍如何创建一个简单的 Asset Compute 工作程序，该程序通过将原始资产裁剪成圆形，并应用可配置的对比度和亮度，来创建资产演绎版。虽然该工作程序本身较为基础，但本教程将使用它来探索如何创建、开发和部署自定义的 Asset Compute 工作程序，以便与 AEM as a Cloud Service 一起使用。
 
 ### 目标 {#objective}
 
-1. 配置和设置必要的帐户和服务以构建和部署Asset Compute工作人员
-1. 创建和配置Asset Compute项目
-1. 开发可生成自定义演绎版的Asset Compute Worker
-1. 编写测试并了解如何调试自定义Asset Compute Worker
-1. 部署Asset Compute Worker，并通过处理配置文件集成其AEM as a Cloud Service Author服务
+1. 提供并设置必要的帐户和服务，以构建和部署 Asset Compute 工作程序
+1. 创建并配置 Asset Compute 项目
+1. 开发一个可生成自定义演绎版的 Asset Compute 工作程序
+1. 为自定义的 Asset Compute 工作程序创作测试，并学习如何对其进行调试
+1. 部署 Asset Compute 工作程序，并通过处理轮廓将其集成到 AEM 作为云服务作者服务
 
 ## 设置
 
-了解如何正确准备扩展Asset Compute工作程序，并了解必须配置和配置哪些服务和帐户，以及在本地安装哪些软件以进行开发。
+了解如何为扩展 Asset Compute 工作程序做好充分准备，并明确哪些服务和账户需要预先配置，以及为了开发需要在本地安装哪些软件。
 
 ### 帐户和服务配置{#accounts-and-services}
 
-要完成教程、 AEM as a Cloud Service开发环境或沙盒程序，以及对App Builder和Microsoft Azure Blob Storage的访问权限，以下帐户和服务需要配置和访问权限。
+为了完成本教程，需要配置以下账户和服务并获取访问权限：AEM as a Cloud Service 开发环境或沙盒程序、App Builder 访问权限以及 Microsoft Azure Blob 存储。
 
 + [提供帐户和服务](./set-up/accounts-and-services.md)
 
 ### 本地开发环境
 
-Asset Compute项目的本地开发需要特定的开发人员工具集，该工具集不同于传统的AEM开发，包括：Microsoft Visual Studio Code、Docker Desktop、Node.js和支持npm的模块。
+本地开发 Asset Compute 项目需要一套特定的开发人员工具集，这与传统的 AEM 开发有所不同，具体包括：Microsoft Visual Studio Code、Docker Desktop、Node.js 以及配套的 npm 模块。
 
 + [设置本地开发环境](./set-up/development-environment.md)
 
 ### App Builder
 
-Asset Compute项目是特别定义的App Builder项目，因此，需要访问Adobe Developer Console中的App Builder才能设置和部署这些项目。
+Asset Compute 项目是专门定义的 App Builder 项目，因此，需要访问 Adobe Developer Console 中的 App Builder 才能进行设置和部署。
 
-+ [设置App Builder](./set-up/app-builder.md)
++ [设置 App Builder](./set-up/app-builder.md)
 
 ## 开发
 
-了解如何创建和配置Asset Compute项目，然后开发可生成定制资源演绎版的自定义工作程序。
+学习如何创建和配置 Asset Compute 项目，然后开发一个自定义工作程序，用于生成定制的资产演绎版。
 
-### 创建新的Asset Compute项目
+### 创建新的 Asset Compute 项目
 
-Asset Compute项目包含一个或多个使用交互式Adobe I/O CLI生成的Asset Compute工作程序。 Asset Compute项目是专门的结构化App Builder项目，依次是Node.js项目。
+包含一个或多个 Asset Compute 工作程序的 Asset Compute 项目，是使用交互式 Adobe I/O CLI 生成的。Asset Compute 项目是经过特殊构建的 App Builder 项目，而这些项目又是 Node.js 项目。
 
-+ [创建新的Asset Compute项目](./develop/project.md)
++ [创建新的 Asset Compute 项目](./develop/project.md)
 
 ### 配置环境变量
 
-环境变量在`.env`文件中进行维护以用于本地开发，并用于提供本地开发所需的Adobe I/O凭据和云存储凭据。
+环境变量在 `.env` 文件中进行维护以用于本地开发，并用于提供本地开发所需的 Adobe I/O 凭据和云存储凭据。
 
 + [配置环境变量](./develop/environment-variables.md)
 
-### 配置manifest.yml
+### 配置 manifest.yml
 
-Asset Compute项目包含清单，这些清单定义了项目中包含的所有Asset Compute工作程序，以及这些工作程序在部署到Adobe I/O Runtime以执行时可用的资源。
+Asset Compute 项目包含清单，该清单定义了项目中包含的所有 Asset Compute 工作程序，以及在部署到 Adobe I/O Runtime 进行执行时它们可用的资源。
 
-+ [配置manifest.yml](./develop/manifest.md)
++ [配置 manifest.yml](./develop/manifest.md)
 
-### 开发工作人员
+### 开发一个工作程序
 
-开发Asset Compute工作程序是扩展Asset Compute微服务的核心，因为该工作程序包含生成或协调生成结果资源演绎版的自定义代码。
+开发 Asset Compute 工作程序是扩展 Asset Compute 微服务的核心，因为该工作程序包含生成或编排生成的结果资产演绎版的自定义代码。
 
-+ [开发Asset Compute员工](./develop/worker.md)
++ [开发 Asset Compute 工作程序](./develop/worker.md)
 
-### 使用Asset Compute开发工具
+### 使用 Asset Compute 开发工具
 
-Asset Compute Development Tool提供了一个本地Web工具，可用于部署、执行和预览工作人员生成的演绎版，并支持快速而迭代的Asset Compute工作人员开发。
+Asset Compute 开发工具提供了一个本地 Web 环境，用于部署、执行和预览工作程序生成的演绎版，支持快速且可迭代的 Asset Compute 工作程序开发。
 
-+ [使用Asset Compute开发工具](./develop/development-tool.md)
++ [使用 Asset Compute 开发工具](./develop/development-tool.md)
 
 ## 测试和调试
 
-了解如何测试自定义Asset Compute工作程序以确保其正常运行，以及调试Asset Compute工作程序以了解自定义代码的执行方式并对其进行故障排除。
+学习如何测试自定义的 Asset Compute 工作程序，以确保其正常运行，并调试 Asset Compute 工作程序，以了解自定义代码的执行方式并排除故障。
 
-### 测试工作人员
+### 测试工作程序
 
-Asset Compute提供了一个测试框架，用于为员工创建测试套件，从而轻松定义确保正常行为的测试。
+Asset Compute 提供了一个测试框架，可用于为工作程序创建测试套件，从而轻松定义可确保正确行为的测试。
 
-+ [测试工作人员](./test-debug/test.md)
++ [测试工作程序](./test-debug/test.md)
 
 ### 调试工作程序
 
-Asset Compute工作进程提供了从传统`console.log(..)`输出到与&#x200B;__VS代码__&#x200B;和&#x200B;__wskdebug__&#x200B;集成的各种级别的调试，从而允许开发人员在工作进程代码实时执行时逐步执行该代码。
+Asset Compute 工作程序提供从传统 `console.log(..)` 输出到与 __VS Code__ 和 __wskdebug__ 集成的各种调试级别，允许开发人员在实时执行工作程序代码时逐步调试。
 
 + [调试工作程序](./test-debug/debug.md)
 
 ## 部署
 
-了解如何将自定义Asset Compute工作程序与AEM as a Cloud Service集成，方法是先将自定义工作程序部署到Adobe I/O Runtime，然后通过AEM as a Cloud Service的处理配置文件从AEM Assets Author进行调用。
+了解如何将自定义的 Asset Compute 工作程序与 AEM as a Cloud Service 进行集成，具体步骤是首先将它们部署到 Adobe I/O Runtime，然后通过 AEM Assets 的处理轮廓从 AEM as a Cloud Service Author 进行调用。
 
-### 部署到Adobe I/O Runtime
+### 部署到 Adobe I/O Runtime
 
-Asset Compute工作人员必须部署到Adobe I/O Runtime才能与AEM as a Cloud Service一起使用。
+Asset Compute 工作程序必须部署到 Adobe I/O Runtime，才能与 AEM as a Cloud Service 一起使用。
 
-+ [使用处理配置文件](./deploy/runtime.md)
++ [使用处理轮廓](./deploy/runtime.md)
 
-### 通过AEM处理用户档案集成工作人员
+### 通过 AEM 处理轮廓集成工作程序
 
-部署到Adobe I/O Runtime后，可以通过[Asset Compute处理配置文件](../../assets/configuring/processing-profiles.md)在AEM as a Cloud Service中注册Assets工作程序。 处理用户档案依次应用于应用于其中资产的资产文件夹。
+一旦部署到 Adobe I/O Runtime，Asset Compute 工作程序即可通过[资产处理轮廓](../../assets/configuring/processing-profiles.md)在 AEM as a Cloud Service 中注册。处理轮廓又会应用于资产文件夹，进而应用于其中的资产。
 
-+ [与AEM处理用户档案集成](./deploy/processing-profiles.md)
++ [与 AEM 处理轮廓集成](./deploy/processing-profiles.md)
 
 ## 高级
 
-这些简短的教程基于前几章中的基础学习来处理更高级的用例。
+这些精简教程基于前几章所建立的基础知识，进一步探讨更高级的应用案例。
 
-+ [开发一个可以将元数据写回的Asset Compute元数据工作程序](./advanced/metadata.md)
++ [开发一个 Asset Compute 元数据工作程序](./advanced/metadata.md)，该工作程序可以将元数据写回
 
-## 基于Github的代码
+## Github 上的代码库
 
-该教程的代码库可在Github上获取，网址为：
+本教程的代码库可在 Github 上找到：
 
-+ [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @主分支
++ [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @ 主分支
 
-源代码不包含所需的`.env`或`config.json`文件。 必须使用您的[帐户和服务](#accounts-and-services)信息添加和配置这些帐户。
+源代码不包含所需的 `.env` 或 `config.json` 文件。这些必须使用您的[账户和服务](#accounts-and-services)信息进行添加和配置。
 
 ## 其他资源
 
-以下是各种Adobe资源，这些资源为开发Asset Compute工作程序提供了进一步的信息和有用的API和SDK。
+以下是各种 Adobe 资源，它们为开发 Asset Compute 工作程序提供了更多信息和有用的 API 和 SDK。
 
 ### 文档
 
-+ [Asset Compute服务文档](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=zh-Hans)
-+ [Asset Compute开发工具自述文件](https://github.com/adobe/asset-compute-devtool)
-+ [Asset Compute示例工作程序](https://github.com/adobe/asset-compute-example-workers)
++ [Asset Compute 服务文档](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
++ [Asset Compute 开发工具自述文件](https://github.com/adobe/asset-compute-devtool)
++ [Asset Compute 示例工作程序](https://github.com/adobe/asset-compute-example-workers)
 
-### API和SDK
+### API 和 SDK
 
 + [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk)
-   + [Asset Compute共享资源](https://github.com/adobe/asset-compute-commons)
+   + [Asset Compute Commons](https://github.com/adobe/asset-compute-commons)
    + [Asset Compute XMP](https://github.com/adobe/asset-compute-xmp#readme)
-+ [Adobe Cloud Blobstore包装器库](https://github.com/adobe/node-cloud-blobstore-wrapper)
-+ [Adobe节点提取重试库](https://github.com/adobe/node-fetch-retry)
-+ [Asset Compute示例工作程序](https://github.com/adobe/asset-compute-example-workers)
++ [Adobe Cloud Blobstore Wrapper 库](https://github.com/adobe/node-cloud-blobstore-wrapper)
++ [Adobe Node Fetch Retry 库](https://github.com/adobe/node-fetch-retry)
++ [Asset Compute 示例工作程序](https://github.com/adobe/asset-compute-example-workers)

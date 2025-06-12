@@ -1,6 +1,6 @@
 ---
-title: AEM Headless入门 — GraphQL
-description: 了解Experience Manager GraphQL API及其功能。
+title: AEM Headless 快速入门 – GraphQL
+description: 了解 Experience Manager GraphQL API 及其功能。
 feature: Content Fragments, GraphQL API, APIs
 topic: Headless, Content Management
 role: Developer
@@ -10,51 +10,50 @@ thumbnail: 328618.jpg
 last-substantial-update: 2022-07-20T00:00:00Z
 duration: 626
 source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '266'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # AEM Headless 快速入门 – GraphQL {#getting-started-with-aem-headless}
 
-AEM的内容片段GraphQL API
-支持无头CMS方案，其中外部客户端应用程序使用AEM中管理的内容呈现体验。
+AEM 的内容片段 GraphQL API 支持 Headless CMS 场景，使外部客户端应用程序能够使用在 AEM 中管理的内容来渲染用户体验。
 
-现代化的内容交付API是基于Javascript的前端应用程序效率和性能的关键。 使用REST API会带来挑战：
+现代化的内容传递 API 是提升基于 JavaScript 的前端应用程序效率与性能的关键。使用 REST API 会带来一些挑战：
 
-* 每次获取一个对象的请求数量很大
-* 通常“超量提供”内容，这意味着应用程序收到的内容多于其需要的内容
+* 一次仅获取一个对象会导致大量请求的产生
+* 经常出现“内容过载”问题，即应用程序接收到的内容超出其实际所需。
 
-为了克服这些挑战，GraphQL提供了基于查询的API，允许客户端仅在AEM中查询所需的内容，并使用单个API调用进行接收。
+为克服这些挑战，GraphQL 提供了一种基于查询的 API，使客户端能够仅请求 AEM 提供所需内容，并通过单次 API 调用接收响应。
 
->[!VIDEO](https://video.tv.adobe.com/v/3452889?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/328618?quality=12&learn=on)
 
-此视频概述了在AEM中实现的GraphQL API。 AEM中的GraphQL API主要用于将AEM内容片段的交付给下游应用程序，作为Headless部署的一部分。
+本视频概述了 AEM 中实施的 GraphQL API。AEM 中的 GraphQL API 主要用于将 AEM 内容片段传递到作为 Headless 部署一部分的下游应用程序。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_overview"
 >title="AEM Headless 快速入门 – GraphQL"
->abstract="了解如何使用 GraphQL 交付内容片段。"
->additional-url="https://video.tv.adobe.com/v/3452889?captions=chi_hans" text="AEM 中的 GraphQL 概述"
+>abstract="了解如何使用 GraphQL 投放内容片段。"
+>additional-url="https://video.tv.adobe.com/v/328618" text="AEM 中的 GraphQL 概述"
 
-## AEM Headless GraphQL视频系列
+## AEM Headless GraphQL 视频系列
 
-通过内容片段和AEM的GraphQL API及开发工具的深入演练，了解AEM的GraphQL功能。
+通过深入介绍内容片段以及 AEM 的 GraphQL API 和开发工具，了解 AEM 的 GraphQL 功能。
 
-* [AEM Headless GraphQL视频系列](./video-series/modeling-basics.md)
+* [AEM Headless GraphQL 视频系列](./video-series/modeling-basics.md)
 
-## AEM Headless GraphQL实践教程
+## AEM Headless GraphQL 实践教程
 
-通过通过AEM的GraphQL API构建一个使用内容片段的React应用程序，探索AEM的GraphQL功能。
+通过构建一个通过 AEM 的 GraphQL API 使用内容片段的 React 应用程序来探索 AEM 的 GraphQL 功能。
 
-* [AEM Headless GraphQL实践教程](./multi-step/overview.md)
+* [AEM Headless GraphQL 实践教程](./multi-step/overview.md)
 
-## AEM GraphQL与AEM内容服务
+## AEM GraphQL 与 AEM 内容服务
 
-|                                | AEM GRAPHQL API | AEM内容服务 |
+|                                | AEM GraphQL API | AEM 内容服务 |
 |--------------------------------|:-----------------|:---------------------|
-| 架构定义 | 结构化内容片段模型 | AEM组件 |
-| 内容 | 内容片段 | AEM组件 |
-| 内容发现 | 按GraphQL查询 | 按AEM页面 |
-| 投放格式 | GRAPHQL JSON | AEM组件导出器JSON |
+| 架构定义 | 结构化内容片段模型 | AEM 组件 |
+| 内容 | 内容片段 | AEM 组件 |
+| 内容探索 | 通过 GraphQL 查询 | 通过 AEM 页面 |
+| 传递格式 | GraphQL JSON | AEM ComponentExporter JSON |

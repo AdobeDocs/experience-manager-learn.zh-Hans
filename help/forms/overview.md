@@ -1,21 +1,21 @@
 ---
-title: AEM Forms教程和视频
-description: 浏览我们的AEM Forms视频和教程，以及可回答您的查询的资源和文档。
+title: AEM Forms 视频和教程
+description: 浏览我们的 AEM Forms 视频和教程，同时还提供资源和文档，以解答您的疑问。
 topic: Development
 role: Developer
 sub-product: Experience Manager Forms
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 duration: 36
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '203'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Forms教程和视频 {#overview}
+# AEM Forms 视频和教程 {#overview}
 
-Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用于创建、管理、发布和更新复杂的数字表单，同时与后端流程、业务规则和数据集成。 本用户指南包含了有关AEM Forms的众多特性和功能的视频和教程
+Adobe Experience Manager (AEM) 提供了一种易于使用的解决方案，可用于创建、管理、发布和更新复杂的数字表单，同时还与后端流程、业务规则和数据集成。本用户指南包含了有关 AEM Forms 的众多特性和功能的视频和教程。
 
 
 <div id="recs-overview-body-1"></div>
@@ -41,33 +41,33 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
     </a>
     </div>
     <p>
-    <em>自适应表单是动态且响应式的新一代表单。 您可以使用自适应表单提供个性化体验</em>
+    <em>自适应表单是动态且响应迅速的新一代表单。您可以使用自适应表单来提供个性化体验</em>
     <p>
   </td>
    <td>
     <a href="./ic-print-channel-tutorial/introduction.md">
-      <img alt="创建您的第一个Print Channel文档" src="./assets/correspondence-management1.png" />
+      <img alt="创建您的第一个打印渠道文档" src="./assets/correspondence-management1.png" />
     </a>
     <div>
       <a href="./ic-print-channel-tutorial/introduction.md">
-    <strong>创建您的第一个Print Channel文档</strong>
+    <strong>创建您的第一个打印渠道文档</strong>
     </a>
     </div>
     <p>
-    <em>交互式通信可以集中管理安全、个性化的交互式信函的创建、编排和交付，例如商务信函、文档、对帐单、福利通知、市场营销邮件、账单和欢迎资料包。</em>
+    <em>交互式通信可以集中管理安全、个性化的交互式信函的创建、编排和投放，例如商务信函、文档、声明、福利通知、市场营销邮件、账单和欢迎资料包。</em>
     <p>
   </td>
   <td>
     <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-      <img alt="在AEM Workflow中使用表单数据模型" src="./assets/fdmlogo.png" />
+      <img alt="在 AEM 工作流中使用表单数据模型" src="./assets/fdmlogo.png" />
     </a>
     <div>
       <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-    <strong>在AEM Workflow中使用表单数据模型</strong>
+    <strong>在 AEM 工作流中使用表单数据模型</strong>
     </a>
     </div>
     <p>
-    <em>作为AEM Workflow中的步骤调用表单数据模型的服务</em>
+    <em>调用表单数据模型的服务作为 AEM 工作流中的一个步骤</em>
     <p>
   </td>
 </tr>
@@ -78,11 +78,11 @@ Adobe Experience Manager (AEM)提供了一个易于使用的解决方案，用�
 
 ## 其他资源
 
-* [AEM Sites创作文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=zh-Hans)
-* [AEM Sites开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=zh-Hans)
-* [AEM Sites管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html?lang=zh-Hans)
-* [AEM Sites部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html?lang=zh-Hans)
-* [AEM as a Cloud Service教程](/help/cloud-service/overview.md)
-* [AEM Assets教程](/help/assets/overview.md)
-* [AEM Forms教程](/help/forms/overview.md)
-* [AEM Foundation教程](/help/foundation/overview.md)
+* [AEM Sites 创作文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites 开发文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites 管理文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites 部署文档](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [AEM as a Cloud Service 教程](/help/cloud-service/overview.md)
+* [AEM Assets 教程](/help/assets/overview.md)
+* [AEM Forms 教程](/help/forms/overview.md)
+* [AEM Foundation 教程](/help/foundation/overview.md)

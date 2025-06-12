@@ -1,35 +1,35 @@
 ---
 title: AEM 教程
-description: Adobe Experience Manager的视频和教程集合。
+description: Adobe Experience Manager 的视频和教程集合。
 exl-id: fe83a2dc-b43a-4e71-9b03-d31ec4f6a6ff
 doc-type: Catalog
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '110'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
-# Experience Manager教程 {#overview}
+# Experience Manager 教程 {#overview}
 
 {{edge-delivery-services}}
 
-Adobe Experience Manager (AEM)是领先的体验管理平台。 本用户指南包含视频和教程，可帮助您从AEM中获取最大价值。
+Adobe Experience Manager (AEM) 是一个领先的体验管理平台。本用户指南包含可帮助您最大程度发挥 AEM 价值的视频和教程。
 
-## AEM教程
+## AEM 教程
 
-+ [AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=zh-Hans)
-+ [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=zh-Hans)
-+ [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html?lang=zh-Hans)
-+ [AEM作为Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=zh-Hans)
-+ [AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/overview.html?lang=zh-Hans)
-+ AEM Guides的[Tutorials](https://experienceleague.adobe.com/docs/experience-manager-guides-learn/tutorials/overview.html?lang=zh-Hans)
++ [AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
++ [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html)
++ [AEM 表单](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html)
++ [AEM as Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
++ [AEM 基础](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/overview.html)
++ [AEM Guides 教程](https://experienceleague.adobe.com/docs/experience-manager-guides-learn/tutorials/overview.html)
 
-## AEM多步教程
+## AEM 多步教程
 
-+ [《AEM Sites 快速入门》 - WKND 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
-+ [AEM Headless快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)
-+ [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html?lang=zh-Hans)
-+ [AEM和Adobe Target快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=zh-Hans)
-+ [AEM 6.x Dispatcher缓存教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html?lang=zh-Hans)
-+ [AEM 6.x Dynamic Media Classic教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html?lang=zh-Hans)
++ [AEM Sites 快速入门 - WKND 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
++ [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
++ [AEM SPA Editor 和 React 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
++ [AEM 和 Adobe Target 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
++ [AEM 6.x Dispatcher Cache 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)
++ [AEM 6.x Dynamic Media Classic 教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html)

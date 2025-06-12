@@ -1,6 +1,6 @@
 ---
 title: 设置本地开发环境
-description: 为使用Edge Delivery Services交付并使用Universal Editor可编辑的站点设置本地开发环境。
+description: 为通过 Edge Delivery Services 投放且可通过通用编辑器编辑的网站设置本地开发环境。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,80 +11,80 @@ jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '994'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # 设置本地开发环境
 
-本地开发环境对于快速开发Edge Delivery Services交付的网站至关重要。 该环境使用本地开发的代码，同时从Edge Delivery Services获取内容，允许开发人员即时查看代码更改。 这样的设置支持快速、迭代的开发和测试。
+本地开发环境对于快速开发由 Edge Delivery Services 提供的网站至关重要。该环境在从 Edge Delivery Services 获取内容的同时，使用本地开发的代码，使开发人员能够即时查看代码更改。这样的设置支持快速、迭代的开发和测试。
 
-Edge Delivery Services网站项目的开发工具和流程可供Web开发人员熟悉，并提供快速高效的开发体验。
+Edge Delivery Services 网站项目的开发工具和流程旨在让 Web 开发人员感到熟悉，并提供快速高效的开发体验。
 
 ## 开发拓扑
 
-此视频概述了可使用通用编辑器编辑的Edge Delivery Services网站项目的开发拓扑。
+本视频概述了 Edge Delivery Services 网站项目的开发拓扑，该项目可通过通用编辑器进行编辑。
 
->[!VIDEO](https://video.tv.adobe.com/v/3443988/?learn=on&enablevpops&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
 
-+++查看其他开发拓扑详细信息
++++ 查看更多有关开发拓扑的详细信息
 
-- **GitHub存储库**：
-   - **目的**：托管网站的代码(CSS和JavaScript)。
-   - **结构**： **主分支**&#x200B;包含生产就绪代码，而其他分支包含工作代码。
-   - **功能**：任何分支的代码都可以针对&#x200B;**生产**&#x200B;或&#x200B;**预览**&#x200B;环境运行，而不会影响实时网站。
+- **GitHub 存储库**：
+   - **用途**：托管网站的代码（CSS 和 JavaScript）。
+   - **结构**：**主分支**&#x200B;包含已准备好用于生产的代码，其他分支则存放开发中的代码。
+   - **功能**：任何分支的代码都可以在&#x200B;**生产环境**&#x200B;或&#x200B;**预览环境**&#x200B;中运行，而不会影响实时网站。
 
-- **AEM创作服务**：
-   - **目的**：用作编辑和管理网站内容的规范内容存储库。
-   - **功能**：内容由&#x200B;**通用编辑器**&#x200B;读取和写入。 在&#x200B;**生产**&#x200B;或&#x200B;**预览**&#x200B;环境中已将编辑的内容发布到&#x200B;**Edge Delivery Services**。
+- **AEM Author 服务**：
+   - **用途**：作为规范的内容存储库，用于编辑和管理网站内容。
+   - **功能**：内容由&#x200B;**通用编辑器**&#x200B;进行读取和写入。编辑后的内容会被发布到&#x200B;**生产**&#x200B;或&#x200B;**预览**&#x200B;环境中的 **Edge Delivery Services**。
 
 - **通用编辑器**：
-   - **目的**：提供用于编辑网站内容的WYSIWYG界面。
-   - **功能**：读取和写入&#x200B;**AEM创作服务**。 可以配置为使用&#x200B;**GitHub存储库**&#x200B;中任何分支的代码来测试和验证更改。
+   - **目的**：提供用于编辑网站内容的所见即所得界面。
+   - **功能**：读取和写入 **AEM Author 服务**。可以配置为使用 **GitHub 存储库**&#x200B;中任何分支的代码来测试和验证更改。
 
 - **Edge Delivery Services**：
    - **生产环境**：
       - **目的**：向最终用户提供实时网站内容和代码。
-      - **功能**：使用&#x200B;**GitHub存储库**&#x200B;的&#x200B;**主分支**&#x200B;的代码，为从&#x200B;**AEM创作服务**&#x200B;发布的内容提供服务。
+      - **功能**：使用来自 **GitHub 存储库****主分支**&#x200B;的代码，提供从 **AEM Author 服务**&#x200B;发布的内容。
    - **预览环境**：
-      - **目的**：提供暂存环境，以便在部署之前测试和预览内容和代码。
-      - **功能**：使用&#x200B;**GitHub存储库**&#x200B;的任何分支的代码提供从&#x200B;**AEM Author服务**&#x200B;发布的内容，从而在不影响实时网站的情况下进行彻底测试。
+      - **目的**：提供一个用于在部署前测试和预览内容与代码的暂存环境。
+      - **功能**：使用来自 **GitHub 存储库**&#x200B;任意分支的代码，提供从 **AEM Author 服务**&#x200B;发布的内容，从而实现全面测试而不影响实时网站。
 
 - **本地开发人员环境**：
-   - **目的**：允许开发人员在本地编写和测试代码(CSS和JavaScript)。
+   - **目的**：允许开发人员在本地创作和测试代码（CSS 和 JavaScript）。
    - **结构**：
-      - **GitHub存储库**&#x200B;的本地克隆，用于基于分支的开发。
-      - 作为开发服务器的&#x200B;**AEM CLI**&#x200B;将本地代码更改应用于&#x200B;**预览环境**&#x200B;以进行热重新加载体验。
-   - **工作流**：开发人员在本地编写代码，将更改提交到工作分支，将分支推送到GitHub，在&#x200B;**通用编辑器**（使用指定的分支）中验证它，并在准备好进行生产部署时将其合并到&#x200B;**主分支**。
+      - 用于基于分支开发的 **GitHub 存储库**&#x200B;本地克隆副本。
+      - **AEM CLI** 作为开发服务器使用，将本地代码变更应用到&#x200B;**预览环境**，以实现热加载体验。
+   - **工作流程**：开发人员在本地创作代码，将更改提交到工作分支，将分支推送到 GitHub，在&#x200B;**通用编辑器**&#x200B;中对其进行验证（使用指定的分支），并在准备好进行生产部署时将其合并到&#x200B;**主分支**&#x200B;中。
 
 +++
 
 ## 先决条件
 
-在开始开发之前，请在您的计算机上安装以下内容：
+在开始开发之前，请在您的机器上安装以下内容：
 
 1. [Git](https://git-scm.com/)
-1. [Node.js和npm](https://nodejs.org)
+1. [Node.js 和 npm](https://nodejs.org)
 1. [Microsoft Visual Studio Code](https://code.visualstudio.com/)（或类似的代码编辑器）
 
-## 克隆GitHub存储库
+## 克隆 GitHub 存储库
 
-将在新代码项目第[&#128279;](./1-new-code-project.md)章(包含AEM Edge Delivery Services代码项目)中创建的GitHub存储库克隆到您的本地开发环境。
+将[新建代码项目章节中创建的包含 AEM Edge Delivery Services 代码项目的 GitHub 存储库](./1-new-code-project.md)克隆到本地开发环境中。
 
-![GitHub存储库克隆](./assets/3-local-development-environment/github-clone.png)
+![GitHub 存储库克隆](./assets/3-local-development-environment/github-clone.png)
 
 ```bash
 $ cd ~/Code
 $ git clone git@github.com:<YOUR_ORG>/aem-wknd-eds-ue.git
 ```
 
-在`Code`目录中创建一个新的`aem-wknd-eds-ue`文件夹，该文件夹用作项目的根目录。 虽然项目可以克隆到计算机上的任何位置，但本教程使用`~/Code`作为根目录。
+在 `Code` 目录中会创建一个新的 `aem-wknd-eds-ue` 文件夹，该文件夹会作为项目的根目录。虽然项目可以克隆到计算机上的任何位置，但本教程使用 `~/Code` 作为根目录。
 
 ## 安装项目依赖项
 
-导航到项目文件夹并使用`npm install`安装所需的依赖项。 尽管Edge Delivery Services项目不使用传统的Node.js构建系统（如Webpack或Vite），但它们仍需要多个依赖关系才能进行本地开发。
+导航到项目文件夹并使用 `npm install` 安装所需的依赖项。虽然 Edge Delivery Services 项目不使用 Webpack 或 Vite 等传统 Node.js 构建系统，但它们仍需要几个依赖项以进行本地开发。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -92,11 +92,11 @@ $ git clone git@github.com:<YOUR_ORG>/aem-wknd-eds-ue.git
 $ npm install
 ```
 
-## 安装AEM CLI
+## 安装 AEM CLI
 
-AEM CLI是一种Node.js命令行工具，旨在简化基于Edge Delivery Services的AEM网站的开发，提供本地开发服务器，用于快速开发和测试您的网站。
+AEM CLI 是一个 Node.js 命令行工具，其旨在简化基于 Edge Delivery Services 的 AEM 网站的开发过程，同时提供本地开发服务器，以便快速开发和测试您的网站。
 
-要安装AEM CLI，请运行：
+要安装 AEM CLI，请运行：
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -104,11 +104,11 @@ AEM CLI是一种Node.js命令行工具，旨在简化基于Edge Delivery Service
 $ npm install @adobe/aem-cli
 ```
 
-也可以使用`npm install --global @adobe/aem-cli`全局安装AEM CLI。
+AEM CLI 还可以使用 `npm install --global @adobe/aem-cli` 进行全局安装。
 
-## 启动本地AEM开发服务器
+## 启动本地 AEM 开发服务器
 
-`aem up`命令启动本地开发服务器，并自动打开一个浏览器窗口以显示服务器的URL。 此服务器充当Edge Delivery Services环境的反向代理，在使用本地代码库进行开发时从中提供内容。
+`aem up` 命令可启动本地开发服务器，并自动打开一个浏览器窗口，以显示服务器的 URL。该服务器充当 Edge Delivery Services 环境的反向代理，可在使用本地代码库进行开发的同时，从该环境提供内容。
 
 ```bash
 $ cd ~/Code/aem-wknd-eds-ue 
@@ -125,23 +125,23 @@ info: Local AEM dev server up and running: http://localhost:3000/
 info: Enabled reverse proxy to https://main--aem-wknd-eds-ue--<YOUR_ORG>.aem.page
 ```
 
-AEM CLI在浏览器中打开网站： `http://localhost:3000/`。 项目中的更改将自动在Web浏览器中热重新加载，而内容更改[需要发布到预览环境](./6-author-block.md)并刷新Web浏览器。
+AEM CLI 会在您的浏览器中打开网址 `http://localhost:3000/`。项目中的更改会自动在 Web 浏览器中热加载，而内容更改则[需要发布到预览环境](./6-author-block.md)并刷新 Web 浏览器。
 
-如果网站打开时页面为404，则很可能是[新代码项目](./1-new-code-project.md)中更新的[fstab.yaml或paths.json](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project)配置不正确，或者更改尚未提交到`main`分支。
+如果网站打开时显示 404 页面，很可能是[新代码项目](./1-new-code-project.md)中更新的 [fstab.yaml 或 paths.json](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) 配置有误，或者更改尚未提交到 `main` 分支。
 
-## 构建JSON片段
+## 构建 JSON 片段
 
-使用[AEM Boilerplate XWalk模板](https://github.com/adobe-rnd/aem-boilerplate-xwalk)创建的Edge Delivery Services项目依赖于可在通用编辑器中启用块创作的JSON配置。
+使用 [AEM Boilerplate XWalk 模板](https://github.com/adobe-rnd/aem-boilerplate-xwalk)创建的 Edge Delivery Services 项目依赖于 JSON 配置，这些配置支持在通用编辑器中进行区块级创作。
 
-- **JSON片段**：与其关联的块一起存储，并定义块模型、定义和过滤器。
-   - **模型片段**：存储在`/blocks/example/_example.json`。
-   - **定义片段**：存储在`/blocks/example/_example.json`中。
-   - **筛选片段**：存储在`/blocks/example/_example.json`。
+- **JSON 片段**：与相关区块一起存储，并定义区块模型、定义和过滤器。
+   - **模型片段**：存储在 `/blocks/example/_example.json`。
+   - **定义片段**：存储在 `/blocks/example/_example.json`。
+   - **过滤器片段**：存储在 `/blocks/example/_example.json`。
 
 
-[AEM样板XWalk项目模板](https://github.com/adobe-rnd/aem-boilerplate-xwalk)包含一个[Husky](https://typicode.github.io/husky/)预提交挂接，该挂接可检测对JSON片段的更改，并在`git commit`时将更改编译到相应的`component-*.json`文件中。
+[AEM Boilerplate XWalk 项目模板](https://github.com/adobe-rnd/aem-boilerplate-xwalk)包含一个 [Husky](https://typicode.github.io/husky/) 预提交钩子，该钩子可检测 JSON 片段的更改，并在 `git commit` 时将它们编译到相应的 `component-*.json` 文件中。
 
-虽然可以通过`npm run`手动运行以下NPM脚本来构建JSON文件，但这通常不是必需的，因为Husky预提交挂接会自动处理它。
+虽然可以通过 `npm run` 手动运行以下 NPM 脚本以构建 JSON 文件，但通常无需这样做，因为 husky 的预提交钩子会自动处理。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -149,22 +149,22 @@ AEM CLI在浏览器中打开网站： `http://localhost:3000/`。 项目中的�
 npm run build:json
 ```
 
-| NPM脚本 | 描述 |
+| NPM 脚本 | 描述 |
 |--------------------|-----------------------------------------------------------------------------|
-| `build:json` | 从片段生成所有JSON文件，并将它们添加到相应的`component-*.json`文件。 |
-| `build:json:models` | 生成块JSON片段并将它们编译到`/component-models.json`中。 |
-| `build:json:definitions` | 生成页面JSON片段并将它们编译到`/component-definitions.json`中。 |
-| `build:json:filters` | 生成页面JSON片段并将它们编译到`/component-filters.json`中。 |
+| `build:json` | 从片段构建所有 JSON 文件并将它们添加到相应的 `component-*.json` 文件。 |
+| `build:json:models` | 构建区块 JSON 片段并将其编译成 `/component-models.json`。 |
+| `build:json:definitions` | 构建页面 JSON 片段并将其编译成 `/component-definitions.json`。 |
+| `build:json:filters` | 构建页面 JSON 片段并将其编译成 `/component-filters.json`。 |
 
 >[!TIP]
 >
-> 在对片段文件进行任何更改后运行`npm run build:json`以重新生成主JSON文件。
+> 在对片段文件进行任何更改后，运行 `npm run build:json` 以重新生成主 JSON 文件。
 
-## 林亭
+## 代码检查
 
-Edge Delivery Services Linting可确保代码质量和一致性，在将更改合并到`main`分支之前必须具备此条件。
+代码检查可确保代码质量和一致性，这是在将更改合并到 `main` 分支之前，Edge Delivery Services 项目必需进行的步骤。
 
-NPM脚本可以通过`npm run`运行，例如：
+可以通过 `npm run` 运行 NPM 脚本，例如：
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -172,15 +172,15 @@ NPM脚本可以通过`npm run`运行，例如：
 $ npm run lint
 ```
 
-| NPM脚本 | 描述 |
+| NPM 脚本 | 描述 |
 |------------------|--------------------------------------------------|
-| `lint:js` | 运行JavaScript Linting检查。 |
-| `lint:css` | 运行CSS筛选检查。 |
-| `lint` | 运行JavaScript和CSS Linting检查。 |
+| `lint:js` | 运行 JavaScript 代码检查。 |
+| `lint:css` | 运行 CSS 代码检查。 |
+| `lint` | 运行 JavaScript 和 CSS 代码检查。 |
 
-### 自动修复Linting问题
+### 自动修复代码检查问题
 
-通过将以下`scripts`添加到项目的`package.json`，您可以自动解决Linting问题，并且可以通过`npm run`运行：
+您可以通过向项目的 `package.json` 添加以下 `scripts`，自动修复代码检查问题，并可通过 `npm run` 运行：
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -188,21 +188,21 @@ $ npm run lint
 $ npm run lint:fix
 ```
 
-这些脚本未预配置AEM样板XWalk模板，但可添加到`package.json`文件：
+这些脚本未预装在 AEM Boilerplate XWalk 模板中，但可以添加到 `package.json` 文件中：
 
 >[!BEGINTABS]
 
->[!TAB 其他脚本]
+>[!TAB 附加脚本]
 
-| NPM脚本 | 命令 | 描述 |
+| NPM 脚本 | 命令 | 描述 |
 |------------------|------------------------------------------------|-------------------------------------------------------|
-| `lint:js:fix` | `npm run lint:js -- --fix` | 自动修复JavaScript链接问题。 |
-| `lint:css:fix` | `stylelint blocks/**/*.css styles/*.css -- --fix` | 自动修复CSS Linting问题。 |
-| `lint:fix` | `npm run lint:js:fix && npm run lint:css:fix` | 运行JS和CSS修复脚本以进行快速清理。 |
+| `lint:js:fix` | `npm run lint:js -- --fix` | 自动修复 JavaScript 代码检查问题。 |
+| `lint:css:fix` | `stylelint blocks/**/*.css styles/*.css -- --fix` | 自动修复 CSS 代码检查问题。 |
+| `lint:fix` | `npm run lint:js:fix && npm run lint:css:fix` | 同时运行 JS 和 CSS 修复脚本，实现快速清理。 |
 
->[!TAB package.json示例]
+>[!TAB package.json 示例]
 
-可以将以下脚本条目添加到`package.json` `scripts`数组。
+以下脚本条目可以添加到 `package.json` 的 `scripts` 数组中。
 
 ```json
 {

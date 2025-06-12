@@ -1,6 +1,6 @@
 ---
 title: 页眉和页脚
-description: 了解如何在Edge Delivery Services和通用编辑器中开发页眉和页脚。
+description: 了解如何在 Edge Delivery Services 和通用编辑器中开发页眉和页脚。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,9 +11,9 @@ jira: KT-17470
 duration: 300
 exl-id: 70ed4362-d4f1-4223-8528-314b2bf06c7c
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1207'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -21,19 +21,19 @@ ht-degree: 0%
 
 ![页眉和页脚](./assets/header-and-footer/hero.png){align="center"}
 
-页眉和页脚在Edge Delivery Services (EDS)中发挥独特的作用，因为它们直接绑定到HTML `<header>`和`<footer>`元素。 与常规页面内容不同，它们分开管理，并且无需清除整个页面缓存即可独立更新。 虽然其实现在`blocks/header`和`blocks/footer`下的代码项目中作为块，但作者可以通过可包含任意块组合的专用AEM页面编辑其内容。
+在 Edge Delivery Services (EDS) 中，页眉和页脚具有独特的作用，因为它们直接绑定到 HTML 的 `<header>` 和 `<footer>` 元素上。与常规页面内容不同，它们是单独管理的，可以独立更新，无需清除整个页面缓存。虽然它们的实施以代码块的形式存在于代码项目中，位于 `blocks/header` 和 `blocks/footer` 下，但作者可以通过可包含任何代码块组合的专用 AEM 页面来编辑其内容。
 
-## 标题块
+## 页眉块
 
-![标头块](./assets/header-and-footer/header-local-development-preview.png){align="center"}
+![页眉块](./assets/header-and-footer/header-local-development-preview.png){align="center"}
 
-标头是绑定到Edge Delivery Services HTML `<header>`元素的特殊块。
-`<header>`元素交付为空，并通过XHR (AJAX)填充到单独的AEM页面中。
-这允许标头独立于页面内容进行管理，并且无需完全缓存清除所有页面即可更新。
+页眉是一个特殊的块，它与 Edge Delivery Services HTML `<header>` 元素绑定。
+`<header>` 元素以空状态传递，并通过 XHR (AJAX) 填充到单独的 AEM 页面。
+这使得页眉可以独立于页面内容进行管理，并且无需清除所有页面的完整缓存即可进行更新。
 
-标头块负责请求包含标头内容的AEM页面片段，并在`<header>`元素中呈现该片段。
+页眉块负责请求包含页眉内容的 AEM 页面片段，并将其呈现在 `<header>` 元素中。
 
-[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```javascript
 import { getMetadata } from '../../scripts/aem.js';
@@ -58,44 +58,45 @@ export default async function decorate(block) {
 }
 ```
 
-`loadFragment()`函数向`${navPath}.plain.html`发出XHR (AJAX)请求，该请求返回页面`<main>`标记中存在的AEM页面HTML的EDS HTML演绎版，使用可能包含的任何块处理其内容，并返回更新的DOM树。
+`loadFragment()` 函数向 `${navPath}.plain.html` 发起一个 XHR (AJAX) 请求，后者返回存在于页面 `<main>` 标记中的 AEM 页面 HTML 的 EDS HTML 演绎版，并会处理其可能包含的任何块的内容，然后返回更新后的 DOM 树。
 
-## 创作标题页面
+## 创作页眉页面
 
-在开发标题块之前，首先在通用编辑器中创作其内容，以便针对其进行开发。
+在开发页眉块之前，先在通用编辑器中创作其内容，以便有内容可供开发。
 
-标题内容位于名为`nav`的专用AEM页面中。
+页眉内容位于名为 `nav` 的专用 AEM 页面中。
 
-![默认页眉页](./assets/header-and-footer/header-page.png){align="center"}
+![默认页眉页面](./assets/header-and-footer/header-page.png){align="center"}
 
-要创作标题，请执行以下操作：
+要创作页眉：
 
-1. 在通用编辑器中打开`nav`页面
-1. 将默认按钮替换为包含WKND徽标的&#x200B;**图像块**
+1. 在通用编辑器中打开 `nav` 页面
+1. 将默认按钮替换为包含 WKND 标志的&#x200B;**图像块**
 1. 通过以下方式更新&#x200B;**文本块**&#x200B;中的导航菜单：
-   - 添加所需的导航链接
-   - 根据需要创建子导航项目
-   - 暂时设置指向主页(`/`)的所有链接
+   - 添加您想要的导航链接
+   - 在需要的地方创建子导航项
+   - 暂时将所有链接都设置为指向主页 (`/`)
 
-通用编辑器中的![作者标题块](./assets/header-and-footer/header-author.png){align="center"}
+![在通用编辑器中创作页眉块](./assets/header-and-footer/header-author.png){align="center"}
 
-### 发布以预览
+### 发布到预览环境
 
-更新页眉页后，[将页面发布到预览](../6-author-block.md)。
+在页眉页面更新后，[将该页面发布到预览环境](../6-author-block.md)。
 
-由于页眉内容位于其自身的页面（`nav`页面）上，因此您必须专门发布该页面，页眉更改才能生效。 发布使用标头的其他页面将不会更新Edge Delivery Services上的标头内容。
+由于页眉内容存在于其独立的页面（即 `nav` 页面）上，因此必须单独发布该页面，页眉的更改才会生效。发布使用该页眉的其他页面不会更新 Edge Delivery Services 上的页眉内容。
 
-## 阻止HTML
+## 区块 HTML
 
-要开始块开发，请先查看Edge Delivery Services预览所公开的DOM结构。 DOM通过JavaScript进行了增强并使用CSS进行了样式设置，为构建和自定义块奠定了基础。
+要开始开发区块，请首先查看 Edge Delivery Services 预览版呈现的 DOM 结构。DOM 通过 JavaScript 进行增强，并使用 CSS 进行样式设计，为构建和定制区块提供了基础。
 
-由于标头是作为片段加载的，因此我们需要检查XHR请求返回的HTML，该标头在插入到DOM中并通过`loadFragment()`进行修饰之后。 可以通过检查浏览器开发人员工具中的DOM来完成此操作。
+由于页眉是以片段形式加载的，因此我们需要在将其注入 DOM 并通过 `loadFragment()` 进行装饰后，检查 XHR 请求返回的 HTML。这可以通过在浏览器开发者工具中检查 DOM 来实现。
 
 
 >[!BEGINTABS]
->[!TAB 要修饰的 DOM]
 
-以下是标头页面在使用提供的`header.js`加载并插入到DOM中之后的HTML：
+>[!TAB 要装饰的 DOM]
+
+以下是在使用提供的 `header.js` 加载并注入 DOM 后，页眉页面的 HTML 代码：
 
 ```html
 <header class="header-wrapper">
@@ -138,22 +139,22 @@ export default async function decorate(block) {
 </header>
 ```
 
->[!TAB 如何查找DOM]
+>[!TAB 如何找到 DOM]
 
-在Web浏览器的开发人员工具中查找并检查页面的`<header>`元素。
+在 Web 浏览器的开发者工具中查找并检查页面的 `<header>` 元素。
 
-![标头DOM](./assets/header-and-footer/header-dom.png){align="center"}
+![页眉 DOM](./assets/header-and-footer/header-dom.png){align="center"}
 
 >[!ENDTABS]
 
 
-## 阻止JavaScript
+## 区块 JavaScript
 
-[AEM样板XWalk项目模板](https://github.com/adobe-rnd/aem-boilerplate-xwalk)中的`/blocks/header/header.js`文件提供了JavaScript以进行导航，包括下拉菜单和响应式移动设备视图。
+[AEM Boilerplate XWalk 项目模板](https://github.com/adobe-rnd/aem-boilerplate-xwalk)中的 `/blocks/header/header.js` 文件提供了用于导航的 JavaScript 脚本，功能包括下拉菜单和响应式移动视图。
 
-虽然`header.js`脚本经常经过大量自定义以匹配站点的设计，但必须保留`decorate()`中的第一行，这些行用于检索和处理标题页面片段。
+尽管 `header.js` 脚本通常会根据网站设计进行大量定制，但务必要保留 `decorate()` 中的前几行代码，它们负责获取并处理页眉页面片段。
 
-[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```javascript
 export default async function decorate(block) {
@@ -164,25 +165,25 @@ export default async function decorate(block) {
   ...
 ```
 
-可以修改剩余的代码以满足项目的需求。
+剩余的代码可以根据项目需求进行修改。
 
-根据标题要求，可以调整或删除样板代码。 在本教程中，我们将使用提供的代码并通过在第一个创作的图像周围添加超链接，并将其链接到网站的主页来增强代码。
+根据页眉的需求，可以对样板代码进行调整或移除。在本教程中，我们将使用提供的代码，并通过在首个创作的图像周围添加超链接，将其链接到网站主页，从而对其进行增强。
 
-模板的代码处理页眉页面片段，假定它按以下顺序包含三个部分：
+模板中的代码会处理页眉页面片段，前提是假设该片段由以下顺序排列的三个部分组成：
 
-1. **品牌部分** — 包含徽标，且样式为`.nav-brand`类。
-2. **节节** — 定义网站的主菜单并设置了`.nav-sections`的样式。
-3. **工具部分** — 包括搜索、登录/注销和配置文件等元素，样式为`.nav-tools`。
+1. **品牌部分** – 包含标志，并使用 `.nav-brand` 类进行样式设置。
+2. **导航部分** – 定义网站的主菜单，并使用 `.nav-sections` 类进行样式设置。
+3. **工具部分** – 包含搜索、登录/登出、轮廓等元素，并使用 `.nav-tools` 类进行样式设置。
 
-为了将徽标图像超链接至主页，我们更新了块JavaScript，如下所示：
+要将徽标图像超链接到主页，我们按如下方式更新该块的 JavaScript 代码：
 
 >[!BEGINTABS]
 
->[!TAB 已更新JavaScript]
+>[!TAB 更新后的 JavaScript]
 
-下面显示了将徽标图像与指向网站主页(`/`)的链接包装在一起的更新代码：
+下面展示了将徽标图像用链接包裹，指向网站主页 (`/`) 的更新代码：
 
-[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```javascript
 export default async function decorate(block) {
@@ -213,11 +214,11 @@ export default async function decorate(block) {
 }
 ```
 
->[!TAB 原始JavaScript]
+>[!TAB 原始 JavaScript]
 
-以下是从模板生成的原始`header.js`：
+以下是模板生成的原始 `header.js`：
 
-[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```javascript
 export default async function decorate(block) {
@@ -249,15 +250,15 @@ export default async function decorate(block) {
 >[!ENDTABS]
 
 
-## 阻止CSS
+## 区块 CSS
 
-更新`/blocks/header/header.css`以根据WKND的品牌设置其样式。
+更新 `/blocks/header/header.css`，使其符合 WKND 品牌的风格。
 
-我们将在`header.css`的底部添加自定义CSS，以使教程更改更易于查看和理解。 虽然可以将这些样式直接集成到模板的CSS规则中，但将它们保持独立有助于说明修改的内容。
+我们将在 `header.css` 的底部添加自定义 CSS，以便更直观地展示和理解本教程中的更改。虽然这些样式可以直接整合到模板的 CSS 规则中，但将它们单独保留有助于清晰展示所做的修改内容。
 
-由于我们是在原始集之后添加新规则，因此我们将使用`header .header.block nav` CSS选择器来封装它们，以确保它们优先于模板规则。
+由于我们是在原有规则之后添加新的规则，因此会用 `header .header.block nav` CSS 选择器包裹它们，以确保新规则优先于模板规则生效。
 
-[!BADGE /blocks/header/header.css]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/header/header.css]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```css
 /* /blocks/header/header.css */
@@ -321,13 +322,13 @@ header .header.block nav {
 
 ## 开发预览
 
-在开发CSS和JavaScript时，AEM CLI的本地开发环境会热重新加载更改，从而允许快速轻松地可视化代码如何影响块。 将鼠标悬停在CTA上并验证Teaser的图像是否放大了图像。
+在开发 CSS 和 JavaScript 的过程中，AEM CLI 的本地开发环境会实时热加载更改，方便快速直观地查看代码对区块的影响。将鼠标悬停在 CTA 上，确认 Teaser 图像是否有放大和缩小的效果。
 
-![使用CSS和JS的标头的本地开发预览](./assets/header-and-footer/header-local-development-preview.png){align="center"}
+![使用 CSS 和 JS 进行页眉的本地开发预览](./assets/header-and-footer/header-local-development-preview.png){align="center"}
 
-## 嵌入代码
+## 对代码进行规范检查
 
-请确保[频繁lint](../3-local-development-environment.md#linting)您的代码更改以保持干净一致。 定期筛选有助于及早发现问题，从而缩短总体开发时间。 请记住，在解决所有链接问题之前，无法将开发工作合并到`main`分支！
+请确保[经常](../3-local-development-environment.md#linting)对代码更改进行规范检查，以保持代码的整洁和一致性。定期进行代码规范检查有助于及早发现问题，减少整体开发时间。请记住，只有在所有代码规范问题解决后，才能将开发工作合并到 `main` 分支！
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -337,7 +338,7 @@ $ npm run lint
 
 ## 在通用编辑器中预览
 
-要在AEM的通用编辑器中查看更改，请添加、提交这些更改，并将其推送到通用编辑器使用的Git存储库分支。 这样做可确保块实施不会中断创作体验。
+要在 AEM 的通用编辑器中查看更改，请将更改添加、提交并推送到通用编辑器使用的 Git 存储库分支。这样做可以确保区块的实施不会影响创作体验。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -348,43 +349,43 @@ $ git commit -m "CSS and JavaScript implementation for Header block"
 $ git push origin header-and-footer
 ```
 
-现在，使用`?ref=header-and-footer`查询参数时，更改在通用编辑器中可见。
+现在，在使用 `?ref=header-and-footer` 查询参数时，通用编辑器中即可看到这些更改。
 
-通用编辑器中的![标头](./assets/header-and-footer/header-universal-editor-preview.png){align="center"}
+![通用编辑器中的页眉](./assets/header-and-footer/header-universal-editor-preview.png){align="center"}
 
 ## 页脚
 
-与页眉一样，页脚内容是在专用的AEM页面上创作的，在本例中是页脚页面(`footer`)。 页脚遵循与片段加载相同的模式，并使用CSS和JavaScript进行修饰。
+与页眉类似，页脚内容也是在专用的 AEM 页面上创作的——在本例中为页脚页面 (`footer`)。页脚遵循相同的模式，即以片段形式加载，并通过 CSS 和 JavaScript 进行装饰。
 
 >[!BEGINTABS]
 
 >[!TAB 页脚]
 
-页脚应采用三列布局实施，其中包含：
+页脚应采用三栏布局，其中包含以下内容：
 
-- 包含促销活动（图像和文本）的左列
-- 带有导航链接的中间列
-- 包含社交媒体链接的右列
-- 位于底部的横跨所有三列的行，版权所有
+- 左栏包含一个促销内容（图像和文本）
+- 中间栏包含导航链接
+- 右栏包含社交媒体链接
+- 底部有一行跨越三栏，其中显示版权信息
 
 ![页脚预览](./assets/header-and-footer/footer-preview.png){align="center"}
 
 >[!TAB 页脚内容]
 
-使用“页脚”页中的列块可创建三列效果。
+在页脚页面中使用“列”区块来实现三栏布局效果。
 
-| 列1 | 列2 | 列3 |
+| 列 1 | 列 2 | 列 3 |
 | ---------|----------------|---------------|
 | 图像 | 标题 3 | 标题 3 |
 | 文本 | 链接列表 | 链接列表 |
 
-![标头DOM](./assets/header-and-footer/footer-author.png){align="center"}
+![页眉 DOM](./assets/header-and-footer/footer-author.png){align="center"}
 
 >[!TAB 页脚代码]
 
-下面的CSS使用三列布局、一致的间距和排版规则来设置页脚块的样式。 页脚实施仅使用模板提供的JavaScript。
+以下 CSS 为页脚区块设置了三栏布局、一致的间距和排版规则。页脚的实施仅使用了模板提供的 JavaScript。
 
-[!BADGE /blocks/footer/footer.css]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/footer/footer.css]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```css
 /* /blocks/footer/footer.css */
@@ -461,13 +462,13 @@ footer {
 
 ## 恭喜！
 
-您现在已了解如何在Edge Delivery Services和通用编辑器中管理和开发页眉和页脚。 您已了解它们的具体情况：
+您现在已经了解了如何在 Edge Delivery Services 和通用编辑器中管理和开发页眉与页脚。您已经学会了它们是如何：
 
-- 在独立于主内容的专用AEM页面上创作
-- 以片段形式异步加载以启用独立更新
-- 用JavaScript和CSS修饰以创建响应式导航体验
-- 与通用编辑器无缝集成，便于内容管理
+- 在独立于主内容的专用 AEM 页面上创作
+- 以片段形式异步加载，以实现独立更新
+- 通过 JavaScript 和 CSS 进行装饰，以实现响应式导航体验
+- 与通用编辑器无缝集成，以便于内容管理
 
-此模式为实施站点范围的导航组件提供了一种灵活的可维护方法。
+这种模式为实施全站导航组件提供了灵活且易维护的方案。
 
-有关更多最佳实践和高级技术，请查看[通用编辑器文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。
+如需了解更多最佳实践和高级技巧，请查阅[通用编辑器文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。

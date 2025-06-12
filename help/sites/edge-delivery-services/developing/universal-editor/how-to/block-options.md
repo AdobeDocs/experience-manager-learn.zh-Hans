@@ -1,6 +1,6 @@
 ---
-title: 块选项
-description: 了解如何使用多个显示选项构建块。
+title: 区块选项
+description: 了解如何构建具有多个显示选项的区块。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,53 +11,53 @@ jira: KT-17296
 duration: 700
 exl-id: f41dff22-bd47-4ea0-98cc-f5ca30b22c4b
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1961'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 使用选项开发块
+# 开发带有选项的区块
 
-本教程以Edge Delivery Services和通用编辑器教程为基础，指导您完成将块选项添加到块的过程。 通过定义块选项，您可以自定义块的外观和功能，从而启用不同的变体来满足各种内容需求。 这允许您在网站的设计系统中实现更大的灵活性和可重用性。
+本教程基于 Edge Delivery Services 和通用编辑器教程，引导您完成向区块添加区块选项的过程。通过定义区块选项，您可以自定义区块的外观和功能，从而支持不同的变体，以满足各种内容需求。这使您网站的设计系统更具灵活性和可重用性。
 
-![并排阻止选项](./assets/block-options/main.png){align="center"}
+![并排区块选项](./assets/block-options/main.png){align="center"}
 
-在本教程中，您将向Teaser块添加块选项，以允许作者在两个显示选项之间进行选择：**默认**&#x200B;和&#x200B;**并排显示**。 **默认**&#x200B;选项在文本上方和后面显示图像，而&#x200B;**并排**&#x200B;选项并排显示图像和文本。
+在本教程中，您将向 Teaser 区块添加区块选项，使作者能够在两种显示选项之间进行选择：**默认选项**&#x200B;和&#x200B;**并排选项**。**默认**&#x200B;选项会将图像显示在文本上方和后方，而&#x200B;**并排选项**&#x200B;则会将图像和文本并排显示。
 
 ## 常见用例
 
-在&#x200B;**Edge Delivery Services**&#x200B;和&#x200B;**通用编辑器**&#x200B;开发中使用&#x200B;**块选项**&#x200B;的常见用例包括但不限于：
+在 **Edge Delivery Services** 和&#x200B;**通用编辑器**&#x200B;开发中使用&#x200B;**区块选项**&#x200B;的常见用例包括但不限于：
 
-1. **布局变量：**&#x200B;可在布局之间轻松切换。 例如，水平与垂直或网格与列表。
-2. **样式变化：**&#x200B;可在主题或视觉处理之间轻松切换。 例如，浅色与深色模式，或者大文本与小文本。
-3. **内容显示控件：**&#x200B;切换元素的可见性或在内容样式之间切换（精简与详细）。
+1. **布局变化：**&#x200B;轻松切换布局。例如，水平与垂直布局，或网格与列表布局。
+2. **样式变化：**&#x200B;轻松切换主题或视觉处理方式。例如，浅色模式与深色模式，或大字体文本与小字体文本。
+3. **内容显示控制：**&#x200B;切换元素可见性或在内容样式（紧凑型与详细型）之间切换。
 
-这些选项为构建动态和可调整的块提供了灵活性和效率。
+这些选项为构建动态且适应性强的区块提供了灵活性和效率。
 
-本教程演示了布局变体用例，其中Teaser块可以两种不同的布局显示：**默认**&#x200B;和&#x200B;**并排显示**。
+本教程演示了布局变体用例，其中 Teaser 区块可以由两种不同的布局显示：**默认布局**&#x200B;和&#x200B;**并排布局**。
 
-## 块模型
+## 区块模型
 
-要将块选项添加到Teaser块，请在`/block/teaser/_teaser.json`处打开其JSON片段，并将新字段添加到模型定义中。 此字段将其`name`属性设置为`classes`，这是AEM用于存储块选项(应用于块的Edge Delivery Services HTML)的保护字段。
+若要在 Teaser 区块中添加区块选项，请打开位于 `/block/teaser/_teaser.json` 的 JSON 片段，并在模型定义中添加一个新字段。该字段将其 `name` 属性设置为 `classes`，这是一个受保护的字段，AEM 使用它来存储应用于区块的 Edge Delivery Services HTML 的区块选项。
 
 ### 字段配置
 
-以下选项卡说明了在块模型中配置块选项的各种方式，包括使用单个CSS类进行单选、使用多个CSS类进行单选以及使用多个CSS类进行多选。 本教程[通过单个CSS类&#x200B;**实现** select中使用的更简单方法](#field-configuration-for-this-tutorial)。
+下面的选项卡展示了在区块模型中配置区块选项的不同方式，包括使用单个 CSS 类的单选、使用多个 CSS 类的单选以及使用多个 CSS 类的多选。本教程采用了使用&#x200B;**单个 CSS 类的单选**&#x200B;这一[更简单的方法](#field-configuration-for-this-tutorial)。
 
 >[!BEGINTABS]
 
->[!TAB 选择单个CSS类]
+>[!TAB 使用单个 CSS 类的单选]
 
-本教程演示如何使用`select`（下拉列表）输入类型让作者选择单个块选项，然后将该选项作为单个对应的CSS类应用。
+本教程演示了如何使用 `select`（下拉）输入类型让作者选择一个区块选项，然后将其应用为单个相应的 CSS 类。
 
-![选择单个CSS类](./assets/block-options/tab-1.png){align="center"}
+![使用单个 CSS 类的单选](./assets/block-options/tab-1.png){align="center"}
 
-#### 块模型
+#### 区块模型
 
-**Default**&#x200B;选项由空字符串(`""`)表示，而&#x200B;**并排**&#x200B;选项使用`"side-by-side"`。 选项的&#x200B;**名称**&#x200B;和&#x200B;**值**&#x200B;不必相同，但&#x200B;**值**&#x200B;确定应用于块HTML的CSS类。 例如，**并排**&#x200B;选项的值可以是`layout-10`而不是`side-by-side`。 但是，最好为CSS类使用语义上有意义的名称，以确保选项值的清晰性和一致性。
+**默认**&#x200B;选项以空字符串 (`""`) 表示，而&#x200B;**并排**&#x200B;选项则使用 `"side-by-side"`。选项的&#x200B;**名称**&#x200B;和&#x200B;**值**&#x200B;不必相同，但&#x200B;**值**&#x200B;决定了应用于区块级 HTML 的 CSS 类。例如，**并排**&#x200B;选项的值可以是 `layout-10`，而不是 `side-by-side`。然而，最好为 CSS 类使用语义上有意义的名称，以确保选项值的清晰性和一致性。
 
-[!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```json{highlight="4,8,9-18"}
 ...
@@ -83,11 +83,11 @@ ht-degree: 0%
 ...
 ```
 
-#### 阻止HTML
+#### 区块 HTML
 
-当作者选择一个选项时，相应的值将作为CSS类添加到块的HTML中：
+当作者选择某个选项时，相应的值将作为 CSS 类添加到该区块的 HTML 中
 
-- 如果选择&#x200B;**默认**：
+- 如果选择了&#x200B;**默认**：
 
   ```html
   <div class="block teaser">
@@ -95,7 +95,7 @@ ht-degree: 0%
   </div>
   ```
 
-- 如果选择&#x200B;**并排**：
+- 如果选择了&#x200B;**并排**：
 
   ```html
   <div class="block teaser side-by-side">
@@ -103,22 +103,22 @@ ht-degree: 0%
   </div>
   ```
 
-这允许根据所选打开应用不同的样式和条件JavaScript。
+这样可以根据所选的选项应用不同的样式和条件式 JavaScript。
 
 
->[!TAB 选择多个CSS类]
+>[!TAB 使用多个 CSS 类的选择]
 
-**本教程中未使用此方法，但说明了替代方法和高级块选项。**
+**本教程中不使用此方法，但它展示了一种替代方案以及更高级的区块配置选项。**
 
-`select`输入类型允许作者选择单个块选项，该选项可以选择映射到多个CSS类。 要实现此目的，请将CSS类列为以空格分隔的值。
+`select` 输入类型允许作者选择一个单一的区块选项，该选项可以选择性地映射到多个 CSS 类。为实现此功能，请将多个 CSS 类以空格分隔的形式列出。
 
-![选择多个CSS类](./assets/block-options/tab-2.png){align="center"}
+![使用多个 CSS 类的选择](./assets/block-options/tab-2.png){align="center"}
 
-#### 块模型
+#### 区块模型
 
-例如，**并排**&#x200B;选项可以支持图像在左侧(`side-by-side left`)或右侧(`side-by-side right`)出现的变体。
+例如，**并排**&#x200B;选项可以支持不同的变体，其中图像可以显示在左侧 (`side-by-side left`) 或右侧 (`side-by-side right`)。
 
-[!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```json{highlight="4,8,9-21"}
 ...
@@ -148,11 +148,11 @@ ht-degree: 0%
 ...
 ```
 
-#### 阻止HTML
+#### 区块 HTML
 
-当作者选择某个选项时，相应的值将用作块HTML中一组以空格分隔的CSS类：
+当作者选择某个选项时，对应的值会作为一组以空格分隔的 CSS 类，应用到该区块的 HTML 中：
 
-- 如果选择&#x200B;**默认**：
+- 如果选择了&#x200B;**默认**：
 
   ```html
   <div class="block teaser">
@@ -160,7 +160,7 @@ ht-degree: 0%
   </div>
   ```
 
-- 如果选择了&#x200B;**并排显示左侧图像**：
+- 如果选择了&#x200B;**图像在左侧的并排显示**：
 
   ```html
   <div class="block teaser side-by-side left">
@@ -168,7 +168,7 @@ ht-degree: 0%
   </div>
   ```
 
-- 如果选择&#x200B;**并排显示**&#x200B;右侧的图像：
+- 如果选择了&#x200B;**图像在右侧的并排显示**：
 
   ```html
   <div class="block teaser side-by-side right">
@@ -176,22 +176,22 @@ ht-degree: 0%
   </div>
   ```
 
-这允许根据所选选项应用不同的样式和条件JavaScript。
+这样可以根据所选的选项应用不同的样式和条件式 JavaScript。
 
 
->[!TAB 使用多个CSS类进行多选]
+>[!TAB 使用多个 CSS 类进行多选]
 
-**本教程中未使用此方法，但说明了替代方法和高级块选项。**
+**本教程中不使用此方法，但它展示了一种替代方案以及更高级的区块配置选项。**
 
-`"component": "multiselect"`的输入类型允许作者同时选择多个选项。 这通过结合多种设计选择实现了块外观的复杂排列。
+`"component": "multiselect"` 输入类型允许作者同时选择多个选项。这使得通过组合多个设计选项来实现区块外观的复杂变体成为可能。
 
-![使用多个CSS类进行多选](./assets/block-options/tab-3.png){align="center"}
+![使用多个 CSS 类进行多选](./assets/block-options/tab-3.png){align="center"}
 
-### 块模型
+### 区块模型
 
-例如，**并排**、左侧&#x200B;**的**&#x200B;图像以及右侧&#x200B;**的**&#x200B;图像可以支持图像位于左侧(`side-by-side left`)或右侧(`side-by-side right`)的变体。
+例如，**并排显示**、**图像在左侧**&#x200B;和&#x200B;**图像在右侧**&#x200B;可以支持图像显示在左侧 (`side-by-side left`) 或右侧 (`side-by-side right`) 的不同变体。
 
-[!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```json{highlight="4,6,8,10-21"}
 ...
@@ -221,11 +221,11 @@ ht-degree: 0%
 ...
 ```
 
-#### 阻止HTML
+#### 区块 HTML
 
-当作者选择多个选项时，相应的值将在块的HTML中作为以空格分隔的CSS类应用：
+当作者选择多个选项时，对应的值会作为以空格分隔的 CSS 类，应用到区块的 HTML 中：
 
-- 如果选择了&#x200B;**并排**&#x200B;和左侧&#x200B;**图像**：
+- 如果选择了&#x200B;**并排**&#x200B;和&#x200B;**图像在左侧**：
 
   ```html{highlight="1"}
   <div class="block teaser side-by-side left">
@@ -233,7 +233,7 @@ ht-degree: 0%
   </div>
   ```
 
-- 如果选择了&#x200B;**并排**&#x200B;和&#x200B;**右侧**&#x200B;的图像：
+- 如果选择了&#x200B;**并排**&#x200B;和&#x200B;**图像在右侧**：
 
   ```html{highlight="1"}
   <div class="block teaser side-by-side right">
@@ -241,30 +241,30 @@ ht-degree: 0%
   </div>
   ```
 
-虽然多选功能提供了灵活性，但它在管理设计排列方面带来了复杂性。 如果没有限制，冲突的选择可能会导致体验中断或品牌外。
+虽然多选功能提供了更高的灵活性，但也增加了管理设计变体的复杂度。如果没有限制，冲突的选择可能导致功能异常或偏离品牌规范的体验。
 
 例如：
 
-- **图像在左侧**&#x200B;或&#x200B;**图像在右侧**&#x200B;而未选择&#x200B;**并排**&#x200B;会隐式将它们应用到&#x200B;**默认值**，该默认值始终将图像设置为背景，因此左右对齐无关。
-- 同时选择左侧&#x200B;**图像**&#x200B;和右侧&#x200B;**图像是矛盾的**。
-- 选择&#x200B;**并排**&#x200B;而不选择&#x200B;**图像在左侧**&#x200B;或&#x200B;**图像在右侧**&#x200B;可能会被认为不明确，因为图像的位置未指定。
+- 如果选择了&#x200B;**图像在左侧**&#x200B;或&#x200B;**图像在右侧**，但未选择&#x200B;**并排显示**，则会隐式地将它们应用到&#x200B;**默认**，该选项始终会将图像设置为背景，因此左侧和右侧的对齐方式无关紧要。
+- 同时选择&#x200B;**图像在左侧**&#x200B;和&#x200B;**图像在右侧**&#x200B;是相互矛盾的。
+- 选择&#x200B;**并排**&#x200B;而不选择&#x200B;**图像在左侧**&#x200B;或&#x200B;**图像在右侧**&#x200B;可能会被视为不明确，因为图像的位置未指定。
 
-要防止出现问题并在使用多选时防止作者混淆，请确保已计划好选项并测试所有排列。 多选功能最适用于简单、无冲突的增强功能，如“大”或“高”，而不是更改版面的选项。
+为避免出现问题及作者在使用多选时产生困惑，请确保选项设计合理且对所有组合情况进行充分测试。多选功能最适合用于简单且不冲突的增强选项，如“large”（大号）或“highlight”（高亮），而不适用于改变布局的选择。
 
 
 >[!TAB 默认选项]
 
-**本教程中未使用此方法，但说明了替代方法和高级块选项。**
+**本教程中不使用此方法，但它展示了一种替代方案以及更高级的区块配置选项。**
 
-在Universal Editor中将新块实例添加到页面时，可以将块选项设置为默认值。 这是通过在[块的定义](../5-new-block.md#block-definition)中设置`classes`属性的默认值来完成的。
+在通用编辑器中，添加新区块实例时，可以将区块选项设置为默认值。这是通过在[区块定义](../5-new-block.md#block-definition)中设置 `classes` 属性的默认值来实现。
 
-#### 块定义
+#### 区块定义
 
-在以下示例中，通过将`classes`字段的`value`属性分配给`side-by-side`，默认选项设置为&#x200B;**并排**。 块模型中相应的块选项输入是可选的。
+在下面的示例中，通过将 `classes` 字段的 `value` 属性设置为 `side-by-side`，将默认选项设为&#x200B;**并排显示**。区块模型中对应的区块选项输入是可选的。
 
-您还可以为同一块定义多个条目，每个条目具有不同的名称和类。 这允许通用编辑器显示不同的块条目，每个条目均预配置了特定的块选项。 虽然这些代码在编辑器中显示为单独的块，但代码库包含根据所选选项动态呈现的单个块。
+您也可以为同一个区块定义多个条目，每个条目拥有不同的名称和类。这使得通用编辑器能够显示不同的区块条目，每个条目都预先配置了特定的区块选项。虽然在编辑器中它们表现为独立的区块，但代码库实际上只包含一个区块，该区块会根据所选选项动态渲染内容。
 
-[!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```json{highlight="12"}
 {
@@ -298,11 +298,11 @@ ht-degree: 0%
 ### 本教程的字段配置
 
 
-在本教程中，我们将使用上面第一个选项卡中介绍的具有单个CSS类的select方法，该方法允许两个离散块选项：**Default**&#x200B;和&#x200B;**并排**。
+在本教程中，我们将使用上文在第一个选项卡中描述的带有单个 CSS 类的选择方法，该方法允许两个独立的区块选项：**默认选项**&#x200B;和&#x200B;**并排选项**。
 
-在块的JSON片段的模型定义中，为块选项添加单个选择字段。 此字段允许作者在默认布局和并排布局之间进行选择。
+在区块 JSON 片段的模型定义中，为区块选项添加一个单选字段。该字段允许作者在默认布局和并排布局之间进行选择。
 
-[!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```json{highlight="7-24"}
 {
@@ -369,13 +369,13 @@ ht-degree: 0%
 }
 ```
 
-## 通用编辑器中的更新块
+## 在通用编辑器中更新区块
 
-要使更新的块选项输入在通用编辑器中可用，请将JSON代码更改部署到GitHub，创建新页面，使用&#x200B;**并排**&#x200B;选项添加和创作Teaser块，然后发布页面以进行预览。 发布后，在本地开发环境中加载页面以进行编码。
+为了在通用编辑器中使更新后的区块选项输入可用，请将 JSON 代码更改部署到 GitHub，创建一个新页面，添加并创作带有&#x200B;**并排**&#x200B;选项的 Teaser 区块，然后发布页面，以进行预览。发布后，在本地开发环境中加载页面，以进行编码。
 
-### 将更改推送到GitHub
+### 将更改推送到 GitHub
 
-要使更新的块选项输入可在通用编辑器中用于设置块选项并针对生成的HTML进行开发，必须链接项目，并将更改推送到GitHub分支（在本例中为`block-options`分支）。
+为了在通用编辑器中提供更新的区块选项输入，以便设置区块选项并针对生成的 HTML 进行开发，必须对项目进行代码检查，并将更改推送到 GitHub 分支——在本例中为 `block-options` 分支。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -388,32 +388,33 @@ $ git commit -m "Add Teaser block option to JSON file so it is available in Univ
 $ git push origin teaser
 ```
 
-### 创建测试页面
+### 创建一个测试页面
 
-在AEM Author服务中，创建一个新页面以添加用于开发的Teaser块。 按照[Edge Delivery Services和Universal Editor Developer教程](../0-overview.md)的[创作块](../6-author-block.md)章节中的约定，在`branches`页面下创建一个测试页面，用您正在处理的Git分支命名该页面 — 在本例中为`block-options`。
+在 AEM Author 服务中，创建一个新的页面，以添加用于开发的 Teaser 区块。遵循 [Edge Delivery Services 和通用编辑器开发人员教程](../0-overview.md)中[创作区块](../6-author-block.md)章节中的约定，在 `branches` 页面下创建一个测试页面，并将其命名为您正在处理的 Git 分支名称——在本例中为 `block-options`。
 
-### 创作块
+### 创作区块
 
-在通用编辑器中编辑新的&#x200B;**块选项**&#x200B;页并添加&#x200B;**Teaser**&#x200B;块。 确保将查询参数`?ref=block-options`添加到URL以使用`block-options` GitHub分支中的代码加载页面，
+在通用编辑器中编辑新的&#x200B;**区块选项**&#x200B;页面，并添加&#x200B;**Teaser**&#x200B;区块。请确保在 URL 中添加查询参数 `?ref=block-options`，以便使用来自 `block-options` GitHub 分支的代码加载页面，
 
-块对话框现在包含一个&#x200B;**Teaser选项**&#x200B;下拉列表，其中具有&#x200B;**默认值**&#x200B;和&#x200B;**并排选择**。 选择&#x200B;**并排显示**&#x200B;并完成其余内容的创作。
+区块对话框现在包含一个带有&#x200B;**默认**&#x200B;和&#x200B;**并排**&#x200B;选项的&#x200B;**Teaser 选项**&#x200B;下拉菜单。选择&#x200B;**并排**&#x200B;并完成剩余的内容创作。
 
-![包含选项块对话框的Teaser](./assets/block-options/block-dialog.png){align="center"}
+![带有选项区块对话框的 Teaser](./assets/block-options/block-dialog.png){align="center"}
 
-或者，添加两个&#x200B;**Teaser**&#x200B;块 — 一个设置为&#x200B;**Default**，另一个设置为&#x200B;**并排**。 这允许您在开发期间并排预览这两个选项，并确保并排实施&#x200B;**不会影响**&#x200B;默认&#x200B;**选项。**
+（可选）添加两个 **Teaser** 区块——一个设置为&#x200B;**默认**，另一个设置为&#x200B;**并排**。这样，您可以在开发过程中并排预览两个选项，并确保实施&#x200B;**并排**&#x200B;选项不会影响&#x200B;**默认**&#x200B;选项。
 
-### 发布以预览
+### 发布到预览环境
 
-将Teaser块添加到页面后，[使用&#x200B;**发布**&#x200B;按钮并将页面发布到预览](../6-author-block.md)，然后在通用编辑器中选择发布到&#x200B;**预览**。
+在将 Teaser 区块添加到页面后，请使用&#x200B;**发布**&#x200B;按钮并在通用编辑器中选择发布到&#x200B;**预览**&#x200B;环境来[发布页面，以进行预览](../6-author-block.md)。
 
-## 阻止HTML
+## 区块 HTML
 
-要开始块开发，请先查看Edge Delivery Services预览所公开的DOM结构。 DOM通过JavaScript进行了增强并使用CSS进行了样式设置，为构建和自定义块奠定了基础。
+要开始开发区块，请首先查看 Edge Delivery Services 预览版呈现的 DOM 结构。DOM 通过 JavaScript 进行增强，并使用 CSS 进行样式设计，为构建和定制区块提供了基础。
 
 >[!BEGINTABS]
->[!TAB 要修饰的 DOM]
 
-以下是Teaser块的DOM，其中选定了&#x200B;**并排**&#x200B;块选项，即将使用JavaScript和CSS进行装饰的目标。
+>[!TAB 要装饰的 DOM]
+
+以下是选择了&#x200B;**并排**&#x200B;区块选项的 Teaser 区块的 DOM，这是使用 JavaScript 和 CSS 进行装饰的目标对象。
 
 ```html{highlight="7"}
 ...
@@ -450,25 +451,25 @@ $ git push origin teaser
 ...
 ```
 
->[!TAB 如何查找DOM]
+>[!TAB 如何找到 DOM]
 
-要查找要修饰的DOM，请在本地开发环境中打开包含块的页面，使用Web浏览器的开发人员工具选择块，然后检查DOM。 这将允许您标识要装饰的相关元素。
+要查找需要装饰的 DOM，请在本地开发环境中打开包含该区块的页面，使用 Web 浏览器的开发人员工具选择该区块，并检查其 DOM 结构。这样您就可以识别出需要装饰的相关元素。
 
-![检查块DOM](./assets/block-options/dom.png){align="center"}
+![检查区块 DOM](./assets/block-options/dom.png){align="center"}
 
 >[!ENDTABS]
 
-## 阻止CSS
+## 区块 CSS
 
-编辑`blocks/teaser/teaser.css`以为&#x200B;**并排**&#x200B;选项添加特定的CSS样式。 此文件包含块的默认CSS。
+编辑 `blocks/teaser/teaser.css`，为&#x200B;**并排**&#x200B;选项添加特定的 CSS 样式。该文件包含该区块的默认 CSS。
 
-要修改&#x200B;**并排显示**&#x200B;选项的样式，请在`teaser.css`文件中添加新的作用域CSS规则，以使用`side-by-side`类配置的Teaser块为目标。
+要修改&#x200B;**并排**&#x200B;选项的样式，请在 `teaser.css` 文件中添加一个新的作用域 CSS 规则，该规则针对的是配置了 `side-by-side` 类的 Teaser 区块。
 
 ```css
 .block.teaser.side-by-side { ... }
 ```
 
-或者，您可以使用CSS嵌套获取更简洁的版本：
+或者，你可以使用 CSS 嵌套来实现更简洁的版本：
 
 ```css
 .block.teaser {
@@ -480,10 +481,10 @@ $ git push origin teaser
 }
 ```
 
-在`&.side-by-side`规则内，添加必需的CSS属性以在应用`side-by-side`类时设置块的样式。
+在 `&.side-by-side` 规则中，添加必要的 CSS 属性，以便在应用 `side-by-side` 类时对区块进行样式设置。
 
-一种常见的方法是重置默认样式，方法是将`all: initial`应用于共享选择器，然后为`side-by-side`变体添加所需的样式。 如果大多数样式在选项之间共享，则覆盖特定属性可能会更容易。 但是，如果多个选择器需要更改，则重置所有样式并仅重新应用必要的样式可以使代码更清晰、更易于维护。
-[!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="下面代码示例的文件名。"}
+一种常见的方法是，先对共享选择器应用 `all: initial` 来重置默认样式，然后为 `side-by-side` 变体添加所需的样式。如果大多数样式在各个选项之间是共享的，那么覆盖特定属性可能会更容易。然而，如果多个选择器需要更改，则重置所有样式并仅重新应用必要的样式可以使代码更清晰、更易于维护。
+[!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```css
 /* /blocks/teaser/teaser.css */
@@ -659,11 +660,11 @@ $ git push origin teaser
 ```
 
 
-## 阻止JavaScript
+## 区块 JavaScript
 
-通过检查应用于块元素的类，可以直接识别块的活动选项。 在此示例中，我们需要根据活动选项调整应用`.image-wrapper`样式的位置。
+通过检查应用于区块元素的类，可以轻松识别该区块的活动选项。在此示例中，我们需要根据活动选项调整 `.image-wrapper` 样式的应用位置。
 
-`getOptions`函数返回应用于块的类数组，不包括`block`和`teaser`（因为所有块都有`block`类，所有Teaser块都有`teaser`类）。 数组中任何剩余的类都指示活动选项。 如果数组为空，则应用默认选项。
+`getOptions` 函数返回一个应用于该区块的类的数组，其中不包括 `block` 和 `teaser`（因为所有区块都有 `block` 类，所有 Teaser 区块都有 `teaser` 类）。数组中剩余的任何类都表示活动选项。如果数组为空，则应用默认选项。
 
 ```javascript
 function getOptions(block) {
@@ -672,7 +673,7 @@ function getOptions(block) {
 }
 ```
 
-此选项列表可用于在块的JavaScript中有条件地执行自定义逻辑：
+此选项列表可用于在区块的 JavaScript 中有条件地执行自定义逻辑：
 
 ```javascript
 if (getOptions(block).includes('side-by-side')) {
@@ -684,9 +685,9 @@ if (getOptions(block).includes('side-by-side')) {
 }
 ```
 
-具有默认和并排选项的Teaser块的完整更新JavaScript文件如下所示：
+带有默认选项和并排选项的 Teaser 区块完整更新后的 JavaScript 文件如下：
 
-[!BADGE /blocks/teaser/teaser.js]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/teaser/teaser.js]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```javascript
 /* /blocks/teaser/teaser.js */
@@ -755,13 +756,13 @@ export default function decorate(block) {
 
 ## 开发预览
 
-添加CSS和JavaScript后，AEM CLI的本地开发环境会热重新加载更改，从而快速轻松地可视化代码如何影响块。 将鼠标悬停在CTA上并验证Teaser的图像是否放大了图像。
+在添加 CSS 和 JavaScript 的过程中，AEM CLI 的本地开发环境会实时热加载更改，方便快速直观地查看代码对区块的影响。将鼠标悬停在 CTA 上，确认 Teaser 图像是否有放大和缩小的效果。
 
-![使用CSS和JS的Teaser的本地开发预览](./assets/block-options//local-development-preview.png)
+![使用 CSS 和 JS 进行 Teaser 的本地开发预览](./assets/block-options//local-development-preview.png)
 
-## 嵌入代码
+## 对代码进行规范检查
 
-请确保[频繁lint](../3-local-development-environment.md#linting)您的代码更改以保持干净一致。 定期筛选有助于及早发现问题，从而缩短总体开发时间。 请记住，在解决所有链接问题之前，无法将开发工作合并到`main`分支！
+请确保[经常](../3-local-development-environment.md#linting)对代码更改进行规范检查，以保持代码的整洁和一致性。定期进行代码规范检查有助于及早发现问题，减少整体开发时间。请记住，只有在所有代码规范问题解决后，才能将开发工作合并到 `main` 分支！
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -771,7 +772,7 @@ $ npm run lint
 
 ## 在通用编辑器中预览
 
-要在AEM的通用编辑器中查看更改，请添加、提交这些更改，并将其推送到通用编辑器使用的Git存储库分支。 这样做可确保块实施不会中断创作体验。
+要在 AEM 的通用编辑器中查看更改，请将更改添加、提交并推送到通用编辑器使用的 Git 存储库分支。这样做可以确保区块的实施不会影响创作体验。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -782,13 +783,13 @@ $ git commit -m "CSS and JavaScript implementation for Teaser block option Side-
 $ git push origin block-options
 ```
 
-现在，使用`?ref=block-options`查询参数时，更改在通用编辑器中可见。
+现在，在使用 `?ref=block-options` 查询参数时，通用编辑器中即可看到这些更改。
 
-通用编辑器中的![Teaser](./assets/block-options/universal-editor-preview.png){align="center"}
+![通用编辑器中的 Teaser](./assets/block-options/universal-editor-preview.png){align="center"}
 
 
 ## 恭喜！
 
-现在，您已探索Edge Delivery Services和通用编辑器中的块选项，为您提供了用于更灵活地自定义和简化内容编辑的工具。 开始在项目中应用这些选项以提高效率并维护一致性。
+您现在已经了解了 Edge Delivery Services 和通用编辑器中的区块选项，掌握了更加灵活地定制和简化内容编辑的工具。开始在您的项目中应用这些选项，以提升效率并保持一致性。
 
-有关更多最佳实践和高级技术，请查看[通用编辑器文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。
+如需了解更多最佳实践和高级技巧，请查阅[通用编辑器文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。

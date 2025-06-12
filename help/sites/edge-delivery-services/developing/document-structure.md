@@ -1,6 +1,6 @@
 ---
-title: Edge Delivery Services的文档结构
-description: 探索如何使用章节、默认内容等功能组合Edge Delivery Services文档。
+title: Edge Delivery Services 的文档结构
+description: 探索 Edge Delivery Services 文档如何通过章节、默认内容等元素构建而成。
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,14 +13,14 @@ thumbnail: 3425716.jpeg
 duration: 194
 exl-id: f6e9822b-1803-4aff-aac4-714146568f91
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '40'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # 文档结构
 
-探索如何使用章节、默认内容等功能组合Edge Delivery Services文档。
+探索 Edge Delivery Services 文档如何通过章节、默认内容等元素构建而成。
 
->[!VIDEO](https://video.tv.adobe.com/v/3445199/?learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3425716/?learn=on)

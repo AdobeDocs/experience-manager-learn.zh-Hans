@@ -1,6 +1,6 @@
 ---
-title: 使用CSS开发块
-description: 使用Edge Delivery Services的CSS开发块，该块可使用通用编辑器进行编辑。
+title: 使用 CSS 开发一个区块
+description: 使用 CSS 为 Edge Delivery Services 开发一个区块，该区块可通过通用编辑器进行编辑。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,31 +11,31 @@ jira: KT-15832
 duration: 900
 exl-id: 14cda9d4-752b-4425-a469-8b6f283ce1db
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '437'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 使用CSS开发块
+# 使用 CSS 开发一个区块
 
-Edge Delivery Services中的块使用CSS进行样式设置。 块的CSS文件存储在块的目录中，并且与该块具有相同的名称。 例如，名为`teaser`的块的CSS文件位于`blocks/teaser/teaser.css`。
+Edge Delivery Services 中的区块使用 CSS 进行样式设置。区块的 CSS 文件存储在该区块的目录中，文件名与区块名称相同。例如，名为 `teaser` 的区块对应的 CSS 文件位于 `blocks/teaser/teaser.css`。
 
-理想情况下，块应当只需要CSS来设置样式，而无需依靠JavaScript修改DOM或添加CSS类。 对JavaScript的需求取决于块的[内容建模](./5-new-block.md#block-model)及其复杂性。 如果需要，可以添加[块JavaScript](./7b-block-js-css.md)。
+理想情况下，区块仅需使用 CSS 进行样式设置，而不依赖 JavaScript 来修改 DOM 或添加 CSS 类。是否需要使用 JavaScript 取决于区块的[内容建模](./5-new-block.md#block-model)及其复杂程度。如有需要，可添加[区块 JavaScript](./7b-block-js-css.md)。
 
-使用仅限CSS的方法时，会定位块的（通常）裸语义HTML元素并进行样式设置。
+采用纯 CSS 方式，对区块中（大多是）简洁的语义化 HTML 元素进行定位和样式设计。
 
-## 阻止HTML
+## 区块 HTML
 
-要了解如何设置块的样式，请首先查看Edge Delivery Services公开的DOM，因为该格式可用于设置样式。 通过检查AEM CLI的本地开发环境提供的块，可以找到DOM。 请避免使用通用编辑器的DOM，因为它略有不同。
+要了解如何为区块设置样式，首先请查看 Edge Delivery Services 公开的 DOM，因为它可用于设置样式。通过检查 AEM CLI 本地开发环境提供的区块，可以找到 DOM。避免使用通用编辑器的 DOM，因为它略有不同。
 
 >[!BEGINTABS]
 
->[!TAB 样式的DOM]
+>[!TAB 需设置样式的 DOM]
 
-以下是作为样式设置目标的Teaser块的DOM。
+以下是作为样式设计目标的 Teaser 区块的 DOM。
 
-请注意[自动作为Edge Delivery Services JavaScript推断的元素扩充的`<p class="button-container">...`。](./4-website-branding.md#inferred-elements)
+请注意，`<p class="button-container">...` 被 Edge Delivery Services 的 JavaScript [自动增强](./4-website-branding.md#inferred-elements)，并作为推断元素添加。
 
 ```html
 ...
@@ -71,21 +71,21 @@ Edge Delivery Services中的块使用CSS进行样式设置。 块的CSS文件存
 ...
 ```
 
->[!TAB 如何查找DOM]
+>[!TAB 如何找到 DOM]
 
-要查找要设置样式的DOM，请在本地开发环境中打开包含未设置样式的块的页面，选择块，然后检查DOM。
+要找到需要设置样式的 DOM 元素，请在本地开发环境中打开包含未设样式区块的页面，选中该区块，并检查其 DOM 结构。
 
-![检查块DOM](./assets/7a-block-css/inspect-block-dom.png)
+![检查区块 DOM](./assets/7a-block-css/inspect-block-dom.png)
 
 >[!ENDTABS]
 
-## 阻止CSS
+## 区块 CSS
 
-在块的文件夹中创建一个新的CSS文件，使用块的名称作为文件名。 例如，对于&#x200B;**Teaser**&#x200B;块，该文件位于`/blocks/teaser/teaser.css`。
+在该区块的文件夹中创建一个新的 CSS 文件，其中文件名应与区块名称相同。例如，对于 **Teaser** 区块，文件位于 `/blocks/teaser/teaser.css`。
 
-当Edge Delivery Services的JavaScript在页面上检测到表示Teaser块的DOM元素时，将自动加载此CSS文件。
+当 Edge Delivery Services 的 JavaScript 检测到页面上存在代表 Teaser 区块的 DOM 元素时，该 CSS 文件会被自动加载。
 
-[!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```css
 /* /blocks/teaser/teaser.css */
@@ -211,13 +211,13 @@ Edge Delivery Services中的块使用CSS进行样式设置。 块的CSS文件存
 
 ## 开发预览
 
-由于CSS是在代码项目中写入的，因此AEM CLI的热重新加载会进行更改，以便快速轻松地了解CSS如何影响块。
+由于 CSS 是在代码项目中创作的，AEM CLI 会热重载这些更改，以便你能够快速且直观地了解 CSS 对区块的影响。
 
-![仅CSS预览](./assets/7a-block-css/local-development-preview.png)
+![仅限 CSS 的预览](./assets/7a-block-css/local-development-preview.png)
 
-## 嵌入代码
+## 对代码进行规范检查
 
-确保您[频繁lint](./3-local-development-environment.md#linting)您的代码更改以确保它是干净一致的。 嵌套有助于及早发现问题，并缩短总体开发时间。 请记住，在解决您的所有Linting问题之前，您无法将开发工作合并到`main`！
+请确保您[经常对代码修改进行规范检查](./3-local-development-environment.md#linting)，以确保其整洁且风格一致。经常进行规范检查有助于及早发现问题，从而缩短整体开发周期。请记住，在解决所有规范检查方面的问题之前，不能将开发工作合并到 `main`！
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -227,7 +227,7 @@ $ npm run lint:css
 
 ## 在通用编辑器中预览
 
-要在AEM的通用编辑器中查看更改，请添加、提交这些更改，并将其推送到通用编辑器使用的Git存储库分支。 此步骤有助于确保块实施不会中断创作体验。
+要在 AEM 的通用编辑器中查看更改，请将更改添加、提交并推送到通用编辑器使用的 Git 存储库分支。此步骤有助于确保区块的实施不会破坏创作体验。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -237,6 +237,6 @@ $ git commit -m "Add CSS-only implementation for teaser block"
 $ git push origin teaser
 ```
 
-现在，添加`?ref=teaser`查询参数时，您可以在通用编辑器中预览更改。
+现在，在添加 `?ref=teaser` 查询参数时，即可在通用编辑器中预览这些更改。
 
-通用编辑器中的![Teaser](./assets/7a-block-css/universal-editor-preview.png)
+![通用编辑器中的 Teaser](./assets/7a-block-css/universal-editor-preview.png)

@@ -1,6 +1,6 @@
 ---
-title: AEM Assets Sidekick插件和Edge Delivery Services
-description: 了解如何使用AEM Assets Sidekick插件将受管资源合并到通过Edge Delivery Services提供的高影响力体验中。
+title: AEM Assets Sidekick 插件和 Edge Delivery Services
+description: 了解如何利用 AEM Assets Sidekick 插件将托管资源合并到通过 Edge Delivery Services 投放的高影响力体验中。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services, Selectors
 topic: Content Management
@@ -13,16 +13,16 @@ thumbnail: 3424615.jpeg
 exl-id: e8ed49a5-4ad2-4759-bf0f-1dae8478d996
 duration: 149
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '61'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# AEM Assets Sidekick插件和Edge Delivery Services
+# AEM Assets Sidekick 插件和 Edge Delivery Services
 
 {{edge-delivery-services}}
 
-了解如何使用[AEM Assets Sidekick插件](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin)将托管资源合并到通过Edge Delivery Services提供的高影响力体验中。
+了解如何利用 [AEM Assets Sidekick 插件](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin)将托管资源合并到通过 Edge Delivery Services 投放的高影响力体验中。
 
->[!VIDEO](https://video.tv.adobe.com/v/3435832/?learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3424615/?learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 在AEM中使用“SSL向导”
-description: Adobe Experience Manager的SSL设置向导，以便更轻松地设置AEM实例以通过HTTPS运行。
+title: 使用 AEM 中的 SSL 向导
+description: Adobe Experience Manager 的 SSL 设置向导简化了配置流程，使设置通过 HTTPS 运行的 AEM 实例变得更加便捷。
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-13839
 doc-type: Technical Video
@@ -11,84 +11,84 @@ exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
 last-substantial-update: 2023-08-08T00:00:00Z
 duration: 564
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '448'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 在AEM中使用“SSL向导”
+# 使用 AEM 中的 SSL 向导
 
-了解如何在Adobe Experience Manager中设置SSL，以使其使用内置的SSL向导通过HTTPS运行。
+了解如何在 Adobe Experience Manager 中使用内置的 SSL 向导设置 SSL，以使其通过 HTTPS 运行。
 
->[!VIDEO](https://video.tv.adobe.com/v/328890?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
 
 
 >[!NOTE]
 >
->对于托管环境，最好由IT部门提供CA信任的证书和密钥。
+>对于托管环境，IT 部门最好提供 CA 信任的证书和密钥。
 >
 >自签名证书仅用于开发目的。
 
-## 使用SSL配置向导
+## 使用 SSL 配置向导
 
-导航到&#x200B;__AEM Author > Tools > Security > SSL Configuration__，然后打开&#x200B;__SSL Configuration Wizard__。
+导航至 __AEM Author > 工具 > 安全性 > SSL 配置__，并打开 __SSL 配置向导__。
 
-![SSL配置向导](assets/use-the-ssl-wizard/ssl-config-wizard.png)
+![SSL 配置向导](assets/use-the-ssl-wizard/ssl-config-wizard.png)
 
-### 创建商店凭据
+### 创建存储凭据
 
-要创建与`ssl-service`系统用户和全局&#x200B;_信任存储_&#x200B;关联的&#x200B;_密钥存储_，请使用&#x200B;__存储凭据__&#x200B;向导步骤。
+要创建与 `ssl-service` 系统用户相关联的&#x200B;_密钥存储区_&#x200B;和全局&#x200B;_信任存储区_，请使用&#x200B;__存储凭据__&#x200B;向导步骤。
 
-1. 输入与`ssl-service`系统用户关联的&#x200B;__密钥库__&#x200B;的密码并确认密码。
-1. 输入全局&#x200B;__信任存储区__&#x200B;的密码并确认密码。 请注意，它是系统范围的Trust Store，如果已创建，则忽略输入的密码。
+1. 输入与 `ssl-service` 系统用户关联的&#x200B;__密钥存储区__&#x200B;的密码并确认密码。
+1. 请输入全局&#x200B;__信任存储区__&#x200B;的密码并确认密码。请注意，这是一个系统范围的信任存储区，如果已创建，则输入的密码将会被忽略。
 
-   ![SSL安装程序 — 存储凭据](assets/use-the-ssl-wizard/store-credentials.png)
+   ![SSL 设置 - 存储凭据](assets/use-the-ssl-wizard/store-credentials.png)
 
 ### 上传私钥和证书
 
-要上传&#x200B;_私钥_&#x200B;和&#x200B;_SSL证书_，请使用&#x200B;__密钥和证书__&#x200B;向导步骤。
+要上传&#x200B;_私钥_&#x200B;和 _SSL 证书_，请使用&#x200B;__密钥与证书__&#x200B;向导步骤。
 
-通常情况下，您的IT部门会提供CA信任的证书和密钥，但自签名证书可用于&#x200B;__开发__&#x200B;和&#x200B;__测试__&#x200B;目的。
+通常，您的 IT 部门会提供受证书颁发机构 (CA) 信任的证书和密钥，但自签名证书也可用于&#x200B;__开发__&#x200B;和&#x200B;__测试__&#x200B;目的。
 
-若要创建或下载自签名证书，请参阅[自签名私钥和证书](#self-signed-private-key-and-certificate)。
+要创建或下载自签名证书，请参阅[自签名私钥和证书](#self-signed-private-key-and-certificate)。
 
-1. 以DER（可分辨编码规则）格式上传&#x200B;__私钥__。 与PEM不同，DER编码文件不包含纯文本语句，如`-----BEGIN CERTIFICATE-----`
-1. 以`.crt`格式上载关联的&#x200B;__SSL证书__。
+1. 以DER（区别编码规则）格式上传&#x200B;__私钥__。与 PEM 不同，DER 编码的文件不包含诸如 `-----BEGIN CERTIFICATE-----` 之类的纯文本语句
+1. 上传 `.crt` 格式的相关 __SSL 证书__。
 
-   ![SSL设置 — 私钥和证书](assets/use-the-ssl-wizard/privatekey-and-certificate.png)
+   ![SSL 设置 - 私钥和证书](assets/use-the-ssl-wizard/privatekey-and-certificate.png)
 
-### 更新SSL连接器详细信息
+### 更新 SSL 连接器详细信息
 
-要更新&#x200B;_主机名_&#x200B;和&#x200B;_端口_，请使用&#x200B;__SSL连接器__&#x200B;向导步骤。
+要更新&#x200B;_主机名_&#x200B;和&#x200B;_端口_，请使用 __SSL 连接器__&#x200B;向导步骤。
 
-1. 更新或验证&#x200B;__HTTPS主机名__&#x200B;值，该值应与证书中的`Common Name (CN)`匹配。
-1. 更新或验证&#x200B;__HTTPS端口__&#x200B;值。
+1. 更新或验证 __HTTPS 主机名__&#x200B;值，该值应与证书中的 `Common Name (CN)` 相匹配。
+1. 更新或验证 __HTTPS 端口__&#x200B;值。
 
-   ![SSL安装程序 — SSL连接器详细信息](assets/use-the-ssl-wizard/ssl-connector-details.png)
+   ![SSL 设置 - SSL 连接器详细信息](assets/use-the-ssl-wizard/ssl-connector-details.png)
 
-### 验证SSL设置
+### 验证 SSL 设置
 
-1. 要验证SSL，请单击&#x200B;__转到HTTPS URL__&#x200B;按钮。
-1. 如果使用自签名证书，您会看到`Your connection is not private`错误。
+1. 要验证 SSL，请点击&#x200B;__转到 HTTPS URL__ 按钮。
+1. 如果使用自签名证书，您会看到 `Your connection is not private` 错误。
 
-   ![SSL设置 — 通过HTTPS验证AEM](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
+   ![SSL 设置 - 通过 HTTPS 验证 AEM](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
 
 ## 自签名私钥和证书
 
-以下zip文件包含本地设置AEM SSL所需的[!DNL DER]和[!DNL CRT]文件，这些文件仅用于本地开发。
+以下压缩包包含在本地设置 AEM SSL 所需的 [!DNL DER] 和 [!DNL CRT] 文件，仅供本地开发使用。
 
-为方便起见，提供了[!DNL DER]和[!DNL CERT]文件，这些文件是使用下面的“生成私钥和自签名证书”一节中所述的步骤生成的。
+[!DNL DER] 和 [!DNL CERT] 文件是为了方便而提供的，并使用下文“生成私钥和自签名证书”部分中概述的步骤生成。
 
-如果需要，证书密码短语为&#x200B;**admin**。
+如果需要，证书密码为 **admin**。
 
-此localhost — 私钥和自签名的certificate.zip（2028年7月到期）
+此本地主机 - 私钥和自签名证书.zip（2028 年 7 月到期）
 
 [下载证书文件](assets/use-the-ssl-wizard/certificate.zip)
 
 ### 私钥和自签名证书生成
 
-上视频描述了AEM创作实例上使用自签名证书的SSL的设置和配置。 使用[[!DNL OpenSSL]](https://www.openssl.org/)的以下命令可以生成私钥和证书以在向导的步骤2中使用。
+上述视频展示了如何使用自签名证书在 AEM 作者实例上设置和配置 SSL。以下使用 [[!DNL OpenSSL]](https://www.openssl.org/) 的命令可以生成一个私钥和证书，以用于向导的第二步。
 
 ```shell
 ### Create Private Key

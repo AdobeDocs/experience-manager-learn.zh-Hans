@@ -1,6 +1,6 @@
 ---
 title: AEM Dispatcher 缓存教程
-description: 本教程旨在帮助您更好地了解Dispatcher的工作方式以及您如何使用它。
+description: 该教程的目标是帮助您更好地了解 Dispatcher 的工作方式以及您如何使用它。
 feature: Dispatcher
 topic: Architecture
 role: Architect
@@ -8,23 +8,23 @@ level: Beginner
 doc-type: Catalog
 exl-id: 9780870e-9ac6-46f9-abc4-87c9470ef7e7
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '154'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # AEM Dispatcher 缓存教程
 
-Dispatcher是大多数（如果不是全部）AEM安装的重要组成部分。 本教程旨在帮助您更好地了解Dispatcher的工作方式以及您如何使用它。
+Dispatcher 是几乎所有 AEM 部署中不可或缺的核心组件。该教程的目标是帮助您更好地了解 Dispatcher 的工作方式以及您如何使用它。
 
-本教程分为三部分。
+本教程分为三个部分。
 
 1. [概念、模式和反模式](chapter-1.md)
-简要介绍Dispatcher的历史和机制，并讨论这会如何影响AEM开发人员如何设计其组件。
+简要介绍 Dispatcher 的历史和机制，并讨论其如何影响 AEM 开发人员设计其组件的方式。
 
-1. [基础结构模式](chapter-2.md)
-讨论各种拓扑，了解如何扩展前置Publish系统和Dispatcher缓存集群的AEM系统。
+1. [基础架构模式](chapter-2.md)
+讨论了如何利用发布系统集群和前置 Dispatcher 缓存来扩展 AEM 系统的各种拓扑结构。
 
 1. [高级缓存主题](chapter-3.md)
-前两个部分重点介绍Dispatcher中的纯http缓存以及存在哪些限制。 本部分将讨论有关如何克服这些限制的一些想法。
+前两部分重点介绍了 Dispatcher 中的纯 http 缓存以及其存在的局限性。本部分讨论了一些如何克服这些限制的想法。

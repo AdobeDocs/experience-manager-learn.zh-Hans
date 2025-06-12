@@ -1,6 +1,6 @@
 ---
-title: Assets Essentials快速入门
-description: 了解如何访问Assets Essentials并探索其用户界面的主要方面。
+title: Assets Essentials 快速入门
+description: 了解如何访问 Assets Essentials 并探索其用户界面的主要方面。
 version: Experience Manager as a Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -13,14 +13,14 @@ doc-type: Feature Video
 exl-id: a0accb94-ceef-4ecf-b1f6-f47751114242
 duration: 251
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '37'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # 快速入门
 
-了解如何访问AEM Assets并探索其用户界面的主要功能。
+了解如何访问 AEM Assets 并探索其用户界面的主要功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/3418817?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/336005?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
 title: 内容片段控制台视频
-description: 了解AEM的内容片段控制台，该控制台使管理和创作内容片段变得轻松！
+description: 了解 AEM 的内容片段控制台，它可以让管理和创作内容片段变得轻松！
 version: Experience Manager as a Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -11,19 +11,19 @@ last-substantial-update: 2023-05-12T00:00:00Z
 doc-type: Catalog
 exl-id: d92c36e2-fbfa-43a3-8c5f-0371cc99f352
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '241'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
 # 内容片段控制台视频
 
-![AEM内容片段编辑器](./assets/main.png)
+![AEM 内容片段编辑器](./assets/main.png)
 
-Adobe Experience Manager的内容片段控制台使管理和创作内容片段更加容易！ 了解如何通过这些视频充分利用内容片段控制台。
+Adobe Experience Manager 的内容片段控制台可以让管理和创作内容片段变得轻松！通过这些视频了解如何充分利用内容片段控制台。
 
-有关内容片段控制台及其功能的完整详细信息，请查看[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=zh-Hans)。
+请查阅[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html)，以了解内容片段控制台及其功能的完整详情。
 
 ## 视频
 
@@ -38,7 +38,7 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <a href="./basics/content-fragments-console.md" title="控制台概述"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3449342?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3409492?format=jpeg"
                 alt="控制台概述">
             </a>
           </figure>
@@ -50,13 +50,12 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./basics/content-fragments-console.md" title="概述">控制台概述</a>
             </p>
-            <p class="is-size-6">内容片段的简要概述
-              控制台。</p>
+            <p class="is-size-6">内容片段控制台的简要概述。</p>
             <a href="./basics/content-fragments-console.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -83,13 +82,12 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./basics/content-fragment-editor.md" title="概述">编辑器概述</a>
             </p>
-            <p class="is-size-6">内容片段的简要概述
-              编辑者。</p>
+            <p class="is-size-6">内容片段编辑器的简要概述。</p>
             <a href="./basics/content-fragment-editor.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -104,8 +102,7 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <a href="./search/fast-filtering.md" title="快速筛选"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3436706?format=jpeg&captions=chi_hans" alt="快速
-                筛选">
+                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="快速筛选">
             </a>
           </figure>
         </div>
@@ -114,16 +111,14 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./search/fast-filtering.md" title="快速筛选">快速
-                正在筛选</a>
+              <a href="./search/fast-filtering.md" title="快速筛选">快速筛选</a>
             </p>
-            <p class="is-size-6">通过内联快速找到内容片段
-              正在筛选。</p>
+            <p class="is-size-6">使用内联过滤快速定位内容片段。</p>
             <a href="./search/fast-filtering.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -135,11 +130,10 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./editor/new-editor-toggle.md" title="新建编辑器切换"
+            <a href="./editor/new-editor-toggle.md" title="新的编辑器切换开关"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="新建
-                编辑器切换">
+                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="新的编辑器切换开关">
             </a>
           </figure>
         </div>
@@ -148,16 +142,14 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/new-editor-toggle.md" title="新建编辑器切换">新
-                编辑器切换</a>
+              <a href="./editor/new-editor-toggle.md" title="新的编辑器切换开关">新的编辑器切换开关</a>
             </p>
-            <p class="is-size-6">从经典无缝过渡到新
-              编辑者。</p>
+            <p class="is-size-6">从经典编辑器无缝过渡到新版编辑器。</p>
             <a href="./editor/new-editor-toggle.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -169,10 +161,9 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./editor/non-asset-content-references.md" title="非资产
-              内容引用" tabindex="-1">
+            <a href="./editor/non-asset-content-references.md" title="非资产内容引用" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3436772?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3419313?format=jpeg"
                 alt="非资产内容引用">
             </a>
           </figure>
@@ -182,16 +173,14 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/non-asset-content-references.md" title="非资产
-                内容引用">非资产内容引用</a>
+              <a href="./editor/non-asset-content-references.md" title="非资产内容引用">非资产内容引用</a>
             </p>
-            <p class="is-size-6">将体验片段和页面合并到
-              您的内容片段。</p>
+            <p class="is-size-6">将体验片段和页面合并到内容片段中。</p>
             <a href="./editor/non-asset-content-references.md"
               class="spectrum-Button spectrum-Button--outline
               spectrum-Button--primary spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -203,11 +192,10 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./editor/rte-variant-compare.md" title="RTE变量比较"
+            <a href="./editor/rte-variant-compare.md" title="RTE 变体比较"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3437562?format=jpeg&captions=chi_hans" alt="RTE
-                变量比较">
+                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="RTE 变体比较">
             </a>
           </figure>
         </div>
@@ -216,16 +204,14 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/rte-variant-compare.md" title="RTE变量
-                比较">RTE变体比较</a>
+              <a href="./editor/rte-variant-compare.md" title="RTE 变体比较">RTE 变体比较</a>
             </p>
-            <p class="is-size-6">轻松对齐富文本内容
-              渠道。</p>
+            <p class="is-size-6">轻松在各个渠道之间对齐富文本内容。</p>
             <a href="./editor/rte-variant-compare.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -240,7 +226,7 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <a href="./editor/language-copies.md" title="语言副本"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3436966?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3419311?format=jpeg"
                 alt="语言副本">
             </a>
           </figure>
@@ -250,16 +236,14 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/language-copies.md" title="语言副本">语言
-                副本</a>
+              <a href="./editor/language-copies.md" title="语言副本">语言副本</a>
             </p>
-            <p class="is-size-6">轻松管理您的内容片段语言
-              份数</p>
+            <p class="is-size-6">轻松管理您的内容片段语言副本</p>
             <a href="./editor/language-copies.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -274,7 +258,7 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <a href="./search/references.md" title="引用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3423635?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3420950?format=jpeg"
                 alt="引用">
             </a>
           </figure>
@@ -286,12 +270,12 @@ Adobe Experience Manager的内容片段控制台使管理和创作内容片段�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./search/references.md" title="引用">引用</a>
             </p>
-            <p class="is-size-6">了解内容片段引用和关系。</p>
+            <p class="is-size-6">了解内容片段的引用和关系。</p>
             <a href="./search/references.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>

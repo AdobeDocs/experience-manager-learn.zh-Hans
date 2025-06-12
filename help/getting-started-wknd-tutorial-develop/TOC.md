@@ -9,36 +9,36 @@ activity: develop
 audience: developer
 index: y
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '124'
-ht-degree: 40%
+ht-degree: 100%
 
 ---
 
 
 # AEM Sites - WKND 教程快速入门 {#getting-started-wknd-tutorial-develop}
 
-+ [WKND教程概述](overview.md)
-+ 项目原型{#project-archetype}
++ [WKND 教程概述](overview.md)
++ 项目原型 {#project-archetype}
    + [概述](./project-archetype/overview.md)
-   + [1 — 项目设置](./project-archetype/project-setup.md)
-   + [2 — 组件基础知识](./project-archetype/component-basics.md)
-   + [3 — 页面和模板](./project-archetype/pages-templates.md)
-   + [4 — 客户端库](./project-archetype/client-side-libraries.md)
-   + [5 — 样式系统](./project-archetype/style-system.md)
-   + [6 — 自定义组件](./project-archetype/custom-component.md)
-   + [7 — 单元测试](./project-archetype/unit-testing.md)
-+ 快速站点创建{#site-template}
+   + [1 - 项目设置](./project-archetype/project-setup.md)
+   + [2 - 组件基础知识](./project-archetype/component-basics.md)
+   + [3 - 页面和模板](./project-archetype/pages-templates.md)
+   + [4 - 客户端库](./project-archetype/client-side-libraries.md)
+   + [5 - 样式系统](./project-archetype/style-system.md)
+   + [6 - 自定义组件](./project-archetype/custom-component.md)
+   + [7 - 单元测试](./project-archetype/unit-testing.md)
++ 快速创建网站 {#site-template}
    + [概述](./site-template/overview.md)
-   + [1 — 创建站点](./site-template/create-site.md)
-   + [2 — 创作和发布简介](./site-template/author-content-publish.md)
-   + [3 — 使用Adobe XD进行UI规划](./site-template/ui-planning-adobe-xd.md)
-   + [4 — 页面模板](./site-template/page-templates.md)
-   + [5 — 主题乐](./site-template/theming.md)
-+ 启用前端管道 — DevOps{#enable-frontend-pipeline-devops}
+   + [1 - 创建网站](./site-template/create-site.md)
+   + [2 - 创作和发布简介](./site-template/author-content-publish.md)
+   + [3 - 使用 Adobe XD 进行 UI 规划](./site-template/ui-planning-adobe-xd.md)
+   + [4 - 页面模板](./site-template/page-templates.md)
+   + [5 - 主题](./site-template/theming.md)
++ 启用前端管道 - DevOps{#enable-frontend-pipeline-devops}
    + [概述](./enable-frontend-pipeline/overview.md)
-   + [1 — 查看全栈项目](./enable-frontend-pipeline/review-uifrontend-module.md)
-   + [2 — 更新项目以使用前端管道](./enable-frontend-pipeline/update-project.md)
-   + [3 — 使用前端管道部署](./enable-frontend-pipeline/create-frontend-pipeline.md)
-   + [4 — 注意事项](./enable-frontend-pipeline/considerations.md)
+   + [1 - 回顾全栈项目](./enable-frontend-pipeline/review-uifrontend-module.md)
+   + [2 - 更新项目，以使用前端管道](./enable-frontend-pipeline/update-project.md)
+   + [3 - 使用前端管道进行部署](./enable-frontend-pipeline/create-frontend-pipeline.md)
+   + [4 - 注意事项](./enable-frontend-pipeline/considerations.md)
 

@@ -1,6 +1,6 @@
 ---
-title: AEM Headless的高级概念 — GraphQL
-description: 一个端到端教程，其中说明了Adobe Experience Manager (AEM) GraphQL API的高级概念。
+title: AEM Headless 的高级概念 - GraphQL
+description: 端到端教程，展示 Adobe Experience Manager (AEM) GraphQL API 的高级概念。
 version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -9,25 +9,25 @@ level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
 duration: 441
 source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1052'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Headless的高级概念
+# AEM Headless 的高级概念
 
-此端到端教程继续介绍[基础教程](../multi-step/overview.md)，其中涵盖了Adobe Experience Manager (AEM) Headless和GraphQL的基础知识。 该高级教程说明了使用内容片段模型、内容片段和AEM GraphQL持久查询的深入方面，包括在客户端应用程序中使用GraphQL持久查询。
+本端到端教程是[基础教程](../multi-step/overview.md)的延续，后者介绍了 Adobe Experience Manager (AEM) Headless 和 GraphQL 的基础知识。本高级教程深入阐述了使用内容片段模型、内容片段以及 AEM GraphQL 持久化查询的各个方面，包括如何在客户端应用程序中使用 GraphQL 持久化查询。
 
 ## 先决条件
 
-完成[AEM as a Cloud Service快速设置](../quick-setup/cloud-service.md)以配置您的AEM as a Cloud Service环境。
+完成 [AEM as a Cloud Service 的快速设置](../quick-setup/cloud-service.md)，以配置您的 AEM as a Cloud Service 环境。
 
-强烈建议您先完成前[个基本教程](../multi-step/overview.md)和[个视频系列](../video-series/modeling-basics.md)教程，然后再继续此高级教程。 虽然您可以使用本地AEM环境完成本教程，但本教程仅介绍AEM as a Cloud Service的工作流。
+强烈建议您在继续学习本高级教程之前，先完成之前的[基础教程](../multi-step/overview.md)和[视频系列](../video-series/modeling-basics.md)教程。虽然您可以使用本地 AEM 环境完成本教程，但本教程仅涵盖 AEM as a Cloud Service 的工作流程。
 
 >[!CAUTION]
 >
->如果您无权访问AEM as a Cloud Service环境，则可以使用本地SDK[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html?lang=zh-Hans)完成AEM Headless快速设置。 但是，请务必注意，某些产品UI页面（例如内容片段导航）是不同的。
+>如果您无法访问 AEM as a Cloud Service 环境，您可以[使用本地 SDK 完成 AEM Headless 的快速设置](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html)。然而，值得注意的是，某些产品的 UI 页面（如内容片段导航）与此不同。
 
 
 
@@ -35,102 +35,102 @@ ht-degree: 0%
 
 本教程涵盖以下主题：
 
-* 使用验证规则和更高级的数据类型（如选项卡占位符、嵌套片段引用、JSON对象以及日期和时间数据类型）创建内容片段模型。
-* 处理嵌套内容和片段引用时创作内容片段，并为内容片段创作治理配置文件夹策略。
-* 使用带有变量和指令的AEM查询来探索GraphQL GraphQL API功能。
-* 在AEM中使用参数保留GraphQL查询，并了解如何将缓存控制参数用于保留查询。
-* 使用AEM Headless JavaScript SDK将有关持久查询的请求集成到示例WKND GraphQL React应用程序中。
+* 使用验证规则和更高级的数据类型（如选项卡占位符、嵌套片段引用、JSON 对象以及日期和时间数据类型）来创建内容片段模型。
+* 在处理嵌套内容和片段引用时创作内容片段，并配置文件夹策略以实现内容片段创作的治理
+* 使用带有变量和指令的 GraphQL 查询来探索 AEM GraphQL API 的功能。
+* 在 AEM 中持久化带参数的 GraphQL 查询，并学习如何在持久化查询中使用 cache-control 参数。
+* 使用 AEM Headless JavaScript SDK，将对持久化查询的请求集成到示例 WKND GraphQL React 应用程序中。
 
-## AEM Headless的高级概念概述
+## AEM Headless 高级概念概述
 
-以下视频提供了本教程中涵盖的概念的高级概述。 本教程包括使用更高级的数据类型定义内容片段模型、嵌套内容片段以及在AEM中保留GraphQL查询。
+以下视频概述了本教程涵盖的主要概念。本教程包括使用更高级的数据类型定义内容片段模型、嵌套内容片段，以及在 AEM 中持久化 GraphQL 查询。
 
->[!VIDEO](https://video.tv.adobe.com/v/3446137?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/340035?quality=12&learn=on)
 
 >[!CAUTION]
 >
->此视频（时间2:25）介绍了如何通过包管理器安装GraphiQL查询编辑器以探索GraphQL查询。 但是，在较新版本的AEM as Cloud Service中，提供了内置&#x200B;**GraphiQL Explorer**，因此无需安装包。 有关详细信息，请参阅[使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=zh-Hans)。
+>本视频（在 2:25 处）提到通过 Package Manager 安装 GraphiQL 查询编辑器，以便探索 GraphQL 查询。然而，在较新的 AEM as a Cloud Service 版本中，内置了 **GraphiQL Explorer**，因此无需单独安装软件包。请参阅[使用 GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 以了解更多信息。
 
 
 ## 项目设置
 
-WKND站点项目具有所有必需的配置，因此您可以在完成[快速设置](../quick-setup/cloud-service.md)后立即启动教程。 本节仅重点介绍在创建您自己的AEM Headless项目时可以使用的一些重要步骤。
+WKND Site 项目包含所有必要的配置，因此您可以在完成[快速设置](../quick-setup/cloud-service.md)后立即开始本教程。本节仅重点介绍创建您自己的 AEM Headless 项目时可参考的一些重要步骤。
 
 
 ### 审查现有配置
 
-在AEM中开始任何新项目的第一步是创建其配置（作为工作区）并创建GraphQL API端点。 要查看或创建配置，请导航到&#x200B;**工具** > **常规** > **配置浏览器**。
+在 AEM 中启动任何新项目的第一步是创建其配置，作为工作区并创建 GraphQL API 端点。要查看或创建配置，请导航至&#x200B;**工具** > **常规** > **配置浏览器**。
 
-![导航到配置浏览器](assets/overview/create-configuration.png)
+![导航至配置浏览器](assets/overview/create-configuration.png)
 
-请注意，已经为教程创建了`WKND Shared`站点配置。 要为您自己的项目创建配置，请选择右上角的&#x200B;**创建**，并完成显示的创建配置模式中的表单。
+请注意，本教程已创建了 `WKND Shared` 网站配置。要为您自己的项目创建配置，请点击右上角的&#x200B;**创建**，并在随后出现的“创建配置”模态对话框中填写表单。
 
-![查看WKND共享配置](assets/overview/review-wknd-shared-configuration.png)
+![查看 WKND 共享配置](assets/overview/review-wknd-shared-configuration.png)
 
-### 审查GraphQL API端点
+### 查看 GraphQL API 端点
 
-接下来，您必须配置要将GraphQL查询发送到的目标的API端点。 若要查看现有端点或创建端点，请导航到&#x200B;**工具** > **常规** > **GraphQL**。
+接下来，您必须配置 API 端点以发送 GraphQL 查询。要查看现有端点或创建一个端点，请导航至&#x200B;**工具** > **常规** > **GraphQL**。
 
-![配置终结点](assets/overview/endpoints.png)
+![配置端点](assets/overview/endpoints.png)
 
-请注意，`WKND Shared Endpoint`已创建。 要为项目创建端点，请选择右上角的&#x200B;**创建**&#x200B;并遵循工作流程。
+请注意，`WKND Shared Endpoint` 已经创建。要为您的项目创建端点，请在右上角选择&#x200B;**创建**，并按照工作流程进行操作。
 
-![查看WKND共享终结点](assets/overview/review-wknd-shared-endpoint.png)
+![审查 WKND 共享端点](assets/overview/review-wknd-shared-endpoint.png)
 
 >[!NOTE]
 >
-> 保存端点后，您将看到一个关于访问安全控制台的模式窗口，如果您希望配置对端点的访问，通过该模式可调整安全设置。 但是，安全权限本身并不在本教程的涵盖范围内。 有关详细信息，请参阅[AEM文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hans)。
+> 保存端点后，您将看到一个关于访问安全控制台的模态对话框，如果您想配置对端点的访问权限，可以通过该对话框调整安全设置。然而，安全权限本身并不在本教程的讨论范围内。有关更多信息，请参阅 [AEM 文档](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)。
 
-### 查看WKND内容结构和语言根文件夹
+### 查看 WKND 内容结构和语言根文件夹
 
-明确定义的内容结构是AEM Headless实施成功的关键。 它有助于内容的可扩展性、可用性和权限管理。
+明确的内容结构是AEM Headless 实施成功的关键。它有助于提高内容的可扩展性、可用性和权限管理。
 
-语言根文件夹是使用ISO语言代码作为其名称（如EN或FR）的文件夹。 AEM翻译管理系统使用这些文件夹定义内容的主要语言和内容翻译的语言。
+语言根文件夹是指以 ISO 语言代码（如 EN 或 FR）作为名称的文件夹。AEM 翻译管理系统利用这些文件夹来定义内容的主要语言以及用于内容翻译的语言。
 
-转到&#x200B;**导航** > **Assets** > **文件**。
+前往&#x200B;**导航** > **资源** > **文件**。
 
-![导航到文件](assets/overview/files.png)
+![导航到“文件”](assets/overview/files.png)
 
-导航到&#x200B;**WKND共享**&#x200B;文件夹。 观察标题为“English”和名称为“EN”的文件夹。 此文件夹是WKND站点项目的语言根文件夹。
+导航到 **WKND 共享**&#x200B;文件夹。注意标题为“English”且名称为“EN”的文件夹。此文件夹是 WKND Site 项目的语言根文件夹。
 
 ![英文文件夹](assets/overview/english.png)
 
-对于您自己的项目，请在配置中创建语言根文件夹。 有关更多详细信息，请参阅[创建文件夹](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#create-folders)部分。
+对于您自己的项目，请在配置中创建一个语言根文件夹。有关更多详细信息，请参阅[创建文件夹](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#create-folders)部分。
 
-### 将配置分配给嵌套文件夹
+### 为嵌套文件夹分配配置
 
-最后，必须将项目配置分配给语言根文件夹。 通过此分配，可基于在您的项目配置中定义的内容片段模型创建内容片段。
+最后，您必须将项目的配置分配到语言根文件夹。此分配允许根据项目配置中定义的内容片段模型来创建内容片段。
 
 要将语言根文件夹分配给配置，请选择该文件夹，然后在顶部导航栏中选择&#x200B;**属性**。
 
 ![选择属性](assets/overview/properties.png)
 
-接下来，导航到&#x200B;**云服务**&#x200B;选项卡，并在&#x200B;**云配置**&#x200B;字段中选择文件夹图标。
+接下来，导航至&#x200B;**云服务**&#x200B;选项卡，并在&#x200B;**云配置**&#x200B;字段中选择文件夹图标。
 
 ![云配置](assets/overview/cloud-conf.png)
 
-在显示的模式窗口中，选择您之前创建的配置以为其分配语言根文件夹。
+在出现的模态对话框中，选择您之前创建的配置，以将语言根文件夹分配给它。
 
 ### 最佳实践
 
-以下是在AEM中创建自己的项目时的最佳实践：
+在 AEM 中创建自己的项目时，以下是一些最佳实践：
 
-* 在建模文件夹层级时应考虑本地化和翻译。 换句话说，语言文件夹应该嵌套在配置文件夹中，这样可以轻松地翻译这些配置文件夹中的内容。
-* 文件夹层次结构应保持扁平且简单明了。 避免在以后移动或重命名文件夹和片段，尤其是在发布以供实时使用之后，因为它更改了可能影响片段引用和GraphQL查询的路径。
+* 在构建文件夹层次结构时，应充分考虑本地化和翻译因素。换句话说，语言文件夹应嵌套在配置文件夹中，这样便于翻译这些配置文件夹中的内容。
+* 文件夹层次结构应保持扁平且直观。请避免在后续操作中移动或重命名文件夹和片段，尤其是在发布供实时使用之后，因为这会改变路径，从而可能影响片段引用和 GraphQL 查询。
 
-## 入门和解决方案包
+## 入门包和解决方案包
 
-有两个AEM **包**&#x200B;可用，可以通过[包管理器](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#sample-content)进行安装
+有两个 AEM **包**&#x200B;可用，可通过[包管理器](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#sample-content)进行安装
 
-* 本教程稍后将使用[Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip)，其中包含示例图像和文件夹。
-* [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip)包含第1-4章的最终解决方案，包括新的内容片段模型、内容片段和持久的GraphQL查询。 对于希望直接跳转到[客户端应用程序集成](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)章节的人非常有用。
+* [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip) 在教程的后续部分中使用，其中包含示例图像和文件夹。
+* [高级 GraphQL 教程解决方案包 1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) 包含第 1 至 4 章的完整解决方案，包括新的内容片段模型、内容片段和持久化 GraphQL 查询。对于那些想直接跳到[客户端应用程序集成](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)章节的人员来说，这将非常有用。
 
 
-[React应用程序 — 高级教程 — WKND Adventures](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md)项目可用于查看和探索示例应用程序。 此示例应用程序通过调用持久化的AEM查询从GraphQL检索内容，并在沉浸式体验中呈现该内容。
+[React 应用程序 - 高级教程 - WKND Adventures](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) 项目可供查看和探索示例应用程序。此示例应用程序通过调用持久化的 GraphQL 查询从 AEM 检索内容，并以沉浸式体验呈现。
 
 ## 快速入门
 
-要开始使用此高级教程，请执行以下步骤：
+要开始学习本高级教程，请按照以下步骤进行：
 
-1. 使用[AEM as a Cloud Service](../quick-setup/cloud-service.md)设置开发环境。
-1. 开始有关[创建内容片段模型](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)的教程一章。
+1. 使用 [AEM as a Cloud Service](../quick-setup/cloud-service.md) 来搭建开发环境。
+1. 请从[创建内容片段模型](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)的教程章节开始。

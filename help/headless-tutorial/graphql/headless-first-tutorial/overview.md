@@ -1,6 +1,6 @@
 ---
-title: AEM Headless第一个教程
-description: 了解如何成为AEM Headless的首个应用程序。
+title: 以 AEM Headless 为核心的教程
+description: 了解如何创建以 AEM Headless 为核心的应用程序。
 version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
@@ -13,53 +13,53 @@ thumbnail: KT-13270.jpeg
 exl-id: b0ac4b50-5fe5-41a1-9530-8e593d7000c9
 duration: 89
 source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '421'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# AEM Headless第一个教程
+# 以 AEM Headless 为核心的教程
 
-欢迎阅读关于使用React构建一个Web体验的教程，该教程完全由AEM Headless API和GraphQL提供支持。 在本教程中，我们将指导您通过将React、Adobe Experience Manager (AEM) Headless API和GraphQL的强大功能结合使用，来创建动态的交互式Web应用程序。
+欢迎参加本教程，学习如何使用 React 构建由 AEM Headless API 和 GraphQL 全面驱动的 Web 体验。在本教程中，我们将引导您通过结合 React、Adobe Experience Manager (AEM) Headless API 和 GraphQL 的强大功能，创建一个动态且互动的 Web 应用程序。
 
-React是用于构建用户界面的常用JavaScript库，以其简单性、可重用性和基于组件的架构而闻名。 AEM提供了强大的内容管理功能并公开了Headless API，允许开发人员通过各种渠道和应用程序访问存储在AEM中的内容和数据。
+React 是一个流行的 JavaScript 库，用于构建用户界面，以其简洁性、可重用性和基于组件的架构著称。AEM 提供强大的内容管理功能，并通过 Headless API 向开发人员开放，允许他们通过多种渠道和应用程序访问存储在 AEM 中的内容和数据。
 
-利用AEM Headless API，您可以从AEM实例中检索内容、资源和数据，并使用它们来增强React应用程序。 GraphQL是一种灵活的API查询语言，可提供一种高效且精确的方法来从AEM实例请求特定数据，从而实现React与AEM之间的无缝集成。
+通过利用 AEM Headless API，您可以从 AEM 实例中获取内容、资产和数据，并将其用于驱动您的 React 应用程序。GraphQL 是一种灵活的 API 查询语言，可提供高效且精准的方式来请求 AEM 实例中的特定数据，实现 React 与 AEM 之间的无缝集成。
 
-![AEM Headless第一个教程](./assets/overview/overview.png)
+![以 AEM Headless 为核心的教程](./assets/overview/overview.png)
 
-在本教程中，我们将指导您逐步完成使用React和AEM Headless API与GraphQL构建Web体验的过程。 您将学习如何设置开发环境、在React和AEM之间建立连接、使用GraphQL查询检索内容以及在Web应用程序中动态呈现内容。
+在本教程中，我们将逐步引导您使用 React 结合 AEM Headless API 和 GraphQL 构建 Web 体验。您将学习如何搭建开发环境、建立 React 与 AEM 的连接、使用 GraphQL 查询检索内容，并在您的 Web 应用中动态呈现这些内容。
 
-我们将介绍配置React项目、使用AEM建立身份验证、使用GraphQL从AEM查询内容、处理React组件中的数据以及通过利用缓存和分页优化性能等主题。
+我们将涵盖的内容包括配置 React 项目、与 AEM 建立身份验证、使用 GraphQL 查询 AEM 内容、在 React 组件中处理数据，以及通过缓存和分页优化性能。
 
-在本教程结束时，您将充分了解如何利用React、AEM Headless API和GraphQL构建强大而引人入胜的Web体验。 那么，让我们深入了解并开始构建您的下一个Web应用程序！
+通过本教程的学习，您将全面掌握如何利用 React、AEM Headless API 和 GraphQL 构建强大且富有吸引力的 Web 体验。那我们开始吧，一起动手构建您的下一个 Web 应用程序！
 
 ## 先决条件
 
 ### 技能
 
-+ 熟练掌握React
-+ 熟练掌握GraphQL
-+ AEM as a Cloud Service基础知识
++ 熟练掌握 React
++ 熟练掌握 GraphQL
++ AEM as a Cloud Service 基础知识
 
 ### AEM as a Cloud Service
 
-本教程需要拥有AEM as a Cloud Service环境的管理员访问权限。
+本教程需要具备对 AEM as a Cloud Service 环境的管理员访问权限。
 
 ### 软件
 
 + [Node.js v16+](https://nodejs.org/en/)
-   + 通过从命令行运行`node -v`检查节点版本
+   + 通过命令行运行 `node -v` 来检查您的节点版本
 + [npm 6+](https://www.npmjs.com/)
-   + 通过从命令行运行`npm -v`检查您的npm版本
+   + 通过命令行运行 `npm -v` 来检查您的 npm 版本
 + [Git](https://git-scm.com/)
-   + 通过从命令行运行`git -v`检查您的Git版本
+   + 通过命令行运行 `git -v` 来检查您的 git 版本
 
-使用[节点版本管理器(nvm)](https://github.com/nvm-sh/nvm)解决同一计算机上有多个node.js版本的问题。
+使用[节点版本管理器 (nvm) ](https://github.com/nvm-sh/nvm)来解决同一台机器上存在多个 Node.js 版本的问题。
 
-确保您具有在计算机上全局安装软件的权限。
+请确保您拥有在计算机上全局安装软件的权限。
 
 ## 下一步
 
-现在您的环境已设置，让我们进入下一步：[在AEM as a Cloud Service中设置并创作内容](./1-content-modeling.md)
+环境配置完成后，接下来我们进入下一步：[在 AEM as a Cloud Service 中进行内容设置与创作](./1-content-modeling.md)。

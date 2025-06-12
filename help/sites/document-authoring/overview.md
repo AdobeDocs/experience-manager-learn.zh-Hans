@@ -1,6 +1,6 @@
 ---
 title: 文档创作视频
-description: 了解如何在AEM中设置和配置文档创作。
+description: 了解如何在 AEM 中设置和配置文档创作。
 version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
@@ -12,17 +12,17 @@ duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1047'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
 # 文档创作视频
 
-了解如何配置文档创作，以允许AEM作者使用Microsoft Word或Google Docs编辑和发布文档。
+了解如何配置文档创作，使 AEM 作者可使用 Microsoft Word 或 Google 文档编辑和发布文档。
 
-有关设置文档创作的完整详细信息，请查看[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=zh-Hans)。
+请参阅 [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html) ，了解有关设置文档创作的完整详细信息。
 
 ## 文档创作快速入门
 
@@ -33,10 +33,10 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="set-up.md" title="文档创作设置"
+            <a href="set-up.md" title="设置文档创作"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438873/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3425699/?format=jpeg"
                 alt="文档创作概述">
             </a>
           </figure>
@@ -53,7 +53,7 @@ ht-degree: 9%
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -68,7 +68,7 @@ ht-degree: 9%
             <a href="preview-and-publish.md" title="预览和发布内容"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3441353/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3425700/?format=jpeg"
                 alt="预览和发布内容">
             </a>
           </figure>
@@ -80,12 +80,12 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="preview-and-publish.md" title="预览和发布内容">编辑器概述</a>
             </p>
-            <p class="is-size-6">有关使用AEM Sidekick预览和发布内容的简要概述。</p>
+            <p class="is-size-6">使用 AEM Sidekick 预览和发布内容的简要概述。</p>
             <a href="preview-and-publish.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -100,7 +100,7 @@ ht-degree: 9%
             <a href="document-structure.md" title="文档结构"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438825/?format=jpeg&captions=chi_hans" alt="文档结构">
+                src="https://video.tv.adobe.com/v/3425701/?format=jpeg" alt="文档结构">
             </a>
           </figure>
         </div>
@@ -116,7 +116,7 @@ ht-degree: 9%
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -128,10 +128,10 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="default-content-and-sections.md" title="默认内容和区域"
+            <a href="default-content-and-sections.md" title="默认内容和部分"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3437985/?format=jpeg&captions=chi_hans" alt="默认内容和区域">
+                src="https://video.tv.adobe.com/v/3425702/?format=jpeg" alt="默认内容和部分">
             </a>
           </figure>
         </div>
@@ -140,14 +140,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="default-content-and-sections.md" title="默认内容和区域">新编辑器切换</a>
+              <a href="default-content-and-sections.md" title="默认内容和部分">新的编辑器切换开关</a>
             </p>
             <p class="is-size-6">探索默认内容和部分的文档创作概念。</p>
             <a href="default-content-and-sections.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -159,10 +159,10 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="blocks-and-autoblocks.md" title="块和自动块" tabindex="-1">
+            <a href="blocks-and-autoblocks.md" title="区块和自动区块" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3439514/?format=jpeg&captions=chi_hans"
-                alt="块和自动块">
+                src="https://video.tv.adobe.com/v/3425703/?format=jpeg"
+                alt="区块和自动区块">
             </a>
           </figure>
         </div>
@@ -171,15 +171,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="blocks-and-autoblocks.md" title="块和自动块">
-                块和自动块</a>
+              <a href="blocks-and-autoblocks.md" title="区块和自动区块">区块和自动区块</a>
             </p>
-            <p class="is-size-6">探索块和自动块的文档创作中的概念。</p>
+            <p class="is-size-6">探索文档创作中区块和自动区块的概念。</p>
             <a href="blocks-and-autoblocks.md"
               class="spectrum-Button spectrum-Button--outline
               spectrum-Button--primary spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -194,7 +193,7 @@ ht-degree: 9%
             <a href="redirects.md" title="重定向"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438553/?format=jpeg&captions=chi_hans" alt="重定向">
+                src="https://video.tv.adobe.com/v/3425704/?format=jpeg" alt="重定向">
             </a>
           </figure>
         </div>
@@ -205,12 +204,12 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="redirects.md" title="重定向">创建重定向</a>
             </p>
-            <p class="is-size-6">探索如何使用文档创作创建重定向。</p>
+            <p class="is-size-6">探索如何使用文档创作来创建重定向。</p>
             <a href="redirects.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -225,7 +224,7 @@ ht-degree: 9%
             <a href="bulk-metadata.md" title="批量元数据"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438432/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3425705/?format=jpeg"
                 alt="批量元数据">
             </a>
           </figure>
@@ -235,15 +234,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="bulk-metadata.md" title="批量元数据">语言
-                副本</a>
+              <a href="bulk-metadata.md" title="批量元数据">语言副本</a>
             </p>
-            <p class="is-size-6">探索如何在文档创作中处理批量元数据。</p>
+            <p class="is-size-6">探索在文档创作中如何处理批量元数据。</p>
             <a href="bulk-metadata.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -258,7 +256,7 @@ ht-degree: 9%
             <a href="page-metadata.md" title="页面元数据"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438078/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3425706/?format=jpeg"
                 alt="页面元数据">
             </a>
           </figure>
@@ -270,12 +268,12 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="page-metadata.md" title="页面元数据">页面元数据</a>
             </p>
-            <p class="is-size-6">了解文档创作如何管理页面元数据。</p>
+            <p class="is-size-6">探索文档创作如何管理页面元数据。</p>
             <a href="page-metadata.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -290,7 +288,7 @@ ht-degree: 9%
             <a href="author-authentication.md" title="作者身份验证"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438188/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3429594/?format=jpeg"
                 alt="作者身份验证">
             </a>
           </figure>
@@ -307,7 +305,7 @@ ht-degree: 9%
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -327,7 +325,7 @@ ht-degree: 9%
             <a href="./how-to/responsive-navigation.md" title="响应式导航"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438177/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3425707/?format=jpeg"
                 alt="响应式导航">
             </a>
           </figure>
@@ -344,7 +342,7 @@ ht-degree: 9%
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -359,7 +357,7 @@ ht-degree: 9%
             <a href="./how-to/document-audit.md" title="文档审核"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3437721/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3425722/?format=jpeg"
                 alt="文档审核">
             </a>
           </figure>
@@ -371,12 +369,12 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/document-audit.md" title="文档审核">文档审核</a>
             </p>
-            <p class="is-size-6">探索文档创作处理文档审核的方式。</p>
+            <p class="is-size-6">探索文档创作如何处理文档审核。</p>
             <a href="page-metadata.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -391,7 +389,7 @@ ht-degree: 9%
             <a href="./how-to/document-permissions.md" title="文档权限"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438111/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3425724/?format=jpeg"
                 alt="文档权限">
             </a>
           </figure>
@@ -408,7 +406,7 @@ ht-degree: 9%
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -423,7 +421,7 @@ ht-degree: 9%
             <a href="./how-to/document-versions.md" title="文档版本"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438806/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3425728/?format=jpeg"
                 alt="文档版本">
             </a>
           </figure>
@@ -435,12 +433,12 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/document-versions.md" title="文档版本">文档版本</a>
             </p>
-            <p class="is-size-6">了解文档创作如何处理文档版本。</p>
+            <p class="is-size-6">探索文档创作如何处理文档版本。</p>
             <a href="./how-to/document-versions.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -455,7 +453,7 @@ ht-degree: 9%
             <a href="./how-to/document-workflows.md" title="文档工作流"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438300/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3425720/?format=jpeg"
                 alt="文档工作流">
             </a>
           </figure>
@@ -467,12 +465,12 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/document-workflows.md" title="文档工作流">文档工作流</a>
             </p>
-            <p class="is-size-6">了解文档创作如何处理文档工作流。</p>
+            <p class="is-size-6">探索文档创作如何处理文档工作流。</p>
             <a href="./how-to/document-workflows.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -484,11 +482,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/iframes.md" title="使用iFrame"
+            <a href="./how-to/iframes.md" title="使用 iFrames"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438399/?format=jpeg&captions=chi_hans"
-                alt="使用iFrame">
+                src="https://video.tv.adobe.com/v/3425719/?format=jpeg"
+                alt="使用 iFrames">
             </a>
           </figure>
         </div>
@@ -497,14 +495,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/iframes.md" title="使用iFrame">使用iFrame</a>
+              <a href="./how-to/iframes.md" title="使用 iFrames">使用 iFrames</a>
             </p>
-            <p class="is-size-6">探索文档创作如何处理视频和iFrame。</p>
+            <p class="is-size-6">探索文档创作如何处理视频和 iFrame。</p>
             <a href="./how-to/iframes.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -516,11 +514,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/image-alt-text.md" title="使用替换文本"
+            <a href="./how-to/image-alt-text.md" title="使用替代文本"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438685/?format=jpeg&captions=chi_hans"
-                alt="使用替换文本">
+                src="https://video.tv.adobe.com/v/3425721/?format=jpeg"
+                alt="使用替代文本">
             </a>
           </figure>
         </div>
@@ -529,14 +527,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/image-alt-text.md" title="使用替换文本">创作图像替换文本</a>
+              <a href="./how-to/image-alt-text.md" title="使用替代文本">创作图像替代文本</a>
             </p>
-            <p class="is-size-6">探索文档创作如何处理图像替换文本。</p>
+            <p class="is-size-6">探索文档创作如何处理图像替代文本。</p>
             <a href="./how-to/image-alt-text.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -548,11 +546,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/no-index.md" title="阻止索引"
+            <a href="./how-to/no-index.md" title="防止索引"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438128/?format=jpeg&captions=chi_hans"
-                alt="阻止索引">
+                src="https://video.tv.adobe.com/v/3425726/?format=jpeg"
+                alt="防止索引">
             </a>
           </figure>
         </div>
@@ -561,14 +559,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/no-index.md" title="阻止索引">阻止搜索引擎索引</a>
+              <a href="./how-to/no-index.md" title="防止索引">防止搜索引擎索引</a>
             </p>
-            <p class="is-size-6">了解如何阻止搜索引擎编制索引。</p>
+            <p class="is-size-6">探索如何防止被搜索引擎索引。</p>
             <a href="./how-to/no-index.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -583,7 +581,7 @@ ht-degree: 9%
             <a href="./how-to/using-dynamic-media.md" title="Dynamic Media"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438916/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3429593/?format=jpeg"
                 alt="Dynamic Media">
             </a>
           </figure>
@@ -595,12 +593,12 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/using-dynamic-media.md" title="Dynamic Media">Dynamic Media</a>
             </p>
-            <p class="is-size-6">了解如何使用Dynamic Media优化图像交付。</p>
+            <p class="is-size-6">探索如何使用 Dynamic Media 来优化图像传递。</p>
             <a href="./how-to/using-dynamic-media.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -612,11 +610,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/migration-using-importer.md" title="使用导入程序进行站点迁移"
+            <a href="./how-to/migration-using-importer.md" title="使用导入器进行网站迁移"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3443706/?format=jpeg&captions=chi_hans"
-                alt="使用导入程序进行站点迁移">
+                src="https://video.tv.adobe.com/v/3429595/?format=jpeg"
+                alt="使用导入器进行网站迁移">
             </a>
           </figure>
         </div>
@@ -625,14 +623,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              使用导入程序<a href="./how-to/migration-using-importer.md" title="使用导入程序进行站点迁移">站点迁移</a>
+              <a href="./how-to/migration-using-importer.md" title="使用导入器进行网站迁移">使用导入器进行网站迁移</a>
             </p>
-            <p class="is-size-6">了解如何使用AEM导入器工具将站点迁移到Edge Delivery Services。</p>
+            <p class="is-size-6">探索如何使用 AEM Importer 工具将网站迁移到 Edge Delivery Services。</p>
             <a href="./how-to/migration-using-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -644,11 +642,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/customizing-importer.md" title="自定义导入程序"
+            <a href="./how-to/customizing-importer.md" title="自定义导入器"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3444255/?format=jpeg&captions=chi_hans"
-                alt="自定义导入程序">
+                src="https://video.tv.adobe.com/v/3429596/?format=jpeg"
+                alt="自定义导入器">
             </a>
           </figure>
         </div>
@@ -657,14 +655,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">3 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/customizing-importer.md" title="自定义导入程序">自定义导入程序</a>
+              <a href="./how-to/customizing-importer.md" title="自定义导入器">自定义导入器</a>
             </p>
-            <p class="is-size-6">了解如何自定义AEM导入程序工具以进行站点迁移。</p>
+            <p class="is-size-6">探索如何自定义 AEM Importer 工具，以进行网站迁移。</p>
             <a href="./how-to/customizing-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -679,7 +677,7 @@ ht-degree: 9%
             <a href="./how-to/bulk-importing-using-importer.md" title="使用导入器批量导入"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3445895/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3429597/?format=jpeg"
                 alt="使用导入器批量导入">
             </a>
           </figure>
@@ -689,14 +687,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">3 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/bulk-importing-using-importer.md" title="使用导入器批量导入">使用导入程序批量导入</a>
+              <a href="./how-to/bulk-importing-using-importer.md" title="使用导入器批量导入">使用导入器批量导入</a>
             </p>
-            <p class="is-size-6">了解如何在站点迁移期间使用AEM导入器工具批量导入网页。</p>
+            <p class="is-size-6">探索如何在网站迁移期间使用 AEM 导入器工具批量导入网页。</p>
             <a href="./how-to/bulk-importing-using-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -716,7 +714,7 @@ ht-degree: 9%
             <a href="./how-to/generate-variations/overview.md" title="生成变体"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3441344/?format=jpeg&captions=chi_hans"
+                src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
                 alt="生成变体">
             </a>
           </figure>
@@ -728,12 +726,12 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/generate-variations/overview.md" title="生成变体">生成变体</a>
             </p>
-            <p class="is-size-6">介绍如何在Edge Delivery Services中生成变体，并了解它对营销人员有何用处。</p>
+            <p class="is-size-6">介绍 Edge Delivery Services 中生成变化的方法并了解它如何对营销人员有用。</p>
             <a href="./how-to/generate-variations/overview.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -745,11 +743,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/configure-sidekick.md" title="生成变体 — 配置Sidekick"
+            <a href="./how-to/generate-variations/configure-sidekick.md" title="生成变体 - 配置 Sidekick"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3436999/?format=jpeg&captions=chi_hans"
-                alt="生成变体 — 配置Sidekick">
+                src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
+                alt="生成变体 - 配置 Sidekick">
             </a>
           </figure>
         </div>
@@ -758,14 +756,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/configure-sidekick.md" title="生成变体 — 配置Sidekick">生成变体 — 配置Sidekick</a>
+              <a href="./how-to/generate-variations/configure-sidekick.md" title="生成变体 - 配置 Sidekick">生成变体 - 配置 Sidekick</a>
             </p>
-            <p class="is-size-6">了解如何在Edge Delivery Services文档创作中配置Sidekick以生成变体。</p>
+            <p class="is-size-6">探索如何配置 Sidekick 以在 Edge Delivery Services 文档创作中生成变体。</p>
             <a href="./how-to/generate-variations/configure-sidekick.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -777,11 +775,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/prompt-templates.md" title="生成变体 — 提示模板"
+            <a href="./how-to/generate-variations/prompt-templates.md" title="生成变体 - 提示模板"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3441344/?format=jpeg&captions=chi_hans"
-                alt="生成变体 — 提示模板">
+                src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
+                alt="生成变体 - 提示模板">
             </a>
           </figure>
         </div>
@@ -790,14 +788,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/prompt-templates.md" title="生成变体 — 提示模板">生成变体 — 提示模板</a>
+              <a href="./how-to/generate-variations/prompt-templates.md" title="生成变体 - 提示模板">生成变体 - 提示模板</a>
             </p>
-            <p class="is-size-6">了解如何使用提示模板来生成变体。</p>
+            <p class="is-size-6">探索如何使用提示模板来生成变体。</p>
             <a href="./how-to/generate-variations/prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -809,11 +807,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 — 自定义提示模板"
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 - 自定义提示模板"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438509/?format=jpeg&captions=chi_hans"
-                alt="生成变体 — 自定义提示模板">
+                src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
+                alt="生成变体 - 自定义提示模板">
             </a>
           </figure>
         </div>
@@ -822,14 +820,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 — 自定义提示模板">生成变体 — 自定义提示模板</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 - 自定义提示模板">生成变体 - 自定义提示模板</a>
             </p>
-            <p class="is-size-6">了解如何为生成变体构建自定义提示模板。</p>
+            <p class="is-size-6">探索如何构建用于生成变体的自定义提示模板。</p>
             <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -841,11 +839,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 — 保存自定义提示模板"
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 - 保存自定义提示模板"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3437519/?format=jpeg&captions=chi_hans"
-                alt="生成变体 — 保存自定义提示模板">
+                src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
+                alt="生成变体 - 保存自定义提示模板">
             </a>
           </figure>
         </div>
@@ -854,14 +852,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 — 保存自定义提示模板">生成变体 — 保存自定义提示模板</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="生成变体 - 保存自定义提示模板">生成变体 - 保存自定义提示模板</a>
             </p>
-            <p class="is-size-6">了解如何保存生成变体的自定义提示模板。</p>
+            <p class="is-size-6">探索如何保存用于生成变体的自定义提示模板。</p>
             <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -873,11 +871,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/using-target-audiences.md" title="生成变体 — 使用Adobe Target受众"
+            <a href="./how-to/generate-variations/using-target-audiences.md" title="生成变体 - 使用 Adobe Target 受众"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3437765/?format=jpeg&captions=chi_hans"
-                alt="生成变体 — 使用Adobe Target受众">
+                src="https://video.tv.adobe.com/v/3428792/?format=jpeg"
+                alt="生成变体 - 使用 Adobe Target 受众">
             </a>
           </figure>
         </div>
@@ -886,14 +884,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-target-audiences.md" title="生成变体 — 使用Adobe Target受众">生成变体 — 使用Adobe Target受众</a>
+              <a href="./how-to/generate-variations/using-target-audiences.md" title="生成变体 - 使用 Adobe Target 受众">生成变体 - 使用 Adobe Target 受众</a>
             </p>
-            <p class="is-size-6">探索如何使用Adobe Target受众，以便为您的内容变体定位正确的受众。</p>
+            <p class="is-size-6">探索如何使用 Adobe Target 受众来针对您的内容变体定位正确的受众。</p>
             <a href="./how-to/generate-variations/using-target-audiences.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -905,11 +903,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="生成变体 — 使用CSV文件受众"
+            <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="生成变体 - 使用 CSV 文件受众"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3436897/?format=jpeg&captions=chi_hans"
-                alt="生成变体 — 使用CSV文件受众">
+                src="https://video.tv.adobe.com/v/3428793/?format=jpeg"
+                alt="生成变体 - 使用 CSV 文件受众">
             </a>
           </figure>
         </div>
@@ -918,14 +916,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="生成变体 — 使用CSV文件受众">生成变体 — 使用CSV文件受众</a>
+              <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="生成变体 - 使用 CSV 文件受众">生成变体 - 使用 CSV 文件受众</a>
             </p>
-            <p class="is-size-6">探索如何使用受众CSV文件，以便针对您的内容变体定位正确的受众。</p>
+            <p class="is-size-6">探索如何使用受众 CSV 文件来针对您的内容变体定位正确的受众。</p>
             <a href="./how-to/generate-variations/using-csv-file-audiences.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -937,11 +935,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="生成变体 — 使用Adobe Firefly"
+            <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="生成变体 - 使用 Adobe Firefly"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438366/?format=jpeg&captions=chi_hans"
-                alt="生成变体 — 使用Adobe Firefly">
+                src="https://video.tv.adobe.com/v/3428794/?format=jpeg"
+                alt="生成变体 - 使用 Adobe Firefly">
             </a>
           </figure>
         </div>
@@ -950,14 +948,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="生成变体 — 使用Adobe Firefly">生成变体 — 使用Adobe Firefly</a>
+              <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="生成变体 - 使用 Adobe Firefly">生成变体 - 使用 Adobe Firefly</a>
             </p>
-            <p class="is-size-6">了解如何使用Adobe Firefly创建内容变体中使用的图像。</p>
+            <p class="is-size-6">探索如何使用 Adobe Firefly 来创建内容变体中使用的图像。</p>
             <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -969,11 +967,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/actions.md" title="生成变体 — 对生成的变体执行的操作"
+            <a href="./how-to/generate-variations/actions.md" title="生成变体 - 对生成的变体的操作"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3437303/?format=jpeg&captions=chi_hans"
-                alt="生成变体 — 对生成的变体执行的操作">
+                src="https://video.tv.adobe.com/v/3428795/?format=jpeg"
+                alt="生成变体 - 对生成的变体的操作">
             </a>
           </figure>
         </div>
@@ -982,14 +980,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/actions.md" title="生成变体 — 对生成的变体执行的操作">生成变体 — 对生成的变体执行的操作</a>
+              <a href="./how-to/generate-variations/actions.md" title="生成变体 - 对生成的变体的操作">生成变体 - 对生成的变体的操作</a>
             </p>
-            <p class="is-size-6">探索可用于所生成内容变体的操作。</p>
+            <p class="is-size-6">探索可用于生成的内容变体的操作。</p>
             <a href="./how-to/generate-variations/actions.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -1001,11 +999,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/trust-privacy.md" title="生成变体 — 信任和隐私"
+            <a href="./how-to/generate-variations/trust-privacy.md" title="生成变体 - 信任和隐私"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3440024/?format=jpeg&captions=chi_hans"
-                alt="生成变体 — 信任和隐私">
+                src="https://video.tv.adobe.com/v/3429060/?format=jpeg"
+                alt="生成变体 - 信任和隐私">
             </a>
           </figure>
         </div>
@@ -1014,14 +1012,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/trust-privacy.md" title="生成变体 — 信任和隐私">生成变体 — 信任和隐私</a>
+              <a href="./how-to/generate-variations/trust-privacy.md" title="生成变体 - 信任和隐私">生成变体 - 信任和隐私</a>
             </p>
-            <p class="is-size-6">探索Adobe如何处理生成变体的信任和隐私。</p>
+            <p class="is-size-6">探索 Adobe 如何处理生成变体的信任和隐私。</p>
             <a href="./how-to/generate-variations/trust-privacy.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -1033,11 +1031,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/experimentation-framework.md" title="试验框架概述"
+            <a href="./how-to/experimentation-framework.md" title="实验框架概述"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3437867/?format=jpeg&captions=chi_hans"
-                alt="试验框架概述">
+                src="https://video.tv.adobe.com/v/3429061/?format=jpeg"
+                alt="实验框架概述">
             </a>
           </figure>
         </div>
@@ -1046,14 +1044,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-framework.md" title="试验框架概述">试验框架概述</a>
+              <a href="./how-to/experimentation-framework.md" title="实验框架概述">实验框架概述</a>
             </p>
-            <p class="is-size-6">探索试验框架，该框架允许营销人员测试哪些内容变体最有效。</p>
+            <p class="is-size-6">探索允许营销人员测试哪些内容变体最有效的实验框架。</p>
             <a href="./how-to/experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -1065,11 +1063,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/setup-experimentation-framework.md" title="设置试验框架"
+            <a href="./how-to/setup-experimentation-framework.md" title="建立实验框架"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438938/?format=jpeg&captions=chi_hans"
-                alt="设置试验框架">
+                src="https://video.tv.adobe.com/v/3429062/?format=jpeg"
+                alt="建立实验框架">
             </a>
           </figure>
         </div>
@@ -1078,14 +1076,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/setup-experimentation-framework.md" title="设置试验框架">正在设置试验框架</a>
+              <a href="./how-to/setup-experimentation-framework.md" title="建立实验框架">建立实验框架</a>
             </p>
-            <p class="is-size-6">探索如何在Edge Delivery Services文档创作中设置试验框架。</p>
+            <p class="is-size-6">探索如何在 Edge Delivery Services 文档创作中设置实验框架。</p>
             <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
@@ -1097,11 +1095,11 @@ ht-degree: 9%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/experimentation-add-metadata.md" title="添加用于试验的元数据"
+            <a href="./how-to/experimentation-add-metadata.md" title="添加实验元数据"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3440126/?format=jpeg&captions=chi_hans"
-                alt="添加用于试验的元数据">
+                src="https://video.tv.adobe.com/v/3428796/?format=jpeg"
+                alt="添加实验元数据">
             </a>
           </figure>
         </div>
@@ -1110,14 +1108,14 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分钟</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-add-metadata.md" title="添加用于试验的元数据">添加试验元数据</a>
+              <a href="./how-to/experimentation-add-metadata.md" title="添加实验元数据">添加实验元数据</a>
             </p>
-            <p class="is-size-6">探索添加用于试验的元数据</p>
+            <p class="is-size-6">探索为实验添加元数据</p>
             <a href="./how-to/experimentation-add-metadata.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">观看视频</span>
+                has-text-weight-bold">观看该视频</span>
             </a>
           </div>
         </div>
