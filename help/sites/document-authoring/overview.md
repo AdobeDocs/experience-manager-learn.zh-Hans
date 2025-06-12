@@ -22,7 +22,7 @@ ht-degree: 100%
 
 了解如何配置文档创作，使 AEM 作者可使用 Microsoft Word 或 Google 文档编辑和发布文档。
 
-请参阅 [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html) ，了解有关设置文档创作的完整详细信息。
+请参阅 [文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=zh-Hans) ，了解有关设置文档创作的完整详细信息。
 
 ## 文档创作快速入门
 

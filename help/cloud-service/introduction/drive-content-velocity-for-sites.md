@@ -181,4 +181,4 @@ AEM Sites：基本运行和操作
 
 若要深入了解内容发布速度，欢迎收听这场时长一小时的[小组讨论](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d)，其中的嘉宾包括 Monique Misrahi (T-Mobile)、Amy Bergstrom (Deloitte) 以及 Adobe 的 Anuradha Pentareddy。
 
-在[客户成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html)中心详细了解战略和思想领导力。
+在[客户成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html?lang=zh-Hans)中心详细了解战略和思想领导力。

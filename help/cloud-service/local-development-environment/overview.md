@@ -25,7 +25,7 @@ ht-degree: 100%
 >id="aemcloud_localdev_overview"
 >title="概述"
 >abstract="为 AEM as a Cloud Service 设置本地开发环境包括开发、构建和编译 AEM 项目所需的开发工具，以及允许开发人员在通过 Adobe Cloud Manager 将新功能部署到 AEM as a Cloud Service 之前在本地快速验证这些新功能的本地运行时。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="开发准则"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=zh-Hans" text="开发准则"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=zh-Hans" text="开发基础"
 
 本教程将指导您使用 AEM as a Cloud Service SDK 为 Adobe Experience Manager (AEM) 设置本地开发环境。其中包括开发、构建和编译 AEM 项目所需的开发工具，以及本地运行时环境，使开发人员能够在通过 Adobe Cloud Manager 将新功能部署到 AEM as a Cloud Service 之前，在本地快速验证这些功能。

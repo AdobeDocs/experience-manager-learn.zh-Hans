@@ -163,7 +163,7 @@ data:
 
 让我们通过阻止来自每秒发出 100 个请求的 IP 地址的请求，使其被阻止 5 分钟，从而&#x200B;**防止 DoS 攻击**。
 
-- 在 WKND 项目的 `/config/cdn.yaml` 文件中添加以下[速率限制流量过滤规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#ratelimit-structure)。
+- 在 WKND 项目的 `/config/cdn.yaml` 文件中添加以下[速率限制流量过滤规则](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hans#ratelimit-structure)。
 
 ```yaml
 kind: CDN
@@ -264,7 +264,7 @@ data:
 
 现在，让我们添加一个 WAF 规则，该规则包含作为 `action` 属性一部分的 `wafFlags` 属性，并&#x200B;**阻止模拟的攻击请求**。
 
-从语法角度来看，WAF 规则与之前所见的规则相似，但 `action` 属性会引用一个或多个 `wafFlags` 值。要了解有关 `wafFlags` 的更多信息，请查阅 [WAF 标记列表](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#waf-flags-list)部分。
+从语法角度来看，WAF 规则与之前所见的规则相似，但 `action` 属性会引用一个或多个 `wafFlags` 值。要了解有关 `wafFlags` 的更多信息，请查阅 [WAF 标记列表](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hans#waf-flags-list)部分。
 
 - 在 WKND 项目的 `/config/cdn.yaml` 文件中添加以下规则。请注意，`block-waf-flags` 规则中包含了一些在模拟恶意流量攻击时出现在仪表板工具中的 wafFlags。实际上，随着威胁形势的发展，随着时间的推移，通过分析日志来确定需要声明哪些新规则是一种很好的做法。
 
@@ -352,7 +352,7 @@ data:
 
 ## 其他资源
 
-[流量过滤规则语法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#rules-syntax)
+[流量过滤规则语法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hans#rules-syntax)
 
-[CDN 日志格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#cdn-log-format)
+[CDN 日志格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hans#cdn-log-format)
 

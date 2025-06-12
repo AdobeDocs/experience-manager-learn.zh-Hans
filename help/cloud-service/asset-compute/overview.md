@@ -147,7 +147,7 @@ Asset Compute 工作程序必须部署到 Adobe I/O Runtime，才能与 AEM as a
 
 ### 文档
 
-+ [Asset Compute 服务文档](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
++ [Asset Compute 服务文档](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=zh-Hans)
 + [Asset Compute 开发工具自述文件](https://github.com/adobe/asset-compute-devtool)
 + [Asset Compute 示例工作程序](https://github.com/adobe/asset-compute-example-workers)
 

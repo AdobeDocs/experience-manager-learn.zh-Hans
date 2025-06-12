@@ -51,6 +51,6 @@ Tags 是 Adobe Experience Platform 下一代的标签管理技术。Tags 提供�
 
 ## 其他资源 {#additional-resources}
 
-+ [Experience Platform 与 Experience Cloud 应用程序的集成](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
-+ [Tags 概述](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [在网站中使用 Tags 实施 Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)
++ [Experience Platform 与 Experience Cloud 应用程序的集成](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html?lang=zh-Hans)
++ [Tags 概述](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=zh-Hans)
++ [在网站中使用 Tags 实施 Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html?lang=zh-Hans)

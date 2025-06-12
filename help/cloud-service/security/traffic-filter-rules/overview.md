@@ -29,7 +29,7 @@ ht-degree: 100%
 
 降低安全漏洞风险是每个组织的重中之重。AEMCS 提供了流量过滤规则功能，其中包括 WAF 规则，以保护网站和应用程序的安全。
 
-流量过滤规则会部署到[内置的内容传递网络](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)，并在请求到达 AEM 基础设施之前进行评估。借助此功能，您可以大幅提升网站的安全性，确保只有合法请求能够访问 AEM 基础设施。
+流量过滤规则会部署到[内置的内容传递网络](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=zh-Hans)，并在请求到达 AEM 基础设施之前进行评估。借助此功能，您可以大幅提升网站的安全性，确保只有合法请求能够访问 AEM 基础设施。
 
 本教程将指导您完成流量过滤规则（包括 WAF 规则）的创建、部署、测试及结果分析全过程。
 

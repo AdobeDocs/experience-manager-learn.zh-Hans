@@ -37,7 +37,7 @@ AEM 提供了多种 HTTP 端点，支持以 Headless 方式进行交互，其中
 
 ## 外部应用程序概述
 
-本教程使用一个[简单的 Node.js 应用程序](./assets/aem-guides_token-authentication-external-application.zip)，该应用程序从命令行运行，使用 [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) 更新 AEM as a Cloud Service 上的资产元数据。
+本教程使用一个[简单的 Node.js 应用程序](./assets/aem-guides_token-authentication-external-application.zip)，该应用程序从命令行运行，使用 [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=zh-Hans) 更新 AEM as a Cloud Service 上的资产元数据。
 
 Node.js 应用程序的执行流程如下：
 

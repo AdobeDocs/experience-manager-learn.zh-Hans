@@ -122,7 +122,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
    ![已导入 AEM 私钥和证书](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
 
-如果 API 提供商使用的是自签名 CA 证书，请将收到的证书导入 AEM 的 TrustStore 中，并按照[这里的](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html#httpclient-and-load-aem-truststore-material)步骤进行操作。
+如果 API 提供商使用的是自签名 CA 证书，请将收到的证书导入 AEM 的 TrustStore 中，并按照[这里的](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html?lang=zh-Hans#httpclient-and-load-aem-truststore-material)步骤进行操作。
 
 同样，如果 AEM 正在使用自签名 CA 证书，请求 API 提供程序导入它。
 
@@ -217,7 +217,7 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 - 如果 API 提供程序正在使用自签名 CA 证书，那么获取全局 AEM TrustStore，`getAEMTrustStore(...)` 方法可以做到这一点。
 - 创建一个 `SSLContextBuilder`的对象，查看 Java™ [API 详情](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html)。
 - 使用 `loadKeyMaterial(final KeyStore keystore,final char[] keyPassword)` 方法将用户的 AEM KeyStore 加载到 `SSLContextBuilder` 中。
-- 密钥库密码是在创建密钥库时设置的密码，应存储在 OSGi 配置中，请参阅[秘密配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)。
+- 密钥库密码是在创建密钥库时设置的密码，应存储在 OSGi 配置中，请参阅[秘密配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hans#secret-configuration-values)。
 
 ## 避免更改 JVM 密钥库
 

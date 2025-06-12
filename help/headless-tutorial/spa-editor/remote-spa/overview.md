@@ -24,7 +24,7 @@ ht-degree: 100%
 
 欢迎来到本系列教程！本教程面向希望使用 AEM SPA 编辑器为现有远程 SPA 添加可编辑 AEM 内容的开发人员。
 
-本教程基于 [WKND GraphQL 应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)，这是一个通过 AEM 的 GraphQL API 使用 AEM 内容片段的 React 应用程序，但该应用程序不提供任何 SPA 内容的上下文创作功能。
+本教程基于 [WKND GraphQL 应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans)，这是一个通过 AEM 的 GraphQL API 使用 AEM 内容片段的 React 应用程序，但该应用程序不提供任何 SPA 内容的上下文创作功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
@@ -65,7 +65,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> **需要帮助设置本地开发环境吗？**&#x200B;请参阅[以下使用 AEM as a Cloud Service SDK 搭建本地开发环境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **需要帮助设置本地开发环境吗？**&#x200B;请参阅[以下使用 AEM as a Cloud Service SDK 搭建本地开发环境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)。
 
 ## &#x200B;1. 为 SPA 编辑器配置 AEM
 
