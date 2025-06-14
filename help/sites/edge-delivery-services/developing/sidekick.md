@@ -23,4 +23,4 @@ ht-degree: 100%
 
 使用 Edge Delivery Services 中的 AEM Sidekick 来实时传送内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425715/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441297/?learn=on&captions=chi_hans)

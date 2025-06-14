@@ -21,4 +21,4 @@ ht-degree: 100%
 
 介绍 Adobe Experience Manager 技术栈中的 [!DNL OSGi]、[!DNL JCR]、[!DNL Oak] 和 [!DNL Sling] 等技术。
 
->[!VIDEO](https://video.tv.adobe.com/v/32034?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36698?quality=12&learn=on&captions=chi_hans)

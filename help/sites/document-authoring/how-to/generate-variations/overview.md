@@ -24,4 +24,4 @@ ht-degree: 100%
 
 介绍 Edge Delivery Services 中生成变化的方法并了解它如何对营销人员有用。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428304/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438564/?learn=on&captions=chi_hans)

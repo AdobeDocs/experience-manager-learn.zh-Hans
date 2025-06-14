@@ -23,4 +23,4 @@ ht-degree: 100%
 
 探索 Edge Delivery Services 文档如何通过章节、默认内容等元素构建而成。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425716/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445199/?learn=on&captions=chi_hans)

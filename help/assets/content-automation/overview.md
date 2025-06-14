@@ -21,4 +21,4 @@ ht-degree: 100%
 
 概述：通过 Adobe Experience Manager Assets 内容自动化，应用 Photoshop 和 Lightroom 的功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/333197?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416627?quality=12&learn=on&captions=chi_hans)

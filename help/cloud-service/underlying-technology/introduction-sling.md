@@ -22,4 +22,4 @@ ht-degree: 100%
 
 对 [!DNL Sling] 的简单介绍，它是一种开源 [!DNL RESTful] Web 框架，是 Adobe Experience Manager 底层技术堆栈的一部分。
 
->[!VIDEO](https://video.tv.adobe.com/v/32032?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36700?quality=12&learn=on&captions=chi_hans)

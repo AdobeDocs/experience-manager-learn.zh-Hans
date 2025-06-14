@@ -27,7 +27,7 @@ AEM 云服务的 Asset Compute 微服务支持开发和部署自定义工作程�
 
 ## 您会做什么
 
->[!VIDEO](https://video.tv.adobe.com/v/40965?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410019?quality=12&learn=on&captions=chi_hans)
 
 本教程将逐步介绍如何创建一个简单的 Asset Compute 工作程序，该程序通过将原始资产裁剪成圆形，并应用可配置的对比度和亮度，来创建资产演绎版。虽然该工作程序本身较为基础，但本教程将使用它来探索如何创建、开发和部署自定义的 Asset Compute 工作程序，以便与 AEM as a Cloud Service 一起使用。
 

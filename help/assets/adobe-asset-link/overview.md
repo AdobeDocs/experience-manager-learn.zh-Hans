@@ -51,7 +51,7 @@ ht-degree: 100%
 
 Adobe Asset Link 提供 Adobe Asset Link 与 AEM 之间的 InDesign 直接链接支持。借助 InDesign 直接链接支持，您可以通过 Adobe Asset Link 面板，从 AEM 向 InDesign 放置（__放置链接__&#x200B;或&#x200B;__放置副本__）或拖放数字资产。此外，还引入了“仅供放置” (FPO) 演绎版。
 
->[!VIDEO](https://video.tv.adobe.com/v/28988?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37235?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

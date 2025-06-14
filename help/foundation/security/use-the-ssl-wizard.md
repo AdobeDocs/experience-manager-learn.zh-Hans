@@ -21,7 +21,7 @@ ht-degree: 100%
 
 了解如何在 Adobe Experience Manager 中使用内置的 SSL 向导设置 SSL，以使其通过 HTTPS 运行。
 
->[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328890?quality=12&learn=on&captions=chi_hans)
 
 
 >[!NOTE]

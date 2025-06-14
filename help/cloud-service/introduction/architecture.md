@@ -24,4 +24,4 @@ ht-degree: 100%
 
 探索具备 Edge Delivery Services 的 AEM as a Cloud Service 的底层架构及其重要组成部分。
 
->[!VIDEO](https://video.tv.adobe.com/v/330542?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346179?quality=12&learn=on&captions=chi_hans)

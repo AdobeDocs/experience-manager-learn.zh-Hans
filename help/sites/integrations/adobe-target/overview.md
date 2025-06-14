@@ -28,7 +28,7 @@ ht-degree: 100%
 
 Adobe Experience Manager (AEM) 和 Adobe Target 是功能强大的解决方案，其具备互补的功能，可无缝集成以提供个性化体验。然而，客户在理解如何以及何时有效地结合使用这些产品时，可能会遇到一些挑战。为了优化每位终端用户的体验，您组织内的各团队需紧密协作，明确角色与职责分工。通过利用 AEM 与 Adobe Target 之间的集成，您的团队能够协同合作，以提供卓越的个性化体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/41241?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410054?quality=12&learn=on&captions=chi_hans)
 
 本视频将介绍三种使用 AEM 和 Target 的方法，帮助您了解哪种方式最适合您的组织。
 

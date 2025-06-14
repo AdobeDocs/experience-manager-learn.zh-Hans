@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Adobe Asset Link 使创意用户能够使用 InDesign、Photoshop 和 Illustrator 中的应用程序内面板浏览、搜索、签出和签入 AEM Assets 中存储的资产。介绍 Adobe Asset Link 面板的 UI 及其功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/33734?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38671?quality=12&learn=on&captions=chi_hans)

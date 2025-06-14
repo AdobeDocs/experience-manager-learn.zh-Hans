@@ -24,7 +24,7 @@ ht-degree: 100%
 了解如何使用 Adobe Experience Manager (AEM) Publish Dispatcher 上的 **OWASP ModSecurity 核心规则集 (CRS)** 使 ModSecurity 可保护您的网站免受拒绝服务 (DoS) 攻击。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3422976?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452141?quality=12&learn=on&captions=chi_hans)
 
 ## 概述
 

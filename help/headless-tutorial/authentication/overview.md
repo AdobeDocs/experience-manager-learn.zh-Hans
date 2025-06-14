@@ -24,7 +24,7 @@ AEM 提供了多种 HTTP 端点，支持以 Headless 方式进行交互，其中
 
 在本教程中，我们将探讨外部应用程序如何使用访问令牌，通过 HTTP 以编程方式对 AEM as a Cloud Service 进行身份验证和交互。
 
->[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410077?quality=12&learn=on&captions=chi_hans)
 
 ## 先决条件
 

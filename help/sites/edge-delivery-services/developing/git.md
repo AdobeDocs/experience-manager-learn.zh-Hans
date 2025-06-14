@@ -23,4 +23,4 @@ ht-degree: 100%
 
 使用 Git 配置 Edge Delivery Services 开发环境。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425718/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441836/?learn=on&captions=chi_hans)

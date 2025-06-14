@@ -27,7 +27,7 @@ ht-degree: 100%
 
 Tags 是 Adobe Experience Platform 下一代的标签管理技术。Tags 提供了部署 Adobe Analytics、Target、Audience Manager 及更多解决方案的最简便途径。了解 Tags 的概述及其与 Adobe Experience Manager 的推荐集成方式。
 
->[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445210?quality=12&learn=on&captions=chi_hans)
 
 ## 先决条件
 

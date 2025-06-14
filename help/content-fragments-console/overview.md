@@ -38,7 +38,7 @@ Adobe Experience Manager 的内容片段控制台可以让管理和创作内容�
             <a href="./basics/content-fragments-console.md" title="控制台概述"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3409492?format=jpeg"
+                src="https://video.tv.adobe.com/v/3449342?format=jpeg&captions=chi_hans"
                 alt="控制台概述">
             </a>
           </figure>
@@ -102,7 +102,7 @@ Adobe Experience Manager 的内容片段控制台可以让管理和创作内容�
             <a href="./search/fast-filtering.md" title="快速筛选"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="快速筛选">
+                src="https://video.tv.adobe.com/v/3436706?format=jpeg&captions=chi_hans" alt="快速筛选">
             </a>
           </figure>
         </div>
@@ -163,7 +163,7 @@ Adobe Experience Manager 的内容片段控制台可以让管理和创作内容�
           <figure class="image is-16by9">
             <a href="./editor/non-asset-content-references.md" title="非资产内容引用" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419313?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436772?format=jpeg&captions=chi_hans"
                 alt="非资产内容引用">
             </a>
           </figure>
@@ -195,7 +195,7 @@ Adobe Experience Manager 的内容片段控制台可以让管理和创作内容�
             <a href="./editor/rte-variant-compare.md" title="RTE 变体比较"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="RTE 变体比较">
+                src="https://video.tv.adobe.com/v/3437562?format=jpeg&captions=chi_hans" alt="RTE 变体比较">
             </a>
           </figure>
         </div>
@@ -226,7 +226,7 @@ Adobe Experience Manager 的内容片段控制台可以让管理和创作内容�
             <a href="./editor/language-copies.md" title="语言副本"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419311?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436966?format=jpeg&captions=chi_hans"
                 alt="语言副本">
             </a>
           </figure>
@@ -258,7 +258,7 @@ Adobe Experience Manager 的内容片段控制台可以让管理和创作内容�
             <a href="./search/references.md" title="引用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3420950?format=jpeg"
+                src="https://video.tv.adobe.com/v/3423635?format=jpeg&captions=chi_hans"
                 alt="引用">
             </a>
           </figure>
