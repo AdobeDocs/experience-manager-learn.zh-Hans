@@ -8,9 +8,9 @@ version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: 2ffe4706856f0dbf63f2916af010f23bdb7b0045
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '456'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -201,4 +201,4 @@ ht-degree: 99%
 + 部署{#deployment}
    + [多租户和并发开发](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hans){target=_blank}
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}
