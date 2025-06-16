@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
 duration: 477
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '2123'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # 将SPA组件映射到AEM组件 {#map-components}
+
+{{spa-editor-deprecation}}
 
 了解如何使用AEM SPA编辑器JS SDK将React组件映射到Adobe Experience Manager (AEM)组件。 组件映射使用户能够在AEM SPA编辑器中对SPA组件进行动态更新，类似于传统的AEM创作。
 
@@ -50,7 +53,7 @@ ht-degree: 0%
 
 ## 检查文本组件
 
-[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了一个映射到AEM [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，该组件渲染来自AEM的&#x200B;*content*。
+[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了一个映射到AEM [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，该组件渲染来自AEM的&#x200B;*content*。
 
 我们来看看组件的工作方式。
 
@@ -221,7 +224,7 @@ AEM SPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 �
 
    **布局容器**&#x200B;组件具有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，SPA编辑器使用`:type`属性识别它，就像`Text`和`Image`组件一样。
 
-   在SPA编辑器中，可以使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=zh-Hans#defining-layouts-layout-mode)重新调整组件大小的相同功能。
+   在SPA编辑器中，可以使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新调整组件大小的相同功能。
 
 2. 返回到[http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。 添加其他&#x200B;**图像**&#x200B;组件，然后尝试使用&#x200B;**布局**&#x200B;选项重新调整其大小：
 
@@ -286,13 +289,13 @@ AEM SPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 �
 
 ## （额外练习）创建自定义图像组件 {#bonus-image}
 
-React核心组件已提供了SPA图像组件。 但是，如果您需要额外的练习，请创建自己的映射到AEM [图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hans)的React实施。 `Image`组件是&#x200B;**content**&#x200B;组件的另一个示例。
+React核心组件已提供了SPA图像组件。 但是，如果您需要额外的练习，请创建自己的映射到AEM [图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)的React实施。 `Image`组件是&#x200B;**content**&#x200B;组件的另一个示例。
 
 ### 检查JSON
 
 在跳转到SPA代码之前，请检查AEM提供的JSON模型。
 
-1. 导航到核心组件库[&#128279;](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的图像示例。
+1. 导航到核心组件库](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的[图像示例。
 
    ![图像核心组件JSON](./assets/map-components/image-json.png)
 

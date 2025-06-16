@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
 duration: 435
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1713'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # 扩展核心组件 {#extend-component}
+
+{{spa-editor-deprecation}}
 
 了解如何扩展要与AEM SPA Editor一起使用的现有核心组件。 了解如何扩展现有组件是一种强大的技术，可用于自定义和扩展AEM SPA Editor实施的功能。
 
@@ -30,13 +33,13 @@ ht-degree: 0%
 
 ## 您将构建的内容
 
-在本章中，创建了一个新的`Card`组件。 `Card`组件扩展了[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hans)，添加了其他内容字段（如“标题”和“行动号召”按钮）来为SPA中的其他内容执行Teaser角色。
+在本章中，创建了一个新的`Card`组件。 `Card`组件扩展了[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)，添加了其他内容字段(如“标题”和“Call to action”按钮)来为SPA中的其他内容执行Teaser角色。
 
 卡组件![的最终创作](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> 在现实实施中，简单地使用[Teaser组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html?lang=zh-Hans)可能比扩展[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hans)来创建`Card`组件更合适，具体取决于项目要求。 始终建议尽可能直接使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)。
+> 在现实实施中，简单地使用[Teaser组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html)可能比扩展[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)来创建`Card`组件更合适，具体取决于项目要求。 始终建议尽可能直接使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 ## 先决条件
 
@@ -103,13 +106,13 @@ ht-degree: 0%
 
    请注意，`sling:resourceSuperType`指向`core/wcm/components/image/v2/image`。 这表明WKND SPA图像组件继承了核心组件图像的功能。
 
-   也称为[代理模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=zh-Hans#proxy-component-pattern) Sling资源继承是一种强大的设计模式，它允许子组件继承功能并在需要时扩展/覆盖行为。 Sling继承支持多个继承级别，因此最终，新`Card`组件会继承核心组件图像的功能。
+   也称为[代理模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Sling资源继承是一种强大的设计模式，它允许子组件继承功能并在需要时扩展/覆盖行为。 Sling继承支持多个继承级别，因此最终，新`Card`组件会继承核心组件图像的功能。
 
    许多开发团队都努力做到自我（不要重复自己）。 通过Sling继承，可在AEM中实现这一点。
 
 4. 在`card`文件夹下，打开文件`_cq_dialog/.content.xml`。
 
-   此文件是`Card`组件的组件对话框定义。 如果使用Sling继承，则可以使用[Sling资源合并器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=zh-Hans)的功能覆盖或扩展对话框的各个部分。 在此示例中，向对话框添加了一个新选项卡，用于从作者捕获其他数据以填充卡组件。
+   此文件是`Card`组件的组件对话框定义。 如果使用Sling继承，则可以使用[Sling资源合并器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html)的功能覆盖或扩展对话框的各个部分。 在此示例中，向对话框添加了一个新选项卡，用于从作者捕获其他数据以填充卡组件。
 
    `sling:orderBefore`等属性允许开发人员选择插入新选项卡或表单字段的位置。 在这种情况下，`Text`选项卡插入到`asset`选项卡之前。 要充分利用Sling资源合并器，请务必了解[图像组件对话框](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml)的原始对话框节点结构。
 
@@ -293,7 +296,7 @@ ht-degree: 0%
    }
    ```
 
-   初始化Sling模型时调用`@PostConstruct initModel()`，因此可以借此机会初始化模型中其他方法可能使用的对象。 `pageManager`是通过`@ScriptVariable`注释提供给Sling模型的多个[Java™支持的全局对象](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=zh-Hans)之一。 [getPage](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html)方法接受路径并返回AEM [Page](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html)对象，如果路径未指向有效页面，则返回null。
+   初始化Sling模型时调用`@PostConstruct initModel()`，因此可以借此机会初始化模型中其他方法可能使用的对象。 `pageManager`是通过`@ScriptVariable`注释提供给Sling模型的多个[Java™支持的全局对象](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html)之一。 [getPage](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html)方法接受路径并返回AEM [Page](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html)对象，如果路径未指向有效页面，则返回null。
 
    这会初始化`cardPage`变量，其他新方法使用该变量返回有关基础链接页面的数据。
 
@@ -350,7 +353,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 您可以在此处[&#128279;](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/extend-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CardImpl.java)查看已完成的CardImpl.java。
+   > 您可以在此处](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/extend-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CardImpl.java)查看[已完成的CardImpl.java。
 
 8. 打开终端窗口，然后使用`core`目录中的Maven `autoInstallBundle`配置文件仅部署`core`模块的更新。
 
@@ -404,7 +407,7 @@ ht-degree: 0%
    +    @Input() ctaText: string;
    ```
 
-3. 添加用于检查行动号召是否准备就绪以及根据`cardLastModified`输入返回日期/时间字符串的方法：
+3. 添加用于检查Call to action是否就绪以及根据`cardLastModified`输入返回日期/时间字符串的方法：
 
    ```js
    export class CardComponent implements OnInit {
@@ -425,7 +428,7 @@ ht-degree: 0%
    }
    ```
 
-4. 打开`card.component.html`并添加以下标记以显示标题、行动要求和上次修改日期：
+4. 打开`card.component.html`并添加以下标记以显示标题、call to action和上次修改日期：
 
    ```html
    <div class="card"  *ngIf="hasContent">
@@ -444,11 +447,11 @@ ht-degree: 0%
    </div>
    ```
 
-   已在`card.component.scss`添加Sass规则以设置标题、行动要求和上次修改日期的样式。
+   已在`card.component.scss`添加Sass规则以设置标题、call to action和上次修改日期的样式。
 
    >[!NOTE]
    >
-   > 您可以在此处[&#128279;](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card)查看已完成的Angular卡组件代码。
+   > 您可以在此处](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card)查看已完成的[Angular卡组件代码。
 
 5. 使用Maven从项目的根目录中部署对AEM的完整更改：
 

@@ -12,7 +12,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
 duration: 164
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 1%
@@ -21,7 +22,9 @@ ht-degree: 1%
 
 # 可编辑的固定组件
 
-可编辑的React组件可以“固定”，也可以硬编码到SPA视图中。 这允许开发人员将与SPA编辑器兼容的组件放置到SPA视图中，并允许用户在AEM SPA编辑器中创作组件的内容。
+{{spa-editor-deprecation}}
+
+可编辑的React组件可以“固定”，也可以硬编码到SPA视图中。 这允许开发人员将与SPA Editor兼容的组件放置到SPA视图中，并允许用户在AEM SPA Editor中创作组件的内容。
 
 ![固定组件](./assets/spa-fixed-component/intro.png)
 
@@ -31,12 +34,12 @@ ht-degree: 1%
 
 要将&#x200B;__Fixed__&#x200B;组件添加到“主页”视图：
 
-+ 创建自定义可编辑的标题组件并将它注册到项目标题的资源类型中
-+ 将可编辑的标题组件放在“SPA主页”视图中
+* 创建自定义可编辑的标题组件并将它注册到项目标题的资源类型中
+* 将可编辑的标题组件放在SPA的“主页”视图中
 
 ### 创建可编辑的React标题组件
 
-在SPA主页视图中，将硬编码文本`<h2>Current Adventures</h2>`替换为自定义可编辑的标题组件。 在使用标题组件之前，我们必须：
+在SPA的“主页”视图中，将硬编码文本`<h2>Current Adventures</h2>`替换为自定义的可编辑标题组件。 在使用标题组件之前，我们必须：
 
 1. 创建自定义标题React组件
 1. 使用`@adobe/aem-react-editable-components`中的方法修饰自定义标题组件使其可编辑。
@@ -91,7 +94,7 @@ ht-degree: 1%
    export const titleIsEmpty = (props) => props.text == null || props.text.trim().length === 0
    ```
 
-   请注意，此React组件尚无法使用AEM SPA编辑器进行编辑。 此基本组件将在下一步中变为可编辑。
+   请注意，此React组件尚无法使用AEM SPA Editor进行编辑。 此基本组件将在下一步中变为可编辑。
 
    阅读有关实施详细信息的代码注释。
 
@@ -132,7 +135,7 @@ ht-degree: 1%
    export default EditableTitle;
    ```
 
-   此`EditableTitle` React组件打包了`Title` React组件，并将其包装和修饰为可在AEM SPA编辑器中编辑。
+   此`EditableTitle` React组件打包了`Title` React组件，并将其包装和修饰为可在AEM SPA Editor中编辑。
 
 ### 使用React EditableTitle组件
 
@@ -175,13 +178,13 @@ ht-degree: 1%
    ![标题组件操作栏](./assets/spa-fixed-component/title-action-bar.png)
 
 1. 创作标题组件：
-   + 标题： __WKND冒险__
-   + 类型/大小： __H2__
+   1. 标题： __WKND冒险__
+   1. 类型/大小： __H2__
 
-     ![标题组件对话框](./assets/spa-fixed-component/title-dialog.png)
+      ![标题组件对话框](./assets/spa-fixed-component/title-dialog.png)
 
 1. 点按&#x200B;__完成__&#x200B;以保存
-1. 在AEM SPA编辑器中预览更改
+1. 在AEM SPA Editor中预览更改
 1. 刷新[http://localhost:3000](http://localhost:3000)上本地运行的WKND应用程序，并立即反映所编写的标题更改。
 
    SPA中的![标题组件](./assets/spa-fixed-component/title-final.png)
@@ -190,9 +193,9 @@ ht-degree: 1%
 
 您已将一个固定的、可编辑的组件添加到WKND应用程序！ 您现在知道如何：
 
-+ 在SPA中创建了一个固定的可编辑组件
-+ 在AEM中创作固定组件
-+ 在远程SPA中查看创作的内容
+* 在SPA中创建了一个固定的可编辑组件
+* 在AEM中创作固定组件
+* 查看远程SPA中的创作内容
 
 ## 后续步骤
 

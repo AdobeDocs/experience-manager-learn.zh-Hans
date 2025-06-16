@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
 duration: 337
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # 添加导航和路由 {#navigation-routing}
+
+{{spa-editor-deprecation}}
 
 了解如何通过使用SPA Editor SDK映射到AEM页面来支持SPA中的多个视图。 动态导航是使用React Router和React Core Components实现的。
 
@@ -30,7 +33,7 @@ ht-degree: 0%
 
 ## 您将构建的内容
 
-本章将导航到AEM中的SPA。 导航菜单由AEM页面层次结构驱动，将使用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=zh-Hans)提供的JSON模型。
+本章将导航到AEM中的SPA。 导航菜单由AEM页面层次结构驱动，将使用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html)提供的JSON模型。
 
 已添加![导航](assets/navigation-routing/navigation-added.png)
 
@@ -312,7 +315,7 @@ ht-degree: 0%
 
    ![标题链接](assets/navigation-routing/header-link.png)
 
-   请注意，未触发完整页面刷新&#x200B;**&#x200B;**，并且SPA路由正在运行。
+   请注意，未触发完整页面刷新&#x200B;****，并且SPA路由正在运行。
 
 1. （可选）使用标准`<a>`锚标记试验`Header.js`文件：
 

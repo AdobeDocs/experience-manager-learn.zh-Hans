@@ -12,8 +12,9 @@ doc-type: Tutorial
 exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
 last-substantial-update: 2022-08-25T00:00:00Z
 duration: 71
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 100%
 
@@ -21,7 +22,7 @@ ht-degree: 100%
 
 # 在 AEM 中创建您的第一个 React SPA {#overview}
 
-{{edge-delivery-services}}
+{{spa-editor-deprecation}}
 
 欢迎来到本系列教程，本教程专为刚接触 Adobe Experience Manager (AEM) 中 **SPA 编辑器**&#x200B;功能的新手开发者设计。本教程将逐步介绍如何为虚构的生活方式品牌 WKND 实施一个 React 应用程序。该 React 应用程序的开发和设计旨在与 AEM 的 SPA 编辑器一起部署，该编辑器会将 React 组件映射到 AEM 组件。部署到 AEM 的完整 SPA 可以使用 AEM 的传统内联编辑工具进行动态创作。
 
@@ -46,7 +47,7 @@ ht-degree: 100%
 * HTML、CSS 和 JavaScript 的基础知识
 * 基本熟悉 [React](https://reactjs.org/tutorial/tutorial.html)
 
-*虽然不是必需的，但对[开发传统 AEM Sites 组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)有基本的了解是有益的。*
+*虽然不是必需的，但对[开发传统 AEM Sites 组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)有基本的了解是有益的。*
 
 ## 本地开发环境 {#local-dev-environment}
 
@@ -54,7 +55,7 @@ ht-degree: 100%
 
 ### 所需软件
 
-* [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=zh-Hans), [AEM 6.5.4+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans#aem-65) 或 [AEM 6.4.8+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans#aem-64)
+* [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html), [AEM 6.5.4+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans#aem-65) 或 [AEM 6.4.8+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans#aem-64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/)（3.3.9 或更新版本）
 * [Node.js](https://nodejs.org/en/) 和 [npm](https://www.npmjs.com/)

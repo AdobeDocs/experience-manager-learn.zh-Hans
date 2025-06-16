@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
 duration: 316
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # 扩展核心组件 {#extend-component}
+
+{{spa-editor-deprecation}}
 
 了解如何扩展要与AEM SPA Editor一起使用的现有核心组件。 了解如何扩展现有组件是一种强大的技术，可用于自定义和扩展AEM SPA Editor实施的功能。
 
@@ -174,7 +177,7 @@ ht-degree: 0%
 
 ## 扩展对话框 {#extend-dialog}
 
-我们的`Banner`组件要求在对话框中有一个额外的文本字段来捕获`bannerText`。 由于我们使用的是Sling继承，因此我们可以使用[Sling资源合并器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=zh-Hans)的功能来覆盖或扩展对话框的各个部分。 在此示例中，向对话框添加了一个新选项卡，用于从作者捕获其他数据以填充卡组件。
+我们的`Banner`组件要求在对话框中有一个额外的文本字段来捕获`bannerText`。 由于我们使用的是Sling继承，因此我们可以使用[Sling资源合并器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html)的功能来覆盖或扩展对话框的各个部分。 在此示例中，向对话框添加了一个新选项卡，用于从作者捕获其他数据以填充卡组件。
 
 1. 在`ui.apps`模块的`banner`文件夹下创建名为`_cq_dialog`的文件夹。
 1. 在`_cq_dialog`下创建对话框定义文件`.content.xml`。 使用以下内容填充：
@@ -231,7 +234,7 @@ ht-degree: 0%
    </jcr:root>
    ```
 
-   上述XML定义将创建一个名为&#x200B;**Text**&#x200B;的新选项卡，并在&#x200B;*现有&#x200B;**资产**&#x200B;选项卡之前*&#x200B;对其进行排序。 它将包含单个字段&#x200B;**横幅文本**。
+   上述XML定义将创建一个名为&#x200B;**Text**&#x200B;的新选项卡，并在&#x200B;*现有&#x200B;**资产**选项卡之前*&#x200B;对其进行排序。 它将包含单个字段&#x200B;**横幅文本**。
 
 1. 该对话框将如下所示：
 

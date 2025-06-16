@@ -11,8 +11,9 @@ last-substantial-update: 2022-11-11T00:00:00Z
 doc-type: Tutorial
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
 duration: 294
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 100%
 
@@ -24,9 +25,9 @@ ht-degree: 100%
 
 欢迎来到本系列教程！本教程面向希望使用 AEM SPA 编辑器为现有远程 SPA 添加可编辑 AEM 内容的开发人员。
 
-本教程基于 [WKND GraphQL 应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans)，这是一个通过 AEM 的 GraphQL API 使用 AEM 内容片段的 React 应用程序，但该应用程序不提供任何 SPA 内容的上下文创作功能。
+本教程基于 [WKND GraphQL 应用程序](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)，这是一个通过 AEM 的 GraphQL API 使用 AEM 内容片段的 React 应用程序，但该应用程序不提供任何 SPA 内容的上下文创作功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/3444857?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## 关于本教程
 
@@ -65,7 +66,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> **需要帮助设置本地开发环境吗？**&#x200B;请参阅[以下使用 AEM as a Cloud Service SDK 搭建本地开发环境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hans)。
+> **需要帮助设置本地开发环境吗？**&#x200B;请参阅[以下使用 AEM as a Cloud Service SDK 搭建本地开发环境的指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 
 ## &#x200B;1. 为 SPA 编辑器配置 AEM
 

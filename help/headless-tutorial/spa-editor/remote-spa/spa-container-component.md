@@ -12,7 +12,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
 duration: 306
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1112'
 ht-degree: 1%
@@ -21,18 +22,20 @@ ht-degree: 1%
 
 # 可编辑的容器组件
 
-[固定组件](./spa-fixed-component.md)为创作SPA内容提供了一些灵活性，但这种方法很僵化，需要开发人员定义可编辑内容的确切构成。 为了支持作者创建例外体验，SPA编辑器支持在SPA中使用容器组件。 容器组件允许作者将允许的组件拖放到容器中并进行创作，就像在传统AEM Sites创作中一样！
+{{spa-editor-deprecation}}
+
+[固定组件](./spa-fixed-component.md)为创作SPA内容提供了一些灵活性，但这种方法很僵化，需要开发人员定义可编辑内容的确切构成。 为了支持作者创建卓越体验，SPA编辑器支持在SPA中使用容器组件。 容器组件允许作者将允许的组件拖放到容器中并进行创作，就像在传统AEM Sites创作中一样！
 
 ![可编辑的容器组件](./assets/spa-container-component/intro.png)
 
-在本章中，我们向“主页”视图添加了一个可编辑的容器，该容器允许作者直接在SPA中使用可编辑的React组件来创作和布局丰富的内容体验。
+在本章中，我们向home视图添加了一个可编辑的容器，使作者能够直接在SPA中使用可编辑的React组件来创作和布局丰富的内容体验。
 
 ## 更新WKND应用程序
 
 要将容器组件添加到“主页”视图，请执行以下操作：
 
-+ 导入AEM React可编辑组件的`ResponsiveGrid`组件
-+ 导入并注册自定义可编辑的React组件（文本和图像），以便在ResponsiveGrid组件中使用
+* 导入AEM React可编辑组件的`ResponsiveGrid`组件
+* 导入并注册自定义可编辑的React组件（文本和图像），以便在ResponsiveGrid组件中使用
 
 ### 使用ResponsiveGrid组件
 
@@ -41,12 +44,12 @@ ht-degree: 1%
 1. 打开并编辑`react-app/src/components/Home.js`
 1. 从`@adobe/aem-react-editable-components`导入`ResponsiveGrid`组件并将其添加到`Home`组件。
 1. 在`<ResponsiveGrid...>`组件上设置以下属性
-   + `pagePath = '/content/wknd-app/us/en/home'`
-   + `itemPath = 'root/responsivegrid'`
+   1. `pagePath = '/content/wknd-app/us/en/home'`
+   1. `itemPath = 'root/responsivegrid'`
 
    这会指示`ResponsiveGrid`组件从AEM资源检索其内容：
 
-   + `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
+   1. `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
    `itemPath`映射到在`Remote SPA Page` AEM模板中定义的`responsivegrid`节点，并在从`Remote SPA Page` AEM模板创建的新AEM页面上自动创建。
 
@@ -282,17 +285,17 @@ export default EditableImage;
 
 ## 在AEM中配置容器
 
-AEM容器组件使用策略来指定其允许的组件。 使用SPA编辑器时，这是一个关键配置，因为SPA只能呈现已映射AEM组件的SPA组件。 确保仅允许我们为提供的SPA实现的组件：
+AEM容器组件使用策略来指定其允许的组件。 使用SPA编辑器时，这是一个关键配置，因为SPA只能呈现已映射SPA组件的AEM组件。 确保仅允许我们为提供了SPA实施的组件：
 
-+ `EditableTitle`映射到`wknd-app/components/title`
-+ `EditableText`映射到`wknd-app/components/text`
-+ `EditableImage`映射到`wknd-app/components/image`
+* `EditableTitle`映射到`wknd-app/components/title`
+* `EditableText`映射到`wknd-app/components/text`
+* `EditableImage`映射到`wknd-app/components/image`
 
-要配置远程SPA页模板的responsivegrid容器，请执行以下操作：
+要配置远程SPA页面模板的responsivegrid容器，请执行以下操作：
 
 1. 登录AEM Author
 1. 导航到&#x200B;__工具>常规>模板> WKND应用程序__
-1. 编辑&#x200B;__报表SPA页面__
+1. 编辑&#x200B;__报告SPA页面__
 
    ![响应式网格策略](./assets/spa-container-component/templates-remote-spa-page.png)
 
@@ -304,9 +307,9 @@ AEM容器组件使用策略来指定其允许的组件。 使用SPA编辑器时�
 
 1. 在右侧的&#x200B;__允许的组件__&#x200B;选项卡下，展开&#x200B;__WKND应用程序 — 内容__
 1. 确保仅选择以下选项：
-   + 图像
-   + 文本
-   + 标题
+   1. 图像
+   1. 文本
+   1. 标题
 
    ![远程SPA页](./assets/spa-container-component/templates-allowed-components.png)
 
@@ -314,18 +317,18 @@ AEM容器组件使用策略来指定其允许的组件。 使用SPA编辑器时�
 
 ## 在AEM中创作容器
 
-更新SPA以嵌入`<ResponsiveGrid...>`、三个可编辑React组件（`EditableTitle`、`EditableText`和`EditableImage`）的包装器，以及使用匹配的模板策略更新AEM之后，我们可以开始在容器组件中创作内容。
+在更新SPA以嵌入`<ResponsiveGrid...>`、三个可编辑React组件（`EditableTitle`、`EditableText`和`EditableImage`）的包装器，以及使用匹配的模板策略更新AEM之后，我们可以开始在容器组件中创作内容。
 
 1. 登录AEM Author
 1. 导航到&#x200B;__站点> WKND应用程序__
 1. 点按&#x200B;__主页__&#x200B;并从顶部操作栏中选择&#x200B;__编辑__
-   + 此时将显示“Hello World”文本组件，因为从AEM项目原型生成项目时，会自动添加此组件
+   1. 此时将显示“Hello World”文本组件，因为从AEM项目原型生成项目时，会自动添加此组件
 1. 从页面编辑器右上角的模式选择器中选择&#x200B;__编辑__
 1. 在标题下方找到&#x200B;__布局容器__&#x200B;可编辑区域
 1. 打开&#x200B;__页面编辑器的侧栏__，然后选择&#x200B;__组件视图__
 1. 将以下组件拖到&#x200B;__布局容器__&#x200B;中
-   + 图像
-   + 标题
+   1. 图像
+   1. 标题
 1. 将组件拖动以按照以下顺序重新排序：
    1. 标题
    1. 图像
@@ -333,8 +336,8 @@ AEM容器组件使用策略来指定其允许的组件。 使用SPA编辑器时�
 1. __作者__ __标题__&#x200B;组件
    1. 点按标题组件，然后点按&#x200B;__扳手__&#x200B;图标以&#x200B;__编辑__&#x200B;标题组件
    1. 添加以下文本：
-      + 标题： __夏季即将到来，让我们充分利用它！__
-      + 类型： __H1__
+      1. 标题： __夏季即将到来，让我们充分利用它！__
+      1. 类型： __H1__
    1. 点按&#x200B;__完成__
 1. __作者__ __图像__&#x200B;组件
    1. 在图像组件上，将图像从侧栏拖入(在切换到Assets视图后)
@@ -344,19 +347,19 @@ AEM容器组件使用策略来指定其允许的组件。 使用SPA编辑器时�
 1. __作者__ __文本__&#x200B;组件
    1. 通过点按文本组件并点按&#x200B;__扳手__&#x200B;图标来编辑文本组件
    1. 添加以下文本：
-      + _现在，您可以享受15%的为期一周的冒险活动和20%的为期两周或更长时间的冒险活动折扣！ 在结帐时，添加促销活动代码SUMMERISCOMING以获取折扣！_
+      1. _现在，您可以享受15%的为期一周的冒险活动和20%的为期两周或更长时间的冒险活动折扣！ 在结帐时，添加促销活动代码SUMMERISCOMING以获取折扣！_
    1. 点按&#x200B;__完成__
 
 1. 组件现已创作，但垂直栈叠。
 
    ![已编写的组件](./assets/spa-container-component/authored-components.png)
 
-使用AEM布局模式可允许我们调整组件的大小和布局。
+   使用AEM的布局模式可让我们调整组件的大小和布局。
 
 1. 使用右上角的模式选择器切换到&#x200B;__布局模式__
 1. __调整图像和文本组件的大小__，使它们并排显示
-   + __图像__&#x200B;组件应为&#x200B;__8列宽__
-   + __文本__&#x200B;组件应为&#x200B;__3列宽__
+   1. __图像__&#x200B;组件应为&#x200B;__8列宽__
+   1. __文本__&#x200B;组件应为&#x200B;__3列宽__
 
    ![布局组件](./assets/spa-container-component/layout-components.png)
 
@@ -370,11 +373,11 @@ AEM容器组件使用策略来指定其允许的组件。 使用SPA编辑器时�
 
 您已添加一个容器组件，该组件允许作者向WKND应用程序添加可编辑的组件！ 您现在知道如何：
 
-+ 在SPA中使用AEM React可编辑组件的`ResponsiveGrid`组件
-+ 创建并注册可编辑的React组件（文本和图像），以便通过容器组件在SPA中使用
-+ 配置远程SPA页模板以允许启用SPA的组件
-+ 将可编辑组件添加到容器组件
-+ SPA编辑器中的创作和布局组件
+* 在SPA中使用AEM React可编辑组件的`ResponsiveGrid`组件
+* 创建并注册可编辑的React组件（文本和图像），以便通过容器组件在SPA中使用
+* 配置远程SPA页面模板以允许启用SPA的组件
+* 将可编辑组件添加到容器组件
+* 在SPA编辑器中创作和布局组件
 
 ## 后续步骤
 

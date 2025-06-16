@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
 duration: 323
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # 创建自定义天气组件 {#custom-component}
+
+{{spa-editor-deprecation}}
 
 了解如何创建要与AEM SPA Editor一起使用的自定义天气组件。 了解如何开发创作对话框和Sling模型，以扩展JSON模型来填充自定义组件。 使用了[Open Weather API](https://openweathermap.org)和[React Open Weather组件](https://www.npmjs.com/package/react-open-weather)。
 
@@ -48,7 +51,7 @@ AEM组件被定义为节点和属性。 在项目中，这些节点和属性在`
 
 >[!NOTE]
 >
-> 有关AEM组件[基础知识的快速刷新可能有所帮助](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=zh-Hans)。
+> 有关AEM组件[基础知识的快速刷新可能有所帮助](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html)。
 
 1. 在您选择的IDE中，打开`ui.apps`文件夹。
 2. 导航到`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components`并创建一个名为`open-weather`的新文件夹。
@@ -142,13 +145,13 @@ AEM组件被定义为节点和属性。 在项目中，这些节点和属性在`
 
    >[!NOTE]
    >
-   > 通过查看核心组件定义[&#128279;](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)，您可以查看更多对话框示例。 您还可以在[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)的`/libs/granite/ui/components/coral/foundation/form`下查看其他表单字段，如`select`、`textarea`、`pathfield`。
+   > 通过查看核心组件定义](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)，您可以查看更多[对话框示例。 您还可以在[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)的`/libs/granite/ui/components/coral/foundation/form`下查看其他表单字段，如`select`、`textarea`、`pathfield`。
 
    对于传统AEM组件，通常需要[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hans)脚本。 由于SPA将渲染组件，因此不需要HTL脚本。
 
 ## 创建Sling模型
 
-Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于将数据从JCR映射到Java变量。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=zh-Hans#sling-models)通常用于为AEM组件封装复杂的服务器端业务逻辑。
+Sling模型是注释驱动的Java“POJO”（纯旧的Java对象），有助于将数据从JCR映射到Java变量。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=en#sling-models)通常用于为AEM组件封装复杂的服务器端业务逻辑。
 
 在SPA编辑器的上下文中，Sling模型使用[Sling模型导出器](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-hans)通过功能通过JSON模型公开组件的内容。
 

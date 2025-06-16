@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
 duration: 509
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '2213'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # 将SPA组件映射到AEM组件 {#map-components}
+
+{{spa-editor-deprecation}}
 
 了解如何使用Angular SPA编辑器JS SDK将AEM组件映射到Adobe Experience Manager (AEM)组件。 组件映射使用户能够在AEM SPA编辑器中对SPA组件进行动态更新，类似于传统的AEM创作。
 
@@ -74,7 +77,7 @@ ht-degree: 0%
 
 ## 检查文本组件
 
-[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了一个映射到AEM [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，该组件渲染来自AEM的&#x200B;*content*。
+[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了一个映射到AEM [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，该组件渲染来自AEM的&#x200B;*content*。
 
 我们来看看组件的工作方式。
 
@@ -198,13 +201,13 @@ ht-degree: 0%
 
 ## 创建图像组件
 
-接下来，创建映射到AEM [图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hans)的`Image`Angular组件。 `Image`组件是&#x200B;**content**&#x200B;组件的另一个示例。
+接下来，创建映射到AEM [图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)的`Image`Angular组件。 `Image`组件是&#x200B;**content**&#x200B;组件的另一个示例。
 
 ### 检查JSON
 
 在跳转到SPA代码之前，请检查AEM提供的JSON模型。
 
-1. 导航到核心组件库[&#128279;](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的图像示例。
+1. 导航到核心组件库](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的[图像示例。
 
    ![图像核心组件JSON](./assets/map-components/image-json.png)
 
@@ -243,7 +246,7 @@ ht-degree: 0%
 
    该项目在`/mock-content/adobestock-140634652.jpeg`处包含一个与&#x200B;**webpack开发服务器**&#x200B;一起使用的示例图像。
 
-   您可以在此处[&#128279;](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/map-components-solution/ui.frontend/src/mocks/json/en.model.json)查看完整的en.model.json。
+   您可以在此处](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/map-components-solution/ui.frontend/src/mocks/json/en.model.json)查看完整的[en.model.json。
 
 3. 添加组件要显示的照片库。
 
@@ -434,7 +437,7 @@ AEM SPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 �
 
    **布局容器**&#x200B;组件具有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，SPA编辑器使用`:type`属性识别它，就像`Text`和`Image`组件一样。
 
-   在SPA编辑器中，可以使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=zh-Hans#defining-layouts-layout-mode)重新调整组件大小的相同功能。
+   在SPA编辑器中，可以使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新调整组件大小的相同功能。
 
 3. 返回到[http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)。 添加其他&#x200B;**图像**&#x200B;组件，然后尝试使用&#x200B;**布局**&#x200B;选项重新调整其大小：
 
