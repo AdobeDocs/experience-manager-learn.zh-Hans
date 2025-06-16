@@ -11,10 +11,10 @@ thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 6425188da75f789b0661ec9bfb79624b5704c92b
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 1%
+source-wordcount: '640'
+ht-degree: 5%
 
 ---
 
@@ -32,7 +32,7 @@ SPA由本机Web资源的集合组成：**HTML、CSS和JavaScript**。 这些资�
 
 1. **云提供商**，如&#x200B;**Azure**&#x200B;或&#x200B;**AWS**。
 
-2. 在公司&#x200B;**数据中心内托管**&#x200B;内部部署&#x200B;**&#x200B;**
+2. 在公司&#x200B;**数据中心内托管**&#x200B;内部部署&#x200B;****
 
 3. **前端托管平台**，如&#x200B;**AWS Amplify**、**Azure App Service**、**Netlify**、**Heroku**、**Vercel**&#x200B;等。
 
@@ -53,11 +53,11 @@ SPA由本机Web资源的集合组成：**HTML、CSS和JavaScript**。 这些资�
 
 以下是SPA生产部署所需的部署配置，在与AEM相同的域上托管时。
 
-| SPA连接到→ | AEM 作者 | AEM 发布 | AEM预览 |
+| SPA连接到→ | AEM 作者 | AEM Publish | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨源资源共享(CORS) | ✘ | ✘ | ✘ |
-| AEM主机 | ✘ | ✘ | ✘ |
+| AEM 主机 | ✘ | ✘ | ✘ |
 
 ### 不同域
 
@@ -70,7 +70,7 @@ SPA由本机Web资源的集合组成：**HTML、CSS和JavaScript**。 这些资�
 
 以下是SPA生产部署所需的部署配置(当托管在不同于AEM的域上时)。
 
-| SPA连接到→ | AEM 作者 | AEM 发布 | AEM预览 |
+| SPA连接到→ | AEM 作者 | AEM Publish | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [跨源资源共享(CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
@@ -94,47 +94,37 @@ SPA由本机Web资源的集合组成：**HTML、CSS和JavaScript**。 这些资�
 
 Adobe提供了一个在React中编码的示例单页应用程序。
 
-<div class="columns is-multiline">
-<!-- React app -->
-<div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="React app" tabindex="0">
-   <div class="card">
-       <div class="card-image">
-           <figure class="image is-16by9">
-               <a href="../example-apps/react-app.md" title="React应用程序" tabindex="-1">
-                   <img class="is-bordered-r-small" src="../example-apps/assets/react-app/react-app-card.png" alt="React应用程序">
-               </a>
-           </figure>
-       </div>
-       <div class="card-content is-padded-small">
-           <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/react-app.md" title="React应用程序">React应用程序</a></p>
-               <p class="is-size-6">以React编写的示例单页应用程序，使用AEM Headless GraphQL API中的内容。</p>
-               <a href="../example-apps/react-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
-               </a>
-           </div>
-       </div>
-   </div>
+<!-- CARDS 
+
+* ../example-apps/react-app.md
+
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="React App - AEM Headless Example">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="../example-apps/react-app.md" title="React应用程序 — AEM Headless示例" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="../example-apps/assets/react-app/react-app.png" alt="React应用程序 — AEM Headless示例"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="../example-apps/react-app.md" target="_blank" rel="referrer" title="React应用程序 — AEM Headless示例">React应用程序 — AEM Headless示例</a>
+                    </p>
+                    <p class="is-size-6">示例应用程序是探索 Adobe Experience Manager (AEM) 的 Headless 功能的好方法。此React应用程序演示了如何使用AEM的GraphQL API通过持久化查询来查询内容。</p>
+                </div>
+                <a href="../example-apps/react-app.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
-<!-- Next.js app -->
-<div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Next.js app" tabindex="0">
-   <div class="card">
-       <div class="card-image">
-           <figure class="image is-16by9">
-               <a href="../example-apps/next-js.md" title="Next.js应用程序" tabindex="-1">
-                   <img class="is-bordered-r-small" src="../example-apps/assets/next-js/next-js-card.png" alt="Next.js应用程序">
-               </a>
-           </figure>
-       </div>
-       <div class="card-content is-padded-small">
-           <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/next-js.md" title="Next.js应用程序">Next.js应用程序</a></p>
-               <p class="is-size-6">以Next.js编写的示例单页应用程序，使用AEM Headless GraphQL API中的内容。</p>
-               <a href="../example-apps/next-js.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
-               </a>
-           </div>
-       </div>
-   </div>
-</div>
-</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+
