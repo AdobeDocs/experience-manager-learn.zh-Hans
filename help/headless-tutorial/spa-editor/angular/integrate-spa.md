@@ -77,13 +77,13 @@ ht-degree: 0%
 
 *SPA集成的高级描述。*
 
-有关前端内部版本的其他信息可在[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)找到。
+有关前端内部版本的其他信息可在[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hans)找到。
 
 ## 检查SPA集成 {#inspect-spa-integration}
 
-接下来，检查`ui.frontend`模块以了解已由[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)自动生成的SPA。
+接下来，检查`ui.frontend`模块以了解已由[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hans)自动生成的SPA。
 
-1. 在您选择的IDE中，打开WKND SPA的AEM项目。 本教程将使用[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)。
+1. 在您选择的IDE中，打开WKND SPA的AEM项目。 本教程将使用[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=zh-Hans#microsoft-visual-studio-code)。
 
    ![VSCode - AEM WKND SPA项目](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -112,7 +112,7 @@ ht-degree: 0%
    "@adobe/cq-spa-page-model-manager": "^1.1.3",
    ```
 
-   上述模块构成了[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)，并提供了将SPA组件映射到AEM组件的功能。
+   上述模块构成了[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html?lang=zh-Hans)，并提供了将SPA组件映射到AEM组件的功能。
 
 5. 在`package.json`文件中，定义了多个`scripts`：
 
@@ -132,7 +132,7 @@ ht-degree: 0%
 
    `build` — 编译Angular应用程序以进行生产分发。 添加`&& clientlib`负责在生成期间将编译后的SPA作为客户端库复制到`ui.apps`模块中。 npm模块[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)用于实现此目的。
 
-   有关可用脚本的更多详细信息可在[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)找到。
+   有关可用脚本的更多详细信息可在[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hans)找到。
 
 6. 检查文件`ui.frontend/clientlib.config.js`。 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs)使用此配置文件来确定如何生成客户端库。
 

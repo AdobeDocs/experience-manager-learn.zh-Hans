@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## 您将构建的内容
 
-本章将导航到AEM中的SPA。 导航菜单由AEM页面层次结构驱动，将使用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html)提供的JSON模型。
+本章将导航到AEM中的SPA。 导航菜单由AEM页面层次结构驱动，将使用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=zh-Hans)提供的JSON模型。
 
 已添加![导航](assets/navigation-routing/navigation-added.png)
 
