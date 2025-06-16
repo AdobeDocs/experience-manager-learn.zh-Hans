@@ -27,7 +27,7 @@ ht-degree: 1%
 
 通过AEM的SPA编辑器，创作者能够编辑单页应用程序或SPA的内容。 开发人员使用React框架创建SPA，然后将SPA的区域映射到AEM组件，从而让作者可以使用熟悉的AEM Sites编辑工具。 以下视频演示了WKND SPA示例站点的一些上下文内编辑功能。 WKND SPA项目包括两个React实施。
 
->[!VIDEO](https://video.tv.adobe.com/v/22229?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326772?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >
