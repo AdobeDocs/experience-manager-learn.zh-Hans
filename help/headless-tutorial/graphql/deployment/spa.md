@@ -32,7 +32,7 @@ SPA由本机Web资源的集合组成：**HTML、CSS和JavaScript**。 这些资�
 
 1. **云提供商**，如&#x200B;**Azure**&#x200B;或&#x200B;**AWS**。
 
-2. 在公司&#x200B;**数据中心内托管**&#x200B;内部部署&#x200B;****
+2. 在公司&#x200B;**数据中心内托管**&#x200B;内部部署&#x200B;**&#x200B;**
 
 3. **前端托管平台**，如&#x200B;**AWS Amplify**、**Azure App Service**、**Netlify**、**Heroku**、**Vercel**&#x200B;等。
 
