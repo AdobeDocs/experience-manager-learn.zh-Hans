@@ -22,4 +22,4 @@ ht-degree: 0%
 
 AEM Champion Brett Birschbach分享在Adobe Experience Manager (AEM)站点中构建实时创作指南的最佳实践。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459572/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463143/?learn=on&enablevpops&captions=chi_hans)
