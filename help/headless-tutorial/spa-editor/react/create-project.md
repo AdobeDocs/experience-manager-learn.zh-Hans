@@ -69,7 +69,7 @@ ht-degree: 1%
 
    注意`frontendModule=react`属性。 这会告知AEM项目原型使用要与AEM SPA编辑器一起使用的启动程序[React代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)引导项目。 属性（如`appTitle`、`appId`、`artifactId`和`groupId`）用于标识项目和目的。
 
-   可以在此处](https://github.com/adobe/aem-project-archetype#available-properties)找到用于配置项目[的可用属性的完整列表。
+   可以在此处[&#128279;](https://github.com/adobe/aem-project-archetype#available-properties)找到用于配置项目的可用属性的完整列表。
 
 1. 以下文件夹和文件结构由本地文件系统上的Maven原型生成：
 
