@@ -497,7 +497,7 @@ function getTransformedMetadata(metadata) {
 
 默认情况下，WKND Sites项目没有显示产品属性所需的资产元数据架构。 让我们在AEM实例中创建资源元数据架构并将其应用到资源文件夹。
 
-1. 登录到AEM as a Cloud Service资源实例。 使用[资产视图](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)导航到`/content/dam/wknd-shared/en`文件夹。
+1. 登录到AEM as a Cloud Service资源实例。 使用[资产视图](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/assets/authoring/switch-views)导航到`/content/dam/wknd-shared/en`文件夹。
 
    ![导航到文件夹](../assets/web-app/navigate-to-folder.png)
 
