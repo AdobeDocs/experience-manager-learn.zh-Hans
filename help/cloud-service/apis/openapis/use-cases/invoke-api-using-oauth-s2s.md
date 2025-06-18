@@ -149,7 +149,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 1. 展开&#x200B;_元数据_&#x200B;部分，然后单击&#x200B;**交付指定资源的元数据**&#x200B;选项。
 
-1. 在右窗格中，单击&#x200B;**尝试它**按钮。
+1. 在右窗格中，单击&#x200B;**尝试它**&#x200B;按钮。
    ![API文档](../assets/s2s/api-documentation.png)
 
 1. 输入以下值：
