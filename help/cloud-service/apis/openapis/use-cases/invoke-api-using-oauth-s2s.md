@@ -12,10 +12,10 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 9a5d811cf92a09da27057f99e1b6b2ed8df2a414
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
 workflow-type: tm+mt
-source-wordcount: '1727'
-ht-degree: 2%
+source-wordcount: '1776'
+ht-degree: 1%
 
 ---
 
@@ -85,6 +85,10 @@ OAuth服务器到服务器身份验证非常适用于需要API访问而不进行
 
    ![添加AEM API](../assets/s2s/add-aem-api.png)
 
+   >[!TIP]
+   >
+   >如果所需的&#x200B;**AEM API卡**&#x200B;已禁用，_为什么禁用了此卡？_&#x200B;信息显示&#x200B;**需要许可证**&#x200B;消息，原因之一可能是您没有使您的AEM as a Cloud Service环境现代化，有关详细信息，请参阅[AEM as a Cloud Service环境现代化](../setup.md#modernization-of-aem-as-a-cloud-service-environment)。
+
 1. 接下来，在&#x200B;_配置API_&#x200B;对话框中，选择&#x200B;**服务器到服务器**&#x200B;身份验证选项，然后单击&#x200B;**下一步**。 服务器到服务器身份验证非常适用于需要API访问而不需要用户交互的后端服务。
 
    ![选择身份验证](../assets/s2s/select-authentication.png)
@@ -145,7 +149,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 1. 展开&#x200B;_元数据_&#x200B;部分，然后单击&#x200B;**交付指定资源的元数据**&#x200B;选项。
 
-1. 在右窗格中，单击&#x200B;**尝试它**&#x200B;按钮。
+1. 在右窗格中，单击&#x200B;**尝试它**按钮。
    ![API文档](../assets/s2s/api-documentation.png)
 
 1. 输入以下值：

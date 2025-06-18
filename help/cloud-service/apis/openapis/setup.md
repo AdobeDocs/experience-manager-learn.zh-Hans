@@ -1,6 +1,6 @@
 ---
-title: 设置基于OpenAPI的AEM API
-description: 了解如何设置AEM as a Cloud Service环境，以便能够访问基于OpenAPI的AEM API。
+title: 设置基于 OpenAPI 的 AEM API
+description: 了解如何设置您的 AEM as a Cloud Service 环境，以允许访问基于 OpenAPI 的 AEM API。
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -12,16 +12,16 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 0%
+source-wordcount: '1493'
+ht-degree: 11%
 
 ---
 
-# 设置基于OpenAPI的AEM API
+# 设置基于 OpenAPI 的 AEM API
 
-了解如何设置AEM as a Cloud Service环境，以便能够访问基于OpenAPI的AEM API。
+了解如何设置您的 AEM as a Cloud Service 环境，以允许访问基于 OpenAPI 的 AEM API。
 
 在此示例中，使用使用服务器到服务器身份验证方法的AEM Assets API来演示设置过程。 其他基于OpenAPI的AEM API也可以执行相同的步骤。
 
@@ -70,7 +70,7 @@ _Admin Console_&#x200B;窗口显示新添加的产品配置文件。
 
 ## 启用AEM API访问{#enable-aem-apis-access}
 
-存在&#x200B;_新产品配置文件_&#x200B;可在Adobe Developer Console (ADC)中启用基于OpenAPI的AEM API访问。 回顾[Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts)是访问Adobe API、SDK、实时事件、无服务器函数等的开发人员中心。
+存在&#x200B;_新产品配置文件_&#x200B;可在Adobe Developer Console (ADC)中启用基于OpenAPI的AEM API访问。 请记住，[Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts)是用于访问Adobe API、SDK、实时事件、无服务器函数等的开发人员中心。
 
 新添加的产品配置文件与&#x200B;_服务_&#x200B;关联，这些服务代表&#x200B;_具有预定义访问控制列表(ACL)_&#x200B;的AEM用户组。 _服务_&#x200B;用于控制对AEM API的访问级别。
 
@@ -133,6 +133,10 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 1. 在&#x200B;_添加API_&#x200B;对话框中，按&#x200B;_Experience Cloud_&#x200B;进行筛选，然后选择所需的AEM API。 例如，在本例中，选择了&#x200B;_资产创作API_。
 
    ![添加AEM API](./assets/s2s/add-aem-api.png)
+
+   >[!TIP]
+   >
+   >    如果所需的&#x200B;**AEM API卡**&#x200B;已禁用，_为什么禁用了此卡？_&#x200B;信息显示&#x200B;**需要许可证**&#x200B;消息，原因之一可能是您没有使您的AEM as a Cloud Service环境现代化，有关详细信息，请参阅[AEM as a Cloud Service环境现代化](#modernization-of-aem-as-a-cloud-service-environment)。
 
 1. 接下来，在&#x200B;_配置API_&#x200B;对话框中，选择所需的身份验证选项。 例如，在本例中，选择了&#x200B;**服务器到服务器**&#x200B;身份验证选项。
 
@@ -198,7 +202,7 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 
 ## 后续步骤
 
-一旦将AEM实例配置为启用ADC项目通信，您就可以开始使用基于OpenAPI的AEM API。 了解如何使用基于开放式API的AEM API，并使用不同的OAuth身份验证方法：
+一旦将AEM实例配置为启用ADC项目通信，您就可以开始使用基于OpenAPI的AEM API。 了解如何使用不同的 OAuth 身份验证方法，来使用基于 OpenAPI 的 AEM API：
 
 <!-- CARDS
 {target = _self}
@@ -222,8 +226,8 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/invoke-api-using-oauth-s2s.md" title="使用服务器到服务器身份验证调用API" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/s2s/OAuth-S2S.png" alt="使用服务器到服务器身份验证调用API"
+                    <a href="./use-cases/invoke-api-using-oauth-s2s.md" title="使用服务器到服务器身份验证调用 API" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/s2s/OAuth-S2S.png" alt="使用服务器到服务器身份验证调用 API"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -231,9 +235,9 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" title="使用服务器到服务器身份验证调用API">使用服务器到服务器身份验证调用API</a>
+                        <a href="./use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" title="使用服务器到服务器身份验证调用 API">使用服务器到服务器身份验证调用 API</a>
                     </p>
-                    <p class="is-size-6">了解如何使用OAuth服务器到服务器身份验证从自定义NodeJS应用程序调用基于OpenAPI的AEM API。</p>
+                    <p class="is-size-6">了解如何使用 OAuth 服务器到服务器身份验证从自定义 NodeJS 应用程序调用基于 OpenAPI 的 AEM API。</p>
                 </div>
                 <a href="./use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
@@ -245,8 +249,8 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/invoke-api-using-oauth-web-app.md" title="使用Web应用程序身份验证调用API" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/web-app/OAuth-WebApp.png" alt="使用Web应用程序身份验证调用API"
+                    <a href="./use-cases/invoke-api-using-oauth-web-app.md" title="使用 Web 应用身份验证调用 API" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/web-app/OAuth-WebApp.png" alt="使用 Web 应用身份验证调用 API"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -254,9 +258,9 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" title="使用Web应用程序身份验证调用API">使用Web应用程序身份验证调用API</a>
+                        <a href="./use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" title="使用 Web 应用身份验证调用 API">使用 Web 应用身份验证调用 API</a>
                     </p>
-                    <p class="is-size-6">了解如何使用OAuth Web应用程序身份验证，从自定义Web应用程序调用基于OpenAPI的AEM API。</p>
+                    <p class="is-size-6">了解如何使用 OAuth Web App 身份验证从自定义 Web 应用程序调用基于 OpenAPI 的 AEM API。</p>
                 </div>
                 <a href="./use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
@@ -268,8 +272,8 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" title="使用单页应用程序身份验证调用API" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/spa/OAuth-SPA.png" alt="使用单页应用程序身份验证调用API"
+                    <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" title="使用单页应用程序身份验证调用 API" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/spa/OAuth-SPA.png" alt="使用单页应用程序身份验证调用 API"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -277,7 +281,7 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" target="_self" rel="referrer" title="使用单页应用程序身份验证调用API">使用单页应用程序身份验证调用API</a>
+                        <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" target="_self" rel="referrer" title="使用单页应用程序身份验证调用 API">使用单页应用程序身份验证调用 API</a>
                     </p>
                     <p class="is-size-6">了解如何使用OAuth 2.0 PKCE流程从自定义单页应用程序(SPA)调用基于OpenAPI的AEM API。</p>
                 </div>

@@ -12,9 +12,9 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
 workflow-type: tm+mt
-source-wordcount: '2081'
+source-wordcount: '2130'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ OAuth单页面应用程序身份验证非常适用于在浏览器中运行的基
 
 PKCE流扩展了OAuth 2.0 _authorization_code_&#x200B;授权类型，通过阻止授权代码拦截增强了安全性。 有关详细信息，请参阅[OAuth服务器到服务器与Web应用程序与单页应用程序凭据的区别](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)部分。
 
-## 您学到的内容{#what-you-learn}
+## 你将学到的内容{#what-you-learn}
 
 在本教程中，您将学习如何：
 
@@ -59,7 +59,7 @@ Adobe Developer Console (ADC)项目配置为启用OAuth单页应用程序身份�
 >ADC项目未提供&#x200B;_client_secret_。 SPA而是生成&#x200B;_code_verifier_&#x200B;和&#x200B;_code_challenge_，以安全地交换&#x200B;_访问令牌_&#x200B;的授权代码。 它无需在客户端存储客户端密钥，增强了安全性。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456974?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 
@@ -384,6 +384,10 @@ WKND SPA使用用户特定的访问令牌来调用内容片段模型和DAM文件
 1. 在&#x200B;_添加API_&#x200B;对话框中，按&#x200B;_Experience Cloud_&#x200B;筛选，选择&#x200B;**AEM CS Sites内容管理**&#x200B;卡片，然后单击&#x200B;**下一步**。
 
    ![添加AEM API](../assets/spa/add-aem-sites-api.png)
+
+   >[!TIP]
+   >
+   >如果所需的&#x200B;**AEM API卡**&#x200B;已禁用，_为什么禁用了此卡？_&#x200B;信息显示&#x200B;**需要许可证**&#x200B;消息，原因之一可能是您没有使您的AEM as a Cloud Service环境现代化，有关详细信息，请参阅[AEM as a Cloud Service环境现代化](../setup.md#modernization-of-aem-as-a-cloud-service-environment)。
 
 1. 接下来，在&#x200B;_配置API_&#x200B;对话框中，选择&#x200B;**用户身份验证**&#x200B;身份验证选项，然后单击&#x200B;**下一步**。
 

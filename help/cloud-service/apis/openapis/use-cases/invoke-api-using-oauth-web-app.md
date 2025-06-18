@@ -12,9 +12,9 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
 workflow-type: tm+mt
-source-wordcount: '2213'
+source-wordcount: '2262'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 OAuth Web应用程序身份验证非常适用于具有前端和&#x200B;_后端_&#x200B;组件的Web应用程序，这些组件需要代表用户&#x200B;**访问AEM API**。 它使用OAuth 2.0 _authorization_code_&#x200B;授权类型代表用户获取访问令牌以访问AEM API。 有关详细信息，请参阅[OAuth服务器到服务器与Web应用程序与单页应用程序凭据的区别](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
 
-## 您学到的内容{#what-you-learn}
+## 你将学到的内容{#what-you-learn}
 
 在本教程中，您将学习如何：
 
@@ -49,7 +49,7 @@ WKND PIM应用程序是一个示例Web应用程序，旨在管理存储在AEM as
 
 Adobe Developer Console (ADC)项目配置为使用OAuth Web应用程序身份验证访问Assets创作API。 它向WKND-PIM Web应用提供了必要的&#x200B;_client_id_&#x200B;和&#x200B;_client_secret_，以启动&#x200B;_authorization_code_&#x200B;授权流。
 
->[!VIDEO](https://video.tv.adobe.com/v/3442767?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 
 下图说明了WKND-PIM Web应用程序&#x200B;_获取用户特定的访问令牌以与Assets创作API交互的功能流程_。
@@ -461,6 +461,10 @@ function getTransformedMetadata(metadata) {
 
    ![添加AEM API](../assets/s2s/add-aem-api.png)
 
+   >[!TIP]
+   >
+   >如果所需的&#x200B;**AEM API卡**&#x200B;已禁用，_为什么禁用了此卡？_&#x200B;信息显示&#x200B;**需要许可证**&#x200B;消息，原因之一可能是您没有使您的AEM as a Cloud Service环境现代化，有关详细信息，请参阅[AEM as a Cloud Service环境现代化](../setup.md#modernization-of-aem-as-a-cloud-service-environment)。
+
 1. 接下来，在&#x200B;_配置API_&#x200B;对话框中，选择&#x200B;**用户身份验证**&#x200B;身份验证选项，然后单击&#x200B;**下一步**。
 
    ![配置AEM API](../assets/web-app/configure-aem-api.png)
@@ -493,7 +497,7 @@ function getTransformedMetadata(metadata) {
 
 默认情况下，WKND Sites项目没有显示产品属性所需的资产元数据架构。 让我们在AEM实例中创建资源元数据架构并将其应用到资源文件夹。
 
-1. 登录到AEM as a Cloud Service资源实例。 使用[资产视图](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/assets/authoring/switch-views)导航到`/content/dam/wknd-shared/en`文件夹。
+1. 登录到AEM as a Cloud Service资源实例。 使用[资产视图](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)导航到`/content/dam/wknd-shared/en`文件夹。
 
    ![导航到文件夹](../assets/web-app/navigate-to-folder.png)
 
