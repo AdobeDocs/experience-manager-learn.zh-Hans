@@ -14,7 +14,7 @@ doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
 source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '577'
 ht-degree: 100%
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 
 此多部分教程旨在教授开发人员如何使用 Adobe Experience Manager (AEM) 中的最新标准和技术来构建网站。完成本教程后，开发人员应该了解该平台的基本基础和 AEM 中的常见设计模式。
 
->[!VIDEO](https://video.tv.adobe.com/v/36053?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
 ## 启动网站项目的选项
 
