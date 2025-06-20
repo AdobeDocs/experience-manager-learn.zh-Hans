@@ -30,7 +30,7 @@ ht-degree: 8%
 >视频演示了用于将AEM连接到Adobe Target的已弃用JWT身份验证方法。 但是，推荐的方法是使用OAuth服务器到服务器身份验证方法。 有关详细信息，请参阅[AEM的JWT-To-OAuth凭据迁移](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration)。 我们正在更新视频以反映此更改。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329016?quality=12&learn=on&captions=chi_hans)
 
 >[!CAUTION]
 >
