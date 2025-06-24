@@ -1,23 +1,23 @@
 ---
 source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '168'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 # 代码片段
 
 ## Edge Delivery Services{#edge-delivery-services}
 
-[!BADGE 如需使用 Edge Delivery Services 从 AEM Sites 进行发布，请点击此处。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=zh-Hans" tooltip="从 AEM Publish 到 Edge Delivery Services"}
+[!BADGE 如需使用 Edge Delivery Services 从 AEM Sites 进行发布，请点击此处。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="从 AEM Publish 到 Edge Delivery Services"}
 
 ## Edge Delivery Services 和页面编辑器{#edge-delivery-services-and-page-editor}
 
-[!BADGE 如需使用 Edge Delivery Services 从 AEM Sites 进行发布，请点击此处。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=zh-Hans" tooltip="从 AEM Publish 到 Edge Delivery Services"}
+[!BADGE 如需使用 Edge Delivery Services 从 AEM Sites 进行发布，请点击此处。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="从 AEM Publish 到 Edge Delivery Services"}
 
 ## Edge Delivery Services 和通用可视化编辑器{#edge-delivery-services-and-universal-visual-editor}
 
-[!BADGE 如需使用 Edge Delivery Services 从 AEM Sites 进行发布，请点击此处。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=zh-Hans" tooltip="从 AEM Publish 到 Edge Delivery Services"}
+[!BADGE 如需使用 Edge Delivery Services 从 AEM Sites 进行发布，请点击此处。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="从 AEM Publish 到 Edge Delivery Services"}
 
 ## 传统 AEM{#traditional-aem}
 
