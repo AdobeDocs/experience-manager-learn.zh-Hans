@@ -11,7 +11,7 @@ last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
 exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: be710750cd6f2c71fa6b5eb8a6309d5965d67c82
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 了解如何在AEM内容片段编辑器中创建自定义字段。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437644?learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
 AEM UI扩展应使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架进行开发，因为这与AEM的其他部分保持一致的外观，并且还有大量预建功能，从而缩短了开发时间。
 
@@ -42,7 +42,7 @@ AEM UI扩展应使用[Adobe React Spectrum](https://react-spectrum.adobe.com/rea
 
 ### 内容片段模型定义
 
-此示例绑定到名称为`sku`的任何内容片段字段（通过`^sku$`的[正则表达式匹配](#extension-registration)），并将其替换为自定义字段。 此示例使用已更新的WKND冒险内容片段模型，其定义如下：
+此示例绑定到名称为`sku`的任何内容片段字段（通过[的](#extension-registration)正则表达式匹配`^sku$`），并将其替换为自定义字段。 此示例使用已更新的WKND冒险内容片段模型，其定义如下：
 
 ![内容片段模型定义](./assets/editor-custom-field/content-fragment-editor.png)
 
@@ -51,7 +51,7 @@ AEM UI扩展应使用[Adobe React Spectrum](https://react-spectrum.adobe.com/rea
 
 ### 应用程序路由
 
-在主React组件`App.js`中，包含用于呈现`SkuField` React组件的`/sku-field`路由。
+在主React组件`App.js`中，包含用于呈现`/sku-field` React组件的`SkuField`路由。
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 
@@ -85,7 +85,7 @@ function App() {
 ...
 ```
 
-此映射到`SkuField`组件的`/sku-field`自定义路由在[扩展注册](#extension-registration)下使用。
+此映射到`/sku-field`组件的`SkuField`自定义路由在[扩展注册](#extension-registration)下使用。
 
 ### 延期注册
 
@@ -136,9 +136,9 @@ export default ExtensionRegistration;
 
 + 利用`useEffect`进行初始化并连接到AEM的内容片段编辑器，在安装完成之前显示加载状态。
 + 在iFrame中渲染时，它会通过`onOpenChange`函数动态调整iFrame的高度，以适应Adobe React光谱选取器的下拉列表。
-+ 使用`onSelectionChange`函数中的`connection.host.field.onChange(value)`将字段选择传回主机，确保根据内容片段模型的指南验证和自动保存所选值。
++ 使用`connection.host.field.onChange(value)`函数中的`onSelectionChange`将字段选择传回主机，确保根据内容片段模型的指南验证和自动保存所选值。
 
-自定义字段在注入到内容片段编辑器中的iFrame中渲染。 自定义字段代码和内容片段编辑器之间的通信仅通过`connection`对象进行，该对象由`@adobe/uix-guest`包中的`attach`函数建立。
+自定义字段在注入到内容片段编辑器中的iFrame中渲染。 自定义字段代码和内容片段编辑器之间的通信仅通过`connection`对象进行，该对象由`attach`包中的`@adobe/uix-guest`函数建立。
 
 `src/aem-cf-editor-1/web-src/src/components/SkuField.js`
 
@@ -189,7 +189,7 @@ const SkuField = (props) => {
    * In these cases adjust the Content Fragment Editor's iframe's height so the field doesn't get cut off.     *
    * @param {*} isOpen true if the picker is open, false if it's closed
    */
-  const onOpenChange = async (isOpen) => {
+  const onOpenChange = (isOpen) => {
     if (isOpen) {
       // Calculate the height of the picker box and its label, and surrounding padding.
       const pickerHeight = Number(document.body.clientHeight.toFixed(0));
@@ -202,12 +202,15 @@ const SkuField = (props) => {
       const height = Math.min(pickerHeight + optionsHeight, 400);
 
       // Set the height of the iframe in the Content Fragment Editor
-      await connection.host.field.setHeight(height);
+      connection.host.field.setStyles({
+        current: { height, },
+        parent: { height, },
+      })
     } else {
-      // Set the height of the iframe in the Content Fragment Editor to the height of the closed picker.
-      await connection.host.field.setHeight(
-        Number(document.body.clientHeight.toFixed(0))
-      );
+      connection.host.field.setStyles({
+        current: { height: 74 },
+        parent: { height: 74 },
+      })
     }
   };
 
