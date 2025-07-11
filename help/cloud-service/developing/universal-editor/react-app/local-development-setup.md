@@ -33,8 +33,8 @@ ht-degree: 3%
    - [Git](https://git-scm.com/downloads)
    - IDE或代码编辑器，如[Visual Studio Code](https://code.visualstudio.com/)
 - 下载并安装以下各项：
-   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk)：它包含快速入门Jar，用于在本地运行AEM创作和发布以进行开发。
-   - [Universal Editor服务](https://experienceleague.adobe.com/en/docs/experience-cloud/software-distribution/home)： Universal Editor服务的本地副本，具有功能子集，可以从软件分发门户下载。
+   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk)：它包含快速入门Jar，用于在本地运行AEM创作和发布以进行开发。
+   - [Universal Editor服务](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud/software-distribution/home)： Universal Editor服务的本地副本，具有功能子集，可以从软件分发门户下载。
    - [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy#local-ssl-proxy)：使用自签名证书进行本地开发的简单本地SSL HTTP代理。 AEM通用编辑器需要React应用程序的HTTPS URL才能在编辑器中加载它。
 
 ## 本地设置
