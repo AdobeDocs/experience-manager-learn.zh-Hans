@@ -12,10 +12,10 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 47bef697-5253-493a-b9f9-b26c27d2db56
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 7c58c5cb6a3d99a9577206b3e5e0b8dcd55a850e
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -25,16 +25,16 @@ ht-degree: 0%
 
 ## 先决条件
 
-按照本教程进行操作，需要执行以下操作：
+学习本教程需具备以下条件：
 
 - HTML和JavaScript的基本技能。
-- 必须本地安装以下工具：
+- 必须在本地安装以下工具：
    - [Node.js](https://nodejs.org/en/download/)
    - [Git](https://git-scm.com/downloads)
    - IDE或代码编辑器，如[Visual Studio Code](https://code.visualstudio.com/)
 - 下载并安装以下各项：
-   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk)：它包含快速入门Jar，用于在本地运行AEM创作和发布以进行开发。
-   - [Universal Editor服务](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud/software-distribution/home)： Universal Editor服务的本地副本，具有功能子集，可以从软件分发门户下载。
+   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk)：它包含快速入门Jar，用于在本地运行AEM创作和发布以进行开发。
+   - [Universal Editor服务](https://experienceleague.adobe.com/en/docs/experience-cloud/software-distribution/home)： Universal Editor服务的本地副本，具有功能子集，可以从软件分发门户下载。
    - [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy#local-ssl-proxy)：使用自签名证书进行本地开发的简单本地SSL HTTP代理。 AEM通用编辑器需要React应用程序的HTTPS URL才能在编辑器中加载它。
 
 ## 本地设置
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 要设置WKND Teams React应用程序，请执行以下步骤：
 
-1. 从`basic-tutorial`解决方案分支克隆[WKND Teams React应用程序](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial)。
+1. 从[解决方案分支克隆](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial)WKND Teams React应用程序`basic-tutorial`。
 
    ```bash
    $ git clone -b solution/basic-tutorial git@github.com:adobe/aem-guides-wknd-graphql.git
@@ -94,13 +94,13 @@ ht-degree: 0%
    $ cp universal-editor-service.cjs universal-editor-service
    ```
 
-1. 在`universal-editor-service`目录中创建`.env`文件并添加以下环境变量：
+1. 在`.env`目录中创建`universal-editor-service`文件并添加以下环境变量：
 
    ```bash
    # The port on which the Universal Editor service runs
-   EXPRESS_PORT=8000
+   UES_PORT=8000
    # Disable SSL verification
-   NODE_TLS_REJECT_UNAUTHORIZED=0
+   UES_TLS_REJECT_UNAUTHORIZED=false
    ```
 
 1. 启动本地通用编辑器服务。
@@ -147,7 +147,7 @@ AEM通用编辑器要求通过HTTPS提供React应用程序。 让我们设置一
 要为WKND Teams React应用程序启用HTTPS，请执行以下步骤：
 
 1. 在终端中按`Ctrl + C`停止React。
-1. 更新`package.json`文件以在`start`脚本中包含`HTTPS=true`环境变量。
+1. 更新`package.json`文件以在`HTTPS=true`脚本中包含`start`环境变量。
 
    ```json
    "scripts": {
@@ -156,7 +156,7 @@ AEM通用编辑器要求通过HTTPS提供React应用程序。 让我们设置一
    }
    ```
 
-1. 更新`.env.development`文件中的`REACT_APP_HOST_URI`以使用AEM SDK的HTTPS协议和本地SSL HTTP代理端口。
+1. 更新`REACT_APP_HOST_URI`文件中的`.env.development`以使用AEM SDK的HTTPS协议和本地SSL HTTP代理端口。
 
    ```bash
    REACT_APP_HOST_URI=https://localhost:8443
