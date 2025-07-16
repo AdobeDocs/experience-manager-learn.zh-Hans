@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
 duration: 225
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 0%
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 这是一个多部分教程，并假定已完成[更新标准AEM项目](./update-project.md)中列出的步骤。
 
-确保您有[权限在Cloud Manager中创建和部署管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=zh-Hans#role-definitions)以及[对AEM as a Cloud Service环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hans)的访问权限。
+确保您有[权限在Cloud Manager中创建和部署管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions)以及[对AEM as a Cloud Service环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html)的访问权限。
 
 ## 重命名现有管道
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->此处的`$HASH_VALUE$`与您在&#x200B;__FrontEnd WKND Deploy to Dev__&#x200B;管道的&#x200B;__内容哈希__&#x200B;字段中看到的内容相同。 AEM将收到有关前端资源的CDN URL的通知，该值存储在&#x200B;__prefixPath__&#x200B;属性下的`/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content`中。
+>此处的`$HASH_VALUE$`与您在&#x200B;__FrontEnd WKND Deploy to Dev__&#x200B;管道的&#x200B;__内容哈希__&#x200B;字段中看到的内容相同。 AEM将收到有关前端资源的CDN URL的通知，该值存储在`/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content`prefixPath __属性下的__&#x200B;中。
 
 
 ![哈希值关联](assets/hash-value-correlartion.png)
