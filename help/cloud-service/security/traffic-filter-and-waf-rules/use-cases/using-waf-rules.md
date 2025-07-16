@@ -193,7 +193,7 @@ $./nikto.pl -useragent "AttackSimulationAgent (Demo/1.0)" -D V -Tuning 9 -ssl -h
 
 ![WKND CDN日志ELK](../assets/use-cases/wknd-cdn-logs-elk-waf.png)
 
-在ELK应用程序内，**WAF仪表板**应显示
+在ELK应用程序内，**WAF仪表板**&#x200B;应显示
 客户端IP (cli_ip)、主机、URL、操作(waf_action)和规则名称(waf_match)列中标记的请求和相应值。
 
 ![WKND WAF仪表板ELK](../assets/use-cases/elk-tool-dashboard-waf-flagged.png)
