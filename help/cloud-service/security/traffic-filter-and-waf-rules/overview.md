@@ -52,7 +52,7 @@ AEM as a Cloud Service利用集成的CDN层来保护和优化网站的投放。 
 
 标准流量过滤器规则可用于实施特定于业务的策略（如速率限制或阻止特定区域），以及根据请求属性和标头（如IP地址、路径或用户代理）阻止流量。
 另一方面，WAF流量过滤器规则为已知的Web利用漏洞和攻击向量提供全面的主动保护，并拥有高级智能来限制误报（即阻止合法流量）。
-若要定义这两种类型的规则，请使用YAML语法，有关详细信息，请参阅[流量过滤器规则语法](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)。
+若要定义这两种类型的规则，请使用YAML语法，有关详细信息，请参阅[流量过滤器规则语法](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)。
 
 ## 何时及为何使用它们
 
