@@ -11,7 +11,7 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18306
 thumbnail: null
 exl-id: 0a738af8-666b-48dc-8187-9b7e6a8d7e1b
-source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
+source-git-commit: b7f567da159865ff04cb7e9bd4dae0b140048e7d
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 14%
@@ -24,7 +24,7 @@ ht-degree: 14%
 
 为了演示设置过程，本教程使用了[AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd)。
 
->[!VIDEO](https://video.tv.adobe.com/v/3469396/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469395/?quality=12&learn=on)
 
 ## 设置概述
 
