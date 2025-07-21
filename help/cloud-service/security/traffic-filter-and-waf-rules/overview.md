@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+exl-id: e6d67204-2f76-441c-a178-a34798fe266d
+source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 1%
 
 ---
-
 
 # 概述 — 保护AEM网站
 
@@ -27,6 +27,9 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > WAF流量过滤器规则需要额外的&#x200B;**WAF-DDoS保护**&#x200B;或&#x200B;**增强的安全性**&#x200B;许可证。 默认情况下，Sites和Forms客户可以使用标准流量过滤器规则。
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469394/?quality=12&learn=on)
 
 ## AEM as a Cloud Service中的流量安全简介
 
@@ -52,7 +55,7 @@ AEM as a Cloud Service利用集成的CDN层来保护和优化网站的投放。 
 
 标准流量过滤器规则可用于实施特定于业务的策略（如速率限制或阻止特定区域），以及根据请求属性和标头（如IP地址、路径或用户代理）阻止流量。
 另一方面，WAF流量过滤器规则为已知的Web利用漏洞和攻击向量提供全面的主动保护，并拥有高级智能来限制误报（即阻止合法流量）。
-若要定义这两种类型的规则，请使用YAML语法，有关详细信息，请参阅[流量过滤器规则语法](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)。
+若要定义这两种类型的规则，请使用YAML语法，有关详细信息，请参阅[流量过滤器规则语法](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)。
 
 ## 何时及为何使用它们
 

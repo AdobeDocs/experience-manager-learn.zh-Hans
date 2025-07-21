@@ -10,17 +10,20 @@ doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18307
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+exl-id: 5e235220-82f6-46e4-b64d-315f027a7024
+source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
 workflow-type: tm+mt
 source-wordcount: '1780'
 ht-degree: 7%
 
 ---
 
-
 # 使用标准流量过滤器规则保护AEM网站
 
 了解如何在AEM as a Cloud Service中使用&#x200B;_Adobe推荐的_ **标准流量过滤器规则**&#x200B;来保护AEM网站免受拒绝服务(DoS)、分布式拒绝服务(DDoS)和机器人滥用。
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469395/?quality=12&learn=on)
 
 ## 学习目标
 
@@ -256,7 +259,7 @@ data:
 
 在本教程中，您已了解如何使用Adobe推荐的AEM as a Cloud Service标准流量过滤器规则来保护AEM网站免受拒绝服务(DoS)、分布式拒绝服务(DDoS)和机器人滥用的攻击。
 
-## 推荐的WAF规则
+## 推荐的 WAF 规则
 
 了解如何实施Adobe推荐的WAF规则，以保护AEM网站免受使用高级技术绕过传统安全措施的复杂威胁。
 
@@ -388,6 +391,4 @@ data:
 
 ## 其他资源
 
-- [推荐的入门规则](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
-
-
+- [推荐的入门规则](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
