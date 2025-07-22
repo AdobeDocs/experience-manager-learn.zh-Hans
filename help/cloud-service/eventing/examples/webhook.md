@@ -12,10 +12,10 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 0%
+source-wordcount: '533'
+ht-degree: 1%
 
 ---
 
@@ -23,9 +23,17 @@ ht-degree: 0%
 
 了解如何在webhook上接收AEM事件并查看事件详细信息，例如有效负载、标头和元数据。
 
->[!VIDEO](https://video.tv.adobe.com/v/3449758?quality=12&learn=on&captions=chi_hans)
 
-在此示例中，利用Adobe提供的&#x200B;_托管的webhook_，您无需设置自己的webhook即可接收AEM事件。 此Adobe提供的webhook托管在[Glitch](https://glitch.com/)上，这是一个众所周知的平台，它提供了有助于构建和部署Web应用程序的基于Web的环境。 但是，如果愿意，也可以使用您自己的webhook选项。
+>[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+
+
+>[!IMPORTANT]
+>
+>本教程中的实时演示端点之前托管在[Glitch](https://glitch.com/)上。 自2025年7月起，Glitch已停止托管服务，无法再访问端点。
+>>我们正在积极努力将演示迁移到替代平台。 教程内容保持准确，并且很快将提供更新的链接。
+>>感谢您的理解和耐心。
+
+使用您自己的webhook，直到实时演示端点再次可用。
 
 ## 先决条件
 
@@ -155,4 +163,4 @@ ht-degree: 0%
 
 ## 其他资源
 
-- [Glitch webhook源代码](https://glitch.com/edit/#!/lovely-ancient-coaster)可供参考。
+- [AEM — 事件Webhook](../assets/examples/webhook/aemeventing-webhook.tgz)源代码可供您参考。

@@ -12,10 +12,10 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 0%
+source-wordcount: '579'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,13 @@ ht-degree: 0%
 
 在Adobe Developer Console项目中，会自动为日志启用每个事件注册，从而实现无缝集成。
 
-在此示例中，利用Adobe提供的&#x200B;_托管Web应用程序_，您可以从日志中获取第一批AEM事件，而无需设置应用程序。 此Adobe提供的Web应用程序托管在[Glitch](https://glitch.com/)上，这是一个众所周知的平台，它提供了有助于构建和部署Web应用程序的基于Web的环境。 但是，如果愿意，也可以选择使用您自己的应用程序。
+>[!IMPORTANT]
+>
+>本教程中的实时演示端点之前托管在[Glitch](https://glitch.com/)上。 自2025年7月起，Glitch已停止托管服务，无法再访问端点。
+>>我们正在积极努力将演示迁移到替代平台。 教程内容保持准确，并且很快将提供更新的链接。
+>>感谢您的理解和耐心。
+
+使用您自己的应用程序，直到实时演示端点再次可用为止。
 
 ## 先决条件
 
@@ -67,7 +73,7 @@ ht-degree: 0%
 
   ![Adobe Developer Console项目活动信息卡](../assets/examples/journaling/adobe-developer-console-project-events-card.png)
 
-## 加载AEM事件日志
+## 加载 AEM 事件日志
 
 为简单起见，此托管Web应用程序仅从日志中获取第一批AEM事件。 这些是日志中最旧可用的事件。 有关详细信息，请参阅[第一批事件](https://developer.adobe.com/events/docs/guides/api/journaling_api/#fetching-your-first-batch-of-events-from-the-journal)。
 
@@ -82,7 +88,5 @@ ht-degree: 0%
   ![完成AEM事件有效负载](../assets/examples/journaling/complete-journal-data.png)
 
 ## 其他资源
-
-- [Glitch webhook源代码](https://glitch.com/edit/#!/indigo-speckle-antler)可供参考。 它是使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)组件呈现UI的简单React应用程序。
 
 - [Adobe I/O Events日记API](https://developer.adobe.com/events/docs/guides/api/journaling_api/)提供有关API的详细信息，例如第一批、下一批和上一批事件、分页等。
