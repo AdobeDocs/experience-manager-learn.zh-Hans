@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
 source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1400'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 98%
    + [Author 和 Publish 服务](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
-   + [AEM Assets Sidekick 插件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=zh-Hans){target=_blank}
+   + [AEM Assets Sidekick 插件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [程序](./cloud-manager/programs.md)
    + [环境](./cloud-manager/environments.md)
@@ -159,7 +159,7 @@ ht-degree: 98%
    + [缓存](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
    + [Adobe CDN - 超越缓存](./content-delivery/adobe-cdn-beyond-caching.md)
    + [自定义错误页面](./content-delivery/custom-error-pages.md)
-   + [URL 重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=zh-Hans){target=_blank}
+   + [URL 重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + 缓存{#caching}
    + [概述](./caching/overview.md)
    + [AEM Publish 服务](./caching/publish.md)
@@ -192,16 +192,16 @@ ht-degree: 98%
       + [电子邮件服务](./networking/examples/email-service.md)
 + 安全性 {#security}
    + [使用流量过滤规则阻止 DoS/DDoS 攻击](./security/blocking-dos-attack-using-traffic-filter-rules.md)
-   + 流量过滤器规则，包括WAF规则 {#traffic-filter-and-waf-rules}
-      + [保护AEM网站](./security/traffic-filter-and-waf-rules/overview.md)
+   + 流量过滤规则（包括 WAF 规则） {#traffic-filter-and-waf-rules}
+      + [保护 AEM 网站](./security/traffic-filter-and-waf-rules/overview.md)
       + [如何设置](./security/traffic-filter-and-waf-rules/setup.md)
-      + [使用流量过滤器规则](./security/traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)
-      + [使用WAF规则](./security/traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)
+      + [使用流量过滤规则](./security/traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)
+      + [使用 WAF 规则](./security/traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)
       + [最佳实践](./security/traffic-filter-and-waf-rules/best-practices.md)
       + 操作方式{#how-to}
          + [监控敏感请求](./security/traffic-filter-and-waf-rules/how-to/request-logging.md)
          + [限制访问](./security/traffic-filter-and-waf-rules/how-to/request-blocking.md)
-         + [标准化请求](./security/traffic-filter-and-waf-rules/how-to/request-transformation.md)
+         + [将请求标准化](./security/traffic-filter-and-waf-rules/how-to/request-transformation.md)
 + AEM 事件{#aem-eventing}
    + [概述](./eventing/overview.md)
    + 示例{#examples}
@@ -243,7 +243,7 @@ ht-degree: 98%
       + [资源工作流迁移工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [浏览 Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [使用 Cloud Acceleration Manager ](./migration/cloud-acceleration-manager/using.md)
-+ [内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=zh-Hans){target=_blank}
++ [内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
    + 为 Forms as a Cloud Service 进行开发 {#developing-for-cloud-service}
       + [1 - 快速入门 ](./forms/developing-for-cloud-service/getting-started.md)
@@ -421,11 +421,11 @@ ht-degree: 98%
    + [疑难解答](./asset-compute/troubleshooting.md)
 
 + 多步教程{#multi-step-tutorials}
-   + [AEM Sites 开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
-   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans){target=_blank}
+   + [AEM Sites 开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html){target=_blank}
    + [SPA 编辑器 (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
-   + [AEM Sites 和 Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=zh-Hans){target=_blank}
-   + [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hans){target=_blank}
+   + [AEM Sites 和 Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html){target=_blank}
+   + [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html){target=_blank}
 + 专家资源 {#expert-resources}
    + AEM 支持人员 {#aem-champions}
       + [Cloud Manager 入门手册](./expert-resources/aem-champions/onboarding-playbook.md)
@@ -460,7 +460,7 @@ ht-degree: 98%
          + [Cloud Manager - 功能测试](./expert-resources/cloud-5/season-2/cloud5-mocm-functional-tests.md)
       + 第 3 季{#season-3}
          + [第三方搜索](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
-         + [Edge 工作程序](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
+         + [边缘处理程序](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
          + [在 Edge Delivery Services 中发布、取消发布事件](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [查询索引和 Excel 公式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
          + [自带 Cloudflare CDN](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)

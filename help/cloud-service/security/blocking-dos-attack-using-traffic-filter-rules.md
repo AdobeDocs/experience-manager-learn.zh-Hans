@@ -1,6 +1,6 @@
 ---
-title: 使用流量过滤规则阻止DoS、DDoS和复杂的攻击
-description: 了解如何使用AEM as a Cloud Service中的流量过滤规则阻止DoS、DDoS和复杂的攻击。
+title: 使用流量过滤规则阻止 DoS、DDoS 及复杂攻击
+description: 了解如何在 AEM as a Cloud Service 中通过流量过滤规则阻止 DoS、DDoS 攻击以及更复杂的威胁。
 version: Experience Manager as a Cloud Service
 feature: Security, Operations
 topic: Security, Administration, Performance
@@ -13,21 +13,21 @@ jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
 source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '609'
-ht-degree: 32%
+ht-degree: 100%
 
 ---
 
-# 使用流量过滤规则阻止DoS、DDoS和复杂的攻击
+# 使用流量过滤规则阻止 DoS、DDoS 及复杂攻击
 
-了解如何在AEM as a Cloud Service (AEMCS)托管的CDN中使用&#x200B;**流量过滤器规则**&#x200B;来阻止拒绝服务(DoS)、分布式拒绝服务(DDoS)和复杂的攻击。
+了解如何在 AEM as a Cloud Service（AEMCS）管理的 CDN 中使用&#x200B;**流量过滤规则**&#x200B;阻止拒绝服务攻击（DoS）、分布式拒绝服务攻击（DDoS）以及复杂攻击。
 
 这些攻击会导致 CDN 流量激增，并可能影响 AEM Publish 服务（即源站）的流量，进而影响网站的响应能力和可用性。
 
-本文概述了AEM网站的默认保护，以及如何通过客户配置扩展这些保护。 它还介绍了如何分析流量模式并配置标准流量过滤器规则以阻止这些攻击。
+本文概述了为您的 AEM 网站提供的默认防护机制，并说明了如何通过自定义配置扩展这些防护能力。另外还介绍了如何分析流量模式，如何配置标准流量过滤规则以有效阻止此类攻击。
 
-## AEM as a Cloud Service中的默认保护
+## AEM as a Cloud Service 中的默认防护机制
 
 让我们了解一下您的 AEM 网站的默认 DDoS 防护：
 
@@ -36,19 +36,19 @@ ht-degree: 32%
 - **阻止：**&#x200B;如果来自特定 IP 地址的流量超过 Adobe 根据每个 CDN 接入点 (PoP) 定义的速率，则 Adobe CDN 将会阻止该流量到达源站。
 - **警报：**&#x200B;当流量超过特定速率时，操作中心会发送有关源站流量激增的警报通知。当任何给定 CDN PoP 的流量超过 _Adobe 定义的_&#x200B;每个 IP 地址的请求速率时，会触发此警报。请参阅[流量过滤规则警报](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)，以了解更多详情。
 
-这些内置保护措施应被视为组织将 DDoS 攻击对性能的影响降至最低的能力的基准。由于每个网站都有不同的性能特征，并且在达到Adobe定义的速率限制之前可能会看到性能下降，因此建议通过&#x200B;_客户配置_&#x200B;来扩展默认保护。
+这些内置保护措施应被视为组织将 DDoS 攻击对性能的影响降至最低的能力的基准。由于每个网站的性能特征各不相同，在未达到 Adobe 设定的速率限制前网站性能可能就已下降，因此建议通过&#x200B;_自定义配置_&#x200B;扩展默认防护能力。
 
-## 使用流量过滤规则扩展保护
+## 通过流量过滤规则扩展防护能力
 
 让我们来看看客户可以采取的另外一些推荐措施，以保护其网站免受 DDoS 攻击：
 
-- 实施Adobe推荐的[标准流量过滤器规则](./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)，通过记录可疑行为并发出警报来识别潜在的恶意流量模式。
-- 使用&#x200B;**WAF-DDoS保护**&#x200B;或&#x200B;**增强安全性**&#x200B;附加组件并实施Adobe推荐的[WAF流量过滤器规则](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)来防御复杂的攻击，包括那些使用高级协议或基于有效负载的技术的攻击。
-- 通过将[请求转换](./traffic-filter-and-waf-rules/how-to/request-transformation.md)配置为忽略不必要的查询参数来提高缓存覆盖率。
+- 实施 Adobe 推荐的[标准流量过滤规则](./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)，通过记录请求和触发警报识别潜在的恶意流量模式。
+- 启用 **WAF-DDoS 防护**&#x200B;或&#x200B;**增强安全性**&#x200B;附加功能，并实施 Adobe 推荐的 [WAF 流量过滤规则](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)，以防御利用高级协议或载荷手法发起的复杂攻击。
+- 通过配置[请求转换规则](./traffic-filter-and-waf-rules/how-to/request-transformation.md)，忽略无关查询参数，从而提升缓存覆盖率。
 
 ## 开始使用
 
-浏览以下教程，配置Adobe推荐的规则以阻止攻击。
+请参考以下教程，了解如何配置 Adobe 推荐的规则以阻止各类攻击。
 
 <!-- CARDS
 {target = _self}
@@ -78,8 +78,8 @@ ht-degree: 32%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./traffic-filter-and-waf-rules/setup.md" title="如何设置流量过滤器规则，包括WAF规则" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./traffic-filter-and-waf-rules/assets/setup/rules-setup.png" alt="如何设置流量过滤器规则，包括WAF规则"
+                    <a href="./traffic-filter-and-waf-rules/setup.md" title="如何设置流量过滤规则（包括 WAF 规则）" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./traffic-filter-and-waf-rules/assets/setup/rules-setup.png" alt="如何设置流量过滤规则（包括 WAF 规则）"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -87,9 +87,9 @@ ht-degree: 32%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./traffic-filter-and-waf-rules/setup.md" target="_self" rel="referrer" title="如何设置流量过滤器规则，包括WAF规则">如何设置流量过滤器规则，包括WAF规则</a>
+                        <a href="./traffic-filter-and-waf-rules/setup.md" target="_self" rel="referrer" title="如何设置流量过滤规则（包括 WAF 规则）">如何设置流量过滤规则（包括 WAF 规则）</a>
                     </p>
-                    <p class="is-size-6">了解如何设置以创建、部署、测试和分析流量过滤器规则(包括WAF规则)的结果。</p>
+                    <p class="is-size-6">了解如何进行设置，以创建、部署、测试和分析流量过滤规则（包括 WAF 规则）的结果。</p>
                 </div>
                 <a href="./traffic-filter-and-waf-rules/setup.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">立即开始</span>
@@ -101,8 +101,8 @@ ht-degree: 32%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md" title="使用标准流量过滤器规则保护AEM网站" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./traffic-filter-and-waf-rules/assets/use-cases/using-traffic-filter-rules.png" alt="使用标准流量过滤器规则保护AEM网站"
+                    <a href="./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md" title="使用标准流量过滤规则保护 AEM 网站" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./traffic-filter-and-waf-rules/assets/use-cases/using-traffic-filter-rules.png" alt="使用标准流量过滤规则保护 AEM 网站"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -110,9 +110,9 @@ ht-degree: 32%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md" target="_self" rel="referrer" title="使用标准流量过滤器规则保护AEM网站">使用标准流量过滤器规则保护AEM网站</a>
+                        <a href="./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md" target="_self" rel="referrer" title="使用标准流量过滤规则保护 AEM 网站">使用标准流量过滤规则保护 AEM 网站</a>
                     </p>
-                    <p class="is-size-6">了解如何使用AEM推荐的标准流量过滤器规则在AEM as a Cloud Service中保护Adobe网站免受DoS、DDoS和机器人滥用。</p>
+                    <p class="is-size-6">了解如何在 AEM as a Cloud Service 中使用 Adobe 推荐的标准流量过滤规则防护 AEM 网站抵御 DoS、DDoS 攻击以及机器人滥用。</p>
                 </div>
                 <a href="./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">应用规则</span>
@@ -124,8 +124,8 @@ ht-degree: 32%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md" title="使用WAF流量过滤器规则保护AEM网站" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./traffic-filter-and-waf-rules/assets/use-cases/using-waf-rules.png" alt="使用WAF流量过滤器规则保护AEM网站"
+                    <a href="./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md" title="使用 WAF 流量过滤规则保护 AEM 网站" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./traffic-filter-and-waf-rules/assets/use-cases/using-waf-rules.png" alt="使用 WAF 流量过滤规则保护 AEM 网站"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -133,12 +133,12 @@ ht-degree: 32%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md" target="_self" rel="referrer" title="使用WAF流量过滤器规则保护AEM网站">使用AEM流量过滤器规则保护WAF网站</a>
+                        <a href="./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md" target="_self" rel="referrer" title="使用 WAF 流量过滤规则保护 AEM 网站">使用 WAF 流量过滤规则保护 AEM 网站</a>
                     </p>
-                    <p class="is-size-6">了解如何使用AEM推荐的Adobe Web应用程序防火墙(WAF)流量过滤器规则在AEM as a Cloud Service中保护网站免受复杂威胁，包括DoS、DDoS和机器人滥用。</p>
+                    <p class="is-size-6">了解如何在 AEM as a Cloud Service 中使用 Adobe 推荐的 Web 应用程序防火墙（WAF）流量过滤规则，防御包括 DoS、DDoS 和机器人滥用在内的复杂安全威胁。</p>
                 </div>
                 <a href="./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">激活WAF</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">启用 WAF</span>
                 </a>
             </div>
         </div>
