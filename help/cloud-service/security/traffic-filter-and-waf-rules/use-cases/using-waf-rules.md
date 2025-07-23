@@ -30,7 +30,7 @@ ht-degree: 100%
 > 使用 WAF 流量过滤规则需要额外的 **WAF-DDoS 防护**&#x200B;或&#x200B;**增强安全性（Enhanced Security）**&#x200B;许可证。Sites 和 Forms 客户可默认使用标准流量过滤规则。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469440/?quality=12&learn=on&captions=chi_hans)
 
 ## 学习目标
 
