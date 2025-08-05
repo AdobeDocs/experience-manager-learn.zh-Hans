@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
 source-git-commit: f0ad5d66549970337118220156d7a6b0fd30fd57
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '620'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -100,7 +100,7 @@ ht-degree: 94%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="设置本地开发环境" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443988/?format=jpeg&nocache=1753811862249&captions=chi_hans" alt="设置本地开发环境"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="设置本地开发环境"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -316,8 +316,8 @@ ht-degree: 94%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./how-to/local-extension-preview.md" title="预览Universal Editor扩展" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="./how-to/assets/local-extension-preview/extension-loaded.png" alt="预览Universal Editor扩展"
+                    <a href="./how-to/local-extension-preview.md" title="预览通用编辑器扩展" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="./how-to/assets/local-extension-preview/extension-loaded.png" alt="预览通用编辑器扩展"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -325,9 +325,9 @@ ht-degree: 94%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./how-to/local-extension-preview.md" target="_blank" rel="referrer" title="预览Universal Editor扩展">预览通用编辑器扩展</a>
+                        <a href="./how-to/local-extension-preview.md" target="_blank" rel="referrer" title="预览通用编辑器扩展">预览通用编辑器扩展</a>
                     </p>
-                    <p class="is-size-6">了解如何在开发期间预览本地运行的通用编辑器扩展。</p>
+                    <p class="is-size-6">了解如何在开发过程中预览本地运行的通用编辑器扩展。</p>
                 </div>
                 <a href="./how-to/local-extension-preview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
