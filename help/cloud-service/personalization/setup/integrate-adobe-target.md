@@ -140,7 +140,7 @@ ht-degree: 1%
 
 ## 其他资源
 
-- [Target API概述](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/target-api-overview)
-- [目标选件](https://experienceleague.adobe.com/en/docs/target/using/experiences/offers/manage-content)
+- [Target API概述](https://experienceleague.adobe.com/zh-hans/docs/target-dev/developer/api/target-api-overview)
+- [目标选件](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/offers/manage-content)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/)
-- AEM中的[体验片段](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)
+- AEM中的[体验片段](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)
