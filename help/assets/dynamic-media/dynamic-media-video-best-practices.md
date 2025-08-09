@@ -20,7 +20,7 @@ ht-degree: 0%
 
 了解在AEM Dynamic Media中发布和优化视频的最佳实践，包括自适应流、针对不同屏幕大小的智能裁剪、自定义查看器预设以及支持字幕、音轨和章节标记。 它强调如何增强查看者体验、可访问性和跨设备营销影响。
 
->[!VIDEO](https://video.tv.adobe.com/v/3470634/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3470688/?learn=on&enablevpops&captions=chi_hans)
 
 ## 支持资源
 
