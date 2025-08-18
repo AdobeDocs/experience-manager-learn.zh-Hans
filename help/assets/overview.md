@@ -6,7 +6,7 @@ version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
 source-git-commit: 82437ad5d395c5261b3a913b168e4068abb55206
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '128'
 ht-degree: 100%
 
