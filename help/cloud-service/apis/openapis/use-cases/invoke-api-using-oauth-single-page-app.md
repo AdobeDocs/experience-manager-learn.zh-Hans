@@ -1,7 +1,7 @@
 ---
 title: 使用OAuth单页应用程序调用基于OpenAPI的AEM API
 description: 了解如何通过OAuth 2.0 PKCE流程，使用自定义单页应用程序(SPA)中的基于用户的身份验证，在AEM as a Cloud Service上调用基于OpenAPI的AEM API。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
@@ -12,7 +12,7 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
 workflow-type: tm+mt
 source-wordcount: '2130'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Adobe Developer Console (ADC)项目配置为启用OAuth单页应用程序身份�
 >ADC项目未提供&#x200B;_client_secret_。 SPA而是生成&#x200B;_code_verifier_&#x200B;和&#x200B;_code_challenge_，以安全地交换&#x200B;_访问令牌_&#x200B;的授权代码。 它无需在客户端存储客户端密钥，增强了安全性。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456974?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 
@@ -423,7 +423,7 @@ WKND SPA使用用户特定的访问令牌来调用内容片段模型和DAM文件
 
 AEM as a Cloud Service的跨源资源共享(CORS)有助于非AEM Web资产对AEM API进行基于浏览器的客户端调用。
 
-1. 在AEM项目中，从`/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/`文件夹中找到或创建`com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json`文件。
+1. 在AEM项目中，从`com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json`文件夹中找到或创建`/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/`文件。
 
    ![查找CORS配置文件](../assets/spa/locate-cors-config-file.png)
 
