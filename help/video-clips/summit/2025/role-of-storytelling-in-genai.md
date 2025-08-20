@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索乡村音乐中的叙事原则如何与用于数字体验的GenAI工具的设计相关。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459229/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462019/?learn=on&enablevpops&captions=chi_hans)

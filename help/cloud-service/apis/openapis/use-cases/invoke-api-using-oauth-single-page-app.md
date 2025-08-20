@@ -59,7 +59,7 @@ Adobe Developer Console (ADC)项目配置为启用OAuth单页应用程序身份�
 >ADC项目未提供&#x200B;_client_secret_。 SPA而是生成&#x200B;_code_verifier_&#x200B;和&#x200B;_code_challenge_，以安全地交换&#x200B;_访问令牌_&#x200B;的授权代码。 它无需在客户端存储客户端密钥，增强了安全性。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3456974?quality=12&learn=on&captions=chi_hans)
 
 
 

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Emily Kellman分享了Adobe.com如何使用生成变体来提高内容速度、缩短时间轴并提高转化率。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459232/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462738/?learn=on&enablevpops&captions=chi_hans)
