@@ -12,10 +12,10 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+source-git-commit: 57da04874cfb37dcccbf605c65fbcba8f12849fb
 workflow-type: tm+mt
-source-wordcount: '1776'
-ht-degree: 1%
+source-wordcount: '1811'
+ht-degree: 2%
 
 ---
 
@@ -72,7 +72,7 @@ OAuth服务器到服务器身份验证非常适用于需要API访问而不进行
 
 >[!TIP]
 >
->确保您已完成[设置基于OpenAPI的AEM API](../setup.md#enable-aem-apis-access)文章中的&#x200B;**启用AEM API访问**&#x200B;步骤。 如果没有该选项，“服务器到服务器”身份验证选项将不可用。
+>确保您已完成&#x200B;**设置基于OpenAPI的AEM API**&#x200B;文章中的[启用AEM API访问](../setup.md#enable-aem-apis-access)步骤。 如果没有该选项，“服务器到服务器”身份验证选项将不可用。
 
 
 1. 从[Adobe Developer Console](https://developer.adobe.com/console/projects)中，打开所需的项目。
@@ -82,6 +82,9 @@ OAuth服务器到服务器身份验证非常适用于需要API访问而不进行
    ![添加API](../assets/s2s/add-api.png)
 
 1. 在&#x200B;_添加API_&#x200B;对话框中，按&#x200B;_Experience Cloud_&#x200B;筛选，选择&#x200B;**AEM Assets创作API**&#x200B;卡片，然后单击&#x200B;**下一步**。
+如果您需要其他基于OpenAPI的AEM API，请参阅[Adobe Developer文档](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis)以查找与您的用例相匹配的API。
+
+   以下示例介绍如何添加&#x200B;**AEM Assets创作API**。
 
    ![添加AEM API](../assets/s2s/add-aem-api.png)
 
@@ -125,7 +128,7 @@ OAuth服务器到服务器身份验证非常适用于需要API访问而不进行
 
 ### 审查API
 
-在开发应用程序之前，让我们从&#x200B;_Assets创作API_&#x200B;查看[交付指定资源的元数据](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata)端点。 API语法为：
+在开发应用程序之前，让我们从[Assets创作API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata)查看&#x200B;_交付指定资源的元数据_&#x200B;端点。 API语法为：
 
 ```http
 GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
@@ -143,13 +146,13 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 ### 使用浏览器调用API
 
-在开发应用程序之前，让我们使用[API文档](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)中的&#x200B;**尝试它**&#x200B;功能调用API。
+在开发应用程序之前，让我们使用&#x200B;**API文档**&#x200B;中的[尝试它](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)功能调用API。
 
 1. 在浏览器中打开[Assets创作API文档](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)。
 
 1. 展开&#x200B;_元数据_&#x200B;部分，然后单击&#x200B;**交付指定资源的元数据**&#x200B;选项。
 
-1. 在右窗格中，单击&#x200B;**尝试它**&#x200B;按钮。
+1. 在右窗格中，单击&#x200B;**尝试它**按钮。
    ![API文档](../assets/s2s/api-documentation.png)
 
 1. 输入以下值：
@@ -192,7 +195,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 1. 将`.env`文件中的占位符替换为ADC项目的OAuth服务器到服务器凭据中的实际值。
 
-1. 将`src/index.js`文件中的`<BUCKETNAME>`和`<ASSETID>`替换为实际值。
+1. 将`<BUCKETNAME>`文件中的`<ASSETID>`和`src/index.js`替换为实际值。
 
 1. 运行NodeJS应用程序。
 
@@ -480,3 +483,4 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 ## 其他资源
 
 - [OAuth 服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
+
