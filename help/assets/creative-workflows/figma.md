@@ -22,6 +22,6 @@ ht-degree: 0%
 
 了解如何将Experience Manager Assets与Figma集成以简化设计工作流，确保品牌一致性，并让创意团队在设计时直接访问批准的资源。
 
->[!VIDEO](https://video.tv.adobe.com/v/3472903/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3472914/?learn=on&enablevpops&captions=chi_hans)
 
 * [下载示例WKND文件](./assets/figma/WKND-Summer-Campaign.fig)

@@ -23,4 +23,4 @@ ht-degree: 29%
 
 了解如何使用Experience Manager Assets Content Hub程序和Adobe Cloud Manager加载项设置Assets。 还了解如何使用产品配置文件配置用户的访问权限。
 
->[!VIDEO](https://video.tv.adobe.com/v/3472918/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3472945/?learn=on&captions=chi_hans)
