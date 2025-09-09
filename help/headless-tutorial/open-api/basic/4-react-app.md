@@ -43,7 +43,7 @@ ht-degree: 1%
 
 此示例React应用程序在本地运行（在`http://localhost:3000`上），并使用OpenAPI API连接到AEM Publish服务的AEM内容片段交付。 要允许此连接，必须在AEM Publish（或Preview）服务上配置CORS（跨源资源共享）。
 
-按照有关设置在[上运行的SPA的`http://localhost:3000`说明操作，以允许向AEM发布服务](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#different-domains)发送CORS请求。
+按照有关设置在[上运行的SPA的`http://localhost:3000`说明操作，以允许向AEM发布服务](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#different-domains)发送CORS请求。
 
 ### 本地CORS代理
 

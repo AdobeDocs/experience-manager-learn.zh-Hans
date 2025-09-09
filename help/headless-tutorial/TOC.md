@@ -28,7 +28,7 @@ ht-degree: 94%
       + [4 — 构建React应用程序](./open-api/basic/4-react-app.md)
       + [5 — 通用编辑器集成](./open-api/basic/5-universal-editor.md)
 + GraphQL {#graphql}
-   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
+   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans){target=_blank}
    + [概述](./graphql/overview.md)
    + 快速设置 {#quick-setup}
       + [云服务](./graphql/quick-setup/cloud-service.md)

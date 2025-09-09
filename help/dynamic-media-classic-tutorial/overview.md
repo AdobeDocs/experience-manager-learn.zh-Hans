@@ -42,7 +42,7 @@ Dynamic Media Classic是客户创建、创作和交付富媒体内容的中心�
 - **视频。**&#x200B;上传最终视频并将其发布，然后逐步下载到可配置的视频查看器中。
 - **智能成像。**&#x200B;技术，可与现有“图像预设”配合使用，以通过基于客户端浏览器功能自动优化图像格式、大小和质量来增强图像投放性能。
 
-要了解该解决方案的其他功能，请访问[Dynamic Media Classic文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html)。
+要了解该解决方案的其他功能，请访问[Dynamic Media Classic文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html?lang=zh-Hans)。
 
 ## Dynamic Media Classic用户界面(UI)
 
@@ -72,4 +72,4 @@ _Dynamic Media Classic UI_
 >
 >选中“上传”对话框中的&#x200B;**上传后发布**&#x200B;复选框，可在上传时自动发布资产。
 
-了解有关[在Dynamic Media Classic的UI中导航](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html)的更多信息。
+了解有关[在Dynamic Media Classic的UI中导航](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html?lang=zh-Hans)的更多信息。

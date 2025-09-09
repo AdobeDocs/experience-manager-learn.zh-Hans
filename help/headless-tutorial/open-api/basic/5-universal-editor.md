@@ -46,7 +46,7 @@ Universal Editor提供了一种强大的方式，可用于为任何Web应用程�
 首先，添加必要的元标记，以将React应用程序标识为与通用编辑器兼容。
 
 1. 在React应用程序中打开`public/index.html`。
-1. 在React应用程序的[部分添加](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)通用编辑器元标记和CORS脚本`<head>`：
+1. 在React应用程序的[部分添加](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)通用编辑器元标记和CORS脚本`<head>`：
 
    ```html
    <!DOCTYPE html>
