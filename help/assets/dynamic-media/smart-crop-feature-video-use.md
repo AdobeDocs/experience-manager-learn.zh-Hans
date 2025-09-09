@@ -1,6 +1,6 @@
 ---
 title: 在AEM Assets Dynamic Media中使用智能裁切
-description: 智能裁切使用Adobe Sensei来消除为响应式设计裁切内容这一耗时且成本高昂的任务。
+description: 智能裁剪可消除为响应式设计裁剪内容这一耗时且成本高昂的任务。
 feature: Smart Crop, Image Profiles
 version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
@@ -10,18 +10,18 @@ jira: KT-784
 doc-type: Feature Video
 exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
 duration: 443
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
 
 # 在AEM Assets Dynamic Media中使用智能裁切{#using-smart-crop-with-aem-assets-dynamic-media}
 
-智能裁切使用Adobe Sensei来消除为响应式设计裁切内容这一耗时且成本高昂的任务。
+智能裁剪可消除为响应式设计裁剪内容这一耗时且成本高昂的任务。
 
->[!VIDEO](https://video.tv.adobe.com/v/40210?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/21519?quality=12&learn=on)
 
 >[!NOTE]
 >

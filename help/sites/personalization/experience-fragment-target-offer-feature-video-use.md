@@ -9,7 +9,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 9ee826cf-389f-4570-bfe1-0d43d3fed3e1
 duration: 574
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Adobe Experience Manager可重新设想AEM和Target之间的个性化工作流程。 在AEM中创建的体验现在可以直接作为HTML选件交付到Adobe Target。 它允许营销人员跨不同渠道无缝测试和个性化内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/38075?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/22383?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -31,9 +31,9 @@ Adobe Experience Manager可重新设想AEM和Target之间的个性化工作流�
 * HTML选件与Experience Fragment选件之间的主要区别在于，针对后者的编辑只能在AEM中完成，然后与Adobe Target同步
 * 应用于体验片段文件夹的Target云服务配置继承到直接在父文件夹下创建的所有体验片段。 子文件夹不继承父云服务配置。
 * 要创建个性化优惠，我们现在可以轻松利用存储在AEM中的内容。
-* 您可以创建多种类型的Target活动，包括Sensei支持的活动，如自动分配、自动定位和Automated Personalization
+* 您可以创建多种类型的Target活动，包括AI支持的活动，如自动分配、自动定位和Automated Personalization
 
 ## 其他资源 {#additional-resources}
 
-* [体验片段文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=zh-Hans)
+* [体验片段文档](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
 * [使用体验片段](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)

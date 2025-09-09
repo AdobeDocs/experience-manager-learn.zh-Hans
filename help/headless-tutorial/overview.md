@@ -8,10 +8,10 @@ level: Beginner
 doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 46d65df60ce7a4cda7ff3aa3fb21c1ee60f59bc6
-workflow-type: ht
-source-wordcount: '375'
-ht-degree: 100%
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+workflow-type: tm+mt
+source-wordcount: '372'
+ht-degree: 96%
 
 ---
 
@@ -21,18 +21,18 @@ Adobe Experience Manager (AEM) 有多个选项可用于定义 Headless 端点，
 
 >[!TIP]
 >
->本系列教程专为那些喜欢&#x200B;**边做边学**&#x200B;的人员设计。如果您喜欢从头开始学习概念，可以查看 [AEM Headless 开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html?lang=zh-Hans)。这套教程和该历程相辅相成。
+>本系列教程专为那些喜欢&#x200B;**边做边学**&#x200B;的人员设计。如果您喜欢从头开始学习概念，可以查看 [AEM Headless 开发人员历程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html)。这套教程和该历程相辅相成。
 
 ## 按 API 分类的教程
 
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
       <img alt="GraphQL API" src="./assets/graphql-icon.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
     <strong>GraphQL API</strong>
     </a>
     </div>
@@ -41,31 +41,31 @@ Adobe Experience Manager (AEM) 有多个选项可用于定义 Headless 端点，
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hans">
+    <a href="./open-api/basic/overview.md">
+      <img alt="OpenAPI" src="./assets/content-services.png" />
+    </a>
+     <div>
+      <a href="./open-api/basic/overview.md">
+        <strong>OpenAPI</strong>
+      </a>
+    </div>
+    <p>
+    <em>了解应用程序如何使用基于OpenAPI的REST API来使用内容。</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
     <img alt="基于令牌的身份验证" src="./assets/token-auth-icon.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
     <strong>令牌身份验证</strong>
     </a>
     </div>
     <p>
     <em>了解应用程序如何通过 AEM 安全地进行身份验证。</em>
     </p>
-  </td>
-  <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=zh-Hans">
-      <img alt="内容服务" src="./assets/content-services.png" />
-    </a>
-     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=zh-Hans">
-        <strong>内容服务</strong>
-      </a>
-    </div>
-    <p>
-    <em>了解应用程序如何使用 REST API 来消费内容。</em>
-    <p>
-  </td>
+  </td>  
 </tr>
 </table>
 
@@ -76,11 +76,11 @@ Adobe Experience Manager (AEM) 有多个选项可用于定义 Headless 端点，
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
       <img alt="iOS 示例" src="./assets/ios-example.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html?lang=zh-Hans">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
     <strong>iOS SwiftUI 示例</strong>
     </a>
     </div>
@@ -89,11 +89,11 @@ Adobe Experience Manager (AEM) 有多个选项可用于定义 Headless 端点，
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
     <img alt="Android 示例" src="./assets/android-example.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
     <strong>Android™ 示例</strong>
     </a>
     </div>
@@ -102,11 +102,11 @@ Adobe Experience Manager (AEM) 有多个选项可用于定义 Headless 端点，
     </p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
       <img alt="React 示例" src="./assets/react-example.png" />
     </a>
      <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html?lang=zh-Hans">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
         <strong>React 示例</strong>
       </a>
     </div>
@@ -124,11 +124,11 @@ Adobe Experience Manager (AEM) 有多个选项可用于定义 Headless 端点，
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html">
       <img alt="React - Headless" src="./assets/react-headless.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
     <strong>React - Headless</strong>
     </a>
     </div>
@@ -150,11 +150,11 @@ Adobe Experience Manager (AEM) 有多个选项可用于定义 Headless 端点，
     <p>
   </td>  
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
     <img alt="React - 远程编辑器" src="./assets/react-remote.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
     <strong>React - 远程编辑器</strong>
     </a>
     </div>
@@ -165,11 +165,11 @@ Adobe Experience Manager (AEM) 有多个选项可用于定义 Headless 端点，
 </tr>
 <tr>  
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
       <img alt="React - SPA 编辑器" src="./assets/react-spa-editor.png" />
     </a>
      <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hans">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
         <strong>React - SPA 编辑器</strong>
       </a>
     </div>
@@ -178,11 +178,11 @@ Adobe Experience Manager (AEM) 有多个选项可用于定义 Headless 端点，
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
     <img alt="Andriod - 内容服务" src="./assets/android.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
     <strong>Android - 内容服务</strong>
     </a>
     </div>
@@ -191,11 +191,11 @@ Adobe Experience Manager (AEM) 有多个选项可用于定义 Headless 端点，
     </p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hans">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
       <img alt="Node.js 身份验证" src="./assets/node-js.png" />
     </a>
      <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hans">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
         <strong>Node.js 身份验证</strong>
       </a>
     </div>
