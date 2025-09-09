@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Experience Manager Assets使用描述视频关键元素的关键字对视频资源进行智能标记，从而使AEM用户能够使用关键词搜索功能轻松找到它们。
 
->[!VIDEO](https://video.tv.adobe.com/v/327005?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340528?quality=12&learn=on&captions=chi_hans)

@@ -21,7 +21,7 @@ ht-degree: 0%
 
 智能裁剪可消除为响应式设计裁剪内容这一耗时且成本高昂的任务。
 
->[!VIDEO](https://video.tv.adobe.com/v/21519?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40210?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

@@ -22,4 +22,4 @@ ht-degree: 0%
 
 借助Adobe Asset Link面板，创意用户可以使用关键字搜索AEM Assets中存储的资源，或在特定位置下执行搜索。 除了基本的搜索选项之外，Adobe Asset Link还允许您使用资源在AEM Assets中搜索视觉上类似的结果。 可视搜索显示结果，其中包含与目标图像相关的美学特性。
 
->[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38592?quality=12&learn=on&captions=chi_hans)

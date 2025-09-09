@@ -22,7 +22,7 @@ ht-degree: 0%
 
 适用于视频的Dynamic Media智能裁剪可智能跟踪视频中的兴趣点，确保视频在所有屏幕尺寸上都具有最佳外观。
 
->[!VIDEO](https://video.tv.adobe.com/v/37958?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326467?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >

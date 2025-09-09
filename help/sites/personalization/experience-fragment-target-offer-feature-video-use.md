@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Adobe Experience Manager可重新设想AEM和Target之间的个性化工作流程。 在AEM中创建的体验现在可以直接作为HTML选件交付到Adobe Target。 它允许营销人员跨不同渠道无缝测试和个性化内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/22383?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38075?quality=12&learn=on&captions=chi_hans)
 
 >[!NOTE]
 >
