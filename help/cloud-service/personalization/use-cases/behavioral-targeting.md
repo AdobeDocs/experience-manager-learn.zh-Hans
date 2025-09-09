@@ -164,7 +164,7 @@ AEP的各种解决方案用于收集、管理和收集行为数据以创建受�
    - **名称**： WKND-RDE-Behavioral-Targeting
    - **描述**：用于将页面查看数据发送到Experience Platform的数据流
    - **映射架构**： WKND-RDE-Behavioral-Targeting
-单击**保存**&#x200B;以创建数据流。
+单击&#x200B;**保存**&#x200B;以创建数据流。
 
   ![配置数据流](../assets/use-cases/behavioral-targeting/configure-datastream-name-review.png)
 
@@ -183,7 +183,7 @@ AEP的各种解决方案用于收集、管理和收集行为数据以创建受�
 
   ![配置Adobe Experience Platform服务](../assets/use-cases/behavioral-targeting/configure-adobe-experience-platform-service.png)
 
-- 在&#x200B;**添加服务**&#x200B;步骤中，从下拉列表中选择&#x200B;**Adobe Target**，并输入&#x200B;**Target环境ID**。 您可以在Adobe Target中的&#x200B;**管理** > **环境**&#x200B;下找到目标环境ID。 单击&#x200B;**保存**以添加该服务。
+- 在&#x200B;**添加服务**&#x200B;步骤中，从下拉列表中选择&#x200B;**Adobe Target**，并输入&#x200B;**Target环境ID**。 您可以在Adobe Target中的&#x200B;**管理** > **环境**&#x200B;下找到目标环境ID。 单击&#x200B;**保存**&#x200B;以添加该服务。
   ![配置Adobe Target服务](../assets/use-cases/behavioral-targeting/configure-adobe-target-service.png)
 
 ### 创建和配置标记属性
@@ -200,7 +200,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
 要创建Tags属性，请完成以下步骤：
 
-- 在&#x200B;**Adobe Experience Platform**&#x200B;中，单击左侧导航栏中的&#x200B;**标记**，然后单击&#x200B;**新建属性**按钮。
+- 在&#x200B;**Adobe Experience Platform**&#x200B;中，单击左侧导航栏中的&#x200B;**标记**，然后单击&#x200B;**新建属性**&#x200B;按钮。
   ![创建新标记属性](../assets/use-cases/behavioral-targeting/create-new-tags-property.png)
 
 - 在&#x200B;**创建属性**&#x200B;对话框中，输入以下内容：
@@ -212,7 +212,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
   ![创建新标记属性](../assets/use-cases/behavioral-targeting/create-new-tags-property-dialog.png)
 
-- 打开新属性，从左侧导航栏中单击&#x200B;**扩展**，然后单击&#x200B;**目录**&#x200B;选项卡。 搜索&#x200B;**Web SDK**，然后单击&#x200B;**安装**按钮。
+- 打开新属性，从左侧导航栏中单击&#x200B;**扩展**，然后单击&#x200B;**目录**&#x200B;选项卡。 搜索&#x200B;**Web SDK**，然后单击&#x200B;**安装**&#x200B;按钮。
   ![安装Web SDK扩展](../assets/use-cases/behavioral-targeting/install-web-sdk-extension.png)
 
 - 在&#x200B;**安装扩展**&#x200B;对话框中，选择您之前创建的&#x200B;**数据流**，然后单击&#x200B;**保存**。
@@ -224,7 +224,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
 创建以下数据元素以捕获重要页面详细信息。
 
-- 从左侧导航中单击&#x200B;**数据元素**，然后单击&#x200B;**新建数据元素**按钮。
+- 从左侧导航中单击&#x200B;**数据元素**，然后单击&#x200B;**新建数据元素**&#x200B;按钮。
   ![创建新数据元素](../assets/use-cases/behavioral-targeting/create-new-data-element.png)
 
 - 在&#x200B;**创建新数据元素**&#x200B;对话框中，输入以下内容：
@@ -306,7 +306,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
 创建规则以使用其他数据元素填充&#x200B;**XDM-Variable Pageview**&#x200B;数据元素，然后再将其发送到Experience Platform。 规则在用户浏览WKND网站时触发。
 
-- 从左侧导航栏中单击&#x200B;**规则**，然后单击&#x200B;**创建新规则**按钮。
+- 从左侧导航栏中单击&#x200B;**规则**，然后单击&#x200B;**创建新规则**&#x200B;按钮。
   ![创建新规则](../assets/use-cases/behavioral-targeting/create-new-rule.png)
 
 - 在&#x200B;**创建新规则**&#x200B;对话框中，输入以下内容：
@@ -398,7 +398,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
 库是已构建并部署到网站的所有标记配置（数据元素、规则、扩展）的集合。 它将所有内容打包在一起，以便数据收集正常工作。 对于行为定位，将发布库以使数据收集规则在您的网站上处于活动状态。
 
-- 从左侧导航栏中单击&#x200B;**发布流**，然后单击&#x200B;**添加库**按钮。
+- 从左侧导航栏中单击&#x200B;**发布流**，然后单击&#x200B;**添加库**&#x200B;按钮。
   ![添加库](../assets/use-cases/behavioral-targeting/add-library.png)
 
 - 在&#x200B;**添加库**&#x200B;对话框中，输入以下内容：
@@ -410,7 +410,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
   ![添加库](../assets/use-cases/behavioral-targeting/add-library-dialog.png)
 
-- 为&#x200B;**开发**&#x200B;泳道构建库后，单击省略号（三个点）并选择&#x200B;**批准并发布到生产环境**选项。
+- 为&#x200B;**开发**&#x200B;泳道构建库后，单击省略号（三个点）并选择&#x200B;**批准并发布到生产环境**&#x200B;选项。
   ![批准并发布到生产环境](../assets/use-cases/behavioral-targeting/approve-publish-to-production.png)
 
 恭喜！您已使用规则创建Tags属性以收集页面详细信息并将它们发送到Experience Platform。 这是创建行为受众的基本步骤。
@@ -444,7 +444,7 @@ Adobe Target目标(V2)允许您直接在Adobe Target中激活在Experience Platf
 
   ![Adobe Target目标](../assets/use-cases/behavioral-targeting/adobe-target-destination.png)
 
-- 在&#x200B;**激活目标**&#x200B;步骤中，提供目标的名称，然后单击&#x200B;**连接到目标**按钮。
+- 在&#x200B;**激活目标**&#x200B;步骤中，提供目标的名称，然后单击&#x200B;**连接到目标**&#x200B;按钮。
   ![连接到目标](../assets/use-cases/behavioral-targeting/connect-to-destination.png)
 
 - 在&#x200B;**目标详细信息**&#x200B;部分中，输入以下内容：
@@ -465,10 +465,10 @@ Adobe Target目标(V2)允许您直接在Adobe Target中激活在Experience Platf
 
 要创建受众，请完成以下步骤：
 
-- 在&#x200B;**Adobe Experience Platform**&#x200B;中，单击左侧导航栏中的&#x200B;**受众**，然后单击&#x200B;**创建受众**按钮。
+- 在&#x200B;**Adobe Experience Platform**&#x200B;中，单击左侧导航栏中的&#x200B;**受众**，然后单击&#x200B;**创建受众**&#x200B;按钮。
   ![创建受众](../assets/use-cases/behavioral-targeting/create-audience.png)
 
-- 在&#x200B;**创建受众**&#x200B;对话框中，选择&#x200B;**生成规则**&#x200B;选项，然后单击&#x200B;**创建**按钮。
+- 在&#x200B;**创建受众**&#x200B;对话框中，选择&#x200B;**生成规则**&#x200B;选项，然后单击&#x200B;**创建**&#x200B;按钮。
   ![创建受众](../assets/use-cases/behavioral-targeting/create-audience-dialog.png)
 
 - 在&#x200B;**创建**&#x200B;步骤中，输入以下内容：
@@ -515,7 +515,7 @@ Adobe Target目标(V2)允许您直接在Adobe Target中激活在Experience Platf
 
   ![Experience Manager](../assets/use-cases/behavioral-targeting/dx-experience-manager.png)
 
-- 导航到您的AEM创作环境，然后单击&#x200B;**站点**按钮。
+- 导航到您的AEM创作环境，然后单击&#x200B;**站点**&#x200B;按钮。
   ![AEM创作环境](../assets/use-cases/behavioral-targeting/aem-author-environment.png)
 
 ### 将标记属性集成并注入到AEM页面中
@@ -600,7 +600,7 @@ Adobe Target中的活动是一种个性化营销活动，它定义将个性化�
 
 现在，创建了一个活动以向&#x200B;**家庭旅行者**&#x200B;受众的主页提供个性化体验。
 
-- 在Adobe Target中，单击&#x200B;**活动**，然后单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**体验定位**活动类型。
+- 在Adobe Target中，单击&#x200B;**活动**，然后单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**体验定位**&#x200B;活动类型。
   ![创建活动](../assets/use-cases/behavioral-targeting/create-activity.png)
 
 - 在&#x200B;**创建体验定位活动**&#x200B;对话框中，选择&#x200B;**Web**&#x200B;类型和&#x200B;**可视化**&#x200B;编辑器选项，并输入WKND网站主页URL。 单击&#x200B;**创建**&#x200B;按钮以创建该活动。
@@ -611,7 +611,7 @@ Adobe Target中的活动是一种个性化营销活动，它定义将个性化�
 
   包含受众和选件的![活动](../assets/use-cases/behavioral-targeting/activity-with-audience-n-offer.png)
 
-- 单击“下一步”****&#x200B;并使用适当的目标和量度配置&#x200B;**目标和设置**&#x200B;部分，然后激活它以实时推送更改。
+- 单击“下一步”**&#x200B;**&#x200B;并使用适当的目标和量度配置&#x200B;**目标和设置**&#x200B;部分，然后激活它以实时推送更改。
 
   ![通过目标和设置激活](../assets/use-cases/behavioral-targeting/activate-with-goals-and-settings.png)
 
