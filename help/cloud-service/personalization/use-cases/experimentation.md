@@ -256,7 +256,7 @@ A/B测试设置过程包括创建和配置试验的六个主要步骤：
 
 ## 其他资源
 
-- [A/B测试概述](https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab)
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
-- [数据流概述](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
-- [可视化体验编辑器(VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
+- [A/B测试概述](https://experienceleague.adobe.com/zh-hans/docs/target/using/activities/abtest/test-ab)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/home)
+- [数据流概述](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/datastreams/overview)
+- [可视化体验编辑器(VEC)](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/vec/visual-experience-composer)
