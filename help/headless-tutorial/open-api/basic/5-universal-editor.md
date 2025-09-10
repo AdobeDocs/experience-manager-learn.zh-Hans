@@ -1,5 +1,5 @@
 ---
-title: 使用通用编辑器使React应用程序可编辑 | Headless教程第5部分
+title: 使用通用编辑器编辑React应用程序 | Headless教程第5部分
 description: 了解如何通过添加必要的工具和配置，在AEM Universal Editor中使React应用程序可编辑。
 version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
@@ -8,15 +8,15 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 duration: 800
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: da3bfa25a424e3176fb7d53189169515db225228
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 2%
 
 ---
 
 
-# 使用通用编辑器使React应用程序可编辑
+# 使用通用编辑器编辑React应用程序
 
 在本章中，您将了解如何使用AEM通用编辑器使在[上一章](./4-react-app.md)中构建的React应用程序可编辑。 通用编辑器允许内容作者直接在React应用程序体验的上下文中编辑内容，同时保持Headless应用程序的无缝体验。
 
@@ -46,7 +46,7 @@ Universal Editor提供了一种强大的方式，可用于为任何Web应用程�
 首先，添加必要的元标记，以将React应用程序标识为与通用编辑器兼容。
 
 1. 在React应用程序中打开`public/index.html`。
-1. 在React应用程序的[部分添加](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)通用编辑器元标记和CORS脚本`<head>`：
+1. 在React应用程序的[部分添加](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)通用编辑器元标记和CORS脚本`<head>`：
 
    ```html
    <!DOCTYPE html>
