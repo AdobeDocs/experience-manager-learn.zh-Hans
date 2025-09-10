@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 duration: 430
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: a3d2a88232cae941647464be8e215a47c85bc0ab
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 3%
 
 ---
 
-# 定义内容片段模型
+# 创建内容片段模型
 
 在本章中，了解如何使用&#x200B;**内容片段模型**&#x200B;为内容建模并构建架构，以及有关定义内容片段模型的不同数据类型。
 
@@ -160,5 +160,5 @@ ht-degree: 3%
 
 ## 相关文档
 
-* [内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html?lang=zh-Hans)
+* [内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)
 
