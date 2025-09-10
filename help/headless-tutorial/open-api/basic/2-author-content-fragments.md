@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 duration: 700
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: 01f51a3556cfbcc22bbe31c4c05c11caaab71708
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 1%
@@ -50,7 +50,7 @@ AEM支持“平面”文件夹组织，这意味着不同内容片段模型的�
    * 标题： **英语**
    * 名称： **en**
 
-   将创建一个根语言文件夹来定位项目，以支持AEM的本机本地化功能。 最佳做法是为多语言支持设置项目，即使您现在不需要本地化。 有关详细信息，请参阅[以下文档页面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=zh-Hans)。
+   将创建一个根语言文件夹来定位项目，以支持AEM的本机本地化功能。 最佳做法是为多语言支持设置项目，即使您现在不需要本地化。 有关详细信息，请参阅[以下文档页面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html)。
 
 1. 在新的&#x200B;**我的项目>英语**&#x200B;文件夹下创建两个子文件夹，其值如下：
 
