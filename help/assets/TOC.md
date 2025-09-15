@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 4a4334047f600cd64a6f6be82974f280b786d0c1
+source-git-commit: 16b106d88d51d68819470758abd536ad42b019db
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '461'
 ht-degree: 99%
 
 ---
@@ -71,6 +71,7 @@ ht-degree: 99%
    + [水印](./advanced/watermarks.md)
 
 + 高级元数据管理{#metadata}
+   + [GenAI元数据](metadata/genai-metadata.md)
    + [级联元数据](metadata/cascade-metadata-feature-video-use.md)
    + [图像的智能标记](metadata/image-smart-tags.md)
    + [图像的自定义智能标记](metadata/custom-smart-tags.md)
@@ -203,4 +204,4 @@ ht-degree: 99%
 + 部署{#deployment}
    + [多租户和并发开发](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hans){target=_blank}
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}
