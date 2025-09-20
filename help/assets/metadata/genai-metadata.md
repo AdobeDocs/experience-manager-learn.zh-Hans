@@ -21,4 +21,4 @@ ht-degree: 0%
 
 了解AEM Assets as a Cloud Service如何使用Adobe GenAI生成和扩充资源元数据，以帮助进行内容管理和发现。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474891/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474918/?learn=on&enablevpops&captions=chi_hans)

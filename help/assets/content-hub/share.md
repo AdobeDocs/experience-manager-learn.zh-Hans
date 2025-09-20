@@ -22,4 +22,4 @@ ht-degree: 77%
 
 了解如何在 AEM Assets Content Hub 中与团队成员共享资产和收藏集，从而促进有效的团队协作和安全的资产共享。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474890/?learn=on&enablevpops=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3474929/?learn=on&enablevpops=on&captions=chi_hans)
