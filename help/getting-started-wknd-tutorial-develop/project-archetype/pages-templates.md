@@ -76,7 +76,7 @@ ht-degree: 100%
 
 通常，规划一个新网站从模型和静态设计开始。[Adobe XD](https://helpx.adobe.com/cn/support/xd.html) 是一种构建用户体验的设计工具。接下来，我们来了解 UI 套件和模型，帮助规划文章页面模板的结构。
 
->[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35900?quality=12&learn=on&captions=chi_hans)
 
 **下载 [WKND 文章设计文件](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)**。
 
@@ -96,7 +96,7 @@ ht-degree: 100%
 
 接下来，在 AEM 中创建一个与模型的结构相匹配的模板。这在 AEM 的本地实例中完成。按照下面视频中的步骤操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/330991?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35871?quality=12&learn=on&captions=chi_hans)
 
 上面视频的高级概览步骤：
 
@@ -164,7 +164,7 @@ ht-degree: 100%
 
 AEM 项目原型生成了页眉和页脚。接下来，更新体验片段以匹配模型。按照下面视频中的步骤操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/330992?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447499?quality=12&learn=on&captions=chi_hans)
 
 上面视频的高级概览步骤：
 
@@ -210,7 +210,7 @@ AEM 项目原型生成了页眉和页脚。接下来，更新体验片段以匹�
 
 接下来，使用文章页面模板创建一个页面。创作页面内容，以匹配网站模型。按照下面视频中的步骤操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/330993?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446452?quality=12&learn=on&captions=chi_hans)
 
 上面视频的高级概览步骤：
 

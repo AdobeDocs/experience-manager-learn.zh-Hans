@@ -24,7 +24,7 @@ ht-degree: 100%
 
 了解如何使用低代码方法在 Adobe Experience Manager 中通过快速网站创建和预定义网站模板创建您的第一个网站。使用开箱即用的组件和模板快速创建并运行网站。使用 Adobe XD 驱动的主题化工作流，仅通过 CSS 和 JavaScript 应用品牌特定的样式和自定义设置。推荐给新项目和开发人员使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/333477?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343263?quality=12&learn=on&captions=chi_hans)
 
 * [Adobe XD UI 套件](https://github.com/adobe/aem-site-template-basic/blob/main/files/wireframe.xd)
 * [AEM 网站模板](https://github.com/adobe/aem-site-template-basic)

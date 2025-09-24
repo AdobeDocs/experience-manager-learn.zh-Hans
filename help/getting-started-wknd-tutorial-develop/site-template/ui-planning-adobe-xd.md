@@ -41,7 +41,7 @@ ht-degree: 100%
 
 ## 标准网站模板 UI 套件 {#standard-site-template-uikit}
 
->[!VIDEO](https://video.tv.adobe.com/v/338680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448440?quality=12&learn=on&captions=chi_hans)
 
 高级概述步骤：
 
@@ -51,7 +51,7 @@ ht-degree: 100%
 
 ## WKND UI 套件 {#wknd-ui-kit}
 
->[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35900?quality=12&learn=on&captions=chi_hans)
 
 高级概述步骤：
 
