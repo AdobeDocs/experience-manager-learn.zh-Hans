@@ -21,7 +21,7 @@ ht-degree: 100%
 
 # 客户端库和前端工作流 {#client-side-libraries}
 
-了解如何使用客户端库或 clientlibs 为 Adobe Experience Manager (AEM) Sites 实施部署和管理 CSS 和 JavaScript。本教程还介绍了如何将 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模块，即一个解耦的 [webpack](https://webpack.js.org/) 项目，集成到端到端构建过程中。
+了解如何使用客户端库或 clientlibs 为 Adobe Experience Manager (AEM) Sites 实施部署和管理 CSS 和 JavaScript。本教程还介绍了如何将 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=zh-Hans) 模块，即一个解耦的 [webpack](https://webpack.js.org/) 项目，集成到端到端构建过程中。
 
 ## 先决条件 {#prerequisites}
 
@@ -82,7 +82,7 @@ ht-degree: 100%
 1. 有组织、有条理地管理对第三方框架的依赖项
 1. 将 CSS/JS 连接成一个或两个请求，最大限度地减少客户端请求的数量。
 
-有关使用[客户端库的更多信息请参见此处。](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)
+有关使用[客户端库的更多信息请参见此处。](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=zh-Hans)
 
 客户端库确实存在一些限制。最需要注意的是对 Sass、LESS 和 TypeScript 等流行的前端语言的支持有限。在本教程中，我们来看一看 **ui.frontend** 模块如何帮助解决这个问题。
 
@@ -90,7 +90,7 @@ ht-degree: 100%
 
 ## 客户端库组织 {#organization}
 
-接下来，我们来看一下 [AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)生成的客户端库的组织。
+接下来，我们来看一下 [AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)生成的客户端库的组织。
 
 ![客户端库组织高级示意图](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -112,7 +112,7 @@ ht-degree: 100%
    | 名称 | 描述 | 注释 |
    |-------------------| ------------| ------|
    | `clientlib-base` | WKND 网站运行所需的 CSS 和 JavaScript 基础级别 | 嵌入核心组件客户端库 |
-   | `clientlib-grid` | 生成[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)所需的 CSS，使其能工作。 | 移动设备/平板电脑的断点可以在此处配置 |
+   | `clientlib-grid` | 生成[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=zh-Hans)所需的 CSS，使其能工作。 | 移动设备/平板电脑的断点可以在此处配置 |
    | `clientlib-site` | 包含 WKND 网站的网站特有主题 | 由 `ui.frontend` 模块生成 |
    | `clientlib-dependencies` | 嵌入任何第三方依赖项 | 由 `ui.frontend` 模块生成 |
 
@@ -120,7 +120,7 @@ ht-degree: 100%
 
 ## 更新基础样式 {#base-styles}
 
-接下来，更新在 **[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)** 模块中定义的基础样式。`ui.frontend` 模块中的文件会生成其中包含网站主题和任何第三方依赖项的 `clientlib-site` 和 `clientlib-dependecies` 库。
+接下来，更新在 **[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=zh-Hans)** 模块中定义的基础样式。`ui.frontend` 模块中的文件会生成其中包含网站主题和任何第三方依赖项的 `clientlib-site` 和 `clientlib-dependecies` 库。
 
 客户端库不支持更高级的语言，例如 [Sass](https://sass-lang.com/) 或 [TypeScript](https://www.typescriptlang.org/)。有几种开源工具，例如 [NPM](https://www.npmjs.com/) 和 [webpack](https://webpack.js.org/)，可以加速和优化前端开发。**ui.frontend** 模块的目标是能够使用这些工具管理大多数前端源文件。
 
@@ -220,7 +220,7 @@ AEM 项目原型会自动设置这个集成。接下来看一下它如何工作�
 
    >[!NOTE]
    >
-   >还有一个 `npm run prod` 配置文件，用于压缩 JS 和 CSS。每当通过 Maven 触发 webpack 构建时，这都是标准编译。有关 [ui.frontend 模块的更多详细信息请参阅此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)。
+   >还有一个 `npm run prod` 配置文件，用于压缩 JS 和 CSS。每当通过 Maven 触发 webpack 构建时，这都是标准编译。有关 [ui.frontend 模块的更多详细信息请参阅此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=zh-Hans)。
 
 1. 查看 `ui.frontend/dist/clientlib-site/site.css` 下面的文件 `site.css`。这是基于 Sass 源文件进行编译的 CSS。
 
@@ -328,7 +328,7 @@ AEM 项目原型会自动设置这个集成。接下来看一下它如何工作�
 
    >[!WARNING]
    >
-   >在发布端非常重要的一点是，客户端库&#x200B;**不能**&#x200B;从 **/apps** 提供，因为出于安全原因，必须使用 [Dispatcher 过滤器分区](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section)限制这个路径。客户端库的 [allowProxy 属性](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)确保了 CSS 和 JS 从 **/etc.clientlibs** 提供。
+   >在发布端非常重要的一点是，客户端库&#x200B;**不能**&#x200B;从 **/apps** 提供，因为出于安全原因，必须使用 [Dispatcher 过滤器分区](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#example-filter-section)限制这个路径。客户端库的 [allowProxy 属性](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=zh-Hans#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)确保了 CSS 和 JS 从 **/etc.clientlibs** 提供。
 
 ### 后续步骤 {#next-steps}
 

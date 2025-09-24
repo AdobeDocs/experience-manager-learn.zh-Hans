@@ -25,13 +25,13 @@ ht-degree: 100%
 
 ## 先决条件 {#prerequisites}
 
-本章中的步骤在 Adobe Experience Manager as a Cloud Service 环境中进行。确保您具有 AEM 环境的管理访问权限。建议使用一个[沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)和[开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)完成本教程。
+本章中的步骤在 Adobe Experience Manager as a Cloud Service 环境中进行。确保您具有 AEM 环境的管理访问权限。建议使用一个[沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html?lang=zh-Hans)和[开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hans)完成本教程。
 
-本教程也可以使用[生产程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html)环境，但是请确保本教程的活动不会影响在目标环境上执行的工作，因为本教程会将内容和代码部署到目标 AEM 环境。
+本教程也可以使用[生产程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html?lang=zh-Hans)环境，但是请确保本教程的活动不会影响在目标环境上执行的工作，因为本教程会将内容和代码部署到目标 AEM 环境。
 
-本教程的有些部分可以使用 [AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html)。本教程中一些依赖云服务的方面，例如[使用 Cloud Manager 的前端管道部署主题](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html)，无法在 AEM SDK 上执行。
+本教程的有些部分可以使用 [AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=zh-Hans)。本教程中一些依赖云服务的方面，例如[使用 Cloud Manager 的前端管道部署主题](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html?lang=zh-Hans)，无法在 AEM SDK 上执行。
 
-查看[加入文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)，了解更多详情。
+查看[加入文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=zh-Hans)，了解更多详情。
 
 ## 目标 {#objective}
 
@@ -76,7 +76,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> 访问 Experience Manager 时遇到问题？查看[加入文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
+> 访问 Experience Manager 时遇到问题？查看[加入文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=zh-Hans)
 
 ## 下载基本网站模板
 

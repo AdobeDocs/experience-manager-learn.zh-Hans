@@ -195,7 +195,7 @@ ht-degree: 100%
 
 ## 请注意——_启用前端管道_&#x200B;按钮
 
-当您选择网站根目录或网站页面时，[边栏选择器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)的[网站](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)选项会显示 **启用前端管道**&#x200B;按钮。点击&#x200B;**启用前端管道**&#x200B;按钮会覆盖上述 **Sling 配置**，请确保您在通过 Cloud Manager 管道执行部署了上述更改后&#x200B;**不要点击**&#x200B;这个按钮。
+当您选择网站根目录或网站页面时，[边栏选择器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=zh-Hans)的[网站](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=zh-Hans)选项会显示 **启用前端管道**&#x200B;按钮。点击&#x200B;**启用前端管道**&#x200B;按钮会覆盖上述 **Sling 配置**，请确保您在通过 Cloud Manager 管道执行部署了上述更改后&#x200B;**不要点击**&#x200B;这个按钮。
 
 ![启用前端管道按钮](assets/enable-front-end-Pipeline-button.png)
 

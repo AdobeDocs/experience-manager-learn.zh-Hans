@@ -82,13 +82,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> 还有一个常规 [AEM 核心组件 UI 套件也可用作](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd)自定义项目的起点。
+> 还有一个常规 [AEM 核心组件 UI 套件也可用作](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd?lang=zh-Hans)自定义项目的起点。
 
 ## 创建文章页面模板
 
 创建页面时，您必须选择一个模板，将其用作创建页面的基础。模板定义了所生成页面的结构、初始内容以及允许使用的组件。
 
-[可编辑模板](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)主要有三个部分：
+[可编辑模板](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=zh-Hans)主要有三个部分：
 
 1. **结构** - 定义了作为模板一部分的各种组件。内容作者无法编辑这些组件。
 1. **初始内容** - 定义了模板开始时使用的组件，内容作者可以编辑和/或删除这些组件
@@ -160,7 +160,7 @@ ht-degree: 100%
 
 ## 通过体验片段更新页眉和页脚 {#experience-fragments}
 
-创建页眉或页脚等全局内容时的一种常见做法是使用[体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。通过体验片段，用户可以组合多个组件来创建一个可引用的组件。体验片段的优势是支持多网站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=zh-hans)。
+创建页眉或页脚等全局内容时的一种常见做法是使用[体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=zh-Hans)。通过体验片段，用户可以组合多个组件来创建一个可引用的组件。体验片段的优势是支持多网站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=zh-hans)。
 
 AEM 项目原型生成了页眉和页脚。接下来，更新体验片段以匹配模型。按照下面视频中的步骤操作：
 
@@ -262,7 +262,7 @@ AEM 项目原型生成了页眉和页脚。接下来，更新体验片段以匹�
 
    页面组件下方只有两个 HTL 脚本，`customfooterlibs.html` 和 `customheaderlibs.html`。*那么这个组件如何渲染页面呢？*
 
-   `sling:resourceSuperType` 属性指向 `core/wcm/components/page/v2/page`。此属性允许 WKND 的页面组件继承核心组件页面组件的&#x200B;**所有**&#x200B;功能。这是[代理组件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)的第一个示例。更多信息请参见[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)。
+   `sling:resourceSuperType` 属性指向 `core/wcm/components/page/v2/page`。此属性允许 WKND 的页面组件继承核心组件页面组件的&#x200B;**所有**&#x200B;功能。这是[代理组件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=zh-Hans#ProxyComponentPattern)的第一个示例。更多信息请参见[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=zh-Hans)。
 
 1. 查看 WKND 组件中的另一个组件，即 `/apps/wknd/components/breadcrumb` 中的 `Breadcrumb` 组件。请注意，可以找到相同的 `sling:resourceSuperType` 属性，但这次它指向 `core/wcm/components/breadcrumb/v2/breadcrumb`。这是使用代理组件模式包含核心组件的另一个示例。事实上，WKND 代码库中的所有组件都是 AEM 核心组件的代理（自定义的 HelloWorld 演示组件除外）。最佳做法是在编写自定义代码&#x200B;*之前*&#x200B;尽可能多地重复使用核心组件的功能。
 
@@ -312,7 +312,7 @@ AEM 项目原型生成了页眉和页脚。接下来，更新体验片段以匹�
 
    将 HTL 分解为多个脚本的另一个原因是允许代理组件覆盖各个脚本，以实施自定义业务逻辑。创建 HTL 脚本 `customfooterlibs.html` 和 `customheaderlibs.html` 的明确目的就是被实施项目覆盖。
 
-   您可以[阅读这篇文章](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)，详细了解可编辑模板如何影响内容页面的渲染。
+   您可以[阅读这篇文章](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=zh-Hans)，详细了解可编辑模板如何影响内容页面的渲染。
 
 1. 查看另一个核心组件，例如位于 `/libs/core/wcm/components/breadcrumb/v2/breadcrumb` 的痕迹导航。查看 `breadcrumb.html` 脚本，了解痕迹导航组件的标记是如何最终生成的。
 

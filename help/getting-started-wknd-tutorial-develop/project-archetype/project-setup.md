@@ -46,7 +46,7 @@ ht-degree: 100%
 
 ## 创建项目 {#create}
 
-为 AEM 创建 Maven 多模块项目有几个选项。本教程使用 [Maven AEM 项目原型 **35**](https://github.com/adobe/aem-project-archetype)。Cloud Manager 还[提供一个 UI 向导](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/project-creation/using-the-wizard.html)，用于启动 AEM 应用程序项目的创建。通过 Cloud Manager UI 生成的基础项目与直接使用原型两种方法形成的结构是相同的。
+为 AEM 创建 Maven 多模块项目有几个选项。本教程使用 [Maven AEM 项目原型 **35**](https://github.com/adobe/aem-project-archetype)。Cloud Manager 还[提供一个 UI 向导](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/project-creation/using-the-wizard.html?lang=zh-Hans)，用于启动 AEM 应用程序项目的创建。通过 Cloud Manager UI 生成的基础项目与直接使用原型两种方法形成的结构是相同的。
 
 >[!NOTE]
 >
@@ -176,24 +176,24 @@ ht-degree: 100%
 
 所生成的 AEM 项目由单个 Maven 模块组成，每个模块都有不同的角色。本教程和大多数开发重点关注以下模块：
 
-* [core](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html) - Java 代码，主要是后端开发人员。
-* [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) - 包含 CSS、JavaScript、Sass、TypeScript 的源代码，主要面向前端开发人员。
-* [ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html) - 包含组件和对话框定义，嵌入已编译的 CSS 和 JavaScript 作为客户端库。
-* [ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html) - 包含结构内容和配置，如可编辑模板、元数据架构（/content、/conf）。
+* [core](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html?lang=zh-Hans) - Java 代码，主要是后端开发人员。
+* [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=zh-Hans) - 包含 CSS、JavaScript、Sass、TypeScript 的源代码，主要面向前端开发人员。
+* [ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html?lang=zh-Hans) - 包含组件和对话框定义，嵌入已编译的 CSS 和 JavaScript 作为客户端库。
+* [ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html?lang=zh-Hans) - 包含结构内容和配置，如可编辑模板、元数据架构（/content、/conf）。
 
 * **all** - 这是一个空的 Maven 模块，它将上述模块组合成一个包，此包可以被部署到 AEM 环境。
 
 ![Maven 项目图](assets/project-setup/project-pom-structure.png)
 
-查看 [AEM 项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，了解&#x200B;**所有** Maven 模块的更多详情。
+查看 [AEM 项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)，了解&#x200B;**所有** Maven 模块的更多详情。
 
 ### 包含核心组件 {#core-components}
 
 [AEM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)是一组 AEM 的标准化网站内容管理 (WCM) 组件。这些组件提供了一组基本功能，可为单个项目设置这些组件的样式、进行自定义和扩展。
 
-AEM as a Cloud Service 环境包括最新版本的 [AEM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。因此，为 AEM as a Cloud Service 生成的项目&#x200B;**不**&#x200B;包含 AEM 核心组件的嵌入。
+AEM as a Cloud Service 环境包括最新版本的 [AEM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。因此，为 AEM as a Cloud Service 生成的项目&#x200B;**不**&#x200B;包含 AEM 核心组件的嵌入。
 
-对于 AEM 6.5/6.4 生成的项目，原型会将 [AEM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)自动嵌入项目。对于 AEM 6.5/6.4，最佳做法是嵌入 AEM 核心组件，以确保最新版本会随您的项目一起被部署。有关如何将核心组件[包含在项目中的更多信息请参阅这里](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components)。
+对于 AEM 6.5/6.4 生成的项目，原型会将 [AEM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)自动嵌入项目。对于 AEM 6.5/6.4，最佳做法是嵌入 AEM 核心组件，以确保最新版本会随您的项目一起被部署。有关如何将核心组件[包含在项目中的更多信息请参阅这里](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=zh-Hans#core-components)。
 
 ## 源控制管理 {#source-control}
 
@@ -221,7 +221,7 @@ AEM 项目原型会生成一个 `.gitignore` 示例文件，它可以作为一�
 
 ### 核心模块 {#core-module}
 
-**[核心](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)**&#x200B;模块包含与项目相关的所有 Java™ 代码。**核心**&#x200B;模块的构建将 OSGi 捆绑包部署到 AEM。要构建这个模块：
+**[核心](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html?lang=zh-Hans)**&#x200B;模块包含与项目相关的所有 Java™ 代码。**核心**&#x200B;模块的构建将 OSGi 捆绑包部署到 AEM。要构建这个模块：
 
 1. 导航到 `core` 文件夹（`aem-guides-wknd` 下面）：
 
@@ -255,7 +255,7 @@ AEM 项目原型会生成一个 `.gitignore` 示例文件，它可以作为一�
 
 ### Ui.apps 和 Ui.content 模块 {#apps-content-module}
 
-**[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven 模块包含 `/apps` 下方的网站所需的所有渲染代码。这包括以 [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) 的 AEM 格式存储的 CSS/JS。这还包括用于渲染动态 HTML 的 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 脚本。您可以将 **ui.apps** 模块视为一种 JCR 中结构的映射，但采用的格式可以存储在文件系统上并提交给源控制。**ui.apps** 模块仅包含代码。
+**[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html?lang=zh-Hans)** maven 模块包含 `/apps` 下方的网站所需的所有渲染代码。这包括以 [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=zh-Hans) 的 AEM 格式存储的 CSS/JS。这还包括用于渲染动态 HTML 的 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans) 脚本。您可以将 **ui.apps** 模块视为一种 JCR 中结构的映射，但采用的格式可以存储在文件系统上并提交给源控制。**ui.apps** 模块仅包含代码。
 
 要构建这个模块：
 
@@ -327,7 +327,7 @@ AEM 项目原型会生成一个 `.gitignore` 示例文件，它可以作为一�
 
    如果端口 **4504** 上没有 AEM 实例运行，就又会发生构建失败的错误。参数 `aem.port` 在位于 `aem-guides-wknd/pom.xml` 的 POM 文件中定义。
 
-**[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** 模块的结构与 **ui.apps** 模块相同。唯一的区别是 **ui.content** 模块包含&#x200B;**可变**&#x200B;内容。**可变**&#x200B;内容主要是指非代码配置，例如模板、策略或文件夹结构，这些都存储在源控制中，**但是**&#x200B;可以在 AEM 实例上直接更改。“页面和模板”一章对此进行了更详细的说明。
+**[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html?lang=zh-Hans)** 模块的结构与 **ui.apps** 模块相同。唯一的区别是 **ui.content** 模块包含&#x200B;**可变**&#x200B;内容。**可变**&#x200B;内容主要是指非代码配置，例如模板、策略或文件夹结构，这些都存储在源控制中，**但是**&#x200B;可以在 AEM 实例上直接更改。“页面和模板”一章对此进行了更详细的说明。
 
 用于构建 **ui.apps** 模块的相同 Maven 命令可用于构建 **ui.content** 模块。您可以随意在 **ui.content** 文件夹中重复上述步骤。
 

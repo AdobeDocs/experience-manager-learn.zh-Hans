@@ -79,7 +79,7 @@ _如果系统上同时安装了 Java™ 8 和 Java™ 11，VS Code 测试运行�
 
 ## 单元测试和 Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) 将单元测试执行和[代码覆盖率报告](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)集成到其 CI/CD 管道，以帮助鼓励和推广 AEM 代码单元测试的最佳实践。
+[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hans) 将单元测试执行和[代码覆盖率报告](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html?lang=zh-Hans)集成到其 CI/CD 管道，以帮助鼓励和推广 AEM 代码单元测试的最佳实践。
 
 单元测试代码对于任何代码库来说都是一种很好的做法，而在使用 Cloud Manager 时为 Cloud Manager 运行单元测试，充分利用其代码质量测试和报告功能，这一点非常重要。
 

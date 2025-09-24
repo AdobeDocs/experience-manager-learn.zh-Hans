@@ -103,7 +103,7 @@ WKND 教程的这个部分将创建一个署名组件，用于显示关于某个
        sling:resourceSuperType="core/wcm/components/image/v2/image"/>
    ```
 
-   上述 XML 文件提供了组件的定义，包括标题、描述和组。`sling:resourceSuperType` 指向 `core/wcm/components/image/v2/image`，这是[核心图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)。
+   上述 XML 文件提供了组件的定义，包括标题、描述和组。`sling:resourceSuperType` 指向 `core/wcm/components/image/v2/image`，这是[核心图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=zh-Hans)。
 
 ### 创建 HTL 脚本 {#create-the-htl-script}
 
@@ -374,7 +374,7 @@ Sling 模型是注释驱动的 Java™ POJO（普通老式 Java™ 对象），�
 
    只有在调用 `classic` 配置文件，也就是 `mvn clean install -PautoInstallSinglePackage -Pclassic` 的情况下会包含 `uber-jar`。这也是这个项目独有的。在由 AEM 项目原型生成的真实项目中，如果指定的 AEM 版本为 6.5 或 6.4，则 `uber-jar` 为默认值。
 
-   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) 包含 AEM 6.x 公开的所有公共 Java™ API。版本在项目根目录的父级 reactor pom 中进行维护，位于 `aem-guides-wknd/pom.xml`。
+   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=zh-Hans#experience-manager-api-dependencies) 包含 AEM 6.x 公开的所有公共 Java™ API。版本在项目根目录的父级 reactor pom 中进行维护，位于 `aem-guides-wknd/pom.xml`。
 
 1. 找到 `core.wcm.components.core` 的依赖项：
 

@@ -60,7 +60,7 @@ ht-degree: 100%
 
 AEM 组件可以被看作是网页的小型模块化构建基块。将 UI 分解为逻辑分块或组件，可以更轻松地进行管理。为了重复使用组件，组件必须是可配置的。这个操作通过作者对话框进行。
 
-AEM 提供一组可立即用于生产的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。**核心组件**&#x200B;的范围从[文本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)和[图像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)等基本元素到[轮播](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)等更复杂的 UI 元素。
+AEM 提供一组可立即用于生产的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。**核心组件**&#x200B;的范围从[文本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans)和[图像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hans)等基本元素到[轮播](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html?lang=zh-Hans)等更复杂的 UI 元素。
 
 接下来，使用 AEM 页面编辑器创作几个组件。
 
@@ -90,7 +90,7 @@ AEM 提供一组可立即用于生产的[核心组件](https://experienceleague.
 
 1. 观察页面上的一些组件，例如&#x200B;**标题**、**导航**、**搜索**，都是固定的。这些区域被配置为页面模板的一部分，不能在单个页面上更改。下一章将详细讨论这个问题。
 
-请随意尝试使用一些其他组件。关于每个[核心组件的文档请参阅此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。关于[页面创作的详细视频系列请参阅此处](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html)。
+请随意尝试使用一些其他组件。关于每个[核心组件的文档请参阅此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。关于[页面创作的详细视频系列请参阅此处](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html?lang=zh-Hans)。
 
 ## 发布更新 {#publish-updates}
 
@@ -156,9 +156,9 @@ AEM 环境分为&#x200B;**作者服务**&#x200B;和&#x200B;**发布服务**。�
 
    ![直接发布](assets/author-content-publish/page-editor-publish.png)
 
-1. 返回到&#x200B;**AEM 发布服务**，查看更改。您很可能&#x200B;**不会**&#x200B;立即看到更新。这是因为 **AEM 发布服务**&#x200B;包括[通过 Apache Web 服务器和内容传递网络进行的缓存](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html)。默认情况下，HTML 内容被缓存约 5 分钟。
+1. 返回到&#x200B;**AEM 发布服务**，查看更改。您很可能&#x200B;**不会**&#x200B;立即看到更新。这是因为 **AEM 发布服务**&#x200B;包括[通过 Apache Web 服务器和内容传递网络进行的缓存](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html?lang=zh-Hans)。默认情况下，HTML 内容被缓存约 5 分钟。
 
-1. 如果要绕过缓存进行测试/调试，只需添加一个查询参数，例如 `?nocache=true`。URL 类似这样：`https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`。有关缓存策略和可用配置的更多详细信息[请参阅此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html)。
+1. 如果要绕过缓存进行测试/调试，只需添加一个查询参数，例如 `?nocache=true`。URL 类似这样：`https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`。有关缓存策略和可用配置的更多详细信息[请参阅此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html?lang=zh-Hans)。
 
 1. 您还可以在 Cloud Manager 中找到发布服务的 URL。导航到 **Cloud Manager 程序** > **环境** > **环境**。
 

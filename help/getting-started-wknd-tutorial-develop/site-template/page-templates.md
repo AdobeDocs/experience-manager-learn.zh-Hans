@@ -62,7 +62,7 @@ ht-degree: 100%
 
 ## 通过体验片段更新页眉和页脚 {#experience-fragments}
 
-创建页眉或页脚等全局内容时的一种常见做法是使用[体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。通过体验片段，用户可以组合多个组件来创建一个可引用的组件。体验片段的优势是支持多网站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=zh-hans#localized-site-structure)。
+创建页眉或页脚等全局内容时的一种常见做法是使用[体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=zh-Hans)。通过体验片段，用户可以组合多个组件来创建一个可引用的组件。体验片段的优势是支持多网站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=zh-hans#localized-site-structure)。
 
 网站模板生成了页眉和页脚。接下来，更新体验片段以匹配模型。按照下面视频中的步骤操作：
 
