@@ -1,6 +1,6 @@
 ---
-title: AEM Sites快速入门 — 组件基础知识
-description: 通过一个简单的“HelloWorld”示例了解Adobe Experience Manager (AEM) Sites组件的基础技术。 本文探讨了HTL、Sling模型、客户端库和作者对话框等主题。
+title: AEM Sites 快速入门 - 组件基础知识
+description: 通过一个简单的“HelloWorld”示例了解 Adobe Experience Manager (AEM) Sites 组件的底层技术。本文探讨 HTL、Sling 模型、客户端库和作者对话框等主题。
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, Developer Tools
 topic: Content Management, Development
@@ -14,45 +14,45 @@ exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
 duration: 1715
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1192'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # 组件基础知识 {#component-basics}
 
-在本章中，让我们通过一个简单的`HelloWorld`示例来探索Adobe Experience Manager (AEM) Sites组件的基础技术。 对现有组件进行了细微的修改，涉及的主题包括创作、HTL、Sling模型、客户端库。
+在本章中，我们通过一个简单的 `HelloWorld` 示例来了解 Adobe Experience Manager (AEM) Sites 组件的底层技术。对一个现有组件进行一些小更改，涵盖创作、HTL、Sling 模型、客户端库等主题。
 
 ## 先决条件 {#prerequisites}
 
 查看设置[本地开发环境](./overview.md#local-dev-environment)所需的工具和说明。
 
-视频中使用的IDE是[Visual Studio Code](https://code.visualstudio.com/)和[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)插件。
+视频中使用的 IDE 是 [Visual Studio Code](https://code.visualstudio.com/) 和 [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) 插件。
 
 ## 目标 {#objective}
 
-1. 了解HTL模板和Sling模型对于动态呈现HTML的作用。
-1. 了解如何使用对话框促进内容创作。
-1. 了解包含CSS和JavaScript以支持组件的客户端库的基础知识。
+1. 了解 HTL 模板和 Sling 模型在动态渲染 HTML 中的作用。
+1. 了解如何使用对话框来促进内容创作。
+1. 学习客户端库的基础知识，如何包含 CSS 和 JavaScript 来支持组件。
 
-## 您即将构建的内容 {#what-build}
+## 您要构建什么 {#what-build}
 
-在本章中，您对简单的`HelloWorld`组件执行了多项修改。 在对`HelloWorld`组件进行更新时，您将了解AEM组件开发的关键领域。
+在本章中，您将对一个简单的 `HelloWorld` 组件进行一些修改。在对 `HelloWorld` 组件进行更新时，您将了解 AEM 组件开发的关键领域。
 
-## 章节起始项目 {#starter-project}
+## 入门项目章节 {#starter-project}
 
-本章以[AEM项目原型](https://github.com/adobe/aem-project-archetype)生成的通用项目为基础。 请观看以下视频并查看[先决条件](#prerequisites)以开始使用！
+本章的基础是由 [AEM 项目原型](https://github.com/adobe/aem-project-archetype)生成的一个普通项目。观看以下视频，从查看[先决条件](#prerequisites)开始！
 
 >[!NOTE]
 >
-> 如果成功完成了上一章，则可以重用该项目并跳过签出入门项目的步骤。
+> 如果您成功完成了上一章的内容，您可以重复使用该项目，跳过签出入门项目的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/345300?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/330985?quality=12&learn=on)
 
-打开新的命令行终端并执行以下操作。
+打开一个新的命令行终端，然后执行以下操作。
 
-1. 在空目录中，克隆[aem-guides-wknd](https://github.com/adobe/aem-guides-wknd)存储库：
+1. 在一个空目录中，克隆 [aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) 存储库：
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd.git --branch tutorial/component-basics-start --single-branch
@@ -60,15 +60,15 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 或者，您可以继续使用上一章[项目设置](./project-setup.md)中生成的项目。
+   > 或者，您也可以继续使用上一章[项目设置](./project-setup.md)中生成的项目。
 
-1. 导航到`aem-guides-wknd`文件夹。
+1. 导航到 `aem-guides-wknd` 文件夹。
 
    ```shell
    $ cd aem-guides-wknd
    ```
 
-1. 使用以下命令生成项目并将其部署到AEM的本地实例：
+1. 使用以下命令构建项目并将其部署到 AEM 的本地实例：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -76,51 +76,51 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.5或6.4，请将`classic`配置文件附加到任何Maven命令。
+   > 如果使用 AEM 6.5 或 6.4，请将 `classic` 配置文件附加到任何 Maven 命令。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-1. 按照有关设置[本地开发环境](overview.md#local-dev-environment)的说明将项目导入您的首选IDE。
+1. 按照说明将项目导入到您首选的 IDE 中，设置一个[本地开发环境](overview.md#local-dev-environment)。
 
 ## 组件创作 {#component-authoring}
 
-组件可以被视为网页的小型模块化构建基块。 要重用组件，必须对组件进行配置。 这是通过创作对话框实现的。 接下来，我们创建一个简单的组件，并检查该对话框中的值如何在AEM中保留。
+组件可以被看作是网页的小型模块化构建基块。为了重复使用组件，组件必须是可配置的。这个操作通过作者对话框进行。接下来，我们创作一个简单的组件，观察对话框中的值如何在 AEM 中保留。
 
->[!VIDEO](https://video.tv.adobe.com/v/345290?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/330986?quality=12&learn=on)
 
-以下是上述视频中执行的高层级步骤。
+以下是上面视频中执行的高级概述步骤。
 
-1. 在&#x200B;**WKND站点** `>` **US** `>` **en**&#x200B;下创建名为&#x200B;**组件基础知识**&#x200B;的页面。
-1. 将&#x200B;**Hello World组件**&#x200B;添加到新创建的页面。
-1. 打开组件的对话框，然后输入一些文本。 保存更改以查看页面上显示的消息。
-1. 切换到开发人员模式，并在CRXDE-Lite中查看内容路径并检查组件实例的属性。
-1. 使用CRXDE-Lite查看`/apps/wknd/components/content/helloworld`中的`cq:dialog`和`helloworld.html`脚本。
+1. 在 **WKND 网站** `>` **US** `>` **en** 下面创建一个名为&#x200B;**组件基础知识**&#x200B;的页面。
+1. 在新创建的页面中添加 **Hello World 组件**。
+1. 打开组件的对话框，输入一些文本。保存更改，查看页面上显示的消息。
+1. 切换到开发者模式，查看 CRXDE-Lite 中的内容路径，检查组件实例的属性。
+1. 使用 CRXDE-Lite 查看 `/apps/wknd/components/content/helloworld` 中的 `cq:dialog` 和 `helloworld.html` 脚本。
 
-## HTL(HTML模板语言)和对话框 {#htl-dialogs}
+## HTL（HTML 模板语言）和对话框 {#htl-dialogs}
 
-HTML模板语言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html?lang=zh-Hans)**&#x200B;是AEM组件用于呈现内容的轻型服务器端模板语言。
+HTML 模板语言或 **[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)** 是 AEM 组件用来渲染内容的轻量级服务器端模板化语言。
 
-**对话框**&#x200B;定义可以为组件生成的可用配置。
+**对话框**&#x200B;定义了可用于组件的可用配置。
 
-接下来，让我们更新`HelloWorld` HTL脚本，以便在文本消息之前显示额外的问候语。
+接下来，我们更新 `HelloWorld` HTL 脚本，在文本消息前面额外显示一句问候语。
 
->[!VIDEO](https://video.tv.adobe.com/v/345282?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/330987?quality=12&learn=on)
 
-以下是上述视频中执行的高层级步骤。
+以下是上面视频中执行的高级概述步骤。
 
-1. 切换到IDE并打开项目到`ui.apps`模块。
-1. 打开`helloworld.html`文件并更新HTML标记。
-1. 使用[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)等IDE工具将文件更改与本地AEM实例同步。
-1. 返回到浏览器并观察组件渲染已更改。
-1. 打开`.content.xml`文件，该文件定义`HelloWorld`组件的对话框，位置：
+1. 切换到 IDE，打开项目的 `ui.apps` 模块。
+1. 打开 `helloworld.html` 文件，更新 HTML 标记。
+1. 使用 IDE 工具，例如 [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)，将文件更改与本地 AEM 实例同步。
+1. 返回浏览器，观察组件渲染发生的变化。
+1. 打开定义 `HelloWorld` 组件的对话框的 `.content.xml` 文件，位于：
 
    ```plain
    <code>/aem-guides-wknd/ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/.content.xml
    ```
 
-1. 更新对话框以添加名为&#x200B;**Title**&#x200B;且名称为`./title`的额外文本字段：
+1. 更新对话框，额外添加一个名为&#x200B;**标题**&#x200B;的文本字段，名称为 `./title`：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -153,13 +153,13 @@ HTML模板语言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/exper
    </jcr:root>
    ```
 
-1. 重新打开文件`helloworld.html`，该文件表示负责从以下路径呈现`HelloWorld`组件的主HTL脚本：
+1. 重新打开文件 `helloworld.html`，它是负责渲染 `HelloWorld` 组件的主要 HTL 脚本，位于以下路径：
 
    ```plain
        <code>/aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/helloworld.html
    ```
 
-1. 更新`helloworld.html`以将&#x200B;**Greeting**&#x200B;文本字段的值渲染为`H1`标记的一部分：
+1. 更新 `helloworld.html`，将&#x200B;**问候**&#x200B;文本字段的值渲染为 `H1` 标记的一部分：
 
    ```html
    <div class="cmp-helloworld" data-cmp-is="helloworld">
@@ -168,30 +168,30 @@ HTML模板语言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/exper
    </div>
    ```
 
-1. 使用开发人员插件或您的Maven技能将更改部署到AEM的本地实例。
+1. 使用开发人员插件或运用您的 Maven 技能，将这些更改部署到 AEM 的本地实例。
 
 ## Sling 模型 {#sling-models}
 
-Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将数据从JCR映射到Java™变量。 在AEM的上下文中进行开发时，它们还提供了其他一些细节。
+Sling 模型是注释驱动的 Java™“POJO”（普通老式 Java™ 对象），帮助将数据从 JCR 映射到 Java™ 变量。在 AEM 环境中开发时，它们还提供一些其他优点。
 
-接下来，我们对`HelloWorldModel` Sling模型进行一些更新，以便在将存储在JCR中的值输出到页面之前，将其应用一些业务逻辑。
+接下来，我们对 `HelloWorldModel` Sling 模型进行更新，对存储在 JCR 中的值应用一些业务逻辑，然后将其输出到页面。
 
->[!VIDEO](https://video.tv.adobe.com/v/36031?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/330988?quality=12&learn=on)
 
-1. 打开文件`HelloWorldModel.java`，它是与`HelloWorld`组件一起使用的Sling模型。
+1. 打开文件 `HelloWorldModel.java`，这是与 `HelloWorld` 组件结合使用的 Sling 模型。
 
    ```plain
    <code>/aem-guides-wknd.core/src/main/java/com/adobe/aem/guides/wknd/core/models/HelloWorldModel.java
    ```
 
-1. 添加以下import语句：
+1. 添加以下导入语句：
 
    ```java
    import org.apache.commons.lang3.StringUtils;
    import org.apache.sling.models.annotations.DefaultInjectionStrategy;
    ```
 
-1. 更新`@Model`注释以使用`DefaultInjectionStrategy`：
+1. 更新 `@Model` 注释，使用 `DefaultInjectionStrategy`：
 
    ```java
    @Model(adaptables = Resource.class,
@@ -200,7 +200,7 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
       ...
    ```
 
-1. 将以下行添加到`HelloWorldModel`类以将该组件的JCR属性`title`和`text`的值映射到Java™变量：
+1. 在 `HelloWorldModel` 类中添加以下行，将组件的 JCR 属性 `title` 和 `text` 的值映射到 Java™ 变量：
 
    ```java
    ...
@@ -221,7 +221,7 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
            ...
    ```
 
-1. 将以下方法`getTitle()`添加到`HelloWorldModel`类，该类返回名为`title`的属性的值。 此方法添加其他逻辑以返回“此处为默认值！”的字符串值。 如果属性`title`为null或为空：
+1. 在 `HelloWorldModel` 类中添加以下方法 `getTitle()`，该方法返回名为 `title` 的属性的值。此方法添加了额外的逻辑，如果属性 `title` 为 null 或空白，就返回“Default Value here!”字符串：
 
    ```java
    /***
@@ -233,7 +233,7 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
    }
    ```
 
-1. 将以下方法`getText()`添加到`HelloWorldModel`类，该类返回名为`text`的属性的值。 此方法将字符串转换为所有大写字符。
+1. 在 `HelloWorldModel` 类中添加以下方法 `getText()`，该方法返回名为 `text` 的属性的值。此方法将字符串转换为全部使用大写字符。
 
    ```java
        /***
@@ -245,7 +245,7 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
    }
    ```
 
-1. 从`core`模块生成并部署捆绑包：
+1. 从 `core` 模块构建并部署捆绑包：
 
    ```shell
    $ cd core
@@ -254,15 +254,15 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
 
    >[!NOTE]
    >
-   > 对于AEM 6.4/6.5，使用`mvn clean install -PautoInstallBundle -Pclassic`
+   > 为 AEM 6.4/6.5 使用 `mvn clean install -PautoInstallBundle -Pclassic`
 
-1. 更新位于`aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html`的文件`helloworld.html`以使用`HelloWorld`模型的新创建方法。
+1. 更新 `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html` 中的 `helloworld.html` 文件，使用 `HelloWorld` 模型的新创建的方法。
 
-   已通过HTL指令为此组件实例实例实例化了`HelloWorld`模型： `data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel"`，将实例保存到变量`model`。
+   通过 HTL 指令 `data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel"` 为这个组件实例化 `HelloWorld` 模型，并将实例保存到变量 `model` 中。
 
-   现在，通过使用`HelloWord`的`model`变量，`HelloWorld`模型实例在HTL中可用。 这些方法调用可以使用缩短的方法语法，例如： `${model.getTitle()}`可以缩短为`${model.title}`。
+   现在，`HelloWorld` 模型实例在 HTL 中可用，通过 `model` 变量使用 `HelloWord`。调用这些方法时可以使用缩短的方法语法，例如：`${model.getTitle()}` 可以缩短为 `${model.title}`。
 
-   同样，所有HTL脚本都插入了[全局对象](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=zh-Hans)，可以使用与Sling模型对象相同的语法访问这些对象。
+   类似地，所有 HTL 脚本都注入了[全局对象](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html)，可以使用与 Sling 模型对象相同的语法访问这些对象。
 
    ```html
    <div class="cmp-helloworld" data-cmp-is="helloworld" 
@@ -279,33 +279,33 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
    </div>
    ```
 
-1. 使用Eclipse开发人员插件或您的Maven技能将更改部署到AEM的本地实例。
+1. 使用 Eclipse 开发人员插件或运用您的 Maven 技能，将这些更改部署到 AEM 的本地实例。
 
 ## 客户端库 {#client-side-libraries}
 
-客户端库（简称`clientlibs`）提供了一种机制，用于组织和管理AEM Sites实施所需的CSS和JavaScript文件。 客户端库是在AEM的页面上包含CSS和JavaScript的标准方法。
+客户端库，简称 `clientlibs`，提供了一种组织和管理 AEM Sites 实施所需的 CSS 和 JavaScript 文件的机制。客户端库是在 AEM 中在页面上包含 CSS 和 JavaScript 的标准方法。
 
-[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=zh-Hans)模块是集成到生成过程中的分离的[webpack](https://webpack.js.org/)项目。 这允许使用常见的前端库，如Sass、LESS和TypeScript。 `ui.frontend`模块将在[客户端库一章](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md)中深入探讨。
+[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模块是一个解耦的 [webpack](https://webpack.js.org/) 项目，被集成到构建过程中。这样就可以使用流行的前端库，例如 Sass、LESS 和 TypeScript。[客户端库](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md)一章中更深入地探讨了 `ui.frontend` 模块。
 
-接下来，更新`HelloWorld`组件的CSS样式。
+接下来，我们更新 `HelloWorld` 组件的 CSS 样式。
 
->[!VIDEO](https://video.tv.adobe.com/v/344332?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/340750?quality=12&learn=on)
 
-以下是上述视频中执行的高层级步骤。
+以下是上面视频中执行的高级概述步骤。
 
-1. 打开终端窗口并导航到`ui.frontend`目录
+1. 打开一个终端窗口，导航到 `ui.frontend` 目录
 
-1. 位于`ui.frontend`目录中运行`npm install npm-run-all --save-dev`命令以安装[npm-run-all](https://www.npmjs.com/package/npm-run-all)节点模块。 此步骤是&#x200B;**在Archetype 39生成的AEM项目**&#x200B;中必需的，在即将发行的Archetype版本中，此步骤不是必需的。
+1. 在 `ui.frontend` 目录中运行 `npm install npm-run-all --save-dev` 命令，安装 [npm-run-all](https://www.npmjs.com/package/npm-run-all) 节点模块。此步骤&#x200B;**是 Archetype 39 生成 AEM 项目所必需的**，但在即将推出的 Archetype 版本中，此步骤不再是必需的。
 
-1. 接下来，运行`npm run watch`命令：
+1. 接下来运行 `npm run watch` 命令：
 
    ```shell
    $ npm run watch
    ```
 
-1. 切换到IDE并打开项目到`ui.frontend`模块。
-1. 打开文件`ui.frontend/src/main/webpack/components/_helloworld.scss`。
-1. 更新文件以显示红色标题：
+1. 切换到 IDE，打开项目的 `ui.frontend` 模块。
+1. 打开文件 `ui.frontend/src/main/webpack/components/_helloworld.scss`。
+1. 更新文件，显示红色标题：
 
    ```scss
    .cmp-helloworld {}
@@ -314,7 +314,7 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
    }
    ```
 
-1. 在终端中，您应该会看到表示`ui.frontend`模块正在编译更改并将其与AEM的本地实例同步的活动。
+1. 在终端中，您会看到 `ui.frontend` 模块正在编译更改，并将其与 AEM 的本地实例同步。
 
    ```shell
    Entrypoint site 214 KiB = clientlib-site/site.css 8.45 KiB clientlib-site/site.js 206 KiB
@@ -330,16 +330,16 @@ Sling模型是注释驱动的Java™“POJO”(纯旧Java™对象)，便于将�
    + jcr_root/apps/wknd/clientlibs/clientlib-dependencies
    ```
 
-1. 返回到浏览器并观察标题颜色已更改。
+1. 返回到浏览器，观察标题颜色的变化。
 
    ![组件基础知识更新](assets/component-basics/color-update.png)
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您已了解Adobe Experience Manager中组件开发的基础知识！
+祝贺您了解了 Adobe Experience Manager 中组件开发的基础知识！
 
 ### 后续步骤 {#next-steps}
 
-在下一章[页面和模板](pages-templates.md)中熟悉Adobe Experience Manager页面和模板。 了解如何将核心组件代理到项目中，并了解可编辑模板的高级策略配置，以构建结构良好的文章页面模板。
+在下一章[页面和模板](pages-templates.md)中，您将熟悉 Adobe Experience Manager 页面和模板。了解核心组件如何通过代理的方式被引入到项目中，以及可编辑模板的高级策略配置如何用于构建结构良好的文章页面模板。
 
-在[GitHub](https://github.com/adobe/aem-guides-wknd)上查看完成的代码，或在Git分支`tutorial/component-basics-solution`上本地查看和部署代码。
+在 [GitHub](https://github.com/adobe/aem-guides-wknd) 上查看完成的代码，或者在本地 Git 分支 `tutorial/component-basics-solution` 上查看和部署代码。

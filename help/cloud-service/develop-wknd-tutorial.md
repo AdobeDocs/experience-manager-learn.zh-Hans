@@ -8,9 +8,9 @@ level: Beginner
 thumbnail: 30476.jpeg
 duration: 411
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '290'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
@@ -25,22 +25,22 @@ ht-degree: 49%
 
 ## WKND 开发人员教程 {#wknd-developer-tutorial}
 
->[!VIDEO](https://video.tv.adobe.com/v/36053?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-此教程设计为使用&#x200B;**AEM as a Cloud Service**，并且向后兼容&#x200B;**AEM 6.5+**&#x200B;和&#x200B;**AEM 6.4.2+**。
+本教程旨在配合 **AEM as a Cloud Service** 使用，且向后兼容 **AEM 6.5+** 和 **AEM 6.4.2+**。
 
-**[在此查看教程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)**
+**[在此处查看教程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
-## 将WKND部署到AEM as a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## 将 WKND 部署到 AEM as a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
-完成WKND教程后，观看以下视频，了解如何将WKND项目部署到AEM as a Cloud Service的概述。
+完成 WKND 教程后，请观看下面的视频，概括了解如何将 WKND 项目部署到 AEM as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/32908?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/30191?quality=12&learn=on)
 
-此视频演示了WKND站点项目可以怎样实现：
+此视频展示了 WKND 网站项目如何：
 
-1. 来源于第三方Git存储库，在本例中为Github.com ，但可以是任何Git存储库
-2. 已推送到在AEM as a Cloud Service项目中注册的上游AdobeCloud Manager Git存储库
-3. 通过Cloud Manager管道部署到AEM as a Cloud Service环境
+1. 来源于一个第三方 Git 存储库，本例中使用 Github.com，但可以是任何 Git 存储库
+2. 被推送到一个通过 AEM as a Cloud Service 程序注册的上游 Adobe Cloud Manager Git 存储库
+3. 通过 Cloud Manager 管道被部署到 AEM as a Cloud Service 环境
 
-有关如何将AEM项目部署到AEM as a Cloud Service的完整概述，请观看有关如何[将Git与AdobeCloud Manager集成](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)的视频系列。
+要全面了解如何将 AEM 项目部署到 AEM as a Cloud Service，请观看关于如何[将 Git 与 Adobe Cloud Manager 集成](https://docs.adobe.com/content/help/zh-hans/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)的视频系列。
