@@ -11,10 +11,10 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 2f7e10680c7211da836e33fdd241cd7f5d633d5f
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 0%
+source-wordcount: '788'
+ht-degree: 1%
 
 ---
 
@@ -49,9 +49,9 @@ $ mvn clean package
 
 ## 使用AEM-RDE插件部署AEM工件
 
-首先，确保已安装[最新的`aio` CLI模块](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli)。
+首先，确保已安装[最新的`aio` CLI模块](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli)。
 
-然后，使用`aio aem:rde:install`命令部署各种AEM工件。 现在你必须
+然后，使用`aio aem:rde:install`命令部署各种AEM工件。
 
 ### 部署`all`和`dispatcher`包
 
@@ -71,8 +71,8 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
 
 让我们增强`Hello World Component`并将其部署到RDE。
 
-1. 从`ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/`文件夹中打开对话框XML (`.content.xml`)文件
-1. 在现有`Text`对话框字段后添加`Description`文本字段
+1. 从`.content.xml`文件夹中打开对话框XML (`ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/`)文件
+1. 在现有`Description`对话框字段后添加`Text`文本字段
 
    ```xml
    ...
@@ -84,8 +84,8 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. 从`ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld`文件夹中打开`helloworld.html`文件
-1. 在`Text`属性的现有`<div>`元素之后渲染`Description`属性。
+1. 从`helloworld.html`文件夹中打开`ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld`文件
+1. 在`Description`属性的现有`<div>`元素之后渲染`Text`属性。
 
    ```html
    ...
@@ -126,13 +126,13 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
 $ aio aem:rde:install --help
 ```
 
-这些标记含义一目了然，`-s`标记可用于仅将部署定位到创作或发布服务。 在部署&#x200B;**content-file或content-xml**&#x200B;文件时使用`-t`标记以及`-p`标记在AEM RDE环境中指定目标JCR路径。
+这些标记含义一目了然，`-s`标记可用于仅将部署定位到创作或发布服务。 在部署`-t`content-file或content-xml **文件时使用**&#x200B;标记以及`-p`标记在AEM RDE环境中指定目标JCR路径。
 
 ### 部署OSGi捆绑包
 
 要了解如何部署OSGi捆绑包，让我们增强`HelloWorldModel` Java™类并将其部署到RDE。
 
-1. 从`core/src/main/java/com/adobe/aem/guides/wknd/core/models`文件夹中打开`HelloWorldModel.java`文件
+1. 从`HelloWorldModel.java`文件夹中打开`core/src/main/java/com/adobe/aem/guides/wknd/core/models`文件
 1. 按如下方式更新`init()`方法：
 
    ```java
@@ -176,7 +176,7 @@ $ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
 
 ### 部署Apache或Dispatcher配置
 
-无法单独部署Apache或Dispatcher配置文件&#x200B;**&#x200B;**，但需要以ZIP文件的形式部署整个Dispatcher文件夹结构。
+无法单独部署Apache或Dispatcher配置文件&#x200B;****，但需要以ZIP文件的形式部署整个Dispatcher文件夹结构。
 
 1. 在`dispatcher`模块的配置文件中进行所需的更改，以便演示，请更新`dispatcher/src/conf.d/available_vhosts/wknd.vhost`以仅缓存`html`文件60秒。
 
@@ -204,11 +204,11 @@ $ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
 
 ### 部署配置(YAML)文件
 
-可以使用`install`命令将CDN、维护任务、日志转发和AEM API身份验证配置文件部署到RDE。 这些配置作为YAML文件在AEM项目的`config`文件夹中进行管理，有关更多详细信息，请参阅[支持的配置](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations)。
+可以使用`install`命令将CDN、维护任务、日志转发和AEM API身份验证配置文件部署到RDE。 这些配置作为YAML文件在AEM项目的`config`文件夹中进行管理，有关更多详细信息，请参阅[支持的配置](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations)。
 
 要了解如何部署配置文件，让我们增强`cdn`配置文件并将其部署到RDE。
 
-1. 从`config`文件夹中打开`cdn.yaml`文件
+1. 从`cdn.yaml`文件夹中打开`config`文件
 1. 更新所需的配置，例如，将速率限制更新为每秒200个请求
 
    ```yaml
@@ -268,13 +268,13 @@ aem rde status   Get a list of the bundles and configs deployed to the current r
 
 ## 后续步骤
 
-了解使用RDE[&#128279;](./development-life-cycle.md)快速交付功能的开发/部署生命周期。
+了解使用RDE[快速交付功能的](./development-life-cycle.md)开发/部署生命周期。
 
 
 ## 其他资源
 
-[RDE命令文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
+[RDE命令文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
 
 用于与Adobe I/O Runtime快速开发环境交互的[AEM CLI插件](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[AEM项目设置](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
+[AEM项目设置](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
