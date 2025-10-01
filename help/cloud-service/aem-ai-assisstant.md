@@ -8,9 +8,9 @@ doc-type: Feature Video
 duration: 205
 last-substantial-update: 2025-09-30T00:00:00Z
 jira: KT-19319
-source-git-commit: ef790e3f4fccb2c8b2205332df3466731c2826dc
+source-git-commit: 823f3cf14794a1b55a53cea10bd012c739dea1b6
 workflow-type: tm+mt
-source-wordcount: '69'
+source-wordcount: '70'
 ht-degree: 8%
 
 ---
@@ -18,6 +18,6 @@ ht-degree: 8%
 
 # AEM AI 助手
 
-了解AEM AI助手如何简化Adobe Experience Manager工作流程。 从查找功能、了解最佳实践、排除问题甚至创建支持票证开始，您可以在AEM中找到智能助手。 借助AI支持的指导、见解和支持，提升工作效率 — 全都在一处。
+了解[AEM AI助手](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#)如何简化您的Adobe Experience Manager工作流程。 从查找功能、了解最佳实践、排除问题甚至创建支持票证开始，您可以在AEM中找到智能助手。 借助AI支持的指导、见解和支持，提升工作效率 — 全都在一处。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
