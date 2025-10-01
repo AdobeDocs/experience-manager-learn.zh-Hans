@@ -13,9 +13,9 @@ last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 duration: 54
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '237'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 91%
 
 ### AEM 环境
 
-要完成本教程，建议您拥有AEM as a Cloud Service环境的AEM管理员访问权限。
+要完成本教程，建议您具有 AEM as a Cloud Service 环境的 AEM 管理员访问权限。
 
 ## 让我们开始吧！
 

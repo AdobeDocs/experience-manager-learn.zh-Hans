@@ -9,9 +9,9 @@ version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
 index: y
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '343'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -20,15 +20,15 @@ ht-degree: 94%
 
 + [AEM Headless 概述](./overview.md)
 + OpenAPI {#open-api}
-   + 基本教程 {#basic}
+   + 基础教程 {#basic}
       + [概述](./open-api/basic/overview.md)
-      + [1 — 定义内容片段模型](./open-api/basic/1-content-fragment-models.md)
+      + [1 - 定义内容片段模型](./open-api/basic/1-content-fragment-models.md)
       + [2 - 创作内容片段](./open-api/basic/2-author-content-fragments.md)
-      + [3 — 浏览OpenAPI API](./open-api/basic/3-explore-openapis.md)
-      + [4 — 构建React应用程序](./open-api/basic/4-react-app.md)
-      + [5 — 通用编辑器集成](./open-api/basic/5-universal-editor.md)
+      + [3 - 浏览 OpenAPI API](./open-api/basic/3-explore-openapis.md)
+      + [4 - 构建 React 应用程序](./open-api/basic/4-react-app.md)
+      + [5 - 通用编辑器集成](./open-api/basic/5-universal-editor.md)
 + GraphQL {#graphql}
-   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans){target=_blank}
+   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
    + [概述](./graphql/overview.md)
    + 快速设置 {#quick-setup}
       + [云服务](./graphql/quick-setup/cloud-service.md)
