@@ -27,7 +27,7 @@ ht-degree: 4%
 >
 >本视频演示了如何在站点地图中使用相对URL。 站点地图[应使用绝对URL](https://sitemaps.org/protocol.html)。 有关如何启用绝对URL的信息，请参阅[配置](#absolute-sitemap-urls)，因为下面的视频未涉及此问题。
 
->[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454371?quality=12&learn=on&captions=chi_hans)
 
 ## 配置
 
