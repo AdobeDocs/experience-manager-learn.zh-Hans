@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何从已弃用的服务帐户(JWT)凭据将其他Adobe解决方案迁移到新的OAuth服务器到服务器凭据。
 
->[!VIDEO](https://video.tv.adobe.com/v/3432960/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449248/?learn=on&captions=chi_hans)
