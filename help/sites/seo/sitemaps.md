@@ -1,5 +1,5 @@
 ---
-title: Sitemap
+title: 网站地图
 description: 了解如何通过为AEM Sites创建站点地图来帮助提升SEO。
 version: Experience Manager as a Cloud Service
 feature: Core Components
@@ -12,14 +12,14 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 937
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: d2714443fa644ba17afdfbed5e6da8091425aeab
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 4%
 
 ---
 
-# Sitemap
+# 网站地图
 
 了解如何通过为AEM Sites创建站点地图来帮助提升SEO。
 
@@ -27,7 +27,7 @@ ht-degree: 4%
 >
 >本视频演示了如何在站点地图中使用相对URL。 站点地图[应使用绝对URL](https://sitemaps.org/protocol.html)。 有关如何启用绝对URL的信息，请参阅[配置](#absolute-sitemap-urls)，因为下面的视频未涉及此问题。
 
->[!VIDEO](https://video.tv.adobe.com/v/3454371?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
 
 ## 配置
 
@@ -35,7 +35,7 @@ ht-degree: 4%
 
 AEM的Sitemap通过使用[Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)支持绝对URL。 这是通过在生成Sitemap(通常为AEM Publish服务)的AEM服务上创建映射节点来完成的。
 
-在`/etc/map/https`下可以定义`https://wknd.com`的Sling映射节点定义示例，如下所示：
+在`https://wknd.com`下可以定义`/etc/map/https`的Sling映射节点定义示例，如下所示：
 
 | 路径 | 属性名称 | 属性类型 | 属性值 |
 |------|----------|---------------|-------|
@@ -50,9 +50,9 @@ AEM的Sitemap通过使用[Sling映射](https://sling.apache.org/documentation/th
 
 ### Sitemap计划程序OSGi配置
 
-为在AEM中重新/生成并缓存的频率（使用[cron表达式](https://cron.help/)）定义[OSGi工厂配置](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)。
+为在AEM中重新/生成并缓存的频率（使用[cron表达式](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)）定义[OSGi工厂配置](https://cron.help/)。
 
-`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
+`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.author`
 
 ```json
 {
@@ -89,7 +89,7 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 
 ## 资源
 
-+ [AEM Sitemap文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=zh-Hans)
++ [AEM Sitemap文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
 + [Apache Sling Sitemap文档](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org Sitemap文档](https://www.sitemaps.org/protocol.html)
 + [Sitemap.org Sitemap索引文件文档](https://www.sitemaps.org/protocol.html#index)
