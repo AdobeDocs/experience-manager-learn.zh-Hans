@@ -22,6 +22,6 @@ ht-degree: 1%
 
 了解如何使用基于属性的访问控制(ABAC)在AEM Assets Content Hub中设置和控制对资源的访问。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475424/?learn=on&enablevpops&captions=chi_hans)
 
 [从基于AEM Assets Content Hub属性的访问控制文档下载基于属性的访问控制定义电子表格](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control)。
