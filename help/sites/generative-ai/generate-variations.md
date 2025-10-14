@@ -11,9 +11,9 @@ last-substantial-update: 2024-03-14T00:00:00Z
 jira: KT-14911
 exl-id: 1055c45c-7f04-4f8e-bca8-a4a085a718c8
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '73'
-ht-degree: 100%
+ht-degree: 67%
 
 ---
 
@@ -25,4 +25,4 @@ Adobe Experience Manager 中的 Generate Variations 是一个动态工具，可�
 
 ## 在 AEM Author 中使用“生成变体”功能
 
-+ __文档创作：__&#x200B;了解如何利用“生成变体”功能来创建动态的个性化文档，从而将以文档为基础的网站升级为更具吸引力和互动性的体验平台。[查看文档](https://www.aem.live/docs/sidekick-generate-variations)
++ __文档创作&#x200B;:__了解如何利用生成变体来创建动态和个性化的文档，将基于文档的网站提升为更引人注目、更引人入胜的体验。 [查看文档](https://www.aem.live/docs/sidekick-generate-variations)
