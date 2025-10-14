@@ -91,6 +91,6 @@ AEM Forms数据集成提供了一个直观的用户界面，用于创建和使�
 可以从[此处](assets/geonames-swagger-files.zip)下载已完成的swagger文件
 swagger文件介绍了以下REST API
 * [获取所有国家/地区](https://secure.geonames.org/countryInfoJSON?username=yourusername)
-* [获取Geoname对象的子项](https://secure.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+* [获取Geoname对象的子项](https://secure.geonames.org/children?formatted=true&geonameId=6252001&username=yourusername)
 
 可以从此处[&#128279;](assets/geonames-api-form-data-model.zip)下载已完成的表单数据模型

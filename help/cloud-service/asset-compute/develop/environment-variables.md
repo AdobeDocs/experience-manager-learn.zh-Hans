@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ![点环境文件](assets/environment-variables/dot-env-file.png)
 
-在开始开发Asset Compute工作人员之前，请确保该项目配置了Adobe I/O和云存储信息。 此信息存储在项目的`.env`中，仅用于本地开发，而不保存在Git中。 `.env`文件提供了一种简便的方法，用于将键/值对公开到本地Asset Compute本地开发环境。 将[Asset Compute工作进程部署到Adobe I/O Runtime时，未使用`.env`文件，而是通过环境变量传入值的子集。 ](../deploy/runtime.md)其他自定义参数和密钥也可以存储在`.env`文件中，例如第三方Web服务的开发凭据。
+在开始开发Asset Compute工作人员之前，请确保该项目配置了Adobe I/O和云存储信息。 此信息存储在项目的`.env`中，仅用于本地开发，而不保存在Git中。 `.env`文件提供了一种简便的方法，用于将键/值对公开到本地Asset Compute本地开发环境。 将[Asset Compute工作进程部署到Adobe I/O Runtime时，未使用`.env`文件，而是通过环境变量传入值的子集。 &#x200B;](../deploy/runtime.md)其他自定义参数和密钥也可以存储在`.env`文件中，例如第三方Web服务的开发凭据。
 
 ## 引用`private.key`
 

@@ -29,7 +29,7 @@ ht-degree: 2%
    + 配置可能需要2 - 10天
 + 云存储
    + [Azure Blob存储](https://azure.microsoft.com/en-us/services/storage/blobs/)
-   + 或[Amazon S3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card)
+   + 或[Amazon S3](https://aws.amazon.com/s3/?did=ft_card&trk=ft_card)
 
 >[!WARNING]
 >
@@ -84,7 +84,7 @@ _配置Azure Blob Storage的点进（无音频）_
 
 ### Amazon S3{#amazon-s3}
 
-建议使用[Microsoft Azure Blob Storage](#azure-blob-storage)完成本教程，但也可以使用[Amazon S3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card)。
+建议使用[Microsoft Azure Blob Storage](#azure-blob-storage)完成本教程，但也可以使用[Amazon S3](https://aws.amazon.com/s3/?did=ft_card&trk=ft_card)。
 
 如果使用Amazon S3存储，请在[配置项目的环境变量](../develop/environment-variables.md#amazon-s3)时指定Amazon S3云存储凭据。
 

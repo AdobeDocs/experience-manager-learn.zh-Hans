@@ -31,7 +31,7 @@ ht-degree: 0%
    * [有关在AEM 6.4上启用SSL的官方文档](https://helpx.adobe.com/cn/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
 * 您需要拥有Salesforce帐户
-* 您需要创建连接的应用程序。 [此处](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0)列出了用于创建应用程序的官方文档表单Salesforce。
+* 您需要创建连接的应用程序。 [此处](https://help.salesforce.com/articleView?id=connected_app_create.htm&type=0)列出了用于创建应用程序的官方文档表单Salesforce。
 * 为应用程序提供适当的OAuth范围（出于测试目的，我已选择所有可用的OAuth范围）
 * 提供回调URL。 我案例中的回调URL是
 

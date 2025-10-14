@@ -94,7 +94,7 @@ AEP的各种解决方案用于收集、管理和收集行为数据以创建受�
 
 登录到[Adobe Experience Cloud](https://experience.adobe.com/)，然后从应用程序切换器或快速访问部分导航到&#x200B;**Experience Platform**。
 
-![ Adobe Experience Cloud](../assets/use-cases/behavioral-targeting/exp-cloud.png)
+![&#x200B; Adobe Experience Cloud](../assets/use-cases/behavioral-targeting/exp-cloud.png)
 
 ### 创建和配置架构
 
