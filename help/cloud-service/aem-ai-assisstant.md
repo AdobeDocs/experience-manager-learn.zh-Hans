@@ -20,4 +20,4 @@ ht-degree: 8%
 
 了解[AEM AI助手](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#)如何简化您的Adobe Experience Manager工作流程。 从查找功能、了解最佳实践、排除问题甚至创建支持票证开始，您可以在AEM中找到智能助手。 借助AI支持的指导、见解和支持，提升工作效率 — 全都在一处。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475368/?learn=on&enablevpops&captions=chi_hans)
