@@ -207,7 +207,7 @@ CTT流程需要连接到以下资源：
 
 ## 其他资源
 
-+ [在云中迁移到Experience Manager的提示和技巧( Summit 2022)](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
++ [在云中迁移到Experience Manager的提示和技巧( Summit 2022)](https://business.adobe.com/cn/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
 
 + [CTT专家系列视频](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html?lang=zh-Hans)
 
