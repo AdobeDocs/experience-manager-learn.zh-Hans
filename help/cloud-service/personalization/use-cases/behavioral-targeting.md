@@ -10,9 +10,10 @@ doc-type: Tutorial
 last-substantial-update: 2025-09-10T00:00:00Z
 jira: KT-19113
 thumbnail: KT-19113.jpeg
-source-git-commit: 5b91e7409ff0735bab40d78ad98410ac2ab006ed
+exl-id: fd7204fa-03f2-40df-9f0a-487a5aec2891
+source-git-commit: c367564acb6465d5f203e5db943c5470607b63c9
 workflow-type: tm+mt
-source-wordcount: '4180'
+source-wordcount: '4185'
 ht-degree: 0%
 
 ---
@@ -45,7 +46,7 @@ ht-degree: 0%
 
 - **杂志页面**：用户阅读&#x200B;_三篇或更多_&#x200B;篇文章时，被分类为&#x200B;**杂志读者**&#x200B;受众，并在杂志页面上看到个性化的主页部分。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474011/?learn=on&enablevpops&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3474001/?learn=on&enablevpops)
 
 >[!TIP]
 >
@@ -58,7 +59,7 @@ ht-degree: 0%
 - [集成Adobe Target](../setup/integrate-adobe-target.md)：使团队能够在AEM中集中创建和管理个性化内容，并在Adobe Target中将其激活为选件。
 - [在Adobe Experience Platform中集成标记](../setup/integrate-adobe-tags.md)：允许团队管理和部署JavaScript以进行个性化和数据收集，而无需重新部署AEM代码。
 
-还熟悉[Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/zh-hans/docs/id-service/using/home)和[Adobe Experience Platform](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/landing/home)概念，如架构、数据流、受众、标识和配置文件。
+还熟悉[Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/en/docs/id-service/using/home)和[Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home)概念，如架构、数据流、受众、标识和配置文件。
 
 虽然您可以在Adobe Target中创建简单的受众，但Adobe Experience Platform (AEP)提供了现代方法来创建和管理受众，并使用各种数据源（如行为和事务性数据）构建完整的客户配置文件。
 
@@ -86,7 +87,7 @@ ht-degree: 0%
 
 4. **验证AEM页面上的行为定位实施**
 
-AEP的各种解决方案用于收集、管理和收集行为数据以创建受众。 然后，将在Adobe Target中激活这些受众。 通过使用Adobe Target中的活动，可以为用户提供个性化的体验。
+AEP的各种解决方案用于收集、管理和收集行为数据以创建受众。 然后，将在Adobe Target中激活这些受众。 通过使用Adobe Target中的活动，可以向符合受众标准的用户交付个性化体验。
 
 ## Adobe Experience Platform步骤
 
@@ -94,7 +95,7 @@ AEP的各种解决方案用于收集、管理和收集行为数据以创建受�
 
 登录到[Adobe Experience Cloud](https://experience.adobe.com/)，然后从应用程序切换器或快速访问部分导航到&#x200B;**Experience Platform**。
 
-![&#x200B; Adobe Experience Cloud](../assets/use-cases/behavioral-targeting/exp-cloud.png)
+![ Adobe Experience Cloud](../assets/use-cases/behavioral-targeting/exp-cloud.png)
 
 ### 创建和配置架构
 
@@ -164,7 +165,7 @@ AEP的各种解决方案用于收集、管理和收集行为数据以创建受�
    - **名称**： WKND-RDE-Behavioral-Targeting
    - **描述**：用于将页面查看数据发送到Experience Platform的数据流
    - **映射架构**： WKND-RDE-Behavioral-Targeting
-单击&#x200B;**保存**&#x200B;以创建数据流。
+单击**保存**&#x200B;以创建数据流。
 
   ![配置数据流](../assets/use-cases/behavioral-targeting/configure-datastream-name-review.png)
 
@@ -183,7 +184,7 @@ AEP的各种解决方案用于收集、管理和收集行为数据以创建受�
 
   ![配置Adobe Experience Platform服务](../assets/use-cases/behavioral-targeting/configure-adobe-experience-platform-service.png)
 
-- 在&#x200B;**添加服务**&#x200B;步骤中，从下拉列表中选择&#x200B;**Adobe Target**，并输入&#x200B;**Target环境ID**。 您可以在Adobe Target中的&#x200B;**管理** > **环境**&#x200B;下找到目标环境ID。 单击&#x200B;**保存**&#x200B;以添加该服务。
+- 在&#x200B;**添加服务**&#x200B;步骤中，从下拉列表中选择&#x200B;**Adobe Target**，并输入&#x200B;**Target环境ID**。 您可以在Adobe Target中的&#x200B;**管理** > **环境**&#x200B;下找到目标环境ID。 单击&#x200B;**保存**以添加该服务。
   ![配置Adobe Target服务](../assets/use-cases/behavioral-targeting/configure-adobe-target-service.png)
 
 ### 创建和配置标记属性
@@ -200,7 +201,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
 要创建Tags属性，请完成以下步骤：
 
-- 在&#x200B;**Adobe Experience Platform**&#x200B;中，单击左侧导航栏中的&#x200B;**标记**，然后单击&#x200B;**新建属性**&#x200B;按钮。
+- 在&#x200B;**Adobe Experience Platform**&#x200B;中，单击左侧导航栏中的&#x200B;**标记**，然后单击&#x200B;**新建属性**按钮。
   ![创建新标记属性](../assets/use-cases/behavioral-targeting/create-new-tags-property.png)
 
 - 在&#x200B;**创建属性**&#x200B;对话框中，输入以下内容：
@@ -212,7 +213,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
   ![创建新标记属性](../assets/use-cases/behavioral-targeting/create-new-tags-property-dialog.png)
 
-- 打开新属性，从左侧导航栏中单击&#x200B;**扩展**，然后单击&#x200B;**目录**&#x200B;选项卡。 搜索&#x200B;**Web SDK**，然后单击&#x200B;**安装**&#x200B;按钮。
+- 打开新属性，从左侧导航栏中单击&#x200B;**扩展**，然后单击&#x200B;**目录**&#x200B;选项卡。 搜索&#x200B;**Web SDK**，然后单击&#x200B;**安装**按钮。
   ![安装Web SDK扩展](../assets/use-cases/behavioral-targeting/install-web-sdk-extension.png)
 
 - 在&#x200B;**安装扩展**&#x200B;对话框中，选择您之前创建的&#x200B;**数据流**，然后单击&#x200B;**保存**。
@@ -224,7 +225,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
 创建以下数据元素以捕获重要页面详细信息。
 
-- 从左侧导航中单击&#x200B;**数据元素**，然后单击&#x200B;**新建数据元素**&#x200B;按钮。
+- 从左侧导航中单击&#x200B;**数据元素**，然后单击&#x200B;**新建数据元素**按钮。
   ![创建新数据元素](../assets/use-cases/behavioral-targeting/create-new-data-element.png)
 
 - 在&#x200B;**创建新数据元素**&#x200B;对话框中，输入以下内容：
@@ -306,7 +307,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
 创建规则以使用其他数据元素填充&#x200B;**XDM-Variable Pageview**&#x200B;数据元素，然后再将其发送到Experience Platform。 规则在用户浏览WKND网站时触发。
 
-- 从左侧导航栏中单击&#x200B;**规则**，然后单击&#x200B;**创建新规则**&#x200B;按钮。
+- 从左侧导航栏中单击&#x200B;**规则**，然后单击&#x200B;**创建新规则**按钮。
   ![创建新规则](../assets/use-cases/behavioral-targeting/create-new-rule.png)
 
 - 在&#x200B;**创建新规则**&#x200B;对话框中，输入以下内容：
@@ -398,7 +399,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
 库是已构建并部署到网站的所有标记配置（数据元素、规则、扩展）的集合。 它将所有内容打包在一起，以便数据收集正常工作。 对于行为定位，将发布库以使数据收集规则在您的网站上处于活动状态。
 
-- 从左侧导航栏中单击&#x200B;**发布流**，然后单击&#x200B;**添加库**&#x200B;按钮。
+- 从左侧导航栏中单击&#x200B;**发布流**，然后单击&#x200B;**添加库**按钮。
   ![添加库](../assets/use-cases/behavioral-targeting/add-library.png)
 
 - 在&#x200B;**添加库**&#x200B;对话框中，输入以下内容：
@@ -410,7 +411,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
   ![添加库](../assets/use-cases/behavioral-targeting/add-library-dialog.png)
 
-- 为&#x200B;**开发**&#x200B;泳道构建库后，单击省略号（三个点）并选择&#x200B;**批准并发布到生产环境**&#x200B;选项。
+- 为&#x200B;**开发**&#x200B;泳道构建库后，单击省略号（三个点）并选择&#x200B;**批准并发布到生产环境**选项。
   ![批准并发布到生产环境](../assets/use-cases/behavioral-targeting/approve-publish-to-production.png)
 
 恭喜！您已使用规则创建Tags属性以收集页面详细信息并将它们发送到Experience Platform。 这是创建行为受众的基本步骤。
@@ -444,7 +445,7 @@ Adobe Target目标(V2)允许您直接在Adobe Target中激活在Experience Platf
 
   ![Adobe Target目标](../assets/use-cases/behavioral-targeting/adobe-target-destination.png)
 
-- 在&#x200B;**激活目标**&#x200B;步骤中，提供目标的名称，然后单击&#x200B;**连接到目标**&#x200B;按钮。
+- 在&#x200B;**激活目标**&#x200B;步骤中，提供目标的名称，然后单击&#x200B;**连接到目标**按钮。
   ![连接到目标](../assets/use-cases/behavioral-targeting/connect-to-destination.png)
 
 - 在&#x200B;**目标详细信息**&#x200B;部分中，输入以下内容：
@@ -465,10 +466,10 @@ Adobe Target目标(V2)允许您直接在Adobe Target中激活在Experience Platf
 
 要创建受众，请完成以下步骤：
 
-- 在&#x200B;**Adobe Experience Platform**&#x200B;中，单击左侧导航栏中的&#x200B;**受众**，然后单击&#x200B;**创建受众**&#x200B;按钮。
+- 在&#x200B;**Adobe Experience Platform**&#x200B;中，单击左侧导航栏中的&#x200B;**受众**，然后单击&#x200B;**创建受众**按钮。
   ![创建受众](../assets/use-cases/behavioral-targeting/create-audience.png)
 
-- 在&#x200B;**创建受众**&#x200B;对话框中，选择&#x200B;**生成规则**&#x200B;选项，然后单击&#x200B;**创建**&#x200B;按钮。
+- 在&#x200B;**创建受众**&#x200B;对话框中，选择&#x200B;**生成规则**&#x200B;选项，然后单击&#x200B;**创建**按钮。
   ![创建受众](../assets/use-cases/behavioral-targeting/create-audience-dialog.png)
 
 - 在&#x200B;**创建**&#x200B;步骤中，输入以下内容：
@@ -515,7 +516,7 @@ Adobe Target目标(V2)允许您直接在Adobe Target中激活在Experience Platf
 
   ![Experience Manager](../assets/use-cases/behavioral-targeting/dx-experience-manager.png)
 
-- 导航到您的AEM创作环境，然后单击&#x200B;**站点**&#x200B;按钮。
+- 导航到您的AEM创作环境，然后单击&#x200B;**站点**按钮。
   ![AEM创作环境](../assets/use-cases/behavioral-targeting/aem-author-environment.png)
 
 ### 将标记属性集成并注入到AEM页面中
@@ -600,7 +601,7 @@ Adobe Target中的活动是一种个性化营销活动，它定义将个性化�
 
 现在，创建了一个活动以向&#x200B;**家庭旅行者**&#x200B;受众的主页提供个性化体验。
 
-- 在Adobe Target中，单击&#x200B;**活动**，然后单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**体验定位**&#x200B;活动类型。
+- 在Adobe Target中，单击&#x200B;**活动**，然后单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**体验定位**活动类型。
   ![创建活动](../assets/use-cases/behavioral-targeting/create-activity.png)
 
 - 在&#x200B;**创建体验定位活动**&#x200B;对话框中，选择&#x200B;**Web**&#x200B;类型和&#x200B;**可视化**&#x200B;编辑器选项，并输入WKND网站主页URL。 单击&#x200B;**创建**&#x200B;按钮以创建该活动。
@@ -611,7 +612,7 @@ Adobe Target中的活动是一种个性化营销活动，它定义将个性化�
 
   包含受众和选件的![活动](../assets/use-cases/behavioral-targeting/activity-with-audience-n-offer.png)
 
-- 单击“下一步”**&#x200B;**&#x200B;并使用适当的目标和量度配置&#x200B;**目标和设置**&#x200B;部分，然后激活它以实时推送更改。
+- 单击“下一步”****&#x200B;并使用适当的目标和量度配置&#x200B;**目标和设置**&#x200B;部分，然后激活它以实时推送更改。
 
   ![通过目标和设置激活](../assets/use-cases/behavioral-targeting/activate-with-goals-and-settings.png)
 
@@ -658,9 +659,9 @@ Adobe Target中的活动是一种个性化营销活动，它定义将个性化�
 
 ## 其他资源
 
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/home)
-- [数据流概述](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/datastreams/overview)
-- [可视化体验编辑器(VEC)](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/vec/visual-experience-composer)
-- [Edge分段](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/segmentation/methods/edge-segmentation)
-- [受众类型](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/segmentation/types/overview)
-- [Adobe Target连接](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
+- [数据流概述](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
+- [可视化体验编辑器(VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
+- [Edge分段](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation)
+- [受众类型](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview)
+- [Adobe Target连接](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)

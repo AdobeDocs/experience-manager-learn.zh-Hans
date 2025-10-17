@@ -11,16 +11,16 @@ last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18717
 thumbnail: null
 exl-id: c4fb11b9-b613-4522-b9da-18d7ae0826ec
-source-git-commit: 5b91e7409ff0735bab40d78ad98410ac2ab006ed
+source-git-commit: c367564acb6465d5f203e5db943c5470607b63c9
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '386'
 ht-degree: 11%
 
 ---
 
 # 个性化概述
 
-了解AEM as a Cloud Service (AEMCS)如何与Adobe Target和Adobe Experience Platform (AEP)集成。 了解如何使用A/B测试提供个性化体验、根据用户的行为定位用户，或使用客户配置文件个性化内容。
+了解AEM as a Cloud Service (AEMCS)如何与Adobe Target和Adobe Experience Platform (AEP)集成以提供个性化体验。 使用体验片段作为个性化内容，了解如何运行A/B测试、基于实时行为定位用户，或使用基于跨系统数据构建的统一客户配置文件个性化内容。
 
 ## 先决条件
 
@@ -38,14 +38,14 @@ ht-degree: 11%
 
 ## 开始使用
 
-在探索特定用例之前，您首先要配置AEM as a Cloud Service进行个性化。 首先，集成Adobe Target和标记，以使用AEP Web SDK实现客户端个性化。 这些基本步骤允许您的AEM页面支持实验、受众定位和实时个性化。
+在探索特定用例之前，您首先要配置AEM as a Cloud Service进行个性化。 首先，集成Adobe Target和Tags以使用Web SDK实现客户端个性化。 这些基本步骤允许您的AEM页面支持实验、受众定位和实时个性化。
 
 <!-- CARDS
 {target = _self}
 
 * ./setup/integrate-adobe-target.md
   {title = Integrate Adobe Target}
-  {description = Integrate AEMCS with Adobe Target to activate personalized content as Adobe Target offers.}
+  {description = Integrate AEMCS with Adobe Target to activate personalized content, such as Experience Fragments, as offers.}
   {image = ./assets/setup/integrate-target.png}
   {cta = Integrate Target}
 
@@ -54,6 +54,7 @@ ht-degree: 11%
   {description = Integrate AEMCS with Tags to inject the Web SDK and custom JavaScript for data collection and personalization.}
   {image = ./assets/setup/integrate-tags.png}
   {cta = Integrate Tags}
+  
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -72,7 +73,7 @@ ht-degree: 11%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./setup/integrate-adobe-target.md" target="_self" rel="referrer" title="集成 Adobe Target">集成Adobe Target</a>
                     </p>
-                    <p class="is-size-6">将AEMCS与Adobe Target集成以激活个性化内容作为Adobe Target优惠。</p>
+                    <p class="is-size-6">将AEMCS与Adobe Target集成以激活个性化内容，例如体验片段，作为选件。</p>
                 </div>
                 <a href="./setup/integrate-adobe-target.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">集成Target</span>
@@ -117,7 +118,7 @@ ht-degree: 11%
 
 * ./use-cases/experimentation.md
     {title = Experimentation (A/B Testing)}
-    {description = Learn how to test different content variations in AEMCS using Adobe Target for A/B testing.}
+    {description = Learn how to test different content variations on an AEMCS website using Adobe Target for A/B testing.}
     {image = ./assets/use-cases/experiment/experimentation.png}
     {cta = Learn Experimentation}
 
@@ -126,6 +127,12 @@ ht-degree: 11%
     {description = Learn how to personalize content based on user behavior using Adobe Experience Platform and Adobe Target.}
     {image = ./assets/use-cases/behavioral-targeting/behavioral-targeting.png}
     {cta = Learn Behavioral Targeting}
+
+* ./use-cases/known-user-personalization.md
+    {title = Known-user personalization}
+    {description = Learn how to personalize content based on known user data by stitching information from multiple systems into a complete customer profile.}
+    {image = ./assets/use-cases/known-user-personalization/known-user-personalization.png}
+    {cta = Learn Known-user personalization}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -144,7 +151,7 @@ ht-degree: 11%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./use-cases/experimentation.md" target="_self" rel="referrer" title="试验（A/B 测试）">试验（A/B测试）</a>
                     </p>
-                    <p class="is-size-6">了解如何使用Adobe Target在AEMCS中测试各种内容变体进行A/B测试。</p>
+                    <p class="is-size-6">了解如何使用Adobe Target在AEMCS网站上测试各种内容变体进行A/B测试。</p>
                 </div>
                 <a href="./use-cases/experimentation.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学习试验</span>
@@ -171,6 +178,29 @@ ht-degree: 11%
                 </div>
                 <a href="./use-cases/behavioral-targeting.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学习行为定位</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Known-user personalization">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./use-cases/known-user-personalization.md" title="已知用户个性化" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/use-cases/known-user-personalization/known-user-personalization.png" alt="已知用户个性化"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./use-cases/known-user-personalization.md" target="_self" rel="referrer" title="已知用户个性化">已知用户个性化</a>
+                    </p>
+                    <p class="is-size-6">了解如何将来自多个系统的信息拼合到完整的客户配置文件中，从而根据已知用户数据个性化内容。</p>
+                </div>
+                <a href="./use-cases/known-user-personalization.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学习已知用户个性化</span>
                 </a>
             </div>
         </div>
