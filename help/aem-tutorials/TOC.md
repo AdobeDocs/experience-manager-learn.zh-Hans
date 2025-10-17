@@ -25,7 +25,7 @@ ht-degree: 52%
 + 多步教程 {#multi}
    + [AEM Sites 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
    + [使用OpenAPI进行AEM内容片段投放快速入门](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/open-api/basic/overview){target=_blank}
-   + 使用通用编辑器编辑[React应用程序](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview){target=_blank}
+   + [使用通用编辑器编辑React应用程序](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview){target=_blank}
    + [Personalization快速入门](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview){target=_blank}
    + [开始使用RDE](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview){target=_blank}
    + [AEM API快速入门](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/overview){target=_blank}
