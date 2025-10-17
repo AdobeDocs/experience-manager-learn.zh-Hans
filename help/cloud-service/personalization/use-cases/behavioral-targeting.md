@@ -59,7 +59,7 @@ ht-degree: 0%
 - [集成Adobe Target](../setup/integrate-adobe-target.md)：使团队能够在AEM中集中创建和管理个性化内容，并在Adobe Target中将其激活为选件。
 - [在Adobe Experience Platform中集成标记](../setup/integrate-adobe-tags.md)：允许团队管理和部署JavaScript以进行个性化和数据收集，而无需重新部署AEM代码。
 
-还熟悉[Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/en/docs/id-service/using/home)和[Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home)概念，如架构、数据流、受众、标识和配置文件。
+还熟悉[Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/zh-hans/docs/id-service/using/home)和[Adobe Experience Platform](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/landing/home)概念，如架构、数据流、受众、标识和配置文件。
 
 虽然您可以在Adobe Target中创建简单的受众，但Adobe Experience Platform (AEP)提供了现代方法来创建和管理受众，并使用各种数据源（如行为和事务性数据）构建完整的客户配置文件。
 
@@ -659,9 +659,9 @@ Adobe Target中的活动是一种个性化营销活动，它定义将个性化�
 
 ## 其他资源
 
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
-- [数据流概述](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
-- [可视化体验编辑器(VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
-- [Edge分段](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation)
-- [受众类型](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview)
-- [Adobe Target连接](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/home)
+- [数据流概述](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/datastreams/overview)
+- [可视化体验编辑器(VEC)](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/vec/visual-experience-composer)
+- [Edge分段](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/segmentation/methods/edge-segmentation)
+- [受众类型](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/segmentation/types/overview)
+- [Adobe Target连接](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
