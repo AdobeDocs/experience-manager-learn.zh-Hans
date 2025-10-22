@@ -1,6 +1,7 @@
 ---
 title: Edge Delivery Services 和 Universal Editor 开发人员教程
 description: 了解在 AEM 通用编辑器中创作并使用 Edge Delivery Services 投放的新网站开发的基础知识。
+short-description: 关于构建AEM网站的开发人员教程，这些网站将强大的创作功能与通用编辑器相结合，并使用Edge Delivery Services实现快如闪电的交付。 了解如何创建新项目、设置本地开发环境和构建自定义块。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -10,10 +11,10 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: f0ad5d66549970337118220156d7a6b0fd30fd57
-workflow-type: ht
-source-wordcount: '620'
-ht-degree: 100%
+source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
+workflow-type: tm+mt
+source-wordcount: '658'
+ht-degree: 94%
 
 ---
 
@@ -100,7 +101,7 @@ ht-degree: 100%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="设置本地开发环境" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443988/?format=jpeg&nocache=1753811862249&captions=chi_hans" alt="设置本地开发环境"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="设置本地开发环境"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
