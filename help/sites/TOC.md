@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
-source-git-commit: bc1c7a96a3d5dbc23fb7d34343cee0cfc2853be9
-workflow-type: ht
-source-wordcount: '597'
-ht-degree: 100%
+source-git-commit: e5a1ab5fcc5314bddfbc4ad900127804bc019009
+workflow-type: tm+mt
+source-wordcount: '564'
+ht-degree: 98%
 
 ---
 
@@ -78,7 +78,7 @@ ht-degree: 100%
 + 生成式 AI {#generative-ai}
    + [生成变体](./generative-ai/generate-variations.md)
 + 内容片段 {#content-fragments}
-   + [内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=zh-Hans){target=_blank}
+   + [内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [创作内容片段](content-fragments/content-fragments-feature-video-use.md)
    + [投放内容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [翻译内容片段](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -86,7 +86,7 @@ ht-degree: 100%
 + 体验片段 {#experience-fragments}
    + [使用体验片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [构建基块](experience-fragments/building-blocks.md)
-   + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=zh-Hans){target=_blank}
+   + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [概述](./edge-delivery-services/overview.md)
    + 开发{#developing}
@@ -119,8 +119,8 @@ ht-degree: 100%
 + 开发 {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 项目原型](developing/aem-project-archetype.md)
-   + [AEM Sites 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
-   + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans){target=_blank}
+   + [AEM Sites 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
+   + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
    + [AEM SPA Editor 和 React 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
    + [响应式断点](developing/responsive-breakpoints.md)
@@ -171,6 +171,7 @@ ht-degree: 100%
       + [生成 FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [使用 Platform Web SDK 进行分析](integrations/platform/analytics-using-web-sdk.md)
+      + [Adobe Target](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
    + Adobe Experience Platform 中的标记 {#experience-platform-data-collection-tags}
       + [概述](integrations/experience-platform/data-collection/tags/overview.md)
       + [创建一个标记属性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
@@ -185,14 +186,9 @@ ht-degree: 100%
       + [使用 Adobe Analytics 跟踪已单击的组件](integrations/analytics/track-clicked-component.md)
       + [使用 Analysis Workspace 分析数据](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
-      + [概述](integrations/adobe-target/overview.md)
-      + [将 Target 扩展添加到标记属性](integrations/adobe-target/add-target-launch-extension.md)
-      + [加载和触发 Target 调用](integrations/adobe-target/load-and-fire-target.md)
-      + [创建 Adobe Target 云服务帐户](integrations/adobe-target/setup-aem-target-cloud-service.md)
-      + [将体验片段导出到 Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
-      + [使用 Experience Fragment 选件创建 Target 活动](integrations/adobe-target/create-target-activity.md)
-      + [使用可视化体验编辑器进行个性化](integrations/adobe-target/personalization-using-vec.md)
-      + [完整网页体验的个性化](integrations/adobe-target/personalization-web-page.md)
+      + [概述](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [设置](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
+      + [用例](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 + 向同行学习 {#expert-resources}
    + [概述](expert-resources/learn-from-your-peers-overview.md)
    + [在 AEM Sites 中创建创作指南](expert-resources/authoring-guide-in-sites.md)
