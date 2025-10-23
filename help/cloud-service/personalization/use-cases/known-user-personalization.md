@@ -33,7 +33,7 @@ ht-degree: 1%
 
 ## 示例用例
 
-![视频](https://video.tv.adobe.com/v/3476105/?learn=on&enablevpops)
+![视频](https://video.tv.adobe.com/v/3476119/?captions=chi_hans&learn=on&enablevpops)
 
 在本教程中，使用[示例WKND网站](https://github.com/adobe/aem-guides-wknd)，该过程演示了&#x200B;**登录的用户**&#x200B;如何在&#x200B;**WKND主页**&#x200B;上看到个性化英雄，这些用户已购买了任何&#x200B;**Ski**&#x200B;冒险活动。
 
