@@ -338,7 +338,7 @@ Adobe Experience Platform (AEP)的各种解决方案用于跨系统收集、管�
 
   ![配置Adobe Experience Platform服务](../assets/use-cases/known-user-personalization/configure-adobe-experience-platform-service.png)
 
-- 在&#x200B;**添加服务**&#x200B;步骤中，从下拉列表中选择&#x200B;**Adobe Target**，并输入&#x200B;**Target环境ID**。 您可以在Adobe Target中的&#x200B;**管理** > **环境**&#x200B;下找到目标环境ID。 单击&#x200B;**保存**以添加该服务。
+- 在&#x200B;**添加服务**&#x200B;步骤中，从下拉列表中选择&#x200B;**Adobe Target**，并输入&#x200B;**Target环境ID**。 您可以在Adobe Target中的&#x200B;**管理** > **环境**&#x200B;下找到目标环境ID。 单击&#x200B;**保存**&#x200B;以添加该服务。
   ![配置Adobe Target服务](../assets/use-cases/known-user-personalization/configure-adobe-target-service.png)
 
 - 最终数据流应如下所示：
@@ -374,7 +374,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
   ![创建新标记属性](../assets/use-cases/known-user-personalization/create-new-tags-property-dialog.png)
 
-- 打开新属性，从左侧导航栏中单击&#x200B;**扩展**，然后单击&#x200B;**目录**&#x200B;选项卡。 搜索&#x200B;**Web SDK**，然后单击&#x200B;**安装**按钮。
+- 打开新属性，从左侧导航栏中单击&#x200B;**扩展**，然后单击&#x200B;**目录**&#x200B;选项卡。 搜索&#x200B;**Web SDK**，然后单击&#x200B;**安装**&#x200B;按钮。
   ![安装Web SDK扩展](../assets/use-cases/known-user-personalization/install-web-sdk-extension.png)
 
 - 在&#x200B;**安装扩展**&#x200B;对话框中，选择您之前创建的&#x200B;**数据流**，然后单击&#x200B;**保存**。
@@ -386,7 +386,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
 创建以下数据元素以捕获重要页面详细信息。
 
-- 从左侧导航中单击&#x200B;**数据元素**，然后单击&#x200B;**新建数据元素**按钮。
+- 从左侧导航中单击&#x200B;**数据元素**，然后单击&#x200B;**新建数据元素**&#x200B;按钮。
   ![创建新数据元素](../assets/use-cases/known-user-personalization/create-new-data-element.png)
 
 - 在&#x200B;**创建新数据元素**&#x200B;对话框中，输入以下内容：
@@ -526,7 +526,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
 创建规则以使用其他数据元素填充&#x200B;**XDM-Variable Pageview**&#x200B;数据元素，然后再将其发送到Experience Platform。 规则在用户浏览WKND网站时触发。
 
-- 从左侧导航栏中单击&#x200B;**规则**，然后单击&#x200B;**创建新规则**按钮。
+- 从左侧导航栏中单击&#x200B;**规则**，然后单击&#x200B;**创建新规则**&#x200B;按钮。
   ![创建新规则](../assets/use-cases/known-user-personalization/create-new-rule.png)
 
 - 在&#x200B;**创建新规则**&#x200B;对话框中，输入以下内容：
@@ -672,7 +672,7 @@ Tags资产是JavaScript代码的容器，用于从您的网站收集数据并将
 
 库是已构建并部署到网站的所有标记配置（数据元素、规则、扩展）的集合。 它将所有内容打包在一起，以便数据收集正常工作。 对于已知用户个性化，将发布库以使数据收集规则在您的网站上处于活动状态。
 
-- 从左侧导航栏中单击&#x200B;**发布流**，然后单击&#x200B;**添加库**按钮。
+- 从左侧导航栏中单击&#x200B;**发布流**，然后单击&#x200B;**添加库**&#x200B;按钮。
   ![添加库](../assets/use-cases/known-user-personalization/add-library.png)
 
 - 在&#x200B;**添加库**&#x200B;对话框中，输入以下内容：
@@ -711,7 +711,7 @@ Adobe Target目标(V2)允许您直接在Adobe Target中激活在Experience Platf
 
   ![Adobe Target目标](../assets/use-cases/known-user-personalization/adobe-target-destination.png)
 
-- 在&#x200B;**激活目标**&#x200B;步骤中，提供目标的名称，然后单击&#x200B;**连接到目标**按钮。
+- 在&#x200B;**激活目标**&#x200B;步骤中，提供目标的名称，然后单击&#x200B;**连接到目标**&#x200B;按钮。
   ![连接到目标](../assets/use-cases/known-user-personalization/connect-to-destination.png)
 
 - 在&#x200B;**目标详细信息**&#x200B;部分中，输入以下内容：
@@ -1004,7 +1004,7 @@ $ git checkout -b feature/known-user-personalization
 
   ![ECID](../assets/use-cases/known-user-personalization/ecid.png)
 
-- 单击&#x200B;**查看**按钮。
+- 单击&#x200B;**查看**&#x200B;按钮。
   ![配置文件列表](../assets/use-cases/known-user-personalization/profile-list.png)
 
 - 单击该配置文件，您应该会看到该配置文件的详细信息。
@@ -1012,7 +1012,7 @@ $ git checkout -b feature/known-user-personalization
 
   在我的例子中，我通过两个不同的浏览器访问我的WKND网站，因此我有两个与用户`teddy`关联的ECID。 两个ECID中的数据将拼合在一起，以创建配置文件。 您已开始了解身份拼接的强大功能以及如何将其用于创建完整的客户个人资料。 不久，事务型数据与行为数据将拼合在一起，以创建完整的客户用户档案。
 
-- 单击&#x200B;**事件**选项卡，您应该会看到与配置文件相关的事件。
+- 单击&#x200B;**事件**&#x200B;选项卡，您应该会看到与配置文件相关的事件。
   ![配置文件事件](../assets/use-cases/known-user-personalization/profile-events.png)
 
 ### 引入事务性数据
@@ -1050,10 +1050,10 @@ $ git checkout -b feature/known-user-personalization
 
   ![已拼接配置文件详细信息](../assets/use-cases/known-user-personalization/stitched-profile-details.png)
 
-- 单击&#x200B;**属性**选项卡，您应该会看到与用户档案关联的事务性和行为数据详细信息。
+- 单击&#x200B;**属性**&#x200B;选项卡，您应该会看到与用户档案关联的事务性和行为数据详细信息。
   ![拼接的配置文件属性](../assets/use-cases/known-user-personalization/stitched-profile-attributes.png)
 
-- 单击&#x200B;**查看身份图**链接可查看配置文件的身份图。
+- 单击&#x200B;**查看身份图**&#x200B;链接可查看配置文件的身份图。
   ![身份图](../assets/use-cases/known-user-personalization/identity-graph.png)
 
 恭喜！您已拼合行为和事务型数据以创建完整的客户用户档案。
@@ -1080,7 +1080,7 @@ $ git checkout -b feature/known-user-personalization
 
 要创建受众，请完成以下步骤：
 
-- 在Adobe Experience Platform中，单击左侧导航栏中的&#x200B;**受众**，然后单击&#x200B;**创建受众**&#x200B;按钮。 然后选择&#x200B;**生成规则**&#x200B;选项并单击&#x200B;**创建**按钮。
+- 在Adobe Experience Platform中，单击左侧导航栏中的&#x200B;**受众**，然后单击&#x200B;**创建受众**&#x200B;按钮。 然后选择&#x200B;**生成规则**&#x200B;选项并单击&#x200B;**创建**&#x200B;按钮。
   ![创建受众](../assets/use-cases/known-user-personalization/create-audience.png)
 
 - 在&#x200B;**创建**&#x200B;步骤中，输入以下内容：
@@ -1144,7 +1144,7 @@ $ git checkout -b feature/known-user-personalization
 
 Adobe Target中的活动是一种个性化营销活动，它定义将个性化内容交付给特定受众的时间和方式。 对于已知用户个性化，将创建一个活动，向已登录并已购买任何滑雪装备的用户显示滑雪装备追加销售选件。
 
-- 在Adobe Target中，单击&#x200B;**活动**，然后单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**体验定位**活动类型。
+- 在Adobe Target中，单击&#x200B;**活动**，然后单击&#x200B;**创建活动**&#x200B;按钮，然后选择&#x200B;**体验定位**&#x200B;活动类型。
   ![创建活动](../assets/use-cases/known-user-personalization/create-activity.png)
 
 - 在&#x200B;**创建体验定位活动**&#x200B;对话框中，选择&#x200B;**Web**&#x200B;类型和&#x200B;**Visual**&#x200B;编辑器选项(一个WYSIWYG编辑器，可让您直接在您的网站上创建和测试个性化体验)，并输入WKND网站主页URL。 单击&#x200B;**创建**&#x200B;按钮以创建该活动。
@@ -1155,7 +1155,7 @@ Adobe Target中的活动是一种个性化营销活动，它定义将个性化�
 
   包含受众和选件的![活动](../assets/use-cases/known-user-personalization/activity-with-audience-n-offer.png)
 
-- 单击“下一步”****&#x200B;并使用适当的目标和量度配置&#x200B;**目标和设置**&#x200B;部分，然后激活它以实时推送更改。
+- 单击“下一步”**&#x200B;**&#x200B;并使用适当的目标和量度配置&#x200B;**目标和设置**&#x200B;部分，然后激活它以实时推送更改。
 
   ![通过目标和设置激活](../assets/use-cases/known-user-personalization/activate-with-goals-and-settings.png)
 
