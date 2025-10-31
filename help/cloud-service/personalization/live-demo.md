@@ -26,7 +26,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > 在多个浏览器窗口或无痕浏览/专用浏览模式下打开演示站点，以同时体验不同的个性化变体。
-> > 使用专用浏览模式时，Firefox和Safari可能会阻止ECID Cookie，或者使用常规浏览模式或在尝试新的个性化方案之前清除Cookie。
+> &#x200B;> 使用专用浏览模式时，Firefox和Safari可能会阻止ECID Cookie，或者使用常规浏览模式或在尝试新的个性化方案之前清除Cookie。
 
 ## 演示用例
 
