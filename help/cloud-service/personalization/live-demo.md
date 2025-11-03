@@ -7,10 +7,10 @@ topic: Personalization, Integrations
 role: Developer, Architect, Leader, User
 level: Beginner
 doc-type: Tutorial
-last-substantial-update: 2025-11-01T00:00:00Z
+last-substantial-update: 2025-11-03T00:00:00Z
 jira: KT-19546
 thumbnail: KT-19546.jpeg
-source-git-commit: 055dc7d666d082244d73d3494bac54d7eb4bb886
+source-git-commit: 9e99936fb03e085f6bc276c7d6ef5cc08e34d1e5
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 1%
@@ -21,12 +21,14 @@ ht-degree: 1%
 
 访问[WKND启用网站](https://wknd.enablementadobe.com/us/en.html){target="wknd"}以查看A/B测试、行为定位和已知用户个性化的实际示例。
 
+>[!VIDEO](https://video.tv.adobe.com/v/3476461/?learn=on&enablevpops)
+
 本页将指导您完成每个个性化方案的实践演示。 在您自己的AEM网站上构建这些功能之前，请使用它来探索可用功能。
 
 >[!IMPORTANT]
 >
 > 在多个浏览器窗口或无痕浏览/专用浏览模式下打开演示站点，以同时体验不同的个性化变体。
-> &#x200B;> 使用专用浏览模式时，Firefox和Safari可能会阻止ECID Cookie，或者使用常规浏览模式或在尝试新的个性化方案之前清除Cookie。
+> 使用专用浏览模式时，Firefox和Safari可能会阻止ECID Cookie，或者使用常规浏览模式或在尝试新的个性化方案之前清除Cookie。
 
 ## 演示用例
 
