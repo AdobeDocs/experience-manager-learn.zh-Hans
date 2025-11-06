@@ -10,18 +10,18 @@ doc-type: Tutorial
 last-substantial-update: 2025-11-03T00:00:00Z
 jira: KT-19546
 thumbnail: KT-19546.jpeg
-source-git-commit: 9e99936fb03e085f6bc276c7d6ef5cc08e34d1e5
+source-git-commit: ed7af09d747d54a84d2583073d3c731388b5f516
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 1%
 
 ---
 
-# Personalization用例的实时演示
+# 个性化用例的实时演示
 
 访问[WKND启用网站](https://wknd.enablementadobe.com/us/en.html){target="wknd"}以查看A/B测试、行为定位和已知用户个性化的实际示例。
 
->[!VIDEO](https://video.tv.adobe.com/v/3476471/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476461/?learn=on&enablevpops)
 
 本页将指导您完成每个个性化方案的实践演示。 在您自己的AEM网站上构建这些功能之前，请使用它来探索可用功能。
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 **了解更多：**&#x200B;是否准备好在您自己的AEM网站上实施行为定位？ 从[行为定位教程](./use-cases/behavioral-targeting.md)开始，了解完整的设置过程。
 
-## 已知用户Personalization
+## 已知用户个性化
 
 基于跨多个系统的数据（包括购买历史记录和客户生命周期阶段）构建的完整客户配置文件提供个性化体验。 Adobe Experience Platform Edge Network用于做出实时个性化决策。
 
@@ -76,7 +76,7 @@ WKND主页主页主页主页横幅根据经过身份验证的用户配置文件�
 
 | 页面 | 您将会看到的内容 | 如何测试 | 配置文件上下文 | 体验 |
 |------|-----------------|-------------|-----------------|------------|
-| [主页](https://wknd.enablementadobe.com/us/en.html){target="wknd"} | 内部滑雪用品店提供&#x200B;**高级滑雪装备，并提供“额外25%优惠”**&#x200B;促销活动，提供专家打包提示，为即将到来的滑雪之旅做好准备 | 使用`teddy/teddy`或`asmith/asmith`登录并刷新页面 | 最近购买了滑雪冒险，因此追加销售滑雪装备 | ![家庭 — 滑雪装备追加销售](./assets/live-demo/known-user-ski-gear-hero.png){width="200" zoomable="yes"} |
+| [主页](https://wknd.enablementadobe.com/us/en.html){target="wknd"} | 内部滑雪用品店提供&#x200B;**高级滑雪装备，并提供“额外25%优惠”**&#x200B;促销活动，提供专家打包提示，为即将到来的滑雪之旅做好准备 | 使用`rwilson/rwilson`登录并刷新页面 | 最近购买了滑雪冒险，因此追加销售滑雪装备 | ![家庭 — 滑雪装备追加销售](./assets/live-demo/known-user-ski-gear-hero.png){width="200" zoomable="yes"} |
 
 **了解更多：**&#x200B;是否准备好在您自己的AEM网站上实施已知用户个性化？ 从[已知用户的Personalization教程](./use-cases/known-user-personalization.md)开始，了解完整的设置过程。
 
@@ -84,7 +84,7 @@ WKND主页主页主页主页横幅根据经过身份验证的用户配置文件�
 
 测试不同的内容变体以确定哪些变体最符合您的业务目标。 Adobe Target会随机向访客提供各种变体，并跟踪表现更好的访客。 这通常称为&#x200B;_试验_。
 
-### 主页专题文章
+### 主页精选文章
 
 WKND主页运行活动A/B测试，该测试包含&#x200B;_Camping in Western Australia_&#x200B;精选文章的三个变体。 每个访客均会被随机分配以查看以下变体之一：
 
@@ -92,7 +92,7 @@ WKND主页运行活动A/B测试，该测试包含&#x200B;_Camping in Western Aus
 |------|-----------------|-------------|------------|
 | [主页](https://wknd.enablementadobe.com/us/en.html){target="wknd"} | 在“我们的精选”部分中随机分配的三个精选文章变体之一： **“脱机：横跨西澳大利亚的史诗级露营路线”**&#x200B;或&#x200B;**“漫游：西澳大利亚的露营冒险”**（或第三个变体），每个变体都具有独特的图片和消息传递以测试哪个变体最能引起共鸣 | 使用不同的浏览器访问主页，使用无痕模式/私有模式或清除Cookie以查看不同的变体 | ![A/B测试变体](./assets/live-demo/ab-test-variations.png){width="200" zoomable="yes"} |
 
-**了解更多：**&#x200B;是否准备好在您自己的AEM网站上实施A/B测试？ 从[试验（A/B测试）教程](./use-cases/experimentation.md)开始，了解完整的设置过程。
+**了解详情：**&#x200B;是否准备好在您自己的AEM网站上实施A/B测试？ 从[试验（A/B测试）教程](./use-cases/experimentation.md)开始，了解完整的设置过程。
 
 
 ## 后续步骤
