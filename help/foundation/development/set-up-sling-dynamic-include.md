@@ -131,7 +131,7 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   > 在上述glob `*.nocache.html*`规则中将尾部`*`保留为关闭状态可能会导致子资源请求[&#128279;](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16)出现问题。
+   > 在上述glob `*.nocache.html*`规则中将尾部`*`保留为关闭状态可能会导致子资源请求[&#128279;](https://github.com/AdobeDocs/experience-manager-learn.zh-Hans/issues/16)出现问题。
 
    ```shell
    /cache {
