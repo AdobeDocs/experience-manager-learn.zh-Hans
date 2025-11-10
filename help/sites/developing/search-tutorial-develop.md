@@ -11,9 +11,9 @@ exl-id: aa268c5f-d29e-4868-a58b-444379cb83be
 last-substantial-update: 2022-08-10T00:00:00Z
 thumbnail: 32090.jpg
 duration: 138
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 1048beba42011eccb1ebdd43458591c8e953fb8a
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '630'
 ht-degree: 1%
 
 ---
@@ -35,14 +35,14 @@ ht-degree: 1%
 
 * [索引管理器](http://localhost:4502/libs/granite/operations/content/diagnosis/tool.html/granite_oakindexmanager)
 * [说明查询](http://localhost:4502/libs/granite/operations/content/diagnosis/tool.html/granite_queryperformance)
-* [CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/oak%3Aindex/cqPageLucene) > /oak：index/cqPageLucene
+* [CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/oak%3Aindex/cqPageLucene) > /oak:index/cqPageLucene
 * [CRX包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 * [QueryBuilder调试器](http://localhost:4502/libs/cq/search/content/querydebug.html？)
-* [Oak索引定义生成器](https://oakutils.appspot.com/generate/index)
+* [Oak索引定义生成器](https://thomasmueller.github.io/oakTools/indexDefGenerator.html)
 
 ### 章 {#chapters}
 
-*以下章节链接假定在`http://localhost:4502`*&#x200B;处的AEM创作实例上安装了[初始包](#initialpackages)
+*以下章节链接假定在[处的AEM创作实例上安装了](#initialpackages)初始包`http://localhost:4502`*
 
 * [第1章](http://localhost:4502/editor.html/content/summit/l4080/chapter-1.html)
 * [第2章](http://localhost:4502/editor.html/content/summit/l4080/chapter-2.html)
@@ -77,7 +77,7 @@ ht-degree: 1%
 * [Github存储库](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/master/simple-search-guide)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 * [Sling模型导出程序](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
-* [QueryBuilder API](https://experienceleague.adobe.com/docs/?lang=zh-Hans)
+* [QueryBuilder API](https://experienceleague.adobe.com/docs/)
 * [AEM Chrome插件](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode) （[文档页面](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/)）
 
 ## 更正和跟进 {#corrections-and-follow-up}
@@ -97,7 +97,7 @@ ht-degree: 1%
 
    Oak支持将索引放置到内容树之外，并且这些索引将仅在该子树中索引。 例如，可以创建&#x200B;**`/content/site-a/oak:index/cqPageLucene`**&#x200B;以仅在&#x200B;**`/content/site-a`.**&#x200B;下索引内容
 
-   等效的方法是使用&#x200B;**`/oak:index`**&#x200B;下的索引上的&#x200B;**`includePaths`**&#x200B;和&#x200B;**`queryPaths`**&#x200B;属性。 例如：
+   等效的方法是使用&#x200B;**`includePaths`**&#x200B;下的索引上的&#x200B;**`queryPaths`**&#x200B;和&#x200B;**`/oak:index`**&#x200B;属性。 例如：
 
    * `/oak:index/siteAcqPageLucene@includePaths=/content/site-a`
    * `/oak:index/siteAcqPageLucene@queryPaths=/content/site-a`
@@ -138,7 +138,7 @@ ht-degree: 1%
    PLAN: [cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) *:* */ union [dam:Asset] as [a] /* lucene:damAssetLucene(/oak:index/damAssetLucene) *:* */
    ```
 
-   通过[QueryBuilder调试器](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group)和[AEM Chrome插件](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)浏览查询和结果。
+   通过[QueryBuilder调试器](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group)和[AEM Chrome插件](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)浏览查询和结果。
 
 5. **如何在同一查询中搜索多个路径？**
 
@@ -162,4 +162,4 @@ ht-degree: 1%
    PLAN: [cq:Page] as [a] /* traverse "/content/docs/en/6-2//*" where isdescendantnode([a], [/content/docs/en/6-2]) */ union [cq:Page] as [a] /* traverse "/content/docs/en/6-3//*" where isdescendantnode([a], [/content/docs/en/6-3]) */
    ```
 
-   通过[QueryBuilder调试器](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group)和[AEM Chrome插件](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)浏览查询和结果。
+   通过[QueryBuilder调试器](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group)和[AEM Chrome插件](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)浏览查询和结果。

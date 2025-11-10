@@ -13,10 +13,10 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: 7ada3c2e7deb414b924077a5d2988db16f28712c
+source-git-commit: 1048beba42011eccb1ebdd43458591c8e953fb8a
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 1%
+source-wordcount: '1706'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 - 了解搜索要求，并检查OOTB索引是否支持搜索要求。 通过Developer Console或&#x200B;**使用**&#x200B;查询性能工具[，该工具位于](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)本地SDK`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`和AEMCS。
 
-- 定义最佳查询，使用[优化查询](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)流程图和[JCR查询备忘表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=zh-Hans)以供参考。
+- 定义最佳查询，使用[优化查询](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)流程图和[JCR查询备忘表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf)以供参考。
 
 - 如果OOTB索引不支持搜索要求，您有两个选择。 但是，查看有关创建有效索引的[提示](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - 自定义OOTB索引：首选选项，因为它易于维护和升级。
@@ -112,7 +112,7 @@ ht-degree: 1%
 
 下图显示了`dam:Asset`节点类型的自定义索引，其中`includedPaths`属性设置为特定路径。
 
-![dam：Asset nodetype上的索引](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
+![dam:Asset节点类型上的索引](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
 
 ##### 分析
 
@@ -243,17 +243,17 @@ AEM使用[Apache Tika](https://tika.apache.org/)从文件&#x200B;_类型(如PDF�
 
 让我们看一看能够帮助您定义、分析和优化索引的少数工具。
 
-### 索引创建工具
+### 索引创建工具和Oak工具
 
-[Oak索引定义生成器](https://oakutils.appspot.com/generate/index)工具可帮助&#x200B;**基于输入查询生成索引定义**。 这是创建自定义索引的良好起点。
+[Oak索引定义生成器](https://thomasmueller.github.io/oakTools/indexDefGenerator.html)工具可帮助&#x200B;**基于输入查询生成索引定义**。 这是创建自定义索引的良好起点。
 
-### 分析索引工具
-
-[索引定义分析器](https://oakutils.appspot.com/analyze/index)工具可帮助&#x200B;**分析索引定义**&#x200B;并提供改进索引定义的建议。
+[Oak工具](https://thomasmueller.github.io/oakTools/index.html)还包含其他
+与索引和查询相关的实用程序，例如在JSON和XML格式之间转换索引，
+将XPath查询转换为SQL-2并比较索引。
 
 ### 查询性能工具
 
-通过Developer Console或&#x200B;_在_&#x200B;本地SDK[和AEMCS上提供的OOTB &#x200B;](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)查询性能工具`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`可帮助&#x200B;**分析查询性能**&#x200B;和[JCR查询备忘表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=zh-Hans)以定义最佳查询。
+通过Developer Console或&#x200B;_在_&#x200B;本地SDK[和AEMCS上提供的OOTB ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)查询性能工具`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`可帮助&#x200B;**分析查询性能**&#x200B;和[JCR查询备忘表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en)以定义最佳查询。
 
 ### 疑难解答工具和提示
 
@@ -274,6 +274,6 @@ AEM使用[Apache Tika](https://tika.apache.org/)从文件&#x200B;_类型(如PDF�
 有关更多信息，请参阅以下文档：
 
 - [Oak查询和索引](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
-- [查询和索引最佳实践](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
+- [查询和索引最佳实践](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
 - [查询和索引的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
 
