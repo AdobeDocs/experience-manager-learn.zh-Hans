@@ -5,9 +5,9 @@ user-guide-description: Adobe Experience Manager Foundation 的视频和教程�
 sub-product: Experience Manager
 index: y
 source-git-commit: bc2f4655631f28323a39ed5b4c7878613296a0ba
-workflow-type: ht
-source-wordcount: '248'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

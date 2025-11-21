@@ -147,7 +147,7 @@ ht-degree: 99%
       + [图像自动化](dynamic-media/dynamic-media-image-automation.md)
       + [Dynamic Media 模板](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media 快照](dynamic-media/dynamic-media-snapshot.md)
-      + [智能裁切](dynamic-media/smart-crop-feature-video-use.md)
+      + [智能裁剪](dynamic-media/smart-crop-feature-video-use.md)
       + [图像锐化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + 视频 {#video}
@@ -155,7 +155,7 @@ ht-degree: 99%
       + [360 视频](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [自定义视频缩略图](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH 自适应流媒体传输](dynamic-media/dynamic-media-dash.md)
-      + [Dynamic Media 智能裁切视频](dynamic-media/dynamic-media-smart-crop-video.md)
+      + [Dynamic Media 智能裁剪视频](dynamic-media/dynamic-media-smart-crop-video.md)
       + [视频播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + 查看器 {#viewers}
       + [查看器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
@@ -186,7 +186,7 @@ ht-degree: 99%
 + Workfront 集成{#workfront}
    + 增强型连接器{#enhanced-connector}
       + [增强型连接器基础知识](./workfront/enhanced-connector/basics.md)
-      + [项目文件夹 &#x200B;](./workfront/enhanced-connector/project-folders.md)
+      + [项目文件夹 ](./workfront/enhanced-connector/project-folders.md)
       + AEM 专家系列{#aem-experts-series}
          + [概述](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [设置](./workfront/enhanced-connector/aem-experts-series/setup.md)
@@ -206,4 +206,4 @@ ht-degree: 99%
 + 部署{#deployment}
    + [多租户和并发开发](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hans){target=_blank}
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}

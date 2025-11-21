@@ -9,7 +9,7 @@ sub-product: Experience Manager Forms
 version: Experience Manager 6.4, Experience Manager 6.5
 index: y
 source-git-commit: c4b5a015f1c0d5e3877886052476871548ec9b0e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 100%
 
@@ -421,8 +421,8 @@ ht-degree: 100%
    + [通用：如何生成自签名证书](troubleshooting/how-to-generate-a-self-signed-certificate.md)
    + [通用：如何从 HTML5 表单发起 Web 服务调用](troubleshooting/how-to-make-web-service-call-from-html5-form.md)
    + [通用：为 AEM Forms OSGI 中的任意类启用调试日志记录的步骤](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-aem-forms-osgi.md)
-   + [通用：为 JBOSS 应用服务器中的任何类启用调试日志记录的步骤](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-jboss-application-server.md)
-   + [通用：为 Websphere 应用服务器中的任何类启用调试日志记录的步骤](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-websphere-application-server.md)
+   + [通用：为 JBOSS 应用程序服务器中的任何类启用调试日志记录的步骤](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-jboss-application-server.md)
+   + [通用：为 Websphere 应用程序服务器中的任何类启用调试日志记录的步骤](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-websphere-application-server.md)
    + [通用：为 AEM Forms OSGi 启用 SSL 的步骤](troubleshooting/steps-to-enable-ssl-for-aem-forms-osgi.md)
    + [通用：加密 lc_turnkey.xml 中使用的密钥库密码的步骤](troubleshooting/steps-to-encrypt-keystore-password-to-be-used-in-lc-turnkey-xml.md)
    + [通用：Steps-to-reset-default-password-for-users-in-AEM-Forms-JEE](troubleshooting/steps-to-reset-default-password-for-users-in-aem-forms-jee.md)
