@@ -23,7 +23,7 @@ ht-degree: 1%
 了解如何使用使用[aem-upload](https://github.com/adobe/aem-upload) Node.js库的客户端应用程序将资源上传到AEM as a Cloud Service环境。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3476952?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3476962?captions=chi_hans&quality=12&learn=on)
 
 
 ## 你将学到的内容
