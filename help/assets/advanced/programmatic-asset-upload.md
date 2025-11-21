@@ -10,7 +10,7 @@ last-substantial-update: 2025-11-14T00:00:00Z
 doc-type: Tutorial
 jira: KT-19571
 thumbnail: KT-19571.png
-source-git-commit: bf996405c360c77475d9f76d5de9bcd4fde3c163
+source-git-commit: 151a5220ee842ee77ae27e99ded62f8d3dae4612
 workflow-type: tm+mt
 source-wordcount: '1585'
 ht-degree: 1%
@@ -21,6 +21,10 @@ ht-degree: 1%
 # 将程序化资产上传到AEM as a Cloud Service
 
 了解如何使用使用[aem-upload](https://github.com/adobe/aem-upload) Node.js库的客户端应用程序将资源上传到AEM as a Cloud Service环境。
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/3476952?quality=12&learn=on)
+
 
 ## 你将学到的内容
 
@@ -50,7 +54,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->在Java中没有[aem-upload](https://github.com/adobe/aem-upload)库的等效项。 必须使用Node.js编写客户端应用程序才能使用&#x200B;_直接二进制上传_&#x200B;方法。 有关其他信息，请参阅[Experience Manager Assets API和操作](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis)页面。
+>在Java中没有[aem-upload](https://github.com/adobe/aem-upload)库的等效项。 必须使用Node.js编写客户端应用程序才能使用&#x200B;_直接二进制上传_&#x200B;方法。 有关其他信息，请参阅[Experience Manager Assets API和操作](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis)页面。
 
 ## 示例应用程序
 
@@ -97,7 +101,7 @@ ht-degree: 1%
 
 有&#x200B;_多种身份验证方法_&#x200B;受[aem-upload](https://github.com/adobe/aem-upload) Node.js库支持。 下表总结了支持的&#x200B;_身份验证方法_&#x200B;及其用途。
 
-| | 基本身份验证 | [本地开发令牌](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [服务凭据](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth Web应用程序](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
+| | 基本身份验证 | [本地开发令牌](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [服务凭据](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth Web应用程序](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
 |---|---|---|---|---|---|---|
 | 是否受支持？ | &amp;amp；检查； | &amp;amp；检查； | &amp;amp；检查； | &amp;amp；交叉； | &amp;amp；交叉； | &amp;amp；交叉； |
 | 用途 | 本地开发 | 本地开发 | 生产 | 不适用 | 不适用 | 不适用 |
@@ -176,7 +180,7 @@ ht-degree: 1%
 
 1. 使用service-credentials.json文件的路径更新`AEM_SERVICE_CREDENTIALS_FILE`环境变量。
 
-1. 确保服务凭据用户具有将资源上传到AEM as a Cloud Service环境的必要权限。 有关详细信息，请参阅[在AEM中配置访问权限](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem)页面。
+1. 确保服务凭据用户具有将资源上传到AEM as a Cloud Service环境的必要权限。 有关详细信息，请参阅[在AEM中配置访问权限](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem)页面。
 
 >[!ENDTABS]
 
