@@ -70,7 +70,7 @@ Adobe Experience Manager 的内容片段控制台可以让管理和创作内容�
             <a href="./basics/content-fragment-editor.md" title="编辑器概述"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3424373?format=jpeg"
+                src="https://video.tv.adobe.com/v/3477337?captions=chi_hans&format=jpeg"
                 alt="编辑器概述">
             </a>
           </figure>
@@ -133,7 +133,7 @@ Adobe Experience Manager 的内容片段控制台可以让管理和创作内容�
             <a href="./editor/new-editor-toggle.md" title="新的编辑器切换开关"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="新的编辑器切换开关">
+                src="https://video.tv.adobe.com/v/3477326?captions=chi_hans&format=jpeg" alt="新的编辑器切换开关">
             </a>
           </figure>
         </div>

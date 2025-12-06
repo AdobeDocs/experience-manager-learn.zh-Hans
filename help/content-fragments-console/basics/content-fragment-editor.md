@@ -23,4 +23,4 @@ ht-degree: 0%
 
 AEM的内容片段编辑器简介。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424373/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477337/?captions=chi_hans&learn=on)

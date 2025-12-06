@@ -41,7 +41,7 @@ AEM Sites的“页面差异”功能节目以颜色编码快速查看页面中�
 
 ## 比较启动页面 {#comparing-launch-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/17746?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477348?captions=chi_hans&quality=12&learn=on)
 
 页面差异功能还可用于识别Blueprint和活动副本、Blueprint和语言副本之间的差异。
 

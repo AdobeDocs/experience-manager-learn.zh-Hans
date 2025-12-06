@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解新编辑器切换如何让您轻松地在默认的新内容片段编辑器和经典编辑器之间进行切换。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419312/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477326/?captions=chi_hans&learn=on)

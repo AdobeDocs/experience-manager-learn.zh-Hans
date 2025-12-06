@@ -27,4 +27,4 @@ ht-degree: 0%
 + 了解AEM创作和发布架构以及如何发布内容
 + 了解使用AEM Publish环境进行Headless投放的最佳实践
 
->[!VIDEO](https://video.tv.adobe.com/v/333296?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450959?captions=chi_hans&quality=12&learn=on)
