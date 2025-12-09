@@ -12,9 +12,9 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: dc29a4b7857ee8d1405c9ef8d14f09374c2bfd01
 workflow-type: tm+mt
-source-wordcount: '1963'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 与Adobe Experience Manager (AEM) as a Cloud Service的集成必须能够安全地对AEM服务进行身份验证。 AEM的Developer Console授予对服务凭据的访问权限，这些凭据用于促进外部应用程序、系统和服务通过HTTP以编程方式与AEM创作或发布服务交互。
 
-AEM使用通过Adobe Developer Console[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)管理的S2S OAuth与其他Adobe产品集成。 对于与服务帐户的自定义集成，在AEM Developer Console中使用和管理JWT凭据。
+AEM使用通过Adobe Developer Console[管理的](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)S2S OAuth与其他Adobe产品集成。 对于与服务帐户的自定义集成，在AEM Developer Console中使用和管理JWT凭据。
 
->[!VIDEO](https://video.tv.adobe.com/v/342217?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
 服务凭据可能显示类似于[本地开发访问令牌](./local-development-access-token.md)，但在几个关键方面不同：
 
@@ -124,7 +124,7 @@ AEM使用通过Adobe Developer Console[&#128279;](https://experienceleague.adobe
 
 + 当存在服务凭据时，外部应用程序在访问AEM as a Cloud Service时使用此访问令牌，而不是本地开发访问令牌
 
-在本教程中，Adobe的`@adobe/jwt-auth` npm模块用于以下两者：(1)从服务凭据生成JWT，以及(2)在单个函数调用中将它交换为访问令牌。 如果您的应用程序不是基于JavaScript，请查看其他语言的[示例代码](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)，以了解如何从服务凭据创建JWT，并将其交换为具有Adobe IMS的访问令牌。
+在本教程中，Adobe的`@adobe/jwt-auth` npm模块用于以下两者：(1)从服务凭据生成JWT，以及(2)在单个函数调用中将它交换为访问令牌。 如果您的应用程序不是基于JavaScript，则可以使用您选择的语言开发自定义代码，以从服务凭据创建JWT，并将其与Adobe IMS交换访问令牌。
 
 ## 读取服务凭据
 
@@ -219,12 +219,12 @@ function getCommandLineParams() {
 
 一旦技术帐户AEM用户在AEM中存在（首先使用访问令牌进行HTTP请求后），就可以像管理其他AEM用户一样管理此AEM用户的权限。
 
-1. 首先，通过打开从AEM Developer Console下载的服务凭据JSON找到技术帐户的AEM登录名，然后找到应类似于`12345678-abcd-9000-efgh-0987654321c@techacct.adobe.com`的`integration.email`值。
+1. 首先，通过打开从AEM Developer Console下载的服务凭据JSON找到技术帐户的AEM登录名，然后找到应类似于`integration.email`的`12345678-abcd-9000-efgh-0987654321c@techacct.adobe.com`值。
 1. 以AEM管理员身份登录到相应的AEM环境的Author服务
 1. 导航到&#x200B;__工具__ > __安全性__ > __用户__
 1. 找到在步骤1中标识具有&#x200B;__登录名__&#x200B;的AEM用户，并打开其&#x200B;__属性__
 1. 导航到&#x200B;__组__&#x200B;选项卡，并添加&#x200B;__DAM用户__&#x200B;组（他们作为资产的写入权限）
-   + [查看AEM提供的用户组的列表](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hans#built-in-users-and-groups)以将服务用户添加到以获得最佳权限。 如果AEM提供的用户组不足以满足需求，请创建您自己的用户组，然后添加相应的权限。
+   + [查看AEM提供的用户组的列表](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups)以将服务用户添加到以获得最佳权限。 如果AEM提供的用户组不足以满足需求，请创建您自己的用户组，然后添加相应的权限。
 1. 点按&#x200B;__保存并关闭__
 
 使用AEM中允许的技术帐户对资源具有写入权限，请重新运行应用程序：
