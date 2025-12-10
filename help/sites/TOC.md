@@ -78,7 +78,7 @@ ht-degree: 98%
 + 生成式 AI {#generative-ai}
    + [生成变体](./generative-ai/generate-variations.md)
 + 内容片段 {#content-fragments}
-   + [内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
+   + [内容片段控制台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=zh-Hans){target=_blank}
    + [创作内容片段](content-fragments/content-fragments-feature-video-use.md)
    + [投放内容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [翻译内容片段](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -86,7 +86,7 @@ ht-degree: 98%
 + 体验片段 {#experience-fragments}
    + [使用体验片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [构建基块](experience-fragments/building-blocks.md)
-   + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
+   + [内容片段与体验片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=zh-Hans){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [概述](./edge-delivery-services/overview.md)
    + 开发{#developing}
@@ -120,8 +120,8 @@ ht-degree: 98%
 + 开发 {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 项目原型](developing/aem-project-archetype.md)
-   + [AEM Sites 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
-   + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
+   + [AEM Sites 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
+   + [AEM Headless 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans){target=_blank}
    + [AEM SPA Editor 和 React 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [扩展页面属性](developing/page-properties-technical-video-develop.md)
    + [响应式断点](developing/responsive-breakpoints.md)
@@ -172,7 +172,7 @@ ht-degree: 98%
       + [生成 FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [使用 Platform Web SDK 进行分析](integrations/platform/analytics-using-web-sdk.md)
-      + [Adobe Target](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [Adobe Target](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/personalization/overview)
    + Adobe Experience Platform 中的标记 {#experience-platform-data-collection-tags}
       + [概述](integrations/experience-platform/data-collection/tags/overview.md)
       + [创建一个标记属性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
@@ -187,9 +187,9 @@ ht-degree: 98%
       + [使用 Adobe Analytics 跟踪已单击的组件](integrations/analytics/track-clicked-component.md)
       + [使用 Analysis Workspace 分析数据](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
-      + [概述](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
-      + [设置](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
-      + [用例](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
+      + [概述](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [设置](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
+      + [用例](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 + 向同行学习 {#expert-resources}
    + [概述](expert-resources/learn-from-your-peers-overview.md)
    + [在 AEM Sites 中创建创作指南](expert-resources/authoring-guide-in-sites.md)
