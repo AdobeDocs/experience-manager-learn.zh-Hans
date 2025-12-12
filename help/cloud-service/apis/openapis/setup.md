@@ -12,10 +12,10 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+source-git-commit: 2160ed585ebfd958275af9aa8ef0aab750f684ef
 workflow-type: tm+mt
-source-wordcount: '1493'
-ht-degree: 11%
+source-wordcount: '1859'
+ht-degree: 9%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 11%
 
 了解如何设置您的 AEM as a Cloud Service 环境，以允许访问基于 OpenAPI 的 AEM API。
 
-在此示例中，使用使用服务器到服务器身份验证方法的AEM Assets API来演示设置过程。 其他基于OpenAPI的AEM API也可以执行相同的步骤。
+在此示例中，使用&#x200B;**服务器到服务器**&#x200B;身份验证方法的&#x200B;**AEM Assets API**&#x200B;用于演示基于OpenAPI的AEM API设置过程。 可以按照类似的步骤设置[其他基于OpenAPI的AEM API](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
@@ -35,20 +35,26 @@ ht-degree: 11%
 1. 配置ADC项目。
 1. 配置AEM实例以启用ADC项目通信。
 
+## 先决条件
+
+- 对Cloud Manager和AEM as a Cloud Service环境的访问权限
+- 访问Adobe Developer Console (ADC)。
+- 用于在`api.yaml`文件中添加或更新API配置的AEM项目。
+
 ## AEM as a Cloud Service环境的现代化{#modernization-of-aem-as-a-cloud-service-environment}
 
-AEM as a Cloud Service环境的现代化是一项针对每个环境的一次性活动，其中涉及以下步骤：
+AEM as a Cloud Service环境的现代化是每个环境一次&#x200B;**的活动**，其中涉及以下步骤。 如果您已实现AEM as a Cloud Service环境的现代化，则可以跳过此步骤。
 
 - 更新至AEM版本&#x200B;**2024.10.18459.20241031T210302Z**&#x200B;或更高版本。
 - 如果环境是在版本2024.10.18459.20241031T210302Z之前创建的，请向其中添加新的产品配置文件。
 
 ### 更新AEM实例{#update-aem-instance}
 
-要更新AEM实例，请在Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_环境_&#x200B;部分中，选择环境名称旁边的&#x200B;_省略号_&#x200B;图标，然后选择&#x200B;**更新**&#x200B;选项。
+- 要更新AEM实例，请在登录到Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)后，导航到&#x200B;_环境_&#x200B;部分，选择环境名称旁边的&#x200B;_省略号_&#x200B;图标并选择&#x200B;**更新**&#x200B;选项。
 
 ![更新AEM实例](./assets/setup/update-aem-instance.png)
 
-然后单击&#x200B;**提交**&#x200B;按钮并运行&#x200B;_建议_&#x200B;全栈管道。
+- 然后单击&#x200B;**提交**&#x200B;按钮并运行&#x200B;_建议_&#x200B;全栈管道。
 
 ![选择最新的AEM发行版本](./assets/setup/select-latest-aem-release.png)
 
@@ -56,41 +62,41 @@ AEM as a Cloud Service环境的现代化是一项针对每个环境的一次性�
 
 ### 添加新产品配置文件{#add-new-product-profiles}
 
-要将新产品配置文件添加到AEM实例，请在Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_环境_&#x200B;部分中，选择环境名称旁边的&#x200B;_省略号_&#x200B;图标，然后选择&#x200B;**添加产品配置文件**&#x200B;选项。
+- 要将新产品配置文件添加到AEM实例，请在Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_环境_&#x200B;部分中，选择环境名称旁边的&#x200B;_省略号_&#x200B;图标，然后选择&#x200B;**添加产品配置文件**&#x200B;选项。
 
 ![添加新的产品配置文件](./assets/setup/add-new-product-profiles.png)
 
-您可以通过单击环境名称旁边的&#x200B;_省略号_&#x200B;图标并选择&#x200B;**管理访问权限** > **作者配置文件**&#x200B;来查看新添加的产品配置文件。
+- 通过单击环境名称旁边的&#x200B;_省略号_&#x200B;图标并选择&#x200B;**管理访问权限** > **作者配置文件**，查看新添加的产品配置文件。
 
-_Admin Console_&#x200B;窗口显示新添加的产品配置文件。
+- _Admin Console_&#x200B;窗口显示新添加的产品配置文件。 根据您的AEM权利(如AEM Assets、AEM Sites、AEM Forms等)，您可能会看到不同的产品配置文件。 例如，我拥有AEM Assets和Sites权限，因此我可以看到以下产品配置文件。
 
 ![查看新产品配置文件](./assets/setup/review-new-product-profiles.png)
 
-以上步骤完成了AEM as a Cloud Service环境的现代化。
+- 以上步骤完成了AEM as a Cloud Service环境的现代化。
 
 ## 启用AEM API访问{#enable-aem-apis-access}
 
-存在&#x200B;_新产品配置文件_&#x200B;可在Adobe Developer Console (ADC)中启用基于OpenAPI的AEM API访问。 请记住，[Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts)是用于访问Adobe API、SDK、实时事件、无服务器函数等的开发人员中心。
+存在&#x200B;_新产品配置文件_&#x200B;可在[Adobe Developer Console (ADC)](https://developer.adobe.com/)中启用基于OpenAPI的AEM API访问。 如果没有这些产品配置文件，您便无法在Adobe Developer Console (ADC)中设置基于OpenAPI的AEM API。
 
-新添加的产品配置文件与&#x200B;_服务_&#x200B;关联，这些服务代表&#x200B;_具有预定义访问控制列表(ACL)_&#x200B;的AEM用户组。 _服务_&#x200B;用于控制对AEM API的访问级别。
+新添加的产品配置文件与&#x200B;_服务_&#x200B;关联，这些服务代表&#x200B;_具有预定义访问控制列表(ACL)_&#x200B;的AEM用户组。 _服务_&#x200B;用于控制对AEM API的访问级别。 您还可以选择或取消选择与产品配置文件关联的&#x200B;_服务_，以减少或增加访问级别。
 
-您还可以选择或取消选择与产品配置文件关联的&#x200B;_服务_，以减少或增加访问级别。
-
-通过单击产品配置文件名称旁边的&#x200B;_查看详细信息_&#x200B;图标来查看关联。
+通过单击产品配置文件名称旁边的&#x200B;_查看详细信息_&#x200B;图标来查看关联。 在以下屏幕截图中，您可以看到&#x200B;**AEM Sites内容管理器 — 作者 — 项目XXX — 环境XXX**&#x200B;产品配置文件与&#x200B;**AEM Sites内容管理器**&#x200B;服务的关联。 查看其他产品配置文件及其与“服务”的关联。
 
 ![查看与产品配置文件关联的服务](./assets/setup/review-services-associated-with-product-profile.png)
 
 ### 启用AEM Assets API访问{#enable-aem-assets-apis-access}
 
-默认情况下，**AEM Assets API Users**&#x200B;服务不与任何产品配置文件关联。 让我们将其与新添加的&#x200B;**AEM Assets Collaborator Users - author - Program XXX - Environment XXX** Product Profile或任何其他要用于AEM Assets API访问的产品配置文件关联。
+在此示例中，**AEM Assets API**&#x200B;用于演示基于OpenAPI的AEM API设置过程。 但是，默认情况下，**AEM Assets API Users**&#x200B;服务不与任何产品配置文件关联。 您需要将其与所需的产品配置文件关联。
+
+让我们将其与新添加的&#x200B;**AEM Assets Collaborator Users - author - Program XXX - Environment XXX** Product Profile或任何其他要用于AEM Assets API访问的产品配置文件关联。
 
 ![将AEM Assets API Users服务与产品配置文件关联](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
 ### 启用服务器到服务器身份验证
 
-要为所需的AEM API启用服务器到服务器身份验证，使用Adobe Developer Console (ADC)设置集成的用户必须以开发人员身份添加到与服务相关联的产品配置文件中。
+要为所需的基于OpenAPI的AEM API启用服务器到服务器身份验证，使用Adobe Developer Console (ADC)设置集成的用户必须作为开发人员添加到与&#x200B;_服务_&#x200B;关联的&#x200B;_产品配置文件_。
 
-例如，要为AEM Assets API启用服务器到服务器身份验证，必须将用户作为开发人员添加到&#x200B;**AEM Assets Collaborator Users - author - Program XXX - Environment XXX**&#x200B;产品配置文件。
+例如，要为AEM Assets API启用服务器到服务器身份验证，必须将用户作为开发人员添加到&#x200B;**AEM Assets Collaborator Users - author - Program XXX - Environment XXX** _产品配置文件_。
 
 ![将开发人员关联到产品配置文件](./assets/setup/associate-developer-to-product-profile.png)
 
@@ -100,7 +106,11 @@ _Admin Console_&#x200B;窗口显示新添加的产品配置文件。
 >
 >要为所需的AEM API启用服务器到服务器身份验证，上述步骤至关重要。 如果没有此关联，AEM API将无法与服务器到服务器身份验证方法一起使用。
 
+通过执行上述所有步骤，您已准备AEM as a Cloud Service环境以启用基于OpenAPI的AEM API访问。 接下来，您需要创建Adobe Developer Console (ADC)项目以设置基于OpenAPI的AEM API。
+
 ## 创建Adobe Developer Console (ADC)项目{#adc-project}
+
+Adobe Developer Console (ADC)项目用于设置基于OpenAPI的AEM API。 请记住，[Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts)是用于访问Adobe API、SDK、实时事件、无服务器函数等的开发人员中心。
 
 ADC项目用于添加所需的API、设置其身份验证并将身份验证帐户与产品配置文件关联。
 
@@ -125,6 +135,8 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 ## 配置ADC项目{#configure-adc-project}
 
 创建ADC项目后，您必须添加所需的AEM API，设置其身份验证，并将身份验证帐户与产品配置文件关联。
+
+在本例中，**AEM Assets API**&#x200B;用于演示基于OpenAPI的AEM API设置过程。 但是，您可以按照类似的步骤添加其他基于OpenAPI的AEM API，如&#x200B;**AEM Sites API**、**AEM Forms API**&#x200B;等。 AEM权限决定Adobe Developer Console (ADC)中可用的API。
 
 1. 要添加AEM API，请单击&#x200B;**添加API**&#x200B;按钮。
 
@@ -167,15 +179,17 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 
 ## 配置AEM实例以启用ADC项目通信{#configure-aem-instance}
 
-要使ADC项目的ClientID能够与AEM实例通信，您需要配置AEM实例。
+接下来，您需要配置AEM实例以启用上述ADC项目通信。 使用此配置，ADC项目的ClientID无法与AEM实例通信，导致出现403禁止错误。 将此配置视为防火墙规则，以便仅允许允许的ClientID与AEM实例通信。
 
-此操作可通过在YAML文件中定义API配置，并使用Cloud Manager中的配置管道来部署它。 YAML文件定义了可以与AEM实例通信的ADC项目中允许的ClientID。
+让我们按照配置AEM实例的步骤启用上述ADC项目通信。
 
-1. 在AEM项目中，从`config`文件夹中找到或创建`api.yaml`文件。
+1. 在本地计算机上，导航到AEM项目（或者克隆项目，如果没有），然后找到`config`文件夹。
 
-   ![查找API YAML](./assets/setup/locate-api-yaml.png){width="500" zoomable="no"}
+1. 在AEM项目中，从`api.yaml`文件夹中找到或创建`config`文件。 在我的案例中，[AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd)用于演示基于OpenAPI的AEM API设置过程。
 
-1. 将以下配置添加到`api.yaml`文件。
+   ![查找API YAML](./assets/setup/locate-api-yaml.png)
+
+1. 将以下配置添加到`api.yaml`文件，以允许ADC项目的ClientID与AEM实例通信。
 
    ```yaml
    kind: "API"
@@ -196,9 +210,11 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 
 1. 提交配置更改并将更改推送到Cloud Manager管道所连接的远程Git存储库。
 
-1. 使用Cloud Manager中的配置管道来部署上述更改。 请注意，`api.yaml`文件也可以使用命令行工具安装在RDE中。
+1. 在Cloud Manager中使用[配置管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)部署上述更改。
 
    ![部署YAML](./assets/setup/config-pipeline.png)
+
+请注意，`api.yaml`文件也可以使用命令行工具[安装在](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[、](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)中。 这有助于在将配置更改部署到生产环境之前测试这些更改。
 
 ## 后续步骤
 
