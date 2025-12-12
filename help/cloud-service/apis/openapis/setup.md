@@ -210,11 +210,11 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 
 1. 提交配置更改并将更改推送到Cloud Manager管道所连接的远程Git存储库。
 
-1. 在Cloud Manager中使用[配置管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)部署上述更改。
+1. 在Cloud Manager中使用[配置管道](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)部署上述更改。
 
    ![部署YAML](./assets/setup/config-pipeline.png)
 
-请注意，`api.yaml`文件也可以使用命令行工具[安装在](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[、](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)中。 这有助于在将配置更改部署到生产环境之前测试这些更改。
+请注意，`api.yaml`文件也可以使用命令行工具[安装在](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[、](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)中。 这有助于在将配置更改部署到生产环境之前测试这些更改。
 
 ## 后续步骤
 
