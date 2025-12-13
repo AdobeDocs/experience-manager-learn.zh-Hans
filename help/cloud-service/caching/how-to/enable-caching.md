@@ -4,7 +4,7 @@ description: 了解如何在AEM as a Cloud Service的CDN中启用HTTP响应缓�
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2023-11-17T00:00:00Z
@@ -12,10 +12,10 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 544c3230-6eb6-4f06-a63c-f56d65c0ff4b
 duration: 174
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 0%
+source-wordcount: '631'
+ht-degree: 1%
 
 ---
 
@@ -27,11 +27,11 @@ ht-degree: 0%
 
 ## 默认缓存行为
 
-当自定义配置不存在时，将使用默认值。 在以下屏幕截图中，您可以看到在部署基于`mynewsite`的[AEM项目原型](https://github.com/adobe/aem-project-archetype)的AEM项目时，AEM Publish和Author的默认缓存行为。
+当自定义配置不存在时，将使用默认值。 在以下屏幕截图中，您可以看到在部署基于[的](https://github.com/adobe/aem-project-archetype)AEM项目原型`mynewsite`的AEM项目时，AEM Publish和Author的默认缓存行为。
 
 ![默认缓存行为](../assets/how-to/aem-publish-default-cache-headers.png){width="800" zoomable="yes"}
 
-查看[AEM Publish — 默认缓存生命周期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html?lang=zh-Hans#cdn-cache-life)和[AEM Author — 默认缓存生命周期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?lang=zh-Hans&#default-cache-life)以了解更多信息。
+查看[AEM Publish — 默认缓存生命周期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html#cdn-cache-life)和[AEM Author — 默认缓存生命周期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?#default-cache-life)以了解更多信息。
 
 总之，AEM as a Cloud Service在AEM Publish中缓存了大部分内容类型(HTML、JSON、JS、CSS和Assets)，在AEM Author中缓存了少数几种内容类型(JS、CSS)。
 
@@ -98,8 +98,8 @@ ht-degree: 0%
    </LocationMatch>
    ```
 
-   `dispatcher/src/conf.d/enabled_vhosts`目录中的vhost文件是`dispatcher/src/conf.d/available_vhosts`目录中文件的&#x200B;**符号链接**，因此请确保创建符号链接（如果不存在）。
-1. 使用[Cloud Manager - Web层配置管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=zh-Hans&#web-tier-config-pipelines)或[RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=zh-Hans#deploy-apache-or-dispatcher-configuration)，将vhost更改部署到所需的AEM as a Cloud Service环境。
+   `dispatcher/src/conf.d/enabled_vhosts`目录中的vhost文件是&#x200B;**目录中文件的**&#x200B;符号链接`dispatcher/src/conf.d/available_vhosts`，因此请确保创建符号链接（如果不存在）。
+1. 使用[Cloud Manager - Web层配置管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines)或[RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration)，将vhost更改部署到所需的AEM as a Cloud Service环境。
 
 但是，要使Web浏览器和CDN缓存的生命周期值不同，可以使用上例中的`Surrogate-Control`标头。 同样，要在特定的日期和时间使缓存过期，您可以使用`Expires`标头。 此外，使用`stale-while-revalidate`和`stale-if-error`属性，您可以控制响应内容的过时状态处理。 AEM WKND项目具有[引用过时状态处理](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L150-L155) CDN缓存配置。
 

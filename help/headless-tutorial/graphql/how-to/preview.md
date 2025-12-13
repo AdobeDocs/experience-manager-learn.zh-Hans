@@ -4,7 +4,7 @@ description: 了解如何使用内容片段预览功能预览所有作者，以�
 version: Experience Manager as a Cloud Service
 feature: Content Fragments
 topic: Headless, Content Management, Development
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2023-03-17T00:00:00Z
@@ -12,7 +12,7 @@ jira: KT-10841
 thumbnail: 3416906.jpeg
 exl-id: 247d40a3-ff67-4c1f-86bf-3794d7ce3e32
 duration: 463
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 AEM Headless应用程序支持集成的创作预览。 预览体验将AEM作者的内容片段编辑器与您的自定义应用程序链接到一起（可通过HTTP寻址），从而允许深层链接进入应用程序，以呈现正在预览的内容片段。
 
->[!VIDEO](https://video.tv.adobe.com/v/3449598?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
 
 要使用内容片段预览，必须满足多个条件：
 
@@ -47,7 +47,7 @@ AEM Headless应用程序支持集成的创作预览。 预览体验将AEM作者�
 
 每个内容片段模型都可以设置预览URL。 可以使用下表中列出的URL表达式，为每个内容片段参数化预览URL。 可以在单个预览URL中使用多个URL表达式。
 
-|                                         | URL表达式 | 价值 |
+|                                         | URL表达式 | 值 |
 | --------------------------------------- | ----------------------------------- | ----------- |
 | 内容片段路径 | `${contentFragment.path}` | `/content/dam/wknd-shared/en/adventures/surf-camp-bali/surf-camp-bali` |
 | 内容片段ID | `${contentFragment.id}` | `12c34567-8901-2aa3-45b6-d7890aa1c23c` |
@@ -76,7 +76,7 @@ AEM Headless应用程序支持集成的创作预览。 预览体验将AEM作者�
 
 ## URL和路由
 
-用于预览内容片段的URL或路由必须可以使用[URL表达式](#url-expressions)进行组合。 在此启用了预览的WKND应用程序版本中，冒险内容片段通过绑定到路由`/adventure<CONTENT FRAGMENT PATH>`的`AdventureDetail`组件显示。 因此，必须将WKND Adventure模型的预览URL设置为`https://preview.app.wknd.site:3000/adventure${contentFragment.path}`才能解析到此路由。
+用于预览内容片段的URL或路由必须可以使用[URL表达式](#url-expressions)进行组合。 在此启用了预览的WKND应用程序版本中，冒险内容片段通过绑定到路由`AdventureDetail`的`/adventure<CONTENT FRAGMENT PATH>`组件显示。 因此，必须将WKND Adventure模型的预览URL设置为`https://preview.app.wknd.site:3000/adventure${contentFragment.path}`才能解析到此路由。
 
 仅当应用程序具有可寻址路由时，内容片段预览才有效，可寻址路由由[URL表达式](#url-expressions)填充，该表达式以可预览的方式在应用中呈现内容片段。
 

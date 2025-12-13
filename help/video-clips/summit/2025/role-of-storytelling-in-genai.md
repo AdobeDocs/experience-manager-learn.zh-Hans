@@ -1,10 +1,10 @@
 ---
-title: 叙事在GenAI中的作用
-description: 探索乡村音乐中的叙事原则如何与用于数字体验的GenAI工具的设计相关。
+title: storytelling在GenAI中的作用
+description: 了解乡村音乐中的storytelling原则如何与用于数字体验的GenAI工具的设计相关联。
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites
-role: Leader, User, Developer, Admin, Architect
+role: Leader, User, Developer, Admin
 level: Beginner, Intermediate, Experienced
 type: Event
 doc-type: Video Clip
@@ -14,15 +14,15 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: f3902c6e-7f32-49ce-982a-76d264b87fd0
-source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
 
 ---
 
-# 叙事在GenAI中的作用
+# storytelling在GenAI中的作用
 
-探索乡村音乐中的叙事原则如何与用于数字体验的GenAI工具的设计相关。
+了解乡村音乐中的storytelling原则如何与用于数字体验的GenAI工具的设计相关联。
 
->[!VIDEO](https://video.tv.adobe.com/v/3462019/?learn=on&enablevpops&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3459229/?learn=on&enablevpops)

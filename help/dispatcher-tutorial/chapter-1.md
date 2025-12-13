@@ -3,14 +3,14 @@ title: 第1章 — Dispatcher概念、模式和反模式
 description: 本章简要介绍Dispatcher的历史和机制，并讨论这会如何影响AEM开发人员如何设计其组件。
 feature: Dispatcher
 topic: Architecture
-role: Architect
+role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 3bdb6e36-4174-44b5-ba05-efbc870c3520
 duration: 3855
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '17384'
+source-wordcount: '17382'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Dispatcher是大多数（如果不是全部）AEM安装的重要组成部分。 
 
 ### 反模式：Dispatcher作为后想
 
-这种基本信息的缺乏导致了许多反模式。我们在许多AEM项目中看到了：
+这种基本信息的缺乏导致了许多反模式。我们在许多AEM项目中看到过：
 
 1. 由于Dispatcher安装在Apache Web Server中，因此配置它是项目中“Unix gods”的作业。 “凡人Java开发者”不必担心这个问题。
 
@@ -71,9 +71,9 @@ Dispatcher是
 
 * 用于Apache httpd webserver的模块，用于为Apache的多功能性添加AEM相关功能，并与所有其他Apache模块（例如SSL甚至SSI包含，我们将在后面看到）一起平稳运行
 
-在Web的早期，一个网站可能会有几百个访客。 一个Dispatcher的设置可以“分派”请求，也可以平衡多个AEM发布服务器的请求负载，这样通常就足够了 — 因此，该名称为“Dispatcher”。 但是，这种设置已经不再经常使用。
+在Web的早期，一个网站可能会有几百个访客。 一个Dispatcher的设置，“已调度”或平衡多台AEM发布服务器的请求负载，这通常就足够了 — 因此，名称为“Dispatcher”。 但是，这种设置已经不再经常使用。
 
-我们将在本文后面看到设置Dispatcher和Publish系统的各种方式。 首先，我们来了解一些http缓存基础知识。
+我们将在本文后面看到设置Dispatcher和Publish系统的不同方法。 首先，我们来了解一些http缓存基础知识。
 
 ![Dispatcher缓存的基本功能](assets/chapter-1/basic-functionality-dispatcher.png)
 
@@ -85,28 +85,28 @@ Dispatcher是
 
 1. 用户请求页面
 2. Dispatcher会检查它是否已具有该页面的渲染版本。 假设这是对此页面的第一个请求，并且Dispatcher找不到本地缓存副本。
-3. Dispatcher从Publish系统请求页面
-4. 在Publish系统上，页面通过JSP或HTL模板渲染
+3. Dispatcher从发布系统请求页面
+4. 在发布系统中，页面通过JSP或HTL模板渲染
 5. 页面将返回到Dispatcher
 6. Dispatcher将缓存页面
 7. Dispatcher会将页面返回到浏览器
-8. 如果再次请求同一页面，则可以直接从Dispatcher缓存中提供该页面，而无需在Publish实例上重新渲染该页面。 这节省了在Publish实例上等待用户和CPU周期的时间。
+8. 如果再次请求同一页面，则可以直接从Dispatcher缓存中提供该页面，而无需在发布实例上重新渲染该页面。 这节省了用户和CPU在发布实例上循环的等待时间。
 
 我们在最后一节中谈到“页面”。 但同样的方案也适用于其他资源，如图像、CSS文件、PDF下载等。
 
 #### 数据缓存方式
 
-Dispatcher模块利用托管Apache Server提供的工具。 HTML页、下载和图片等资源作为简单文件存储在Apache文件系统中。 就是这么简单。
+Dispatcher模块利用托管Apache Server提供的工具。 HTML-pages、下载和图片等资源作为简单文件存储在Apache文件系统中。 就是这么简单。
 
 文件名由所请求资源的URL派生。 如果您请求文件`/foo/bar.html`，该文件例如存储在/`var/cache/docroot/foo/bar.html`下。
 
-原则上，如果所有文件都进行了缓存，因而静态存储在Dispatcher中，则可以拉取Publish系统的插件，而Dispatcher将充当一个简单的Web服务器。 但这只是为了说明原则。 现实生活要复杂得多。 您不能缓存所有内容，而且缓存永远不会完全“满”，因为由于渲染过程的动态性，资源数量可能是无限的。 静态文件系统的模型有助于粗略了解Dispatcher的功能。 并且它有助于解释Dispatcher的限制。
+原则上，如果所有文件都缓存并因此静态存储在Dispatcher中，则可以拉取Publish系统的插件，而Dispatcher将充当一个简单的Web服务器。 但这只是为了说明原则。 现实生活要复杂得多。 您不能缓存所有内容，而且缓存永远不会完全“满”，因为由于渲染过程的动态性，资源数量可能是无限的。 静态文件系统的模型有助于粗略了解Dispatcher的功能。 并且它有助于解释Dispatcher的限制。
 
 #### AEM URL结构和文件系统映射
 
 要更详细地了解Dispatcher，让我们重新访问一个简单示例URL的结构。  让我们看下面的示例，
 
-`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&otherparameter=value#fragment`
+`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&amp;otherparameter=value#fragment`
 
 * `http`表示协议
 
@@ -114,7 +114,7 @@ Dispatcher模块利用托管Apache Server提供的工具。 HTML页、下载和�
 
 * `path/to/resource`是资源存储在CRX中的路径，随后存储在Apache Server的文件系统中
 
-从这里，AEM文件系统与Apache文件系统之间有些不同。
+从这里，AEM文件系统与Apache文件系统之间有些许不同。
 
 在AEM中，
 
@@ -128,7 +128,7 @@ Dispatcher模块利用托管Apache Server提供的工具。 HTML页、下载和�
 
 * `?parameter=value&otherparameter=value`是URL的查询节。 它用于将任意参数传递给AEM。 无法缓存包含参数的URL，因此应限制仅使用绝对必需的参数。
 
-* `#fragment`，URL的片段部分未传递到AEM，它仅在浏览器中使用；在JavaScript框架中作为“路由参数”使用，或者跳转到页面上的特定部分。
+* `#fragment`，URL的片段部分没有传递到AEM，它仅在浏览器中使用；在JavaScript框架中作为“路由参数”使用，或者跳转到页面上的特定部分。
 
 在Apache中（*引用以下图表*），
 
@@ -244,7 +244,7 @@ URL必须始终具有扩展名。 不过，您可以在AEM中处理不带扩展�
 
 #### 不可缓存的请求
 
-让我们查看上一章的快速摘要，以及一些更多例外情况。 如果URL配置为可缓存并且是GET请求，则Dispatcher可以缓存该URL。 不能在以下异常之一下缓存它。
+让我们查看上一章的快速摘要，以及一些更多例外情况。 如果URL配置为可缓存，并且是GET请求，则Dispatcher可以缓存URL。 不能在以下异常之一下缓存它。
 
 **可缓存的请求**
 
@@ -304,7 +304,7 @@ invalidate-path:  /content/dam/path/to/image
 <no body>
 ```
 
-失效很简单：向Dispatcher上的特殊“/invalidate”URL发出简单GET请求。 不需要HTTP主体，“payload”只是“invalidate-path”标头。 另请注意，标头中的invalidate-path是AEM知道的资源，而不是Dispatcher缓存的一个或多个文件。 AEM只了解资源。 请求资源时，在运行时使用扩展、选择器和后缀。 AEM不会就资源上使用的选择器执行任何记账，因此在激活资源时，它只知道资源路径而已。
+失效很简单：向Dispatcher上的特殊“/invalidate”URL发出简单GET请求。 不需要HTTP主体，“payload”只是“invalidate-path”标头。 另请注意，标头中的invalidate-path是AEM知道的资源，而不是Dispatcher缓存的一个或多个文件。 AEM只了解资源。 请求资源时，在运行时使用扩展、选择器和后缀。 AEM不会就资源上使用的选择器执行任何记账，因此在激活资源时，它只需要知道资源路径即可。
 
 就我们的情况来说，这已经足够了。 如果某个资源已更改，我们可以放心地假设，该资源的所有演绎版也已更改。 在我们的示例中，如果图像已更改，则也会呈现新的缩略图。
 
@@ -320,7 +320,7 @@ Dispatcher可以安全地删除包含其缓存的所有演绎版的资源。 它
 
 #### 网格化内容问题
 
-与上载到AEM的图像或其他二进制文件不同，HTML页不是孤立的动物。 它们成群结队地生活，通过超链接和引用彼此高度互联。 简单的链接无害，但在我们谈论内容引用时它会变得很棘手。 页面上无处不在的顶部导航或Teaser是内容引用。
+与上载到AEM的图像或其他二进制文件不同，HTML页面不是孤立的动物。 它们成群结队地生活，通过超链接和引用彼此高度互联。 简单的链接无害，但在我们谈论内容引用时它会变得很棘手。 页面上无处不在的顶部导航或Teaser是内容引用。
 
 #### 内容引用以及它们成为问题的原因
 
@@ -336,7 +336,7 @@ Dispatcher可以安全地删除包含其缓存的所有演绎版的资源。 它
 
 ![](assets/chapter-1/content-references.png)
 
-在AEM上只能看到与魅力类似的效果，但如果您在Publish实例中使用Dispatcher，则会出现一些奇怪的情况。
+在AEM上，它只能发挥魅力作用，但是如果您在Publish实例中使用Dispatcher，则会出现奇怪的情况。
 
 想象一下，您已发布您的网站。 “加拿大”页面上的标题为“加拿大”。 当访客请求您的主页（带有对该页面的Teaser引用）时，“加拿大”页面上的组件将呈现以下内容
 
@@ -365,13 +365,13 @@ Dispatcher只是一个基于文件系统的Web服务器，它速度快，但相�
 
 “冬季特惠”页面尚未呈现，因此Dispatcher上没有静态版本，因此在应请求重新呈现时与新的Teaser一起显示。
 
-您可能会认为，当资源发生更改时，Dispatcher将在呈现和刷新使用此资源的所有页面时跟踪它访问的每个资源。 但是，Dispatcher不呈现页面。 渲染由Publish系统执行。 Dispatcher不知道哪些资源进入渲染的.html文件。
+您可能会认为，当资源发生更改时，Dispatcher将在呈现和刷新使用此资源的所有页面时跟踪它访问的每个资源。 但是，Dispatcher不呈现页面。 渲染由发布系统执行。 Dispatcher不知道哪些资源进入渲染的.html文件。
 
 还是不相信吗？ 您可能会认为&#x200B;*“必须有实现某种依赖项跟踪的方法”*。 有，或者更准确地说&#x200B;*有*。 公报3：AEM的曾曾祖父在&#x200B;_会议_&#x200B;中实施了一个依赖关系跟踪器，用于呈现页面。
 
 在请求期间，通过此会话获得的每个资源都作为当前所渲染URL的依赖项进行跟踪。
 
-但事实证明，追踪这些依赖性是非常昂贵的。 人们很快发现，如果他们完全关闭依赖项跟踪功能，并依赖在更改一个html页面后重新呈现所有html页面，则网站速度更快。 此外，这一方案也不完美 — 过程中存在许多陷阱和例外。 在某些情况下，您不是使用请求默认会话获取资源，而是使用管理员会话获取一些辅助资源来呈现请求。 这些依赖项通常不会被跟踪，并导致令人头疼的问题，并且运营团队会打电话要求手动刷新缓存。 如果他们有标准程序那么做，那你就很幸运了。 途中还有更多的哥特教，不过，我们别再回忆了。 这可以追溯到2005年。 最终，该功能在公报4中被默认停用，没有重新成为后继的CQ5，后者后来成为AEM。
+但事实证明，追踪这些依赖性是非常昂贵的。 人们很快发现，如果他们完全关闭依赖项跟踪功能，并依赖在更改一个html页面后重新呈现所有html页面，则网站速度更快。 此外，这一方案也不完美 — 过程中存在许多陷阱和例外。 在某些情况下，您不是使用请求默认会话获取资源，而是使用管理员会话获取一些辅助资源来呈现请求。 这些依赖项通常不会被跟踪，并导致令人头疼的问题，并且运营团队会打电话要求手动刷新缓存。 如果他们有标准程序那么做，那你就很幸运了。 途中还有更多的哥特教，不过，我们别再回忆了。 这可以追溯到2005年。 最终，该功能在公报4中被默认停用，未能重新成为后来成为AEM的继承CQ5。
 
 ### 自动失效
 
@@ -407,7 +407,7 @@ Dispatcher只是一个基于文件系统的Web服务器，它速度快，但相�
 
 Dispatcher中所有文件的创建日期都早于statfile，并且在上次激活（和失效）之前已呈现，因此被视为“无效”。 虽然它们仍然在文件系统中实际存在，但Dispatcher会忽略它们。 它们已经“过时”了。 每当请求旧资源时，Dispatcher都会请求AEM系统重新渲染页面。 然后，新渲染的页面将存储在文件系统中 — 现在，具有新的创建日期，并且再次刷新。
 
-![&#x200B; .stat文件的创建日期定义哪些内容已过时哪些内容是新鲜的](assets/chapter-1/creation-date.png)
+![ .stat文件的创建日期定义哪些内容已过时哪些内容是新鲜的](assets/chapter-1/creation-date.png)
 
 *.stat文件的创建日期定义哪些内容已过时哪些内容是新鲜的*
 
@@ -429,7 +429,7 @@ Dispatcher根据文件扩展名决定是否应用自动失效方案。
 
 可配置自动失效的文件结尾。 理论上，您可以包含自动失效的所有扩展。 但请记住，这需要付出高昂的代价。 您不会看到过时的资源无意中交付，但交付性能因过度失效而大幅降低。
 
-例如，假设您实施一个方案，其中动态呈现PNG和JPG并依赖其他资源来执行此操作。 您可能希望将高分辨率图像重新缩放为较小的与Web兼容的分辨率。 在这样做时，还会更改压缩率。 在此示例中，分辨率和压缩率不是固定常量，而是使用图像的组件中的可配置参数。 现在，如果更改此参数，则需要使图像失效。
+例如，假设您实施一个方案，其中动态渲染PNG和JPG并依赖其他资源来实现这一点。 您可能希望将高分辨率图像重新缩放为较小的与Web兼容的分辨率。 在这样做时，还会更改压缩率。 在此示例中，分辨率和压缩率不是固定常量，而是使用图像的组件中的可配置参数。 现在，如果更改此参数，则需要使图像失效。
 
 没问题 — 我们刚刚了解到，可以将图像添加到自动失效中，并且每当发生任何更改时，都始终重新渲染图像。
 
@@ -445,7 +445,7 @@ Dispatcher根据文件扩展名决定是否应用自动失效方案。
 
 ##### 自动失效的例外：ResourceOnly失效
 
-Dispatcher的失效请求通常由复制代理从Publish系统中触发。
+Dispatcher的失效请求通常由复制代理从发布系统触发。
 
 如果您对依赖项信心十足，则可以尝试构建自己的失效复制代理。
 
@@ -483,7 +483,7 @@ Dispatcher的失效请求通常由复制代理从Publish系统中触发。
 
 响应组件既负责标记的呈现，又负责传送二进制图像数据。
 
-我们在这里实现它的方式是我们在许多项目中看到的通用模式，甚至其中一个AEM核心组件都基于该模式。 因此，您作为开发人员很可能会调整该模式。 在封装方面，它有它的最佳之处，但需要付出大量努力才能使其为Dispatcher做好准备。 我们稍后将讨论如何缓解此问题的几个选项。
+我们在此处实施的方式是我们在许多项目中看到的通用模式，即使AEM核心组件之一也基于该模式。 因此，您作为开发人员很可能会调整该模式。 在封装方面，它有它的最佳之处，但需要付出大量努力才能使其为Dispatcher做好准备。 我们稍后将讨论如何缓解此问题的几个选项。
 
 我们把这里使用的模式称为“后台处理程序模式”，因为问题可以追溯到《公报3》的早期，当时有一个方法“后台处理程序”，可以调用资源将其二进制原始数据流式传输到响应中。
 
@@ -544,7 +544,7 @@ CRX中响应图像的资源结构&#x200B;**
 
 <br> 
 
-考虑用户将两朵花图像的新版本上传并激活到DAM。 AEM将根据以下内容的失效请求发送：
+考虑用户将两朵花图像的新版本上传并激活到DAM。 AEM将发送失效请求
 
 `/content/dam/flower.jpg`
 
@@ -582,7 +582,7 @@ CRX中响应图像的资源结构&#x200B;**
 
 #### 结论
 
-从AEM开发人员的角度来看，这种模式看起来非常优雅。 但是，如果把Dispatcher也考虑在内，你可能会同意，这种天真的做法可能还不够。
+从AEM开发人员的角度来看，这种模式看上去非常优雅。 但是，如果把Dispatcher也考虑在内，你可能会同意，这种天真的做法可能还不够。
 
 现在由你们来决定这到底是一种模式还是一种反模式。 也许您已经想到了一些好点子来缓解上面解释的问题？ 很好。 您应该很想知道其他项目是如何解决这些问题的。
 
@@ -602,7 +602,7 @@ CRX中响应图像的资源结构&#x200B;**
 >
 >这是反模式。 不要使用它。 永远。
 
-您是否曾看到`?ck=398547283745`之类的查询参数？ 它们称为cache-killer (“ck”)。 其思想是，如果添加任何查询参数，将不缓存资源。 此外，如果您添加随机数作为参数的值(例如“398547283745”)，则URL将变得唯一，并且您确保在AEM系统和屏幕之间没有任何其他缓存能够缓存该值。 通常中间嫌犯会是位于Dispatcher前的“清漆”缓存、CDN甚至浏览器缓存。 再说一遍：别这样。 您确实希望尽可能长时间地缓存资源。 快取是你的朋友。 不要杀朋友。
+您是否曾看到`?ck=398547283745`之类的查询参数？ 它们称为cache-killer (“ck”)。 其思想是，如果添加任何查询参数，将不缓存资源。 此外，如果您添加随机数作为参数的值(例如“398547283745”)，则URL将变得唯一，并且您确保AEM系统和屏幕之间的任何其他缓存都不能缓存。 通常中间嫌犯会是位于Dispatcher前的“清漆”缓存、CDN甚至浏览器缓存。 再说一遍：别这样。 您确实希望尽可能长时间地缓存资源。 快取是你的朋友。 不要杀朋友。
 
 #### 自动失效
 
@@ -624,7 +624,7 @@ Unix时间戳足以满足实际实施的需要。 为了提高可读性，我们
 
 不得将指纹用作查询参数，如带有查询参数的URL   无法缓存。 您可以使用选择器或后缀作为指纹。
 
-假设`/content/dam/flower.jpg`文件的`jcr:lastModified`日期为2018年12月31日，即23:59。 带有指纹的URL是`/content/home/jcr:content/par/respi.fp-2018-31-12-23-59.jpg`。
+假设文件`/content/dam/flower.jpg`的`jcr:lastModified`日期为2018年12月31日，即23:59。 带有指纹的URL是`/content/home/jcr:content/par/respi.fp-2018-31-12-23-59.jpg`。
 
 只要不更改引用的资源(`flower.jpg`)文件，此URL将保持稳定。 因此，它可以无限期地缓存，而且它不是缓存杀手。
 
@@ -632,9 +632,9 @@ Unix时间戳足以满足实际实施的需要。 为了提高可读性，我们
 
 这是基本概念。 但是，有一些细节很容易被忽视。
 
-在我们的示例中，组件在23:59呈现并缓存。 现在图像已更改，假设00:00。  组件&#x200B;_将_&#x200B;在其标记中生成一个新的指纹URL。
+在本例中，组件呈现并缓存到23:59。 现在图像已更改，假设为00:00。  组件&#x200B;_将_&#x200B;在其标记中生成一个新的指纹URL。
 
-你可能认为它&#x200B;_应该_...但事实并非如此。由于只更改了图像的二进制文件，并且未接触包含页，因此不需要重新呈现HTML标记。 因此，Dispatcher使用旧指纹提供页面，从而提供图像的旧版本。
+你可能认为它&#x200B;_应该_...但事实并非如此。由于只更改了图像的二进制文件，并且未触及包含页面，因此无需重新呈现HTML标记。 因此，Dispatcher使用旧指纹提供页面，从而提供图像的旧版本。
 
 ![图像组件比引用的图像更新，未呈现新的指纹。](assets/chapter-1/recent-image-component.png)
 
@@ -658,13 +658,13 @@ Unix时间戳足以满足实际实施的需要。 为了提高可读性，我们
 
 “statfile级别”定义子树的根节点的深度。 在上面的示例中，级别将为“2”(1=/content，2=/mysite，dam)
 
-将statfile级别“降低”为0的思想基本上是将整个/content树定义为一个、唯一的子树，以使页面和资产处于同一自动失效域中。 因此我们只会在层级的大树上（在docroot“/”处）。 但这样做会在发布内容时自动使服务器上的所有站点失效，即使在完全不相关的站点上也是如此。 相信我们：从长远来看，这是个坏主意，因为这会严重降低您的整体缓存命中率。 您所能做的就是希望AEM服务器有足够的火力，可以在没有缓存的情况下运行。
+将statfile级别“降低”为0的思想基本上是将整个/content树定义为一个、唯一的子树，以使页面和资产处于同一自动失效域中。 因此我们只会在层级的大树上（在docroot“/”处）。 但这样做会在发布内容时自动使服务器上的所有站点失效，即使在完全不相关的站点上也是如此。 相信我们：从长远来看，这是个坏主意，因为这会严重降低您的整体缓存命中率。 您所能做的就是希望AEM服务器有足够的火力，能够在没有缓存的情况下运行。
 
 稍后您将了解更深入的statfile级别的全部好处。
 
 #### 实施自定义失效代理
 
-无论如何 — 我们需要以某种方式告知Dispatcher，如果“.jpg”或“.png”更改为允许使用新URL重新呈现，则HTML页面将失效。
+无论如何 — 我们需要以某种方式告知Dispatcher，如果“.jpg”或“.png”更改为允许使用新URL重新呈现，则HTML-Pages将失效。
 
 例如，我们在项目中看到的是发布系统上的特殊复制代理，每当发布某个站点的图像时，这些代理都会发送该站点的失效请求。
 
@@ -742,9 +742,9 @@ Invalidate-path /content/mysite/dummy
 …
 ```
 
-每个请求都将绕过Dispatcher，这会导致Publish实例上出现负载。 更糟糕的是，在Dispatcher上创建一个相应的文件。
+每个请求都将绕过Dispatcher，从而导致发布实例上出现负载。 更糟糕的是，在Dispatcher上创建一个相应的文件。
 
-因此……您必须检查图像的jcr：lastModified日期并返回404（如果不是预期日期），而不是仅使用指纹作为简单的缓存杀手。 在Publish系统上这需要一些时间和CPU周期……这是您首先希望防止的。
+因此……您必须检查图像的jcr:lastModified日期并返回404（如果不是预期日期），而不是仅使用指纹作为简单的缓存杀手。 在Publish系统上，这需要一些时间和CPU周期……这是您首先要防止的。
 
 #### 高频发布中URL指纹的注意事项
 
@@ -752,11 +752,11 @@ Invalidate-path /content/mysite/dummy
 
 [版本化Clientlibs](https://adobe-consulting-services.github.io/acs-aem-commons/features/versioned-clientlibs/index.html)是使用此方法的模块。
 
-但在这里，您可能会面临另一个警告：具有URL指纹：它会将URL与内容相关联。 在不更改URL（亦即，更新修改日期）的情况下无法更改内容。 这才是指纹设计之初的初衷。 但请考虑一下，您正在推出一个新版本，其中包含新的CSS和JS文件，因此是带有新指纹的新URL。 您的所有HTML页仍引用旧的指纹URL。 因此，要使新版本始终如一地工作，您需要一次使所有HTML页面失效，以强制使用对新指纹文件的引用重新呈现。 如果您有多个网站依赖相同的库，则可能需要大量重新渲染 — 在这种情况下，无法利用`statfiles`。 因此，请准备好在推出后看到Publish系统上的负载峰值。 您可能会考虑采用带有缓存预热的蓝绿部署，或者在Dispatcher前面使用基于TTL的缓存……这种可能性是无限的。
+但在这里，您可能会面临另一个警告：具有URL指纹：它会将URL与内容相关联。 在不更改URL（亦即，更新修改日期）的情况下无法更改内容。 这才是指纹设计之初的初衷。 但请考虑一下，您正在推出一个新版本，其中包含新的CSS和JS文件，因此是带有新指纹的新URL。 您的所有HTML页面仍具有对旧指纹URL的引用。 因此，要使新版本始终如一地工作，您需要一次使所有HTML页面失效，以强制使用对新指纹文件的引用重新渲染。 如果您有多个网站依赖相同的库，则可能需要大量重新渲染 — 在这种情况下，无法利用`statfiles`。 因此，请准备好在推出后看到发布系统上的负载峰值。 您可能会考虑采用带有缓存预热的蓝绿部署，或者在Dispatcher前面使用基于TTL的缓存……这种可能性是无限的。
 
 #### 短暂休息
 
-这要考虑的细节太多了，对吧？ 而且它很难被理解、测试和调试。 而这一切都是为了一个看似优雅的解决方案。 不可否认，它很优雅，但只是从仅仅AEM的角度来看。 与Dispatcher一起，它变得令人讨厌。
+这要考虑的细节太多了，对吧？ 而且它很难被理解、测试和调试。 而这一切都是为了一个看似优雅的解决方案。 不可否认，它相当优雅，但只是从AEM的角度来看。 与Dispatcher一起，它变得令人讨厌。
 
 但是，它并不能解决一个基本警告，如果某个图像在不同页面上多次使用，则会将这些图像缓存在这些页面下。 这里没有多少缓存协同效应。
 
@@ -776,13 +776,13 @@ AEM对依赖关系也知之甚少。 它缺乏适当的语义或“依赖关系�
 
 AEM了解其中一些引用。 当您尝试删除或移动引用的页面或资产时，它使用此知识来警告您。 它通过在删除资产时查询内部搜索来实现这一点。 内容引用的确具有一个非常特殊的形式。 它们是以“/content”开头的路径表达式。 因此，它们可以轻松进行全文索引，并在必要时进行查询。
 
-在我们的示例中，我们将需要Publish系统上的自定义复制代理，该代理将在特定路径发生更改时触发搜索该路径。
+在我们的示例中，我们需要在Publish系统上使用自定义的复制代理，当路径发生更改时，该代理将触发搜索特定路径。
 
 比如说
 
 `/content/dam/flower.jpg`
 
-已在Publish上发生更改。 代理将触发对“/content/dam/flower.jpg”的搜索，并查找引用这些图像的所有页面。
+在发布时已更改。 代理将触发对“/content/dam/flower.jpg”的搜索，并查找引用这些图像的所有页面。
 
 然后，它可以向Dispatcher发出大量失效请求。 每个包含资产的页面对应一个资产。
 
@@ -806,7 +806,7 @@ AEM了解其中一些引用。 当您尝试删除或移动引用的页面或资�
 
 <br> 
 
-我们使用资源原始资源路径来呈现数据。 如果需要按原样呈现原始图像，则可以为资源使用AEM默认呈现器。
+我们使用资源原始资源路径来呈现数据。 如果需要按原样呈现原始图像，我们可以为资源使用AEM默认呈现器。
 
 如果需要对特定组件进行一些特殊处理，我们将在路径上注册一个专用的servlet，并选择器代表组件进行转换。 我们在这里用“.respi”做到了模范。 选择器。 明智的做法是跟踪全局URL空间中使用的选择器名称（如`/content/dam`），并遵循良好的命名惯例以避免命名冲突。
 
@@ -910,7 +910,7 @@ respi2组件是一个显示响应图像的组件 — 与respi组件一样。 不
 
 #### 使用选择器时过滤无效请求
 
-减少选择器的数量是一个良好的开端。 根据经验，您应始终将有效参数的数量限制为绝对最小值。 如果您非常聪明地这样做，您甚至可以使用AEM外部的Web应用程序防火墙使用一组静态的过滤器，而不需要深入了解底层AEM系统来保护您的系统：
+减少选择器的数量是一个良好的开端。 根据经验，您应始终将有效参数的数量限制为绝对最小值。 如果您非常聪明地执行这项操作，甚至可以在不深入了解底层AEM系统的情况下，使用AEM外部的静态筛选器集来利用Web应用程序防火墙来保护您的系统：
 
 ```
 Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
@@ -974,11 +974,11 @@ AEM正在告诉浏览器。 “我没有`q-41`。 但您好，您可以问我有
 
 #### Web应用程序防火墙
 
-如果您拥有专为Web安全而设计的Web应用程序防火墙设备或“WAF”，则绝对应该利用这些功能。 但您可能会发现，WAF是由对您的内容应用程序了解有限的人操作的，他们或者过滤有效请求，或者让过多有害请求通过。 您可能会发现，WAF操作人员被分配到不同的部门，具有不同的轮班和发布时间表，与直接团队成员的沟通可能不像直接团队成员那样紧密，并且您并不总是及时得到更改，这意味着最终您的开发和内容速度会受到影响。
+如果您拥有专为Web安全而设计的Web应用程序防火墙设备或“WAF”，则绝对应该利用这些功能。 但是您可能会发现，WAF是由对您的内容应用程序了解有限的人运营的，他们或者会过滤有效的请求，或者会允许传递过多有害请求。 您可能会发现，WAF的运营人员被分配到不同的部门，他们的轮班和发布时间表不尽相同，与直接队友的沟通可能不像您自己那么紧密，您也不总是能够及时得到变化，这意味着最终您的开发和内容速度会受到影响。
 
 你最终可能会得到一些一般规定，甚至一个阻止列表，你的直觉上说，这个规则可能会被收紧。
 
-#### Dispatcher和Publish筛选
+#### Dispatcher — 和发布筛选
 
 下一步是在Apache核心和/或Dispatcher中添加URL过滤规则。
 
@@ -986,7 +986,7 @@ AEM正在告诉浏览器。 “我没有`q-41`。 但您好，您可以问我有
 
 #### 监控和调试
 
-在实践中，您将在每个级别上获得一些安全性。 但请确保您有办法查明在哪个级别过滤掉请求。 确保您可以直接访问Publish系统、Dispatcher和WAF上的日志文件，以找出链中的哪个过滤器阻止了请求。
+在实践中，您将在每个级别上获得一些安全性。 但请确保您有办法查明在哪个级别过滤掉请求。 确保您可以直接访问发布系统、Dispatcher和WAF上的日志文件，以找出链中的哪个过滤器阻止了请求。
 
 ### 选择器和选择器数量激增
 
@@ -1088,7 +1088,7 @@ statfile (`.stat`)的上次修改日期是在Dispatcher上收到来自AEM的失�
 
 当我们引入自动失效和statfile时，我们说，*所有*&#x200B;文件在出现任何更改时都被视为无效，并且所有文件无论如何都是相互依赖的。
 
-这不太准确。 通常，共享公共主导航根目录的所有文件都是相互依赖的。 但一个AEM实例可以托管多个网站 — *个独立的*&#x200B;网站。 不共享通用导航 — 事实上，不共享任何内容。
+这不太准确。 通常，共享公共主导航根目录的所有文件都是相互依赖的。 但一个AEM实例可以托管多个网站 — *独立*&#x200B;网站。 不共享通用导航 — 事实上，不共享任何内容。
 
 使站点B失效不是因为站点A发生了更改而是一种浪费吗？ 是的，是的。 而且也不一定非要如此。
 
@@ -1108,7 +1108,7 @@ Dispatcher提供了一种将网站彼此分离的简单方法： `statfiles-leve
 
 现在，如果您发布 — 从而使`/content/site-b/home`或低于`/content/site-b`的任何其他资源失效，`.stat`文件将在`/content/site-b/`创建。
 
-`/content/site-a/`下的内容不受影响。 此内容将与位于`/content/site-a/`的`.stat`文件进行比较。 我们创建了两个单独的失效域。
+`/content/site-a/`下的内容不受影响。 此内容将与位于`.stat`的`/content/site-a/`文件进行比较。 我们创建了两个单独的失效域。
 
 ![statfileslevel“1”创建不同的失效域](assets/chapter-1/statfiles-level-1.png)
 
@@ -1145,7 +1145,7 @@ statfileslevel平均应用于设置中的所有站点。 因此，有必要使�
   ..
 ```
 
-前者需要&#x200B;_2_&#x200B;的`statfileslevel`，而后者需要&#x200B;_3_。
+前者需要`statfileslevel`2 _的_，而后者需要&#x200B;_3_。
 
 情况不理想。 如果将其设置为&#x200B;_3_，则自动失效在子分支`/home`、`/products`和`/about`之间的较小站点中不起作用。
 
@@ -1167,7 +1167,7 @@ statfileslevel平均应用于设置中的所有站点。 因此，有必要使�
 
 现在哪个级别合适？ 这取决于您在站点之间的依赖关系数量。 为呈现页面而解析的包含项被视为“硬依赖项”。 在本指南开头引入&#x200B;_Teaser_&#x200B;组件时，我们演示了此&#x200B;_包含_。
 
-_超链接_&#x200B;是较软的依赖关系形式。 您很有可能会在一个网站内添加超链接……而且您在网站之间添加链接的可能性也不大。 简单的超链接通常不会在网站之间创建依赖关系。 只需考虑一下您从网站设置的facebook外部链接……如果在facebook上发生任何更改，您无需渲染页面，反之亦然，对吗？
+_超链接_&#x200B;是较软的依赖关系形式。 您很有可能会在一个网站内添加超链接……而且您在网站之间添加链接的可能性也不大。 简单的超链接通常不会在网站之间创建依赖关系。 只要想一想您从网站设置到Facebook的外部链接……如果facebook上发生任何变化，您就不必渲染页面，反之亦然，对吗？
 
 从链接的资源（如导航标题）读取内容时，会发生依赖关系。 如果您只依赖本地输入的导航标题，而不从目标页面绘制它们（与使用外部链接时一样），则可以避免此类依赖关系。
 
@@ -1208,7 +1208,7 @@ www.shiny-brand.de
 
 Google等搜索引擎认为不同URL上的相同内容具有“欺骗性”。 用户可能希望通过创建提供相同内容的场来尝试获得更高的排名或更频繁地被列出。 搜索引擎会识别这些尝试，并实际对仅回收内容的页面进行低排名。
 
-您可以通过在每个页面的标题部分为每个相关页面设置`<link rel="alternate">`标记来防止排名下降，防止您实际上拥有多个具有相同内容的页面，以及防止您不尝试“游戏”系统(请参阅[“告诉Google您的页面的本地化版本”](https://support.google.com/webmasters/answer/189077?hl=en))：
+您可以通过在每个页面的标题部分为每个相关页面设置[标记来防止排名下降，防止您实际上拥有多个具有相同内容的页面，以及防止您不尝试“游戏”系统(请参阅](https://support.google.com/webmasters/answer/189077?hl=en)“告诉Google您的页面的本地化版本”`<link rel="alternate">`)：
 
 ```
 # URL: www.shiny-brand.fr/fr/home/produits.html
@@ -1298,15 +1298,15 @@ Google等搜索引擎认为不同URL上的相同内容具有“欺骗性”。 �
 
 ### 更正失效时间
 
-如果现成安装AEM Author和Publish，则拓扑结构会有点奇怪。 作者将内容发送到Publish系统，同时将失效请求发送到Dispatcher。 由于Publish系统和Dispatcher都通过队列与创作环境脱钩，所以时间安排可能会有点不幸。 在Publish系统上更新内容之前，Dispatcher可以接收来自作者的失效请求。
+如果安装现成的AEM Author和Publish ，则拓扑结构会有点奇怪。 作者将内容发送到发布系统，同时将失效请求发送到Dispatcher。 由于发布系统和Dispatcher都是通过队列与创作环境分离的，所以时间安排可能会有点不幸。 在发布系统上更新内容之前，Dispatcher可以接收来自作者的失效请求。
 
 如果客户在此期间请求该内容，Dispatcher将请求和存储过时的内容。
 
-更可靠的设置是在收到Publish系统&#x200B;_的内容后_&#x200B;从AEM系统发送失效请求。 文章“[使发布实例中的Dispatcher缓存失效](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)”描述了详细信息。
+更可靠的设置是在发布系统&#x200B;_收到内容_&#x200B;后从其发送失效请求。 文章“[使发布实例中的Dispatcher缓存失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)”描述了详细信息。
 
 **引用**
 
-[helpx.adobe.com — 使发布实例中的Dispatcher缓存失效](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)
+[helpx.adobe.com — 使发布实例中的Dispatcher缓存失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)
 
 ### HTTP标头和标头缓存
 
@@ -1314,9 +1314,9 @@ Google等搜索引擎认为不同URL上的相同内容具有“欺骗性”。 �
 
 通常，您会使用资源路径和后缀可能派生的信息，开始将缺少的标头重新应用到具有`mod_headers`的Apache Server中的资源。 但这并不总是足够的。
 
-特别令人恼火的是，即使使用Dispatcher，对浏览器的前&#x200B;_个未缓存_&#x200B;响应也来自具有完整标题的Publish系统，而后续响应则由具有有限标题集的Dispatcher生成。
+特别令人恼火的是，即使使用Dispatcher，对浏览器的前&#x200B;_个未缓存_&#x200B;响应也来自具有完整标题的Publish系统，而后续响应则由Dispatcher生成，具有有限的标题集。
 
-从Dispatcher 4.1.11开始，Dispatcher可以存储Publish系统生成的标头。
+从Dispatcher 4.1.11开始，Dispatcher可以存储由发布系统生成的标头。
 
 这可让您在Dispatcher中消除标题逻辑的重复，并释放HTTP和AEM的完整表达能力。
 
@@ -1326,7 +1326,7 @@ Google等搜索引擎认为不同URL上的相同内容具有“欺骗性”。 �
 
 ### 单个缓存异常
 
-一般情况下，您可能希望缓存所有页面和图像，但在某些情况下会例外。 例如，您要缓存PNG图像，但不缓存PNG图像以显示验证码（假设在每个请求上发生更改）。 Dispatcher可能不会将验证码识别为验证码……但AEM确实会识别。 它可以要求Dispatcher不要缓存该请求，方法是随响应发送相应的标头：
+一般情况下，您可能希望缓存所有页面和图像，但在某些情况下会例外。 例如，您要缓存PNG图像，但不缓存PNG图像以显示验证码（假设在每个请求上发生更改）。 Dispatcher可能不会将验证码识别为验证码……但AEM确实如此。 它可以要求Dispatcher不要缓存该请求，方法是随响应发送相应的标头：
 
 ```plain
   response.setHeader("Dispatcher", "no-cache");
@@ -1350,7 +1350,7 @@ Cache-Control和Pragma是正式的HTTP标头，它们会传播到上层缓存层
 
 您可以通过在资源中设置到期日期，帮助浏览器决定何时向服务器请求文件的新版本。
 
-通常，您可以通过使用Apache的`mod_expires`或存储来自AEM的Cache-Control和Expires标头来静态执行此操作（如果您需要更多单独的控件）。
+通常，您可以通过使用Apache的`mod_expires`或存储来自AEM的Cache-Control和Expires标头来静态执行此操作（如果您需要更单个的控制）。
 
 浏览器中缓存的文档可以具有三个最新级别。
 
@@ -1376,7 +1376,7 @@ _200 — 以下是HTTP标头中的较新版本_，以及HTTP正文中的实际�
 
 我们前面解释道，当Dispatcher生成`Last-Modified`日期时，在不同的请求之间可能会有所不同，因为缓存的文件（以及日期）是在浏览器请求文件时生成的。 另一种方法是使用“电子标签”，即标识实际内容的数字（例如，通过生成哈希代码），而不是日期。
 
-_ACS Commons包_&#x200B;中的“[Etag支持](https://adobe-consulting-services.github.io/acs-aem-commons/features/etag/index.html)”使用此方法。 但这需要付出代价：由于电子标签必须以标头形式发送，但在计算哈希代码时要求完全读取响应，因此必须在主内存中完全缓冲响应，然后才能投放响应。 当网站更有可能具有未缓存的资源时，这会对延迟产生负面影响，当然，您需要关注AEM系统占用的内存。
+[ACS Commons包](https://adobe-consulting-services.github.io/acs-aem-commons/features/etag/index.html)中的“_Etag支持_”使用此方法。 但这需要付出代价：由于电子标签必须以标头形式发送，但在计算哈希代码时要求完全读取响应，因此必须在主内存中完全缓冲响应，然后才能投放响应。 当网站更有可能具有未缓存的资源时，这会对延迟产生负面影响，当然，您需要监控AEM系统占用的内存。
 
 如果您使用的是URL指纹，则可以设置很长的到期日期。 您可以在浏览器中永久缓存指纹资源。 新版本使用新URL标记，旧版本无需更新。
 
@@ -1426,7 +1426,7 @@ _ACS Commons包_&#x200B;中的“[Etag支持](https://adobe-consulting-services.
 
 我们已经看到一个项目，每个域都有单独的圆点。 调试和维护这些设备是一个噩梦 — 实际上，我们从未看到它完美运行。
 
-我们可以通过重组缓存来解决这些问题。 所有域只有一个docroot，并且当服务器上的所有文件都以`/content`开头时，可以按1:1处理失效请求。
+我们可以通过重组缓存来解决这些问题。 所有域只有一个docroot，由于服务器上的所有文件都以:1开头，因此可以处理1`/content`的失效请求。
 
 截断部分也很容易。  由于`/etc/map`中的相应配置，AEM生成了截断的链接。
 
@@ -1454,15 +1454,15 @@ _ACS Commons包_&#x200B;中的“[Etag支持](https://adobe-consulting-services.
 
 * [apache.org — 修改重写](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
 
-* [helpx.adobe.com — 资源映射](https://helpx.adobe.com/cn/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
+* [helpx.adobe.com — 资源映射](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
 
 ### 错误处理
 
-在AEM类中，您将了解如何在Sling中编写错误处理程序。 这与编写常规模板没有太大区别。 您只需使用JSP或HTL编写模板即可，对吗？
+在AEM课程中，您将了解如何在Sling中为错误处理程序编程。 这与编写常规模板没有太大区别。 您只需使用JSP或HTL编写模板即可，对吗？
 
-是的，但这只是AEM部分。 请记住 — Dispatcher不缓存`404 – not found`或`500 – internal server error`响应。
+是的，但这只是AEM的部分。 请记住 — Dispatcher不缓存`404 – not found`或`500 – internal server error`响应。
 
-如果您在每个（失败的）请求上动态呈现这些页面，则Publish系统上会存在不必要的高负载。
+如果您在每个（失败的）请求上动态呈现这些页面，则会在发布系统上产生不必要的高负载。
 
 我们发现有用的地方在于，在发生错误时不呈现完整的错误页面，而只呈现该页面的超简化和小版本，甚至静态版本，没有任何修饰或逻辑。
 
@@ -1479,7 +1479,7 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 首先，`error-404.html`始终是同一页面。 因此，不存在诸如“您对&quot;_product_&quot;的搜索未产生结果”之类的单个消息。 我们可以轻松地接受这一点。
 
-第二……嗯，如果我们看到内部服务器错误 — 或者更糟的是，我们遇到AEM系统的中断，则无法要求AEM呈现错误页面，对吗？ 在`ErrorDocument`指令中定义的必需后续请求也将失败。 我们通过运行cron-job解决了此问题，该作业将定期通过`wget`从其定义的位置提取错误页面，并将其存储到`ErrorDocuments`指令中定义的静态文件位置。
+第二……嗯，如果我们看到内部服务器错误 — 或者更糟的是，我们遇到AEM系统中断，则无法要求AEM呈现错误页面，对吗？ 在`ErrorDocument`指令中定义的必需后续请求也将失败。 我们通过运行cron-job解决了此问题，该作业将定期通过`wget`从其定义的位置提取错误页面，并将其存储到`ErrorDocuments`指令中定义的静态文件位置。
 
 **引用**
 
@@ -1489,9 +1489,9 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 默认情况下，Dispatcher在交付资源时不检查权限。 实施过程与此类似，是出于某种目的，目的是为了加快您的公共网站的运行速度。 如果您希望通过登录保护某些资源，则基本上有三个选项，
 
-1. 在请求点击缓存之前Protect资源 — 即，由Dispatcher前面的SSO（单点登录）网关访问，或作为Apache服务器中的模块访问
+1. 在请求点击缓存之前保护资源 — 即，由Dispatcher前面的SSO（单点登录）网关或作为Apache服务器中的模块
 
-2. 不缓存敏感资源，因此始终从Publish系统实时提供这些资源。
+2. 不缓存敏感资源，因此始终从发布系统实时提供这些资源。
 
 3. 在Dispatcher中使用权限敏感型缓存
 
@@ -1504,13 +1504,13 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 >此模式需要&#x200B;_截取_&#x200B;每个请求并执行实际&#x200B;_授权_&#x200B;的&#x200B;_网关_ — 向Dispatcher授予或拒绝请求。 如果您的SSO系统是&#x200B;_身份验证器_，该验证器仅建立您必须实施选项3的用户的身份。 如果您在SSO系统手册中读到“SAML”或“OAauth”等术语，则强烈表明您必须实施选项3。
 
 
-**选项2**。 “不缓存”通常不是个好主意。 如果这样做，请确保排除的流量和敏感资源数很小。 或者，确保在Publish系统中安装一些内存缓存，以便Publish系统能够处理由此产生的负载 — 有关本系列第三部分的更多信息。
+**选项2**。 “不缓存”通常不是个好主意。 如果这样做，请确保排除的流量和敏感资源数很小。 或者，确保在发布系统中安装一些内存缓存，确保发布系统能够处理由此产生的负载 — 有关本系列第三部分的更多信息。
 
-**选项3**。 “权限敏感型缓存”是一种有趣的方法。 Dispatcher正在缓存资源，但在交付该资源之前，会询问AEM系统是否可以这样做。 这会创建从Dispatcher到Publish的额外请求，但通常情况下，如果已缓存页面，Publish系统无需重新渲染页面。 但是，此方法需要一些自定义实施。 在文章[权限敏感型缓存](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/permissions-cache.html)中查找详细信息。
+**选项3**。 “权限敏感型缓存”是一种有趣的方法。 Dispatcher正在缓存资源，但在交付之前，它会询问AEM系统是否可以使用。 这会创建从Dispatcher到发布的额外请求，但通常情况下，如果已经缓存了页面，发布系统无需重新渲染页面。 但是，此方法需要一些自定义实施。 在文章[权限敏感型缓存](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)中查找详细信息。
 
 **引用**
 
-* [helpx.adobe.com — 权限敏感型缓存](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/permissions-cache.html)
+* [helpx.adobe.com — 权限敏感型缓存](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)
 
 ### 设置宽限期
 
@@ -1528,7 +1528,7 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 您可以将Dispatcher设置为使用`grace period`自动失效。 这会在`statfiles`修改日期内部添加一些额外时间。
 
-假设您的`statfile`的修改时间为今天12:00，并且您的`gracePeriod`设置为2分钟。 然后，所有自动失效的文件在12:01和12:02被视为有效。 它们在12:02后重新呈现。
+假设您的`statfile`的修改时间为今天12:00，并且您的`gracePeriod`设置为2分钟。 然后，所有自动失效的文件在12:01和12:02被视为有效。 它们在12:02之后重新呈现。
 
 引用配置建议的`gracePeriod`为两分钟，理由充分。 你也许会想，“两分钟？ 这几乎算不了什么。 我可以轻松地等待10分钟让内容显示……”  因此，您可能希望设置更长的时间（假设10分钟后至少会显示您的内容）。
 
@@ -1540,13 +1540,13 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 假设您正在运营一个媒体网站，并且您的编辑人员每5分钟会定期提供一次内容更新。 假定您将gracePeriod设置为5分钟。
 
-我们从12:00开始一个简单的示例。
+我们将从12:00处的一个快速示例开始。
 
 12:00 - Statfile设置为12:00。 在12:05之前，所有缓存的文件都被视为有效。
 
 12:01 — 发生失效。 这将光栅时间延长到12:06
 
-12:05 — 另一位编辑发表了他的文章 — 将宽限期延长至12:10。
+12:05 — 另一编辑发布了他的文章 — 将宽限期延长到另一个gracePeriod 12:10。
 
 等等……内容永远不会失效。 在&#x200B;*内，每次*&#x200B;失效都会有效地延长宽限期。 `gracePeriod`旨在承受失效风暴……但您最终必须外出下雨……因此，请尽量缩短`gracePeriod`以防止永远藏在庇护所中。
 
@@ -1556,7 +1556,7 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 如果定期复制间隔短于`gracePeriod`，则`gracePeriod`可能会变得不可预测地长。
 
-另一个想法是：仅在固定的时间间隔内失效。 介于两者之间的时间始终意味着提供过时的内容。 最终将会发生失效，但许多失效信息会被收集到一起“批量”失效，这样Dispatcher就有机会同时提供一些缓存的内容，并为Publish系统提供一些喘息空间。
+另一个想法是：仅在固定的时间间隔内失效。 介于两者之间的时间始终意味着提供过时的内容。 最终将会发生失效，但许多失效信息会被收集到一起“批量”失效，这样Dispatcher就有机会同时提供一些缓存的内容，并给发布系统一些喘息的机会。
 
 实施将如下所示：
 
@@ -1570,7 +1570,7 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 <br> 
 
-之后，在失效请求到下一轮30秒时隙之间发生的缓存命中被视为过时；Publish上存在更新，但Dispatcher仍提供旧内容。
+之后，在失效请求到下一轮30秒时隙之间发生的缓存命中将被视为过时；发布时发生了更新，但Dispatcher仍会提供旧内容。
 
 这种做法有助于确定较长的宽限期，而不必担心随后的请求会无限期地延长宽限期。 正如我们之前所说，这只是个想法，我们没有机会去测试。
 
@@ -1588,11 +1588,11 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 随后，由于这些页面非常受欢迎，因此出现了来自不同浏览器的新传入请求。 让我们以主页为例。
 
-由于缓存现在无效，因此同时传入的所有主页请求都将转发到Publish系统，从而产生高负载。
+由于缓存现在无效，所有同时传入的主页请求都将转发到发布系统，从而产生高负载。
 
-![对空缓存中的相同资源的并行请求：请求将转发到Publish](assets/chapter-1/parallel-requests.png)
+![对空缓存上的相同资源的并行请求：请求被转发到发布](assets/chapter-1/parallel-requests.png)
 
-*对空缓存中的相同资源的并行请求：请求将转发到Publish*
+*对空缓存上的相同资源的并行请求：请求被转发到发布*
 
 通过自动重新获取，您可以在一定程度上缓解这种情况。 在自动失效后，大多数失效页面仍会以物理方式存储在Dispatcher中。 它们仅&#x200B;_被视为_&#x200B;过时。 _自动重新获取_&#x200B;意味着，在向发布系统启动&#x200B;_一个_&#x200B;请求以重新获取过时内容时，您仍会为这些过时页面提供几秒钟的时间：
 
@@ -1604,7 +1604,7 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 要启用重新获取，您必须告知Dispatcher在自动失效后要重新获取哪些资源。 请记住，您激活的任何页面也会自动使所有其他页面（包括您的受欢迎页面）失效。
 
-重新获取实际上意味着在每个(！)中通知Dispatcher 失效请求，以便重新获取最受欢迎的摘要，以及最受欢迎的摘要。
+重新获取实际上意味着在每个(！)失效请求中告知Dispatcher您希望重新获取最受欢迎的无效请求，以及最受欢迎的无效请求。
 
 这可以通过在失效请求正文中放置资源URL（实际URL，而不仅仅是路径）的列表来实现：
 
@@ -1623,25 +1623,25 @@ Content-Length: 207
 /content/my-brand/products/product-2.html
 ```
 
-当Dispatcher看到此类请求时，它将像往常一样触发自动失效，并立即将请求排入队列，以从Publish系统重新获取新内容。
+当Dispatcher看到此类请求时，它将像往常一样触发自动失效，并立即将请求排入队列，以从发布系统重新获取新内容。
 
 由于我们现在使用的是请求正文，因此还需要根据HTTP标准设置content-type和content-length。
 
 Dispatcher还在内部标记相应的URL，以便知道可以直接交付这些资源，即使这些资源因自动失效而被视为无效。
 
-所有列出的URL都是逐一请求的。 因此，您无需担心在Publish系统上产生过高的负载。 但您也不希望在该列表中放置过多URL。 最终，需要在限定时间内最终处理队列，以免在太长时间内提供陈旧内容。 只需包含您最常访问的10个页面即可。
+所有列出的URL都是逐一请求的。 因此，您无需担心在发布系统上创建太高的负载。 但您也不希望在该列表中放置过多URL。 最终，需要在限定时间内最终处理队列，以免在太长时间内提供陈旧内容。 只需包含您最常访问的10个页面即可。
 
 如果您查看Dispatcher的缓存目录，将会看到标有时间戳的临时文件。 这些是当前正在后台加载的文件。
 
 **引用**
 
-[helpx.adobe.com — 使从AEM中缓存的页面失效](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/page-invalidate.html)
+[helpx.adobe.com — 使从AEM中缓存的页面失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
 
-### 屏蔽Publish系统
+### 保护发布系统
 
-Dispatcher通过屏蔽Publish系统使其免受仅用于维护的请求的攻击，从而提供了一点额外的安全性。 例如，您不想向公众公开`/crx/de`或`/system/console` URL。
+Dispatcher通过屏蔽发布系统免受仅用于维护的请求的影响，提供了一定的额外安全性。 例如，您不想向公众公开`/crx/de`或`/system/console` URL。
 
-在系统中安装Web应用程序防火墙(WAF)不会造成任何损害。 但这给您的预算增加了很大数量，而且并非所有项目都能够负担得起，并且（别忘了）运行和维护无线工作流程。
+在系统中安装Web应用程序防火墙(WAF)没有坏处。 但这给您的预算增加了很大数量，而且并非所有项目都能够负担得起，并且（别忘了）运行和维护一个WAF。
 
 我们经常看到Dispatcher配置中的一组Apache重写规则，这些规则阻止访问更易受攻击的资源。
 
@@ -1690,7 +1690,7 @@ Dispatcher通过屏蔽Publish系统使其免受仅用于维护的请求的攻击
 
 [apache.org- sethandler指令](https://httpd.apache.org/docs/2.4/mod/core.html#sethandler)
 
-[helpx.adobe.com — 配置对内容过滤器的访问](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter)
+[helpx.adobe.com — 配置对内容过滤器的访问](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter)
 
 ### 使用正则表达式和Glob进行筛选
 
@@ -1726,7 +1726,7 @@ _通配模式_，相比之下，使用双引号`"`，您只能使用简单占位
 
 `"GET /content/foo/bar.html HTTP/1.1"`
 
-这是您的模式要与之进行比较的字符串。 初学者往往会忘记第一部分，`method`(GET、POST...)。 所以，一个模式
+这是您的模式要与之进行比较的字符串。 初学者往往会忘记第一部分，`method` (GET、POST...)。 所以，一个模式
 
 `/0002  { /glob "/content/\*" /type "allow" }`
 
@@ -1843,13 +1843,13 @@ _通配模式_，相比之下，使用双引号`"`，您只能使用简单占位
 
 **引用**
 
-[helpx.adobe.com — 为glob属性设计模式](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
+[helpx.adobe.com — 为glob属性设计模式](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
 
 ### 协议规范
 
 最后一个提示不是真正的提示，但我们觉得还是值得与您共享。
 
-在大多数情况下，AEM和Dispatcher均可开箱即用。 因此，您不会找到有关失效协议的全面Dispatcher协议规范，从而在上面构建您自己的应用程序。 这些信息是公开的，但分散在若干资源中。
+大多数情况下，AEM和Dispatcher均可开箱即用。 因此，您不会找到有关失效协议的全面Dispatcher协议规范，从而在上面构建您自己的应用程序。 这些信息是公开的，但分散在若干资源中。
 
 我们试图在一定程度上填补这个空白。 以下是失效请求的外观：
 
@@ -1906,18 +1906,18 @@ CQ-Handle: <path-pattern>
 
 ## 其他资源
 
-有关Dispatcher缓存的良好概述和简介： [https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher.html)
+有关Dispatcher缓存的良好概述和简介： [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)
 
-Dispatcher文档及所有指令说明： [https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)
+Dispatcher文档及所有指令说明： [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)
 
-一些常见问题：[https://helpx.adobe.com/cn/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/cn/experience-manager/using/dispatcher-faq.html)
+一些常见问题：[https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html)
 
 关于Dispatcher优化的网络研讨会录像 — 强烈建议：[https://my.adobeconnect.com/p7th2gf8k43?proto=true](https://my.adobeconnect.com/p7th2gf8k43?proto=true)
 
 在2018年Potsdam举行的“内容失效的未充分了解的力量”会议、“adaptTo()”演示文稿[https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html](https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html)
 
-使从AEM中缓存的页面失效： [https://helpx.adobe.com/cn/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/page-invalidate.html)
+使从AEM中缓存的页面失效： [https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
 
 ## 下一步
 
-* [2 — 基础架构模式](chapter-2.md)
+* [2 - 基础设施模式](chapter-2.md)

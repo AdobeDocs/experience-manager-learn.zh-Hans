@@ -1,10 +1,10 @@
 ---
-title: 用于PIM集成的AEM Assets事件
+title: 用于 PIM 集成的 AEM Assets 事件
 description: 了解如何集成AEM Assets和产品信息管理(PIM)系统以进行资源元数据更新。
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 761
@@ -12,14 +12,14 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: ab499385a1df8c4b0ac58b6a382faa29b262e3ba
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1518'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# 用于PIM集成的AEM Assets事件
+# 用于 PIM 集成的 AEM Assets 事件
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 集成的高层流程如下所示：
 
-用于PIM集成的![AEM Assets事件](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
+![用于 PIM 集成的 AEM Assets 事件](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
 
 1. 当完成资源上传并完成所有资源处理活动时，AEM创作服务会触发一个&#x200B;_资源处理已完成_&#x200B;事件。 等待资产处理完成可确保已完成任何现成的处理，例如元数据提取。
 1. 该事件已发送到[Adobe I/O Events](https://developer.adobe.com/events/)服务。
@@ -57,8 +57,8 @@ ht-degree: 0%
 
 高级开发步骤包括：
 
-1. [AEM as a Cloud Service环境的现代化](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
-1. [启用AEM API访问](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
+1. [AEM as a Cloud Service环境的现代化](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
+1. [启用AEM API访问](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
 1. [在Adobe Developer Console (ADC)中创建项目](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
 1. [初始化项目以进行本地开发](./runtime-action.md#initialize-project-for-local-development)
 1. 在ADC中配置项目
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 此操作可通过在AEM项目的`api.yaml`文件中定义配置来完成。 然后，使用Cloud Manager中的配置管道部署`api.yaml`文件。
 
-- 在AEM项目中，从`config`文件夹中找到或创建`api.yaml`文件。
+- 在AEM项目中，从`api.yaml`文件夹中找到或创建`config`文件。
 
   ![查找API YAML](../assets/examples/assets-pim-integration/locate-api-yaml.png)
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 ### 开发运行时操作
 
-要执行元数据检索和更新，请先更新`src/dx-excshell-1/actions/generic`文件夹中自动创建的&#x200B;_通用_&#x200B;操作代码。
+要执行元数据检索和更新，请先更新&#x200B;_文件夹中自动创建的_&#x200B;通用`src/dx-excshell-1/actions/generic`操作代码。
 
 有关完整代码，请参阅附加的[WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip)文件，以下部分突出显示关键文件。
 
@@ -293,7 +293,7 @@ ht-degree: 0%
 
 默认情况下，WKND Sites项目没有用于显示PIM特定元数据（如SKU、供应商名称等）的资源元数据架构。 让我们在AEM实例中创建资源元数据架构并将其应用到资源文件夹。
 
-1. 登录到AEM as a Cloud Service资源实例，并出现在[资源视图](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/assets/authoring/switch-views)中。
+1. 登录到AEM as a Cloud Service资源实例，并出现在[资源视图](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)中。
 
    ![AEM Assets视图](../assets/examples/assets-pim-integration/aem-assets-view.png)
 

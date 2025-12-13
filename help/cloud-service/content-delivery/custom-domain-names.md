@@ -4,7 +4,7 @@ description: 了解如何管理和实施AEM as a Cloud Service托管网站的自
 version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Custom Domain Names
 topic: Architecture, Migration
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 130
@@ -12,10 +12,10 @@ last-substantial-update: 2024-08-09T00:00:00Z
 jira: KT-15946
 thumbnail: KT-15946.jpeg
 exl-id: e11ff38c-e823-4631-a5b0-976c2d11353e
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 1%
+source-wordcount: '594'
+ht-degree: 2%
 
 ---
 
@@ -82,5 +82,5 @@ ht-degree: 1%
 
 现在您已经了解了域名管理流程，可以通过执行以下教程来为AEM as a Cloud Service网站实施自定义域名：
 
-**[使用Adobe管理的CDN的自定义域名](./custom-domain-name-with-adobe-managed-cdn.md)**：在本教程中，您将了解如何使用Adobe管理的CDN **向**&#x200B;AEM as a Cloud Service网站添加自定义域名。
+**[使用Adobe管理的CDN的自定义域名](./custom-domain-name-with-adobe-managed-cdn.md)**：在本教程中，您将了解如何使用Adobe管理的CDN **向**AEM as a Cloud Service网站添加自定义域名。
 **[具有客户管理的CDN的自定义域名](./custom-domain-names-with-customer-managed-cdn.md)**：在本教程中，您将了解如何使用客户管理的CDN **向** AEM as a Cloud Service网站添加自定义域名。

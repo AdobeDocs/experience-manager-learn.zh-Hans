@@ -11,7 +11,7 @@ jira: KT-9359
 exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 68
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 21%
@@ -27,7 +27,7 @@ ht-degree: 21%
 ## 创建自适应表单
 
 基于基本模板和画布3.0主题的简单自适应表单用于创建示例表单。
-可以从此处下载此文章[&#128279;](assets/icons.zip)中使用的图标。
+可以从此处下载此文章[中使用的](assets/icons.zip)图标。
 
 
 ## 设置默认状态的样式

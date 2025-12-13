@@ -4,16 +4,16 @@ description: 了解如何配置跨源资源共享(CORS)以用于AEM GraphQL。
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2024-03-22T00:00:00Z
 duration: 185
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '593'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Manager as a Cloud Service的跨源资源共享(CORS)有助于�
 
 AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 
-| 客户端连接到 | AEM 作者 | AEM 发布 | AEM预览 |
+| 客户端连接到 | AEM 作者 | AEM Publish | AEM预览 |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
 | 需要CORS OSGi配置 | ✔ | ✘ | ✘ |
 
@@ -59,7 +59,7 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 + `supportedheaders`包含`"Authorization"`，因为应授权对AEM作者的请求。
 + `supportscredentials`设置为`true`，因为应授权对AEM作者的请求。
 
-[了解有关CORS OSGi配置的更多信息。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=zh-Hans)
+[了解有关CORS OSGi配置的更多信息。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
 
 以下示例支持在AEM Author上使用AEM GraphQL持久查询。 若要使用客户端定义的GraphQL查询，请在`allowedpaths`和`POST`中将GraphQL终结点URL添加到`supportedmethods`。
 
@@ -100,20 +100,20 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 
 + [在WKND项目中可以找到OSGi配置示例。](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json)
 
-## AEM 发布
+## AEM Publish
 
 在AEM Publish （和Preview）服务上启用CORS与AEM Author服务不同。 AEM Publish服务要求将AEM Dispatcher配置添加到AEM Publish的Dispatcher配置。 AEM发布不使用[OSGi配置](#osgi-configuration)。
 
 在AEM发布上配置CORS时，请确保：
 
-+ 无法通过从AEM Dispatcher项目的`clientheaders.any`文件中删除`Origin`标头（如果之前已添加）将`Origin` HTTP请求标头发送到AEM发布服务。 应从`clientheaders.any`文件中删除任何`Access-Control-`标头，由Dispatcher管理这些标头，而不是AEM发布服务。
++ 无法通过从AEM Dispatcher项目的`Origin`文件中删除`Origin`标头（如果之前已添加）将`clientheaders.any` HTTP请求标头发送到AEM发布服务。 应从`Access-Control-`文件中删除任何`clientheaders.any`标头，由Dispatcher管理这些标头，而不是AEM发布服务。
 + 如果您在AEM Publish服务中启用了任何[CORS OSGi配置](#osgi-configuration)，则必须将其删除并将其配置迁移到下面列出的[Dispatcher vhost配置](#set-cors-headers-in-vhost)。
 
-### Dispatcher配置
+### Dispatcher 配置
 
 必须将AEM Publish (and Preview)服务的Dispatcher配置为支持CORS。
 
-| 客户端连接到 | AEM 作者 | AEM 发布 | AEM预览 |
+| 客户端连接到 | AEM 作者 | AEM Publish | AEM预览 |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
 | 需要Dispatcher CORS配置 | ✘ | ✔ | ✔ |
 

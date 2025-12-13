@@ -4,14 +4,15 @@ description: 了解如何在 AEM as a Cloud Service 中通过流量过滤规则�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18313
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
+exl-id: eee81cd6-9090-45d6-b77f-a266de1d9826
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 100%
 
@@ -59,7 +60,7 @@ data:
           queryParamMatch: ^(?!search$|campaignId$).*$
 ```
 
-- 将更改提交并推送到 Cloud Manager Git 存储库。
+- 将更改内容提交并推送到 Cloud Manager Git 存储库。
 
 - 使用[先前创建的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 配置管道，将更改内容部署至 AEM 环境。
 
@@ -68,4 +69,3 @@ data:
 - 在 AEM 日志（`aemrequest.log`）中，您应能看到请求已被转换为 `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html?search=foo&campaignId=bar`，其中 `otherParam` 已被移除。
 
   ![转换 WKND 请求](../assets/how-to/aemrequest-log-transformation.png)
-

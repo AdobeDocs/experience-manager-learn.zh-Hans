@@ -4,14 +4,15 @@ description: 了解如何在 AEM as a Cloud Service 中通过流量过滤规则�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18312
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
+exl-id: 53cb8996-4944-4137-a979-6cf86b088d42
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 100%
 
@@ -66,7 +67,7 @@ data:
       action: block    
 ```
 
-- 将更改提交并推送到 Cloud Manager Git 存储库。
+- 将更改内容提交并推送到 Cloud Manager Git 存储库。
 
 - 使用[先前创建的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 配置管道，将更改内容部署至 AEM 环境。
 

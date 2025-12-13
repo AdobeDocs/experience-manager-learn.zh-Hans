@@ -4,14 +4,14 @@ description: 了解单页应用程序(SPA) AEM Headless部署的部署注意事�
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
-source-git-commit: 6425188da75f789b0661ec9bfb79624b5704c92b
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '640'
 ht-degree: 5%
@@ -32,7 +32,7 @@ SPA由本机Web资源的集合组成：**HTML、CSS和JavaScript**。 这些资�
 
 1. **云提供商**，如&#x200B;**Azure**&#x200B;或&#x200B;**AWS**。
 
-2. 在公司&#x200B;**数据中心内托管**&#x200B;内部部署&#x200B;**&#x200B;**
+2. 在公司&#x200B;**数据中心内托管**&#x200B;内部部署&#x200B;****
 
 3. **前端托管平台**，如&#x200B;**AWS Amplify**、**Azure App Service**、**Netlify**、**Heroku**、**Vercel**&#x200B;等。
 

@@ -4,7 +4,7 @@ description: 了解如何使用基于用户的身份验证，从使用OAuth Web�
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Intermediate
 doc-type: Tutorial
 jira: KT-16718
@@ -12,7 +12,7 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '2262'
 ht-degree: 0%
@@ -49,7 +49,7 @@ WKND PIM应用程序是一个示例Web应用程序，旨在管理存储在AEM as
 
 Adobe Developer Console (ADC)项目配置为使用OAuth Web应用程序身份验证访问Assets创作API。 它向WKND-PIM Web应用提供了必要的&#x200B;_client_id_&#x200B;和&#x200B;_client_secret_，以启动&#x200B;_authorization_code_&#x200B;授权流。
 
->[!VIDEO](https://video.tv.adobe.com/v/3442767?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 
 下图说明了WKND-PIM Web应用程序&#x200B;_获取用户特定的访问令牌以与Assets创作API交互的功能流程_。
@@ -497,11 +497,11 @@ function getTransformedMetadata(metadata) {
 
 默认情况下，WKND Sites项目没有显示产品属性所需的资产元数据架构。 让我们在AEM实例中创建资源元数据架构并将其应用到资源文件夹。
 
-1. 登录到AEM as a Cloud Service资源实例。 使用[资产视图](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/assets/authoring/switch-views)导航到`/content/dam/wknd-shared/en`文件夹。
+1. 登录到AEM as a Cloud Service资源实例。 使用[资产视图](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)导航到`/content/dam/wknd-shared/en`文件夹。
 
    ![导航到文件夹](../assets/web-app/navigate-to-folder.png)
 
-1. 创建&#x200B;**PIM**，并在其中创建&#x200B;**Camping**&#x200B;文件夹，然后在&#x200B;**Camping**&#x200B;文件夹中上传[示例图像](../assets/web-app/camping-gear-imgs.zip)。
+1. 创建&#x200B;**PIM**，并在其中创建&#x200B;**Camping**&#x200B;文件夹，然后在[Camping](../assets/web-app/camping-gear-imgs.zip)文件夹中上传&#x200B;**示例图像**。
 
    ![PIM文件夹](../assets/web-app/pim-folder.png)
 
@@ -577,7 +577,7 @@ function getTransformedMetadata(metadata) {
    EXPRESS_SESSION_SECRET=1234554321
    ```
 
-   `AEM_ASSET_IDS`是&#x200B;**Camping**&#x200B;文件夹中已上传图像的`jcr:uuid`属性值。 有关更多详细信息，请参阅此[部分](./invoke-api-using-oauth-s2s.md#review-the-api)。
+   `AEM_ASSET_IDS`是`jcr:uuid`Camping **文件夹中已上传图像的**&#x200B;属性值。 有关更多详细信息，请参阅此[部分](./invoke-api-using-oauth-s2s.md#review-the-api)。
 
 1. 打开终端并导航到提取的文件夹。 使用以下命令安装所需的依赖项。
 

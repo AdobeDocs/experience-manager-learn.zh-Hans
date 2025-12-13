@@ -9,9 +9,9 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '854'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 通过我们的&#x200B;[**实时演示**](https://landing.adobe.com/zh-Hans/na/dynamic-media/ctir-2755/live-demos.html)来探索Adobe Dynamic Media的可能性，从而让前沿解决方案栩栩如生。 了解&#x200B;[**Dynamic Assets**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/dynamic-assets.html)如何简化工作流和提升内容管理，并发现能够在每个渠道中吸引受众的&#x200B;[**交互式体验**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/interactive-experiences.html)。 [了解Dynamic Media如何转变您的内容策略](https://landing.adobe.com/zh-Hans/na/dynamic-media/ctir-2755/live-demos.html)！
 
-## Dynamic Media概述
+## Dynamic Media 概述
 
->[!VIDEO](https://video.tv.adobe.com/v/34932?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ## 与AEM Sites一起使用
 
->[!VIDEO](https://video.tv.adobe.com/v/34936?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ## 构建混合媒体收藏集
 
->[!VIDEO](https://video.tv.adobe.com/v/34942?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 ## 图像预设
 
->[!VIDEO](https://video.tv.adobe.com/v/34499?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
 此视频介绍如何创建图像预设，以及什么是图像预设，它是一系列图像服务器参数的简写形式，这些参数会在URL请求时对图像进行操作。 了解扩展和编辑图像预设的有用技术。
 
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 ## 高级URL修饰符
 
->[!VIDEO](https://video.tv.adobe.com/v/34493?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
 此视频介绍如何超越调整图像大小功能，利用源文件本身的功能（背景透明度、内置剪切路径以及作为变量裁剪和文本）以及Dynamic Media的URL修饰符。
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 ## JPEG文件大小管理
 
->[!VIDEO](https://video.tv.adobe.com/v/35194?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
 
 >[!NOTE]
@@ -107,7 +107,7 @@ ht-degree: 0%
 
 ## 隐藏字幕
 
->[!VIDEO](https://video.tv.adobe.com/v/34311?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 通过附加复制URL以指向其他隐藏式字幕文件文档（一个web.VTT侧边栏文件，其中包含任何视频的CC信息），轻松地将隐藏式字幕添加到Dynamic Media视频中。
 
@@ -115,4 +115,8 @@ ht-degree: 0%
 
 本视频说明为什么锐化图像对于保持图像保真度至关重要，以及如何使用高级设置制作完美图像。
 
+<!--
+This link is broken
+
 >[!VIDEO](https://demos-pub.assetsadobe.com/etc/dam/viewers/s7viewers/html5/VideoViewer.html?asset=%2Fcontent%2Fdam%2Fdm-public-facing-upgrade-portal-video%2F04_DynamicImagery_AdvancedSettings_071917_BH.mp4&config=/etc/dam/presets/viewer/Video_social&serverUrl=https%3A%2F%2Fadobedemo62-h.assetsadobe.com%2Fis%2Fimage%2F&contenturl=%2F&config2=/etc/dam/presets/analytics&videoserverurl=https://gateway-na.assetsadobe.com/DMGateway/public/demoCo&posterimage=/content/dam/dm-public-facing-upgrade-portal-video/04_DynamicImagery_AdvancedSettings_071917_BH.mp4)
+-->

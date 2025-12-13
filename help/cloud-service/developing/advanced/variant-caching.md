@@ -1,12 +1,12 @@
 ---
 title: 使用AEM as a Cloud Service缓存页面变体
 description: 了解如何设置和使用AEM as a Cloud Service来支持缓存页面变体。
-role: Architect, Developer
+role: Developer
 topic: Development
 feature: CDN Cache, Dispatcher
 exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
 duration: 149
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 1%
@@ -49,11 +49,11 @@ ht-degree: 1%
 
 ## 用途
 
-1. 为了演示该功能，我们将使用[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)的实施作为示例。
+1. 为了演示该功能，我们将使用[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)的实施作为示例。
 
 1. 在AEM中实施[SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html)以使用变量值在HTTP响应上设置`x-aem-variant` Cookie。
 
-1. AEM CDN会自动将`x-aem-variant` Cookie转换为同名的HTTP标头。
+1. AEM的CDN会自动将`x-aem-variant` Cookie转换为同名的HTTP标头。
 
 1. 将Apache Web Server mod_rewrite规则添加到您的`dispatcher`项目，该规则可修改请求路径以包含变体选择器。
 
@@ -134,7 +134,7 @@ ht-degree: 1%
 
 ## 变量限制
 
-+ AEM CDN可管理多达200个变量。 这意味着`x-aem-variant`标头最多可以有200个唯一值。 有关详细信息，请查看[CDN配置限制](https://docs.fastly.com/en/guides/resource-limits)。
++ AEM的CDN可管理多达200个变体。 这意味着`x-aem-variant`标头最多可以有200个唯一值。 有关详细信息，请查看[CDN配置限制](https://docs.fastly.com/en/guides/resource-limits)。
 
 + 必须注意的是，您选择的变体键决不会超过此数字。  例如，用户ID不是合适的键，因为对于大多数网站，它很容易超过200个值，而如果某个国家/地区只有不到200个州，则该国家/地区的状态会更适合。
 

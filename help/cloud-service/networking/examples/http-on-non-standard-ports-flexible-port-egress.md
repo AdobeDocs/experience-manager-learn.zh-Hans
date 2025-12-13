@@ -4,15 +4,15 @@ description: 了解如何从AEM as a Cloud Service向运行在非标准端口上
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
 duration: 86
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
-> 此代码示例仅适用于[灵活端口出口](../flexible-port-egress.md)。 对于专用出口IP地址和VPN[&#128279;](./http-dedicated-egress-ip-vpn.md)的非标准端口上的HTTP/HTTPS连接，提供了类似但不同的代码示例。
+> 此代码示例仅适用于[灵活端口出口](../flexible-port-egress.md)。 对于专用出口IP地址和VPN[的非标准端口上的](./http-dedicated-egress-ip-vpn.md)HTTP/HTTPS连接，提供了类似但不同的代码示例。
 
 ## 代码示例
 

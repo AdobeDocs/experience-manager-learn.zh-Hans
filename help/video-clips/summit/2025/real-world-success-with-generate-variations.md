@@ -4,7 +4,7 @@ description: Emily Kellman分享了Adobe.com如何使用生成变体来提高内
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites
-role: Leader, User, Developer, Admin, Architect
+role: Leader, User, Developer, Admin
 level: Beginner, Intermediate, Experienced
 type: Event
 doc-type: Video Clip
@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: df0a03c1-d278-4c45-afff-bfbdaffe83bd
-source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Emily Kellman分享了Adobe.com如何使用生成变体来提高内容速度、缩短时间轴并提高转化率。
 
->[!VIDEO](https://video.tv.adobe.com/v/3462738/?learn=on&enablevpops&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3459232/?learn=on&enablevpops)

@@ -4,15 +4,15 @@ description: 了解如何使用AEM的JDBC DataSourcePool和出口端口从AEM as
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
 duration: 117
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
@@ -35,8 +35,8 @@ ht-degree: 0%
 
 OSGi配置的连接字符串使用：
 
-+ 通过[OSGi配置环境变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hans#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]`将`AEM_PROXY_HOST`值作为连接的主机
-+ `30001`是Cloud Manager端口转发映射`30001`→`mysql.example.com:3306`的`portOrig`值
++ 通过`AEM_PROXY_HOST`OSGi配置环境变量[ ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values)将`$[env:AEM_PROXY_HOST;default=proxy.tunnel]`值作为连接的主机
++ `30001`是Cloud Manager端口转发映射`portOrig`→`30001`的`mysql.example.com:3306`值
 
 由于密码不能存储在代码中，因此最好通过OSGi配置变量、使用AIO CLI或Cloud Manager API设置来提供SQL连接的用户名和密码。
 
@@ -61,7 +61,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 ## 代码示例
 
 此Java™代码示例是一种OSGi服务，该服务通过AEM的DataSourcePool OSGi服务连接到外部MySQL数据库。
-DataSourcePool OSGi工厂配置依次指定了通过[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)操作中的`portForwards`规则映射到外部主机和端口`mysql.example.com:3306`的端口(`30001`)。
+DataSourcePool OSGi工厂配置依次指定了通过`30001`enableEnvironmentAdvancedNetworkingConfiguration`portForwards`操作中的[规则映射到外部主机和端口](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)的端口(`mysql.example.com:3306`)。
 
 ```json
 ...

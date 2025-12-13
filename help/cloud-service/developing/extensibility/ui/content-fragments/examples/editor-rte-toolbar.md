@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 6fd93d3b-6d56-43c5-86e6-2e2685deecc9
 duration: 345
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -25,18 +25,18 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
-可以使用`rte`扩展点将自定义按钮添加到内容片段编辑器中的&#x200B;**RTE工具栏**。 此示例说明如何向RTE工具栏添加名为&#x200B;_添加提示_&#x200B;的自定义按钮并修改RTE中的内容。
+可以使用&#x200B;**扩展点将自定义按钮添加到内容片段编辑器中的** RTE工具栏`rte`。 此示例说明如何向RTE工具栏添加名为&#x200B;_添加提示_&#x200B;的自定义按钮并修改RTE中的内容。
 
-使用`rte`扩展点的`getCustomButtons()`方法，可以将一个或多个自定义按钮添加到&#x200B;**RTE工具栏**。 还可以分别使用`getCoreButtons()`和`removeButtons)`方法添加或删除标准RTE按钮，如&#x200B;_复制、粘贴、粗体和斜体_。
+使用`rte`扩展点的`getCustomButtons()`方法，可以将一个或多个自定义按钮添加到&#x200B;**RTE工具栏**。 还可以分别使用&#x200B;_和_&#x200B;方法添加或删除标准RTE按钮，如`getCoreButtons()`复制、粘贴、粗体和斜体`removeButtons)`。
 
-此示例说明如何使用自定义&#x200B;_添加提示_&#x200B;工具栏按钮插入高亮显示的注释或提示。 高亮显示的注释或提示内容具有通过HTML元素和关联的CSS类应用的特殊格式。 占位符内容和HTML代码是使用`getCustomButtons()`的`onClick()`回调方法插入的。
+此示例说明如何使用自定义&#x200B;_添加提示_&#x200B;工具栏按钮插入高亮显示的注释或提示。 高亮显示的注释或提示内容具有通过HTML元素和关联的CSS类应用的特殊格式。 占位符内容和HTML代码是使用`onClick()`的`getCustomButtons()`回调方法插入的。
 
 ## 扩展点
 
 此示例扩展到扩展点`rte`以在内容片段编辑器中将自定义按钮添加到RTE工具栏。
 
 | AEM UI已扩展 | 扩展点 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [内容片段编辑器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [富文本编辑器工具栏](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
 
 ## 扩展示例

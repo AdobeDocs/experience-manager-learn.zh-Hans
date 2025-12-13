@@ -12,7 +12,7 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 937
-source-git-commit: d2714443fa644ba17afdfbed5e6da8091425aeab
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 4%
@@ -27,7 +27,7 @@ ht-degree: 4%
 >
 >本视频演示了如何在站点地图中使用相对URL。 站点地图[应使用绝对URL](https://sitemaps.org/protocol.html)。 有关如何启用绝对URL的信息，请参阅[配置](#absolute-sitemap-urls)，因为下面的视频未涉及此问题。
 
->[!VIDEO](https://video.tv.adobe.com/v/3454371?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
 
 ## 配置
 
@@ -89,7 +89,7 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 
 ## 资源
 
-+ [AEM Sitemap文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=zh-Hans)
++ [AEM Sitemap文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
 + [Apache Sling Sitemap文档](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org Sitemap文档](https://www.sitemaps.org/protocol.html)
 + [Sitemap.org Sitemap索引文件文档](https://www.sitemaps.org/protocol.html#index)

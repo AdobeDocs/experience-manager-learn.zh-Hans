@@ -5,7 +5,7 @@ short-description: 了解如何使用通用编辑器编辑示例 React 应用程
 version: Experience Manager as a Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 87
@@ -13,7 +13,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 69ed610e-2eff-43b3-98f9-3dc40594e879
-source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 100%

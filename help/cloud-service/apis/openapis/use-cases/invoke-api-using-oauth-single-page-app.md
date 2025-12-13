@@ -4,7 +4,7 @@ description: 了解如何通过OAuth 2.0 PKCE流程，使用自定义单页应�
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Intermediate
 doc-type: Tutorial
 jira: KT-17430
@@ -12,7 +12,7 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '2130'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Adobe Developer Console (ADC)项目配置为启用OAuth单页应用程序身份�
 >ADC项目未提供&#x200B;_client_secret_。 SPA而是生成&#x200B;_code_verifier_&#x200B;和&#x200B;_code_challenge_，以安全地交换&#x200B;_访问令牌_&#x200B;的授权代码。 它无需在客户端存储客户端密钥，增强了安全性。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456974?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 

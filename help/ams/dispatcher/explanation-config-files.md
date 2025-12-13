@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 duration: 379
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 | 文件 | 文件目标 | 描述 |
 | --- | --- | --- |
 | 文件名`.any` | `/etc/httpd/conf.dispatcher.d/` | AEM Dispatcher Apache模块从`*.any`文件中获取其设置。 默认父包含文件为`conf.dispatcher.d/dispatcher.any` |
-| 文件名`_farm.any` | 暂存： `/etc/httpd/conf.dispatcher.d/available_farms/`<br>活动： `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>注意：</b>这些场文件将不会复制到`enabled_farms`文件夹中，而是使用`symlinks`到`conf.dispatcher.d/dispatcher.any`文件中包含`available_farms/*_farm.any`文件<br/>`*_farm.any`文件的相对路径。 这些父场文件可用于控制每个渲染或网站类型的模块行为。 文件在`available_farms`目录中创建，并在`enabled_farms`目录中通过`symlink`启用。  <br/>它将从`dispatcher.any`文件中按名称自动包含它们。<br/><b>基线</b>场文件以`000_`开头，以确保先加载它们。<br><b>自定义</b>场文件应在`100_`开始编号方案之后加载，以确保正确的包含行为。 |
+| 文件名`_farm.any` | 暂存： `/etc/httpd/conf.dispatcher.d/available_farms/`<br>活动： `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>注意：</b>这些场文件将不会复制到`enabled_farms`文件夹中，而是使用`symlinks`到`available_farms/*_farm.any`文件中包含<br/>`*_farm.any`文件`conf.dispatcher.d/dispatcher.any`文件的相对路径。 这些父场文件可用于控制每个渲染或网站类型的模块行为。 文件在`available_farms`目录中创建，并在`symlink`目录中通过`enabled_farms`启用。  <br/>它将从`dispatcher.any`文件中按名称自动包含它们。<br/><b>基线</b>场文件以`000_`开头，以确保先加载它们。<br><b>自定义</b>场文件应在`100_`开始编号方案之后加载，以确保正确的包含行为。 | |
 | 文件名`_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any`文件包含在`conf.dispatcher.d/enabled_farms/*_farm.any`文件内。 每个场都有一组规则，这些规则会更改应该过滤掉的流量，而不是发送给渲染程序。 |
 | 文件名`_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any`文件包含在`conf.dispatcher.d/enabled_farms/*_farm.any`文件内。 这些文件是主机名或URI路径的列表，将通过blob匹配来匹配，以确定使用哪个渲染器为该请求提供服务 |
 | 文件名`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any`文件包含在`conf.dispatcher.d/enabled_farms/*_farm.any`文件内。 这些文件指定缓存哪些项目以及不缓存哪些项目 |
@@ -143,7 +143,7 @@ IncludeOptional conf.d/*.conf
 LoadModule dispatcher_module modules /mod_dispatcher .so
 ```
 
-要在`<VirtualHost />`中使用模块，我们将配置文件拖放到名为`dispatcher_vhost.conf`的`/etc/httpd/conf.d/`中，在该文件中，您将看到使用设置模块工作所需的基本参数：
+要在`<VirtualHost />`中使用模块，我们将配置文件拖放到名为`/etc/httpd/conf.d/`的`dispatcher_vhost.conf`中，在该文件中，您将看到使用设置模块工作所需的基本参数：
 
 ```
 <IfModule disp_apache2.c> 
@@ -164,7 +164,7 @@ LoadModule dispatcher_module modules /mod_dispatcher .so
 
 顶级`dispatcher.any`文件包括在`/etc/httpd/conf.dispatcher.d/enabled_farms/`中生活的所有启用场文件，其文件名为`FILENAME_farm.any`，符合我们的标准命名约定。
 
-稍后在前面提到的`dispatcher_vhost.conf`文件中，我们还执行了include语句，以启用每个启用的、文件名为`FILENAME.vhost`且位于`/etc/httpd/conf.d/enabled_vhosts/`中的虚拟主机文件，这些文件遵循我们的标准命名约定。
+稍后在前面提到的`dispatcher_vhost.conf`文件中，我们还执行了include语句，以启用每个启用的、文件名为`/etc/httpd/conf.d/enabled_vhosts/`且位于`FILENAME.vhost`中的虚拟主机文件，这些文件遵循我们的标准命名约定。
 
 ```
 IncludeOptional /etc/httpd/conf.d/enabled_vhosts/*.vhost
@@ -193,7 +193,7 @@ IncludeOptional /etc/httpd/conf.d/enabled_vhosts/*.vhost
 
 ![此图片显示一个.vhost文件如何包含来自变量、白名单和重写文件夹的文件](assets/explanation-config-files/Apache-Webserver-AMS-Vhost-Includes.png "Apache-Webserver-AMS-Vhost-Include")
 
-当来自`/etc/httpd/conf.d/availabled_vhosts/`目录的任何`.vhost`文件被符号链接到`/etc/httpd/conf.d/enabled_vhosts/`目录时，它们将在运行配置中使用。
+当来自`.vhost`目录的任何`/etc/httpd/conf.d/availabled_vhosts/`文件被符号链接到`/etc/httpd/conf.d/enabled_vhosts/`目录时，它们将在运行配置中使用。
 
 `.vhost`文件具有基于我们找到的公共段的子包含。  变量、白名单和重写规则等内容。
 
@@ -249,11 +249,11 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 ### AMS场包含
 
-![&lt;FILENAME>_farms.any将包含sub .any文件以完成场配置。  在此图片中，您可以看到场将包含每个顶级节文件缓存、clientheaders、筛选器、渲染器和vhosts .any文件](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Include")
+![<FILENAME>_farms.any将包含sub .any文件以完成场配置。  在此图片中，您可以看到场将包含每个顶级节文件缓存、clientheaders、筛选器、渲染器和vhosts .any文件](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Include")
 
 当来自`/etc/httpd/conf.dispatcher.d/available_farms/`目录的任何FILENAME_farm.any文件被符号链接到`/etc/httpd/conf.dispatcher.d/enabled_farms/`目录时，它们将在运行配置中使用。
 
-场文件具有基于场[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#defining-farms-farms)的顶级部分的子包含，如缓存、clientheaders、筛选器、渲染器和主机。
+场文件具有基于场[的](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms)顶级部分的子包含，如缓存、clientheaders、筛选器、渲染器和主机。
 
 `FILENAME_farm.any`文件将根据需要在场文件中包含它们的位置，为每个文件包含include语句。  以下是`FILENAME_farm.any`文件的示例语法，作为良好引用：
 

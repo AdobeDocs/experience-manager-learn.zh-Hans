@@ -1,10 +1,10 @@
 ---
-title: 实施无管道URL重定向
+title: 实施无管道 URL 重定向
 description: 了解如何在AEM as a Cloud Service中实施管道免费的URL重定向，以使营销团队无需开发人员即可管理重定向。
 version: Experience Manager as a Cloud Service
 feature: Operations, Dispatcher
 topic: Development, Content Management, Administration
-role: Architect, Developer, User
+role: Developer, User
 level: Beginner, Intermediate
 doc-type: Article
 duration: 0
@@ -12,16 +12,16 @@ last-substantial-update: 2025-02-05T00:00:00Z
 jira: KT-15739
 thumbnail: KT-15739.jpeg
 exl-id: 3b0f5971-38b8-4b9e-b90e-9de7432e0e9d
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '973'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
-# 实施无管道URL重定向
+# 实施无管道 URL 重定向
 
-了解如何在AEM as a Cloud Service中实施[管道免费的URL重定向](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)，以使营销团队无需开发人员即可管理重定向。
+了解如何在AEM as a Cloud Service中实施[管道免费的URL重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)，以使营销团队无需开发人员即可管理重定向。
 
 在AEM中有多个管理URL重定向的选项，有关详细信息，请参阅[URL重定向](url-redirection.md)。
 
@@ -37,11 +37,11 @@ ht-degree: 0%
 
 ## 教程用例
 
-出于演示目的，假设WKND营销团队正在启动新的滑雪活动。 他们希望为滑雪冒险页面创建简短URL，并像管理内容一样自行管理这些页面。 他们决定使用[管道免费的URL重定向](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)方法管理URL重定向。
+出于演示目的，假设WKND营销团队正在启动新的滑雪活动。 他们希望为滑雪冒险页面创建简短URL，并像管理内容一样自行管理这些页面。 他们决定使用[管道免费的URL重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)方法管理URL重定向。
 
 根据营销团队的要求，需要创建URL重定向如下。
 
-| SOURCE URL | 目标 URL |
+| 源 URL | 目标 URL |
 |------------|------------|
 | /ski | /us/en/adventures.html |
 | /ski/northamerica | /us/en/adventures/downhill-skiing-wyoming.html |
@@ -74,7 +74,7 @@ DAM中的![文本文件](./assets/pipeline-free-redirects/text-file-in-dam.png)
 
 [ACS Commons — 重定向映射管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)提供了一个用户友好的界面来管理URL重定向。
 
-例如，营销团队可以创建名为`SkiCampaign`的新&#x200B;*重定向映射*&#x200B;页面，并使用&#x200B;**编辑条目**&#x200B;选项卡添加上述URL重定向。 URL重定向位于`/etc/acs-commons/redirect-maps/skicampaign/jcr:content.redirectmap.txt`。
+例如，营销团队可以创建名为&#x200B;*的新*&#x200B;重定向映射`SkiCampaign`页面，并使用&#x200B;**编辑条目**&#x200B;选项卡添加上述URL重定向。 URL重定向位于`/etc/acs-commons/redirect-maps/skicampaign/jcr:content.redirectmap.txt`。
 
 ![重定向映射管理器](./assets/pipeline-free-redirects/redirect-map-manager.png)
 
@@ -100,11 +100,11 @@ DAM中的![文本文件](./assets/pipeline-free-redirects/text-file-in-dam.png)
 
 ### 为灵活模式启用Dispatcher模块
 
-首先，验证是否已为&#x200B;_灵活模式_&#x200B;启用Dispatcher模块。 `dispatcher/src/opt-in`文件夹中存在`USE_SOURCES_DIRECTLY`文件表示Dispatcher处于灵活模式。
+首先，验证是否已为&#x200B;_灵活模式_&#x200B;启用Dispatcher模块。 `USE_SOURCES_DIRECTLY`文件夹中存在`dispatcher/src/opt-in`文件表示Dispatcher处于灵活模式。
 
 ### 将URL重定向加载为RewriteMap
 
-接下来，在`dispatcher/src/opt-in`文件夹创建一个新的配置文件`managed-rewrite-maps.yaml`，该文件的结构如下。
+接下来，在`managed-rewrite-maps.yaml`文件夹创建一个新的配置文件`dispatcher/src/opt-in`，该文件的结构如下。
 
 ```yaml
 maps:
@@ -114,7 +114,7 @@ maps:
     ttl: 300 # Optional, default is 300 seconds, the reload interval for the map
 ```
 
-在部署期间，Dispatcher在`/tmp/rewrites`文件夹中创建`<MAPNAME>.map`文件。
+在部署期间，Dispatcher在`<MAPNAME>.map`文件夹中创建`/tmp/rewrites`文件。
 
 >[!IMPORTANT]
 >
@@ -122,7 +122,7 @@ maps:
 
 ### 将URL重定向应用于传入请求
 
-最后，创建或更新Apache重写配置文件以使用上述映射(`<MAPNAME>.map`)。 例如，让我们使用`dispatcher/src/conf.d/rewrites`文件夹中的`rewrite.rules`文件来应用URL重定向。
+最后，创建或更新Apache重写配置文件以使用上述映射(`<MAPNAME>.map`)。 例如，让我们使用`rewrite.rules`文件夹中的`dispatcher/src/conf.d/rewrites`文件来应用URL重定向。
 
 ```
 ...
@@ -139,11 +139,12 @@ RewriteRule ^(.*)$ ${<MAPALIAS>:$1|/} [L,R=301]
 让我们查看上面提到的[的每个URL重定向管理选项的Dispatcher配置](#manage-redirects)。
 
 >[!BEGINTABS]
->[!TAB DAM中的 文本文件]
+
+>DAM中的[!TAB 文本文件]
 
 当URL重定向在文本文件中作为键值对进行管理，并上传到DAM时，配置如下。
 
-[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```yaml
 maps:
@@ -151,7 +152,7 @@ maps:
   path: /content/dam/wknd/redirects/skicampaign.txt
 ```
 
-[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```
 ...
@@ -170,7 +171,7 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 
 使用ACS Commons — 重定向映射管理器管理URL重定向时，配置如下。
 
-[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```yaml
 maps:
@@ -178,7 +179,7 @@ maps:
   path: /etc/acs-commons/redirect-maps/skicampaign/jcr:content.redirectmap.txt
 ```
 
-[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```
 ...
@@ -197,7 +198,7 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 
 使用ACS Commons — 重定向管理器管理URL重定向时，配置如下。
 
-[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```yaml
 maps:
@@ -205,7 +206,7 @@ maps:
   path: /conf/wknd/settings/redirects.txt
 ```
 
-[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="下面代码示例的文件名。"}
+[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="下面是代码示例的文件名。"}
 
 ```
 ...
@@ -228,7 +229,7 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 >
 >*无管道*&#x200B;术语用于强调&#x200B;*配置仅部署一次*，营销团队可以通过更新文本文件来管理URL重定向。
 
-要部署配置，请使用[Cloud Manager](https://my.cloudmanager.adobe.com/)中的[全栈栈](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)或[Web层配置](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#web-tier-config-pipelines)管道。
+要部署配置，请使用[Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)中的[全栈栈](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#web-tier-config-pipelines)或[Web层配置](https://my.cloudmanager.adobe.com/)管道。
 
 ![通过全栈管道部署](./assets/pipeline-free-redirects/deploy-full-stack-pipeline.png)
 
@@ -247,5 +248,5 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 
 ## 其他资源
 
-- [无管道URL重定向](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
+- [无管道URL重定向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
 - [URL重定向](url-redirection.md)

@@ -3,7 +3,7 @@ title: 快速设置SPA编辑器和远程SPA
 description: 了解如何在15分钟内启动并运行远程SPA和AEM SPA Editor！
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7629
 thumbnail: 333181.jpg
@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
 duration: 647
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '730'
 ht-degree: 10%
 
 ---
@@ -79,21 +79,21 @@ AEM SDK将在[http://localhost:4502](http://localhost:4502)上启动并自动启
 本教程依赖于&#x200B;__WKND 2.1.0+的__&#x200B;项目（内容）。
 
 1. [下载最新版本的`aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
-1. 使用`admin`凭据在[http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)登录AEM SDK的包管理器。
+1. 使用[凭据在:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin`登录AEM SDK的包管理器。
 1. __上传__&#x200B;在步骤1中下载的`aem-guides-wknd.all.x.x.x.zip`
-1. 点按条目`aem-guides-wknd.all-x.x.x.zip`的&#x200B;__安装__&#x200B;按钮
+1. 点按条目&#x200B;__的__&#x200B;安装`aem-guides-wknd.all-x.x.x.zip`按钮
 
 ## 下载并安装WKND应用程序SPA包
 
 为了执行快速设置，此处提供了AEM包，其中包含教程的最终AEM配置和内容。
 
-1. [下载 &#x200B;](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [下载 &#x200B;](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
-1. 使用`admin`凭据在[http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)登录AEM SDK的包管理器。
+1. [下载 ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [下载 ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
+1. 使用[凭据在:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin`登录AEM SDK的包管理器。
 1. __上传__&#x200B;在步骤1中下载的`wknd-app.all.x.x.x.zip`
-1. 点按条目`wknd-app.all.x.x.x.zip`的&#x200B;__安装__&#x200B;按钮
+1. 点按条目&#x200B;__的__&#x200B;安装`wknd-app.all.x.x.x.zip`按钮
 1. __上传__&#x200B;在步骤2中下载的`wknd-app.ui.content.sample.x.x.x.zip`
-1. 点按条目`wknd-app.ui.content.sample.x.x.x.zip`的&#x200B;__安装__&#x200B;按钮
+1. 点按条目&#x200B;__的__&#x200B;安装`wknd-app.ui.content.sample.x.x.x.zip`按钮
 
 ## 下载WKND应用程序源
 
@@ -131,7 +131,7 @@ $ npm run start
 
 在创作内容之前，请排列浏览器窗口，使AEM Author (`http://localhost:4502`)位于左侧，远程SPA (`http://localhost:3000`)在右侧运行。 通过这种安排，您可以看到对AEM源内容的更改如何立即反映在SPA中。
 
-1. 以`admin`身份登录到[AEM SDK创作服务](http://localhost:4502)
+1. 以[身份登录到](http://localhost:4502)AEM SDK创作服务`admin`
 1. 导航到&#x200B;__站点> WKND应用程序>我们> en__
 1. 编辑&#x200B;__WKND应用程序主页__
 1. 切换到&#x200B;__编辑__&#x200B;模式

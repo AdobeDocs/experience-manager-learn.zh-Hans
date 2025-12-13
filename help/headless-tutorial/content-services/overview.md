@@ -8,8 +8,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 5aa32791-861a-48e3-913c-36028373b788
 duration: 311
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 100%
 
@@ -25,7 +25,7 @@ AEM 内容服务允许使用与 AEM Sites 中网页创作相同的内容抽象�
 
 一个端到端的教程，展示如何使用 AEM 构建并展示内容，并在 Headless CMS 场景中由原生移动应用程序使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/33073?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/28315?quality=12&learn=on)
 
 本教程将探讨如何利用 AEM 内容服务来增强移动应用程序的用户体验。该应用程序展示由 WKND 团队策划的活动信息（音乐、表演、艺术等）。
 

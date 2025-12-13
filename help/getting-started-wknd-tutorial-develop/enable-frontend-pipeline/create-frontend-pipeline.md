@@ -4,7 +4,7 @@ description: 了解如何创建和运行前端管道，该管道用于构建前�
 version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
@@ -13,8 +13,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
 duration: 225
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 100%
 
@@ -38,7 +38,7 @@ ht-degree: 100%
 
 这是一个多段式教程，并且假设您已完成[更新标准 AEM 项目](./update-project.md)中概述的步骤。
 
-确保您具有[在 Cloud Manager 中创建和部署管道的权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=zh-hans#role-definitions)以及[对 AEM as a Cloud Service 环境的访问权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hans)。
+确保您具有[在 Cloud Manager 中创建和部署管道的权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=zh-hans#role-definitions)以及[对 AEM as a Cloud Service 环境的访问权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html)。
 
 ## 重命名现有管道
 

@@ -4,7 +4,7 @@ description: 了解如何使用AEM Headless处理大型结果集。
 version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
@@ -12,7 +12,7 @@ jira: KT-13102
 thumbnail: 3418381.jpeg
 exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
 duration: 308
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 1%
@@ -200,7 +200,7 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 #### useEffect挂钩
 
-`useEffect`挂接可调用持久查询(`adventures-by-offset-and-limit`)，该查询将检索Adventures列表。 查询使用`offset`和`limit`参数指定起点和要检索的结果数。 `page`值更改时调用`useEffect`挂接。
+`useEffect`挂接可调用持久查询(`adventures-by-offset-and-limit`)，该查询将检索Adventures列表。 查询使用`offset`和`limit`参数指定起点和要检索的结果数。 `useEffect`值更改时调用`page`挂接。
 
 
 ```javascript

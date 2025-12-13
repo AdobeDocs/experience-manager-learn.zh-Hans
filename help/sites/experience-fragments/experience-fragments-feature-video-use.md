@@ -4,7 +4,7 @@ description: 体验片段使内容创作者可在渠道（包括Sites页面和�
 sub-product: Experience Manager Sites
 feature: Experience Fragments
 topic: Content Management
-role: Architect, Developer, Admin, User
+role: Developer, Admin, User
 level: Beginner
 doc-type: Feature Video
 version: Experience Manager as a Cloud Service
@@ -13,7 +13,7 @@ thumbnail: 331785.jpg
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
 duration: 228
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 2%
@@ -26,9 +26,9 @@ ht-degree: 2%
 
 体验片段使内容创作者可在渠道（包括Sites页面和第三方系统）间重用内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3445617?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
 
-体验片段是一组经过组合的组件，组合后将创建一个体验。 例如，*Title*、*Image*、*Description*&#x200B;和&#x200B;*行动号召按钮*&#x200B;可以组合在一起以形成Teaser体验。
+体验片段是一组经过组合的组件，组合后将创建一个体验。 例如，可以组合&#x200B;*Title*、*Image*、*Description*&#x200B;和&#x200B;*Call to action Button*&#x200B;以形成Teaser体验。
 
 借助体验片段，营销人员可以：
 

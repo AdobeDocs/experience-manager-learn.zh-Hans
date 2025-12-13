@@ -10,7 +10,7 @@ level: Intermediate
 exl-id: 1f13d82e-c1d0-4c8c-8468-b4a4c5897c71
 last-substantial-update: 2021-02-09T00:00:00Z
 duration: 239
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -21,7 +21,9 @@ ht-degree: 0%
 
 从AEM Forms 6.4开始，我们现在能够将表单数据模型服务用作AEM Workflow的一部分。 以下视频介绍了在AEM工作流中配置表单数据模型步骤所需的步骤
 
->本视频中演示的功能需要AEM Forms 6.5.1
+>[!NOTE]
+>
+>本视频中演示的功能需要使用AEM Forms 6.5.1
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28145?quality=12&learn=on)
@@ -39,4 +41,5 @@ ht-degree: 0%
 * 打开[MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled)。 填写详细信息并提交。 在提交表单时，触发[贷款申请工作流](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)。
 
 ![工作流](assets/invokefdm651.PNG)。
+
 如果信用评分超过500，工作流将利用“或拆分”组件将申请路由给管理员。 如果信用评分低于500，则申请将被转交cavery。

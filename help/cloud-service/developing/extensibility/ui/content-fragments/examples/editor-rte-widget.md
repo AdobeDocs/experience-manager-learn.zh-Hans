@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 167a4b11-1202-4c7a-b022-f3f996348a4e
 duration: 476
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 了解如何在AEM内容片段编辑器中向富文本编辑器(RTE)添加构件。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447442?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
 要在富文本编辑器(RTE)中添加动态内容，可以使用&#x200B;**小组件**&#x200B;功能。 这些小组件有助于在RTE中集成简单或复杂的UI，并且可以使用您选择的JS框架创建UI。 可将其视为通过在RTE中按`{`特殊键打开的对话框。
 
 通常，小组件用于插入具有外部系统依赖关系或可以根据当前上下文更改的动态内容。
 
-使用`rte`扩展点将&#x200B;**构件**&#x200B;添加到内容片段编辑器中的&#x200B;**RTE**。 使用`rte`扩展点的`getWidgets()`方法添加了一个或多个小组件。 它们是通过按`{`特殊键打开上下文菜单选项来触发的，然后选择所需的构件以加载自定义对话框UI。
+使用&#x200B;**扩展点将**&#x200B;构件&#x200B;**添加到内容片段编辑器中的** RTE`rte`。 使用`rte`扩展点的`getWidgets()`方法添加了一个或多个小组件。 它们是通过按`{`特殊键打开上下文菜单选项来触发的，然后选择所需的构件以加载自定义对话框UI。
 
 此示例说明如何添加名为&#x200B;_折扣代码列表_&#x200B;的小组件以在RTE内容中查找、选择和添加特定于WKND冒险的折扣代码。 这些折扣代码可以在外部系统中管理，如Order Management System (OMS)、产品信息管理(PIM)、自主开发的应用程序或Adobe AppBuilder操作。
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 此示例扩展到扩展点`rte`，在内容片段编辑器中将小组件添加到RTE。
 
 | AEM UI已扩展 | 扩展点 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [内容片段编辑器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [富文本编辑器小组件](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## 扩展示例
@@ -53,7 +53,7 @@ WKND内容作者可以查找、选择和添加当前特定于冒险的折扣代�
 
 `ExtensionRegistration.js`映射到index.html路由，是AEM扩展的入口点，并定义：
 
-+ 具有`id, label and url`特性的`getWidgets()`函数中的构件定义。
++ 具有`getWidgets()`特性的`id, label and url`函数中的构件定义。
 + `url`属性值，加载对话框UI的相对URL路径(`/index.html#/discountCodes`)。
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
@@ -92,7 +92,7 @@ function ExtensionRegistration() {
 export default ExtensionRegistration;
 ```
 
-### 在`App.js`中添加`discountCodes`路由{#add-widgets-route}
+### 在`discountCodes`中添加`App.js`路由{#add-widgets-route}
 
 在主React组件`App.js`中，添加`discountCodes`路由以呈现上述相对URL路径的UI。
 
@@ -120,9 +120,9 @@ export default ExtensionRegistration;
 
 + UI是使用React Spectrum组件呈现的，如[ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html)、[ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html)、[Button](https://react-spectrum.adobe.com/react-spectrum/Button.html)
 + `adventureDiscountCodes`数组具有冒险名称和折扣代码的硬编码映射。 在现实场景中，此数据可以从Adobe AppBuilder操作或PIM、OMS等外部系统或自主开发的或基于云提供商的API网关中检索。
-+ 使用`useEffect` [React挂接](https://react.dev/reference/react/useEffect)初始化`guestConnection`，并将其作为组件状态进行管理。 用于与AEM主机通信。
++ 使用`guestConnection` `useEffect`React挂接[初始化](https://react.dev/reference/react/useEffect)，并将其作为组件状态进行管理。 用于与AEM主机通信。
 + `handleDiscountCodeChange`函数获取所选冒险名称的折扣代码并更新状态变量。
-+ 使用`guestConnection`对象的`addDiscountCode`函数提供了要执行的RTE指令。 在本例中，`insertContent`指令和实际折扣代码的HTML代码段将插入到RTE中。
++ 使用`addDiscountCode`对象的`guestConnection`函数提供了要执行的RTE指令。 在本例中，`insertContent`指令和实际折扣代码的HTML代码段将插入到RTE中。
 
 `src/aem-cf-editor-1/web-src/src/components/DiscountCodes.js`
 

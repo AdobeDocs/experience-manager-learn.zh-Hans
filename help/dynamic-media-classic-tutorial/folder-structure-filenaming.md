@@ -1,5 +1,5 @@
 ---
-title: 确定文件夹结构和文件命名约定
+title: 确定文件夹结构和文件命名惯例
 description: 文件命名可能是您在实施Dynamic Media Classic时做出的最重要决策。 文件夹结构同样重要。 了解为何对文件夹结构和文件名采取这种方式如此重要且可能的方法。
 feature: Dynamic Media Classic
 topic: Content Management
@@ -8,14 +8,14 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 15121896-9196-4ce0-aff2-9178563326b4
 duration: 253
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1202'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 确定文件夹结构和文件命名约定 {#folder-structure-filenaming}
+# 确定文件夹结构和文件命名惯例 {#folder-structure-filenaming}
 
 在跳转并开始上载所有内容之前，明智的做法是考虑将要使用的文件夹结构，尤其是文件命名约定。 这样可能会为您节省时间，并且以后必须重做任务。 最好在所有小组中协调这些决策。
 
@@ -77,7 +77,7 @@ Dynamic Media Classic中的所有URL和交易都由资产ID驱动，资产ID是�
 | AA123 | 替代视图 | AA123_1.tif AA123_2.tif AA123_3.tif | AA123_1 AA123_2 AA123_3 |
 |         | 彩色视图 | AA123_BLU.tif AA123_RED.tif AA123_BROWN.tif | AA123_BLU AA123_RED AA123_BROWN |
 |         | 样本 | AA123_BLU_SW.tif | AA123_BLU_SW |
-|         | 图像集或样本集 |                                             | AA123或AA123_SET | — |
+|         | 图像集或样本集 |                                             | AA123或AA123_SET |
 
 在处理集集合（如图像集和样本集）时，集本身也必须具有唯一的名称。 因此，在这种情况下，可以为该集指定基础SKU作为其名称，或指定扩展名为“_SET”的SKU。
 

@@ -4,15 +4,15 @@ description: 了解如何进行设置，以创建、部署、测试和分析流�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18306
 thumbnail: null
 exl-id: 0a738af8-666b-48dc-8187-9b7e6a8d7e1b
-source-git-commit: b7f567da159865ff04cb7e9bd4dae0b140048e7d
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 100%
 

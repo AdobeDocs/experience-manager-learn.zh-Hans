@@ -7,11 +7,11 @@ kt: 6872, 6875
 thumbnail: 26317.jpg
 topic: Architecture
 feature: Cloud Manager, CI-CD Pipeline
-role: Architect, Developer, Admin
+role: Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
 duration: 408
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 53%
@@ -29,12 +29,12 @@ ht-degree: 53%
 
 ## 配置
 
-[CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html?lang=zh-Hans)配置定义将启动管道的触发器、控制生产部署的参数以及性能测试参数。
+[CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html)配置定义将启动管道的触发器、控制生产部署的参数以及性能测试参数。
 
->[!VIDEO](https://video.tv.adobe.com/v/327604?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### 管道执行
 
-[CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=zh-Hans)用于通过暂存生成代码并将其部署到生产环境，从而缩短实现值的时间。
+[CI/CD生产管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html)用于通过暂存生成代码并将其部署到生产环境，从而缩短实现值的时间。
 
->[!VIDEO](https://video.tv.adobe.com/v/327611?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)

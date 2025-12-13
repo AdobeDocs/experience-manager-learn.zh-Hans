@@ -12,9 +12,9 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
-source-git-commit: dc29a4b7857ee8d1405c9ef8d14f09374c2bfd01
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1960'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 与Adobe Experience Manager (AEM) as a Cloud Service的集成必须能够安全地对AEM服务进行身份验证。 AEM的Developer Console授予对服务凭据的访问权限，这些凭据用于促进外部应用程序、系统和服务通过HTTP以编程方式与AEM创作或发布服务交互。
 
-AEM使用通过Adobe Developer Console[管理的](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)S2S OAuth与其他Adobe产品集成。 对于与服务帐户的自定义集成，在AEM Developer Console中使用和管理JWT凭据。
+AEM使用通过Adobe Developer Console[管理的](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)S2S OAuth与其他Adobe产品集成。 对于与服务帐户的自定义集成，在AEM Developer Console中使用和管理JWT凭据。
 
->[!VIDEO](https://video.tv.adobe.com/v/342217?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
 服务凭据可能显示类似于[本地开发访问令牌](./local-development-access-token.md)，但在几个关键方面不同：
 
@@ -53,8 +53,10 @@ AEM使用通过Adobe Developer Console[管理的](https://experienceleague.adobe
 技术帐户只创建一次，但私钥用于管理与技术帐户关联的服务凭据可随着时间的推移进行管理。 例如，必须在当前私钥到期之前生成新的私钥/服务凭据，以允许用户不间断地访问服务凭据。
 
 1. 确保您以下列身份登录：
+
    + __Adobe IMS组织的系统管理员__
    + __AEM Author__&#x200B;上的&#x200B;__AEM管理员__ IMS产品配置文件的成员
+
 1. 登录到[Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
 1. 打开包含AEM as a Cloud Service环境的程序以集成为设置服务凭据
 1. 点按&#x200B;__环境__&#x200B;分区中环境旁边的省略号，然后选择&#x200B;__Developer Console__
@@ -74,8 +76,10 @@ AEM使用通过Adobe Developer Console[管理的](https://experienceleague.adobe
 下载服务凭据的步骤与初始化类似。
 
 1. 确保您以下列身份登录：
+
    + __Adobe IMS组织管理员__
    + __AEM Author__&#x200B;上的&#x200B;__AEM管理员__ IMS产品配置文件的成员
+
 1. 登录到[Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
 1. 打开包含AEM as a Cloud Service环境的项目以与集成
 1. 点按&#x200B;__环境__&#x200B;分区中环境旁边的省略号，然后选择&#x200B;__Developer Console__
@@ -93,6 +97,7 @@ AEM使用通过Adobe Developer Console[管理的](https://experienceleague.adobe
 为简单起见，本教程通过命令行在中传递服务凭据。 但是，请与您的IT安全团队合作，了解如何根据贵组织的安全指南存储和访问这些凭据。
 
 1. 将[下载的服务凭据JSON](#download-service-credentials)复制到项目根目录中名为`service_token.json`的文件
+
    + 请记住，绝不要将&#x200B;_任何凭据_&#x200B;提交到Git！
 
 ## 使用服务凭据
@@ -107,7 +112,9 @@ AEM使用通过Adobe Developer Console[管理的](https://experienceleague.adobe
 1. 外部应用程序使用服务凭据中的信息构建JWT令牌
 1. JWT令牌会发送到Adobe IMS以交换访问令牌
 1. Adobe IMS返回可用于访问AEM as a Cloud Service的访问令牌
+
    + 访问令牌无法更改过期时间。
+
 1. 外部应用程序向AEM as a Cloud Service发出HTTP请求，并将访问令牌作为持有者令牌添加到HTTP请求的授权标头
 1. AEM as a Cloud Service接收HTTP请求、验证请求并执行HTTP请求所请求的工作，并将HTTP响应返回给外部应用程序
 
@@ -117,12 +124,12 @@ AEM使用通过Adobe Developer Console[管理的](https://experienceleague.adobe
 
 1. 读取服务凭据
 
-+ 为简单起见，服务凭据将从下载的JSON文件中读取，但在实际使用场景中，服务凭据必须根据贵组织的安全指南进行安全存储
+   + 为简单起见，服务凭据将从下载的JSON文件中读取，但在实际使用场景中，服务凭据必须根据贵组织的安全指南进行安全存储
 
 1. 从服务凭据生成JWT
 1. 交换JWT以获取访问令牌
 
-+ 当存在服务凭据时，外部应用程序在访问AEM as a Cloud Service时使用此访问令牌，而不是本地开发访问令牌
+   + 当存在服务凭据时，外部应用程序在访问AEM as a Cloud Service时使用此访问令牌，而不是本地开发访问令牌
 
 在本教程中，Adobe的`@adobe/jwt-auth` npm模块用于以下两者：(1)从服务凭据生成JWT，以及(2)在单个函数调用中将它交换为访问令牌。 如果您的应用程序不是基于JavaScript，则可以使用您选择的语言开发自定义代码，以从服务凭据创建JWT，并将其与Adobe IMS交换访问令牌。
 
@@ -155,36 +162,36 @@ function getCommandLineParams() {
 
    如果提供了服务凭据，应用程序会生成JWT并将其与Adobe IMS交换访问令牌。 使用[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)的`auth(...)`函数，该函数会生成JWT并在单个函数调用中将其交换为访问令牌。 `auth(..)`方法的参数是[JSON对象，包含服务凭据JSON中提供的特定信息](https://www.npmjs.com/package/@adobe/jwt-auth#config-object)，如下面的代码中所述。
 
-```javascript
- async function getAccessToken(developerConsoleCredentials) {
+   ```javascript
+    async function getAccessToken(developerConsoleCredentials) {
+   
+        if (developerConsoleCredentials.accessToken) {
+            // This is a Local Development access token
+            return developerConsoleCredentials.accessToken;
+        } else {
+            // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
+            let serviceCredentials = developerConsoleCredentials.integration;
+   
+            // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
+            // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
+            let { access_token } = await auth({
+                clientId: serviceCredentials.technicalAccount.clientId, // Client Id
+                technicalAccountId: serviceCredentials.id,              // Technical Account Id
+                orgId: serviceCredentials.org,                          // Adobe IMS Org Id
+                clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
+                privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
+                metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
+                ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
+            });
+   
+            return access_token;
+        }
+    }
+   ```
 
-     if (developerConsoleCredentials.accessToken) {
-         // This is a Local Development access token
-         return developerConsoleCredentials.accessToken;
-     } else {
-         // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
-         let serviceCredentials = developerConsoleCredentials.integration;
+   现在，根据通过`file`命令行参数传入的JSON文件（本地开发访问令牌JSON或服务凭据JSON），应用程序将派生访问令牌。
 
-         // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
-         // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
-         let { access_token } = await auth({
-             clientId: serviceCredentials.technicalAccount.clientId, // Client Id
-             technicalAccountId: serviceCredentials.id,              // Technical Account Id
-             orgId: serviceCredentials.org,                          // Adobe IMS Org Id
-             clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
-             privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
-             metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
-             ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
-         });
-
-         return access_token;
-     }
- }
-```
-
-    现在，根据通过命令行参数传入的JSON文件（本地开发访问令牌JSON或服务凭据JSON），应用程序将派生访问令牌。
-    
-    请记住，尽管服务凭据每365天过期一次，但JWT和相应的访问令牌会频繁过期，并且需要在过期之前刷新。 可使用“refresh_token”[由Adobe IMS提供](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)完成此操作。
+   请记住，虽然服务凭据每365天过期一次，但JWT和相应的访问令牌会频繁过期，并且需要在过期之前刷新。 可使用Adobe IMS`refresh_token`提供的[ ](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)完成此操作。
 
 1. 完成这些更改后，已从AEM Developer Console下载服务凭据JSON，为方便起见，将这些凭据JSON保存为`service_token.json`，并将其保存在与此`index.js`相同的文件夹中。 现在，让我们执行应用程序，将命令行参数`file`替换为`service_token.json`，并将`propertyValue`更新为新值，以便在AEM中显示效果。
 
@@ -224,7 +231,9 @@ function getCommandLineParams() {
 1. 导航到&#x200B;__工具__ > __安全性__ > __用户__
 1. 找到在步骤1中标识具有&#x200B;__登录名__&#x200B;的AEM用户，并打开其&#x200B;__属性__
 1. 导航到&#x200B;__组__&#x200B;选项卡，并添加&#x200B;__DAM用户__&#x200B;组（他们作为资产的写入权限）
-   + [查看AEM提供的用户组的列表](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hans#built-in-users-and-groups)以将服务用户添加到以获得最佳权限。 如果AEM提供的用户组不足以满足需求，请创建您自己的用户组，然后添加相应的权限。
+
+   + [查看AEM提供的用户组的列表](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups)以将服务用户添加到以获得最佳权限。 如果AEM提供的用户组不足以满足需求，请创建您自己的用户组，然后添加相应的权限。
+
 1. 点按&#x200B;__保存并关闭__
 
 使用AEM中允许的技术帐户对资源具有写入权限，请重新运行应用程序：

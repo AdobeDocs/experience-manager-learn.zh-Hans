@@ -4,7 +4,7 @@ description: 了解如何为标准 AEM 项目启用前端管道，以便更快�
 version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
@@ -15,8 +15,8 @@ last-substantial-update: 2022-09-23T00:00:00Z
 doc-type: Tutorial
 exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
 duration: 206
-source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 100%
 
@@ -35,10 +35,10 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->一般来说，前端管道通常与 [AEM 快速网站创建](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/overview.html?lang=zh-hans)结合使用，可以通过一个相关教程 [AEM Sites 快速入门 - 快速网站创建](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html?lang=zh-Hans)了解更多信息。在本教程和相关视频中您会看到对它的引用，这是为了确保指出细微的差别，并通过一些直接或间接的比较来解释关键概念。
+>一般来说，前端管道通常与 [AEM 快速网站创建](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/overview.html?lang=zh-hans)结合使用，可以通过一个相关教程 [AEM Sites 快速入门 - 快速网站创建](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html)了解更多信息。在本教程和相关视频中您会看到对它的引用，这是为了确保指出细微的差别，并通过一些直接或间接的比较来解释关键概念。
 
 
-相关的[多步骤教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html?lang=zh-Hans)详细说明了如何使用快速网站创建功能为虚构的生活方式品牌 WKND 实施一个 AEM 网站。查看[主题化工作流](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html?lang=zh-Hans)，了解前端管道工作也很有帮助。
+相关的[多步骤教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html)详细说明了如何使用快速网站创建功能为虚构的生活方式品牌 WKND 实施一个 AEM 网站。查看[主题化工作流](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html)，了解前端管道工作也很有帮助。
 
 ## 前端管道的概述、优势和考虑事项
 
@@ -53,7 +53,7 @@ ht-degree: 100%
 
 本教程中的部署步骤在 Adobe Cloud Manager 中进行，请确保您有&#x200B;__部署管理者__&#x200B;角色，请参阅云管理[角色定义](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=zh-hans#role-definitions)。
 
-请确保使用[沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html?lang=zh-Hans)和[开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hans)完成本教程。
+请确保使用[沙盒程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html)和[开发环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html)完成本教程。
 
 ## 后续步骤 {#next-steps}
 

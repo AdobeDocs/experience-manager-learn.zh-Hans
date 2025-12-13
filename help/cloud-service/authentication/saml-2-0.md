@@ -4,16 +4,16 @@ description: 了解如何在AEM as a Cloud Service Publish服务上配置SAML 2.
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '4262'
+source-wordcount: '4233'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 SAML 2.0与AEM Publish（或Preview）集成，允许基于AEM的Web体验的最终用户向非Adobe IDP（身份提供程序）进行身份验证，并以已命名授权用户的身份访问AEM。
 
-|                       | AEM 作者 | AEM 发布 |
+|                       | AEM 作者 | AEM Publish |
 |-----------------------|:----------:|:-----------:|
 | SAML 2.0支持 | ✘ | ✔ |
 
@@ -56,7 +56,7 @@ AEM Publish SAML集成的典型流程如下所示：
 
 ## 配置演练
 
->[!VIDEO](https://video.tv.adobe.com/v/3455354?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
 
 此视频介绍如何设置与AEM as a Cloud Service Publish服务的SAML 2.0集成，以及使用Okta作为IDP。
 
@@ -141,7 +141,7 @@ _当[SAML 2.0身份验证处理程序OSGi配置属性`handleLogout`设置为`tru
 1. 选择&#x200B;__保存并关闭__。
 1. 创建包含更新的&#x200B;__authentication-service__&#x200B;用户的包。
 
-   _使用包使用以下临时解决方法：_
+   使用包使用以下临时解决方法(_U):_
 
    1. 导航到&#x200B;__工具>部署>包__。
    1. 创建资源包
@@ -150,7 +150,7 @@ _当[SAML 2.0身份验证处理程序OSGi配置属性`handleLogout`设置为`tru
       + 组： `com.your.company`
    1. 编辑新的&#x200B;__身份验证服务密钥存储__&#x200B;包。
    1. 选择&#x200B;__筛选器__&#x200B;选项卡，并为根路径`/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`添加筛选器。
-      + 导航到&#x200B;__工具>安全>用户__&#x200B;并选择&#x200B;__身份验证服务__&#x200B;用户，即可找到`<AUTHENTICATION SERVICE UUID>`。 UUID是URL的最后一部分。
+      + 导航到`<AUTHENTICATION SERVICE UUID>`工具>安全>用户&#x200B;__并选择__&#x200B;身份验证服务&#x200B;__用户，即可找到__。 UUID是URL的最后一部分。
    1. 选择&#x200B;__完成__，然后选择&#x200B;__保存__。
    1. 为&#x200B;__Authentication Service Key Store__&#x200B;包选择&#x200B;__生成__&#x200B;按钮。
    1. 生成后，选择&#x200B;__更多__ > __复制__&#x200B;以激活AEM发布的身份验证服务密钥存储。
@@ -228,7 +228,7 @@ AuthnRequest签名和SAML断言加密都是可选的，但是它们都使用[SAM
 1. 选择&#x200B;__保存并关闭__。
 1. 创建包含更新的&#x200B;__authentication-service__&#x200B;用户的包。
 
-   _使用包使用以下临时解决方法：_
+   使用包使用以下临时解决方法(_U):_
 
    1. 导航到&#x200B;__工具>部署>包__。
    1. 创建资源包
@@ -237,7 +237,7 @@ AuthnRequest签名和SAML断言加密都是可选的，但是它们都使用[SAM
       + 组： `com.your.company`
    1. 编辑新的&#x200B;__身份验证服务密钥存储__&#x200B;包。
    1. 选择&#x200B;__筛选器__&#x200B;选项卡，并为根路径`/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`添加筛选器。
-      + 导航到&#x200B;__工具>安全>用户__&#x200B;并选择&#x200B;__身份验证服务__&#x200B;用户，即可找到`<AUTHENTICATION SERVICE UUID>`。 UUID是URL的最后一部分。
+      + 导航到`<AUTHENTICATION SERVICE UUID>`工具>安全>用户&#x200B;__并选择__&#x200B;身份验证服务&#x200B;__用户，即可找到__。 UUID是URL的最后一部分。
    1. 选择&#x200B;__完成__，然后选择&#x200B;__保存__。
    1. 为&#x200B;__Authentication Service Key Store__&#x200B;包选择&#x200B;__生成__&#x200B;按钮。
    1. 生成后，选择&#x200B;__更多__ > __复制__&#x200B;以激活AEM发布的身份验证服务密钥存储。
@@ -251,7 +251,7 @@ AEM的SAML配置是通过&#x200B;__Adobe Granite SAML 2.0身份验证处理程�
 
 ### Adobe Granite SAML 2.0身份验证处理程序OSGi配置{#configure-saml-2-0-authentication-handler-osgi-configuration}
 
-|                                   | OSGi属性 | 必填 | 值格式 | 默认值 | 描述 |
+|                                   | OSGi属性 | 必需 | 值格式 | 默认值 | 描述 |
 |-----------------------------------|-------------------------------|:--------:|:---------------------:|---------------------------|-------------|
 | 路径 | `path` | ✔ | 字符串数组 | `/` | 此身份验证处理程序用于的AEM路径。 |
 | IDP URL | `idpUrl` | ✔ | 字符串 |                           | 发送SAML身份验证请求的IDP URL。 |
@@ -333,9 +333,9 @@ AEM使用以下用户属性，这些属性可通过Adobe Granite SAML 2.0身份�
 
 ### 使用加密
 
-在[加密AuthnRequest和SAML断言](#encrypting-the-authnrequest-and-saml-assertion)时，需要以下属性： `useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`。 `keyStorePassword`包含密码，因此不能将该值存储在OSGi配置文件中，而是使用[机密配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hans#secret-configuration-values)插入
+在[加密AuthnRequest和SAML断言](#encrypting-the-authnrequest-and-saml-assertion)时，需要以下属性： `useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`。 `keyStorePassword`包含密码，因此不能将该值存储在OSGi配置文件中，而是使用[机密配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)插入
 
-+++或者，更新OSGi配置以使用加密
++++（可选）更新OSGi配置以使用加密
 
 1. 在IDE中打开`/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json`。
 1. 添加三个属性`useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`，如下所示。
@@ -366,7 +366,7 @@ AEM使用以下用户属性，这些属性可通过Adobe Granite SAML 2.0身份�
 
 + `useEncryption`设置为`true`
 + `spPrivateKeyAlias`包含SAML集成使用的私钥的密钥库条目别名。
-+ `keyStorePassword`包含包含`authentication-service`用户密钥库密码的[OSGi密码配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hans#secret-configuration-values)。
++ `keyStorePassword`包含包含[用户密钥库密码的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)OSGi密码配置变量`authentication-service`。
 
 +++
 
@@ -394,7 +394,7 @@ AEM使用以下用户属性，这些属性可通过Adobe Granite SAML 2.0身份�
 
 AEM Publish支持单个反向链接过滤器配置，因此请将SAML配置要求与任何现有配置合并。
 
-如果`allow.hosts` （或`allow.hosts.regex`）在不同环境之间不同，则可以使用特定属性定义每个环境（`config.publish.dev`、`config.publish.stage`和`config.publish.prod`）的OSGi配置。
+如果`config.publish.dev` （或`config.publish.stage`）在不同环境之间不同，则可以使用特定属性定义每个环境（`config.publish.prod`、`allow.hosts`和`allow.hosts.regex`）的OSGi配置。
 
 ## 配置跨源资源共享(CORS)
 
@@ -424,7 +424,7 @@ AEM Publish支持单个反向链接过滤器配置，因此请将SAML配置要�
 }
 ```
 
-如果`alloworigin`和`allowedpaths`在不同环境之间不同，则可以使用特定属性定义每个环境（`config.publish.dev`、`config.publish.stage`和`config.publish.prod`）的OSGi配置。
+如果`config.publish.dev`和`config.publish.stage`在不同环境之间不同，则可以使用特定属性定义每个环境（`config.publish.prod`、`alloworigin`和`allowedpaths`）的OSGi配置。
 
 ## 配置AEM Dispatcher以允许SAML HTTP POST
 
@@ -452,12 +452,12 @@ AEM Publish支持单个反向链接过滤器配置，因此请将SAML配置要�
 ### 如何为新环境中的SAML用户启用动态组成员资格
 
 为了显着提升新AEM as a Cloud Service环境中的群组评估性能，建议在新环境中激活动态群组成员资格功能。
-这也是激活数据同步时的必要步骤。 更多详细信息[此处](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier) 。
+这也是激活数据同步时的必要步骤。 更多详细信息[此处](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier) 。
 为此，请将以下属性添加到OSGI配置文件中：
 
 `/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
 
-使用此配置，用户和组将创建为[Oak外部用户](https://jackrabbit.apache.org/oak/docs/security/authentication/identitymanagement.html)。 在AEM中，外部用户和组具有由`[user name];[idp]`或`[group name];[idp]`组成的默认`rep:principalName`。
+使用此配置，用户和组将创建为[Oak外部用户](https://jackrabbit.apache.org/oak/docs/security/authentication/identitymanagement.html)。 在AEM中，外部用户和组具有由`rep:principalName`或`[user name];[idp]`组成的默认`[group name];[idp]`。
 请注意，访问控制列表(ACL)与用户或组的PrincipalName相关联。
 在现有部署中部署此配置时，如果先前的`identitySyncType`未指定或设置为`default`，则将创建新用户和组，并且必须将ACL应用于这些新用户和组。 请注意，外部组不能包含本地用户。 [Repoinit](https://sling.apache.org/documentation/bundles/repository-initialization.html)可用于为SAML外部组创建ACL，即使仅在用户执行登录时创建它们。
 为避免对ACL进行此重构，已实施标准[迁移功能](#automatic-migration-to-dynamic-group-membership-for-existing-environments)。
@@ -551,7 +551,7 @@ SAML身份验证处理程序在指定以下属性时创建本地用户： `"iden
 
 ### 如何配置自动迁移到动态组成员资格
 
-1. 在SAML OSGi配置文件`com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json`中启用属性`"identitySyncType": "idp_dynamic_simplified_id"`：
+1. 在SAML OSGi配置文件`"identitySyncType": "idp_dynamic_simplified_id"`中启用属性`com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json`：
 2. 使用工厂PID配置新的OSGi服务，其开始值为： `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~`。 例如，PID可以是： `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~myIdP`。 设置以下属性：
 
 ```
@@ -632,7 +632,7 @@ $ git push adobe saml-auth:develop
 </form>
 ```
 
-### Dispatcher配置
+### Dispatcher 配置
 
 HTTP GET和POST方法都需要客户端访问AEM的`/system/sling/login`端点，因此必须允许通过AEM Dispatcher访问它们。
 

@@ -3,7 +3,7 @@ title: 将可编辑的React容器组件添加到远程SPA
 description: 了解如何将可编辑的容器组件添加到远程SPA，以便AEM作者将组件拖放到其中。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7635
 thumbnail: kt-7635.jpeg
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
 duration: 306
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1112'
 ht-degree: 1%
@@ -42,7 +42,7 @@ ht-degree: 1%
 要将可编辑区域添加到“主页”视图，请执行以下操作：
 
 1. 打开并编辑`react-app/src/components/Home.js`
-1. 从`@adobe/aem-react-editable-components`导入`ResponsiveGrid`组件并将其添加到`Home`组件。
+1. 从`ResponsiveGrid`导入`@adobe/aem-react-editable-components`组件并将其添加到`Home`组件。
 1. 在`<ResponsiveGrid...>`组件上设置以下属性
    1. `pagePath = '/content/wknd-app/us/en/home'`
    1. `itemPath = 'root/responsivegrid'`
@@ -51,7 +51,7 @@ ht-degree: 1%
 
    1. `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
-   `itemPath`映射到在`Remote SPA Page` AEM模板中定义的`responsivegrid`节点，并在从`Remote SPA Page` AEM模板创建的新AEM页面上自动创建。
+   `itemPath`映射到在`responsivegrid` AEM模板中定义的`Remote SPA Page`节点，并在从`Remote SPA Page` AEM模板创建的新AEM页面上自动创建。
 
    更新`Home.js`以添加`<ResponsiveGrid...>`组件。
 
@@ -248,7 +248,7 @@ export default EditableImage;
     }
    ```
 
-1. 在`EditableImage.js`中导入`EditableImage.scss`
+1. 在`EditableImage.scss`中导入`EditableImage.js`
 
    ```javascript
    ...
@@ -266,7 +266,7 @@ export default EditableImage;
 新创建的`EditableText`和`EditableImage` React组件在SPA中引用，并根据AEM返回的JSON动态实例化。 要确保SPA可以使用这些组件，请在`Home.js`中为其创建import语句
 
 1. 在IDE中打开SPA项目
-1. 打开文件`src/Home.js`
+1. 打开文件 `src/Home.js`
 1. 添加`AEMText`和`AEMImage`的import语句
 
    ```javascript
@@ -364,7 +364,7 @@ AEM容器组件使用策略来指定其允许的组件。 使用SPA编辑器时�
    ![布局组件](./assets/spa-container-component/layout-components.png)
 
 1. 在AEM页面编辑器中&#x200B;__预览__&#x200B;您所做的更改
-1. 刷新在[http://localhost:3000](http://localhost:3000)上本地运行的WKND应用程序以查看所编写的更改！
+1. 刷新[http://localhost:3000](http://localhost:3000)上本地运行的WKND应用程序以查看所编写的更改！
 
    SPA中的![容器组件](./assets/spa-container-component/localhost-final.png)
 

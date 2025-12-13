@@ -7,12 +7,12 @@ feature: Migration
 jira: KT-6729, KT-14796
 thumbnail: 329680.jpg
 topic: Migration
-role: Architect, Developer
+role: Developer
 level: Beginner
 last-substantial-update: 2024-01-16T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
 duration: 712
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 2%
@@ -27,17 +27,17 @@ AEM as a Cloud Service中的批量导入工具允许管理员以安全高效的�
 
 >[!TAB 资产视图]
 
-了解如何使用[Asset视图](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html?lang=zh-Hans) [批量导入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html?lang=zh-Hans)将大量文件导入AEM Assets，以Dropbox作为示例云存储提供商，以实现清晰易用的集成过程。
+了解如何使用[Asset视图](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [批量导入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html)将大量文件导入AEM Assets，以Dropbox作为示例云存储提供商，以实现清晰易用的集成过程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3451969/?learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
 
 >[!TAB 管理员视图]
 
->[!VIDEO](https://video.tv.adobe.com/v/341379?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
 
 >[!TIP]
 >
-> 此视频中的输入源仅显示Azure Blob Storage和Amazon S3；但是，可用源会随着时间的推移而继续增长。 有关支持的输入源的完整列表，请参阅产品或[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=zh-Hans#bulk-upload)中的可用选项。
+> 此视频中的输入源仅显示Azure Blob Storage和Amazon S3；但是，可用源会随着时间的推移而继续增长。 有关支持的输入源的完整列表，请参阅产品或[文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload)中的可用选项。
 
 ## 计划批量导入
 

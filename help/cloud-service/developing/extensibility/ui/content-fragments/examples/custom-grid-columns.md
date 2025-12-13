@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
 exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
 duration: 198
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 此示例扩展到扩展点`contentFragmentGrid`以向内容片段控制台添加自定义列。
 
 | AEM UI已扩展 | 扩展点 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [内容片段控制台](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [网格列](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/) |
 
 ## 扩展示例
@@ -149,7 +149,7 @@ export default ExtensionRegistration;
 
 #### 内容片段数据
 
-向`getColumns()`中的`render(..)`方法传递了一个片段数组。 数组中的每个对象表示网格中的一行，并包含以下有关内容片段的元数据。 此元数据可用于网格中的常用自定义列。
+向`render(..)`中的`getColumns()`方法传递了一个片段数组。 数组中的每个对象表示网格中的一行，并包含以下有关内容片段的元数据。 此元数据可用于网格中的常用自定义列。
 
 
 ```javascript
@@ -161,7 +161,7 @@ render: async function (fragments) {
 }
 ```
 
-示例内容片段JSON，可用作`render(..)`方法中`fragments`参数的元素。
+示例内容片段JSON，可用作`fragments`方法中`render(..)`参数的元素。
 
 ```json
 {
@@ -208,7 +208,7 @@ render: async function (fragments) {
 
 >[!IMPORTANT]
 >
-> 确保将AEM创作实例配置为允许来自运行AppBuilder应用程序的源的[跨源请求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=zh-Hans)。 允许的源包括`https://localhost:9080`、AppBuilder暂存源和AppBuilder生产源。
+> 确保将AEM创作实例配置为允许来自运行AppBuilder应用程序的源的[跨源请求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html)。 允许的源包括`https://localhost:9080`、AppBuilder暂存源和AppBuilder生产源。
 >
 > 或者，扩展也可以调用自定义[AppBuilder操作](../../runtime-action.md)，以代表扩展向AEM Author发出请求。
 

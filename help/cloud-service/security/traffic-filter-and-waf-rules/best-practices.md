@@ -4,14 +4,15 @@ description: 了解在 AEM as a Cloud Service 中配置流量过滤规则（包�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18310
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
+exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 100%
 
@@ -134,4 +135,3 @@ ht-degree: 100%
 - [流量过滤规则（包括 WAF 规则）](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
 - [了解 AEM 中的 DoS/DDoS 预防](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/foundation/security/understanding-dos-and-prevention-approaches)
 - [使用流量过滤规则阻止 DoS 和 DDoS 攻击](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules)
-

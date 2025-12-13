@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
 duration: 1438
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 0%
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 用于生成数字图像的![Adobe I/O Runtime操作流程](./assets/digital-image-generation/flow.png){align="center"}
 
-1. 选择内容片段，然后单击[操作栏](#extension-registration)中扩展的`Generate Image`按钮以打开[模式](#modal)。
+1. 选择内容片段，然后单击`Generate Image`操作栏[中扩展的](#extension-registration)按钮以打开[模式](#modal)。
 1. [模式](#modal)显示使用[React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)生成的自定义输入表单。
 1. 提交表单会将用户提供的`Image Description`文本、选定的内容片段和AEM主机发送到[自定义Adobe I/O Runtime操作](#adobe-io-runtime-action)。
 1. [Adobe I/O Runtime操作](#adobe-io-runtime-action)验证输入。
@@ -53,7 +53,7 @@ ht-degree: 0%
 此示例扩展到扩展点`actionBar`以将自定义按钮添加到内容片段控制台。
 
 | AEM UI已扩展 | 扩展点 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [内容片段控制台](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [操作栏](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
 ## 扩展示例
@@ -146,7 +146,7 @@ ht-degree: 0%
 
 ### 延期注册
 
-映射到`index.html`路由的`ExtensionRegistration.js`是AEM扩展的入口点并定义：
+映射到`ExtensionRegistration.js`路由的`index.html`是AEM扩展的入口点并定义：
 
 1. 扩展按钮的位置显示在AEM创作体验中（`actionBar`或`headerMenu`）
 1. `getButtons()`函数中扩展按钮的定义
@@ -223,7 +223,7 @@ export default ExtensionRegistration;
 重要的是，与扩展中的AEM的任何交互都应委派给[AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，该操作是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中运行的单独无服务器进程。
 使用Adobe I/O Runtime操作与AEM进行通信，是为了避免跨源资源共享(CORS)连接问题。
 
-提交&#x200B;_生成图像_&#x200B;表单后，自定义`onSubmitHandler()`将调用Adobe I/O Runtime操作，传递图像描述、当前AEM主机（域）和用户的AEM访问令牌。 然后，该操作调用OpenAI的[图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) API以使用提交的图像描述生成图像。 接下来，使用[AEM上传](https://github.com/adobe/aem-upload)节点模块的`DirectBinaryUpload`类，它将生成的图像上传到AEM，最后使用[AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=zh-Hans)更新内容片段。
+提交&#x200B;_生成图像_&#x200B;表单后，自定义`onSubmitHandler()`将调用Adobe I/O Runtime操作，传递图像描述、当前AEM主机（域）和用户的AEM访问令牌。 然后，该操作调用OpenAI的[图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) API以使用提交的图像描述生成图像。 接下来，使用[AEM上传](https://github.com/adobe/aem-upload)节点模块的`DirectBinaryUpload`类，它将生成的图像上传到AEM，最后使用[AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)更新内容片段。
 
 当接收来自Adobe I/O Runtime操作的响应时，模式被更新以显示图像生成操作的结果。
 
@@ -482,7 +482,7 @@ export default function GenerateImageModal() {
 
 >[!NOTE]
 >
->在`buildAssetDetailsURL()`函数中，`aemAssetdetailsURL`变量值假定已启用[Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=zh-Hans#overview)。 如果您已禁用Unified Shell，则必须从变量值中删除`/ui#/aem`。
+>在`buildAssetDetailsURL()`函数中，`aemAssetdetailsURL`变量值假定已启用[Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview)。 如果您已禁用Unified Shell，则必须从变量值中删除`/ui#/aem`。
 
 
 ### Adobe I/O Runtime操作
@@ -595,7 +595,7 @@ exports.main = main;
 
 #### 图像生成
 
-此模块负责使用[openai](https://github.com/openai/openai-node)库调用OpenAI的[图像生成](https://beta.openai.com/docs/guides/images/image-generation-beta)端点。 要获取在`.env`文件中定义的OpenAI API密钥，它使用`params.OPENAI_API_KEY`。
+此模块负责使用[openai](https://beta.openai.com/docs/guides/images/image-generation-beta)库调用OpenAI的[图像生成](https://github.com/openai/openai-node)端点。 要获取在`.env`文件中定义的OpenAI API密钥，它使用`params.OPENAI_API_KEY`。
 
 + `src/aem-cf-console-admin-1/actions/generate-image/generate-image-using-openai.js`
 

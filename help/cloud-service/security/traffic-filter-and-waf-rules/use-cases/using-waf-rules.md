@@ -4,7 +4,7 @@ description: 了解如何在 AEM as a Cloud Service 中使用 Adobe 推荐的 We
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
@@ -12,8 +12,8 @@ badgeLicense: label="需要许可证" type="positive" before-title="true"
 jira: KT-18308
 thumbnail: null
 exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
-source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1376'
 ht-degree: 100%
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 > 使用 WAF 流量过滤规则需要额外的 **WAF-DDoS 防护**&#x200B;或&#x200B;**增强安全性（Enhanced Security）**&#x200B;许可证。Sites 和 Forms 客户可默认使用标准流量过滤规则。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469440/?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## 学习目标
 

@@ -4,15 +4,15 @@ description: 了解如何使用Java™ SQL API和出口端口从AEM as a Cloud S
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9356
 thumbnail: KT-9356.jpeg
 exl-id: ec9d37cb-70b6-4414-a92b-3b84b3f458ab
 duration: 124
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## OSGi配置
 
-由于密码不能存储在代码中，因此最好通过[机密OSGi配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hans#secret-configuration-values)、使用AIO CLI或Cloud Manager API设置来提供SQL连接的用户名和密码。
+由于密码不能存储在代码中，因此最好通过[机密OSGi配置变量](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)、使用AIO CLI或Cloud Manager API设置来提供SQL连接的用户名和密码。
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/com.adobe.aem.wknd.examples.core.connections.impl.MySqlExternalServiceImpl.cfg.json`
 
@@ -54,7 +54,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 
 ## 代码示例
 
-此Java™代码示例是通过[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)操作的以下Cloud Manager `portForwards`规则连接到外部SQL Server Web服务器的OSGi服务。
+此Java™代码示例是通过`portForwards`enableEnvironmentAdvancedNetworkingConfiguration[操作的以下Cloud Manager ](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)规则连接到外部SQL Server Web服务器的OSGi服务。
 
 ```json
 ...

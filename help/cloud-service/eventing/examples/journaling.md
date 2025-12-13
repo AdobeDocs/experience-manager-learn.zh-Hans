@@ -4,7 +4,7 @@ description: 了解如何从日志中检索初始的AEM事件集并浏览有关�
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 280
@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
-source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 1%
@@ -32,8 +32,8 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >本教程中的实时演示端点之前托管在[Glitch](https://glitch.com/)上。 自2025年7月起，Glitch已停止托管服务，无法再访问端点。
->&#x200B;>我们正在积极努力将演示迁移到替代平台。 教程内容保持准确，并且很快将提供更新的链接。
->&#x200B;>感谢您的理解和耐心。
+>我们正在积极努力将演示迁移到替代平台。 教程内容保持准确，并且很快将提供更新的链接。
+>感谢您的理解和耐心。
 
 使用您自己的应用程序，直到实时演示端点再次可用为止。
 

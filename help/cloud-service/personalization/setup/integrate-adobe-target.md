@@ -1,24 +1,24 @@
 ---
-title: 集成Adobe Target
+title: 集成 Adobe Target
 description: 了解如何将AEM as a Cloud Service与Adobe Target集成以管理和激活个性化内容（体验片段）作为选件。
 version: Experience Manager as a Cloud Service
 feature: Personalization, Integrations
 topic: Personalization, Integrations, Architecture
-role: Developer, Architect, Leader, Data Architect, User
+role: Developer, Leader, User
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18718
 thumbnail: null
-source-git-commit: 70665c019f63df1e736292ad24c47624a3a80d49
+exl-id: 86767e52-47ce-442c-a620-bc9e7ac2eaf3
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-
-# 集成Adobe Target
+# 集成 Adobe Target
 
 了解如何将AEM as a Cloud Service (AEMCS)与Adobe Target集成以在Adobe Target中激活个性化内容（如体验片段）作为选件。
 
@@ -55,7 +55,7 @@ ht-degree: 1%
 5. 在&#x200B;**选择产品配置文件**&#x200B;步骤中，选择&#x200B;**默认Workspace**，然后单击&#x200B;**保存配置的API**。\
    ![选择产品配置文件](../assets/setup/adc-select-product-profiles.png)
 
-6. 在左侧导航中，选择&#x200B;**OAuth服务器到服务器**&#x200B;并查看配置详细信息。 请注意客户端ID和客户端密码 — 您需要这两个值才能在AEM中配置IMS集成。
+6. 在左侧导航中，选择&#x200B;**OAuth服务器到服务器**并查看配置详细信息。 请注意客户端ID和客户端密码 — 您需要这两个值才能在AEM中配置IMS集成。
    ![OAuth服务器到服务器详细信息](../assets/setup/adc-oauth-server-to-server.png)
 
 ## 在AEM中为Target创建Adobe IMS配置
@@ -140,7 +140,7 @@ ht-degree: 1%
 
 ## 其他资源
 
-- [Target API概述](https://experienceleague.adobe.com/zh-hans/docs/target-dev/developer/api/target-api-overview)
-- [目标选件](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/offers/manage-content)
+- [Target API概述](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/target-api-overview)
+- [目标选件](https://experienceleague.adobe.com/en/docs/target/using/experiences/offers/manage-content)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/)
-- AEM中的[体验片段](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)
+- AEM中的[体验片段](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)

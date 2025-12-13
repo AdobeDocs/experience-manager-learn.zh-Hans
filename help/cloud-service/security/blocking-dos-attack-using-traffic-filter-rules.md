@@ -4,7 +4,7 @@ description: 了解如何在 AEM as a Cloud Service 中通过流量过滤规则�
 version: Experience Manager as a Cloud Service
 feature: Security, Operations
 topic: Security, Administration, Performance
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 436
@@ -12,8 +12,8 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 100%
 

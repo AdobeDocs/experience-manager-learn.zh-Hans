@@ -4,14 +4,15 @@ description: 了解如何通过在 AEM as a Cloud Service 中使用流量过滤�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18311
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
+exl-id: 8fa0488f-b901-49bf-afa5-5ed29242355f
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 100%
 
@@ -68,7 +69,7 @@ data:
       action: log   
 ```
 
-- 将更改提交并推送到 Cloud Manager Git 存储库。
+- 将更改内容提交并推送到 Cloud Manager Git 存储库。
 
 - 使用[先前创建的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 配置管道，将更改内容部署至 AEM 环境。
 
@@ -104,4 +105,3 @@ data:
 - 查看更新后的仪表板中的&#x200B;**已分析请求**、**已标记请求**&#x200B;以及&#x200B;**已标记请求详情**&#x200B;面板。对于匹配的 CDN 日志条目，它应显示每个条目的客户端 IP (cli_ip)、主机、URL、操作 (waf_action) 和规则名称 (waf_match) 的值。
 
   ![ELK 工具仪表板](../assets/how-to/elk-tool-dashboard.png)
-

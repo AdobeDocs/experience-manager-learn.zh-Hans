@@ -4,7 +4,7 @@ description: 了解如何在使用客户管理的CDN的AEM as a Cloud Service网
 version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,7 +12,7 @@ last-substantial-update: 2024-06-21T00:00:00Z
 jira: KT-15945
 thumbnail: KT-15945.jpeg
 exl-id: fa9ee14f-130e-491b-91b6-594ba47a7278
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 了解如何将自定义域名添加到使用&#x200B;**客户管理的CDN**&#x200B;的AEM as a Cloud Service网站。
 
-在本教程中，通过使用客户管理的CDN添加具有传输层安全性(TLS)的HTTPS可寻址自定义域名`wkndviaawscdn.enablementadobe.com`，增强了示例[AEM WKND](https://github.com/adobe/aem-guides-wknd)站点的品牌化。 在本教程中，AWS CloudFront用作客户管理的CDN，但任何CDN提供商都应与AEM as a Cloud Service兼容。
+在本教程中，通过使用客户管理的CDN添加具有传输层安全性(TLS)的HTTPS可寻址自定义域名[，增强了示例](https://github.com/adobe/aem-guides-wknd)AEM WKND`wkndviaawscdn.enablementadobe.com`站点的品牌化。 在本教程中，AWS CloudFront用作客户管理的CDN，但任何CDN提供商都应与AEM as a Cloud Service兼容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432561?quality=12&learn=on)
 
@@ -41,13 +41,13 @@ ht-degree: 0%
    - 客户CDN — 设置客户CDN并添加SSL证书和域详细信息，如AWS CloudFront、Azure CDN或Akamai。
    - 域名系统(DNS)托管服务 — 为您的自定义域添加DNS记录，如Azure DNS或AWS Route 53。
 - 访问[Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)以将HTTP标头验证CDN规则部署到AEM as a Cloud Service环境。
-- 示例[AEM WKND](https://github.com/adobe/aem-guides-wknd)站点已部署到[生产程序](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs)类型的AEM as a Cloud Service环境。
+- 示例[AEM WKND](https://github.com/adobe/aem-guides-wknd)站点已部署到[生产程序](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs)类型的AEM as a Cloud Service环境。
 
 如果您无权访问第三方服务，请&#x200B;_与您的安全或托管团队协作以完成步骤_。
 
 ## 生成SSL证书
 
->[!VIDEO](https://video.tv.adobe.com/v/3441503?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
 
 您有两个选项：
 
@@ -78,7 +78,7 @@ $ openssl crl2pkcs7 -nocrl -certfile <YOUR-SIGNED-CERT>.crt | openssl pkcs7 -pri
 
 Adobe Cloud Manager在单独的表单字段&#x200B;_中接受最终实体证书和证书链_，因此您必须从已签名的证书中提取最终实体证书和证书链。
 
-在本教程中，以`*.enablementadobe.com`域颁发的[DigitCert](https://www.digicert.com/)签名证书为例。 通过在文本编辑器中打开签名证书并复制`-----BEGIN CERTIFICATE-----`和`-----END CERTIFICATE-----`标记之间的内容来提取最终实体和证书链。
+在本教程中，以[域颁发的](https://www.digicert.com/)DigitCert`*.enablementadobe.com`签名证书为例。 通过在文本编辑器中打开签名证书并复制`-----BEGIN CERTIFICATE-----`和`-----END CERTIFICATE-----`标记之间的内容来提取最终实体和证书链。
 
 ## 设置客户管理的CDN
 
@@ -222,7 +222,7 @@ public class VerifyHeadersServlet extends SlingSafeMethodsServlet {
 
 ## 在X-AEM-Edge-Key HTTP标头中传递密钥
 
->[!VIDEO](https://video.tv.adobe.com/v/3445055?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3432567?quality=12&learn=on)
 
 更新客户CDN以在`X-AEM-Edge-Key` HTTP标头中传递密钥。 Adobe CDN使用该密钥来验证请求是否来自客户CDN，并将`Host`标头值转换为从客户CDN接收的`X-Forwarded-Host`的值。
 

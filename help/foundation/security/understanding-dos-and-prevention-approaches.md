@@ -4,15 +4,15 @@ description: 了解如何预防和减轻针对 AEM 的 DoS 和 DDoS 攻击。
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Development
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Beginner
 doc-type: Article
 duration: 75
 last-substantial-update: 2024-03-30T00:00:00Z
 jira: KT-15219
 exl-id: 1d7dd829-e235-4884-a13f-b6ea8f6b4b0b
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 100%
 

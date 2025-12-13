@@ -4,7 +4,7 @@ description: 了解如何在AEM as a Cloud Service中管理“产品配置文件
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Beginner
 doc-type: Article
 jira: KT-17429
@@ -12,7 +12,7 @@ thumbnail: KT-17429.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 3230a8e7-6342-4497-9163-1898700f29a4
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 有时，凭据（又称技术帐户用户）需要其他权限，如AEM资源的&#x200B;_创建、更新、删除_ (CUD)。 在这种情况下，您可以在AEM实例中更新&#x200B;_服务_&#x200B;用户组的权限。
 
-例如，当AEM Assets Author API调用收到非GET请求[&#128279;](../use-cases/invoke-api-using-oauth-s2s.md#403-error-for-non-get-requests)的403错误时，您可以在AEM实例中更新&#x200B;_AEM Assets Collaborator Users - Service_&#x200B;用户组的权限。
+例如，当AEM Assets Author API调用收到非GET请求[的](../use-cases/invoke-api-using-oauth-s2s.md#403-error-for-non-get-requests)403错误时，您可以在AEM实例中更新&#x200B;_AEM Assets Collaborator Users - Service_&#x200B;用户组的权限。
 
 使用权限用户界面或[Sling存储库初始化](https://sling.apache.org/documentation/bundles/repository-initialization.html)脚本，您可以在AEM实例中更新现成用户组的权限。
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 - 提交更改并将其推送到存储库。
 
-- 使用[Cloud Manager全栈管道](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)将更改部署到AEM实例。
+- 使用[Cloud Manager全栈管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)将更改部署到AEM实例。
 
 - 您还可以使用&#x200B;**权限**&#x200B;视图验证用户组的权限。 导航到AEM实例中的&#x200B;**工具** > **安全性** > **权限**。
 

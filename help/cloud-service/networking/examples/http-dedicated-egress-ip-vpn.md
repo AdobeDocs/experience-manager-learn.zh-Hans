@@ -4,15 +4,15 @@ description: 了解如何从AEM as a Cloud Service向为专用出口IP地址和V
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
 duration: 70
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ HTTP/HTTPS连接会自动使用专用出口IP地址或VPN代理出AEM as a Cloud
 
 >[!CAUTION]
 >
-> 此代码示例仅适用于[专用出口IP地址](../dedicated-egress-ip-address.md)和[VPN](../vpn.md)。 对于灵活端口出口[&#128279;](./http-on-non-standard-ports-flexible-port-egress.md)的非标准端口上的HTTP/HTTPS连接，提供了类似但不同的代码示例。
+> 此代码示例仅适用于[专用出口IP地址](../dedicated-egress-ip-address.md)和[VPN](../vpn.md)。 对于灵活端口出口[的非标准端口上的](./http-on-non-standard-ports-flexible-port-egress.md)HTTP/HTTPS连接，提供了类似但不同的代码示例。
 
 ## 代码示例
 

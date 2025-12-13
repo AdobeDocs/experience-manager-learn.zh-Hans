@@ -9,9 +9,9 @@ exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
 thumbnail: 328618.jpg
 last-substantial-update: 2022-07-20T00:00:00Z
 duration: 626
-source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
-workflow-type: ht
-source-wordcount: '266'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '265'
 ht-degree: 100%
 
 ---
@@ -27,7 +27,7 @@ AEM 的内容片段 GraphQL API 支持 Headless CMS 场景，使外部客户端�
 
 为克服这些挑战，GraphQL 提供了一种基于查询的 API，使客户端能够仅请求 AEM 提供所需内容，并通过单次 API 调用接收响应。
 
->[!VIDEO](https://video.tv.adobe.com/v/3452889?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/328618?quality=12&learn=on)
 
 本视频概述了 AEM 中实施的 GraphQL API。AEM 中的 GraphQL API 主要用于将 AEM 内容片段传递到作为 Headless 部署一部分的下游应用程序。
 
@@ -35,7 +35,7 @@ AEM 的内容片段 GraphQL API 支持 Headless CMS 场景，使外部客户端�
 >id="aemcloud_learn_headless_graphql_overview"
 >title="AEM Headless 快速入门 – GraphQL"
 >abstract="了解如何使用 GraphQL 投放内容片段。"
->additional-url="https://video.tv.adobe.com/v/3452889?captions=chi_hans" text="AEM 中的 GraphQL 概述"
+>additional-url="https://video.tv.adobe.com/v/328618" text="AEM 中的 GraphQL 概述"
 
 ## AEM Headless GraphQL 视频系列
 
@@ -56,4 +56,4 @@ AEM 的内容片段 GraphQL API 支持 Headless CMS 场景，使外部客户端�
 | 架构定义 | 结构化内容片段模型 | AEM 组件 |
 | 内容 | 内容片段 | AEM 组件 |
 | 内容探索 | 通过 GraphQL 查询 | 通过 AEM 页面 |
-| 传递格式 | GraphQL JSON | AEM ComponentExporter JSON |
+| 投放格式 | GraphQL JSON | AEM ComponentExporter JSON |

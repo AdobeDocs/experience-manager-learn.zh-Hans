@@ -4,7 +4,7 @@ description: 了解如何从AEM as a Cloud Service的CDN中清除或删除缓存
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,7 +12,7 @@ last-substantial-update: 2024-08-13T00:00:00Z
 jira: KT-15963
 thumbnail: KT-15963.jpeg
 exl-id: 5d81f6ee-a7df-470f-84b9-12374c878a1b
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 在本教程中，您将学习如何使用自助服务功能设置和使用Purge API Token清除示例[AEM WKND](https://github.com/adobe/aem-guides-wknd)站点的CDN缓存。
 
->[!VIDEO](https://video.tv.adobe.com/v/3436942?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3432948?quality=12&learn=on)
 
 ## 缓存失效与显式清除
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 清除API令牌是通过在AEM项目代码中配置CDN规则创建的。
 
-1. 从AEM项目的主`config`文件夹中打开`cdn.yaml`文件。 例如，[WKND项目的cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml)文件。
+1. 从AEM项目的主`cdn.yaml`文件夹中打开`config`文件。 例如，[WKND项目的cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml)文件。
 
 1. 将以下CDN规则添加到`cdn.yaml`文件：
 
@@ -86,7 +86,7 @@ data:
 1. 然后选择&#x200B;**配置**&#x200B;选项卡并单击&#x200B;**添加配置**&#x200B;按钮。
 
 1. 在&#x200B;**环境配置**&#x200B;对话框中，输入以下详细信息：
-   - **名称**：输入环境变量的名称。 它必须匹配`cdn.yaml`文件中的`purgeKey1`或`purgeKey2`值。
+   - **名称**：输入环境变量的名称。 它必须匹配`purgeKey1`文件中的`purgeKey2`或`cdn.yaml`值。
    - **值**：输入清除API令牌值。
    - 已应用&#x200B;**服务**：选择&#x200B;**全部**&#x200B;选项。
    - **类型**：选择&#x200B;**密钥**&#x200B;选项。

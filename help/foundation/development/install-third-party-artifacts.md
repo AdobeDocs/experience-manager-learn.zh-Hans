@@ -4,7 +4,7 @@ description: 了解如何在构建和部署AEM项目时安装公共Maven存储�
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: OSGI
 topic: Development
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,7 +12,7 @@ last-substantial-update: 2024-09-13T00:00:00Z
 jira: KT-16207
 thumbnail: KT-16207.jpeg
 exl-id: 0cec14b3-4be5-4666-a36c-968ea2fc634f
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 - [OSGi捆绑包](https://www.osgi.org/resources/architecture/)： OSGi捆绑包是一个Java™存档文件，它包含Java类、资源以及描述捆绑包及其依赖项的清单。
 - [Java jar](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html)：包含Java类和资源的Java™存档文件。
-- [包](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages)：包是包含文件系统序列化形式的存储库内容的zip文件。
+- [包](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages)：包是包含文件系统序列化形式的存储库内容的zip文件。
 
 ## 标准方案
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 ## 罕见场景
 
-有时，在生成和部署AEM项目时，您可能需要安装第三方捆绑包、jar或包&#x200B;**，在[Maven中央存储库](https://mvnrepository.com/)或[Adobe公共存储库](https://repo.adobe.com/index.html)中，这些捆绑包或jar或包**&#x200B;不可用。
+有时，在生成和部署AEM项目时，您可能需要安装第三方捆绑包、jar或包&#x200B;**，在** Maven中央存储库[或](https://mvnrepository.com/)Adobe公共存储库[中，这些捆绑包或jar或包](https://repo.adobe.com/index.html)不可用。
 
 原因可能是：
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 要学习本教程，您需要：
 
-- [本地AEM开发环境](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview)或[快速开发环境(RDE)](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/rde/overview)安装程序。
+- [本地AEM开发环境](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview)或[快速开发环境(RDE)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview)安装程序。
 
 - [AEM WKND项目](https://github.com/adobe/aem-guides-wknd) _用于添加第三方包或jar或包_&#x200B;并验证更改。
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 ## 在AEM项目中安装第三方捆绑包{#install-third-party-bundle}
 
-让我们将公共Maven存储库&#x200B;_中不可用的_&#x200B;演示OSGi [my-example-bundle](./assets/install-third-party-articafcts/my-example-bundle.zip)安装并用于AEM WKND项目。
+让我们将公共Maven存储库[中不可用的](./assets/install-third-party-articafcts/my-example-bundle.zip)演示OSGi _my-example-bundle_&#x200B;安装并用于AEM WKND项目。
 
 **my-example-bundle**&#x200B;导出`HelloWorldService` OSGi服务，其`sayHello()`方法返回`Hello Earth!`消息。
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 ### 使用捆绑包中的服务
 
-让我们使用AEM WKND项目中`my-example-bundle`的`HelloWorldService` OSGi服务。
+让我们使用AEM WKND项目中`HelloWorldService`的`my-example-bundle` OSGi服务。
 
 - 在AEM WKND项目的`core`模块中，创建`SayHello.java` Sling servlet @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet`。
 
@@ -155,7 +155,7 @@ ht-degree: 0%
 
   此处：
    - `system`范围表示不应在公共Maven存储库中查找依赖项。
-   - `systemPath`是AEM WKND项目的`all`模块中`my-example-bundle`文件的路径。
+   - `systemPath`是AEM WKND项目的`my-example-bundle`模块中`all`文件的路径。
    - `${maven.multiModuleProjectDirectory}`是一个指向多模块项目根目录的Maven属性。
 
 - 在AEM WKND项目的`core`模块的`core/pom.xml`文件中，将`my-example-bundle`添加为依赖项。
@@ -176,7 +176,7 @@ ht-degree: 0%
   $ mvn clean install -PautoInstallPackage
   ```
 
-- 通过访问浏览器中的URL `http://localhost:4502/bin/sayhello`，验证`SayHello` servlet是否按预期工作。
+- 通过访问浏览器中的URL `SayHello`，验证`http://localhost:4502/bin/sayhello` servlet是否按预期工作。
 
 - 将以上更改提交到AEM WKND项目的存储库。 然后通过运行Cloud Manager管道来验证RDE或AEM环境中的更改。
 
@@ -198,7 +198,7 @@ AEM WKND项目的[tutorial/install-3rd-party-bundle](https://github.com/adobe/ae
 
 让我们安装并使用演示[my-example-jar](./assets/install-third-party-articafcts/my-example-jar.zip)，该演示&#x200B;_在公共Maven存储库_&#x200B;中不可用于AEM WKND项目。
 
-**my-example-jar**&#x200B;是一个Java jar文件，该文件包含带有`sayHello()`方法的`MyHelloWorldService`类，并返回`Hello World!`消息。
+**my-example-jar**&#x200B;是一个Java jar文件，该文件包含带有`MyHelloWorldService`方法的`sayHello()`类，并返回`Hello World!`消息。
 
 有关详细信息，请参阅[my-example-jar.zip](./assets/install-third-party-articafcts/my-example-jar.zip)文件中的README.md文件。
 
@@ -216,7 +216,7 @@ AEM WKND项目的[tutorial/install-3rd-party-bundle](https://github.com/adobe/ae
 
 ### 使用jar中的服务
 
-让我们在AEM WKND项目中使用`my-example-jar`中的`MyHelloWorldService`。
+让我们在AEM WKND项目中使用`MyHelloWorldService`中的`my-example-jar`。
 
 - 在AEM WKND项目的`core`模块中，创建`SayHello.java` Sling servlet @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet`。
 
@@ -275,7 +275,7 @@ AEM WKND项目的[tutorial/install-3rd-party-bundle](https://github.com/adobe/ae
 
   此处：
    - `system`范围表示不应在公共Maven存储库中查找依赖项。
-   - `systemPath`是AEM WKND项目的`all`模块中`my-example-jar`文件的路径。
+   - `systemPath`是AEM WKND项目的`my-example-jar`模块中`all`文件的路径。
    - `${maven.multiModuleProjectDirectory}`是一个指向多模块项目根目录的Maven属性。
 
 - 在AEM WKND项目的`core`模块的`core/pom.xml`文件中，进行两项更改：
@@ -325,7 +325,7 @@ AEM WKND项目的[tutorial/install-3rd-party-bundle](https://github.com/adobe/ae
   $ mvn clean install -PautoInstallPackage
   ```
 
-- 通过访问浏览器中的URL `http://localhost:4502/bin/sayhello`，验证`SayHello` servlet是否按预期工作。
+- 通过访问浏览器中的URL `SayHello`，验证`http://localhost:4502/bin/sayhello` servlet是否按预期工作。
 
 - 将以上更改提交到AEM WKND项目的存储库。 然后通过运行Cloud Manager管道来验证RDE或AEM环境中的更改。
 
@@ -339,7 +339,7 @@ AEM WKND项目的[tutorial/install-3rd-party-jar](https://github.com/adobe/aem-g
 
 可以按照以下步骤在AEM项目中安装非OSGi捆绑包并且可能在公共Maven存储库中提供的Java Jar：
 
-- 更新核心模块`pom.xml`文件中的`bnd-maven-plugin`配置，以将Java jar作为内联资源包含在正在生成的OSGi包中。
+- 更新核心模块`bnd-maven-plugin`文件中的`pom.xml`配置，以将Java jar作为内联资源包含在正在生成的OSGi包中。
 
 仅当Java jar在公共Maven存储库中不可用时，才需要执行以下步骤：
 
@@ -361,7 +361,7 @@ ACS AEM Commons包在公共Maven存储库中提供。 请参阅[将ACS AEM Commo
 
 - 从POM文件中注释或删除ACS AEM Commons版本依赖项。 请参阅[将ACS AEM Commons添加到您的AEM Maven项目](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html)以确定依赖关系。
 
-- 将[ACS AEM Commons存储库](https://github.com/Adobe-Consulting-Services/acs-aem-commons)的`master`分支克隆到本地计算机。
+- 将`master`ACS AEM Commons存储库[的](https://github.com/Adobe-Consulting-Services/acs-aem-commons)分支克隆到本地计算机。
 
 - 使用以下命令构建ACS AEM Commons SNAPSHOT版本：
 

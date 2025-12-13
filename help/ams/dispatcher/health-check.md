@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 69b4e469-52cc-441b-b6e5-2fe7ef18da90
 duration: 247
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 0%
@@ -87,7 +87,7 @@ ht-degree: 0%
 ```
 Listen 81
 <VirtualHost *:81>
-    ServerName	"health"
+    ServerName "health"
     ...SNIP...
     ScriptAlias /health/ "/var/www/cgi-bin/health/"
 </VirtualHost>
@@ -101,7 +101,7 @@ Listen 81
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_author.vhost`
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_publish.vhost`
 
-这些文件名为`000_`作为前缀。  它最初配置为使用与活动站点相同的域名。  其目的是让此文件在运行状况检查检测到某个AEM后端存在问题时启用。  然后提供一个错误页面，而不是一个没有页面的503 HTTP响应代码。  它将从普通`.vhost`文件窃取流量，因为它在共享同一`ServerName`或`ServerAlias`时，在该`.vhost`文件之前加载。  导致发往特定域的页面转到不正常的主机，而不是正常流量流经的默认主机。
+这些文件名为`000_`作为前缀。  它最初配置为使用与活动站点相同的域名。  其目的是让此文件在运行状况检查检测到某个AEM后端存在问题时启用。  然后提供一个错误页面，而不是一个没有页面的503 HTTP响应代码。  它将从普通`.vhost`文件窃取流量，因为它在共享同一`.vhost`或`ServerName`时，在该`ServerAlias`文件之前加载。  导致发往特定域的页面转到不正常的主机，而不是正常流量流经的默认主机。
 
 运行运行状况检查脚本时，它们将注销其当前运行状况状态。  每分钟有一次，服务器上会有一个cronjob在日志中查找不健康的条目。  如果检测到创作AEM实例不正常，则会启用符号链接：
 
@@ -128,7 +128,8 @@ RELOAD_MODE='author'
 ```
 
 有效选项：
-- 作者
+
+- author
    - 这是默认选项。
    - 这会在作者不正常时为其设置维护页面
 - 发布
@@ -142,27 +143,27 @@ RELOAD_MODE='author'
 
 ```
 <VirtualHost *:80>
-	ServerName	unhealthyauthor
-	ServerAlias	${AUTHOR_DEFAULT_HOSTNAME}
-	ErrorDocument	503 /error.html
-	DocumentRoot	/mnt/var/www/default
-	<Directory />
-		Options FollowSymLinks
-		AllowOverride None
-	</Directory>
-	<Directory "/mnt/var/www/default">
-		AllowOverride None
-		Require all granted
-	</Directory>
-	<IfModule mod_headers.c>
-		Header always add X-Dispatcher ${DISP_ID}
-		Header always add X-Vhost "unhealthy-author"
-	</IfModule>
-	<IfModule mod_rewrite.c>
-		ReWriteEngine   on
-		RewriteCond %{REQUEST_URI} !^/error.html$
-		RewriteRule ^/* /error.html [R=503,L,NC]
-	</IfModule>
+    ServerName    unhealthyauthor
+    ServerAlias    ${AUTHOR_DEFAULT_HOSTNAME}
+    ErrorDocument    503 /error.html
+    DocumentRoot    /mnt/var/www/default
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+    <Directory "/mnt/var/www/default">
+        AllowOverride None
+        Require all granted
+    </Directory>
+    <IfModule mod_headers.c>
+        Header always add X-Dispatcher ${DISP_ID}
+        Header always add X-Vhost "unhealthy-author"
+    </IfModule>
+    <IfModule mod_rewrite.c>
+        ReWriteEngine   on
+        RewriteCond %{REQUEST_URI} !^/error.html$
+        RewriteRule ^/* /error.html [R=503,L,NC]
+    </IfModule>
 </VirtualHost>
 ```
 

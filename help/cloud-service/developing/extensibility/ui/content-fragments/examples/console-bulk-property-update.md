@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 duration: 1362
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 批量属性更新示例扩展
 
->[!VIDEO](https://video.tv.adobe.com/v/3454469?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
 此示例AEM内容片段控制台扩展是一个[操作栏](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/)扩展，用于将内容片段属性批量更新为公共值。
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 此示例扩展到扩展点`actionBar`以将自定义按钮添加到内容片段控制台。
 
 | AEM UI已扩展 | 扩展点 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [内容片段控制台](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [操作栏](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 ### 延期注册
 
-映射到`index.html`路由的`ExtensionRegistration.js`是AEM扩展的入口点并定义：
+映射到`ExtensionRegistration.js`路由的`index.html`是AEM扩展的入口点并定义：
 
 1. 扩展按钮的位置显示在AEM创作体验中（`actionBar`或`headerMenu`）
 1. `getButtons()`函数中扩展按钮的定义
@@ -171,7 +171,7 @@ export default ExtensionRegistration;
 重要的是，与扩展中的AEM的任何交互都应委派给[AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，该操作是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中运行的单独无服务器进程。
 使用Adobe I/O Runtime操作与AEM通信是为了避免跨源资源共享(CORS)连接问题。
 
-提交批量属性更新表单后，自定义`onSubmitHandler()`将调用Adobe I/O Runtime操作，传递当前AEM主机（域）和用户的AEM访问令牌，从而调用[AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=zh-Hans)来更新内容片段。
+提交批量属性更新表单后，自定义`onSubmitHandler()`将调用Adobe I/O Runtime操作，传递当前AEM主机（域）和用户的AEM访问令牌，从而调用[AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)来更新内容片段。
 
 当收到来自Adobe I/O Runtime操作的响应时，模式会更新以显示批量属性更新操作的结果。
 

@@ -3,7 +3,7 @@ title: 将可编辑组件添加到远程SPA的动态路由
 description: 了解如何将可编辑的组件添加到远程SPA中的动态路由。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7636
 thumbnail: kt-7636.jpeg
@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
 duration: 202
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 在前两章中，我们将可编辑的组件内容从SPA的“主页”视图映射到AEM中位于`/content/wknd-app/us/en/`的相应远程SPA根页面。
 
-为SPA动态路由的可编辑组件定义映射类似，但是我们必须在路由实例与AEM页面之间制定1:1映射方案。
+为SPA动态路由的可编辑组件定义映射类似，但是我们必须在路由的实例与AEM页面之间制定1:1映射方案。
 
 在本教程中，我们使用WKND冒险内容片段的名称（该路径的最后一个区段），并将其映射到`/content/wknd-app/us/en/adventure`下的简单路径。
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ## 远程SPA映射
 
-通过在[BootstrapSPA](./spa-bootstrap.md)中完成的`setupProxy`配置配置了离开远程SPA的请求的映射。
+通过在`setupProxy`BootstrapSPA[中完成的](./spa-bootstrap.md)配置配置了离开远程SPA的请求的映射。
 
 ## SPA编辑器映射
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 ## 更新WKND应用程序
 
-让我们将在[最后一章](./spa-container-component.md)中创建的`<ResponsiveGrid...>`组件放入我们的`AdventureDetail` SPA组件中，创建一个可编辑的容器。
+让我们将在`<ResponsiveGrid...>`最后一章[中创建的](./spa-container-component.md)组件放入我们的`AdventureDetail` SPA组件中，创建一个可编辑的容器。
 
 ### 放置ResponsiveGrid SPA组件
 

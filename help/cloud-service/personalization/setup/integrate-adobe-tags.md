@@ -4,19 +4,19 @@ description: 了解如何将AEM as a Cloud Service与Adobe Experience Platform�
 version: Experience Manager as a Cloud Service
 feature: Personalization, Integrations
 topic: Personalization, Integrations, Architecture, Content Management
-role: Developer, Architect, Leader, Data Architect, User
+role: Developer, Leader, User
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18719
 thumbnail: null
-source-git-commit: 70665c019f63df1e736292ad24c47624a3a80d49
+exl-id: 71cfb9f5-57d9-423c-bd2a-f6940cc0b4db
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 1%
 
 ---
-
 
 # 在Adobe Experience Platform中集成标记
 
@@ -55,7 +55,7 @@ ht-degree: 1%
 4. 打开新资产。 **Core**&#x200B;扩展应已包含。 稍后，您将在设置试验用例时添加&#x200B;**Web SDK**&#x200B;扩展，因为它需要其他配置，如&#x200B;**数据流ID**。\
    ![Adobe Tags核心扩展](../assets/setup/adobe-tags-core-extension.png)
 
-5. 转到&#x200B;**发布流**&#x200B;并单击&#x200B;**添加库**&#x200B;以创建部署库，从而发布Tags属性。
+5. 转到&#x200B;**发布流**&#x200B;并单击&#x200B;**添加库**以创建部署库，从而发布Tags属性。
    ![Adobe标记发布流](../assets/setup/adobe-tags-publishing-flow.png)
 
 6. 在&#x200B;**创建库**&#x200B;对话框中，提供：
@@ -127,5 +127,5 @@ ht-degree: 1%
 
 ## 其他资源
 
-- [Adobe Experience Platform Debugger概述](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/debugger/home)
+- [Adobe Experience Platform Debugger概述](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
 - [Tags 概述](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/tags/home)

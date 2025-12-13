@@ -4,7 +4,7 @@ description: 了解如何使用Adobe I/O Runtime操作接收AEM事件并查看�
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 457
@@ -12,10 +12,10 @@ last-substantial-update: 2024-01-29T00:00:00Z
 jira: KT-14878
 thumbnail: KT-14878.jpeg
 exl-id: b1c127a8-24e7-4521-b535-60589a1391bf
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -137,7 +137,7 @@ https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 
 - 在Adobe Developer Console中，导航到在上一步中创建的[项目](https://developer.adobe.com/console/projects)，然后单击以将其打开。 选择`Stage`工作区，这是部署操作的位置。
 
-- 单击“添加服务”**&#x200B;**&#x200B;按钮并选择&#x200B;**API**&#x200B;选项。 在&#x200B;**添加API**&#x200B;模式中，选择&#x200B;**Adobe服务** > **I/O管理API**，然后单击&#x200B;**下一步**，执行其他配置步骤并单击&#x200B;**保存配置的API**。
+- 单击“添加服务”****&#x200B;按钮并选择&#x200B;**API**&#x200B;选项。 在&#x200B;**添加API**&#x200B;模式中，选择&#x200B;**Adobe服务** > **I/O管理API**，然后单击&#x200B;**下一步**，执行其他配置步骤并单击&#x200B;**保存配置的API**。
 
   ![添加服务 — 配置项目](../assets/examples/runtime-action/add-io-management-api.png)
 

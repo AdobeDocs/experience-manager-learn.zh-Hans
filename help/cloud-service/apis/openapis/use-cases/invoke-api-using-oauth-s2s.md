@@ -4,7 +4,7 @@ description: 了解如何使用OAuth服务器到服务器身份验证从自定�
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Beginner
 doc-type: Tutorial
 jira: KT-16516
@@ -12,7 +12,7 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 57da04874cfb37dcccbf605c65fbcba8f12849fb
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 2%
@@ -152,7 +152,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 1. 展开&#x200B;_元数据_&#x200B;部分，然后单击&#x200B;**交付指定资源的元数据**&#x200B;选项。
 
-1. 在右窗格中，单击&#x200B;**尝试它**&#x200B;按钮。
+1. 在右窗格中，单击&#x200B;**尝试它**按钮。
    ![API文档](../assets/s2s/api-documentation.png)
 
 1. 输入以下值：
@@ -417,7 +417,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
    ...
    ```
 
-## 在幕后工作
+## 深入了解
 
 成功调用API后，将在AEM创作服务中创建表示ADC项目的OAuth服务器到服务器凭据的用户，以及匹配产品配置文件和服务配置的用户组。 _技术帐户用户_&#x200B;与产品配置文件和&#x200B;_服务_&#x200B;用户组相关联，该用户组具有&#x200B;_读取_&#x200B;资产元数据的必要权限。
 

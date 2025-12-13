@@ -4,7 +4,7 @@ description: 了解Adobe提供的AEM Cloud Service CDN日志分析工具，以�
 version: Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Development
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Beginner
 doc-type: Tutorial
 duration: 219
@@ -12,10 +12,10 @@ last-substantial-update: 2024-05-17T00:00:00Z
 jira: KT-15505
 thumbnail: KT-15505.jpeg
 exl-id: 830c2486-099b-454f-bc07-6bf36e81ac8d
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '442'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 了解Adobe提供的&#x200B;_AEM Cloud Service CDN日志分析工具_，以及它如何帮助您深入了解您的CDN性能和AEM实施。
  
->[!VIDEO](https://video.tv.adobe.com/v/3446115?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3429177?quality=12&learn=on)
 
 ## 概述
 
@@ -44,11 +44,11 @@ ht-degree: 0%
 
 为了快速启动日志分析，Adobe为Splunk和ELK栈栈提供了预建的仪表板。
 
-- **CDN缓存命中率**：按HIT、PASS和MISS状态提供对缓存命中率和请求总数的见解。 它还提供顶级HIT、PASS和MISS URL。
+- **CDN 缓存命中率**：提供总缓存命中率以及按 HIT、PASS 和 MISS 状态统计的请求总数洞察。它还提供顶级HIT、PASS和MISS URL。
 
   ![CDN缓存命中率](assets/CHR-dashboard.png)
 
-- **CDN流量仪表板**：通过CDN和原始请求率、4xx和5xx错误率以及非缓存请求提供流量分析。 它还为每个客户端IP地址提供每秒最大CND和源请求数，以及优化CDN配置的更多见解。
+- **CDN 流量仪表板**：通过 CDN 和源站请求率、4xx 和 5xx 错误率以及非缓存请求，提供流量洞察。它还为每个客户端IP地址提供每秒最大CND和源请求数，以及优化CDN配置的更多见解。
 
   ![CDN流量仪表板](assets/Traffic-dashboard.png)
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
   ![WAF信息板](assets/WAF-Dashboard.png)
 
-## Splunk集成
+## Splunk 集成
 
 对于利用[Splunk](https://www.splunk.com/en_us/products/observability-cloud.html)且已启用AEMCS日志转发到其Splunk实例的组织，可以快速导入预建仪表板。 这种设置有助于加速日志分析，提供可操作的见解以优化AEM实施并减轻DOS攻击等安全威胁。
 

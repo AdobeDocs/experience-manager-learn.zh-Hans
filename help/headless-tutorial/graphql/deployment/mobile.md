@@ -4,15 +4,15 @@ description: 了解移动AEM Headless部署的部署注意事项。
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10796
 thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
 duration: 31
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '152'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ AEM Headless移动部署是iOS、Android™等的原生移动应用程序。 该
 
 必须为移动应用程序部署就地以下部署配置。
 
-| 移动设备应用程序连接到→ | AEM 作者 | AEM 发布 | AEM预览 |
+| 移动设备应用程序连接到→ | AEM 作者 | AEM Publish | AEM预览 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher筛选器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨源资源共享(CORS) | ✘ | ✘ | ✘ |

@@ -4,14 +4,14 @@ description: 了解如何使用Adobe Target在AEM as a Cloud Service (AEMCS)中�
 version: Experience Manager as a Cloud Service
 feature: Personalization
 topic: Personalization,Content Management, Integrations
-role: Developer, Architect, Leader
+role: Developer, Leader
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18720
 thumbnail: KT-18720.jpeg
 exl-id: c8a4f0bf-1f80-4494-abe6-9fbc138e4039
-source-git-commit: 5b91e7409ff0735bab40d78ad98410ac2ab006ed
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1493'
 ht-degree: 1%
@@ -256,7 +256,7 @@ A/B测试设置过程包括创建和配置试验的六个主要步骤：
 
 ## 其他资源
 
-- [A/B测试概述](https://experienceleague.adobe.com/zh-hans/docs/target/using/activities/abtest/test-ab)
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/home)
-- [数据流概述](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/datastreams/overview)
-- [可视化体验编辑器(VEC)](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/vec/visual-experience-composer)
+- [A/B测试概述](https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
+- [数据流概述](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
+- [可视化体验编辑器(VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)

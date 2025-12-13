@@ -4,7 +4,7 @@ description: 了解如何从 AEM 向需要相互传输层安全性 (mTLS) 身份
 feature: Security
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Experienced
 jira: KT-13881
 thumbnail: KT-13881.png
@@ -12,8 +12,8 @@ doc-type: Article
 last-substantial-update: 2023-10-10T00:00:00Z
 exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
 duration: 495
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 了解如何从 AEM 向需要相互传输层安全性 (mTLS) 身份验证的 Web API 进行 HTTPS 调用。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447869?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
 
 mTLS 或双向 TLS 身份验证通过要求&#x200B;**客户端和服务器相互验证**&#x200B;来增强 TLS 协议的安全性。这种身份验证是通过使用数字证书来完成的。它通常用于对安全性和身份验证要求极高的场景。
 
@@ -122,7 +122,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
    ![已导入 AEM 私钥和证书](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
 
-如果 API 提供商使用的是自签名 CA 证书，请将收到的证书导入 AEM 的 TrustStore 中，并按照[这里的](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html?lang=zh-Hans#httpclient-and-load-aem-truststore-material)步骤进行操作。
+如果 API 提供商使用的是自签名 CA 证书，请将收到的证书导入 AEM 的 TrustStore 中，并按照[这里的](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html#httpclient-and-load-aem-truststore-material)步骤进行操作。
 
 同样，如果 AEM 正在使用自签名 CA 证书，请求 API 提供程序导入它。
 
@@ -217,7 +217,7 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 - 如果 API 提供程序正在使用自签名 CA 证书，那么获取全局 AEM TrustStore，`getAEMTrustStore(...)` 方法可以做到这一点。
 - 创建一个 `SSLContextBuilder`的对象，查看 Java™ [API 详情](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html)。
 - 使用 `loadKeyMaterial(final KeyStore keystore,final char[] keyPassword)` 方法将用户的 AEM KeyStore 加载到 `SSLContextBuilder` 中。
-- 密钥库密码是在创建密钥库时设置的密码，应存储在 OSGi 配置中，请参阅[秘密配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hans#secret-configuration-values)。
+- 密钥库密码是在创建密钥库时设置的密码，应存储在 OSGi 配置中，请参阅[秘密配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)。
 
 ## 避免更改 JVM 密钥库
 

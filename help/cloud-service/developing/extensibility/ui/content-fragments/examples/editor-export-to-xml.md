@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
 duration: 307
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 1%
@@ -32,7 +32,7 @@ ht-degree: 1%
 此示例扩展到扩展点`headerBar`以将自定义按钮添加到内容片段编辑器。
 
 | AEM UI已扩展 | 扩展点 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [内容片段编辑器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [标题菜单](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
 
 ## 扩展示例
@@ -148,7 +148,7 @@ export default ExtensionRegistration;
 
 #### 内容片段数据
 
-可以使用`guestConnection.host.contentFragment`对象上的`getContentFragment()`方法检索活动内容片段。
+可以使用`getContentFragment()`对象上的`guestConnection.host.contentFragment`方法检索活动内容片段。
 
 ```javascript
 const contentFragment = await guestConnection.host.contentFragment.getContentFragment();

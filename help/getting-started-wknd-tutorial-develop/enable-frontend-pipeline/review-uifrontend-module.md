@@ -4,7 +4,7 @@ description: 查看基于 maven 的全栈 AEM Sites 项目的前端开发、部�
 version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
@@ -13,8 +13,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
 duration: 364
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 100%
 
@@ -56,14 +56,14 @@ ht-degree: 100%
 
 在开发阶段，通过更新 `ui.frontend/src/main/webpack` 文件夹中的 CSS、JS 文件进行前端更改，例如确定样式和重新品牌化等。然后在构建期间，[webpack](https://webpack.js.org/) module-bundler 和 maven 插件将这些文件转换为 `ui.apps` 模块下的优化 AEM 客户端库。
 
-[__在 Cloud Manager 中运行全栈__&#x200B;管道时](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=zh-Hans)，前端更改被部署到 AEM as a Cloud Service 环境。
+[__在 Cloud Manager 中运行全栈__&#x200B;管道时](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)，前端更改被部署到 AEM as a Cloud Service 环境。
 
 前端资源通过以 `/etc.clientlibs/` 开头的 URI 路径被传递到网页浏览器，通常被缓存在 AEM Dispatcher 和内容传递网络上。
 
 
 >[!NOTE]
 >
-> 与此相似，在 __AEM 快速网站创建历程__&#x200B;中，[前端更改](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html?lang=zh-Hans)通过运行&#x200B;__前端__&#x200B;管道被部署到 AEM as a Cloud Service 环境，请参阅[设置您的管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html?lang=zh-Hans)
+> 与此相似，在 __AEM 快速网站创建历程__&#x200B;中，[前端更改](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html)通过运行&#x200B;__前端__&#x200B;管道被部署到 AEM as a Cloud Service 环境，请参阅[设置您的管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html)
 
 ### 查看 WKND 网站项目中的 webpack 配置 {#development-frontend-webpack-clientlib}
 
@@ -134,7 +134,7 @@ ht-degree: 100%
 
 ### 部署到 AEM as a Cloud Service {#deployment-frontend-aemaacs}
 
-[__全栈__&#x200B;管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=zh-Hans&#full-stack-pipeline)将这些更改部署到 AEM as a Cloud Service 环境。
+[__全栈__&#x200B;管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#full-stack-pipeline)将这些更改部署到 AEM as a Cloud Service 环境。
 
 
 ### 从 AEM as a Cloud Service 交付 {#delivery-frontend-aemaacs}
