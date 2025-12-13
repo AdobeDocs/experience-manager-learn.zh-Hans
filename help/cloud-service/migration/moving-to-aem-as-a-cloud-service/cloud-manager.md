@@ -21,7 +21,7 @@ ht-degree: 2%
 
 了解Cloud Manager for AEM as a Cloud Service，以及它与Adobe Manage Services (AMS)上适用于AEM的Cloud Manager的区别。
 
->[!VIDEO](https://video.tv.adobe.com/v/336961?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453905?captions=chi_hans&quality=12&learn=on)
 
 ## 实践练习
 

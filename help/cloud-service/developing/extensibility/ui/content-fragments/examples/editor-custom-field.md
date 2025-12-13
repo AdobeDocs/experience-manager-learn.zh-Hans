@@ -22,7 +22,7 @@ ht-degree: 1%
 
 了解如何在AEM内容片段编辑器中创建自定义字段。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437644?captions=chi_hans&learn=on)
 
 AEM UI扩展应使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)框架进行开发，因为这与AEM的其他部分保持一致的外观，并且还有大量预建功能，从而缩短了开发时间。
 

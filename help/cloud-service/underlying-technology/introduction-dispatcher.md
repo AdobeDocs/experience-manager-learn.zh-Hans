@@ -22,7 +22,7 @@ ht-degree: 100%
 
 简单介绍作为 AEM 架构一部分的 [!DNL dispatcher] 的功能和特性。
 
->[!VIDEO](https://video.tv.adobe.com/v/32029?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36703?captions=chi_hans&quality=12&learn=on)
 
 ## 其他资源 {#additional-resources}
 

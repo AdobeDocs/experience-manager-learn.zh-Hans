@@ -22,4 +22,4 @@ ht-degree: 100%
 
 [!DNL OSGi] 简介：OSGi 是一种针对 [!DNL Java] 应用程序的动态模块化架构，是 Adobe Experience Manager 的基础。
 
->[!VIDEO](https://video.tv.adobe.com/v/32031?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36701?captions=chi_hans&quality=12&learn=on)

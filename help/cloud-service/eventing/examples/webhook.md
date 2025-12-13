@@ -24,7 +24,7 @@ ht-degree: 1%
 了解如何在webhook上接收AEM事件并查看事件详细信息，例如有效负载、标头和元数据。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449758?captions=chi_hans&quality=12&learn=on)
 
 
 >[!IMPORTANT]

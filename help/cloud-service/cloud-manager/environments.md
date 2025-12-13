@@ -22,4 +22,4 @@ ht-degree: 0%
 
 [Cloud Manager环境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html?lang=zh-Hans)由AEM Author、AEM Publish和Dispatcher服务组成。 不同的环境支持各种角色，并可使用不同的CI/CD管道参与环境。 Cloud Manager环境通常有一个生产环境、一个暂存环境和一个开发环境。
 
->[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34270?captions=chi_hans&quality=12&learn=on)

@@ -22,7 +22,7 @@ ht-degree: 2%
 
 推荐使用内容传输工具将内容从AEM的内部部署或AMS托管版本迁移到AEM as a Cloud Service环境。
 
->[!VIDEO](https://video.tv.adobe.com/v/35460?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327074?captions=chi_hans&quality=12&learn=on)
 
 ## 其他资源 {#additional-resources}
 

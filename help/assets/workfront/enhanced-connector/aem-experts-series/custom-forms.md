@@ -26,6 +26,6 @@ ht-degree: 20%
 
 了解如何配置Workfront和AEM Assets以使用Workfront自定义表单和AEM元数据架构管理和同步资源元数据。
 
->[!VIDEO](https://video.tv.adobe.com/v/340332?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431490?captions=chi_hans&quality=12&learn=on)
 
 _关于Workfront for Experience Manager增强型连接器的[四部分专家系列的第二部分](./overview.md)_

@@ -25,7 +25,7 @@ AEM 内容服务允许使用与 AEM Sites 中网页创作相同的内容抽象�
 
 一个端到端的教程，展示如何使用 AEM 构建并展示内容，并在 Headless CMS 场景中由原生移动应用程序使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/28315?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33073?captions=chi_hans&quality=12&learn=on)
 
 本教程将探讨如何利用 AEM 内容服务来增强移动应用程序的用户体验。该应用程序展示由 WKND 团队策划的活动信息（音乐、表演、艺术等）。
 

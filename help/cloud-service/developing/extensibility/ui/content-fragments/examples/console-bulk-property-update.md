@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 批量属性更新示例扩展
 
->[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454469?captions=chi_hans&quality=12&learn=on)
 
 此示例AEM内容片段控制台扩展是一个[操作栏](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/)扩展，用于将内容片段属性批量更新为公共值。
 

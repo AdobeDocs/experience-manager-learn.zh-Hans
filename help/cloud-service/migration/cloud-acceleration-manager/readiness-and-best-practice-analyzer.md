@@ -21,4 +21,4 @@ ht-degree: 17%
 
 了解Best Practice Analyzer如何帮助您准备好从本地AEM或Adobe Managed Services移至Experience Manager as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336690?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446463?captions=chi_hans&quality=12&learn=on)

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解内容人工智能如何让您快速高效地创建引人入胜的内容变体。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459227/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461887/?captions=chi_hans&learn=on&enablevpops)

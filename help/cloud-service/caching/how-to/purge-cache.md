@@ -25,7 +25,7 @@ ht-degree: 0%
 
 在本教程中，您将学习如何使用自助服务功能设置和使用Purge API Token清除示例[AEM WKND](https://github.com/adobe/aem-guides-wknd)站点的CDN缓存。
 
->[!VIDEO](https://video.tv.adobe.com/v/3432948?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436942?captions=chi_hans&quality=12&learn=on)
 
 ## 缓存失效与显式清除
 

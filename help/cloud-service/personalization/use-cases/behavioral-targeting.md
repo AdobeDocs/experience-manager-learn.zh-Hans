@@ -46,7 +46,7 @@ ht-degree: 0%
 
 - **杂志页面**：用户阅读&#x200B;_三篇或更多_&#x200B;篇文章时，被分类为&#x200B;**杂志读者**&#x200B;受众，并在杂志页面上看到个性化的主页部分。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474001/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474011/?captions=chi_hans&learn=on&enablevpops)
 
 >[!TIP]
 >

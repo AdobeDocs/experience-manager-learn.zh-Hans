@@ -23,4 +23,4 @@ ht-degree: 0%
 
 了解AEM as a Cloud Service内容片段创作控制台的基本特性和功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/3409492?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449342?captions=chi_hans&quality=12&learn=on)

@@ -21,4 +21,4 @@ ht-degree: 13%
 
 了解核心存储库现代化器如何自动将现有AEM Maven项目更新为可与AEM as a Cloud Service兼容的项目。
 
->[!VIDEO](https://video.tv.adobe.com/v/336694?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444673?captions=chi_hans&quality=12&learn=on)

@@ -22,4 +22,4 @@ ht-degree: 100%
 
 简单介绍作为 Adobe Experience Manager 架构一部分的作者层和发布层。
 
->[!VIDEO](https://video.tv.adobe.com/v/32033?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36699?captions=chi_hans&quality=12&learn=on)

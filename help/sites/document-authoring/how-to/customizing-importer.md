@@ -24,4 +24,4 @@ ht-degree: 13%
 
 了解如何自定义AEM导入程序，以便在使用Edge Delivery Services将网站迁移到文档创作过程中最大限度地提高效率和准确性。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429596/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444255/?captions=chi_hans&learn=on)

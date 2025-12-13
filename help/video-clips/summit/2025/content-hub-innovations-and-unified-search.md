@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索Content Hub的新功能，包括基于属性的访问控制、品牌登陆页面以及跨平台的统一搜索。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459223/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461820/?captions=chi_hans&learn=on&enablevpops)

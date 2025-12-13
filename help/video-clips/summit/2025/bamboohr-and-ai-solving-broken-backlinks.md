@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解BambooHR如何使用AI识别和修复损坏的后链接，从而带来有机流量增加4%。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459238/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461997/?captions=chi_hans&learn=on&enablevpops)

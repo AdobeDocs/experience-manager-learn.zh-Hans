@@ -21,4 +21,4 @@ ht-degree: 0%
 
 探索Cloud Acceleration Manager在Experience Manager as a Cloud Service中的导航体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/336698?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446732?captions=chi_hans&quality=12&learn=on)

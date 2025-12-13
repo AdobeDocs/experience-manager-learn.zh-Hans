@@ -21,4 +21,4 @@ ht-degree: 9%
 
 了解Dispatcher转换器如何自动将现有AEM Dispatcher配置更新为可与AEM as a Cloud Service兼容的配置。
 
->[!VIDEO](https://video.tv.adobe.com/v/336695?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441461?captions=chi_hans&quality=12&learn=on)

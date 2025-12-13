@@ -25,7 +25,7 @@ ht-degree: 0%
 
 AEM使用通过Adobe Developer Console[管理的](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)S2S OAuth与其他Adobe产品集成。 对于与服务帐户的自定义集成，在AEM Developer Console中使用和管理JWT凭据。
 
->[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342217?captions=chi_hans&quality=12&learn=on)
 
 服务凭据可能显示类似于[本地开发访问令牌](./local-development-access-token.md)，但在几个关键方面不同：
 

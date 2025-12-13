@@ -21,4 +21,4 @@ ht-degree: 0%
 
 概述不同Dispatcher配置中的区别，并给出将Dispatcher从Adobe Managed Services (AMS)迁移到AEM as a Cloud Service的提示和技巧。
 
->[!VIDEO](https://video.tv.adobe.com/v/330556?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345893?captions=chi_hans&quality=12&learn=on)

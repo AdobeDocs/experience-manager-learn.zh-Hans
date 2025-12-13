@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解AEM AI Assistant如何简化查找产品知识并自动创建支持工单。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459225/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461931/?captions=chi_hans&learn=on&enablevpops)

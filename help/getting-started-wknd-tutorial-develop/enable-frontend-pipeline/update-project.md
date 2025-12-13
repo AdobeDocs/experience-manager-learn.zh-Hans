@@ -30,7 +30,7 @@ ht-degree: 100%
 
 ## 全栈 AEM 项目的配置更改概述
 
->[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453619?captions=chi_hans&quality=12&learn=on)
 
 ## 先决条件 {#prerequisites}
 

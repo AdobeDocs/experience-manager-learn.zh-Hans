@@ -21,4 +21,4 @@ ht-degree: 0%
 
 有关使用Cloud Acceleration Manager工具的叙述性演练。
 
->[!VIDEO](https://video.tv.adobe.com/v/336699?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454680?captions=chi_hans&quality=12&learn=on)

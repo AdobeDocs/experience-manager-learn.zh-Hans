@@ -19,4 +19,4 @@ ht-degree: 0%
 
 以下视频概述了AEM Sites中多站点管理的基本概念。
 
->[!VIDEO](https://video.tv.adobe.com/v/33594?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36814?captions=chi_hans&quality=12&learn=on)
