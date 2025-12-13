@@ -27,7 +27,7 @@ ht-degree: 0%
 
 - [OSGi捆绑包](https://www.osgi.org/resources/architecture/)： OSGi捆绑包是一个Java™存档文件，它包含Java类、资源以及描述捆绑包及其依赖项的清单。
 - [Java jar](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html)：包含Java类和资源的Java™存档文件。
-- [包](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages)：包是包含文件系统序列化形式的存储库内容的zip文件。
+- [包](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages)：包是包含文件系统序列化形式的存储库内容的zip文件。
 
 ## 标准方案
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 要学习本教程，您需要：
 
-- [本地AEM开发环境](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview)或[快速开发环境(RDE)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview)安装程序。
+- [本地AEM开发环境](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview)或[快速开发环境(RDE)](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/rde/overview)安装程序。
 
 - [AEM WKND项目](https://github.com/adobe/aem-guides-wknd) _用于添加第三方包或jar或包_&#x200B;并验证更改。
 

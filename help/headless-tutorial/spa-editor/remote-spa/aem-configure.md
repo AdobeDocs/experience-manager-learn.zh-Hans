@@ -214,7 +214,7 @@ Sling映射影响AEM在`http`和`localhost`上运行，因此仅支持本地开�
 
 ## 跨源资源共享安全策略
 
-接下来，配置AEM以保护内容，以便仅此SPA可以访问AEM内容。 在AEM[中配置](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html)跨源资源共享。
+接下来，配置AEM以保护内容，以便仅此SPA可以访问AEM内容。 在AEM[中配置](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=zh-Hans)跨源资源共享。
 
 1. 在IDE中，打开`ui.config` Maven子项目
 1. 导航`src/main/content/jcr_root/apps/wknd-app/osgiconfig/config`

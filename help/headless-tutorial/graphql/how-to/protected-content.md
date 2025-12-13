@@ -54,7 +54,7 @@ ht-degree: 0%
 
 要授予AEM Headless GraphQL API请求访问受保护内容的权限，您可以将headless请求与属于特定用户组的用户相关联。 以下是两种常用方法：
 
-1. **AEM as a Cloud Service [技术帐户](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials)：**
+1. **AEM as a Cloud Service [技术帐户](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials)：**
    - 在AEM as a Cloud Service Developer Console中创建技术帐户。
    - 使用技术帐户登录AEM Author一次。
    - 通过&#x200B;**工具>安全>组> AEM Headless API用户>成员**，将技术帐户添加到用户组。
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 ![AEM Headless CUG](./assets/protected-content/cugs.png){align="center"}
 
-按照以下步骤通过[封闭用户组(CUG)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/advanced/closed-user-groups)实现此目的。
+按照以下步骤通过[封闭用户组(CUG)](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/assets/advanced/closed-user-groups)实现此目的。
 
 1. 以&#x200B;**DAM用户**&#x200B;身份登录AEM作者。
 2. 导航到&#x200B;**Assets >文件**，然后选择包含要保护的内容片段的&#x200B;**文件夹**。 除非被其他CUG覆盖，否则CUG按层级应用，并会影响到子文件夹。
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 ## 防止缓存受保护的内容
 
-默认情况下，AEM as a Cloud Service [缓存HTTP响应](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/publish)以提高性能。 但是，这可能会导致提供受保护内容时出现问题。 要阻止缓存此类内容，请在AEM发布实例的Apache配置中[删除特定端点](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/publish#how-to-customize-cache-rules-1)的缓存标头。
+默认情况下，AEM as a Cloud Service [缓存HTTP响应](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/caching/publish)以提高性能。 但是，这可能会导致提供受保护内容时出现问题。 要阻止缓存此类内容，请在AEM发布实例的Apache配置中[删除特定端点](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/caching/publish#how-to-customize-cache-rules-1)的缓存标头。
 
 将以下规则添加到Dispatcher项目的Apache配置文件中，以删除特定端点的缓存标头：
 
@@ -120,4 +120,4 @@ ht-degree: 0%
 
 ## 保护AEM Headless GraphQL API端点
 
-本指南不涉及保护[AEM Headless GraphQL API端点](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/graphql-endpoint)本身，而是侧重于保护它们提供的内容。 所有用户（包括匿名用户）都可以访问包含受保护内容的端点。 将仅返回可由用户的封闭用户组访问的内容。 如果没有可访问的内容，AEM Headless API响应将仍具有200 HTTP响应状态代码，但结果将为空。 通常，保护内容安全就足够了，因为端点本身不会公开敏感数据。 如果您需要保护端点，请通过[Sling存储库初始化(repoinit)脚本](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)在AEM Publish上将ACL应用到这些端点。
+本指南不涉及保护[AEM Headless GraphQL API端点](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/headless/graphql-api/graphql-endpoint)本身，而是侧重于保护它们提供的内容。 所有用户（包括匿名用户）都可以访问包含受保护内容的端点。 将仅返回可由用户的封闭用户组访问的内容。 如果没有可访问的内容，AEM Headless API响应将仍具有200 HTTP响应状态代码，但结果将为空。 通常，保护内容安全就足够了，因为端点本身不会公开敏感数据。 如果您需要保护端点，请通过[Sling存储库初始化(repoinit)脚本](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)在AEM Publish上将ACL应用到这些端点。

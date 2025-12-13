@@ -30,7 +30,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 >[!MORELIKETHIS]
 >
-> 有关灵活端口出口的更多详细信息，请阅读AEM as a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+> 有关灵活端口出口的更多详细信息，请阅读AEM as a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 
 ## 先决条件
@@ -45,7 +45,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 + Cloud Manager项目ID
 + Cloud Manager环境ID
 
-有关更多详细信息，[请查看如何设置、配置和获取Cloud Manger API凭据](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用这些凭据进行Cloud Manager API调用。
+有关更多详细信息，[请查看如何设置、配置和获取Cloud Manger API凭据](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用这些凭据进行Cloud Manager API调用。
 
 本教程使用`curl`来进行Cloud Manager API配置。 提供的`curl`命令采用Linux/macOS语法。 如果使用Windows命令提示符，请将`\`换行符替换为`^`。
 
@@ -87,7 +87,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 1. 首先，通过使用Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)操作确定在中设置了高级联网的地区。 进行后续Cloud Manager API调用需要`region name`。 通常，会使用生产环境所在的区域。
 
-   在[环境的详细信息](https://my.cloudmanager.adobe.com)下的[Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)中查找您的AEM as a Cloud Service环境所在的地区。 Cloud Manager中显示的地区名称可以是[映射到Cloud Manager API中使用的地区代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments)。
+   在[环境的详细信息](https://my.cloudmanager.adobe.com)下的[Cloud Manager](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)中查找您的AEM as a Cloud Service环境所在的地区。 Cloud Manager中显示的地区名称可以是[映射到Cloud Manager API中使用的地区代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments)。
 
    __listRegions HTTP请求__
 
@@ -221,7 +221,7 @@ AEM提供两组特殊的Java™系统变量，这些变量映射到AEM的HTTP/HT
 
 >[!TIP]
 >
-> 有关[完整的路由规则集](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)，请参阅AEM as a Cloud Service的灵活端口出口文档。
+> 有关[完整的路由规则集](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)，请参阅AEM as a Cloud Service的灵活端口出口文档。
 
 #### 代码示例
 

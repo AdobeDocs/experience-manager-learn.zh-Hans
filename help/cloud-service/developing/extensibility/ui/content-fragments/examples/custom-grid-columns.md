@@ -208,7 +208,7 @@ render: async function (fragments) {
 
 >[!IMPORTANT]
 >
-> 确保将AEM创作实例配置为允许来自运行AppBuilder应用程序的源的[跨源请求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html)。 允许的源包括`https://localhost:9080`、AppBuilder暂存源和AppBuilder生产源。
+> 确保将AEM创作实例配置为允许来自运行AppBuilder应用程序的源的[跨源请求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=zh-Hans)。 允许的源包括`https://localhost:9080`、AppBuilder暂存源和AppBuilder生产源。
 >
 > 或者，扩展也可以调用自定义[AppBuilder操作](../../runtime-action.md)，以代表扩展向AEM Author发出请求。
 

@@ -26,21 +26,21 @@ ht-degree: 2%
 >
 >您可以通过Cloud Manager UI或使用API调用配置VPN和端口转发。 本教程重点介绍API方法。
 >
->如果您希望使用UI，请参阅[为AEM as a Cloud Service配置高级网络](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+>如果您希望使用UI，请参阅[为AEM as a Cloud Service配置高级网络](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 ## 什么是虚拟专用网络？
 
-虚拟专用网络(VPN)允许AEM as a Cloud Service客户将Cloud Manager计划中的&#x200B;**AEM环境**&#x200B;连接到现有的[支持的](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)个VPN。 VPN允许在AEM as a Cloud Service与客户网络内的服务之间安全且受控的连接。
+虚拟专用网络(VPN)允许AEM as a Cloud Service客户将Cloud Manager计划中的&#x200B;**AEM环境**&#x200B;连接到现有的[支持的](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)个VPN。 VPN允许在AEM as a Cloud Service与客户网络内的服务之间安全且受控的连接。
 
-Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类型。 在执行以下命令之前，请确保虚拟专用网络是您的AEM as a Cloud Service最[合适的网络基础架构类型](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类型。 在执行以下命令之前，请确保虚拟专用网络是您的AEM as a Cloud Service最[合适的网络基础架构类型](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 >[!NOTE]
 >
->请注意，不支持将构建环境从Cloud Manager连接到VPN。 如果必须从专用存储库访问二进制项目，则必须使用公共Internet [上可用的URL设置安全且受密码保护的存储库，如此处](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project)所述。
+>请注意，不支持将构建环境从Cloud Manager连接到VPN。 如果必须从专用存储库访问二进制项目，则必须使用公共Internet [上可用的URL设置安全且受密码保护的存储库，如此处](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project)所述。
 
 >[!MORELIKETHIS]
 >
-> 有关虚拟专用网络的更多详细信息，请阅读AEM as a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+> 有关虚拟专用网络的更多详细信息，请阅读AEM as a Cloud Service [高级网络配置文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 ## 先决条件
 
@@ -55,13 +55,13 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 + Cloud Manager环境ID
 + **基于路由的**&#x200B;虚拟专用网络，可访问所有必要的连接参数。
 
-有关更多详细信息，[请查看如何设置、配置和获取Cloud Manger API凭据](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用这些凭据进行Cloud Manager API调用。
+有关更多详细信息，[请查看如何设置、配置和获取Cloud Manger API凭据](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用这些凭据进行Cloud Manager API调用。
 
 >[!IMPORTANT]
 >
 >本教程使用`curl`来进行Cloud Manager API配置 — *（如果您更喜欢编程方法*）。 提供的`curl`命令采用Linux®或macOS语法。 如果使用Windows命令提示符，请将`\`换行符替换为`^`。
 >
->或者，您可以通过Cloud Manager UI完成相同的任务。 *如果您更喜欢UI方法*，请参阅[为AEM as a Cloud Service配置高级网络](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+>或者，您可以通过Cloud Manager UI完成相同的任务。 *如果您更喜欢UI方法*，请参阅[为AEM as a Cloud Service配置高级网络](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 ## 为每个项目启用虚拟专用网络
 
@@ -113,7 +113,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 1. 首先，使用Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)操作确定需要高级联网的区域。 进行后续Cloud Manager API调用需要`region name`。 通常，会使用生产环境所在的区域。
 
-   在[环境的详细信息](https://my.cloudmanager.adobe.com)下的[Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)中查找您的AEM as a Cloud Service环境所在的地区。 Cloud Manager中显示的地区名称可以是[映射到Cloud Manager API中使用的地区代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments)。
+   在[环境的详细信息](https://my.cloudmanager.adobe.com)下的[Cloud Manager](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)中查找您的AEM as a Cloud Service环境所在的地区。 Cloud Manager中显示的地区名称可以是[映射到Cloud Manager API中使用的地区代码](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments)。
 
    __listRegions HTTP请求__
 
@@ -294,7 +294,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 >[!TIP]
 >
-> 有关[完整的路由规则集](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)，请参阅AEM as a Cloud Service的虚拟专用网络文档。
+> 有关[完整的路由规则集](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)，请参阅AEM as a Cloud Service的虚拟专用网络文档。
 
 #### 代码示例
 
@@ -362,8 +362,8 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
 <table><tr>
    <td>
-      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list"><img alt="应用IP允许列表" src="./assets/code_examples__vpn-allow-list.png"/></a>
-      <div>列入允许列表 <strong><a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list">应用IP</a></strong></div>
+      <a href="https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list"><img alt="应用IP允许列表" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div>列入允许列表 <strong><a href="https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list">应用IP</a></strong></div>
       <p>
             配置IP允许列表，以便只有VPN通信可以访问AEM。
       </p>

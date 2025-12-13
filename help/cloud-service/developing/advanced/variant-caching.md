@@ -49,7 +49,7 @@ ht-degree: 1%
 
 ## 用途
 
-1. 为了演示该功能，我们将使用[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)的实施作为示例。
+1. 为了演示该功能，我们将使用[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)的实施作为示例。
 
 1. 在AEM中实施[SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html)以使用变量值在HTTP响应上设置`x-aem-variant` Cookie。
 

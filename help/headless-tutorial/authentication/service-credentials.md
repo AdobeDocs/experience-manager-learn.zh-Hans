@@ -23,7 +23,7 @@ ht-degree: 0%
 
 与Adobe Experience Manager (AEM) as a Cloud Service的集成必须能够安全地对AEM服务进行身份验证。 AEM的Developer Console授予对服务凭据的访问权限，这些凭据用于促进外部应用程序、系统和服务通过HTTP以编程方式与AEM创作或发布服务交互。
 
-AEM使用通过Adobe Developer Console[管理的](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)S2S OAuth与其他Adobe产品集成。 对于与服务帐户的自定义集成，在AEM Developer Console中使用和管理JWT凭据。
+AEM使用通过Adobe Developer Console[管理的](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)S2S OAuth与其他Adobe产品集成。 对于与服务帐户的自定义集成，在AEM Developer Console中使用和管理JWT凭据。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
@@ -232,7 +232,7 @@ function getCommandLineParams() {
 1. 找到在步骤1中标识具有&#x200B;__登录名__&#x200B;的AEM用户，并打开其&#x200B;__属性__
 1. 导航到&#x200B;__组__&#x200B;选项卡，并添加&#x200B;__DAM用户__&#x200B;组（他们作为资产的写入权限）
 
-   + [查看AEM提供的用户组的列表](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups)以将服务用户添加到以获得最佳权限。 如果AEM提供的用户组不足以满足需求，请创建您自己的用户组，然后添加相应的权限。
+   + [查看AEM提供的用户组的列表](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hans#built-in-users-and-groups)以将服务用户添加到以获得最佳权限。 如果AEM提供的用户组不足以满足需求，请创建您自己的用户组，然后添加相应的权限。
 
 1. 点按&#x200B;__保存并关闭__
 

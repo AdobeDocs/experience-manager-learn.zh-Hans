@@ -35,7 +35,7 @@ AEM创作服务使用CDN，但其目的是增强产品资源的交付，因此�
 
 AEM Author CDN位于最终用户（通常是营销人员或内容作者）和AEM Author之间。 它会缓存不可变文件(例如支持AEM创作体验的静态资源)，而不是创作内容。
 
-AEM Author的CDN确实缓存了多种可能感兴趣的资源，包括对持久查询[的可自定义TTL和对自定义客户端库](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances)的[长TTL。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries)
+AEM Author的CDN确实缓存了多种可能感兴趣的资源，包括对持久查询[的可自定义TTL和对自定义客户端库](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hans&author-instances)的[长TTL。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#client-side-libraries)
 
 ### 默认缓存期限
 
@@ -43,9 +43,9 @@ AEM Author的CDN确实缓存了多种可能感兴趣的资源，包括对持久�
 
 | 内容类型 | 默认CDN缓存期限 |
 |:------------ |:---------- |
-| [持久查询(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances) | 1 分钟 |
-| [客户端库(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
-| [所有其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 未缓存 |
+| [持久查询(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hans&author-instances) | 1 分钟 |
+| [客户端库(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#client-side-libraries) | 30 天 |
+| [所有其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hans#other-content) | 未缓存 |
 
 
 ## AEM Dispatcher

@@ -127,5 +127,5 @@ ht-degree: 1%
 
 ## 其他资源
 
-- [Adobe Experience Platform Debugger概述](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
+- [Adobe Experience Platform Debugger概述](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/debugger/home)
 - [Tags 概述](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/tags/home)

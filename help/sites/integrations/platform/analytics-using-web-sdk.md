@@ -76,7 +76,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-有关应包含在SDR文档中的概念和各种元素的更多信息，请访问[创建和维护解决方案设计参考(SDR)文档](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html)。 您还可以下载示例Excel模板，但[此处](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx)也提供了特定于WKND的版本。
+有关应包含在SDR文档中的概念和各种元素的更多信息，请访问[创建和维护解决方案设计参考(SDR)文档](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html?lang=zh-Hans)。 您还可以下载示例Excel模板，但[此处](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx)也提供了特定于WKND的版本。
 
 ## 设置Analytics — 报表包、Analysis Workspace
 
@@ -90,10 +90,10 @@ ht-degree: 1%
 
 要了解有关Analytics设置和概念的更多信息，强烈建议使用以下资源：
 
-+ [报告包](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html)
-+ [转化变量](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)
-+ [成功事件](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
-+ [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)
++ [报告包](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html?lang=zh-Hans)
++ [转化变量](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=zh-Hans)
++ [成功事件](https://experienceleague.adobe.com/zh-hans/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
++ [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=zh-Hans)
 
 ## 更新数据流 — 添加Analytics服务
 
@@ -214,7 +214,7 @@ ht-degree: 1%
 
 +++
 
-有关将AEM核心组件与Adobe客户端数据层集成的其他信息，请参阅[将Adobe客户端数据层与AEM核心组件结合使用指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)。
+有关将AEM核心组件与Adobe客户端数据层集成的其他信息，请参阅[将Adobe客户端数据层与AEM核心组件结合使用指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=zh-Hans)。
 
 
 >[!INFO]
@@ -273,9 +273,9 @@ Analysis Workspace是Adobe Analytics中的一个功能强大的工具，允许�
 
 ## 其他资源
 
-+ [集成Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
-+ [将Adobe客户端数据层与核心组件结合使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
-+ [集成Experience Platform数据收集标记和AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
-+ [Adobe Experience Platform Web SDK和Edge Network概述](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
-+ [数据收集教程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
-+ [Adobe Experience Platform Debugger概述](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [集成Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html?lang=zh-Hans)
++ [将Adobe客户端数据层与核心组件结合使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=zh-Hans)
++ [集成Experience Platform数据收集标记和AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=zh-Hans)
++ [Adobe Experience Platform Web SDK和Edge Network概述](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html?lang=zh-Hans)
++ [数据收集教程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html?lang=zh-Hans)
++ [Adobe Experience Platform Debugger概述](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hans)

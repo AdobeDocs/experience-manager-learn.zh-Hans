@@ -171,7 +171,7 @@ export default ExtensionRegistration;
 重要的是，与扩展中的AEM的任何交互都应委派给[AppBuilder Adobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，该操作是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中运行的单独无服务器进程。
 使用Adobe I/O Runtime操作与AEM通信是为了避免跨源资源共享(CORS)连接问题。
 
-提交批量属性更新表单后，自定义`onSubmitHandler()`将调用Adobe I/O Runtime操作，传递当前AEM主机（域）和用户的AEM访问令牌，从而调用[AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)来更新内容片段。
+提交批量属性更新表单后，自定义`onSubmitHandler()`将调用Adobe I/O Runtime操作，传递当前AEM主机（域）和用户的AEM访问令牌，从而调用[AEM内容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=zh-Hans)来更新内容片段。
 
 当收到来自Adobe I/O Runtime操作的响应时，模式会更新以显示批量属性更新操作的结果。
 

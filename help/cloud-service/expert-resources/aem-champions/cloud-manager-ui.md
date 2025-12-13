@@ -26,4 +26,4 @@ ht-degree: 2%
 
 ## 其他资源 {#additional-resources}
 
-* [Cloud Manager简介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html) — 有关在AEM as a Cloud Service中使用Cloud Manager的文档
+* [Cloud Manager简介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html?lang=zh-Hans) — 有关在AEM as a Cloud Service中使用Cloud Manager的文档

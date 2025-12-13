@@ -52,7 +52,7 @@ AEM支持的身份验证（有时是授权）机制的综合视图。
             <td>✔</td>
         </tr>
         <tr>
-            <td>基于令牌（带<a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封装令牌</a>）</td>
+            <td>基于令牌（带<a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html?lang=zh-Hans" target="_blank">封装令牌</a>）</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -63,19 +63,19 @@ AEM支持的身份验证（有时是授权）机制的综合视图。
             <td></td>
             <td></td>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ldap-config.html" target="_blank">LDAP</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ldap-config.html?lang=zh-Hans" target="_blank">LDAP</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html" target="_blank">SSO</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html?lang=zh-Hans" target="_blank">SSO</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html" target="_blank">SAML 2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html?lang=zh-Hans" target="_blank">SAML 2.0</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>

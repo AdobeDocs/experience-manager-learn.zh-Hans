@@ -41,7 +41,7 @@ ht-degree: 0%
    - 客户CDN — 设置客户CDN并添加SSL证书和域详细信息，如AWS CloudFront、Azure CDN或Akamai。
    - 域名系统(DNS)托管服务 — 为您的自定义域添加DNS记录，如Azure DNS或AWS Route 53。
 - 访问[Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)以将HTTP标头验证CDN规则部署到AEM as a Cloud Service环境。
-- 示例[AEM WKND](https://github.com/adobe/aem-guides-wknd)站点已部署到[生产程序](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs)类型的AEM as a Cloud Service环境。
+- 示例[AEM WKND](https://github.com/adobe/aem-guides-wknd)站点已部署到[生产程序](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs)类型的AEM as a Cloud Service环境。
 
 如果您无权访问第三方服务，请&#x200B;_与您的安全或托管团队协作以完成步骤_。
 

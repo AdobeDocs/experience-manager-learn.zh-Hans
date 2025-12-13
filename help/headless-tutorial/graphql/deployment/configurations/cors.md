@@ -59,7 +59,7 @@ AEM CORS OSGi配置工厂定义了接受CORS HTTP请求的允许标准。
 + `supportedheaders`包含`"Authorization"`，因为应授权对AEM作者的请求。
 + `supportscredentials`设置为`true`，因为应授权对AEM作者的请求。
 
-[了解有关CORS OSGi配置的更多信息。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
+[了解有关CORS OSGi配置的更多信息。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=zh-Hans)
 
 以下示例支持在AEM Author上使用AEM GraphQL持久查询。 若要使用客户端定义的GraphQL查询，请在`allowedpaths`和`POST`中将GraphQL终结点URL添加到`supportedmethods`。
 
