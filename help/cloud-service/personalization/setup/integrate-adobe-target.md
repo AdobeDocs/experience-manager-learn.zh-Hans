@@ -55,7 +55,7 @@ ht-degree: 2%
 5. 在&#x200B;**选择产品配置文件**&#x200B;步骤中，选择&#x200B;**默认Workspace**，然后单击&#x200B;**保存配置的API**。\
    ![选择产品配置文件](../assets/setup/adc-select-product-profiles.png)
 
-6. 在左侧导航中，选择&#x200B;**OAuth服务器到服务器**并查看配置详细信息。 请注意客户端ID和客户端密码 — 您需要这两个值才能在AEM中配置IMS集成。
+6. 在左侧导航中，选择&#x200B;**OAuth服务器到服务器**&#x200B;并查看配置详细信息。 请注意客户端ID和客户端密码 — 您需要这两个值才能在AEM中配置IMS集成。
    ![OAuth服务器到服务器详细信息](../assets/setup/adc-oauth-server-to-server.png)
 
 ## 在AEM中为Target创建Adobe IMS配置

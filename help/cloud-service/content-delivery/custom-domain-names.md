@@ -82,5 +82,5 @@ ht-degree: 2%
 
 现在您已经了解了域名管理流程，可以通过执行以下教程来为AEM as a Cloud Service网站实施自定义域名：
 
-**[使用Adobe管理的CDN的自定义域名](./custom-domain-name-with-adobe-managed-cdn.md)**：在本教程中，您将了解如何使用Adobe管理的CDN **向**AEM as a Cloud Service网站添加自定义域名。
+**[使用Adobe管理的CDN的自定义域名](./custom-domain-name-with-adobe-managed-cdn.md)**：在本教程中，您将了解如何使用Adobe管理的CDN **向**&#x200B;AEM as a Cloud Service网站添加自定义域名。
 **[具有客户管理的CDN的自定义域名](./custom-domain-names-with-customer-managed-cdn.md)**：在本教程中，您将了解如何使用客户管理的CDN **向** AEM as a Cloud Service网站添加自定义域名。

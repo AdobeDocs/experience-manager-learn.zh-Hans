@@ -86,7 +86,7 @@ AEM的URL重定向解决方案如下所示：
 
 ### `Redirect`页面属性
 
-`Redirect`高级选项卡[中的现成(OOTB) ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties.html)页面属性允许内容作者定义当前页面的重定向位置。 此解决方案最适合每页面重定向方案，并且没有用于查看和管理页面重定向的中心位置。
+`Redirect`高级选项卡[中的现成(OOTB) &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties.html)页面属性允许内容作者定义当前页面的重定向位置。 此解决方案最适合每页面重定向方案，并且没有用于查看和管理页面重定向的中心位置。
 
 ## 哪个解决方案适合实施
 

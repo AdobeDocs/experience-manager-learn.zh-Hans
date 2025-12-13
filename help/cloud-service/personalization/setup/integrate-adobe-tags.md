@@ -55,7 +55,7 @@ ht-degree: 1%
 4. 打开新资产。 **Core**&#x200B;扩展应已包含。 稍后，您将在设置试验用例时添加&#x200B;**Web SDK**&#x200B;扩展，因为它需要其他配置，如&#x200B;**数据流ID**。\
    ![Adobe Tags核心扩展](../assets/setup/adobe-tags-core-extension.png)
 
-5. 转到&#x200B;**发布流**&#x200B;并单击&#x200B;**添加库**以创建部署库，从而发布Tags属性。
+5. 转到&#x200B;**发布流**&#x200B;并单击&#x200B;**添加库**&#x200B;以创建部署库，从而发布Tags属性。
    ![Adobe标记发布流](../assets/setup/adobe-tags-publishing-flow.png)
 
 6. 在&#x200B;**创建库**&#x200B;对话框中，提供：

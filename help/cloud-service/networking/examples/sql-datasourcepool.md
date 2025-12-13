@@ -35,7 +35,7 @@ ht-degree: 0%
 
 OSGi配置的连接字符串使用：
 
-+ 通过`AEM_PROXY_HOST`OSGi配置环境变量[ ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values)将`$[env:AEM_PROXY_HOST;default=proxy.tunnel]`值作为连接的主机
++ 通过`AEM_PROXY_HOST`OSGi配置环境变量[&#x200B; &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values)将`$[env:AEM_PROXY_HOST;default=proxy.tunnel]`值作为连接的主机
 + `30001`是Cloud Manager端口转发映射`portOrig`→`30001`的`mysql.example.com:3306`值
 
 由于密码不能存储在代码中，因此最好通过OSGi配置变量、使用AIO CLI或Cloud Manager API设置来提供SQL连接的用户名和密码。

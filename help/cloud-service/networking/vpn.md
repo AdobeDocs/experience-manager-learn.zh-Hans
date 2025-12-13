@@ -261,7 +261,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
    如果您的AEM部署&#x200B;__仅__&#x200B;需要与外部服务的HTTP/HTTPS连接，请将`portForwards`数组留空，因为这些规则仅对于非HTTP/HTTPS请求是必需的。
 
 
-2. 对于每个环境，使用Cloud Manager API的[getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)操作验证VPN路由规则是否有效。
+&#x200B;2. 对于每个环境，使用Cloud Manager API的[getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)操作验证VPN路由规则是否有效。
 
    __getEnvironmentAdvancedNetworkingConfiguration HTTP请求__
 
@@ -273,9 +273,9 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
        -H 'Content-Type: application/json'
    ```
 
-3. 可以使用Cloud Manager API的[enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)操作更新虚拟专用网络代理配置。 请记住`enableEnvironmentAdvancedNetworkingConfiguration`是`PUT`操作，因此必须随每次调用此操作提供所有规则。
+&#x200B;3. 可以使用Cloud Manager API的[enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)操作更新虚拟专用网络代理配置。 请记住`enableEnvironmentAdvancedNetworkingConfiguration`是`PUT`操作，因此必须随每次调用此操作提供所有规则。
 
-4. 现在，您可以在自定义AEM代码和配置中使用虚拟专用网络出口配置。
+&#x200B;4. 现在，您可以在自定义AEM代码和配置中使用虚拟专用网络出口配置。
 
 ## 通过虚拟专用网络连接到外部服务
 

@@ -249,7 +249,7 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 ### AMS场包含
 
-![<FILENAME>_farms.any将包含sub .any文件以完成场配置。  在此图片中，您可以看到场将包含每个顶级节文件缓存、clientheaders、筛选器、渲染器和vhosts .any文件](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Include")
+![&lt;FILENAME>_farms.any将包含sub .any文件以完成场配置。  在此图片中，您可以看到场将包含每个顶级节文件缓存、clientheaders、筛选器、渲染器和vhosts .any文件](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Include")
 
 当来自`/etc/httpd/conf.dispatcher.d/available_farms/`目录的任何FILENAME_farm.any文件被符号链接到`/etc/httpd/conf.dispatcher.d/enabled_farms/`目录时，它们将在运行配置中使用。
 

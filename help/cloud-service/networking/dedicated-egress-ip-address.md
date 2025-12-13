@@ -113,7 +113,7 @@ Cloud Manager程序只能具有&#x200B;__单个__&#x200B;网络基础架构类�
 
    等待15分钟，让Cloud Manager计划配置网络基础设施。
 
-3. 检查程序是否已使用Cloud Manager API __getNetworkInfrastructure__&#x200B;操作，使用上一步中从[ HTTP请求返回的](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure)，完成`id`专用出口IP地址`createNetworkInfrastructure`配置。
+3. 检查程序是否已使用Cloud Manager API __getNetworkInfrastructure__&#x200B;操作，使用上一步中从[&#x200B; HTTP请求返回的](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure)，完成`id`专用出口IP地址`createNetworkInfrastructure`配置。
 
    __getNetworkInfrastructure HTTP请求__
 
