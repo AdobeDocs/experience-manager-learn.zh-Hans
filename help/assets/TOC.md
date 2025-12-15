@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: bf996405c360c77475d9f76d5de9bcd4fde3c163
+source-git-commit: a43bd7ae4e5b0a6793c52b5a8d0f36e3c1b260b1
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 99%
+source-wordcount: '472'
+ht-degree: 98%
 
 ---
 
@@ -144,6 +144,7 @@ ht-degree: 99%
    + [Dynamic Media 概述](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic 桌面应用程序](dynamic-media/dynamic-media-classic-desktop-application.md)
    + 图像 {#images}
+      + [URL语法和图像预设](dynamic-media/dynamic-media-urls-and-image-presets.md)
       + [图像自动化](dynamic-media/dynamic-media-image-automation.md)
       + [Dynamic Media 模板](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media 快照](dynamic-media/dynamic-media-snapshot.md)
@@ -186,7 +187,7 @@ ht-degree: 99%
 + Workfront 集成{#workfront}
    + 增强型连接器{#enhanced-connector}
       + [增强型连接器基础知识](./workfront/enhanced-connector/basics.md)
-      + [项目文件夹 &#x200B;](./workfront/enhanced-connector/project-folders.md)
+      + [项目文件夹 ](./workfront/enhanced-connector/project-folders.md)
       + AEM 专家系列{#aem-experts-series}
          + [概述](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [设置](./workfront/enhanced-connector/aem-experts-series/setup.md)
@@ -206,4 +207,4 @@ ht-degree: 99%
 + 部署{#deployment}
    + [多租户和并发开发](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hans){target=_blank}
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}

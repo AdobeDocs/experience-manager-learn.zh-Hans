@@ -9,9 +9,9 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: a43bd7ae4e5b0a6793c52b5a8d0f36e3c1b260b1
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ## Dynamic Media 概述
 
->[!VIDEO](https://video.tv.adobe.com/v/34932?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ## 与AEM Sites一起使用
 
->[!VIDEO](https://video.tv.adobe.com/v/34936?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ## 构建混合媒体收藏集
 
->[!VIDEO](https://video.tv.adobe.com/v/34942?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 ## 图像预设
 
->[!VIDEO](https://video.tv.adobe.com/v/34499?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
 此视频介绍如何创建图像预设，以及什么是图像预设，它是一系列图像服务器参数的简写形式，这些参数会在URL请求时对图像进行操作。 了解扩展和编辑图像预设的有用技术。
 
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 ## 高级URL修饰符
 
->[!VIDEO](https://video.tv.adobe.com/v/34493?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
 此视频介绍如何超越调整图像大小功能，利用源文件本身的功能（背景透明度、内置剪切路径以及作为变量裁剪和文本）以及Dynamic Media的URL修饰符。
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 ## JPEG文件大小管理
 
->[!VIDEO](https://video.tv.adobe.com/v/35194?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
 
 >[!NOTE]
@@ -107,16 +107,7 @@ ht-degree: 0%
 
 ## 隐藏字幕
 
->[!VIDEO](https://video.tv.adobe.com/v/34311?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 通过附加复制URL以指向其他隐藏式字幕文件文档（一个web.VTT侧边栏文件，其中包含任何视频的CC信息），轻松地将隐藏式字幕添加到Dynamic Media视频中。
 
-## 图像锐化
-
-本视频说明为什么锐化图像对于保持图像保真度至关重要，以及如何使用高级设置制作完美图像。
-
-<!--
-This link is broken
-
->[!VIDEO](https://demos-pub.assetsadobe.com/etc/dam/viewers/s7viewers/html5/VideoViewer.html?asset=%2Fcontent%2Fdam%2Fdm-public-facing-upgrade-portal-video%2F04_DynamicImagery_AdvancedSettings_071917_BH.mp4&config=/etc/dam/presets/viewer/Video_social&serverUrl=https%3A%2F%2Fadobedemo62-h.assetsadobe.com%2Fis%2Fimage%2F&contenturl=%2F&config2=/etc/dam/presets/analytics&videoserverurl=https://gateway-na.assetsadobe.com/DMGateway/public/demoCo&posterimage=/content/dam/dm-public-facing-upgrade-portal-video/04_DynamicImagery_AdvancedSettings_071917_BH.mp4)
--->
