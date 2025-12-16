@@ -21,6 +21,6 @@ ht-degree: 0%
 
 探索AEM Assets Dynamic Media URL语法，了解如何使用图像预设最大化您的价值。 增强资产管理功能并提高工作流效率。
 
->[!VIDEO](https://video.tv.adobe.com/v/3477924/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477946/?captions=chi_hans&learn=on&enablevpops)
 
 观看这个短视频，其中介绍[如何在AEM Assets](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets)中创建图像预设。
