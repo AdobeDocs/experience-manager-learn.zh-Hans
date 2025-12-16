@@ -21,6 +21,6 @@ ht-degree: 0%
 
 本视频介绍在Dynamic Media中创建图像预设的步骤。
 
->[!VIDEO](https://video.tv.adobe.com/v/335459?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418238?captions=chi_hans&quality=12&learn=on)
 
 了解在AEM Assets中创建Dynamic Media URL和图像预设的最佳实践，并了解其工作方式！ [在此观看视频](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-urls-and-image-presets)。
