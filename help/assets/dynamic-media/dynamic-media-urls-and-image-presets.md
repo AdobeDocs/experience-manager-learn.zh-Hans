@@ -23,4 +23,4 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3477924/?learn=on&enablevpops)
 
-观看这个短视频，其中介绍[如何在AEM Assets](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets)中创建图像预设。
+观看这个短视频，其中介绍[如何在AEM Assets](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets)中创建图像预设。
