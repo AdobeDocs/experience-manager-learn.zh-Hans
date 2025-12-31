@@ -4,9 +4,9 @@ description: 下载新闻稿的存档版本。
 hidefromtoc: true
 hide: true
 exl-id: 16133400-b4c6-4d86-9c28-d5e230d55839
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 42d1e4c0b2fa9413f57a27d4b247389f17fe9163
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '54'
 ht-degree: 0%
 
 ---
@@ -27,4 +27,6 @@ ht-degree: 0%
 | [8月](assets/August-Newsletter.pdf) |
 | [9月](assets/Sept-Newsletter.pdf) |
 | [10月](assets/Oct-Newsletter.pdf) |
+| [11月](assets/Nov-Newsletter.pdf) |
+| [12月](assets/Dec-Newsletter.pdf) |
 
