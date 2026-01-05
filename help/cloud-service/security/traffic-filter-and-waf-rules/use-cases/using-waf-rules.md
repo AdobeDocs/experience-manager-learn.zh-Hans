@@ -12,10 +12,10 @@ badgeLicense: label="需要许可证" type="positive" before-title="true"
 jira: KT-18308
 thumbnail: null
 exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '1376'
-ht-degree: 100%
+source-wordcount: '1386'
+ht-degree: 98%
 
 ---
 
@@ -27,10 +27,10 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
-> 使用 WAF 流量过滤规则需要额外的 **WAF-DDoS 防护**&#x200B;或&#x200B;**增强安全性（Enhanced Security）**&#x200B;许可证。Sites 和 Forms 客户可默认使用标准流量过滤规则。
+> WAF流量过滤器规则需要额外的扩展安全性(以前称为WAF-DdS Protection)或医疗保健的扩展安全性（以前称为“增强安全性”）许可证。 Sites 和 Forms 客户可默认使用标准流量过滤规则。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469440/?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## 学习目标
 

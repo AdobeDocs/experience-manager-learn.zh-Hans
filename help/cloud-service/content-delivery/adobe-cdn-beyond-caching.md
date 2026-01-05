@@ -12,9 +12,9 @@ last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
 exl-id: 8948a900-01e9-49ed-9ce5-3a057f5077e4
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 这些功能是&#x200B;**自助服务**&#x200B;功能。 已在AEM项目的`cdn.yaml`文件中配置并使用Cloud Manager配置管道部署。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440285?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
 
 ## 在CDN上配置流量
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 - **DoS攻击防护：** Adobe CDN在网络层吸收DoS攻击，阻止它们访问您的源服务器。
 - **速率限制：**&#x200B;为了保护您的源服务器免受过多请求的影响，您可以在CDN上配置速率限制。
-- **Web应用程序防火墙(WAF)：** WAF保护您的网站免受常见Web应用程序漏洞的攻击，如SQL注入、跨站点脚本编写等。 使用此功能需要增强安全许可证或WAF-DOS保护许可证。
+- **Web应用程序防火墙(WAF)：** WAF保护您的网站免受常见Web应用程序漏洞的攻击，如SQL注入、跨站点脚本编写等。 要使用此功能，需要扩展安全性(以前称为WAF-DDoS Protection)或医疗保健扩展安全性（以前称为Enhanced Security）许可证。
 - **请求转换：**&#x200B;修改传入请求，例如设置或取消设置标头、修改查询参数、Cookie等。
 - **响应转换：**&#x200B;修改传出响应，如设置或取消设置标头。
 - **源选择：**&#x200B;根据请求URL将流量路由到不同的源服务器(Adobe和非Adobe)。
@@ -91,13 +91,13 @@ data:
 
 [使用流量过滤器规则保护网站](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
-[配置和部署HTTP标头验证CDN规则](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
+[配置和部署HTTP标头验证CDN规则](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
 
-[如何清除CDN缓存](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
+[如何清除CDN缓存](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
 
-[配置CDN错误页](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
+[配置CDN错误页](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
 
-[在CDN上配置流量](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
+[在CDN上配置流量](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
 
-[正在配置CDN凭据和身份验证](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
+[正在配置CDN凭据和身份验证](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 

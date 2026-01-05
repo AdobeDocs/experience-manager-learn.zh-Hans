@@ -12,10 +12,10 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 100%
+source-wordcount: '619'
+ht-degree: 93%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 100%
 让我们来看看客户可以采取的另外一些推荐措施，以保护其网站免受 DDoS 攻击：
 
 - 实施 Adobe 推荐的[标准流量过滤规则](./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)，通过记录请求和触发警报识别潜在的恶意流量模式。
-- 启用 **WAF-DDoS 防护**&#x200B;或&#x200B;**增强安全性**&#x200B;附加功能，并实施 Adobe 推荐的 [WAF 流量过滤规则](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)，以防御利用高级协议或载荷手法发起的复杂攻击。
+- 使用扩展安全性(以前称为WAF-DDoS Protection)或医疗保健的扩展安全性（以前称为Enhanced Security）加载项，并实施Adobe推荐的[WAF流量过滤器规则](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)来防御复杂的攻击，包括那些使用高级协议或基于有效负载的技术的攻击。
 - 通过配置[请求转换规则](./traffic-filter-and-waf-rules/how-to/request-transformation.md)，忽略无关查询参数，从而提升缓存覆盖率。
 
 ## 开始使用
