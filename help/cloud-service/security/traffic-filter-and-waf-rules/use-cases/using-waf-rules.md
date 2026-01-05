@@ -30,7 +30,7 @@ ht-degree: 98%
 > WAF流量过滤器规则需要额外的扩展安全性(以前称为WAF-DdS Protection)或医疗保健的扩展安全性（以前称为“增强安全性”）许可证。 Sites 和 Forms 客户可默认使用标准流量过滤规则。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469440/?captions=chi_hans&quality=12&learn=on)
 
 ## 学习目标
 
