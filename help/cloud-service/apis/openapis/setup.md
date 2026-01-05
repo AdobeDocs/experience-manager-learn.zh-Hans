@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f4f177f2745cb03c81011679b9d88eaadeb9cae3
 workflow-type: tm+mt
-source-wordcount: '1859'
+source-wordcount: '1891'
 ht-degree: 9%
 
 ---
@@ -179,7 +179,9 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 
 ## 配置AEM实例以启用ADC项目通信{#configure-aem-instance}
 
-接下来，您需要配置AEM实例以启用上述ADC项目通信。 使用此配置，ADC项目的ClientID无法与AEM实例通信，导致出现403禁止错误。 将此配置视为防火墙规则，以便仅允许允许的ClientID与AEM实例通信。
+接下来，您需要配置AEM实例以启用上述ADC项目通信。
+
+如果没有此配置，ADC项目的ClientID无法与AEM实例通信，并导致403禁止错误。 将此配置视为防火墙规则，以便仅允许允许的ClientID与AEM实例通信。
 
 让我们按照配置AEM实例的步骤启用上述ADC项目通信。
 
@@ -210,11 +212,16 @@ ADC项目用于添加所需的API、设置其身份验证并将身份验证帐�
 
 1. 提交配置更改并将更改推送到Cloud Manager管道所连接的远程Git存储库。
 
-1. 在Cloud Manager中使用[配置管道](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)部署上述更改。
+1. 在Cloud Manager中使用[配置管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)部署上述更改。
 
    ![部署YAML](./assets/setup/config-pipeline.png)
 
-请注意，`api.yaml`文件也可以使用命令行工具[安装在](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[、](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)中。 这有助于在将配置更改部署到生产环境之前测试这些更改。
+请注意，`api.yaml`文件也可以使用命令行工具[安装在](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[、](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)中。 这有助于在将配置更改部署到生产环境之前测试这些更改。
+
+>[!CAUTION]
+>
+>YAML (`api.yaml`)文件是配置AEM实例以启用与ADC项目通信的唯一方法。 此配置不支持其他方法，例如使用环境变量。
+
 
 ## 后续步骤
 
