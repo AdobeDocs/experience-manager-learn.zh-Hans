@@ -21,7 +21,7 @@ ht-degree: 98%
 
 # 使用 WAF 规则保护 AEM 网站
 
-了解如何在 AEM as a Cloud Service 中使用 _Adobe 推荐的_**Web 应用程序防火墙（WAF）规则**&#x200B;防御包括 DoS、DDoS 和机器人滥用在内的复杂安全威胁。
+了解如何在 AEM as a Cloud Service 中使用 _Adobe 推荐的_&#x200B;**Web 应用程序防火墙（WAF）规则**&#x200B;防御包括 DoS、DDoS 和机器人滥用在内的复杂安全威胁。
 
 复杂攻击的特点包括高请求速率、复杂的攻击模式，以及利用高级技术绕过传统安全防护机制。
 
