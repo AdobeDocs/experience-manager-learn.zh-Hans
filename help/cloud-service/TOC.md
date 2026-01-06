@@ -252,17 +252,17 @@ ht-degree: 99%
       + [简介](./migration/cloud-acceleration-manager/introduction.md)
       + [准备工作和 Best Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [实施阶段](./migration/cloud-acceleration-manager/implementation-phase.md)
-      + [代码重构工具 ](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
+      + [代码重构工具 &#x200B;](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
       + [代码存储库现代化器](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
       + [Dispatcher 转换器](./migration/cloud-acceleration-manager/dispatcher-converter.md)
       + [索引转换器](./migration/cloud-acceleration-manager/index-converter.md)
       + [资源工作流迁移工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [浏览 Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
-      + [使用 Cloud Acceleration Manager ](./migration/cloud-acceleration-manager/using.md)
+      + [使用 Cloud Acceleration Manager &#x200B;](./migration/cloud-acceleration-manager/using.md)
 + [内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
    + 为 Forms as a Cloud Service 进行开发 {#developing-for-cloud-service}
-      + [1 - 快速入门 ](./forms/developing-for-cloud-service/getting-started.md)
+      + [1 - 快速入门 &#x200B;](./forms/developing-for-cloud-service/getting-started.md)
       + [2 - 安装 IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [3 - 设置 Git](./forms/developing-for-cloud-service/setup-git.md)
       + [4 - 将 IntelliJ 与 AEM 同步](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
@@ -374,7 +374,7 @@ ht-degree: 99%
       + [3 - 创建自适应表单模板](./forms/prefill-azure-storage/associate-page-component.md)
       + [4- 创建 Azure 存储集成](./forms/prefill-azure-storage/create-fdm.md)
       + [5 - 创建 SendGrid 集成](./forms/prefill-azure-storage/send-grid-fdm.md)
-      + [6 - 创建自适应表单 ](./forms/prefill-azure-storage/create-af.md)
+      + [6 - 创建自适应表单 &#x200B;](./forms/prefill-azure-storage/create-af.md)
       + [7 - 部署示例资产](./forms/prefill-azure-storage/deploy-sample-assets.md)
 
    + 创建审核工作流程{#create-aem-workflow}
