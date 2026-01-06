@@ -22,6 +22,6 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3478455/?learn=on&enablevpops)
 
-有关AEM中可用代理及其功能的完整列表（包括示例提示），请参阅AEM中的[代理文档](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)。
+有关AEM中可用代理及其功能的完整列表（包括示例提示），请参阅AEM中的[代理文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)。
 
 *要访问AEM中的代理，请按照[设置指南](./setup.md#agents-in-aem)来确保您已在AEM环境中设置访问权限。*

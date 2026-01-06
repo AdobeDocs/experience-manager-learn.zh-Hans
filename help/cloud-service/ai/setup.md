@@ -28,7 +28,7 @@ ht-degree: 3%
 
 ### AEM中的代理
 
-要在AEM中使用代理，必须先配置[AEM AI助手](#aem-ai-assistant)访问权限。 AEM中的代理必须由Adobe配置。 要请求访问AEM中的代理，请联系您的Adobe代表或[Adobe支持](https://experienceleague.adobe.com/en/support)。
+要在AEM中使用代理，必须先配置[AEM AI助手](#aem-ai-assistant)访问权限。 AEM中的代理必须由Adobe配置。 要请求访问AEM中的代理，请联系您的Adobe代表或[Adobe支持](https://experienceleague.adobe.com/zh-hans/support)。
 
 ## 工作区
 
