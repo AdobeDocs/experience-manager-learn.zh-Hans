@@ -20,7 +20,7 @@ ht-degree: 0%
 
 了解如何使用通过[AEM AI Assistant](./ai-assistant.md)公开的代理来自动化任务并简化工作流。 了解代理是什么、它们的工作方式以及它们适合您在AEM中工作的位置。
 
->[!VIDEO](https://video.tv.adobe.com/v/3478455/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3478465/?captions=chi_hans&learn=on&enablevpops)
 
 有关AEM中可用代理及其功能的完整列表（包括示例提示），请参阅AEM中的[代理文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)。
 

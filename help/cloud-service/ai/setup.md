@@ -24,7 +24,7 @@ ht-degree: 3%
 
 了解如何使用[Adobe Admin Console](https://adminconsole.adobe.com)在Adobe Experience Manager中配置对AI助理的访问权限。 此步骤对于使用户能够从Assistant获取响应并利用自动票证创建是必需的。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474066/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474076/?captions=chi_hans&learn=on&enablevpops)
 
 ### AEM中的代理
 
