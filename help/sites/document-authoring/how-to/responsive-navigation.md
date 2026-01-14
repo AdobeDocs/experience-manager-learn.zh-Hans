@@ -1,7 +1,7 @@
 ---
 title: 响应式导航
 description: 了解如何在Edge Delivery文档创作中执行响应式导航。
-version: Experience Manager 6.5, Experience Manager as a Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User
@@ -12,10 +12,10 @@ jira: KT-14473
 thumbnail: 3425707.jpeg
 duration: 91
 exl-id: 58af7383-61eb-4df1-ac2b-6d7bafb999c3
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8323da7961c4b6ffeaad5f936b7b515bb08a616a
 workflow-type: tm+mt
 source-wordcount: '24'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解如何在文档创作中执行响应式导航。
 
->[!VIDEO](https://video.tv.adobe.com/v/3438177/?learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3425707/?learn=on)
