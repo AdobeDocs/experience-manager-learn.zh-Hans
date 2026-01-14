@@ -25,4 +25,4 @@ ht-degree: 12%
 
 探索文档创作如何处理页面级元数据，以及作者如何在没有任何技术专业知识的情况下更新这些元数据。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425706/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438078/?captions=chi_hans&learn=on)

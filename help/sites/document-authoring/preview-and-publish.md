@@ -25,4 +25,4 @@ ht-degree: 25%
 
 有关如何使用文档创作创建和发布内容的分步指南。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425700/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441353/?captions=chi_hans&learn=on)

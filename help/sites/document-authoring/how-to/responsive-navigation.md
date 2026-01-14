@@ -25,4 +25,4 @@ ht-degree: 16%
 
 了解如何在文档创作中执行响应式导航。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425707/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438177/?captions=chi_hans&learn=on)

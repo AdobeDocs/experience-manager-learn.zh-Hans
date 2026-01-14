@@ -25,4 +25,4 @@ ht-degree: 7%
 
 探索如何在文档创作中使用块和自动块，以及如何改进站点和创作体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425703/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439514/?captions=chi_hans&learn=on)

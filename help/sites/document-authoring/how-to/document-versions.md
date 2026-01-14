@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解如何使用AEM文档创作功能创作文档。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425728/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438806/?captions=chi_hans&learn=on)

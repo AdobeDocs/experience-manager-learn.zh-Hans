@@ -25,4 +25,4 @@ ht-degree: 7%
 
 了解如何在AEM文档创作中使用文档工作流。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425720/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438300/?captions=chi_hans&learn=on)

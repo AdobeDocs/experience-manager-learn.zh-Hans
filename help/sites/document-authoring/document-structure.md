@@ -25,4 +25,4 @@ ht-degree: 7%
 
 探索如何使用默认内容、块等将文档创作组合在一起。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425701/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438825/?captions=chi_hans&learn=on)
