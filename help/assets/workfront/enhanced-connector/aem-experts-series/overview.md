@@ -100,4 +100,4 @@ ht-degree: 85%
 
 如果您使用Workfront Fusion链接Workfront和AEM Assets，并要自动创建项目和工作流，请参阅Workfront Fusion和AEM Assets集成文档。
 
-[使用Workfront Fusion通过Workfront工作流将AEM问题转化为项目](https://experienceleague.adobe.com/en/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/use-fusion-to-create-project-with-workflows)
+[使用Workfront Fusion通过Workfront工作流将AEM问题转化为项目](https://experienceleague.adobe.com/zh-hans/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/use-fusion-to-create-project-with-workflows)
