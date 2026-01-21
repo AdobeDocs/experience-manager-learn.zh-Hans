@@ -13,10 +13,10 @@ badgeIntegration: label="集成" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
 duration: 49
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '280'
-ht-degree: 100%
+source-git-commit: 866dca32844a7185bdf3980e38570da1d44d8b83
+workflow-type: tm+mt
+source-wordcount: '328'
+ht-degree: 85%
 
 ---
 
@@ -95,3 +95,9 @@ ht-degree: 100%
    </td>
   </tr>  
 </tbody></table>
+
+## 通过Workfront Fusion连接
+
+如果您使用Workfront Fusion链接Workfront和AEM Assets，并要自动创建项目和工作流，请参阅Workfront Fusion和AEM Assets集成文档。
+
+[使用Workfront Fusion通过Workfront工作流将AEM问题转化为项目](https://experienceleague.adobe.com/en/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/use-fusion-to-create-project-with-workflows)
