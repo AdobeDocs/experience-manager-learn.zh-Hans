@@ -68,7 +68,7 @@ AEM Publish SAML 集成的典型流程如下：
 + AEM管理员访问AEM作为云服务环境
 + 管理员访问IDP
 + 可选地，可以访问用于加密SAML负载的公私钥对
-+ AEM 网站页面（或页面树），发布到 AEM Publish，并 [由封闭用户组（CUG）保护](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
++ AEM 网站页面（或页面树），发布到 AEM Publish，并 [由封闭用户组（CUG）保护](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
 
 SAML 2.0 仅支持认证 AEM 发布或预览的使用。 若要使用和IDP管理AEM作者的身份验证，[请将IDP与Adobe IMS集成](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html)。
 
@@ -333,7 +333,7 @@ AEM使用以下用户属性，这些属性可通过Adobe Granite SAML 2.0身份�
 
 ### 使用加密
 
-在[加密AuthnRequest和SAML断言](#encrypting-the-authnrequest-and-saml-assertion)时，需要以下属性： `useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`。 `keyStorePassword`包含密码，因此不能将该值存储在OSGi配置文件中，而是使用[机密配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)插入
+在[加密AuthnRequest和SAML断言](#encrypting-the-authnrequest-and-saml-assertion)时，需要以下属性： `useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`。 `keyStorePassword`包含密码，因此不能将该值存储在OSGi配置文件中，而是使用[机密配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hans#secret-configuration-values)插入
 
 +++（可选）更新OSGi配置以使用加密
 
@@ -366,7 +366,7 @@ AEM使用以下用户属性，这些属性可通过Adobe Granite SAML 2.0身份�
 
 + `useEncryption`设置为`true`
 + `spPrivateKeyAlias`包含SAML集成使用的私钥的密钥库条目别名。
-+ `keyStorePassword`包含包含[用户密钥库密码的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)OSGi密码配置变量`authentication-service`。
++ `keyStorePassword`包含包含[用户密钥库密码的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hans#secret-configuration-values)OSGi密码配置变量`authentication-service`。
 
 +++
 
@@ -452,7 +452,7 @@ AEM Publish支持单个反向链接过滤器配置，因此请将SAML配置要�
 ### 如何为新环境中的SAML用户启用动态组成员资格
 
 为了显着提升新AEM as a Cloud Service环境中的群组评估性能，建议在新环境中激活动态群组成员资格功能。
-这也是激活数据同步时的必要步骤。 更多详细信息[此处](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier) 。
+这也是激活数据同步时的必要步骤。 更多详细信息[此处](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier) 。
 为此，请将以下属性添加到OSGI配置文件中：
 
 `/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
