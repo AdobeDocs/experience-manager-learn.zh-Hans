@@ -394,7 +394,7 @@ AEM使用以下用户属性，这些属性可通过Adobe Granite SAML 2.0身份�
 
 AEM Publish支持单个反向链接过滤器配置，因此请将SAML配置要求与任何现有配置合并。
 
-如果环境（或`config.publish.dev`）在不同环境中不同，`config.publish.stage`OSGi配置`config.publish.prod``allow.hosts``allow.hosts.regex`（、和）可以定义为特定属性。
+如果环境（或`config.publish.dev`）在不同环境中不同，`config.publish.stage`OSGi配置`config.publish.prod` `allow.hosts` `allow.hosts.regex`（、和）可以定义为特定属性。
 
 ## 配置跨源资源共享（CORS）
 
@@ -402,7 +402,7 @@ AEM Publish支持单个反向链接过滤器配置，因此请将SAML配置要�
 
 该HTTP POST请求的 `Origin` 头通常与AEM发布主机的值不同，因此需要CORS配置。
 
-在本地AEM SDK (`localhost:4503`)上测试SAML身份验证时，IDP可能会将`Origin`标头设置为`null`。 如果是，请补充`"null"``alloworigin`。
+在本地AEM SDK (`localhost:4503`)上测试SAML身份验证时，IDP可能会将`Origin`标头设置为`null`。 如果是，请补充`"null"` `alloworigin`。
 
 1. 在`/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~saml.cfg.json`处的项目中创建一个OSGi配置文件
    + 将`/wknd-examples/`更改为您的项目名称
@@ -424,7 +424,7 @@ AEM Publish支持单个反向链接过滤器配置，因此请将SAML配置要�
 }
 ```
 
-每个环境（`config.publish.dev`、 `config.publish.stage`和 `config.publish.prod`）的OSGi配置可以定义，如果 和`alloworigin``allowedpaths`在不同环境中存在差异，则可定义特定属性。
+每个环境（`config.publish.dev`、 `config.publish.stage`和 `config.publish.prod`）的OSGi配置可以定义，如果 和`alloworigin` `allowedpaths`在不同环境中存在差异，则可定义特定属性。
 
 ## 配置AEM Dispatcher以允许SAML HTTP POST发送
 
@@ -539,7 +539,7 @@ SAML身份验证处理程序在指定以下属性时创建外部用户： `"iden
 4. 本地用户随后会被从他所属的所有Saml本地群组中移除。 Saml局部群由OAK属性标识： `rep:managedByIdp`。 当属性 `syncType` 未指定或未设置为 `default`时，Saml认证处理程序会设置该属性。
 
 例如，如果迁移前 `user1` 是本地用户，是本地组 `group1`成员，迁移后将发生以下变化：
-`user1` 成为外部用户。 该属性 `rep:externalId` 被添加到他的个人资料中。`user1`成为外部群的成员：`group1;idp``user1`不再是局部群的直接成员：`group1``group1;idp`是局部群的成员。 `group1`
+`user1` 成为外部用户。 该属性 `rep:externalId` 被添加到他的个人资料中。`user1`成为外部群的成员：`group1;idp` `user1`不再是局部群的直接成员：`group1` `group1;idp`是局部群的成员。 `group1`
 
 `user1` 则是局部群的成员： `group1` 尽管继承
 
