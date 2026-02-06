@@ -8,10 +8,10 @@ role: Admin
 level: Beginner
 jira: KT-4999
 thumbnail: 39150.jpg
-last-substantial-update: 2023-05-19T00:00:00Z
+last-substantial-update: 2026-02-06T00:00:00Z
 exl-id: 40ba2368-edb7-4348-9aff-91194200092e
 duration: 160
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 3ea020ef8521d0014c69c9cf900e49c5f695fe0c
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 65%
@@ -27,4 +27,4 @@ ht-degree: 65%
 
  Adobe IMS用户组建立了对AEM公开的用户逻辑集，这些逻辑集可用来定义AEM用户的微调权限。
 
->[!VIDEO](https://video.tv.adobe.com/v/327865?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/39150?quality=12&learn=on)
