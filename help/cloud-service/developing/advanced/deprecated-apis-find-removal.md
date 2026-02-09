@@ -117,10 +117,10 @@ AEM分析器报告&#x200B;**什么**&#x200B;已被弃用，并提供有关如何
 
 | Analyzer警告类型 | 它指示的内容 | 建议的操作 | 引用 |
 | --------------------- | ----------------- | ------------------ | --------- |
-| 已弃用的AEM API | 将从AEM as a Cloud Service删除API | 将用法替换为支持的公共API | [API删除指南](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| 已弃用的AEM包或类 | 不再支持包或类 | 重构代码以使用推荐的替代方案 | [已弃用的API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
-| 已弃用的第三方库 | 将来的SDK中将不支持库 | 升级依赖项并重构使用情况 | [一般准则](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| 已弃用的Sling/OSGi模式 | 检测到旧批注或API | 迁移到新版Sling和OSGi API | [删除Sling/OSGi模式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 已弃用的AEM API | 将从AEM as a Cloud Service删除API | 将用法替换为支持的公共API | [API删除指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 已弃用的AEM包或类 | 不再支持包或类 | 重构代码以使用推荐的替代方案 | [已弃用的API](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
+| 已弃用的第三方库 | 将来的SDK中将不支持库 | 升级依赖项并重构使用情况 | [一般准则](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 已弃用的Sling/OSGi模式 | 检测到旧批注或API | 迁移到新版Sling和OSGi API | [删除Sling/OSGi模式](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
 | 计划删除（未来日期） | API仍然有效，但稍后会强制删除 | 在管道实施之前计划清理 | [发行说明](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/home) |
 
 ### 实践指导
@@ -134,5 +134,5 @@ AEM分析器报告&#x200B;**什么**&#x200B;已被弃用，并提供有关如何
 ## 其他资源
 
 - [AEM Analyzer Maven插件](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md)
-- [已弃用和已删除的功能和API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)
+- [已弃用和已删除的功能和API](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)
 
