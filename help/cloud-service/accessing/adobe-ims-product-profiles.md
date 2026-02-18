@@ -31,4 +31,4 @@ Adobe IMS产品配置文件授权用户登录AEM Author服务，并根据用户�
 
 ## 其他资源
 
-+ [Admin Console文档中的管理产品和用户访问权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)
++ [Admin Console文档中的管理产品和用户访问权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=zh-Hans#managing-products-and-user-access-in-admin-console)
