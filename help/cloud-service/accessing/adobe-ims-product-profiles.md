@@ -7,10 +7,10 @@ role: Admin
 level: Beginner
 jira: KT-5000
 thumbnail: 39156.jpg
-last-substantial-update: 2026-02-06T00:00:00Z
+last-substantial-update: 2026-02-18T00:00:00Z
 exl-id: 089a557c-5155-489c-bccf-0cb97e95840c
 duration: 312
-source-git-commit: fa6f5b0019ae0f965c7ff2738bb942dd30185662
+source-git-commit: b30dc712c04284eabb06be46af40dd753f8a51e0
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 42%
@@ -27,8 +27,8 @@ ht-degree: 42%
 
 Adobe IMS产品配置文件授权用户登录AEM Author服务，并根据用户所属的产品配置文件提供访问权限基准。
 
->[!VIDEO](https://video.tv.adobe.com/v/327572?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39156?quality=12&learn=on)
 
 ## 其他资源
 
-+ [Admin Console文档中的管理产品和用户访问权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=zh-Hans#managing-products-and-user-access-in-admin-console)
++ [Admin Console文档中的管理产品和用户访问权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)
