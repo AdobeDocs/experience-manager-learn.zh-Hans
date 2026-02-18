@@ -68,7 +68,7 @@ AEM Publish SAML集成的典型流程如下所示：
 + AEM管理员对AEM as a Cloud Service环境的访问权限
 + 对IDP的管理员访问权限
 + （可选）访问用于加密SAML有效负载的公钥/私钥对
-+ AEM Sites页面（或页面树），已发布到AEM Publish，并[受封闭用户组(CUG)保护](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
++ AEM Sites页面（或页面树），已发布到AEM Publish，并[受封闭用户组(CUG)保护](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
 
 仅支持SAML 2.0向AEM发布或预览验证用户。 若要使用和IDP管理AEM作者的身份验证，[请将IDP与Adobe IMS集成](https://helpx.adobe.com/cn/enterprise/using/set-up-identity.html)。
 
@@ -334,7 +334,7 @@ AEM使用以下用户属性，这些属性可通过Adobe Granite SAML 2.0身份�
 
 ### 使用加密
 
-在[加密AuthnRequest和SAML断言](#encrypting-the-authnrequest-and-saml-assertion)时，需要以下属性： `useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`。 `keyStorePassword`包含密码，因此不能将该值存储在OSGi配置文件中，而是使用[机密配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)插入
+在[加密AuthnRequest和SAML断言](#encrypting-the-authnrequest-and-saml-assertion)时，需要以下属性： `useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`。 `keyStorePassword`包含密码，因此不能将该值存储在OSGi配置文件中，而是使用[机密配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hans#secret-configuration-values)插入
 
 +++（可选）更新OSGi配置以使用加密
 
@@ -367,7 +367,7 @@ AEM使用以下用户属性，这些属性可通过Adobe Granite SAML 2.0身份�
 
 + `useEncryption`设置为`true`
 + `spPrivateKeyAlias`包含SAML集成使用的私钥的密钥库条目别名。
-+ `keyStorePassword`包含包含[用户密钥库密码的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)OSGi密码配置变量`authentication-service`。
++ `keyStorePassword`包含包含[用户密钥库密码的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hans#secret-configuration-values)OSGi密码配置变量`authentication-service`。
 
 +++
 
@@ -453,7 +453,7 @@ AEM Publish支持单个反向链接过滤器配置，因此请将SAML配置要�
 ### 如何为新环境中的SAML用户启用动态组成员资格
 
 为了显着提升新AEM as a Cloud Service环境中的群组评估性能，建议在新环境中激活动态群组成员资格功能。
-这也是激活数据同步时的必要步骤。 更多详细信息[此处](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier) 。
+这也是激活数据同步时的必要步骤。 更多详细信息[此处](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier) 。
 为此，请将以下属性添加到OSGI配置文件中：
 
 `/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
@@ -623,7 +623,7 @@ public void postSyncUserProcess(
 
 **重要信息：**&#x200B;要修改存储库中的用户属性，挂接实现需要：
 + 通过`SlingRepository`插入的`@Reference`引用
-+ 已配置具有适当权限的[服务用户](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)（已在“Apache Sling服务用户映射器服务修正”中配置）
++ 已配置具有适当权限的[服务用户](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)（已在“Apache Sling服务用户映射器服务修正”中配置）
 + 使用try-catch-finally块进行正确的会话管理
 
 ### 实施自定义SAML挂接
@@ -809,7 +809,7 @@ SAML挂接使用OSGi配置来指定它应应用于哪个IDP。 在项目中创�
 
 #### 步骤4：配置服务用户（如果修改存储库）
 
-如果SAML挂接需要修改存储库中的用户属性（如`postSyncUserProcess`示例中所示），则必须配置[服务用户](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)：
+如果SAML挂接需要修改存储库中的用户属性（如`postSyncUserProcess`示例中所示），则必须配置[服务用户](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)：
 
 1. 在`/ui.config/src/main/content/jcr_root/apps/myproject/osgiconfig/config/org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~saml.cfg.json`的项目中创建服务用户映射：
 
@@ -852,8 +852,8 @@ end
 + **正在测试**：在部署到生产环境之前，请在较低环境中彻底测试自定义挂接
 + **多个挂接**：可以配置多个SAML挂接实现；将执行所有匹配的挂接。 使用OSGi组件中的`service.ranking`属性控制执行顺序（首先执行排名较高的值）。 要在多个SAML身份验证处理程序工厂配置(`com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>`)中重用SAML挂接，请创建多个挂接配置（OSGi工厂配置），每个挂接都有与相应SAML身份验证处理程序匹配的不同`idpIdentifier`
 + **安全性**：在业务逻辑中使用SAML断言的所有数据之前，对其进行验证和整理
-+ **存储库访问**：在`postSyncUserProcess`中修改用户属性时，请始终使用具有适当权限的[服务用户](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)，而不是管理会话
-+ **服务用户权限**：向[服务用户](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)授予所需的最低权限（例如，仅在`jcr:read`上授予`rep:write`和`/home/users`，而不是完全管理员权限）
++ **存储库访问**：在`postSyncUserProcess`中修改用户属性时，请始终使用具有适当权限的[服务用户](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)，而不是管理会话
++ **服务用户权限**：向[服务用户](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)授予所需的最低权限（例如，仅在`jcr:read`上授予`rep:write`和`/home/users`，而不是完全管理员权限）
 + **会话管理**：始终使用try-catch-finally块以确保存储库会话正确关闭，即使发生异常也是如此
 + **用户同步计时**： `postSyncUserProcess`挂接在用户同步到OAK之后执行，因此在该时间点该用户对象必定存在于存储库中
 
