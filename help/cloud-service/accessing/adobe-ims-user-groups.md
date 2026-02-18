@@ -27,4 +27,4 @@ ht-degree: 65%
 
  Adobe IMS用户组建立了对AEM公开的用户逻辑集，这些逻辑集可用来定义AEM用户的微调权限。
 
->[!VIDEO](https://video.tv.adobe.com/v/39150?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327865?captions=chi_hans&quality=12&learn=on)
