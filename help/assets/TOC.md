@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: a43bd7ae4e5b0a6793c52b5a8d0f36e3c1b260b1
+source-git-commit: 146cb524c9ff10d6e4a836c0c14bdcabb553ef5d
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 98%
 
 + 搜索和发现{#search-and-discovery}
    + [搜索](./search-and-discovery/search.md)
-   + [上下文搜索](./search-and-discovery/contextual-search.md)
+   + [AI 搜索](./search-and-discovery/ai-search.md)
    + [Adobe Firefly 集成](./search-and-discovery/adobe-firefly.md)
    + [收藏集](./search-and-discovery/collections.md)
    + [搜索提升](./search-and-discovery/search-boost.md)
@@ -187,7 +187,7 @@ ht-degree: 98%
 + Workfront 集成{#workfront}
    + 增强型连接器{#enhanced-connector}
       + [增强型连接器基础知识](./workfront/enhanced-connector/basics.md)
-      + [项目文件夹 &#x200B;](./workfront/enhanced-connector/project-folders.md)
+      + [项目文件夹 ](./workfront/enhanced-connector/project-folders.md)
       + AEM 专家系列{#aem-experts-series}
          + [概述](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [设置](./workfront/enhanced-connector/aem-experts-series/setup.md)
@@ -207,4 +207,4 @@ ht-degree: 98%
 + 部署{#deployment}
    + [多租户和并发开发](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hans){target=_blank}
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}

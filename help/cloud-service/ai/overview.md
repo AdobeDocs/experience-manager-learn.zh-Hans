@@ -7,10 +7,10 @@ level: Beginner
 doc-type: Catalog
 duration: 30
 last-substantial-update: 2026-01-05T00:00:00Z
-source-git-commit: 51dafa4f3f89c1b3057b411cdf142fec04ab797e
+source-git-commit: 146cb524c9ff10d6e4a836c0c14bdcabb553ef5d
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 18%
+source-wordcount: '203'
+ht-degree: 19%
 
 ---
 
@@ -39,6 +39,10 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
     {title = Generate Variations}
     {description = Generate Variations in Adobe Experience Manager optimizes text and images for any experiences.}
     {cta = Watch}
+* ../../assets/search-and-discovery/ai-search.md
+    {title = AI Search}
+    {description = Learn how AEM Assets AI Search enhances search by intelligently surfacing relevant assets and enabling smarter search experiences.}
+    {cta = Watch}
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -48,7 +52,7 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./setup.md" title="在AEM中设置人工智能" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474076/?captions=chi_hans&format=jpeg&nocache=1769184550491" alt="在AEM中设置人工智能"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474066/?format=jpeg&nocache=1771440888392" alt="在AEM中设置人工智能"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -71,7 +75,7 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./ai-assistant.md" title="AEM AI 助手" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475368/?captions=chi_hans&format=jpeg&nocache=1769184550481" alt="AEM AI 助手"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475357/?format=jpeg&nocache=1771440888441" alt="AEM AI 助手"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -94,7 +98,7 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./agents-in-aem.md" title="AEM中的代理" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3478465/?captions=chi_hans&format=jpeg&nocache=1769184550500" alt="AEM中的代理"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3478455/?format=jpeg&nocache=1771440888404" alt="AEM中的代理"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -117,7 +121,7 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="../../sites/generative-ai/generate-variations.md" title="生成变体" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3427946/?format=jpeg&nocache=1769184550510" alt="生成变体"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3427946/?format=jpeg&nocache=1771440888429" alt="生成变体"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -135,6 +139,28 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
             </div>
         </div>
     </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="AI Search">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="../../assets/search-and-discovery/ai-search.md" title="AI 搜索" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3479989/?format=jpeg&nocache=1771440888416" alt="AI 搜索"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="../../assets/search-and-discovery/ai-search.md" target="_blank" rel="referrer" title="AI 搜索">AI 搜索</a>
+                    </p>
+                    <p class="is-size-6">了解AEM AssetsAI 搜索如何通过智能显示相关资源和启用更智能的搜索体验来增强搜索。</p>
+                </div>
+                <a href="../../assets/search-and-discovery/ai-search.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">观看</span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
-
