@@ -187,7 +187,7 @@ ht-degree: 97%
 + Workfront 集成{#workfront}
    + 增强型连接器{#enhanced-connector}
       + [增强型连接器基础知识](./workfront/enhanced-connector/basics.md)
-      + [项目文件夹 ](./workfront/enhanced-connector/project-folders.md)
+      + [项目文件夹 &#x200B;](./workfront/enhanced-connector/project-folders.md)
       + AEM 专家系列{#aem-experts-series}
          + [概述](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [设置](./workfront/enhanced-connector/aem-experts-series/setup.md)
