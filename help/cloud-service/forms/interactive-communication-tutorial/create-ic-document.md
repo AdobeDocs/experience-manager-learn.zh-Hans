@@ -21,7 +21,7 @@ ht-degree: 2%
 
 使用预定义模板和可重用片段创建交互式通信文档。 这确保了文档创建的一致性和效率。 通过选择正确的表单数据模型(FDM)并将片段插入指定的目标区域来嵌入动态数据。 测试最终输出的准确性和格式。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480054/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480075/?captions=chi_hans&learn=on&enablevpops)
 
 ## 后续步骤
 

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 了解如何使用API和Postman生成交互式通信文档。 此过程涉及获取文档ID、验证请求和使用预填充配置渲染PDF。 了解如何将此API集成到应用程序中，以实现动态运行时参数传递和安全身份验证。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480017/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480039/?captions=chi_hans&learn=on&enablevpops)

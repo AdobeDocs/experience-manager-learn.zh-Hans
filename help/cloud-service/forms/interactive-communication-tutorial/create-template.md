@@ -21,7 +21,7 @@ ht-degree: 3%
 
 了解如何创建交互式通信模板以标准化传出通信。 这些模板确保客户沟通的一致性、治理和品牌一致性。 了解使用IC Web Designer和对象库等工具创建、编辑和启用模板以供将来使用的过程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480029/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480052/?captions=chi_hans&learn=on&enablevpops)
 
 ## 后续步骤
 

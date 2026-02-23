@@ -21,7 +21,7 @@ ht-degree: 3%
 
 了解如何为交互式通信文档开发可重用片段。 优化布局并确保客户地址和信件正文部分的动态数据绑定。 使用格式、位置和边距控件增强文档设计。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480042/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480064/?captions=chi_hans&learn=on&enablevpops)
 
 ## 后续步骤
 
