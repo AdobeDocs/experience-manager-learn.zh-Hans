@@ -53,8 +53,8 @@ ht-degree: 2%
 
 高级开发步骤包括：
 
-1. [AEM as a Cloud Service环境的现代化](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
-1. [启用AEM API访问](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
+1. [AEM as a Cloud Service环境的现代化](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
+1. [启用AEM API访问](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
 1. [在Adobe Developer Console (ADC)中创建项目](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
 1. [初始化项目以进行本地开发](./runtime-action.md#initialize-project-for-local-development)
 1. 在ADC中配置项目
@@ -289,7 +289,7 @@ ht-degree: 2%
 
 默认情况下，WKND Sites项目没有用于显示PIM特定元数据（如SKU、供应商名称等）的资源元数据架构。 让我们在AEM实例中创建资源元数据架构并将其应用到资源文件夹。
 
-1. 登录到AEM as a Cloud Service资源实例，并出现在[资源视图](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)中。
+1. 登录到AEM as a Cloud Service资源实例，并出现在[资源视图](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/assets/authoring/switch-views)中。
 
    ![AEM Assets视图](../assets/examples/assets-pim-integration/aem-assets-view.png)
 
