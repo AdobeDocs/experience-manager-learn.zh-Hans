@@ -7,13 +7,13 @@ level: Beginner
 doc-type: Catalog
 duration: 30
 last-substantial-update: 2026-01-05T00:00:00Z
-source-git-commit: 146cb524c9ff10d6e4a836c0c14bdcabb553ef5d
+exl-id: cc255744-bb86-49cb-88ca-1266d28985a5
+source-git-commit: 6313c25d9f660adc2a76fc8b3baf66ff081d2868
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 19%
 
 ---
-
 
 # Experience Manager的人工智能
 
@@ -31,7 +31,7 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
     {title = AEM AI Assistant}
     {description = Learn how AI Assistant provides product knowledge and support in AEM.}
     {cta = Watch}
-* ./agents-in-aem.md
+* ./agents/agents-in-aem.md
     {title = Agents in AEM}
     {description = Discover how AI-powered agents automate tasks and enhance workflows in AEM.}
     {cta = Watch}
@@ -52,7 +52,7 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./setup.md" title="在AEM中设置人工智能" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474076/?captions=chi_hans&format=jpeg&nocache=1771440888392" alt="在AEM中设置人工智能"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474066/?format=jpeg&nocache=1772461889360" alt="在AEM中设置人工智能"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -75,7 +75,7 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./ai-assistant.md" title="AEM AI 助手" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475368/?captions=chi_hans&format=jpeg&nocache=1771440888441" alt="AEM AI 助手"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475357/?format=jpeg&nocache=1772461889318" alt="AEM AI 助手"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -97,8 +97,8 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./agents-in-aem.md" title="AEM中的代理" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3478465/?captions=chi_hans&format=jpeg&nocache=1771440888404" alt="AEM中的代理"
+                    <a href="./agents/agents-in-aem.md" title="AEM中的代理" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3478455/?format=jpeg&nocache=1772461889348" alt="AEM中的代理"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -106,11 +106,11 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        AEM中的<a href="./agents-in-aem.md" target="_blank" rel="referrer" title="AEM中的代理">代理</a>
+                        AEM中的<a href="./agents/agents-in-aem.md" target="_blank" rel="referrer" title="AEM中的代理">代理</a>
                     </p>
                     <p class="is-size-6">了解AI支持的代理如何在AEM中自动执行任务并增强工作流。</p>
                 </div>
-                <a href="./agents-in-aem.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="./agents/agents-in-aem.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">观看</span>
                 </a>
             </div>
@@ -121,7 +121,7 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="../../sites/generative-ai/generate-variations.md" title="生成变体" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3427946/?format=jpeg&nocache=1771440888429" alt="生成变体"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3427946/?format=jpeg&nocache=1772461889329" alt="生成变体"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -144,7 +144,7 @@ Experience Manager as a Cloud Service提供高级AI功能，以增强内容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="../../assets/search-and-discovery/ai-search.md" title="AI 搜索" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3479989/?format=jpeg&nocache=1771440888416" alt="AI 搜索"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3479989/?format=jpeg&nocache=1772461889339" alt="AI 搜索"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
