@@ -122,7 +122,7 @@ AEM Development Agent的功能会不断扩展和定期更新。 若要获取反�
 
 ### 创建和配置代码质量管道
 
-本教程使用代码质量管道（非生产）触发管道故障以进行故障排除。 有关代码质量管道的详细信息，请参阅[ CI/CD管道简介](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction)。
+本教程使用代码质量管道（非生产）触发管道故障以进行故障排除。 有关代码质量管道的详细信息，请参阅[&#x200B; CI/CD管道简介](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction)。
 
 - 在Cloud Manager中，导航到&#x200B;**管道**&#x200B;部分，然后选择&#x200B;**添加** > **添加非生产管道**。
 - 在&#x200B;**添加非生产管道**&#x200B;对话框中，配置以下内容：
