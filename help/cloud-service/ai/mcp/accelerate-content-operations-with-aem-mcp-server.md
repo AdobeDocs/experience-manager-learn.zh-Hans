@@ -36,10 +36,10 @@ AEM as a Cloud Service提供&#x200B;_MCP服务器_，以便您的IDE或聊天应
 
 1. 在计算机上打开光标。
 
-1. 从“光标”菜单转到&#x200B;**设置** > **光标设置**以打开设置窗口。
+1. 从“光标”菜单转到&#x200B;**设置** > **光标设置**&#x200B;以打开设置窗口。
    ![游标设置](../assets/content-mcp-server/cursor-settings.png)
 
-1. 在左侧边栏中，单击&#x200B;**工具和MCP**以打开该面板。
+1. 在左侧边栏中，单击&#x200B;**工具和MCP**&#x200B;以打开该面板。
    ![工具和MCP](../assets/content-mcp-server/tools-mcp.png)
 
 1. 单击&#x200B;**添加自定义MCP**&#x200B;或&#x200B;**新建MCP服务器**&#x200B;以打开`mcp.json`，然后粘贴此配置：
@@ -68,7 +68,7 @@ AEM as a Cloud Service提供&#x200B;_MCP服务器_，以便您的IDE或聊天应
 
    ![添加AEM MCP服务器](../assets/content-mcp-server/mcp-json-file.png)
 
-1. 在“光标设置”窗口中，单击&#x200B;**连接**&#x200B;以启动身份验证过程。 它使用OAuth 2.0 PKCE流获取&#x200B;**用户特定的访问令牌**以访问AEM MCP服务器。
+1. 在“光标设置”窗口中，单击&#x200B;**连接**&#x200B;以启动身份验证过程。 它使用OAuth 2.0 PKCE流获取&#x200B;**用户特定的访问令牌**&#x200B;以访问AEM MCP服务器。
    ![连接到AEM MCP服务器](../assets/content-mcp-server/connect-to-aem-mcp-server.png)
 
 1. 使用Adobe ID登录，然后返回到“光标设置”窗口。
