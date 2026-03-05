@@ -92,7 +92,7 @@ AEM as a Cloud Service提供&#x200B;_MCP服务器_，以便您的IDE或聊天应
    $ git clone git@github.com:adobe/aem-guides-wknd.git
    ```
 
-1. 将[WKND站点](https://github.com/adobe/aem-guides-wknd)项目部署到您的RDE。 有关详细步骤，请参阅[如何使用快速开发环境](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-aem-artifacts-using-the-aem-rde-plugin)。
+1. 将[WKND站点](https://github.com/adobe/aem-guides-wknd)项目部署到您的RDE。 有关详细步骤，请参阅[如何使用快速开发环境](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-aem-artifacts-using-the-aem-rde-plugin)。
 
 1. 在IDE中打开`react-app`文件夹。
 
