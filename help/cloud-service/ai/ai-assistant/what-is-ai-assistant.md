@@ -20,4 +20,4 @@ ht-degree: 0%
 
 AI Assistant可加速AEM任务、提供即时答案、指导功能使用、排查问题和创建支持工单 — 所有这些都可以从Experience Manager界面完成。 它有助于团队更快地交付内容，减少文档搜索，并提高运营效率。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480859/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480880/?captions=chi_hans&learn=on&enablevpops)
