@@ -22,7 +22,7 @@ ht-degree: 0%
 
 在本教程中，您&#x200B;_审阅_&#x200B;冒险内容片段详细信息，_更新_&#x200B;片段（例如，冒险的价格），以及&#x200B;_验证_ WKND Adventures React应用程序[中的更改](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)，所有这些更改都是针对您的IDE中的&#x200B;_较低的AEM环境_ （RDE或开发），并且没有离开MCP流。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480895/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480905/?captions=chi_hans&learn=on&enablevpops)
 
 ## 概述
 
