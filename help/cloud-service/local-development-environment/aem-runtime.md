@@ -11,9 +11,9 @@ level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
 duration: 411
-source-git-commit: 99e3cadc71ca4e26f9e4034085788dfc5407d1bb
+source-git-commit: dce730466f7004798dd57d7c030dccf5c15a9513
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1797'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 7%
 >id="aemcloud_localdev_aemruntime"
 >title="本地 AEM 运行时"
 >abstract="Adobe Experience Manager (AEM) 可以使用 AEM as a Cloud Service SDK 的快速入门 Jar 在本地运行。这样开发人员即可先部署到和测试自定义代码、配置和内容，然后再将它提交到源代码管理以及将它部署到 AEM as a Cloud Service 环境。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=zh-Hans" text="AEM as a Cloud Service SDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下载 AEM as a Cloud Service SDK"
 
 Adobe Experience Manager (AEM) 可以使用 AEM as a Cloud Service SDK 的快速入门 Jar 在本地运行。这样开发人员即可先部署到和测试自定义代码、配置和内容，然后再将它提交到源代码管理以及将它部署到 AEM as a Cloud Service 环境。
@@ -35,8 +35,8 @@ Adobe Experience Manager (AEM) 可以使用 AEM as a Cloud Service SDK 的快速
 
 Experience Manager是一种Java™应用程序，因此需要Oracle Java™ SDK支持开发工具。
 
-1. [下载并安装最新的Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.0_values=software-type%3Atooling&fulltext=Oracle%7E+JDK%7E+11%7E&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=list&p.offset=0&p.limit=14&p.limit=144)
-1. 通过运行以下命令，验证是否已安装Oracle Java™ 11 SDK：
+1. [下载并安装最新的Java™ JDK 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=java*+21*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=11)
+1. 通过运行以下命令，验证是否已安装Oracle Java™ 21 JDK：
 
 >[!BEGINTABS]
 
@@ -60,7 +60,9 @@ $ java --version
 
 >[!ENDTABS]
 
-![Java](./assets/aem-runtime/java.png)
+>[!CAUTION]
+>
+>如果您运行的是旧版本的AEM SDK，则可能需要[下载Java 11 JDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=java*+11*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=11)。 但是，最佳实践是使用最新版本的AEM SDK。
 
 ## 下载AEM as a Cloud Service SDK
 
@@ -87,8 +89,8 @@ AEM as a Cloud Service SDK(或AEM SDK)包含用于在本机运行AEM创作和发
    + `java -jar aem-author-p4502.jar`
       + 提供管理员密码作为`admin`。 可接受任何管理员密码，但建议对本地开发使用默认密码以减少重新配置的需要。
 
-   您&#x200B;*无法*&#x200B;通过双击[&#128279;](#troubleshooting-double-click)启动AEM作为Cloud Service快速入门Jar 。
-1. 在Web浏览器中，访问位于[http://localhost:4502](http://localhost:4502)的本地AEM创作服务
+   您&#x200B;*无法*&#x200B;通过双击[启动AEM作为Cloud Service快速入门Jar ](#troubleshooting-double-click)。
+1. 在Web浏览器中，访问位于[http://localhost:4502](http://localhost:4502)的本地AEM创作服务。 首次启动时，可能需要等待几分钟才能完成安装。 通常，浏览器选项卡将自动打开。
 
 >[!BEGINTABS]
 
@@ -132,8 +134,14 @@ $ java -jar aem-author-p4502.jar
    + `java -jar aem-publish-p4503.jar`
       + 提供管理员密码作为`admin`。 可接受任何管理员密码，但建议对本地开发使用默认密码以减少重新配置的需要。
 
-   您&#x200B;*无法*&#x200B;通过双击[&#128279;](#troubleshooting-double-click)启动AEM作为Cloud Service快速入门Jar 。
-1. 在Web浏览器中，访问位于[http://localhost:4503](http://localhost:4503)的本地AEM发布服务
+   您&#x200B;*无法*&#x200B;通过双击[启动AEM作为Cloud Service快速入门Jar ](#troubleshooting-double-click)。
+
+1. 您可以使用以下命令将AEM项目或示例[AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd)克隆并部署到本地AEM运行时：
+
+```shell
+$ cd <your-aem-project-directory or aem-guides-wknd>
+$ mvn clean install -PautoInstallSinglePackage -PautoInstallSinglePackagePublish
+```
 
 >[!BEGINTABS]
 
@@ -166,10 +174,44 @@ $ java -jar aem-publish-p4503.jar
 
 >[!ENDTABS]
 
+## 模拟内容分发 {#content-distribution}
+
+在真实的Cloud Service环境中，使用[Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe Pipeline将内容从Author Service分发到Publish Service。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution)是仅在云环境中可用的独立微服务。
+
+在开发期间，可能需要使用本地Author和Publish服务模拟内容的分发。 这可以通过启用旧版复制代理来实现。
+
+>[!NOTE]
+>
+> 复制代理只能在本地Quickstart JAR中使用，并且只能提供内容分发的模拟。
+
+1. 登录到&#x200B;**作者**&#x200B;服务，然后导航到[http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html)。
+1. 单击&#x200B;**默认代理（发布）**&#x200B;以打开默认复制代理。
+1. 单击&#x200B;**编辑**&#x200B;以打开代理的配置。
+1. 在&#x200B;**设置**&#x200B;选项卡下，更新以下字段：
+
+   + **已启用** — 检查true
+   + **代理用户ID** — 将此字段留空
+
+   ![复制代理配置 — 设置](assets/aem-runtime/settings-config.png)
+
+1. 在&#x200B;**传输**&#x200B;选项卡下，更新以下字段：
+
+   + **URI** - `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
+   + **用户** - `admin`
+   + **密码** - `admin`
+
+   ![复制代理配置 — 传输](assets/aem-runtime/transport-config.png)
+
+1. 单击&#x200B;**确定**&#x200B;保存配置并启用&#x200B;**默认**&#x200B;复制代理。
+1. 您现在可以更改Author服务上的内容并将其发布到Publish服务。
+
+   ![发布页面](assets/aem-runtime/publish-page-changes.png)
+
+1. 您可以在`http://localhost:4503/<your-page-path>.html`上查看已发布的内容。 通常，您无需登录Publish服务即可查看已发布的内容。 但是，如果您遇到任何问题或查看日志、配置等，则可以通过[http://localhost:4503/libs/granite/core/content/login.html](http://localhost:4503/libs/granite/core/content/login.html)登录Publish服务。
 
 ## 在预发行模式中设置本地AEM服务
 
-本地AEM运行时可在[预发行模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=zh-Hans)下启动，允许开发人员针对AEM as a Cloud Service的下一发行版功能进行构建。 通过在本地AEM运行时的第一个启动中传递`-r prerelease`参数，启用了预发行版。 这可以同时用于本地AEM Author和AEM Publish服务。
+本地AEM运行时可在[预发行模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html)下启动，允许开发人员针对AEM as a Cloud Service的下一发行版功能进行构建。 通过在本地AEM运行时的第一个启动中传递`-r prerelease`参数，启用了预发行版。 这可以同时用于本地AEM Author和AEM Publish服务。
 
 
 >[!BEGINTABS]
@@ -205,39 +247,6 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 ```
 
 >[!ENDTABS]
-
-## 模拟内容分发 {#content-distribution}
-
-在真实的Cloud Service环境中，使用[Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe Pipeline将内容从Author Service分发到Publish Service。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=zh-Hans#content-distribution)是仅在云环境中可用的独立微服务。
-
-在开发期间，可能需要使用本地Author和Publish服务模拟内容的分发。 这可以通过启用旧版复制代理来实现。
-
->[!NOTE]
->
-> 复制代理只能在本地Quickstart JAR中使用，并且只能提供内容分发的模拟。
-
-1. 登录到&#x200B;**作者**&#x200B;服务并导航到[http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html)。
-1. 单击&#x200B;**默认代理（发布）**&#x200B;以打开默认复制代理。
-1. 单击&#x200B;**编辑**&#x200B;以打开代理的配置。
-1. 在&#x200B;**设置**&#x200B;选项卡下，更新以下字段：
-
-   + **已启用** — 检查true
-   + **代理用户ID** — 将此字段留空
-
-   ![复制代理配置 — 设置](assets/aem-runtime/settings-config.png)
-
-1. 在&#x200B;**传输**&#x200B;选项卡下，更新以下字段：
-
-   + **URI** - `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
-   + **用户** - `admin`
-   + **密码** - `admin`
-
-   ![复制代理配置 — 传输](assets/aem-runtime/transport-config.png)
-
-1. 单击&#x200B;**确定**&#x200B;保存配置并启用&#x200B;**默认**&#x200B;复制代理。
-1. 您现在可以更改Author服务上的内容并将其发布到Publish服务。
-
-![发布页面](assets/aem-runtime/publish-page-changes.png)
 
 ## 快速入门Jar启动模式
 
@@ -271,7 +280,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 ## 可选的本地AEM运行时设置任务
 
-+ __OSGi配置环境变量和机密变量__&#x200B;是[专门为AEM本地运行时](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hans#local-development)设置的，而不是使用aio CLI管理它们。
++ __OSGi配置环境变量和机密变量__&#x200B;是[专门为AEM本地运行时](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development)设置的，而不是使用aio CLI管理它们。
 
 ## 何时更新快速入门Jar
 
@@ -364,9 +373,9 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-这是因为AEM as a Cloud Service需要Java™ SDK 11，而您运行的是其他版本，很可能是Java™ 8。 要解决此问题，请下载并安装[Oracle Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.0_values=software-type%3Atooling&fulltext=Oracle%7E+JDK%7E+11%7E&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=list&p.offset=0&p.limit=14&p.limit=144)。
+这是因为AEM as a Cloud Service需要Java™ JDK 21，而您运行的是其他版本，很可能是Java™ 11或8。 要解决此问题，请下载并安装[Oracle Java™ JDK 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Java*+21*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=11)。
 
-安装Oracle Java™ 11 SDK后，通过从命令行运行命令来验证它是活动版本：
+安装Oracle Java™ 21 JDK后，通过从命令行运行命令来验证它是活动版本：
 
 >[!BEGINTABS]
 
@@ -395,4 +404,4 @@ $ java --version
 + [下载AEM SDK](https://experience.adobe.com/#/downloads)
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [下载Docker](https://www.docker.com/)
-+ [Experience Manager Dispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)
++ [Experience Manager Dispatcher文档](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
