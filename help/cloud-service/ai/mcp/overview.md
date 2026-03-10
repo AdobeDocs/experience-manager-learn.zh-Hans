@@ -8,9 +8,10 @@ doc-type: Article
 duration: 0
 last-substantial-update: 2026-03-04T00:00:00Z
 jira: KT-20473
-source-git-commit: c5f1c7f57181b1e9de6dd91aa2428f2fe1a04893
+exl-id: 7f2e4e37-6440-423e-9ba9-9228fe03600b
+source-git-commit: ac44a73d2b63dba5292393730c712aec68ddea6c
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 ## AEM MCP服务器列表
 
-所有AEM MCP服务器在`https://mcp.adobeaemcloud.com/adobe/mcp/`下均可用。 有关详细信息，请参阅[将MCP用于AEM as a Cloud Service](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service)。
+所有AEM MCP服务器在`https://mcp.adobeaemcloud.com/adobe/mcp/`下均可用。 有关详细信息，请参阅[将MCP用于AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service)。
 
 - **内容** (`/content`) — 具有创建、读取、更新和删除页面、片段和资产的完全访问权限。
 - **内容（只读）** (`/content-readonly`) — 以只读方式列出和获取页面、片段和资产（无更改）。
@@ -69,14 +70,8 @@ MCP是围绕三个实体生成的： **主机**、**客户端**&#x200B;和&#x200
 
 ## 设置
 
-AEM MCP服务器设计为可与定义的一组兼容MCP的应用程序配合使用。 正式支持以下应用程序：
-
-- [个人克劳德](https://claude.com/product/overview)
-- [游标](https://www.cursor.com/)
-- [OpenAI ChatGPT](https://chatgpt.com/)
-- [Microsoft Copilot Studio](https://www.microsoft.com/en-us/microsoft-365-copilot/microsoft-copilot-studio)
-
-有关详细信息，请参阅[安装概述](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service#setup-overview)。
+AEM MCP服务器设计为可与定义的一组兼容MCP的应用程序配合使用。
+若要在首选的IDE或基于聊天应用程序中设置AEM MCP服务器，请参阅[支持的MCP应用程序](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications)以了解详细信息。
 
 ## 用例
 
