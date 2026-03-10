@@ -89,7 +89,7 @@ AEM as a Cloud Service SDK(或AEM SDK)包含用于在本机运行AEM创作和发
    + `java -jar aem-author-p4502.jar`
       + 提供管理员密码作为`admin`。 可接受任何管理员密码，但建议对本地开发使用默认密码以减少重新配置的需要。
 
-   您&#x200B;*无法*&#x200B;通过双击[启动AEM作为Cloud Service快速入门Jar ](#troubleshooting-double-click)。
+   您&#x200B;*无法*&#x200B;通过双击[启动AEM作为Cloud Service快速入门Jar &#x200B;](#troubleshooting-double-click)。
 1. 在Web浏览器中，访问位于[http://localhost:4502](http://localhost:4502)的本地AEM创作服务。 首次启动时，可能需要等待几分钟才能完成安装。 通常，浏览器选项卡将自动打开。
 
 >[!BEGINTABS]
@@ -134,7 +134,7 @@ $ java -jar aem-author-p4502.jar
    + `java -jar aem-publish-p4503.jar`
       + 提供管理员密码作为`admin`。 可接受任何管理员密码，但建议对本地开发使用默认密码以减少重新配置的需要。
 
-   您&#x200B;*无法*&#x200B;通过双击[启动AEM作为Cloud Service快速入门Jar ](#troubleshooting-double-click)。
+   您&#x200B;*无法*&#x200B;通过双击[启动AEM作为Cloud Service快速入门Jar &#x200B;](#troubleshooting-double-click)。
 
 1. 您可以使用以下命令将AEM项目或示例[AEM WKND Sites项目](https://github.com/adobe/aem-guides-wknd)克隆并部署到本地AEM运行时：
 
