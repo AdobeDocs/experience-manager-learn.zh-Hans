@@ -22,7 +22,7 @@ ht-degree: 2%
 
 了解如何在AEM Forms中设置云配置以便与Adobe Experience Platform安全集成。 使用Adobe Developer Console凭据为您的表单实现无缝的数据提交和检索。 本指南提供了有效配置连接的分步说明。
 
->[!VIDEO](https://video.tv.adobe.com/v/3481496/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481506/?captions=chi_hans&learn=on&enablevpops)
 
 
 ## 后续步骤

@@ -22,4 +22,4 @@ ht-degree: 0%
 
 了解如何通过AEM Forms提交内容在Adobe Experience Platform中创建和管理用户档案。 此集成可简化数据管理并增强用户体验。
 
->[!VIDEO](https://video.tv.adobe.com/v/3481508/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481519/?captions=chi_hans&learn=on&enablevpops)
