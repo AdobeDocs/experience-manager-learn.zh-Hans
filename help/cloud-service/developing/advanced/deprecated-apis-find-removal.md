@@ -34,7 +34,7 @@ ht-degree: 2%
 - AEM as a Cloud Service **操作中心**&#x200B;通知您项目中的&#x200B;_已弃用的API_。
   操作中心![已弃用的API](./assets/deprecated-apis/actions-center-deprecated-apis.png)
 
-- Cloud Manager管道报告中的&#x200B;**代码扫描**&#x200B;步骤在您的项目中弃用的API，请查看&#x200B;**下载详细信息**报告，以查看弃用的API的完整列表。
+- Cloud Manager管道报告中的&#x200B;**代码扫描**&#x200B;步骤在您的项目中弃用的API，请查看&#x200B;**下载详细信息**&#x200B;报告，以查看弃用的API的完整列表。
   ![代码扫描中已弃用的API](./assets/deprecated-apis/code-scanning-summary.png)
 
 - Cloud Manager管道中的&#x200B;**工件准备**&#x200B;步骤报告项目中已弃用的API，**下载日志**&#x200B;并在日志文件中查找&#x200B;_Analyzer警告_。
