@@ -1,5 +1,5 @@
 ---
-title: 正在筛选值应用程序
+title: 过滤 Vue 应用程序
 description: 一个简单的Vue应用程序，用于筛选使用内容片段建模的WKND冒险。
 version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
@@ -13,14 +13,14 @@ hide: true
 hidefromtoc: true
 exl-id: 8f96093a-4449-4249-9257-028e2ffd979b
 duration: 26
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# 正在筛选值应用程序
+# 过滤 Vue 应用程序
 
 探索AEM Headless GraphQL API使用[值](https://vuejs.org/)应用程序筛选数据的能力。 此React应用程序创建一个可按活动类型筛选的WKND Adventures列表。
 

@@ -1,5 +1,5 @@
 ---
-title: 筛选React应用程序
+title: 过滤 React 应用程序
 description: 一个简单的React应用程序，用于过滤使用内容片段建模的WKND冒险。
 version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
@@ -13,14 +13,14 @@ hide: true
 hidefromtoc: true
 exl-id: 1eb9487e-a82a-4d15-a776-cf004f2e3f01
 duration: 26
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# 筛选React应用程序
+# 过滤 React 应用程序
 
 探索AEM Headless GraphQL API使用[React](https://reactjs.org/)应用程序筛选数据的能力。 此React应用程序创建一个可按活动类型筛选的WKND Adventures列表。
 

@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: da9a0a9b-000b-4dd6-895e-8b20ade31664
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 观看Experience Catalyst如何利用AI轻松地将WordPress站点迁移到AEM云服务。
 
->[!VIDEO](https://video.tv.adobe.com/v/3461986/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459228/?learn=on&enablevpops)

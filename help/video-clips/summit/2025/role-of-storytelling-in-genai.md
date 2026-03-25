@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: f3902c6e-7f32-49ce-982a-76d264b87fd0
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解乡村音乐中的storytelling原则如何与用于数字体验的GenAI工具的设计相关联。
 
->[!VIDEO](https://video.tv.adobe.com/v/3462019/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459229/?learn=on&enablevpops)

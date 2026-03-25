@@ -1,6 +1,6 @@
 ---
-title: 使用jQuery和Handlebars进行筛选
-description: 使用jQuery和Handlebars的JavaScript实施，该实施会筛选要显示的WKND Adventures。.
+title: 使用 jQuery 和 Handlebars 进行过滤
+description: JavaScript实施，使用jQuery和Handlebars来筛选要显示的WKND Adventures。
 version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -14,14 +14,14 @@ hide: true
 hidefromtoc: true
 exl-id: 75ffd84a-62b1-480f-b05f-3664f54bb171
 duration: 26
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
-# 使用jQuery和Handlebars进行筛选
+# 使用 jQuery 和 Handlebars 进行过滤
 
 探索AEM Headless GraphQL API通过使用了[jQuery](https://jquery.com/)和[Handlebars](https://handlebarsjs.com/)的JavaScript应用程序筛选数据的能力。 此应用程序创建一个可按活动类型筛选的WKND Adventures列表。
 

@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 1666878c-11ee-4f94-a307-605d96e21619
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索AEM Assets中的语义搜索如何帮助您更有效地查找与您的意图相匹配的内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3461898/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459226/?learn=on&enablevpops)

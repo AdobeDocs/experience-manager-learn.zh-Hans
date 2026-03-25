@@ -2,7 +2,7 @@
 title: 在AEM as a Cloud Service中查找并删除已弃用的API
 description: 了解如何在AEM as a Cloud Service中查找和删除已弃用的API。
 version: Experience Manager as a Cloud Service
-role: Developer, Architect
+role: Developer
 level: Beginner
 doc-type: tutorial
 duration: null
@@ -10,7 +10,7 @@ jira: KT-20288
 thumbnail: KT-20288.png
 last-substantial-update: 2026-02-09T00:00:00Z
 exl-id: 287894ea-9cc1-4c27-ac7e-967ad46f4789
-source-git-commit: 08dd5006ebf4ebd94e8bc60594f8f1541feb810f
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 2%
@@ -34,7 +34,7 @@ ht-degree: 2%
 - AEM as a Cloud Service **操作中心**&#x200B;通知您项目中的&#x200B;_已弃用的API_。
   操作中心![已弃用的API](./assets/deprecated-apis/actions-center-deprecated-apis.png)
 
-- Cloud Manager管道报告中的&#x200B;**代码扫描**&#x200B;步骤在您的项目中弃用的API，请查看&#x200B;**下载详细信息**&#x200B;报告，以查看弃用的API的完整列表。
+- Cloud Manager管道报告中的&#x200B;**代码扫描**&#x200B;步骤在您的项目中弃用的API，请查看&#x200B;**下载详细信息**报告，以查看弃用的API的完整列表。
   ![代码扫描中已弃用的API](./assets/deprecated-apis/code-scanning-summary.png)
 
 - Cloud Manager管道中的&#x200B;**工件准备**&#x200B;步骤报告项目中已弃用的API，**下载日志**&#x200B;并在日志文件中查找&#x200B;_Analyzer警告_。
@@ -137,10 +137,10 @@ AEM分析器报告&#x200B;**什么**&#x200B;已被弃用，并提供有关如何
 
 | Analyzer警告类型 | 它指示的内容 | 建议的操作 | 引用 |
 | --------------------- | ----------------- | ------------------ | --------- |
-| 已弃用的AEM API | 将从AEM as a Cloud Service删除API | 将用法替换为支持的公共API | [API删除指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| 已弃用的AEM包或类 | 不再支持包或类 | 重构代码以使用推荐的替代方案 | [已弃用的API](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
-| 已弃用的第三方库 | 将来的SDK中将不支持库 | 升级依赖项并重构使用情况 | [一般准则](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| 已弃用的Sling/OSGi模式 | 检测到旧批注或API | 迁移到新版Sling和OSGi API | [删除Sling/OSGi模式](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 已弃用的AEM API | 将从AEM as a Cloud Service删除API | 将用法替换为支持的公共API | [API删除指南](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 已弃用的AEM包或类 | 不再支持包或类 | 重构代码以使用推荐的替代方案 | [已弃用的API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
+| 已弃用的第三方库 | 将来的SDK中将不支持库 | 升级依赖项并重构使用情况 | [一般准则](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 已弃用的Sling/OSGi模式 | 检测到旧批注或API | 迁移到新版Sling和OSGi API | [删除Sling/OSGi模式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
 | 计划删除（未来日期） | API仍然有效，但稍后会强制删除 | 在管道实施之前计划清理 | [发行说明](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/home) |
 
 ### 实践指导
@@ -154,4 +154,4 @@ AEM分析器报告&#x200B;**什么**&#x200B;已被弃用，并提供有关如何
 ## 其他资源
 
 - [AEM Analyzer Maven插件](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md)
-- [已弃用和已删除的功能和API](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)
+- [已弃用和已删除的功能和API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)

@@ -1,7 +1,7 @@
 ---
 title: Edge Delivery Services 和 Universal Editor 开发人员教程
 description: 了解在 AEM 通用编辑器中创作并使用 Edge Delivery Services 投放的新网站开发的基础知识。
-short-description: 关于构建AEM网站的开发人员教程，这些网站将强大的创作功能与通用编辑器相结合，并使用Edge Delivery Services实现快如闪电的交付。 了解如何创建新项目、设置本地开发环境和构建自定义块。
+short-description: 面向开发者的教程，介绍如何构建 AEM 网站，将强大的创作能力与通用编辑器相结合，并通过 Edge Delivery Services 实现极速内容交付。了解如何创建新项目、搭建本地开发环境以及构建自定义区块。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,10 +11,10 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '658'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,8 @@ ht-degree: 94%
 
 了解如何在 AEM as a Cloud Service 中创建代码项目和配置新网站。此设置支持使用通用编辑器进行无缝开发，以创建内容并通过 Edge Delivery Services 快速投放内容。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./1-new-code-project.md
 * ./2-new-aem-site.md
@@ -88,7 +89,8 @@ ht-degree: 94%
 ## 开发设置
 
 了解如何配置本地开发环境，以实现快速网站开发。这种设置可通过通用编辑器无缝地创建网站，并通过 Edge Delivery Services 实现高效的内容投放，确保开发工作流程顺畅且优化。
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./3-local-development-environment.md
 * ./4-website-branding.md
@@ -101,7 +103,7 @@ ht-degree: 94%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="设置本地开发环境" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443988/?captions=chi_hans&format=jpeg&nocache=1753811862249" alt="设置本地开发环境"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="设置本地开发环境"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -149,7 +151,8 @@ ht-degree: 94%
 
 了解如何通过定义内容模型并为测试和开发设置示例内容来创建新区块。探索两种渲染该区块的方法，并了解如何在 AEM 和 Edge Delivery Services 中对其进行结构化，以实现最佳性能和灵活性。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./5-new-block.md {image = ./assets/5-new-block/card.png}
 * ./6-author-block.md {image = ./assets/6-author-block/card.png}
@@ -258,7 +261,8 @@ ht-degree: 94%
 
 既然你已经完成了本教程，那就利用这些有针对性的操作指南来巩固所学知识吧。这些指南在此处涵盖的代码和概念基础上进行了扩展，探讨了特定角色的用例、高级技术以及提升 Edge Delivery Services 和通用编辑器开发技能的其他技巧。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./how-to/block-options.md
 * ./how-to/header-and-footer.md

@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 3b3ef9c2-f4e0-45fa-a2a4-3e7130b4d6ce
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解BambooHR如何使用AI识别和修复损坏的后链接，从而带来有机流量增加4%。
 
->[!VIDEO](https://video.tv.adobe.com/v/3461997/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459238/?learn=on&enablevpops)

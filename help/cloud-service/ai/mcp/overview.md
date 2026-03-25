@@ -9,7 +9,7 @@ duration: 0
 last-substantial-update: 2026-03-04T00:00:00Z
 jira: KT-20473
 exl-id: 7f2e4e37-6440-423e-9ba9-9228fe03600b
-source-git-commit: ac44a73d2b63dba5292393730c712aec68ddea6c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '877'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## AEM MCP服务器列表
 
-所有AEM MCP服务器在`https://mcp.adobeaemcloud.com/adobe/mcp/`下均可用。 有关详细信息，请参阅[将MCP用于AEM as a Cloud Service](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service)。
+所有AEM MCP服务器在`https://mcp.adobeaemcloud.com/adobe/mcp/`下均可用。 有关详细信息，请参阅[将MCP用于AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service)。
 
 - **内容** (`/content`) — 具有创建、读取、更新和删除页面、片段和资产的完全访问权限。
 - **内容（只读）** (`/content-readonly`) — 以只读方式列出和获取页面、片段和资产（无更改）。
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 MCP服务器是为具有交互式UX和人为监督的&#x200B;**人工操作的MCP客户端**&#x200B;设计的。 MCP工具规范建议&#x200B;_可以批准或拒绝工具调用循环中的人_。
 
-如果在代理或自治系统中使用MCP服务器，请将其视为单独的兼容性层。 列入允许列表在&#x200B;**提示**、_提示_&#x200B;或&#x200B;_路由逻辑_&#x200B;中不要对&#x200B;_工具名称进行硬编码_。 在MCP中，_工具名称_&#x200B;是程序化标识符，_描述_&#x200B;是LLM的面向模型的提示。 基于提示和选择的首选功能或描述。
+如果在代理或自治系统中使用MCP服务器，请将其视为单独的兼容性层。 在&#x200B;**提示**、_提示_&#x200B;或&#x200B;_路由逻辑_&#x200B;中不要对&#x200B;_工具名称进行硬编码_。 在MCP中，_工具名称_&#x200B;是程序化标识符，_描述_&#x200B;是LLM的面向模型的提示。 基于提示和选择的首选功能或描述。
 
 通过`tools/list`实施运行时发现，处理工具列表更改(`notifications/tools/list_changed`)，并在需要超出协议基线的稳定性保证时与MCP服务器提供商协调上线和版本控制。
 
@@ -71,11 +71,12 @@ MCP是围绕三个实体生成的： **主机**、**客户端**&#x200B;和&#x200
 ## 设置
 
 AEM MCP服务器设计为可与定义的一组兼容MCP的应用程序配合使用。
-若要在首选的IDE或基于聊天应用程序中设置AEM MCP服务器，请参阅[支持的MCP应用程序](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications)以了解详细信息。
+若要在首选的IDE或基于聊天应用程序中设置AEM MCP服务器，请参阅[支持的MCP应用程序](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications)以了解详细信息。
 
 ## 用例
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./accelerate-content-operations-with-aem-mcp-server.md    

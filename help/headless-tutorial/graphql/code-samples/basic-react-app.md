@@ -1,5 +1,5 @@
 ---
-title: 基本React应用程序
+title: 基本 React 应用程序
 description: 一个基本React应用程序，可显示WKND冒险列表及其详细信息
 version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
@@ -14,14 +14,14 @@ hide: true
 hidefromtoc: true
 exl-id: 870be37f-68bb-4b0f-9918-e68b09be830e
 duration: 17
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
-# 基本React应用程序
+# 基本 React 应用程序
 
 此[React](https://reactjs.org/)应用程序演示了如何使用AEM的GraphQL API通过持久化查询来查询内容。 此应用程序呈现WKND冒险的可筛选内容，并在选择一个冒险后显示该冒险的完整详细信息。
 

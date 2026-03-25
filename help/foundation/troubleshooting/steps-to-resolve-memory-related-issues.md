@@ -7,19 +7,19 @@ level: Intermediate
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Administration
-index: y
+index: true
 doc-type: Technical Video
 exl-id: 6477e9df-f33f-46b1-aa9b-535063da65dd
 duration: 109
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '38'
-ht-degree: 0%
+ht-degree: 21%
 
 ---
 
-# 解决AEM中内存相关问题的步骤
+# 解决 AEM 中与内存相关的问题的步骤
 
 *本视频介绍解决AEM中与内存相关问题的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/3418351?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/335473?quality=12&learn=on)

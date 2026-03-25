@@ -14,14 +14,14 @@ recommendations: noCatalog, noDisplay
 hidefromtoc: true
 exl-id: 2e5bd50e-c0d7-4292-8097-e0a17f41a91a
 duration: 22
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '113'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# 筛选SvelteKit应用程序
+# 过滤 SvelteKit 应用程序
 
 探索AEM Headless GraphQL API使用[SvelteKit](https://kit.svelte.dev/)应用程序列出数据的能力。 此SvelteKit应用程序创建WKND冒险列表，可以选择该列表来显示冒险的详细信息。
 

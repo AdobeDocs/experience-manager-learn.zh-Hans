@@ -11,7 +11,7 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
-source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1195'
 ht-degree: 98%
@@ -26,7 +26,7 @@ ht-degree: 98%
 
 >[!IMPORTANT]
 >
-> WAF流量过滤器规则需要额外的扩展安全性(以前称为WAF-DdS Protection)或医疗保健的扩展安全性（以前称为“增强安全性”）许可证。 Sites 和 Forms 客户可默认使用标准流量过滤规则。
+> WAF流量过滤器规则需要额外的扩展安全性（以前称为WAF-DdS Protection）或医疗保健的扩展安全性（以前称为“增强安全性”）许可证。 Sites 和 Forms 客户可默认使用标准流量过滤规则。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3469394/?quality=12&learn=on)
@@ -93,7 +93,8 @@ Adobe 推荐标准流量过滤规则和 WAF 流量过滤规则，帮助您快速
 
 通过以下设置指南和用例了解如何在 AEM as a Cloud Service 中定义、部署、测试和分析流量过滤规则（包括 WAF 规则）。这些为您提供了背景知识，使您后续能够自信地应用 Adobe 推荐的规则。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./setup.md
@@ -134,7 +135,8 @@ Adobe 推荐标准流量过滤规则和 WAF 流量过滤规则，帮助您快速
 
 本指南提供分步说明，帮助您在 AEM as a Cloud Service 环境中设置并部署 Adobe 推荐的标准流量过滤规则和 WAF 流量过滤规则。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/using-traffic-filter-rules.md
@@ -204,7 +206,8 @@ Adobe 推荐标准流量过滤规则和 WAF 流量过滤规则，帮助您快速
 
 对于更复杂的场景，您可以参考以下用例，了解如何根据具体业务需求实施自定义流量过滤规则：
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./how-to/request-logging.md

@@ -11,7 +11,7 @@ last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18717
 thumbnail: null
 exl-id: c4fb11b9-b613-4522-b9da-18d7ae0826ec
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 8%
@@ -44,7 +44,8 @@ ht-degree: 8%
 >
 > 先探索实时演示，有助于您在投入时间进行设置和实施之前了解每种个性化技术的价值和功能。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./live-demo.md
@@ -85,7 +86,8 @@ ht-degree: 8%
 
 在探索特定用例之前，您首先要配置AEM as a Cloud Service进行个性化。 首先，集成Adobe Target和Tags以使用Web SDK实现客户端个性化。 这些基本步骤允许您的AEM页面支持实验、受众定位和实时个性化。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./setup/integrate-adobe-target.md
@@ -158,7 +160,8 @@ ht-degree: 8%
 
 探索AEMCS、Adobe Target和Adobe Experience Platform支持的以下常见个性化用例。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/experimentation.md

@@ -12,7 +12,7 @@ badgeLicense: label="需要许可证" type="positive" before-title="true"
 jira: KT-18308
 thumbnail: null
 exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
-source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 98%
@@ -21,16 +21,16 @@ ht-degree: 98%
 
 # 使用 WAF 规则保护 AEM 网站
 
-了解如何在 AEM as a Cloud Service 中使用 _Adobe 推荐的_&#x200B;**Web 应用程序防火墙（WAF）规则**&#x200B;防御包括 DoS、DDoS 和机器人滥用在内的复杂安全威胁。
+了解如何在 AEM as a Cloud Service 中使用 _Adobe 推荐的_**Web 应用程序防火墙（WAF）规则**&#x200B;防御包括 DoS、DDoS 和机器人滥用在内的复杂安全威胁。
 
 复杂攻击的特点包括高请求速率、复杂的攻击模式，以及利用高级技术绕过传统安全防护机制。
 
 >[!IMPORTANT]
 >
-> WAF流量过滤器规则需要额外的扩展安全性(以前称为WAF-DdS Protection)或医疗保健的扩展安全性（以前称为“增强安全性”）许可证。 Sites 和 Forms 客户可默认使用标准流量过滤规则。
+> WAF流量过滤器规则需要额外的扩展安全性（以前称为WAF-DdS Protection）或医疗保健的扩展安全性（以前称为“增强安全性”）许可证。 Sites 和 Forms 客户可默认使用标准流量过滤规则。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469440/?captions=chi_hans&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## 学习目标
 
@@ -233,7 +233,8 @@ $./nikto.pl -useragent "AttackSimulationAgent (Demo/1.0)" -D V -Tuning 9 -ssl -h
 
 对于更复杂的场景，您可以参考以下用例，了解如何根据具体业务需求实施自定义流量过滤规则：
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ../how-to/request-logging.md

@@ -10,7 +10,7 @@ topic: Integrations
 jira: KT-14794
 exl-id: c4257567-76bd-417e-a1a2-38a0647767d9
 duration: 147
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 创建自定义提交以处理表单提交
 
-为满足用例，创建了自定义提交服务以将提交的数据和附件存储在Azure中。 提交基于核心组件的表单时，数据采用以下格式
+为满足使用案例，创建了自定义提交服务以将提交的数据和附件存储在Azure中。 提交基于核心组件的表单时，数据采用以下格式
 
 ```json
 {
@@ -40,9 +40,9 @@ ht-degree: 1%
 }
 ```
 
-元素&#x200B;_&#x200B;**contractcopy**&#x200B;_表示文件附件组件，用于捕获随表单提交的附件。
-为了能够使用数据及其附件预填充自适应表单，提交的附件将保存在Azure门户中，提交数据中的合同副本对象的数据元素将使用已保存附件的URL进行更新。
-自定义提交服务在Azure门户中提取并存储附件。  更新的已提交数据将如下所示
+元素&#x200B;_**contractcopy**_表示文件附件组件，用于捕获随表单提交的附件。
+为了能够使用数据及其附件预填充自适应表单，提交的附件将保存在Azure门户中，并且提交数据中的合同副本对象的数据元素将使用保存附件的url进行更新。
+自定义提交服务可在Azure门户中提取并存储附件。  更新的已提交数据将如下所示
 
 
 ```json
@@ -62,9 +62,7 @@ ht-degree: 1%
     },
     "Message": "We would like to renew our annual contract "
 }
-``
 ```
-
 
 [此处](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56)提供了基于核心组件的自适应表单的示例自定义提交处理程序。 编写以下自定义提交以处理表单提交
 
