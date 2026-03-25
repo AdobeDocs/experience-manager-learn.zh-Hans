@@ -22,4 +22,4 @@ ht-degree: 23%
 
 *此视频介绍调查AEM中SAML相关问题的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335466?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418298?captions=chi_hans&quality=12&learn=on)

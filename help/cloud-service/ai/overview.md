@@ -56,7 +56,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./ai-assistant/overview.md" title="AEM AI 助手" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475357/?format=jpeg&nocache=1773082651757" alt="AEM AI 助手"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475368/?captions=chi_hans&format=jpeg&nocache=1773082651757" alt="AEM AI 助手"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

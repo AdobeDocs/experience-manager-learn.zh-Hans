@@ -22,4 +22,4 @@ ht-degree: 21%
 
 *本视频介绍解决AEM中与内存相关问题的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335473?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418351?captions=chi_hans&quality=12&learn=on)

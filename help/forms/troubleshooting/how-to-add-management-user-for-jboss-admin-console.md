@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *本视频介绍为JBoss管理控制台添加管理用户的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335484?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418357?captions=chi_hans&quality=12&learn=on)

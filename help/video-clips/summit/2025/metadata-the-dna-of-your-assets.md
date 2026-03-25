@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解元数据如何驱动工作流、搜索和见解，以及自动化如何丰富元数据以符合品牌标准。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461975/?captions=chi_hans&learn=on&enablevpops)

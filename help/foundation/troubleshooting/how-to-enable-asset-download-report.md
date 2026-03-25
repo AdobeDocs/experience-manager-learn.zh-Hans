@@ -22,4 +22,4 @@ ht-degree: 20%
 
 *此视频介绍启用资产下载报表的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335463?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418280?captions=chi_hans&quality=12&learn=on)

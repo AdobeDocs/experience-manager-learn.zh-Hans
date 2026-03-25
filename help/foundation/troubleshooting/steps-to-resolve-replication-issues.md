@@ -22,4 +22,4 @@ ht-degree: 40%
 
 *本视频介绍解决AEM中复制问题的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335471?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418322?captions=chi_hans&quality=12&learn=on)

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解Adobe通过GenAI工具降低进入壁垒、统一工作流和最大程度提高业务影响的方法。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459231/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462162/?captions=chi_hans&learn=on&enablevpops)

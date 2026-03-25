@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此视频介绍更改熵值的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335494?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437688?captions=chi_hans&quality=12&learn=on)

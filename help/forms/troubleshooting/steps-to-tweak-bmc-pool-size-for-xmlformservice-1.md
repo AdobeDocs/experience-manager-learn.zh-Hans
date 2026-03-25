@@ -22,4 +22,4 @@ ht-degree: 0%
 
 *此视频介绍调整XMLFormService（第1个，共2个）的bmc池大小的步骤。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335552?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438674?captions=chi_hans&quality=12&learn=on)

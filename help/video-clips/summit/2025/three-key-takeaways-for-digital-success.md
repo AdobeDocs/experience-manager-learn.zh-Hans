@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索优化数字体验的三个关键原则：修复基础知识、利用人工智能和增强战略领袖的能力。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459234/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462052/?captions=chi_hans&learn=on&enablevpops)
