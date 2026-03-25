@@ -38,7 +38,7 @@ ht-degree: 100%
 
 这是一个多段式教程，并且假设您已完成[更新标准 AEM 项目](./update-project.md)中概述的步骤。
 
-确保您具有[在 Cloud Manager 中创建和部署管道的权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=zh-hans#role-definitions)以及[对 AEM as a Cloud Service 环境的访问权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html)。
+确保您具有[在 Cloud Manager 中创建和部署管道的权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=zh-hans#role-definitions)以及[对 AEM as a Cloud Service 环境的访问权限](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hans)。
 
 ## 重命名现有管道
 
