@@ -76,5 +76,5 @@ InDesign模板文件和支持的图像
 
 下载[InDesign模板文件和支持的图像](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
-* [InDesign CC试用版下载](https://creative.adobe.com/products/download/indesign)
-* 可以从[Adobe预发行站点](https://www.adobeprerelease.com/)下载InDesign Server试用版，或者[CC Enterprise客户可以联系其客户经理以请求InDesign Server试用许可证](https://www.adobe.com/products/indesignserver/faq.html)
+* [InDesign CC试用版下载](https://creative.adobe.com/cn/products/download/indesign)
+* 可以从[Adobe预发行站点](https://www.adobeprerelease.com/)下载InDesign Server试用版，或者[CC Enterprise客户可以联系其客户经理以请求InDesign Server试用许可证](https://www.adobe.com/cn/products/indesignserver/faq.html)
