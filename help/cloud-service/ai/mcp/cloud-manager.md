@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Cloud Manager MCP Server允许AEM开发人员直接在其IDE中运行管道、调试故障并访问Cloud Manager工具 — 无上下文切换。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480340/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480352/?captions=chi_hans&learn=on&enablevpops)
