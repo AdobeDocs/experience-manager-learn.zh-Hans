@@ -9,9 +9,9 @@ duration: 97
 last-substantial-update: 2026-03-02T00:00:00Z
 jira: KT-20425
 exl-id: 0811742a-7f1b-4659-8ab0-982ef1527483
-source-git-commit: e630a91aa965df4d1222d7949a61dc0fa6f2865b
+source-git-commit: 12f517200fd777390fc17fcc389fb59644299ac9
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '54'
 ht-degree: 0%
 
 ---
@@ -20,8 +20,4 @@ ht-degree: 0%
 
 Cloud Manager MCP Server允许AEM开发人员直接在其IDE中运行管道、调试故障并访问Cloud Manager工具 — 无上下文切换。
 
->[!AVAILABILITY]
->
-> Cloud Manager MCP Server现在为Beta版。 若要请求访问，请发送电子邮件至[aemcs-mcp-feedback@adobe.com](mailto:aemcs-mcp-feedback@adobe.com)，其中包含用例说明。
-
->[!VIDEO](https://video.tv.adobe.com/v/3480352/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480340/?learn=on&enablevpops)
