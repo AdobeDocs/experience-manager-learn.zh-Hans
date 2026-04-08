@@ -20,4 +20,4 @@ ht-degree: 0%
 
 了解AI Assistant如何与Agentic AI匹配，将您的意图转化为行动。 在此视频中，我们探讨AI Assistant如何作为AEM中实现Agentic AI功能的网关。 您还可以在概念级别学习代理人工智能，并简要介绍AEM中的代理。
 
->[!VIDEO](https://video.tv.adobe.com/v/3483212/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3483222/?captions=chi_hans&learn=on&enablevpops)
