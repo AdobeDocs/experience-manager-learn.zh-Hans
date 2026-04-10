@@ -6,16 +6,18 @@ topic: Development
 feature: CDN Cache, Dispatcher
 exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
 duration: 149
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 0f9480bb52765daa01c5372a117a441adb03bb9d
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 1%
+source-wordcount: '696'
+ht-degree: 0%
 
 ---
 
 # 缓存页面变量
 
-了解如何设置和使用AEM as a Cloud Service来支持缓存页面变体。
+Web体验通常需要通过地理位置、个性化或试验来适应不同受众的内容。 在本教程中，您将了解如何配置Adobe Experience Manager (AEM) as a Cloud Service以使用`x-aem-variant` Cookie高效地缓存和提供多个页面变体，从而确保大规模灵活性和高性能。
+
+从较高层面看，此方法涉及项目的代码设置访客特定的`x-aem-variant` Cookie（例如，基于位置），然后该Cookie将转换为CDN上的请求标头。 此值通过Dispatcher重写规则合并到请求URL中，允许AEM呈现正确的变体，同时允许CDN和Dispatcher为每个变体缓存单独的页面版本。
 
 ## 示例用例
 
@@ -27,7 +29,7 @@ ht-degree: 1%
 
 + 确定变体键及其可能具有的值的数量。 在我们的示例中，我们因美国州而异，因此最大数量为50。 这个值足够小，不会导致CDN的变量限制出现问题。 [查看变体限制部分](#variant-limitations)。
 
-+ AEM代码必须将Cookie __&quot;x-aem-variant&quot;__&#x200B;设置为访客的首选状态(例如 `Set-Cookie: x-aem-variant=NY`)。
++ 项目代码必须将Cookie __&quot;x-aem-variant&quot;__&#x200B;设置为访客的首选状态(例如 `Set-Cookie: x-aem-variant=NY`)。 AEM和Adobe管理的CDN不会自动确定或设置`x-aem-variant`。 如果此标头/Cookie存在，则是因为您的应用程序已设置它。 可以通过自定义AEM Servlet或AEM Servlet过滤器来设置此标头（如下面的代码示例所示）。
 
 + 访客的后续请求会发送该Cookie(例如， `"Cookie: x-aem-variant=NY"`)，并且Cookie将在CDN级别转换为预定义的标头（即`x-aem-variant:NY`），该标头将传递给Dispatcher。
 
@@ -49,13 +51,13 @@ ht-degree: 1%
 
 ## 用途
 
-1. 为了演示该功能，我们将使用[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)的实施作为示例。
+1. 为了演示该功能，我们将使用[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)的实施作为示例。
 
 1. 在AEM中实施[SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html)以使用变量值在HTTP响应上设置`x-aem-variant` Cookie。
 
 1. AEM的CDN会自动将`x-aem-variant` Cookie转换为同名的HTTP标头。
 
-1. 将Apache Web Server mod_rewrite规则添加到您的`dispatcher`项目，该规则可修改请求路径以包含变体选择器。
+1. 将Apache Web Server `mod_rewrite`规则添加到您的`dispatcher`项目，该规则将修改请求路径以包含变体选择器。
 
 1. 使用Cloud Manager部署过滤器并重写规则。
 
