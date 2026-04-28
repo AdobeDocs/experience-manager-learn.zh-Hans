@@ -25,4 +25,4 @@ ht-degree: 0%
 
 观看Experience Catalyst如何利用AI轻松地将WordPress站点迁移到AEM云服务。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459228/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461986/?captions=chi_hans&learn=on&enablevpops)
