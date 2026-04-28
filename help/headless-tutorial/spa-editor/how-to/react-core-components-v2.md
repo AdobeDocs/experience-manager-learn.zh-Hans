@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
 duration: 190
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 1%
+source-wordcount: '634'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ AEM提供了[AEM React可编辑组件v2](https://www.npmjs.com/package/@adobe/ae
 
 * [npm模块](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 * [Github项目](https://github.com/adobe/aem-react-editable-components)
-* [Adobe文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=zh-Hans)
+* [Adobe文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html)
 
 
 有关AEM React可编辑组件v2的更多详细信息和代码示例，请查看技术文档：
@@ -38,7 +38,7 @@ AEM提供了[AEM React可编辑组件v2](https://www.npmjs.com/package/@adobe/ae
 
 ## AEM页面
 
-AEM React可编辑组件可与SPA编辑器或远程SPA React应用程序一起使用。 必须通过扩展[SPA页面组件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html?lang=zh-Hans)的AEM页面公开填充可编辑React组件的内容。 映射到可编辑React组件的AEM组件必须实施AEM的[组件导出程序框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=zh-Hans)，如[AEM核心WCM组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+AEM React可编辑组件可与SPA编辑器或远程SPA React应用程序一起使用。 必须通过扩展[SPA页面组件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html)的AEM页面公开填充可编辑React组件的内容。 映射到可编辑React组件的AEM组件必须实施AEM的[组件导出程序框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)，如[AEM核心WCM组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 
 ## 依赖项

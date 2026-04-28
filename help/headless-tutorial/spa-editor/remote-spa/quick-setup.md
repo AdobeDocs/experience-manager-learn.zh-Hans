@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
 duration: 647
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 10%
+source-wordcount: '838'
+ht-degree: 13%
 
 ---
 
@@ -43,7 +43,7 @@ _快速设置的视频演练_
 + [Git](https://git-scm.com/downloads)
 + 仅macOS先决条件
    + [Xcode](https://developer.apple.com/xcode/)或[Xcode命令行工具](https://developer.apple.com/xcode/resources/)
-+ [aem-guides-wknd.all-2.1.0.zip 或更高版本](https://github.com/adobe/aem-guides-wknd/releases)
++ [aem-guides-wknd.all-2.1.0.zip或更高版本](https://github.com/adobe/aem-guides-wknd/releases)
 + [aem-guides-wknd-graphql源代码(branch： feature/spa-editor)](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
 
 
@@ -79,21 +79,21 @@ AEM SDK将在[http://localhost:4502](http://localhost:4502)上启动并自动启
 本教程依赖于&#x200B;__WKND 2.1.0+的__&#x200B;项目（内容）。
 
 1. [下载最新版本的`aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
-1. 使用[凭据在:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin`登录AEM SDK的包管理器。
+1. 使用`admin`凭据在[http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)登录AEM SDK的包管理器。
 1. __上传__&#x200B;在步骤1中下载的`aem-guides-wknd.all.x.x.x.zip`
-1. 点按条目&#x200B;__的__&#x200B;安装`aem-guides-wknd.all-x.x.x.zip`按钮
+1. 点按条目`aem-guides-wknd.all-x.x.x.zip`的&#x200B;__安装__&#x200B;按钮
 
 ## 下载并安装WKND应用程序SPA包
 
 为了执行快速设置，此处提供了AEM包，其中包含教程的最终AEM配置和内容。
 
-1. [下载 &#x200B;](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [下载 &#x200B;](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
-1. 使用[凭据在:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin`登录AEM SDK的包管理器。
+1. [下载`wknd-app.all.x.x.x.zip`](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [下载`wknd-app.ui.content.sample.x.x.x.zip`](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
+1. 使用`admin`凭据在[http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)登录AEM SDK的包管理器。
 1. __上传__&#x200B;在步骤1中下载的`wknd-app.all.x.x.x.zip`
-1. 点按条目&#x200B;__的__&#x200B;安装`wknd-app.all.x.x.x.zip`按钮
+1. 点按条目`wknd-app.all.x.x.x.zip`的&#x200B;__安装__&#x200B;按钮
 1. __上传__&#x200B;在步骤2中下载的`wknd-app.ui.content.sample.x.x.x.zip`
-1. 点按条目&#x200B;__的__&#x200B;安装`wknd-app.ui.content.sample.x.x.x.zip`按钮
+1. 点按条目`wknd-app.ui.content.sample.x.x.x.zip`的&#x200B;__安装__&#x200B;按钮
 
 ## 下载WKND应用程序源
 
@@ -131,7 +131,7 @@ $ npm run start
 
 在创作内容之前，请排列浏览器窗口，使AEM Author (`http://localhost:4502`)位于左侧，远程SPA (`http://localhost:3000`)在右侧运行。 通过这种安排，您可以看到对AEM源内容的更改如何立即反映在SPA中。
 
-1. 以[身份登录到](http://localhost:4502)AEM SDK创作服务`admin`
+1. 以`admin`身份登录到[AEM SDK创作服务](http://localhost:4502)
 1. 导航到&#x200B;__站点> WKND应用程序>我们> en__
 1. 编辑&#x200B;__WKND应用程序主页__
 1. 切换到&#x200B;__编辑__&#x200B;模式

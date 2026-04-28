@@ -1,6 +1,6 @@
 ---
-title: 扩展核心组件 | AEM SPA编辑器和React快速入门
-description: 了解如何扩展要与AEM SPA编辑器一起使用的现有核心组件的JSON模型。 了解如何将属性和内容添加到现有组件是一种强大的技术，可扩展AEM SPA Editor实施的功能。 了解如何使用委派模式来扩展Sling模型和Sling资源合并器的功能。
+title: Extend a Core Component | Getting Started with the AEM SPA Editor and React
+description: Learn how to extend the JSON Model for an existing Core Component to be used with the AEM SPA Editor. Understanding how to add properties and content to an existing component is a powerful technique to expand the capabilities of an AEM SPA Editor implementation. Learn to use the delegation pattern for extending Sling Models and features of Sling Resource Merger.
 feature: SPA Editor, Core Components
 version: Experience Manager as a Cloud Service
 jira: KT-5879
@@ -12,43 +12,43 @@ doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
 duration: 316
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '1058'
-ht-degree: 0%
+source-wordcount: '1115'
+ht-degree: 5%
 
 ---
 
-# 扩展核心组件 {#extend-component}
+# Extend a Core Component {#extend-component}
 
 {{spa-editor-deprecation}}
 
-了解如何扩展要与AEM SPA Editor一起使用的现有核心组件。 了解如何扩展现有组件是一种强大的技术，可用于自定义和扩展AEM SPA Editor实施的功能。
+Learn how to extend an existing Core Component to be used with the AEM SPA Editor. Understanding how to extend an existing component is a powerful technique to customize and expand the capabilities of an AEM SPA Editor implementation.
 
 ## 目标
 
-1. 使用其他属性和内容扩展现有核心组件。
-2. 了解使用`sling:resourceSuperType`的组件继承的基本内容。
-3. 了解如何利用Sling模型的[委派模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)来重复使用现有逻辑和功能。
+1. Extend an existing Core Component with additional properties and content.
+2. Understand the basic of Component Inheritance with the use of `sling:resourceSuperType`.
+3. Learn how to leverage the [Delegation Pattern](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) for Sling Models to re-use existing logic and functionality.
 
-## 您将构建的内容
+## 您将构建什么
 
-本章说明了将额外属性添加到标准`Image`组件以满足新`Banner`组件的要求所需的额外代码。 `Banner`组件包含与标准`Image`组件相同的所有属性，但包含一个附加属性，供用户填充&#x200B;**横幅文本**。
+This chapter illustrates the additional code needed to add an extra property to a standard `Image` component to fulfill the requirements for a new `Banner` component. The `Banner` component contains all of the same properties as the standard `Image` component but includes an additional property for users to populate the **Banner Text**.
 
-![最终创作的横幅组件](assets/extend-component/final-author-banner-component.png)
+![Final authored banner component](assets/extend-component/final-author-banner-component.png)
 
 ## 先决条件
 
-查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。 在本教程的此刻，我们假定用户已对AEM SPA Editor功能有一定的了解。
+查看设置[本地开发环境](overview.md#local-dev-environment)所需的工具和说明。 It is assumed at this point in the tutorial users have a solid understanding of the AEM SPA Editor feature.
 
-## Sling资源超级类型的继承 {#sling-resource-super-type}
+## Inheritance with Sling Resource Super Type {#sling-resource-super-type}
 
-要扩展现有组件，请在组件的定义上设置名为`sling:resourceSuperType`的属性。  `sling:resourceSuperType`是一个[属性](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties)，它可以在指向其他组件的AEM组件定义上设置。 这会显式设置该组件以继承标识为`sling:resourceSuperType`的组件的所有功能。
+To extend an existing component set a property named `sling:resourceSuperType` on your component&#39;s definition.  `sling:resourceSuperType`is a [property](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties) that can be set on an AEM component&#39;s definition that points to another component. This explicitly sets the component to inherit all functionality of the component identified as the `sling:resourceSuperType`.
 
-如果要在`wknd-spa-react/components/image`处扩展`Image`组件，我们需要更新`ui.apps`模块中的代码。
+If we want to extend the `Image` component at `wknd-spa-react/components/image` we need to update the code in the `ui.apps` module.
 
-1. 在`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/banner`的`banner`的`ui.apps`模块下创建新文件夹。
-1. 在`banner`下创建组件定义(`.content.xml`)，如下所示：
+1. Create a new folder beneath the `ui.apps` module for `banner` at `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/banner`.
+1. Beneath `banner` create a Component definition (`.content.xml`) like the following:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -59,9 +59,9 @@ ht-degree: 0%
        componentGroup="WKND SPA React - Content"/>
    ```
 
-   这将设置`wknd-spa-react/components/banner`以继承`wknd-spa-react/components/image`的所有功能。
+   This sets `wknd-spa-react/components/banner` to inherit all functionality of `wknd-spa-react/components/image`.
 
-## cq：editConfig {#cq-edit-config}
+## cq:editConfig {#cq-edit-config}
 
 `_cq_editConfig.xml`文件指示AEM创作UI中的拖放行为。 扩展图像组件时，资源类型必须与组件本身匹配，这一点很重要。
 
@@ -177,7 +177,7 @@ ht-degree: 0%
 
 ## 扩展对话框 {#extend-dialog}
 
-我们的`Banner`组件要求在对话框中有一个额外的文本字段来捕获`bannerText`。 由于我们使用的是Sling继承，因此我们可以使用[Sling资源合并器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=zh-Hans)的功能来覆盖或扩展对话框的各个部分。 在此示例中，向对话框添加了一个新选项卡，用于从作者捕获其他数据以填充卡组件。
+我们的`Banner`组件要求在对话框中有一个额外的文本字段来捕获`bannerText`。 由于我们使用的是Sling继承，因此我们可以使用[Sling资源合并器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html)的功能来覆盖或扩展对话框的各个部分。 在此示例中，向对话框添加了一个新选项卡，用于从作者捕获其他数据以填充卡组件。
 
 1. 在`ui.apps`模块的`banner`文件夹下创建名为`_cq_dialog`的文件夹。
 1. 在`_cq_dialog`下创建对话框定义文件`.content.xml`。 使用以下内容填充：
@@ -234,7 +234,7 @@ ht-degree: 0%
    </jcr:root>
    ```
 
-   上述XML定义将创建一个名为&#x200B;**Text**&#x200B;的新选项卡，并在&#x200B;*现有&#x200B;**资产**&#x200B;选项卡之前*&#x200B;对其进行排序。 它将包含单个字段&#x200B;**横幅文本**。
+   上述XML定义将创建一个名为&#x200B;**Text**&#x200B;的新选项卡，并在&#x200B;*现有&#x200B;**资产**选项卡之前*&#x200B;对其进行排序。 它将包含单个字段&#x200B;**横幅文本**。
 
 1. 该对话框将如下所示：
 
@@ -479,7 +479,7 @@ ht-degree: 0%
 
 显示![横幅文本](assets/extend-component/banner-text-displayed.png)
 
-1. 在[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)查看JSON模型响应并搜索`wknd-spa-react/components/card`：
+1. 在以下位置查看JSON模型响应： [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)并搜索`wknd-spa-react/components/card`：
 
    ```json
    "banner": {

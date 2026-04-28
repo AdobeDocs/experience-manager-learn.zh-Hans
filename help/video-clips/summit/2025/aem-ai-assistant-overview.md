@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 5a799ef6-9770-4cf1-a288-80a9bbb26faf
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解AEM AI Assistant如何简化查找产品知识并自动创建支持工单。
 
->[!VIDEO](https://video.tv.adobe.com/v/3461931/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459225/?learn=on&enablevpops)

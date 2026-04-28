@@ -1,5 +1,5 @@
 ---
-title: SPA编辑器项目 | AEM SPA Editor和Angular快速入门
+title: SPA编辑器项目| AEM SPA编辑器和Angular快速入门
 description: 了解如何使用Adobe Experience Manager (AEM) Maven项目作为与AEM SPA编辑器集成的Angular应用程序的起点。
 feature: SPA Editor, AEM Project Archetype
 version: Experience Manager as a Cloud Service
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
 duration: 252
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 1%
+source-wordcount: '1148'
+ht-degree: 6%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 1. 了解从Maven原型构建的新AEM SPA Editor项目的结构。
 2. 将起始项目部署到AEM的本地实例。
 
-## 您将构建的内容
+## 您将构建什么
 
 在本章中，将基于[AEM项目原型](https://github.com/adobe/aem-project-archetype)部署新的AEM项目。 AEM项目通过非常简单的Angular SPA起点引导。 本章中使用的项目将作为WKND SPA实施的基础，并在以后的章节中构建该项目。
 
@@ -90,7 +90,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   > 注意`frontendModule=angular`属性。 这会告知AEM项目原型使用要与AEM SPA编辑器一起使用的启动程序[Angular代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hans)引导项目。
+   > 注意`frontendModule=angular`属性。 这会告知AEM项目原型使用要与AEM SPA编辑器一起使用的启动程序[Angular代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)引导项目。
 
 ## 构建项目
 
@@ -139,7 +139,7 @@ ht-degree: 1%
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven配置文件&#x200B;***autoInstallSinglePackage***&#x200B;编译项目的各个模块并将单个包部署到AEM实例。 默认情况下，此包将部署到在端口&#x200B;**4502**&#x200B;上本地运行的AEM实例，并使用&#x200B;**admin：admin**&#x200B;的凭据。
+   Maven配置文件&#x200B;***autoInstallSinglePackage***&#x200B;编译项目的各个模块并将单个包部署到AEM实例。 默认情况下，此包将部署到在端口&#x200B;**4502**&#x200B;上本地运行的AEM实例，并使用&#x200B;**admin:admin**&#x200B;的凭据。
 
 4. 导航到本地AEM实例上的&#x200B;**[!UICONTROL 包管理器]**： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)。
 
@@ -149,7 +149,7 @@ ht-degree: 1%
 
    项目所需的所有自定义代码将捆绑在这些包中，并安装在AEM运行时中。
 
-6. 您还应该看到`spa.project.core`和`core.wcm.components`的多个包。 这些是原型自动包含的依赖项。 有关[AEM核心组件的详细信息见此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+6. 您还应该看到`spa.project.core`和`core.wcm.components`的多个包。 这些是原型自动包含的依赖项。 有关[AEM核心组件的详细信息见此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 ## 创作内容
 
@@ -161,7 +161,7 @@ ht-degree: 1%
 
 2. 选择页面，然后单击菜单栏中的&#x200B;**[!UICONTROL 编辑]**&#x200B;按钮，打开&#x200B;**[!DNL us]** > **[!DNL en]** > **[!DNL WKND SPA Angular Home Page]**&#x200B;页面：
 
-   ![站点控制台](./assets/create-project/open-home-page.png)
+   ![网站控制台](./assets/create-project/open-home-page.png)
 
 3. **[!UICONTROL Text]**&#x200B;组件已添加到该页面。 您可以像在AEM中编辑任何其他组件一样编辑此组件。
 

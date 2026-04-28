@@ -1,6 +1,6 @@
 ---
-title: 添加导航和路由 | AEM SPA编辑器和React快速入门
-description: 了解如何通过使用SPA Editor SDK映射到AEM页面来支持SPA中的多个视图。 动态导航是使用React Router和React Core Components实现的。
+title: Add navigation and routing | Getting Started with the AEM SPA Editor and React
+description: Learn how multiple views in the SPA can be supported by mapping to AEM Pages with the SPA Editor SDK. Dynamic navigation is implemented using React Router and React Core Components.
 feature: SPA Editor
 version: Experience Manager as a Cloud Service
 jira: KT-4988
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
 duration: 337
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '1481'
-ht-degree: 0%
+source-wordcount: '1721'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 {{spa-editor-deprecation}}
 
-了解如何通过使用SPA Editor SDK映射到AEM页面来支持SPA中的多个视图。 动态导航是使用React Router和React Core Components实现的。
+Learn how multiple views in the SPA can be supported by mapping to AEM Pages with the SPA Editor SDK. Dynamic navigation is implemented using React Router and React Core Components.
 
 ## 目标
 
@@ -31,9 +31,9 @@ ht-degree: 0%
 1. 了解如何使用[React Router](https://reacttraining.com/react-router)在SPA的不同视图之间导航。
 1. 使用AEM React核心组件实施由AEM页面层次结构驱动的动态导航。
 
-## 您将构建的内容
+## 您将构建什么
 
-本章将导航到AEM中的SPA。 导航菜单由AEM页面层次结构驱动，将使用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=zh-Hans)提供的JSON模型。
+本章将导航到AEM中的SPA。 导航菜单由AEM页面层次结构驱动，将使用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html)提供的JSON模型。
 
 已添加![导航](assets/navigation-routing/navigation-added.png)
 
@@ -73,9 +73,9 @@ ht-degree: 0%
    在&#x200B;**属性**&#x200B;下：
 
    * 将&#x200B;**导航根**&#x200B;设置为`/content/wknd-spa-react/us/en`。
-   * 将&#x200B;**排除根级别**&#x200B;设置为&#x200B;**1**。
-   * 取消选中&#x200B;**收集所有子页面**。
-   * 将&#x200B;**导航结构深度**&#x200B;设置为&#x200B;**3**。
+   * 将&#x200B;**排除根级别**&#x200B;设置为 **1**。
+   * 取消勾选&#x200B;**收集所有子页面**。
+   * 将&#x200B;**导航结构深度**&#x200B;设置为 **3**。
 
    ![配置导航策略](assets/navigation-routing/navigation-policy.png)
 
@@ -155,7 +155,7 @@ ht-degree: 0%
 
    在初始JSON请求中加载SPA的&#x200B;**所有**&#x200B;内容是不明智的，因为这会降低初始页面加载的速度。 接下来，让我们看一下如何收集页面的层次结构深度。
 
-1. 导航到&#x200B;**SPA根**&#x200B;模板，位于： [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html)。
+1. 导航到&#x200B;**SPA根**&#x200B;模板，网址为： [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html)。
 
    单击&#x200B;**页面属性菜单** > **页面策略**：
 
@@ -169,7 +169,7 @@ ht-degree: 0%
 
    单击&#x200B;**完成**&#x200B;以保存对策略所做的更改。
 
-1. 重新打开JSON模型[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)。
+1. Re-open the JSON model [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json).
 
    ```json
    {
@@ -191,15 +191,15 @@ ht-degree: 0%
    }
    ```
 
-   请注意，**页面3**&#x200B;路径已从初始JSON模型中移除： `/content/wknd-spa-react/us/en/home/page-2/page-3`。 这是因为&#x200B;**页面3**&#x200B;在层次结构中处于级别3，我们更新了策略以仅包含最大深度为级别2的内容。
+   请注意，**页面3**&#x200B;路径已从初始JSON模型中移除： `/content/wknd-spa-react/us/en/home/page-2/page-3`。 This is because **Page 3** is at a level 3 in the hierarchy and we updated the policy to only include content at a max depth of level 2.
 
-1. 重新打开SPA主页： [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html)并打开浏览器的开发人员工具。
+1. Re-open the SPA homepage: [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html) and open your browser&#39;s developer tools.
 
-   刷新页面，您应该会看到对`/content/wknd-spa-react/us/en.model.json`（即SPA根）的XHR请求。 请注意，根据教程中前面制作的SPA根模板的层级深度配置，只包含三个子页面。 这不包括&#x200B;**第3**&#x200B;页。
+   Refresh the page and you should see the XHR request to `/content/wknd-spa-react/us/en.model.json`, which is the SPA Root. 请注意，根据教程中前面制作的SPA根模板的层级深度配置，只包含三个子页面。 这不包括&#x200B;**第3**&#x200B;页。
 
    ![初始JSON请求 — SPA根](assets/navigation-routing/initial-json-request.png)
 
-1. 在开发人员工具打开的情况下，使用`Navigation`组件直接导航到&#x200B;**第3**&#x200B;页：
+1. With the developer tools open, use the `Navigation` component to navigate directly to **Page 3**:
 
    请注意，已向`/content/wknd-spa-react/us/en/home/page-2/page-3.model.json`发出新的XHR请求
 
@@ -207,13 +207,13 @@ ht-degree: 0%
 
    AEM模型管理器了解&#x200B;**Page 3** JSON内容不可用，因此会自动触发额外的XHR请求。
 
-1. 通过直接导航到[http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html)尝试使用深层链接。 另请注意，浏览器的“后退”按钮将继续工作。
+1. Experiment with deep links by navigating directly to: [http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html). Also observe that the browser&#39;s back button continues to work.
 
-## 检查React路由  {#react-routing}
+## Inspect React Routing  {#react-routing}
 
-使用[React Router](https://reactrouter.com/en/main)实现导航和路由。 React Router是用于React应用程序的导航组件集合。 [AEM React核心组件](https://github.com/adobe/aem-react-core-wcm-components-base)使用React Router的功能来实现前面步骤中使用的&#x200B;**导航**&#x200B;组件。
+The navigation and routing is implemented with [React Router](https://reactrouter.com/en/main). React Router is a collection of navigation components for React applications. [AEM React Core Components](https://github.com/adobe/aem-react-core-wcm-components-base) uses features of React Router to implement the **Navigation** component used in the previous steps.
 
-接下来，检查React Router如何与SPA集成，并使用React Router的[Link](https://reactrouter.com/en/main/components/link)组件进行实验。
+Next, inspect how React Router is integrated with the SPA and experiment using React Router&#39;s [Link](https://reactrouter.com/en/main/components/link) component.
 
 1. 在IDE的`ui.frontend/src/index.js`处打开文件`index.js`。
 
@@ -240,7 +240,7 @@ ht-degree: 0%
    });
    ```
 
-   请注意，`App`已包装在[React Router](https://reacttraining.com/react-router)的`Router`组件中。 由AEM SPA编辑器JS SDK提供的`ModelManager`根据JSON模型API向AEM页面添加了动态路由。
+   Notice that the `App` is wrapped in the `Router` component from [React Router](https://reacttraining.com/react-router). The `ModelManager`, provided by the AEM SPA Editor JS SDK, adds the dynamic routes to AEM Pages based on the JSON model API.
 
 1. 在`ui.frontend/src/components/Page/Page.js`处打开文件`Page.js`
 
@@ -259,7 +259,7 @@ ht-degree: 0%
    );
    ```
 
-   `Page` SPA组件使用`MapTo`函数将AEM中的&#x200B;**页面**&#x200B;映射到相应的SPA组件。 `withRoute`实用程序有助于根据`cqPath`属性将SPA动态路由到相应的AEM子页面。
+   The `Page` SPA component uses the `MapTo` function to map **Pages** in AEM to a corresponding SPA component. `withRoute`实用程序有助于根据`cqPath`属性将SPA动态路由到相应的AEM子页面。
 
 1. 在`ui.frontend/src/components/Header/Header.js`处打开`Header.js`组件。
 1. 更新`Header`以将`<h1>`标记包装在指向主页的[链接](https://reactrouter.com/en/main/components/link)中：
@@ -309,13 +309,13 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. 在AEM中导航到SPA中的一个页面： [http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html)
+1. 导航到AEM中SPA的以下页面之一： [http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html)
 
    请使用`Header`中的链接而不是`Navigation`组件进行导航。
 
    ![标题链接](assets/navigation-routing/header-link.png)
 
-   请注意，未触发完整页面刷新&#x200B;**&#x200B;**，并且SPA路由正在运行。
+   请注意，未触发完整页面刷新&#x200B;****，并且SPA路由正在运行。
 
 1. （可选）使用标准`<a>`锚标记试验`Header.js`文件：
 

@@ -1,5 +1,5 @@
 ---
-title: 创建项目 | AEM SPA编辑器和React快速入门
+title: 创建项目| AEM SPA Editor and React快速入门
 description: 了解如何生成Adobe Experience Manager (AEM) Maven项目，作为与AEM SPA编辑器集成的React应用程序的起点。
 feature: SPA Editor, AEM Project Archetype
 version: Experience Manager as a Cloud Service
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
 duration: 250
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 1%
+source-wordcount: '1105'
+ht-degree: 15%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 1. 使用AEM项目原型生成启用SPA Editor的项目。
 2. 将起始项目部署到AEM的本地实例。
 
-## 您将构建的内容 {#what-build}
+## 您将构建什么 {#what-build}
 
 在本章中，基于[AEM项目原型](https://github.com/adobe/aem-project-archetype)生成了一个新的AEM项目。 AEM项目通过非常简单的React SPA起点引导。
 
@@ -46,7 +46,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->本教程使用原型的版本&#x200B;**35**。
+>本教程使用 **35** 版本的原型。
 
 1. 打开命令行终端并输入以下Maven命令：
 
@@ -67,11 +67,11 @@ ht-degree: 1%
    >
    > 如果定位AEM 6.5.5+使用`aemVersion="6.5.5"`替换`aemVersion="cloud"`。 如果目标为6.4.8+，则使用`aemVersion="6.4.8"`。
 
-   注意`frontendModule=react`属性。 这会告知AEM项目原型使用要与AEM SPA编辑器一起使用的启动程序[React代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=zh-Hans)引导项目。 属性（如`appTitle`、`appId`、`artifactId`和`groupId`）用于标识项目和目的。
+   注意`frontendModule=react`属性。 这会告知AEM项目原型使用要与AEM SPA编辑器一起使用的启动程序[React代码库](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)引导项目。 属性（如`appTitle`、`appId`、`artifactId`和`groupId`）用于标识项目和目的。
 
-   可以在此处[&#128279;](https://github.com/adobe/aem-project-archetype#available-properties)找到用于配置项目的可用属性的完整列表。
+   用于配置项目的可用属性的完整列表[请参阅此处](https://github.com/adobe/aem-project-archetype#available-properties)。
 
-1. 以下文件夹和文件结构由本地文件系统上的Maven原型生成：
+1. Maven 原型会在您的本地文件系统上生成以下文件夹和文件结构：
 
    ```plain
    |--- aem-guides-wknd-spa.react/
@@ -92,9 +92,9 @@ ht-degree: 1%
        |--- .gitignore
    ```
 
-   每个文件夹表示一个单独的Maven模块。 在本教程中，我们将主要使用`ui.frontend`模块，即React应用程序。 有关各个模块的更多详细信息，请参阅[AEM项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)。
+   每个文件夹表示一个单独的Maven模块。 在本教程中，我们将主要使用`ui.frontend`模块，即React应用程序。 有关各个模块的更多详细信息，请参阅[AEM项目原型文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)。
 
-## 部署和生成项目
+## 部署并构建项目
 
 接下来，使用Maven编译、构建项目代码并将其部署到AEM的本地实例。
 
@@ -105,7 +105,7 @@ ht-degree: 1%
    $ cd aem-guides-wknd-spa.react
    ```
 
-1. 运行以下命令以生成整个项目并将其部署到AEM：
+1. 运行以下命令，构建整个项目并将其部署到 AEM：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -135,7 +135,7 @@ ht-degree: 1%
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven配置文件`autoInstallSinglePackage`编译项目的各个模块，并将单个包部署到AEM实例。 默认情况下，此包将部署到在端口&#x200B;**4502**&#x200B;上本地运行的、凭据为`admin:admin`的AEM实例。
+   Maven 配置文件 `autoInstallSinglePackage` 会编译项目的各个模块，然后将一个包部署到 AEM 实例。 默认情况下，此包被部署到在本地端口 **4502** 上运行的 AEM 实例，凭据为 `admin:admin`。
 
 1. 导航到本地AEM实例上的&#x200B;**包管理器**： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)。
 
@@ -157,7 +157,7 @@ ht-degree: 1%
 
 2. 通过选择页面，然后单击菜单栏中的&#x200B;**编辑**&#x200B;按钮，打开&#x200B;**us** > **en** > **WKND SPA React主页**&#x200B;页面：
 
-   ![站点控制台](./assets/create-project/open-home-page.png)
+   ![网站控制台](./assets/create-project/open-home-page.png)
 
 3. **Text**&#x200B;组件已添加到该页面。 您可以像在AEM中编辑任何其他组件一样编辑此组件。
 

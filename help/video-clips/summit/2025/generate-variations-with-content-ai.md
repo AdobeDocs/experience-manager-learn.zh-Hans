@@ -1,6 +1,6 @@
 ---
-title: 使用内容人工智能生成变体
-description: 了解内容人工智能如何让您快速高效地创建引人入胜的内容变体。
+title: Generate Variations with Content AI
+description: See how Content AI enables you to create engaging content variations quickly and efficiently.
 cloud: Experience Cloud
 solution: Experience Manager
 feature-set: Experience Manager
@@ -14,15 +14,15 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 885dd083-79f1-49c4-88cc-7594aaa3fdbf
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 0%
 
 ---
 
-# 使用内容人工智能生成变体
+# Generate Variations with Content AI
 
-了解内容人工智能如何让您快速高效地创建引人入胜的内容变体。
+See how Content AI enables you to create engaging content variations quickly and efficiently.
 
->[!VIDEO](https://video.tv.adobe.com/v/3461887/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459227/?learn=on&enablevpops)

@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
 duration: 202
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '902'
-ht-degree: 0%
+source-wordcount: '919'
+ht-degree: 1%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ## 远程SPA映射
 
-通过在`setupProxy`BootstrapSPA[中完成的](./spa-bootstrap.md)配置配置了离开远程SPA的请求的映射。
+通过在[BootstrapSPA](./spa-bootstrap.md)中完成的`setupProxy`配置配置了离开远程SPA的请求的映射。
 
 ## SPA编辑器映射
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 ## 更新WKND应用程序
 
-让我们将在`<ResponsiveGrid...>`最后一章[中创建的](./spa-container-component.md)组件放入我们的`AdventureDetail` SPA组件中，创建一个可编辑的容器。
+让我们将在[最后一章](./spa-container-component.md)中创建的`<ResponsiveGrid...>`组件放入我们的`AdventureDetail` SPA组件中，创建一个可编辑的容器。
 
 ### 放置ResponsiveGrid SPA组件
 
@@ -174,7 +174,7 @@ function AdventureDetailRender(props) {
 
 ## 恭喜！
 
-恭喜！您为SPA中的动态路由添加了创作功能！
+恭喜！ 您为SPA中的动态路由添加了创作功能！
 
 * 向动态路由添加了AEM React可编辑组件的ResponsiveGrid组件
 * 创建了AEM页面，以支持在SPA中创作两条特定路径（波特兰的Bali Surf Camp和Beervana）

@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
 duration: 306
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1121'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 1%
 要将可编辑区域添加到“主页”视图，请执行以下操作：
 
 1. 打开并编辑`react-app/src/components/Home.js`
-1. 从`ResponsiveGrid`导入`@adobe/aem-react-editable-components`组件并将其添加到`Home`组件。
+1. 从`@adobe/aem-react-editable-components`导入`ResponsiveGrid`组件并将其添加到`Home`组件。
 1. 在`<ResponsiveGrid...>`组件上设置以下属性
    1. `pagePath = '/content/wknd-app/us/en/home'`
    1. `itemPath = 'root/responsivegrid'`
@@ -51,7 +51,7 @@ ht-degree: 1%
 
    1. `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
-   `itemPath`映射到在`responsivegrid` AEM模板中定义的`Remote SPA Page`节点，并在从`Remote SPA Page` AEM模板创建的新AEM页面上自动创建。
+   `itemPath`映射到在`Remote SPA Page` AEM模板中定义的`responsivegrid`节点，并在从`Remote SPA Page` AEM模板创建的新AEM页面上自动创建。
 
    更新`Home.js`以添加`<ResponsiveGrid...>`组件。
 
@@ -248,7 +248,7 @@ export default EditableImage;
     }
    ```
 
-1. 在`EditableImage.scss`中导入`EditableImage.js`
+1. 在`EditableImage.js`中导入`EditableImage.scss`
 
    ```javascript
    ...
@@ -340,7 +340,7 @@ AEM容器组件使用策略来指定其允许的组件。 使用SPA编辑器时�
       1. 类型： __H1__
    1. 点按&#x200B;__完成__
 1. __作者__ __图像__&#x200B;组件
-   1. 在图像组件上，将图像从侧栏拖入(在切换到Assets视图后)
+   1. 在图像组件上，将图像从侧栏拖入（在切换到Assets视图后）
    1. 点按图像组件，然后点按&#x200B;__扳手__&#x200B;图标以进行编辑
    1. 选中&#x200B;__图像是装饰性的__&#x200B;复选框
    1. 点按&#x200B;__完成__

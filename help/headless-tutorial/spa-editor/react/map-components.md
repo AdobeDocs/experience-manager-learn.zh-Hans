@@ -1,5 +1,5 @@
 ---
-title: 将SPA组件映射到AEM组件 | AEM SPA编辑器和React快速入门
+title: 将SPA组件映射到AEM组件| AEM SPA Editor和React快速入门
 description: 了解如何使用AEM SPA编辑器JS SDK将React组件映射到Adobe Experience Manager (AEM)组件。 组件映射使用户能够在AEM SPA编辑器中对SPA组件进行动态更新，类似于传统的AEM创作。 您还将了解如何使用开箱即用的AEM React核心组件。
 feature: SPA Editor
 version: Experience Manager as a Cloud Service
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
 duration: 477
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '2123'
-ht-degree: 0%
+source-wordcount: '2357'
+ht-degree: 8%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 1. 检查React组件如何使用从AEM传递的动态属性。
 1. 了解如何使用现成的[React AEM核心组件](https://github.com/adobe/aem-react-core-wcm-components-examples)。
 
-## 您将构建的内容
+## 您将构建什么
 
 本章检查提供的`Text` SPA组件如何映射到AEM `Text`组件。 在SPA中使用并在AEM中创作的React核心组件（如`Image` SPA组件）。 **布局容器**&#x200B;和&#x200B;**模板编辑器**&#x200B;策略的现成功能也用于创建外观变化稍大的视图。
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 ## 检查文本组件
 
-[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了一个映射到AEM [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，该组件渲染来自AEM的&#x200B;*content*。
+[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了一个映射到AEM [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，该组件渲染来自AEM的&#x200B;*content*。
 
 我们来看看组件的工作方式。
 
@@ -141,9 +141,9 @@ ht-degree: 0%
 
 [AEM WCM组件 — React核心实施](https://github.com/adobe/aem-react-core-wcm-components-base)和[AEM WCM组件 — Spa编辑器 — React核心实施](https://github.com/adobe/aem-react-core-wcm-components-spa)。 这些是一组可重复使用的UI组件，映射到开箱即用的AEM组件。 大多数项目可以重复使用这些组件作为自己的实施的起点。
 
-1. 在项目代码中，打开位于`ui.frontend/src/components`的文件`import-components.js`。
-此文件会导入映射到AEM组件的所有SPA组件。 考虑到SPA Editor实施的动态性质，我们必须显式引用与AEM可创作组件关联的任何SPA组件。 这允许AEM作者选择在应用程序中随处使用组件。
-1. 以下import语句包含在项目中编写的SPA组件：
+1. In the project code open the file `import-components.js` at `ui.frontend/src/components`.
+This file imports all of the SPA components that map to AEM components. Given the dynamic nature of the SPA Editor implementation, we must explicitly reference any SPA components that are tied to AEM author-able components. This allows an AEM author to choose to use a component wherever they want in the application.
+1. The following import statements include SPA components written in the project:
 
    ```js
    import './Page/Page';
@@ -152,37 +152,37 @@ ht-degree: 0%
    import './ExperienceFragment/ExperienceFragment';
    ```
 
-1. 存在来自`@adobe/aem-core-components-react-spa`和`@adobe/aem-core-components-react-base`的其他`imports`。 这些调用将导入React核心组件，并在当前项目中使其可用。 然后使用`MapTo`将这些组件映射到项目特定的AEM组件，就像前面的`Text`组件示例一样。
+1. There are several other `imports` from `@adobe/aem-core-components-react-spa` and `@adobe/aem-core-components-react-base`. These are importing the React Core components and making them available in the current project. These are then mapped to project specific AEM components using the `MapTo`, just like with the `Text` component example earlier.
 
-### 更新AEM策略
+### Update AEM Policies
 
-策略是AEM模板的一项功能，它让开发人员和高级用户能够精细地控制可以使用哪些组件。 React核心组件包含在SPA代码中，但需要通过策略启用，然后才能在应用程序中使用。
+Policies are a feature of AEM templates gives developers and power-users granular control over which components are available to be used. The React Core Components are included in the SPA Code but need to be enabled via a policy before they can be used in the application.
 
-1. 从AEM开始屏幕导航到&#x200B;**工具** > **模板** > **[WKND SPA React](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-react)**。
+1. From the AEM Start screen navigate to **Tools** > **Templates** > **[WKND SPA React](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-react)**.
 
-1. 选择并打开&#x200B;**SPA页面**&#x200B;模板以进行编辑。
+1. Select and open the **SPA Page** template for editing.
 
-1. 选择&#x200B;**布局容器**&#x200B;并单击它的&#x200B;**策略**&#x200B;图标以编辑策略：
+1. Select the **Layout Container** and click it&#39;s **policy** icon to edit the policy:
 
-   ![布局容器策略](assets/map-components/edit-spa-page-template.png)
+   ![layout container policy](assets/map-components/edit-spa-page-template.png)
 
-1. 在&#x200B;**允许的组件** > **WKND SPA React - Content** >检查&#x200B;**图像**、**Teaser**&#x200B;和&#x200B;**标题**&#x200B;下。
+1. Under **Allowed Components** > **WKND SPA React - Content** > check **Image**, **Teaser**, and **Title**.
 
-   ![更新的组件可用](assets/map-components/update-components-available.png)
+   ![Updated Components available](assets/map-components/update-components-available.png)
 
-   在&#x200B;**默认组件** > **添加映射**&#x200B;下，并选择&#x200B;**图像 — WKND SPA React - Content**&#x200B;组件：
+   Under **Default Components** > **Add mapping** and choose the **Image - WKND SPA React - Content** component:
 
-   ![设置默认组件](./assets/map-components/default-components.png)
+   ![Set default components](./assets/map-components/default-components.png)
 
-   输入`image/*`的&#x200B;**MIME类型**。
+   Enter a **mime type** of `image/*`.
 
-   单击&#x200B;**完成**&#x200B;以保存策略更新。
+   Click **Done** to save the policy updates.
 
-1. 在&#x200B;**布局容器**&#x200B;中，单击&#x200B;**文本**&#x200B;组件的&#x200B;**策略**&#x200B;图标。
+1. In the **Layout Container** click the **policy** icon for the **Text** component.
 
-   创建名为&#x200B;**WKND SPA Text**&#x200B;的新策略。 在&#x200B;**插件** > **格式** >下，选中所有框以启用其他格式选项：
+   Create a new policy named **WKND SPA Text**. Under **Plugins** > **Formatting** > check all the boxes to enable additional formatting options:
 
-   ![启用RTE格式](assets/map-components/enable-formatting-rte.png)
+   ![Enable RTE Formatting](assets/map-components/enable-formatting-rte.png)
 
    在&#x200B;**插件** > **段落样式** >下，选中&#x200B;**启用段落样式**&#x200B;的框：
 
@@ -224,53 +224,53 @@ AEM SPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 �
 
    **布局容器**&#x200B;组件具有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，SPA编辑器使用`:type`属性识别它，就像`Text`和`Image`组件一样。
 
-   在SPA编辑器中，可以使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=zh-Hans#defining-layouts-layout-mode)重新调整组件大小的相同功能。
+   在SPA编辑器中，可以使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新调整组件大小的相同功能。
 
-2. 返回到[http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。 添加其他&#x200B;**图像**&#x200B;组件，然后尝试使用&#x200B;**布局**&#x200B;选项重新调整其大小：
+2. Return to [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). Add additional **Image** components and try re-sizing them using the **Layout** option:
 
-   ![使用布局模式重新调整图像大小](./assets/map-components/responsive-grid-layout-change.gif)
+   ![Re-size image using Layout mode](./assets/map-components/responsive-grid-layout-change.gif)
 
-3. 重新打开JSON模型[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)并观察作为JSON一部分的`columnClassNames`：
+3. Re-open the JSON model [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) and observe the `columnClassNames` as part of the JSON:
 
-   ![列类名](./assets/map-components/responsive-grid-classnames.png)
+   ![Cloumn Class names](./assets/map-components/responsive-grid-classnames.png)
 
-   类名`aem-GridColumn--default--4`指示组件应基于12列网格为4列宽。 有关[响应式网格的更多详细信息见此处](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)。
+   The class name `aem-GridColumn--default--4` indicates the component should be 4 columns wide based on a 12 column grid. More details about the [responsive grid can be found here](https://adobe-marketing-cloud.github.io/aem-responsivegrid/).
 
-4. 返回到IDE，在`ui.apps`模块中`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-grid`处定义了客户端库。 打开文件`less/grid.less`。
+4. Return to the IDE and in the `ui.apps` module there is a client-side library defined at `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-grid`. 打开文件 `less/grid.less`。
 
-   此文件确定&#x200B;**布局容器**&#x200B;使用的断点（`default`、`tablet`和`phone`）。 此文件将根据项目规范进行自定义。 当前断点设置为`1200px`和`768px`。
+   This file determines the breakpoints (`default`, `tablet`, and `phone`) used by the **Layout Container**. This file is intended to be customized per project specifications. Currently the breakpoints are set to `1200px` and `768px`.
 
-5. 您应该能够使用`Text`组件的响应式功能和更新的富文本策略来创作类似于以下内容的视图：
+5. You should be able to use the responsive capabilities and the updated rich text policies of the `Text` component to author a view like the following:
 
    ![章节示例最终创作](assets/map-components/final-page.png)
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您已了解如何将SPA组件映射到AEM组件，并且您使用了React核心组件。 您还有机会探索&#x200B;**布局容器**&#x200B;的响应式功能。
+Congratulations, you learned how to map SPA components to AEM Components and you used the React Core Components. You also got a chance to explore the responsive capabilities of the **Layout Container**.
 
 ### 后续步骤 {#next-steps}
 
-[导航和路由](navigation-routing.md) — 了解如何使用SPA Editor SDK映射到AEM Pages，从而支持SPA中的多个视图。 动态导航是使用React Router和React Core Components实现的。
+[Navigation and Routing](navigation-routing.md) - Learn how multiple views in the SPA can be supported by mapping to AEM Pages with the SPA Editor SDK. Dynamic navigation is implemented using React Router and React Core Components.
 
-## （额外练习）将配置保留到源代码管理 {#bonus-configs}
+## (Bonus) Persist configurations to source control {#bonus-configs}
 
-在许多情况下，尤其是在AEM项目开始时，将配置（如模板和相关内容策略）保留到源代码控制中很有价值。 这可确保所有开发人员都针对同一组内容和配置工作，并可确保环境之间具有额外的一致性。 一旦项目达到一定的成熟度，管理模板的操作就可以交给一组特殊的超级用户。
+In many cases, especially at the beginning of an AEM project it is valuable to persist configurations, like templates and related content policies, to source control. 这可确保所有开发人员都针对同一组内容和配置工作，额外确保环境之间的一致性。 只要项目达到了一定的成熟度，管理模板的实践工作就可以移交给一个专门的高级用户组。
 
-接下来的几个步骤将使用Visual Studio Code IDE和[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)执行，但可以使用任何工具和您已配置为从AEM的本地实例&#x200B;**提取**&#x200B;或&#x200B;**导入**&#x200B;内容的任何IDE执行。
+The next few steps will take place using the Visual Studio Code IDE and [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) but could be doing using any tool and any IDE that you have configured to **pull** or **import** content from a local instance of AEM.
 
-1. 在Visual Studio Code IDE中，确保已通过Marketplace扩展安装&#x200B;**VSCode AEM Sync**：
+1. In the Visual Studio Code IDE, ensure that you have **VSCode AEM Sync** installed via the Marketplace extension:
 
-   ![VSCode AEM同步](./assets/map-components/vscode-aem-sync.png)
+   ![VSCode AEM Sync](./assets/map-components/vscode-aem-sync.png)
 
-2. 在项目资源管理器中展开&#x200B;**ui.content**&#x200B;模块并导航到`/conf/wknd-spa-react/settings/wcm/templates`。
+2. Expand the **ui.content** module in the Project explorer and navigate to `/conf/wknd-spa-react/settings/wcm/templates`.
 
-3. **右键单击** `templates`文件夹并选择&#x200B;**从AEM服务器导入**：
+3. **右键单击** `templates` 文件夹，然后选择&#x200B;**从 AEM 服务器导入**：
 
-   ![VSCode导入模板](./assets/map-components/import-aem-servervscode.png)
+   ![VSCode 导入模板](./assets/map-components/import-aem-servervscode.png)
 
-4. 重复导入内容的步骤，但选择位于`/conf/wknd-spa-react/settings/wcm/templates/policies`的&#x200B;**策略**&#x200B;文件夹。
+4. Repeat the steps to import content but select the **policies** folder located at `/conf/wknd-spa-react/settings/wcm/templates/policies`.
 
-5. 检查位于`ui.content/src/main/content/META-INF/vault/filter.xml`的`filter.xml`文件。
+5. Inspect the `filter.xml` file located at `ui.content/src/main/content/META-INF/vault/filter.xml`.
 
    ```xml
    <!--ui.content filter.xml-->
@@ -283,43 +283,43 @@ AEM SPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 �
     </workspaceFilter>
    ```
 
-   `filter.xml`文件负责识别与包一起安装的节点的路径。 请注意每个筛选器上的`mode="merge"`，这表示现有内容将不会被修改，而是只会添加新内容。 由于内容作者可能正在更新这些路径，因此代码部署&#x200B;**不**&#x200B;覆盖内容非常重要。 有关使用筛选器元素的更多详细信息，请参阅[FileVault文档](https://jackrabbit.apache.org/filevault/filter.html)。
+   `filter.xml` 文件负责识别随包安装的节点的路径。 Notice the `mode="merge"` on each of the filters which indicates that existing content will not be modified, only new content is added. 由于内容作者可能会更新这些路径，因此代码部署&#x200B;**不会**&#x200B;覆盖内容，这一点很重要。 查看 [FileVault 文档](https://jackrabbit.apache.org/filevault/filter.html)，了解有关使用过滤器元素的更多详细信息。
 
-   比较`ui.content/src/main/content/META-INF/vault/filter.xml`和`ui.apps/src/main/content/META-INF/vault/filter.xml`以了解每个模块管理的不同节点。
+   比较 `ui.content/src/main/content/META-INF/vault/filter.xml` 和 `ui.apps/src/main/content/META-INF/vault/filter.xml`，了解每个模块管理的不同节点。
 
-## （额外练习）创建自定义图像组件 {#bonus-image}
+## (Bonus) Create custom Image Component {#bonus-image}
 
-React核心组件已提供了SPA图像组件。 但是，如果您需要额外的练习，请创建自己的映射到AEM [图像组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hans)的React实施。 `Image`组件是&#x200B;**content**&#x200B;组件的另一个示例。
+A SPA Image component has already been provided by the React Core components. However, if you want extra practice, create your own React implementation that maps to the AEM [Image component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html). The `Image` component is another example of a **content** component.
 
-### 检查JSON
+### Inspect the JSON
 
-在跳转到SPA代码之前，请检查AEM提供的JSON模型。
+Before jumping into the SPA code, inspect the JSON model provided by AEM.
 
-1. 导航到核心组件库[&#128279;](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的图像示例。
+1. Navigate to the [Image examples in the Core Component library](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html).
 
-   ![图像核心组件JSON](./assets/map-components/image-json.png)
+   ![Image Core Component JSON](./assets/map-components/image-json.png)
 
-   `src`、`alt`和`title`的属性用于填充SPA `Image`组件。
+   Properties of `src`, `alt`, and `title` are used to populate the SPA `Image` component.
 
    >[!NOTE]
    >
-   > 其他公开的图像属性(`lazyEnabled`、`widths`)允许开发人员创建自适应和延迟加载组件。 本教程中构建的组件非常简单，**不**&#x200B;会使用这些高级属性。
+   > There are other Image properties exposed (`lazyEnabled`, `widths`) that allow a developer to create an adaptive and lazy-loading component. The component built in this tutorial is simple and does **not** use these advanced properties.
 
-### 实施图像组件
+### Implement the Image component
 
-1. 接下来，在`ui.frontend/src/components`下创建一个名为`Image`的新文件夹。
-1. 在`Image`文件夹下创建名为`Image.js`的新文件。
+1. Next, create a new folder named `Image` under `ui.frontend/src/components`.
+1. Beneath the `Image` folder create a new file named `Image.js`.
 
-   ![Image.js文件](./assets/map-components/image-js-file.png)
+   ![Image.js file](./assets/map-components/image-js-file.png)
 
-1. 将以下`import`语句添加到`Image.js`：
+1. Add the following `import` statements to `Image.js`:
 
    ```js
    import React, {Component} from 'react';
    import {MapTo} from '@adobe/aem-react-editable-components';
    ```
 
-1. 然后添加`ImageEditConfig`以确定何时在AEM中显示占位符：
+1. Then add the `ImageEditConfig` to determine when to show the placeholder in AEM:
 
    ```js
    export const ImageEditConfig = {
@@ -332,9 +332,9 @@ React核心组件已提供了SPA图像组件。 但是，如果您需要额外�
    };
    ```
 
-   如果未设置`src`属性，将显示占位符。
+   The placeholder will show if the `src` property is not set.
 
-1. 接下来实施`Image`类：
+1. Next implement the `Image` class:
 
    ```js
     export default class Image extends Component {
@@ -360,17 +360,17 @@ React核心组件已提供了SPA图像组件。 但是，如果您需要额外�
    }
    ```
 
-   上述代码将根据JSON模型传入的prop `src`、`alt`和`title`呈现`<img>`。
+   The above code will render an `<img>` based on the props `src`, `alt`, and `title` passed in by the JSON model.
 
-1. 添加`MapTo`代码以将React组件映射到AEM组件：
+1. Add the `MapTo` code to map the React component to the AEM component:
 
    ```js
    MapTo('wknd-spa-react/components/image')(Image, ImageEditConfig);
    ```
 
-   请注意，字符串`wknd-spa-react/components/image`对应于AEM组件在`ui.apps`中的位置： `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/image`。
+   Note the string `wknd-spa-react/components/image` corresponds to the location of the AEM component in `ui.apps` at: `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/image`.
 
-1. 在同一目录中创建一个名为`Image.css`的新文件并添加以下内容：
+1. Create a new file named `Image.css` in the same directory and add the following:
 
    ```scss
    .Image-src {
@@ -380,7 +380,7 @@ React核心组件已提供了SPA图像组件。 但是，如果您需要额外�
    }
    ```
 
-1. 在`Image.js`中，在`import`语句下方的顶部添加对文件的引用：
+1. In `Image.js` add a reference to the file at the top beneath the `import` statements:
 
    ```js
    import React, {Component} from 'react';

@@ -1,6 +1,6 @@
 ---
-title: 适用于Personalization的Dynamic Media模板
-description: 了解Dynamic Media模板如何实现横幅的动态个性化，从而轻松为不同受众创建变体。
+title: Dynamic Media Templates for Personalization
+description: See how Dynamic Media Templates enable on-the-fly personalization of banners, making it easy to create variations for different audiences.
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets
 feature-set: Experience Manager, Experience Manager Assets
@@ -14,15 +14,15 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: d4458e36-348a-4903-9990-1382443f128b
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
-# 适用于Personalization的Dynamic Media模板
+# Dynamic Media Templates for Personalization
 
-了解Dynamic Media模板如何实现横幅的动态个性化，从而轻松为不同受众创建变体。
+See how Dynamic Media Templates enable on-the-fly personalization of banners, making it easy to create variations for different audiences.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3459222/?learn=on&enablevpops)

@@ -1,6 +1,6 @@
 ---
-title: 在AEM Sites中使用SPA编辑器
-description: AEM的单页应用程序编辑器框架使作者能够编辑单页应用程序或SPA的内容。 使用React框架的开发人员可创建SPA，然后将SPA的区域映射到AEM组件，从而使作者可以使用熟悉的AEM Sites编辑工具。
+title: Using the SPA Editor with AEM Sites
+description: AEM's Single Page Application editor framework provides authors the ability to edit content for a Single Page Application or SPA. Developers using either React frameworks create a SPA and then map areas of the SPA to AEM components, allowing authors to use familiar AEM Sites editing tools.
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: SPA
 feature: SPA Editor
@@ -12,35 +12,35 @@ doc-type: Feature Video
 exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
 duration: 473
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 1%
+source-wordcount: '259'
+ht-degree: 13%
 
 ---
 
-# 在AEM Sites中使用SPA编辑器
+# Using the SPA Editor with AEM Sites
 
 {{spa-editor-deprecation}}
 
-有关在AEM Sites中为单页应用程序创作内容的视频概述。
+Video overview of authoring content for a Single Page Application in AEM Sites.
 
-通过AEM的SPA编辑器，创作者能够编辑单页应用程序或SPA的内容。 开发人员使用React框架创建SPA，然后将SPA的区域映射到AEM组件，从而让作者可以使用熟悉的AEM Sites编辑工具。 以下视频演示了WKND SPA示例站点的一些上下文内编辑功能。 WKND SPA项目包括两个React实施。
+AEM&#39;s SPA Editor provides authors the ability to edit content for a Single Page Application or SPA. Developers using the React framework create a SPA and then map areas of the SPA to AEM components, allowing authors to use familiar AEM Sites editing tools. The below video demonstrates some of the in-context editing features with the WKND SPA sample site. The WKND SPA project includes both a React implementation.
 
->[!VIDEO](https://video.tv.adobe.com/v/326772?quality=12&learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/22229?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 单页应用程序(SPA)编辑器功能需要AEM 6.4 Service Pack 2或更高版本。
+> The Single-Page Application (SPA) Editor feature requires AEM 6.4 service pack 2 or newer.
 >
-> 对于需要基于SPA框架的客户端渲染的项目，推荐使用SPA编辑器解决方案。
+> The SPA Editor is the recommended solution for projects that require SPA framework based client-side rendering.
 
 ## 其他资源 {#additional-resources}
 
-WKND SPA实施仅支持AEM 6.4.8+、AEM 6.5.5+和AEM as a Cloud Service。
+The WKND SPA implementation only provides support for AEM 6.4.8+, AEM 6.5.5+ and AEM as a Cloud Service.
 
-根据您的AEM版本，下载并安装相应的[WKND SPA包](https://github.com/adobe/aem-guides-wknd-spa/releases)。 **React**&#x200B;有单独的版本。
+Download and install the appropriate [WKND SPA package](https://github.com/adobe/aem-guides-wknd-spa/releases) based on your version of AEM. There are separate versions for **React**.
 
-有关使用SPA编辑器进行开发的详细教程，请参阅：
+For a detailed tutorial on developing with the SPA Editor see:
 
-* [AEM SPA Editor和React快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hans)
+* [AEM SPA Editor 和 React 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)

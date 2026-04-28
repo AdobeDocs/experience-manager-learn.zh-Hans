@@ -1,5 +1,5 @@
 ---
-title: 添加导航和路由 | AEM SPA Editor和Angular快速入门
+title: 添加导航和路由| AEM SPA编辑器和Angular快速入门
 description: 了解如何使用AEM页面和SPA Editor SDK支持SPA中的多个视图。 动态导航是使用Angular路由实现的，并且已添加到现有的标题组件中。
 feature: SPA Editor
 version: Experience Manager as a Cloud Service
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
 duration: 669
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '2531'
-ht-degree: 0%
+source-wordcount: '2845'
+ht-degree: 2%
 
 ---
 
@@ -31,9 +31,9 @@ ht-degree: 0%
 2. 了解如何使用[Angular路由](https://angular.io/guide/router)在SPA的不同视图之间导航。
 3. 实施由AEM页面层次结构驱动的动态导航。
 
-## 您将构建的内容
+## 您将构建什么
 
-本章将导航菜单添加到现有`Header`组件。 导航菜单由AEM页面层次结构驱动，并使用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=zh-Hans)提供的JSON模型。
+本章将导航菜单添加到现有`Header`组件。 导航菜单由AEM页面层次结构驱动，并使用[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
 
 已实施![导航](assets/navigation-routing/final-navigation-implemented.gif)
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 ## 检查HeaderComponent更新 {#inspect-header}
 
-在前几章中，已通过`app.component.html`将`HeaderComponent`组件添加为纯Angular组件。 在本章中，`HeaderComponent`组件已从应用程序中删除，并通过[模板编辑器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hans)添加。 这允许用户在AEM中配置`HeaderComponent`的导航菜单。
+在前几章中，已通过`app.component.html`将`HeaderComponent`组件添加为纯Angular组件。 在本章中，`HeaderComponent`组件已从应用程序中删除，并通过[模板编辑器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)添加。 这允许用户在AEM中配置`HeaderComponent`的导航菜单。
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ ht-degree: 0%
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`组件将通过`sling:resourceSuperType`属性继承[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=zh-Hans)的所有功能。
+   AEM `Header`组件将通过`sling:resourceSuperType`属性继承[导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)的所有功能。
 
 ## 将HeaderComponent添加到SPA模板 {#add-header-template}
 
@@ -153,9 +153,9 @@ ht-degree: 0%
    在&#x200B;**[!UICONTROL 属性]**&#x200B;下：
 
    * 将&#x200B;**[!UICONTROL 导航根]**&#x200B;设置为`/content/wknd-spa-angular/us/en`。
-   * 将&#x200B;**[!UICONTROL 排除根级别]**&#x200B;设置为&#x200B;**1**。
+   * 将&#x200B;**[!UICONTROL 排除根级别]**&#x200B;设置为 **1**。
    * 取消选中&#x200B;**[!UICONTROL 收集所有子页面]**。
-   * 将&#x200B;**[!UICONTROL 导航结构深度]**&#x200B;设置为&#x200B;**3**。
+   * 将&#x200B;**[!UICONTROL 导航结构深度]**&#x200B;设置为 **3**。
 
    ![配置标头策略](assets/navigation-routing/header-policy.png)
 
@@ -217,7 +217,7 @@ ht-degree: 0%
 
    在初始JSON请求中加载SPA的&#x200B;**所有**&#x200B;内容是不明智的，因为这会降低初始页面加载的速度。 接下来，我们来看看如何收集页面的层级深度。
 
-7. 导航到&#x200B;**SPA根**&#x200B;模板，位于： [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-app-template/structure.html)。
+7. 导航到&#x200B;**SPA根**&#x200B;模板，网址为： [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-app-template/structure.html)。
 
    单击&#x200B;**[!UICONTROL 页面属性菜单]** > **[!UICONTROL 页面策略]**：
 
@@ -261,7 +261,7 @@ ht-degree: 0%
 
 接下来，使用新`NavigationComponent`实施导航菜单。 我们可以直接在`header.component.html`中添加代码，但更好的做法是避免使用大型组件。 相反，实施一个以后可能会重复使用的`NavigationComponent`。
 
-1. 查看[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)上的AEM `Header`组件公开的JSON：
+1. 查看AEM `Header`组件在[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)处公开的JSON：
 
    ```json
    ...
@@ -369,7 +369,7 @@ ht-degree: 0%
 
    不执行数据转换，此类主要是为强键入JSON模型而创建的。 请注意，`this.children`被类型化为`NavigationLink[]`，并且构造函数为`children`数组中的每个项递归创建新的`NavigationLink`对象。 请记住，`Header`的JSON模型是分层的。
 
-6. 打开文件`navigation-link.spec.ts`。 这是`NavigationLink`类的测试文件。 使用以下内容更新它：
+6. 打开文件 `navigation-link.spec.ts`。 这是`NavigationLink`类的测试文件。 使用以下内容更新它：
 
    ```js
    import { NavigationLink } from './navigation-link';
@@ -393,7 +393,7 @@ ht-degree: 0%
 
    请注意，`const data`遵循之前针对单个链接检查的相同JSON模型。 这远远不是可靠的单元测试，但应该足以测试`NavigationLink`的构造函数。
 
-7. 打开文件`navigation.component.ts`。 使用以下内容更新它：
+7. 打开文件 `navigation.component.ts`。 使用以下内容更新它：
 
    ```js
    import { Component, OnInit, Input } from '@angular/core';
@@ -639,7 +639,7 @@ ht-degree: 0%
 
    `PageComponent`是Angular组件，它表示AEM中的页面，用于呈现匹配的路由。 稍后将在教程中查看`PageComponent`。
 
-   `AemPageDataResolver`由AEM SPA编辑器JS SDK提供，是一个自定义[Angular路由器解析器](https://angular.io/api/router/Resolve)，用于将路由URL(即AEM中包含.html扩展名的路径)转换为AEM中的资源路径（即不含扩展名的页面路径）。
+   `AemPageDataResolver`由AEM SPA编辑器JS SDK提供，是一个自定义[Angular路由器解析器](https://angular.io/api/router/Resolve)，用于将路由URL（即AEM中包含.html扩展名的路径）转换为AEM中的资源路径（即不含扩展名的页面路径）。
 
    例如，`AemPageDataResolver`将路由的URL `content/wknd-spa-angular/us/en/home.html`转换为`/content/wknd-spa-angular/us/en/home`的路径。 此标头用于根据JSON模型API中的路径解析页面内容。
 
@@ -702,7 +702,7 @@ ht-degree: 0%
 
    >[!CAUTION]
    >
-   > Angular项目启用了一些非常严格的筛选规则。 如果Maven构建失败，请检查错误并查找在列出的文件中发现的&#x200B;**Lint错误。**。修复过滤器发现的任何问题并重新运行Maven命令。
+   > Angular项目启用了一些非常严格的筛选规则。 如果Maven生成失败，请检查错误并查找在列出的文件中发现的&#x200B;**Lint错误。**。修复过滤器发现的任何问题并重新运行Maven命令。
 
 2. 导航到AEM中的SPA主页： [http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html)，然后打开浏览器的开发人员工具。 以下屏幕截图是从Google Chrome浏览器中捕获的。
 
@@ -724,7 +724,7 @@ ht-degree: 0%
 
    已实施![导航](assets/navigation-routing/final-navigation-implemented.gif)
 
-5. 通过直接导航到[http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html)尝试使用深层链接。 请注意，浏览器的“后退”按钮仍可继续使用。
+5. 尝试直接导航到[http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html)来使用深层链接。 请注意，浏览器的“后退”按钮仍可继续使用。
 
 ## 恭喜！ {#congratulations}
 

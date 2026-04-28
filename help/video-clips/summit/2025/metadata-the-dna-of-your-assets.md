@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: dcc6c975-dd7e-402d-844c-eccf888d9b2c
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解元数据如何驱动工作流、搜索和见解，以及自动化如何丰富元数据以符合品牌标准。
 
->[!VIDEO](https://video.tv.adobe.com/v/3461975/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)

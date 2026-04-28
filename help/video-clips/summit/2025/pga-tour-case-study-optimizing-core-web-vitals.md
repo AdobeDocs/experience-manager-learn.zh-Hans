@@ -1,6 +1,6 @@
 ---
 title: PGA导览案例研究 — 优化Core Web Vitals
-description: 了解PGA TOUR如何将其网站的Core Web Vitals提高了19%，以应对大型锦标赛期间意外的流量激增。
+description: See how PGA TOUR improved their website's Core Web Vitals by 19% to handle unexpected traffic surges during a major tournament.
 cloud: Experience Cloud
 solution: Experience Manager
 feature-set: Experience Manager
@@ -13,7 +13,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 8b13fb6c-f16f-45ba-aca1-c72c7e218b95
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 # PGA导览案例研究：优化Core Web Vitals
 
-了解PGA TOUR如何将其网站的Core Web Vitals提高了19%，以应对大型锦标赛期间意外的流量激增。
+See how PGA TOUR improved their website&#39;s Core Web Vitals by 19% to handle unexpected traffic surges during a major tournament.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3459237/?learn=on&enablevpops)

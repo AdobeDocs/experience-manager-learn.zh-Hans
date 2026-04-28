@@ -1,6 +1,6 @@
 ---
-title: AEM as a Cloud Service中的遍历警告
-description: 了解如何在AEM as a Cloud Service中缓解遍历警告。
+title: Traversal warnings in AEM as a Cloud Service
+description: Learn how to mitigate traversal warnings in AEM as a Cloud Service.
 feature: Migration
 role: Developer
 level: Beginner
@@ -11,10 +11,10 @@ index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
 duration: 155
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 5%
+source-wordcount: '950'
+ht-degree: 12%
 
 ---
 
@@ -23,18 +23,18 @@ ht-degree: 5%
 >[!TIP]
 >请将此页加入书签以供将来参考。
 
-_什么是遍历警告？_
+_What are traversal warnings?_
 
-遍历警告是&#x200B;__aemerror__ log语句，指示在AEM Publish服务上执行的查询性能不佳。 遍历警告通常以两种方式显示在AEM中：
+Traversal warnings are __aemerror__ log statements indicating poorly performing queries are being executed on the AEM Publish service. Traversal warnings typically manifest in AEM in two ways:
 
-1. __查询速度慢__&#x200B;不使用索引，导致响应时间慢。
-1. __查询失败__，抛出`RuntimeNodeTraversalException`，导致体验中断。
+1. __Slow queries__ that do not use indexes, resulting in slow response times.
+1. __Failing queries__, that throw a `RuntimeNodeTraversalException`, resulting in a broken experience.
 
-允许取消选中遍历警告会减慢AEM性能，并可能导致用户体验受损。
+Allowing traversal warnings to go unchecked slows down AEM performance, and can result in broken experiences for your users.
 
-## 如何解决遍历警告
+## How to resolve traversal warnings
 
-可通过三个简单的步骤来缓解遍历警告：分析、调整和验证。 在确定最优调整之前，需要多次反复调整和验证。
+Mitigating traversal warnings can be approached using three simple steps: analyze, adjust, and verify. Expect several iterations of adjust and verify before identifying the optimal adjustments.
 
 <div class="columns is-multiline">
 
@@ -50,10 +50,10 @@ _什么是遍历警告？_
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-                <p class="headline is-size-5 has-text-weight-bold">分析问题</p>
-               <p class="is-size-6">识别并了解正在遍历的查询。</p>
+                <p class="headline is-size-5 has-text-weight-bold">Analyze the problem</p>
+               <p class="is-size-6">Identify and understand what queries are traversing.</p>
                <a href="#analyze" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">分析</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Analyze</span>
                </a>
            </div>
        </div>
@@ -72,10 +72,10 @@ _什么是遍历警告？_
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-                <p class="headline is-size-5 has-text-weight-bold">调整代码或配置</p>
-               <p class="is-size-6">更新查询和索引以避免查询遍历。</p>
+                <p class="headline is-size-5 has-text-weight-bold">Adjust the code or configuration</p>
+               <p class="is-size-6">Update queries and indexes to avoid query traversals.</p>
                <a href="#adjust" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">调整</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Adjust</span>
                </a>
            </div>
        </div>
@@ -94,10 +94,10 @@ _什么是遍历警告？_
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-                <p class="headline is-size-5 has-text-weight-bold">验证调整是否有效</p>                       
-               <p class="is-size-6">验证对查询和索引的更改将移除遍历。</p>
+                <p class="headline is-size-5 has-text-weight-bold">Verify the adjustments worked</p>                       
+               <p class="is-size-6">Verify changes to queries and indexes remove traversals.</p>
                <a href="#verify" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">验证</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Verify</span>
                </a>
            </div>
        </div>
@@ -106,13 +106,13 @@ _什么是遍历警告？_
 
 </div>
 
-## 1.分析{#analyze}
+## &#x200B;1. 分析{#analyze}
 
-首先，确定哪些AEM Publish服务显示遍历警告。 为此，请从Cloud Manager中[下载过去`aemerror`3天（开发、暂存和生产环境）的所有环境中的](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html?lang=zh-Hans#cloud-manager){target="_blank"}日志&#x200B;__。__
+First, identify which AEM Publish services are exhibiting traversal warnings. To do this, from Cloud Manager, [download Publish services&#39; `aemerror` logs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"} from all environments (Dev, Stage and Production) for the past __three days__.
 
-![下载AEM as a Cloud Service日志](./assets/traversals/download-logs.jpg)
+![Download AEM as a Cloud Service logs](./assets/traversals/download-logs.jpg)
 
-打开日志文件并搜索Java™类`org.apache.jackrabbit.oak.plugins.index.Cursors$TraversingCursor`。 包含遍历警告的日志包含一系列类似于以下内容的语句：
+Open the log files, and search for the Java™ class `org.apache.jackrabbit.oak.plugins.index.Cursors$TraversingCursor`. 包含遍历警告的日志包含一系列类似于以下内容的语句：
 
 ```log
 24.05.2022 14:18:46.146 [cm-p123-e456-aem-author-9876-edcba] *WARN* [192.150.10.214 [1653401908419] GET /content/wknd/us/en/example.html HTTP/1.1] 
@@ -129,7 +129,7 @@ consider creating an index or changing the query
 
    + 示例：`GET /content/wknd/us/en/example.html HTTP/1.1`
 
-+ Oak查询语法
++ Oak query syntax
 
    + 示例：`select [jcr:path], [jcr:score], * from [nt:base] as a where [xyz] = 'abc' and isdescendantnode(a, '/content')`
 
@@ -151,7 +151,7 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
     ...
 ```
 
-## 2.调整{#adjust}
+## &#x200B;2. 调整{#adjust}
 
 一旦发现违规查询及其调用代码，必须进行调整。 可以进行两种类型的调整以缓解遍历警告：
 
@@ -159,24 +159,24 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
 
 __更改查询__&#x200B;以添加新的查询限制，这些限制可解析为现有的索引限制。 如果可能，最好更改查询而不是更改索引。
 
-+ [了解如何优化查询性能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=zh-Hans#query-performance-tuning){target="_blank"}
++ [了解如何优化查询性能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 
 ### 调整索引
 
 __更改（或创建）AEM索引__，以使现有查询限制可解析为索引更新。
 
-+ [了解如何优化现有索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=zh-Hans#query-performance-tuning){target="_blank"}
-+ [了解如何创建索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=zh-Hans#create-a-new-index){target="_blank"}
++ [了解如何优化现有索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [了解如何创建索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target="_blank"}
 
-## 3.验证{#verify}
+## &#x200B;3. 验证{#verify}
 
 必须验证对查询、索引或这两者所做的调整，以确保它们缓解遍历警告。
 
 ![说明查询](./assets/traversals/verify.gif)
 
-如果只对查询[进行了](#adjust-the-query)调整，则可以通过Developer Console的[Explain Query](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=zh-Hans#queries){target="_blank"}直接在AEM as a Cloud Service上测试该查询。 解释针对AEM Author服务运行的查询，但是，由于索引定义在Author和Publish服务中是相同的，因此验证针对AEM Author服务的查询便已足够。
+如果只对查询](#adjust-the-query)进行了[调整，则可以通过Developer Console的[Explain Query](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}直接在AEM as a Cloud Service上测试该查询。 解释针对AEM Author服务运行的查询，但是，由于索引定义在Author和Publish服务中是相同的，因此验证针对AEM Author服务的查询便已足够。
 
-如果对索引[进行了](#adjust-the-index)调整，则必须将该索引部署到AEM as a Cloud Service。 部署索引调整后，Developer Console的[Explain查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=zh-Hans#queries){target="_blank"}可用于进一步执行和优化查询。
+如果对索引](#adjust-the-index)进行了[调整，则必须将该索引部署到AEM as a Cloud Service。 部署索引调整后，Developer Console的[Explain查询](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}可用于进一步执行和优化查询。
 
 最终，所有更改（查询和代码）都会提交到Git并使用Cloud Manager部署到AEM as a Cloud Service。 部署后，重新测试与原始遍历警告关联的代码路径，并验证`aemerror`日志中是否不再显示遍历警告。
 
@@ -191,14 +191,14 @@ __更改（或创建）AEM索引__，以使现有查询限制可解析为索引�
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=zh-Hans" title="Cloud 5 — 搜索和索引" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 — 搜索和索引"></a>
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜索和索引" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 — 搜索和索引"></a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=zh-Hans" title="Cloud 5 — 搜索和索引">Cloud 5 — 搜索和索引</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜索和索引">Cloud 5 — 搜索和索引</a></p>
                <p class="is-size-6">Cloud 5团队展示如何在AEM as a Cloud Service上探索搜索和索引的细节。</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=zh-Hans" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                </a>
            </div>
@@ -212,16 +212,16 @@ __更改（或创建）AEM索引__，以使现有查询限制可解析为索引�
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=zh-Hans" title="内容搜索与索引" tabindex="-1">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="内容搜索与索引" tabindex="-1">
                    <img class="is-bordered-r-small" src="./assets/traversals/resources--docs.png" alt="内容搜索与索引">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=zh-Hans" title="内容搜索与索引">内容搜索和索引文档</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="内容搜索与索引">内容搜索和索引文档</a></p>
                <p class="is-size-6">了解如何在AEM as a Cloud Service中创建和管理索引。</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=zh-Hans" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                </a>
            </div>
@@ -234,16 +234,16 @@ __更改（或创建）AEM索引__，以使现有查询限制可解析为索引�
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=zh-Hans" title="实现Oak索引的现代化" tabindex="-1">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="实现Oak索引的现代化" tabindex="-1">
                    <img class="is-bordered-r-small" src="./assets/traversals/resources--aem-experts-series.png" alt="实现Oak索引的现代化">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=zh-Hans" title="实现Oak索引的现代化">实现Oak索引的现代化</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="实现Oak索引的现代化">实现Oak索引的现代化</a></p>
                <p class="is-size-6">了解如何将AEM 6 Oak索引定义转换为与AEM as a Cloud Service兼容的定义，并在以后维护这些索引。</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=zh-Hans" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                </a>
            </div>
@@ -256,15 +256,15 @@ __更改（或创建）AEM索引__，以使现有查询限制可解析为索引�
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="索引定义文档" tabindex="-1">
-                   <img class="is-bordered-r-small" src="./assets/traversals/resources--oak-docs.png" alt="索引定义文档">
+               <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="Index definition documentation" tabindex="-1">
+                   <img class="is-bordered-r-small" src="./assets/traversals/resources--oak-docs.png" alt="Index definition documentation">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="索引定义文档">Lucene索引文档</a></p>
-               <p class="has-ellipsis is-size-6">Apache Oak Jackrabbit Lucene索引引用记录了所有受支持的Lucene索引配置。</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="Index definition documentation">Lucene index documentation</a></p>
+               <p class="has-ellipsis is-size-6">The Apache Oak Jackrabbit Lucene index reference that documents all supported Lucene index configurations.</p>
                <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解详情</span>
                </a>

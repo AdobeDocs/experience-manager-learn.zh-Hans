@@ -1,6 +1,6 @@
 ---
-title: 用于个性化营销的Dynamic Media模板
-description: 探索Dynamic Media模板如何使营销人员能够为个性化营销活动创建实时、可自定义的内容。
+title: Dynamic Media Templates for Personalized Marketing
+description: Explore how Dynamic Media Templates enable marketers to create live, customizable content for personalized campaigns.
 cloud: Experience Cloud
 solution: Experience Manager Assets
 feature-set: Experience Manager Assets
@@ -14,15 +14,15 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: e875feab-bf5b-47ab-b3be-ee0c2e418f50
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
-# 用于个性化营销的Dynamic Media模板
+# Dynamic Media Templates for Personalized Marketing
 
-探索Dynamic Media模板如何使营销人员能够为个性化营销活动创建实时、可自定义的内容。
+Explore how Dynamic Media Templates enable marketers to create live, customizable content for personalized campaigns.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3459241/?learn=on&enablevpops)

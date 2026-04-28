@@ -1,6 +1,6 @@
 ---
-title: 集成SPA | AEM SPA Editor和Angular快速入门
-description: 了解如何将在Angular中编写的单页应用程序(SPA)的源代码与Adobe Experience Manager (AEM)项目集成。 了解如何使用现代前端工具(如Angular的CLI工具)快速开发针对AEM JSON模型API的SPA。
+title: 集成SPA | AEM SPA Editor和Angular入门
+description: 了解如何将在Angular中编写的单页应用程序(SPA)的源代码与Adobe Experience Manager (AEM)项目集成。 了解如何使用现代前端工具（如Angular的CLI工具）快速开发针对AEM JSON模型API的SPA。
 feature: SPA Editor
 version: Experience Manager as a Cloud Service
 jira: KT-5310
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
 duration: 536
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '2045'
-ht-degree: 0%
+source-wordcount: '2299'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 2. 了解如何使用本地开发服务器进行专用前端开发。
 3. 探索使用&#x200B;**代理**&#x200B;和静态&#x200B;**模拟**&#x200B;文件来针对AEM JSON模型API进行开发
 
-## 您将构建的内容
+## 您将构建什么
 
 本章将向SPA添加一个简单的`Header`组件。 在构建此静态`Header`组件的过程中，使用了多种方法来开发AEM SPA。
 
@@ -77,17 +77,17 @@ ht-degree: 0%
 
 *SPA集成的高级描述。*
 
-有关前端内部版本的其他信息可在[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hans)找到。
+有关前端内部版本的其他信息可在[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)找到。
 
 ## 检查SPA集成 {#inspect-spa-integration}
 
-接下来，检查`ui.frontend`模块以了解已由[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hans)自动生成的SPA。
+接下来，检查`ui.frontend`模块以了解已由[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)自动生成的SPA。
 
-1. 在您选择的IDE中，打开WKND SPA的AEM项目。 本教程将使用[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=zh-Hans#microsoft-visual-studio-code)。
+1. 在您选择的IDE中，打开WKND SPA的AEM项目。 本教程将使用[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)。
 
    ![VSCode - AEM WKND SPA项目](./assets/integrate-spa/vscode-ide-openproject.png)
 
-2. 展开并检查`ui.frontend`文件夹。 打开文件`ui.frontend/package.json`
+2. 展开并检查`ui.frontend`文件夹。 打开文件 `ui.frontend/package.json`
 
 3. 在`dependencies`下，您应该会看到几个与`@angular`相关的项：
 
@@ -112,7 +112,7 @@ ht-degree: 0%
    "@adobe/cq-spa-page-model-manager": "^1.1.3",
    ```
 
-   上述模块构成了[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html?lang=zh-Hans)，并提供了将SPA组件映射到AEM组件的功能。
+   上述模块构成了[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)，并提供了将SPA组件映射到AEM组件的功能。
 
 5. 在`package.json`文件中，定义了多个`scripts`：
 
@@ -132,11 +132,11 @@ ht-degree: 0%
 
    `build` — 编译Angular应用程序以进行生产分发。 添加`&& clientlib`负责在生成期间将编译后的SPA作为客户端库复制到`ui.apps`模块中。 npm模块[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)用于实现此目的。
 
-   有关可用脚本的更多详细信息可在[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hans)找到。
+   有关可用脚本的更多详细信息可在[此处](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)找到。
 
-6. 检查文件`ui.frontend/clientlib.config.js`。 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs)使用此配置文件来确定如何生成客户端库。
+6. 查看文件 `ui.frontend/clientlib.config.js`。 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs)使用此配置文件来确定如何生成客户端库。
 
-7. 检查文件`ui.frontend/pom.xml`。 此文件将`ui.frontend`文件夹转换为[Maven模块](https://maven.apache.org/guides/mini/guide-multiple-modules.html)。 `pom.xml`文件已更新为在Maven生成期间使用[frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin)到&#x200B;**test**&#x200B;和&#x200B;**build** SPA。
+7. 查看文件 `ui.frontend/pom.xml`。 此文件将`ui.frontend`文件夹转换为[Maven模块](https://maven.apache.org/guides/mini/guide-multiple-modules.html)。 `pom.xml`文件已更新为在Maven生成期间使用[frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin)到&#x200B;**test**&#x200B;和&#x200B;**build** SPA。
 
 8. 在`ui.frontend/src/app/app.component.ts`处检查文件`app.component.ts`：
 
@@ -169,15 +169,15 @@ ht-degree: 0%
 
 ## 添加标头组件 {#header-component}
 
-接下来，向SPA添加新组件，并将更改部署到本地AEM实例以查看集成。
+Next, add a new component to the SPA and deploy the changes to a local AEM instance to see the integration.
 
-1. 打开新的终端窗口并导航到`ui.frontend`文件夹：
+1. Open a new terminal window and navigate to the `ui.frontend` folder:
 
    ```shell
    $ cd aem-guides-wknd-spa/ui.frontend
    ```
 
-2. 全局安装[Angular CLI](https://angular.io/cli#installing-angular-cli)用于生成Angular组件，以及通过&#x200B;**ng**&#x200B;命令生成和提供Angular应用程序。
+2. Install [Angular CLI](https://angular.io/cli#installing-angular-cli) globally This is used to generate Angular components as well as to build and serve the Angular application via the **ng** command.
 
    ```shell
    $ npm install -g @angular/cli
@@ -185,9 +185,9 @@ ht-degree: 0%
 
    >[!CAUTION]
    >
-   > 此项目使用的&#x200B;**@angular/cli**&#x200B;的版本是&#x200B;**9.1.7**。 建议保持Angular CLI版本的同步。
+   > The version of **@angular/cli** used by this project is **9.1.7**. It is recommended to keep the the Angular CLI versions in sync.
 
-3. 通过从`ui.frontend`文件夹中运行Angular CLI `ng generate component`命令创建新的`Header`组件。
+3. Create a new `Header` component by running the Angular CLI `ng generate component` command from within the `ui.frontend` folder.
 
    ```shell
    $ ng generate component components/header
@@ -199,13 +199,13 @@ ht-degree: 0%
    UPDATE src/app/app.module.ts (1809 bytes)
    ```
 
-   这将为位于`ui.frontend/src/app/components/header`的新Angular标题组件创建框架。
+   This will create a skeleton for the new Angular Header component at `ui.frontend/src/app/components/header`.
 
-4. 在您选择的IDE中打开`aem-guides-wknd-spa`项目。 导航到 `ui.frontend/src/app/components/header` 文件夹。
+4. Open the `aem-guides-wknd-spa` project in the IDE of your choice. 导航到 `ui.frontend/src/app/components/header` 文件夹。
 
-   IDE中的![标头组件路径](assets/integrate-spa/header-component-path.png)
+   ![Header Component Path in the IDE](assets/integrate-spa/header-component-path.png)
 
-5. 打开文件`header.component.html`并将内容替换为以下内容：
+5. Open the file `header.component.html` and replace the contents with the following:
 
    ```html
    <!--/* header.component.html */-->
@@ -216,18 +216,18 @@ ht-degree: 0%
    </header>
    ```
 
-   请注意，这会显示静态内容，因此此Angular组件不需要对默认生成的`header.component.ts`进行任何调整。
+   Note this displays static content, so this Angular component does not require any adjustments to the default generated `header.component.ts`.
 
-6. 在`ui.frontend/src/app/app.component.html`处打开文件&#x200B;**app.component.html**。 添加`app-header`：
+6. Open the file **app.component.html** at  `ui.frontend/src/app/app.component.html`. Add the `app-header`:
 
    ```html
    <app-header></app-header>
    <router-outlet></router-outlet>
    ```
 
-   这将包括所有页面内容上方的`header`组件。
+   This will include the `header` component above all the page content.
 
-7. 打开新终端并导航到`ui.frontend`文件夹并运行`npm run build`命令：
+7. Open a new terminal and navigate into the `ui.frontend` folder and run the `npm run build` command:
 
    ```shell
    $ cd ui.frontend
@@ -239,11 +239,11 @@ ht-degree: 0%
    ES5 bundle generation complete.
    ```
 
-8. 导航到`ui.apps`文件夹。 在`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular`下方，您应该会看到已从`ui.frontend/build`文件夹中复制了编译的SPA文件。
+8. 导航到 `ui.apps` 文件夹。 Beneath `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular` you should see the compiled SPA files have been copied from  the`ui.frontend/build` folder.
 
-   ![在ui.apps中生成的客户端库](assets/integrate-spa/compiled-spa-uiapps.png)
+   ![Client library generated in ui.apps](assets/integrate-spa/compiled-spa-uiapps.png)
 
-9. 返回终端并导航到`ui.apps`文件夹。 执行以下Maven命令：
+9. Return to the terminal and navigate into the `ui.apps` folder. Execute the following Maven command:
 
    ```shell
    $ cd ../ui.apps
@@ -257,13 +257,13 @@ ht-degree: 0%
    [INFO] ------------------------------------------------------------------------
    ```
 
-   这会将`ui.apps`包部署到AEM的本地正在运行的实例。
+   This will deploy the `ui.apps` package to a local running instance of AEM.
 
-10. 打开浏览器选项卡并导航到[http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)。 您现在应会看到`Header`组件的内容显示在SPA中。
+10. Open a browser tab and navigate to [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html). You should now see the contents of the `Header` component being displayed in the SPA.
 
-   ![初始标头实现](assets/integrate-spa/initial-header-implementation.png)
+   ![Initial header implementation](assets/integrate-spa/initial-header-implementation.png)
 
-   从项目的根目录（即`mvn clean install -PautoInstallSinglePackage`）触发Maven生成时，将自动执行步骤&#x200B;**7-9**。 您现在应该了解SPA和AEM客户端库之间集成的基础知识。 请注意，您仍然可以在AEM中编辑和添加`Text`组件，但`Header`组件不可编辑。
+   Steps **7-9** are executed automatically when triggering a Maven build from the root of the project (i.e `mvn clean install -PautoInstallSinglePackage`). You should now understand the basics of the integration between the SPA and AEM client-side libraries. 请注意，您仍然可以在AEM中编辑和添加`Text`组件，但`Header`组件不可编辑。
 
 ## Webpack开发服务器 — JSON API代理 {#proxy-json}
 
@@ -424,7 +424,7 @@ ht-degree: 0%
 
    ![Angular JSON内部版本开发更新](assets/integrate-spa/angular-json-build-dev-update.png)
 
-7. 打开文件`ui.frontend/package.json`并添加新的&#x200B;**start：mock**&#x200B;命令以引用&#x200B;**proxy.mock.conf.json**&#x200B;文件。
+7. 打开文件`ui.frontend/package.json`并添加新的&#x200B;**start:mock**&#x200B;命令以引用&#x200B;**proxy.mock.conf.json**&#x200B;文件。
 
    ```diff
        "scripts": {
@@ -439,7 +439,7 @@ ht-degree: 0%
 
    通过添加新命令，可以轻松地在代理配置之间进行切换。
 
-8. 如果当前正在运行，请停止&#x200B;**webpack开发服务器**。 使用&#x200B;**start：mock**&#x200B;脚本启动&#x200B;**webpack开发服务器**：
+8. 如果当前正在运行，请停止&#x200B;**webpack开发服务器**。 使用&#x200B;**启动:mock**&#x200B;脚本启动&#x200B;**webpack开发服务器**：
 
    ```shell
    $ npm run start:mock

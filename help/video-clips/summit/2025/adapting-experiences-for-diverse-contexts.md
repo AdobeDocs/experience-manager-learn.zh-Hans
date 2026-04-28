@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 71c0c58e-5789-417b-9a61-f290ca1b4ae5
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 了解体验生成如何使营销人员能够在保持控制的同时，根据各种角色、渠道和地理位置调整内容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3462415/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459245/?learn=on&enablevpops)
