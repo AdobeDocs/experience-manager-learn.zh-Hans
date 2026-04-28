@@ -77,7 +77,7 @@ An AEM component is defined as a node and properties. In the project, these node
 
 >[!NOTE]
 >
-> A quick refresher on the [basics of AEM components may be helpful](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html).
+> A quick refresher on the [basics of AEM components may be helpful](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=zh-Hans).
 
 1. Open the `ui.apps` folder in the IDE of your choice.
 2. Navigate to `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components` and create a folder named `custom-component`.
@@ -159,13 +159,13 @@ An AEM component is defined as a node and properties. In the project, these node
    >
    > 通过查看核心组件定义[&#128279;](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)，您可以查看更多对话框示例。 您还可以在[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)的`/libs/granite/ui/components/coral/foundation/form`下查看其他表单字段，如`select`、`textarea`、`pathfield`。
 
-   对于传统AEM组件，通常需要[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)脚本。 由于SPA呈现组件，因此不需要HTL脚本。
+   对于传统AEM组件，通常需要[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)脚本。 由于SPA呈现组件，因此不需要HTL脚本。
 
 ## 创建Sling模型
 
-Sling 模型是注释驱动的 Java™“POJO”（普通老式 Java™ 对象），帮助将数据从 JCR 映射到 Java™ 变量。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models)通常用于为AEM组件封装复杂的服务器端业务逻辑。
+Sling 模型是注释驱动的 Java™“POJO”（普通老式 Java™ 对象），帮助将数据从 JCR 映射到 Java™ 变量。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=zh-Hans#sling-models)通常用于为AEM组件封装复杂的服务器端业务逻辑。
 
-在SPA编辑器的上下文中，Sling模型使用[Sling模型导出器](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)通过功能通过JSON模型公开组件的内容。
+在SPA编辑器的上下文中，Sling模型使用[Sling模型导出器](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hans)通过功能通过JSON模型公开组件的内容。
 
 1. 在您选择的IDE中，打开`core`模块。 `CustomComponent.java`和`CustomComponentImpl.java`已作为章节开始程序代码的一部分创建和清除。
 

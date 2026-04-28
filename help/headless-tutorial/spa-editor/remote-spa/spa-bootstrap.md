@@ -70,7 +70,7 @@ $ npm install @adobe/aem-react-editable-components
       * 需要与AEM Author一起使用
       * 可能需要与AEM Publish一起使用（如果内容受保护）
       * 针对AEM SDK进行开发时，可通过基本身份验证支持本地帐户。 这是本教程中使用的方法。
-      * 与AEM as a Cloud Service集成时，使用[访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
+      * 与AEM as a Cloud Service集成时，使用[访问令牌](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hans)
    * `REACT_APP_BASIC_AUTH_USER`： SPA在检索AEM内容时用于进行身份验证的AEM __用户名__。
    * `REACT_APP_BASIC_AUTH_PASS`：检索AEM内容时，SPA用于进行身份验证的AEM __密码__。
 

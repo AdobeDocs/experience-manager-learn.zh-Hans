@@ -51,7 +51,7 @@ AEM组件被定义为节点和属性。 在项目中，这些节点和属性在`
 
 >[!NOTE]
 >
-> 有关AEM组件[基础知识的快速刷新可能有所帮助](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html)。
+> 有关AEM组件[基础知识的快速刷新可能有所帮助](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=zh-Hans)。
 
 1. 在您选择的IDE中，打开`ui.apps`文件夹。
 2. 导航到`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components`并创建一个名为`open-weather`的新文件夹。
@@ -151,9 +151,9 @@ AEM组件被定义为节点和属性。 在项目中，这些节点和属性在`
 
 ## Create the Sling Model
 
-Sling Models are annotation driven Java &quot;POJO&#39;s&quot; (Plain Old Java Objects) that facilitate the mapping of data from the JCR to Java variables. [Sling Models](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=en#sling-models) typically function to encapsulate complex server-side business logic for AEM Components.
+Sling Models are annotation driven Java &quot;POJO&#39;s&quot; (Plain Old Java Objects) that facilitate the mapping of data from the JCR to Java variables. [Sling Models](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=zh-Hans#sling-models) typically function to encapsulate complex server-side business logic for AEM Components.
 
-In the context of the SPA Editor, Sling Models expose a component&#39;s content through the JSON model through a feature using the [Sling Model Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
+In the context of the SPA Editor, Sling Models expose a component&#39;s content through the JSON model through a feature using the [Sling Model Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hans).
 
 1. In the IDE of your choice open the `core` module at `aem-guides-wknd-spa.react/core`.
 1. Create a file named at `OpenWeatherModel.java` at `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.

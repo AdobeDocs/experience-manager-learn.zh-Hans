@@ -53,7 +53,7 @@ ht-degree: 8%
 
 ## 检查文本组件
 
-[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了一个映射到AEM [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，该组件渲染来自AEM的&#x200B;*content*。
+[AEM项目原型](https://github.com/adobe/aem-project-archetype)提供了一个映射到AEM [文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans)的`Text`组件。 这是&#x200B;**content**&#x200B;组件的示例，该组件渲染来自AEM的&#x200B;*content*。
 
 我们来看看组件的工作方式。
 
@@ -224,7 +224,7 @@ AEM SPA编辑器SDK自动提供对&#x200B;**布局容器**&#x200B;的支持。 �
 
    **布局容器**&#x200B;组件具有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，SPA编辑器使用`:type`属性识别它，就像`Text`和`Image`组件一样。
 
-   在SPA编辑器中，可以使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新调整组件大小的相同功能。
+   在SPA编辑器中，可以使用[布局模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=zh-Hans#defining-layouts-layout-mode)重新调整组件大小的相同功能。
 
 2. Return to [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). Add additional **Image** components and try re-sizing them using the **Layout** option:
 
@@ -289,7 +289,7 @@ The next few steps will take place using the Visual Studio Code IDE and [VSCode 
 
 ## (Bonus) Create custom Image Component {#bonus-image}
 
-A SPA Image component has already been provided by the React Core components. However, if you want extra practice, create your own React implementation that maps to the AEM [Image component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html). The `Image` component is another example of a **content** component.
+A SPA Image component has already been provided by the React Core components. However, if you want extra practice, create your own React implementation that maps to the AEM [Image component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hans). The `Image` component is another example of a **content** component.
 
 ### Inspect the JSON
 
