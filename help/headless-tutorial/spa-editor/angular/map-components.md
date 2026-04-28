@@ -207,7 +207,7 @@ ht-degree: 8%
 
 在跳转到SPA代码之前，请检查AEM提供的JSON模型。
 
-1. 导航到核心组件库](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的[图像示例。
+1. 导航到核心组件库[&#128279;](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的图像示例。
 
    ![图像核心组件JSON](./assets/map-components/image-json.png)
 

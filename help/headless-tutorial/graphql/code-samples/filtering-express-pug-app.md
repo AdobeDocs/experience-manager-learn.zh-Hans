@@ -25,7 +25,7 @@ ht-degree: 0%
 
 探索AEM Headless GraphQL API使用[Express](https://expressjs.com/)和[Pug](https://pugjs.org/)应用程序筛选数据的能力。 此Express应用程序创建一个可按活动类型筛选的WKND冒险列表。
 
-此代码演示了使用适用于NodeJS](https://github.com/adobe/aem-headless-client-nodejs#aem-headless-client-for-nodejs)的Adobe [AEM Headless客户端使用基于Node.js的JavaScript调用持久GraphQL查询。 此应用程序使用`wknd-shared/adventures-all`持久查询来收集所有冒险，并派生可用活动类型的列表。 当用户选择活动类型时，选定的类型将传递到`wknd-shared/adventures-by-activity`持久查询，并仅检索指定活动类型的那些冒险的冒险详细信息。 冒险详细信息是通过`wknd-shared/adventures-by-slug`持久查询从AEM中检索的。
+此代码演示了使用适用于NodeJS[&#128279;](https://github.com/adobe/aem-headless-client-nodejs#aem-headless-client-for-nodejs)的Adobe AEM Headless客户端使用基于Node.js的JavaScript调用持久GraphQL查询。 此应用程序使用`wknd-shared/adventures-all`持久查询来收集所有冒险，并派生可用活动类型的列表。 当用户选择活动类型时，选定的类型将传递到`wknd-shared/adventures-by-activity`持久查询，并仅检索指定活动类型的那些冒险的冒险详细信息。 冒险详细信息是通过`wknd-shared/adventures-by-slug`持久查询从AEM中检索的。
 
 此代码：
 
