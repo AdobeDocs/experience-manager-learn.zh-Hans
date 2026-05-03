@@ -107,7 +107,7 @@ ht-degree: 2%
 
 ## 其他资源
 
-- [使用人工智能工具进行本地开发](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [使用人工智能工具进行本地开发](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [面向AI编码代理的Adobe技能](https://github.com/adobe/skills)
 
