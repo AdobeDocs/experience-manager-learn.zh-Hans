@@ -69,8 +69,8 @@ MCP服务器通过[模型上下文协议](https://modelcontextprotocol.io/)向�
 
 对于针对AEM SDK和Dispatcher的&#x200B;**本地开发**，请从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=mcp*&1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.0_values=software-type%3Atooling&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=3)门户安装这些&#x200B;**本地MCP服务器**：
 
-- **AEM Quickstart本地MCP服务器**：公开本地AEM SDK实例的实时运行时数据，以支持故障排除和开发。 有关详细信息，请参阅[AEM快速入门MCP服务器](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server)。
-- **Dispatcher本地MCP服务器**：启用本地Dispatcher实例的运行时验证和检查。 有关详细信息，请参阅[Dispatcher MCP服务器](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server)。
+- **AEM Quickstart本地MCP服务器**：公开本地AEM SDK实例的实时运行时数据，以支持故障排除和开发。 有关详细信息，请参阅[AEM快速入门MCP服务器](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server)。
+- **Dispatcher本地MCP服务器**：启用本地Dispatcher实例的运行时验证和检查。 有关详细信息，请参阅[Dispatcher MCP服务器](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server)。
 
 对于Adobe托管的AEM MCP服务器（例如，内容、只读内容和Cloud Manager），请参阅AEM中的[MCP服务器](../mcp/overview.md)。
 
@@ -157,7 +157,7 @@ CARDS
 
 ## 其他资源
 
-- [使用AI工具进行本地开发](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [使用AI工具进行本地开发](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [面向AI编码代理的Adobe技能](https://github.com/adobe/skills)
 
