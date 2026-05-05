@@ -8,10 +8,10 @@ doc-type: Catalog
 duration: 30
 last-substantial-update: 2026-01-05T00:00:00Z
 exl-id: cc255744-bb86-49cb-88ca-1266d28985a5
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 22%
+source-wordcount: '199'
+ht-degree: 18%
 
 ---
 
@@ -37,7 +37,13 @@ CARDS
 * ./mcp/overview.md
     {title = AEM MCP Servers}
     {description = Learn how to extend AEM into your favorite AI-tools.}
-    {cta = Learn}    
+    {cta = Learn}
+
+* ./ai-assited-development/overview.md
+    {title = AI-assisted development}
+    {description = Use Agent Skills, AGENTS.md, and MCP with your IDE to build production-ready AEM code.}
+    {image = ./ai-assited-development/assets/component-development/review-generated-code.png}
+    {cta = Learn}
 
 * ../../sites/generative-ai/generate-variations.md
     {title = Generate Variations}
@@ -56,7 +62,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./ai-assistant/overview.md" title="AEM AI 助手" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475368/?captions=chi_hans&format=jpeg&nocache=1773082651757" alt="AEM AI 助手"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475357/?format=jpeg&nocache=1773082651757" alt="AEM AI 助手"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -92,6 +98,29 @@ CARDS
                     <p class="is-size-6">了解如何将AEM扩展到您喜爱的AI工具中。</p>
                 </div>
                 <a href="./mcp/overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学习</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="AI-assisted development">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./ai-assited-development/overview.md" title="AI辅助开发" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="./ai-assited-development/assets/component-development/review-generated-code.png" alt="AI辅助开发"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./ai-assited-development/overview.md" target="_blank" rel="referrer" title="AI辅助开发">AI辅助开发</a>
+                    </p>
+                    <p class="is-size-6">在IDE中使用Agent Skills、AGENTS.md和MCP来构建可用于生产的AEM代码。</p>
+                </div>
+                <a href="./ai-assited-development/overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学习</span>
                 </a>
             </div>

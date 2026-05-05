@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 2eb26576a0308d8b74c2d1ce7db61c148936d076
+source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 94%
+source-wordcount: '1642'
+ht-degree: 93%
 
 ---
 
@@ -44,6 +44,12 @@ ht-degree: 94%
       + [概述](./ai/mcp/overview.md)
       + [使用MCP服务器加速AEM内容操作](./ai/mcp/accelerate-content-operations-with-aem-mcp-server.md)
       + [Cloud Manager MCP服务器](./ai/mcp/cloud-manager.md)
+   + AI辅助开发 {#ai-assisted-development}
+      + [概述](./ai/ai-assited-development/overview.md)
+      + 设置{#setup}
+         + [座席技能](./ai/ai-assited-development/setup/agent-skills.md)
+      + 用例{#use-cases}
+         + [组件开发](./ai/ai-assited-development/use-cases/component-development.md)
 + Experience Cloud 集成{#integrations}
    + [集成](./integrations/experience-cloud.md)
    + [AEM Headless 和 Target](./integrations/target.md)
@@ -55,7 +61,7 @@ ht-degree: 94%
    + [Author 和 Publish 服务](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
-   + [AEM Assets Sidekick 插件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=zh-Hans){target=_blank}
+   + [AEM Assets Sidekick插件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [程序](./cloud-manager/programs.md)
    + [环境](./cloud-manager/environments.md)
@@ -187,7 +193,7 @@ ht-degree: 94%
    + [缓存](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
    + [Adobe CDN - 超越缓存](./content-delivery/adobe-cdn-beyond-caching.md)
    + [自定义错误页面](./content-delivery/custom-error-pages.md)
-   + [URL 重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=zh-Hans){target=_blank}
+   + [URL 重定向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + 缓存{#caching}
    + [概述](./caching/overview.md)
    + [AEM Publish 服务](./caching/publish.md)
@@ -197,7 +203,7 @@ ht-degree: 94%
       + [启用缓存](./caching/how-to/enable-caching.md)
       + [禁用缓存](./caching/how-to/disable-caching.md)
       + [清除缓存](./caching/how-to/purge-cache.md)
-+ 访问 AEM {#accessing}
++ 访问 AEM{#accessing}
    + [概述](./accessing/overview.md)
    + [Adobe IMS 用户](./accessing/adobe-ims-users.md)
    + [Adobe IMS 用户组](./accessing/adobe-ims-user-groups.md)
@@ -265,17 +271,17 @@ ht-degree: 94%
       + [简介](./migration/cloud-acceleration-manager/introduction.md)
       + [准备工作和 Best Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [实施阶段](./migration/cloud-acceleration-manager/implementation-phase.md)
-      + [代码重构工具 &#x200B;](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
+      + [代码重构工具](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
       + [代码存储库现代化器](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
       + [Dispatcher 转换器](./migration/cloud-acceleration-manager/dispatcher-converter.md)
       + [索引转换器](./migration/cloud-acceleration-manager/index-converter.md)
       + [资源工作流迁移工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [浏览 Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
-      + [使用 Cloud Acceleration Manager &#x200B;](./migration/cloud-acceleration-manager/using.md)
-+ [内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=zh-Hans){target=_blank}
+      + [使用 Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
++ [内容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
-   + 为 Forms as a Cloud Service 进行开发 {#developing-for-cloud-service}
-      + [1 - 快速入门 &#x200B;](./forms/developing-for-cloud-service/getting-started.md)
+   + 为 Forms as a Cloud Service 进行开发{#developing-for-cloud-service}
+      + [1 - 快速入门](./forms/developing-for-cloud-service/getting-started.md)
       + [2 - 安装 IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [3 - 设置 Git](./forms/developing-for-cloud-service/setup-git.md)
       + [4 - 将 IntelliJ 与 AEM 同步](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
@@ -342,11 +348,11 @@ ht-degree: 94%
       + [配置表单以提交AEP](./forms/aep-integration/create-integration-with-aep.md)
    + 交互式通信教程{#interactive-communication-tutorial}
       + [&#x200B;1. 简介](./forms/interactive-communication-tutorial/introduction.md)
-      + [2.创建FDM](./forms/interactive-communication-tutorial/create-form-data-model.md)
-      + [3.创建模板](./forms/interactive-communication-tutorial/create-template.md)
-      + [4.创建片段](./forms/interactive-communication-tutorial/create-fragments.md)
-      + [5.创建IC文档](./forms/interactive-communication-tutorial/create-ic-document.md)
-      + [6.生成IC文档](./forms/interactive-communication-tutorial/test-document-generation.md)
+      + [&#x200B;2. 创建FDM](./forms/interactive-communication-tutorial/create-form-data-model.md)
+      + [&#x200B;3. 创建模板](./forms/interactive-communication-tutorial/create-template.md)
+      + [&#x200B;4. 创建片段](./forms/interactive-communication-tutorial/create-fragments.md)
+      + [&#x200B;5. 创建IC文档](./forms/interactive-communication-tutorial/create-ic-document.md)
+      + [&#x200B;6. 生成IC文档](./forms/interactive-communication-tutorial/test-document-generation.md)
    + 在 AEM Forms CS 中生成文档{#doc-gen-formscs}
       + [简介](./forms/doc-gen-forms-cs/introduction.md)
       + [创建服务凭据](./forms/doc-gen-forms-cs/service-credentials.md)
@@ -398,7 +404,7 @@ ht-degree: 94%
       + [3 - 创建自适应表单模板](./forms/prefill-azure-storage/associate-page-component.md)
       + [4- 创建 Azure 存储集成](./forms/prefill-azure-storage/create-fdm.md)
       + [5 - 创建 SendGrid 集成](./forms/prefill-azure-storage/send-grid-fdm.md)
-      + [6 - 创建自适应表单 &#x200B;](./forms/prefill-azure-storage/create-af.md)
+      + [6 - 创建自适应表单](./forms/prefill-azure-storage/create-af.md)
       + [7 - 部署示例资产](./forms/prefill-azure-storage/deploy-sample-assets.md)
 
    + 创建审核工作流程{#create-aem-workflow}
@@ -457,11 +463,11 @@ ht-degree: 94%
    + [疑难解答](./asset-compute/troubleshooting.md)
 
 + 多步教程{#multi-step-tutorials}
-   + [AEM Sites 开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans){target=_blank}
-   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans){target=_blank}
-   + [SPA 编辑器 (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
-   + [AEM Sites 和 Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=zh-Hans){target=_blank}
-   + [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hans){target=_blank}
+   + [AEM Sites开发](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html){target=_blank}
+   + [SPA编辑器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
+   + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html){target=_blank}
+   + [基于令牌的身份验证](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html){target=_blank}
 + 专家资源 {#expert-resources}
    + AEM 支持人员 {#aem-champions}
       + [Cloud Manager 入门手册](./expert-resources/aem-champions/onboarding-playbook.md)
