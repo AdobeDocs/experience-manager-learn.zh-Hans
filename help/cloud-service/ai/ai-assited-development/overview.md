@@ -3,26 +3,26 @@ title: AI辅助开发
 description: 了解AI辅助开发，该开发使用AI支持的IDE或编码代理以及AGENTS.md、Agent Skills和MCP服务器，帮助为AEM as a Cloud Service上的项目生成高质量的生产就绪代码。
 version: Experience Manager as a Cloud Service
 feature: Developer Tools
-role: Developer, Architect
+role: Developer
 level: Beginner
 doc-type: Article
 duration: 0
 last-substantial-update: 2026-04-24T00:00:00Z
 jira: KT-20899
 thumbnail: KT-20899.pngKT-20899
-source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
+exl-id: 19b7ab0b-2f47-434a-a141-17701f432fac
+source-git-commit: 6f303c8fbec523227716fe0bc1bff8fceffad1f9
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 0%
 
 ---
 
-
 # AI辅助开发
 
 AI辅助开发使用AI支持的IDE或编码代理以及`AGENTS.md`、代理技能和MCP服务器来帮助为AEM as a Cloud Service项目生成高质量、可随时投入生产的代码。
 
-Visual Studio Code[&#128279;](https://code.visualstudio.com/docs/copilot/overview)、[Claude Code](https://code.claude.com/docs/en/overview)中的工具（如[Cursor](https://www.cursor.com/)、GitHub Copilot）以及类似的AI支持的IDE和编码代理在以下几个关键方面有所帮助：
+Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview)、[Claude Code](https://code.claude.com/docs/en/overview)中的工具（如[Cursor](https://www.cursor.com/)、[GitHub Copilot）以及类似的AI支持的IDE和编码代理在以下几个关键方面有所帮助：
 
 - **更快的迭代**：从描述所需功能或更改的自然语言提示生成或重构代码。
 - **学习辅助**：在出现提示时解释不熟悉的代码路径、配置、概念或最佳实践。
@@ -69,8 +69,8 @@ MCP服务器通过[模型上下文协议](https://modelcontextprotocol.io/)向�
 
 对于针对AEM SDK和Dispatcher的&#x200B;**本地开发**，请从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=mcp*&1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.0_values=software-type%3Atooling&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=3)门户安装这些&#x200B;**本地MCP服务器**：
 
-- **AEM Quickstart本地MCP服务器**：公开本地AEM SDK实例的实时运行时数据，以支持故障排除和开发。 有关详细信息，请参阅[AEM快速入门MCP服务器](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server)。
-- **Dispatcher本地MCP服务器**：启用本地Dispatcher实例的运行时验证和检查。 有关详细信息，请参阅[Dispatcher MCP服务器](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server)。
+- **AEM Quickstart本地MCP服务器**：公开本地AEM SDK实例的实时运行时数据，以支持故障排除和开发。 有关详细信息，请参阅[AEM快速入门MCP服务器](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server)。
+- **Dispatcher本地MCP服务器**：启用本地Dispatcher实例的运行时验证和检查。 有关详细信息，请参阅[Dispatcher MCP服务器](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server)。
 
 对于Adobe托管的AEM MCP服务器（例如，内容、只读内容和Cloud Manager），请参阅AEM中的[MCP服务器](../mcp/overview.md)。
 
@@ -157,7 +157,7 @@ CARDS
 
 ## 其他资源
 
-- [使用AI工具进行本地开发](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [使用AI工具进行本地开发](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [面向AI编码代理的Adobe技能](https://github.com/adobe/skills)
 

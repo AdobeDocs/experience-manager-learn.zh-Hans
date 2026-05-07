@@ -3,7 +3,7 @@ title: 使用AEM Agent技能进行组件开发
 description: 了解如何使用AEM Agent Skills开发AEM组件，作为AI辅助开发的一部分。
 version: Experience Manager as a Cloud Service
 feature: Developer Tools
-role: Developer, Architect
+role: Developer
 level: Beginner
 doc-type: Article
 duration: 0
@@ -11,7 +11,7 @@ last-substantial-update: 2026-04-24T00:00:00Z
 jira: KT-20901
 thumbnail: KT-20901.png
 exl-id: bd9b74e8-81ab-4d42-bd0a-5443248b5770
-source-git-commit: f93359e731b6c3fa549e9499ef693042eba3aad7
+source-git-commit: 6f303c8fbec523227716fe0bc1bff8fceffad1f9
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 2%
@@ -107,7 +107,7 @@ ht-degree: 2%
 
 ## 其他资源
 
-- [使用人工智能工具进行本地开发](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [使用人工智能工具进行本地开发](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [面向AI编码代理的Adobe技能](https://github.com/adobe/skills)
 
