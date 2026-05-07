@@ -22,7 +22,7 @@ ht-degree: 0%
 
 AI辅助开发使用AI支持的IDE或编码代理以及`AGENTS.md`、代理技能和MCP服务器来帮助为AEM as a Cloud Service项目生成高质量、可随时投入生产的代码。
 
-Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview)、[Claude Code](https://code.claude.com/docs/en/overview)中的工具（如[Cursor](https://www.cursor.com/)、[GitHub Copilot）以及类似的AI支持的IDE和编码代理在以下几个关键方面有所帮助：
+Visual Studio Code[&#128279;](https://code.visualstudio.com/docs/copilot/overview)、[Claude Code](https://code.claude.com/docs/en/overview)中的工具（如[Cursor](https://www.cursor.com/)、GitHub Copilot）以及类似的AI支持的IDE和编码代理在以下几个关键方面有所帮助：
 
 - **更快的迭代**：从描述所需功能或更改的自然语言提示生成或重构代码。
 - **学习辅助**：在出现提示时解释不熟悉的代码路径、配置、概念或最佳实践。
